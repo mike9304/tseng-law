@@ -1,6 +1,7 @@
 import { defineComponent } from '../define';
 import BookingWidgetElement from './Element';
 import BookingWidgetInspector from './Inspector';
+import { BOOKING_WIDGET_LEGACY_DEFAULTS } from './booking-widget-copy';
 
 export default defineComponent({
   kind: 'booking-widget',
@@ -9,16 +10,15 @@ export default defineComponent({
   icon: 'B',
   defaultContent: {
     eyebrow: '',
-    title: 'Book a consultation',
-    locale: 'ko' as const,
+    title: BOOKING_WIDGET_LEGACY_DEFAULTS.title[0],
     serviceId: '',
     staffId: '',
-    successMessage: '예약이 완료되었습니다',
+    successMessage: BOOKING_WIDGET_LEGACY_DEFAULTS.successMessage[0],
     redirectAfterBooking: '',
     showCaseSummary: true,
-    caseSummaryLabel: '사건 개요',
+    caseSummaryLabel: BOOKING_WIDGET_LEGACY_DEFAULTS.caseSummaryLabel[0],
     showAttachmentLinks: true,
-    attachmentLinksLabel: '첨부 링크',
+    attachmentLinksLabel: BOOKING_WIDGET_LEGACY_DEFAULTS.attachmentLinksLabel[0],
     customFieldLabels: '',
   },
   defaultStyle: {

@@ -3,6 +3,8 @@ import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { bookingServiceInputSchema } from '@/lib/builder/bookings/types';
 import { listServices, makeServiceId, saveService, slugify, timestamped } from '@/lib/builder/bookings/storage';
+import { getBookingServiceApiErrorPayload } from '@/lib/builder/bookings/bookings-copy';
+import { normalizeLocale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -19,9 +21,16 @@ export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const parsed = bookingServiceInputSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) {
-    return NextResponse.json({ error: 'Invalid service payload', details: parsed.error.issues.slice(0, 3) }, { status: 400 });
+    return NextResponse.json(
+      {
+        ...getBookingServiceApiErrorPayload(locale, 'invalid_service_payload'),
+        details: parsed.error.issues.slice(0, 3),
+      },
+      { status: 400 },
+    );
   }
 
   const serviceId = makeServiceId();

@@ -13,9 +13,11 @@ import Reveal from '@/components/Reveal';
 import type { FAQItem } from '@/data/faq-content';
 import { faqContent } from '@/data/faq-content';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
+import { insightsArchive } from '@/data/insights-archive';
 import { buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
-import { getAllColumnPosts } from '@/lib/columns';
 import type { Locale } from '@/lib/locales';
+
+type HomeInsightArchivePosts = Parameters<typeof InsightsArchiveSection>[0]['posts'];
 
 const homeSeoCopy: Record<Locale, { title: string; description: string; keywords: string[] }> = {
   ko: {
@@ -54,7 +56,7 @@ function LegacyHomePageBody({
   faqItems,
 }: {
   locale: Locale;
-  posts: ReturnType<typeof getAllColumnPosts>;
+  posts: HomeInsightArchivePosts;
   faqItems: FAQItem[];
 }) {
   return (
@@ -88,9 +90,23 @@ function LegacyHomePageBody({
   );
 }
 
+function resolveLegacyHomeInsightPosts(locale: Locale): HomeInsightArchivePosts {
+  const archive = insightsArchive[locale === 'en' ? 'ko' : locale];
+  return archive.posts.map((post) => ({
+    slug: post.id,
+    title: post.title,
+    date: post.date ?? '',
+    dateDisplay: post.date ?? '',
+    readTime: post.readTime ?? '',
+    categoryLabel: archive.categories[post.category] ?? '',
+    featuredImage: post.image,
+    summary: post.summary,
+  }));
+}
+
 export function HomeLegacyPage({ locale }: { locale: Locale }) {
   const faqItems = faqContent[locale];
-  const allPosts = getAllColumnPosts(locale);
+  const allPosts = resolveLegacyHomeInsightPosts(locale);
   const profile = getAttorneyProfile(locale, primaryAttorneySlug);
 
   return (

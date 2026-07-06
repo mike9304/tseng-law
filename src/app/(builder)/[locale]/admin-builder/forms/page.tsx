@@ -2,14 +2,16 @@ import type { Metadata } from 'next';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { listSubmissions, type FormSubmission } from '@/lib/builder/forms/form-engine';
 import FormSubmissionsDashboard from '@/components/builder/forms/FormSubmissionsDashboard';
+import { getFormsCopy } from '@/components/builder/forms/forms-copy';
 
 export const dynamic = 'force-dynamic';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const copy = getFormsCopy(params.locale);
   return {
-    title: 'Form Submissions',
-    description: 'Review form submissions.',
+    title: copy.dashboard.title,
+    description: copy.dashboard.description,
     robots: 'noindex,nofollow',
   };
 }
@@ -35,6 +37,7 @@ export default async function FormsAdminPage({
     <FormSubmissionsDashboard
       initialSubmissions={initialSubmissions}
       formId={formId}
+      locale={params.locale}
     />
   );
 }

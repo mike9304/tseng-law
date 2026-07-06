@@ -83,11 +83,15 @@ describe('/api/builder/live-chat/[conversationId]', () => {
     vi.mocked(getConversation).mockResolvedValue(null);
     const route = await import('../route');
     const response = await route.GET(
-      new NextRequest('https://law.example.test/api/builder/live-chat/cnv-missing'),
+      new NextRequest('https://law.example.test/api/builder/live-chat/cnv-missing?locale=zh-hant'),
       { params: { conversationId: 'cnv-missing' } },
     );
+    const payload = await response.json();
 
     expect(response.status).toBe(404);
+    expect(payload.errorCode).toBe('conversation_not_found');
+    expect(payload.error).toBe('找不到這段對話。');
+    expect(payload.error).not.toMatch(/[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]/);
   });
 
   it('closes a conversation on PATCH status=closed', async () => {
@@ -113,6 +117,22 @@ describe('/api/builder/live-chat/[conversationId]', () => {
     expect(saveConversation).toHaveBeenCalledWith(
       expect.objectContaining({ status: 'open' }),
     );
+  });
+
+  it('returns localized 404 on PATCH when the conversation is missing', async () => {
+    vi.mocked(getConversation).mockResolvedValue(null);
+    const route = await import('../route');
+    const response = await route.PATCH(patchRequest({ locale: 'en', status: 'closed' }), {
+      params: { conversationId: 'cnv-missing' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(404);
+    expect(payload).toEqual({
+      error: 'Conversation not found.',
+      errorCode: 'conversation_not_found',
+    });
+    expect(saveConversation).not.toHaveBeenCalled();
   });
 
   it('refuses anonymous callers on GET (guardMutation deny)', async () => {

@@ -6,13 +6,25 @@ import {
 } from '@/lib/builder/persistence';
 import { recordPageRollback } from '@/lib/builder/audit/record';
 import { isBuilderPageKey, isDefaultBuilderSiteId } from '@/lib/builder/site';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 import { normalizeLocale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
-function badRequest(message: string) {
-  return NextResponse.json({ ok: false, error: message }, { status: 400 });
+function errorResponse(
+  locale: ReturnType<typeof normalizeLocale>,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra: Record<string, unknown> = {},
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...extra },
+    { status },
+  );
 }
 
 export async function POST(
@@ -22,25 +34,25 @@ export async function POST(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+
   if (!isDefaultBuilderSiteId(params.siteId)) {
-    return NextResponse.json({ ok: false, error: 'Unknown builder site.' }, { status: 404 });
+    return errorResponse(locale, 'builder_site_not_found', 404);
   }
 
   if (!isBuilderPageKey(params.pageKey)) {
-    return NextResponse.json({ ok: false, error: 'Unknown builder page.' }, { status: 404 });
+    return errorResponse(locale, 'builder_page_not_found', 404);
   }
-
-  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return badRequest('Invalid JSON body.');
+    return errorResponse(locale, 'invalid_json', 400);
   }
 
   if (!body || typeof body !== 'object' || Array.isArray(body)) {
-    return badRequest('revisionId is required.');
+    return errorResponse(locale, 'rollback_revision_required', 400);
   }
 
   const record = body as Record<string, unknown>;
@@ -50,7 +62,7 @@ export async function POST(
       : null;
 
   if (!revisionId) {
-    return badRequest('revisionId is required.');
+    return errorResponse(locale, 'rollback_revision_required', 400);
   }
 
   const updatedBy =
@@ -77,7 +89,7 @@ export async function POST(
     });
 
     if (!result) {
-      return NextResponse.json({ ok: false, error: 'Published revision record not found.' }, { status: 404 });
+      return errorResponse(locale, 'revision_not_found', 404);
     }
 
     await recordPageRollback({
@@ -97,20 +109,13 @@ export async function POST(
     });
   } catch (error) {
     if (error instanceof BuilderSnapshotConflictError) {
-      return NextResponse.json(
-        {
-          ok: false,
-          error: 'Snapshot conflict. Reload the latest shared draft before rollback.',
-          conflict: error.conflict,
-        },
-        { status: 409 }
-      );
+      return errorResponse(locale, 'draft_conflict', 409, { conflict: error.conflict });
     }
 
     if (error instanceof Error) {
-      return NextResponse.json({ ok: false, error: error.message }, { status: 400 });
+      return errorResponse(locale, 'rollback_failed', 500);
     }
 
-    throw error;
+    return errorResponse(locale, 'rollback_failed', 500);
   }
 }

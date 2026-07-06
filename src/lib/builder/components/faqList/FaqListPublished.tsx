@@ -1,8 +1,11 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import type { BuilderFaqCategory, BuilderFaqItem } from '@/lib/builder/faq/faq-shared';
+import { DEFAULT_FAQ_CATEGORIES } from '@/lib/builder/faq/faq-shared';
 import type { Locale } from '@/lib/locales';
+import { getFaqListCopy } from './faq-list-copy';
 import styles from './FaqList.module.css';
 
 export interface FaqItem {
@@ -23,12 +26,6 @@ export interface FaqListContent {
   schemaEnabled?: boolean;
   limit?: number;
 }
-
-const fallbackCategoryLabels: Record<Locale, Record<string, string>> = {
-  ko: { all: '전체' },
-  'zh-hant': { all: '全部' },
-  en: { all: 'All' },
-};
 
 function itemId(item: FaqItem | BuilderFaqItem, index: number): string {
   return ('faqId' in item && item.faqId) ? item.faqId : `static-${index}`;
@@ -57,6 +54,15 @@ function normalizeStaticItem(item: FaqItem, index: number): BuilderFaqItem {
   };
 }
 
+function readSearchParam(searchParams: ReturnType<typeof useSearchParams>, key: string): string {
+  return searchParams?.get(key)?.trim() ?? '';
+}
+
+function buildWidgetHref(pathname: string, params: URLSearchParams): string {
+  const query = params.toString();
+  return query ? `${pathname}?${query}` : pathname;
+}
+
 export default function FaqListPublished({
   node,
   locale = 'ko',
@@ -67,19 +73,29 @@ export default function FaqListPublished({
 }) {
   const content = node.content ?? {};
   const source = content.source ?? 'static';
+  const useAppSource = source === 'app';
   const staticItems = useMemo(() => (content.items ?? []).map(normalizeStaticItem), [content.items]);
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const urlCategory = useAppSource ? readSearchParam(searchParams, 'category') : '';
+  const urlQuery = useAppSource ? readSearchParam(searchParams, 'q') : '';
+  const initialCategory = urlCategory || content.categoryId || 'all';
   const [appItems, setAppItems] = useState<BuilderFaqItem[]>([]);
-  const [categories, setCategories] = useState<BuilderFaqCategory[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState(content.categoryId ?? 'all');
-  const [query, setQuery] = useState('');
+  const [categories, setCategories] = useState<BuilderFaqCategory[]>(DEFAULT_FAQ_CATEGORIES);
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
+  const [query, setQuery] = useState(urlQuery);
   const [openId, setOpenId] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const useAppSource = source === 'app';
-  const copy = fallbackCategoryLabels[locale] ?? fallbackCategoryLabels.ko;
+  const copy = getFaqListCopy(locale);
 
   useEffect(() => {
-    setSelectedCategory(content.categoryId ?? 'all');
-  }, [content.categoryId]);
+    setSelectedCategory(urlCategory || content.categoryId || 'all');
+  }, [content.categoryId, urlCategory]);
+
+  useEffect(() => {
+    setQuery(urlQuery);
+  }, [urlQuery]);
 
   useEffect(() => {
     if (!useAppSource) return;
@@ -93,12 +109,43 @@ export default function FaqListPublished({
       .then((json) => {
         if (!json?.ok) return;
         setAppItems(Array.isArray(json.items) ? json.items : []);
-        setCategories(Array.isArray(json.categories) ? json.categories : []);
+        setCategories(
+          Array.isArray(json.categories) && json.categories.length > 0
+            ? json.categories
+            : DEFAULT_FAQ_CATEGORIES,
+        );
       })
       .catch(() => undefined)
       .finally(() => setLoading(false));
     return () => controller.abort();
   }, [content.limit, locale, useAppSource]);
+
+  function replaceWidgetUrl(nextCategory: string, nextQuery: string) {
+    if (!useAppSource) return;
+    const params = new URLSearchParams(searchParams?.toString() ?? '');
+    params.delete('page');
+    const trimmedQuery = nextQuery.trim();
+    if (nextCategory && nextCategory !== 'all') params.set('category', nextCategory);
+    else params.delete('category');
+    if (trimmedQuery) params.set('q', trimmedQuery);
+    else params.delete('q');
+
+    const href = buildWidgetHref(pathname, params);
+    if (typeof window !== 'undefined') {
+      window.history.replaceState(null, '', href);
+    }
+    router.replace(href, { scroll: false });
+  }
+
+  function handleQueryChange(nextQuery: string) {
+    setQuery(nextQuery);
+    replaceWidgetUrl(selectedCategory, nextQuery);
+  }
+
+  function handleCategoryChange(nextCategory: string) {
+    setSelectedCategory(nextCategory);
+    replaceWidgetUrl(nextCategory, query);
+  }
 
   const sourceItems = useAppSource ? appItems : staticItems;
   const visibleItems = useMemo(() => {
@@ -130,23 +177,23 @@ export default function FaqListPublished({
     <div className={styles.root} data-builder-faq-widget="true" data-faq-source={source}>
       {(content.showSearch || (useAppSource && content.showSearch !== false)) ? (
         <label className={styles.search}>
-          <span>{locale === 'ko' ? 'FAQ 검색' : locale === 'zh-hant' ? '搜尋 FAQ' : 'Search FAQ'}</span>
+          <span>{copy.searchLabel}</span>
           <input
             type="search"
             value={query}
-            placeholder={locale === 'ko' ? '질문 검색' : locale === 'zh-hant' ? '搜尋問題' : 'Search questions'}
-            onChange={(event) => setQuery(event.currentTarget.value)}
+            placeholder={copy.searchPlaceholder}
+            onChange={(event) => handleQueryChange(event.currentTarget.value)}
           />
         </label>
       ) : null}
 
       {useAppSource && content.showCategoryFilter !== false && categories.length > 0 ? (
-        <div className={styles.categories} aria-label="FAQ categories">
+        <div className={styles.categories} aria-label={copy.categoriesLabel}>
           <button
             type="button"
             className={selectedCategory === 'all' ? styles.categoryActive : styles.category}
             aria-pressed={selectedCategory === 'all'}
-            onClick={() => setSelectedCategory('all')}
+            onClick={() => handleCategoryChange('all')}
           >
             {copy.all}
           </button>
@@ -157,7 +204,7 @@ export default function FaqListPublished({
               className={selectedCategory === category.categoryId ? styles.categoryActive : styles.category}
               aria-pressed={selectedCategory === category.categoryId}
               data-builder-faq-category-filter={category.categoryId}
-              onClick={() => setSelectedCategory(category.categoryId)}
+              onClick={() => handleCategoryChange(category.categoryId)}
             >
               {category.label[locale]}
             </button>
@@ -168,10 +215,10 @@ export default function FaqListPublished({
       <div className={styles.list} aria-live="polite">
         {sourceItems.length === 0 ? (
           <div className={styles.empty} role="status">
-            {loading ? 'FAQ 불러오는 중...' : 'FAQ List'}
+            {loading ? copy.loading : copy.emptyState}
           </div>
         ) : visibleItems.length === 0 ? (
-          <div className={styles.empty}>{locale === 'ko' ? '조건에 맞는 FAQ가 없습니다.' : 'No FAQ results.'}</div>
+          <div className={styles.empty}>{copy.noResults}</div>
         ) : visibleItems.map((item, i) => {
           const id = itemId(item, i);
           const isOpen = openId === id;

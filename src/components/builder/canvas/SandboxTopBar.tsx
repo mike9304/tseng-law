@@ -1,7 +1,10 @@
 'use client';
 
-import type { Locale } from '@/lib/locales';
+import { memo, useCallback, useEffect, useMemo, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
+import { useRouter } from 'next/navigation';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import BreakpointBadge from '@/components/builder/editor/BreakpointBadge';
+import ModalShell from '@/components/builder/canvas/ModalShell';
 import {
   hasResponsiveOverride,
   VIEWPORT_WIDTHS,
@@ -10,18 +13,51 @@ import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import LocaleSwitcher from './LocaleSwitcher';
 import EditorThemeToggle from './EditorThemeToggle';
 import EditorPrefsButton from './EditorPrefsButton';
+import EditorChromeIcon, { type EditorChromeIconName } from './EditorChromeIcon';
+import {
+  ADMIN_NAV_TREE,
+} from '@/lib/builder/admin-nav/nav-config';
+import {
+  pushRecentAdminNav,
+  readRecentAdminNav,
+  writeRecentAdminNav,
+  type AdminNavHistoryEntry,
+} from '@/lib/builder/admin-nav/recent-nav';
+import {
+  buildAdminQuickJumpGroups,
+  buildAdminQuickJumpResults,
+  stepAdminQuickJumpIndex,
+  type AdminQuickJumpResult,
+} from '@/lib/builder/admin-nav/quick-jump';
+import { getSandboxTopBarCopy } from './sandbox-top-bar-copy';
 import styles from './SandboxPage.module.css';
 
 export type ViewportMode = 'desktop' | 'tablet' | 'mobile';
+export type MemberPreviewMode = 'signed-out' | 'free' | 'premium' | 'admin';
+export type CollabPresenceEntry = {
+  sessionId: string;
+  username: string;
+  color: string;
+  lastSeenAt: string;
+  nodeId?: string;
+};
 
-const VIEWPORT_OPTIONS: Array<{ mode: ViewportMode; label: string; icon: string }> = [
-  { mode: 'desktop', label: 'Desktop', icon: 'D' },
-  { mode: 'tablet', label: 'Tablet', icon: 'T' },
-  { mode: 'mobile', label: 'Mobile', icon: 'M' },
+const VIEWPORT_OPTIONS: Array<{ mode: ViewportMode; icon: EditorChromeIconName }> = [
+  { mode: 'desktop', icon: 'desktop' },
+  { mode: 'tablet', icon: 'tablet' },
+  { mode: 'mobile', icon: 'mobile' },
 ];
 
-export default function SandboxTopBar({
+const MEMBER_PREVIEW_OPTIONS: Array<{ mode: MemberPreviewMode }> = [
+  { mode: 'signed-out' },
+  { mode: 'free' },
+  { mode: 'premium' },
+  { mode: 'admin' },
+];
+
+function SandboxTopBar({
   locale,
+  siteId,
   draftSaveState,
   selectedSummary,
   selectionCount,
@@ -32,14 +68,20 @@ export default function SandboxTopBar({
   onOpenSettings,
   onOpenHistory,
   onOpenPreview,
+  onOpenResponsiveAi,
+  canOpenResponsiveAi,
   onOpenPages,
   activePageId,
   onLocaleChange,
   siteName,
   currentSlug,
   saveBlockReason,
+  memberPreviewMode,
+  onMemberPreviewModeChange,
+  presenceEntries = [],
 }: {
   locale: string;
+  siteId: string;
   draftSaveState: 'idle' | 'saving' | 'saved' | 'error';
   selectedSummary: string;
   selectionCount: number;
@@ -50,21 +92,138 @@ export default function SandboxTopBar({
   onOpenSettings?: () => void;
   onOpenHistory?: () => void;
   onOpenPreview?: () => void;
+  onOpenResponsiveAi?: () => void;
+  canOpenResponsiveAi?: boolean;
   onOpenPages?: () => void;
   activePageId?: string | null;
   onLocaleChange?: (locale: Locale, linkedPageId: string | null) => void;
   siteName?: string;
   currentSlug?: string;
   saveBlockReason?: string | null;
+  memberPreviewMode: MemberPreviewMode;
+  onMemberPreviewModeChange: (mode: MemberPreviewMode) => void;
+  presenceEntries?: CollabPresenceEntry[];
 }) {
-  const { document, selectedNodeId, resetResponsiveOverride } = useBuilderCanvasStore();
-  const saveLabel = draftSaveState === 'saving' ? '저장 중...' : draftSaveState === 'saved' ? '저장됨' : draftSaveState === 'error' ? '저장 실패' : '';
+  const router = useRouter();
+  const selectedNodeId = useBuilderCanvasStore((state) => state.selectedNodeId);
+  const hasSelectedOverride = useBuilderCanvasStore((state) => {
+    const selectedNode = state.selectedNodeId ? state.nodesById.get(state.selectedNodeId) ?? null : null;
+    return Boolean(selectedNode && hasResponsiveOverride(selectedNode, viewport));
+  });
+  const hasPageViewportOverride = useBuilderCanvasStore((state) => (
+    viewport !== 'desktop'
+      ? Boolean(state.document?.nodes.some((node) => hasResponsiveOverride(node, viewport)))
+      : false
+  ));
+  const resetResponsiveOverride = useBuilderCanvasStore((state) => state.resetResponsiveOverride);
+  const resetResponsiveOverridesForViewport = useBuilderCanvasStore((state) => state.resetResponsiveOverridesForViewport);
+  const normalizedLocale = normalizeLocale(locale);
+  const copy = getSandboxTopBarCopy(normalizedLocale);
+  const saveLabel = copy.saveStateLabels[draftSaveState];
   const saveClass = draftSaveState === 'saving' ? styles.statusBadgeSaving : draftSaveState === 'saved' ? styles.statusBadgeSaved : draftSaveState === 'error' ? styles.statusBadgeError : '';
   const canOpenSeo = Boolean(onOpenSeo && activePageId);
-  const selectedNode = document?.nodes.find((node) => node.id === selectedNodeId) ?? null;
-  const hasSelectedOverride = Boolean(selectedNode && hasResponsiveOverride(selectedNode, viewport));
-  const canResetViewport = viewport !== 'desktop' && Boolean(selectedNode) && hasSelectedOverride;
-  const pageLabel = currentSlug?.trim() ? `/${currentSlug.trim()}` : '홈';
+  const canResetSelectedViewport = viewport !== 'desktop' && Boolean(selectedNodeId) && hasSelectedOverride;
+  const canResetPageViewport = viewport !== 'desktop' && hasPageViewportOverride;
+  const responsiveAiEnabled = Boolean(onOpenResponsiveAi && canOpenResponsiveAi);
+  const pageLabel = currentSlug?.trim() ? `/${currentSlug.trim()}` : copy.homePageLabel;
+  const viewportLabel = copy.viewportLabels[viewport];
+  const [recentNav, setRecentNav] = useState<AdminNavHistoryEntry[]>([]);
+  const [quickJumpOpen, setQuickJumpOpen] = useState(false);
+  const [quickJumpQuery, setQuickJumpQuery] = useState('');
+  const [quickJumpActiveIndex, setQuickJumpActiveIndex] = useState(-1);
+  const quickJumpSections = useMemo(
+    () => buildAdminQuickJumpGroups(normalizedLocale, recentNav, ADMIN_NAV_TREE, quickJumpQuery),
+    [normalizedLocale, quickJumpQuery, recentNav],
+  );
+  const quickJumpResults = useMemo(
+    () => buildAdminQuickJumpResults(normalizedLocale, recentNav, ADMIN_NAV_TREE, quickJumpQuery),
+    [normalizedLocale, quickJumpQuery, recentNav],
+  );
+
+  useEffect(() => {
+    setRecentNav(readRecentAdminNav());
+  }, []);
+
+  const navigateToAdminHref = useCallback((entry: AdminNavHistoryEntry) => {
+    setRecentNav((current) => {
+      const next = pushRecentAdminNav(current, entry);
+      writeRecentAdminNav(next);
+      return next;
+    });
+    router.push(entry.href);
+    setQuickJumpOpen(false);
+  }, [router]);
+
+  const openQuickJump = useCallback(() => {
+    setQuickJumpQuery('');
+    setQuickJumpOpen(true);
+  }, []);
+
+  useEffect(() => {
+    if (!quickJumpOpen) {
+      setQuickJumpActiveIndex(-1);
+      return;
+    }
+    setQuickJumpActiveIndex(quickJumpResults.length > 0 ? 0 : -1);
+  }, [quickJumpOpen, quickJumpResults]);
+
+  useEffect(() => {
+    const handleKeydown = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      const isTyping = Boolean(target && (
+        target.tagName === 'INPUT' ||
+        target.tagName === 'TEXTAREA' ||
+        target.tagName === 'SELECT' ||
+        target.isContentEditable
+      ));
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k' && !isTyping) {
+        event.preventDefault();
+        openQuickJump();
+        return;
+      }
+      if (quickJumpOpen && event.key === 'Escape') {
+        event.preventDefault();
+        setQuickJumpOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeydown);
+    return () => window.removeEventListener('keydown', handleKeydown);
+  }, [openQuickJump, quickJumpOpen]);
+
+  const navigateByResult = useCallback((result: AdminQuickJumpResult) => {
+    navigateToAdminHref({
+      label: result.label,
+      href: result.href,
+      sectionHeading: result.groupHeading,
+    });
+  }, [navigateToAdminHref]);
+
+  const getQuickJumpResultIndex = useCallback((sectionHeading: string, href: string) => {
+    return quickJumpResults.findIndex(
+      (result) => result.href === href && result.groupHeading === sectionHeading,
+    );
+  }, [quickJumpResults]);
+
+  const handleQuickJumpKeyDown = useCallback((event: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (quickJumpResults.length === 0) return;
+    if (!['ArrowDown', 'ArrowUp', 'Home', 'End', 'Enter'].includes(event.key)) return;
+    event.preventDefault();
+
+    if (event.key === 'Enter') {
+      const selected = quickJumpResults[Math.max(0, quickJumpActiveIndex)] ?? quickJumpResults[0];
+      if (selected) navigateByResult(selected);
+      return;
+    }
+
+    setQuickJumpActiveIndex((current) => stepAdminQuickJumpIndex(current, event.key, quickJumpResults.length));
+  }, [navigateByResult, quickJumpActiveIndex, quickJumpResults]);
+
+  const pageSelectorLabel = `${copy.pageControlLabel} ${pageLabel}`;
+  const pageSelectorAriaLabel = normalizedLocale === 'ko'
+    ? `현재: ${pageSelectorLabel}`
+    : normalizedLocale === 'zh-hant'
+      ? `目前：${pageSelectorLabel}`
+      : `Current: ${pageSelectorLabel}`;
 
   return (
     <header className={styles.topBar}>
@@ -72,67 +231,209 @@ export default function SandboxTopBar({
         <button
           type="button"
           className={styles.siteNameButton}
-          title="사이트 설정"
+          title={copy.siteSettingsTitle}
           onClick={onOpenSettings}
         >
           <span className={styles.siteMark} aria-hidden="true" />
-          <span>{siteName || '호정국제'}</span>
+          <span>{siteName || copy.defaultSiteName}</span>
         </button>
         <button
           type="button"
           className={styles.pageDropdownButton}
-          title="페이지 선택"
+          aria-label={pageSelectorAriaLabel}
+          data-builder-topbar-page-selector="true"
+          title={copy.pageSelectTitle}
           onClick={onOpenPages}
         >
-          <span>{pageLabel}</span>
-          <span aria-hidden="true">⌄</span>
+          <span className={styles.pageDropdownKicker}>{copy.pageControlLabel} </span>
+          <span className={styles.pageDropdownCurrent}>{pageLabel}</span>
+          <EditorChromeIcon name="chevronDown" className={styles.pageDropdownChevron} />
         </button>
       </div>
 
       <div className={styles.topBarMeta}>
-        {onLocaleChange ? (
-          <LocaleSwitcher
-            currentLocale={locale as Locale}
-            activePageId={activePageId ?? null}
-            onLocaleChange={onLocaleChange}
-          />
-        ) : (
-          <span className={styles.topBarChip}>locale: {locale}</span>
-        )}
-        <div className={styles.breakpointSwitcher} aria-label="Viewport breakpoint switcher">
-          {VIEWPORT_OPTIONS.map((option) => {
-            const active = viewport === option.mode;
-            return (
-              <button
-                key={option.mode}
-                type="button"
-                className={`${styles.breakpointButton} ${active ? styles.breakpointButtonActive : ''}`}
-                title={`${option.label} (${VIEWPORT_WIDTHS[option.mode]}px)`}
-                aria-pressed={active}
-                data-builder-topbar-viewport={option.mode}
-                onClick={() => onViewportChange(option.mode)}
-              >
-                <span className={styles.breakpointIcon}>{option.icon}</span>
-                <span>{option.label}</span>
-                <small>{VIEWPORT_WIDTHS[option.mode]}px</small>
-              </button>
-            );
-          })}
+        <div className={styles.topBarMetaCluster} data-builder-topbar-meta-cluster="navigation">
+          {onLocaleChange ? (
+            <LocaleSwitcher
+              currentLocale={normalizedLocale}
+              siteId={siteId}
+              activePageId={activePageId ?? null}
+              onLocaleChange={onLocaleChange}
+            />
+          ) : (
+            <span className={styles.topBarChip}>{copy.localeFallbackLabel(locale)}</span>
+          )}
+          <label className={styles.quickJumpControl} title={copy.quickJumpSelectTitle}>
+            <span>{copy.quickJumpSelectLabel}</span>
+            <select
+              aria-label={copy.quickJumpSelectTitle}
+              value=""
+              onChange={(event) => {
+                const target = event.target.value;
+                if (!target) return;
+                event.currentTarget.value = '';
+                const matched = quickJumpSections
+                  .flatMap((section) => section.items.map((item) => ({ ...item, sectionHeading: section.heading })))
+                  .find((item) => item.href === target);
+                if (matched) {
+                  navigateToAdminHref(matched);
+                  return;
+                }
+                const recent = recentNav.find((item) => item.href === target);
+                if (recent) {
+                  navigateToAdminHref(recent);
+                }
+              }}
+            >
+              <option value="">{copy.quickJumpSelectPlaceholder}</option>
+              {quickJumpSections.map((section) => (
+                <optgroup key={section.heading} label={section.heading}>
+                  {section.items.map((item) => (
+                    <option key={item.href} value={item.href}>
+                      {item.label}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
+            </select>
+          </label>
           <button
             type="button"
-              className={styles.breakpointResetButton}
-              disabled={!canResetViewport}
-            title={selectedNode && viewport !== 'desktop'
-              ? `${viewport} 반응형 오버라이드 초기화`
-              : '태블릿/모바일에서 노드를 선택하면 초기화할 수 있습니다'}
-            onClick={() => {
-              if (!selectedNode || viewport === 'desktop') return;
-              resetResponsiveOverride(selectedNode.id, viewport);
-            }}
+            className={styles.topBarChip}
+            data-builder-admin-quickjump-open="true"
+            title={copy.quickJumpButtonTitle}
+            onClick={openQuickJump}
           >
-            <BreakpointBadge viewport={viewport} active={hasSelectedOverride} label="override" />
-            <span>초기화</span>
+            {copy.quickJumpButtonLabel}
           </button>
+        </div>
+        <div className={styles.topBarMetaCluster} data-builder-topbar-meta-cluster="preview">
+          <div
+            className={`${styles.topBarChip} ${styles.topBarPresenceChip}`}
+            data-builder-topbar-presence="true"
+            role="status"
+            aria-live="polite"
+            title={copy.presenceTitle(
+              presenceEntries.length,
+              presenceEntries.slice(0, 3).map((entry) => entry.username),
+            )}
+          >
+            <span className={styles.topBarPresenceLabel}>{copy.collaborationLabel}</span>
+            <span className={styles.topBarPresenceAvatars} aria-hidden="true">
+              {presenceEntries.slice(0, 3).map((entry) => {
+                const initials = entry.username
+                  .trim()
+                  .split(/\s+/)
+                  .slice(0, 2)
+                  .map((part) => part[0]?.toUpperCase() ?? '')
+                  .join('')
+                  .slice(0, 2) || '•';
+                return (
+                  <span
+                    key={entry.sessionId}
+                    className={styles.topBarPresenceAvatar}
+                    style={{ background: entry.color }}
+                  >
+                    {initials}
+                  </span>
+                );
+              })}
+            </span>
+            <span>{copy.presenceActiveLabel(presenceEntries.length)}</span>
+          </div>
+          <label className={styles.memberPreviewControl} title={copy.memberPreviewTitle}>
+            <span>{copy.memberPreviewLabel}</span>
+            <select
+              aria-label={copy.memberPreviewAriaLabel}
+              data-builder-member-preview-mode="true"
+              value={memberPreviewMode}
+              onChange={(event) => onMemberPreviewModeChange(event.target.value as MemberPreviewMode)}
+            >
+              {MEMBER_PREVIEW_OPTIONS.map((option) => (
+                <option key={option.mode} value={option.mode}>
+                  {copy.memberPreviewLabels[option.mode]}
+                </option>
+              ))}
+            </select>
+          </label>
+          <div className={styles.breakpointSwitcher} aria-label={copy.viewportGroupAriaLabel}>
+            {VIEWPORT_OPTIONS.map((option) => {
+              const active = viewport === option.mode;
+              const label = copy.viewportLabels[option.mode];
+              return (
+                <button
+                  key={option.mode}
+                  type="button"
+                  className={`${styles.breakpointButton} ${active ? styles.breakpointButtonActive : ''}`}
+                  title={copy.viewportTitle(label, VIEWPORT_WIDTHS[option.mode])}
+                  aria-pressed={active}
+                  data-builder-topbar-viewport={option.mode}
+                  onClick={() => onViewportChange(option.mode)}
+                >
+                  <span className={styles.breakpointIcon}>
+                    <EditorChromeIcon name={option.icon} className={styles.topBarSvgIcon} />
+                  </span>
+                  <span>{label}</span>
+                  <small>{VIEWPORT_WIDTHS[option.mode]}px</small>
+                </button>
+              );
+            })}
+            <button
+              type="button"
+              className={styles.breakpointResetButton}
+              disabled={!canResetSelectedViewport}
+              data-builder-selected-override-reset={viewport}
+              title={selectedNodeId && viewport !== 'desktop'
+                ? copy.responsiveResetTitle(viewportLabel)
+                : copy.responsiveResetDisabledTitle}
+              onClick={() => {
+                if (!selectedNodeId || viewport === 'desktop') return;
+                resetResponsiveOverride(selectedNodeId, viewport);
+              }}
+            >
+              <BreakpointBadge
+                viewport={viewport}
+                active={hasSelectedOverride}
+                label={copy.responsiveOverrideBadgeLabel}
+                title={copy.responsiveOverrideBadgeTitle(viewportLabel)}
+                ariaLabel={copy.responsiveOverrideBadgeTitle(viewportLabel)}
+              />
+              <span className={styles.breakpointResetLabel}>{copy.responsiveResetLabel}</span>
+            </button>
+            <button
+              type="button"
+              className={`${styles.breakpointResetButton} ${styles.breakpointPageResetButton}`}
+              disabled={!canResetPageViewport}
+              data-builder-page-reset={viewport}
+              title={viewport !== 'desktop'
+                ? copy.responsivePageResetTitle(viewportLabel)
+                : copy.responsivePageResetDisabledTitle}
+              onClick={() => {
+                if (viewport === 'desktop') return;
+                resetResponsiveOverridesForViewport(viewport);
+              }}
+            >
+              <BreakpointBadge
+                viewport={viewport}
+                active={hasPageViewportOverride}
+                label=""
+                title={copy.responsivePageResetTitle(viewportLabel)}
+                ariaLabel={copy.responsivePageResetTitle(viewportLabel)}
+              />
+              <span className={styles.breakpointResetLabel}>{copy.responsivePageResetLabel}</span>
+            </button>
+            <button
+              type="button"
+              className={`${styles.breakpointResetButton} ${styles.breakpointAiButton}`}
+              disabled={!responsiveAiEnabled}
+              data-builder-responsive-ai-open="true"
+              title={responsiveAiEnabled ? copy.responsiveAiTitle(viewportLabel) : copy.responsiveAiDisabledTitle}
+              onClick={onOpenResponsiveAi}
+            >
+              <EditorChromeIcon name="sparkles" className={styles.breakpointIcon} />
+              <span className={styles.breakpointResetLabel}>{copy.responsiveAiLabel}</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -141,58 +442,119 @@ export default function SandboxTopBar({
         <EditorThemeToggle />
         {selectionCount > 0 ? (
           <span className={styles.selectionPill} title={selectedSummary}>
-            {selectionCount}개 선택됨
+            {copy.selectionCountLabel(selectionCount)}
           </span>
         ) : null}
         {draftSaveState === 'saving' && <span className={styles.savingSpinner} />}
         {saveLabel && <span className={`${styles.topBarChip} ${saveClass}`} data-builder-topbar-status="true">{saveLabel}</span>}
         {saveBlockReason ? (
           <span className={`${styles.topBarChip} ${styles.statusBadgeError}`} title={saveBlockReason} data-builder-topbar-status="true">
-            저장 차단
+            {copy.saveBlockedLabel}
           </span>
         ) : null}
         {onOpenHistory && (
           <button
             type="button"
-            className={styles.topBarChip}
+            className={`${styles.topBarChip} ${styles.topBarActionChip}`}
             data-builder-topbar-secondary="true"
-            title="버전 히스토리"
-            style={{ cursor: 'pointer' }}
+            title={copy.historyTitle}
             onClick={onOpenHistory}
           >
-            히스토리
+            <EditorChromeIcon name="history" className={styles.topBarActionIcon} />
+            <span>{copy.historyLabel}</span>
           </button>
         )}
         <button
           type="button"
-          className={styles.topBarChip}
+          className={`${styles.topBarChip} ${styles.topBarActionChip}`}
           data-builder-topbar-secondary="true"
-          title="미리보기"
+          title={copy.previewTitle}
           disabled={!onOpenPreview}
           onClick={onOpenPreview}
         >
-          미리보기
+          <EditorChromeIcon name="preview" className={styles.topBarActionIcon} />
+          <span>{copy.previewLabel}</span>
         </button>
         <button
           type="button"
-          className={styles.topBarChip}
+          className={`${styles.topBarChip} ${styles.topBarActionChip}`}
           data-builder-topbar-secondary="true"
-          title="현재 페이지 SEO"
+          title={copy.seoTitle}
           disabled={!canOpenSeo}
           onClick={onOpenSeo}
         >
-          SEO
+          <EditorChromeIcon name="seo" className={styles.topBarActionIcon} />
+          <span>SEO</span>
         </button>
         <button
           type="button"
           className={styles.publishButton}
-          title="사이트 발행"
+          title={copy.publishTitle}
           disabled={Boolean(saveBlockReason)}
           onClick={onPublish}
         >
-          발행
+          <EditorChromeIcon name="publish" className={styles.publishButtonIcon} />
+          <span>{copy.publishLabel}</span>
         </button>
       </div>
+
+      {quickJumpOpen ? (
+        <ModalShell
+          open
+          size="md"
+          title={copy.quickJumpModalTitle}
+          description={copy.quickJumpModalDescription}
+          ariaLabel={copy.quickJumpModalAriaLabel}
+          closeAriaLabel={copy.quickJumpModalCloseAriaLabel}
+          onClose={() => setQuickJumpOpen(false)}
+          bodyFlush
+        >
+          <div
+            className={styles.quickJumpPalette}
+            onKeyDown={handleQuickJumpKeyDown}
+          >
+            <input
+              autoFocus
+              type="search"
+              value={quickJumpQuery}
+              onChange={(event) => setQuickJumpQuery(event.target.value)}
+              placeholder={copy.quickJumpSearchPlaceholder}
+              aria-label={copy.quickJumpSearchAriaLabel}
+              className={styles.quickJumpSearchInput}
+            />
+            <div className={styles.quickJumpResults}>
+              {quickJumpSections.length === 0 ? (
+                <div className={styles.quickJumpEmptyState}>{copy.quickJumpEmptyState}</div>
+              ) : quickJumpSections.map((section) => (
+                <section key={section.heading} className={styles.quickJumpSection}>
+                  <h3>{section.heading}</h3>
+                  <div className={styles.quickJumpSectionItems}>
+                    {section.items.map((item) => {
+                      const resultIndex = getQuickJumpResultIndex(section.heading, item.href);
+                      const active = resultIndex === quickJumpActiveIndex;
+                      return (
+                        <button
+                          key={item.href}
+                          type="button"
+                          onClick={() => navigateToAdminHref({ label: item.label, href: item.href, sectionHeading: section.heading })}
+                          className={styles.quickJumpResult}
+                          data-active={active ? 'true' : 'false'}
+                          aria-current={active ? 'true' : undefined}
+                        >
+                          <span className={styles.quickJumpResultLabel}>{item.label}</span>
+                          <span className={styles.quickJumpResultHref}>{item.href}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </section>
+              ))}
+            </div>
+          </div>
+        </ModalShell>
+      ) : null}
     </header>
   );
 }
+
+export default memo(SandboxTopBar);

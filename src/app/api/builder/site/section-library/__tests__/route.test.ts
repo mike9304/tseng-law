@@ -172,7 +172,7 @@ describe('/api/builder/site/section-library', () => {
     const payload = await response.json();
 
     expect(response.status).toBe(400);
-    expect(payload.error).toBe('validation_error');
+    expect(payload.errorCode).toBe('validation_error');
     expect(createSection).not.toHaveBeenCalled();
   });
 
@@ -188,7 +188,28 @@ describe('/api/builder/site/section-library', () => {
     const payload = await response.json();
 
     expect(response.status).toBe(400);
-    expect(payload.error).toBe('validation_error');
+    expect(payload.errorCode).toBe('validation_error');
+    expect(createSection).not.toHaveBeenCalled();
+  });
+
+  it('returns localized stable-code JSON when the root node is missing from nodes', async () => {
+    const route = await import('../route');
+    const response = await route.POST(
+      postRequest({
+        name: 'Broken section',
+        rootNodeId: 'missing-root',
+        nodes: [makeContainer()],
+        locale: 'zh-hant',
+      }),
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(payload).toMatchObject({
+      ok: false,
+      error: '找不到要儲存區段的根元素。',
+      errorCode: 'section_root_missing',
+    });
     expect(createSection).not.toHaveBeenCalled();
   });
 

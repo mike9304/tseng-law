@@ -36,7 +36,15 @@ export default function HeroMediaBackground() {
     <div className="hero-media" aria-hidden>
       {slides.map((slide, slideIndex) => (
         <div key={slide.image} className="hero-media-item" data-active={slideIndex === index}>
-          <div className="hero-media-fallback" style={{ backgroundImage: `url(${slide.image})` }} />
+          <div className="hero-media-fallback" style={{ backgroundImage: `url(${slide.image})` }}>
+            <img
+              className="hero-media-image"
+              src={slide.image}
+              alt=""
+              loading={slideIndex === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
+          </div>
         </div>
       ))}
     </div>

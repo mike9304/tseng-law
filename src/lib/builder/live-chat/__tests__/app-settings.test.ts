@@ -55,4 +55,19 @@ describe('resolveLiveChatSettings', () => {
     });
     expect(resolveLiveChatSettings(undefined, false)).toBeNull();
   });
+
+  it('uses locale-specific defaults when app copy is not configured', () => {
+    expect(resolveLiveChatSettings([makeChatApp()], false, 'en')).toMatchObject({
+      source: 'app',
+      launcherEnabled: true,
+      title: 'Tseng Law Consultation',
+      introText: 'Name and email are optional.',
+      launcherLabel: 'Live chat',
+    });
+    expect(resolveLiveChatSettings(undefined, true, 'zh-hant')).toMatchObject({
+      source: 'legacy-site-setting',
+      title: '皓正國際諮詢',
+      launcherLabel: '即時諮詢',
+    });
+  });
 });

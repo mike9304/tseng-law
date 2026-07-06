@@ -24,6 +24,8 @@ function makeSubscriber(overrides: Partial<Subscriber> = {}): Subscriber {
     preferredLocale: 'ko',
     tags: [],
     doubleOptInToken: 'tok-double',
+    doubleOptInTokenCreatedAt: '2026-06-19T00:00:00.000Z',
+    doubleOptInTokenExpiresAt: '2099-06-26T00:00:00.000Z',
     unsubscribeToken: 'tok-unsub',
     source: 'public-form',
     createdAt: '2026-05-13T00:00:00Z',
@@ -32,9 +34,10 @@ function makeSubscriber(overrides: Partial<Subscriber> = {}): Subscriber {
   };
 }
 
-function getRequest(token: string): NextRequest {
+function getRequest(token: string, locale?: string): NextRequest {
   const url = new URL('https://law.example.test/api/marketing/verify');
   if (token) url.searchParams.set('token', token);
+  if (locale) url.searchParams.set('locale', locale);
   return new NextRequest(url, { headers: { 'x-forwarded-for': '127.0.0.11' } });
 }
 
@@ -53,7 +56,7 @@ describe('/api/marketing/verify', () => {
     expect(response.status).toBe(200);
     expect(payload.verified).toBe(true);
     expect(saveSubscriber).toHaveBeenCalledWith(
-      expect.objectContaining({ status: 'subscribed' }),
+      expect.objectContaining({ status: 'subscribed', doubleOptInVerifiedAt: expect.any(String) }),
     );
   });
 
@@ -70,21 +73,55 @@ describe('/api/marketing/verify', () => {
 
   it('returns 400 when token is missing', async () => {
     const route = await import('../route');
-    const response = await route.GET(getRequest(''));
+    const response = await route.GET(getRequest('', 'zh-hant'));
+    const payload = await response.json();
+
     expect(response.status).toBe(400);
+    expect(payload).toMatchObject({
+      ok: false,
+      error: '需要確認權杖。',
+      errorCode: 'missing_token',
+    });
   });
 
   it('returns 404 when token does not resolve to a subscriber', async () => {
     vi.mocked(getSubscriberByDoubleOptInToken).mockResolvedValue(null);
     const route = await import('../route');
-    const response = await route.GET(getRequest('tok-unknown'));
+    const response = await route.GET(getRequest('tok-unknown', 'en'));
+    const payload = await response.json();
+
     expect(response.status).toBe(404);
+    expect(payload).toMatchObject({
+      ok: false,
+      error: 'The confirmation token is invalid.',
+      errorCode: 'invalid_token',
+    });
+  });
+
+  it('returns 410 when a pending subscriber verification token is expired', async () => {
+    vi.mocked(getSubscriberByDoubleOptInToken).mockResolvedValue(
+      makeSubscriber({ doubleOptInTokenExpiresAt: '2000-01-01T00:00:00.000Z' }),
+    );
+    const route = await import('../route');
+    const response = await route.GET(getRequest('tok-double', 'en'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(410);
+    expect(payload).toMatchObject({
+      ok: false,
+      error: 'The confirmation link has expired. Please subscribe again.',
+      errorCode: 'expired_token',
+    });
+    expect(saveSubscriber).not.toHaveBeenCalled();
   });
 
   it('returns 429 when the verify rate limit is exceeded', async () => {
     vi.mocked(checkRateLimit).mockResolvedValueOnce({ allowed: false, remaining: 0, retryAfterMs: 6000 });
     const route = await import('../route');
-    const response = await route.GET(getRequest('tok-double'));
+    const response = await route.GET(getRequest('tok-double', 'en'));
+    const payload = await response.json();
+
     expect(response.status).toBe(429);
+    expect(payload.errorCode).toBe('too_many_requests');
   });
 });

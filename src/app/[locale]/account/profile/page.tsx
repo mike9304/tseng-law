@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import MemberProfileClient from '@/components/members/MemberProfileClient';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
@@ -6,6 +7,15 @@ import { publicMember } from '@/lib/builder/members/members-engine';
 import styles from '@/components/members/MembersArea.module.css';
 
 export const dynamic = 'force-dynamic';
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  const title = locale === 'ko' ? '회원 프로필' : locale === 'zh-hant' ? '會員個人資料' : 'Member profile';
+  return {
+    title,
+    robots: { index: false, follow: false },
+  };
+}
 
 export default async function MemberProfilePage({ params }: { params: { locale: Locale } }) {
   const locale = normalizeLocale(params.locale);

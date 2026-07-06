@@ -1,26 +1,36 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderSectionCanvasNode } from '@/lib/builder/canvas/types';
+import { normalizeLocale } from '@/lib/locales';
+import {
+  getLayoutNavigationWidgetsCopy,
+  localizedLayoutText,
+  SECTION_LEGACY_DEFAULTS,
+} from '../layout-navigation-widgets-copy';
 
 export default function SectionInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const sectionNode = node as BuilderSectionCanvasNode;
+  const sectionCopy = getLayoutNavigationWidgetsCopy(normalizeLocale(locale)).section;
+  const copy = sectionCopy.inspector;
+  const label = localizedLayoutText(sectionNode.content.label, sectionCopy.defaultLabel, SECTION_LEGACY_DEFAULTS.label);
 
   return (
     <>
       <label>
-        <span>Label</span>
+        <span>{copy.label}</span>
         <input
           type="text"
-          value={sectionNode.content.label}
+          value={label}
           disabled={disabled}
           onChange={(event) => onUpdate({ label: event.target.value })}
         />
       </label>
       <label>
-        <span>Max width</span>
+        <span>{copy.maxWidth}</span>
         <input
           type="number"
           min={320}
@@ -31,7 +41,7 @@ export default function SectionInspector({
         />
       </label>
       <label>
-        <span>Padding</span>
+        <span>{copy.padding}</span>
         <input
           type="number"
           min={0}

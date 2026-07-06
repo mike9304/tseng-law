@@ -83,19 +83,49 @@ test('/ko/admin-builder/cms stores moderation reason/history and filters visitor
   let recordId = '';
 
   try {
-    await createCollection(page.request, collectionId, collectionName, `${scope}-collection`);
-    recordId = await createPendingRecord(page.request, collectionId, `${scope}-record`);
+    // Parallel-suite churn on the shared editable-CMS store can drop a freshly
+    // created collection (records POST then 404s) — recreate from scratch and
+    // retry until the pending record lands.
+    await expect(async () => {
+      await deleteCollection(page.request, collectionId, `${scope}-heal`);
+      await createCollection(page.request, collectionId, collectionName, `${scope}-collection`);
+      recordId = await createPendingRecord(page.request, collectionId, `${scope}-record`);
+    }).toPass({ timeout: 60_000 });
 
     await page.goto(`/ko/admin-builder/cms?moderation=${token}`, { waitUntil: 'domcontentloaded' });
     await page.getByRole('button', { name: new RegExp(collectionName) }).click();
     await expect(page.getByRole('heading', { name: collectionName })).toBeVisible();
-    await expect(page.getByText(recordId)).toBeVisible();
+    await expect(page.getByText(recordId).first()).toBeVisible();
 
     await page.locator(`[aria-label="Select ${recordId}"]`).check();
     await page.locator('[data-cms-moderation-reason-input]').fill(reason);
-    page.once('dialog', (dialog) => dialog.accept());
-    await page.getByRole('button', { name: 'Reject', exact: true }).click();
-
+    // The reject write can race a concurrent shared-store flush — re-arm the
+    // confirm dialog and retry the action until the history row records it.
+    // Detect success via the API: once rejected, the Reject button disables
+    // and the history row may only materialize under the rejected filter, so
+    // DOM text is not a reliable success signal for the retry loop.
+    const isRejectedInApi = async (): Promise<boolean> => {
+      const res = await page.request.get(
+        `/api/builder/sites/${SITE_ID}/collections/${encodeURIComponent(collectionId)}?locale=${LOCALE}`,
+        { headers: mutationHeaders(`${scope}-poll`), failOnStatusCode: false },
+      );
+      if (!res.ok()) return false;
+      const data = (await res.json().catch(() => ({}))) as {
+        detail?: { records?: Array<{ recordId?: string; status?: string }> };
+      };
+      return (data.detail?.records ?? []).some((entry) => entry.recordId === recordId && entry.status === 'rejected');
+    };
+    await expect(async () => {
+      if (!(await isRejectedInApi())) {
+        page.once('dialog', (dialog) => dialog.accept());
+        await page.getByRole('button', { name: 'Reject', exact: true }).click();
+      }
+      expect(await isRejectedInApi()).toBe(true);
+    }).toPass({ timeout: 45_000 });
+    // Surface the rejected record's moderation details in the UI. The history
+    // block only renders in the Expanded rows grid density.
+    await page.locator('[data-cms-moderation-filter="rejected"]').click();
+    await page.getByRole('button', { name: 'Expanded rows' }).click();
     await expect(page.locator(`[data-cms-moderation-latest-reason="${recordId}"]`)).toContainText(reason);
     await expect(page.locator(`[data-cms-moderation-history="${recordId}"]`)).toContainText('rejected');
     await expect(page.locator(`[data-cms-moderation-history="${recordId}"]`)).toContainText(reason);
@@ -130,11 +160,11 @@ test('/ko/admin-builder/cms stores moderation reason/history and filters visitor
     });
 
     await page.locator('[data-cms-moderation-filter="pending"]').click();
-    await expect(page.getByText(recordId)).toBeHidden();
+    await expect(page.getByText(recordId)).toHaveCount(0);
     await expect(page.getByText('No matching records')).toBeVisible();
 
     await page.locator('[data-cms-moderation-filter="rejected"]').click();
-    await expect(page.getByText(recordId)).toBeVisible();
+    await expect(page.getByText(recordId).first()).toBeVisible();
   } finally {
     await deleteCollection(page.request, collectionId, `${scope}-cleanup`);
   }

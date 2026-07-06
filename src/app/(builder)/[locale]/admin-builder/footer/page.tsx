@@ -7,13 +7,35 @@ import {
 } from '@/lib/builder/site/persistence';
 import { createDefaultCanvasDocument, normalizeCanvasDocument } from '@/lib/builder/canvas/types';
 import GlobalCanvasEditor from '@/components/builder/global/GlobalCanvasEditor';
+import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-  title: 'Global Footer Editor',
-  robots: { index: false, follow: false },
+const COPY: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '글로벌 푸터 편집기',
+    description: '사이트 푸터 캔버스를 로케일별로 편집합니다.',
+  },
+  'zh-hant': {
+    title: '全域頁尾編輯器',
+    description: '依語言編輯網站頁尾畫布。',
+  },
+  en: {
+    title: 'Global Footer Editor',
+    description: 'Edit the site footer canvas by locale.',
+  },
 };
+
+export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  return buildSeoMetadata({
+    locale,
+    title: COPY[locale].title,
+    description: COPY[locale].description,
+    path: '/admin-builder/footer',
+    noindex: true,
+  });
+}
 
 export default async function GlobalFooterEditPage({
   params,

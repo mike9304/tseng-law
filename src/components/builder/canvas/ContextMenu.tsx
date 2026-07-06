@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { memo, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './SandboxPage.module.css';
 
@@ -24,7 +24,7 @@ function clampAxis(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), Math.max(min, max));
 }
 
-export default function ContextMenu({
+function ContextMenu({
   x,
   y,
   title,
@@ -377,3 +377,5 @@ export default function ContextMenu({
     </>
   );
 }
+
+export default memo(ContextMenu);

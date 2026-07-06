@@ -11,13 +11,14 @@ test('POST /api/builder/ai-generator/page-spec returns a spec with sections', as
   await page.setExtraHTTPHeaders(mutationHeaders(token));
 
   const res = await page.request.post('/api/builder/ai-generator/page-spec', {
+    timeout: 55_000, // the real LLM round-trip regularly exceeds the 15s action default
     data: {
       purpose: 'Showcase our law firm services and book consultations',
       audience: 'Small business owners in Seoul',
       targetAction: 'Book a free 15-minute consultation',
       locale: 'ko',
       industry: 'legal',
-      intent: 'lead-capture',
+      intent: 'conversion',
     },
     headers: { 'Content-Type': 'application/json', ...mutationHeaders(token) },
   });

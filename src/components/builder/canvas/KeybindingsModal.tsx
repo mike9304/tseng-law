@@ -8,6 +8,9 @@ import {
   type CustomKeybinding,
 } from '@/lib/builder/canvas/editor-prefs';
 import { DEFAULT_KEYBINDINGS, resolveShortcutCombo } from '@/lib/builder/canvas/shortcuts';
+import { currentBuilderLocale } from './canvasNodeUtils';
+import { getCanvasKeybindingsCopy } from './canvas-shortcuts-copy';
+import styles from './KeybindingsModal.module.css';
 
 interface Props {
   open: boolean;
@@ -33,6 +36,8 @@ const FOCUSABLE_SELECTOR = [
 export default function KeybindingsModal({ open, onClose }: Props) {
   const panelRef = useRef<HTMLDivElement | null>(null);
   const restoreFocusRef = useRef<HTMLElement | null>(null);
+  const locale = currentBuilderLocale();
+  const copy = getCanvasKeybindingsCopy(locale as Parameters<typeof getCanvasKeybindingsCopy>[0]);
   const [bindings, setBindings] = useState<CustomKeybinding[]>(
     () => DEFAULT_KEYBINDINGS.map((binding) => ({ action: binding.action, combo: binding.combo })),
   );
@@ -151,18 +156,9 @@ export default function KeybindingsModal({ open, onClose }: Props) {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Keybindings"
+      aria-label={copy.ariaLabel}
       data-builder-keybindings-modal="true"
-      style={{
-        position: 'fixed',
-        inset: 0,
-        background: 'rgba(0,0,0,0.4)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        zIndex: 9999,
-        padding: 16,
-      }}
+      className={styles.backdrop}
       onClick={onClose}
     >
       <div
@@ -170,78 +166,61 @@ export default function KeybindingsModal({ open, onClose }: Props) {
         tabIndex={-1}
         data-builder-keybindings-panel="true"
         onClick={(e) => e.stopPropagation()}
-        style={{
-          background: '#ffffff',
-          borderRadius: 12,
-          padding: 24,
-          width: 480,
-          maxWidth: '92vw',
-          maxHeight: '85vh',
-          overflow: 'auto',
-          boxShadow: '0 28px 80px rgba(0,0,0,0.32)',
-        }}
+        className={styles.panel}
       >
-        <h2 style={{ margin: '0 0 12px', fontSize: 16 }}>단축키 매핑</h2>
-        <p style={{ margin: '0 0 16px', fontSize: 12, color: '#64748b' }}>
-          Mod = Cmd (macOS) / Ctrl (Windows). 변경 후 저장하면 다음 단축키 처리 시
-          반영됩니다.
+        <h2 className={styles.title}>{copy.title}</h2>
+        <p className={styles.description}>
+          {copy.description}
         </p>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+        <table className={styles.table}>
           <thead>
             <tr>
-              <th style={{ textAlign: 'left', padding: 6, color: '#475569' }}>액션</th>
-              <th style={{ textAlign: 'left', padding: 6, color: '#475569' }}>설명</th>
-              <th style={{ textAlign: 'left', padding: 6, color: '#475569' }}>단축키</th>
+              <th className={styles.headingCell}>{copy.action}</th>
+              <th className={styles.headingCell}>{copy.descriptionHeading}</th>
+              <th className={styles.headingCell}>{copy.shortcutHeading}</th>
             </tr>
           </thead>
           <tbody>
             {bindings.map((b) => (
               <tr key={b.action}>
-                <td style={{ padding: 6, fontFamily: 'ui-monospace, Menlo, monospace' }}>{b.action}</td>
-                <td style={{ padding: 6, color: '#475569' }}>
+                <td className={styles.actionCell}>{b.action}</td>
+                <td className={styles.descriptionCell}>
                   {DEFAULT_KEYBINDINGS.find((binding) => binding.action === b.action)?.label ?? b.action}
                 </td>
-                <td style={{ padding: 6 }}>
+                <td className={styles.inputCell}>
                   <input
                     type="text"
                     data-builder-keybinding-input={b.action}
                     value={b.combo}
                     onChange={(event) => updateCombo(b.action, event.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '4px 8px',
-                      border: '1px solid #cbd5e1',
-                      borderRadius: 6,
-                      fontFamily: 'ui-monospace, Menlo, monospace',
-                      fontSize: 12,
-                    }}
+                    className={styles.comboInput}
                   />
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <div style={{ marginTop: 16, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
+        <div className={styles.actions}>
           <button
             type="button"
             onClick={reset}
-            style={{ marginRight: 'auto', padding: '8px 14px', border: '1px solid #cbd5e1', background: '#ffffff', borderRadius: 8, cursor: 'pointer' }}
+            className={`${styles.button} ${styles.secondaryButton} ${styles.resetButton}`}
           >
-            기본값
+            {copy.reset}
           </button>
           <button
             type="button"
             onClick={onClose}
-            style={{ padding: '8px 14px', border: '1px solid #cbd5e1', background: '#ffffff', borderRadius: 8, cursor: 'pointer' }}
+            className={`${styles.button} ${styles.secondaryButton}`}
           >
-            취소
+            {copy.cancel}
           </button>
           <button
             type="button"
             onClick={persist}
-            style={{ padding: '8px 14px', border: 0, background: '#0f172a', color: '#ffffff', borderRadius: 8, cursor: 'pointer', fontWeight: 700 }}
+            className={`${styles.button} ${styles.primaryButton}`}
           >
-            저장
+            {copy.save}
           </button>
         </div>
       </div>

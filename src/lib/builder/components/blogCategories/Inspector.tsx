@@ -1,66 +1,50 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderBlogCategoriesCanvasNode } from '@/lib/builder/canvas/types';
+import { getBlogCategoriesCopy } from './blog-categories-copy';
+import styles from '../BlogWidgetInspector.module.css';
 
-const sectionLabelStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  letterSpacing: '0.05em',
-  color: '#64748b',
-  marginTop: 12,
-  marginBottom: 4,
-  display: 'block',
-};
-
-const selectStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '4px 6px',
-  fontSize: '0.85rem',
-  border: '1px solid #e2e8f0',
-  borderRadius: 6,
-  background: '#fff',
-};
-
-export default function BlogCategoriesInspector({ node, onUpdate, disabled = false }: BuilderComponentInspectorProps) {
+export default function BlogCategoriesInspector({ node, locale, onUpdate, disabled = false }: BuilderComponentInspectorProps) {
   const fnode = node as BuilderBlogCategoriesCanvasNode;
   const c = fnode.content;
+  const copy = getBlogCategoriesCopy(locale);
 
   const activeColorString =
     typeof c.activeColor === 'string' ? c.activeColor : '#0b3b2e';
 
   return (
-    <>
-      <span style={sectionLabelStyle}>Layout</span>
-      <label>
-        <span>Layout</span>
-        <select style={selectStyle} value={c.layout} disabled={disabled} onChange={(e) => onUpdate({ layout: e.target.value })}>
-          <option value="horizontal">Horizontal</option>
-          <option value="vertical">Vertical</option>
-          <option value="grid">Grid</option>
+    <div className={styles.root} data-builder-blog-categories-inspector="true">
+      <span className={styles.sectionLabel}>{copy.inspector.layoutSection}</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.layoutLabel}</span>
+        <select className={styles.control} value={c.layout} disabled={disabled} onChange={(e) => onUpdate({ layout: e.target.value })}>
+          <option value="horizontal">{copy.inspector.layoutOptions.horizontal}</option>
+          <option value="vertical">{copy.inspector.layoutOptions.vertical}</option>
+          <option value="grid">{copy.inspector.layoutOptions.grid}</option>
         </select>
       </label>
 
-      <span style={sectionLabelStyle}>Display</span>
-      <label>
+      <span className={styles.sectionLabel}>{copy.inspector.displaySection}</span>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showAll} disabled={disabled} onChange={(e) => onUpdate({ showAll: e.target.checked })} />
-        <span>{'"전체"'} 카테고리 보이기</span>
+        <span>{copy.inspector.showAll}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showPostCount} disabled={disabled} onChange={(e) => onUpdate({ showPostCount: e.target.checked })} />
-        <span>글 수 보이기</span>
+        <span>{copy.inspector.showPostCount}</span>
       </label>
 
-      <span style={sectionLabelStyle}>Active color</span>
-      <label>
-        <span>Color (hex)</span>
+      <span className={styles.sectionLabel}>{copy.inspector.activeColorSection}</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.colorLabel}</span>
         <input
           type="text"
           value={activeColorString}
           disabled={disabled}
+          className={styles.control}
           onChange={(e) => onUpdate({ activeColor: e.target.value || undefined })}
-          placeholder="#0b3b2e"
+          placeholder={copy.inspector.colorPlaceholder}
         />
       </label>
-    </>
+    </div>
   );
 }

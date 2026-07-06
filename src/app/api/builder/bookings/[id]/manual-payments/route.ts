@@ -5,6 +5,12 @@ import { recordBookingManualPayment } from '@/lib/builder/bookings/payments';
 import { runBookingBillingAutomation } from '@/lib/builder/billing-document-automation';
 import { getCurrentBillingInvoice } from '@/lib/builder/billing-documents';
 import { queueBillingPaymentReceivedNotification } from '@/lib/builder/commerce/notifications-engine';
+import {
+  getBookingManualPaymentApiErrorPayload,
+  normalizeBookingManualPaymentApiErrorCode,
+  type BookingManualPaymentApiErrorCode,
+} from '@/lib/builder/bookings/bookings-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -18,15 +24,19 @@ const manualPaymentSchema = z.object({
   idempotencyKey: z.string().trim().max(160).optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+function validationError(locale: Locale, error: ZodError): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
+    {
+      ok: false,
+      ...getBookingManualPaymentApiErrorPayload(locale, 'validation_error'),
+      issues: error.flatten(),
+    },
     { status: 400 },
   );
 }
 
-function errorStatus(error?: string): number {
-  switch (error) {
+function errorStatus(errorCode: BookingManualPaymentApiErrorCode): number {
+  switch (errorCode) {
     case 'booking_not_found':
       return 404;
     case 'manual_payment_amount_invalid':
@@ -43,6 +53,7 @@ function errorStatus(error?: string): number {
 export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   try {
     const input = manualPaymentSchema.parse(await request.json());
@@ -51,9 +62,10 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       actor: 'admin',
     });
     if (!result.booking || !result.manualPayment) {
+      const errorCode = normalizeBookingManualPaymentApiErrorCode(result.error);
       return NextResponse.json(
-        { ok: false, error: result.error ?? 'manual_payment_failed' },
-        { status: errorStatus(result.error) },
+        { ok: false, ...getBookingManualPaymentApiErrorPayload(locale, errorCode) },
+        { status: errorStatus(errorCode) },
       );
     }
 
@@ -84,9 +96,17 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
     return NextResponse.json({ ok: true, booking, manualPayment: result.manualPayment });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
-    if (error instanceof SyntaxError) return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
+    if (error instanceof ZodError) return validationError(locale, error);
+    if (error instanceof SyntaxError) {
+      return NextResponse.json({
+        ok: false,
+        ...getBookingManualPaymentApiErrorPayload(locale, 'invalid_json'),
+      }, { status: 400 });
+    }
     console.error('[builder/bookings/:id/manual-payments] POST failed:', error);
-    return NextResponse.json({ ok: false, error: 'manual_payment_failed' }, { status: 500 });
+    return NextResponse.json({
+      ok: false,
+      ...getBookingManualPaymentApiErrorPayload(locale, 'manual_payment_failed'),
+    }, { status: 500 });
   }
 }

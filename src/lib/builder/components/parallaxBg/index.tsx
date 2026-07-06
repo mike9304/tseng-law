@@ -3,15 +3,24 @@
 import { useEffect, useRef, useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderParallaxBgCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import {
+  getUtilityAdvancedWidgetsCopy,
+  localizedUtilityText,
+  PARALLAX_BG_LEGACY_DEFAULTS,
+} from '../utility-advanced-widgets-copy';
 
 function ParallaxBgRender({
   node,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderParallaxBgCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getUtilityAdvancedWidgetsCopy(locale).parallaxBg;
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [offsetY, setOffsetY] = useState(0);
 
@@ -33,6 +42,8 @@ function ParallaxBgRender({
   const safeBg = c.imageUrl
     ? `url(${c.imageUrl}) center / cover no-repeat`
     : 'linear-gradient(135deg, #1e293b, #475569)';
+  const contentTitle = localizedUtilityText(c.contentTitle, copy.defaultTitle, PARALLAX_BG_LEGACY_DEFAULTS.title);
+  const contentSubtitle = localizedUtilityText(c.contentSubtitle, copy.defaultSubtitle, PARALLAX_BG_LEGACY_DEFAULTS.subtitle);
 
   return (
     <div
@@ -55,7 +66,7 @@ function ParallaxBgRender({
         className="builder-decorative-parallax-overlay"
         style={{ position: 'absolute', inset: 0, background: c.overlayColor }}
       />
-      {(c.contentTitle || c.contentSubtitle) ? (
+      {(contentTitle || contentSubtitle) ? (
         <div
           className="builder-decorative-parallax-content"
           style={{
@@ -70,8 +81,8 @@ function ParallaxBgRender({
             gap: 8,
           }}
         >
-          {c.contentTitle ? <strong style={{ fontSize: 28 }}>{c.contentTitle}</strong> : null}
-          {c.contentSubtitle ? <p style={{ margin: 0, fontSize: 14, opacity: 0.9 }}>{c.contentSubtitle}</p> : null}
+          {contentTitle ? <strong style={{ fontSize: 28 }}>{contentTitle}</strong> : null}
+          {contentSubtitle ? <p style={{ margin: 0, fontSize: 14, opacity: 0.9 }}>{contentSubtitle}</p> : null}
         </div>
       ) : null}
     </div>
@@ -80,23 +91,27 @@ function ParallaxBgRender({
 
 function ParallaxBgInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const pNode = node as BuilderParallaxBgCanvasNode;
   const c = pNode.content;
+  const copy = getUtilityAdvancedWidgetsCopy(locale).parallaxBg;
+  const contentTitle = localizedUtilityText(c.contentTitle, copy.defaultTitle, PARALLAX_BG_LEGACY_DEFAULTS.title);
+  const contentSubtitle = localizedUtilityText(c.contentSubtitle, copy.defaultSubtitle, PARALLAX_BG_LEGACY_DEFAULTS.subtitle);
   return (
     <>
       <label>
-        <span>이미지 URL</span>
+        <span>{copy.inspector.imageUrl}</span>
         <input type="text" value={c.imageUrl} disabled={disabled} onChange={(event) => onUpdate({ imageUrl: event.target.value })} />
       </label>
       <label>
-        <span>오버레이 색</span>
+        <span>{copy.inspector.overlayColor}</span>
         <input type="text" value={c.overlayColor} disabled={disabled} onChange={(event) => onUpdate({ overlayColor: event.target.value })} />
       </label>
       <label>
-        <span>패럴랙스 속도 (0~2)</span>
+        <span>{copy.inspector.speed}</span>
         <input
           type="number"
           step="0.05"
@@ -108,12 +123,12 @@ function ParallaxBgInspector({
         />
       </label>
       <label>
-        <span>제목</span>
-        <input type="text" value={c.contentTitle} disabled={disabled} onChange={(event) => onUpdate({ contentTitle: event.target.value })} />
+        <span>{copy.inspector.title}</span>
+        <input type="text" value={contentTitle} disabled={disabled} onChange={(event) => onUpdate({ contentTitle: event.target.value })} />
       </label>
       <label>
-        <span>부제</span>
-        <textarea rows={2} value={c.contentSubtitle} disabled={disabled} onChange={(event) => onUpdate({ contentSubtitle: event.target.value })} />
+        <span>{copy.inspector.subtitle}</span>
+        <textarea rows={2} value={contentSubtitle} disabled={disabled} onChange={(event) => onUpdate({ contentSubtitle: event.target.value })} />
       </label>
     </>
   );
@@ -128,8 +143,8 @@ export default defineComponent({
     imageUrl: '',
     overlayColor: 'rgba(15, 23, 42, 0.4)',
     speed: 0.4,
-    contentTitle: '신뢰의 법무 파트너',
-    contentSubtitle: '한국과 대만, 두 사법체계를 잇는 자문',
+    contentTitle: PARALLAX_BG_LEGACY_DEFAULTS.title,
+    contentSubtitle: PARALLAX_BG_LEGACY_DEFAULTS.subtitle,
   },
   defaultStyle: {},
   defaultRect: { width: 720, height: 360 },

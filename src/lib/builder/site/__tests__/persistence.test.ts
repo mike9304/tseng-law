@@ -1,13 +1,20 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import os from 'os';
+import path from 'path';
+import { mkdtemp, rm } from 'fs/promises';
 import {
+  deletePageCanvasRecord,
   mergeLatestPagePublishMetaForWrite,
   mergeUntouchedPageSeoForWrite,
+  readPageCanvas,
   reconcileSiteDocumentInstalledAppsForWrite,
   reconcileSiteDocumentNavigationForWrite,
   reconcileSiteDocumentPagesForWrite,
   reconcileSiteDocumentRedirectsForWrite,
   reconcileSiteDocumentUninstalledAppsForWrite,
+  writePageCanvas,
 } from '@/lib/builder/site/persistence';
+import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import type { BuilderInstalledApp, BuilderUninstalledAppArchive } from '@/lib/builder/apps/types';
 import type { BuilderNavItem, BuilderPageMeta, BuilderSiteDocument, SiteRedirect } from '@/lib/builder/site/types';
 
@@ -549,5 +556,46 @@ describe('mergeUntouchedPageSeoForWrite', () => {
     expect(Object.prototype.hasOwnProperty.call(nextHome, 'seo')).toBe(true);
     expect(mergeUntouchedPageSeoForWrite(next, latest).pages[0]?.seo)
       .toBeUndefined();
+  });
+});
+
+describe('deletePageCanvasRecord', () => {
+  const previousRoot = process.env.BUILDER_SITE_ROOT;
+  const previousBackend = process.env.BUILDER_SITE_BACKEND;
+  let tempRoot = '';
+
+  beforeEach(async () => {
+    tempRoot = await mkdtemp(path.join(os.tmpdir(), 'builder-site-persistence-'));
+    process.env.BUILDER_SITE_ROOT = tempRoot;
+    process.env.BUILDER_SITE_BACKEND = 'local';
+  });
+
+  afterEach(async () => {
+    if (previousRoot === undefined) delete process.env.BUILDER_SITE_ROOT;
+    else process.env.BUILDER_SITE_ROOT = previousRoot;
+    if (previousBackend === undefined) delete process.env.BUILDER_SITE_BACKEND;
+    else process.env.BUILDER_SITE_BACKEND = previousBackend;
+    await rm(tempRoot, { recursive: true, force: true });
+  });
+
+  it('removes a local page canvas variant', async () => {
+    const document: BuilderCanvasDocument = {
+      version: 1,
+      locale: 'ko',
+      updatedAt: '2026-06-21T00:00:00.000Z',
+      updatedBy: 'rollback-test',
+      stageWidth: 1280,
+      stageHeight: 720,
+      nodes: [],
+    };
+
+    await writePageCanvas('rollback-site', 'rollback-page', 'published', document);
+    await expect(readPageCanvas('rollback-site', 'rollback-page', 'published'))
+      .resolves.toMatchObject({ updatedBy: 'rollback-test' });
+
+    await deletePageCanvasRecord('rollback-site', 'rollback-page', 'published');
+
+    await expect(readPageCanvas('rollback-site', 'rollback-page', 'published'))
+      .resolves.toBeNull();
   });
 });

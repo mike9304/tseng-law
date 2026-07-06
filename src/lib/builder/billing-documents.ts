@@ -164,7 +164,31 @@ function documentTypeLabel(type: BillingDocumentType): string {
   return type === 'invoice' ? 'Invoice' : 'Receipt';
 }
 
-function documentStatusLabel(status: BillingDocumentStatus): string {
+function documentStatusLabel(locale: Locale, status: BillingDocumentStatus): string {
+  if (locale === 'ko') {
+    switch (status) {
+      case 'emailed_stub':
+        return '이메일 발송됨';
+      case 'voided':
+        return '무효';
+      case 'superseded':
+        return '대체됨';
+      default:
+        return '발행됨';
+    }
+  }
+  if (locale === 'zh-hant') {
+    switch (status) {
+      case 'emailed_stub':
+        return '已寄送';
+      case 'voided':
+        return '已作廢';
+      case 'superseded':
+        return '已取代';
+      default:
+        return '已開立';
+    }
+  }
   switch (status) {
     case 'emailed_stub':
       return 'Email queued';
@@ -177,7 +201,31 @@ function documentStatusLabel(status: BillingDocumentStatus): string {
   }
 }
 
-function shareStatusLabel(status: BillingDocumentShareStatus): string {
+function shareStatusLabel(locale: Locale, status: BillingDocumentShareStatus): string {
+  if (locale === 'ko') {
+    switch (status) {
+      case 'active':
+        return '공유 활성';
+      case 'expired':
+        return '공유 만료';
+      case 'revoked':
+        return '공유 취소';
+      default:
+        return '공유 링크 없음';
+    }
+  }
+  if (locale === 'zh-hant') {
+    switch (status) {
+      case 'active':
+        return '分享啟用';
+      case 'expired':
+        return '分享過期';
+      case 'revoked':
+        return '分享撤銷';
+      default:
+        return '無分享連結';
+    }
+  }
   switch (status) {
     case 'active':
       return 'Share active';
@@ -202,12 +250,98 @@ function isPaidStatus(status: CommerceOrderPaymentStatus | Booking['paymentStatu
   return status === 'paid' || status === 'partially_refunded' || status === 'partial-refund' || status === 'refunded';
 }
 
-function paymentStatusLabel(status: CommerceOrderPaymentStatus | Booking['paymentStatus']): string {
-  if (!status) return 'No payment';
+function paymentStatusLabel(locale: Locale, status: string | null | undefined): string {
+  if (!status) return locale === 'ko' ? '결제 없음' : locale === 'zh-hant' ? '無付款' : 'No payment';
+  if (locale === 'ko') {
+    switch (status) {
+      case 'requires_manual_payment':
+        return '수동 결제 필요';
+      case 'partially_paid':
+        return '부분 결제됨';
+      case 'authorized_stub':
+        return '승인됨';
+      case 'paid':
+        return '결제 완료';
+      case 'failed':
+        return '결제 실패';
+      case 'partially_refunded':
+      case 'partial-refund':
+        return '부분 환불됨';
+      case 'refunded':
+        return '환불됨';
+      case 'unpaid':
+        return '미결제';
+      case 'pending':
+        return '대기';
+      case 'succeeded':
+        return '성공';
+      case 'canceled':
+        return '취소됨';
+      default:
+        return status;
+    }
+  }
+  if (locale === 'zh-hant') {
+    switch (status) {
+      case 'requires_manual_payment':
+        return '需要手動付款';
+      case 'partially_paid':
+        return '部分付款';
+      case 'authorized_stub':
+        return '已授權';
+      case 'paid':
+        return '已付款';
+      case 'failed':
+        return '付款失敗';
+      case 'partially_refunded':
+      case 'partial-refund':
+        return '部分退款';
+      case 'refunded':
+        return '已退款';
+      case 'unpaid':
+        return '未付款';
+      case 'pending':
+        return '待處理';
+      case 'succeeded':
+        return '成功';
+      case 'canceled':
+        return '已取消';
+      default:
+        return status;
+    }
+  }
   return status.replace(/_/g, ' ');
 }
 
-function paymentLinkStatusLabel(status: BillingDocumentPaymentLinkStatus): string {
+function paymentLinkStatusLabel(locale: Locale, status: BillingDocumentPaymentLinkStatus): string {
+  if (locale === 'ko') {
+    switch (status) {
+      case 'active':
+        return '결제 링크 활성';
+      case 'expired':
+        return '결제 링크 만료';
+      case 'revoked':
+        return '결제 링크 취소';
+      case 'not_created':
+        return '결제 링크 없음';
+      default:
+        return '사용 불가';
+    }
+  }
+  if (locale === 'zh-hant') {
+    switch (status) {
+      case 'active':
+        return '付款連結啟用';
+      case 'expired':
+        return '付款連結過期';
+      case 'revoked':
+        return '付款連結撤銷';
+      case 'not_created':
+        return '無付款連結';
+      default:
+        return '不可用';
+    }
+  }
   switch (status) {
     case 'active':
       return 'Pay link active';
@@ -451,7 +585,7 @@ function orderRow(order: CommerceOrder, document: CommerceOrderDocument): Builde
     type: document.type,
     typeLabel: documentTypeLabel(document.type),
     status: document.status,
-    statusLabel: documentStatusLabel(document.status),
+    statusLabel: documentStatusLabel(locale, document.status),
     locale,
     currency: document.currency,
     totalAmount: document.totalCents,
@@ -472,7 +606,7 @@ function orderRow(order: CommerceOrder, document: CommerceOrderDocument): Builde
     supersedesDocumentId: document.supersedesDocumentId,
     supersededByDocumentId: document.supersededByDocumentId,
     shareStatus,
-    shareStatusLabel: shareStatusLabel(shareStatus),
+    shareStatusLabel: shareStatusLabel(locale, shareStatus),
     shareLinkCreatedAt: document.shareLinkCreatedAt,
     shareLinkExpiresAt: document.shareLinkExpiresAt,
     shareLinkRevokedAt: document.shareLinkRevokedAt,
@@ -482,11 +616,11 @@ function orderRow(order: CommerceOrder, document: CommerceOrderDocument): Builde
     downloadCount: document.downloadCount ?? 0,
     detailHref: `/${locale}/admin-builder/commerce/orders`,
     paymentStatus: order.payment.status,
-    paymentStatusLabel: paymentStatusLabel(order.payment.status),
+    paymentStatusLabel: paymentStatusLabel(locale, order.payment.status),
     paymentReferenceId: order.payment.referenceId,
     paymentLinkId: document.paymentLinkId,
     paymentLinkStatus: payLinkStatus,
-    paymentLinkStatusLabel: paymentLinkStatusLabel(payLinkStatus),
+    paymentLinkStatusLabel: paymentLinkStatusLabel(locale, payLinkStatus),
     paymentReconciliationStatus: reconciliationStatus,
     paymentReconciliationStatusLabel: paymentReconciliationStatusLabel(reconciliationStatus),
     paymentLinkRenewalNeeded: reconciliationStatus === 'renew_required',
@@ -501,7 +635,7 @@ function orderRow(order: CommerceOrder, document: CommerceOrderDocument): Builde
     lines,
     details: [
       { label: 'Order', value: order.confirmationNumber },
-      { label: 'Payment', value: order.payment.status },
+      { label: 'Payment', value: paymentStatusLabel(locale, order.payment.status) },
       ...(document.voidReason ? [{ label: 'Lifecycle note', value: document.voidReason }] : []),
       ...(document.supersedesDocumentId ? [{ label: 'Supersedes', value: document.supersedesDocumentId }] : []),
       ...(document.supersededByDocumentId ? [{ label: 'Superseded by', value: document.supersededByDocumentId }] : []),
@@ -540,7 +674,7 @@ function bookingRow(
     type: document.type,
     typeLabel: documentTypeLabel(document.type),
     status: document.status,
-    statusLabel: documentStatusLabel(document.status),
+    statusLabel: documentStatusLabel(locale, document.status),
     locale,
     currency: document.currency,
     totalAmount: document.amount,
@@ -561,7 +695,7 @@ function bookingRow(
     supersedesDocumentId: document.supersedesDocumentId,
     supersededByDocumentId: document.supersededByDocumentId,
     shareStatus,
-    shareStatusLabel: shareStatusLabel(shareStatus),
+    shareStatusLabel: shareStatusLabel(locale, shareStatus),
     shareLinkCreatedAt: document.shareLinkCreatedAt,
     shareLinkExpiresAt: document.shareLinkExpiresAt,
     shareLinkRevokedAt: document.shareLinkRevokedAt,
@@ -571,11 +705,11 @@ function bookingRow(
     downloadCount: document.downloadCount ?? 0,
     detailHref: `/${locale}/admin-builder/bookings/dashboard`,
     paymentStatus: booking.paymentStatus,
-    paymentStatusLabel: paymentStatusLabel(booking.paymentStatus),
+    paymentStatusLabel: paymentStatusLabel(locale, booking.paymentStatus),
     paymentReferenceId: bookingPaymentReference(booking),
     paymentLinkId: document.paymentLinkId,
     paymentLinkStatus: payLinkStatus,
-    paymentLinkStatusLabel: paymentLinkStatusLabel(payLinkStatus),
+    paymentLinkStatusLabel: paymentLinkStatusLabel(locale, payLinkStatus),
     paymentReconciliationStatus: reconciliationStatus,
     paymentReconciliationStatusLabel: paymentReconciliationStatusLabel(reconciliationStatus),
     paymentLinkRenewalNeeded: reconciliationStatus === 'renew_required',
@@ -602,7 +736,7 @@ function bookingRow(
       ...(document.supersedesDocumentId ? [{ label: 'Supersedes', value: document.supersedesDocumentId }] : []),
       ...(document.supersededByDocumentId ? [{ label: 'Superseded by', value: document.supersededByDocumentId }] : []),
       { label: 'Start', value: booking.startAt },
-      { label: 'Payment', value: booking.paymentStatus ?? 'unpaid' },
+      { label: 'Payment', value: paymentStatusLabel(locale, booking.paymentStatus) },
     ],
   });
 }

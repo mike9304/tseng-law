@@ -19,9 +19,11 @@ import {
 } from '@/lib/builder/seo/hreflang';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { defaultLocale, locales, type Locale } from '@/lib/locales';
 import { buildAbsoluteUrl, getSiteUrl } from '@/lib/seo';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
+import { isInternalSandboxPage } from '@/lib/builder/site/internal-pages';
 
 export interface BuilderSitemapEntry {
   url: string;
@@ -36,6 +38,7 @@ function isPublic(page: BuilderPageMeta): boolean {
   if (page.noIndex) return false;
   if (page.seo?.noIndex) return false;
   if (page.password) return false;
+  if (isInternalSandboxPage(page)) return false;
   return true;
 }
 
@@ -48,7 +51,7 @@ export async function collectBuilderSitemapEntriesForLocale(
 ): Promise<BuilderSitemapEntry[]> {
   let site: BuilderSiteDocument;
   try {
-    site = await readSiteDocument('default', locale);
+    site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, locale);
   } catch {
     return [];
   }

@@ -1,15 +1,34 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError } from 'zod';
+import type { Locale } from '@/lib/locales';
+import { normalizeLocale } from '@/lib/locales';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { readNativeBlogAdminModel } from '@/lib/builder/blog/admin-storage';
+import {
+  type BuilderBlogApiErrorCode,
+  getBuilderBlogApiErrorPayload,
+} from '@/lib/builder/blog/blog-api-copy';
 import { columnLocaleSchema } from '@/lib/builder/columns/types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderBlogApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderBlogApiErrorPayload(locale, errorCode), ...extras },
+    { status },
+  );
+}
+
 export async function GET(request: NextRequest) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   try {
     const locale = columnLocaleSchema.parse(request.nextUrl.searchParams.get('locale') ?? 'ko');
@@ -17,15 +36,9 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ ok: true, model });
   } catch (error) {
     if (error instanceof ZodError) {
-      return NextResponse.json(
-        { ok: false, error: 'validation_error', issues: error.flatten() },
-        { status: 400 },
-      );
+      return errorResponse(errorLocale, 'validation_error', 400, { issues: error.flatten() });
     }
     console.error('[builder/blog/admin] GET failed:', error);
-    return NextResponse.json(
-      { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
-      { status: 500 },
-    );
+    return errorResponse(errorLocale, 'blog_admin_load_failed', 500);
   }
 }

@@ -1,0 +1,61 @@
+.originChip.originChip {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  min-height: 20px;
+  gap: 4px;
+  padding: 2px 7px;
+  overflow: hidden;
+  border: 1px solid var(--origin-border, #cbd5e1);
+  border-radius: 999px;
+  background: var(--origin-bg, #f8fafc);
+  color: var(--origin-fg, #64748b);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.originChip[data-builder-style-origin='theme'] {
+  --origin-bg: rgba(29, 78, 216, 0.12);
+  --origin-border: rgba(29, 78, 216, 0.34);
+  --origin-fg: #1d4ed8;
+}
+
+.originChip[data-builder-style-origin='variant'] {
+  --origin-bg: rgba(16, 185, 129, 0.13);
+  --origin-border: rgba(16, 185, 129, 0.35);
+  --origin-fg: #047857;
+}
+
+.originChip[data-builder-style-origin='manual'] {
+  --origin-bg: rgba(245, 158, 11, 0.14);
+  --origin-border: rgba(245, 158, 11, 0.4);
+  --origin-fg: #b45309;
+}
+
+.originChip[data-builder-style-origin='default'] {
+  --origin-bg: rgba(148, 163, 184, 0.14);
+  --origin-border: rgba(148, 163, 184, 0.38);
+  --origin-fg: #64748b;
+}
+
+.originChip .originChipDot {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+  color: inherit;
+  box-shadow: 0 0 0 2px color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.originChip .originChipLabel {
+  min-width: 0;
+  overflow: hidden;
+  color: inherit;
+  text-overflow: ellipsis;
+}

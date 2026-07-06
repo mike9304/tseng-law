@@ -1,0 +1,130 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  color: #334155;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.label {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.control {
+  width: 100%;
+  min-height: 34px;
+  box-sizing: border-box;
+  border: 1px solid #dbe3ec;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 0.82rem;
+  outline: none;
+  padding: 6px 10px;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    background 140ms ease;
+}
+
+.control:hover:not(:disabled) {
+  border-color: #b8c4d6;
+}
+
+.control:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.14);
+}
+
+.control:disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.control[data-invalid='true'] {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.helpText {
+  color: #64748b;
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+
+.errorText {
+  color: #dc2626;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.secondaryButton,
+.dangerButton {
+  align-self: flex-start;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 5px 9px;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.secondaryButton {
+  border: 1px solid #dbe3ec;
+  background: #f8fafc;
+  color: #334155;
+}
+
+.secondaryButton:hover:not(:disabled) {
+  border-color: #b8c4d6;
+  background: #f1f5f9;
+}
+
+.dangerButton {
+  border: 1px solid #fecaca;
+  background: #fff7f7;
+  color: #b91c1c;
+}
+
+.dangerButton:hover:not(:disabled) {
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+
+.secondaryButton:focus-visible,
+.dangerButton:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.14);
+}
+
+.secondaryButton:disabled,
+.dangerButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+}
+
+.advancedFields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

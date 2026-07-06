@@ -4,6 +4,12 @@ import type { BuilderFormSubmitCanvasNode } from '@/lib/builder/canvas/types';
 import type { BuilderTheme } from '@/lib/builder/site/types';
 import { resolveThemeColor } from '@/lib/builder/site/theme';
 import { useBuilderFormRuntime } from '@/lib/builder/forms/runtime-context';
+import type { Locale } from '@/lib/locales';
+import {
+  FORM_SUBMIT_KO_DEFAULTS,
+  getFormControlsCopy,
+  localizedFormControlText,
+} from '../form/form-controls-copy';
 
 interface ResolvedStyle {
   background: string;
@@ -36,12 +42,21 @@ export default function FormSubmitElement({
   node,
   theme,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderFormSubmitCanvasNode;
   theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getFormControlsCopy(locale);
+  const label = localizedFormControlText(c.label, copy.fieldDefaults.submitLabel, FORM_SUBMIT_KO_DEFAULTS.label);
+  const loadingLabel = localizedFormControlText(
+    c.loadingLabel,
+    copy.fieldDefaults.submitLoadingLabel,
+    FORM_SUBMIT_KO_DEFAULTS.loadingLabel,
+  );
   const styleProps = getStyleProps(c.style, theme);
   const runtime = useBuilderFormRuntime();
   const hiddenByStep = runtime?.mode === 'published' && !runtime.isLastStep;
@@ -66,9 +81,9 @@ export default function FormSubmitElement({
         display: hiddenByStep ? 'none' : undefined,
       }}
       data-builder-form-submit="true"
-      data-loading-label={c.loadingLabel}
+      data-loading-label={loadingLabel}
     >
-      {c.label}
+      {label}
     </button>
   );
 }

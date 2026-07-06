@@ -4,13 +4,16 @@ import type {
   BuilderSeoChecklistSettings,
   BuilderSiteDocument,
 } from '@/lib/builder/site/types';
+import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
+import { resolveLocaleSeo } from '@/lib/builder/translations/seo-projection';
 import {
   type BuilderSeoValidationIssue,
   validateBuilderPageSeo,
 } from '@/lib/builder/seo/validation';
 import { buildSeoAssistantTasks, type BuilderSeoAssistantTask } from '@/lib/builder/seo/assistant';
 import { mergeSeoWithDefaults } from '@/lib/builder/seo/defaults';
+import { getSeoOverviewCopy } from '@/lib/builder/seo/overview-copy';
 
 export interface BuilderSeoPageAudit {
   pageId: string;
@@ -126,7 +129,9 @@ export function buildBuilderSeoOverview(input: {
   canvasesByPageId?: Map<string, BuilderCanvasDocument | null>;
 }): BuilderSeoOverview {
   const { site } = input;
-  const checklistSettings = site.settings?.seoChecklist ?? {};
+  const resolvedSettings = resolveBuilderSiteSettings(site.settings, site.locale);
+  const checklistSettings = resolvedSettings?.seoChecklist ?? site.settings?.seoChecklist ?? {};
+  const copy = getSeoOverviewCopy(site.locale);
   const keywords = (checklistSettings.keywords ?? [])
     .map((keyword) => keyword.trim().toLowerCase())
     .filter(Boolean)
@@ -134,14 +139,23 @@ export function buildBuilderSeoOverview(input: {
 
   const pages = site.pages.map((page) => {
     const canvas = input.canvasesByPageId?.get(page.pageId) ?? null;
-    const issues = validateBuilderPageSeo({ page, site, seo: page.seo });
+    const effectiveSeo = {
+      ...(page.seo ?? {}),
+      ...resolveLocaleSeo(page, page.locale),
+    };
+    const effectivePage = {
+      ...page,
+      seo: Object.keys(effectiveSeo).length > 0 ? effectiveSeo : undefined,
+    };
+    const issues = validateBuilderPageSeo({ page: effectivePage, site, seo: effectivePage.seo });
     const resolvedSeo = mergeSeoWithDefaults({
-      page,
+      page: effectivePage,
       site,
       siteUrl: 'https://example.com',
       locale: page.locale,
+      seo: effectivePage.seo,
     });
-    const assistantTasks = buildSeoAssistantTasks({ page, site, canvas });
+    const assistantTasks = buildSeoAssistantTasks({ page: effectivePage, site, canvas });
     const h1Count = countH1(canvas);
     const { imageCount, imagesMissingAlt } = imageStats(canvas);
     const haystack = [
@@ -181,49 +195,53 @@ export function buildBuilderSeoOverview(input: {
   const averageScore = pages.length
     ? Math.round(pages.reduce((sum, page) => sum + page.score, 0) / pages.length)
     : 0;
+  const missingSeoFields = pages.filter((page) => page.issues.some((issue) => issue.id.endsWith('missing'))).length;
+  const indexablePublishedPages = pages.filter((page) => page.published && page.indexable).length;
+  const h1CleanupPages = pages.filter((page) => page.h1Count !== 1).length;
+  const missingAltImages = pages.reduce((sum, page) => sum + page.imagesMissingAlt, 0);
 
   const checklist: BuilderSeoChecklistItem[] = [
     {
       id: 'business-name',
-      label: 'Business name',
-      status: checklistSettings.businessName || site.settings?.firmName ? 'done' : 'todo',
-      detail: checklistSettings.businessName || site.settings?.firmName || 'SEO checklist에 business name을 입력하세요.',
+      label: copy.businessNameLabel,
+      status: checklistSettings.businessName || resolvedSettings?.firmName ? 'done' : 'todo',
+      detail: checklistSettings.businessName || resolvedSettings?.firmName || copy.businessNameMissing,
     },
     {
       id: 'keywords',
-      label: 'Keywords',
+      label: copy.keywordsLabel,
       status: keywords.length > 0 ? 'done' : 'todo',
-      detail: keywords.length > 0 ? `${keywords.length}/5 keywords configured` : '최대 5개 focus keyword를 설정하세요.',
+      detail: keywords.length > 0 ? copy.keywordsConfigured(keywords.length) : copy.keywordsMissing,
     },
     {
       id: 'seo-fields',
-      label: 'Page SEO fields',
-      status: pages.every((page) => !page.issues.some((issue) => issue.id.endsWith('missing'))) ? 'done' : 'warning',
-      detail: `${pages.filter((page) => page.issues.some((issue) => issue.id.endsWith('missing'))).length} page(s) missing title or description`,
+      label: copy.seoFieldsLabel,
+      status: missingSeoFields === 0 ? 'done' : 'warning',
+      detail: copy.seoFieldsMissing(missingSeoFields),
     },
     {
       id: 'indexable',
-      label: 'Indexable public pages',
-      status: pages.some((page) => page.published && page.indexable) ? 'done' : 'todo',
-      detail: `${pages.filter((page) => page.published && page.indexable).length} published indexable page(s)`,
+      label: copy.indexableLabel,
+      status: indexablePublishedPages > 0 ? 'done' : 'todo',
+      detail: copy.indexablePages(indexablePublishedPages),
     },
     {
       id: 'h1',
-      label: 'One H1 per page',
-      status: pages.every((page) => page.h1Count === 1) ? 'done' : 'warning',
-      detail: `${pages.filter((page) => page.h1Count !== 1).length} page(s) need H1 cleanup`,
+      label: copy.h1Label,
+      status: h1CleanupPages === 0 ? 'done' : 'warning',
+      detail: copy.h1Cleanup(h1CleanupPages),
     },
     {
       id: 'image-alt',
-      label: 'Image alt text',
-      status: pages.every((page) => page.imagesMissingAlt === 0) ? 'done' : 'warning',
-      detail: `${pages.reduce((sum, page) => sum + page.imagesMissingAlt, 0)} image(s) missing alt text`,
+      label: copy.imageAltLabel,
+      status: missingAltImages === 0 ? 'done' : 'warning',
+      detail: copy.imageAltMissing(missingAltImages),
     },
     {
       id: 'blockers',
-      label: 'Publish blockers',
+      label: copy.blockersLabel,
       status: blockers === 0 ? 'done' : 'todo',
-      detail: `${blockers} blocker issue(s) across builder pages`,
+      detail: copy.blockers(blockers),
     },
   ];
 

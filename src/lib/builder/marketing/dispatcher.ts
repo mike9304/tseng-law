@@ -9,14 +9,15 @@ import {
 } from './campaign-storage';
 import { listActiveSubscribersForTags, getSubscriberByEmail } from './subscriber-storage';
 import { renderCampaignForSubscriber } from './template-renderer';
+import { sendMarketingEmail } from './email-provider';
 
 /**
  * PR #4 — Email Marketing dispatcher.
  *
- * Sends one campaign in batches via Resend (or a local stub when RESEND_API_KEY is
- * unset). Recipients are materialized lazily — when send() is called the first
- * time, we expand the campaign's segmentTags into a fixed recipient set and
- * persist them, so subsequent batches resume from the same list.
+ * Sends one campaign in batches through the configured marketing email provider.
+ * Recipients are materialized lazily: when send() is called the first time, we
+ * expand segmentTags into a fixed recipient set and persist it so later batches
+ * resume from the same list.
  */
 
 interface SendResult {
@@ -32,47 +33,6 @@ function getBaseUrl(): string {
   const env = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || '';
   if (env) return env.replace(/\/+$/, '');
   return 'https://tseng-law.com';
-}
-
-async function sendOne(args: {
-  to: string;
-  fromName: string;
-  fromAddress: string;
-  subject: string;
-  html: string;
-  text: string;
-}): Promise<{ ok: boolean; id?: string; error?: string }> {
-  const apiKey = process.env.RESEND_API_KEY ?? '';
-  if (!apiKey) {
-    if (process.env.NODE_ENV === 'production') {
-      return { ok: false, error: 'RESEND_API_KEY unset in production' };
-    }
-    return { ok: true, id: `stub_${Date.now()}` };
-  }
-  try {
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: `${args.fromName} <${args.fromAddress}>`,
-        to: args.to,
-        subject: args.subject,
-        html: args.html,
-        text: args.text,
-      }),
-    });
-    if (!res.ok) {
-      const detail = await res.text().catch(() => '');
-      return { ok: false, error: `${res.status} ${detail.slice(0, 200)}` };
-    }
-    const data = (await res.json()) as { id?: string };
-    return { ok: true, id: data.id };
-  } catch (err) {
-    return { ok: false, error: err instanceof Error ? err.message : String(err) };
-  }
 }
 
 async function ensureRecipients(campaign: Campaign): Promise<void> {
@@ -160,7 +120,7 @@ async function sendCampaignBatchInner(args: {
       trackingToken: recipient.trackingToken,
       baseUrl,
     });
-    const sent = await sendOne({
+    const sent = await sendMarketingEmail({
       to: recipient.email,
       fromName: campaign.fromName,
       fromAddress: campaign.fromAddress,
@@ -247,7 +207,7 @@ export async function sendTestEmail(args: {
     trackingToken: 'preview-tracking',
     baseUrl: getBaseUrl(),
   });
-  const sent = await sendOne({
+  const sent = await sendMarketingEmail({
     to: args.testEmail,
     fromName: args.campaign.fromName,
     fromAddress: args.campaign.fromAddress,

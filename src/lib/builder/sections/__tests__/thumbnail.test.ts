@@ -113,6 +113,7 @@ describe('buildSavedSectionThumbnailSvg', () => {
     expect(result).toMatch(/<svg/);
     expect(result).toMatch(/<\/svg>/);
     expect(result.length).toBeGreaterThan(80);
+    expect(result).not.toContain('style=');
     // text fill (#cbd5e1) should be present in the kind color set
     expect(result).toContain('#cbd5e1');
   });

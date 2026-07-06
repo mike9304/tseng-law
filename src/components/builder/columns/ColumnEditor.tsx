@@ -8,6 +8,7 @@ import Placeholder from '@tiptap/extension-placeholder';
 import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import ColumnTranslationStatusAlert from '@/components/builder/translations/ColumnTranslationStatusAlert';
 import type { BuilderAssetListItem } from '@/lib/builder/assets';
+import { getColumnEditCopy } from '@/components/builder/columns/column-edit-copy';
 import type { Locale } from '@/lib/locales';
 
 interface ColumnEditorProps {
@@ -118,6 +119,7 @@ export default function ColumnEditor({
   initialContent,
   onSaveStatus,
 }: ColumnEditorProps) {
+  const copy = getColumnEditCopy(locale);
   const [title, setTitle] = useState(initialContent.title);
   const [summary, setSummary] = useState(initialContent.summary);
   const [summaryOpen, setSummaryOpen] = useState(false);
@@ -135,7 +137,7 @@ export default function ColumnEditor({
         link: { openOnClick: false, HTMLAttributes: { rel: 'noopener noreferrer nofollow' } },
       }),
       Image,
-      Placeholder.configure({ placeholder: '칼럼 본문을 여기에 작성하세요...' }),
+      Placeholder.configure({ placeholder: copy.editor.bodyPlaceholder }),
     ],
     content: initialContent.bodyHtml || '<p></p>',
     editorProps: {
@@ -227,21 +229,36 @@ export default function ColumnEditor({
         { method: 'POST' },
       );
       if (res.ok) {
+        const data = await res.json().catch(() => ({})) as {
+          slugRedirect?: {
+            status?: string;
+            redirects?: unknown[];
+            redirect?: unknown;
+            skipReason?: string;
+          } | null;
+        };
         setSaveStatus('saved');
         onSaveStatus?.('saved');
-        alert('발행 완료! AI 상담사 인덱싱이 백그라운드에서 진행됩니다.');
+        const redirectCount = data.slugRedirect?.redirects?.length
+          ?? (data.slugRedirect?.redirect ? 1 : 0);
+        const redirectCopy = redirectCount > 0
+          ? copy.editor.publishAlerts.redirect(redirectCount)
+          : data.slugRedirect?.status === 'skipped'
+            ? copy.editor.publishAlerts.redirectSkipped(data.slugRedirect.skipReason ?? 'no change')
+            : '';
+        alert(`${copy.editor.publishAlerts.success}${redirectCopy}`);
       } else {
         const data = await res.json().catch(() => ({}));
-        alert(`발행 실패: ${(data as { error?: string }).error || res.status}`);
+        alert(copy.editor.publishAlerts.failure((data as { error?: string }).error || res.status));
         setSaveStatus('error');
         onSaveStatus?.('error');
       }
     } catch {
-      alert('발행 중 네트워크 오류가 발생했습니다.');
+      alert(copy.editor.publishAlerts.networkError);
       setSaveStatus('error');
       onSaveStatus?.('error');
     }
-  }, [save, slug, locale, onSaveStatus]);
+  }, [save, slug, locale, onSaveStatus, copy]);
 
   const insertAssetImage = useCallback((asset: BuilderAssetListItem) => {
     editor
@@ -258,7 +275,11 @@ export default function ColumnEditor({
           <span className="column-editor-slug">/{slug}</span>
           <span className="column-editor-locale">{locale}</span>
           <span className={`column-editor-save-state is-${saveStatus}`}>
-            {saveStatus === 'saving' ? '저장 중' : saveStatus === 'error' ? '저장 실패' : '저장됨'}
+            {saveStatus === 'saving'
+              ? copy.editor.saveStateSaving
+              : saveStatus === 'error'
+                ? copy.editor.saveStateError
+                : copy.editor.saveStateSaved}
           </span>
         </div>
         <div className="column-editor-topbar-right">
@@ -269,13 +290,13 @@ export default function ColumnEditor({
             target="_blank"
             rel="noreferrer"
           >
-            공개 페이지
+            {copy.editor.publicPage}
           </a>
           <button type="button" className="column-editor-btn-save" onClick={() => save()}>
-            저장
+            {copy.editor.save}
           </button>
           <button type="button" className="column-editor-btn-publish" onClick={handlePublish}>
-            발행
+            {copy.editor.publish}
           </button>
         </div>
       </div>
@@ -287,7 +308,7 @@ export default function ColumnEditor({
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="칼럼 제목"
+            placeholder={copy.editor.titlePlaceholder}
           />
         </label>
       </div>
@@ -361,34 +382,34 @@ export default function ColumnEditor({
           onClick={() => editor?.chain().focus().toggleBlockquote().run()}
           className={editor?.isActive('blockquote') ? 'is-active' : ''}
         >
-          인용
+          {copy.editor.toolbarButtons.blockquote}
         </button>
         <button
           type="button"
           onClick={() => editor?.chain().focus().toggleCodeBlock().run()}
           className={editor?.isActive('codeBlock') ? 'is-active' : ''}
         >
-          코드
+          {copy.editor.toolbarButtons.codeBlock}
         </button>
         <button type="button" onClick={() => editor?.chain().focus().setHorizontalRule().run()}>
-          구분선
+          {copy.editor.toolbarButtons.horizontalRule}
         </button>
         <button
           type="button"
           onClick={() => {
-            const url = prompt('링크 URL:');
+            const url = prompt(copy.editor.linkPrompt);
             if (url) editor?.chain().focus().setLink({ href: url }).run();
           }}
           className={editor?.isActive('link') ? 'is-active' : ''}
         >
-          링크
+          {copy.editor.toolbarButtons.link}
         </button>
         <button
           type="button"
-          aria-label="Image"
+          aria-label={copy.editor.imageButtonAria}
           onClick={() => setAssetLibraryOpen(true)}
         >
-          사진
+          {copy.editor.imageButton}
         </button>
       </div>
 
@@ -399,18 +420,18 @@ export default function ColumnEditor({
         onToggle={(event) => setSummaryOpen(event.currentTarget.open)}
       >
         <summary>
-          <span>목록 설명</span>
-          <strong>{summary.trim() ? '직접 입력 사용 중' : '본문 앞부분으로 자동 생성'}</strong>
+          <span>{copy.editor.summary.label}</span>
+          <strong>{summary.trim() ? copy.editor.summary.direct : copy.editor.summary.auto}</strong>
         </summary>
         <label className="column-editor-field">
           <textarea
             className="column-editor-summary-input"
             value={summary}
             onChange={(e) => setSummary(e.target.value)}
-            placeholder="비워두면 본문 앞부분으로 자동 생성됩니다."
+            placeholder={copy.editor.summary.placeholder}
             rows={2}
           />
-          <small>티스토리처럼 제목과 본문만 쓰면 자동으로 목록 설명이 저장됩니다. 필요한 경우에만 직접 입력하세요.</small>
+          <small>{copy.editor.summary.help}</small>
         </label>
       </details>
       <AssetLibraryModal

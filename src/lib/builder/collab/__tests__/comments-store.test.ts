@@ -3,6 +3,8 @@ import { mkdtemp, rm } from 'fs/promises';
 import { tmpdir } from 'os';
 import path from 'path';
 import {
+  assignComment,
+  CommentParentNotFoundError,
   createComment,
   deleteComment,
   listComments,
@@ -71,7 +73,7 @@ describe('comments-store', () => {
     expect(resolved?.resolvedAt).toBeDefined();
 
     expect(await listComments('default', 'home')).toHaveLength(0);
-    const withResolved = await listComments('default', 'home', true);
+    const withResolved = await listComments('default', 'home', { includeResolved: true });
     expect(withResolved).toHaveLength(1);
     expect(withResolved[0].resolvedAt).toBeDefined();
 
@@ -89,7 +91,59 @@ describe('comments-store', () => {
     });
     expect(await deleteComment('default', 'home', created.id)).toBe(true);
     expect(await deleteComment('default', 'home', created.id)).toBe(false);
-    expect(await listComments('default', 'home', true)).toHaveLength(0);
+    expect(await listComments('default', 'home', { includeResolved: true })).toHaveLength(0);
+  });
+
+  it('persists reply parent links and rejects missing parents', async () => {
+    const root = await createComment({
+      siteId: 'default',
+      pageId: 'home',
+      author: 'alice',
+      body: 'root thread',
+    });
+
+    const reply = await createComment({
+      siteId: 'default',
+      pageId: 'home',
+      author: 'bob',
+      body: 'reply thread',
+      parentId: root.id,
+    });
+
+    const list = await listComments('default', 'home', { includeResolved: true });
+    expect(list.find((comment) => comment.id === reply.id)?.parentId).toBe(root.id);
+    await expect(
+      createComment({
+        siteId: 'default',
+        pageId: 'home',
+        author: 'charlie',
+        body: 'dangling reply',
+        parentId: 'missing-parent',
+      }),
+    ).rejects.toBeInstanceOf(CommentParentNotFoundError);
+  });
+
+  it('assigns, filters, and clears a comment assignee', async () => {
+    const first = await createComment({
+      siteId: 'default',
+      pageId: 'home',
+      author: 'alice',
+      body: 'assign me',
+    });
+    await createComment({
+      siteId: 'default',
+      pageId: 'home',
+      author: 'alice',
+      body: 'leave unassigned',
+    });
+
+    const assigned = await assignComment('default', 'home', first.id, 'reviewer-1');
+    expect(assigned?.assignee).toBe('reviewer-1');
+    const filtered = await listComments('default', 'home', { assignee: 'reviewer-1' });
+    expect(filtered.map((comment) => comment.id)).toEqual([first.id]);
+
+    const cleared = await assignComment('default', 'home', first.id);
+    expect(cleared?.assignee).toBeUndefined();
   });
 
   it('rejects empty bodies and trims input', async () => {

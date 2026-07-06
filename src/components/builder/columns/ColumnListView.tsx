@@ -10,6 +10,7 @@ import {
   getCategoryLabel,
   getColumnBlogCategory,
 } from '@/components/builder/columns/blogAdminMeta';
+import { getColumnListCopy } from '@/components/builder/columns/column-list-copy';
 import { locales, type Locale } from '@/lib/locales';
 import type { ColumnFrontmatter, ColumnListItem } from '@/lib/builder/columns/types';
 import type { NativeBlogPostStatus } from '@/lib/builder/blog/admin-model';
@@ -110,6 +111,7 @@ export default function ColumnListView({
   contentLocale,
   initialColumns,
 }: ColumnListViewProps) {
+  const copy = getColumnListCopy(routeLocale);
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
@@ -347,33 +349,33 @@ export default function ColumnListView({
 
   return (
     <main className="admin-console column-manager">
-      <div className="column-builder-return-dock" aria-label="Column manager quick navigation">
+      <div className="column-builder-return-dock" aria-label={copy.quickNavAria}>
         <Link
           className="column-builder-return-primary"
           href={`/${routeLocale}/admin-builder`}
-          aria-label="편집 홈 메뉴로 돌아가기"
+          aria-label={copy.backToHome}
         >
           <span>←</span>
-          <strong>편집기 홈으로 돌아가기</strong>
+          <strong>{copy.backToHome}</strong>
         </Link>
         <Link className="column-builder-return-secondary" href={`/${routeLocale}/columns`}>
-          공개 칼럼
+          {copy.publicColumns}
         </Link>
       </div>
       <header className="column-manager-hero">
         <div>
-          <span className="column-manager-eyebrow">Blog manager</span>
-          <h1>칼럼 관리</h1>
-          <p>카테고리별 칼럼을 검색하고, 초안 작성부터 발행까지 한 화면에서 관리합니다.</p>
+          <span className="column-manager-eyebrow">{copy.eyebrow}</span>
+          <h1>{copy.title}</h1>
+          <p>{copy.description}</p>
         </div>
         <div className="column-manager-hero-actions">
           <Link
             href={`/${routeLocale}/admin-builder`}
             className="admin-console-ghost-btn column-manager-back-btn"
           >
-            ← 편집기 홈으로 돌아가기
+            {copy.heroBack}
           </Link>
-          <nav className="admin-console-pill-nav" aria-label="Column locale tabs">
+          <nav className="admin-console-pill-nav" aria-label={copy.heroTabsAria}>
             {locales.map((locale) => {
               const href = `/${routeLocale}/admin-builder/columns?contentLocale=${locale}`;
               const active = locale === contentLocale;
@@ -390,7 +392,7 @@ export default function ColumnListView({
             onClick={handleQuickCreate}
             disabled={createPending}
           >
-            {createPending ? '새 글 여는 중...' : '+ 새 글 쓰기'}
+            {createPending ? copy.modal.pending : copy.newButton}
           </button>
         </div>
       </header>
@@ -398,38 +400,38 @@ export default function ColumnListView({
       <section className="blog-native-admin-strip" data-blog-native-admin>
         <article data-blog-admin-kpi="posts">
           <strong>{blogAdminStats.total}</strong>
-          <span>Posts</span>
+          <span>{copy.stats.posts}</span>
         </article>
         <article data-blog-admin-kpi="drafts">
           <strong>{blogAdminStats.draft}</strong>
-          <span>Drafts</span>
+          <span>{copy.stats.drafts}</span>
         </article>
         <article data-blog-admin-kpi="scheduled">
           <strong>{blogAdminStats.scheduled}</strong>
-          <span>Scheduled</span>
+          <span>{copy.stats.scheduled}</span>
         </article>
         <article data-blog-admin-kpi="published">
           <strong>{blogAdminStats.published}</strong>
-          <span>Published</span>
+          <span>{copy.stats.published}</span>
         </article>
         <article data-blog-admin-kpi="authors">
           <strong>{blogAdminStats.authors}</strong>
-          <span>Authors</span>
+          <span>{copy.stats.authors}</span>
         </article>
         <article data-blog-admin-kpi="taxonomy">
           <strong>{blogAdminStats.categories}/{blogAdminStats.tags}</strong>
-          <span>Categories / tags</span>
+          <span>{copy.stats.taxonomy}</span>
         </article>
       </section>
 
       <div className="column-manager-shell">
-        <aside className="column-manager-sidebar" aria-label="Column categories">
+        <aside className="column-manager-sidebar" aria-label={copy.sidebarAria}>
           <button
             type="button"
             className={activeCategory === 'all' ? 'is-active' : undefined}
             onClick={() => setActiveCategory('all')}
           >
-            <span>전체</span>
+            <span>{copy.allCategories}</span>
             <strong>{columns.length}</strong>
           </button>
           {BLOG_ADMIN_CATEGORIES.map((category) => (
@@ -445,39 +447,39 @@ export default function ColumnListView({
             </button>
           ))}
           <button type="button" className="column-manager-add-category" disabled>
-            + 새 카테고리
+            {copy.addCategory}
           </button>
         </aside>
 
         <section className="column-manager-main">
           <div className="column-manager-toolbar">
             <label className="column-manager-search">
-              <span>검색</span>
+              <span>{copy.searchLabel}</span>
               <input
                 type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="제목, slug, 태그, 저자 검색"
-                aria-label="칼럼 검색"
+                placeholder={copy.searchPlaceholder}
+                aria-label={copy.searchAria}
               />
             </label>
             <label className="column-manager-status-filter">
-              <span>Status</span>
+              <span>{copy.statusLabel}</span>
               <select
                 value={statusFilter}
                 onChange={(event) => setStatusFilter(event.target.value as BlogStatusFilter)}
                 data-blog-status-filter
               >
-                <option value="all">All statuses</option>
-                <option value="draft">Drafts</option>
-                <option value="scheduled">Scheduled</option>
-                <option value="published">Published</option>
-                <option value="needs-review">Needs revision</option>
+                <option value="all">{copy.statusOptions.all}</option>
+                <option value="draft">{copy.statusOptions.draft}</option>
+                <option value="scheduled">{copy.statusOptions.scheduled}</option>
+                <option value="published">{copy.statusOptions.published}</option>
+                <option value="needs-review">{copy.statusOptions.needsReview}</option>
               </select>
             </label>
             <div className="column-manager-count">
               <strong>{filteredColumns.length}</strong>
-              <span>posts</span>
+              <span>{copy.countLabel}</span>
             </div>
           </div>
 
@@ -486,15 +488,15 @@ export default function ColumnListView({
 
           {filteredColumns.length === 0 ? (
             <div className="admin-console-empty-state column-manager-empty">
-              <h3>아직 칼럼이 없습니다.</h3>
-              <p>새 글 쓰기를 누르면 바로 본문 작성 화면으로 이동합니다.</p>
+              <h3>{copy.empty.title}</h3>
+              <p>{copy.empty.description}</p>
               <button
                 type="button"
                 className="admin-console-primary-btn"
                 onClick={handleQuickCreate}
                 disabled={createPending}
               >
-                {createPending ? '새 글 여는 중...' : '첫 글 쓰기'}
+                {createPending ? copy.modal.pending : copy.empty.button}
               </button>
             </div>
           ) : (

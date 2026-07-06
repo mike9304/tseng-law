@@ -87,6 +87,77 @@ describe('parseAuditEvent', () => {
     expect((parsed as typeof SAMPLE_EVENT).assetId).toBe('asset-x');
   });
 
+  it('returns the parsed event for a translation site review acknowledgement', () => {
+    const event: AuditEvent = {
+      type: 'publish.translation_site_review',
+      at: '2026-06-20T01:00:00.000Z',
+      actorRef: 'admin',
+      siteId: 'tseng-law-main-site',
+      pageId: 'page-about-ko',
+      action: 'schedule',
+      sourceLocale: 'ko',
+      syncedAt: '2026-06-20T00:58:00.000Z',
+      totalCount: 5,
+      currentPageCount: 1,
+      otherPageCount: 4,
+      warningCount: 3,
+      errorCount: 2,
+      reviewHref: '/ko/admin-builder/translations?sourceLocale=ko&category=pages',
+      scheduledAt: '2026-06-21T00:00:00.000Z',
+      jobId: 'job-translation-review',
+    };
+
+    const parsed = parseAuditEvent(event);
+
+    expect(parsed).toEqual(event);
+  });
+
+  it('returns the parsed event for a CMS records bulk lifecycle mutation', () => {
+    const event: AuditEvent = {
+      type: 'cms.records.bulk_lifecycle',
+      at: '2026-06-25T01:00:00.000Z',
+      actorRef: 'admin',
+      siteId: 'default',
+      collectionId: 'recipes-archive',
+      action: 'status',
+      recordIds: ['recipe-draft'],
+      requestedCount: 1,
+      changedCount: 1,
+      status: 'published',
+      locale: 'ko',
+    };
+
+    const parsed = parseAuditEvent(event);
+
+    expect(parsed).toEqual(event);
+  });
+
+  it('returns the parsed event for an individual CMS record mutation', () => {
+    for (const type of ['cms.record_created', 'cms.record_updated', 'cms.record_deleted'] as const) {
+      const event: AuditEvent = {
+        type,
+        at: '2026-07-02T01:00:00.000Z',
+        actorRef: 'admin',
+        siteId: 'default',
+        collectionId: 'articles',
+        recordId: 'rec-1',
+      };
+
+      expect(parseAuditEvent(event)).toEqual(event);
+    }
+  });
+
+  it('returns the parsed event for a commerce settings update', () => {
+    const event: AuditEvent = {
+      type: 'commerce.settings_updated',
+      at: '2026-07-02T02:00:00.000Z',
+      actorRef: 'admin',
+      area: 'currency',
+    };
+
+    expect(parseAuditEvent(event)).toEqual(event);
+  });
+
   it('throws on forbidden key before zod parse', () => {
     expect(() =>
       parseAuditEvent({ ...SAMPLE_EVENT, request: '...' }),
@@ -102,7 +173,7 @@ describe('parseAuditEvent', () => {
       parseAuditEvent({
         type: 'unknown.event',
         at: SAMPLE_EVENT.at,
-      } as unknown),
+      }),
     ).toThrow();
   });
 

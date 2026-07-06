@@ -202,6 +202,18 @@
   padding: 16px;
 }
 
+.paymentProviderPanel {
+  margin-top: 14px;
+}
+
+.paymentTrendPanel {
+  margin-top: 14px;
+}
+
+.paymentAlertPanel {
+  margin-top: 14px;
+}
+
 .paymentPanelHeader {
   display: flex;
   align-items: flex-start;
@@ -275,6 +287,14 @@
   font-size: 0.96rem;
 }
 
+.paymentSourceGrid p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .paymentSourceGrid section > div {
   display: flex;
   align-items: center;
@@ -302,6 +322,146 @@
 
 .paymentSourceGrid strong[data-tone='warn'] {
   color: #b45309;
+}
+
+.paymentTrendGrid {
+  display: grid;
+  gap: 10px;
+}
+
+.paymentTrendRow {
+  display: grid;
+  grid-template-columns: minmax(76px, 0.85fr) minmax(120px, 1.25fr) minmax(130px, 0.95fr);
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+
+.paymentTrendLabel,
+.paymentTrendValues {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.paymentTrendLabel strong,
+.paymentTrendValues strong {
+  color: #0f172a;
+  font-size: 0.84rem;
+  line-height: 1.25;
+}
+
+.paymentTrendLabel span,
+.paymentTrendValues span {
+  color: #64748b;
+  font-size: 0.74rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.paymentTrendBarTrack {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.paymentTrendBar {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #2d5c48, #0f766e);
+}
+
+.paymentAlertGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.paymentAlertCard {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  border: 1px solid #dbe4ee;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 12px;
+}
+
+.paymentAlertCard[data-tone='danger'] {
+  border-color: rgba(220, 38, 38, 0.28);
+  background: rgba(254, 242, 242, 0.94);
+}
+
+.paymentAlertCard[data-tone='warn'] {
+  border-color: rgba(245, 158, 11, 0.28);
+  background: rgba(255, 251, 235, 0.94);
+}
+
+.paymentAlertCard[data-tone='info'] {
+  border-color: rgba(59, 130, 246, 0.24);
+  background: rgba(239, 246, 255, 0.94);
+}
+
+.paymentAlertCard span {
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.paymentAlertCard h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 0.92rem;
+}
+
+.paymentAlertCard p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.paymentAlertCard strong {
+  color: #0f172a;
+  font-size: 1.08rem;
+}
+
+.paymentWebhookFeed {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.paymentWebhookFeed section {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 12px;
+}
+
+.paymentWebhookFeed h3 {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.paymentWebhookFeed p,
+.paymentWebhookFeed span {
+  margin: 0;
+  color: #475569;
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
+.paymentWebhookFeed strong {
+  color: #0f172a;
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
 }
 
 .list {
@@ -735,6 +895,7 @@
 
   .paymentHeroStats,
   .paymentSourceGrid,
+  .paymentAlertGrid,
   .paymentCurrencyHeader,
   .paymentCurrencyTable > div:not(.paymentCurrencyHeader) {
     grid-template-columns: 1fr;

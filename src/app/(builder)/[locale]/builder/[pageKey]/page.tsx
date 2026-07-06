@@ -18,9 +18,15 @@ import {
   getBuilderPageConfig,
   isBuilderPageKey,
   readBuilderSiteOverview,
-  readPreferredBuilderPreviewSnapshot,
+  readBuilderPageSnapshotOverview,
   resolveBuilderEditorMode,
 } from '@/lib/builder/site';
+import { readSiteDocument } from '@/lib/builder/site/persistence';
+import {
+  BuilderPublishValidationError,
+  validateBuilderSnapshotForPublish,
+  type BuilderPublishValidationIssue,
+} from '@/lib/builder/validation';
 import {
   type BuilderHomeDocumentState,
   type BuilderPageDocument,
@@ -41,11 +47,13 @@ export function generateMetadata({ params }: { params: { locale: Locale; pageKey
   const locale = normalizeLocale(params.locale);
   const pageKey = isBuilderPageKey(params.pageKey) ? params.pageKey : 'home';
   const config = getBuilderPageConfig(pageKey);
+  const previewCopy =
+    pageKey === 'about' || pageKey === 'contact' ? getReadonlyPreviewRouteCopy(locale, pageKey) : null;
 
   return buildSeoMetadata({
     locale,
-    title: `${config.title} Builder`,
-    description: config.description,
+    title: previewCopy ? previewCopy.title : `${config.title} Builder`,
+    description: previewCopy ? previewCopy.description : config.description,
     path: `/builder/${pageKey}`,
     noindex: true,
   });
@@ -69,15 +77,34 @@ export default async function BuilderPageRoute({ params, searchParams }: Builder
   }
 
   const overview = await readBuilderSiteOverview(locale);
-  const snapshot = await readPreferredBuilderPreviewSnapshot(pageKey, locale);
+  const snapshotOverview = await readBuilderPageSnapshotOverview(pageKey, locale);
+  const siteDocument = await readSiteDocument('default', locale);
+  const snapshot = snapshotOverview.preferred.snapshot;
   const allPosts = pageKey === 'home' ? await getAllColumnPostsIncludingBlob(locale) : [];
   const faqItems = pageKey === 'home' ? faqContent[locale] : null;
   const datasetOverviews = readBuilderPageDatasetOverviews(
     pageKey,
     snapshot.snapshot.document,
     locale,
-    allPosts
+    allPosts,
+    { cmsCollections: siteDocument.cmsCollections },
   );
+  let publishValidation: { passed: boolean; issues: BuilderPublishValidationIssue[] } = {
+    passed: true,
+    issues: [],
+  };
+  try {
+    await validateBuilderSnapshotForPublish(snapshot.snapshot);
+  } catch (error) {
+    if (error instanceof BuilderPublishValidationError) {
+      publishValidation = {
+        passed: false,
+        issues: error.issues,
+      };
+    } else {
+      throw error;
+    }
+  }
   const policyNotes = buildModePolicyNotes({ pageKey, requestedMode });
 
   return (
@@ -93,6 +120,19 @@ export default async function BuilderPageRoute({ params, searchParams }: Builder
       site={overview.site}
       pages={overview.pages}
       datasetOverviews={datasetOverviews}
+      publishSnapshot={{
+        draft: {
+          persisted: snapshotOverview.draft.persisted,
+          revision: snapshotOverview.draft.revision,
+          savedAt: snapshotOverview.draft.savedAt,
+        },
+        published: {
+          persisted: snapshotOverview.published.persisted,
+          revision: snapshotOverview.published.revision,
+          savedAt: snapshotOverview.published.savedAt,
+        },
+      }}
+      publishValidation={publishValidation}
       snapshot={{
         persisted: snapshot.persisted,
         kind: snapshot.snapshot.kind,
@@ -151,13 +191,14 @@ function renderReadonlyPage({
     }
     case 'about': {
       const copy = pageCopy[locale].about;
+      const previewCopy = getReadonlyPreviewRouteCopy(locale, 'about');
 
       return (
         <BuilderReadonlyPagePreview
           locale={locale}
           pageKey="about"
-          title="About Builder Preview"
-          description="Preview mode reads the latest persisted draft first, then falls back to published or default schema."
+          title={previewCopy.title}
+          description={previewCopy.description}
           document={snapshotDocument}
         >
           <BuilderPublishedAboutRenderer
@@ -175,13 +216,14 @@ function renderReadonlyPage({
     }
     case 'contact': {
       const copy = pageCopy[locale].contact;
+      const previewCopy = getReadonlyPreviewRouteCopy(locale, 'contact');
 
       return (
         <BuilderReadonlyPagePreview
           locale={locale}
           pageKey="contact"
-          title="Contact Builder Preview"
-          description="Preview mode reads the latest persisted draft first, then falls back to published or default schema."
+          title={previewCopy.title}
+          description={previewCopy.description}
           document={snapshotDocument}
         >
           <BuilderPublishedContactRenderer
@@ -200,6 +242,35 @@ function renderReadonlyPage({
     default:
       notFound();
   }
+}
+
+function getReadonlyPreviewRouteCopy(locale: Locale, pageKey: 'about' | 'contact') {
+  const titles = {
+    about:
+      locale === 'ko' ? '빌더 소개 미리보기' : locale === 'zh-hant' ? '建構器關於頁預覽' : 'About Builder Preview',
+    contact:
+      locale === 'ko' ? '빌더 문의 미리보기' : locale === 'zh-hant' ? '建構器聯絡頁預覽' : 'Contact Builder Preview',
+  } as const;
+
+  const descriptions = {
+    about:
+      locale === 'ko'
+        ? '미리보기 모드는 최신 저장 초안을 먼저 읽고, 그다음 게시본 또는 기본 스키마로 돌아갑니다.'
+        : locale === 'zh-hant'
+          ? '預覽模式會先讀取最近保存的草稿，接著才回退到已發佈版本或預設結構。'
+          : 'Preview mode reads the latest persisted draft first, then falls back to published or default schema.',
+    contact:
+      locale === 'ko'
+        ? '미리보기 모드는 최신 저장 초안을 먼저 읽고, 그다음 게시본 또는 기본 스키마로 돌아갑니다.'
+        : locale === 'zh-hant'
+          ? '預覽模式會先讀取最近保存的草稿，接著才回退到已發佈版本或預設結構。'
+          : 'Preview mode reads the latest persisted draft first, then falls back to published or default schema.',
+  } as const;
+
+  return {
+    title: titles[pageKey],
+    description: descriptions[pageKey],
+  } as const;
 }
 
 function buildModePolicyNotes({

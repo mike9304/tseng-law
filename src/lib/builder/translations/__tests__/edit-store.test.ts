@@ -12,6 +12,7 @@ import {
 } from '@/lib/builder/site/persistence';
 import {
   applyTranslationToLocaleDraft,
+  applyImageOverridesToLocaleDraft,
   findTargetPageMeta,
   setNodeContentString,
   setPageLocaleSeoOverride,
@@ -94,6 +95,39 @@ function seedDraftCanvas(): BuilderCanvasDocument {
           label: '문의하기',
           href: '/contact',
           style: 'primary',
+        } as never,
+      },
+    ] as never,
+  };
+}
+
+function seedImageDraftCanvas(options?: {
+  srcByLocale?: Record<string, string>;
+  altByLocale?: Record<string, string>;
+}): BuilderCanvasDocument {
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: '2026-05-20T00:00:00.000Z',
+    updatedBy: 'sandbox-builder',
+    stageWidth: 1280,
+    stageHeight: 880,
+    nodes: [
+      {
+        id: 'hero-media',
+        kind: 'image',
+        rect: { x: 0, y: 0, width: 320, height: 220 },
+        style: {} as never,
+        zIndex: 0,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          src: '/api/builder/assets/ko/source.webp',
+          alt: '소스 이미지',
+          fit: 'cover',
+          srcByLocale: options?.srcByLocale ?? {},
+          altByLocale: options?.altByLocale ?? {},
         } as never,
       },
     ] as never,
@@ -252,6 +286,88 @@ describe('applyTranslationToLocaleDraft', () => {
     expect(result.skipped.find((s) => s.nodeId === 'missing-node')?.reason).toBe(
       'node_not_found',
     );
+  });
+});
+
+describe('applyImageOverridesToLocaleDraft', () => {
+  let site: BuilderSiteDocument;
+  let written: { canvas: BuilderCanvasDocument | null; site: BuilderSiteDocument | null };
+
+  beforeEach(() => {
+    site = seedSite();
+    written = { canvas: null, site: null };
+    mockedReadSiteDocument.mockImplementation(async () => site);
+    mockedWriteSiteDocument.mockImplementation(async (next) => {
+      written.site = next;
+      site = next;
+    });
+    mockedReadPageCanvas.mockImplementation(async (_siteId, pageId) => {
+      if (pageId === 'page-about-en' || pageId === 'page-about-ko') {
+        return seedImageDraftCanvas();
+      }
+      return null;
+    });
+    mockedWritePageCanvas.mockImplementation(async (_siteId, _pageId, _variant, doc) => {
+      written.canvas = doc;
+    });
+  });
+
+  it('writes locale-scoped image overrides to the target draft', async () => {
+    const result = await applyImageOverridesToLocaleDraft(
+      'edit-store-site',
+      'ko',
+      'en',
+      'page-about-ko',
+      {
+        'hero-media': {
+          src: '/api/builder/assets/ko/override.webp',
+          alt: 'Localized hero alt',
+        },
+      },
+    );
+
+    expect(result.ok).toBe(true);
+    expect(result.appliedCount).toBe(1);
+    expect(result.targetPageId).toBe('page-about-en');
+    const node = written.canvas?.nodes[0] as {
+      content: { srcByLocale?: Record<string, string>; altByLocale?: Record<string, string> };
+    };
+    expect(node.content.srcByLocale?.en).toBe('/api/builder/assets/ko/override.webp');
+    expect(node.content.altByLocale?.en).toBe('Localized hero alt');
+    expect(written.canvas?.locale).toBe('en');
+    expect(written.canvas?.updatedBy).toBe('translation-manager');
+  });
+
+  it('clears locale overrides with empty strings', async () => {
+    mockedReadPageCanvas.mockImplementation(async (_siteId, pageId) => {
+      if (pageId === 'page-about-en' || pageId === 'page-about-ko') {
+        return seedImageDraftCanvas({
+          srcByLocale: { en: '/api/builder/assets/ko/override.webp' },
+          altByLocale: { en: 'Localized hero alt' },
+        });
+      }
+      return null;
+    });
+
+    const result = await applyImageOverridesToLocaleDraft(
+      'edit-store-site',
+      'ko',
+      'en',
+      'page-about-ko',
+      {
+        'hero-media': {
+          src: '',
+          alt: '',
+        },
+      },
+    );
+
+    expect(result.ok).toBe(true);
+    const node = written.canvas?.nodes[0] as {
+      content: { srcByLocale?: Record<string, string>; altByLocale?: Record<string, string> };
+    };
+    expect(node.content.srcByLocale?.en).toBeUndefined();
+    expect(node.content.altByLocale?.en).toBeUndefined();
   });
 });
 

@@ -6,13 +6,29 @@ import type {
 import { isContainerLikeKind } from '@/lib/builder/canvas/types';
 import { computeTopLevelFlowSectionMetrics, isTopLevelFlowSection } from '@/lib/builder/canvas/flow';
 import { parentUsesFlowLayout } from '@/lib/builder/canvas/tree';
-import { resolveViewportRect, type Viewport, VIEWPORT_BREAKPOINTS } from '@/lib/builder/canvas/responsive';
+import {
+  resolveViewportHidden,
+  resolveViewportRect,
+  type Viewport,
+  VIEWPORT_BREAKPOINTS,
+} from '@/lib/builder/canvas/responsive';
+import { applyPublishedResponsiveAutoFit } from '@/lib/builder/site/published-responsive-autofit';
 
 const TABLET_MAX = VIEWPORT_BREAKPOINTS.tablet + 255;
 const MOBILE_MAX = VIEWPORT_BREAKPOINTS.tablet - 1;
 
 function escapeCssId(id: string): string {
   return id.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+}
+
+function nodeSelector(id: string): string {
+  return `.builder-pub-node[data-node-id="${escapeCssId(id)}"]`;
+}
+
+function isTopLevelPageRoot(node: BuilderCanvasNode): boolean {
+  if (node.parentId || !isContainerLikeKind(node.kind)) return false;
+  const content = node.content as { as?: unknown };
+  return content.as === 'main';
 }
 
 function buildResponsiveOverrideRule(
@@ -30,8 +46,13 @@ function buildResponsiveOverrideRule(
     // Responsive overrides for x/y would incorrectly offset the element even when position:relative.
     // Width/height overrides remain valid and useful for sizing flex items.
     if (!inFlowContext && !isFlowSection) {
-      if (r.x !== undefined) declarations.push(`left: ${r.x}px`);
-      if (r.y !== undefined) declarations.push(`top: ${r.y}px`);
+      if (isTopLevelPageRoot(node)) {
+        declarations.push('position: relative');
+      } else {
+        declarations.push(`position: ${node.sticky ? 'sticky' : 'absolute'}`);
+        if (r.x !== undefined) declarations.push(`left: ${r.x}px`);
+        if (r.y !== undefined) declarations.push(`top: ${r.y}px`);
+      }
     }
     if (r.width !== undefined) declarations.push(`width: ${r.width}px`);
     if (r.height !== undefined) {
@@ -45,7 +66,7 @@ function buildResponsiveOverrideRule(
     declarations.push(`font-size: ${override.fontSize}px`);
   }
   if (declarations.length === 0) return '';
-  return `[data-node-id="${escapeCssId(node.id)}"] { ${declarations.map((d) => `${d} !important`).join('; ')}; }`;
+  return `${nodeSelector(node.id)} { ${declarations.map((d) => `${d} !important`).join('; ')}; }`;
 }
 
 /**
@@ -64,8 +85,10 @@ function buildFlowGapStylesheetForViewport(
   viewport: 'tablet' | 'mobile',
 ): string[] {
   const v: Viewport = viewport;
+  const visibleFlowSiblings = flowSiblings.filter((node) => !resolveViewportHidden(node, v));
+  if (visibleFlowSiblings.length === 0) return [];
 
-  const anyOverride = flowSiblings.some((node) => {
+  const anyOverride = visibleFlowSiblings.some((node) => {
     const responsive = node.responsive as ResponsiveConfig | undefined;
     const bucket = viewport === 'mobile'
       ? (responsive?.mobile ?? responsive?.tablet)
@@ -74,7 +97,7 @@ function buildFlowGapStylesheetForViewport(
   });
   if (!anyOverride) return [];
 
-  const resolved = flowSiblings.map((node) => {
+  const resolved = visibleFlowSiblings.map((node) => {
     const r = resolveViewportRect(node, v);
     return { node, y: r.y, height: r.height };
   }).sort((left, right) =>
@@ -87,7 +110,7 @@ function buildFlowGapStylesheetForViewport(
   let previousBottom = 0;
   for (const entry of resolved) {
     const marginTop = Math.max(0, entry.y - previousBottom);
-    rules.push(`[data-node-id="${escapeCssId(entry.node.id)}"] { margin-top: ${marginTop}px !important; }`);
+    rules.push(`${nodeSelector(entry.node.id)} { margin-top: ${marginTop}px !important; }`);
     previousBottom = Math.max(previousBottom + marginTop + entry.height, entry.y + entry.height);
   }
   return rules;
@@ -98,7 +121,11 @@ function buildTopLevelFlowSectionStylesheetForViewport(
   viewport: 'tablet' | 'mobile',
 ): string[] {
   const visibleNodes = nodes.filter((node) => node.visible !== false);
-  const flowSections = visibleNodes.filter(isTopLevelFlowSection);
+  const viewportVisibleNodes = visibleNodes.filter((node) => {
+    if (!isTopLevelFlowSection(node)) return true;
+    return !resolveViewportHidden(node, viewport);
+  });
+  const flowSections = viewportVisibleNodes.filter(isTopLevelFlowSection);
   const anyOverride = flowSections.some((node) => {
     const responsive = node.responsive as ResponsiveConfig | undefined;
     const bucket = viewport === 'mobile'
@@ -108,7 +135,7 @@ function buildTopLevelFlowSectionStylesheetForViewport(
   });
   if (!anyOverride) return [];
 
-  const metrics = computeTopLevelFlowSectionMetrics(visibleNodes, viewport);
+  const metrics = computeTopLevelFlowSectionMetrics(viewportVisibleNodes, viewport);
   return [...flowSections]
     .sort((left, right) => {
       const leftRect = resolveViewportRect(left, viewport);
@@ -121,7 +148,7 @@ function buildTopLevelFlowSectionStylesheetForViewport(
       const metric = metrics.get(node.id);
       if (!metric) return [];
       return [
-        `[data-node-id="${escapeCssId(node.id)}"] { margin-top: ${metric.marginTop}px !important; min-height: ${metric.minHeight}px !important; }`,
+        `${nodeSelector(node.id)} { margin-top: ${metric.marginTop}px !important; min-height: ${metric.minHeight}px !important; }`,
       ];
     });
 }
@@ -194,4 +221,8 @@ export function buildResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
     css += `@media (max-width: ${MOBILE_MAX}px) {\n  ${mobileRules.join('\n  ')}\n}\n`;
   }
   return css;
+}
+
+export function buildPublishedResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
+  return buildResponsiveStylesheet(applyPublishedResponsiveAutoFit(nodes));
 }

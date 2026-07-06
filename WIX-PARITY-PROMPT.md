@@ -905,7 +905,14 @@ M__ <이름> done.
 ### 13.4 M21 Forms (이미 일부)
 | 키 | 용도 |
 |---|---|
+| `MARKETING_EMAIL_PROVIDER` | 마케팅 캠페인 발송 provider (`resend`, `mailchimp-transactional`, `stub`) |
 | `RESEND_API_KEY` | Resend 이메일 |
+| `MAILCHIMP_TRANSACTIONAL_API_KEY` | Mailchimp Transactional/Mandrill 이메일 |
+| `MAILCHIMP_TRANSACTIONAL_API_URL` | Mailchimp Transactional endpoint override (옵션) |
+| `MAILCHIMP_MARKETING_API_KEY` | Mailchimp Marketing API audience/contact sync |
+| `MAILCHIMP_AUDIENCE_ID` | Mailchimp list/audience id |
+| `MAILCHIMP_SERVER_PREFIX` | Mailchimp data center prefix (`us6` 등, API key suffix에서 자동 추론 가능) |
+| `MAILCHIMP_MARKETING_API_URL` | Mailchimp Marketing API root override (옵션, 테스트/프록시용) |
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` | SMTP fallback |
 | `HCAPTCHA_SITE_KEY` / `HCAPTCHA_SECRET` | hCaptcha |
 | `TURNSTILE_SITE_KEY` / `TURNSTILE_SECRET` | Cloudflare Turnstile |

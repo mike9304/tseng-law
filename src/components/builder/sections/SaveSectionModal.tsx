@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import {
@@ -10,17 +10,11 @@ import {
 } from '@/lib/builder/site/types';
 import { normalizeSavedSectionSnapshot } from '@/lib/builder/sections/normalize';
 import { buildSavedSectionThumbnailSvg } from '@/lib/builder/sections/thumbnail';
+import EditorChromeIcon from '@/components/builder/canvas/EditorChromeIcon';
+import { getSaveSectionModalCopy } from './section-panel-copy';
+import styles from './SaveSectionModal.module.css';
 
 export { buildSavedSectionThumbnailSvg as buildThumbnailSvg } from '@/lib/builder/sections/thumbnail';
-
-const CATEGORY_LABELS: Record<SavedSectionCategory, string> = {
-  hero: 'Hero',
-  features: 'Features',
-  testimonials: 'Testimonials',
-  cta: 'CTA',
-  footer: 'Footer',
-  custom: 'Custom',
-};
 
 const FOCUSABLE_SELECTOR = [
   'a[href]',
@@ -57,6 +51,7 @@ export default function SaveSectionModal({
   onSaved: (section: SavedSection) => void;
   onClose: () => void;
 }) {
+  const copy = getSaveSectionModalCopy(locale);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState<SavedSectionCategory>('custom');
@@ -66,6 +61,9 @@ export default function SaveSectionModal({
   const nameInputRef = useRef<HTMLInputElement | null>(null);
   const restoreFocusRef = useRef<HTMLElement | null>(null);
   const closingRef = useRef(false);
+  const titleId = useId();
+  const introId = useId();
+  const errorId = useId();
 
   const closeModal = useCallback(() => {
     closingRef.current = true;
@@ -145,15 +143,16 @@ export default function SaveSectionModal({
     () => buildSavedSectionThumbnailSvg(normalizedPayload.nodes, normalizedPayload.rootNodeId),
     [normalizedPayload],
   );
+  const canSave = name.trim().length > 0 && !submitting;
 
   async function handleSave() {
     if (submitting) return;
     if (!name.trim()) {
-      setErrorMessage('이름을 입력하세요.');
+      setErrorMessage(copy.nameRequired);
       return;
     }
     if (normalizedPayload.nodes.length === 0) {
-      setErrorMessage('선택한 섹션 데이터가 올바르지 않습니다.');
+      setErrorMessage(copy.invalidSectionData);
       return;
     }
     setSubmitting(true);
@@ -178,13 +177,13 @@ export default function SaveSectionModal({
       );
       const data = (await response.json()) as { ok: boolean; section?: SavedSection; error?: string };
       if (!response.ok || !data.ok || !data.section) {
-        setErrorMessage(data.error ?? '저장에 실패했습니다.');
+        setErrorMessage(data.error ?? copy.saveFailed);
         return;
       }
       closingRef.current = true;
       onSaved(data.section);
     } catch (error) {
-      const message = error instanceof Error ? error.message : '저장에 실패했습니다.';
+      const message = error instanceof Error ? error.message : copy.saveFailed;
       setErrorMessage(message);
     } finally {
       setSubmitting(false);
@@ -194,17 +193,7 @@ export default function SaveSectionModal({
   return (
     <div
       role="presentation"
-      style={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: 10100,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'rgba(15, 23, 42, 0.5)',
-        backdropFilter: 'blur(6px)',
-        WebkitBackdropFilter: 'blur(6px)',
-      }}
+      className={styles.backdrop}
       onClick={(event) => {
         if (event.target === event.currentTarget) closeModal();
       }}
@@ -213,178 +202,117 @@ export default function SaveSectionModal({
         ref={panelRef}
         role="dialog"
         aria-modal="true"
-        aria-label="섹션으로 저장"
+        aria-label={copy.ariaLabel}
+        aria-labelledby={titleId}
+        aria-describedby={errorMessage ? `${introId} ${errorId}` : introId}
         tabIndex={-1}
         data-builder-save-section-dialog="true"
         onKeyDownCapture={handleDialogKeyDown}
-        style={{
-          background: '#fff',
-          borderRadius: 16,
-          boxShadow: '0 32px 80px rgba(0, 0, 0, 0.25)',
-          padding: 24,
-          maxWidth: 520,
-          width: '92vw',
-          maxHeight: '88vh',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 14,
-        }}
+        className={styles.panel}
       >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h2 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 700, color: '#0f172a' }}>
-            섹션으로 저장
-          </h2>
-          <button
-            type="button"
-            onClick={closeModal}
-            aria-label="닫기"
-            style={{
-              border: 'none',
-              background: 'transparent',
-              fontSize: '1.3rem',
-              color: '#64748b',
-              cursor: 'pointer',
-              padding: '2px 8px',
-              borderRadius: 8,
-            }}
-          >
-            ×
-          </button>
-        </div>
-
-        <div style={{ fontSize: '0.78rem', color: '#64748b' }}>
-          선택한 컨테이너와 자식 요소를 라이브러리에 저장합니다. 다른 페이지에서 재사용할 수 있습니다.
-        </div>
-
-        <div
-          style={{
-            border: '1px solid #e2e8f0',
-            borderRadius: 12,
-            background: '#f8fafc',
-            height: 140,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            overflow: 'hidden',
-          }}
-          dangerouslySetInnerHTML={{ __html: thumbnailSvg }}
-        />
-
-        <label style={labelStyle}>
-          <span style={labelTextStyle}>이름 *</span>
-          <input
-            ref={nameInputRef}
-            type="text"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            maxLength={200}
-            autoFocus
-            placeholder="예) 호정 hero 섹션"
-            style={inputStyle}
-          />
-        </label>
-
-        <label style={labelStyle}>
-          <span style={labelTextStyle}>설명 (선택)</span>
-          <textarea
-            value={description}
-            onChange={(event) => setDescription(event.target.value)}
-            maxLength={1000}
-            rows={2}
-            placeholder="섹션 용도, 사용 위치 등"
-            style={{ ...inputStyle, fontFamily: 'inherit', resize: 'vertical' }}
-          />
-        </label>
-
-        <label style={labelStyle}>
-          <span style={labelTextStyle}>카테고리</span>
-          <select
-            value={category}
-            onChange={(event) => setCategory(event.target.value as SavedSectionCategory)}
-            style={inputStyle}
-          >
-            {SAVED_SECTION_CATEGORIES.map((cat) => (
-              <option key={cat} value={cat}>
-                {CATEGORY_LABELS[cat]}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        {errorMessage ? (
-          <div
-            style={{
-              padding: '8px 12px',
-              background: '#fef2f2',
-              border: '1px solid #fecaca',
-              borderRadius: 8,
-              color: '#b91c1c',
-              fontSize: '0.78rem',
-            }}
-          >
-            {errorMessage}
+        <div className={styles.header}>
+          <div className={styles.titleBlock}>
+            <h2 id={titleId} className={styles.title}>
+              {copy.title}
+            </h2>
+            <p id={introId} className={styles.intro}>
+              {copy.intro}
+            </p>
           </div>
-        ) : null}
-
-        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8, marginTop: 4 }}>
           <button
             type="button"
             onClick={closeModal}
-            disabled={submitting}
-            style={{
-              padding: '8px 14px',
-              border: '1px solid #cbd5e1',
-              borderRadius: 8,
-              background: '#fff',
-              color: '#334155',
-              fontSize: '0.85rem',
-              fontWeight: 600,
-              cursor: submitting ? 'not-allowed' : 'pointer',
-            }}
+            aria-label={copy.closeAriaLabel}
+            className={styles.closeButton}
           >
-            취소
-          </button>
-          <button
-            type="button"
-            onClick={() => { void handleSave(); }}
-            disabled={submitting || !name.trim()}
-            style={{
-              padding: '8px 16px',
-              border: 'none',
-              borderRadius: 8,
-              background: submitting || !name.trim() ? '#94a3b8' : '#123b63',
-              color: '#fff',
-              fontSize: '0.85rem',
-              fontWeight: 600,
-              cursor: submitting || !name.trim() ? 'not-allowed' : 'pointer',
-            }}
-          >
-            {submitting ? '저장 중...' : '저장'}
+            <EditorChromeIcon name="close" />
           </button>
         </div>
+
+        <form
+          className={styles.formShell}
+          onSubmit={(event) => {
+            event.preventDefault();
+            void handleSave();
+          }}
+        >
+          <div className={styles.body}>
+            <div className={styles.previewPane}>
+              <div
+                className={styles.previewFrame}
+                dangerouslySetInnerHTML={{ __html: thumbnailSvg }}
+              />
+            </div>
+
+            <div className={styles.formPane}>
+              <label className={styles.field}>
+                <span className={styles.fieldLabel}>{copy.nameLabel}</span>
+                <input
+                  ref={nameInputRef}
+                  type="text"
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
+                  maxLength={200}
+                  autoFocus
+                  placeholder={copy.namePlaceholder}
+                  className={styles.input}
+                />
+              </label>
+
+              <label className={styles.field}>
+                <span className={styles.fieldLabel}>{copy.descriptionLabel}</span>
+                <textarea
+                  value={description}
+                  onChange={(event) => setDescription(event.target.value)}
+                  maxLength={1000}
+                  rows={3}
+                  placeholder={copy.descriptionPlaceholder}
+                  className={`${styles.input} ${styles.textarea}`}
+                />
+              </label>
+
+              <label className={styles.field}>
+                <span className={styles.fieldLabel}>{copy.categoryLabel}</span>
+                <select
+                  value={category}
+                  onChange={(event) => setCategory(event.target.value as SavedSectionCategory)}
+                  className={`${styles.input} ${styles.select}`}
+                >
+                  {SAVED_SECTION_CATEGORIES.map((cat) => (
+                    <option key={cat} value={cat}>
+                      {copy.categoryLabels[cat]}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              {errorMessage ? (
+                <div id={errorId} className={styles.errorMessage} role="alert">
+                  {errorMessage}
+                </div>
+              ) : null}
+            </div>
+          </div>
+
+          <div className={styles.footer}>
+            <button
+              type="button"
+              onClick={closeModal}
+              disabled={submitting}
+              className={styles.secondaryButton}
+            >
+              {copy.cancel}
+            </button>
+            <button
+              type="submit"
+              disabled={!canSave}
+              className={styles.primaryButton}
+            >
+              {submitting ? copy.saving : copy.save}
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
 }
-
-const labelStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 4,
-};
-
-const labelTextStyle: React.CSSProperties = {
-  fontSize: '0.75rem',
-  color: '#475569',
-  fontWeight: 600,
-};
-
-const inputStyle: React.CSSProperties = {
-  padding: '8px 10px',
-  border: '1px solid #cbd5e1',
-  borderRadius: 8,
-  background: '#fff',
-  fontSize: '0.85rem',
-  color: '#0f172a',
-  outline: 'none',
-};

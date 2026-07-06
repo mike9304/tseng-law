@@ -10,6 +10,10 @@ import { siteContent } from '@/data/site-content';
 import SearchOverlay from '@/components/SearchOverlay';
 import MobileNavDrawer from '@/components/MobileNavDrawer';
 import SmartLink from '@/components/SmartLink';
+import {
+  captureOverlayScrollSnapshots,
+  scheduleOverlayScrollRestore,
+} from '@/components/builder/published/overlayFocus';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 
 type MegaLink = {
@@ -202,6 +206,8 @@ export default function Header({ locale }: { locale: Locale }) {
   const closeMenuLabel = locale === 'ko' ? '메뉴 닫기' : locale === 'zh-hant' ? '關閉選單' : 'Close menu';
   const searchLabel = locale === 'ko' ? '검색 열기' : locale === 'zh-hant' ? '開啟搜尋' : 'Open search';
   const skipLabel = locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : 'Skip to main content';
+  const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home';
+  const mainNavLabel = locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : 'Main';
   const memberLabels =
     locale === 'ko'
       ? { login: '로그인', account: '내 계정', premium: '프리미엄', logout: '로그아웃' }
@@ -287,6 +293,12 @@ export default function Header({ locale }: { locale: Locale }) {
     setSearchOpen(true);
   }, []);
 
+  const openSearchFromHeader = useCallback((opener: HTMLElement) => {
+    const scrollSnapshots = captureOverlayScrollSnapshots(opener);
+    setSearchOpen(true);
+    scheduleOverlayScrollRestore(scrollSnapshots);
+  }, []);
+
   const handleMemberLogout = useCallback(async () => {
     try {
       await fetch('/api/members/logout', {
@@ -341,7 +353,7 @@ export default function Header({ locale }: { locale: Locale }) {
 
     const loadMember = async () => {
       try {
-        const response = await fetch('/api/members/me', {
+        const response = await fetch(`/api/members/me?locale=${locale}`, {
           cache: 'no-store',
           credentials: 'include'
         });
@@ -439,7 +451,7 @@ export default function Header({ locale }: { locale: Locale }) {
 
       <div className="header-main">
         <div className="container header-main-inner">
-          <Link className="header-logo" href={`/${locale}`} aria-label="Home">
+          <Link className="header-logo" href={`/${locale}`} aria-label={homeLabel}>
             <span className="logo-mark" aria-hidden>
               <Image src={brandLogo} alt="" width={508} height={80} priority />
             </span>
@@ -449,7 +461,7 @@ export default function Header({ locale }: { locale: Locale }) {
           <nav
             className={`main-nav${openMenu ? ' menu-open' : ''}`}
             id="mainNav"
-            aria-label="Main"
+            aria-label={mainNavLabel}
             ref={mainNavRef}
             onMouseEnter={clearCloseTimeout}
             onMouseLeave={scheduleCloseMegaMenu}
@@ -511,7 +523,12 @@ export default function Header({ locale }: { locale: Locale }) {
           </nav>
 
           <div className="header-actions">
-            <button className="header-search-btn" type="button" onClick={() => setSearchOpen(true)} aria-label={searchLabel}>
+            <button
+              className="header-search-btn"
+              type="button"
+              onClick={(event) => openSearchFromHeader(event.currentTarget)}
+              aria-label={searchLabel}
+            >
               <svg className="header-search-icon" viewBox="0 0 24 24" aria-hidden>
                 <circle cx="11" cy="11" r="7.2" />
                 <line x1="16.5" y1="16.5" x2="21" y2="21" />

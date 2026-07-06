@@ -22,11 +22,11 @@ function parseWCheckpointStatuses(markdown) {
   const rows = [];
   let currentSection = null;
   let lastRow = null;
+  let statusCellIndex = null;
 
   const rowPattern = /^\|\s*(W\d{1,3})\s*\|/;
   const sectionPattern = /^##\s+(.+?)\s*$/;
   const separatorPattern = /^\|\s*-{2,}/;
-  const headerPattern = /^\|\s*ID\s*\|/i;
 
   for (const rawLine of lines) {
     const line = rawLine.trimEnd();
@@ -35,10 +35,18 @@ function parseWCheckpointStatuses(markdown) {
     if (sectionMatch) {
       currentSection = sectionMatch[1].trim();
       lastRow = null;
+      statusCellIndex = null;
       continue;
     }
 
-    if (separatorPattern.test(line) || headerPattern.test(line)) {
+    const headerStatusCellIndex = parseHeaderStatusCellIndex(line);
+    if (headerStatusCellIndex !== null) {
+      statusCellIndex = headerStatusCellIndex;
+      lastRow = null;
+      continue;
+    }
+
+    if (separatorPattern.test(line)) {
       lastRow = null;
       continue;
     }
@@ -56,19 +64,25 @@ function parseWCheckpointStatuses(markdown) {
       continue;
     }
 
-    const [idCell, ...rest] = cells;
-    const statusCell = rest[rest.length - 1] || '';
-    const areaCell = rest[0] || '';
-    const checkpointCell = rest.length >= 3 ? rest.slice(1, -1).join(' | ') : '';
+    const activeStatusCellIndex = statusCellIndex ?? fallbackStatusCellIndex(cells.length);
+    if (activeStatusCellIndex >= cells.length) {
+      lastRow = null;
+      continue;
+    }
 
+    const idCell = cells[0] || '';
+    const areaCell = cells[1] || '';
+    const checkpointCell = cells[2] || '';
+    const statusCell = cells[activeStatusCellIndex] || '';
     const statusInfo = extractStatus(statusCell);
+    const noteTail = cells.slice(activeStatusCellIndex + 1).join(' | ').trim();
 
     const row = {
       id: idCell.trim(),
       area: areaCell.trim(),
       checkpoint: checkpointCell.trim(),
       status: statusInfo.status,
-      note: statusInfo.note,
+      note: joinNotes(statusInfo.note, noteTail),
       _section: currentSection,
     };
 
@@ -77,6 +91,21 @@ function parseWCheckpointStatuses(markdown) {
   }
 
   return rows;
+}
+
+function parseHeaderStatusCellIndex(line) {
+  if (!line.startsWith('|')) return null;
+
+  const cells = splitMarkdownRow(line).map((cell) => cell.trim().toLowerCase());
+  const firstCell = cells[0];
+  if (firstCell !== 'id' && firstCell !== '#') return null;
+
+  const statusIndex = cells.findIndex((cell) => cell === 'status' || cell === '상태');
+  return statusIndex === -1 ? null : statusIndex;
+}
+
+function fallbackStatusCellIndex(cellCount) {
+  return cellCount >= 5 ? 4 : 3;
 }
 
 function splitMarkdownRow(line) {
@@ -90,6 +119,7 @@ function extractStatus(cell) {
   const trimmed = cell.trim();
   const emojiOrder = [
     ['🟢', 'green'],
+    ['✅', 'green'],
     ['🟡', 'yellow'],
     ['🔴', 'red'],
     ['⚫', 'black'],
@@ -104,6 +134,12 @@ function extractStatus(cell) {
   }
 
   return { status: null, note: trimmed };
+}
+
+function joinNotes(first, second) {
+  if (!first) return second;
+  if (!second) return first;
+  return `${first} ${second}`;
 }
 
 function tallyByStatus(rows) {
@@ -175,6 +211,16 @@ function buildReport({ rows, counts, gatePassed, generatedAt }) {
     }
   }
   lines.push('');
+
+  const unknownRows = rows.filter((row) => row.status === null);
+  if (unknownRows.length > 0) {
+    lines.push(`## Unknown Status (${unknownRows.length})`);
+    lines.push('');
+    for (const row of unknownRows) {
+      lines.push(`- **${row.id}** (${row._section || ''} / ${row.area}) — ${truncate(row.note || row.checkpoint, 260)}`);
+    }
+    lines.push('');
+  }
 
   return lines.join('\n');
 }

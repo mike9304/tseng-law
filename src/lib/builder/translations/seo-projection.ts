@@ -19,7 +19,13 @@ import type {
 export interface ProjectedSeoValue {
   title?: string;
   description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   ogImage?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  focusKeyword?: string;
 }
 
 export type ProjectedSeoMap = Partial<Record<Locale, ProjectedSeoValue>>;
@@ -44,7 +50,13 @@ export function projectSeoToLocales(
   const source: ProjectedSeoValue = {
     title: seo?.title,
     description: seo?.description,
+    ogTitle: seo?.ogTitle,
+    ogDescription: seo?.ogDescription,
     ogImage: seo?.ogImage,
+    twitterTitle: seo?.twitterTitle,
+    twitterDescription: seo?.twitterDescription,
+    twitterImage: seo?.twitterImage,
+    focusKeyword: seo?.focusKeyword,
   };
   const out: ProjectedSeoMap = {};
   for (const locale of targetLocales) {
@@ -52,7 +64,13 @@ export function projectSeoToLocales(
     out[locale] = {
       title: override.title ?? source.title,
       description: override.description ?? source.description,
+      ogTitle: override.ogTitle ?? source.ogTitle,
+      ogDescription: override.ogDescription ?? source.ogDescription,
       ogImage: override.ogImage ?? source.ogImage,
+      twitterTitle: override.twitterTitle ?? source.twitterTitle,
+      twitterDescription: override.twitterDescription ?? source.twitterDescription,
+      twitterImage: override.twitterImage ?? source.twitterImage,
+      focusKeyword: override.focusKeyword ?? source.focusKeyword,
     };
   }
   return out;

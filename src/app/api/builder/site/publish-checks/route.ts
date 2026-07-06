@@ -14,20 +14,41 @@
  *   }
  *
  * Response:
- *   { ok: true, suite: PublishCheckSuite }
+ *   { ok: true, suite: PublishCheckSuite, translationSiteWarnings?: TranslationSiteWarningSummary, translationReleasePolicy?: TranslationReleasePolicy, translationReleaseApproval?: TranslationReleaseApprovalRequirement }
  *   { ok: false, error: string }
  */
 import { NextRequest, NextResponse } from 'next/server';
-import { normalizeLocale } from '@/lib/locales';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { runAllChecks } from '@/lib/builder/publish-gate/gate-runner';
+import { buildTranslationSiteWarningSummary } from '@/lib/builder/publish-gate/translation-site-summary';
+import {
+  applyTranslationReleasePolicyToSuite,
+  readTranslationReleasePolicy,
+} from '@/lib/builder/publish-gate/translation-release-policy';
+import {
+  applyTranslationReleaseApprovalToSuite,
+  evaluateTranslationReleaseApprovalRequirement,
+} from '@/lib/builder/publish-gate/translation-release-approval';
 import { readPageCanvas, readSiteDocument } from '@/lib/builder/site/persistence';
 import { guardMutation } from '@/lib/builder/security/guard';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 
-function badRequest(message: string) {
-  return NextResponse.json({ ok: false, error: message }, { status: 400 });
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode) },
+    { status },
+  );
 }
 
 export async function POST(request: NextRequest) {
@@ -41,29 +62,69 @@ export async function POST(request: NextRequest) {
     body = {};
   }
 
-  const siteId = typeof body.siteId === 'string' && body.siteId.trim() ? body.siteId.trim() : 'default';
+  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
+  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
   const pageId = typeof body.pageId === 'string' && body.pageId.trim() ? body.pageId.trim() : null;
   const locale = normalizeLocale(
     typeof body.locale === 'string' ? body.locale : request.nextUrl.searchParams.get('locale') ?? undefined,
   );
 
-  if (!pageId) return badRequest('pageId is required.');
+  if (!pageId) return errorResponse(locale, 'page_id_required', 400);
 
   // Resolve canvas document
   let canvas: BuilderCanvasDocument | null = null;
   if (body.document && typeof body.document === 'object') {
     canvas = body.document as BuilderCanvasDocument;
   } else {
-    canvas = await readPageCanvas(siteId, pageId, 'draft');
+    try {
+      canvas = await readPageCanvas(siteId, pageId, 'draft');
+    } catch {
+      return errorResponse(locale, 'publish_checks_failed', 500);
+    }
   }
   if (!canvas) {
-    return NextResponse.json({ ok: false, error: 'Draft canvas not found.' }, { status: 404 });
+    return errorResponse(locale, 'draft_canvas_not_found', 404);
   }
 
   // Resolve page + site for SEO + slug-based link checks
   const site = await readSiteDocument(siteId, locale).catch(() => null);
   const page = site?.pages.find((p) => p.pageId === pageId) ?? null;
 
-  const suite = await runAllChecks(canvas, page, site);
-  return NextResponse.json({ ok: true, suite });
+  try {
+    const suite = await runAllChecks(canvas, page, site);
+    const translationReleasePolicy = await readTranslationReleasePolicy(siteId);
+    const translationSiteWarnings = site
+      ? buildTranslationSiteWarningSummary(site, pageId)
+      : undefined;
+    const checkedSuite = translationSiteWarnings
+      ? applyTranslationReleasePolicyToSuite(
+        suite,
+        translationReleasePolicy,
+        translationSiteWarnings,
+        locale,
+      )
+      : suite;
+    const translationReleaseApproval = translationSiteWarnings
+      ? await evaluateTranslationReleaseApprovalRequirement({
+        siteId,
+        pageId,
+        locale,
+        actorUsername: auth.username,
+        policy: translationReleasePolicy,
+        summary: translationSiteWarnings,
+      })
+      : undefined;
+    const suiteWithApproval = translationReleaseApproval
+      ? applyTranslationReleaseApprovalToSuite(checkedSuite, translationReleaseApproval)
+      : checkedSuite;
+    return NextResponse.json({
+      ok: true,
+      suite: suiteWithApproval,
+      translationSiteWarnings,
+      translationReleasePolicy,
+      translationReleaseApproval,
+    });
+  } catch {
+    return errorResponse(locale, 'publish_checks_failed', 500);
+  }
 }

@@ -5,12 +5,12 @@ import {
   TEXT_ASSISTANT_ACTIONS,
   TEXT_ASSISTANT_TONES,
   TEXT_ASSISTANT_TARGET_LOCALES,
-  describeTextAssistantAction,
   type TextAssistantAction,
   type TextAssistantTone,
   type TextAssistantTargetLocale,
 } from '@/lib/builder/ai-generator/text-assistant';
 import styles from './SandboxPage.module.css';
+import { getAiTextAssistantCopy } from './ai-text-assistant-copy';
 
 interface AiTextAssistantPanelProps {
   sourceText: string;
@@ -45,29 +45,6 @@ interface RunPayload {
   elementHint?: string;
 }
 
-const ACTION_LABEL: Record<TextAssistantAction, string> = {
-  rewrite: 'Rewrite',
-  expand: 'Expand',
-  shorten: 'Shorten',
-  translate: 'Translate',
-  tone: 'Tone',
-};
-
-const TONE_LABEL: Record<TextAssistantTone, string> = {
-  formal: 'Formal',
-  casual: 'Casual',
-  persuasive: 'Persuasive',
-  concise: 'Concise',
-  warm: 'Warm',
-  authoritative: 'Authoritative',
-};
-
-const LOCALE_LABEL: Record<TextAssistantTargetLocale, string> = {
-  ko: '한국어',
-  'zh-hant': '繁體中文',
-  en: 'English',
-};
-
 function newHistoryId(): string {
   return `ai-text-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
 }
@@ -94,17 +71,18 @@ export default function AiTextAssistantPanel({
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [showOriginal, setShowOriginal] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
+  const copy = useMemo(() => getAiTextAssistantCopy(sourceLocale), [sourceLocale]);
 
   const currentEntry = historyIndex >= 0 ? history[historyIndex] ?? null : null;
   const canApply = !!currentEntry && currentEntry.text !== sourceText && !pending;
   const previewText = showOriginal || !currentEntry ? sourceText : currentEntry.text;
 
-  const sourceLengthLabel = useMemo(() => `${sourceText.length}자`, [sourceText.length]);
-  const previewLengthLabel = useMemo(() => `${previewText.length}자`, [previewText.length]);
+  const sourceLengthLabel = useMemo(() => copy.characterCountLabel(sourceText.length), [copy, sourceText.length]);
+  const previewLengthLabel = useMemo(() => copy.characterCountLabel(previewText.length), [copy, previewText.length]);
 
   const runRequest = useCallback(async () => {
     if (!sourceText.trim()) {
-      setError('AI 어시스턴트는 빈 텍스트에서 실행할 수 없습니다.');
+      setError(copy.emptySourceError);
       return;
     }
     setError(null);
@@ -137,8 +115,8 @@ export default function AiTextAssistantPanel({
         | { ok: false; error?: string; message?: string }
         | null;
       if (!response.ok || !body || body.ok !== true) {
-        const message = body && body.ok === false ? body.message ?? body.error ?? '요청에 실패했습니다.' : '요청에 실패했습니다.';
-        setError(typeof message === 'string' ? message : 'AI 텍스트 어시스턴트 호출에 실패했습니다.');
+        const message = body && body.ok === false ? body.message ?? body.error ?? copy.requestFailedError : copy.requestFailedError;
+        setError(typeof message === 'string' ? message : copy.callFailedError);
         return;
       }
       const entry: HistoryEntry = {
@@ -158,11 +136,11 @@ export default function AiTextAssistantPanel({
       setShowOriginal(false);
     } catch (err) {
       if ((err as Error)?.name === 'AbortError') return;
-      setError((err as Error)?.message ?? 'AI 텍스트 어시스턴트 호출 중 오류가 발생했습니다.');
+      setError((err as Error)?.message ?? copy.callExceptionError);
     } finally {
       setPending(false);
     }
-  }, [action, brandTone, customPrompt, elementHint, historyIndex, siteName, sourceLocale, sourceText, targetLocale, tone]);
+  }, [action, brandTone, copy, customPrompt, elementHint, historyIndex, siteName, sourceLocale, sourceText, targetLocale, tone]);
 
   const handleApply = useCallback(() => {
     if (!currentEntry) return;
@@ -191,7 +169,7 @@ export default function AiTextAssistantPanel({
   return (
     <div
       role="dialog"
-      aria-label="AI 텍스트 어시스턴트"
+      aria-label={copy.dialogLabel}
       data-builder-ai-text-panel="true"
       className={styles.inlineTextAiPanel}
       data-placement={placement}
@@ -199,18 +177,18 @@ export default function AiTextAssistantPanel({
       onPointerDown={(event) => event.stopPropagation()}
     >
       <header className={styles.inlineTextAiPanelHeader}>
-        <strong>AI 텍스트 어시스턴트</strong>
+        <strong>{copy.title}</strong>
         <button
           type="button"
           className={styles.inlineTextAiPanelClose}
-          aria-label="AI 어시스턴트 닫기"
+          aria-label={copy.closeLabel}
           onClick={onClose}
         >
           ×
         </button>
       </header>
 
-      <div role="radiogroup" aria-label="AI 액션" className={styles.inlineTextAiActions}>
+      <div role="radiogroup" aria-label={copy.actionGroupLabel} className={styles.inlineTextAiActions}>
         {TEXT_ASSISTANT_ACTIONS.map((value) => (
           <button
             key={value}
@@ -221,22 +199,22 @@ export default function AiTextAssistantPanel({
             className={styles.inlineTextAiActionChip}
             onClick={() => setAction(value)}
           >
-            {ACTION_LABEL[value]}
+            {copy.actionLabels[value]}
           </button>
         ))}
       </div>
 
       {action === 'translate' ? (
         <label className={styles.inlineTextAiField}>
-          <span>번역 대상 언어</span>
+          <span>{copy.targetLocaleLabel}</span>
           <select
             value={targetLocale}
             onChange={(event) => setTargetLocale(event.target.value as TextAssistantTargetLocale)}
-            aria-label="번역 대상 언어"
+            aria-label={copy.targetLocaleLabel}
           >
             {TEXT_ASSISTANT_TARGET_LOCALES.filter((loc) => loc !== sourceLocale).map((loc) => (
               <option key={loc} value={loc}>
-                {LOCALE_LABEL[loc]}
+                {copy.localeLabels[loc]}
               </option>
             ))}
           </select>
@@ -245,15 +223,15 @@ export default function AiTextAssistantPanel({
 
       {action === 'tone' ? (
         <label className={styles.inlineTextAiField}>
-          <span>톤</span>
+          <span>{copy.toneLabel}</span>
           <select
             value={tone}
             onChange={(event) => setTone(event.target.value as TextAssistantTone)}
-            aria-label="톤 선택"
+            aria-label={copy.toneSelectLabel}
           >
             {TEXT_ASSISTANT_TONES.map((value) => (
               <option key={value} value={value}>
-                {TONE_LABEL[value]}
+                {copy.toneLabels[value]}
               </option>
             ))}
           </select>
@@ -261,13 +239,13 @@ export default function AiTextAssistantPanel({
       ) : null}
 
       <label className={styles.inlineTextAiField}>
-        <span>추가 지시 (선택)</span>
+        <span>{copy.customPromptLabel}</span>
         <textarea
           value={customPrompt}
           onChange={(event) => setCustomPrompt(event.target.value)}
           rows={2}
           maxLength={600}
-          placeholder="예: 변호사 사무실 톤, 5문장 이내, 클릭 유도 표현 포함"
+          placeholder={copy.customPromptPlaceholder}
         />
       </label>
 
@@ -284,7 +262,7 @@ export default function AiTextAssistantPanel({
           onClick={runRequest}
           disabled={pending}
         >
-          {pending ? '생성 중...' : currentEntry ? '다시 생성' : '생성'}
+          {pending ? copy.generatingLabel : currentEntry ? copy.regenerateLabel : copy.generateLabel}
         </button>
         {currentEntry ? (
           <>
@@ -293,13 +271,13 @@ export default function AiTextAssistantPanel({
               className={styles.inlineTextAiGhostButton}
               onClick={handleUndo}
               disabled={pending || historyIndex < 0}
-              aria-label="이전 결과"
+              aria-label={copy.previousResultLabel}
             >
               ←
             </button>
             <span className={styles.inlineTextAiHistoryLabel}>
               {history.length === 0
-                ? '결과 없음'
+                ? copy.noResultsLabel
                 : `${historyIndex + 1} / ${history.length}`}
             </span>
             <button
@@ -307,7 +285,7 @@ export default function AiTextAssistantPanel({
               className={styles.inlineTextAiGhostButton}
               onClick={handleRedo}
               disabled={pending || historyIndex >= history.length - 1}
-              aria-label="다음 결과"
+              aria-label={copy.nextResultLabel}
             >
               →
             </button>
@@ -317,7 +295,7 @@ export default function AiTextAssistantPanel({
               onClick={() => setShowOriginal((value) => !value)}
               aria-pressed={showOriginal}
             >
-              {showOriginal ? '결과 보기' : '원본 보기'}
+              {showOriginal ? copy.showResultLabel : copy.showOriginalLabel}
             </button>
           </>
         ) : null}
@@ -326,7 +304,7 @@ export default function AiTextAssistantPanel({
       <div className={styles.inlineTextAiPreview} aria-live="polite">
         <header className={styles.inlineTextAiPreviewHeader}>
           <span>
-            {showOriginal || !currentEntry ? '원본' : describeTextAssistantAction(currentEntry)}
+            {showOriginal || !currentEntry ? copy.originalLabel : copy.describeAction(currentEntry)}
           </span>
           <span>{showOriginal || !currentEntry ? sourceLengthLabel : previewLengthLabel}</span>
         </header>
@@ -340,7 +318,7 @@ export default function AiTextAssistantPanel({
           onClick={handleDiscard}
           disabled={pending}
         >
-          초기화
+          {copy.resetLabel}
         </button>
         <button
           type="button"
@@ -349,7 +327,7 @@ export default function AiTextAssistantPanel({
           disabled={!canApply}
           data-builder-ai-text-apply="true"
         >
-          적용
+          {copy.applyLabel}
         </button>
       </div>
     </div>

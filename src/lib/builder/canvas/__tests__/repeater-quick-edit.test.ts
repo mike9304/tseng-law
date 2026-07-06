@@ -109,6 +109,32 @@ describe('builder canvas repeater quick edit', () => {
     });
   });
 
+  it('reuses an existing node map for quick edit lookup', () => {
+    const nodes = [
+      textNode('home-services-card-0-title', '투자·법인설립'),
+      textNode('home-services-card-0-description', '대만 법인 설립 자문'),
+      buttonNode('home-services-card-0-more', '자세히 보기', '/ko/services/company'),
+    ];
+    const nodesById = new Map(nodes.map((node) => [node.id, node]));
+
+    const quickEdit = resolveBuilderCanvasRepeaterQuickEdit(
+      nodesById,
+      'home-services-card-0-title'
+    );
+
+    expect(quickEdit).toMatchObject({
+      kind: 'service',
+      index: 0,
+      rootNodeId: 'home-services-card-0',
+      titleNodeId: 'home-services-card-0-title',
+      descriptionNodeId: 'home-services-card-0-description',
+      linkNodeId: 'home-services-card-0-more',
+      title: '투자·법인설립',
+      description: '대만 법인 설립 자문',
+      href: '/ko/services/company',
+    });
+  });
+
   it('ignores non-repeater selections', () => {
     expect(resolveBuilderCanvasRepeaterQuickEdit([textNode('hero-title', 'Hero')], 'hero-title')).toBeNull();
   });

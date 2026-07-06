@@ -96,6 +96,112 @@
   padding: 24px;
 }
 
+.memberProfileSummary {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.memberProfilePhotoWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.memberProfilePhoto,
+.memberProfilePhotoPlaceholder {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  border: 1px solid #cbd5e1;
+}
+
+.memberProfilePhotoPlaceholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dbeafe, #fef3c7);
+  color: #1f2937;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.memberProfileSummaryCopy {
+  display: grid;
+  gap: 4px;
+}
+
+.memberProfileSummaryCopy strong {
+  font-size: 1.05rem;
+  color: #111827;
+}
+
+.memberProfileSummaryCopy p,
+.memberProfileSummaryCopy small {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.memberProfileChipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.memberProfileChipLabel {
+  color: #111827;
+  font-weight: 800;
+}
+
+.memberProfileChip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.memberProfileNotifications {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.memberProfileNotifications legend {
+  padding: 0 6px;
+  color: #111827;
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.memberProfileOption {
+  display: flex !important;
+  gap: 10px;
+  align-items: center;
+  font-weight: 700 !important;
+}
+
+.memberProfileOption input {
+  width: 18px;
+  min-height: 18px;
+  flex: 0 0 auto;
+}
+
 .authForm {
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -112,7 +218,8 @@
 }
 
 .authForm input,
-.profileForm input {
+.profileForm input,
+.profileForm textarea {
   min-height: 46px;
   width: 100%;
   border: 1px solid #cbd5e1;
@@ -121,6 +228,12 @@
   color: #111827;
   font: inherit;
   background: #ffffff;
+}
+
+.profileForm textarea {
+  min-height: 104px;
+  padding: 12px 14px;
+  resize: vertical;
 }
 
 .authForm button,
@@ -193,6 +306,59 @@
   line-height: 1.6;
 }
 
+.accountProfileSummary {
+  display: grid;
+  gap: 10px;
+}
+
+.accountProfilePhoto,
+.accountProfilePhotoPlaceholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid #cbd5e1;
+}
+
+.accountProfilePhotoPlaceholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0f2fe, #fef3c7);
+  color: #1f2937;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.accountProfileSummary small {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.accountProfileChipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.accountProfileChipLabel {
+  color: #111827;
+  font-weight: 800;
+}
+
+.accountProfileChip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #075985;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
 .memberBadge {
   display: flex;
   flex-wrap: wrap;
@@ -222,6 +388,63 @@
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
+}
+
+.bookingFilterRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bookingFilterActive {
+  background: #111827;
+  color: #ffffff;
+}
+
+.bookingFilterInactive {
+  background: #f8fafc;
+  color: #374151;
+  border: 1px solid #cbd5e1;
+}
+
+.searchField {
+  display: grid;
+  gap: 8px;
+}
+
+.searchField span {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #374151;
+}
+
+.searchField input {
+  min-height: 46px;
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0 14px;
+  color: #111827;
+  font: inherit;
+  background: #ffffff;
+}
+
+.bookingDateRange {
+  display: grid;
+  gap: 10px;
+}
+
+.bookingDateRangeFields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.muted {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
 .bookingsHeader {
@@ -266,6 +489,83 @@
   gap: 10px;
 }
 
+.bookingNoResultsCard {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.bookingNoResultsEyebrow {
+  margin: 0;
+  color: #7c2d12;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.bookingNoResultsCard h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.bookingNoResultsBody {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.bookingNoResultsFilters {
+  display: grid;
+  gap: 10px;
+}
+
+.bookingNoResultsFilters p {
+  margin: 0;
+  color: #111827;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.bookingNoResultsList {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bookingNoResultsList li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.bookingNoResultsList li span {
+  color: #374151;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.bookingNoResultsList li strong {
+  color: #111827;
+  font-size: 0.92rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
 .bookingRow {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -303,8 +603,88 @@
 }
 
 .bookingActions {
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+}
+
+.bookingActions .accountLink {
+  width: auto;
+}
+
+.bookingRescheduleForm {
+  display: grid;
+  gap: 12px;
+  align-items: start;
+}
+
+.bookingRescheduleForm label {
+  display: grid;
+  gap: 8px;
+  color: #374151;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.bookingRescheduleForm span {
+  font-size: 0.85rem;
+}
+
+.bookingRescheduleForm input {
+  min-height: 46px;
+  width: min(100%, 320px);
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0 14px;
+  color: #111827;
+  font: inherit;
+  background: #ffffff;
+}
+
+.bookingRescheduleForm button {
+  min-height: 46px;
+  width: fit-content;
+  border: 0;
+  border-radius: 6px;
+  padding: 0 18px;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.bookingRescheduleForm button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.rebookDetails {
+  display: grid;
+  gap: 16px;
+}
+
+.rebookSummary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  width: fit-content;
+  padding: 0 18px;
+  border-radius: 6px;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+
+.rebookSummary::-webkit-details-marker {
+  display: none;
+}
+
+.rebookFlow {
+  display: grid;
+  gap: 12px;
 }
 
 .bookingCode {
@@ -358,6 +738,14 @@
   .bookingActions,
   .bookingActions .accountLink {
     width: 100%;
+  }
+
+  .rebookSummary {
+    width: 100%;
+  }
+
+  .bookingFilterRow {
+    gap: 10px;
   }
 
   .bookingCode {

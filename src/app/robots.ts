@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { defaultLocale, locales } from '@/lib/locales';
 import { getSiteUrl } from '@/lib/seo';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
@@ -29,7 +30,7 @@ async function collectNoIndexPaths(): Promise<string[]> {
   const out: string[] = [];
   for (const locale of locales) {
     try {
-      const site = await readSiteDocument('default', locale);
+      const site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, locale);
       for (const page of site.pages) {
         if (page.locale !== locale) continue;
         if (!(page.noIndex || page.seo?.noIndex || page.password)) continue;
@@ -47,7 +48,7 @@ async function collectCustomRobotsText(): Promise<string | null> {
   const orderedLocales = [defaultLocale, ...locales.filter((locale) => locale !== defaultLocale)];
   for (const locale of orderedLocales) {
     try {
-      const site = await readSiteDocument('default', locale);
+      const site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, locale);
       const custom = site.settings?.robotsTxt?.trim();
       if (custom) return custom;
     } catch {

@@ -1,28 +1,29 @@
-import type { Metadata } from 'next';
 import BookingsAdminShell from '@/components/builder/bookings/BookingsAdminShell';
 import BookingCalendarAdmin from '@/components/builder/bookings/BookingCalendarAdmin';
+import { normalizeBookingCalendarMonth, normalizeBookingCalendarViewMode } from '@/lib/builder/bookings/calendar-url';
+import { getBookingsAdminCopy } from '@/lib/builder/bookings/bookings-copy';
 import { listAvailability, listBookings, listServices, listStaff } from '@/lib/builder/bookings/storage';
 import { textForLocale, type CalendarEntry } from '@/lib/builder/bookings/types';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-  title: 'Bookings Calendar',
-  robots: { index: false, follow: false },
+type PageProps = {
+  params: { locale: string };
+  searchParams?: { month?: string; view?: string; staffId?: string };
 };
 
-function currentMonthRange(): { from: string; to: string } {
-  const now = new Date();
-  return {
-    from: new Date(now.getFullYear(), now.getMonth(), 1).toISOString(),
-    to: new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59).toISOString(),
-  };
-}
-
-export default async function BookingCalendarPage({ params }: { params: { locale: string } }) {
+export default async function BookingCalendarPage({ params, searchParams }: PageProps) {
   const locale: Locale = normalizeLocale(params.locale);
-  const range = currentMonthRange();
+  const copy = getBookingsAdminCopy(locale);
+  const initialMonth = normalizeBookingCalendarMonth(searchParams?.month);
+  const initialViewMode = normalizeBookingCalendarViewMode(searchParams?.view);
+  const initialStaffId = searchParams?.staffId ?? '';
+  const [year, month] = initialMonth.split('-').map(Number);
+  const range = {
+    from: new Date(year, (month || 1) - 1, 1).toISOString(),
+    to: new Date(year, month || 1, 0, 23, 59, 59).toISOString(),
+  };
   const [bookings, services, staff, availability] = await Promise.all([
     listBookings({ ...range, includeCancelled: true }),
     listServices(true),
@@ -56,10 +57,19 @@ export default async function BookingCalendarPage({ params }: { params: { locale
     <BookingsAdminShell
       locale={locale}
       active="calendar"
-      title="Bookings calendar"
-      subtitle="Review consultation bookings and blocked calendar time in one dashboard."
+      title={copy.pages.calendar.title}
+      subtitle={copy.pages.calendar.subtitle}
     >
-      <BookingCalendarAdmin locale={locale} initialEntries={entries} services={services} staff={staff} />
+      <BookingCalendarAdmin
+        locale={locale}
+        initialEntries={entries}
+        services={services}
+        staff={staff}
+        availability={availability}
+        initialMonth={initialMonth}
+        initialViewMode={initialViewMode}
+        initialStaffId={initialStaffId}
+      />
     </BookingsAdminShell>
   );
 }

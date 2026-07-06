@@ -236,6 +236,308 @@
   font-size: 12px;
 }
 
+.progressActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.progressActionLink,
+.progressActionMuted {
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+
+.progressActionLink {
+  background: #fff;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.progressActionLink:hover {
+  background: #eff6ff;
+}
+
+.progressActionMuted {
+  background: #f8fafc;
+  color: #94a3b8;
+}
+
+.batchProgressCard {
+  display: grid;
+  gap: 8px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1e3a8a;
+  padding: 12px;
+}
+
+.batchProgressHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.batchProgressTrack {
+  overflow: hidden;
+  height: 8px;
+  border-radius: 999px;
+  background: #dbeafe;
+}
+
+.batchProgressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #1d4ed8, #0891b2);
+  transition: width .18s ease;
+}
+
+.batchProgressMeta {
+  margin: 0;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.providerReadinessCard {
+  display: grid;
+  gap: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 12px;
+}
+
+.providerReadinessHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.providerReadinessHeader h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 14px;
+}
+
+.providerReadinessHeader p,
+.providerReadinessMessage {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.providerReadinessGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.providerReadinessProvider {
+  display: grid;
+  gap: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.providerReadinessProviderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.providerReadinessProviderHeader strong {
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.providerReadinessProviderHeader span,
+.providerReadinessMeta span,
+.providerReadinessCheck {
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.2;
+  padding: 5px 8px;
+}
+
+.providerReadinessMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.providerReadinessProviderHeader span[data-state="pass"],
+.providerReadinessMeta span[data-state="pass"],
+.providerReadinessCheck[data-state="pass"] {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.providerReadinessMeta span[data-state="warn"],
+.providerReadinessCheck[data-state="warn"] {
+  border-color: #fed7aa;
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.providerReadinessCheck[data-state="fail"] {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.providerReadinessChecks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.providerSmokeSummary,
+.providerSmokeHistory {
+  display: grid;
+  gap: 8px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 10px;
+}
+
+.providerSmokeSummary + .providerSmokeHistory {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.providerSmokeSummary strong,
+.providerSmokeHistory strong {
+  color: #0f172a;
+  font-size: 12px;
+}
+
+.providerSmokeSummary p,
+.providerSmokeHistory p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.providerSmokeHistoryList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.providerSmokeHistoryList span {
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.2;
+  padding: 5px 8px;
+}
+
+.providerSmokeHistoryList span[data-state="pass"] {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.providerSmokeHistoryList span[data-state="unconfigured"] {
+  border-color: #fed7aa;
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.providerSmokeHistoryList span[data-state="fail"] {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.reviewStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.reviewChip,
+.reviewChipStrong {
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+
+.reviewChipStrong {
+  border-color: #bfdbfe;
+  background: #dbeafe;
+  font-weight: 800;
+}
+
+.reviewChipButton {
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  background: #fff;
+  color: #1d4ed8;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+
+.reviewChipButton:hover {
+  background: #eff6ff;
+}
+
+.reviewChipActive {
+  border-color: #1d4ed8;
+  background: #dbeafe;
+  color: #1e3a8a;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 10px;
+}
+
+.reviewChipMuted {
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+
+.reviewLocaleGroup {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
 .notice {
   min-height: 22px;
   color: #475569;
@@ -443,6 +745,8 @@
   .sidebar,
   .toolbar,
   .progressCard,
+  .providerReadinessCard,
+  .providerReadinessProvider,
   .matrixWrap,
   .matrix th,
   .button,
@@ -459,6 +763,8 @@
   .sidebar,
   .toolbar,
   .progressCard,
+  .providerReadinessCard,
+  .providerReadinessProvider,
   .matrixWrap {
     border-color: #1e293b;
   }
@@ -467,6 +773,8 @@
   .rowLabel,
   .sourceCell,
   .cellDisplay,
+  .providerReadinessHeader h3,
+  .providerReadinessProviderHeader strong,
   .smallButton {
     color: #e2e8f0;
   }
@@ -481,6 +789,8 @@
   .categoryStats,
   .progressStats,
   .rowMeta,
+  .providerReadinessHeader p,
+  .providerReadinessMessage,
   .notice {
     color: #94a3b8;
   }

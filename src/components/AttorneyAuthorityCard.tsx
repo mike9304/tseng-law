@@ -5,7 +5,7 @@ import type { Locale } from '@/lib/locales';
 
 const cardLabels = {
   ko: {
-    eyebrow: 'Lead Attorney',
+    eyebrow: '담당 변호사',
     heading: '담당 변호사',
     practice: '주요 대응 분야',
     channels: '공개 프로필 및 채널',
@@ -13,7 +13,7 @@ const cardLabels = {
     contact: '상담 문의',
   },
   'zh-hant': {
-    eyebrow: 'Lead Attorney',
+    eyebrow: '承辦律師',
     heading: '承辦律師',
     practice: '主要服務領域',
     channels: '公開簡介與頻道',

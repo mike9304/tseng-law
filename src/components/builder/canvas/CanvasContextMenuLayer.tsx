@@ -1,11 +1,34 @@
 'use client';
 
-import ContextMenu from '@/components/builder/canvas/ContextMenu';
+import { memo, useCallback, useMemo } from 'react';
+import ContextMenu, { type ContextMenuAction } from '@/components/builder/canvas/ContextMenu';
 import type { ImageEditTab } from '@/components/builder/canvas/ImageEditDialog';
 import { useShortcutLabels, type ShortcutAction } from '@/components/builder/canvas/hooks/useShortcutLabels';
 import { type ContextMenuState } from '@/components/builder/canvas/canvasInteraction';
 import { linkValueFromLegacy, type LinkValue } from '@/lib/builder/links';
 import { isContainerLikeKind, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import { getCanvasContextMenuCopy } from './canvas-context-menu-copy';
+
+const CONTEXT_MENU_SHORTCUT_ACTIONS: ShortcutAction[] = [
+  'editLink',
+  'copy',
+  'cut',
+  'paste',
+  'duplicate',
+  'pasteStyle',
+  'copyStyle',
+  'bringToFront',
+  'bringForward',
+  'sendBackward',
+  'sendToBack',
+  'toggleLock',
+  'group',
+  'ungroup',
+  'delete',
+];
+
+const EMPTY_CONTEXT_MENU_ACTIONS: ContextMenuAction[] = [];
 
 type CanvasContextMenuLayerProps = {
   alignSelectedNodes: (alignment: 'left' | 'center' | 'right' | 'top' | 'middle' | 'bottom') => void;
@@ -25,13 +48,15 @@ type CanvasContextMenuLayerProps = {
   handlePaste: () => void;
   handlePasteStyle: () => void;
   hasUnlockedSelection: boolean;
+  locale?: Locale;
   matchSelectedNodesSize: (axis: 'width' | 'height') => void;
-  nodes: BuilderCanvasNode[];
+  nodesById: Map<string, BuilderCanvasNode>;
   onRequestAssetLibrary?: (nodeId: string) => void;
   onRequestImageEditor?: (nodeId: string, initialTab?: ImageEditTab) => void;
   onRequestMoveToPage?: (nodeIds: string[]) => void;
   onRequestSaveAsSection?: (rootNodeId: string) => void;
   selectedLinkTargetNode: BuilderCanvasNode | null;
+  selectedNodeIdSet: ReadonlySet<string>;
   selectedNodeIds: string[];
   selectedNodes: BuilderCanvasNode[];
   sendSelectedNodeBackward: () => void;
@@ -45,7 +70,7 @@ type CanvasContextMenuLayerProps = {
   updateSelectedLink: (nodeId: string, link: LinkValue | null) => void;
 };
 
-export default function CanvasContextMenuLayer({
+function CanvasContextMenuLayer({
   alignSelectedNodes,
   bringSelectedNodeForward,
   bringSelectedNodeToFront,
@@ -63,13 +88,15 @@ export default function CanvasContextMenuLayer({
   handlePaste,
   handlePasteStyle,
   hasUnlockedSelection,
+  locale = 'ko',
   matchSelectedNodesSize,
-  nodes,
+  nodesById,
   onRequestAssetLibrary,
   onRequestImageEditor,
   onRequestMoveToPage,
   onRequestSaveAsSection,
   selectedLinkTargetNode,
+  selectedNodeIdSet,
   selectedNodeIds,
   selectedNodes,
   sendSelectedNodeBackward,
@@ -82,57 +109,42 @@ export default function CanvasContextMenuLayer({
   updateResponsiveOverride,
   updateSelectedLink,
 }: CanvasContextMenuLayerProps) {
-  const shortcutLabels = useShortcutLabels([
-    'editLink',
-    'copy',
-    'cut',
-    'paste',
-    'duplicate',
-    'pasteStyle',
-    'copyStyle',
-    'bringToFront',
-    'bringForward',
-    'sendBackward',
-    'sendToBack',
-    'toggleLock',
-    'group',
-    'ungroup',
-    'delete',
-  ]);
-  const shortcutGlyph = (action: ShortcutAction) => shortcutLabels.get(action)?.glyph ?? '';
-  const shortcutTitle = (title: string, action: ShortcutAction) => {
+  const copy = useMemo(() => getCanvasContextMenuCopy(locale), [locale]);
+  const shortcutLabels = useShortcutLabels(CONTEXT_MENU_SHORTCUT_ACTIONS);
+  const shortcutGlyph = useCallback(
+    (action: ShortcutAction) => shortcutLabels.get(action)?.glyph ?? '',
+    [shortcutLabels],
+  );
+  const shortcutTitle = useCallback((title: string, action: ShortcutAction) => {
     const label = shortcutLabels.get(action)?.title;
     return label ? `${title} (${label})` : title;
-  };
+  }, [shortcutLabels]);
+  const closeContextMenu = useCallback(() => setContextMenu(null), [setContextMenu]);
 
-  if (!contextMenu) return null;
-
-  const contextMenuNode = nodes.find((node) => node.id === contextMenu.nodeId) ?? null;
-  const contextMenuTitle = selectedNodeIds.length > 1
-    ? `${selectedNodeIds.length}개 선택됨`
-    : (contextMenuNode?.kind ?? '요소') + ' 메뉴';
+  const hasContextMenu = contextMenu != null;
+  const contextMenuNode = hasContextMenu ? nodesById.get(contextMenu.nodeId) ?? null : null;
+  const contextMenuTitle = hasContextMenu && selectedNodeIds.length > 1
+    ? copy.selectedCountTitle(selectedNodeIds.length)
+    : copy.nodeMenuTitle(contextMenuNode?.kind);
   const contextPrimaryNode = contextMenuNode ?? selectedNodes[0] ?? null;
   const contextSelectionCount =
-    contextMenuNode && !(selectedNodeIds.length > 1 && selectedNodeIds.includes(contextMenuNode.id))
+    contextMenuNode && !(selectedNodeIds.length > 1 && selectedNodeIdSet.has(contextMenuNode.id))
       ? 1
       : selectedNodeIds.length;
 
-  return (
-    <ContextMenu
-      x={contextMenu.x}
-      y={contextMenu.y}
-      title={contextMenuTitle}
-      actions={[
+  const actions = useMemo<ContextMenuAction[]>(() => {
+    if (!hasContextMenu) return EMPTY_CONTEXT_MENU_ACTIONS;
+    return [
         {
           key: 'edit-text',
-          label: '텍스트 편집',
-          title: '인라인 텍스트 편집 (또는 더블클릭)',
+          label: copy.textEditLabel,
+          title: copy.textEditTitle,
           disabled:
             contextSelectionCount !== 1 ||
             (contextPrimaryNode?.kind !== 'text' && contextPrimaryNode?.kind !== 'heading') ||
             Boolean(contextPrimaryNode?.locked),
           onSelect: () => {
-            setContextMenu(null);
+            closeContextMenu();
             if (typeof document !== 'undefined' && contextPrimaryNode) {
               document.dispatchEvent(
                 new CustomEvent('builder:start-text-edit', {
@@ -144,15 +156,15 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'image-edit',
-          label: '자르기 / 필터 / Alt...',
-          title: '이미지 자르기, 필터, alt 텍스트 편집',
+          label: copy.imageEditLabel,
+          title: copy.imageEditTitle,
           disabled:
             contextSelectionCount !== 1 ||
             contextPrimaryNode?.kind !== 'image' ||
             Boolean(contextPrimaryNode?.locked) ||
             !onRequestImageEditor,
           onSelect: () => {
-            setContextMenu(null);
+            closeContextMenu();
             if (contextPrimaryNode && onRequestImageEditor) {
               onRequestImageEditor(contextPrimaryNode.id, 'crop');
             }
@@ -160,14 +172,14 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'replace-image',
-          label: '이미지 교체',
-          title: '에셋 라이브러리 열기',
+          label: copy.replaceImageLabel,
+          title: copy.replaceImageTitle,
           disabled:
             contextSelectionCount !== 1 ||
             contextPrimaryNode?.kind !== 'image' ||
             Boolean(contextPrimaryNode?.locked),
           onSelect: () => {
-            setContextMenu(null);
+            closeContextMenu();
             if (contextPrimaryNode && onRequestAssetLibrary) {
               onRequestAssetLibrary(contextPrimaryNode.id);
             }
@@ -175,15 +187,15 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'edit-alt',
-          label: 'Alt 텍스트 편집',
-          title: '이미지 alt 텍스트 편집',
+          label: copy.editAltLabel,
+          title: copy.editAltTitle,
           disabled:
             contextSelectionCount !== 1 ||
             contextPrimaryNode?.kind !== 'image' ||
             Boolean(contextPrimaryNode?.locked) ||
             !onRequestImageEditor,
           onSelect: () => {
-            setContextMenu(null);
+            closeContextMenu();
             if (contextPrimaryNode && onRequestImageEditor) {
               onRequestImageEditor(contextPrimaryNode.id, 'alt');
             }
@@ -198,11 +210,11 @@ export default function CanvasContextMenuLayer({
             if (value?.href) {
               const trimmed = value.href.trim();
               const preview = trimmed.length > 20 ? `${trimmed.slice(0, 18)}...` : trimmed;
-              return `링크 편집 - ${preview}`;
+              return copy.editLinkWithPreviewLabel(preview);
             }
-            return '링크 편집';
+            return copy.editLinkLabel;
           })(),
-          title: shortcutTitle('링크 편집', 'editLink'),
+          title: shortcutTitle(copy.editLinkLabel, 'editLink'),
           shortcut: shortcutGlyph('editLink'),
           disabled:
             selectedNodeIds.length !== 1 ||
@@ -210,14 +222,14 @@ export default function CanvasContextMenuLayer({
             Boolean(selectedNodes[0]?.locked) ||
             Boolean(selectedLinkTargetNode.locked),
           onSelect: () => {
-            setContextMenu(null);
+            closeContextMenu();
             focusSelectedLinkInput();
           },
         },
         {
           key: 'remove-link',
-          label: '링크 제거',
-          title: '현재 링크 제거',
+          label: copy.removeLinkLabel,
+          title: copy.removeLinkTitle,
           disabled: (() => {
             if (!selectedLinkTargetNode || selectedLinkTargetNode.locked) return true;
             const value = linkValueFromLegacy(
@@ -226,7 +238,7 @@ export default function CanvasContextMenuLayer({
             return !value?.href;
           })(),
           onSelect: () => {
-            setContextMenu(null);
+            closeContextMenu();
             if (selectedLinkTargetNode) {
               updateSelectedLink(selectedLinkTargetNode.id, null);
             }
@@ -235,95 +247,95 @@ export default function CanvasContextMenuLayer({
         { key: 'sep-clipboard', label: '', separator: true },
         {
           key: 'copy',
-          label: '복사',
+          label: copy.copyLabel,
           shortcut: shortcutGlyph('copy'),
-          title: shortcutTitle('복사', 'copy'),
+          title: shortcutTitle(copy.copyLabel, 'copy'),
           disabled: selectedNodeIds.length === 0,
           onSelect: handleCopy,
         },
         {
           key: 'cut',
-          label: '잘라내기',
+          label: copy.cutLabel,
           shortcut: shortcutGlyph('cut'),
-          title: shortcutTitle('잘라내기', 'cut'),
+          title: shortcutTitle(copy.cutLabel, 'cut'),
           disabled: !hasUnlockedSelection,
           onSelect: handleCut,
         },
         {
           key: 'paste',
-          label: '붙여넣기',
+          label: copy.pasteLabel,
           shortcut: shortcutGlyph('paste'),
-          title: shortcutTitle('붙여넣기', 'paste'),
+          title: shortcutTitle(copy.pasteLabel, 'paste'),
           disabled: !clipboardHasContent,
           onSelect: handlePaste,
         },
         {
           key: 'duplicate',
-          label: '복제',
+          label: copy.duplicateLabel,
           shortcut: shortcutGlyph('duplicate'),
-          title: shortcutTitle('복제', 'duplicate'),
+          title: shortcutTitle(copy.duplicateLabel, 'duplicate'),
           disabled: !hasUnlockedSelection,
           onSelect: handleDuplicate,
         },
         {
           key: 'paste-style',
-          label: '스타일 붙여넣기',
+          label: copy.pasteStyleLabel,
           shortcut: shortcutGlyph('pasteStyle'),
-          title: '선택 노드에 스타일만 붙여넣기',
+          title: copy.pasteStyleTitle,
           disabled: !styleClipboardHasContent || !hasUnlockedSelection,
           onSelect: () => {
-            setContextMenu(null);
+            closeContextMenu();
             handlePasteStyle();
           },
         },
         {
           key: 'copy-style',
-          label: '스타일 복사',
+          label: copy.copyStyleLabel,
           shortcut: shortcutGlyph('copyStyle'),
-          title: '선택 노드의 스타일만 복사',
+          title: copy.copyStyleTitle,
           disabled: contextSelectionCount !== 1 || !contextPrimaryNode,
           onSelect: () => {
-            setContextMenu(null);
+            closeContextMenu();
             handleCopyStyle();
           },
         },
         { key: 'sep-arrange', label: '', separator: true },
         {
           key: 'bring-front',
-          label: '맨 앞으로',
+          label: copy.bringToFrontLabel,
           shortcut: shortcutGlyph('bringToFront'),
-          title: '맨 앞으로 가져오기',
+          title: copy.bringToFrontTitle,
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
           onSelect: bringSelectedNodeToFront,
         },
         {
           key: 'bring-forward',
-          label: '한 단계 앞으로',
+          label: copy.bringForwardLabel,
           shortcut: shortcutGlyph('bringForward'),
-          title: '한 단계 앞으로',
+          title: copy.bringForwardTitle,
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
           onSelect: bringSelectedNodeForward,
         },
         {
           key: 'send-backward',
-          label: '한 단계 뒤로',
+          label: copy.sendBackwardLabel,
           shortcut: shortcutGlyph('sendBackward'),
-          title: '한 단계 뒤로',
+          title: copy.sendBackwardTitle,
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
           onSelect: sendSelectedNodeBackward,
         },
         {
           key: 'send-back',
-          label: '맨 뒤로',
+          label: copy.sendToBackLabel,
           shortcut: shortcutGlyph('sendToBack'),
-          title: '맨 뒤로 보내기',
+          title: copy.sendToBackTitle,
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
           onSelect: sendSelectedNodeToBack,
         },
         {
           key: 'lock',
-          label: selectedNodes.every((node) => node.locked) ? '잠금 해제' : '잠금',
-          title: '선택 잠금 토글',
+          label: selectedNodes.every((node) => node.locked) ? copy.unlockLabel : copy.lockLabel,
+          title: copy.lockTitle,
           shortcut: shortcutGlyph('toggleLock'),
           disabled: selectedNodeIds.length === 0,
           onSelect: toggleSelectedNodeLock,
@@ -331,85 +343,85 @@ export default function CanvasContextMenuLayer({
         { key: 'sep-align', label: '', separator: true },
         {
           key: 'align-left',
-          label: '왼쪽 정렬',
-          title: '왼쪽 정렬',
+          label: copy.alignLeftLabel,
+          title: copy.alignLeftTitle,
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('left'),
         },
         {
           key: 'align-center',
-          label: '가로 중앙 정렬',
-          title: '가운데 정렬',
+          label: copy.alignCenterLabel,
+          title: copy.alignCenterTitle,
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('center'),
         },
         {
           key: 'align-right',
-          label: '오른쪽 정렬',
-          title: '오른쪽 정렬',
+          label: copy.alignRightLabel,
+          title: copy.alignRightTitle,
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('right'),
         },
         {
           key: 'align-top',
-          label: '위쪽 정렬',
-          title: '상단 정렬',
+          label: copy.alignTopLabel,
+          title: copy.alignTopTitle,
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('top'),
         },
         {
           key: 'align-middle',
-          label: '세로 중앙 정렬',
-          title: '중앙 정렬',
+          label: copy.alignMiddleLabel,
+          title: copy.alignMiddleTitle,
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('middle'),
         },
         {
           key: 'align-bottom',
-          label: '아래쪽 정렬',
-          title: '하단 정렬',
+          label: copy.alignBottomLabel,
+          title: copy.alignBottomTitle,
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('bottom'),
         },
         { key: 'sep-distribute', label: '', separator: true, onSelect: () => {} },
         {
           key: 'distribute-horizontal',
-          label: '가로 균등 분배',
-          title: '가로 균등 분배 (3개 이상)',
+          label: copy.distributeHorizontalLabel,
+          title: copy.distributeHorizontalTitle,
           disabled: selectedNodeIds.length < 3 || !hasUnlockedSelection,
           onSelect: () => distributeSelectedNodes('horizontal'),
         },
         {
           key: 'distribute-vertical',
-          label: '세로 균등 분배',
-          title: '세로 균등 분배 (3개 이상)',
+          label: copy.distributeVerticalLabel,
+          title: copy.distributeVerticalTitle,
           disabled: selectedNodeIds.length < 3 || !hasUnlockedSelection,
           onSelect: () => distributeSelectedNodes('vertical'),
         },
         {
           key: 'match-width',
-          label: '너비 맞춤',
-          title: '선택 요소 너비 동일화',
+          label: copy.matchWidthLabel,
+          title: copy.matchWidthTitle,
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => matchSelectedNodesSize('width'),
         },
         {
           key: 'match-height',
-          label: '높이 맞춤',
-          title: '선택 요소 높이 동일화',
+          label: copy.matchHeightLabel,
+          title: copy.matchHeightTitle,
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => matchSelectedNodesSize('height'),
         },
         { key: 'sep-state', label: '', separator: true },
         {
           key: 'hide-on-viewport',
-          label: '기기별 숨김',
-          title: '현재 선택을 특정 viewport에서 숨깁니다',
+          label: copy.hideOnViewportLabel,
+          title: copy.hideOnViewportTitle,
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
           children: [
             {
               key: 'hide-desktop',
-              label: '데스크탑에서 숨김',
+              label: copy.hideDesktopLabel,
               onSelect: () => {
                 if (!selectedNodes[0]) return;
                 updateNode(selectedNodes[0].id, (node) => ({ ...node, visible: false }));
@@ -417,7 +429,7 @@ export default function CanvasContextMenuLayer({
             },
             {
               key: 'hide-tablet',
-              label: '태블릿에서 숨김',
+              label: copy.hideTabletLabel,
               onSelect: () => {
                 if (!selectedNodes[0]) return;
                 updateResponsiveOverride(selectedNodes[0].id, 'tablet', { hidden: true });
@@ -425,7 +437,7 @@ export default function CanvasContextMenuLayer({
             },
             {
               key: 'hide-mobile',
-              label: '모바일에서 숨김',
+              label: copy.hideMobileLabel,
               onSelect: () => {
                 if (!selectedNodes[0]) return;
                 updateResponsiveOverride(selectedNodes[0].id, 'mobile', { hidden: true });
@@ -435,33 +447,33 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'pin-to-screen',
-          label: '화면 고정',
-          title: 'Coming soon - Codex F-track',
+          label: copy.pinToScreenLabel,
+          title: copy.pinToScreenTitle,
           disabled: true,
         },
         {
           key: 'anchor-link',
-          label: '앵커 링크...',
-          title: 'Use the Layout tab to edit anchor name',
+          label: copy.anchorLinkLabel,
+          title: copy.anchorLinkTitle,
           disabled: true,
         },
         {
           key: 'animations',
-          label: '애니메이션...',
-          title: 'Open the Animations tab in the inspector',
+          label: copy.animationsLabel,
+          title: copy.animationsTitle,
           disabled: true,
         },
         {
           key: 'effects',
-          label: '효과...',
-          title: 'Coming soon - Codex F-track',
+          label: copy.effectsLabel,
+          title: copy.effectsTitle,
           disabled: true,
         },
         { key: 'sep-pages', label: '', separator: true, onSelect: () => {} },
         {
           key: 'move-to-page',
-          label: '페이지로 이동...',
-          title: '다른 페이지로 이동',
+          label: copy.moveToPageLabel,
+          title: copy.moveToPageTitle,
           disabled: selectedNodeIds.length === 0 || !hasUnlockedSelection || !onRequestMoveToPage,
           onSelect: () => {
             if (onRequestMoveToPage) {
@@ -471,15 +483,15 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'save-as-section',
-          label: '섹션으로 저장...',
-          title: '컨테이너 + 자식을 라이브러리에 저장 (재사용)',
+          label: copy.saveAsSectionLabel,
+          title: copy.saveAsSectionTitle,
           disabled:
             selectedNodeIds.length !== 1 ||
             !selectedNodes[0] ||
             !isContainerLikeKind(selectedNodes[0].kind) ||
             !onRequestSaveAsSection,
           onSelect: () => {
-            setContextMenu(null);
+            closeContextMenu();
             if (onRequestSaveAsSection && selectedNodes[0]) {
               onRequestSaveAsSection(selectedNodes[0].id);
             }
@@ -487,46 +499,46 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'add-to-library',
-          label: '라이브러리에 추가',
-          title: 'Coming soon - Codex F-track',
+          label: copy.addToLibraryLabel,
+          title: copy.addToLibraryTitle,
           disabled: true,
         },
         {
           key: 'convert-to-component',
-          label: '컴포넌트로 변환',
-          title: 'Coming soon - Codex F-track',
+          label: copy.convertToComponentLabel,
+          title: copy.convertToComponentTitle,
           disabled: true,
         },
         {
           key: 'style-override',
-          label: '스타일 오버라이드',
-          title: 'Coming soon - Codex F-track',
+          label: copy.styleOverrideLabel,
+          title: copy.styleOverrideTitle,
           disabled: true,
           children: [
-            { key: 'override-fill', label: '채색 오버라이드', disabled: true, title: 'Coming soon - Codex F-track' },
-            { key: 'override-typography', label: '서체 오버라이드', disabled: true, title: 'Coming soon - Codex F-track' },
-            { key: 'override-effects', label: '효과 오버라이드', disabled: true, title: 'Coming soon - Codex F-track' },
+            { key: 'override-fill', label: copy.overrideFillLabel, disabled: true, title: copy.styleOverrideTitle },
+            { key: 'override-typography', label: copy.overrideTypographyLabel, disabled: true, title: copy.styleOverrideTitle },
+            { key: 'override-effects', label: copy.overrideEffectsLabel, disabled: true, title: copy.styleOverrideTitle },
           ],
         },
         {
           key: 'reset-style',
-          label: '스타일 초기화',
-          title: 'Coming soon - Codex F-track',
+          label: copy.resetStyleLabel,
+          title: copy.resetStyleTitle,
           disabled: true,
         },
         { key: 'sep-group', label: '', separator: true, onSelect: () => {} },
         {
           key: 'group',
-          label: '그룹',
-          title: '그룹 만들기 (2개 이상)',
+          label: copy.groupLabel,
+          title: copy.groupTitle,
           shortcut: shortcutGlyph('group'),
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: groupSelectedNodes,
         },
         {
           key: 'ungroup',
-          label: '그룹 해제',
-          title: '그룹 해제',
+          label: copy.ungroupLabel,
+          title: copy.ungroupTitle,
           shortcut: shortcutGlyph('ungroup'),
           disabled:
             selectedNodeIds.length !== 1 ||
@@ -537,15 +549,68 @@ export default function CanvasContextMenuLayer({
         { key: 'sep-danger', label: '', separator: true },
         {
           key: 'delete',
-          label: '삭제',
+          label: copy.deleteLabel,
           shortcut: shortcutGlyph('delete'),
-          title: shortcutTitle('삭제', 'delete'),
+          title: shortcutTitle(copy.deleteLabel, 'delete'),
           tone: 'danger',
           disabled: !hasUnlockedSelection,
           onSelect: deleteSelectedNode,
         },
-      ]}
-      onClose={() => setContextMenu(null)}
+    ];
+  }, [
+    alignSelectedNodes,
+    bringSelectedNodeForward,
+    bringSelectedNodeToFront,
+    childrenMap,
+    clipboardHasContent,
+    closeContextMenu,
+    hasContextMenu,
+    contextPrimaryNode,
+    contextSelectionCount,
+    copy,
+    deleteSelectedNode,
+    distributeSelectedNodes,
+    focusSelectedLinkInput,
+    groupSelectedNodes,
+    handleCopy,
+    handleCopyStyle,
+    handleCut,
+    handleDuplicate,
+    handlePaste,
+    handlePasteStyle,
+    hasUnlockedSelection,
+    matchSelectedNodesSize,
+    onRequestAssetLibrary,
+    onRequestImageEditor,
+    onRequestMoveToPage,
+    onRequestSaveAsSection,
+    selectedLinkTargetNode,
+    selectedNodeIdSet,
+    selectedNodeIds,
+    selectedNodes,
+    sendSelectedNodeBackward,
+    sendSelectedNodeToBack,
+    shortcutGlyph,
+    shortcutTitle,
+    styleClipboardHasContent,
+    toggleSelectedNodeLock,
+    ungroupSelectedNode,
+    updateNode,
+    updateResponsiveOverride,
+    updateSelectedLink,
+  ]);
+
+  if (!contextMenu) return null;
+
+  return (
+    <ContextMenu
+      x={contextMenu.x}
+      y={contextMenu.y}
+      title={contextMenuTitle}
+      actions={actions}
+      onClose={closeContextMenu}
     />
   );
 }
+
+export default memo(CanvasContextMenuLayer);

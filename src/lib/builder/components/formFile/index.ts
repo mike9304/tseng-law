@@ -1,6 +1,7 @@
 import { defineComponent } from '../define';
 import FormFileElement from './Element';
 import FormFileInspector from './Inspector';
+import { FORM_FILE_KO_DEFAULTS } from '../form/form-controls-copy';
 
 export default defineComponent({
   kind: 'form-file',
@@ -9,7 +10,7 @@ export default defineComponent({
   icon: '⇪',
   defaultContent: {
     name: 'attachment',
-    label: '첨부 파일',
+    label: FORM_FILE_KO_DEFAULTS.label,
     required: false,
     accept: 'image/*,application/pdf',
     maxSizeMb: 10,

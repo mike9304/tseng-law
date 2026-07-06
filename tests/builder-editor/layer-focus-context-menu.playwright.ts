@@ -3,7 +3,7 @@ import { expect, test, type Page } from '@playwright/test';
 async function ensureLayersPanelOpen(page: Page): Promise<ReturnType<Page['locator']>> {
   const layersPanel = page.locator('[data-builder-layers-panel="true"]');
   if (await layersPanel.isVisible().catch(() => false)) return layersPanel;
-  await page.getByRole('button', { name: /Layers/i }).click();
+  await page.getByRole('button', { name: /Layers|레이어/i }).click();
   await expect(layersPanel).toBeVisible();
   return layersPanel;
 }

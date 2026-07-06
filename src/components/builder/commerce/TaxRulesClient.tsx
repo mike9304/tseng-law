@@ -48,7 +48,7 @@ export default function TaxRulesClient({ locale, siteTitle, initialRules }: TaxR
     setBusy(true);
     setNotice('Saving tax rules...');
     try {
-      const response = await fetch('/api/builder/commerce/tax-rules', {
+      const response = await fetch(`/api/builder/commerce/tax-rules?locale=${encodeURIComponent(locale)}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ rules }),

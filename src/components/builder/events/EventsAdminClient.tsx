@@ -4,6 +4,7 @@ import { FormEvent, useMemo, useState } from 'react';
 import type { BuilderEvent, EventStatus } from '@/lib/builder/events/events-shared';
 import { DEFAULT_EVENT_CATEGORIES } from '@/lib/builder/events/events-shared';
 import type { Locale } from '@/lib/locales';
+import { getEventsCopy } from './events-copy';
 import styles from './EventsAdmin.module.css';
 
 interface EventsAdminClientProps {
@@ -29,6 +30,7 @@ function ticketLabel(event: BuilderEvent): string {
 }
 
 export default function EventsAdminClient({ locale, initialEvents }: EventsAdminClientProps) {
+  const copy = getEventsCopy(locale);
   const [events, setEvents] = useState(initialEvents);
   const [status, setStatus] = useState<EventStatus | 'all'>('all');
   const [pending, setPending] = useState(false);
@@ -68,12 +70,12 @@ export default function EventsAdminClient({ locale, initialEvents }: EventsAdmin
         body: JSON.stringify(payload),
       });
       const json = await response.json();
-      if (!response.ok || !json?.ok) throw new Error(json?.error || '이벤트 저장 실패');
+      if (!response.ok || !json?.ok) throw new Error(json?.error || copy.createError);
       setEvents((current) => [json.event as BuilderEvent, ...current.filter((item) => item.eventId !== json.event.eventId)]);
-      setMessage('이벤트가 생성되었습니다.');
+      setMessage(copy.formSubmitSuccess);
       event.currentTarget.reset();
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : '이벤트 저장 실패');
+      setMessage(error instanceof Error ? error.message : copy.createError);
     } finally {
       setPending(false);
     }
@@ -82,16 +84,17 @@ export default function EventsAdminClient({ locale, initialEvents }: EventsAdmin
   async function updateStatus(eventId: string, nextStatus: EventStatus) {
     setMessage('');
     try {
-      const response = await fetch(`/api/builder/events/${encodeURIComponent(eventId)}`, {
+      const params = new URLSearchParams({ locale });
+      const response = await fetch(`/api/builder/events/${encodeURIComponent(eventId)}?${params.toString()}`, {
         method: 'PATCH',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ status: nextStatus }),
       });
       const json = await response.json();
-      if (!response.ok || !json?.ok) throw new Error(json?.error || '상태 변경 실패');
+      if (!response.ok || !json?.ok) throw new Error(json?.error || copy.updateError);
       setEvents((current) => current.map((item) => item.eventId === eventId ? json.event as BuilderEvent : item));
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : '상태 변경 실패');
+      setMessage(error instanceof Error ? error.message : copy.updateError);
     }
   }
 
@@ -103,54 +106,54 @@ export default function EventsAdminClient({ locale, initialEvents }: EventsAdmin
     <main className={styles.root} data-builder-events-admin="true">
       <header className={styles.header}>
         <div>
-          <p className={styles.eyebrow}>Native Events</p>
-          <h1>이벤트 관리</h1>
-          <p>세미나, 웨비나, 상담회를 만들고 RSVP와 티켓 기본 정보를 관리합니다.</p>
+          <p className={styles.eyebrow}>{copy.eyebrow}</p>
+          <h1>{copy.heading}</h1>
+          <p>{copy.description}</p>
         </div>
         <a className={styles.publicLink} href={`/${locale}/events`} target="_blank" rel="noreferrer">
-          공개 이벤트 보기
+          {copy.publicLink}
         </a>
       </header>
 
-      <section className={styles.stats} aria-label="이벤트 요약">
-        <div><strong>{events.length}</strong><span>전체</span></div>
-        <div><strong>{publishedCount}</strong><span>공개</span></div>
-        <div><strong>{upcomingCount}</strong><span>예정</span></div>
-        <div><strong>{rsvpCount}</strong><span>신청</span></div>
+      <section className={styles.stats} aria-label={copy.statsLabel}>
+        <div><strong>{events.length}</strong><span>{copy.totalLabel}</span></div>
+        <div><strong>{publishedCount}</strong><span>{copy.publishedLabel}</span></div>
+        <div><strong>{upcomingCount}</strong><span>{copy.upcomingLabel}</span></div>
+        <div><strong>{rsvpCount}</strong><span>{copy.rsvpLabel}</span></div>
       </section>
 
       <section className={styles.layout}>
         <form className={styles.form} onSubmit={createEvent} data-builder-events-create-form="true">
-          <h2>새 이벤트</h2>
+          <h2>{copy.createHeading}</h2>
           <label>
-            제목
-            <input name="title" required placeholder="대만 회사설립 세미나" />
+            {copy.titleLabel}
+            <input name="title" required placeholder="최대 180자 · 예: 대만 회사설립 세미나" />
           </label>
           <label>
-            설명
-            <textarea name="description" rows={4} placeholder="행사 소개를 입력하세요." />
+            {copy.descriptionLabel}
+            <textarea name="description" rows={4} placeholder="최대 4000자 · 예: 대만 법인 설립 절차와 주의점을 다루는 무료 세미나입니다." />
           </label>
           <div className={styles.twoCols}>
             <label>
-              날짜
+              {copy.dateLabel}
               <input name="date" type="date" required />
             </label>
             <label>
-              시간
+              {copy.timeLabel}
               <input name="time" type="time" required defaultValue="14:00" />
             </label>
           </div>
           <label>
-            장소
-            <input name="location" required placeholder="타이베이 오피스 / Online" />
+            {copy.locationLabel}
+            <input name="location" required placeholder="최대 240자 · 예: 타이베이 오피스 / Online" />
           </label>
           <div className={styles.twoCols}>
             <label>
-              정원
+              {copy.capacityLabel}
               <input name="capacity" type="number" min={1} defaultValue={80} />
             </label>
             <label>
-              카테고리
+              {copy.categoryLabel}
               <select name="category" defaultValue="seminar">
                 {DEFAULT_EVENT_CATEGORIES.map((category) => (
                   <option key={category.id} value={category.id}>{category.name[locale]}</option>
@@ -160,45 +163,45 @@ export default function EventsAdminClient({ locale, initialEvents }: EventsAdmin
           </div>
           <div className={styles.twoCols}>
             <label>
-              상태
+              {copy.statusLabel}
               <select name="status" defaultValue="published">
-                <option value="published">공개</option>
-                <option value="draft">초안</option>
-                <option value="cancelled">취소</option>
+                <option value="published">{copy.statusPublished}</option>
+                <option value="draft">{copy.statusDraft}</option>
+                <option value="cancelled">{copy.statusCancelled}</option>
               </select>
             </label>
             <label>
-              티켓
+              {copy.ticketLabel}
               <select name="ticketType" defaultValue="free">
-                <option value="free">무료</option>
-                <option value="paid">유료</option>
+                <option value="free">{copy.ticketFree}</option>
+                <option value="paid">{copy.ticketPaid}</option>
               </select>
             </label>
           </div>
           <label>
-            유료 티켓 가격(TWD)
+            {copy.priceLabel}
             <input name="ticketPriceTwd" type="number" min={0} defaultValue={0} />
           </label>
           <label className={styles.checkbox}>
             <input name="rsvpEnabled" type="checkbox" defaultChecked />
-            RSVP 받기
+            {copy.rsvpToggleLabel}
           </label>
-          <button type="submit" disabled={pending}>{pending ? '저장 중...' : '이벤트 생성'}</button>
+          <button type="submit" disabled={pending}>{pending ? copy.creatingButton : copy.createButton}</button>
           {message ? <p className={styles.message} role="status">{message}</p> : null}
         </form>
 
-        <section className={styles.list} aria-label="이벤트 목록">
+        <section className={styles.list} aria-label={copy.listHeading}>
           <div className={styles.listHeader}>
-            <h2>이벤트</h2>
-            <select value={status} onChange={(event) => setStatus(event.currentTarget.value as EventStatus | 'all')} aria-label="상태 필터">
-              <option value="all">전체</option>
-              <option value="published">공개</option>
-              <option value="draft">초안</option>
-              <option value="cancelled">취소</option>
+            <h2>{copy.listHeading}</h2>
+            <select value={status} onChange={(event) => setStatus(event.currentTarget.value as EventStatus | 'all')} aria-label={copy.filterLabel}>
+              <option value="all">{copy.totalLabel}</option>
+              <option value="published">{copy.statusPublished}</option>
+              <option value="draft">{copy.statusDraft}</option>
+              <option value="cancelled">{copy.statusCancelled}</option>
             </select>
           </div>
           {filteredEvents.length === 0 ? (
-            <div className={styles.empty}>이벤트가 없습니다.</div>
+            <div className={styles.empty}>{copy.emptyState}</div>
           ) : (
             <div className={styles.cards}>
               {filteredEvents.map((event) => (
@@ -210,9 +213,9 @@ export default function EventsAdminClient({ locale, initialEvents }: EventsAdmin
                     <p>{event.registeredCount}/{event.capacity} RSVP · {ticketLabel(event)}</p>
                   </div>
                   <div className={styles.actions}>
-                    <a href={`/${locale}/events/${event.slug}`} target="_blank" rel="noreferrer">보기</a>
+                    <a href={`/${locale}/events/${event.slug}`} target="_blank" rel="noreferrer">{copy.viewLabel}</a>
                     <button type="button" onClick={() => updateStatus(event.eventId, event.status === 'published' ? 'draft' : 'published')}>
-                      {event.status === 'published' ? '초안으로' : '공개'}
+                      {event.status === 'published' ? copy.toggleToDraftLabel : copy.toggleToPublishLabel}
                     </button>
                   </div>
                 </article>

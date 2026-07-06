@@ -8,18 +8,20 @@
  *
  * Calls are issued sequentially with bounded concurrency (default 4) to
  * avoid hammering the upstream model. The AI text endpoint accepts one
- * text per request — true batching is a follow-up. See TODO at the
- * bottom of this file.
+ * text per request; M172 provider-native batch routing is implemented
+ * in the Translation Manager path.
  */
 
 import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type { BuilderRichText } from '@/lib/builder/rich-text/types';
 
 export interface AutoTranslateSourceNode {
-  nodeId: string;
-  text: string;
+  readonly nodeId: string;
+  readonly text: string;
   /** Hint for what role the text plays (e.g. 'button-label', 'heading'). */
-  elementHint?: string;
+  readonly elementHint?: string;
+  readonly richText?: BuilderRichText;
 }
 
 export interface AutoTranslateProposal {
@@ -57,14 +59,14 @@ export function extractTranslatableNodes(
 function nodeToSource(node: BuilderCanvasNode): AutoTranslateSourceNode | null {
   switch (node.kind) {
     case 'text': {
-      const text = (node.content as { text?: unknown }).text;
+      const text = node.content.text;
       if (typeof text !== 'string' || text.trim().length === 0) return null;
-      return { nodeId: node.id, text, elementHint: 'body text' };
+      return { nodeId: node.id, text, elementHint: 'body text', richText: node.content.richText };
     }
     case 'heading': {
-      const text = (node.content as { text?: unknown }).text;
+      const text = node.content.text;
       if (typeof text !== 'string' || text.trim().length === 0) return null;
-      return { nodeId: node.id, text, elementHint: 'heading' };
+      return { nodeId: node.id, text, elementHint: 'heading', richText: node.content.richText };
     }
     case 'button': {
       const label = (node.content as { label?: unknown }).label;
@@ -201,8 +203,3 @@ export async function autoTranslateNodes(
     errors,
   };
 }
-
-// TODO(F115 follow-up): once the AI text endpoint supports an array of
-// items in one request, replace the per-node fetch loop with a single
-// batched call (target chunk size ~10). The current per-call latency is
-// the limiting factor for large pages.

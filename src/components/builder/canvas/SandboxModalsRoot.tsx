@@ -16,10 +16,10 @@ import type {
   ComponentDesignPresetKey,
   ComponentDesignPresetPatchResult,
 } from '@/lib/builder/site/component-design-presets';
-import { buildSitePagePath } from '@/lib/builder/site/paths';
 import type { BuilderSiteSettings, BuilderTheme, SavedSection } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
 import type { ViewportMode } from './SandboxTopBar';
+import { resolveSandboxPreviewUrl } from './SandboxModalsRoot.helpers';
 
 type DraftMeta = {
   revision: number;
@@ -39,6 +39,7 @@ type PageOption = {
 
 type SandboxModalsRootProps = {
   locale: Locale;
+  siteId: string;
   document: BuilderCanvasDocument | null;
   siteName?: string;
   currentSlug: string;
@@ -80,6 +81,7 @@ type SandboxModalsRootProps = {
 
 export default function SandboxModalsRoot({
   locale,
+  siteId,
   document,
   siteName,
   currentSlug,
@@ -118,6 +120,15 @@ export default function SandboxModalsRoot({
   onMoveCompleted,
   onToast,
 }: SandboxModalsRootProps) {
+  const previewUrl = previewOpen
+    ? resolveSandboxPreviewUrl({
+        activePageId,
+        currentSlug,
+        locale,
+        sitePages,
+      })
+    : null;
+
   return (
     <>
       {assetLibraryNode?.kind === 'image' ? (
@@ -156,6 +167,7 @@ export default function SandboxModalsRoot({
         open={publishOpen}
         document={document}
         locale={locale}
+        siteId={siteId}
         activePageId={activePageId}
         draftMeta={draftMeta}
         onDraftSaved={onDraftSaved}
@@ -183,8 +195,9 @@ export default function SandboxModalsRoot({
 
       <VersionHistoryPanel
         open={historyOpen}
+        locale={locale}
         pageId={activePageId ?? ''}
-        siteId="default"
+        siteId={siteId}
         draftMeta={draftMeta}
         onRestored={onDraftSaved}
         onClose={onCloseHistory}
@@ -194,8 +207,9 @@ export default function SandboxModalsRoot({
 
       <PreviewModal
         open={previewOpen}
+        locale={locale}
         onClose={onClosePreview}
-        previewUrl={previewOpen ? buildSitePagePath(locale, currentSlug ?? '') : null}
+        previewUrl={previewUrl}
         initialDevice={viewport === 'mobile' ? 'mobile' : viewport === 'tablet' ? 'tablet' : 'desktop'}
       />
 
@@ -217,6 +231,7 @@ export default function SandboxModalsRoot({
           currentPageId={activePageId}
           sourceNodeIds={movePickerNodeIds}
           locale={locale}
+          siteId={siteId}
           onClose={onCloseMovePicker}
           onMoved={(result) => {
             onCloseMovePicker();

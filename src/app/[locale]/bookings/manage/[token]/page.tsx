@@ -4,16 +4,24 @@ import BookingManageClient from '@/components/builder/bookings/BookingManageClie
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-  title: 'Manage booking',
-  robots: { index: false, follow: false },
-};
+export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  const title = locale === 'ko'
+    ? '예약 관리'
+    : locale === 'zh-hant'
+      ? '管理預約'
+      : 'Manage booking';
+  return {
+    title,
+    robots: { index: false, follow: false },
+  };
+}
 
 export default function BookingManagePage({
   params,
 }: {
   params: { locale: string; token: string };
 }) {
-  normalizeLocale(params.locale);
-  return <BookingManageClient token={params.token} />;
+  const locale = normalizeLocale(params.locale);
+  return <BookingManageClient token={params.token} locale={locale} />;
 }

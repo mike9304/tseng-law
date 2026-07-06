@@ -115,6 +115,8 @@
   line-height: 1.45;
   padding: 16px 18px;
   text-align: left;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .question:hover,

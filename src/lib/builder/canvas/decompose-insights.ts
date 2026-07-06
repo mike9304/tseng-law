@@ -1,7 +1,7 @@
 import type { BuilderCanvasNode } from './types';
 import type { Locale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
-import { getAllColumnPosts } from '@/lib/columns';
+import { getAllColumnPosts, type ColumnPost } from '@/lib/columns';
 import {
   HOME_STAGE_WIDTH,
   createHomeButtonNode,
@@ -47,6 +47,7 @@ const INSIGHTS_ROOT_HEIGHT = 1260;
 const INSIGHTS_LIST_ITEM_HEIGHT = 176;
 const INSIGHTS_LIST_ITEM_PITCH = 196;
 const INSIGHTS_LIST_MIN_HEIGHT = 620;
+const INSIGHTS_LIST_NO_CONTROLS_MIN_HEIGHT = 601;
 const INSIGHTS_PAGE_SIZE = 3;
 
 type HomeInsightPost = {
@@ -61,8 +62,11 @@ type HomeInsightPost = {
 
 export const INSIGHTS_SECTION_ROOT_HEIGHT = INSIGHTS_ROOT_HEIGHT;
 
-function resolveInsightsPosts(locale: Locale): HomeInsightPost[] {
-  return getAllColumnPosts(locale).map((post) => ({
+function resolveInsightsPosts(
+  locale: Locale,
+  sourcePosts: readonly ColumnPost[] = getAllColumnPosts(locale),
+): HomeInsightPost[] {
+  return sourcePosts.map((post) => ({
     slug: post.slug,
     title: post.title,
     dateDisplay: post.dateDisplay || post.date || '',
@@ -77,21 +81,26 @@ export function createInsightsDecomposedNodes(
   rootY: number,
   locale: Locale,
   zBase: number,
+  sourcePosts?: readonly ColumnPost[],
 ): BuilderCanvasNode[] {
   const copy = copyByLocale[locale];
-  const posts = resolveInsightsPosts(locale);
+  const posts = resolveInsightsPosts(locale, sourcePosts);
   if (posts.length === 0) return [];
 
   const [featured, ...rest] = posts;
   const listItems = rest.slice(0, INSIGHTS_PAGE_SIZE);
   const pageCount = Math.max(1, Math.ceil(rest.length / 3));
+  const hasPaginationControls = pageCount > 1;
+  const listMinHeight = hasPaginationControls ? INSIGHTS_LIST_MIN_HEIGHT : INSIGHTS_LIST_NO_CONTROLS_MIN_HEIGHT;
   const listHeight = Math.max(
-    INSIGHTS_LIST_MIN_HEIGHT,
+    listMinHeight,
     listItems.length > 0
       ? ((listItems.length - 1) * INSIGHTS_LIST_ITEM_PITCH) + INSIGHTS_LIST_ITEM_HEIGHT
-      : INSIGHTS_LIST_MIN_HEIGHT,
+      : listMinHeight,
   );
-  const listWrapHeight = 72 + listHeight + 28;
+  const listTop = hasPaginationControls ? 72 : 16;
+  const listWrapBottomPadding = hasPaginationControls ? 28 : 4;
+  const listWrapHeight = listTop + listHeight + listWrapBottomPadding;
   const gridHeight = Math.max(740, listWrapHeight);
   const authorLabel =
     locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾俊瑋律師審閱' : 'Reviewed by Wei Tseng';
@@ -236,7 +245,7 @@ export function createInsightsDecomposedNodes(
       text: featured.dateDisplay || copy.dateFallback,
       className: 'insights-date',
       as: 'time',
-    } as never),
+    }),
     createHomeTextNode({
       id: 'home-insights-featured-readtime',
       parentId: 'home-insights-featured-meta',
@@ -295,53 +304,58 @@ export function createInsightsDecomposedNodes(
       className: 'insights-list-wrap',
     }),
     createHomeContainerNode({
-      id: 'home-insights-controls',
-      parentId: listWrapId,
-      rect: { x: 20, y: 16, width: 446, height: 32 },
-      zIndex: 0,
-      label: 'home insights controls',
-      className: 'insights-controls',
-    }),
-    createHomeButtonNode({
-      id: 'home-insights-prev',
-      parentId: 'home-insights-controls',
-      rect: { x: 0, y: 0, width: 96, height: 32 },
-      zIndex: 0,
-      label: `‹ ${copy.prevLabel}`,
-      href: '#insights',
-      style: 'secondary',
-      className: 'insights-nav-btn',
-      as: 'button',
-    }),
-    createHomeTextNode({
-      id: 'home-insights-page-indicator',
-      parentId: 'home-insights-controls',
-      rect: { x: 156, y: 6, width: 134, height: 20 },
-      zIndex: 1,
-      text: `1 / ${pageCount}`,
-      className: 'insights-page-indicator',
-      as: 'span',
-    }),
-    createHomeButtonNode({
-      id: 'home-insights-next',
-      parentId: 'home-insights-controls',
-      rect: { x: 350, y: 0, width: 96, height: 32 },
-      zIndex: 2,
-      label: `${copy.nextLabel} ›`,
-      href: '#insights',
-      style: 'secondary',
-      className: 'insights-nav-btn',
-      as: 'button',
-    }),
-    createHomeContainerNode({
       id: listId,
       parentId: listWrapId,
-      rect: { x: 20, y: 72, width: 446, height: listHeight },
+      rect: { x: 20, y: listTop, width: 446, height: listHeight },
       zIndex: 1,
       label: 'home insights list',
       className: 'insights-list',
     }),
   ];
+
+  if (hasPaginationControls) {
+    nodes.push(
+      createHomeContainerNode({
+        id: 'home-insights-controls',
+        parentId: listWrapId,
+        rect: { x: 20, y: 16, width: 446, height: 32 },
+        zIndex: 0,
+        label: 'home insights controls',
+        className: 'insights-controls',
+      }),
+      createHomeButtonNode({
+        id: 'home-insights-prev',
+        parentId: 'home-insights-controls',
+        rect: { x: 0, y: 0, width: 96, height: 32 },
+        zIndex: 0,
+        label: `‹ ${copy.prevLabel}`,
+        href: '#insights',
+        style: 'secondary',
+        className: 'insights-nav-btn',
+        as: 'button',
+      }),
+      createHomeTextNode({
+        id: 'home-insights-page-indicator',
+        parentId: 'home-insights-controls',
+        rect: { x: 156, y: 6, width: 134, height: 20 },
+        zIndex: 1,
+        text: `1 / ${pageCount}`,
+        className: 'insights-page-indicator',
+        as: 'span',
+      }),
+      createHomeButtonNode({
+        id: 'home-insights-next',
+        parentId: 'home-insights-controls',
+        rect: { x: 350, y: 0, width: 96, height: 32 },
+        zIndex: 2,
+        label: `${copy.nextLabel} ›`,
+        href: '#insights',
+        style: 'secondary',
+        className: 'insights-nav-btn',
+        as: 'button',
+      }),
+    );
+  }
 
   listItems.forEach((post, index) => {
     const itemId = `home-insights-item-${index}`;

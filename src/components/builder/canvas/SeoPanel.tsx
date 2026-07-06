@@ -29,18 +29,8 @@ import {
   normalizeStructuredDataSettings,
   validateBuilderPageSeo,
 } from '@/lib/builder/seo/validation';
-import {
-  backdropStyle,
-  footerStyle,
-  formStyle,
-  ghostButtonStyle,
-  headerStyle,
-  helpTextStyle,
-  panelStyle,
-  primaryButtonStyle,
-  tabBarStyle,
-  tabButtonStyle,
-} from './SeoPanel.styles';
+import styles from './SeoPanel.module.css';
+import { getSeoPanelCopy } from './seo-panel-copy';
 
 interface SeoFormState {
   slug: string;
@@ -129,6 +119,12 @@ function isStarterStructuredDataJson(json: string | undefined): boolean {
   const normalized = (json ?? '').trim();
   if (!normalized) return true;
   return Object.values(STRUCTURED_DATA_BLOCK_TEMPLATES).some((template) => template.json.trim() === normalized);
+}
+
+export function localizedUntitledPage(locale: Locale): string {
+  if (locale === 'ko') return '제목 없음 페이지';
+  if (locale === 'zh-hant') return '未命名頁面';
+  return 'Untitled page';
 }
 
 interface SeoPageResponseMeta {
@@ -233,15 +229,16 @@ function buildRecommendation(input: {
   page?: SeoPageResponseMeta | null;
   document?: BuilderCanvasDocument;
   siteName?: string;
-  locale: string;
+  locale: Locale;
 }): Pick<SeoFormState, 'title' | 'description' | 'ogTitle' | 'ogDescription' | 'twitterTitle' | 'twitterDescription'> {
-  const pageTitle = input.page?.title[input.locale] || input.page?.title.ko || input.form.slug || 'Page';
+  const copy = getSeoPanelCopy(input.locale);
+  const pageTitle = input.page?.title[input.locale] || input.page?.title.ko || input.form.slug || copy.pageTitleFallback;
   const heading = findPrimaryHeading(input.document) || pageTitle;
-  const siteName = input.siteName || '호정국제';
+  const siteName = input.siteName || copy.recommendationSiteNameFallback;
   const texts = collectPageText(input.document);
   const body = texts.filter((item) => item !== heading).join(' ');
   const baseTitle = fitText(`${heading} | ${siteName}`, SEO_TITLE_MAX);
-  const descriptionSource = body || `${heading} 페이지입니다. ${siteName}의 주요 서비스와 상담 정보를 확인할 수 있습니다.`;
+  const descriptionSource = body || copy.recommendationDescription(heading, siteName);
   const description = fitText(descriptionSource, SEO_DESCRIPTION_MAX);
 
   return {
@@ -307,7 +304,7 @@ export default function SeoPanel({
 }: {
   open: boolean;
   pageId: string;
-  locale: string;
+  locale: Locale;
   document?: BuilderCanvasDocument;
   siteName?: string;
   onSaved?: (page: SeoPageResponseMeta) => void;
@@ -332,6 +329,7 @@ export default function SeoPanel({
   const panelRef = useRef<HTMLDivElement | null>(null);
   const restoreFocusRef = useRef<HTMLElement | null>(null);
   const closingRef = useRef(false);
+  const copy = useMemo(() => getSeoPanelCopy(locale), [locale]);
 
   const closePanel = useCallback(() => {
     closingRef.current = true;
@@ -357,7 +355,7 @@ export default function SeoPanel({
   const fetchSeo = useCallback(async () => {
     if (!pageId) {
       setForm(EMPTY_SEO);
-      setError('현재 선택된 페이지가 없습니다.');
+      setError(copy.noPageSelected);
       setRedirectWarning(null);
       return;
     }
@@ -374,7 +372,7 @@ export default function SeoPanel({
       const payload = (await response.json().catch(() => ({}))) as SeoResponse;
 
       if (!response.ok) {
-        setError(payload.error || 'SEO 메타데이터를 불러오지 못했습니다.');
+        setError(payload.error || copy.loadError);
         return;
       }
 
@@ -408,11 +406,11 @@ export default function SeoPanel({
       setCreateRedirect(true);
       void fetchAssistant();
     } catch {
-      setError('SEO 메타데이터를 불러오지 못했습니다.');
+      setError(copy.loadError);
     } finally {
       setLoading(false);
     }
-  }, [fetchAssistant, locale, pageId]);
+  }, [copy.loadError, copy.noPageSelected, fetchAssistant, locale, pageId]);
 
   useEffect(() => {
     if (open) void fetchSeo();
@@ -612,7 +610,7 @@ export default function SeoPanel({
 
   const saveFocusKeyword = async () => {
     if (!pageId) return;
-    setAssistantStatus('저장 중...');
+    setAssistantStatus(copy.assistantSaving);
     try {
       const response = await fetch(
         `/api/builder/site/pages/${pageId}/seo-assistant?locale=${encodeURIComponent(locale)}`,
@@ -625,19 +623,19 @@ export default function SeoPanel({
       );
       const payload = (await response.json().catch(() => ({}))) as SeoAssistantResponse;
       if (!response.ok) {
-        setAssistantStatus(payload.error || 'Assistant 저장 실패');
+        setAssistantStatus(payload.error || copy.assistantSaveFailed);
         return;
       }
       setAssistantTasks(payload.tasks ?? []);
-      setAssistantStatus('저장됨');
+      setAssistantStatus(copy.assistantSaved);
     } catch {
-      setAssistantStatus('Assistant 저장 실패');
+      setAssistantStatus(copy.assistantSaveFailed);
     }
   };
 
   const handleSave = async () => {
     if (!pageId) {
-      setError('현재 선택된 페이지가 없습니다.');
+      setError(copy.noPageSelected);
       return;
     }
 
@@ -663,7 +661,7 @@ export default function SeoPanel({
 
       if (!response.ok) {
         setServerIssues(payload.validation ?? []);
-        setError(payload.error || 'SEO 메타데이터를 저장하지 못했습니다.');
+        setError(payload.error || copy.saveError);
         return;
       }
 
@@ -673,15 +671,13 @@ export default function SeoPanel({
       if (payload.page) onSaved?.(payload.page);
       if (payload.redirectWarnings?.length) {
         const warning = payload.redirectWarnings[0];
-        setRedirectWarning(
-          `SEO 메타데이터는 저장됐지만 ${warning.from} redirect는 생성되지 않았습니다. 기존 redirect 규칙을 확인하세요. (${warning.message})`,
-        );
+        setRedirectWarning(copy.redirectWarning(warning.from, warning.message));
         setActiveTab('basics');
         return;
       }
       closePanel();
     } catch {
-      setError('SEO 메타데이터를 저장하지 못했습니다.');
+      setError(copy.saveError);
     } finally {
       setSaving(false);
     }
@@ -691,60 +687,61 @@ export default function SeoPanel({
 
   const canonicalPreview = form.canonical.trim() || defaults?.canonical || `/${locale}/${form.slug}`;
   const publicPathPreview = defaults?.publicPath || `/${locale}${form.slug ? `/${form.slug}` : ''}`;
-  const searchTitle = truncatePreview(form.title.trim() || page?.title[locale] || page?.title.ko || '페이지 제목', 62);
-  const searchDescription = truncatePreview(form.description.trim() || '검색 결과에 표시될 페이지 설명을 입력하세요.', 160);
-  const socialTitle = truncatePreview(form.ogTitle.trim() || form.title.trim() || 'Untitled page', 80);
-  const socialDescription = truncatePreview(form.ogDescription.trim() || form.description.trim() || '소셜 공유 설명을 입력하세요.', 150);
+  const searchTitle = truncatePreview(form.title.trim() || page?.title[locale] || page?.title.ko || copy.pageTitleFallback, 62);
+  const searchDescription = truncatePreview(form.description.trim() || copy.searchDescriptionFallback, 160);
+  const socialTitle = truncatePreview(form.ogTitle.trim() || form.title.trim() || localizedUntitledPage(locale), 80);
+  const socialDescription = truncatePreview(form.ogDescription.trim() || form.description.trim() || copy.socialDescriptionFallback, 150);
   const socialImage = form.ogImage.trim() || form.twitterImage.trim();
   const blockers = localIssues.filter((issue) => issue.severity === 'blocker').length;
   const warnings = localIssues.filter((issue) => issue.severity === 'warning').length;
 
   return (
     <div
-      style={backdropStyle}
+      className={styles.backdrop}
       onClick={(event) => {
         if (event.target === event.currentTarget) closePanel();
       }}
     >
       <div
         ref={panelRef}
-        style={panelStyle}
+        className={styles.panel}
         role="dialog"
         aria-modal="true"
-        aria-label="페이지 SEO"
+        aria-label={copy.dialogLabel}
         tabIndex={-1}
         data-builder-seo-panel-dialog="true"
         onKeyDownCapture={handlePanelKeyDown}
       >
-        <div style={headerStyle}>
-          <div style={{ display: 'grid', gap: 3, minWidth: 0 }}>
-            <strong style={{ fontSize: '1rem', color: '#0f172a' }}>페이지 SEO</strong>
-            <span style={helpTextStyle}>
-              {publicPathPreview} · blocker {blockers} · warning {warnings}
+        <div className={styles.header}>
+          <div className={styles.headerText}>
+            <strong className={styles.title}>{copy.title}</strong>
+            <span className={styles.helpText}>
+              {publicPathPreview} · {copy.summary(blockers, warnings)}
             </span>
           </div>
-          <div style={{ display: 'flex', gap: 8 }}>
-            <button type="button" style={ghostButtonStyle} onClick={applyRecommendation}>
-              추천 적용
+          <div className={styles.headerActions}>
+            <button type="button" className={styles.ghostButton} onClick={applyRecommendation}>
+              {copy.applyRecommendation}
             </button>
-            <button type="button" style={ghostButtonStyle} onClick={closePanel}>
-              닫기
+            <button type="button" className={styles.ghostButton} onClick={closePanel}>
+              {copy.close}
             </button>
           </div>
         </div>
 
-        <div style={tabBarStyle}>
+        <div className={styles.tabBar}>
           {[
-            ['basics', 'Basics'],
-            ['social', 'Social share'],
-            ['advanced', 'Advanced'],
-            ['hreflang', 'Hreflang & Sitemap'],
-            ['assistant', 'Assistant'],
+            ['basics', copy.tabs.basics],
+            ['social', copy.tabs.social],
+            ['advanced', copy.tabs.advanced],
+            ['hreflang', copy.tabs.hreflang],
+            ['assistant', copy.tabs.assistant],
           ].map(([key, label]) => (
             <button
               key={key}
               type="button"
-              style={tabButtonStyle(activeTab === key)}
+              className={styles.tabButton}
+              data-active={activeTab === key ? 'true' : undefined}
               onClick={() => setActiveTab(key as SeoPanelTab)}
             >
               {label}
@@ -752,10 +749,10 @@ export default function SeoPanel({
           ))}
         </div>
 
-        <div style={formStyle}>
+        <div className={styles.form}>
           {loading ? (
-            <div style={{ padding: 24, textAlign: 'center', color: '#64748b', fontSize: '0.86rem' }}>
-              로딩 중...
+            <div className={styles.loading}>
+              {copy.loading}
             </div>
           ) : (
             <>
@@ -781,6 +778,7 @@ export default function SeoPanel({
 
               <SeoPanelSocialTab
                 active={activeTab === 'social'}
+                locale={locale}
                 ogTitle={form.ogTitle}
                 ogImage={form.ogImage}
                 ogDescription={form.ogDescription}
@@ -797,6 +795,7 @@ export default function SeoPanel({
 
               <SeoPanelAdvancedTab
                 active={activeTab === 'advanced'}
+                locale={locale}
                 additionalMetaTags={form.additionalMetaTags}
                 structuredData={form.structuredData}
                 structuredDataBlocks={form.structuredDataBlocks}
@@ -812,6 +811,7 @@ export default function SeoPanel({
 
               <SeoPanelHreflangTab
                 active={activeTab === 'hreflang'}
+                locale={locale}
                 hreflangAlternates={hreflangAlternates}
                 siblings={siblings}
                 missingLocales={missingLocales}
@@ -820,6 +820,7 @@ export default function SeoPanel({
 
               <SeoPanelAssistantTab
                 active={activeTab === 'assistant'}
+                locale={locale}
                 focusKeyword={form.focusKeyword}
                 assistantStatus={assistantStatus}
                 assistantTasks={assistantTasks}
@@ -831,35 +832,30 @@ export default function SeoPanel({
           )}
         </div>
 
-        <div style={footerStyle}>
-          <div style={{ display: 'grid', gap: 4, minHeight: 18, minWidth: 0, flex: 1 }}>
-            <span style={{ color: '#dc2626', fontSize: '0.78rem' }}>{error ?? ''}</span>
+        <div className={styles.footer}>
+          <div className={styles.footerStatus}>
+            <span className={styles.errorText}>{error ?? ''}</span>
             {redirectWarning ? (
               <span
                 role="status"
                 aria-live="polite"
-                style={{
-                  color: '#92400e',
-                  fontSize: '0.78rem',
-                  lineHeight: 1.4,
-                  overflowWrap: 'anywhere',
-                }}
+                className={styles.warningText}
               >
                 {redirectWarning}
               </span>
             ) : null}
           </div>
-          <div style={{ display: 'flex', gap: 8 }}>
-            <button type="button" style={ghostButtonStyle} onClick={closePanel}>
-              취소
+          <div className={styles.footerActions}>
+            <button type="button" className={styles.ghostButton} onClick={closePanel}>
+              {copy.cancel}
             </button>
             <button
               type="button"
-              style={primaryButtonStyle}
+              className={styles.primaryButton}
               onClick={handleSave}
               disabled={saving || loading || !pageId}
             >
-              {saving ? '저장 중...' : '저장'}
+              {saving ? copy.saving : copy.save}
             </button>
           </div>
         </div>

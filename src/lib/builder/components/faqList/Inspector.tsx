@@ -1,16 +1,14 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderFaqListCanvasNode } from '@/lib/builder/canvas/types';
 import { DEFAULT_FAQ_CATEGORIES } from '@/lib/builder/faq/faq-shared';
+import { getFaqListCopy } from './faq-list-copy';
+import styles from './FaqListInspector.module.css';
 
-const labelStyle: React.CSSProperties = { fontSize: '0.72rem', fontWeight: 600, color: '#475569', textTransform: 'uppercase', letterSpacing: '0.04em' };
-const inputStyle: React.CSSProperties = { padding: '6px 10px', border: '1px solid #e2e8f0', borderRadius: 8, fontSize: '0.82rem', color: '#0f172a', outline: 'none' };
-const rowStyle: React.CSSProperties = { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 };
-const checkStyle: React.CSSProperties = { display: 'grid', gridTemplateColumns: 'auto minmax(0, 1fr)', gap: 8, alignItems: 'center', fontSize: '0.82rem', color: '#334155' };
-
-export default function FaqListInspector({ node, onUpdate, disabled = false }: BuilderComponentInspectorProps) {
+export default function FaqListInspector({ node, locale = 'ko', onUpdate, disabled = false }: BuilderComponentInspectorProps) {
   const faqNode = node as BuilderFaqListCanvasNode;
   const items = faqNode.content.items ?? [];
   const source = faqNode.content.source ?? 'static';
+  const copy = getFaqListCopy(locale);
 
   const updateItem = (index: number, patch: { question?: string; answer?: string }) => {
     const next = [...items];
@@ -21,100 +19,111 @@ export default function FaqListInspector({ node, onUpdate, disabled = false }: B
   const removeItem = (index: number) => onUpdate({ items: items.filter((_, i) => i !== index) });
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-      <label style={{ display: 'grid', gap: 6 }}>
-        <span style={labelStyle}>소스</span>
+    <div className={styles.root} data-builder-faq-list-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.source}</span>
         <select
+          className={styles.control}
           value={source}
           disabled={disabled}
-          style={inputStyle}
           onChange={(e) => onUpdate({ source: e.currentTarget.value })}
         >
-          <option value="static">직접 입력</option>
-          <option value="app">FAQ 앱 데이터</option>
+          <option value="static">{copy.inspector.sourceStatic}</option>
+          <option value="app">{copy.inspector.sourceApp}</option>
         </select>
       </label>
-      <div style={rowStyle}>
-        <label style={{ display: 'grid', gap: 6 }}>
-          <span style={labelStyle}>카테고리</span>
+      <div className={styles.inlineFields}>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.inspector.category}</span>
           <select
+            className={styles.control}
             value={faqNode.content.categoryId ?? 'all'}
             disabled={disabled}
-            style={inputStyle}
             onChange={(e) => onUpdate({ categoryId: e.currentTarget.value })}
-          >
-            <option value="all">전체</option>
+        >
+            <option value="all">{copy.all}</option>
             {DEFAULT_FAQ_CATEGORIES.map((category) => (
-              <option key={category.categoryId} value={category.categoryId}>{category.label.ko}</option>
+              <option key={category.categoryId} value={category.categoryId}>{category.label[locale]}</option>
             ))}
           </select>
         </label>
-        <label style={{ display: 'grid', gap: 6 }}>
-          <span style={labelStyle}>표시 수</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.inspector.limit}</span>
           <input
+            className={styles.control}
             type="number"
             min={1}
             max={100}
             value={faqNode.content.limit ?? 50}
             disabled={disabled}
-            style={inputStyle}
             onChange={(e) => onUpdate({ limit: Number(e.currentTarget.value) })}
           />
         </label>
       </div>
-      <label style={checkStyle}>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={faqNode.content.showSearch ?? false}
           disabled={disabled}
           onChange={(e) => onUpdate({ showSearch: e.currentTarget.checked })}
         />
-        검색창 표시
+        {copy.inspector.showSearch}
       </label>
-      <label style={checkStyle}>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={faqNode.content.showCategoryFilter ?? true}
           disabled={disabled}
           onChange={(e) => onUpdate({ showCategoryFilter: e.currentTarget.checked })}
         />
-        카테고리 필터 표시
+        {copy.inspector.showCategoryFilter}
       </label>
-      <label style={checkStyle}>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={faqNode.content.expandFirst ?? true}
           disabled={disabled}
           onChange={(e) => onUpdate({ expandFirst: e.currentTarget.checked })}
         />
-        첫 질문 열기
+        {copy.inspector.expandFirst}
       </label>
-      <label style={checkStyle}>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={faqNode.content.schemaEnabled ?? true}
           disabled={disabled}
           onChange={(e) => onUpdate({ schemaEnabled: e.currentTarget.checked })}
         />
-        FAQPage schema 출력
+        {copy.inspector.schemaEnabled}
       </label>
-      <span style={labelStyle}>항목 ({items.length})</span>
-      {items.map((item, i) => (
-        <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: 10, background: '#f8fafc', borderRadius: 8, border: '1px solid #e2e8f0' }}>
-          <input type="text" placeholder="질문" value={item.question} disabled={disabled} style={inputStyle}
-            onChange={(e) => updateItem(i, { question: e.target.value })} />
-          <textarea rows={3} placeholder="답변" value={item.answer} disabled={disabled}
-            style={{ ...inputStyle, fontFamily: 'inherit', resize: 'vertical' }}
-            onChange={(e) => updateItem(i, { answer: e.target.value })} />
-          <button type="button" disabled={disabled} onClick={() => removeItem(i)}
-            style={{ alignSelf: 'flex-end', padding: '4px 10px', fontSize: '0.72rem', background: '#fee2e2', color: '#b91c1c', border: 'none', borderRadius: 6, cursor: 'pointer' }}>
-            제거
-          </button>
-        </div>
-      ))}
-      <button type="button" disabled={disabled} onClick={addItem}
-        style={{ padding: '6px 12px', fontSize: '0.78rem', background: '#0f172a', color: '#fff', border: 'none', borderRadius: 8, cursor: 'pointer' }}>
-        + Q&A 추가
+      <span className={styles.sectionLabel}>{copy.inspector.items(items.length)}</span>
+      <div className={styles.items}>
+        {items.map((item, i) => (
+          <div key={i} className={styles.itemCard}>
+            <input
+              className={styles.control}
+              type="text"
+              placeholder={copy.inspector.questionPlaceholder}
+              value={item.question}
+              disabled={disabled}
+              onChange={(e) => updateItem(i, { question: e.target.value })}
+            />
+            <textarea
+              className={`${styles.control} ${styles.textarea}`}
+              rows={3}
+              placeholder={copy.inspector.answerPlaceholder}
+              value={item.answer}
+              disabled={disabled}
+              onChange={(e) => updateItem(i, { answer: e.target.value })}
+            />
+            <button className={styles.dangerButton} type="button" disabled={disabled} onClick={() => removeItem(i)}>
+              {copy.inspector.removeItem}
+            </button>
+          </div>
+        ))}
+      </div>
+      <button className={styles.primaryButton} type="button" disabled={disabled} onClick={addItem}>
+        {copy.inspector.addItem}
       </button>
     </div>
   );

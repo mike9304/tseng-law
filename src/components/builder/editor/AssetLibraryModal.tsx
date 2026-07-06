@@ -6,6 +6,7 @@ import type { Locale } from '@/lib/locales';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 import { AssetLibraryChrome, type AssetSortMode } from './AssetLibraryChrome';
 import { AssetLibraryGrid } from './AssetLibraryGrid';
+import { getAssetLibraryFolderLabel, getAssetLibraryModalCopy } from './asset-library-modal-copy';
 
 interface AssetListResponse {
   ok: boolean;
@@ -137,11 +138,13 @@ export default function AssetLibraryModal({
   const [newTagName, setNewTagName] = useState('');
   const [assetFolderByFilename, setAssetFolderByFilename] = useState<Record<string, string>>({});
   const [assetTagsByFilename, setAssetTagsByFilename] = useState<Record<string, string[]>>({});
+  const [activeAssetUrl, setActiveAssetUrl] = useState<string | null>(selectedUrl ?? null);
   const [storageReady, setStorageReady] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [deleteFilename, setDeleteFilename] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const text = getAssetLibraryModalCopy(locale);
 
   const loadAssets = useCallback(async () => {
     setIsLoading(true);
@@ -152,9 +155,9 @@ export default function AssetLibraryModal({
       });
       const payload = await response.json() as AssetListResponse;
       if (!response.ok || !payload.ok) {
-        const message = payload.error ?? '이미지를 불러오지 못했습니다.';
+        const message = payload.error ?? text.errorLoad;
         setError(message);
-        onToast?.('네트워크 오류, 다시 시도해주세요', 'error');
+        onToast?.(text.errorNetwork, 'error');
         return;
       }
       setAssets(payload.assets ?? []);
@@ -167,8 +170,8 @@ export default function AssetLibraryModal({
       lastSyncedLibraryJsonRef.current = JSON.stringify(library);
       setStorageReady(true);
     } catch {
-      setError('이미지를 불러오지 못했습니다.');
-      onToast?.('네트워크 오류, 다시 시도해주세요', 'error');
+      setError(text.errorLoad);
+      onToast?.(text.errorNetwork, 'error');
       const library = mergeAssetLibraryState(null, readPersistedAssetLibraryState(locale));
       setFolders(library.folders);
       setTags(library.tags);
@@ -366,21 +369,42 @@ export default function AssetLibraryModal({
     });
   }, [activeFolder, activeTag, assetFolderByFilename, assetTagsByFilename, assets, search, selectedUrl, sortMode]);
 
+  const localizedFolders = useMemo(
+    () => folders.map((folder) => ({
+      ...folder,
+      name: getAssetLibraryFolderLabel(text, folder.id, folder.name),
+    })),
+    [folders, text],
+  );
+
   const folderTree = useMemo(
     () => [
-      { id: 'all', name: 'All assets', count: assets.length },
-      { id: 'recent', name: 'Recent', count: assets.filter((asset) => {
+      { id: 'all', name: text.folderLabels.all, count: assets.length },
+      { id: 'recent', name: text.folderLabels.recent, count: assets.filter((asset) => {
         const uploadedAt = Date.parse(asset.uploadedAt);
         return !Number.isNaN(uploadedAt) && Date.now() - uploadedAt < 1000 * 60 * 60 * 24 * 7;
       }).length },
-      { id: 'selected', name: 'Selected', count: selectedUrl ? assets.filter((asset) => asset.url === selectedUrl).length : 0 },
-      ...folders.map((folder) => ({
+      { id: 'selected', name: text.folderLabels.selected, count: selectedUrl ? assets.filter((asset) => asset.url === selectedUrl).length : 0 },
+      ...localizedFolders.map((folder) => ({
         ...folder,
         count: assets.filter((asset) => (assetFolderByFilename[asset.filename] ?? 'uploads') === folder.id).length,
       })),
     ],
-    [assetFolderByFilename, assets, folders, selectedUrl],
+    [assetFolderByFilename, assets, localizedFolders, selectedUrl, text],
   );
+
+  useEffect(() => {
+    if (!open) return;
+    if (filteredAssets.length === 0) {
+      setActiveAssetUrl(null);
+      return;
+    }
+    setActiveAssetUrl((current) => {
+      if (current && filteredAssets.some((asset) => asset.url === current)) return current;
+      if (selectedUrl && filteredAssets.some((asset) => asset.url === selectedUrl)) return selectedUrl;
+      return filteredAssets[0]?.url ?? null;
+    });
+  }, [filteredAssets, open, selectedUrl]);
 
   function createFolder() {
     const name = newFolderName.trim();
@@ -433,7 +457,7 @@ export default function AssetLibraryModal({
     const { validateUploadFile } = await import('@/lib/builder/canvas/upload-validation');
     const validation = validateUploadFile(file);
     if (!validation.valid) {
-      setError(validation.error || '파일 업로드 실패');
+      setError(validation.error || text.errorUpload);
       return;
     }
 
@@ -449,7 +473,7 @@ export default function AssetLibraryModal({
       });
       const payload = await response.json() as AssetUploadResponse;
       if (!response.ok || !payload.ok || !payload.asset) {
-        setError(payload.error ?? 'Failed to upload asset.');
+        setError(payload.error ?? text.errorUpload);
         return;
       }
       setAssets((currentAssets) => [
@@ -457,7 +481,7 @@ export default function AssetLibraryModal({
         ...currentAssets.filter((asset) => asset.filename !== payload.asset!.filename),
       ]);
     } catch {
-      setError('Failed to upload asset.');
+      setError(text.errorUpload);
     } finally {
       setIsUploading(false);
     }
@@ -480,7 +504,7 @@ export default function AssetLibraryModal({
       });
       const payload = await response.json() as { ok: boolean; error?: string };
       if (!response.ok || !payload.ok) {
-        setError(payload.error ?? 'Failed to delete asset.');
+        setError(payload.error ?? text.errorDelete);
         return;
       }
       setAssets((currentAssets) => currentAssets.filter((entry) => entry.filename !== asset.filename));
@@ -497,7 +521,7 @@ export default function AssetLibraryModal({
         assetTagsByFilename: nextTagMap,
       });
     } catch {
-      setError('Failed to delete asset.');
+      setError(text.errorDelete);
     } finally {
       setDeleteFilename(null);
     }
@@ -533,6 +557,41 @@ export default function AssetLibraryModal({
     onClose();
   }
 
+  useEffect(() => {
+    if (!open) return undefined;
+    function handleKeyboardNavigation(event: KeyboardEvent) {
+      if (!filteredAssets.length) return;
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        onClose();
+        return;
+      }
+      if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp' && event.key !== 'Home' && event.key !== 'End' && event.key !== 'Enter' && event.key !== ' ') {
+        return;
+      }
+      const currentIndex = Math.max(0, filteredAssets.findIndex((asset) => asset.url === activeAssetUrl));
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        const activeAsset = filteredAssets[currentIndex] ?? filteredAssets[0];
+        if (activeAsset) handleSelectAsset(activeAsset);
+        return;
+      }
+      event.preventDefault();
+      const nextIndex = event.key === 'Home'
+        ? 0
+        : event.key === 'End'
+          ? filteredAssets.length - 1
+          : event.key === 'ArrowDown'
+            ? Math.min(filteredAssets.length - 1, currentIndex + 1)
+            : Math.max(0, currentIndex - 1);
+      setActiveAssetUrl(filteredAssets[nextIndex]?.url ?? null);
+    }
+    window.addEventListener('keydown', handleKeyboardNavigation, true);
+    return () => window.removeEventListener('keydown', handleKeyboardNavigation, true);
+  }, [activeAssetUrl, filteredAssets, handleSelectAsset, onClose, open]);
+
   if (!open) return null;
 
   return (
@@ -542,18 +601,18 @@ export default function AssetLibraryModal({
         className={styles.modalCard}
         role="dialog"
         aria-modal="true"
-        aria-label="Asset library"
+        aria-label={text.dialog}
         tabIndex={-1}
         data-builder-asset-library-dialog="true"
         onClick={(event) => event.stopPropagation()}
       >
         <header className={styles.modalHeader}>
           <div>
-            <span className={styles.modalEyebrow}>Asset library</span>
-            <strong>Select, upload, or remove builder images</strong>
+            <span className={styles.modalEyebrow}>{text.dialog}</span>
+            <strong>{text.title}</strong>
           </div>
           <button type="button" className={styles.modalCloseButton} onClick={onClose}>
-            Close
+            {text.close}
           </button>
         </header>
 
@@ -580,20 +639,17 @@ export default function AssetLibraryModal({
             onChangeActiveTag={setActiveTag}
             onChangeNewTagName={setNewTagName}
             onCreateTag={createTag}
+            locale={locale}
           >
             {error ? <p className={styles.modalError}>{error}</p> : null}
-            {isLoading ? <p className={styles.modalHint}>Loading assets…</p> : null}
+            {isLoading ? <p className={styles.modalHint}>{text.loading}</p> : null}
             {!isLoading && filteredAssets.length === 0 ? (
               <div className={styles.assetEmptyState}>
                 <strong>
-                  {assets.length === 0
-                    ? '아직 업로드된 이미지가 없습니다.'
-                    : '현재 필터와 맞는 이미지가 없습니다.'}
+                  {assets.length === 0 ? text.noAssetsTitle : text.noMatchTitle}
                 </strong>
                 <span>
-                  {assets.length === 0
-                    ? '이미지를 드래그하거나 업로드 버튼을 눌러 바로 추가하세요.'
-                    : '검색어, 폴더, 태그 필터를 지우거나 다시 불러오세요.'}
+                  {assets.length === 0 ? text.noAssetsBody : text.noMatchBody}
                 </span>
                 <div className={styles.assetEmptyActions}>
                   <button
@@ -602,7 +658,7 @@ export default function AssetLibraryModal({
                     disabled={isUploading}
                     onClick={() => inputRef.current?.click()}
                   >
-                    Upload image
+                    {text.upload}
                   </button>
                   <button
                     type="button"
@@ -610,7 +666,7 @@ export default function AssetLibraryModal({
                     disabled={isLoading}
                     onClick={() => void loadAssets()}
                   >
-                    Retry
+                    {text.retry}
                   </button>
                 </div>
               </div>
@@ -619,7 +675,8 @@ export default function AssetLibraryModal({
             <AssetLibraryGrid
               assets={filteredAssets}
               selectedUrl={selectedUrl}
-              folders={folders}
+              activeUrl={activeAssetUrl}
+              folders={localizedFolders}
               tags={tags}
               assetFolderByFilename={assetFolderByFilename}
               assetTagsByFilename={assetTagsByFilename}
@@ -628,6 +685,7 @@ export default function AssetLibraryModal({
               onDeleteAsset={(asset) => void handleDeleteAsset(asset)}
               onChangeAssetFolder={changeAssetFolder}
               onToggleAssetTag={toggleAssetTag}
+              locale={locale}
             />
           </AssetLibraryChrome>
         </div>

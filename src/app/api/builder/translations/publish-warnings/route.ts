@@ -10,13 +10,22 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { normalizeLocale } from '@/lib/locales';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { guardBuilderRead } from '@/lib/builder/security/guard';
 import { buildTranslationPublishWarningsPayload } from '@/lib/builder/translations/publish-warnings';
+import { getBuilderTranslationsApiErrorPayload } from '@/lib/builder/translations/translations-api-copy';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+function resolveRequestLocale(request: NextRequest): Locale {
+  return normalizeLocale(
+    request.nextUrl.searchParams.get('locale') ||
+      request.nextUrl.searchParams.get('sourceLocale') ||
+      undefined,
+  );
+}
 
 export async function GET(request: NextRequest) {
   const auth = guardBuilderRead(request);
@@ -32,7 +41,13 @@ export async function GET(request: NextRequest) {
     const payload = await buildTranslationPublishWarningsPayload(siteId, sourceLocale);
     return NextResponse.json(payload);
   } catch (err) {
-    const message = err instanceof Error ? err.message : 'internal';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    console.error('[builder/translations/publish-warnings] load failed:', err);
+    return NextResponse.json(
+      {
+        ok: false,
+        ...getBuilderTranslationsApiErrorPayload(resolveRequestLocale(request), 'translation_publish_warnings_failed'),
+      },
+      { status: 500 },
+    );
   }
 }

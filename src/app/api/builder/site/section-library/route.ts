@@ -21,6 +21,11 @@ import {
 } from '@/lib/builder/site/types';
 import { normalizeSavedSectionSnapshot } from '@/lib/builder/sections/normalize';
 import { buildSavedSectionThumbnailSvg } from '@/lib/builder/sections/thumbnail';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import type { Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -37,11 +42,20 @@ const createBodySchema = z
   })
   .strict();
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...(extra ?? {}) },
+    { status },
   );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
 }
 
 function sectionWithSafeThumbnail(section: SavedSection): SavedSection {
@@ -66,17 +80,15 @@ export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  let locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
   try {
     const body = await request.json();
     const parsed = createBodySchema.parse(body);
-    const locale = normalizeLocale(parsed.locale || 'ko');
+    locale = normalizeLocale(parsed.locale || 'ko');
 
     const normalizedNodes = normalizeSavedSectionSnapshot(parsed.nodes, parsed.rootNodeId);
     if (normalizedNodes.length === 0) {
-      return NextResponse.json(
-        { ok: false, error: 'rootNodeId not present in nodes' },
-        { status: 400 },
-      );
+      return errorResponse(locale, 'section_root_missing', 400);
     }
     const thumbnail = buildSavedSectionThumbnailSvg(normalizedNodes, parsed.rootNodeId);
 
@@ -91,11 +103,10 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ ok: true, section: sectionWithSafeThumbnail(section) });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(locale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON' }, { status: 400 });
+      return errorResponse(locale, 'invalid_json', 400);
     }
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    return errorResponse(locale, 'section_create_failed', 500);
   }
 }

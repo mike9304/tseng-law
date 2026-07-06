@@ -17,6 +17,10 @@ import path from 'path';
 import { mkdtemp, rm } from 'fs/promises';
 import type { BuilderSiteDocument } from '@/lib/builder/site/types';
 
+vi.mock('next/cache', () => ({
+  revalidatePath: vi.fn(),
+}));
+
 // In-memory site doc store, shared with mocked persistence.
 const siteStore: { current: BuilderSiteDocument | null } = { current: null };
 // In-memory published page records, keyed by pageId.
@@ -38,6 +42,9 @@ vi.mock('@/lib/builder/site/persistence', () => ({
   }),
   writePageCanvasRecord: vi.fn(async (_siteId: string, pageId: string, record: unknown) => {
     publishedStore.set(pageId, record as { revision: number; savedAt: string; document: unknown });
+  }),
+  deletePageCanvasRecord: vi.fn(async (_siteId: string, pageId: string) => {
+    publishedStore.delete(pageId);
   }),
 }));
 
@@ -202,8 +209,7 @@ describe('publishAtomic failure path', () => {
     expect(outcome.status).toBe('rolled-back');
     // page-1's published record must be restored to the snapshot.
     expect(publishedStore.get('page-1')?.revision).toBe(5);
-    // page-2 had no prior published variant — orchestrator wrote one, rollback
-    // can't fully un-write it, but the failure surfaces so the operator can clean up.
+    expect(publishedStore.has('page-2')).toBe(false);
     const cmsResult = outcome.results.find((r) => r.kind === 'cms');
     expect(cmsResult?.status).toBe('failed');
     expect(cmsResult?.error).toContain('cms_collection_not_found');

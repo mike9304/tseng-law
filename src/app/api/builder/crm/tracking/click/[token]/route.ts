@@ -12,23 +12,40 @@ import {
   resolveTrackingSecret,
   verifyTrackingToken,
 } from '@/lib/builder/crm/tracking-model';
+import {
+  getBuilderCrmApiErrorPayload,
+  type BuilderCrmApiErrorCode,
+} from '@/lib/builder/crm/crm-api-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderCrmApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderCrmApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
 
 export async function GET(
   request: NextRequest,
   { params }: { params: { token: string } },
 ) {
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const secret = resolveTrackingSecret();
   if (!secret) {
-    return NextResponse.json({ error: 'Tracking not configured' }, { status: 503 });
+    return errorResponse(locale, 'tracking_not_configured', 503);
   }
   const payload = verifyTrackingToken(params.token, secret, {
     expectedKind: 'click',
   });
   if (!payload || !isSafeRedirectUrl(payload.url)) {
-    return NextResponse.json({ error: 'Invalid token' }, { status: 404 });
+    return errorResponse(locale, 'tracking_invalid_token', 404);
   }
 
   try {

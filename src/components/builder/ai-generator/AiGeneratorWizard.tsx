@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useMemo, useState, type CSSProperties, type ReactNode } from 'react';
 import {
   COLOR_PREFERENCES,
   INDUSTRIES,
@@ -15,6 +15,11 @@ import {
   AI_GENERATOR_PROMPT_CHANGELOG,
   AI_GENERATOR_PROMPT_VERSION,
 } from '@/lib/builder/ai-generator/prompt-versions';
+import {
+  scoreDesignerStyleCandidates,
+  serializeDesignerScorePayload,
+  type DesignerStyleCandidateId,
+} from '@/lib/builder/ai-generator/designer-scoring';
 import {
   draftToSavedSectionSnapshots,
   type GeneratedSectionSnapshot,
@@ -45,9 +50,75 @@ interface PromptHistoryEntry {
 interface DraftResponse {
   ok?: boolean;
   cached?: boolean;
+  versionId?: string;
+  versionWarning?: string;
   draft?: Draft;
   error?: string;
   message?: string;
+}
+
+interface ServerIntakeVersionSummary {
+  id: string;
+  siteId: string;
+  createdAt: string;
+  createdBy: string;
+  companyName: string;
+  industry: SiteSpec['industry'];
+  locale: SiteSpec['locale'];
+  promptVersion: string;
+  pageCount: number;
+  sectionCount: number;
+  heroHeadline: string;
+}
+
+type ServerIntakeDiffValue = string | number | readonly string[] | null;
+
+interface ServerIntakeDiffChange {
+  field: string;
+  before: ServerIntakeDiffValue;
+  after: ServerIntakeDiffValue;
+}
+
+interface ServerIntakeVersionDiff {
+  isEmpty: boolean;
+  specChanges: ServerIntakeDiffChange[];
+  draftChanges: ServerIntakeDiffChange[];
+}
+
+interface ServerVersionsResponse {
+  ok?: boolean;
+  versions?: ServerIntakeVersionSummary[];
+  error?: string;
+  message?: string;
+}
+
+interface ServerVersionRestoreResponse {
+  ok?: boolean;
+  version?: {
+    id: string;
+    createdAt: string;
+    spec: SiteSpec;
+    draft: Draft;
+  };
+  spec?: SiteSpec;
+  draft?: Draft;
+  error?: string;
+  message?: string;
+}
+
+interface ServerVersionDiffResponse {
+  ok?: boolean;
+  leftId?: string;
+  rightId?: string;
+  diff?: ServerIntakeVersionDiff;
+  error?: string;
+  message?: string;
+}
+
+interface ServerVersionDiffState {
+  leftId: string;
+  rightId: string;
+  diff: ServerIntakeVersionDiff;
 }
 
 interface ApplyResponse {
@@ -75,6 +146,98 @@ interface ApplySkippedPage {
   reason: string;
 }
 
+interface BuilderSitePageSummary {
+  pageId: string;
+  slug: string;
+  title?: Record<string, string>;
+  publishedAt?: string;
+  publishedRevisionId?: string;
+}
+
+interface PagesResponse {
+  pages?: BuilderSitePageSummary[];
+  error?: string;
+  message?: string;
+}
+
+interface BuilderNavigationItemSummary {
+  id: string;
+  label?: string | Record<string, string>;
+  pageId?: string;
+  href?: string;
+  children?: BuilderNavigationItemSummary[];
+}
+
+interface NavigationResponse {
+  navigation?: BuilderNavigationItemSummary[];
+  error?: string;
+  message?: string;
+}
+
+interface PublishCreatedPageResponse {
+  ok?: boolean;
+  slug?: string;
+  publishedRevisionId?: string;
+  publishedSavedAt?: string;
+  error?: string;
+  message?: string;
+}
+
+type PublishPreflightStatus = 'idle' | 'checking' | 'ready' | 'blocked' | 'error';
+
+interface PublishPreflightSummary {
+  status: PublishPreflightStatus;
+  blockerCount: number;
+  warningCount: number;
+  infoCount: number;
+  checkedAt?: string;
+  message?: string;
+  firstIssue?: string;
+}
+
+interface PublishCheckResultSummary {
+  severity?: 'blocker' | 'warning' | 'info';
+  category?: string;
+  message?: string;
+}
+
+interface PublishCheckSuiteSummary {
+  results?: PublishCheckResultSummary[];
+  hasBlocker?: boolean;
+  warningCount?: number;
+  blockerCount?: number;
+  infoCount?: number;
+  checkedAt?: string;
+}
+
+interface PublishChecksResponse {
+  ok?: boolean;
+  suite?: PublishCheckSuiteSummary;
+  error?: string;
+  message?: string;
+}
+
+interface ScheduledPublishJobSummary {
+  jobId: string;
+  scheduledAt: string;
+  status: 'scheduled' | 'publishing' | 'published' | 'failed' | 'cancelled';
+  expectedDraftRevision?: number;
+}
+
+interface ScheduledPublishResponse {
+  ok?: boolean;
+  job?: ScheduledPublishJobSummary | null;
+  error?: string;
+  message?: string;
+}
+
+interface CancelScheduledPublishResponse {
+  ok?: boolean;
+  cancelled?: number;
+  error?: string;
+  message?: string;
+}
+
 interface SaveSectionResponse {
   ok?: boolean;
   section?: {
@@ -100,6 +263,25 @@ interface ImageGenerationResponse {
   message?: string;
 }
 
+type DesignerServerScoreStatus = 'idle' | 'checking' | 'synced' | 'mismatch' | 'error';
+
+interface DesignerServerScoreResult {
+  id: string;
+  rank: number;
+  score: number;
+  layoutFit: number;
+  paletteFit: number;
+}
+
+interface DesignerServerScoreResponse {
+  ok?: boolean;
+  top?: DesignerServerScoreResult | null;
+  scores?: DesignerServerScoreResult[];
+  payload?: string;
+  error?: string;
+  message?: string;
+}
+
 interface HeroAssetSelection {
   assetId?: string;
   url: string;
@@ -118,12 +300,21 @@ interface GeneratedDraftComparison {
 }
 
 interface DesignerStyleSuggestion {
-  id: string;
+  id: DesignerStyleCandidateId;
   label: string;
   description: string;
   treatment: string;
   composition: string;
   palette: Draft['palette'];
+  score: number;
+  rank: number;
+  scoreReasons: string[];
+  layoutFit: number;
+  paletteFit: number;
+  fitPreview: string;
+  designPoolProfile: string;
+  designPoolFit: number;
+  designPoolSignals: string[];
 }
 
 interface DraftVisualDiffMetrics {
@@ -133,8 +324,80 @@ interface DraftVisualDiffMetrics {
   visualGuidance: number;
 }
 
+interface SitemapTreeDiffRow {
+  slug: string;
+  title: string;
+  path: string;
+  depth: number;
+  parentLabel: string;
+  hierarchyPath: string;
+  generatedIndex: number;
+  currentIndex: number;
+  targetIndex: number;
+  state: 'home' | 'not_selected' | 'will_create' | 'will_add_nav' | 'will_skip_existing' | 'created_draft';
+}
+
+interface ApplySectionDiffRow {
+  pageSlug: string;
+  pageTitle: string;
+  pageIndex: number;
+  sectionId: string;
+  sectionTitle: string;
+  sectionIndex: number;
+  state: 'will_insert';
+}
+
+interface ApplyVisualDiffRow {
+  pageSlug: string;
+  pageTitle: string;
+  beforeState: 'new_draft';
+  afterSectionCount: number;
+  afterSectionSummary: string;
+}
+
+interface ApplyResponsiveReviewRow {
+  pageSlug: string;
+  pageTitle: string;
+  breakpoint: 'mobile';
+  breakpoints: 'mobile,tablet';
+  issueCount: number;
+  mobileIssueCount: number;
+  tabletIssueCount: number;
+  status: 'review' | 'ready';
+  primaryIssue: string;
+  issueSummary: string;
+}
+
+interface NavigationTreeEntry {
+  slug: string;
+  href: string;
+  depth: number;
+  indexPath: string;
+  label: string;
+  pageId?: string;
+}
+
+interface SitemapNavigationDiffRow {
+  slug: string;
+  title: string;
+  path: string;
+  state:
+    | 'home'
+    | 'not_selected'
+    | 'current_public'
+    | 'current_hidden_draft'
+    | 'will_append_hidden_until_publish'
+    | 'queued_hidden_until_publish'
+    | 'public_after_publish'
+    | 'page_exists_not_in_nav'
+    | 'draft_only';
+  depth: number;
+  indexPath: string;
+}
+
 interface Props {
   locale: Locale;
+  siteId: string;
 }
 
 const STEPS: Array<{ id: WizardStep; label: string; kicker: string }> = [
@@ -204,6 +467,21 @@ function displayPlanPath(slug: string): string {
   return normalized === '/' ? '/' : `/${normalized}`;
 }
 
+function planHierarchyFromTitle(title: string): { depth: number; parentLabel: string; hierarchyPath: string } {
+  const segments = title
+    .split(/\s*(?:\/|>)\s*/g)
+    .map((segment) => segment.trim())
+    .filter(Boolean);
+  if (segments.length <= 1) {
+    return { depth: 0, parentLabel: '', hierarchyPath: title };
+  }
+  return {
+    depth: segments.length - 1,
+    parentLabel: segments.slice(0, -1).join(' / '),
+    hierarchyPath: segments.join(' / '),
+  };
+}
+
 function selectableSitemapSlugs(draft: Draft): string[] {
   return draft.plan.sitemap
     .map((page) => normalizePlanSlug(page.slug))
@@ -215,10 +493,103 @@ function formatPageStatusLabel(status: string): string {
   if (status === 'planned') return 'Ready';
   if (status === 'not_selected') return 'Skipped';
   if (status === 'home') return 'Home';
+  if (status === 'existing_page') return 'Exists';
   if (status === 'duplicate_slug') return 'Exists';
   if (status === 'invalid_slug') return 'Invalid';
   if (status === 'reserved_slug') return 'Reserved';
   return status.replace(/_/g, ' ');
+}
+
+function formatSitemapTreeDiffState(state: SitemapTreeDiffRow['state']): string {
+  if (state === 'will_add_nav') return 'New + nav';
+  if (state === 'will_create') return 'New draft';
+  if (state === 'will_skip_existing') return 'Existing slug';
+  if (state === 'created_draft') return 'Draft created';
+  if (state === 'not_selected') return 'Skipped';
+  return 'Home';
+}
+
+function formatNavigationDiffState(state: SitemapNavigationDiffRow['state']): string {
+  if (state === 'current_public') return 'Current public nav';
+  if (state === 'current_hidden_draft') return 'Current hidden draft nav';
+  if (state === 'will_append_hidden_until_publish') return 'Will append hidden';
+  if (state === 'queued_hidden_until_publish') return 'Queued hidden';
+  if (state === 'public_after_publish') return 'Public after publish';
+  if (state === 'page_exists_not_in_nav') return 'Page exists, no nav';
+  if (state === 'draft_only') return 'Draft only';
+  if (state === 'not_selected') return 'Skipped';
+  return 'Home';
+}
+
+function navigationHrefToSlug(href: string | undefined, locale: Locale): string {
+  const rawPath = (href ?? '').split('#')[0]?.split('?')[0] ?? '';
+  const localePrefix = `/${locale}`;
+  const withoutLocale = rawPath === localePrefix
+    ? ''
+    : rawPath.startsWith(`${localePrefix}/`)
+      ? rawPath.slice(localePrefix.length)
+      : rawPath;
+  return normalizePlanSlug(withoutLocale);
+}
+
+function navigationLabelText(label: BuilderNavigationItemSummary['label'], locale: Locale): string {
+  if (typeof label === 'string') return label;
+  if (label && typeof label === 'object') return label[locale] ?? Object.values(label)[0] ?? 'Untitled';
+  return 'Untitled';
+}
+
+function flattenNavigationEntries(
+  items: BuilderNavigationItemSummary[],
+  locale: Locale,
+  depth = 0,
+  prefix: number[] = [],
+): NavigationTreeEntry[] {
+  return items.flatMap((item, index) => {
+    const indexPathParts = [...prefix, index + 1];
+    const entry: NavigationTreeEntry = {
+      slug: navigationHrefToSlug(item.href, locale),
+      href: item.href ?? '',
+      depth,
+      indexPath: indexPathParts.join('.'),
+      label: navigationLabelText(item.label, locale),
+      pageId: item.pageId,
+    };
+    return [entry, ...flattenNavigationEntries(item.children ?? [], locale, depth + 1, indexPathParts)];
+  });
+}
+
+function formatPublishPreflight(summary?: PublishPreflightSummary): string {
+  if (!summary || summary.status === 'idle') return 'Preflight pending';
+  if (summary.status === 'checking') return 'Checking publish gate';
+  if (summary.status === 'error') return 'Preflight unavailable';
+  if (summary.status === 'blocked') return `${summary.blockerCount} blockers`;
+  if (summary.warningCount > 0) return `Publish ready · ${summary.warningCount} warnings`;
+  return 'Publish ready';
+}
+
+function formatScheduledPublishTime(value?: string): string {
+  if (!value) return 'Not scheduled';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat('ko-KR', {
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(date);
+}
+
+function formatDatetimeLocalValue(date: Date): string {
+  const pad = (value: number) => String(value).padStart(2, '0');
+  return [
+    date.getFullYear(),
+    pad(date.getMonth() + 1),
+    pad(date.getDate()),
+  ].join('-') + `T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+}
+
+function defaultScheduledPublishInput(): string {
+  return formatDatetimeLocalValue(new Date(Date.now() + 24 * 60 * 60 * 1000));
 }
 
 function formatHistoryDate(value: string): string {
@@ -230,6 +601,24 @@ function formatHistoryDate(value: string): string {
     hour: '2-digit',
     minute: '2-digit',
   }).format(date);
+}
+
+function formatServerDiffValue(value: ServerIntakeDiffValue): string {
+  if (Array.isArray(value)) return value.length > 0 ? value.join(', ') : 'empty';
+  if (value === null) return 'empty';
+  return String(value);
+}
+
+function serverDiffChangeCount(diff: ServerIntakeVersionDiff): number {
+  return diff.specChanges.length + diff.draftChanges.length;
+}
+
+function persistPromptHistory(locale: Locale, entries: PromptHistoryEntry[]): void {
+  try {
+    window.localStorage.setItem(aiGeneratorHistoryKey(locale), JSON.stringify(entries));
+  } catch (error) {
+    if (!(error instanceof Error)) throw error;
+  }
 }
 
 function visualBriefForUi(draft: Draft) {
@@ -344,17 +733,63 @@ function responsiveFixedDraft(source: Draft): Draft {
         ...source.plan.visualBrief,
         treatment: source.plan.visualBrief.treatment.includes('mobile-safe CTA spacing')
           ? source.plan.visualBrief.treatment
-          : `${source.plan.visualBrief.treatment}; mobile-safe CTA spacing`,
+          : `${source.plan.visualBrief.treatment}; mobile-safe CTA spacing; tablet sections balance`,
         composition: source.plan.visualBrief.composition.includes('Responsive auto-fix applied')
           ? source.plan.visualBrief.composition
-          : `${source.plan.visualBrief.composition} Responsive auto-fix applied: stack proof cards before CTA and reserve tap-safe spacing.`,
+          : `${source.plan.visualBrief.composition} Responsive auto-fix applied: stack proof cards before CTA, reserve tap-safe spacing, and balance two-column tablet sections.`,
       },
     },
   };
 }
 
+function isResponsiveAutoFixed(value: Draft): boolean {
+  return value.plan.visualBrief.treatment.includes('mobile-safe CTA spacing')
+    && value.plan.visualBrief.composition.includes('Responsive auto-fix applied');
+}
+
+function responsiveBreakpointIssues(
+  sectionIds: string[],
+  sectionCopyById: Map<string, string>,
+  autoFixed: boolean,
+  breakpoint: 'mobile' | 'tablet' = 'mobile',
+): string[] {
+  const issues: string[] = [];
+  const normalizedSectionIds = sectionIds.map((sectionId) => sectionId.toLowerCase());
+  if (breakpoint === 'tablet') {
+    if (sectionIds.length >= 4) {
+      issues.push('Tablet two-column balance');
+    }
+    return autoFixed ? [] : issues;
+  }
+  if (sectionIds.length >= 4) {
+    issues.push('Dense mobile section stack');
+  }
+  if (!autoFixed && normalizedSectionIds.some((sectionId) => (
+    sectionId.includes('cta')
+    || sectionId.includes('contact')
+    || sectionId.includes('newsletter')
+  ))) {
+    issues.push('CTA tap target spacing');
+  }
+  if (!autoFixed && sectionIds.some((sectionId) => (sectionCopyById.get(sectionId)?.length ?? 0) > 165)) {
+    issues.push('Long copy compaction');
+  }
+  return issues;
+}
+
 function designerStyleSuggestions(source: Draft): DesignerStyleSuggestion[] {
-  return [
+  const candidates: Array<Omit<
+    DesignerStyleSuggestion,
+    | 'rank'
+    | 'score'
+    | 'scoreReasons'
+    | 'layoutFit'
+    | 'paletteFit'
+    | 'fitPreview'
+    | 'designPoolProfile'
+    | 'designPoolFit'
+    | 'designPoolSignals'
+  >> = [
     {
       id: 'editorial-trust',
       label: 'Editorial trust',
@@ -398,6 +833,27 @@ function designerStyleSuggestions(source: Draft): DesignerStyleSuggestion[] {
       },
     },
   ];
+  const scoringById = new Map(
+    scoreDesignerStyleCandidates(source.spec).map((score) => [score.id, score]),
+  );
+  return candidates
+    .map((suggestion) => {
+      const scoring = scoringById.get(suggestion.id);
+      return {
+        ...suggestion,
+        score: scoring?.score ?? 70,
+        rank: scoring?.rank ?? 99,
+        scoreReasons: scoring?.reasons ?? ['balanced baseline'],
+        layoutFit: scoring?.layoutFit ?? 78,
+        paletteFit: scoring?.paletteFit ?? 76,
+        fitPreview: scoring?.fitPreview ?? 'Balanced page rhythm',
+        designPoolProfile: scoring?.designPoolProfile ?? 'balanced-builder-system',
+        designPoolFit: scoring?.designPoolFit ?? 76,
+        designPoolSignals: scoring?.designPoolSignals ?? ['balanced rhythm'],
+      };
+    })
+    .sort((a, b) => b.score - a.score || a.label.localeCompare(b.label))
+    .map((suggestion) => suggestion);
 }
 
 function replaceOrAppendBriefNote(value: string, label: string, replacement: string): string {
@@ -505,7 +961,7 @@ function renderDraftPageStrip(draftValue: Draft, label: string, dataAttribute: s
   );
 }
 
-export default function AiGeneratorWizard({ locale }: Props) {
+export default function AiGeneratorWizard({ locale, siteId }: Props) {
   const [step, setStep] = useState<WizardStep>(1);
   const [industry, setIndustry] = useState<Industry>('law');
   const [companyName, setCompanyName] = useState('호정국제법률사무소');
@@ -532,6 +988,22 @@ export default function AiGeneratorWizard({ locale }: Props) {
   const [navigationAddedSlugs, setNavigationAddedSlugs] = useState<string[]>([]);
   const [discarding, setDiscarding] = useState(false);
   const [discardNotice, setDiscardNotice] = useState('');
+  const [sitePages, setSitePages] = useState<BuilderSitePageSummary[]>([]);
+  const [sitePagesLoading, setSitePagesLoading] = useState(false);
+  const [sitePagesError, setSitePagesError] = useState('');
+  const [siteNavigation, setSiteNavigation] = useState<BuilderNavigationItemSummary[]>([]);
+  const [siteNavigationLoading, setSiteNavigationLoading] = useState(false);
+  const [siteNavigationError, setSiteNavigationError] = useState('');
+  const [publishingPageId, setPublishingPageId] = useState<string | null>(null);
+  const [publishedPageIds, setPublishedPageIds] = useState<string[]>([]);
+  const [publishPreflightByPageId, setPublishPreflightByPageId] = useState<Record<string, PublishPreflightSummary>>({});
+  const [schedulingPageId, setSchedulingPageId] = useState<string | null>(null);
+  const [cancellingScheduledPageId, setCancellingScheduledPageId] = useState<string | null>(null);
+  const [scheduledPublishByPageId, setScheduledPublishByPageId] = useState<Record<string, ScheduledPublishJobSummary>>({});
+  const [scheduledPublishInputByPageId, setScheduledPublishInputByPageId] = useState<Record<string, string>>({});
+  const [publishWarningAcknowledgedByPageId, setPublishWarningAcknowledgedByPageId] = useState<Record<string, boolean>>({});
+  const [publishNotice, setPublishNotice] = useState('');
+  const [publishError, setPublishError] = useState('');
   const [savingSectionRootId, setSavingSectionRootId] = useState<string | null>(null);
   const [savedSectionIds, setSavedSectionIds] = useState<Record<string, string>>({});
   const [sectionSaveNotice, setSectionSaveNotice] = useState('');
@@ -554,6 +1026,18 @@ export default function AiGeneratorWizard({ locale }: Props) {
   const [designerSuggestionSnapshot, setDesignerSuggestionSnapshot] = useState<Draft | null>(null);
   const [designerSuggestionNotice, setDesignerSuggestionNotice] = useState('');
   const [appliedDesignerSuggestionId, setAppliedDesignerSuggestionId] = useState('');
+  const [designerServerScoreStatus, setDesignerServerScoreStatus] = useState<DesignerServerScoreStatus>('idle');
+  const [designerServerScorePayload, setDesignerServerScorePayload] = useState('');
+  const [designerServerScoreTop, setDesignerServerScoreTop] = useState('none');
+  const [designerServerScoreCount, setDesignerServerScoreCount] = useState(0);
+  const [designerServerScoreNotice, setDesignerServerScoreNotice] = useState('');
+  const [serverVersions, setServerVersions] = useState<ServerIntakeVersionSummary[]>([]);
+  const [serverVersionsLoading, setServerVersionsLoading] = useState(false);
+  const [serverVersionsError, setServerVersionsError] = useState('');
+  const [serverVersionNotice, setServerVersionNotice] = useState('');
+  const [serverVersionDiff, setServerVersionDiff] = useState<ServerVersionDiffState | null>(null);
+  const [serverVersionDiffLoadingId, setServerVersionDiffLoadingId] = useState<string | null>(null);
+  const [serverVersionRestoringId, setServerVersionRestoringId] = useState<string | null>(null);
   const promptVersionComparison = useMemo(() => {
     const selected = promptVersionEntry(selectedPromptVersion);
     const current = promptVersionEntry(AI_GENERATOR_PROMPT_VERSION);
@@ -578,6 +1062,97 @@ export default function AiGeneratorWizard({ locale }: Props) {
       setHistory([]);
     }
   }, [locale]);
+
+  const refreshServerVersions = useCallback(async (
+    options: { silent?: boolean; notice?: string } = {},
+  ): Promise<ServerIntakeVersionSummary[]> => {
+    if (!options.silent) setServerVersionsLoading(true);
+    setServerVersionsError('');
+    try {
+      const response = await fetch(
+        `/api/builder/ai-generator/versions?siteId=${encodeURIComponent(siteId)}&locale=${encodeURIComponent(locale)}`,
+        {
+          credentials: 'same-origin',
+        },
+      );
+      const payload = (await response.json().catch(() => ({}))) as ServerVersionsResponse;
+      if (!response.ok || !Array.isArray(payload.versions)) {
+        setServerVersions([]);
+        setServerVersionsError(payload.message ?? payload.error ?? '서버 생성 기록을 불러오지 못했습니다.');
+        return [];
+      }
+      setServerVersions(payload.versions);
+      if (options.notice) setServerVersionNotice(options.notice);
+      return payload.versions;
+    } catch (error) {
+      setServerVersions([]);
+      setServerVersionsError(error instanceof Error ? error.message : '서버 생성 기록을 불러오지 못했습니다.');
+      return [];
+    } finally {
+      if (!options.silent) setServerVersionsLoading(false);
+    }
+  }, [locale, siteId]);
+
+  const refreshSitePages = useCallback(async (
+    options: { silent?: boolean } = {},
+  ): Promise<BuilderSitePageSummary[]> => {
+    if (!options.silent) setSitePagesLoading(true);
+    setSitePagesError('');
+    try {
+      const response = await fetch(`/api/builder/site/pages?locale=${encodeURIComponent(locale)}`, {
+        credentials: 'same-origin',
+      });
+      const payload = (await response.json().catch(() => ({}))) as PagesResponse;
+      if (!response.ok || !Array.isArray(payload.pages)) {
+        setSitePages([]);
+        setSitePagesError(payload.message ?? payload.error ?? '현재 page tree를 불러오지 못했습니다.');
+        return [];
+      }
+      setSitePages(payload.pages);
+      return payload.pages;
+    } catch {
+      setSitePages([]);
+      setSitePagesError('현재 page tree를 불러오지 못했습니다.');
+      return [];
+    } finally {
+      if (!options.silent) setSitePagesLoading(false);
+    }
+  }, [locale]);
+
+  const refreshSiteNavigation = useCallback(async (
+    options: { silent?: boolean } = {},
+  ): Promise<BuilderNavigationItemSummary[]> => {
+    if (!options.silent) setSiteNavigationLoading(true);
+    setSiteNavigationError('');
+    try {
+      const response = await fetch(`/api/builder/site/navigation?locale=${encodeURIComponent(locale)}`, {
+        credentials: 'same-origin',
+      });
+      const payload = (await response.json().catch(() => ({}))) as NavigationResponse;
+      if (!response.ok || !Array.isArray(payload.navigation)) {
+        setSiteNavigation([]);
+        setSiteNavigationError(payload.message ?? payload.error ?? '현재 Navigation tree를 불러오지 못했습니다.');
+        return [];
+      }
+      setSiteNavigation(payload.navigation);
+      return payload.navigation;
+    } catch {
+      setSiteNavigation([]);
+      setSiteNavigationError('현재 Navigation tree를 불러오지 못했습니다.');
+      return [];
+    } finally {
+      if (!options.silent) setSiteNavigationLoading(false);
+    }
+  }, [locale]);
+
+  useEffect(() => {
+    void refreshSitePages();
+    void refreshSiteNavigation();
+  }, [refreshSiteNavigation, refreshSitePages]);
+
+  useEffect(() => {
+    void refreshServerVersions({ silent: true });
+  }, [refreshServerVersions]);
 
   useEffect(() => {
     let active = true;
@@ -661,6 +1236,14 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setAppliedPages([]);
     setSkippedApplyPages([]);
     setNavigationAddedSlugs([]);
+    setPublishedPageIds([]);
+    setPublishPreflightByPageId({});
+    setScheduledPublishByPageId({});
+    setScheduledPublishInputByPageId({});
+    setPublishWarningAcknowledgedByPageId({});
+    setCancellingScheduledPageId(null);
+    setPublishNotice('');
+    setPublishError('');
     setDiscardNotice('');
     try {
       const res = await fetch('/api/builder/ai-generator/apply', {
@@ -694,6 +1277,9 @@ export default function AiGeneratorWizard({ locale }: Props) {
       setAppliedPageId(nextPages[0]?.pageId ?? null);
       setAppliedSlug(nextPages[0]?.slug ?? null);
       setDiscardNotice('');
+      void refreshSitePages({ silent: true });
+      void refreshSiteNavigation({ silent: true });
+      void Promise.all(nextPages.map((pageEntry) => loadPublishPreflight(pageEntry)));
       if (applyScope === 'single') setDraftSlug(suggestDraftSlug());
     } finally {
       setApplying(false);
@@ -729,12 +1315,201 @@ export default function AiGeneratorWizard({ locale }: Props) {
       setAppliedPages([]);
       setSkippedApplyPages([]);
       setNavigationAddedSlugs([]);
+      setPublishedPageIds([]);
+      setPublishPreflightByPageId({});
+      setScheduledPublishByPageId({});
+      setScheduledPublishInputByPageId({});
+      setPublishWarningAcknowledgedByPageId({});
+      setCancellingScheduledPageId(null);
+      setPublishNotice('');
+      setPublishError('');
+      void refreshSitePages({ silent: true });
+      void refreshSiteNavigation({ silent: true });
       const hadMissing = results.some((result) => result.res.status === 404);
       setDiscardNotice(hadMissing
         ? '이미 삭제된 draft로 표시를 정리했습니다.'
         : `${pagesToDiscard.length}개 draft를 폐기했습니다.`);
     } finally {
       setDiscarding(false);
+    }
+  }
+
+  async function loadPublishPreflight(pageEntry: ApplyCreatedPage) {
+    if (!pageEntry.pageId) return;
+    setPublishPreflightByPageId((current) => ({
+      ...current,
+      [pageEntry.pageId]: {
+        status: 'checking',
+        blockerCount: 0,
+        warningCount: 0,
+        infoCount: 0,
+      },
+    }));
+    try {
+      const res = await fetch('/api/builder/site/publish-checks', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          siteId: 'default',
+          pageId: pageEntry.pageId,
+          locale,
+        }),
+      });
+      const payload = (await res.json().catch(() => ({}))) as PublishChecksResponse;
+      if (!res.ok || !payload.ok || !payload.suite) {
+        setPublishPreflightByPageId((current) => ({
+          ...current,
+          [pageEntry.pageId]: {
+            status: 'error',
+            blockerCount: 0,
+            warningCount: 0,
+            infoCount: 0,
+            message: payload.message ?? payload.error ?? 'Publish preflight failed.',
+          },
+        }));
+        return;
+      }
+      const firstIssue = payload.suite.results?.find((result) => result.severity === 'blocker' || result.severity === 'warning');
+      setPublishPreflightByPageId((current) => ({
+        ...current,
+        [pageEntry.pageId]: {
+          status: payload.suite?.hasBlocker ? 'blocked' : 'ready',
+          blockerCount: payload.suite?.blockerCount ?? 0,
+          warningCount: payload.suite?.warningCount ?? 0,
+          infoCount: payload.suite?.infoCount ?? 0,
+          checkedAt: payload.suite?.checkedAt,
+          firstIssue: firstIssue?.message,
+        },
+      }));
+    } catch {
+      setPublishPreflightByPageId((current) => ({
+        ...current,
+        [pageEntry.pageId]: {
+          status: 'error',
+          blockerCount: 0,
+          warningCount: 0,
+          infoCount: 0,
+          message: 'Publish preflight network error.',
+        },
+      }));
+    }
+  }
+
+  async function publishCreatedPage(pageEntry: ApplyCreatedPage) {
+    if (!pageEntry.pageId) return;
+    const preflight = publishPreflightByPageId[pageEntry.pageId];
+    if (preflight?.status === 'blocked') {
+      setPublishError(preflight.firstIssue ?? 'Publish blockers must be fixed before publishing.');
+      return;
+    }
+    if ((preflight?.warningCount ?? 0) > 0 && !publishWarningAcknowledgedByPageId[pageEntry.pageId]) {
+      setPublishError('Publish warnings must be acknowledged before publishing.');
+      return;
+    }
+    setPublishingPageId(pageEntry.pageId);
+    setPublishError('');
+    setPublishNotice('');
+    try {
+      const res = await fetch(`/api/builder/site/pages/${encodeURIComponent(pageEntry.pageId)}/publish`, {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({}),
+      });
+      const payload = (await res.json().catch(() => ({}))) as PublishCreatedPageResponse;
+      if (!res.ok || !payload.ok) {
+        setPublishError(payload.message ?? payload.error ?? `${pageEntry.slug || pageEntry.pageId} 발행 실패`);
+        return;
+      }
+      setPublishedPageIds((current) => Array.from(new Set([...current, pageEntry.pageId])));
+      setPublishNotice(`${displayPlanPath(payload.slug ?? pageEntry.slug)} published · 공개 header 반영 준비 완료`);
+      void refreshSitePages({ silent: true });
+      void refreshSiteNavigation({ silent: true });
+    } catch {
+      setPublishError(`${pageEntry.slug || pageEntry.pageId} 발행 중 네트워크 오류가 발생했습니다.`);
+    } finally {
+      setPublishingPageId(null);
+    }
+  }
+
+  async function scheduleCreatedPagePublish(pageEntry: ApplyCreatedPage) {
+    if (!pageEntry.pageId) return;
+    const preflight = publishPreflightByPageId[pageEntry.pageId];
+    if (preflight?.status === 'blocked') {
+      setPublishError(preflight.firstIssue ?? 'Publish blockers must be fixed before scheduling.');
+      return;
+    }
+    if ((preflight?.warningCount ?? 0) > 0 && !publishWarningAcknowledgedByPageId[pageEntry.pageId]) {
+      setPublishError('Publish warnings must be acknowledged before scheduling.');
+      return;
+    }
+    setSchedulingPageId(pageEntry.pageId);
+    setPublishError('');
+    setPublishNotice('');
+    try {
+      const scheduledAtInput = scheduledPublishInputByPageId[pageEntry.pageId]?.trim() || defaultScheduledPublishInput();
+      const scheduledAtDate = new Date(scheduledAtInput);
+      if (Number.isNaN(scheduledAtDate.getTime()) || scheduledAtDate.getTime() <= Date.now()) {
+        setPublishError('미래 예약 시간을 선택해 주세요.');
+        return;
+      }
+      const scheduledAt = scheduledAtDate.toISOString();
+      const res = await fetch(`/api/builder/site/pages/${encodeURIComponent(pageEntry.pageId)}/scheduled-publish?locale=${encodeURIComponent(locale)}`, {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          locale,
+          scheduledAt,
+        }),
+      });
+      const payload = (await res.json().catch(() => ({}))) as ScheduledPublishResponse;
+      if (!res.ok || !payload.ok || !payload.job) {
+        setPublishError(payload.message ?? payload.error ?? `${pageEntry.slug || pageEntry.pageId} 예약 발행 실패`);
+        return;
+      }
+      setScheduledPublishByPageId((current) => ({
+        ...current,
+        [pageEntry.pageId]: payload.job as ScheduledPublishJobSummary,
+      }));
+      setScheduledPublishInputByPageId((current) => ({
+        ...current,
+        [pageEntry.pageId]: formatDatetimeLocalValue(new Date(payload.job?.scheduledAt ?? scheduledAt)),
+      }));
+      setPublishNotice(`${displayPlanPath(pageEntry.slug)} scheduled · ${formatScheduledPublishTime(payload.job.scheduledAt)}`);
+    } catch {
+      setPublishError(`${pageEntry.slug || pageEntry.pageId} 예약 발행 중 네트워크 오류가 발생했습니다.`);
+    } finally {
+      setSchedulingPageId(null);
+    }
+  }
+
+  async function cancelCreatedPageSchedule(pageEntry: ApplyCreatedPage) {
+    if (!pageEntry.pageId) return;
+    setCancellingScheduledPageId(pageEntry.pageId);
+    setPublishError('');
+    setPublishNotice('');
+    try {
+      const res = await fetch(`/api/builder/site/pages/${encodeURIComponent(pageEntry.pageId)}/scheduled-publish?locale=${encodeURIComponent(locale)}`, {
+        method: 'DELETE',
+        credentials: 'same-origin',
+      });
+      const payload = (await res.json().catch(() => ({}))) as CancelScheduledPublishResponse;
+      if (!res.ok || !payload.ok) {
+        setPublishError(payload.message ?? payload.error ?? `${pageEntry.slug || pageEntry.pageId} 예약 취소 실패`);
+        return;
+      }
+      setScheduledPublishByPageId((current) => {
+        const next = { ...current };
+        delete next[pageEntry.pageId];
+        return next;
+      });
+      setPublishNotice(`${displayPlanPath(pageEntry.slug)} schedule cancelled · ${payload.cancelled ?? 0} job`);
+    } catch {
+      setPublishError(`${pageEntry.slug || pageEntry.pageId} 예약 취소 중 네트워크 오류가 발생했습니다.`);
+    } finally {
+      setCancellingScheduledPageId(null);
     }
   }
 
@@ -747,11 +1522,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
     };
     setHistory((current) => {
       const next = [entry, ...current].slice(0, 6);
-      try {
-        window.localStorage.setItem(aiGeneratorHistoryKey(locale), JSON.stringify(next));
-      } catch {
-        /* local history is a convenience only. */
-      }
+      persistPromptHistory(locale, next);
       return next;
     });
     setHistoryNotice('생성 기록에 저장했습니다.');
@@ -765,16 +1536,12 @@ export default function AiGeneratorWizard({ locale }: Props) {
           ? { ...entry, spec: nextDraft.spec, draft: nextDraft }
           : entry
       ));
-      try {
-        window.localStorage.setItem(aiGeneratorHistoryKey(locale), JSON.stringify(next));
-      } catch {
-        /* local history is a convenience only. */
-      }
+      persistPromptHistory(locale, next);
       return next;
     });
   }
 
-  function restoreHistory(entry: PromptHistoryEntry) {
+  function restoreDraftEntry(entry: PromptHistoryEntry, notice: string) {
     setIndustry(entry.spec.industry);
     setCompanyName(entry.spec.companyName);
     setSlogan(entry.spec.slogan ?? '');
@@ -801,6 +1568,14 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setAppliedPages([]);
     setSkippedApplyPages([]);
     setNavigationAddedSlugs([]);
+    setPublishedPageIds([]);
+    setPublishPreflightByPageId({});
+    setScheduledPublishByPageId({});
+    setScheduledPublishInputByPageId({});
+    setPublishWarningAcknowledgedByPageId({});
+    setCancellingScheduledPageId(null);
+    setPublishNotice('');
+    setPublishError('');
     setSelectedSitemapPageSlugs(selectableSitemapSlugs(entry.draft));
     setDiscardNotice('');
     setSavedSectionIds({});
@@ -813,21 +1588,85 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setDraftSlug(suggestDraftSlug());
     setDraftPreviewFrame('desktop');
     setError('');
-    setHistoryNotice('이전 생성안을 복원했습니다.');
+    setHistoryNotice(notice);
     setStep(6);
+  }
+
+  function restoreHistory(entry: PromptHistoryEntry) {
+    restoreDraftEntry(entry, '이전 생성안을 복원했습니다.');
   }
 
   function removeHistoryEntry(entryId: string) {
     setHistory((current) => {
       const next = current.filter((entry) => entry.id !== entryId);
-      try {
-        window.localStorage.setItem(aiGeneratorHistoryKey(locale), JSON.stringify(next));
-      } catch {
-        /* local history is a convenience only. */
-      }
+      persistPromptHistory(locale, next);
       return next;
     });
     setHistoryNotice('생성 기록을 삭제했습니다.');
+  }
+
+  async function compareServerVersionWithPrevious(version: ServerIntakeVersionSummary, previous?: ServerIntakeVersionSummary) {
+    if (!previous) {
+      setServerVersionNotice('비교할 이전 서버 버전이 없습니다.');
+      return;
+    }
+    setServerVersionDiffLoadingId(version.id);
+    setServerVersionsError('');
+    setServerVersionNotice('');
+    try {
+      const response = await fetch(
+        `/api/builder/ai-generator/versions/${encodeURIComponent(previous.id)}/diff/${encodeURIComponent(version.id)}?siteId=${encodeURIComponent(siteId)}`,
+        { credentials: 'same-origin' },
+      );
+      const payload = (await response.json().catch(() => ({}))) as ServerVersionDiffResponse;
+      if (!response.ok || !payload.diff || !payload.leftId || !payload.rightId) {
+        setServerVersionsError(payload.message ?? payload.error ?? '서버 버전 비교를 불러오지 못했습니다.');
+        return;
+      }
+      setServerVersionDiff({
+        leftId: payload.leftId,
+        rightId: payload.rightId,
+        diff: payload.diff,
+      });
+      setServerVersionNotice(`${serverDiffChangeCount(payload.diff)}개 변경점을 비교했습니다.`);
+    } catch (error) {
+      setServerVersionsError(error instanceof Error ? error.message : '서버 버전 비교를 불러오지 못했습니다.');
+    } finally {
+      setServerVersionDiffLoadingId(null);
+    }
+  }
+
+  async function restoreServerVersion(version: ServerIntakeVersionSummary) {
+    setServerVersionRestoringId(version.id);
+    setServerVersionsError('');
+    setServerVersionNotice('');
+    try {
+      const response = await fetch(
+        `/api/builder/ai-generator/versions/${encodeURIComponent(version.id)}/restore?siteId=${encodeURIComponent(siteId)}`,
+        {
+          method: 'POST',
+          credentials: 'same-origin',
+        },
+      );
+      const payload = (await response.json().catch(() => ({}))) as ServerVersionRestoreResponse;
+      const restoredSpec = payload.spec ?? payload.version?.spec;
+      const restoredDraft = payload.draft ?? payload.version?.draft;
+      if (!response.ok || !restoredSpec || !restoredDraft) {
+        setServerVersionsError(payload.message ?? payload.error ?? '서버 버전 복원에 실패했습니다.');
+        return;
+      }
+      restoreDraftEntry({
+        id: `server-${version.id}`,
+        createdAt: payload.version?.createdAt ?? version.createdAt,
+        spec: restoredSpec,
+        draft: restoredDraft,
+      }, '서버 생성 버전을 현재 draft로 복원했습니다.');
+      setServerVersionNotice(`${version.companyName} 서버 버전을 복원했습니다.`);
+    } catch (error) {
+      setServerVersionsError(error instanceof Error ? error.message : '서버 버전 복원에 실패했습니다.');
+    } finally {
+      setServerVersionRestoringId(null);
+    }
   }
 
   async function generate() {
@@ -843,6 +1682,14 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setAppliedPages([]);
     setSkippedApplyPages([]);
     setNavigationAddedSlugs([]);
+    setPublishedPageIds([]);
+    setPublishPreflightByPageId({});
+    setScheduledPublishByPageId({});
+    setScheduledPublishInputByPageId({});
+    setPublishWarningAcknowledgedByPageId({});
+    setCancellingScheduledPageId(null);
+    setPublishNotice('');
+    setPublishError('');
     setDiscardNotice('');
     setSavedSectionIds({});
     setSectionSaveNotice('');
@@ -852,7 +1699,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setDesignerSuggestionNotice('');
     setAppliedDesignerSuggestionId('');
     try {
-      const res = await fetch('/api/builder/ai-generator', {
+      const res = await fetch(`/api/builder/ai-generator?siteId=${encodeURIComponent(siteId)}`, {
         method: 'POST',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
@@ -869,6 +1716,11 @@ export default function AiGeneratorWizard({ locale }: Props) {
       setDraft(payload.draft);
       setSelectedSitemapPageSlugs(selectableSitemapSlugs(payload.draft));
       rememberDraft(payload.draft);
+      if (payload.versionId) {
+        void refreshServerVersions({ silent: true, notice: '서버 버전 ledger에 저장했습니다.' });
+      } else if (payload.versionWarning) {
+        setServerVersionNotice('생성은 완료됐지만 서버 버전 ledger 저장은 건너뛰었습니다.');
+      }
       setDraftSlug(suggestDraftSlug());
       setDraftPreviewFrame('desktop');
       setStep(6);
@@ -878,7 +1730,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
   }
 
   async function requestDraftForPromptVersion(promptVersion: string): Promise<Draft> {
-    const res = await fetch('/api/builder/ai-generator', {
+    const res = await fetch(`/api/builder/ai-generator?siteId=${encodeURIComponent(siteId)}`, {
       method: 'POST',
       credentials: 'same-origin',
       headers: { 'Content-Type': 'application/json' },
@@ -917,6 +1769,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
         current,
         comparedAt: new Date().toISOString(),
       });
+      void refreshServerVersions({ silent: true });
     } catch (comparisonError) {
       setError(comparisonError instanceof Error ? comparisonError.message : '비교 생성 실패');
     } finally {
@@ -934,6 +1787,14 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setAppliedPages([]);
     setSkippedApplyPages([]);
     setNavigationAddedSlugs([]);
+    setPublishedPageIds([]);
+    setPublishPreflightByPageId({});
+    setScheduledPublishByPageId({});
+    setScheduledPublishInputByPageId({});
+    setPublishWarningAcknowledgedByPageId({});
+    setCancellingScheduledPageId(null);
+    setPublishNotice('');
+    setPublishError('');
     setDiscardNotice('');
     setSavedSectionIds({});
     setSectionSaveNotice('');
@@ -954,7 +1815,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setDraft(nextDraft);
     updateStoredDraftHistory(draft, nextDraft);
     setDraftPreviewFrame('mobile');
-    setResponsiveFixNotice('모바일 CTA 간격과 긴 문장을 자동 보정했습니다.');
+    setResponsiveFixNotice('모바일 CTA 간격, 긴 문장, 태블릿 2열 균형을 자동 보정했습니다.');
     setError('');
   }
 
@@ -1022,11 +1883,12 @@ export default function AiGeneratorWizard({ locale }: Props) {
         setError(payload.message ?? payload.error ?? '섹션 저장 실패');
         return;
       }
+      const savedSection = payload.section;
       setSavedSectionIds((current) => ({
         ...current,
-        [snapshot.rootNodeId]: payload.section!.sectionId,
+        [snapshot.rootNodeId]: savedSection.sectionId,
       }));
-      setSectionSaveNotice(`Saved Sections에 추가됨: ${payload.section.name}`);
+      setSectionSaveNotice(`Saved Sections에 추가됨: ${savedSection.name}`);
       window.dispatchEvent(new CustomEvent('builder:saved-section-changed'));
     } finally {
       setSavingSectionRootId(null);
@@ -1115,6 +1977,115 @@ export default function AiGeneratorWizard({ locale }: Props) {
     () => new Set(navigationAddedSlugs.map((slug) => normalizePlanSlug(slug))),
     [navigationAddedSlugs],
   );
+  const sitePageBySlug = useMemo(() => {
+    const entries = sitePages.map((page) => [normalizePlanSlug(page.slug), page] as const);
+    return new Map(entries);
+  }, [sitePages]);
+  const navigationEntries = useMemo(
+    () => flattenNavigationEntries(siteNavigation, locale),
+    [locale, siteNavigation],
+  );
+  const navigationEntryBySlug = useMemo(() => {
+    const entries = navigationEntries.map((entry) => [entry.slug, entry] as const);
+    return new Map(entries);
+  }, [navigationEntries]);
+  const publishedCreatedPageIdSet = useMemo(() => {
+    const ids = new Set(publishedPageIds);
+    for (const page of sitePages) {
+      if (page.publishedAt || page.publishedRevisionId) ids.add(page.pageId);
+    }
+    return ids;
+  }, [publishedPageIds, sitePages]);
+  const sitemapTreeDiffRows = useMemo<SitemapTreeDiffRow[]>(() => {
+    if (!draft) return [];
+    return draft.plan.sitemap.map((page, generatedIndex) => {
+      const slug = normalizePlanSlug(page.slug);
+      const currentIndex = sitePages.findIndex((sitePage) => normalizePlanSlug(sitePage.slug) === slug);
+      const targetIndex = selectedSitemapPageSlugs.findIndex((selectedSlug) => normalizePlanSlug(selectedSlug) === slug);
+      const state: SitemapTreeDiffRow['state'] = slug === '/'
+        ? 'home'
+        : appliedPageSlugs.has(slug)
+          ? 'created_draft'
+          : targetIndex < 0
+            ? 'not_selected'
+            : currentIndex >= 0
+              ? 'will_skip_existing'
+              : includeNavigation
+                ? 'will_add_nav'
+                : 'will_create';
+      return {
+        slug,
+        title: page.title,
+        path: displayPlanPath(slug),
+        ...planHierarchyFromTitle(page.title),
+        generatedIndex,
+        currentIndex,
+        targetIndex,
+        state,
+      };
+    });
+  }, [appliedPageSlugs, draft, includeNavigation, selectedSitemapPageSlugs, sitePages]);
+  const sitemapTreeDiffStats = useMemo(() => ({
+    newPages: sitemapTreeDiffRows.filter((row) => row.state === 'will_create' || row.state === 'will_add_nav').length,
+    existingPages: sitemapTreeDiffRows.filter((row) => row.state === 'will_skip_existing').length,
+    navigationAdds: sitemapTreeDiffRows.filter((row) => row.state === 'will_add_nav').length,
+    selectedPages: sitemapTreeDiffRows.filter((row) => row.targetIndex >= 0).length,
+    nestedPages: sitemapTreeDiffRows.filter((row) => row.depth > 0).length,
+  }), [sitemapTreeDiffRows]);
+  const sitemapNavigationDiffRows = useMemo<SitemapNavigationDiffRow[]>(() => {
+    if (!draft) return [];
+    return draft.plan.sitemap.map((page) => {
+      const slug = normalizePlanSlug(page.slug);
+      const navEntry = navigationEntryBySlug.get(slug);
+      const sitePage = sitePageBySlug.get(slug);
+      const isPublished = Boolean(sitePage?.publishedAt || sitePage?.publishedRevisionId)
+        || appliedPages.some((entry) => normalizePlanSlug(entry.slug) === slug && publishedCreatedPageIdSet.has(entry.pageId));
+      const isSelected = selectedSitemapPageSlugSet.has(slug);
+      const wasNavigationAdded = navigationAddedSlugSet.has(slug);
+      const willAppend = includeNavigation && isSelected && !navEntry && !sitePage;
+      const state: SitemapNavigationDiffRow['state'] = slug === '/'
+        ? 'home'
+        : wasNavigationAdded
+          ? isPublished
+            ? 'public_after_publish'
+            : 'queued_hidden_until_publish'
+          : navEntry
+            ? isPublished
+              ? 'current_public'
+              : 'current_hidden_draft'
+            : !isSelected
+              ? 'not_selected'
+              : willAppend
+                ? 'will_append_hidden_until_publish'
+                : sitePage
+                  ? 'page_exists_not_in_nav'
+                  : 'draft_only';
+      return {
+        slug,
+        title: page.title,
+        path: displayPlanPath(slug),
+        state,
+        depth: navEntry?.depth ?? 0,
+        indexPath: navEntry?.indexPath ?? (willAppend ? `${navigationEntries.length + 1}` : '-'),
+      };
+    });
+  }, [
+    appliedPages,
+    draft,
+    includeNavigation,
+    navigationAddedSlugSet,
+    navigationEntries.length,
+    navigationEntryBySlug,
+    publishedCreatedPageIdSet,
+    selectedSitemapPageSlugSet,
+    sitePageBySlug,
+  ]);
+  const sitemapNavigationDiffStats = useMemo(() => ({
+    current: sitemapNavigationDiffRows.filter((row) => row.state === 'current_public' || row.state === 'current_hidden_draft').length,
+    appending: sitemapNavigationDiffRows.filter((row) => row.state === 'will_append_hidden_until_publish' || row.state === 'queued_hidden_until_publish').length,
+    publicAfterPublish: sitemapNavigationDiffRows.filter((row) => row.state === 'public_after_publish').length,
+    hiddenUntilPublish: sitemapNavigationDiffRows.filter((row) => row.state === 'will_append_hidden_until_publish' || row.state === 'queued_hidden_until_publish' || row.state === 'current_hidden_draft').length,
+  }), [sitemapNavigationDiffRows]);
   const generatedSectionSnapshots = useMemo(
     () => (draft
       ? draftToSavedSectionSnapshots({ draft, locale, pageId: 'ai-section-library-preview' })
@@ -1123,6 +2094,71 @@ export default function AiGeneratorWizard({ locale }: Props) {
   );
   const activeVisualBrief = draft ? visualBriefForUi(draft) : null;
   const designerSuggestions = useMemo(() => (draft ? designerStyleSuggestions(draft) : []), [draft]);
+  const designerScoreExportPayload = useMemo(
+    () => serializeDesignerScorePayload(designerSuggestions),
+    [designerSuggestions],
+  );
+  const designerServerScoreRequest = useMemo(() => (draft ? {
+    industry: draft.spec.industry,
+    tone: draft.spec.tone,
+    colorPreference: draft.spec.colorPreference,
+    goals: draft.spec.goals ?? [],
+    brandKeywords: draft.spec.brandKeywords ?? [],
+    constraints: draft.spec.constraints,
+    audience: draft.spec.audience,
+  } : null), [draft]);
+  useEffect(() => {
+    if (!designerServerScoreRequest) {
+      setDesignerServerScoreStatus('idle');
+      setDesignerServerScorePayload('');
+      setDesignerServerScoreTop('none');
+      setDesignerServerScoreCount(0);
+      setDesignerServerScoreNotice('');
+      return undefined;
+    }
+
+    let active = true;
+    setDesignerServerScoreStatus('checking');
+    setDesignerServerScoreNotice('Server score checking');
+    fetch('/api/builder/ai-generator/style-score', {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(designerServerScoreRequest),
+    })
+      .then(async (response) => {
+        const payload = (await response.json().catch(() => ({}))) as DesignerServerScoreResponse;
+        if (!active) return;
+        if (!response.ok || !payload.ok || !payload.payload) {
+          setDesignerServerScoreStatus('error');
+          setDesignerServerScorePayload('');
+          setDesignerServerScoreTop('none');
+          setDesignerServerScoreCount(0);
+          setDesignerServerScoreNotice(payload.message ?? payload.error ?? 'Server score unavailable');
+          return;
+        }
+        const status: DesignerServerScoreStatus = payload.payload === designerScoreExportPayload
+          ? 'synced'
+          : 'mismatch';
+        setDesignerServerScoreStatus(status);
+        setDesignerServerScorePayload(payload.payload);
+        setDesignerServerScoreTop(payload.top?.id ?? 'none');
+        setDesignerServerScoreCount(payload.scores?.length ?? 0);
+        setDesignerServerScoreNotice(status === 'synced' ? 'Server score synced' : 'Server score differs');
+      })
+      .catch(() => {
+        if (!active) return;
+        setDesignerServerScoreStatus('error');
+        setDesignerServerScorePayload('');
+        setDesignerServerScoreTop('none');
+        setDesignerServerScoreCount(0);
+        setDesignerServerScoreNotice('Server score unavailable');
+      });
+
+    return () => {
+      active = false;
+    };
+  }, [designerServerScoreRequest, designerScoreExportPayload]);
   const generatedPageVisualDiff = useMemo(() => (
     generatedDraftComparison
       ? fullPageVisualDiffMetrics(generatedDraftComparison.selected, generatedDraftComparison.current)
@@ -1156,6 +2192,99 @@ export default function AiGeneratorWizard({ locale }: Props) {
   const applyReviewSectionCount = useMemo(
     () => applyReviewPages.reduce((total, page) => total + page.sections.length, 0),
     [applyReviewPages],
+  );
+  const applySectionDiffRows = useMemo<ApplySectionDiffRow[]>(() => {
+    if (!draft) return [];
+    const sectionTitleById = new Map<string, string>([
+      ['hero', draft.content.hero.headline],
+      ...draft.plan.contentPlan.map((item) => [item.sectionId, item.title] as const),
+      ...draft.content.sections.map((section) => [section.sectionId, section.headline] as const),
+    ]);
+    return applyReviewPages.flatMap((page, pageIndex) => (
+      page.sections.map((sectionId, sectionIndex) => ({
+        pageSlug: page.slug,
+        pageTitle: page.title,
+        pageIndex,
+        sectionId,
+        sectionTitle: sectionTitleById.get(sectionId) ?? sectionId.replace(/-/g, ' '),
+        sectionIndex,
+        state: 'will_insert' as const,
+      }))
+    ));
+  }, [applyReviewPages, draft]);
+  const applySectionDiffStats = useMemo(() => ({
+    sectionCount: applySectionDiffRows.length,
+    uniqueSectionCount: new Set(applySectionDiffRows.map((row) => row.sectionId)).size,
+  }), [applySectionDiffRows]);
+  const applyVisualDiffRows = useMemo<ApplyVisualDiffRow[]>(() => (
+    applyReviewPages.map((page) => ({
+      pageSlug: page.slug,
+      pageTitle: page.title,
+      beforeState: 'new_draft',
+      afterSectionCount: page.sections.length,
+      afterSectionSummary: page.sections.slice(0, 4).join(' / '),
+    }))
+  ), [applyReviewPages]);
+  const applyVisualDiffSectionCount = useMemo(
+    () => applyVisualDiffRows.reduce((total, row) => total + row.afterSectionCount, 0),
+    [applyVisualDiffRows],
+  );
+  const applyResponsiveReviewRows = useMemo<ApplyResponsiveReviewRow[]>(() => {
+    if (!draft) return [];
+    const autoFixed = isResponsiveAutoFixed(draft);
+    const sectionCopyById = new Map<string, string>([
+      ['hero', `${draft.content.hero.headline} ${draft.content.hero.body}`],
+      ...draft.content.sections.map((section) => (
+        [section.sectionId, `${section.headline} ${section.body}`] as const
+      )),
+    ]);
+    return applyReviewPages.map((page) => {
+      const mobileIssues = responsiveBreakpointIssues(page.sections, sectionCopyById, autoFixed, 'mobile');
+      const tabletIssues = responsiveBreakpointIssues(page.sections, sectionCopyById, autoFixed, 'tablet');
+      const issues = [...mobileIssues, ...tabletIssues];
+      return {
+        pageSlug: page.slug,
+        pageTitle: page.title,
+        breakpoint: 'mobile' as const,
+        breakpoints: 'mobile,tablet' as const,
+        issueCount: issues.length,
+        mobileIssueCount: mobileIssues.length,
+        tabletIssueCount: tabletIssues.length,
+        status: issues.length > 0 ? 'review' : 'ready',
+        primaryIssue: issues[0] ?? 'Ready',
+        issueSummary: issues.length > 0
+          ? [
+            mobileIssues.length > 0 ? `Mobile: ${mobileIssues.join(' / ')}` : '',
+            tabletIssues.length > 0 ? `Tablet: ${tabletIssues.join(' / ')}` : '',
+          ].filter(Boolean).join(' · ')
+          : 'Mobile/tablet breakpoints ready',
+      };
+    });
+  }, [applyReviewPages, draft]);
+  const applyResponsiveReviewIssueCount = useMemo(
+    () => applyResponsiveReviewRows.reduce((total, row) => total + row.issueCount, 0),
+    [applyResponsiveReviewRows],
+  );
+  const applyResponsiveReviewReadyCount = useMemo(
+    () => applyResponsiveReviewRows.filter((row) => row.status === 'ready').length,
+    [applyResponsiveReviewRows],
+  );
+  const applyResponsiveReviewMobileIssueCount = useMemo(
+    () => applyResponsiveReviewRows.reduce((total, row) => total + row.mobileIssueCount, 0),
+    [applyResponsiveReviewRows],
+  );
+  const applyResponsiveReviewTabletIssueCount = useMemo(
+    () => applyResponsiveReviewRows.reduce((total, row) => total + row.tabletIssueCount, 0),
+    [applyResponsiveReviewRows],
+  );
+  const createdDraftPageEntries = useMemo<ApplyCreatedPage[]>(() => {
+    if (appliedPages.length > 0) return appliedPages;
+    if (!appliedPageId) return [];
+    return [{ pageId: appliedPageId, slug: appliedSlug ?? '', title: appliedSlug ?? undefined }];
+  }, [appliedPageId, appliedPages, appliedSlug]);
+  const createdDraftPublishedCount = useMemo(
+    () => createdDraftPageEntries.filter((page) => publishedCreatedPageIdSet.has(page.pageId)).length,
+    [createdDraftPageEntries, publishedCreatedPageIdSet],
   );
 
   return (
@@ -1240,6 +2369,90 @@ export default function AiGeneratorWizard({ locale }: Props) {
             <p className={styles.historyEmpty}>생성하면 최근 6개 프롬프트와 드래프트가 여기에 저장됩니다.</p>
           )}
         </div>
+        <div className={styles.historyCard} data-ai-generator-server-versions>
+          <div className={styles.historyHeader}>
+            <span className={styles.eyebrow}>Server Versions</span>
+            <div className={styles.serverHistoryActions}>
+              <strong>{serverVersionsLoading ? 'loading' : `${serverVersions.length} saved`}</strong>
+              <button
+                type="button"
+                className={styles.ghostButton}
+                onClick={() => void refreshServerVersions({ notice: '서버 버전 ledger를 새로고침했습니다.' })}
+                disabled={serverVersionsLoading}
+                data-ai-generator-server-versions-refresh
+              >
+                새로고침
+              </button>
+            </div>
+          </div>
+          {serverVersionNotice ? <p className={styles.noticeText}>{serverVersionNotice}</p> : null}
+          {serverVersionsError ? <p className={styles.errorText}>{serverVersionsError}</p> : null}
+          {serverVersions.length > 0 ? (
+            <div className={styles.historyList}>
+              {serverVersions.map((version, index) => {
+                const previous = serverVersions[index + 1];
+                return (
+                  <article key={version.id} className={styles.historyItem} data-ai-generator-server-version-id={version.id}>
+                    <div className={styles.historyItemMeta}>
+                      <strong>{version.companyName}</strong>
+                      <span>{formatHistoryDate(version.createdAt)} · {version.createdBy}</span>
+                      <small>{version.pageCount} pages · {version.heroHeadline}</small>
+                    </div>
+                    <div className={styles.serverVersionMeta}>
+                      <span>{version.promptVersion}</span>
+                      <span>{version.sectionCount + 1} sections</span>
+                    </div>
+                    <div className={styles.historyItemActions}>
+                      <button
+                        type="button"
+                        className={styles.ghostButton}
+                        onClick={() => void compareServerVersionWithPrevious(version, previous)}
+                        disabled={!previous || serverVersionDiffLoadingId === version.id}
+                        data-ai-generator-server-version-diff={version.id}
+                      >
+                        {serverVersionDiffLoadingId === version.id ? '비교 중' : '이전 비교'}
+                      </button>
+                      <button
+                        type="button"
+                        className={styles.ghostButton}
+                        onClick={() => void restoreServerVersion(version)}
+                        disabled={serverVersionRestoringId === version.id}
+                        data-ai-generator-server-version-restore={version.id}
+                      >
+                        {serverVersionRestoringId === version.id ? '복원 중' : '복원'}
+                      </button>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          ) : (
+            <p className={styles.historyEmpty}>생성하면 서버에 최근 24개 spec·draft 버전이 보관됩니다.</p>
+          )}
+          {serverVersionDiff ? (
+            <div className={styles.serverVersionDiff} data-ai-generator-server-version-diff-panel>
+              <div className={styles.serverVersionDiffHead}>
+                <span>Diff</span>
+                <strong>{serverDiffChangeCount(serverVersionDiff.diff)} changes</strong>
+              </div>
+              {serverVersionDiff.diff.isEmpty ? (
+                <p>No spec or draft summary changes.</p>
+              ) : (
+                <ul>
+                  {[
+                    ...serverVersionDiff.diff.specChanges.map((change) => ({ group: 'Spec', change })),
+                    ...serverVersionDiff.diff.draftChanges.map((change) => ({ group: 'Draft', change })),
+                  ].slice(0, 6).map(({ group, change }) => (
+                    <li key={`${group}-${change.field}`}>
+                      <b>{group} · {change.field}</b>
+                      <span>{formatServerDiffValue(change.before)} -&gt; {formatServerDiffValue(change.after)}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ) : null}
+        </div>
       </aside>
 
       <section className={styles.workspace}>
@@ -1275,18 +2488,18 @@ export default function AiGeneratorWizard({ locale }: Props) {
             <div className={styles.formGrid}>
               <label className={styles.field}>
                 <span>회사명</span>
-                <input value={companyName} onChange={(event) => setCompanyName(event.target.value)} placeholder="회사명" />
+                <input value={companyName} onChange={(event) => setCompanyName(event.target.value)} placeholder="사이트에 표시할 사무소/회사명 · 예: 호정국제법률사무소" />
               </label>
               <label className={styles.field}>
                 <span>슬로건</span>
-                <input value={slogan} onChange={(event) => setSlogan(event.target.value)} placeholder="선택 입력" />
+                <input value={slogan} onChange={(event) => setSlogan(event.target.value)} placeholder="선택 · 한 줄 슬로건 · 예: 대만 최초 한국어 법률사무소" />
               </label>
               <label className={`${styles.field} ${styles.fieldWide}`}>
                 <span>주요 고객</span>
                 <input
                   value={audience}
                   onChange={(event) => setAudience(event.target.value)}
-                  placeholder="예: 대만 진출을 준비하는 한국 기업"
+                  placeholder="핵심 고객 · 예: 대만 진출을 준비하는 한국 기업"
                 />
               </label>
             </div>
@@ -1412,7 +2625,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
                 rows={5}
                 value={visualDirection}
                 onChange={(event) => setVisualDirection(event.target.value)}
-                placeholder="예: 타이베이 도시감, 전문적인 법률 사무소, 인물 없는 상담 장면"
+                placeholder="디자인 방향 · 색상·분위기·이미지 톤 · 예: 타이베이 도시감, 차분한 법률 사무소 톤, 인물 없는 상담 장면"
               />
             </label>
             <div className={styles.promptSelectorBlock} data-ai-generator-prompt-selector>
@@ -1783,10 +2996,12 @@ export default function AiGeneratorWizard({ locale }: Props) {
                     className={styles.responsiveFixCard}
                     data-ai-generator-responsive-fix
                     data-ai-generator-responsive-fix-state={responsiveFixSnapshot ? 'applied' : 'ready'}
+                    data-ai-generator-responsive-fix-breakpoints="mobile,tablet"
+                    data-ai-generator-responsive-fix-mode="copy_cta_tablet_balance"
                   >
                     <div>
                       <strong>Responsive AI fix</strong>
-                      <p>모바일 프레임에서 긴 문장과 CTA 간격을 먼저 보정합니다.</p>
+                      <p>모바일 긴 문장·CTA 간격과 태블릿 2열 균형을 함께 보정합니다.</p>
                     </div>
                     <div className={styles.responsiveFixActions}>
                       <button
@@ -1795,7 +3010,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
                         onClick={applyResponsiveDraftFix}
                         data-ai-generator-apply-responsive-fix
                       >
-                        모바일 보정 적용
+                        반응형 보정 적용
                       </button>
                       <button
                         type="button"
@@ -1815,6 +3030,10 @@ export default function AiGeneratorWizard({ locale }: Props) {
                     className={styles.designerSuggestionCard}
                     data-ai-generator-designer-suggestions
                     data-ai-generator-designer-suggestion-active={appliedDesignerSuggestionId || 'none'}
+                    data-ai-generator-designer-suggestion-top={designerSuggestions[0]?.id ?? 'none'}
+                    data-ai-generator-designer-suggestion-top-score={designerSuggestions[0]?.score ?? 0}
+                    data-ai-generator-designer-suggestion-top-layout-fit={designerSuggestions[0]?.layoutFit ?? 0}
+                    data-ai-generator-designer-suggestion-top-palette-fit={designerSuggestions[0]?.paletteFit ?? 0}
                   >
                     <div>
                       <strong>Designer polish</strong>
@@ -1832,6 +3051,12 @@ export default function AiGeneratorWizard({ locale }: Props) {
                           }
                           onClick={() => applyDesignerStyleSuggestion(suggestion)}
                           data-ai-generator-designer-suggestion={suggestion.id}
+                          data-ai-generator-designer-suggestion-rank={suggestion.rank}
+                          data-ai-generator-designer-suggestion-score={suggestion.score}
+                          data-ai-generator-designer-suggestion-layout-fit={suggestion.layoutFit}
+                          data-ai-generator-designer-suggestion-palette-fit={suggestion.paletteFit}
+                          data-ai-generator-designer-suggestion-design-pool-profile={suggestion.designPoolProfile}
+                          data-ai-generator-designer-suggestion-design-pool-fit={suggestion.designPoolFit}
                           data-ai-generator-designer-suggestion-selected={
                             appliedDesignerSuggestionId === suggestion.id ? 'true' : 'false'
                           }
@@ -1842,10 +3067,87 @@ export default function AiGeneratorWizard({ locale }: Props) {
                             <i style={{ background: suggestion.palette.accent }} />
                             <i style={{ background: suggestion.palette.background }} />
                           </span>
+                          <span className={styles.designerSuggestionScore}>
+                            <em>#{suggestion.rank}</em>
+                            <em>{suggestion.score}% match</em>
+                          </span>
+                          <span
+                            className={styles.designerSuggestionFitPreview}
+                            data-ai-generator-designer-suggestion-fit-preview={suggestion.id}
+                          >
+                            <i style={{ '--fit': `${suggestion.layoutFit}%` } as CSSProperties} />
+                            <i style={{ '--fit': `${suggestion.paletteFit}%` } as CSSProperties} />
+                            <em>Layout {suggestion.layoutFit}</em>
+                            <em>Palette {suggestion.paletteFit}</em>
+                          </span>
                           <strong>{suggestion.label}</strong>
                           <small>{suggestion.description}</small>
+                          <small>{suggestion.fitPreview}</small>
+                          <span
+                            className={styles.designerDesignPoolMatch}
+                            data-ai-generator-designer-design-pool-match={suggestion.id}
+                            data-ai-generator-designer-design-pool-profile={suggestion.designPoolProfile}
+                            data-ai-generator-designer-design-pool-fit={suggestion.designPoolFit}
+                          >
+                            <strong>{suggestion.designPoolFit}% design-pool</strong>
+                            <small>{suggestion.designPoolProfile}</small>
+                            {suggestion.designPoolSignals.map((signal) => (
+                              <i key={signal}>{signal}</i>
+                            ))}
+                          </span>
+                          <span className={styles.designerSuggestionReasons}>
+                            {suggestion.scoreReasons.map((reason) => (
+                              <i key={reason}>{reason}</i>
+                            ))}
+                          </span>
                         </button>
                       ))}
+                    </div>
+                    <div
+                      className={styles.designerScoreExport}
+                      data-ai-generator-designer-score-export
+                      data-ai-generator-designer-score-export-count={designerSuggestions.length}
+                      data-ai-generator-designer-score-export-top={designerSuggestions[0]?.id ?? 'none'}
+                      data-ai-generator-designer-score-export-payload={designerScoreExportPayload}
+                    >
+                      <div>
+                        <span>Scoring payload</span>
+                        <strong>
+                          {designerSuggestions[0]
+                            ? `${designerSuggestions[0].label} · ${designerSuggestions[0].score}%`
+                            : 'No suggestions'}
+                        </strong>
+                      </div>
+                      <div className={styles.designerScoreExportRows}>
+                        {designerSuggestions.map((suggestion) => (
+                          <span
+                            key={suggestion.id}
+                            data-ai-generator-designer-score-export-row={suggestion.id}
+                            data-ai-generator-designer-score-export-row-rank={suggestion.rank}
+                            data-ai-generator-designer-score-export-row-score={suggestion.score}
+                            data-ai-generator-designer-score-export-row-layout-fit={suggestion.layoutFit}
+                            data-ai-generator-designer-score-export-row-palette-fit={suggestion.paletteFit}
+                          >
+                            <strong>{suggestion.rank}. {suggestion.label}</strong>
+                            <small>{suggestion.score}% · L{suggestion.layoutFit} · P{suggestion.paletteFit}</small>
+                          </span>
+                        ))}
+                      </div>
+                      <div
+                        className={styles.designerServerScore}
+                        data-ai-generator-designer-server-score
+                        data-ai-generator-designer-server-score-status={designerServerScoreStatus}
+                        data-ai-generator-designer-server-score-top={designerServerScoreTop}
+                        data-ai-generator-designer-server-score-count={designerServerScoreCount}
+                        data-ai-generator-designer-server-score-payload={designerServerScorePayload}
+                        data-ai-generator-designer-server-score-match={
+                          designerServerScorePayload === designerScoreExportPayload ? 'true' : 'false'
+                        }
+                      >
+                        <span>Server score check</span>
+                        <strong>{designerServerScoreNotice || 'Waiting for server score'}</strong>
+                        <small>{designerServerScorePayload || designerScoreExportPayload}</small>
+                      </div>
                     </div>
                     <div className={styles.designerSuggestionActions}>
                       <button
@@ -1958,7 +3260,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
                       setDraftSlug(event.target.value);
                       setError('');
                     }}
-                    placeholder="ai-site-draft"
+                    placeholder="영문 소문자·숫자·하이픈 · 예: ai-site-draft (admin, api 등 예약어 불가)"
                     autoCapitalize="none"
                     spellCheck={false}
                   />
@@ -2035,6 +3337,107 @@ export default function AiGeneratorWizard({ locale }: Props) {
                         ))}
                       </div>
                     ) : null}
+                    <div
+                      className={styles.sitemapTreeDiff}
+                      data-ai-generator-sitemap-tree-diff
+                      data-ai-generator-sitemap-tree-new-count={sitemapTreeDiffStats.newPages}
+                      data-ai-generator-sitemap-tree-existing-count={sitemapTreeDiffStats.existingPages}
+                      data-ai-generator-sitemap-tree-navigation-count={sitemapTreeDiffStats.navigationAdds}
+                      data-ai-generator-sitemap-tree-selected-count={sitemapTreeDiffStats.selectedPages}
+                      data-ai-generator-sitemap-tree-hierarchy-count={sitemapTreeDiffStats.nestedPages}
+                    >
+                      <div className={styles.sitemapTreeDiffHead}>
+                        <span>Page tree diff</span>
+                        <strong>{sitePagesLoading ? 'Loading current tree' : `${sitemapTreeDiffStats.newPages} new · ${sitemapTreeDiffStats.existingPages} existing`}</strong>
+                      </div>
+                      <div className={styles.sitemapTreeDiffStats}>
+                        <span>
+                          <strong>{sitemapTreeDiffStats.selectedPages}</strong>
+                          Selected
+                        </span>
+                        <span>
+                          <strong>{sitemapTreeDiffStats.navigationAdds}</strong>
+                          Nav adds
+                        </span>
+                        <span>
+                          <strong>{sitePages.length}</strong>
+                          Current pages
+                        </span>
+                        <span>
+                          <strong>{sitemapTreeDiffStats.nestedPages}</strong>
+                          Nested intents
+                        </span>
+                      </div>
+                      {sitePagesError ? (
+                        <p className={styles.treeDiffError}>{sitePagesError}</p>
+                      ) : null}
+                      <div className={styles.sitemapTreeDiffRows}>
+                        {sitemapTreeDiffRows.map((row) => (
+                          <div
+                            key={row.slug}
+                            data-ai-generator-sitemap-tree-diff-row={row.slug}
+                            data-ai-generator-sitemap-tree-diff-state={row.state}
+                            data-ai-generator-sitemap-tree-depth={row.depth}
+                            data-ai-generator-sitemap-tree-parent={row.parentLabel}
+                            data-ai-generator-sitemap-tree-hierarchy={row.hierarchyPath}
+                            data-ai-generator-sitemap-current-index={row.currentIndex}
+                            data-ai-generator-sitemap-target-index={row.targetIndex}
+                          >
+                            <span>{row.generatedIndex + 1}</span>
+                            <strong>{row.depth > 0 ? row.hierarchyPath : row.title}</strong>
+                            <small>{row.path}</small>
+                            {row.depth > 0 ? <small>Parent: {row.parentLabel}</small> : null}
+                            <em>{formatSitemapTreeDiffState(row.state)}</em>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div
+                      className={styles.sitemapNavigationDiff}
+                      data-ai-generator-sitemap-navigation-diff
+                      data-ai-generator-sitemap-navigation-diff-current-count={sitemapNavigationDiffStats.current}
+                      data-ai-generator-sitemap-navigation-diff-append-count={sitemapNavigationDiffStats.appending}
+                      data-ai-generator-sitemap-navigation-diff-public-count={sitemapNavigationDiffStats.publicAfterPublish}
+                      data-ai-generator-sitemap-navigation-diff-hidden-count={sitemapNavigationDiffStats.hiddenUntilPublish}
+                    >
+                      <div className={styles.sitemapTreeDiffHead}>
+                        <span>Navigation tree diff</span>
+                        <strong>{siteNavigationLoading ? 'Loading Navigation' : `${sitemapNavigationDiffStats.appending} append · ${sitemapNavigationDiffStats.hiddenUntilPublish} hidden`}</strong>
+                      </div>
+                      <div className={styles.sitemapTreeDiffStats}>
+                        <span>
+                          <strong>{sitemapNavigationDiffStats.current}</strong>
+                          Current nav
+                        </span>
+                        <span>
+                          <strong>{sitemapNavigationDiffStats.appending}</strong>
+                          Append
+                        </span>
+                        <span>
+                          <strong>{sitemapNavigationDiffStats.publicAfterPublish}</strong>
+                          Public
+                        </span>
+                      </div>
+                      {siteNavigationError ? (
+                        <p className={styles.treeDiffError}>{siteNavigationError}</p>
+                      ) : null}
+                      <div className={styles.sitemapNavigationDiffRows}>
+                        {sitemapNavigationDiffRows.map((row) => (
+                          <div
+                            key={row.slug}
+                            data-ai-generator-sitemap-navigation-diff-row={row.slug}
+                            data-ai-generator-sitemap-navigation-diff-state={row.state}
+                            data-ai-generator-sitemap-navigation-diff-depth={row.depth}
+                            data-ai-generator-sitemap-navigation-diff-index={row.indexPath}
+                          >
+                            <span>{row.indexPath}</span>
+                            <strong>{row.title}</strong>
+                            <small>{row.path}</small>
+                            <em>{formatNavigationDiffState(row.state)}</em>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
 	                  </div>
 	                ) : null}
 	                {applyScope === 'sitemap' ? (
@@ -2113,6 +3516,120 @@ export default function AiGeneratorWizard({ locale }: Props) {
                   ) : (
                     <p>선택된 생성 대상이 없습니다.</p>
                   )}
+                  <div
+                    className={styles.applySectionDiff}
+                    data-ai-generator-apply-section-diff
+                    data-ai-generator-apply-section-diff-mode="create_draft"
+                    data-ai-generator-apply-section-diff-scope={applyScope}
+                    data-ai-generator-apply-section-diff-page-count={applyReviewPages.length}
+                    data-ai-generator-apply-section-diff-section-count={applySectionDiffStats.sectionCount}
+                    data-ai-generator-apply-section-diff-unique-count={applySectionDiffStats.uniqueSectionCount}
+                  >
+                    <div className={styles.applySectionDiffHead}>
+                      <span>Section transaction diff</span>
+                      <strong>{applySectionDiffStats.sectionCount} inserts · {applySectionDiffStats.uniqueSectionCount} unique</strong>
+                    </div>
+                    <div className={styles.applySectionDiffRows}>
+                      {applySectionDiffRows.slice(0, 8).map((row) => (
+                        <span
+                          key={`${row.pageSlug}-${row.sectionId}-${row.sectionIndex}`}
+                          data-ai-generator-apply-section-diff-row={`${row.pageSlug}:${row.sectionId}:${row.sectionIndex}`}
+                          data-ai-generator-apply-section-diff-page={row.pageSlug}
+                          data-ai-generator-apply-section-diff-page-index={row.pageIndex}
+                          data-ai-generator-apply-section-diff-section={row.sectionId}
+                          data-ai-generator-apply-section-diff-section-index={row.sectionIndex}
+                          data-ai-generator-apply-section-diff-state={row.state}
+                        >
+                          <strong>{row.sectionTitle}</strong>
+                          <small>{displayPlanPath(row.pageSlug)} · {row.sectionId}</small>
+                          <em>Will insert</em>
+                        </span>
+                      ))}
+                      {applySectionDiffRows.length > 8 ? (
+                        <em>+{applySectionDiffRows.length - 8} more inserts</em>
+                      ) : null}
+                    </div>
+                  </div>
+                  <div
+                    className={styles.applyVisualDiff}
+                    data-ai-generator-apply-visual-diff
+                    data-ai-generator-apply-visual-diff-mode="before_after"
+                    data-ai-generator-apply-visual-diff-before="new_draft"
+                    data-ai-generator-apply-visual-diff-after="generated_draft"
+                    data-ai-generator-apply-visual-diff-page-count={applyVisualDiffRows.length}
+                    data-ai-generator-apply-visual-diff-after-section-count={applyVisualDiffSectionCount}
+                  >
+                    <div className={styles.applyVisualDiffHead}>
+                      <span>Visual before/after</span>
+                      <strong>{applyVisualDiffRows.length} pages · {applyVisualDiffSectionCount} sections</strong>
+                    </div>
+                    <div className={styles.applyVisualDiffFrames}>
+                      <span>
+                        <strong>Before</strong>
+                        <small>New draft targets are empty until apply.</small>
+                      </span>
+                      <span>
+                        <strong>After</strong>
+                        <small>Generated sections are inserted as editable canvas blocks.</small>
+                      </span>
+                    </div>
+                    <div className={styles.applyVisualDiffRows}>
+                      {applyVisualDiffRows.slice(0, 4).map((row) => (
+                        <span
+                          key={row.pageSlug}
+                          data-ai-generator-apply-visual-diff-row={row.pageSlug}
+                          data-ai-generator-apply-visual-diff-row-before={row.beforeState}
+                          data-ai-generator-apply-visual-diff-row-after-sections={row.afterSectionCount}
+                        >
+                          <strong>{row.pageTitle}</strong>
+                          <small>{displayPlanPath(row.pageSlug)} · {row.afterSectionSummary}</small>
+                          <em>{row.afterSectionCount} sections</em>
+                        </span>
+                      ))}
+                      {applyVisualDiffRows.length > 4 ? (
+                        <em>+{applyVisualDiffRows.length - 4} more pages</em>
+                      ) : null}
+                    </div>
+                  </div>
+                  <div
+                    className={styles.applyResponsiveReview}
+                    data-ai-generator-apply-responsive-review
+                    data-ai-generator-apply-responsive-review-mode="breakpoint_review"
+                    data-ai-generator-apply-responsive-review-breakpoint="mobile"
+                    data-ai-generator-apply-responsive-review-breakpoints="mobile,tablet"
+                    data-ai-generator-apply-responsive-review-page-count={applyResponsiveReviewRows.length}
+                    data-ai-generator-apply-responsive-review-issue-count={applyResponsiveReviewIssueCount}
+                    data-ai-generator-apply-responsive-review-mobile-issue-count={applyResponsiveReviewMobileIssueCount}
+                    data-ai-generator-apply-responsive-review-tablet-issue-count={applyResponsiveReviewTabletIssueCount}
+                    data-ai-generator-apply-responsive-review-ready-count={applyResponsiveReviewReadyCount}
+                  >
+                    <div className={styles.applyResponsiveReviewHead}>
+                      <span>Responsive breakpoint review</span>
+                      <strong>{applyResponsiveReviewIssueCount} responsive checks</strong>
+                    </div>
+                    <div className={styles.applyResponsiveReviewRows}>
+                      {applyResponsiveReviewRows.slice(0, 4).map((row) => (
+                        <span
+                          key={row.pageSlug}
+                          data-ai-generator-apply-responsive-review-row={row.pageSlug}
+                          data-ai-generator-apply-responsive-review-row-breakpoint={row.breakpoint}
+                          data-ai-generator-apply-responsive-review-row-breakpoints={row.breakpoints}
+                          data-ai-generator-apply-responsive-review-row-issues={row.issueCount}
+                          data-ai-generator-apply-responsive-review-row-mobile-issues={row.mobileIssueCount}
+                          data-ai-generator-apply-responsive-review-row-tablet-issues={row.tabletIssueCount}
+                          data-ai-generator-apply-responsive-review-row-status={row.status}
+                          data-ai-generator-apply-responsive-review-row-primary={row.primaryIssue}
+                        >
+                          <strong>{row.pageTitle}</strong>
+                          <small>{displayPlanPath(row.pageSlug)} · {row.issueSummary}</small>
+                          <em>{row.status === 'ready' ? 'Ready' : `${row.issueCount} checks`}</em>
+                        </span>
+                      ))}
+                      {applyResponsiveReviewRows.length > 4 ? (
+                        <em>+{applyResponsiveReviewRows.length - 4} more pages</em>
+                      ) : null}
+                    </div>
+                  </div>
                   <p>
                     {applyScope === 'sitemap'
                       ? '선택한 slug만 draft로 생성하고, 기존 slug는 서버 검증 후 건너뜁니다.'
@@ -2156,6 +3673,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
                   data-ai-generator-created-page-id={appliedPageId}
                   data-ai-generator-created-page-slug={appliedSlug ?? ''}
                   data-ai-generator-created-page-count={appliedPages.length || 1}
+                  data-ai-generator-created-page-published-count={createdDraftPublishedCount}
                 >
 	                  <p className={styles.successText}>
 	                    새 draft page {appliedPages.length || 1}개 생성됨
@@ -2171,19 +3689,237 @@ export default function AiGeneratorWizard({ locale }: Props) {
 	                    </p>
 	                  ) : null}
 	                  <div className={styles.createdPageList} data-ai-generator-created-page-list>
-                    {(appliedPages.length > 0 ? appliedPages : [{ pageId: appliedPageId, slug: appliedSlug ?? '' }]).map((pageEntry) => (
-                      <a
-                        key={pageEntry.pageId}
-                        href={`/${locale}/admin-builder?pageId=${encodeURIComponent(pageEntry.pageId)}`}
-                        data-ai-generator-created-page-link
-                        data-ai-generator-created-page-link-id={pageEntry.pageId}
-                        data-ai-generator-created-page-link-slug={pageEntry.slug}
-                      >
-                        <strong>{pageEntry.title ?? pageEntry.slug}</strong>
-                        <span>/{pageEntry.slug}</span>
-                      </a>
-                    ))}
+                    {createdDraftPageEntries.map((pageEntry) => {
+                      const isPublished = publishedCreatedPageIdSet.has(pageEntry.pageId);
+                      const preflight = publishPreflightByPageId[pageEntry.pageId];
+                      const scheduledJob = scheduledPublishByPageId[pageEntry.pageId];
+                      const scheduledInputValue = scheduledPublishInputByPageId[pageEntry.pageId] ?? defaultScheduledPublishInput();
+                      const preflightStatus = preflight?.status ?? 'idle';
+                      const hasPublishWarnings = (preflight?.warningCount ?? 0) > 0;
+                      const publishWarningsAcknowledged = !!publishWarningAcknowledgedByPageId[pageEntry.pageId];
+                      const warningOverrideStatus = hasPublishWarnings
+                        ? publishWarningsAcknowledged
+                          ? 'acknowledged'
+                          : 'required'
+                        : 'not_required';
+                      const normalizedCreatedSlug = normalizePlanSlug(pageEntry.slug);
+                      const createdPath = normalizedCreatedSlug === '/'
+                        ? `/${locale}`
+                        : `/${locale}/${normalizedCreatedSlug}`;
+                      const navigationTransactionStatus = navigationAddedSlugSet.has(normalizedCreatedSlug)
+                        ? isPublished
+                          ? 'public_after_publish'
+                          : 'queued_hidden_until_publish'
+                        : 'not_requested';
+                      const transactionStatus = isPublished
+                        ? 'published'
+                        : hasPublishWarnings && !publishWarningsAcknowledged
+                          ? 'warning_review'
+                        : preflightStatus === 'blocked'
+                          ? 'blocked'
+                          : preflightStatus === 'checking'
+                            ? 'checking'
+                            : 'ready';
+                      const publishDisabled = isPublished
+                        || publishingPageId === pageEntry.pageId
+                        || preflightStatus === 'checking'
+                        || preflightStatus === 'blocked'
+                        || (hasPublishWarnings && !publishWarningsAcknowledged);
+                      const scheduleTransactionStatus = isPublished
+                        ? 'published'
+                        : cancellingScheduledPageId === pageEntry.pageId
+                          ? 'cancelling'
+                        : hasPublishWarnings && !publishWarningsAcknowledged
+                          ? 'warning_review'
+                        : schedulingPageId === pageEntry.pageId
+                          ? 'scheduling'
+                          : scheduledJob?.status === 'scheduled'
+                            ? 'scheduled'
+                            : preflightStatus === 'blocked'
+                              ? 'blocked'
+                              : preflightStatus === 'checking'
+                                ? 'checking'
+                                : 'ready';
+                      const scheduleAction = scheduledJob?.status === 'scheduled' ? 'cancel' : 'schedule';
+                      const scheduleDisabled = isPublished
+                        || schedulingPageId === pageEntry.pageId
+                        || cancellingScheduledPageId === pageEntry.pageId
+                        || (scheduleAction === 'schedule' && (
+                          preflightStatus === 'checking'
+                          || preflightStatus === 'blocked'
+                          || (hasPublishWarnings && !publishWarningsAcknowledged)
+                        ));
+                      return (
+                        <div
+                          key={pageEntry.pageId}
+                          className={styles.createdPagePublishRow}
+                          data-ai-generator-created-page-publish-control
+                          data-ai-generator-created-page-publish-status={isPublished ? 'published' : 'draft'}
+                          data-ai-generator-created-page-publish-id={pageEntry.pageId}
+                          data-ai-generator-created-page-publish-slug={pageEntry.slug}
+                        >
+                          <a
+                            href={`/${locale}/admin-builder?pageId=${encodeURIComponent(pageEntry.pageId)}`}
+                            data-ai-generator-created-page-link
+                            data-ai-generator-created-page-link-id={pageEntry.pageId}
+                            data-ai-generator-created-page-link-slug={pageEntry.slug}
+                          >
+                            <strong>{pageEntry.title ?? pageEntry.slug}</strong>
+                            <span>/{pageEntry.slug}</span>
+                          </a>
+                          <span
+                            className={styles.createdPagePreflight}
+                            data-ai-generator-created-page-preflight
+                            data-ai-generator-created-page-preflight-status={preflightStatus}
+                            data-ai-generator-created-page-preflight-blockers={preflight?.blockerCount ?? 0}
+                            data-ai-generator-created-page-preflight-warnings={preflight?.warningCount ?? 0}
+                            data-ai-generator-created-page-preflight-infos={preflight?.infoCount ?? 0}
+                          >
+                            <strong>Publish preflight</strong>
+                            <em>{formatPublishPreflight(preflight)}</em>
+                            {preflight?.firstIssue || preflight?.message ? (
+                              <small>{preflight.firstIssue ?? preflight.message}</small>
+                            ) : (
+                              <small>SEO, links, images, forms, data checks</small>
+                            )}
+                          </span>
+                          <label
+                            className={styles.createdPageWarningOverride}
+                            data-ai-generator-created-page-warning-override
+                            data-ai-generator-created-page-warning-override-status={warningOverrideStatus}
+                            data-ai-generator-created-page-warning-override-warnings={preflight?.warningCount ?? 0}
+                          >
+                            <input
+                              type="checkbox"
+                              checked={publishWarningsAcknowledged}
+                              disabled={!hasPublishWarnings || isPublished}
+                              onChange={(event) => {
+                                const checked = event.currentTarget.checked;
+                                setPublishWarningAcknowledgedByPageId((current) => ({
+                                  ...current,
+                                  [pageEntry.pageId]: checked,
+                                }));
+                              }}
+                              data-ai-generator-created-page-warning-override-toggle={pageEntry.pageId}
+                            />
+                            <span>
+                              <strong>Warning override</strong>
+                              <em>{hasPublishWarnings
+                                ? publishWarningsAcknowledged
+                                  ? 'Warnings acknowledged'
+                                  : `${preflight?.warningCount ?? 0} warnings need review`
+                                : 'No warnings'}</em>
+                            </span>
+                          </label>
+                          <button
+                            type="button"
+                            className={styles.secondaryButton}
+                            disabled={publishDisabled}
+                            onClick={() => { void publishCreatedPage(pageEntry); }}
+                            data-ai-generator-created-page-publish={pageEntry.pageId}
+                          >
+                            {isPublished
+                              ? 'Published'
+                              : publishingPageId === pageEntry.pageId
+                                ? 'Publishing...'
+                                : 'Publish'}
+                          </button>
+                          <label className={styles.createdPageScheduleInput}>
+                            <span>Schedule time</span>
+                            <input
+                              type="datetime-local"
+                              value={scheduledInputValue}
+                              disabled={isPublished || schedulingPageId === pageEntry.pageId || scheduledJob?.status === 'scheduled'}
+                              onChange={(event) => {
+                                const nextValue = event.currentTarget.value;
+                                setScheduledPublishInputByPageId((current) => ({
+                                  ...current,
+                                  [pageEntry.pageId]: nextValue,
+                                }));
+                              }}
+                              data-ai-generator-created-page-schedule-input={pageEntry.pageId}
+                            />
+                          </label>
+                          <button
+                            type="button"
+                            className={styles.secondaryButton}
+                            disabled={scheduleDisabled}
+                            onClick={() => {
+                              if (scheduleAction === 'cancel') {
+                                void cancelCreatedPageSchedule(pageEntry);
+                              } else {
+                                void scheduleCreatedPagePublish(pageEntry);
+                              }
+                            }}
+                            data-ai-generator-created-page-schedule={pageEntry.pageId}
+                            data-ai-generator-created-page-schedule-action={scheduleAction}
+                          >
+                            {isPublished
+                              ? 'Published'
+                              : cancellingScheduledPageId === pageEntry.pageId
+                                ? 'Cancelling...'
+                              : scheduleAction === 'cancel'
+                                ? 'Cancel schedule'
+                                : schedulingPageId === pageEntry.pageId
+                                  ? 'Scheduling...'
+                                  : 'Schedule +24h'}
+                          </button>
+                          <span
+                            className={styles.createdPageTransaction}
+                            data-ai-generator-created-page-publish-transaction
+                            data-ai-generator-created-page-publish-transaction-status={transactionStatus}
+                            data-ai-generator-created-page-publish-transaction-mode="immediate"
+                            data-ai-generator-created-page-publish-transaction-navigation={navigationTransactionStatus}
+                            data-ai-generator-created-page-publish-transaction-route={createdPath}
+                          >
+                            <strong>Immediate publish transaction</strong>
+                            <small>
+                              <em>{createdPath}</em>
+                              <em>{navigationTransactionStatus === 'public_after_publish'
+                                ? 'Navigation public'
+                                : navigationTransactionStatus === 'queued_hidden_until_publish'
+                                  ? 'Navigation hidden until publish'
+                                  : 'Navigation unchanged'}</em>
+                              <em>{preflight?.blockerCount ?? 0} blockers</em>
+                              <em>{preflight?.warningCount ?? 0} warnings</em>
+                            </small>
+                          </span>
+                          <span
+                            className={`${styles.createdPageTransaction} ${styles.createdPageScheduleTransaction}`}
+                            data-ai-generator-created-page-schedule-transaction
+                            data-ai-generator-created-page-schedule-status={scheduleTransactionStatus}
+                            data-ai-generator-created-page-schedule-mode="scheduled"
+                            data-ai-generator-created-page-schedule-at={scheduledJob?.scheduledAt ?? ''}
+                            data-ai-generator-created-page-schedule-route={createdPath}
+                          >
+                            <strong>Scheduled publish transaction</strong>
+                            <small>
+                              <em>{createdPath}</em>
+                              <em>{scheduledJob?.status === 'scheduled'
+                                ? formatScheduledPublishTime(scheduledJob.scheduledAt)
+                                : isPublished
+                                  ? 'Already published'
+                                  : scheduleTransactionStatus === 'blocked'
+                                    ? 'Preflight blocked'
+                                    : 'Ready for +24h schedule'}</em>
+                              <em>{preflight?.blockerCount ?? 0} blockers</em>
+                              <em>{preflight?.warningCount ?? 0} warnings</em>
+                            </small>
+                          </span>
+                        </div>
+                      );
+                    })}
                   </div>
+                  {publishNotice ? (
+                    <p className={styles.successText} data-ai-generator-publish-notice>
+                      {publishNotice}
+                    </p>
+                  ) : null}
+                  {publishError ? (
+                    <p className={styles.errorText} data-ai-generator-publish-error>
+                      {publishError}
+                    </p>
+                  ) : null}
                   <div className={styles.successActions}>
                     <a href={`/${locale}/admin-builder?pageId=${encodeURIComponent(appliedPageId)}`}>
                       첫 페이지 열기
@@ -2217,6 +3953,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
 	                    const isCreated = appliedPageSlugs.has(planSlug);
 	                    const isNavigationAdded = navigationAddedSlugSet.has(planSlug);
 	                    const isHomePage = planSlug === '/';
+                    const isExistingPage = sitePageBySlug.has(planSlug);
                     const isSelected = selectedSitemapPageSlugSet.has(planSlug);
                     const status = isCreated
                       ? 'created'
@@ -2226,7 +3963,9 @@ export default function AiGeneratorWizard({ locale }: Props) {
                           ? 'home'
                           : !isSelected
                             ? 'not_selected'
-                          : 'planned';
+                            : isExistingPage
+                              ? 'existing_page'
+                              : 'planned';
                     const statusClassName = [
                       styles.pageStatus,
                       isCreated

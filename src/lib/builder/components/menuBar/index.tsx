@@ -1,6 +1,13 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderMenuBarCanvasNode } from '@/lib/builder/canvas/types';
+import { normalizeLocale } from '@/lib/locales';
+import {
+  getLayoutNavigationWidgetsCopy,
+  localizedMenuItems,
+  MENU_BAR_LEGACY_DEFAULT_ITEMS,
+} from '../layout-navigation-widgets-copy';
 import MenuBarRender from './MenuBarRender';
+import styles from './MenuBarInspector.module.css';
 
 function itemsToText(items: BuilderMenuBarCanvasNode['content']['items']): string {
   return items.map((it) => `${it.label} | ${it.href}`).join('\n');
@@ -20,66 +27,72 @@ function parseItems(value: string): BuilderMenuBarCanvasNode['content']['items']
 
 function MenuBarInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const menuNode = node as BuilderMenuBarCanvasNode;
   const c = menuNode.content;
+  const copy = getLayoutNavigationWidgetsCopy(normalizeLocale(locale)).menuBar;
+  const displayItems = localizedMenuItems(c.items, copy.defaultItems);
   return (
-    <>
-      <label>
-        <span>방향</span>
+    <div className={styles.root} data-builder-menu-bar-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.orientation}</span>
         <select
+          className={styles.control}
           value={c.orientation}
           disabled={disabled}
           onChange={(event) => onUpdate({ orientation: event.target.value as BuilderMenuBarCanvasNode['content']['orientation'] })}
         >
-          <option value="horizontal">Horizontal</option>
-          <option value="vertical">Vertical</option>
+          <option value="horizontal">{copy.inspector.orientationOptions.horizontal}</option>
+          <option value="vertical">{copy.inspector.orientationOptions.vertical}</option>
         </select>
       </label>
-      <label>
-        <span>스타일</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.style}</span>
         <select
+          className={styles.control}
           value={c.variant}
           disabled={disabled}
           onChange={(event) => onUpdate({ variant: event.target.value as BuilderMenuBarCanvasNode['content']['variant'] })}
         >
-          <option value="plain">Plain</option>
-          <option value="pill">Pill</option>
-          <option value="dropdown">Dropdown</option>
-          <option value="mega">Mega menu</option>
+          <option value="plain">{copy.inspector.variantOptions.plain}</option>
+          <option value="pill">{copy.inspector.variantOptions.pill}</option>
+          <option value="dropdown">{copy.inspector.variantOptions.dropdown}</option>
+          <option value="mega">{copy.inspector.variantOptions.mega}</option>
         </select>
       </label>
-      <label>
-        <span>활성 href</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.activeHref}</span>
         <input
+          className={styles.control}
           type="text"
           value={c.activeHref}
           disabled={disabled}
           onChange={(event) => onUpdate({ activeHref: event.target.value })}
         />
       </label>
-      <label>
-        <span>메뉴 항목 (label | href)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.items}</span>
         <textarea
+          className={`${styles.control} ${styles.textarea}`}
           rows={5}
-          style={{ fontFamily: 'inherit', resize: 'vertical' }}
-          value={itemsToText(c.items)}
+          value={itemsToText(displayItems)}
           disabled={disabled}
           onChange={(event) => onUpdate({ items: parseItems(event.target.value) })}
         />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={c.showMobileHamburger}
           disabled={disabled}
           onChange={(event) => onUpdate({ showMobileHamburger: event.target.checked })}
         />
-        <span>모바일 햄버거</span>
+        <span>{copy.inspector.mobileHamburger}</span>
       </label>
-    </>
+    </div>
   );
 }
 
@@ -89,12 +102,7 @@ export default defineComponent({
   category: 'advanced',
   icon: '☰',
   defaultContent: {
-    items: [
-      { label: '서비스', href: '/ko/services' },
-      { label: '변호사', href: '/ko/lawyers' },
-      { label: '소식', href: '/ko/insights' },
-      { label: '문의', href: '/ko/contact' },
-    ],
+    items: MENU_BAR_LEGACY_DEFAULT_ITEMS.map((item) => ({ ...item })),
     orientation: 'horizontal' as const,
     variant: 'plain' as const,
     activeHref: '',

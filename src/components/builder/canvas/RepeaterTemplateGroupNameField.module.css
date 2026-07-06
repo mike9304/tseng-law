@@ -1,0 +1,32 @@
+.repeaterTemplateGroupNameForm {
+  display: flex;
+  width: min(196px, 100%);
+  min-width: 0;
+}
+
+.repeaterTemplateGroupNameInput {
+  width: 100%;
+  min-width: 0;
+  height: 24px;
+  padding: 0 7px;
+  border: 1px solid color-mix(in srgb, var(--insp-accent, #2563eb) 28%, transparent);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--editor-panel, #fff) 98%, transparent);
+  color: var(--editor-fg-primary, #0f172a);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+  outline: none;
+  pointer-events: auto;
+}
+
+.repeaterTemplateGroupNameInput:focus {
+  border-color: color-mix(in srgb, var(--insp-accent, #2563eb) 56%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--insp-accent, #2563eb) 16%, transparent);
+}
+
+.repeaterTemplateGroupNameInput::placeholder {
+  color: var(--editor-fg-muted, #64748b);
+  font-weight: 750;
+}

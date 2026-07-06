@@ -7,12 +7,17 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
-import { normalizeLocale } from '@/lib/locales';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
   deleteRedirect,
   updateRedirect,
 } from '@/lib/builder/site/redirects';
+import { getRedirectValidationErrorPayload } from '@/lib/builder/site/redirect-validation-payload';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -29,9 +34,25 @@ const redirectPatchSchema = z
   })
   .strict();
 
-function validationErrorResponse(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra: Record<string, unknown> = {},
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...extra },
+    { status },
+  );
+}
+
+function validationErrorResponse(locale: Locale, error: ZodError): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      ...getBuilderSiteApiErrorPayload(locale, 'validation_error'),
+      issues: error.flatten(),
+    },
     { status: 400 },
   );
 }
@@ -43,33 +64,39 @@ export async function PATCH(
   const auth = await guardMutation(request, { permission: 'edit-seo' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
   let raw: unknown;
   try {
     raw = await request.json();
   } catch {
-    return NextResponse.json({ ok: false, error: 'Invalid JSON body' }, { status: 400 });
+    return errorResponse(locale, 'invalid_json', 400);
   }
 
   let payload: z.infer<typeof redirectPatchSchema>;
   try {
     payload = redirectPatchSchema.parse(raw);
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
     throw error;
   }
 
-  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const result = await updateRedirect('default', locale, params.id, payload);
-  if ('notFound' in result) {
-    return NextResponse.json({ ok: false, error: 'Redirect not found' }, { status: 404 });
+  try {
+    const result = await updateRedirect('default', locale, params.id, payload);
+    if ('notFound' in result) {
+      return errorResponse(locale, 'redirect_not_found', 404);
+    }
+    if ('error' in result) {
+      return errorResponse(
+        locale,
+        'redirect_rule_invalid',
+        400,
+        getRedirectValidationErrorPayload(result.error),
+      );
+    }
+    return NextResponse.json({ ok: true, redirect: result.redirect });
+  } catch {
+    return errorResponse(locale, 'redirect_save_failed', 500);
   }
-  if ('error' in result) {
-    return NextResponse.json(
-      { ok: false, error: result.error.message, field: result.error.field },
-      { status: 400 },
-    );
-  }
-  return NextResponse.json({ ok: true, redirect: result.redirect });
 }
 
 export async function DELETE(
@@ -80,9 +107,13 @@ export async function DELETE(
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const removed = await deleteRedirect('default', locale, params.id);
-  if (!removed) {
-    return NextResponse.json({ ok: false, error: 'Redirect not found' }, { status: 404 });
+  try {
+    const removed = await deleteRedirect('default', locale, params.id);
+    if (!removed) {
+      return errorResponse(locale, 'redirect_not_found', 404);
+    }
+    return NextResponse.json({ ok: true });
+  } catch {
+    return errorResponse(locale, 'redirect_delete_failed', 500);
   }
-  return NextResponse.json({ ok: true });
 }

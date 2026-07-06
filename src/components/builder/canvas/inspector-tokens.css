@@ -56,8 +56,9 @@
 
 .insp-row {
   display: grid;
-  grid-template-columns: minmax(72px, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   align-items: center;
+  min-width: 0;
   min-height: 34px;
   gap: 4px 12px;
   padding: 0 4px;
@@ -418,7 +419,7 @@
 }
 
 .insp-repeater-record-compare-row span {
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -449,6 +450,43 @@
   color: #64748b;
   font-size: 10px;
   font-weight: 750;
+}
+
+.insp-repeater-record-compare-fields {
+  grid-column: 2;
+  display: grid;
+  min-width: 0;
+  gap: 0.25rem;
+  padding-top: 0.15rem;
+}
+
+.insp-repeater-record-compare-fields div {
+  display: grid;
+  grid-template-columns: minmax(54px, 0.52fr) minmax(0, 1fr);
+  min-width: 0;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.insp-repeater-record-compare-fields em,
+.insp-repeater-record-compare-fields b {
+  min-width: 0;
+  overflow: hidden;
+  font-size: 9px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.insp-repeater-record-compare-fields em {
+  color: #64748b;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.insp-repeater-record-compare-fields b {
+  color: var(--insp-input-fg);
+  font-weight: 850;
 }
 
 .insp-action-button {
@@ -486,15 +524,23 @@
 .insp-swatch-row {
   display: inline-flex;
   align-items: stretch;
-  height: 28px;
+  height: 30px;
+  flex: 0 0 auto;
+  min-width: 96px;
+  max-width: 100%;
   overflow: hidden;
   border: 1px solid var(--insp-input-border);
   border-radius: 8px;
   background: var(--insp-input-bg);
 }
 
+.insp-number-stepper {
+  width: 96px;
+}
+
 .insp-number-stepper button {
-  width: 24px;
+  flex: 0 0 28px;
+  width: 28px;
   border: 0;
   background: transparent;
   color: #64748b;
@@ -505,7 +551,7 @@
 
 .insp-number-stepper input {
   flex: 1;
-  min-width: 0;
+  min-width: 28px;
   border: 0;
   background: transparent;
   color: var(--insp-input-fg);
@@ -519,7 +565,7 @@
 .insp-number-stepper > span {
   display: inline-flex;
   align-items: center;
-  padding: 0 6px;
+  padding: 0 5px;
   border-left: 1px solid var(--insp-input-border);
   color: var(--insp-label);
   font-size: 10px;
@@ -589,16 +635,20 @@
 .insp-slider-row {
   display: inline-flex;
   width: 100%;
+  min-width: 0;
   align-items: center;
   gap: 8px;
 }
 
 .insp-slider-row input {
   flex: 1;
+  width: 100%;
+  min-width: 0;
   accent-color: var(--insp-accent);
 }
 
 .insp-slider-row > span {
+  flex: 0 0 auto;
   min-width: 38px;
   color: var(--insp-input-fg);
   font-size: 11px;
@@ -614,8 +664,8 @@
 
 .insp-toggle-row {
   position: relative;
-  width: 36px;
-  height: 20px;
+  width: 42px;
+  height: 24px;
   padding: 0;
   border: 1px solid var(--insp-input-border);
   border-radius: 999px;
@@ -631,8 +681,8 @@
   position: absolute;
   top: 1px;
   left: 1px;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.18);
@@ -640,7 +690,7 @@
 }
 
 .insp-toggle-row[data-checked='true'] > span {
-  left: 17px;
+  left: 19px;
 }
 
 .insp-advanced-disclosure {

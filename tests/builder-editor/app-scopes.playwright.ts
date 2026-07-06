@@ -55,10 +55,9 @@ test('installed app scope gate allows declared CMS read access and blocks missin
       { headers: mutationHeaders(`app-scope-deny-scope-${token}`) },
     );
     expect(deniedScopeResponse.status()).toBe(403);
-    await expect(deniedScopeResponse.json()).resolves.toMatchObject({
-      ok: false,
-      error: 'app_scope_not_granted',
-    });
+    const deniedScopePayload = await deniedScopeResponse.json() as { ok?: boolean; error?: string; errorCode?: string };
+    expect(deniedScopePayload.ok).toBe(false);
+    expect(deniedScopePayload.errorCode ?? deniedScopePayload.error).toBe('app_scope_not_granted');
 
     await disableApp(page.request, CMS_APP_ID, `app-scope-disable-${token}`);
     const disabledResponse = await page.request.get(
@@ -66,10 +65,9 @@ test('installed app scope gate allows declared CMS read access and blocks missin
       { headers: mutationHeaders(`app-scope-deny-disabled-${token}`) },
     );
     expect(disabledResponse.status()).toBe(403);
-    await expect(disabledResponse.json()).resolves.toMatchObject({
-      ok: false,
-      error: 'app_disabled',
-    });
+    const disabledPayload = await disabledResponse.json() as { ok?: boolean; error?: string; errorCode?: string };
+    expect(disabledPayload.ok).toBe(false);
+    expect(disabledPayload.errorCode ?? disabledPayload.error).toBe('app_disabled');
   } finally {
     await uninstallIfPresent(page.request, CMS_APP_ID, `app-scope-clean-cms-after-${token}`);
     await uninstallIfPresent(page.request, NO_CMS_APP_ID, `app-scope-clean-no-cms-after-${token}`);

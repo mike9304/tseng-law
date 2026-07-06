@@ -17,26 +17,16 @@ const STATUS_EMOJIS = {
   black: '⚫',
 };
 
-/**
- * Parse the WIX-FULL-PRODUCT-CHECKPOINTS.md markdown into a structured list of
- * F-layer checkpoint rows. Each row has the shape
- *   { id, area, checkpoint, status, note }
- * where status is one of 'green' | 'yellow' | 'red' | 'black' | null.
- *
- * The parser also tracks the current "## M### ..." milestone header so the
- * report can group rows; the milestone is attached as a non-public extra field
- * `_section` on the returned rows for the script's convenience.
- */
 function parseCheckpointStatuses(markdown) {
   const lines = markdown.split(/\r?\n/);
   const rows = [];
   let currentSection = null;
   let lastRow = null;
+  let statusCellIndex = null;
 
   const rowPattern = /^\|\s*(F\d{1,3})\s*\|/;
   const sectionPattern = /^##\s+(.+?)\s*$/;
   const separatorPattern = /^\|\s*-{2,}/;
-  const headerPattern = /^\|\s*ID\s*\|/i;
 
   for (const rawLine of lines) {
     const line = rawLine.trimEnd();
@@ -45,10 +35,18 @@ function parseCheckpointStatuses(markdown) {
     if (sectionMatch) {
       currentSection = sectionMatch[1].trim();
       lastRow = null;
+      statusCellIndex = null;
       continue;
     }
 
-    if (separatorPattern.test(line) || headerPattern.test(line)) {
+    const headerStatusCellIndex = parseHeaderStatusCellIndex(line);
+    if (headerStatusCellIndex !== null) {
+      statusCellIndex = headerStatusCellIndex;
+      lastRow = null;
+      continue;
+    }
+
+    if (separatorPattern.test(line)) {
       lastRow = null;
       continue;
     }
@@ -65,20 +63,30 @@ function parseCheckpointStatuses(markdown) {
     }
 
     const cells = splitMarkdownRow(line);
-    if (cells.length < 5) {
+    if (cells.length < 4) {
       lastRow = null;
       continue;
     }
 
-    const [idCell, areaCell, checkpointCell, _doneWhenCell, statusCell] = cells;
+    const activeStatusCellIndex = statusCellIndex ?? fallbackStatusCellIndex(cells.length);
+    if (activeStatusCellIndex >= cells.length) {
+      lastRow = null;
+      continue;
+    }
+
+    const idCell = cells[0] || '';
+    const areaCell = cells[1] || '';
+    const checkpointCell = cells[2] || '';
+    const statusCell = cells[activeStatusCellIndex] || '';
     const statusInfo = extractStatus(statusCell);
+    const noteTail = cells.slice(activeStatusCellIndex + 1).join(' | ').trim();
 
     const row = {
       id: idCell.trim(),
       area: areaCell.trim(),
       checkpoint: checkpointCell.trim(),
       status: statusInfo.status,
-      note: statusInfo.note,
+      note: joinNotes(statusInfo.note, noteTail),
       _section: currentSection,
     };
 
@@ -87,6 +95,21 @@ function parseCheckpointStatuses(markdown) {
   }
 
   return rows;
+}
+
+function parseHeaderStatusCellIndex(line) {
+  if (!line.startsWith('|')) return null;
+
+  const cells = splitMarkdownRow(line).map((cell) => cell.trim().toLowerCase());
+  const firstCell = cells[0];
+  if (firstCell !== 'id' && firstCell !== '#') return null;
+
+  const statusIndex = cells.findIndex((cell) => cell === 'status' || cell === '상태');
+  return statusIndex === -1 ? null : statusIndex;
+}
+
+function fallbackStatusCellIndex(cellCount) {
+  return cellCount >= 5 ? 4 : 3;
 }
 
 function splitMarkdownRow(line) {
@@ -102,6 +125,7 @@ function extractStatus(cell) {
   const trimmed = cell.trim();
   const emojiOrder = [
     ['🟢', 'green'],
+    ['✅', 'green'],
     ['🟡', 'yellow'],
     ['🔴', 'red'],
     ['⚫', 'black'],
@@ -116,6 +140,12 @@ function extractStatus(cell) {
   }
 
   return { status: null, note: trimmed };
+}
+
+function joinNotes(first, second) {
+  if (!first) return second;
+  if (!second) return first;
+  return `${first} ${second}`;
 }
 
 function tallyByStatus(rows) {
@@ -205,6 +235,16 @@ function buildReport({ rows, counts, gatePassed, generatedAt }) {
       if (row.note) {
         lines.push(`  - Note: ${truncate(row.note, 400)}`);
       }
+    }
+    lines.push('');
+  }
+
+  const unknownRows = rows.filter((row) => row.status === null);
+  if (unknownRows.length > 0) {
+    lines.push(`## Unknown Status (${unknownRows.length})`);
+    lines.push('');
+    for (const row of unknownRows) {
+      lines.push(`- **${row.id}** (${row._section || ''} / ${row.area}) — ${truncate(row.note || row.checkpoint, 260)}`);
     }
     lines.push('');
   }

@@ -1,6 +1,7 @@
 import { defineComponent } from '../define';
 import FormInputElement from './Element';
 import FormInputInspector from './Inspector';
+import { FORM_INPUT_KO_DEFAULTS } from '../form/form-controls-copy';
 
 export default defineComponent({
   kind: 'form-input',
@@ -9,7 +10,7 @@ export default defineComponent({
   icon: '⌨',
   defaultContent: {
     name: 'field-1',
-    label: '필드',
+    label: FORM_INPUT_KO_DEFAULTS.label,
     placeholder: '',
     type: 'text' as const,
     required: false,

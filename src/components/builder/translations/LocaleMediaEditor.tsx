@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import type { Locale } from '@/lib/locales';
+import { getTranslationCopy } from './translation-copy';
 
 export interface LocaleMediaEditorRow {
   nodeId: string;
@@ -34,6 +35,7 @@ export default function LocaleMediaEditor({
   targetLocale,
   rows,
 }: Props) {
+  const copy = getTranslationCopy(sourceLocale);
   const [state, setState] = useState<RowState>(() => {
     const seeded: RowState = {};
     for (const row of rows) {
@@ -71,12 +73,12 @@ export default function LocaleMediaEditor({
         | { ok?: boolean; url?: string; error?: string }
         | null;
       if (!response.ok || !body?.ok || typeof body.url !== 'string') {
-        setError(body?.error ?? `Upload failed (${response.status})`);
+        setError(body?.error ?? copy.editorUploadFailed);
         return;
       }
       updateRow(nodeId, { src: body.url });
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Upload failed');
+      setError(err instanceof Error ? err.message : copy.editorUploadFailed);
     } finally {
       setUploadingNodeId(null);
     }
@@ -97,7 +99,7 @@ export default function LocaleMediaEditor({
         if (Object.keys(next).length > 0) imageOverrides[row.nodeId] = next;
       }
       if (Object.keys(imageOverrides).length === 0) {
-        setNotice('Nothing to save.');
+        setNotice(copy.editorNothingToSave);
         return;
       }
       const response = await fetch('/api/builder/translations/edit', {
@@ -113,13 +115,13 @@ export default function LocaleMediaEditor({
       });
       const body = (await response.json().catch(() => null)) as SaveResponse | null;
       if (!response.ok || !body?.ok) {
-        setError(body?.error ?? `Save failed (${response.status})`);
+        setError(body?.error ?? `${copy.editorSaveFailed} (${response.status})`);
         return;
       }
       const count = body.imageOverrides?.appliedCount ?? 0;
-      setNotice(`Saved ${count} image override${count === 1 ? '' : 's'}.`);
+      setNotice(copy.editorSavedImageOverrides(targetLocale, count));
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Save failed');
+      setError(err instanceof Error ? err.message : copy.editorSaveFailed);
     } finally {
       setSaving(false);
     }
@@ -128,22 +130,28 @@ export default function LocaleMediaEditor({
   if (rows.length === 0) {
     return (
       <section style={sectionStyle}>
-        <h2 style={sectionHeading}>Per-language images</h2>
+        <h2 style={sectionHeading}>{copy.editorPerLanguageImages}</h2>
         <p style={{ fontSize: 13, color: '#64748b' }}>
-          No image nodes on this page.
+          {copy.editorNoImageNodes}
         </p>
       </section>
     );
   }
 
   return (
-    <section style={sectionStyle}>
+    <section style={sectionStyle} data-locale-media-editor="true">
       <header style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-        <h2 style={{ ...sectionHeading, margin: 0 }}>
-          Per-language images ({rows.length})
-        </h2>
-        <button type="button" onClick={saveAll} disabled={saving} style={btnPrimary}>
-          {saving ? 'Saving…' : 'Save image overrides'}
+          <h2 style={{ ...sectionHeading, margin: 0 }}>
+            {copy.editorPerLanguageImages} ({rows.length})
+          </h2>
+        <button
+          type="button"
+          onClick={saveAll}
+          disabled={saving}
+          style={btnPrimary}
+          data-locale-media-save="true"
+        >
+          {saving ? copy.editorSavingImageOverrides : copy.editorSaveImageOverrides}
         </button>
         {notice && <span style={{ fontSize: 12, color: '#166534' }}>{notice}</span>}
         {error && <span style={{ fontSize: 12, color: '#991b1b' }}>{error}</span>}
@@ -165,9 +173,10 @@ export default function LocaleMediaEditor({
                 gridTemplateColumns: '160px 1fr',
                 gap: 12,
               }}
+              data-locale-media-row={row.nodeId}
             >
               <div>
-                <div style={labelText}>Preview ({targetLocale})</div>
+                <div style={labelText}>{copy.editorPreview(targetLocale)}</div>
                 {previewSrc ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -199,18 +208,19 @@ export default function LocaleMediaEditor({
                   <code>{row.nodeId}</code>
                 </div>
                 <label style={labelStyle}>
-                  <span style={labelText}>Source src</span>
+                  <span style={labelText}>{copy.editorSourceSrc}</span>
                   <input
                     type="text"
                     value={row.sourceSrc}
                     readOnly
                     style={inputReadOnly}
+                    data-locale-media-source-src={row.nodeId}
                   />
                 </label>
                 <label style={labelStyle}>
-                  <span style={labelText}>
-                    Override src ({targetLocale})
-                  </span>
+                    <span style={labelText}>
+                      {copy.editorOverrideSrc(targetLocale)}
+                    </span>
                   <input
                     type="text"
                     value={current.src}
@@ -219,10 +229,11 @@ export default function LocaleMediaEditor({
                       updateRow(row.nodeId, { src: event.target.value })
                     }
                     style={inputStyle}
+                    data-locale-media-override-src={row.nodeId}
                   />
                 </label>
                 <label style={labelStyle}>
-                  <span style={labelText}>Upload replacement</span>
+                  <span style={labelText}>{copy.editorUploadReplacement}</span>
                   <input
                     type="file"
                     accept="image/*"
@@ -236,18 +247,19 @@ export default function LocaleMediaEditor({
                   />
                 </label>
                 <label style={labelStyle}>
-                  <span style={labelText}>Source alt</span>
+                  <span style={labelText}>{copy.editorSourceAlt}</span>
                   <input
                     type="text"
                     value={row.sourceAlt}
                     readOnly
                     style={inputReadOnly}
+                    data-locale-media-source-alt={row.nodeId}
                   />
                 </label>
                 <label style={labelStyle}>
-                  <span style={labelText}>
-                    Override alt ({targetLocale})
-                  </span>
+                    <span style={labelText}>
+                      {copy.editorOverrideAlt(targetLocale)}
+                    </span>
                   <input
                     type="text"
                     value={current.alt}
@@ -256,6 +268,7 @@ export default function LocaleMediaEditor({
                       updateRow(row.nodeId, { alt: event.target.value })
                     }
                     style={inputStyle}
+                    data-locale-media-override-alt={row.nodeId}
                   />
                 </label>
               </div>

@@ -1,5 +1,8 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderSocialBarCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import { getSocialWidgetsCopy } from '../social-widgets-copy';
+import styles from './SocialBarInspector.module.css';
 
 const PROVIDER_GLYPHS: Record<string, string> = {
   instagram: 'IG',
@@ -18,18 +21,21 @@ const PROVIDER_GLYPHS: Record<string, string> = {
 
 function SocialBarRender({
   node,
+  locale = 'ko',
 }: {
   node: BuilderSocialBarCanvasNode;
+  locale?: Locale;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
+  const copy = getSocialWidgetsCopy(locale);
   return (
     <nav
       className="builder-social-bar"
       data-builder-social-widget="bar"
       data-builder-social-layout={c.layout}
       data-builder-social-style={c.style}
-      aria-label="social links"
+      aria-label={copy.socialBar.navLabel}
     >
       {c.items.map((it, idx) => (
         <a
@@ -39,7 +45,7 @@ function SocialBarRender({
           rel="noopener noreferrer"
           data-builder-social-provider={it.provider}
           style={{ width: c.size, height: c.size, color: c.color }}
-          aria-label={it.label ?? it.provider}
+          aria-label={it.label ?? copy.providers[it.provider]}
         >
           <span>{PROVIDER_GLYPHS[it.provider] ?? it.provider.slice(0, 2).toUpperCase()}</span>
         </a>
@@ -70,67 +76,73 @@ function parseItems(value: string): BuilderSocialBarCanvasNode['content']['items
 
 function SocialBarInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const sbNode = node as BuilderSocialBarCanvasNode;
   const c = sbNode.content;
+  const copy = getSocialWidgetsCopy(locale);
   return (
-    <>
-      <label>
-        <span>항목 (provider | href)</span>
+    <div className={styles.root} data-builder-social-bar-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.socialBar.inspector.items}</span>
         <textarea
           rows={5}
-          style={{ fontFamily: 'inherit', resize: 'vertical' }}
+          className={`${styles.control} ${styles.textarea}`}
           value={itemsToText(c.items)}
           disabled={disabled}
           onChange={(event) => onUpdate({ items: parseItems(event.target.value) })}
         />
       </label>
-      <label>
-        <span>배치</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.socialBar.inspector.layout}</span>
         <select
           value={c.layout}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ layout: event.target.value as BuilderSocialBarCanvasNode['content']['layout'] })}
         >
-          <option value="row">Row</option>
-          <option value="column">Column</option>
+          <option value="row">{copy.layouts.row}</option>
+          <option value="column">{copy.layouts.column}</option>
         </select>
       </label>
-      <label>
-        <span>스타일</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.socialBar.inspector.style}</span>
         <select
           value={c.style}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ style: event.target.value as BuilderSocialBarCanvasNode['content']['style'] })}
         >
-          <option value="plain">Plain</option>
-          <option value="solid">Solid</option>
-          <option value="outline">Outline</option>
+          <option value="plain">{copy.socialBar.inspector.styles.plain}</option>
+          <option value="solid">{copy.socialBar.inspector.styles.solid}</option>
+          <option value="outline">{copy.socialBar.inspector.styles.outline}</option>
         </select>
       </label>
-      <label>
-        <span>크기</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.socialBar.inspector.size}</span>
         <input
           type="number"
           min={24}
           max={80}
           value={c.size}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ size: Number(event.target.value) })}
         />
       </label>
-      <label>
-        <span>색</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.socialBar.inspector.color}</span>
         <input
           type="text"
           value={c.color}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ color: event.target.value })}
         />
       </label>
-    </>
+    </div>
   );
 }
 

@@ -10,6 +10,11 @@ import {
   getBuilderSeoDefaults,
 } from '@/lib/builder/seo/defaults';
 import type { BuilderSeoDefaults } from '@/lib/builder/site/types';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -67,11 +72,20 @@ const seoSettingsSchema = seoDefaultsSchema.extend({
   robotsTxt: z.string().max(5000).optional(),
 });
 
-function validationErrorResponse(error: ZodError): NextResponse {
+function errorResponse(
+  locale: ReturnType<typeof normalizeLocale>,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...(extra ?? {}) },
+    { status },
   );
+}
+
+function validationErrorResponse(locale: ReturnType<typeof normalizeLocale>, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
 }
 
 function cleanDefaults(input: BuilderSeoDefaults): BuilderSeoDefaults {
@@ -99,20 +113,20 @@ export async function GET(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-seo' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
   try {
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const site = await readSiteDocument(siteId, locale);
     return NextResponse.json({
       ok: true,
-      defaults: getBuilderSeoDefaults(site),
+      defaults: getBuilderSeoDefaults(site, locale),
       factoryDefaults: DEFAULT_BUILDER_SEO_DEFAULTS,
       robotsTxt: site.settings?.robotsTxt ?? '',
       preview: buildSeoPreviewRows({ site, siteUrl: getSiteUrl(), locale }),
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
+    return errorResponse(locale, 'seo_settings_load_failed', 500);
   }
 }
 
@@ -120,21 +134,22 @@ export async function PATCH(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-seo' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
   try {
     const rawPayload = await request.json();
     const payload = seoSettingsSchema.parse(rawPayload);
     const { robotsTxt, ...defaultsPayload } = payload;
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const site = await readSiteDocument(siteId, locale);
     const nextDefaults = cleanDefaults({
-      ...getBuilderSeoDefaults(site),
+      ...getBuilderSeoDefaults(site, locale),
       ...defaultsPayload,
       patterns: {
-        ...(getBuilderSeoDefaults(site).patterns ?? {}),
+        ...(getBuilderSeoDefaults(site, locale).patterns ?? {}),
         ...(defaultsPayload.patterns ?? {}),
       },
       structuredData: {
-        ...(getBuilderSeoDefaults(site).structuredData ?? {}),
+        ...(getBuilderSeoDefaults(site, locale).structuredData ?? {}),
         ...(defaultsPayload.structuredData ?? {}),
       },
     });
@@ -153,16 +168,15 @@ export async function PATCH(request: NextRequest) {
 
     return NextResponse.json({
       ok: true,
-      defaults: getBuilderSeoDefaults(site),
+      defaults: getBuilderSeoDefaults(site, locale),
       robotsTxt: site.settings?.robotsTxt ?? '',
       preview: buildSeoPreviewRows({ site, siteUrl: getSiteUrl(), locale }),
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+      return errorResponse(locale, 'invalid_json', 400);
     }
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    return errorResponse(locale, 'seo_settings_save_failed', 500);
   }
 }

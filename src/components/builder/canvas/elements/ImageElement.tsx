@@ -7,8 +7,10 @@ import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
 import { filtersToCSS, isDefaultFilters, type ImageFilters } from '@/lib/builder/canvas/filters';
 import { ASPECT_RATIOS } from '@/lib/builder/canvas/crop';
 import { sanitizeLinkValue } from '@/lib/builder/links';
+import { getImageEditCopy } from '@/lib/builder/components/image/image-edit-copy';
 import type { BuilderTheme } from '@/lib/builder/site/types';
 import { resolveThemeColor } from '@/lib/builder/site/theme';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 const PLACEHOLDER_SRC = '/images/placeholder-image.svg';
 const FOCUSABLE_SELECTOR = [
@@ -132,13 +134,104 @@ function aspectToClipPath(
 function InlineSvgArt({
   name,
   color,
+  label,
 }: {
   name: NonNullable<BuilderImageCanvasNode['content']['svg']>['name'];
   color: string;
+  label: string;
 }) {
+  if (name === 'pricing-consultation') {
+    return (
+      <svg viewBox="0 0 32 32" role="img" aria-label={label}>
+        <path d="M8.5 8.5h9a5.5 5.5 0 0 1 0 11h-2.8l-3.8 3v-3H8.5A4.5 4.5 0 0 1 4 15V13a4.5 4.5 0 0 1 4.5-4.5Z" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M18 11.5h5.5A4.5 4.5 0 0 1 28 16v1.2a4.3 4.3 0 0 1-4.3 4.3h-1.6v3l-3.5-3" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M10.5 13h5M10.5 16h3.4" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <circle cx="22.3" cy="11.1" r="1.2" fill={color} stroke="none" opacity="0.9" />
+      </svg>
+    );
+  }
+  if (name === 'pricing-litigation') {
+    return (
+      <svg viewBox="0 0 32 32" role="img" aria-label={label}>
+        <path d="M16 6v18" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M8 11.5h16" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M11 11.5 8.3 17a2.8 2.8 0 0 0 2.5 1.6h.4a2.8 2.8 0 0 0 2.5-1.6l-2.7-5.5Z" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M21 11.5 18.3 17a2.8 2.8 0 0 0 2.5 1.6h.4a2.8 2.8 0 0 0 2.5-1.6L21 11.5Z" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M11 23.5h10" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M13.2 6.8 16 4l2.8 2.8" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+      </svg>
+    );
+  }
+  if (name === 'pricing-company') {
+    return (
+      <svg viewBox="0 0 32 32" role="img" aria-label={label}>
+        <path d="M6.5 25.5V11.8L15.5 8v17.5" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M15.5 25.5V13.8L25.5 10v15.5" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M10.3 15.5h1.8M10.3 19.2h1.8M19.5 15.5h1.8M19.5 19.2h1.8" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M4.5 25.5h23" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M21.5 6.5h4.2M23.6 4.4v4.2" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+      </svg>
+    );
+  }
+  if (name === 'pricing-retainer') {
+    return (
+      <svg viewBox="0 0 32 32" role="img" aria-label={label}>
+        <rect x="8" y="6.5" width="16" height="20" rx="3.4" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M12 6.5h8v3.2h-8z" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="M12.2 14.2h7.6M12.2 18h7.6M12.2 21.8h4.4" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <path d="m21.7 20.7 1.6 1.6 3.2-3.6" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+        <circle cx="23.4" cy="9.6" r="1.2" fill={color} stroke="none" opacity="0.9" />
+      </svg>
+    );
+  }
+  if (name === 'service-0') {
+    return (
+      <svg viewBox="0 0 24 24" role="img" aria-label={label}>
+        <path d="M4 18h16" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+        <path d="M6 18V8h4v10" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+        <path d="M14 18V5h4v13" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+        <path d="M4 12l4-4 4 3 8-6" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+      </svg>
+    );
+  }
+  if (name === 'service-1') {
+    return (
+      <svg viewBox="0 0 24 24" role="img" aria-label={label}>
+        <path d="M6 5h10l3 3v11H6z" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+        <path d="M16 5v3h3" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+        <path d="M9 13h7M9 17h5" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+      </svg>
+    );
+  }
+  if (name === 'service-2') {
+    return (
+      <svg viewBox="0 0 24 24" role="img" aria-label={label}>
+        <path d="M3 12h18" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+        <path d="M7 9l-4 3 4 3" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+        <path d="M17 9l4 3-4 3" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+        <path d="M10 7h4M10 17h4" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+      </svg>
+    );
+  }
+  if (name === 'service-3' || name === 'service-4') {
+    return (
+      <svg viewBox="0 0 24 24" role="img" aria-label={label}>
+        <path d="M12 3l7 3v6c0 4.5-2.6 7.6-7 9-4.4-1.4-7-4.5-7-9V6l7-3z" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+        <path d="M9 12l2 2 4-4" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+      </svg>
+    );
+  }
+  if (name === 'service-5') {
+    return (
+      <svg viewBox="0 0 24 24" role="img" aria-label={label}>
+        <path d="M5 19V7l7-3 7 3v12" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+        <path d="M9 12h6M9 15h6" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+      </svg>
+    );
+  }
   if (name === 'shield') {
     return (
-      <svg viewBox="0 0 120 120" role="img" aria-label="Shield icon">
+      <svg viewBox="0 0 120 120" role="img" aria-label={label}>
         <path d="M60 10 102 26v30c0 27-17 45-42 54C35 101 18 83 18 56V26l42-16Z" fill={color} opacity="0.14" />
         <path d="M60 16 96 30v27c0 23-14 39-36 47-22-8-36-24-36-47V30l36-14Z" fill="none" stroke={color} strokeWidth="7" />
         <path d="m42 60 12 12 28-31" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" />
@@ -147,7 +240,7 @@ function InlineSvgArt({
   }
   if (name === 'building') {
     return (
-      <svg viewBox="0 0 120 120" role="img" aria-label="Building icon">
+      <svg viewBox="0 0 120 120" role="img" aria-label={label}>
         <rect x="26" y="22" width="68" height="78" rx="6" fill={color} opacity="0.12" />
         <path d="M28 100V26c0-3 2-5 5-5h54c3 0 5 2 5 5v74" fill="none" stroke={color} strokeWidth="7" />
         <path d="M43 42h10M67 42h10M43 60h10M67 60h10M43 78h10M67 78h10M18 100h84" stroke={color} strokeLinecap="round" strokeWidth="7" />
@@ -156,14 +249,14 @@ function InlineSvgArt({
   }
   if (name === 'spark') {
     return (
-      <svg viewBox="0 0 120 120" role="img" aria-label="Spark icon">
+      <svg viewBox="0 0 120 120" role="img" aria-label={label}>
         <path d="M60 15 71 48l34 12-34 12-11 33-12-33-33-12 33-12 12-33Z" fill={color} opacity="0.16" />
         <path d="M60 15 71 48l34 12-34 12-11 33-12-33-33-12 33-12 12-33Z" fill="none" stroke={color} strokeLinejoin="round" strokeWidth="7" />
       </svg>
     );
   }
   return (
-    <svg viewBox="0 0 120 120" role="img" aria-label="Scales icon">
+    <svg viewBox="0 0 120 120" role="img" aria-label={label}>
       <path d="M60 15v84M32 35h56M60 35 36 72h48L60 35Z" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="7" />
       <path d="M28 72c2 12 12 20 24 20s22-8 24-20M8 72h48M64 72h48M44 105h32" fill="none" stroke={color} strokeLinecap="round" strokeWidth="7" />
     </svg>
@@ -174,10 +267,12 @@ export default function ImageElement({
   node,
   mode = 'edit',
   theme,
+  locale = 'ko',
 }: {
   node: BuilderImageCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
   theme?: BuilderTheme;
+  locale?: Locale;
 }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [popupOpen, setPopupOpen] = useState(false);
@@ -208,9 +303,11 @@ export default function ImageElement({
   if (lightboxSlug) clickAction = 'lightbox';
   if (clickAction === 'none' && link) clickAction = 'link';
 
+  const copy = getImageEditCopy(normalizeLocale(locale)).runtime;
   const svg = node.content.svg?.enabled ? node.content.svg : null;
+  const isServiceSvg = svg ? svg.name.startsWith('service-') : false;
   const compare = node.content.compare?.enabled ? node.content.compare : null;
-  const imageAlt = node.content.alt || 'Image';
+  const imageAlt = node.content.alt || copy.fallbackAlt;
   const svgColor = svg
     ? (resolveThemeColor(svg.color, theme) ?? '#116dff')
     : '#116dff';
@@ -265,7 +362,7 @@ export default function ImageElement({
           fontSize: 13,
           fontWeight: 500,
         }}
-        aria-label={node.content.alt || 'Image placeholder'}
+        aria-label={node.content.alt || copy.imagePlaceholder}
       >
         <svg
           width="32"
@@ -282,13 +379,27 @@ export default function ImageElement({
           <circle cx="8.5" cy="8.5" r="1.5" />
           <polyline points="21 15 16 10 5 21" />
         </svg>
-        <span>Click to add image</span>
+        <span>{copy.clickToAddImage}</span>
       </div>
     );
   }
 
   const isHeroBackground =
     /(^|-)hero(-|$)/i.test(node.id) && /(media|background|bg|image)/i.test(node.id);
+  const imageObjectPosition = node.content.focalPoint
+    ? `${node.content.focalPoint.x}% ${node.content.focalPoint.y}%`
+    : undefined;
+  const imageSizes = isHeroBackground
+    ? '100vw'
+    : '(max-width: 1280px) 100vw, 360px';
+  const imageFallbackBackground = !svg && !compare && !node.content.gif
+    ? {
+        backgroundImage: `url(${JSON.stringify(node.content.src)})`,
+        backgroundPosition: imageObjectPosition ?? 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: node.content.fit === 'contain' ? 'contain' : 'cover',
+      }
+    : null;
 
   const baseImage = (
     <Image
@@ -296,14 +407,12 @@ export default function ImageElement({
       alt={node.content.alt}
       fill
       draggable={false}
-      sizes="(max-width: 1280px) 100vw, 360px"
+      sizes={imageSizes}
       unoptimized={Boolean(node.content.gif)}
       priority={isHeroBackground}
       style={{
         objectFit: node.content.fit,
-        objectPosition: node.content.focalPoint
-          ? `${node.content.focalPoint.x}% ${node.content.focalPoint.y}%`
-          : undefined,
+        objectPosition: imageObjectPosition,
         filter: cssFilter,
       }}
     />
@@ -321,7 +430,8 @@ export default function ImageElement({
         overflow: 'hidden',
         userSelect: 'none',
         clipPath: clipPath || undefined,
-        background: svg ? 'rgba(248, 250, 252, 0.92)' : undefined,
+        background: svg && !isServiceSvg ? 'rgba(248, 250, 252, 0.92)' : undefined,
+        ...imageFallbackBackground,
       }}
     >
       {svg ? (
@@ -332,16 +442,16 @@ export default function ImageElement({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '12%',
+            padding: isServiceSvg ? 0 : '12%',
           }}
         >
-          <InlineSvgArt name={svg.name} color={svgColor} />
+          <InlineSvgArt name={svg.name} color={svgColor} label={copy.svgIconLabels[svg.name]} />
         </div>
       ) : compare ? (
         <div className="builder-image-compare" data-builder-before-after="true">
           <Image
             src={compare.beforeSrc}
-            alt={`${imageAlt} before`}
+            alt={copy.beforeImageAlt(imageAlt)}
             fill
             draggable={false}
             sizes="(max-width: 1280px) 100vw, 360px"
@@ -353,7 +463,7 @@ export default function ImageElement({
           >
             <Image
               src={compare.afterSrc}
-              alt={`${imageAlt} after`}
+              alt={copy.afterImageAlt(imageAlt)}
               fill
               draggable={false}
               sizes="(max-width: 1280px) 100vw, 360px"
@@ -372,7 +482,7 @@ export default function ImageElement({
               min={5}
               max={95}
               value={comparePosition}
-              aria-label="Before after comparison"
+              aria-label={copy.beforeAfterComparison}
               onChange={(event) => setComparePosition(Number(event.currentTarget.value))}
             />
           ) : null}
@@ -386,13 +496,11 @@ export default function ImageElement({
               alt=""
               fill
               draggable={false}
-              sizes="(max-width: 1280px) 100vw, 360px"
+              sizes={imageSizes}
               className="builder-image-hover-swap"
               style={{
                 objectFit: node.content.fit,
-                objectPosition: node.content.focalPoint
-                  ? `${node.content.focalPoint.x}% ${node.content.focalPoint.y}%`
-                  : undefined,
+                objectPosition: imageObjectPosition,
               }}
             />
           ) : null}
@@ -410,9 +518,11 @@ export default function ImageElement({
           <span>{hotspot.label}</span>
         </a>
       ))}
-      <div className="image-hover-overlay">
-        이미지 변경
-      </div>
+      {mode !== 'published' ? (
+        <div className="image-hover-overlay">
+          {copy.changeImageOverlay}
+        </div>
+      ) : null}
     </div>
   );
 
@@ -420,10 +530,10 @@ export default function ImageElement({
 
   const modalImage = (
     <div className="builder-media-modal-image">
-      {svg ? <InlineSvgArt name={svg.name} color={svgColor} /> : (
+      {svg ? <InlineSvgArt name={svg.name} color={svgColor} label={copy.svgIconLabels[svg.name]} /> : (
         <Image
           src={compare?.afterSrc ?? node.content.src}
-          alt={node.content.alt}
+          alt={compare ? copy.afterImageAlt(imageAlt) : imageAlt}
           fill
           sizes="100vw"
           style={{ objectFit: 'contain' }}
@@ -443,7 +553,7 @@ export default function ImageElement({
       tabIndex={-1}
       onClick={closeLightbox}
     >
-      <button ref={lightboxCloseRef} type="button" className="builder-media-modal-close" onClick={closeLightbox} aria-label="Close lightbox">
+      <button ref={lightboxCloseRef} type="button" className="builder-media-modal-close" onClick={closeLightbox} aria-label={copy.closeLightbox}>
         ×
       </button>
       <div onClick={(event) => event.stopPropagation()} style={{ display: 'contents' }}>
@@ -458,16 +568,16 @@ export default function ImageElement({
       className="builder-media-modal"
       role="dialog"
       aria-modal="true"
-      aria-label={`${imageAlt} popup`}
+      aria-label={copy.popupDialogLabel(imageAlt)}
       tabIndex={-1}
       onClick={closePopup}
     >
       <div className="builder-media-popup-card" onClick={(event) => event.stopPropagation()}>
-        <button ref={popupCloseRef} type="button" className="builder-media-popup-close" onClick={closePopup} aria-label="Close popup">
+        <button ref={popupCloseRef} type="button" className="builder-media-popup-close" onClick={closePopup} aria-label={copy.closePopup}>
           ×
         </button>
-        <strong>{node.content.alt || 'Image detail'}</strong>
-        <span>{node.content.hotspots?.[0]?.label ?? '미디어 팝업 콘텐츠'}</span>
+        <strong>{node.content.alt || copy.imageDetailFallback}</strong>
+        <span>{node.content.hotspots?.[0]?.label ?? copy.popupContentFallback}</span>
       </div>
     </div>
   ) : null;

@@ -4,7 +4,8 @@ import type { BuilderComponentInspectorProps } from '../define';
 import LinkPicker from '@/components/builder/editor/LinkPicker';
 import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
 import type { LinkValue } from '@/lib/builder/links';
-import styles from '@/components/builder/canvas/SandboxPage.module.css';
+import { getImageEditCopy } from './image-edit-copy';
+import styles from './ImageInspector.module.css';
 
 function hotspotsToText(hotspots: BuilderImageCanvasNode['content']['hotspots']): string {
   return (hotspots ?? [])
@@ -34,6 +35,7 @@ function parseHotspots(value: string): BuilderImageCanvasNode['content']['hotspo
 
 export default function ImageInspector({
   node,
+  locale,
   onUpdate,
   disabled = false,
   onRequestAssetLibrary,
@@ -43,108 +45,113 @@ export default function ImageInspector({
   const imageNode = node as BuilderImageCanvasNode;
   const compare = imageNode.content.compare;
   const svg = imageNode.content.svg;
+  const copy = getImageEditCopy(locale);
 
   return (
-    <>
-      <div className={styles.inspectorActionRow}>
+    <div className={styles.root} data-builder-image-inspector="true">
+      <div className={styles.actionRow}>
         <button
           type="button"
           className={styles.actionButton}
           disabled={disabled || !onRequestAssetLibrary}
           onClick={() => onRequestAssetLibrary?.()}
         >
-          Open asset library
+          {copy.inspector.openAssetLibrary}
         </button>
         <button
           type="button"
           className={styles.actionButton}
           disabled={disabled || !imageNode.content.src}
           onClick={() => onRequestImageEditor?.()}
-          style={{ marginLeft: 6 }}
         >
-          Crop / Filter / Alt
+          {copy.inspector.openImageEditor}
         </button>
       </div>
-      <label>
-        <span>Source URL</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.sourceUrl}</span>
         <input
           type="text"
           value={imageNode.content.src}
           disabled={disabled}
-          placeholder="https://example.com/image.jpg"
+          placeholder={copy.inspector.sourceUrlPlaceholder}
+          className={styles.control}
           onChange={(event) => onUpdate({ src: event.target.value })}
         />
       </label>
-      <label>
-        <span>Alt text</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.altText}</span>
         <input
           type="text"
           value={imageNode.content.alt}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ alt: event.target.value })}
         />
       </label>
-      <label>
-        <span>Fit</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.fit}</span>
         <select
           value={imageNode.content.fit}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ fit: event.target.value })}
         >
-          <option value="cover">Cover</option>
-          <option value="contain">Contain</option>
+          <option value="cover">{copy.inspector.fitCover}</option>
+          <option value="contain">{copy.inspector.fitContain}</option>
         </select>
       </label>
-      <label>
-        <span>Click action</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.clickAction}</span>
         <select
           value={imageNode.content.clickAction ?? 'none'}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ clickAction: event.target.value })}
         >
-          <option value="none">None</option>
-          <option value="link">Link</option>
-          <option value="lightbox">Lightbox</option>
-          <option value="popup">Popup</option>
+          <option value="none">{copy.inspector.none}</option>
+          <option value="link">{copy.inspector.link}</option>
+          <option value="lightbox">{copy.inspector.lightbox}</option>
+          <option value="popup">{copy.inspector.popup}</option>
         </select>
       </label>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 4 }}>
-        <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#475569' }}>
-          Link
-        </span>
+      <div className={styles.linkSection}>
+        <span className={styles.sectionLabel}>{copy.inspector.link}</span>
         <LinkPicker
           value={(imageNode.content.link ?? null) as LinkValue | null}
           onChange={(link) => onUpdate({ link: link ?? undefined })}
           context={linkPickerContext}
           disabled={disabled}
+          locale={locale}
         />
       </div>
-      <fieldset className={styles.inspectorFieldset}>
-        <legend>Media interactions</legend>
-        <label>
-          <span>Hover swap image</span>
+      <fieldset className={styles.fieldset}>
+        <legend className={styles.legend}>{copy.inspector.mediaInteractions}</legend>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.inspector.hoverSwapImage}</span>
           <input
             type="text"
             value={imageNode.content.hoverSrc ?? ''}
             disabled={disabled}
-            placeholder="/images/hover.jpg"
+            placeholder={copy.inspector.hoverSwapImagePlaceholder}
+            className={styles.control}
             onChange={(event) => onUpdate({ hoverSrc: event.target.value || undefined })}
           />
         </label>
-        <label>
-          <span>Hotspots</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.inspector.hotspots}</span>
           <textarea
             rows={3}
             value={hotspotsToText(imageNode.content.hotspots)}
             disabled={disabled}
-            placeholder="42, 55, 상담 예약, /ko/contact"
+            placeholder={copy.inspector.hotspotsPlaceholder}
+            className={`${styles.control} ${styles.textarea}`}
             onChange={(event) => onUpdate({ hotspots: parseHotspots(event.target.value) })}
           />
         </label>
       </fieldset>
-      <fieldset className={styles.inspectorFieldset}>
-        <legend>Before / after</legend>
-        <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+      <fieldset className={styles.fieldset}>
+        <legend className={styles.legend}>{copy.inspector.beforeAfter}</legend>
+        <label className={styles.checkboxRow}>
           <input
             type="checkbox"
             checked={Boolean(compare?.enabled)}
@@ -162,47 +169,50 @@ export default function ImageInspector({
               })
             }
           />
-          <span>Enable compare slider</span>
+          <span>{copy.inspector.enableCompareSlider}</span>
         </label>
-        <label>
-          <span>Before image</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.inspector.beforeImage}</span>
           <input
             type="text"
             value={compare?.beforeSrc ?? ''}
             disabled={disabled || !compare?.enabled}
+            className={styles.control}
             onChange={(event) =>
               onUpdate({ compare: { enabled: true, beforeSrc: event.target.value, afterSrc: compare?.afterSrc || imageNode.content.src, position: compare?.position ?? 50 } })
             }
           />
         </label>
-        <label>
-          <span>After image</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.inspector.afterImage}</span>
           <input
             type="text"
             value={compare?.afterSrc ?? ''}
             disabled={disabled || !compare?.enabled}
+            className={styles.control}
             onChange={(event) =>
               onUpdate({ compare: { enabled: true, beforeSrc: compare?.beforeSrc || imageNode.content.src, afterSrc: event.target.value, position: compare?.position ?? 50 } })
             }
           />
         </label>
-        <label>
-          <span>Position {compare?.position ?? 50}%</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.inspector.position} {compare?.position ?? 50}%</span>
           <input
             type="range"
             min={5}
             max={95}
             value={compare?.position ?? 50}
             disabled={disabled || !compare?.enabled}
+            className={styles.range}
             onChange={(event) =>
               onUpdate({ compare: { enabled: true, beforeSrc: compare?.beforeSrc || imageNode.content.src, afterSrc: compare?.afterSrc || imageNode.content.src, position: Number(event.target.value) } })
             }
           />
         </label>
       </fieldset>
-      <fieldset className={styles.inspectorFieldset}>
-        <legend>SVG / GIF</legend>
-        <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+      <fieldset className={styles.fieldset}>
+        <legend className={styles.legend}>{copy.inspector.svgGif}</legend>
+        <label className={styles.checkboxRow}>
           <input
             type="checkbox"
             checked={Boolean(svg?.enabled)}
@@ -215,58 +225,72 @@ export default function ImageInspector({
               })
             }
           />
-          <span>Inline SVG icon</span>
+          <span>{copy.inspector.inlineSvgIcon}</span>
         </label>
-        <label>
-          <span>SVG shape</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.inspector.svgShape}</span>
           <select
             value={svg?.name ?? 'scales'}
             disabled={disabled || !svg?.enabled}
+            className={styles.control}
             onChange={(event) => onUpdate({ svg: { enabled: true, name: event.target.value, color: svg?.color ?? { kind: 'token', token: 'primary' } } })}
           >
-            <option value="scales">Scales</option>
-            <option value="shield">Shield</option>
-            <option value="building">Building</option>
-            <option value="spark">Spark</option>
+            <option value="scales">{copy.inspector.svgShapes.scales}</option>
+            <option value="shield">{copy.inspector.svgShapes.shield}</option>
+            <option value="building">{copy.inspector.svgShapes.building}</option>
+            <option value="spark">{copy.inspector.svgShapes.spark}</option>
+            <option value="service-0">{copy.inspector.svgShapes['service-0']}</option>
+            <option value="service-1">{copy.inspector.svgShapes['service-1']}</option>
+            <option value="service-2">{copy.inspector.svgShapes['service-2']}</option>
+            <option value="service-3">{copy.inspector.svgShapes['service-3']}</option>
+            <option value="service-4">{copy.inspector.svgShapes['service-4']}</option>
+            <option value="service-5">{copy.inspector.svgShapes['service-5']}</option>
+            <option value="pricing-consultation">{copy.inspector.svgShapes['pricing-consultation']}</option>
+            <option value="pricing-litigation">{copy.inspector.svgShapes['pricing-litigation']}</option>
+            <option value="pricing-company">{copy.inspector.svgShapes['pricing-company']}</option>
+            <option value="pricing-retainer">{copy.inspector.svgShapes['pricing-retainer']}</option>
           </select>
         </label>
-        <label>
-          <span>SVG color</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.inspector.svgColor}</span>
           <input
             type="text"
             value={typeof svg?.color === 'string' ? svg.color : ''}
             disabled={disabled || !svg?.enabled}
-            placeholder="#116dff or theme token via preset"
+            placeholder={copy.inspector.svgColorPlaceholder}
+            className={styles.control}
             onChange={(event) => onUpdate({ svg: { enabled: true, name: svg?.name ?? 'scales', color: event.target.value || { kind: 'token', token: 'primary' } } })}
           />
         </label>
-        <label>
-          <span>GIF provider</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.inspector.gifProvider}</span>
           <select
             value={imageNode.content.gif?.provider ?? 'manual'}
             disabled={disabled}
+            className={styles.control}
             onChange={(event) => onUpdate({ gif: { provider: event.target.value, query: imageNode.content.gif?.query || undefined } })}
           >
-            <option value="manual">Manual GIF URL</option>
-            <option value="giphy">Giphy search note</option>
+            <option value="manual">{copy.inspector.manualGifUrl}</option>
+            <option value="giphy">{copy.inspector.giphySearchNote}</option>
           </select>
         </label>
-        <label>
-          <span>GIF search query</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.inspector.gifSearchQuery}</span>
           <input
             type="text"
             value={imageNode.content.gif?.query ?? ''}
             disabled={disabled}
-            placeholder="law office"
+            placeholder={copy.inspector.gifSearchQueryPlaceholder}
+            className={styles.control}
             onChange={(event) => onUpdate({ gif: { provider: imageNode.content.gif?.provider ?? 'manual', query: event.target.value || undefined } })}
           />
         </label>
       </fieldset>
       {imageNode.content.cropAspect && imageNode.content.cropAspect !== 'Free' && (
-        <div style={{ fontSize: '0.78rem', color: '#64748b', marginTop: 4 }}>
-          Crop: {imageNode.content.cropAspect}
+        <div className={styles.cropNotice}>
+          {copy.inspector.cropLabel} {imageNode.content.cropAspect}
         </div>
       )}
-    </>
+    </div>
   );
 }

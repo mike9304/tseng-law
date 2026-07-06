@@ -1,0 +1,35 @@
+.breakpointBadge.breakpointBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 18px;
+  color: #1d4ed8;
+  font-size: 0.66rem;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.breakpointBadge[data-has-label='false'] {
+  gap: 0;
+}
+
+.breakpointBadge .breakpointBadgeDot {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #116dff;
+  color: inherit;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.12);
+}
+
+.breakpointBadge .breakpointBadgeLabel {
+  min-width: 0;
+  overflow: hidden;
+  color: inherit;
+  text-overflow: ellipsis;
+}

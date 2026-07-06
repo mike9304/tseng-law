@@ -32,6 +32,8 @@ import styles from './PublicProductDetail.module.css';
 type DetailCopy = {
   back: string;
   collection: string;
+  mediaThumbnails: string;
+  status: string;
   details: string;
   mediaFallback: string;
   options: string;
@@ -62,6 +64,8 @@ const copy: Record<Locale, DetailCopy> = {
   ko: {
     back: '스토어로 돌아가기',
     collection: '컬렉션',
+    mediaThumbnails: '상품 썸네일',
+    status: '상태',
     details: '상세 정보',
     mediaFallback: '상품 이미지',
     options: '옵션',
@@ -90,6 +94,8 @@ const copy: Record<Locale, DetailCopy> = {
   'zh-hant': {
     back: '返回商店',
     collection: '系列',
+    mediaThumbnails: '商品縮圖',
+    status: '狀態',
     details: '商品詳情',
     mediaFallback: '商品圖片',
     options: '選項',
@@ -118,6 +124,8 @@ const copy: Record<Locale, DetailCopy> = {
   en: {
     back: 'Back to store',
     collection: 'Collection',
+    mediaThumbnails: 'Product thumbnails',
+    status: 'Status',
     details: 'Details',
     mediaFallback: 'Product image',
     options: 'Options',
@@ -356,7 +364,7 @@ export default function PublicProductDetail({
       data-commerce-product-hydrated={cartHydrated ? 'true' : 'false'}
     >
       <div className={styles.inner}>
-        <Link href={`/${locale}/store`} className={styles.backLink}>
+        <Link href={`/${locale}/store`} className={styles.backLink} data-commerce-product-back-link>
           {t.back}
         </Link>
 
@@ -370,7 +378,7 @@ export default function PublicProductDetail({
               )}
             </div>
             {media.length > 1 ? (
-              <div className={styles.thumbs} aria-label="Product media thumbnails">
+              <div className={styles.thumbs} aria-label={t.mediaThumbnails} data-commerce-product-thumbnails>
                 {media.map((item) => (
                   <button
                     key={item.mediaId}
@@ -406,7 +414,7 @@ export default function PublicProductDetail({
                 <dd data-commerce-product-sku>{sku}</dd>
               </div>
               <div>
-                <dt>Status</dt>
+                <dt>{t.status}</dt>
                 <dd>
                   <span className={styles.availability} data-state={availability} data-commerce-product-availability-label>
                     {variantMissing ? t.noVariant : availabilityCopy[locale][availability]}

@@ -7,6 +7,7 @@ import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel
 import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorPanel';
 import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
 import { BuilderThemeProvider } from '@/components/builder/editor/BuilderThemeContext';
+import { getCanvasShellCopy } from '@/components/builder/canvas/canvas-shell-copy';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { DEFAULT_THEME, type BuilderLightbox } from '@/lib/builder/site/types';
@@ -37,6 +38,7 @@ export default function LightboxEditor({
   const [saveState, setSaveState] = useState<SaveState>('idle');
   const [meta, setMeta] = useState(lightbox);
   const initialUpdatedAtRef = useRef(initialDocument.updatedAt);
+  const text = getCanvasShellCopy(locale).lightbox;
 
   // Hydrate the canvas store on mount (and reset selection cleanly).
   useEffect(() => {
@@ -83,12 +85,12 @@ export default function LightboxEditor({
 
   const saveLabel = useMemo(() => {
     switch (saveState) {
-      case 'saving': return 'Saving…';
-      case 'saved': return 'Saved';
-      case 'error': return 'Save failed';
+      case 'saving': return text.saveStates.saving;
+      case 'saved': return text.saveStates.saved;
+      case 'error': return text.saveStates.error;
       default: return '';
     }
-  }, [saveState]);
+  }, [saveState, text.saveStates]);
 
   async function patchMeta(patch: Partial<BuilderLightbox>) {
     try {
@@ -137,7 +139,7 @@ export default function LightboxEditor({
             href={`/${locale}/admin-builder/lightboxes`}
             style={{ color: '#cbd5e1', textDecoration: 'none', fontSize: 13 }}
           >
-            ← Lightboxes
+            ← {text.backLabel}
           </Link>
           <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 8 }}>
             <strong style={{ fontSize: 14 }}>{meta.name}</strong>
@@ -165,8 +167,8 @@ export default function LightboxEditor({
               cursor: 'pointer',
               fontSize: 13,
             }}
-          >
-            Settings
+            >
+            {text.settingsLabel}
           </button>
         </header>
 
@@ -198,7 +200,7 @@ export default function LightboxEditor({
                 fontSize: 11,
               }}
             >
-              ➕<br />Add
+              ➕<br />{text.addLabel}
             </button>
             <button
               type="button"
@@ -213,7 +215,7 @@ export default function LightboxEditor({
                 fontSize: 11,
               }}
             >
-              🧩<br />Layers
+              🧩<br />{text.layersLabel}
             </button>
           </nav>
 
@@ -228,10 +230,10 @@ export default function LightboxEditor({
                 flex: '0 0 auto',
               }}
             >
-              {drawer === 'add' && <SandboxCatalogPanel />}
-              {drawer === 'layers' && <SandboxLayersPanel />}
-              {drawer === 'settings' && (
-                <LightboxSettingsPanel meta={meta} onPatch={patchMeta} />
+      {drawer === 'add' && <SandboxCatalogPanel />}
+      {drawer === 'layers' && <SandboxLayersPanel locale={locale} />}
+      {drawer === 'settings' && (
+                <LightboxSettingsPanel meta={meta} locale={locale} onPatch={patchMeta} />
               )}
             </aside>
           )}
@@ -261,7 +263,7 @@ export default function LightboxEditor({
                 boxShadow: '0 24px 60px rgba(0,0,0,0.4)',
               }}
             >
-              <CanvasContainer />
+              <CanvasContainer locale={locale} />
             </div>
             <p style={{ color: '#cbd5e1', fontSize: 12, marginTop: 12 }}>
               {meta.sizeMode === 'fixed'
@@ -292,29 +294,32 @@ export default function LightboxEditor({
 
 function LightboxSettingsPanel({
   meta,
+  locale,
   onPatch,
 }: {
   meta: BuilderLightbox;
+  locale: Locale;
   onPatch: (patch: Partial<BuilderLightbox>) => Promise<void>;
 }) {
+  const text = getCanvasShellCopy(locale).lightbox;
   return (
     <div style={{ padding: 16, fontSize: 13 }}>
-      <h2 style={{ fontSize: 16, marginBottom: 12 }}>Lightbox settings</h2>
+      <h2 style={{ fontSize: 16, marginBottom: 12 }}>{text.settingsHeading}</h2>
 
       <label style={{ display: 'block', marginBottom: 12 }}>
-        <span style={{ display: 'block', marginBottom: 4, fontWeight: 600 }}>Size mode</span>
+        <span style={{ display: 'block', marginBottom: 4, fontWeight: 600 }}>{text.sizeModeLabel}</span>
         <select
           value={meta.sizeMode}
           onChange={(e) => onPatch({ sizeMode: e.target.value as 'auto' | 'fixed' })}
           style={{ width: '100%', padding: 6, border: '1px solid #cbd5e1', borderRadius: 4 }}
         >
-          <option value="auto">Auto</option>
-          <option value="fixed">Fixed</option>
+          <option value="auto">{text.auto}</option>
+          <option value="fixed">{text.fixed}</option>
         </select>
       </label>
 
       <label style={{ display: 'block', marginBottom: 12 }}>
-        <span style={{ display: 'block', marginBottom: 4, fontWeight: 600 }}>Width (px)</span>
+        <span style={{ display: 'block', marginBottom: 4, fontWeight: 600 }}>{text.widthLabel}</span>
         <input
           type="number"
           value={meta.width ?? 600}
@@ -324,7 +329,7 @@ function LightboxSettingsPanel({
       </label>
 
       <label style={{ display: 'block', marginBottom: 12 }}>
-        <span style={{ display: 'block', marginBottom: 4, fontWeight: 600 }}>Height (px)</span>
+        <span style={{ display: 'block', marginBottom: 4, fontWeight: 600 }}>{text.heightLabel}</span>
         <input
           type="number"
           value={meta.height ?? 400}
@@ -339,7 +344,7 @@ function LightboxSettingsPanel({
           checked={meta.dismissable}
           onChange={(e) => onPatch({ dismissable: e.target.checked })}
         />
-        Show close (X) button
+        {text.showCloseButton}
       </label>
 
       <label style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
@@ -348,7 +353,7 @@ function LightboxSettingsPanel({
           checked={meta.closeOnOutsideClick}
           onChange={(e) => onPatch({ closeOnOutsideClick: e.target.checked })}
         />
-        Close on outside click
+        {text.closeOnOutsideClick}
       </label>
 
       <label style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
@@ -357,7 +362,7 @@ function LightboxSettingsPanel({
           checked={meta.closeOnEsc}
           onChange={(e) => onPatch({ closeOnEsc: e.target.checked })}
         />
-        Close on Esc key
+        {text.closeOnEsc}
       </label>
 
       <label style={{ display: 'block', marginBottom: 12 }}>

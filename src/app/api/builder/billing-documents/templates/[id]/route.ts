@@ -7,6 +7,8 @@ import {
   getBillingDocumentTemplate,
   updateBillingDocumentTemplate,
 } from '@/lib/builder/billing-documents-templates';
+import { getBuilderBillingDocumentsApiErrorPayload } from '@/lib/builder/billing-documents-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -22,9 +24,13 @@ const patchSchema = z.object({
   isDefault: z.boolean().optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+function validationError(locale: Locale, error: ZodError): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
+    {
+      ok: false,
+      ...getBuilderBillingDocumentsApiErrorPayload(locale, 'invalid_template_payload'),
+      issues: error.flatten(),
+    },
     { status: 400 },
   );
 }
@@ -32,19 +38,29 @@ function validationError(error: ZodError): NextResponse {
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   try {
     const template = await getBillingDocumentTemplate(params.id);
-    if (!template) return NextResponse.json({ ok: false, error: 'template_not_found' }, { status: 404 });
+    if (!template) {
+      return NextResponse.json(
+        { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(errorLocale, 'template_not_found') },
+        { status: 404 },
+      );
+    }
     return NextResponse.json({ ok: true, template });
   } catch (error) {
     console.error('[builder/billing-documents/templates/:id] GET failed:', error);
-    return NextResponse.json({ ok: false, error: 'template_load_failed' }, { status: 500 });
+    return NextResponse.json(
+      { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(errorLocale, 'template_load_failed') },
+      { status: 500 },
+    );
   }
 }
 
 export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   try {
     const raw = await request.json().catch(() => ({}));
     const input = patchSchema.parse(raw);
@@ -52,24 +68,41 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       ...input,
       logoAssetId: input.logoAssetId === undefined ? undefined : input.logoAssetId,
     });
-    if (!template) return NextResponse.json({ ok: false, error: 'template_not_found' }, { status: 404 });
+    if (!template) {
+      return NextResponse.json(
+        { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(errorLocale, 'template_not_found') },
+        { status: 404 },
+      );
+    }
     return NextResponse.json({ ok: true, template });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     console.error('[builder/billing-documents/templates/:id] PATCH failed:', error);
-    return NextResponse.json({ ok: false, error: 'template_update_failed' }, { status: 500 });
+    return NextResponse.json(
+      { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(errorLocale, 'template_update_failed') },
+      { status: 500 },
+    );
   }
 }
 
 export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   try {
     const ok = await deleteBillingDocumentTemplate(params.id);
-    if (!ok) return NextResponse.json({ ok: false, error: 'template_not_found' }, { status: 404 });
+    if (!ok) {
+      return NextResponse.json(
+        { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(errorLocale, 'template_not_found') },
+        { status: 404 },
+      );
+    }
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error('[builder/billing-documents/templates/:id] DELETE failed:', error);
-    return NextResponse.json({ ok: false, error: 'template_delete_failed' }, { status: 500 });
+    return NextResponse.json(
+      { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(errorLocale, 'template_delete_failed') },
+      { status: 500 },
+    );
   }
 }

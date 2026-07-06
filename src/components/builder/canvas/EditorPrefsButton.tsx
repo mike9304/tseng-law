@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   applyEditorPreferencesToDocument,
   BUILDER_EDITOR_PREFS_EVENT,
@@ -9,8 +9,12 @@ import {
   saveAndBroadcastEditorPreferences,
   type EditorPreferences,
 } from '@/lib/builder/canvas/editor-prefs';
+import { currentBuilderLocale } from './canvasNodeUtils';
+import { getCanvasEditorPrefsCopy } from './canvas-shortcuts-copy';
+import EditorChromeIcon from './EditorChromeIcon';
 import KeybindingsModal from './KeybindingsModal';
-import styles from './SandboxPage.module.css';
+import styles from './EditorPrefsButton.module.css';
+import chromeStyles from './SandboxPage.module.css';
 
 /**
  * Phase 28 — Editor preferences popover button.
@@ -22,6 +26,9 @@ export default function EditorPrefsButton() {
   const [open, setOpen] = useState(false);
   const [keybindingsOpen, setKeybindingsOpen] = useState(false);
   const [prefs, setPrefs] = useState<EditorPreferences>(DEFAULT_EDITOR_PREFS);
+  const hostRef = useRef<HTMLDivElement | null>(null);
+  const locale = currentBuilderLocale();
+  const copy = getCanvasEditorPrefsCopy(locale as Parameters<typeof getCanvasEditorPrefsCopy>[0]);
 
   useEffect(() => {
     const loaded = loadEditorPreferences();
@@ -34,6 +41,30 @@ export default function EditorPrefsButton() {
     return () => document.removeEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
   }, []);
 
+  useEffect(() => {
+    if (!open || keybindingsOpen) return undefined;
+
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target;
+      if (target instanceof Node && hostRef.current?.contains(target)) {
+        return;
+      }
+      setOpen(false);
+    };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      event.preventDefault();
+      setOpen(false);
+    };
+
+    document.addEventListener('click', handleClick);
+    window.addEventListener('keydown', handleKeyDown, true);
+    return () => {
+      document.removeEventListener('click', handleClick);
+      window.removeEventListener('keydown', handleKeyDown, true);
+    };
+  }, [keybindingsOpen, open]);
+
   function update(partial: Partial<EditorPreferences>) {
     const next: EditorPreferences = { ...prefs, ...partial };
     setPrefs(next);
@@ -41,93 +72,93 @@ export default function EditorPrefsButton() {
   }
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div className={styles.editorPrefsHost} ref={hostRef}>
       <button
         type="button"
-        className={styles.topBarChip}
+        className={`${chromeStyles.topBarChip} ${chromeStyles.topBarIconButton}`}
         onClick={() => setOpen((v) => !v)}
-        title="Editor preferences"
+        title={copy.buttonTitle}
+        aria-label={copy.buttonTitle}
         aria-haspopup="true"
         aria-expanded={open}
         data-builder-prefs-button
       >
-        ⚙
+        <EditorChromeIcon name="settings" className={chromeStyles.topBarSvgIcon} />
       </button>
       {open ? (
         <div
           role="dialog"
-          aria-label="Editor preferences"
-          style={{
-            position: 'absolute',
-            top: 'calc(100% + 6px)',
-            right: 0,
-            background: '#ffffff',
-            border: '1px solid #e2e8f0',
-            borderRadius: 10,
-            boxShadow: '0 18px 40px rgba(15,23,42,0.18)',
-            padding: 12,
-            width: 240,
-            zIndex: 50,
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 10,
-            fontSize: 12,
-          }}
+          aria-label={copy.dialogLabel}
+          className={styles.editorPrefsPopover}
         >
-          <strong style={{ color: '#475569', textTransform: 'uppercase', fontSize: 10 }}>Editor</strong>
-          <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <header className={styles.editorPrefsHeader}>
+            <span>{copy.heading}</span>
+            <strong>{copy.buttonTitle}</strong>
+          </header>
+          <label className={styles.editorPrefsToggleRow}>
             <input
               type="checkbox"
+              className={styles.editorPrefsToggleInput}
               checked={prefs.rulers.enabled}
               onChange={(event) => update({ rulers: { ...prefs.rulers, enabled: event.target.checked } })}
             />
-            <span>Rulers</span>
+            <span className={styles.editorPrefsToggleText}>{copy.rulers}</span>
+            <span className={styles.editorPrefsToggleSwitch} aria-hidden="true" />
           </label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <label className={styles.editorPrefsToggleRow}>
             <input
               type="checkbox"
+              className={styles.editorPrefsToggleInput}
               checked={prefs.outline.enabled}
               onChange={(event) => update({ outline: { ...prefs.outline, enabled: event.target.checked } })}
             />
-            <span>Outline view</span>
+            <span className={styles.editorPrefsToggleText}>{copy.outlineView}</span>
+            <span className={styles.editorPrefsToggleSwitch} aria-hidden="true" />
           </label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <label className={styles.editorPrefsToggleRow}>
             <input
               type="checkbox"
+              className={styles.editorPrefsToggleInput}
+              checked={prefs.outline.hideContent}
+              disabled={!prefs.outline.enabled}
+              onChange={(event) =>
+                update({ outline: { ...prefs.outline, hideContent: event.target.checked } })
+              }
+            />
+            <span className={styles.editorPrefsToggleText}>{copy.outlineHideContent}</span>
+            <span className={styles.editorPrefsToggleSwitch} aria-hidden="true" />
+          </label>
+          <label className={styles.editorPrefsToggleRow}>
+            <input
+              type="checkbox"
+              className={styles.editorPrefsToggleInput}
               checked={prefs.pixelGrid.enabled}
               onChange={(event) => update({ pixelGrid: { ...prefs.pixelGrid, enabled: event.target.checked } })}
             />
-            <span>Pixel grid + snap</span>
+            <span className={styles.editorPrefsToggleText}>{copy.pixelGrid}</span>
+            <span className={styles.editorPrefsToggleSwitch} aria-hidden="true" />
           </label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ flex: 1 }}>Grid size</span>
+          <label className={styles.editorPrefsNumberRow}>
+            <span>{copy.gridSize}</span>
             <input
               type="number"
               min={4}
               max={64}
+              className={styles.editorPrefsNumberInput}
               value={prefs.pixelGrid.size}
               onChange={(event) =>
                 update({ pixelGrid: { ...prefs.pixelGrid, size: Math.max(4, Math.min(64, Number(event.target.value) || 8)) } })
               }
-              style={{ width: 56, padding: '3px 6px', border: '1px solid #cbd5e1', borderRadius: 4 }}
             />
           </label>
           <button
             type="button"
             data-builder-shortcut-map-open="true"
             onClick={() => setKeybindingsOpen(true)}
-            style={{
-              padding: '8px 10px',
-              border: '1px solid #cbd5e1',
-              borderRadius: 8,
-              background: '#ffffff',
-              color: '#0f172a',
-              cursor: 'pointer',
-              fontWeight: 800,
-              textAlign: 'left',
-            }}
+            className={styles.editorPrefsShortcutButton}
           >
-            Shortcut map
+            <EditorChromeIcon name="keyboard" className={styles.editorPrefsShortcutIcon} />
+            <span>{copy.shortcutMap}</span>
           </button>
         </div>
       ) : null}

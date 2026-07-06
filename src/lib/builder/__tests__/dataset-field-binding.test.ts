@@ -106,6 +106,25 @@ function makeButtonNode(): BuilderButtonCanvasNode {
   }) as BuilderButtonCanvasNode;
 }
 
+function makeAttorneyImageNode(): BuilderImageCanvasNode {
+  return builderCanvasNodeSchema.parse({
+    id: 'bound-attorney-image',
+    kind: 'image',
+    rect: { x: 0, y: 0, width: 220, height: 220 },
+    zIndex: 1,
+    content: {
+      src: '/images/placeholder-image.svg',
+      alt: 'placeholder',
+      fit: 'cover',
+      link: null,
+    },
+    dataBinding: {
+      targetId: 'home.attorney.profile',
+      fields: { src: 'image', alt: 'name', href: 'href' },
+    },
+  }) as BuilderImageCanvasNode;
+}
+
 function makeGalleryNode(): BuilderGalleryCanvasNode {
   return builderCanvasNodeSchema.parse({
     id: 'bound-gallery',
@@ -209,6 +228,19 @@ describe('builder dataset field binding', () => {
     expect(rendered.content.link?.href).toBe('/ko/services/investment');
   });
 
+  it('binds attorney profile image, alt text, and profile links', () => {
+    const rendered = applyBuilderDatasetBindingToNode(makeAttorneyImageNode(), context) as BuilderImageCanvasNode;
+
+    expect(rendered.content.src).toBe('/images/team/tseng-junwei.png');
+    expect(rendered.content.alt).toBe('증준외 변호사');
+    expect(rendered.content.link?.href).toBe('/ko/lawyers/wei-tseng');
+    expect(resolveBuilderDatasetFieldValue({
+      context,
+      targetId: 'home.attorney.profile',
+      fieldId: 'role',
+    })).toContain('대표 변호사');
+  });
+
   it('binds gallery images from column records while preserving layout controls', () => {
     const node = makeGalleryNode();
     const rendered = applyBuilderDatasetBindingToNode(node, context) as BuilderGalleryCanvasNode;
@@ -295,6 +327,58 @@ describe('builder dataset field binding', () => {
     expect(rendered.content.layoutItems).toEqual([]);
     expect(JSON.stringify(rendered.content.layoutItems)).not.toContain('기존 항목');
     expect(resolveBuilderDatasetBindingRecordCount(emptyContext, node.dataBinding!)).toBe(0);
+  });
+
+  it('prioritizes runtime records for user CMS collection dynamic list bindings', () => {
+    const runtimeContext = {
+      ...context,
+      runtimeRecordsByTarget: {
+        'home.insights.feed': [
+          {
+            recordId: 'recipe-alpha',
+            primaryLabel: 'Alpha Soup',
+            secondaryLabel: 'Alpha summary',
+            routePath: '/ko/recipes/alpha-soup',
+            fieldValues: {
+              title: 'Alpha Soup',
+              summary: 'Alpha custom summary',
+              href: '/ko/recipes/alpha-soup',
+              category: 'soup',
+            },
+          },
+          {
+            recordId: 'recipe-charlie',
+            primaryLabel: 'Charlie Soup',
+            secondaryLabel: 'Charlie summary',
+            routePath: '/ko/recipes/charlie-soup',
+            fieldValues: {
+              title: 'Charlie Soup',
+              summary: 'Charlie custom summary',
+              href: '/ko/recipes/charlie-soup',
+              category: 'soup',
+            },
+          },
+        ],
+      },
+    };
+
+    const text = applyBuilderDatasetBindingToNode(makeTextNode(), runtimeContext) as BuilderTextCanvasNode;
+    expect(text.content.text).toBe('Alpha Soup');
+    expect(text.content.link?.href).toBe('/ko/recipes/alpha-soup');
+
+    const secondText = applyBuilderDatasetBindingToNode(makeTextNode(), {
+      ...runtimeContext,
+      recordIndexOverride: 1,
+    }) as BuilderTextCanvasNode;
+    expect(secondText.content.text).toBe('Charlie Soup');
+    expect(secondText.content.link?.href).toBe('/ko/recipes/charlie-soup');
+
+    const repeater = applyBuilderDatasetBindingToNode(makeRepeaterNode(), runtimeContext) as BuilderContainerCanvasNode;
+    expect(repeater.content.layoutItems).toEqual([
+      { title: 'Alpha Soup', description: 'Alpha custom summary', image: undefined },
+      { title: 'Charlie Soup', description: 'Charlie custom summary', image: undefined },
+    ]);
+    expect(resolveBuilderDatasetBindingRecordCount(runtimeContext, makeRepeaterNode().dataBinding!)).toBe(2);
   });
 
   it('returns null for unsupported fields and clears mapped placeholder content', () => {

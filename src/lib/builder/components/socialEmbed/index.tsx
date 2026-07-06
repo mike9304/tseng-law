@@ -1,15 +1,22 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderSocialEmbedCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import { getSocialWidgetsCopy } from '../social-widgets-copy';
+import styles from './SocialEmbedInspector.module.css';
 
 function SocialEmbedRender({
   node,
+  locale = 'ko',
   mode = 'edit',
 }: {
   node: BuilderSocialEmbedCanvasNode;
+  locale?: Locale;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
   const isEdit = mode === 'edit';
+  const copy = getSocialWidgetsCopy(locale);
+  const providerLabel = copy.socialEmbed.providers[c.provider];
 
   return (
     <div
@@ -20,14 +27,14 @@ function SocialEmbedRender({
     >
       {c.showHeader ? (
         <header>
-          <strong>{c.provider}</strong>
-          <small>{c.handle || c.channelId || '@핸들'}</small>
+          <strong>{providerLabel}</strong>
+          <small>{c.handle || c.channelId || copy.socialEmbed.handleFallback}</small>
         </header>
       ) : null}
       {isEdit ? (
         <div className="builder-social-embed-placeholder">
-          <em>{c.provider} 외부 임베드 자리</em>
-          <small>(public 페이지에서 SDK 로드)</small>
+          <em>{copy.socialEmbed.editPlaceholder(providerLabel)}</em>
+          <small>({copy.socialEmbed.editSdkHint})</small>
         </div>
       ) : (
         <div
@@ -36,7 +43,7 @@ function SocialEmbedRender({
         >
           {Array.from({ length: c.count }, (_, idx) => (
             <div key={idx} data-builder-social-tile={idx + 1}>
-              <small>{c.provider}/{idx + 1}</small>
+              <small>{providerLabel}/{idx + 1}</small>
             </div>
           ))}
         </div>
@@ -47,67 +54,73 @@ function SocialEmbedRender({
 
 function SocialEmbedInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const seNode = node as BuilderSocialEmbedCanvasNode;
   const c = seNode.content;
+  const copy = getSocialWidgetsCopy(locale);
   return (
-    <>
-      <label>
-        <span>공급자</span>
+    <div className={styles.root} data-builder-social-embed-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.socialEmbed.inspector.provider}</span>
         <select
           value={c.provider}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ provider: event.target.value as BuilderSocialEmbedCanvasNode['content']['provider'] })}
         >
-          <option value="instagram-feed">Instagram feed</option>
-          <option value="youtube-subscribe">YouTube subscribe</option>
-          <option value="linkedin-follow">LinkedIn follow</option>
-          <option value="tiktok-feed">TikTok feed</option>
+          <option value="instagram-feed">{copy.socialEmbed.providers['instagram-feed']}</option>
+          <option value="youtube-subscribe">{copy.socialEmbed.providers['youtube-subscribe']}</option>
+          <option value="linkedin-follow">{copy.socialEmbed.providers['linkedin-follow']}</option>
+          <option value="tiktok-feed">{copy.socialEmbed.providers['tiktok-feed']}</option>
         </select>
       </label>
-      <label>
-        <span>핸들 / Channel ID</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.socialEmbed.inspector.handle}</span>
         <input
           type="text"
           value={c.handle}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ handle: event.target.value })}
         />
       </label>
-      <label>
-        <span>레이아웃</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.socialEmbed.inspector.layout}</span>
         <select
           value={c.layout}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ layout: event.target.value as BuilderSocialEmbedCanvasNode['content']['layout'] })}
         >
-          <option value="grid">Grid</option>
-          <option value="list">List</option>
+          <option value="grid">{copy.socialEmbed.layouts.grid}</option>
+          <option value="list">{copy.socialEmbed.layouts.list}</option>
         </select>
       </label>
-      <label>
-        <span>개수</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.socialEmbed.inspector.count}</span>
         <input
           type="number"
           min={1}
           max={20}
           value={c.count}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ count: Number(event.target.value) })}
         />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={c.showHeader}
           disabled={disabled}
           onChange={(event) => onUpdate({ showHeader: event.target.checked })}
         />
-        <span>헤더 표시</span>
+        <span>{copy.socialEmbed.inspector.showHeader}</span>
       </label>
-    </>
+    </div>
   );
 }
 

@@ -6,17 +6,27 @@ import type { BuilderTheme } from '@/lib/builder/site/types';
 import { resolveThemeColor } from '@/lib/builder/site/theme';
 import { resolveFormInputVariantStyle } from '@/lib/builder/site/component-variants';
 import { useFormFieldRuntime } from '@/lib/builder/forms/render-helpers';
+import type { Locale } from '@/lib/locales';
+import {
+  FORM_DATE_KO_DEFAULTS,
+  getFormControlsCopy,
+  localizedFormControlText,
+} from '../form/form-controls-copy';
 
 export default function FormDateElement({
   node,
   theme,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderFormDateCanvasNode;
   theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getFormControlsCopy(locale);
+  const label = localizedFormControlText(c.label, copy.fieldDefaults.dateLabel, FORM_DATE_KO_DEFAULTS.label);
   const [focused, setFocused] = useState(false);
   const field = useFormFieldRuntime({ nodeId: node.id, name: c.name, showIf: c.showIf });
   const textColor = resolveThemeColor({ kind: 'token', token: 'text' }, theme) ?? '#0f172a';
@@ -28,7 +38,7 @@ export default function FormDateElement({
   return (
     <div ref={field.rootRef} style={{ ...shellStyle, opacity: mode !== 'published' && c.showIf ? 0.72 : 1 }}>
       <label htmlFor={`field-${node.id}`} style={labelStyle}>
-        {c.label}
+        {label}
         {c.required ? <span style={{ color: '#dc2626', marginLeft: 4 }}>*</span> : null}
       </label>
       <input
@@ -39,7 +49,7 @@ export default function FormDateElement({
         max={c.max}
         defaultValue={c.defaultValue}
         required={c.required && field.visible}
-        data-builder-field-label={c.label}
+        data-builder-field-label={label}
         data-builder-error-message={c.errorMessage}
         aria-invalid={field.error ? true : undefined}
         aria-describedby={field.error ? `field-${node.id}-error` : undefined}

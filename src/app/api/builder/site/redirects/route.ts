@@ -10,12 +10,17 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
-import { normalizeLocale } from '@/lib/locales';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
   createRedirect,
   listRedirects,
 } from '@/lib/builder/site/redirects';
+import { getRedirectValidationErrorPayload } from '@/lib/builder/site/redirect-validation-payload';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -32,9 +37,25 @@ const redirectInputSchema = z
   })
   .strict();
 
-function validationErrorResponse(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra: Record<string, unknown> = {},
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...extra },
+    { status },
+  );
+}
+
+function validationErrorResponse(locale: Locale, error: ZodError): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      ...getBuilderSiteApiErrorPayload(locale, 'validation_error'),
+      issues: error.flatten(),
+    },
     { status: 400 },
   );
 }
@@ -44,37 +65,47 @@ export async function GET(request: NextRequest) {
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const redirects = await listRedirects('default', locale);
-  return NextResponse.json({ ok: true, redirects });
+  try {
+    const redirects = await listRedirects('default', locale);
+    return NextResponse.json({ ok: true, redirects });
+  } catch {
+    return errorResponse(locale, 'redirects_load_failed', 500);
+  }
 }
 
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-seo' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
   let raw: unknown;
   try {
     raw = await request.json();
   } catch {
-    return NextResponse.json({ ok: false, error: 'Invalid JSON body' }, { status: 400 });
+    return errorResponse(locale, 'invalid_json', 400);
   }
 
   let payload: z.infer<typeof redirectInputSchema>;
   try {
     payload = redirectInputSchema.parse(raw);
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
     throw error;
   }
 
-  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const result = await createRedirect('default', locale, payload);
-  if ('error' in result) {
-    return NextResponse.json(
-      { ok: false, error: result.error.message, field: result.error.field },
-      { status: 400 },
-    );
-  }
+  try {
+    const result = await createRedirect('default', locale, payload);
+    if ('error' in result) {
+      return errorResponse(
+        locale,
+        'redirect_rule_invalid',
+        400,
+        getRedirectValidationErrorPayload(result.error),
+      );
+    }
 
-  return NextResponse.json({ ok: true, redirect: result.redirect });
+    return NextResponse.json({ ok: true, redirect: result.redirect });
+  } catch {
+    return errorResponse(locale, 'redirect_save_failed', 500);
+  }
 }

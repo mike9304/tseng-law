@@ -13,11 +13,46 @@ import {
   recordRevision,
   rollbackToRevision,
 } from '@/lib/builder/site/publish';
-import { readPageCanvas, readPageCanvasRecordState } from '@/lib/builder/site/persistence';
+import { readPageCanvasRecordState } from '@/lib/builder/site/persistence';
 import { recordPageRollback } from '@/lib/builder/audit/record';
 import { guardMutation } from '@/lib/builder/security/guard';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+async function readJsonObject(request: NextRequest): Promise<Record<string, unknown>> {
+  try {
+    const parsed = await request.json();
+    return isRecord(parsed) ? parsed : {};
+  } catch (error) {
+    if (error instanceof Error) return {};
+    throw error;
+  }
+}
+
+function revisionIdFromResult(result: string | { readonly revisionId: string }): string {
+  return typeof result === 'string' ? result : result.revisionId;
+}
 
 export async function POST(
   request: NextRequest,
@@ -26,49 +61,61 @@ export async function POST(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const pageId = params.pageId;
+  const body = await readJsonObject(request);
+  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
+  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
 
-  let body: Record<string, unknown> = {};
-  try {
-    body = (await request.json()) as Record<string, unknown>;
-  } catch {
-    body = {};
-  }
-
-  const siteId = typeof body.siteId === 'string' && body.siteId.trim() ? body.siteId.trim() : 'default';
   const revisionId = typeof body.revisionId === 'string' ? body.revisionId.trim() : '';
 
   if (!revisionId) {
-    return NextResponse.json({ ok: false, error: 'revisionId is required.' }, { status: 400 });
+    return errorResponse(locale, 'rollback_revision_required', 400);
   }
 
   // Backup current draft before rollback (so the rollback is reversible).
-  const currentDraft = await readPageCanvas(siteId, pageId, 'draft');
+  const currentDraftState = await readPageCanvasRecordState(siteId, pageId, 'draft').catch((error) => {
+    if (error instanceof Error) return null;
+    throw error;
+  });
   let backupRevisionId: string | null = null;
-  if (currentDraft) {
+  if (currentDraftState) {
     try {
-      backupRevisionId = await recordRevision(pageId, currentDraft, { source: 'rollback-backup' });
-    } catch {
+      const result = await recordRevision(siteId, pageId, currentDraftState.record, { source: 'rollback-backup' });
+      backupRevisionId = revisionIdFromResult(result);
+    } catch (error) {
+      if (!(error instanceof Error)) throw error;
       backupRevisionId = null;
     }
   }
 
-  const ok = await rollbackToRevision(siteId, pageId, revisionId);
-  if (!ok) {
-    return NextResponse.json({ ok: false, error: 'Rollback failed.' }, { status: 404 });
+  let ok = false;
+  try {
+    ok = await rollbackToRevision(siteId, pageId, revisionId);
+  } catch {
+    return errorResponse(locale, 'rollback_failed', 500);
   }
+  if (!ok) return errorResponse(locale, 'rollback_failed', 404);
 
   // Return the restored document and draft meta for client-side replaceDocument
   // plus revision-aware follow-up actions such as publish.
-  const restored = await readRevisionDocument(pageId, revisionId);
-  const restoredState = await readPageCanvasRecordState(siteId, pageId, 'draft');
-  await recordPageRollback({
-    request,
-    siteId,
-    pageId,
-    revisionId,
-    backupRevisionId,
+  const restored = await readRevisionDocument(pageId, revisionId).catch(() => null);
+  const restoredState = await readPageCanvasRecordState(siteId, pageId, 'draft').catch((error) => {
+    if (error instanceof Error) return null;
+    throw error;
   });
+  try {
+    await recordPageRollback({
+      request,
+      siteId,
+      pageId,
+      revisionId,
+      backupRevisionId,
+    });
+  } catch (error) {
+    if (!(error instanceof Error)) throw error;
+    // Rollback succeeded; audit logging should not make the response fail.
+  }
 
   return NextResponse.json({
     ok: true,

@@ -1,30 +1,16 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import type { BookingEmailTemplate, BookingEmailTemplateType } from '@/lib/builder/bookings/types';
 import {
-  bookingEmailTemplateConfig,
   bookingEmailTemplatePlaceholders,
+  getBookingEmailTemplateConfig,
 } from '@/lib/builder/bookings/email-template-config';
+import type { Locale } from '@/lib/locales';
+import { bookingEmailTemplateAdminCopy, renderBookingEmailPreviewSample, sampleBookingEmailValuesForLocale } from './BookingEmailTemplatesAdmin.support';
 import styles from './BookingsAdmin.module.css';
 
 type Draft = Pick<BookingEmailTemplate, 'type' | 'subject' | 'body' | 'isActive'>;
-
-const sampleValues: Record<string, string> = {
-  customerName: '김민수',
-  customerEmail: 'client@example.com',
-  customerPhone: '+82-10-1234-5678',
-  serviceName: '초기 상담 30분',
-  staffName: '증위명 변호사',
-  startTime: '2026. 5. 18. 오후 2:00',
-  endTime: '2026. 5. 18. 오후 2:30',
-  timezone: 'Asia/Seoul',
-  meetingLink: 'https://meet.example.com/consultation',
-  manageUrl: 'https://tseng-law.com/ko/booking/manage/demo-token',
-  caseSummary: '대만 법인 설립 전 계약 리스크를 검토하고 싶습니다.',
-  notes: '한국어 상담을 선호합니다.',
-  bookingSummary: 'Service: 초기 상담 30분\nStaff: 증위명 변호사\nTime: 2026. 5. 18. 오후 2:00\nManage: https://tseng-law.com/ko/booking/manage/demo-token',
-};
 
 function draftFromTemplate(template: BookingEmailTemplate): Draft {
   return {
@@ -35,27 +21,29 @@ function draftFromTemplate(template: BookingEmailTemplate): Draft {
   };
 }
 
-function defaultDraft(type: BookingEmailTemplateType): Draft {
-  const config = bookingEmailTemplateConfig[type];
-  return {
-    type,
-    subject: config.subject,
-    body: config.body,
-    isActive: true,
-  };
-}
-
-function renderSample(input: string): string {
-  return input.replace(/{{\s*([a-zA-Z0-9]+)\s*}}/g, (match, key: string) => sampleValues[key] ?? match);
-}
-
 export default function BookingEmailTemplatesAdmin({
+  locale,
   initialTemplates,
 }: {
+  locale: Locale;
   initialTemplates: BookingEmailTemplate[];
 }) {
   const [templates, setTemplates] = useState(initialTemplates);
   const [selectedType, setSelectedType] = useState<BookingEmailTemplateType>(initialTemplates[0]?.type ?? 'customer-confirmation');
+  const subjectRef = useRef<HTMLInputElement | null>(null);
+  const bodyRef = useRef<HTMLTextAreaElement | null>(null);
+  const activeFieldRef = useRef<'subject' | 'body'>('subject');
+  const c = bookingEmailTemplateAdminCopy[locale];
+  const templateConfig = getBookingEmailTemplateConfig(locale);
+  const defaultDraft = useCallback((type: BookingEmailTemplateType): Draft => {
+    const config = templateConfig[type];
+    return {
+      type,
+      subject: config.subject,
+      body: config.body,
+      isActive: true,
+    };
+  }, [templateConfig]);
   const selectedTemplate = useMemo(
     () => templates.find((template) => template.type === selectedType) ?? {
       ...defaultDraft(selectedType),
@@ -63,7 +51,7 @@ export default function BookingEmailTemplatesAdmin({
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     },
-    [selectedType, templates],
+    [defaultDraft, selectedType, templates],
   );
   const [draft, setDraft] = useState<Draft>(() => draftFromTemplate(selectedTemplate));
   const [saving, setSaving] = useState(false);
@@ -84,7 +72,9 @@ export default function BookingEmailTemplatesAdmin({
     setMessage(null);
     setError(null);
     try {
-      const response = await fetch(`/api/builder/bookings/email-templates/${draft.type}`, {
+      const response = await fetch(`/api/builder/bookings/email-templates/${draft.type}?locale=${
+        encodeURIComponent(locale)
+      }`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'same-origin',
@@ -96,13 +86,14 @@ export default function BookingEmailTemplatesAdmin({
       });
       const payload = (await response.json().catch(() => null)) as { template?: BookingEmailTemplate; error?: string } | null;
       if (!response.ok || !payload?.template) throw new Error(payload?.error || 'save failed');
+      const savedTemplate = payload.template;
       setTemplates((current) => current.map((template) => (
-        template.type === payload.template!.type ? payload.template! : template
+        template.type === savedTemplate.type ? savedTemplate : template
       )));
-      setDraft(draftFromTemplate(payload.template));
-      setMessage('Email template saved.');
+      setDraft(draftFromTemplate(savedTemplate));
+      setMessage(c.saved);
     } catch {
-      setError('이메일 템플릿을 저장하지 못했습니다.');
+      setError(c.saveFailed);
     } finally {
       setSaving(false);
     }
@@ -114,14 +105,45 @@ export default function BookingEmailTemplatesAdmin({
     setError(null);
   };
 
-  const previewSubject = renderSample(draft.subject);
-  const previewBody = renderSample(draft.body);
+  const setFocusedField = (field: 'subject' | 'body') => {
+    activeFieldRef.current = field;
+  };
+
+  const insertToken = (token: string) => {
+    const activeElement = document.activeElement;
+    const field =
+      activeElement === bodyRef.current
+        ? 'body'
+        : activeElement === subjectRef.current
+          ? 'subject'
+          : activeFieldRef.current;
+    const target = field === 'body' ? bodyRef.current : subjectRef.current;
+    if (!target) return;
+    const targetField = target === bodyRef.current ? 'body' : 'subject';
+    const selectionStart = target.selectionStart ?? target.value.length;
+    const selectionEnd = target.selectionEnd ?? target.value.length;
+    const nextValue = `${target.value.slice(0, selectionStart)}{{${token}}}${target.value.slice(selectionEnd)}`;
+    const nextDraft = targetField === 'body'
+      ? { ...draft, body: nextValue }
+      : { ...draft, subject: nextValue };
+    setDraft(nextDraft);
+    setFocusedField(targetField);
+    requestAnimationFrame(() => {
+      target.focus();
+      const cursor = selectionStart + token.length + 4;
+      target.setSelectionRange(cursor, cursor);
+    });
+  };
+
+  const previewValues = useMemo(() => sampleBookingEmailValuesForLocale(locale), [locale]);
+  const previewSubject = renderBookingEmailPreviewSample(draft.subject, previewValues);
+  const previewBody = renderBookingEmailPreviewSample(draft.body, previewValues);
 
   return (
     <div className={styles.emailTemplateLayout}>
-      <aside className={styles.emailTemplateList} aria-label="Booking email template list">
+      <aside className={styles.emailTemplateList} aria-label={c.listLabel}>
         {templates.map((template) => {
-          const config = bookingEmailTemplateConfig[template.type];
+          const config = templateConfig[template.type];
           return (
             <button
               className={styles.emailTemplateItem}
@@ -137,11 +159,11 @@ export default function BookingEmailTemplatesAdmin({
         })}
       </aside>
 
-      <section className={styles.panel} aria-label="Booking email template editor">
+      <section className={styles.panel} aria-label={c.editorLabel}>
         <div className={styles.sectionHeader}>
           <div>
-            <h2 className={styles.cardTitle}>{bookingEmailTemplateConfig[draft.type].label}</h2>
-            <p className={styles.muted}>{bookingEmailTemplateConfig[draft.type].description}</p>
+            <h2 className={styles.cardTitle}>{templateConfig[draft.type].label}</h2>
+            <p className={styles.muted}>{templateConfig[draft.type].description}</p>
           </div>
           <label className={styles.toggleRow}>
             <input
@@ -149,7 +171,7 @@ export default function BookingEmailTemplatesAdmin({
               type="checkbox"
               onChange={(event) => setDraft({ ...draft, isActive: event.target.checked })}
             />
-            Active
+            {c.active}
           </label>
         </div>
 
@@ -158,41 +180,62 @@ export default function BookingEmailTemplatesAdmin({
 
         <div className={styles.formGrid}>
           <label className={`${styles.field} ${styles.fieldFull}`}>
-            <span className={styles.label}>Subject</span>
+            <span className={styles.label}>{c.subject}</span>
             <input
               className={styles.input}
+              ref={subjectRef}
               value={draft.subject}
-              onChange={(event) => setDraft({ ...draft, subject: event.target.value })}
+              placeholder={c.subjectPlaceholder}
+              onFocus={() => setFocusedField('subject')}
+              onChange={(event) => {
+                setFocusedField('subject');
+                setDraft({ ...draft, subject: event.target.value });
+              }}
             />
           </label>
           <label className={`${styles.field} ${styles.fieldFull}`}>
-            <span className={styles.label}>Body</span>
+            <span className={styles.label}>{c.body}</span>
             <textarea
               className={`${styles.textarea} ${styles.emailTemplateTextarea}`}
+              ref={bodyRef}
               value={draft.body}
-              onChange={(event) => setDraft({ ...draft, body: event.target.value })}
+              placeholder={c.bodyPlaceholder}
+              onFocus={() => setFocusedField('body')}
+              onChange={(event) => {
+                setFocusedField('body');
+                setDraft({ ...draft, body: event.target.value });
+              }}
             />
           </label>
         </div>
 
-        <div className={styles.placeholderGrid} aria-label="Available placeholders">
+        <div className={styles.placeholderGrid} aria-label={c.placeholders}>
           {bookingEmailTemplatePlaceholders.map((placeholder) => (
-            <code key={placeholder}>{`{{${placeholder}}}`}</code>
+            <button
+              key={placeholder}
+              className={styles.placeholderToken}
+              type="button"
+              data-placeholder-token={placeholder}
+              onMouseDown={(event) => event.preventDefault()}
+              onClick={() => insertToken(placeholder)}
+            >
+              {`{{${placeholder}}}`}
+            </button>
           ))}
         </div>
 
         <div className={styles.inlineActions}>
           <button className={styles.button} disabled={saving} type="button" onClick={save}>
-            {saving ? 'Saving...' : 'Save template'}
+            {saving ? c.saving : c.save}
           </button>
           <button className={styles.buttonSecondary} disabled={saving} type="button" onClick={reset}>
-            Reset default
+            {c.reset}
           </button>
         </div>
       </section>
 
-      <section className={styles.emailPreview} aria-label="Email preview">
-        <span className={styles.label}>Live preview</span>
+      <section className={styles.emailPreview} aria-label={c.preview}>
+        <span className={styles.label}>{c.preview}</span>
         <h2>{previewSubject}</h2>
         <div className={styles.emailPreviewBody}>
           {previewBody.split('\n').map((line, index) => (

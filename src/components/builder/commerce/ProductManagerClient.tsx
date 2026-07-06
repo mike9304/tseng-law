@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
+import { downloadText } from './download-text';
 import type { Locale } from '@/lib/locales';
 import {
   commerceInventoryAvailability,
@@ -22,6 +23,320 @@ interface ProductManagerClientProps {
   siteTitle: string;
   initialProducts: CommerceProduct[];
 }
+
+const COPY = {
+  ko: {
+    title: '제품',
+    subtitle: '제품, 가격, 재고, 변형, 스토어 노출을 관리합니다.',
+    orders: '주문',
+    payments: '결제',
+    currency: '통화',
+    taxRules: '세금 규칙',
+    shipping: '배송',
+    notifications: '알림',
+    webhooks: '웹훅',
+    addProduct: '제품 추가',
+    exportCsv: 'CSV 내보내기',
+    productStats: '제품 통계',
+    searchPlaceholder: '제목, SKU, 태그, 카테고리 검색',
+    allStatuses: '모든 상태',
+    active: '활성',
+    draft: '초안',
+    archived: '보관됨',
+    allCategories: '모든 카테고리',
+    allStock: '모든 재고',
+    inStock: '재고 있음',
+    lowStockFilter: '재고 부족',
+    outOfStock: '품절',
+    backorder: '예약 판매',
+    recentlyUpdated: '최근 수정',
+    titleSort: '제목',
+    priceLowHigh: '가격 낮은 순',
+    priceHighLow: '가격 높은 순',
+    selected: (count: number) => `${count}개 선택됨`,
+    setActive: '활성으로 설정',
+    setDraft: '초안으로 설정',
+    archive: '보관',
+    clear: '해제',
+    editProduct: '제품 수정',
+    addProductHeading: '제품 추가',
+    reset: '초기화',
+    titleLabel: '제목',
+    slug: '슬러그',
+    slugPlaceholder: '최대 120자 · 영문 소문자·숫자·하이픈 · 예: taiwan-startup-guide (비면 제목에서 자동 생성)',
+    description: '설명',
+    body: '본문',
+    status: '상태',
+    sku: 'SKU',
+    price: '가격',
+    compareAt: '비교 가격',
+    quantity: '수량',
+    lowStock: '재고 부족',
+    categories: '카테고리',
+    tags: '태그',
+    imageUrl: '이미지 URL',
+    imageAlt: '이미지 대체 텍스트',
+    options: '옵션',
+    addOption: '옵션 추가',
+    generateVariants: '변형 생성',
+    addOptionsHint: '형식이나 지역 같은 옵션을 추가한 뒤 변형 행을 생성하세요.',
+    optionName: '이름',
+    optionNamePlaceholder: '옵션 이름 · 최대 80자 · 예: 형식',
+    optionValues: '값',
+    optionValuesPlaceholder: '쉼표 구분, 항목당 최대 80자 · 예: PDF, 상담',
+    variantOptionValuesPlaceholder: '이름=값 쌍, 쉼표 구분 · 예: 형식=PDF',
+    variants: '변형',
+    addVariant: '변형 추가',
+    allowBackorder: '예약 판매',
+    noProducts: '아직 제품이 없습니다',
+    noProductsHint: '첫 제품을 추가해 제품 갤러리, 제품 페이지, 장바구니, 체크아웃을 활성화하세요.',
+    productsList: '제품 목록',
+    importExport: '가져오기 / 내보내기 CSV',
+    importCsvButton: 'CSV 가져오기',
+    exportFiltered: '필터된 항목 내보내기',
+    duplicate: '복제',
+    edit: '편집',
+    removeVariant: '변형 삭제',
+    seoDescription: 'SEO 설명',
+    seoTitle: 'SEO 제목',
+    trackInventory: '재고 추적',
+    variantLabel: (index) => `변형 ${index + 1}`,
+    generatedVariants: (count: number) => `변형 ${count}개 생성됨`,
+  },
+  'zh-hant': {
+    title: '產品',
+    subtitle: '管理產品、定價、庫存、變體與商店可見性。',
+    orders: '訂單',
+    payments: '付款',
+    currency: '幣別',
+    taxRules: '稅務規則',
+    shipping: '運送',
+    notifications: '通知',
+    webhooks: 'Webhook',
+    addProduct: '新增產品',
+    exportCsv: '匯出 CSV',
+    productStats: '產品統計',
+    searchPlaceholder: '搜尋標題、SKU、標籤、類別',
+    allStatuses: '所有狀態',
+    active: '啟用',
+    draft: '草稿',
+    archived: '封存',
+    allCategories: '所有類別',
+    allStock: '所有庫存',
+    inStock: '有庫存',
+    lowStockFilter: '庫存不足',
+    outOfStock: '缺貨',
+    backorder: '預購',
+    recentlyUpdated: '最近更新',
+    titleSort: '標題',
+    priceLowHigh: '價格低到高',
+    priceHighLow: '價格高到低',
+    selected: (count: number) => `已選取 ${count} 筆`,
+    setActive: '設為啟用',
+    setDraft: '設為草稿',
+    archive: '封存',
+    clear: '清除',
+    editProduct: '編輯產品',
+    addProductHeading: '新增產品',
+    reset: '重設',
+    titleLabel: '標題',
+    slug: 'Slug',
+    slugPlaceholder: '留白時自動產生 · 最多 120 字 · 小寫英文/數字/連字號 · 例如：taiwan-startup-guide',
+    description: '描述',
+    body: '內文',
+    status: '狀態',
+    sku: 'SKU',
+    price: '價格',
+    compareAt: '比較價格',
+    quantity: '數量',
+    lowStock: '庫存不足',
+    categories: '類別',
+    tags: '標籤',
+    imageUrl: '圖片 URL',
+    imageAlt: '圖片替代文字',
+    options: '選項',
+    addOption: '新增選項',
+    generateVariants: '產生變體',
+    addOptionsHint: '加入格式或地區等選項後，產生變體列。',
+    optionName: '名稱',
+    optionNamePlaceholder: '選項名稱 · 最多 80 字 · 例如：格式',
+    optionValues: '值',
+    optionValuesPlaceholder: '逗號分隔，每項最多 80 字 · 例如：PDF, 諮詢',
+    variantOptionValuesPlaceholder: '名稱=值 配對，逗號分隔 · 例如：格式=PDF',
+    variants: '變體',
+    addVariant: '新增變體',
+    allowBackorder: '預購',
+    noProducts: '目前沒有產品',
+    noProductsHint: '新增第一個產品以啟用產品圖庫、產品頁、購物車與結帳。',
+    productsList: '產品列表',
+    importExport: '匯入 / 匯出 CSV',
+    importCsvButton: '匯入 CSV',
+    exportFiltered: '匯出已篩選項目',
+    duplicate: '複製',
+    edit: '編輯',
+    removeVariant: '刪除變體',
+    seoDescription: 'SEO 描述',
+    seoTitle: 'SEO 標題',
+    trackInventory: '追蹤庫存',
+    variantLabel: (index) => `變體 ${index + 1}`,
+    generatedVariants: (count: number) => `已產生 ${count} 個變體`,
+  },
+  en: {
+    title: 'Products',
+    subtitle: 'Manage products, pricing, inventory, variants, and storefront visibility.',
+    orders: 'Orders',
+    payments: 'Payments',
+    currency: 'Currency',
+    taxRules: 'Tax rules',
+    shipping: 'Shipping',
+    notifications: 'Notifications',
+    webhooks: 'Webhooks',
+    addProduct: 'Add product',
+    exportCsv: 'Export CSV',
+    productStats: 'Product stats',
+    searchPlaceholder: 'Search title, SKU, tag, category',
+    allStatuses: 'All statuses',
+    active: 'Active',
+    draft: 'Draft',
+    archived: 'Archived',
+    allCategories: 'All categories',
+    allStock: 'All stock',
+    inStock: 'In stock',
+    lowStockFilter: 'Low stock',
+    outOfStock: 'Out of stock',
+    backorder: 'Backorder',
+    recentlyUpdated: 'Recently updated',
+    titleSort: 'Title',
+    priceLowHigh: 'Price low-high',
+    priceHighLow: 'Price high-low',
+    selected: (count: number) => `${count} selected`,
+    setActive: 'Set active',
+    setDraft: 'Set draft',
+    archive: 'Archive',
+    clear: 'Clear',
+    editProduct: 'Edit product',
+    addProductHeading: 'Add product',
+    reset: 'Reset',
+    titleLabel: 'Title',
+    slug: 'Slug',
+    slugPlaceholder: 'Max 120 chars · lowercase letters/numbers/hyphens · e.g. taiwan-startup-guide (auto from title if blank)',
+    description: 'Description',
+    body: 'Body',
+    status: 'Status',
+    sku: 'SKU',
+    price: 'Price',
+    compareAt: 'Compare at',
+    quantity: 'Quantity',
+    lowStock: 'Low stock',
+    categories: 'Categories',
+    tags: 'Tags',
+    imageUrl: 'Image URL',
+    imageAlt: 'Image alt',
+    options: 'Options',
+    addOption: 'Add option',
+    generateVariants: 'Generate variants',
+    addOptionsHint: 'Add options such as Format or Region, then generate variant rows.',
+    optionName: 'Name',
+    optionNamePlaceholder: 'Option name · max 80 chars · e.g. Format',
+    optionValues: 'Values',
+    optionValuesPlaceholder: 'Comma-separated, max 80 each · e.g. PDF, Consultation',
+    variantOptionValuesPlaceholder: 'Name=value pairs, comma-separated · e.g. Format=PDF',
+    variants: 'Variants',
+    addVariant: 'Add variant',
+    allowBackorder: 'Allow backorder',
+    noProducts: 'No products yet',
+    noProductsHint: 'Add your first product to power product galleries, product pages, cart, and checkout.',
+    productsList: 'Products list',
+    importExport: 'Import / Export CSV',
+    importCsvButton: 'Import CSV',
+    exportFiltered: 'Export filtered',
+    duplicate: 'Duplicate',
+    edit: 'Edit',
+    removeVariant: 'Remove variant',
+    seoDescription: 'SEO description',
+    seoTitle: 'SEO title',
+    trackInventory: 'Track inventory',
+    variantLabel: (index) => `Variant ${index + 1}`,
+    generatedVariants: (count: number) => `Generated ${count} variants`,
+  },
+} satisfies Record<Locale, {
+  title: string;
+  subtitle: string;
+  orders: string;
+  payments: string;
+  currency: string;
+  taxRules: string;
+  shipping: string;
+  notifications: string;
+  webhooks: string;
+  addProduct: string;
+  exportCsv: string;
+  productStats: string;
+  searchPlaceholder: string;
+  allStatuses: string;
+  active: string;
+  draft: string;
+  archived: string;
+  allCategories: string;
+  allStock: string;
+  inStock: string;
+  lowStockFilter: string;
+  lowStock: string;
+  outOfStock: string;
+  backorder: string;
+  recentlyUpdated: string;
+  titleSort: string;
+  priceLowHigh: string;
+  priceHighLow: string;
+  selected: (count: number) => string;
+  setActive: string;
+  setDraft: string;
+  archive: string;
+  clear: string;
+  editProduct: string;
+  addProductHeading: string;
+  reset: string;
+  titleLabel: string;
+  slug: string;
+  slugPlaceholder: string;
+  description: string;
+  body: string;
+  status: string;
+  sku: string;
+  price: string;
+  compareAt: string;
+  quantity: string;
+  categories: string;
+  tags: string;
+  imageUrl: string;
+  imageAlt: string;
+  options: string;
+  addOption: string;
+  generateVariants: string;
+  addOptionsHint: string;
+  optionName: string;
+  optionNamePlaceholder: string;
+  optionValues: string;
+  optionValuesPlaceholder: string;
+  variantOptionValuesPlaceholder: string;
+  variants: string;
+  addVariant: string;
+  allowBackorder: string;
+  noProducts: string;
+  noProductsHint: string;
+  productsList: string;
+  importExport: string;
+  importCsvButton: string;
+  exportFiltered: string;
+  duplicate: string;
+  edit: string;
+  removeVariant: string;
+  seoDescription: string;
+  seoTitle: string;
+  trackInventory: string;
+  variantLabel: (index: number) => string;
+  generatedVariants: (count: number) => string;
+}>;
 
 type Draft = {
   productId?: string;
@@ -402,6 +717,7 @@ function parseImportCsv(locale: Locale, text: string) {
 }
 
 export default function ProductManagerClient({ locale, siteTitle, initialProducts }: ProductManagerClientProps) {
+  const copy = COPY[locale];
   const [products, setProducts] = useState(initialProducts);
   const [draft, setDraft] = useState<Draft>(emptyDraft);
   const [search, setSearch] = useState('');
@@ -462,8 +778,8 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
     try {
       const response = await fetch(
         draft.productId
-          ? `/api/builder/commerce/products/${encodeURIComponent(draft.productId)}`
-          : '/api/builder/commerce/products',
+          ? `/api/builder/commerce/products/${encodeURIComponent(draft.productId)}?locale=${encodeURIComponent(locale)}`
+          : `/api/builder/commerce/products?locale=${encodeURIComponent(locale)}`,
         {
           method: draft.productId ? 'PATCH' : 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -487,7 +803,7 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
     setBusy(true);
     setNotice(`${action} pending`);
     try {
-      const response = await fetch(`/api/builder/commerce/products/${encodeURIComponent(productId)}`, {
+      const response = await fetch(`/api/builder/commerce/products/${encodeURIComponent(productId)}?locale=${encodeURIComponent(locale)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action }),
@@ -509,7 +825,7 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
     setBusy(true);
     setNotice('Bulk update pending');
     try {
-      const response = await fetch('/api/builder/commerce/products', {
+      const response = await fetch(`/api/builder/commerce/products?locale=${encodeURIComponent(locale)}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ productIds: selectedIds, status: nextStatus }),
@@ -539,7 +855,7 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
     let failed = 0;
     try {
       for (const row of rows) {
-        const response = await fetch('/api/builder/commerce/products', {
+        const response = await fetch(`/api/builder/commerce/products?locale=${encodeURIComponent(locale)}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(row),
@@ -639,23 +955,23 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
       <header className={styles.header}>
         <div>
           <span>{siteTitle}</span>
-          <h1>Products</h1>
-          <p>Manage products, pricing, inventory, variants, and storefront visibility.</p>
+          <h1>{copy.title}</h1>
+          <p>{copy.subtitle}</p>
         </div>
         <div className={styles.headerActions}>
-          <Link href={`/${locale}/admin-builder/commerce/orders`}>Orders</Link>
-          <Link href={`/${locale}/admin-builder/commerce/payments`}>Payments</Link>
-          <Link href={`/${locale}/admin-builder/commerce/currency`}>Currency</Link>
-          <Link href={`/${locale}/admin-builder/commerce/tax`}>Tax rules</Link>
-          <Link href={`/${locale}/admin-builder/commerce/shipping`}>Shipping</Link>
-          <Link href={`/${locale}/admin-builder/commerce/notifications`}>Notifications</Link>
-          <Link href={`/${locale}/admin-builder/commerce/webhooks`}>Webhooks</Link>
-          <button type="button" onClick={() => setDraft(emptyDraft)} data-commerce-add-product>Add product</button>
-          <button type="button" onClick={() => setTransferText(productCsv(filtered))} data-commerce-product-export="header">Export CSV</button>
+          <Link href={`/${locale}/admin-builder/commerce/orders`}>{copy.orders}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/payments`}>{copy.payments}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/currency`}>{copy.currency}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/tax`}>{copy.taxRules}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/shipping`}>{copy.shipping}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/notifications`}>{copy.notifications}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/webhooks`}>{copy.webhooks}</Link>
+          <button type="button" onClick={() => setDraft(emptyDraft)} data-commerce-add-product>{copy.addProduct}</button>
+          <button type="button" onClick={() => { const csv = productCsv(filtered); setTransferText(csv); downloadText('products.csv', csv); }} data-commerce-product-export="header">{copy.exportCsv}</button>
         </div>
       </header>
 
-      <section className={styles.kpis} aria-label="Product stats">
+      <section className={styles.kpis} aria-label={copy.productStats}>
         {Object.entries(counts).map(([key, value]) => (
           <article key={key} data-commerce-products-kpi={key.replace(/[A-Z]/g, (match) => `-${match.toLowerCase()}`)}>
             <strong>{value}</strong>
@@ -668,106 +984,106 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
         <input
           value={search}
           onChange={(event) => setSearch(event.target.value)}
-          placeholder="Search title, SKU, tag, category"
+          placeholder={copy.searchPlaceholder}
           data-commerce-products-search
         />
         <select value={status} onChange={(event) => setStatus(event.target.value as StatusFilter)} data-commerce-products-status-filter>
-          <option value="all">All statuses</option>
-          <option value="active">Active</option>
-          <option value="draft">Draft</option>
-          <option value="archived">Archived</option>
+          <option value="all">{copy.allStatuses}</option>
+          <option value="active">{copy.active}</option>
+          <option value="draft">{copy.draft}</option>
+          <option value="archived">{copy.archived}</option>
         </select>
         <select value={category} onChange={(event) => setCategory(event.target.value)} data-commerce-products-category-filter>
-          <option value="all">All categories</option>
+          <option value="all">{copy.allCategories}</option>
           {categories.map((item) => <option key={item} value={item}>{item}</option>)}
         </select>
         <select value={stock} onChange={(event) => setStock(event.target.value as StockFilter)} data-commerce-products-stock-filter>
-          <option value="all">All stock</option>
-          <option value="in-stock">In stock</option>
-          <option value="low-stock">Low stock</option>
-          <option value="out-of-stock">Out of stock</option>
-          <option value="backorder">Backorder</option>
+          <option value="all">{copy.allStock}</option>
+          <option value="in-stock">{copy.inStock}</option>
+          <option value="low-stock">{copy.lowStockFilter}</option>
+          <option value="out-of-stock">{copy.outOfStock}</option>
+          <option value="backorder">{copy.backorder}</option>
         </select>
         <select value={sort} onChange={(event) => setSort(event.target.value as SortBy)} data-commerce-products-sort>
-          <option value="updated-desc">Recently updated</option>
-          <option value="title-asc">Title</option>
-          <option value="price-asc">Price low-high</option>
-          <option value="price-desc">Price high-low</option>
+          <option value="updated-desc">{copy.recentlyUpdated}</option>
+          <option value="title-asc">{copy.titleSort}</option>
+          <option value="price-asc">{copy.priceLowHigh}</option>
+          <option value="price-desc">{copy.priceHighLow}</option>
         </select>
       </section>
 
       {selectedIds.length > 0 ? (
         <section className={styles.bulkBar} data-commerce-products-bulk-bar>
-          <strong>{selectedIds.length} selected</strong>
-          <button type="button" disabled={busy} onClick={() => void applyBulkStatus('active')}>Set active</button>
-          <button type="button" disabled={busy} onClick={() => void applyBulkStatus('draft')}>Set draft</button>
-          <button type="button" disabled={busy} onClick={() => void applyBulkStatus('archived')}>Archive</button>
-          <button type="button" onClick={() => setSelectedIds([])}>Clear</button>
+          <strong>{copy.selected(selectedIds.length)}</strong>
+          <button type="button" disabled={busy} onClick={() => void applyBulkStatus('active')}>{copy.setActive}</button>
+          <button type="button" disabled={busy} onClick={() => void applyBulkStatus('draft')}>{copy.setDraft}</button>
+          <button type="button" disabled={busy} onClick={() => void applyBulkStatus('archived')}>{copy.archive}</button>
+          <button type="button" onClick={() => setSelectedIds([])}>{copy.clear}</button>
         </section>
       ) : null}
 
       <section className={styles.shell}>
         <form className={styles.editor} data-commerce-product-editor onSubmit={(event) => { event.preventDefault(); void saveDraft(); }}>
           <div className={styles.panelHead}>
-            <h2>{draft.productId ? 'Edit product' : 'Add product'}</h2>
-            <button type="button" onClick={() => setDraft(emptyDraft)}>Reset</button>
+            <h2>{draft.productId ? copy.editProduct : copy.addProductHeading}</h2>
+            <button type="button" onClick={() => setDraft(emptyDraft)}>{copy.reset}</button>
           </div>
-          <label><span>Title</span><input required value={draft.title} onChange={(event) => setDraft({ ...draft, title: event.target.value })} data-commerce-product-title /></label>
-          <label><span>Slug</span><input value={draft.slug} onChange={(event) => setDraft({ ...draft, slug: event.target.value })} placeholder="Auto generated if empty" /></label>
-          <label><span>Description</span><textarea required rows={3} value={draft.description} onChange={(event) => setDraft({ ...draft, description: event.target.value })} data-commerce-product-description /></label>
-          <label><span>Body</span><textarea rows={4} value={draft.body} onChange={(event) => setDraft({ ...draft, body: event.target.value })} /></label>
+          <label><span>{copy.titleLabel}</span><input required value={draft.title} onChange={(event) => setDraft({ ...draft, title: event.target.value })} data-commerce-product-title /></label>
+          <label><span>{copy.slug}</span><input value={draft.slug} onChange={(event) => setDraft({ ...draft, slug: event.target.value })} placeholder={copy.slugPlaceholder} /></label>
+          <label><span>{copy.description}</span><textarea required rows={3} value={draft.description} onChange={(event) => setDraft({ ...draft, description: event.target.value })} data-commerce-product-description /></label>
+          <label><span>{copy.body}</span><textarea rows={4} value={draft.body} onChange={(event) => setDraft({ ...draft, body: event.target.value })} /></label>
           <div className={styles.grid2}>
-            <label><span>Status</span><select value={draft.status} onChange={(event) => setDraft({ ...draft, status: event.target.value as CommerceProductStatus })} data-commerce-product-status-input><option value="draft">Draft</option><option value="active">Active</option><option value="archived">Archived</option></select></label>
-            <label><span>SKU</span><input required value={draft.sku} onChange={(event) => setDraft({ ...draft, sku: event.target.value })} data-commerce-product-sku /></label>
-            <label><span>Price</span><input type="number" min="0" step="0.01" value={draft.price} onChange={(event) => setDraft({ ...draft, price: event.target.value })} data-commerce-product-price /></label>
-            <label><span>Compare at</span><input type="number" min="0" step="0.01" value={draft.compareAtPrice} onChange={(event) => setDraft({ ...draft, compareAtPrice: event.target.value })} /></label>
-            <label><span>Currency</span><select value={draft.currency} onChange={(event) => setDraft({ ...draft, currency: event.target.value as CommerceCurrency })}><option value="TWD">TWD</option><option value="KRW">KRW</option><option value="USD">USD</option></select></label>
-            <label><span>Quantity</span><input type="number" min="0" value={draft.quantity} onChange={(event) => setDraft({ ...draft, quantity: event.target.value })} data-commerce-product-quantity /></label>
-            <label><span>Low stock</span><input type="number" min="0" value={draft.lowStockThreshold} onChange={(event) => setDraft({ ...draft, lowStockThreshold: event.target.value })} data-commerce-product-low-stock /></label>
-            <label><span>Categories</span><input value={draft.categoryIds} onChange={(event) => setDraft({ ...draft, categoryIds: event.target.value })} data-commerce-product-categories /></label>
+            <label><span>{copy.status}</span><select value={draft.status} onChange={(event) => setDraft({ ...draft, status: event.target.value as CommerceProductStatus })} data-commerce-product-status-input><option value="draft">{copy.draft}</option><option value="active">{copy.active}</option><option value="archived">{copy.archived}</option></select></label>
+            <label><span>{copy.sku}</span><input required value={draft.sku} onChange={(event) => setDraft({ ...draft, sku: event.target.value })} data-commerce-product-sku /></label>
+            <label><span>{copy.price}</span><input type="number" min="0" step="0.01" value={draft.price} onChange={(event) => setDraft({ ...draft, price: event.target.value })} data-commerce-product-price /></label>
+            <label><span>{copy.compareAt}</span><input type="number" min="0" step="0.01" value={draft.compareAtPrice} onChange={(event) => setDraft({ ...draft, compareAtPrice: event.target.value })} /></label>
+            <label><span>{copy.currency}</span><select value={draft.currency} onChange={(event) => setDraft({ ...draft, currency: event.target.value as CommerceCurrency })}><option value="TWD">TWD</option><option value="KRW">KRW</option><option value="USD">USD</option></select></label>
+            <label><span>{copy.quantity}</span><input type="number" min="0" value={draft.quantity} onChange={(event) => setDraft({ ...draft, quantity: event.target.value })} data-commerce-product-quantity /></label>
+            <label><span>{copy.lowStock}</span><input type="number" min="0" value={draft.lowStockThreshold} onChange={(event) => setDraft({ ...draft, lowStockThreshold: event.target.value })} data-commerce-product-low-stock /></label>
+            <label><span>{copy.categories}</span><input value={draft.categoryIds} onChange={(event) => setDraft({ ...draft, categoryIds: event.target.value })} data-commerce-product-categories /></label>
           </div>
-          <label><span>Tags</span><input value={draft.tags} onChange={(event) => setDraft({ ...draft, tags: event.target.value })} /></label>
-          <label><span>Image URL</span><input value={draft.mediaUrl} onChange={(event) => setDraft({ ...draft, mediaUrl: event.target.value })} /></label>
-          <label><span>Image alt</span><input value={draft.mediaAlt} onChange={(event) => setDraft({ ...draft, mediaAlt: event.target.value })} /></label>
+          <label><span>{copy.tags}</span><input value={draft.tags} onChange={(event) => setDraft({ ...draft, tags: event.target.value })} /></label>
+          <label><span>{copy.imageUrl}</span><input value={draft.mediaUrl} onChange={(event) => setDraft({ ...draft, mediaUrl: event.target.value })} /></label>
+          <label><span>{copy.imageAlt}</span><input value={draft.mediaAlt} onChange={(event) => setDraft({ ...draft, mediaAlt: event.target.value })} /></label>
           <section className={styles.variantSection} data-commerce-product-options>
             <div className={styles.panelHead}>
-              <h3>Options</h3>
+              <h3>{copy.options}</h3>
               <div>
-                <button type="button" onClick={addOption} data-commerce-product-option-add>Add option</button>
-                <button type="button" onClick={generateVariantsFromOptions} data-commerce-product-variants-generate>Generate variants</button>
+                <button type="button" onClick={addOption} data-commerce-product-option-add>{copy.addOption}</button>
+                <button type="button" onClick={generateVariantsFromOptions} data-commerce-product-variants-generate>{copy.generateVariants}</button>
               </div>
             </div>
             {draft.options.length === 0 ? (
-              <p className={styles.muted}>Add options such as Format or Region, then generate variant rows.</p>
+              <p className={styles.muted}>{copy.addOptionsHint}</p>
             ) : draft.options.map((option, index) => (
               <div key={`${option.optionId}-${index}`} className={styles.optionRow} data-commerce-product-option-row>
                 <label>
-                  <span>Name</span>
+                  <span>{copy.optionName}</span>
                   <input
                     value={option.name}
                     onChange={(event) => updateOption(index, { name: event.target.value })}
-                    placeholder="Format"
+                    placeholder={copy.optionNamePlaceholder}
                     data-commerce-product-option-name
                   />
                 </label>
                 <label>
-                  <span>Values</span>
+                  <span>{copy.optionValues}</span>
                   <input
                     value={option.values}
                     onChange={(event) => updateOption(index, { values: event.target.value })}
-                    placeholder="PDF, Consultation"
+                    placeholder={copy.optionValuesPlaceholder}
                     data-commerce-product-option-values
                   />
                 </label>
-                <button type="button" onClick={() => removeOption(index)} data-commerce-product-option-remove>Remove</button>
+                <button type="button" onClick={() => removeOption(index)} data-commerce-product-option-remove>{copy.clear}</button>
               </div>
             ))}
           </section>
 
           <section className={styles.variantSection} data-commerce-product-variants>
             <div className={styles.panelHead}>
-              <h3>Variants</h3>
-              <button type="button" onClick={addVariant} data-commerce-product-variant-add>Add variant</button>
+              <h3>{copy.variants}</h3>
+              <button type="button" onClick={addVariant} data-commerce-product-variant-add>{copy.addVariant}</button>
             </div>
             {draft.variants.map((variant, index) => {
               const availability = variantAvailability(variant, draft.trackInventory);
@@ -779,48 +1095,48 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
                   data-commerce-product-variant-availability={availability}
                 >
                   <div className={styles.variantHead}>
-                    <strong>{variant.title || `Variant ${index + 1}`}</strong>
+                    <strong>{variant.title || copy.variantLabel(index)}</strong>
                     <span>{availability}</span>
                   </div>
                   <div className={styles.grid2}>
-                    <label><span>Title</span><input value={variant.title} onChange={(event) => updateVariant(index, { title: event.target.value })} data-commerce-product-variant-title /></label>
-                    <label><span>SKU</span><input value={variant.sku} onChange={(event) => updateVariant(index, { sku: event.target.value })} data-commerce-product-variant-sku /></label>
-                    <label><span>Option values</span><input value={variant.optionValues} onChange={(event) => updateVariant(index, { optionValues: event.target.value })} placeholder="Format=PDF" data-commerce-product-variant-option-values /></label>
-                    <label><span>Status</span><select value={variant.status} onChange={(event) => updateVariant(index, { status: event.target.value as CommerceProductVariantStatus })} data-commerce-product-variant-status><option value="active">Active</option><option value="disabled">Disabled</option></select></label>
-                    <label><span>Price</span><input type="number" min="0" step="0.01" value={variant.price} onChange={(event) => updateVariant(index, { price: event.target.value })} data-commerce-product-variant-price /></label>
-                    <label><span>Compare at</span><input type="number" min="0" step="0.01" value={variant.compareAtPrice} onChange={(event) => updateVariant(index, { compareAtPrice: event.target.value })} /></label>
-                    <label><span>Quantity</span><input type="number" min="0" value={variant.quantity} onChange={(event) => updateVariant(index, { quantity: event.target.value })} data-commerce-product-variant-quantity /></label>
-                    <label><span>Low stock</span><input type="number" min="0" value={variant.lowStockThreshold} onChange={(event) => updateVariant(index, { lowStockThreshold: event.target.value })} data-commerce-product-variant-low-stock /></label>
-                    <label><span>Media ID</span><input value={variant.mediaId} onChange={(event) => updateVariant(index, { mediaId: event.target.value })} data-commerce-product-variant-media-id /></label>
-                    <label><span>Image URL</span><input value={variant.mediaUrl} onChange={(event) => updateVariant(index, { mediaUrl: event.target.value })} data-commerce-product-variant-media-url /></label>
+                    <label><span>{copy.titleLabel}</span><input value={variant.title} onChange={(event) => updateVariant(index, { title: event.target.value })} data-commerce-product-variant-title /></label>
+                    <label><span>{copy.sku}</span><input value={variant.sku} onChange={(event) => updateVariant(index, { sku: event.target.value })} data-commerce-product-variant-sku /></label>
+                    <label><span>{locale === 'ko' ? '옵션 값' : locale === 'zh-hant' ? '選項值' : 'Option values'}</span><input value={variant.optionValues} onChange={(event) => updateVariant(index, { optionValues: event.target.value })} placeholder={copy.variantOptionValuesPlaceholder} data-commerce-product-variant-option-values /></label>
+                    <label><span>{copy.status}</span><select value={variant.status} onChange={(event) => updateVariant(index, { status: event.target.value as CommerceProductVariantStatus })} data-commerce-product-variant-status><option value="active">{copy.active}</option><option value="disabled">{locale === 'ko' ? '비활성' : locale === 'zh-hant' ? '已停用' : 'Disabled'}</option></select></label>
+                    <label><span>{copy.price}</span><input type="number" min="0" step="0.01" value={variant.price} onChange={(event) => updateVariant(index, { price: event.target.value })} data-commerce-product-variant-price /></label>
+                    <label><span>{copy.compareAt}</span><input type="number" min="0" step="0.01" value={variant.compareAtPrice} onChange={(event) => updateVariant(index, { compareAtPrice: event.target.value })} /></label>
+                    <label><span>{copy.quantity}</span><input type="number" min="0" value={variant.quantity} onChange={(event) => updateVariant(index, { quantity: event.target.value })} data-commerce-product-variant-quantity /></label>
+                    <label><span>{copy.lowStock}</span><input type="number" min="0" value={variant.lowStockThreshold} onChange={(event) => updateVariant(index, { lowStockThreshold: event.target.value })} data-commerce-product-variant-low-stock /></label>
+                    <label><span>{locale === 'ko' ? '미디어 ID' : locale === 'zh-hant' ? '媒體 ID' : 'Media ID'}</span><input value={variant.mediaId} onChange={(event) => updateVariant(index, { mediaId: event.target.value })} data-commerce-product-variant-media-id /></label>
+                    <label><span>{copy.imageUrl}</span><input value={variant.mediaUrl} onChange={(event) => updateVariant(index, { mediaUrl: event.target.value })} data-commerce-product-variant-media-url /></label>
                   </div>
                   <div className={styles.variantActions}>
-                    <label><input type="checkbox" checked={variant.allowBackorder} onChange={(event) => updateVariant(index, { allowBackorder: event.target.checked })} data-commerce-product-variant-backorder />Allow backorder</label>
+                    <label><input type="checkbox" checked={variant.allowBackorder} onChange={(event) => updateVariant(index, { allowBackorder: event.target.checked })} data-commerce-product-variant-backorder />{copy.backorder}</label>
                     {variant.mediaUrl ? <img src={variant.mediaUrl} alt="" data-commerce-product-variant-image /> : null}
-                    <button type="button" onClick={() => removeVariant(index)} data-commerce-product-variant-remove>Remove variant</button>
+                    <button type="button" onClick={() => removeVariant(index)} data-commerce-product-variant-remove>{copy.removeVariant}</button>
                   </div>
                 </article>
               );
             })}
           </section>
           <div className={styles.grid2}>
-            <label><span>SEO title</span><input value={draft.seoTitle} onChange={(event) => setDraft({ ...draft, seoTitle: event.target.value })} /></label>
-            <label><span>SEO description</span><input value={draft.seoDescription} onChange={(event) => setDraft({ ...draft, seoDescription: event.target.value })} /></label>
+            <label><span>{copy.seoTitle}</span><input value={draft.seoTitle} onChange={(event) => setDraft({ ...draft, seoTitle: event.target.value })} /></label>
+            <label><span>{copy.seoDescription}</span><input value={draft.seoDescription} onChange={(event) => setDraft({ ...draft, seoDescription: event.target.value })} /></label>
           </div>
           <div className={styles.checks}>
-            <label><input type="checkbox" checked={draft.trackInventory} onChange={(event) => setDraft({ ...draft, trackInventory: event.target.checked })} data-commerce-product-track-inventory />Track inventory</label>
-            <label><input type="checkbox" checked={draft.allowBackorder} onChange={(event) => setDraft({ ...draft, allowBackorder: event.target.checked })} data-commerce-product-allow-backorder />Allow backorder</label>
+            <label><input type="checkbox" checked={draft.trackInventory} onChange={(event) => setDraft({ ...draft, trackInventory: event.target.checked })} data-commerce-product-track-inventory />{copy.trackInventory}</label>
+            <label><input type="checkbox" checked={draft.allowBackorder} onChange={(event) => setDraft({ ...draft, allowBackorder: event.target.checked })} data-commerce-product-allow-backorder />{copy.allowBackorder}</label>
           </div>
-          <button type="submit" disabled={busy} data-commerce-product-save>{draft.productId ? 'Save product' : 'Create product'}</button>
+          <button type="submit" disabled={busy} data-commerce-product-save>{draft.productId ? (locale === 'ko' ? '제품 저장' : locale === 'zh-hant' ? '儲存產品' : 'Save product') : (locale === 'ko' ? '제품 생성' : locale === 'zh-hant' ? '建立產品' : 'Create product')}</button>
           <p role="status" className={styles.notice}>{notice}</p>
         </form>
 
-        <section className={styles.list} aria-label="Products list">
+        <section className={styles.list} aria-label={copy.productsList}>
           {filtered.length === 0 ? (
             <article className={styles.empty} data-commerce-products-empty>
-              <strong>No products yet</strong>
-              <span>Add your first product to power product galleries, product pages, cart, and checkout.</span>
-              <button type="button" onClick={() => setDraft(emptyDraft)} data-commerce-add-product>Add product</button>
+              <strong>{copy.noProducts}</strong>
+              <span>{copy.noProductsHint}</span>
+              <button type="button" onClick={() => setDraft(emptyDraft)} data-commerce-add-product>{copy.addProduct}</button>
             </article>
           ) : (
             filtered.map((product) => {
@@ -847,7 +1163,7 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
                   <div className={styles.identity}>
                     <strong>{product.title}</strong>
                     <span>/{product.slug}</span>
-                    <small>{product.categoryIds.join(', ') || 'Uncategorized'}</small>
+                    <small>{product.categoryIds.join(', ') || (locale === 'ko' ? '분류 없음' : locale === 'zh-hant' ? '未分類' : 'Uncategorized')}</small>
                   </div>
                   <div className={styles.meta}>
                     <span>{product.sku}</span>
@@ -856,12 +1172,12 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
                   <div className={styles.chips}>
                     <span>{product.status}</span>
                     <span>{state}</span>
-                    <span>{product.variants.length} variants</span>
+                    <span>{product.variants.length} {locale === 'ko' ? '변형' : locale === 'zh-hant' ? '變體' : 'variants'}</span>
                   </div>
                   <div className={styles.actions}>
-                    <button type="button" onClick={() => setDraft(productToDraft(product))} data-commerce-product-action="edit">Edit</button>
-                    <button type="button" disabled={busy} onClick={() => void runProductAction(product.productId, 'duplicate')} data-commerce-product-action="duplicate">Duplicate</button>
-                    <button type="button" disabled={busy} onClick={() => void runProductAction(product.productId, 'archive')} data-commerce-product-action="archive">Archive</button>
+                    <button type="button" onClick={() => setDraft(productToDraft(product))} data-commerce-product-action="edit">{copy.edit}</button>
+                    <button type="button" disabled={busy} onClick={() => void runProductAction(product.productId, 'duplicate')} data-commerce-product-action="duplicate">{copy.duplicate}</button>
+                    <button type="button" disabled={busy} onClick={() => void runProductAction(product.productId, 'archive')} data-commerce-product-action="archive">{copy.archive}</button>
                   </div>
                 </article>
               );
@@ -872,19 +1188,19 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
 
       <section className={styles.transfer}>
         <div className={styles.panelHead}>
-          <h2>Import / Export CSV</h2>
+          <h2>{copy.importExport}</h2>
           <div>
-            <button type="button" onClick={() => setTransferText(productCsv(filtered))} data-commerce-product-export="filtered">Export filtered</button>
-            <button type="button" disabled={busy} onClick={() => void importCsv()} data-commerce-product-import>Import CSV</button>
+            <button type="button" onClick={() => { const csv = productCsv(filtered); setTransferText(csv); downloadText('products.csv', csv); }} data-commerce-product-export="filtered">{copy.exportFiltered}</button>
+            <button type="button" disabled={busy} onClick={() => void importCsv()} data-commerce-product-import>{copy.importCsvButton}</button>
           </div>
         </div>
-        <textarea
-          value={transferText}
-          onChange={(event) => setTransferText(event.target.value)}
-          rows={6}
-          placeholder="title,sku,price,currency,status,quantity,categories,tags,description"
-          data-commerce-product-import-text
-        />
+          <textarea
+            value={transferText}
+            onChange={(event) => setTransferText(event.target.value)}
+            rows={6}
+            placeholder={locale === 'ko' ? '제목,SKU,가격,통화,상태,수량,카테고리,태그,설명' : locale === 'zh-hant' ? '標題,SKU,價格,幣別,狀態,數量,類別,標籤,描述' : 'title,sku,price,currency,status,quantity,categories,tags,description'}
+            data-commerce-product-import-text
+          />
       </section>
     </main>
   );

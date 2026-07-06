@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { createHistory, pushHistory, redoHistory, undoHistory } from '@/lib/builder/canvas/history';
+import {
+  createHistory,
+  jumpHistory,
+  pushHistory,
+  redoHistory,
+  renameHistoryEntry,
+  undoHistory,
+} from '@/lib/builder/canvas/history';
 
 type TestDocument = {
   id: string;
@@ -56,5 +63,40 @@ describe('canvas history', () => {
     expect(branched.canRedo).toBe(false);
     expect(redoHistory(branched)).toBeNull();
     expect(branched.entries[2]?.snapshot.nodes[0]).toBe(sharedNode);
+  });
+
+  it('jumps directly to an indexed snapshot and preserves the redo branch', () => {
+    let history = createHistory(doc(0));
+    history = pushHistory(history, doc(1));
+    history = pushHistory(history, doc(2));
+
+    const jumpToInitial = jumpHistory(history, 0);
+    expect(jumpToInitial?.snapshot.id).toBe('doc-0');
+    expect(jumpToInitial?.state.cursor).toBe(0);
+    expect(jumpToInitial?.state.canUndo).toBe(false);
+    expect(jumpToInitial?.state.canRedo).toBe(true);
+
+    const jumpToLatest = jumpHistory(jumpToInitial!.state, 2);
+    expect(jumpToLatest?.snapshot.id).toBe('doc-2');
+    expect(jumpToLatest?.state.cursor).toBe(2);
+    expect(jumpToLatest?.state.canUndo).toBe(true);
+    expect(jumpToLatest?.state.canRedo).toBe(false);
+  });
+
+  it('stores and clears an explicit history entry name without mutating snapshots', () => {
+    let history = createHistory(doc(0));
+    history = pushHistory(history, doc(1));
+
+    const named = renameHistoryEntry(history, 1, '  Attorney hero aligned  ');
+
+    expect(named?.entries[1]?.name).toBe('Attorney hero aligned');
+    expect(named?.entries[1]?.snapshot).toBe(history.entries[1]?.snapshot);
+    expect(named?.cursor).toBe(history.cursor);
+    expect(named?.canUndo).toBe(history.canUndo);
+
+    const cleared = renameHistoryEntry(named!, 1, '   ');
+
+    expect(cleared?.entries[1]?.name).toBeUndefined();
+    expect(cleared?.entries[1]?.snapshot).toBe(history.entries[1]?.snapshot);
   });
 });

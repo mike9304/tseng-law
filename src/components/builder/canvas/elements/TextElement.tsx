@@ -2,7 +2,10 @@ import type { CSSProperties, ReactNode } from 'react';
 import type { BuilderTextCanvasNode } from '@/lib/builder/canvas/types';
 import { fontFamilyCSS } from '@/lib/builder/canvas/fonts';
 import { RichTextRenderer } from '@/lib/builder/rich-text/render';
+import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import type { BuilderTheme } from '@/lib/builder/site/types';
+import type { Locale } from '@/lib/locales';
+import { localizedTextDefault, TEXT_LEGACY_DEFAULT_TEXT } from '@/lib/builder/components/text/text-copy';
 import {
   resolveFontWeightCss,
   resolveThemeColor,
@@ -39,12 +42,16 @@ function textPathD(curve?: string, baseline = 62): string {
   return `M 54 ${baseline + 28} C 250 ${baseline - 54}, 750 ${baseline - 54}, 946 ${baseline + 28}`;
 }
 
-function renderTextContent(node: BuilderTextCanvasNode, richTextMode: 'block' | 'heading'): ReactNode {
-  if (!node.content.richText) return node.content.text;
+function renderTextContent(
+  text: string,
+  richText: BuilderTextCanvasNode['content']['richText'],
+  richTextMode: 'block' | 'heading',
+): ReactNode {
+  if (!richText) return text;
   return (
     <RichTextRenderer
-      richText={node.content.richText}
-      fallbackText={node.content.text}
+      richText={richText}
+      fallbackText={text}
       mode={richTextMode}
     />
   );
@@ -82,9 +89,11 @@ function wrapWithLink(
 function TextPath({
   node,
   theme,
+  text,
 }: {
   node: BuilderTextCanvasNode;
   theme?: BuilderTheme;
+  text: string;
 }) {
   const typography = resolveThemeTextTypography(node.content, theme);
   const fontFamily = typography.fontFamily
@@ -97,7 +106,7 @@ function TextPath({
     <svg
       viewBox="0 0 1000 180"
       role="img"
-      aria-label={node.content.text}
+      aria-label={text}
       preserveAspectRatio="none"
       style={{ width: '100%', height: '100%', overflow: 'visible', display: 'block' }}
     >
@@ -121,7 +130,7 @@ function TextPath({
           href={`#${pathId}`}
           startOffset={node.content.align === 'center' ? '50%' : node.content.align === 'right' ? '100%' : '0%'}
         >
-          {node.content.text}
+          {text}
         </textPath>
       </text>
     </svg>
@@ -132,17 +141,23 @@ export default function TextElement({
   node,
   theme,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderTextCanvasNode;
   theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const { className, as } = node.content;
   const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
   const richTextMode = richTextModeForTag(Tag);
+  const text = localizedTextDefault(node.content.text, locale);
+  const richText = node.content.text === TEXT_LEGACY_DEFAULT_TEXT
+    ? richTextFromPlainText(text)
+    : node.content.richText;
 
   if (as === 'input') {
-    const placeholder = node.content.placeholder ?? node.content.text;
+    const placeholder = node.content.placeholder ?? text;
     return (
       <input
         className={className}
@@ -152,12 +167,14 @@ export default function TextElement({
         aria-label={node.content.ariaLabel ?? placeholder}
         readOnly={mode === 'edit'}
         defaultValue=""
+        suppressHydrationWarning
         style={{
           width: '100%',
           height: '100%',
           margin: 0,
           boxSizing: 'border-box',
           pointerEvents: mode === 'edit' ? 'none' : undefined,
+          caretColor: mode === 'edit' ? 'transparent' : undefined,
         }}
       />
     );
@@ -170,10 +187,15 @@ export default function TextElement({
         style={{
           margin: 0,
           whiteSpace: 'pre-wrap',
-          wordBreak: 'break-word',
+          // Inherit the site's word-break (the live Korean site uses
+          // `word-break: keep-all`, propagated through the canvas) instead of
+          // hard-forcing `break-word`, which made decomposed Korean text wrap
+          // mid-word (e.g. "한국어로" → "한국"/"어로") and diverge from the live
+          // site. overflow-wrap still breaks genuinely overflowing long tokens.
+          overflowWrap: 'break-word',
         }}
       >
-        {renderTextContent(node, richTextMode)}
+        {renderTextContent(text, richText, richTextMode)}
       </Tag>
     ));
   }
@@ -208,7 +230,7 @@ export default function TextElement({
   }
 
   const child = node.content.textPath?.enabled ? (
-    <TextPath node={node} theme={theme} />
+    <TextPath node={node} theme={theme} text={text} />
   ) : node.content.marquee?.enabled ? (
     <span
       className="builder-text-marquee"
@@ -217,10 +239,10 @@ export default function TextElement({
         animationDirection: node.content.marquee.direction === 'right' ? 'reverse' : 'normal',
       }}
     >
-      {node.content.text}
+      {text}
     </span>
   ) : (
-    <ContentTag style={contentStyle}>{renderTextContent(node, richTextMode)}</ContentTag>
+    <ContentTag style={contentStyle}>{renderTextContent(text, richText, richTextMode)}</ContentTag>
   );
 
   return wrapWithLink(node, mode, (
@@ -243,7 +265,10 @@ export default function TextElement({
         // see when a box is too short for the content. Marquee still hides
         // overflow because it animates through it.
         overflow: node.content.marquee?.enabled ? 'hidden' : 'visible',
-        wordBreak: 'break-word',
+        // Inherit the site's word-break (Korean live site uses keep-all) rather
+        // than forcing break-word, which broke Korean words mid-syllable in the
+        // canvas; overflow-wrap still handles genuinely overflowing long tokens.
+        overflowWrap: 'break-word',
         whiteSpace: node.content.marquee?.enabled ? 'nowrap' : 'pre-wrap',
         textShadow: buildTextShadow(node.content.textShadow),
         backgroundColor: node.content.backgroundColor ? resolveThemeColor(node.content.backgroundColor, theme) : undefined,

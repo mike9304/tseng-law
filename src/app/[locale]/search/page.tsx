@@ -42,7 +42,7 @@ function searchKindLabel(kind: SearchDocKind | 'all', locale: Locale): string {
   if (kind === 'all') return locale === 'ko' ? '전체' : locale === 'zh-hant' ? '全部' : 'All';
   if (kind === 'page') return locale === 'ko' ? '페이지' : locale === 'zh-hant' ? '頁面' : 'Pages';
   if (kind === 'blog') return locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '洞見' : 'Columns';
-  if (kind === 'faq') return 'FAQ';
+  if (kind === 'faq') return locale === 'ko' ? '자주 묻는 질문' : locale === 'zh-hant' ? '常見問題' : 'FAQ';
   return locale === 'ko' ? '포트폴리오' : locale === 'zh-hant' ? '作品集' : 'Portfolio';
 }
 

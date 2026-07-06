@@ -15,6 +15,10 @@ import {
   CUSTOM_CODE_MAX_LENGTH,
   validateSiteCustomCode,
 } from '@/lib/builder/site/custom-code';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -27,43 +31,46 @@ const customCodeSchema = z
   })
   .strict();
 
-function validationErrorResponse(error: ZodError): NextResponse {
+function errorResponse(
+  locale: ReturnType<typeof normalizeLocale>,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...(extra ?? {}) },
+    { status },
   );
+}
+
+function validationErrorResponse(locale: ReturnType<typeof normalizeLocale>, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
 }
 
 export async function GET(request: NextRequest) {
   const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
   try {
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
     const site = await readSiteDocument('default', locale);
     return NextResponse.json({ ok: true, customCode: site.customCode ?? {} });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+  } catch {
+    return errorResponse(locale, 'custom_code_load_failed', 500);
   }
 }
 
 export async function PATCH(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
   try {
     const payload = customCodeSchema.parse(await request.json());
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
     const validation = validateSiteCustomCode(payload);
     if (validation.oversized) {
-      return NextResponse.json(
-        {
-          ok: false,
-          error: 'custom_code_too_long',
-          maxLength: CUSTOM_CODE_MAX_LENGTH,
-          warnings: validation.warnings,
-        },
-        { status: 400 },
-      );
+      return errorResponse(locale, 'custom_code_too_long', 400, {
+        maxLength: CUSTOM_CODE_MAX_LENGTH,
+        warnings: validation.warnings,
+      });
     }
     const site = await readSiteDocument('default', locale);
     const now = new Date().toISOString();
@@ -85,11 +92,10 @@ export async function PATCH(request: NextRequest) {
       warnings: validation.warnings,
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+      return errorResponse(locale, 'invalid_json', 400);
     }
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    return errorResponse(locale, 'custom_code_save_failed', 500);
   }
 }

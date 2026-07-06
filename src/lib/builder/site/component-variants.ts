@@ -707,19 +707,40 @@ export function resolveButtonVariantStyles(
   }
 
   if (variant === 'secondary-solid') {
+    const hasCustomSurface = custom.hasCustomBg && !custom.hasCustomBorder && !custom.hasShadow;
+    const customHoverBackground = custom.backgroundColor ?? custom.backgroundStyle.background ?? 'transparent';
+
     return {
       ...base,
       backgroundStyle: custom.hasCustomBg ? custom.backgroundStyle : { background: secondary },
       color: background,
-      border: custom.hasCustomBorder ? custom.border : `1px solid ${secondary}`,
-      borderColor: custom.hasCustomBorder ? custom.borderColor : secondary,
-      boxShadow: custom.hasShadow ? custom.boxShadow : `0 10px 22px ${colorMix(secondary, 18, 'transparent')}`,
+      border: custom.hasCustomBorder
+        ? custom.border
+        : hasCustomSurface
+          ? '1px solid transparent'
+          : `1px solid ${secondary}`,
+      borderColor: custom.hasCustomBorder
+        ? custom.borderColor
+        : hasCustomSurface
+          ? 'transparent'
+          : secondary,
+      boxShadow: custom.hasShadow
+        ? custom.boxShadow
+        : hasCustomSurface
+          ? 'none'
+          : `0 10px 22px ${colorMix(secondary, 18, 'transparent')}`,
       cssVars: {
         ...base.cssVars,
-        '--builder-button-hover-background': colorMix(secondary, 86, '#000000'),
+        '--builder-button-hover-background': hasCustomSurface
+          ? customHoverBackground
+          : colorMix(secondary, 86, '#000000'),
         '--builder-button-hover-color': background,
-        '--builder-button-hover-border-color': colorMix(secondary, 86, '#000000'),
-        '--builder-button-hover-box-shadow': `0 14px 30px ${colorMix(secondary, 25, 'transparent')}`,
+        '--builder-button-hover-border-color': hasCustomSurface
+          ? 'transparent'
+          : colorMix(secondary, 86, '#000000'),
+        '--builder-button-hover-box-shadow': hasCustomSurface
+          ? 'none'
+          : `0 14px 30px ${colorMix(secondary, 25, 'transparent')}`,
       },
     };
   }

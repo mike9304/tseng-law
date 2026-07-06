@@ -1,21 +1,33 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { z } from 'zod';
 import {
   BuilderCmsPermissionError,
   BuilderCmsValidationError,
-  bulkDeleteEditableBuilderCmsRecords,
   bulkUpdateEditableBuilderCmsRecordStatus,
 } from '@/lib/builder/cms-editable';
+import {
+  bulkRestoreTrashedEditableBuilderCmsRecords,
+  bulkTrashEditableBuilderCmsRecords,
+} from '@/lib/builder/cms-record-trash';
+import { bulkRepairEditableBuilderCmsRecordSlugConflicts } from '@/lib/builder/cms-slug-conflict-repair';
+import { BUILDER_CMS_SLUG_CONFLICT_RULE_VALUES } from '@/lib/builder/cms-slug-conflict-rule';
+import { bulkGenerateEditableBuilderCmsRecordSlugs } from '@/lib/builder/cms-slug-repair';
 import { isBuilderCollectionId } from '@/lib/builder/cms';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { resolveBuilderCmsRouteActor } from '@/lib/builder/cms-route-actor';
+import { recordCmsRecordsBulkLifecycle } from '@/lib/builder/audit/record';
 
-type BulkRecordPayload = {
-  action?: unknown;
-  recordIds?: unknown;
-  status?: unknown;
-  moderationReason?: unknown;
-};
+const bulkRecordPayloadSchema = z.object({
+  action: z.string().optional(),
+  recordIds: z.array(z.string()).optional(),
+  status: z.unknown().optional(),
+  moderationReason: z.unknown().optional(),
+  slugField: z.string().optional(),
+  sourceFieldKey: z.string().optional(),
+  slugPattern: z.string().optional(),
+  slugConflictRule: z.enum(BUILDER_CMS_SLUG_CONFLICT_RULE_VALUES).optional(),
+});
 
 export async function POST(
   request: NextRequest,
@@ -37,12 +49,12 @@ export async function POST(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
-    const payload = await request.json() as BulkRecordPayload;
-    const action = String(payload.action ?? '');
+    const payload = bulkRecordPayloadSchema.parse(await request.json());
+    const action = payload.action ?? '';
     const routeActor = resolveBuilderCmsRouteActor(auth, request);
 
     if (action === 'delete') {
-      const result = await bulkDeleteEditableBuilderCmsRecords(
+      const result = await bulkTrashEditableBuilderCmsRecords(
         params.siteId,
         locale,
         params.collectionId,
@@ -52,6 +64,110 @@ export async function POST(
       if (!result) {
         return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
       }
+      await recordCmsRecordsBulkLifecycle({
+        request,
+        siteId: params.siteId,
+        collectionId: params.collectionId,
+        action,
+        recordIds: auditRecordIds(payload.recordIds),
+        requestedCount: result.requested,
+        changedCount: result.deleted,
+        locale,
+        missingRecordIds: result.missingRecordIds,
+      });
+      return NextResponse.json({ ok: true, actor: routeActor.actor, action, ...result });
+    }
+
+    if (action === 'restore-deleted') {
+      const result = await bulkRestoreTrashedEditableBuilderCmsRecords(
+        params.siteId,
+        locale,
+        params.collectionId,
+        payload.recordIds,
+        routeActor,
+      );
+      if (!result) {
+        return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
+      }
+      await recordCmsRecordsBulkLifecycle({
+        request,
+        siteId: params.siteId,
+        collectionId: params.collectionId,
+        action: 'status',
+        recordIds: auditRecordIds(payload.recordIds),
+        requestedCount: result.requested,
+        changedCount: result.restored,
+        locale,
+        status: 'archived',
+        missingRecordIds: result.missingRecordIds,
+        skippedRecordIds: result.skippedRecordIds,
+      });
+      return NextResponse.json({ ok: true, actor: routeActor.actor, action, ...result });
+    }
+
+    if (action === 'generate-slugs') {
+      const result = await bulkGenerateEditableBuilderCmsRecordSlugs(
+        params.siteId,
+        locale,
+        params.collectionId,
+        payload.recordIds,
+        payload.slugField,
+        routeActor,
+        payload.sourceFieldKey,
+        payload.slugPattern,
+      );
+      if (!result) {
+        return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
+      }
+      await recordCmsRecordsBulkLifecycle({
+        request,
+        siteId: params.siteId,
+        collectionId: params.collectionId,
+        action,
+        recordIds: auditRecordIds(payload.recordIds),
+        requestedCount: result.requested,
+        changedCount: result.updated,
+        locale,
+        slugField: result.slugField,
+        sourceFieldKey: result.sourceFieldKey,
+        slugPattern: result.slugPattern,
+        missingRecordIds: result.missingRecordIds,
+        skippedRecordIds: result.skippedRecordIds,
+      });
+      return NextResponse.json({ ok: true, actor: routeActor.actor, action, ...result });
+    }
+
+    if (action === 'repair-slug-conflicts') {
+      const result = await bulkRepairEditableBuilderCmsRecordSlugConflicts(
+        params.siteId,
+        locale,
+        params.collectionId,
+        payload.recordIds,
+        payload.slugField,
+        routeActor,
+        payload.sourceFieldKey,
+        payload.slugPattern,
+        payload.slugConflictRule,
+      );
+      if (!result) {
+        return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
+      }
+      await recordCmsRecordsBulkLifecycle({
+        request,
+        siteId: params.siteId,
+        collectionId: params.collectionId,
+        action,
+        recordIds: auditRecordIds(payload.recordIds),
+        requestedCount: result.requested,
+        changedCount: result.updated,
+        locale,
+        slugField: result.slugField,
+        sourceFieldKey: result.sourceFieldKey,
+        slugPattern: result.slugPattern,
+        slugConflictRule: result.slugConflictRule,
+        missingRecordIds: result.missingRecordIds,
+        skippedRecordIds: result.skippedRecordIds,
+      });
       return NextResponse.json({ ok: true, actor: routeActor.actor, action, ...result });
     }
 
@@ -68,6 +184,18 @@ export async function POST(
     if (!result) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
     }
+    await recordCmsRecordsBulkLifecycle({
+      request,
+      siteId: params.siteId,
+      collectionId: params.collectionId,
+      action: 'status',
+      recordIds: auditRecordIds(payload.recordIds),
+      requestedCount: result.requested,
+      changedCount: result.updated,
+      locale,
+      status: typeof status === 'string' ? status : undefined,
+      missingRecordIds: result.missingRecordIds,
+    });
     return NextResponse.json({ ok: true, actor: routeActor.actor, action: 'status', status, ...result });
   } catch (error) {
     if (error instanceof BuilderCmsPermissionError) {
@@ -76,6 +204,12 @@ export async function POST(
     if (error instanceof BuilderCmsValidationError) {
       return NextResponse.json(
         { ok: false, error: error.message, issues: error.issues },
+        { status: 400 },
+      );
+    }
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        { ok: false, error: 'Invalid CMS records bulk payload.', issues: error.issues.map((issue) => issue.message) },
         { status: 400 },
       );
     }
@@ -92,4 +226,8 @@ function statusFromBulkAction(action: string, status: unknown) {
   if (action === 'publish') return 'published';
   if (action === 'draft') return 'draft';
   return status;
+}
+
+function auditRecordIds(recordIds: readonly string[] | undefined): readonly string[] {
+  return [...new Set(recordIds ?? [])];
 }

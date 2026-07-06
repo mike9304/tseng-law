@@ -3,6 +3,7 @@
 import { useMemo, useState, useTransition } from 'react';
 import {
   BUILDER_APP_CATEGORIES,
+  type BuilderAppAuditEvent,
   type BuilderAppCatalogEntry,
   type BuilderAppCategory,
   type BuilderAppInstallStatus,
@@ -20,6 +21,315 @@ interface AppMarketClientProps {
   locale: Locale;
   initialEntries: BuilderAppCatalogEntry[];
 }
+
+const copy = {
+  ko: {
+    title: '앱 마켓',
+    description: '로컬 앱 카탈로그와 설치 수명주기를 관리합니다.',
+    noticeReady: '준비됨',
+    search: '검색',
+    searchPlaceholder: '앱, 권한, 위젯 검색',
+    category: '카테고리',
+    allCategories: '전체 카테고리',
+    status: '상태',
+    allStatuses: '전체 상태',
+    installedNativeApps: '설치된 네이티브 앱',
+    installedNativeAppsDesc: '업데이트, 설정, 앱 관리자 화면을 한 곳에서 관리합니다.',
+    installedSuffix: '설치됨',
+    enabledApps: '활성 앱',
+    disabledApps: '비활성 앱',
+    updatesAvailable: '업데이트 가능',
+    settingsPanels: '설정 패널',
+    catalogApps: '카탈로그 앱',
+    widgets: '위젯',
+    adminRoutes: '관리 경로',
+    installed: '설치됨',
+    enabled: '활성',
+    disabled: '비활성',
+    updateAvailable: '업데이트 가능',
+    current: '현재',
+    migrationsOk: '마이그레이션 정상',
+    notInstalled: '미설치',
+    update: '업데이트',
+    install: '설치',
+    enable: '활성화',
+    disable: '비활성화',
+    uninstall: '제거',
+    rollback: '롤백',
+    restore: '복원',
+    settings: '설정',
+    open: '열기',
+    permissions: '권한',
+    appDisabledScopesBlocked: '앱이 비활성화되어 권한이 차단됨',
+    uninstallArchive: '제거 보관함',
+    dataKeptForRestore: '복구를 위해 데이터 보관됨',
+    dataRemovedAuditRetained: '데이터 제거됨 · 감사 로그 유지',
+    latestEvent: '최근 이벤트',
+    uninstallCleanup: '제거 정리',
+    keepData: '복구용 데이터 보관',
+    removeData: '데이터 제거, 감사 로그 유지',
+    migrations: '마이그레이션',
+    installFresh: '새로 설치',
+    noAppsFound: '앱을 찾을 수 없습니다',
+    adjustFilters: '검색, 카테고리, 상태 필터를 조정하세요.',
+    settingsSaved: '설정이 저장되었습니다.',
+    settingsSavePending: '설정 저장 중...',
+    settingsSaveFailed: '설정 저장 실패',
+    actionPending: (action: string) => `${action} 처리 중...`,
+    actionComplete: (action: string) => `${action} 완료`,
+    actionFailed: '앱 작업 실패',
+    required: '필수',
+    selectPlaceholder: '선택',
+    manage: '관리',
+    updatedPrefix: '업데이트',
+    noInstalledApps: '설치된 앱 없음',
+    installNativeAppsHint: '아래 카탈로그에서 네이티브 앱을 설치하면 여기에서 관리할 수 있습니다.',
+    latestVersion: (version: string) => `최신 v${version}`,
+    installedVersion: (version: string) => `설치됨 v${version}`,
+    installedLatestVersion: (installed: string, latest: string) => `설치됨 v${installed} · 최신 v${latest}`,
+    builderVersion: (version: number) => `빌더 v${version}`,
+    compatible: '호환됨',
+    requiresBuilderVersion: (version: number) => `빌더 v${version}+ 필요`,
+    rollbackAvailable: '롤백 가능',
+    rollbackUnavailable: '롤백 불가',
+    previousVersion: (version: string) => `이전 v${version}`,
+    grantedScopesEnforced: (count: number) => `${count}개 권한이 적용됨`,
+    uninstalledAt: (date: string) => `제거됨 ${date}`,
+    latestEventAt: (event: string, date: string) => `${event} · ${date}`,
+    migrationsApplied: (applied: number, total: number) => `${applied}/${total} 마이그레이션 적용됨`,
+    migrationFailures: (count: number) => `${count}개 실패`,
+    migrationIssues: (count: number) => `${count}개 마이그레이션 문제`,
+    latestMigration: (id: string, status: string, date: string) => `최근: ${id} · ${status} · ${date}`,
+    saveSettings: '설정 저장',
+    counts: {
+      widgets: (count: number) => `${count}개 위젯`,
+      settingsPanels: (count: number) => `${count}개 설정 패널`,
+      adminRoutes: (count: number) => `${count}개 관리 경로`,
+      routes: (count: number) => `${count}개 경로`,
+      migrations: (count: number) => `${count}개 마이그레이션`,
+    },
+    auditEvents: {
+      installed: '설치됨',
+      enabled: '활성화됨',
+      disabled: '비활성화됨',
+      upgraded: '업데이트됨',
+      'rolled-back': '롤백됨',
+      restored: '복원됨',
+      'settings-updated': '설정 업데이트됨',
+      'migrations-run': '마이그레이션 실행됨',
+      'migrations-failed': '마이그레이션 실패',
+      uninstalled: '제거됨',
+    },
+    migrationStatus: {
+      applied: '적용됨',
+      failed: '실패',
+    },
+  },
+  'zh-hant': {
+    title: '應用市集',
+    description: '管理本地應用目錄與安裝生命週期。',
+    noticeReady: '就緒',
+    search: '搜尋',
+    searchPlaceholder: '搜尋應用、權限、小工具',
+    category: '類別',
+    allCategories: '所有類別',
+    status: '狀態',
+    allStatuses: '所有狀態',
+    installedNativeApps: '已安裝的原生應用',
+    installedNativeAppsDesc: '在同一處管理更新、設定與應用管理頁面。',
+    installedSuffix: '已安裝',
+    enabledApps: '已啟用應用',
+    disabledApps: '已停用應用',
+    updatesAvailable: '可更新',
+    settingsPanels: '設定面板',
+    catalogApps: '目錄應用',
+    widgets: '小工具',
+    adminRoutes: '管理路徑',
+    installed: '已安裝',
+    enabled: '已啟用',
+    disabled: '已停用',
+    updateAvailable: '可更新',
+    current: '目前',
+    migrationsOk: '遷移正常',
+    notInstalled: '未安裝',
+    update: '更新',
+    install: '安裝',
+    enable: '啟用',
+    disable: '停用',
+    uninstall: '移除',
+    rollback: '回復',
+    restore: '還原',
+    settings: '設定',
+    open: '開啟',
+    permissions: '權限',
+    appDisabledScopesBlocked: '應用已停用；權限已封鎖',
+    uninstallArchive: '解除安裝封存',
+    dataKeptForRestore: '資料已保留以便還原',
+    dataRemovedAuditRetained: '資料已移除 · 保留稽核記錄',
+    latestEvent: '最近事件',
+    uninstallCleanup: '解除安裝清理',
+    keepData: '保留資料以便還原',
+    removeData: '移除資料，保留稽核記錄',
+    migrations: '遷移',
+    installFresh: '全新安裝',
+    noAppsFound: '找不到應用',
+    adjustFilters: '請調整搜尋、類別或狀態篩選。',
+    settingsSaved: '設定已儲存。',
+    settingsSavePending: '設定儲存中...',
+    settingsSaveFailed: '設定儲存失敗',
+    actionPending: (action: string) => `${action}處理中...`,
+    actionComplete: (action: string) => `${action}完成`,
+    actionFailed: '應用操作失敗',
+    required: '必填',
+    selectPlaceholder: '選擇',
+    manage: '管理',
+    updatedPrefix: '更新',
+    noInstalledApps: '尚未安裝應用',
+    installNativeAppsHint: '從下方目錄安裝原生應用後，即可在此管理。',
+    latestVersion: (version: string) => `最新 v${version}`,
+    installedVersion: (version: string) => `已安裝 v${version}`,
+    installedLatestVersion: (installed: string, latest: string) => `已安裝 v${installed} · 最新 v${latest}`,
+    builderVersion: (version: number) => `編輯器 v${version}`,
+    compatible: '相容',
+    requiresBuilderVersion: (version: number) => `需要編輯器 v${version}+`,
+    rollbackAvailable: '可回復',
+    rollbackUnavailable: '無回復點',
+    previousVersion: (version: string) => `前版 v${version}`,
+    grantedScopesEnforced: (count: number) => `已強制套用 ${count} 個權限`,
+    uninstalledAt: (date: string) => `解除安裝於 ${date}`,
+    latestEventAt: (event: string, date: string) => `${event} · ${date}`,
+    migrationsApplied: (applied: number, total: number) => `${applied}/${total} 個遷移已套用`,
+    migrationFailures: (count: number) => `${count} 個失敗`,
+    migrationIssues: (count: number) => `${count} 個遷移問題`,
+    latestMigration: (id: string, status: string, date: string) => `最近：${id} · ${status} · ${date}`,
+    saveSettings: '儲存設定',
+    counts: {
+      widgets: (count: number) => `${count} 個小工具`,
+      settingsPanels: (count: number) => `${count} 個設定面板`,
+      adminRoutes: (count: number) => `${count} 個管理路徑`,
+      routes: (count: number) => `${count} 個路徑`,
+      migrations: (count: number) => `${count} 個遷移`,
+    },
+    auditEvents: {
+      installed: '已安裝',
+      enabled: '已啟用',
+      disabled: '已停用',
+      upgraded: '已更新',
+      'rolled-back': '已回復',
+      restored: '已還原',
+      'settings-updated': '設定已更新',
+      'migrations-run': '遷移已執行',
+      'migrations-failed': '遷移失敗',
+      uninstalled: '已解除安裝',
+    },
+    migrationStatus: {
+      applied: '已套用',
+      failed: '失敗',
+    },
+  },
+  en: {
+    title: 'App Market',
+    description: 'Local app catalog and install lifecycle controls.',
+    noticeReady: 'Ready',
+    search: 'Search',
+    searchPlaceholder: 'Search apps, scopes, widgets',
+    category: 'Category',
+    allCategories: 'All categories',
+    status: 'Status',
+    allStatuses: 'All statuses',
+    installedNativeApps: 'Installed native apps',
+    installedNativeAppsDesc: 'Manage updates, settings, and app admin surfaces from one place.',
+    installedSuffix: 'installed',
+    enabledApps: 'Enabled apps',
+    disabledApps: 'Disabled apps',
+    updatesAvailable: 'Updates available',
+    settingsPanels: 'Settings panels',
+    catalogApps: 'Catalog apps',
+    widgets: 'widgets',
+    adminRoutes: 'admin routes',
+    installed: 'installed',
+    enabled: 'enabled',
+    disabled: 'disabled',
+    updateAvailable: 'update available',
+    current: 'current',
+    migrationsOk: 'migrations ok',
+    notInstalled: 'not installed',
+    update: 'Update',
+    install: 'Install',
+    enable: 'Enable',
+    disable: 'Disable',
+    uninstall: 'Uninstall',
+    rollback: 'Rollback',
+    restore: 'Restore',
+    settings: 'Settings',
+    open: 'Open',
+    permissions: 'permissions',
+    appDisabledScopesBlocked: 'App disabled; scopes blocked',
+    uninstallArchive: 'Uninstall archive',
+    dataKeptForRestore: 'Data kept for restore',
+    dataRemovedAuditRetained: 'Data removed; audit retained',
+    latestEvent: 'Latest event',
+    uninstallCleanup: 'Uninstall cleanup',
+    keepData: 'Keep data for restore',
+    removeData: 'Remove data, keep audit',
+    migrations: 'Migrations',
+    installFresh: 'Install fresh',
+    noAppsFound: 'No apps found',
+    adjustFilters: 'Adjust search, category, or status filters.',
+    settingsSaved: 'settings saved',
+    settingsSavePending: 'settings save pending',
+    settingsSaveFailed: 'Settings save failed',
+    actionPending: (action: string) => `${action} pending`,
+    actionComplete: (action: string) => `${action} complete`,
+    actionFailed: 'App action failed',
+    required: 'Required',
+    selectPlaceholder: 'Select',
+    manage: 'Manage',
+    updatedPrefix: 'updated',
+    noInstalledApps: 'No installed apps',
+    installNativeAppsHint: 'Install native apps from the catalog below to manage them here.',
+    latestVersion: (version: string) => `Latest v${version}`,
+    installedVersion: (version: string) => `Installed v${version}`,
+    installedLatestVersion: (installed: string, latest: string) => `Installed v${installed} · Latest v${latest}`,
+    builderVersion: (version: number) => `Builder v${version}`,
+    compatible: 'Compatible',
+    requiresBuilderVersion: (version: number) => `Requires builder v${version}+`,
+    rollbackAvailable: 'Rollback available',
+    rollbackUnavailable: 'No rollback point',
+    previousVersion: (version: string) => `Previous v${version}`,
+    grantedScopesEnforced: (count: number) => `${count} granted scopes enforced`,
+    uninstalledAt: (date: string) => `Uninstalled at ${date}`,
+    latestEventAt: (event: string, date: string) => `${event} at ${date}`,
+    migrationsApplied: (applied: number, total: number) => `${applied}/${total} migrations applied`,
+    migrationFailures: (count: number) => `${count} failed`,
+    migrationIssues: (count: number) => `${count} migration issues`,
+    latestMigration: (id: string, status: string, date: string) => `Last: ${id} · ${status} at ${date}`,
+    saveSettings: 'Save settings',
+    counts: {
+      widgets: (count: number) => `${count} widgets`,
+      settingsPanels: (count: number) => `${count} settings panels`,
+      adminRoutes: (count: number) => `${count} admin routes`,
+      routes: (count: number) => `${count} routes`,
+      migrations: (count: number) => `${count} migrations`,
+    },
+    auditEvents: {
+      installed: 'installed',
+      enabled: 'enabled',
+      disabled: 'disabled',
+      upgraded: 'upgraded',
+      'rolled-back': 'rolled back',
+      restored: 'restored',
+      'settings-updated': 'settings updated',
+      'migrations-run': 'migrations run',
+      'migrations-failed': 'migrations failed',
+      uninstalled: 'uninstalled',
+    },
+    migrationStatus: {
+      applied: 'applied',
+      failed: 'failed',
+    },
+  },
+} as const;
 
 function entrySearchText(entry: BuilderAppCatalogEntry): string {
   const manifest = entry.manifest;
@@ -91,7 +401,21 @@ function localizedRouteHref(locale: Locale, path: string): string {
   return `/${locale}${path}`;
 }
 
+type AppMarketCopy = (typeof copy)[Locale];
+
+function installationStatusLabel(text: AppMarketCopy, status?: BuilderAppInstallStatus): string {
+  if (status === 'enabled') return text.enabled;
+  if (status === 'disabled') return text.disabled;
+  if (status) return text.installed;
+  return text.notInstalled;
+}
+
+function auditEventLabel(text: AppMarketCopy, type?: BuilderAppAuditEvent['type']): string {
+  return type ? text.auditEvents[type] : text.auditEvents.installed;
+}
+
 export default function AppMarketClient({ locale, initialEntries }: AppMarketClientProps) {
+  const text = copy[locale];
   const [entries, setEntries] = useState(() => sortEntries(initialEntries));
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState<BuilderAppCategory | 'all'>('all');
@@ -101,7 +425,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
   const [settingsDrafts, setSettingsDrafts] = useState<Record<string, SettingsDraft>>({});
   const [settingsErrors, setSettingsErrors] = useState<SettingsErrors>({});
   const [uninstallModes, setUninstallModes] = useState<Record<string, BuilderAppUninstallCleanupMode>>({});
-  const [notice, setNotice] = useState('Ready');
+  const [notice, setNotice] = useState<string>(text.noticeReady);
   const [isPending, startTransition] = useTransition();
 
   const filteredEntries = useMemo(() => {
@@ -171,7 +495,8 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
 
   async function runAction(appId: string, action: 'install' | 'update' | 'enable' | 'disable' | 'rollback' | 'restore' | 'uninstall') {
     setBusyAppId(appId);
-    setNotice(`${action} pending`);
+    const actionLabel = text[action];
+    setNotice(text.actionPending(actionLabel));
     try {
       const isInstallLikeAction = action === 'install' || action === 'update';
       const url = isInstallLikeAction
@@ -197,15 +522,16 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
         manifest?: BuilderAppCatalogEntry['manifest'];
       };
       if (!response.ok || !payload.ok) {
-        throw new Error(payload.error ?? `Request failed (${response.status})`);
+        setNotice(payload.error ?? text.actionFailed);
+        return;
       }
       startTransition(() => {
         if (payload.entry) upsertEntry(payload.entry);
         else if (action === 'uninstall') clearInstallation(appId);
       });
-      setNotice(`${action} complete`);
-    } catch (error) {
-      setNotice(error instanceof Error ? error.message : 'App action failed');
+      setNotice(text.actionComplete(actionLabel));
+    } catch {
+      setNotice(text.actionFailed);
     } finally {
       setBusyAppId(null);
     }
@@ -215,7 +541,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
     const appId = entry.manifest.appId;
     const draft = draftFor(entry);
     setSettingsBusyAppId(appId);
-    setNotice('settings save pending');
+    setNotice(text.settingsSavePending);
     setSettingsErrors((current) => Object.fromEntries(
       Object.entries(current).filter(([key]) => !key.startsWith(`${appId}:`)),
     ));
@@ -241,7 +567,8 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
             ])),
           }));
         }
-        throw new Error(payload.error ?? `Request failed (${response.status})`);
+        setNotice(payload.error ?? text.settingsSaveFailed);
+        return;
       }
       if (payload.entry) {
         upsertEntry(payload.entry);
@@ -250,9 +577,9 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
           [appId]: buildSettingsDraft(payload.entry!),
         }));
       }
-      setNotice('settings saved');
-    } catch (error) {
-      setNotice(error instanceof Error ? error.message : 'Settings save failed');
+      setNotice(text.settingsSaved);
+    } catch {
+      setNotice(text.settingsSaveFailed);
     } finally {
       setSettingsBusyAppId(null);
     }
@@ -278,7 +605,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
       <label key={field.fieldId} className="builder-app-settings-field">
         <span>
           {field.label}
-          {field.required ? <em>Required</em> : null}
+          {field.required ? <em>{text.required}</em> : null}
         </span>
         {field.type === 'textarea' ? (
           <textarea
@@ -299,7 +626,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
             value={typeof value === 'string' ? value : ''}
             onChange={(event) => updateSettingDraft(entry, field.fieldId, event.target.value)}
           >
-            <option value="">Select</option>
+            <option value="">{text.selectPlaceholder}</option>
             {(field.options ?? []).map((option) => (
               <option key={option.value} value={option.value}>{option.label}</option>
             ))}
@@ -323,8 +650,8 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
       <section className="builder-preview-inspector-card">
         <div className="builder-dashboard-page-head">
           <div>
-            <strong>App Market</strong>
-            <span>Local catalog with manifest validation and lifecycle controls.</span>
+            <strong>{text.title}</strong>
+            <span>{text.description}</span>
           </div>
           <span className="builder-stage-pill builder-stage-pill--accent" aria-live="polite">
             {notice}
@@ -334,53 +661,53 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
         <div className="builder-dashboard-kpi-grid">
           <article className="builder-dashboard-kpi-card">
             <strong>{entries.length}</strong>
-            <span>Catalog apps</span>
+            <span>{text.catalogApps}</span>
           </article>
           <article className="builder-dashboard-kpi-card">
             <strong>{installedCount}</strong>
-            <span>Installed</span>
+            <span>{text.installed}</span>
           </article>
           <article className="builder-dashboard-kpi-card">
             <strong>{enabledCount}</strong>
-            <span>Enabled</span>
+            <span>{text.enabled}</span>
           </article>
         </div>
 
         <div className="builder-app-market-toolbar">
           <label>
-            <span>Search</span>
+            <span>{text.search}</span>
             <input
               value={search}
               onChange={(event) => setSearch(event.target.value)}
-              placeholder="Search apps, scopes, widgets"
+              placeholder={text.searchPlaceholder}
               data-app-market-search
             />
           </label>
           <label>
-            <span>Category</span>
+            <span>{text.category}</span>
             <select
               value={category}
               onChange={(event) => setCategory(event.target.value as BuilderAppCategory | 'all')}
               data-app-market-category
             >
-              <option value="all">All categories</option>
+              <option value="all">{text.allCategories}</option>
               {BUILDER_APP_CATEGORIES.map((item) => (
                 <option key={item} value={item}>{item}</option>
               ))}
             </select>
           </label>
           <label>
-            <span>Status</span>
+            <span>{text.status}</span>
             <select
               value={status}
               onChange={(event) => setStatus(event.target.value as StatusFilter)}
               data-app-market-status-filter
             >
-              <option value="all">All statuses</option>
-              <option value="installed">Installed</option>
-              <option value="enabled">Enabled</option>
-              <option value="disabled">Disabled</option>
-              <option value="not-installed">Not installed</option>
+              <option value="all">{text.allStatuses}</option>
+              <option value="installed">{text.installed}</option>
+              <option value="enabled">{text.enabled}</option>
+              <option value="disabled">{text.disabled}</option>
+              <option value="not-installed">{text.notInstalled}</option>
             </select>
           </label>
         </div>
@@ -389,30 +716,30 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
       <section className="builder-native-app-dashboard" data-native-app-dashboard>
         <div className="builder-dashboard-page-head">
           <div>
-            <strong>Installed native apps</strong>
-            <span>Manage updates, settings, and app admin surfaces from one place.</span>
+            <strong>{text.installedNativeApps}</strong>
+            <span>{text.installedNativeAppsDesc}</span>
           </div>
           <span className="builder-stage-pill builder-stage-pill--accent">
-            {installedEntries.length} installed
+            {installedEntries.length} {text.installedSuffix}
           </span>
         </div>
 
         <div className="builder-dashboard-kpi-grid builder-native-app-dashboard-kpis">
           <article className="builder-dashboard-kpi-card">
             <strong>{enabledCount}</strong>
-            <span>Enabled apps</span>
+            <span>{text.enabledApps}</span>
           </article>
           <article className="builder-dashboard-kpi-card">
             <strong>{disabledCount}</strong>
-            <span>Disabled apps</span>
+            <span>{text.disabledApps}</span>
           </article>
           <article className="builder-dashboard-kpi-card">
             <strong>{updateCount}</strong>
-            <span>Updates available</span>
+            <span>{text.updatesAvailable}</span>
           </article>
           <article className="builder-dashboard-kpi-card">
             <strong>{settingsPanelCount}</strong>
-            <span>Settings panels</span>
+            <span>{text.settingsPanels}</span>
           </article>
         </div>
 
@@ -440,21 +767,21 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
 
                 <div className="builder-native-app-dashboard-state">
                   <span className={`builder-stage-pill${installation?.status === 'enabled' ? ' builder-stage-pill--accent' : ''}`}>
-                    {installation?.status ?? 'not installed'}
+                    {installation?.status ? (installation.status === 'enabled' ? text.enabled : installation.status === 'disabled' ? text.disabled : text.installed) : text.notInstalled}
                   </span>
                   <span className="builder-stage-pill">
-                    {entry.versionState.updateAvailable ? 'update available' : 'current'}
+                    {entry.versionState.updateAvailable ? text.updateAvailable : text.current}
                   </span>
                   <span className={`builder-stage-pill${failedMigrations.length > 0 ? ' builder-stage-pill--danger' : ''}`}>
-                    {failedMigrations.length > 0 ? `${failedMigrations.length} migration issues` : 'migrations ok'}
+                    {failedMigrations.length > 0 ? text.migrationIssues(failedMigrations.length) : text.migrationsOk}
                   </span>
                 </div>
 
                 <div className="builder-native-app-dashboard-meta">
-                  <span>{manifest.widgets.length} widgets</span>
-                  <span>{manifest.settingsPanels.length} settings panels</span>
-                  <span>{adminRoutes.length} admin routes</span>
-                  <span>updated {installation?.updatedAt ?? '-'}</span>
+                  <span>{text.counts.widgets(manifest.widgets.length)}</span>
+                  <span>{text.counts.settingsPanels(manifest.settingsPanels.length)}</span>
+                  <span>{text.counts.adminRoutes(adminRoutes.length)}</span>
+                  <span>{text.updatedPrefix} {installation?.updatedAt ?? '-'}</span>
                 </div>
 
                 <div className="builder-native-app-dashboard-actions">
@@ -466,7 +793,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                       onClick={() => runAction(manifest.appId, 'update')}
                       data-native-app-update-action={manifest.appId}
                     >
-                      Update
+                      {text.update}
                     </button>
                   ) : null}
                   {adminRoutes.map((route) => (
@@ -476,7 +803,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                       href={localizedRouteHref(locale, route.path)}
                       data-native-app-admin-link={`${manifest.appId}:${route.routeId}`}
                     >
-                      {route.label ?? 'Manage'}
+                    {route.label ?? text.manage}
                     </a>
                   ))}
                   {manifest.settingsPanels.length > 0 ? (
@@ -485,7 +812,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                       href={`#settings-${manifest.appId}`}
                       data-native-app-settings-link={manifest.appId}
                     >
-                      Settings
+                      {text.settings}
                     </a>
                   ) : null}
                   {publicRoutes.slice(0, 2).map((route) => (
@@ -495,7 +822,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                       href={localizedRouteHref(locale, route.path)}
                       data-native-app-public-link={`${manifest.appId}:${route.routeId}`}
                     >
-                      {route.label ?? 'Open'}
+                    {route.label ?? text.open}
                     </a>
                   ))}
                 </div>
@@ -504,8 +831,8 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
           })}
           {installedEntries.length === 0 ? (
             <article className="builder-native-app-dashboard-empty" data-native-app-dashboard-empty>
-              <strong>No installed apps</strong>
-              <span>Install native apps from the catalog below to manage them here.</span>
+              <strong>{text.noInstalledApps}</strong>
+              <span>{text.installNativeAppsHint}</span>
             </article>
           ) : null}
         </div>
@@ -542,7 +869,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                   <span>{manifest.summary}</span>
                 </div>
                 <span className={`builder-stage-pill${installation?.status === 'enabled' ? ' builder-stage-pill--accent' : ''}`}>
-                  {installation?.status ?? 'not installed'}
+                  {installationStatusLabel(text, installation?.status)}
                 </span>
               </div>
 
@@ -551,10 +878,10 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
               <div className="builder-dashboard-page-meta">
                 <span>{manifest.category}</span>
                 <span>v{manifest.version}</span>
-                <span>{manifest.widgets.length} widgets</span>
-                <span>{manifest.settingsPanels.length} settings panels</span>
-                <span>{manifest.routes.length} routes</span>
-                <span>{manifest.migrations.length} migrations</span>
+                <span>{text.counts.widgets(manifest.widgets.length)}</span>
+                <span>{text.counts.settingsPanels(manifest.settingsPanels.length)}</span>
+                <span>{text.counts.routes(manifest.routes.length)}</span>
+                <span>{text.counts.migrations(manifest.migrations.length)}</span>
               </div>
 
               <div
@@ -567,38 +894,38 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                 <span data-app-update-chip>
                   <strong>
                     {!installation
-                      ? `Latest v${versionState.latestVersion}`
+                      ? text.latestVersion(versionState.latestVersion)
                       : versionState.updateAvailable
-                        ? 'Update available'
-                        : 'Current version'}
+                        ? text.updateAvailable
+                        : text.current}
                   </strong>
                   {installation ? (
                     <small>
                       {versionState.updateAvailable
-                        ? `Installed v${versionState.installedVersion} · Latest v${versionState.latestVersion}`
-                        : `Installed v${versionState.installedVersion}`}
+                        ? text.installedLatestVersion(versionState.installedVersion ?? '-', versionState.latestVersion)
+                        : text.installedVersion(versionState.installedVersion ?? '-')}
                     </small>
                   ) : null}
                 </span>
                 <span data-app-compat-chip>
                   <strong>
-                    {versionState.compatibility === 'compatible'
-                      ? 'Compatible'
-                      : `Requires builder v${manifest.compatibility.minBuilderVersion}+`}
+                      {versionState.compatibility === 'compatible'
+                      ? text.compatible
+                      : text.requiresBuilderVersion(manifest.compatibility.minBuilderVersion)}
                   </strong>
-                  <small>Builder v{versionState.builderVersion}</small>
+                  <small>{text.builderVersion(versionState.builderVersion)}</small>
                 </span>
                 {installation ? (
                   <span data-app-rollback-chip>
                     <strong>
-                      {versionState.canRollback ? 'Rollback available' : 'No rollback point'}
+                    {versionState.canRollback ? text.rollbackAvailable : text.rollbackUnavailable}
                     </strong>
-                    {versionState.rollbackVersion ? <small>Previous v{versionState.rollbackVersion}</small> : null}
+                    {versionState.rollbackVersion ? <small>{text.previousVersion(versionState.rollbackVersion)}</small> : null}
                   </span>
                 ) : null}
               </div>
 
-              <div className="builder-app-market-scope-list" aria-label={`${manifest.name} permissions`}>
+              <div className="builder-app-market-scope-list" aria-label={`${manifest.name} ${text.permissions}`}>
                 {manifest.permissions.map((permission) => (
                   <span key={permission} data-app-permission-scope={permission}>{permission}</span>
                 ))}
@@ -611,8 +938,8 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                   data-app-scope-state={installation.status === 'enabled' ? 'enforced' : 'disabled'}
                 >
                   {installation.status === 'enabled'
-                    ? `${manifest.permissions.length} granted scopes enforced`
-                    : 'App disabled; scopes blocked'}
+                    ? text.grantedScopesEnforced(manifest.permissions.length)
+                    : text.appDisabledScopesBlocked}
                 </div>
               ) : null}
 
@@ -622,28 +949,28 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                   data-app-uninstall-summary={manifest.appId}
                   data-app-uninstall-reversible={uninstall.reversible ? 'true' : 'false'}
                 >
-                  <strong>Uninstall archive</strong>
+                  <strong>{text.uninstallArchive}</strong>
                   <span>
-                    {uninstall.reversible ? 'Data kept for restore' : 'Data removed; audit retained'}
+                    {uninstall.reversible ? text.dataKeptForRestore : text.dataRemovedAuditRetained}
                     {' · '}
                     {uninstall.cleanupMode}
                   </span>
-                  <small>Uninstalled at {uninstall.uninstalledAt}</small>
+                  <small>{text.uninstalledAt(uninstall.uninstalledAt)}</small>
                 </div>
               ) : null}
 
               {installation ? (
                 <div className="builder-app-market-audit">
-                  <strong>Latest event</strong>
+                  <strong>{text.latestEvent}</strong>
                   <span>
-                    {latestAudit?.type ?? 'installed'} at {installation.updatedAt}
+                    {text.latestEventAt(auditEventLabel(text, latestAudit?.type), installation.updatedAt)}
                   </span>
                 </div>
               ) : null}
 
               {installation ? (
                 <label className="builder-app-uninstall-mode" data-app-uninstall-mode={manifest.appId}>
-                  <span>Uninstall cleanup</span>
+                  <span>{text.uninstallCleanup}</span>
                   <select
                     value={uninstallModes[manifest.appId] ?? 'keep-data'}
                     onChange={(event) => setUninstallModes((current) => ({
@@ -652,8 +979,8 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                     }))}
                     data-app-uninstall-cleanup={manifest.appId}
                   >
-                    <option value="keep-data">Keep data for restore</option>
-                    <option value="remove-data">Remove data, keep audit</option>
+                    <option value="keep-data">{text.keepData}</option>
+                    <option value="remove-data">{text.removeData}</option>
                   </select>
                 </label>
               ) : null}
@@ -664,14 +991,18 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                   data-app-migration-summary={manifest.appId}
                   data-app-migration-status={failedMigrations.length > 0 ? 'failed' : 'applied'}
                 >
-                  <strong>Migrations</strong>
+                  <strong>{text.migrations}</strong>
                   <span>
-                    {appliedMigrations.length}/{manifest.migrations.length} migrations applied
-                    {failedMigrations.length > 0 ? ` · ${failedMigrations.length} failed` : ''}
+                    {text.migrationsApplied(appliedMigrations.length, manifest.migrations.length)}
+                    {failedMigrations.length > 0 ? ` · ${text.migrationFailures(failedMigrations.length)}` : ''}
                   </span>
                   {latestMigration ? (
                     <small>
-                      Last: {latestMigration.migrationId} · {latestMigration.status} at {latestMigration.ranAt}
+                      {text.latestMigration(
+                        latestMigration.migrationId,
+                        text.migrationStatus[latestMigration.status],
+                        latestMigration.ranAt,
+                      )}
                     </small>
                   ) : null}
                 </div>
@@ -695,7 +1026,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                       onClick={() => saveSettings(entry)}
                       data-app-settings-save={manifest.appId}
                     >
-                      Save settings
+                    {text.saveSettings}
                     </button>
                   </div>
                 </div>
@@ -710,7 +1041,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                     onClick={() => runAction(manifest.appId, 'update')}
                     data-app-action={`update-${manifest.appId}`}
                   >
-                    Update
+                    {text.update}
                   </button>
                 ) : null}
                 {!installation && uninstall?.reversible ? (
@@ -721,7 +1052,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                     onClick={() => runAction(manifest.appId, 'restore')}
                     data-app-action={`restore-${manifest.appId}`}
                   >
-                    Restore
+                    {text.restore}
                   </button>
                 ) : null}
                 {!installation ? (
@@ -732,7 +1063,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                     onClick={() => runAction(manifest.appId, 'install')}
                     data-app-action={`install-${manifest.appId}`}
                   >
-                    {uninstall ? 'Install fresh' : 'Install'}
+                    {uninstall ? text.installFresh : text.install}
                   </button>
                 ) : installation.status === 'enabled' ? (
                   <button
@@ -742,7 +1073,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                     onClick={() => runAction(manifest.appId, 'disable')}
                     data-app-action={`disable-${manifest.appId}`}
                   >
-                    Disable
+                    {text.disable}
                   </button>
                 ) : (
                   <button
@@ -752,7 +1083,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                     onClick={() => runAction(manifest.appId, 'enable')}
                     data-app-action={`enable-${manifest.appId}`}
                   >
-                    Enable
+                    {text.enable}
                   </button>
                 )}
                 {installation ? (
@@ -764,7 +1095,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                       onClick={() => runAction(manifest.appId, 'rollback')}
                       data-app-action={`rollback-${manifest.appId}`}
                     >
-                      Rollback
+                      {text.rollback}
                     </button>
                   ) : null
                 ) : null}
@@ -776,7 +1107,7 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
                     onClick={() => runAction(manifest.appId, 'uninstall')}
                     data-app-action={`uninstall-${manifest.appId}`}
                   >
-                    Uninstall
+                    {text.uninstall}
                   </button>
                 ) : null}
               </div>
@@ -787,8 +1118,8 @@ export default function AppMarketClient({ locale, initialEntries }: AppMarketCli
           <article className="builder-dashboard-page-card" data-app-market-empty>
             <div className="builder-dashboard-page-head">
               <div>
-                <strong>No apps found</strong>
-                <span>Adjust search, category, or status filters.</span>
+                <strong>{text.noAppsFound}</strong>
+                <span>{text.adjustFilters}</span>
               </div>
             </div>
           </article>

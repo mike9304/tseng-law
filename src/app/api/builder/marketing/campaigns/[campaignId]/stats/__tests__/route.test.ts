@@ -9,7 +9,7 @@ import {
 import type { Campaign, CampaignRecipient } from '@/lib/builder/marketing/campaign-types';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1', email: 'a@b' } })),
+  guardMutation: vi.fn(async () => ({ username: 'admin-1' })),
 }));
 
 vi.mock('@/lib/builder/marketing/campaign-storage', () => ({
@@ -36,7 +36,10 @@ function makeCampaign(): Campaign {
   };
 }
 
-function recipient(status: CampaignRecipient['status']): CampaignRecipient {
+function recipient(
+  status: CampaignRecipient['status'],
+  overrides: Partial<CampaignRecipient> = {},
+): CampaignRecipient {
   return {
     campaignId: 'cmp-1',
     subscriberId: 'sub-1',
@@ -44,24 +47,41 @@ function recipient(status: CampaignRecipient['status']): CampaignRecipient {
     status,
     attempts: 1,
     trackingToken: 'trk-1',
+    ...overrides,
   };
 }
 
 describe('/api/builder/marketing/campaigns/[campaignId]/stats', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.mocked(guardMutation).mockResolvedValue({
-      user: { id: 'admin-1', email: 'a@b' },
-    } as unknown as Awaited<ReturnType<typeof guardMutation>>);
+    vi.mocked(guardMutation).mockResolvedValue({ username: 'admin-1' });
   });
 
   it('returns aggregate stats and engagement rates on happy path', async () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     vi.mocked(listRecipientsForCampaign).mockResolvedValue([
-      recipient('sent'),
-      recipient('opened'),
-      recipient('clicked'),
-      recipient('pending'),
+      recipient('sent', {
+        subscriberId: 'sub-sent',
+        email: 'sent@example.test',
+        sentAt: '2026-06-18T00:00:00.000Z',
+      }),
+      recipient('opened', {
+        subscriberId: 'sub-opened',
+        email: 'opened@example.test',
+        sentAt: '2026-06-18T00:01:00.000Z',
+        openedAt: '2026-06-18T01:00:00.000Z',
+      }),
+      recipient('clicked', {
+        subscriberId: 'sub-clicked',
+        email: 'clicked@example.test',
+        sentAt: '2026-06-18T00:02:00.000Z',
+        openedAt: '2026-06-18T01:30:00.000Z',
+        clickedAt: '2026-06-18T02:00:00.000Z',
+      }),
+      recipient('pending', {
+        subscriberId: 'sub-pending',
+        email: 'pending@example.test',
+      }),
     ]);
     vi.mocked(aggregateStats).mockReturnValue({
       recipients: 4,
@@ -72,7 +92,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/stats', () => {
     });
     const route = await import('../route');
     const response = await route.GET(
-      new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-1/stats'),
+      new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-1/stats?locale=en'),
       { params: { campaignId: 'cmp-1' } },
     );
     const payload = await response.json();
@@ -83,16 +103,72 @@ describe('/api/builder/marketing/campaigns/[campaignId]/stats', () => {
     expect(payload.rates.click).toBe(0.25);
     expect(payload.pending).toBe(1);
     expect(payload.campaign.campaignId).toBe('cmp-1');
+    expect(payload.recipientBreakdown).toMatchObject({
+      sent: 1,
+      opened: 1,
+      clicked: 1,
+      pending: 1,
+    });
+    expect(payload.recentEvents.slice(0, 2)).toEqual([
+      {
+        kind: 'clicked',
+        occurredAt: '2026-06-18T02:00:00.000Z',
+        subscriberId: 'sub-clicked',
+        email: 'clicked@example.test',
+      },
+      {
+        kind: 'opened',
+        occurredAt: '2026-06-18T01:30:00.000Z',
+        subscriberId: 'sub-clicked',
+        email: 'clicked@example.test',
+      },
+    ]);
+    expect(payload.funnel).toEqual([
+      { key: 'recipients', count: 4, rate: 1 },
+      { key: 'opens', count: 2, rate: 0.5 },
+      { key: 'clicks', count: 1, rate: 0.25 },
+      { key: 'unsubscribes', count: 0, rate: 0 },
+      { key: 'bounces', count: 0, rate: 0 },
+    ]);
   });
 
   it('returns 404 when campaign is missing', async () => {
     vi.mocked(getCampaign).mockResolvedValue(null);
     const route = await import('../route');
     const response = await route.GET(
-      new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-missing/stats'),
+      new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-missing/stats?locale=zh-hant'),
       { params: { campaignId: 'cmp-missing' } },
     );
+    const payload = await response.json();
+
     expect(response.status).toBe(404);
+    expect(payload).toEqual({
+      ok: false,
+      error: '找不到活動。',
+      errorCode: 'campaign_not_found',
+    });
+  });
+
+  it('returns localized stats failures without leaking exception details', async () => {
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
+    vi.mocked(listRecipientsForCampaign).mockRejectedValueOnce(new Error('stats secret leaked'));
+    const route = await import('../route');
+    const response = await route.GET(
+      new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-1/stats?locale=en'),
+      { params: { campaignId: 'cmp-1' } },
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Unable to load campaign stats.',
+      errorCode: 'campaign_stats_failed',
+    });
+    expect(JSON.stringify(payload)).not.toContain('stats secret leaked');
+    expect(consoleError).toHaveBeenCalledWith('[builder/marketing/campaigns/:id/stats] stats failed:', expect.any(Error));
+    consoleError.mockRestore();
   });
 
   it('returns zero rates when recipients are empty (no divide-by-zero)', async () => {

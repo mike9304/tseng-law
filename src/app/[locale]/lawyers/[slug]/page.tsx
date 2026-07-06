@@ -1,11 +1,16 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import FAQAccordion from '@/components/FAQAccordion';
-import { getAttorneyProfile, getAttorneyProfilePath, getAttorneyProfileSlugs } from '@/data/attorney-profiles';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
+import {
+  normalizeAttorneyProfileSlug,
+  readAttorneyProfileSourceRecordBySlug,
+  readAttorneyProfileSourceRecords,
+} from '@/lib/builder/lawyers/source';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import {
   isBuilderDynamicTemplateBlockVisible,
@@ -17,7 +22,7 @@ export const dynamic = 'force-dynamic';
 
 const sectionLabels = {
   ko: {
-    pageLabel: 'PROFILE',
+    pageLabel: '변호사 프로필',
     facts: '핵심 정보',
     education: '학력',
     experience: '경력',
@@ -28,7 +33,7 @@ const sectionLabels = {
     searchTerms: '자주 찾는 검색 주제',
   },
   'zh-hant': {
-    pageLabel: 'PROFILE',
+    pageLabel: '律師簡介',
     facts: '重點資訊',
     education: '學歷',
     experience: '經歷',
@@ -51,14 +56,16 @@ const sectionLabels = {
   },
 } as const;
 
-export function generateStaticParams() {
-  const slugs = getAttorneyProfileSlugs();
+export async function generateStaticParams() {
+  const slugs = (await readAttorneyProfileSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko')).map(
+    (profile) => profile.slug,
+  );
   return ['ko', 'zh-hant', 'en'].flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }
 
-export function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Metadata {
+export async function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Promise<Metadata> {
   const locale = normalizeLocale(params.locale);
-  const profile = getAttorneyProfile(locale, params.slug);
+  const profile = await readAttorneyProfileSourceRecordBySlug(DEFAULT_BUILDER_SITE_ID, locale, params.slug);
 
   if (!profile) {
     return {};
@@ -77,14 +84,18 @@ export function generateMetadata({ params }: { params: { locale: Locale; slug: s
 
 export default async function LawyerProfilePage({ params }: { params: { locale: Locale; slug: string } }) {
   const locale = normalizeLocale(params.locale);
-  const profile = getAttorneyProfile(locale, params.slug);
+  const profile = await readAttorneyProfileSourceRecordBySlug(DEFAULT_BUILDER_SITE_ID, locale, params.slug);
   const labels = sectionLabels[locale];
 
   if (!profile) {
     return notFound();
   }
 
-  const profilePath = getAttorneyProfilePath(locale, profile.slug);
+  if (normalizeAttorneyProfileSlug(params.slug) !== profile.slug) {
+    permanentRedirect(`/${locale}/lawyers/${profile.slug}`);
+  }
+
+  const profilePath = `/${locale}/lawyers/${profile.slug}`;
   const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
     'attorney-profiles.item-template',
     locale
@@ -153,11 +164,14 @@ export default async function LawyerProfilePage({ params }: { params: { locale: 
                 <div className="profile-hero-photo">
                   <Image
                     src={profile.image}
-                    alt={`${profile.name} ${profile.role}`}
+                    alt={profile.imageAltText}
                     fill
                     sizes="(max-width: 900px) 100vw, 360px"
                     className="person-photo"
-                    style={{ objectFit: 'cover' }}
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: `${profile.imageFocalPoint.x * 100}% ${profile.imageFocalPoint.y * 100}%`,
+                    }}
                   />
                 </div>
                 <div className="profile-hero-body">

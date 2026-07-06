@@ -23,6 +23,14 @@ export const DEFAULT_FILTERS: ImageFilters = {
   sepia: 0,
 };
 
+export type FilterPresetKey = 'original' | 'bw' | 'vintage' | 'bright' | 'highContrast' | 'soft';
+
+export interface FilterPreset {
+  key: FilterPresetKey;
+  label: string;
+  filters: Partial<ImageFilters>;
+}
+
 export function isDefaultFilters(f: ImageFilters): boolean {
   return (
     f.brightness === 100 &&
@@ -45,11 +53,11 @@ export function filtersToCSS(f: ImageFilters): string {
   return parts.length > 0 ? parts.join(' ') : 'none';
 }
 
-export const FILTER_PRESETS: Array<{ label: string; filters: Partial<ImageFilters> }> = [
-  { label: 'Original', filters: {} },
-  { label: 'B&W', filters: { grayscale: 100 } },
-  { label: 'Vintage', filters: { sepia: 60, contrast: 110 } },
-  { label: 'Bright', filters: { brightness: 130, contrast: 105 } },
-  { label: 'High Contrast', filters: { contrast: 150 } },
-  { label: 'Soft', filters: { brightness: 110, contrast: 90, blur: 1 } },
+export const FILTER_PRESETS: FilterPreset[] = [
+  { key: 'original', label: 'Original', filters: {} },
+  { key: 'bw', label: 'B&W', filters: { grayscale: 100 } },
+  { key: 'vintage', label: 'Vintage', filters: { sepia: 60, contrast: 110 } },
+  { key: 'bright', label: 'Bright', filters: { brightness: 130, contrast: 105 } },
+  { key: 'highContrast', label: 'High Contrast', filters: { contrast: 150 } },
+  { key: 'soft', label: 'Soft', filters: { brightness: 110, contrast: 90, blur: 1 } },
 ];

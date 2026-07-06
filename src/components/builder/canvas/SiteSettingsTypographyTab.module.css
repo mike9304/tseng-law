@@ -1,0 +1,150 @@
+.root {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.sectionHeading {
+  color: #0f172a;
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.field {
+  display: grid;
+  min-width: 0;
+  gap: 6px;
+}
+
+.label {
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 34px;
+  padding: 6px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  color: #0f172a;
+  font-size: 13px;
+  outline: none;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.input:focus-visible {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 14%);
+}
+
+.description {
+  margin: 4px 0 12px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.scalePreview {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.scalePreviewRow {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 52px;
+  align-items: center;
+  min-height: 30px;
+  gap: 10px;
+}
+
+.scalePreviewLabel {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.scalePreviewSample {
+  min-width: 0;
+  overflow: hidden;
+  color: #0f172a;
+  font-family: var(--site-typography-preview-family, system-ui);
+  font-size: var(--site-typography-preview-size, 13px);
+  font-weight: var(--site-typography-preview-weight, 500);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scalePreviewSize {
+  color: #334155;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.presetCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.presetCard:focus-within {
+  border-color: #bfdbfe;
+  box-shadow: 0 8px 18px rgb(15 23 42 / 6%);
+}
+
+.presetHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.presetPreview {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--site-typography-preset-color, #0f172a);
+  font-family: var(--site-typography-preset-family, system-ui);
+  font-size: var(--site-typography-preset-size, 16px);
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.presetName {
+  flex: 0 0 auto;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .fieldGrid {
+    grid-template-columns: 1fr;
+  }
+}

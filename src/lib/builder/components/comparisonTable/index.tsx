@@ -1,26 +1,43 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderComparisonTableCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import {
+  COMPARISON_TABLE_LEGACY_DEFAULT_COLUMNS,
+  COMPARISON_TABLE_LEGACY_DEFAULT_ROWS,
+  getMarketingWidgetsCopy,
+  localizedComparisonTableDefaults,
+} from '../marketing-widgets-copy';
+import styles from './ComparisonTableInspector.module.css';
 
 function ComparisonTableRender({
   node,
+  locale = 'ko',
 }: {
   node: BuilderComparisonTableCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getMarketingWidgetsCopy(locale);
+  const table = localizedComparisonTableDefaults(
+    c.columns,
+    c.rows,
+    copy.comparisonTable.defaultColumns,
+    copy.comparisonTable.defaultRows,
+  );
   return (
     <table className="builder-datadisplay-comparison-table" data-builder-datadisplay-widget="comparison-table">
       <thead>
         <tr>
           <th />
-          {c.columns.map((col, idx) => <th key={`${col}-${idx}`}>{col}</th>)}
+          {table.columns.map((col, idx) => <th key={`${col}-${idx}`}>{col}</th>)}
         </tr>
       </thead>
       <tbody>
-        {c.rows.length === 0 ? (
-          <tr><td colSpan={c.columns.length + 1}><em>비교 항목을 인스펙터에서 추가하세요</em></td></tr>
+        {table.rows.length === 0 ? (
+          <tr><td colSpan={table.columns.length + 1}><em>{copy.comparisonTable.empty}</em></td></tr>
         ) : (
-          c.rows.map((row, idx) => (
+          table.rows.map((row, idx) => (
             <tr key={`${row.feature}-${idx}`}>
               <th scope="row">{row.feature}</th>
               {row.values.map((v, i) => <td key={i}>{v}</td>)}
@@ -59,34 +76,42 @@ function parseRows(value: string): BuilderComparisonTableCanvasNode['content']['
 
 function ComparisonTableInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const ctNode = node as BuilderComparisonTableCanvasNode;
   const c = ctNode.content;
+  const copy = getMarketingWidgetsCopy(locale);
+  const table = localizedComparisonTableDefaults(
+    c.columns,
+    c.rows,
+    copy.comparisonTable.defaultColumns,
+    copy.comparisonTable.defaultRows,
+  );
   return (
-    <>
-      <label>
-        <span>컬럼 (한 줄에 하나)</span>
+    <div className={styles.root} data-builder-comparison-table-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.comparisonTable.inspector.columns}</span>
         <textarea
+          className={styles.control}
           rows={4}
-          style={{ fontFamily: 'inherit' }}
-          value={columnsToText(c.columns)}
+          value={columnsToText(table.columns)}
           disabled={disabled}
           onChange={(event) => onUpdate({ columns: parseColumns(event.target.value) })}
         />
       </label>
-      <label>
-        <span>행 (feature | value1 | value2 ...)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.comparisonTable.inspector.rows}</span>
         <textarea
+          className={`${styles.control} ${styles.compactTextarea}`}
           rows={8}
-          style={{ fontFamily: 'inherit', fontSize: 11 }}
-          value={rowsToText(c.rows)}
+          value={rowsToText(table.rows)}
           disabled={disabled}
           onChange={(event) => onUpdate({ rows: parseRows(event.target.value) })}
         />
       </label>
-    </>
+    </div>
   );
 }
 
@@ -96,13 +121,8 @@ export default defineComponent({
   category: 'advanced',
   icon: '⇄',
   defaultContent: {
-    columns: ['기본', '표준', '프리미엄'],
-    rows: [
-      { feature: '월 상담 건수', values: ['1회', '5회', '무제한'] },
-      { feature: '계약 검토', values: ['—', '✓', '✓'] },
-      { feature: '소송 대응', values: ['—', '—', '✓'] },
-      { feature: '한·대 양국 협업', values: ['—', '✓', '✓'] },
-    ],
+    columns: COMPARISON_TABLE_LEGACY_DEFAULT_COLUMNS,
+    rows: COMPARISON_TABLE_LEGACY_DEFAULT_ROWS,
   },
   defaultStyle: {},
   defaultRect: { width: 560, height: 280 },

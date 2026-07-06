@@ -9,14 +9,17 @@ import {
   DEFAULT_FLEX,
   DEFAULT_GRID,
 } from '@/lib/builder/canvas/layout-modes';
+import type { Locale } from '@/lib/locales';
 import { BuilderFormRuntimeProvider } from '@/lib/builder/forms/runtime-context';
 import type { FormValues } from '@/lib/builder/forms/conditional';
 import { getDefaultValidationMessage } from '@/lib/builder/forms/render-helpers';
 import type { FormSubmissionFile } from '@/lib/builder/forms/form-engine';
+import { FORM_KO_DEFAULTS, getFormControlsCopy, localizedFormControlText } from './form-controls-copy';
 
 interface FormElementProps {
   node: BuilderFormCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
   children?: ReactNode;
 }
 
@@ -26,8 +29,14 @@ type SubmitErrorResponse = {
   cmsIssues?: string[];
 };
 
-export default function FormElement({ node, mode = 'edit', children }: FormElementProps) {
+export default function FormElement({ node, mode = 'edit', locale = 'ko', children }: FormElementProps) {
   const content = node.content;
+  const copy = getFormControlsCopy(locale);
+  const successMessage = localizedFormControlText(
+    content.successMessage,
+    copy.formDefaults.successMessage,
+    FORM_KO_DEFAULTS.successMessage,
+  );
   const layoutMode = content.layoutMode ?? 'absolute';
   const loadedAtRef = useRef<number>(Date.now());
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -116,7 +125,7 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
           onClick={() => setActiveStepIndex((step) => Math.max(0, step - 1))}
           style={stepButtonStyle(current === 0)}
         >
-          Previous
+          {copy.formRuntime.previousLabel}
         </button>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#64748b' }}>
           {steps.map((step, index) => (
@@ -139,7 +148,7 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
           onClick={() => setActiveStepIndex((step) => Math.min(steps.length - 1, step + 1))}
           style={stepButtonStyle(current >= steps.length - 1)}
         >
-          Next
+          {copy.formRuntime.nextLabel}
         </button>
       </div>
     );
@@ -174,7 +183,7 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
                 pointerEvents: 'none',
               }}
             >
-              Form · {content.name}
+              {copy.formRuntime.emptyBadgeLabel} · {content.name}
             </div>
           ) : null}
         </form>
@@ -200,7 +209,7 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
           textAlign: 'center',
         }}
       >
-        {content.successMessage}
+        {successMessage}
       </div>
     );
   }
@@ -212,7 +221,7 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
 
     const elapsed = Date.now() - loadedAtRef.current;
     if (elapsed < 3000) {
-      setErrorMsg('잠시 후 다시 시도해 주세요.');
+      setErrorMsg(copy.formRuntime.slowSubmissionError);
       return;
     }
 
@@ -227,7 +236,7 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
     setFieldErrors({});
 
     if (content.captcha && content.captcha !== 'none' && !captchaSiteKey) {
-      setErrorMsg('Captcha is enabled but no site key is configured.');
+      setErrorMsg(copy.formRuntime.captchaMissingError);
       setStatus('error');
       return;
     }
@@ -255,10 +264,10 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
 
     setStatus('submitting');
     try {
-      const locale = typeof window !== 'undefined'
+      const uploadLocale = typeof window !== 'undefined'
         ? window.location.pathname.split('/').filter(Boolean)[0] || 'ko'
         : 'ko';
-      const files = await uploadFormFiles(formEl, locale);
+      const files = await uploadFormFiles(formEl, uploadLocale, copy.formRuntime.fileUploadFailedError);
       const res = await fetch('/api/forms/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -287,7 +296,7 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
           focusFirstFieldError(formEl, serverFieldErrors);
         }
         const cmsIssueText = err.cmsIssues?.length ? ` ${err.cmsIssues.join(' ')}` : '';
-        setErrorMsg((err.error || '전송에 실패했습니다.') + cmsIssueText);
+        setErrorMsg((err.error || copy.formRuntime.submitFailedError) + cmsIssueText);
         setStatus('error');
         return;
       }
@@ -296,7 +305,7 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
         window.location.href = content.redirectUrl;
       }
     } catch (error) {
-      setErrorMsg(error instanceof Error ? error.message : '네트워크 오류가 발생했습니다.');
+      setErrorMsg(error instanceof Error ? error.message : copy.formRuntime.networkError);
       setStatus('error');
     }
   }
@@ -348,8 +357,8 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
             data-sitekey={captchaSiteKey}
           >
             {captchaSiteKey
-              ? `${content.captcha} captcha placeholder`
-              : `${content.captcha} captcha not configured`}
+              ? copy.formRuntime.captchaPlaceholder(content.captcha)
+              : copy.formRuntime.captchaNotConfigured(content.captcha)}
           </div>
         ) : null}
         {renderStepControls()}
@@ -401,28 +410,28 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
         );
         const required = group.some((candidate) => candidate.required);
         if (required && !group.some((candidate) => candidate.checked)) {
-          errors[name] = customMessage || '필수 입력 항목입니다.';
+          errors[name] = customMessage || copy.formRuntime.requiredError;
         }
         continue;
       }
 
       if (control instanceof HTMLInputElement && control.type === 'file') {
         if (control.required && (!control.files || control.files.length === 0)) {
-          errors[name] = customMessage || '필수 입력 항목입니다.';
+          errors[name] = customMessage || copy.formRuntime.requiredError;
           continue;
         }
         const maxSizeMb = Number(control.getAttribute('data-builder-max-size-mb') || '0');
         if (maxSizeMb > 0 && control.files) {
           const tooLarge = Array.from(control.files).some((file) => file.size > maxSizeMb * 1024 * 1024);
           if (tooLarge) {
-            errors[name] = customMessage || `파일은 ${maxSizeMb}MB 이하로 첨부해 주세요.`;
+            errors[name] = customMessage || copy.formRuntime.fileTooLargeError(maxSizeMb);
           }
         }
         continue;
       }
 
       if (!control.checkValidity()) {
-        errors[name] = customMessage || getDefaultValidationMessage(control);
+        errors[name] = customMessage || getDefaultValidationMessage(control, copy.formRuntime);
       }
     }
 
@@ -435,7 +444,7 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
       const hidden = signature.closest<HTMLElement>('.builder-pub-node')?.style.display === 'none';
       const hasInk = signature.getAttribute('data-builder-signature-has-ink') === 'true';
       if (name && required && !hidden && !hasInk) {
-        errors[name] = '필수 입력 항목입니다.';
+        errors[name] = copy.formRuntime.requiredError;
       }
     }
 
@@ -464,7 +473,11 @@ function focusFirstFieldError(formEl: HTMLFormElement, errors: Record<string, st
   control?.focus({ preventScroll: false });
 }
 
-async function uploadFormFiles(formEl: HTMLFormElement, locale: string): Promise<FormSubmissionFile[]> {
+async function uploadFormFiles(
+  formEl: HTMLFormElement,
+  locale: string,
+  fallbackError: string,
+): Promise<FormSubmissionFile[]> {
   const uploads: FormSubmissionFile[] = [];
   const inputs = Array.from(formEl.querySelectorAll<HTMLInputElement>('input[type="file"][name]'));
 
@@ -486,7 +499,7 @@ async function uploadFormFiles(formEl: HTMLFormElement, locale: string): Promise
         file?: FormSubmissionFile;
       };
       if (!response.ok || !payload.file) {
-        throw new Error(payload.error || '파일 업로드에 실패했습니다.');
+        throw new Error(payload.error || fallbackError);
       }
       uploads.push(payload.file);
     }

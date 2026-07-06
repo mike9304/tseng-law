@@ -1,14 +1,29 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderBusinessHoursCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import {
+  getLocationWidgetsCopy,
+  localizedBusinessHourRows,
+  localizedLocationWidgetText,
+  LOCATION_WIDGETS_LEGACY_DEFAULTS,
+} from '../location-widgets-copy';
+import styles from './BusinessHoursInspector.module.css';
 
 function BusinessHoursRender({
   node,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderBusinessHoursCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getLocationWidgetsCopy(locale);
+  const title = localizedLocationWidgetText(c.title, copy.businessHours.defaultTitle, LOCATION_WIDGETS_LEGACY_DEFAULTS.businessHours.title);
+  const timezone = localizedLocationWidgetText(c.timezone, copy.businessHours.defaultTimezone, LOCATION_WIDGETS_LEGACY_DEFAULTS.businessHours.timezone);
+  const rows = localizedBusinessHourRows(c.rows, copy.businessHours.defaultRows);
+  const note = localizedLocationWidgetText(c.note, copy.businessHours.defaultNote, LOCATION_WIDGETS_LEGACY_DEFAULTS.businessHours.note);
   const today = mode !== 'edit' ? new Date().getDay() : -1;
 
   return (
@@ -16,25 +31,25 @@ function BusinessHoursRender({
       className="builder-location-business-hours"
       data-builder-location-widget="business-hours"
     >
-      <strong>{c.title}</strong>
-      {c.timezone ? <small>{c.timezone}</small> : null}
+      <strong>{title}</strong>
+      {timezone ? <small>{timezone}</small> : null}
       <ul>
-        {c.rows.length === 0 ? (
-          <li className="builder-location-empty"><em>영업 시간을 인스펙터에서 추가하세요</em></li>
+        {rows.length === 0 ? (
+          <li className="builder-location-empty"><em>{copy.businessHours.empty}</em></li>
         ) : (
-          c.rows.map((row, idx) => (
+          rows.map((row, idx) => (
             <li
               key={`${row.day}-${idx}`}
               data-builder-business-hours-today={today === idx ? 'true' : 'false'}
               data-builder-business-hours-closed={row.closed ? 'true' : 'false'}
             >
               <span>{row.day}</span>
-              <em>{row.closed ? '휴무' : row.hours || '—'}</em>
+              <em>{row.closed ? copy.businessHours.closed : row.hours || '—'}</em>
             </li>
           ))
         )}
       </ul>
-      {c.note ? <p>{c.note}</p> : null}
+      {note ? <p>{note}</p> : null}
     </section>
   );
 }
@@ -60,40 +75,47 @@ function parseRows(value: string): BuilderBusinessHoursCanvasNode['content']['ro
 
 function BusinessHoursInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const bhNode = node as BuilderBusinessHoursCanvasNode;
   const c = bhNode.content;
+  const hoursCopy = getLocationWidgetsCopy(locale).businessHours;
+  const copy = hoursCopy.inspector;
+  const title = localizedLocationWidgetText(c.title, hoursCopy.defaultTitle, LOCATION_WIDGETS_LEGACY_DEFAULTS.businessHours.title);
+  const timezone = localizedLocationWidgetText(c.timezone, hoursCopy.defaultTimezone, LOCATION_WIDGETS_LEGACY_DEFAULTS.businessHours.timezone);
+  const rows = localizedBusinessHourRows(c.rows, hoursCopy.defaultRows);
+  const note = localizedLocationWidgetText(c.note, hoursCopy.defaultNote, LOCATION_WIDGETS_LEGACY_DEFAULTS.businessHours.note);
   return (
-    <>
-      <label>
-        <span>제목</span>
-        <input type="text" value={c.title} disabled={disabled} onChange={(event) => onUpdate({ title: event.target.value })} />
+    <div className={styles.root} data-builder-business-hours-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.title}</span>
+        <input type="text" value={title} disabled={disabled} className={styles.control} onChange={(event) => onUpdate({ title: event.target.value })} />
       </label>
-      <label>
-        <span>시간대</span>
-        <input type="text" value={c.timezone} disabled={disabled} onChange={(event) => onUpdate({ timezone: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.timezone}</span>
+        <input type="text" value={timezone} disabled={disabled} className={styles.control} onChange={(event) => onUpdate({ timezone: event.target.value })} />
       </label>
-      <label>
-        <span>요일별 시간 (day | hours [| closed])</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.rows}</span>
         <textarea
           rows={7}
-          style={{ fontFamily: 'inherit', resize: 'vertical' }}
-          value={rowsToText(c.rows)}
+          className={`${styles.control} ${styles.textarea} ${styles.rowsTextarea}`}
+          value={rowsToText(rows)}
           disabled={disabled}
           onChange={(event) => onUpdate({ rows: parseRows(event.target.value) })}
         />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showCurrentStatus} disabled={disabled} onChange={(event) => onUpdate({ showCurrentStatus: event.target.checked })} />
-        <span>오늘 강조</span>
+        <span>{copy.highlightToday}</span>
       </label>
-      <label>
-        <span>비고</span>
-        <textarea rows={2} value={c.note} disabled={disabled} onChange={(event) => onUpdate({ note: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.note}</span>
+        <textarea rows={2} value={note} disabled={disabled} className={`${styles.control} ${styles.textarea}`} onChange={(event) => onUpdate({ note: event.target.value })} />
       </label>
-    </>
+    </div>
   );
 }
 
@@ -103,19 +125,11 @@ export default defineComponent({
   category: 'advanced',
   icon: '🕒',
   defaultContent: {
-    title: '영업 시간',
-    timezone: 'Asia/Seoul',
-    rows: [
-      { day: '일', hours: '', closed: true },
-      { day: '월', hours: '09:00 ~ 18:00', closed: false },
-      { day: '화', hours: '09:00 ~ 18:00', closed: false },
-      { day: '수', hours: '09:00 ~ 18:00', closed: false },
-      { day: '목', hours: '09:00 ~ 18:00', closed: false },
-      { day: '금', hours: '09:00 ~ 18:00', closed: false },
-      { day: '토', hours: '10:00 ~ 14:00', closed: false },
-    ],
+    title: LOCATION_WIDGETS_LEGACY_DEFAULTS.businessHours.title,
+    timezone: LOCATION_WIDGETS_LEGACY_DEFAULTS.businessHours.timezone,
+    rows: LOCATION_WIDGETS_LEGACY_DEFAULTS.businessHours.rows.map((row) => ({ ...row })),
     showCurrentStatus: true,
-    note: '공휴일은 별도 안내합니다.',
+    note: LOCATION_WIDGETS_LEGACY_DEFAULTS.businessHours.note,
   },
   defaultStyle: {},
   defaultRect: { width: 280, height: 280 },

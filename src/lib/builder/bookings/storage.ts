@@ -3,6 +3,7 @@ import path from 'path';
 import { get, list, put } from '@vercel/blob';
 import type {
   Booking,
+  BookingCancellationPolicy,
   BookingEmailTemplate,
   BookingEmailTemplateType,
   BookingPackage,
@@ -16,8 +17,10 @@ import type {
   StaffAvailability,
 } from '@/lib/builder/bookings/types';
 import { createLocalizedText, dayOfWeeks } from '@/lib/builder/bookings/types';
+import { recurringAvailabilityTemplates } from '@/lib/builder/bookings/availability-templates';
+import { normalizeBookingTimezone } from '@/lib/builder/bookings/timezone';
 
-const BOOKINGS_ROOT = path.join(process.cwd(), 'runtime-data', 'builder-bookings');
+const BOOKINGS_ROOT = process.env.BUILDER_BOOKINGS_ROOT ?? path.join(process.cwd(), 'runtime-data', 'builder-bookings');
 const BLOB_PREFIX = 'builder-bookings/';
 
 type Collection =
@@ -27,6 +30,7 @@ type Collection =
   | 'bookings'
   | 'waitlist'
   | 'email-templates'
+  | 'cancellation-policies'
   | 'resources'
   | 'packages'
   | 'package-credits';
@@ -125,6 +129,67 @@ function nowIso(): string {
   return new Date().toISOString();
 }
 
+function defaultCancellationPolicies(): BookingCancellationPolicy[] {
+  const now = nowIso();
+  return [
+    {
+      policyId: 'standard-24h',
+      name: 'Standard policy',
+      description: 'Full refund 24 hours before start, partial refund 6 hours before start.',
+      cancelHoursBefore: 0,
+      rescheduleHoursBefore: 6,
+      fullRefundHoursBefore: 24,
+      partialRefundHoursBefore: 6,
+      partialRefundPercent: 50,
+      cancellationFeePercent: 0,
+      isActive: true,
+      createdAt: now,
+      updatedAt: now,
+    },
+    {
+      policyId: 'strict-48h',
+      name: 'Strict policy',
+      description: 'Full refund 48 hours before start, partial refund 24 hours before start.',
+      cancelHoursBefore: 6,
+      rescheduleHoursBefore: 24,
+      fullRefundHoursBefore: 48,
+      partialRefundHoursBefore: 24,
+      partialRefundPercent: 50,
+      cancellationFeePercent: 0,
+      isActive: true,
+      createdAt: now,
+      updatedAt: now,
+    },
+    {
+      policyId: 'flexible-6h',
+      name: 'Flexible policy',
+      description: 'Full refund 6 hours before start.',
+      cancelHoursBefore: 0,
+      rescheduleHoursBefore: 0,
+      fullRefundHoursBefore: 6,
+      partialRefundHoursBefore: 0,
+      partialRefundPercent: 0,
+      cancellationFeePercent: 0,
+      isActive: true,
+      createdAt: now,
+      updatedAt: now,
+    },
+  ];
+}
+
+function normalizeCancellationPolicy(policy: BookingCancellationPolicy): BookingCancellationPolicy {
+  return {
+    ...policy,
+    cancelHoursBefore: policy.cancelHoursBefore ?? 0,
+    rescheduleHoursBefore: policy.rescheduleHoursBefore ?? 0,
+    fullRefundHoursBefore: policy.fullRefundHoursBefore ?? 0,
+    partialRefundHoursBefore: policy.partialRefundHoursBefore ?? 0,
+    partialRefundPercent: policy.partialRefundPercent ?? 0,
+    cancellationFeePercent: policy.cancellationFeePercent ?? 0,
+    isActive: policy.isActive ?? true,
+  };
+}
+
 function weeklyDefaults(): StaffAvailability['weekly'] {
   return Object.fromEntries(
     dayOfWeeks.map((day) => [
@@ -132,6 +197,36 @@ function weeklyDefaults(): StaffAvailability['weekly'] {
       day === 'saturday' || day === 'sunday' ? [] : [{ start: '09:00', end: '18:00' }],
     ]),
   ) as Record<DayOfWeek, Array<{ start: string; end: string }>>;
+}
+
+function cloneWeekly(weekly: BookingResource['weekly']): BookingResource['weekly'] {
+  if (!weekly) return weekly;
+  return Object.fromEntries(
+    dayOfWeeks.map((day) => [day, (weekly[day] ?? []).map((block) => ({ ...block }))]),
+  ) as NonNullable<BookingResource['weekly']>;
+}
+
+function weeklyFromTemplate(templateId: string): BookingResource['weekly'] {
+  const template = recurringAvailabilityTemplates.find((item) => item.templateId === templateId)
+    ?? recurringAvailabilityTemplates.find((item) => item.templateId === 'weekdays-09-18')
+    ?? recurringAvailabilityTemplates[0];
+  return Object.fromEntries(
+    dayOfWeeks.map((day) => [day, template.weekly[day].map((block) => ({ ...block }))]),
+  ) as NonNullable<BookingResource['weekly']>;
+}
+
+function normalizeResource(resource: BookingResource): BookingResource {
+  const templateId = resource.recurringTemplateId?.trim() || undefined;
+  const normalizedTemplateId = templateId ?? (resource.weekly ? undefined : 'weekdays-09-18');
+  return {
+    ...resource,
+    bufferBeforeMinutes: resource.bufferBeforeMinutes ?? 0,
+    bufferAfterMinutes: resource.bufferAfterMinutes ?? 0,
+    timezone: normalizeBookingTimezone(resource.timezone),
+    recurringTemplateId: normalizedTemplateId,
+    weekly: cloneWeekly(resource.weekly) ?? weeklyFromTemplate(normalizedTemplateId ?? 'weekdays-09-18'),
+    blockedDates: resource.blockedDates?.map((blocked) => ({ ...blocked })) ?? [],
+  };
 }
 
 function seedServices(timestamp: string): BookingService[] {
@@ -222,6 +317,11 @@ function seedResources(timestamp: string): BookingResource[] {
       description: createLocalizedText('일반 상담과 화상 상담에 사용하는 기본 예약 공간입니다.'),
       location: 'Taipei Office',
       capacity: 4,
+      bufferBeforeMinutes: 0,
+      bufferAfterMinutes: 0,
+      weekly: weeklyFromTemplate('weekdays-09-18'),
+      timezone: 'Asia/Taipei',
+      recurringTemplateId: 'weekdays-09-18',
       blockedDates: [],
       isActive: true,
       createdAt: timestamp,
@@ -233,6 +333,11 @@ function seedResources(timestamp: string): BookingResource[] {
       description: createLocalizedText('여러 참석자가 있는 방문 상담과 문서 검토 미팅에 사용하는 회의실입니다.'),
       location: 'Taipei Office',
       capacity: 8,
+      bufferBeforeMinutes: 0,
+      bufferAfterMinutes: 0,
+      weekly: weeklyFromTemplate('weekdays-09-18'),
+      timezone: 'Asia/Taipei',
+      recurringTemplateId: 'weekdays-09-18',
       blockedDates: [],
       isActive: true,
       createdAt: timestamp,
@@ -325,6 +430,7 @@ async function ensureSeedData(): Promise<void> {
       staffId: member.staffId,
       weekly: weeklyDefaults(),
       blockedDates: [],
+      dateOverrides: [],
       timezone: 'Asia/Taipei',
       recurringTemplateId: 'weekdays-09-18',
       holidayCalendar: 'none',
@@ -358,6 +464,10 @@ export function makePackageId(): string {
 
 export function makePackageCreditId(): string {
   return `pc-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
+}
+
+export function makeCancellationPolicyId(): string {
+  return `policy-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
 }
 
 export function slugify(input: string): string {
@@ -402,21 +512,48 @@ export async function saveStaff(staff: Staff): Promise<void> {
   await writeJson('staff', staff.staffId, staff);
 }
 
+export async function listCancellationPolicies(includeInactive = false): Promise<BookingCancellationPolicy[]> {
+  const policies = await listJson<BookingCancellationPolicy>('cancellation-policies');
+  const source = new Map<string, BookingCancellationPolicy>();
+  for (const policy of defaultCancellationPolicies()) {
+    source.set(policy.policyId, normalizeCancellationPolicy(policy));
+  }
+  for (const policy of policies) {
+    source.set(policy.policyId, normalizeCancellationPolicy(policy));
+  }
+  return Array.from(source.values())
+    .filter((policy) => includeInactive || policy.isActive)
+    .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+}
+
+export async function getCancellationPolicy(policyId: string): Promise<BookingCancellationPolicy | null> {
+  const existing = await readJson<BookingCancellationPolicy>('cancellation-policies', policyId);
+  if (existing) return normalizeCancellationPolicy(existing);
+  const fallback = defaultCancellationPolicies().find((policy) => policy.policyId === policyId);
+  return fallback ? normalizeCancellationPolicy(fallback) : null;
+}
+
+export async function saveCancellationPolicy(policy: BookingCancellationPolicy): Promise<void> {
+  await writeJson('cancellation-policies', policy.policyId, normalizeCancellationPolicy(policy));
+}
+
 export async function listResources(includeInactive = false): Promise<BookingResource[]> {
   await ensureSeedData();
   const resources = await listJson<BookingResource>('resources');
   return resources
+    .map((resource) => normalizeResource(resource))
     .filter((resource) => includeInactive || resource.isActive)
     .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
 }
 
 export async function getResource(resourceId: string): Promise<BookingResource | null> {
   await ensureSeedData();
-  return readJson<BookingResource>('resources', resourceId);
+  const resource = await readJson<BookingResource>('resources', resourceId);
+  return resource ? normalizeResource(resource) : null;
 }
 
 export async function saveResource(resource: BookingResource): Promise<void> {
-  await writeJson('resources', resource.resourceId, resource);
+  await writeJson('resources', resource.resourceId, normalizeResource(resource));
 }
 
 export async function listPackages(includeInactive = false): Promise<BookingPackage[]> {
@@ -481,6 +618,7 @@ export async function getStaffAvailability(staffId: string): Promise<StaffAvaila
     staffId,
     weekly: weeklyDefaults(),
     blockedDates: [],
+    dateOverrides: [],
     timezone: 'Asia/Taipei',
     recurringTemplateId: 'weekdays-09-18',
     holidayCalendar: 'none',
@@ -505,8 +643,8 @@ export async function saveBooking(booking: Booking): Promise<void> {
   const prior = await readJson<Booking>('bookings', booking.bookingId);
   await writeJson('bookings', booking.bookingId, booking);
   if (!prior) {
-    void import('@/lib/builder/apps/hooks-registry').then(({ dispatchAppHook }) => (
-      dispatchAppHook({
+    void import('@/lib/builder/apps/hook-runtime').then(({ dispatchAppHookEvent }) => (
+      dispatchAppHookEvent({
         kind: 'bookings.reservation-created',
         payload: {
           bookingId: booking.bookingId,

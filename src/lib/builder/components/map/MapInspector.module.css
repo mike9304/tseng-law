@@ -1,0 +1,121 @@
+.root {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 5px;
+  color: #334155;
+  font-size: 0.78rem;
+}
+
+.label {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.control {
+  width: 100%;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 0.82rem;
+  outline: none;
+  padding: 7px 10px;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    background-color 140ms ease;
+}
+
+.control:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.14);
+}
+
+.control:disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.textarea {
+  font-family: inherit;
+  min-height: 64px;
+  resize: vertical;
+}
+
+.presetGrid {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.presetButton,
+.zoomButton {
+  align-items: center;
+  border: 1px solid #dbe2ea;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 750;
+  justify-content: center;
+  min-height: 30px;
+  padding: 0 8px;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    transform 140ms ease,
+    background-color 140ms ease;
+}
+
+.presetButton:hover:not(:disabled),
+.zoomButton:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #b8c7d9;
+}
+
+.presetButton:focus-visible,
+.zoomButton:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.14);
+  outline: none;
+}
+
+.presetButton:active:not(:disabled),
+.zoomButton:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.presetButton:disabled,
+.zoomButton:disabled {
+  color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.56;
+}
+
+.zoomRow {
+  align-items: center;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: 32px minmax(0, 1fr) 32px;
+}
+
+.range {
+  accent-color: #116dff;
+  width: 100%;
+}
+
+.range:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+}

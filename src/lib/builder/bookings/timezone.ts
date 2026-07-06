@@ -1,5 +1,7 @@
 const DEFAULT_BOOKING_TIMEZONE = 'Asia/Taipei';
 
+const DAY_NAMES = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'] as const;
+
 function partsFor(instantMs: number, timezone: string) {
   const formatter = new Intl.DateTimeFormat('en-US', {
     timeZone: timezone,
@@ -71,6 +73,24 @@ export function dateInTimezone(iso: string, timezone: string): string {
     String(parts.month).padStart(2, '0'),
     String(parts.day).padStart(2, '0'),
   ].join('-');
+}
+
+export function dayOfWeekInTimezone(iso: string, timezone: string): (typeof DAY_NAMES)[number] {
+  const safeTimezone = normalizeBookingTimezone(timezone);
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    timeZone: safeTimezone,
+    weekday: 'long',
+  });
+  const weekday = formatter.format(new Date(iso)).toLowerCase();
+  return (DAY_NAMES.includes(weekday as (typeof DAY_NAMES)[number])
+    ? weekday
+    : 'monday') as (typeof DAY_NAMES)[number];
+}
+
+export function timeInTimezone(iso: string, timezone: string): string {
+  const safeTimezone = normalizeBookingTimezone(timezone);
+  const parts = partsFor(Date.parse(iso), safeTimezone);
+  return `${String(parts.hour).padStart(2, '0')}:${String(parts.minute).padStart(2, '0')}`;
 }
 
 export function formatDateTimeInTimezone(

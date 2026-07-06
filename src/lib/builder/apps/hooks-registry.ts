@@ -4,8 +4,8 @@
  * In-memory map of live (appId, kind, hookId) → handler, plus a JSON file
  * at `runtime-data/apps/hook-registrations.json` that persists metadata so
  * registrations survive a process restart. Handlers themselves cannot be
- * persisted (functions are not JSON-serialisable); after reload, persisted
- * records exist but stay "dormant" until an app re-binds a live handler.
+ * persisted (functions are not JSON-serialisable); stored code bodies are
+ * executed by hook-runtime while this registry dispatches live handlers.
  *
  * Dispatch ordering is priority descending, then insertion order. Individual
  * handler errors are caught + logged via F110's dev log buffer (`source: 'app'`)
@@ -52,7 +52,10 @@ let writeQueue: Promise<void> = Promise.resolve();
 let insertionCounter = 0;
 
 function registryFilePath(): string {
-  return path.join(process.cwd(), REGISTRY_FILE_REL);
+  // 테스트 격리: 병렬 워커가 동일 파일을 경쟁하지 않도록 파일별 경로 주입 가능.
+  // 미설정 시 기존 경로와 동일(하위호환).
+  const override = process.env.BUILDER_APP_HOOK_REGISTRY_PATH?.trim();
+  return override ? override : path.join(process.cwd(), REGISTRY_FILE_REL);
 }
 
 async function loadFromDiskIfNeeded(): Promise<void> {

@@ -1,8 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { columnLocaleSchema } from '@/lib/builder/columns/types';
 import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  getBuilderPortfolioApiErrorPayload,
+  type BuilderPortfolioApiErrorCode,
+} from '@/lib/builder/portfolio/portfolio-api-copy';
 import {
   createProject,
   filterFeaturedProjects,
@@ -56,14 +61,34 @@ const querySchema = z.object({
   limit: z.coerce.number().int().min(1).max(100).default(50),
 });
 
-function validationError(error: ZodError): NextResponse {
+function requestLocale(request: NextRequest, input?: unknown): Locale {
+  if (typeof input === 'string') return normalizeLocale(input);
+  return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+}
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderPortfolioApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    {
+      ok: false,
+      ...getBuilderPortfolioApiErrorPayload(locale, errorCode),
+      ...(extra ?? {}),
+    },
+    { status },
   );
 }
 
+function validationErrorResponse(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
 export async function GET(request: NextRequest) {
+  const errorLocale = requestLocale(request);
+
   try {
     const sp = request.nextUrl.searchParams;
     const parsed = querySchema.parse({
@@ -93,12 +118,9 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({ ok: true, locale: parsed.locale, total, projects });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationErrorResponse(errorLocale, error);
     console.error('[builder/portfolio] GET failed:', error);
-    return NextResponse.json(
-      { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
-      { status: 500 },
-    );
+    return errorResponse(errorLocale, 'portfolio_list_failed', 500);
   }
 }
 
@@ -106,23 +128,30 @@ export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
+  let body: unknown;
   try {
-    const input = projectInputSchema.parse(await request.json());
+    body = await request.json();
+  } catch (error) {
+    console.error('[builder/portfolio] POST JSON parse failed:', error);
+    return errorResponse(requestLocale(request), 'invalid_json', 400);
+  }
+
+  const errorLocale = requestLocale(
+    request,
+    body && typeof body === 'object' && 'locale' in body ? (body as { locale?: unknown }).locale : undefined,
+  );
+
+  try {
+    const input = projectInputSchema.parse(body);
     const project = await createProject(input);
     const errors = validateProject(project);
     if (errors.length > 0) {
-      return NextResponse.json({ ok: false, error: 'validation_error', errors }, { status: 400 });
+      return errorResponse(input.locale, 'validation_error', 400);
     }
     return NextResponse.json({ ok: true, project }, { status: 201 });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
-    if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
-    }
+    if (error instanceof ZodError) return validationErrorResponse(errorLocale, error);
     console.error('[builder/portfolio] POST failed:', error);
-    return NextResponse.json(
-      { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
-      { status: 500 },
-    );
+    return errorResponse(errorLocale, 'portfolio_create_failed', 500);
   }
 }

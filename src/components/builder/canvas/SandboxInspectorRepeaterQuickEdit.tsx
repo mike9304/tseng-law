@@ -1,30 +1,37 @@
 'use client';
 
 import type { BuilderCanvasRepeaterQuickEdit } from '@/lib/builder/canvas/repeater-quick-edit';
+import type { Locale } from '@/lib/locales';
 import {
   InspectorNotice,
   InspectorSection,
 } from './InspectorControls';
 import styles from './SandboxPage.module.css';
+import { getSandboxInspectorRepeaterQuickEditCopy } from './sandbox-inspector-repeater-quick-edit-copy';
 
 export default function SandboxInspectorRepeaterQuickEdit({
   quickEdit,
   disabled,
+  locale = 'ko',
   updateNodeContent,
 }: {
   quickEdit: BuilderCanvasRepeaterQuickEdit;
   disabled?: boolean;
+  locale?: Locale;
   updateNodeContent: (nodeId: string, content: Record<string, unknown>) => void;
 }) {
+  const copy = getSandboxInspectorRepeaterQuickEditCopy(locale);
+  const itemNumber = quickEdit.index + 1;
+
   if (quickEdit.kind === 'service') {
     return (
-      <InspectorSection label="Repeater" title={`Service item ${quickEdit.index + 1}`}>
+      <InspectorSection label={copy.sectionLabel} title={copy.serviceTitle(itemNumber)}>
         <InspectorNotice tone="linked">
-          이 카드의 제목과 본문을 한 번에 수정합니다. 변경 내용은 선택한 노드들과 함께 저장됩니다.
+          {copy.serviceNotice}
         </InspectorNotice>
         <div className={styles.inspectorFormStack} data-inspector-content-adapter="true">
           <label>
-            <span>Title</span>
+            <span>{copy.serviceTitleLabel}</span>
             <input
               type="text"
               value={quickEdit.title}
@@ -41,7 +48,7 @@ export default function SandboxInspectorRepeaterQuickEdit({
             />
           </label>
           <label>
-            <span>Description</span>
+            <span>{copy.serviceDescriptionLabel}</span>
             <textarea
               rows={3}
               value={quickEdit.description}
@@ -54,7 +61,7 @@ export default function SandboxInspectorRepeaterQuickEdit({
             />
           </label>
           <label>
-            <span>Detail link</span>
+            <span>{copy.serviceDetailLinkLabel}</span>
             <input
               type="text"
               value={quickEdit.href}
@@ -72,13 +79,13 @@ export default function SandboxInspectorRepeaterQuickEdit({
   }
 
   return (
-    <InspectorSection label="Repeater" title={`FAQ item ${quickEdit.index + 1}`}>
+    <InspectorSection label={copy.sectionLabel} title={copy.faqTitle(itemNumber)}>
       <InspectorNotice tone="linked">
-        이 FAQ 항목의 질문과 답변을 한 번에 수정합니다. 변경 내용은 선택한 노드들과 함께 저장됩니다.
+        {copy.faqNotice}
       </InspectorNotice>
       <div className={styles.inspectorFormStack} data-inspector-content-adapter="true">
         <label>
-          <span>Question</span>
+          <span>{copy.faqQuestionLabel}</span>
           <input
             type="text"
             value={quickEdit.question}
@@ -91,7 +98,7 @@ export default function SandboxInspectorRepeaterQuickEdit({
           />
         </label>
         <label>
-          <span>Answer</span>
+          <span>{copy.faqAnswerLabel}</span>
           <textarea
             rows={4}
             value={quickEdit.answer}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { siteContent } from '@/data/site-content';
 import type { Locale } from '@/lib/locales';
@@ -98,7 +99,7 @@ export default function SearchOverlay({
   const tabLabel =
     content.tabs.find((tab) => tab.id === activeTab)?.label ?? content.tabs[0]?.label ?? '';
 
-  return (
+  const overlay = (
     <div
       ref={overlayRef}
       className="search-overlay"
@@ -186,4 +187,6 @@ export default function SearchOverlay({
       </div>
     </div>
   );
+
+  return createPortal(overlay, document.body);
 }

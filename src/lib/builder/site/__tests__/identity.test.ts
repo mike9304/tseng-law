@@ -27,6 +27,13 @@ describe('normalizeBuilderSiteId', () => {
     expect(normalizeBuilderSiteId('Site_2')).toBe('Site_2');
   });
 
+  it('maps serialized-missing ids (undefined/null strings) to the default site', () => {
+    expect(normalizeBuilderSiteId('undefined')).toBe(DEFAULT_BUILDER_SITE_ID);
+    expect(normalizeBuilderSiteId('Undefined')).toBe(DEFAULT_BUILDER_SITE_ID);
+    expect(normalizeBuilderSiteId('null')).toBe(DEFAULT_BUILDER_SITE_ID);
+    expect(normalizeBuilderSiteId('NULL')).toBe(DEFAULT_BUILDER_SITE_ID);
+  });
+
   it('rejects path-traversal and separator payloads instead of letting them reach path.join', () => {
     expect(normalizeBuilderSiteId('../../etc/passwd')).toBe(DEFAULT_BUILDER_SITE_ID);
     expect(normalizeBuilderSiteId('..')).toBe(DEFAULT_BUILDER_SITE_ID);

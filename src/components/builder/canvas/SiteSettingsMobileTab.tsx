@@ -8,14 +8,9 @@ import {
   normalizeHeaderFooterMobileConfig,
   normalizeMobileBottomBar,
 } from '@/lib/builder/site/mobile-schema';
-import {
-  fieldStyle,
-  inputStyle,
-  labelStyle,
-  sectionHeadingStyle,
-  sectionStyle,
-  twoColumnStyle,
-} from './SiteSettingsModal.styles';
+import type { Locale } from '@/lib/locales';
+import { getSiteSettingsCopy } from './site-settings-copy';
+import styles from './SiteSettingsMobileTab.module.css';
 
 interface SiteSettingsMobileTabProps {
   headerFooter: BuilderHeaderFooterConfig;
@@ -23,6 +18,7 @@ interface SiteSettingsMobileTabProps {
   settings: Partial<BuilderSiteSettings>;
   onChangeHeaderFooter: (next: BuilderHeaderFooterConfig) => void;
   onChangeMobileBottomBar: (next: BuilderMobileBottomBar) => void;
+  locale: Locale;
 }
 
 export function SiteSettingsMobileTab({
@@ -31,8 +27,10 @@ export function SiteSettingsMobileTab({
   settings,
   onChangeHeaderFooter,
   onChangeMobileBottomBar,
+  locale,
 }: SiteSettingsMobileTabProps) {
   const normalizedBottomBar = normalizeMobileBottomBar(mobileBottomBar, settings);
+  const copy = getSiteSettingsCopy(locale);
 
   const updateMobileBottomAction = (
     index: number,
@@ -45,12 +43,13 @@ export function SiteSettingsMobileTab({
   };
 
   return (
-    <div style={sectionStyle}>
-      <div style={sectionHeadingStyle}>Mobile header</div>
-      <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.82rem', fontWeight: 800, color: '#334155' }}>
+    <div className={styles.root}>
+      <div className={styles.sectionHeading}>{copy.mobile.headerHeading}</div>
+      <label className={styles.checkboxLabel}>
         <input
           type="checkbox"
           checked={headerFooter.mobileSticky === true}
+          className={styles.checkbox}
           onChange={(event) => {
             onChangeHeaderFooter({
               ...normalizeHeaderFooterMobileConfig(headerFooter),
@@ -58,13 +57,13 @@ export function SiteSettingsMobileTab({
             });
           }}
         />
-        Sticky mobile header
+        {copy.mobile.stickyHeader}
       </label>
-      <div style={fieldStyle}>
-        <label style={labelStyle}>Hamburger mode</label>
+      <div className={styles.field}>
+        <label className={styles.label}>{copy.mobile.hamburgerMode}</label>
         <select
           value={headerFooter.mobileHamburger ?? 'auto'}
-          style={inputStyle}
+          className={styles.input}
           onChange={(event) => {
             const value = event.target.value;
             onChangeHeaderFooter({
@@ -73,17 +72,18 @@ export function SiteSettingsMobileTab({
             });
           }}
         >
-          <option value="auto">Auto</option>
-          <option value="force">Force hamburger</option>
-          <option value="off">Desktop menu on mobile</option>
+          <option value="auto">{copy.mobile.hamburgerAuto}</option>
+          <option value="force">{copy.mobile.hamburgerForce}</option>
+          <option value="off">{copy.mobile.hamburgerDesktop}</option>
         </select>
       </div>
 
-      <div style={sectionHeadingStyle}>Mobile bottom CTA</div>
-      <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.82rem', fontWeight: 800, color: '#334155' }}>
+      <div className={styles.sectionHeading}>{copy.mobile.bottomHeading}</div>
+      <label className={styles.checkboxLabel}>
         <input
           type="checkbox"
           checked={mobileBottomBar.enabled}
+          className={styles.checkbox}
           onChange={(event) => {
             onChangeMobileBottomBar({
               ...normalizedBottomBar,
@@ -91,26 +91,18 @@ export function SiteSettingsMobileTab({
             });
           }}
         />
-        Show fixed bottom action bar
+        {copy.mobile.showBottomBar}
       </label>
       {normalizedBottomBar.actions.map((action, index) => (
         <section
           key={action.id || index}
-          style={{
-            border: '1px solid #e2e8f0',
-            borderRadius: 10,
-            padding: 12,
-            display: 'grid',
-            gridTemplateColumns: '110px 1fr',
-            gap: 10,
-            alignItems: 'end',
-          }}
+          className={styles.actionCard}
         >
-          <div style={fieldStyle}>
-            <label style={labelStyle}>Type</label>
+          <div className={styles.field}>
+            <label className={styles.label}>{copy.mobile.type}</label>
             <select
               value={action.kind}
-              style={inputStyle}
+              className={styles.input}
               onChange={(event) => {
                 const value = event.target.value;
                 updateMobileBottomAction(index, {
@@ -118,27 +110,27 @@ export function SiteSettingsMobileTab({
                 });
               }}
             >
-              <option value="phone">Phone</option>
-              <option value="booking">Booking</option>
-              <option value="custom">Custom</option>
+              <option value="phone">{copy.mobile.phone}</option>
+              <option value="booking">{copy.mobile.booking}</option>
+              <option value="custom">{copy.mobile.custom}</option>
             </select>
           </div>
-          <div style={twoColumnStyle}>
-            <div style={fieldStyle}>
-              <label style={labelStyle}>Label</label>
+          <div className={styles.actionFieldsGrid}>
+            <div className={styles.field}>
+              <label className={styles.label}>{copy.mobile.label}</label>
               <input
                 type="text"
                 value={action.label}
-                style={inputStyle}
+                className={styles.input}
                 onChange={(event) => updateMobileBottomAction(index, { label: event.target.value })}
               />
             </div>
-            <div style={fieldStyle}>
-              <label style={labelStyle}>Link</label>
+            <div className={styles.field}>
+              <label className={styles.label}>{copy.mobile.link}</label>
               <input
                 type="text"
                 value={action.href}
-                style={inputStyle}
+                className={styles.input}
                 onChange={(event) => updateMobileBottomAction(index, { href: event.target.value })}
               />
             </div>

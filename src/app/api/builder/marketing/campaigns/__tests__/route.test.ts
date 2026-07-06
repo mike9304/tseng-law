@@ -35,6 +35,14 @@ function makeCampaign(overrides: Partial<Campaign> = {}): Campaign {
   };
 }
 
+function request(method: 'GET' | 'POST', query = '', body?: unknown): NextRequest {
+  return new NextRequest(`https://law.example.test/api/builder/marketing/campaigns${query ? `?${query}` : ''}`, {
+    method,
+    headers: { 'content-type': 'application/json' },
+    body: body === undefined ? undefined : typeof body === 'string' ? body : JSON.stringify(body),
+  });
+}
+
 function postRequest(body: unknown): NextRequest {
   return new NextRequest('https://law.example.test/api/builder/marketing/campaigns', {
     method: 'POST',
@@ -55,13 +63,31 @@ describe('/api/builder/marketing/campaigns', () => {
     vi.mocked(listCampaigns).mockResolvedValue([makeCampaign(), makeCampaign({ campaignId: 'cmp-2' })]);
     const route = await import('../route');
     const response = await route.GET(
-      new NextRequest('https://law.example.test/api/builder/marketing/campaigns'),
+      request('GET', 'locale=en'),
     );
     const payload = await response.json();
 
     expect(response.status).toBe(200);
     expect(payload.total).toBe(2);
     expect(payload.campaigns).toHaveLength(2);
+  });
+
+  it('GET returns localized list failures without leaking exception details', async () => {
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    vi.mocked(listCampaigns).mockRejectedValueOnce(new Error('campaign list secret leaked'));
+    const route = await import('../route');
+    const response = await route.GET(request('GET', 'locale=zh-hant'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(payload).toEqual({
+      ok: false,
+      error: '無法載入活動清單。',
+      errorCode: 'campaigns_list_failed',
+    });
+    expect(JSON.stringify(payload)).not.toContain('campaign list secret leaked');
+    expect(consoleError).toHaveBeenCalledWith('[builder/marketing/campaigns] list failed:', expect.any(Error));
+    consoleError.mockRestore();
   });
 
   it('POST creates a draft campaign with empty stats and 201 status', async () => {
@@ -103,16 +129,61 @@ describe('/api/builder/marketing/campaigns', () => {
   it('POST rejects empty name with 400', async () => {
     const route = await import('../route');
     const response = await route.POST(
-      postRequest({
+      request('POST', 'locale=zh-hant', {
         name: '   ',
         subject: { ko: 'a', 'zh-hant': 'a', en: 'a' },
         bodyHtml: { ko: 'a', 'zh-hant': 'a', en: 'a' },
         bodyText: { ko: 'a', 'zh-hant': 'a', en: 'a' },
       }),
     );
+    const payload = await response.json();
 
     expect(response.status).toBe(400);
+    expect(payload).toMatchObject({
+      ok: false,
+      error: '請確認活動資料。',
+      errorCode: 'invalid_campaign_payload',
+    });
     expect(saveCampaign).not.toHaveBeenCalled();
+  });
+
+  it('POST returns localized invalid JSON errors', async () => {
+    const route = await import('../route');
+    const response = await route.POST(request('POST', 'locale=en', '{'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Check the marketing request format.',
+      errorCode: 'invalid_json',
+    });
+    expect(saveCampaign).not.toHaveBeenCalled();
+  });
+
+  it('POST returns localized create failures without leaking exception details', async () => {
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    vi.mocked(saveCampaign).mockRejectedValueOnce(new Error('campaign create secret leaked'));
+    const route = await import('../route');
+    const response = await route.POST(
+      request('POST', 'locale=en', {
+        name: 'June digest',
+        subject: { ko: '6월', 'zh-hant': '6月', en: 'June' },
+        bodyHtml: { ko: '<p>안녕</p>', 'zh-hant': '<p>哈</p>', en: '<p>Hi</p>' },
+        bodyText: { ko: '안녕', 'zh-hant': '哈', en: 'Hi' },
+      }),
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Unable to create the campaign.',
+      errorCode: 'campaign_create_failed',
+    });
+    expect(JSON.stringify(payload)).not.toContain('campaign create secret leaked');
+    expect(consoleError).toHaveBeenCalledWith('[builder/marketing/campaigns] create failed:', expect.any(Error));
+    consoleError.mockRestore();
   });
 
   it('POST refuses anonymous callers (guardMutation deny)', async () => {

@@ -1,11 +1,15 @@
 'use client';
 
-import type { CSSProperties } from 'react';
+import { useRef, type CSSProperties } from 'react';
 import type { MotionKeyframe, MotionTimelineConfig } from '@/lib/builder/animations/presets';
+import type { Locale } from '@/lib/locales';
+import { getMotionTimelineEditorCopy } from '@/components/builder/editor/motion-timeline-editor-copy';
+import MotionTimelineKeyframeRow from '@/components/builder/editor/MotionTimelineKeyframeRow';
 
 interface Props {
   value: MotionTimelineConfig | undefined;
   disabled?: boolean;
+  locale?: Locale;
   onChange: (next: MotionTimelineConfig | undefined) => void;
 }
 
@@ -45,19 +49,11 @@ function keyframeOffset(keyframe: MotionKeyframe): number {
   return Math.max(0, Math.min(1, raw));
 }
 
-/**
- * Phase 22 W173 — Motion timeline visual editor.
- *
- * Renders a horizontal track with draggable keyframe markers (offset 0~1).
- * Each keyframe can have a CSS `transform` and `opacity`. Supports a
- * scroll-bound toggle and a duration field (used when not scroll-bound).
- *
- * Designed for the inspector animations tab; emits a normalized
- * MotionTimelineConfig or `undefined` to clear.
- */
-export default function MotionTimelineEditor({ value, disabled, onChange }: Props) {
+export default function MotionTimelineEditor({ value, disabled, locale = 'ko', onChange }: Props) {
   const config = value ?? DEFAULT;
   const keyframes = config.keyframes;
+  const copy = getMotionTimelineEditorCopy(locale);
+  const draggingIndexRef = useRef<number | null>(null);
 
   function update(patch: Partial<MotionTimelineConfig>) {
     onChange({ ...config, ...patch });
@@ -65,6 +61,13 @@ export default function MotionTimelineEditor({ value, disabled, onChange }: Prop
 
   function updateKeyframe(idx: number, patch: Partial<MotionKeyframe>) {
     const next = keyframes.map((k, i) => (i === idx ? { ...k, ...patch } : k));
+    update({ keyframes: next });
+  }
+
+  function updateKeyframeOffset(idx: number, offset: number) {
+    const next = keyframes
+      .map((keyframe, index) => (index === idx ? { ...keyframe, offset } : keyframe))
+      .sort((left, right) => keyframeOffset(left) - keyframeOffset(right));
     update({ keyframes: next });
   }
 
@@ -81,9 +84,46 @@ export default function MotionTimelineEditor({ value, disabled, onChange }: Prop
 
   function handleTrackClick(event: React.MouseEvent<HTMLDivElement>) {
     if (disabled) return;
+    if (event.currentTarget !== event.target) return;
     const rect = event.currentTarget.getBoundingClientRect();
     const offset = (event.clientX - rect.left) / rect.width;
     addKeyframe(offset);
+  }
+
+  function markerOffsetFromPointer(event: React.PointerEvent<HTMLDivElement>): number | null {
+    const track = event.currentTarget.parentElement;
+    if (!track) return null;
+    const rect = track.getBoundingClientRect();
+    if (rect.width <= 0) return null;
+    return Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+  }
+
+  function handleMarkerPointerDown(event: React.PointerEvent<HTMLDivElement>, idx: number) {
+    if (disabled) return;
+    event.preventDefault();
+    event.stopPropagation();
+    draggingIndexRef.current = idx;
+    event.currentTarget.setPointerCapture(event.pointerId);
+    const offset = markerOffsetFromPointer(event);
+    if (offset !== null) updateKeyframeOffset(idx, Number(offset.toFixed(3)));
+  }
+
+  function handleMarkerPointerMove(event: React.PointerEvent<HTMLDivElement>, idx: number) {
+    if (disabled || draggingIndexRef.current !== idx) return;
+    event.preventDefault();
+    event.stopPropagation();
+    const offset = markerOffsetFromPointer(event);
+    if (offset !== null) updateKeyframeOffset(idx, Number(offset.toFixed(3)));
+  }
+
+  function handleMarkerPointerUp(event: React.PointerEvent<HTMLDivElement>, idx: number) {
+    if (draggingIndexRef.current !== idx) return;
+    event.preventDefault();
+    event.stopPropagation();
+    draggingIndexRef.current = null;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
   }
 
   return (
@@ -96,11 +136,11 @@ export default function MotionTimelineEditor({ value, disabled, onChange }: Prop
             disabled={disabled}
             onChange={(event) => update({ scrollBound: event.target.checked })}
           />
-          Scroll-bound
+          {copy.scrollBoundLabel}
         </label>
         {!config.scrollBound ? (
           <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            Duration
+            {copy.durationLabel}
             <input
               type="number"
               min={200}
@@ -111,7 +151,7 @@ export default function MotionTimelineEditor({ value, disabled, onChange }: Prop
               onChange={(event) => update({ durationMs: Number(event.target.value) || 1200 })}
               style={{ width: 80, padding: '3px 6px', border: '1px solid #cbd5e1', borderRadius: 4 }}
             />
-            ms
+            {copy.millisecondsLabel}
           </label>
         ) : null}
         {value ? (
@@ -121,7 +161,7 @@ export default function MotionTimelineEditor({ value, disabled, onChange }: Prop
             disabled={disabled}
             style={{ marginLeft: 'auto', fontSize: 11, color: '#b91c1c', background: 'transparent', border: 0, cursor: 'pointer' }}
           >
-            타임라인 제거
+            {copy.removeTimelineLabel}
           </button>
         ) : null}
       </div>
@@ -129,14 +169,26 @@ export default function MotionTimelineEditor({ value, disabled, onChange }: Prop
       <div
         style={trackStyle}
         onClick={handleTrackClick}
-        title="클릭해서 키프레임 추가"
+        title={copy.trackAddTitle}
         role="presentation"
       >
         {keyframes.map((kf, idx) => (
           <div
             key={idx}
+            role="slider"
+            aria-label={copy.markerAriaLabel(idx + 1)}
+            aria-valuemin={0}
+            aria-valuemax={1}
+            aria-valuenow={keyframeOffset(kf)}
+            tabIndex={disabled ? -1 : 0}
+            data-builder-motion-keyframe-marker={`${idx + 1}`}
             style={{ ...markerStyle, left: `${keyframeOffset(kf) * 100}%` }}
-            title={`#${idx} · offset ${keyframeOffset(kf).toFixed(2)}`}
+            title={copy.markerTitle(idx + 1, keyframeOffset(kf).toFixed(2))}
+            onClick={(event) => event.stopPropagation()}
+            onPointerDown={(event) => handleMarkerPointerDown(event, idx)}
+            onPointerMove={(event) => handleMarkerPointerMove(event, idx)}
+            onPointerUp={(event) => handleMarkerPointerUp(event, idx)}
+            onPointerCancel={(event) => handleMarkerPointerUp(event, idx)}
           >
             {idx + 1}
           </div>
@@ -154,7 +206,7 @@ export default function MotionTimelineEditor({ value, disabled, onChange }: Prop
               pointerEvents: 'none',
             }}
           >
-            트랙을 클릭해 키프레임 추가
+            {copy.emptyTrackLabel}
           </span>
         ) : null}
       </div>
@@ -162,56 +214,17 @@ export default function MotionTimelineEditor({ value, disabled, onChange }: Prop
       {keyframes.length > 0 ? (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
           {keyframes.map((kf, idx) => (
-            <div
+            <MotionTimelineKeyframeRow
               key={idx}
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '36px 90px 1fr 70px 30px',
-                gap: 6,
-                alignItems: 'center',
-                fontSize: 11,
-              }}
-            >
-              <strong style={{ color: '#1d4ed8' }}>#{idx + 1}</strong>
-              <input
-                type="number"
-                min={0}
-                max={1}
-                step={0.01}
-                value={keyframeOffset(kf)}
-                disabled={disabled}
-                onChange={(event) => updateKeyframe(idx, { offset: Math.max(0, Math.min(1, Number(event.target.value))) })}
-                style={{ padding: '3px 6px', border: '1px solid #cbd5e1', borderRadius: 4 }}
-              />
-              <input
-                type="text"
-                placeholder="transform e.g. translateY(-20px) scale(1.05)"
-                value={kf.transform ?? ''}
-                disabled={disabled}
-                onChange={(event) => updateKeyframe(idx, { transform: event.target.value })}
-                style={{ padding: '3px 6px', border: '1px solid #cbd5e1', borderRadius: 4, fontFamily: 'ui-monospace, Menlo, monospace' }}
-              />
-              <input
-                type="number"
-                min={0}
-                max={1}
-                step={0.05}
-                value={kf.opacity ?? 1}
-                disabled={disabled}
-                onChange={(event) => updateKeyframe(idx, { opacity: Math.max(0, Math.min(1, Number(event.target.value))) })}
-                style={{ padding: '3px 6px', border: '1px solid #cbd5e1', borderRadius: 4 }}
-                aria-label={`Opacity keyframe ${idx + 1}`}
-              />
-              <button
-                type="button"
-                onClick={() => removeKeyframe(idx)}
-                disabled={disabled}
-                style={{ background: 'transparent', border: 0, color: '#b91c1c', cursor: 'pointer', fontSize: 14 }}
-                aria-label={`Remove keyframe ${idx + 1}`}
-              >
-                ×
-              </button>
-            </div>
+              keyframe={kf}
+              index={idx}
+              offset={keyframeOffset(kf)}
+              copy={copy}
+              disabled={disabled}
+              onOffsetChange={updateKeyframeOffset}
+              onKeyframeChange={updateKeyframe}
+              onRemove={removeKeyframe}
+            />
           ))}
         </div>
       ) : null}

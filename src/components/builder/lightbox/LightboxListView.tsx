@@ -14,6 +14,7 @@ export default function LightboxListView({
   locale: Locale;
   initialLightboxes: BuilderLightbox[];
 }) {
+  const copy = getLightboxListCopy(locale);
   const [lightboxes, setLightboxes] = useState<BuilderLightbox[]>(initialLightboxes);
   const [name, setName] = useState('');
   const [slug, setSlug] = useState('');
@@ -24,9 +25,9 @@ export default function LightboxListView({
     e.preventDefault();
     setError(null);
     const trimmedSlug = slug.trim();
-    const trimmedName = name.trim() || 'Untitled lightbox';
+    const trimmedName = name.trim() || copy.untitledLabel;
     if (!trimmedSlug || !SLUG_RE.test(trimmedSlug)) {
-      setError('Slug must be lowercase alphanumeric with hyphens');
+      setError(copy.slugErrorLabel);
       return;
     }
     setBusy(true);
@@ -39,21 +40,21 @@ export default function LightboxListView({
       });
       const data = (await res.json()) as { ok?: boolean; lightbox?: BuilderLightbox; error?: string };
       if (!res.ok || !data.ok || !data.lightbox) {
-        setError(data.error ?? 'Failed to create lightbox');
+        setError(data.error ?? copy.createFailedLabel);
         return;
       }
       setLightboxes((prev) => [...prev, data.lightbox!]);
       setName('');
       setSlug('');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'unknown error');
+      setError(err instanceof Error ? err.message : copy.unknownErrorLabel);
     } finally {
       setBusy(false);
     }
   }
 
   async function handleDelete(id: string) {
-    if (!window.confirm('Delete this lightbox?')) return;
+    if (!window.confirm(copy.deleteConfirmLabel)) return;
     setBusy(true);
     try {
       const res = await fetch(`/api/builder/site/lightboxes/${id}?locale=${locale}`, {
@@ -64,7 +65,7 @@ export default function LightboxListView({
         setLightboxes((prev) => prev.filter((lb) => lb.id !== id));
       } else {
         const data = (await res.json().catch(() => ({}))) as { error?: string };
-        setError(data.error ?? 'Failed to delete');
+        setError(data.error ?? copy.deleteFailedLabel);
       }
     } finally {
       setBusy(false);
@@ -72,7 +73,7 @@ export default function LightboxListView({
   }
 
   async function handleRename(id: string, currentName: string) {
-    const next = window.prompt('New name', currentName);
+    const next = window.prompt(copy.renamePromptLabel, currentName);
     if (!next || next.trim() === currentName) return;
     setBusy(true);
     try {
@@ -86,7 +87,7 @@ export default function LightboxListView({
       if (data.ok && data.lightbox) {
         setLightboxes((prev) => prev.map((lb) => (lb.id === id ? data.lightbox! : lb)));
       } else {
-        setError(data.error ?? 'Failed to rename');
+        setError(data.error ?? copy.renameFailedLabel);
       }
     } finally {
       setBusy(false);
@@ -95,9 +96,9 @@ export default function LightboxListView({
 
   return (
     <main style={{ padding: 24, maxWidth: 880, margin: '0 auto' }}>
-      <h1 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8 }}>Lightboxes ({locale})</h1>
+      <h1 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8 }}>{copy.title}</h1>
       <p style={{ color: '#64748b', marginBottom: 24, fontSize: 14 }}>
-        Trigger from a button via <code>href: lightbox:&lt;slug&gt;</code>.
+        {copy.description}
       </p>
 
       <form
@@ -115,7 +116,7 @@ export default function LightboxListView({
       >
         <input
           type="text"
-          placeholder="Name"
+          placeholder={copy.namePlaceholder}
           value={name}
           onChange={(e) => setName(e.target.value)}
           disabled={busy}
@@ -128,7 +129,7 @@ export default function LightboxListView({
         />
         <input
           type="text"
-          placeholder="Slug (e.g. contact-form)"
+          placeholder={copy.slugPlaceholder}
           value={slug}
           onChange={(e) => setSlug(e.target.value.toLowerCase())}
           disabled={busy}
@@ -152,7 +153,7 @@ export default function LightboxListView({
             fontWeight: 600,
           }}
         >
-          + New lightbox
+          {copy.newButtonLabel}
         </button>
       </form>
 
@@ -173,7 +174,7 @@ export default function LightboxListView({
 
       {lightboxes.length === 0 ? (
         <div style={{ padding: 32, textAlign: 'center', color: '#94a3b8', fontSize: 14 }}>
-          No lightboxes yet. Create one above.
+          {copy.emptyLabel}
         </div>
       ) : (
         <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
@@ -209,7 +210,7 @@ export default function LightboxListView({
                   fontWeight: 600,
                 }}
               >
-                Edit
+                {copy.editLabel}
               </Link>
               <button
                 type="button"
@@ -224,7 +225,7 @@ export default function LightboxListView({
                   fontSize: 13,
                 }}
               >
-                Rename
+                {copy.renameLabel}
               </button>
               <button
                 type="button"
@@ -240,7 +241,7 @@ export default function LightboxListView({
                   fontSize: 13,
                 }}
               >
-                Delete
+                {copy.deleteLabel}
               </button>
             </li>
           ))}
@@ -248,4 +249,36 @@ export default function LightboxListView({
       )}
     </main>
   );
+}
+
+function getLightboxListCopy(locale: Locale) {
+  return {
+    title: locale === 'ko' ? '라이트박스 관리자' : locale === 'zh-hant' ? '燈箱管理員' : 'Lightbox Admin',
+    description:
+      locale === 'ko'
+        ? '버튼 클릭으로 열리는 라이트박스를 관리합니다. href: lightbox:<slug>로 트리거하세요.'
+        : locale === 'zh-hant'
+          ? '管理按鈕開啟的燈箱。使用 href: lightbox:<slug> 來觸發。'
+          : 'Manage lightboxes opened from buttons. Trigger with href: lightbox:<slug>.',
+    untitledLabel: locale === 'ko' ? '이름 없는 라이트박스' : locale === 'zh-hant' ? '未命名燈箱' : 'Untitled lightbox',
+    namePlaceholder: locale === 'ko' ? '이름' : locale === 'zh-hant' ? '名稱' : 'Name',
+    slugPlaceholder: locale === 'ko' ? 'Slug (예: contact-form)' : locale === 'zh-hant' ? 'Slug（例如：contact-form）' : 'Slug (e.g. contact-form)',
+    slugErrorLabel:
+      locale === 'ko'
+        ? 'Slug는 소문자 영숫자와 하이픈만 사용할 수 있습니다.'
+        : locale === 'zh-hant'
+          ? 'Slug 必須是小寫英數與連字號。'
+          : 'Slug must be lowercase alphanumeric with hyphens',
+    createFailedLabel: locale === 'ko' ? '라이트박스 생성 실패' : locale === 'zh-hant' ? '燈箱建立失敗' : 'Failed to create lightbox',
+    unknownErrorLabel: locale === 'ko' ? '알 수 없는 오류' : locale === 'zh-hant' ? '未知錯誤' : 'Unknown error',
+    deleteConfirmLabel: locale === 'ko' ? '이 라이트박스를 삭제할까요?' : locale === 'zh-hant' ? '要刪除此燈箱嗎？' : 'Delete this lightbox?',
+    deleteFailedLabel: locale === 'ko' ? '라이트박스 삭제 실패' : locale === 'zh-hant' ? '燈箱刪除失敗' : 'Failed to delete lightbox',
+    renamePromptLabel: locale === 'ko' ? '새 이름' : locale === 'zh-hant' ? '新名稱' : 'New name',
+    renameFailedLabel: locale === 'ko' ? '라이트박스 이름 변경 실패' : locale === 'zh-hant' ? '燈箱重新命名失敗' : 'Failed to rename lightbox',
+    newButtonLabel: locale === 'ko' ? '+ 새 라이트박스' : locale === 'zh-hant' ? '+ 新增燈箱' : '+ New lightbox',
+    emptyLabel: locale === 'ko' ? '라이트박스가 없습니다. 위에서 새로 만드세요.' : locale === 'zh-hant' ? '尚無燈箱。請在上方建立。' : 'No lightboxes yet. Create one above.',
+    editLabel: locale === 'ko' ? '편집' : locale === 'zh-hant' ? '編輯' : 'Edit',
+    renameLabel: locale === 'ko' ? '이름 변경' : locale === 'zh-hant' ? '重新命名' : 'Rename',
+    deleteLabel: locale === 'ko' ? '삭제' : locale === 'zh-hant' ? '刪除' : 'Delete',
+  } as const;
 }

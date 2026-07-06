@@ -1,12 +1,15 @@
 'use client';
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
+import type { Locale } from '@/lib/locales';
+import { getPreviewModalCopy } from './preview-modal-copy';
+import styles from './PreviewModal.module.css';
 
 type DeviceMode = 'desktop' | 'tablet' | 'mobile';
 
 interface DeviceSpec {
   mode: DeviceMode;
-  label: string;
   width: number;
   height: number;
   bezel: number;
@@ -18,7 +21,6 @@ interface DeviceSpec {
 const DEVICES: Record<DeviceMode, DeviceSpec> = {
   desktop: {
     mode: 'desktop',
-    label: 'Desktop',
     width: 1280,
     height: 800,
     bezel: 0,
@@ -28,7 +30,6 @@ const DEVICES: Record<DeviceMode, DeviceSpec> = {
   },
   tablet: {
     mode: 'tablet',
-    label: 'Tablet',
     width: 768,
     height: 1024,
     bezel: 14,
@@ -38,7 +39,6 @@ const DEVICES: Record<DeviceMode, DeviceSpec> = {
   },
   mobile: {
     mode: 'mobile',
-    label: 'Mobile',
     width: 390,
     height: 780,
     bezel: 12,
@@ -46,12 +46,6 @@ const DEVICES: Record<DeviceMode, DeviceSpec> = {
     notch: true,
     homeIndicator: true,
   },
-};
-
-const ICONS: Record<DeviceMode, string> = {
-  desktop: '🖥',
-  tablet: '⬜',
-  mobile: '▯',
 };
 
 const FOCUSABLE_SELECTOR = [
@@ -64,27 +58,69 @@ const FOCUSABLE_SELECTOR = [
   '[contenteditable="true"]:not([tabindex="-1"])',
 ].join(',');
 
+type PreviewStageStyle = CSSProperties & {
+  '--preview-stage-scale': string;
+};
+
+type PreviewDeviceStyle = CSSProperties & {
+  '--preview-device-bezel': string;
+  '--preview-device-height': string;
+  '--preview-device-radius': string;
+  '--preview-device-screen-radius': string;
+  '--preview-device-shell-width': string;
+  '--preview-device-width': string;
+};
+
+function stageShellStyle(stageScale: number): PreviewStageStyle {
+  return {
+    '--preview-stage-scale': String(stageScale),
+  };
+}
+
+function deviceFrameStyle(spec: DeviceSpec): PreviewDeviceStyle {
+  return {
+    '--preview-device-bezel': `${spec.bezel}px`,
+    '--preview-device-height': `${spec.height}px`,
+    '--preview-device-radius': `${spec.radius}px`,
+    '--preview-device-screen-radius': `${Math.max(8, spec.radius - spec.bezel + 4)}px`,
+    '--preview-device-shell-width': `${spec.width + spec.bezel * 2}px`,
+    '--preview-device-width': `${spec.width}px`,
+  };
+}
+
 export default function PreviewModal({
   open,
+  locale,
   onClose,
   previewUrl,
   initialDevice = 'desktop',
 }: {
   open: boolean;
+  locale?: Locale | string;
   onClose: () => void;
   previewUrl: string | null;
   initialDevice?: DeviceMode;
 }) {
+  const copy = getPreviewModalCopy(locale);
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const restoreFocusRef = useRef<HTMLElement | null>(null);
   const closingRef = useRef(false);
   const [device, setDevice] = useState<DeviceMode>(initialDevice);
   const [reloadKey, setReloadKey] = useState(0);
+  const [frameLoading, setFrameLoading] = useState(false);
 
   useEffect(() => {
     if (!open) return;
     setDevice(initialDevice);
   }, [open, initialDevice]);
+
+  useEffect(() => {
+    if (!open) {
+      setFrameLoading(false);
+      return;
+    }
+    setFrameLoading(Boolean(previewUrl));
+  }, [device, open, previewUrl, reloadKey]);
 
   useEffect(() => {
     if (!open) return;
@@ -203,75 +239,28 @@ export default function PreviewModal({
       ref={dialogRef}
       role="dialog"
       aria-modal="true"
-      aria-label="페이지 미리보기"
+      aria-label={copy.ariaLabel}
       tabIndex={-1}
       data-builder-preview-dialog="true"
-      style={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: 10100,
-        display: 'flex',
-        flexDirection: 'column',
-        background: 'rgba(8, 12, 24, 0.78)',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
-        animation: 'previewBackdropIn 180ms ease',
-      }}
+      className={styles.dialog}
       onClick={(event) => {
         if (event.target === event.currentTarget) onClose();
       }}
     >
-      <style>{`
-        @keyframes previewBackdropIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes previewShellIn { from { transform: translateY(8px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        .preview-device-btn { position: relative; display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px 7px 12px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: #cbd5e1; border-radius: 999px; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 140ms ease; }
-        .preview-device-btn:hover:not(:disabled) { background: rgba(255,255,255,0.08); color: #fff; border-color: rgba(255,255,255,0.22); }
-        .preview-device-btn[aria-pressed="true"] { background: #fff; color: #0f172a; border-color: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.35); }
-        .preview-device-btn small { opacity: 0.7; font-weight: 500; font-variant-numeric: tabular-nums; }
-        .preview-device-btn[aria-pressed="true"] small { opacity: 0.55; }
-        .preview-action-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.04); color: #e2e8f0; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 140ms ease; }
-        .preview-action-btn:hover:not(:disabled) { background: rgba(255,255,255,0.1); color: #fff; }
-        .preview-action-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-        .preview-close-btn { width: 32px; height: 32px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.04); color: #e2e8f0; cursor: pointer; font-size: 1rem; display: inline-flex; align-items: center; justify-content: center; transition: all 140ms ease; }
-        .preview-close-btn:hover { background: #ef4444; color: #fff; border-color: #ef4444; }
-      `}</style>
-
-      <header
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr auto 1fr',
-          alignItems: 'center',
-          padding: '14px 24px',
-          borderBottom: '1px solid rgba(255,255,255,0.08)',
-          color: '#fff',
-          gap: 16,
-          animation: 'previewShellIn 220ms ease',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 0 }}>
-          <span style={{ fontSize: '0.92rem', fontWeight: 700, letterSpacing: '-0.01em' }}>미리보기</span>
+      <header className={styles.header}>
+        <div className={styles.titleBar}>
+          <span className={styles.title}>{copy.title}</span>
           {previewUrl ? (
             <span
               title={previewUrl}
-              style={{
-                fontSize: '0.74rem',
-                color: '#94a3b8',
-                background: 'rgba(255,255,255,0.06)',
-                padding: '3px 10px',
-                borderRadius: 999,
-                fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
-                whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                maxWidth: 360,
-              }}
+              className={styles.urlPill}
             >
               {previewUrl}
             </span>
           ) : null}
         </div>
 
-        <div role="group" aria-label="디바이스 선택" style={{ display: 'inline-flex', gap: 6, padding: 4, borderRadius: 999, background: 'rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.06)' }}>
+        <div role="group" aria-label={copy.deviceGroupAriaLabel} className={styles.deviceGroup}>
           {(['desktop', 'tablet', 'mobile'] as const).map((mode) => {
             const d = DEVICES[mode];
             const active = device === mode;
@@ -279,105 +268,73 @@ export default function PreviewModal({
               <button
                 key={mode}
                 type="button"
-                className="preview-device-btn"
+                className={styles.deviceButton}
                 aria-pressed={active}
                 onClick={() => setDevice(mode)}
               >
-                <span aria-hidden style={{ fontSize: '0.92rem', lineHeight: 1 }}>{ICONS[mode]}</span>
-                <span>{d.label}</span>
+                <span aria-hidden className={styles.deviceIcon} data-mode={mode} />
+                <span>{copy.deviceLabels[mode]}</span>
                 <small>{d.width}</small>
               </button>
             );
           })}
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 8 }}>
-          <button type="button" className="preview-action-btn" onClick={reload} title="새로고침 (⌘R)">
+        <div className={styles.actionGroup}>
+          <button type="button" className={styles.actionButton} onClick={reload} aria-label={copy.reloadLabel} title={copy.reloadTitle}>
             <span aria-hidden>↻</span>
-            <span>새로고침</span>
+            <span>{copy.reloadLabel}</span>
           </button>
-          <button type="button" className="preview-action-btn" onClick={openInNewTab} disabled={!previewUrl} title="새 탭에서 열기">
+          <button type="button" className={styles.actionButton} onClick={openInNewTab} aria-label={copy.openInNewTabLabel} disabled={!previewUrl} title={copy.openInNewTabTitle}>
             <span aria-hidden>↗</span>
-            <span>새 탭</span>
+            <span>{copy.openInNewTabLabel}</span>
           </button>
-          <button type="button" className="preview-close-btn" onClick={onClose} aria-label="미리보기 닫기" title="닫기 (Esc)">
+          <button type="button" className={styles.closeButton} onClick={onClose} aria-label={copy.closeAriaLabel} title={copy.closeTitle}>
             ×
           </button>
         </div>
       </header>
 
       <div
-        style={{
-          flex: 1,
-          minHeight: 0,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '24px 24px 32px',
-          overflow: 'auto',
-        }}
+        className={styles.stageBody}
         onClick={(event) => {
           if (event.target === event.currentTarget) onClose();
         }}
       >
         <div
           aria-hidden={false}
-          style={{
-            transform: `scale(${stageScale})`,
-            transformOrigin: 'center center',
-            transition: 'transform 200ms ease',
-            animation: 'previewShellIn 260ms ease',
-          }}
+          className={styles.stageShell}
+          style={stageShellStyle(stageScale)}
         >
-          <DeviceFrame spec={spec}>
+          <DeviceFrame spec={spec} browserChromeLabel={copy.browserChromeLabel}>
             {previewUrl ? (
-              <iframe
-                key={`${device}-${reloadKey}-${previewUrl}`}
-                src={previewUrl}
-                title={`Preview ${spec.label}`}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  border: 'none',
-                  display: 'block',
-                  background: '#fff',
-                }}
-              />
+              <>
+                <iframe
+                  key={`${device}-${reloadKey}-${previewUrl}`}
+                  src={previewUrl}
+                  title={copy.iframeTitle(copy.deviceLabels[spec.mode])}
+                  className={styles.previewFrame}
+                  onLoad={() => setFrameLoading(false)}
+                />
+                {frameLoading ? (
+                  <div className={styles.previewLoadingOverlay} role="status" aria-live="polite">
+                    <span className={styles.previewLoadingSpinner} aria-hidden="true" />
+                    <span>{copy.loadingMessage}</span>
+                  </div>
+                ) : null}
+              </>
             ) : (
-              <div
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  background: '#0f172a',
-                  color: '#94a3b8',
-                  fontSize: '0.85rem',
-                  fontWeight: 500,
-                }}
-              >
-                먼저 페이지를 발행해야 미리보기가 가능합니다.
+              <div className={styles.unpublished}>
+                {copy.unpublishedMessage}
               </div>
             )}
           </DeviceFrame>
         </div>
       </div>
 
-      <footer
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '10px 24px',
-          color: '#94a3b8',
-          fontSize: '0.74rem',
-          letterSpacing: '0.01em',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
-        }}
-      >
+      <footer className={styles.footer}>
         <span>
-          {spec.width} × {spec.height}px · 스케일 {Math.round(stageScale * 100)}% · Esc 또는 외곽 클릭으로 닫기
+          {copy.footerSummary(spec.width, spec.height, Math.round(stageScale * 100))}
         </span>
       </footer>
     </div>
@@ -386,97 +343,51 @@ export default function PreviewModal({
 
 function DeviceFrame({
   spec,
+  browserChromeLabel,
   children,
 }: {
   spec: DeviceSpec;
-  children: React.ReactNode;
+  browserChromeLabel: string;
+  children: ReactNode;
 }) {
   if (spec.mode === 'desktop') {
     return (
       <div
-        style={{
-          background: '#fff',
-          borderRadius: spec.radius,
-          overflow: 'hidden',
-          boxShadow: '0 30px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.05)',
-          width: spec.width,
-        }}
+        className={styles.desktopFrame}
+        data-mode={spec.mode}
+        style={deviceFrameStyle(spec)}
       >
-        <div
-          style={{
-            height: 32,
-            display: 'flex',
-            alignItems: 'center',
-            gap: 8,
-            padding: '0 14px',
-            background: 'linear-gradient(180deg, #f1f5f9, #e2e8f0)',
-            borderBottom: '1px solid #cbd5e1',
-          }}
-        >
-          <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#ef4444', boxShadow: 'inset 0 -1px 0 rgba(0,0,0,0.1)' }} />
-          <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#f59e0b', boxShadow: 'inset 0 -1px 0 rgba(0,0,0,0.1)' }} />
-          <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#22c55e', boxShadow: 'inset 0 -1px 0 rgba(0,0,0,0.1)' }} />
-          <span style={{ flex: 1 }} />
-          <span style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 500 }}>preview</span>
+        <div className={styles.browserBar}>
+          <span className={styles.browserDot} data-tone="red" />
+          <span className={styles.browserDot} data-tone="yellow" />
+          <span className={styles.browserDot} data-tone="green" />
+          <span className={styles.browserSpacer} />
+          <span className={styles.browserLabel}>{browserChromeLabel}</span>
         </div>
-        <div style={{ width: spec.width, height: spec.height, background: '#fff' }}>{children}</div>
+        <div className={styles.desktopScreen}>{children}</div>
       </div>
     );
   }
 
   return (
     <div
-      style={{
-        position: 'relative',
-        background: '#0f172a',
-        borderRadius: spec.radius,
-        padding: spec.bezel,
-        boxShadow: '0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 2px rgba(255,255,255,0.06), inset 0 0 0 1px rgba(255,255,255,0.04)',
-        width: spec.width + spec.bezel * 2,
-      }}
+      className={styles.deviceFrame}
+      data-mode={spec.mode}
+      style={deviceFrameStyle(spec)}
     >
       {spec.notch ? (
         <span
           aria-hidden
-          style={{
-            position: 'absolute',
-            top: spec.bezel + 6,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: 110,
-            height: 26,
-            borderRadius: 14,
-            background: '#000',
-            zIndex: 2,
-            boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.04)',
-          }}
+          className={styles.notch}
         />
       ) : null}
-      <div
-        style={{
-          width: spec.width,
-          height: spec.height,
-          background: '#fff',
-          borderRadius: spec.radius - spec.bezel + 4,
-          overflow: 'hidden',
-          position: 'relative',
-        }}
-      >
+      <div className={styles.deviceScreen}>
         {children}
       </div>
       {spec.homeIndicator ? (
         <span
           aria-hidden
-          style={{
-            position: 'absolute',
-            bottom: spec.bezel - 2,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: 110,
-            height: 4,
-            borderRadius: 2,
-            background: 'rgba(255,255,255,0.6)',
-          }}
+          className={styles.homeIndicator}
         />
       ) : null}
     </div>

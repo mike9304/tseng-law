@@ -1,16 +1,12 @@
 'use client';
 
 import { useCallback, useState } from 'react';
-
-const LOCALE_LABELS: Record<string, string> = {
-  ko: '한국어',
-  'zh-hant': '繁體中文',
-  en: 'English',
-};
+import { getColumnEditCopy } from '@/components/builder/columns/column-edit-copy';
+import type { Locale } from '@/lib/locales';
 
 interface ColumnLocaleLinkerProps {
   slug: string;
-  locale: string;
+  locale: Locale;
   linkedSlugs: { ko?: string; 'zh-hant'?: string; en?: string };
   onSaveStatus?: (status: 'saving' | 'saved' | 'error') => void;
 }
@@ -21,9 +17,10 @@ export default function ColumnLocaleLinker({
   linkedSlugs: initial,
   onSaveStatus,
 }: ColumnLocaleLinkerProps) {
+  const copy = getColumnEditCopy(locale);
   const [links, setLinks] = useState(initial);
 
-  const otherLocales = Object.keys(LOCALE_LABELS).filter((l) => l !== locale) as Array<'ko' | 'zh-hant' | 'en'>;
+  const otherLocales = Object.keys(copy.localeLinker.localeNames).filter((l) => l !== locale) as Array<'ko' | 'zh-hant' | 'en'>;
 
   const handleLink = useCallback(
     async (targetLocale: 'ko' | 'zh-hant' | 'en', targetSlug: string) => {
@@ -64,15 +61,15 @@ export default function ColumnLocaleLinker({
 
   return (
     <aside className="column-frontmatter-panel" style={{ marginTop: '1rem' }}>
-      <h3>다국어 연결</h3>
+      <h3>{copy.localeLinker.heading}</h3>
       {otherLocales.map((otherLocale) => (
         <label key={otherLocale} className="column-editor-field">
-          <span>{LOCALE_LABELS[otherLocale]}</span>
+          <span>{copy.localeLinker.localeNames[otherLocale]}</span>
           <div style={{ display: 'flex', gap: '0.3rem' }}>
             <input
               type="text"
               value={links[otherLocale] || ''}
-              placeholder="연결할 slug"
+              placeholder={copy.localeLinker.placeholder}
               onChange={(e) => {
                 setLinks((prev) => ({ ...prev, [otherLocale]: e.target.value }));
               }}
@@ -94,7 +91,7 @@ export default function ColumnLocaleLinker({
                   whiteSpace: 'nowrap',
                 }}
               >
-                열기
+                {copy.localeLinker.open}
               </a>
             )}
           </div>

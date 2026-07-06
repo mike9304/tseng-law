@@ -273,6 +273,7 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
         setService('');
         setContent('');
         setWebsite('');
+        await fetchReviews();
       } else {
         const data = await res.json().catch(() => null);
         setMessage({ type: 'error', text: getErrorMessage(locale, data?.error) });

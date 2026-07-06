@@ -2,8 +2,10 @@
 
 import Link from 'next/link';
 import { useState, useMemo } from 'react';
+import type { Locale } from '@/lib/locales';
 import type { FormSubmission } from '@/lib/builder/forms/form-engine';
 import { safeHref } from '@/lib/builder/links';
+import { getFormsCopy } from './forms-copy';
 
 type DateRange = 'all' | '7d' | '30d';
 type ReadFilter = 'all' | 'read' | 'unread';
@@ -11,9 +13,11 @@ type ReadFilter = 'all' | 'read' | 'unread';
 interface Props {
   initialSubmissions: FormSubmission[];
   formId: string;
+  locale: Locale;
 }
 
-export default function FormSubmissionsDashboard({ initialSubmissions, formId }: Props) {
+export default function FormSubmissionsDashboard({ initialSubmissions, formId, locale }: Props) {
+  const copy = getFormsCopy(locale);
   const [submissions, setSubmissions] = useState<FormSubmission[]>(initialSubmissions);
   const [selected, setSelected] = useState<FormSubmission | null>(null);
   const [loading, setLoading] = useState(false);
@@ -133,15 +137,15 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
         <div>
           <h1 style={{ fontSize: '1.5rem', fontWeight: 700, margin: 0 }}>
-            Form Submissions
+            {copy.dashboard.title}
           </h1>
           <p style={{ fontSize: '0.875rem', color: '#6b7280', margin: '0.25rem 0 0' }}>
-            {formId} &middot; {submissions.length} total &middot; {unreadCount} unread
+            {copy.dashboard.summary(formId, submissions.length, unreadCount)}
           </p>
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
           <Link
-            href={`/ko/admin-builder/forms/builder/${encodeURIComponent(formId)}`}
+            href={`/${locale}/admin-builder/forms/builder/${encodeURIComponent(formId)}`}
             style={{
               padding: '0.5rem 1rem',
               fontSize: '0.85rem',
@@ -153,7 +157,7 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
               fontWeight: 600,
             }}
           >
-            폼 빌더 열기
+            {copy.dashboard.openBuilder}
           </Link>
           <button
             onClick={refreshList}
@@ -169,7 +173,7 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
               opacity: loading ? 0.6 : 1,
             }}
           >
-            Refresh
+            {copy.dashboard.refresh}
           </button>
         </div>
       </div>
@@ -188,7 +192,7 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
       }}>
         <input
           type="text"
-          placeholder="Search name, email, message..."
+          placeholder={copy.dashboard.searchPlaceholder}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           style={{
@@ -213,7 +217,7 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
             cursor: 'pointer',
           }}
         >
-          <option value="all">All categories</option>
+          <option value="all">{copy.dashboard.categoryAll}</option>
           {categories.map((cat) => (
             <option key={cat} value={cat}>{cat}</option>
           ))}
@@ -230,9 +234,9 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
             cursor: 'pointer',
           }}
         >
-          <option value="all">All time</option>
-          <option value="7d">Last 7 days</option>
-          <option value="30d">Last 30 days</option>
+          <option value="all">{copy.dashboard.dateAll}</option>
+          <option value="7d">{copy.dashboard.date7d}</option>
+          <option value="30d">{copy.dashboard.date30d}</option>
         </select>
         <select
           value={readFilter}
@@ -246,13 +250,13 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
             cursor: 'pointer',
           }}
         >
-          <option value="all">All status</option>
-          <option value="unread">Unread only</option>
-          <option value="read">Read only</option>
+          <option value="all">{copy.dashboard.statusAll}</option>
+          <option value="unread">{copy.dashboard.unreadOnly}</option>
+          <option value="read">{copy.dashboard.readOnly}</option>
         </select>
         {(searchQuery || categoryFilter !== 'all' || dateRange !== 'all' || readFilter !== 'all') && (
           <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>
-            {filteredSubmissions.length} of {submissions.length} shown
+            {copy.dashboard.shown(filteredSubmissions.length, submissions.length)}
           </span>
         )}
       </div>
@@ -265,8 +269,8 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
           background: '#f9fafb',
           borderRadius: 8,
           color: '#9ca3af',
-        }}>
-          {submissions.length === 0 ? 'No submissions yet.' : 'No matching submissions.'}
+          }}>
+          {submissions.length === 0 ? copy.dashboard.noSubmissionsYet : copy.dashboard.noMatchingSubmissions}
         </div>
       ) : (
         <div style={{ overflowX: 'auto' }}>
@@ -281,12 +285,12 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
           }}>
             <thead>
               <tr style={{ background: '#f3f4f6', textAlign: 'left' }}>
-                <th style={thStyle}>Status</th>
-                <th style={thStyle}>Date</th>
-                <th style={thStyle}>Name</th>
-                <th style={thStyle}>Email</th>
-                <th style={thStyle}>Category</th>
-                <th style={thStyle}>Message</th>
+                <th style={thStyle}>{copy.dashboard.table.status}</th>
+                <th style={thStyle}>{copy.dashboard.table.date}</th>
+                <th style={thStyle}>{copy.dashboard.table.name}</th>
+                <th style={thStyle}>{copy.dashboard.table.email}</th>
+                <th style={thStyle}>{copy.dashboard.table.category}</th>
+                <th style={thStyle}>{copy.dashboard.table.message}</th>
               </tr>
             </thead>
             <tbody>
@@ -360,9 +364,10 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: 700, margin: 0 }}>Submission Detail</h2>
+              <h2 style={{ fontSize: '1.2rem', fontWeight: 700, margin: 0 }}>{copy.dashboard.detail.title}</h2>
               <button
                 onClick={() => setSelected(null)}
+                aria-label={copy.dashboard.detail.closeLabel}
                 style={{
                   background: 'none',
                   border: 'none',
@@ -377,17 +382,21 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem' }}>
-              <DetailRow label="Submission ID" value={selected.submissionId} />
-              <DetailRow label="Date" value={formatDate(selected.submittedAt)} />
-              <DetailRow label="Status" value={selected.read ? 'Read' : 'Unread'} />
+              <DetailRow label={copy.dashboard.detail.submissionId} value={selected.submissionId} />
+              <DetailRow label={copy.dashboard.detail.form} value={selected.formId} />
+              <DetailRow label={copy.dashboard.detail.submitted} value={formatDate(selected.submittedAt)} />
+              <DetailRow
+                label={copy.dashboard.detail.status}
+                value={selected.read ? copy.dashboard.detail.read : copy.dashboard.detail.unread}
+              />
               {Object.entries(selected.data).map(([key, value]) => (
                 <DetailRow key={key} label={key} value={String(value ?? '')} />
               ))}
-              {selected.ip && <DetailRow label="IP" value={selected.ip} />}
-              {selected.userAgent && <DetailRow label="User Agent" value={selected.userAgent} />}
+              {selected.ip && <DetailRow label={copy.dashboard.detail.ip} value={selected.ip} />}
+              {selected.userAgent && <DetailRow label={copy.dashboard.detail.userAgent} value={selected.userAgent} />}
               {selected.files && selected.files.length > 0 && (
                 <div>
-                  <strong style={{ color: '#374151' }}>Files:</strong>
+                  <strong style={{ color: '#374151' }}>{locale === 'ko' ? '파일' : locale === 'zh-hant' ? '檔案' : 'Files'}:</strong>
                   <ul style={{ margin: '0.25rem 0 0', paddingLeft: '1.25rem' }}>
                     {selected.files.map((f) => {
                       const fileHref = safeHref(f.url);
@@ -427,7 +436,7 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
                   opacity: loading ? 0.6 : 1,
                 }}
               >
-                Mark as Read
+                {copy.dashboard.detail.markAsRead}
               </button>
             )}
           </div>

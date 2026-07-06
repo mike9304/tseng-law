@@ -4,11 +4,28 @@ import {
   readLightboxCanvas,
   writeLightboxCanvas,
 } from '@/lib/builder/site/persistence';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
 import { normalizeLocale } from '@/lib/locales';
-import { normalizeCanvasDocument } from '@/lib/builder/canvas/types';
+import { normalizeCanvasDocumentForSave } from '@/lib/builder/canvas/types';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import type { Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
 
 export async function GET(
   request: NextRequest,
@@ -17,9 +34,11 @@ export async function GET(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
-  const draft = await readLightboxCanvas('default', params.id);
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const draft = await readLightboxCanvas(siteId, params.id);
   if (!draft) {
-    return NextResponse.json({ ok: false, error: 'Lightbox draft not found' }, { status: 404 });
+    return errorResponse(locale, 'lightbox_draft_not_found', 404);
   }
   return NextResponse.json({ ok: true, document: draft });
 }
@@ -35,13 +54,20 @@ export async function PUT(
   try {
     body = (await request.json()) as { document?: unknown };
   } catch {
-    return NextResponse.json({ ok: false, error: 'Invalid JSON' }, { status: 400 });
+    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+    return errorResponse(locale, 'invalid_json', 400);
   }
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const normalized = normalizeCanvasDocument(body.document, locale);
+  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const normalized = normalizeCanvasDocumentForSave(body.document, locale);
+  if (!normalized) {
+    // Unrepairable payload: refuse instead of persisting the sandbox fallback
+    // over the saved canvas (F15/R1 data-loss shape).
+    return errorResponse(locale, 'draft_document_invalid', 400);
+  }
 
-  await writeLightboxCanvas('default', params.id, normalized);
+  await writeLightboxCanvas(siteId, params.id, normalized);
 
   return NextResponse.json({ ok: true, document: normalized });
 }

@@ -1,10 +1,12 @@
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
+import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
 import {
   type BuilderSeoValidationIssue,
   validateBuilderPageSeo,
 } from '@/lib/builder/seo/validation';
 import { mergeSeoWithDefaults } from '@/lib/builder/seo/defaults';
+import { getSeoAssistantTaskCopy } from '@/lib/builder/seo/assistant-task-copy';
 
 export type BuilderSeoAssistantSeverity = 'critical' | 'high' | 'medium' | 'low';
 export type BuilderSeoAssistantStatus = 'done' | 'todo';
@@ -89,6 +91,7 @@ export function buildSeoAssistantTasks(input: {
   siteUrl?: string;
 }): BuilderSeoAssistantTask[] {
   const siteUrl = input.siteUrl ?? 'https://example.com';
+  const resolvedSettings = resolveBuilderSiteSettings(input.site?.settings, input.page.locale);
   const seo = mergeSeoWithDefaults({
     page: input.page,
     site: input.site,
@@ -96,7 +99,9 @@ export function buildSeoAssistantTasks(input: {
     locale: input.page.locale,
   });
   const focusKeyword = cleanText(seo.focusKeyword)
-    || cleanText(input.site?.settings?.seoChecklist?.keywords?.[0]);
+    || cleanText(input.site?.settings?.seoChecklist?.keywords?.[0])
+    || cleanText(resolvedSettings?.seoChecklist?.keywords?.[0]);
+  const copy = getSeoAssistantTaskCopy(input.page.locale);
   const pageText = collectText(input.canvas);
   const title = cleanText(seo.title);
   const description = cleanText(seo.description);
@@ -113,90 +118,90 @@ export function buildSeoAssistantTasks(input: {
 
   tasks.push({
     id: 'assistant-indexable',
-    label: 'Let search engines index this page',
+    label: copy.indexable.label,
     severity: seo.noIndex || input.page.noIndex ? 'critical' : 'low',
     status: seo.noIndex || input.page.noIndex ? 'todo' : 'done',
     field: 'robots',
     detail: seo.noIndex || input.page.noIndex
-      ? '검색 노출이 필요한 페이지라면 noindex를 끄세요.'
-      : '페이지가 검색엔진 색인 대상입니다.',
+      ? copy.indexable.noIndex
+      : copy.indexable.enabled,
   });
 
   tasks.push({
     id: 'assistant-h1',
-    label: 'Use one H1 on the page',
+    label: copy.h1.label,
     severity: h1Count === 1 ? 'low' : 'high',
     status: h1Count === 1 ? 'done' : 'todo',
     field: 'content',
     detail: h1Count === 1
-      ? 'H1 구조가 적절합니다.'
-      : `현재 H1이 ${h1Count}개입니다. 핵심 제목 하나만 H1로 유지하세요.`,
+      ? copy.h1.valid
+      : copy.h1.invalid(h1Count),
   });
 
   tasks.push({
     id: 'assistant-image-alt',
-    label: 'Write alt text for images',
+    label: copy.imageAlt.label,
     severity: missingAlt > 0 ? 'medium' : 'low',
     status: missingAlt > 0 ? 'todo' : 'done',
     field: 'content',
     detail: missingAlt > 0
-      ? `${missingAlt}개 이미지에 alt text가 없습니다.`
-      : '이미지 alt text가 채워져 있습니다.',
+      ? copy.imageAlt.invalid(missingAlt)
+      : copy.imageAlt.valid,
   });
 
   if (focusKeyword) {
     tasks.push({
       id: 'assistant-keyword-title',
-      label: 'Add focus keyword to title tag',
+      label: copy.keywordTitle.label,
       severity: includesKeyword(title, focusKeyword) ? 'low' : 'high',
       status: includesKeyword(title, focusKeyword) ? 'done' : 'todo',
       field: 'title',
       detail: includesKeyword(title, focusKeyword)
-        ? `Title에 "${focusKeyword}"가 포함되어 있습니다.`
-        : `SEO title에 "${focusKeyword}"를 자연스럽게 포함하세요.`,
-      applyHint: `${focusKeyword} | ${title}`.slice(0, 60),
+        ? copy.keywordTitle.valid(focusKeyword)
+        : copy.keywordTitle.invalid(focusKeyword),
+      applyHint: copy.keywordTitle.applyHint(focusKeyword, title),
     });
 
     tasks.push({
       id: 'assistant-keyword-description',
-      label: 'Add focus keyword to meta description',
+      label: copy.keywordDescription.label,
       severity: includesKeyword(description, focusKeyword) ? 'low' : 'medium',
       status: includesKeyword(description, focusKeyword) ? 'done' : 'todo',
       field: 'description',
       detail: includesKeyword(description, focusKeyword)
-        ? `Description에 "${focusKeyword}"가 포함되어 있습니다.`
-        : `Meta description에 "${focusKeyword}"를 포함하세요.`,
+        ? copy.keywordDescription.valid(focusKeyword)
+        : copy.keywordDescription.invalid(focusKeyword),
     });
 
     tasks.push({
       id: 'assistant-keyword-slug',
-      label: 'Add focus keyword to URL slug',
+      label: copy.keywordSlug.label,
       severity: includesKeyword(slug, focusKeyword.replace(/\s+/g, ' ')) ? 'low' : 'medium',
       status: includesKeyword(slug, focusKeyword.replace(/\s+/g, ' ')) ? 'done' : 'todo',
       field: 'slug',
       detail: includesKeyword(slug, focusKeyword.replace(/\s+/g, ' '))
-        ? 'Slug가 focus keyword와 연결되어 있습니다.'
-        : '가능하면 URL slug에도 핵심 검색어를 짧게 반영하세요.',
+        ? copy.keywordSlug.valid
+        : copy.keywordSlug.invalid,
     });
 
     tasks.push({
       id: 'assistant-keyword-body',
-      label: 'Add focus keyword to page body',
+      label: copy.keywordBody.label,
       severity: includesKeyword(pageText, focusKeyword) ? 'low' : 'medium',
       status: includesKeyword(pageText, focusKeyword) ? 'done' : 'todo',
       field: 'content',
       detail: includesKeyword(pageText, focusKeyword)
-        ? `본문에 "${focusKeyword}"가 포함되어 있습니다.`
-        : `페이지 본문에 "${focusKeyword}"를 자연스럽게 포함하세요.`,
+        ? copy.keywordBody.valid(focusKeyword)
+        : copy.keywordBody.invalid(focusKeyword),
     });
   } else {
     tasks.push({
       id: 'assistant-focus-keyword',
-      label: 'Set a focus keyword',
+      label: copy.focusKeyword.label,
       severity: 'medium',
       status: 'todo',
       field: 'focusKeyword',
-      detail: '페이지별 focus keyword를 입력하면 Wix SEO Assistant처럼 더 구체적인 작업이 생성됩니다.',
+      detail: copy.focusKeyword.detail,
     });
   }
 

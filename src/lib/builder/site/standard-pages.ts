@@ -10,6 +10,7 @@ export const REQUIRED_STANDARD_PAGE_SLUGS = [
   'pricing',
   'reviews',
   'columns',
+  'videos',
   'privacy',
   'disclaimer',
 ] as const;
@@ -32,6 +33,10 @@ export function matchesStandardPageSlugForLocale(
   if (pageLocale(page) !== locale) return false;
   if (slug === '') return page.isHomePage || page.slug === '';
   return page.slug === slug;
+}
+
+export function isStandardPageSlug(slug: string): boolean {
+  return REQUIRED_STANDARD_PAGE_SLUGS.some((standardSlug) => standardSlug === slug);
 }
 
 export function needsStandardPageSeedForLocale(

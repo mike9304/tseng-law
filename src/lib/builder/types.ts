@@ -10,7 +10,7 @@ export const builderDatasetCollectionIds = [
   'attorney-profiles',
 ] as const;
 export type BuilderDatasetCollectionId = (typeof builderDatasetCollectionIds)[number];
-export const builderDatasetTargetIds = ['home.insights.feed', 'home.services.list'] as const;
+export const builderDatasetTargetIds = ['home.insights.feed', 'home.services.list', 'home.attorney.profile'] as const;
 export type BuilderDatasetTargetId = (typeof builderDatasetTargetIds)[number];
 export const builderDatasetModes = ['list'] as const;
 export type BuilderDatasetMode = (typeof builderDatasetModes)[number];
@@ -55,6 +55,22 @@ export type BuilderSectionKey =
   | BuilderContactSectionKey;
 export type BuilderCollectionSectionKey = 'home.faq' | 'home.services';
 export type BuilderServiceItem = SiteContent['services']['items'][number];
+export interface BuilderAttorneyProfileItem {
+  slug: string;
+  name: string;
+  role: string;
+  title: string;
+  description: string;
+  email: string;
+  image: string;
+  imageAltText: string;
+  imageFocalPoint: {
+    x: number;
+    y: number;
+  };
+  summary: string[];
+  href: string;
+}
 export const builderViewportModes = ['desktop', 'tablet', 'mobile'] as const;
 export type BuilderViewportMode = (typeof builderViewportModes)[number];
 export const builderResponsiveBreakpoints = ['tablet', 'mobile'] as const;
@@ -207,6 +223,14 @@ export interface BuilderPageDatasetBinding {
   filters?: BuilderPageDatasetFilter[];
   sort?: BuilderPageDatasetSort[];
   limit?: number;
+  /**
+   * WIX-PERFECT #6 Slice 2: when set, this binding sources from a USER-created CMS
+   * collection (site.cmsCollections) instead of a built-in static collection. Additive
+   * and optional — the closed `targetId`/`collectionId` unions stay the built-in defaults
+   * (kept valid for type-safety); the render path branches on this field when present.
+   * See cms-collection-datasets.ts.
+   */
+  cmsCollectionId?: string;
 }
 
 export interface BuilderPageDatasetFilter {

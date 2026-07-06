@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { locales, type Locale } from '@/lib/locales';
+import { getTranslationCopy } from './translation-copy';
 
 interface Props {
   siteId: string;
@@ -29,6 +30,7 @@ export default function LocaleSlugEditor({
   initialSlugByLocale,
   embedded = false,
 }: Omit<Props, 'siteId'> & Partial<Pick<Props, 'siteId'>>) {
+  const copy = getTranslationCopy(sourceLocale);
   const targetLocales = useMemo(
     () => locales.filter((candidate) => candidate !== sourceLocale),
     [sourceLocale],
@@ -68,13 +70,13 @@ export default function LocaleSlugEditor({
       );
       const body = (await response.json().catch(() => null)) as PatchResponse | null;
       if (!response.ok || !body?.ok) {
-        setError(body?.error ?? `Save failed (${response.status})`);
+        setError(body?.error ?? copy.editorSaveFailed);
         return;
       }
       setSlugs(body.page?.slugByLocale ?? slugByLocale);
-      setNotice(`Saved ${locale} slug.`);
+      setNotice(copy.editorSavedSlug(locale));
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Save failed');
+      setError(err instanceof Error ? err.message : copy.editorSaveFailed);
     } finally {
       setSavingLocale(null);
     }
@@ -82,6 +84,7 @@ export default function LocaleSlugEditor({
 
   return (
     <section
+      data-locale-slug-editor="true"
       style={{
         marginBottom: embedded ? 16 : 0,
         border: '1px solid #e2e8f0',
@@ -90,9 +93,9 @@ export default function LocaleSlugEditor({
         background: '#f8fafc',
       }}
     >
-      <h2 style={sectionHeading}>Per-language URL slug</h2>
+      <h2 style={sectionHeading}>{copy.editorPerLanguageUrlSlug}</h2>
       <p style={{ fontSize: 12, color: '#475569', margin: '0 0 12px' }}>
-        Source slug ({sourceLocale}): <code>{defaultSlug || '(home)'}</code>
+        {copy.editorSourceSlugLabel} ({sourceLocale}): <code>{defaultSlug || '(home)'}</code>
       </p>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         {targetLocales.map((locale) => {
@@ -120,14 +123,16 @@ export default function LocaleSlugEditor({
                   }))
                 }
                 style={inputStyle}
+                data-locale-slug-input={locale}
               />
               <button
                 type="button"
                 onClick={() => save(locale)}
                 disabled={isSaving}
                 style={btnPrimary}
+                data-locale-slug-save={locale}
               >
-                {isSaving ? 'Saving…' : 'Save'}
+                {isSaving ? copy.editorSaving : copy.editorSave}
               </button>
             </div>
           );

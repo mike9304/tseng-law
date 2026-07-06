@@ -5,14 +5,15 @@
  * artefact (blob or local file) so they don't bloat the site document
  * and don't fight the page/navigation reconcile machinery.
  *
- * Invocation is a NAIVE sandbox (`new Function(...)`); see `invoke` route.
- * Production-grade isolation (Vercel Sandbox / vm2 / isolated-vm) is a
- * deliberate follow-up.
+ * Invocation runs through a bounded worker/vm helper; see `invoke` route.
+ * Production-grade isolation (Vercel Sandbox / isolated-vm) is still a
+ * deliberate follow-up before untrusted authors are allowed.
  */
 
 import { get, put } from '@vercel/blob';
 import { readFile, writeFile, mkdir } from 'fs/promises';
 import path from 'path';
+import { validateBuilderFunctionSource } from './function-source-validation';
 
 export const BUILDER_FUNCTION_RUNTIME = 'node-stub' as const;
 export type BuilderFunctionRuntime = typeof BUILDER_FUNCTION_RUNTIME;
@@ -58,13 +59,17 @@ export async function readBuilderFunctions(): Promise<BuilderServerlessFunction[
         const parsed = JSON.parse(text) as FunctionsStore;
         return Array.isArray(parsed?.functions) ? parsed.functions : [];
       }
-    } catch { /* fallthrough */ }
+    } catch (error) {
+      if (!(error instanceof Error)) throw error;
+    }
   } else {
     try {
       const text = await readFile(localPath(), 'utf8');
       const parsed = JSON.parse(text) as FunctionsStore;
       return Array.isArray(parsed?.functions) ? parsed.functions : [];
-    } catch { /* fallthrough */ }
+    } catch (error) {
+      if (!(error instanceof Error)) throw error;
+    }
   }
   return [];
 }
@@ -122,6 +127,11 @@ export function validateBuilderFunctionInput(input: {
 
   if (code.length > CODE_MAX) {
     return { field: 'code', message: `code must be ≤ ${CODE_MAX} chars` };
+  }
+  const sourceSyntaxIssue = validateBuilderFunctionSource(code)
+    .find((issue) => issue.code === 'syntax');
+  if (sourceSyntaxIssue) {
+    return { field: 'code', message: sourceSyntaxIssue.message };
   }
 
   return null;

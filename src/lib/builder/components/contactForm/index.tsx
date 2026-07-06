@@ -4,6 +4,12 @@ import { useState } from 'react';
 import { defineComponent } from '../define';
 import ContactFormInspector from './Inspector';
 import styles from './ContactForm.module.css';
+import type { Locale } from '@/lib/locales';
+import {
+  CONTACT_FORM_LEGACY_DEFAULTS,
+  getConversionWidgetsCopy,
+  localizedContactFormSubmitLabel,
+} from '../conversion-widgets-copy';
 
 interface ContactFormContent {
   fields: string[];
@@ -11,19 +17,14 @@ interface ContactFormContent {
   action: string;
 }
 
-const fieldLabels: Record<string, string> = {
-  name: 'Name',
-  email: 'Email',
-  phone: 'Phone',
-  message: 'Message',
-};
-
-function ContactFormRender({ node }: { node: { content: ContactFormContent } }) {
+function ContactFormRender({ node, locale = 'ko' }: { node: { content: ContactFormContent }; locale?: Locale }) {
+  const copy = getConversionWidgetsCopy(locale);
   const {
-    fields = ['name', 'email', 'phone', 'message'],
-    submitLabel = 'Submit',
-    action = '/api/consultation/submit',
+    fields = CONTACT_FORM_LEGACY_DEFAULTS.fields,
+    submitLabel = copy.contactForm.defaultSubmitLabel,
+    action = CONTACT_FORM_LEGACY_DEFAULTS.action,
   } = node.content;
+  const displaySubmitLabel = localizedContactFormSubmitLabel(submitLabel, copy.contactForm.defaultSubmitLabel);
 
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
@@ -56,7 +57,7 @@ function ContactFormRender({ node }: { node: { content: ContactFormContent } }) 
   if (status === 'success') {
     return (
       <div className={styles.success}>
-        Thank you! Your message has been sent.
+        {copy.contactForm.successMessage}
       </div>
     );
   }
@@ -67,7 +68,7 @@ function ContactFormRender({ node }: { node: { content: ContactFormContent } }) 
       className={styles.form}
     >
       {fields.map((field) => {
-        const label = fieldLabels[field] || field;
+        const label = copy.contactForm.fieldLabels[field as keyof typeof copy.contactForm.fieldLabels] || field;
         const isTextarea = field === 'message';
 
         return (
@@ -98,7 +99,7 @@ function ContactFormRender({ node }: { node: { content: ContactFormContent } }) 
       })}
       {status === 'error' && (
         <p className={styles.error}>
-          Failed to send. Please try again.
+          {copy.contactForm.errorMessage}
         </p>
       )}
       <button
@@ -106,7 +107,7 @@ function ContactFormRender({ node }: { node: { content: ContactFormContent } }) 
         disabled={status === 'submitting'}
         className={styles.button}
       >
-        {status === 'submitting' ? 'Sending...' : submitLabel}
+        {status === 'submitting' ? copy.contactForm.submittingLabel : displaySubmitLabel}
       </button>
     </form>
   );
@@ -118,9 +119,9 @@ export default defineComponent({
   category: 'domain',
   icon: '◻',
   defaultContent: {
-    fields: ['name', 'email', 'phone', 'message'],
-    submitLabel: 'Submit',
-    action: '/api/consultation/submit',
+    fields: CONTACT_FORM_LEGACY_DEFAULTS.fields.map((field) => field),
+    submitLabel: CONTACT_FORM_LEGACY_DEFAULTS.submitLabel,
+    action: CONTACT_FORM_LEGACY_DEFAULTS.action,
   },
   defaultStyle: {},
   defaultRect: { width: 400, height: 250 },

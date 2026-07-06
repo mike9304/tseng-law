@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { createContext, useContext } from 'react';
 import { DEFAULT_THEME, type BuilderTheme } from '@/lib/builder/site/types';
 

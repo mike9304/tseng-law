@@ -5,7 +5,10 @@ import {
 import { serviceAreas } from '@/data/service-details';
 import { getBuilderBindableTargetsForCollection } from '@/lib/builder/datasets';
 import { getAllColumnPosts } from '@/lib/columns';
+import { readAttorneyProfileSourceRecords, type AttorneyProfileSourceRecord } from '@/lib/builder/lawyers/source';
+import { readServiceAreaSourceRecords, type ServiceAreaSourceRecord } from '@/lib/builder/services/source';
 import { normalizeLocale } from '@/lib/locales';
+import type { BuilderDatasetTargetId, BuilderPageKey } from '@/lib/builder/types';
 
 export const builderCollectionIds = [
   'columns',
@@ -53,6 +56,7 @@ export interface BuilderCollectionSummary {
   supportsRelations: boolean;
   fields: BuilderCollectionFieldSummary[];
   routeBindings: BuilderCollectionRouteBindingSummary[];
+  bindableTargets: BuilderCollectionBindableTargetSummary[];
 }
 
 export interface BuilderCollectionRecordPreview {
@@ -61,6 +65,7 @@ export interface BuilderCollectionRecordPreview {
   secondaryLabel: string;
   routePath: string;
   seo: BuilderCollectionRecordSeoPreview;
+  sourceFields?: BuilderCollectionRecordSourceFields;
 }
 
 export interface BuilderCollectionRecordSeoPreview {
@@ -69,12 +74,38 @@ export interface BuilderCollectionRecordSeoPreview {
   canonicalPath: string;
   keywords: string[];
   image?: string;
+  imageAltText?: string;
+  imageFocalPoint?: {
+    x: number;
+    y: number;
+  };
   noIndex: boolean;
 }
 
+export interface BuilderCollectionRecordSourceFields {
+  intro?: string;
+  keyPoints?: readonly string[];
+  columnSlugs?: readonly string[];
+  columnOptions?: readonly BuilderCollectionRecordRelationOption[];
+  summary?: readonly string[];
+  languages?: readonly string[];
+  practiceAreas?: readonly string[];
+  internalLinks?: readonly BuilderCollectionRecordLink[];
+}
+
+export interface BuilderCollectionRecordRelationOption {
+  slug: string;
+  title: string;
+}
+
+export interface BuilderCollectionRecordLink {
+  label: string;
+  href: string;
+}
+
 export interface BuilderCollectionBindableTargetSummary {
-  targetId: string;
-  pageKey: string;
+  targetId: BuilderDatasetTargetId;
+  pageKey: BuilderPageKey;
   sectionKey: string;
   title: string;
   description: string;
@@ -83,7 +114,22 @@ export interface BuilderCollectionBindableTargetSummary {
 
 export interface BuilderCollectionDetail extends BuilderCollectionSummary {
   sampleRecords: BuilderCollectionRecordPreview[];
-  bindableTargets: BuilderCollectionBindableTargetSummary[];
+}
+
+interface BuilderCollectionRecordPreviewSources {
+  attorneyProfileRecords?: readonly AttorneyProfileSourceRecord[];
+  serviceAreaRecords?: readonly ServiceAreaSourceRecord[];
+}
+
+function readBindableTargets(collectionId: BuilderCollectionId): BuilderCollectionBindableTargetSummary[] {
+  return getBuilderBindableTargetsForCollection(collectionId).map((target) => ({
+    targetId: target.targetId,
+    pageKey: target.pageKey,
+    sectionKey: target.sectionKey,
+    title: target.title,
+    description: target.description,
+    runtimeStatus: target.runtimeStatus,
+  }));
 }
 
 export function isBuilderCollectionId(
@@ -132,6 +178,7 @@ export function readBuilderCollectionSummaries(
     { key: 'name', label: 'Name', type: 'text', localized: true, repeated: false, required: true },
     { key: 'role', label: 'Role', type: 'text', localized: true, repeated: false, required: true },
     { key: 'description', label: 'Description', type: 'rich-text', localized: true, repeated: false, required: true },
+    { key: 'summary', label: 'Summary', type: 'string-list', localized: true, repeated: true, required: true },
     { key: 'email', label: 'Email', type: 'email', localized: false, repeated: false, required: true },
     { key: 'image', label: 'Profile image', type: 'image', localized: false, repeated: false, required: true },
     { key: 'languages', label: 'Languages', type: 'string-list', localized: true, repeated: true, required: true },
@@ -163,6 +210,7 @@ export function readBuilderCollectionSummaries(
           notes: 'Live static article route today. Candidate dynamic item page once dataset binding is real.',
         },
       ],
+      bindableTargets: readBindableTargets('columns'),
     },
     {
       id: 'service-areas',
@@ -187,6 +235,7 @@ export function readBuilderCollectionSummaries(
           notes: 'Live static service detail route today. Candidate dynamic item template later.',
         },
       ],
+      bindableTargets: readBindableTargets('service-areas'),
     },
     {
       id: 'attorney-profiles',
@@ -211,13 +260,56 @@ export function readBuilderCollectionSummaries(
           notes: `Live static profile route today. Current record count: ${Object.keys(localizedAttorneyProfiles).length}.`,
         },
       ],
+      bindableTargets: readBindableTargets('attorney-profiles'),
     },
   ];
 }
 
+export function readBuilderCollectionDetails(
+  localeInput: string | null | undefined
+): BuilderCollectionDetail[] {
+  return builderCollectionIds.map((collectionId) => readBuilderCollectionDetail(collectionId, localeInput));
+}
+
+export async function readBuilderCollectionDetailsForSite(
+  siteId: string,
+  localeInput: string | null | undefined,
+): Promise<BuilderCollectionDetail[]> {
+  const locale = normalizeLocale(localeInput ?? undefined);
+  const [serviceAreaRecords, attorneyProfileRecords] = await Promise.all([
+    readServiceAreaSourceRecords(siteId, locale),
+    readAttorneyProfileSourceRecords(siteId, locale),
+  ]);
+
+  return builderCollectionIds.map((collectionId) => readBuilderCollectionDetail(collectionId, locale, {
+    attorneyProfileRecords,
+    serviceAreaRecords,
+  }));
+}
+
+export async function readBuilderCollectionDetailForSite(
+  siteId: string,
+  collectionId: BuilderCollectionId,
+  localeInput: string | null | undefined,
+): Promise<BuilderCollectionDetail> {
+  const locale = normalizeLocale(localeInput ?? undefined);
+  if (collectionId === 'service-areas') {
+    return readBuilderCollectionDetail(collectionId, locale, {
+      serviceAreaRecords: await readServiceAreaSourceRecords(siteId, locale),
+    });
+  }
+  if (collectionId === 'attorney-profiles') {
+    return readBuilderCollectionDetail(collectionId, locale, {
+      attorneyProfileRecords: await readAttorneyProfileSourceRecords(siteId, locale),
+    });
+  }
+  return readBuilderCollectionDetail(collectionId, locale);
+}
+
 export function readBuilderCollectionDetail(
   collectionId: BuilderCollectionId,
-  localeInput: string | null | undefined
+  localeInput: string | null | undefined,
+  sources: BuilderCollectionRecordPreviewSources = {},
 ): BuilderCollectionDetail {
   const locale = normalizeLocale(localeInput ?? undefined);
   const summaries = readBuilderCollectionSummaries(locale);
@@ -227,37 +319,25 @@ export function readBuilderCollectionDetail(
     throw new Error(`Unknown builder collection detail: ${collectionId}`);
   }
 
-  const bindableTargets = getBuilderBindableTargetsForCollection(collectionId).map((target) => ({
-    targetId: target.targetId,
-    pageKey: target.pageKey,
-    sectionKey: target.sectionKey,
-    title: target.title,
-    description: target.description,
-    runtimeStatus: target.runtimeStatus,
-  }));
-
-  const allRecordPreviews = readBuilderCollectionRecordPreviews(collectionId, locale);
+  const allRecordPreviews = readBuilderCollectionRecordPreviews(collectionId, locale, sources);
 
   switch (collectionId) {
     case 'columns': {
       return {
         ...summary,
         sampleRecords: allRecordPreviews.slice(0, 4),
-        bindableTargets,
       };
     }
     case 'service-areas': {
       return {
         ...summary,
         sampleRecords: allRecordPreviews.slice(0, 4),
-        bindableTargets,
       };
     }
     case 'attorney-profiles': {
       return {
         ...summary,
         sampleRecords: allRecordPreviews,
-        bindableTargets,
       };
     }
     default:
@@ -267,9 +347,14 @@ export function readBuilderCollectionDetail(
 
 export function readBuilderCollectionRecordPreviews(
   collectionId: BuilderCollectionId,
-  localeInput: string | null | undefined
+  localeInput: string | null | undefined,
+  sources: BuilderCollectionRecordPreviewSources = {},
 ): BuilderCollectionRecordPreview[] {
   const locale = normalizeLocale(localeInput ?? undefined);
+  const columnOptions = getAllColumnPosts(locale).map((post) => ({
+    slug: post.slug,
+    title: post.title,
+  }));
 
   switch (collectionId) {
     case 'columns':
@@ -292,8 +377,11 @@ export function readBuilderCollectionRecordPreviews(
         },
       }));
     case 'service-areas':
-      return serviceAreas.map((area) => ({
-        recordId: area.slug,
+      return (sources.serviceAreaRecords ?? serviceAreas.map((area) => ({
+        ...area,
+        sourceSlug: area.slug,
+      }))).map((area) => ({
+        recordId: area.sourceSlug,
         primaryLabel: area.title[locale],
         secondaryLabel: `${area.subtitle[locale]} · ${area.columnSlugs.length} linked columns`,
         routePath: `/${locale}/services/${area.slug}`,
@@ -308,8 +396,39 @@ export function readBuilderCollectionRecordPreviews(
           ],
           noIndex: false,
         },
+        sourceFields: {
+          intro: area.intro[locale],
+          keyPoints: area.keyPoints[locale],
+          columnSlugs: area.columnSlugs,
+          columnOptions,
+        },
       }));
     case 'attorney-profiles': {
+      if (sources.attorneyProfileRecords) {
+        return sources.attorneyProfileRecords.map((profile) => ({
+          recordId: profile.sourceSlug,
+          primaryLabel: profile.name,
+          secondaryLabel: `${profile.role} · ${profile.email}`,
+          routePath: `/${locale}/lawyers/${profile.slug}`,
+          seo: {
+            title: profile.title,
+            description: profile.description,
+            canonicalPath: `/${locale}/lawyers/${profile.slug}`,
+            keywords: profile.keywords,
+            image: profile.image,
+            imageAltText: profile.imageAltText,
+            imageFocalPoint: profile.imageFocalPoint,
+            noIndex: false,
+          },
+          sourceFields: {
+            summary: profile.summary,
+            languages: profile.languages,
+            practiceAreas: profile.practiceAreas,
+            internalLinks: profile.internalLinks,
+          },
+        }));
+      }
+
       const localizedAttorneyProfiles = attorneyProfiles[locale];
       return getAttorneyProfileSlugs().map((slug) => {
         const profile = localizedAttorneyProfiles[slug];
@@ -325,7 +444,15 @@ export function readBuilderCollectionRecordPreviews(
             canonicalPath: `/${locale}/lawyers/${profile.slug}`,
             keywords: profile.keywords,
             image: profile.image,
+            imageAltText: `${profile.name.trim()} ${profile.role.trim()}`.trim(),
+            imageFocalPoint: { x: 0.5, y: 0.5 },
             noIndex: false,
+          },
+          sourceFields: {
+            summary: profile.summary,
+            languages: profile.languages,
+            practiceAreas: profile.practiceAreas,
+            internalLinks: profile.internalLinks,
           },
         };
       });

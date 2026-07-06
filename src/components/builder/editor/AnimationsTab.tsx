@@ -2,6 +2,7 @@
 
 import type { CSSProperties } from 'react';
 import type { BuilderAnimationConfig, BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
 import {
   ANIMATION_EASING_OPTIONS,
   CLICK_PRESET_OPTIONS,
@@ -28,6 +29,7 @@ import {
   type ScrollEffect,
 } from '@/lib/builder/animations/presets';
 import MotionTimelineEditor from '@/components/builder/editor/MotionTimelineEditor';
+import { getAnimationsTabCopy, type AnimationPresetLabels } from '@/components/builder/editor/animations-tab-copy';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 
 type AnimationConfigValue = NonNullable<BuilderAnimationConfig>;
@@ -86,12 +88,18 @@ function isCubicBezierEasing(value: string): boolean {
 }
 
 function EasingField({
-  label = 'Easing',
+  label,
+  customLabel,
+  customOptionLabel,
+  easingLabels,
   value,
   disabled,
   onChange,
 }: {
-  label?: string;
+  label: string;
+  customLabel: string;
+  customOptionLabel: string;
+  easingLabels: AnimationPresetLabels['easing'];
   value: AnimationEasingValue;
   disabled?: boolean;
   onChange: (value: AnimationEasingValue) => void;
@@ -119,14 +127,14 @@ function EasingField({
         >
           {ANIMATION_EASING_OPTIONS.map((option) => (
             <option key={option.value} value={option.value}>
-              {option.label}
+              {easingLabels[option.value] ?? option.label}
             </option>
           ))}
-          <option value="custom">Custom cubic-bezier</option>
+          <option value="custom">{customOptionLabel}</option>
         </select>
       </label>
       <label className={styles.inspectorField}>
-        <span className={styles.inspectorFieldLabel}>Custom</span>
+        <span className={styles.inspectorFieldLabel}>{customLabel}</span>
         <input
           className={styles.inspectorInput}
           type="text"
@@ -200,13 +208,16 @@ function RangeField({
 export default function AnimationsTab({
   node,
   disabled = false,
+  locale = 'ko',
   onUpdateAnimation,
 }: {
   node: BuilderCanvasNode;
   disabled?: boolean;
+  locale?: Locale;
   onUpdateAnimation: (animation: BuilderAnimationConfig) => void;
 }) {
   const animation = normalizeAnimationConfig(node.animation);
+  const copy = getAnimationsTabCopy(locale);
 
   const commitAnimation = (nextAnimation: AnimationConfigValue) => {
     onUpdateAnimation(nextAnimation);
@@ -284,36 +295,36 @@ export default function AnimationsTab({
     <div className={styles.inspectorFormStack}>
       <section style={sectionStyle}>
         <div style={sectionHeaderStyle}>
-          <span style={sectionTitleStyle}>Entrance</span>
+          <span style={sectionTitleStyle}>{copy.sections.entrance}</span>
           <button
             type="button"
             style={previewButtonStyle}
             disabled={disabled || animation.entrance.preset === 'none'}
             onClick={playPreview}
           >
-            Play preview
+            {copy.previewButtonLabel}
           </button>
         </div>
 
         <label className={styles.inspectorField}>
-          <span className={styles.inspectorFieldLabel}>Preset</span>
+          <span className={styles.inspectorFieldLabel}>{copy.presetLabel}</span>
           <select
             className={styles.inspectorSelect}
-            aria-label="Entrance preset"
+            aria-label={copy.aria.entrancePreset}
             value={animation.entrance.preset}
             disabled={disabled}
             onChange={(event) => updateEntrance({ preset: event.target.value as EntrancePreset })}
           >
             {ENTRANCE_PRESET_OPTIONS.map((option) => (
               <option key={option.value} value={option.value}>
-                {option.label}
+                {copy.labels.entrance[option.value] ?? option.label}
               </option>
             ))}
           </select>
         </label>
 
         <RangeField
-          label="Duration"
+          label={copy.durationLabel}
           value={animation.entrance.duration}
           min={100}
           max={3000}
@@ -323,7 +334,7 @@ export default function AnimationsTab({
           onChange={(duration) => updateEntrance({ duration: Math.round(duration) })}
         />
         <RangeField
-          label="Delay"
+          label={copy.delayLabel}
           value={animation.entrance.delay}
           min={0}
           max={3000}
@@ -335,6 +346,10 @@ export default function AnimationsTab({
 
         <div className={styles.inspectorFieldGrid}>
           <EasingField
+            label={copy.easingLabel}
+            customLabel={copy.customEasingLabel}
+            customOptionLabel={copy.customEasingOptionLabel}
+            easingLabels={copy.labels.easing}
             value={animation.entrance.easing}
             disabled={disabled}
             onChange={(easing) => updateEntrance({ easing })}
@@ -346,31 +361,31 @@ export default function AnimationsTab({
               disabled={disabled}
               onChange={(event) => updateEntrance({ triggerOnce: event.target.checked })}
             />
-            <span>Trigger once</span>
+            <span>{copy.triggerOnceLabel}</span>
           </label>
         </div>
       </section>
 
       <section style={sectionStyle}>
-        <span style={sectionTitleStyle}>Exit</span>
+        <span style={sectionTitleStyle}>{copy.sections.exit}</span>
         <label className={styles.inspectorField}>
-          <span className={styles.inspectorFieldLabel}>Preset</span>
+          <span className={styles.inspectorFieldLabel}>{copy.presetLabel}</span>
           <select
             className={styles.inspectorSelect}
-            aria-label="Exit preset"
+            aria-label={copy.aria.exitPreset}
             value={animation.exit.preset}
             disabled={disabled}
             onChange={(event) => updateExit({ preset: event.target.value as ExitPreset })}
           >
             {EXIT_PRESET_OPTIONS.map((option) => (
               <option key={option.value} value={option.value}>
-                {option.label}
+                {copy.labels.exit[option.value] ?? option.label}
               </option>
             ))}
           </select>
         </label>
         <RangeField
-          label="Duration"
+          label={copy.durationLabel}
           value={animation.exit.duration}
           min={100}
           max={3000}
@@ -380,33 +395,37 @@ export default function AnimationsTab({
           onChange={(duration) => updateExit({ duration: Math.round(duration) })}
         />
         <EasingField
+          label={copy.easingLabel}
+          customLabel={copy.customEasingLabel}
+          customOptionLabel={copy.customEasingOptionLabel}
+          easingLabels={copy.labels.easing}
           value={animation.exit.easing}
           disabled={disabled || animation.exit.preset === 'none'}
           onChange={(easing) => updateExit({ easing })}
         />
-        <p style={hintStyle}>Exit runs when the element leaves the viewport on the published page.</p>
+        <p style={hintStyle}>{copy.hints.exit}</p>
       </section>
 
       <section style={sectionStyle}>
-        <span style={sectionTitleStyle}>Loop</span>
+        <span style={sectionTitleStyle}>{copy.sections.loop}</span>
         <label className={styles.inspectorField}>
-          <span className={styles.inspectorFieldLabel}>Preset</span>
+          <span className={styles.inspectorFieldLabel}>{copy.presetLabel}</span>
           <select
             className={styles.inspectorSelect}
-            aria-label="Loop preset"
+            aria-label={copy.aria.loopPreset}
             value={animation.loop.preset}
             disabled={disabled}
             onChange={(event) => updateLoop({ preset: event.target.value as LoopPreset })}
           >
             {LOOP_PRESET_OPTIONS.map((option) => (
               <option key={option.value} value={option.value}>
-                {option.label}
+                {copy.labels.loop[option.value] ?? option.label}
               </option>
             ))}
           </select>
         </label>
         <RangeField
-          label="Duration"
+          label={copy.durationLabel}
           value={animation.loop.durationMs}
           min={200}
           max={20000}
@@ -416,7 +435,7 @@ export default function AnimationsTab({
           onChange={(durationMs) => updateLoop({ durationMs: Math.round(durationMs) })}
         />
         <RangeField
-          label="Intensity"
+          label={copy.intensityLabel}
           value={animation.loop.intensity}
           min={0}
           max={100}
@@ -424,29 +443,29 @@ export default function AnimationsTab({
           disabled={disabled || animation.loop.preset === 'none'}
           onChange={(intensity) => updateLoop({ intensity: Math.round(intensity) })}
         />
-        <p style={hintStyle}>Loop presets run continuously on the published page and respect reduced motion.</p>
+        <p style={hintStyle}>{copy.hints.loop}</p>
       </section>
 
       <section style={sectionStyle}>
-        <span style={sectionTitleStyle}>Scroll</span>
+        <span style={sectionTitleStyle}>{copy.sections.scroll}</span>
         <label className={styles.inspectorField}>
-          <span className={styles.inspectorFieldLabel}>Effect</span>
+          <span className={styles.inspectorFieldLabel}>{copy.effectLabel}</span>
           <select
             className={styles.inspectorSelect}
-            aria-label="Scroll effect"
+            aria-label={copy.aria.scrollEffect}
             value={animation.scroll.effect}
             disabled={disabled}
             onChange={(event) => updateScroll({ effect: event.target.value as ScrollEffect })}
           >
             {SCROLL_EFFECT_OPTIONS.map((option) => (
               <option key={option.value} value={option.value}>
-                {option.label}
+                {copy.labels.scroll[option.value] ?? option.label}
               </option>
             ))}
           </select>
         </label>
         <RangeField
-          label="Intensity"
+          label={copy.intensityLabel}
           value={animation.scroll.intensity}
           min={-100}
           max={100}
@@ -454,29 +473,29 @@ export default function AnimationsTab({
           disabled={disabled || animation.scroll.effect === 'none'}
           onChange={(intensity) => updateScroll({ intensity })}
         />
-        <p style={hintStyle}>Scroll effects run on the published page; the editor keeps this as a runtime setting.</p>
+        <p style={hintStyle}>{copy.hints.scroll}</p>
       </section>
 
       <section style={sectionStyle}>
-        <span style={sectionTitleStyle}>Hover</span>
+        <span style={sectionTitleStyle}>{copy.sections.hover}</span>
         <label className={styles.inspectorField}>
-          <span className={styles.inspectorFieldLabel}>Preset</span>
+          <span className={styles.inspectorFieldLabel}>{copy.presetLabel}</span>
           <select
             className={styles.inspectorSelect}
-            aria-label="Hover preset"
+            aria-label={copy.aria.hoverPreset}
             value={animation.hover.preset}
             disabled={disabled}
             onChange={(event) => updateHover({ preset: event.target.value as HoverAnimationPreset })}
           >
             {HOVER_PRESET_OPTIONS.map((option) => (
               <option key={option.value} value={option.value}>
-                {option.label}
+                {copy.labels.hover[option.value] ?? option.label}
               </option>
             ))}
           </select>
         </label>
         <RangeField
-          label="Transition"
+          label={copy.transitionLabel}
           value={animation.hover.transitionMs}
           min={0}
           max={2000}
@@ -485,29 +504,29 @@ export default function AnimationsTab({
           disabled={disabled}
           onChange={(transitionMs) => updateHover({ transitionMs: Math.round(transitionMs) })}
         />
-        <p style={hintStyle}>Hover presets are separate from the Style tab hover controls and can be layered with them.</p>
+        <p style={hintStyle}>{copy.hints.hover}</p>
       </section>
 
       <section style={sectionStyle}>
-        <span style={sectionTitleStyle}>Click</span>
+        <span style={sectionTitleStyle}>{copy.sections.click}</span>
         <label className={styles.inspectorField}>
-          <span className={styles.inspectorFieldLabel}>Preset</span>
+          <span className={styles.inspectorFieldLabel}>{copy.presetLabel}</span>
           <select
             className={styles.inspectorSelect}
-            aria-label="Click preset"
+            aria-label={copy.aria.clickPreset}
             value={animation.click.preset}
             disabled={disabled}
             onChange={(event) => updateClick({ preset: event.target.value as ClickAnimationPreset })}
           >
             {CLICK_PRESET_OPTIONS.map((option) => (
               <option key={option.value} value={option.value}>
-                {option.label}
+                {copy.labels.click[option.value] ?? option.label}
               </option>
             ))}
           </select>
         </label>
         <RangeField
-          label="Duration"
+          label={copy.durationLabel}
           value={animation.click.durationMs}
           min={100}
           max={3000}
@@ -517,7 +536,7 @@ export default function AnimationsTab({
           onChange={(durationMs) => updateClick({ durationMs: Math.round(durationMs) })}
         />
         <RangeField
-          label="Intensity"
+          label={copy.intensityLabel}
           value={animation.click.intensity}
           min={0}
           max={100}
@@ -525,16 +544,17 @@ export default function AnimationsTab({
           disabled={disabled || animation.click.preset === 'none'}
           onChange={(intensity) => updateClick({ intensity: Math.round(intensity) })}
         />
-        <p style={hintStyle}>Click trigger replays once every time the published element is clicked.</p>
+        <p style={hintStyle}>{copy.hints.click}</p>
       </section>
 
       <section style={sectionStyle}>
         <div style={sectionHeaderStyle}>
-          <span style={sectionTitleStyle}>Motion timeline</span>
+          <span style={sectionTitleStyle}>{copy.sections.motionTimeline}</span>
         </div>
         <MotionTimelineEditor
           value={(node.animation as { timeline?: MotionTimelineConfig } | undefined)?.timeline}
           disabled={disabled}
+          locale={locale}
           onChange={(timeline) => {
             const base = node.animation ?? {};
             if (!timeline) {
@@ -546,15 +566,15 @@ export default function AnimationsTab({
             commitAnimation({ ...base, timeline });
           }}
         />
-        <p style={hintStyle}>키프레임은 0~1 범위. scroll-bound 켜면 스크롤 진행률에 맞춰 보간, 끄면 durationMs 동안 시간 기반 재생.</p>
+        <p style={hintStyle}>{copy.hints.motionTimeline}</p>
       </section>
 
       <section style={sectionStyle} data-builder-lottie-hint="true">
-        <span style={sectionTitleStyle}>Lottie animation</span>
+        <span style={sectionTitleStyle}>{copy.sections.lottie}</span>
         <p style={hintStyle}>
-          더 정교한 벡터 애니메이션이 필요하면 좌측 Add 패널의 <strong>Media → Lottie</strong> 위젯을
-          캔버스에 추가하세요. LottieFiles 공식 임베드 URL을 붙여넣으면 재생/속도/루프가
-          위젯의 Inspector에서 그대로 제어됩니다.
+          {copy.lottie.introBeforeWidget}
+          <strong>{copy.lottie.widgetName}</strong>
+          {copy.lottie.introAfterWidget}
         </p>
         <ul
           style={{
@@ -565,9 +585,9 @@ export default function AnimationsTab({
             lineHeight: 1.55,
           }}
         >
-          <li>지원 호스트: lottie.host / lottiefiles.com (CSP 허용 완료)</li>
-          <li>예: <code>https://lottie.host/embed/&lt;id&gt;/&lt;hash&gt;.lottie</code></li>
-          <li>iframe 격리: <code>sandbox=&quot;allow-scripts allow-same-origin&quot;</code></li>
+          <li>{copy.lottie.supportedHosts}</li>
+          <li>{copy.lottie.exampleLabel}: <code>{copy.lottie.exampleUrl}</code></li>
+          <li>{copy.lottie.iframeSandboxLabel}: <code>{copy.lottie.iframeSandboxValue}</code></li>
         </ul>
       </section>
 
@@ -577,7 +597,7 @@ export default function AnimationsTab({
         disabled={disabled || !node.animation}
         onClick={() => onUpdateAnimation(undefined)}
       >
-        Reset animations
+        {copy.resetButtonLabel}
       </button>
     </div>
   );

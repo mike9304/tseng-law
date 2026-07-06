@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
+import { downloadText } from './download-text';
 import type { Locale } from '@/lib/locales';
 import type {
   CommerceOrder,
@@ -228,7 +229,7 @@ export default function OrderManagerClient({ locale, siteTitle, initialOrders }:
     setBusyOrderId(order.orderId);
     setNotice('Recording manual payment...');
     try {
-      const response = await fetch(`/api/builder/commerce/orders/${encodeURIComponent(order.orderId)}/manual-payments`, {
+      const response = await fetch(`/api/builder/commerce/orders/${encodeURIComponent(order.orderId)}/manual-payments?locale=${encodeURIComponent(locale)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -277,7 +278,7 @@ export default function OrderManagerClient({ locale, siteTitle, initialOrders }:
     setBusyOrderId(order.orderId);
     setNotice(providerRefund ? 'Processing provider refund...' : 'Recording manual refund...');
     try {
-      const response = await fetch(`/api/builder/commerce/orders/${encodeURIComponent(order.orderId)}/refunds`, {
+      const response = await fetch(`/api/builder/commerce/orders/${encodeURIComponent(order.orderId)}/refunds?locale=${encodeURIComponent(locale)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amountCents, reason: draft.reason }),
@@ -303,7 +304,7 @@ export default function OrderManagerClient({ locale, siteTitle, initialOrders }:
     setBusyOrderId(order.orderId);
     setNotice(email ? `Queueing ${documentTypeLabel(type).toLowerCase()} email...` : `Issuing ${documentTypeLabel(type).toLowerCase()}...`);
     try {
-      const response = await fetch(`/api/builder/commerce/orders/${encodeURIComponent(order.orderId)}/documents`, {
+      const response = await fetch(`/api/builder/commerce/orders/${encodeURIComponent(order.orderId)}/documents?locale=${encodeURIComponent(locale)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type, email }),
@@ -331,7 +332,7 @@ export default function OrderManagerClient({ locale, siteTitle, initialOrders }:
     setBusyOrderId(orderId);
     setNotice('Updating order...');
     try {
-      const response = await fetch(`/api/builder/commerce/orders/${encodeURIComponent(orderId)}`, {
+      const response = await fetch(`/api/builder/commerce/orders/${encodeURIComponent(orderId)}?locale=${encodeURIComponent(locale)}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(patch),
@@ -365,7 +366,7 @@ export default function OrderManagerClient({ locale, siteTitle, initialOrders }:
           <Link href={`/${locale}/admin-builder/commerce/shipping`}>Shipping</Link>
           <Link href={`/${locale}/admin-builder/commerce/notifications`}>Notifications</Link>
           <Link href={`/${locale}/admin-builder/commerce/webhooks`}>Webhooks</Link>
-          <button type="button" onClick={() => { setExportText(orderCsv(filtered)); setNotice('Export ready'); }} data-commerce-order-export="filtered">
+          <button type="button" onClick={() => { const csv = orderCsv(filtered); setExportText(csv); downloadText('orders.csv', csv); setNotice('Export ready'); }} data-commerce-order-export="filtered">
             Export CSV
           </button>
           <button type="button" onClick={() => void refresh()} data-commerce-orders-refresh>Refresh</button>
@@ -419,7 +420,7 @@ export default function OrderManagerClient({ locale, siteTitle, initialOrders }:
         {filtered.length === 0 ? (
           <article className={styles.empty} data-commerce-orders-empty>
             <strong>No orders found</strong>
-            <span>Checkout-created orders will appear here after F61 order creation.</span>
+            <span>Orders created at checkout will appear here.</span>
           </article>
         ) : filtered.map((order) => {
           const remainingRefundable = refundableCents(order);

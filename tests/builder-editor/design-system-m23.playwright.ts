@@ -50,11 +50,11 @@ test.describe('M23 design system parity', () => {
   test('exposes designer polish presets directly in the Design drawer', async ({ page }) => {
     await openBuilder(page, `/ko/admin-builder?designerPolish=${Date.now().toString(36)}`);
 
-    await page.getByRole('button', { name: 'Design', exact: true }).click();
-    const drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Polish presets' }).first();
+    await page.getByRole('button', { name: /^Design$|^디자인$/ }).click();
+    const drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: /Polish presets|정리 프리셋/ }).first();
     await expect(drawer.locator('[data-builder-designer-polish="true"]')).toBeVisible();
-    await expect(drawer.locator('[data-builder-designer-preset]')).toHaveCount(4);
-    await expect(drawer.locator('[data-builder-designer-preset="conversion"]')).toContainText('Conversion system');
+    await expect(drawer.locator('[data-builder-designer-preset]')).toHaveCount(5);
+    await expect(drawer.locator('[data-builder-designer-preset="conversion"]')).toContainText(/Conversion system|전환형 시스템/);
   });
 
   test('persists typography scale and exposes style source chips in the inspector', async ({ page }) => {
@@ -84,9 +84,9 @@ test.describe('M23 design system parity', () => {
       await openBuilder(page, `/ko/admin-builder?m23=${token}`);
 
       const settingsModal = await openSiteSettings(page);
-      await settingsModal.getByRole('button', { name: 'Typography' }).click();
-      await expect(settingsModal.getByRole('spinbutton', { name: 'Typography base size' })).toHaveValue('17');
-      await expect(settingsModal.getByRole('combobox', { name: 'Typography scale ratio' })).toHaveValue('1.333');
+      await settingsModal.getByRole('button', { name: /Typography|타이포그래피/ }).click();
+      await expect(settingsModal.getByRole('spinbutton', { name: /Typography base size|기본 크기/ })).toHaveValue('17');
+      await expect(settingsModal.getByRole('combobox', { name: /Typography scale ratio|비율/ })).toHaveValue('1.333');
       const typographyPreview = settingsModal.locator('[data-builder-typography-scale-preview="true"]');
       await expect(typographyPreview).toBeVisible();
       await expect(typographyPreview.locator('[data-builder-typography-scale-preview-row="h1"]')).toContainText('95px');
@@ -95,19 +95,19 @@ test.describe('M23 design system parity', () => {
 
       await selectCanvasNode(page, 'home-hero-title');
       const inspector = page.locator('[data-builder-inspector-panel="true"]').first();
-      await inspector.getByRole('button', { name: 'style', exact: true }).click();
+      await inspector.getByRole('button', { name: /^style$|^스타일$/ }).click();
       const visualizer = inspector.locator('[data-builder-style-origin-visualizer="true"]').first();
       await expect(visualizer).toBeVisible();
-      await expect(visualizer).toContainText('Style sources');
+      await expect(visualizer).toContainText(/Style sources|스타일 소스/);
       await expect(visualizer.locator('[data-builder-style-source-row="background"]')).toBeVisible();
       await expect(visualizer.locator('[data-builder-style-source-hint="background"]')).toContainText('기본값');
       await expect(visualizer.locator('[data-builder-style-origin="default"]').first()).toBeVisible();
 
       await selectCanvasNode(page, 'home-hero-search-button');
-      await inspector.getByRole('button', { name: 'style', exact: true }).click();
+      await inspector.getByRole('button', { name: /^style$|^스타일$/ }).click();
       const buttonVisualizer = inspector.locator('[data-builder-style-origin-visualizer="true"]').first();
       await expect(buttonVisualizer.locator('[data-builder-style-source-row="variant"]')).toBeVisible();
-      await expect(buttonVisualizer.locator('[data-builder-style-source-hint="variant"]')).toContainText('variant:');
+      await expect(buttonVisualizer.locator('[data-builder-style-source-hint="variant"]')).toContainText(/variant:|변형:/);
       await expect(buttonVisualizer.locator('[data-builder-style-origin="variant"]').first()).toBeVisible();
     } finally {
       if (originalTheme) {

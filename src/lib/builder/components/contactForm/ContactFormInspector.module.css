@@ -1,0 +1,94 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #334155;
+  font-size: 0.78rem;
+}
+
+.label {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.fieldChipList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.fieldChip {
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #334155;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  min-height: 26px;
+  padding: 4px 10px;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease, box-shadow 120ms ease;
+}
+
+.fieldChip:hover:not(:disabled) {
+  border-color: #94a3b8;
+  background: #e2e8f0;
+}
+
+.fieldChip:focus-visible {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+  outline: none;
+}
+
+.fieldChipActive {
+  border-color: #0f172a;
+  background: #0f172a;
+  color: #fff;
+}
+
+.fieldChip:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.control {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 0.82rem;
+  min-height: 32px;
+  outline: none;
+  padding: 6px 10px;
+  transition: border-color 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+.control:focus-visible {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+}
+
+.control:disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fieldChip,
+  .control {
+    transition-duration: 1ms;
+  }
+}

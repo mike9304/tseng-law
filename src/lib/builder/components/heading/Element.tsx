@@ -1,9 +1,12 @@
 import type { BuilderHeadingCanvasNode } from '@/lib/builder/canvas/types';
 import { fontFamilyCSS } from '@/lib/builder/canvas/fonts';
 import { RichTextRenderer } from '@/lib/builder/rich-text/render';
+import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import type { BuilderTheme } from '@/lib/builder/site/types';
+import type { Locale } from '@/lib/locales';
 import { resolveThemeColor, resolveThemeTextTypography } from '@/lib/builder/site/theme';
 import { headingFontSizeFromTheme } from '@/lib/builder/site/typography-scale';
+import { HEADING_LEGACY_DEFAULT_TEXT, localizedHeadingText } from './heading-copy';
 
 const LEVEL_TO_SIZE = {
   1: 48,
@@ -17,9 +20,11 @@ const LEVEL_TO_SIZE = {
 export default function HeadingElement({
   node,
   theme,
+  locale = 'ko',
 }: {
   node: BuilderHeadingCanvasNode;
   theme?: BuilderTheme;
+  locale?: Locale;
 }) {
   const level = Math.max(1, Math.min(6, node.content.level)) as keyof typeof LEVEL_TO_SIZE;
   const Tag = `h${level}` as const;
@@ -46,6 +51,10 @@ export default function HeadingElement({
   const fontFamily = typography.fontFamily
     ? fontFamilyCSS(typography.fontFamily)
     : 'system-ui, -apple-system, sans-serif';
+  const text = localizedHeadingText(node.content.text, locale);
+  const richText = node.content.text === HEADING_LEGACY_DEFAULT_TEXT
+    ? richTextFromPlainText(text)
+    : node.content.richText;
 
   return (
     <Tag
@@ -71,14 +80,14 @@ export default function HeadingElement({
         alignItems: 'center',
       }}
     >
-      {node.content.richText ? (
+      {richText ? (
         <RichTextRenderer
-          richText={node.content.richText}
-          fallbackText={node.content.text}
+          richText={richText}
+          fallbackText={text}
           mode="heading"
         />
       ) : (
-        node.content.text
+        text
       )}
     </Tag>
   );

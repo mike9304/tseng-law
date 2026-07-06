@@ -8,12 +8,15 @@ import {
   makeVisitorToken,
   saveConversation,
 } from '@/lib/builder/live-chat/storage';
+import { getLiveChatApiErrorPayload, type LiveChatApiErrorCode } from '@/lib/builder/live-chat/widget-copy';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
+import { normalizeLocale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 const payloadSchema = z.object({
+  locale: z.string().trim().optional(),
   visitorName: z.string().trim().max(120).optional(),
   visitorEmail: z.string().trim().email().max(200).optional(),
   pagePath: z.string().trim().max(500).optional(),
@@ -28,13 +31,35 @@ function clientIp(request: NextRequest): string {
   );
 }
 
+function localeFromRequest(request: NextRequest, rawBody?: unknown): ReturnType<typeof normalizeLocale> {
+  if (typeof rawBody === 'object' && rawBody !== null) {
+    const locale = (rawBody as { locale?: unknown }).locale;
+    if (typeof locale === 'string') return normalizeLocale(locale);
+  }
+
+  return normalizeLocale(request.nextUrl.searchParams.get('locale') || undefined);
+}
+
+function errorResponse(
+  request: NextRequest,
+  errorCode: LiveChatApiErrorCode,
+  status: number,
+  rawBody?: unknown,
+): NextResponse {
+  return NextResponse.json(
+    getLiveChatApiErrorPayload(localeFromRequest(request, rawBody), errorCode, 'start'),
+    { status },
+  );
+}
+
 export async function POST(request: NextRequest) {
   const ip = clientIp(request);
   const rate = await checkRateLimit(`livechat-start:${ip}`, 6, 60_000);
-  if (!rate.allowed) return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+  if (!rate.allowed) return errorResponse(request, 'too_many_requests', 429);
 
-  const parsed = payloadSchema.safeParse(await request.json().catch(() => null));
-  if (!parsed.success) return NextResponse.json({ error: 'Invalid payload' }, { status: 400 });
+  const rawBody = await request.json().catch(() => null);
+  const parsed = payloadSchema.safeParse(rawBody);
+  if (!parsed.success) return errorResponse(request, 'invalid_payload', 400, rawBody);
 
   const now = new Date().toISOString();
   const conversationId = makeConversationId();

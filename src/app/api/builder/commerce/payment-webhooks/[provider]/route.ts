@@ -2,7 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import { isCommercePaymentProvider } from '@/lib/builder/commerce/payment-providers';
 import { normalizeCommercePaymentWebhookPayload } from '@/lib/builder/commerce/payment-webhooks-shared';
 import { receivePaymentWebhookEvent } from '@/lib/builder/commerce/payment-webhooks-engine';
+import {
+  getCommercePaymentWebhooksApiErrorPayload,
+  type CommercePaymentWebhooksApiErrorCode,
+} from '@/lib/builder/commerce/payment-webhooks-copy';
 import { verifyWebhookSignature } from '@/lib/builder/webhooks/signature';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -18,38 +23,53 @@ function providerSecret(provider: string): string | null {
   return process.env.NODE_ENV === 'production' ? null : DEV_COMMERCE_WEBHOOK_SECRET;
 }
 
+function errorResponse(
+  locale: Locale,
+  errorCode: CommercePaymentWebhooksApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getCommercePaymentWebhooksApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
 export async function POST(request: NextRequest, { params }: { params: { provider: string } }) {
-  
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+
   // builder-route-guard: allow-public — intentional public visitor endpoint
-if (!isCommercePaymentProvider(params.provider)) {
-    return NextResponse.json({ ok: false, error: 'payment_provider_not_found' }, { status: 404 });
+  if (!isCommercePaymentProvider(params.provider)) {
+    return errorResponse(errorLocale, 'payment_provider_not_found', 404);
   }
 
   const secret = providerSecret(params.provider);
   if (!secret) {
-    return NextResponse.json({ ok: false, error: 'payment_webhook_not_configured' }, { status: 503 });
+    return errorResponse(errorLocale, 'payment_webhook_not_configured', 503);
   }
 
   const rawBody = await request.text();
   const signature = request.headers.get('commerce-signature') ?? request.headers.get('stripe-signature') ?? '';
   if (!verifyWebhookSignature(secret, rawBody, signature, 300)) {
-    return NextResponse.json({ ok: false, error: 'invalid_signature' }, { status: 400 });
+    return errorResponse(errorLocale, 'invalid_signature', 400);
   }
 
   let payload: unknown;
   try {
     payload = JSON.parse(rawBody);
   } catch {
-    return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
+    return errorResponse(errorLocale, 'invalid_json', 400);
   }
 
   const normalized = normalizeCommercePaymentWebhookPayload(params.provider, payload);
   if (!normalized) {
-    return NextResponse.json({ ok: false, error: 'unsupported_payment_event' }, { status: 400 });
+    return errorResponse(errorLocale, 'unsupported_payment_event', 400);
   }
 
   try {
-    const result = await receivePaymentWebhookEvent(normalized);
+    const result = await receivePaymentWebhookEvent({
+      ...normalized,
+      signatureVerified: true,
+    });
     return NextResponse.json({
       ok: true,
       duplicate: result.duplicate,
@@ -60,6 +80,6 @@ if (!isCommercePaymentProvider(params.provider)) {
     });
   } catch (error) {
     console.error('[builder/commerce/payment-webhooks/:provider] POST failed:', error);
-    return NextResponse.json({ ok: false, error: 'payment_webhook_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'payment_webhook_failed', 500);
   }
 }

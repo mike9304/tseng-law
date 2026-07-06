@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { locales, type Locale } from '@/lib/locales';
+import EditorChromeIcon from './EditorChromeIcon';
+import styles from './SandboxPage.module.css';
 
 interface LinkedPageInfo {
   pageId: string;
@@ -23,67 +25,66 @@ const LOCALE_LABELS: Record<Locale, string> = {
   en: 'English',
 };
 
-const dropdownContainerStyle: React.CSSProperties = {
-  position: 'relative',
-  display: 'inline-flex',
+type LocaleSwitcherCopy = {
+  create: string;
+  createBody: (label: string) => string;
+  createTitle: string;
+  linked: string;
+  missing: string;
+  current: string;
+  pageTitle: (label: string) => string;
+  title: string;
+  cancel: string;
 };
 
-const triggerStyle: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  gap: 4,
-  minHeight: 26,
-  padding: '0 0.65rem',
-  borderRadius: 999,
-  border: '1px solid #cbd5e1',
-  background: '#fff',
-  color: '#334155',
-  fontSize: '0.78rem',
-  fontWeight: 700,
-  cursor: 'pointer',
-  transition: 'background 150ms ease, border-color 150ms ease',
+const COPY: Record<Locale, LocaleSwitcherCopy> = {
+  ko: {
+    create: '만들기',
+    createBody: (label) => `${label} 번역 페이지가 없습니다. 현재 페이지를 기준으로 새 번역 페이지를 만들까요?`,
+    createTitle: '번역 페이지 없음',
+    linked: '연결됨',
+    missing: '번역 없음',
+    current: '현재',
+    pageTitle: (label) => `${label} 번역`,
+    title: '다국어 전환',
+    cancel: '취소',
+  },
+  'zh-hant': {
+    create: '建立',
+    createBody: (label) => `尚未建立 ${label} 翻譯頁面。要依目前頁面建立新的翻譯頁面嗎？`,
+    createTitle: '沒有翻譯頁面',
+    linked: '已連結',
+    missing: '無翻譯',
+    current: '目前',
+    pageTitle: (label) => `${label} 翻譯`,
+    title: '切換語言',
+    cancel: '取消',
+  },
+  en: {
+    create: 'Create',
+    createBody: (label) => `There is no ${label} translation page yet. Create one from the current page?`,
+    createTitle: 'No translation page',
+    linked: 'Linked',
+    missing: 'No translation',
+    current: 'Current',
+    pageTitle: (label) => `${label} translation`,
+    title: 'Switch language',
+    cancel: 'Cancel',
+  },
 };
 
-const menuStyle: React.CSSProperties = {
-  position: 'absolute',
-  top: '100%',
-  left: 0,
-  marginTop: 4,
-  background: '#fff',
-  border: '1px solid #e2e8f0',
-  borderRadius: 12,
-  boxShadow: '0 8px 24px rgba(0,0,0,.12)',
-  padding: 4,
-  minWidth: 180,
-  zIndex: 1000,
-};
-
-function menuItemStyle(active: boolean, disabled: boolean): React.CSSProperties {
-  return {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: 8,
-    width: '100%',
-    padding: '8px 12px',
-    borderRadius: 8,
-    border: 'none',
-    background: active ? '#eff6ff' : 'transparent',
-    color: disabled ? '#94a3b8' : active ? '#123b63' : '#334155',
-    fontSize: '0.82rem',
-    fontWeight: active ? 600 : 400,
-    cursor: disabled ? 'default' : 'pointer',
-    textAlign: 'left',
-    transition: 'background 100ms ease',
-  };
+function getLocaleSwitcherCopy(locale: Locale): LocaleSwitcherCopy {
+  return COPY[locale] ?? COPY.ko;
 }
 
 export default function LocaleSwitcher({
   currentLocale,
+  siteId,
   activePageId,
   onLocaleChange,
 }: {
   currentLocale: Locale;
+  siteId: string;
   activePageId: string | null;
   onLocaleChange: (locale: Locale, linkedPageId: string | null) => void;
 }) {
@@ -91,6 +92,7 @@ export default function LocaleSwitcher({
   const [linkedPages, setLinkedPages] = useState<Record<string, LinkedPageInfo | null>>({});
   const [translationProgress, setTranslationProgress] = useState<Record<string, TranslationProgressInfo>>({});
   const [showCreatePrompt, setShowCreatePrompt] = useState<Locale | null>(null);
+  const copy = getLocaleSwitcherCopy(currentLocale);
 
   // Fetch linked pages for current page
   useEffect(() => {
@@ -100,7 +102,7 @@ export default function LocaleSwitcher({
     async function fetchLinked() {
       try {
         const response = await fetch(
-          `/api/builder/site/pages/${activePageId}/linked`,
+          `/api/builder/site/pages/${activePageId}/linked?${new URLSearchParams({ locale: currentLocale, siteId }).toString()}`,
           { credentials: 'same-origin' },
         );
         if (response.ok && !cancelled) {
@@ -114,7 +116,7 @@ export default function LocaleSwitcher({
 
     fetchLinked();
     return () => { cancelled = true; };
-  }, [activePageId]);
+  }, [activePageId, currentLocale, siteId]);
 
   useEffect(() => {
     let cancelled = false;
@@ -161,14 +163,15 @@ export default function LocaleSwitcher({
     async (locale: Locale) => {
       if (!activePageId) return;
       try {
-        const response = await fetch('/api/builder/site/pages', {
+        const response = await fetch(`/api/builder/site/pages?${new URLSearchParams({ locale, siteId }).toString()}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'same-origin',
           body: JSON.stringify({
+            siteId,
             locale,
             slug: `page-${Date.now().toString(36)}`,
-            title: `${LOCALE_LABELS[locale]} translation`,
+            title: copy.pageTitle(LOCALE_LABELS[locale]),
             linkedFromPageId: activePageId,
           }),
         });
@@ -184,7 +187,7 @@ export default function LocaleSwitcher({
         setShowCreatePrompt(null);
       }
     },
-    [activePageId, onLocaleChange],
+    [activePageId, copy, onLocaleChange, siteId],
   );
 
   // Close dropdown on outside click
@@ -202,19 +205,25 @@ export default function LocaleSwitcher({
 
   return (
     <>
-      <div style={dropdownContainerStyle} data-locale-switcher>
+      <div className={styles.localeSwitcher} data-locale-switcher>
         <button
           type="button"
-          style={triggerStyle}
-          title="다국어 전환"
+          className={styles.localeSwitcherTrigger}
+          title={copy.title}
+          aria-haspopup="menu"
+          aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          {LOCALE_LABELS[currentLocale] ?? currentLocale}
-          <span style={{ fontSize: '0.6rem', opacity: 0.6 }}>{open ? '\u25B2' : '\u25BC'}</span>
+          <span>{LOCALE_LABELS[currentLocale] ?? currentLocale}</span>
+          <EditorChromeIcon
+            name="chevronDown"
+            className={styles.localeSwitcherChevron}
+            data-open={open ? 'true' : 'false'}
+          />
         </button>
 
         {open && (
-          <div style={menuStyle}>
+          <div className={styles.localeSwitcherMenu} role="menu" aria-label={copy.title}>
             {locales.map((loc) => {
               const isActive = loc === currentLocale;
               const linked = linkedPages[loc];
@@ -223,27 +232,29 @@ export default function LocaleSwitcher({
                 <button
                   key={loc}
                   type="button"
-                  style={menuItemStyle(isActive, false)}
+                  className={styles.localeSwitcherItem}
+                  data-active={isActive ? 'true' : 'false'}
                   onClick={() => handleLocaleClick(loc)}
+                  role="menuitem"
                 >
                   <span>{LOCALE_LABELS[loc]}</span>
                   {isActive && (
-                    <span style={{ fontSize: '0.7rem', color: '#123b63', fontWeight: 700 }}>
-                      current
+                    <span className={styles.localeSwitcherBadge} data-tone="active">
+                      {copy.current}
                     </span>
                   )}
                   {!isActive && !hasLinked && (
-                    <span style={{ fontSize: '0.68rem', color: '#94a3b8' }}>
-                      no translation
+                    <span className={styles.localeSwitcherBadge} data-tone="muted">
+                      {copy.missing}
                     </span>
                   )}
                   {!isActive && hasLinked && (
-                    <span style={{ fontSize: '0.68rem', color: '#22c55e' }}>
-                      linked
+                    <span className={styles.localeSwitcherBadge} data-tone="success">
+                      {copy.linked}
                     </span>
                   )}
                   {!isActive && translationProgress[loc] && (
-                    <span style={{ fontSize: '0.68rem', color: '#64748b' }}>
+                    <span className={styles.localeSwitcherBadge} data-tone="progress">
                       {translationProgress[loc].percent}%
                     </span>
                   )}
@@ -256,49 +267,30 @@ export default function LocaleSwitcher({
 
       {showCreatePrompt && (
         <div
-          style={{
-            position: 'fixed',
-            inset: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: 'rgba(15, 23, 42, 0.45)',
-            backdropFilter: 'blur(6px)',
-            WebkitBackdropFilter: 'blur(6px)',
-            zIndex: 10000,
-          }}
+          className={styles.localeSwitcherPromptBackdrop}
           onClick={(e) => { if (e.target === e.currentTarget) setShowCreatePrompt(null); }}
         >
-          <div
-            style={{
-              background: '#fff',
-              borderRadius: 16,
-              boxShadow: '0 24px 64px rgba(0,0,0,.18)',
-              padding: 32,
-              maxWidth: 400,
-              width: '90vw',
-            }}
-          >
-            <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0f172a', marginBottom: 8 }}>
-              번역 페이지 없음
+          <div className={styles.localeSwitcherPrompt} role="dialog" aria-modal="true" aria-label={copy.createTitle}>
+            <div className={styles.localeSwitcherPromptTitle}>
+              {copy.createTitle}
             </div>
-            <div style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: 20 }}>
-              이 locale ({LOCALE_LABELS[showCreatePrompt]}) 에 번역이 없습니다. 만들기?
+            <div className={styles.localeSwitcherPromptBody}>
+              {copy.createBody(LOCALE_LABELS[showCreatePrompt])}
             </div>
-            <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+            <div className={styles.localeSwitcherPromptActions}>
               <button
                 type="button"
                 onClick={() => setShowCreatePrompt(null)}
-                style={{ padding: '6px 16px', background: '#f1f5f9', color: '#334155', border: '1px solid #cbd5e1', borderRadius: 8, fontSize: '0.82rem', cursor: 'pointer' }}
+                className={styles.localeSwitcherPromptSecondary}
               >
-                취소
+                {copy.cancel}
               </button>
               <button
                 type="button"
                 onClick={() => handleCreateLinkedPage(showCreatePrompt)}
-                style={{ padding: '6px 16px', background: '#123b63', color: '#fff', border: 'none', borderRadius: 8, fontSize: '0.82rem', fontWeight: 600, cursor: 'pointer' }}
+                className={styles.localeSwitcherPromptPrimary}
               >
-                만들기
+                {copy.create}
               </button>
             </div>
           </div>

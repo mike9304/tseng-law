@@ -5,6 +5,7 @@ import type { BuilderEventListCanvasNode } from '@/lib/builder/canvas/types';
 import type { BuilderEvent } from '@/lib/builder/events/events-shared';
 import { DEFAULT_EVENT_CATEGORIES } from '@/lib/builder/events/events-shared';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { getEventWidgetsCopy } from '../event-widgets-copy';
 import styles from './EventList.module.css';
 
 interface EventListElementProps {
@@ -17,49 +18,6 @@ type RootStyle = CSSProperties & {
   '--event-list-columns': string;
 };
 
-const MOCK_EVENTS: BuilderEvent[] = [
-  {
-    eventId: 'evt-mock-seminar',
-    slug: 'taiwan-company-seminar',
-    title: '대만 회사설립 세미나',
-    description: '외국인 투자자가 대만 법인을 설립할 때 확인해야 할 절차와 리스크를 정리합니다.',
-    date: '2026-06-18',
-    time: '14:00',
-    location: '타이베이 오피스',
-    capacity: 40,
-    registeredCount: 12,
-    category: 'seminar',
-    locale: 'ko',
-    status: 'published',
-    rsvpEnabled: true,
-    ticketType: 'free',
-    ticketPriceTwd: 0,
-    ticketCurrency: 'TWD',
-    createdAt: '2026-05-20T00:00:00.000Z',
-    updatedAt: '2026-05-20T00:00:00.000Z',
-  },
-  {
-    eventId: 'evt-mock-webinar',
-    slug: 'labor-law-webinar',
-    title: '대만 노동법 웨비나',
-    description: '채용, 해고, 퇴직금, 시간외 수당 쟁점을 사례 중심으로 봅니다.',
-    date: '2026-07-02',
-    time: '10:30',
-    location: 'Online',
-    capacity: 100,
-    registeredCount: 28,
-    category: 'webinar',
-    locale: 'ko',
-    status: 'published',
-    rsvpEnabled: true,
-    ticketType: 'paid',
-    ticketPriceTwd: 800,
-    ticketCurrency: 'TWD',
-    createdAt: '2026-05-20T00:00:00.000Z',
-    updatedAt: '2026-05-20T00:00:00.000Z',
-  },
-];
-
 function categoryLabel(category: string, locale: Locale): string {
   return DEFAULT_EVENT_CATEGORIES.find((item) => item.id === category)?.name[locale] ?? category;
 }
@@ -68,8 +26,8 @@ function formatDate(event: BuilderEvent): string {
   return `${event.date} ${event.time}`;
 }
 
-function ticketLabel(event: BuilderEvent): string {
-  if (event.ticketType === 'free') return '무료';
+function ticketLabel(event: BuilderEvent, copy: ReturnType<typeof getEventWidgetsCopy>): string {
+  if (event.ticketType === 'free') return copy.free;
   return `${event.ticketCurrency} ${event.ticketPriceTwd.toLocaleString()}`;
 }
 
@@ -77,6 +35,7 @@ export default function EventListElement({ node, mode = 'edit', locale }: EventL
   const c = node.content;
   const isBuilder = mode !== 'published';
   const effectiveLocale = normalizeLocale(locale || 'ko');
+  const copy = getEventWidgetsCopy(effectiveLocale);
   const [events, setEvents] = useState<BuilderEvent[] | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -110,16 +69,16 @@ export default function EventListElement({ node, mode = 'edit', locale }: EventL
   }, [c.category, c.limit, c.timeFilter, effectiveLocale, isBuilder]);
 
   const items = useMemo(() => {
-    const source = events ?? (isBuilder ? MOCK_EVENTS : []);
+    const source = events ?? (isBuilder ? copy.mockEvents.list : []);
     return source.slice(0, c.limit);
-  }, [c.limit, events, isBuilder]);
+  }, [c.limit, copy.mockEvents.list, events, isBuilder]);
 
   if (!isBuilder && loading) {
-    return <div className={styles.state} data-builder-event-list="true" role="status">Loading events...</div>;
+    return <div className={styles.state} data-builder-event-list="true" role="status">{copy.loadingList}</div>;
   }
 
   if (items.length === 0) {
-    return <div className={styles.state} data-builder-event-list="true">표시할 이벤트가 없습니다.</div>;
+    return <div className={styles.state} data-builder-event-list="true">{copy.empty}</div>;
   }
 
   const rootStyle: RootStyle = {
@@ -145,11 +104,11 @@ export default function EventListElement({ node, mode = 'edit', locale }: EventL
             </a>
             <div className={styles.footer}>
               {c.showCapacity ? (
-                <span className={styles.capacity}>{remaining} / {event.capacity} seats</span>
+                <span className={styles.capacity}>{copy.seats(remaining, event.capacity)}</span>
               ) : <span />}
-              <span className={styles.ticket}>{ticketLabel(event)}</span>
+              <span className={styles.ticket}>{ticketLabel(event, copy)}</span>
               {c.showRsvp && event.rsvpEnabled ? (
-                <a className={styles.cta} href={href}>{effectiveLocale === 'ko' ? '신청' : 'RSVP'}</a>
+                <a className={styles.cta} href={href}>{copy.rsvp}</a>
               ) : null}
             </div>
           </article>

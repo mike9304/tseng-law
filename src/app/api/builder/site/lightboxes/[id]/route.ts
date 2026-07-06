@@ -6,6 +6,12 @@ import {
   deleteLightbox,
   updateLightbox,
 } from '@/lib/builder/site/persistence';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import type { Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -26,11 +32,20 @@ const patchSchema = z
   })
   .strict();
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...(extra ?? {}) },
+    { status },
   );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
 }
 
 export async function PATCH(
@@ -40,22 +55,22 @@ export async function PATCH(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
   try {
     const body = await request.json();
     const patch = patchSchema.parse(body);
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const updated = await updateLightbox('default', locale, params.id, patch);
+    const updated = await updateLightbox(siteId, locale, params.id, patch);
     if (!updated) {
-      return NextResponse.json({ ok: false, error: 'Lightbox not found' }, { status: 404 });
+      return errorResponse(locale, 'lightbox_not_found', 404);
     }
     return NextResponse.json({ ok: true, lightbox: updated });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(locale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON' }, { status: 400 });
+      return errorResponse(locale, 'invalid_json', 400);
     }
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    return errorResponse(locale, 'lightbox_update_failed', 500);
   }
 }
 
@@ -67,9 +82,10 @@ export async function DELETE(
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const ok = await deleteLightbox('default', locale, params.id);
+  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const ok = await deleteLightbox(siteId, locale, params.id);
   if (!ok) {
-    return NextResponse.json({ ok: false, error: 'Lightbox not found' }, { status: 404 });
+    return errorResponse(locale, 'lightbox_not_found', 404);
   }
   return NextResponse.json({ ok: true });
 }

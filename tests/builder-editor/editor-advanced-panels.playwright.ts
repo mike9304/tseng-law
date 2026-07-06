@@ -107,10 +107,10 @@ async function ensureLayersPanelOpen(page: Page): Promise<ReturnType<Page['locat
   if (await layersPanel.isVisible().catch(() => false)) {
     return layersPanel;
   }
-  const layersButton = page.getByRole('button', { name: /Layers/i });
+  const layersButton = page.locator('[data-builder-rail-item="layers"]');
   await layersButton.click();
   if (!(await layersPanel.isVisible({ timeout: 2500 }).catch(() => false))) {
-    await page.getByRole('button', { name: /Pages/i }).click();
+    await page.locator('[data-builder-rail-item="pages"]').click();
     await layersButton.click();
   }
   await expect(layersPanel).toBeVisible();
@@ -180,7 +180,7 @@ test.describe('M28 editor advanced panels', () => {
       await expect(page.locator('[data-builder-element-comments="home-hero-title"]')).toBeVisible();
       await addElementComment(page, 'home-hero-title', 'M28 QA comment');
 
-      await page.getByRole('button', { name: /Add/i }).click();
+      await page.locator('[data-builder-rail-item="add"]').click();
       await expect(page.locator('[data-builder-component-library="true"]')).toBeVisible();
       await heroTitleNode.scrollIntoViewIfNeeded();
       await heroTitleNode.click({ position: { x: 12, y: 12 }, force: true });
@@ -188,7 +188,7 @@ test.describe('M28 editor advanced panels', () => {
       await page.locator('[data-builder-component-library-name="true"]').fill('Hero title test');
       await expect(page.locator('[data-builder-component-library-save="true"]')).toBeEnabled();
       await page.locator('[data-builder-component-library-save="true"]').click();
-      await expect(page.getByText('Hero title test')).toBeVisible();
+      await expect(page.locator('[data-builder-component-library-item-view]').filter({ hasText: 'Hero title test' })).toBeVisible();
       await page.locator('[data-builder-component-library-insert]').first().click();
       await expect(page.locator('[data-builder-activity-chip="true"]').filter({ hasText: /saving|Pasted|Copied|Toggled|style/i }).or(page.locator('[data-builder-component-library="true"]'))).toBeVisible();
 
@@ -262,7 +262,7 @@ test.describe('M28 editor advanced panels', () => {
       await expect.poll(() => countGeneratedTextNodes(page)).toBe(generatedTextCountAfterDuplicate);
       await expect(page.locator('[data-node-id^="text-"][data-selected="true"]').last()).toBeVisible();
 
-      await page.getByRole('button', { name: /History/i }).click();
+      await page.locator('[data-builder-rail-item="history"]').click();
       await expect(page.locator('[data-builder-undo-timeline="true"]')).toBeVisible();
       await expect(page.locator('[data-builder-undo-snapshot]').first()).toBeVisible();
       const undoButton = page.locator('[data-builder-undo-action="undo"]');

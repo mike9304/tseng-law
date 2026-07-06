@@ -1,17 +1,54 @@
 import type { Metadata } from 'next';
-import { normalizeLocale, type Locale } from '@/lib/locales';
-import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
+import { redirect } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
+import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { pageCopy } from '@/data/page-copy';
+import {
+  buildPublishedSitePageMetadata,
+  PublishedSitePageView,
+  resolvePublishedSitePage,
+} from '@/lib/builder/site/public-page';
+import { emitPublicPageRenderHook } from '@/lib/builder/apps/lifecycle-emitters';
 import {
   isBuilderDynamicTemplateBlockVisible,
   readBuilderDynamicTemplatePublishedBlockVisibility,
 } from '@/lib/builder/dynamic-template-drafts';
+import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
+import { checkAccess } from '@/lib/builder/members/members-engine';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildSeoMetadata } from '@/lib/seo';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
+
+const COLUMNS_SLUG = 'columns';
+
+type ColumnsSearchParams = Record<string, string | string[] | undefined>;
+
+function buildPublishedPath(locale: Locale): string {
+  return `/${locale}/${COLUMNS_SLUG}`;
+}
+
+function firstSearchParamValue(value: string | string[] | undefined): string | undefined {
+  return Array.isArray(value) ? value[0] : value;
+}
+
+function toColumnGridFilters(searchParams?: ColumnsSearchParams) {
+  return {
+    category: firstSearchParamValue(searchParams?.category),
+    author: firstSearchParamValue(searchParams?.author),
+    q: firstSearchParamValue(searchParams?.q),
+    year: firstSearchParamValue(searchParams?.year),
+    month: firstSearchParamValue(searchParams?.month),
+  };
+}
+
+const headerLabel: Record<Locale, string> = {
+  ko: '칼럼',
+  'zh-hant': '專欄',
+  en: 'COLUMNS',
+};
 
 const columnKeywords: Record<Locale, string[]> = {
   ko: ['대만 법률 칼럼', '대만 회사설립 정보', '대만 소송 사례', '대만 노동법', '대만 변호사 블로그'],
@@ -19,8 +56,11 @@ const columnKeywords: Record<Locale, string[]> = {
   en: ['Taiwan legal articles', 'Taiwan company setup guide', 'Taiwan litigation insights', 'Taiwan labor law', 'Taiwan legal blog'],
 };
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
   const locale = normalizeLocale(params.locale);
+  const publishedMetadata = await buildPublishedSitePageMetadata(locale, COLUMNS_SLUG);
+  if (publishedMetadata) return publishedMetadata;
+
   const copy = pageCopy[locale].insights;
 
   return buildSeoMetadata({
@@ -37,9 +77,44 @@ export default async function ColumnsPage({
   searchParams,
 }: {
   params: { locale: Locale };
-  searchParams?: { category?: string; author?: string; q?: string; year?: string; month?: string };
+  searchParams?: ColumnsSearchParams;
 }) {
   const locale = normalizeLocale(params.locale);
+
+  const publishedPage = await resolvePublishedSitePage(locale, COLUMNS_SLUG);
+  if (publishedPage) {
+    const access = publishedPage.pageMeta.memberAccess;
+    if (access?.requireLogin) {
+      const member = await getCurrentSiteMember();
+      const allowed = checkAccess(
+        {
+          pageId: publishedPage.pageMeta.pageId,
+          requireLogin: true,
+          allowedRoles: access.allowedRoles ?? [],
+          redirectUrl: access.redirectPath,
+        },
+        member,
+      );
+
+      if (!allowed) {
+        const currentPath = buildPublishedPath(locale);
+        redirect(access.redirectPath || `/${locale}/login?next=${encodeURIComponent(currentPath)}`);
+      }
+    }
+
+    emitPublicPageRenderHook({
+      kind: 'public.page-render',
+      payload: {
+        siteId: publishedPage.site.siteId,
+        pageId: publishedPage.pageMeta.pageId,
+        slug: COLUMNS_SLUG,
+        locale,
+      },
+    });
+
+    return <PublishedSitePageView resolved={publishedPage} searchParams={searchParams} />;
+  }
+
   const copy = pageCopy[locale].insights;
   const posts = await getAllColumnPostsIncludingBlob(locale);
   const byline = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng';
@@ -77,9 +152,9 @@ export default async function ColumnsPage({
         </>
       ) : null}
       {showHero ? (
-        <PageHeader locale={locale} label="COLUMNS" title={copy.title} description={copy.description} />
+        <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description} />
       ) : null}
-      {showRepeater ? <ColumnsGrid locale={locale} posts={posts} initialFilters={searchParams ?? {}} /> : null}
+      {showRepeater ? <ColumnsGrid locale={locale} posts={posts} initialFilters={toColumnGridFilters(searchParams)} /> : null}
     </>
   );
 }

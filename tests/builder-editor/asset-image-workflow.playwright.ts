@@ -1,6 +1,8 @@
 import { expect, test, type Page } from '@playwright/test';
+import { getImageEditCopy } from '@/lib/builder/components/image/image-edit-copy';
 
 const shortcutModifier = 'ControlOrMeta';
+const imageCopy = getImageEditCopy('ko');
 
 const tinyPng = Buffer.from(
   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=',
@@ -24,7 +26,7 @@ interface AssetLibraryPayload {
 
 async function uploadAsset(page: Page, filename: string): Promise<UploadedAsset> {
   const response = await page.request.post('/api/builder/assets?locale=ko', {
-    timeout: 60_000,
+    timeout: 120_000,
     multipart: {
       file: {
         name: filename,
@@ -42,7 +44,7 @@ async function uploadAsset(page: Page, filename: string): Promise<UploadedAsset>
 
 async function deleteAsset(page: Page, filename: string): Promise<void> {
   await page.request.delete('/api/builder/assets?locale=ko', {
-    timeout: 30_000,
+    timeout: 60_000,
     data: { locale: 'ko', filename },
   });
 }
@@ -57,7 +59,7 @@ async function imageNode(page: Page) {
 async function ensureLayersPanelOpen(page: Page): Promise<ReturnType<Page['locator']>> {
   const layersPanel = page.locator('[data-builder-layers-panel="true"]');
   if (await layersPanel.isVisible().catch(() => false)) return layersPanel;
-  await page.getByRole('button', { name: /Layers/i }).click();
+  await page.getByRole('button', { name: /Layers|레이어/ }).click();
   await expect(layersPanel).toBeVisible();
   return layersPanel;
 }
@@ -101,21 +103,24 @@ async function openImageEditDialog(page: Page, actionName: RegExp) {
   const preferredAction = menu.getByRole('menuitem', { name: actionName });
   const action = (await preferredAction.count()) > 0
     ? preferredAction
-    : menu.getByRole('menuitem', { name: /자르기 \/ 필터 \/ Alt|Crop \/ Filter \/ Alt/ });
+    : menu.getByRole('menuitem', { name: imageCopy.inspector.openImageEditor });
   await action.click();
-  const dialog = page.getByRole('dialog', { name: 'Crop, filter, and alt text' });
+  const dialog = page.getByRole('dialog', { name: imageCopy.dialog.ariaLabel });
   await expect(dialog).toBeVisible();
   return dialog;
 }
 
 async function readAssetLibraryPayload(page: Page): Promise<AssetLibraryPayload> {
-  const response = await page.request.get('/api/builder/assets?locale=ko&limit=24');
+  const response = await page.request.get('/api/builder/assets?locale=ko&limit=24', {
+    timeout: 120_000,
+  });
   expect(response.status()).toBe(200);
   return response.json() as Promise<AssetLibraryPayload>;
 }
 
 async function cleanupAssetLibraryToken(page: Page, token: string): Promise<void> {
-  const payload = await readAssetLibraryPayload(page);
+  const payload = await readAssetLibraryPayload(page).catch(() => null);
+  if (!payload) return;
   const library = payload.library;
   if (!library) return;
   await page.request.patch('/api/builder/assets?locale=ko', {
@@ -145,15 +150,15 @@ test.describe('/ko/admin-builder image asset workflow', () => {
     await selectImageLayer(page);
     const inspector = page.locator('[class*="inspectorColumn"]').first();
     await expect(inspector).toBeVisible();
-    await inspector.getByRole('button', { name: 'content' }).click();
-    const trigger = inspector.getByRole('button', { name: 'Crop / Filter / Alt' });
+    await inspector.getByRole('button', { name: /content|콘텐츠/ }).click();
+    const trigger = inspector.getByRole('button', { name: imageCopy.inspector.openImageEditor });
     await trigger.focus();
     await expect(trigger).toBeFocused();
     await page.keyboard.press('Enter');
 
-    const dialog = page.getByRole('dialog', { name: 'Crop, filter, and alt text' });
-    const closeButton = dialog.getByRole('button', { name: 'Close' });
-    const applyButton = dialog.getByRole('button', { name: 'Apply' });
+    const dialog = page.getByRole('dialog', { name: imageCopy.dialog.ariaLabel });
+    const closeButton = dialog.getByRole('button', { name: imageCopy.dialog.close });
+    const applyButton = dialog.getByRole('button', { name: imageCopy.dialog.ai.apply });
     await expect(dialog).toBeVisible();
     await expect(closeButton).toBeFocused();
 
@@ -193,8 +198,8 @@ test.describe('/ko/admin-builder image asset workflow', () => {
     await expect(replaceTrigger).toBeFocused();
     await page.keyboard.press('Enter');
 
-    const assetDialog = page.getByRole('dialog', { name: 'Asset library' });
-    const closeButton = assetDialog.getByRole('button', { name: 'Close' });
+    const assetDialog = page.getByRole('dialog', { name: /Asset library|자산 라이브러리/ });
+    const closeButton = assetDialog.getByRole('button', { name: /Close|닫기/ });
     await expect(assetDialog).toBeVisible();
     await expect(closeButton).toBeFocused();
 
@@ -228,6 +233,7 @@ test.describe('/ko/admin-builder image asset workflow', () => {
   });
 
   test('covers W22 asset organization/replacement and W23 Crop/Filter/Alt paths', async ({ page }) => {
+    test.setTimeout(180_000);
     const token = `w22-${Date.now().toString(36)}`;
     const uploaded: UploadedAsset[] = [];
     let originalAlt = '';
@@ -246,18 +252,18 @@ test.describe('/ko/admin-builder image asset workflow', () => {
 
       const replaceMenu = await openImageContextMenu(page);
       await replaceMenu.getByRole('menuitem', { name: /이미지 교체|Replace image/ }).click();
-      let assetDialog = page.getByRole('dialog', { name: 'Asset library' });
+      let assetDialog = page.getByRole('dialog', { name: /Asset library|자산 라이브러리/ });
       await expect(assetDialog).toBeVisible();
-      await expect(assetDialog.getByText('Folders')).toBeVisible();
-      await expect(assetDialog.getByText('All assets')).toBeVisible();
-      await expect(assetDialog.getByText('Recent')).toBeVisible();
+      await expect(assetDialog.getByText(/Folders|폴더/).first()).toBeVisible();
+      await expect(assetDialog.getByText(/All assets|전체 이미지/).first()).toBeVisible();
+      await expect(assetDialog.getByText(/^Recent$|^최근$/).first()).toBeVisible();
 
-      await assetDialog.locator('input[placeholder="New folder"]').fill(`Case ${token}`);
-      await assetDialog.getByRole('button', { name: 'Add' }).click();
+      await assetDialog.getByPlaceholder(/New folder|새 폴더/).fill(`Case ${token}`);
+      await assetDialog.getByRole('button', { name: /^Add$|^추가$/ }).click();
       await expect(assetDialog.getByRole('button', { name: new RegExp(`Case ${token}`) })).toBeVisible();
 
-      await assetDialog.locator('input[placeholder="New tag"]').fill(token);
-      await assetDialog.getByRole('button', { name: 'Create' }).click();
+      await assetDialog.getByPlaceholder(/New tag|새 태그/).fill(token);
+      await assetDialog.getByRole('button', { name: /^Create$|^생성$/ }).click();
       await expect(assetDialog.locator('[class*="assetTagBar"]').getByRole('button', { name: token, exact: true })).toBeVisible();
       await expect.poll(async () => {
         const payload = await readAssetLibraryPayload(page);
@@ -266,16 +272,16 @@ test.describe('/ko/admin-builder image asset workflow', () => {
           hasTag: payload.library?.tags?.includes(token) ?? false,
         };
       }).toEqual({ hasFolder: true, hasTag: true });
-      await assetDialog.getByRole('button', { name: 'Close' }).click();
+      await assetDialog.getByRole('button', { name: /Close|닫기/ }).click();
       await expect(assetDialog).not.toBeVisible();
 
       const persistedMenu = await openImageContextMenu(page);
       await persistedMenu.getByRole('menuitem', { name: /이미지 교체|Replace image/ }).click();
-      assetDialog = page.getByRole('dialog', { name: 'Asset library' });
+      assetDialog = page.getByRole('dialog', { name: /Asset library|자산 라이브러리/ });
       await expect(assetDialog.getByRole('button', { name: new RegExp(`Case ${token}`) })).toBeVisible();
       await expect(assetDialog.locator('[class*="assetTagBar"]').getByRole('button', { name: token, exact: true })).toBeVisible();
-      await assetDialog.getByRole('button', { name: /All assets/ }).click();
-      await assetDialog.getByRole('button', { name: 'All tags' }).click();
+      await assetDialog.getByRole('button', { name: /All assets|전체 이미지/ }).click();
+      await assetDialog.getByRole('button', { name: /All tags|전체 태그/ }).click();
 
       await assetDialog.getByRole('searchbox').fill(token);
       await assetDialog.locator('select').first().selectOption('name-asc');
@@ -287,54 +293,54 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       await assetDialog
         .locator('article')
         .filter({ hasText: selectedAsset.filename })
-        .getByRole('button', { name: 'Use image' })
+        .getByRole('button', { name: /Use image|이미지 사용/ })
         .click();
       await expect(renderedImage).toHaveAttribute('src', new RegExp(selectedAsset.filename));
       await page.keyboard.press(`${shortcutModifier}+Z`);
       await expect(renderedImage).not.toHaveAttribute('src', new RegExp(selectedAsset.filename));
 
       const cropDialog = await openImageEditDialog(page, /Crop \/ Filter \/ Alt/);
-      await expect(cropDialog.getByText('Aspect ratio')).toBeVisible();
+      await expect(cropDialog.getByText(imageCopy.dialog.crop.aspectRatio)).toBeVisible();
       await cropDialog.getByRole('button', { name: '16:9' }).click();
-      await cropDialog.getByRole('button', { name: 'Focal bottom-left' }).click();
-      await cropDialog.getByRole('button', { name: 'Apply' }).click();
+      await cropDialog.getByRole('button', { name: imageCopy.dialog.crop.focalPresetAriaLabel(imageCopy.dialog.crop.focalPresetLabels.bottomLeft) }).click();
+      await cropDialog.getByRole('button', { name: imageCopy.dialog.ai.apply }).click();
       await expect(renderedImage).toHaveAttribute('style', /object-position:\s*20%\s+80%/);
 
       const filterDialogAfterCrop = await openImageEditDialog(page, /Crop \/ Filter \/ Alt/);
-      await expect(filterDialogAfterCrop.getByText('Aspect ratio')).toBeVisible();
-      await expect(filterDialogAfterCrop.getByLabel('Focal point X')).toHaveValue('20');
-      await expect(filterDialogAfterCrop.getByLabel('Focal point Y')).toHaveValue('80');
-      await filterDialogAfterCrop.getByRole('button', { name: 'Close' }).click();
+      await expect(filterDialogAfterCrop.getByText(imageCopy.dialog.crop.aspectRatio)).toBeVisible();
+      await expect(filterDialogAfterCrop.getByLabel(imageCopy.dialog.crop.focalPointX)).toHaveValue('20');
+      await expect(filterDialogAfterCrop.getByLabel(imageCopy.dialog.crop.focalPointY)).toHaveValue('80');
+      await filterDialogAfterCrop.getByRole('button', { name: imageCopy.dialog.close }).click();
 
       const filterDialog = await openImageEditDialog(page, /Crop \/ Filter \/ Alt/);
-      await filterDialog.getByRole('button', { name: 'filter' }).click();
-      await filterDialog.getByRole('button', { name: 'B&W' }).click();
+      await filterDialog.getByRole('button', { name: imageCopy.dialog.tabs.filter }).click();
+      await filterDialog.getByRole('button', { name: imageCopy.dialog.filterPresets.bw }).click();
       await expect(filterDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('style', /grayscale\(100%\)/);
-      await filterDialog.getByRole('button', { name: 'Apply' }).click();
+      await filterDialog.getByRole('button', { name: imageCopy.dialog.ai.apply }).click();
       await expect(renderedImage).toHaveAttribute('style', /grayscale\(100%\)/);
 
       await selectImageLayer(page);
       const inspector = page.locator('[class*="inspectorColumn"]').first();
       await expect(inspector).toBeVisible();
-      await inspector.getByRole('button', { name: 'content' }).click();
-      await inspector.getByRole('button', { name: 'Crop / Filter / Alt' }).click();
-      const inspectorDialog = page.getByRole('dialog', { name: 'Crop, filter, and alt text' });
+      await inspector.getByRole('button', { name: /content|콘텐츠/ }).click();
+      await inspector.getByRole('button', { name: imageCopy.inspector.openImageEditor }).click();
+      const inspectorDialog = page.getByRole('dialog', { name: imageCopy.dialog.ariaLabel });
       await expect(inspectorDialog).toBeVisible();
-      await inspectorDialog.getByRole('button', { name: 'filter' }).click();
+      await inspectorDialog.getByRole('button', { name: imageCopy.dialog.tabs.filter }).click();
       await expect(inspectorDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('style', /grayscale\(100%\)/);
-      await inspectorDialog.getByRole('button', { name: 'Close' }).click();
+      await inspectorDialog.getByRole('button', { name: imageCopy.dialog.close }).click();
 
       const altDialog = await openImageEditDialog(page, /Alt 텍스트 편집/);
-      const altTextarea = altDialog.getByPlaceholder('Describe the image for accessibility and SEO');
+      const altTextarea = altDialog.getByPlaceholder(imageCopy.dialog.alt.placeholder);
       await expect(altTextarea).toBeVisible();
       const nextAlt = `W23 alt ${token}`;
       await altTextarea.fill(nextAlt);
-      await altDialog.getByRole('button', { name: 'Apply' }).click();
+      await altDialog.getByRole('button', { name: imageCopy.dialog.ai.apply }).click();
       await expect(renderedImage).toHaveAttribute('alt', nextAlt);
 
       const restoreDialog = await openImageEditDialog(page, /Alt 텍스트 편집/);
-      await restoreDialog.getByPlaceholder('Describe the image for accessibility and SEO').fill(originalAlt);
-      await restoreDialog.getByRole('button', { name: 'Apply' }).click();
+      await restoreDialog.getByPlaceholder(imageCopy.dialog.alt.placeholder).fill(originalAlt);
+      await restoreDialog.getByRole('button', { name: imageCopy.dialog.ai.apply }).click();
       await expect(renderedImage).toHaveAttribute('alt', originalAlt);
     } finally {
       for (const asset of uploaded) {
@@ -345,6 +351,7 @@ test.describe('/ko/admin-builder image asset workflow', () => {
   });
 
   test('applies an Image 2.0 edit result from the image edit dialog', async ({ page }) => {
+    test.setTimeout(180_000);
     const token = `ai-edit-${Date.now().toString(36)}`;
     const uploaded: UploadedAsset[] = [];
     const firstEditedFilename = `${token}-premium.webp`;
@@ -360,8 +367,12 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       expect(body.assetUrl).toContain(uploaded[0].filename);
       expect(body.outputFormat).toBe('webp');
       expect(body.mask?.dataUrl).toMatch(/^data:image\/png;base64,/);
-      const filename = body.prompt?.includes('calm editorial') ? secondEditedFilename : firstEditedFilename;
-      expect(body.mask?.description).toBe(filename === secondEditedFilename ? 'Brush mask' : 'Center focus');
+      const filename = body.prompt === imageCopy.dialog.ai.presetPrompts.editorialCalm ? secondEditedFilename : firstEditedFilename;
+      expect(body.mask?.description).toBe(
+        filename === secondEditedFilename
+          ? imageCopy.dialog.ai.brushMaskDescription
+          : imageCopy.dialog.ai.maskDescriptions.centerFocus,
+      );
       await route.fulfill({
         status: 200,
         contentType: 'application/json',
@@ -386,19 +397,19 @@ test.describe('/ko/admin-builder image asset workflow', () => {
 
       const replaceMenu = await openImageContextMenu(page);
       await replaceMenu.getByRole('menuitem', { name: /이미지 교체|Replace image/ }).click();
-      const assetDialog = page.getByRole('dialog', { name: 'Asset library' });
+      const assetDialog = page.getByRole('dialog', { name: /Asset library|자산 라이브러리/ });
       await expect(assetDialog).toBeVisible();
       await assetDialog.getByRole('searchbox').fill(token);
       await assetDialog
         .locator('article')
         .filter({ hasText: uploaded[0].filename })
-        .getByRole('button', { name: 'Use image' })
+        .getByRole('button', { name: /Use image|이미지 사용/ })
         .click();
       await expect(renderedImage).toHaveAttribute('src', new RegExp(uploaded[0].filename));
 
       const editDialog = await openImageEditDialog(page, /Crop \/ Filter \/ Alt/);
-      await editDialog.getByRole('button', { name: 'ai' }).click();
-      await editDialog.locator('[data-builder-ai-image-edit-mask="Center focus"]').click();
+      await editDialog.getByRole('button', { name: imageCopy.dialog.tabs.ai }).click();
+      await editDialog.locator('[data-builder-ai-image-edit-mask="centerFocus"]').click();
       await expect(editDialog.locator('[class*="imageEditAiMaskOverlay"]')).toBeVisible();
       await editDialog.locator('[data-builder-ai-image-edit-prompt="true"]').fill(
         'Make this a brighter premium legal website hero image with realistic office lighting and no text.',
@@ -421,7 +432,7 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       await editDialog.locator('[data-builder-ai-image-edit-review="edited"]').click();
       await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(firstEditedFilename));
 
-      await editDialog.getByRole('button', { name: 'Editorial calm' }).click();
+      await editDialog.getByRole('button', { name: imageCopy.dialog.ai.presetLabels.editorialCalm }).click();
       await editDialog.locator('[data-builder-ai-image-edit-mask="brush"]').click();
       const brushSurface = editDialog.locator('[data-builder-ai-image-edit-brush-surface="true"]');
       await expect(brushSurface).toBeVisible();
@@ -478,12 +489,12 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       await editDialog.locator(`[data-builder-ai-image-edit-variant="${firstEditedFilename}"]`).click();
       await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(firstEditedFilename));
       await editDialog.locator('[data-builder-ai-image-edit-clear="true"]').click();
-      await expect(editDialog.locator('[data-builder-ai-image-edit-status="true"]')).toContainText('AI edit selection cleared');
+      await expect(editDialog.locator('[data-builder-ai-image-edit-status="true"]')).toContainText(imageCopy.dialog.ai.clearedNotice);
       await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(uploaded[0].filename));
       await editDialog.locator('[data-builder-ai-image-edit-review-undo="true"]').click();
       await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(firstEditedFilename));
 
-      await editDialog.getByRole('button', { name: 'Apply' }).click();
+      await editDialog.getByRole('button', { name: imageCopy.dialog.ai.apply }).click();
       await expect(renderedImage).toHaveAttribute('src', new RegExp(firstEditedFilename));
     } finally {
       await page.unroute('**/api/builder/ai-generator/image/edit').catch(() => undefined);

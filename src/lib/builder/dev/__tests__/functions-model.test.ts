@@ -34,6 +34,20 @@ describe('builder serverless function model', () => {
       .toEqual({ field: 'code', message: expect.any(String) });
   });
 
+  it('rejects saved function bodies with JavaScript syntax errors', () => {
+    expect(validateBuilderFunctionInput(
+      { name: 'Async', slug: 'async', code: 'await Promise.resolve(ctx.now());\nreturn true;' },
+      [],
+    )).toBeNull();
+    expect(validateBuilderFunctionInput(
+      { name: 'Broken', slug: 'broken', code: 'return ctx.now();\n}' },
+      [],
+    )).toEqual({
+      field: 'code',
+      message: expect.stringContaining('valid JavaScript function body'),
+    });
+  });
+
   it('rejects duplicate slugs but allows updates by id', () => {
     const existing = [createBuilderFunction({ name: 'A', slug: 'one', code: '' })];
     expect(validateBuilderFunctionInput({ name: 'B', slug: 'one', code: '' }, existing))

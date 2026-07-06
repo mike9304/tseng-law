@@ -1,13 +1,19 @@
 import Link from 'next/link';
 import BuilderWorkspaceFrame from '@/components/builder/BuilderWorkspaceFrame';
+import BuilderCollectionSeedAllAndOpenAction from '@/components/builder/datasets/BuilderCollectionSeedAllAndOpenAction';
+import BuilderDatasetSeedAction from '@/components/builder/datasets/BuilderDatasetSeedAction';
+import BuilderDatasetSeedAllAction from '@/components/builder/datasets/BuilderDatasetSeedAllAction';
 import type { BuilderCollectionDetail } from '@/lib/builder/cms';
 import { buildBuilderDynamicRouteId } from '@/lib/builder/dynamic-routes';
 import {
   buildBuilderCollectionHref,
+  buildBuilderCmsCollectionHref,
   buildBuilderDynamicRouteHref,
   buildBuilderDynamicTemplateHref,
+  buildBuilderPageDatasetHref,
 } from '@/lib/builder/hrefs';
 import { buildBuilderDynamicTemplateId } from '@/lib/builder/dynamic-templates';
+import { getBuilderWorkspaceCopy } from '@/lib/builder/workspace-copy';
 import type { BuilderSiteOverview } from '@/lib/builder/site';
 import type { Locale } from '@/lib/locales';
 
@@ -20,15 +26,17 @@ export default function BuilderCollectionWorkspaceShell({
   overview: BuilderSiteOverview;
   detail: BuilderCollectionDetail;
 }) {
+  const copy = getBuilderWorkspaceCopy(locale);
   return (
     <BuilderWorkspaceFrame
+      locale={locale}
       title={`${detail.title} collection`}
       description="Read-only collection detail. This route exposes real schema and sample record evidence without pretending record editing or dataset mapping already exists."
       activeRail="pages"
       stageUrl={buildBuilderCollectionHref(locale, detail.id)}
       railItems={[
-        { key: 'pages', label: 'Pages', description: 'Workspace and collection inventory', href: `/${locale}/builder`, active: true },
-        { key: 'assets', label: 'Assets', description: 'Recent builder media', href: `/${locale}/builder` },
+        { key: 'pages', label: copy.pagesLabel, description: copy.pagesDescription, href: `/${locale}/builder`, active: true },
+        { key: 'assets', label: copy.assetsLabel, description: copy.assetsDescription, href: `/${locale}/builder` },
       ]}
       leftMeta={
         <>
@@ -48,8 +56,8 @@ export default function BuilderCollectionWorkspaceShell({
       }
       leftSidebar={
         <section className="builder-preview-inspector-card builder-dashboard-sidebar">
-          <h2>Collections</h2>
-          <p>Only collections with real source data appear here. This route stays read-only in WAVE-03-B02.</p>
+          <h2>{copy.collectionSidebarTitle}</h2>
+          <p>{copy.collectionSidebarDescription}</p>
           <div className="builder-dashboard-nav-list">
             {overview.collections.map((collection) => (
               <Link
@@ -68,15 +76,24 @@ export default function BuilderCollectionWorkspaceShell({
       inspector={
         <>
           <section className="builder-preview-inspector-card">
-            <h2>Collection policy</h2>
+            <h2>{copy.collectionPolicyTitle}</h2>
             <ul className="builder-preview-inspector-notes">
-              <li>This route is read-only. No collection CRUD or record editing is implied here.</li>
-              <li>Dataset binding is limited to explicitly registered targets only.</li>
-              <li>Dynamic list/item/manage pages remain outside this batch.</li>
+              {copy.collectionPolicyItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
           </section>
           <section className="builder-preview-inspector-card">
             <h2>Current collection</h2>
+            <div className="builder-dashboard-page-actions" style={{ marginBottom: 12 }}>
+              <Link
+                href={buildBuilderCmsCollectionHref(locale, detail.id)}
+                className="builder-action-btn builder-action-btn--primary"
+                data-cms-source-collection-link={detail.id}
+              >
+                Open CMS collection
+              </Link>
+            </div>
             <dl className="builder-preview-inspector-list">
               <div>
                 <dt>ID</dt>
@@ -99,10 +116,45 @@ export default function BuilderCollectionWorkspaceShell({
           <section className="builder-preview-inspector-card">
             <h2>Bindable targets</h2>
             {detail.bindableTargets.length ? (
+              <div style={{ marginBottom: 12, display: 'grid', gap: 8 }}>
+                <Link
+                  href={buildBuilderPageDatasetHref(locale, detail.bindableTargets[0].pageKey, {
+                    targetId: detail.bindableTargets[0].targetId,
+                  })}
+                  className="builder-action-btn builder-action-btn--primary"
+                  data-builder-collection-target-primary-link={detail.bindableTargets[0].targetId}
+                  style={{ justifySelf: 'start', textDecoration: 'none' }}
+                >
+                  Open {detail.bindableTargets[0].title}
+                </Link>
+                <BuilderCollectionSeedAllAndOpenAction
+                  locale={locale}
+                  siteId={overview.site.id}
+                  targets={detail.bindableTargets}
+                />
+                <BuilderDatasetSeedAllAction
+                  locale={locale}
+                  siteId={overview.site.id}
+                  targets={detail.bindableTargets}
+                />
+              </div>
+            ) : null}
+            {detail.bindableTargets.length ? (
               <ul className="builder-preview-inspector-notes">
                 {detail.bindableTargets.map((target) => (
-                  <li key={target.targetId}>
-                    {target.title} · {target.pageKey} · {target.runtimeStatus}
+                  <li key={target.targetId} data-builder-collection-target={target.targetId}>
+                    <div style={{ display: 'grid', gap: 8 }}>
+                      <Link href={buildBuilderPageDatasetHref(locale, target.pageKey, { targetId: target.targetId })}>
+                        {target.title} · {target.pageKey} · {target.runtimeStatus}
+                      </Link>
+                      <BuilderDatasetSeedAction
+                        locale={locale}
+                        siteId={overview.site.id}
+                        pageKey={target.pageKey}
+                        targetId={target.targetId}
+                        label="Seed defaults and open editor"
+                      />
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -178,7 +230,9 @@ export default function BuilderCollectionWorkspaceShell({
                 </div>
                 <div className="builder-dashboard-page-meta">
                   <span>Record {record.recordId}</span>
-                  <span>{record.routePath}</span>
+                  <Link href={record.routePath} data-cms-source-record-route-link={record.recordId}>
+                    Open route
+                  </Link>
                 </div>
               </article>
             ))}
@@ -242,6 +296,20 @@ export default function BuilderCollectionWorkspaceShell({
                     <span>Page {target.pageKey}</span>
                     <span>Section {target.sectionKey}</span>
                     <span>Target {target.targetId}</span>
+                  </div>
+                  <div className="builder-dashboard-page-actions">
+                    <Link
+                      href={buildBuilderPageDatasetHref(locale, target.pageKey, { targetId: target.targetId })}
+                      className="builder-action-btn builder-action-btn--primary"
+                    >
+                      Open dataset editor
+                    </Link>
+                    <BuilderDatasetSeedAction
+                      locale={locale}
+                      siteId={overview.site.id}
+                      pageKey={target.pageKey}
+                      targetId={target.targetId}
+                    />
                   </div>
                 </article>
               ))

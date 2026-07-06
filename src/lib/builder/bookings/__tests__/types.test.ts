@@ -79,6 +79,91 @@ describe('booking service input schema', () => {
       depositAmount: 5000,
     })).toThrow();
   });
+
+  it('accepts staff-specific prices only for paid services', () => {
+    const parsed = bookingServiceInputSchema.parse({
+      ...baseServiceInput,
+      paymentMode: 'paid',
+      priceAmount: 5000,
+      staffPriceOverrides: { 'staff-premium': 8000 },
+    });
+
+    expect(parsed.staffPriceOverrides).toEqual({ 'staff-premium': 8000 });
+    expect(() => bookingServiceInputSchema.parse({
+      ...baseServiceInput,
+      paymentMode: 'free',
+      staffPriceOverrides: { 'staff-premium': 8000 },
+    })).toThrow();
+  });
+
+  it('accepts resource-specific prices only for paid services', () => {
+    const parsed = bookingServiceInputSchema.parse({
+      ...baseServiceInput,
+      paymentMode: 'paid',
+      priceAmount: 5000,
+      resourcePriceOverrides: { 'room-a': 9000 },
+    });
+
+    expect(parsed.resourcePriceOverrides).toEqual({ 'room-a': 9000 });
+    expect(() => bookingServiceInputSchema.parse({
+      ...baseServiceInput,
+      paymentMode: 'free',
+      resourcePriceOverrides: { 'room-a': 9000 },
+    })).toThrow();
+  });
+
+  it('accepts discount codes only for paid services', () => {
+    const parsed = bookingServiceInputSchema.parse({
+      ...baseServiceInput,
+      paymentMode: 'paid',
+      priceAmount: 5000,
+      discountCodes: [{ code: ' legal20 ', type: 'percent', value: 20, active: true }],
+    });
+
+    expect(parsed.discountCodes).toEqual([
+      expect.objectContaining({
+        code: 'LEGAL20',
+        type: 'percent',
+        value: 20,
+        active: true,
+        locale: 'all',
+      }),
+    ]);
+    expect(() => bookingServiceInputSchema.parse({
+      ...baseServiceInput,
+      paymentMode: 'free',
+      discountCodes: [{ code: 'LEGAL20', type: 'percent', value: 20, active: true }],
+    })).toThrow();
+    expect(() => bookingServiceInputSchema.parse({
+      ...baseServiceInput,
+      paymentMode: 'paid',
+      priceAmount: 5000,
+      discountCodes: [{ code: 'TOO-MUCH', type: 'percent', value: 101, active: true }],
+    })).toThrow();
+  });
+
+  it('accepts collect-later paid services and rejects collect-later deposits', () => {
+    const parsed = bookingServiceInputSchema.parse({
+      ...baseServiceInput,
+      paymentMode: 'paid',
+      priceAmount: 5000,
+      collectPaymentLater: true,
+    });
+
+    expect(parsed.collectPaymentLater).toBe(true);
+    expect(() => bookingServiceInputSchema.parse({
+      ...baseServiceInput,
+      paymentMode: 'paid',
+      priceAmount: 5000,
+      collectPaymentLater: true,
+      depositAmount: 1500,
+    })).toThrow();
+    expect(() => bookingServiceInputSchema.parse({
+      ...baseServiceInput,
+      paymentMode: 'free',
+      collectPaymentLater: true,
+    })).toThrow();
+  });
 });
 
 describe('booking resource input schema', () => {
@@ -88,6 +173,8 @@ describe('booking resource input schema', () => {
       description: createLocalizedText('Shared room'),
       location: 'Taipei Office',
       capacity: 8,
+      bufferBeforeMinutes: 15,
+      bufferAfterMinutes: 30,
       blockedDates: [{
         start: '2099-01-05T00:00:00.000Z',
         end: '2099-01-05T01:00:00.000Z',
@@ -98,7 +185,30 @@ describe('booking resource input schema', () => {
 
     expect(parsed.capacity).toBe(8);
     expect(parsed.location).toBe('Taipei Office');
+    expect(parsed.bufferBeforeMinutes).toBe(15);
+    expect(parsed.bufferAfterMinutes).toBe(30);
     expect(parsed.blockedDates).toHaveLength(1);
+  });
+
+  it('accepts recurring weekly calendars and resource timezones', () => {
+    const parsed = bookingResourceInputSchema.parse({
+      name: createLocalizedText('Recurring room'),
+      weekly: {
+        monday: [{ start: '09:00', end: '09:45' }],
+        tuesday: [],
+        wednesday: [],
+        thursday: [],
+        friday: [],
+        saturday: [],
+        sunday: [],
+      },
+      timezone: 'America/New_York',
+      recurringTemplateId: 'weekdays-09-18',
+    });
+
+    expect(parsed.weekly.monday).toEqual([{ start: '09:00', end: '09:45' }]);
+    expect(parsed.timezone).toBe('America/New_York');
+    expect(parsed.recurringTemplateId).toBe('weekdays-09-18');
   });
 
   it('rejects invalid resource capacity', () => {

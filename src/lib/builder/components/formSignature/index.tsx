@@ -4,15 +4,31 @@ import { useEffect, useRef, useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderFormSignatureCanvasNode } from '@/lib/builder/canvas/types';
 import { useFormFieldRuntime } from '@/lib/builder/forms/render-helpers';
+import type { Locale } from '@/lib/locales';
+import {
+  FORM_SIGNATURE_KO_DEFAULTS,
+  getFormControlsCopy,
+  localizedFormControlText,
+} from '../form/form-controls-copy';
+import inspectorStyles from '../form/FormControlInspector.module.css';
 
 function FormSignatureRender({
   node,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderFormSignatureCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getFormControlsCopy(locale);
+  const label = localizedFormControlText(c.label, copy.signatureWidget.defaults.label, FORM_SIGNATURE_KO_DEFAULTS.label);
+  const helpText = localizedFormControlText(
+    c.helpText,
+    copy.signatureWidget.defaults.helpText,
+    FORM_SIGNATURE_KO_DEFAULTS.helpText,
+  );
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const drawingRef = useRef(false);
   const [hasInk, setHasInk] = useState(false);
@@ -89,8 +105,8 @@ function FormSignatureRender({
         data-builder-signature-has-ink={hasInk ? 'true' : 'false'}
         aria-required={c.required ? 'true' : 'false'}
       >
-        <legend>{c.label}{c.required ? ' *' : ''}</legend>
-        {c.helpText ? <p>{c.helpText}</p> : null}
+        <legend>{label}{c.required ? ' *' : ''}</legend>
+        {helpText ? <p>{helpText}</p> : null}
         <canvas
           ref={canvasRef}
           width={520}
@@ -103,7 +119,7 @@ function FormSignatureRender({
         <input type="hidden" name={c.name} value={signatureValue} readOnly />
         {c.showClearButton ? (
           <button type="button" onClick={() => mode !== 'edit' && clear()}>
-            지우기
+            {copy.signatureWidget.clearButtonLabel}
           </button>
         ) : null}
         {field.error ? <span role="alert">{field.error}</span> : null}
@@ -114,31 +130,40 @@ function FormSignatureRender({
 
 function FormSignatureInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const sNode = node as BuilderFormSignatureCanvasNode;
   const c = sNode.content;
+  const signatureCopy = getFormControlsCopy(locale).signatureWidget;
+  const copy = signatureCopy.inspector;
+  const label = localizedFormControlText(c.label, signatureCopy.defaults.label, FORM_SIGNATURE_KO_DEFAULTS.label);
+  const helpText = localizedFormControlText(
+    c.helpText,
+    signatureCopy.defaults.helpText,
+    FORM_SIGNATURE_KO_DEFAULTS.helpText,
+  );
   return (
-    <>
+    <div className={inspectorStyles.root} data-builder-form-advanced-inspector="signature">
       <label>
-        <span>이름 (name)</span>
+        <span>{copy.nameLabel}</span>
         <input type="text" value={c.name} disabled={disabled} onChange={(event) => onUpdate({ name: event.target.value })} />
       </label>
       <label>
-        <span>라벨</span>
-        <input type="text" value={c.label} disabled={disabled} onChange={(event) => onUpdate({ label: event.target.value })} />
+        <span>{copy.labelLabel}</span>
+        <input type="text" value={label} disabled={disabled} onChange={(event) => onUpdate({ label: event.target.value })} />
       </label>
       <label>
-        <span>안내</span>
-        <textarea rows={2} value={c.helpText} disabled={disabled} onChange={(event) => onUpdate({ helpText: event.target.value })} />
+        <span>{copy.helpTextLabel}</span>
+        <textarea rows={2} value={helpText} disabled={disabled} onChange={(event) => onUpdate({ helpText: event.target.value })} />
       </label>
       <label>
-        <span>펜 색</span>
+        <span>{copy.strokeColorLabel}</span>
         <input type="text" value={c.strokeColor} disabled={disabled} onChange={(event) => onUpdate({ strokeColor: event.target.value })} />
       </label>
       <label>
-        <span>펜 두께</span>
+        <span>{copy.strokeWidthLabel}</span>
         <input
           type="number"
           min={1}
@@ -148,15 +173,15 @@ function FormSignatureInspector({
           onChange={(event) => onUpdate({ strokeWidth: Number(event.target.value) })}
         />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label>
         <input type="checkbox" checked={c.required} disabled={disabled} onChange={(event) => onUpdate({ required: event.target.checked })} />
-        <span>필수</span>
+        <span>{copy.requiredLabel}</span>
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label>
         <input type="checkbox" checked={c.showClearButton} disabled={disabled} onChange={(event) => onUpdate({ showClearButton: event.target.checked })} />
-        <span>지우기 버튼</span>
+        <span>{copy.showClearButtonLabel}</span>
       </label>
-    </>
+    </div>
   );
 }
 
@@ -167,9 +192,9 @@ export default defineComponent({
   icon: '✍',
   defaultContent: {
     name: 'signature',
-    label: '서명',
+    label: FORM_SIGNATURE_KO_DEFAULTS.label,
     required: true,
-    helpText: '박스 안에 서명해 주세요',
+    helpText: FORM_SIGNATURE_KO_DEFAULTS.helpText,
     strokeColor: '#0f172a',
     strokeWidth: 2,
     showClearButton: true,

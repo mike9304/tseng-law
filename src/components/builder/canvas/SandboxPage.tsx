@@ -1,12 +1,14 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import {
   type BuilderPageSummary,
   type SandboxDrawerPanel,
 } from '@/components/builder/canvas/SandboxEditorRail';
 import SandboxFeedbackOverlay from '@/components/builder/canvas/SandboxFeedbackOverlay';
 import SandboxEditorWorkspace from '@/components/builder/canvas/SandboxEditorWorkspace';
+import type { SiteHeaderMemberNavPreview } from '@/components/builder/published/SiteHeader';
 import SandboxStatusBar, {
   type EditorDensity,
   type EditorThemeMode,
@@ -15,25 +17,37 @@ import { BuilderThemeProvider } from '@/components/builder/editor/BuilderThemeCo
 import SandboxModalsRoot, {
   type ImageEditorRequest,
 } from '@/components/builder/canvas/SandboxModalsRoot';
+import type { CanvasCollabCursor } from '@/components/builder/canvas/CanvasCollabCursorsLayer';
 import type { SaveSectionPayload } from '@/components/builder/sections/SaveSectionModal';
 import type { BuilderRegisteredAppWidget } from '@/lib/builder/apps/widgets';
 import { insertSavedSection } from '@/lib/builder/sections/insertSection';
 import { getCanvasNodeDescendantIds } from '@/lib/builder/canvas/tree';
-import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/SandboxTopBar';
+import SandboxTopBar, { type CollabPresenceEntry, type ViewportMode } from '@/components/builder/canvas/SandboxTopBar';
+import type { MemberPreviewMode } from '@/components/builder/canvas/SandboxTopBar';
 import GoogleFontsLoader from '@/components/builder/canvas/GoogleFontsLoader';
+import ResponsiveAiPanel from '@/components/builder/canvas/ResponsiveAiPanel';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import type {
+  ResponsiveSuggestion,
+  ResponsiveTargetViewport,
+} from '@/lib/builder/ai-generator/responsive-rules';
 import type { BuilderDataBindingPreviewTarget } from '@/lib/builder/datasets';
+import type { BuilderFaqCategory, BuilderFaqItem } from '@/lib/builder/faq/faq-shared';
 import {
   applyComponentDesignPresetToNodes,
   getComponentDesignPreset,
+  summarizeComponentDesignTargets,
   type ComponentDesignPresetKey,
   type ComponentDesignPresetPatchResult,
 } from '@/lib/builder/site/component-design-presets';
-import { type BuilderLightbox, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme, type SavedSection } from '@/lib/builder/site/types';
+import { normalizeSiteHref } from '@/lib/builder/site/paths';
+import { type BuilderLightbox, type BuilderNavItem, type BuilderPopup, type BuilderSiteSettings, type BuilderTheme, type SavedSection } from '@/lib/builder/site/types';
 import { collectThemeFontFamilies } from '@/lib/builder/site/theme';
+import type { ColumnPost } from '@/lib/columns';
 import type { Locale } from '@/lib/locales';
 import { useSandboxSiteState } from './hooks/useSandboxSiteState';
+import type { DraftMeta } from './hooks/useSandboxSiteState';
 import styles from './SandboxPage.module.css';
 import {
   SAVE_BADGE_TTL_MS,
@@ -41,17 +55,145 @@ import {
   VIEWPORT_WIDTHS,
   conflictBannerStyle,
   conflictReloadButtonStyle,
+  getDraftConflictCopy,
   getPublicChromeCopy,
+  getSandboxPageFeedbackCopy,
   type ActivityChip,
-  type PublicChromePanel,
   type SandboxToast,
   type ToastOptions,
   type ToastTone,
 } from '@/components/builder/canvas/SandboxPageChrome';
+import { getNavigationCopy } from '@/components/builder/canvas/navigation-copy';
+
+function memberPreviewModeFromParam(value: string | null): MemberPreviewMode {
+  if (value === 'free' || value === 'premium' || value === 'admin') return value;
+  return 'signed-out';
+}
+
+function memberNavPreviewFromMode(mode: MemberPreviewMode): SiteHeaderMemberNavPreview | undefined {
+  if (mode === 'premium' || mode === 'admin') {
+    return {
+      authenticated: true,
+      member: {
+        name: mode === 'admin' ? 'Builder Admin Preview' : 'Builder Premium Preview',
+        role: mode,
+      },
+    };
+  }
+  if (mode === 'free') {
+    return {
+      authenticated: true,
+      member: {
+        name: 'Builder Member Preview',
+        role: 'free',
+      },
+    };
+  }
+  return undefined;
+}
+
+function responsiveTargetViewportFrom(viewport: ViewportMode): ResponsiveTargetViewport | null {
+  if (viewport === 'mobile' || viewport === 'tablet') return viewport;
+  return null;
+}
+
+function findNavigationItemIdByHref(
+  items: BuilderNavItem[],
+  href: string,
+  locale: Locale,
+): string | null {
+  const targetHref = normalizeSiteHref(href, locale);
+  for (const item of items) {
+    if (normalizeSiteHref(item.href, locale) === targetHref) return item.id;
+    if (item.children?.length) {
+      const childId = findNavigationItemIdByHref(item.children, href, locale);
+      if (childId) return childId;
+    }
+  }
+  return null;
+}
+
+function moveNavigationItemWithinSiblings(
+  items: BuilderNavItem[],
+  itemId: string,
+  direction: 'up' | 'down',
+): { items: BuilderNavItem[]; moved: boolean } {
+  const index = items.findIndex((item) => item.id === itemId);
+  if (index >= 0) {
+    const targetIndex = direction === 'up' ? index - 1 : index + 1;
+    if (targetIndex < 0 || targetIndex >= items.length) return { items, moved: false };
+    const nextItems = [...items];
+    [nextItems[index], nextItems[targetIndex]] = [nextItems[targetIndex], nextItems[index]];
+    return { items: nextItems, moved: true };
+  }
+
+  let moved = false;
+  const nextItems = items.map((item) => {
+    if (moved || !item.children?.length) return item;
+    const result = moveNavigationItemWithinSiblings(item.children, itemId, direction);
+    if (!result.moved) return item;
+    moved = true;
+    return {
+      ...item,
+      children: result.items,
+    };
+  });
+  return { items: moved ? nextItems : items, moved };
+}
+
+function localizedNavigationLabel(
+  currentLabel: BuilderNavItem['label'],
+  labels: Record<Locale, string>,
+  untitled: string,
+): BuilderNavItem['label'] {
+  const fallback = labels.ko || labels.en || labels['zh-hant'] || untitled;
+  if (typeof currentLabel === 'string') {
+    return {
+      ko: labels.ko || fallback,
+      'zh-hant': labels['zh-hant'] || fallback,
+      en: labels.en || fallback,
+    };
+  }
+  return {
+    ...currentLabel,
+    ko: labels.ko || currentLabel.ko || fallback,
+    'zh-hant': labels['zh-hant'] || currentLabel['zh-hant'] || fallback,
+    en: labels.en || currentLabel.en || fallback,
+  };
+}
+
+function renameNavigationItemLabels(
+  items: BuilderNavItem[],
+  itemId: string,
+  labels: Record<Locale, string>,
+  untitled: string,
+): { items: BuilderNavItem[]; renamed: boolean } {
+  let renamed = false;
+  const nextItems = items.map((item) => {
+    if (item.id === itemId) {
+      renamed = true;
+      return {
+        ...item,
+        label: localizedNavigationLabel(item.label, labels, untitled),
+      };
+    }
+    if (!item.children?.length) return item;
+    const result = renameNavigationItemLabels(item.children, itemId, labels, untitled);
+    if (!result.renamed) return item;
+    renamed = true;
+    return {
+      ...item,
+      children: result.items,
+    };
+  });
+  return { items: renamed ? nextItems : items, renamed };
+}
 
 export default function SandboxPage({
   initialDocument,
+  initialDraftMeta,
   locale,
+  siteId,
   initialPageId,
   siteName,
   siteSettings,
@@ -59,12 +201,18 @@ export default function SandboxPage({
   navItems,
   currentSlug,
   sitePages,
+  columnPosts = [],
+  faqCategories = [],
+  faqItems = [],
   datasetPreviewTargets = [],
   siteLightboxes = [],
+  sitePopups = [],
   appWidgets = [],
 }: {
   initialDocument: BuilderCanvasDocument;
+  initialDraftMeta?: DraftMeta | null;
   locale: Locale;
+  siteId: string;
   backend: 'blob' | 'file';
   initialPageId?: string;
   siteName?: string;
@@ -73,27 +221,38 @@ export default function SandboxPage({
   navItems?: BuilderNavItem[];
   currentSlug?: string;
   sitePages?: BuilderPageSummary[];
+  columnPosts?: ColumnPost[];
+  faqCategories?: BuilderFaqCategory[];
+  faqItems?: BuilderFaqItem[];
   datasetPreviewTargets?: BuilderDataBindingPreviewTarget[];
   siteLightboxes?: BuilderLightbox[];
+  sitePopups?: BuilderPopup[];
   appWidgets?: BuilderRegisteredAppWidget[];
 }) {
-  const {
-    document: canvasDocument,
-    selectedNodeId,
-    selectedNodeIds,
-    draftSaveState,
-    clipboardCount,
-    mutationBaseDocument,
-    replaceDocument,
-    pasteClipboardNodes,
-    setSelectedNodeId,
-    setDraftSaveState,
-    updateNode,
-    updateNodeContent,
-    updateSelectedNodes,
-    setViewport: setStoreViewport,
-    applyMobileAutoFit,
-  } = useBuilderCanvasStore();
+  const searchParams = useSearchParams();
+  const canvasDocument = useBuilderCanvasStore((state) => state.document);
+  const nodesById = useBuilderCanvasStore((state) => state.nodesById);
+  const selectedNodeId = useBuilderCanvasStore((state) => state.selectedNodeId);
+  const selectedNodeIds = useBuilderCanvasStore((state) => state.selectedNodeIds);
+  const draftSaveState = useBuilderCanvasStore((state) => state.draftSaveState);
+  const clipboardCount = useBuilderCanvasStore((state) => state.clipboardCount);
+  const mutationBaseDocument = useBuilderCanvasStore((state) => state.mutationBaseDocument);
+  const hasLocalHistory = useBuilderCanvasStore((state) => state.canUndo || state.canRedo);
+  const replaceDocument = useBuilderCanvasStore((state) => state.replaceDocument);
+  const pasteClipboardNodes = useBuilderCanvasStore((state) => state.pasteClipboardNodes);
+  const setSelectedNodeId = useBuilderCanvasStore((state) => state.setSelectedNodeId);
+  const setDraftSaveState = useBuilderCanvasStore((state) => state.setDraftSaveState);
+  const updateNode = useBuilderCanvasStore((state) => state.updateNode);
+  const updateNodeContent = useBuilderCanvasStore((state) => state.updateNodeContent);
+  const updateSelectedNodes = useBuilderCanvasStore((state) => state.updateSelectedNodes);
+  const updateResponsiveOverride = useBuilderCanvasStore((state) => state.updateResponsiveOverride);
+  const beginMutationSession = useBuilderCanvasStore((state) => state.beginMutationSession);
+  const commitMutationSession = useBuilderCanvasStore((state) => state.commitMutationSession);
+  const cancelMutationSession = useBuilderCanvasStore((state) => state.cancelMutationSession);
+  const undo = useBuilderCanvasStore((state) => state.undo);
+  const canUndo = useBuilderCanvasStore((state) => state.canUndo);
+  const setStoreViewport = useBuilderCanvasStore((state) => state.setViewport);
+  const applyMobileAutoFit = useBuilderCanvasStore((state) => state.applyMobileAutoFit);
   const [assetLibraryNodeId, setAssetLibraryNodeId] = useState<string | null>(null);
   const [imageEditorRequest, setImageEditorRequest] = useState<ImageEditorRequest>(null);
   const [toasts, setToasts] = useState<SandboxToast[]>([]);
@@ -109,28 +268,56 @@ export default function SandboxPage({
   const [historyOpen, setHistoryOpen] = useState(false);
   const [activeDrawer, setActiveDrawer] = useState<SandboxDrawerPanel | null>(null);
   const [clientReady, setClientReady] = useState(false);
-  const [publicChromePanel, setPublicChromePanel] = useState<PublicChromePanel>(null);
+  const usesColumnsShortcutFlow = useMemo(
+    () => searchParams.get('publicChromeColumnsShortcut') !== '0',
+    [searchParams],
+  );
+  const queryMemberPreviewMode = useMemo(
+    () => memberPreviewModeFromParam(searchParams.get('memberPreview')),
+    [searchParams],
+  );
+  const [memberPreviewMode, setMemberPreviewMode] = useState<MemberPreviewMode>(queryMemberPreviewMode);
+  const memberNavPreview = useMemo(() => memberNavPreviewFromMode(memberPreviewMode), [memberPreviewMode]);
   const [activeNavItemId, setActiveNavItemId] = useState<string | null>(null);
   const [focusedNavItemId, setFocusedNavItemId] = useState<string | null>(null);
   const [addNavChildParentId, setAddNavChildParentId] = useState<string | null>(null);
+  const [missingPageHref, setMissingPageHref] = useState<string | null>(null);
   const [helpOpen, setHelpOpen] = useState(false);
   const [previewOpen, setPreviewOpen] = useState(false);
+  const [responsiveAiOpen, setResponsiveAiOpen] = useState(false);
   const [editorDensity, setEditorDensity] = useState<EditorDensity>('cozy');
   const [editorThemeMode, setEditorThemeMode] = useState<EditorThemeMode>('light');
   const [movePickerNodeIds, setMovePickerNodeIds] = useState<string[] | null>(null);
   const [saveSectionPayload, setSaveSectionPayload] = useState<SaveSectionPayload | null>(null);
+  const [presenceEntries, setPresenceEntries] = useState<CollabPresenceEntry[]>([]);
+  const [collabCursors, setCollabCursors] = useState<CanvasCollabCursor[]>([]);
   const childrenMap = useBuilderCanvasStore((state) => state.childrenMap);
   const addNodes = useBuilderCanvasStore((state) => state.addNodes);
   const storeViewport = useBuilderCanvasStore((state) => state.viewport);
+  const navigationCopy = useMemo(() => getNavigationCopy(locale), [locale]);
   const publicChromeCopy = useMemo(() => getPublicChromeCopy(locale), [locale]);
+  const draftConflictCopy = useMemo(() => getDraftConflictCopy(locale), [locale]);
+  const pageFeedbackCopy = useMemo(() => getSandboxPageFeedbackCopy(locale), [locale]);
   const handleViewportChange = useCallback((nextViewport: ViewportMode) => {
     setViewport(nextViewport);
     setStoreViewport(nextViewport);
   }, [setStoreViewport]);
+  const openPublishPanel = useCallback(() => setPublishOpen(true), []);
+  const openSeoPanel = useCallback(() => setSeoOpen(true), []);
+  const openSettingsPanel = useCallback(() => setSettingsOpen(true), []);
+  const openHistoryPanel = useCallback(() => setHistoryOpen(true), []);
+  const openPreviewPanel = useCallback(() => setPreviewOpen(true), []);
+  const openResponsiveAiPanel = useCallback(() => setResponsiveAiOpen(true), []);
+  const closeResponsiveAiPanel = useCallback(() => setResponsiveAiOpen(false), []);
+  const openPagesDrawer = useCallback(() => setActiveDrawer('pages'), []);
 
   useEffect(() => {
     setClientReady(true);
   }, []);
+
+  useEffect(() => {
+    setMemberPreviewMode(queryMemberPreviewMode);
+  }, [queryMemberPreviewMode]);
 
   useEffect(() => {
     const pageDocument = window.document;
@@ -223,6 +410,7 @@ export default function SandboxPage({
 
   const {
     activePageId,
+    canDecomposeCurrentPage,
     columnPostsSummary,
     columnsPageLookupPending,
     currentSlugState,
@@ -241,6 +429,7 @@ export default function SandboxPage({
     siteThemeState,
     handleHeaderNavigate,
     handleLocaleChange,
+    handleDecomposeCurrentPage,
     handleMoveCompleted,
     handleOpenColumnsPage,
     handlePagesChange,
@@ -250,7 +439,9 @@ export default function SandboxPage({
     refreshColumnsPageIfNeeded,
   } = useSandboxSiteState({
     initialDocument,
+    initialDraftMeta,
     locale,
+    siteId,
     initialPageId,
     siteSettings,
     siteTheme,
@@ -258,12 +449,137 @@ export default function SandboxPage({
     currentSlug,
     sitePages,
     canvasDocument,
+    hasLocalHistory,
     mutationBaseDocument,
     replaceDocument,
     setDraftSaveState,
     pushToast,
-    onMissingHeaderPage: () => setActiveDrawer('pages'),
+    onMissingHeaderPage: (href) => {
+      setMissingPageHref(href);
+      setActiveDrawer('pages');
+    },
   });
+
+  const responsiveAiTargetViewport = responsiveTargetViewportFrom(viewport);
+  const canOpenResponsiveAi = Boolean(responsiveAiTargetViewport && canvasDocument && activePageId);
+
+  const previewResponsiveSuggestions = useCallback((suggestions: ResponsiveSuggestion[]) => {
+    if (!responsiveAiTargetViewport || suggestions.length === 0) return;
+    beginMutationSession();
+    for (const suggestion of suggestions) {
+      updateResponsiveOverride(
+        suggestion.nodeId,
+        responsiveAiTargetViewport,
+        suggestion.mobileOverride,
+        'transient',
+      );
+    }
+  }, [beginMutationSession, responsiveAiTargetViewport, updateResponsiveOverride]);
+
+  const applyResponsiveSuggestions = useCallback((suggestions: ResponsiveSuggestion[]) => {
+    if (!responsiveAiTargetViewport || suggestions.length === 0) return;
+    beginMutationSession();
+    for (const suggestion of suggestions) {
+      updateResponsiveOverride(
+        suggestion.nodeId,
+        responsiveAiTargetViewport,
+        suggestion.mobileOverride,
+        'transient',
+      );
+    }
+    commitMutationSession();
+  }, [beginMutationSession, commitMutationSession, responsiveAiTargetViewport, updateResponsiveOverride]);
+
+  const getResponsiveAnalysisCanvas = useCallback((): BuilderCanvasDocument => {
+    const currentDocument = useBuilderCanvasStore.getState().document;
+    if (currentDocument) return currentDocument;
+    if (canvasDocument) return canvasDocument;
+    throw new Error('Canvas document is not loaded.');
+  }, [canvasDocument]);
+
+  useEffect(() => {
+    if (canOpenResponsiveAi || !responsiveAiOpen) return;
+    setResponsiveAiOpen(false);
+    cancelMutationSession();
+  }, [canOpenResponsiveAi, cancelMutationSession, responsiveAiOpen]);
+
+  useEffect(() => {
+    if (!clientReady || !activePageId) {
+      setPresenceEntries([]);
+      return undefined;
+    }
+
+    const storageKey = 'builder:collab-session-id';
+    let sessionId = '';
+    try {
+      sessionId = window.sessionStorage.getItem(storageKey) ?? '';
+      if (!sessionId) {
+        sessionId = window.crypto?.randomUUID?.() ?? `sess-${Math.random().toString(36).slice(2, 10)}`;
+        window.sessionStorage.setItem(storageKey, sessionId);
+      }
+    } catch {
+      sessionId = `sess-${Math.random().toString(36).slice(2, 10)}`;
+    }
+
+    let cancelled = false;
+    const syncPresence = async () => {
+      try {
+        const response = await fetch(`/api/builder/collab/presence?${new URLSearchParams({ locale, siteId }).toString()}`, {
+          method: 'POST',
+          credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            siteId,
+            pageId: activePageId,
+            sessionId,
+            nodeId: selectedNodeId ?? undefined,
+          }),
+        });
+        if (!response.ok || cancelled) return;
+        const payload = await response.json().catch(() => null) as { active?: CollabPresenceEntry[] } | null;
+        if (!payload || !Array.isArray(payload.active) || cancelled) return;
+        setPresenceEntries(payload.active);
+      } catch {
+        if (!cancelled) setPresenceEntries([]);
+      }
+    };
+
+    void syncPresence();
+    const timer = window.setInterval(syncPresence, 15_000);
+    return () => {
+      cancelled = true;
+      window.clearInterval(timer);
+    };
+  }, [activePageId, clientReady, locale, selectedNodeId, siteId]);
+
+  useEffect(() => {
+    if (!clientReady || !activePageId) {
+      setCollabCursors([]);
+      return undefined;
+    }
+
+    let cancelled = false;
+    const syncCursors = async () => {
+      try {
+        const response = await fetch(`/api/builder/collab/cursors?${new URLSearchParams({ siteId, pageId: activePageId }).toString()}`, {
+          credentials: 'include',
+        });
+        if (!response.ok || cancelled) return;
+        const payload = await response.json().catch(() => null) as { cursors?: CanvasCollabCursor[] } | null;
+        if (!payload || !Array.isArray(payload.cursors) || cancelled) return;
+        setCollabCursors(payload.cursors);
+      } catch {
+        if (!cancelled) setCollabCursors([]);
+      }
+    };
+
+    void syncCursors();
+    const timer = window.setInterval(syncCursors, 7_500);
+    return () => {
+      cancelled = true;
+      window.clearInterval(timer);
+    };
+  }, [activePageId, clientReady, siteId]);
 
   const handleApplyComponentDesignPreset = useCallback((presetKey: ComponentDesignPresetKey): ComponentDesignPresetPatchResult => {
     const preset = getComponentDesignPreset(presetKey);
@@ -273,29 +589,35 @@ export default function SandboxPage({
         changedNodeIds: [],
         counts: { buttons: 0, cards: 0, formFields: 0, formSubmits: 0 },
       };
-      pushToast('현재 페이지 문서를 아직 불러오지 못했습니다.', 'error');
+      pushToast(pageFeedbackCopy.currentPageNotLoaded, 'error');
       return emptyResult;
     }
 
     const result = applyComponentDesignPresetToNodes(canvasDocument.nodes, preset.key);
     if (result.changedNodeIds.length === 0) {
-      pushToast('현재 페이지에 변경할 button/card/form 요소가 없습니다.', 'error');
+      const componentTargetCount = summarizeComponentDesignTargets(canvasDocument.nodes).total;
+      pushToast(
+        componentTargetCount > 0
+          ? pageFeedbackCopy.componentPresetAlreadyMatches(preset.label)
+          : pageFeedbackCopy.componentPresetNoTargets,
+        componentTargetCount > 0 ? 'success' : 'error',
+      );
       return result;
     }
 
     const nextNodeById = new Map(result.nodes.map((node) => [node.id, node]));
     updateSelectedNodes(result.changedNodeIds, (node) => nextNodeById.get(node.id) ?? node);
-    pushToast(`${preset.label} preset applied to ${result.changedNodeIds.length} components`, 'success');
+    pushToast(pageFeedbackCopy.componentPresetApplied(preset.label, result.changedNodeIds.length), 'success');
     return result;
-  }, [canvasDocument, pushToast, updateSelectedNodes]);
+  }, [canvasDocument, pageFeedbackCopy, pushToast, updateSelectedNodes]);
 
   const handlePagesPanelPaste = useCallback(() => {
     const state = useBuilderCanvasStore.getState();
     if (state.clipboardCount <= 0) return;
     pasteClipboardNodes();
     const pastedCount = state.clipboardCount;
-    pushActivityChip(`Pasted ${pastedCount} item${pastedCount === 1 ? '' : 's'}`);
-  }, [pasteClipboardNodes, pushActivityChip]);
+    pushActivityChip(pageFeedbackCopy.pastedItems(pastedCount));
+  }, [pageFeedbackCopy, pasteClipboardNodes, pushActivityChip]);
 
   useEffect(() => {
     if (activeDrawer !== 'pages') return undefined;
@@ -345,8 +667,8 @@ export default function SandboxPage({
   }, [activePageId, currentSlugState]);
 
   const selectedNode = useMemo(
-    () => canvasDocument?.nodes.find((node) => node.id === selectedNodeId) ?? null,
-    [canvasDocument, selectedNodeId],
+    () => (selectedNodeId ? nodesById.get(selectedNodeId) ?? null : null),
+    [nodesById, selectedNodeId],
   );
   const linkPickerLightboxes = useMemo(
     () =>
@@ -359,13 +681,24 @@ export default function SandboxPage({
         })),
     [locale, siteLightboxes],
   );
+  const linkPickerPopups = useMemo(
+    () =>
+      sitePopups
+        .filter((popup) => popup.locale === locale)
+        .map((popup) => ({
+          id: popup.id,
+          slug: popup.slug,
+          name: popup.name,
+        })),
+    [locale, sitePopups],
+  );
   const assetLibraryNode = useMemo(
-    () => canvasDocument?.nodes.find((node) => node.id === assetLibraryNodeId) ?? null,
-    [assetLibraryNodeId, canvasDocument],
+    () => (assetLibraryNodeId ? nodesById.get(assetLibraryNodeId) ?? null : null),
+    [assetLibraryNodeId, nodesById],
   );
   const imageEditorNode = useMemo(
-    () => canvasDocument?.nodes.find((node) => node.id === imageEditorRequest?.nodeId) ?? null,
-    [imageEditorRequest?.nodeId, canvasDocument],
+    () => (imageEditorRequest?.nodeId ? nodesById.get(imageEditorRequest.nodeId) ?? null : null),
+    [imageEditorRequest?.nodeId, nodesById],
   );
 
   useEffect(() => {
@@ -404,23 +737,10 @@ export default function SandboxPage({
     }
   }, []);
 
-  const handleEditorFooterLinkActivation = useCallback((event: {
-    target: EventTarget | null;
-    preventDefault: () => void;
-    stopPropagation: () => void;
-  }) => {
-    const target = event.target;
-    if (!(target instanceof Element) || !target.closest('a[href]')) return;
-    event.preventDefault();
-    event.stopPropagation();
-    setActiveDrawer('nav');
-    pushToast('Footer links stay in the editor. Use Navigation to edit them.', 'error');
-  }, [pushToast]);
-
   const viewportWidth = VIEWPORT_WIDTHS[viewport];
 
   const toggleDrawer = useCallback((panel: SandboxDrawerPanel) => {
-    setActiveDrawer((current) => (current === panel ? null : panel));
+    setActiveDrawer((current) => (current === panel && panel !== 'pages' ? null : panel));
   }, []);
 
   useEffect(() => {
@@ -436,6 +756,45 @@ export default function SandboxPage({
     setFocusedNavItemId(itemId);
   }, []);
 
+  const handleRequestRenameNavItem = useCallback(async (itemId: string, labels: Record<Locale, string>) => {
+    const fallbackLabel = labels.ko.trim() || labels.en.trim() || labels['zh-hant'].trim() || navigationCopy.titles.untitled;
+    const nextLabels: Record<Locale, string> = {
+      ko: labels.ko.trim() || fallbackLabel,
+      'zh-hant': labels['zh-hant'].trim() || fallbackLabel,
+      en: labels.en.trim() || fallbackLabel,
+    };
+    const result = renameNavigationItemLabels(headerNavItems, itemId, nextLabels, navigationCopy.titles.untitled);
+    if (!result.renamed) {
+      pushToast(pageFeedbackCopy.navItemNotFound, 'error');
+      return false;
+    }
+
+    setNavItemsState(result.items);
+    setActiveNavItemId(itemId);
+    try {
+      const response = await fetch('/api/builder/site/navigation', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({
+          locale,
+          navigation: result.items,
+        }),
+      });
+      if (!response.ok) throw new Error('Navigation save failed');
+      const payload = (await response.json().catch(() => null)) as { navigation?: BuilderNavItem[] } | null;
+      if (Array.isArray(payload?.navigation)) {
+        setNavItemsState(payload.navigation);
+      }
+      pushActivityChip(pageFeedbackCopy.navNameSaved);
+      return true;
+    } catch {
+      setNavItemsState(headerNavItems);
+      pushToast(pageFeedbackCopy.navNameSaveFailed, 'error');
+      return false;
+    }
+  }, [headerNavItems, locale, navigationCopy.titles.untitled, pageFeedbackCopy, pushActivityChip, pushToast, setNavItemsState]);
+
   const handleRequestAddNavChild = useCallback((parentItemId: string) => {
     setActiveDrawer('nav');
     setActiveNavItemId(parentItemId);
@@ -443,12 +802,44 @@ export default function SandboxPage({
     setAddNavChildParentId(parentItemId);
   }, []);
 
+  const handleRequestMoveNavItem = useCallback((itemId: string, direction: 'up' | 'down') => {
+    const result = moveNavigationItemWithinSiblings(headerNavItems, itemId, direction);
+    if (!result.moved) {
+      pushToast(pageFeedbackCopy.navMoveUnavailable, 'error');
+      return;
+    }
+
+    setNavItemsState(result.items);
+    setActiveNavItemId(itemId);
+    void fetch('/api/builder/site/navigation', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify({
+        locale,
+        navigation: result.items,
+      }),
+    })
+      .then(async (response) => {
+        if (!response.ok) throw new Error('Navigation save failed');
+        const payload = (await response.json().catch(() => null)) as { navigation?: BuilderNavItem[] } | null;
+        if (Array.isArray(payload?.navigation)) {
+          setNavItemsState(payload.navigation);
+        }
+        pushActivityChip(pageFeedbackCopy.navOrderSaved);
+      })
+      .catch(() => {
+        setNavItemsState(headerNavItems);
+        pushToast(pageFeedbackCopy.navOrderSaveFailed, 'error');
+      });
+  }, [headerNavItems, locale, pageFeedbackCopy, pushActivityChip, pushToast, setNavItemsState]);
+
   const handleRequestSaveAsSection = useCallback(
     (rootNodeId: string) => {
       const allNodes = canvasDocument?.nodes ?? [];
       const rootNode = allNodes.find((node) => node.id === rootNodeId);
       if (!rootNode) {
-        pushToast('선택한 컨테이너를 찾을 수 없습니다.', 'error');
+        pushToast(pageFeedbackCopy.selectedContainerNotFound, 'error');
         return;
       }
       const descendantIds = getCanvasNodeDescendantIds(rootNodeId, childrenMap);
@@ -461,32 +852,33 @@ export default function SandboxPage({
         nodes: snapshot,
       });
     },
-    [childrenMap, canvasDocument?.nodes, pushToast],
+    [childrenMap, canvasDocument?.nodes, pageFeedbackCopy, pushToast],
   );
 
   const handleInsertSavedSection = useCallback(
-    async (sectionId: string, position: { x: number; y: number }) => {
+    async (sectionId: string, position: { x: number; y: number }, parentNodeId: string | null = null) => {
       try {
         const response = await fetch(
           `/api/builder/site/section-library/${sectionId}?locale=${encodeURIComponent(locale)}`,
           { credentials: 'same-origin' },
         );
         if (!response.ok) {
-          pushToast('섹션을 불러오지 못했습니다.', 'error');
+          pushToast(pageFeedbackCopy.savedSectionLoadFailed, 'error');
           return;
         }
         const data = (await response.json()) as { ok: boolean; section?: SavedSection };
         if (!data.ok || !data.section) {
-          pushToast('섹션 데이터가 올바르지 않습니다.', 'error');
+          pushToast(pageFeedbackCopy.savedSectionInvalid, 'error');
           return;
         }
         const result = insertSavedSection(data.section, position);
         if (result.nodes.length === 0) {
-          pushToast('섹션을 삽입할 수 없습니다.', 'error');
+          pushToast(pageFeedbackCopy.savedSectionInsertFailed, 'error');
           return;
         }
-        addNodes(result.nodes, result.rootNodeId);
-        pushToast(`"${data.section.name}" 섹션을 추가했습니다.`, 'success');
+        addNodes(result.nodes, result.rootNodeId, parentNodeId);
+        setSelectedNodeId(result.rootNodeId);
+        pushToast(pageFeedbackCopy.savedSectionAdded(data.section.name), 'success');
         void fetch(
           `/api/builder/site/section-library/${sectionId}?locale=${encodeURIComponent(locale)}`,
           {
@@ -497,11 +889,11 @@ export default function SandboxPage({
           },
         ).catch(() => undefined);
       } catch (error) {
-        const message = error instanceof Error ? error.message : '섹션 추가 오류';
+        const message = error instanceof Error ? error.message : pageFeedbackCopy.savedSectionAddError;
         pushToast(message, 'error');
       }
     },
-    [addNodes, locale, pushToast],
+    [addNodes, locale, pageFeedbackCopy, pushToast, setSelectedNodeId],
   );
 
   const canvasWrapperStyle: React.CSSProperties = viewportWidth
@@ -550,12 +942,64 @@ export default function SandboxPage({
       };
 
   const handleOpenColumnsPanel = useCallback(() => {
+    if (currentSlugState !== 'columns') {
+      setActiveDrawer(null);
+      void handleOpenColumnsPage(() => setActiveDrawer('pages'));
+      return;
+    }
+
     const nextDrawer = activeDrawer === 'columns' ? null : 'columns';
     setActiveDrawer(nextDrawer);
-    if (nextDrawer === 'columns') {
-      void handleOpenColumnsPage(() => setActiveDrawer('pages'));
+  }, [activeDrawer, currentSlugState, handleOpenColumnsPage]);
+
+  const handleCanvasHeaderNavigate = useCallback((href: string) => {
+    setMissingPageHref(null);
+    setActiveDrawer(null);
+    window.setTimeout(() => {
+      setActiveDrawer(null);
+    }, 0);
+    handleHeaderNavigate(href);
+  }, [handleHeaderNavigate]);
+
+  const handleEditorFooterLinkActivation = useCallback((event: {
+    target: EventTarget | null;
+    preventDefault: () => void;
+    stopPropagation: () => void;
+  }) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const footerLink = target.closest<HTMLAnchorElement>('a[href]');
+    if (!footerLink) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    const href = footerLink.getAttribute('href') ?? '';
+    if (/^(mailto:|tel:)/.test(href)) {
+      setActiveDrawer(null);
+      setSettingsOpen(true);
+      pushToast(pageFeedbackCopy.footerContactSettings, 'success');
+      return;
     }
-  }, [activeDrawer, handleOpenColumnsPage]);
+
+    if (!href || /^(https?:|mailto:|tel:|#)/.test(href)) {
+      const navItemId = findNavigationItemIdByHref(headerNavItems, href, locale);
+      setActiveDrawer('nav');
+      if (navItemId) {
+        setActiveNavItemId(navItemId);
+        setFocusedNavItemId(navItemId);
+      }
+      pushToast(
+        navItemId
+          ? pageFeedbackCopy.footerNavigationOpened
+          : pageFeedbackCopy.footerNavigationFallback,
+        navItemId ? 'success' : 'error',
+      );
+      return;
+    }
+
+    handleCanvasHeaderNavigate(href);
+  }, [handleCanvasHeaderNavigate, headerNavItems, locale, pageFeedbackCopy, pushToast]);
 
   useEffect(() => {
     if (activeDrawer === 'columns') refreshColumnsPageIfNeeded();
@@ -572,54 +1016,78 @@ export default function SandboxPage({
       >
         <GoogleFontsLoader extraFamilies={collectThemeFontFamilies(siteThemeState)} />
         <SandboxTopBar
-        locale={locale}
-        draftSaveState={draftSaveState}
-        selectedSummary={
-          selectedNodeIds.length > 1
-            ? `${selectedNodeIds.length} nodes`
-            : selectedNode
-              ? `${selectedNode.kind} · ${selectedNode.id}`
-              : 'none'
-        }
-        selectionCount={selectedNodeIds.length}
-        viewport={viewport}
-        onViewportChange={handleViewportChange}
-        onPublish={() => setPublishOpen(true)}
-        onOpenSeo={() => setSeoOpen(true)}
-        onOpenSettings={() => setSettingsOpen(true)}
-        onOpenHistory={() => setHistoryOpen(true)}
-        onOpenPreview={() => setPreviewOpen(true)}
-        onOpenPages={() => setActiveDrawer('pages')}
-        activePageId={activePageId}
-        onLocaleChange={handleLocaleChange}
-        siteName={siteName}
-        currentSlug={currentSlugState}
-        saveBlockReason={saveBlockReason}
-      />
+          locale={locale}
+          siteId={siteId}
+          draftSaveState={draftSaveState}
+          selectedSummary={
+            selectedNodeIds.length > 1
+              ? pageFeedbackCopy.selectionSummaryMultiple(selectedNodeIds.length)
+              : selectedNode
+                ? `${selectedNode.kind} · ${selectedNode.id}`
+                : pageFeedbackCopy.selectionSummaryNone
+          }
+          selectionCount={selectedNodeIds.length}
+          viewport={viewport}
+          onViewportChange={handleViewportChange}
+          onPublish={openPublishPanel}
+          onOpenSeo={openSeoPanel}
+          onOpenSettings={openSettingsPanel}
+          onOpenHistory={openHistoryPanel}
+          onOpenPreview={openPreviewPanel}
+          onOpenResponsiveAi={openResponsiveAiPanel}
+          canOpenResponsiveAi={canOpenResponsiveAi}
+          onOpenPages={openPagesDrawer}
+          activePageId={activePageId}
+          onLocaleChange={handleLocaleChange}
+          siteName={siteName}
+          currentSlug={currentSlugState}
+          saveBlockReason={saveBlockReason}
+          memberPreviewMode={memberPreviewMode}
+          onMemberPreviewModeChange={setMemberPreviewMode}
+          presenceEntries={presenceEntries}
+        />
+
+        {responsiveAiOpen && responsiveAiTargetViewport && canvasDocument && activePageId ? (
+          <ResponsiveAiPanel
+            pageId={activePageId}
+            locale={locale}
+            targetViewport={responsiveAiTargetViewport}
+            getAnalysisCanvas={getResponsiveAnalysisCanvas}
+            canUndoLast={canUndo}
+            onPreview={previewResponsiveSuggestions}
+            onCancelPreview={cancelMutationSession}
+            onCommitPreview={commitMutationSession}
+            onApply={applyResponsiveSuggestions}
+            onUndoLast={undo}
+            onClose={closeResponsiveAiPanel}
+          />
+        ) : null}
 
         {draftConflict ? (
           <div style={conflictBannerStyle} role="alert">
             <span>
-              Conflict — 다른 탭에서 저장됨. 새로고침해서 최신본을 가져오거나, 변경사항을 다른 곳에 백업한 뒤 reload 하세요.
+              {draftConflictCopy.message}
             </span>
             <button
               type="button"
               style={conflictReloadButtonStyle}
               onClick={handleReloadDraftAfterConflict}
             >
-              새로고침
+              {draftConflictCopy.reloadLabel}
             </button>
           </div>
         ) : null}
 
         <SandboxEditorWorkspace
           locale={locale}
+          siteId={siteId}
           activeDrawer={activeDrawer}
           activePageId={activePageId}
           clipboardCount={clipboardCount}
           columnPostsSummary={columnPostsSummary}
           columnsPageLookupPending={columnsPageLookupPending}
-          document={canvasDocument}
+          document={canvasDocument ?? initialDocument}
+          nodesById={nodesById}
           selectedNode={selectedNode}
           focusedNavItemId={focusedNavItemId}
           addNavChildParentId={addNavChildParentId}
@@ -629,16 +1097,23 @@ export default function SandboxPage({
           headerNavItems={headerNavItems}
           currentSlug={currentSlugState}
           activeNavItemId={activeNavItemId}
+          missingPageHref={missingPageHref}
           viewportWidth={viewportWidth}
           canvasOuterStyle={canvasOuterStyle}
           canvasWrapperStyle={canvasWrapperStyle}
           canvasColumnRef={canvasColumnRef}
           publicChromeCopy={publicChromeCopy}
-          publicChromePanel={publicChromePanel}
+          publicChromeColumnsShortcut={usesColumnsShortcutFlow}
+          collabCursors={collabCursors}
           linkPickerLightboxes={linkPickerLightboxes}
+          linkPickerPopups={linkPickerPopups}
           linkPickerSitePages={linkPickerSitePages}
+          columnPosts={columnPosts}
+          faqCategories={faqCategories}
+          faqItems={faqItems}
           datasetPreviewTargets={datasetPreviewTargets}
           appWidgets={appWidgets}
+          memberNavPreview={memberNavPreview}
           onToggleDrawer={toggleDrawer}
           onOpenColumnsPanel={handleOpenColumnsPanel}
           onOpenColumnsPage={() => {
@@ -646,38 +1121,41 @@ export default function SandboxPage({
               if (opened) setActiveDrawer(null);
             });
           }}
-          onOpenSettings={() => setSettingsOpen(true)}
-          onOpenHistory={() => setHistoryOpen(true)}
+          onOpenSettings={openSettingsPanel}
+          onOpenHistory={openHistoryPanel}
           onApplyComponentDesignPreset={handleApplyComponentDesignPreset}
           onSetActiveDrawer={setActiveDrawer}
           onSelectPage={handleSelectPage}
           onPagesChange={handlePagesChange}
+          onMissingPageHandled={() => setMissingPageHref(null)}
           onNavigationChange={setNavItemsState}
           onNavFocusHandled={() => setFocusedNavItemId(null)}
           onNavAddChildHandled={() => setAddNavChildParentId(null)}
           onSelectNode={setSelectedNodeId}
           onUpdateNodeContent={updateNodeContent}
-          onHeaderNavigate={(href) => {
-            setActiveDrawer(null);
-            handleHeaderNavigate(href);
-          }}
+          onHeaderNavigate={handleCanvasHeaderNavigate}
           onRequestEditNavItem={handleRequestEditNavItem}
+          onRequestRenameNavItem={handleRequestRenameNavItem}
           onRequestAddNavChild={handleRequestAddNavChild}
+          onRequestMoveNavItem={handleRequestMoveNavItem}
           onFooterLinkActivation={handleEditorFooterLinkActivation}
-          onSetPublicChromePanel={setPublicChromePanel}
           onRequestAssetLibrary={setAssetLibraryNodeId}
           onRequestImageEditor={setImageEditorRequest}
           onRequestMoveToPage={setMovePickerNodeIds}
           onRequestSaveAsSection={handleRequestSaveAsSection}
-          onRequestInsertSavedSection={(sectionId, position) => {
-            void handleInsertSavedSection(sectionId, position);
+          canDecomposeCurrentPage={canDecomposeCurrentPage}
+          onDecomposeCurrentPage={handleDecomposeCurrentPage}
+          onRequestInsertSavedSection={(sectionId, position, parentNodeId) => {
+            void handleInsertSavedSection(sectionId, position, parentNodeId);
           }}
+          onCanvasPageLink={handleCanvasHeaderNavigate}
           onToast={pushToast}
           onActivity={pushActivityChip}
         />
 
         <SandboxModalsRoot
           locale={locale}
+          siteId={siteId}
           document={canvasDocument}
           siteName={siteName}
           currentSlug={currentSlugState}
@@ -732,7 +1210,7 @@ export default function SandboxPage({
           onClosePreview={() => setPreviewOpen(false)}
           onCloseSaveSection={() => setSaveSectionPayload(null)}
           onSectionSaved={(section) => {
-            pushToast(`"${section.name}" 섹션을 저장했습니다.`, 'success');
+            pushToast(pageFeedbackCopy.savedSectionSaved(section.name), 'success');
             if (typeof window !== 'undefined') {
               window.dispatchEvent(new CustomEvent('builder:saved-section-changed'));
             }
@@ -743,12 +1221,14 @@ export default function SandboxPage({
         />
 
         <SandboxFeedbackOverlay
+          locale={locale}
           draftSaveState={draftSaveState}
           activityChips={activityChips}
           toasts={toasts}
           onDismissToast={dismissToast}
         />
         <SandboxStatusBar
+          locale={locale}
           viewport={viewport}
           draftSaveState={draftSaveState}
           selectionCount={selectedNodeIds.length}

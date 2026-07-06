@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { guardMutation } from '@/lib/builder/security/guard';
+import { getBookingPackageCreditApiErrorPayload } from '@/lib/builder/bookings/bookings-copy';
 import { bookingPackageCreditInputSchema } from '@/lib/builder/bookings/types';
 import {
   getPackage,
@@ -10,6 +11,7 @@ import {
   timestamped,
 } from '@/lib/builder/bookings/storage';
 import { normalizePackageEmail } from '@/lib/builder/bookings/packages';
+import { normalizeLocale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -34,13 +36,22 @@ export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const parsed = bookingPackageCreditInputSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) {
-    return NextResponse.json({ error: 'Invalid credit payload', details: parsed.error.issues.slice(0, 3) }, { status: 400 });
+    return NextResponse.json(
+      {
+        ...getBookingPackageCreditApiErrorPayload(locale, 'invalid_credit_payload'),
+        details: parsed.error.issues.slice(0, 3),
+      },
+      { status: 400 },
+    );
   }
 
   const pkg = await getPackage(parsed.data.packageId);
-  if (!pkg) return NextResponse.json({ error: 'Package not found' }, { status: 404 });
+  if (!pkg) {
+    return NextResponse.json(getBookingPackageCreditApiErrorPayload(locale, 'package_not_found'), { status: 404 });
+  }
 
   const totalCredits = parsed.data.totalCredits ?? pkg.credits;
   const credit = timestamped({

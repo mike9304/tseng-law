@@ -20,6 +20,9 @@ export interface CommercePaymentWebhookEvent {
   paymentStatus: CommerceOrderPaymentStatus;
   amountCents?: number;
   currency?: CommerceCurrency;
+  feeCents?: number;
+  netAmountCents?: number;
+  balanceTransactionId?: string;
   orderId?: string;
   status: CommercePaymentWebhookStatus;
   error?: string;
@@ -40,6 +43,10 @@ export interface NormalizedCommercePaymentWebhookInput {
   paymentStatus: CommerceOrderPaymentStatus;
   amountCents?: number;
   currency?: CommerceCurrency;
+  feeCents?: number;
+  netAmountCents?: number;
+  balanceTransactionId?: string;
+  signatureVerified?: boolean;
   payload: unknown;
 }
 
@@ -59,6 +66,25 @@ function cents(value: unknown): number | undefined {
 function currency(value: unknown): CommerceCurrency | undefined {
   const normalized = text(value).toUpperCase();
   return isCurrency(normalized) ? normalized : undefined;
+}
+
+function balanceTransactionFeeDetails(input: Record<string, unknown>): number | undefined {
+  const direct = cents(input.fee);
+  if (direct !== undefined) return direct;
+  const feeDetails = input.fee_details;
+  if (!Array.isArray(feeDetails)) return undefined;
+  const first = feeDetails[0];
+  if (!first || typeof first !== 'object') return undefined;
+  const amount = cents((first as Record<string, unknown>).amount);
+  return amount;
+}
+
+function balanceTransactionNetAmount(input: Record<string, unknown>, feeCents?: number): number | undefined {
+  const direct = cents(input.net);
+  if (direct !== undefined) return direct;
+  const amount = cents(input.amount);
+  if (amount === undefined || feeCents === undefined) return undefined;
+  return Math.max(0, amount - feeCents);
 }
 
 function objectValue(input: unknown): Record<string, unknown> {
@@ -122,6 +148,7 @@ export function normalizeCommercePaymentWebhookPayload(
   const data = objectAt(root, 'data');
   const nestedObject = objectAt(data, 'object');
   const object = Object.keys(nestedObject).length ? nestedObject : root;
+  const balanceTransaction = objectAt(object, 'balance_transaction');
   const eventType = text(root.type) || text(root.eventType);
   const paymentStatus = mapEventTypeToPaymentStatus(eventType);
   const providerEventId = text(root.id) || text(root.eventId);
@@ -142,6 +169,9 @@ export function normalizeCommercePaymentWebhookPayload(
     paymentStatus,
     amountCents: cents(object.amountCents ?? object.amount ?? root.amountCents),
     currency: currency(object.currency ?? root.currency),
+    feeCents: balanceTransactionFeeDetails(balanceTransaction) ?? cents(object.application_fee_amount ?? root.application_fee_amount),
+    netAmountCents: balanceTransactionNetAmount(balanceTransaction, balanceTransactionFeeDetails(balanceTransaction)) ?? cents(object.netAmountCents ?? root.netAmountCents),
+    balanceTransactionId: text(balanceTransaction.id) || text(object.balance_transaction_id) || text(root.balance_transaction_id) || undefined,
     payload: maskSensitivePayload(payload),
   };
 }
@@ -186,11 +216,14 @@ export function normalizeCommercePaymentWebhookEvent(input: unknown): CommercePa
     paymentStatus,
     amountCents: cents(source.amountCents),
     currency: currency(source.currency),
+    feeCents: cents(source.feeCents),
+    netAmountCents: cents(source.netAmountCents),
+    balanceTransactionId: source.balanceTransactionId ? String(source.balanceTransactionId) : undefined,
     orderId: source.orderId ? String(source.orderId) : undefined,
     status,
     error: source.error ? String(source.error) : undefined,
     replayCount: Number.isFinite(Number(source.replayCount)) ? Math.max(0, Math.floor(Number(source.replayCount))) : 0,
-    signatureVerified: source.signatureVerified !== false,
+    signatureVerified: source.signatureVerified === true,
     payload: source.payload ?? {},
     receivedAt: typeof source.receivedAt === 'string' ? source.receivedAt : now,
     processedAt: typeof source.processedAt === 'string' ? source.processedAt : undefined,

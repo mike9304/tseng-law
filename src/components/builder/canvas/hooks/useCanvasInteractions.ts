@@ -3,25 +3,33 @@
 import { useCallback, useEffect, useRef, useState, type Dispatch, type RefObject, type SetStateAction } from 'react';
 import type { ResizeHandle } from '@/components/builder/canvas/CanvasNode';
 import {
-  clampAspectRect,
   clampRect,
   createMoveInteractionCandidates,
+  findContainerHitCandidateForPoint,
   isKeyboardTextInputTarget,
   resolveCanvasNodeAbsoluteRectForViewport,
-  resolveLocalRectForParent,
+  resolveMaxOverlapSectionId,
+  writeClampedAspectRect,
+  writeClampedRect,
+  writeLocalClampedRectForParent,
+  writeClampedMoveRect,
+  writeResizeDraftRect,
+  MIN_CANVAS_NODE_HEIGHT,
+  MIN_CANVAS_NODE_WIDTH,
+  type ContainerHitRect,
   type ContextMenuState,
   type InteractionGeometrySnapshot,
   type InteractionState,
+  type MoveInteractionCandidates,
   type OverlapPickerState,
   type PointerMoveSnapshot,
   type SelectionBoxState,
 } from '@/components/builder/canvas/canvasInteraction';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
-import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
 import { isContainerLikeKind, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { parentUsesFlowLayout } from '@/lib/builder/canvas/tree';
-import { computeSnap } from '@/lib/builder/canvas/snap';
+import { createSnapEdgeScratch, writeSnapFromEdges } from '@/lib/builder/canvas/snap';
 import type { AlignmentGuide, SnapReferenceGuide } from '@/lib/builder/canvas/snap';
 import type { ZoomState } from '@/lib/builder/canvas/zoom';
 import {
@@ -41,13 +49,14 @@ type UseCanvasInteractionsArgs = {
   beginMutationSession: () => void;
   cancelMutationSession: () => void;
   captureInteractionGeometry: () => InteractionGeometrySnapshot;
+  childrenMap: Record<string, string[]>;
   commitMutationSession: () => void;
   currentViewport: Viewport;
   gridSnapSize: number;
-  nodes: BuilderCanvasNode[];
   nodesById: Map<string, BuilderCanvasNode>;
   onToast?: (message: string, tone: 'success' | 'error') => void;
   selectedNodeIds: string[];
+  selectedNodeIdSet: ReadonlySet<string>;
   setContextMenu: Dispatch<SetStateAction<ContextMenuState | null>>;
   setActiveViewport: Dispatch<SetStateAction<Viewport | null>>;
   setOverlapPicker: Dispatch<SetStateAction<OverlapPickerState | null>>;
@@ -55,6 +64,7 @@ type UseCanvasInteractionsArgs = {
   setSelectedNodeIds: (nodeIds: string[], primaryNodeId?: string | null) => void;
   setSelectionBox: Dispatch<SetStateAction<SelectionBoxState | null>>;
   setZoomState: Dispatch<SetStateAction<ZoomState>>;
+  rootVisibleNodes: BuilderCanvasNode[];
   stageHeight: number;
   stageWidth: number;
   updateNodeRectsForViewport: (
@@ -63,13 +73,590 @@ type UseCanvasInteractionsArgs = {
     mode?: 'commit' | 'transient',
     zIndexById?: Map<string, number>,
   ) => void;
+  updateSingleNodeRectForViewport: (
+    nodeId: string,
+    rect: BuilderCanvasNode['rect'],
+    viewport: Viewport,
+    mode?: 'commit' | 'transient',
+  ) => void;
   viewportRef: RefObject<HTMLDivElement | null>;
-  visibleNodes: BuilderCanvasNode[];
+  visibleContainerNodes: BuilderCanvasNode[];
   referenceGuides: SnapReferenceGuide[];
   zoomState: ZoomState;
 };
 
 const MOVE_ACTIVATION_THRESHOLD_PX = 4;
+const MOVE_ACTIVATION_THRESHOLD_SQUARED = MOVE_ACTIVATION_THRESHOLD_PX * MOVE_ACTIVATION_THRESHOLD_PX;
+const EMPTY_ALIGNMENT_GUIDES: AlignmentGuide[] = [];
+
+type MoveInteraction = Extract<NonNullable<InteractionState>, { type: 'move' }>;
+type ResizeInteraction = Extract<NonNullable<InteractionState>, { type: 'resize' }>;
+type MoveInteractionSession = InteractionGeometrySnapshot & MoveInteractionCandidates & {
+  pointerId: number;
+};
+type DirectMoveFrameInput = {
+  height: number;
+  nodeId: string;
+  pointerId: number;
+  width: number;
+  x: number;
+  y: number;
+};
+type ResizePreviewStyleSnapshot = {
+  height: string;
+  left: string;
+  top: string;
+  width: string;
+};
+type InteractionPointerPosition = { x: number; y: number };
+
+export function areAlignmentGuidesEqual(left: AlignmentGuide[], right: AlignmentGuide[]): boolean {
+  if (left === right) return true;
+  if (left.length !== right.length) return false;
+  for (let index = 0; index < left.length; index += 1) {
+    const guide = left[index];
+    const other = right[index];
+    if (
+      guide.axis === other.axis
+      && guide.position === other.position
+      && guide.from === other.from
+      && guide.to === other.to
+      && guide.tone === other.tone
+      && guide.label === other.label
+    ) {
+      continue;
+    }
+    return false;
+  }
+  return true;
+}
+
+function setGuidesIfChanged(
+  guidesRef: { current: AlignmentGuide[] },
+  setGuides: Dispatch<SetStateAction<AlignmentGuide[]>>,
+  nextGuides: AlignmentGuide[],
+) {
+  if (areAlignmentGuidesEqual(guidesRef.current, nextGuides)) return;
+  guidesRef.current = nextGuides;
+  setGuides(nextGuides);
+}
+
+export function isSameMoveSelection(
+  currentNodeIds: readonly string[],
+  currentPrimaryNodeId: string | null,
+  nextNodeIds: readonly string[],
+  nextPrimaryNodeId: string,
+): boolean {
+  if (currentPrimaryNodeId !== nextPrimaryNodeId) return false;
+  if (currentNodeIds.length !== nextNodeIds.length) return false;
+  for (let index = 0; index < currentNodeIds.length; index += 1) {
+    if (currentNodeIds[index] !== nextNodeIds[index]) return false;
+  }
+  return true;
+}
+
+export function areCanvasRectsEqual(
+  left: BuilderCanvasNode['rect'] | null | undefined,
+  right: BuilderCanvasNode['rect'] | null | undefined,
+): boolean {
+  if (left === right) return true;
+  if (!left || !right) return false;
+  return left.x === right.x
+    && left.y === right.y
+    && left.width === right.width
+    && left.height === right.height;
+}
+
+export function createResizePreviewStateSnapshot(
+  currentRect: BuilderCanvasNode['rect'] | null | undefined,
+  nextRect: BuilderCanvasNode['rect'] | null | undefined,
+): BuilderCanvasNode['rect'] | null | undefined {
+  if (areCanvasRectsEqual(currentRect, nextRect)) return undefined;
+  if (!nextRect) return null;
+  return {
+    x: nextRect.x,
+    y: nextRect.y,
+    width: nextRect.width,
+    height: nextRect.height,
+  };
+}
+
+export function areInteractionPointersEqual(
+  left: InteractionPointerPosition | null | undefined,
+  right: InteractionPointerPosition | null | undefined,
+): boolean {
+  if (left === right) return true;
+  if (!left || !right) return false;
+  return left.x === right.x && left.y === right.y;
+}
+
+export function isMoveActivationDistanceMet(deltaX: number, deltaY: number): boolean {
+  return deltaX * deltaX + deltaY * deltaY >= MOVE_ACTIVATION_THRESHOLD_SQUARED;
+}
+
+export function getDirectMovePreviewTranslate(
+  startRect: BuilderCanvasNode['rect'],
+  rect: BuilderCanvasNode['rect'],
+): string {
+  return `${rect.x - startRect.x}px ${rect.y - startRect.y}px`;
+}
+
+export function areDirectMoveFrameInputsEqual(
+  current: DirectMoveFrameInput | null | undefined,
+  pointerId: number,
+  nodeId: string,
+  rect: BuilderCanvasNode['rect'],
+): boolean {
+  return Boolean(
+    current
+      && current.pointerId === pointerId
+      && current.nodeId === nodeId
+      && current.x === Math.round(rect.x)
+      && current.y === Math.round(rect.y)
+      && current.width === Math.round(rect.width)
+      && current.height === Math.round(rect.height),
+  );
+}
+
+function writeDirectMoveFrameInput(
+  target: DirectMoveFrameInput,
+  pointerId: number,
+  nodeId: string,
+  rect: BuilderCanvasNode['rect'],
+): DirectMoveFrameInput {
+  target.pointerId = pointerId;
+  target.nodeId = nodeId;
+  target.x = Math.round(rect.x);
+  target.y = Math.round(rect.y);
+  target.width = Math.round(rect.width);
+  target.height = Math.round(rect.height);
+  return target;
+}
+
+export function getDirectResizePreviewStyles(
+  rect: BuilderCanvasNode['rect'],
+): ResizePreviewStyleSnapshot {
+  return {
+    height: `${rect.height}px`,
+    left: `${rect.x}px`,
+    top: `${rect.y}px`,
+    width: `${rect.width}px`,
+  };
+}
+
+export function getUnlockedMoveNodeIds(
+  targetNodeId: string,
+  selectedNodeIds: string[],
+  selectedNodeIdSet: ReadonlySet<string>,
+  nodesById: Map<string, BuilderCanvasNode>,
+): string[] {
+  if (selectedNodeIds.length === 0 || !selectedNodeIdSet.has(targetNodeId)) {
+    return [targetNodeId];
+  }
+
+  let unlockedNodeIds: string[] | null = null;
+  for (let index = 0; index < selectedNodeIds.length; index += 1) {
+    const selectedId = selectedNodeIds[index];
+    if (selectedId === undefined) continue;
+    if (nodesById.get(selectedId)?.locked) {
+      unlockedNodeIds ??= selectedNodeIds.slice(0, index);
+      continue;
+    }
+    if (unlockedNodeIds) {
+      unlockedNodeIds.push(selectedId);
+    }
+  }
+  return unlockedNodeIds ?? selectedNodeIds;
+}
+
+export function buildMoveStartRectRecords(
+  nodeIds: readonly string[],
+  nodesById: Map<string, BuilderCanvasNode>,
+  absoluteRectById: Map<string, BuilderCanvasNode['rect']>,
+  viewport: Viewport,
+): Pick<MoveInteraction, 'startRects' | 'startAbsoluteRects'> {
+  const startRects: MoveInteraction['startRects'] = {};
+  const startAbsoluteRects: MoveInteraction['startAbsoluteRects'] = {};
+
+  for (const nodeId of nodeIds) {
+    const node = nodesById.get(nodeId);
+    if (!node) continue;
+    const viewportRect = resolveViewportRect(node, viewport);
+    startRects[node.id] = viewportRect;
+    startAbsoluteRects[node.id] = absoluteRectById.get(node.id) ?? viewportRect;
+  }
+
+  return { startRects, startAbsoluteRects };
+}
+
+export function getMoveSnapCandidateNodes({
+  activeGroupId,
+  childrenMap,
+  movingNode,
+  nodesById,
+  rootVisibleNodes,
+}: {
+  activeGroupId: string | null;
+  childrenMap: Record<string, string[]>;
+  movingNode: BuilderCanvasNode;
+  nodesById: Map<string, BuilderCanvasNode>;
+  rootVisibleNodes: BuilderCanvasNode[];
+}): BuilderCanvasNode[] {
+  const movingParentId = movingNode.parentId ?? null;
+  const scopeParentId = activeGroupId ?? movingParentId;
+
+  if (!scopeParentId) {
+    return rootVisibleNodes;
+  }
+
+  const scopedNodes: BuilderCanvasNode[] = [];
+  for (const childId of childrenMap[scopeParentId] ?? []) {
+    const childNode = nodesById.get(childId);
+    if (childNode?.visible) scopedNodes.push(childNode);
+  }
+  return scopedNodes;
+}
+
+function createMoveInteractionSession({
+  activeGroupId,
+  childrenMap,
+  geometry,
+  moveInteraction,
+  rootVisibleNodes,
+  visibleContainerNodes,
+}: {
+  activeGroupId: string | null;
+  childrenMap: Record<string, string[]>;
+  geometry: InteractionGeometrySnapshot;
+  moveInteraction: MoveInteraction;
+  rootVisibleNodes: BuilderCanvasNode[];
+  visibleContainerNodes: BuilderCanvasNode[];
+}): MoveInteractionSession {
+  const movingNode = geometry.nodesById.get(moveInteraction.nodeId);
+  const moveCandidates = moveInteraction.nodeIds.length === 1 && movingNode
+    ? createMoveInteractionCandidates({
+        activeGroupId,
+        absoluteRectById: geometry.absoluteRectById,
+        containerNodes: visibleContainerNodes,
+        movingNode,
+        movingNodeIds: moveInteraction.nodeIdSet,
+        nodes: getMoveSnapCandidateNodes({
+          activeGroupId,
+          childrenMap,
+          movingNode,
+          nodesById: geometry.nodesById,
+          rootVisibleNodes,
+        }),
+        snapBounds: moveInteraction.snapBounds,
+        viewport: moveInteraction.viewport,
+      })
+    : {
+        snapRects: moveInteraction.snapRects,
+        snapEdges: moveInteraction.snapEdges,
+        containerHitRects: moveInteraction.containerHitRects,
+      };
+
+  return {
+    pointerId: moveInteraction.pointerId,
+    nodesById: geometry.nodesById,
+    absoluteRectById: geometry.absoluteRectById,
+    snapRects: moveCandidates.snapRects,
+    snapEdges: moveCandidates.snapEdges,
+    containerHitRects: moveCandidates.containerHitRects,
+  };
+}
+
+export function buildResizeSnapRects({
+  absoluteRectById,
+  nodesById,
+  resizingNodeId,
+  viewport,
+}: {
+  absoluteRectById: Map<string, BuilderCanvasNode['rect']>;
+  nodesById: Map<string, BuilderCanvasNode>;
+  resizingNodeId: string;
+  viewport: Viewport;
+}): BuilderCanvasNode['rect'][] {
+  const snapRects: BuilderCanvasNode['rect'][] = [];
+  for (const node of nodesById.values()) {
+    if (!node.visible || node.id === resizingNodeId) continue;
+    snapRects.push(absoluteRectById.get(node.id) ?? resolveViewportRect(node, viewport));
+  }
+  return snapRects;
+}
+
+export function resolvePendingMoveAbsoluteRect(
+  rect: BuilderCanvasNode['rect'],
+  parentAbsoluteRect: BuilderCanvasNode['rect'] | null,
+): BuilderCanvasNode['rect'] {
+  if (!parentAbsoluteRect) return rect;
+  return {
+    ...rect,
+    x: parentAbsoluteRect.x + rect.x,
+    y: parentAbsoluteRect.y + rect.y,
+  };
+}
+
+export function resolvePendingMoveHoverContainerId({
+  containerHitRects,
+  parentAbsoluteRect,
+  preferredContainerHit,
+  rect,
+  topLevelSectionHitRects,
+  currentTopLevelSectionId,
+  preferSectionOverlap = false,
+}: {
+  containerHitRects: readonly ContainerHitRect[];
+  parentAbsoluteRect: BuilderCanvasNode['rect'] | null;
+  preferredContainerHit: ContainerHitRect | null;
+  rect: BuilderCanvasNode['rect'];
+  // Wix-parity cross-section reparent: the hit rects of candidate top-level
+  // sections + the moved node's current top-level ancestor. When
+  // preferSectionOverlap is set (desktop free move of an absolute node) and the
+  // node's drop rect overlaps a DIFFERENT top-level section more than its
+  // current one, the reparent target is that section (bigger overlap wins)
+  // instead of the center-point container. Absent/false preserves the historical
+  // center-point resolution (nested-container drops unchanged).
+  topLevelSectionHitRects?: readonly ContainerHitRect[];
+  currentTopLevelSectionId?: string | null;
+  preferSectionOverlap?: boolean;
+}): string | null {
+  const absoluteRect = resolvePendingMoveAbsoluteRect(rect, parentAbsoluteRect);
+  if (preferSectionOverlap && topLevelSectionHitRects && topLevelSectionHitRects.length > 0) {
+    const overlapSectionId = resolveMaxOverlapSectionId(absoluteRect, topLevelSectionHitRects);
+    if (overlapSectionId && overlapSectionId !== (currentTopLevelSectionId ?? null)) {
+      return overlapSectionId;
+    }
+  }
+  const centerX = absoluteRect.x + absoluteRect.width / 2;
+  const centerY = absoluteRect.y + absoluteRect.height / 2;
+  return findContainerHitCandidateForPoint(
+    centerX,
+    centerY,
+    containerHitRects,
+    preferredContainerHit,
+  )?.id ?? null;
+}
+
+/**
+ * A node is eligible for Wix-parity "free move" (unclamped drag across / beyond
+ * its parent section boundary) only on the desktop viewport and only when it is
+ * an absolute-positioned widget — i.e. NOT a top-level flow section (those use
+ * the flow reorder path) and NOT a direct child of a flex/grid container (those
+ * are laid out by the parent). Responsive (tablet/mobile) editing keeps the
+ * existing in-bounds clamp + flow reflow pipeline untouched.
+ */
+export function canFreeMoveNodeOnDesktop(
+  node: BuilderCanvasNode,
+  nodesById: Map<string, BuilderCanvasNode>,
+  viewport: Viewport,
+): boolean {
+  return viewport === 'desktop'
+    && !isTopLevelFlowSection(node)
+    && !parentUsesFlowLayout(node, nodesById);
+}
+
+export function resolveSelectedDomMoveTargetId(
+  nodeId: string,
+  eventTarget: EventTarget | null,
+  additive: boolean,
+): string {
+  if (additive || !(eventTarget instanceof HTMLElement)) return nodeId;
+  const hitNode = eventTarget.closest<HTMLElement>('[data-node-id]');
+  const selectedAncestor = hitNode?.parentElement?.closest<HTMLElement>('[data-node-id][data-selected="true"]');
+  const selectedAncestorId = selectedAncestor?.dataset.nodeId ?? null;
+  return selectedAncestorId && selectedAncestorId !== nodeId ? selectedAncestorId : nodeId;
+}
+
+/**
+ * Walks up the parentId chain to the top-level ancestor (the node whose parentId
+ * is null). Used to know which top-level section a moved node currently lives in
+ * so a cross-section drop can be detected. Cycle-guarded.
+ */
+export function resolveTopLevelAncestorId(
+  node: BuilderCanvasNode,
+  nodesById: Map<string, BuilderCanvasNode>,
+): string | null {
+  let current: BuilderCanvasNode | undefined = node;
+  const seen = new Set<string>();
+  while (current?.parentId && !seen.has(current.id)) {
+    seen.add(current.id);
+    const parent = nodesById.get(current.parentId);
+    if (!parent) break;
+    current = parent;
+  }
+  return current?.id ?? null;
+}
+
+/**
+ * Builds the subset of container hit rects that are top-level flow sections,
+ * used as candidates for bigger-overlap cross-section reparent on drop.
+ */
+export function collectTopLevelSectionHitRects(
+  containerHitRects: readonly ContainerHitRect[],
+  nodesById: Map<string, BuilderCanvasNode>,
+): ContainerHitRect[] {
+  const sections: ContainerHitRect[] = [];
+  for (const hit of containerHitRects) {
+    const node = nodesById.get(hit.id);
+    if (node && isTopLevelFlowSection(node)) {
+      sections.push(hit);
+    }
+  }
+  return sections;
+}
+
+function cssAttributeValue(value: string): string {
+  return value.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+}
+
+export function isReusablePreviewElement(
+  element: HTMLElement | null | undefined,
+  nodeId: string,
+): element is HTMLElement {
+  return Boolean(element?.isConnected && element.getAttribute('data-node-id') === nodeId);
+}
+
+function findNodeElement(nodeId: string, previewElements?: Map<string, HTMLElement>): HTMLElement | null {
+  const cached = previewElements?.get(nodeId);
+  if (isReusablePreviewElement(cached, nodeId)) {
+    return cached;
+  }
+  const element = document.querySelector<HTMLElement>(`[data-node-id="${cssAttributeValue(nodeId)}"]`);
+  if (element) {
+    previewElements?.set(nodeId, element);
+  } else {
+    previewElements?.delete(nodeId);
+  }
+  return element;
+}
+
+export function canUseDirectMovePreview(
+  nodeIds: readonly string[],
+  currentNodesById: Map<string, BuilderCanvasNode>,
+): boolean {
+  for (const nodeId of nodeIds) {
+    if (!currentNodesById.has(nodeId)) return false;
+  }
+  return true;
+}
+
+function applyDirectMovePreview(
+  activeInteraction: MoveInteraction,
+  rects: Map<string, BuilderCanvasNode['rect']>,
+  previewNodeIds: Set<string>,
+  previewElements: Map<string, HTMLElement>,
+) {
+  for (const [nodeId, rect] of rects) {
+    const startRect = activeInteraction.startRects[nodeId];
+    const element = findNodeElement(nodeId, previewElements);
+    if (!startRect || !element) continue;
+    const nextTranslate = getDirectMovePreviewTranslate(startRect, rect);
+    if (element.style.getPropertyValue('translate') !== nextTranslate) {
+      element.style.setProperty('translate', nextTranslate);
+    }
+    if (element.dataset.builderDirectMovePreview !== 'true') {
+      element.dataset.builderDirectMovePreview = 'true';
+    }
+    previewNodeIds.add(nodeId);
+  }
+}
+
+function applyDirectMovePreviewForNode(
+  activeInteraction: MoveInteraction,
+  nodeId: string,
+  rect: BuilderCanvasNode['rect'],
+  previewNodeIds: Set<string>,
+  previewElements: Map<string, HTMLElement>,
+) {
+  const startRect = activeInteraction.startRects[nodeId];
+  const element = findNodeElement(nodeId, previewElements);
+  if (!startRect || !element) return;
+  const nextTranslate = getDirectMovePreviewTranslate(startRect, rect);
+  if (element.style.getPropertyValue('translate') !== nextTranslate) {
+    element.style.setProperty('translate', nextTranslate);
+  }
+  if (element.dataset.builderDirectMovePreview !== 'true') {
+    element.dataset.builderDirectMovePreview = 'true';
+  }
+  previewNodeIds.add(nodeId);
+}
+
+function applyDirectResizePreview(
+  activeInteraction: ResizeInteraction,
+  rect: BuilderCanvasNode['rect'],
+  originalStyles: Map<string, ResizePreviewStyleSnapshot>,
+  previewElements: Map<string, HTMLElement>,
+) {
+  const element = findNodeElement(activeInteraction.nodeId, previewElements);
+  if (!element) return;
+  if (!originalStyles.has(activeInteraction.nodeId)) {
+    originalStyles.set(activeInteraction.nodeId, {
+      height: element.style.height,
+      left: element.style.left,
+      top: element.style.top,
+      width: element.style.width,
+    });
+  }
+  const nextLeft = `${rect.x}px`;
+  const nextTop = `${rect.y}px`;
+  const nextWidth = `${rect.width}px`;
+  const nextHeight = `${rect.height}px`;
+  if (element.style.left !== nextLeft) element.style.left = nextLeft;
+  if (element.style.top !== nextTop) element.style.top = nextTop;
+  if (element.style.width !== nextWidth) element.style.width = nextWidth;
+  if (element.style.height !== nextHeight) element.style.height = nextHeight;
+  if (element.dataset.builderDirectResizePreview !== 'true') {
+    element.dataset.builderDirectResizePreview = 'true';
+  }
+}
+
+function clearDirectMovePreview(
+  previewNodeIds: Set<string>,
+  previewElements: Map<string, HTMLElement>,
+) {
+  for (const nodeId of previewNodeIds) {
+    const element = findNodeElement(nodeId, previewElements);
+    if (element) {
+      element.style.removeProperty('translate');
+      delete element.dataset.builderDirectMovePreview;
+    }
+    previewElements.delete(nodeId);
+  }
+  previewNodeIds.clear();
+}
+
+function clearDirectResizePreviewMarkers(
+  originalStyles: Map<string, ResizePreviewStyleSnapshot>,
+  previewElements: Map<string, HTMLElement>,
+) {
+  for (const nodeId of originalStyles.keys()) {
+    const element = findNodeElement(nodeId, previewElements);
+    if (element) {
+      delete element.dataset.builderDirectResizePreview;
+    }
+    previewElements.delete(nodeId);
+  }
+  originalStyles.clear();
+}
+
+function restoreDirectResizePreview(
+  originalStyles: Map<string, ResizePreviewStyleSnapshot>,
+  previewElements: Map<string, HTMLElement>,
+) {
+  for (const [nodeId, styles] of originalStyles) {
+    const element = findNodeElement(nodeId, previewElements);
+    if (element) {
+      element.style.left = styles.left;
+      element.style.top = styles.top;
+      element.style.width = styles.width;
+      element.style.height = styles.height;
+      delete element.dataset.builderDirectResizePreview;
+    }
+    previewElements.delete(nodeId);
+  }
+  originalStyles.clear();
+}
 
 export function useCanvasInteractions({
   activeGroupId,
@@ -78,10 +665,10 @@ export function useCanvasInteractions({
   beginMutationSession,
   cancelMutationSession,
   captureInteractionGeometry,
+  childrenMap,
   commitMutationSession,
   currentViewport,
   gridSnapSize,
-  nodes,
   nodesById,
   onToast,
   selectedNodeIds,
@@ -92,37 +679,120 @@ export function useCanvasInteractions({
   setSelectedNodeIds,
   setSelectionBox,
   setZoomState,
+  rootVisibleNodes,
   stageHeight,
   stageWidth,
   updateNodeRectsForViewport,
+  updateSingleNodeRectForViewport,
   viewportRef,
-  visibleNodes,
+  visibleContainerNodes,
   referenceGuides,
   zoomState,
+  selectedNodeIdSet,
 }: UseCanvasInteractionsArgs) {
   const [interaction, setInteraction] = useState<InteractionState>(null);
-  const [guides, setGuides] = useState<AlignmentGuide[]>([]);
-  const [interactionPointer, setInteractionPointer] = useState<{ x: number; y: number } | null>(null);
+  const [guides, setGuides] = useState<AlignmentGuide[]>(EMPTY_ALIGNMENT_GUIDES);
+  const guidesRef = useRef<AlignmentGuide[]>(EMPTY_ALIGNMENT_GUIDES);
+  const [interactionPointer, setInteractionPointer] = useState<InteractionPointerPosition | null>(null);
+  const interactionPointerRef = useRef<InteractionPointerPosition | null>(null);
   const [isSpacePressed, setIsSpacePressed] = useState(false);
   const [hoveredContainerId, setHoveredContainerId] = useState<string | null>(null);
+  const hoveredContainerIdRef = useRef<string | null>(null);
+  const hoveredContainerHitRef = useRef<ContainerHitRect | null>(null);
   const canceledInteractionPointerIdsRef = useRef<Set<number>>(new Set());
   const interactionGeometrySnapshotRef = useRef<InteractionGeometrySnapshot | null>(null);
+  const moveInteractionSessionRef = useRef<MoveInteractionSession | null>(null);
   const moveActivationRef = useRef<{ pointerId: number; active: boolean } | null>(null);
-  const pendingPointerMoveRef = useRef<PointerMoveSnapshot | null>(null);
+  const directMoveFastPreviewPointerRef = useRef<number | null>(null);
+  const overlapPickerClearedPointerRef = useRef<number | null>(null);
+  const pendingPointerMoveRef = useRef<PointerMoveSnapshot>({
+    pointerId: 0,
+    clientX: 0,
+    clientY: 0,
+    shiftKey: false,
+  });
+  const hasPendingPointerMoveRef = useRef(false);
   const pointerMoveFrameRef = useRef<number | null>(null);
+  const pendingDirectMoveRectRef = useRef<BuilderCanvasNode['rect'] | null>(null);
+  const pendingDirectMoveAbsoluteRectDraftRef = useRef<BuilderCanvasNode['rect']>({ x: 0, y: 0, width: 0, height: 0 });
+  const pendingDirectMoveFrameInputDraftRef = useRef<DirectMoveFrameInput>({
+    pointerId: 0,
+    nodeId: '',
+    x: 0,
+    y: 0,
+    width: 0,
+    height: 0,
+  });
+  const lastDirectMoveFrameInputRef = useRef<DirectMoveFrameInput | null>(null);
+  const pendingDirectMoveSnappedRectDraftRef = useRef<BuilderCanvasNode['rect']>({ x: 0, y: 0, width: 0, height: 0 });
+  const pendingDirectMoveLocalRectDraftRef = useRef<BuilderCanvasNode['rect']>({ x: 0, y: 0, width: 0, height: 0 });
+  const pendingDirectMoveSnapEdgeScratchRef = useRef<ReturnType<typeof createSnapEdgeScratch> | null>(null);
+  const pendingDirectMoveRectsRef = useRef<Map<string, BuilderCanvasNode['rect']> | null>(null);
+  const pendingDirectMoveRectsDraftRef = useRef<Map<string, BuilderCanvasNode['rect']>>(new Map());
+  const pendingDirectMoveRectDraftsByIdRef = useRef<Map<string, BuilderCanvasNode['rect']>>(new Map());
+  const pendingDirectResizeRectRef = useRef<BuilderCanvasNode['rect'] | null>(null);
+  const pendingDirectResizeInputRectDraftRef = useRef<BuilderCanvasNode['rect']>({ x: 0, y: 0, width: 0, height: 0 });
+  const pendingDirectResizePreviewRectDraftRef = useRef<BuilderCanvasNode['rect']>({ x: 0, y: 0, width: 0, height: 0 });
+  const directPreviewNodeIdsRef = useRef<Set<string>>(new Set());
+  const directPreviewElementsRef = useRef<Map<string, HTMLElement>>(new Map());
+  const directResizePreviewStylesRef = useRef<Map<string, ResizePreviewStyleSnapshot>>(new Map());
+  const [resizePreviewRect, setResizePreviewRect] = useState<BuilderCanvasNode['rect'] | null>(null);
+  const resizePreviewRectRef = useRef<BuilderCanvasNode['rect'] | null>(null);
+  pendingDirectMoveSnapEdgeScratchRef.current ??= createSnapEdgeScratch();
   const moveNodeIntoContainer = useBuilderCanvasStore((state) => state.moveNodeIntoContainer);
+  const setHoveredContainerIdIfChanged = useCallback((nextHoveredContainerId: string | null) => {
+    if (hoveredContainerIdRef.current === nextHoveredContainerId) return;
+    hoveredContainerIdRef.current = nextHoveredContainerId;
+    setHoveredContainerId(nextHoveredContainerId);
+  }, []);
+  const setHoveredContainerHitIfChanged = useCallback((nextHit: ContainerHitRect | null) => {
+    if (hoveredContainerHitRef.current === nextHit) return;
+    hoveredContainerHitRef.current = nextHit;
+    setHoveredContainerIdIfChanged(nextHit?.id ?? null);
+  }, [setHoveredContainerIdIfChanged]);
+  const setInteractionPointerIfChanged = useCallback((nextPointer: InteractionPointerPosition | null) => {
+    if (areInteractionPointersEqual(interactionPointerRef.current, nextPointer)) return;
+    interactionPointerRef.current = nextPointer;
+    setInteractionPointer(nextPointer);
+  }, []);
+  const setResizePreviewRectIfChanged = useCallback((nextRect: BuilderCanvasNode['rect'] | null) => {
+    const nextStateRect = createResizePreviewStateSnapshot(resizePreviewRectRef.current, nextRect);
+    if (nextStateRect === undefined) return;
+    resizePreviewRectRef.current = nextStateRect;
+    setResizePreviewRect(nextStateRect);
+  }, []);
 
   useEffect(() => {
     if (!activeViewport || activeViewport === currentViewport) return;
     cancelMutationSession();
     interactionGeometrySnapshotRef.current = null;
+    moveInteractionSessionRef.current = null;
     moveActivationRef.current = null;
+    directMoveFastPreviewPointerRef.current = null;
+    overlapPickerClearedPointerRef.current = null;
+    pendingDirectMoveRectRef.current = null;
+    lastDirectMoveFrameInputRef.current = null;
+    pendingDirectMoveRectsRef.current = null;
+    pendingDirectMoveRectsDraftRef.current.clear();
+    pendingDirectMoveRectDraftsByIdRef.current.clear();
+    pendingDirectResizeRectRef.current = null;
+    clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+    restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
     setActiveViewport(null);
     setInteraction(null);
-    setInteractionPointer(null);
-    setGuides([]);
-    setHoveredContainerId(null);
-  }, [activeViewport, cancelMutationSession, currentViewport, setActiveViewport]);
+    setInteractionPointerIfChanged(null);
+    setResizePreviewRectIfChanged(null);
+    setGuidesIfChanged(guidesRef, setGuides, EMPTY_ALIGNMENT_GUIDES);
+    setHoveredContainerHitIfChanged(null);
+  }, [
+    activeViewport,
+    cancelMutationSession,
+    currentViewport,
+    setActiveViewport,
+    setHoveredContainerHitIfChanged,
+    setInteractionPointerIfChanged,
+    setResizePreviewRectIfChanged,
+  ]);
 
   useEffect(() => {
     if (!interaction) return undefined;
@@ -135,19 +805,40 @@ export function useCanvasInteractions({
       canceledInteractionPointerIdsRef.current.add(activeInteraction.pointerId);
       cancelMutationSession();
       interactionGeometrySnapshotRef.current = null;
+      moveInteractionSessionRef.current = null;
       moveActivationRef.current = null;
+      directMoveFastPreviewPointerRef.current = null;
+      overlapPickerClearedPointerRef.current = null;
+      pendingDirectMoveRectRef.current = null;
+      lastDirectMoveFrameInputRef.current = null;
+      pendingDirectMoveRectsRef.current = null;
+      pendingDirectMoveRectsDraftRef.current.clear();
+      pendingDirectMoveRectDraftsByIdRef.current.clear();
+      pendingDirectResizeRectRef.current = null;
+      clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+      restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
       setInteraction(null);
       setActiveViewport(null);
-      setInteractionPointer(null);
-      setGuides([]);
-      setHoveredContainerId(null);
+      setInteractionPointerIfChanged(null);
+      setResizePreviewRectIfChanged(null);
+      setGuidesIfChanged(guidesRef, setGuides, EMPTY_ALIGNMENT_GUIDES);
+      setHoveredContainerHitIfChanged(null);
       setContextMenu(null);
       setOverlapPicker(null);
     }
 
     window.addEventListener('keydown', handleInteractionEscape, true);
     return () => window.removeEventListener('keydown', handleInteractionEscape, true);
-  }, [cancelMutationSession, interaction, setActiveViewport, setContextMenu, setOverlapPicker]);
+  }, [
+    cancelMutationSession,
+    interaction,
+    setActiveViewport,
+    setContextMenu,
+    setHoveredContainerHitIfChanged,
+    setInteractionPointerIfChanged,
+    setOverlapPicker,
+    setResizePreviewRectIfChanged,
+  ]);
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -172,6 +863,30 @@ export function useCanvasInteractions({
     if (!interaction) return undefined;
     const activeInteraction = interaction;
     canceledInteractionPointerIdsRef.current.delete(activeInteraction.pointerId);
+    const pendingDirectMoveRectsDraft = pendingDirectMoveRectsDraftRef.current;
+    const pendingDirectMoveRectDraftsById = pendingDirectMoveRectDraftsByIdRef.current;
+    const directPreviewNodeIds = directPreviewNodeIdsRef.current;
+    const directPreviewElements = directPreviewElementsRef.current;
+    const directResizePreviewStyles = directResizePreviewStylesRef.current;
+
+    function ensureMoveInteractionSession(moveInteraction: MoveInteraction): MoveInteractionSession | null {
+      const currentSession = moveInteractionSessionRef.current;
+      if (currentSession?.pointerId === moveInteraction.pointerId) return currentSession;
+
+      const geometry = captureInteractionGeometry();
+      interactionGeometrySnapshotRef.current = geometry;
+      beginMutationSession();
+      const nextSession = createMoveInteractionSession({
+        activeGroupId,
+        childrenMap,
+        geometry,
+        moveInteraction,
+        rootVisibleNodes,
+        visibleContainerNodes,
+      });
+      moveInteractionSessionRef.current = nextSession;
+      return nextSession;
+    }
 
     function processPointerMove(pointer: PointerMoveSnapshot) {
       if (pointer.pointerId !== activeInteraction.pointerId) return;
@@ -189,11 +904,6 @@ export function useCanvasInteractions({
 
       const deltaX = (pointer.clientX - activeInteraction.originX) / zoomState.zoom;
       const deltaY = (pointer.clientY - activeInteraction.originY) / zoomState.zoom;
-      const viewportRect = viewportRef.current?.getBoundingClientRect();
-      setInteractionPointer({
-        x: viewportRect ? pointer.clientX - viewportRect.left : pointer.clientX,
-        y: viewportRect ? pointer.clientY - viewportRect.top : pointer.clientY,
-      });
       if (activeInteraction.type === 'move') {
         const rawDeltaX = pointer.clientX - activeInteraction.originX;
         const rawDeltaY = pointer.clientY - activeInteraction.originY;
@@ -202,74 +912,162 @@ export function useCanvasInteractions({
           : null;
         if (
           !moveActivation?.active
-          && Math.hypot(rawDeltaX, rawDeltaY) < MOVE_ACTIVATION_THRESHOLD_PX
+          && !isMoveActivationDistanceMet(rawDeltaX, rawDeltaY)
         ) {
           return;
         }
         if (!moveActivation?.active) {
           moveActivationRef.current = { pointerId: activeInteraction.pointerId, active: true };
         }
-        setOverlapPicker(null);
-        const geometry = interactionGeometrySnapshotRef.current;
-        if (!geometry) return;
-        const currentNodesById = geometry.nodesById;
-        const currentAbsoluteRects = geometry.absoluteRectById;
+        if (
+          activeInteraction.nodeIds.length === 1
+          && activeInteraction.canDirectPreview
+          && !moveInteractionSessionRef.current
+          && directMoveFastPreviewPointerRef.current !== activeInteraction.pointerId
+        ) {
+          const nodeId = activeInteraction.nodeIds[0];
+          const baseAbsoluteRect = activeInteraction.startAbsoluteRects[nodeId];
+          const currentNode = nodesById.get(nodeId);
+          if (currentNode && baseAbsoluteRect) {
+            directMoveFastPreviewPointerRef.current = activeInteraction.pointerId;
+            beginMutationSession();
+            const tentative = pendingDirectMoveAbsoluteRectDraftRef.current;
+            tentative.x = baseAbsoluteRect.x + deltaX;
+            tentative.y = baseAbsoluteRect.y + deltaY;
+            tentative.width = baseAbsoluteRect.width;
+            tentative.height = baseAbsoluteRect.height;
+            const parentRect = currentNode.parentId
+              ? absoluteRectById.get(currentNode.parentId) ?? null
+              : null;
+            const allowOverflow = canFreeMoveNodeOnDesktop(currentNode, nodesById, activeInteraction.viewport);
+            const nextRect = pendingDirectMoveLocalRectDraftRef.current;
+            const didMovePreviewRectChange = writeLocalClampedRectForParent(
+              nextRect,
+              tentative,
+              parentRect,
+              parentRect?.width ?? stageWidth,
+              parentRect?.height ?? stageHeight,
+              allowOverflow,
+            );
+            pendingDirectMoveRectRef.current = nextRect;
+            pendingDirectMoveRectsRef.current = null;
+            setHoveredContainerHitIfChanged(null);
+            setGuidesIfChanged(guidesRef, setGuides, EMPTY_ALIGNMENT_GUIDES);
+            if (didMovePreviewRectChange || !directPreviewNodeIdsRef.current.has(nodeId)) {
+              applyDirectMovePreviewForNode(
+                activeInteraction,
+                nodeId,
+                nextRect,
+                directPreviewNodeIdsRef.current,
+                directPreviewElementsRef.current,
+              );
+            }
+          }
+        }
+        const moveSession = ensureMoveInteractionSession(activeInteraction);
+        if (!moveSession) return;
+        if (overlapPickerClearedPointerRef.current !== activeInteraction.pointerId) {
+          overlapPickerClearedPointerRef.current = activeInteraction.pointerId;
+          setOverlapPicker(null);
+        }
+        const currentNodesById = moveSession.nodesById;
+        const currentAbsoluteRects = moveSession.absoluteRectById;
         if (activeInteraction.nodeIds.length === 1) {
           const nodeId = activeInteraction.nodeIds[0];
           const baseAbsoluteRect = activeInteraction.startAbsoluteRects[nodeId];
           const currentNode = currentNodesById.get(nodeId);
           if (currentNode && baseAbsoluteRect) {
-            const tentative = {
-              x: baseAbsoluteRect.x + deltaX,
-              y: baseAbsoluteRect.y + deltaY,
-              width: baseAbsoluteRect.width,
-              height: baseAbsoluteRect.height,
-            };
+            const tentative = pendingDirectMoveAbsoluteRectDraftRef.current;
+            tentative.x = baseAbsoluteRect.x + deltaX;
+            tentative.y = baseAbsoluteRect.y + deltaY;
+            tentative.width = baseAbsoluteRect.width;
+            tentative.height = baseAbsoluteRect.height;
+            if (
+              activeInteraction.canDirectPreview
+              && directPreviewNodeIdsRef.current.has(nodeId)
+              && areDirectMoveFrameInputsEqual(
+                lastDirectMoveFrameInputRef.current,
+                activeInteraction.pointerId,
+                nodeId,
+                tentative,
+              )
+            ) {
+              return;
+            }
+            lastDirectMoveFrameInputRef.current = writeDirectMoveFrameInput(
+              pendingDirectMoveFrameInputDraftRef.current,
+              activeInteraction.pointerId,
+              nodeId,
+              tentative,
+            );
             const centerX = tentative.x + tentative.width / 2;
             const centerY = tentative.y + tentative.height / 2;
-            let hitContainerId: string | null = null;
-            for (const candidate of activeInteraction.containerHitRects) {
-              const rect = candidate.rect;
-              if (
-                centerX >= rect.x
-                && centerX <= rect.x + rect.width
-                && centerY >= rect.y
-                && centerY <= rect.y + rect.height
-              ) {
-                hitContainerId = candidate.id;
-                break;
-              }
-            }
-            setHoveredContainerId(hitContainerId);
+            const hitContainer = findContainerHitCandidateForPoint(
+              centerX,
+              centerY,
+              moveSession.containerHitRects,
+              hoveredContainerHitRef.current,
+            );
+            setHoveredContainerHitIfChanged(hitContainer);
 
             const parentRect = currentNode.parentId
               ? currentAbsoluteRects.get(currentNode.parentId) ?? null
               : null;
-            const { snappedRect, guides: nextGuides } = computeSnap(tentative, activeInteraction.snapRects, gridSnapSize, {
-              width: stageWidth,
-              height: stageHeight,
-            }, referenceGuides);
-            setGuides(nextGuides);
-            updateNodeRectsForViewport(
-              new Map([
-                [
-                  nodeId,
-                  clampRect(
-                    resolveLocalRectForParent(snappedRect, parentRect),
-                    parentRect?.width ?? stageWidth,
-                    parentRect?.height ?? stageHeight,
-                  ),
-                ],
-              ]),
-              activeInteraction.viewport,
-              'transient',
+            const snappedRect = pendingDirectMoveSnappedRectDraftRef.current;
+            const nextGuides = writeSnapFromEdges(
+              snappedRect,
+              tentative,
+              moveSession.snapEdges,
+              gridSnapSize,
+              activeInteraction.snapBounds,
+              referenceGuides,
+              pendingDirectMoveSnapEdgeScratchRef.current ?? undefined,
             );
+            setGuidesIfChanged(guidesRef, setGuides, nextGuides);
+            const allowOverflow = canFreeMoveNodeOnDesktop(currentNode, currentNodesById, activeInteraction.viewport);
+            const nextRect = pendingDirectMoveLocalRectDraftRef.current;
+            const isFirstDirectMovePreview = pendingDirectMoveRectRef.current !== nextRect;
+            const didMovePreviewRectChange = writeLocalClampedRectForParent(
+              nextRect,
+              snappedRect,
+              parentRect,
+              parentRect?.width ?? stageWidth,
+              parentRect?.height ?? stageHeight,
+              allowOverflow,
+            );
+            if (activeInteraction.canDirectPreview) {
+              pendingDirectMoveRectRef.current = nextRect;
+              pendingDirectMoveRectsRef.current = null;
+              if (didMovePreviewRectChange || isFirstDirectMovePreview || !directPreviewNodeIdsRef.current.has(nodeId)) {
+                applyDirectMovePreviewForNode(
+                  activeInteraction,
+                  nodeId,
+                  nextRect,
+                  directPreviewNodeIdsRef.current,
+                  directPreviewElementsRef.current,
+                );
+              }
+            } else {
+              pendingDirectMoveRectRef.current = null;
+              lastDirectMoveFrameInputRef.current = null;
+              pendingDirectMoveRectsRef.current = null;
+              clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+              updateSingleNodeRectForViewport(nodeId, nextRect, activeInteraction.viewport, 'transient');
+            }
             return;
           }
         }
-        setHoveredContainerId(null);
-        setGuides([]);
-        const nextRects = new Map<string, BuilderCanvasNode['rect']>();
+        setHoveredContainerHitIfChanged(null);
+        setGuidesIfChanged(guidesRef, setGuides, EMPTY_ALIGNMENT_GUIDES);
+        const nextRects = activeInteraction.canDirectPreview
+          ? pendingDirectMoveRectsDraftRef.current
+          : new Map<string, BuilderCanvasNode['rect']>();
+        const directMoveRectDraftsById = activeInteraction.canDirectPreview
+          ? pendingDirectMoveRectDraftsByIdRef.current
+          : null;
+        if (activeInteraction.canDirectPreview) {
+          nextRects.clear();
+        }
         for (const nodeId of activeInteraction.nodeIds) {
           const currentNode = currentNodesById.get(nodeId);
           if (!currentNode) continue;
@@ -277,24 +1075,66 @@ export function useCanvasInteractions({
           const parentRect = currentNode.parentId
             ? currentAbsoluteRects.get(currentNode.parentId) ?? null
             : null;
+          const boundsWidth = parentRect?.width ?? stageWidth;
+          const boundsHeight = parentRect?.height ?? stageHeight;
+          const allowOverflow = canFreeMoveNodeOnDesktop(currentNode, currentNodesById, activeInteraction.viewport);
+          if (directMoveRectDraftsById) {
+            let nextRect = directMoveRectDraftsById.get(nodeId);
+            if (!nextRect) {
+              nextRect = { x: 0, y: 0, width: 0, height: 0 };
+              directMoveRectDraftsById.set(nodeId, nextRect);
+            }
+            nextRects.set(
+              nodeId,
+              writeClampedMoveRect(nextRect, baseRect, deltaX, deltaY, boundsWidth, boundsHeight, allowOverflow),
+            );
+            continue;
+          }
           nextRects.set(
             nodeId,
-            clampRect(
-              {
-                ...baseRect,
-                x: baseRect.x + deltaX,
-                y: baseRect.y + deltaY,
-              },
-              parentRect?.width ?? stageWidth,
-              parentRect?.height ?? stageHeight,
-            ),
+            allowOverflow
+              ? {
+                  x: Math.round(baseRect.x + deltaX),
+                  y: Math.round(baseRect.y + deltaY),
+                  width: Math.max(MIN_CANVAS_NODE_WIDTH, Math.round(baseRect.width)),
+                  height: Math.max(MIN_CANVAS_NODE_HEIGHT, Math.round(baseRect.height)),
+                }
+              : clampRect(
+                  {
+                    ...baseRect,
+                    x: baseRect.x + deltaX,
+                    y: baseRect.y + deltaY,
+                  },
+                  boundsWidth,
+                  boundsHeight,
+                ),
           );
         }
-        updateNodeRectsForViewport(nextRects, activeInteraction.viewport, 'transient');
+        if (activeInteraction.canDirectPreview) {
+          pendingDirectMoveRectRef.current = null;
+          lastDirectMoveFrameInputRef.current = null;
+          pendingDirectMoveRectsRef.current = nextRects;
+          applyDirectMovePreview(
+            activeInteraction,
+            nextRects,
+            directPreviewNodeIdsRef.current,
+            directPreviewElementsRef.current,
+          );
+        } else {
+          pendingDirectMoveRectRef.current = null;
+          lastDirectMoveFrameInputRef.current = null;
+          pendingDirectMoveRectsRef.current = null;
+          clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+          updateNodeRectsForViewport(nextRects, activeInteraction.viewport, 'transient');
+        }
         return;
       }
 
-      setGuides([]);
+      setInteractionPointerIfChanged({
+        x: pointer.clientX - activeInteraction.viewportOriginX,
+        y: pointer.clientY - activeInteraction.viewportOriginY,
+      });
+      setGuidesIfChanged(guidesRef, setGuides, EMPTY_ALIGNMENT_GUIDES);
       const geometry = interactionGeometrySnapshotRef.current;
       if (!geometry) return;
       const currentNodesById = geometry.nodesById;
@@ -303,73 +1143,46 @@ export function useCanvasInteractions({
       if (!targetNode) return;
       const { handle } = activeInteraction;
       const startRect = activeInteraction.startRect;
-      const nextRect = { ...startRect };
       const isCorner = handle === 'nw' || handle === 'ne' || handle === 'sw' || handle === 'se';
       const preserveAspectRatio = isCorner && pointer.shiftKey;
-
-      if (preserveAspectRatio) {
-        const aspect = startRect.width / startRect.height;
-        let newWidth: number;
-        let newHeight: number;
-        if (Math.abs(deltaX) * startRect.height >= Math.abs(deltaY) * startRect.width) {
-          if (handle === 'se' || handle === 'ne') {
-            newWidth = startRect.width + deltaX;
-          } else {
-            newWidth = startRect.width - deltaX;
-          }
-          newHeight = newWidth / aspect;
-        } else {
-          if (handle === 'se' || handle === 'sw') {
-            newHeight = startRect.height + deltaY;
-          } else {
-            newHeight = startRect.height - deltaY;
-          }
-          newWidth = newHeight * aspect;
-        }
-        nextRect.width = newWidth;
-        nextRect.height = newHeight;
-        if (handle === 'nw') {
-          nextRect.x = startRect.x + (startRect.width - newWidth);
-          nextRect.y = startRect.y + (startRect.height - newHeight);
-        } else if (handle === 'ne') {
-          nextRect.y = startRect.y + (startRect.height - newHeight);
-        } else if (handle === 'sw') {
-          nextRect.x = startRect.x + (startRect.width - newWidth);
-        }
-      } else {
-        if (handle === 'e' || handle === 'ne' || handle === 'se') {
-          nextRect.width = startRect.width + deltaX;
-        }
-        if (handle === 'w' || handle === 'nw' || handle === 'sw') {
-          nextRect.x = startRect.x + deltaX;
-          nextRect.width = startRect.width - deltaX;
-        }
-        if (handle === 's' || handle === 'sw' || handle === 'se') {
-          nextRect.height = startRect.height + deltaY;
-        }
-        if (handle === 'n' || handle === 'nw' || handle === 'ne') {
-          nextRect.y = startRect.y + deltaY;
-          nextRect.height = startRect.height - deltaY;
-        }
-      }
+      const nextRect = writeResizeDraftRect(
+        pendingDirectResizeInputRectDraftRef.current,
+        startRect,
+        handle,
+        deltaX,
+        deltaY,
+        preserveAspectRatio,
+      );
 
       const parentRect = targetNode.parentId
         ? currentAbsoluteRects.get(targetNode.parentId) ?? null
         : null;
       const boundsWidth = parentRect?.width ?? stageWidth;
       const boundsHeight = parentRect?.height ?? stageHeight;
-      updateNodeRectsForViewport(
-        new Map([
-          [
-            activeInteraction.nodeId,
-            preserveAspectRatio
-              ? clampAspectRect(nextRect, startRect, handle, boundsWidth, boundsHeight)
-              : clampRect(nextRect, boundsWidth, boundsHeight),
-          ],
-        ]),
-        activeInteraction.viewport,
-        'transient',
-      );
+      const previewRect = pendingDirectResizePreviewRectDraftRef.current;
+      const isFirstDirectResizePreview = pendingDirectResizeRectRef.current !== previewRect;
+      const allowResizeOverflow = activeInteraction.viewport === 'desktop' && !isTopLevelFlowSection(targetNode);
+      const didResizePreviewRectChange = preserveAspectRatio
+        ? writeClampedAspectRect(
+            previewRect,
+            nextRect,
+            startRect,
+            handle,
+            boundsWidth,
+            boundsHeight,
+            allowResizeOverflow,
+          )
+        : writeClampedRect(previewRect, nextRect, boundsWidth, boundsHeight, allowResizeOverflow);
+      pendingDirectResizeRectRef.current = previewRect;
+      if (didResizePreviewRectChange || isFirstDirectResizePreview || !directResizePreviewStylesRef.current.has(activeInteraction.nodeId)) {
+        applyDirectResizePreview(
+          activeInteraction,
+          previewRect,
+          directResizePreviewStylesRef.current,
+          directPreviewElementsRef.current,
+        );
+      }
+      setResizePreviewRectIfChanged(previewRect);
     }
 
     function flushPendingPointerMove() {
@@ -377,10 +1190,10 @@ export function useCanvasInteractions({
         window.cancelAnimationFrame(pointerMoveFrameRef.current);
         pointerMoveFrameRef.current = null;
       }
-      const pendingPointerMove = pendingPointerMoveRef.current;
-      pendingPointerMoveRef.current = null;
-      if (pendingPointerMove) {
-        processPointerMove(pendingPointerMove);
+      const hasPendingPointerMove = hasPendingPointerMoveRef.current;
+      hasPendingPointerMoveRef.current = false;
+      if (hasPendingPointerMove) {
+        processPointerMove(pendingPointerMoveRef.current);
       }
     }
 
@@ -388,20 +1201,20 @@ export function useCanvasInteractions({
       if (event.pointerId !== activeInteraction.pointerId) return;
       if (canceledInteractionPointerIdsRef.current.has(activeInteraction.pointerId)) return;
 
-      pendingPointerMoveRef.current = {
-        pointerId: event.pointerId,
-        clientX: event.clientX,
-        clientY: event.clientY,
-        shiftKey: event.shiftKey,
-      };
+      const pendingPointerMove = pendingPointerMoveRef.current;
+      pendingPointerMove.pointerId = event.pointerId;
+      pendingPointerMove.clientX = event.clientX;
+      pendingPointerMove.clientY = event.clientY;
+      pendingPointerMove.shiftKey = event.shiftKey;
+      hasPendingPointerMoveRef.current = true;
 
       if (pointerMoveFrameRef.current !== null) return;
       pointerMoveFrameRef.current = window.requestAnimationFrame(() => {
         pointerMoveFrameRef.current = null;
-        const pendingPointerMove = pendingPointerMoveRef.current;
-        pendingPointerMoveRef.current = null;
-        if (pendingPointerMove) {
-          processPointerMove(pendingPointerMove);
+        const hasPendingPointerMove = hasPendingPointerMoveRef.current;
+        hasPendingPointerMoveRef.current = false;
+        if (hasPendingPointerMove) {
+          processPointerMove(pendingPointerMoveRef.current);
         }
       });
     }
@@ -411,7 +1224,19 @@ export function useCanvasInteractions({
       flushPendingPointerMove();
       if (canceledInteractionPointerIdsRef.current.delete(activeInteraction.pointerId)) {
         interactionGeometrySnapshotRef.current = null;
+        moveInteractionSessionRef.current = null;
         moveActivationRef.current = null;
+        directMoveFastPreviewPointerRef.current = null;
+        overlapPickerClearedPointerRef.current = null;
+        pendingDirectMoveRectRef.current = null;
+        lastDirectMoveFrameInputRef.current = null;
+        pendingDirectMoveRectsRef.current = null;
+        pendingDirectMoveRectsDraftRef.current.clear();
+        pendingDirectMoveRectDraftsByIdRef.current.clear();
+        pendingDirectResizeRectRef.current = null;
+        clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+        restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
+        setResizePreviewRectIfChanged(null);
         return;
       }
       const activeMoveActivation = moveActivationRef.current?.pointerId === activeInteraction.pointerId
@@ -420,20 +1245,111 @@ export function useCanvasInteractions({
       if (activeInteraction.type === 'move' && !activeMoveActivation?.active) {
         cancelMutationSession();
         interactionGeometrySnapshotRef.current = null;
+        moveInteractionSessionRef.current = null;
         moveActivationRef.current = null;
-        setHoveredContainerId(null);
+        directMoveFastPreviewPointerRef.current = null;
+        overlapPickerClearedPointerRef.current = null;
+        pendingDirectMoveRectRef.current = null;
+        lastDirectMoveFrameInputRef.current = null;
+        pendingDirectMoveRectsRef.current = null;
+        pendingDirectMoveRectsDraftRef.current.clear();
+        pendingDirectMoveRectDraftsByIdRef.current.clear();
+        pendingDirectResizeRectRef.current = null;
+        clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+        restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
+        setHoveredContainerHitIfChanged(null);
         setInteraction(null);
         setActiveViewport(null);
-        setInteractionPointer(null);
-        setGuides([]);
+        setInteractionPointerIfChanged(null);
+        setResizePreviewRectIfChanged(null);
+        setGuidesIfChanged(guidesRef, setGuides, EMPTY_ALIGNMENT_GUIDES);
         return;
       }
-      const currentHoveredContainerId = (() => {
+      const pendingMoveHoverContainer = (() => {
+        if (activeInteraction.type !== 'move' || activeInteraction.nodeIds.length !== 1) {
+          return { resolved: false, containerId: null as string | null };
+        }
+        const nodeId = activeInteraction.nodeIds[0];
+        const pendingRect = pendingDirectMoveRectRef.current
+          ?? pendingDirectMoveRectsRef.current?.get(nodeId)
+          ?? null;
+        if (!pendingRect) return { resolved: false, containerId: null as string | null };
+        const activeMoveSession = moveInteractionSessionRef.current?.pointerId === activeInteraction.pointerId
+          ? moveInteractionSessionRef.current
+          : null;
+        const geometry = activeMoveSession ?? interactionGeometrySnapshotRef.current;
+        const currentNode = geometry?.nodesById.get(nodeId) ?? null;
+        const parentAbsoluteRect = currentNode?.parentId
+          ? geometry?.absoluteRectById.get(currentNode.parentId) ?? null
+          : null;
+        const containerHitRects = activeMoveSession?.containerHitRects ?? activeInteraction.containerHitRects;
+        // Cross-section reparent (Wix parity): a desktop free-move of an absolute
+        // widget that straddles a section boundary should belong to the top-level
+        // section with the bigger overlap. Gate keeps flow/responsive drops on the
+        // historical center-point resolution.
+        const preferSectionOverlap = currentNode !== null && geometry !== null
+          && canFreeMoveNodeOnDesktop(currentNode, geometry.nodesById, activeInteraction.viewport);
+        return {
+          resolved: true,
+          containerId: resolvePendingMoveHoverContainerId({
+            containerHitRects,
+            parentAbsoluteRect,
+            preferredContainerHit: hoveredContainerHitRef.current,
+            rect: pendingRect,
+            preferSectionOverlap,
+            topLevelSectionHitRects: preferSectionOverlap && geometry
+              ? collectTopLevelSectionHitRects(containerHitRects, geometry.nodesById)
+              : undefined,
+            currentTopLevelSectionId: preferSectionOverlap && currentNode && geometry
+              ? resolveTopLevelAncestorId(currentNode, geometry.nodesById)
+              : undefined,
+          }),
+        };
+      })();
+      if (
+        activeInteraction.type === 'move'
+        && activeInteraction.nodeIds.length === 1
+        && pendingDirectMoveRectRef.current
+      ) {
+        const pendingDirectMoveRect = pendingDirectMoveRectRef.current;
+        pendingDirectMoveRectRef.current = null;
+        lastDirectMoveFrameInputRef.current = null;
+        clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+        updateSingleNodeRectForViewport(
+          activeInteraction.nodeIds[0],
+          pendingDirectMoveRect,
+          activeInteraction.viewport,
+          'transient',
+        );
+      }
+      if (activeInteraction.type === 'move' && pendingDirectMoveRectsRef.current) {
+        const pendingDirectMoveRects = pendingDirectMoveRectsRef.current;
+        pendingDirectMoveRectsRef.current = null;
+        clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+        updateNodeRectsForViewport(
+          pendingDirectMoveRects,
+          activeInteraction.viewport,
+          'transient',
+        );
+        pendingDirectMoveRects.clear();
+        pendingDirectMoveRectDraftsByIdRef.current.clear();
+      }
+      if (activeInteraction.type === 'resize' && pendingDirectResizeRectRef.current) {
+        const pendingDirectResizeRect = pendingDirectResizeRectRef.current;
+        pendingDirectResizeRectRef.current = null;
+        updateSingleNodeRectForViewport(
+          activeInteraction.nodeId,
+          pendingDirectResizeRect,
+          activeInteraction.viewport,
+          'transient',
+        );
+      }
+      const currentHoveredContainerId = pendingMoveHoverContainer.resolved ? pendingMoveHoverContainer.containerId : (() => {
         if (activeInteraction.type !== 'move' || activeInteraction.nodeIds.length !== 1) return null;
         const nodeId = activeInteraction.nodeIds[0];
-        const currentDocument = useBuilderCanvasStore.getState().document;
-        const allNodes = currentDocument?.nodes ?? [];
-        const latestNodesById = getCanvasNodesById(allNodes);
+        const storeState = useBuilderCanvasStore.getState();
+        const allNodes = storeState.document?.nodes ?? [];
+        const latestNodesById = storeState.nodesById;
         const movedNode = latestNodesById.get(nodeId);
         if (!movedNode) return null;
         const movedRect = resolveCanvasNodeAbsoluteRectForViewport(
@@ -500,12 +1416,12 @@ export function useCanvasInteractions({
           && !willReparent
         ) {
           const movedId = activeInteraction.nodeIds[0];
-          // Use store.getState for freshest nodes (transient rects are live in the document)
-          const currentDoc = useBuilderCanvasStore.getState().document;
-          const freshNodes = currentDoc?.nodes ?? [];
-          const movedNode = freshNodes.find((n) => n.id === movedId);
+          // Use store.getState for freshest nodes (transient rects are live in the document).
+          const storeState = useBuilderCanvasStore.getState();
+          const freshNodes = storeState.document?.nodes ?? [];
+          const latestNodesById = storeState.nodesById;
+          const movedNode = latestNodesById.get(movedId);
           if (movedNode) {
-            const latestNodesById = getCanvasNodesById(freshNodes);
             const isFlowLayoutItem =
               isTopLevelFlowSection(movedNode) ||
               parentUsesFlowLayout(movedNode, latestNodesById);
@@ -587,11 +1503,11 @@ export function useCanvasInteractions({
           && activeInteraction.viewport !== 'desktop'
         ) {
           const resizedId = activeInteraction.nodeId;
-          const currentDoc = useBuilderCanvasStore.getState().document;
-          const freshNodes = currentDoc?.nodes ?? [];
-          const resizedNode = freshNodes.find((n) => n.id === resizedId);
+          const storeState = useBuilderCanvasStore.getState();
+          const freshNodes = storeState.document?.nodes ?? [];
+          const latestNodesById = storeState.nodesById;
+          const resizedNode = latestNodesById.get(resizedId);
           if (resizedNode) {
-            const latestNodesById = getCanvasNodesById(freshNodes);
             const isFlowLayoutItem =
               isTopLevelFlowSection(resizedNode) ||
               parentUsesFlowLayout(resizedNode, latestNodesById);
@@ -630,13 +1546,19 @@ export function useCanvasInteractions({
           commitMutationSession();
         }
       }
-      setHoveredContainerId(null);
+      setHoveredContainerHitIfChanged(null);
       interactionGeometrySnapshotRef.current = null;
+      moveInteractionSessionRef.current = null;
       moveActivationRef.current = null;
+      directMoveFastPreviewPointerRef.current = null;
+      overlapPickerClearedPointerRef.current = null;
+      pendingDirectResizeRectRef.current = null;
+      clearDirectResizePreviewMarkers(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
       setInteraction(null);
       setActiveViewport(null);
-      setInteractionPointer(null);
-      setGuides([]);
+      setInteractionPointerIfChanged(null);
+      setResizePreviewRectIfChanged(null);
+      setGuidesIfChanged(guidesRef, setGuides, EMPTY_ALIGNMENT_GUIDES);
     }
 
     window.addEventListener('pointermove', handlePointerMove);
@@ -648,22 +1570,45 @@ export function useCanvasInteractions({
         window.cancelAnimationFrame(pointerMoveFrameRef.current);
         pointerMoveFrameRef.current = null;
       }
-      pendingPointerMoveRef.current = null;
+      hasPendingPointerMoveRef.current = false;
+      moveInteractionSessionRef.current = null;
+      directMoveFastPreviewPointerRef.current = null;
+      pendingDirectMoveRectRef.current = null;
+      lastDirectMoveFrameInputRef.current = null;
+      pendingDirectMoveRectsRef.current = null;
+      pendingDirectMoveRectsDraft.clear();
+      pendingDirectMoveRectDraftsById.clear();
+      pendingDirectResizeRectRef.current = null;
+      clearDirectMovePreview(directPreviewNodeIds, directPreviewElements);
+      restoreDirectResizePreview(directResizePreviewStyles, directPreviewElements);
+      setResizePreviewRectIfChanged(null);
     };
   }, [
     cancelMutationSession,
+    absoluteRectById,
+    activeGroupId,
+    beginMutationSession,
+    captureInteractionGeometry,
+    childrenMap,
     commitMutationSession,
     gridSnapSize,
     interaction,
     moveNodeIntoContainer,
+    nodesById,
     onToast,
     referenceGuides,
+    setHoveredContainerHitIfChanged,
+    setInteractionPointerIfChanged,
     setOverlapPicker,
     setActiveViewport,
+    setResizePreviewRectIfChanged,
     setZoomState,
     stageHeight,
     stageWidth,
+    rootVisibleNodes,
     updateNodeRectsForViewport,
+    updateSingleNodeRectForViewport,
+    visibleContainerNodes,
     viewportRef,
     zoomState.zoom,
   ]);
@@ -673,7 +1618,19 @@ export function useCanvasInteractions({
     setOverlapPicker(null);
     setSelectionBox(null);
     interactionGeometrySnapshotRef.current = null;
+    moveInteractionSessionRef.current = null;
     moveActivationRef.current = null;
+    overlapPickerClearedPointerRef.current = null;
+    pendingDirectMoveRectRef.current = null;
+    lastDirectMoveFrameInputRef.current = null;
+    pendingDirectMoveRectsRef.current = null;
+    pendingDirectMoveRectsDraftRef.current.clear();
+    pendingDirectMoveRectDraftsByIdRef.current.clear();
+    pendingDirectResizeRectRef.current = null;
+    clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+    restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
+    setHoveredContainerHitIfChanged(null);
+    setResizePreviewRectIfChanged(null);
     setInteraction({
       type: 'pan',
       pointerId: event.pointerId,
@@ -682,85 +1639,89 @@ export function useCanvasInteractions({
       startPanX: zoomState.panX,
       startPanY: zoomState.panY,
     });
-  }, [setContextMenu, setOverlapPicker, setSelectionBox, zoomState.panX, zoomState.panY]);
+  }, [setContextMenu, setHoveredContainerHitIfChanged, setOverlapPicker, setResizePreviewRectIfChanged, setSelectionBox, zoomState.panX, zoomState.panY]);
 
   const startMove = useCallback((nodeId: string, event: React.PointerEvent) => {
     event.preventDefault();
     event.stopPropagation();
+    const moveNodeId = resolveSelectedDomMoveTargetId(
+      nodeId,
+      event.target,
+      event.metaKey || event.ctrlKey || event.shiftKey,
+    );
     setContextMenu(null);
     setOverlapPicker((current) => (current?.mode === 'list' ? null : current));
-    const nodeIds = selectedNodeIds.includes(nodeId) && selectedNodeIds.length > 0
-      ? selectedNodeIds.filter((selectedId) => !nodes.find((candidate) => candidate.id === selectedId)?.locked)
-      : [nodeId];
+    overlapPickerClearedPointerRef.current = null;
+    moveInteractionSessionRef.current = null;
+    directMoveFastPreviewPointerRef.current = null;
+    pendingDirectMoveRectRef.current = null;
+    lastDirectMoveFrameInputRef.current = null;
+    pendingDirectMoveRectsRef.current = null;
+    pendingDirectMoveRectsDraftRef.current.clear();
+    pendingDirectMoveRectDraftsByIdRef.current.clear();
+    pendingDirectResizeRectRef.current = null;
+    clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+    restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
+    setHoveredContainerHitIfChanged(null);
+    setResizePreviewRectIfChanged(null);
+    const nodeIds = getUnlockedMoveNodeIds(moveNodeId, selectedNodeIds, selectedNodeIdSet, nodesById);
     if (nodeIds.length === 0) return;
+    const nodeIdSet = nodeIds === selectedNodeIds ? selectedNodeIdSet : new Set(nodeIds);
     const interactionViewport = currentViewport;
-    const startRects = Object.fromEntries(
-      nodes
-        .filter((node) => nodeIds.includes(node.id))
-        .map((node) => [node.id, resolveViewportRect(node, interactionViewport)]),
-    );
-    const startAbsoluteRects = Object.fromEntries(
-      nodes
-        .filter((node) => nodeIds.includes(node.id))
-        .map((node) => [node.id, absoluteRectById.get(node.id) ?? resolveViewportRect(node, interactionViewport)]),
-    );
-    const movingNode = nodesById.get(nodeId);
-    const moveCandidates = nodeIds.length === 1 && movingNode
-      ? createMoveInteractionCandidates({
-          activeGroupId,
-          absoluteRectById,
-          movingNode,
-          movingNodeIds: new Set(nodeIds),
-          nodes: visibleNodes,
-          snapBounds: {
-            x: 0,
-            y: 0,
-            width: stageWidth,
-            height: stageHeight,
-          },
-          viewport: interactionViewport,
-        })
-      : { snapRects: [], containerHitRects: [] };
-    setSelectedNodeIds(nodeIds, nodeId);
-    setActiveViewport(interactionViewport);
-    interactionGeometrySnapshotRef.current = captureInteractionGeometry();
-    beginMutationSession();
-    moveActivationRef.current = { pointerId: event.pointerId, active: false };
-    setInteractionPointer({
-      x: event.clientX - (viewportRef.current?.getBoundingClientRect().left ?? 0),
-      y: event.clientY - (viewportRef.current?.getBoundingClientRect().top ?? 0),
-    });
-    setInteraction({
-      type: 'move',
-      nodeId,
+    const { startRects, startAbsoluteRects } = buildMoveStartRectRecords(
       nodeIds,
+      nodesById,
+      absoluteRectById,
+      interactionViewport,
+    );
+    const snapBounds = {
+      x: 0,
+      y: 0,
+      width: stageWidth,
+      height: stageHeight,
+    };
+    const currentSelection = useBuilderCanvasStore.getState();
+    if (!isSameMoveSelection(currentSelection.selectedNodeIds, currentSelection.selectedNodeId, nodeIds, moveNodeId)) {
+      setSelectedNodeIds(nodeIds, moveNodeId);
+    }
+    setActiveViewport(interactionViewport);
+    moveActivationRef.current = { pointerId: event.pointerId, active: false };
+    setInteractionPointerIfChanged(null);
+    const nextInteraction: MoveInteraction = {
+      type: 'move',
+      nodeId: moveNodeId,
+      nodeIds,
+      nodeIdSet,
+      canDirectPreview: canUseDirectMovePreview(nodeIds, nodesById),
       viewport: interactionViewport,
       pointerId: event.pointerId,
       originX: event.clientX,
       originY: event.clientY,
-      startParentId: nodesById.get(nodeId)?.parentId ?? null,
+      startParentId: nodesById.get(moveNodeId)?.parentId ?? null,
       startRects,
       startAbsoluteRects,
-      snapRects: moveCandidates.snapRects,
-      containerHitRects: moveCandidates.containerHitRects,
-    });
+      snapBounds,
+      snapRects: [],
+      snapEdges: [],
+      containerHitRects: [],
+    };
+    interactionGeometrySnapshotRef.current = null;
+    setInteraction(nextInteraction);
   }, [
     absoluteRectById,
-    activeGroupId,
-    beginMutationSession,
-    captureInteractionGeometry,
     currentViewport,
-    nodes,
     nodesById,
+    selectedNodeIdSet,
     selectedNodeIds,
     setContextMenu,
     setOverlapPicker,
     setActiveViewport,
+    setHoveredContainerHitIfChanged,
+    setInteractionPointerIfChanged,
     setSelectedNodeIds,
+    setResizePreviewRectIfChanged,
     stageHeight,
     stageWidth,
-    viewportRef,
-    visibleNodes,
   ]);
 
   const startResize = useCallback((nodeId: string, handle: ResizeHandle, event: React.PointerEvent) => {
@@ -768,6 +1729,18 @@ export function useCanvasInteractions({
     event.stopPropagation();
     setOverlapPicker(null);
     moveActivationRef.current = null;
+    overlapPickerClearedPointerRef.current = null;
+    moveInteractionSessionRef.current = null;
+    pendingDirectMoveRectRef.current = null;
+    lastDirectMoveFrameInputRef.current = null;
+    pendingDirectMoveRectsRef.current = null;
+    pendingDirectMoveRectsDraftRef.current.clear();
+    pendingDirectMoveRectDraftsByIdRef.current.clear();
+    pendingDirectResizeRectRef.current = null;
+    clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+    restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
+    setHoveredContainerHitIfChanged(null);
+    setResizePreviewRectIfChanged(null);
     const targetNode = nodesById.get(nodeId);
     if (!targetNode) return;
     const interactionViewport = currentViewport;
@@ -775,9 +1748,12 @@ export function useCanvasInteractions({
     setActiveViewport(interactionViewport);
     interactionGeometrySnapshotRef.current = captureInteractionGeometry();
     beginMutationSession();
-    setInteractionPointer({
-      x: event.clientX - (viewportRef.current?.getBoundingClientRect().left ?? 0),
-      y: event.clientY - (viewportRef.current?.getBoundingClientRect().top ?? 0),
+    const viewportRect = viewportRef.current?.getBoundingClientRect();
+    const viewportOriginX = viewportRect?.left ?? 0;
+    const viewportOriginY = viewportRect?.top ?? 0;
+    setInteractionPointerIfChanged({
+      x: event.clientX - viewportOriginX,
+      y: event.clientY - viewportOriginY,
     });
     setInteraction({
       type: 'resize',
@@ -787,8 +1763,16 @@ export function useCanvasInteractions({
       pointerId: event.pointerId,
       originX: event.clientX,
       originY: event.clientY,
+      viewportOriginX,
+      viewportOriginY,
       startRect: resolveViewportRect(targetNode, interactionViewport),
       startAbsoluteRect: absoluteRectById.get(nodeId) ?? resolveViewportRect(targetNode, interactionViewport),
+      snapRects: buildResizeSnapRects({
+        absoluteRectById,
+        nodesById,
+        resizingNodeId: nodeId,
+        viewport: interactionViewport,
+      }),
     });
   }, [
     absoluteRectById,
@@ -798,6 +1782,9 @@ export function useCanvasInteractions({
     nodesById,
     setOverlapPicker,
     setActiveViewport,
+    setHoveredContainerHitIfChanged,
+    setInteractionPointerIfChanged,
+    setResizePreviewRectIfChanged,
     setSelectedNodeId,
     viewportRef,
   ]);
@@ -808,6 +1795,7 @@ export function useCanvasInteractions({
     interaction,
     interactionPointer,
     isSpacePressed,
+    resizePreviewRect,
     startMove,
     startPan,
     startResize,

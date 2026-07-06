@@ -7,6 +7,12 @@ import SectionLabel from '@/components/SectionLabel';
 import { homeFaqTextSurfaceIds } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
 
+const parentheticalParticlePattern = /\)([은는이가을를과와])/g;
+
+function formatFaqQuestion(question: string): string {
+  return question.replace(parentheticalParticlePattern, ')\u2060$1');
+}
+
 export default function FAQAccordion({
   locale,
   items,
@@ -22,13 +28,14 @@ export default function FAQAccordion({
 }) {
   const [openIndex, setOpenIndex] = useState<number>(-1);
   const sectionTitle = locale === 'ko' ? '자주 묻는 질문' : locale === 'zh-hant' ? '常見問題' : 'Frequently Asked Questions';
+  const sectionLabel = locale === 'ko' ? '자주 묻는 질문' : locale === 'zh-hant' ? '常見問題' : 'FAQ';
   const sectionClass = sectionClassName ?? 'section';
 
   return (
     <section className={sectionClass} id={id} data-tone={tone}>
       <div className="container">
         <SectionLabel data-builder-surface-key={homeFaqTextSurfaceIds[0]}>
-          <SurfaceText surfaceKey={homeFaqTextSurfaceIds[0]}>FAQ</SurfaceText>
+          <SurfaceText surfaceKey={homeFaqTextSurfaceIds[0]}>{sectionLabel}</SurfaceText>
         </SectionLabel>
         <h2 className="section-title" data-builder-surface-key={homeFaqTextSurfaceIds[1]}>
           <SurfaceText surfaceKey={homeFaqTextSurfaceIds[1]}>{sectionTitle}</SurfaceText>
@@ -49,7 +56,7 @@ export default function FAQAccordion({
                     aria-controls={panelId}
                     onClick={() => setOpenIndex(isOpen ? -1 : index)}
                   >
-                    <span>{item.question}</span>
+                    <span>{formatFaqQuestion(item.question)}</span>
                     <span className="faq-arrow" aria-hidden>
                       ▸
                     </span>

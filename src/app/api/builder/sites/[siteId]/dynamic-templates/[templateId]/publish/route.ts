@@ -1,16 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { z } from 'zod';
 import { decodeBuilderDynamicTemplateParam } from '@/lib/builder/dynamic-templates';
 import {
   BuilderDynamicTemplateDraftMissingError,
-  publishBuilderDynamicTemplateDraft,
-  readBuilderDynamicTemplateDraft,
-  readBuilderDynamicTemplatePublished,
 } from '@/lib/builder/dynamic-template-drafts';
+import { publishDynamicTemplateBlockDraft } from '@/lib/builder/dynamic-template-block-publish';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { normalizeLocale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
+
+const publishBodySchema = z.object({
+  updatedBy: z.string().trim().min(1).max(120).optional(),
+});
 
 export async function POST(
   request: NextRequest,
@@ -28,41 +31,56 @@ export async function POST(
     return NextResponse.json({ ok: false, error: 'Unknown builder dynamic template.' }, { status: 404 });
   }
 
-  let body: unknown;
-  try {
-    body = await request.json();
-  } catch {
-    body = null;
+  const rawBody: unknown = await request.json().catch(() => ({}));
+  const parsedBody = publishBodySchema.safeParse(rawBody);
+  if (!parsedBody.success) {
+    return NextResponse.json(
+      { ok: false, error: 'invalid_body', issues: parsedBody.error.issues.slice(0, 3) },
+      { status: 400 },
+    );
   }
-
-  const updatedBy =
-    body &&
-    typeof body === 'object' &&
-    !Array.isArray(body) &&
-    typeof (body as Record<string, unknown>).updatedBy === 'string'
-      ? ((body as Record<string, unknown>).updatedBy as string)
-      : auth.username;
 
   try {
     const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
-    const published = await publishBuilderDynamicTemplateDraft({
+    const outcome = await publishDynamicTemplateBlockDraft({
+      siteId: params.siteId,
       templateId,
       locale,
-      updatedBy,
+      updatedBy: parsedBody.data.updatedBy ?? auth.username,
     });
-    const [draft, nextPublished] = await Promise.all([
-      readBuilderDynamicTemplateDraft(templateId, locale),
-      readBuilderDynamicTemplatePublished(templateId, locale),
-    ]);
+
+    if (outcome.status === 'cms-publish-failed') {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: 'cms_publish_failed',
+          siteId: params.siteId,
+          locale,
+          action: 'publish',
+          status: outcome.status,
+          templateCollectionId: outcome.templateCollectionId,
+          referencedCollectionIds: outcome.referencedCollectionIds,
+          cmsPublish: outcome.cmsPublish,
+          draft: outcome.draft,
+          published: outcome.published,
+          snapshot: outcome.snapshot,
+        },
+        { status: 207 },
+      );
+    }
 
     return NextResponse.json({
       ok: true,
       siteId: params.siteId,
       locale,
       action: 'publish',
-      draft,
-      published: nextPublished,
-      snapshot: published.snapshot,
+      status: outcome.status,
+      templateCollectionId: outcome.templateCollectionId,
+      referencedCollectionIds: outcome.referencedCollectionIds,
+      cmsPublish: outcome.cmsPublish,
+      draft: outcome.draft,
+      published: outcome.published,
+      snapshot: outcome.snapshot,
     });
   } catch (error) {
     if (error instanceof BuilderDynamicTemplateDraftMissingError) {

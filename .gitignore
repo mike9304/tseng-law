@@ -38,3 +38,15 @@ data/reviews.json
 data/audit/
 runtime-data/
 .vercel
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Working artifacts (agent sessions) — not product
+scratchpad/
+runtime-data-prod-mirror/
+BRAIN-HANDOFF-OPUS.md
+SEED-ALIGNMENT-TARGETS.md
+DEPLOY-RUNBOOK.md
+.next-*/
+.codex/

@@ -20,6 +20,7 @@ Status legend:
 | --- | --- | --- | --- | --- |
 | F01 | Benchmark | Official source manifest | Source list exists | 🟢 |
 | F02 | Dynamic | Visitor filters | Public filter UI ships | 🟡 First slice shipped for /columns; SSR and multi-collection remain |
+| F05 | Bookings | Calendar depth | Calendar workflow ships | ✅ Legacy verified row |
 
 ## M158 Misc
 
@@ -33,7 +34,7 @@ describe('parseCheckpointStatuses', () => {
   it('parses every status emoji into a typed row', () => {
     const rows = parseCheckpointStatuses(FIXTURE);
 
-    expect(rows).toHaveLength(4);
+    expect(rows).toHaveLength(5);
 
     expect(rows[0]).toEqual({
       id: 'F01',
@@ -47,7 +48,11 @@ describe('parseCheckpointStatuses', () => {
     expect(rows[1].status).toBe('yellow');
     expect(rows[1].note).toContain('First slice shipped for /columns');
 
-    expect(rows[2]).toEqual({
+    expect(rows[2].id).toBe('F05');
+    expect(rows[2].status).toBe('green');
+    expect(rows[2].note).toBe('Legacy verified row');
+
+    expect(rows[3]).toEqual({
       id: 'F03',
       area: 'Apps',
       checkpoint: 'Hook lifecycle',
@@ -55,15 +60,15 @@ describe('parseCheckpointStatuses', () => {
       note: '',
     });
 
-    expect(rows[3].id).toBe('F04');
-    expect(rows[3].status).toBe('black');
-    expect(rows[3].note).toContain('Deferred');
+    expect(rows[4].id).toBe('F04');
+    expect(rows[4].status).toBe('black');
+    expect(rows[4].note).toContain('Deferred');
   });
 
   it('skips section headers and table header/separator rows', () => {
     const rows = parseCheckpointStatuses(FIXTURE);
     const ids = rows.map((row) => row.id);
-    expect(ids).toEqual(['F01', 'F02', 'F03', 'F04']);
+    expect(ids).toEqual(['F01', 'F02', 'F05', 'F03', 'F04']);
     expect(ids).not.toContain('ID');
   });
 
@@ -76,6 +81,32 @@ describe('parseCheckpointStatuses', () => {
     expect(rows).toHaveLength(1);
     expect(rows[0].status).toBeNull();
     expect(rows[0].note).toBe('needs triage');
+  });
+
+  it('parses W-layer tables where 상태 is not the last column', () => {
+    const wLayer = `| # | 동작 | 검증 방법 | 상태 | 마지막 검증 |
+|---|---|---|---|---|
+| W01 | Builder opens | See the real site in editor | 🟢 | user verified |
+| W02 | Selection handles | Click a hero node | 🟡 자동검증 통과 / 사용자 QA 대기 | browser proof exists |
+`;
+
+    const rows = parseCheckpointStatuses(wLayer);
+
+    expect(rows).toHaveLength(2);
+    expect(rows[0]).toEqual({
+      id: 'W01',
+      area: 'Builder opens',
+      checkpoint: 'See the real site in editor',
+      status: 'green',
+      note: 'user verified',
+    });
+    expect(rows[1]).toEqual({
+      id: 'W02',
+      area: 'Selection handles',
+      checkpoint: 'Click a hero node',
+      status: 'yellow',
+      note: '자동검증 통과 / 사용자 QA 대기 browser proof exists',
+    });
   });
 
   it('folds trailing prose lines into the previous row note', () => {
@@ -94,7 +125,7 @@ describe('tallyCheckpointRows', () => {
   it('counts each status independently', () => {
     const rows = parseCheckpointStatuses(FIXTURE);
     const tally = tallyCheckpointRows(rows);
-    expect(tally).toEqual({ green: 1, yellow: 1, red: 1, black: 1, unknown: 0 });
+    expect(tally).toEqual({ green: 2, yellow: 1, red: 1, black: 1, unknown: 0 });
   });
 
   it('records unknown-status rows', () => {

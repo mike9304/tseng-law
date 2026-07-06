@@ -49,6 +49,10 @@ export const integrationCreateSchema = z.object({
   enabled: z.boolean().default(true),
 });
 
+export const integrationPatchSchema = z.object({
+  enabled: z.boolean(),
+});
+
 function emptyFile(): CrmIntegrationsFile {
   return { version: 1, updatedAt: new Date(0).toISOString(), integrations: [] };
 }

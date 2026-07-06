@@ -1,5 +1,6 @@
 import { defineComponent } from '../define';
 import EventRsvpElement from './Element';
+import { EVENT_RSVP_LEGACY_DEFAULTS } from '../event-widgets-copy';
 
 export default defineComponent({
   kind: 'event-rsvp',
@@ -7,9 +8,9 @@ export default defineComponent({
   category: 'domain',
   icon: 'RSVP',
   defaultContent: {
-    title: '이벤트 신청',
+    title: EVENT_RSVP_LEGACY_DEFAULTS.title,
     showTicketInfo: true,
-    successMessage: '신청이 접수되었습니다. 확인 메일을 기다려 주세요.',
+    successMessage: EVENT_RSVP_LEGACY_DEFAULTS.successMessage,
   },
   defaultStyle: {
     backgroundColor: 'transparent',

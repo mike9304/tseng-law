@@ -16,7 +16,11 @@
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["node", "react", "react-dom"],
+    "types": [
+      "node",
+      "react",
+      "react-dom"
+    ],
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
@@ -38,7 +42,8 @@
     ".next/types/**/*.ts",
     ".next-g-editor/types/**/*.ts",
     ".next-dev/types/**/*.ts",
-    ".next-build/types/**/*.ts"
+    ".next-build/types/**/*.ts",
+    ".next-fix-build/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

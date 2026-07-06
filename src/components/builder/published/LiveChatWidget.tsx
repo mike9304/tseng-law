@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import type { LiveChatLauncherPlacement } from '@/lib/builder/live-chat/app-settings';
+import { getLiveChatWidgetCopy } from '@/lib/builder/live-chat/widget-copy';
+import { defaultLocale, type Locale } from '@/lib/locales';
 import { usePublishedOverlayFocus } from './overlayFocus';
 
 interface ChatMessage {
@@ -30,6 +32,7 @@ export interface LiveChatWidgetProps {
   launcherLabel?: string;
   launcherEnabled?: boolean;
   source?: string;
+  locale?: Locale;
 }
 
 function loadSession(): Persisted | null {
@@ -57,14 +60,16 @@ function isValidEmail(value: string): boolean {
 
 export default function LiveChatWidget({
   enabled = true,
-  title = '호정국제 상담',
-  introText = '이름과 이메일은 선택 사항입니다.',
-  offlineMessage = '지금은 답변이 지연될 수 있습니다. 메시지를 남겨주시면 확인 후 연락드리겠습니다.',
+  title,
+  introText,
+  offlineMessage,
   accentColor = '#0f172a',
   placement = 'bottom-right',
   emailRequired = false,
-  launcherLabel = '실시간 상담',
+  launcherLabel,
+  locale = defaultLocale,
 }: LiveChatWidgetProps) {
+  const copy = getLiveChatWidgetCopy(locale);
   const [open, setOpen] = useState(false);
   const [session, setSession] = useState<Persisted | null>(null);
   const [name, setName] = useState('');
@@ -80,11 +85,13 @@ export default function LiveChatWidget({
   const triggerRef = useRef<HTMLButtonElement | null>(null);
   const openerRef = useRef<HTMLElement | null>(null);
   const restoreLocalTriggerOnCloseRef = useRef(false);
-  const resolvedTitle = title.trim() || '호정국제 상담';
-  const resolvedIntroText = introText.trim() || '이름과 이메일은 선택 사항입니다.';
-  const resolvedOfflineMessage = offlineMessage.trim();
+  const resolvedTitle = title?.trim() || copy.defaultTitle;
+  const resolvedIntroText = introText?.trim() || copy.defaultIntroText;
+  const resolvedOfflineMessage = offlineMessage === undefined
+    ? copy.defaultOfflineMessage
+    : offlineMessage.trim();
   const resolvedAccentColor = accentColor.trim() || '#0f172a';
-  const resolvedLauncherLabel = launcherLabel.trim() || '실시간 상담';
+  const resolvedLauncherLabel = launcherLabel?.trim() || copy.defaultLauncherLabel;
 
   useEffect(() => {
     setSession(loadSession());
@@ -112,7 +119,7 @@ export default function LiveChatWidget({
     if (!open || !session) return;
     if (sourceRef.current) sourceRef.current.close();
     const source = new EventSource(
-      `/api/live-chat/stream?conversationId=${encodeURIComponent(session.conversationId)}&visitorToken=${encodeURIComponent(session.visitorToken)}`,
+      `/api/live-chat/stream?conversationId=${encodeURIComponent(session.conversationId)}&visitorToken=${encodeURIComponent(session.visitorToken)}&locale=${encodeURIComponent(locale)}`,
     );
     source.addEventListener('message', (event) => {
       try {
@@ -169,29 +176,30 @@ export default function LiveChatWidget({
     if (!draft.trim()) return;
     const trimmedEmail = email.trim();
     if (emailRequired && !trimmedEmail) {
-      setError('이메일을 입력해 주세요.');
+      setError(copy.emailRequiredError);
       return;
     }
     if (trimmedEmail && !isValidEmail(trimmedEmail)) {
-      setError('올바른 이메일 주소를 입력해 주세요.');
+      setError(copy.invalidEmailError);
       return;
     }
     setSending(true);
     setError('');
     try {
-      const res = await fetch('/api/live-chat/start', {
+      const res = await fetch(`/api/live-chat/start?locale=${encodeURIComponent(locale)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          locale,
           visitorName: name.trim() || undefined,
           visitorEmail: trimmedEmail || undefined,
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
           message: draft.trim(),
         }),
       });
-      const payload = (await res.json().catch(() => ({}))) as { conversationId?: string; visitorToken?: string; error?: string };
+      const payload = (await res.json().catch(() => ({}))) as { conversationId?: string; visitorToken?: string; error?: string; errorCode?: string };
       if (!res.ok || !payload.conversationId || !payload.visitorToken) {
-        setError(payload.error ?? '시작 실패');
+        setError(copy.apiErrorMessage(payload.errorCode ?? payload.error, 'start'));
         return;
       }
       const next: Persisted = { conversationId: payload.conversationId, visitorToken: payload.visitorToken };
@@ -209,10 +217,11 @@ export default function LiveChatWidget({
     setSending(true);
     setError('');
     try {
-      const res = await fetch('/api/live-chat/send', {
+      const res = await fetch(`/api/live-chat/send?locale=${encodeURIComponent(locale)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          locale,
           conversationId: session.conversationId,
           visitorToken: session.visitorToken,
           body: draft.trim(),
@@ -226,8 +235,8 @@ export default function LiveChatWidget({
         ]);
         setDraft('');
       } else {
-        const payload = (await res.json().catch(() => ({}))) as { error?: string };
-        setError(payload.error ?? '전송 실패');
+        const payload = (await res.json().catch(() => ({}))) as { error?: string; errorCode?: string };
+        setError(copy.apiErrorMessage(payload.errorCode ?? payload.error, 'send'));
       }
     } finally {
       setSending(false);
@@ -258,15 +267,15 @@ export default function LiveChatWidget({
         >
           <header style={{ padding: 12, background: 'var(--builder-live-chat-accent)', color: '#fff', borderTopLeftRadius: 12, borderTopRightRadius: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
             <strong style={{ fontSize: 14 }}>{resolvedTitle}</strong>
-            <button type="button" onClick={() => closeChat()} style={{ marginLeft: 'auto', background: 'transparent', border: 0, color: '#fff', cursor: 'pointer', fontSize: 18 }} aria-label="닫기">×</button>
+            <button type="button" onClick={() => closeChat()} style={{ marginLeft: 'auto', background: 'transparent', border: 0, color: '#fff', cursor: 'pointer', fontSize: 18 }} aria-label={copy.closeLabel}>×</button>
           </header>
           <div role="log" aria-live="polite" aria-relevant="additions text" style={{ flex: 1, overflowY: 'auto', padding: 12, background: '#f8fafc', display: 'flex', flexDirection: 'column', gap: 6 }}>
             {!session ? (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                 <p style={{ margin: 0, fontSize: 12, color: '#475569' }}>{resolvedIntroText}</p>
                 {resolvedOfflineMessage ? <p style={{ margin: 0, fontSize: 12, color: '#64748b' }}>{resolvedOfflineMessage}</p> : null}
-                <input aria-label="이름" type="text" placeholder="이름" value={name} onChange={(e) => setName(e.target.value)} style={{ padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }} />
-                <input aria-label="이메일" type="email" required={emailRequired} placeholder={emailRequired ? '이메일 (필수)' : '이메일'} value={email} onChange={(e) => setEmail(e.target.value)} style={{ padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }} />
+                <input aria-label={copy.nameLabel} type="text" placeholder={copy.namePlaceholder} value={name} onChange={(e) => setName(e.target.value)} style={{ padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }} />
+                <input aria-label={copy.emailLabel} type="email" required={emailRequired} placeholder={emailRequired ? copy.emailRequiredPlaceholder : copy.emailPlaceholder} value={email} onChange={(e) => setEmail(e.target.value)} style={{ padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }} />
               </div>
             ) : null}
             {messages.map((m) => (
@@ -287,13 +296,13 @@ export default function LiveChatWidget({
                   void (session ? sendMessage() : startConversation());
                 }
               }}
-              placeholder={session ? '메시지를 입력하세요...' : '문의 내용을 입력하세요'}
-              aria-label="채팅 메시지"
+              placeholder={session ? copy.replyPlaceholder : copy.newConversationPlaceholder}
+              aria-label={copy.messageInputLabel}
               disabled={sending}
               style={{ flex: 1, padding: '8px 10px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }}
             />
             <button type="button" disabled={sending || !draft.trim()} onClick={() => (session ? sendMessage() : startConversation())} style={{ padding: '8px 14px', border: 0, background: sending || !draft.trim() ? '#94a3b8' : 'var(--builder-live-chat-accent)', color: '#fff', borderRadius: 6, fontWeight: 700, fontSize: 12, cursor: sending ? 'not-allowed' : 'pointer' }}>
-              {session ? '전송' : '시작'}
+              {session ? copy.sendLabel : copy.startLabel}
             </button>
           </div>
           {error ? <div role="status" aria-live="polite" style={{ padding: '0 12px 8px', fontSize: 11, color: '#dc2626' }}>{error}</div> : null}
@@ -307,7 +316,7 @@ export default function LiveChatWidget({
             restoreLocalTriggerOnCloseRef.current = true;
             setOpen(true);
           }}
-          aria-label={`${resolvedLauncherLabel} 열기`}
+          aria-label={copy.openLauncherLabel(resolvedLauncherLabel)}
           style={{ width: 56, height: 56, borderRadius: '50%', border: 0, background: 'var(--builder-live-chat-accent)', color: '#fff', fontSize: 22, boxShadow: '0 10px 20px rgba(15,23,42,0.32)', cursor: 'pointer' }}
         >
           💬

@@ -18,6 +18,7 @@ import type {
   SiteRedirect,
 } from '@/lib/builder/site/types';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
+import { findRedirectMatch } from '@/lib/builder/site/redirect-match';
 
 const TTL_MS = 60_000;
 const SITE_BLOB_PATH = `builder-site/${DEFAULT_BUILDER_SITE_ID}/site.json`;
@@ -101,51 +102,9 @@ export function invalidateRedirectsCache(): void {
   cache = null;
 }
 
-function wildcardPrefix(pattern: string): string | null {
-  if (!pattern.endsWith('/*')) return null;
-  return pattern.slice(0, -1);
-}
-
-function applyWildcardTarget(to: string, suffix: string): string {
-  if (!to.endsWith('/*')) return to;
-  return `${to.slice(0, -1)}${suffix}`;
-}
-
-/**
- * Match a path against the active rule set. Exact rules win first.
- * Rules ending in `/*` act as prefix redirects and can preserve the
- * matched suffix when the destination also ends in `/*`.
- */
 export function findMatchingRedirect(
   path: string,
   rules: SiteRedirect[],
 ): SiteRedirect | null {
-  if (!path.startsWith('/')) return null;
-  for (const rule of rules) {
-    if (rule.from === path) return rule;
-  }
-
-  const wildcardMatches = rules
-    .map((rule) => {
-      const prefix = wildcardPrefix(rule.from);
-      if (!prefix || !path.startsWith(prefix)) return null;
-      const suffix = path.slice(prefix.length);
-      if (!suffix) return null;
-      return {
-        rule,
-        prefixLength: prefix.length,
-        to: applyWildcardTarget(rule.to, suffix),
-      };
-    })
-    .filter((match): match is { rule: SiteRedirect; prefixLength: number; to: string } => Boolean(match))
-    .sort((left, right) => right.prefixLength - left.prefixLength);
-
-  const wildcard = wildcardMatches[0];
-  if (wildcard) {
-    return {
-      ...wildcard.rule,
-      to: wildcard.to,
-    };
-  }
-  return null;
+  return findRedirectMatch(path, rules);
 }

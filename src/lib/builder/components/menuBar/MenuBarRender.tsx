@@ -9,15 +9,21 @@ import {
   type KeyboardEvent as ReactKeyboardEvent,
 } from 'react';
 import type { BuilderMenuBarCanvasNode } from '@/lib/builder/canvas/types';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import { getLayoutNavigationWidgetsCopy, localizedMenuItems } from '../layout-navigation-widgets-copy';
 
 export default function MenuBarRender({
   node,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderMenuBarCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getLayoutNavigationWidgetsCopy(normalizeLocale(locale)).menuBar;
+  const items = localizedMenuItems(c.items, copy.defaultItems);
   const [openIdx, setOpenIdx] = useState<number | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
@@ -201,7 +207,7 @@ export default function MenuBarRender({
       data-builder-nav-widget="menu-bar"
       data-builder-menu-orientation={c.orientation}
       data-builder-menu-variant={c.variant}
-      aria-label="primary navigation"
+      aria-label={copy.navLabel}
       onKeyDown={handleMenuKeyDown}
     >
       {showMobileToggle ? (
@@ -209,7 +215,7 @@ export default function MenuBarRender({
           ref={hamburgerRef}
           type="button"
           className="builder-nav-menu-hamburger"
-          aria-label={mobileOpen ? 'close menu' : 'open menu'}
+          aria-label={mobileOpen ? copy.closeMenu : copy.openMenu}
           aria-expanded={mobileOpen}
           aria-controls={mobileMenuId}
           onClick={() => {
@@ -227,13 +233,13 @@ export default function MenuBarRender({
         data-builder-menu-mobile-panel="true"
         data-builder-menu-mobile-open={mobileOpen ? 'true' : 'false'}
       >
-        {c.items.length === 0 && mode === 'edit'
+        {items.length === 0 && mode === 'edit'
           ? (
             <li className="builder-nav-menu-empty">
-              <em>메뉴 항목을 인스펙터에서 추가하세요</em>
+              <em>{copy.empty}</em>
             </li>
           )
-          : c.items.map(renderItem)}
+          : items.map(renderItem)}
       </ul>
     </nav>
   );

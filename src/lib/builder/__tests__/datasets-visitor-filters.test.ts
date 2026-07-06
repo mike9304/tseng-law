@@ -3,6 +3,7 @@ import {
   buildVisitorQueryString,
   composeVisitorDatasetPatch,
   parseVisitorPaginationParams,
+  parseVisitorDatasetQuery,
   sliceVisitorRecords,
 } from '@/lib/builder/datasets-visitor-filters';
 import { createDefaultBuilderPageDatasets } from '@/lib/builder/datasets';
@@ -157,6 +158,37 @@ describe('composeVisitorDatasetPatch', () => {
   });
 });
 
+describe('parseVisitorDatasetQuery', () => {
+  it('parses visitor search params into nested filter and sort query values', () => {
+    const result = parseVisitorDatasetQuery({
+      q: 'Secondary',
+      'filter[title]': '대만',
+      'filterOp[slug]': 'equals',
+      sort: 'date:desc,title:asc',
+      page: '2',
+      perPage: '6',
+    });
+
+    expect(result).toEqual({
+      filter: { title: '대만' },
+      filterOp: { slug: 'equals' },
+      q: 'Secondary',
+      sort: 'date:desc,title:asc',
+      page: '2',
+      perPage: '6',
+    });
+  });
+
+  it('skips unrelated keys', () => {
+    const result = parseVisitorDatasetQuery({
+      foo: 'bar',
+      'filter[title]': 'taiwan',
+    });
+
+    expect(result).toEqual({ filter: { title: 'taiwan' } });
+  });
+});
+
 describe('parseVisitorPaginationParams', () => {
   it('returns sane defaults for empty input', () => {
     const result = parseVisitorPaginationParams(undefined);
@@ -215,6 +247,7 @@ describe('sliceVisitorRecords', () => {
 describe('buildVisitorQueryString', () => {
   it('serializes filters and sort tokens', () => {
     const result = buildVisitorQueryString({
+      search: 'Secondary',
       filters: [
         { fieldId: 'category', operator: 'contains', value: 'formation' },
         { fieldId: 'slug', operator: 'equals', value: 'taiwan-basics' },
@@ -227,6 +260,7 @@ describe('buildVisitorQueryString', () => {
       perPage: 6,
     });
 
+    expect(result).toContain('q=Secondary');
     expect(result).toContain('filter%5Bcategory%5D=formation');
     expect(result).toContain('filter%5Bslug%5D=taiwan-basics');
     expect(result).toContain('filterOp%5Bslug%5D=equals');

@@ -7,10 +7,14 @@ import {
   sanitizeLinkValue,
   type LinkValue,
 } from '@/lib/builder/links';
+import type { Locale } from '@/lib/locales';
+import { getLinkPickerCopy } from './link-picker-copy';
+import styles from './LinkPicker.module.css';
 
 export interface LinkPickerContext {
   siteAnchors?: string[];
   siteLightboxes?: { id: string; slug: string; name: string }[];
+  sitePopups?: { id: string; slug: string; name: string }[];
   /**
    * 현재 사이트의 페이지 path 자동완성. `/`로 시작하는 href 입력 시 datalist로 노출.
    * 형식: { path: '/about', title: 'About', slug?: 'about' }.
@@ -18,82 +22,25 @@ export interface LinkPickerContext {
   sitePages?: { path: string; title?: string; slug?: string }[];
 }
 
+const EMPTY_SITE_ANCHORS: NonNullable<LinkPickerContext['siteAnchors']> = [];
+const EMPTY_SITE_LIGHTBOXES: NonNullable<LinkPickerContext['siteLightboxes']> = [];
+const EMPTY_SITE_PAGES: NonNullable<LinkPickerContext['sitePages']> = [];
+const EMPTY_SITE_POPUPS: NonNullable<LinkPickerContext['sitePopups']> = [];
+
 interface LinkPickerProps {
   value: LinkValue | null;
   onChange: (value: LinkValue | null) => void;
   context?: LinkPickerContext;
   disabled?: boolean;
+  locale?: Locale;
 }
-
-const fieldStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 4,
-  fontSize: '0.78rem',
-  color: '#334155',
-};
-
-const labelStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  fontWeight: 700,
-  color: '#475569',
-  textTransform: 'uppercase',
-  letterSpacing: '0.04em',
-};
-
-const inputStyle: React.CSSProperties = {
-  width: '100%',
-  boxSizing: 'border-box',
-  padding: '6px 10px',
-  border: '1px solid #dbe3ec',
-  borderRadius: 8,
-  fontSize: '0.82rem',
-  color: '#0f172a',
-  outline: 'none',
-  background: '#fff',
-};
-
-const helpStyle: React.CSSProperties = {
-  fontSize: '0.7rem',
-  color: '#64748b',
-  lineHeight: 1.35,
-};
-
-const errorStyle: React.CSSProperties = {
-  ...helpStyle,
-  color: '#dc2626',
-  fontWeight: 700,
-};
-
-const clearButtonStyle: React.CSSProperties = {
-  alignSelf: 'flex-start',
-  border: '1px solid #fecaca',
-  borderRadius: 8,
-  background: '#fff7f7',
-  color: '#b91c1c',
-  cursor: 'pointer',
-  fontSize: '0.74rem',
-  fontWeight: 700,
-  padding: '5px 9px',
-};
-
-const toggleButtonStyle: React.CSSProperties = {
-  alignSelf: 'flex-start',
-  border: '1px solid #dbe3ec',
-  borderRadius: 8,
-  background: '#f8fafc',
-  color: '#334155',
-  cursor: 'pointer',
-  fontSize: '0.74rem',
-  fontWeight: 700,
-  padding: '5px 9px',
-};
 
 export default function LinkPicker({
   value,
   onChange,
   context,
   disabled = false,
+  locale,
 }: LinkPickerProps) {
   const anchorListId = useId();
   const pageListId = useId();
@@ -109,15 +56,45 @@ export default function LinkPicker({
   const hasHref = trimmedHref.length > 0;
   const isSafe = hasHref ? isLinkSafe(trimmedHref) : true;
   const scheme = hasHref ? describeLinkScheme(trimmedHref) : 'invalid';
-  const lightboxes = context?.siteLightboxes ?? [];
-  const anchors = context?.siteAnchors ?? [];
-  const sitePages = context?.sitePages ?? [];
+  const lightboxes = context?.siteLightboxes ?? EMPTY_SITE_LIGHTBOXES;
+  const popups = context?.sitePopups ?? EMPTY_SITE_POPUPS;
+  const anchors = context?.siteAnchors ?? EMPTY_SITE_ANCHORS;
+  const sitePages = context?.sitePages ?? EMPTY_SITE_PAGES;
+  const anchorOptions = useMemo(() => {
+    const seen = new Set<string>();
+    const options: string[] = [];
+    for (const anchor of anchors) {
+      const nextAnchor = anchor.trim();
+      if (!nextAnchor || seen.has(nextAnchor)) continue;
+      seen.add(nextAnchor);
+      options.push(nextAnchor);
+    }
+    return options;
+  }, [anchors]);
+  const pageOptions = useMemo(() => {
+    const seen = new Set<string>();
+    const options: Array<{ path: string; label?: string }> = [];
+    for (const page of sitePages) {
+      const path = page.path.trim();
+      if (!path || seen.has(path)) continue;
+      seen.add(path);
+      options.push({ path, label: page.title || page.slug });
+    }
+    return options;
+  }, [sitePages]);
   const showLightboxSelect = trimmedHref.startsWith('lightbox:') && lightboxes.length > 0;
-  const showPageList = trimmedHref.startsWith('/') && sitePages.length > 0;
+  const showPopupSelect = trimmedHref.startsWith('popup:') && popups.length > 0;
+  const showPageList = trimmedHref.startsWith('/') && pageOptions.length > 0;
+  const copy = getLinkPickerCopy(locale);
 
   const lightboxSlug = useMemo(() => {
     return trimmedHref.startsWith('lightbox:')
       ? trimmedHref.slice('lightbox:'.length).trim()
+      : '';
+  }, [trimmedHref]);
+  const popupSlug = useMemo(() => {
+    return trimmedHref.startsWith('popup:')
+      ? trimmedHref.slice('popup:'.length).trim()
       : '';
   }, [trimmedHref]);
 
@@ -147,63 +124,61 @@ export default function LinkPicker({
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-      <label style={fieldStyle}>
-        <span style={labelStyle}>Link</span>
+    <div className={styles.root} data-builder-link-picker="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.link.label}</span>
         <input
+          className={styles.control}
           type="text"
           value={href}
           disabled={disabled}
-          placeholder="/ko/contact, #contact, lightbox:demo, https://..."
-          style={{
-            ...inputStyle,
-            borderColor: !isSafe ? '#ef4444' : '#dbe3ec',
-          }}
+          placeholder={copy.link.placeholder}
+          data-invalid={!isSafe ? 'true' : undefined}
           list={
             showPageList
               ? pageListId
-              : trimmedHref.startsWith('#') && anchors.length > 0
+              : trimmedHref.startsWith('#') && anchorOptions.length > 0
                 ? anchorListId
                 : undefined
           }
           data-builder-href-input="true"
           onChange={(event) => patch({ href: event.target.value })}
         />
-        {anchors.length > 0 ? (
+        {anchorOptions.length > 0 ? (
           <datalist id={anchorListId}>
-            {anchors.map((anchor) => (
+            {anchorOptions.map((anchor) => (
               <option key={anchor} value={`#${anchor}`} />
             ))}
           </datalist>
         ) : null}
-        {sitePages.length > 0 ? (
+        {pageOptions.length > 0 ? (
           <datalist id={pageListId}>
-            {sitePages.map((page) => (
-              <option key={page.path} value={page.path} label={page.title || page.slug} />
+            {pageOptions.map((page) => (
+              <option key={page.path} value={page.path} label={page.label} />
             ))}
           </datalist>
         ) : null}
         {!isSafe ? (
-          <span style={errorStyle}>
-            차단된 링크입니다. `/`, `#`, `lightbox:`, `https:`, `http:`, `mailto:`, `tel:` 만 허용됩니다.
-          </span>
+          <span className={styles.errorText}>{copy.link.blockedLink}</span>
         ) : hasHref ? (
-          <span style={helpStyle}>감지된 링크 유형: {scheme}</span>
+          <span className={styles.helpText}>
+            {copy.link.detectedScheme}: {scheme}
+          </span>
         ) : (
-          <span style={helpStyle}>비워두면 링크가 제거됩니다.</span>
+          <span className={styles.helpText}>{copy.link.emptyLink}</span>
         )}
       </label>
 
       {showLightboxSelect ? (
-        <label style={fieldStyle}>
-          <span style={labelStyle}>Lightbox</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.link.lightboxLabel}</span>
           <select
+            className={styles.control}
             value={lightboxSlug}
             disabled={disabled}
-            style={inputStyle}
             onChange={(event) => patch({ href: event.target.value ? `lightbox:${event.target.value}` : '' })}
           >
-            <option value="">Lightbox 선택</option>
+            <option value="">{copy.link.lightboxPlaceholder}</option>
             {lightboxes.map((lightbox) => (
               <option key={lightbox.id} value={lightbox.slug}>
                 {lightbox.name} ({lightbox.slug})
@@ -213,76 +188,95 @@ export default function LinkPicker({
         </label>
       ) : null}
 
-      <label style={fieldStyle}>
-        <span style={labelStyle}>Target</span>
+      {showPopupSelect ? (
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.link.popupLabel}</span>
+          <select
+            className={styles.control}
+            value={popupSlug}
+            disabled={disabled}
+            onChange={(event) => patch({ href: event.target.value ? `popup:${event.target.value}` : '' })}
+          >
+            <option value="">{copy.link.popupPlaceholder}</option>
+            {popups.map((popup) => (
+              <option key={popup.id} value={popup.slug}>
+                {popup.name} ({popup.slug})
+              </option>
+            ))}
+          </select>
+        </label>
+      ) : null}
+
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.link.targetLabel}</span>
         <select
+          className={styles.control}
           value={draft.target ?? '_self'}
           disabled={disabled}
-          style={inputStyle}
           onChange={(event) => handleTargetChange(event.target.value as '_self' | '_blank')}
         >
-          <option value="_self">같은 창</option>
-          <option value="_blank">새 창 (_blank)</option>
+          <option value="_self">{copy.link.targetSelf}</option>
+          <option value="_blank">{copy.link.targetBlank}</option>
         </select>
       </label>
 
       <button
         type="button"
-        style={toggleButtonStyle}
+        className={styles.secondaryButton}
         disabled={disabled}
         onClick={() => setAdvancedOpen((current) => !current)}
       >
-        {advancedOpen ? 'Hide advanced' : 'Advanced'}
+        {advancedOpen ? copy.link.advancedHide : copy.link.advancedShow}
       </button>
 
       {advancedOpen ? (
-        <>
-          <label style={fieldStyle}>
-            <span style={labelStyle}>Rel</span>
+        <div className={styles.advancedFields}>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.link.relLabel}</span>
             <input
+              className={styles.control}
               type="text"
               value={draft.rel ?? ''}
               disabled={disabled}
-              style={inputStyle}
               placeholder="noopener noreferrer"
               onChange={(event) => patch({ rel: event.target.value || undefined })}
             />
           </label>
-          <label style={fieldStyle}>
-            <span style={labelStyle}>Title</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.link.titleLabel}</span>
             <input
+              className={styles.control}
               type="text"
               value={draft.title ?? ''}
               disabled={disabled}
-              style={inputStyle}
               maxLength={200}
               onChange={(event) => patch({ title: event.target.value || undefined })}
             />
           </label>
-          <label style={fieldStyle}>
-            <span style={labelStyle}>Aria label</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.link.ariaLabelLabel}</span>
             <input
+              className={styles.control}
               type="text"
               value={draft.ariaLabel ?? ''}
               disabled={disabled}
-              style={inputStyle}
               maxLength={200}
               onChange={(event) => patch({ ariaLabel: event.target.value || undefined })}
             />
           </label>
-        </>
+        </div>
       ) : null}
 
       <button
         type="button"
-        style={clearButtonStyle}
+        className={styles.dangerButton}
         disabled={disabled}
         onClick={() => {
           setDraft({ href: '', target: '_self' });
           onChange(null);
         }}
       >
-        Clear link
+        {copy.link.clearLink}
       </button>
     </div>
   );

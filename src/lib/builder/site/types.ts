@@ -12,11 +12,9 @@ import type { TranslationEntry } from '@/lib/builder/translations/types';
 import type { BuilderCmsCollection } from '@/lib/builder/cms-types';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import type {
-  BuilderDatasetCollectionId,
-  BuilderDatasetTargetId,
-  BuilderPageDatasetFilter,
-  BuilderPageDatasetSort,
-} from '@/lib/builder/types';
+  BuilderDynamicItemPageMeta,
+  BuilderDynamicListPageMeta,
+} from '@/lib/builder/site/dynamic-page-types';
 import type { BuilderInstalledApp, BuilderUninstalledAppArchive } from '@/lib/builder/apps/types';
 import type { MemberRole } from '@/lib/builder/members/members-engine';
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
@@ -27,6 +25,11 @@ import {
 } from '@/lib/builder/site/theme';
 // BuilderCanvasDocument used by persistence.ts, not directly here
 
+export type {
+  BuilderDynamicItemPageMeta,
+  BuilderDynamicListPageMeta,
+} from '@/lib/builder/site/dynamic-page-types';
+
 export type BuilderPageDocumentFamily =
   | 'section-snapshot-v1'
   | 'scene-promotable-v1'
@@ -36,25 +39,6 @@ export interface BuilderPageLifecycleMeta {
   activeDocumentFamily: BuilderPageDocumentFamily;
   publishBackend: 'builder-snapshot';
   sceneStatus: 'derived-only' | 'seeded' | 'promoted';
-}
-
-export interface BuilderDynamicListPageMeta {
-  kind: 'collection-list-v1';
-  collectionId: BuilderDatasetCollectionId;
-  targetId: BuilderDatasetTargetId;
-  filters: BuilderPageDatasetFilter[];
-  sort: BuilderPageDatasetSort[];
-  limit?: number;
-  createdAt: string;
-}
-
-export interface BuilderDynamicItemPageMeta {
-  kind: 'collection-item-v1';
-  collectionId: BuilderDatasetCollectionId;
-  targetId: BuilderDatasetTargetId;
-  slugField: string;
-  defaultRecordSlug: string;
-  createdAt: string;
 }
 
 export interface BuilderMemberAccessMeta {
@@ -76,6 +60,7 @@ export interface BuilderNavItem {
 export interface BuilderPageMeta {
   pageId: string;
   slug: string;
+  slugByLocale?: Partial<Record<Locale, string>>;
   title: Record<Locale, string>;
   locale: Locale;
   documentKind?: 'section-snapshot-v1' | 'canvas-scene-vnext';
@@ -126,7 +111,13 @@ export interface BuilderSeoMetadata {
   localizedOverrides?: Partial<Record<Locale, {
     title?: string;
     description?: string;
+    ogTitle?: string;
+    ogDescription?: string;
     ogImage?: string;
+    twitterTitle?: string;
+    twitterDescription?: string;
+    twitterImage?: string;
+    focusKeyword?: string;
   }>>;
 }
 
@@ -628,6 +619,19 @@ export interface BrandKitAssets {
   ogImageAssetId?: string;
 }
 
+// Brand kit custom palette color — a user-named hex color that supplements
+// the 5 fixed brand tokens (primary/secondary/accent/background/text). These
+// are editor-defined and persisted under settings.brand; they are surfaced to
+// the published site as `--builder-custom-color-<i>` CSS variables.
+export interface BrandCustomColor {
+  name: string;
+  color: string;
+}
+
+export interface BrandSettings {
+  customColors?: BrandCustomColor[];
+}
+
 export interface DarkModeConfig {
   defaultMode?: 'light' | 'dark' | 'auto';
   allowVisitorToggle?: boolean;
@@ -636,10 +640,73 @@ export interface DarkModeConfig {
 export interface BuilderSiteSettings {
   ogImage?: string;
   assets?: BrandKitAssets;
+  brand?: BrandSettings;
+  localizedOverrides?: Partial<Record<Locale, BuilderLocalizedSiteSettingsOverride>>;
+}
+
+export interface BuilderLocalizedSiteSettingsOverride {
+  firmName?: string;
+  phone?: string;
+  email?: string;
+  address?: string;
+  businessHours?: string;
+  businessRegNumber?: string;
+  seoChecklist?: BuilderSeoChecklistSettings;
+  seoDefaults?: {
+    patterns?: Partial<BuilderSeoPatternSettings>;
+  };
 }
 
 export interface BuilderSiteDocument {
   darkMode?: DarkModeConfig;
   /** F105 — site-level custom code slots injected into <head>/<body>. */
   customCode?: { siteHead?: string; siteBodyStart?: string; siteBodyEnd?: string };
+}
+
+export interface BuilderServiceAreaSourceOverride {
+  sourceSlug: string;
+  slug?: string;
+  title?: Partial<Record<Locale, string>>;
+  subtitle?: Partial<Record<Locale, string>>;
+  intro?: Partial<Record<Locale, string>>;
+  keyPoints?: Partial<Record<Locale, string[]>>;
+  columnSlugs?: string[];
+  updatedAt?: string;
+  updatedBy?: string;
+}
+
+export interface BuilderAttorneyProfileSourceOverride {
+  sourceSlug: string;
+  slug?: string;
+  localized?: Partial<Record<Locale, {
+    name?: string;
+    role?: string;
+    title?: string;
+    description?: string;
+    summary?: string[];
+    languages?: string[];
+    practiceAreas?: string[];
+    internalLinks?: Array<{
+      label: string;
+      href: string;
+    }>;
+  }>>;
+  email?: string;
+  image?: string;
+  imageAltText?: string;
+  imageFocalPoint?: {
+    x: number;
+    y: number;
+  };
+  updatedAt?: string;
+  updatedBy?: string;
+}
+
+export interface BuilderSourceCollectionOverrides {
+  serviceAreas?: BuilderServiceAreaSourceOverride[];
+  attorneyProfiles?: BuilderAttorneyProfileSourceOverride[];
+}
+
+export interface BuilderSiteDocument {
+  sourceCollectionOverrides?: BuilderSourceCollectionOverrides;
 }

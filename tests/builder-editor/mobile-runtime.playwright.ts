@@ -222,9 +222,9 @@ test.describe('M10 mobile runtime controls', () => {
       await page.setViewportSize({ width: 1440, height: 1000 });
       await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(pageId)}`);
       const settingsModal = await openSiteSettings(page);
-      await settingsModal.getByRole('button', { name: /Mobile/ }).click();
-      await expect(settingsModal.getByText('Sticky mobile header')).toBeVisible();
-      await expect(settingsModal.getByText('Show fixed bottom action bar')).toBeVisible();
+      await settingsModal.getByRole('button', { name: /Mobile|모바일/ }).click();
+      await expect(settingsModal.getByText(/Sticky mobile header|고정 모바일 헤더/)).toBeVisible();
+      await expect(settingsModal.getByText(/Show fixed bottom action bar|고정 하단 작업 바 표시/)).toBeVisible();
       await settingsModal.getByRole('button', { name: 'Close' }).click();
 
       const shortcutModifier = process.platform === 'darwin' ? 'Meta' : 'Control';
@@ -242,7 +242,7 @@ test.describe('M10 mobile runtime controls', () => {
 
       const previewModal = await openPreviewModalMobile(page);
       await expect(previewModal.getByText(/390 × 780px/)).toBeVisible();
-      await expect(previewModal.locator('iframe[title="Preview Mobile"]')).toHaveAttribute('src', new RegExp(`/ko/${slug}(?:$|\\?)`));
+      await expect(previewModal.locator('iframe[title="Preview Mobile"], iframe[title="모바일 미리보기"]')).toHaveAttribute('src', new RegExp(`/ko/${slug}(?:$|\\?)`));
       await previewModal.getByRole('button', { name: '미리보기 닫기' }).click();
 
       const node = editableNode;

@@ -5,21 +5,38 @@ import {
   listActive,
   type PresenceEntry,
 } from '@/lib/builder/collab/presence-store';
+import {
+  getBuilderCollabApiErrorPayload,
+  type BuilderCollabApiErrorCode,
+} from '@/lib/builder/collab/collab-api-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  normalizeCollabId,
+  optionalCollabId,
+  readJsonObject,
+  resolveCollabSiteIdFromRequest,
+} from '../request-parsing';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const MAX_ID_LEN = 200;
-
-function badRequest(message: string): NextResponse {
-  return NextResponse.json({ ok: false, error: message }, { status: 400 });
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderCollabApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderCollabApiErrorPayload(locale, errorCode) },
+    { status },
+  );
 }
 
-function normalizeId(value: unknown): string | null {
-  if (typeof value !== 'string') return null;
-  const trimmed = value.trim();
-  if (!trimmed || trimmed.length > MAX_ID_LEN) return null;
-  return trimmed;
+function badRequest(locale: Locale): NextResponse {
+  return errorResponse(locale, 'invalid_request', 400);
+}
+
+function resolveLocale(request: NextRequest): Locale {
+  return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 }
 
 function projectEntry(entry: PresenceEntry): {
@@ -41,43 +58,55 @@ function projectEntry(entry: PresenceEntry): {
 export async function GET(request: NextRequest) {
   const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
+  const locale = resolveLocale(request);
 
-  const siteId = normalizeId(request.nextUrl.searchParams.get('siteId')) ?? 'default';
-  const pageId = normalizeId(request.nextUrl.searchParams.get('pageId'));
-  if (!pageId) return badRequest('Missing pageId');
+  const siteId = resolveCollabSiteIdFromRequest(request);
+  const pageId = normalizeCollabId(request.nextUrl.searchParams.get('pageId'));
+  if (!pageId) return badRequest(locale);
 
-  const active = listActive(siteId, pageId).map(projectEntry);
-  return NextResponse.json({ ok: true, active });
+  try {
+    const active = listActive(siteId, pageId).map(projectEntry);
+    return NextResponse.json({ ok: true, active });
+  } catch (error) {
+    console.error('[builder/collab/presence] GET failed:', error);
+    return errorResponse(locale, 'presence_load_failed', 500);
+  }
 }
 
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
+  const locale = resolveLocale(request);
 
-  let body: { siteId?: unknown; pageId?: unknown; sessionId?: unknown; nodeId?: unknown };
+  let body: Record<string, unknown>;
   try {
-    body = (await request.json()) as typeof body;
+    const parsed = await readJsonObject(request);
+    if (!parsed) return badRequest(locale);
+    body = parsed;
   } catch {
-    return badRequest('Invalid JSON body');
+    return badRequest(locale);
   }
 
-  const siteId = normalizeId(body.siteId) ?? 'default';
-  const pageId = normalizeId(body.pageId);
-  const sessionId = normalizeId(body.sessionId);
-  if (!pageId) return badRequest('Missing pageId');
-  if (!sessionId) return badRequest('Missing sessionId');
-  const nodeId = body.nodeId === undefined || body.nodeId === null
-    ? undefined
-    : normalizeId(body.nodeId) ?? undefined;
+  const siteId = resolveCollabSiteIdFromRequest(request, body.siteId);
+  const pageId = normalizeCollabId(body.pageId);
+  const sessionId = normalizeCollabId(body.sessionId);
+  if (!pageId) return badRequest(locale);
+  if (!sessionId) return badRequest(locale);
+  const nodeId = optionalCollabId(body.nodeId);
 
-  const entry = heartbeat(siteId, pageId, sessionId, {
-    username: auth.username,
-    nodeId,
-  });
+  try {
+    const entry = heartbeat(siteId, pageId, sessionId, {
+      username: auth.username,
+      nodeId,
+    });
 
-  return NextResponse.json({
-    ok: true,
-    entry: projectEntry(entry),
-    active: listActive(siteId, pageId).map(projectEntry),
-  });
+    return NextResponse.json({
+      ok: true,
+      entry: projectEntry(entry),
+      active: listActive(siteId, pageId).map(projectEntry),
+    });
+  } catch (error) {
+    console.error('[builder/collab/presence] POST failed:', error);
+    return errorResponse(locale, 'presence_update_failed', 500);
+  }
 }

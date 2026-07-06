@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
+  checkDraftSaveRateLimit,
   checkMutationRateLimit,
   checkPublishRateLimit,
   resetRateLimitStore,
@@ -41,6 +42,15 @@ describe('builder rate limit', () => {
       expect(result.allowed).toBe(true);
     }
     const blocked = await checkPublishRateLimit('127.0.0.2');
+    expect(blocked.allowed).toBe(false);
+  });
+
+  it('keeps draft autosaves in a higher-volume bucket', async () => {
+    for (let index = 0; index < 180; index += 1) {
+      const result = await checkDraftSaveRateLimit('127.0.0.3');
+      expect(result.allowed).toBe(true);
+    }
+    const blocked = await checkDraftSaveRateLimit('127.0.0.3');
     expect(blocked.allowed).toBe(false);
   });
 

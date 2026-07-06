@@ -11,6 +11,12 @@ export default function ColumnTranslationStatusAlert({
   routeLocale: string;
 }) {
   const [summary, setSummary] = useState<{ missing: number; outdated: number } | null>(null);
+  const label = routeLocale === 'ko' ? '번역 필요' : routeLocale === 'zh-hant' ? '需要翻譯' : 'Needs translation';
+  const title = routeLocale === 'ko'
+    ? 'Translation Manager에서 이 칼럼의 번역 상태를 확인합니다.'
+    : routeLocale === 'zh-hant'
+      ? '在翻譯管理中查看此欄位的翻譯狀態。'
+      : 'Open Translation Manager to review this column translation status.';
 
   useEffect(() => {
     let cancelled = false;
@@ -59,11 +65,11 @@ export default function ColumnTranslationStatusAlert({
         fontWeight: 700,
         textDecoration: 'none',
       }}
-      title="Translation Manager에서 이 칼럼의 번역 상태를 확인합니다."
+      title={title}
     >
-      번역 필요
+      {label}
       <span>
-        {summary.outdated} outdated / {summary.missing} missing
+        {summary.outdated} {routeLocale === 'zh-hant' ? '過期' : routeLocale === 'ko' ? '오래됨' : 'outdated'} / {summary.missing} {routeLocale === 'zh-hant' ? '缺少' : routeLocale === 'ko' ? '누락' : 'missing'}
       </span>
     </a>
   );

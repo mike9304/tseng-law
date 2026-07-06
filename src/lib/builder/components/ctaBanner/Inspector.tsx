@@ -1,40 +1,43 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderCtaBannerCanvasNode } from '@/lib/builder/canvas/types';
+import { getConversionWidgetsCopy } from '../conversion-widgets-copy';
+import styles from './CtaBannerInspector.module.css';
 
-const fieldStyle: React.CSSProperties = { display: 'flex', flexDirection: 'column', gap: 4, fontSize: '0.78rem', color: '#334155' };
-const labelStyle: React.CSSProperties = { fontSize: '0.72rem', fontWeight: 600, color: '#475569', textTransform: 'uppercase', letterSpacing: '0.04em' };
-const inputStyle: React.CSSProperties = { padding: '6px 10px', border: '1px solid #e2e8f0', borderRadius: 8, fontSize: '0.82rem', color: '#0f172a', outline: 'none' };
-
-export default function CtaBannerInspector({ node, onUpdate, disabled = false }: BuilderComponentInspectorProps) {
+export default function CtaBannerInspector({ node, locale = 'ko', onUpdate, disabled = false }: BuilderComponentInspectorProps) {
   const ctaNode = node as BuilderCtaBannerCanvasNode;
+  const copy = getConversionWidgetsCopy(locale).ctaBanner.inspector;
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-      <label style={fieldStyle}>
-        <span style={labelStyle}>제목</span>
-        <input type="text" value={ctaNode.content.title} disabled={disabled} style={inputStyle}
+    <div className={styles.root} data-builder-cta-banner-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.title}</span>
+        <input type="text" value={ctaNode.content.title} disabled={disabled} className={styles.control}
           onChange={(e) => onUpdate({ title: e.target.value })} />
       </label>
-      <label style={fieldStyle}>
-        <span style={labelStyle}>설명</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.description}</span>
         <textarea rows={3} value={ctaNode.content.description} disabled={disabled}
-          style={{ ...inputStyle, fontFamily: 'inherit', resize: 'vertical' }}
+          className={`${styles.control} ${styles.textarea}`}
           onChange={(e) => onUpdate({ description: e.target.value })} />
       </label>
-      <label style={fieldStyle}>
-        <span style={labelStyle}>버튼 텍스트</span>
-        <input type="text" value={ctaNode.content.buttonLabel} disabled={disabled} style={inputStyle}
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.buttonText}</span>
+        <input type="text" value={ctaNode.content.buttonLabel} disabled={disabled} className={styles.control}
           onChange={(e) => onUpdate({ buttonLabel: e.target.value })} />
       </label>
-      <label style={fieldStyle}>
-        <span style={labelStyle}>버튼 링크</span>
-        <input type="text" value={ctaNode.content.buttonHref} disabled={disabled} style={inputStyle}
-          placeholder="/ko/contact" onChange={(e) => onUpdate({ buttonHref: e.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.buttonLink}</span>
+        <input type="text" value={ctaNode.content.buttonHref} disabled={disabled} className={styles.control}
+          placeholder={copy.buttonLinkPlaceholder} onChange={(e) => onUpdate({ buttonHref: e.target.value })} />
       </label>
-      <label style={fieldStyle}>
-        <span style={labelStyle}>배경 색</span>
-        <input type="text" value={ctaNode.content.backgroundColor} disabled={disabled} style={inputStyle}
-          placeholder="#0b3b2e 또는 linear-gradient(...)" onChange={(e) => onUpdate({ backgroundColor: e.target.value })} />
-        <div style={{ height: 32, borderRadius: 6, background: ctaNode.content.backgroundColor, border: '1px solid #e2e8f0' }} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.backgroundColor}</span>
+        <input type="text" value={ctaNode.content.backgroundColor} disabled={disabled} className={styles.control}
+          placeholder={copy.backgroundPlaceholder} onChange={(e) => onUpdate({ backgroundColor: e.target.value })} />
+        <span
+          className={styles.backgroundPreview}
+          style={{ background: ctaNode.content.backgroundColor }}
+          aria-hidden="true"
+        />
       </label>
     </div>
   );

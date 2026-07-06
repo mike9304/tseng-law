@@ -3,18 +3,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderShareButtonsCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import {
+  getSocialWidgetsCopy,
+  localizedSocialWidgetText,
+  SHARE_BUTTONS_LEGACY_DEFAULTS,
+} from '../social-widgets-copy';
+import styles from './ShareButtonsInspector.module.css';
 
 type Provider = BuilderShareButtonsCanvasNode['content']['providers'][number];
-
-const LABEL: Record<Provider, string> = {
-  copy: '링크 복사',
-  facebook: 'Facebook',
-  twitter: 'Twitter',
-  kakao: '카카오',
-  line: 'LINE',
-  whatsapp: 'WhatsApp',
-  email: '이메일',
-};
 
 function buildShareHref(provider: Provider, pageUrl: string, pageTitle: string): string {
   const encUrl = encodeURIComponent(pageUrl);
@@ -33,12 +30,16 @@ function buildShareHref(provider: Provider, pageUrl: string, pageTitle: string):
 
 function ShareButtonsRender({
   node,
+  locale = 'ko',
   mode = 'edit',
 }: {
   node: BuilderShareButtonsCanvasNode;
+  locale?: Locale;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
+  const copy = getSocialWidgetsCopy(locale);
+  const title = localizedSocialWidgetText(c.title, copy.shareButtons.defaultTitle, SHARE_BUTTONS_LEGACY_DEFAULTS.title);
   const [copied, setCopied] = useState(false);
   const copiedTimerRef = useRef<number | null>(null);
 
@@ -71,7 +72,7 @@ function ShareButtonsRender({
       data-builder-social-widget="share"
       data-builder-share-layout={c.layout}
     >
-      {c.title ? <strong>{c.title}</strong> : null}
+      {title ? <strong>{title}</strong> : null}
       <div>
         {c.providers.map((p) => (
           <button
@@ -80,9 +81,9 @@ function ShareButtonsRender({
             data-builder-share-provider={p}
             onClick={() => void handleClick(p)}
             style={{ width: c.size, height: c.size }}
-            aria-label={LABEL[p]}
+            aria-label={copy.shareProviders[p]}
           >
-            {p === 'copy' && copied ? '✓' : LABEL[p].slice(0, 2)}
+            {p === 'copy' && copied ? '✓' : copy.shareProviders[p].slice(0, 2)}
           </button>
         ))}
       </div>
@@ -92,68 +93,76 @@ function ShareButtonsRender({
 
 function ShareButtonsInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const shareNode = node as BuilderShareButtonsCanvasNode;
   const c = shareNode.content;
+  const copy = getSocialWidgetsCopy(locale);
+  const title = localizedSocialWidgetText(c.title, copy.shareButtons.defaultTitle, SHARE_BUTTONS_LEGACY_DEFAULTS.title);
   const all: Provider[] = ['copy', 'facebook', 'twitter', 'kakao', 'line', 'whatsapp', 'email'];
   return (
-    <>
-      <label>
-        <span>제목</span>
+    <div className={styles.root} data-builder-share-buttons-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.shareButtons.inspector.title}</span>
         <input
           type="text"
-          value={c.title}
+          value={title}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ title: event.target.value })}
         />
       </label>
-      <span style={{ fontSize: 11, fontWeight: 700, color: '#475569' }}>공급자 선택</span>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-        {all.map((p) => {
-          const checked = c.providers.includes(p);
-          return (
-            <label key={p} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12 }}>
-              <input
-                type="checkbox"
-                checked={checked}
-                disabled={disabled}
-                onChange={(event) => {
-                  const next = event.target.checked
-                    ? [...c.providers, p]
-                    : c.providers.filter((value) => value !== p);
-                  onUpdate({ providers: next.slice(0, 10) });
-                }}
-              />
-              {LABEL[p]}
-            </label>
-          );
-        })}
+      <div className={styles.providerGroup}>
+        <span className={styles.providerLabel}>{copy.shareButtons.inspector.providerSelection}</span>
+        <div className={styles.providerGrid}>
+          {all.map((p) => {
+            const checked = c.providers.includes(p);
+            return (
+              <label key={p} className={styles.providerOption}>
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  disabled={disabled}
+                  onChange={(event) => {
+                    const next = event.target.checked
+                      ? [...c.providers, p]
+                      : c.providers.filter((value) => value !== p);
+                    onUpdate({ providers: next.slice(0, 10) });
+                  }}
+                />
+                <span>{copy.shareProviders[p]}</span>
+              </label>
+            );
+          })}
+        </div>
       </div>
-      <label>
-        <span>배치</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.shareButtons.inspector.layout}</span>
         <select
           value={c.layout}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ layout: event.target.value as BuilderShareButtonsCanvasNode['content']['layout'] })}
         >
-          <option value="row">Row</option>
-          <option value="column">Column</option>
+          <option value="row">{copy.layouts.row}</option>
+          <option value="column">{copy.layouts.column}</option>
         </select>
       </label>
-      <label>
-        <span>크기</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.shareButtons.inspector.size}</span>
         <input
           type="number"
           min={28}
           max={80}
           value={c.size}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ size: Number(event.target.value) })}
         />
       </label>
-    </>
+    </div>
   );
 }
 
@@ -164,7 +173,7 @@ export default defineComponent({
   icon: '⇪',
   defaultContent: {
     providers: ['copy', 'facebook', 'twitter', 'kakao'] as Provider[],
-    title: '공유하기',
+    title: SHARE_BUTTONS_LEGACY_DEFAULTS.title,
     layout: 'row' as const,
     size: 40,
   },

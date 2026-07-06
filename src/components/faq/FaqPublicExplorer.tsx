@@ -1,8 +1,16 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, type MouseEvent as ReactMouseEvent } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import type { BuilderFaqCategory, BuilderFaqItem } from '@/lib/builder/faq/faq-shared';
 import type { Locale } from '@/lib/locales';
+import {
+  buildHref,
+  categoryLabel,
+  decodeHash,
+  faqPublicExplorerCopy,
+  filterFaqItems,
+} from './FaqPublicExplorer.logic';
 import styles from './FaqPublicExplorer.module.css';
 
 interface FaqPublicExplorerProps {
@@ -10,40 +18,7 @@ interface FaqPublicExplorerProps {
   categories: BuilderFaqCategory[];
   items: BuilderFaqItem[];
   initialCategory?: string;
-}
-
-const copy: Record<Locale, {
-  all: string;
-  search: string;
-  clear: string;
-  count: (count: number) => string;
-  empty: string;
-}> = {
-  ko: {
-    all: '전체',
-    search: 'FAQ 검색',
-    clear: '초기화',
-    count: (count) => `${count}개 질문`,
-    empty: '조건에 맞는 질문이 없습니다.',
-  },
-  'zh-hant': {
-    all: '全部',
-    search: '搜尋 FAQ',
-    clear: '清除',
-    count: (count) => `${count} 個問題`,
-    empty: '沒有符合條件的問題。',
-  },
-  en: {
-    all: 'All',
-    search: 'Search FAQ',
-    clear: 'Clear',
-    count: (count) => `${count} questions`,
-    empty: 'No questions match these filters.',
-  },
-};
-
-function categoryLabel(categories: BuilderFaqCategory[], categoryId: string, locale: Locale): string {
-  return categories.find((category) => category.categoryId === categoryId)?.label[locale] ?? categoryId;
+  initialQuery?: string;
 }
 
 export default function FaqPublicExplorer({
@@ -51,31 +26,117 @@ export default function FaqPublicExplorer({
   categories,
   items,
   initialCategory = 'all',
+  initialQuery = '',
 }: FaqPublicExplorerProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState(initialCategory || 'all');
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(initialQuery || '');
   const [openId, setOpenId] = useState<string | null>(items[0]?.faqId ?? null);
-  const text = copy[locale];
+  const [currentHash, setCurrentHash] = useState<string | null>(null);
+  const text = faqPublicExplorerCopy[locale];
+  const categoryRailLabel = locale === 'ko' ? 'FAQ 분류' : locale === 'zh-hant' ? 'FAQ 分類' : 'FAQ categories';
 
-  const filteredItems = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-    return items.filter((item) => {
-      const matchesCategory = selectedCategory === 'all' || item.categoryId === selectedCategory;
-      if (!matchesCategory) return false;
-      if (!normalizedQuery) return true;
-      return [
-        item.question,
-        item.answer,
-        categoryLabel(categories, item.categoryId, locale),
-        ...item.tags,
-      ].some((value) => value.toLowerCase().includes(normalizedQuery));
-    });
-  }, [categories, items, locale, query, selectedCategory]);
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const syncFromHash = () => {
+      const hash = decodeHash(window.location.hash);
+      setCurrentHash(hash || null);
+      if (!hash) return;
+      const match = items.find((item) => item.slug === hash || item.faqId === hash);
+      if (match) setOpenId(match.faqId);
+    };
+
+    syncFromHash();
+    window.addEventListener('hashchange', syncFromHash);
+    return () => {
+      window.removeEventListener('hashchange', syncFromHash);
+    };
+  }, [items, query, selectedCategory]);
+
+  const filteredItems = useMemo(
+    () => filterFaqItems(items, categories, locale, selectedCategory, query),
+    [categories, items, locale, query, selectedCategory],
+  );
+
+  function resolveVisibleHash(nextCategory: string, nextQuery: string): string | null {
+    if (!currentHash) return null;
+    const nextItems = filterFaqItems(items, categories, locale, nextCategory, nextQuery);
+    return nextItems.some((item) => item.slug === currentHash || item.faqId === currentHash) ? currentHash : null;
+  }
 
   function clearFilters() {
     setSelectedCategory('all');
     setQuery('');
     setOpenId(items[0]?.faqId ?? null);
+    replaceVisitorUrl(buildHref(pathname, new URLSearchParams(), currentHash));
+  }
+
+  function replaceVisitorUrl(href: string) {
+    if (typeof window !== 'undefined') {
+      window.history.replaceState(null, '', href);
+    }
+    router.replace(href, { scroll: false });
+  }
+
+  function setVisitorQuery(nextCategory: string, nextQuery: string, nextHash: string | null = currentHash) {
+    const params = new URLSearchParams(searchParams?.toString() ?? '');
+    params.delete('page');
+    if (nextCategory && nextCategory !== 'all') params.set('category', nextCategory);
+    else params.delete('category');
+    if (nextQuery.trim()) params.set('q', nextQuery.trim());
+    else params.delete('q');
+    replaceVisitorUrl(buildHref(pathname, params, nextHash));
+  }
+
+  function currentFilterParams(): URLSearchParams {
+    const params = new URLSearchParams(searchParams?.toString() ?? '');
+    params.delete('page');
+    if (selectedCategory && selectedCategory !== 'all') params.set('category', selectedCategory);
+    else params.delete('category');
+    if (query.trim()) params.set('q', query.trim());
+    else params.delete('q');
+    return params;
+  }
+
+  function handleCategoryClick(nextCategory: string) {
+    const nextHash = resolveVisibleHash(nextCategory, query);
+    const nextItems = filterFaqItems(items, categories, locale, nextCategory, query);
+    setSelectedCategory(nextCategory);
+    setOpenId(nextItems.find((item) => item.slug === nextHash || item.faqId === nextHash)?.faqId ?? nextItems[0]?.faqId ?? null);
+    setVisitorQuery(nextCategory, query, nextHash);
+    setCurrentHash(nextHash);
+  }
+
+  function handleQueryChange(nextQuery: string) {
+    const nextHash = resolveVisibleHash(selectedCategory, nextQuery);
+    const nextItems = filterFaqItems(items, categories, locale, selectedCategory, nextQuery);
+    setQuery(nextQuery);
+    setOpenId(nextItems.find((item) => item.slug === nextHash || item.faqId === nextHash)?.faqId ?? nextItems[0]?.faqId ?? null);
+    setVisitorQuery(selectedCategory, nextQuery, nextHash);
+    setCurrentHash(nextHash);
+  }
+
+  function handleQuestionToggle(item: BuilderFaqItem) {
+    const nextOpenId = openId === item.faqId ? null : item.faqId;
+    setOpenId(nextOpenId);
+    setCurrentHash(nextOpenId ? item.slug : null);
+    if (typeof window !== 'undefined') {
+      const currentParams = currentFilterParams();
+      const nextHref = buildHref(pathname, currentParams, nextOpenId ? item.slug : null);
+      window.history.replaceState(null, '', nextHref);
+    }
+  }
+
+  function handleCategoryLinkClick(event: ReactMouseEvent<HTMLAnchorElement>, nextCategory: string) {
+    event.preventDefault();
+    handleCategoryClick(nextCategory);
+  }
+
+  function handleClearLinkClick(event: ReactMouseEvent<HTMLAnchorElement>) {
+    event.preventDefault();
+    clearFilters();
   }
 
   return (
@@ -87,36 +148,52 @@ export default function FaqPublicExplorer({
             type="search"
             value={query}
             placeholder={text.search}
-            onChange={(event) => setQuery(event.currentTarget.value)}
+            onChange={(event) => handleQueryChange(event.currentTarget.value)}
           />
         </label>
         <div className={styles.count} role="status">{text.count(filteredItems.length)}</div>
       </div>
 
-      <div className={styles.categoryRail} aria-label="FAQ categories">
-        <button
-          type="button"
+      <div className={styles.categoryRail} aria-label={categoryRailLabel}>
+        <a
+          href={buildHref(pathname, (() => {
+            const params = new URLSearchParams(searchParams?.toString() ?? '');
+            params.delete('page');
+            params.delete('category');
+            params.delete('q');
+            return params;
+          })(), currentHash)}
           className={selectedCategory === 'all' ? styles.categoryActive : styles.category}
-          aria-pressed={selectedCategory === 'all'}
-          onClick={() => setSelectedCategory('all')}
+          aria-current={selectedCategory === 'all' ? 'page' : undefined}
+          onClick={(event) => handleCategoryLinkClick(event, 'all')}
         >
           {text.all}
-        </button>
+        </a>
         {categories.map((category) => (
-          <button
+          <a
+            href={buildHref(pathname, (() => {
+              const params = new URLSearchParams(searchParams?.toString() ?? '');
+              params.delete('page');
+              if (category.categoryId !== 'all') params.set('category', category.categoryId);
+              else params.delete('category');
+              return params;
+            })(), currentHash)}
             key={category.categoryId}
-            type="button"
             className={selectedCategory === category.categoryId ? styles.categoryActive : styles.category}
-            aria-pressed={selectedCategory === category.categoryId}
-            onClick={() => setSelectedCategory(category.categoryId)}
+            aria-current={selectedCategory === category.categoryId ? 'page' : undefined}
+            onClick={(event) => handleCategoryLinkClick(event, category.categoryId)}
           >
             {category.label[locale]}
-          </button>
+          </a>
         ))}
         {(selectedCategory !== 'all' || query) ? (
-          <button type="button" className={styles.clear} onClick={clearFilters}>
+          <a
+            href={buildHref(pathname, new URLSearchParams(), currentHash)}
+            className={styles.clear}
+            onClick={handleClearLinkClick}
+          >
             {text.clear}
-          </button>
+          </a>
         ) : null}
       </div>
 
@@ -142,7 +219,7 @@ export default function FaqPublicExplorer({
                   className={styles.question}
                   aria-expanded={isOpen}
                   aria-controls={panelId}
-                  onClick={() => setOpenId(isOpen ? null : item.faqId)}
+                  onClick={() => handleQuestionToggle(item)}
                 >
                   <span>
                     <small>{categoryLabel(categories, item.categoryId, locale)}</small>

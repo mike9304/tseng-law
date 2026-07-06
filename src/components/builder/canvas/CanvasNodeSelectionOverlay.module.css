@@ -44,8 +44,8 @@
   left: 50%;
   pointer-events: auto;
   transform: translateX(-50%);
-  width: calc(15px / var(--canvas-zoom, 1));
-  height: calc(15px / var(--canvas-zoom, 1));
+  width: calc(20px / var(--canvas-zoom, 1));
+  height: calc(20px / var(--canvas-zoom, 1));
   border: 0;
   background: transparent;
   cursor: grab;
@@ -99,7 +99,7 @@
   position: absolute;
   bottom: -26px;
   left: 0;
-  display: inline-flex;
+  display: none;
   align-items: center;
   min-height: 21px;
   max-width: min(320px, calc(100vw - 80px));

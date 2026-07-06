@@ -394,15 +394,140 @@ function unique(values: Array<string | undefined>): string[] {
   return [...new Set(values.filter(Boolean) as string[])];
 }
 
+/**
+ * Compute a quality score (0–100) from REAL document signals, so the template picker
+ * reflects actual page quality instead of a hardcoded literal. Curated hero templates that
+ * set an explicit `qaScore` keep it (this is only a fallback). Rewards image-rich, well-sized,
+ * section-varied pages — the qualities the Track-C rebuild added (WIX-PERFECT #2/#7).
+ */
+export function computeTemplateQaScore(template: PageTemplate): number {
+  const nodes = template.document?.nodes ?? [];
+  const nodeCount = nodes.length;
+  const imageCount = nodes.filter((n) => n.kind === 'image').length;
+  const distinctKinds = new Set(nodes.map((n) => n.kind)).size;
+
+  let score = 55; // baseline for a valid, schema-passing template
+  // Node budget: the registry enforces a Wix-grade 40–70 range; reward the sweet spot.
+  if (nodeCount >= 45 && nodeCount <= 66) score += 14;
+  else if (nodeCount >= 40 && nodeCount <= 70) score += 8;
+  // Real imagery is the single biggest visual-quality signal (lorem skeletons had 0).
+  if (imageCount >= 4) score += 16;
+  else if (imageCount >= 2) score += 10;
+  else if (imageCount >= 1) score += 4;
+  // Element variety (heading/text/image/button/container ≈ a real composed page).
+  if (distinctKinds >= 5) score += 10;
+  else if (distinctKinds >= 4) score += 6;
+  // Section richness when known.
+  const sectionCount = (template as { sections?: string[] }).sections?.length ?? 0;
+  if (sectionCount >= 4) score += 5;
+  return Math.max(0, Math.min(100, score));
+}
+
+/** Derive a quality tier from a computed score when none is explicitly curated. */
+function tierForScore(score: number): TemplateQualityTier {
+  if (score >= 85) return 'premium';
+  if (score >= 70) return 'standard';
+  if (score >= 55) return 'draft';
+  return 'under-review';
+}
+
 export function getTemplateMetadata(template: PageTemplate): TemplateMetadata {
   const category = CATEGORY_DEFAULTS[template.category] ?? CATEGORY_DEFAULTS.layout;
   const specific = TEMPLATE_METADATA[template.id] ?? {};
+  // Per-template CURATED qaScore/qualityTier win (the 5 hero templates). Otherwise compute
+  // from real document signals — NOT the category blanket 'standard' — so the picker can't
+  // badge a thin page premium nor under-rate a genuinely rich rebuilt one.
+  const computedScore = computeTemplateQaScore(template);
+  const qaScore = specific.qaScore ?? computedScore;
+  const qualityTier = specific.qualityTier ?? tierForScore(computedScore);
   return {
     ...category,
     ...specific,
+    qaScore,
+    qualityTier,
     pageType: specific.pageType ?? category.pageType ?? inferPageType(template),
     tags: unique([...(category.tags ?? []), ...(specific.tags ?? []), template.subcategory]),
   };
+}
+
+/* ── Centralized WCAG-AA contrast floor (applied to served templates) ──────────
+ * Many hand-authored templates put dark-ish accent / muted text on a light tint or
+ * white, landing below AA (4.5:1 body / 3:1 large). This conservatively darkens ONLY
+ * dark-ish text that sits on a LIGHT background — never light/white text (so hero/scrim
+ * text over photos is untouched, even where its background can't be resolved). It clones
+ * touched nodes (no source mutation) and is idempotent (already-compliant text is left as-is). */
+function _cRgb(col: string | undefined | null): [number, number, number] | null {
+  if (col == null) return null;
+  const s = String(col).trim().toLowerCase();
+  if (s === 'white') return [255, 255, 255];
+  if (s === 'black') return [0, 0, 0];
+  if (s.startsWith('#')) {
+    let h = s.slice(1);
+    if (h.length === 3) h = h.replace(/./g, '$&$&');
+    if (h.length >= 6) return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
+    return null;
+  }
+  const m = s.match(/rgba?\(([^)]+)\)/);
+  if (m) { const p = m[1].split(',').map((x) => parseFloat(x)); if ((p[3] == null ? 1 : p[3]) < 0.6) return null; return [p[0], p[1], p[2]]; }
+  return null;
+}
+function _cHex(r: number, g: number, b: number): string {
+  return '#' + [r, g, b].map((v) => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0')).join('');
+}
+function _cLum([r, g, b]: [number, number, number]): number {
+  const f = (v: number) => { const c = v / 255; return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; };
+  return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b);
+}
+function _cRatio(a: [number, number, number], b: [number, number, number]): number {
+  const l = [_cLum(a), _cLum(b)].sort((x, y) => y - x);
+  return (l[0] + 0.05) / (l[1] + 0.05);
+}
+function _headingSize(level: number | undefined): number {
+  const l = level ?? 2;
+  return l === 1 ? 52 : l === 2 ? 36 : l === 3 ? 24 : 19;
+}
+export function applyContrastFloor(template: PageTemplate): PageTemplate {
+  const nodes = template.document?.nodes;
+  if (!nodes?.length) return template;
+  const byId = new Map(nodes.map((n) => [n.id, n]));
+  const resolveBg = (node: typeof nodes[number]): [number, number, number] => {
+    let p = node.parentId ? byId.get(node.parentId) : undefined;
+    while (p) {
+      const c = (p.content ?? {}) as { background?: string };
+      const st = (p.style ?? {}) as { backgroundColor?: string };
+      const bg = _cRgb(c.background) ?? _cRgb(st.backgroundColor);
+      if (bg) return bg;
+      p = p.parentId ? byId.get(p.parentId) : undefined;
+    }
+    return [255, 255, 255]; // page default
+  };
+  let changed = false;
+  const newNodes = nodes.map((n): (typeof nodes)[number] => {
+    if (n.kind !== 'text' && n.kind !== 'heading' && n.kind !== 'button') return n;
+    const c = (n.content ?? {}) as { color?: string; fontSize?: number; fontWeight?: string; level?: number };
+    const fg = _cRgb(c.color);
+    if (!fg) return n;
+    if (_cLum(fg) > 0.5) return n; // skip light/white text → never break hero/scrim-over-photo text
+    const bg = n.kind === 'button' ? (_cRgb((n.style as { backgroundColor?: string } | undefined)?.backgroundColor) ?? resolveBg(n)) : resolveBg(n);
+    const bgLum = _cLum(bg);
+    // Light bg → darken the dark text; very-dark solid bg → lighten it. Mid-tone bg is ambiguous → leave as authored.
+    if (bgLum > 0.25 && bgLum <= 0.5) return n;
+    const fs = n.kind === 'heading' ? _headingSize(c.level) : (c.fontSize ?? 16);
+    const large = fs >= 24 || (fs >= 18.66 && c.fontWeight === 'bold');
+    const need = large ? 3 : 4.5;
+    if (_cRatio(fg, bg) >= need) return n;
+    let [r, g, b] = fg;
+    if (bgLum > 0.5) {
+      for (let i = 0; i < 30 && _cRatio([r, g, b], bg) < need; i++) { r *= 0.92; g *= 0.92; b *= 0.92; }
+    } else {
+      // very-dark solid background (lum ≤ 0.25 — a section, not a photo) → lighten text toward white
+      for (let i = 0; i < 30 && _cRatio([r, g, b], bg) < need; i++) { r += (255 - r) * 0.12; g += (255 - g) * 0.12; b += (255 - b) * 0.12; }
+    }
+    changed = true;
+    return { ...n, content: { ...n.content, color: _cHex(r, g, b) } } as (typeof nodes)[number];
+  });
+  if (!changed) return template;
+  return { ...template, document: { ...template.document, nodes: newNodes } };
 }
 
 export function enrichTemplate(template: PageTemplate): PageTemplate {

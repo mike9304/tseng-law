@@ -6,8 +6,11 @@ import {
   type BuilderWorkspaceMember,
   type BuilderWorkspaceRole,
 } from '@/lib/builder/workspace/account-model';
+import type { WorkspaceCopy } from '@/lib/builder/workspace/workspace-copy';
 
 interface MembersPanelProps {
+  locale: string;
+  copy: WorkspaceCopy['members'];
   initialMembers: BuilderWorkspaceMember[];
 }
 
@@ -37,7 +40,7 @@ const dangerButtonStyle: React.CSSProperties = {
   border: '1px solid #fecaca',
 };
 
-export default function MembersPanel({ initialMembers }: MembersPanelProps) {
+export default function MembersPanel({ locale, copy, initialMembers }: MembersPanelProps) {
   const [members, setMembers] = useState(initialMembers);
   const [email, setEmail] = useState('');
   const [role, setRole] = useState<BuilderWorkspaceRole>('viewer');
@@ -50,13 +53,13 @@ export default function MembersPanel({ initialMembers }: MembersPanelProps) {
     setError(null);
     setBusy('add');
     try {
-      const res = await fetch('/api/builder/workspace/members', {
+      const res = await fetch(`/api/builder/workspace/members?locale=${locale}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email.trim(), role }),
+        body: JSON.stringify({ email: email.trim(), role, locale }),
       });
       const payload = await res.json().catch(() => ({}));
-      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? 'Failed to add member.');
+      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? copy.errors.add);
       setMembers((prev) => {
         if (prev.some((m) => m.email === payload.member.email)) return prev;
         return [...prev, payload.member];
@@ -64,7 +67,7 @@ export default function MembersPanel({ initialMembers }: MembersPanelProps) {
       setEmail('');
       setRole('viewer');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to add member.');
+      setError(err instanceof Error ? err.message : copy.errors.add);
     } finally {
       setBusy(null);
     }
@@ -75,18 +78,18 @@ export default function MembersPanel({ initialMembers }: MembersPanelProps) {
     setError(null);
     setBusy(`role-${target.email}`);
     try {
-      const res = await fetch(`/api/builder/workspace/members/${encodeURIComponent(target.email)}`, {
+      const res = await fetch(`/api/builder/workspace/members/${encodeURIComponent(target.email)}?locale=${locale}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ role: nextRole }),
+        body: JSON.stringify({ role: nextRole, locale }),
       });
       const payload = await res.json().catch(() => ({}));
-      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? 'Failed to update role.');
+      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? copy.errors.updateRole);
       setMembers((prev) =>
         prev.map((member) => (member.email === target.email ? payload.member : member)),
       );
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to update role.');
+      setError(err instanceof Error ? err.message : copy.errors.updateRole);
     } finally {
       setBusy(null);
     }
@@ -96,14 +99,14 @@ export default function MembersPanel({ initialMembers }: MembersPanelProps) {
     setError(null);
     setBusy(`remove-${target.email}`);
     try {
-      const res = await fetch(`/api/builder/workspace/members/${encodeURIComponent(target.email)}`, {
+      const res = await fetch(`/api/builder/workspace/members/${encodeURIComponent(target.email)}?locale=${locale}`, {
         method: 'DELETE',
       });
       const payload = await res.json().catch(() => ({}));
-      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? 'Failed to remove member.');
+      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? copy.errors.remove);
       setMembers((prev) => prev.filter((member) => member.email !== target.email));
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to remove member.');
+      setError(err instanceof Error ? err.message : copy.errors.remove);
     } finally {
       setBusy(null);
     }
@@ -127,22 +130,22 @@ export default function MembersPanel({ initialMembers }: MembersPanelProps) {
           type="email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
-          placeholder="member@example.com"
+          placeholder={copy.emailPlaceholder}
           style={inputStyle}
-          aria-label="Member email"
+          aria-label={copy.emailLabel}
         />
         <select
           value={role}
           onChange={(event) => setRole(event.target.value as BuilderWorkspaceRole)}
           style={{ ...inputStyle, flex: '0 0 auto', minWidth: 120 }}
-          aria-label="Member role"
+          aria-label={copy.roleLabel}
         >
           {BUILDER_WORKSPACE_ROLES.map((option) => (
-            <option key={option} value={option}>{option}</option>
+            <option key={option} value={option}>{copy.role[option]}</option>
           ))}
         </select>
         <button type="submit" style={buttonStyle} disabled={busy === 'add'} data-members-add>
-          {busy === 'add' ? 'Adding…' : 'Invite member'}
+          {busy === 'add' ? copy.adding : copy.invite}
         </button>
       </form>
       {error ? (
@@ -171,7 +174,7 @@ export default function MembersPanel({ initialMembers }: MembersPanelProps) {
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <strong style={{ fontSize: 14, color: '#0f172a' }}>{member.email}</strong>
               <span style={{ fontSize: 12, color: '#64748b' }}>
-                Added {new Date(member.addedAt).toLocaleDateString()}
+                {copy.addedPrefix} {new Intl.DateTimeFormat(locale).format(new Date(member.addedAt))}
               </span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -182,7 +185,7 @@ export default function MembersPanel({ initialMembers }: MembersPanelProps) {
                 }
                 disabled={busy === `role-${member.email}`}
                 data-member-role-select={member.email}
-                aria-label={`Role for ${member.email}`}
+                aria-label={`${copy.roleLabel} ${member.email}`}
                 style={{
                   padding: '6px 10px',
                   borderRadius: 6,
@@ -201,7 +204,7 @@ export default function MembersPanel({ initialMembers }: MembersPanelProps) {
                 onClick={() => handleRemove(member)}
                 data-member-remove={member.email}
               >
-                {busy === `remove-${member.email}` ? '…' : 'Remove'}
+                {busy === `remove-${member.email}` ? '…' : copy.remove}
               </button>
             </div>
           </li>

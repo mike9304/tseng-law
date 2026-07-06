@@ -30,7 +30,7 @@ test.describe('/ko/admin-builder text widget pack', () => {
       await page.keyboard.press('Escape');
 
       const drawer = await openCatalogDrawer(page);
-      await expect(drawer.getByText('Text widget pack')).toBeVisible();
+      await expect(drawer.getByText(/Text widget pack|텍스트 위젯 팩/)).toBeVisible();
 
       const presets = [
         'heading-h1-h6',
@@ -58,7 +58,7 @@ test.describe('/ko/admin-builder text widget pack', () => {
 
       await page.locator('[data-node-id^="text-"]').filter({ hasText: '상담 예약으로 이동' }).click({ force: true });
       const inspector = page.locator('[data-builder-inspector-panel="true"]').first();
-      await inspector.getByRole('button', { name: 'content' }).click();
+      await inspector.getByRole('button', { name: /^(?:콘텐츠|Content|內容)$/ }).click();
       await expect(inspector.locator('[data-builder-href-input="true"]').first()).toHaveValue('/ko/contact');
     } finally {
       if (pageId) {

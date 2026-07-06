@@ -10,6 +10,7 @@ import { listProjects, loadProject, saveProject } from '@/lib/builder/portfolio/
 import type { PortfolioProject } from '@/lib/builder/portfolio/portfolio-shared';
 import { listBuilderAppCatalogEntries } from '@/lib/builder/apps/installed';
 import { resolveLiveChatSettings } from '@/lib/builder/live-chat/app-settings';
+import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
 import { saveTranslationValue, syncTranslationsForSite } from '@/lib/builder/translations/sync';
 
 vi.mock('@/lib/builder/site/persistence', () => ({
@@ -141,8 +142,46 @@ describe('app translation hooks', () => {
 
   beforeEach(() => {
     site = createDefaultSiteDocument('ko', 'test-site');
-    site.pages = [];
+    site.pages = [{
+      pageId: 'page-seo-ko',
+      slug: 'seo-page',
+      title: { ko: 'SEO 페이지', 'zh-hant': 'SEO 頁面', en: 'SEO page' },
+      locale: 'ko',
+      seo: {
+        title: '페이지 SEO 제목',
+        description: '페이지 SEO 설명',
+        ogTitle: 'OG 제목',
+        ogDescription: 'OG 설명',
+        twitterTitle: '트위터 제목',
+        twitterDescription: '트위터 설명',
+      },
+      createdAt: now,
+      updatedAt: now,
+    }];
     site.navigation = [];
+    site.settings = {
+      firmName: '호정국제',
+      phone: '02-1234-5678',
+      email: 'contact@example.com',
+      address: '서울특별시',
+      businessHours: '월-금 09:00-18:00',
+      businessRegNumber: '123-45-67890',
+      robotsTxt: 'User-agent: *',
+      seoDefaults: {
+        patterns: {
+          titleTemplate: '%s | 호정국제',
+          descriptionTemplate: '%s에 대한 설명',
+          ogTitleTemplate: '%s | OG',
+          ogDescriptionTemplate: '%s | OG 설명',
+          twitterTitleTemplate: '%s | Twitter',
+          twitterDescriptionTemplate: '%s | Twitter 설명',
+        },
+      },
+      favicon: '/favicon.ico',
+      logo: '/logo.png',
+      logoDark: '/logo-dark.png',
+      liveChatWidgetEnabled: true,
+    };
     site.installedApps = [{
       appId: 'live-chat',
       version: '1.0.0',
@@ -216,6 +255,13 @@ describe('app translation hooks', () => {
     expect(keys).toContain('app:faq-manager:content:faq:faq-source-ko:question');
     expect(keys).toContain('app:native-events:content:events:evt-source-ko:title');
     expect(keys).toContain('app:native-portfolio:content:portfolio:pf-source-ko:title');
+    expect(keys).toContain('page:page-seo-ko:seo:title');
+    expect(keys).toContain('page:page-seo-ko:seo:ogTitle');
+    expect(keys).toContain('page:page-seo-ko:seo:twitterDescription');
+    expect(keys).toContain('site:settings:firmName');
+    expect(keys).toContain('site:settings:seoDefaults.patterns.titleTemplate');
+    expect(keys).not.toContain('site:settings:favicon');
+    expect(keys).not.toContain('site:settings:logoDark');
     expect(payload.entries.find((entry) => entry.key === 'app:live-chat:setting:title:value')?.sourceText)
       .toBe('호정국제 상담');
   });
@@ -297,5 +343,70 @@ describe('app translation hooks', () => {
     expect(result.applied).toBe(false);
     const entries = await listBuilderAppCatalogEntries('test-site', 'en');
     expect(entries.find((entry) => entry.manifest.appId === 'site-search')?.manifest.name).toBe('Site Finder');
+  });
+
+  it('applies page SEO text translations to the right SEO fields', async () => {
+    const ogResult = await saveTranslationValue({
+      siteId: 'test-site',
+      sourceLocale: 'ko',
+      key: 'page:page-seo-ko:seo:ogTitle',
+      targetLocale: 'en',
+      text: 'OG Title',
+      status: 'manual',
+      provider: 'manual',
+    });
+    const twitterResult = await saveTranslationValue({
+      siteId: 'test-site',
+      sourceLocale: 'ko',
+      key: 'page:page-seo-ko:seo:twitterDescription',
+      targetLocale: 'en',
+      text: 'Twitter Description',
+      status: 'manual',
+      provider: 'manual',
+    });
+
+    expect(ogResult.applied).toBe(true);
+    expect(twitterResult.applied).toBe(true);
+    expect(site.pages.find((page) => page.pageId === 'page-seo-ko')?.seo?.localizedOverrides?.en).toMatchObject({
+      ogTitle: 'OG Title',
+      twitterDescription: 'Twitter Description',
+    });
+    expect(site.pages.find((page) => page.pageId === 'page-seo-ko')?.seo?.title).toBe('페이지 SEO 제목');
+  });
+
+  it('stores site-setting text translations as locale overrides while preserving the source values', async () => {
+    const firmNameResult = await saveTranslationValue({
+      siteId: 'test-site',
+      sourceLocale: 'ko',
+      key: 'site:settings:firmName',
+      targetLocale: 'en',
+      text: 'Tseng Law',
+      status: 'manual',
+      provider: 'manual',
+    });
+    const seoPatternResult = await saveTranslationValue({
+      siteId: 'test-site',
+      sourceLocale: 'ko',
+      key: 'site:settings:seoDefaults.patterns.titleTemplate',
+      targetLocale: 'en',
+      text: '{{pageName}} | Tseng Law',
+      status: 'manual',
+      provider: 'manual',
+    });
+
+    expect(firmNameResult.applied).toBe(true);
+    expect(seoPatternResult.applied).toBe(true);
+    expect(site.settings?.firmName).toBe('호정국제');
+    expect(site.settings?.localizedOverrides?.en).toMatchObject({
+      firmName: 'Tseng Law',
+      seoDefaults: {
+        patterns: {
+          titleTemplate: '{{pageName}} | Tseng Law',
+        },
+      },
+    });
+    expect(resolveBuilderSiteSettings(site.settings, 'en')?.firmName).toBe('Tseng Law');
+    expect(resolveBuilderSiteSettings(site.settings, 'en')?.seoDefaults?.patterns?.titleTemplate)
+      .toBe('{{pageName}} | Tseng Law');
   });
 });

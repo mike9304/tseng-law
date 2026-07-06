@@ -1,5 +1,6 @@
 'use client';
 
+import { memo } from 'react';
 import {
   getCanvasNodeLabel,
   type OverlapPickerState,
@@ -10,16 +11,16 @@ import styles from './SandboxPage.module.css';
 type CanvasOverlapPickerLayerProps = {
   nodesById: Map<string, BuilderCanvasNode>;
   overlapPicker: OverlapPickerState | null;
-  selectedNodeIds: string[];
+  selectedNodeIdSet: ReadonlySet<string>;
   setOverlapPicker: (picker: OverlapPickerState | null | ((current: OverlapPickerState | null) => OverlapPickerState | null)) => void;
   setSelectedNodeId: (nodeId: string | null) => void;
   toggleNodeSelection: (nodeId: string) => void;
 };
 
-export default function CanvasOverlapPickerLayer({
+function CanvasOverlapPickerLayer({
   nodesById,
   overlapPicker,
-  selectedNodeIds,
+  selectedNodeIdSet,
   setOverlapPicker,
   setSelectedNodeId,
   toggleNodeSelection,
@@ -76,7 +77,7 @@ export default function CanvasOverlapPickerLayer({
             type="button"
             className={[
               styles.overlapPickerItem,
-              selectedNodeIds.includes(node.id) ? styles.overlapPickerItemSelected : '',
+              selectedNodeIdSet.has(node.id) ? styles.overlapPickerItemSelected : '',
             ].filter(Boolean).join(' ')}
             title={node.id}
             onClick={(event) => {
@@ -97,3 +98,5 @@ export default function CanvasOverlapPickerLayer({
     </div>
   );
 }
+
+export default memo(CanvasOverlapPickerLayer);

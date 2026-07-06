@@ -2,10 +2,15 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
+  getCommercePaymentIntentsApiErrorPayload,
+  type CommercePaymentIntentsApiErrorCode,
+} from '@/lib/builder/commerce/payment-intents-api-copy';
+import {
   captureCommercePaymentIntent,
   createCommercePaymentIntent,
   paymentIntentToOrderStatus,
 } from '@/lib/builder/commerce/payment-providers';
+import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -20,19 +25,39 @@ const intentSchema = z.object({
   simulateFailure: z.boolean().optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: CommercePaymentIntentsApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getCommercePaymentIntentsApiErrorPayload(locale, errorCode), ...extras },
+    { status },
   );
 }
 
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
+function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
+  if (payload && typeof payload === 'object' && 'locale' in payload) {
+    const locale = (payload as { locale?: unknown }).locale;
+    if (typeof locale === 'string' && isLocale(locale)) return locale;
+  }
+  return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+}
+
 export async function POST(request: NextRequest) {
+  let errorLocale = resolveRequestLocale(request);
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
   try {
-    const input = intentSchema.parse(await request.json());
+    const payload = await request.json();
+    errorLocale = resolveRequestLocale(request, payload);
+    const input = intentSchema.parse(payload);
     const intent = input.action === 'capture'
       ? captureCommercePaymentIntent(input.paymentIntent, { simulateFailure: input.simulateFailure })
       : createCommercePaymentIntent({
@@ -43,16 +68,16 @@ export async function POST(request: NextRequest) {
           simulateFailure: input.simulateFailure,
         });
 
-    if (!intent) return NextResponse.json({ ok: false, error: 'payment_intent_invalid' }, { status: 400 });
+    if (!intent) return errorResponse(errorLocale, 'payment_intent_invalid', 400);
     return NextResponse.json({
       ok: true,
       intent,
       paymentStatus: paymentIntentToOrderStatus(intent),
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
-    if (error instanceof SyntaxError) return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
+    if (error instanceof ZodError) return validationError(errorLocale, error);
+    if (error instanceof SyntaxError) return errorResponse(errorLocale, 'invalid_json', 400);
     console.error('[builder/commerce/payment-intents] POST failed:', error);
-    return NextResponse.json({ ok: false, error: 'payment_intent_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'payment_intent_failed', 500);
   }
 }

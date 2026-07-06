@@ -1,0 +1,252 @@
+.hiddenInput {
+  display: none;
+}
+
+.section {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.sectionHeading {
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  min-width: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.card[data-active='true'] {
+  border-color: #116dff;
+  background: #f8fbff;
+}
+
+.title {
+  display: block;
+  color: var(--site-presets-title-color, #0f172a);
+  font-family: var(--site-presets-title-font, inherit);
+  font-size: var(--site-presets-title-size, 0.9rem);
+  line-height: 1.2;
+}
+
+.description {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.descriptionSmall {
+  color: #64748b;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.metaBox {
+  display: grid;
+  gap: 7px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--site-presets-meta-radius, 8px);
+  background: #f8fafc;
+  color: #334155;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.button {
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #f8fafc;
+  color: #0f172a;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition:
+    border-color 140ms ease,
+    background-color 140ms ease,
+    box-shadow 140ms ease,
+    color 140ms ease;
+}
+
+.button:hover {
+  border-color: #94a3b8;
+  background: #f1f5f9;
+}
+
+.button:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgb(17 109 255 / 14%);
+  outline: none;
+}
+
+.buttonFull {
+  flex: 1;
+}
+
+.buttonDanger {
+  color: #b91c1c;
+}
+
+.buttonPrimary {
+  border-color: #116dff;
+  background: #116dff;
+  color: #fff;
+}
+
+.buttonPrimary:hover {
+  border-color: #0f5bd8;
+  background: #0f5bd8;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.buttonRowEnd {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.radiusPreview {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  min-height: 46px;
+}
+
+.radiusSwatch {
+  border: 1px solid var(--site-presets-radius-border, #93c5fd);
+  border-radius: var(--site-presets-radius, 8px);
+  background: var(--site-presets-radius-bg, #dbeafe);
+}
+
+.radiusSwatch[data-size='sm'] {
+  width: 34px;
+  height: 24px;
+}
+
+.radiusSwatch[data-size='md'] {
+  width: 44px;
+  height: 32px;
+}
+
+.radiusSwatch[data-size='lg'] {
+  width: 54px;
+  height: 40px;
+}
+
+.shadowPreview {
+  display: grid;
+  min-height: 56px;
+  place-items: center;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.shadowSwatch {
+  width: 72px;
+  height: 34px;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--site-presets-shadow-radius, 8px);
+  background: #fff;
+  box-shadow: var(--site-presets-shadow, none);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.paletteRow {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 3px;
+}
+
+.paletteSwatch {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgb(15 23 42 / 14%);
+  border-radius: 999px;
+  background: var(--site-presets-swatch-color, #e2e8f0);
+}
+
+.themePreview {
+  padding: 10px;
+  border: 1px solid var(--site-presets-theme-border, #e2e8f0);
+  border-radius: var(--site-presets-theme-radius, 8px);
+  background: var(--site-presets-theme-bg, #fff);
+}
+
+.themePreviewTitle {
+  color: var(--site-presets-theme-title-color, #0f172a);
+  font-family: var(--site-presets-theme-title-font, inherit);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.themePreviewBody {
+  margin-top: 5px;
+  color: var(--site-presets-theme-body-color, #64748b);
+  font-family: var(--site-presets-theme-body-font, inherit);
+  font-size: 12px;
+}
+
+.emptyText {
+  color: #64748b;
+  font-size: 0.76rem;
+}
+
+.pendingCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  background: #eff6ff;
+}
+
+.pendingTitle {
+  color: #1e3a8a;
+  font-size: 0.86rem;
+}
+
+.pendingDescription {
+  color: #334155;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

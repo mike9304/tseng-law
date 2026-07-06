@@ -2,8 +2,11 @@
 
 import { useRef, useState } from 'react';
 import type { SharedAssetListItem } from '@/lib/builder/workspace/shared-assets';
+import type { WorkspaceCopy } from '@/lib/builder/workspace/workspace-copy';
 
 interface SharedAssetsPanelProps {
+  locale: string;
+  copy: WorkspaceCopy['sharedAssets'];
   initialAssets: SharedAssetListItem[];
 }
 
@@ -17,7 +20,7 @@ const buttonStyle: React.CSSProperties = {
   cursor: 'pointer',
 };
 
-export default function SharedAssetsPanel({ initialAssets }: SharedAssetsPanelProps) {
+export default function SharedAssetsPanel({ locale, copy, initialAssets }: SharedAssetsPanelProps) {
   const [assets, setAssets] = useState(initialAssets);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
@@ -31,19 +34,20 @@ export default function SharedAssetsPanel({ initialAssets }: SharedAssetsPanelPr
     try {
       const formData = new FormData();
       formData.append('file', file);
-      const res = await fetch('/api/builder/workspace/assets', {
+      formData.append('locale', locale);
+      const res = await fetch(`/api/builder/workspace/assets?locale=${locale}`, {
         method: 'POST',
         body: formData,
       });
       const payload = await res.json().catch(() => ({}));
-      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? 'Upload failed.');
+      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? copy.errors.upload);
       setAssets((prev) => [
         { ...payload.asset, pathname: `workspace/assets/${payload.asset.filename}` },
         ...prev,
       ]);
       if (inputRef.current) inputRef.current.value = '';
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Upload failed.');
+      setError(err instanceof Error ? err.message : copy.errors.upload);
     } finally {
       setBusy(false);
     }
@@ -52,14 +56,14 @@ export default function SharedAssetsPanel({ initialAssets }: SharedAssetsPanelPr
   async function handleDelete(filename: string) {
     setError(null);
     try {
-      const res = await fetch(`/api/builder/workspace/assets/${encodeURIComponent(filename)}`, {
+      const res = await fetch(`/api/builder/workspace/assets/${encodeURIComponent(filename)}?locale=${locale}`, {
         method: 'DELETE',
       });
       const payload = await res.json().catch(() => ({}));
-      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? 'Delete failed.');
+      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? copy.errors.delete);
       setAssets((prev) => prev.filter((asset) => asset.filename !== filename));
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Delete failed.');
+      setError(err instanceof Error ? err.message : copy.errors.delete);
     }
   }
 
@@ -83,10 +87,10 @@ export default function SharedAssetsPanel({ initialAssets }: SharedAssetsPanelPr
           onChange={handleUpload}
           disabled={busy}
           data-shared-assets-upload
-          aria-label="Upload shared asset"
+          aria-label={copy.upload}
         />
         <span style={{ fontSize: 12, color: '#64748b' }}>
-          {busy ? 'Uploading…' : 'JPG / PNG / WEBP / GIF / AVIF / SVG, up to 10MB.'}
+          {busy ? copy.uploading : copy.hint}
         </span>
       </div>
       {error ? (
@@ -105,7 +109,7 @@ export default function SharedAssetsPanel({ initialAssets }: SharedAssetsPanelPr
         }}
       >
         {assets.length === 0 ? (
-          <li style={{ color: '#64748b', fontSize: 13 }}>No shared assets yet.</li>
+          <li style={{ color: '#64748b', fontSize: 13 }}>{copy.noAssets}</li>
         ) : null}
         {assets.map((asset) => (
           <li
@@ -143,10 +147,10 @@ export default function SharedAssetsPanel({ initialAssets }: SharedAssetsPanelPr
               }}
               data-shared-asset-delete={asset.filename}
             >
-              Delete
+              {copy.delete}
             </button>
           </li>
-        ))}
+          ))}
       </ul>
     </div>
   );

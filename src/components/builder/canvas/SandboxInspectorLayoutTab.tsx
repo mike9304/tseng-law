@@ -1,7 +1,9 @@
 'use client';
 
 import BreakpointBadge from '@/components/builder/editor/BreakpointBadge';
+import { getSandboxInspectorLayoutTabCopy } from '@/components/builder/canvas/sandbox-inspector-layout-tab-copy';
 import type { BuilderCanvasNode, ResponsiveOverride } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
 import {
   hasResponsiveOverride,
   resolveViewportFontSize,
@@ -100,6 +102,8 @@ function LayoutField({
   step = 1,
   disabled = false,
   hasOverride = false,
+  title,
+  ariaLabel,
 }: {
   label: string;
   viewport: Viewport;
@@ -110,13 +114,15 @@ function LayoutField({
   step?: number;
   disabled?: boolean;
   hasOverride?: boolean;
+  title: string;
+  ariaLabel: string;
 }) {
   return (
     <LabeledRow
       label={label}
       hint={viewport === 'desktop' ? undefined : viewport}
       hasOverride={hasOverride}
-      title={`${label} (${viewport})`}
+      title={title}
     >
       <NumberStepper
         value={value}
@@ -125,7 +131,7 @@ function LayoutField({
         step={step}
         suffix="px"
         disabled={disabled}
-        ariaLabel={`${label} value`}
+        ariaLabel={ariaLabel}
         onChange={onCommit}
       />
       <BreakpointBadge viewport={viewport} active={hasOverride} label="" />
@@ -134,6 +140,7 @@ function LayoutField({
 }
 
 export default function SandboxInspectorLayoutTab({
+  locale,
   node,
   viewport,
   setViewport,
@@ -143,6 +150,7 @@ export default function SandboxInspectorLayoutTab({
   resetResponsiveOverride,
   nodesById,
 }: {
+  locale: Locale;
   node: BuilderCanvasNode;
   viewport: Viewport;
   setViewport: (viewport: Viewport) => void;
@@ -152,6 +160,7 @@ export default function SandboxInspectorLayoutTab({
   resetResponsiveOverride: (nodeId: string, viewport: Viewport) => void;
   nodesById: Map<string, BuilderCanvasNode>;
 }) {
+  const copy = getSandboxInspectorLayoutTabCopy(locale);
   const isViewportOverride = viewport !== 'desktop';
   const responsiveViewport = isViewportOverride ? viewport : null;
   const activeOverride = responsiveViewport
@@ -171,6 +180,16 @@ export default function SandboxInspectorLayoutTab({
   );
   const isHiddenAtVp = resolveViewportHidden(node, viewport);
   const isInFlowContext = parentUsesFlowLayout(node, nodesById);
+  const viewportLabel = copy.deviceLabels[viewport];
+  const layoutFieldCopy = (label: string) => ({
+    title: copy.fieldTitle(label, viewportLabel),
+    ariaLabel: copy.fieldValueAriaLabel(label),
+  });
+  const viewportHelper = isViewportOverride
+    ? hasActiveOverride
+      ? copy.viewportOverrideCreatedHelper
+      : copy.viewportInheritedHelper
+    : copy.viewportDesktopHelper;
   const commitRect = (field: 'x' | 'y' | 'width' | 'height', nextValue: number) => {
     if (!isViewportOverride) {
       updateNode(node.id, (current) => updateRectField(current, field, nextValue));
@@ -196,84 +215,68 @@ export default function SandboxInspectorLayoutTab({
 
   return (
     <>
-      <LabeledRow
-        label="Viewport"
-        helper={
-          isViewportOverride
-            ? hasActiveOverride
-              ? 'Override created for this viewport.'
-              : 'Inherits desktop until you edit a value.'
-            : 'Desktop is the source layout.'
-        }
+      <section
+        className={styles.inspectorViewportPanel}
+        aria-label={copy.viewportGroupAriaLabel}
       >
+        <div className={styles.inspectorViewportHeader}>
+          <span className={styles.inspectorViewportLabel}>{copy.viewportLabel}</span>
+          <span className={styles.inspectorViewportHelper}>{viewportHelper}</span>
+        </div>
         <div
           data-builder-mobile-inspector-viewport="true"
           data-builder-viewport-override-state={isViewportOverride && hasActiveOverride ? 'created' : 'inherited'}
+          className={styles.inspectorViewportSelector}
           role="group"
-          aria-label="Inspector viewport"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
-            gap: 6,
-            width: '100%',
-          }}
+          aria-label={copy.viewportGroupAriaLabel}
         >
           {DEVICE_META.map((device) => {
             const active = viewport === device.vp;
             const hasOverride = device.vp !== 'desktop' && hasResponsiveOverride(node, device.vp);
+            const deviceLabel = copy.deviceLabels[device.vp];
+            const title = `${deviceLabel} ${VIEWPORT_WIDTHS[device.vp]}px${hasOverride ? ` - ${copy.overrideBadgeLabel}` : ''}`;
             return (
               <button
                 key={device.vp}
                 type="button"
                 data-builder-inspector-viewport-option={device.vp}
+                data-active={active ? 'true' : undefined}
+                data-has-override={hasOverride ? 'true' : undefined}
                 aria-pressed={active}
                 onClick={() => setViewport(device.vp)}
-                style={{
-                  minWidth: 0,
-                  padding: '7px 6px',
-                  borderRadius: 8,
-                  border: active ? '1px solid #116dff' : '1px solid #dbe3ee',
-                  background: active ? '#eaf3ff' : '#fff',
-                  color: active ? '#0f4ec4' : '#334155',
-                  fontSize: '0.72rem',
-                  fontWeight: 850,
-                  cursor: 'pointer',
-                }}
-                title={`${device.label} ${VIEWPORT_WIDTHS[device.vp]}px`}
+                className={styles.inspectorViewportButton}
+                title={title}
               >
-                <span aria-hidden style={{ display: 'block', fontSize: '0.8rem' }}>{device.short}</span>
-                <span style={{ display: 'block' }}>{device.label}</span>
-                <small style={{ display: 'block', color: active ? '#1d4ed8' : '#64748b' }}>
-                  {VIEWPORT_WIDTHS[device.vp]}px{hasOverride ? ' · override' : ''}
-                </small>
+                <span className={styles.inspectorViewportGlyph} aria-hidden>{device.short}</span>
+                <span className={styles.inspectorViewportButtonCopy}>
+                  <span className={styles.inspectorViewportButtonLabel}>{deviceLabel}</span>
+                  <span className={styles.inspectorViewportButtonMeta}>
+                    <span>{VIEWPORT_WIDTHS[device.vp]}px</span>
+                    {hasOverride ? (
+                      <span
+                        className={styles.inspectorViewportOverrideDot}
+                        aria-hidden
+                        title={copy.overrideBadgeLabel}
+                      />
+                    ) : null}
+                  </span>
+                </span>
               </button>
             );
           })}
         </div>
-      </LabeledRow>
+      </section>
       {isViewportOverride ? (
         <div
           data-builder-viewport-override-banner={hasActiveOverride ? 'created' : 'inherited'}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: 8,
-            padding: '6px 10px',
-            borderRadius: 8,
-            border: '1px solid #bfdbfe',
-            background: '#eff6ff',
-            fontSize: '0.74rem',
-            color: '#1e40af',
-            marginBottom: 8,
-          }}
+          className={styles.inspectorViewportOverrideBanner}
         >
           <span>
-            <strong style={{ marginRight: 6 }}>{viewport}</strong>
-            {hasActiveOverride ? 'Override created' : 'viewport override 편집 중'}
+            <strong>{viewportLabel}</strong>
+            {hasActiveOverride ? copy.overrideCreatedLabel : copy.overrideEditingLabel}
             {hasActiveOverride ? null : (
-              <span style={{ color: '#475569', marginLeft: 6 }}>
-                (override 미설정 — desktop 값 표시)
+              <span>
+                ({copy.overrideInheritedNote})
               </span>
             )}
           </span>
@@ -281,77 +284,62 @@ export default function SandboxInspectorLayoutTab({
             type="button"
             onClick={() => resetResponsiveOverride(node.id, viewport)}
             disabled={node.locked || !hasActiveOverride}
-            style={{
-              padding: '2px 8px',
-              fontSize: '0.72rem',
-              border: '1px solid #bfdbfe',
-              background: '#fff',
-              borderRadius: 6,
-              cursor: hasActiveOverride && !node.locked ? 'pointer' : 'not-allowed',
-              opacity: hasActiveOverride && !node.locked ? 1 : 0.5,
-              color: '#1e40af',
-            }}
-            title={`${viewport} viewport 의 override 를 모두 제거합니다`}
+            className={styles.inspectorViewportResetButton}
+            title={copy.resetViewportTitle(viewportLabel)}
           >
-            Reset {viewport}
+            {copy.resetViewportLabel(viewportLabel)}
           </button>
         </div>
       ) : null}
       <div className={styles.inspectorFieldGrid}>
         <LayoutField
-          label="X"
+          label={copy.xLabel}
           viewport={viewport}
           value={effectiveRect.x}
           onCommit={(nextValue) => commitRect('x', nextValue)}
           disabled={node.locked || isInFlowContext}
           hasOverride={fieldHasOverride('x')}
+          {...layoutFieldCopy(copy.xLabel)}
         />
         <LayoutField
-          label="Y"
+          label={copy.yLabel}
           viewport={viewport}
           value={effectiveRect.y}
           onCommit={(nextValue) => commitRect('y', nextValue)}
           disabled={node.locked || isInFlowContext}
           hasOverride={fieldHasOverride('y')}
+          {...layoutFieldCopy(copy.yLabel)}
         />
         {isInFlowContext ? (
           <div
-            style={{
-              gridColumn: '1 / -1',
-              fontSize: '0.68rem',
-              color: '#64748b',
-              background: '#f8fafc',
-              border: '1px solid #e2e8f0',
-              borderRadius: 6,
-              padding: '5px 8px',
-              margin: '2px 0 4px',
-              lineHeight: 1.3,
-            }}
+            className={styles.inspectorFlowNotice}
           >
-            이 요소는 부모의 Flow 레이아웃(flex / grid)을 따릅니다. X/Y 위치는 무시됩니다.
+            {copy.flowLayoutNotice}
           </div>
         ) : null}
         <LayoutField
-          label="Width"
+          label={copy.widthLabel}
           viewport={viewport}
           value={effectiveRect.width}
           min={MIN_WIDTH}
           onCommit={(nextValue) => commitRect('width', nextValue)}
           disabled={node.locked}
           hasOverride={fieldHasOverride('width')}
+          {...layoutFieldCopy(copy.widthLabel)}
         />
         <LayoutField
-          label="Height"
+          label={copy.heightLabel}
           viewport={viewport}
           value={effectiveRect.height}
           min={MIN_HEIGHT}
           onCommit={(nextValue) => commitRect('height', nextValue)}
           disabled={node.locked}
           hasOverride={fieldHasOverride('height')}
+          {...layoutFieldCopy(copy.heightLabel)}
         />
         {baseFontSize != null && effectiveFontSize != null ? (
           <LayoutField
-            label="Font size"
+            label={copy.fontSizeLabel}
             viewport={viewport}
             value={effectiveFontSize}
             min={8}
@@ -359,6 +347,7 @@ export default function SandboxInspectorLayoutTab({
             onCommit={commitFontSize}
             disabled={node.locked}
             hasOverride={hasFontSizeOverride}
+            {...layoutFieldCopy(copy.fontSizeLabel)}
           />
         ) : null}
       </div>
@@ -367,34 +356,26 @@ export default function SandboxInspectorLayoutTab({
         updateNode={updateNode}
         updateResponsiveOverride={updateResponsiveOverride}
         activeViewport={viewport}
+        deviceLabels={copy.deviceLabels}
+        copy={copy.deviceVisibility}
       />
       {hasHiddenOverride ? (
         <p
           data-builder-viewport-hidden-override="true"
-          style={{
-            margin: '6px 2px 0',
-            fontSize: '0.72rem',
-            color: '#475569',
-            fontWeight: 600,
-          }}
+          className={styles.inspectorViewportHiddenNote}
         >
-          Hidden override exists for {viewport}.
+          {copy.hiddenOverrideExists(viewportLabel)}
         </p>
       ) : null}
       {isViewportOverride && isHiddenAtVp ? (
         <p
-          style={{
-            margin: '6px 2px 0',
-            fontSize: '0.72rem',
-            color: '#b45309',
-            fontWeight: 500,
-          }}
+          className={styles.inspectorViewportHiddenWarning}
         >
-          ⚠ {viewport}에서 숨김 처리되어 캔버스/미리보기에서 보이지 않습니다.
+          ⚠ {copy.hiddenAtViewportWarning(viewportLabel)}
         </p>
       ) : null}
 
-      <LabeledRow label="Rotation" hint="deg">
+      <LabeledRow label={copy.rotationLabel} hint="deg">
         <SliderRow
           value={node.rotation}
           min={0}
@@ -410,8 +391,8 @@ export default function SandboxInspectorLayoutTab({
         />
       </LabeledRow>
 
-      <InspectorSection label="State" title="Visibility & lock">
-        <LabeledRow label="Lock">
+      <InspectorSection label={copy.stateSectionLabel} title={copy.stateSectionTitle}>
+        <LabeledRow label={copy.lockLabel}>
           <ToggleRow
             checked={node.locked}
             onChange={(checked) => {
@@ -422,7 +403,7 @@ export default function SandboxInspectorLayoutTab({
             }}
           />
         </LabeledRow>
-        <LabeledRow label="Visible">
+        <LabeledRow label={copy.visibleLabel}>
           <ToggleRow
             checked={node.visible}
             onChange={(checked) => {
@@ -433,7 +414,7 @@ export default function SandboxInspectorLayoutTab({
             }}
           />
         </LabeledRow>
-        <LabeledRow label="Pin">
+        <LabeledRow label={copy.pinLabel}>
           <ToggleRow
             checked={Boolean(node.sticky)}
             disabled={node.locked}
@@ -457,7 +438,7 @@ export default function SandboxInspectorLayoutTab({
       {node.sticky ? (
         <div className={styles.inspectorFieldGrid}>
           <LayoutField
-            label="Sticky offset (px)"
+            label={copy.stickyOffsetLabel}
             viewport={viewport}
             value={node.sticky.offset}
             min={0}
@@ -469,15 +450,16 @@ export default function SandboxInspectorLayoutTab({
               },
             }))}
             disabled={node.locked}
+            {...layoutFieldCopy(copy.stickyOffsetLabel)}
           />
-          <LabeledRow label="Pin from">
+          <LabeledRow label={copy.pinFromLabel}>
             <SegmentedControl
               value={node.sticky.from ?? 'top'}
               disabled={node.locked}
-              ariaLabel="Pin from"
+              ariaLabel={copy.pinFromAriaLabel}
               options={[
-                { value: 'top', label: 'Top' },
-                { value: 'bottom', label: 'Bottom' },
+                { value: 'top', label: copy.pinTopLabel },
+                { value: 'bottom', label: copy.pinBottomLabel },
               ]}
               onChange={(nextFrom) => {
                 updateNode(node.id, (current) => ({
@@ -494,11 +476,11 @@ export default function SandboxInspectorLayoutTab({
       ) : null}
 
       <div className={styles.inspectorField}>
-        <span className={styles.inspectorFieldLabel}>⚓ Anchor name</span>
+        <span className={styles.inspectorFieldLabel}>⚓ {copy.anchorNameLabel}</span>
         <input
           className={styles.inspectorInput}
           type="text"
-          placeholder="e.g. about, services"
+          placeholder={copy.anchorPlaceholder}
           value={node.anchorName ?? ''}
           disabled={node.locked}
           onChange={(event) => {
@@ -519,12 +501,12 @@ export default function SandboxInspectorLayoutTab({
           }}
         />
         {node.anchorName ? (
-          <span style={{ fontSize: '0.7rem', color: '#94a3b8', marginTop: 4, display: 'block' }}>
-            링크: <code style={{ color: '#0f172a' }}>#{node.anchorName}</code>
+          <span className={styles.inspectorAnchorHint}>
+            {copy.anchorLinkPrefix}: <code className={styles.inspectorAnchorCode}>#{node.anchorName}</code>
           </span>
         ) : (
-          <span style={{ fontSize: '0.7rem', color: '#94a3b8', marginTop: 4, display: 'block' }}>
-            영문 소문자, 숫자, 하이픈만. 버튼 href에 <code>#name</code>으로 연결.
+          <span className={styles.inspectorAnchorHint}>
+            {copy.anchorHelp}
           </span>
         )}
       </div>

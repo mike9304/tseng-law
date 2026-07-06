@@ -110,11 +110,11 @@ export default function SiteSearchEnhancer() {
           setBusy(true);
           showStatus(locale.startsWith('zh') ? '搜尋中...' : locale.startsWith('en') ? 'Searching...' : '검색 중...');
           const res = await fetch(`/api/search?${params.toString()}`, { signal: controller.signal });
+          const payload = (await res.json().catch(() => ({}))) as { hits?: SearchHit[]; error?: string };
           if (!res.ok) {
-            showStatus(locale.startsWith('zh') ? '搜尋暫時無法使用' : locale.startsWith('en') ? 'Search is temporarily unavailable' : '검색을 일시적으로 사용할 수 없습니다.');
+            showStatus(payload.error || (locale.startsWith('zh') ? '搜尋暫時無法使用' : locale.startsWith('en') ? 'Search is temporarily unavailable' : '검색을 일시적으로 사용할 수 없습니다.'));
             return;
           }
-          const payload = (await res.json()) as { hits?: SearchHit[] };
           const hits = payload.hits ?? [];
           if (hits.length === 0) {
             showEmpty();

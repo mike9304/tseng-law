@@ -10,14 +10,17 @@ import {
   type KeyboardEvent as ReactKeyboardEvent,
 } from 'react';
 import type { BuilderColorValue, ThemeColorToken } from '@/lib/builder/site/theme';
-import { THEME_COLOR_LABELS, isThemeColorReference } from '@/lib/builder/site/theme';
+import { isThemeColorReference } from '@/lib/builder/site/theme';
 import {
   getColorBindingIndicator,
-  getThemeBindingBadgeStyle,
   type ThemeBindingIndicator,
 } from '@/lib/builder/site/theme-bindings';
 import { contrastRatio, normalizeHexColor, wcagLevel } from '@/lib/builder/site/theme/contrast';
 import { pushRecentColor, readRecentColors, writeRecentColors } from '@/lib/builder/site/theme/recent-colors';
+import type { Locale } from '@/lib/locales';
+import { getColorPickerCopy, type ColorPickerCopy } from '@/components/builder/editor/color-picker-copy';
+import ThemeBindingBadge from '@/components/builder/editor/ThemeBindingBadge';
+import styles from './ColorPickerAdvanced.module.css';
 
 export interface ThemeSwatch {
   token: ThemeColorToken;
@@ -32,10 +35,16 @@ export interface ColorPickerProps {
   paletteTokens?: ThemeSwatch[];
   disabled?: boolean;
   enableContrast?: boolean;
+  locale?: Locale;
 }
 
 type EyeDropperConstructor = new () => {
   open: () => Promise<{ sRGBHex: string }>;
+};
+
+type ColorPickerStyleVars = CSSProperties & {
+  '--color-picker-current'?: string;
+  '--color-picker-swatch'?: string;
 };
 
 const FOCUSABLE_SELECTOR = [
@@ -84,84 +93,36 @@ function getEyeDropper(): EyeDropperConstructor | null {
   return candidate ?? null;
 }
 
-const wrapperStyle: CSSProperties = {
-  position: 'relative',
-  display: 'inline-flex',
-  width: '100%',
-  minWidth: 0,
-};
+function localizeColorBindingIndicator(
+  indicator: ThemeBindingIndicator,
+  value: BuilderColorValue | undefined,
+  copy: ColorPickerCopy,
+): ThemeBindingIndicator {
+  if (isThemeColorReference(value)) {
+    const tokenLabel = copy.themeColorLabels[value.token];
+    return {
+      label: copy.colorBindingBadge.linked.label,
+      tone: indicator.tone,
+      title: copy.colorBindingBadge.linked.title(tokenLabel),
+    };
+  }
 
-const triggerStyle: CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: '24px minmax(0, 1fr) auto',
-  alignItems: 'center',
-  gap: 8,
-  width: '100%',
-  minHeight: 36,
-  padding: '6px 9px',
-  border: '1px solid #cbd5e1',
-  borderRadius: 10,
-  background: '#fff',
-  color: '#0f172a',
-  cursor: 'pointer',
-};
-
-const panelStyle: CSSProperties = {
-  position: 'absolute',
-  top: 'calc(100% + 8px)',
-  left: 0,
-  zIndex: 70,
-  display: 'grid',
-  gap: 12,
-  width: 320,
-  maxWidth: 'min(320px, calc(100vw - 32px))',
-  padding: 14,
-  border: '1px solid rgba(15, 23, 42, 0.12)',
-  borderRadius: 16,
-  background: '#fff',
-  boxShadow: '0 24px 60px rgba(15, 23, 42, 0.22)',
-};
-
-const labelStyle: CSSProperties = {
-  color: '#64748b',
-  fontSize: 11,
-  fontWeight: 850,
-  letterSpacing: '0.04em',
-  textTransform: 'uppercase',
-};
-
-const textInputStyle: CSSProperties = {
-  width: '100%',
-  minHeight: 34,
-  padding: '7px 10px',
-  border: '1px solid #cbd5e1',
-  borderRadius: 9,
-  color: '#0f172a',
-  fontFamily: 'JetBrains Mono, SFMono-Regular, Consolas, monospace',
-  fontSize: 12,
-  outline: 'none',
-  boxSizing: 'border-box',
-};
-
-function ThemeBindingBadge({ indicator }: { indicator: ThemeBindingIndicator }) {
-  return (
-    <span title={indicator.title} style={getThemeBindingBadgeStyle(indicator.tone)}>
-      {indicator.label}
-    </span>
-  );
+  return {
+    label: copy.colorBindingBadge.detached.label,
+    tone: indicator.tone,
+    title: copy.colorBindingBadge.detached.title(),
+  };
 }
 
-function swatchButtonStyle(color: string, active: boolean): CSSProperties {
+function colorSwatchStyle(color: string): ColorPickerStyleVars {
   return {
-    width: 26,
-    height: 26,
-    border: active ? '2px solid #116dff' : '1px solid rgba(15, 23, 42, 0.18)',
-    borderRadius: 8,
-    outline: active ? '2px solid rgba(17, 109, 255, 0.18)' : 'none',
-    outlineOffset: 2,
-    background: color,
-    cursor: 'pointer',
-    padding: 0,
+    '--color-picker-swatch': color,
+  };
+}
+
+function currentColorStyle(color: string): ColorPickerStyleVars {
+  return {
+    '--color-picker-current': color,
   };
 }
 
@@ -181,6 +142,7 @@ export default function ColorPickerAdvanced({
   paletteTokens,
   disabled = false,
   enableContrast = true,
+  locale = 'ko',
 }: ColorPickerProps) {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
@@ -191,6 +153,7 @@ export default function ColorPickerAdvanced({
   const [textValue, setTextValue] = useState(colorToText(value));
   const [recentColors, setRecentColors] = useState<string[]>([]);
   const [eyeDropperError, setEyeDropperError] = useState<string | null>(null);
+  const copy = getColorPickerCopy(locale);
   const normalizedTokens = useMemo(() => paletteTokens ?? [], [paletteTokens]);
   const fallbackPaletteColors = useMemo(() => normalizeFallbackPalette(palette), [palette]);
   const currentColor = resolveCurrentColor(value, normalizedTokens);
@@ -203,6 +166,7 @@ export default function ColorPickerAdvanced({
   const level = wcagLevel(ratio);
   const activeToken = isThemeColorReference(value) ? value.token : null;
   const bindingIndicator = getColorBindingIndicator(value);
+  const bindingIndicatorDisplay = localizeColorBindingIndicator(bindingIndicator, value, copy);
   const EyeDropper = getEyeDropper();
 
   const closePopover = () => {
@@ -310,19 +274,21 @@ export default function ColorPickerAdvanced({
       commitCustomColor(result.sRGBHex);
       setEyeDropperError(null);
     } catch {
-      setEyeDropperError('EyeDropper cancelled or unavailable.');
+      setEyeDropperError(copy.eyeDropperError);
     }
   };
 
   const renderSwatches = (items: Array<{ key: string; label: string; color: string; token?: ThemeColorToken }>) => (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(8, 26px)', gap: 8 }}>
+    <div className={styles.swatchGrid}>
       {items.map((item) => (
         <button
           key={item.key}
           type="button"
+          className={styles.swatchButton}
           title={`${item.label} · ${item.color}`}
           disabled={disabled}
-          style={swatchButtonStyle(item.color, item.token ? activeToken === item.token : item.color === currentHex)}
+          data-active={(item.token ? activeToken === item.token : item.color === currentHex) ? 'true' : undefined}
+          style={colorSwatchStyle(item.color)}
           onClick={() => {
             if (item.token) {
               onChange({ kind: 'token', token: item.token });
@@ -336,12 +302,12 @@ export default function ColorPickerAdvanced({
   );
 
   return (
-    <div ref={wrapperRef} style={wrapperStyle} data-color-picker-advanced>
+    <div ref={wrapperRef} className={styles.root} data-color-picker-advanced>
       <button
         ref={triggerRef}
         type="button"
         disabled={disabled}
-        style={{ ...triggerStyle, opacity: disabled ? 0.6 : 1 }}
+        className={styles.trigger}
         onClick={() => {
           if (open) {
             closePopover();
@@ -350,63 +316,63 @@ export default function ColorPickerAdvanced({
           setOpen(true);
         }}
       >
-        <span style={{ width: 24, height: 24, borderRadius: 7, border: '1px solid #cbd5e1', background: currentColor }} />
-        <span style={{ minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: 12, fontWeight: 800 }}>
+        <span className={styles.triggerSwatch} style={currentColorStyle(currentColor)} />
+        <span className={styles.triggerValue}>
           {colorToText(value) || currentColor}
         </span>
-        <ThemeBindingBadge indicator={bindingIndicator} />
+        <ThemeBindingBadge indicator={bindingIndicatorDisplay} />
       </button>
 
       {open ? (
         <div
           ref={panelRef}
-          style={panelStyle}
+          className={styles.panel}
           role="dialog"
-          aria-label="Advanced color picker"
+          aria-label={copy.dialogAriaLabel}
           tabIndex={-1}
           data-builder-color-picker-dialog="true"
           data-builder-popover-dialog="true"
           onKeyDownCapture={handlePanelKeyDown}
         >
-          <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10 }}>
-            <div style={{ display: 'grid', gap: 4 }}>
-              <strong style={{ color: '#0f172a', fontSize: 13 }}>Color</strong>
-              <span style={{ color: '#64748b', fontSize: 11 }}>Theme-linked, detached, recent, and WCAG checks</span>
+          <div className={styles.panelHeader}>
+            <div className={styles.panelTitleStack}>
+              <strong className={styles.panelTitle}>{copy.title}</strong>
+              <span className={styles.panelDescription}>{copy.description}</span>
             </div>
-            <ThemeBindingBadge indicator={bindingIndicator} />
+            <ThemeBindingBadge indicator={bindingIndicatorDisplay} />
           </div>
 
           {normalizedTokens.length > 0 ? (
-            <div style={{ display: 'grid', gap: 7 }}>
-              <span style={labelStyle}>Theme palette</span>
+            <div className={styles.section}>
+              <span className={styles.sectionLabel}>{copy.themePaletteLabel}</span>
               {renderSwatches(normalizedTokens.map((item) => ({
                 key: item.token,
                 token: item.token,
                 color: item.color,
-                label: item.label ?? THEME_COLOR_LABELS[item.token],
+                label: copy.themeColorLabels[item.token] ?? item.label ?? item.token,
               })))}
             </div>
           ) : fallbackPaletteColors.length > 0 ? (
-            <div style={{ display: 'grid', gap: 7 }}>
-              <span style={labelStyle}>Palette</span>
+            <div className={styles.section}>
+              <span className={styles.sectionLabel}>{copy.paletteLabel}</span>
               {renderSwatches(fallbackPaletteColors.map((color) => ({ key: color, color, label: color })))}
             </div>
           ) : null}
 
           {recentColors.length > 0 ? (
-            <div style={{ display: 'grid', gap: 7 }}>
-              <span style={labelStyle}>Recent</span>
+            <div className={styles.section}>
+              <span className={styles.sectionLabel}>{copy.recentLabel}</span>
               {renderSwatches(recentColors.map((color) => ({ key: color, color, label: color })))}
             </div>
           ) : null}
 
-          <div style={{ display: 'grid', gridTemplateColumns: '44px minmax(0, 1fr)', gap: 8 }}>
+          <div className={styles.colorInputRow}>
             <input
-              aria-label="Native color value"
+              aria-label={copy.nativeColorAriaLabel}
               type="color"
               value={currentHex}
               disabled={disabled}
-              style={{ width: 44, height: 34, padding: 2, border: '1px solid #cbd5e1', borderRadius: 9, background: '#fff' }}
+              className={styles.nativeColorInput}
               onChange={(event) => commitCustomColor(event.target.value)}
             />
             <input
@@ -414,8 +380,8 @@ export default function ColorPickerAdvanced({
               type="text"
               value={textValue}
               disabled={disabled}
-              placeholder="#123b63 or hsl(211 70% 40%)"
-              style={textInputStyle}
+              placeholder={copy.customColorPlaceholder}
+              className={styles.textInput}
               onChange={(event) => {
                 const nextValue = event.target.value;
                 setTextValue(nextValue);
@@ -431,39 +397,28 @@ export default function ColorPickerAdvanced({
             />
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+          <div className={styles.actionRow}>
             <button
               type="button"
               disabled={!EyeDropper || disabled}
-              title={EyeDropper ? 'Pick a color from the screen' : 'EyeDropper is unavailable in this browser'}
-              style={{
-                minHeight: 30,
-                padding: '0 10px',
-                border: '1px solid #cbd5e1',
-                borderRadius: 9,
-                background: EyeDropper ? '#f8fafc' : '#f1f5f9',
-                color: EyeDropper ? '#0f172a' : '#94a3b8',
-                fontSize: 12,
-                fontWeight: 800,
-                cursor: EyeDropper ? 'pointer' : 'not-allowed',
-              }}
+              title={EyeDropper ? copy.eyeDropperPickTitle : copy.eyeDropperUnavailableTitle}
+              className={styles.eyeDropperButton}
               onClick={pickEyeDropper}
             >
-              EyeDropper
+              {copy.eyeDropperLabel}
             </button>
             {enableContrast ? (
-              <span
-                title={`Against ${backgroundHex}`}
-                style={{
-                  ...getThemeBindingBadgeStyle(level === 'fail' ? 'custom' : 'linked'),
-                  textTransform: 'none',
+              <ThemeBindingBadge
+                textCase="normal"
+                indicator={{
+                  label: ratio ? `${ratio.toFixed(2)}:1 ${copy.wcagLevelLabels[level]}` : copy.contrastUnavailableLabel,
+                  tone: level === 'fail' ? 'custom' : 'linked',
+                  title: copy.contrastAgainstTitle(backgroundHex),
                 }}
-              >
-                {ratio ? `${ratio.toFixed(2)}:1 ${level}` : 'Contrast n/a'}
-              </span>
+              />
             ) : null}
           </div>
-          {eyeDropperError ? <span style={{ color: '#92400e', fontSize: 11 }}>{eyeDropperError}</span> : null}
+          {eyeDropperError ? <span className={styles.errorText}>{eyeDropperError}</span> : null}
         </div>
       ) : null}
     </div>

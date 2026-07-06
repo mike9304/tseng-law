@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  getBuilderPortfolioApiErrorPayload,
+  type BuilderPortfolioApiErrorCode,
+} from '@/lib/builder/portfolio/portfolio-api-copy';
 import {
   deleteProject,
   loadProject,
@@ -38,57 +43,93 @@ const patchSchema = z.object({
   seoDescription: z.string().trim().max(320).optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+function requestLocale(request: NextRequest, input?: unknown): Locale {
+  if (typeof input === 'string') return normalizeLocale(input);
+  return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+}
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderPortfolioApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    {
+      ok: false,
+      ...getBuilderPortfolioApiErrorPayload(locale, errorCode),
+      ...(extra ?? {}),
+    },
+    { status },
   );
 }
 
+function validationErrorResponse(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
 export async function GET(request: NextRequest, { params }: { params: { projectId: string } }) {
+  const locale = requestLocale(request);
   const scope = request.nextUrl.searchParams.get('scope') ?? 'public';
   if (scope === 'all') {
     const auth = requireBuilderAdminAuth(request);
     if (auth instanceof NextResponse) return auth;
   }
 
-  const project = await loadProject(params.projectId);
-  if (!project || (scope !== 'all' && project.status !== 'published')) {
-    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  try {
+    const project = await loadProject(params.projectId);
+    if (!project || (scope !== 'all' && project.status !== 'published')) {
+      return errorResponse(locale, 'portfolio_project_not_found', 404);
+    }
+    return NextResponse.json({ ok: true, project });
+  } catch (error) {
+    console.error('[builder/portfolio/:projectId] GET failed:', error);
+    return errorResponse(locale, 'portfolio_load_failed', 500);
   }
-  return NextResponse.json({ ok: true, project });
 }
 
 export async function PATCH(request: NextRequest, { params }: { params: { projectId: string } }) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = requestLocale(request);
+
   try {
     const project = await loadProject(params.projectId);
-    if (!project) return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
-    const patch = patchSchema.parse(await request.json());
+    if (!project) return errorResponse(locale, 'portfolio_project_not_found', 404);
+
+    let body: unknown;
+    try {
+      body = await request.json();
+    } catch (error) {
+      console.error('[builder/portfolio/:projectId] PATCH JSON parse failed:', error);
+      return errorResponse(locale, 'invalid_json', 400);
+    }
+
+    const patch = patchSchema.parse(body);
     const saved = await saveProject({ ...project, ...patch });
     const errors = validateProject(saved);
     if (errors.length > 0) {
-      return NextResponse.json({ ok: false, error: 'validation_error', errors }, { status: 400 });
+      return errorResponse(locale, 'validation_error', 400);
     }
     return NextResponse.json({ ok: true, project: saved });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
-    if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
-    }
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
     console.error('[builder/portfolio/:projectId] PATCH failed:', error);
-    return NextResponse.json(
-      { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
-      { status: 500 },
-    );
+    return errorResponse(locale, 'portfolio_update_failed', 500);
   }
 }
 
 export async function DELETE(request: NextRequest, { params }: { params: { projectId: string } }) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
-  await deleteProject(params.projectId);
-  return NextResponse.json({ ok: true });
+  const locale = requestLocale(request);
+
+  try {
+    await deleteProject(params.projectId);
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error('[builder/portfolio/:projectId] DELETE failed:', error);
+    return errorResponse(locale, 'portfolio_delete_failed', 500);
+  }
 }

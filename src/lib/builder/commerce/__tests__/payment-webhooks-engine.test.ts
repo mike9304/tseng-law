@@ -107,6 +107,7 @@ describe('commerce payment webhooks engine', () => {
       event: { status: 'processed', orderId: order.orderId },
       order: { orderId: order.orderId },
     });
+    expect(result.event.signatureVerified).toBe(false);
     const loaded = await loadOrder(order.orderId);
     expect(loaded?.payment.status).toBe('paid');
     expect(loaded?.audit.some((event) => event.type === 'payment.webhook.applied')).toBe(true);
@@ -124,6 +125,53 @@ describe('commerce payment webhooks engine', () => {
     expect(duplicate).toMatchObject({ duplicate: true, changed: false, reason: 'duplicate_event' });
     const afterDuplicate = await loadOrder(order.orderId);
     expect(afterDuplicate?.audit.filter((event) => event.type === 'payment.webhook.applied')).toHaveLength(1);
+  });
+
+  it('stores explicit verification state when provided by the caller', async () => {
+    const result = await receivePaymentWebhookEvent({
+      provider: 'sandbox-card',
+      providerEventId: 'evt_f68_verified',
+      eventType: 'payment_intent.succeeded',
+      paymentReferenceId: 'pi_f68_verified',
+      paymentStatus: 'paid',
+      amountCents: 1000,
+      currency: 'TWD',
+      signatureVerified: true,
+      payload: {},
+    });
+
+    expect(result.event.signatureVerified).toBe(true);
+    expect((await listPaymentWebhookEvents())[0]?.signatureVerified).toBe(true);
+  });
+
+  it('persists balance transaction fee metadata from normalized payloads', async () => {
+    const result = await receivePaymentWebhookEvent({
+      provider: 'sandbox-card',
+      providerEventId: 'evt_f68_fee_metadata',
+      eventType: 'payment_intent.succeeded',
+      paymentReferenceId: 'pi_f68_fee_metadata',
+      paymentStatus: 'paid',
+      amountCents: 1234,
+      currency: 'TWD',
+      feeCents: 44,
+      netAmountCents: 1190,
+      balanceTransactionId: 'bt_f68_fee_metadata',
+      signatureVerified: true,
+      payload: {},
+    });
+
+    expect(result.event).toMatchObject({
+      feeCents: 44,
+      netAmountCents: 1190,
+      balanceTransactionId: 'bt_f68_fee_metadata',
+    });
+    expect(await listPaymentWebhookEvents()).toMatchObject([
+      {
+        feeCents: 44,
+        netAmountCents: 1190,
+        balanceTransactionId: 'bt_f68_fee_metadata',
+      },
+    ]);
   });
 
   it('keeps unmatched events replayable and blocks amount/currency mismatch', async () => {

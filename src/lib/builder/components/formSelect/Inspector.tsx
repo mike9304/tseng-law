@@ -4,17 +4,17 @@ import {
   FORM_INPUT_VARIANTS,
   normalizeFormInputVariantKey,
 } from '@/lib/builder/site/component-variants';
+import {
+  FORM_SELECT_KO_DEFAULTS,
+  getFormControlsCopy,
+  localizedFormControlText,
+  localizedFormSelectOptionLabel,
+} from '../form/form-controls-copy';
+import styles from '../form/FormControlInspector.module.css';
 
-const selectStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '4px 6px',
-  fontSize: '0.85rem',
-  border: '1px solid #e2e8f0',
-  borderRadius: 6,
-  background: '#fff',
-};
+type FormControlsCopy = ReturnType<typeof getFormControlsCopy>;
 
-function parseOptions(value: string) {
+function parseOptions(value: string, copy: FormControlsCopy) {
   const options = value
     .split('\n')
     .map((line) => line.trim())
@@ -27,78 +27,87 @@ function parseOptions(value: string) {
         label: (labelParts.join('|').trim() || optionValue).slice(0, 200),
       };
     });
-  return options.length > 0 ? options : [{ value: 'option-1', label: '옵션 1' }];
+  return options.length > 0 ? options : [{ value: 'option-1', label: copy.fieldInspector.selectFallbackOptionLabel }];
 }
 
-function stringifyOptions(options: Array<{ value: string; label: string }>) {
-  return options.map((option) => `${option.value}|${option.label}`).join('\n');
+function stringifyOptions(options: Array<{ value: string; label: string }>, copy: FormControlsCopy) {
+  return options
+    .map((option) => `${option.value}|${localizedFormSelectOptionLabel(option.label, copy.fieldDefaults.selectOptionLabel)}`)
+    .join('\n');
 }
 
 export default function FormSelectInspector({
   node,
+  locale,
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const selectNode = node as BuilderFormSelectCanvasNode;
   const c = selectNode.content;
+  const copy = getFormControlsCopy(locale ?? 'ko');
+  const label = localizedFormControlText(c.label, copy.fieldDefaults.selectLabel, FORM_SELECT_KO_DEFAULTS.label);
+  const placeholder = localizedFormControlText(
+    c.placeholder,
+    copy.fieldDefaults.selectPlaceholder,
+    FORM_SELECT_KO_DEFAULTS.placeholder,
+  );
 
   return (
-    <>
+    <div className={styles.root} data-builder-form-field-inspector="select">
       <label>
-        <span>Field name</span>
+        <span>{copy.fieldInspector.fieldNameLabel}</span>
         <input type="text" value={c.name} disabled={disabled} onChange={(event) => onUpdate({ name: event.target.value })} />
       </label>
       <label>
-        <span>Label</span>
-        <input type="text" value={c.label} disabled={disabled} onChange={(event) => onUpdate({ label: event.target.value })} />
+        <span>{copy.fieldInspector.labelLabel}</span>
+        <input type="text" value={label} disabled={disabled} onChange={(event) => onUpdate({ label: event.target.value })} />
       </label>
       <label>
-        <span>Input variant</span>
+        <span>{copy.fieldInspector.inputVariantLabel}</span>
         <select
-          style={selectStyle}
           value={normalizeFormInputVariantKey(c.variant)}
           disabled={disabled}
           onChange={(event) => onUpdate({ variant: event.target.value })}
         >
           {FORM_INPUT_VARIANTS.map((variant) => (
             <option key={variant.key} value={variant.key}>
-              {variant.label}
+              {copy.fieldInspector.inputVariantLabels[variant.key]}
             </option>
           ))}
         </select>
       </label>
       <label>
-        <span>Placeholder</span>
-        <input type="text" value={c.placeholder ?? ''} disabled={disabled} onChange={(event) => onUpdate({ placeholder: event.target.value || undefined })} />
+        <span>{copy.fieldInspector.placeholderLabel}</span>
+        <input type="text" value={placeholder} disabled={disabled} onChange={(event) => onUpdate({ placeholder: event.target.value || undefined })} />
       </label>
       <label>
-        <span>Options (value|label per line)</span>
+        <span>{copy.fieldInspector.optionsLabel}</span>
         <textarea
           rows={5}
-          value={stringifyOptions(c.options)}
+          value={stringifyOptions(c.options, copy)}
           disabled={disabled}
-          onChange={(event) => onUpdate({ options: parseOptions(event.target.value) })}
+          onChange={(event) => onUpdate({ options: parseOptions(event.target.value, copy) })}
         />
       </label>
       <label>
-        <span>Default value</span>
+        <span>{copy.fieldInspector.defaultValueLabel}</span>
         <input type="text" value={c.defaultValue ?? ''} disabled={disabled} onChange={(event) => onUpdate({ defaultValue: event.target.value || undefined })} />
       </label>
       <label>
-        <span>Required</span>
+        <span>{copy.fieldInspector.requiredLabel}</span>
         <input type="checkbox" checked={c.required} disabled={disabled} onChange={(event) => onUpdate({ required: event.target.checked })} />
       </label>
       <label>
-        <span>Multiple</span>
+        <span>{copy.fieldInspector.multipleLabel}</span>
         <input type="checkbox" checked={c.multiple} disabled={disabled} onChange={(event) => onUpdate({ multiple: event.target.checked })} />
       </label>
       <label>
-        <span>Show if field</span>
+        <span>{copy.fieldInspector.showIfFieldLabel}</span>
         <input
           type="text"
           value={c.showIf?.fieldName ?? ''}
           disabled={disabled}
-          placeholder="caseType"
+          placeholder={copy.fieldInspector.conditionalFieldPlaceholder}
           onChange={(event) =>
             onUpdate({
               showIf: event.target.value
@@ -111,30 +120,29 @@ export default function FormSelectInspector({
       {c.showIf ? (
         <>
           <label>
-            <span>Condition</span>
+            <span>{copy.fieldInspector.conditionLabel}</span>
             <select
-              style={selectStyle}
               value={c.showIf.operator}
               disabled={disabled}
               onChange={(event) => onUpdate({ showIf: { ...c.showIf, operator: event.target.value } })}
             >
-              <option value="equals">equals</option>
-              <option value="notEquals">not equals</option>
-              <option value="contains">contains</option>
-              <option value="isEmpty">is empty</option>
-              <option value="isNotEmpty">is not empty</option>
+              <option value="equals">{copy.fieldInspector.conditionOptions.equals}</option>
+              <option value="notEquals">{copy.fieldInspector.conditionOptions.notEquals}</option>
+              <option value="contains">{copy.fieldInspector.conditionOptions.contains}</option>
+              <option value="isEmpty">{copy.fieldInspector.conditionOptions.isEmpty}</option>
+              <option value="isNotEmpty">{copy.fieldInspector.conditionOptions.isNotEmpty}</option>
             </select>
           </label>
           <label>
-            <span>Condition value</span>
+            <span>{copy.fieldInspector.conditionValueLabel}</span>
             <input type="text" value={c.showIf.value ?? ''} disabled={disabled} onChange={(event) => onUpdate({ showIf: { ...c.showIf, value: event.target.value } })} />
           </label>
         </>
       ) : null}
       <label>
-        <span>Custom error</span>
+        <span>{copy.fieldInspector.customErrorLabel}</span>
         <input type="text" value={c.errorMessage ?? ''} disabled={disabled} onChange={(event) => onUpdate({ errorMessage: event.target.value })} />
       </label>
-    </>
+    </div>
   );
 }

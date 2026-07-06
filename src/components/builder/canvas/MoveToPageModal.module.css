@@ -1,0 +1,115 @@
+.error {
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 0.78rem;
+}
+
+.targetList {
+  max-height: 360px;
+  overflow: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.emptyState {
+  padding: 24px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.targetButton {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 0;
+  border-bottom: 1px solid #f1f5f9;
+  background: transparent;
+  color: #0f172a;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+  text-align: left;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.targetButton:last-child {
+  border-bottom: 0;
+}
+
+.targetButton:hover:not(:disabled),
+.targetButton:focus-visible {
+  background: #f8fafc;
+}
+
+.targetButton:focus-visible {
+  outline: 3px solid rgba(17, 109, 255, 0.18);
+  outline-offset: -3px;
+}
+
+.targetButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+.targetIcon {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: #eff6ff;
+  color: #123b63;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.targetText {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.targetTitle {
+  display: block;
+  overflow: hidden;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.targetMeta {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.72rem;
+}
+
+.status {
+  margin-top: 12px;
+  color: #94a3b8;
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+.status[data-tone='moving'] {
+  color: #64748b;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 520px) {
+  .targetList {
+    max-height: 52vh;
+  }
+
+  .targetButton {
+    align-items: flex-start;
+    padding: 12px;
+  }
+}

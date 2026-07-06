@@ -8,13 +8,15 @@ import type {
 import {
   getBuilderBindableTarget,
   getBuilderBindableTargets,
-  type BuilderDatasetSampleRecord,
 } from '@/lib/builder/datasets';
 import { resolveBuilderDatasetPreviewRecord } from '@/lib/builder/dataset-preview-binding';
+import RepeaterMultiRecordPreview from '@/components/builder/canvas/RepeaterMultiRecordPreview';
 import {
   getBuilderDataBindingFieldOptions,
   resolveBuilderStaleDataBindingFields,
 } from '@/lib/builder/dataset-binding-validation';
+import { buildRepeaterRecordComparisonModel } from './repeater-record-comparison';
+import type { Locale } from '@/lib/locales';
 import type {
   BuilderDatasetTargetId,
   BuilderPageDatasetFilter,
@@ -28,45 +30,14 @@ import {
   ToggleRow,
 } from './InspectorControls';
 import { useBuilderDatasetPreviewTargets } from './BuilderDatasetPreviewContext';
+import {
+  getSandboxDataBindingPanelCopy,
+  type DataBindingBindableNodeKind,
+  type DataBindingFieldControl,
+  type SandboxDataBindingPanelCopy,
+} from './sandbox-data-binding-panel-copy';
 
-type BindableNodeKind = 'text' | 'heading' | 'image' | 'button' | 'gallery' | 'container';
-
-interface BindingFieldControl {
-  key: keyof BuilderDataBindingFieldMap;
-  label: string;
-  hint: string;
-}
-
-const FIELD_CONTROLS_BY_KIND: Record<BindableNodeKind, BindingFieldControl[]> = {
-  text: [
-    { key: 'text', label: 'Text', hint: 'content' },
-    { key: 'href', label: 'Link', hint: 'href' },
-  ],
-  heading: [
-    { key: 'text', label: 'Text', hint: 'content' },
-  ],
-  image: [
-    { key: 'src', label: 'Image', hint: 'src' },
-    { key: 'alt', label: 'Alt', hint: 'text' },
-    { key: 'href', label: 'Link', hint: 'href' },
-  ],
-  gallery: [
-    { key: 'src', label: 'Images', hint: 'src' },
-    { key: 'alt', label: 'Alt', hint: 'text' },
-    { key: 'caption', label: 'Caption', hint: 'text' },
-  ],
-  container: [
-    { key: 'title', label: 'Item title', hint: 'text' },
-    { key: 'description', label: 'Item copy', hint: 'text' },
-    { key: 'src', label: 'Item image', hint: 'src' },
-  ],
-  button: [
-    { key: 'label', label: 'Label', hint: 'text' },
-    { key: 'href', label: 'Link', hint: 'href' },
-  ],
-};
-
-function isBindableNode(node: BuilderCanvasNode): node is BuilderCanvasNode & { kind: BindableNodeKind } {
+function isBindableNode(node: BuilderCanvasNode): node is BuilderCanvasNode & { kind: DataBindingBindableNodeKind } {
   return (
     node.kind === 'text'
     || node.kind === 'heading'
@@ -120,7 +91,7 @@ function resolveStaleFieldRows(
   node: BuilderCanvasNode,
   targetId: BuilderDatasetTargetId,
   fields: BuilderDataBindingFieldMap,
-  controls: readonly BindingFieldControl[],
+  controls: readonly DataBindingFieldControl[],
 ) {
   const labelsByKey = new Map(controls.map((control) => [control.key, control.label] as const));
   return resolveBuilderStaleDataBindingFields({
@@ -140,8 +111,9 @@ function resolveStaleFieldRows(
 function getDatasetFilterFieldLabel(
   targetId: BuilderDatasetTargetId,
   fieldId: string | undefined,
+  copy: SandboxDataBindingPanelCopy,
 ): string {
-  if (!fieldId) return 'field';
+  if (!fieldId) return copy.fieldFallbackLabel;
   const field = getBuilderBindableTarget(targetId).filterFields.find(
     (candidate) => candidate.fieldId === fieldId
   );
@@ -151,8 +123,9 @@ function getDatasetFilterFieldLabel(
 function getDatasetSortFieldLabel(
   targetId: BuilderDatasetTargetId,
   fieldId: string | undefined,
+  copy: SandboxDataBindingPanelCopy,
 ): string {
-  if (!fieldId) return 'field';
+  if (!fieldId) return copy.fieldFallbackLabel;
   const field = getBuilderBindableTarget(targetId).sortFields.find(
     (candidate) => candidate.fieldId === fieldId
   );
@@ -162,14 +135,15 @@ function getDatasetSortFieldLabel(
 function formatDatasetFilterSummary(
   targetId: BuilderDatasetTargetId,
   filters: readonly BuilderPageDatasetFilter[] | undefined,
+  copy: SandboxDataBindingPanelCopy,
 ): string {
   const activeFilters = (filters ?? []).filter((filter) => filter.fieldId && filter.value);
-  if (activeFilters.length === 0) return 'none';
-  if (activeFilters.length > 1) return `${activeFilters.length} active`;
+  if (activeFilters.length === 0) return copy.noneSummary;
+  if (activeFilters.length > 1) return copy.activeFilterSummary(activeFilters.length);
 
   const filter = activeFilters[0]!;
-  const fieldLabel = getDatasetFilterFieldLabel(targetId, filter.fieldId);
-  const operatorLabel = filter.operator === 'equals' ? '=' : 'contains';
+  const fieldLabel = getDatasetFilterFieldLabel(targetId, filter.fieldId, copy);
+  const operatorLabel = filter.operator === 'equals' ? '=' : copy.containsOperatorLabel;
   const value = filter.value.length > 24 ? `${filter.value.slice(0, 24)}...` : filter.value;
   return `${fieldLabel} ${operatorLabel} ${value}`;
 }
@@ -177,16 +151,17 @@ function formatDatasetFilterSummary(
 function formatDatasetSortSummary(
   targetId: BuilderDatasetTargetId,
   sort: readonly BuilderPageDatasetSort[] | undefined,
+  copy: SandboxDataBindingPanelCopy,
 ): string {
   const activeSort = (sort ?? []).filter((rule) => rule.fieldId && rule.direction);
-  if (activeSort.length === 0) return 'none';
-  if (activeSort.length > 1) return `${activeSort.length} rules`;
+  if (activeSort.length === 0) return copy.noneSummary;
+  if (activeSort.length > 1) return copy.sortRuleSummary(activeSort.length);
 
   const rule = activeSort[0]!;
-  return `${getDatasetSortFieldLabel(targetId, rule.fieldId)} ${rule.direction.toUpperCase()}`;
+  return `${getDatasetSortFieldLabel(targetId, rule.fieldId, copy)} ${copy.sortDirectionLabel(rule.direction)}`;
 }
 
-function readRepeaterChildMappingRows(targetId: BuilderDatasetTargetId) {
+function readRepeaterChildMappingRows(targetId: BuilderDatasetTargetId, copy: SandboxDataBindingPanelCopy) {
   const target = getBuilderBindableTarget(targetId);
   const fieldsById = new Map(target.bindableFields.map((field) => [field.fieldId, field] as const));
   const firstTextField = target.bindableFields.find((field) => (field.valueKind ?? 'text') === 'text')?.fieldId;
@@ -203,39 +178,23 @@ function readRepeaterChildMappingRows(targetId: BuilderDatasetTargetId) {
 
   return [
     titleField
-      ? { label: 'Text / heading / button label', value: getDatasetFieldLabel(targetId, titleField) }
+      ? { label: copy.childMappingTextLabel, value: getDatasetFieldLabel(targetId, titleField) }
       : null,
     firstImageField
-      ? { label: 'Image source', value: getDatasetFieldLabel(targetId, firstImageField) }
+      ? { label: copy.childMappingImageSourceLabel, value: getDatasetFieldLabel(targetId, firstImageField) }
       : null,
     hrefField
-      ? { label: 'Button / image link', value: getDatasetFieldLabel(targetId, hrefField) }
+      ? { label: copy.childMappingLinkLabel, value: getDatasetFieldLabel(targetId, hrefField) }
       : null,
     summaryField && summaryField !== titleField
-      ? { label: 'Card copy / gallery caption', value: getDatasetFieldLabel(targetId, summaryField) }
+      ? { label: copy.childMappingCopyLabel, value: getDatasetFieldLabel(targetId, summaryField) }
       : null,
   ].filter((row): row is { label: string; value: string } => Boolean(row?.value));
 }
 
-function resolveRepeaterComparisonWindow(
-  records: readonly BuilderDatasetSampleRecord[],
-  currentIndex: number,
-): Array<{ index: number; record: BuilderDatasetSampleRecord }> {
-  if (records.length <= 1) return [];
-  const windowSize = Math.min(3, records.length);
-  const start = Math.min(
-    Math.max(0, currentIndex - 1),
-    Math.max(0, records.length - windowSize),
-  );
-  return records.slice(start, start + windowSize).map((record, offset) => ({
-    index: start + offset,
-    record,
-  }));
-}
-
-function truncateComparisonText(value: string | undefined): string {
+function truncateComparisonText(value: string | undefined, copy: SandboxDataBindingPanelCopy): string {
   const text = (value ?? '').trim();
-  if (!text) return 'Empty';
+  if (!text) return copy.emptyValue;
   return text.length > 72 ? `${text.slice(0, 72)}...` : text;
 }
 
@@ -244,6 +203,7 @@ export default function SandboxDataBindingPanel({
   childNodes = [],
   childNodeCount = 0,
   disabled = false,
+  locale = 'ko',
   onApplyRepeaterChildBindings,
   onUpdateDataBinding,
   previewRecordIndexOverride,
@@ -252,11 +212,13 @@ export default function SandboxDataBindingPanel({
   childNodes?: readonly BuilderCanvasNode[];
   childNodeCount?: number;
   disabled?: boolean;
+  locale?: Locale;
   onApplyRepeaterChildBindings?: (targetId: BuilderDatasetTargetId) => void;
   onUpdateDataBinding: (dataBinding: BuilderDataBinding | undefined) => void;
   previewRecordIndexOverride?: number;
 }) {
   const previewTargets = useBuilderDatasetPreviewTargets();
+  const copy = getSandboxDataBindingPanelCopy(locale);
 
   if (!isBindableNode(node)) return null;
 
@@ -267,7 +229,7 @@ export default function SandboxDataBindingPanel({
 
   const enabled = Boolean(activeBinding);
   const binding = normalizeBinding(activeBinding, targetId);
-  const controls = FIELD_CONTROLS_BY_KIND[node.kind];
+  const controls = copy.fieldControlsByKind[node.kind];
   const isRepeaterContainer = node.kind === 'container' && node.content.layoutMode === 'repeater';
   const targetDefinition = getBuilderBindableTarget(binding.targetId);
   const previewTarget = previewTargets.find((target) => target.targetId === binding.targetId);
@@ -278,6 +240,7 @@ export default function SandboxDataBindingPanel({
   const sourceFilters = previewTarget?.filters ?? [];
   const sourceSort = previewTarget?.sort ?? targetDefinition.defaultSort ?? [];
   const previewRecords = previewTarget?.records ?? [];
+  const repeaterPreviewLoading = isRepeaterContainer && enabled && !previewTarget;
   const recordMax = Math.max(1, previewRecords.length || 51);
   const hasInheritedPreviewRecord = typeof previewRecordIndexOverride === 'number';
   const previewRecordBinding = hasInheritedPreviewRecord
@@ -293,7 +256,7 @@ export default function SandboxDataBindingPanel({
     : [];
   const hasStaleFieldRows = staleFieldRows.length > 0;
   const repeaterChildMappingRows = isRepeaterContainer
-    ? readRepeaterChildMappingRows(binding.targetId)
+    ? readRepeaterChildMappingRows(binding.targetId, copy)
     : [];
   const effectiveChildNodeCount = childNodes.length || childNodeCount;
   const boundChildNodeCount = isRepeaterContainer
@@ -313,15 +276,21 @@ export default function SandboxDataBindingPanel({
         })
         .filter((row): row is { key: string; label: string; value: string } => row !== null)
     : [];
-  const repeaterComparisonFieldId = isRepeaterContainer
-    ? binding.fields.title ?? binding.fields.text ?? binding.fields.label ?? binding.fields.description
-    : undefined;
-  const repeaterComparisonFieldLabel = repeaterComparisonFieldId
-    ? getDatasetFieldLabel(binding.targetId, repeaterComparisonFieldId) ?? repeaterComparisonFieldId
-    : 'Primary';
-  const repeaterComparisonRows = isRepeaterContainer && enabled && !hasInheritedPreviewRecord
-    ? resolveRepeaterComparisonWindow(previewRecords, recordNumber - 1)
-    : [];
+  const repeaterComparisonModel = isRepeaterContainer && enabled && !hasInheritedPreviewRecord
+    ? buildRepeaterRecordComparisonModel({
+        childNodes,
+        containerFields: binding.fields,
+        currentIndex: recordNumber - 1,
+        emptyValue: copy.emptyValue,
+        records: previewRecords,
+        resolveFieldLabel: (fieldId) => getDatasetFieldLabel(binding.targetId, fieldId),
+        targetId: binding.targetId,
+      })
+    : { rows: [], fieldSummary: '' };
+  const repeaterComparisonRows = repeaterComparisonModel.rows;
+  const repeaterComparisonFieldLabel =
+    repeaterComparisonModel.fieldSummary || copy.repeaterComparisonPrimaryFallback;
+  const repeaterPreviewActiveRecordId = previewRecords[recordNumber - 1]?.recordId ?? previewRecords[0]?.recordId ?? '';
 
   const updateBinding = (next: BuilderDataBinding) => {
     onUpdateDataBinding({
@@ -332,26 +301,34 @@ export default function SandboxDataBindingPanel({
       ) as BuilderDataBindingFieldMap,
     });
   };
+  const handleRepeaterPreviewChange = (recordId: string) => {
+    const nextIndex = previewRecords.findIndex((record) => record.recordId === recordId);
+    if (nextIndex < 0) return;
+    updateBinding({
+      ...binding,
+      recordIndex: nextIndex,
+    });
+  };
 
   return (
-    <InspectorSection label="Data" title="Field binding">
+    <InspectorSection label={copy.sectionLabel} title={copy.sectionTitle}>
       <div data-builder-data-binding-panel="true" data-builder-data-binding-enabled={enabled ? 'true' : 'false'}>
         <InspectorNotice tone={hasStaleFieldRows ? 'detached' : enabled ? 'linked' : 'neutral'}>
           {hasStaleFieldRows
-            ? 'Dataset binding needs attention before publishing.'
+            ? copy.staleNotice
             : enabled
-              ? 'This element uses dataset fields at publish/runtime.'
-              : 'Bind this element to home insights or service records.'}
+              ? copy.enabledNotice
+              : copy.disabledNotice}
         </InspectorNotice>
 
         {enabled ? (
           <div className="insp-data-source-summary" data-builder-data-source-summary="true">
-            <span>Connected to: {targetDefinition.title}</span>
-            <span>Collection: {sourceCollectionId}</span>
-            <span>Limit: {sourceLimit ?? 'all'}</span>
-            <span>Filter: {formatDatasetFilterSummary(binding.targetId, sourceFilters)}</span>
-            <span>Sort: {formatDatasetSortSummary(binding.targetId, sourceSort)}</span>
-            <span>Published runtime: applied</span>
+            <span>{copy.connectedTo(targetDefinition.title)}</span>
+            <span>{copy.collectionSummary(sourceCollectionId)}</span>
+            <span>{copy.limitSummary(sourceLimit)}</span>
+            <span>{copy.filterSummary(formatDatasetFilterSummary(binding.targetId, sourceFilters, copy))}</span>
+            <span>{copy.sortSummary(formatDatasetSortSummary(binding.targetId, sourceSort, copy))}</span>
+            <span>{copy.publishedRuntimeApplied}</span>
           </div>
         ) : null}
 
@@ -361,8 +338,8 @@ export default function SandboxDataBindingPanel({
             data-builder-data-binding-warning="true"
             role="status"
           >
-            <strong>Missing or incompatible field</strong>
-            <span>Choose a replacement field below, or set the row to Not bound.</span>
+            <strong>{copy.staleWarningTitle}</strong>
+            <span>{copy.staleWarningBody}</span>
             <ul>
               {staleFieldRows.map((row) => (
                 <li key={row.key}>
@@ -373,18 +350,18 @@ export default function SandboxDataBindingPanel({
           </div>
         ) : null}
 
-        <LabeledRow label="Use data" hint="dataset">
+        <LabeledRow label={copy.useDataLabel} hint={copy.useDataHint}>
           <ToggleRow
             checked={enabled}
             disabled={disabled}
-            ariaLabel="Toggle dataset field binding"
+            ariaLabel={copy.toggleBindingAriaLabel}
             onChange={(next) => {
               onUpdateDataBinding(next ? binding : undefined);
             }}
           />
         </LabeledRow>
 
-        <LabeledRow label="Dataset" hint="source">
+        <LabeledRow label={copy.datasetLabel} hint={copy.datasetHint}>
           <select
             className="insp-select"
             data-builder-data-binding-target="true"
@@ -403,11 +380,11 @@ export default function SandboxDataBindingPanel({
           </select>
         </LabeledRow>
 
-        {previewRecords.length > 0 ? (
+        {enabled && previewRecords.length > 0 ? (
           <LabeledRow
-            label="Preview"
-            hint="record"
-            helper={enabled ? 'Switches only the editor preview record. It does not edit CMS data.' : undefined}
+            label={copy.previewLabel}
+            hint={copy.previewHint}
+            helper={enabled ? copy.previewHelper : undefined}
           >
             <select
               className="insp-select"
@@ -434,13 +411,13 @@ export default function SandboxDataBindingPanel({
           </LabeledRow>
         ) : null}
 
-        <LabeledRow label="Record" hint="row">
+        <LabeledRow label={copy.recordLabel} hint={copy.recordHint}>
           <NumberStepper
             value={recordNumber}
             min={1}
             max={recordMax}
             disabled={disabled || !enabled || hasInheritedPreviewRecord}
-            ariaLabel="Dataset record number"
+            ariaLabel={copy.recordNumberAriaLabel}
             onChange={(value) => {
               updateBinding({
                 ...binding,
@@ -454,12 +431,12 @@ export default function SandboxDataBindingPanel({
           <div className="insp-data-preview" data-builder-data-record-preview="true">
             <span className="insp-data-preview-mode" data-builder-data-preview-mode="true">
               {hasInheritedPreviewRecord
-                ? 'Previewing CMS record data inherited from the parent repeater. Template content remains editable; record data is read-only here.'
-                : 'Previewing CMS record data. Template content remains editable; record data is read-only here.'}
+                ? copy.previewModeInherited
+                : copy.previewModeDirect}
             </span>
             <div className="insp-data-preview-meta">
               <span data-builder-data-record-position="true">
-                Record {recordNumber} of {previewRecords.length || recordMax}
+                {copy.recordPosition(recordNumber, previewRecords.length || recordMax)}
               </span>
               <span>{previewTarget?.title ?? binding.targetId}</span>
             </div>
@@ -471,7 +448,7 @@ export default function SandboxDataBindingPanel({
                 {boundPreviewRows.map((row) => (
                   <div key={row.key}>
                     <dt>{row.label}</dt>
-                    <dd>{row.value || 'Empty'}</dd>
+                    <dd>{row.value || copy.emptyValue}</dd>
                   </div>
                 ))}
               </dl>
@@ -479,25 +456,43 @@ export default function SandboxDataBindingPanel({
           </div>
         ) : enabled && previewTarget ? (
           <InspectorNotice tone="neutral">
-            No sample records are available for this dataset preview.
+            {copy.noSampleRecordsNotice}
           </InspectorNotice>
+        ) : null}
+
+        {isRepeaterContainer ? (
+          <RepeaterMultiRecordPreview
+            loading={repeaterPreviewLoading}
+            records={previewRecords}
+            title={copy.repeaterPreviewTitle}
+            description={enabled
+              ? copy.repeaterPreviewEnabledDescription
+              : copy.repeaterPreviewDisabledDescription}
+            initialActiveRecordId={repeaterPreviewActiveRecordId}
+            onActiveRecordChange={handleRepeaterPreviewChange}
+            labels={{
+              loadingStatus: copy.repeaterPreviewLoadingStatus,
+              loadingListAriaLabel: copy.repeaterPreviewLoadingAriaLabel,
+              emptyMessage: copy.repeaterPreviewEmptyMessage,
+              visibleRecordSummary: copy.repeaterPreviewVisibleSummary,
+              switcherAriaLabel: copy.repeaterPreviewSwitcherAriaLabel,
+            }}
+          />
         ) : null}
 
         {repeaterComparisonRows.length > 0 ? (
           <div
             className="insp-repeater-record-compare"
             data-builder-repeater-record-comparison="true"
-            aria-label="Repeater record comparison"
+            aria-label={copy.repeaterComparisonAriaLabel}
           >
             <div className="insp-repeater-record-compare-head">
-              <strong>Record comparison</strong>
+              <strong>{copy.repeaterComparisonTitle}</strong>
               <span>{repeaterComparisonFieldLabel}</span>
             </div>
-            {repeaterComparisonRows.map(({ index, record }) => {
+            {repeaterComparisonRows.map(({ fields, index, record }) => {
               const selectedRow = index === recordNumber - 1;
-              const comparisonValue = repeaterComparisonFieldId
-                ? record.fieldValues[repeaterComparisonFieldId]
-                : record.primaryLabel;
+              const primaryField = fields[0];
               return (
                 <button
                   key={record.recordId}
@@ -515,8 +510,29 @@ export default function SandboxDataBindingPanel({
                   }}
                 >
                   <span>{index + 1}</span>
-                  <strong>{truncateComparisonText(record.primaryLabel)}</strong>
-                  <small>{truncateComparisonText(comparisonValue)}</small>
+                  <strong>{truncateComparisonText(record.primaryLabel, copy)}</strong>
+                  <small>
+                    {primaryField
+                      ? `${primaryField.label}: ${truncateComparisonText(primaryField.value, copy)}`
+                      : truncateComparisonText(record.primaryLabel, copy)}
+                  </small>
+                  {fields.length > 0 ? (
+                    <div
+                      className="insp-repeater-record-compare-fields"
+                      data-builder-repeater-record-comparison-fields="true"
+                    >
+                      {fields.map((field) => (
+                        <div
+                          key={field.fieldId}
+                          data-builder-repeater-record-comparison-field="true"
+                          data-builder-repeater-record-comparison-field-id={field.fieldId}
+                        >
+                          <em>{field.label}</em>
+                          <b>{truncateComparisonText(field.value, copy)}</b>
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
                 </button>
               );
             })}
@@ -552,10 +568,10 @@ export default function SandboxDataBindingPanel({
                     });
                   }}
                 >
-                  <option value="">Not bound</option>
+                  <option value="">{copy.notBoundOption}</option>
                   {selectedFieldIsStale ? (
                     <option value={selectedFieldId}>
-                      Missing field: {selectedFieldId}
+                      {copy.missingFieldOption(selectedFieldId)}
                     </option>
                   ) : null}
                   {options.map((field) => (
@@ -573,8 +589,8 @@ export default function SandboxDataBindingPanel({
           <div className="insp-repeater-authoring" data-builder-repeater-binding-authoring="true">
             <InspectorNotice tone={effectiveChildNodeCount > 0 ? 'linked' : 'neutral'}>
               {effectiveChildNodeCount > 0
-                ? `This repeater has ${effectiveChildNodeCount} template child${effectiveChildNodeCount === 1 ? '' : 'ren'} ready for dataset binding.`
-                : 'Add child elements inside this repeater to create a repeatable template.'}
+                ? copy.repeaterTemplateReadyNotice(effectiveChildNodeCount)
+                : copy.repeaterTemplateEmptyNotice}
             </InspectorNotice>
             {enabled && effectiveChildNodeCount > 0 ? (
               <div
@@ -583,8 +599,8 @@ export default function SandboxDataBindingPanel({
               >
                 <span>
                   {hasBoundChildTemplate
-                    ? `${boundChildNodeCount} template child${boundChildNodeCount === 1 ? '' : 'ren'} bound`
-                    : 'No template children bound yet'}
+                    ? copy.repeaterTemplateBoundStatus(boundChildNodeCount)
+                    : copy.repeaterTemplateUnboundStatus}
                 </span>
                 <small>{targetDefinition.title}</small>
               </div>
@@ -593,7 +609,7 @@ export default function SandboxDataBindingPanel({
               <dl
                 className="insp-repeater-binding-map"
                 data-builder-repeater-binding-map="true"
-                aria-label="Repeater child binding map"
+                aria-label={copy.repeaterChildBindingMapAriaLabel}
               >
                 {repeaterChildMappingRows.map((row) => (
                   <div key={row.label}>
@@ -610,7 +626,7 @@ export default function SandboxDataBindingPanel({
               disabled={disabled || !enabled || effectiveChildNodeCount === 0 || !onApplyRepeaterChildBindings}
               onClick={() => onApplyRepeaterChildBindings?.(binding.targetId)}
             >
-              {hasBoundChildTemplate ? 'Replace child template bindings' : 'Bind child template'}
+              {hasBoundChildTemplate ? copy.replaceChildTemplateBindingsLabel : copy.bindChildTemplateLabel}
             </button>
           </div>
         ) : null}

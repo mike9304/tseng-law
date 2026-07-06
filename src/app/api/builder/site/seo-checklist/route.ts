@@ -3,7 +3,17 @@ import { z, ZodError } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { normalizeLocale } from '@/lib/locales';
+import {
+  resolveBuilderSiteSettings,
+  setLocalizedBuilderSiteSeoChecklistOverride,
+} from '@/lib/builder/site/localized-settings';
+import { DEFAULT_TRANSLATION_SOURCE_LOCALE } from '@/lib/builder/translations/sync';
 import type { BuilderSeoChecklistSettings } from '@/lib/builder/site/types';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -14,11 +24,20 @@ const checklistSchema = z.object({
   serviceMode: z.enum(['physical', 'online', 'both']).optional(),
 }).strict();
 
-function validationErrorResponse(error: ZodError): NextResponse {
+function errorResponse(
+  locale: ReturnType<typeof normalizeLocale>,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...(extra ?? {}) },
+    { status },
   );
+}
+
+function validationErrorResponse(locale: ReturnType<typeof normalizeLocale>, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
 }
 
 function sanitizeChecklist(input: BuilderSeoChecklistSettings): BuilderSeoChecklistSettings {
@@ -37,16 +56,17 @@ export async function GET(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-seo' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
   try {
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const site = await readSiteDocument(siteId, locale);
+    const resolvedSettings = resolveBuilderSiteSettings(site.settings, locale);
     return NextResponse.json({
       ok: true,
-      checklist: site.settings?.seoChecklist ?? {},
+      checklist: resolvedSettings?.seoChecklist ?? site.settings?.seoChecklist ?? {},
     });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+  } catch {
+    return errorResponse(locale, 'seo_checklist_load_failed', 500);
   }
 }
 
@@ -54,29 +74,35 @@ export async function PATCH(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-seo' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
   try {
     const payload = checklistSchema.parse(await request.json());
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const site = await readSiteDocument(siteId, locale);
     const now = new Date().toISOString();
-
-    site.settings = {
-      ...(site.settings ?? {}),
-      seoChecklist: sanitizeChecklist(payload),
-    };
+    const sanitized = sanitizeChecklist(payload);
+    if (locale === DEFAULT_TRANSLATION_SOURCE_LOCALE) {
+      site.settings = {
+        ...(site.settings ?? {}),
+        seoChecklist: sanitized,
+      };
+    } else {
+      const nextSettings = site.settings ?? {};
+      const applied = setLocalizedBuilderSiteSeoChecklistOverride(nextSettings, locale, sanitized);
+      site.settings = applied ? nextSettings : site.settings;
+    }
     site.updatedAt = now;
     await writeSiteDocument(site);
 
     return NextResponse.json({
       ok: true,
-      checklist: site.settings.seoChecklist ?? {},
+      checklist: resolveBuilderSiteSettings(site.settings, locale)?.seoChecklist ?? site.settings?.seoChecklist ?? {},
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+      return errorResponse(locale, 'invalid_json', 400);
     }
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    return errorResponse(locale, 'seo_checklist_save_failed', 500);
   }
 }

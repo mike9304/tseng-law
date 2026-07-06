@@ -1,7 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'node:crypto';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
-import { normalizeLocale } from '@/lib/locales';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  getPublicSearchApiErrorPayload,
+  type PublicSearchApiErrorCode,
+} from '@/lib/builder/search/search-api-copy';
 import { runSearchQuery } from '@/lib/builder/search/query-engine';
 import {
   appendQueryLog,
@@ -13,6 +17,20 @@ import { SEARCH_DOC_KINDS, type SearchDocKind } from '@/lib/builder/search/types
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+function errorResponse(
+  locale: Locale,
+  errorCode: PublicSearchApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      ...getPublicSearchApiErrorPayload(locale, errorCode),
+    },
+    { status },
+  );
+}
 
 function clientIp(request: NextRequest): string {
   return (
@@ -28,31 +46,44 @@ function userAgentDigest(request: NextRequest): string {
 }
 
 export async function GET(request: NextRequest) {
-  const ip = clientIp(request);
-  const rate = await checkRateLimit(`search:${ip}`, 60, 60_000);
-  if (!rate.allowed) {
-    return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
-  }
-
   const query = (request.nextUrl.searchParams.get('q') ?? '').trim();
   const localeParam = request.nextUrl.searchParams.get('locale') ?? 'ko';
   const locale = normalizeLocale(localeParam);
   const kindsParam = request.nextUrl.searchParams.get('kinds') ?? '';
   const limit = Math.max(1, Math.min(50, Number(request.nextUrl.searchParams.get('limit')) || 20));
 
+  const ip = clientIp(request);
+  const rate = await checkRateLimit(`search:${ip}`, 60, 60_000);
+  if (!rate.allowed) {
+    return errorResponse(locale, 'too_many_requests', 429);
+  }
+
   if (query.length === 0) {
     return NextResponse.json({ ok: true, query, hits: [], total: 0 });
   }
 
-  const storedIndex = await loadSearchIndex();
-  const index = storedIndex ?? buildSearchIndex(await collectAllSearchDocs('default'));
+  let storedIndex: Awaited<ReturnType<typeof loadSearchIndex>>;
+  let index: NonNullable<typeof storedIndex>;
+  try {
+    storedIndex = await loadSearchIndex();
+    index = storedIndex ?? buildSearchIndex(await collectAllSearchDocs('default'));
+  } catch (error) {
+    console.error('[public/search] index load failed:', error);
+    return errorResponse(locale, 'search_index_failed', 500);
+  }
 
   const kinds = kindsParam
     .split(',')
     .map((s) => s.trim())
     .filter((s): s is SearchDocKind => SEARCH_DOC_KINDS.includes(s as SearchDocKind));
 
-  const hits = runSearchQuery({ index, query, locale, limit, kinds: kinds.length > 0 ? kinds : undefined });
+  let hits: ReturnType<typeof runSearchQuery>;
+  try {
+    hits = runSearchQuery({ index, query, locale, limit, kinds: kinds.length > 0 ? kinds : undefined });
+  } catch (error) {
+    console.error('[public/search] query failed:', error);
+    return errorResponse(locale, 'search_query_failed', 500);
+  }
 
   // Fire-and-forget query logging.
   void appendQueryLog({
@@ -62,6 +93,8 @@ export async function GET(request: NextRequest) {
     hitId: hits[0]?.doc.id,
     at: new Date().toISOString(),
     userAgentDigest: userAgentDigest(request),
+  }).catch((error) => {
+    console.error('[public/search] query log failed:', error);
   });
 
   return NextResponse.json({

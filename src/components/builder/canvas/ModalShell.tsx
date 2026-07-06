@@ -46,6 +46,7 @@ export interface ModalShellProps {
   bodyFlush?: boolean;
   fullViewport?: boolean;
   ariaLabel?: string;
+  closeAriaLabel?: string;
   panelRef?: MutableRefObject<HTMLDivElement | null>;
 }
 
@@ -139,6 +140,7 @@ export default function ModalShell({
   bodyFlush = false,
   fullViewport = false,
   ariaLabel,
+  closeAriaLabel = 'Close',
   panelRef,
 }: ModalShellProps) {
   const titleId = useId();
@@ -285,7 +287,7 @@ export default function ModalShell({
             <h2 id={titleId} className={styles.title}>{title}</h2>
             {resolvedSubtitle ? <p id={subtitleId} className={styles.subtitle}>{resolvedSubtitle}</p> : null}
           </div>
-          <button type="button" aria-label="Close" className={styles.closeButton} onClick={onClose} disabled={!dismissable}>
+          <button type="button" aria-label={closeAriaLabel} className={styles.closeButton} onClick={onClose} disabled={!dismissable}>
             <span aria-hidden>x</span>
           </button>
         </header>

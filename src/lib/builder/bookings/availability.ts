@@ -6,9 +6,10 @@ import {
   listBookings,
   listStaff,
 } from '@/lib/builder/bookings/storage';
-import { dayOfWeeks, type DayOfWeek } from '@/lib/builder/bookings/types';
+import type { BookingResource, DayOfWeek } from '@/lib/builder/bookings/types';
+import { dayOfWeeks } from '@/lib/builder/bookings/types';
 import { isHolidayDate } from '@/lib/builder/bookings/availability-templates';
-import { dateInTimezone, localDateTimeToUtcIso, normalizeBookingTimezone } from './timezone';
+import { dateInTimezone, dayOfWeekInTimezone, localDateTimeToUtcIso, normalizeBookingTimezone, timeInTimezone } from './timezone';
 
 export interface SlotRequest {
   serviceId: string;
@@ -52,6 +53,64 @@ function intervalsOverlap(aStart: string, aEnd: string, bStart: string, bEnd: st
   return aStart < bEnd && aEnd > bStart;
 }
 
+function slotWithinWeeklyAvailability(
+  startAt: string,
+  endAt: string,
+  weekly: BookingResource['weekly'],
+  timezone: string,
+): boolean {
+  if (!weekly) return true;
+  const day = dayOfWeekInTimezone(startAt, timezone);
+  const blocks = weekly[day] || [];
+  if (blocks.length === 0) return false;
+  const startTime = timeInTimezone(startAt, timezone);
+  const endTime = timeInTimezone(endAt, timezone);
+  return blocks.some((block) => block.start <= startTime && endTime <= block.end);
+}
+
+function staffAvailabilityBlocksForDate(
+  availability: Awaited<ReturnType<typeof getStaffAvailability>>,
+  date: string,
+): { blocks: Array<{ start: string; end: string }>; overridden: boolean } {
+  const override = availability.dateOverrides?.find((item) => item.date === date);
+  if (override) return { blocks: override.blocks, overridden: true };
+  const day = dayOfWeekForDate(date);
+  return { blocks: availability.weekly[day] || [], overridden: false };
+}
+
+export { describeStaffAvailabilityForDate, type StaffAvailabilityPreview } from './availability-preview';
+
+function resourceOverlapCount(
+  resource: BookingResource,
+  bookings: Array<{
+    resourceIds?: string[];
+    startAt: string;
+    endAt: string;
+    serviceId: string;
+    staffId: string;
+  }>,
+  candidateStartWithBuffer: string,
+  candidateEndWithBuffer: string,
+  startAt: string,
+  endAt: string,
+  serviceId: string,
+  staffId: string,
+): number {
+  return bookings.reduce((count, booking) => {
+    if (!booking.resourceIds?.includes(resource.resourceId)) return count;
+    const isSameGroupSlot = booking.serviceId === serviceId
+      && booking.staffId === staffId
+      && booking.startAt === startAt
+      && booking.endAt === endAt;
+    if (isSameGroupSlot) return count + 1;
+    const resourceStart = addMinutes(booking.startAt, -(resource.bufferBeforeMinutes ?? 0));
+    const resourceEnd = addMinutes(booking.endAt, resource.bufferAfterMinutes ?? 0);
+    return intervalsOverlap(candidateStartWithBuffer, candidateEndWithBuffer, resourceStart, resourceEnd)
+      ? count + 1
+      : count;
+  }, 0);
+}
+
 async function computeSlotsForStaff(
   serviceId: string,
   staffId: string,
@@ -67,10 +126,8 @@ async function computeSlotsForStaff(
   if (!service || !service.isActive || !staff || !staff.isActive) return [];
   if (service.staffIds.length > 0 && !service.staffIds.includes(staffId)) return [];
   const timezone = normalizeBookingTimezone(availability.timezone);
-  if (isHolidayDate(date, availability.holidayCalendar)) return [];
-
-  const day = dayOfWeekForDate(date);
-  const blocks = availability.weekly[day] || [];
+  const { blocks, overridden } = staffAvailabilityBlocksForDate(availability, date);
+  if (!overridden && isHolidayDate(date, availability.holidayCalendar)) return [];
   if (blocks.length === 0) return [];
 
   const from = localDateTimeToUtcIso(date, '00:00', timezone);
@@ -119,22 +176,32 @@ async function computeSlotsForStaff(
       );
       const conflictingBookings = overlappingBookings.filter((booking) => !exactSlotBookings.includes(booking));
 
-      const hasResourceConflict = resourceBookings.some((booking) => {
-        if (!booking.resourceIds?.some((resourceId) => requiredResourceIds.includes(resourceId))) return false;
-        const isSameGroupSlot = booking.serviceId === service.serviceId
-          && booking.staffId === staffId
-          && booking.startAt === startAt
-          && booking.endAt === endAt;
-        return !isSameGroupSlot
-          && intervalsOverlap(candidateStartWithBuffer, candidateEndWithBuffer, booking.startAt, booking.endAt);
-      });
       const hasResourceBlockedTime = requiredResources.some((resource) =>
-        (resource.blockedDates ?? []).some((blocked) =>
-          intervalsOverlap(candidateStartWithBuffer, candidateEndWithBuffer, blocked.start, blocked.end),
-        ),
+        (resource.blockedDates ?? []).some((blocked) => {
+          const resourceStart = addMinutes(blocked.start, -(resource.bufferBeforeMinutes ?? 0));
+          const resourceEnd = addMinutes(blocked.end, resource.bufferAfterMinutes ?? 0);
+          return intervalsOverlap(candidateStartWithBuffer, candidateEndWithBuffer, resourceStart, resourceEnd);
+        }),
       );
+      const hasResourceWeeklyConflict = requiredResources.some((resource) => {
+        const resourceTimezone = normalizeBookingTimezone(resource.timezone ?? timezone);
+        return !slotWithinWeeklyAvailability(startAt, endAt, resource.weekly, resourceTimezone);
+      });
+      const hasResourceCapacityConflict = requiredResources.some((resource) => {
+        const capacity = Math.max(1, resource.capacity ?? 1);
+        return resourceOverlapCount(
+          resource,
+          resourceBookings,
+          candidateStartWithBuffer,
+          candidateEndWithBuffer,
+          startAt,
+          endAt,
+          service.serviceId,
+          staffId,
+        ) >= capacity;
+      });
 
-      if (!hasResourceConflict && !hasResourceBlockedTime && conflictingBookings.length === 0 && exactSlotBookings.length < maxParticipants) {
+      if (!hasResourceBlockedTime && !hasResourceWeeklyConflict && !hasResourceCapacityConflict && conflictingBookings.length === 0 && exactSlotBookings.length < maxParticipants) {
         slots.push({
           startAt,
           endAt,

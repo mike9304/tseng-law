@@ -1,0 +1,147 @@
+.section {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.section[data-active='false'] {
+  display: none;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #0f172a;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.twoColumn {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  color: #334155;
+  font-size: 0.77rem;
+  font-weight: 700;
+}
+
+.helpText {
+  color: #64748b;
+  font-size: 0.73rem;
+  line-height: 1.45;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  outline: none;
+  color: #0f172a;
+  font-size: 0.84rem;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.input:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgb(17 109 255 / 14%);
+}
+
+.input:disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+}
+
+.textarea {
+  min-height: 86px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.counterRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.72rem;
+}
+
+.counterValue {
+  color: #94a3b8;
+}
+
+.counterValue[data-tone='warning'] {
+  color: #d97706;
+}
+
+.counterValue[data-tone='success'] {
+  color: #16a34a;
+}
+
+.checkboxGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 8px;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 9px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 0.78rem;
+}
+
+.checkboxRow input {
+  margin-top: 2px;
+}
+
+.previewCard {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.previewUrl {
+  color: #202124;
+  font-size: 0.74rem;
+  word-break: break-all;
+}
+
+.previewTitle {
+  color: #1a0dab;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.previewDescription {
+  color: #4d5156;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .twoColumn {
+    grid-template-columns: 1fr;
+  }
+}

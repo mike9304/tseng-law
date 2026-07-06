@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 import type { CheckpointDefinition, CheckpointFinding } from '../types';
-import { canvasEditor, gotoBuilder, selectFirstNode } from '../helpers';
+import { clickCenter, dismissOverlays, gotoBuilder, pickLeafNode } from '../helpers';
 
 export const W07_resize: CheckpointDefinition = {
   id: 'W07',
@@ -10,11 +10,25 @@ export const W07_resize: CheckpointDefinition = {
     log('admin-builder 진입');
     await gotoBuilder(page, baseUrl);
 
-    log('첫 visible 노드 선택');
-    const selected = await selectFirstNode(page);
-    await expect(selected).toBeVisible({ timeout: 5_000 });
+    log('잔여 popover/drawer 정리 (Escape x2)');
+    await dismissOverlays(page);
 
     const findings: CheckpointFinding[] = [];
+
+    log('leaf 노드 선택 (size floor 40x24)');
+    const leaf = await pickLeafNode(page, [], { minWidth: 40, minHeight: 24 });
+    if (!leaf) {
+      findings.push({
+        severity: 'blocker',
+        summary: 'resize 대상 leaf 노드를 찾지 못함 (40x24 이상 leaf 없음)',
+      });
+      return { findings };
+    }
+    await clickCenter(leaf.locator);
+    await page.waitForTimeout(300);
+    const selected = leaf.locator;
+    await expect(selected).toBeVisible({ timeout: 5_000 });
+    await expect(selected.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
 
     const initialBox = await selected.boundingBox();
     if (!initialBox) {
@@ -23,7 +37,7 @@ export const W07_resize: CheckpointDefinition = {
     }
     await recordEvidence('before-resize');
 
-    log('SE resize handle 잡고 +40px,+40px drag');
+    log('SE resize handle 잡고 Shift drag');
     // aria-label은 "Resize {kind} node se" 형태 — SE 핸들만 끝이 " se"
     const seHandle = selected.locator('button[aria-label$=" se"], [data-resize-handle="se"]').first();
     let useHandle = seHandle;
@@ -46,11 +60,18 @@ export const W07_resize: CheckpointDefinition = {
 
     const startX = handleBox.x + handleBox.width / 2;
     const startY = handleBox.y + handleBox.height / 2;
-    await page.mouse.move(startX, startY);
-    await page.mouse.down();
-    await page.mouse.move(startX + 40, startY + 40, { steps: 8 });
-    await recordEvidence('mid-drag');
-    await page.mouse.up();
+    const resizeDeltaX = initialBox.width > 540 ? -64 : 64;
+    const resizeDeltaY = initialBox.width > 540 ? -16 : 16;
+    await page.keyboard.down('Shift');
+    try {
+      await page.mouse.move(startX, startY);
+      await page.mouse.down();
+      await page.mouse.move(startX + resizeDeltaX, startY + resizeDeltaY, { steps: 8 });
+      await recordEvidence('mid-drag');
+      await page.mouse.up();
+    } finally {
+      await page.keyboard.up('Shift').catch(() => undefined);
+    }
     await page.waitForTimeout(400);
 
     const afterBox = await selected.boundingBox();
@@ -64,7 +85,15 @@ export const W07_resize: CheckpointDefinition = {
     if (Math.abs(dw) < 5 && Math.abs(dh) < 5) {
       findings.push({
         severity: 'blocker',
-        summary: `SE handle drag(+40,+40) 후에도 크기 변화 거의 없음 (dw=${dw.toFixed(1)}, dh=${dh.toFixed(1)})`,
+        summary: `SE handle Shift drag 후에도 크기 변화 거의 없음 (dw=${dw.toFixed(1)}, dh=${dh.toFixed(1)})`,
+      });
+    }
+    const initialRatio = initialBox.width / initialBox.height;
+    const afterRatio = afterBox.width / afterBox.height;
+    if (Math.abs(afterRatio - initialRatio) > 0.25) {
+      findings.push({
+        severity: 'blocker',
+        summary: `Shift resize 후 비율 유지 오차가 큼 (before=${initialRatio.toFixed(2)}, after=${afterRatio.toFixed(2)})`,
       });
     }
     await recordEvidence('after-resize');

@@ -1,6 +1,8 @@
 import { defineComponent } from '../define';
 import ColumnListInspector from './Inspector';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import styles from './ColumnList.module.css';
+import { getDomainCardWidgetsCopy } from '../domain-card-widgets-copy';
 
 interface ColumnItem {
   slug: string;
@@ -16,8 +18,9 @@ interface ColumnListContent {
   items?: ColumnItem[];
 }
 
-function ColumnListRender({ node }: { node: { content: ColumnListContent } }) {
+function ColumnListRender({ node, locale = 'ko' }: { node: { content: ColumnListContent }; locale?: Locale }) {
   const { items = [], limit = 6 } = node.content;
+  const copy = getDomainCardWidgetsCopy(normalizeLocale(locale));
 
   const displayed = items.slice(0, limit);
 
@@ -26,7 +29,7 @@ function ColumnListRender({ node }: { node: { content: ColumnListContent } }) {
       <div className={styles.grid}>
         {Array.from({ length: Math.min(limit, 3) }).map((_, i) => (
           <div key={i} className="builder-widget-empty">
-            Column
+            {copy.columnList.empty}
           </div>
         ))}
       </div>

@@ -2,11 +2,14 @@
 
 import Image from 'next/image';
 import type { BuilderAssetFolder, BuilderAssetListItem } from '@/lib/builder/assets';
+import type { Locale } from '@/lib/locales';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
+import { getAssetLibraryGridCopy } from './asset-library-grid-copy';
 
 interface AssetLibraryGridProps {
   assets: BuilderAssetListItem[];
   selectedUrl?: string | null;
+  activeUrl?: string | null;
   folders: BuilderAssetFolder[];
   tags: string[];
   assetFolderByFilename: Record<string, string>;
@@ -16,6 +19,7 @@ interface AssetLibraryGridProps {
   onDeleteAsset: (asset: BuilderAssetListItem) => void;
   onChangeAssetFolder: (filename: string, folderId: string) => void;
   onToggleAssetTag: (filename: string, tag: string) => void;
+  locale: Locale;
 }
 
 function formatBytes(value: number) {
@@ -24,10 +28,10 @@ function formatBytes(value: number) {
   return `${value} B`;
 }
 
-function formatUploadedAt(value: string) {
+function formatUploadedAt(value: string, locale: Locale) {
   const timestamp = Date.parse(value);
   if (Number.isNaN(timestamp)) return value;
-  return new Intl.DateTimeFormat('ko-KR', {
+  return new Intl.DateTimeFormat(locale === 'zh-hant' ? 'zh-TW' : locale === 'ko' ? 'ko-KR' : 'en-US', {
     month: 'short',
     day: 'numeric',
     hour: '2-digit',
@@ -38,6 +42,7 @@ function formatUploadedAt(value: string) {
 export function AssetLibraryGrid({
   assets,
   selectedUrl,
+  activeUrl,
   folders,
   tags,
   assetFolderByFilename,
@@ -47,17 +52,24 @@ export function AssetLibraryGrid({
   onDeleteAsset,
   onChangeAssetFolder,
   onToggleAssetTag,
+  locale,
 }: AssetLibraryGridProps) {
+  const text = getAssetLibraryGridCopy(locale);
+
   return (
     <div className={styles.assetGrid}>
       {assets.map((asset) => {
         const active = selectedUrl === asset.url;
+        const keyboardActive = activeUrl === asset.url;
         const assetFolder = assetFolderByFilename[asset.filename] ?? 'uploads';
         const assetTags = assetTagsByFilename[asset.filename] ?? [];
         return (
           <article
             key={asset.filename}
-            className={`${styles.assetCard} ${active ? styles.assetCardActive : ''}`}
+            data-builder-asset-library-asset={asset.filename}
+            data-builder-asset-library-asset-url={asset.url}
+            data-builder-asset-library-asset-active={keyboardActive ? 'true' : undefined}
+            className={`${styles.assetCard} ${(active || keyboardActive) ? styles.assetCardActive : ''}`}
           >
             <div className={styles.assetPreview}>
               <Image
@@ -71,7 +83,7 @@ export function AssetLibraryGrid({
             </div>
             <div className={styles.assetMeta}>
               <strong>{asset.filename}</strong>
-              <span>{formatBytes(asset.size)} · {formatUploadedAt(asset.uploadedAt)}</span>
+              <span>{formatBytes(asset.size)} · {formatUploadedAt(asset.uploadedAt, locale)}</span>
             </div>
             <div className={styles.assetOrganizeRow}>
               <select
@@ -88,7 +100,7 @@ export function AssetLibraryGrid({
                     className={`${styles.assetMiniTag} ${assetTags.includes(tag) ? styles.assetMiniTagActive : ''}`}
                     onClick={() => onToggleAssetTag(asset.filename, tag)}
                   >
-                    {tag}
+                  {tag}
                   </button>
                 ))}
               </div>
@@ -99,7 +111,7 @@ export function AssetLibraryGrid({
                 className={styles.actionButton}
                 onClick={() => onSelectAsset(asset)}
               >
-                Use image
+                {text.useImage}
               </button>
               <button
                 type="button"
@@ -107,7 +119,7 @@ export function AssetLibraryGrid({
                 disabled={deleteFilename === asset.filename}
                 onClick={() => onDeleteAsset(asset)}
               >
-                {deleteFilename === asset.filename ? 'Deleting…' : 'Delete'}
+                {deleteFilename === asset.filename ? text.deleting : text.delete}
               </button>
             </div>
           </article>

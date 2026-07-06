@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Booking, BookingResource, BookingService, Staff, StaffAvailability } from '@/lib/builder/bookings/types';
 import { createLocalizedText, dayOfWeeks } from '@/lib/builder/bookings/types';
-import { computeAvailableSlots, isSlotAvailable } from '@/lib/builder/bookings/availability';
+import { computeAvailableSlots, describeStaffAvailabilityForDate, isSlotAvailable } from '@/lib/builder/bookings/availability';
 
 const fixtures = vi.hoisted(() => ({
   service: null as BookingService | null,
@@ -50,6 +50,8 @@ function makeResource(overrides: Partial<BookingResource> = {}): BookingResource
     description: createLocalizedText('Test room'),
     location: 'Taipei',
     capacity: 4,
+    bufferBeforeMinutes: 0,
+    bufferAfterMinutes: 0,
     blockedDates: [],
     isActive: true,
     createdAt: '2026-01-01T00:00:00.000Z',
@@ -186,6 +188,7 @@ describe('booking availability slots', () => {
         updatedAt: '2026-01-01T00:00:00.000Z',
       },
     ];
+    fixtures.resources = [makeResource({ capacity: 1 })];
     fixtures.bookings = [
       makeBooking('2099-01-05T00:00:00.000Z', '2099-01-05T00:30:00.000Z', {
         bookingId: 'bk-other-resource',
@@ -203,6 +206,7 @@ describe('booking availability slots', () => {
   it('blocks slots when a required resource has blocked time', async () => {
     fixtures.service = { ...fixtures.service!, requiredResourceIds: ['room-a'], bufferBeforeMinutes: 0, bufferAfterMinutes: 0 };
     fixtures.resources = [makeResource({
+      capacity: 1,
       blockedDates: [{
         start: '2099-01-05T00:00:00.000Z',
         end: '2099-01-05T00:30:00.000Z',
@@ -216,9 +220,32 @@ describe('booking availability slots', () => {
     expect(slots.map((slot) => slot.startAt)).toContain('2099-01-05T00:30:00.000Z');
   });
 
+  it('applies resource-specific buffers around booked resource usage', async () => {
+    fixtures.service = { ...fixtures.service!, requiredResourceIds: ['room-a'], bufferBeforeMinutes: 0, bufferAfterMinutes: 0 };
+    fixtures.availability = {
+      ...fixtures.availability!,
+      weekly: weekly('09:00', '11:00'),
+    };
+    fixtures.resources = [makeResource({ capacity: 1, bufferBeforeMinutes: 30, bufferAfterMinutes: 30 })];
+    fixtures.bookings = [
+      makeBooking('2099-01-05T00:30:00.000Z', '2099-01-05T01:00:00.000Z', {
+        bookingId: 'bk-resource-buffer',
+        resourceIds: ['room-a'],
+      }),
+    ];
+
+    const slots = await computeAvailableSlots({ serviceId: 'svc-test', staffId: 'staff-test', date: '2099-01-05' });
+
+    expect(slots.map((slot) => slot.startAt)).not.toContain('2099-01-05T00:00:00.000Z');
+    expect(slots.map((slot) => slot.startAt)).not.toContain('2099-01-05T00:30:00.000Z');
+    expect(slots.map((slot) => slot.startAt)).not.toContain('2099-01-05T01:00:00.000Z');
+    expect(slots.map((slot) => slot.startAt)).toContain('2099-01-05T01:30:00.000Z');
+  });
+
   it('applies service buffers when checking required resource blocked time', async () => {
     fixtures.service = { ...fixtures.service!, requiredResourceIds: ['room-a'], bufferBeforeMinutes: 0, bufferAfterMinutes: 15 };
     fixtures.resources = [makeResource({
+      capacity: 1,
       blockedDates: [{
         start: '2099-01-05T00:30:00.000Z',
         end: '2099-01-05T00:45:00.000Z',
@@ -229,6 +256,64 @@ describe('booking availability slots', () => {
     const slots = await computeAvailableSlots({ serviceId: 'svc-test', staffId: 'staff-test', date: '2099-01-05' });
 
     expect(slots.map((slot) => slot.startAt)).not.toContain('2099-01-05T00:00:00.000Z');
+  });
+
+  it('blocks slots outside a required resource weekly calendar', async () => {
+    fixtures.service = { ...fixtures.service!, requiredResourceIds: ['room-a'], bufferBeforeMinutes: 0, bufferAfterMinutes: 0 };
+    fixtures.availability = {
+      ...fixtures.availability!,
+      weekly: weekly('09:00', '18:00'),
+      timezone: 'Asia/Taipei',
+    };
+    fixtures.resources = [makeResource({
+      capacity: 1,
+      weekly: {
+        monday: [{ start: '09:00', end: '09:45' }],
+        tuesday: [],
+        wednesday: [],
+        thursday: [],
+        friday: [],
+        saturday: [],
+        sunday: [],
+      },
+      timezone: 'Asia/Taipei',
+      recurringTemplateId: 'custom-weekly',
+    })];
+
+    const slots = await computeAvailableSlots({ serviceId: 'svc-test', staffId: 'staff-test', date: '2099-01-05' });
+
+    expect(slots.map((slot) => slot.startAt)).toEqual([
+      '2099-01-05T01:00:00.000Z',
+      '2099-01-05T01:15:00.000Z',
+    ]);
+  });
+
+  it('allows overlapping bookings up to the configured resource capacity', async () => {
+    fixtures.service = { ...fixtures.service!, requiredResourceIds: ['room-a'], bufferBeforeMinutes: 0, bufferAfterMinutes: 0 };
+    fixtures.staff = [
+      fixtures.staff[0],
+      {
+        staffId: 'staff-other',
+        name: createLocalizedText('Other Attorney'),
+        title: createLocalizedText('Attorney'),
+        isActive: true,
+        createdAt: '2026-01-01T00:00:00.000Z',
+        updatedAt: '2026-01-01T00:00:00.000Z',
+      },
+    ];
+    fixtures.resources = [makeResource({ capacity: 2 })];
+    fixtures.bookings = [
+      makeBooking('2099-01-05T00:00:00.000Z', '2099-01-05T00:30:00.000Z', {
+        bookingId: 'bk-resource-capacity',
+        staffId: 'staff-other',
+        resourceIds: ['room-a'],
+      }),
+    ];
+
+    const slots = await computeAvailableSlots({ serviceId: 'svc-test', staffId: 'staff-test', date: '2099-01-05' });
+
+    expect(slots.map((slot) => slot.startAt)).toContain('2099-01-05T00:00:00.000Z');
+    expect(slots.find((slot) => slot.startAt === '2099-01-05T00:00:00.000Z')?.capacityRemaining).toBe(1);
   });
 
   it('ignores blocked time from resources the service does not require', async () => {
@@ -254,6 +339,7 @@ describe('booking availability slots', () => {
   it('keeps required resource blocked time enforced when excluding the booking being rescheduled', async () => {
     fixtures.service = { ...fixtures.service!, requiredResourceIds: ['room-a'], bufferBeforeMinutes: 0, bufferAfterMinutes: 0 };
     fixtures.resources = [makeResource({
+      capacity: 1,
       blockedDates: [{
         start: '2099-01-05T00:00:00.000Z',
         end: '2099-01-05T00:30:00.000Z',
@@ -286,6 +372,7 @@ describe('booking availability slots', () => {
       bufferAfterMinutes: 0,
     };
     fixtures.resources = [makeResource({
+      capacity: 1,
       blockedDates: [{
         start: '2099-01-05T00:00:00.000Z',
         end: '2099-01-05T00:30:00.000Z',
@@ -322,6 +409,7 @@ describe('booking availability slots', () => {
         updatedAt: '2026-01-01T00:00:00.000Z',
       },
     ];
+    fixtures.resources = [makeResource({ capacity: 1 })];
     fixtures.bookings = [
       makeBooking('2099-01-05T00:00:00.000Z', '2099-01-05T00:30:00.000Z', {
         bookingId: 'bk-reschedule',
@@ -367,6 +455,39 @@ describe('booking availability slots', () => {
 
     expect(normalSlots.length).toBeGreaterThan(0);
     expect(holidaySlots).toEqual([]);
+  });
+
+  it('describes a holiday override as open and a blank override as closed', () => {
+    const holidayOpen = describeStaffAvailabilityForDate({
+      ...fixtures.availability!,
+      holidayCalendar: 'kr',
+      dateOverrides: [{
+        date: '2026-10-09',
+        blocks: [{ start: '10:00', end: '18:00' }],
+      }],
+    }, '2026-10-09');
+    const holidayClosed = describeStaffAvailabilityForDate({
+      ...fixtures.availability!,
+      holidayCalendar: 'kr',
+      dateOverrides: [{
+        date: '2026-10-09',
+        blocks: [],
+      }],
+    }, '2026-10-09');
+
+    expect(holidayOpen).toMatchObject({
+      status: 'open',
+      override: true,
+      blocks: [{ start: '10:00', end: '18:00' }],
+    });
+    expect(holidayOpen.reason).toContain('reopens this day');
+    expect(holidayOpen.warnings).toContain('Holiday calendar is ignored while this override exists.');
+    expect(holidayClosed).toMatchObject({
+      status: 'closed',
+      override: true,
+      blocks: [],
+    });
+    expect(holidayClosed.reason).toContain('closes this day');
   });
 
   it('fans out "any staff" requests across eligible active staff only', async () => {

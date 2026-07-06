@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { addBookingDuration, isSlotAvailable } from '@/lib/builder/bookings/availability';
+import { getBookingMutationApiErrorPayload } from '@/lib/builder/bookings/bookings-copy';
 import { bookingUpdateSchema } from '@/lib/builder/bookings/types';
 import { getBooking, getService, getStaff, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
 import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
 import { restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
+import { maybeCreateBookingZoomLink } from '@/lib/builder/bookings/zoom-handoff';
+import { normalizeLocale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -14,19 +17,30 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const existing = await getBooking(params.id);
-  if (!existing) return NextResponse.json({ error: 'Booking not found' }, { status: 404 });
+  if (!existing) {
+    return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'booking_not_found'), { status: 404 });
+  }
 
   const parsed = bookingUpdateSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) {
-    return NextResponse.json({ error: 'Invalid booking payload', details: parsed.error.issues.slice(0, 3) }, { status: 400 });
+    return NextResponse.json(
+      {
+        ...getBookingMutationApiErrorPayload(locale, 'invalid_booking_payload'),
+        details: parsed.error.issues.slice(0, 3),
+      },
+      { status: 400 },
+    );
   }
 
   const nextStaffId = parsed.data.staffId || existing.staffId;
   const nextStartAt = parsed.data.startAt || existing.startAt;
   const service = await getService(existing.serviceId);
   const staff = await getStaff(nextStaffId);
-  if (!service || !staff) return NextResponse.json({ error: 'Service or staff not found' }, { status: 404 });
+  if (!service || !staff) {
+    return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'service_or_staff_not_found'), { status: 404 });
+  }
 
   const timingChanged = nextStaffId !== existing.staffId || nextStartAt !== existing.startAt;
   const resourceIds = service.requiredResourceIds ?? [];
@@ -40,7 +54,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       resourceIds,
     };
     if (!acquireSlotLock(slotKey)) {
-      return NextResponse.json({ error: 'Selected slot is being booked by another request.' }, { status: 409 });
+      return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'slot_lock_conflict'), { status: 409 });
     }
     acquiredSlotKey = slotKey;
     try {
@@ -51,7 +65,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       if (!available) {
         releaseSlotLock(slotKey);
         acquiredSlotKey = null;
-        return NextResponse.json({ error: 'Selected slot is no longer available' }, { status: 409 });
+        return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'slot_unavailable'), { status: 409 });
       }
     } catch (error) {
       releaseSlotLock(slotKey);
@@ -74,9 +88,21 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       ? existing.cancelledAt ?? new Date().toISOString()
       : existing.cancelledAt,
   }, existing.createdAt);
+  const zoom = timingChanged && parsed.data.status !== 'cancelled'
+    ? await maybeCreateBookingZoomLink({
+      service,
+      staffId: nextStaffId,
+      startTimeISO: nextStartAt,
+      customerName: nextDraft.customer.name,
+      customerEmail: nextDraft.customer.email,
+    })
+    : null;
   const next = parsed.data.status === 'cancelled'
     ? await restorePackageCreditForBooking(nextDraft)
-    : nextDraft;
+    : timestamped({
+        ...nextDraft,
+        ...(zoom?.meetingLink ? { meetingLink: zoom.meetingLink } : existing.meetingLink ? { meetingLink: existing.meetingLink } : {}),
+      }, nextDraft.createdAt);
   try {
     await saveBooking(next);
   } finally {

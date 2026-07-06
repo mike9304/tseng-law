@@ -7,18 +7,36 @@ import {
   writeLightboxCanvas,
 } from '@/lib/builder/site/persistence';
 import { createDefaultCanvasDocument } from '@/lib/builder/canvas/types';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import type { Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
 export async function GET(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const lightboxes = await listLightboxes('default', locale);
+  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const lightboxes = await listLightboxes(siteId, locale);
   return NextResponse.json({ lightboxes });
 }
 
@@ -30,35 +48,29 @@ export async function POST(request: NextRequest) {
   try {
     body = (await request.json()) as { slug?: string; name?: string; locale?: string };
   } catch {
-    return NextResponse.json({ ok: false, error: 'Invalid JSON' }, { status: 400 });
+    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+    return errorResponse(locale, 'invalid_json', 400);
   }
 
   const locale = normalizeLocale(body.locale || 'ko');
   const slug = (body.slug ?? '').trim();
   const name = (body.name ?? '').trim() || 'Untitled lightbox';
+  const siteId = resolveBuilderSiteIdFromRequest(request);
 
   if (!slug || slug.length > 100 || !SLUG_RE.test(slug)) {
-    return NextResponse.json(
-      { ok: false, error: 'Invalid slug — lowercase alphanumeric with hyphens only' },
-      { status: 400 },
-    );
+    return errorResponse(locale, 'invalid_lightbox_slug', 400);
   }
 
-  const existing = await listLightboxes('default', locale);
+  const existing = await listLightboxes(siteId, locale);
   if (existing.some((lb) => lb.slug === slug)) {
-    return NextResponse.json(
-      { ok: false, error: 'A lightbox with this slug already exists' },
-      { status: 409 },
-    );
+    return errorResponse(locale, 'lightbox_slug_conflict', 409);
   }
 
-  const lightbox = await createLightbox('default', locale, slug, name);
+  const lightbox = await createLightbox(siteId, locale, slug, name);
 
-  // Seed an empty canvas document.
   const canvas = createDefaultCanvasDocument(locale);
-  // Replace seeded nodes with an empty canvas — lightboxes start blank.
   const blank = { ...canvas, nodes: [], stageWidth: 600, stageHeight: 400 };
-  await writeLightboxCanvas('default', lightbox.id, blank);
+  await writeLightboxCanvas(siteId, lightbox.id, blank);
 
   return NextResponse.json({ ok: true, lightbox });
 }

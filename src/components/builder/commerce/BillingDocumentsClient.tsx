@@ -58,6 +58,249 @@ type BillingPaymentAnalytics = {
 };
 const manualPaymentMethods: ManualPaymentMethod[] = ['bank_transfer', 'cash', 'check', 'other'];
 
+const COPY = {
+  ko: {
+    title: '청구서 문서',
+    subtitle: '주문과 예약의 청구서, 영수증, 결제 링크, 수동 결제 기록을 한곳에서 관리합니다.',
+    products: '제품',
+    orders: '주문',
+    payments: '결제',
+    currency: '통화',
+    bookings: '예약',
+    refunded: '환불됨',
+    stalePayLink: '오래된 결제 링크',
+    failedPayment: '실패한 결제',
+    failedWebhook: '실패한 웹훅',
+    exportCsv: 'CSV 내보내기',
+    refresh: '새로고침',
+    automaticPolicy: '자동 발행 정책',
+    automaticPolicyReady: '자동 발행 정책 준비 완료',
+    automaticPolicySaved: '자동 발행 정책이 저장되었습니다.',
+    automaticPolicySave: '저장 중...',
+    searchPlaceholder: '문서, 고객, 이메일 검색',
+    allSources: '모든 출처',
+    allTypes: '모든 문서 유형',
+    allStatus: '모든 상태',
+    invoices: '청구서',
+    receipts: '영수증',
+    issued: '발행됨',
+    emailed: '이메일 발송됨',
+    voided: '무효',
+    superseded: '대체됨',
+    notFoundTitle: '청구서 문서를 찾을 수 없습니다',
+    notFoundBody: '주문 또는 예약 문서 작업 후 여기에 표시됩니다.',
+    webhookExceptionsTitle: '청구 웹훅 예외',
+    webhookExceptionsBody: '화면에 보이는 청구 문서와 일치하지 않는 호스팅 결제 웹훅입니다.',
+    webhookExceptionsCount: (shown: number, total: number) => `최신 ${shown}개 / 전체 ${total}개`,
+    replay: '다시 재시도',
+    replaying: '재시도 중...',
+    webhookProcessed: '웹훅 처리됨',
+    webhookIgnored: '웹훅 무시됨',
+    webhookFailed: '웹훅 실패',
+    paymentAnalytics: '결제 분석',
+    openAnalytics: '전체 분석 열기',
+    hostedLinks: '호스팅 링크',
+    paymentLinkActive: '결제 링크 활성',
+    paymentLinkClosed: '결제 링크 닫힘',
+    paymentLinkStale: '결제 링크 갱신 필요',
+    documentActivity: '문서 활동',
+    documentActivityBody: '이 문서의 결제 링크 이력과 호스팅 결제 웹훅 이력입니다.',
+    hostedWebhooks: '호스팅 결제 웹훅',
+    renewalNeeded: '갱신 필요',
+    openSource: '원본 열기',
+    downloadPdf: 'PDF 다운로드',
+    openPay: '결제 열기',
+    copyPay: '결제 링크 복사',
+    renewPay: '결제 링크 갱신',
+    revokePay: '결제 링크 취소',
+    createPay: '결제 링크 생성',
+    hidePayment: '결제 숨기기',
+    recordPayment: '결제 기록',
+    viewLink: '링크 열기',
+    copyLink: '링크 복사',
+    revokeLink: '링크 취소',
+    createLink: '링크 생성',
+    void: '무효 처리',
+    supersede: '대체 문서 발행',
+    activity: '활동',
+    hideActivity: '활동 숨기기',
+    recordOfflinePayment: '오프라인 결제 기록',
+    onlySucceeded: '성공한 결제만 잔액을 줄입니다.',
+    recordCurrency: '문서 통화로 기록:',
+    savePaymentRecord: '결제 기록 저장',
+    status: '상태',
+    amount: '금액',
+    method: '방법',
+    reference: '참조',
+    note: '메모',
+    saving: '저장 중...',
+    manualPaymentFailed: '수동 결제 실패',
+    payLinkFailed: '결제 링크 실패',
+    payLinkCopied: '결제 링크가 복사되었습니다',
+    shareLinkCopied: '공유 링크가 복사되었습니다',
+  },
+  'zh-hant': {
+    title: '帳單文件',
+    subtitle: '在同一處管理訂單與預約的發票、收據、付款連結與手動付款紀錄。',
+    products: '產品',
+    orders: '訂單',
+    payments: '付款',
+    currency: '幣別',
+    bookings: '預約',
+    refunded: '已退款',
+    stalePayLink: '過期付款連結',
+    failedPayment: '失敗付款',
+    failedWebhook: '失敗的 webhook',
+    exportCsv: '匯出 CSV',
+    refresh: '重新整理',
+    automaticPolicy: '自動開立政策',
+    automaticPolicyReady: '自動開立政策已就緒',
+    automaticPolicySaved: '自動開立政策已儲存。',
+    automaticPolicySave: '儲存中...',
+    searchPlaceholder: '搜尋文件、客戶、電子郵件',
+    allSources: '所有來源',
+    allTypes: '所有文件類型',
+    allStatus: '所有狀態',
+    invoices: '發票',
+    receipts: '收據',
+    issued: '已開立',
+    emailed: '已寄送',
+    voided: '已作廢',
+    superseded: '已取代',
+    notFoundTitle: '找不到帳單文件',
+    notFoundBody: '在訂單或預約文件操作後會顯示於此。',
+    webhookExceptionsTitle: '帳單 Webhook 異常',
+    webhookExceptionsBody: '與畫面上可見的帳單文件不符的託管付款 Webhook。',
+    webhookExceptionsCount: (shown: number, total: number) => `最新 ${shown} 筆 / 共 ${total} 筆`,
+    replay: '再次重試',
+    replaying: '重試中...',
+    webhookProcessed: 'Webhook 已處理',
+    webhookIgnored: 'Webhook 已忽略',
+    webhookFailed: 'Webhook 失敗',
+    paymentAnalytics: '付款分析',
+    openAnalytics: '開啟完整分析',
+    hostedLinks: '託管連結',
+    paymentLinkActive: '付款連結啟用',
+    paymentLinkClosed: '付款連結已關閉',
+    paymentLinkStale: '付款連結需要更新',
+    documentActivity: '文件活動',
+    documentActivityBody: '此文件的付款連結歷程與託管付款 webhook 歷程。',
+    hostedWebhooks: '託管付款 Webhook',
+    renewalNeeded: '需要更新',
+    openSource: '開啟來源',
+    downloadPdf: '下載 PDF',
+    openPay: '開啟付款',
+    copyPay: '複製付款連結',
+    renewPay: '更新付款連結',
+    revokePay: '撤銷付款連結',
+    createPay: '建立付款連結',
+    hidePayment: '隱藏付款',
+    recordPayment: '記錄付款',
+    viewLink: '開啟連結',
+    copyLink: '複製連結',
+    revokeLink: '撤銷連結',
+    createLink: '建立連結',
+    void: '作廢',
+    supersede: '建立取代文件',
+    activity: '活動',
+    hideActivity: '隱藏活動',
+    recordOfflinePayment: '記錄離線付款',
+    onlySucceeded: '只有成功的付款才會減少餘額。',
+    recordCurrency: '以文件幣別記錄：',
+    savePaymentRecord: '儲存付款記錄',
+    status: '狀態',
+    amount: '金額',
+    method: '方式',
+    reference: '參考',
+    note: '備註',
+    saving: '儲存中...',
+    manualPaymentFailed: '手動付款失敗',
+    payLinkFailed: '付款連結失敗',
+    payLinkCopied: '已複製付款連結',
+    shareLinkCopied: '已複製分享連結',
+  },
+  en: {
+    title: 'Billing documents',
+    subtitle: 'Central invoice and receipt archive for commerce orders and paid booking flows.',
+    products: 'Products',
+    orders: 'Orders',
+    payments: 'Payments',
+    currency: 'Currency',
+    bookings: 'Bookings',
+    refunded: 'Refunded',
+    stalePayLink: 'Stale pay link',
+    failedPayment: 'Failed payment',
+    failedWebhook: 'Failed webhook',
+    exportCsv: 'Export CSV',
+    refresh: 'Refresh',
+    automaticPolicy: 'Automatic issuance policy',
+    automaticPolicyReady: 'Automatic issuance policy ready',
+    automaticPolicySaved: 'Automatic issuance policy saved.',
+    automaticPolicySave: 'Saving policy...',
+    searchPlaceholder: 'Search document, customer, email',
+    allSources: 'All sources',
+    allTypes: 'All document types',
+    allStatus: 'All status',
+    invoices: 'Invoices',
+    receipts: 'Receipts',
+    issued: 'Issued',
+    emailed: 'Emailed',
+    voided: 'Voided',
+    superseded: 'Superseded',
+    notFoundTitle: 'No billing documents found',
+    notFoundBody: 'Issued invoices and receipts will appear here after order or booking document actions.',
+    webhookExceptionsTitle: 'Billing webhook exceptions',
+    webhookExceptionsBody: 'Hosted payment webhooks that do not match a visible billing document row.',
+    webhookExceptionsCount: (shown: number, total: number) => `Showing latest ${shown} of ${total}`,
+    replay: 'Replay',
+    replaying: 'Replaying...',
+    webhookProcessed: 'Webhook processed',
+    webhookIgnored: 'Webhook ignored',
+    webhookFailed: 'Webhook failed',
+    paymentAnalytics: 'Payment analytics',
+    openAnalytics: 'Open full analytics',
+    hostedLinks: 'Hosted links',
+    paymentLinkActive: 'Pay link active',
+    paymentLinkClosed: 'Pay link closed',
+    paymentLinkStale: 'Pay link needs renewal',
+    documentActivity: 'Document activity',
+    documentActivityBody: 'Payment link lifecycle and hosted payment webhook history for this document.',
+    hostedWebhooks: 'Hosted payment webhooks',
+    renewalNeeded: 'Renewal needed',
+    openSource: 'Open source',
+    downloadPdf: 'Download PDF',
+    openPay: 'Open pay',
+    copyPay: 'Copy pay',
+    renewPay: 'Renew pay',
+    revokePay: 'Revoke pay',
+    createPay: 'Create pay',
+    hidePayment: 'Hide payment',
+    recordPayment: 'Record payment',
+    viewLink: 'View link',
+    copyLink: 'Copy link',
+    revokeLink: 'Revoke link',
+    createLink: 'Create link',
+    void: 'Void',
+    supersede: 'Supersede',
+    activity: 'Activity',
+    hideActivity: 'Hide activity',
+    recordOfflinePayment: 'Record offline payment',
+    onlySucceeded: 'Only succeeded payments reduce balance.',
+    recordCurrency: 'Record in invoice currency:',
+    savePaymentRecord: 'Save payment record',
+    status: 'Status',
+    amount: 'Amount',
+    method: 'Method',
+    reference: 'Reference',
+    note: 'Note',
+    saving: 'Saving...',
+    manualPaymentFailed: 'Manual payment failed',
+    payLinkFailed: 'Pay link failed',
+    payLinkCopied: 'Pay link copied',
+    shareLinkCopied: 'Share link copied',
+  },
+} satisfies Record<Locale, Record<string, string | ((shown: number, total: number) => string)>>;
+
 function documentKey(document: Pick<BuilderBillingDocumentRow, 'documentId' | 'source'>): string {
   return `${document.source}:${document.documentId}`;
 }
@@ -85,7 +328,33 @@ function defaultManualPaymentDraft(document: BuilderBillingDocumentRow): ManualP
   };
 }
 
-function manualPaymentMethodLabel(method: ManualPaymentMethod): string {
+function manualPaymentMethodLabel(locale: Locale, method: ManualPaymentMethod): string {
+  if (locale === 'ko') {
+    switch (method) {
+      case 'bank_transfer':
+        return '계좌이체';
+      case 'cash':
+        return '현금';
+      case 'check':
+        return '수표';
+      case 'other':
+      default:
+        return '기타';
+    }
+  }
+  if (locale === 'zh-hant') {
+    switch (method) {
+      case 'bank_transfer':
+        return '銀行轉帳';
+      case 'cash':
+        return '現金';
+      case 'check':
+        return '支票';
+      case 'other':
+      default:
+        return '其他';
+    }
+  }
   switch (method) {
     case 'bank_transfer':
       return 'Bank transfer';
@@ -99,7 +368,33 @@ function manualPaymentMethodLabel(method: ManualPaymentMethod): string {
   }
 }
 
-function manualPaymentStatusLabel(status: ManualPaymentStatus): string {
+function manualPaymentStatusLabel(locale: Locale, status: ManualPaymentStatus): string {
+  if (locale === 'ko') {
+    switch (status) {
+      case 'succeeded':
+        return '성공 - 결제 완료로 계산';
+      case 'pending':
+        return '대기 - 확인 필요';
+      case 'failed':
+        return '실패 - 미결제';
+      case 'canceled':
+      default:
+        return '취소 - 미결제';
+    }
+  }
+  if (locale === 'zh-hant') {
+    switch (status) {
+      case 'succeeded':
+        return '成功 - 計入已付款';
+      case 'pending':
+        return '待處理 - 等待確認';
+      case 'failed':
+        return '失敗 - 未付款';
+      case 'canceled':
+      default:
+        return '已取消 - 未付款';
+    }
+  }
   switch (status) {
     case 'succeeded':
       return 'Succeeded - counts as paid';
@@ -151,13 +446,39 @@ function paymentLinkDisplayState(document: BuilderBillingDocumentRow): PaymentLi
   return document.paymentLinkStatus;
 }
 
-function paymentLinkDisplayLabel(document: BuilderBillingDocumentRow, state: PaymentLinkDisplayState): string {
+function paymentLinkDisplayLabel(locale: Locale, document: BuilderBillingDocumentRow, state: PaymentLinkDisplayState): string {
+  if (locale === 'ko') {
+    if (state === 'stale') return '결제 링크 갱신 필요 · 잔액 변경';
+    if (state === 'closed') return '결제 링크 닫힘 · 잔액 결제됨';
+    return `${document.paymentLinkStatusLabel}${document.paymentLinkExpiresAt ? ` · 만료 ${new Date(document.paymentLinkExpiresAt).toLocaleDateString()}` : ''}`;
+  }
+  if (locale === 'zh-hant') {
+    if (state === 'stale') return '付款連結需要更新 · 餘額已變更';
+    if (state === 'closed') return '付款連結已關閉 · 餘額已結清';
+    return `${document.paymentLinkStatusLabel}${document.paymentLinkExpiresAt ? ` · 到期 ${new Date(document.paymentLinkExpiresAt).toLocaleDateString()}` : ''}`;
+  }
   if (state === 'stale') return 'Pay link needs renewal · balance changed';
   if (state === 'closed') return 'Pay link closed · balance paid';
   return `${document.paymentLinkStatusLabel}${document.paymentLinkExpiresAt ? ` · expires ${new Date(document.paymentLinkExpiresAt).toLocaleDateString()}` : ''}`;
 }
 
-function paymentLinkEventLabel(event: BuilderBillingDocumentRow['paymentLinkEvents'][number]): string {
+function paymentLinkEventLabel(locale: Locale, event: BuilderBillingDocumentRow['paymentLinkEvents'][number]): string {
+  if (locale === 'ko') {
+    if (event.type === 'created') return '결제 링크 생성';
+    if (event.type === 'renewed') return '결제 링크 갱신';
+    if (event.reason === 'balance_changed') return '결제 후 링크 갱신 필요';
+    if (event.reason === 'document_voided') return '무효 처리로 링크 닫힘';
+    if (event.reason === 'document_superseded') return '대체 문서로 링크 닫힘';
+    return '결제 링크 취소';
+  }
+  if (locale === 'zh-hant') {
+    if (event.type === 'created') return '付款連結已建立';
+    if (event.type === 'renewed') return '付款連結已更新';
+    if (event.reason === 'balance_changed') return '付款後連結已過期';
+    if (event.reason === 'document_voided') return '因作廢而關閉連結';
+    if (event.reason === 'document_superseded') return '因取代而關閉連結';
+    return '付款連結已撤銷';
+  }
   if (event.type === 'created') return 'Pay link created';
   if (event.type === 'renewed') return 'Pay link renewed';
   if (event.reason === 'balance_changed') return 'Pay link stale after payment';
@@ -166,16 +487,26 @@ function paymentLinkEventLabel(event: BuilderBillingDocumentRow['paymentLinkEven
   return 'Pay link revoked';
 }
 
-function paymentLinkEventDetail(event: BuilderBillingDocumentRow['paymentLinkEvents'][number]): string {
+function paymentLinkEventDetail(locale: Locale, event: BuilderBillingDocumentRow['paymentLinkEvents'][number]): string {
   const parts = [new Date(event.createdAt).toLocaleString()];
-  if (event.expiresAt) parts.push(`expires ${new Date(event.expiresAt).toLocaleDateString()}`);
-  if (event.balanceDueLabel) parts.push(`due ${event.balanceDueLabel}`);
-  if (event.paymentId) parts.push(`payment ${event.paymentId}`);
-  if (event.actor === 'system') parts.push('system');
+  if (event.expiresAt) parts.push(locale === 'ko' ? `만료 ${new Date(event.expiresAt).toLocaleDateString()}` : locale === 'zh-hant' ? `到期 ${new Date(event.expiresAt).toLocaleDateString()}` : `expires ${new Date(event.expiresAt).toLocaleDateString()}`);
+  if (event.balanceDueLabel) parts.push(locale === 'ko' ? `미지급 ${event.balanceDueLabel}` : locale === 'zh-hant' ? `應付 ${event.balanceDueLabel}` : `due ${event.balanceDueLabel}`);
+  if (event.paymentId) parts.push(locale === 'ko' ? `결제 ${event.paymentId}` : locale === 'zh-hant' ? `付款 ${event.paymentId}` : `payment ${event.paymentId}`);
+  if (event.actor === 'system') parts.push(locale === 'ko' ? '시스템' : locale === 'zh-hant' ? '系統' : 'system');
   return parts.join(' · ');
 }
 
-function webhookStatusLabel(event: BillingDocumentWebhookEvent): string {
+function webhookStatusLabel(locale: Locale, event: BillingDocumentWebhookEvent): string {
+  if (locale === 'ko') {
+    if (event.status === 'processed') return event.changed ? '웹훅 처리됨' : '웹훅 처리됨 · 변경 없음';
+    if (event.status === 'ignored') return '웹훅 무시됨';
+    return '웹훅 실패';
+  }
+  if (locale === 'zh-hant') {
+    if (event.status === 'processed') return event.changed ? 'Webhook 已處理' : 'Webhook 已處理 · 無變更';
+    if (event.status === 'ignored') return 'Webhook 已忽略';
+    return 'Webhook 失敗';
+  }
   if (event.status === 'processed') return event.changed ? 'Webhook processed' : 'Webhook processed · no change';
   if (event.status === 'ignored') return 'Webhook ignored';
   return 'Webhook failed';
@@ -185,7 +516,7 @@ function compactWebhookId(id: string): string {
   return id.length <= 20 ? id : `${id.slice(0, 10)}...${id.slice(-6)}`;
 }
 
-function webhookEventDetail(event: BillingDocumentWebhookEvent): string {
+function webhookEventDetail(locale: Locale, event: BillingDocumentWebhookEvent): string {
   const divisor = amountInputDivisor(event.currency);
   const amount = (event.amount / divisor).toLocaleString(undefined, {
     maximumFractionDigits: divisor === 1 ? 0 : 2,
@@ -199,20 +530,20 @@ function webhookEventDetail(event: BillingDocumentWebhookEvent): string {
     `${event.currency} ${amount}`,
   ];
   if (event.providerPaymentId) parts.push(event.providerPaymentId);
-  if (event.paymentLinkId) parts.push(`link ${compactWebhookId(event.paymentLinkId)}`);
-  if (event.replayCount > 0) parts.push(`replayed ${event.replayCount}`);
+  if (event.paymentLinkId) parts.push(locale === 'ko' ? `링크 ${compactWebhookId(event.paymentLinkId)}` : locale === 'zh-hant' ? `連結 ${compactWebhookId(event.paymentLinkId)}` : `link ${compactWebhookId(event.paymentLinkId)}`);
+  if (event.replayCount > 0) parts.push(locale === 'ko' ? `다시 재생 ${event.replayCount}` : locale === 'zh-hant' ? `已重播 ${event.replayCount}` : `replayed ${event.replayCount}`);
   if (event.error) parts.push(event.error);
   return parts.map((part) => (part.startsWith('pi_') || part.startsWith('cs_') ? compactWebhookId(part) : part)).join(' · ');
 }
 
-function webhookSummaryLabel(events: BillingDocumentWebhookEvent[]): string {
-  if (!events.length) return 'No hosted webhooks';
+function webhookSummaryLabel(locale: Locale, events: BillingDocumentWebhookEvent[]): string {
+  if (!events.length) return locale === 'ko' ? '호스팅 웹훅 없음' : locale === 'zh-hant' ? '無託管 Webhook' : 'No hosted webhooks';
   const failed = events.filter((event) => event.status === 'failed').length;
   const ignored = events.filter((event) => event.status === 'ignored').length;
   const processed = events.filter((event) => event.status === 'processed').length;
-  if (failed) return `Webhook failed · ${failed}/${events.length}`;
-  if (ignored) return `Webhook ignored · ${ignored}/${events.length}`;
-  return `Webhook processed · ${processed}/${events.length}`;
+  if (failed) return locale === 'ko' ? `웹훅 실패 · ${failed}/${events.length}` : locale === 'zh-hant' ? `Webhook 失敗 · ${failed}/${events.length}` : `Webhook failed · ${failed}/${events.length}`;
+  if (ignored) return locale === 'ko' ? `웹훅 무시됨 · ${ignored}/${events.length}` : locale === 'zh-hant' ? `Webhook 已忽略 · ${ignored}/${events.length}` : `Webhook ignored · ${ignored}/${events.length}`;
+  return locale === 'ko' ? `웹훅 처리됨 · ${processed}/${events.length}` : locale === 'zh-hant' ? `Webhook 已處理 · ${processed}/${events.length}` : `Webhook processed · ${processed}/${events.length}`;
 }
 
 function documentCsv(documents: BuilderBillingDocumentRow[]): string {
@@ -258,17 +589,18 @@ export default function BillingDocumentsClient({
   initialWebhookEvents = [],
   initialSource = 'all',
 }: BillingDocumentsClientProps) {
+  const c = COPY[locale];
   const [documents, setDocuments] = useState(initialDocuments);
   const [webhookEvents, setWebhookEvents] = useState(initialWebhookEvents);
   const [automationSettings, setAutomationSettings] = useState(initialAutomationSettings);
   const [automationDraft, setAutomationDraft] = useState(initialAutomationSettings);
-  const [automationNotice, setAutomationNotice] = useState('Automatic issuance policy ready');
+  const [automationNotice, setAutomationNotice] = useState(String(c.automaticPolicyReady));
   const [savingAutomation, setSavingAutomation] = useState(false);
   const [query, setQuery] = useState('');
   const [source, setSource] = useState<SourceFilter>(initialSource);
   const [type, setType] = useState<TypeFilter>('all');
   const [status, setStatus] = useState<StatusFilter>('all');
-  const [notice, setNotice] = useState('Ready');
+  const [notice, setNotice] = useState(locale === 'ko' ? '준비됨' : locale === 'zh-hant' ? '已就緒' : 'Ready');
   const [exportText, setExportText] = useState('');
   const [manualPaymentOpenKey, setManualPaymentOpenKey] = useState('');
   const [manualPaymentBusyKey, setManualPaymentBusyKey] = useState('');
@@ -368,7 +700,7 @@ export default function BillingDocumentsClient({
         needsReview += 1;
         attentionRows.push({
           key: documentWebhookKey(document),
-          label: stale ? 'Stale pay link' : failedPayment ? 'Failed payment' : 'Failed webhook',
+          label: stale ? c.stalePayLink : failedPayment ? c.failedPayment : c.failedWebhook,
           detail: `${document.number} · ${document.sourceLabel} · ${document.paymentReconciliationStatusLabel}`,
         });
       }
@@ -377,7 +709,7 @@ export default function BillingDocumentsClient({
     for (const event of unmatchedWebhookEvents.slice(0, 3)) {
       attentionRows.push({
         key: event.eventId,
-        label: webhookStatusLabel(event),
+        label: webhookStatusLabel(locale, event),
         detail: `${event.source} · ${event.paymentStatus} · ${compactWebhookId(event.providerEventId)}`,
       });
     }
@@ -420,7 +752,7 @@ export default function BillingDocumentsClient({
       fetch(`/api/builder/billing-documents?locale=${encodeURIComponent(locale)}&source=all`, {
         cache: 'no-store',
       }),
-      fetch('/api/builder/billing-documents/webhooks', {
+      fetch(`/api/builder/billing-documents/webhooks?locale=${encodeURIComponent(locale)}`, {
         cache: 'no-store',
       }),
     ]);
@@ -430,7 +762,7 @@ export default function BillingDocumentsClient({
       error?: string;
     };
     if (!response.ok || !payload.ok || !Array.isArray(payload.documents)) {
-      setNotice(payload.error ?? 'Document refresh failed');
+      setNotice(payload.error ?? (locale === 'ko' ? '문서 새로고침에 실패했습니다.' : locale === 'zh-hant' ? '文件重新整理失敗。' : 'Document refresh failed'));
       return;
     }
     setDocuments(payload.documents);
@@ -446,9 +778,9 @@ export default function BillingDocumentsClient({
 
   async function replayWebhookEvent(event: BillingDocumentWebhookEvent) {
     setWebhookBusyId(event.eventId);
-    setNotice('Replaying hosted webhook...');
+    setNotice(locale === 'ko' ? '호스팅 웹훅 다시 재생 중...' : locale === 'zh-hant' ? '重播託管 Webhook 中...' : 'Replaying hosted webhook...');
     try {
-      const response = await fetch(`/api/builder/billing-documents/webhooks/events/${encodeURIComponent(event.eventId)}/replay`, {
+      const response = await fetch(`/api/builder/billing-documents/webhooks/events/${encodeURIComponent(event.eventId)}/replay?locale=${encodeURIComponent(locale)}`, {
         method: 'POST',
       });
       const payload = await response.json().catch(() => ({})) as {
@@ -459,14 +791,16 @@ export default function BillingDocumentsClient({
         error?: string;
       };
       if (!response.ok || !payload.ok || !payload.event) {
-        setNotice(payload.error ?? payload.reason ?? 'Webhook replay failed');
+        setNotice(payload.error ?? payload.reason ?? (locale === 'ko' ? '웹훅 다시 재생에 실패했습니다.' : locale === 'zh-hant' ? 'Webhook 重播失敗。' : 'Webhook replay failed'));
         return;
       }
       setWebhookEvents((current) => current.map((entry) => (
         entry.eventId === payload.event?.eventId ? payload.event : entry
       )));
       await refreshDocuments();
-      setNotice(payload.changed ? 'Webhook replay applied changes' : 'Webhook replay completed with no document change');
+      setNotice(payload.changed
+        ? (locale === 'ko' ? '웹훅 다시 재생으로 변경사항이 적용되었습니다.' : locale === 'zh-hant' ? 'Webhook 重播已套用變更。' : 'Webhook replay applied changes')
+        : (locale === 'ko' ? '웹훅 다시 재생이 완료되었지만 문서 변경은 없었습니다.' : locale === 'zh-hant' ? 'Webhook 重播完成，但文件未變更。' : 'Webhook replay completed with no document change'));
     } finally {
       setWebhookBusyId('');
     }
@@ -517,9 +851,9 @@ export default function BillingDocumentsClient({
 
   async function saveAutomationPolicy() {
     setSavingAutomation(true);
-    setAutomationNotice('Saving policy...');
+    setAutomationNotice(String(c.automaticPolicySave));
     try {
-      const response = await fetch('/api/builder/billing-documents/settings', {
+      const response = await fetch(`/api/builder/billing-documents/settings?locale=${encodeURIComponent(locale)}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ settings: automationDraft }),
@@ -530,14 +864,14 @@ export default function BillingDocumentsClient({
         error?: string;
       };
       if (!response.ok || !payload.ok || !payload.settings) {
-        setAutomationNotice(payload.error ?? 'Could not save automatic issuance policy.');
+        setAutomationNotice(payload.error ?? (locale === 'ko' ? '자동 발행 정책을 저장하지 못했습니다.' : locale === 'zh-hant' ? '無法儲存自動開立政策。' : 'Could not save automatic issuance policy.'));
         return;
       }
       setAutomationSettings(payload.settings);
       setAutomationDraft(payload.settings);
-      setAutomationNotice('Automatic issuance policy saved.');
+      setAutomationNotice(String(c.automaticPolicySaved));
     } catch {
-      setAutomationNotice('Could not save automatic issuance policy.');
+      setAutomationNotice(locale === 'ko' ? '자동 발행 정책을 저장하지 못했습니다.' : locale === 'zh-hant' ? '無法儲存自動開立政策。' : 'Could not save automatic issuance policy.');
     } finally {
       setSavingAutomation(false);
     }
@@ -545,72 +879,75 @@ export default function BillingDocumentsClient({
 
   async function copyShareLink(path: string) {
     if (!path) {
-      setNotice('Create a share link first');
+      setNotice(locale === 'ko' ? '먼저 공유 링크를 생성하세요.' : locale === 'zh-hant' ? '請先建立分享連結。' : 'Create a share link first');
       return;
     }
     const url = new URL(path, window.location.origin).toString();
     try {
       await navigator.clipboard.writeText(url);
-      setNotice('Share link copied');
+      setNotice(String(c.shareLinkCopied));
     } catch {
-      setNotice('Copy failed. Open link and copy from the address bar.');
+      setNotice(locale === 'ko' ? '복사 실패. 링크를 열고 주소 표시줄에서 복사하세요.' : locale === 'zh-hant' ? '複製失敗。請開啟連結並從網址列複製。' : 'Copy failed. Open link and copy from the address bar.');
     }
   }
 
   async function copyPaymentLink(path: string) {
     if (!path) {
-      setNotice('No payment link available');
+      setNotice(locale === 'ko' ? '사용 가능한 결제 링크가 없습니다.' : locale === 'zh-hant' ? '沒有可用的付款連結。' : 'No payment link available');
       return;
     }
     const url = new URL(path, window.location.origin).toString();
     try {
       await navigator.clipboard.writeText(url);
-      setNotice('Payment link copied');
+      setNotice(String(c.payLinkCopied));
     } catch {
-      setNotice('Copy failed. Open payment link and copy from the address bar.');
+      setNotice(locale === 'ko' ? '복사 실패. 결제 링크를 열고 주소 표시줄에서 복사하세요.' : locale === 'zh-hant' ? '複製失敗。請開啟付款連結並從網址列複製。' : 'Copy failed. Open payment link and copy from the address bar.');
     }
   }
 
   async function createPaymentLink(document: BuilderBillingDocumentRow) {
     const renew = document.paymentLinkStatus !== 'not_created';
-    setNotice(renew ? 'Renewing pay link...' : 'Creating pay link...');
-    const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/payment-link`, {
+    setNotice(renew ? (locale === 'ko' ? '결제 링크 갱신 중...' : locale === 'zh-hant' ? '更新付款連結中...' : 'Renewing pay link...') : (locale === 'ko' ? '결제 링크 생성 중...' : locale === 'zh-hant' ? '建立付款連結中...' : 'Creating pay link...'));
+    const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/payment-link?locale=${encodeURIComponent(locale)}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ renew }),
     });
     const payload = await response.json().catch(() => ({})) as { ok?: boolean; document?: BuilderBillingDocumentRow; error?: string };
     if (!response.ok || !payload.ok || !payload.document) {
-      setNotice(payload.error ?? 'Pay link failed');
+      setNotice(payload.error ?? (locale === 'ko' ? '결제 링크 생성에 실패했습니다.' : locale === 'zh-hant' ? '付款連結失敗。' : 'Pay link failed'));
       return;
     }
     replaceDocument(payload.document);
     await copyPaymentLink(payload.document.paymentLinkPath);
-    if (renew) setNotice('New pay link copied');
+    if (renew) setNotice(locale === 'ko' ? '새 결제 링크가 복사되었습니다.' : locale === 'zh-hant' ? '新的付款連結已複製。' : 'New pay link copied');
   }
 
   async function revokePaymentLink(document: BuilderBillingDocumentRow) {
-    setNotice('Revoking pay link...');
-    const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/payment-link`, {
+    setNotice(locale === 'ko' ? '결제 링크 취소 중...' : locale === 'zh-hant' ? '撤銷付款連結中...' : 'Revoking pay link...');
+    const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/payment-link?locale=${encodeURIComponent(locale)}`, {
       method: 'DELETE',
     });
     const payload = await response.json().catch(() => ({})) as { ok?: boolean; document?: BuilderBillingDocumentRow; error?: string };
     if (!response.ok || !payload.ok || !payload.document) {
-      setNotice(payload.error ?? 'Pay link revoke failed');
+      setNotice(payload.error ?? (locale === 'ko' ? '결제 링크 취소에 실패했습니다.' : locale === 'zh-hant' ? '撤銷付款連結失敗。' : 'Pay link revoke failed'));
       return;
     }
     replaceDocument(payload.document);
-    setNotice('Pay link revoked');
+    setNotice(locale === 'ko' ? '결제 링크가 취소되었습니다.' : locale === 'zh-hant' ? '付款連結已撤銷。' : 'Pay link revoked');
   }
 
   async function updateLifecycle(document: BuilderBillingDocumentRow, action: 'void' | 'supersede') {
-    setNotice(action === 'void' ? 'Voiding document...' : 'Creating superseding document...');
-    const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/lifecycle`, {
+    setNotice(action === 'void' ? (locale === 'ko' ? '문서 무효 처리 중...' : locale === 'zh-hant' ? '文件作廢中...' : 'Voiding document...') : (locale === 'ko' ? '대체 문서 발행 중...' : locale === 'zh-hant' ? '建立取代文件中...' : 'Creating superseding document...'));
+    const reason = action === 'void'
+      ? (locale === 'ko' ? '중앙 청구서 관리자에서 무효 처리됨' : locale === 'zh-hant' ? '已由中央帳單管理員作廢' : 'Voided in central billing manager')
+      : (locale === 'ko' ? '중앙 청구서 관리자에서 대체됨' : locale === 'zh-hant' ? '已由中央帳單管理員取代' : 'Superseded in central billing manager');
+    const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/lifecycle?locale=${encodeURIComponent(locale)}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         action,
-        reason: action === 'void' ? 'Voided in central billing manager' : 'Superseded in central billing manager',
+        reason,
       }),
     });
     const payload = await response.json().catch(() => ({})) as {
@@ -620,24 +957,24 @@ export default function BillingDocumentsClient({
       error?: string;
     };
     if (!response.ok || !payload.ok || !payload.document) {
-      setNotice(payload.error ?? 'Lifecycle update failed');
+      setNotice(payload.error ?? (locale === 'ko' ? '문서 상태 변경에 실패했습니다.' : locale === 'zh-hant' ? '文件生命週期更新失敗。' : 'Lifecycle update failed'));
       return;
     }
     if (payload.supersededDocument) replaceDocument(payload.supersededDocument);
     replaceDocument(payload.document);
-    setNotice(action === 'void' ? 'Document voided' : 'Superseding document issued');
+    setNotice(action === 'void' ? (locale === 'ko' ? '문서가 무효 처리되었습니다.' : locale === 'zh-hant' ? '文件已作廢。' : 'Document voided') : (locale === 'ko' ? '대체 문서가 발행되었습니다.' : locale === 'zh-hant' ? '已發出取代文件。' : 'Superseding document issued'));
   }
 
   async function createShareLink(document: BuilderBillingDocumentRow) {
-    setNotice('Creating share link...');
-    const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/share-link`, {
+    setNotice(locale === 'ko' ? '공유 링크 생성 중...' : locale === 'zh-hant' ? '建立分享連結中...' : 'Creating share link...');
+    const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/share-link?locale=${encodeURIComponent(locale)}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({}),
     });
     const payload = await response.json().catch(() => ({})) as { ok?: boolean; document?: BuilderBillingDocumentRow; error?: string };
     if (!response.ok || !payload.ok || !payload.document) {
-      setNotice(payload.error ?? 'Share link failed');
+      setNotice(payload.error ?? (locale === 'ko' ? '공유 링크 생성에 실패했습니다.' : locale === 'zh-hant' ? '分享連結失敗。' : 'Share link failed'));
       return;
     }
     replaceDocument(payload.document);
@@ -645,17 +982,17 @@ export default function BillingDocumentsClient({
   }
 
   async function revokeShareLink(document: BuilderBillingDocumentRow) {
-    setNotice('Revoking share link...');
-    const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/share-link`, {
+    setNotice(locale === 'ko' ? '공유 링크 취소 중...' : locale === 'zh-hant' ? '撤銷分享連結中...' : 'Revoking share link...');
+    const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/share-link?locale=${encodeURIComponent(locale)}`, {
       method: 'DELETE',
     });
     const payload = await response.json().catch(() => ({})) as { ok?: boolean; document?: BuilderBillingDocumentRow; error?: string };
     if (!response.ok || !payload.ok || !payload.document) {
-      setNotice(payload.error ?? 'Revoke failed');
+      setNotice(payload.error ?? (locale === 'ko' ? '공유 링크 취소에 실패했습니다.' : locale === 'zh-hant' ? '撤銷分享連結失敗。' : 'Revoke failed'));
       return;
     }
     replaceDocument(payload.document);
-    setNotice('Share link revoked');
+    setNotice(locale === 'ko' ? '공유 링크가 취소되었습니다.' : locale === 'zh-hant' ? '分享連結已撤銷。' : 'Share link revoked');
   }
 
   async function recordManualPayment(document: BuilderBillingDocumentRow) {
@@ -663,18 +1000,18 @@ export default function BillingDocumentsClient({
     const draft = manualPaymentDrafts[key] ?? defaultManualPaymentDraft(document);
     const amountCents = manualPaymentAmountCents(document.currency, draft.amount);
     if (!Number.isFinite(amountCents) || amountCents <= 0) {
-      setNotice('Enter a valid manual payment amount');
+      setNotice(locale === 'ko' ? '유효한 수동 결제 금액을 입력하세요.' : locale === 'zh-hant' ? '請輸入有效的手動付款金額。' : 'Enter a valid manual payment amount');
       return;
     }
     if (amountCents > document.balanceDue) {
-      setNotice('Manual payment exceeds balance due');
+      setNotice(locale === 'ko' ? '수동 결제 금액이 미지급 잔액을 초과합니다.' : locale === 'zh-hant' ? '手動付款金額超過應付餘額。' : 'Manual payment exceeds balance due');
       return;
     }
 
     setManualPaymentBusyKey(key);
-    setNotice('Recording central manual payment...');
+    setNotice(locale === 'ko' ? '중앙 수동 결제 기록 중...' : locale === 'zh-hant' ? '記錄中央手動付款中...' : 'Recording central manual payment...');
     try {
-      const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/manual-payments`, {
+      const response = await fetch(`/api/builder/billing-documents/${encodeURIComponent(document.source)}/${encodeURIComponent(document.ownerId)}/${encodeURIComponent(document.documentId)}/manual-payments?locale=${encodeURIComponent(locale)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -692,7 +1029,7 @@ export default function BillingDocumentsClient({
         error?: string;
       };
       if (!response.ok || !payload.ok || !payload.document) {
-        setNotice(payload.error ?? 'Manual payment failed');
+        setNotice(payload.error ?? (locale === 'ko' ? '수동 결제 기록에 실패했습니다.' : locale === 'zh-hant' ? '手動付款失敗。' : 'Manual payment failed'));
         return;
       }
 
@@ -704,7 +1041,7 @@ export default function BillingDocumentsClient({
         [key]: nextDraft,
       }));
       if (payload.document.balanceDue <= 0) setManualPaymentOpenKey('');
-      setNotice(payload.document.balanceDue <= 0 ? 'Manual payment completed balance' : 'Manual payment recorded');
+      setNotice(payload.document.balanceDue <= 0 ? (locale === 'ko' ? '수동 결제로 잔액이 정리되었습니다.' : locale === 'zh-hant' ? '手動付款已結清餘額。' : 'Manual payment completed balance') : (locale === 'ko' ? '수동 결제가 기록되었습니다.' : locale === 'zh-hant' ? '手動付款已記錄。' : 'Manual payment recorded'));
     } finally {
       setManualPaymentBusyKey('');
     }
@@ -715,36 +1052,54 @@ export default function BillingDocumentsClient({
       <header className={styles.header}>
         <div>
           <span>{siteTitle}</span>
-          <h1>Billing documents</h1>
-          <p>Central invoice and receipt archive for commerce orders and paid booking flows.</p>
+          <h1>{c.title}</h1>
+          <p>{c.subtitle}</p>
         </div>
         <div className={styles.headerActions}>
-          <Link href={`/${locale}/admin-builder/commerce/products`}>Products</Link>
-          <Link href={`/${locale}/admin-builder/commerce/orders`}>Orders</Link>
-          <Link href={`/${locale}/admin-builder/commerce/payments`}>Payments</Link>
-          <Link href={`/${locale}/admin-builder/commerce/currency`}>Currency</Link>
-          <Link href={`/${locale}/admin-builder/bookings/dashboard`}>Bookings</Link>
+          <Link href={`/${locale}/admin-builder/commerce/products`}>{c.products}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/orders`}>{c.orders}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/payments`}>{c.payments}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/currency`}>{c.currency}</Link>
+          <Link href={`/${locale}/admin-builder/bookings/dashboard`}>{c.bookings}</Link>
           <button
             type="button"
             onClick={() => {
               setExportText(documentCsv(filtered));
-              setNotice('Export ready');
+              setNotice(locale === 'ko' ? 'CSV 내보내기 준비됨' : locale === 'zh-hant' ? 'CSV 匯出已就緒' : 'Export ready');
             }}
             data-billing-documents-export
           >
-            Export CSV
+            {c.exportCsv}
           </button>
           <button type="button" onClick={() => void refreshDocuments()} data-billing-documents-refresh>
-            Refresh
+            {c.refresh}
           </button>
         </div>
       </header>
 
-      <section className={styles.kpis} aria-label="Billing document stats">
+      <section className={styles.kpis} aria-label={locale === 'ko' ? '청구서 문서 통계' : locale === 'zh-hant' ? '帳單文件統計' : 'Billing document stats'}>
         {Object.entries(counts).map(([key, value]) => (
           <article key={key} data-billing-documents-kpi={key}>
             <strong>{value}</strong>
-            <span>{key}</span>
+            <span>
+              {key === 'total'
+                ? (locale === 'ko' ? '총계' : locale === 'zh-hant' ? '總計' : 'Total')
+                : key === 'invoices'
+                  ? c.invoices
+                  : key === 'receipts'
+                    ? c.receipts
+                    : key === 'orders'
+                      ? c.orders
+                      : key === 'bookings'
+                        ? c.bookings
+                        : key === 'emailed'
+                          ? c.emailed
+                          : locale === 'ko'
+                            ? '공유됨'
+                            : locale === 'zh-hant'
+                              ? '已分享'
+                              : 'Shared'}
+            </span>
           </article>
         ))}
       </section>
@@ -752,31 +1107,31 @@ export default function BillingDocumentsClient({
       <section className={styles.paymentAnalytics} data-payment-analytics>
         <div className={styles.paymentAnalyticsHeader}>
           <div>
-            <span>Payment analytics</span>
-            <h2>Current document scope</h2>
+            <span>{c.paymentAnalytics}</span>
+            <h2>{locale === 'ko' ? '현재 문서 범위' : locale === 'zh-hant' ? '目前文件範圍' : 'Current document scope'}</h2>
           </div>
-          <Link href={`/${locale}/admin-builder/commerce/payments`}>Open full analytics</Link>
+          <Link href={`/${locale}/admin-builder/commerce/payments`}>{c.openAnalytics}</Link>
         </div>
         <div className={styles.paymentAnalyticsCards}>
           <article data-payment-analytics-kpi="collected">
             <strong>{paymentAnalytics.collectedLabel}</strong>
-            <span>Collected</span>
+            <span>{locale === 'ko' ? '수금됨' : locale === 'zh-hant' ? '已收款' : 'Collected'}</span>
           </article>
           <article data-payment-analytics-kpi="balance-due">
             <strong>{paymentAnalytics.balanceDueLabel}</strong>
-            <span>Balance due</span>
+            <span>{locale === 'ko' ? '미지급 잔액' : locale === 'zh-hant' ? '應付餘額' : 'Balance due'}</span>
           </article>
           <article data-payment-analytics-kpi="manual-pending">
             <strong>{paymentAnalytics.manualPending}</strong>
-            <span>Manual pending</span>
+            <span>{locale === 'ko' ? '수동 대기' : locale === 'zh-hant' ? '手動待處理' : 'Manual pending'}</span>
           </article>
           <article data-payment-analytics-kpi="refunded">
             <strong>{paymentAnalytics.refundedLabel}</strong>
-            <span>Refunded</span>
+            <span>{c.refunded}</span>
           </article>
           <article data-payment-analytics-kpi="needs-review">
             <strong>{paymentAnalytics.needsReview}</strong>
-            <span>Needs review</span>
+            <span>{locale === 'ko' ? '검토 필요' : locale === 'zh-hant' ? '需要檢視' : 'Needs review'}</span>
           </article>
         </div>
         <div className={styles.paymentMix} data-payment-analytics-mix>
@@ -785,9 +1140,9 @@ export default function BillingDocumentsClient({
           <span data-payment-analytics-segment style={{ flexGrow: Math.max(1, paymentAnalytics.failedWebhooks) }} />
         </div>
         <div className={styles.paymentMixLegend}>
-          <span>Hosted links {paymentAnalytics.activePayLinks}</span>
-          <span>Manual due {paymentAnalytics.manualPending}</span>
-          <span>Webhook failures {paymentAnalytics.failedWebhooks}</span>
+          <span>{c.hostedLinks} {paymentAnalytics.activePayLinks}</span>
+          <span>{locale === 'ko' ? '수동 미결제' : locale === 'zh-hant' ? '手動應付' : 'Manual due'} {paymentAnalytics.manualPending}</span>
+          <span>{locale === 'ko' ? '웹훅 실패' : locale === 'zh-hant' ? 'Webhook 失敗' : 'Webhook failures'} {paymentAnalytics.failedWebhooks}</span>
         </div>
         <div className={styles.paymentAttention} data-payment-analytics-attention>
           {paymentAnalytics.attentionRows.length > 0 ? paymentAnalytics.attentionRows.map((row) => (
@@ -797,8 +1152,8 @@ export default function BillingDocumentsClient({
             </article>
           )) : (
             <article data-payment-analytics-empty>
-              <strong>No payment exceptions</strong>
-              <span>Failed webhooks, stale pay links, and failed payment rows will appear here.</span>
+              <strong>{locale === 'ko' ? '결제 예외 없음' : locale === 'zh-hant' ? '沒有付款異常' : 'No payment exceptions'}</strong>
+              <span>{locale === 'ko' ? '실패한 웹훅, 오래된 결제 링크, 실패한 결제 행이 여기에 표시됩니다.' : locale === 'zh-hant' ? '失敗的 webhook、過期的付款連結與失敗付款列會顯示於此。' : 'Failed webhooks, stale pay links, and failed payment rows will appear here.'}</span>
             </article>
           )}
         </div>
@@ -807,8 +1162,8 @@ export default function BillingDocumentsClient({
       <section className={styles.automationPanel} data-billing-auto-policy>
         <div className={styles.automationHeader}>
           <div>
-            <h2>Automatic issuance</h2>
-            <p>Choose when invoices and receipts are created automatically. Manual actions remain available.</p>
+            <h2>{c.automaticPolicy}</h2>
+            <p>{locale === 'ko' ? '청구서와 영수증이 자동 생성되는 시점을 선택합니다. 수동 작업은 계속 가능합니다.' : locale === 'zh-hant' ? '選擇發票與收據自動建立的時機。仍可使用手動操作。' : 'Choose when invoices and receipts are created automatically. Manual actions remain available.'}</p>
           </div>
           <button
             type="button"
@@ -816,12 +1171,12 @@ export default function BillingDocumentsClient({
             disabled={savingAutomation || !automationDirty}
             data-billing-auto-policy-save
           >
-            {savingAutomation ? 'Saving policy...' : 'Save policy'}
+            {savingAutomation ? c.automaticPolicySave : (locale === 'ko' ? '정책 저장' : locale === 'zh-hant' ? '儲存政策' : 'Save policy')}
           </button>
         </div>
         <div className={styles.automationGroups}>
           <div className={styles.automationGroup} data-billing-auto-policy-group="orders">
-            <strong>Commerce orders</strong>
+            <strong>{locale === 'ko' ? '커머스 주문' : locale === 'zh-hant' ? '商務訂單' : 'Commerce orders'}</strong>
             <label>
               <input
                 type="checkbox"
@@ -829,7 +1184,7 @@ export default function BillingDocumentsClient({
                 onChange={(event) => updateAutomationRule('orders', 'invoiceOnCreate', 'enabled', event.target.checked)}
                 data-billing-auto-order-invoice
               />
-              <span>Auto-issue invoices for new orders</span>
+              <span>{locale === 'ko' ? '새 주문에 대해 청구서를 자동 발행' : locale === 'zh-hant' ? '新訂單自動開立發票' : 'Auto-issue invoices for new orders'}</span>
             </label>
             <label>
               <input
@@ -839,7 +1194,7 @@ export default function BillingDocumentsClient({
                 onChange={(event) => updateAutomationRule('orders', 'invoiceOnCreate', 'email', event.target.checked)}
                 data-billing-auto-order-invoice-email
               />
-              <span>Auto-email order invoices</span>
+              <span>{locale === 'ko' ? '주문 청구서를 자동 이메일' : locale === 'zh-hant' ? '自動寄送訂單發票' : 'Auto-email order invoices'}</span>
             </label>
             <label>
               <input
@@ -848,7 +1203,7 @@ export default function BillingDocumentsClient({
                 onChange={(event) => updateAutomationRule('orders', 'receiptOnPaid', 'enabled', event.target.checked)}
                 data-billing-auto-order-receipt
               />
-              <span>Auto-issue receipts when orders are paid</span>
+              <span>{locale === 'ko' ? '주문 결제 시 영수증 자동 발행' : locale === 'zh-hant' ? '訂單付款後自動開立收據' : 'Auto-issue receipts when orders are paid'}</span>
             </label>
             <label>
               <input
@@ -858,11 +1213,11 @@ export default function BillingDocumentsClient({
                 onChange={(event) => updateAutomationRule('orders', 'receiptOnPaid', 'email', event.target.checked)}
                 data-billing-auto-order-receipt-email
               />
-              <span>Auto-email order receipts</span>
+              <span>{locale === 'ko' ? '주문 영수증을 자동 이메일' : locale === 'zh-hant' ? '自動寄送訂單收據' : 'Auto-email order receipts'}</span>
             </label>
           </div>
           <div className={styles.automationGroup} data-billing-auto-policy-group="bookings">
-            <strong>Bookings</strong>
+            <strong>{c.bookings}</strong>
             <label>
               <input
                 type="checkbox"
@@ -870,7 +1225,7 @@ export default function BillingDocumentsClient({
                 onChange={(event) => updateAutomationRule('bookings', 'invoiceOnCreate', 'enabled', event.target.checked)}
                 data-billing-auto-booking-invoice
               />
-              <span>Auto-issue invoices for new bookings</span>
+              <span>{locale === 'ko' ? '새 예약에 대해 청구서를 자동 발행' : locale === 'zh-hant' ? '新預約自動開立發票' : 'Auto-issue invoices for new bookings'}</span>
             </label>
             <label>
               <input
@@ -880,7 +1235,7 @@ export default function BillingDocumentsClient({
                 onChange={(event) => updateAutomationRule('bookings', 'invoiceOnCreate', 'email', event.target.checked)}
                 data-billing-auto-booking-invoice-email
               />
-              <span>Auto-email booking invoices</span>
+              <span>{locale === 'ko' ? '예약 청구서를 자동 이메일' : locale === 'zh-hant' ? '自動寄送預約發票' : 'Auto-email booking invoices'}</span>
             </label>
             <label>
               <input
@@ -889,7 +1244,7 @@ export default function BillingDocumentsClient({
                 onChange={(event) => updateAutomationRule('bookings', 'receiptOnPaid', 'enabled', event.target.checked)}
                 data-billing-auto-booking-receipt
               />
-              <span>Auto-issue receipts when bookings are paid</span>
+              <span>{locale === 'ko' ? '예약 결제 시 영수증 자동 발행' : locale === 'zh-hant' ? '預約付款後自動開立收據' : 'Auto-issue receipts when bookings are paid'}</span>
             </label>
             <label>
               <input
@@ -899,18 +1254,18 @@ export default function BillingDocumentsClient({
                 onChange={(event) => updateAutomationRule('bookings', 'receiptOnPaid', 'email', event.target.checked)}
                 data-billing-auto-booking-receipt-email
               />
-              <span>Auto-email booking receipts</span>
+              <span>{locale === 'ko' ? '예약 영수증을 자동 이메일' : locale === 'zh-hant' ? '自動寄送預約收據' : 'Auto-email booking receipts'}</span>
             </label>
           </div>
         </div>
         <div className={styles.instructionHeader}>
-          <strong>Offline payment instructions</strong>
-          <span>Shown on invoice payment links. Keep banking details short and operational.</span>
+          <strong>{locale === 'ko' ? '오프라인 결제 안내' : locale === 'zh-hant' ? '離線付款說明' : 'Offline payment instructions'}</strong>
+          <span>{locale === 'ko' ? '청구서 결제 링크에 표시됩니다. 은행 정보는 짧고 운영 중심으로 유지하세요.' : locale === 'zh-hant' ? '顯示於發票付款連結。請保持銀行資訊簡短且具操作性。' : 'Shown on invoice payment links. Keep banking details short and operational.'}</span>
         </div>
         <div className={styles.instructionGroups} data-billing-manual-instructions>
           {(['orders', 'bookings'] as AutomationTarget[]).map((target) => (
             <div key={target} className={styles.instructionGroup} data-billing-manual-instructions-group={target}>
-              <strong>{target === 'orders' ? 'Order invoices' : 'Booking invoices'}</strong>
+              <strong>{target === 'orders' ? (locale === 'ko' ? '주문 청구서' : locale === 'zh-hant' ? '訂單發票' : 'Order invoices') : (locale === 'ko' ? '예약 청구서' : locale === 'zh-hant' ? '預約發票' : 'Booking invoices')}</strong>
               {manualPaymentMethods.map((method) => {
                 const instruction = automationDraft.manualPayments[target][method];
                 const fieldKey = `${target}-${method}`;
@@ -923,12 +1278,12 @@ export default function BillingDocumentsClient({
                         onChange={(event) => updateManualInstruction(target, method, 'enabled', event.target.checked)}
                         data-billing-manual-instruction-enabled={fieldKey}
                       />
-                      <span>{manualPaymentMethodLabel(method)}</span>
+                      <span>{manualPaymentMethodLabel(locale, method)}</span>
                     </label>
                     <input
                       value={instruction.title}
                       maxLength={80}
-                      aria-label={`${manualPaymentMethodLabel(method)} title`}
+                      aria-label={`${manualPaymentMethodLabel(locale, method)} ${locale === 'ko' ? '제목' : locale === 'zh-hant' ? '標題' : 'title'}`}
                       onChange={(event) => updateManualInstruction(target, method, 'title', event.target.value)}
                       data-billing-manual-instruction-title={fieldKey}
                     />
@@ -936,8 +1291,8 @@ export default function BillingDocumentsClient({
                       value={instruction.instructions}
                       rows={3}
                       maxLength={900}
-                      aria-label={`${manualPaymentMethodLabel(method)} instructions`}
-                      placeholder="Account, routing details, branch notes, or office instructions"
+                      aria-label={`${manualPaymentMethodLabel(locale, method)} ${locale === 'ko' ? '안내' : locale === 'zh-hant' ? '說明' : 'instructions'}`}
+                      placeholder={locale === 'ko' ? '계좌, 라우팅 정보, 지점 메모 또는 사무실 안내' : locale === 'zh-hant' ? '帳號、轉帳資訊、分行備註或辦公室說明' : 'Account, routing details, branch notes, or office instructions'}
                       onChange={(event) => updateManualInstruction(target, method, 'instructions', event.target.value)}
                       data-billing-manual-instruction-body={fieldKey}
                     />
@@ -956,25 +1311,25 @@ export default function BillingDocumentsClient({
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search document, customer, email"
+          placeholder={c.searchPlaceholder}
           data-billing-documents-search
         />
         <select value={source} onChange={(event) => setSource(event.target.value as SourceFilter)} data-billing-documents-source>
-          <option value="all">All sources</option>
-          <option value="order">Orders</option>
-          <option value="booking">Bookings</option>
+          <option value="all">{c.allSources}</option>
+          <option value="order">{c.orders}</option>
+          <option value="booking">{c.bookings}</option>
         </select>
         <select value={type} onChange={(event) => setType(event.target.value as TypeFilter)} data-billing-documents-type>
-          <option value="all">All document types</option>
-          <option value="invoice">Invoices</option>
-          <option value="receipt">Receipts</option>
+          <option value="all">{c.allTypes}</option>
+          <option value="invoice">{c.invoices}</option>
+          <option value="receipt">{c.receipts}</option>
         </select>
         <select value={status} onChange={(event) => setStatus(event.target.value as StatusFilter)} data-billing-documents-status>
-          <option value="all">All status</option>
-          <option value="issued">Issued</option>
-          <option value="emailed_stub">Email queued</option>
-          <option value="voided">Voided</option>
-          <option value="superseded">Superseded</option>
+          <option value="all">{c.allStatus}</option>
+          <option value="issued">{c.issued}</option>
+          <option value="emailed_stub">{c.emailed}</option>
+          <option value="voided">{c.voided}</option>
+          <option value="superseded">{c.superseded}</option>
         </select>
       </section>
 
@@ -983,10 +1338,10 @@ export default function BillingDocumentsClient({
       {unmatchedWebhookEvents.length ? (
         <section className={styles.webhookExceptions} data-billing-document-webhook-exceptions>
           <div>
-            <strong>Billing webhook exceptions</strong>
-            <span>Hosted payment webhooks that do not match a visible billing document row.</span>
+            <strong>{c.webhookExceptionsTitle}</strong>
+            <span>{c.webhookExceptionsBody}</span>
             <span data-billing-document-webhook-exception-count>
-              Showing latest {Math.min(3, unmatchedWebhookEvents.length)} of {unmatchedWebhookEvents.length}
+              {c.webhookExceptionsCount(Math.min(3, unmatchedWebhookEvents.length), unmatchedWebhookEvents.length)}
             </span>
           </div>
           <ol>
@@ -997,9 +1352,9 @@ export default function BillingDocumentsClient({
                 data-billing-document-webhook-exception-status={event.status}
                 data-billing-document-webhook-exception-reason={event.error ?? event.paymentStatus}
               >
-                <span>{webhookStatusLabel(event)}</span>
+                <span>{webhookStatusLabel(locale, event)}</span>
                 <small>
-                  {event.source} {event.ownerId} / {event.documentId} · {webhookEventDetail(event)}
+                  {event.source} {event.ownerId} / {event.documentId} · {webhookEventDetail(locale, event)}
                 </small>
                 <button
                   type="button"
@@ -1007,7 +1362,7 @@ export default function BillingDocumentsClient({
                   onClick={() => void replayWebhookEvent(event)}
                   data-billing-document-webhook-exception-replay={event.eventId}
                 >
-                  {webhookBusyId === event.eventId ? 'Replaying...' : 'Replay'}
+                  {webhookBusyId === event.eventId ? c.replaying : c.replay}
                 </button>
               </li>
             ))}
@@ -1015,22 +1370,23 @@ export default function BillingDocumentsClient({
         </section>
       ) : null}
 
-      <section className={styles.list} aria-label="Billing documents list">
+      <section className={styles.list} aria-label={locale === 'ko' ? '청구서 문서 목록' : locale === 'zh-hant' ? '帳單文件列表' : 'Billing documents list'}>
         {filtered.length === 0 ? (
           <article className={styles.empty} data-billing-documents-empty>
-            <strong>No billing documents found</strong>
-            <span>Issued invoices and receipts will appear here after order or booking document actions.</span>
+            <strong>{c.notFoundTitle}</strong>
+            <span>{c.notFoundBody}</span>
           </article>
         ) : filtered.map((document) => {
           const isCurrent = document.status === 'issued' || document.status === 'emailed_stub';
           const rowKey = documentKey(document);
+          const downloadHref = `${document.downloadPath}${document.downloadPath.includes('?') ? '&' : '?'}locale=${encodeURIComponent(locale)}`;
           const manualPaymentAllowed = canRecordManualPayment(document);
           const manualPaymentOpen = manualPaymentOpenKey === rowKey;
           const activityOpen = activityOpenKey === rowKey;
           const manualPaymentDraft = manualPaymentDrafts[rowKey] ?? defaultManualPaymentDraft(document);
           const manualPaymentBusy = manualPaymentBusyKey === rowKey;
           const payLinkState = paymentLinkDisplayState(document);
-          const payLinkLabel = paymentLinkDisplayLabel(document, payLinkState);
+          const payLinkLabel = paymentLinkDisplayLabel(locale, document, payLinkState);
           const rowWebhookEvents = webhookEventsByDocument.get(documentWebhookKey(document)) ?? [];
           const hasActivity = document.paymentLinkEvents.length > 0 || rowWebhookEvents.length > 0 || document.paymentLinkRenewalNeeded;
           return (
@@ -1056,17 +1412,17 @@ export default function BillingDocumentsClient({
             <div className={styles.amounts}>
               <strong>{document.totalLabel}</strong>
               <span className={styles.currencyChip} data-billing-document-currency={rowKey}>
-                Currency {document.currency}
+                {c.currency} {document.currency}
               </span>
-              <span>Due {document.balanceDueLabel}</span>
-              <span>Refunded {document.refundedLabel}</span>
+              <span>{locale === 'ko' ? '미지급' : locale === 'zh-hant' ? '應付' : 'Due'} {document.balanceDueLabel}</span>
+              <span>{c.refunded} {document.refundedLabel}</span>
             </div>
             <div className={styles.state}>
               <strong>{document.statusLabel}</strong>
               <span>{new Date(document.issuedAt).toLocaleString()}</span>
-              {document.emailedAt ? <span>Email {new Date(document.emailedAt).toLocaleString()}</span> : null}
-              <span>{document.shareStatusLabel}{document.shareLinkExpiresAt ? ` · expires ${new Date(document.shareLinkExpiresAt).toLocaleDateString()}` : ''}</span>
-              <span data-billing-document-payment-status={rowKey}>Payment {document.paymentStatusLabel}</span>
+              {document.emailedAt ? <span>{c.emailed} {new Date(document.emailedAt).toLocaleString()}</span> : null}
+              <span>{document.shareStatusLabel}{document.shareLinkExpiresAt ? ` · ${locale === 'ko' ? '만료' : locale === 'zh-hant' ? '到期' : 'expires'} ${new Date(document.shareLinkExpiresAt).toLocaleDateString()}` : ''}</span>
+              <span data-billing-document-payment-status={rowKey}>{locale === 'ko' ? '결제' : locale === 'zh-hant' ? '付款' : 'Payment'} {document.paymentStatusLabel}</span>
               <span
                 data-billing-document-payment-link-status={rowKey}
                 data-billing-document-payment-link-state={payLinkState}
@@ -1080,37 +1436,37 @@ export default function BillingDocumentsClient({
                   data-billing-document-webhook-status={rowKey}
                   data-billing-document-webhook-state={rowWebhookEvents.some((event) => event.status === 'failed') ? 'failed' : rowWebhookEvents.some((event) => event.status === 'ignored') ? 'ignored' : 'processed'}
                 >
-                  {webhookSummaryLabel(rowWebhookEvents)}
+                  {webhookSummaryLabel(locale, rowWebhookEvents)}
                 </span>
               ) : null}
-              {document.voidedAt ? <span>Voided {new Date(document.voidedAt).toLocaleString()}</span> : null}
+              {document.voidedAt ? <span>{c.voided} {new Date(document.voidedAt).toLocaleString()}</span> : null}
               {document.voidReason ? <span>{document.voidReason}</span> : null}
-              {document.supersedesDocumentId ? <span>Supersedes {document.supersedesDocumentId}</span> : null}
-              {document.supersededByDocumentId ? <span>Superseded by {document.supersededByDocumentId}</span> : null}
-              <span>{document.viewCount} views · {document.downloadCount} downloads</span>
+              {document.supersedesDocumentId ? <span>{locale === 'ko' ? '대체함' : locale === 'zh-hant' ? '取代文件' : 'Supersedes'} {document.supersedesDocumentId}</span> : null}
+              {document.supersededByDocumentId ? <span>{locale === 'ko' ? '대체됨' : locale === 'zh-hant' ? '被取代' : 'Superseded by'} {document.supersededByDocumentId}</span> : null}
+              <span>{document.viewCount} {locale === 'ko' ? '조회' : locale === 'zh-hant' ? '檢視' : 'views'} · {document.downloadCount} {locale === 'ko' ? '다운로드' : locale === 'zh-hant' ? '下載' : 'downloads'}</span>
             </div>
             <div className={styles.actions}>
-              <a href={document.downloadPath} data-billing-document-download={rowKey}>
-                Download PDF
+              <a href={downloadHref} data-billing-document-download={rowKey}>
+                {c.downloadPdf}
               </a>
               {isCurrent && document.paymentLinkPath ? (
                 <>
                   <a href={document.paymentLinkPath} target="_blank" rel="noreferrer" data-billing-document-payment={rowKey}>
-                    Open pay
+                    {c.openPay}
                   </a>
                   <button type="button" onClick={() => void copyPaymentLink(document.paymentLinkPath)} data-billing-document-copy-payment={rowKey}>
-                    Copy pay
+                    {c.copyPay}
                   </button>
                   <button type="button" onClick={() => void createPaymentLink(document)} data-billing-document-renew-payment={rowKey}>
-                    Renew pay
+                    {c.renewPay}
                   </button>
                   <button type="button" onClick={() => void revokePaymentLink(document)} data-billing-document-revoke-payment={rowKey}>
-                    Revoke pay
+                    {c.revokePay}
                   </button>
                 </>
               ) : isCurrent && (document.paymentLinkStatus === 'not_created' || document.paymentLinkStatus === 'expired' || document.paymentLinkStatus === 'revoked') ? (
                 <button type="button" onClick={() => void createPaymentLink(document)} data-billing-document-create-payment={rowKey}>
-                  {document.paymentLinkStatus === 'not_created' ? 'Create pay' : 'Renew pay'}
+                  {document.paymentLinkStatus === 'not_created' ? c.createPay : c.renewPay}
                 </button>
               ) : null}
               {manualPaymentAllowed ? (
@@ -1125,33 +1481,33 @@ export default function BillingDocumentsClient({
                   }}
                   data-billing-document-manual-payment-toggle={rowKey}
                 >
-                  {manualPaymentOpen ? 'Hide payment' : 'Record payment'}
+                  {manualPaymentOpen ? c.hidePayment : c.recordPayment}
                 </button>
               ) : null}
               {isCurrent && document.shareStatus === 'active' ? (
                 <>
                   <a href={document.sharePath} target="_blank" rel="noreferrer" data-billing-document-share={rowKey}>
-                    View link
+                    {c.viewLink}
                   </a>
                   <button type="button" onClick={() => void copyShareLink(document.sharePath)} data-billing-document-copy={rowKey}>
-                    Copy link
+                    {c.copyLink}
                   </button>
                   <button type="button" onClick={() => void revokeShareLink(document)} data-billing-document-revoke={rowKey}>
-                    Revoke link
+                    {c.revokeLink}
                   </button>
                 </>
               ) : isCurrent ? (
                 <button type="button" onClick={() => void createShareLink(document)} data-billing-document-create-share={rowKey}>
-                  Create link
+                  {c.createLink}
                 </button>
               ) : null}
               {isCurrent ? (
                 <>
                   <button type="button" onClick={() => void updateLifecycle(document, 'void')} data-billing-document-void={rowKey}>
-                    Void
+                    {c.void}
                   </button>
                   <button type="button" onClick={() => void updateLifecycle(document, 'supersede')} data-billing-document-supersede={rowKey}>
-                    Supersede
+                    {c.supersede}
                   </button>
                 </>
               ) : null}
@@ -1161,10 +1517,10 @@ export default function BillingDocumentsClient({
                   onClick={() => setActivityOpenKey((current) => (current === rowKey ? '' : rowKey))}
                   data-billing-document-activity-toggle={rowKey}
                 >
-                  {activityOpen ? 'Hide activity' : 'Activity'}
+                  {activityOpen ? c.hideActivity : c.activity}
                 </button>
               ) : null}
-              <Link href={document.detailHref}>Open source</Link>
+              <Link href={document.detailHref}>{c.openSource}</Link>
             </div>
             {activityOpen && hasActivity ? (
               <div
@@ -1173,8 +1529,8 @@ export default function BillingDocumentsClient({
                 data-billing-document-payment-link-history={rowKey}
               >
                 <div>
-                  <strong>Document activity</strong>
-                  <span>Payment link lifecycle and hosted payment webhook history for this document.</span>
+                  <strong>{c.documentActivity}</strong>
+                  <span>{c.documentActivityBody}</span>
                 </div>
                 {rowWebhookEvents.length ? (
                   <section
@@ -1182,7 +1538,7 @@ export default function BillingDocumentsClient({
                     data-billing-document-webhook-history={rowKey}
                     data-billing-document-webhook-ledger={rowKey}
                   >
-                    <strong>Hosted payment webhooks</strong>
+                    <strong>{c.hostedWebhooks}</strong>
                     <ol>
                       {rowWebhookEvents.slice(0, 5).map((event) => (
                         <li
@@ -1190,8 +1546,8 @@ export default function BillingDocumentsClient({
                           data-billing-document-webhook-event={event.eventId}
                           data-billing-document-webhook-event-status={event.status}
                         >
-                          <span>{webhookStatusLabel(event)}</span>
-                          <small>{webhookEventDetail(event)}</small>
+                          <span>{webhookStatusLabel(locale, event)}</span>
+                          <small>{webhookEventDetail(locale, event)}</small>
                           {event.status !== 'processed' ? (
                             <button
                               type="button"
@@ -1199,7 +1555,7 @@ export default function BillingDocumentsClient({
                               onClick={() => void replayWebhookEvent(event)}
                               data-billing-document-webhook-replay={event.eventId}
                             >
-                              {webhookBusyId === event.eventId ? 'Replaying...' : 'Replay'}
+                              {webhookBusyId === event.eventId ? c.replaying : c.replay}
                             </button>
                           ) : null}
                         </li>
@@ -1210,7 +1566,7 @@ export default function BillingDocumentsClient({
                 <ol>
                   {document.paymentLinkRenewalNeeded ? (
                     <li data-billing-document-activity-item="renewal_needed">
-                      <span>Renewal needed</span>
+                      <span>{c.renewalNeeded}</span>
                       <small>{payLinkLabel}</small>
                     </li>
                   ) : null}
@@ -1221,8 +1577,8 @@ export default function BillingDocumentsClient({
                       data-billing-document-activity-reason={event.reason}
                       data-billing-document-activity-reference={event.paymentId ?? event.paymentLinkId ?? event.eventId}
                     >
-                      <span>{paymentLinkEventLabel(event)}</span>
-                      <small>{paymentLinkEventDetail(event)}</small>
+                      <span>{paymentLinkEventLabel(locale, event)}</span>
+                      <small>{paymentLinkEventDetail(locale, event)}</small>
                     </li>
                   ))}
                 </ol>
@@ -1232,14 +1588,14 @@ export default function BillingDocumentsClient({
               <div className={styles.manualPaymentPanel} data-billing-document-manual-payment-form={rowKey}>
                 <div className={styles.manualPaymentHeader}>
                   <div>
-                    <strong>Record offline payment</strong>
-                    <span data-billing-document-manual-payment-helper={rowKey}>Only succeeded payments reduce balance.</span>
-                    <span data-billing-document-manual-payment-currency={rowKey}>Record in invoice currency: {document.currency}</span>
+                    <strong>{c.recordOfflinePayment}</strong>
+                    <span data-billing-document-manual-payment-helper={rowKey}>{c.onlySucceeded}</span>
+                    <span data-billing-document-manual-payment-currency={rowKey}>{c.recordCurrency} {document.currency}</span>
                   </div>
-                  <em>Balance due {document.balanceDueLabel}</em>
+                  <em>{locale === 'ko' ? '미지급 잔액' : locale === 'zh-hant' ? '應付餘額' : 'Balance due'} {document.balanceDueLabel}</em>
                 </div>
                 <label>
-                  <span>Status</span>
+                  <span>{c.status}</span>
                   <select
                     value={manualPaymentDraft.status}
                     disabled={manualPaymentBusy}
@@ -1250,12 +1606,12 @@ export default function BillingDocumentsClient({
                     data-billing-document-manual-payment-status={rowKey}
                   >
                     {(['succeeded', 'pending', 'failed', 'canceled'] as ManualPaymentStatus[]).map((statusOption) => (
-                      <option key={statusOption} value={statusOption}>{manualPaymentStatusLabel(statusOption)}</option>
+                      <option key={statusOption} value={statusOption}>{manualPaymentStatusLabel(locale, statusOption)}</option>
                     ))}
                   </select>
                 </label>
                 <label>
-                  <span>Amount</span>
+                  <span>{c.amount}</span>
                   <input
                     value={manualPaymentDraft.amount}
                     inputMode="decimal"
@@ -1268,7 +1624,7 @@ export default function BillingDocumentsClient({
                   />
                 </label>
                 <label>
-                  <span>Method</span>
+                  <span>{c.method}</span>
                   <select
                     value={manualPaymentDraft.method}
                     disabled={manualPaymentBusy}
@@ -1279,12 +1635,12 @@ export default function BillingDocumentsClient({
                     data-billing-document-manual-payment-method={rowKey}
                   >
                     {(['bank_transfer', 'cash', 'check', 'other'] as ManualPaymentMethod[]).map((method) => (
-                      <option key={method} value={method}>{manualPaymentMethodLabel(method)}</option>
+                      <option key={method} value={method}>{manualPaymentMethodLabel(locale, method)}</option>
                     ))}
                   </select>
                 </label>
                 <label>
-                  <span>Reference</span>
+                  <span>{c.reference}</span>
                   <input
                     value={manualPaymentDraft.reference}
                     disabled={manualPaymentBusy}
@@ -1296,7 +1652,7 @@ export default function BillingDocumentsClient({
                   />
                 </label>
                 <label>
-                  <span>Note</span>
+                  <span>{c.note}</span>
                   <textarea
                     value={manualPaymentDraft.note}
                     rows={2}
@@ -1315,7 +1671,7 @@ export default function BillingDocumentsClient({
                   onClick={() => void recordManualPayment(document)}
                   data-billing-document-manual-payment-submit={rowKey}
                 >
-                  {manualPaymentBusy ? 'Saving...' : 'Save payment record'}
+                  {manualPaymentBusy ? c.saving : c.savePaymentRecord}
                 </button>
               </div>
             ) : null}
@@ -1326,7 +1682,7 @@ export default function BillingDocumentsClient({
 
       {exportText ? (
         <section className={styles.exportPanel} data-billing-documents-export-panel>
-          <h2>CSV export</h2>
+          <h2>{c.exportCsv}</h2>
           <textarea readOnly rows={8} value={exportText} />
         </section>
       ) : null}

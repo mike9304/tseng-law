@@ -33,8 +33,9 @@ function makeConversation(overrides: Partial<ChatConversation> = {}): ChatConver
   };
 }
 
-function postRequest(body: unknown): NextRequest {
-  return new NextRequest('https://law.example.test/api/live-chat/send', {
+function postRequest(body: unknown, localeQuery = ''): NextRequest {
+  const query = localeQuery ? `?locale=${localeQuery}` : '';
+  return new NextRequest(`https://law.example.test/api/live-chat/send${query}`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-forwarded-for': '127.0.0.8' },
     body: JSON.stringify(body),
@@ -63,46 +64,60 @@ describe('/api/live-chat/send', () => {
     );
   });
 
-  it('returns 401 when the visitor token does not match', async () => {
+  it('returns localized 401 when the visitor token does not match', async () => {
     vi.mocked(getConversation).mockResolvedValue(makeConversation());
     const route = await import('../route');
     const response = await route.POST(
-      postRequest({ conversationId: 'cnv-1', visitorToken: 'tok-WRONG', body: 'hi' }),
+      postRequest({ conversationId: 'cnv-1', visitorToken: 'tok-WRONG', body: 'hi', locale: 'zh-hant' }),
     );
+    const payload = await response.json();
 
     expect(response.status).toBe(401);
+    expect(payload.errorCode).toBe('unauthorized');
+    expect(payload.error).toBe('無法確認這段對話。請重新開始。');
+    expect(payload.error).not.toMatch(/[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]/);
     expect(appendMessage).not.toHaveBeenCalled();
   });
 
-  it('returns 404 when the conversation does not exist', async () => {
+  it('returns localized 404 when the conversation does not exist', async () => {
     vi.mocked(getConversation).mockResolvedValue(null);
     const route = await import('../route');
     const response = await route.POST(
-      postRequest({ conversationId: 'cnv-missing', visitorToken: 'tok-correct', body: 'hi' }),
+      postRequest({ conversationId: 'cnv-missing', visitorToken: 'tok-correct', body: 'hi', locale: 'en' }),
     );
+    const payload = await response.json();
 
     expect(response.status).toBe(404);
+    expect(payload.errorCode).toBe('conversation_not_found');
+    expect(payload.error).toBe('This conversation could not be found. Please start again.');
+    expect(payload.error).not.toMatch(/[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3\u4E00-\u9FFF]/);
     expect(appendMessage).not.toHaveBeenCalled();
   });
 
-  it('refuses to append to a closed conversation with 409', async () => {
+  it('refuses to append to a closed conversation with localized 409', async () => {
     vi.mocked(getConversation).mockResolvedValue(makeConversation({ status: 'closed' }));
     const route = await import('../route');
     const response = await route.POST(
-      postRequest({ conversationId: 'cnv-1', visitorToken: 'tok-correct', body: 'hi' }),
+      postRequest({ conversationId: 'cnv-1', visitorToken: 'tok-correct', body: 'hi', locale: 'zh-hant' }),
     );
+    const payload = await response.json();
 
     expect(response.status).toBe(409);
+    expect(payload.errorCode).toBe('conversation_closed');
+    expect(payload.error).toBe('這段對話已結束。');
     expect(appendMessage).not.toHaveBeenCalled();
   });
 
-  it('returns 429 when the send rate limit is exceeded', async () => {
+  it('returns localized 429 when the send rate limit is exceeded', async () => {
     vi.mocked(checkRateLimit).mockResolvedValueOnce({ allowed: false, remaining: 0, retryAfterMs: 4000 });
     const route = await import('../route');
     const response = await route.POST(
-      postRequest({ conversationId: 'cnv-1', visitorToken: 'tok-correct', body: 'hi' }),
+      postRequest({ conversationId: 'cnv-1', visitorToken: 'tok-correct', body: 'hi' }, 'en'),
     );
+    const payload = await response.json();
 
     expect(response.status).toBe(429);
+    expect(payload.errorCode).toBe('too_many_requests');
+    expect(payload.error).toBe('Please try again in a moment.');
   });
 });

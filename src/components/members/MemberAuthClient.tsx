@@ -68,6 +68,7 @@ export default function MemberAuthClient({ locale, nextPath }: MemberAuthClientP
     const payload = {
       email: String(form.get('email') ?? ''),
       password: String(form.get('password') ?? ''),
+      locale,
       ...(mode === 'signup' ? { name: String(form.get('name') ?? '') } : {}),
     };
     try {

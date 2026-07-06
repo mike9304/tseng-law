@@ -9,16 +9,9 @@ import {
   isDefaultFilters,
   type ImageFilters,
 } from '@/lib/builder/canvas/filters';
+import type { Locale } from '@/lib/locales';
+import { getImageEditCopy } from '@/lib/builder/components/image/image-edit-copy';
 import styles from './SandboxPage.module.css';
-
-const FILTER_SLIDERS: Array<{ key: keyof ImageFilters; label: string; min: number; max: number; step?: number; unit: string }> = [
-  { key: 'brightness', label: 'Brightness', min: 0, max: 200, unit: '%' },
-  { key: 'contrast', label: 'Contrast', min: 0, max: 200, unit: '%' },
-  { key: 'saturation', label: 'Saturation', min: 0, max: 200, unit: '%' },
-  { key: 'blur', label: 'Blur', min: 0, max: 20, step: 0.5, unit: 'px' },
-  { key: 'grayscale', label: 'B&W', min: 0, max: 100, unit: '%' },
-  { key: 'sepia', label: 'Sepia', min: 0, max: 100, unit: '%' },
-];
 
 const FOCUSABLE_SELECTOR = [
   'a[href]:not([tabindex="-1"])',
@@ -32,6 +25,7 @@ const FOCUSABLE_SELECTOR = [
 
 export type ImageEditTab = 'crop' | 'filter' | 'alt' | 'ai';
 type ImageFocalPoint = { x: number; y: number };
+type FocalPresetKey = 'topLeft' | 'top' | 'topRight' | 'left' | 'center' | 'right' | 'bottomLeft' | 'bottom' | 'bottomRight';
 type EditedImageAsset = {
   filename: string;
   url: string;
@@ -41,8 +35,10 @@ type AiReviewHistoryState = {
   index: number;
 };
 
+type AiVariationPresetKey = 'premiumBright' | 'editorialCalm' | 'modernContrast';
+type AiMaskPresetKey = 'centerFocus' | 'topBand' | 'bottomBand' | 'leftDetail' | 'rightDetail';
 type AiMaskRect = {
-  label: string;
+  label: AiMaskPresetKey;
   x: number;
   y: number;
   width: number;
@@ -64,26 +60,29 @@ const DEFAULT_AI_MASK_EDGE = 0;
 const EMPTY_AI_REVIEW_HISTORY: AiReviewHistoryState = { entries: [], index: -1 };
 
 const AI_VARIATION_PRESETS = [
-  {
-    label: 'Premium bright',
-    prompt: 'Make this a brighter premium legal website hero image with realistic office lighting and no text.',
-  },
-  {
-    label: 'Editorial calm',
-    prompt: 'Create a calm editorial version with refined contrast, warm professional lighting, and no text.',
-  },
-  {
-    label: 'Modern contrast',
-    prompt: 'Create a modern high-contrast website image with polished legal brand atmosphere and no text.',
-  },
-];
+  'premiumBright',
+  'editorialCalm',
+  'modernContrast',
+] as const satisfies readonly AiVariationPresetKey[];
 
 const AI_MASK_PRESETS: AiMaskRect[] = [
-  { label: 'Center focus', x: 28, y: 24, width: 44, height: 44 },
-  { label: 'Top band', x: 12, y: 8, width: 76, height: 28 },
-  { label: 'Bottom band', x: 12, y: 62, width: 76, height: 26 },
-  { label: 'Left detail', x: 8, y: 22, width: 34, height: 52 },
-  { label: 'Right detail', x: 58, y: 22, width: 34, height: 52 },
+  { label: 'centerFocus', x: 28, y: 24, width: 44, height: 44 },
+  { label: 'topBand', x: 12, y: 8, width: 76, height: 28 },
+  { label: 'bottomBand', x: 12, y: 62, width: 76, height: 26 },
+  { label: 'leftDetail', x: 8, y: 22, width: 34, height: 52 },
+  { label: 'rightDetail', x: 58, y: 22, width: 34, height: 52 },
+];
+
+const FOCAL_PRESETS: Array<{ key: FocalPresetKey; x: number; y: number }> = [
+  { key: 'topLeft', x: 20, y: 20 },
+  { key: 'top', x: 50, y: 20 },
+  { key: 'topRight', x: 80, y: 20 },
+  { key: 'left', x: 20, y: 50 },
+  { key: 'center', x: 50, y: 50 },
+  { key: 'right', x: 80, y: 50 },
+  { key: 'bottomLeft', x: 20, y: 80 },
+  { key: 'bottom', x: 50, y: 80 },
+  { key: 'bottomRight', x: 80, y: 80 },
 ];
 
 function clampFocal(value: number): number {
@@ -111,7 +110,7 @@ export default function ImageEditDialog({
   onClose,
 }: {
   open: boolean;
-  locale: string;
+  locale: Locale | string;
   imageSrc: string;
   alt: string;
   cropAspect?: string;
@@ -146,6 +145,15 @@ export default function ImageEditDialog({
   const [aiReviewOriginal, setAiReviewOriginal] = useState(false);
   const [aiReviewHistory, setAiReviewHistory] = useState<AiReviewHistoryState>(EMPTY_AI_REVIEW_HISTORY);
   const [aiPreviewFrame, setAiPreviewFrame] = useState<AiPreviewFrame>('desktop');
+  const copy = getImageEditCopy(locale);
+  const filterSliders: Array<{ key: keyof ImageFilters; label: string; min: number; max: number; step?: number; unit: string }> = [
+    { key: 'brightness', label: copy.dialog.filterPresets.brightness, min: 0, max: 200, unit: '%' },
+    { key: 'contrast', label: copy.dialog.filterPresets.contrast, min: 0, max: 200, unit: '%' },
+    { key: 'saturation', label: copy.dialog.filterPresets.saturation, min: 0, max: 200, unit: '%' },
+    { key: 'blur', label: copy.dialog.filterPresets.blur, min: 0, max: 20, step: 0.5, unit: 'px' },
+    { key: 'grayscale', label: copy.dialog.filterPresets.bw, min: 0, max: 100, unit: '%' },
+    { key: 'sepia', label: copy.dialog.filterPresets.sepia, min: 0, max: 100, unit: '%' },
+  ];
   const previewImageRef = useRef<HTMLImageElement | null>(null);
   const aiBrushIdRef = useRef(0);
   const activeBrushStrokeIdRef = useRef<string | null>(null);
@@ -361,7 +369,7 @@ export default function ImageEditDialog({
     setAiEditedAsset(asset);
     setAiReviewOriginal(false);
     setAiNoticeTone('info');
-    setAiNotice(asset ? `Review restored: ${asset.filename}` : 'Review restored to the current image.');
+    setAiNotice(copy.dialog.ai.reviewRestored(asset?.filename));
   };
   const createAiMaskPayload = (): { dataUrl: string; description: string } | null => {
     const image = previewImageRef.current;
@@ -391,7 +399,7 @@ export default function ImageEditDialog({
       } else {
         context.clearRect(rectX, rectY, rectWidth, rectHeight);
       }
-      return { dataUrl: canvas.toDataURL('image/png'), description: aiMaskRect.label };
+      return { dataUrl: canvas.toDataURL('image/png'), description: copy.dialog.ai.maskDescriptions[aiMaskRect.label] };
     }
     const usableBrushStrokes = aiBrushEnabled
       ? aiBrushStrokes.filter((stroke) => stroke.points.length > 0)
@@ -425,7 +433,7 @@ export default function ImageEditDialog({
       context.stroke();
       context.restore();
     });
-    return { dataUrl: canvas.toDataURL('image/png'), description: 'Brush mask' };
+    return { dataUrl: canvas.toDataURL('image/png'), description: copy.dialog.ai.brushMaskDescription };
   };
   const handleGenerateAiEdit = async () => {
     const prompt = aiPrompt.trim();
@@ -456,7 +464,7 @@ export default function ImageEditDialog({
         asset?: EditedImageAsset;
       };
       if (!response.ok || !payload.ok || !payload.asset?.url) {
-        throw new Error(payload.message || payload.error || 'Image edit failed.');
+        throw new Error(payload.message || payload.error || copy.dialog.ai.imageEditFailed);
       }
       pushAiReviewSelection(payload.asset);
       setAiEditedAssets((current) => [
@@ -464,10 +472,10 @@ export default function ImageEditDialog({
         ...current.filter((asset) => asset.url !== payload.asset!.url),
       ].slice(0, 4));
       setAiNoticeTone('success');
-      setAiNotice(`Edited image ready: ${payload.asset.filename}`);
+      setAiNotice(copy.dialog.ai.editedImageReady(payload.asset.filename));
     } catch (error) {
       setAiNoticeTone('error');
-      setAiNotice(error instanceof Error ? error.message : 'Image edit failed.');
+      setAiNotice(error instanceof Error ? error.message : copy.dialog.ai.imageEditFailed);
     } finally {
       setAiGenerating(false);
     }
@@ -482,18 +490,18 @@ export default function ImageEditDialog({
         className={`${styles.modalCard} ${styles.imageEditDialog}`}
         role="dialog"
         aria-modal="true"
-        aria-label="Crop, filter, and alt text"
+        aria-label={copy.dialog.ariaLabel}
         tabIndex={-1}
         data-builder-image-edit-dialog="true"
         onClick={(event) => event.stopPropagation()}
       >
         <header className={styles.modalHeader}>
           <div>
-            <span className={styles.modalEyebrow}>Image settings</span>
-            <strong>Crop / Filter / Alt edit</strong>
+            <span className={styles.modalEyebrow}>{copy.dialog.eyebrow}</span>
+            <strong>{copy.dialog.title}</strong>
           </div>
           <button type="button" className={styles.modalCloseButton} onClick={onClose}>
-            Close
+            {copy.dialog.close}
           </button>
         </header>
 
@@ -508,7 +516,7 @@ export default function ImageEditDialog({
                 <img
                   ref={previewImageRef}
                   src={previewSrc}
-                  alt={draftAlt || 'Image preview'}
+                  alt={draftAlt || copy.dialog.ai.previewAltFallback}
                   style={{
                     filter: previewFilter,
                     objectPosition: `${draftFocalPoint.x}% ${draftFocalPoint.y}%`,
@@ -585,7 +593,7 @@ export default function ImageEditDialog({
                 ) : null}
               </div>
             ) : (
-              <span className={styles.modalHint}>No image source.</span>
+              <span className={styles.modalHint}>{copy.dialog.noImageSource}</span>
             )}
           </div>
 
@@ -598,14 +606,14 @@ export default function ImageEditDialog({
                   className={`${styles.imageEditTab} ${activeTab === tab ? styles.imageEditTabActive : ''}`}
                   onClick={() => setActiveTab(tab)}
                 >
-                  {tab}
+                  {copy.dialog.tabs[tab]}
                 </button>
               ))}
             </div>
 
             {activeTab === 'crop' ? (
               <div className={styles.imageEditPanel}>
-                <span className={styles.inspectorFieldLabel}>Aspect ratio</span>
+                <span className={styles.inspectorFieldLabel}>{copy.dialog.crop.aspectRatio}</span>
                 <div className={styles.imageEditRatioGrid}>
                   {ASPECT_RATIOS.map((ratio) => (
                     <button
@@ -614,30 +622,20 @@ export default function ImageEditDialog({
                       className={`${styles.imageEditOptionButton} ${draftAspect === ratio.label ? styles.imageEditOptionButtonActive : ''}`}
                       onClick={() => setDraftAspect(ratio.label)}
                     >
-                      {ratio.label}
+                      {copy.dialog.crop.aspectRatioLabels[ratio.key]}
                     </button>
                   ))}
                 </div>
                 <div className={styles.imageEditFocalControls}>
-                  <span className={styles.inspectorFieldLabel}>Focal point</span>
-                  <div className={styles.imageEditFocalGrid} aria-label="Focal point presets">
-                    {[
-                      ['top-left', 20, 20],
-                      ['top', 50, 20],
-                      ['top-right', 80, 20],
-                      ['left', 20, 50],
-                      ['center', 50, 50],
-                      ['right', 80, 50],
-                      ['bottom-left', 20, 80],
-                      ['bottom', 50, 80],
-                      ['bottom-right', 80, 80],
-                    ].map(([label, x, y]) => (
+                  <span className={styles.inspectorFieldLabel}>{copy.dialog.crop.focalPoint}</span>
+                  <div className={styles.imageEditFocalGrid} aria-label={copy.dialog.crop.focalPointPresets}>
+                    {FOCAL_PRESETS.map((preset) => (
                       <button
-                        key={label}
+                        key={preset.key}
                         type="button"
-                        aria-label={`Focal ${label}`}
+                        aria-label={copy.dialog.crop.focalPresetAriaLabel(copy.dialog.crop.focalPresetLabels[preset.key])}
                         className={styles.imageEditFocalPreset}
-                        onClick={() => updateFocalPoint({ x: Number(x), y: Number(y) })}
+                        onClick={() => updateFocalPoint({ x: preset.x, y: preset.y })}
                       />
                     ))}
                   </div>
@@ -648,7 +646,7 @@ export default function ImageEditDialog({
                       min={0}
                       max={100}
                       value={draftFocalPoint.x}
-                      aria-label="Focal point X"
+                      aria-label={copy.dialog.crop.focalPointX}
                       onChange={(event) => updateFocalPoint({ x: Number(event.target.value) })}
                     />
                     <strong>{draftFocalPoint.x}%</strong>
@@ -660,7 +658,7 @@ export default function ImageEditDialog({
                       min={0}
                       max={100}
                       value={draftFocalPoint.y}
-                      aria-label="Focal point Y"
+                      aria-label={copy.dialog.crop.focalPointY}
                       onChange={(event) => updateFocalPoint({ y: Number(event.target.value) })}
                     />
                     <strong>{draftFocalPoint.y}%</strong>
@@ -674,16 +672,16 @@ export default function ImageEditDialog({
                 <div className={styles.imageEditPresetRow}>
                   {FILTER_PRESETS.map((preset) => (
                     <button
-                      key={preset.label}
+                      key={preset.key}
                       type="button"
                       className={styles.imageEditOptionButton}
                       onClick={() => setDraftFilters({ ...DEFAULT_FILTERS, ...preset.filters })}
                     >
-                      {preset.label}
+                      {copy.dialog.filterPresetLabels[preset.key]}
                     </button>
                   ))}
                 </div>
-                {FILTER_SLIDERS.map((slider) => (
+                {filterSliders.map((slider) => (
                   <label key={slider.key} className={styles.imageEditSlider}>
                     <span>{slider.label}</span>
                     <input
@@ -708,12 +706,12 @@ export default function ImageEditDialog({
             {activeTab === 'alt' ? (
               <div className={styles.imageEditPanel}>
                 <label className={styles.inspectorField}>
-                  <span className={styles.inspectorFieldLabel}>Alt text</span>
+                  <span className={styles.inspectorFieldLabel}>{copy.dialog.alt.text}</span>
                   <textarea
                     className={styles.inspectorTextarea}
                     value={draftAlt}
                     rows={5}
-                    placeholder="Describe the image for accessibility and SEO"
+                    placeholder={copy.dialog.alt.placeholder}
                     onChange={(event) => setDraftAlt(event.target.value)}
                   />
                 </label>
@@ -723,15 +721,13 @@ export default function ImageEditDialog({
             {activeTab === 'ai' ? (
               <div className={styles.imageEditPanel} data-builder-ai-image-edit-panel="true">
                 <div className={styles.imageEditAiIntro}>
-                  <span className={styles.inspectorFieldLabel}>Image 2.0 edit</span>
-                  <strong>프롬프트로 새 버전 만들기</strong>
-                  <p>
-                    현재 빌더 자산을 기반으로 새 이미지를 만들고, Apply를 누르면 이 이미지로 교체됩니다.
-                  </p>
+                  <span className={styles.inspectorFieldLabel}>{copy.dialog.ai.sectionEyebrow}</span>
+                  <strong>{copy.dialog.ai.subtitle}</strong>
+                  <p>{copy.dialog.ai.body}</p>
                 </div>
                 <div className={styles.imageEditAiViewportControls} data-builder-ai-image-preview-controls="true">
-                  <span className={styles.inspectorFieldLabel}>Preview frame</span>
-                  <div className={styles.imageEditAiViewportButtons} aria-label="AI image preview frame">
+                  <span className={styles.inspectorFieldLabel}>{copy.dialog.ai.previewFrame}</span>
+                  <div className={styles.imageEditAiViewportButtons} aria-label={copy.dialog.ai.previewFrameDialog}>
                     {(['desktop', 'mobile'] as AiPreviewFrame[]).map((frame) => (
                       <button
                         key={frame}
@@ -740,37 +736,37 @@ export default function ImageEditDialog({
                         data-builder-ai-image-preview-mode-button={frame}
                         onClick={() => setAiPreviewFrame(frame)}
                       >
-                        {frame === 'desktop' ? 'Desktop' : 'Mobile'}
+                        {frame === 'desktop' ? copy.dialog.ai.previewDesktop : copy.dialog.ai.previewMobile}
                       </button>
                     ))}
                   </div>
                 </div>
                 <label className={styles.inspectorField}>
-                  <span className={styles.inspectorFieldLabel}>Edit prompt</span>
+                  <span className={styles.inspectorFieldLabel}>{copy.dialog.ai.editPrompt}</span>
                   <textarea
                     className={styles.inspectorTextarea}
                     value={aiPrompt}
                     rows={5}
-                    placeholder="예: 더 밝고 고급스러운 법률사무소 히어로 이미지로 바꾸고, 텍스트는 넣지 마세요."
+                    placeholder={copy.dialog.ai.promptPlaceholder}
                     data-builder-ai-image-edit-prompt="true"
                     onChange={(event) => setAiPrompt(event.target.value)}
                   />
                 </label>
-                <div className={styles.imageEditAiPresets} aria-label="AI edit prompt presets">
+                <div className={styles.imageEditAiPresets} aria-label={copy.dialog.ai.promptPresets}>
                   {AI_VARIATION_PRESETS.map((preset) => (
                     <button
-                      key={preset.label}
+                      key={preset}
                       type="button"
                       className={styles.imageEditOptionButton}
-                      onClick={() => setAiPrompt(preset.prompt)}
+                      onClick={() => setAiPrompt(copy.dialog.ai.presetPrompts[preset])}
                     >
-                      {preset.label}
+                      {copy.dialog.ai.presetLabels[preset]}
                     </button>
                   ))}
                 </div>
                 <div className={styles.imageEditAiMaskControls}>
-                  <span className={styles.inspectorFieldLabel}>Mask area</span>
-                  <div className={styles.imageEditAiPresets} aria-label="AI edit mask presets">
+                  <span className={styles.inspectorFieldLabel}>{copy.dialog.ai.maskArea}</span>
+                  <div className={styles.imageEditAiPresets} aria-label={copy.dialog.ai.maskPresets}>
                     <button
                       type="button"
                       className={`${styles.imageEditOptionButton} ${!aiMaskRect && !aiBrushEnabled ? styles.imageEditOptionButtonActive : ''}`}
@@ -781,7 +777,7 @@ export default function ImageEditDialog({
                         setAiBrushStrokes([]);
                       }}
                     >
-                      Full image
+                      {copy.dialog.ai.fullImage}
                     </button>
                     <button
                       type="button"
@@ -792,7 +788,7 @@ export default function ImageEditDialog({
                         setAiBrushEnabled(true);
                       }}
                     >
-                      Brush area
+                      {copy.dialog.ai.brushArea}
                     </button>
                     {AI_MASK_PRESETS.map((preset) => (
                       <button
@@ -805,11 +801,11 @@ export default function ImageEditDialog({
                           setAiBrushEnabled(false);
                         }}
                       >
-                        {preset.label}
+                        {copy.dialog.ai.maskLabels[preset.label]}
                       </button>
                     ))}
                     <label className={styles.imageEditAiFeather}>
-                      <span>Feather</span>
+                      <span>{copy.dialog.ai.feather}</span>
                       <input
                         type="range"
                         min={0}
@@ -821,7 +817,7 @@ export default function ImageEditDialog({
                       <strong>{aiMaskFeather}%</strong>
                     </label>
                     <label className={styles.imageEditAiFeather}>
-                      <span>Edge</span>
+                      <span>{copy.dialog.ai.edge}</span>
                       <input
                         type="range"
                         min={-8}
@@ -840,7 +836,7 @@ export default function ImageEditDialog({
                           data-builder-ai-image-edit-brush-mode="paint"
                           onClick={() => setAiBrushMode('paint')}
                         >
-                          Add
+                          {copy.dialog.ai.add}
                         </button>
                         <button
                           type="button"
@@ -848,10 +844,10 @@ export default function ImageEditDialog({
                           data-builder-ai-image-edit-brush-mode="erase"
                           onClick={() => setAiBrushMode('erase')}
                         >
-                          Erase
+                          {copy.dialog.ai.erase}
                         </button>
                         <label className={styles.imageEditAiBrushSize}>
-                          <span>Brush size</span>
+                          <span>{copy.dialog.ai.brushSize}</span>
                           <input
                             type="range"
                             min={4}
@@ -869,7 +865,7 @@ export default function ImageEditDialog({
                           disabled={aiBrushStrokes.length === 0}
                           onClick={undoLastAiBrushStroke}
                         >
-                          Undo stroke
+                          {copy.dialog.ai.undoStroke}
                         </button>
                         <button
                           type="button"
@@ -878,7 +874,7 @@ export default function ImageEditDialog({
                           disabled={aiBrushStrokes.length === 0}
                           onClick={() => setAiBrushStrokes([])}
                         >
-                          Clear brush
+                          {copy.dialog.ai.clearBrush}
                         </button>
                       </div>
                     ) : null}
@@ -886,7 +882,7 @@ export default function ImageEditDialog({
                 </div>
                 {!builderAssetUrl ? (
                   <p className={styles.imageEditAiNotice} data-tone="warning">
-                    AI edit requires an image from the builder asset library. Replace this image with an uploaded asset first.
+                    {copy.dialog.ai.requiresAssetLibrary}
                   </p>
                 ) : null}
                 {aiNotice ? (
@@ -905,7 +901,7 @@ export default function ImageEditDialog({
                   disabled={!builderAssetUrl || aiPrompt.trim().length < 20 || aiGenerating}
                   onClick={handleGenerateAiEdit}
                 >
-                  {aiGenerating ? 'Generating...' : 'Generate edit'}
+                  {aiGenerating ? copy.dialog.ai.generating : copy.dialog.ai.generate}
                 </button>
                 {aiEditedAssets.length > 0 ? (
                   <div className={styles.imageEditAiReviewControls} data-builder-ai-image-edit-review-controls="true">
@@ -916,7 +912,7 @@ export default function ImageEditDialog({
                       disabled={!aiEditedAsset}
                       onClick={() => setAiReviewOriginal(false)}
                     >
-                      Selected edit
+                      {copy.dialog.ai.selectedEdit}
                     </button>
                     <button
                       type="button"
@@ -925,7 +921,7 @@ export default function ImageEditDialog({
                       disabled={!aiEditedAsset}
                       onClick={() => setAiReviewOriginal(true)}
                     >
-                      Original
+                      {copy.dialog.ai.original}
                     </button>
                     <button
                       type="button"
@@ -934,7 +930,7 @@ export default function ImageEditDialog({
                       disabled={!canUndoAiReview}
                       onClick={() => restoreAiReviewSelection(-1)}
                     >
-                      Undo review
+                      {copy.dialog.ai.undoReview}
                     </button>
                     <button
                       type="button"
@@ -943,7 +939,7 @@ export default function ImageEditDialog({
                       disabled={!canRedoAiReview}
                       onClick={() => restoreAiReviewSelection(1)}
                     >
-                      Redo review
+                      {copy.dialog.ai.redoReview}
                     </button>
                     <button
                       type="button"
@@ -953,28 +949,26 @@ export default function ImageEditDialog({
                       onClick={() => {
                         pushAiReviewSelection(null);
                         setAiNoticeTone('info');
-                        setAiNotice('AI edit selection cleared. Apply will keep the current image.');
+                        setAiNotice(copy.dialog.ai.clearedNotice);
                       }}
                     >
-                      Clear AI edit
+                      {copy.dialog.ai.clearAiEdit}
                     </button>
                   </div>
                 ) : null}
                 {aiEditedAsset ? (
                   <div className={styles.imageEditAiTransactionReview} data-builder-ai-image-edit-transaction="true">
                     <div className={styles.imageEditAiTransactionFrame}>
-                      <span>Current</span>
+                      <span>{copy.dialog.ai.current}</span>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={dialogImageSrc} alt="" />
                     </div>
                     <div className={styles.imageEditAiTransactionFrame}>
-                      <span>Selected edit</span>
+                      <span>{copy.dialog.ai.selectedEdit}</span>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={aiEditedAsset.url} alt="" />
                     </div>
-                    <p>
-                      Apply will replace the image source with <strong>{aiEditedAsset.filename}</strong>.
-                    </p>
+                    <p>{copy.dialog.ai.applyWillReplace(aiEditedAsset.filename)}</p>
                   </div>
                 ) : null}
                 {aiEditedAssets.length > 0 ? (
@@ -1003,7 +997,7 @@ export default function ImageEditDialog({
 
         <footer className={styles.imageEditFooter}>
           <button type="button" className={styles.actionButton} onClick={onClose}>
-            Cancel
+            {copy.dialog.ai.cancel}
           </button>
           <button
             type="button"
@@ -1019,7 +1013,7 @@ export default function ImageEditDialog({
               onApply(nextContent);
             }}
           >
-            Apply
+            {copy.dialog.ai.apply}
           </button>
         </footer>
       </div>

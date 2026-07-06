@@ -1,5 +1,7 @@
 import { defineComponent } from '../define';
 import CtaBannerInspector from './Inspector';
+import type { Locale } from '@/lib/locales';
+import { getConversionWidgetsCopy } from '../conversion-widgets-copy';
 
 interface CtaBannerContent {
   title: string;
@@ -9,7 +11,8 @@ interface CtaBannerContent {
   backgroundColor: string;
 }
 
-function CtaBannerRender({ node }: { node: { content: CtaBannerContent } }) {
+function CtaBannerRender({ node, locale = 'ko' }: { node: { content: CtaBannerContent }; locale?: Locale }) {
+  const copy = getConversionWidgetsCopy(locale);
   const {
     title = '',
     description = '',
@@ -34,7 +37,7 @@ function CtaBannerRender({ node }: { node: { content: CtaBannerContent } }) {
           fontSize: 13,
         }}
       >
-        CTA Banner
+        {copy.ctaBanner.empty}
       </div>
     );
   }

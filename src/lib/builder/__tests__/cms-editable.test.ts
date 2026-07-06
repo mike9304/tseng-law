@@ -1,7 +1,14 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { DEFAULT_THEME, type BuilderSiteDocument } from '@/lib/builder/site/types';
+import {
+  DEFAULT_THEME,
+  type BuilderDynamicItemPageMeta,
+  type BuilderPageMeta,
+  type BuilderSiteDocument,
+  type SiteRedirect,
+} from '@/lib/builder/site/types';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { readBuilderImageAsset } from '@/lib/builder/assets';
+import { readBuilderCollectionRecordPreviews } from '@/lib/builder/cms';
 import {
   BuilderCmsPermissionError,
   BuilderCmsValidationError,
@@ -122,6 +129,322 @@ describe('editable builder CMS store', () => {
         fields: { title: 'Duplicate quote', slug: 'first' },
       }),
     ).rejects.toBeInstanceOf(BuilderCmsValidationError);
+  });
+
+  it('validates reference fields against the related collection before save', async () => {
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'authors',
+      name: 'Authors',
+    });
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'articles',
+      name: 'Articles',
+      fields: [
+        {
+          fieldId: 'field-title',
+          key: 'title',
+          label: 'Title',
+          type: 'text',
+          localized: true,
+          repeated: false,
+          required: true,
+        },
+        {
+          fieldId: 'field-author',
+          key: 'author',
+          label: 'Author',
+          type: 'reference',
+          localized: false,
+          repeated: false,
+          required: false,
+          relationCollectionId: 'authors',
+        },
+      ],
+    });
+
+    await expect(
+      createEditableBuilderCmsRecord('test-site', 'ko', 'articles', {
+        fields: { title: 'Missing author', author: 'record-missing-author' },
+      }),
+    ).rejects.toMatchObject({
+      issues: ['Author must reference an existing Authors record.'],
+    });
+
+    const author = await createEditableBuilderCmsRecord('test-site', 'ko', 'authors', {
+      fields: { title: 'Ada Lovelace', slug: 'ada-lovelace' },
+    });
+    expect(author?.recordId).toBeTruthy();
+
+    const article = await createEditableBuilderCmsRecord('test-site', 'ko', 'articles', {
+      fields: { title: 'Reference pass', author: author?.recordId },
+    });
+    expect(article?.fields).toMatchObject({
+      title: 'Reference pass',
+      author: author?.recordId,
+    });
+
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'related-articles',
+      name: 'Related articles',
+      fields: [
+        {
+          fieldId: 'field-title',
+          key: 'title',
+          label: 'Title',
+          type: 'text',
+          localized: true,
+          repeated: false,
+          required: true,
+        },
+        {
+          fieldId: 'field-column',
+          key: 'column',
+          label: 'Column',
+          type: 'reference',
+          localized: false,
+          repeated: false,
+          required: false,
+          relationCollectionId: 'columns',
+        },
+      ],
+    });
+
+    const columnPreview = readBuilderCollectionRecordPreviews('columns', 'ko')[0];
+    expect(columnPreview).toBeTruthy();
+
+    await expect(
+      createEditableBuilderCmsRecord('test-site', 'ko', 'related-articles', {
+        fields: { title: 'Missing column', column: 'record-missing-column' },
+      }),
+    ).rejects.toMatchObject({
+      issues: ['Column must reference an existing Insights columns record.'],
+    });
+
+    const relatedArticle = await createEditableBuilderCmsRecord('test-site', 'ko', 'related-articles', {
+      fields: { title: 'Source reference pass', column: columnPreview?.recordId },
+    });
+    expect(relatedArticle?.fields).toMatchObject({
+      title: 'Source reference pass',
+      column: columnPreview?.recordId,
+    });
+  });
+
+  it('creates slug redirects when editable record slugs change', async () => {
+    const now = new Date('2026-05-13T00:00:00.000Z').toISOString();
+    const dynamicItem: BuilderDynamicItemPageMeta = {
+      kind: 'collection-item-v1',
+      collectionId: 'articles-redirects' as BuilderDynamicItemPageMeta['collectionId'],
+      targetId: 'home.insights.feed',
+      slugField: 'slug',
+      defaultRecordSlug: 'original-article',
+      createdAt: now,
+    };
+    siteDoc.pages = [
+      {
+        pageId: 'page-articles',
+        slug: 'insights',
+        title: { ko: 'Insights', en: 'Insights', 'zh-hant': 'Insights' },
+        locale: 'ko',
+        dynamicItem,
+        createdAt: now,
+        updatedAt: now,
+      } satisfies BuilderPageMeta,
+    ];
+
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'articles-redirects',
+      name: 'Articles redirects',
+      slug: 'articles',
+      fields: [
+        {
+          fieldId: 'field-title',
+          key: 'title',
+          label: 'Title',
+          type: 'text',
+          localized: true,
+          repeated: false,
+          required: true,
+        },
+        {
+          fieldId: 'field-slug',
+          key: 'slug',
+          label: 'Slug',
+          type: 'slug',
+          localized: false,
+          repeated: false,
+          required: true,
+          unique: true,
+        },
+      ],
+    });
+
+    const created = await createEditableBuilderCmsRecord('test-site', 'ko', 'articles-redirects', {
+      fields: { title: 'Original article', slug: 'original-article' },
+    });
+    expect(created?.recordId).toBeTruthy();
+
+    const updated = await updateEditableBuilderCmsRecord(
+      'test-site',
+      'ko',
+      'articles-redirects',
+      created!.recordId,
+      { fields: { title: 'Original article', slug: 'updated-article' } },
+    );
+    expect(updated?.redirectCreated).toBe(true);
+    expect(updated?.redirectWarnings ?? []).toHaveLength(0);
+    expect(siteDoc.redirects).toEqual(expect.arrayContaining([
+      expect.objectContaining({
+        from: '/ko/articles/original-article',
+        to: '/ko/articles/updated-article',
+      }),
+      expect.objectContaining({
+        from: '/ko/insights/original-article',
+        to: '/ko/insights/updated-article',
+      }),
+    ]));
+  });
+
+  it('exposes redirect acknowledgement when inline slug saves change', async () => {
+    const now = new Date('2026-05-13T00:00:00.000Z').toISOString();
+    const dynamicItem: BuilderDynamicItemPageMeta = {
+      kind: 'collection-item-v1',
+      collectionId: 'articles-inline' as BuilderDynamicItemPageMeta['collectionId'],
+      targetId: 'home.services.list',
+      slugField: 'slug',
+      defaultRecordSlug: 'inline-article',
+      createdAt: now,
+    };
+    siteDoc.pages = [
+      {
+        pageId: 'page-articles',
+        slug: 'insights',
+        title: { ko: 'Insights', en: 'Insights', 'zh-hant': 'Insights' },
+        locale: 'ko',
+        dynamicItem,
+        createdAt: now,
+        updatedAt: now,
+      } satisfies BuilderPageMeta,
+    ];
+
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'articles-inline',
+      name: 'Articles inline',
+      slug: 'articles',
+      fields: [
+        {
+          fieldId: 'field-title',
+          key: 'title',
+          label: 'Title',
+          type: 'text',
+          localized: true,
+          repeated: false,
+          required: true,
+        },
+        {
+          fieldId: 'field-slug',
+          key: 'slug',
+          label: 'Slug',
+          type: 'slug',
+          localized: false,
+          repeated: false,
+          required: true,
+          unique: true,
+        },
+      ],
+    });
+
+    const created = await createEditableBuilderCmsRecord('test-site', 'ko', 'articles-inline', {
+      fields: { title: 'Original article', slug: 'original-article' },
+    });
+    expect(created?.recordId).toBeTruthy();
+
+    const updated = await updateEditableBuilderCmsRecord(
+      'test-site',
+      'ko',
+      'articles-inline',
+      created!.recordId,
+      { fields: { title: 'Inline article', slug: 'inline-article-updated' } },
+    );
+    expect(updated?.redirectCreated).toBe(true);
+    expect(updated?.redirectWarnings ?? []).toHaveLength(0);
+    expect(siteDoc.redirects).toEqual(expect.arrayContaining([
+      expect.objectContaining({
+        from: '/ko/articles/original-article',
+        to: '/ko/articles/inline-article-updated',
+      }),
+      expect.objectContaining({
+        from: '/ko/insights/original-article',
+        to: '/ko/insights/inline-article-updated',
+      }),
+    ]));
+  });
+
+  it('surfaces redirect warnings when a slug rename collides with an existing redirect', async () => {
+    const now = new Date('2026-05-13T00:00:00.000Z').toISOString();
+    const createdAt = now;
+    siteDoc.redirects = [
+      {
+        redirectId: 'redir-conflict',
+        from: '/ko/articles/original-article',
+        to: '/ko/contact?existing=conflict',
+        type: 301,
+        isActive: true,
+        note: 'manual-conflict',
+        createdAt,
+        updatedAt: createdAt,
+      } satisfies SiteRedirect,
+    ];
+
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'articles-conflict',
+      name: 'Articles conflict',
+      slug: 'articles',
+      fields: [
+        {
+          fieldId: 'field-title',
+          key: 'title',
+          label: 'Title',
+          type: 'text',
+          localized: true,
+          repeated: false,
+          required: true,
+        },
+        {
+          fieldId: 'field-slug',
+          key: 'slug',
+          label: 'Slug',
+          type: 'slug',
+          localized: false,
+          repeated: false,
+          required: true,
+          unique: true,
+        },
+      ],
+    });
+
+    const created = await createEditableBuilderCmsRecord('test-site', 'ko', 'articles-conflict', {
+      fields: { title: 'Original article', slug: 'original-article' },
+    });
+    expect(created?.recordId).toBeTruthy();
+
+    const updated = await updateEditableBuilderCmsRecord(
+      'test-site',
+      'ko',
+      'articles-conflict',
+      created!.recordId,
+      { fields: { title: 'Original article', slug: 'updated-article' } },
+    );
+    expect(updated?.redirectCreated).toBeUndefined();
+    expect(updated?.redirectWarnings ?? []).toEqual(
+      expect.arrayContaining([expect.stringContaining('already has an active redirect')]),
+    );
+    expect(siteDoc.redirects).toEqual(expect.arrayContaining([
+      expect.objectContaining({
+        from: '/ko/articles/original-article',
+        to: '/ko/contact?existing=conflict',
+        note: 'manual-conflict',
+      }),
+    ]));
   });
 
   it('updates and deletes editable CMS records without touching source collections', async () => {
@@ -382,7 +705,7 @@ describe('editable builder CMS store', () => {
       collectionId: 'testimonials',
       name: 'Testimonials',
     });
-    await createEditableBuilderCmsRecord('test-site', 'ko', 'testimonials', {
+    const created = await createEditableBuilderCmsRecord('test-site', 'ko', 'testimonials', {
       fields: { title: 'First, quote', slug: 'first' },
     });
 
@@ -390,6 +713,13 @@ describe('editable builder CMS store', () => {
     expect(exported?.filename).toBe('testimonials-records.csv');
     expect(exported?.csv).toContain('recordId,status,locale,title,slug');
     expect(exported?.csv).toContain('"First, quote"');
+
+    const selectedExported = await exportEditableBuilderCmsRecordsCsv('test-site', 'ko', 'testimonials', {
+      recordIds: [created!.recordId],
+    });
+    expect(selectedExported?.filename).toBe('testimonials-selected-records.csv');
+    expect(selectedExported?.csv).toContain(created!.recordId);
+    expect(selectedExported?.csv).not.toContain('Second quote');
 
     await expect(
       importEditableBuilderCmsRecordsCsv(
@@ -673,7 +1003,7 @@ describe('editable builder CMS store', () => {
           localized: false,
           repeated: false,
           required: false,
-          relationCollectionId: 'authors',
+          relationCollectionId: 'authors-typed',
         },
       ],
     });
@@ -692,8 +1022,21 @@ describe('editable builder CMS store', () => {
       'reference',
     ]);
     expect(detail.fields.find((field) => field.key === 'author')).toMatchObject({
-      relationCollectionId: 'authors',
+      relationCollectionId: 'authors-typed',
     });
+
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'authors-typed',
+      name: 'Authors Typed',
+    });
+    const author = await createEditableBuilderCmsRecord('test-site', 'ko', 'authors-typed', {
+      recordId: 'record-author',
+      fields: {
+        title: 'Record Author',
+        slug: 'record-author',
+      },
+    });
+    expect(author?.recordId).toBe('record-author');
 
     const created = await createEditableBuilderCmsRecord('test-site', 'ko', 'articles', {
       fields: {
@@ -707,7 +1050,7 @@ describe('editable builder CMS store', () => {
         contact: 'editor@example.com',
         website: 'https://example.com/article',
         tags: 'taiwan\nlaw\nvisa',
-        author: 'record-author',
+        author: author?.recordId,
       },
     });
 
@@ -725,7 +1068,7 @@ describe('editable builder CMS store', () => {
       contact: 'editor@example.com',
       website: 'https://example.com/article',
       tags: ['taiwan', 'law', 'visa'],
-      author: 'record-author',
+      author: author?.recordId,
     });
   });
 

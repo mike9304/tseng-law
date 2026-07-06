@@ -138,6 +138,34 @@ function safeTrim(value: unknown, max: number): string {
   return typeof value === 'string' ? value.trim().slice(0, max) : '';
 }
 
+function normalizeEmail(value: unknown): string {
+  return typeof value === 'string' ? value.trim().toLowerCase() : '';
+}
+
+function parseEmailAliases(value: unknown): string[] {
+  if (typeof value !== 'string') return [];
+  const raw = value.trim();
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) {
+      return parsed
+        .map((item) => normalizeEmail(item))
+        .filter(Boolean);
+    }
+  } catch {
+    // Fall through to delimiter parsing.
+  }
+  return raw
+    .split(/[\n,;|]+/)
+    .map((item) => normalizeEmail(item))
+    .filter(Boolean);
+}
+
+function serializeEmailAliases(emails: string[]): string {
+  return JSON.stringify([...new Set(emails.map((email) => normalizeEmail(email)).filter(Boolean))]);
+}
+
 function normalizeRole(role: unknown): MemberRole {
   return role === 'premium' || role === 'admin' ? role : 'free';
 }
@@ -165,6 +193,10 @@ export function publicMember(member: SiteMember): PublicSiteMember {
   const { passwordHash, ...safe } = normalizeMember(member);
   void passwordHash;
   return safe;
+}
+
+export function getMemberPortalEmails(member: SiteMember): string[] {
+  return [...new Set([normalizeEmail(member.email), ...parseEmailAliases(member.customFields?.memberEmailAliases)])].filter(Boolean);
 }
 
 // ─── Password hashing (bcrypt, production-safe) ──────────────────
@@ -237,16 +269,45 @@ export async function saveMember(member: SiteMember): Promise<SiteMember> {
 
 export async function updateMemberProfile(
   memberId: string,
-  patch: { name?: string; phone?: string; profilePhoto?: string; customFields?: Record<string, string> },
+  patch: { email?: string; name?: string; phone?: string; profilePhoto?: string; customFields?: Record<string, string> },
 ): Promise<SiteMember | null> {
   const member = await getMember(memberId);
   if (!member) return null;
+  const nextEmail = normalizeEmail(patch.email);
+  if (nextEmail && nextEmail !== member.email) {
+    const existing = await getMemberByEmail(nextEmail);
+    if (existing && existing.memberId !== member.memberId) {
+      throw new Error('duplicate_email');
+    }
+  }
+
+  // `memberEmailAliases` is an authorization-sensitive, server-managed field:
+  // getMemberPortalEmails() grants booking/billing portal access to every email
+  // it contains, and the only legitimate writer is the old-email accumulation
+  // below (when a member changes their address). An unprivileged self-service
+  // PATCH must never set it directly — otherwise a member could append a
+  // victim's email and read/cancel/refund their bookings & invoices (IDOR).
+  const incomingCustomFields = { ...(patch.customFields ?? {}) };
+  delete incomingCustomFields.memberEmailAliases;
+  const nextCustomFields = {
+    ...(member.customFields ?? {}),
+    ...incomingCustomFields,
+  };
+  if (nextEmail && nextEmail !== member.email) {
+    const aliases = new Set([
+      ...parseEmailAliases(nextCustomFields.memberEmailAliases),
+      member.email,
+    ]);
+    nextCustomFields.memberEmailAliases = serializeEmailAliases([...aliases]);
+  }
+
   return saveMember({
     ...member,
+    ...(nextEmail ? { email: nextEmail } : {}),
     ...(patch.name != null ? { name: safeTrim(patch.name, 120) || member.name } : {}),
     ...(patch.phone != null ? { phone: safeTrim(patch.phone, 80) } : {}),
     ...(patch.profilePhoto != null ? { profilePhoto: safeTrim(patch.profilePhoto, 2000) } : {}),
-    ...(patch.customFields ? { customFields: patch.customFields } : {}),
+    customFields: nextCustomFields,
   });
 }
 

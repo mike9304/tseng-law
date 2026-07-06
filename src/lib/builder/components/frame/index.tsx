@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderFrameCanvasNode } from '@/lib/builder/canvas/types';
+import { getVisualWidgetsCopy } from '../visual-widgets-copy';
 
 function frameStyle(c: BuilderFrameCanvasNode['content']): CSSProperties {
   switch (c.style) {
@@ -77,33 +78,35 @@ function FrameRender({
 
 function FrameInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const fNode = node as BuilderFrameCanvasNode;
   const c = fNode.content;
+  const copy = getVisualWidgetsCopy(locale);
   return (
     <>
       <label>
-        <span>스타일</span>
+        <span>{copy.frame.inspector.style}</span>
         <select
           value={c.style}
           disabled={disabled}
           onChange={(event) => onUpdate({ style: event.target.value as BuilderFrameCanvasNode['content']['style'] })}
         >
-          <option value="solid">Solid</option>
-          <option value="double">Double</option>
-          <option value="corner">Corner accent</option>
-          <option value="photo">Photo</option>
-          <option value="tag">Tag</option>
+          <option value="solid">{copy.frame.inspector.styles.solid}</option>
+          <option value="double">{copy.frame.inspector.styles.double}</option>
+          <option value="corner">{copy.frame.inspector.styles.corner}</option>
+          <option value="photo">{copy.frame.inspector.styles.photo}</option>
+          <option value="tag">{copy.frame.inspector.styles.tag}</option>
         </select>
       </label>
       <label>
-        <span>색</span>
+        <span>{copy.frame.inspector.color}</span>
         <input type="text" value={c.color} disabled={disabled} onChange={(event) => onUpdate({ color: event.target.value })} />
       </label>
       <label>
-        <span>두께</span>
+        <span>{copy.frame.inspector.width}</span>
         <input
           type="number"
           min={1}
@@ -114,7 +117,7 @@ function FrameInspector({
         />
       </label>
       <label>
-        <span>모서리 (px)</span>
+        <span>{copy.frame.inspector.radius}</span>
         <input
           type="number"
           min={0}
@@ -125,7 +128,7 @@ function FrameInspector({
         />
       </label>
       <label>
-        <span>라벨</span>
+        <span>{copy.frame.inspector.label}</span>
         <input type="text" value={c.label} disabled={disabled} onChange={(event) => onUpdate({ label: event.target.value })} />
       </label>
     </>

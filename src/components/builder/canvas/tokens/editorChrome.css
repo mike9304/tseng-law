@@ -10,9 +10,9 @@
   --editor-fg-secondary: #3a3f49;
   --editor-fg-muted: #6b7280;
   --editor-fg-inverse: #ffffff;
-  --editor-accent: #6366f1;
-  --editor-accent-strong: #4f46e5;
-  --editor-accent-soft: rgba(99, 102, 241, 0.14);
+  --editor-accent: #116dff;
+  --editor-accent-strong: #0b57d0;
+  --editor-accent-soft: rgba(17, 109, 255, 0.14);
   --editor-danger: #b91c1c;
   --editor-warning: #b45309;
   --editor-success: #166534;

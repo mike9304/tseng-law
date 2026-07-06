@@ -7,6 +7,12 @@ import {
   type ListContactsFilter,
 } from '@/lib/builder/crm/contact-store';
 import { runAutomationsForEvent } from '@/lib/builder/crm/automation-engine';
+import { dispatchToIntegrations } from '@/lib/builder/crm/integrations-dispatcher';
+import {
+  getBuilderCrmApiErrorPayload,
+  type BuilderCrmApiErrorCode,
+} from '@/lib/builder/crm/crm-api-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -23,44 +29,78 @@ const createBodySchema = z.object({
   customFields: z.record(z.string().max(80), z.string().max(2000)).optional(),
 });
 
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderCrmApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderCrmApiErrorPayload(locale, errorCode), ...(extra ?? {}) },
+    { status },
+  );
+}
+
 export async function GET(request: NextRequest) {
   const auth = await guardMutation(request, { allowReadOnly: true, permission: 'view-contacts' });
   if (auth instanceof NextResponse) return auth;
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
 
   const url = request.nextUrl;
+  const source = sourceSchema.safeParse(url.searchParams.get('source'));
   const filter: ListContactsFilter = {
     tag: url.searchParams.get('tag')?.trim() || undefined,
-    source: (url.searchParams.get('source') as ListContactsFilter['source']) || undefined,
+    source: source.success ? source.data : undefined,
     q: url.searchParams.get('q')?.trim() || undefined,
   };
-  const contacts = await listContacts(filter);
-  return NextResponse.json({ ok: true, contacts, total: contacts.length });
+  try {
+    const contacts = await listContacts(filter);
+    return NextResponse.json({ ok: true, contacts, total: contacts.length });
+  } catch (error) {
+    console.error('[builder/crm/contacts] list failed:', error);
+    return errorResponse(locale, 'contacts_list_failed', 500);
+  }
 }
 
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'manage-contacts' });
   if (auth instanceof NextResponse) return auth;
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
 
-  const raw = await request.json().catch(() => null);
+  let raw: unknown;
+  try {
+    raw = await request.json();
+  } catch {
+    return errorResponse(locale, 'invalid_json', 400);
+  }
   const parsed = createBodySchema.safeParse(raw);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: 'Invalid contact payload', details: parsed.error.issues.slice(0, 3) },
-      { status: 400 },
-    );
-  }
-  const contact = await createContact(parsed.data);
-
-  // Best-effort automation firing — never break the API on automation errors.
-  try {
-    await runAutomationsForEvent({
-      kind: 'contact-created',
-      contact,
-      payload: { source: contact.source },
+    return errorResponse(locale, 'invalid_contact_payload', 400, {
+      details: parsed.error.issues.slice(0, 3),
     });
-  } catch (err) {
-    console.error('[crm/contacts] automation dispatch failed:', err);
   }
+  try {
+    const contact = await createContact(parsed.data);
 
-  return NextResponse.json({ ok: true, contact }, { status: 201 });
+    // Best-effort automation firing: never break contact creation on automation errors.
+    try {
+      await runAutomationsForEvent({
+        kind: 'contact-created',
+        contact,
+        payload: { source: contact.source },
+      });
+      await dispatchToIntegrations({
+        kind: 'contact-created',
+        contact,
+        payload: { source: contact.source },
+      });
+    } catch (err) {
+      console.error('[crm/contacts] post-create dispatch failed:', err);
+    }
+
+    return NextResponse.json({ ok: true, contact }, { status: 201 });
+  } catch (error) {
+    console.error('[builder/crm/contacts] create failed:', error);
+    return errorResponse(locale, 'contact_create_failed', 500);
+  }
 }

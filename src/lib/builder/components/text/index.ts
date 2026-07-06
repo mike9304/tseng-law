@@ -2,8 +2,9 @@ import { defineComponent } from '../define';
 import TextElement from '@/components/builder/canvas/elements/TextElement';
 import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import TextInspector from './Inspector';
+import { TEXT_LEGACY_DEFAULT_TEXT } from './text-copy';
 
-const defaultText = '텍스트를 입력하세요';
+const defaultText = TEXT_LEGACY_DEFAULT_TEXT;
 
 export default defineComponent({
   kind: 'text',

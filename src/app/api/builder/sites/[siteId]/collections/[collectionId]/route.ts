@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
   isBuilderCollectionId,
-  readBuilderCollectionDetail,
+  readBuilderCollectionDetailForSite,
 } from '@/lib/builder/cms';
 import {
   BuilderCmsValidationError,
@@ -9,6 +9,8 @@ import {
   readEditableBuilderCmsCollection,
   updateEditableBuilderCmsCollection,
 } from '@/lib/builder/cms-editable';
+import { readBuilderCmsDynamicItemRoutePoliciesForCollection } from '@/lib/builder/cms-dynamic-item-route-policy';
+import { readEditableBuilderCmsCollectionTrash } from '@/lib/builder/cms-record-trash';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { guardMutation } from '@/lib/builder/security/guard';
 
@@ -27,7 +29,7 @@ export async function GET(
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
     if (isBuilderCollectionId(params.collectionId)) {
-      const detail = readBuilderCollectionDetail(params.collectionId, locale);
+      const detail = await readBuilderCollectionDetailForSite(params.siteId, params.collectionId, locale);
       return NextResponse.json({ ok: true, detail, source: 'static' });
     }
 
@@ -35,7 +37,23 @@ export async function GET(
     if (!detail) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
     }
-    return NextResponse.json({ ok: true, detail, source: 'editable' });
+    const [trashedRecords, dynamicItemRoutePolicies] = await Promise.all([
+      readEditableBuilderCmsCollectionTrash(
+        params.siteId,
+        locale,
+        params.collectionId,
+      ),
+      readBuilderCmsDynamicItemRoutePoliciesForCollection(params.siteId, locale, params.collectionId),
+    ]);
+    return NextResponse.json({
+      ok: true,
+      detail: {
+        ...detail,
+        trashedRecords: trashedRecords ?? [],
+        dynamicItemRoutePolicies,
+      },
+      source: 'editable',
+    });
   } catch (error) {
     console.error('[builder-collection-detail] failed', error);
     return NextResponse.json(

@@ -1,12 +1,15 @@
 'use client';
 
+import type { Locale } from '@/lib/locales';
 import type { ViewportMode } from './SandboxTopBar';
 import styles from './SandboxPage.module.css';
+import { getSandboxStatusBarCopy } from './sandbox-status-bar-copy';
 
 export type EditorDensity = 'compact' | 'cozy' | 'comfortable';
 export type EditorThemeMode = 'light' | 'dark';
 
 interface SandboxStatusBarProps {
+  locale: Locale;
   viewport: ViewportMode;
   draftSaveState: 'idle' | 'saving' | 'saved' | 'error';
   selectionCount: number;
@@ -17,9 +20,9 @@ interface SandboxStatusBarProps {
 }
 
 const DENSITY_OPTIONS: EditorDensity[] = ['compact', 'cozy', 'comfortable'];
-const DENSITY_LABELS: Record<EditorDensity, string> = { compact: '좁게', cozy: '보통', comfortable: '넓게' };
 
 export default function SandboxStatusBar({
+  locale,
   viewport,
   draftSaveState,
   selectionCount,
@@ -28,17 +31,23 @@ export default function SandboxStatusBar({
   onDensityChange,
   onThemeModeChange,
 }: SandboxStatusBarProps) {
+  const copy = getSandboxStatusBarCopy(locale);
+
   return (
-    <footer className={styles.statusBar} aria-label="Editor status">
+    <footer className={styles.statusBar} aria-label={copy.footerAriaLabel}>
       <div className={styles.statusBarCluster}>
-        <span className={styles.statusBarItem}>뷰포트: {viewport}</span>
-        <span className={styles.statusBarItem}>{selectionCount > 0 ? `${selectionCount}개 선택됨` : ''}</span>
-        <span className={`${styles.statusBarItem} ${styles[`statusBarSave_${draftSaveState}` as keyof typeof styles]}`}>
-          {draftSaveState === 'saving' ? '저장 중...' : draftSaveState === 'saved' ? '저장됨' : draftSaveState === 'error' ? '저장 실패' : ''}
-        </span>
+        <span className={styles.statusBarItem}>{copy.viewportLabel}: {viewport}</span>
+        {selectionCount > 0 ? (
+          <span className={styles.statusBarItem}>{copy.selectionCountLabel(selectionCount)}</span>
+        ) : null}
+        {draftSaveState !== 'idle' ? (
+          <span className={`${styles.statusBarItem} ${styles[`statusBarSave_${draftSaveState}` as keyof typeof styles]}`}>
+            {copy.saveStateLabels[draftSaveState]}
+          </span>
+        ) : null}
       </div>
       <div className={styles.statusBarCluster}>
-        <div className={styles.statusBarSegmented} aria-label="Editor density">
+        <div className={styles.statusBarSegmented} aria-label={copy.densityAriaLabel}>
           {DENSITY_OPTIONS.map((option) => (
             <button
               key={option}
@@ -47,7 +56,7 @@ export default function SandboxStatusBar({
               aria-pressed={option === density}
               onClick={() => onDensityChange(option)}
             >
-              {DENSITY_LABELS[option]}
+              {copy.densityLabels[option]}
             </button>
           ))}
         </div>
@@ -57,9 +66,9 @@ export default function SandboxStatusBar({
           aria-pressed={themeMode === 'dark'}
           onClick={() => onThemeModeChange(themeMode === 'dark' ? 'light' : 'dark')}
         >
-          {themeMode === 'dark' ? '다크' : '라이트'}
+          {copy.themeModeLabels[themeMode]}
         </button>
-        <span className={styles.statusBarItem}>단축키: ?</span>
+        <span className={styles.statusBarItem} data-builder-status-shortcuts="true">{copy.shortcutsLabel}</span>
       </div>
     </footer>
   );

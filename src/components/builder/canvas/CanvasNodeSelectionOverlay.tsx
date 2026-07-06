@@ -65,6 +65,7 @@ export function CanvasNodeSelectionOverlay({
             top: `${rotationReadout.y}px`,
           }}
           aria-live="polite"
+          data-builder-rotation-chip="true"
         >
           {rotationReadout.degrees}°
         </div>

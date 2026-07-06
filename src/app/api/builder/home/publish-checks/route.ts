@@ -6,11 +6,22 @@ import {
 } from '@/lib/builder/validation';
 import type { BuilderHomeDocumentState, BuilderPageDocument, BuilderPageSnapshot } from '@/lib/builder/types';
 import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 
 export const runtime = 'nodejs';
 
-function badRequest(message: string) {
-  return NextResponse.json({ ok: false, error: message }, { status: 400 });
+function errorResponse(
+  locale: ReturnType<typeof normalizeBuilderHomeLocale>,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode) },
+    { status },
+  );
 }
 
 function parseBody(body: unknown): {
@@ -77,20 +88,17 @@ export async function POST(request: NextRequest) {
     const parsed = parseBody(body);
     if (parsed) {
       if (parsed.document.pageKey !== 'home') {
-        return badRequest('Only home builder checks are supported.');
+        return errorResponse(locale, 'home_snapshot_page_unsupported', 400);
       }
       if (parsed.document.locale !== locale) {
-        return badRequest('Locale mismatch.');
+        return errorResponse(locale, 'home_snapshot_locale_mismatch', 400);
       }
       snapshot = buildTransientSnapshot(locale, parsed);
       basis = 'request';
     } else {
       const draft = await readBuilderHomeSnapshot('draft', locale);
       if (!draft.persisted) {
-        return NextResponse.json(
-          { ok: false, error: 'No draft snapshot exists for this locale.' },
-          { status: 404 }
-        );
+        return errorResponse(locale, 'home_publish_draft_not_found', 404);
       }
       snapshot = draft.snapshot;
       basis = 'server-draft';
@@ -115,6 +123,6 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    throw error;
+    return errorResponse(locale, 'home_publish_failed', 500);
   }
 }

@@ -5,8 +5,37 @@ import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persiste
 import { guardMutation } from '@/lib/builder/security/guard';
 import type { BuilderNavItem } from '@/lib/builder/site/types';
 import { buildSitePagePath, normalizeSiteHref } from '@/lib/builder/site/paths';
+import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import { upgradePublicHeaderNavigation } from '@/lib/builder/site/public-header-navigation';
+import type { Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+const NO_STORE_HEADERS = { 'Cache-Control': 'no-store' };
+
+type NavigationRequestBody = {
+  readonly siteId?: string;
+  readonly navigation?: BuilderNavItem[];
+  readonly locale?: string;
+};
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
 
 function revalidateNavigationSurfaces(site: Awaited<ReturnType<typeof readSiteDocument>>, locale: ReturnType<typeof normalizeLocale>) {
   const paths = new Set<string>();
@@ -15,7 +44,7 @@ function revalidateNavigationSurfaces(site: Awaited<ReturnType<typeof readSiteDo
   );
 
   for (const page of site.pages ?? []) {
-    paths.add(buildSitePagePath(locale, page.slug || ''));
+    paths.add(buildSitePagePath(locale, page.isHomePage ? '' : resolveLocaleSlug(page, locale)));
   }
 
   for (const item of collectNavItems(site.navigation ?? [])) {
@@ -39,32 +68,36 @@ export async function GET(request: NextRequest) {
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const site = await readSiteDocument('default', locale);
-  return NextResponse.json({ navigation: site.navigation });
+  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const site = upgradePublicHeaderNavigation(await readSiteDocument(siteId, locale));
+  return NextResponse.json({ navigation: site.navigation }, { headers: NO_STORE_HEADERS });
 }
 
 export async function PUT(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
-  let body: { navigation?: BuilderNavItem[]; locale?: string };
+  let body: NavigationRequestBody;
   try {
-    body = (await request.json()) as { navigation?: BuilderNavItem[]; locale?: string };
+    body = (await request.json()) as NavigationRequestBody;
   } catch {
-    return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
+    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+    return errorResponse(locale, 'invalid_json', 400);
   }
 
   const locale = normalizeLocale(body.locale || 'ko');
+  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
+  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
 
   if (!Array.isArray(body.navigation)) {
-    return NextResponse.json({ error: 'navigation array required' }, { status: 400 });
+    return errorResponse(locale, 'navigation_required', 400);
   }
 
-  const site = await readSiteDocument('default', locale);
+  const site = await readSiteDocument(siteId, locale);
   site.navigation = body.navigation;
   site.updatedAt = new Date().toISOString();
   await writeSiteDocument(site, { preserveMissingNavigation: false });
   revalidateNavigationSurfaces(site, locale);
 
-  return NextResponse.json({ success: true, navigation: site.navigation });
+  return NextResponse.json({ success: true, navigation: site.navigation }, { headers: NO_STORE_HEADERS });
 }

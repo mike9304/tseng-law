@@ -1,12 +1,14 @@
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { resolveViewportHidden } from '@/lib/builder/canvas/responsive';
+import type { InspectorDeviceVisibilityCopy } from './sandbox-inspector-layout-tab-copy';
+import styles from './SandboxPage.module.css';
 
 export type ViewportLite = 'desktop' | 'tablet' | 'mobile';
 
-export const DEVICE_META: Array<{ vp: ViewportLite; icon: string; short: string; label: string }> = [
-  { vp: 'desktop', icon: '▭', short: 'D', label: 'Desktop' },
-  { vp: 'tablet', icon: '⬜', short: 'T', label: 'Tablet' },
-  { vp: 'mobile', icon: '▯', short: 'M', label: 'Mobile' },
+export const DEVICE_META: Array<{ vp: ViewportLite; icon: string; short: string }> = [
+  { vp: 'desktop', icon: '▭', short: 'D' },
+  { vp: 'tablet', icon: '⬜', short: 'T' },
+  { vp: 'mobile', icon: '▯', short: 'M' },
 ];
 
 export function ShowOnDeviceToggles({
@@ -14,6 +16,8 @@ export function ShowOnDeviceToggles({
   updateNode,
   updateResponsiveOverride,
   activeViewport,
+  deviceLabels,
+  copy,
 }: {
   node: BuilderCanvasNode;
   updateNode: (id: string, updater: (node: BuilderCanvasNode) => BuilderCanvasNode) => void;
@@ -23,46 +27,35 @@ export function ShowOnDeviceToggles({
     patch: { hidden?: boolean | undefined },
   ) => void;
   activeViewport: ViewportLite;
+  deviceLabels: Record<ViewportLite, string>;
+  copy: InspectorDeviceVisibilityCopy;
 }) {
   const disabled = node.locked;
   return (
     <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 10,
-        marginTop: 12,
-        padding: '8px 10px',
-        borderRadius: 10,
-        background: 'linear-gradient(180deg, #f8fafc, #f1f5f9)',
-        border: '1px solid #e2e8f0',
-      }}
+      className={styles.inspectorDeviceVisibility}
     >
-      <span
-        style={{
-          fontSize: '0.72rem',
-          fontWeight: 700,
-          color: '#475569',
-          letterSpacing: '0.04em',
-          textTransform: 'uppercase',
-        }}
-      >
-        표시 기기
+      <span className={styles.inspectorDeviceVisibilityLabel}>
+        {copy.label}
       </span>
-      <div style={{ display: 'flex', gap: 4, marginLeft: 'auto' }}>
-        {DEVICE_META.map(({ vp, icon, short, label }) => {
+      <div className={styles.inspectorDeviceVisibilityButtons}>
+        {DEVICE_META.map(({ vp, icon, short }) => {
           const visible = vp === 'desktop'
             ? Boolean(node.visible)
             : !resolveViewportHidden(node, vp);
           const isActiveVp = activeViewport === vp;
+          const label = deviceLabels[vp];
           return (
             <button
               key={vp}
               type="button"
               aria-pressed={visible}
-              aria-label={`${label}에서 ${visible ? '보임' : '숨김'} (클릭하여 토글)`}
-              title={`${label} · ${visible ? '보임' : '숨김'}\n클릭하여 토글${isActiveVp ? ' (현재 편집 중)' : ''}`}
+              aria-label={copy.ariaLabel(label, visible)}
+              title={copy.title(label, visible, isActiveVp)}
               disabled={disabled}
+              className={styles.inspectorDeviceToggle}
+              data-visible={visible ? 'true' : 'false'}
+              data-active-viewport={isActiveVp ? 'true' : undefined}
               onClick={() => {
                 if (vp === 'desktop') {
                   updateNode(node.id, (n) => ({ ...n, visible: !visible }));
@@ -72,54 +65,9 @@ export function ShowOnDeviceToggles({
                   hidden: visible ? true : undefined,
                 });
               }}
-              style={{
-                position: 'relative',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 4,
-                padding: '5px 9px',
-                borderRadius: 8,
-                border: visible
-                  ? `1px solid ${isActiveVp ? '#1d4ed8' : '#cbd5e1'}`
-                  : '1px solid #e2e8f0',
-                background: visible
-                  ? (isActiveVp ? 'linear-gradient(180deg, #dbeafe, #bfdbfe)' : '#fff')
-                  : '#f1f5f9',
-                color: visible ? (isActiveVp ? '#1e3a8a' : '#0f172a') : '#94a3b8',
-                cursor: disabled ? 'not-allowed' : 'pointer',
-                opacity: disabled ? 0.55 : 1,
-                fontSize: '0.74rem',
-                fontWeight: 600,
-                lineHeight: 1,
-                transition: 'all 120ms ease',
-                boxShadow: visible && isActiveVp ? '0 1px 0 rgba(29,78,216,0.18)' : 'none',
-              }}
             >
-              <span aria-hidden style={{ fontSize: '0.85rem' }}>{icon}</span>
-              <span>{short}</span>
-              {!visible ? (
-                <span
-                  aria-hidden
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    pointerEvents: 'none',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <span
-                    style={{
-                      width: '85%',
-                      height: 1,
-                      background: '#94a3b8',
-                      transform: 'rotate(-12deg)',
-                      transformOrigin: 'center',
-                    }}
-                  />
-                </span>
-              ) : null}
+              <span className={styles.inspectorDeviceToggleIcon} aria-hidden>{icon}</span>
+              <span className={styles.inspectorDeviceToggleShort}>{short}</span>
             </button>
           );
         })}
@@ -128,28 +76,38 @@ export function ShowOnDeviceToggles({
   );
 }
 
-export function InspectorEmptyState() {
+export function InspectorEmptyState({
+  title,
+  body,
+  clearSelectionLabel,
+}: {
+  title: string;
+  body: string;
+  clearSelectionLabel: string;
+}) {
   return (
     <div
       data-builder-inspector-empty="true"
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 8,
-        padding: '36px 24px',
-        textAlign: 'center',
-      }}
+      className={styles.inspectorEmptyState}
     >
-      <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden>
-        <rect x="6" y="6" width="44" height="44" rx="8" fill="none" stroke="#cbd5e1" strokeDasharray="4 4" />
-        <circle cx="28" cy="28" r="3" fill="#94a3b8" />
-      </svg>
-      <p style={{ margin: 0, color: '#0f172a', fontSize: 13, fontWeight: 700 }}>편집할 요소를 선택하세요</p>
-      <p style={{ margin: 0, color: '#475569', fontSize: 11, lineHeight: 1.5 }}>
-        캔버스에서 요소를 클릭하거나 레이어 패널을 사용하세요.<br />
-        선택 해제: <kbd style={{ color: '#0f172a', fontWeight: 800 }}>Esc</kbd>
-      </p>
+      <div className={styles.inspectorEmptyStateIcon} aria-hidden="true">
+        <svg viewBox="0 0 40 40" className={styles.inspectorEmptyStateSvg}>
+          <rect x="9" y="9" width="22" height="22" rx="5" />
+          <path d="M20 6v6" />
+          <path d="M20 28v6" />
+          <path d="M6 20h6" />
+          <path d="M28 20h6" />
+          <circle cx="20" cy="20" r="2.5" />
+        </svg>
+      </div>
+      <div className={styles.inspectorEmptyStateCopy}>
+        <p className={styles.inspectorEmptyStateTitle}>{title}</p>
+        <p className={styles.inspectorEmptyStateBody}>{body}</p>
+      </div>
+      <div className={styles.inspectorEmptyStateShortcut}>
+        <span>{clearSelectionLabel}</span>
+        <kbd>Esc</kbd>
+      </div>
     </div>
   );
 }
@@ -157,11 +115,17 @@ export function InspectorEmptyState() {
 export function renderCompositeSurfaceEditor({
   node,
   surfaceKey,
+  surfaceTitle,
+  closeLabel,
+  placeholder,
   onUpdate,
   onClose,
 }: {
   node: BuilderCanvasNode;
   surfaceKey: string;
+  surfaceTitle: string;
+  closeLabel: string;
+  placeholder: string;
   onUpdate: (overrides: Record<string, string>) => void;
   onClose: () => void;
 }): JSX.Element {
@@ -170,40 +134,24 @@ export function renderCompositeSurfaceEditor({
   const current = overrides[surfaceKey] ?? '';
   return (
     <section
-      style={{
-        padding: 12,
-        borderRadius: 10,
-        border: '1px solid #bfdbfe',
-        background: '#eff6ff',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 8,
-        marginBottom: 12,
-      }}
+      className={styles.compositeSurfaceEditor}
+      data-builder-composite-surface-editor="true"
     >
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <strong style={{ fontSize: '0.78rem', color: '#1e40af' }}>
-          슬롯 편집 · {surfaceKey}
+      <div className={styles.compositeSurfaceEditorHeader}>
+        <strong className={styles.compositeSurfaceEditorTitle}>
+          {surfaceTitle}
         </strong>
         <button
           type="button"
           onClick={onClose}
-          style={{
-            padding: '2px 8px',
-            fontSize: '0.72rem',
-            border: '1px solid #bfdbfe',
-            background: 'white',
-            borderRadius: 6,
-            cursor: 'pointer',
-            color: '#1e40af',
-          }}
+          className={styles.compositeSurfaceEditorClose}
         >
-          닫기
+          {closeLabel}
         </button>
       </div>
       <textarea
         value={current}
-        placeholder="비워두면 원본 기본값을 사용합니다"
+        placeholder={placeholder}
         onChange={(e) => {
           const value = e.target.value;
           const next = { ...overrides };
@@ -214,17 +162,7 @@ export function renderCompositeSurfaceEditor({
           }
           onUpdate(next);
         }}
-        style={{
-          padding: '6px 10px',
-          border: '1px solid #93c5fd',
-          borderRadius: 8,
-          fontSize: '0.82rem',
-          color: '#0f172a',
-          outline: 'none',
-          minHeight: 64,
-          resize: 'vertical',
-          fontFamily: 'inherit',
-        }}
+        className={styles.compositeSurfaceEditorTextarea}
       />
     </section>
   );

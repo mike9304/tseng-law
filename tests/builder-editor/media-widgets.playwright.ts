@@ -30,7 +30,7 @@ test.describe('/ko/admin-builder media widget pack', () => {
       await page.keyboard.press('Escape');
 
       const drawer = await openCatalogDrawer(page);
-      await expect(drawer.getByText('Media widget pack')).toBeVisible();
+      await expect(drawer.getByText(/Media widget pack|미디어 위젯 팩/)).toBeVisible();
 
       const presets = [
         'lightbox-trigger',

@@ -1,10 +1,20 @@
 import styles from './SandboxPage.module.css';
+import {
+  BUILDER_NODE_KIND_DRAG_MIME,
+  BUILDER_WIDGET_PRESET_DRAG_MIME,
+  encodeCatalogWidgetPresetDragData,
+} from './canvasCatalogDrop';
 
 export interface CatalogWidgetPresetLike {
   id: string;
   label: string;
   description: string;
   icon: string;
+  kind: string;
+  width: number;
+  height: number;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
 }
 
 type CatalogWidgetSectionVariant = 'text' | 'media';
@@ -47,6 +57,7 @@ export function SandboxCatalogWidgetSection<TPreset extends CatalogWidgetPresetL
       <button
         type="button"
         className={`${styles.catalogCategoryButton} ${isOpen ? styles.catalogCategoryButtonOpen : ''}`}
+        data-add-category={categoryId}
         onClick={onToggle}
       >
         <span className={styles.catalogCategoryMeta}>
@@ -71,8 +82,14 @@ export function SandboxCatalogWidgetSection<TPreset extends CatalogWidgetPresetL
                 key={preset.id}
                 type="button"
                 className={buttonClassName}
+                draggable
                 {...presetDataAttribute}
                 onClick={() => onAdd(preset)}
+                onDragStart={(event) => {
+                  event.dataTransfer.setData(BUILDER_NODE_KIND_DRAG_MIME, preset.kind);
+                  event.dataTransfer.setData(BUILDER_WIDGET_PRESET_DRAG_MIME, encodeCatalogWidgetPresetDragData(preset));
+                  event.dataTransfer.effectAllowed = 'copy';
+                }}
               >
                 <span className={iconClassName}>{preset.icon}</span>
                 <span className={copyClassName}>

@@ -3,11 +3,16 @@ import { z, ZodError } from 'zod';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
+  getCommerceSubscriptionsApiErrorPayload,
+  type CommerceSubscriptionsApiErrorCode,
+} from '@/lib/builder/commerce/subscriptions-api-copy';
+import {
   createCustomerSubscription,
   createSubscriptionPlan,
   listCustomerSubscriptions,
   listSubscriptionPlans,
 } from '@/lib/builder/commerce/subscriptions-store';
+import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -48,26 +53,65 @@ const subscriptionCreateSchema = z.object({
 const createSchema = z.discriminatedUnion('kind', [planCreateSchema, subscriptionCreateSchema]);
 
 const querySchema = z.object({
+  locale: z.enum(['ko', 'zh-hant', 'en']).default('ko'),
   scope: z.enum(['plans', 'subscriptions', 'all']).default('all'),
   planId: z.string().trim().optional(),
   status: z.enum(['trialing', 'active', 'past_due', 'paused', 'cancelled']).optional(),
   email: z.string().trim().email().optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: CommerceSubscriptionsApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getCommerceSubscriptionsApiErrorPayload(locale, errorCode), ...extras },
+    { status },
   );
 }
 
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
+function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
+  if (payload && typeof payload === 'object') {
+    const directLocale = (payload as { locale?: unknown }).locale;
+    if (typeof directLocale === 'string' && isLocale(directLocale)) return directLocale;
+    const customer = (payload as { customer?: unknown }).customer;
+    if (customer && typeof customer === 'object') {
+      const customerLocale = (customer as { locale?: unknown }).locale;
+      if (typeof customerLocale === 'string' && isLocale(customerLocale)) return customerLocale;
+    }
+  }
+  return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+}
+
+function subscriptionCreateErrorCode(error: unknown): CommerceSubscriptionsApiErrorCode {
+  return error === 'plan_not_found'
+    || error === 'plan_archived'
+    || error === 'customer_email_required'
+    ? error
+    : 'subscription_create_failed';
+}
+
+function statusForErrorCode(errorCode: CommerceSubscriptionsApiErrorCode): number {
+  if (errorCode === 'plan_not_found' || errorCode === 'subscription_not_found') return 404;
+  if (errorCode === 'subscription_create_failed' || errorCode === 'subscription_update_failed') return 500;
+  return 400;
+}
+
 export async function GET(request: NextRequest) {
+  const errorLocale = resolveRequestLocale(request);
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
 
   try {
     const sp = request.nextUrl.searchParams;
     const parsed = querySchema.parse({
+      locale: sp.get('locale') ?? 'ko',
       scope: sp.get('scope') ?? 'all',
       planId: sp.get('planId') ?? undefined,
       status: sp.get('status') ?? undefined,
@@ -90,18 +134,20 @@ export async function GET(request: NextRequest) {
       totals: { plans: plans.length, subscriptions: subscriptions.length },
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     console.error('[builder/commerce/subscriptions] GET failed:', error);
-    return NextResponse.json({ ok: false, error: 'subscriptions_list_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'subscriptions_list_failed', 500);
   }
 }
 
 export async function POST(request: NextRequest) {
+  let errorLocale = resolveRequestLocale(request);
   const guard = await guardMutation(request, { bucket: 'mutation' });
   if (guard instanceof NextResponse) return guard;
 
   try {
     const body = await request.json();
+    errorLocale = resolveRequestLocale(request, body);
     const input = createSchema.parse(body);
 
     if (input.kind === 'plan') {
@@ -118,14 +164,14 @@ export async function POST(request: NextRequest) {
       trialEndsAt: input.trialEndsAt,
     });
     if (!result.value) {
-      const status = result.error === 'plan_not_found' ? 404 : 400;
-      return NextResponse.json({ ok: false, error: result.error ?? 'subscription_create_failed' }, { status });
+      const errorCode = subscriptionCreateErrorCode(result.error);
+      return errorResponse(errorLocale, errorCode, statusForErrorCode(errorCode));
     }
     return NextResponse.json({ ok: true, subscription: result.value }, { status: 201 });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
-    if (error instanceof SyntaxError) return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
+    if (error instanceof ZodError) return validationError(errorLocale, error);
+    if (error instanceof SyntaxError) return errorResponse(errorLocale, 'invalid_json', 400);
     console.error('[builder/commerce/subscriptions] POST failed:', error);
-    return NextResponse.json({ ok: false, error: 'subscription_create_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'subscription_create_failed', 500);
   }
 }

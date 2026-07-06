@@ -1,0 +1,159 @@
+.root {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  color: #334155;
+  display: grid;
+  font-size: 0.78rem;
+  gap: 5px;
+}
+
+.inlineFields {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.label,
+.sectionLabel {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.control {
+  background: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  color: #0f172a;
+  font: inherit;
+  font-size: 0.82rem;
+  outline: none;
+  padding: 7px 10px;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+  width: 100%;
+}
+
+.control:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.14);
+}
+
+.control:disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.range {
+  accent-color: #116dff;
+  margin: 2px 0;
+  width: 100%;
+}
+
+.range:focus-visible {
+  outline: 2px solid #116dff;
+  outline-offset: 4px;
+}
+
+.range:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.checkboxRow {
+  align-items: center;
+  color: #334155;
+  display: inline-grid;
+  font-size: 0.82rem;
+  gap: 8px;
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.checkboxRow input {
+  accent-color: #116dff;
+  height: 15px;
+  margin: 0;
+  width: 15px;
+}
+
+.checkboxRow input:focus-visible {
+  outline: 2px solid #116dff;
+  outline-offset: 2px;
+}
+
+.checkboxRow input:disabled,
+.checkboxRow input:disabled + span {
+  cursor: not-allowed;
+  opacity: 0.56;
+}
+
+.imageList {
+  display: grid;
+  gap: 8px;
+}
+
+.imageCard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+}
+
+.dangerButton,
+.primaryButton {
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 7px 12px;
+  transition:
+    background-color 140ms ease,
+    box-shadow 140ms ease,
+    opacity 140ms ease;
+}
+
+.dangerButton {
+  align-self: end;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 0.72rem;
+  padding: 5px 10px;
+}
+
+.primaryButton {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.dangerButton:hover:not(:disabled) {
+  background: #fecaca;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: #1e293b;
+}
+
+.dangerButton:focus-visible,
+.primaryButton:focus-visible {
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.18);
+  outline: 2px solid #116dff;
+  outline-offset: 2px;
+}
+
+.dangerButton:disabled,
+.primaryButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}

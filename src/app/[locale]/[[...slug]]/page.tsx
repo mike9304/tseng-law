@@ -6,9 +6,11 @@ import {
   PublishedSitePageView,
   resolvePublishedSitePage,
 } from '@/lib/builder/site/public-page';
+import { emitPublicPageRenderHook } from '@/lib/builder/apps/lifecycle-emitters';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { checkAccess } from '@/lib/builder/members/members-engine';
 import { getLegacyPageMetadata, renderLegacyPage } from '../(legacy)';
+import { OPEN_GRAPH_LOCALE } from '@/lib/builder/seo/seo-model';
 
 export const dynamic = 'force-dynamic';
 
@@ -20,6 +22,18 @@ function buildPublishedPath(locale: Locale, slugPath: string): string {
   return `/${locale}${slugPath ? `/${slugPath}` : ''}`;
 }
 
+function withOgLocale(metadata: Metadata, locale: Locale): Metadata {
+  const base = metadata.openGraph;
+  const baseOg = base && typeof base === 'object' ? base : {};
+  return {
+    ...metadata,
+    openGraph: {
+      ...baseOg,
+      locale: OPEN_GRAPH_LOCALE[locale],
+    },
+  };
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -28,25 +42,24 @@ export async function generateMetadata({
   const locale: Locale = normalizeLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
 
+  const publishedMetadata = await buildPublishedSitePageMetadata(locale, slugPath);
+  if (publishedMetadata) return withOgLocale(publishedMetadata, locale);
+
   const legacyMetadata = getLegacyPageMetadata(slugPath, locale);
   if (legacyMetadata) return legacyMetadata;
-
-  const publishedMetadata = await buildPublishedSitePageMetadata(locale, slugPath);
-  if (publishedMetadata) return publishedMetadata;
 
   return { title: 'Page not found' };
 }
 
 export default async function MainSiteCatchAllPage({
   params,
+  searchParams,
 }: {
   params: { locale: string; slug?: string[] };
+  searchParams?: Record<string, string | string[] | undefined>;
 }) {
   const locale: Locale = normalizeLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
-
-  const legacyPage = await renderLegacyPage(slugPath, locale);
-  if (legacyPage) return legacyPage;
 
   const publishedPage = await resolvePublishedSitePage(locale, slugPath);
   if (publishedPage) {
@@ -69,8 +82,21 @@ export default async function MainSiteCatchAllPage({
       }
     }
 
-    return <PublishedSitePageView resolved={publishedPage} />;
+    emitPublicPageRenderHook({
+      kind: 'public.page-render',
+      payload: {
+        siteId: publishedPage.site.siteId,
+        pageId: publishedPage.pageMeta.pageId,
+        slug: slugPath,
+        locale,
+      },
+    });
+
+    return <PublishedSitePageView resolved={publishedPage} searchParams={searchParams} />;
   }
+
+  const legacyPage = await renderLegacyPage(slugPath, locale);
+  if (legacyPage) return legacyPage;
 
   notFound();
 }

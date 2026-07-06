@@ -1,13 +1,11 @@
 import type { Locale } from '@/lib/locales';
 import { projectPagesForLocale } from '@/lib/builder/site/persistence';
 import type { BuilderPageMeta } from '@/lib/builder/site/types';
+import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
+import { isInternalSandboxPage } from '@/lib/builder/site/internal-pages';
 
 function isHomePage(page: BuilderPageMeta, slugPath: string): boolean {
   return !slugPath && (page.isHomePage || page.slug === '');
-}
-
-function isSlugPage(page: BuilderPageMeta, slugPath: string): boolean {
-  return Boolean(slugPath) && page.slug === slugPath;
 }
 
 function sortPageCandidates(left: BuilderPageMeta, right: BuilderPageMeta): number {
@@ -22,14 +20,28 @@ export interface BuilderResolvedPageMatch {
   dynamicItemRecordSlug?: string;
 }
 
+export interface ResolvePageMetaOptions {
+  /**
+   * When true, internal sandbox/QA/probe pages remain resolvable by slug.
+   * Editor-side callers (e.g. publish pre-flight validation that looks a page
+   * up by slug) may opt in. The public routing path leaves this false (the
+   * default) so a leaked internal page is never served even when publishedAt
+   * is set.
+   */
+  includeInternalSandbox?: boolean;
+}
+
 export function findPageMetaForLocaleWithDynamicContext(
   pages: BuilderPageMeta[],
   locale: Locale,
   slugPath: string,
+  options: ResolvePageMetaOptions = {},
 ): BuilderResolvedPageMatch | undefined {
-  const visiblePages = projectPagesForLocale(pages, locale);
+  const visiblePages = projectPagesForLocale(pages, locale).filter((page) => (
+    options.includeInternalSandbox || !isInternalSandboxPage(page)
+  ));
   const candidates = visiblePages.filter((page) => (
-    isHomePage(page, slugPath) || isSlugPage(page, slugPath)
+    isHomePage(page, slugPath) || resolveLocaleSlug(page, locale) === slugPath
   ));
 
   const exactPage = [...candidates].sort(sortPageCandidates)[0];
@@ -37,8 +49,9 @@ export function findPageMetaForLocaleWithDynamicContext(
 
   const dynamicItemCandidates = visiblePages
     .filter((page) => {
-      if (!page.dynamicItem || !page.slug || !slugPath.startsWith(`${page.slug}/`)) return false;
-      const recordSlug = slugPath.slice(page.slug.length + 1);
+      const effectiveSlug = resolveLocaleSlug(page, locale);
+      if (!page.dynamicItem || !effectiveSlug || !slugPath.startsWith(`${effectiveSlug}/`)) return false;
+      const recordSlug = slugPath.slice(effectiveSlug.length + 1);
       return Boolean(recordSlug && !recordSlug.includes('/'));
     })
     .sort(sortPageCandidates);
@@ -47,7 +60,7 @@ export function findPageMetaForLocaleWithDynamicContext(
 
   return {
     page: dynamicItemPage,
-    dynamicItemRecordSlug: slugPath.slice(dynamicItemPage.slug.length + 1),
+    dynamicItemRecordSlug: slugPath.slice(resolveLocaleSlug(dynamicItemPage, locale).length + 1),
   };
 }
 
@@ -55,6 +68,7 @@ export function findPageMetaForLocale(
   pages: BuilderPageMeta[],
   locale: Locale,
   slugPath: string,
+  options: ResolvePageMetaOptions = {},
 ): BuilderPageMeta | undefined {
-  return findPageMetaForLocaleWithDynamicContext(pages, locale, slugPath)?.page;
+  return findPageMetaForLocaleWithDynamicContext(pages, locale, slugPath, options)?.page;
 }

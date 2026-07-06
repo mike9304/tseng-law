@@ -6,6 +6,7 @@ import {
   writePageCanvas,
   writeSiteDocument,
 } from '@/lib/builder/site/persistence';
+import { setLocalizedBuilderSiteSettingOverride } from '@/lib/builder/site/localized-settings';
 import type { BuilderNavItem, BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
 import { listColumnBundles, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
 import type { ColumnDocument } from '@/lib/builder/columns/types';
@@ -92,6 +93,42 @@ function labelForPath(path: string): string {
     bodyMarkdown: 'Body',
   };
   return labels[key] ?? key;
+}
+
+function collectPageSeoField(
+  items: CollectedTranslationSource[],
+  page: BuilderPageMeta,
+  sourceLocale: Locale,
+  field: 'title' | 'description' | 'ogTitle' | 'ogDescription' | 'twitterTitle' | 'twitterDescription',
+) {
+  const value = page.seo?.[field];
+  if (!value) return;
+  const pageTitle = sourceLocaleTitle(page, sourceLocale);
+  const labels: Record<typeof field, string> = {
+    title: 'SEO title',
+    description: 'SEO description',
+    ogTitle: 'OG title',
+    ogDescription: 'OG description',
+    twitterTitle: 'Twitter title',
+    twitterDescription: 'Twitter description',
+  };
+  addSource(
+    items,
+    {
+      key: entryKey(['page', page.pageId, 'seo', field]),
+      sourceText: value,
+      content: {
+        pageId: page.pageId,
+        contentType: 'page-meta',
+        contentRef: `page:${page.pageId}:seo:${field}`,
+        contentPath: `seo.${field}`,
+        category: 'pages',
+        label: `${pageTitle} / ${labels[field]}`,
+        pageTitle,
+      },
+    },
+    sourceLocale,
+  );
 }
 
 function manifestText(manifest: BuilderAppManifest, path: string, fallback: string, sourceLocale: Locale): string {
@@ -231,6 +268,47 @@ function collectAppManifestStrings(
         { routeId: route.routeId },
       );
     }
+  }
+}
+
+function collectSiteSettingText(
+  items: CollectedTranslationSource[],
+  site: BuilderSiteDocument,
+  sourceLocale: Locale,
+) {
+  const settings = site.settings ?? {};
+  const textFields: Array<[string, string | undefined]> = [
+    ['firmName', settings.firmName],
+    ['phone', settings.phone],
+    ['email', settings.email],
+    ['address', settings.address],
+    ['businessHours', settings.businessHours],
+    ['businessRegNumber', settings.businessRegNumber],
+    ['seoDefaults.patterns.titleTemplate', settings.seoDefaults?.patterns?.titleTemplate],
+    ['seoDefaults.patterns.descriptionTemplate', settings.seoDefaults?.patterns?.descriptionTemplate],
+    ['seoDefaults.patterns.ogTitleTemplate', settings.seoDefaults?.patterns?.ogTitleTemplate],
+    ['seoDefaults.patterns.ogDescriptionTemplate', settings.seoDefaults?.patterns?.ogDescriptionTemplate],
+    ['seoDefaults.patterns.twitterTitleTemplate', settings.seoDefaults?.patterns?.twitterTitleTemplate],
+    ['seoDefaults.patterns.twitterDescriptionTemplate', settings.seoDefaults?.patterns?.twitterDescriptionTemplate],
+  ];
+
+  for (const [key, value] of textFields) {
+    if (!value) continue;
+    addSource(
+      items,
+      {
+        key: entryKey(['site', 'settings', key]),
+        sourceText: value,
+        content: {
+          contentType: 'site-setting',
+          contentRef: `site:settings:${key}`,
+          contentPath: `settings.${key}`,
+          category: 'site',
+          label: `Site setting / ${key}`,
+        },
+      },
+      sourceLocale,
+    );
   }
 }
 
@@ -574,23 +652,7 @@ async function collectTranslationSources(
     sourceLocale,
   );
 
-  for (const [key, value] of Object.entries(site.settings ?? {})) {
-    addSource(
-      items,
-      {
-        key: entryKey(['site', 'settings', key]),
-        sourceText: value,
-        content: {
-          contentType: 'site-setting',
-          contentRef: `site:settings:${key}`,
-          contentPath: `settings.${key}`,
-          category: 'site',
-          label: `Site setting / ${key}`,
-        },
-      },
-      sourceLocale,
-    );
-  }
+  collectSiteSettingText(items, site, sourceLocale);
 
   collectAppManifestStrings(items, sourceLocale);
   collectInstalledAppSettings(items, site, sourceLocale);
@@ -635,44 +697,12 @@ async function collectTranslationSources(
       sourceLocale,
     );
 
-    if (page.seo?.title) {
-      addSource(
-        items,
-        {
-          key: entryKey(['page', page.pageId, 'seo', 'title']),
-          sourceText: page.seo.title,
-          content: {
-            pageId: page.pageId,
-            contentType: 'page-meta',
-            contentRef: `page:${page.pageId}:seo:title`,
-            contentPath: 'seo.title',
-            category: 'pages',
-            label: `${pageTitle} / SEO title`,
-            pageTitle,
-          },
-        },
-        sourceLocale,
-      );
-    }
-    if (page.seo?.description) {
-      addSource(
-        items,
-        {
-          key: entryKey(['page', page.pageId, 'seo', 'description']),
-          sourceText: page.seo.description,
-          content: {
-            pageId: page.pageId,
-            contentType: 'page-meta',
-            contentRef: `page:${page.pageId}:seo:description`,
-            contentPath: 'seo.description',
-            category: 'pages',
-            label: `${pageTitle} / SEO description`,
-            pageTitle,
-          },
-        },
-        sourceLocale,
-      );
-    }
+    collectPageSeoField(items, page, sourceLocale, 'title');
+    collectPageSeoField(items, page, sourceLocale, 'description');
+    collectPageSeoField(items, page, sourceLocale, 'ogTitle');
+    collectPageSeoField(items, page, sourceLocale, 'ogDescription');
+    collectPageSeoField(items, page, sourceLocale, 'twitterTitle');
+    collectPageSeoField(items, page, sourceLocale, 'twitterDescription');
 
     const canvas = await readPageCanvas(site.siteId, page.pageId, 'draft');
     for (const node of canvas?.nodes ?? []) {
@@ -1087,6 +1117,13 @@ async function applyTranslationToSourceTarget(
   if (entry.content.contentType === 'menu-item' && entry.content.navItemId) {
     return setNavigationLabel(site.navigation, entry.content.navItemId, targetLocale, text);
   }
+  if (entry.content.contentType === 'site-setting') {
+    const contentPath = entry.content.contentPath ?? '';
+    const settings = site.settings ?? {};
+    const applied = setLocalizedBuilderSiteSettingOverride(settings, targetLocale, contentPath, text);
+    if (applied) site.settings = settings;
+    return applied;
+  }
   if (entry.content.contentType === 'page-title') {
     const sourcePage = site.pages.find((page) => page.pageId === entry.content.pageId);
     const targetPage = findTargetPage(site, entry.content.pageId, targetLocale);
@@ -1095,12 +1132,36 @@ async function applyTranslationToSourceTarget(
     return Boolean(sourcePage || targetPage);
   }
   if (entry.content.contentType === 'page-meta') {
-    const targetPage = findTargetPage(site, entry.content.pageId, targetLocale);
-    const page = targetPage ?? site.pages.find((candidate) => candidate.pageId === entry.content.pageId);
-    if (!page) return false;
-    page.seo = page.seo ?? {};
-    if (entry.content.contentPath === 'seo.title') page.seo.title = text;
-    if (entry.content.contentPath === 'seo.description') page.seo.description = text;
+    const sourcePage = site.pages.find((candidate) => candidate.pageId === entry.content.pageId);
+    if (!sourcePage) return false;
+    sourcePage.seo = sourcePage.seo ?? {};
+    const currentOverrides = (sourcePage.seo as {
+      localizedOverrides?: Partial<Record<Locale, Partial<{
+        title?: string;
+        description?: string;
+        ogTitle?: string;
+        ogDescription?: string;
+        ogImage?: string;
+        twitterTitle?: string;
+        twitterDescription?: string;
+        twitterImage?: string;
+      }>>>;
+    }).localizedOverrides ?? {};
+    const currentOverride = currentOverrides[targetLocale] ?? {};
+    const nextOverride = { ...currentOverride };
+    if (entry.content.contentPath === 'seo.title') nextOverride.title = text;
+    if (entry.content.contentPath === 'seo.description') nextOverride.description = text;
+    if (entry.content.contentPath === 'seo.ogTitle') nextOverride.ogTitle = text;
+    if (entry.content.contentPath === 'seo.ogDescription') nextOverride.ogDescription = text;
+    if (entry.content.contentPath === 'seo.twitterTitle') nextOverride.twitterTitle = text;
+    if (entry.content.contentPath === 'seo.twitterDescription') nextOverride.twitterDescription = text;
+    for (const key of Object.keys(nextOverride) as Array<keyof typeof nextOverride>) {
+      if (nextOverride[key] === '' || nextOverride[key] === undefined) delete nextOverride[key];
+    }
+    sourcePage.seo.localizedOverrides = {
+      ...currentOverrides,
+      [targetLocale]: nextOverride,
+    };
     return true;
   }
   if (entry.content.category === 'columns') {

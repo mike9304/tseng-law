@@ -6,21 +6,27 @@ import type {
 } from '@/lib/builder/commerce/products-shared';
 import styles from './PublicStorefront.module.css';
 
-const copy: Record<Locale, { all: string; empty: string; products: string }> = {
+const copy: Record<Locale, { all: string; categories: string; empty: string; products: string; collectionFallback: string }> = {
   ko: {
     all: '전체 상품',
+    categories: '상품 카테고리',
     empty: '현재 이 컬렉션에 공개된 상품이 없습니다.',
     products: '상품',
+    collectionFallback: '컬렉션',
   },
   'zh-hant': {
     all: '全部商品',
+    categories: '商品分類',
     empty: '此系列目前沒有公開商品。',
     products: '商品',
+    collectionFallback: '系列',
   },
   en: {
     all: 'All products',
+    categories: 'Store categories',
     empty: 'No public products are available in this collection.',
     products: 'Products',
+    collectionFallback: 'Collection',
   },
 };
 
@@ -63,14 +69,14 @@ export default function PublicStorefront({
     >
       <section className={styles.hero}>
         <div className={styles.inner}>
-          <p className={styles.eyebrow}>{eyebrow}</p>
+          <p className={styles.eyebrow} data-commerce-store-eyebrow>{eyebrow}</p>
           <h1>{title}</h1>
           <p>{description}</p>
         </div>
       </section>
 
       <div className={styles.inner}>
-        <nav className={styles.categoryNav} aria-label="Store categories" data-commerce-category-nav>
+        <nav className={styles.categoryNav} aria-label={copy[locale].categories} data-commerce-category-nav>
           <Link
             href={`/${locale}/store`}
             aria-current={!activeCategory ? 'true' : undefined}
@@ -108,7 +114,7 @@ export default function PublicStorefront({
                   <div className={styles.imageFallback} aria-hidden />
                 )}
                 <div className={styles.cardBody}>
-                  <span className={styles.badge}>{product.categoryIds[0] ?? 'collection'}</span>
+                <span className={styles.badge}>{product.categoryIds[0] ?? copy[locale].collectionFallback}</span>
                   <Link
                     href={productHref(locale, product)}
                     className={styles.productLink}

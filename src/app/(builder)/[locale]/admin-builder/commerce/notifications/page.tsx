@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
 import {
@@ -7,8 +8,18 @@ import {
 } from '@/lib/builder/commerce/notifications-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import NotificationManagerClient from '@/components/builder/commerce/NotificationManagerClient';
+import { getNotificationsCopy } from '@/components/builder/commerce/notifications-copy';
 
 export const dynamic = 'force-dynamic';
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  const copy = getNotificationsCopy(locale);
+  return {
+    title: `${copy.title} · Hojeong Builder`,
+    description: copy.subtitle,
+  };
+}
 
 export default async function CommerceNotificationsPage({ params }: { params: { locale: Locale } }) {
   const locale = normalizeLocale(params.locale);

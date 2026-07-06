@@ -5,17 +5,27 @@ import type { BuilderFormFileCanvasNode } from '@/lib/builder/canvas/types';
 import type { BuilderTheme } from '@/lib/builder/site/types';
 import { resolveFormInputVariantStyle } from '@/lib/builder/site/component-variants';
 import { useFormFieldRuntime } from '@/lib/builder/forms/render-helpers';
+import type { Locale } from '@/lib/locales';
+import {
+  FORM_FILE_KO_DEFAULTS,
+  getFormControlsCopy,
+  localizedFormControlText,
+} from '../form/form-controls-copy';
 
 export default function FormFileElement({
   node,
   theme,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderFormFileCanvasNode;
   theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getFormControlsCopy(locale);
+  const label = localizedFormControlText(c.label, copy.fieldDefaults.fileLabel, FORM_FILE_KO_DEFAULTS.label);
   const [focused, setFocused] = useState(false);
   const field = useFormFieldRuntime({ nodeId: node.id, name: c.name, showIf: c.showIf });
   const inputVariantStyle = resolveFormInputVariantStyle(c.variant, theme, {
@@ -26,7 +36,7 @@ export default function FormFileElement({
   return (
     <div ref={field.rootRef} style={{ ...shellStyle, opacity: mode !== 'published' && c.showIf ? 0.72 : 1 }}>
       <label htmlFor={`field-${node.id}`} style={labelStyle}>
-        {c.label}
+        {label}
         {c.required ? <span style={{ color: '#dc2626', marginLeft: 4 }}>*</span> : null}
       </label>
       <input
@@ -36,7 +46,7 @@ export default function FormFileElement({
         accept={c.accept}
         multiple={c.multiple}
         required={c.required && field.visible}
-        data-builder-field-label={c.label}
+        data-builder-field-label={label}
         data-builder-error-message={c.errorMessage}
         data-builder-max-size-mb={c.maxSizeMb}
         aria-invalid={field.error ? true : undefined}

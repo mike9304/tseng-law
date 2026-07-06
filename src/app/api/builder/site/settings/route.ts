@@ -1,393 +1,50 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { ZodError, z } from 'zod';
+import { ZodError } from 'zod';
 import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
-import {
-  DEFAULT_THEME,
-  type BrandKitAssets,
-  type BuilderHeaderFooterConfig,
-  type BuilderMobileBottomBar,
-  type BuilderSiteSettings,
-  type BuilderTheme,
-  type DarkModeConfig,
-} from '@/lib/builder/site/types';
-import {
-  MOBILE_HAMBURGER_MODES,
-  normalizeHeaderFooterMobileConfig,
-  normalizeMobileBottomBar,
-} from '@/lib/builder/site/mobile-schema';
-import {
-  THEME_COLOR_TOKENS,
-  THEME_TEXT_PRESET_KEYS,
-  applyTypographyScaleToTheme,
-  normalizeDarkColors,
-  normalizeThemeEffects,
-  normalizeThemeTextPresets,
-  normalizeThemeTypographyScale,
-} from '@/lib/builder/site/theme';
+import { DEFAULT_TRANSLATION_SOURCE_LOCALE } from '@/lib/builder/translations/sync';
+import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
+import { normalizeHeaderFooterMobileConfig, normalizeMobileBottomBar } from '@/lib/builder/site/mobile-schema';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
 import { normalizeLocale } from '@/lib/locales';
+import {
+  mergeHeaderFooterMobileConfig,
+  mergeMobileBottomBarConfig,
+  mergeTheme,
+  normalizeDarkModeConfig,
+} from './route-appearance';
+import { errorResponse, validationErrorResponse } from './route-responses';
+import { settingsPayloadSchema } from './route-schema';
+import {
+  applyLocalizedSettingsPatch,
+  mergeSettings,
+  stripLocalizedSettingsPatch,
+} from './route-settings';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
-
-const optionalTrimmedString = (max: number) =>
-  z.preprocess(
-    (value) => {
-      if (typeof value !== 'string') return value;
-      const trimmed = value.trim();
-      return trimmed.length > 0 ? trimmed : undefined;
-    },
-    z.string().max(max).optional(),
-  );
-
-const builderAssetIdSchema = z.string()
-  .trim()
-  .regex(/^(?:builder\/assets|\/api\/builder\/assets)\/(?:ko|en|zh-hant)\/[^/?#\\]+$/)
-  .max(2000);
-
-const brandKitAssetsSchema = z.object({
-  logoLightAssetId: builderAssetIdSchema.optional(),
-  logoDarkAssetId: builderAssetIdSchema.optional(),
-  faviconAssetId: builderAssetIdSchema.optional(),
-  ogImageAssetId: builderAssetIdSchema.optional(),
-}).strict();
-
-const darkModeSchema = z.object({
-  defaultMode: z.enum(['light', 'dark', 'auto']).optional(),
-  allowVisitorToggle: z.boolean().optional(),
-}).strict();
-
-const headerFooterMobileSchema = z.object({
-  mobileSticky: z.boolean().optional(),
-  mobileHamburger: z.enum(MOBILE_HAMBURGER_MODES).optional(),
-}).strict();
-
-const mobileBottomBarActionSchema = z.object({
-  id: z.string().trim().min(1).max(80),
-  label: z.string().trim().min(1).max(40),
-  href: z.string().trim().min(1).max(500),
-  kind: z.enum(['phone', 'booking', 'custom']),
-}).strict();
-
-const mobileBottomBarSchema = z.object({
-  enabled: z.boolean().optional(),
-  actions: z.array(mobileBottomBarActionSchema).max(3).optional(),
-}).strict();
-
-const siteSettingsSchema = z.object({
-  firmName: optionalTrimmedString(200),
-  phone: optionalTrimmedString(80),
-  email: optionalTrimmedString(200),
-  address: optionalTrimmedString(400),
-  businessHours: optionalTrimmedString(200),
-  businessRegNumber: optionalTrimmedString(120),
-  logo: optionalTrimmedString(2000),
-  logoDark: optionalTrimmedString(2000),
-  favicon: optionalTrimmedString(2000),
-  ogImage: optionalTrimmedString(2000),
-  pageTransition: z.enum(['none', 'fade', 'slide-up', 'slide-left', 'scale']).optional(),
-  pageTransitionDurationMs: z.number().int().min(80).max(3000).optional(),
-  assets: brandKitAssetsSchema.optional(),
-  seoChecklist: z.object({
-    businessName: optionalTrimmedString(200),
-    keywords: z.array(z.string().trim().min(1).max(80)).max(5).optional(),
-    serviceMode: z.enum(['physical', 'online', 'both']).optional(),
-  }).strict().optional(),
-  // seoDefaults / robotsTxt / liveChatWidgetEnabled live in the same file
-  // but are owned by their own dedicated endpoints (/api/builder/site/
-  // seo-settings, /robots.txt, /live-chat). They can show up in cleanup
-  // round-trips that re-PUT the GET response; silently allow & ignore
-  // instead of rejecting, otherwise the test cleanup leaves the site
-  // settings corrupted for the next test in a sweep.
-}).passthrough();
-
-const themeColorValueSchema = z.union([
-  z.string().trim().min(1).max(2000),
-  z.object({
-    kind: z.literal('token').optional(),
-    token: z.enum(THEME_COLOR_TOKENS),
-  }).strict(),
-]);
-
-const themeTextPresetSchema = z.object({
-  label: z.string().trim().min(1).max(80),
-  fontFamily: z.string().trim().min(1).max(200),
-  fontSize: z.number().int().min(12).max(160),
-  fontWeight: z.enum(['regular', 'medium', 'bold']),
-  lineHeight: z.number().min(0.5).max(4),
-  letterSpacing: z.number().min(-2).max(10),
-  color: themeColorValueSchema,
-}).strict();
-
-const themeColorsSchema = z.object({
-  primary: z.string().trim().min(1).max(64),
-  secondary: z.string().trim().min(1).max(64),
-  accent: z.string().trim().min(1).max(64),
-  text: z.string().trim().min(1).max(64),
-  background: z.string().trim().min(1).max(64),
-  muted: z.string().trim().min(1).max(64),
-}).strict();
-
-const typographyScaleSchema = z.object({
-  baseSize: z.number().int().min(10).max(28),
-  ratio: z.union([
-    z.literal(1.125),
-    z.literal(1.2),
-    z.literal(1.25),
-    z.literal(1.333),
-    z.literal(1.414),
-    z.literal(1.5),
-  ]),
-}).strict();
-
-const themeEffectsSchema = z.object({
-  radiusPreset: z.enum(['sharp', 'medium', 'soft']).optional(),
-  shadowPreset: z.enum(['none', 'soft', 'medium', 'strong']).optional(),
-}).strict();
-
-const siteThemeSchema = z.object({
-  colors: themeColorsSchema,
-  darkColors: themeColorsSchema.optional(),
-  fonts: z.object({
-    heading: z.string().trim().min(1).max(200),
-    body: z.string().trim().min(1).max(200),
-  }).strict(),
-  radii: z.object({
-    sm: z.number().int().min(0).max(64),
-    md: z.number().int().min(0).max(64),
-    lg: z.number().int().min(0).max(128),
-  }).strict(),
-  themeTextPresets: z.object(
-    Object.fromEntries(
-      THEME_TEXT_PRESET_KEYS.map((key) => [key, themeTextPresetSchema]),
-    ) as Record<(typeof THEME_TEXT_PRESET_KEYS)[number], typeof themeTextPresetSchema>,
-  ).strict().optional(),
-  typographyScale: typographyScaleSchema.optional(),
-  effects: themeEffectsSchema.optional(),
-}).strict();
-
-const settingsPayloadSchema = z.object({
-  settings: siteSettingsSchema.optional(),
-  theme: siteThemeSchema.optional(),
-  darkMode: darkModeSchema.optional(),
-  headerFooter: headerFooterMobileSchema.optional(),
-  mobileBottomBar: mobileBottomBarSchema.optional(),
-}).strict();
-
-function validationErrorResponse(error: ZodError): NextResponse {
-  return NextResponse.json(
-    {
-      ok: false,
-      error: 'validation_error',
-      issues: error.flatten(),
-    },
-    { status: 400 },
-  );
-}
-
-function sanitizeSettings(settings?: BuilderSiteSettings): BuilderSiteSettings | undefined {
-  if (!settings) return undefined;
-
-  const nextSettings: BuilderSiteSettings = {};
-  const stringKeys = [
-    'favicon',
-    'logo',
-    'logoDark',
-    'firmName',
-    'phone',
-    'email',
-    'address',
-    'businessHours',
-    'businessRegNumber',
-    'ogImage',
-  ] as const;
-
-  for (const key of stringKeys) {
-    const value = settings[key];
-    if (typeof value === 'string' && value.trim().length > 0) {
-      nextSettings[key] = value.trim();
-    }
-  }
-
-  const assets = sanitizeBrandKitAssets(settings.assets);
-  if (assets) {
-    nextSettings.assets = assets;
-  }
-  if (settings.pageTransition === 'none'
-    || settings.pageTransition === 'fade'
-    || settings.pageTransition === 'slide-up'
-    || settings.pageTransition === 'slide-left'
-    || settings.pageTransition === 'scale') {
-    nextSettings.pageTransition = settings.pageTransition;
-  }
-  if (typeof settings.pageTransitionDurationMs === 'number' && Number.isFinite(settings.pageTransitionDurationMs)) {
-    nextSettings.pageTransitionDurationMs = Math.max(80, Math.min(3000, Math.round(settings.pageTransitionDurationMs)));
-  }
-  if (settings.seoChecklist) {
-    const seoKeywords = (settings.seoChecklist.keywords ?? [])
-      .map((keyword) => keyword.trim())
-      .filter(Boolean)
-      .slice(0, 5);
-    nextSettings.seoChecklist = {
-      ...(settings.seoChecklist.businessName?.trim()
-        ? { businessName: settings.seoChecklist.businessName.trim() }
-        : {}),
-      ...(seoKeywords.length > 0
-        ? { keywords: seoKeywords }
-        : {}),
-      ...(settings.seoChecklist.serviceMode ? { serviceMode: settings.seoChecklist.serviceMode } : {}),
-    };
-  }
-
-  return Object.keys(nextSettings).length > 0 ? nextSettings : undefined;
-}
-
-function mergeSettings(
-  current: BuilderSiteSettings | undefined,
-  patch: BuilderSiteSettings,
-): BuilderSiteSettings | undefined {
-  const nextSettings: BuilderSiteSettings = { ...(current ?? {}) };
-  const stringKeys = [
-    'favicon',
-    'logo',
-    'logoDark',
-    'firmName',
-    'phone',
-    'email',
-    'address',
-    'businessHours',
-    'businessRegNumber',
-    'ogImage',
-  ] as const;
-
-  for (const key of stringKeys) {
-    if (!Object.prototype.hasOwnProperty.call(patch, key)) continue;
-    const value = patch[key];
-    if (typeof value === 'string' && value.trim().length > 0) {
-      nextSettings[key] = value.trim();
-    } else {
-      delete nextSettings[key];
-    }
-  }
-
-  if (Object.prototype.hasOwnProperty.call(patch, 'assets')) {
-    const assets = sanitizeBrandKitAssets(patch.assets);
-    if (assets) {
-      nextSettings.assets = assets;
-    } else {
-      delete nextSettings.assets;
-    }
-  }
-
-  if (Object.prototype.hasOwnProperty.call(patch, 'seoChecklist')) {
-    const sanitized = sanitizeSettings({ seoChecklist: patch.seoChecklist });
-    if (sanitized?.seoChecklist && Object.keys(sanitized.seoChecklist).length > 0) {
-      nextSettings.seoChecklist = sanitized.seoChecklist;
-    } else {
-      delete nextSettings.seoChecklist;
-    }
-  }
-
-  if (Object.prototype.hasOwnProperty.call(patch, 'pageTransition')) {
-    if (patch.pageTransition === 'none'
-      || patch.pageTransition === 'fade'
-      || patch.pageTransition === 'slide-up'
-      || patch.pageTransition === 'slide-left'
-      || patch.pageTransition === 'scale') {
-      nextSettings.pageTransition = patch.pageTransition;
-    } else {
-      delete nextSettings.pageTransition;
-    }
-  }
-
-  if (Object.prototype.hasOwnProperty.call(patch, 'pageTransitionDurationMs')) {
-    if (typeof patch.pageTransitionDurationMs === 'number' && Number.isFinite(patch.pageTransitionDurationMs)) {
-      nextSettings.pageTransitionDurationMs = Math.max(80, Math.min(3000, Math.round(patch.pageTransitionDurationMs)));
-    } else {
-      delete nextSettings.pageTransitionDurationMs;
-    }
-  }
-
-  return Object.keys(nextSettings).length > 0 ? nextSettings : undefined;
-}
-
-function sanitizeBrandKitAssets(assets?: BrandKitAssets): BrandKitAssets | undefined {
-  if (!assets) return undefined;
-  const nextAssets: BrandKitAssets = {};
-  for (const key of ['logoLightAssetId', 'logoDarkAssetId', 'faviconAssetId', 'ogImageAssetId'] as const) {
-    const value = assets[key];
-    if (typeof value === 'string' && value.trim().length > 0) {
-      nextAssets[key] = value.trim();
-    }
-  }
-  return Object.keys(nextAssets).length > 0 ? nextAssets : undefined;
-}
-
-function normalizeDarkModeConfig(value?: DarkModeConfig): Required<DarkModeConfig> {
-  const defaultMode = value?.defaultMode === 'dark' || value?.defaultMode === 'auto'
-    ? value.defaultMode
-    : 'light';
-  return {
-    defaultMode,
-    allowVisitorToggle: value?.allowVisitorToggle !== false,
-  };
-}
-
-function mergeHeaderFooterMobileConfig(
-  current: BuilderHeaderFooterConfig | undefined,
-  patch: Partial<BuilderHeaderFooterConfig> | undefined,
-): BuilderHeaderFooterConfig {
-  return normalizeHeaderFooterMobileConfig({
-    ...(current ?? {}),
-    ...(patch ?? {}),
-  });
-}
-
-function mergeMobileBottomBarConfig(
-  current: BuilderMobileBottomBar | undefined,
-  patch: Partial<BuilderMobileBottomBar> | undefined,
-  settings?: BuilderSiteSettings,
-): BuilderMobileBottomBar {
-  return normalizeMobileBottomBar({
-    ...(current ?? {}),
-    ...(patch ?? {}),
-    actions: patch?.actions ?? current?.actions,
-  } as BuilderMobileBottomBar, settings);
-}
-
-function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
-  const colors = { ...DEFAULT_THEME.colors, ...theme?.colors };
-  return applyTypographyScaleToTheme({
-    colors,
-    darkColors: normalizeDarkColors(colors, theme?.darkColors),
-    fonts: { ...DEFAULT_THEME.fonts, ...theme?.fonts },
-    radii: { ...DEFAULT_THEME.radii, ...theme?.radii },
-    themeTextPresets: normalizeThemeTextPresets(theme?.themeTextPresets),
-    typographyScale: normalizeThemeTypographyScale(theme),
-    effects: normalizeThemeEffects(theme),
-  });
-}
 
 export async function GET(request: NextRequest) {
   const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
   try {
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const site = await readSiteDocument(siteId, locale);
+    const resolvedSettings = resolveBuilderSiteSettings(site.settings, locale);
 
     return NextResponse.json({
       ok: true,
-      settings: site.settings ?? {},
+      settings: resolvedSettings ?? {},
       theme: mergeTheme(site.theme),
       darkMode: normalizeDarkModeConfig(site.darkMode),
       headerFooter: normalizeHeaderFooterMobileConfig(site.headerFooter),
-      mobileBottomBar: normalizeMobileBottomBar(site.mobileBottomBar, site.settings),
+      mobileBottomBar: normalizeMobileBottomBar(site.mobileBottomBar, resolvedSettings),
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
+    return errorResponse(locale, 'site_settings_load_failed', 500);
   }
 }
 
@@ -395,39 +52,48 @@ export async function PUT(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
   try {
     const payload = settingsPayloadSchema.parse(await request.json());
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const site = await readSiteDocument(siteId, locale);
     const now = new Date().toISOString();
 
-    site.settings = payload.settings ? mergeSettings(site.settings, payload.settings) : site.settings;
+    const isSourceLocale = locale === DEFAULT_TRANSLATION_SOURCE_LOCALE;
+    const globalPatch = isSourceLocale
+      ? payload.settings
+      : stripLocalizedSettingsPatch(payload.settings);
+    site.settings = globalPatch ? mergeSettings(site.settings, globalPatch) : site.settings;
+    if (!isSourceLocale && payload.settings) {
+      const nextSettings = site.settings ?? {};
+      const applied = applyLocalizedSettingsPatch(nextSettings, payload.settings, locale);
+      site.settings = applied ? nextSettings : site.settings;
+    }
     site.theme = mergeTheme(payload.theme ?? site.theme);
     site.darkMode = payload.darkMode ? normalizeDarkModeConfig(payload.darkMode) : site.darkMode;
     site.headerFooter = payload.headerFooter
       ? mergeHeaderFooterMobileConfig(site.headerFooter, payload.headerFooter)
       : normalizeHeaderFooterMobileConfig(site.headerFooter);
     site.mobileBottomBar = payload.mobileBottomBar
-      ? mergeMobileBottomBarConfig(site.mobileBottomBar, payload.mobileBottomBar, site.settings)
-      : normalizeMobileBottomBar(site.mobileBottomBar, site.settings);
+      ? mergeMobileBottomBarConfig(site.mobileBottomBar, payload.mobileBottomBar, resolveBuilderSiteSettings(site.settings, locale))
+      : normalizeMobileBottomBar(site.mobileBottomBar, resolveBuilderSiteSettings(site.settings, locale));
     site.updatedAt = now;
 
     await writeSiteDocument(site);
 
     return NextResponse.json({
       ok: true,
-      settings: site.settings ?? {},
+      settings: resolveBuilderSiteSettings(site.settings, locale) ?? {},
       theme: site.theme,
       darkMode: normalizeDarkModeConfig(site.darkMode),
       headerFooter: normalizeHeaderFooterMobileConfig(site.headerFooter),
-      mobileBottomBar: normalizeMobileBottomBar(site.mobileBottomBar, site.settings),
+      mobileBottomBar: normalizeMobileBottomBar(site.mobileBottomBar, resolveBuilderSiteSettings(site.settings, locale)),
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+      return errorResponse(locale, 'invalid_json', 400);
     }
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    return errorResponse(locale, 'site_settings_save_failed', 500);
   }
 }

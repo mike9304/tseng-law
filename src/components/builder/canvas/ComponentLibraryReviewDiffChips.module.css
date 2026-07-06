@@ -1,0 +1,21 @@
+.componentLibraryReviewDiffDetails {
+  align-items: flex-start;
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.componentLibraryReviewDiffDetailsTitle {
+  color: var(--builder-muted-foreground, #64748b);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.componentLibraryReviewDiffDetail {
+  color: var(--builder-foreground, #0f172a);
+  font-size: 12px;
+  line-height: 1.35;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

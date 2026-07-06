@@ -4,7 +4,15 @@ import crypto from 'node:crypto';
 import { get, list, put } from '@vercel/blob';
 import type { CapturedError } from './types';
 
-const ROOT = path.join(process.cwd(), 'runtime-data', 'errors');
+/**
+ * 로컬(file) 백엔드의 에러 로그 루트 디렉터리. 기본값은 기존과 동일.
+ * BUILDER_ERROR_LOG_PATH 로 격리 가능 — audit/ops 스토어의 BUILDER_*_PATH 규약과 정합.
+ * 호출 시점에 env 를 읽어 테스트가 경로를 주입(isolate)할 수 있게 한다.
+ */
+function errorLogRoot(): string {
+  const override = process.env.BUILDER_ERROR_LOG_PATH?.trim();
+  return override ? override : path.join(process.cwd(), 'runtime-data', 'errors');
+}
 const BLOB_PREFIX = 'errors/entries/';
 const SOFT_CAP = 1000;
 
@@ -32,7 +40,7 @@ export async function appendErrorLog(entry: CapturedError): Promise<void> {
     });
     return;
   }
-  const target = path.join(ROOT, `${id}.json`);
+  const target = path.join(errorLogRoot(), `${id}.json`);
   await fs.mkdir(path.dirname(target), { recursive: true });
   await fs.writeFile(target, body, 'utf8');
 }
@@ -65,7 +73,7 @@ async function listBlob(): Promise<CapturedError[]> {
 
 async function listFile(): Promise<CapturedError[]> {
   const out: CapturedError[] = [];
-  await walkDir(ROOT, out);
+  await walkDir(errorLogRoot(), out);
   return out;
 }
 

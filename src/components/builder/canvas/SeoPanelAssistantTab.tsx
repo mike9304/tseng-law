@@ -2,25 +2,23 @@
 
 import type { BuilderSeoAssistantTask } from '@/lib/builder/seo/assistant';
 import type { BuilderSeoValidationIssue } from '@/lib/builder/seo/validation';
+import type { Locale } from '@/lib/locales';
+import styles from './SeoPanelAssistantTab.module.css';
 import {
-  fieldStyle,
-  ghostButtonStyle,
-  helpTextStyle,
-  inputStyle,
-  labelStyle,
-  previewCardStyle,
-  sectionStyle,
-  sectionTitleStyle,
-} from './SeoPanel.styles';
+  getSeoPanelAssistantCopy,
+  getSeoPanelAssistantFieldLabel,
+  isSeoPanelAssistantFailure,
+} from './seo-panel-assistant-copy';
 
-function issueTone(issue: BuilderSeoValidationIssue): React.CSSProperties {
-  if (issue.severity === 'blocker') return { color: '#dc2626', borderColor: '#fecaca', background: '#fef2f2' };
-  if (issue.severity === 'warning') return { color: '#b45309', borderColor: '#fed7aa', background: '#fff7ed' };
-  return { color: '#0369a1', borderColor: '#bae6fd', background: '#f0f9ff' };
+function issueTone(issue: BuilderSeoValidationIssue): 'blocker' | 'warning' | 'info' {
+  if (issue.severity === 'blocker') return 'blocker';
+  if (issue.severity === 'warning') return 'warning';
+  return 'info';
 }
 
 interface SeoPanelAssistantTabProps {
   active: boolean;
+  locale: Locale;
   focusKeyword: string;
   assistantStatus: string;
   assistantTasks: BuilderSeoAssistantTask[];
@@ -31,6 +29,7 @@ interface SeoPanelAssistantTabProps {
 
 export function SeoPanelAssistantTab({
   active,
+  locale,
   focusKeyword,
   assistantStatus,
   assistantTasks,
@@ -38,74 +37,75 @@ export function SeoPanelAssistantTab({
   onChangeFocusKeyword,
   onSaveFocusKeyword,
 }: SeoPanelAssistantTabProps) {
+  const copy = getSeoPanelAssistantCopy(locale);
+  const isFailure = isSeoPanelAssistantFailure(assistantStatus, copy);
+
   return (
     <>
-      <section style={{ ...sectionStyle, display: active ? 'grid' : 'none' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'center' }}>
-          <div>
-            <h3 style={sectionTitleStyle}>SEO Assistant</h3>
-            <span style={helpTextStyle}>포커스 키워드와 자동 점검 항목을 관리합니다.</span>
+      <section className={styles.section} data-active={active ? 'true' : 'false'}>
+        <div className={styles.sectionHeader}>
+          <div className={styles.titleBlock}>
+            <h3 className={styles.sectionTitle}>{copy.title}</h3>
+            <span className={styles.helpText}>{copy.description}</span>
           </div>
-          <button type="button" style={ghostButtonStyle} onClick={onSaveFocusKeyword}>
-            키워드 저장
+          <button type="button" className={styles.ghostButton} onClick={onSaveFocusKeyword}>
+            {copy.save}
           </button>
         </div>
-        <div style={fieldStyle}>
-          <label style={labelStyle} htmlFor="builder-seo-focus-keyword">Focus keyword</label>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="builder-seo-focus-keyword">{copy.focusKeyword}</label>
           <input
             id="builder-seo-focus-keyword"
             type="text"
             value={focusKeyword}
-            style={inputStyle}
+            className={styles.input}
             onChange={(event) => onChangeFocusKeyword(event.target.value)}
           />
         </div>
         {assistantStatus ? (
-          <div style={{ ...helpTextStyle, color: assistantStatus.includes('실패') ? '#dc2626' : '#15803d' }}>
+          <div className={styles.statusText} data-tone={isFailure ? 'error' : 'success'}>
             {assistantStatus}
           </div>
         ) : null}
         {assistantTasks.length === 0 ? (
-          <div style={{ ...previewCardStyle, color: '#64748b', fontSize: '0.78rem' }}>
-            Assistant 점검 항목이 없습니다.
+          <div className={`${styles.previewCard} ${styles.emptyCard}`}>
+            {copy.empty}
           </div>
         ) : (
-          <div style={{ display: 'grid', gap: 8 }}>
+          <div className={styles.list}>
             {assistantTasks.map((task) => (
-              <div key={task.id} style={previewCardStyle}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10 }}>
-                  <strong style={{ color: '#0f172a', fontSize: '0.82rem' }}>{task.label}</strong>
-                  <span style={helpTextStyle}>{task.severity} · {task.status}</span>
+              <div key={task.id} className={styles.previewCard}>
+                <div className={styles.taskHeader}>
+                  <strong className={styles.taskTitle}>{task.label}</strong>
+                  <span className={styles.helpText}>
+                    {copy.taskSeverity[task.severity]} · {copy.taskStatus[task.status]}
+                  </span>
                 </div>
-                <div style={helpTextStyle}>{task.field}: {task.detail}</div>
-                {task.applyHint ? <div style={helpTextStyle}>{task.applyHint}</div> : null}
+                <div className={styles.helpText}>{getSeoPanelAssistantFieldLabel(copy, task.field)}: {task.detail}</div>
+                {task.applyHint ? <div className={styles.helpText}>{task.applyHint}</div> : null}
               </div>
             ))}
           </div>
         )}
       </section>
 
-      <section style={{ ...sectionStyle, display: active ? 'grid' : 'none' }}>
-        <h3 style={sectionTitleStyle}>검증</h3>
+      <section className={styles.section} data-active={active ? 'true' : 'false'}>
+        <h3 className={styles.sectionTitle}>{copy.validationTitle}</h3>
         {localIssues.length === 0 ? (
-          <div style={{ ...previewCardStyle, color: '#15803d', fontWeight: 800 }}>
-            SEO 검사 통과
+          <div className={`${styles.previewCard} ${styles.validationPass}`}>
+            {copy.validationPass}
           </div>
         ) : (
-          <div style={{ display: 'grid', gap: 8 }}>
+          <div className={styles.list}>
             {localIssues.map((issue) => (
               <div
                 key={issue.id}
-                style={{
-                  ...issueTone(issue),
-                  border: '1px solid',
-                  borderRadius: 8,
-                  padding: '9px 10px',
-                  fontSize: '0.78rem',
-                  lineHeight: 1.45,
-                }}
+                className={styles.issueCard}
+                data-tone={issueTone(issue)}
               >
-                <strong>{issue.severity.toUpperCase()} · {issue.field}</strong>
+                <strong>
+                  {copy.issueSeverity[issue.severity]} · {getSeoPanelAssistantFieldLabel(copy, issue.field)}
+                </strong>
                 <div>{issue.message}</div>
                 {issue.fixHint ? <div>{issue.fixHint}</div> : null}
               </div>

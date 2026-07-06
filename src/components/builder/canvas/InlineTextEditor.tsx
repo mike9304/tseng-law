@@ -19,7 +19,9 @@ import {
   sanitizeTipTapDoc,
 } from '@/lib/builder/rich-text/sanitize';
 import type { TextAssistantTargetLocale } from '@/lib/builder/ai-generator/text-assistant';
+import type { Locale } from '@/lib/locales';
 import AiTextAssistantPanel from './AiTextAssistantPanel';
+import { getInlineTextEditorCopy } from './inline-text-editor-copy';
 import styles from './SandboxPage.module.css';
 
 interface InlineTextEditorProps {
@@ -39,7 +41,9 @@ interface InlineTextEditorProps {
   aiSiteName?: string;
   aiBrandTone?: string;
   aiElementHint?: string;
+  locale?: Locale;
   onSave: (payload: { richText: BuilderRichText; plainText: string }) => void;
+  onCancel?: () => void;
   onBlur: () => void;
 }
 
@@ -84,11 +88,15 @@ export default function InlineTextEditor({
   aiSiteName,
   aiBrandTone,
   aiElementHint,
+  locale,
   onSave,
+  onCancel,
   onBlur,
 }: InlineTextEditorProps) {
+  const copy = getInlineTextEditorCopy(locale ?? 'ko');
   const containerRef = useRef<HTMLDivElement>(null);
   const lastSavedSignatureRef = useRef<string | null>(null);
+  const closeModeRef = useRef<'commit' | 'cancel' | null>(null);
   const isComposingRef = useRef(false);
   const pendingBlurAfterCompositionRef = useRef(false);
   const [toolbarBelow, setToolbarBelow] = useState(false);
@@ -111,12 +119,22 @@ export default function InlineTextEditor({
       }),
       Link.configure({ openOnClick: false }),
       Underline,
-      Placeholder.configure({ placeholder: '텍스트 입력...' }),
+      Placeholder.configure({ placeholder: copy.placeholder }),
     ],
     content: initialContent,
-    autofocus: 'end',
+    autofocus: 'all',
     immediatelyRender: false,
     editorProps: {
+      handleKeyDown: (_view, event) => {
+        if (event.key !== 'Escape') return false;
+        event.preventDefault();
+        closeModeRef.current = 'cancel';
+        pendingBlurAfterCompositionRef.current = false;
+        isComposingRef.current = false;
+        onCancel?.();
+        onBlur();
+        return true;
+      },
       attributes: {
         style: [
           `font-size: ${fontSize}px`,
@@ -138,6 +156,7 @@ export default function InlineTextEditor({
   });
 
   const handleSave = useCallback(() => {
+    if (closeModeRef.current === 'cancel') return;
     if (!editor) return;
     const doc = sanitizeTipTapDoc(editor.getJSON()) ?? richTextFromPlainText(editor.getText()).doc;
     const plainText = extractPlainTextFromTipTapDoc(doc);
@@ -156,6 +175,7 @@ export default function InlineTextEditor({
   }, [editor, onSave]);
 
   const commitAndBlur = useCallback(() => {
+    closeModeRef.current = 'commit';
     if (isComposingRef.current) {
       pendingBlurAfterCompositionRef.current = true;
       editor?.view.dom.dispatchEvent(new CompositionEvent('compositionend', {
@@ -174,6 +194,14 @@ export default function InlineTextEditor({
     handleSave();
     onBlur();
   }, [editor, handleSave, onBlur]);
+
+  const cancelAndBlur = useCallback(() => {
+    closeModeRef.current = 'cancel';
+    pendingBlurAfterCompositionRef.current = false;
+    isComposingRef.current = false;
+    onCancel?.();
+    onBlur();
+  }, [onBlur, onCancel]);
 
   useEffect(() => {
     if (!editor || lastSavedSignatureRef.current) return;
@@ -202,18 +230,37 @@ export default function InlineTextEditor({
   }, [commitAndBlur]);
 
   useEffect(() => () => {
-    handleSave();
+    if (closeModeRef.current !== 'cancel') handleSave();
   }, [handleSave]);
 
   useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
+    const handleEditorKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        cancelAndBlur();
+        return;
+      }
+      const target = e.target instanceof Node ? e.target : null;
+      const isEditorTarget = target ? Boolean(editor?.view.dom.contains(target)) : false;
+      if (
+        e.key === 'Enter'
+        && isEditorTarget
+        && !e.shiftKey
+        && !e.metaKey
+        && !e.ctrlKey
+        && !e.altKey
+        && !e.isComposing
+        && !isComposingRef.current
+      ) {
+        e.preventDefault();
+        e.stopPropagation();
         commitAndBlur();
       }
     };
-    document.addEventListener('keydown', handleEsc);
-    return () => document.removeEventListener('keydown', handleEsc);
-  }, [commitAndBlur]);
+    document.addEventListener('keydown', handleEditorKeyDown, true);
+    return () => document.removeEventListener('keydown', handleEditorKeyDown, true);
+  }, [cancelAndBlur, commitAndBlur, editor]);
 
   const handleLink = useCallback(() => {
     if (!editor) return;
@@ -292,47 +339,47 @@ export default function InlineTextEditor({
         <div
           data-builder-inline-text-toolbar="true"
           role="toolbar"
-          aria-label="Inline text formatting"
+          aria-label={copy.toolbarAriaLabel}
           className={styles.inlineTextToolbar}
           data-placement={toolbarPlacement}
         >
           {/* Bold / Italic / Underline / Strikethrough */}
           <button
             type="button"
-            aria-label="Bold"
+            aria-label={copy.boldAriaLabel}
             aria-pressed={editor.isActive('bold')}
             className={toolbarButtonClassName(editor.isActive('bold'))}
-            title="굵게 (Cmd+B)"
+            title={copy.boldTitle}
             onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleBold().run()); }}
           >
             B
           </button>
           <button
             type="button"
-            aria-label="Italic"
+            aria-label={copy.italicAriaLabel}
             aria-pressed={editor.isActive('italic')}
             className={toolbarButtonClassName(editor.isActive('italic'), styles.inlineTextToolbarButtonItalic)}
-            title="기울임 (Cmd+I)"
+            title={copy.italicTitle}
             onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleItalic().run()); }}
           >
             I
           </button>
           <button
             type="button"
-            aria-label="Underline"
+            aria-label={copy.underlineAriaLabel}
             aria-pressed={editor.isActive('underline')}
             className={toolbarButtonClassName(editor.isActive('underline'), styles.inlineTextToolbarButtonUnderline)}
-            title="밑줄 (Cmd+U)"
+            title={copy.underlineTitle}
             onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleUnderline().run()); }}
           >
             U
           </button>
           <button
             type="button"
-            aria-label="Strikethrough"
+            aria-label={copy.strikethroughAriaLabel}
             aria-pressed={editor.isActive('strike')}
             className={toolbarButtonClassName(editor.isActive('strike'), styles.inlineTextToolbarButtonStrike)}
-            title="취소선"
+            title={copy.strikethroughTitle}
             onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleStrike().run()); }}
           >
             S
@@ -343,30 +390,30 @@ export default function InlineTextEditor({
           {/* Headings */}
           <button
             type="button"
-            aria-label="Heading 1"
+            aria-label={copy.heading1AriaLabel}
             aria-pressed={editor.isActive('heading', { level: 1 })}
             className={toolbarButtonClassName(editor.isActive('heading', { level: 1 }))}
-            title="제목 1"
+            title={copy.heading1Title}
             onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleHeading({ level: 1 }).run()); }}
           >
             H1
           </button>
           <button
             type="button"
-            aria-label="Heading 2"
+            aria-label={copy.heading2AriaLabel}
             aria-pressed={editor.isActive('heading', { level: 2 })}
             className={toolbarButtonClassName(editor.isActive('heading', { level: 2 }))}
-            title="제목 2"
+            title={copy.heading2Title}
             onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleHeading({ level: 2 }).run()); }}
           >
             H2
           </button>
           <button
             type="button"
-            aria-label="Heading 3"
+            aria-label={copy.heading3AriaLabel}
             aria-pressed={editor.isActive('heading', { level: 3 })}
             className={toolbarButtonClassName(editor.isActive('heading', { level: 3 }))}
-            title="제목 3"
+            title={copy.heading3Title}
             onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleHeading({ level: 3 }).run()); }}
           >
             H3
@@ -377,20 +424,20 @@ export default function InlineTextEditor({
           {/* Lists */}
           <button
             type="button"
-            aria-label="Bulleted list"
+            aria-label={copy.bulletListAriaLabel}
             aria-pressed={editor.isActive('bulletList')}
             className={toolbarButtonClassName(editor.isActive('bulletList'))}
-            title="글머리 기호 목록"
+            title={copy.bulletListTitle}
             onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleBulletList().run()); }}
           >
             &bull;
           </button>
           <button
             type="button"
-            aria-label="Numbered list"
+            aria-label={copy.numberedListAriaLabel}
             aria-pressed={editor.isActive('orderedList')}
             className={toolbarButtonClassName(editor.isActive('orderedList'))}
-            title="번호 매기기 목록"
+            title={copy.numberedListTitle}
             onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleOrderedList().run()); }}
           >
             1.
@@ -401,24 +448,24 @@ export default function InlineTextEditor({
           {/* Link */}
           <button
             type="button"
-            aria-label="Link"
+            aria-label={copy.linkAriaLabel}
             aria-pressed={editor.isActive('link')}
             className={toolbarButtonClassName(editor.isActive('link'))}
-            title="링크 삽입"
+            title={copy.linkTitle}
             onMouseDown={(e) => { e.preventDefault(); handleLink(); }}
           >
-            Link
+            {copy.linkButtonText}
           </button>
           {linkPickerOpen ? (
             <div
               role="dialog"
-              aria-label="텍스트 링크 편집"
+              aria-label={copy.linkPopoverAriaLabel}
               className={styles.inlineTextLinkPopover}
               data-placement={toolbarPlacement}
               onMouseDown={(event) => event.stopPropagation()}
               onPointerDown={(event) => event.stopPropagation()}
             >
-              <LinkPicker value={linkPickerValue} onChange={applyLink} />
+              <LinkPicker value={linkPickerValue} onChange={applyLink} locale={locale} />
             </div>
           ) : null}
 
@@ -426,11 +473,11 @@ export default function InlineTextEditor({
 
           <button
             type="button"
-            aria-label="AI 텍스트 어시스턴트"
+            aria-label={copy.aiAssistantAriaLabel}
             aria-expanded={aiPanelOpen}
             data-builder-inline-text-ai="true"
             className={toolbarButtonClassName(aiPanelOpen)}
-            title="AI로 텍스트 다시 쓰기/요약/번역/톤 조정"
+            title={copy.aiAssistantTitle}
             onMouseDown={(event) => {
               event.preventDefault();
               handleSave();

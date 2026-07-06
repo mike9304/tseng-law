@@ -8,6 +8,7 @@ import type {
   CommerceNotificationSettings,
   CommerceRecoveryCart,
 } from '@/lib/builder/commerce/notifications-engine';
+import { getNotificationsCopy } from './notifications-copy';
 import styles from './NotificationManager.module.css';
 
 interface NotificationManagerClientProps {
@@ -17,16 +18,6 @@ interface NotificationManagerClientProps {
   initialEvents: CommerceNotificationEvent[];
   initialRecoveries: CommerceRecoveryCart[];
 }
-
-const templateLabels: Record<keyof CommerceNotificationSettings['templates'], string> = {
-  'order.created.customer': 'Customer order confirmation',
-  'order.created.admin': 'Admin new order alert',
-  'order.updated.customer': 'Customer order update',
-  'order.invoice.customer': 'Customer invoice email',
-  'order.receipt.customer': 'Customer receipt email',
-  'billing.payment_received.customer': 'Customer payment received',
-  'cart.abandoned.customer': 'Cart recovery',
-};
 
 function patchTemplate(
   settings: CommerceNotificationSettings,
@@ -70,17 +61,18 @@ function paymentReceivedSkipReason(payload: Record<string, unknown>): string {
   return typeof reason === 'string' && reason.trim() ? reason.trim() : '';
 }
 
-function paymentReceivedSummary(event: CommerceNotificationEvent): string {
+function paymentReceivedSummary(event: CommerceNotificationEvent, locale: Locale): string {
   if (event.type !== 'billing.payment_received.customer') return '';
+  const copy = getNotificationsCopy(locale);
   const paymentId = payloadString(event.payload, 'paymentId');
   const skipReason = paymentReceivedSkipReason(event.payload);
   const parts = [
     payloadString(event.payload, 'paymentMethodLabel'),
     payloadString(event.payload, 'amountLabel'),
     payloadString(event.payload, 'documentNumber'),
-    payloadString(event.payload, 'balanceDueLabel') ? `Balance ${payloadString(event.payload, 'balanceDueLabel')}` : '',
-    paymentId ? `Payment ${paymentId}` : '',
-    skipReason ? `Skipped: ${skipReason}` : '',
+    payloadString(event.payload, 'balanceDueLabel') ? `${copy.balanceDuePrefix} ${payloadString(event.payload, 'balanceDueLabel')}` : '',
+    paymentId ? `${copy.paymentIdPrefix} ${paymentId}` : '',
+    skipReason ? `${copy.skippedPrefix}: ${skipReason}` : '',
   ];
   return parts.filter(Boolean).join(' · ');
 }
@@ -92,10 +84,11 @@ export default function NotificationManagerClient({
   initialEvents,
   initialRecoveries,
 }: NotificationManagerClientProps) {
+  const copy = getNotificationsCopy(locale);
   const [settings, setSettings] = useState(initialSettings);
   const [events, setEvents] = useState(initialEvents);
   const [recoveries, setRecoveries] = useState(initialRecoveries);
-  const [notice, setNotice] = useState('Ready');
+  const [notice, setNotice] = useState(copy.ready);
   const [busy, setBusy] = useState(false);
 
   const counts = useMemo(() => ({
@@ -106,37 +99,40 @@ export default function NotificationManagerClient({
   }), [events, recoveries]);
 
   async function refresh() {
-    const response = await fetch(`/api/builder/commerce/notifications?locale=${locale}`, { cache: 'no-store' });
+    const response = await fetch(`/api/builder/commerce/notifications?locale=${encodeURIComponent(locale)}`, { cache: 'no-store' });
     const payload = await response.json().catch(() => ({})) as {
       ok?: boolean;
       settings?: CommerceNotificationSettings;
       events?: CommerceNotificationEvent[];
       recoveries?: CommerceRecoveryCart[];
+      error?: string;
     };
     if (payload.ok) {
       if (payload.settings) setSettings(payload.settings);
       if (Array.isArray(payload.events)) setEvents(payload.events);
       if (Array.isArray(payload.recoveries)) setRecoveries(payload.recoveries);
-      setNotice('Notifications refreshed');
+      setNotice(copy.notificationsRefreshed);
+    } else {
+      setNotice(payload.error ?? copy.notificationsRefreshFailed);
     }
   }
 
   async function save() {
     setBusy(true);
-    setNotice('Saving notifications...');
+    setNotice(copy.saving);
     try {
-      const response = await fetch('/api/builder/commerce/notifications', {
+      const response = await fetch(`/api/builder/commerce/notifications?locale=${encodeURIComponent(locale)}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ settings }),
       });
       const payload = await response.json().catch(() => ({})) as { ok?: boolean; settings?: CommerceNotificationSettings; error?: string };
       if (!response.ok || !payload.ok || !payload.settings) {
-        setNotice(payload.error ?? 'Notifications save failed');
+        setNotice(payload.error ?? copy.notificationsSaveFailed);
         return;
       }
       setSettings(payload.settings);
-      setNotice('Notifications saved');
+      setNotice(copy.notificationsSaved);
     } finally {
       setBusy(false);
     }
@@ -147,21 +143,23 @@ export default function NotificationManagerClient({
       <header className={styles.header}>
         <div>
           <span>{siteTitle}</span>
-          <h1>Commerce notifications</h1>
-          <p>Queue order, billing payment, and cart recovery notifications for the store workflow.</p>
+          <h1>{copy.title}</h1>
+          <p>{copy.subtitle}</p>
         </div>
-        <div className={styles.headerActions}>
-          <Link href={`/${locale}/admin-builder/commerce/products`}>Products</Link>
-          <Link href={`/${locale}/admin-builder/commerce/orders`}>Orders</Link>
-          <Link href={`/${locale}/admin-builder/commerce/currency`}>Currency</Link>
-          <Link href={`/${locale}/admin-builder/commerce/shipping`}>Shipping</Link>
-          <Link href={`/${locale}/admin-builder/commerce/webhooks`}>Webhooks</Link>
-          <button type="button" disabled={busy} onClick={() => void save()} data-commerce-notifications-save>Save</button>
-          <button type="button" onClick={() => void refresh()} data-commerce-notifications-refresh>Refresh</button>
+        <div className={styles.headerActions} data-commerce-notifications-header-actions>
+          <Link href={`/${locale}/admin-builder/commerce/products`}>{copy.nav.products}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/orders`}>{copy.nav.orders}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/currency`}>{copy.nav.currency}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/shipping`}>{copy.nav.shipping}</Link>
+          <Link href={`/${locale}/admin-builder/commerce/webhooks`}>{copy.nav.webhooks}</Link>
+          <button type="button" disabled={busy} onClick={() => void save()} data-commerce-notifications-save>
+            {busy ? copy.saving : copy.save}
+          </button>
+          <button type="button" onClick={() => void refresh()} data-commerce-notifications-refresh>{copy.refresh}</button>
         </div>
       </header>
 
-      <section className={styles.kpis} aria-label="Notification stats">
+      <section className={styles.kpis} aria-label={copy.statsLabel}>
         {Object.entries(counts).map(([key, value]) => (
           <article key={key} data-commerce-notifications-kpi={key}>
             <strong>{value}</strong>
@@ -172,9 +170,9 @@ export default function NotificationManagerClient({
 
       <p role="status" className={styles.notice} data-commerce-notifications-notice>{notice}</p>
 
-      <section className={styles.settings} aria-label="Notification settings">
+      <section className={styles.settings} aria-label={copy.settingsLabel}>
         <label>
-          <span>Enabled</span>
+          <span>{copy.enabled}</span>
           <input
             type="checkbox"
             checked={settings.enabled}
@@ -183,7 +181,7 @@ export default function NotificationManagerClient({
           />
         </label>
         <label>
-          <span>Sender</span>
+          <span>{copy.sender}</span>
           <input
             value={settings.senderName}
             data-commerce-notifications-sender
@@ -191,7 +189,7 @@ export default function NotificationManagerClient({
           />
         </label>
         <label>
-          <span>Admin email</span>
+          <span>{copy.adminEmail}</span>
           <input
             value={settings.adminEmail}
             type="email"
@@ -200,7 +198,7 @@ export default function NotificationManagerClient({
           />
         </label>
         <label>
-          <span>Recovery delay</span>
+          <span>{copy.recoveryDelay}</span>
           <input
             value={String(settings.abandonedCart.delayMinutes)}
             inputMode="numeric"
@@ -219,7 +217,7 @@ export default function NotificationManagerClient({
         </label>
       </section>
 
-      <section className={styles.templates} aria-label="Notification templates">
+      <section className={styles.templates} aria-label={copy.templatesLabel}>
         {Object.entries(settings.templates).map(([type, template]) => (
           <article key={type} data-commerce-notification-template-row={type}>
             <label>
@@ -229,7 +227,7 @@ export default function NotificationManagerClient({
                 data-commerce-notification-template-enabled={type}
                 onChange={(event) => setSettings((current) => patchTemplate(current, type as keyof CommerceNotificationSettings['templates'], { enabled: event.target.checked }))}
               />
-              <span>{templateLabels[type as keyof CommerceNotificationSettings['templates']]}</span>
+              <span>{copy.templateLabels[type]}</span>
             </label>
             <input
               value={template.subject}
@@ -238,11 +236,11 @@ export default function NotificationManagerClient({
             />
             {type === 'billing.payment_received.customer' ? (
               <details className={styles.paymentPolicy} data-commerce-notifications-payment-rules>
-                <summary>Payment rules</summary>
+                <summary>{copy.paymentRules}</summary>
                 <div>
-                  <span>Manual and hosted payments use the same customer-facing template.</span>
-                  <span>Receipt overlap is skipped to avoid duplicate paid emails.</span>
-                  <span>Partial payments include the remaining balance.</span>
+                  {copy.paymentRulesNotes.map((note) => (
+                    <span key={note}>{note}</span>
+                  ))}
                 </div>
                 <label>
                   <input
@@ -251,7 +249,7 @@ export default function NotificationManagerClient({
                     data-commerce-notifications-payment-received-enabled
                     onChange={(event) => setSettings((current) => patchPaymentReceived(current, { enabled: event.target.checked }))}
                   />
-                  <span>Send payment received emails</span>
+                  <span>{copy.paymentReceivedEnabled}</span>
                 </label>
                 <label>
                   <input
@@ -260,7 +258,7 @@ export default function NotificationManagerClient({
                     data-commerce-notifications-payment-received-manual
                     onChange={(event) => setSettings((current) => patchPaymentReceived(current, { manualEnabled: event.target.checked }))}
                   />
-                  <span>Send for manual payments</span>
+                  <span>{copy.paymentReceivedManual}</span>
                 </label>
                 <label>
                   <input
@@ -269,7 +267,7 @@ export default function NotificationManagerClient({
                     data-commerce-notifications-payment-received-hosted
                     onChange={(event) => setSettings((current) => patchPaymentReceived(current, { hostedEnabled: event.target.checked }))}
                   />
-                  <span>Send for hosted payment links</span>
+                  <span>{copy.paymentReceivedHosted}</span>
                 </label>
                 <label>
                   <input
@@ -278,10 +276,10 @@ export default function NotificationManagerClient({
                     data-commerce-notifications-payment-received-suppress-receipt-overlap
                     onChange={(event) => setSettings((current) => patchPaymentReceived(current, { suppressFullSettlementReceiptOverlap: event.target.checked }))}
                   />
-                  <span>Skip when receipt email is queued</span>
+                  <span>{copy.paymentReceivedSuppressOverlap}</span>
                 </label>
                 <small data-commerce-notifications-payment-received-variables>
-                  Variables: customerName, customerEmail, documentNumber, amountLabel, balanceDueLabel, paymentMethodLabel, paymentDate, paymentStatus, sourceLabel
+                  {copy.paymentReceivedVariables}
                 </small>
               </details>
             ) : null}
@@ -291,7 +289,7 @@ export default function NotificationManagerClient({
 
       <section className={styles.grid}>
         <div>
-          <h2>Outbox</h2>
+          <h2>{copy.outboxTitle}</h2>
           <div className={styles.list} data-commerce-notification-events>
             {events.map((event) => (
               <article
@@ -302,9 +300,9 @@ export default function NotificationManagerClient({
               >
                 <strong>{event.type}</strong>
                 <span>{event.recipient.email}</span>
-                {paymentReceivedSummary(event) ? (
+                {paymentReceivedSummary(event, locale) ? (
                   <span className={styles.eventSummary} data-commerce-notification-event-summary>
-                    {paymentReceivedSummary(event)}
+                    {paymentReceivedSummary(event, locale)}
                   </span>
                 ) : null}
                 <small>{event.status} · {event.subject}</small>
@@ -313,7 +311,7 @@ export default function NotificationManagerClient({
           </div>
         </div>
         <div>
-          <h2>Recovery carts</h2>
+          <h2>{copy.recoveriesTitle}</h2>
           <div className={styles.list} data-commerce-recovery-carts>
             {recoveries.map((recovery) => (
               <article

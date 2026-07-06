@@ -1,12 +1,13 @@
 'use client';
 
+import React from 'react';
 import { useRef, useState } from 'react';
 import type { BuilderAssetListItem } from '@/lib/builder/assets';
 import type { Locale } from '@/lib/locales';
 import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
-import FontPicker from '@/components/builder/editor/FontPicker';
+import BrandKitPaletteEditor, { BRAND_COLOR_KEYS } from '@/components/builder/editor/BrandKitPaletteEditor';
+import { getTextControlsCopy } from './text-controls-copy';
 import {
-  THEME_COLOR_LABELS,
   resolveBuilderBrandAssetUrl,
   type BrandKit,
 } from '@/lib/builder/site/theme';
@@ -130,12 +131,6 @@ const assetRowStyle: React.CSSProperties = {
   background: '#fff',
 };
 
-const colorGridStyle: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-  gap: 12,
-};
-
 const footerActionsStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'space-between',
@@ -144,54 +139,30 @@ const footerActionsStyle: React.CSSProperties = {
   paddingTop: 4,
 };
 
-type BrandColorKey = keyof BrandKit['colors'];
 type BrandAssetKey = 'logoLightAssetId' | 'logoDarkAssetId' | 'faviconAssetId' | 'ogImageAssetId';
 type BrandUrlKey = 'logoLight' | 'logoDark' | 'favicon' | 'ogImage';
 
-const BRAND_COLOR_KEYS: BrandColorKey[] = [
-  'primary',
-  'secondary',
-  'accent',
-  'background',
-  'text',
-];
-
-function updateBrandColor(kit: BrandKit, key: BrandColorKey, value: string): BrandKit {
-  return {
-    ...kit,
-    colors: {
-      ...kit.colors,
-      [key]: value,
-    },
-  };
-}
-
 const BRAND_ASSET_FIELDS: Array<{
-  label: string;
   urlKey: BrandUrlKey;
   assetKey: BrandAssetKey;
   placeholder: string;
 }> = [
   {
-    label: 'Light logo',
     urlKey: 'logoLight',
     assetKey: 'logoLightAssetId',
     placeholder: 'https://example.com/logo.png',
   },
   {
-    label: 'Dark logo',
     urlKey: 'logoDark',
     assetKey: 'logoDarkAssetId',
     placeholder: 'https://example.com/logo-dark.png',
   },
   {
-    label: 'Favicon',
     urlKey: 'favicon',
     assetKey: 'faviconAssetId',
     placeholder: 'https://example.com/favicon.ico',
   },
   {
-    label: 'OG image',
     urlKey: 'ogImage',
     assetKey: 'ogImageAssetId',
     placeholder: 'https://example.com/social-card.png',
@@ -246,17 +217,18 @@ export default function BrandKitPanel({
   const logoPreview = resolveBrandAssetPreview(value, 'logoLight', 'logoLightAssetId');
   const activePickerField = BRAND_ASSET_FIELDS.find((field) => field.assetKey === assetPickerKey);
   const selectedAssetCount = BRAND_ASSET_FIELDS.filter((field) => Boolean(value.assets?.[field.assetKey])).length;
+  const copy = getTextControlsCopy(locale);
 
   return (
     <div style={panelShellStyle}>
       <div style={siteWideWarningStyle}>
         <span aria-hidden="true">!</span>
-        <span>Brand kit changes are site-wide. Apply updates here, then save Site Settings to publish the new visual system.</span>
+        <span>{copy.brandKit.warning}</span>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '170px 1fr', gap: 14, alignItems: 'stretch' }}>
         <div style={logoCardStyle}>
-          <div style={sectionHeadingStyle}>Logo</div>
+          <div style={sectionHeadingStyle}>{copy.brandKit.logoHeading}</div>
           <div
             style={{
               minHeight: 92,
@@ -271,7 +243,7 @@ export default function BrandKitPanel({
           >
             {logoPreview ? (
               <span
-                aria-label="Logo preview"
+                aria-label={copy.brandKit.logoPreview}
                 role="img"
                 style={{
                   width: '100%',
@@ -280,7 +252,7 @@ export default function BrandKitPanel({
                 }}
               />
             ) : (
-              <span style={{ color: '#94a3b8', fontSize: '0.76rem', fontWeight: 700 }}>Logo preview</span>
+              <span style={{ color: '#94a3b8', fontSize: '0.76rem', fontWeight: 700 }}>{copy.brandKit.logoPreview}</span>
             )}
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6 }}>
@@ -295,7 +267,7 @@ export default function BrandKitPanel({
             const hasAsset = Boolean(value.assets?.[field.assetKey]);
             return (
               <div key={field.assetKey} style={assetRowStyle}>
-                <label style={labelStyle}>{field.label} URL</label>
+                <label style={labelStyle}>{copy.brandKit.assetLabels[field.assetKey]}</label>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 8, alignItems: 'center' }}>
                   <input
                     type="url"
@@ -305,7 +277,7 @@ export default function BrandKitPanel({
                     onChange={(event) => onChange({ ...value, [field.urlKey]: event.target.value })}
                   />
                   <button type="button" style={actionButtonStyle} onClick={() => setAssetPickerKey(field.assetKey)}>
-                    Select from assets
+                    {copy.brandKit.selectFromAssets}
                   </button>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, minHeight: 28 }}>
@@ -323,7 +295,7 @@ export default function BrandKitPanel({
                     />
                   ) : null}
                   <span style={{ color: hasAsset ? '#0f766e' : '#94a3b8', fontSize: '0.74rem', fontWeight: 700 }}>
-                    {hasAsset ? 'Asset selected' : 'Raw URL fallback'}
+                    {hasAsset ? copy.brandKit.assetSelected : copy.brandKit.rawUrlFallback}
                   </span>
                   {hasAsset ? (
                     <button
@@ -331,7 +303,7 @@ export default function BrandKitPanel({
                       style={{ ...actionButtonStyle, padding: '5px 8px', fontSize: '0.72rem' }}
                       onClick={() => onChange(clearBrandAsset(value, field.assetKey))}
                     >
-                      Clear asset
+                      {copy.brandKit.clearAsset}
                     </button>
                   ) : null}
                 </div>
@@ -339,7 +311,7 @@ export default function BrandKitPanel({
             );
           })}
           <div style={fieldStyle}>
-            <label style={labelStyle}>Radius scale</label>
+            <label style={labelStyle}>{copy.brandKit.radiusScaleLabel}</label>
             <input
               type="number"
               min={0}
@@ -355,13 +327,13 @@ export default function BrandKitPanel({
       <section style={brandAssetLibraryStyle}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
           <div>
-            <div style={sectionHeadingStyle}>Brand asset library</div>
+            <div style={sectionHeadingStyle}>{copy.brandKit.assetLibraryHeading}</div>
             <strong style={{ color: '#0f172a', fontSize: '0.94rem' }}>
-              {selectedAssetCount}/4 brand assets selected
+              {copy.brandKit.selectedAssetCount(selectedAssetCount, 4)}
             </strong>
           </div>
           <button type="button" style={actionButtonStyle} onClick={() => setAssetPickerKey('logoLightAssetId')}>
-            Open brand assets
+            {copy.brandKit.openAssetLibrary}
           </button>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 8 }}>
@@ -378,8 +350,8 @@ export default function BrandKitPanel({
                 }}
                 onClick={() => setAssetPickerKey(field.assetKey)}
               >
-                <span>{field.label}</span>
-                <span>{selected ? 'Linked' : 'Pick'}</span>
+                <span>{copy.brandKit.assetLabels[field.assetKey]}</span>
+                <span>{selected ? copy.brandKit.linked : copy.brandKit.pick}</span>
               </button>
             );
           })}
@@ -388,8 +360,8 @@ export default function BrandKitPanel({
           {BRAND_COLOR_KEYS.map((key) => (
             <span
               key={key}
-              title={THEME_COLOR_LABELS[key]}
-              aria-label={`${THEME_COLOR_LABELS[key]} color`}
+              title={copy.brandKit.colorLabels[key]}
+              aria-label={copy.brandKit.colorAriaLabel(copy.brandKit.colorLabels[key])}
               style={{
                 width: 24,
                 height: 24,
@@ -399,48 +371,24 @@ export default function BrandKitPanel({
               }}
             />
           ))}
+          {(value.customColors ?? []).map((entry, index) => (
+            <span
+              key={`custom-swatch-${index}`}
+              title={entry.name || entry.color}
+              aria-label={copy.brandKit.colorAriaLabel(entry.name || entry.color)}
+              style={{
+                width: 24,
+                height: 24,
+                borderRadius: 999,
+                border: '1px solid rgba(15,23,42,0.14)',
+                background: entry.color,
+              }}
+            />
+          ))}
         </div>
       </section>
 
-      <div style={colorGridStyle}>
-        {BRAND_COLOR_KEYS.map((key) => (
-          <div key={key} style={fieldStyle}>
-            <label style={labelStyle}>{THEME_COLOR_LABELS[key]}</label>
-            <div style={{ display: 'grid', gridTemplateColumns: '46px 1fr', gap: 8, alignItems: 'center' }}>
-              <input
-                type="color"
-                value={/^#[0-9a-fA-F]{6}$/.test(value.colors[key]) ? value.colors[key] : '#000000'}
-                style={{ width: 46, height: 36, padding: 4, border: '1px solid #e2e8f0', borderRadius: 8, background: '#fff' }}
-                onChange={(event) => onChange(updateBrandColor(value, key, event.target.value))}
-              />
-              <input
-                type="text"
-                value={value.colors[key]}
-                placeholder="#123B63"
-                style={inputStyle}
-                onChange={(event) => onChange(updateBrandColor(value, key, event.target.value))}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div style={colorGridStyle}>
-        <div style={fieldStyle}>
-          <label style={labelStyle}>Title font</label>
-          <FontPicker
-            value={value.fonts.title}
-            onChange={(fontFamily) => onChange({ ...value, fonts: { ...value.fonts, title: fontFamily } })}
-          />
-        </div>
-        <div style={fieldStyle}>
-          <label style={labelStyle}>Body font</label>
-          <FontPicker
-            value={value.fonts.body}
-            onChange={(fontFamily) => onChange({ ...value, fonts: { ...value.fonts, body: fontFamily } })}
-          />
-        </div>
-      </div>
+      <BrandKitPaletteEditor value={value} locale={locale} onChange={onChange} />
 
       <input
         ref={importInputRef}
@@ -457,14 +405,14 @@ export default function BrandKitPanel({
       <div style={footerActionsStyle}>
         <div style={{ display: 'flex', gap: 8 }}>
           <button type="button" style={actionButtonStyle} onClick={onExport}>
-            Export JSON
+            {copy.brandKit.exportJson}
           </button>
           <button type="button" style={actionButtonStyle} onClick={() => importInputRef.current?.click()}>
-            Import JSON
+            {copy.brandKit.importJson}
           </button>
         </div>
         <button type="button" style={primaryButtonStyle} onClick={onApply}>
-          Apply brand kit
+          {copy.brandKit.applyBrandKit}
         </button>
       </div>
       {activePickerField ? (

@@ -4,11 +4,11 @@ import type { BuilderTheme } from '@/lib/builder/site/types';
 import ColorPicker from '@/components/builder/editor/ColorPicker';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
 import {
-  THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
   type BuilderColorValue,
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
+import { getVisualWidgetsCopy } from '../visual-widgets-copy';
 import styles from './Divider.module.css';
 
 function DividerRender({
@@ -59,32 +59,34 @@ function DividerRender({
 
 function DividerInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const dividerNode = node as BuilderDividerCanvasNode;
   const theme = useBuilderTheme();
+  const copy = getVisualWidgetsCopy(locale);
   const paletteTokens = THEME_COLOR_TOKENS.map((token) => ({
     token,
-    label: THEME_COLOR_LABELS[token],
+    label: copy.themeColorLabels[token],
     color: theme.colors[token],
   }));
 
   return (
     <>
       <label>
-        <span>Orientation</span>
+        <span>{copy.divider.inspector.orientation}</span>
         <select
           value={dividerNode.content.orientation}
           disabled={disabled}
           onChange={(event) => onUpdate({ orientation: event.target.value })}
         >
-          <option value="horizontal">Horizontal</option>
-          <option value="vertical">Vertical</option>
+          <option value="horizontal">{copy.divider.inspector.orientations.horizontal}</option>
+          <option value="vertical">{copy.divider.inspector.orientations.vertical}</option>
         </select>
       </label>
       <label>
-        <span>Thickness</span>
+        <span>{copy.divider.inspector.thickness}</span>
         <input
           type="number"
           min={1}
@@ -96,7 +98,7 @@ function DividerInspector({
         />
       </label>
       <label>
-        <span>Color</span>
+        <span>{copy.divider.inspector.color}</span>
         <ColorPicker
           value={dividerNode.content.color}
           paletteTokens={paletteTokens}
@@ -105,15 +107,15 @@ function DividerInspector({
         />
       </label>
       <label>
-        <span>Style</span>
+        <span>{copy.divider.inspector.style}</span>
         <select
           value={dividerNode.content.style}
           disabled={disabled}
           onChange={(event) => onUpdate({ style: event.target.value })}
         >
-          <option value="solid">Solid</option>
-          <option value="dashed">Dashed</option>
-          <option value="dotted">Dotted</option>
+          <option value="solid">{copy.divider.inspector.styles.solid}</option>
+          <option value="dashed">{copy.divider.inspector.styles.dashed}</option>
+          <option value="dotted">{copy.divider.inspector.styles.dotted}</option>
         </select>
       </label>
     </>

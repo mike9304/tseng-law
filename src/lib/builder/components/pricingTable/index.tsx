@@ -1,20 +1,31 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderPricingTableCanvasNode } from '@/lib/builder/canvas/types';
 import { safeHref } from '@/lib/builder/links';
+import type { Locale } from '@/lib/locales';
+import {
+  getMarketingWidgetsCopy,
+  localizedPricingPlans,
+  PRICING_TABLE_LEGACY_DEFAULT_PLANS,
+} from '../marketing-widgets-copy';
+import styles from './PricingTableInspector.module.css';
 
 function PricingTableRender({
   node,
+  locale = 'ko',
 }: {
   node: BuilderPricingTableCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getMarketingWidgetsCopy(locale);
+  const plans = localizedPricingPlans(c.plans, copy.pricingTable.defaultPlans);
   return (
     <section className="builder-datadisplay-pricing-table" data-builder-datadisplay-widget="pricing-table">
-      {c.plans.length === 0 ? (
-        <em>요금제를 인스펙터에서 추가하세요</em>
+      {plans.length === 0 ? (
+        <em>{copy.pricingTable.empty}</em>
       ) : (
-        c.plans.map((plan, idx) => {
+        plans.map((plan, idx) => {
           const ctaHref = safeHref(plan.ctaHref);
           return (
             <article key={`${plan.name}-${idx}`} data-featured={plan.featured ? 'true' : 'false'}>
@@ -53,7 +64,7 @@ function plansToText(plans: BuilderPricingTableCanvasNode['content']['plans']): 
   ].join(' | ')).join('\n');
 }
 
-function parsePlans(value: string): BuilderPricingTableCanvasNode['content']['plans'] {
+function parsePlans(value: string, defaultCtaLabel: string): BuilderPricingTableCanvasNode['content']['plans'] {
   const out: BuilderPricingTableCanvasNode['content']['plans'] = [];
   for (const raw of value.split('\n')) {
     const line = raw.trim();
@@ -66,7 +77,7 @@ function parsePlans(value: string): BuilderPricingTableCanvasNode['content']['pl
       price: (price ?? '').slice(0, 60),
       period: period || undefined,
       featured: (flag ?? '').toLowerCase() === 'featured',
-      ctaLabel: (ctaLabel ?? '선택').slice(0, 60),
+      ctaLabel: (ctaLabel || defaultCtaLabel).slice(0, 60),
       ctaHref: (ctaHref ?? '').slice(0, 2000),
       features: (featuresStr ?? '').split(';').map((p) => p.trim()).filter(Boolean).slice(0, 20),
     };
@@ -77,24 +88,27 @@ function parsePlans(value: string): BuilderPricingTableCanvasNode['content']['pl
 
 function PricingTableInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const ptNode = node as BuilderPricingTableCanvasNode;
   const c = ptNode.content;
+  const copy = getMarketingWidgetsCopy(locale);
+  const plans = localizedPricingPlans(c.plans, copy.pricingTable.defaultPlans);
   return (
-    <>
-      <label>
-        <span>요금제 (name | price | period | featured | ctaLabel | ctaHref | feature1; feature2)</span>
+    <div className={styles.root} data-builder-pricing-table-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.pricingTable.inspector.plans}</span>
         <textarea
+          className={`${styles.control} ${styles.textarea}`}
           rows={8}
-          style={{ fontFamily: 'inherit', resize: 'vertical', fontSize: 11 }}
-          value={plansToText(c.plans)}
+          value={plansToText(plans)}
           disabled={disabled}
-          onChange={(event) => onUpdate({ plans: parsePlans(event.target.value) })}
+          onChange={(event) => onUpdate({ plans: parsePlans(event.target.value, copy.pricingTable.defaultCtaLabel) })}
         />
       </label>
-    </>
+    </div>
   );
 }
 
@@ -104,11 +118,7 @@ export default defineComponent({
   category: 'advanced',
   icon: '💰',
   defaultContent: {
-    plans: [
-      { name: '기본', price: '50만원', period: '/ 상담', featured: false, ctaLabel: '신청', ctaHref: '/ko/contact', features: ['초기 1시간 상담', '서면 요약', '문의 1회'] },
-      { name: '표준', price: '200만원', period: '/ 월', featured: true, ctaLabel: '추천', ctaHref: '/ko/contact', features: ['월 5건 자문', '계약서 검토', '협상 지원', '월간 보고'] },
-      { name: '프리미엄', price: '500만원', period: '/ 월', featured: false, ctaLabel: '문의', ctaHref: '/ko/contact', features: ['무제한 자문', '소송 대응', '한·대 양국 협업', '실시간 응대'] },
-    ],
+    plans: PRICING_TABLE_LEGACY_DEFAULT_PLANS,
   },
   defaultStyle: {},
   defaultRect: { width: 720, height: 360 },

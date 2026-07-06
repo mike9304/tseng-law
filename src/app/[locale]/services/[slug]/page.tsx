@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
-import { getServiceArea, getServiceSlugs } from '@/data/service-details';
 import { getColumnPost } from '@/lib/columns';
 import JsonLd from '@/components/JsonLd';
+import {
+  normalizeServiceAreaSlug,
+  readServiceAreaSourceRecordBySlug,
+  readServiceAreaSourceRecords,
+} from '@/lib/builder/services/source';
 import {
   isBuilderDynamicTemplateBlockVisible,
   readBuilderDynamicTemplatePublishedBlockVisibility,
@@ -16,8 +21,66 @@ import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buil
 
 export const dynamic = 'force-dynamic';
 
-export function generateStaticParams() {
-  const slugs = getServiceSlugs();
+const copy: Record<Locale, {
+  backLabel: string;
+  keyPointsLabel: string;
+  attorneyHeading: string;
+  columnsLabel: string;
+  readMore: string;
+  contactLabel: string;
+  contactDesc: string;
+  contactBtn: string;
+  emptyMsg: string;
+  reviewLead: string;
+  reviewTail: string;
+  breadcrumbServices: string;
+}> = {
+  ko: {
+    backLabel: '← 업무분야 목록으로',
+    keyPointsLabel: '핵심 요약',
+    attorneyHeading: '이 분야 담당 변호사',
+    columnsLabel: '관련 칼럼 — 자세히 알아보기',
+    readMore: '자세히 읽기 →',
+    contactLabel: '상담 예약',
+    contactDesc: '이 분야에 대해 궁금한 점이 있으시면 언제든 문의해 주세요.',
+    contactBtn: '문의하기',
+    emptyMsg: '이 분야의 전문 칼럼을 준비 중입니다.',
+    reviewLead: '이 페이지는 ',
+    reviewTail: '가 검토하고 관련 칼럼과 상담 흐름을 연결했습니다.',
+    breadcrumbServices: '업무분야',
+  },
+  'zh-hant': {
+    backLabel: '← 返回服務領域',
+    keyPointsLabel: '重點摘要',
+    attorneyHeading: '此領域承辦律師',
+    columnsLabel: '相關專欄 — 深入了解',
+    readMore: '閱讀全文 →',
+    contactLabel: '預約諮詢',
+    contactDesc: '如對此服務領域有任何疑問，歡迎隨時聯繫我們。',
+    contactBtn: '聯絡我們',
+    emptyMsg: '此領域的專欄正在準備中。',
+    reviewLead: '本頁內容由 ',
+    reviewTail: '審閱，並串接相關專欄與諮詢流程。',
+    breadcrumbServices: '服務領域',
+  },
+  en: {
+    backLabel: '← Back to services',
+    keyPointsLabel: 'Key Points',
+    attorneyHeading: 'Lead Attorney for This Practice Area',
+    columnsLabel: 'Related Columns — Learn More',
+    readMore: 'Read full article →',
+    contactLabel: 'Book Consultation',
+    contactDesc: 'If you have any questions about this practice area, please contact us anytime.',
+    contactBtn: 'Contact Us',
+    emptyMsg: 'Columns for this practice area are being prepared.',
+    reviewLead: 'This page is reviewed by ',
+    reviewTail: ' and connects related columns with the consultation flow.',
+    breadcrumbServices: 'Practice Areas',
+  },
+};
+
+export async function generateStaticParams() {
+  const slugs = (await readServiceAreaSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko')).map((area) => area.slug);
   return ['ko', 'zh-hant', 'en'].flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }
 
@@ -25,9 +88,9 @@ function summarize(text: string, maxLength = 160) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
 }
 
-export function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Metadata {
+export async function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Promise<Metadata> {
   const locale = normalizeLocale(params.locale);
-  const area = getServiceArea(params.slug);
+  const area = await readServiceAreaSourceRecordBySlug(DEFAULT_BUILDER_SITE_ID, locale, params.slug);
   const attorney = getAttorneyProfile(locale, primaryAttorneySlug);
 
   if (!area) {
@@ -48,38 +111,14 @@ export function generateMetadata({ params }: { params: { locale: Locale; slug: s
 
 export default async function ServiceDetailPage({ params }: { params: { locale: Locale; slug: string } }) {
   const locale = normalizeLocale(params.locale);
-  const area = getServiceArea(params.slug);
+  const area = await readServiceAreaSourceRecordBySlug(DEFAULT_BUILDER_SITE_ID, locale, params.slug);
   if (!area) return notFound();
+  if (normalizeServiceAreaSlug(params.slug) !== area.slug) {
+    permanentRedirect(`/${locale}/services/${area.slug}`);
+  }
   const attorney = getAttorneyProfile(locale, primaryAttorneySlug);
   const description = summarize(area.intro[locale]);
-
-  const backLabel = locale === 'ko' ? '← 업무분야 목록으로' : locale === 'zh-hant' ? '← 返回服務領域' : '← Back to services';
-  const keyPointsLabel = locale === 'ko' ? '핵심 요약' : locale === 'zh-hant' ? '重點摘要' : 'Key Points';
-  const attorneyHeading = locale === 'ko' ? '이 분야 담당 변호사' : locale === 'zh-hant' ? '此領域承辦律師' : 'Lead Attorney for This Practice Area';
-  const columnsLabel = locale === 'ko' ? '관련 칼럼 — 자세히 알아보기' : locale === 'zh-hant' ? '相關專欄 — 深入了解' : 'Related Columns — Learn More';
-  const readMore = locale === 'ko' ? '자세히 읽기 →' : locale === 'zh-hant' ? '閱讀全文 →' : 'Read full article →';
-  const contactLabel = locale === 'ko' ? '상담 예약' : locale === 'zh-hant' ? '預約諮詢' : 'Book Consultation';
-  const contactDesc = locale === 'ko'
-    ? '이 분야에 대해 궁금한 점이 있으시면 언제든 문의해 주세요.'
-    : locale === 'zh-hant'
-      ? '如對此服務領域有任何疑問，歡迎隨時聯繫我們。'
-      : 'If you have any questions about this practice area, please contact us anytime.';
-  const contactBtn = locale === 'ko' ? '문의하기' : locale === 'zh-hant' ? '聯絡我們' : 'Contact Us';
-  const emptyMsg = locale === 'ko'
-    ? '이 분야의 전문 칼럼을 준비 중입니다.'
-    : locale === 'zh-hant'
-      ? '此領域的專欄正在準備中。'
-      : 'Columns for this practice area are being prepared.';
-  const reviewLead = locale === 'ko'
-    ? '이 페이지는 '
-    : locale === 'zh-hant'
-      ? '本頁內容由 '
-      : 'This page is reviewed by ';
-  const reviewTail = locale === 'ko'
-    ? '가 검토하고 관련 칼럼과 상담 흐름을 연결했습니다.'
-    : locale === 'zh-hant'
-      ? '審閱，並串接相關專欄與諮詢流程。'
-      : ' and connects related columns with the consultation flow.';
+  const t = copy[locale];
 
   const columns = area.columnSlugs
     .map((slug) => getColumnPost(slug, locale))
@@ -101,7 +140,7 @@ export default async function ServiceDetailPage({ params }: { params: { locale: 
           <JsonLd
             data={buildBreadcrumbJsonLd(locale, [
               { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
-              { name: locale === 'ko' ? '업무분야' : locale === 'zh-hant' ? '服務領域' : 'Practice Areas', path: `/${locale}/services` },
+              { name: t.breadcrumbServices, path: `/${locale}/services` },
               { name: area.title[locale], path: `/${locale}/services/${area.slug}` },
             ])}
           />
@@ -136,7 +175,7 @@ export default async function ServiceDetailPage({ params }: { params: { locale: 
       {showHero ? (
         <section className="svc-hero" data-tone="dark">
           <div className="container svc-hero-inner">
-            <Link href={`/${locale}/services`} className="svc-back-link">{backLabel}</Link>
+            <Link href={`/${locale}/services`} className="svc-back-link">{t.backLabel}</Link>
             <h1 className="svc-hero-title">{area.title[locale]}</h1>
             <p className="svc-hero-subtitle">{area.subtitle[locale]}</p>
           </div>
@@ -150,17 +189,17 @@ export default async function ServiceDetailPage({ params }: { params: { locale: 
               <p className="svc-intro">{area.intro[locale]}</p>
               {attorney ? (
                 <p className="svc-review-note">
-                  {reviewLead}
+                  {t.reviewLead}
                   <Link href={`/${locale}/lawyers/${attorney.slug}`} className="link-underline">
                     {attorney.name}
                   </Link>
-                  {reviewTail}
+                  {t.reviewTail}
                 </p>
               ) : null}
 
               {points.length > 0 && (
                 <div className="svc-keypoints">
-                  <h2 className="svc-keypoints-title">{keyPointsLabel}</h2>
+                  <h2 className="svc-keypoints-title">{t.keyPointsLabel}</h2>
                   <ul className="svc-keypoints-list">
                     {points.map((point, i) => (
                       <li key={i}>{point}</li>
@@ -171,7 +210,7 @@ export default async function ServiceDetailPage({ params }: { params: { locale: 
 
               {columns.length > 0 && (
                 <div className="svc-columns-section">
-                  <h2 className="svc-columns-heading">{columnsLabel}</h2>
+                  <h2 className="svc-columns-heading">{t.columnsLabel}</h2>
                   <div className="svc-columns-grid">
                     {columns.map((col) => (
                       <Link
@@ -190,7 +229,7 @@ export default async function ServiceDetailPage({ params }: { params: { locale: 
                           <time>{col.dateDisplay || col.date}</time>
                           {col.readTime && <span>{col.readTime}</span>}
                         </span>
-                        <span className="svc-col-card-link">{readMore}</span>
+                        <span className="svc-col-card-link">{t.readMore}</span>
                       </Link>
                     ))}
                   </div>
@@ -198,17 +237,17 @@ export default async function ServiceDetailPage({ params }: { params: { locale: 
               )}
 
               {columns.length === 0 && (
-                <div className="svc-empty"><p>{emptyMsg}</p></div>
+                <div className="svc-empty"><p>{t.emptyMsg}</p></div>
               )}
             </div>
 
             <aside className="svc-sidebar">
               <div className="svc-sidebar-card svc-sidebar-card--attorney">
-                <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
+                <AttorneyAuthorityCard locale={locale} heading={t.attorneyHeading} />
               </div>
               {columns.length > 0 && (
                 <div className="svc-sidebar-card">
-                  <h3 className="svc-sidebar-title">{columnsLabel.split(' —')[0]}</h3>
+                  <h3 className="svc-sidebar-title">{t.columnsLabel.split(' —')[0]}</h3>
                   <ul className="svc-related-list">
                     {columns.map((col) => (
                       <li key={col.slug}>
@@ -221,10 +260,10 @@ export default async function ServiceDetailPage({ params }: { params: { locale: 
                 </div>
               )}
               <div className="svc-sidebar-card">
-                <h3 className="svc-sidebar-title">{contactLabel}</h3>
-                <p className="svc-sidebar-text">{contactDesc}</p>
+                <h3 className="svc-sidebar-title">{t.contactLabel}</h3>
+                <p className="svc-sidebar-text">{t.contactDesc}</p>
                 <Link href={`/${locale}/contact`} className="button svc-sidebar-btn">
-                  {contactBtn}
+                  {t.contactBtn}
                 </Link>
               </div>
             </aside>

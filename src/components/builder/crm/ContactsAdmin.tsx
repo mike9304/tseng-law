@@ -2,16 +2,14 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import type { CrmContact, CrmContactSource } from '@/lib/builder/crm/contact-model';
+import type { Locale } from '@/lib/locales';
+import { normalizeLocale } from '@/lib/locales';
+import { formatDateTime } from '@/lib/builder/format/datetime';
 
 interface Props {
   initialContacts: CrmContact[];
+  locale: Locale;
 }
-
-const SOURCE_LABEL: Record<CrmContactSource, string> = {
-  form: '폼',
-  manual: '수동',
-  booking: '예약',
-};
 
 const SOURCE_COLOR: Record<CrmContactSource, string> = {
   form: '#0ea5e9',
@@ -29,7 +27,126 @@ interface DraftState {
 
 const EMPTY_DRAFT: DraftState = { email: '', name: '', phone: '', tags: '', notes: '' };
 
-export default function ContactsAdmin({ initialContacts }: Props) {
+const CONTACTS_COPY = {
+  ko: {
+    sourceLabel: { form: '폼', manual: '수동', booking: '예약' },
+    searchPlaceholder: '이메일·이름·전화 검색',
+    allTags: '전체 태그',
+    allSources: '전체 출처',
+    refresh: '조회',
+    addContact: '+ 연락처 추가',
+    namePlaceholder: '이름',
+    phonePlaceholder: '전화',
+    tagsPlaceholder: '태그 (쉼표 구분)',
+    save: '저장',
+    cancel: '취소',
+    edit: '편집',
+    delete: '삭제',
+    emailRequired: '이메일을 입력해 주세요.',
+    createFailed: '연락처를 만들지 못했습니다.',
+    updateFailed: '연락처를 업데이트하지 못했습니다.',
+    deleteFailed: '연락처를 삭제하지 못했습니다.',
+    deleteConfirm: '이 연락처를 삭제하시겠습니까?',
+    headers: {
+      email: '이메일',
+      name: '이름',
+      phone: '전화',
+      source: '출처',
+      tags: '태그',
+      lastActivity: '최근 활동',
+      actions: '액션',
+    },
+    empty: '연락처가 없습니다.',
+    dateLocale: 'ko-KR',
+  },
+  'zh-hant': {
+    sourceLabel: { form: '表單', manual: '手動', booking: '預約' },
+    searchPlaceholder: '搜尋 Email、姓名、電話',
+    allTags: '所有標籤',
+    allSources: '所有來源',
+    refresh: '查詢',
+    addContact: '+ 新增聯絡人',
+    namePlaceholder: '姓名',
+    phonePlaceholder: '電話',
+    tagsPlaceholder: '標籤（以逗號分隔）',
+    save: '儲存',
+    cancel: '取消',
+    edit: '編輯',
+    delete: '刪除',
+    emailRequired: '請輸入 Email。',
+    createFailed: '無法建立聯絡人。',
+    updateFailed: '無法更新聯絡人。',
+    deleteFailed: '無法刪除聯絡人。',
+    deleteConfirm: '要刪除此聯絡人嗎？',
+    headers: {
+      email: 'Email',
+      name: '姓名',
+      phone: '電話',
+      source: '來源',
+      tags: '標籤',
+      lastActivity: '最近活動',
+      actions: '操作',
+    },
+    empty: '沒有聯絡人。',
+    dateLocale: 'zh-TW',
+  },
+  en: {
+    sourceLabel: { form: 'Form', manual: 'Manual', booking: 'Booking' },
+    searchPlaceholder: 'Search email, name, phone',
+    allTags: 'All tags',
+    allSources: 'All sources',
+    refresh: 'Refresh',
+    addContact: '+ Add contact',
+    namePlaceholder: 'Name',
+    phonePlaceholder: 'Phone',
+    tagsPlaceholder: 'Tags (comma separated)',
+    save: 'Save',
+    cancel: 'Cancel',
+    edit: 'Edit',
+    delete: 'Delete',
+    emailRequired: 'Enter an email address.',
+    createFailed: 'Unable to create the contact.',
+    updateFailed: 'Unable to update the contact.',
+    deleteFailed: 'Unable to delete the contact.',
+    deleteConfirm: 'Delete this contact?',
+    headers: {
+      email: 'Email',
+      name: 'Name',
+      phone: 'Phone',
+      source: 'Source',
+      tags: 'Tags',
+      lastActivity: 'Last activity',
+      actions: 'Actions',
+    },
+    empty: 'No contacts.',
+    dateLocale: 'en-US',
+  },
+} as const satisfies Record<Locale, {
+  sourceLabel: Record<CrmContactSource, string>;
+  searchPlaceholder: string;
+  allTags: string;
+  allSources: string;
+  refresh: string;
+  addContact: string;
+  namePlaceholder: string;
+  phonePlaceholder: string;
+  tagsPlaceholder: string;
+  save: string;
+  cancel: string;
+  edit: string;
+  delete: string;
+  emailRequired: string;
+  createFailed: string;
+  updateFailed: string;
+  deleteFailed: string;
+  deleteConfirm: string;
+  headers: Record<'email' | 'name' | 'phone' | 'source' | 'tags' | 'lastActivity' | 'actions', string>;
+  empty: string;
+  dateLocale: string;
+}>;
+
+export default function ContactsAdmin({ initialContacts, locale }: Props) {
+  const copy = CONTACTS_COPY[locale];
   const [contacts, setContacts] = useState(initialContacts);
   const [search, setSearch] = useState('');
   const [tagFilter, setTagFilter] = useState('');
@@ -64,6 +181,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
 
   const refresh = useCallback(async () => {
     const params = new URLSearchParams();
+    if (locale !== 'ko') params.set('locale', locale);
     if (tagFilter) params.set('tag', tagFilter);
     if (sourceFilter) params.set('source', sourceFilter);
     if (search.trim()) params.set('q', search.trim());
@@ -74,17 +192,17 @@ export default function ContactsAdmin({ initialContacts }: Props) {
       const payload = (await res.json()) as { contacts: CrmContact[] };
       setContacts(payload.contacts);
     }
-  }, [tagFilter, sourceFilter, search]);
+  }, [locale, tagFilter, sourceFilter, search]);
 
   async function createOne() {
     if (!draft.email.trim()) {
-      setError('이메일을 입력해 주세요.');
+      setError(copy.emailRequired);
       return;
     }
     setBusy(true);
     setError('');
     try {
-      const res = await fetch('/api/builder/crm/contacts', {
+      const res = await fetch(localizedCrmApiPath(locale, '/api/builder/crm/contacts'), {
         method: 'POST',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
@@ -102,7 +220,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
       });
       if (!res.ok) {
         const payload = (await res.json().catch(() => ({}))) as { error?: string };
-        setError(payload.error || 'Failed to create contact');
+        setError(payload.error || copy.createFailed);
         return;
       }
       const data = (await res.json()) as { contact: CrmContact };
@@ -133,7 +251,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
     setBusy(true);
     setError('');
     try {
-      const res = await fetch(`/api/builder/crm/contacts/${editingId}`, {
+      const res = await fetch(localizedCrmApiPath(locale, `/api/builder/crm/contacts/${editingId}`), {
         method: 'PATCH',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
@@ -150,7 +268,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
       });
       if (!res.ok) {
         const payload = (await res.json().catch(() => ({}))) as { error?: string };
-        setError(payload.error || 'Failed to update contact');
+        setError(payload.error || copy.updateFailed);
         return;
       }
       const data = (await res.json()) as { contact: CrmContact };
@@ -162,16 +280,17 @@ export default function ContactsAdmin({ initialContacts }: Props) {
   }
 
   async function removeContact(id: string) {
-    if (typeof window !== 'undefined' && !window.confirm('이 연락처를 삭제하시겠습니까?')) return;
+    if (typeof window !== 'undefined' && !window.confirm(copy.deleteConfirm)) return;
     setBusy(true);
     setError('');
     try {
-      const res = await fetch(`/api/builder/crm/contacts/${id}`, {
+      const res = await fetch(localizedCrmApiPath(locale, `/api/builder/crm/contacts/${id}`), {
         method: 'DELETE',
         credentials: 'same-origin',
       });
       if (!res.ok) {
-        setError('삭제에 실패했습니다.');
+        const payload = (await res.json().catch(() => ({}))) as { error?: string };
+        setError(payload.error || copy.deleteFailed);
         return;
       }
       setContacts((prev) => prev.filter((c) => c.id !== id));
@@ -188,7 +307,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
         <input
           type="search"
-          placeholder="이메일·이름·전화 검색"
+          placeholder={copy.searchPlaceholder}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           data-testid="crm-contacts-search"
@@ -200,7 +319,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
           data-testid="crm-contacts-tag-filter"
           style={inputStyle}
         >
-          <option value="">전체 태그</option>
+          <option value="">{copy.allTags}</option>
           {allTags.map((t) => (
             <option key={t} value={t}>
               {t}
@@ -212,15 +331,15 @@ export default function ContactsAdmin({ initialContacts }: Props) {
           onChange={(e) => setSourceFilter(e.target.value as CrmContactSource | '')}
           style={inputStyle}
         >
-          <option value="">전체 출처</option>
-          {(Object.keys(SOURCE_LABEL) as CrmContactSource[]).map((s) => (
+          <option value="">{copy.allSources}</option>
+          {(Object.keys(copy.sourceLabel) as CrmContactSource[]).map((s) => (
             <option key={s} value={s}>
-              {SOURCE_LABEL[s]}
+              {copy.sourceLabel[s]}
             </option>
           ))}
         </select>
         <button type="button" onClick={() => void refresh()} style={ghostButton} disabled={busy}>
-          조회
+          {copy.refresh}
         </button>
         <button
           type="button"
@@ -231,7 +350,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
           data-testid="crm-contact-create-toggle"
           style={{ ...primaryButton, marginLeft: 'auto' }}
         >
-          + 연락처 추가
+          {copy.addContact}
         </button>
       </div>
 
@@ -247,7 +366,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
           />
           <input
             type="text"
-            placeholder="이름"
+            placeholder={copy.namePlaceholder}
             value={draft.name}
             onChange={(e) => setDraft((p) => ({ ...p, name: e.target.value }))}
             data-testid="crm-contact-create-name"
@@ -255,14 +374,14 @@ export default function ContactsAdmin({ initialContacts }: Props) {
           />
           <input
             type="tel"
-            placeholder="전화"
+            placeholder={copy.phonePlaceholder}
             value={draft.phone}
             onChange={(e) => setDraft((p) => ({ ...p, phone: e.target.value }))}
             style={inputStyle}
           />
           <input
             type="text"
-            placeholder="태그 (쉼표 구분)"
+            placeholder={copy.tagsPlaceholder}
             value={draft.tags}
             onChange={(e) => setDraft((p) => ({ ...p, tags: e.target.value }))}
             data-testid="crm-contact-create-tags"
@@ -275,7 +394,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
             data-testid="crm-contact-create-submit"
             style={primaryButton}
           >
-            저장
+            {copy.save}
           </button>
         </div>
       ) : null}
@@ -290,20 +409,20 @@ export default function ContactsAdmin({ initialContacts }: Props) {
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, minWidth: 720 }}>
           <thead>
             <tr style={{ background: '#f1f5f9', textAlign: 'left' }}>
-              <th style={th}>이메일</th>
-              <th style={th}>이름</th>
-              <th style={th}>전화</th>
-              <th style={th}>출처</th>
-              <th style={th}>태그</th>
-              <th style={th}>최근 활동</th>
-              <th style={th}>액션</th>
+              <th style={th}>{copy.headers.email}</th>
+              <th style={th}>{copy.headers.name}</th>
+              <th style={th}>{copy.headers.phone}</th>
+              <th style={th}>{copy.headers.source}</th>
+              <th style={th}>{copy.headers.tags}</th>
+              <th style={th}>{copy.headers.lastActivity}</th>
+              <th style={th}>{copy.headers.actions}</th>
             </tr>
           </thead>
           <tbody>
             {visible.length === 0 ? (
               <tr>
                 <td colSpan={7} style={{ padding: 24, textAlign: 'center', color: '#94a3b8' }}>
-                  연락처가 없습니다.
+                  {copy.empty}
                 </td>
               </tr>
             ) : (
@@ -342,7 +461,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
                           />
                         </td>
                         <td style={td}>
-                          <SourceChip source={c.source} />
+                          <SourceChip source={c.source} label={copy.sourceLabel[c.source]} />
                         </td>
                         <td style={td}>
                           <input
@@ -353,7 +472,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
                             style={inputStyle}
                           />
                         </td>
-                        <td style={td}>{formatRelative(c.lastActivityAt)}</td>
+                        <td style={td}>{formatRelative(c.lastActivityAt, locale)}</td>
                         <td style={td}>
                           <button
                             type="button"
@@ -362,14 +481,14 @@ export default function ContactsAdmin({ initialContacts }: Props) {
                             data-testid={`crm-contact-save-${c.email}`}
                             style={primaryButton}
                           >
-                            저장
+                            {copy.save}
                           </button>
                           <button
                             type="button"
                             onClick={() => setEditingId(null)}
                             style={{ ...ghostButton, marginLeft: 4 }}
                           >
-                            취소
+                            {copy.cancel}
                           </button>
                         </td>
                       </>
@@ -379,10 +498,10 @@ export default function ContactsAdmin({ initialContacts }: Props) {
                         <td style={td}>{c.name ?? '—'}</td>
                         <td style={td}>{c.phone ?? '—'}</td>
                         <td style={td}>
-                          <SourceChip source={c.source} />
+                          <SourceChip source={c.source} label={copy.sourceLabel[c.source]} />
                         </td>
                         <td style={td}>{c.tags.join(', ') || '—'}</td>
-                        <td style={td}>{formatRelative(c.lastActivityAt)}</td>
+                        <td style={td}>{formatRelative(c.lastActivityAt, locale)}</td>
                         <td style={td}>
                           <button
                             type="button"
@@ -390,7 +509,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
                             data-testid={`crm-contact-edit-${c.email}`}
                             style={ghostButton}
                           >
-                            편집
+                            {copy.edit}
                           </button>
                           <button
                             type="button"
@@ -398,7 +517,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
                             data-testid={`crm-contact-delete-${c.email}`}
                             style={{ ...ghostButton, color: '#dc2626', marginLeft: 4 }}
                           >
-                            삭제
+                            {copy.delete}
                           </button>
                         </td>
                       </>
@@ -414,7 +533,7 @@ export default function ContactsAdmin({ initialContacts }: Props) {
   );
 }
 
-function SourceChip({ source }: { source: CrmContactSource }) {
+function SourceChip({ source, label }: { source: CrmContactSource; label: string }) {
   return (
     <span
       style={{
@@ -427,17 +546,18 @@ function SourceChip({ source }: { source: CrmContactSource }) {
         fontSize: 11,
       }}
     >
-      {SOURCE_LABEL[source]}
+      {label}
     </span>
   );
 }
 
-function formatRelative(iso: string): string {
-  try {
-    return new Date(iso).toLocaleString('ko-KR');
-  } catch {
-    return iso;
-  }
+function formatRelative(iso: string, locale: string): string {
+  return formatDateTime(iso, normalizeLocale(locale));
+}
+
+function localizedCrmApiPath(locale: Locale, path: string): string {
+  if (locale === 'ko') return path;
+  return `${path}?locale=${encodeURIComponent(locale)}`;
 }
 
 const inputStyle: React.CSSProperties = {

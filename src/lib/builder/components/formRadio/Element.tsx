@@ -9,17 +9,28 @@ import {
   resolveFormInputVariantStyle,
 } from '@/lib/builder/site/component-variants';
 import { useFormFieldRuntime } from '@/lib/builder/forms/render-helpers';
+import type { Locale } from '@/lib/locales';
+import {
+  FORM_RADIO_KO_DEFAULTS,
+  getFormControlsCopy,
+  localizedFormControlText,
+  localizedFormSelectOptionLabel,
+} from '../form/form-controls-copy';
 
 export default function FormRadioElement({
   node,
   theme,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderFormRadioCanvasNode;
   theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getFormControlsCopy(locale);
+  const label = localizedFormControlText(c.label, copy.fieldDefaults.radioLabel, FORM_RADIO_KO_DEFAULTS.label);
   const field = useFormFieldRuntime({ nodeId: node.id, name: c.name, showIf: c.showIf });
   const variantKey = normalizeFormInputVariantKey(c.variant);
   const variantStyle = resolveFormInputVariantStyle(c.variant, theme, {
@@ -39,7 +50,7 @@ export default function FormRadioElement({
       }}
     >
       <span id={`field-${node.id}-label`} style={legendStyle}>
-        {c.label}
+        {label}
         {c.required ? <span style={{ color: '#dc2626', marginLeft: 4 }}>*</span> : null}
       </span>
       <div style={{ display: 'flex', flexDirection: c.layout === 'horizontal' ? 'row' : 'column', gap: 8, flexWrap: 'wrap' }}>
@@ -51,13 +62,13 @@ export default function FormRadioElement({
               value={option.value}
               defaultChecked={c.defaultValue === option.value}
               required={c.required && field.visible && index === 0}
-              data-builder-field-label={c.label}
+              data-builder-field-label={label}
               data-builder-error-message={c.errorMessage}
               aria-describedby={field.error ? `field-${node.id}-error` : undefined}
               style={{ accentColor }}
               onChange={(event) => field.onValueChange(event.currentTarget.value)}
             />
-            <span>{option.label}</span>
+            <span>{localizedFormSelectOptionLabel(option.label, copy.fieldDefaults.selectOptionLabel)}</span>
           </label>
         ))}
       </div>

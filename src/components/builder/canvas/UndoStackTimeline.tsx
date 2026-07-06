@@ -1,16 +1,27 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { currentBuilderLocale } from './canvasNodeUtils';
+import EditorChromeIcon from './EditorChromeIcon';
 import styles from './SandboxPage.module.css';
+import {
+  getUndoStackTimelineCopy,
+  type UndoStackTimelineCopy,
+} from './undo-stack-timeline-copy';
 
 function sameJson(left: unknown, right: unknown): boolean {
   return JSON.stringify(left) === JSON.stringify(right);
 }
 
-function summarizeTransition(previous: BuilderCanvasDocument | null, current: BuilderCanvasDocument, index: number): string {
-  if (!previous) return 'Initial canvas snapshot';
+function summarizeTransition(
+  previous: BuilderCanvasDocument | null,
+  current: BuilderCanvasDocument,
+  index: number,
+  copy: UndoStackTimelineCopy,
+): string {
+  if (!previous) return copy.initialSnapshot;
 
   const previousById = new Map(previous.nodes.map((node) => [node.id, node]));
   const currentById = new Map(current.nodes.map((node) => [node.id, node]));
@@ -38,129 +49,172 @@ function summarizeTransition(previous: BuilderCanvasDocument | null, current: Bu
   }
 
   const parts: string[] = [];
-  if (added) parts.push(`added ${added}`);
-  if (removed) parts.push(`removed ${removed}`);
-  if (moved) parts.push(`moved ${moved}`);
-  if (resized) parts.push(`resized ${resized}`);
-  if (restyled) parts.push(`styled ${restyled}`);
-  if (content) parts.push(`edited ${content}`);
-  return parts.length > 0 ? parts.join(' · ') : `Snapshot ${index + 1}`;
+  if (added) parts.push(copy.addedLabel(added));
+  if (removed) parts.push(copy.removedLabel(removed));
+  if (moved) parts.push(copy.movedLabel(moved));
+  if (resized) parts.push(copy.resizedLabel(resized));
+  if (restyled) parts.push(copy.styledLabel(restyled));
+  if (content) parts.push(copy.editedLabel(content));
+  return parts.length > 0 ? parts.join(' · ') : copy.snapshotLabel(index + 1);
 }
 
-function nodeCountLabel(snapshot: BuilderCanvasDocument): string {
+function nodeCountLabel(snapshot: BuilderCanvasDocument, copy: UndoStackTimelineCopy): string {
   const roots = snapshot.nodes.filter((node: BuilderCanvasNode) => !node.parentId).length;
-  return `${snapshot.nodes.length} nodes · ${roots} roots`;
+  return copy.nodeCountLabel(snapshot.nodes.length, roots);
 }
 
 export default function UndoStackTimeline() {
   const history = useBuilderCanvasStore((state) => state.history);
+  const documentLocale = useBuilderCanvasStore((state) => state.document?.locale);
   const canUndo = useBuilderCanvasStore((state) => state.canUndo);
   const canRedo = useBuilderCanvasStore((state) => state.canRedo);
   const undo = useBuilderCanvasStore((state) => state.undo);
   const redo = useBuilderCanvasStore((state) => state.redo);
+  const jumpToHistorySnapshot = useBuilderCanvasStore((state) => state.jumpToHistorySnapshot);
+  const renameHistorySnapshot = useBuilderCanvasStore((state) => state.renameHistorySnapshot);
+  const copy = getUndoStackTimelineCopy(documentLocale ?? currentBuilderLocale());
+  const currentEntry = history ? history.entries[history.cursor] : null;
+  const currentEntryName = currentEntry?.name ?? '';
+  const [draftName, setDraftName] = useState(currentEntryName);
 
   const entries = useMemo(() => {
     const rawEntries = history?.entries ?? [];
     return rawEntries.map((entry, index) => {
       const previous = rawEntries[index - 1]?.snapshot ?? null;
+      const summary = summarizeTransition(previous, entry.snapshot, index, copy);
+      const explicitName = entry.name?.trim();
       return {
         ...entry,
-        name: summarizeTransition(previous, entry.snapshot, index),
-        nodeCount: nodeCountLabel(entry.snapshot),
+        title: explicitName || summary,
+        hasExplicitName: Boolean(explicitName),
+        nodeCount: nodeCountLabel(entry.snapshot, copy),
+        timeLabel: new Date(entry.timestamp).toLocaleTimeString(copy.dateLocale, {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+        }),
       };
     });
-  }, [history]);
+  }, [copy, history]);
+
+  useEffect(() => {
+    setDraftName(currentEntryName);
+  }, [currentEntryName, history?.cursor]);
 
   if (!history) return null;
 
+  const normalizedDraftName = draftName.trim().replace(/\s+/g, ' ');
+  const canSaveName = normalizedDraftName !== currentEntryName;
+  const canClearName = currentEntryName.length > 0 || draftName.trim().length > 0;
+
+  const saveCurrentName = () => {
+    renameHistorySnapshot(history.cursor, draftName);
+  };
+
+  const clearCurrentName = () => {
+    setDraftName('');
+    renameHistorySnapshot(history.cursor, '');
+  };
+
   return (
-    <section className={styles.panelSection} data-builder-undo-timeline="true">
-      <header className={styles.panelSectionHeader}>
-        <div>
-          <span>Undo stack</span>
-          <strong>{entries.length} snapshots</strong>
+    <section className={`${styles.panelSection} ${styles.undoTimeline}`} data-builder-undo-timeline="true">
+      <header className={styles.undoTimelineHeader}>
+        <div className={styles.undoTimelineHeading}>
+          <span>{copy.sectionLabel}</span>
+          <strong>{copy.snapshotCountLabel(entries.length)}</strong>
         </div>
-        <div style={{ display: 'flex', gap: 6 }}>
+        <div className={styles.undoTimelineActions}>
           <button
             type="button"
-            className={styles.panelHeaderButton}
+            className={styles.undoTimelineActionButton}
             data-builder-undo-action="undo"
+            title={copy.undoTitle}
+            aria-label={copy.undoTitle}
             disabled={!canUndo}
             onClick={undo}
           >
-            Undo
+            <EditorChromeIcon name="undo" />
+            <span>{copy.undo}</span>
           </button>
           <button
             type="button"
-            className={styles.panelHeaderButton}
+            className={styles.undoTimelineActionButton}
             data-builder-undo-action="redo"
+            title={copy.redoTitle}
+            aria-label={copy.redoTitle}
             disabled={!canRedo}
             onClick={redo}
           >
-            Redo
+            <EditorChromeIcon name="redo" />
+            <span>{copy.redo}</span>
           </button>
         </div>
       </header>
-      <ol
-        style={{
-          listStyle: 'none',
-          margin: 0,
-          padding: '2px 0 0 16px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 8,
-          position: 'relative',
-        }}
-      >
-        <span
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            left: 4,
-            top: 8,
-            bottom: 8,
-            width: 2,
-            borderRadius: 999,
-            background: '#dbe3ee',
-          }}
-        />
+      <div className={styles.undoTimelineNameForm} data-builder-undo-name-form="true">
+        <label className={styles.undoTimelineNameLabel} htmlFor="builder-undo-snapshot-name">
+          {copy.nameInputLabel}
+        </label>
+        <div className={styles.undoTimelineNameControls}>
+          <input
+            id="builder-undo-snapshot-name"
+            className={styles.undoTimelineNameInput}
+            data-builder-undo-name-input="true"
+            maxLength={80}
+            value={draftName}
+            placeholder={copy.nameInputPlaceholder}
+            onChange={(event) => setDraftName(event.currentTarget.value)}
+          />
+          <button
+            type="button"
+            className={styles.undoTimelineNameButton}
+            data-builder-undo-name-save="true"
+            title={copy.saveNameTitle}
+            disabled={!canSaveName}
+            onClick={saveCurrentName}
+          >
+            {copy.saveName}
+          </button>
+          <button
+            type="button"
+            className={styles.undoTimelineNameButton}
+            data-builder-undo-name-clear="true"
+            title={copy.clearNameTitle}
+            disabled={!canClearName}
+            onClick={clearCurrentName}
+          >
+            {copy.clearName}
+          </button>
+        </div>
+      </div>
+      <ol className={styles.undoTimelineList}>
+        <span className={styles.undoTimelineRail} aria-hidden="true" />
         {entries.map((entry, index) => {
           const active = index === history.cursor;
           return (
-            <li
-              key={`${entry.timestamp}-${index}`}
-              data-builder-undo-snapshot={active ? 'current' : 'saved'}
-              style={{
-                position: 'relative',
-                padding: '8px 10px',
-                border: active ? '1px solid #116dff' : '1px solid #e2e8f0',
-                borderRadius: 8,
-                background: active ? '#eff6ff' : '#fff',
-                boxShadow: active ? '0 8px 20px rgba(17,109,255,0.12)' : 'none',
-              }}
-            >
-              <span
-                aria-hidden="true"
-                style={{
-                  position: 'absolute',
-                  left: -17,
-                  top: 12,
-                  width: 10,
-                  height: 10,
-                  borderRadius: 999,
-                  border: active ? '2px solid #116dff' : '2px solid #94a3b8',
-                  background: '#fff',
-                }}
-              />
-              <strong style={{ display: 'block', color: '#0f172a', fontSize: '0.78rem' }}>
-                {entry.name}
-              </strong>
-              <small style={{ display: 'block', marginTop: 2, color: '#64748b', fontSize: '0.68rem' }}>
-                {new Date(entry.timestamp).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
-                {' · '}
-                {entry.nodeCount}
-                {active ? ' · current' : ''}
-              </small>
+            <li key={`${entry.timestamp}-${index}`}>
+              <button
+                type="button"
+                disabled={active}
+                onClick={() => jumpToHistorySnapshot(index)}
+                aria-current={active ? 'step' : undefined}
+                aria-label={`${entry.title} · ${entry.nodeCount}`}
+                className={styles.undoTimelineSnapshot}
+                data-builder-undo-snapshot={active ? 'current' : 'saved'}
+                data-builder-undo-snapshot-name={entry.hasExplicitName ? 'explicit' : 'auto'}
+                data-active={active ? 'true' : 'false'}
+              >
+                <span className={styles.undoTimelineDot} aria-hidden="true" />
+                <strong className={styles.undoTimelineSnapshotTitle}>
+                  {entry.title}
+                </strong>
+                <small className={styles.undoTimelineSnapshotMeta}>
+                  <span>{entry.timeLabel}</span>
+                  <span>{entry.nodeCount}</span>
+                  <span className={styles.undoTimelineSnapshotBadge}>
+                    {active ? copy.currentBadge : copy.savedBadge}
+                  </span>
+                </small>
+              </button>
             </li>
           );
         })}

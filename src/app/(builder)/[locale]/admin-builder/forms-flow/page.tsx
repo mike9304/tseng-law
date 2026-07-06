@@ -4,6 +4,7 @@ import type { CSSProperties } from 'react';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { listPages, readPageCanvas } from '@/lib/builder/site/persistence';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { getFormsFlowCopy } from './forms-flow-copy';
 
 export const dynamic = 'force-dynamic';
 
@@ -18,16 +19,19 @@ interface FormFlowEntry {
   conditionalCount: number;
 }
 
-export function generateMetadata(): Metadata {
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  const copy = getFormsFlowCopy(locale);
   return {
-    title: 'Forms Flow',
-    description: 'Review builder forms, steps, and conditional fields.',
+    title: copy.pageTitle,
+    description: copy.pageDescription,
     robots: 'noindex,nofollow',
   };
 }
 
 export default async function FormsFlowPage({ params }: { params: { locale: Locale } }) {
   const locale = normalizeLocale(params.locale);
+  const copy = getFormsFlowCopy(locale);
   const pages = await listPages('default', locale);
   const entries: FormFlowEntry[] = [];
 
@@ -58,10 +62,8 @@ export default async function FormsFlowPage({ params }: { params: { locale: Loca
   return (
     <main style={{ minHeight: '100vh', background: '#f8fafc', color: '#0f172a', fontFamily: 'system-ui, sans-serif', padding: 24 }}>
       <header style={{ marginBottom: 20 }}>
-        <h1 style={{ margin: 0, fontSize: 24 }}>Forms flow</h1>
-        <p style={{ margin: '4px 0 0', color: '#64748b', fontSize: 14 }}>
-          Form nodes across draft pages. Detailed step and conditional editing stays in the page builder inspector.
-        </p>
+        <h1 style={{ margin: 0, fontSize: 24 }}>{copy.heading}</h1>
+        <p style={{ margin: '4px 0 0', color: '#64748b', fontSize: 14 }}>{copy.body}</p>
       </header>
 
       <section style={{ display: 'grid', gap: 12 }}>
@@ -74,18 +76,18 @@ export default async function FormsFlowPage({ params }: { params: { locale: Loca
               </span>
             </div>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', color: '#334155', fontSize: 13 }}>
-              <span style={pillStyle}>{entry.fieldCount} fields</span>
-              <span style={pillStyle}>{entry.stepCount} steps</span>
-              <span style={pillStyle}>{entry.conditionalCount} conditions</span>
+              <span style={pillStyle}>{copy.card.fields(entry.fieldCount)}</span>
+              <span style={pillStyle}>{copy.card.steps(entry.stepCount)}</span>
+              <span style={pillStyle}>{copy.card.conditions(entry.conditionalCount)}</span>
             </div>
             <Link href={`/${locale}/admin-builder?pageId=${encodeURIComponent(entry.pageId)}`} style={linkStyle}>
-              Open in builder
+              {copy.card.openInBuilder}
             </Link>
           </article>
         ))}
         {entries.length === 0 ? (
           <div style={{ padding: 36, border: '1px dashed #cbd5e1', borderRadius: 10, textAlign: 'center', color: '#94a3b8', background: '#fff' }}>
-            No form nodes found in draft pages.
+            {copy.emptyState}
           </div>
         ) : null}
       </section>

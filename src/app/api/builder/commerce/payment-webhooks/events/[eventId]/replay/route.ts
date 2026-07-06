@@ -1,9 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { replayPaymentWebhookEvent } from '@/lib/builder/commerce/payment-webhooks-engine';
+import {
+  getCommercePaymentWebhooksApiErrorPayload,
+  type CommercePaymentWebhooksApiErrorCode,
+} from '@/lib/builder/commerce/payment-webhooks-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+function errorResponse(
+  locale: Locale,
+  errorCode: CommercePaymentWebhooksApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getCommercePaymentWebhooksApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
 
 export async function POST(
   request: NextRequest,
@@ -12,13 +28,20 @@ export async function POST(
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
 
-  const result = await replayPaymentWebhookEvent(params.eventId);
-  if (!result.event) return NextResponse.json({ ok: false, error: 'payment_webhook_event_not_found' }, { status: 404 });
-  return NextResponse.json({
-    ok: true,
-    event: result.event,
-    order: result.order,
-    changed: result.changed,
-    reason: result.reason,
-  });
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+
+  try {
+    const result = await replayPaymentWebhookEvent(params.eventId);
+    if (!result.event) return errorResponse(errorLocale, 'payment_webhook_event_not_found', 404);
+    return NextResponse.json({
+      ok: true,
+      event: result.event,
+      order: result.order,
+      changed: result.changed,
+      reason: result.reason,
+    });
+  } catch (error) {
+    console.error('[builder/commerce/payment-webhooks/replay] POST failed:', error);
+    return errorResponse(errorLocale, 'payment_webhook_replay_failed', 500);
+  }
 }

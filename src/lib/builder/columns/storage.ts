@@ -11,6 +11,7 @@ import {
   type ColumnLinkedSlugs,
   type ColumnListItem,
 } from './types';
+import { isBlobBlockedForDeployEnv } from '@/lib/builder/storage/blob-env-guard';
 
 type ColumnBackend = 'blob' | 'file';
 type ColumnVariant = 'draft' | 'published';
@@ -19,7 +20,10 @@ const COLUMN_BLOB_PREFIX = 'consultation-columns';
 
 function getColumnBackend(): ColumnBackend {
   if (!process.env.BLOB_READ_WRITE_TOKEN) return 'file';
+  if (isBlobBlockedForDeployEnv()) return 'file';
   if (process.env.CONSULTATION_LOG_BACKEND === 'local') return 'file';
+  if (process.env.BUILDER_COLUMNS_BACKEND === 'local') return 'file';
+  if (process.env.NODE_ENV !== 'production' && process.env.BUILDER_USE_BLOB_IN_DEV !== '1') return 'file';
   return 'blob';
 }
 

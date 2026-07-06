@@ -1,14 +1,19 @@
 'use client';
 
+import type { Locale } from '@/lib/locales';
 import type { FormSubmission } from '@/lib/builder/forms/form-engine';
+import { getFormsCopy } from './forms-copy';
 
 export default function SubmissionDetailModal({
   submission,
   onClose,
+  locale,
 }: {
   submission: FormSubmission;
   onClose: () => void;
+  locale: Locale;
 }) {
+  const copy = getFormsCopy(locale);
   return (
     <div
       onClick={onClose}
@@ -36,23 +41,23 @@ export default function SubmissionDetailModal({
       >
         <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, marginBottom: 18 }}>
           <div>
-            <h2 style={{ margin: 0, fontSize: 20 }}>Submission detail</h2>
+            <h2 style={{ margin: 0, fontSize: 20 }}>{copy.list.detail.title}</h2>
             <p style={{ margin: '4px 0 0', color: '#64748b', fontSize: 13 }}>{submission.submissionId}</p>
           </div>
-          <button type="button" onClick={onClose} style={closeButtonStyle} aria-label="Close detail">
+          <button type="button" onClick={onClose} style={closeButtonStyle} aria-label={copy.list.detail.closeLabel}>
             x
           </button>
         </header>
 
         <div style={{ display: 'grid', gap: 10 }}>
-          <DetailRow label="Form" value={submission.formId} />
-          <DetailRow label="Submitted" value={formatDate(submission.submittedAt)} />
-          <DetailRow label="Status" value={submission.read ? 'Read' : 'Unread'} />
+          <DetailRow label={copy.list.detail.submissionId} value={submission.submissionId} />
+          <DetailRow label={copy.list.detail.date} value={formatDate(submission.submittedAt)} />
+          <DetailRow label={copy.list.detail.status} value={submission.read ? copy.list.detail.read : copy.list.detail.unread} />
           {Object.entries(submission.data).map(([key, value]) => (
             <DetailRow key={key} label={key} value={String(value ?? '')} />
           ))}
-          {submission.ip ? <DetailRow label="IP" value={submission.ip} /> : null}
-          {submission.userAgent ? <DetailRow label="User agent" value={submission.userAgent} /> : null}
+          {submission.ip ? <DetailRow label={copy.list.detail.ip} value={submission.ip} /> : null}
+          {submission.userAgent ? <DetailRow label={copy.list.detail.userAgent} value={submission.userAgent} /> : null}
         </div>
       </section>
     </div>

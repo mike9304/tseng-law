@@ -1,5 +1,6 @@
 'use client';
 
+import { memo } from 'react';
 import styles from './SandboxPage.module.css';
 
 export interface OverlayRect {
@@ -18,16 +19,67 @@ interface DragGhostProps {
   panY: number;
 }
 
-function toScreen(rect: OverlayRect, zoom: number, panX: number, panY: number): OverlayRect {
-  return {
-    x: rect.x * zoom + panX,
-    y: rect.y * zoom + panY,
-    width: rect.width * zoom,
-    height: rect.height * zoom,
-  };
-}
+const DragOriginRects = memo(function DragOriginRects({
+  panX,
+  panY,
+  rects,
+  zoom,
+}: {
+  panX: number;
+  panY: number;
+  rects: OverlayRect[];
+  zoom: number;
+}) {
+  return (
+    <>
+      {rects.map((rect, index) => (
+        <div
+          key={`origin-${index}`}
+          className={styles.canvasOverlayDragOrigin}
+          style={{
+            left: `${rect.x * zoom + panX}px`,
+            top: `${rect.y * zoom + panY}px`,
+            width: `${rect.width * zoom}px`,
+            height: `${rect.height * zoom}px`,
+          }}
+          aria-hidden
+        />
+      ))}
+    </>
+  );
+});
 
-export default function DragGhost({
+const DragCurrentRects = memo(function DragCurrentRects({
+  panX,
+  panY,
+  rects,
+  zoom,
+}: {
+  panX: number;
+  panY: number;
+  rects: OverlayRect[];
+  zoom: number;
+}) {
+  return (
+    <>
+      {rects.map((rect, index) => (
+        <div
+          key={`ghost-${index}`}
+          className={styles.canvasOverlayDragGhost}
+          style={{
+            left: `${rect.x * zoom + panX}px`,
+            top: `${rect.y * zoom + panY}px`,
+            width: `${rect.width * zoom}px`,
+            height: `${rect.height * zoom}px`,
+          }}
+          aria-hidden
+        />
+      ))}
+    </>
+  );
+});
+
+function DragGhost({
   mode,
   startRects,
   currentRects,
@@ -39,39 +91,12 @@ export default function DragGhost({
 
   return (
     <>
-      {startRects.map((rect, index) => {
-        const screen = toScreen(rect, zoom, panX, panY);
-        return (
-          <div
-            key={`origin-${index}`}
-            className={styles.canvasOverlayDragOrigin}
-            style={{
-              left: `${screen.x}px`,
-              top: `${screen.y}px`,
-              width: `${screen.width}px`,
-              height: `${screen.height}px`,
-            }}
-            aria-hidden
-          />
-        );
-      })}
-
-      {mode === 'move' && currentRects.map((rect, index) => {
-        const screen = toScreen(rect, zoom, panX, panY);
-        return (
-          <div
-            key={`ghost-${index}`}
-            className={styles.canvasOverlayDragGhost}
-            style={{
-              left: `${screen.x}px`,
-              top: `${screen.y}px`,
-              width: `${screen.width}px`,
-              height: `${screen.height}px`,
-            }}
-            aria-hidden
-          />
-        );
-      })}
+      <DragOriginRects rects={startRects} zoom={zoom} panX={panX} panY={panY} />
+      {mode === 'move' ? (
+        <DragCurrentRects rects={currentRects} zoom={zoom} panX={panX} panY={panY} />
+      ) : null}
     </>
   );
 }
+
+export default memo(DragGhost);

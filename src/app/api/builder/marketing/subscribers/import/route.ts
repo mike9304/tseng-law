@@ -8,6 +8,12 @@ import {
   saveSubscriber,
 } from '@/lib/builder/marketing/subscriber-storage';
 import { subscriberImportRowSchema } from '@/lib/builder/marketing/subscriber-types';
+import {
+  getBuilderMarketingApiErrorPayload,
+  type BuilderMarketingApiErrorCode,
+} from '@/lib/builder/marketing/marketing-api-copy';
+import { buildMarketingConsentRecord } from '@/lib/builder/marketing/subscriber-consent';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -17,14 +23,42 @@ const payloadSchema = z.object({
   defaultStatus: z.enum(['pending', 'subscribed']).default('pending'),
 });
 
+function clientIp(request: NextRequest): string {
+  return (
+    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+    request.headers.get('x-real-ip') ||
+    'unknown'
+  );
+}
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderMarketingApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderMarketingApiErrorPayload(locale, errorCode), ...(extra ?? {}) },
+    { status },
+  );
+}
+
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'manage-subscribers' });
   if (auth instanceof NextResponse) return auth;
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
 
-  const raw = await request.json().catch(() => null);
+  let raw: unknown;
+  try {
+    raw = await request.json();
+  } catch {
+    return errorResponse(locale, 'invalid_json', 400);
+  }
   const parsed = payloadSchema.safeParse(raw);
   if (!parsed.success) {
-    return NextResponse.json({ error: 'Invalid import payload' }, { status: 400 });
+    return errorResponse(locale, 'invalid_import_payload', 400, {
+      details: parsed.error.issues.slice(0, 3),
+    });
   }
 
   // Hard cap on cumulative payload size — 2000 rows × ~1KB worst case is
@@ -34,11 +68,12 @@ export async function POST(request: NextRequest) {
   for (const row of parsed.data.rows) {
     cumulativeChars += row.email.length + (row.tags?.join('').length ?? 0);
     if (cumulativeChars > 256 * 1024) {
-      return NextResponse.json({ error: 'Import payload exceeds 256KB cumulative.' }, { status: 413 });
+      return errorResponse(locale, 'import_payload_too_large', 413);
     }
   }
 
   const now = new Date().toISOString();
+  const userAgent = request.headers.get('user-agent') ?? undefined;
   let created = 0;
   let updated = 0;
   let skipped = 0;
@@ -51,23 +86,39 @@ export async function POST(request: NextRequest) {
         skipped += 1;
         continue;
       }
+      const marketingConsent = parsed.data.defaultStatus === 'subscribed'
+        ? buildMarketingConsentRecord({
+          acceptedAt: now,
+          source: 'csv-import',
+          preferredLocale: row.preferredLocale,
+          ipAddress: clientIp(request),
+          acceptedBy: auth.username,
+          ...(userAgent ? { userAgent } : {}),
+          ...(row.consentEvidence ? { text: row.consentEvidence } : {}),
+        })
+        : existing?.marketingConsent;
       const subscriber = {
         subscriberId: existing?.subscriberId ?? makeSubscriberId(),
         email: row.email,
-        contactId: existing?.contactId,
+        ...(existing?.contactId ? { contactId: existing.contactId } : {}),
         status: parsed.data.defaultStatus,
         tags: Array.from(new Set([...(existing?.tags ?? []), ...row.tags])),
         preferredLocale: row.preferredLocale,
         unsubscribeToken: existing?.unsubscribeToken ?? makeToken(),
         source: 'csv-import',
+        ...(marketingConsent ? { marketingConsent } : {}),
         createdAt: existing?.createdAt ?? now,
         updatedAt: now,
       };
       await saveSubscriber(subscriber);
       if (existing) updated += 1;
       else created += 1;
-    } catch (err) {
-      errors.push({ email: row.email, reason: err instanceof Error ? err.message : 'unknown' });
+    } catch (error) {
+      console.error('[builder/marketing/subscribers/import] row failed:', error);
+      errors.push({
+        email: row.email,
+        reason: getBuilderMarketingApiErrorPayload(locale, 'subscriber_import_row_failed').error,
+      });
     }
   }
 

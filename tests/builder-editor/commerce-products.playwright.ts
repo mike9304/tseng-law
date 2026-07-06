@@ -1,5 +1,5 @@
 import { createHmac } from 'node:crypto';
-import { expect, request as playwrightRequest, test, type APIRequestContext } from '@playwright/test';
+import { expect, request as playwrightRequest, test, type APIRequestContext, type Page } from '@playwright/test';
 
 const LOCALE = 'ko';
 const STORE_APP_ID = 'native-store';
@@ -77,6 +77,8 @@ type CommerceCurrencySettingsSummary = {
   rates: Array<{ currency: string; enabled: boolean; rateToBase?: number }>;
   updatedAt: string;
 };
+
+type CommerceTestLocale = 'ko' | 'zh-hant';
 
 type TestDocument = {
   version: 1;
@@ -186,6 +188,208 @@ function makeProductGalleryDocument(token: string, categorySlug: string): TestDo
       },
     ],
   };
+}
+
+async function runCurrencySettingsGuardrails(page: Page, locale: CommerceTestLocale) {
+  const token = `${locale}-${Date.now().toString(36)}`;
+  const originalResponse = await page.request.get('/api/builder/commerce/currency-settings?scope=all', {
+    headers: mutationHeaders(`commerce-currency-read-original-${token}`),
+  });
+  expect(originalResponse.status()).toBe(200);
+  const originalPayload = await originalResponse.json() as { ok?: boolean; settings?: CommerceCurrencySettingsSummary };
+  const originalSettings = originalPayload.settings;
+
+  const copy = locale === 'ko'
+    ? {
+        policy: '단일 통화 체크아웃은 계속 적용됩니다',
+        saved: '통화 설정이 저장되었습니다.',
+        rateReady: '미리보기 비율 준비됨',
+        heading: '통화 설정',
+      }
+    : {
+        policy: '仍維持單幣別結帳',
+        saved: '幣別設定已儲存。',
+        rateReady: '預覽匯率已就緒',
+        heading: '幣別設定',
+      };
+
+  try {
+    await page.goto(`/${locale}/admin-builder/commerce/currency?currency=${token}`, { waitUntil: 'domcontentloaded' });
+    await expect(page.locator('[data-commerce-currency-admin]')).toBeVisible();
+    await expect(page.locator('h1')).toContainText(copy.heading);
+    await expect(page.locator('[data-commerce-currency-policy]')).toContainText(copy.policy);
+    await page.locator('[data-commerce-currency-base]').selectOption('TWD');
+    await page.locator('[data-commerce-currency-mode]').selectOption('manual-preview');
+    const usdEnabled = page.locator('[data-commerce-currency-enabled="USD"]');
+    if (!(await usdEnabled.isChecked())) await usdEnabled.check();
+    const usdRate = page.locator('[data-commerce-currency-rate="USD"]');
+    await expect(usdRate).toBeEnabled();
+    await usdRate.fill('31.25');
+    await page.locator('[data-commerce-currency-save]').click();
+    await expect(page.locator('[data-commerce-currency-notice]')).toContainText(copy.saved);
+    await expect(page.locator('[data-commerce-currency-rate-status="USD"]')).toContainText(copy.rateReady);
+
+    const publicResponse = await page.request.get('/api/builder/commerce/currency-settings');
+    expect(publicResponse.status()).toBe(200);
+    const publicPayload = await publicResponse.json() as { ok?: boolean; settings?: CommerceCurrencySettingsSummary };
+    expect(publicPayload.settings).toMatchObject({
+      baseCurrency: 'TWD',
+      conversionMode: 'manual-preview',
+    });
+    expect(publicPayload.settings?.rates.find((rate) => rate.currency === 'USD')).toMatchObject({
+      enabled: true,
+      rateToBase: 31.25,
+    });
+
+    await page.evaluate(({ locale: innerLocale, token: innerToken }: { locale: CommerceTestLocale; token: string }) => {
+      window.localStorage.setItem(`tseng-commerce-cart-v1:${innerLocale}`, JSON.stringify({
+        version: 1,
+        locale: innerLocale,
+        currency: 'TWD',
+        items: [{
+          itemId: `currency-${innerToken}::default`,
+          productId: `currency-${innerToken}`,
+          productSlug: `currency-${innerToken}`,
+          title: `Currency Guardrail ${innerToken}`,
+          sku: `CUR-${innerToken}`,
+          priceCents: 12500,
+          currency: 'TWD',
+          quantity: 1,
+          maxQuantity: 5,
+          optionValues: {},
+        }],
+        updatedAt: new Date().toISOString(),
+      }));
+    }, { locale, token });
+    await page.goto(`/${locale}/store/checkout`, { waitUntil: 'domcontentloaded' });
+    await expect(page.locator('[data-commerce-checkout]')).toHaveAttribute('data-commerce-checkout-hydrated', 'true');
+    await expect(page.locator('[data-commerce-checkout-conversion-policy]')).toHaveAttribute('data-commerce-checkout-base-currency', 'TWD');
+    await expect(page.locator('[data-commerce-checkout-conversion-policy]')).toHaveAttribute('data-commerce-checkout-conversion-mode', 'manual-preview');
+    await expect(page.locator('[data-commerce-checkout-conversion-policy]')).toContainText('TWD');
+  } finally {
+    if (originalSettings) {
+      await page.request.patch('/api/builder/commerce/currency-settings', {
+        headers: mutationHeaders(`commerce-currency-restore-${token}`),
+        data: { settings: originalSettings },
+        failOnStatusCode: false,
+      });
+    }
+  }
+}
+
+async function runPaymentAnalyticsLocaleShell(page: Page, locale: CommerceTestLocale) {
+  const copy = locale === 'ko'
+    ? {
+        heading: '결제 분석',
+        stats: '결제 통계',
+        alerts: '알림',
+        sourceQuality: '출처 품질',
+        sourceFunnel: '출처 퍼널',
+        liveReconciliation: '실시간 대사',
+        providerFee: '공급자 수수료 대사',
+        trend: '추세 차트',
+        providerMix: '공급자 구성',
+        providerFees: '공급자 수수료',
+        exportJson: 'JSON 내보내기',
+        exportTrendCsv: '추세 CSV 내보내기',
+      }
+    : {
+        heading: '付款分析',
+        stats: '付款統計',
+        alerts: '警示',
+        sourceQuality: '來源品質',
+        sourceFunnel: '來源漏斗',
+        liveReconciliation: '即時對帳',
+        providerFee: '供應商費用對帳',
+        trend: '趨勢圖',
+        providerMix: '供應商組合',
+        providerFees: '供應商費用',
+        exportJson: '匯出 JSON',
+        exportTrendCsv: '匯出趨勢 CSV',
+      };
+
+  await page.goto(`/${locale}/admin-builder/commerce/payments`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-payment-analytics-page]')).toBeVisible();
+  await expect(page.locator('h1')).toContainText(copy.heading);
+  await expect(page.locator(`[aria-label="${copy.stats}"]`)).toBeVisible();
+  await expect(page.locator('[data-payment-analytics-alerts]')).toContainText(copy.alerts);
+  await expect(page.locator('[data-payment-analytics-sources]')).toContainText(copy.sourceQuality);
+  await expect(page.locator('[data-payment-analytics-source-funnel]')).toContainText(copy.sourceFunnel);
+  await expect(page.locator('[data-payment-analytics-webhook-reconciliation]')).toContainText(copy.liveReconciliation);
+  await expect(page.locator('[data-payment-analytics-webhook-fees]')).toContainText(copy.providerFee);
+  await expect(page.locator('[data-payment-analytics-trend]')).toContainText(copy.trend);
+  await expect(page.locator('[data-payment-analytics-providers]')).toContainText(copy.providerMix);
+  await expect(page.locator('[data-payment-analytics-provider-fees]')).toContainText(copy.providerFees);
+  await expect(page.locator('[data-payment-analytics-export="json"]')).toHaveText(copy.exportJson);
+  await expect(page.locator('[data-payment-analytics-export="csv"]')).toHaveText(copy.exportTrendCsv);
+  await expect(page.locator('a[href$="/commerce/products"]')).toBeVisible();
+  await expect(page.locator('a[href$="/commerce/orders"]')).toBeVisible();
+  await expect(page.locator('a[href$="/commerce/documents"]')).toBeVisible();
+}
+
+async function runPaymentWebhooksShellLocale(page: Page, locale: CommerceTestLocale) {
+  const copy = locale === 'ko'
+    ? {
+        heading: '결제 웹훅',
+        subtitle: '결제 이벤트, 주문 매칭, 재시도 상태, 마스킹된 payload를 한곳에서 검토합니다.',
+        orders: '주문',
+        products: '제품',
+        currency: '통화',
+        tax: '세금 규칙',
+        shipping: '배송',
+        notifications: '알림',
+        refresh: '새로고침',
+        search: '이벤트, 참조, 주문, 오류 검색',
+        allProviders: '모든 공급자',
+        sandboxCard: '샌드박스 카드',
+        manualInvoice: '수동 청구서',
+        allStatus: '모든 상태',
+        ready: '준비됨',
+        replay: '재시도',
+        hideDetails: '세부 정보 숨기기',
+        showMaskedPayload: '마스킹된 payload 보기',
+        eventsLabel: '결제 웹훅 이벤트',
+      }
+    : {
+        heading: '付款 Webhook',
+        subtitle: '在同一處檢視付款事件、訂單比對、重試狀態與遮罩後的 payload。',
+        orders: '訂單',
+        products: '產品',
+        currency: '幣別',
+        tax: '稅務規則',
+        shipping: '運送',
+        notifications: '通知',
+        refresh: '重新整理',
+        search: '搜尋事件、參考、訂單、錯誤',
+        allProviders: '所有供應商',
+        sandboxCard: '沙盒卡片',
+        manualInvoice: '手動發票',
+        allStatus: '所有狀態',
+        ready: '就緒',
+        replay: '重播',
+        hideDetails: '隱藏詳細資料',
+        showMaskedPayload: '顯示已遮罩的 payload',
+        eventsLabel: '付款 Webhook 事件',
+      };
+
+  await page.goto(`/${locale}/admin-builder/commerce/webhooks`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-commerce-payment-webhooks-admin]')).toBeVisible();
+  await expect(page.getByRole('heading', { name: copy.heading })).toBeVisible();
+  await expect(page.locator('header')).toContainText(copy.subtitle);
+  await expect(page.getByRole('link', { name: copy.orders })).toBeVisible();
+  await expect(page.getByRole('link', { name: copy.products })).toBeVisible();
+  await expect(page.getByRole('link', { name: copy.currency })).toBeVisible();
+  await expect(page.getByRole('link', { name: copy.tax })).toBeVisible();
+  await expect(page.getByRole('link', { name: copy.shipping })).toBeVisible();
+  await expect(page.getByRole('link', { name: copy.notifications })).toBeVisible();
+  await expect(page.getByRole('button', { name: copy.refresh })).toBeVisible();
+  await expect(page.locator('[data-payment-webhooks-search]')).toHaveAttribute('placeholder', copy.search);
+  await expect(page.locator('[data-payment-webhooks-provider-filter]')).toContainText(copy.allProviders);
+  await expect(page.locator('[data-payment-webhooks-provider-filter]')).toContainText(copy.sandboxCard);
+  await expect(page.locator('[data-payment-webhooks-provider-filter]')).toContainText(copy.manualInvoice);
+  await expect(page.locator('[data-payment-webhooks-status-filter]')).toContainText(copy.allStatus);
+  await expect(page.getByRole('status')).toContainText(copy.ready);
+  await expect(page.locator(`[aria-label="${copy.eventsLabel}"]`)).toBeVisible();
 }
 
 async function installStoreApp(request: APIRequestContext, scope: string) {
@@ -464,6 +668,103 @@ async function createTaxCheckoutProduct(
   return { productId: payload.product!.productId, slug, sku };
 }
 
+async function runProductManagerShellLocale(page: Page, locale: CommerceTestLocale) {
+  const copy = locale === 'ko'
+    ? {
+        heading: '제품',
+        subtitle: '제품, 가격, 재고, 변형, 스토어 노출을 관리합니다.',
+        addProduct: '제품 추가',
+        exportCsv: 'CSV 내보내기',
+        stats: '제품 통계',
+        search: '제목, SKU, 태그, 카테고리 검색',
+        productsList: '제품 목록',
+        noProducts: '아직 제품이 없습니다',
+        importExport: '가져오기 / 내보내기 CSV',
+        seoTitle: 'SEO 제목',
+        seoDescription: 'SEO 설명',
+        trackInventory: '재고 추적',
+        allowBackorder: '예약 판매',
+        exportFiltered: '필터된 항목 내보내기',
+        importCsvButton: 'CSV 가져오기',
+        removeVariant: '변형 삭제',
+        optionName: '이름',
+        optionValues: '값',
+        optionNamePlaceholder: '형식',
+        optionValuesPlaceholder: 'PDF, 상담',
+        variantOptionValuesPlaceholder: '형식=PDF',
+        importPlaceholder: '제목,SKU,가격,통화,상태,수량,카테고리,태그,설명',
+        edit: '편집',
+        duplicate: '복제',
+        archive: '보관',
+      }
+    : {
+        heading: '產品',
+        subtitle: '管理產品、定價、庫存、變體與商店可見性。',
+        addProduct: '新增產品',
+        exportCsv: '匯出 CSV',
+        stats: '產品統計',
+        search: '搜尋標題、SKU、標籤、類別',
+        productsList: '產品列表',
+        noProducts: '目前沒有產品',
+        importExport: '匯入 / 匯出 CSV',
+        seoTitle: 'SEO 標題',
+        seoDescription: 'SEO 描述',
+        trackInventory: '追蹤庫存',
+        allowBackorder: '預購',
+        exportFiltered: '匯出已篩選項目',
+        importCsvButton: '匯入 CSV',
+        removeVariant: '刪除變體',
+        optionName: '名稱',
+        optionValues: '值',
+        optionNamePlaceholder: '格式',
+        optionValuesPlaceholder: 'PDF, 諮詢',
+        variantOptionValuesPlaceholder: '格式=PDF',
+        importPlaceholder: '標題,SKU,價格,幣別,狀態,數量,類別,標籤,描述',
+        edit: '編輯',
+        duplicate: '複製',
+        archive: '封存',
+      };
+
+  await page.goto(`/${locale}/admin-builder/commerce/products`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-commerce-products-admin]')).toBeVisible();
+  await expect(page.locator('h1')).toContainText(copy.heading);
+  await expect(page.locator('header')).toContainText(copy.subtitle);
+  await expect(page.locator('header [data-commerce-add-product]').first()).toHaveText(copy.addProduct);
+  await expect(page.locator('[data-commerce-product-export="header"]')).toHaveText(copy.exportCsv);
+  await expect(page.locator('[aria-label="Products list"], [aria-label="제품 목록"], [aria-label="產品列表"]')).toHaveAttribute('aria-label', copy.productsList);
+  await expect(page.locator('[data-commerce-products-search]')).toHaveAttribute('placeholder', copy.search);
+  await expect(page.locator('[data-commerce-products-kpi="total"]')).toBeVisible();
+  await expect(page.getByRole('heading', { name: copy.importExport })).toBeVisible();
+  await expect(page.getByLabel(copy.seoTitle)).toBeVisible();
+  await expect(page.getByLabel(copy.seoDescription)).toBeVisible();
+  await expect(page.getByRole('checkbox', { name: copy.trackInventory })).toBeVisible();
+  await expect(page.locator('[data-commerce-product-allow-backorder]')).toBeVisible();
+  await expect(page.locator('[data-commerce-product-export="filtered"]')).toHaveText(copy.exportFiltered);
+  await expect(page.locator('[data-commerce-product-import]')).toHaveText(copy.importCsvButton);
+  await expect(page.locator('[data-commerce-product-variant-remove]')).toHaveText(copy.removeVariant);
+  await expect(page.locator('[data-commerce-product-import-text]')).toHaveAttribute('placeholder', copy.importPlaceholder);
+  await page.locator('[data-commerce-product-option-add]').click();
+  await expect(page.locator('[data-commerce-product-option-row] input[placeholder]').first()).toHaveAttribute('placeholder', copy.optionNamePlaceholder);
+  await expect(page.locator('[data-commerce-product-option-row] input[placeholder]').nth(1)).toHaveAttribute('placeholder', copy.optionValuesPlaceholder);
+  await expect(page.locator('[data-commerce-product-variant-option-values]').first()).toHaveAttribute('placeholder', copy.variantOptionValuesPlaceholder);
+}
+
+test('/ko/admin-builder/commerce/products localizes shell labels', async ({ page }) => {
+  await runProductManagerShellLocale(page, 'ko');
+});
+
+test('/zh-hant/admin-builder/commerce/products localizes shell labels', async ({ page }) => {
+  await runProductManagerShellLocale(page, 'zh-hant');
+});
+
+test('/ko/admin-builder/commerce/webhooks localizes shell labels', async ({ page }) => {
+  await runPaymentWebhooksShellLocale(page, 'ko');
+});
+
+test('/zh-hant/admin-builder/commerce/webhooks localizes shell labels', async ({ page }) => {
+  await runPaymentWebhooksShellLocale(page, 'zh-hant');
+});
+
 test('/ko/admin-builder/commerce manages native store products end to end', async ({ page }) => {
   const token = Date.now().toString(36);
   const title = `F54 Product ${token}`;
@@ -516,7 +817,7 @@ test('/ko/admin-builder/commerce manages native store products end to end', asyn
     const activeRow = page.locator('[data-commerce-product-row]').filter({ hasText: sku }).first();
     await activeRow.locator(`[data-commerce-product-select="${createdId}"]`).check();
     await expect(page.locator('[data-commerce-products-bulk-bar]')).toBeVisible();
-    await page.locator('[data-commerce-products-bulk-bar]').getByRole('button', { name: 'Archive' }).click();
+    await page.locator('[data-commerce-products-bulk-bar]').getByRole('button', { name: '보관' }).click();
     await expect(page.getByRole('status')).toContainText('products updated');
 
     await page.locator('[data-commerce-products-status-filter]').selectOption('archived');
@@ -735,8 +1036,8 @@ test('/ko/admin-builder/commerce/webhooks reviews and replays signed payment eve
   await expect(row.locator('pre')).toContainText('[masked]');
 
   await row.locator('[data-payment-webhook-replay]').click();
-  await expect(page.getByRole('status')).toContainText('order_not_found');
-  await expect(row).toContainText('Replay count 1');
+  await expect(page.getByRole('status')).toContainText(/order_not_found|주문을 찾을 수 없음/);
+  await expect(row).toContainText('재시도 횟수 1');
 
   await page.setViewportSize({ width: 375, height: 900 });
   await expect(row).toBeVisible();
@@ -930,75 +1231,19 @@ test('/ko/admin-builder/commerce/shipping configures delivery, pickup, and free 
 });
 
 test('/ko/admin-builder/commerce/currency configures conversion preview guardrails', async ({ page }) => {
-  const token = Date.now().toString(36);
-  const originalResponse = await page.request.get('/api/builder/commerce/currency-settings?scope=all', {
-    headers: mutationHeaders(`commerce-currency-read-original-${token}`),
-  });
-  expect(originalResponse.status()).toBe(200);
-  const originalPayload = await originalResponse.json() as { ok?: boolean; settings?: CommerceCurrencySettingsSummary };
-  const originalSettings = originalPayload.settings;
+  await runCurrencySettingsGuardrails(page, 'ko');
+});
 
-  try {
-    await page.goto(`/${LOCALE}/admin-builder/commerce/currency?currency=${token}`, { waitUntil: 'domcontentloaded' });
-    await expect(page.locator('[data-commerce-currency-admin]')).toBeVisible();
-    await expect(page.locator('[data-commerce-currency-policy]')).toContainText('Single-currency checkout');
-    await page.locator('[data-commerce-currency-base]').selectOption('TWD');
-    await page.locator('[data-commerce-currency-mode]').selectOption('manual-preview');
-    const usdEnabled = page.locator('[data-commerce-currency-enabled="USD"]');
-    if (!(await usdEnabled.isChecked())) await usdEnabled.check();
-    const usdRate = page.locator('[data-commerce-currency-rate="USD"]');
-    await expect(usdRate).toBeEnabled();
-    await usdRate.fill('31.25');
-    await page.locator('[data-commerce-currency-save]').click();
-    await expect(page.locator('[data-commerce-currency-notice]')).toContainText('Currency settings saved');
-    await expect(page.locator('[data-commerce-currency-rate-status="USD"]')).toContainText('Preview rate ready');
+test('/zh-hant/admin-builder/commerce/currency configures conversion preview guardrails', async ({ page }) => {
+  await runCurrencySettingsGuardrails(page, 'zh-hant');
+});
 
-    const publicResponse = await page.request.get('/api/builder/commerce/currency-settings');
-    expect(publicResponse.status()).toBe(200);
-    const publicPayload = await publicResponse.json() as { ok?: boolean; settings?: CommerceCurrencySettingsSummary };
-    expect(publicPayload.settings).toMatchObject({
-      baseCurrency: 'TWD',
-      conversionMode: 'manual-preview',
-    });
-    expect(publicPayload.settings?.rates.find((rate) => rate.currency === 'USD')).toMatchObject({
-      enabled: true,
-      rateToBase: 31.25,
-    });
+test('/ko/admin-builder/commerce/payments localizes analytics shell labels', async ({ page }) => {
+  await runPaymentAnalyticsLocaleShell(page, 'ko');
+});
 
-    await page.evaluate(({ locale, token: innerToken }) => {
-      window.localStorage.setItem(`tseng-commerce-cart-v1:${locale}`, JSON.stringify({
-        version: 1,
-        locale,
-        currency: 'TWD',
-        items: [{
-          itemId: `currency-${innerToken}::default`,
-          productId: `currency-${innerToken}`,
-          productSlug: `currency-${innerToken}`,
-          title: `Currency Guardrail ${innerToken}`,
-          sku: `CUR-${innerToken}`,
-          priceCents: 12500,
-          currency: 'TWD',
-          quantity: 1,
-          maxQuantity: 5,
-          optionValues: {},
-        }],
-        updatedAt: new Date().toISOString(),
-      }));
-    }, { locale: LOCALE, token });
-    await page.goto(`/${LOCALE}/store/checkout`, { waitUntil: 'domcontentloaded' });
-    await expect(page.locator('[data-commerce-checkout]')).toHaveAttribute('data-commerce-checkout-hydrated', 'true');
-    await expect(page.locator('[data-commerce-checkout-conversion-policy]')).toHaveAttribute('data-commerce-checkout-base-currency', 'TWD');
-    await expect(page.locator('[data-commerce-checkout-conversion-policy]')).toHaveAttribute('data-commerce-checkout-conversion-mode', 'manual-preview');
-    await expect(page.locator('[data-commerce-checkout-conversion-policy]')).toContainText('TWD');
-  } finally {
-    if (originalSettings) {
-      await page.request.patch('/api/builder/commerce/currency-settings', {
-        headers: mutationHeaders(`commerce-currency-restore-${token}`),
-        data: { settings: originalSettings },
-        failOnStatusCode: false,
-      });
-    }
-  }
+test('/zh-hant/admin-builder/commerce/payments localizes analytics shell labels', async ({ page }) => {
+  await runPaymentAnalyticsLocaleShell(page, 'zh-hant');
 });
 
 test('/ko/admin-builder/commerce/notifications queues cart recovery and order hooks', async ({ page }) => {
@@ -1026,7 +1271,7 @@ test('/ko/admin-builder/commerce/notifications queues cart recovery and order ho
     await page.locator('[data-commerce-notifications-payment-received-suppress-receipt-overlap]').check();
     await page.locator('[data-commerce-notification-template-subject="cart.abandoned.customer"]').fill(`Recover cart ${token}`);
     await page.locator('[data-commerce-notifications-save]').click();
-    await expect(page.locator('[data-commerce-notifications-notice]')).toContainText('Notifications saved');
+    await expect(page.locator('[data-commerce-notifications-notice]')).toContainText(/Notifications saved|알림이 저장되었습니다/);
     const savedNotificationsResponse = await page.request.get(`/api/builder/commerce/notifications?locale=${LOCALE}`, {
       headers: mutationHeaders(`commerce-notifications-read-saved-${token}`),
     });
@@ -1261,7 +1506,7 @@ test('/ko/admin-builder/commerce supports structured options, variants, images, 
     await page.locator('[data-commerce-products-search]').fill(`${sku}-PDF-TP`);
     const row = page.locator('[data-commerce-product-row]').filter({ hasText: title }).first();
     await expect(row).toBeVisible();
-    await expect(row).toContainText('4 variants');
+    await expect(row).toContainText(/4 variants|4 변형/);
 
     await row.locator('[data-commerce-product-action="edit"]').click();
     await expect(page.locator('[data-commerce-product-variant-row]')).toHaveCount(4);
@@ -1315,6 +1560,9 @@ test('/ko/store categories drive navigation, galleries, and dynamic URLs', async
 
     await page.goto(`/${LOCALE}/store?storeCategory=${token}`, { waitUntil: 'domcontentloaded' });
     await expect(page.locator('[data-commerce-storefront]')).toBeVisible();
+    await expect(page.locator('[data-commerce-store-eyebrow]')).toContainText('스토어');
+    await expect(page.locator('[data-commerce-category-nav]')).toHaveAttribute('aria-label', '상품 카테고리');
+    await expect(page.locator('[data-commerce-category-link="all"]')).toContainText('전체 상품');
     await expect(page.locator(`[data-commerce-category-link="${categorySlug}"]`)).toHaveAttribute(
       'href',
       `/${LOCALE}/store/categories/${categorySlug}`,
@@ -1386,6 +1634,7 @@ test('/ko/store/products renders product detail pages with variants, quantity, r
     await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', `F58 SEO description ${token}`);
     await expect(page.locator('[data-commerce-product-detail]')).toHaveAttribute('data-commerce-product-slug', slug);
     await expect(page.locator('[data-commerce-product-detail]')).toHaveAttribute('data-commerce-product-availability', 'out-of-stock');
+    await expect(page.locator('[data-commerce-product-back-link]')).toContainText('스토어로 돌아가기');
     await expect(page.locator('[data-commerce-product-media-main]')).toHaveAttribute(
       'data-commerce-product-media-main',
       `f58-media-pdf-${token}`,
@@ -1394,6 +1643,10 @@ test('/ko/store/products renders product detail pages with variants, quantity, r
     await expect(page.locator('[data-commerce-product-sku]')).toContainText(`${sku}-PDF-TP`);
     await expect(page.locator('[data-commerce-product-availability-label]')).toContainText('품절');
     await expect(page.locator('[data-commerce-product-add-to-cart]')).toBeDisabled();
+    await expect(page.locator('[data-commerce-product-detail]')).toContainText('스토어로 돌아가기');
+    await expect(page.locator('[data-commerce-product-detail]')).toContainText('상세 정보');
+    await expect(page.locator('[data-commerce-product-detail]')).toContainText('관련 상품');
+    await expect(page.locator('[data-commerce-product-thumbnails]')).toHaveAttribute('aria-label', '상품 썸네일');
 
     await page.locator(`[data-commerce-product-media-thumb="f58-media-consult-${token}"]`).click();
     await expect(page.locator('[data-commerce-product-media-main]')).toHaveAttribute(
@@ -1407,6 +1660,8 @@ test('/ko/store/products renders product detail pages with variants, quantity, r
     await expect(page.locator('[data-commerce-product-sku]')).toContainText(`${sku}-CONSULT-TP`);
     await expect(page.locator('[data-commerce-product-availability-label]')).toContainText('판매 중');
     await expect(page.locator('[data-commerce-product-quantity]')).toHaveValue('1');
+    await expect(page.locator('[data-commerce-product-detail]')).toContainText('옵션');
+    await expect(page.locator('[data-commerce-product-detail]')).toContainText('수량');
     await page.locator('[data-commerce-product-quantity-increment]').click();
     await expect(page.locator('[data-commerce-product-quantity]')).toHaveValue('2');
     await expect(page.locator('[data-commerce-product-add-to-cart]')).toBeEnabled();

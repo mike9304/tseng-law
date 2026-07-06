@@ -33,14 +33,33 @@ function buildAboutPage(y: number, locale: Locale, zBase: number): { nodes: Buil
   nodes.push(...attorney.nodes);
   cursor += attorney.height;
 
-  const contact = createContactBlocksSectionNodes('page-about', cursor, locale, zBase + 300);
+  const contact = createContactBlocksSectionNodes(
+    'page-about',
+    cursor,
+    locale,
+    zBase + 300,
+    true,
+    locale === 'zh-hant' ? 63 : 0,
+  );
   nodes.push(...contact.nodes);
   cursor += contact.height;
 
   return { nodes, height: cursor - y };
 }
 
-export const ABOUT_PAGE_ROOT_HEIGHT = Math.max(...locales.map((locale) => buildAboutPage(0, locale, 0).height));
+// Per-locale page height. The document's `stageHeight` is only a FLOOR — the
+// published renderer resolves final height as max(stageHeight, deepest node
+// bottom) (see src/lib/builder/site/public-page.tsx). Each locale's decomposed
+// tree already ends tight (last section bottom = content bottom + the standard
+// 88px SECTION_BOTTOM), so seeding a page with ITS OWN locale height avoids
+// padding shorter locales (ko/zh-hant) up to the tallest (English) locale.
+// Mirrors getLawyersPageRootHeight — seed-pages.ts should pass this per locale
+// (like the lawyers page) instead of the cross-locale max constant.
+export function getAboutPageRootHeight(locale: Locale): number {
+  return buildAboutPage(0, locale, 0).height;
+}
+
+export const ABOUT_PAGE_ROOT_HEIGHT = Math.max(...locales.map((locale) => getAboutPageRootHeight(locale)));
 
 export function createAboutPageDecomposedNodes(y: number, locale: Locale, zBase: number): BuilderCanvasNode[] {
   return buildAboutPage(y, locale, zBase).nodes;

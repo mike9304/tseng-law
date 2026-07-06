@@ -1,11 +1,14 @@
 import { defineComponent } from '../define';
 import CustomEmbedInspector from './Inspector';
+import type { Locale } from '@/lib/locales';
+import { getConversionWidgetsCopy } from '../conversion-widgets-copy';
 
 interface CustomEmbedContent {
   html: string;
 }
 
-function CustomEmbedRender({ node, mode }: { node: { content: CustomEmbedContent }; mode?: 'edit' | 'preview' | 'published' }) {
+function CustomEmbedRender({ node, mode, locale = 'ko' }: { node: { content: CustomEmbedContent }; mode?: 'edit' | 'preview' | 'published'; locale?: Locale }) {
+  const copy = getConversionWidgetsCopy(locale);
   const { html = '' } = node.content;
 
   if (!html) {
@@ -24,7 +27,7 @@ function CustomEmbedRender({ node, mode }: { node: { content: CustomEmbedContent
           fontSize: 13,
         }}
       >
-        Custom Embed
+        {copy.customEmbed.empty}
       </div>
     );
   }
@@ -40,7 +43,7 @@ function CustomEmbedRender({ node, mode }: { node: { content: CustomEmbedContent
         srcDoc={srcDoc}
         sandbox="allow-scripts allow-popups allow-forms"
         style={{ width: '100%', height: '100%', border: 'none', borderRadius: 8 }}
-        title="Custom embed"
+        title={copy.customEmbed.iframeTitle}
       />
     );
   }

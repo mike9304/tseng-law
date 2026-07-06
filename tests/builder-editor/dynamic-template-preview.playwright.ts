@@ -1,5 +1,8 @@
 import { expect, test, type Page } from '@playwright/test';
 
+const dtpScope = `pw-dtp-${Date.now().toString(36)}`;
+const dtpHeaders = { 'x-forwarded-for': dtpScope };
+
 const dynamicTemplateEndpoint =
   '/api/builder/sites/default/dynamic-templates/service-areas.item-template?locale=ko';
 const dynamicTemplatePublishEndpoint =
@@ -13,6 +16,7 @@ type DynamicTemplateDraftState = {
 };
 
 type DynamicTemplateSnapshot = {
+  updatedBy?: string;
   state?: {
     version?: unknown;
     visibleBlockIds?: unknown;
@@ -58,6 +62,7 @@ test.afterEach(async ({ page }) => {
 
 test('passes selected dynamic-route preview record into the linked template editor', async ({ page }) => {
   await page.goto('/ko/builder/dynamic-routes/service-areas.item?previewRecordId=civil');
+  await expect(page.locator('aside[aria-label="빌더 탐색"]')).toBeVisible();
 
   const templateHref =
     '/ko/builder/dynamic-templates/service-areas.item-template?previewRecordId=civil';
@@ -111,6 +116,9 @@ test('passes selected dynamic-route preview record into the linked template edit
   await expect(page.locator('[data-builder-dynamic-template-preview="true"]')).not.toContainText(
     'Record SEO card'
   );
+
+  await page.goto('/zh-hant/builder/dynamic-routes/service-areas.item?previewRecordId=civil');
+  await expect(page.locator('aside[aria-label="建構器導覽"]')).toBeVisible();
 });
 
 test('shows a recoverable message for missing dynamic route preview records', async ({ page }) => {
@@ -118,16 +126,16 @@ test('shows a recoverable message for missing dynamic route preview records', as
 
   await expect(page.getByText('Preview record not found').first()).toBeVisible();
   await expect(page.getByText('missing-record').first()).toBeVisible();
-  await expect(page.getByText('No resolved live route').first()).toBeVisible();
+  await expect(page.getByText(/No resolved live route|해결된 라이브 경로 없음/).first()).toBeVisible();
 
-  const sampleRecordLink = page.getByRole('link', { name: 'Use preview record' }).first();
+  const sampleRecordLink = page.getByRole('link', { name: /Use preview record|미리보기 레코드 사용/ }).first();
   const sampleHref = await sampleRecordLink.getAttribute('href');
   expect(sampleHref).toMatch(/previewRecordId=[^&]+/);
 
   await sampleRecordLink.click();
   await expect(page).toHaveURL(/\/ko\/builder\/dynamic-routes\/service-areas\.item\?previewRecordId=[^&]+$/);
   await expect(page.getByText('record-selected').first()).toBeVisible();
-  await expect(page.getByText('No resolved live route').first()).toHaveCount(0);
+  await expect(page.getByText(/No resolved live route|해결된 라이브 경로 없음/).first()).toHaveCount(0);
 });
 
 test('shows a recoverable message for missing dynamic template preview records', async ({ page }) => {
@@ -223,12 +231,36 @@ test('publishes dynamic template block visibility to public service routes', asy
   }, { timeout: 20_000 }).toBe(nextHeroState);
 
   await page.goto(`/ko/services/family?dynamic-template-publish-check=${Date.now()}`);
+  const koBackLink = page.locator('.svc-back-link');
+  if (await koBackLink.count()) {
+    await expect(koBackLink).toContainText('업무분야 목록으로');
+  }
   if (nextHeroState === 'Hidden') {
     await expect(page.locator('.svc-hero')).toHaveCount(0);
   } else {
     await expect(page.locator('.svc-hero')).toBeVisible();
   }
+  await expect(page.locator('.svc-keypoints-title')).toContainText('핵심 요약');
+  await expect(page.locator('.svc-columns-heading')).toContainText('관련 칼럼');
+  await expect(page.locator('.authority-card-eyebrow')).toContainText('담당 변호사');
+  await expect(page.locator('.svc-sidebar-card--attorney')).toContainText('이 분야 담당 변호사');
+  const bookingCard = page.locator('.svc-sidebar-card').filter({ hasText: '상담 예약' });
+  await expect(bookingCard).toContainText('상담 예약');
+  await expect(bookingCard).toContainText('문의하기');
   await expect(page.locator('.svc-article')).toBeVisible();
+
+  await page.goto(`/zh-hant/services/family?dynamic-template-publish-check=${Date.now()}`);
+  const zhBackLink = page.locator('.svc-back-link');
+  if (await zhBackLink.count()) {
+    await expect(zhBackLink).toContainText('返回服務領域');
+  }
+  await expect(page.locator('.svc-keypoints-title')).toContainText('重點摘要');
+  await expect(page.locator('.svc-columns-heading')).toContainText('相關專欄');
+  await expect(page.locator('.authority-card-eyebrow')).toContainText('承辦律師');
+  await expect(page.locator('.svc-sidebar-card--attorney')).toContainText('此領域承辦律師');
+  const bookingCardZh = page.locator('.svc-sidebar-card').filter({ hasText: '預約諮詢' });
+  await expect(bookingCardZh).toContainText('預約諮詢');
+  await expect(bookingCardZh).toContainText('聯絡我們');
 });
 
 async function readPublishedVisibleBlockIds(page: Page): Promise<string[]> {
@@ -242,11 +274,20 @@ async function readPublishedVisibleBlockIds(page: Page): Promise<string[]> {
 async function readCurrentDynamicTemplateState(page: Page): Promise<DynamicTemplateSavedState> {
   const payload = await readDynamicTemplatePayload(page);
   const fallback = createBaselineDynamicTemplateState(payload);
+  const draft = payload.draft?.persisted ? normalizeApiState(payload.draft.snapshot, fallback) : null;
+  const published = payload.published?.persisted
+    ? normalizeApiState(payload.published.snapshot, fallback)
+    : null;
+  // Only this suite writes the template state in the QA harness, so a captured
+  // state whose updatedBy is one of our own markers is residue from an
+  // interrupted prior run — restoring it would make the pollution permanent
+  // (this exact loop once published the hero block as hidden forever).
+  // Treat such residue as "restore to baseline" instead.
+  const isOwnResidue = (snapshot?: { updatedBy?: string } | null) =>
+    typeof snapshot?.updatedBy === 'string' && snapshot.updatedBy.startsWith('builder-dynamic-template-test');
   return {
-    draft: payload.draft?.persisted ? normalizeApiState(payload.draft.snapshot, fallback) : null,
-    published: payload.published?.persisted
-      ? normalizeApiState(payload.published.snapshot, fallback)
-      : null,
+    draft: isOwnResidue(payload.draft?.snapshot) ? fallback : draft,
+    published: isOwnResidue(payload.published?.snapshot) ? fallback : published,
     fallback,
   };
 }
@@ -288,6 +329,7 @@ async function writeDynamicTemplateDraft(
 ): Promise<void> {
   const response = await page.request.put(dynamicTemplateEndpoint, {
     data: { state, updatedBy },
+    headers: dtpHeaders,
   });
   expect(response.status()).toBe(200);
   const payload = (await response.json()) as { ok?: boolean };
@@ -297,6 +339,7 @@ async function writeDynamicTemplateDraft(
 async function publishDynamicTemplateDraft(page: Page, updatedBy: string): Promise<void> {
   const response = await page.request.post(dynamicTemplatePublishEndpoint, {
     data: { updatedBy },
+    headers: dtpHeaders,
   });
   expect(response.status()).toBe(200);
   const payload = (await response.json()) as { ok?: boolean };

@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import type { BuilderBlogRecentPostsCanvasNode } from '@/lib/builder/canvas/types';
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
 import { DEFAULT_BLOG_CATEGORIES } from '@/lib/builder/blog/blog-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { getBlogRecentPostsCopy, type BlogRecentPostMock } from './blog-recent-posts-copy';
 import styles from './BlogRecentPosts.module.css';
 
 interface BlogRecentPostsElementProps {
@@ -13,45 +14,7 @@ interface BlogRecentPostsElementProps {
   locale?: Locale;
 }
 
-interface RecentPostItem {
-  postId: string;
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  authorName: string;
-  date: string;
-}
-
-const MOCK_POSTS: RecentPostItem[] = [
-  {
-    postId: 'recent-1',
-    slug: 'recent-1',
-    title: '대만 회사설립 체크리스트',
-    excerpt: '법인 설립 전 확인해야 할 절차와 실무 쟁점.',
-    category: 'company-formation',
-    authorName: '호정국제 법률사무소',
-    date: '2026-04-12',
-  },
-  {
-    postId: 'recent-2',
-    slug: 'recent-2',
-    title: '노동계약 분쟁 대응',
-    excerpt: '근로계약, 퇴직금, 해고 통지 관련 핵심 정리.',
-    category: 'labor-law',
-    authorName: '대만 비즈니스 법무팀',
-    date: '2026-04-08',
-  },
-  {
-    postId: 'recent-3',
-    slug: 'recent-3',
-    title: '교통사고 합의 절차',
-    excerpt: '보험사 협의와 손해 산정에서 놓치기 쉬운 항목.',
-    category: 'traffic-accident',
-    authorName: '분쟁대응팀',
-    date: '2026-04-01',
-  },
-];
+type RecentPostItem = BlogRecentPostMock;
 
 function clampLimit(value: number): number {
   if (!Number.isFinite(value)) return 5;
@@ -90,6 +53,7 @@ export default function BlogRecentPostsElement({
   const c = node.content;
   const isBuilder = mode !== 'published';
   const effectiveLocale = normalizeLocale(locale || 'ko');
+  const copy = getBlogRecentPostsCopy(effectiveLocale);
   const limit = clampLimit(c.limit);
   const [posts, setPosts] = useState<BlogPost[] | null>(null);
   const [loading, setLoading] = useState(false);
@@ -123,14 +87,14 @@ export default function BlogRecentPostsElement({
   }, [effectiveLocale, isBuilder, limit]);
 
   const items = useMemo(() => {
-    const source = posts ? posts.map(toItem) : isBuilder ? MOCK_POSTS : [];
+    const source = posts ? posts.map(toItem) : isBuilder ? copy.element.mockPosts : [];
     return source.slice(0, limit);
-  }, [isBuilder, limit, posts]);
+  }, [copy.element.mockPosts, isBuilder, limit, posts]);
 
   if (!isBuilder && loading) {
     return (
       <div className={styles.state} data-builder-blog-recent-posts="true" role="status">
-        Loading posts...
+        {copy.element.loading}
       </div>
     );
   }
@@ -138,7 +102,7 @@ export default function BlogRecentPostsElement({
   if (items.length === 0) {
     return (
       <div className={styles.state} data-builder-blog-recent-posts="true">
-        최근 공개 글이 없습니다.
+        {copy.element.emptyState}
       </div>
     );
   }

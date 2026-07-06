@@ -18,7 +18,12 @@ export async function POST(request: NextRequest) {
   const rawBody = await request.text();
   const secret = webhookSecret();
   if (!secret) {
-    if (process.env.NODE_ENV === 'production') {
+    // BILLING_DOCUMENT_STRIPE_WEBHOOK_ALLOW_UNSIGNED=1 keeps the dev acceptance
+    // path available when a production build runs in a local/QA harness —
+    // same opt-in pattern as BOOKING_STRIPE_WEBHOOK_ALLOW_UNSIGNED.
+    const allowUnsigned = process.env.BILLING_DOCUMENT_STRIPE_WEBHOOK_ALLOW_UNSIGNED === '1'
+      || process.env.BOOKING_STRIPE_WEBHOOK_ALLOW_UNSIGNED === '1';
+    if (process.env.NODE_ENV === 'production' && !allowUnsigned) {
       return NextResponse.json({ ok: false, error: 'stripe_webhook_not_configured' }, { status: 503 });
     }
     console.warn('[billing-documents/stripe-webhook] webhook secret unset; accepting unsigned dev events');

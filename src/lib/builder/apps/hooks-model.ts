@@ -3,9 +3,8 @@
  *
  * Apps register lifecycle hooks that the builder fires on well-known events
  * (page save, public render, order created, reservation created, CMS record
- * created, publish completed). Handlers are in-process callbacks; this slice
- * also persists METADATA so the registry survives restarts even though the
- * function references themselves cannot be serialised.
+ * created, publish completed). Handlers are in-process callbacks; persisted
+ * records can also point at stored code bodies executed by hook-runtime.
  *
  * See hooks-registry.ts for the runtime + file-backed metadata store.
  */
@@ -103,8 +102,7 @@ export interface RegisteredAppHookRecord {
   active?: boolean;
   /**
    * F112 secret id for the stored hook code body, when the registry POST
-   * route was able to persist via the secrets store. Stored code is dormant
-   * in this slice — it is not executed.
+   * route was able to persist via the secrets store.
    */
   codeSecretId?: string;
   /** Fallback stub note when no secret store was available. */

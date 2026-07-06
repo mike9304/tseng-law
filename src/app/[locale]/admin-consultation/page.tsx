@@ -3,16 +3,22 @@ import {
   readDashboardMetrics,
   type AdminDashboardMetrics,
 } from '@/lib/consultation/admin/read-logs';
+import { getConsultationCopy, type ConsultationCopy } from './copy';
 import type { Locale } from '@/lib/locales';
 import { normalizeLocale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-export const metadata: Metadata = {
-  title: 'Consultation Admin',
-  robots: { index: false, follow: false },
-};
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  const title = locale === 'ko' ? '상담 관리' : locale === 'zh-hant' ? '諮詢管理' : 'Consultation admin';
+  return {
+    title,
+    robots: { index: false, follow: false },
+  };
+}
+
 
 const KNOWLEDGE_ACTION_PATH = '/api/consultation/knowledge';
 
@@ -28,6 +34,7 @@ const CATEGORY_OPTIONS = [
   'cosmetics',
   'unknown',
 ] as const;
+
 
 function formatTimestamp(iso: string): string {
   try {
@@ -79,24 +86,30 @@ function Section({
   );
 }
 
-function FunnelTable({ metrics }: { metrics: AdminDashboardMetrics }): React.ReactElement {
-  const rows: Array<{ label: string; count: number; note?: string }> = [
-    { label: 'Session started', count: metrics.funnel.session_started },
-    { label: 'Chat received', count: metrics.funnel.chat_received },
-    { label: 'Chat answered', count: metrics.funnel.chat_answered },
-    { label: 'Escalation shown', count: metrics.funnel.escalation_shown },
-    { label: 'Form opened', count: metrics.funnel.form_opened },
-    { label: 'Form submit attempted', count: metrics.funnel.form_submit_attempted },
-    { label: 'Submit received', count: metrics.funnel.submit_received },
-    { label: 'Submit validated', count: metrics.funnel.submit_validated },
-    { label: 'Submit email sent', count: metrics.funnel.submit_email_sent },
+function FunnelTable({
+  metrics,
+  copy,
+}: {
+  metrics: AdminDashboardMetrics;
+  copy: ConsultationCopy;
+}): React.ReactElement {
+  const rows: Array<{ label: string; count: number }> = [
+    { label: copy.funnelStages[0] || 'Session started', count: metrics.funnel.session_started },
+    { label: copy.funnelStages[1] || 'Chat received', count: metrics.funnel.chat_received },
+    { label: copy.funnelStages[2] || 'Chat answered', count: metrics.funnel.chat_answered },
+    { label: copy.funnelStages[3] || 'Escalation shown', count: metrics.funnel.escalation_shown },
+    { label: copy.funnelStages[4] || 'Form opened', count: metrics.funnel.form_opened },
+    { label: copy.funnelStages[5] || 'Form submit attempted', count: metrics.funnel.form_submit_attempted },
+    { label: copy.funnelStages[6] || 'Submit received', count: metrics.funnel.submit_received },
+    { label: copy.funnelStages[7] || 'Submit validated', count: metrics.funnel.submit_validated },
+    { label: copy.funnelStages[8] || 'Submit email sent', count: metrics.funnel.submit_email_sent },
   ];
   return (
     <table className="admin-console-table">
       <thead>
         <tr>
-          <th>Stage</th>
-          <th>Count</th>
+          <th>{copy.funnelHeaders.stage}</th>
+          <th>{copy.funnelHeaders.count}</th>
         </tr>
       </thead>
       <tbody>
@@ -111,19 +124,25 @@ function FunnelTable({ metrics }: { metrics: AdminDashboardMetrics }): React.Rea
   );
 }
 
-function ConversionTable({ metrics }: { metrics: AdminDashboardMetrics }): React.ReactElement {
+function ConversionTable({
+  metrics,
+  copy,
+}: {
+  metrics: AdminDashboardMetrics;
+  copy: ConsultationCopy;
+}): React.ReactElement {
   const rows = [
-    { label: 'Chat received → answered', value: metrics.conversion.received_to_answered },
-    { label: 'Chat received → submit received', value: metrics.conversion.received_to_submit_received },
-    { label: 'Submit received → email sent', value: metrics.conversion.submit_received_to_email_sent },
-    { label: 'Full funnel (chat → email sent)', value: metrics.conversion.full_funnel },
+    { label: copy.conversionSteps[0] || 'Chat received → answered', value: metrics.conversion.received_to_answered },
+    { label: copy.conversionSteps[1] || 'Chat received → submit received', value: metrics.conversion.received_to_submit_received },
+    { label: copy.conversionSteps[2] || 'Submit received → email sent', value: metrics.conversion.submit_received_to_email_sent },
+    { label: copy.conversionSteps[3] || 'Full funnel (chat → email sent)', value: metrics.conversion.full_funnel },
   ];
   return (
     <table className="admin-console-table admin-console-table--wide">
       <thead>
         <tr>
-          <th>Conversion step</th>
-          <th>Rate</th>
+          <th>{copy.conversionHeaders.step}</th>
+          <th>{copy.conversionHeaders.rate}</th>
         </tr>
       </thead>
       <tbody>
@@ -140,23 +159,29 @@ function ConversionTable({ metrics }: { metrics: AdminDashboardMetrics }): React
   );
 }
 
-function CategoryTable({ metrics }: { metrics: AdminDashboardMetrics }): React.ReactElement {
+function CategoryTable({
+  metrics,
+  copy,
+}: {
+  metrics: AdminDashboardMetrics;
+  copy: ConsultationCopy;
+}): React.ReactElement {
   return (
     <table className="admin-console-table">
       <thead>
         <tr>
-          <th>Category</th>
-          <th>Chats</th>
-          <th>Submissions</th>
-          <th>👍</th>
-          <th>👎</th>
+          <th>{copy.categoryTableHeader}</th>
+          <th>{copy.categoryTableHeaders.chats}</th>
+          <th>{copy.categoryTableHeaders.submissions}</th>
+          <th>{copy.categoryTableHeaders.positive}</th>
+          <th>{copy.categoryTableHeaders.negative}</th>
         </tr>
       </thead>
       <tbody>
         {metrics.byCategory.length === 0 ? (
           <tr>
             <td colSpan={5} className="admin-console-empty">
-              (no chat events in window)
+              {copy.categoryTableHeaders.empty}
             </td>
           </tr>
         ) : (
@@ -177,11 +202,13 @@ function CategoryTable({ metrics }: { metrics: AdminDashboardMetrics }): React.R
 
 function RecentNegativeFeedback({
   items,
+  copy,
 }: {
   items: AdminDashboardMetrics['recentNegativeFeedback'];
+  copy: ConsultationCopy;
 }): React.ReactElement {
   if (items.length === 0) {
-    return <p className="admin-console-empty-note">👎 피드백이 없습니다.</p>;
+    return <p className="admin-console-empty-note">{copy.recentNegativeEmpty}</p>;
   }
   return (
     <ul className="admin-console-feedback-list">
@@ -206,23 +233,25 @@ function RecentNegativeFeedback({
 
 function RecentSubmissions({
   items,
+  copy,
 }: {
   items: AdminDashboardMetrics['recentSubmissions'];
+  copy: ConsultationCopy;
 }): React.ReactElement {
   if (items.length === 0) {
-    return <p className="admin-console-empty-note">기간 내 제출 이벤트가 없습니다.</p>;
+    return <p className="admin-console-empty-note">{copy.recentSubmissionsEmpty}</p>;
   }
   return (
     <table className="admin-console-table admin-console-table--wide">
       <thead>
         <tr>
-          <th>Time (Taipei)</th>
-          <th>Intake ID</th>
-          <th>Category</th>
-          <th>Risk</th>
-          <th>Urgency</th>
-          <th>Contact</th>
-          <th>Status</th>
+          <th>{copy.recentSubmissionsHeaders.time}</th>
+          <th>{copy.recentSubmissionsHeaders.intakeId}</th>
+          <th>{copy.recentSubmissionsHeaders.category}</th>
+          <th>{copy.recentSubmissionsHeaders.risk}</th>
+          <th>{copy.recentSubmissionsHeaders.urgency}</th>
+          <th>{copy.recentSubmissionsHeaders.contact}</th>
+          <th>{copy.recentSubmissionsHeaders.status}</th>
         </tr>
       </thead>
       <tbody>
@@ -254,11 +283,13 @@ function RecentSubmissions({
 
 function RecentChatSamples({
   items,
+  copy,
 }: {
   items: AdminDashboardMetrics['recentChatSamples'];
+  copy: ConsultationCopy;
 }): React.ReactElement {
   if (items.length === 0) {
-    return <p className="admin-console-empty-note">기간 내 채팅 이벤트가 없습니다.</p>;
+    return <p className="admin-console-empty-note">{copy.recentChatEmpty}</p>;
   }
   return (
     <ul className="admin-console-chat-list">
@@ -291,16 +322,13 @@ function RecentChatSamples({
 
 function KnowledgeStatusNotice({
   status,
+  copy,
 }: {
   status?: string;
+  copy: ConsultationCopy;
 }): React.ReactElement | null {
   if (!status) return null;
-  const labels: Record<string, string> = {
-    saved: '변호사 검토 Q&A가 저장되었습니다.',
-    archived: '선택한 Q&A가 보관 처리되었습니다.',
-    missing: '질문과 변호사 답변을 모두 입력해야 저장됩니다.',
-    error: 'Q&A 저장 중 오류가 발생했습니다.',
-  };
+  const labels: Record<string, string> = copy.knowledgeStatus;
   const message = labels[status];
   if (!message) return null;
   return (
@@ -312,12 +340,14 @@ function KnowledgeStatusNotice({
 
 function KnowledgeCategorySelect({
   defaultValue,
+  copy,
 }: {
   defaultValue?: string;
+  copy: ConsultationCopy;
 }): React.ReactElement {
   return (
     <label className="admin-console-field">
-      <span>분류</span>
+      <span>{copy.knowledgeForm.categoryLabel}</span>
       <select name="category" defaultValue={defaultValue || 'general'}>
         {CATEGORY_OPTIONS.map((category) => (
           <option key={category} value={category}>
@@ -335,13 +365,15 @@ function AttorneyKnowledgeCreateForm({
   defaultCategory,
   defaultKeywords,
   sourceNote,
-  submitLabel = '답변 저장',
+  copy,
+  submitLabel = copy.knowledgeForm.submitLabel,
 }: {
   locale: Locale;
   defaultQuestion?: string;
   defaultCategory?: string;
   defaultKeywords?: string[];
   sourceNote?: string;
+  copy: ConsultationCopy;
   submitLabel?: string;
 }): React.ReactElement {
   return (
@@ -349,37 +381,37 @@ function AttorneyKnowledgeCreateForm({
       <input type="hidden" name="locale" value={locale} />
       {sourceNote ? <input type="hidden" name="sourceNote" value={sourceNote} /> : null}
       <label className="admin-console-field">
-        <span>질문</span>
+        <span>{copy.knowledgeForm.questionLabel}</span>
         <textarea
           name="question"
           defaultValue={defaultQuestion || ''}
           rows={2}
-          placeholder="사용자가 자주 물어보는 질문을 그대로 적습니다."
+          placeholder={copy.knowledgeForm.questionPlaceholder}
           required
         />
       </label>
-      <KnowledgeCategorySelect defaultValue={defaultCategory} />
+      <KnowledgeCategorySelect defaultValue={defaultCategory} copy={copy} />
       <label className="admin-console-field">
-        <span>변호사 답변</span>
+        <span>{copy.knowledgeForm.answerLabel}</span>
         <textarea
           name="answer"
           rows={5}
-          placeholder="AI가 그대로 인용할 수 있는 안전한 범위의 답변을 작성합니다."
+          placeholder={copy.knowledgeForm.answerPlaceholder}
           required
         />
-        <small>최신 법률 판단이 필요하면 “구체 사안은 상담 필요”처럼 경계를 포함해 주세요.</small>
+        <small>{copy.knowledgeForm.answerHint}</small>
       </label>
       <label className="admin-console-field">
-        <span>검색 키워드</span>
+        <span>{copy.knowledgeForm.keywordsLabel}</span>
         <input
           name="keywords"
           defaultValue={(defaultKeywords || []).join(', ')}
-          placeholder="상담료, 예약, 비용"
+          placeholder={copy.knowledgeForm.keywordsPlaceholder}
         />
       </label>
       <label className="admin-console-field">
-        <span>검토자</span>
-        <input name="reviewedBy" placeholder="담당 변호사 또는 운영자" />
+        <span>{copy.knowledgeForm.reviewerLabel}</span>
+        <input name="reviewedBy" placeholder={copy.knowledgeForm.reviewerPlaceholder} />
       </label>
       <div className="admin-console-form-actions">
         <button type="submit" className="admin-console-primary-btn">
@@ -392,13 +424,15 @@ function AttorneyKnowledgeCreateForm({
 
 function ApprovedAttorneyKnowledge({
   entries,
+  copy,
 }: {
   entries: AdminDashboardMetrics['attorneyKnowledge']['approved'];
+  copy: ConsultationCopy;
 }): React.ReactElement {
   if (entries.length === 0) {
     return (
       <p className="admin-console-empty-note">
-        아직 승인된 변호사 Q&A가 없습니다. 아래 후보 질문부터 답변을 채워 주세요.
+        {copy.emptyStates.approvedKnowledge}
       </p>
     );
   }
@@ -418,7 +452,7 @@ function ApprovedAttorneyKnowledge({
               <input type="hidden" name="action" value="archive" />
               <input type="hidden" name="id" value={entry.id} />
               <button type="submit" className="admin-console-danger-btn">
-                보관
+                {copy.knowledgeForm.archiveLabel}
               </button>
             </form>
           </div>
@@ -427,25 +461,25 @@ function ApprovedAttorneyKnowledge({
             <input type="hidden" name="locale" value={entry.locale} />
             <input type="hidden" name="sourceNote" value={entry.sourceNote || 'approved attorney knowledge update'} />
             <label className="admin-console-field">
-              <span>질문</span>
+              <span>{copy.knowledgeForm.questionLabel}</span>
               <textarea name="question" defaultValue={entry.question} rows={2} required />
             </label>
-            <KnowledgeCategorySelect defaultValue={entry.category} />
+            <KnowledgeCategorySelect defaultValue={entry.category} copy={copy} />
             <label className="admin-console-field">
-              <span>변호사 답변</span>
+              <span>{copy.knowledgeForm.answerLabel}</span>
               <textarea name="answer" defaultValue={entry.answer} rows={5} required />
             </label>
             <label className="admin-console-field">
-              <span>검색 키워드</span>
+              <span>{copy.knowledgeForm.keywordsLabel}</span>
               <input name="keywords" defaultValue={entry.keywords.join(', ')} />
             </label>
             <label className="admin-console-field">
-              <span>검토자</span>
+              <span>{copy.knowledgeForm.reviewerLabel}</span>
               <input name="reviewedBy" defaultValue={entry.reviewedBy || ''} />
             </label>
             <div className="admin-console-form-actions">
               <button type="submit" className="admin-console-ghost-btn">
-                수정 저장
+                {copy.knowledgeForm.saveLabel}
               </button>
             </div>
           </form>
@@ -458,14 +492,16 @@ function ApprovedAttorneyKnowledge({
 function KnowledgeGapCandidates({
   locale,
   items,
+  copy,
 }: {
   locale: Locale;
   items: AdminDashboardMetrics['attorneyKnowledge']['gapCandidates'];
+  copy: ConsultationCopy;
 }): React.ReactElement {
   if (items.length === 0) {
     return (
       <p className="admin-console-empty-note">
-        최근 로그에서 반복 답변 공백 후보가 아직 발견되지 않았습니다.
+        {copy.emptyStates.gapCandidates}
       </p>
     );
   }
@@ -487,7 +523,8 @@ function KnowledgeGapCandidates({
             defaultCategory={item.classification || 'general'}
             defaultKeywords={item.keywords}
             sourceNote={`dashboard gap candidate: ${item.reason}`}
-            submitLabel="후보 답변 저장"
+            submitLabel={copy.knowledgeForm.candidateSaveLabel}
+            copy={copy}
           />
         </article>
       ))}
@@ -498,13 +535,15 @@ function KnowledgeGapCandidates({
 function SuggestedAttorneyQuestions({
   locale,
   items,
+  copy,
 }: {
   locale: Locale;
   items: AdminDashboardMetrics['attorneyKnowledge']['suggestedQuestions'];
+  copy: ConsultationCopy;
 }): React.ReactElement {
   const visibleItems = items.filter((item) => item.locale === locale).slice(0, 8);
   if (visibleItems.length === 0) {
-    return <p className="admin-console-empty-note">현재 언어의 예상 질문 후보가 없습니다.</p>;
+    return <p className="admin-console-empty-note">{copy.emptyStates.suggestedQuestions}</p>;
   }
 
   return (
@@ -521,7 +560,8 @@ function SuggestedAttorneyQuestions({
             defaultCategory={item.category}
             defaultKeywords={item.keywords}
             sourceNote={`expected attorney question: ${item.id}`}
-            submitLabel="예상 질문 답변 저장"
+            submitLabel={copy.knowledgeForm.suggestedSaveLabel}
+            copy={copy}
           />
         </article>
       ))}
@@ -540,6 +580,7 @@ export default async function AdminConsultationPage({
   // Component even runs. If the request reached here, the caller has
   // already satisfied the Basic Auth challenge.
   const locale: Locale = normalizeLocale(params.locale);
+  const copy = getConsultationCopy(locale);
 
   const requestedDays = Number.parseInt(searchParams?.days ?? '7', 10);
   const windowDays = Number.isFinite(requestedDays) && requestedDays > 0 && requestedDays <= 90 ? requestedDays : 7;
@@ -625,22 +666,24 @@ export default async function AdminConsultationPage({
     <main className="admin-console">
       <header className="admin-console-header">
         <div>
-          <h1>호정 AI 상담 운영 대시보드</h1>
+          <h1>{copy.heroTitle}</h1>
           <p>
-            최근 <strong>{metrics.timeWindowDays}</strong>일 구간 ·{' '}
-            총 이벤트 <strong>{metrics.totalEvents.toLocaleString()}</strong>개 ·{' '}
-            피드백 <strong>{metrics.totalFeedback.toLocaleString()}</strong>개 ·{' '}
-            생성 시각 {formatTimestamp(metrics.generatedAt)}
+            {copy.heroDescription
+              .replace('{days}', String(metrics.timeWindowDays))
+              .replace('{events}', metrics.totalEvents.toLocaleString())
+              .replace('{feedback}', metrics.totalFeedback.toLocaleString())
+              .replace('{generatedAt}', formatTimestamp(metrics.generatedAt))}
           </p>
         </div>
-        <nav className="admin-console-window-nav" aria-label="Time window">
-          {[1, 7, 14, 30, 90].map((d) => (
+        <p className="admin-console-window-label">{copy.windowLabel}</p>
+        <nav className="admin-console-window-nav" aria-label={copy.windowAriaLabel}>
+          {copy.windowOptions.map((option) => (
             <a
-              key={d}
-              href={`?days=${d}`}
-              className={d === metrics.timeWindowDays ? 'is-active' : ''}
+              key={option.days}
+              href={`?days=${option.days}`}
+              className={option.days === metrics.timeWindowDays ? 'is-active' : ''}
             >
-              {d}일
+              {option.label}
             </a>
           ))}
         </nav>
@@ -648,76 +691,78 @@ export default async function AdminConsultationPage({
 
       {loadError ? (
         <Section
-          title="Dashboard fallback mode"
-          description="메트릭 로딩에 실패했지만 페이지 자체는 열어 둡니다."
+          title={copy.loadErrorTitle}
+          description={copy.loadErrorDescription}
         >
           <p className="admin-console-empty-note">
-            로그 스토리지 읽기 실패: <code>{loadError}</code>
+            {copy.loadErrorFallbackPrefix}: <code>{loadError}</code>
           </p>
           <p className="admin-console-empty-note">
-            현재는 0값 fallback으로 렌더링 중입니다. 로컬 리뷰에서는 파일 로그를 우선 사용하도록 조정했습니다.
+            {copy.loadErrorSecondaryNote}
           </p>
         </Section>
       ) : null}
 
       <div className="admin-console-grid">
-        <Section title="Conversion funnel" description="세션 발생부터 이메일 접수 완료까지 단계별 드롭오프.">
+        <Section title={copy.conversionTitle} description={copy.conversionDescription}>
           <div className="admin-console-split">
-            <FunnelTable metrics={metrics} />
-            <ConversionTable metrics={metrics} />
+            <FunnelTable metrics={metrics} copy={copy} />
+            <ConversionTable metrics={metrics} copy={copy} />
           </div>
         </Section>
 
         <Section
-          title="Performance & cost"
-          description={`최근 ${metrics.timeWindowDays}일 LLM 호출 ${metrics.performance.sampleCount}건 기준. gpt-4o-mini 가격 (입력 $0.15 / 출력 $0.60 per 1M tokens).`}
+          title={copy.performanceTitle}
+          description={copy.performanceDescription
+            .replace('{days}', String(metrics.timeWindowDays))
+            .replace('{samples}', metrics.performance.sampleCount.toLocaleString())}
         >
           <table className="admin-console-table">
             <tbody>
               <tr>
-                <td>Latency p50</td>
+                <td>{copy.performanceRowLabels.latencyP50}</td>
                 <td className="admin-console-num">
                   {metrics.performance.latencyP50Ms.toLocaleString()} ms
                 </td>
               </tr>
               <tr>
-                <td>Latency p95</td>
+                <td>{copy.performanceRowLabels.latencyP95}</td>
                 <td className="admin-console-num">
                   {metrics.performance.latencyP95Ms.toLocaleString()} ms
                 </td>
               </tr>
               <tr>
-                <td>Latency p99</td>
+                <td>{copy.performanceRowLabels.latencyP99}</td>
                 <td className="admin-console-num">
                   {metrics.performance.latencyP99Ms.toLocaleString()} ms
                 </td>
               </tr>
               <tr>
-                <td>Avg latency</td>
+                <td>{copy.performanceRowLabels.avgLatency}</td>
                 <td className="admin-console-num">
                   {metrics.performance.avgLatencyMs.toLocaleString()} ms
                 </td>
               </tr>
               <tr>
-                <td>Total prompt tokens</td>
+                <td>{copy.performanceRowLabels.totalPromptTokens}</td>
                 <td className="admin-console-num">
                   {metrics.performance.totalPromptTokens.toLocaleString()}
                 </td>
               </tr>
               <tr>
-                <td>Total completion tokens</td>
+                <td>{copy.performanceRowLabels.totalCompletionTokens}</td>
                 <td className="admin-console-num">
                   {metrics.performance.totalCompletionTokens.toLocaleString()}
                 </td>
               </tr>
               <tr>
-                <td>Estimated total cost (USD)</td>
+                <td>{copy.performanceRowLabels.estimatedTotalCost}</td>
                 <td className="admin-console-num">
                   ${metrics.performance.estimatedCostUsd.toFixed(4)}
                 </td>
               </tr>
               <tr>
-                <td>Avg cost per chat (USD)</td>
+                <td>{copy.performanceRowLabels.avgCostPerChat}</td>
                 <td className="admin-console-num">
                   ${metrics.performance.avgCostPerChatUsd.toFixed(4)}
                 </td>
@@ -726,67 +771,67 @@ export default async function AdminConsultationPage({
           </table>
         </Section>
 
-        <Section title="Safety & rate limits">
+        <Section title={copy.safetyTitle}>
           <table className="admin-console-table">
             <tbody>
               <tr>
-                <td>Chat failed</td>
+                <td>{copy.safetyRowLabels.chatFailed}</td>
                 <td className="admin-console-num">{metrics.funnel.chat_failed}</td>
               </tr>
               <tr>
-                <td>Chat rate-limited (IP)</td>
+                <td>{copy.safetyRowLabels.chatRateLimited}</td>
                 <td className="admin-console-num">{metrics.safety.rateLimitedChat}</td>
               </tr>
               <tr>
-                <td>Prompt injection blocked</td>
+                <td>{copy.safetyRowLabels.promptInjectionBlocked}</td>
                 <td className="admin-console-num">{metrics.funnel.chat_injection_blocked}</td>
               </tr>
               <tr>
-                <td>PII bypass triggered</td>
+                <td>{copy.safetyRowLabels.piiBypassTriggered}</td>
                 <td className="admin-console-num">{metrics.safety.piiBypassTriggered}</td>
               </tr>
               <tr>
-                <td>Low-confidence bypass</td>
+                <td>{copy.safetyRowLabels.lowConfidenceBypass}</td>
                 <td className="admin-console-num">{metrics.safety.lowConfidenceBypassTriggered}</td>
               </tr>
               <tr>
-                <td>Groundedness flagged</td>
+                <td>{copy.safetyRowLabels.groundednessFlagged}</td>
                 <td className="admin-console-num">{metrics.safety.groundednessFlagged}</td>
               </tr>
               <tr>
-                <td>Staleness warning shown</td>
+                <td>{copy.safetyRowLabels.stalenessWarningShown}</td>
                 <td className="admin-console-num">{metrics.safety.stalenessFlagged}</td>
               </tr>
               <tr>
-                <td>Submit rate-limited (session)</td>
+                <td>{copy.safetyRowLabels.submitRateLimited}</td>
                 <td className="admin-console-num">{metrics.safety.rateLimitedSubmit}</td>
               </tr>
               <tr>
-                <td>Submit duplicate</td>
+                <td>{copy.safetyRowLabels.submitDuplicate}</td>
                 <td className="admin-console-num">{metrics.funnel.submit_duplicate}</td>
               </tr>
               <tr>
-                <td>Submit consent missing</td>
+                <td>{copy.safetyRowLabels.submitConsentMissing}</td>
                 <td className="admin-console-num">{metrics.funnel.submit_consent_missing}</td>
               </tr>
               <tr>
-                <td>Submit email failed</td>
+                <td>{copy.safetyRowLabels.submitEmailFailed}</td>
                 <td className="admin-console-num">{metrics.funnel.submit_email_failed}</td>
               </tr>
             </tbody>
           </table>
         </Section>
 
-        <Section title="Category breakdown">
-          <CategoryTable metrics={metrics} />
+        <Section title={copy.categoryTitle}>
+          <CategoryTable metrics={metrics} copy={copy} />
         </Section>
 
-        <Section title="Risk level distribution">
+        <Section title={copy.riskTitle}>
           <table className="admin-console-table">
             <thead>
               <tr>
-                <th>Level</th>
-                <th>Count</th>
+                <th>{copy.riskTableHeaders.level}</th>
+                <th>{copy.riskTableHeaders.count}</th>
               </tr>
             </thead>
             <tbody>
@@ -800,12 +845,12 @@ export default async function AdminConsultationPage({
           </table>
         </Section>
 
-        <Section title="Locale distribution">
+        <Section title={copy.localeTitle}>
           <table className="admin-console-table">
             <thead>
               <tr>
-                <th>Locale</th>
-                <th>Count</th>
+                <th>{copy.localeTableHeaders.locale}</th>
+                <th>{copy.localeTableHeaders.count}</th>
               </tr>
             </thead>
             <tbody>
@@ -826,8 +871,12 @@ export default async function AdminConsultationPage({
         </Section>
 
         <Section
-          title="Feedback overview"
-          description={`전체 피드백 ${metrics.feedback.total}건 중 👍 ${metrics.feedback.helpful}건 (${metrics.feedback.helpfulRatio}%), 👎 ${metrics.feedback.unhelpful}건.`}
+          title={copy.feedbackTitle}
+          description={copy.feedbackDescription
+            .replace('{total}', metrics.feedback.total.toLocaleString())
+            .replace('{helpful}', metrics.feedback.helpful.toLocaleString())
+            .replace('{ratio}', String(metrics.feedback.helpfulRatio))
+            .replace('{unhelpful}', metrics.feedback.unhelpful.toLocaleString())}
         >
           <div className="admin-console-feedback-bar" aria-hidden>
             <span
@@ -839,54 +888,51 @@ export default async function AdminConsultationPage({
       </div>
 
       <Section
-        title="Recent 👎 feedback"
-        description="변호사 재검토 대상. 메시지 본문은 저장되지 않고, 사용자가 남긴 코멘트만 PII 마스킹 후 노출됩니다."
+        title={copy.recentNegativeTitle}
+        description={copy.recentNegativeDescription}
       >
-        <RecentNegativeFeedback items={metrics.recentNegativeFeedback} />
+        <RecentNegativeFeedback items={metrics.recentNegativeFeedback} copy={copy} />
       </Section>
 
-      <Section title="Recent submissions" description="최근 10건의 상담 접수 (실제 수신 이메일 내용은 본 문서에 노출되지 않습니다).">
-        <RecentSubmissions items={metrics.recentSubmissions} />
+      <Section title={copy.recentSubmissionsTitle} description={copy.recentSubmissionsDescription}>
+        <RecentSubmissions items={metrics.recentSubmissions} copy={copy} />
       </Section>
 
       <Section
-        title="변호사 검토 Q&A 학습"
-        description={`승인된 답변 ${metrics.attorneyKnowledge.approvedCount}개. AI는 공개 칼럼 근거가 약해도 이 답변과 질문이 맞으면 변호사 검토 Q&A를 우선 사용합니다.`}
+        title={copy.knowledgeTitle}
+        description={copy.knowledgeDescription.replace('{approvedCount}', metrics.attorneyKnowledge.approvedCount.toLocaleString())}
       >
-        <KnowledgeStatusNotice status={searchParams?.knowledge} />
+        <KnowledgeStatusNotice status={searchParams?.knowledge} copy={copy} />
         <div className="admin-console-knowledge-grid">
           <div>
-            <h3 className="admin-console-subtitle">직접 추가</h3>
-            <AttorneyKnowledgeCreateForm
-              locale={locale}
-              sourceNote="manual attorney knowledge entry"
-            />
+            <h3 className="admin-console-subtitle">{copy.knowledgeDirectTitle}</h3>
+            <AttorneyKnowledgeCreateForm locale={locale} sourceNote="manual attorney knowledge entry" copy={copy} />
           </div>
           <div>
-            <h3 className="admin-console-subtitle">승인된 Q&A</h3>
-            <ApprovedAttorneyKnowledge entries={metrics.attorneyKnowledge.approved} />
+            <h3 className="admin-console-subtitle">{copy.knowledgeApprovedTitle}</h3>
+            <ApprovedAttorneyKnowledge entries={metrics.attorneyKnowledge.approved} copy={copy} />
           </div>
         </div>
       </Section>
 
       <Section
-        title="변호사 답변 요청 큐"
-        description="AI가 자주 모르는 질문과 운영상 미리 채워야 할 예상 질문입니다. 답변을 저장하면 다음 사용자부터 해당 답변을 근거로 사용합니다."
+        title={copy.knowledgeGapTitle}
+        description={copy.knowledgeForm.answerHint}
       >
         <div className="admin-console-knowledge-grid">
           <div>
-            <h3 className="admin-console-subtitle">로그 기반 공백 후보</h3>
-            <KnowledgeGapCandidates locale={locale} items={metrics.attorneyKnowledge.gapCandidates} />
+            <h3 className="admin-console-subtitle">{copy.knowledgeGapTitle}</h3>
+            <KnowledgeGapCandidates locale={locale} items={metrics.attorneyKnowledge.gapCandidates} copy={copy} />
           </div>
           <div>
-            <h3 className="admin-console-subtitle">미리 준비할 예상 질문</h3>
-            <SuggestedAttorneyQuestions locale={locale} items={metrics.attorneyKnowledge.suggestedQuestions} />
+            <h3 className="admin-console-subtitle">{copy.knowledgeSuggestedTitle}</h3>
+            <SuggestedAttorneyQuestions locale={locale} items={metrics.attorneyKnowledge.suggestedQuestions} copy={copy} />
           </div>
         </div>
       </Section>
 
-      <Section title="Recent chat samples" description="최근 15개 채팅 이벤트. 메시지는 이메일/전화번호/RRN이 서버 저장 시점에 redact된 상태입니다.">
-        <RecentChatSamples items={metrics.recentChatSamples} />
+      <Section title={copy.recentChatTitle} description={copy.recentChatDescription}>
+        <RecentChatSamples items={metrics.recentChatSamples} copy={copy} />
       </Section>
     </main>
   );

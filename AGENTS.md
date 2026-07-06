@@ -1,3 +1,6 @@
+> ✅ **여기가 진짜 윅스빌더입니다** — 고객 인도 대상 = 이 레포(`~/Projects/tseng-law`). `GLM-practice-builder*`(舊 tseng-law-builder*)는 연습작이니 무시. (2026-07-03 격리 조치)
+> 📘 완성 루프 작업방식(검증-승격 조립라인·격리·하청 운영) = [[builder-completion-loop]] `~/agent-library/skills/builder-completion-loop/SKILL.md` — 빌더 완성 작업 전 필독.
+
 # AGENTS.md — 호정국제 사이트 빌더 (Real Wix)
 
 > 이 파일은 Claude Code / Codex / Cursor 등 모든 AI 에이전트가 **세션 시작 시 먼저 읽어야 하는** 최소 오리엔테이션이다.
@@ -24,9 +27,14 @@
 
 세션 흐름: 사용자가 target W__ 지정 → Manager(Claude Opus)가 SESSION.md 작성 → 워커 agent 발주 / Codex 프롬프트 제공 → 통합 → 브라우저 검증 → Wix 체크포인트.md 갱신 → 계획서 § 16 Changelog 한 줄 → SESSION.md 리셋.
 
-## 현재 상태 (2026-04-28 기준)
+## 현재 상태 (2026-07-03 기준)
 
-- **Wix 체크포인트 점수**: 🟢 **4 / 225** (W01, W05, W13, W16). S-05 W02~W12 8건 브라우저 검증 대기 (녹색 시 12/225). S-07 은 W 직결 없음 (Phase 3 widget foundation). 스코어카드 W01~W225.
+- **Wix 체크포인트 점수**: 🟢 **225 / 225** (`npm run audit:w-checkpoints` PASS, 225 green / 0 yellow / 0 red). 전체 제품 체크포인트도 `npm run audit:release` PASS, 120 green / 0 yellow / 0 red.
+- **로컬 handoff 게이트**: `npm run qa`, clean `npm run build`, `NEXT_DIST_DIR=.next-build npm run test:builder-smoke`, `npm run typecheck`, `git diff --check` 통과.
+- **아직 전역 완료로 선언하지 말 조건**: production admin-builder 인증 smoke, 외부 provider/credential QA(Stripe/Zoom/메일/캘린더/AI 등), live deploy 후 공개 정적자산 200 재확인, 전체 dirty worktree 정리/리뷰.
+- **2026-07-03 라이브 발견 사항**: production `/ko/columns`에서 `/images/placeholder-article-hero.jpg`가 배포 누락으로 404. Clean `HEAD` 검증 결과 최소 배포 범위는 `public/images/placeholder-*` 정적자산 묶음 + `src/lib/builder/site/redirect-match.ts`이며, 다음 배포 후 raw/optimizer URL 재확인 필요.
+- **W07 최신 근거**: 2026-07-02 Codex가 현재 production seed의 풀폭 `home-hero` composite에서 SE handle이 inspector 뒤에 가려지던 canvas fit 결함을 `CanvasContainer` visible scroll-root 기준 fit으로 수정. `QA_ONLY=W07` real builder QA pass/0 findings, report `/tmp/tseng-w07-qa/2026-07-02T01-14-39/report.md`.
+- **W08 최신 근거**: 2026-07-02 Codex가 실제 `/Users/son7/Projects/tseng-law` isolated builder `http://127.0.0.1:4536`에서 `home-hero-label` 선택 후 회전 핸들 real mouse drag를 재검증. 8 resize handles, rotate cursor `grab`, transform `matrix(1, 0, 0, 1, 0, 0)` -> `matrix(0, 1, -1, 0, 0, 0)`, readout `90°`, Undo enabled, browser errors 0. Report `/tmp/tseng-w08-qa/2026-07-02T01-36-33-944Z/report.md`. Computer Use MCP는 timeout이라 Safari GUI 증거는 System Events/실제 스크린샷으로 보강.
 - **F0 (메인 사이트 → 빌더)**: 코드 완료 + local 좌표 포지셔닝 버그 fix 완료. `/ko` 390 builder-pub-node 로 홈 decompose (home-seed-v6, service icon 노드 +6 포함). `/ko/{about,services,contact,lawyers,faq,pricing,reviews,privacy,disclaimer}` 각각 decompose-page-*.ts 로 30~193 builder-pub-node 렌더 (S-06).
 - **S-07 (2026-04-28)**: Container auto-layout 실동작. `public-page.tsx`/`CanvasNode.tsx` 가 parent layoutMode 전파, flex/grid 부모의 child wrapper 는 relative flow. 기존 decompose 는 absolute 기본 유지 → 회귀 0. fixture: `/ko/admin-builder/_dev/flex` (3 child 가 row/center/gap=24 로 배치, rect.x/y 무시). Phase 3 widget library foundation 준비.
 - **S-06 (2026-04-20)**: 9 서브페이지 decompose propagate 완료. 각 페이지가 `legacy-page-*` 단일 composite → 수십~수백 개별 편집 가능 builder 노드 트리로 전환. 라우트 9 per-page → `[locale]/[[...slug]]` catch-all 로 통합. 시각 1:1 패리티는 사용자 브라우저 대조 대기.
@@ -84,27 +92,27 @@
 
 ## Phase 로드맵 (마스터 플랜)
 
+> 2026-07-03 현재 공식 audit는 W01~W225 전부 green이다. 아래 표는 원래 phase map을 보존하되, "현재" 열은 최신 audit와 남은 handoff blocker 기준으로 읽는다.
+
 | Phase | 범위 | 체크포인트 | 현재 |
 |---|---|---|---|
-| **0** | F0 메인 사이트 → 빌더 전환 | — (전처리) | 🟡 코드 완, 브라우저 검증 대기 |
-| **1** | 에디터 코어 (드래그/편집/publish 등) | W01~W30 | 🟡 3 Green, 나머지 검증 필요 |
-| **2** | 모바일 & 반응형 | W31~W45 | 🔴 미시작 |
-| **3** | 위젯 라이브러리 (~70 위젯, 10 카테고리) | W46~W135 | 🔴 미시작 |
-| **4** | 폼 빌더 | W136~W150 | 🔴 미시작 |
-| **5** | Motion (entrance/scroll/hover/loop/timeline) | W151~W175 | 🔴 미시작 |
-| **6** | 디자인 시스템 (color/font sets, themes) | W176~W185 | 🔴 미시작 |
-| **7** | SEO + Publish maturity | W186~W195 | 🔴 부분 존재 |
-| **8** | **Wix Bookings** (상담 예약 전체) | W196~W215 | 🔴 미시작 |
-| **9** | 에디터 고도화 (rulers/layers/단축키/align) | W216~W225 | 🔴 미시작 |
-
-우선순위 가이드: Phase 1 완주 → Phase 2 (반응형 먼저 맞춰야 위젯 재작업 최소) → Phase 3 위젯 → Phase 4 Forms → Phase 8 Bookings (Forms 인프라 의존). Phase 5 Motion 은 cross-cutting 이라 어느 시점이든 병렬 가능.
+| **0** | F0 메인 사이트 → 빌더 전환 | — (전처리) | 🟢 local/public smoke 통과, live deploy parity 확인 대기 |
+| **1** | 에디터 코어 (드래그/편집/publish 등) | W01~W30 | 🟢 audit green |
+| **2** | 모바일 & 반응형 | W31~W45 | 🟢 audit green |
+| **3** | 위젯 라이브러리 (~70 위젯, 10 카테고리) | W46~W135 | 🟢 audit green |
+| **4** | 폼 빌더 | W136~W150 | 🟢 audit green |
+| **5** | Motion (entrance/scroll/hover/loop/timeline) | W151~W175 | 🟢 audit green |
+| **6** | 디자인 시스템 (color/font sets, themes) | W176~W185 | 🟢 audit green |
+| **7** | SEO + Publish maturity | W186~W195 | 🟢 audit green, deploy/post-deploy smoke pending |
+| **8** | **Wix Bookings** (상담 예약 전체) | W196~W215 | 🟢 audit green, live provider QA pending |
+| **9** | 에디터 고도화 (rulers/layers/단축키/align) | W216~W225 | 🟢 audit green |
 
 ## 다음 큰 블로커 (우선순위)
 
-1. **F0 브라우저 검증**: `/ko`, `/ko/about` 등 실제 렌더 확인 + `/admin-builder` 드래그/스냅/그룹 정상 동작 확인 (포지셔닝 fix 수반 refactor 때문)
-2. **W02~W30 검증 세션**: 코드는 다 있음. 사용자 클릭으로 30/30 Green 확정 후에 Phase 2 로 이동
-3. **Phase 2 모바일 스키마 결정**: `hiddenOnViewports`, viewport-override rect, fontSize 등. 한 번 결정하면 돌리기 어려움
-4. **Rate limit 를 Upstash 로 이관**: 현재 in-memory (Phase 7 편입)
+1. **배포 전 worktree 정리**: 현재 대량 dirty tree라 production deploy는 clean build/atomic commit 기준으로만 진행. Placeholder 404 수정 최소 staged 범위는 `public/images/placeholder-*` + `src/lib/builder/site/redirect-match.ts`.
+2. **Production admin-builder 인증 smoke**: `.env.local` credentials로 `https://tseng-law.com` GET smoke는 401. 실제 production builder credentials 또는 Vercel env 확인 필요.
+3. **외부 provider QA**: Stripe, Zoom, Google/Outlook calendar, Resend/SMTP, DeepL/OpenAI, Upstash 등 live credential/provider smoke는 현재 머신의 env만으로 완료 불가.
+4. **Post-deploy 확인**: 배포 후 `/images/placeholder-article-hero.jpg`와 `_next/image?...placeholder-article-hero.jpg...`가 200인지 확인.
 
 ## 레포 / 운영 환경
 

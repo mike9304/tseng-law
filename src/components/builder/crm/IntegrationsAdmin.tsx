@@ -2,16 +2,13 @@
 
 import { useState } from 'react';
 import type { CrmIntegration, CrmIntegrationKind } from '@/lib/builder/crm/integrations-model';
+import type { Locale } from '@/lib/locales';
+import { formatDate } from '@/lib/builder/format/datetime';
 
 interface Props {
   initialIntegrations: CrmIntegration[];
+  locale: Locale;
 }
-
-const KIND_LABEL: Record<CrmIntegrationKind, string> = {
-  'slack-webhook': 'Slack',
-  'generic-webhook': 'Generic webhook',
-  'mailchimp-stub': 'Mailchimp (stub)',
-};
 
 const KIND_COLOR: Record<CrmIntegrationKind, string> = {
   'slack-webhook': '#4a154b',
@@ -26,7 +23,96 @@ interface DraftState {
 
 const EMPTY: DraftState = { kind: 'slack-webhook', webhookUrl: '' };
 
-export default function IntegrationsAdmin({ initialIntegrations }: Props) {
+const INTEGRATIONS_COPY = {
+  ko: {
+    kindLabel: {
+      'slack-webhook': 'Slack',
+      'generic-webhook': '일반 Webhook',
+      'mailchimp-stub': 'Mailchimp (스텁)',
+    },
+    addIntegration: '+ 연동 추가',
+    save: '저장',
+    webhookRequired: 'Webhook URL을 입력해 주세요.',
+    createFailed: '외부 연동을 만들지 못했습니다.',
+    updateFailed: '연동 수정에 실패했습니다.',
+    deleteFailed: '연동 삭제에 실패했습니다.',
+    deleteConfirm: '이 연동을 삭제할까요?',
+    deleteLabel: '삭제',
+    headers: {
+      channel: '채널',
+      target: '대상',
+      enabled: '활성',
+      created: '생성',
+      actions: '관리',
+    },
+    empty: '연결된 외부 채널이 없습니다.',
+    dateLocale: 'ko-KR',
+  },
+  'zh-hant': {
+    kindLabel: {
+      'slack-webhook': 'Slack',
+      'generic-webhook': '一般 Webhook',
+      'mailchimp-stub': 'Mailchimp（stub）',
+    },
+    addIntegration: '+ 新增整合',
+    save: '儲存',
+    webhookRequired: '請輸入 Webhook URL。',
+    createFailed: '無法建立外部整合。',
+    updateFailed: '無法更新整合。',
+    deleteFailed: '無法刪除整合。',
+    deleteConfirm: '確定刪除此整合？',
+    deleteLabel: '刪除',
+    headers: {
+      channel: '渠道',
+      target: '目標',
+      enabled: '啟用',
+      created: '建立時間',
+      actions: '操作',
+    },
+    empty: '尚未連接外部渠道。',
+    dateLocale: 'zh-TW',
+  },
+  en: {
+    kindLabel: {
+      'slack-webhook': 'Slack',
+      'generic-webhook': 'Generic webhook',
+      'mailchimp-stub': 'Mailchimp (stub)',
+    },
+    addIntegration: '+ Add integration',
+    save: 'Save',
+    webhookRequired: 'Enter a webhook URL.',
+    createFailed: 'Unable to create the external integration.',
+    updateFailed: 'Failed to update the integration.',
+    deleteFailed: 'Failed to delete the integration.',
+    deleteConfirm: 'Delete this integration?',
+    deleteLabel: 'Delete',
+    headers: {
+      channel: 'Channel',
+      target: 'Target',
+      enabled: 'Enabled',
+      created: 'Created',
+      actions: 'Actions',
+    },
+    empty: 'No external channels connected.',
+    dateLocale: 'en-US',
+  },
+} as const satisfies Record<Locale, {
+  kindLabel: Record<CrmIntegrationKind, string>;
+  addIntegration: string;
+  save: string;
+  webhookRequired: string;
+  createFailed: string;
+  updateFailed: string;
+  deleteFailed: string;
+  deleteConfirm: string;
+  deleteLabel: string;
+  headers: Record<'channel' | 'target' | 'enabled' | 'created' | 'actions', string>;
+  empty: string;
+  dateLocale: string;
+}>;
+
+export default function IntegrationsAdmin({ initialIntegrations, locale }: Props) {
+  const copy = INTEGRATIONS_COPY[locale];
   const [integrations, setIntegrations] = useState(initialIntegrations);
   const [creating, setCreating] = useState(false);
   const [draft, setDraft] = useState<DraftState>(EMPTY);
@@ -35,13 +121,13 @@ export default function IntegrationsAdmin({ initialIntegrations }: Props) {
 
   async function createOne() {
     if (draft.kind !== 'mailchimp-stub' && !draft.webhookUrl.trim()) {
-      setError('Webhook URL을 입력해 주세요.');
+      setError(copy.webhookRequired);
       return;
     }
     setBusy(true);
     setError('');
     try {
-      const res = await fetch('/api/builder/crm/integrations', {
+      const res = await fetch(localizedCrmApiPath(locale, '/api/builder/crm/integrations'), {
         method: 'POST',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
@@ -53,13 +139,56 @@ export default function IntegrationsAdmin({ initialIntegrations }: Props) {
       });
       if (!res.ok) {
         const payload = (await res.json().catch(() => ({}))) as { error?: string };
-        setError(payload.error || 'Failed to create integration');
+        setError(payload.error || copy.createFailed);
         return;
       }
       const data = (await res.json()) as { integration: CrmIntegration };
       setIntegrations((prev) => [data.integration, ...prev]);
       setDraft(EMPTY);
       setCreating(false);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function toggleEnabled(integ: CrmIntegration) {
+    setBusy(true);
+    setError('');
+    try {
+      const res = await fetch(localizedCrmApiPath(locale, `/api/builder/crm/integrations/${integ.id}`), {
+        method: 'PATCH',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ enabled: !integ.enabled }),
+      });
+      if (!res.ok) {
+        const payload = (await res.json().catch(() => ({}))) as { error?: string };
+        setError(payload.error || copy.updateFailed);
+        return;
+      }
+      const data = (await res.json()) as { integration: CrmIntegration };
+      setIntegrations((prev) => prev.map((i) => (i.id === data.integration.id ? data.integration : i)));
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function removeOne(id: string) {
+    if (busy) return;
+    if (typeof window !== 'undefined' && !window.confirm(copy.deleteConfirm)) return;
+    setBusy(true);
+    setError('');
+    try {
+      const res = await fetch(localizedCrmApiPath(locale, `/api/builder/crm/integrations/${id}`), {
+        method: 'DELETE',
+        credentials: 'same-origin',
+      });
+      if (!res.ok) {
+        const payload = (await res.json().catch(() => ({}))) as { error?: string };
+        setError(payload.error || copy.deleteFailed);
+        return;
+      }
+      setIntegrations((prev) => prev.filter((i) => i.id !== id));
     } finally {
       setBusy(false);
     }
@@ -80,7 +209,7 @@ export default function IntegrationsAdmin({ initialIntegrations }: Props) {
           data-testid="crm-integration-create-toggle"
           style={primaryButton}
         >
-          + 연동 추가
+          {copy.addIntegration}
         </button>
       </div>
 
@@ -93,9 +222,9 @@ export default function IntegrationsAdmin({ initialIntegrations }: Props) {
             }
             style={inputStyle}
           >
-            {(Object.keys(KIND_LABEL) as CrmIntegrationKind[]).map((k) => (
+            {(Object.keys(copy.kindLabel) as CrmIntegrationKind[]).map((k) => (
               <option key={k} value={k}>
-                {KIND_LABEL[k]}
+                {copy.kindLabel[k]}
               </option>
             ))}
           </select>
@@ -115,7 +244,7 @@ export default function IntegrationsAdmin({ initialIntegrations }: Props) {
             data-testid="crm-integration-create-submit"
             style={primaryButton}
           >
-            저장
+            {copy.save}
           </button>
         </div>
       ) : null}
@@ -130,17 +259,18 @@ export default function IntegrationsAdmin({ initialIntegrations }: Props) {
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, minWidth: 640 }}>
           <thead>
             <tr style={{ background: '#f1f5f9', textAlign: 'left' }}>
-              <th style={th}>채널</th>
-              <th style={th}>대상</th>
-              <th style={th}>활성</th>
-              <th style={th}>생성</th>
+              <th style={th}>{copy.headers.channel}</th>
+              <th style={th}>{copy.headers.target}</th>
+              <th style={th}>{copy.headers.enabled}</th>
+              <th style={th}>{copy.headers.created}</th>
+              <th style={th}>{copy.headers.actions}</th>
             </tr>
           </thead>
           <tbody>
             {integrations.length === 0 ? (
               <tr>
-                <td colSpan={4} style={{ padding: 24, textAlign: 'center', color: '#94a3b8' }}>
-                  연결된 외부 채널이 없습니다.
+                <td colSpan={5} style={{ padding: 24, textAlign: 'center', color: '#94a3b8' }}>
+                  {copy.empty}
                 </td>
               </tr>
             ) : (
@@ -158,12 +288,34 @@ export default function IntegrationsAdmin({ initialIntegrations }: Props) {
                         fontSize: 11,
                       }}
                     >
-                      {KIND_LABEL[integ.kind]}
+                      {copy.kindLabel[integ.kind]}
                     </span>
                   </td>
                   <td style={{ ...td, wordBreak: 'break-all' }}>{integ.webhookUrl ?? '—'}</td>
                   <td style={td}>{integ.enabled ? 'ON' : 'OFF'}</td>
-                  <td style={td}>{new Date(integ.createdAt).toLocaleDateString('ko-KR')}</td>
+                  <td style={td}>{formatDate(integ.createdAt, locale)}</td>
+                  <td style={td}>
+                    <div style={{ display: 'flex', gap: 8 }}>
+                      <button
+                        type="button"
+                        disabled={busy}
+                        onClick={() => void toggleEnabled(integ)}
+                        data-testid={`crm-integration-toggle-${integ.id}`}
+                        style={{ padding: '4px 10px', borderRadius: 6, border: 'none', cursor: busy ? 'default' : 'pointer', color: '#fff', background: integ.enabled ? '#16a34a' : '#94a3b8' }}
+                      >
+                        {integ.enabled ? 'ON' : 'OFF'}
+                      </button>
+                      <button
+                        type="button"
+                        disabled={busy}
+                        onClick={() => void removeOne(integ.id)}
+                        data-testid={`crm-integration-delete-${integ.id}`}
+                        style={{ padding: '4px 10px', borderRadius: 6, border: '1px solid #fecaca', background: '#fff', color: '#dc2626', cursor: busy ? 'default' : 'pointer' }}
+                      >
+                        {copy.deleteLabel}
+                      </button>
+                    </div>
+                  </td>
                 </tr>
               ))
             )}
@@ -180,6 +332,11 @@ const inputStyle: React.CSSProperties = {
   borderRadius: 6,
   fontSize: 13,
 };
+
+function localizedCrmApiPath(locale: Locale, path: string): string {
+  if (locale === 'ko') return path;
+  return `${path}?locale=${encodeURIComponent(locale)}`;
+}
 
 const primaryButton: React.CSSProperties = {
   padding: '6px 12px',

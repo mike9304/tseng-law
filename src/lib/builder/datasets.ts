@@ -1,7 +1,30 @@
 import type { ColumnPost } from '@/lib/columns';
+import {
+  attorneyProfiles,
+  getAttorneyProfileSlugs,
+} from '@/data/attorney-profiles';
 import { serviceAreas } from '@/data/service-details';
+import {
+  readAttorneyProfileDatasetField,
+  readColumnDatasetField,
+  readServiceAreaDatasetField,
+  readServiceItemDatasetField,
+} from '@/lib/builder/dataset-record-fields';
+import {
+  resolvePublishedCmsColumnPosts,
+} from '@/lib/builder/site/cms-runtime';
+import {
+  resolvePublishedAttorneyRuntimeItems,
+  resolvePublishedServiceRuntimeItems,
+} from '@/lib/builder/site/runtime-items';
+import type { BuilderSiteDocument } from '@/lib/builder/site/types';
+import {
+  findCmsCollection,
+  resolveCmsCollectionDataset,
+} from '@/lib/builder/cms-collection-datasets';
 import type { Locale } from '@/lib/locales';
 import type {
+  BuilderAttorneyProfileItem,
   BuilderDatasetCollectionId,
   BuilderDatasetFilterOperator,
   BuilderDatasetMode,
@@ -15,6 +38,8 @@ import type {
   BuilderPageKey,
   BuilderSectionKey,
 } from '@/lib/builder/types';
+
+type BuilderDatasetPublishedSite = Pick<BuilderSiteDocument, 'cmsCollections' | 'sourceCollectionOverrides'>;
 
 export interface BuilderDatasetFieldDefinition {
   fieldId: string;
@@ -48,6 +73,13 @@ export interface BuilderPageDatasetOverview {
   title: string;
   description: string;
   collectionIds: BuilderDatasetCollectionId[];
+  defaultCollectionId: BuilderDatasetCollectionId;
+  modeOptions: BuilderDatasetMode[];
+  defaultLimit?: number;
+  limitOptions?: number[];
+  defaultSort?: BuilderPageDatasetSort[];
+  filterFields: BuilderDatasetFieldDefinition[];
+  sortFields: BuilderDatasetFieldDefinition[];
   currentBinding: BuilderPageDatasetBinding;
   sampleRecords: BuilderDatasetSampleRecord[];
   repeaterItems: BuilderDatasetRepeaterPreviewItem[];
@@ -79,6 +111,8 @@ export interface BuilderPageDatasetBindingPatch {
   filters?: BuilderPageDatasetFilter[];
   sort?: BuilderPageDatasetSort[];
   limit?: number;
+  /** WIX-PERFECT #6 Slice 3: bind to a user CMS collection (additive). */
+  cmsCollectionId?: string;
 }
 
 export interface BuilderDatasetRepeaterPreviewItem {
@@ -163,6 +197,43 @@ const builderBindableTargetDefinitions: readonly BuilderBindableTargetDefinition
     limitOptions: [3, 6],
     runtimeStatus: 'runtime-applied',
   },
+  {
+    targetId: 'home.attorney.profile',
+    pageKey: 'home',
+    sectionKey: 'home.attorney',
+    title: 'Attorney profile',
+    description:
+      'Attorney profile records for dynamic lawyer pages and profile cards. This binding resolves profile slug, text, image, email, and link fields.',
+    collectionIds: ['attorney-profiles'],
+    mode: 'list',
+    modeOptions: ['list'],
+    defaultCollectionId: 'attorney-profiles',
+    bindableFields: [
+      { fieldId: 'slug', label: 'Slug', valueKind: 'text' },
+      { fieldId: 'name', label: 'Name', valueKind: 'text' },
+      { fieldId: 'role', label: 'Role', valueKind: 'text' },
+      { fieldId: 'title', label: 'SEO title', valueKind: 'text' },
+      { fieldId: 'description', label: 'Description', valueKind: 'text' },
+      { fieldId: 'summary', label: 'Summary', valueKind: 'text' },
+      { fieldId: 'email', label: 'Email', valueKind: 'text' },
+      { fieldId: 'image', label: 'Profile image', valueKind: 'image' },
+      { fieldId: 'href', label: 'Lawyer link', valueKind: 'url' },
+    ],
+    filterFields: [
+      { fieldId: 'slug', label: 'Slug' },
+      { fieldId: 'name', label: 'Name' },
+      { fieldId: 'role', label: 'Role' },
+      { fieldId: 'email', label: 'Email' },
+    ],
+    sortFields: [
+      { fieldId: 'name', label: 'Name' },
+      { fieldId: 'role', label: 'Role' },
+      { fieldId: 'slug', label: 'Slug' },
+    ],
+    defaultLimit: 1,
+    limitOptions: [1, 3],
+    runtimeStatus: 'runtime-applied',
+  },
 ] as const;
 
 export function isBuilderDatasetTargetId(value: string | null | undefined): value is BuilderDatasetTargetId {
@@ -235,6 +306,8 @@ export function cloneBuilderPageDatasetBinding(
     filters: cloneDatasetFilters(binding.filters ?? []),
     sort: cloneDatasetSort(binding.sort ?? []),
     limit: typeof binding.limit === 'number' ? binding.limit : undefined,
+    // WIX-PERFECT #6 Slice 2: preserve the user-collection source across clone/normalize/save.
+    ...(binding.cmsCollectionId ? { cmsCollectionId: binding.cmsCollectionId } : {}),
   };
 }
 
@@ -272,11 +345,18 @@ export function readBuilderPageDatasetOverviews(
   pageKey: BuilderPageKey,
   document: Pick<BuilderPageDocument, 'pageKey' | 'datasets'>,
   locale: Locale,
-  posts: ColumnPost[]
+  posts: ColumnPost[],
+  publishedSite?: BuilderDatasetPublishedSite,
 ): BuilderPageDatasetOverview[] {
   return getBuilderBindableTargets(pageKey).map((definition) => {
     const binding = getBuilderPageDatasetBinding(document, definition.targetId);
-    const sampleRecords = readBuilderDatasetSampleRecords(definition.targetId, binding, locale, posts);
+    const sampleRecords = readBuilderDatasetSampleRecordsInternal(
+      definition.targetId,
+      binding,
+      locale,
+      posts,
+      publishedSite,
+    );
     const repeaterItems = sampleRecords.map(toRepeaterPreviewItem);
 
     return {
@@ -286,6 +366,13 @@ export function readBuilderPageDatasetOverviews(
       title: definition.title,
       description: definition.description,
       collectionIds: [...definition.collectionIds],
+      defaultCollectionId: definition.defaultCollectionId,
+      modeOptions: [...definition.modeOptions],
+      defaultLimit: definition.defaultLimit,
+      limitOptions: definition.limitOptions ? [...definition.limitOptions] : undefined,
+      defaultSort: definition.defaultSort ? cloneDatasetSort(definition.defaultSort) : undefined,
+      filterFields: definition.filterFields.map((field) => ({ ...field })),
+      sortFields: definition.sortFields.map((field) => ({ ...field })),
       currentBinding: cloneBuilderPageDatasetBinding(binding),
       sampleRecords,
       repeaterItems,
@@ -301,9 +388,22 @@ export function readBuilderDatasetRepeaterItems(
   targetId: BuilderDatasetTargetId,
   binding: BuilderPageDatasetBinding,
   locale: Locale,
-  posts: ColumnPost[]
+  posts: ColumnPost[],
+  publishedSite?: BuilderDatasetPublishedSite,
 ): BuilderDatasetRepeaterPreviewItem[] {
-  return readBuilderDatasetSampleRecords(targetId, binding, locale, posts).map(toRepeaterPreviewItem);
+  return readBuilderDatasetSampleRecords(targetId, binding, locale, posts, publishedSite).map(
+    toRepeaterPreviewItem,
+  );
+}
+
+export function readBuilderDatasetSampleRecords(
+  targetId: BuilderDatasetTargetId,
+  binding: BuilderPageDatasetBinding,
+  locale: Locale,
+  posts: ColumnPost[],
+  publishedSite?: BuilderDatasetPublishedSite,
+): BuilderDatasetSampleRecord[] {
+  return readBuilderDatasetSampleRecordsInternal(targetId, binding, locale, posts, publishedSite);
 }
 
 export function replaceBuilderPageDatasetLimit(
@@ -406,15 +506,73 @@ export function resolveServicesDatasetItems(
   }));
 }
 
-function readBuilderDatasetSampleRecords(
+export function resolveAttorneyProfileDatasetItems(
+  document: Pick<BuilderPageDocument, 'pageKey' | 'datasets'>,
+  locale: Locale,
+  sourceItems?: BuilderAttorneyProfileItem[]
+): BuilderAttorneyProfileItem[] {
+  const binding = getBuilderPageDatasetBinding(document, 'home.attorney.profile');
+  const limit = normalizeLimit(binding.limit, getBuilderBindableTarget('home.attorney.profile').defaultLimit);
+  const records = sourceItems && sourceItems.length > 0
+    ? sourceItems
+    : getAttorneyProfileSlugs().map((slug) => {
+        const profile = attorneyProfiles[locale][slug];
+        return {
+          slug: profile.slug,
+          name: profile.name,
+          role: profile.role,
+          title: profile.title,
+          description: profile.description,
+          email: profile.email,
+          image: profile.image,
+          imageAltText: `${profile.name} ${profile.role}`,
+          imageFocalPoint: { x: 0.5, y: 0.5 },
+          summary: profile.summary,
+          href: `/${locale}/lawyers/${profile.slug}`,
+        };
+      });
+
+  return applyDatasetLimit(
+    sortDatasetRecords(
+      filterDatasetRecords(records, binding, readAttorneyProfileDatasetField),
+      binding,
+      readAttorneyProfileDatasetField
+    ),
+    limit
+  );
+}
+
+function readBuilderDatasetSampleRecordsInternal(
   targetId: BuilderDatasetTargetId,
   binding: BuilderPageDatasetBinding,
   locale: Locale,
-  posts: ColumnPost[]
+  posts: ColumnPost[],
+  publishedSite?: BuilderDatasetPublishedSite,
 ) {
+  // WIX-PERFECT #6 Slice 2: a binding may source from a USER-created CMS collection.
+  // Branch FIRST (additive) — when cmsCollectionId is set and the collection exists on the
+  // site, resolve its records through the same filter→sort→limit contract and return the
+  // shared row shape. Built-in targets fall through to the untouched switch below.
+  if (binding.cmsCollectionId) {
+    const collection = findCmsCollection(publishedSite, binding.cmsCollectionId);
+    if (collection) {
+      return resolveCmsCollectionDataset(collection, {
+        filters: binding.filters,
+        sort: binding.sort,
+        limit: binding.limit,
+        routeBase: `/${locale}/${collection.slug}`,
+      });
+    }
+    // bound but collection missing (deleted/unpublished) → empty, like the built-in safe path
+    return [];
+  }
+
   switch (targetId) {
     case 'home.insights.feed':
-      return resolveInsightsDatasetPosts({ pageKey: 'home', datasets: [binding] }, posts).map((post) => ({
+      return resolveInsightsDatasetPosts(
+        { pageKey: 'home', datasets: [binding] },
+        publishedSite ? resolvePublishedCmsColumnPosts(publishedSite, locale) ?? posts : posts,
+      ).map((post) => ({
         recordId: post.slug,
         primaryLabel: post.title,
         secondaryLabel: `${post.categoryLabel} · ${post.dateDisplay || post.date}`,
@@ -438,32 +596,112 @@ function readBuilderDatasetSampleRecords(
         },
       }));
     case 'home.services.list':
-      return applyDatasetLimit(
-        sortDatasetRecords(
-          filterDatasetRecords(serviceAreas, binding, (service, fieldId) =>
-            readServiceAreaDatasetField(service, fieldId, locale)
+      {
+        const publishedServices = publishedSite
+          ? resolvePublishedServiceRuntimeItems(
+              publishedSite,
+              locale,
+              resolvePublishedCmsColumnPosts(publishedSite, locale) ?? posts
+            )
+          : null;
+
+        if (publishedServices) {
+          return publishedServices.map((service) => ({
+            recordId: service.href.split('/').filter(Boolean).pop() ?? service.title,
+            primaryLabel: service.title,
+            secondaryLabel: service.description,
+            routePath: service.href,
+            fieldValues: {
+              slug: service.href.split('/').filter(Boolean).pop() ?? service.title,
+              title: service.title,
+              label: service.title,
+              description: service.description,
+              summary: service.description,
+              details: (service.details ?? []).join('\n'),
+              href: service.href,
+              url: service.href,
+            },
+          }));
+        }
+
+        return applyDatasetLimit(
+          sortDatasetRecords(
+            filterDatasetRecords(serviceAreas, binding, (service, fieldId) =>
+              readServiceAreaDatasetField(service, fieldId, locale)
+            ),
+            binding,
+            (service, fieldId) => readServiceAreaDatasetField(service, fieldId, locale)
           ),
-          binding,
-          (service, fieldId) => readServiceAreaDatasetField(service, fieldId, locale)
-        ),
-        normalizeLimit(binding.limit, getBuilderBindableTarget(targetId).defaultLimit)
-      )
-        .map((service) => ({
-          recordId: service.slug,
-          primaryLabel: service.title[locale],
-          secondaryLabel: service.subtitle[locale],
-          routePath: `/${locale}/services/${service.slug}`,
-          fieldValues: {
-            slug: service.slug,
-            title: service.title[locale],
-            label: service.title[locale],
-            description: service.subtitle[locale],
-            summary: service.subtitle[locale],
-            details: service.keyPoints[locale].join('\n'),
-            href: `/${locale}/services/${service.slug}`,
-            url: `/${locale}/services/${service.slug}`,
-          },
-        }));
+          normalizeLimit(binding.limit, getBuilderBindableTarget(targetId).defaultLimit)
+        )
+          .map((service) => ({
+            recordId: service.slug,
+            primaryLabel: service.title[locale],
+            secondaryLabel: service.subtitle[locale],
+            routePath: `/${locale}/services/${service.slug}`,
+            fieldValues: {
+              slug: service.slug,
+              title: service.title[locale],
+              label: service.title[locale],
+              description: service.subtitle[locale],
+              summary: service.subtitle[locale],
+              details: service.keyPoints[locale].join('\n'),
+              href: `/${locale}/services/${service.slug}`,
+              url: `/${locale}/services/${service.slug}`,
+            },
+          }));
+      }
+    case 'home.attorney.profile':
+      {
+        const publishedProfiles = publishedSite
+          ? resolvePublishedAttorneyRuntimeItems(publishedSite, locale)
+          : null;
+
+        if (publishedProfiles) {
+          return publishedProfiles.map((profile) => ({
+            recordId: profile.slug,
+            primaryLabel: profile.name,
+            secondaryLabel: `${profile.role} · ${profile.email}`,
+            routePath: profile.href,
+            fieldValues: {
+              slug: profile.slug,
+              name: profile.name,
+              title: profile.title,
+              label: profile.name,
+              role: profile.role,
+              description: profile.description,
+              summary: profile.summary.join('\n'),
+              email: profile.email,
+              image: profile.image,
+              src: profile.image,
+              href: profile.href,
+              url: profile.href,
+            },
+          }));
+        }
+
+        return resolveAttorneyProfileDatasetItems({ pageKey: 'home', datasets: [binding] }, locale)
+          .map((profile) => ({
+            recordId: profile.slug,
+            primaryLabel: profile.name,
+            secondaryLabel: `${profile.role} · ${profile.email}`,
+            routePath: profile.href,
+            fieldValues: {
+              slug: profile.slug,
+              name: profile.name,
+              title: profile.title,
+              label: profile.name,
+              role: profile.role,
+              description: profile.description,
+              summary: profile.summary.join('\n'),
+              email: profile.email,
+              image: profile.image,
+              src: profile.image,
+              href: profile.href,
+              url: profile.href,
+            },
+          }));
+      }
     default:
       return assertNever(targetId);
   }
@@ -496,13 +734,49 @@ function normalizeBuilderDatasetBinding(
     mode: definition.modeOptions.includes(candidate?.mode as BuilderDatasetMode)
       ? (candidate?.mode as BuilderDatasetMode)
       : definition.mode,
-    filters: normalizeDatasetFilters(definition, candidate?.filters),
-    sort: normalizeDatasetSort(definition, candidate?.sort ?? definition.defaultSort),
+    // WIX-PERFECT #6 Slice 2: a user-collection binding's filters/sort reference the
+    // collection's OWN field keys, not the built-in target's filterFields — so when
+    // cmsCollectionId is set, pass them through (lightly sanitized) instead of validating
+    // against the built-in definition. Built-in bindings keep their strict normalization.
+    filters: candidate?.cmsCollectionId
+      ? sanitizeCmsBindingFilters(candidate?.filters)
+      : normalizeDatasetFilters(definition, candidate?.filters),
+    sort: candidate?.cmsCollectionId
+      ? sanitizeCmsBindingSort(candidate?.sort)
+      : normalizeDatasetSort(definition, candidate?.sort ?? definition.defaultSort),
     limit:
       typeof definition.defaultLimit === 'number'
         ? normalizeLimit(candidate?.limit, definition.defaultLimit)
-        : undefined,
+        : normalizeLimit(candidate?.limit, candidate?.cmsCollectionId ? 12 : undefined),
+    ...(candidate?.cmsCollectionId ? { cmsCollectionId: candidate.cmsCollectionId } : {}),
   };
+}
+
+/** Sanitize filters for a user-collection binding (field keys are the collection's own). */
+function sanitizeCmsBindingFilters(input: unknown): BuilderPageDatasetFilter[] {
+  if (!Array.isArray(input)) return [];
+  return input
+    .filter((item): item is Partial<BuilderPageDatasetFilter> => !!item && typeof item === 'object')
+    .map((filter) => ({
+      fieldId: typeof filter.fieldId === 'string' ? filter.fieldId.trim().slice(0, 80) : '',
+      operator: normalizeFilterOperator(filter.operator),
+      value: typeof filter.value === 'string' ? filter.value.trim().slice(0, 120) : '',
+    }))
+    .filter((filter) => filter.fieldId && filter.value)
+    .slice(0, 6);
+}
+
+/** Sanitize sort rules for a user-collection binding. */
+function sanitizeCmsBindingSort(input: unknown): BuilderPageDatasetSort[] {
+  if (!Array.isArray(input)) return [];
+  return input
+    .filter((item): item is Partial<BuilderPageDatasetSort> => !!item && typeof item === 'object')
+    .map((rule): BuilderPageDatasetSort => ({
+      fieldId: typeof rule.fieldId === 'string' ? rule.fieldId.trim().slice(0, 80) : '',
+      direction: rule.direction === 'desc' ? 'desc' : 'asc',
+    }))
+    .filter((rule) => rule.fieldId)
+    .slice(0, 4);
 }
 
 function normalizeDatasetFilters(
@@ -595,53 +869,6 @@ function sortDatasetRecords<TRecord>(
 
 function applyDatasetLimit<TRecord>(records: TRecord[], limit: number | undefined): TRecord[] {
   return typeof limit === 'number' ? records.slice(0, limit) : records;
-}
-
-function readColumnDatasetField(post: ColumnPost, fieldId: string): string {
-  switch (fieldId) {
-    case 'slug':
-      return post.slug;
-    case 'title':
-      return post.title;
-    case 'category':
-      return post.category;
-    case 'categoryLabel':
-      return post.categoryLabel;
-    case 'date':
-      return post.date;
-    default:
-      return '';
-  }
-}
-
-function readServiceItemDatasetField(item: BuilderServiceItem, fieldId: string): string {
-  switch (fieldId) {
-    case 'title':
-      return item.title;
-    case 'description':
-      return item.description;
-    case 'href':
-      return item.href;
-    default:
-      return '';
-  }
-}
-
-function readServiceAreaDatasetField(
-  service: (typeof serviceAreas)[number],
-  fieldId: string,
-  locale: Locale
-): string {
-  switch (fieldId) {
-    case 'title':
-      return service.title[locale];
-    case 'description':
-      return service.subtitle[locale];
-    case 'href':
-      return service.slug;
-    default:
-      return '';
-  }
 }
 
 function normalizeLimit(value: number | undefined, fallback: number | undefined) {

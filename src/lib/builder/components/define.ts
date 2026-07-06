@@ -17,6 +17,7 @@ type AnyComponent = ComponentType<any>;
 
 export interface BuilderComponentInspectorProps {
   node: BuilderCanvasNode;
+  locale?: Locale;
   onUpdate: (props: Record<string, unknown>) => void;
   disabled?: boolean;
   onRequestAssetLibrary?: () => void;

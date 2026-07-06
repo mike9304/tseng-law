@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { readBuilderCollectionSummaries } from '@/lib/builder/cms';
+import { readBuilderCollectionDetailsForSite } from '@/lib/builder/cms';
 import {
   BuilderCmsValidationError,
   createEditableBuilderCmsCollection,
@@ -22,7 +22,7 @@ export async function GET(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
-    const collections = readBuilderCollectionSummaries(locale);
+    const collections = await readBuilderCollectionDetailsForSite(params.siteId, locale);
     const editableCollections = await listEditableBuilderCmsCollections(params.siteId, locale);
     return NextResponse.json({ ok: true, collections, editableCollections });
   } catch (error) {

@@ -22,7 +22,7 @@ test.describe('/ko/columns visitor search', () => {
     await searchInput.fill(probe);
     await page.locator('.columns-search-submit').click();
 
-    await expect.poll(() => page.url()).toContain('q=');
+    expect(new URL(page.url()).searchParams.get('q')).toBe(probe);
     const filteredCount = Number(await grid.getAttribute('data-columns-visible-count'));
     expect(filteredCount).toBeGreaterThan(0);
     expect(filteredCount).toBeLessThanOrEqual(initialCount);
@@ -32,7 +32,7 @@ test.describe('/ko/columns visitor search', () => {
 
     // Clear search restores full grid
     await page.locator('[data-columns-search-clear="true"]').click();
-    await expect.poll(() => page.url()).not.toContain('q=');
+    expect(new URL(page.url()).searchParams.has('q')).toBe(false);
     await expect.poll(async () => Number(await grid.getAttribute('data-columns-visible-count'))).toBe(initialCount);
   });
 });

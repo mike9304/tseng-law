@@ -1,52 +1,94 @@
 import { expect, test } from '@playwright/test';
+import {
+  createBuilderPage,
+  createCmsRecord,
+  createEditableCollection,
+  deleteBuilderPage,
+  deleteEditableCollection,
+  expectArray,
+  expectHookLog,
+  expectRecord,
+  isRecord,
+  mutationHeaders,
+  readDraftForSave,
+  registerStoredHook,
+  saveDraft,
+} from './helpers/apps-hooks';
 
-function mutationHeaders(scope: string): Record<string, string> {
-  const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'apps-hooks';
-  return { 'x-forwarded-for': `pw-${safeScope}` };
-}
-
-test('/api/builder/apps/hooks lists registered hooks and accepts dormant metadata POST', async ({ page }) => {
+test('/api/builder/apps/hooks registers, invokes, and logs stored hook code', async ({ page }) => {
   test.setTimeout(60_000);
 
   const token = `hooks-${Date.now().toString(36)}`;
   const appId = `pw-app-${token}`.toLowerCase().slice(0, 60);
   const hookId = `${appId}-publish-1`.slice(0, 60);
+  const marker = `stored-hook-${token}`;
+  const pageId = `page-${token}`;
+  const reference = `${appId}:${hookId}`;
 
   await page.setExtraHTTPHeaders(mutationHeaders(token));
 
-  // 1. POST a dormant metadata record
   const postRes = await page.request.post('/api/builder/apps/hooks', {
     data: {
       appId,
       kind: 'publish.completed',
       hookId,
       priority: 5,
-      code: 'function handler(event, ctx) { ctx.log("test"); }',
+      code: `function handler(event, ctx, app) { ctx.log("${marker}:" + event.payload.pageId + ":" + app.hookId); return "stored-ok"; }`,
     },
     headers: { 'Content-Type': 'application/json', ...mutationHeaders(token) },
   });
   expect(postRes.status()).toBe(201);
-  const created = (await postRes.json()) as {
-    ok: boolean;
-    hook: { hookId: string; appId: string; kind: string; priority: number; hasHandler: boolean };
-  };
+  const created = expectRecord(await postRes.json(), 'hook create response');
+  const createdHook = expectRecord(created.hook, 'created hook');
   expect(created.ok).toBe(true);
-  expect(created.hook.hookId).toBe(hookId);
-  expect(created.hook.appId).toBe(appId);
-  expect(created.hook.kind).toBe('publish.completed');
-  expect(created.hook.priority).toBe(5);
-  // Dormant — no handler bound
-  expect(created.hook.hasHandler).toBe(false);
+  expect(createdHook.hookId).toBe(hookId);
+  expect(createdHook.appId).toBe(appId);
+  expect(createdHook.kind).toBe('publish.completed');
+  expect(createdHook.priority).toBe(5);
+  expect(createdHook.hasHandler).toBe(false);
+  expect(typeof createdHook.codeSecretId, 'stored hook code requires NEXTAUTH_SECRET or BUILDER_SECRET_KEK').toBe('string');
 
-  // 2. GET should include the new record
   const listRes = await page.request.get('/api/builder/apps/hooks');
   expect(listRes.status()).toBe(200);
-  const list = (await listRes.json()) as {
-    ok: boolean;
-    hooks: Array<{ hookId: string; appId: string; kind: string }>;
-  };
+  const list = expectRecord(await listRes.json(), 'hook list response');
+  const hooks = expectArray(list.hooks, 'hook list');
   expect(list.ok).toBe(true);
-  expect(list.hooks.some((h) => h.hookId === hookId && h.appId === appId)).toBe(true);
+  expect(hooks.some((hook) => isRecord(hook) && hook.hookId === hookId && hook.appId === appId)).toBe(true);
+
+  const invokeRes = await page.request.post('/api/builder/apps/hooks/invoke?locale=en', {
+    data: {
+      kind: 'publish.completed',
+      payload: {
+        siteId: 'site-a',
+        pageId,
+        revision: 3,
+        publishedAt: new Date().toISOString(),
+      },
+    },
+    headers: { 'Content-Type': 'application/json', ...mutationHeaders(`${token}-invoke`) },
+  });
+  expect(invokeRes.status()).toBe(200);
+  const invoked = expectRecord(await invokeRes.json(), 'hook invoke response');
+  const summary = expectRecord(invoked.summary, 'hook invoke summary');
+  const stored = expectRecord(summary.stored, 'stored hook invoke summary');
+  const invokedHooks = expectArray(stored.hooks, 'stored hook invocation list');
+  expect(invoked.ok).toBe(true);
+  expect(summary.kind).toBe('publish.completed');
+  expect(stored.invoked).toBeGreaterThanOrEqual(1);
+  expect(invokedHooks.some((hook) => isRecord(hook) && hook.hookId === hookId && hook.ok === true)).toBe(true);
+
+  const logsRes = await page.request.get(
+    `/api/builder/dev/logs?source=app&reference=${encodeURIComponent(reference)}&limit=20`,
+  );
+  expect(logsRes.status()).toBe(200);
+  const logs = expectRecord(await logsRes.json(), 'app logs response');
+  const entries = expectArray(logs.entries, 'app log entries');
+  expect(entries.some((entry) => (
+    isRecord(entry)
+      && entry.level === 'log'
+      && typeof entry.message === 'string'
+      && entry.message.includes(`${marker}:${pageId}:${hookId}`)
+  ))).toBe(true);
 });
 
 test('/api/builder/apps/hooks rejects invalid kind', async ({ page }) => {
@@ -60,6 +102,69 @@ test('/api/builder/apps/hooks rejects invalid kind', async ({ page }) => {
     headers: { 'Content-Type': 'application/json', ...mutationHeaders('hooks-invalid') },
   });
   expect(res.status()).toBe(400);
-  const body = (await res.json()) as { ok: boolean; error?: string };
+  const body = expectRecord(await res.json(), 'invalid hook response');
   expect(body.ok).toBe(false);
+});
+
+test('stored hooks run from automatic editor, public, and CMS lifecycle surfaces', async ({ page }) => {
+  test.setTimeout(120_000);
+
+  const token = `auto-${Date.now().toString(36)}`;
+  const appId = `pw-auto-${token}`.toLowerCase().slice(0, 60);
+  const collectionId = `pw-app-hooks-${token}`.toLowerCase().slice(0, 60);
+  let pageId = '';
+
+  await page.setExtraHTTPHeaders(mutationHeaders(token));
+
+  const editorMarker = `editor-lifecycle-${token}`;
+  const editorHookId = `${appId}-editor`.slice(0, 60);
+  const editorReference = await registerStoredHook(page, {
+    token,
+    appId,
+    hookId: editorHookId,
+    kind: 'editor.page-save',
+    marker: editorMarker,
+  });
+
+  const publicMarker = `public-lifecycle-${token}`;
+  const publicHookId = `${appId}-public`.slice(0, 60);
+  const publicReference = await registerStoredHook(page, {
+    token,
+    appId,
+    hookId: publicHookId,
+    kind: 'public.page-render',
+    marker: publicMarker,
+  });
+
+  const cmsMarker = `cms-lifecycle-${token}`;
+  const cmsHookId = `${appId}-cms`.slice(0, 60);
+  const cmsReference = await registerStoredHook(page, {
+    token,
+    appId,
+    hookId: cmsHookId,
+    kind: 'cms.record-created',
+    marker: cmsMarker,
+  });
+
+  try {
+    pageId = await createBuilderPage(page.request, token);
+    const draft = await readDraftForSave(page.request, pageId, token);
+    await saveDraft(page.request, pageId, token, draft);
+    await expectHookLog(page, editorReference, `${editorMarker}:editor.page-save:${editorHookId}`);
+
+    const publicResponse = await page.request.get(`/ko?appsHookSmoke=${encodeURIComponent(token)}`, {
+      failOnStatusCode: false,
+    });
+    expect(publicResponse.status()).toBe(200);
+    await expectHookLog(page, publicReference, `${publicMarker}:public.page-render:${publicHookId}`);
+
+    await createEditableCollection(page.request, collectionId, token);
+    await createCmsRecord(page.request, collectionId, token);
+    await expectHookLog(page, cmsReference, `${cmsMarker}:cms.record-created:${cmsHookId}`);
+  } finally {
+    if (pageId) {
+      await deleteBuilderPage(page.request, pageId, token);
+    }
+    await deleteEditableCollection(page.request, collectionId, token);
+  }
 });

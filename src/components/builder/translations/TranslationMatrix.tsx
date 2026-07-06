@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import type { TranslationEntry, TranslationStatus } from '@/lib/builder/translations/types';
 import TranslationCell from './TranslationCell';
+import { getTranslationCopy } from './translation-copy';
 import styles from './TranslationManager.module.css';
 
 const PAGE_SIZE = 100;
@@ -25,6 +26,7 @@ export default function TranslationMatrix({
   onSave: (key: string, locale: Locale, text: string, status: TranslationStatus) => Promise<void>;
   onTranslate: (entry: TranslationEntry, locale: Locale) => Promise<void>;
 }) {
+  const copy = getTranslationCopy(sourceLocale);
   // Deduplicate entries by key — the server can return duplicates (e.g.
   // the same string appearing in multiple content surfaces), which
   // triggers a React "two children with the same key" warning and
@@ -54,7 +56,7 @@ export default function TranslationMatrix({
   if (uniqueEntries.length === 0) {
     return (
       <div className={styles.matrixWrap}>
-        <div className={styles.empty}>No translation entries match the current filters.</div>
+        <div className={styles.empty}>{copy.matrixNoEntries}</div>
       </div>
     );
   }
@@ -64,10 +66,10 @@ export default function TranslationMatrix({
       <table className={styles.matrix}>
         <thead>
           <tr>
-            <th>Content</th>
-            <th>Source - {sourceLocale}</th>
+            <th>{copy.matrixContent}</th>
+            <th>{copy.matrixSource} - {sourceLocale}</th>
             {targetLocales.map((locale) => (
-              <th key={locale}>Target - {locale}</th>
+              <th key={locale}>{copy.matrixTarget} - {locale}</th>
             ))}
           </tr>
         </thead>

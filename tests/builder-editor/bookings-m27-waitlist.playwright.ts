@@ -1,5 +1,6 @@
 import { expect, test, type APIRequestContext } from '@playwright/test';
 import { dayOfWeeks } from '@/lib/builder/bookings/types';
+import { getBookingFlowCopy } from '@/lib/builder/bookings/bookings-copy';
 
 const baseStyle = {
   backgroundColor: 'transparent',
@@ -25,12 +26,6 @@ function mutationHeaders(scope: string): Record<string, string> {
   };
 }
 
-function todayPlus(days: number): string {
-  const date = new Date();
-  date.setDate(date.getDate() + days);
-  return date.toISOString().slice(0, 10);
-}
-
 function allWeek(start: string, end: string) {
   return Object.fromEntries(dayOfWeeks.map((day) => [day, [{ start, end }]]));
 }
@@ -48,7 +43,9 @@ async function createBuilderPage(request: APIRequestContext, slug: string, title
   const payload = (await response.json()) as { success?: boolean; pageId?: string; error?: string };
   expect(payload.success, payload.error).toBe(true);
   expect(payload.pageId).toBeTruthy();
-  return payload.pageId!;
+  const pageId = payload.pageId;
+  if (!pageId) throw new Error('Created page response did not include pageId');
+  return pageId;
 }
 
 async function currentDraftRevision(request: APIRequestContext, pageId: string): Promise<number> {
@@ -58,7 +55,9 @@ async function currentDraftRevision(request: APIRequestContext, pageId: string):
   expect(response.status()).toBe(200);
   const payload = (await response.json()) as { draft?: { revision?: number } };
   expect(typeof payload.draft?.revision).toBe('number');
-  return payload.draft!.revision!;
+  const revision = payload.draft?.revision;
+  if (typeof revision !== 'number') throw new Error('Draft response did not include revision');
+  return revision;
 }
 
 async function putDraft(request: APIRequestContext, pageId: string, expectedRevision: number, document: Record<string, unknown>): Promise<void> {
@@ -136,8 +135,9 @@ test.describe('M27 Bookings waitlist', () => {
 
   test('joins waitlist when no slots exist and promotes from admin dashboard', async ({ page }) => {
     const token = Date.now().toString(36);
-    const slug = `g-editor-m27-waitlist-${token}`;
+    const slug = `m27-waitlist-${token}`;
     const headers = mutationHeaders(token);
+    const copy = getBookingFlowCopy('ko');
     let pageId: string | null = null;
     let serviceId: string | null = null;
     let staffId: string | null = null;
@@ -204,20 +204,20 @@ test.describe('M27 Bookings waitlist', () => {
       await page.goto(`/ko/${slug}?m27=${token}`, { waitUntil: 'domcontentloaded' });
       const flow = page.locator('[data-booking-flow="true"]').first();
       await expect(flow).toBeVisible();
-      await flow.getByRole('button', { name: 'Continue' }).click();
-      await flow.getByRole('button', { name: 'Continue' }).click();
+      await flow.getByRole('button', { name: copy.labels.continue }).click();
+      await flow.getByRole('button', { name: copy.labels.continue }).click();
       await expect(flow.locator('[data-booking-waitlist="true"]')).toBeVisible();
-      await flow.getByLabel('Name').fill(`M27 대기 고객 ${token}`);
-      await flow.getByLabel('Email').fill(`m27-waitlist-${token}@example.com`);
-      await flow.getByLabel('Phone').fill('+82-10-1111-2222');
-      await flow.getByLabel('Notes').fill('빈 시간표라 대기 등록합니다.');
+      await flow.getByLabel(copy.labels.name).fill(`M27 대기 고객 ${token}`);
+      await flow.getByLabel(copy.labels.email).fill(`m27-waitlist-${token}@example.com`);
+      await flow.getByLabel(copy.labels.phone).fill('+82-10-1111-2222');
+      await flow.getByLabel(copy.labels.notes).fill('빈 시간표라 대기 등록합니다.');
       await flow.locator('[data-booking-waitlist="true"] input[type="checkbox"]').check();
 
       const waitlistResponsePromise = page.waitForResponse((response) =>
         response.url().includes('/api/booking/waitlist') && response.request().method() === 'POST',
         { timeout: 30_000 },
       );
-      await flow.getByRole('button', { name: 'Join waitlist' }).click();
+      await flow.getByRole('button', { name: copy.labels.joinWaitlist }).click();
       const waitlistResponse = await waitlistResponsePromise;
       expect(waitlistResponse.status()).toBe(201);
       const waitlistPayload = (await waitlistResponse.json()) as { waitlist: { waitlistId: string } };
@@ -243,14 +243,14 @@ test.describe('M27 Bookings waitlist', () => {
         response.url().includes(`/api/builder/bookings/waitlist/${waitlistId}/promote`) && response.request().method() === 'POST',
         { timeout: 45_000 },
       );
-      await row.getByRole('button', { name: 'Promote' }).click();
+      await row.getByRole('button', { name: '승격' }).click();
       const promoteResponse = await promoteResponsePromise;
       expect(promoteResponse.status()).toBe(201);
       const promotePayload = (await promoteResponse.json()) as { booking: { bookingId: string }; waitlist: { status: string; promotedBookingId?: string } };
       bookingId = promotePayload.booking.bookingId;
       expect(promotePayload.waitlist.status).toBe('promoted');
       expect(promotePayload.waitlist.promotedBookingId).toBe(bookingId);
-      await expect(row).toContainText('promoted');
+      await expect(row).toContainText('승격됨');
       await expect(page.locator(`[data-booking-row="${bookingId}"]`)).toBeVisible();
     } finally {
       if (bookingId) {

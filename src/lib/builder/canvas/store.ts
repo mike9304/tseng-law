@@ -31,12 +31,14 @@ import {
   type ResponsiveConfig,
   type ResponsiveOverride,
 } from '@/lib/builder/canvas/types';
-import { autoFitMobileTree, type Viewport } from '@/lib/builder/canvas/responsive';
+import { autoFitMobileTree, hasResponsiveOverride, type Viewport } from '@/lib/builder/canvas/responsive';
 import {
   createHistory,
+  jumpHistory,
   pushHistory,
   undoHistory,
   redoHistory,
+  renameHistoryEntry,
   type HistoryState,
 } from '@/lib/builder/canvas/history';
 import {
@@ -46,6 +48,7 @@ import {
   resolveCanvasNodeAbsoluteRect,
   resolveCanvasNodeLocalRect,
 } from '@/lib/builder/canvas/tree';
+import { isTopLevelFlowSection } from '@/lib/builder/canvas/flow';
 import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import {
   isBuilderRichText,
@@ -86,6 +89,7 @@ interface BuilderCanvasStoreState {
   document: BuilderCanvasDocument | null;
   selectedNodeId: string | null;
   selectedNodeIds: string[];
+  selectedNodeIdSet: ReadonlySet<string>;
   selectedSurfaceKey: string | null;
   setSelectedSurfaceKey: (key: string | null) => void;
   activeGroupId: string | null;
@@ -106,7 +110,7 @@ interface BuilderCanvasStoreState {
   interactivePreview: BuilderCanvasInteractivePreviewState;
   setInteractivePreviewIndex: (section: BuilderCanvasPreviewSection, index: number) => void;
   applyMobileAutoFit: (mobileWidth?: number) => void;
-  replaceDocument: (document: BuilderCanvasDocument) => void;
+  replaceDocument: (document: BuilderCanvasDocument, options?: { preserveSelection?: boolean }) => void;
   setSelectedNodeId: (nodeId: string | null) => void;
   setSelectedNodeIds: (nodeIds: string[], primaryNodeId?: string | null) => void;
   toggleNodeSelection: (nodeId: string) => void;
@@ -118,12 +122,15 @@ interface BuilderCanvasStoreState {
   cancelMutationSession: () => void;
   undo: () => void;
   redo: () => void;
+  jumpToHistorySnapshot: (cursor: number) => void;
+  renameHistorySnapshot: (cursor: number, name: string) => void;
   copySelectedNodesToClipboard: () => void;
   cutSelectedNodesToClipboard: () => void;
   pasteClipboardNodes: () => void;
   alignSelectedNodes: (action: BuilderCanvasAlignmentAction) => void;
   distributeSelectedNodes: (action: BuilderCanvasDistributeAction) => void;
   matchSelectedNodesSize: (action: BuilderCanvasMatchSizeAction) => void;
+  groupNodeIds: (nodeIds: string[], primaryNodeId?: string | null) => void;
   groupSelectedNodes: () => void;
   ungroupSelectedNode: () => void;
   toggleSelectedNodeLock: () => void;
@@ -134,8 +141,13 @@ interface BuilderCanvasStoreState {
    * Caller is responsible for assigning fresh, unique ids and consistent
    * `parentId` references inside the set. The store will append them
    * with rising zIndex values and select the root.
-   */
-  addNodes: (nodes: BuilderCanvasNode[], rootNodeId?: string | null) => void;
+  */
+  addNodes: (nodes: BuilderCanvasNode[], rootNodeId?: string | null, parentNodeId?: string | null) => void;
+  replaceSelectedNodeWithNodes: (
+    nodes: BuilderCanvasNode[],
+    rootNodeId?: string | null,
+    selectionNodeIds?: readonly string[],
+  ) => void;
   duplicateSelectedNode: () => void;
   updateSelectedNodes: (
     nodeIds: string[],
@@ -152,6 +164,12 @@ interface BuilderCanvasStoreState {
     viewport: Viewport,
     mode?: MutationMode,
     zIndexById?: Map<string, number> | Record<string, number>,
+  ) => void;
+  updateSingleNodeRectForViewport: (
+    nodeId: string,
+    rect: CanvasNodeRect,
+    viewport: Viewport,
+    mode?: MutationMode,
   ) => void;
   updateNodeContent: (nodeId: string, content: Record<string, unknown>, mode?: MutationMode) => void;
   updateNodeStyle: (nodeId: string, style: Partial<BuilderCanvasNodeStyle>, mode?: MutationMode) => void;
@@ -173,6 +191,7 @@ interface BuilderCanvasStoreState {
   ) => void;
   /** Clear all responsive overrides for a node at the given viewport. */
   resetResponsiveOverride: (nodeId: string, viewport: Viewport) => void;
+  resetResponsiveOverridesForViewport: (viewport: Viewport) => void;
 }
 
 function sortNodes(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
@@ -186,6 +205,7 @@ const TRANSIENT_UPDATE_NODES_OPTIONS: UpdateNodesOptions = {
   touchUpdatedAt: false,
 };
 const EMPTY_NODES_BY_ID = new Map<string, BuilderCanvasNode>();
+const EMPTY_SELECTED_NODE_ID_SET = new Set<string>();
 const jsonContentSignatureCache = new WeakMap<object, string>();
 
 function createDefaultInteractivePreviewState(): BuilderCanvasInteractivePreviewState {
@@ -267,6 +287,33 @@ function revealPreviewForSelection(
   return next;
 }
 
+function areArraysEqual<T>(left: readonly T[], right: readonly T[]): boolean {
+  return left.length === right.length && left.every((value, index) => value === right[index]);
+}
+
+function createSelectedNodeIdSet(selectedNodeIds: readonly string[]): ReadonlySet<string> {
+  return selectedNodeIds.length === 0 ? EMPTY_SELECTED_NODE_ID_SET : new Set(selectedNodeIds);
+}
+
+function resolveSelectedNodeIdSetForState(
+  state: BuilderCanvasStoreState,
+  selectedNodeIds: string[],
+): ReadonlySet<string> {
+  return selectedNodeIds === state.selectedNodeIds
+    ? state.selectedNodeIdSet
+    : createSelectedNodeIdSet(selectedNodeIds);
+}
+
+function areInteractivePreviewStatesEqual(
+  left: BuilderCanvasInteractivePreviewState,
+  right: BuilderCanvasInteractivePreviewState,
+): boolean {
+  return left.servicesOpenIndex === right.servicesOpenIndex
+    && left.faqOpenIndex === right.faqOpenIndex
+    && areArraysEqual(left.servicesRevealedIndices, right.servicesRevealedIndices)
+    && areArraysEqual(left.faqRevealedIndices, right.faqRevealedIndices);
+}
+
 function updateNodesOptionsForMode(mode: MutationMode): UpdateNodesOptions | undefined {
   return mode === 'transient' ? TRANSIENT_UPDATE_NODES_OPTIONS : undefined;
 }
@@ -316,12 +363,44 @@ function cloneDefaultContent(content: Record<string, unknown>): Record<string, u
   return JSON.parse(JSON.stringify(content)) as Record<string, unknown>;
 }
 
+/**
+ * content 내부의 node-id 참조(form steps.fieldNodeIds)를 복제 idMap 으로 remap.
+ * steps 가 없거나 remap 대상이 없으면 원본 content 를 그대로 반환(불필요한 복사 회피).
+ * remap 시에는 원본 변형을 막기 위해 해당 경로만 얕은 복사로 교체한다.
+ */
+function remapClonedContentRefs(
+  content: BuilderCanvasNode['content'],
+  remapNodeId: (id: string) => string,
+): BuilderCanvasNode['content'] {
+  if (!content || typeof content !== 'object') return content;
+  const steps = (content as { steps?: unknown }).steps;
+  if (!Array.isArray(steps)) return content;
+
+  let changed = false;
+  const nextSteps = steps.map((step) => {
+    if (!step || typeof step !== 'object') return step;
+    const fieldNodeIds = (step as { fieldNodeIds?: unknown }).fieldNodeIds;
+    if (!Array.isArray(fieldNodeIds)) return step;
+    const mapped = fieldNodeIds.map((fid) => (typeof fid === 'string' ? remapNodeId(fid) : fid));
+    if (mapped.some((value, index) => value !== fieldNodeIds[index])) {
+      changed = true;
+      return { ...step, fieldNodeIds: mapped };
+    }
+    return step;
+  });
+
+  if (!changed) return content;
+  return { ...content, steps: nextSteps } as BuilderCanvasNode['content'];
+}
+
 function cloneNodeSet(nodes: BuilderCanvasNode[], offset: number): BuilderCanvasNode[] {
   const idMap = new Map<string, string>();
 
   for (const node of nodes) {
     idMap.set(node.id, createNodeId(node.kind));
   }
+
+  const remapNodeId = (id: string): string => idMap.get(id) ?? id;
 
   return nodes.map((node) => ({
     ...node,
@@ -332,7 +411,12 @@ function cloneNodeSet(nodes: BuilderCanvasNode[], offset: number): BuilderCanvas
       x: node.rect.x + offset,
       y: node.rect.y + offset,
     },
-  }));
+    // 앵커는 고유해야 하므로 복제본에서 제거(동일 anchorName 중복 방지).
+    anchorName: undefined,
+    // content 내부 node-id 참조(form steps.fieldNodeIds)를 복제된 자식 id 로 remap.
+    content: remapClonedContentRefs(node.content, remapNodeId),
+    // content override 로 kind↔content 판별이 끊기지만 shape 는 보존되므로 단언(sound).
+  } as BuilderCanvasNode));
 }
 
 function reorderNodeSequence(
@@ -346,8 +430,9 @@ function reorderNodeSequence(
   if (currentIndex === clampedIndex) return nodes;
   const nextNodes = [...nodes];
   const [selectedNode] = nextNodes.splice(currentIndex, 1);
+  if (!selectedNode) return nodes;
   nextNodes.splice(clampedIndex, 0, selectedNode);
-  return nextNodes;
+  return nextNodes.map((node, index) => (node.zIndex === index ? node : { ...node, zIndex: index }));
 }
 
 function sameDocumentContent(left: BuilderCanvasDocument, right: BuilderCanvasDocument): boolean {
@@ -509,6 +594,46 @@ function resolveSelectedNodeIds(
   return [];
 }
 
+function resolvePreservedSelection(
+  document: BuilderCanvasDocument,
+  preferredNodeIds: string[],
+  preferredNodeId: string | null,
+): { selectedNodeId: string | null; selectedNodeIds: string[] } {
+  const existingIds = new Set(document.nodes.map((node) => node.id));
+  const selectedNodeIds = preferredNodeIds.filter((nodeId) => existingIds.has(nodeId));
+  if (preferredNodeId && existingIds.has(preferredNodeId)) {
+    return {
+      selectedNodeId: preferredNodeId,
+      selectedNodeIds: selectedNodeIds.length > 0 ? selectedNodeIds : [preferredNodeId],
+    };
+  }
+  return {
+    selectedNodeId: selectedNodeIds[selectedNodeIds.length - 1] ?? null,
+    selectedNodeIds,
+  };
+}
+
+function resolveSelectedNodeIdFromMap(
+  nodesById: Map<string, BuilderCanvasNode>,
+  preferredNodeId: string | null,
+): string | null {
+  if (preferredNodeId && nodesById.has(preferredNodeId)) return preferredNodeId;
+  return nodesById.values().next().value?.id ?? null;
+}
+
+function resolveSelectedNodeIdsFromMap(
+  nodesById: Map<string, BuilderCanvasNode>,
+  preferredNodeIds: string[],
+  selectedNodeId: string | null,
+): string[] {
+  const allPreferredIdsExist = preferredNodeIds.every((nodeId) => nodesById.has(nodeId));
+  if (preferredNodeIds.length > 0 && allPreferredIdsExist) return preferredNodeIds;
+  const filteredNodeIds = preferredNodeIds.filter((nodeId) => nodesById.has(nodeId));
+  if (filteredNodeIds.length > 0) return filteredNodeIds;
+  if (selectedNodeId && nodesById.has(selectedNodeId)) return [selectedNodeId];
+  return [];
+}
+
 function resolveActiveGroupId(
   document: BuilderCanvasDocument,
   preferredGroupId: string | null,
@@ -527,6 +652,45 @@ function resolveTreeState(
     activeGroupId: resolveActiveGroupId(document, preferredGroupId),
     childrenMap: buildChildrenMap(document.nodes),
     nodesById: getCanvasNodesById(document.nodes),
+  };
+}
+
+function applyTransientRectDocument(
+  state: BuilderCanvasStoreState,
+  document: BuilderCanvasDocument,
+  changedNodesById: Map<string, BuilderCanvasNode>,
+  shouldRebuildChildrenMap: boolean,
+): Partial<BuilderCanvasStoreState> | BuilderCanvasStoreState {
+  if (state.document && sameDocumentIdentity(document, state.document)) return state;
+  const nodesById = new Map(state.nodesById);
+  for (const [nodeId, node] of changedNodesById) {
+    nodesById.set(nodeId, node);
+  }
+  const nextSelectedNodeId = resolveSelectedNodeIdFromMap(nodesById, state.selectedNodeId);
+  const selectedNodeIds = resolveSelectedNodeIdsFromMap(nodesById, state.selectedNodeIds, nextSelectedNodeId);
+  return {
+    document,
+    selectedNodeId: nextSelectedNodeId,
+    selectedNodeIds,
+    selectedNodeIdSet: resolveSelectedNodeIdSetForState(state, selectedNodeIds),
+    activeGroupId: state.activeGroupId && nodesById.has(state.activeGroupId) ? state.activeGroupId : null,
+    childrenMap: shouldRebuildChildrenMap ? buildChildrenMap(document.nodes) : state.childrenMap,
+    nodesById,
+  };
+}
+
+function applyTransientSingleNodeRectDocument(
+  state: BuilderCanvasStoreState,
+  document: BuilderCanvasDocument,
+  nodeId: string,
+  node: BuilderCanvasNode,
+): Partial<BuilderCanvasStoreState> | BuilderCanvasStoreState {
+  if (state.document && sameDocumentIdentity(document, state.document)) return state;
+  const nodesById = new Map(state.nodesById);
+  nodesById.set(nodeId, node);
+  return {
+    document,
+    nodesById,
   };
 }
 
@@ -561,10 +725,12 @@ function applyTransientDocument(
   if (state.document && sameDocumentIdentity(document, state.document)) return state;
   const nextSelectedNodeId = resolveSelectedNodeId(document, selectedNodeId);
   const nextTreeState = resolveTreeState(document, state.activeGroupId);
+  const nextSelectedNodeIds = resolveSelectedNodeIds(document, selectedNodeIds, nextSelectedNodeId);
   return {
     document,
     selectedNodeId: nextSelectedNodeId,
-    selectedNodeIds: resolveSelectedNodeIds(document, selectedNodeIds, nextSelectedNodeId),
+    selectedNodeIds: nextSelectedNodeIds,
+    selectedNodeIdSet: resolveSelectedNodeIdSetForState(state, nextSelectedNodeIds),
     ...nextTreeState,
   };
 }
@@ -579,10 +745,12 @@ function applyCommittedDocument(
   const nextHistory = pushHistory(state.history, document);
   const nextSelectedNodeId = resolveSelectedNodeId(document, selectedNodeId);
   const nextTreeState = resolveTreeState(document, state.activeGroupId);
+  const nextSelectedNodeIds = resolveSelectedNodeIds(document, selectedNodeIds, nextSelectedNodeId);
   return {
     document,
     selectedNodeId: nextSelectedNodeId,
-    selectedNodeIds: resolveSelectedNodeIds(document, selectedNodeIds, nextSelectedNodeId),
+    selectedNodeIds: nextSelectedNodeIds,
+    selectedNodeIdSet: resolveSelectedNodeIdSetForState(state, nextSelectedNodeIds),
     ...nextTreeState,
     history: nextHistory,
     mutationBaseDocument: null,
@@ -591,12 +759,94 @@ function applyCommittedDocument(
   };
 }
 
+function groupNodeIdsInState(
+  state: BuilderCanvasStoreState,
+  selectedNodeIds: readonly string[],
+): Partial<BuilderCanvasStoreState> | BuilderCanvasStoreState {
+  if (!state.document || selectedNodeIds.length < 2) return state;
+  const selectedSet = new Set(selectedNodeIds);
+  const targetNodes = state.document.nodes.filter(
+    (node) => selectedSet.has(node.id) && !node.locked,
+  );
+  if (targetNodes.length < 2) return state;
+  const sharedParentId = targetNodes[0]!.parentId ?? null;
+  const allShareParent = targetNodes.every((node) => (node.parentId ?? null) === sharedParentId);
+  if (!allShareParent) return state;
+  const nodesById = state.nodesById;
+  const absoluteRects = new Map<string, CanvasNodeRect>();
+  let minX = Number.POSITIVE_INFINITY;
+  let minY = Number.POSITIVE_INFINITY;
+  let maxX = Number.NEGATIVE_INFINITY;
+  let maxY = Number.NEGATIVE_INFINITY;
+  let maxZ = Number.NEGATIVE_INFINITY;
+
+  for (const node of targetNodes) {
+    const rect = resolveCanvasNodeAbsoluteRect(node, nodesById);
+    absoluteRects.set(node.id, rect);
+    minX = Math.min(minX, rect.x);
+    minY = Math.min(minY, rect.y);
+    maxX = Math.max(maxX, rect.x + rect.width);
+    maxY = Math.max(maxY, rect.y + rect.height);
+    maxZ = Math.max(maxZ, node.zIndex);
+  }
+
+  const groupRect = { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
+  const groupId = `group-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  const groupParentNode = sharedParentId ? nodesById.get(sharedParentId) ?? null : null;
+  const groupParentAbsoluteRect = groupParentNode
+    ? resolveCanvasNodeAbsoluteRect(groupParentNode, nodesById)
+    : null;
+  const localGroupRect = resolveCanvasNodeLocalRect(groupRect, groupParentAbsoluteRect);
+  const groupNode: BuilderCanvasNode = {
+    id: groupId,
+    kind: 'container',
+    ...(sharedParentId ? { parentId: sharedParentId } : {}),
+    rect: localGroupRect,
+    style: createDefaultCanvasNodeStyle(),
+    zIndex: maxZ,
+    rotation: 0,
+    locked: false,
+    visible: true,
+    content: {
+      label: 'Group',
+      background: 'transparent',
+      borderColor: 'transparent',
+      borderStyle: 'solid' as const,
+      borderWidth: 0,
+      borderRadius: 0,
+      padding: 0,
+      layoutMode: 'absolute' as const,
+    },
+  };
+  const targetIds = new Set(targetNodes.map((node) => node.id));
+  const document = updateNodes(state.document, (nodes) => [
+    ...nodes.map((node) => {
+      if (!targetIds.has(node.id)) return node;
+      const absRect = absoluteRects.get(node.id)!;
+      return {
+        ...node,
+        parentId: groupId,
+        rect: {
+          x: absRect.x - minX,
+          y: absRect.y - minY,
+          width: absRect.width,
+          height: absRect.height,
+        },
+      };
+    }),
+    groupNode,
+  ]);
+  return applyCommittedDocument(state, document, groupId, [groupId]);
+}
+
 export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   document: null,
   selectedNodeId: null,
   selectedNodeIds: [],
+  selectedNodeIdSet: EMPTY_SELECTED_NODE_ID_SET,
   selectedSurfaceKey: null,
-  setSelectedSurfaceKey: (key) => set({ selectedSurfaceKey: key }),
+  setSelectedSurfaceKey: (key) =>
+    set((state) => (state.selectedSurfaceKey === key ? state : { selectedSurfaceKey: key })),
   activeGroupId: null,
   draftSaveState: 'idle',
   clipboardHasContent: hasClipboard(),
@@ -608,7 +858,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   childrenMap: {},
   nodesById: EMPTY_NODES_BY_ID,
   viewport: 'desktop' as Viewport,
-  setViewport: (viewport) => set({ viewport }),
+  setViewport: (viewport) => set((state) => (state.viewport === viewport ? state : { viewport })),
   interactivePreview: createDefaultInteractivePreviewState(),
   setInteractivePreviewIndex: (section, index) =>
     set((state) => {
@@ -654,57 +904,99 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         ...nextState,
         selectedNodeId: null,
         selectedNodeIds: [],
+        selectedNodeIdSet: EMPTY_SELECTED_NODE_ID_SET,
       };
     }),
-  replaceDocument: (document) =>
-    set({
-      document,
-      selectedNodeId: null,
-      selectedNodeIds: [],
-      activeGroupId: null,
-      draftSaveState: 'idle',
-      interactivePreview: createDefaultInteractivePreviewState(),
-      history: createHistory(document),
-      mutationBaseDocument: null,
-      canUndo: false,
-      canRedo: false,
-      childrenMap: buildChildrenMap(document.nodes),
-      nodesById: getCanvasNodesById(document.nodes),
+  replaceDocument: (document, options = {}) =>
+    set((state) => {
+      const preservedSelection = options.preserveSelection
+        ? resolvePreservedSelection(document, state.selectedNodeIds, state.selectedNodeId)
+        : { selectedNodeId: null, selectedNodeIds: [] };
+      const nextTreeState = options.preserveSelection
+        ? resolveTreeState(document, state.activeGroupId)
+        : {
+            activeGroupId: null,
+            childrenMap: buildChildrenMap(document.nodes),
+            nodesById: getCanvasNodesById(document.nodes),
+          };
+      return {
+        document,
+        selectedNodeId: preservedSelection.selectedNodeId,
+        selectedNodeIds: preservedSelection.selectedNodeIds,
+        selectedNodeIdSet: options.preserveSelection
+          ? createSelectedNodeIdSet(preservedSelection.selectedNodeIds)
+          : EMPTY_SELECTED_NODE_ID_SET,
+        draftSaveState: 'idle',
+        interactivePreview: createDefaultInteractivePreviewState(),
+        history: createHistory(document),
+        mutationBaseDocument: null,
+        canUndo: false,
+        canRedo: false,
+        ...nextTreeState,
+      };
     }),
   setSelectedNodeId: (selectedNodeId) =>
     set((state) => {
       const selectedNodeIds = selectedNodeId ? [selectedNodeId] : [];
+      const interactivePreview = selectedNodeId
+        ? revealPreviewForSelection(state.interactivePreview, state.nodesById, selectedNodeIds)
+        : createDefaultInteractivePreviewState();
+      if (
+        state.selectedNodeId === selectedNodeId
+        && areArraysEqual(state.selectedNodeIds, selectedNodeIds)
+        && state.selectedSurfaceKey === null
+        && areInteractivePreviewStatesEqual(state.interactivePreview, interactivePreview)
+      ) {
+        return state;
+      }
       return {
         selectedNodeId,
         selectedNodeIds,
+        selectedNodeIdSet: createSelectedNodeIdSet(selectedNodeIds),
         selectedSurfaceKey: null,
-        interactivePreview: selectedNodeId
-          ? revealPreviewForSelection(state.interactivePreview, state.nodesById, selectedNodeIds)
-          : createDefaultInteractivePreviewState(),
+        interactivePreview,
       };
     }),
   setSelectedNodeIds: (selectedNodeIds, primaryNodeId = null) =>
     set((state) => {
       if (!state.document) return state;
       if (selectedNodeIds.length === 0) {
+        const interactivePreview = createDefaultInteractivePreviewState();
+        if (
+          state.selectedNodeId === null
+          && state.selectedNodeIds.length === 0
+          && areInteractivePreviewStatesEqual(state.interactivePreview, interactivePreview)
+        ) {
+          return state;
+        }
         return {
           selectedNodeId: null,
           selectedNodeIds: [],
-          interactivePreview: createDefaultInteractivePreviewState(),
+          selectedNodeIdSet: EMPTY_SELECTED_NODE_ID_SET,
+          interactivePreview,
         };
       }
       const selectedId = primaryNodeId ?? selectedNodeIds[selectedNodeIds.length - 1] ?? null;
       const resolvedNodeIds = resolveSelectedNodeIds(state.document, selectedNodeIds, selectedId);
+      const interactivePreview = revealPreviewForSelection(state.interactivePreview, state.nodesById, resolvedNodeIds);
+      if (
+        state.selectedNodeId === selectedId
+        && areArraysEqual(state.selectedNodeIds, resolvedNodeIds)
+        && interactivePreview === state.interactivePreview
+      ) {
+        return state;
+      }
       return {
         selectedNodeId: selectedId,
         selectedNodeIds: resolvedNodeIds,
-        interactivePreview: revealPreviewForSelection(state.interactivePreview, state.nodesById, resolvedNodeIds),
+        selectedNodeIdSet: createSelectedNodeIdSet(resolvedNodeIds),
+        interactivePreview,
       };
     }),
   toggleNodeSelection: (nodeId) =>
     set((state) => {
       if (!state.document) return state;
-      const exists = state.selectedNodeIds.includes(nodeId);
+      const exists = state.selectedNodeIdSet.has(nodeId);
       const selectedNodeIds = exists
         ? state.selectedNodeIds.filter((candidateId) => candidateId !== nodeId)
         : [...state.selectedNodeIds, nodeId];
@@ -712,6 +1004,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         return {
           selectedNodeId: null,
           selectedNodeIds: [],
+          selectedNodeIdSet: EMPTY_SELECTED_NODE_ID_SET,
           interactivePreview: createDefaultInteractivePreviewState(),
         };
       }
@@ -721,6 +1014,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       return {
         selectedNodeId,
         selectedNodeIds,
+        selectedNodeIdSet: createSelectedNodeIdSet(selectedNodeIds),
         interactivePreview: revealPreviewForSelection(state.interactivePreview, state.nodesById, selectedNodeIds),
       };
     }),
@@ -735,19 +1029,23 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         activeGroupId: groupId,
         selectedNodeId: null,
         selectedNodeIds: [],
+        selectedNodeIdSet: EMPTY_SELECTED_NODE_ID_SET,
       };
     }),
   exitGroup: () =>
     set((state) => {
       if (!state.document || !state.activeGroupId) return state;
       const groupNode = state.nodesById.get(state.activeGroupId);
+      const selectedNodeIds = groupNode ? [groupNode.id] : [];
       return {
         activeGroupId: null,
         selectedNodeId: groupNode?.id ?? null,
-        selectedNodeIds: groupNode ? [groupNode.id] : [],
+        selectedNodeIds,
+        selectedNodeIdSet: createSelectedNodeIdSet(selectedNodeIds),
       };
     }),
-  setDraftSaveState: (draftSaveState) => set({ draftSaveState }),
+  setDraftSaveState: (draftSaveState) =>
+    set((state) => (state.draftSaveState === draftSaveState ? state : { draftSaveState })),
   beginMutationSession: () =>
     set((state) => {
       if (!state.document || state.mutationBaseDocument) return state;
@@ -782,10 +1080,12 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const document = state.mutationBaseDocument;
       const nextSelectedNodeId = resolveSelectedNodeId(document, state.selectedNodeId);
       const nextTreeState = resolveTreeState(document, state.activeGroupId);
+      const nextSelectedNodeIds = resolveSelectedNodeIds(document, state.selectedNodeIds, nextSelectedNodeId);
       return {
         document,
         selectedNodeId: nextSelectedNodeId,
-        selectedNodeIds: resolveSelectedNodeIds(document, state.selectedNodeIds, nextSelectedNodeId),
+        selectedNodeIds: nextSelectedNodeIds,
+        selectedNodeIdSet: resolveSelectedNodeIdSetForState(state, nextSelectedNodeIds),
         ...nextTreeState,
         mutationBaseDocument: null,
       };
@@ -798,10 +1098,12 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const previousDocument = result.snapshot;
       const nextSelectedNodeId = resolveSelectedNodeId(previousDocument, state.selectedNodeId);
       const nextTreeState = resolveTreeState(previousDocument, state.activeGroupId);
+      const nextSelectedNodeIds = resolveSelectedNodeIds(previousDocument, state.selectedNodeIds, nextSelectedNodeId);
       return {
         document: previousDocument,
         selectedNodeId: nextSelectedNodeId,
-        selectedNodeIds: resolveSelectedNodeIds(previousDocument, state.selectedNodeIds, nextSelectedNodeId),
+        selectedNodeIds: nextSelectedNodeIds,
+        selectedNodeIdSet: resolveSelectedNodeIdSetForState(state, nextSelectedNodeIds),
         ...nextTreeState,
         history: result.state,
         mutationBaseDocument: null,
@@ -817,15 +1119,49 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const nextDocument = result.snapshot;
       const nextSelectedNodeId = resolveSelectedNodeId(nextDocument, state.selectedNodeId);
       const nextTreeState = resolveTreeState(nextDocument, state.activeGroupId);
+      const nextSelectedNodeIds = resolveSelectedNodeIds(nextDocument, state.selectedNodeIds, nextSelectedNodeId);
       return {
         document: nextDocument,
         selectedNodeId: nextSelectedNodeId,
-        selectedNodeIds: resolveSelectedNodeIds(nextDocument, state.selectedNodeIds, nextSelectedNodeId),
+        selectedNodeIds: nextSelectedNodeIds,
+        selectedNodeIdSet: resolveSelectedNodeIdSetForState(state, nextSelectedNodeIds),
         ...nextTreeState,
         history: result.state,
         mutationBaseDocument: null,
         canUndo: result.state.canUndo,
         canRedo: result.state.canRedo,
+      };
+    }),
+  jumpToHistorySnapshot: (cursor) =>
+    set((state) => {
+      if (!state.document || !state.history) return state;
+      const result = jumpHistory(state.history, cursor);
+      if (!result) return state;
+      const nextDocument = result.snapshot;
+      const nextSelectedNodeId = resolveSelectedNodeId(nextDocument, state.selectedNodeId);
+      const nextTreeState = resolveTreeState(nextDocument, state.activeGroupId);
+      const nextSelectedNodeIds = resolveSelectedNodeIds(nextDocument, state.selectedNodeIds, nextSelectedNodeId);
+      return {
+        document: nextDocument,
+        selectedNodeId: nextSelectedNodeId,
+        selectedNodeIds: nextSelectedNodeIds,
+        selectedNodeIdSet: resolveSelectedNodeIdSetForState(state, nextSelectedNodeIds),
+        ...nextTreeState,
+        history: result.state,
+        mutationBaseDocument: null,
+        canUndo: result.state.canUndo,
+        canRedo: result.state.canRedo,
+      };
+    }),
+  renameHistorySnapshot: (cursor, name) =>
+    set((state) => {
+      if (!state.history) return state;
+      const nextHistory = renameHistoryEntry(state.history, cursor, name);
+      if (!nextHistory || nextHistory === state.history) return state;
+      return {
+        history: nextHistory,
+        canUndo: nextHistory.canUndo,
+        canRedo: nextHistory.canRedo,
       };
     }),
   copySelectedNodesToClipboard: () =>
@@ -847,11 +1183,14 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document || state.selectedNodeIds.length === 0) return state;
       const unlockedRootIds = state.document.nodes
-        .filter((node) => state.selectedNodeIds.includes(node.id) && !node.locked)
+        .filter((node) => state.selectedNodeIdSet.has(node.id) && !node.locked)
         .map((node) => node.id);
+      const unlockedRootIdSet = new Set(unlockedRootIds);
+      const unlockedDescendantIdSet = new Set(
+        unlockedRootIds.flatMap((rootId) => getCanvasNodeDescendantIds(rootId, state.childrenMap)),
+      );
       const selectedNodes = state.document.nodes.filter(
-        (node) => unlockedRootIds.includes(node.id)
-          || unlockedRootIds.some((rootId) => getCanvasNodeDescendantIds(rootId, state.childrenMap).includes(node.id)),
+        (node) => unlockedRootIdSet.has(node.id) || unlockedDescendantIdSet.has(node.id),
       );
       if (selectedNodes.length === 0) return state;
       cutNodes(selectedNodes);
@@ -928,7 +1267,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document || state.selectedNodeIds.length < 2) return state;
       const targetNodes = state.document.nodes.filter(
-        (node) => state.selectedNodeIds.includes(node.id) && !node.locked,
+        (node) => state.selectedNodeIdSet.has(node.id) && !node.locked,
       );
       if (targetNodes.length < 2) return state;
       const nextRects = new Map(
@@ -952,7 +1291,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document || state.selectedNodeIds.length < 3) return state;
       const targetNodes = state.document.nodes.filter(
-        (node) => state.selectedNodeIds.includes(node.id) && !node.locked,
+        (node) => state.selectedNodeIdSet.has(node.id) && !node.locked,
       );
       if (targetNodes.length < 3) return state;
       const distributor = action === 'horizontal' ? distributeHorizontal : distributeVertical;
@@ -973,7 +1312,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document || state.selectedNodeIds.length < 2) return state;
       const targetNodes = state.document.nodes.filter(
-        (node) => state.selectedNodeIds.includes(node.id) && !node.locked,
+        (node) => state.selectedNodeIdSet.has(node.id) && !node.locked,
       );
       if (targetNodes.length < 2) return state;
       const matcher = action === 'width' ? matchWidth : matchHeight;
@@ -991,81 +1330,13 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       return applyCommittedDocument(state, document);
     }),
   groupSelectedNodes: () =>
+    set((state) => groupNodeIdsInState(state, state.selectedNodeIds)),
+  groupNodeIds: (nodeIds, primaryNodeId = null) =>
     set((state) => {
-      if (!state.document || state.selectedNodeIds.length < 2) return state;
-      const selectedSet = new Set(state.selectedNodeIds);
-      const targetNodes = state.document.nodes.filter(
-        (node) => selectedSet.has(node.id) && !node.locked,
-      );
-      if (targetNodes.length < 2) return state;
-      const sharedParentId = targetNodes[0]!.parentId ?? null;
-      const allShareParent = targetNodes.every((node) => (node.parentId ?? null) === sharedParentId);
-      if (!allShareParent) return state;
-      const nodesById = state.nodesById;
-      const absoluteRects = new Map<string, CanvasNodeRect>();
-      let minX = Number.POSITIVE_INFINITY;
-      let minY = Number.POSITIVE_INFINITY;
-      let maxX = Number.NEGATIVE_INFINITY;
-      let maxY = Number.NEGATIVE_INFINITY;
-      let maxZ = Number.NEGATIVE_INFINITY;
-
-      for (const node of targetNodes) {
-        const rect = resolveCanvasNodeAbsoluteRect(node, nodesById);
-        absoluteRects.set(node.id, rect);
-        minX = Math.min(minX, rect.x);
-        minY = Math.min(minY, rect.y);
-        maxX = Math.max(maxX, rect.x + rect.width);
-        maxY = Math.max(maxY, rect.y + rect.height);
-        maxZ = Math.max(maxZ, node.zIndex);
-      }
-
-      const groupRect = { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
-      const groupId = `group-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
-      const groupParentNode = sharedParentId ? nodesById.get(sharedParentId) ?? null : null;
-      const groupParentAbsoluteRect = groupParentNode
-        ? resolveCanvasNodeAbsoluteRect(groupParentNode, nodesById)
-        : null;
-      const localGroupRect = resolveCanvasNodeLocalRect(groupRect, groupParentAbsoluteRect);
-      const groupNode: BuilderCanvasNode = {
-        id: groupId,
-        kind: 'container',
-        ...(sharedParentId ? { parentId: sharedParentId } : {}),
-        rect: localGroupRect,
-        style: createDefaultCanvasNodeStyle(),
-        zIndex: maxZ,
-        rotation: 0,
-        locked: false,
-        visible: true,
-        content: {
-          label: 'Group',
-          background: 'transparent',
-          borderColor: 'transparent',
-          borderStyle: 'solid' as const,
-          borderWidth: 0,
-          borderRadius: 0,
-          padding: 0,
-          layoutMode: 'absolute' as const,
-        },
-      };
-      const targetIds = new Set(targetNodes.map((node) => node.id));
-      const document = updateNodes(state.document, (nodes) => [
-        ...nodes.map((node) => {
-          if (!targetIds.has(node.id)) return node;
-          const absRect = absoluteRects.get(node.id)!;
-          return {
-            ...node,
-            parentId: groupId,
-            rect: {
-              x: absRect.x - minX,
-              y: absRect.y - minY,
-              width: absRect.width,
-              height: absRect.height,
-            },
-          };
-        }),
-        groupNode,
-      ]);
-      return applyCommittedDocument(state, document, groupId);
+      if (!state.document) return state;
+      const selectedNodeId = primaryNodeId ?? nodeIds[nodeIds.length - 1] ?? null;
+      const selectedNodeIds = resolveSelectedNodeIds(state.document, nodeIds, selectedNodeId);
+      return groupNodeIdsInState(state, selectedNodeIds);
     }),
   ungroupSelectedNode: () =>
     set((state) => {
@@ -1109,6 +1380,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       return {
         ...next,
         selectedNodeIds: childIds,
+        selectedNodeIdSet: createSelectedNodeIdSet(childIds),
         selectedNodeId: childIds[0] ?? null,
       };
     }),
@@ -1134,13 +1406,24 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document) return state;
       const nodesById = state.nodesById;
+      const explicitParentNode = node.parentId
+        ? nodesById.get(node.parentId) ?? null
+        : null;
+      const explicitInsertionParent = explicitParentNode && isContainerLikeKind(explicitParentNode.kind)
+        ? explicitParentNode
+        : null;
       const activeGroupNode = state.activeGroupId
         ? nodesById.get(state.activeGroupId) ?? null
         : null;
       const activeGroupRect = activeGroupNode
         ? resolveCanvasNodeAbsoluteRect(activeGroupNode, nodesById)
         : null;
-      const nextNode = activeGroupNode
+      const nextNode = explicitInsertionParent
+        ? {
+            ...node,
+            parentId: explicitInsertionParent.id,
+          }
+        : activeGroupNode
         ? {
             ...node,
             parentId: activeGroupNode.id,
@@ -1163,11 +1446,15 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const document = updateNodes(state.document, (nodes) => [...nodes, nextNode]);
       return applyCommittedDocument(state, document, nextNode.id, [nextNode.id]);
     }),
-  addNodes: (incomingNodes, rootNodeId) =>
+  addNodes: (incomingNodes, rootNodeId, parentNodeId = null) =>
     set((state) => {
       if (!state.document || incomingNodes.length === 0) return state;
       const incomingIds = new Set(incomingNodes.map((n) => n.id));
       const nodesById = state.nodesById;
+      const explicitParentNode = parentNodeId ? nodesById.get(parentNodeId) ?? null : null;
+      const explicitInsertionParent = explicitParentNode && isContainerLikeKind(explicitParentNode.kind)
+        ? explicitParentNode
+        : null;
       const activeGroupNode = state.activeGroupId
         ? nodesById.get(state.activeGroupId) ?? null
         : null;
@@ -1180,6 +1467,13 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         // Roots — nodes whose parentId points outside the incoming set.
         const isRoot = !node.parentId || !incomingIds.has(node.parentId);
         if (isRoot) {
+          if (explicitInsertionParent) {
+            return {
+              ...node,
+              parentId: explicitInsertionParent.id,
+              zIndex: baseZ + index,
+            };
+          }
           // Reparent root to active group if any (and translate rect to group-local).
           if (activeGroupNode) {
             return {
@@ -1212,11 +1506,40 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         adjustedNodes.map((n) => n.id),
       );
     }),
+  replaceSelectedNodeWithNodes: (incomingNodes, rootNodeId, selectionNodeIds) =>
+    set((state) => {
+      if (!state.document || incomingNodes.length === 0 || state.selectedNodeIds.length === 0) return state;
+      const unlockedRootIds = state.document.nodes
+        .filter((node) => state.selectedNodeIdSet.has(node.id) && !node.locked)
+        .map((node) => node.id);
+      const removedNodeIds = new Set([
+        ...unlockedRootIds,
+        ...unlockedRootIds.flatMap((nodeId) => getCanvasNodeDescendantIds(nodeId, state.childrenMap)),
+      ]);
+      if (removedNodeIds.size === 0) return state;
+
+      const incomingIds = new Set(incomingNodes.map((node) => node.id));
+      const remainingNodes = state.document.nodes.filter((node) => !removedNodeIds.has(node.id));
+      if (remainingNodes.some((node) => incomingIds.has(node.id))) return state;
+
+      const document = updateNodes(state.document, () => [...remainingNodes, ...incomingNodes]);
+      const primarySelectedId = rootNodeId && incomingIds.has(rootNodeId)
+        ? rootNodeId
+        : incomingNodes[0]?.id ?? null;
+      const nextSelectedNodeIds = (selectionNodeIds ?? (primarySelectedId ? [primarySelectedId] : []))
+        .filter((nodeId) => incomingIds.has(nodeId));
+      return applyCommittedDocument(
+        state,
+        document,
+        primarySelectedId,
+        nextSelectedNodeIds,
+      );
+    }),
   duplicateSelectedNode: () =>
     set((state) => {
       if (!state.document || state.selectedNodeIds.length === 0) return state;
       const rootNodeIds = state.document.nodes
-        .filter((node) => state.selectedNodeIds.includes(node.id) && !node.locked)
+        .filter((node) => state.selectedNodeIdSet.has(node.id) && !node.locked)
         .map((node) => node.id);
       const selectedNodeIds = new Set([
         ...rootNodeIds,
@@ -1262,6 +1585,8 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document) return state;
       let changed = false;
+      const changedNodesById = new Map<string, BuilderCanvasNode>();
+      let zIndexChanged = false;
       const zMap = zIndexById instanceof Map ? zIndexById : zIndexById ? new Map(Object.entries(zIndexById).map(([k, v]) => [k, Number(v)])) : null;
       const document = updateNodes(state.document, (nodes) =>
         nodes.map((node) => {
@@ -1277,15 +1602,48 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
           }
           if (z !== undefined && nextNode.zIndex !== z) {
             nextNode = { ...nextNode, zIndex: z } as BuilderCanvasNode;
+            zIndexChanged = true;
           }
-          if (nextNode !== node) changed = true;
+          if (nextNode !== node) {
+            changed = true;
+            changedNodesById.set(node.id, nextNode);
+          }
           return nextNode;
         }),
         updateNodesOptionsForMode(mode));
       if (!changed) return state;
-      return mode === 'transient'
-        ? applyTransientDocument(state, document)
-        : applyCommittedDocument(state, document);
+      if (mode === 'transient') {
+        return applyTransientRectDocument(state, document, changedNodesById, zIndexChanged);
+      }
+      return applyCommittedDocument(state, document);
+    }),
+  updateSingleNodeRectForViewport: (nodeId, rect, viewport, mode = 'commit') =>
+    set((state) => {
+      if (!state.document) return state;
+      const nodes = state.document.nodes;
+      let nodeIndex = -1;
+      for (let index = 0; index < nodes.length; index += 1) {
+        if (nodes[index]?.id === nodeId) {
+          nodeIndex = index;
+          break;
+        }
+      }
+      if (nodeIndex < 0) return state;
+      const currentNode = nodes[nodeIndex];
+      if (!currentNode) return state;
+      const nextNode = applyCanvasNodeRectForViewport(currentNode, rect, viewport);
+      if (nextNode === currentNode) return state;
+      const nextNodes = nodes.slice();
+      nextNodes[nodeIndex] = nextNode;
+      const document: BuilderCanvasDocument = {
+        ...state.document,
+        updatedAt: mode === 'transient' ? state.document.updatedAt : new Date().toISOString(),
+        nodes: nextNodes,
+      };
+      if (mode === 'transient') {
+        return applyTransientSingleNodeRectDocument(state, document, nodeId, nextNode);
+      }
+      return applyCommittedDocument(state, document);
     }),
   updateNodeContent: (nodeId, content, mode = 'commit') =>
     set((state) => {
@@ -1373,7 +1731,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document || state.selectedNodeIds.length === 0) return state;
       const unlockedRootIds = state.document.nodes
-        .filter((node) => state.selectedNodeIds.includes(node.id) && !node.locked)
+        .filter((node) => state.selectedNodeIdSet.has(node.id) && !node.locked)
         .map((node) => node.id);
       const selectedNodeIds = new Set([
         ...unlockedRootIds,
@@ -1403,6 +1761,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
             activeGroupId: null,
             selectedNodeId: nextSelectedNodeId,
             selectedNodeIds: nextSelectedNodeId ? [nextSelectedNodeId] : [],
+            selectedNodeIdSet: createSelectedNodeIdSet(nextSelectedNodeId ? [nextSelectedNodeId] : []),
           }
         : nextState;
     }),
@@ -1411,7 +1770,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       if (!state.document || state.selectedNodeIds.length === 0) return state;
       const selectedNodeIds = new Set(
         state.document.nodes
-          .filter((node) => state.selectedNodeIds.includes(node.id) && !node.locked)
+          .filter((node) => state.selectedNodeIdSet.has(node.id) && !node.locked)
           .map((node) => node.id),
       );
       if (selectedNodeIds.size === 0) return state;
@@ -1499,7 +1858,12 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const nodesById = state.nodesById;
       const node = nodesById.get(nodeId);
       const container = nodesById.get(containerId);
-      if (!node || !container || !isContainerLikeKind(container.kind) || nodeId === containerId) return state;
+      if (
+        !node
+        || !container
+        || (!isContainerLikeKind(container.kind) && !isTopLevelFlowSection(container))
+        || nodeId === containerId
+      ) return state;
       if (isCanvasNodeAncestor(nodeId, containerId, nodesById)) return state;
 
       const absoluteNodeRect = resolveCanvasNodeAbsoluteRect(node, nodesById);
@@ -1604,6 +1968,28 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
             responsive: allEmpty ? undefined : nextResponsive,
           } as BuilderCanvasNode;
           return nextNode;
+        }));
+      return applyCommittedDocument(state, document);
+    }),
+  resetResponsiveOverridesForViewport: (viewport) =>
+    set((state) => {
+      if (!state.document) return state;
+      if (viewport === 'desktop') return state;
+      const hasViewportOverride = state.document.nodes.some((node) => hasResponsiveOverride(node, viewport));
+      if (!hasViewportOverride) return state;
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.map((node) => {
+          const responsive = node.responsive;
+          if (!responsive?.[viewport]) return node;
+          const nextResponsive: ResponsiveConfig = {
+            ...responsive,
+            [viewport]: undefined,
+          };
+          const allEmpty = !nextResponsive.tablet && !nextResponsive.mobile;
+          return {
+            ...node,
+            responsive: allEmpty ? undefined : nextResponsive,
+          };
         }));
       return applyCommittedDocument(state, document);
     }),

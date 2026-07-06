@@ -1,10 +1,12 @@
 import { defineComponent } from '../define';
 import AttorneyCardInspector from './Inspector';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import type { BuilderTheme } from '@/lib/builder/site/types';
 import {
   legacyCardStyleToVariant,
   resolveCardVariantStyle,
 } from '@/lib/builder/site/component-variants';
+import { getDomainCardWidgetsCopy } from '../domain-card-widgets-copy';
 
 interface AttorneyCardContent {
   name: string;
@@ -18,11 +20,14 @@ interface AttorneyCardContent {
 function AttorneyCardRender({
   node,
   theme,
+  locale = 'ko',
 }: {
   node: { content: AttorneyCardContent };
   theme?: BuilderTheme;
+  locale?: Locale;
 }) {
   const { name = '', title = '', photo = '', specialties = [] } = node.content;
+  const copy = getDomainCardWidgetsCopy(normalizeLocale(locale));
   const variantStyle = resolveCardVariantStyle(
     node.content.variant ?? legacyCardStyleToVariant(node.content.cardStyle),
     theme,
@@ -47,7 +52,7 @@ function AttorneyCardRender({
           fontSize: 13,
         }}
       >
-        Attorney Card
+        {copy.attorneyCard.empty}
       </div>
     );
   }

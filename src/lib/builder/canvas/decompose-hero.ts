@@ -9,16 +9,30 @@ import {
   createHomeTextNode,
 } from './decompose-home-shared';
 
-const HERO_ROOT_HEIGHT = 1020;
+const HERO_ROOT_HEIGHT = 820;
+const HERO_SEARCH_AVAILABLE_WIDTH = 1151;
+// Keep the editable hero search safely above the next flow section even when
+// the editor auto-fits the stage below 100% zoom. This stays in sync with
+// upgradeHeroSearchForm (admin-builder/page.tsx), which repairs persisted
+// documents to the same geometry.
+export const HERO_SEARCH_WRAPPER_Y = 618;
 
 export const HERO_SECTION_ROOT_HEIGHT = HERO_ROOT_HEIGHT;
+export const HERO_MEDIA_IMAGE_SOURCES = [
+  '/images/hero-bg-01.webp',
+  '/images/hero-bg-02.webp',
+  '/images/hero-bg-03.webp',
+] as const;
+export const HERO_MEDIA_IMAGE_NODE_IDS = HERO_MEDIA_IMAGE_SOURCES.map((_, index) => (
+  index === 0 ? 'home-hero-media-image' : `home-hero-media-image-${index + 1}`
+));
 
 const quickMenus = {
   ko: [
     { label: '업무분야', href: '/ko/services' },
     { label: '칼럼', href: '/ko/columns' },
     { label: '변호사', href: '/ko/lawyers' },
-    { label: 'FAQ', href: '/ko/faq' },
+    { label: '자주 묻는 질문', href: '/ko/faq' },
     { label: '영상/채널', href: '/ko/videos' },
     { label: '연락처', href: '/ko/contact' },
   ],
@@ -26,7 +40,7 @@ const quickMenus = {
     { label: '服務領域', href: '/zh-hant/services' },
     { label: '專欄', href: '/zh-hant/columns' },
     { label: '律師', href: '/zh-hant/lawyers' },
-    { label: 'FAQ', href: '/zh-hant/faq' },
+    { label: '常見問題', href: '/zh-hant/faq' },
     { label: '影音/頻道', href: '/zh-hant/videos' },
     { label: '聯絡', href: '/zh-hant/contact' },
   ],
@@ -76,18 +90,19 @@ export function createHeroDecomposedNodes(
       label: 'hero media',
       className: 'hero-media',
     }),
-    createHomeImageNode({
-      id: 'home-hero-media-image',
+    ...HERO_MEDIA_IMAGE_SOURCES.map((src, index) => createHomeImageNode({
+      id: HERO_MEDIA_IMAGE_NODE_IDS[index] ?? `home-hero-media-image-${index + 1}`,
       parentId: mediaId,
       rect: { x: 0, y: 0, width: HOME_STAGE_WIDTH, height: HERO_ROOT_HEIGHT },
       zIndex: 0,
-      src: '/images/hero-bg-01.webp',
-      alt: hero.title,
-    }),
+      src,
+      alt: index === 0 ? hero.title : '',
+      ...(index === 0 ? {} : { style: { opacity: 0 } }),
+    })),
     createHomeContainerNode({
       id: innerId,
       parentId: rootId,
-      rect: { x: 72, y: 108, width: 1136, height: 520 },
+      rect: { x: 51, y: 184, width: 1178, height: 483 },
       zIndex: 1,
       label: 'hero inner',
       className: 'container hero-inner',
@@ -95,7 +110,7 @@ export function createHeroDecomposedNodes(
     createHomeContainerNode({
       id: copyId,
       parentId: innerId,
-      rect: { x: 0, y: 40, width: 640, height: 360 },
+      rect: { x: 0, y: 0, width: 780, height: 363 },
       zIndex: 0,
       label: 'hero copy',
       className: 'hero-copy',
@@ -103,7 +118,7 @@ export function createHeroDecomposedNodes(
     createHomeTextNode({
       id: 'home-hero-label',
       parentId: copyId,
-      rect: { x: 0, y: 0, width: 240, height: 32 },
+      rect: { x: 0, y: 1, width: 240, height: 32 },
       zIndex: 0,
       text: hero.label,
       className: 'section-label',
@@ -114,7 +129,7 @@ export function createHeroDecomposedNodes(
     createHomeTextNode({
       id: 'home-hero-title',
       parentId: copyId,
-      rect: { x: 0, y: 44, width: 620, height: 128 },
+      rect: { x: 0, y: 56, width: 780, height: 167 },
       zIndex: 1,
       text: hero.title,
       className: 'hero-title',
@@ -124,7 +139,7 @@ export function createHeroDecomposedNodes(
     createHomeTextNode({
       id: 'home-hero-subtitle',
       parentId: copyId,
-      rect: { x: 0, y: 188, width: 560, height: 108 },
+      rect: { x: 0, y: 247, width: 580, height: 116 },
       zIndex: 2,
       text: hero.subtitle,
       className: 'hero-subtitle',
@@ -134,7 +149,7 @@ export function createHeroDecomposedNodes(
     createHomeContainerNode({
       id: linksId,
       parentId: copyId,
-      rect: { x: 0, y: 314, width: 260, height: 32 },
+      rect: { x: 0, y: 338, width: 260, height: 32 },
       zIndex: 3,
       label: 'hero links',
       className: 'hero-links-minimal',
@@ -153,7 +168,7 @@ export function createHeroDecomposedNodes(
     createHomeContainerNode({
       id: searchWrapperId,
       parentId: rootId,
-      rect: { x: 0, y: 758, width: HOME_STAGE_WIDTH, height: 62 },
+      rect: { x: 0, y: HERO_SEARCH_WRAPPER_Y, width: HOME_STAGE_WIDTH, height: 62 },
       zIndex: 2,
       label: 'hero search wrapper',
       className: 'hero-search-wrapper',
@@ -161,7 +176,7 @@ export function createHeroDecomposedNodes(
     createHomeContainerNode({
       id: searchContainerId,
       parentId: searchWrapperId,
-      rect: { x: 0, y: 0, width: HOME_STAGE_WIDTH, height: 62 },
+      rect: { x: 0, y: 0, width: HERO_SEARCH_AVAILABLE_WIDTH, height: 62 },
       zIndex: 0,
       label: 'hero search container',
       className: 'container',
@@ -169,7 +184,7 @@ export function createHeroDecomposedNodes(
     createHomeContainerNode({
       id: searchWrapId,
       parentId: searchContainerId,
-      rect: { x: 0, y: 0, width: 620, height: 62 },
+      rect: { x: 0, y: 0, width: 760, height: 62 },
       zIndex: 0,
       label: 'hero search dropdown wrap',
       className: 'hero-search-dropdown-wrap',
@@ -177,7 +192,7 @@ export function createHeroDecomposedNodes(
     createHomeContainerNode({
       id: searchBarId,
       parentId: searchWrapId,
-      rect: { x: 0, y: 0, width: 620, height: 62 },
+      rect: { x: 0, y: 0, width: 760, height: 62 },
       zIndex: 0,
       label: 'hero search bar',
       className: 'hero-search-bar overlap',
@@ -196,7 +211,7 @@ export function createHeroDecomposedNodes(
     createHomeTextNode({
       id: 'home-hero-search-input',
       parentId: searchBarId,
-      rect: { x: 0, y: 0, width: 558, height: 62 },
+      rect: { x: 0, y: 0, width: 700, height: 62 },
       zIndex: 0,
       text: hero.searchPlaceholder,
       className: 'search-input hero-search-input',
@@ -210,7 +225,7 @@ export function createHeroDecomposedNodes(
     createHomeButtonNode({
       id: 'home-hero-search-button',
       parentId: searchBarId,
-      rect: { x: 558, y: 0, width: 62, height: 62 },
+      rect: { x: 700, y: 0, width: 60, height: 62 },
       zIndex: 1,
       label: '⌕',
       href: `/${locale}/search`,
@@ -223,7 +238,7 @@ export function createHeroDecomposedNodes(
     createHomeContainerNode({
       id: quickMenuId,
       parentId: searchWrapId,
-      rect: { x: 0, y: 70, width: 620, height: 318 },
+      rect: { x: 0, y: 70, width: 760, height: 318 },
       zIndex: 2,
       label: 'hero quick menu focused state',
       className: 'hero-quick-menu builder-hero-quick-menu',
@@ -233,7 +248,7 @@ export function createHeroDecomposedNodes(
       createHomeButtonNode({
         id: `home-hero-quick-menu-item-${index}`,
         parentId: quickMenuId,
-        rect: { x: 0, y: index * 53, width: 620, height: 53 },
+        rect: { x: 0, y: index * 53, width: 760, height: 53 },
         zIndex: index,
         label: item.label,
         href: item.href,
@@ -245,7 +260,7 @@ export function createHeroDecomposedNodes(
     createHomeButtonNode({
       id: 'home-hero-scroll-arrow',
       parentId: rootId,
-      rect: { x: 1216, y: 752, width: 64, height: 46 },
+      rect: { x: 1216, y: 746, width: 48, height: 48 },
       zIndex: 3,
       label: '⌄',
       href: '#insights',

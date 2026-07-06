@@ -17,7 +17,7 @@ const quickMenus = {
     { label: '업무분야', href: '/ko/services' },
     { label: '칼럼', href: '/ko/columns' },
     { label: '변호사', href: '/ko/lawyers' },
-    { label: 'FAQ', href: '/ko/faq' },
+    { label: '자주 묻는 질문', href: '/ko/faq' },
     { label: '영상/채널', href: '/ko/videos' },
     { label: '연락처', href: '/ko/contact' },
   ],
@@ -25,7 +25,7 @@ const quickMenus = {
     { label: '服務領域', href: '/zh-hant/services' },
     { label: '專欄', href: '/zh-hant/columns' },
     { label: '律師', href: '/zh-hant/lawyers' },
-    { label: 'FAQ', href: '/zh-hant/faq' },
+    { label: '常見問題', href: '/zh-hant/faq' },
     { label: '影音/頻道', href: '/zh-hant/videos' },
     { label: '聯絡', href: '/zh-hant/contact' },
   ],
@@ -39,7 +39,7 @@ const quickMenus = {
   ]
 } as const;
 
-export default function HeroSearch({ locale }: { locale: Locale }) {
+export default function HeroSearch({ locale, scrollHref = '#insights' }: { locale: Locale; scrollHref?: string }) {
   const hero = siteContent[locale].hero;
   const [focused, setFocused] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -92,6 +92,7 @@ export default function HeroSearch({ locale }: { locale: Locale }) {
                 name="q"
                 placeholder={hero.searchPlaceholder}
                 aria-label={hero.searchPlaceholder}
+                suppressHydrationWarning
                 onFocus={() => setFocused(true)}
               />
               <button className="hero-search-btn" type="submit" aria-label={hero.searchButton}>
@@ -119,7 +120,7 @@ export default function HeroSearch({ locale }: { locale: Locale }) {
       </div>
       <div className="hero-bottom-crop" />
       <a
-        href="#insights"
+        href={scrollHref}
         className="hero-scroll-arrow"
         aria-label={locale === 'ko' ? '아래로 스크롤' : locale === 'zh-hant' ? '向下滾動' : 'Scroll down'}
       >

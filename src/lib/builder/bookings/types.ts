@@ -41,6 +41,21 @@ export type BookingReminderType =
 
 export type LocalizedText = Record<Locale, string>;
 
+// Phase F77 — Booking discount codes (service-scoped, paid-only).
+export type BookingDiscountType = 'percent' | 'fixed';
+
+export interface BookingDiscountRule {
+  code: string;
+  type: BookingDiscountType;
+  value: number;
+  active: boolean;
+  locale?: Locale | 'all';
+  minSubtotalAmount?: number;
+  maxDiscountAmount?: number;
+  startsAt?: string;
+  endsAt?: string;
+}
+
 export interface BookingService {
   serviceId: string;
   slug: string;
@@ -63,8 +78,13 @@ export interface BookingService {
   paymentMode?: 'free' | 'paid';
   priceAmount?: number;        // smallest currency unit (e.g. cents/won)
   priceCurrency?: 'KRW' | 'USD' | 'TWD' | 'JPY' | 'EUR';
+  staffPriceOverrides?: Record<string, number>;
+  resourcePriceOverrides?: Record<string, number>;
+  // Phase F77 — Service-scoped discount codes (paid services only).
+  discountCodes?: BookingDiscountRule[];
   /** Optional fixed amount due online at booking time; remaining balance is collected later. */
   depositAmount?: number;
+  collectPaymentLater?: boolean;
   // Phase 27 — Multi-location (W212).
   allowedLocationIds?: string[];
   // Phase 26 — Meeting mode (W205).
@@ -91,12 +111,19 @@ export interface BookingCancellationPolicy {
   policyId: string;
   name: string;
   description?: string;
+  /** Minimum hours before start required to cancel at all. */
+  cancelHoursBefore: number;
+  /** Minimum hours before start required to reschedule at all. */
+  rescheduleHoursBefore: number;
   /** Minimum hours before start time required to cancel for full refund. */
   fullRefundHoursBefore: number;
   /** Minimum hours before start time required to cancel for partial refund. */
   partialRefundHoursBefore: number;
   /** Partial refund percentage (0~100). */
   partialRefundPercent: number;
+  /** Cancellation fee percentage deducted from any refundable amount (0~100). */
+  cancellationFeePercent: number;
+  isActive: boolean;
   createdAt: string;
   updatedAt: string;
 }
@@ -119,6 +146,11 @@ export interface BookingResource {
   description?: LocalizedText;
   location?: string;
   capacity?: number;
+  bufferBeforeMinutes?: number;
+  bufferAfterMinutes?: number;
+  weekly?: Record<DayOfWeek, AvailabilityBlock[]>;
+  timezone?: string;
+  recurringTemplateId?: string;
   blockedDates?: BlockedDate[];
   isActive: boolean;
   createdAt: string;
@@ -175,13 +207,46 @@ export interface BlockedDate {
   reason?: string;
 }
 
+const timeSchema = z.string().regex(/^\d{2}:\d{2}$/);
+
+export const availabilityBlockSchema = z.object({
+  start: timeSchema,
+  end: timeSchema,
+}).refine((value) => value.start < value.end, {
+  message: 'Availability start must be before end.',
+});
+
+const weeklyAvailabilitySchema = z.object(
+  Object.fromEntries(dayOfWeeks.map((day) => [day, z.array(availabilityBlockSchema)])) as Record<
+    DayOfWeek,
+    z.ZodArray<typeof availabilityBlockSchema>
+  >,
+);
+
+const staffAvailabilityDateOverrideSchema = z.object({
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  blocks: z.array(availabilityBlockSchema).default([]),
+  note: z.string().trim().max(300).optional(),
+});
+
+const defaultWeeklyAvailability = Object.fromEntries(
+  dayOfWeeks.map((day) => [day, day === 'saturday' || day === 'sunday' ? [] : [{ start: '09:00', end: '18:00' }]]),
+) as Record<DayOfWeek, Array<{ start: string; end: string }>>;
+
 export interface StaffAvailability {
   staffId: string;
   weekly: Record<DayOfWeek, AvailabilityBlock[]>;
   blockedDates: BlockedDate[];
+  dateOverrides?: StaffAvailabilityDateOverride[];
   timezone: string;
   recurringTemplateId?: string;
   holidayCalendar?: HolidayCalendar;
+}
+
+export interface StaffAvailabilityDateOverride {
+  date: string;
+  blocks: AvailabilityBlock[];
+  note?: string;
 }
 
 export interface BookingBillingDocument {
@@ -279,6 +344,9 @@ export interface Booking {
   cancellationReason?: string;     // W206
   cancelledAt?: string;            // W206
   customerTimezone?: string;       // W214
+  // Phase F77 — Discount snapshot persisted at booking time.
+  discountCode?: string;           // F77
+  discountAmount?: number;         // F77
 }
 
 export interface BookingWaitlistEntry {
@@ -323,13 +391,26 @@ const localizedTextSchema = z.object({
   en: z.string().trim().min(1).max(300),
 });
 
+export const bookingDiscountRuleInputSchema = z.object({
+  code: z.string().trim().min(1).max(32).transform((value) => value.toUpperCase()),
+  type: z.enum(['percent', 'fixed']),
+  value: z.coerce.number().int().min(1).max(100_000_000),
+  active: z.coerce.boolean().default(true),
+  locale: z.enum(['all', 'ko', 'zh-hant', 'en']).default('all'),
+  minSubtotalAmount: z.coerce.number().int().min(0).max(200_000_000).optional(),
+  maxDiscountAmount: z.coerce.number().int().min(0).max(200_000_000).optional(),
+  startsAt: z.string().trim().max(40).optional(),
+  endsAt: z.string().trim().max(40).optional(),
+}).refine((value) => value.type !== 'percent' || value.value <= 100, {
+  message: 'Percent discount value cannot exceed 100.',
+  path: ['value'],
+});
+
 const optionalLocalizedTextSchema = z.object({
   ko: z.string().trim().max(2000).default(''),
   'zh-hant': z.string().trim().max(2000).default(''),
   en: z.string().trim().max(2000).default(''),
 });
-
-const timeSchema = z.string().regex(/^\d{2}:\d{2}$/);
 const isoSchema = z.string().datetime({ offset: true });
 const timezoneSchema = z.string().trim().min(1).max(80).refine(isValidBookingTimezone, {
   message: 'Invalid timezone.',
@@ -360,17 +441,84 @@ export const bookingServiceInputSchema = z.object({
   paymentMode: z.enum(['free', 'paid']).default('free'),
   priceAmount: z.coerce.number().int().min(0).max(200_000_000).optional(),
   priceCurrency: z.enum(['KRW', 'USD', 'TWD', 'JPY', 'EUR']).default('TWD'),
+  staffPriceOverrides: z.record(
+    z.string().trim().min(1).max(120),
+    z.coerce.number().int().min(0).max(200_000_000),
+  ).optional(),
+  resourcePriceOverrides: z.record(
+    z.string().trim().min(1).max(120),
+    z.coerce.number().int().min(0).max(200_000_000),
+  ).optional(),
   depositAmount: z.coerce.number().int().min(0).max(200_000_000).optional(),
+  collectPaymentLater: z.coerce.boolean().default(false),
+  discountCodes: z.array(bookingDiscountRuleInputSchema).max(20).optional(),
   meetingMode: z.enum(['in-person', 'zoom', 'phone', 'hybrid']).default('in-person'),
   cancellationPolicyId: z.string().trim().max(120).optional(),
   reminderOffsetsHours: z.array(z.union([z.literal(1), z.literal(24)])).max(2).optional(),
-}).refine((value) => {
-  if (value.paymentMode !== 'paid' || !value.depositAmount) return true;
+}).superRefine((value, ctx) => {
+  const hasStaffPriceOverrides = Object.keys(value.staffPriceOverrides ?? {}).length > 0;
+  const hasResourcePriceOverrides = Object.keys(value.resourcePriceOverrides ?? {}).length > 0;
+  const hasDiscountCodes = (value.discountCodes ?? []).length > 0;
+  if (value.paymentMode !== 'paid') {
+    if (hasStaffPriceOverrides) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Staff-specific prices are only available for paid services.',
+        path: ['staffPriceOverrides'],
+      });
+    }
+    if (hasResourcePriceOverrides) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Resource-specific prices are only available for paid services.',
+        path: ['resourcePriceOverrides'],
+      });
+    }
+    if (hasDiscountCodes) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Discount codes are only available for paid services.',
+        path: ['discountCodes'],
+      });
+    }
+    if (value.collectPaymentLater) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Collect-later payment is only available for paid services.',
+        path: ['collectPaymentLater'],
+      });
+    }
+    return;
+  }
+  if (value.collectPaymentLater && (value.depositAmount ?? 0) > 0) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: 'Deposit amount is not allowed when payment is collected later.',
+      path: ['depositAmount'],
+    });
+    return;
+  }
+  if (!value.depositAmount) return;
   const total = value.priceAmount ?? value.priceTwd ?? 0;
-  return value.depositAmount < total;
-}, {
-  message: 'Deposit amount must be lower than the full payment amount.',
-  path: ['depositAmount'],
+  if (value.depositAmount >= total) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: 'Deposit amount must be lower than the full payment amount.',
+      path: ['depositAmount'],
+    });
+  }
+});
+
+export const bookingCancellationPolicyInputSchema = z.object({
+  name: z.string().trim().min(1).max(120),
+  description: z.string().trim().max(500).optional(),
+  cancelHoursBefore: z.coerce.number().int().min(0).max(240).default(0),
+  rescheduleHoursBefore: z.coerce.number().int().min(0).max(240).default(0),
+  fullRefundHoursBefore: z.coerce.number().int().min(0).max(240).default(0),
+  partialRefundHoursBefore: z.coerce.number().int().min(0).max(240).default(0),
+  partialRefundPercent: z.coerce.number().int().min(0).max(100).default(0),
+  cancellationFeePercent: z.coerce.number().int().min(0).max(100).default(0),
+  isActive: z.coerce.boolean().default(true),
 });
 
 export const staffInputSchema = z.object({
@@ -387,6 +535,11 @@ export const bookingResourceInputSchema = z.object({
   description: optionalLocalizedTextSchema.optional(),
   location: z.string().trim().max(160).optional(),
   capacity: z.coerce.number().int().min(1).max(500).default(1),
+  bufferBeforeMinutes: z.coerce.number().int().min(0).max(240).default(0),
+  bufferAfterMinutes: z.coerce.number().int().min(0).max(240).default(0),
+  weekly: weeklyAvailabilitySchema.default(defaultWeeklyAvailability),
+  timezone: timezoneSchema.default('Asia/Taipei'),
+  recurringTemplateId: z.string().trim().max(80).optional(),
   blockedDates: z.array(blockedDateSchema).default([]),
   isActive: z.coerce.boolean().default(true),
 });
@@ -421,22 +574,11 @@ export const bookingPackageCreditUpdateSchema = z.object({
   status: z.enum(['active', 'used', 'expired', 'revoked']).optional(),
 });
 
-export const availabilityBlockSchema = z.object({
-  start: timeSchema,
-  end: timeSchema,
-}).refine((value) => value.start < value.end, {
-  message: 'Availability start must be before end.',
-});
-
 export const staffAvailabilitySchema = z.object({
   staffId: z.string().trim().min(1),
-  weekly: z.object(
-    Object.fromEntries(dayOfWeeks.map((day) => [day, z.array(availabilityBlockSchema)])) as Record<
-      DayOfWeek,
-      z.ZodArray<typeof availabilityBlockSchema>
-    >,
-  ),
+  weekly: weeklyAvailabilitySchema,
   blockedDates: z.array(blockedDateSchema).default([]),
+  dateOverrides: z.array(staffAvailabilityDateOverrideSchema).default([]),
   timezone: timezoneSchema.default('Asia/Taipei'),
   recurringTemplateId: z.string().trim().max(80).optional(),
   holidayCalendar: z.enum(['none', 'kr', 'tw', 'kr-tw']).default('none'),
@@ -463,6 +605,7 @@ export const bookingCreateSchema = z.object({
   source: z.enum(['web', 'admin']).default('web'),
   status: z.enum(['pending', 'confirmed', 'cancelled', 'completed', 'no-show']).default('confirmed'),
   paymentIntentId: z.string().trim().min(1).max(200).optional(),
+  discountCode: z.string().trim().min(1).max(32).optional(),
 });
 
 export const bookingWaitlistCreateSchema = z.object({

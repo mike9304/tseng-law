@@ -43,9 +43,9 @@ test('enabled app widgets appear in the add panel and quick-add to the canvas', 
 
     let drawer = await openCatalogDrawer(page);
     await expect(drawer.locator('[data-builder-app-widget-section="true"]')).toBeVisible();
-    await expect(drawer.locator('[data-builder-app-widget-count="true"]')).toContainText('1 widgets');
+    await expect(drawer.locator('[data-builder-app-widget-count="true"]')).toContainText(/1 widgets|위젯 1개/);
 
-    await drawer.getByLabel('Search add elements').fill('search');
+    await drawer.getByLabel(/Search add elements|추가 요소 검색/).fill('search');
     const card = drawer.locator(`[data-builder-app-widget-card="${WIDGET_ID}"]`);
     await expect(card).toBeVisible();
     await expect(card).toHaveAttribute('data-builder-app-widget-kind', 'site-search');
@@ -58,7 +58,7 @@ test('enabled app widgets appear in the add panel and quick-add to the canvas', 
     await page.reload({ waitUntil: 'domcontentloaded' });
     await openBuilder(page, `/${LOCALE}/admin-builder?appWidget=${token}&disabled=1`);
     drawer = await openCatalogDrawer(page);
-    await drawer.getByLabel('Search add elements').fill('search');
+    await drawer.getByLabel(/Search add elements|추가 요소 검색/).fill('search');
     await expect(drawer.locator(`[data-builder-app-widget-card="${WIDGET_ID}"]`)).toHaveCount(0);
   } finally {
     await uninstallIfPresent(page.request, `app-widget-cleanup-after-${token}`);

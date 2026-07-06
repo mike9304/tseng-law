@@ -49,7 +49,7 @@ describe('/api/builder/live-chat/[conversationId]/send', () => {
     } as unknown as Awaited<ReturnType<typeof guardMutation>>);
   });
 
-  it('appends an admin message and updates lastMessageAt on happy path', async () => {
+  it('appends an admin message with the default ko author label on happy path', async () => {
     vi.mocked(getConversation).mockResolvedValue(makeConversation());
     const route = await import('../route');
     const response = await route.POST(postRequest({ body: '안녕하세요, 박변호사입니다.' }), {
@@ -60,9 +60,21 @@ describe('/api/builder/live-chat/[conversationId]/send', () => {
     expect(response.status).toBe(200);
     expect(payload.ok).toBe(true);
     expect(appendMessage).toHaveBeenCalledWith(
-      expect.objectContaining({ role: 'admin', body: '안녕하세요, 박변호사입니다.', authorLabel: 'admin' }),
+      expect.objectContaining({ role: 'admin', body: '안녕하세요, 박변호사입니다.', authorLabel: '관리자' }),
     );
     expect(saveConversation).toHaveBeenCalledTimes(1);
+  });
+
+  it('uses locale-specific default author labels when authorLabel is omitted', async () => {
+    vi.mocked(getConversation).mockResolvedValue(makeConversation());
+    const route = await import('../route');
+    await route.POST(postRequest({ body: '您好', locale: 'zh-hant' }), {
+      params: { conversationId: 'cnv-1' },
+    });
+
+    expect(appendMessage).toHaveBeenCalledWith(
+      expect.objectContaining({ authorLabel: '管理員' }),
+    );
   });
 
   it('uses authorLabel from payload when provided', async () => {
@@ -80,22 +92,31 @@ describe('/api/builder/live-chat/[conversationId]/send', () => {
   it('rejects empty body with 400', async () => {
     vi.mocked(getConversation).mockResolvedValue(makeConversation());
     const route = await import('../route');
-    const response = await route.POST(postRequest({ body: '   ' }), {
+    const response = await route.POST(postRequest({ body: '   ', locale: 'zh-hant' }), {
       params: { conversationId: 'cnv-1' },
     });
+    const payload = await response.json();
 
     expect(response.status).toBe(400);
+    expect(payload.errorCode).toBe('invalid_payload');
+    expect(payload.error).toBe('請確認訊息內容。');
+    expect(payload.error).not.toMatch(/[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]/);
     expect(appendMessage).not.toHaveBeenCalled();
   });
 
   it('returns 404 when conversation is missing', async () => {
     vi.mocked(getConversation).mockResolvedValue(null);
     const route = await import('../route');
-    const response = await route.POST(postRequest({ body: 'hi' }), {
+    const response = await route.POST(postRequest({ body: 'hi', locale: 'en' }), {
       params: { conversationId: 'cnv-missing' },
     });
+    const payload = await response.json();
 
     expect(response.status).toBe(404);
+    expect(payload).toEqual({
+      error: 'Conversation not found.',
+      errorCode: 'conversation_not_found',
+    });
     expect(appendMessage).not.toHaveBeenCalled();
   });
 

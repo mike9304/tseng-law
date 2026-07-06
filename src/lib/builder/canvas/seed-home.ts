@@ -1,5 +1,6 @@
 import type { BuilderCanvasDocument, BuilderCanvasNode, CompositeComponentKey } from './types';
 import { createDefaultCanvasNodeStyle } from './types';
+import { responsivize } from '@/lib/builder/templates/_shared/responsivize';
 import type { Locale } from '@/lib/locales';
 import {
   createCaseResultsDecomposedNodes,
@@ -38,7 +39,19 @@ import {
   CONTACT_SECTION_ROOT_HEIGHT,
 } from './decompose-contact';
 
-export const SEED_VERSION = 'home-seed-v6';
+// v7: the home is now seeded as a live-reflecting `composite` stack (mirrors the
+// real tseng-law.com home), with the editable decomposed layout preserved as the
+// "decompose to edit" target.
+// v10: default home is the live-reflecting COMPOSITE stack (mirrors tseng-law.com
+// exactly); content is edited via the data admins, not the canvas. The editable
+// decomposed home is kept for "decompose to edit" + admin migrations/locale
+// repair. Bumping re-seeds existing homes to the live-matching composite.
+// v12: composite home no longer receives auto-generated mobile rect overrides.
+// The underlying live React sections own their responsive layout; auto-fit
+// overrides inserted artificial mobile gaps and made the public home drift from
+// the real site.
+export const SEED_VERSION = 'home-seed-v12';
+export const PREVIOUS_SEED_VERSIONS = new Set(['home-seed-v6', 'home-seed-v7', 'home-seed-v8', 'home-seed-v9', 'home-seed-v10', 'home-seed-v11']);
 
 const STAGE_WIDTH = 1280;
 
@@ -57,17 +70,49 @@ type DecomposedSpec = {
 
 type HomeSectionSpec = CompositeSpec | DecomposedSpec;
 
-const homeSections: HomeSectionSpec[] = [
+// Editable, granular home layout — the "decompose to edit" target and the
+// subject of the layout regression test. Section order matches the live home.
+const decomposedHomeSections: HomeSectionSpec[] = [
   { kind: 'decomposed', builder: createHeroDecomposedNodes,      height: HERO_SECTION_ROOT_HEIGHT },
   { kind: 'decomposed', builder: createInsightsDecomposedNodes,  height: INSIGHTS_SECTION_ROOT_HEIGHT },
   { kind: 'decomposed', builder: createServicesDecomposedNodes,  height: SERVICES_SECTION_ROOT_HEIGHT },
   { kind: 'decomposed', builder: createAttorneyDecomposedNodes,  height: ATTORNEY_SECTION_ROOT_HEIGHT },
-  // home-case-results: decomposed pilot (S-03)
   { kind: 'decomposed', builder: createCaseResultsDecomposedNodes, height: CASE_RESULTS_ROOT_HEIGHT },
   { kind: 'decomposed', builder: createStatsDecomposedNodes,     height: STATS_SECTION_ROOT_HEIGHT },
   { kind: 'decomposed', builder: createFaqDecomposedNodes,       height: FAQ_SECTION_ROOT_HEIGHT },
   { kind: 'decomposed', builder: createOfficesDecomposedNodes,   height: OFFICES_SECTION_ROOT_HEIGHT },
   { kind: 'decomposed', builder: createContactDecomposedNodes,   height: CONTACT_SECTION_ROOT_HEIGHT },
+];
+
+// Live-reflecting home: each section is a `composite` node rendering the SAME
+// React component the live tseng-law.com home uses, in the same order, so the
+// builder home mirrors the real site exactly.
+// Natural render heights (1280px desktop) measured from the live published home
+// via scripts/measure-home-sections.mjs. Used as the composite flow floor so the
+// editor canvas stacks sections exactly like the published page. Re-run that
+// script after content/layout changes and update these values.
+const MEASURED_SECTION_HEIGHTS = {
+  hero: 788,
+  insights: 1277,
+  services: 1278,
+  attorney: 926,
+  caseResults: 800,
+  stats: 621,
+  faq: 1333,
+  offices: 919,
+  contact: 516,
+} as const;
+
+const compositeHomeSections: CompositeSpec[] = [
+  { kind: 'composite', id: 'home-hero',          componentKey: 'hero-search',       height: MEASURED_SECTION_HEIGHTS.hero },
+  { kind: 'composite', id: 'home-insights',      componentKey: 'insights-archive',  height: MEASURED_SECTION_HEIGHTS.insights },
+  { kind: 'composite', id: 'home-services',      componentKey: 'services-bento',    height: MEASURED_SECTION_HEIGHTS.services },
+  { kind: 'composite', id: 'home-attorney',      componentKey: 'home-attorney',     height: MEASURED_SECTION_HEIGHTS.attorney },
+  { kind: 'composite', id: 'home-case-results',  componentKey: 'home-case-results', height: MEASURED_SECTION_HEIGHTS.caseResults },
+  { kind: 'composite', id: 'home-stats',         componentKey: 'home-stats',        height: MEASURED_SECTION_HEIGHTS.stats },
+  { kind: 'composite', id: 'home-faq',           componentKey: 'faq-accordion',     height: MEASURED_SECTION_HEIGHTS.faq },
+  { kind: 'composite', id: 'home-offices',       componentKey: 'office-map-tabs',   height: MEASURED_SECTION_HEIGHTS.offices },
+  { kind: 'composite', id: 'home-contact',       componentKey: 'home-contact-cta',  height: MEASURED_SECTION_HEIGHTS.contact },
 ];
 
 function createCompositeNode(
@@ -92,13 +137,13 @@ function createCompositeNode(
   };
 }
 
-export function createHomePageCanvasDocument(locale: Locale): BuilderCanvasDocument {
+function buildHomeDocument(locale: Locale, sections: HomeSectionSpec[]): BuilderCanvasDocument {
   const updatedAt = new Date().toISOString();
   const nodes: BuilderCanvasNode[] = [];
   let y = 0;
   let zBase = 0;
 
-  homeSections.forEach((spec) => {
+  sections.forEach((spec) => {
     if (spec.kind === 'composite') {
       nodes.push(createCompositeNode(spec, y, zBase, locale));
       zBase += 1;
@@ -109,6 +154,9 @@ export function createHomePageCanvasDocument(locale: Locale): BuilderCanvasDocum
     }
     y += spec.height;
   });
+  if (sections.some((spec) => spec.kind === 'decomposed')) {
+    responsivize(nodes);
+  }
 
   return {
     version: 1,
@@ -116,7 +164,19 @@ export function createHomePageCanvasDocument(locale: Locale): BuilderCanvasDocum
     updatedAt,
     updatedBy: SEED_VERSION,
     stageWidth: STAGE_WIDTH,
-    stageHeight: y + 40,
+    stageHeight: y + 2,
     nodes,
   };
+}
+
+// Default home seed: live-reflecting COMPOSITE stack — mirrors the live
+// tseng-law.com home exactly (section content is edited via the data admins).
+export function createHomePageCanvasDocument(locale: Locale): BuilderCanvasDocument {
+  return buildHomeDocument(locale, compositeHomeSections);
+}
+
+// Editable decomposed home — the "decompose to edit" target and the subject of
+// the admin migrations / locale repair / layout regression test.
+export function createHomePageCanvasDocumentDecomposed(locale: Locale): BuilderCanvasDocument {
+  return buildHomeDocument(locale, decomposedHomeSections);
 }

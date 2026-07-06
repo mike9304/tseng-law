@@ -6,6 +6,7 @@ import {
   checkAccess,
   createMember,
   getMemberByEmail,
+  getMemberPortalEmails,
   listMembers,
   loginMember,
   publicMember,
@@ -68,6 +69,12 @@ describe('native members engine', () => {
     expect((await validateSession(session!.sessionId))?.memberId).toBe(free.memberId);
     await updateMemberProfile(free.memberId, { name: 'Updated Free', phone: '+886-2-1234-5678' });
     expect((await getMemberByEmail('free@example.com'))?.name).toBe('Updated Free');
+
+    await updateMemberProfile(free.memberId, { email: 'updated-free@example.com' });
+    const updatedFree = await getMemberByEmail('updated-free@example.com');
+    expect(updatedFree?.email).toBe('updated-free@example.com');
+    expect(getMemberPortalEmails(updatedFree!)).toEqual(expect.arrayContaining(['updated-free@example.com', 'free@example.com']));
+    expect(updatedFree?.customFields?.memberEmailAliases).toContain('free@example.com');
 
     expect(checkAccess({ pageId: 'account', requireLogin: true, allowedRoles: [] }, free)).toBe(true);
     expect(checkAccess({ pageId: 'premium', requireLogin: true, allowedRoles: ['premium', 'admin'] }, free)).toBe(false);

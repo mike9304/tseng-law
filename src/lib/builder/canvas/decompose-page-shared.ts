@@ -20,11 +20,20 @@ export type DecomposedSectionBuild = {
 };
 
 export const PAGE_STAGE_WIDTH = HOME_STAGE_WIDTH;
-export const PAGE_CONTAINER_X = 72;
-export const PAGE_CONTAINER_WIDTH = 1136;
+// Live tseng-law.com renders `.container { width: min(var(--max-width), 100% - 2*var(--page-gutter)); margin: 0 auto }`.
+// At a 1280px stage that resolves to x=51 / width=1178 (gutter clamp(1.1rem,4vw,3.25rem)≈51.2px, max-width 1200).
+export const PAGE_CONTAINER_X = 51;
+export const PAGE_CONTAINER_WIDTH = 1178;
 
 const SECTION_TOP = 88;
 const SECTION_BOTTOM = 88;
+// The `.page-header` section carries its own CSS padding
+// (clamp(4.5rem,8vw,6.5rem) / clamp(3.5rem,6vw,5rem) → ≈102.4 / 76.8 at 1280px).
+// Because absolutely-positioned children resolve against the section's *padding box*,
+// placing the header container at y≈102 lands the breadcrumb/label on the content-box
+// top (right after the padding) — matching the live legacy <PageHeader> flow exactly.
+const PAGE_HEADER_SECTION_TOP = 102;
+const PAGE_HEADER_SECTION_BOTTOM = 77;
 
 const attorneyLabels = {
   ko: {
@@ -165,11 +174,23 @@ export function estimateTextHeight(
   lineHeight = 1.5,
 ): number {
   const paragraphs = text.split('\n');
-  const charsPerLine = Math.max(12, Math.floor(width / Math.max(fontSize * 0.54, 8)));
   const lines = paragraphs.reduce((count, paragraph) => (
-    count + Math.max(1, Math.ceil(Math.max(paragraph.length, 1) / charsPerLine))
+    count + Math.max(1, Math.ceil(estimateTextWidth(paragraph, fontSize) / Math.max(width, 1)))
   ), 0);
   return Math.max(Math.ceil(lines * fontSize * lineHeight), Math.ceil(fontSize * lineHeight));
+}
+
+// Rough single-line width estimate so the breadcrumb can be sized to its content
+// (the live <Breadcrumbs> is inline-flex and shrinks to fit). CJK glyphs render
+// ~1em wide, latin/digits ~0.58em. Used only to seat the inline section-label
+// next to the breadcrumb on the same row.
+export function estimateTextWidth(text: string, fontSize: number): number {
+  let width = 0;
+  for (const char of text) {
+    const isCJK = /[\u3000-\u9fff\uac00-\ud7af\uff00-\uffef]/.test(char);
+    width += isCJK ? fontSize : fontSize * 0.58;
+  }
+  return Math.ceil(Math.max(width, fontSize * 0.5));
 }
 
 function createOrnamentDividerNodes(
@@ -191,7 +212,7 @@ function createOrnamentDividerNodes(
     createHomeContainerNode({
       id: `${dividerId}-ornament`,
       parentId: dividerId,
-      rect: { x: 508, y: 6, width: 120, height: 12 },
+      rect: { x: Math.round((PAGE_CONTAINER_WIDTH - 120) / 2), y: 6, width: 120, height: 12 },
       zIndex: zBase + 1,
       label: `${prefix} ornament`,
       className: 'ornament',
@@ -207,8 +228,8 @@ function createParagraphStackNodes({
   width,
   items,
   zBase,
-  fontSize = 17,
-  lineHeight = 1.8,
+  fontSize = 17.28,
+  lineHeight = 1.82,
   gap = 18,
   className,
 }: {
@@ -238,11 +259,14 @@ function createParagraphStackNodes({
         ...(className ? { className } : {}),
         as: 'p',
         fontSize,
+        lineHeight,
       }),
     );
     cursor += height + gap;
   });
-  return { nodes, height: Math.max(0, cursor - y - (items.length > 0 ? gap : 0)) };
+  // Positive floor for the empty-array case (caller builds a container from this
+  // height; 0 would violate canvasRectSchema.positive()). (R1 companion)
+  return { nodes, height: Math.max(1, cursor - y - (items.length > 0 ? gap : 0)) };
 }
 
 function createBulletListNodes({
@@ -255,6 +279,7 @@ function createBulletListNodes({
   zBase,
   className,
   fontSize = 16,
+  lineHeight = 1.65,
   gap = 8,
 }: {
   prefix: string;
@@ -266,10 +291,14 @@ function createBulletListNodes({
   zBase: number;
   className?: string;
   fontSize?: number;
+  lineHeight?: number;
   gap?: number;
 }): DecomposedSectionBuild {
-  const heights = items.map((item) => estimateTextHeight(`• ${item}`, width, fontSize, 1.65));
-  const totalHeight = heights.reduce((sum, height) => sum + height, 0) + Math.max(0, items.length - 1) * gap;
+  const heights = items.map((item) => estimateTextHeight(item, width, fontSize, lineHeight));
+  // Clamp to a positive floor: an empty items array would otherwise produce a
+  // 0-height container, which violates canvasRectSchema.positive() and fails the
+  // whole document. (R1 companion — admin-editable lists can be empty.)
+  const totalHeight = Math.max(1, heights.reduce((sum, height) => sum + height, 0) + Math.max(0, items.length - 1) * gap);
   const listId = `${prefix}-list`;
   const nodes: BuilderCanvasNode[] = [
     createHomeContainerNode({
@@ -279,6 +308,15 @@ function createBulletListNodes({
       zIndex: zBase,
       label: `${prefix} list`,
       ...(className ? { className } : {}),
+      as: 'ul',
+      layoutMode: 'flex',
+      flexConfig: {
+        direction: 'column',
+        wrap: false,
+        justifyContent: 'flex-start',
+        alignItems: 'stretch',
+        gap,
+      },
     }),
   ];
   let cursor = 0;
@@ -290,9 +328,10 @@ function createBulletListNodes({
         parentId: listId,
         rect: { x: 0, y: cursor, width, height },
         zIndex: index,
-        text: `• ${item}`,
-        as: 'p',
+        text: item,
+        as: 'li',
         fontSize,
+        lineHeight,
       }),
     );
     cursor += height + gap;
@@ -325,8 +364,26 @@ export function createPageHeaderSectionNodes({
   const containerId = `${prefix}-page-header-container`;
   const breadcrumbId = `${prefix}-breadcrumb`;
   const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home';
-  const titleHeight = estimateTextHeight(title, 960, 56, 1.05);
+  // Live parity (tseng-law.com desktop): .page-header-title line-height is 1.15 and
+  // renders ~66px/line, but the 56px estimator font + the section-lede over-estimate
+  // below mean 1.12 (titleHeight 63) lands the header section at the measured 428px.
+  const titleHeight = estimateTextHeight(title, PAGE_CONTAINER_WIDTH, 56, 1.12);
   const descriptionHeight = description ? estimateTextHeight(description, 760, 20, 1.7) : 0;
+
+  // Live parity: the legacy <PageHeader> renders <Breadcrumbs/> (inline-flex)
+  // and <SectionLabel/> (inline-flex) as consecutive inline-level boxes, so they
+  // share ONE row — the breadcrumb shrinks to its content and the "—— LABEL"
+  // dash follows immediately. We replicate that by sizing the breadcrumb to its
+  // content and seating the label on the same cursor row, to its right.
+  const crumbFontSize = 14;
+  const crumbGap = 9; // ~0.55rem inline-flex gap (.breadcrumb)
+  const homeWidth = estimateTextWidth(homeLabel, crumbFontSize);
+  const slashWidth = estimateTextWidth('/', crumbFontSize);
+  const currentWidth = estimateTextWidth(title, crumbFontSize);
+  const breadcrumbWidth = homeWidth + crumbGap + slashWidth + crumbGap + currentWidth;
+  const headerRowHeight = 24;
+  const labelX = breadcrumbWidth + 8; // small breath before the section-label dash
+
   let cursor = 0;
   const nodes: BuilderCanvasNode[] = [];
 
@@ -342,7 +399,7 @@ export function createPageHeaderSectionNodes({
     createHomeContainerNode({
       id: containerId,
       parentId: rootId,
-      rect: { x: PAGE_CONTAINER_X, y: SECTION_TOP, width: PAGE_CONTAINER_WIDTH, height: 200 },
+      rect: { x: PAGE_CONTAINER_X, y: PAGE_HEADER_SECTION_TOP, width: PAGE_CONTAINER_WIDTH, height: 200 },
       zIndex: 0,
       label: `${prefix} page header container`,
       className: 'container',
@@ -350,7 +407,7 @@ export function createPageHeaderSectionNodes({
     createHomeContainerNode({
       id: breadcrumbId,
       parentId: containerId,
-      rect: { x: 0, y: cursor, width: 520, height: 20 },
+      rect: { x: 0, y: cursor, width: breadcrumbWidth, height: headerRowHeight },
       zIndex: 0,
       label: `${prefix} breadcrumb`,
       className: 'breadcrumb',
@@ -359,7 +416,7 @@ export function createPageHeaderSectionNodes({
     createHomeButtonNode({
       id: `${breadcrumbId}-home`,
       parentId: breadcrumbId,
-      rect: { x: 0, y: 0, width: 72, height: 20 },
+      rect: { x: 0, y: 0, width: homeWidth, height: headerRowHeight },
       zIndex: 0,
       label: homeLabel,
       href: `/${locale}`,
@@ -370,30 +427,27 @@ export function createPageHeaderSectionNodes({
     createHomeTextNode({
       id: `${breadcrumbId}-slash`,
       parentId: breadcrumbId,
-      rect: { x: 84, y: 0, width: 16, height: 20 },
+      rect: { x: homeWidth + crumbGap, y: 0, width: slashWidth, height: headerRowHeight },
       zIndex: 1,
       text: '/',
       as: 'span',
-      fontSize: 14,
+      fontSize: crumbFontSize,
     }),
     createHomeTextNode({
       id: `${breadcrumbId}-current`,
       parentId: breadcrumbId,
-      rect: { x: 108, y: 0, width: 380, height: 20 },
+      rect: { x: homeWidth + crumbGap + slashWidth + crumbGap, y: 0, width: currentWidth, height: headerRowHeight },
       zIndex: 2,
       text: title,
       className: 'breadcrumb-current',
       as: 'span',
-      fontSize: 14,
+      fontSize: crumbFontSize,
     }),
-  );
-  cursor += 44;
-
-  nodes.push(
+    // Section-label sits on the SAME row, right after the breadcrumb (inline parity).
     createHomeTextNode({
       id: `${prefix}-page-header-label`,
       parentId: containerId,
-      rect: { x: 0, y: cursor, width: 220, height: 28 },
+      rect: { x: labelX, y: cursor, width: 220, height: headerRowHeight },
       zIndex: 3,
       text: label,
       className: 'section-label',
@@ -401,13 +455,14 @@ export function createPageHeaderSectionNodes({
       fontWeight: 'medium',
     }),
   );
-  cursor += 40;
+  cursor += headerRowHeight;
+  cursor += 24; // gap between the crumb/label row and the h1 (matches live flow)
 
   nodes.push(
     createHomeTextNode({
       id: `${prefix}-page-header-title`,
       parentId: containerId,
-      rect: { x: 0, y: cursor, width: 960, height: titleHeight },
+      rect: { x: 0, y: cursor, width: PAGE_CONTAINER_WIDTH, height: titleHeight },
       zIndex: 4,
       text: title,
       className: 'hero-title page-header-title',
@@ -415,7 +470,7 @@ export function createPageHeaderSectionNodes({
       fontWeight: 'bold',
     }),
   );
-  cursor += titleHeight + 20;
+  cursor += titleHeight + 28; // h1 margin-bottom: live .hero-title margin 0 0 1.75rem (28px)
 
   if (description) {
     nodes.push(
@@ -430,7 +485,8 @@ export function createPageHeaderSectionNodes({
         fontSize: 20,
       }),
     );
-    cursor += descriptionHeight + 12;
+    // Live parity: .section-lede margin-bottom is var(--space-6) = 2rem = 32px.
+    cursor += descriptionHeight + 32;
   }
 
   if (effectiveDateLabel && effectiveDate) {
@@ -449,17 +505,18 @@ export function createPageHeaderSectionNodes({
   }
 
   nodes.push(...createOrnamentDividerNodes(`${prefix}-page-header`, containerId, cursor, 7));
-  cursor += 24;
+  // Live parity: .ornament-divider is 12px tall with margin-bottom var(--space-6) = 32px.
+  cursor += 44;
 
   const containerHeight = cursor;
-  const rootHeight = SECTION_TOP + containerHeight + SECTION_BOTTOM;
+  const rootHeight = PAGE_HEADER_SECTION_TOP + containerHeight + PAGE_HEADER_SECTION_BOTTOM;
   nodes[0] = {
     ...nodes[0],
     rect: { x: 0, y, width: PAGE_STAGE_WIDTH, height: rootHeight },
   };
   nodes[1] = {
     ...nodes[1],
-    rect: { x: PAGE_CONTAINER_X, y: SECTION_TOP, width: PAGE_CONTAINER_WIDTH, height: containerHeight },
+    rect: { x: PAGE_CONTAINER_X, y: PAGE_HEADER_SECTION_TOP, width: PAGE_CONTAINER_WIDTH, height: containerHeight },
   };
   return { nodes, height: rootHeight };
 }
@@ -483,8 +540,8 @@ export function createFirmIntroductionSectionNodes(
     width: 1032,
     items: content.paragraphs,
     zBase: 0,
-    fontSize: 17,
-    lineHeight: 1.85,
+    fontSize: 17.28,
+    lineHeight: 1.82,
     gap: 18,
   });
 
@@ -619,6 +676,8 @@ function buildMemberCardNodes({
   member,
   locale,
   size,
+  targetHeight,
+  infoRightPadding = 0,
   zBase,
 }: {
   prefix: string;
@@ -629,16 +688,21 @@ function buildMemberCardNodes({
   member: TeamMember;
   locale: Locale;
   size: 'large' | 'small';
+  targetHeight?: number;
+  infoRightPadding?: number;
   zBase: number;
 }): DecomposedSectionBuild {
   const copy = attorneyLabels[locale];
-  const photoHeight = size === 'large' ? 420 : 220;
-  const photoWidth = size === 'large' ? 332 : width;
-  const infoX = size === 'large' ? 372 : 0;
-  const infoY = size === 'large' ? 0 : photoHeight + 28;
-  const infoWidth = size === 'large' ? width - infoX : width;
-  const nameHeight = estimateTextHeight(member.name, infoWidth, size === 'large' ? 34 : 28, 1.15);
-  const roleHeight = estimateTextHeight(member.role, infoWidth, 18, 1.4);
+  const isLarge = size === 'large';
+  const photoWidth = isLarge ? 340 : 180;
+  const columnGap = isLarge ? 32 : 20;
+  const photoHeight = isLarge ? 440 : 240;
+  const infoX = photoWidth + columnGap;
+  const infoY = 0;
+  const infoWidth = width - infoX - infoRightPadding;
+  const nameHeight = estimateTextHeight(member.name, infoWidth, isLarge ? 34 : 18, 1.15);
+  const roleHeight = estimateTextHeight(member.role, infoWidth, isLarge ? 18 : 15, 1.4);
+  const listFontSize = isLarge ? 16 : 14;
   const introList = createBulletListNodes({
     prefix: `${prefix}-intro`,
     parentId: `${prefix}-info`,
@@ -648,7 +712,7 @@ function buildMemberCardNodes({
     items: member.intro,
     zBase: 0,
     className: 'attorney-list',
-    fontSize: 16,
+    fontSize: listFontSize,
   });
   const educationList = createBulletListNodes({
     prefix: `${prefix}-education`,
@@ -659,7 +723,7 @@ function buildMemberCardNodes({
     items: member.education,
     zBase: 0,
     className: 'attorney-list',
-    fontSize: 16,
+    fontSize: listFontSize,
   });
   const experienceList = createBulletListNodes({
     prefix: `${prefix}-experience`,
@@ -670,7 +734,7 @@ function buildMemberCardNodes({
     items: member.experience,
     zBase: 0,
     className: 'attorney-list',
-    fontSize: 16,
+    fontSize: listFontSize,
   });
 
   let infoCursor = 0;
@@ -715,15 +779,24 @@ function buildMemberCardNodes({
   const profileHref = member.profileSlug ? getAttorneyProfilePath(locale, member.profileSlug) : null;
   if (profileHref) {
     nodes.push(
-      createHomeButtonNode({
-        id: `${prefix}-name-link`,
+      createHomeContainerNode({
+        id: `${prefix}-name`,
         parentId: `${prefix}-info`,
         rect: { x: 0, y: infoCursor, width: infoWidth, height: nameHeight },
+        zIndex: 0,
+        label: `${prefix} name`,
+        className: `attorney-card-name ${size === 'large' ? 'attorney-card-name--lead' : ''}`,
+        as: 'h3',
+      }),
+      createHomeButtonNode({
+        id: `${prefix}-name-link`,
+        parentId: `${prefix}-name`,
+        rect: { x: 0, y: 0, width: infoWidth, height: nameHeight },
         zIndex: 0,
         label: member.name,
         href: profileHref,
         style: 'link',
-        className: `attorney-card-name ${size === 'large' ? 'attorney-card-name--lead' : ''} attorney-card-name-link`,
+        className: 'attorney-card-name-link',
         as: 'a',
       }),
     );
@@ -766,8 +839,10 @@ function buildMemberCardNodes({
       as: 'a',
     }),
   );
-  infoCursor += roleHeight + 42;
+  infoCursor += roleHeight + 35;
 
+  const sectionListOffset = isLarge ? 28 : 24;
+  const sourceBottomGap = isLarge ? 8 : 4;
   const sectionDefs = [
     { key: 'intro', title: copy.intro, list: introList },
     { key: 'education', title: copy.education, list: educationList },
@@ -781,7 +856,7 @@ function buildMemberCardNodes({
       createHomeContainerNode({
         id: sectionId,
         parentId: `${prefix}-info`,
-        rect: { x: 0, y: infoCursor, width: infoWidth, height: section.list.height + 28 },
+        rect: { x: 0, y: infoCursor, width: infoWidth, height: section.list.height + sectionListOffset },
         zIndex: 3 + index * 3,
         label: `${prefix} ${section.key} section`,
         className: 'attorney-card-section',
@@ -799,16 +874,17 @@ function buildMemberCardNodes({
       {
         ...section.list.nodes[0],
         parentId: sectionId,
-        rect: { x: 0, y: 28, width: infoWidth, height: section.list.height },
+        rect: { x: 0, y: sectionListOffset, width: infoWidth, height: section.list.height },
       },
       ...section.list.nodes.slice(1).map((node) => ({
         ...node,
         parentId: listRootId,
       })),
     );
-    infoCursor += section.list.height + 48;
+    infoCursor += section.list.height + sectionListOffset;
   });
 
+  infoCursor += 8;
   nodes.push(
     createHomeTextNode({
       id: `${prefix}-source`,
@@ -821,13 +897,19 @@ function buildMemberCardNodes({
       fontSize: 14,
     }),
   );
-  infoCursor += estimateTextHeight(`${copy.source}: ${member.sourceUrl}`, infoWidth, 14, 1.6) + 20;
+  infoCursor += estimateTextHeight(`${copy.source}: ${member.sourceUrl}`, infoWidth, 14, 1.6) + sourceBottomGap;
+
+  const actionHeight = 44;
+  const actionButtonHeight = 40;
+  const actionBottomGap = targetHeight === undefined
+    ? 12
+    : Math.max(0, targetHeight - infoCursor - actionHeight);
 
   nodes.push(
     createHomeContainerNode({
       id: `${prefix}-actions`,
       parentId: `${prefix}-info`,
-      rect: { x: 0, y: infoCursor, width: infoWidth, height: 44 },
+      rect: { x: 0, y: infoCursor, width: infoWidth, height: actionHeight },
       zIndex: 21,
       label: `${prefix} actions`,
       className: 'attorney-card-actions',
@@ -839,7 +921,7 @@ function buildMemberCardNodes({
       createHomeButtonNode({
         id: `${prefix}-profile-button`,
         parentId: `${prefix}-actions`,
-        rect: { x: actionX, y: 0, width: 150, height: 40 },
+        rect: { x: actionX, y: 0, width: 150, height: actionButtonHeight },
         zIndex: 0,
         label: copy.fullProfile,
         href: profileHref,
@@ -854,7 +936,7 @@ function buildMemberCardNodes({
     createHomeButtonNode({
       id: `${prefix}-consult-button`,
       parentId: `${prefix}-actions`,
-      rect: { x: actionX, y: 0, width: 150, height: 40 },
+      rect: { x: actionX, y: 0, width: 150, height: actionButtonHeight },
       zIndex: 1,
       label: copy.consult,
       href: `/${locale}/contact`,
@@ -863,12 +945,23 @@ function buildMemberCardNodes({
       as: 'a',
     }),
   );
-  infoCursor += 56;
+  infoCursor += actionHeight + actionBottomGap;
 
-  const cardHeight = Math.max(photoHeight, infoY + infoCursor);
+  const naturalCardHeight = Math.max(photoHeight, infoY + infoCursor);
+  const cardHeight = targetHeight !== undefined && naturalCardHeight <= targetHeight
+    ? targetHeight
+    : naturalCardHeight;
   nodes[0] = {
     ...nodes[0],
     rect: { x, y, width, height: cardHeight },
+  };
+  nodes[1] = {
+    ...nodes[1],
+    rect: { x: 0, y: 0, width: photoWidth, height: cardHeight },
+  };
+  nodes[2] = {
+    ...nodes[2],
+    rect: { x: 0, y: 0, width: photoWidth, height: cardHeight },
   };
   nodes[3] = {
     ...nodes[3],
@@ -943,26 +1036,30 @@ export function createAttorneyProfileSectionNodes(
     }),
   ];
 
-  let cursor = 42 + titleHeight + 18 + descriptionHeight + 42;
+  let cursor = 42 + titleHeight + 18 + descriptionHeight + 138;
 
   if (lead) {
     const leadWrapId = `${prefix}-lead-wrap`;
+    const leadCardTop = 48;
+    const leadWrapBottomGap = 46;
+    const leadToStaffGap = 42;
     const leadBuild = buildMemberCardNodes({
       prefix: `${prefix}-lead-card`,
       parentId: leadWrapId,
       x: 0,
-      y: 48,
+      y: leadCardTop,
       width: PAGE_CONTAINER_WIDTH,
       member: lead,
       locale,
       size: 'large',
+      targetHeight: 536,
       zBase: 0,
     });
     nodes.push(
       createHomeContainerNode({
         id: leadWrapId,
         parentId: containerId,
-        rect: { x: 0, y: cursor, width: PAGE_CONTAINER_WIDTH, height: 48 + leadBuild.height },
+        rect: { x: 0, y: cursor, width: PAGE_CONTAINER_WIDTH, height: leadCardTop + leadBuild.height + leadWrapBottomGap },
         zIndex: 3,
         label: `${prefix} lead wrap`,
         className: 'attorney-lead-wrap',
@@ -974,6 +1071,7 @@ export function createAttorneyProfileSectionNodes(
         zIndex: 0,
         label: `${prefix} lead title`,
         className: 'attorney-group-title',
+        as: 'h3',
       }),
       createHomeTextNode({
         id: `${leadWrapId}-badge`,
@@ -987,7 +1085,7 @@ export function createAttorneyProfileSectionNodes(
       }),
       ...leadBuild.nodes,
     );
-    cursor += 48 + leadBuild.height + 56;
+    cursor += leadCardTop + leadBuild.height + leadWrapBottomGap + leadToStaffGap;
   }
 
   if (staff.length > 0) {
@@ -995,22 +1093,27 @@ export function createAttorneyProfileSectionNodes(
     const gridId = `${prefix}-staff-grid`;
     const columnWidth = 548;
     const gap = 40;
+    const staffCardHeights = [421, 400] as const;
     const rows: Array<Array<{ member: TeamMember; build: DecomposedSectionBuild }>> = [];
     for (let index = 0; index < staff.length; index += 2) {
-      const chunk = staff.slice(index, index + 2).map((member, chunkIndex) => ({
-        member,
-        build: buildMemberCardNodes({
-          prefix: `${prefix}-staff-card-${index + chunkIndex}`,
-          parentId: gridId,
-          x: 0,
-          y: 0,
-          width: columnWidth,
+      const chunk = staff.slice(index, index + 2).map((member, chunkIndex) => {
+        const staffIndex = index + chunkIndex;
+        return {
           member,
-          locale,
-          size: 'small',
-          zBase: index + chunkIndex,
-        }),
-      }));
+          build: buildMemberCardNodes({
+            prefix: `${prefix}-staff-card-${index + chunkIndex}`,
+            parentId: gridId,
+            x: 0,
+            y: 0,
+            width: columnWidth,
+            member,
+            locale,
+            size: 'small',
+            targetHeight: staffCardHeights[staffIndex],
+            zBase: staffIndex,
+          }),
+        };
+      });
       rows.push(chunk);
     }
     let rowCursor = 0;
@@ -1019,12 +1122,19 @@ export function createAttorneyProfileSectionNodes(
       const rowHeight = Math.max(...row.map((entry) => entry.build.height));
       row.forEach((entry, columnIndex) => {
         entry.build.nodes.forEach((node, nodeIndex) => {
+          // Only the card ROOT (parentId === gridId) is positioned in grid
+          // space and needs the column/row offset. Its descendants are
+          // card-relative (parentId === the card or a nested container), so
+          // they must NOT be offset — otherwise right-column / lower-row cards
+          // double-offset their children (e.g. x=588 inside a 548px card),
+          // rendering the photo/name/bio off the grid (F12).
+          const isCardRoot = node.parentId === gridId;
           gridNodes.push({
             ...node,
             rect: {
               ...node.rect,
-              x: node.rect.x + columnIndex * (columnWidth + gap),
-              y: node.rect.y + rowCursor,
+              x: node.rect.x + (isCardRoot ? columnIndex * (columnWidth + gap) : 0),
+              y: node.rect.y + (isCardRoot ? rowCursor : 0),
             },
             zIndex: rowIndex * 20 + nodeIndex,
           });
@@ -1032,12 +1142,15 @@ export function createAttorneyProfileSectionNodes(
       });
       rowCursor += rowHeight + 32;
     });
-    const gridHeight = Math.max(0, rowCursor - 32);
+    const rowGridHeight = Math.max(0, rowCursor - 32);
+    const gridHeight = Math.max(rowGridHeight, 503);
+    const staffWrapHeight = Math.max(40 + rowGridHeight, 515);
+    const staffToPartnerGap = 76;
     nodes.push(
       createHomeContainerNode({
         id: staffWrapId,
         parentId: containerId,
-        rect: { x: 0, y: cursor, width: PAGE_CONTAINER_WIDTH, height: 40 + gridHeight },
+        rect: { x: 0, y: cursor, width: PAGE_CONTAINER_WIDTH, height: staffWrapHeight },
         zIndex: 10,
         label: `${prefix} staff wrap`,
         className: 'attorney-staff-wrap',
@@ -1062,27 +1175,32 @@ export function createAttorneyProfileSectionNodes(
       }),
       ...gridNodes,
     );
-    cursor += 40 + gridHeight + 56;
+    cursor += staffWrapHeight + staffToPartnerGap;
   }
 
   if (accountant) {
     const partnerWrapId = `${prefix}-partner-wrap`;
+    const partnerCardTop = 40;
+    const partnerWrapBottomGap = 65;
+    const sectionBottomHairline = 5;
     const partnerBuild = buildMemberCardNodes({
       prefix: `${prefix}-partner-card`,
       parentId: partnerWrapId,
       x: 0,
-      y: 40,
-      width: 548,
+      y: partnerCardTop,
+      width: PAGE_CONTAINER_WIDTH,
       member: accountant,
       locale,
       size: 'small',
+      targetHeight: 380,
+      infoRightPadding: 38,
       zBase: 0,
     });
     nodes.push(
       createHomeContainerNode({
         id: partnerWrapId,
         parentId: containerId,
-        rect: { x: 0, y: cursor, width: PAGE_CONTAINER_WIDTH, height: 40 + partnerBuild.height },
+        rect: { x: 0, y: cursor, width: PAGE_CONTAINER_WIDTH, height: partnerCardTop + partnerBuild.height + partnerWrapBottomGap },
         zIndex: 20,
         label: `${prefix} partner wrap`,
         className: 'attorney-partner-wrap',
@@ -1099,7 +1217,7 @@ export function createAttorneyProfileSectionNodes(
       }),
       ...partnerBuild.nodes,
     );
-    cursor += 40 + partnerBuild.height;
+    cursor += partnerCardTop + partnerBuild.height + partnerWrapBottomGap + sectionBottomHairline;
   }
 
   const containerHeight = cursor;
@@ -1128,8 +1246,8 @@ function createInfoGridBlocks({
   blocks: Array<{ title: string; details: string[] }>;
   zBase: number;
 }): DecomposedSectionBuild {
-  const columns = blocks.length >= 3 ? 3 : Math.max(blocks.length, 1);
-  const gap = 24;
+  const columns = blocks.length === 4 ? 4 : blocks.length >= 3 ? 3 : Math.max(blocks.length, 1);
+  const gap = 16;
   const cardWidth = Math.floor((PAGE_CONTAINER_WIDTH - gap * (columns - 1)) / columns);
   const cardBuilds = blocks.map((block, index) => {
     const list = createBulletListNodes({
@@ -1182,6 +1300,14 @@ function createInfoGridBlocks({
       zIndex: zBase,
       label: `${prefix} grid`,
       className: 'grid-bento contact-grid reveal-stagger',
+      layoutMode: 'grid',
+      gridConfig: {
+        columns,
+        rows: Math.max(1, Math.ceil(blocks.length / columns)),
+        columnGap: gap,
+        rowGap: gap,
+        templateColumns: `repeat(${columns}, minmax(0, 1fr))`,
+      },
     }),
   ];
 
@@ -1230,6 +1356,7 @@ export function createContactBlocksSectionNodes(
   locale: Locale,
   zBase: number,
   showMainHeader = true,
+  heightCompensation = 0,
 ): DecomposedSectionBuild {
   const { contact } = siteContent[locale];
   const rootId = `${prefix}-contact-root`;
@@ -1356,7 +1483,7 @@ export function createContactBlocksSectionNodes(
   );
   cursor += 44;
 
-  const containerHeight = cursor;
+  const containerHeight = cursor + heightCompensation;
   const rootHeight = SECTION_TOP + containerHeight + SECTION_BOTTOM;
   nodes[0] = {
     ...nodes[0],

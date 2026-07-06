@@ -1,6 +1,7 @@
 import { defineComponent } from '../define';
 import FormElement from './Element';
 import FormInspector from './Inspector';
+import { FORM_KO_DEFAULTS } from './form-controls-copy';
 
 export default defineComponent({
   kind: 'form',
@@ -12,7 +13,7 @@ export default defineComponent({
     submitTo: 'storage' as const,
     targetEmail: undefined,
     webhookUrl: undefined,
-    successMessage: '감사합니다. 곧 연락드리겠습니다.',
+    successMessage: FORM_KO_DEFAULTS.successMessage,
     redirectUrl: undefined,
     method: 'POST' as const,
     layoutMode: 'absolute' as const,

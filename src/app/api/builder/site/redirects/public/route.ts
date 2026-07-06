@@ -7,8 +7,12 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { normalizeLocale } from '@/lib/locales';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { listRedirects } from '@/lib/builder/site/redirects';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -18,22 +22,38 @@ function isLocalRequest(request: NextRequest): boolean {
   return hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '0.0.0.0';
 }
 
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
 export async function GET(request: NextRequest) {
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
   if (!isLocalRequest(request)) {
-    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+    return errorResponse(locale, 'redirects_public_unavailable', 404);
   }
 
-  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const redirects = (await listRedirects('default', locale))
-    .filter((redirect) => redirect.isActive)
-    .map((redirect) => ({
-      redirectId: redirect.redirectId,
-      from: redirect.from,
-      to: redirect.to,
-      type: redirect.type,
-      isActive: redirect.isActive,
-      updatedAt: redirect.updatedAt,
-    }));
+  let redirects;
+  try {
+    redirects = (await listRedirects('default', locale))
+      .filter((redirect) => redirect.isActive)
+      .map((redirect) => ({
+        redirectId: redirect.redirectId,
+        from: redirect.from,
+        to: redirect.to,
+        type: redirect.type,
+        isActive: redirect.isActive,
+        updatedAt: redirect.updatedAt,
+      }));
+  } catch {
+    return errorResponse(locale, 'redirects_load_failed', 500);
+  }
 
   return NextResponse.json(
     { ok: true, redirects },

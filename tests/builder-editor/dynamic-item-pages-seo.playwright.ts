@@ -38,7 +38,10 @@ async function readPageMetadata(page: Page): Promise<{
       return element?.href ?? null;
     };
     const recordJsonLd = (() => {
-      const scripts = Array.from(document.querySelectorAll('script[type="application/ld+json"]')) as HTMLScriptElement[];
+      // The locale layout emits site-wide WebSite/LegalService JSON-LD BEFORE
+      // <main>; scope to <main> so the page's per-record schema (rendered
+      // first inside it) is the deterministic first match.
+      const scripts = Array.from(document.querySelectorAll('main script[type="application/ld+json"]')) as HTMLScriptElement[];
       for (const script of scripts) {
         try {
           const parsed = JSON.parse(script.textContent || 'null') as Record<string, unknown> | null;

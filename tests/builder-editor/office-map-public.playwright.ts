@@ -302,7 +302,7 @@ async function createBuilderPage(
 async function openPagesDrawer(page: Page): Promise<Locator> {
   const drawer = page.locator('aside[aria-hidden="false"]').first();
   if (await drawer.isVisible().catch(() => false)) return drawer;
-  const pagesButton = page.getByRole('button', { name: 'Pages', exact: true });
+  const pagesButton = page.getByRole('button', { name: /^Pages$|^페이지$/ });
   await expect(pagesButton).toBeVisible();
   for (let attempt = 0; attempt < 3; attempt += 1) {
     await pagesButton.click({ force: true });
@@ -344,11 +344,12 @@ async function openBuilderPage(page: Page, pageTitle: string, pageId?: string): 
   await expect(page.getByText(/Loaded page:/)).toBeVisible();
 }
 
-async function selectLayerNode(page: Page, nodeId: string, kind: string): Promise<void> {
-  await page.getByRole('button', { name: 'Layers', exact: true }).click({ force: true });
+async function selectLayerNode(page: Page, nodeId: string): Promise<void> {
+  await page.getByRole('button', { name: /^Layers$|^레이어$/ }).click({ force: true });
   const drawer = page.locator('aside[aria-hidden="false"]').first();
-  await expect(drawer.getByText('Layers').first()).toBeVisible();
-  const row = drawer.locator(`[title="${kind} ${nodeId}"]`).first();
+  await expect(drawer.getByText(/Layers|레이어/).first()).toBeVisible();
+  await drawer.locator('[data-builder-layer-search="true"]').fill(nodeId);
+  const row = drawer.locator(`[data-builder-layer-row="${nodeId}"]`).first();
   await expect(row).toBeVisible({ timeout: 10_000 });
   await row.focus();
   await page.keyboard.press('Enter');
@@ -456,8 +457,8 @@ test.describe('/ko/admin-builder office map public reflection', () => {
         zoom: '17',
       });
 
-      await selectLayerNode(page, mapId, 'map');
-      await page.getByRole('button', { name: 'content' }).click({ force: true });
+      await selectLayerNode(page, mapId);
+      await page.getByRole('button', { name: /content|콘텐츠/ }).click({ force: true });
       await expect(page.locator('[data-builder-map-inspector="true"]')).toBeVisible();
       await expect(page.getByLabel('Map address')).toHaveValue(quickAddress);
       await expect(page.getByRole('slider', { name: 'Map zoom' })).toHaveValue('17');
@@ -535,15 +536,15 @@ test.describe('/ko/admin-builder office map public reflection', () => {
 
       const officeMap = page.locator('[data-node-id="home-offices-layout-0-map"]').first();
       await expect(officeMap).toBeVisible();
-      await selectLayerNode(page, 'home-offices-layout-0-map', 'map');
-      await page.getByRole('button', { name: 'content' }).click({ force: true });
-      await expect(page.getByText('Office sync')).toBeVisible();
+      await selectLayerNode(page, 'home-offices-layout-0-map');
+      await page.getByRole('button', { name: /content|콘텐츠/ }).click({ force: true });
+      await expect(page.getByText(/Office sync|사무소 동기화/)).toBeVisible();
 
-      await page.getByLabel('Office title synced value').fill(nextOfficeTitle);
-      await page.getByLabel('Office address synced value').fill(nextAddress);
-      await page.getByLabel('Office phone synced value').fill(nextPhone);
-      await page.getByLabel('Office fax synced value').fill(nextFax);
-      await page.getByLabel('Office map URL').fill(nextMapUrl);
+      await page.getByLabel(/Office title synced value|동기화된 사무소명/).fill(nextOfficeTitle);
+      await page.getByLabel(/Office address synced value|동기화된 사무소 주소/).fill(nextAddress);
+      await page.getByLabel(/Office phone synced value|동기화된 사무소 전화번호/).fill(nextPhone);
+      await page.getByLabel(/Office fax synced value|동기화된 사무소 팩스번호/).fill(nextFax);
+      await page.getByLabel(/Office map URL|사무소 지도 URL/).fill(nextMapUrl);
 
       const officeCardAddress = page.locator('[data-node-id="home-offices-layout-0-card-address"]').first();
       await expect(officeCardAddress).toContainText(nextAddress);
@@ -596,6 +597,70 @@ test.describe('/ko/admin-builder office map public reflection', () => {
         const src = await publishedMap.locator('iframe[title="Google Maps"]').first().getAttribute('src');
         return src ? new URL(src).searchParams.get('q') : '';
       }, { timeout: 10_000 }).toBe(nextAddress);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
+  test('renders a visible fallback (address + Google Maps link) when the map embed is blocked', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = `map-fallback-${Date.now().toString(36)}`;
+    const slug = `g-fallback-${token}`;
+    const title = `Map Fallback ${token}`;
+    const mapId = `fallback-map-node-${token}`;
+    const address = `台北市大同區承德路一段35號 ${token}`;
+    let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(token));
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        title,
+        makeGenericMapDocument({
+          token,
+          rootId: `fallback-map-root-${token}`,
+          mapId,
+          address,
+          zoom: 15,
+        }),
+      );
+
+      const draft = await draftPayload(page, pageId);
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        data: { expectedDraftRevision: draft.draft?.revision },
+        headers: mutationHeaders(slug),
+      });
+      expect(publishResponse.status()).toBe(200);
+      const published = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(published.ok, published.error).toBe(true);
+      expect(published.slug).toBe(slug);
+
+      await page.route('**/maps.google.com/**', (route) => route.abort());
+      await page.route('**/www.google.com/maps/**', (route) => route.abort());
+
+      await waitForPublishedNode(page, slug, mapId);
+      const mapNode = page.locator(`[data-node-id="${mapId}"]`).first();
+      await expect(mapNode).toBeVisible();
+
+      const fallback = mapNode.locator('[data-map-fallback="true"]').first();
+      await expect(fallback).toBeVisible({ timeout: 20_000 });
+
+      await expect(fallback.locator('[data-map-fallback-address="true"]')).toContainText(address);
+      const fallbackLink = fallback.locator('[data-map-fallback-link="true"]');
+      await expect(fallbackLink).toBeVisible();
+      await expect(fallbackLink).toHaveAttribute(
+        'href',
+        `https://www.google.com/maps/search/${encodeURIComponent(address)}`,
+      );
+
+      await expect(mapNode.locator('iframe[title="Google Maps"]')).toBeVisible();
     } finally {
       if (pageId) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {

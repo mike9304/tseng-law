@@ -3,6 +3,13 @@
 import { useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderNotificationBarCanvasNode } from '@/lib/builder/canvas/types';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  getNotificationBarCopy,
+  localizedNotificationBarText,
+  NOTIFICATION_BAR_LEGACY_DEFAULTS,
+} from './notification-bar-copy';
+import styles from './NotificationBarInspector.module.css';
 
 function safeHref(raw: string): string | null {
   const trimmed = raw.trim();
@@ -28,15 +35,28 @@ const TONE_COLORS: Record<BuilderNotificationBarCanvasNode['content']['tone'], {
 
 function NotificationBarRender({
   node,
+  locale,
   mode = 'edit',
 }: {
   node: BuilderNotificationBarCanvasNode;
+  locale?: Locale;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
+  const copy = getNotificationBarCopy(normalizeLocale(locale || 'ko'));
   const [dismissed, setDismissed] = useState(false);
   const palette = TONE_COLORS[c.tone];
   const ctaHref = safeHref(c.ctaHref);
+  const message = localizedNotificationBarText(
+    c.message,
+    copy.defaults.message,
+    NOTIFICATION_BAR_LEGACY_DEFAULTS.message,
+  );
+  const ctaLabel = localizedNotificationBarText(
+    c.ctaLabel,
+    copy.defaults.ctaLabel,
+    NOTIFICATION_BAR_LEGACY_DEFAULTS.ctaLabel,
+  );
 
   if (dismissed && mode !== 'edit') return null;
 
@@ -49,21 +69,21 @@ function NotificationBarRender({
       role="status"
       style={{ background: palette.bg, color: palette.fg, borderColor: palette.border }}
     >
-      <span className="builder-interactive-notification-message">{c.message}</span>
-      {ctaHref && c.ctaLabel ? (
+      <span className="builder-interactive-notification-message">{message}</span>
+      {ctaHref && ctaLabel ? (
         <a
           className="builder-interactive-notification-cta"
           href={ctaHref}
           rel="noopener noreferrer"
           style={{ color: palette.fg }}
         >
-          {c.ctaLabel}
+          {ctaLabel}
         </a>
       ) : null}
       {c.dismissable ? (
         <button
           type="button"
-          aria-label="dismiss notification"
+          aria-label={copy.dismiss}
           className="builder-interactive-notification-dismiss"
           onClick={() => mode !== 'edit' && setDismissed(true)}
           style={{ color: palette.fg }}
@@ -77,64 +97,91 @@ function NotificationBarRender({
 
 function NotificationBarInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const notiNode = node as BuilderNotificationBarCanvasNode;
   const c = notiNode.content;
+  const copy = getNotificationBarCopy(locale);
+  const message = localizedNotificationBarText(
+    c.message,
+    copy.defaults.message,
+    NOTIFICATION_BAR_LEGACY_DEFAULTS.message,
+  );
+  const ctaLabel = localizedNotificationBarText(
+    c.ctaLabel,
+    copy.defaults.ctaLabel,
+    NOTIFICATION_BAR_LEGACY_DEFAULTS.ctaLabel,
+  );
   return (
-    <>
-      <label>
-        <span>메시지</span>
+    <div className={styles.root} data-builder-notification-bar-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.message}</span>
         <textarea
           rows={2}
-          value={c.message}
+          value={message}
           disabled={disabled}
+          className={`${styles.control} ${styles.textarea}`}
           onChange={(event) => onUpdate({ message: event.target.value })}
         />
       </label>
-      <label>
-        <span>CTA 라벨</span>
-        <input type="text" value={c.ctaLabel} disabled={disabled} onChange={(event) => onUpdate({ ctaLabel: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.ctaLabel}</span>
+        <input
+          type="text"
+          value={ctaLabel}
+          disabled={disabled}
+          className={styles.control}
+          onChange={(event) => onUpdate({ ctaLabel: event.target.value })}
+        />
       </label>
-      <label>
-        <span>CTA 링크</span>
-        <input type="text" value={c.ctaHref} disabled={disabled} onChange={(event) => onUpdate({ ctaHref: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.ctaHref}</span>
+        <input
+          type="text"
+          value={c.ctaHref}
+          disabled={disabled}
+          className={styles.control}
+          onChange={(event) => onUpdate({ ctaHref: event.target.value })}
+        />
       </label>
-      <label>
-        <span>톤</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.tone}</span>
         <select
           value={c.tone}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ tone: event.target.value as BuilderNotificationBarCanvasNode['content']['tone'] })}
         >
-          <option value="info">Info</option>
-          <option value="warning">Warning</option>
-          <option value="success">Success</option>
-          <option value="danger">Danger</option>
+          <option value="info">{copy.inspector.tones.info}</option>
+          <option value="warning">{copy.inspector.tones.warning}</option>
+          <option value="success">{copy.inspector.tones.success}</option>
+          <option value="danger">{copy.inspector.tones.danger}</option>
         </select>
       </label>
-      <label>
-        <span>위치</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.position}</span>
         <select
           value={c.position}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ position: event.target.value as BuilderNotificationBarCanvasNode['content']['position'] })}
         >
-          <option value="top">Top</option>
-          <option value="bottom">Bottom</option>
+          <option value="top">{copy.inspector.positions.top}</option>
+          <option value="bottom">{copy.inspector.positions.bottom}</option>
         </select>
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={c.dismissable}
           disabled={disabled}
           onChange={(event) => onUpdate({ dismissable: event.target.checked })}
         />
-        <span>닫기 버튼 표시</span>
+        <span>{copy.inspector.dismissable}</span>
       </label>
-    </>
+    </div>
   );
 }
 
@@ -144,8 +191,8 @@ export default defineComponent({
   category: 'advanced',
   icon: '🔔',
   defaultContent: {
-    message: '새 공지가 도착했습니다.',
-    ctaLabel: '자세히 보기',
+    message: NOTIFICATION_BAR_LEGACY_DEFAULTS.message,
+    ctaLabel: NOTIFICATION_BAR_LEGACY_DEFAULTS.ctaLabel,
     ctaHref: '',
     dismissable: true,
     tone: 'info' as const,

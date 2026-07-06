@@ -1,6 +1,7 @@
 import { defineComponent } from '../define';
 import FormDateElement from './Element';
 import FormDateInspector from './Inspector';
+import { FORM_DATE_KO_DEFAULTS } from '../form/form-controls-copy';
 
 export default defineComponent({
   kind: 'form-date',
@@ -9,7 +10,7 @@ export default defineComponent({
   icon: '◷',
   defaultContent: {
     name: 'date',
-    label: '날짜',
+    label: FORM_DATE_KO_DEFAULTS.label,
     required: false,
     type: 'date' as const,
     min: undefined,

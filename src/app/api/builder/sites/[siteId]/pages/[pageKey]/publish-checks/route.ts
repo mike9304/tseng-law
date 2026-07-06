@@ -5,14 +5,25 @@ import {
   BuilderPublishValidationError,
   validateBuilderSnapshotForPublish,
 } from '@/lib/builder/validation';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 import type { BuilderPageDocument, BuilderPageSnapshot, BuilderPageState } from '@/lib/builder/types';
 import { normalizeLocale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
-function badRequest(message: string) {
-  return NextResponse.json({ ok: false, error: message }, { status: 400 });
+function errorResponse(
+  locale: ReturnType<typeof normalizeLocale>,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode) },
+    { status },
+  );
 }
 
 function parseBody(body: unknown): {
@@ -65,15 +76,15 @@ export async function POST(
   const auth = await guardMutation(request, { bucket: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+
   if (!isDefaultBuilderSiteId(params.siteId)) {
-    return NextResponse.json({ ok: false, error: 'Unknown builder site.' }, { status: 404 });
+    return errorResponse(locale, 'builder_site_not_found', 404);
   }
 
   if (!isBuilderPageKey(params.pageKey)) {
-    return NextResponse.json({ ok: false, error: 'Unknown builder page.' }, { status: 404 });
+    return errorResponse(locale, 'builder_page_not_found', 404);
   }
-
-  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   let body: unknown;
   try {
@@ -91,20 +102,17 @@ export async function POST(
     const parsed = parseBody(body);
     if (parsed) {
       if (parsed.document.pageKey !== params.pageKey) {
-        return badRequest('Page key mismatch.');
+        return errorResponse(locale, 'validation_error', 400);
       }
       if (parsed.document.locale !== locale) {
-        return badRequest('Locale mismatch.');
+        return errorResponse(locale, 'draft_locale_mismatch', 400);
       }
       snapshot = buildTransientSnapshot(params.pageKey, locale, parsed);
       basis = 'request';
     } else {
       const draft = await readBuilderPageSnapshot(params.pageKey, 'draft', locale);
       if (!draft.persisted) {
-        return NextResponse.json(
-          { ok: false, error: 'No draft snapshot exists for this locale.' },
-          { status: 404 }
-        );
+        return errorResponse(locale, 'draft_not_found', 404);
       }
       snapshot = draft.snapshot;
       basis = 'server-draft';
@@ -129,6 +137,6 @@ export async function POST(
       });
     }
 
-    throw error;
+    return errorResponse(locale, 'publish_checks_failed', 500);
   }
 }

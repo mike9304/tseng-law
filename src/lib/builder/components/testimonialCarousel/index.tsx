@@ -3,26 +3,37 @@
 import { useEffect, useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderTestimonialCarouselCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import {
+  getMarketingWidgetsCopy,
+  localizedTestimonialItems,
+  TESTIMONIAL_CAROUSEL_LEGACY_DEFAULT_ITEMS,
+} from '../marketing-widgets-copy';
+import styles from './TestimonialCarouselInspector.module.css';
 
 function TestimonialCarouselRender({
   node,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderTestimonialCarouselCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getMarketingWidgetsCopy(locale).testimonialCarousel;
+  const items = localizedTestimonialItems(c.items, copy.defaultItems);
   const [idx, setIdx] = useState(0);
 
   useEffect(() => {
-    if (mode === 'edit' || c.autoplayMs === 0 || c.items.length <= 1) return undefined;
+    if (mode === 'edit' || c.autoplayMs === 0 || items.length <= 1) return undefined;
     const timer = window.setInterval(() => {
-      setIdx((current) => (current + 1) % c.items.length);
+      setIdx((current) => (current + 1) % items.length);
     }, c.autoplayMs);
     return () => window.clearInterval(timer);
-  }, [c.autoplayMs, c.items.length, mode]);
+  }, [c.autoplayMs, items.length, mode]);
 
-  const active = c.items[idx] ?? null;
+  const active = items[idx] ?? null;
 
   return (
     <section className="builder-datadisplay-testimonial" data-builder-datadisplay-widget="testimonial-carousel">
@@ -36,17 +47,17 @@ function TestimonialCarouselRender({
           </footer>
         </article>
       ) : (
-        <em>의뢰인 후기를 인스펙터에서 추가하세요</em>
+        <em>{copy.empty}</em>
       )}
-      {c.items.length > 1 ? (
+      {items.length > 1 ? (
         <nav>
-          {c.items.map((_, i) => (
+          {items.map((_, i) => (
             <button
               key={i}
               type="button"
               data-active={idx === i ? 'true' : 'false'}
               onClick={() => mode !== 'edit' && setIdx(i)}
-              aria-label={`testimonial ${i + 1}`}
+              aria-label={copy.itemAriaLabel(i + 1)}
             />
           ))}
         </nav>
@@ -74,26 +85,31 @@ function parseItems(value: string): BuilderTestimonialCarouselCanvasNode['conten
 
 function TestimonialCarouselInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const tcNode = node as BuilderTestimonialCarouselCanvasNode;
   const c = tcNode.content;
+  const testimonialCopy = getMarketingWidgetsCopy(locale).testimonialCarousel;
+  const items = localizedTestimonialItems(c.items, testimonialCopy.defaultItems);
+  const copy = testimonialCopy.inspector;
   return (
-    <>
-      <label>
-        <span>후기 (name | role | quote)</span>
+    <div className={styles.root} data-builder-testimonial-carousel-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.items}</span>
         <textarea
+          className={`${styles.control} ${styles.textarea}`}
           rows={6}
-          style={{ fontFamily: 'inherit', resize: 'vertical' }}
-          value={itemsToText(c.items)}
+          value={itemsToText(items)}
           disabled={disabled}
           onChange={(event) => onUpdate({ items: parseItems(event.target.value) })}
         />
       </label>
-      <label>
-        <span>자동 전환 (ms, 0 = 끔)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.autoplayMs}</span>
         <input
+          className={styles.control}
           type="number"
           min={0}
           max={60000}
@@ -103,11 +119,11 @@ function TestimonialCarouselInspector({
           onChange={(event) => onUpdate({ autoplayMs: Number(event.target.value) })}
         />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showStars} disabled={disabled} onChange={(event) => onUpdate({ showStars: event.target.checked })} />
-        <span>별점 표시</span>
+        <span>{copy.showStars}</span>
       </label>
-    </>
+    </div>
   );
 }
 
@@ -117,10 +133,7 @@ export default defineComponent({
   category: 'advanced',
   icon: '❝',
   defaultContent: {
-    items: [
-      { name: '김 OO', role: '기업 의뢰인', quote: '한·대 양국 법무를 정확하게 검토해 주셔서 협상이 안전했습니다.' },
-      { name: '張 OO', role: 'PMC 대표', quote: '시간대 차이를 고려해 빠르게 응답해 주셨고 결과도 만족스러웠습니다.' },
-    ],
+    items: TESTIMONIAL_CAROUSEL_LEGACY_DEFAULT_ITEMS,
     autoplayMs: 6000,
     showStars: true,
   },

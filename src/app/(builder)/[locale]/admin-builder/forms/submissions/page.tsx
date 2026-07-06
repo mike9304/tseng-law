@@ -6,13 +6,15 @@ import {
   type FormSubmission,
 } from '@/lib/builder/forms/form-engine';
 import SubmissionsListView from '@/components/builder/forms/SubmissionsListView';
+import { getFormsCopy } from '@/components/builder/forms/forms-copy';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata(): Metadata {
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const copy = getFormsCopy(params.locale);
   return {
-    title: 'Form Submissions',
-    description: 'Review builder form submissions.',
+    title: copy.list.title,
+    description: copy.list.description,
     robots: 'noindex,nofollow',
   };
 }
@@ -39,6 +41,7 @@ export default async function FormSubmissionsPage({
       formIds={formIds}
       initialFormId={activeFormId}
       initialSubmissions={initialSubmissions}
+      locale={params.locale}
     />
   );
 }

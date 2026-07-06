@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import type { BuilderBlogCategoriesCanvasNode } from '@/lib/builder/canvas/types';
 import { DEFAULT_BLOG_CATEGORIES, type BlogCategory } from '@/lib/builder/blog/blog-engine';
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { getBlogCategoriesCopy } from './blog-categories-copy';
 
 function colorToCss(value: unknown): string {
   if (typeof value === 'string') return value;
@@ -24,6 +25,7 @@ export default function BlogCategoriesElement({ node, mode = 'edit', locale }: B
   const c = node.content;
   const isBuilder = mode !== 'published';
   const effectiveLocale = normalizeLocale(locale || 'ko');
+  const copy = getBlogCategoriesCopy(effectiveLocale);
   const [counts, setCounts] = useState<Record<string, number>>({});
 
   useEffect(() => {
@@ -50,7 +52,7 @@ export default function BlogCategoriesElement({ node, mode = 'edit', locale }: B
   const activeColorCss = useMemo(() => colorToCss(c.activeColor ?? '#0b3b2e'), [c.activeColor]);
   const items: Array<BlogCategory | { id: 'all'; slug: '__all'; name: { ko: string; 'zh-hant': string; en: string }; postCount: number }> = c.showAll
     ? [
-        { id: 'all', slug: '__all' as const, name: { ko: '전체', 'zh-hant': '全部', en: 'All' }, postCount: 0 },
+        { id: 'all', slug: '__all' as const, name: { ko: copy.element.allLabel, 'zh-hant': copy.element.allLabel, en: copy.element.allLabel }, postCount: 0 },
         ...DEFAULT_BLOG_CATEGORIES,
       ]
     : DEFAULT_BLOG_CATEGORIES;

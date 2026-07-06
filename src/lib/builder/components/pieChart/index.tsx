@@ -1,16 +1,29 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderPieChartCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import {
+  DATA_WIDGETS_LEGACY_DEFAULTS,
+  getDataWidgetsCopy,
+  localizedDataWidgetSlices,
+  localizedDataWidgetText,
+} from '../data-widgets-copy';
+import styles from '../DataWidgetInspector.module.css';
 
 const DEFAULT_COLORS = ['#1d4ed8', '#0ea5e9', '#10b981', '#f59e0b', '#ef4444', '#a855f7', '#14b8a6', '#f43f5e'];
 
 function PieChartRender({
   node,
+  locale = 'ko',
 }: {
   node: BuilderPieChartCanvasNode;
+  locale?: Locale;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
-  const total = c.slices.reduce((sum, s) => sum + Math.max(0, s.value), 0) || 1;
+  const copy = getDataWidgetsCopy(locale);
+  const title = localizedDataWidgetText(c.title, copy.chart.defaults.pieTitle, DATA_WIDGETS_LEGACY_DEFAULTS.pieTitle);
+  const slices = localizedDataWidgetSlices(c.slices, copy.chart.defaults.pieSlices);
+  const total = slices.reduce((sum, s) => sum + Math.max(0, s.value), 0) || 1;
   let cumulative = 0;
   const radius = 50;
   const cx = 60;
@@ -18,10 +31,10 @@ function PieChartRender({
 
   return (
     <div className="builder-datadisplay-chart builder-datadisplay-pie" data-builder-datadisplay-widget="pie-chart">
-      {c.title ? <strong>{c.title}</strong> : null}
+      {title ? <strong>{title}</strong> : null}
       <div className="builder-datadisplay-pie-body">
-        <svg viewBox="0 0 120 120" width={120} height={120} role="img" aria-label={c.title || 'Pie chart'}>
-          {c.slices.map((slice, idx) => {
+        <svg viewBox="0 0 120 120" width={120} height={120} role="img" aria-label={title || copy.chart.pieAria}>
+          {slices.map((slice, idx) => {
             const start = cumulative / total;
             cumulative += Math.max(0, slice.value);
             const end = cumulative / total;
@@ -45,7 +58,7 @@ function PieChartRender({
         </svg>
         {c.showLegend ? (
           <ul className="builder-datadisplay-pie-legend">
-            {c.slices.map((slice, idx) => (
+            {slices.map((slice, idx) => (
               <li key={`${slice.label}-${idx}`}>
                 <span style={{ background: slice.color || DEFAULT_COLORS[idx % DEFAULT_COLORS.length] }} />
                 <span>{slice.label}</span>
@@ -80,36 +93,40 @@ function parseSlices(value: string): BuilderPieChartCanvasNode['content']['slice
 
 function PieChartInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const pcNode = node as BuilderPieChartCanvasNode;
   const c = pcNode.content;
+  const copy = getDataWidgetsCopy(locale);
+  const title = localizedDataWidgetText(c.title, copy.chart.defaults.pieTitle, DATA_WIDGETS_LEGACY_DEFAULTS.pieTitle);
+  const slices = localizedDataWidgetSlices(c.slices, copy.chart.defaults.pieSlices);
   return (
-    <>
-      <label>
-        <span>제목</span>
-        <input type="text" value={c.title} disabled={disabled} onChange={(event) => onUpdate({ title: event.target.value })} />
+    <div className={styles.root} data-builder-data-widget-inspector="pie-chart">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.chart.inspector.title}</span>
+        <input className={styles.control} type="text" value={title} disabled={disabled} onChange={(event) => onUpdate({ title: event.target.value })} />
       </label>
-      <label>
-        <span>슬라이스 (label | value | color)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.chart.inspector.slices}</span>
         <textarea
+          className={`${styles.control} ${styles.textarea}`}
           rows={6}
-          style={{ fontFamily: 'inherit', resize: 'vertical' }}
-          value={slicesToText(c.slices)}
+          value={slicesToText(slices)}
           disabled={disabled}
           onChange={(event) => onUpdate({ slices: parseSlices(event.target.value) })}
         />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showLegend} disabled={disabled} onChange={(event) => onUpdate({ showLegend: event.target.checked })} />
-        <span>범례 표시</span>
+        <span>{copy.chart.inspector.showLegend}</span>
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.donut} disabled={disabled} onChange={(event) => onUpdate({ donut: event.target.checked })} />
-        <span>도넛 모양</span>
+        <span>{copy.chart.inspector.donut}</span>
       </label>
-    </>
+    </div>
   );
 }
 
@@ -119,14 +136,8 @@ export default defineComponent({
   category: 'advanced',
   icon: '◔',
   defaultContent: {
-    title: '분야별 자문',
-    slices: [
-      { label: '기업', value: 38 },
-      { label: '이민', value: 24 },
-      { label: '소송', value: 18 },
-      { label: '가사', value: 12 },
-      { label: '기타', value: 8 },
-    ],
+    title: DATA_WIDGETS_LEGACY_DEFAULTS.pieTitle,
+    slices: DATA_WIDGETS_LEGACY_DEFAULTS.pieSlices.map((slice) => ({ ...slice })),
     showLegend: true,
     donut: false,
   },

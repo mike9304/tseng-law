@@ -1,10 +1,16 @@
-import { isBuilderCollectionId } from '@/lib/builder/cms';
+import {
+  isBuilderCollectionId,
+  readBuilderCollectionRecordPreviews,
+  readBuilderCollectionSummaries,
+} from '@/lib/builder/cms';
 import {
   queryBuilderCmsRecords,
   stringifyBuilderCmsRecordValue,
 } from '@/lib/builder/cms-record-query';
+import { normalizeBuilderCmsTrashedRecords } from '@/lib/builder/cms-record-trash-normalize';
 import { parseBuilderAssetUrl, readBuilderImageAsset } from '@/lib/builder/assets';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
+import { createRedirect } from '@/lib/builder/site/redirects';
 import {
   builderCmsFieldTypes,
   builderCmsPermissionActors,
@@ -28,14 +34,12 @@ import {
   type BuilderCmsRecordRevisionAction,
   type BuilderCmsRecordStatus,
 } from '@/lib/builder/cms-types';
+import { BuilderCmsValidationError } from '@/lib/builder/cms-validation-error';
+import type { BuilderPageMeta } from '@/lib/builder/site/types';
+import type { Locale } from '@/lib/locales';
 import { normalizeLocale } from '@/lib/locales';
 
-export class BuilderCmsValidationError extends Error {
-  constructor(message: string, public readonly issues: string[] = [message]) {
-    super(message);
-    this.name = 'BuilderCmsValidationError';
-  }
-}
+export { BuilderCmsValidationError } from '@/lib/builder/cms-validation-error';
 
 export class BuilderCmsPermissionError extends Error {
   constructor(
@@ -89,6 +93,12 @@ export interface BuilderCmsCsvImportOptions {
   mode?: BuilderCmsCsvImportMode;
   actor?: BuilderCmsPermissionActor;
   columnMap?: BuilderCmsCsvColumnMap;
+  duplicateMode?: boolean;
+}
+
+export interface BuilderCmsCsvExportOptions {
+  actor?: BuilderCmsPermissionActor;
+  recordIds?: string[];
 }
 
 export interface BuilderCmsCsvExportResult {
@@ -193,7 +203,7 @@ export async function updateEditableBuilderCmsCollection(
   const index = collections.findIndex((candidate) => candidate.collectionId === collectionId);
   if (index === -1) return null;
 
-  const next = updateCollectionFromInput(collections[index], input, collections);
+  const next = updateCollectionFromInput(collections[index], input, locale, collections);
   await assertCollectionMediaAssetsExist(next);
   site.cmsCollections = collections.map((collection, candidateIndex) => (
     candidateIndex === index ? next : collection
@@ -237,7 +247,7 @@ export async function createEditableBuilderCmsRecord(
   const collection = collections[index];
   assertCmsPermission(collection, 'create', resolveCmsActor(options));
   ensureUniqueRecordId(collection, recordId);
-  const fields = validateRecordFields(collection, input.fields, { recordId });
+  const fields = validateRecordFields(collection, input.fields, { recordId, locale }, collections);
   await assertRecordMediaAssetsExist(collection, fields);
   const status = normalizeRecordStatus(input.status);
   const record: BuilderCmsRecord = {
@@ -271,7 +281,7 @@ export async function updateEditableBuilderCmsRecord(
   recordId: string,
   input: RecordInput,
   options: BuilderCmsAccessOptions = {},
-): Promise<BuilderCmsRecord | null> {
+): Promise<(BuilderCmsRecord & { redirectCreated?: boolean; redirectWarnings?: string[] }) | null> {
   const locale = normalizeLocale(localeInput ?? undefined);
   const site = await readSiteDocument(siteId, locale);
   const collections = normalizeCmsCollections(site.cmsCollections);
@@ -285,8 +295,11 @@ export async function updateEditableBuilderCmsRecord(
 
   const now = new Date().toISOString();
   const previous = collection.records[recordIndex];
-  const fields = validateRecordFields(collection, input.fields ?? previous.fields, { recordId });
+  const fields = validateRecordFields(collection, input.fields ?? previous.fields, { recordId, locale }, collections);
   await assertRecordMediaAssetsExist(collection, fields);
+  const slugField = collection.fields.find((field) => field.type === 'slug');
+  const previousSlug = slugField ? normalizeSlug(previous.fields[slugField.key]) : '';
+  const nextSlug = slugField ? normalizeSlug(fields[slugField.key]) : '';
   const status = input.status ? normalizeRecordStatus(input.status) : previous.status;
   const nextLocale = input.locale ? normalizeLocale(String(input.locale)) : previous.locale;
   const moderation = (status !== previous.status || hasModerationReason(input.moderationReason))
@@ -314,7 +327,22 @@ export async function updateEditableBuilderCmsRecord(
   ));
   site.updatedAt = now;
   await writeSiteDocument(site);
-  return nextRecord;
+
+  const { redirectCreated, redirectWarnings } = await createEditableRecordSlugRedirects({
+    siteId,
+    collection,
+    locale,
+    previousSlug,
+    nextSlug,
+    pages: site.pages ?? [],
+    shouldCreateRedirect: previousSlug !== nextSlug,
+  });
+
+  return {
+    ...nextRecord,
+    ...(redirectCreated ? { redirectCreated } : {}),
+    ...(redirectWarnings.length > 0 ? { redirectWarnings } : {}),
+  };
 }
 
 export async function restoreEditableBuilderCmsRecordRevision(
@@ -343,7 +371,7 @@ export async function restoreEditableBuilderCmsRecordRevision(
   if (!revision) return null;
 
   const now = new Date().toISOString();
-  const fields = validateRecordFields(collection, revision.fields, { recordId });
+  const fields = validateRecordFields(collection, revision.fields, { recordId, locale }, collections);
   await assertRecordMediaAssetsExist(collection, fields);
   const nextRecord: BuilderCmsRecord = {
     ...current,
@@ -394,7 +422,7 @@ export async function duplicateEditableBuilderCmsRecord(
 
   const now = new Date().toISOString();
   const nextRecordId = generateUniqueRecordId(collection);
-  const fields = buildDuplicateRecordFields(collection, source, nextRecordId);
+  const fields = buildDuplicateRecordFields(collection, source, nextRecordId, locale, collections);
   await assertRecordMediaAssetsExist(collection, fields);
   const record: BuilderCmsRecord = {
     recordId: nextRecordId,
@@ -471,7 +499,7 @@ export async function bulkUpdateEditableBuilderCmsRecordStatus(
   for (const record of collection.records) {
     if (!requestedRecordIds.has(record.recordId)) continue;
     foundRecordIds.add(record.recordId);
-    const fields = validateRecordFields(collection, record.fields, { recordId: record.recordId });
+    const fields = validateRecordFields(collection, record.fields, { recordId: record.recordId, locale }, collections);
     await assertRecordMediaAssetsExist(collection, fields);
     validatedFields.set(record.recordId, fields);
   }
@@ -571,7 +599,7 @@ export async function exportEditableBuilderCmsRecordsCsv(
   siteId: string,
   localeInput: string | null | undefined,
   collectionId: string,
-  options: BuilderCmsAccessOptions = {},
+  options: BuilderCmsAccessOptions & BuilderCmsCsvExportOptions = {},
 ): Promise<BuilderCmsCsvExportResult | null> {
   const locale = normalizeLocale(localeInput ?? undefined);
   const site = await readSiteDocument(siteId, locale);
@@ -582,9 +610,12 @@ export async function exportEditableBuilderCmsRecordsCsv(
   assertCmsPermission(collection, 'read', resolveCmsActor(options));
 
   const headers = csvHeadersForCollection(collection);
-  const rows = collection.records.map((record) => headers.map((header) => csvRecordCell(collection, record, header)));
+  const selectedRecordIds = options.recordIds?.length ? new Set(normalizeRecordIdList(options.recordIds)) : null;
+  const rows = collection.records
+    .filter((record) => !selectedRecordIds || selectedRecordIds.has(record.recordId))
+    .map((record) => headers.map((header) => csvRecordCell(collection, record, header)));
   return {
-    filename: `${collection.slug || collection.collectionId}-records.csv`,
+    filename: `${collection.slug || collection.collectionId}${selectedRecordIds ? '-selected' : ''}-records.csv`,
     csv: stringifyCsv([headers, ...rows]),
   };
 }
@@ -607,7 +638,15 @@ export async function importEditableBuilderCmsRecordsCsv(
   assertCmsPermission(collection, 'create', actor);
   const mode: BuilderCmsCsvImportMode = options.mode === 'replace' ? 'replace' : 'append';
   if (mode === 'replace') assertCmsPermission(collection, 'delete', actor);
-  const importResult = await buildImportedCsvRecords(collection, csvText, mode, options.columnMap);
+  const importResult = await buildImportedCsvRecords(
+    locale,
+    collections,
+    collection,
+    csvText,
+    mode,
+    options.columnMap,
+    options.duplicateMode,
+  );
   const now = new Date().toISOString();
   const nextCollection: BuilderCmsCollection = {
     ...collection,
@@ -642,6 +681,7 @@ export function normalizeCmsCollections(input: unknown): BuilderCmsCollection[] 
         fields,
         indexes: normalizeIndexDefinitions(collection.indexes, fields, { useDefaults: true }),
         records: normalizeRecords(collection.records),
+        trashedRecords: normalizeBuilderCmsTrashedRecords(collection.trashedRecords),
         permissions: normalizePermissions(collection.permissions),
         createdAt: normalizeTimestamp(collection.createdAt),
         updatedAt: normalizeTimestamp(collection.updatedAt),
@@ -680,6 +720,7 @@ function createCollectionFromInput(
 function updateCollectionFromInput(
   current: BuilderCmsCollection,
   input: CollectionPatchInput,
+  locale: string,
   allCollections: BuilderCmsCollection[],
 ): BuilderCmsCollection {
   const name = input.name === undefined ? current.name : normalizeRequiredString(input.name, 'name');
@@ -719,7 +760,7 @@ function updateCollectionFromInput(
   };
 
   for (const record of next.records) {
-    validateRecordFields(next, record.fields, { recordId: record.recordId });
+    validateRecordFields(next, record.fields, { recordId: record.recordId, locale }, allCollections);
   }
 
   return next;
@@ -747,6 +788,7 @@ function toCollectionDetail(collection: BuilderCmsCollection): BuilderCmsCollect
     fields: collection.fields,
     indexes: collection.indexes,
     records: collection.records,
+    trashedRecords: collection.trashedRecords ?? [],
   };
 }
 
@@ -1102,7 +1144,8 @@ function orderPermissionActors(
 function validateRecordFields(
   collection: BuilderCmsCollection,
   input: unknown,
-  options: { recordId: string },
+  options: { recordId: string; locale: string },
+  allCollections?: BuilderCmsCollection[],
 ): Record<string, unknown> {
   if (!isRecordObject(input)) {
     throw new BuilderCmsValidationError('Record fields must be an object.');
@@ -1123,6 +1166,15 @@ function validateRecordFields(
       fields[field.key] = coerceFieldValue(field, value);
     } catch (error) {
       issues.push(error instanceof Error ? error.message : `${field.label} is invalid.`);
+      continue;
+    }
+
+    if (
+      field.type === 'reference'
+      && !isValidReferenceValue(collection, field, fields[field.key], options.locale, allCollections)
+    ) {
+      const relationCollectionName = resolveReferenceCollectionName(collection, field, options.locale, allCollections);
+      issues.push(`${field.label} must reference an existing ${relationCollectionName} record.`);
       continue;
     }
 
@@ -1225,6 +1277,7 @@ function coerceFieldValue(field: BuilderCmsFieldDefinition, value: unknown): unk
     case 'image':
       return normalizeImageValue(field, value);
     case 'reference':
+      return String(value).trim();
     case 'text':
     case 'rich-text':
     default: {
@@ -1253,6 +1306,65 @@ function validateFieldMinMax(field: BuilderCmsFieldDefinition, value: number): v
   if (typeof field.validation?.max === 'number' && value > field.validation.max) {
     throw new Error(`${field.label} must be at most ${field.validation.max}.`);
   }
+}
+
+function resolveReferenceCollection(
+  collection: BuilderCmsCollection,
+  field: BuilderCmsFieldDefinition,
+  locale: string,
+  allCollections?: BuilderCmsCollection[],
+): { collectionId: string; name: string; records: { recordId: string }[] } | null {
+  const targetCollectionId = field.relationCollectionId?.trim() || collection.collectionId;
+  if (targetCollectionId === collection.collectionId) {
+    return {
+      collectionId: collection.collectionId,
+      name: collection.name,
+      records: collection.records.map((record) => ({ recordId: record.recordId })),
+    };
+  }
+  const editableCollection = allCollections?.find((candidate) => candidate.collectionId === targetCollectionId);
+  if (editableCollection) {
+    return {
+      collectionId: editableCollection.collectionId,
+      name: editableCollection.name,
+      records: editableCollection.records.map((record) => ({ recordId: record.recordId })),
+    };
+  }
+  if (!isBuilderCollectionId(targetCollectionId)) return null;
+  const sourceCollection = readBuilderCollectionSummaries(locale).find((summary) => summary.id === targetCollectionId);
+  if (!sourceCollection) return null;
+  return {
+    collectionId: sourceCollection.id,
+    name: sourceCollection.title,
+    records: readBuilderCollectionRecordPreviews(targetCollectionId, locale).map((preview) => ({
+      recordId: preview.recordId,
+    })),
+  };
+}
+
+function isValidReferenceValue(
+  collection: BuilderCmsCollection,
+  field: BuilderCmsFieldDefinition,
+  value: unknown,
+  locale: string,
+  allCollections?: BuilderCmsCollection[],
+): boolean {
+  const referenceRecordId = String(value ?? '').trim();
+  if (!referenceRecordId) return true;
+  const targetCollection = resolveReferenceCollection(collection, field, locale, allCollections);
+  if (!targetCollection) return false;
+  return targetCollection.records.some((record) => record.recordId === referenceRecordId);
+}
+
+function resolveReferenceCollectionName(
+  collection: BuilderCmsCollection,
+  field: BuilderCmsFieldDefinition,
+  locale: string,
+  allCollections?: BuilderCmsCollection[],
+): string {
+  return resolveReferenceCollection(collection, field, locale, allCollections)?.name
+    ?? field.relationCollectionId
+    ?? collection.name;
 }
 
 function normalizeImageValue(field: BuilderCmsFieldDefinition, value: unknown): BuilderCmsImageValue {
@@ -1462,13 +1574,15 @@ function buildDuplicateRecordFields(
   collection: BuilderCmsCollection,
   source: BuilderCmsRecord,
   nextRecordId: string,
+  locale: string,
+  allCollections?: BuilderCmsCollection[],
 ): Record<string, unknown> {
   const fields = { ...source.fields };
   for (const field of collection.fields) {
     if (!field.unique) continue;
     fields[field.key] = nextUniqueFieldValue(collection, field, fields[field.key], nextRecordId);
   }
-  return validateRecordFields(collection, fields, { recordId: nextRecordId });
+  return validateRecordFields(collection, fields, { recordId: nextRecordId, locale }, allCollections);
 }
 
 function nextUniqueFieldValue(
@@ -1530,10 +1644,13 @@ function escapeCsvCell(value: string): string {
 }
 
 async function buildImportedCsvRecords(
+  locale: string,
+  allCollections: BuilderCmsCollection[],
   collection: BuilderCmsCollection,
   csvText: string,
   mode: BuilderCmsCsvImportMode,
   columnMapInput?: BuilderCmsCsvColumnMap,
+  duplicateMode = false,
 ): Promise<{ records: BuilderCmsRecord[]; summary: BuilderCmsCsvImportSummary }> {
   const table = parseCsvTable(csvText);
   if (table.length === 0) {
@@ -1572,13 +1689,26 @@ async function buildImportedCsvRecords(
       return [target, sourceHeader ? sourceRow[sourceHeader] ?? '' : ''];
     }));
     try {
-      const recordId = normalizeOptionalId(row.recordId, `row ${rowNumber} recordId`)
-        ?? generateUniqueRecordId(validationCollection);
+      const recordId = duplicateMode
+        ? generateUniqueRecordId(validationCollection)
+        : normalizeOptionalId(row.recordId, `row ${rowNumber} recordId`)
+          ?? generateUniqueRecordId(validationCollection);
       ensureUniqueRecordId(validationCollection, recordId);
       const fields = Object.fromEntries(
         collection.fields.map((field) => [field.key, fieldKeys.has(field.key) ? row[field.key] : undefined]),
       );
-      const recordFields = validateRecordFields(validationCollection, fields, { recordId });
+      const recordFields = duplicateMode
+        ? validateRecordFields(
+          validationCollection,
+          Object.fromEntries(collection.fields.map((field) => (
+            field.unique
+              ? [field.key, nextUniqueFieldValue(validationCollection, field, fields[field.key], recordId)]
+              : [field.key, fields[field.key]]
+          ))),
+          { recordId, locale },
+          allCollections,
+        )
+        : validateRecordFields(validationCollection, fields, { recordId, locale }, allCollections);
       await assertRecordMediaAssetsExist(validationCollection, recordFields);
       const record: BuilderCmsRecord = {
         recordId,
@@ -1808,6 +1938,52 @@ function normalizeSlug(input: unknown): string {
     throw new BuilderCmsValidationError('Slug must use lowercase letters, numbers, and hyphens.');
   }
   return slug;
+}
+
+async function createEditableRecordSlugRedirects(input: {
+  siteId: string;
+  collection: Pick<BuilderCmsCollection, 'collectionId' | 'slug' | 'fields'>;
+  locale: Locale;
+  previousSlug: string;
+  nextSlug: string;
+  pages: BuilderPageMeta[];
+  shouldCreateRedirect: boolean;
+}): Promise<{ redirectCreated: boolean; redirectWarnings: string[] }> {
+  if (!input.shouldCreateRedirect || !input.previousSlug || !input.nextSlug) {
+    return { redirectCreated: false, redirectWarnings: [] };
+  }
+
+  const bases = new Set<string>();
+  const collectionBase = input.collection.slug?.trim().replace(/^\/+|\/+$/g, '') || input.collection.collectionId;
+  if (collectionBase) bases.add(collectionBase);
+  const slugField = input.collection.fields.find((field) => field.type === 'slug');
+  for (const page of input.pages) {
+    if (page.locale !== input.locale) continue;
+    if (page.isHomePage) continue;
+    if ((page.dynamicItem?.cmsCollectionId ?? page.dynamicItem?.collectionId) !== input.collection.collectionId) continue;
+    if (slugField && page.dynamicItem?.slugField !== slugField.key) continue;
+    const pageBase = page.slug.trim().replace(/^\/+|\/+$/g, '');
+    if (pageBase) bases.add(pageBase);
+  }
+
+  const redirectWarnings: string[] = [];
+  let redirectCreated = false;
+  for (const base of bases) {
+    const result = await createRedirect(input.siteId, input.locale, {
+      from: `/${input.locale}/${base}/${input.previousSlug}`,
+      to: `/${input.locale}/${base}/${input.nextSlug}`,
+      type: 301,
+      isActive: true,
+      note: `auto:cms-record-slug-rename(${input.collection.collectionId},${input.previousSlug}→${input.nextSlug})`,
+    });
+    if ('redirect' in result) {
+      redirectCreated = true;
+      continue;
+    }
+    redirectWarnings.push(result.error.message);
+  }
+
+  return { redirectCreated, redirectWarnings };
 }
 
 function normalizeTimestamp(input: unknown): string {

@@ -1,5 +1,10 @@
 import { locales, type Locale } from '@/lib/locales';
-import { createHomePageCanvasDocument } from './seed-home';
+// Locale repair operates on the editable DECOMPOSED home (identified by the
+// 'home-hero-root' sentinel and granular text nodes). The live-reflecting
+// composite home has no such nodes, so it is recognised as not-a-home by
+// isHomeDocument() and passes through untouched — correct, since each composite
+// node already carries its own locale in config.
+import { createHomePageCanvasDocumentDecomposed as createHomePageCanvasDocument } from './seed-home';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from './types';
 
 const HOME_SENTINEL_NODE_IDS = [

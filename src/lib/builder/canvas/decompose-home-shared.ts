@@ -1,4 +1,4 @@
-import type { BuilderCanvasNode } from './types';
+import type { BuilderCanvasNode, BuilderCanvasNodeStyle, BuilderImageCanvasNode } from './types';
 import { createDefaultCanvasNodeStyle } from './types';
 import type { CardVariantKey } from '@/lib/builder/site/component-variants';
 
@@ -11,15 +11,15 @@ type Rect = {
   height: number;
 };
 
-type ContainerTag = 'div' | 'section' | 'article' | 'aside' | 'header' | 'footer' | 'main' | 'nav' | 'form';
-type TextTag = 'div' | 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'input';
+type ContainerTag = 'div' | 'section' | 'article' | 'aside' | 'header' | 'footer' | 'main' | 'nav' | 'form' | 'h2' | 'h3' | 'h4' | 'ul';
+type TextTag = 'div' | 'span' | 'p' | 'li' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'time' | 'input';
 type ButtonTag = 'a' | 'button';
 const baseTextContent = {
-  fontSize: 16,
+  fontSize: 17.28,
   color: '#0f172a',
   fontWeight: 'regular' as const,
   align: 'left' as const,
-  lineHeight: 1.5,
+  lineHeight: 1.82,
   letterSpacing: 0,
   fontFamily: 'system-ui',
   verticalAlign: 'top' as const,
@@ -145,9 +145,10 @@ export function createHomeTextNode({
   parentId,
   className,
   as = 'div',
-  fontSize = 16,
+  fontSize = 17.28,
   color = '#0f172a',
   fontWeight = 'regular',
+  lineHeight = 1.82,
   inputType,
   name,
   placeholder,
@@ -163,6 +164,7 @@ export function createHomeTextNode({
   fontSize?: number;
   color?: string;
   fontWeight?: 'regular' | 'medium' | 'bold';
+  lineHeight?: number;
   inputType?: 'text' | 'search' | 'email' | 'url' | 'tel';
   name?: string;
   placeholder?: string;
@@ -184,6 +186,7 @@ export function createHomeTextNode({
       fontSize,
       color,
       fontWeight,
+      lineHeight,
       ...(className ? { className } : {}),
       ...(as ? { as } : {}),
       ...(inputType ? { inputType } : {}),
@@ -255,6 +258,8 @@ export function createHomeImageNode({
   alt,
   parentId,
   fit = 'cover',
+  style,
+  svg,
 }: {
   id: string;
   rect: Rect;
@@ -263,13 +268,15 @@ export function createHomeImageNode({
   alt: string;
   parentId?: string;
   fit?: 'cover' | 'contain';
+  style?: Partial<BuilderCanvasNodeStyle>;
+  svg?: BuilderImageCanvasNode['content']['svg'];
 }): BuilderCanvasNode {
   return {
     id,
     kind: 'image',
     ...(parentId ? { parentId } : {}),
     rect,
-    style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
+    style: createDefaultCanvasNodeStyle({ borderRadius: 0, ...style }),
     zIndex,
     rotation: 0,
     locked: false,
@@ -278,6 +285,7 @@ export function createHomeImageNode({
       src,
       alt,
       fit,
+      ...(svg ? { svg } : {}),
     },
   };
 }

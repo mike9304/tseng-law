@@ -1,14 +1,16 @@
 import { defineComponent } from '../define';
 import type { BuilderComponentRenderProps } from '../define';
 import MapInspector from './Inspector';
+import { getLocationWidgetsCopy } from '../location-widgets-copy';
 
 interface MapContent {
   address: string;
   zoom: number;
 }
 
-function MapRender({ node, mode = 'preview' }: BuilderComponentRenderProps) {
+function MapRender({ node, mode = 'preview', locale = 'ko' }: BuilderComponentRenderProps) {
   const { address = '', zoom = 15 } = node.content as unknown as MapContent;
+  const copy = getLocationWidgetsCopy(locale);
   const isEditMode = mode === 'edit';
 
   if (!address) {
@@ -36,6 +38,7 @@ function MapRender({ node, mode = 'preview' }: BuilderComponentRenderProps) {
   }
 
   const src = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&z=${zoom}&output=embed`;
+  const mapSearchUrl = `https://www.google.com/maps/search/${encodeURIComponent(address)}`;
 
   return (
     <div
@@ -50,11 +53,67 @@ function MapRender({ node, mode = 'preview' }: BuilderComponentRenderProps) {
     >
       <iframe
         src={src}
-        style={{ width: '100%', height: '100%', border: 'none', pointerEvents: isEditMode ? 'none' : 'auto' }}
+        style={{
+          width: '100%',
+          height: '100%',
+          border: 'none',
+          pointerEvents: isEditMode ? 'none' : 'auto',
+        }}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Google Maps"
+        title={copy.map.iframeTitle}
       />
+      {!isEditMode ? (
+        <div
+          data-map-fallback="true"
+          style={{
+            position: 'absolute',
+            left: 10,
+            right: 10,
+            bottom: 10,
+            zIndex: 2,
+            display: 'grid',
+            gap: 6,
+            padding: 10,
+            borderRadius: 8,
+            border: '1px solid rgba(148, 163, 184, 0.38)',
+            background: 'rgba(248, 250, 252, 0.92)',
+            color: '#334155',
+            boxShadow: '0 10px 22px rgba(15, 23, 42, 0.14)',
+            pointerEvents: 'auto',
+          }}
+        >
+          <div
+            data-map-fallback-address="true"
+            style={{ fontSize: 13, fontWeight: 700, lineHeight: 1.35, wordBreak: 'keep-all' }}
+          >
+            {address}
+          </div>
+          <div style={{ fontSize: 12, color: '#64748b' }}>{copy.map.fallbackMessage}</div>
+          <a
+            data-map-fallback-link="true"
+            href={mapSearchUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              pointerEvents: 'auto',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              width: 'fit-content',
+              padding: '8px 14px',
+              borderRadius: 8,
+              background: '#2563eb',
+              color: '#fff',
+              fontSize: 13,
+              fontWeight: 700,
+              textDecoration: 'none',
+            }}
+          >
+            {copy.map.openInMaps}
+          </a>
+        </div>
+      ) : null}
       {isEditMode ? (
         <div
           aria-hidden
@@ -71,7 +130,7 @@ function MapRender({ node, mode = 'preview' }: BuilderComponentRenderProps) {
             pointerEvents: 'none',
           }}
         >
-          Map · 위치 변경
+          {copy.map.editBadge}
         </div>
       ) : null}
     </div>

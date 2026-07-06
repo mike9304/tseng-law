@@ -1,90 +1,42 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type CSSProperties } from 'react';
 import { fontFamilyCSS } from '@/lib/builder/canvas/fonts';
+import type { Locale } from '@/lib/locales';
 import {
   THEME_TEXT_PRESET_KEYS,
   type ThemeTextPresetKey,
+  type ThemeTextPreset,
   getThemeTextPresets,
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
 import {
-  getThemeBindingBadgeStyle,
   getTypographyBindingIndicator,
-  type ThemeBindingIndicator,
 } from '@/lib/builder/site/theme-bindings';
+import ThemeBindingBadge from '@/components/builder/editor/ThemeBindingBadge';
 import { useBuilderTheme } from './BuilderThemeContext';
+import { getTextControlsCopy } from './text-controls-copy';
+import styles from './ThemeTextPresetPicker.module.css';
 
-const wrapperStyle: React.CSSProperties = {
-  position: 'relative',
-  width: 220,
-  maxWidth: '100%',
+type ThemeTextPresetStyleVars = CSSProperties & {
+  '--theme-text-preset-color'?: string;
+  '--theme-text-preset-font-family'?: string;
+  '--theme-text-preset-font-size'?: string;
+  '--theme-text-preset-font-weight'?: number;
 };
 
-const triggerStyle: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 8,
-  width: '100%',
-  height: 36,
-  padding: '0 10px',
-  border: '1px solid #cbd5e1',
-  borderRadius: 8,
-  background: '#fff',
-  color: '#0f172a',
-  fontSize: '0.82rem',
-  textAlign: 'left',
-  cursor: 'pointer',
-};
-
-const triggerLabelStyle: React.CSSProperties = {
-  minWidth: 0,
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  color: '#0f172a',
-  fontSize: '0.82rem',
-  fontWeight: 600,
-  letterSpacing: 0,
-  textTransform: 'none',
-  whiteSpace: 'nowrap',
-};
-
-const popoverStyle: React.CSSProperties = {
-  position: 'absolute',
-  top: 'calc(100% + 6px)',
-  left: 0,
-  width: 220,
-  zIndex: 45,
-  padding: 8,
-  border: '1px solid #e2e8f0',
-  borderRadius: 10,
-  background: '#fff',
-  boxShadow: '0 16px 40px rgba(15, 23, 42, 0.18)',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 4,
-};
-
-function optionStyle(active: boolean): React.CSSProperties {
+function presetPreviewStyle(preset: ThemeTextPreset, theme: ReturnType<typeof useBuilderTheme>): ThemeTextPresetStyleVars {
   return {
-    width: '100%',
-    minHeight: 36,
-    padding: '6px 8px',
-    border: active ? '1px solid #116dff' : '1px solid transparent',
-    borderRadius: 8,
-    background: active ? '#eff6ff' : 'transparent',
-    textAlign: 'left',
-    cursor: 'pointer',
+    '--theme-text-preset-color': resolveThemeColor(preset.color, theme),
+    '--theme-text-preset-font-family': fontFamilyCSS(preset.fontFamily),
+    '--theme-text-preset-font-size': `${Math.min(18, Math.max(13, preset.fontSize * 0.42))}px`,
+    '--theme-text-preset-font-weight':
+      preset.fontWeight === 'bold'
+        ? 700
+        : preset.fontWeight === 'medium'
+          ? 600
+          : 400,
   };
-}
-
-function ThemeBindingBadge({ indicator }: { indicator: ThemeBindingIndicator }) {
-  return (
-    <span title={indicator.title} style={getThemeBindingBadgeStyle(indicator.tone)}>
-      {indicator.label}
-    </span>
-  );
 }
 
 export default function ThemeTextPresetPicker({
@@ -92,16 +44,19 @@ export default function ThemeTextPresetPicker({
   disabled = false,
   onChange,
   onClear,
+  locale = 'en',
 }: {
   value?: ThemeTextPresetKey;
   disabled?: boolean;
   onChange: (key: ThemeTextPresetKey) => void;
   onClear?: () => void;
+  locale?: Locale;
 }) {
   const theme = useBuilderTheme();
+  const copy = getTextControlsCopy(locale);
   const presets = getThemeTextPresets(theme);
   const [open, setOpen] = useState(false);
-  const currentLabel = value ? presets[value].label : 'No preset';
+  const currentLabel = value ? copy.themePresetPicker.presets[value] : copy.themePresetPicker.noPreset;
   const bindingIndicator = getTypographyBindingIndicator(value);
 
   useEffect(() => {
@@ -117,29 +72,30 @@ export default function ThemeTextPresetPicker({
   }, [open]);
 
   return (
-    <div style={wrapperStyle} data-theme-text-preset-picker>
+    <div className={styles.root} data-theme-text-preset-picker>
       <button
         type="button"
         disabled={disabled}
-        style={{ ...triggerStyle, opacity: disabled ? 0.6 : 1 }}
+        className={styles.trigger}
         onClick={() => setOpen((current) => !current)}
       >
-        <span style={triggerLabelStyle}>{currentLabel}</span>
+        <span className={styles.triggerLabel}>{currentLabel}</span>
         <ThemeBindingBadge indicator={bindingIndicator} />
       </button>
 
       {open ? (
-        <div style={popoverStyle}>
+        <div className={styles.popover} data-theme-text-preset-popover="true">
           {onClear ? (
             <button
               type="button"
-              style={optionStyle(!value)}
+              className={styles.option}
+              data-active={!value ? 'true' : undefined}
               onClick={() => {
                 onClear();
                 setOpen(false);
               }}
             >
-              <span style={{ fontSize: '0.78rem', color: '#64748b' }}>No preset</span>
+              <span className={styles.noPresetLabel}>{copy.themePresetPicker.noPreset}</span>
             </button>
           ) : null}
 
@@ -149,31 +105,21 @@ export default function ThemeTextPresetPicker({
               <button
                 key={key}
                 type="button"
-                style={optionStyle(value === key)}
+                className={styles.option}
+                data-active={value === key ? 'true' : undefined}
                 onClick={() => {
                   onChange(key);
                   setOpen(false);
                 }}
               >
                 <span
-                  style={{
-                    display: 'block',
-                    color: resolveThemeColor(preset.color, theme),
-                    fontFamily: fontFamilyCSS(preset.fontFamily),
-                    fontSize: Math.min(18, Math.max(13, preset.fontSize * 0.42)),
-                    fontWeight:
-                      preset.fontWeight === 'bold'
-                        ? 700
-                        : preset.fontWeight === 'medium'
-                          ? 600
-                          : 400,
-                    lineHeight: 1.15,
-                  }}
+                  className={styles.previewText}
+                  style={presetPreviewStyle(preset, theme)}
                 >
-                  제목 텍스트
+                  {copy.themePresetPicker.previewText}
                 </span>
-                <span style={{ display: 'block', marginTop: 2, fontSize: '0.7rem', color: '#64748b' }}>
-                  {preset.label}
+                <span className={styles.presetName}>
+                  {copy.themePresetPicker.presets[key]}
                 </span>
               </button>
             );

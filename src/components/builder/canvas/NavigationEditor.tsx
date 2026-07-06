@@ -1,124 +1,93 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import type { BuilderNavItem } from '@/lib/builder/site/types';
+import { getNavigationCopy } from './navigation-copy';
+import styles from './SandboxPage.module.css';
 
-const containerStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 4,
-  padding: '8px 0',
-};
+type NavigationIconName = 'plus' | 'up' | 'down' | 'edit' | 'trash' | 'link' | 'save' | 'close';
 
-const headerStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  padding: '0 8px',
-  marginBottom: 4,
-};
+function NavigationIcon({ name }: { name: NavigationIconName }) {
+  let icon: ReactNode;
 
-const headerLabelStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  letterSpacing: '0.05em',
-  color: '#64748b',
-};
+  switch (name) {
+    case 'plus':
+      icon = (
+        <>
+          <path d="M12 5v14" />
+          <path d="M5 12h14" />
+        </>
+      );
+      break;
+    case 'up':
+      icon = <path d="m7 11 5-5 5 5M12 6v12" />;
+      break;
+    case 'down':
+      icon = <path d="m7 13 5 5 5-5M12 18V6" />;
+      break;
+    case 'edit':
+      icon = (
+        <>
+          <path d="M5 18.5h4.2L18.4 9.3a2 2 0 0 0 0-2.8l-.9-.9a2 2 0 0 0-2.8 0L5.5 14.8 5 18.5Z" />
+          <path d="m13.7 6.7 3.6 3.6" />
+        </>
+      );
+      break;
+    case 'trash':
+      icon = (
+        <>
+          <path d="M5.5 7h13" />
+          <path d="M9 7V5.5h6V7" />
+          <path d="M7.5 7.5 8.2 19h7.6l.7-11.5" />
+          <path d="M10.5 10.5v5" />
+          <path d="M13.5 10.5v5" />
+        </>
+      );
+      break;
+    case 'link':
+      icon = (
+        <>
+          <path d="M9.5 14.5 14.5 9.5" />
+          <path d="M10.5 7.5 12 6a3.5 3.5 0 0 1 5 5l-1.5 1.5" />
+          <path d="M13.5 16.5 12 18a3.5 3.5 0 0 1-5-5l1.5-1.5" />
+        </>
+      );
+      break;
+    case 'save':
+      icon = (
+        <>
+          <path d="M5 5h11l3 3v11H5V5Z" />
+          <path d="M8 5v5h7V5" />
+          <path d="M8 19v-5h8v5" />
+        </>
+      );
+      break;
+    case 'close':
+      icon = (
+        <>
+          <path d="M7 7l10 10" />
+          <path d="M17 7 7 17" />
+        </>
+      );
+      break;
+  }
 
-const addBtnStyle: React.CSSProperties = {
-  padding: '2px 10px',
-  fontSize: '0.75rem',
-  fontWeight: 600,
-  border: '1px solid #cbd5e1',
-  borderRadius: 6,
-  background: '#fff',
-  color: '#334155',
-  cursor: 'pointer',
-};
-
-const itemStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 6,
-  padding: '6px 8px',
-  borderRadius: 8,
-  border: '1px solid #e2e8f0',
-  background: '#fff',
-  fontSize: '0.8rem',
-  color: '#334155',
-  transition: 'background 120ms ease',
-};
-
-const childItemStyle: React.CSSProperties = {
-  ...itemStyle,
-  marginLeft: 18,
-  borderStyle: 'dashed',
-  background: '#fbfdff',
-};
-
-const childBadgeStyle: React.CSSProperties = {
-  flexShrink: 0,
-  borderRadius: 999,
-  background: '#eff6ff',
-  color: '#116dff',
-  padding: '1px 6px',
-  fontSize: '0.62rem',
-  fontWeight: 800,
-};
-
-const inputStyle: React.CSSProperties = {
-  flex: 1,
-  minWidth: 0,
-  padding: '3px 6px',
-  border: '1px solid #e2e8f0',
-  borderRadius: 6,
-  fontSize: '0.78rem',
-  color: '#0f172a',
-  outline: 'none',
-};
-
-const smallBtnStyle: React.CSSProperties = {
-  padding: '2px 6px',
-  fontSize: '0.68rem',
-  fontWeight: 600,
-  border: '1px solid #cbd5e1',
-  borderRadius: 4,
-  background: '#fff',
-  color: '#64748b',
-  cursor: 'pointer',
-  flexShrink: 0,
-};
-
-const dangerBtnStyle: React.CSSProperties = {
-  ...smallBtnStyle,
-  color: '#dc2626',
-  borderColor: '#fca5a5',
-};
-
-const editFormStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 4,
-  padding: '6px 8px',
-  borderRadius: 8,
-  border: '1px solid #116dff',
-  background: '#f8fafc',
-};
-
-const editRowStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 4,
-};
-
-const editLabelStyle: React.CSSProperties = {
-  fontSize: '0.68rem',
-  fontWeight: 600,
-  color: '#64748b',
-  minWidth: 36,
-};
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      focusable="false"
+    >
+      {icon}
+    </svg>
+  );
+}
 
 function labelForLocale(item: BuilderNavItem, locale: Locale): string {
   if (typeof item.label === 'string') return item.label;
@@ -192,6 +161,15 @@ function moveNavigationItem(
   ));
 }
 
+function countNavigationItems(items: BuilderNavItem[]): number {
+  let count = 0;
+  for (const item of items) {
+    count += 1;
+    if (item.children?.length) count += countNavigationItems(item.children);
+  }
+  return count;
+}
+
 export default function NavigationEditor({
   locale,
   focusItemId,
@@ -208,6 +186,7 @@ export default function NavigationEditor({
   onNavigationChange?: (items: BuilderNavItem[]) => void;
 }) {
   const editorLocale = normalizeLocale(locale);
+  const copy = getNavigationCopy(editorLocale);
   const labelInputRef = useRef<HTMLInputElement | null>(null);
   const addChildRequestRef = useRef<string | null>(null);
   const [items, setItems] = useState<BuilderNavItem[]>([]);
@@ -217,6 +196,8 @@ export default function NavigationEditor({
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editLabel, setEditLabel] = useState('');
   const [editHref, setEditHref] = useState('');
+  const navigationItemCount = countNavigationItems(items);
+  const navigationStatusLabel = loading ? copy.loading : copy.itemCountLabel(navigationItemCount);
 
   const fetchNav = useCallback(async () => {
     try {
@@ -254,19 +235,19 @@ export default function NavigationEditor({
             navigation: nextItems,
           }),
         });
-        if (!response.ok) throw new Error('Navigation save failed');
+        if (!response.ok) throw new Error(copy.titles.saveError);
         const payload = (await response.json().catch(() => null)) as { navigation?: BuilderNavItem[] } | null;
         if (Array.isArray(payload?.navigation)) {
           setItems(payload.navigation);
           onNavigationChange?.(payload.navigation);
         }
       } catch {
-        setSaveError('메뉴 저장에 실패했습니다.');
+        setSaveError(copy.titles.saveError);
       } finally {
         setSaving(false);
       }
     },
-    [locale, onNavigationChange],
+    [copy.titles.saveError, locale, onNavigationChange],
   );
 
   const handleAdd = () => {
@@ -275,7 +256,7 @@ export default function NavigationEditor({
       ...items,
       {
         id,
-        label: { ko: '새 항목', 'zh-hant': '新項目', en: 'New item' },
+        label: { ko: copy.titles.newItem, 'zh-hant': copy.titles.newItem, en: copy.titles.newItem },
         href: '/',
         pageId: `external-${id}`,
       },
@@ -288,7 +269,7 @@ export default function NavigationEditor({
     const id = `${parentId}-child-${Date.now().toString(36)}`;
     const child: BuilderNavItem = {
       id,
-      label: { ko: '새 하위 메뉴', 'zh-hant': '新子選單', en: 'New submenu item' },
+      label: { ko: copy.titles.newSubmenu, 'zh-hant': copy.titles.newSubmenu, en: copy.titles.newSubmenu },
       href: '/',
       pageId: `external-${id}`,
     };
@@ -351,7 +332,7 @@ export default function NavigationEditor({
 
   const commitEdit = () => {
     if (!editingId) return;
-    const nextLabel = editLabel.trim() || 'Untitled';
+    const nextLabel = editLabel.trim() || copy.titles.newItem;
     const nextHref = editHref.trim() || '/';
     const next = updateNavigationItem(
       items,
@@ -368,141 +349,171 @@ export default function NavigationEditor({
   };
 
   const renderEditForm = (itemId: string) => (
-    <div key={itemId} style={editFormStyle} data-builder-nav-edit-id={itemId}>
-      <div style={editRowStyle}>
-        <span style={editLabelStyle}>라벨</span>
+    <div key={itemId} className={styles.navigationEditForm} data-builder-nav-edit-id={itemId}>
+      <label className={styles.navigationEditRow}>
+        <span>{copy.labels.label}</span>
         <input
           type="text"
           value={editLabel}
-          style={inputStyle}
           ref={labelInputRef}
+          placeholder={copy.placeholders.label}
           onChange={(e) => setEditLabel(e.target.value)}
         />
-      </div>
-      <div style={editRowStyle}>
-        <span style={editLabelStyle}>경로</span>
+      </label>
+      <label className={styles.navigationEditRow}>
+        <span>{copy.labels.href}</span>
         <input
           type="text"
           value={editHref}
-          style={inputStyle}
+          placeholder={copy.placeholders.href}
           onChange={(e) => setEditHref(e.target.value)}
         />
-      </div>
-      <div style={{ display: 'flex', gap: 4, justifyContent: 'flex-end' }}>
+      </label>
+      <div className={styles.navigationEditActions}>
         <button
           type="button"
-          style={smallBtnStyle}
+          className={styles.navigationTextButton}
           onClick={() => setEditingId(null)}
         >
-          취소
+          <NavigationIcon name="close" />
+          {copy.actions.cancel}
         </button>
         <button
           type="button"
-          style={{ ...smallBtnStyle, color: '#116dff', borderColor: '#116dff' }}
+          className={`${styles.navigationTextButton} ${styles.navigationTextButtonPrimary}`}
           onClick={commitEdit}
         >
-          저장
+          <NavigationIcon name="save" />
+          {copy.actions.save}
         </button>
       </div>
     </div>
   );
 
+  const renderItemRow = (item: BuilderNavItem, isChild = false) => {
+    const label = labelForLocale(item, editorLocale) || copy.titles.untitled;
+    return (
+      <div
+        key={item.id}
+        className={styles.navigationItemRow}
+        data-builder-nav-item-row={item.id}
+        data-depth={isChild ? 'child' : 'root'}
+      >
+        <div className={styles.navigationItemTop}>
+          <div className={styles.navigationItemText}>
+            <span className={styles.navigationItemTitleLine}>
+              {isChild ? <span className={styles.navigationItemBadge}>{copy.titles.megaBadge}</span> : null}
+              <strong className={styles.navigationItemTitle}>{label}</strong>
+            </span>
+            <span className={styles.navigationItemPath} title={item.href} aria-label={`${copy.labels.path}: ${item.href}`}>
+              <NavigationIcon name="link" />
+              <span>{item.href}</span>
+            </span>
+          </div>
+          <div className={styles.navigationItemActions}>
+            <button
+              type="button"
+              className={styles.navigationIconButton}
+              onClick={() => handleMove(item.id, 'up')}
+              title={isChild ? `${copy.titles.megaBadge} ${copy.titles.moveUp}` : copy.titles.moveUp}
+              aria-label={isChild ? `${copy.titles.megaBadge} ${copy.titles.moveUp}` : copy.titles.moveUp}
+            >
+              <NavigationIcon name="up" />
+            </button>
+            <button
+              type="button"
+              className={styles.navigationIconButton}
+              onClick={() => handleMove(item.id, 'down')}
+              title={isChild ? `${copy.titles.megaBadge} ${copy.titles.moveDown}` : copy.titles.moveDown}
+              aria-label={isChild ? `${copy.titles.megaBadge} ${copy.titles.moveDown}` : copy.titles.moveDown}
+            >
+              <NavigationIcon name="down" />
+            </button>
+            {!isChild ? (
+              <button
+                type="button"
+                className={styles.navigationIconButton}
+                onClick={() => handleAddChild(item.id)}
+                title={copy.titles.addChild}
+                aria-label={copy.titles.addChild}
+              >
+                <NavigationIcon name="plus" />
+              </button>
+            ) : null}
+            <button
+              type="button"
+              className={styles.navigationIconButton}
+              onClick={() => startEdit(item)}
+              title={copy.titles.edit}
+              aria-label={copy.titles.edit}
+            >
+              <NavigationIcon name="edit" />
+            </button>
+            <button
+              type="button"
+              className={`${styles.navigationIconButton} ${styles.navigationIconButtonDanger}`}
+              onClick={() => handleDelete(item.id)}
+              title={isChild ? `${copy.titles.megaBadge} ${copy.titles.delete}` : copy.titles.delete}
+              aria-label={isChild ? `${copy.titles.megaBadge} ${copy.titles.delete}` : copy.titles.delete}
+            >
+              <NavigationIcon name="trash" />
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div style={containerStyle}>
-      <div style={headerStyle}>
-        <span style={headerLabelStyle}>Navigation</span>
+    <div
+      className={styles.navigationEditor}
+      data-builder-navigation-editor="true"
+      data-builder-navigation-loading={loading ? 'true' : 'false'}
+      data-builder-navigation-count={navigationItemCount}
+      aria-busy={loading ? 'true' : 'false'}
+    >
+      <div className={styles.navigationEditorHeader}>
+        <div>
+          <span>{copy.title}</span>
+          <strong>{navigationStatusLabel}</strong>
+        </div>
         <button
           type="button"
-          style={addBtnStyle}
+          className={styles.navigationAddButton}
           onClick={handleAdd}
           disabled={saving}
         >
-          + 추가
+          <NavigationIcon name="plus" />
+          {copy.addButton}
         </button>
       </div>
 
       {loading ? (
-        <div style={{ padding: '8px 10px', fontSize: '0.8rem', color: '#94a3b8' }}>
-          Loading...
-        </div>
+        <p className={styles.navigationEditorState}>{copy.loading}</p>
       ) : items.length === 0 ? (
-        <div style={{ padding: '8px 10px', fontSize: '0.8rem', color: '#94a3b8' }}>
-          항목 없음
-        </div>
+        <p className={styles.navigationEditorState}>{copy.emptyState}</p>
       ) : (
-        items.map((item) =>
-          editingId === item.id ? (
-            renderEditForm(item.id)
-          ) : (
-            <div key={item.id}>
-              <div style={itemStyle} data-builder-nav-item-row={item.id}>
-                <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                  {labelForLocale(item, editorLocale)}
-                </span>
-                <span style={{ fontSize: '0.68rem', color: '#94a3b8', flexShrink: 0 }}>
-                  {item.href}
-                </span>
-                <button type="button" style={smallBtnStyle} onClick={() => handleMove(item.id, 'up')} title="위로">
-                  ↑
-                </button>
-                <button type="button" style={smallBtnStyle} onClick={() => handleMove(item.id, 'down')} title="아래로">
-                  ↓
-                </button>
-                <button type="button" style={smallBtnStyle} onClick={() => handleAddChild(item.id)} title="하위 메뉴 추가">
-                  + Mega
-                </button>
-                <button type="button" style={smallBtnStyle} onClick={() => startEdit(item)} title="편집">
-                  ✎
-                </button>
-                <button type="button" style={dangerBtnStyle} onClick={() => handleDelete(item.id)} title="삭제">
-                  ✕
-                </button>
-              </div>
+        <div className={styles.navigationItemList}>
+          {items.map((item) => (
+            <div key={item.id} className={styles.navigationItemGroup}>
+              {editingId === item.id ? renderEditForm(item.id) : renderItemRow(item)}
               {item.children?.length ? (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginTop: 4, marginBottom: 4 }}>
+                <div className={styles.navigationChildList}>
                   {item.children.map((child) => (
-                    editingId === child.id ? (
-                      renderEditForm(child.id)
-                    ) : (
-                      <div key={child.id} style={childItemStyle} data-builder-nav-item-row={child.id}>
-                        <span style={childBadgeStyle}>Mega</span>
-                        <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                          {labelForLocale(child, editorLocale)}
-                        </span>
-                        <span style={{ fontSize: '0.68rem', color: '#94a3b8', flexShrink: 0 }}>
-                          {child.href}
-                        </span>
-                        <button type="button" style={smallBtnStyle} onClick={() => handleMove(child.id, 'up')} title="Mega 위로">
-                          ↑
-                        </button>
-                        <button type="button" style={smallBtnStyle} onClick={() => handleMove(child.id, 'down')} title="Mega 아래로">
-                          ↓
-                        </button>
-                        <button type="button" style={smallBtnStyle} onClick={() => startEdit(child)} title="Mega item">
-                          ✎
-                        </button>
-                        <button type="button" style={dangerBtnStyle} onClick={() => handleDelete(child.id)} title="Mega 삭제">
-                          ✕
-                        </button>
-                      </div>
-                    )
+                    editingId === child.id ? renderEditForm(child.id) : renderItemRow(child, true)
                   ))}
                 </div>
               ) : null}
             </div>
-          ),
-        )
+          ))}
+        </div>
       )}
 
       {saving && (
-        <div style={{ padding: '4px 8px', fontSize: '0.72rem', color: '#116dff', fontWeight: 600 }}>
-          저장 중...
-        </div>
+        <p className={styles.navigationEditorSaving}>{copy.titles.saving}</p>
       )}
       {saveError ? (
-        <div role="alert" style={{ padding: '4px 8px', fontSize: '0.72rem', color: '#dc2626', fontWeight: 700 }}>
-          {saveError}
-        </div>
+        <p role="alert" className={styles.navigationEditorError}>{saveError}</p>
       ) : null}
     </div>
   );

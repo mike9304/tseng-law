@@ -31,12 +31,13 @@ export async function GET(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
+    const recordIds = url.searchParams.getAll('recordIds');
     const routeActor = resolveBuilderCmsRouteActor(auth, request);
     const result = await exportEditableBuilderCmsRecordsCsv(
       params.siteId,
       locale,
       params.collectionId,
-      routeActor,
+      { ...routeActor, recordIds: recordIds.length > 0 ? recordIds : undefined },
     );
     if (!result) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
@@ -81,17 +82,18 @@ export async function POST(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
-    const payload = await request.json() as { csv?: unknown; mode?: unknown; columnMap?: unknown };
+    const payload = await request.json() as { csv?: unknown; mode?: unknown; columnMap?: unknown; duplicateMode?: unknown };
     const mode: BuilderCmsCsvImportMode = payload.mode === 'replace' ? 'replace' : 'append';
     const csv = typeof payload.csv === 'string' ? payload.csv : '';
     const columnMap = isCsvColumnMap(payload.columnMap) ? payload.columnMap : undefined;
+    const duplicateMode = payload.duplicateMode === true;
     const routeActor = resolveBuilderCmsRouteActor(auth, request);
     const result = await importEditableBuilderCmsRecordsCsv(
       params.siteId,
       locale,
       params.collectionId,
       csv,
-      { mode, columnMap, ...routeActor },
+      { mode, columnMap, duplicateMode, ...routeActor },
     );
     if (!result) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });

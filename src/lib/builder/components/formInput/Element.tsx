@@ -6,18 +6,28 @@ import type { BuilderTheme } from '@/lib/builder/site/types';
 import { resolveThemeColor } from '@/lib/builder/site/theme';
 import { resolveFormInputVariantStyle } from '@/lib/builder/site/component-variants';
 import { useFormFieldRuntime } from '@/lib/builder/forms/render-helpers';
+import type { Locale } from '@/lib/locales';
+import {
+  FORM_INPUT_KO_DEFAULTS,
+  getFormControlsCopy,
+  localizedFormControlText,
+} from '../form/form-controls-copy';
 import styles from './FormInput.module.css';
 
 export default function FormInputElement({
   node,
   theme,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderFormInputCanvasNode;
   theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getFormControlsCopy(locale);
+  const label = localizedFormControlText(c.label, copy.fieldDefaults.inputLabel, FORM_INPUT_KO_DEFAULTS.label);
   const [focused, setFocused] = useState(false);
   const field = useFormFieldRuntime({ nodeId: node.id, name: c.name, showIf: c.showIf });
   const textColor = resolveThemeColor({ kind: 'token', token: 'text' }, theme) ?? '#0f172a';
@@ -32,13 +42,13 @@ export default function FormInputElement({
       ref={field.rootRef}
       className={`${styles.field} ${mode !== 'published' && c.showIf ? styles.conditional : ''}`}
     >
-      {c.label ? (
+      {label ? (
         <label
           className={styles.label}
           style={{ color: labelColor }}
           htmlFor={`field-${node.id}`}
         >
-          {c.label}
+          {label}
           {c.required ? <span className={styles.required}>*</span> : null}
         </label>
       ) : null}
@@ -56,7 +66,7 @@ export default function FormInputElement({
         step={c.type === 'number' ? c.numericStep ?? (c.allowDecimals ? 'any' : 1) : undefined}
         inputMode={c.type === 'number' ? (c.allowDecimals ? 'decimal' : 'numeric') : undefined}
         pattern={c.pattern}
-        data-builder-field-label={c.label}
+        data-builder-field-label={label}
         data-builder-error-message={c.errorMessage}
         aria-invalid={field.error ? true : undefined}
         aria-describedby={field.error ? `field-${node.id}-error` : undefined}

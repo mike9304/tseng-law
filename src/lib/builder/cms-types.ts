@@ -141,6 +141,12 @@ export interface BuilderCmsRecord {
   updatedAt: string;
 }
 
+export interface BuilderCmsTrashedRecord {
+  readonly record: BuilderCmsRecord;
+  readonly deletedAt: string;
+  readonly deletedBy: string;
+}
+
 export interface BuilderCmsCollection {
   collectionId: string;
   name: string;
@@ -150,6 +156,7 @@ export interface BuilderCmsCollection {
   fields: BuilderCmsFieldDefinition[];
   indexes: BuilderCmsIndexDefinition[];
   records: BuilderCmsRecord[];
+  trashedRecords?: BuilderCmsTrashedRecord[];
   permissions: BuilderCmsPermissions;
   createdAt: string;
   updatedAt: string;
@@ -173,4 +180,5 @@ export interface BuilderCmsCollectionDetail extends BuilderCmsCollectionSummary 
   fields: BuilderCmsFieldDefinition[];
   indexes: BuilderCmsIndexDefinition[];
   records: BuilderCmsRecord[];
+  trashedRecords?: BuilderCmsTrashedRecord[];
 }

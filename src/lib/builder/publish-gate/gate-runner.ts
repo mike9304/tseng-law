@@ -1,12 +1,15 @@
 /**
  * Publish gate — orchestrator.
  *
- * Runs every check in `checks.ts` against the supplied canvas/page/site,
+ * Runs every publish-gate check against the supplied canvas/page/site,
  * aggregates results, and returns a `PublishCheckSuite` that callers can
  * render or use to gate the publish action.
  */
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import { readBuilderFunctions } from '@/lib/builder/dev/functions-model';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
+import { checkCodeSlotDeployReadiness } from './code-slot-checks';
+import type { CheckResult, PublishCheckSuite } from './check-types';
 import {
   checkBrokenLinks,
   checkEmptyContent,
@@ -17,23 +20,25 @@ import {
   checkResponsiveOverflow,
   checkSeoMeta,
   checkStaleDatasetBindings,
-  type CheckResult,
-  type PublishCheckSuite,
 } from './checks';
+import { checkTranslationPublishWarnings } from './translation-checks';
 
-export type { CheckResult, PublishCheckSuite, CheckSeverity, CheckCategory } from './checks';
+export type { CheckCategory, CheckResult, CheckSeverity, PublishCheckSuite } from './check-types';
 
 export async function runAllChecks(
   canvas: BuilderCanvasDocument,
   page?: BuilderPageMeta | null,
   site?: BuilderSiteDocument | null,
 ): Promise<PublishCheckSuite> {
+  const functions = await readBuilderFunctions();
   const all: CheckResult[] = [
     ...checkEmptyContent(canvas),
     ...checkBrokenLinks(canvas, site),
     ...checkImageAlt(canvas),
     ...checkSeoMeta(page, site),
     ...checkStaleDatasetBindings(canvas),
+    ...checkCodeSlotDeployReadiness(canvas, functions),
+    ...checkTranslationPublishWarnings(page, site),
     ...checkPrerenderReadiness(page),
     ...checkFormTarget(canvas),
     ...checkResponsiveOverflow(canvas),

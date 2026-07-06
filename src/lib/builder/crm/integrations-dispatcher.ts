@@ -1,14 +1,15 @@
 /**
  * Fan-out for CRM events to enabled integrations. Slack payloads get a
  * Slack-shaped formatted body; generic webhooks receive the raw event.
- * Mailchimp is a stub (logs only) — real Mailchimp wiring requires API
- * tokens we don't ship in this slice.
+ * Legacy `mailchimp-stub` integrations now route to Mailchimp Marketing
+ * audience sync when API credentials are configured.
  *
  * Failures are caught per integration; one bad webhook can't break the rest.
  */
 
 import type { CrmContact } from './contact-model';
 import { readIntegrations, type CrmIntegration } from './integrations-model';
+import { syncMailchimpAudienceMember } from './mailchimp-audience';
 
 export interface CrmIntegrationEvent {
   kind: 'contact-created' | 'form-submitted' | 'tag-added';
@@ -65,10 +66,19 @@ async function dispatchOne(
 ): Promise<void> {
   if (!integration.enabled) return;
   if (integration.kind === 'mailchimp-stub') {
-    console.info('[crm/integrations] mailchimp-stub event', {
+    const result = await syncMailchimpAudienceMember(event.contact, {
+      settings: integration.settings,
+      fetchImpl,
+    });
+    if (!result.ok) {
+      console.error('[crm/integrations] mailchimp audience sync failed:', integration.id, result.error);
+      return;
+    }
+    console.info('[crm/integrations] mailchimp audience sync', {
       integrationId: integration.id,
       contactEmail: event.contact.email,
       kind: event.kind,
+      status: result.status,
     });
     return;
   }

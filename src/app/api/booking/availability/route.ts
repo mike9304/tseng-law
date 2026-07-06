@@ -1,9 +1,29 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { computeAvailableSlots } from '@/lib/builder/bookings/availability';
+import {
+  getPublicBookingApiErrorPayload,
+  type PublicBookingApiErrorCode,
+} from '@/lib/builder/bookings/bookings-copy';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+function errorResponse(
+  locale: Locale,
+  errorCode: PublicBookingApiErrorCode,
+  status: number,
+  init?: ResponseInit,
+): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      ...getPublicBookingApiErrorPayload(locale, errorCode),
+    },
+    { ...init, status },
+  );
+}
 
 function clientIp(request: NextRequest): string {
   return (
@@ -14,9 +34,12 @@ function clientIp(request: NextRequest): string {
 }
 
 export async function GET(request: NextRequest) {
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || undefined);
   const rate = await checkRateLimit(`booking-availability:${clientIp(request)}`, 30, 60_000);
   if (!rate.allowed) {
-    return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+    return errorResponse(locale, 'too_many_requests', 429, {
+      headers: { 'Retry-After': String(Math.ceil(rate.retryAfterMs / 1000)) },
+    });
   }
 
   const { searchParams } = request.nextUrl;
@@ -25,9 +48,14 @@ export async function GET(request: NextRequest) {
   const date = searchParams.get('date') || '';
 
   if (!serviceId || !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
-    return NextResponse.json({ error: 'Missing serviceId or date' }, { status: 400 });
+    return errorResponse(locale, 'booking_availability_invalid', 400);
   }
 
-  const slots = await computeAvailableSlots({ serviceId, staffId, date });
-  return NextResponse.json({ slots });
+  try {
+    const slots = await computeAvailableSlots({ serviceId, staffId, date });
+    return NextResponse.json({ slots });
+  } catch (error) {
+    console.error('[booking/availability] GET failed:', error);
+    return errorResponse(locale, 'booking_availability_failed', 500);
+  }
 }

@@ -18,7 +18,7 @@ export function buildChildrenMap(nodes: BuilderCanvasNode[]): Record<string, str
 }
 
 /**
- * Returns the layoutMode of the node's direct parent container (if any).
+ * Returns the layoutMode of the node's direct parent container when present.
  * Used to determine whether children participate in flex/grid flow vs absolute.
  * Mirrors the computation in CanvasNode.tsx and public-page.tsx.
  */
@@ -124,7 +124,7 @@ export function resolveCanvasNodeLocalRect(
 
 export function getCanvasNodeDescendantIds(
   nodeId: string,
-  childrenMap: Record<string, string[]>,
+  childrenMap: Readonly<Record<string, readonly string[]>>,
 ): string[] {
   const descendants: string[] = [];
   const stack = [...(childrenMap[nodeId] ?? [])];

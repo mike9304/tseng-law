@@ -8,6 +8,11 @@ import {
   saveFaqItem,
   validateFaqItem,
 } from '@/lib/builder/faq/faq-engine';
+import {
+  getBuilderFaqApiErrorPayload,
+  type BuilderFaqApiErrorCode,
+} from '@/lib/builder/faq/faq-api-copy';
+import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -20,54 +25,86 @@ const patchSchema = z.object({
   status: z.enum(['draft', 'published']).optional(),
   sortOrder: z.coerce.number().int().min(0).max(100000).optional(),
   schemaEnabled: z.boolean().optional(),
+  locale: z.string().trim().max(20).optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderFaqApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getBuilderFaqApiErrorPayload(locale, errorCode), ...extras },
+    { status },
   );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
+function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
+  const queryLocale = request.nextUrl.searchParams.get('locale') ?? undefined;
+  if (isLocale(queryLocale)) return queryLocale;
+  if (payload && typeof payload === 'object') {
+    const locale = (payload as { locale?: unknown }).locale;
+    if (typeof locale === 'string' && isLocale(locale)) return locale;
+  }
+  return normalizeLocale(queryLocale);
 }
 
 export async function GET(request: NextRequest, { params }: { params: { faqId: string } }) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
+  const locale = resolveRequestLocale(request);
 
-  const item = await loadFaqItem(params.faqId);
-  if (!item) return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
-  return NextResponse.json({ ok: true, item });
+  try {
+    const item = await loadFaqItem(params.faqId);
+    if (!item) return errorResponse(locale, 'faq_not_found', 404);
+    return NextResponse.json({ ok: true, item });
+  } catch (error) {
+    console.error('[builder/faq/:faqId] GET failed:', error);
+    return errorResponse(locale, 'faq_load_failed', 500);
+  }
 }
 
 export async function PATCH(request: NextRequest, { params }: { params: { faqId: string } }) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
+  let errorLocale = resolveRequestLocale(request);
   try {
     const item = await loadFaqItem(params.faqId);
-    if (!item) return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
-    const patch = patchSchema.parse(await request.json());
-    const saved = await saveFaqItem({ ...item, ...patch });
+    if (!item) return errorResponse(errorLocale, 'faq_not_found', 404);
+    const body = await request.json();
+    errorLocale = resolveRequestLocale(request, body);
+    const patch = patchSchema.parse(body);
+    const saved = await saveFaqItem({ ...item, ...patch, locale: item.locale });
     const errors = validateFaqItem(saved);
     if (errors.length > 0) {
-      return NextResponse.json({ ok: false, error: 'validation_error', errors }, { status: 400 });
+      return errorResponse(errorLocale, 'validation_error', 400);
     }
     return NextResponse.json({ ok: true, item: saved });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+      return errorResponse(errorLocale, 'invalid_json', 400);
     }
     console.error('[builder/faq/:faqId] PATCH failed:', error);
-    return NextResponse.json(
-      { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
-      { status: 500 },
-    );
+    return errorResponse(errorLocale, 'faq_update_failed', 500);
   }
 }
 
 export async function DELETE(request: NextRequest, { params }: { params: { faqId: string } }) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
-  await deleteFaqItem(params.faqId);
-  return NextResponse.json({ ok: true });
+  const locale = resolveRequestLocale(request);
+  try {
+    await deleteFaqItem(params.faqId);
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error('[builder/faq/:faqId] DELETE failed:', error);
+    return errorResponse(locale, 'faq_delete_failed', 500);
+  }
 }

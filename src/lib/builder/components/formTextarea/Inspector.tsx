@@ -4,63 +4,62 @@ import {
   FORM_INPUT_VARIANTS,
   normalizeFormInputVariantKey,
 } from '@/lib/builder/site/component-variants';
-
-const selectStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '4px 6px',
-  fontSize: '0.85rem',
-  border: '1px solid #e2e8f0',
-  borderRadius: 6,
-  background: '#fff',
-};
+import {
+  FORM_TEXTAREA_KO_DEFAULTS,
+  getFormControlsCopy,
+  localizedFormControlText,
+} from '../form/form-controls-copy';
+import styles from '../form/FormControlInspector.module.css';
 
 export default function FormTextareaInspector({
   node,
+  locale,
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const taNode = node as BuilderFormTextareaCanvasNode;
   const c = taNode.content;
+  const copy = getFormControlsCopy(locale ?? 'ko');
+  const label = localizedFormControlText(c.label, copy.fieldDefaults.textareaLabel, FORM_TEXTAREA_KO_DEFAULTS.label);
 
   return (
-    <>
+    <div className={styles.root} data-builder-form-field-inspector="textarea">
       <label>
-        <span>Field name</span>
+        <span>{copy.fieldInspector.fieldNameLabel}</span>
         <input
           type="text"
           value={c.name}
           disabled={disabled}
           onChange={(event) => onUpdate({ name: event.target.value })}
-          placeholder="message"
+          placeholder={copy.fieldInspector.fieldNamePlaceholder}
         />
       </label>
       <label>
-        <span>Label</span>
+        <span>{copy.fieldInspector.labelLabel}</span>
         <input
           type="text"
-          value={c.label}
+          value={label}
           disabled={disabled}
           onChange={(event) => onUpdate({ label: event.target.value })}
-          placeholder="문의 내용"
+          placeholder={copy.fieldInspector.textareaLabelPlaceholder}
         />
       </label>
       <label>
-        <span>Input variant</span>
+        <span>{copy.fieldInspector.inputVariantLabel}</span>
         <select
-          style={selectStyle}
           value={normalizeFormInputVariantKey(c.variant)}
           disabled={disabled}
           onChange={(event) => onUpdate({ variant: event.target.value })}
         >
           {FORM_INPUT_VARIANTS.map((variant) => (
             <option key={variant.key} value={variant.key}>
-              {variant.label}
+              {copy.fieldInspector.inputVariantLabels[variant.key]}
             </option>
           ))}
         </select>
       </label>
       <label>
-        <span>Placeholder</span>
+        <span>{copy.fieldInspector.placeholderLabel}</span>
         <input
           type="text"
           value={c.placeholder ?? ''}
@@ -69,7 +68,7 @@ export default function FormTextareaInspector({
         />
       </label>
       <label>
-        <span>Default value</span>
+        <span>{copy.fieldInspector.defaultValueLabel}</span>
         <textarea
           value={c.defaultValue ?? ''}
           rows={2}
@@ -78,7 +77,7 @@ export default function FormTextareaInspector({
         />
       </label>
       <label>
-        <span>Rows</span>
+        <span>{copy.fieldInspector.rowsLabel}</span>
         <input
           type="number"
           min={2}
@@ -89,7 +88,7 @@ export default function FormTextareaInspector({
         />
       </label>
       <label>
-        <span>Required</span>
+        <span>{copy.fieldInspector.requiredLabel}</span>
         <input
           type="checkbox"
           checked={c.required}
@@ -98,7 +97,7 @@ export default function FormTextareaInspector({
         />
       </label>
       <label>
-        <span>Min length</span>
+        <span>{copy.fieldInspector.minLengthLabel}</span>
         <input
           type="number"
           min={0}
@@ -111,7 +110,7 @@ export default function FormTextareaInspector({
         />
       </label>
       <label>
-        <span>Max length</span>
+        <span>{copy.fieldInspector.maxLengthLabel}</span>
         <input
           type="number"
           min={1}
@@ -124,12 +123,12 @@ export default function FormTextareaInspector({
         />
       </label>
       <label>
-        <span>Show if field</span>
+        <span>{copy.fieldInspector.showIfFieldLabel}</span>
         <input
           type="text"
           value={c.showIf?.fieldName ?? ''}
           disabled={disabled}
-          placeholder="caseType"
+          placeholder={copy.fieldInspector.conditionalFieldPlaceholder}
           onChange={(event) =>
             onUpdate({
               showIf: event.target.value
@@ -140,7 +139,7 @@ export default function FormTextareaInspector({
         />
       </label>
       <label>
-        <span>Show if value</span>
+        <span>{copy.fieldInspector.conditionValueLabel}</span>
         <input
           type="text"
           value={c.showIf?.value ?? ''}
@@ -149,7 +148,7 @@ export default function FormTextareaInspector({
         />
       </label>
       <label>
-        <span>Custom error</span>
+        <span>{copy.fieldInspector.customErrorLabel}</span>
         <input
           type="text"
           value={c.errorMessage ?? ''}
@@ -157,6 +156,6 @@ export default function FormTextareaInspector({
           onChange={(event) => onUpdate({ errorMessage: event.target.value })}
         />
       </label>
-    </>
+    </div>
   );
 }

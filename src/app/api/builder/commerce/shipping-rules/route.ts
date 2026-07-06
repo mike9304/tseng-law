@@ -3,7 +3,12 @@ import { ZodError, z } from 'zod';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { loadShippingRules, saveShippingRules } from '@/lib/builder/commerce/shipping-engine';
+import {
+  getCommerceShippingRulesApiErrorPayload,
+  type CommerceShippingRulesApiErrorCode,
+} from '@/lib/builder/commerce/shipping-rules-copy';
 import { publicShippingRules } from '@/lib/builder/commerce/shipping-shared';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -31,14 +36,25 @@ const patchSchema = z.object({
   rules: z.array(shippingRuleSchema).min(1).max(100),
 });
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: CommerceShippingRulesApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getCommerceShippingRulesApiErrorPayload(locale, errorCode), ...extras },
+    { status },
   );
 }
 
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
 export async function GET(request: NextRequest) {
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+
   try {
     const sp = request.nextUrl.searchParams;
     const locale = localeSchema.parse(sp.get('locale') ?? 'ko');
@@ -57,13 +73,14 @@ export async function GET(request: NextRequest) {
       rules: scope === 'all' ? rules : publicShippingRules(rules, locale, currency),
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     console.error('[builder/commerce/shipping-rules] GET failed:', error);
-    return NextResponse.json({ ok: false, error: 'shipping_rules_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'shipping_rules_failed', 500);
   }
 }
 
 export async function PATCH(request: NextRequest) {
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
@@ -72,9 +89,9 @@ export async function PATCH(request: NextRequest) {
     const rules = await saveShippingRules(input.rules);
     return NextResponse.json({ ok: true, rules });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
-    if (error instanceof SyntaxError) return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+    if (error instanceof ZodError) return validationError(errorLocale, error);
+    if (error instanceof SyntaxError) return errorResponse(errorLocale, 'invalid_json', 400);
     console.error('[builder/commerce/shipping-rules] PATCH failed:', error);
-    return NextResponse.json({ ok: false, error: 'shipping_rules_update_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'shipping_rules_update_failed', 500);
   }
 }

@@ -2,11 +2,10 @@
 
 import type { BuilderColorValue, BuilderBackgroundValue } from '@/lib/builder/site/theme';
 import type { BuilderTheme } from '@/lib/builder/site/types';
-import {
-  classifyStyleOrigin,
-  STYLE_ORIGIN_COLOR,
-  type StyleOriginKind,
-} from '@/lib/builder/site/style-origin';
+import type { Locale } from '@/lib/locales';
+import { classifyStyleOrigin } from '@/lib/builder/site/style-origin';
+import { getStyleTabCopy } from '@/components/builder/editor/style-tab-copy';
+import styles from './StyleOriginChip.module.css';
 
 interface Props {
   /** Resolved style value (token-resolved string, or raw value). */
@@ -14,14 +13,8 @@ interface Props {
   theme: BuilderTheme;
   variantKey?: string;
   manualOverride?: boolean;
+  locale?: Locale;
 }
-
-const LABEL: Record<StyleOriginKind, string> = {
-  theme: 'Theme',
-  variant: 'Variant',
-  manual: 'Manual',
-  default: 'Default',
-};
 
 /**
  * Phase 23 W185 — Style origin chip.
@@ -30,30 +23,17 @@ const LABEL: Record<StyleOriginKind, string> = {
  * (theme token, variant preset, manual override, or default). Hovering shows
  * a finer-grained hint (`theme.colors.primary`, `variant: card-elevated`, ...).
  */
-export default function StyleOriginChip({ value, theme, variantKey, manualOverride }: Props) {
+export default function StyleOriginChip({ value, theme, variantKey, manualOverride, locale = 'ko' }: Props) {
   const origin = classifyStyleOrigin({ value, theme, variantKey, manualOverride });
-  const color = STYLE_ORIGIN_COLOR[origin.kind];
+  const copy = getStyleTabCopy(locale);
   return (
     <span
-      title={origin.hint}
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: 4,
-        padding: '2px 6px',
-        borderRadius: 999,
-        fontSize: 10,
-        fontWeight: 700,
-        textTransform: 'uppercase',
-        letterSpacing: 0.4,
-        background: `${color}22`,
-        color,
-        border: `1px solid ${color}55`,
-      }}
+      title={copy.originHint(origin.hint)}
+      className={styles.originChip}
       data-builder-style-origin={origin.kind}
     >
-      <span aria-hidden style={{ width: 6, height: 6, borderRadius: 999, background: color }} />
-      {LABEL[origin.kind]}
+      <span aria-hidden className={styles.originChipDot} />
+      <span className={styles.originChipLabel}>{copy.originLabels[origin.kind]}</span>
     </span>
   );
 }

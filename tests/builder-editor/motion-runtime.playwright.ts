@@ -175,6 +175,72 @@ function makeMotionDocument(token: string): TestDocument {
   };
 }
 
+function makeTimelineInterpolationDocument(token: string): TestDocument {
+  const now = new Date().toISOString();
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `motion-timeline-${token}`,
+    stageWidth: 1280,
+    stageHeight: 1200,
+    nodes: [
+      {
+        id: `timeline-target-${token}`,
+        kind: 'text',
+        rect: { x: 120, y: 440, width: 520, height: 120 },
+        style: baseStyle,
+        zIndex: 1,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          text: `Timeline interpolation target ${token}`,
+          fontSize: 26,
+          color: '#0f172a',
+          fontWeight: 'bold',
+          align: 'center',
+          lineHeight: 1.3,
+          letterSpacing: 0,
+          fontFamily: 'system-ui',
+          as: 'p',
+        },
+        animation: {
+          timeline: {
+            scrollBound: true,
+            durationMs: 1600,
+            keyframes: [
+              { offset: 0, transform: 'translateY(0px) scale(1)', opacity: 1 },
+              { offset: 1, transform: 'translateY(-80px) scale(1.2)', opacity: 0.5, easing: 'linear' },
+            ],
+          },
+        },
+      },
+      {
+        id: `timeline-spacer-${token}`,
+        kind: 'container',
+        rect: { x: 0, y: 1000, width: 1280, height: 120 },
+        style: { ...baseStyle, backgroundColor: 'transparent', borderWidth: 0, shadowBlur: 0 },
+        zIndex: 0,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          label: 'Timeline spacer',
+          background: 'transparent',
+          borderColor: '#cbd5e1',
+          borderStyle: 'solid',
+          borderWidth: 0,
+          borderRadius: 0,
+          padding: 0,
+          layoutMode: 'absolute',
+          as: 'div',
+        },
+      },
+    ],
+  };
+}
+
 async function createBuilderPage(
   request: APIRequestContext,
   slug: string,
@@ -206,10 +272,13 @@ async function currentDraftRevision(request: APIRequestContext, pageId: string):
 }
 
 async function selectLayerNode(page: import('@playwright/test').Page, nodeId: string, kind: string): Promise<void> {
-  await page.getByRole('button', { name: 'Layers', exact: true }).click({ force: true });
-  const drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Layers' }).first();
-  await expect(drawer.getByText('Layers').first()).toBeVisible();
-  const row = drawer.locator(`[title="${kind} ${nodeId}"]`).first();
+  await page.getByRole('button', { name: /^Layers$|^레이어$/ }).click({ force: true });
+  const drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: /Layers|레이어/ }).first();
+  await expect(drawer.getByText(/^Layers$|^레이어$/).first()).toBeVisible();
+  // Nested layers are collapsed by default — searching by node id force-expands
+  // the ancestor chain so deeply nested rows (e.g. hero children) render.
+  await drawer.locator('[data-builder-layer-search="true"]').fill(nodeId);
+  const row = drawer.locator(`[title="${kind} ${nodeId}"], [title$=" ${nodeId}"]`).first();
   await expect(row).toBeVisible({ timeout: 10_000 });
   await row.click();
   await expect(page.locator(`[data-node-id="${nodeId}"][class*="nodeSelected"]`).first()).toBeVisible({
@@ -244,48 +313,48 @@ test.describe('/ko published motion runtime', () => {
     // Inspector header no longer prints the node ID — verify selection on
     // the canvas itself, then check the kind label that the panel does show.
     await expect(page.locator('[data-node-id="home-hero-title"][data-selected="true"]')).toBeVisible();
-    await expect(inspector).toContainText(/text/i);
-    await inspector.getByRole('button', { name: 'animations', exact: true }).click();
-    await expect(page.getByText('Entrance', { exact: true })).toBeVisible();
-    await expect(page.getByText('Exit', { exact: true })).toBeVisible();
-    await expect(page.getByText('Loop', { exact: true })).toBeVisible();
-    await expect(page.getByText('Click', { exact: true })).toBeVisible();
-    await expect(page.getByText('Motion timeline', { exact: true })).toBeVisible();
+    await expect(inspector).toContainText(/text|텍스트/i);
+    await inspector.getByRole('button', { name: /^animations$|^애니메이션$/i }).click();
+    await expect(page.getByText(/^Entrance$|^등장$/)).toBeVisible();
+    await expect(page.getByText(/^Exit$|^퇴장$/)).toBeVisible();
+    await expect(page.getByText(/^Loop$|^반복$/)).toBeVisible();
+    await expect(page.getByText(/^Click$|^클릭$/)).toBeVisible();
+    await expect(page.getByText(/^Motion timeline$|^모션 타임라인$/)).toBeVisible();
 
-    const exitPreset = page.getByRole('combobox', { name: 'Exit preset' });
+    const exitPreset = page.getByRole('combobox', { name: /^Exit preset$|^퇴장 프리셋$/ });
     await exitPreset.selectOption('fade-out');
     const exitSection = exitPreset.locator('xpath=ancestor::section[1]');
-    await exitSection.getByRole('combobox', { name: 'Easing' }).selectOption('custom');
+    await exitSection.getByRole('combobox', { name: /^Easing$|^이징$/ }).selectOption('custom');
     const exitCustomEasing = exitSection.getByPlaceholder('cubic-bezier(0.34, 1.56, 0.64, 1)');
     await expect(exitCustomEasing).toBeEnabled();
-    await exitSection.getByRole('combobox', { name: 'Easing' }).selectOption('elastic');
+    await exitSection.getByRole('combobox', { name: /^Easing$|^이징$/ }).selectOption('elastic');
     await expect(exitCustomEasing).toBeDisabled();
     await page.waitForTimeout(150);
 
-    const loopPreset = page.getByRole('combobox', { name: 'Loop preset' });
+    const loopPreset = page.getByRole('combobox', { name: /^Loop preset$|^반복 프리셋$/ });
     await expect(loopPreset).toBeEnabled();
     await loopPreset.selectOption('float');
     const loopSection = loopPreset.locator('xpath=ancestor::section[1]');
-    await expect(loopSection.getByRole('spinbutton', { name: 'Intensity' })).toBeEnabled();
+    await expect(loopSection.getByRole('spinbutton', { name: /Intensity|강도/ })).toBeEnabled();
 
-    const scrollEffect = page.getByRole('combobox', { name: 'Scroll effect' });
+    const scrollEffect = page.getByRole('combobox', { name: /^Scroll effect$|^스크롤 효과$/ });
     await expect(scrollEffect).toBeEnabled();
     await scrollEffect.selectOption('background-parallax');
     await page.waitForTimeout(150);
     await scrollEffect.selectOption('scrub-translate');
     const scrollSection = scrollEffect.locator('xpath=ancestor::section[1]');
-    await expect(scrollSection.getByRole('spinbutton', { name: 'Intensity' })).toBeEnabled();
+    await expect(scrollSection.getByRole('spinbutton', { name: /Intensity|강도/ })).toBeEnabled();
 
-    const clickPreset = page.getByRole('combobox', { name: 'Click preset' });
+    const clickPreset = page.getByRole('combobox', { name: /^Click preset$|^클릭 프리셋$/ });
     await expect(clickPreset).toBeEnabled();
     await clickPreset.selectOption('pulse');
     const clickSection = clickPreset.locator('xpath=ancestor::section[1]');
-    await expect(clickSection.getByRole('spinbutton', { name: 'Intensity' })).toBeEnabled();
+    await expect(clickSection.getByRole('spinbutton', { name: /Intensity|강도/ })).toBeEnabled();
 
     const settingsModal = await openSiteSettings(page);
-    await settingsModal.getByRole('button', { name: 'Advanced' }).click();
-    await settingsModal.getByRole('combobox', { name: 'Page transition' }).selectOption('slide-up');
-    await expect(settingsModal.getByRole('spinbutton', { name: 'Page transition duration' })).toBeEnabled();
+    await settingsModal.getByRole('button', { name: /^Advanced$|^고급$/ }).click();
+    await settingsModal.getByRole('combobox', { name: /^Page transition$|^페이지 전환$/ }).selectOption('slide-up');
+    await expect(settingsModal.getByRole('spinbutton', { name: /^Page transition duration$|^Duration$|^지속 시간$/ })).toBeEnabled();
     await settingsModal.getByRole('button', { name: '취소' }).click();
   });
 
@@ -425,6 +494,65 @@ test.describe('/ko published motion runtime', () => {
         },
         failOnStatusCode: false,
       });
+    }
+  });
+
+  test('interpolates scroll-bound timeline transform and opacity at mid progress', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-motion-timeline-${token}`;
+    let pageId: string | null = null;
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Motion Timeline ${token}`,
+      );
+      let revision = await currentDraftRevision(page.request, pageId);
+      revision = await putDraft(page.request, pageId, revision, makeTimelineInterpolationDocument(token));
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: { expectedDraftRevision: revision },
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      const target = page.locator(`[data-node-id="timeline-target-${token}"]`).first();
+      await expect(target).toBeVisible();
+      const handle = await target.elementHandle();
+      expect(handle).toBeTruthy();
+
+      await page.waitForFunction(() => document.documentElement.dataset.builderAnimationsReady === 'true');
+      await page.evaluate((element) => {
+        const node = element as HTMLElement;
+        const previousTransform = node.style.getPropertyValue('--builder-anim-timeline-transform');
+        if (previousTransform) node.style.removeProperty('--builder-anim-timeline-transform');
+        const rect = node.getBoundingClientRect();
+        const targetScrollY = window.scrollY + rect.top + rect.height / 2 - (window.innerHeight || 1) / 2;
+        if (previousTransform) node.style.setProperty('--builder-anim-timeline-transform', previousTransform);
+        window.scrollTo(0, targetScrollY);
+      }, handle);
+      await page.waitForFunction(
+        (element) => {
+          const node = element as HTMLElement;
+          const transform = node.style.getPropertyValue('--builder-anim-timeline-transform');
+          const opacity = node.style.getPropertyValue('--builder-anim-timeline-opacity');
+          const translateY = Number(transform.match(/translateY\((-?\d+(?:\.\d+)?)px\)/)?.[1]);
+          const scale = Number(transform.match(/scale\((\d+(?:\.\d+)?)\)/)?.[1]);
+          return Math.abs(translateY + 40) < 1
+            && Math.abs(scale - 1.1) < 0.01
+            && Math.abs(Number(opacity) - 0.75) < 0.01;
+        },
+        handle,
+      );
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
     }
   });
 });

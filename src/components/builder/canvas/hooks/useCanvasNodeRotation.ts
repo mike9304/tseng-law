@@ -2,6 +2,7 @@
 
 import {
   useCallback,
+  useEffect,
   useRef,
   useState,
   type PointerEvent as ReactPointerEvent,
@@ -38,6 +39,13 @@ export function useCanvasNodeRotation({
 }: UseCanvasNodeRotationArgs) {
   const [rotationReadout, setRotationReadout] = useState<RotationReadout>(null);
   const rotationDrag = useRef<{ startAngle: number; startRotation: number } | null>(null);
+  const readoutClearTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => () => {
+    if (readoutClearTimer.current) {
+      clearTimeout(readoutClearTimer.current);
+    }
+  }, []);
 
   const handleRotationPointerDown = useCallback(
     (event: ReactPointerEvent<HTMLDivElement>) => {
@@ -45,6 +53,10 @@ export function useCanvasNodeRotation({
       event.preventDefault();
       const targetEl = nodeRef.current;
       if (!targetEl) return;
+      if (readoutClearTimer.current) {
+        clearTimeout(readoutClearTimer.current);
+        readoutClearTimer.current = null;
+      }
       const activeEl = targetEl;
       const rect = activeEl.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
@@ -82,7 +94,14 @@ export function useCanvasNodeRotation({
         if (didCleanup) return;
         didCleanup = true;
         rotationDrag.current = null;
-        setRotationReadout(null);
+        if (mode === 'cancel') {
+          setRotationReadout(null);
+        } else {
+          readoutClearTimer.current = setTimeout(() => {
+            setRotationReadout(null);
+            readoutClearTimer.current = null;
+          }, 900);
+        }
         try {
           if (activeEl.hasPointerCapture(pointerId)) {
             activeEl.releasePointerCapture(pointerId);

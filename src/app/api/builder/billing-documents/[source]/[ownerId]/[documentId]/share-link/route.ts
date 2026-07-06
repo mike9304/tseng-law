@@ -6,6 +6,11 @@ import {
   parseBillingDocumentSource,
   revokeBillingDocumentShareLink,
 } from '@/lib/builder/billing-documents';
+import {
+  getBuilderBillingDocumentsApiErrorPayload,
+  type BuilderBillingDocumentsApiErrorCode,
+} from '@/lib/builder/billing-documents-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -14,9 +19,24 @@ const shareLinkSchema = z.object({
   expiresAt: z.string().trim().datetime().optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderBillingDocumentsApiErrorCode,
+  status: number,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
+    { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      ...getBuilderBillingDocumentsApiErrorPayload(locale, 'invalid_share_link_payload'),
+      issues: error.flatten(),
+    },
     { status: 400 },
   );
 }
@@ -28,20 +48,21 @@ export async function POST(
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const source = parseBillingDocumentSource(params.source);
-  if (!source) return NextResponse.json({ ok: false, error: 'invalid_document_source' }, { status: 400 });
+  if (!source) return errorResponse(errorLocale, 'invalid_document_source', 400);
 
   try {
     const input = shareLinkSchema.parse(await request.json().catch(() => ({})));
     const document = await createBillingDocumentShareLink(source, params.ownerId, params.documentId, {
       expiresAt: input.expiresAt,
     });
-    if (!document) return NextResponse.json({ ok: false, error: 'document_not_found' }, { status: 404 });
+    if (!document) return errorResponse(errorLocale, 'document_not_found', 404);
     return NextResponse.json({ ok: true, document });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     console.error('[builder/billing-documents/share-link] POST failed:', error);
-    return NextResponse.json({ ok: false, error: 'share_link_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'share_link_failed', 500);
   }
 }
 
@@ -52,15 +73,16 @@ export async function DELETE(
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const source = parseBillingDocumentSource(params.source);
-  if (!source) return NextResponse.json({ ok: false, error: 'invalid_document_source' }, { status: 400 });
+  if (!source) return errorResponse(errorLocale, 'invalid_document_source', 400);
 
   try {
     const document = await revokeBillingDocumentShareLink(source, params.ownerId, params.documentId);
-    if (!document) return NextResponse.json({ ok: false, error: 'document_not_found' }, { status: 404 });
+    if (!document) return errorResponse(errorLocale, 'document_not_found', 404);
     return NextResponse.json({ ok: true, document });
   } catch (error) {
     console.error('[builder/billing-documents/share-link] DELETE failed:', error);
-    return NextResponse.json({ ok: false, error: 'share_link_revoke_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'share_link_revoke_failed', 500);
   }
 }

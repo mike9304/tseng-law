@@ -7,16 +7,26 @@ import {
   CARD_VARIANTS,
   resolveCardVariantStyle,
 } from '@/lib/builder/site/component-variants';
+import type { Locale } from '@/lib/locales';
+import {
+  getMarketingWidgetsCopy,
+  localizedTeamMemberContent,
+  TEAM_MEMBER_CARD_LEGACY_DEFAULTS,
+} from '../marketing-widgets-copy';
+import styles from './TeamMemberCardInspector.module.css';
 
 function TeamMemberCardRender({
   node,
+  locale = 'ko',
   theme,
 }: {
   node: BuilderTeamMemberCardCanvasNode;
+  locale?: Locale;
   theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
 }) {
-  const c = node.content;
+  const copy = getMarketingWidgetsCopy(locale).teamMemberCard;
+  const c = localizedTeamMemberContent(node.content, copy.defaultContent);
   const variantStyle = resolveCardVariantStyle(c.variant, theme);
   return (
     <article
@@ -79,54 +89,82 @@ function parseSocial(value: string): BuilderTeamMemberCardCanvasNode['content'][
 
 function TeamMemberCardInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const tmNode = node as BuilderTeamMemberCardCanvasNode;
-  const c = tmNode.content;
+  const teamCopy = getMarketingWidgetsCopy(locale).teamMemberCard;
+  const c = localizedTeamMemberContent(tmNode.content, teamCopy.defaultContent);
+  const copy = teamCopy.inspector;
   return (
-    <>
-      <label>
-        <span>이름</span>
-        <input type="text" value={c.name} disabled={disabled} onChange={(event) => onUpdate({ name: event.target.value })} />
+    <div className={styles.root} data-builder-team-member-card-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.name}</span>
+        <input
+          className={styles.control}
+          type="text"
+          value={c.name}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ name: event.target.value })}
+        />
       </label>
-      <label>
-        <span>직책</span>
-        <input type="text" value={c.role} disabled={disabled} onChange={(event) => onUpdate({ role: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.role}</span>
+        <input
+          className={styles.control}
+          type="text"
+          value={c.role}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ role: event.target.value })}
+        />
       </label>
-      <label>
-        <span>소개</span>
-        <textarea rows={4} value={c.bio} disabled={disabled} onChange={(event) => onUpdate({ bio: event.target.value })} />
-      </label>
-      <label>
-        <span>아바타 URL</span>
-        <input type="text" value={c.avatar} disabled={disabled} onChange={(event) => onUpdate({ avatar: event.target.value })} />
-      </label>
-      <label>
-        <span>소셜 (label | href)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.bio}</span>
         <textarea
+          className={`${styles.control} ${styles.textarea}`}
+          rows={4}
+          value={c.bio}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ bio: event.target.value })}
+        />
+      </label>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.avatarUrl}</span>
+        <input
+          className={styles.control}
+          type="text"
+          value={c.avatar}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ avatar: event.target.value })}
+        />
+      </label>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.socialLinks}</span>
+        <textarea
+          className={`${styles.control} ${styles.textarea}`}
           rows={3}
-          style={{ fontFamily: 'inherit' }}
           value={socialToText(c.socialLinks)}
           disabled={disabled}
           onChange={(event) => onUpdate({ socialLinks: parseSocial(event.target.value) })}
         />
       </label>
-      <label>
-        <span>카드 스타일</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.cardStyle}</span>
         <select
+          className={styles.control}
           value={c.variant ?? 'flat'}
           disabled={disabled}
           onChange={(event) => onUpdate({ variant: event.target.value })}
         >
           {CARD_VARIANTS.map((variant) => (
             <option key={variant.key} value={variant.key}>
-              {variant.label}
+              {copy.cardVariants[variant.key]}
             </option>
           ))}
         </select>
       </label>
-    </>
+    </div>
   );
 }
 
@@ -136,13 +174,8 @@ export default defineComponent({
   category: 'advanced',
   icon: '👤',
   defaultContent: {
-    name: '김 변호사',
-    role: '대표 변호사 · 한국·대만 자격',
-    bio: '국제 기업 자문과 한·대 사이 협상 중재를 전문으로 합니다.',
-    avatar: '',
-    socialLinks: [
-      { label: 'LinkedIn', href: 'https://linkedin.com/' },
-    ],
+    ...TEAM_MEMBER_CARD_LEGACY_DEFAULTS,
+    socialLinks: TEAM_MEMBER_CARD_LEGACY_DEFAULTS.socialLinks.map((link) => ({ ...link })),
   },
   defaultStyle: {},
   defaultRect: { width: 280, height: 380 },

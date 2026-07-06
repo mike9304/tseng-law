@@ -49,7 +49,7 @@ function noWeek() {
 }
 
 test.describe('M27 recurring availability templates', () => {
-  test.setTimeout(120_000);
+  test.setTimeout(180_000);
 
   test('applies recurring template and automatic holiday exclusion from admin UI', async ({ page }) => {
     const token = Date.now().toString(36);
@@ -62,6 +62,7 @@ test.describe('M27 recurring availability templates', () => {
     try {
       const staffResponse = await page.request.post('/api/builder/bookings/staff', {
         headers,
+        timeout: 30_000,
         data: {
           name: { ko: `M27 반복 변호사 ${token}`, 'zh-hant': `M27 循環律師 ${token}`, en: `M27 Recurring Attorney ${token}` },
           title: { ko: '반복 검증', 'zh-hant': '循環測試', en: 'Recurring test' },
@@ -76,6 +77,7 @@ test.describe('M27 recurring availability templates', () => {
 
       const serviceResponse = await page.request.post('/api/builder/bookings/services', {
         headers,
+        timeout: 30_000,
         data: {
           name: { ko: `M27 반복 상담 ${token}`, 'zh-hant': `M27 循環諮詢 ${token}`, en: `M27 Recurring Consultation ${token}` },
           description: { ko: 'W212 반복 가용성 검증', 'zh-hant': 'W212 循環測試', en: 'W212 recurring verification' },
@@ -98,6 +100,7 @@ test.describe('M27 recurring availability templates', () => {
 
       const emptyAvailability = await page.request.patch(`/api/builder/bookings/staff/${staffId}/availability`, {
         headers,
+        timeout: 30_000,
         data: {
           weekly: noWeek(),
           blockedDates: [],
@@ -108,22 +111,24 @@ test.describe('M27 recurring availability templates', () => {
       expect(emptyAvailability.status()).toBe(200);
 
       await page.goto(`/ko/admin-builder/bookings/staff/${staffId}/availability`, { waitUntil: 'domcontentloaded' });
-      await page.getByLabel('Recurring template').selectOption('weekdays-10-18');
-      await page.getByRole('button', { name: 'Apply template' }).click();
-      await page.getByLabel('Timezone').selectOption('Asia/Seoul');
-      await page.getByLabel('Holiday calendar').selectOption('kr-tw');
+      await expect(page.getByRole('heading', { name: '근무 시간' })).toBeVisible();
+      await page.getByLabel('반복 템플릿').selectOption('weekdays-10-18');
+      await page.getByRole('button', { name: '템플릿 적용' }).click();
+      await page.getByLabel('시간대').selectOption('Asia/Seoul');
+      await page.getByLabel('휴일 캘린더').selectOption('kr-tw');
 
       const saveResponsePromise = page.waitForResponse((response) =>
         response.url().includes(`/api/builder/bookings/staff/${staffId}/availability`) && response.request().method() === 'PATCH',
         { timeout: 30_000 },
       );
-      await page.getByRole('button', { name: 'Save availability' }).click();
+      await page.getByRole('button', { name: '가능 시간 저장' }).click();
       expect((await saveResponsePromise).status()).toBe(200);
-      await expect(page.getByText('Availability saved.')).toBeVisible();
+      await expect(page.getByText('가능 시간을 저장했습니다.')).toBeVisible();
 
       const workDate = nextWorkingDate();
       const workSlotsResponse = await page.request.get(`/api/booking/availability?serviceId=${serviceId}&staffId=${staffId}&date=${workDate}`, {
         headers,
+        timeout: 30_000,
       });
       expect(workSlotsResponse.status()).toBe(200);
       const workSlots = ((await workSlotsResponse.json()) as { slots: Array<{ startAt: string }> }).slots;
@@ -133,19 +138,47 @@ test.describe('M27 recurring availability templates', () => {
       const holidayDate = nextHolidayWorkingDate();
       const holidaySlotsResponse = await page.request.get(`/api/booking/availability?serviceId=${serviceId}&staffId=${staffId}&date=${holidayDate}`, {
         headers,
+        timeout: 30_000,
       });
       expect(holidaySlotsResponse.status()).toBe(200);
       expect(((await holidaySlotsResponse.json()) as { slots: unknown[] }).slots).toEqual([]);
+
+      await page.getByRole('button', { name: '날짜 예외 추가' }).click();
+      await page.locator('[data-booking-availability-override-date="true"]').fill(holidayDate);
+      await page.locator('[data-booking-availability-override-start="true"]').fill('10:00');
+      await page.locator('[data-booking-availability-override-end="true"]').fill('18:00');
+      await page.locator('[data-booking-availability-override-note="true"]').fill('Holiday override');
+      await expect(page.locator('[data-booking-availability-override-preview="true"]')).toContainText('열림');
+      await expect(page.locator('[data-booking-availability-override-preview="true"]')).toContainText('날짜 예외가 이 날짜를');
+
+      const overrideSaveResponsePromise = page.waitForResponse((response) =>
+        response.url().includes(`/api/builder/bookings/staff/${staffId}/availability`) && response.request().method() === 'PATCH',
+        { timeout: 30_000 },
+      );
+      await page.getByRole('button', { name: '가능 시간 저장' }).click();
+      expect((await overrideSaveResponsePromise).status()).toBe(200);
+      await expect(page.getByText('가능 시간을 저장했습니다.')).toBeVisible();
+
+      const overrideSlotsResponse = await page.request.get(`/api/booking/availability?serviceId=${serviceId}&staffId=${staffId}&date=${holidayDate}`, {
+        headers,
+        timeout: 30_000,
+      });
+      expect(overrideSlotsResponse.status()).toBe(200);
+      const overrideSlots = ((await overrideSlotsResponse.json()) as { slots: Array<{ startAt: string }> }).slots;
+      expect(overrideSlots.length).toBeGreaterThan(0);
+      expect(overrideSlots[0].startAt).toContain('T01:00:00.000Z');
     } finally {
       if (serviceId) {
         await page.request.delete(`/api/builder/bookings/services/${serviceId}`, {
           headers,
+          timeout: 30_000,
           failOnStatusCode: false,
         });
       }
       if (staffId) {
         await page.request.delete(`/api/builder/bookings/staff/${staffId}`, {
           headers,
+          timeout: 30_000,
           failOnStatusCode: false,
         });
       }

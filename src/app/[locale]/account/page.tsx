@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
@@ -6,11 +7,39 @@ import styles from '@/components/members/MembersArea.module.css';
 
 export const dynamic = 'force-dynamic';
 
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  const title = locale === 'ko' ? '회원 계정' : locale === 'zh-hant' ? '會員帳戶' : 'Member account';
+  return {
+    title,
+    robots: { index: false, follow: false },
+  };
+}
+
 export default async function MemberAccountPage({ params }: { params: { locale: Locale } }) {
   const locale = normalizeLocale(params.locale);
   const member = await getCurrentSiteMember();
   if (!member) redirect(`/${locale}/login?next=${encodeURIComponent(`/${locale}/account`)}`);
   const isPremium = member.role === 'premium' || member.role === 'admin';
+  const profileNote = member.customFields?.profileNote?.trim() || '';
+  const memberEmailAliases = (() => {
+    try {
+      return member.customFields?.memberEmailAliases ? JSON.parse(member.customFields.memberEmailAliases) : [];
+    } catch {
+      return [];
+    }
+  })() as string[];
+  const notificationSummary = [
+    member.customFields?.bookingEmailReminders === 'true'
+      ? (locale === 'ko' ? '예약 이메일' : locale === 'zh-hant' ? '預約信件' : 'Booking email')
+      : null,
+    member.customFields?.bookingSmsReminders === 'true'
+      ? (locale === 'ko' ? '예약 SMS' : locale === 'zh-hant' ? '預約簡訊' : 'Booking SMS')
+      : null,
+    member.customFields?.billingEmails === 'true'
+      ? (locale === 'ko' ? '청구서 이메일' : locale === 'zh-hant' ? '帳單信件' : 'Billing email')
+      : null,
+  ].filter(Boolean) as string[];
 
   return (
     <main className={styles.accountPage} data-member-account-page="true">
@@ -23,7 +52,50 @@ export default async function MemberAccountPage({ params }: { params: { locale: 
         <div className={styles.accountGrid}>
           <article className={styles.accountCard}>
             <strong>{locale === 'ko' ? '프로필' : locale === 'zh-hant' ? '個人資料' : 'Profile'}</strong>
-            <p>{locale === 'ko' ? '이름, 전화번호 등 회원 정보를 관리합니다.' : locale === 'zh-hant' ? '管理姓名、電話等會員資料。' : 'Manage name, phone, and member details.'}</p>
+            <div className={styles.accountProfileSummary} data-member-account-profile-summary="true">
+              {member.profilePhoto ? (
+                <img
+                  className={styles.accountProfilePhoto}
+                  src={member.profilePhoto}
+                  alt={member.name}
+                  data-member-account-profile-photo="true"
+                />
+              ) : (
+                <div className={styles.accountProfilePhotoPlaceholder} data-member-account-profile-photo="empty">
+                  {member.name.slice(0, 1).toUpperCase()}
+                </div>
+              )}
+              <p>{locale === 'ko' ? '이름, 전화번호 등 회원 정보를 관리합니다.' : locale === 'zh-hant' ? '管理姓名、電話等會員資料。' : 'Manage name, phone, and member details.'}</p>
+              {profileNote ? (
+                <small data-member-account-profile-note="true">{profileNote}</small>
+              ) : null}
+              {memberEmailAliases.length > 0 ? (
+                <div className={styles.accountProfileChipRow} data-member-account-profile-aliases="true">
+                  <span className={styles.accountProfileChipLabel}>
+                    {locale === 'ko' ? '이전 이메일' : locale === 'zh-hant' ? '舊信箱' : 'Previous emails'}
+                  </span>
+                  {memberEmailAliases.map((email) => (
+                    <span key={email} className={styles.accountProfileChip}>
+                      {email}
+                    </span>
+                  ))}
+                </div>
+              ) : null}
+              <div className={styles.accountProfileChipRow} data-member-account-profile-notification-summary="true">
+                <span className={styles.accountProfileChipLabel}>
+                  {locale === 'ko' ? '알림' : locale === 'zh-hant' ? '通知' : 'Notifications'}
+                </span>
+                {notificationSummary.length > 0 ? (
+                  notificationSummary.map((item) => (
+                    <span key={item} className={styles.accountProfileChip}>
+                      {item}
+                    </span>
+                  ))
+                ) : (
+                  <small>{locale === 'ko' ? '현재 알림 없음' : locale === 'zh-hant' ? '目前沒有通知偏好' : 'No notification preferences set'}</small>
+                )}
+              </div>
+            </div>
             <Link className={styles.accountLink} href={`/${locale}/account/profile`}>
               {locale === 'ko' ? '프로필 열기' : locale === 'zh-hant' ? '開啟個人資料' : 'Open profile'}
             </Link>
@@ -40,6 +112,13 @@ export default async function MemberAccountPage({ params }: { params: { locale: 
             <p>{locale === 'ko' ? '회원 이메일과 일치하는 예정/지난 상담 예약을 확인합니다.' : locale === 'zh-hant' ? '查看與會員信箱相符的即將到來與過去諮詢。' : 'Review upcoming and past consultations tied to your member email.'}</p>
             <Link className={styles.accountLink} href={`/${locale}/account/bookings`} data-member-bookings-link="true">
               {locale === 'ko' ? '예약 보기' : locale === 'zh-hant' ? '查看預約' : 'View bookings'}
+            </Link>
+          </article>
+          <article className={styles.accountCard}>
+            <strong>{locale === 'ko' ? '청구서' : locale === 'zh-hant' ? '帳單' : 'Billing'}</strong>
+            <p>{locale === 'ko' ? '회원 이메일과 연결된 청구서와 영수증을 확인하고 결제 링크를 열 수 있습니다.' : locale === 'zh-hant' ? '查看與會員信箱連結的帳單與收據，並可開啟付款連結。' : 'Review invoices and receipts tied to your member email and open payment links.'}</p>
+            <Link className={styles.accountLink} href={`/${locale}/account/billing`} data-member-billing-link="true">
+              {locale === 'ko' ? '청구서 보기' : locale === 'zh-hant' ? '查看帳單' : 'View billing'}
             </Link>
           </article>
           <article className={styles.accountCard}>

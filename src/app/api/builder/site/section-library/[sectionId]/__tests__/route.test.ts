@@ -105,7 +105,7 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
     const payload = await response.json();
 
     expect(response.status).toBe(404);
-    expect(payload.error).toContain('not found');
+    expect(payload.errorCode).toBe('section_not_found');
   });
 
   it('rejects unknown fields with strict validation (zod)', async () => {
@@ -116,7 +116,7 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
     const payload = await response.json();
 
     expect(response.status).toBe(400);
-    expect(payload.error).toBe('validation_error');
+    expect(payload.errorCode).toBe('validation_error');
     expect(updateSection).not.toHaveBeenCalled();
   });
 
@@ -130,7 +130,7 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
     const payload = await response.json();
 
     expect(response.status).toBe(404);
-    expect(payload.error).toContain('not found');
+    expect(payload.errorCode).toBe('section_not_found');
   });
 
   it('refuses anonymous callers on DELETE (guardMutation deny)', async () => {
@@ -168,10 +168,16 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
 
     const route = await import('../route');
     const response = await route.GET(
-      new NextRequest('https://law.example.test/api/builder/site/section-library/sec-missing?locale=ko'),
+      new NextRequest('https://law.example.test/api/builder/site/section-library/sec-missing?locale=zh-hant'),
       { params: { sectionId: 'sec-missing' } },
     );
+    const payload = await response.json();
 
     expect(response.status).toBe(404);
+    expect(payload).toMatchObject({
+      ok: false,
+      error: '找不到已儲存區段。',
+      errorCode: 'section_not_found',
+    });
   });
 });

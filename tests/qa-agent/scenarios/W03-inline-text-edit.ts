@@ -12,7 +12,7 @@ export const W03_inlineTextEdit: CheckpointDefinition = {
 
     const canvas = canvasEditor(page);
     const textNode = canvas
-      .locator('[data-node-id*="title"]:visible, [data-node-id*="subtitle"]:visible, [data-node-id*="copy"]:visible')
+      .locator('[data-node-id="home-hero-title"]:visible, [data-node-id="home-hero-subtitle"]:visible, [data-node-id*="title"]:visible, [data-node-id*="subtitle"]:visible')
       .first();
     await expect(textNode).toBeVisible({ timeout: 10_000 });
     const originalText = (await textNode.textContent())?.trim() ?? '';

@@ -151,18 +151,18 @@ test.describe('M26 customer booking management links', () => {
       const rescheduleResponse = page.waitForResponse((response) =>
         response.url().includes('/api/booking/manage/') && response.request().method() === 'PATCH',
       );
-      await page.getByLabel('New start time').fill(toLocalInputValue(rescheduledStartAt));
-      await page.getByRole('button', { name: 'Save new time' }).click();
+      await page.getByLabel(/New start time|새 시작 시간/).fill(toLocalInputValue(rescheduledStartAt));
+      await page.getByRole('button', { name: /^Save new time$|^새 시간 저장$/ }).click();
       const reschedulePayload = (await (await rescheduleResponse).json()) as { booking: { startAt: string; staffId: string } };
       expect(reschedulePayload.booking.startAt).toBe(rescheduledStartAt);
       expect(reschedulePayload.booking.staffId).toBe(staffId);
-      await expect(page.getByText('Booking rescheduled.')).toBeVisible();
+      await expect(page.getByText(/Booking rescheduled\.|예약 시간이 변경되었습니다\./)).toBeVisible();
 
       const cancelResponse = page.waitForResponse((response) =>
         response.url().includes('/api/booking/manage/') && response.request().method() === 'PATCH',
       );
-      await page.getByLabel('Reason').fill('고객 링크 취소 검증');
-      await page.getByRole('button', { name: 'Cancel booking' }).click();
+      await page.getByLabel(/Reason|사유/).fill('고객 링크 취소 검증');
+      await page.getByRole('button', { name: /^Cancel booking$|^예약 취소$/ }).click();
       const cancelPayload = (await (await cancelResponse).json()) as { booking: { status: string; cancellationReason?: string } };
       expect(cancelPayload.booking.status).toBe('cancelled');
       expect(cancelPayload.booking.cancellationReason).toContain('고객 링크 취소');
@@ -283,17 +283,32 @@ test.describe('M26 customer booking management links', () => {
         failOnStatusCode: false,
       });
       expect(blockedResponse.status()).toBe(409);
-      const blockedJson = await blockedResponse.json() as { error?: string };
-      expect(blockedJson.error).toContain('Reschedule requires');
+      const blockedJson = await blockedResponse.json() as { error?: string; errorCode?: string; policy?: { rescheduleBlockedReason?: string } };
+      expect(blockedJson).toMatchObject({
+        error: '이 예약은 일정을 변경할 수 없습니다.',
+        errorCode: 'reschedule_unavailable',
+      });
+      expect(blockedJson.policy?.rescheduleBlockedReason).toBe('이 예약은 일정을 변경할 수 없습니다.');
 
+      // /api/booking/cancel now requires the signed manage token (ownership
+      // proof). With a valid token the request still reaches — and is blocked
+      // by — the cancellation policy guard.
       const directCancelResponse = await page.request.post('/api/booking/cancel', {
         headers,
-        data: { bookingId, reason: 'direct cancel policy guard check' },
+        data: { bookingId, token: manageToken, reason: 'direct cancel policy guard check' },
         failOnStatusCode: false,
       });
       expect(directCancelResponse.status()).toBe(409);
       const directCancelJson = await directCancelResponse.json() as { error?: string };
       expect(directCancelJson.error).toContain('Cancellation requires');
+
+      // Without the manage token the endpoint must reject (no anonymous cancel).
+      const unauthedCancelResponse = await page.request.post('/api/booking/cancel', {
+        headers,
+        data: { bookingId, reason: 'missing manage token' },
+        failOnStatusCode: false,
+      });
+      expect(unauthedCancelResponse.status()).toBe(401);
     } finally {
       if (bookingId) {
         await page.request.patch(`/api/builder/bookings/${bookingId}`, {

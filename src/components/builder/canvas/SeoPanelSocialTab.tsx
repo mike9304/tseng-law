@@ -1,16 +1,8 @@
 'use client';
 
-import {
-  fieldStyle,
-  helpTextStyle,
-  inputStyle,
-  labelStyle,
-  previewCardStyle,
-  sectionStyle,
-  sectionTitleStyle,
-  textareaStyle,
-  twoColumnStyle,
-} from './SeoPanel.styles';
+import type { Locale } from '@/lib/locales';
+import styles from './SeoPanelSocialTab.module.css';
+import { getSeoPanelSocialCopy } from './seo-panel-social-copy';
 
 type TwitterCard = 'summary' | 'summary_large_image';
 
@@ -24,6 +16,7 @@ export type SeoSocialTextField =
 
 interface SeoPanelSocialTabProps {
   active: boolean;
+  locale: Locale;
   ogTitle: string;
   ogImage: string;
   ogDescription: string;
@@ -40,6 +33,7 @@ interface SeoPanelSocialTabProps {
 
 export function SeoPanelSocialTab({
   active,
+  locale,
   ogTitle,
   ogImage,
   ogDescription,
@@ -53,108 +47,109 @@ export function SeoPanelSocialTab({
   onChangeTextField,
   onChangeTwitterCard,
 }: SeoPanelSocialTabProps) {
+  const copy = getSeoPanelSocialCopy(locale);
   return (
-    <section style={{ ...sectionStyle, display: active ? 'grid' : 'none' }}>
-      <h3 style={sectionTitleStyle}>소셜 공유 설정</h3>
-      <div style={twoColumnStyle}>
-        <div style={fieldStyle}>
-          <label style={labelStyle} htmlFor="builder-seo-og-title">OG title</label>
+    <section className={styles.section} data-active={active ? 'true' : 'false'}>
+      <h3 className={styles.sectionTitle}>{copy.title}</h3>
+      <div className={styles.twoColumn}>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="builder-seo-og-title">{copy.ogTitle}</label>
           <input
             id="builder-seo-og-title"
             type="text"
             value={ogTitle}
-            placeholder="비우면 SEO title 사용"
-            style={inputStyle}
+            placeholder={copy.useSeoTitle}
+            className={styles.input}
             onChange={(event) => onChangeTextField('ogTitle', event.target.value)}
           />
         </div>
-        <div style={fieldStyle}>
-          <label style={labelStyle} htmlFor="builder-seo-og-image">OG image URL</label>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="builder-seo-og-image">{copy.ogImage}</label>
           <input
             id="builder-seo-og-image"
             type="url"
             value={ogImage}
-            placeholder="https://example.com/og-image.png"
-            style={inputStyle}
+            placeholder={copy.ogImagePlaceholder}
+            className={styles.input}
             onChange={(event) => onChangeTextField('ogImage', event.target.value)}
           />
         </div>
       </div>
-      <div style={fieldStyle}>
-        <label style={labelStyle} htmlFor="builder-seo-og-description">OG description</label>
+      <div className={styles.field}>
+        <label className={styles.label} htmlFor="builder-seo-og-description">{copy.ogDescription}</label>
         <textarea
           id="builder-seo-og-description"
           value={ogDescription}
-          placeholder="비우면 meta description 사용"
-          style={textareaStyle}
+          placeholder={copy.useMetaDescription}
+          className={`${styles.input} ${styles.textarea}`}
           onChange={(event) => onChangeTextField('ogDescription', event.target.value)}
         />
       </div>
 
-      <div style={twoColumnStyle}>
-        <div style={fieldStyle}>
-          <label style={labelStyle} htmlFor="builder-seo-twitter-card">Twitter card</label>
+      <div className={styles.twoColumn}>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="builder-seo-twitter-card">{copy.twitterCard}</label>
           <select
             id="builder-seo-twitter-card"
             value={twitterCard}
-            style={inputStyle}
+            className={styles.input}
             onChange={(event) => onChangeTwitterCard(event.target.value as TwitterCard)}
           >
             <option value="summary_large_image">summary_large_image</option>
             <option value="summary">summary</option>
           </select>
         </div>
-        <div style={fieldStyle}>
-          <label style={labelStyle} htmlFor="builder-seo-twitter-image">Twitter image URL</label>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="builder-seo-twitter-image">{copy.twitterImage}</label>
           <input
             id="builder-seo-twitter-image"
             type="url"
             value={twitterImage}
-            placeholder="비우면 OG image 사용"
-            style={inputStyle}
+            placeholder={copy.useOgImage}
+            className={styles.input}
             onChange={(event) => onChangeTextField('twitterImage', event.target.value)}
           />
         </div>
       </div>
-      <div style={twoColumnStyle}>
-        <div style={fieldStyle}>
-          <label style={labelStyle} htmlFor="builder-seo-twitter-title">Twitter title</label>
+      <div className={styles.twoColumn}>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="builder-seo-twitter-title">{copy.twitterTitle}</label>
           <input
             id="builder-seo-twitter-title"
             type="text"
             value={twitterTitle}
-            placeholder="비우면 OG/SEO title 사용"
-            style={inputStyle}
+            placeholder={copy.useOgSeoTitle}
+            className={styles.input}
             onChange={(event) => onChangeTextField('twitterTitle', event.target.value)}
           />
         </div>
-        <div style={fieldStyle}>
-          <label style={labelStyle} htmlFor="builder-seo-twitter-description">Twitter description</label>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="builder-seo-twitter-description">{copy.twitterDescription}</label>
           <input
             id="builder-seo-twitter-description"
             type="text"
             value={twitterDescription}
-            placeholder="비우면 OG/meta description 사용"
-            style={inputStyle}
+            placeholder={copy.useOgMetaDescription}
+            className={styles.input}
             onChange={(event) => onChangeTextField('twitterDescription', event.target.value)}
           />
         </div>
       </div>
 
-      <h4 style={{ ...sectionTitleStyle, fontSize: '0.78rem' }}>OG image preview</h4>
-      <div style={previewCardStyle}>
-        <div style={{ display: 'grid', gridTemplateColumns: '160px minmax(0, 1fr)', gap: 12, alignItems: 'center' }}>
-          <div style={{ height: 84, borderRadius: 8, background: '#e2e8f0', overflow: 'hidden', display: 'grid', placeItems: 'center', color: '#64748b', fontSize: '0.75rem', fontWeight: 800 }}>
+      <h4 className={styles.previewHeading}>{copy.preview}</h4>
+      <div className={styles.previewCard}>
+        <div className={styles.socialPreviewGrid}>
+          <div className={styles.socialImageFrame}>
             {socialImage ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={socialImage} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={socialImage} alt="" className={styles.socialImage} />
             ) : (
-              'No image'
+              copy.noImage
             )}
           </div>
-          <div style={{ minWidth: 0 }}>
-            <div style={{ fontWeight: 800, color: '#0f172a', fontSize: '0.88rem' }}>{socialTitle}</div>
-            <div style={{ ...helpTextStyle, marginTop: 5 }}>{socialDescription}</div>
+          <div className={styles.socialPreviewCopy}>
+            <div className={styles.socialPreviewTitle}>{socialTitle}</div>
+            <div className={styles.helpText}>{socialDescription}</div>
           </div>
         </div>
       </div>

@@ -9,9 +9,11 @@ import {
   type ReactNode,
 } from 'react';
 import {
-  getThemeBindingBadgeStyle,
   type ThemeBindingTone,
 } from '@/lib/builder/site/theme-bindings';
+import ThemeBindingBadge from '@/components/builder/editor/ThemeBindingBadge';
+import { currentBuilderLocale } from './canvasNodeUtils';
+import { getInspectorControlsCopy } from './inspector-controls-copy';
 import styles from './SandboxPage.module.css';
 
 export type InspectorMixed = boolean;
@@ -28,16 +30,18 @@ interface BaseControlProps {
   hasOverride?: boolean;
 }
 
-export function MixedValueIndicator({ label = 'Mixed' }: { label?: string }) {
+export function MixedValueIndicator({ label }: { label?: string }) {
+  const locale = currentBuilderLocale();
+  const copy = getInspectorControlsCopy(locale as Parameters<typeof getInspectorControlsCopy>[0]);
   return (
     <span
       role="status"
-      aria-label="Mixed values"
-      title="Multiple selected values differ. Entering a new value applies it to all selected elements."
+      aria-label={copy.mixedValuesLabel}
+      title={copy.mixedValuesTitle}
       className={styles.mixedValueBadge}
     >
       <span aria-hidden>--</span>
-      {label}
+      {label ?? copy.mixed}
     </span>
   );
 }
@@ -65,6 +69,8 @@ export function LabeledRow({
   title,
   helper,
 }: LabeledRowProps) {
+  const locale = currentBuilderLocale();
+  const copy = getInspectorControlsCopy(locale as Parameters<typeof getInspectorControlsCopy>[0]);
   return (
     <div
       id={id}
@@ -76,35 +82,27 @@ export function LabeledRow({
         <span title={title ?? label}>{label}</span>
         {hint ? <small>{hint}</small> : null}
         {binding?.tone ? (
-          <button
-            type="button"
-            onClick={binding.onToggleLink}
+          <ThemeBindingBadge
+            border="none"
             disabled={!binding.onToggleLink}
-            title={
-              binding.token
-                ? `Bound to ${binding.token}${binding.onToggleLink ? '. Click to change.' : ''}`
-                : 'Theme binding'
-            }
-            style={{
-              ...getThemeBindingBadgeStyle(binding.tone),
-              border: 'none',
-              cursor: binding.onToggleLink ? 'pointer' : 'default',
+            showDot
+            onClick={binding.onToggleLink}
+            indicator={{
+              label: binding.tone === 'linked' ? copy.linked : binding.tone === 'detached' ? copy.detached : copy.custom,
+              tone: binding.tone,
+              title: binding.token
+                ? copy.boundTo(binding.token, Boolean(binding.onToggleLink))
+                : copy.themeBinding,
             }}
-          >
-            <span
-              aria-hidden
-              style={{
-                width: 6,
-                height: 6,
-                borderRadius: 999,
-                background: 'currentColor',
-                marginRight: 4,
-              }}
-            />
-            {binding.tone === 'linked' ? 'Linked' : binding.tone === 'detached' ? 'Detached' : 'Custom'}
-          </button>
+          />
         ) : null}
-        {hasOverride ? <span className="insp-row-override-dot" aria-hidden title="Viewport override" /> : null}
+        {hasOverride ? (
+          <span
+            className="insp-row-override-dot"
+            aria-hidden
+            title={copy.viewportOverrideTitle}
+          />
+        ) : null}
       </div>
       <div className="insp-row-control">{children}</div>
       {helper ? <div className="insp-row-helper">{helper}</div> : null}
@@ -125,9 +123,11 @@ export interface NumberStepperProps extends BaseControlProps {
 }
 
 export const NumberStepper = forwardRef<HTMLInputElement, NumberStepperProps>(function NumberStepper(
-  { value, onChange, min, max, step = 1, suffix, width = 96, fineStep, mixed, disabled, ariaLabel },
+  { value, onChange, min, max, step = 1, suffix, width, fineStep, mixed, disabled, ariaLabel },
   ref,
 ) {
+  const locale = currentBuilderLocale();
+  const copy = getInspectorControlsCopy(locale as Parameters<typeof getInspectorControlsCopy>[0]);
   const [draft, setDraft] = useState(value === null ? '' : String(value));
 
   useEffect(() => {
@@ -179,7 +179,7 @@ export const NumberStepper = forwardRef<HTMLInputElement, NumberStepperProps>(fu
 
   return (
     <div className="insp-number-stepper" style={{ width }}>
-      <button type="button" aria-label="Decrease" disabled={disabled} onClick={() => stepBy(-1)}>
+      <button type="button" aria-label={copy.decrease} disabled={disabled} onClick={() => stepBy(-1)}>
         -
       </button>
       <input
@@ -194,7 +194,7 @@ export const NumberStepper = forwardRef<HTMLInputElement, NumberStepperProps>(fu
         onKeyDown={handleKeyDown}
       />
       {suffix ? <span>{suffix}</span> : null}
-      <button type="button" aria-label="Increase" disabled={disabled} onClick={() => stepBy(1)}>
+      <button type="button" aria-label={copy.increase} disabled={disabled} onClick={() => stepBy(1)}>
         +
       </button>
     </div>
@@ -270,6 +270,8 @@ export function SwatchRow({
   ariaLabel,
   size = 24,
 }: SwatchRowProps) {
+  const locale = currentBuilderLocale();
+  const copy = getInspectorControlsCopy(locale as Parameters<typeof getInspectorControlsCopy>[0]);
   if (mixed) return <MixedValueIndicator />;
   const tone: ThemeBindingTone = linkedToken ? 'linked' : detached ? 'detached' : 'custom';
 
@@ -279,19 +281,20 @@ export function SwatchRow({
       className="insp-swatch-row"
       onClick={onClick}
       disabled={disabled}
-      aria-label={ariaLabel ?? 'Open color picker'}
-      title={linkedToken ? `Bound to ${linkedToken}` : detached ? 'Detached color' : 'Custom color'}
+      aria-label={ariaLabel ?? copy.colorPicker}
+      title={linkedToken ? copy.boundTo(linkedToken, false) : detached ? copy.detachedColor : copy.customColor}
     >
       <span className="insp-swatch" style={{ width: size, height: size }}>
         <span style={{ background: cssValue ?? 'transparent' }} />
       </span>
-      <span style={getThemeBindingBadgeStyle(tone)}>
-        <span
-          aria-hidden
-          style={{ width: 6, height: 6, borderRadius: 999, background: 'currentColor', marginRight: 4 }}
-        />
-        {tone === 'linked' ? 'Linked' : tone === 'detached' ? 'Detached' : 'Custom'}
-      </span>
+      <ThemeBindingBadge
+        showDot
+        indicator={{
+          label: tone === 'linked' ? copy.linked : tone === 'detached' ? copy.detached : copy.custom,
+          tone,
+          title: linkedToken ? copy.boundTo(linkedToken, false) : detached ? copy.detachedColor : copy.customColor,
+        }}
+      />
     </button>
   );
 }
@@ -318,13 +321,15 @@ export function SliderRow({
   ariaLabel,
 }: SliderRowProps) {
   if (mixed) return <MixedValueIndicator />;
+  const locale = currentBuilderLocale();
+  const copy = getInspectorControlsCopy(locale as Parameters<typeof getInspectorControlsCopy>[0]);
   const resolved = value ?? min;
 
   return (
     <div className="insp-slider-row">
       <input
         type="range"
-        aria-label={ariaLabel ?? 'Adjust value'}
+        aria-label={ariaLabel ?? copy.adjustValue}
         disabled={disabled}
         min={min}
         max={max}
@@ -348,6 +353,8 @@ export interface ToggleRowProps extends BaseControlProps {
 
 export function ToggleRow({ checked, onChange, mixed, disabled, ariaLabel }: ToggleRowProps) {
   if (mixed) return <MixedValueIndicator />;
+  const locale = currentBuilderLocale();
+  const copy = getInspectorControlsCopy(locale as Parameters<typeof getInspectorControlsCopy>[0]);
 
   return (
     <button
@@ -355,8 +362,8 @@ export function ToggleRow({ checked, onChange, mixed, disabled, ariaLabel }: Tog
       className="insp-toggle-row"
       role="switch"
       aria-checked={checked}
-      aria-label={ariaLabel ?? (checked ? 'Disable setting' : 'Enable setting')}
-      title={ariaLabel ?? (checked ? 'Disable setting' : 'Enable setting')}
+      aria-label={ariaLabel ?? (checked ? copy.disableSetting : copy.enableSetting)}
+      title={ariaLabel ?? (checked ? copy.disableSetting : copy.enableSetting)}
       disabled={disabled}
       data-checked={checked ? 'true' : undefined}
       onClick={() => onChange(!checked)}
@@ -383,6 +390,9 @@ export function AdvancedDisclosure({
 }: AdvancedDisclosureProps) {
   const [internalOpen, setInternalOpen] = useState(defaultOpen);
   const isOpen = open ?? internalOpen;
+  const locale = currentBuilderLocale();
+  const copy = getInspectorControlsCopy(locale as Parameters<typeof getInspectorControlsCopy>[0]);
+  const resolvedLabel = label === 'Advanced' ? copy.advanced : label;
 
   return (
     <div className="insp-advanced-disclosure">
@@ -396,7 +406,7 @@ export function AdvancedDisclosure({
         }}
       >
         <span aria-hidden data-open={isOpen ? 'true' : undefined}>▶</span>
-        {label}
+        {resolvedLabel}
       </button>
       <div hidden={!isOpen}>{children}</div>
     </div>
@@ -429,6 +439,8 @@ export function InspectorSection({
   defaultOpen?: boolean;
 }) {
   const [open, setOpen] = useState(defaultOpen);
+  const locale = currentBuilderLocale();
+  const copy = getInspectorControlsCopy(locale as Parameters<typeof getInspectorControlsCopy>[0]);
 
   return (
     <section className={styles.panelSection}>
@@ -441,7 +453,7 @@ export function InspectorSection({
           aria-expanded={open}
           onClick={() => setOpen((current) => !current)}
         >
-          {open ? 'Hide' : 'Show'}
+          {open ? copy.hide : copy.show}
         </button>
       </header>
       {open ? children : null}
@@ -450,5 +462,7 @@ export function InspectorSection({
 }
 
 export function MixedValueBadge({ label = 'Mixed' }: { label?: string }) {
-  return <MixedValueIndicator label={label} />;
+  const locale = currentBuilderLocale();
+  const copy = getInspectorControlsCopy(locale as Parameters<typeof getInspectorControlsCopy>[0]);
+  return <MixedValueIndicator label={label === 'Mixed' ? copy.mixed : label} />;
 }

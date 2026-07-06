@@ -7,6 +7,7 @@ import {
   authorizeBuilderAppScope,
   BuilderAppScopeError,
 } from '@/lib/builder/apps/scopes';
+import { getBuilderAppsApiErrorPayload, type BuilderAppsApiErrorCode } from '@/lib/builder/apps/apps-api-copy';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -33,12 +34,18 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     });
   } catch (error) {
     if (error instanceof BuilderAppScopeError) {
+      const errorCode = error.code === 'app_scope_unknown'
+        ? 'app_scope_check_failed'
+        : error.code as BuilderAppsApiErrorCode;
       return NextResponse.json(
-        { ok: false, error: error.code, message: error.message },
+        { ok: false, ...getBuilderAppsApiErrorPayload(locale, errorCode) },
         { status: error.code === 'app_not_found' || error.code === 'app_not_installed' ? 404 : 403 },
       );
     }
     console.error('[builder-app-cms-collections] failed', error);
-    return NextResponse.json({ ok: false, error: 'app_scope_check_failed' }, { status: 500 });
+    return NextResponse.json(
+      { ok: false, ...getBuilderAppsApiErrorPayload(locale, 'app_scope_check_failed') },
+      { status: 500 },
+    );
   }
 }

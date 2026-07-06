@@ -8,12 +8,12 @@ export const dynamic = 'force-dynamic';
 
 const builderDashboardSeoCopy: Record<Locale, { title: string; description: string }> = {
   ko: {
-    title: 'Builder Workspace',
-    description: '호정 builder workspace dashboard입니다.',
+    title: '빌더 작업 공간',
+    description: '호정 빌더 작업 공간 대시보드입니다.',
   },
   'zh-hant': {
-    title: 'Builder Workspace',
-    description: '昊鼎 builder workspace dashboard。',
+    title: '建構器工作區',
+    description: '昊鼎建構器工作區儀表板。',
   },
   en: {
     title: 'Builder Workspace',

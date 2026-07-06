@@ -5,6 +5,7 @@ import type { BuilderEventCalendarCanvasNode } from '@/lib/builder/canvas/types'
 import type { BuilderEvent, CalendarMonth } from '@/lib/builder/events/events-shared';
 import { groupEventsByMonth } from '@/lib/builder/events/events-shared';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { getEventWidgetsCopy } from '../event-widgets-copy';
 import styles from './EventCalendar.module.css';
 
 interface EventCalendarElementProps {
@@ -12,49 +13,6 @@ interface EventCalendarElementProps {
   mode?: 'edit' | 'preview' | 'published';
   locale?: Locale;
 }
-
-const MOCK_EVENTS: BuilderEvent[] = [
-  {
-    eventId: 'evt-calendar-1',
-    slug: 'visa-workshop',
-    title: '비자 실무 워크샵',
-    description: '취업허가와 거류증 실무를 다룹니다.',
-    date: '2026-06-12',
-    time: '15:00',
-    location: '타이베이 오피스',
-    capacity: 25,
-    registeredCount: 9,
-    category: 'workshop',
-    locale: 'ko',
-    status: 'published',
-    rsvpEnabled: true,
-    ticketType: 'free',
-    ticketPriceTwd: 0,
-    ticketCurrency: 'TWD',
-    createdAt: '2026-05-20T00:00:00.000Z',
-    updatedAt: '2026-05-20T00:00:00.000Z',
-  },
-  {
-    eventId: 'evt-calendar-2',
-    slug: 'contract-webinar',
-    title: '계약 리스크 웨비나',
-    description: '국제계약 주요 조항을 검토합니다.',
-    date: '2026-07-03',
-    time: '11:00',
-    location: 'Online',
-    capacity: 80,
-    registeredCount: 20,
-    category: 'webinar',
-    locale: 'ko',
-    status: 'published',
-    rsvpEnabled: true,
-    ticketType: 'paid',
-    ticketPriceTwd: 500,
-    ticketCurrency: 'TWD',
-    createdAt: '2026-05-20T00:00:00.000Z',
-    updatedAt: '2026-05-20T00:00:00.000Z',
-  },
-];
 
 function monthLabel(yearMonth: string): string {
   const [year, month] = yearMonth.split('-');
@@ -65,6 +23,7 @@ export default function EventCalendarElement({ node, mode = 'edit', locale }: Ev
   const c = node.content;
   const isBuilder = mode !== 'published';
   const effectiveLocale = normalizeLocale(locale || 'ko');
+  const copy = getEventWidgetsCopy(effectiveLocale);
   const [events, setEvents] = useState<BuilderEvent[] | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -98,16 +57,16 @@ export default function EventCalendarElement({ node, mode = 'edit', locale }: Ev
   }, [c.category, c.showPast, effectiveLocale, isBuilder]);
 
   const months = useMemo<CalendarMonth[]>(() => {
-    const source = events ?? (isBuilder ? MOCK_EVENTS : []);
+    const source = events ?? (isBuilder ? copy.mockEvents.calendar : []);
     return groupEventsByMonth(source).slice(0, c.months);
-  }, [c.months, events, isBuilder]);
+  }, [c.months, copy.mockEvents.calendar, events, isBuilder]);
 
   if (!isBuilder && loading) {
-    return <div className={styles.state} data-builder-event-calendar="true" role="status">Loading calendar...</div>;
+    return <div className={styles.state} data-builder-event-calendar="true" role="status">{copy.loadingCalendar}</div>;
   }
 
   if (months.length === 0) {
-    return <div className={styles.state} data-builder-event-calendar="true">표시할 이벤트가 없습니다.</div>;
+    return <div className={styles.state} data-builder-event-calendar="true">{copy.empty}</div>;
   }
 
   return (
@@ -121,10 +80,10 @@ export default function EventCalendarElement({ node, mode = 'edit', locale }: Ev
               const remaining = Math.max(0, event.capacity - event.registeredCount);
               return (
                 <a key={event.eventId} className={styles.event} href={href} data-builder-event-calendar-item={event.eventId}>
-                  <time>{event.date.slice(8, 10)}일 {event.time}</time>
+                  <time>{copy.calendarTime(event.date.slice(8, 10), event.time)}</time>
                   <strong>{event.title}</strong>
                   <span>{event.location}</span>
-                  {c.showCapacity ? <small>{remaining} / {event.capacity} seats</small> : null}
+                  {c.showCapacity ? <small>{copy.seats(remaining, event.capacity)}</small> : null}
                 </a>
               );
             })}

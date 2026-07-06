@@ -15,16 +15,32 @@ import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
+const dynamicTemplateCopy: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '빌더 동적 템플릿 세부 정보',
+    description: '호정 빌더 안의 동적 템플릿 편집기 v0입니다.',
+  },
+  'zh-hant': {
+    title: '建構器動態範本詳細資料',
+    description: '昊鼎建構器中的動態範本編輯器 v0。',
+  },
+  en: {
+    title: 'Builder Dynamic Template Detail',
+    description: 'Dynamic template editor v0 inside the Hojeong builder.',
+  },
+};
+
 export function generateMetadata({
   params,
 }: {
   params: { locale: Locale; templateId: string };
 }): Metadata {
   const locale = normalizeLocale(params.locale);
+  const copy = dynamicTemplateCopy[locale];
   return buildSeoMetadata({
     locale,
-    title: 'Builder Dynamic Template Detail',
-    description: 'Dynamic template editor v0 inside the Hojeong builder.',
+    title: copy.title,
+    description: copy.description,
     path: `/builder/dynamic-templates/${params.templateId}`,
     noindex: true,
   });

@@ -4,6 +4,12 @@ import {
   getRecipientByToken,
   saveRecipient,
 } from '@/lib/builder/marketing/campaign-storage';
+import { dispatchMarketingAnalyticsEvent } from '@/lib/builder/marketing/analytics-integrations';
+import {
+  getPublicMarketingApiErrorPayload,
+  type PublicMarketingApiErrorCode,
+} from '@/lib/builder/marketing/marketing-api-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -32,23 +38,43 @@ function clientIp(request: NextRequest): string {
   );
 }
 
+function errorResponse(
+  locale: Locale,
+  errorCode: PublicMarketingApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getPublicMarketingApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
 export async function GET(request: NextRequest) {
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const rate = await checkRateLimit(`marketing-track:${clientIp(request)}`, 60, 60_000);
   if (!rate.allowed) {
-    return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+    return errorResponse(locale, 'too_many_requests', 429);
   }
   const token = request.nextUrl.searchParams.get('token') ?? '';
   const target = request.nextUrl.searchParams.get('u') ?? '';
   if (!target || !isSafeRedirect(target)) {
-    return NextResponse.json({ error: 'Invalid redirect' }, { status: 400 });
+    return errorResponse(locale, 'invalid_redirect', 400);
   }
   if (token) {
     const recipient = await getRecipientByToken(token);
-    if (recipient) {
-      await saveRecipient({
+    if (recipient && !recipient.clickedAt) {
+      const clickedAt = new Date().toISOString();
+      const nextRecipient = {
         ...recipient,
-        clickedAt: recipient.clickedAt ?? new Date().toISOString(),
-        status: recipient.clickedAt ? recipient.status : 'clicked',
+        clickedAt,
+        status: 'clicked' as const,
+      };
+      await saveRecipient(nextRecipient);
+      await dispatchMarketingAnalyticsEvent({
+        kind: 'campaign-clicked',
+        occurredAt: clickedAt,
+        recipient: nextRecipient,
+        payload: { targetUrl: target },
       });
     }
   }

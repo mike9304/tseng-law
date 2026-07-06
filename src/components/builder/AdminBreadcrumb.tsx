@@ -13,57 +13,15 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-const SEGMENT_LABEL: Record<string, string> = {
-  'admin-builder': '빌더',
-  cms: 'CMS',
-  collections: 'Collections',
-  records: 'Records',
-  apps: 'Apps',
-  commerce: 'Commerce',
-  bookings: 'Bookings',
-  crm: 'CRM',
-  translations: 'Translations',
-  workspace: 'Workspace',
-  ops: 'Ops',
-  '_dev': 'Dev',
-  '%5Fdev': 'Dev',
-  functions: 'Functions',
-  logs: 'Logs',
-  sdk: 'SDK',
-  secrets: 'Secrets',
-  webhooks: 'Webhooks',
-  members: 'Members',
-  domains: 'Domains',
-  backups: 'Backups',
-  migrations: 'Migrations',
-  marketing: 'Marketing',
-  forms: 'Forms',
-  'forms-flow': 'Forms · Flow',
-  events: 'Events',
-  faq: 'FAQ',
-  portfolio: 'Portfolio',
-  columns: 'Columns',
-  search: 'Search',
-  seo: 'SEO',
-  errors: 'Errors',
-  experiments: 'Experiments',
-  inbox: 'Inbox',
-  sandbox: 'Sandbox',
-  lightboxes: 'Lightboxes',
-  footer: 'Footer',
-  header: 'Header',
-  'ai-generator': 'AI Generator',
-  'custom-code': 'Custom Code',
-};
+import { getAdminBreadcrumbLabel } from '@/lib/builder/admin-nav/nav-copy';
 
 interface Crumb {
   label: string;
   href: string | null;
 }
 
-function labelFor(segment: string): string {
-  return SEGMENT_LABEL[segment] ?? decodeURIComponent(segment);
+function labelFor(locale: string, segment: string): string {
+  return getAdminBreadcrumbLabel(locale, segment);
 }
 
 export function buildAdminBreadcrumb(pathname: string): Crumb[] {
@@ -79,7 +37,7 @@ export function buildAdminBreadcrumb(pathname: string): Crumb[] {
     const segment = rest[i];
     acc += `/${segment}`;
     const isLast = i === rest.length - 1;
-    crumbs.push({ label: labelFor(segment), href: isLast ? null : acc });
+    crumbs.push({ label: labelFor(locale, segment), href: isLast ? null : acc });
   }
   return crumbs;
 }

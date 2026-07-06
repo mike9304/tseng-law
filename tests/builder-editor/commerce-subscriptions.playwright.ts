@@ -23,23 +23,23 @@ test('subscriptions: POST plan, POST subscription, PATCH transition', async ({ p
     headers: { 'Content-Type': 'application/json', ...mutationHeaders(token) },
   });
   expect(planRes.status()).toBe(201);
-  const planBody = (await planRes.json()) as { ok: boolean; plan: { id: string } };
-  expect(planBody.plan.id.startsWith('plan_')).toBe(true);
+  const planBody = (await planRes.json()) as { ok: boolean; plan: { planId: string } };
+  expect(planBody.plan.planId.startsWith('plan_')).toBe(true);
 
   const subRes = await page.request.post('/api/builder/commerce/subscriptions', {
     data: {
       kind: 'subscription',
-      planId: planBody.plan.id,
+      planId: planBody.plan.planId,
       customer: { email: `pw-${token}@example.com`, name: 'PW User' },
     },
     headers: { 'Content-Type': 'application/json', ...mutationHeaders(token) },
   });
   expect(subRes.status()).toBe(201);
-  const subBody = (await subRes.json()) as { ok: boolean; subscription: { id: string; status: string } };
-  expect(subBody.subscription.id.startsWith('sub_')).toBe(true);
+  const subBody = (await subRes.json()) as { ok: boolean; subscription: { subscriptionId: string; status: string } };
+  expect(subBody.subscription.subscriptionId.startsWith('sub_')).toBe(true);
 
   const transitionRes = await page.request.patch(
-    `/api/builder/commerce/subscriptions/${encodeURIComponent(subBody.subscription.id)}`,
+    `/api/builder/commerce/subscriptions/${encodeURIComponent(subBody.subscription.subscriptionId)}`,
     {
       data: { kind: 'subscription', transition: 'cancel', note: 'pw cleanup' },
       headers: { 'Content-Type': 'application/json', ...mutationHeaders(token) },

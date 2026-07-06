@@ -18,13 +18,13 @@ const copy: Record<Locale, { title: string; description: string; eyebrow: string
   ko: {
     title: '이벤트',
     description: '대만 법률 세미나, 웨비나, 상담회 일정을 확인하고 신청하세요.',
-    eyebrow: 'Events',
+    eyebrow: '이벤트',
     empty: '현재 공개된 이벤트가 없습니다.',
   },
   'zh-hant': {
     title: '活動',
     description: '查看台灣法律研討會、線上講座與諮詢活動。',
-    eyebrow: 'Events',
+    eyebrow: '活動',
     empty: '目前沒有公開活動。',
   },
   en: {

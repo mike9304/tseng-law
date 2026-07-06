@@ -1,0 +1,113 @@
+import type { Locale } from '@/lib/locales';
+import type { BookingCancellationPolicy } from '@/lib/builder/bookings/types';
+import { bookingServicesAdminCopyEn } from './BookingServicesAdmin.copy.en';
+import { bookingServicesAdminCopyKo } from './BookingServicesAdmin.copy.ko';
+import { bookingServicesAdminCopyZh } from './BookingServicesAdmin.copy.zh';
+
+export type BookingServicesAdminCopy = {
+  readonly toolbar: (count: number) => string;
+  readonly newService: string;
+  readonly serviceNotes: string;
+  readonly cardLabel: string;
+  readonly minLabel: string;
+  readonly activeLabel: string;
+  readonly inactiveLabel: string;
+  readonly seatsLabel: string;
+  readonly reminderLabel: string;
+  readonly everyLabel: string;
+  readonly staffLabel: string;
+  readonly resourcesLabel: string;
+  readonly imageFallback: string;
+  readonly editServiceTitle: string;
+  readonly newServiceTitle: string;
+  readonly saveService: string;
+  readonly saving: string;
+  readonly cancel: string;
+  readonly paidBooking: (currency: string, amount: number) => string;
+  readonly freeBooking: string;
+  readonly deposit: (currency: string, amount: number) => string;
+  readonly collectPaymentLater: string;
+  readonly staffPriceOverrideSummary: (staffName: string, currency: string, amount: number) => string;
+  readonly staffPriceOverrides: string;
+  readonly staffPriceOverrideHint: string;
+  readonly resourcePriceOverrides: string;
+  readonly resourcePriceOverrideHint: string;
+  readonly resourcePriceOverrideSummary: (resourceName: string, currency: string, amount: number) => string;
+  readonly discountCodes: string;
+  readonly discountCodesHint: string;
+  readonly discountCode: string;
+  readonly discountType: string;
+  readonly discountValue: string;
+  readonly discountLocale: string;
+  readonly discountAllLocales: string;
+  readonly discountActive: string;
+  readonly discountPercent: string;
+  readonly discountFixed: string;
+  readonly addDiscountCode: string;
+  readonly removeDiscountCode: string;
+  readonly discountCodeSummary: (code: string, type: 'percent' | 'fixed', value: number) => string;
+  readonly anyActiveStaff: string;
+  readonly noSharedResources: string;
+  readonly active: string;
+  readonly inactive: string;
+  readonly edit: string;
+  readonly deactivate: string;
+  readonly editService: string;
+  readonly close: string;
+  readonly nameKo: string;
+  readonly nameEn: string;
+  readonly nameZh: string;
+  readonly durationMinutes: string;
+  readonly priceTwd: string;
+  readonly paymentMode: string;
+  readonly paymentAmount: string;
+  readonly depositDueNow: string;
+  readonly paymentCurrency: string;
+  readonly meetingMode: string;
+  readonly cancellationPolicy: string;
+  readonly noPolicy: string;
+  readonly category: string;
+  readonly bufferBefore: string;
+  readonly bufferAfter: string;
+  readonly capacity: string;
+  readonly bookingInterval: string;
+  readonly reminderSchedule: string;
+  readonly reminderHint: string;
+  readonly hoursBefore24: string;
+  readonly hoursBefore1: string;
+  readonly imageUrl: string;
+  readonly descriptionKo: string;
+  readonly descriptionEn: string;
+  readonly descriptionZh: string;
+  readonly staff: string;
+  readonly requiredResources: string;
+  readonly inactiveResources: (names: string[]) => string;
+  readonly resourceHint: string;
+  readonly inactiveResourcesList: (names: string[]) => string;
+  readonly reminderSummary: (hours: Array<1 | 24>) => string;
+  readonly policySummary: (id: string, name?: string) => string;
+  readonly policyLabel: (policy: BookingCancellationPolicy) => string;
+  readonly inactiveResourceWarning: (names: string[]) => string;
+  readonly resourceActive: string;
+  readonly resourceInactive: string;
+  readonly freeOption: string;
+  readonly paidOption: string;
+  readonly inPerson: string;
+  readonly zoom: string;
+  readonly phone: string;
+  readonly hybrid: string;
+  readonly paginationPage: (page: number, total: number, items: number) => string;
+  readonly paginationPageSize: string;
+  readonly paginationPrev: string;
+  readonly paginationNext: string;
+};
+
+const copyByLocale: Record<Locale, BookingServicesAdminCopy> = {
+  ko: bookingServicesAdminCopyKo,
+  'zh-hant': bookingServicesAdminCopyZh,
+  en: bookingServicesAdminCopyEn,
+};
+
+export function getBookingServicesAdminCopy(locale: Locale): BookingServicesAdminCopy {
+  return copyByLocale[locale];
+}

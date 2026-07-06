@@ -3,14 +3,47 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
   applyTranslationToLocaleDraft,
+  applyImageOverridesToLocaleDraft,
   setPageLocaleSeoOverride,
   type NodeUpdates,
   type PerLocaleSeoOverride,
 } from '@/lib/builder/translations/edit-store';
+import {
+  getBuilderTranslationsApiErrorPayload,
+  type BuilderTranslationsApiErrorCode,
+} from '@/lib/builder/translations/translations-api-copy';
 import { DEFAULT_TRANSLATION_SOURCE_LOCALE } from '@/lib/builder/translations/sync';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+interface TranslationEditRequestBody {
+  locale?: unknown;
+  sourceLocale?: unknown;
+  targetLocale?: unknown;
+  pageId?: unknown;
+  siteId?: unknown;
+  nodeUpdates?: unknown;
+  seoOverride?: unknown;
+  imageOverrides?: unknown;
+}
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderTranslationsApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderTranslationsApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
+function resolveRequestLocale(body: TranslationEditRequestBody | null): Locale {
+  if (typeof body?.locale === 'string') return normalizeLocale(body.locale) as Locale;
+  if (typeof body?.sourceLocale === 'string') return normalizeLocale(body.sourceLocale) as Locale;
+  return DEFAULT_TRANSLATION_SOURCE_LOCALE;
+}
 
 function parseNodeUpdates(raw: unknown): NodeUpdates {
   if (!raw || typeof raw !== 'object') return {};
@@ -37,6 +70,20 @@ function parseSeoOverride(raw: unknown): PerLocaleSeoOverride | null {
   return Object.keys(out).length > 0 ? out : null;
 }
 
+function parseImageOverrides(raw: unknown): Record<string, { src?: string; alt?: string }> {
+  if (!raw || typeof raw !== 'object') return {};
+  const out: Record<string, { src?: string; alt?: string }> = {};
+  for (const [nodeId, value] of Object.entries(raw as Record<string, unknown>)) {
+    if (!value || typeof value !== 'object') continue;
+    const candidate = value as { src?: unknown; alt?: unknown };
+    const next: { src?: string; alt?: string } = {};
+    if (typeof candidate.src === 'string') next.src = candidate.src;
+    if (typeof candidate.alt === 'string') next.alt = candidate.alt;
+    if (Object.keys(next).length > 0) out[nodeId] = next;
+  }
+  return out;
+}
+
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, {
     bucket: 'mutation',
@@ -44,88 +91,89 @@ export async function POST(request: NextRequest) {
   });
   if (auth instanceof NextResponse) return auth;
 
-  let body: {
-    sourceLocale?: string;
-    targetLocale?: string;
-    pageId?: string;
-    siteId?: string;
-    nodeUpdates?: unknown;
-    seoOverride?: unknown;
-  };
+  let body: TranslationEditRequestBody | null = null;
   try {
-    body = (await request.json()) as typeof body;
+    body = (await request.json()) as TranslationEditRequestBody;
   } catch {
-    return NextResponse.json(
-      { ok: false, error: 'invalid_json' },
-      { status: 400 },
-    );
+    return errorResponse(DEFAULT_TRANSLATION_SOURCE_LOCALE, 'invalid_json', 400);
   }
 
+  const errorLocale = resolveRequestLocale(body);
   if (typeof body.pageId !== 'string' || body.pageId.length === 0) {
-    return NextResponse.json(
-      { ok: false, error: 'pageId is required' },
-      { status: 400 },
-    );
+    return errorResponse(errorLocale, 'invalid_request', 400);
   }
   if (typeof body.targetLocale !== 'string') {
-    return NextResponse.json(
-      { ok: false, error: 'targetLocale is required' },
-      { status: 400 },
-    );
+    return errorResponse(errorLocale, 'invalid_request', 400);
   }
   const targetLocale = normalizeLocale(body.targetLocale) as Locale;
   const sourceLocale = normalizeLocale(
-    body.sourceLocale || DEFAULT_TRANSLATION_SOURCE_LOCALE,
+    typeof body.sourceLocale === 'string' ? body.sourceLocale : DEFAULT_TRANSLATION_SOURCE_LOCALE,
   ) as Locale;
   if (targetLocale === sourceLocale) {
-    return NextResponse.json(
-      { ok: false, error: 'targetLocale must differ from sourceLocale' },
-      { status: 400 },
-    );
+    return errorResponse(errorLocale, 'invalid_request', 400);
   }
-  const siteId = body.siteId || 'default';
+  const siteId = typeof body.siteId === 'string' && body.siteId.trim() ? body.siteId : 'default';
 
   const nodeUpdates = parseNodeUpdates(body.nodeUpdates);
   const seoOverride = parseSeoOverride(body.seoOverride);
+  const imageOverrides = parseImageOverrides(body.imageOverrides);
 
-  let nodeResult = null as Awaited<ReturnType<typeof applyTranslationToLocaleDraft>> | null;
-  if (Object.keys(nodeUpdates).length > 0) {
-    nodeResult = await applyTranslationToLocaleDraft(
-      siteId,
-      sourceLocale,
-      targetLocale,
-      body.pageId,
-      nodeUpdates,
-    );
+  try {
+    let nodeResult = null as Awaited<ReturnType<typeof applyTranslationToLocaleDraft>> | null;
+    if (Object.keys(nodeUpdates).length > 0) {
+      nodeResult = await applyTranslationToLocaleDraft(
+        siteId,
+        sourceLocale,
+        targetLocale,
+        body.pageId,
+        nodeUpdates,
+      );
+    }
+
+    let seoApplied = false;
+    if (seoOverride) {
+      seoApplied = await setPageLocaleSeoOverride(
+        siteId,
+        sourceLocale,
+        targetLocale,
+        body.pageId,
+        seoOverride,
+      );
+    }
+
+    let imageResult = null as Awaited<ReturnType<typeof applyImageOverridesToLocaleDraft>> | null;
+    if (Object.keys(imageOverrides).length > 0) {
+      imageResult = await applyImageOverridesToLocaleDraft(
+        siteId,
+        sourceLocale,
+        targetLocale,
+        body.pageId,
+        imageOverrides,
+      );
+    }
+
+    if (!nodeResult && !seoOverride && !imageResult) {
+      return errorResponse(errorLocale, 'no_updates_provided', 400);
+    }
+
+    return NextResponse.json({
+      ok: true,
+      nodeUpdates: nodeResult
+        ? {
+            appliedCount: nodeResult.appliedCount,
+            skipped: nodeResult.skipped,
+            targetPageId: nodeResult.targetPageId,
+          }
+        : null,
+      seoApplied,
+      imageOverrides: imageResult
+        ? {
+            appliedCount: imageResult.appliedCount,
+          }
+        : null,
+    });
+  } catch (error) {
+    console.error('[builder/translations/edit] save failed:', error);
+    return errorResponse(errorLocale, 'translation_edit_failed', 500);
   }
-
-  let seoApplied = false;
-  if (seoOverride) {
-    seoApplied = await setPageLocaleSeoOverride(
-      siteId,
-      sourceLocale,
-      targetLocale,
-      body.pageId,
-      seoOverride,
-    );
-  }
-
-  if (!nodeResult && !seoOverride) {
-    return NextResponse.json(
-      { ok: false, error: 'no_updates_provided' },
-      { status: 400 },
-    );
-  }
-
-  return NextResponse.json({
-    ok: true,
-    nodeUpdates: nodeResult
-      ? {
-          appliedCount: nodeResult.appliedCount,
-          skipped: nodeResult.skipped,
-          targetPageId: nodeResult.targetPageId,
-        }
-      : null,
-    seoApplied,
-  });
 }

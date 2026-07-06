@@ -113,7 +113,7 @@ export function InsightsArchiveListPreview({ locale }: { locale: string }) {
             aria-label={copy.prevLabel}
             onClick={() => setPage((current) => (current - 1 + pageCount) % pageCount)}
           >
-            {copy.prevLabel}
+            ‹ {copy.prevLabel}
           </button>
           <span className="insights-page-indicator">{page + 1} / {pageCount}</span>
           <button
@@ -122,7 +122,7 @@ export function InsightsArchiveListPreview({ locale }: { locale: string }) {
             aria-label={copy.nextLabel}
             onClick={() => setPage((current) => (current + 1) % pageCount)}
           >
-            {copy.nextLabel}
+            {copy.nextLabel} ›
           </button>
         </div>
       ) : null}

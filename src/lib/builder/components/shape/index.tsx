@@ -1,5 +1,6 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderShapeCanvasNode } from '@/lib/builder/canvas/types';
+import { getVisualWidgetsCopy } from '../visual-widgets-copy';
 
 function shapePath(shape: BuilderShapeCanvasNode['content']['shape']): string {
   switch (shape) {
@@ -44,41 +45,43 @@ function ShapeRender({
 
 function ShapeInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const sNode = node as BuilderShapeCanvasNode;
   const c = sNode.content;
+  const copy = getVisualWidgetsCopy(locale);
   return (
     <>
       <label>
-        <span>모양</span>
+        <span>{copy.shape.inspector.shape}</span>
         <select
           value={c.shape}
           disabled={disabled}
           onChange={(event) => onUpdate({ shape: event.target.value as BuilderShapeCanvasNode['content']['shape'] })}
         >
-          <option value="circle">Circle</option>
-          <option value="square">Square</option>
-          <option value="triangle">Triangle</option>
-          <option value="pentagon">Pentagon</option>
-          <option value="hexagon">Hexagon</option>
-          <option value="star">Star</option>
-          <option value="heart">Heart</option>
-          <option value="arrow">Arrow</option>
-          <option value="blob">Blob</option>
+          <option value="circle">{copy.shape.inspector.shapes.circle}</option>
+          <option value="square">{copy.shape.inspector.shapes.square}</option>
+          <option value="triangle">{copy.shape.inspector.shapes.triangle}</option>
+          <option value="pentagon">{copy.shape.inspector.shapes.pentagon}</option>
+          <option value="hexagon">{copy.shape.inspector.shapes.hexagon}</option>
+          <option value="star">{copy.shape.inspector.shapes.star}</option>
+          <option value="heart">{copy.shape.inspector.shapes.heart}</option>
+          <option value="arrow">{copy.shape.inspector.shapes.arrow}</option>
+          <option value="blob">{copy.shape.inspector.shapes.blob}</option>
         </select>
       </label>
       <label>
-        <span>채움</span>
+        <span>{copy.shape.inspector.fill}</span>
         <input type="text" value={c.fill} disabled={disabled} onChange={(event) => onUpdate({ fill: event.target.value })} />
       </label>
       <label>
-        <span>외곽선 색</span>
+        <span>{copy.shape.inspector.strokeColor}</span>
         <input type="text" value={c.stroke} disabled={disabled} onChange={(event) => onUpdate({ stroke: event.target.value })} />
       </label>
       <label>
-        <span>외곽선 두께</span>
+        <span>{copy.shape.inspector.strokeWidth}</span>
         <input
           type="number"
           min={0}

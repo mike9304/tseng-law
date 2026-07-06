@@ -1,13 +1,22 @@
 'use client';
 
+import Link from 'next/link';
+import type { Locale } from '@/lib/locales';
 import type { TranslationProgress as TranslationProgressValue } from '@/lib/builder/translations/types';
+import { buildTranslationManagerReviewQuery } from '@/lib/builder/translations/query';
+import { getTranslationCopy } from './translation-copy';
 import styles from './TranslationManager.module.css';
 
 export default function TranslationProgress({
   progress,
+  routeLocale,
+  sourceLocale,
 }: {
   progress: TranslationProgressValue[];
+  routeLocale: Locale;
+  sourceLocale: Locale;
 }) {
+  const copy = getTranslationCopy(routeLocale);
   if (progress.length === 0) return null;
 
   return (
@@ -22,7 +31,37 @@ export default function TranslationProgress({
             <div className={styles.progressFill} style={{ width: `${item.percent}%` }} />
           </div>
           <div className={styles.progressStats}>
-            {item.translated + item.manual}/{item.total} complete - {item.missing} missing - {item.outdated} outdated
+            {copy.progressComplete(item.translated + item.manual, item.total)} - {copy.progressMissing(item.missing)} - {copy.progressOutdated(item.outdated)}
+          </div>
+          <div className={styles.progressActions}>
+            {item.missing > 0 ? (
+              <Link
+                className={styles.progressActionLink}
+                href={`/${routeLocale}/admin-builder/translations?${buildTranslationManagerReviewQuery({
+                  sourceLocale,
+                  targetLocale: item.locale,
+                  statusFilter: 'missing',
+                })}`}
+              >
+                {copy.progressReviewMissing}
+              </Link>
+            ) : (
+              <span className={styles.progressActionMuted}>{copy.progressNoMissing}</span>
+            )}
+            {item.outdated > 0 ? (
+              <Link
+                className={styles.progressActionLink}
+                href={`/${routeLocale}/admin-builder/translations?${buildTranslationManagerReviewQuery({
+                  sourceLocale,
+                  targetLocale: item.locale,
+                  statusFilter: 'outdated',
+                })}`}
+              >
+                {copy.progressReviewOutdated}
+              </Link>
+            ) : (
+              <span className={styles.progressActionMuted}>{copy.progressNoOutdated}</span>
+            )}
           </div>
         </div>
       ))}

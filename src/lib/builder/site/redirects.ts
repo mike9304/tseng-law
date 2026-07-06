@@ -24,6 +24,11 @@
  */
 
 import type { Locale } from '@/lib/locales';
+import {
+  findWildcardRedirectOverlap,
+  type RedirectConflictCode,
+  type RedirectConflictDiagnostic,
+} from './redirect-conflicts';
 import { findRedirectMatch } from './redirect-match';
 import {
   readSiteDocument,
@@ -56,6 +61,18 @@ export interface RedirectInput {
 export interface RedirectValidationError {
   field: 'from' | 'to' | 'type';
   message: string;
+  code?: RedirectConflictCode;
+  diagnostic?: RedirectConflictDiagnostic;
+}
+
+export class RedirectDeletePersistenceError extends Error {
+  readonly redirectId: string;
+
+  constructor(redirectId: string) {
+    super(`redirect "${redirectId}" remained persisted after delete`);
+    this.name = 'RedirectDeletePersistenceError';
+    this.redirectId = redirectId;
+  }
 }
 
 export function validateRedirectInput(
@@ -121,6 +138,20 @@ export function validateRedirectInput(
   );
   if (dup) {
     return { field: 'from', message: `from "${from}" already has an active redirect` };
+  }
+
+  const wildcardOverlap = findWildcardRedirectOverlap(
+    { from, isActive: input.isActive },
+    existing,
+    ignoreId,
+  );
+  if (wildcardOverlap) {
+    return {
+      field: 'from',
+      message: `from "${from}" overlaps active wildcard redirect "${wildcardOverlap.conflictingFrom}"`,
+      code: wildcardOverlap.code,
+      diagnostic: wildcardOverlap,
+    };
   }
 
   return null;
@@ -207,13 +238,13 @@ export async function updateRedirect(
     updatedAt: new Date().toISOString(),
   };
 
-  // Skip self-conflict checks when only the active flag is flipping.
-  const onlyActiveFlip =
+  const onlyNonActivatingFlagPatch =
+    patch.isActive !== true &&
     patch.from === undefined &&
     patch.to === undefined &&
     patch.type === undefined &&
     patch.note === undefined;
-  if (!onlyActiveFlip) {
+  if (!onlyNonActivatingFlagPatch) {
     const error = validateRedirectInput(
       { from: next.from, to: next.to, type: next.type, isActive: next.isActive },
       existing,
@@ -238,6 +269,11 @@ export async function deleteRedirect(
   const filtered = existing.filter((r) => r.redirectId !== id);
   if (filtered.length === existing.length) return false;
   await writeSiteWithRedirects(site, filtered, { deleteRedirectIds: [id] });
+  const persisted = await readSiteDocument(siteId, locale);
+  const survived = (persisted.redirects ?? []).some((r) => r.redirectId === id);
+  if (survived) {
+    throw new RedirectDeletePersistenceError(id);
+  }
   return true;
 }
 

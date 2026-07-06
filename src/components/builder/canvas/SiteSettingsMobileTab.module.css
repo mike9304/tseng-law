@@ -1,0 +1,87 @@
+.root {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.sectionHeading {
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.checkboxLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #334155;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  accent-color: #116dff;
+}
+
+.field {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+}
+
+.label {
+  color: #334155;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  font-size: 0.85rem;
+  outline: none;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.input:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgb(17 109 255 / 14%);
+}
+
+.actionCard {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  align-items: end;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.actionFieldsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .actionCard,
+  .actionFieldsGrid {
+    grid-template-columns: 1fr;
+  }
+}

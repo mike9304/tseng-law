@@ -1,0 +1,42 @@
+.table {
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .row,
+  .cell {
+    display: block;
+    width: 100%;
+  }
+
+  .row {
+    padding: 8px 0;
+  }
+
+  .cell {
+    padding: 3px 0 !important;
+    white-space: normal !important;
+  }
+
+  .cell::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    color: #64748b;
+    font-family: system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .summaryCell {
+    margin-top: 4px;
+    overflow-wrap: anywhere;
+  }
+}

@@ -16,7 +16,7 @@ export default async function TemplatesPage({ params }: { params: { locale: stri
   const templates = await listTemplates();
   return (
     <main>
-      <MarketingNav locale={locale} active="campaigns" />
+      <MarketingNav locale={locale} active="templates" />
       <TemplatesAdmin initialTemplates={templates} locale={locale} />
     </main>
   );

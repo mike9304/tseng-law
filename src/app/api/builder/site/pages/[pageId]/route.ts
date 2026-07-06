@@ -1,23 +1,40 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
-import { normalizeLocale } from '@/lib/locales';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { deletePage, readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
-import type { BuilderNavItem, BuilderPageMeta } from '@/lib/builder/site/types';
+import type { BuilderMemberAccessMeta, BuilderNavItem, BuilderPageMeta } from '@/lib/builder/site/types';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
 import {
   normalizeSeoSlugInput,
   validateBuilderPageSeo,
 } from '@/lib/builder/seo/validation';
 import { generateRedirectId, validateRedirectInput } from '@/lib/builder/site/redirects';
+import { isLocaleSlugConflict } from '@/lib/builder/translations/locale-slug';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
+const memberRoleSchema = z.enum(['free', 'premium', 'admin']);
+const memberAccessSchema = z.object({
+  requireLogin: z.literal(true),
+  allowedRoles: z.array(memberRoleSchema).max(3).optional(),
+  redirectPath: z.string().trim().max(500).regex(/^\//).optional(),
+}).strict();
+
 const updatePageSchema = z.object({
-  title: z.string().trim().min(1).max(200),
+  siteId: z.string().trim().min(1).max(120).optional(),
+  title: z.string().trim().min(1).max(200).optional(),
   slug: z.string().trim().max(200).optional(),
+  slugByLocale: z.record(z.string().trim().max(200), z.string().trim().max(200)).optional(),
   createRedirect: z.boolean().optional(),
+  memberAccess: memberAccessSchema.nullable().optional(),
 }).strict();
 
 interface RedirectCreationWarning {
@@ -27,11 +44,37 @@ interface RedirectCreationWarning {
   message: string;
 }
 
-function validationErrorResponse(error: ZodError): NextResponse {
+class PageRouteError extends Error {
+  constructor(
+    readonly errorCode: BuilderSiteApiErrorCode,
+    readonly status: number,
+    readonly extra: Record<string, unknown> = {},
+  ) {
+    super(errorCode);
+  }
+}
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra: Record<string, unknown> = {},
+): NextResponse {
   return NextResponse.json(
     {
       ok: false,
-      error: 'validation_error',
+      ...getBuilderSiteApiErrorPayload(locale, errorCode),
+      ...extra,
+    },
+    { status },
+  );
+}
+
+function validationErrorResponse(locale: Locale, error: ZodError): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      ...getBuilderSiteApiErrorPayload(locale, 'validation_error'),
       issues: error.flatten(),
     },
     { status: 400 },
@@ -40,6 +83,29 @@ function validationErrorResponse(error: ZodError): NextResponse {
 
 function pageHref(locale: string, slug: string, isHomePage?: boolean): string {
   return buildSitePagePath(locale, isHomePage ? '' : slug);
+}
+
+function normalizeLocalizedSlugs(
+  input: Record<string, string> | undefined,
+  page: BuilderPageMeta,
+  site: Awaited<ReturnType<typeof readSiteDocument>>,
+): Partial<Record<(typeof locales)[number], string>> | null {
+  if (!input) return null;
+  const out: Partial<Record<(typeof locales)[number], string>> = {};
+  for (const [rawLocale, rawValue] of Object.entries(input)) {
+    if (!locales.includes(rawLocale as (typeof locales)[number])) continue;
+    const locale = rawLocale as (typeof locales)[number];
+    const value = normalizeSeoSlugInput(rawValue);
+    if (value === '') continue;
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*(?:\/[a-z0-9]+(?:-[a-z0-9]+)*)*$/.test(value)) {
+      throw new PageRouteError('localized_slug_invalid', 400);
+    }
+    if (isLocaleSlugConflict(site.pages, locale, value, page.pageId)) {
+      throw new PageRouteError('localized_slug_duplicate', 409);
+    }
+    out[locale] = value;
+  }
+  return Object.keys(out).length > 0 ? out : null;
 }
 
 function updateNavigationPageReference(
@@ -53,6 +119,15 @@ function updateNavigationPageReference(
     label: item.pageId === page.pageId && item.id === `nav-${page.pageId}` ? page.title : item.label,
     children: item.children ? updateNavigationPageReference(item.children, page, nextHref) : item.children,
   }));
+}
+
+function normalizeMemberAccessPatch(memberAccess: z.infer<typeof memberAccessSchema>): BuilderMemberAccessMeta {
+  const allowedRoles = Array.from(new Set(memberAccess.allowedRoles ?? []));
+  return {
+    requireLogin: true,
+    ...(allowedRoles.length > 0 ? { allowedRoles } : {}),
+    ...(memberAccess.redirectPath ? { redirectPath: memberAccess.redirectPath } : {}),
+  };
 }
 
 function appendRedirectIfValid(
@@ -97,14 +172,16 @@ export async function PATCH(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+
   try {
     const payload = updatePageSchema.parse(await request.json());
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const siteId = resolveBuilderSiteIdFromRequest(request, payload.siteId);
+    const site = await readSiteDocument(siteId, locale);
     const page = site.pages.find((entry) => entry.pageId === params.pageId);
 
     if (!page) {
-      return NextResponse.json({ ok: false, error: 'Page not found' }, { status: 404 });
+      return errorResponse(locale, 'page_not_found', 404);
     }
 
     const now = new Date().toISOString();
@@ -121,13 +198,38 @@ export async function PATCH(
 
     if (blockers.length > 0) {
       return NextResponse.json(
-        { ok: false, error: 'validation_error', issues: blockers, validation },
+        {
+          ok: false,
+          ...getBuilderSiteApiErrorPayload(locale, 'validation_error'),
+          issues: blockers,
+          validation,
+        },
         { status: 400 },
       );
     }
 
-    page.title[locale] = payload.title;
+    if (payload.title !== undefined) {
+      page.title[locale] = payload.title;
+    }
     page.slug = nextSlug;
+    if (payload.slugByLocale !== undefined) {
+      const nextSlugByLocale = normalizeLocalizedSlugs(payload.slugByLocale, page, site);
+      if (nextSlugByLocale) {
+        page.slugByLocale = {
+          ...(page.slugByLocale ?? {}),
+          ...nextSlugByLocale,
+        };
+      } else {
+        delete page.slugByLocale;
+      }
+    }
+    if (payload.memberAccess !== undefined) {
+      if (payload.memberAccess === null) {
+        delete page.memberAccess;
+      } else {
+        page.memberAccess = normalizeMemberAccessPatch(payload.memberAccess);
+      }
+    }
     page.updatedAt = now;
     site.updatedAt = now;
     let redirectCreated = false;
@@ -170,12 +272,14 @@ export async function PATCH(
       redirectWarnings,
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
-    if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+    if (error instanceof PageRouteError) {
+      return errorResponse(locale, error.errorCode, error.status, error.extra);
     }
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
+    if (error instanceof SyntaxError) {
+      return errorResponse(locale, 'invalid_json', 400);
+    }
+    return errorResponse(locale, 'page_update_failed', 500);
   }
 }
 
@@ -186,23 +290,24 @@ export async function DELETE(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
+
   try {
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const site = await readSiteDocument(siteId, locale);
     const page = site.pages.find((entry) => entry.pageId === params.pageId);
 
     if (!page) {
-      return NextResponse.json({ ok: false, error: 'Page not found' }, { status: 404 });
+      return errorResponse(locale, 'page_not_found', 404);
     }
 
     if (page.isHomePage) {
-      return NextResponse.json({ ok: false, error: 'Home page cannot be deleted' }, { status: 400 });
+      return errorResponse(locale, 'home_page_delete_blocked', 400);
     }
 
-    await deletePage('default', params.pageId, locale);
+    await deletePage(siteId, params.pageId, locale);
     return NextResponse.json({ ok: true });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+  } catch {
+    return errorResponse(locale, 'page_delete_failed', 500);
   }
 }

@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import type { BuilderVideoCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import { getMediaWidgetsCopy } from '../media-widgets-copy';
 
 function extractVideoEmbed(url: string, autoplay: boolean, loop: boolean, muted: boolean): string | null {
   if (!url) return null;
@@ -43,7 +45,7 @@ function isDirectVideoUrl(url: string): boolean {
   );
 }
 
-export default function VideoRender({ node }: { node: BuilderVideoCanvasNode }) {
+export default function VideoRender({ node, locale = 'ko' }: { node: BuilderVideoCanvasNode; locale?: Locale }) {
   const {
     url = '',
     autoplay = false,
@@ -53,6 +55,7 @@ export default function VideoRender({ node }: { node: BuilderVideoCanvasNode }) 
     thumbnail,
     mode = 'box',
   } = node.content;
+  const copy = getMediaWidgetsCopy(locale);
   const [playing, setPlaying] = useState(false);
   const embedUrl = extractVideoEmbed(url, autoplay, loop, muted);
   const directVideo = isDirectVideoUrl(url);
@@ -99,7 +102,7 @@ export default function VideoRender({ node }: { node: BuilderVideoCanvasNode }) 
               fontWeight: 800,
             }}
           >
-            Background video
+            {copy.video.backgroundBadge}
           </span>
         ) : null}
       </div>
@@ -146,7 +149,7 @@ export default function VideoRender({ node }: { node: BuilderVideoCanvasNode }) 
       >
         <Image
           src={thumbnail}
-          alt="Video thumbnail"
+          alt={copy.video.thumbnailAlt}
           fill
           sizes="(max-width: 1280px) 100vw, 420px"
           style={{
@@ -199,7 +202,7 @@ export default function VideoRender({ node }: { node: BuilderVideoCanvasNode }) 
         style={{ width: '100%', height: '100%', border: 'none' }}
         allow="autoplay; fullscreen; picture-in-picture"
         allowFullScreen
-        title="Video embed"
+        title={copy.video.embedTitle}
       />
     </div>
   );

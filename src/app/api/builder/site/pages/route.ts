@@ -1,241 +1,278 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
-import { normalizeLocale } from '@/lib/locales';
-import { listPages, createPage, readPageCanvas, readSiteDocument, writePageCanvas, writeSiteDocument } from '@/lib/builder/site/persistence';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  listPages,
+  createPage,
+  readPageCanvas,
+  readPageCanvasRecordState,
+  readSiteDocument,
+  writePageCanvas,
+  writeSiteDocument,
+} from '@/lib/builder/site/persistence';
 import { normalizeCanvasDocument, createDefaultCanvasDocument, createBlankCanvasDocument } from '@/lib/builder/canvas/types';
+import { SEED_DRAFT_UPDATED_BY } from '@/lib/builder/canvas/home-draft-reseed';
 import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
-import type { BuilderNavItem } from '@/lib/builder/site/types';
+import type { BuilderNavItem, BuilderPageMeta } from '@/lib/builder/site/types';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
 import {
-  createBuilderDynamicListCanvasDocument,
-  createBuilderDynamicListPageMeta,
-  getDynamicListDefaultTitle,
   isSupportedDynamicListCollectionId,
 } from '@/lib/builder/dynamic-list-pages';
 import {
-  createBuilderDynamicItemCanvasDocument,
-  createBuilderDynamicItemPageMeta,
-  getDynamicItemDefaultTitle,
   isSupportedDynamicItemCollectionId,
 } from '@/lib/builder/dynamic-item-pages';
-import type { BuilderPageDatasetFilter, BuilderPageDatasetSort } from '@/lib/builder/types';
+import { isValidBuilderSlug, normalizeSeoSlugInput } from '@/lib/builder/seo/validation';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import { normalizeMemberAccessInput } from '@/lib/builder/site/member-access-input';
+import type { CreatePageRequestBody } from './create-page-request';
+import {
+  createCreatePageDynamicCanvas,
+  resolveCreatePageTitle,
+  writeCreatePageDynamicMeta,
+} from './dynamic-page-create';
 
 export const runtime = 'nodejs';
+
+type PageListMeta = BuilderPageMeta & {
+  draftSavedAt?: string;
+  draftRevision?: number;
+  hasUnpublishedChanges: boolean;
+};
+
+function timestampMs(value: string | undefined): number | null {
+  if (!value) return null;
+  const parsed = Date.parse(value);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function pageHasUnpublishedChanges(
+  page: BuilderPageMeta,
+  draftState: Awaited<ReturnType<typeof readPageCanvasRecordState>>,
+): boolean {
+  if (!page.publishedAt || !draftState) return false;
+  const draftRevision = draftState.record.revision;
+  if (typeof page.lastPublishedDraftRevision === 'number') {
+    return draftRevision > page.lastPublishedDraftRevision;
+  }
+  const draftSavedMs = timestampMs(draftState.record.savedAt);
+  const publishedSavedMs = timestampMs(page.publishedSavedAt ?? page.publishedAt);
+  return draftSavedMs !== null && publishedSavedMs !== null && draftSavedMs > publishedSavedMs;
+}
+
+async function withDraftState(siteId: string, page: BuilderPageMeta): Promise<PageListMeta> {
+  const draftState = await readPageCanvasRecordState(siteId, page.pageId, 'draft');
+  return {
+    ...page,
+    ...(draftState
+      ? {
+        draftSavedAt: draftState.record.savedAt,
+        draftRevision: draftState.record.revision,
+      }
+      : {}),
+    hasUnpublishedChanges: pageHasUnpublishedChanges(page, draftState),
+  };
+}
+
+function pageRouteErrorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra: Record<string, unknown> = {},
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, success: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...extra },
+    { status },
+  );
+}
 
 export async function GET(request: NextRequest) {
   const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const pages = await listPages('default', locale);
-  return NextResponse.json({ pages });
+  const siteId = resolveBuilderSiteIdFromRequest(request);
+  try {
+    const pages = await listPages(siteId, locale);
+    const pagesWithDraftState = await Promise.all(pages.map((page) => withDraftState(siteId, page)));
+    return NextResponse.json({ pages: pagesWithDraftState });
+  } catch {
+    return pageRouteErrorResponse(locale, 'pages_list_failed', 500);
+  }
 }
 
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
-  let body: {
-    slug?: string;
-    title?: string;
-    locale?: string;
-    document?: unknown;
-    linkedFromPageId?: string;
-    blank?: boolean;
-    addToNavigation?: boolean;
-    dynamicListCollectionId?: string;
-    dynamicListFilters?: BuilderPageDatasetFilter[];
-    dynamicListSort?: BuilderPageDatasetSort[];
-    dynamicListLimit?: number;
-    dynamicItemCollectionId?: string;
-    dynamicItemRecordSlug?: string;
-  };
+  let body: CreatePageRequestBody;
   try {
-    body = (await request.json()) as {
-      slug?: string;
-      title?: string;
-      locale?: string;
-      document?: unknown;
-      linkedFromPageId?: string;
-      blank?: boolean;
-      addToNavigation?: boolean;
-      dynamicListCollectionId?: string;
-      dynamicListFilters?: BuilderPageDatasetFilter[];
-      dynamicListSort?: BuilderPageDatasetSort[];
-      dynamicListLimit?: number;
-      dynamicItemCollectionId?: string;
-      dynamicItemRecordSlug?: string;
-    };
+    body = (await request.json()) as CreatePageRequestBody;
   } catch {
-    return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
+    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+    return pageRouteErrorResponse(locale, 'invalid_json', 400);
   }
 
-  const locale = normalizeLocale(body.locale || 'ko');
+  const locale = normalizeLocale(body.locale || request.nextUrl.searchParams.get('locale') || 'ko');
+  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
+  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
   const rawDynamicListCollectionId = body.dynamicListCollectionId?.trim();
   const dynamicListCollectionId = isSupportedDynamicListCollectionId(rawDynamicListCollectionId)
     ? rawDynamicListCollectionId
     : null;
   if (rawDynamicListCollectionId && !dynamicListCollectionId) {
-    return NextResponse.json(
-      {
-        success: false,
-        error: 'unsupported_dynamic_list_collection',
-        message: 'Only columns and service-areas can be used for dynamic list pages in this version.',
-      },
-      { status: 400 },
-    );
+    return pageRouteErrorResponse(locale, 'unsupported_dynamic_list_collection', 400);
   }
+  const rawDynamicListCmsCollectionId = body.dynamicListCmsCollectionId?.trim();
   const rawDynamicItemCollectionId = body.dynamicItemCollectionId?.trim();
   const dynamicItemCollectionId = isSupportedDynamicItemCollectionId(rawDynamicItemCollectionId)
     ? rawDynamicItemCollectionId
     : null;
   if (rawDynamicItemCollectionId && !dynamicItemCollectionId) {
-    return NextResponse.json(
-      {
-        success: false,
-        error: 'unsupported_dynamic_item_collection',
-        message: 'Only columns and service-areas can be used for dynamic item pages in this version.',
-      },
-      { status: 400 },
-    );
+    return pageRouteErrorResponse(locale, 'unsupported_dynamic_item_collection', 400);
   }
-  if (dynamicListCollectionId && dynamicItemCollectionId) {
-    return NextResponse.json(
-      {
-        success: false,
-        error: 'ambiguous_dynamic_page_kind',
-        message: 'Create either a dynamic list page or a dynamic item page, not both.',
-      },
-      { status: 400 },
-    );
+  const rawDynamicItemCmsCollectionId = body.dynamicItemCmsCollectionId?.trim();
+  const hasDynamicListSelection = Boolean(dynamicListCollectionId || rawDynamicListCmsCollectionId);
+  const hasDynamicItemSelection = Boolean(dynamicItemCollectionId || rawDynamicItemCmsCollectionId);
+  if (hasDynamicListSelection && hasDynamicItemSelection) {
+    return pageRouteErrorResponse(locale, 'ambiguous_dynamic_page_kind', 400);
   }
-  const rawSlug = body.slug?.trim() || '';
+  if (dynamicListCollectionId && rawDynamicListCmsCollectionId) {
+    return pageRouteErrorResponse(locale, 'ambiguous_dynamic_page_kind', 400);
+  }
+  if (dynamicItemCollectionId && rawDynamicItemCmsCollectionId) {
+    return pageRouteErrorResponse(locale, 'ambiguous_dynamic_page_kind', 400);
+  }
+  const rawSlug = normalizeSeoSlugInput(body.slug ?? '');
   const slug = rawSlug || `page-${Date.now().toString(36)}`;
-  const title =
-    body.title?.trim()
-    || (dynamicListCollectionId
-      ? getDynamicListDefaultTitle(dynamicListCollectionId, locale)
-      : dynamicItemCollectionId
-        ? getDynamicItemDefaultTitle(dynamicItemCollectionId, locale)
-        : 'New Page');
 
-  if (slug.length > 200 || (rawSlug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))) {
-    return NextResponse.json({ error: 'Invalid slug: lowercase alphanumeric with hyphens only' }, { status: 400 });
+  if (slug.length > 200 || (rawSlug && !isValidBuilderSlug(slug))) {
+    return pageRouteErrorResponse(locale, 'invalid_slug', 400);
   }
 
-  const site = await readSiteDocument('default', locale);
-  const duplicate = site.pages.find((entry) => entry.locale === locale && entry.slug === slug);
-  if (duplicate) {
-    return NextResponse.json(
-      {
-        success: false,
-        error: 'duplicate_slug',
-        message: 'A page with this slug already exists.',
-        pageId: duplicate.pageId,
-      },
-      { status: 409 },
-    );
-  }
-
-  const page = await createPage('default', locale, slug, title);
-  let createdPage = page;
-
-  if (dynamicListCollectionId) {
-    const nextSite = await readSiteDocument('default', locale);
-    const dynamicPage = nextSite.pages.find((entry) => entry.pageId === page.pageId);
-    if (dynamicPage) {
-      dynamicPage.dynamicList = createBuilderDynamicListPageMeta({
-        collectionId: dynamicListCollectionId,
-        filters: body.dynamicListFilters,
-        sort: body.dynamicListSort,
-        limit: body.dynamicListLimit,
-      });
-      dynamicPage.updatedAt = new Date().toISOString();
-      nextSite.updatedAt = dynamicPage.updatedAt;
-      await writeSiteDocument(nextSite);
-      createdPage = dynamicPage;
+  try {
+    const site = await readSiteDocument(siteId, locale);
+    const duplicate = site.pages.find((entry) => (
+      entry.locale === locale && normalizeSeoSlugInput(entry.slug) === slug
+    ));
+    if (duplicate) {
+      return pageRouteErrorResponse(locale, 'duplicate_slug', 409, { pageId: duplicate.pageId });
     }
-  }
-  if (dynamicItemCollectionId) {
-    const nextSite = await readSiteDocument('default', locale);
-    const dynamicPage = nextSite.pages.find((entry) => entry.pageId === page.pageId);
-    if (dynamicPage) {
-      dynamicPage.dynamicItem = createBuilderDynamicItemPageMeta({
-        collectionId: dynamicItemCollectionId,
-        locale,
-        recordSlug: body.dynamicItemRecordSlug,
-      });
-      dynamicPage.updatedAt = new Date().toISOString();
-      nextSite.updatedAt = dynamicPage.updatedAt;
-      await writeSiteDocument(nextSite);
-      createdPage = dynamicPage;
+    const cmsDynamicListCollection = rawDynamicListCmsCollectionId
+      ? site.cmsCollections?.find((collection) => collection.collectionId === rawDynamicListCmsCollectionId) ?? null
+      : null;
+    if (rawDynamicListCmsCollectionId && !cmsDynamicListCollection) {
+      return pageRouteErrorResponse(locale, 'unsupported_dynamic_list_collection', 400);
     }
-  }
-
-  if (body.linkedFromPageId) {
-    const nextSite = await readSiteDocument('default', locale);
-    const sourcePage = nextSite.pages.find((entry) => entry.pageId === body.linkedFromPageId);
-    const createdPage = nextSite.pages.find((entry) => entry.pageId === page.pageId);
-    if (sourcePage && createdPage) {
-      sourcePage.linkedPageIds = { ...(sourcePage.linkedPageIds ?? {}), [locale]: page.pageId };
-      createdPage.linkedPageIds = {
-        ...(createdPage.linkedPageIds ?? {}),
-        [sourcePage.locale]: sourcePage.pageId,
-      };
-      createdPage.title = { ...sourcePage.title, [locale]: title };
-      nextSite.updatedAt = new Date().toISOString();
-      await writeSiteDocument(nextSite);
+    const cmsDynamicItemCollection = rawDynamicItemCmsCollectionId
+      ? site.cmsCollections?.find((collection) => collection.collectionId === rawDynamicItemCmsCollectionId) ?? null
+      : null;
+    if (rawDynamicItemCmsCollectionId && !cmsDynamicItemCollection) {
+      return pageRouteErrorResponse(locale, 'unsupported_dynamic_item_collection', 400);
     }
-  }
+    const dynamicSelection = {
+      dynamicListCollectionId,
+      cmsDynamicListCollection,
+      dynamicItemCollectionId,
+      cmsDynamicItemCollection,
+    };
+    const title = resolveCreatePageTitle({ bodyTitle: body.title, locale, selection: dynamicSelection });
 
-  if (body.addToNavigation === true) {
-    const nextSite = await readSiteDocument('default', locale);
-    const createdPage = nextSite.pages.find((entry) => entry.pageId === page.pageId);
-    if (createdPage) {
-      const href = buildSitePagePath(locale, createdPage.slug || '');
-      const hasNavigationItem = (items: BuilderNavItem[]): boolean => items.some((item) => (
-        item.pageId === createdPage.pageId
-        || item.href === href
-        || Boolean(item.children?.length && hasNavigationItem(item.children))
-      ));
-      if (!hasNavigationItem(nextSite.navigation ?? [])) {
-        nextSite.navigation = [
-          ...(nextSite.navigation ?? []),
-          {
-            id: `nav-${createdPage.pageId}`,
-            label: createdPage.title,
-            pageId: createdPage.pageId,
-            href,
-          },
-        ];
+    const page = await createPage(siteId, locale, slug, title);
+    let createdPage = page;
+
+    createdPage = await writeCreatePageDynamicMeta({
+      siteId,
+      locale,
+      pageId: page.pageId,
+      body,
+      selection: dynamicSelection,
+    }) ?? createdPage;
+
+    if (body.linkedFromPageId) {
+      const nextSite = await readSiteDocument(siteId, locale);
+      const sourcePage = nextSite.pages.find((entry) => entry.pageId === body.linkedFromPageId);
+      const createdPage = nextSite.pages.find((entry) => entry.pageId === page.pageId);
+      if (sourcePage && createdPage) {
+        sourcePage.linkedPageIds = { ...(sourcePage.linkedPageIds ?? {}), [locale]: page.pageId };
+        createdPage.linkedPageIds = {
+          ...(createdPage.linkedPageIds ?? {}),
+          [sourcePage.locale]: sourcePage.pageId,
+        };
+        createdPage.title = { ...sourcePage.title, [locale]: title };
         nextSite.updatedAt = new Date().toISOString();
         await writeSiteDocument(nextSite);
-        try {
-          revalidatePath(buildSitePagePath(locale, ''));
-          revalidatePath(href);
-        } catch {
-          // Best effort: local dev and tests read the latest site document directly.
+      }
+    }
+
+    const memberAccess = normalizeMemberAccessInput(body.memberAccess);
+    if (memberAccess) {
+      const nextSite = await readSiteDocument(siteId, locale);
+      const memberPage = nextSite.pages.find((entry) => entry.pageId === page.pageId);
+      if (memberPage) {
+        memberPage.memberAccess = memberAccess;
+        memberPage.updatedAt = new Date().toISOString();
+        nextSite.updatedAt = memberPage.updatedAt;
+        await writeSiteDocument(nextSite);
+        createdPage = memberPage;
+      }
+    }
+
+    if (body.addToNavigation === true) {
+      const nextSite = await readSiteDocument(siteId, locale);
+      const createdPage = nextSite.pages.find((entry) => entry.pageId === page.pageId);
+      if (createdPage) {
+        const href = buildSitePagePath(locale, createdPage.slug || '');
+        const hasNavigationItem = (items: BuilderNavItem[]): boolean => items.some((item) => (
+          item.pageId === createdPage.pageId
+          || item.href === href
+          || Boolean(item.children?.length && hasNavigationItem(item.children))
+        ));
+        if (!hasNavigationItem(nextSite.navigation ?? [])) {
+          nextSite.navigation = [
+            ...(nextSite.navigation ?? []),
+            {
+              id: `nav-${createdPage.pageId}`,
+              label: createdPage.title,
+              pageId: createdPage.pageId,
+              href,
+            },
+          ];
+          nextSite.updatedAt = new Date().toISOString();
+          await writeSiteDocument(nextSite);
+          try {
+            revalidatePath(buildSitePagePath(locale, ''));
+            revalidatePath(href);
+          } catch {
+            // Best effort: local dev and tests read the latest site document directly.
+          }
         }
       }
     }
+
+    // Save the initial canvas document (template or blank)
+    const sourceCanvas = body.linkedFromPageId
+      ? await readPageCanvas(siteId, body.linkedFromPageId, 'draft')
+      : null;
+    const dynamicCanvas = createCreatePageDynamicCanvas({ locale, selection: dynamicSelection });
+    const canvasDoc = body.document
+      ? normalizeCanvasDocument(body.document, locale)
+      : dynamicCanvas
+        ? dynamicCanvas
+      : body.blank
+        ? createBlankCanvasDocument(locale)
+      : sourceCanvas
+        ? normalizeCanvasDocument({ ...sourceCanvas, locale }, locale)
+        : createDefaultCanvasDocument(locale);
+    await writePageCanvas(siteId, page.pageId, 'draft', canvasDoc, {
+      updatedBy: SEED_DRAFT_UPDATED_BY,
+    });
+
+    return NextResponse.json({ success: true, pageId: page.pageId, page: createdPage });
+  } catch {
+    return pageRouteErrorResponse(locale, 'page_create_failed', 500);
   }
-
-  // Save the initial canvas document (template or blank)
-  const sourceCanvas = body.linkedFromPageId
-    ? await readPageCanvas('default', body.linkedFromPageId, 'draft')
-    : null;
-  const canvasDoc = body.document
-    ? normalizeCanvasDocument(body.document, locale)
-    : dynamicListCollectionId
-      ? createBuilderDynamicListCanvasDocument({ collectionId: dynamicListCollectionId, locale })
-    : dynamicItemCollectionId
-      ? createBuilderDynamicItemCanvasDocument({ collectionId: dynamicItemCollectionId, locale })
-    : body.blank
-      ? createBlankCanvasDocument(locale)
-    : sourceCanvas
-      ? normalizeCanvasDocument({ ...sourceCanvas, locale }, locale)
-      : createDefaultCanvasDocument(locale);
-  await writePageCanvas('default', page.pageId, 'draft', canvasDoc);
-
-  return NextResponse.json({ success: true, pageId: page.pageId, page: createdPage });
 }

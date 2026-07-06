@@ -2,6 +2,13 @@ import React from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderFloatingChatCanvasNode } from '@/lib/builder/canvas/types';
 import { safeHref as toSafeHref } from '@/lib/builder/links';
+import type { Locale } from '@/lib/locales';
+import {
+  FLOATING_CHAT_LEGACY_DEFAULTS,
+  getFloatingChatCopy,
+  localizedFloatingChatText,
+} from './floating-chat-copy';
+import styles from './FloatingChatInspector.module.css';
 
 const PROVIDER_GLYPH: Record<BuilderFloatingChatCanvasNode['content']['provider'], string> = {
   whatsapp: 'WA',
@@ -26,11 +33,15 @@ const PROVIDER_COLOR_FALLBACK: Record<BuilderFloatingChatCanvasNode['content']['
 function FloatingChatRender({
   node,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderFloatingChatCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getFloatingChatCopy(locale);
+  const label = localizedFloatingChatText(c.label, copy.defaultLabel, FLOATING_CHAT_LEGACY_DEFAULTS.label);
   const safeHref = toSafeHref(c.href) ?? '#';
   const bg = c.color && c.color.trim() ? c.color : PROVIDER_COLOR_FALLBACK[c.provider];
   const isNativeLiveChat = c.provider === 'live-chat';
@@ -46,14 +57,14 @@ function FloatingChatRender({
     'data-builder-social-widget': 'floating-chat',
     'data-builder-floating-provider': c.provider,
     'data-builder-floating-placement': c.placement,
-    'aria-label': c.label,
+    'aria-label': label,
     style: { background: bg },
   } as const;
 
   const content = (
     <>
       <span aria-hidden="true">{PROVIDER_GLYPH[c.provider]}</span>
-      {c.showLabel ? <span className="builder-social-floating-label">{c.label}</span> : null}
+      {c.showLabel ? <span className="builder-social-floating-label">{label}</span> : null}
     </>
   );
 
@@ -85,78 +96,86 @@ function FloatingChatRender({
 
 function FloatingChatInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const fcNode = node as BuilderFloatingChatCanvasNode;
   const c = fcNode.content;
+  const copy = getFloatingChatCopy(locale);
+  const label = localizedFloatingChatText(c.label, copy.defaultLabel, FLOATING_CHAT_LEGACY_DEFAULTS.label);
   return (
-    <>
-      <label>
-        <span>공급자</span>
+    <div className={styles.root} data-builder-floating-chat-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.provider}</span>
         <select
           value={c.provider}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ provider: event.target.value as BuilderFloatingChatCanvasNode['content']['provider'] })}
         >
-          <option value="whatsapp">WhatsApp</option>
-          <option value="line">LINE</option>
-          <option value="kakao">Kakao</option>
-          <option value="telegram">Telegram</option>
-          <option value="messenger">Messenger</option>
-          <option value="live-chat">Live Chat</option>
-          <option value="custom">Custom</option>
+          <option value="whatsapp">{copy.inspector.providers.whatsapp}</option>
+          <option value="line">{copy.inspector.providers.line}</option>
+          <option value="kakao">{copy.inspector.providers.kakao}</option>
+          <option value="telegram">{copy.inspector.providers.telegram}</option>
+          <option value="messenger">{copy.inspector.providers.messenger}</option>
+          <option value="live-chat">{copy.inspector.providers['live-chat']}</option>
+          <option value="custom">{copy.inspector.providers.custom}</option>
         </select>
       </label>
-      <label>
-        <span>링크 (deep link / URL)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.href}</span>
         <input
           type="text"
           value={c.href}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ href: event.target.value })}
         />
       </label>
-      <label>
-        <span>라벨</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.label}</span>
         <input
           type="text"
-          value={c.label}
+          value={label}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ label: event.target.value })}
         />
       </label>
-      <label>
-        <span>위치</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.placement}</span>
         <select
           value={c.placement}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ placement: event.target.value as BuilderFloatingChatCanvasNode['content']['placement'] })}
         >
-          <option value="bottom-right">오른쪽 아래</option>
-          <option value="bottom-left">왼쪽 아래</option>
-          <option value="bottom-center">아래 중앙</option>
+          <option value="bottom-right">{copy.inspector.placements['bottom-right']}</option>
+          <option value="bottom-left">{copy.inspector.placements['bottom-left']}</option>
+          <option value="bottom-center">{copy.inspector.placements['bottom-center']}</option>
         </select>
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={c.showLabel}
           disabled={disabled}
           onChange={(event) => onUpdate({ showLabel: event.target.checked })}
         />
-        <span>라벨 표시</span>
+        <span>{copy.inspector.showLabel}</span>
       </label>
-      <label>
-        <span>색</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.color}</span>
         <input
           type="text"
           value={c.color}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ color: event.target.value })}
         />
       </label>
-    </>
+    </div>
   );
 }
 
@@ -168,7 +187,7 @@ export default defineComponent({
   defaultContent: {
     provider: 'whatsapp' as const,
     href: 'https://wa.me/',
-    label: '문의하기',
+    label: FLOATING_CHAT_LEGACY_DEFAULTS.label,
     placement: 'bottom-right' as const,
     showLabel: false,
     color: '#25d366',

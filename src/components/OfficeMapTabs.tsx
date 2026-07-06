@@ -126,6 +126,8 @@ export default function OfficeMapTabs({
   const faxLabel = locale === 'ko' ? '팩스' : locale === 'zh-hant' ? '傳真' : 'Fax';
   const viewMapLabel =
     locale === 'ko' ? 'Google 지도에서 보기 (사진·리뷰)' : locale === 'zh-hant' ? '在 Google 地圖查看 (照片·評論)' : 'View on Google Maps (photos & reviews)';
+  const mapPreviewLabel = locale === 'ko' ? '지도 미리보기' : locale === 'zh-hant' ? '地圖預覽' : 'Map preview';
+  const openMapLabel = locale === 'ko' ? '지도 열기' : locale === 'zh-hant' ? '開啟地圖' : 'Open map';
 
   if (!current) return null;
 
@@ -164,6 +166,24 @@ export default function OfficeMapTabs({
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
             />
+            <div
+              className="office-map-fallback"
+              data-office-map-fallback
+            >
+              <div className="office-map-fallback-panel">
+                <span className="office-map-fallback-kicker">{mapPreviewLabel}</span>
+                <strong>{current.title}</strong>
+                <span>{current.address}</span>
+                <a
+                  className="office-map-fallback-link"
+                  href={current.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {openMapLabel}
+                </a>
+              </div>
+            </div>
           </div>
           <article className="card office-card">
             <div className="section-label">{officeLabel}</div>

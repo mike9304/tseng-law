@@ -1,5 +1,6 @@
 'use client';
 
+import { memo } from 'react';
 import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 
@@ -7,17 +8,17 @@ type CanvasDropHighlightProps = {
   absoluteRectById: Map<string, BuilderCanvasNode['rect']>;
   geometryViewport: Viewport;
   hoveredContainerId: string | null;
-  visibleNodes: BuilderCanvasNode[];
+  nodesById: Map<string, BuilderCanvasNode>;
 };
 
-export default function CanvasDropHighlight({
+function CanvasDropHighlight({
   absoluteRectById,
   geometryViewport,
   hoveredContainerId,
-  visibleNodes,
+  nodesById,
 }: CanvasDropHighlightProps) {
   if (!hoveredContainerId) return null;
-  const containerNode = visibleNodes.find((node) => node.id === hoveredContainerId);
+  const containerNode = nodesById.get(hoveredContainerId) ?? null;
   const rect = containerNode
     ? absoluteRectById.get(containerNode.id) ?? resolveViewportRect(containerNode, geometryViewport)
     : null;
@@ -42,3 +43,5 @@ export default function CanvasDropHighlight({
     />
   );
 }
+
+export default memo(CanvasDropHighlight);

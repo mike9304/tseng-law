@@ -9,38 +9,21 @@ import {
   legacyCardStyleToVariant,
   normalizeCardVariantKey,
 } from '@/lib/builder/site/component-variants';
+import { getBlogPostCardCopy } from './blog-post-card-copy';
+import styles from '../BlogWidgetInspector.module.css';
 
-const sectionLabelStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  letterSpacing: '0.05em',
-  color: '#64748b',
-  marginTop: 12,
-  marginBottom: 4,
-  display: 'block',
-};
-
-const selectStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '4px 6px',
-  fontSize: '0.85rem',
-  border: '1px solid #e2e8f0',
-  borderRadius: 6,
-  background: '#fff',
-};
-
-export default function BlogPostCardInspector({ node, onUpdate, disabled = false }: BuilderComponentInspectorProps) {
+export default function BlogPostCardInspector({ node, locale, onUpdate, disabled = false }: BuilderComponentInspectorProps) {
   const fnode = node as BuilderBlogPostCardCanvasNode;
   const c = fnode.content;
   const [available, setAvailable] = useState<BlogPost[]>([]);
+  const copy = getBlogPostCardCopy(locale);
 
   useEffect(() => {
     let cancelled = false;
-    const locale = typeof window === 'undefined'
+    const resolvedLocale = typeof window === 'undefined'
       ? 'ko'
       : window.location.pathname.split('/').filter(Boolean)[0] || 'ko';
-    fetch(`/api/builder/blog/posts?locale=${encodeURIComponent(locale)}&limit=100&scope=all`)
+    fetch(`/api/builder/blog/posts?locale=${encodeURIComponent(resolvedLocale)}&limit=100&scope=all`)
       .then((r) => r.json())
       .then((json) => {
         if (cancelled) return;
@@ -53,75 +36,76 @@ export default function BlogPostCardInspector({ node, onUpdate, disabled = false
   }, []);
 
   return (
-    <>
-      <span style={sectionLabelStyle}>Post</span>
-      <label>
-        <span>Post (slug)</span>
+    <div className={styles.root} data-builder-blog-post-card-inspector="true">
+      <span className={styles.sectionLabel}>{copy.section.post}</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.postSlug}</span>
         <select
-          style={selectStyle}
+          className={styles.control}
           value={c.postId ?? ''}
           disabled={disabled}
           onChange={(e) => onUpdate({ postId: e.target.value || undefined })}
         >
-          <option value="">— Select post —</option>
+          <option value="">{copy.inspector.postPlaceholder}</option>
           {available.map((p) => (
             <option key={p.postId} value={p.postId}>{p.title} ({p.slug})</option>
           ))}
         </select>
       </label>
-      <label>
-        <span>Manual postId override</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.manualPostIdOverride}</span>
         <input
           type="text"
           value={c.postId ?? ''}
           disabled={disabled}
+          className={styles.control}
           onChange={(e) => onUpdate({ postId: e.target.value || undefined })}
-          placeholder="custom-slug"
+          placeholder={copy.inspector.manualPostIdPlaceholder}
         />
       </label>
 
-      <span style={sectionLabelStyle}>Card style</span>
-      <label>
-        <span>Card variant</span>
+      <span className={styles.sectionLabel}>{copy.section.cardStyle}</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.cardVariant}</span>
         <select
-          style={selectStyle}
+          className={styles.control}
           value={normalizeCardVariantKey(c.variant ?? legacyCardStyleToVariant(c.cardStyle))}
           disabled={disabled}
           onChange={(e) => onUpdate({ variant: e.target.value })}
         >
           {CARD_VARIANTS.map((variant) => (
             <option key={variant.key} value={variant.key}>
-              {variant.label}
+              {copy.variants[variant.key] ?? variant.label}
             </option>
           ))}
         </select>
       </label>
 
-      <span style={sectionLabelStyle}>Display</span>
-      <label>
+      <span className={styles.sectionLabel}>{copy.section.display}</span>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showFeaturedImage} disabled={disabled} onChange={(e) => onUpdate({ showFeaturedImage: e.target.checked })} />
-        <span>Featured image</span>
+        <span>{copy.inspector.featuredImage}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showCategory} disabled={disabled} onChange={(e) => onUpdate({ showCategory: e.target.checked })} />
-        <span>Category</span>
+        <span>{copy.inspector.category}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showExcerpt} disabled={disabled} onChange={(e) => onUpdate({ showExcerpt: e.target.checked })} />
-        <span>Excerpt</span>
+        <span>{copy.inspector.excerpt}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showAuthor} disabled={disabled} onChange={(e) => onUpdate({ showAuthor: e.target.checked })} />
-        <span>Author</span>
+        <span>{copy.inspector.author}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showDate} disabled={disabled} onChange={(e) => onUpdate({ showDate: e.target.checked })} />
-        <span>Date</span>
+        <span>{copy.inspector.date}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showReadingTime} disabled={disabled} onChange={(e) => onUpdate({ showReadingTime: e.target.checked })} />
-        <span>Reading time</span>
+        <span>{copy.inspector.readingTime}</span>
       </label>
-    </>
+    </div>
   );
 }

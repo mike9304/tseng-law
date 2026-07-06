@@ -1,10 +1,29 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { listServices } from '@/lib/builder/bookings/storage';
-import { normalizeLocale } from '@/lib/locales';
+import {
+  getPublicBookingApiErrorPayload,
+  type PublicBookingApiErrorCode,
+} from '@/lib/builder/bookings/bookings-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+function errorResponse(
+  locale: Locale,
+  errorCode: PublicBookingApiErrorCode,
+  status: number,
+  init?: ResponseInit,
+): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      ...getPublicBookingApiErrorPayload(locale, errorCode),
+    },
+    { ...init, status },
+  );
+}
 
 function clientIp(request: NextRequest): string {
   return (
@@ -15,22 +34,26 @@ function clientIp(request: NextRequest): string {
 }
 
 export async function GET(request: NextRequest) {
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || undefined);
   // SECURITY: public endpoint — gate against enumeration / scraping / DoS.
   const rate = await checkRateLimit(`booking-services:${clientIp(request)}`, 60, 60_000);
   if (!rate.allowed) {
-    return NextResponse.json(
-      { error: 'Too many requests' },
-      { status: 429, headers: { 'Retry-After': String(Math.ceil(rate.retryAfterMs / 1000)) } },
-    );
+    return errorResponse(locale, 'too_many_requests', 429, {
+      headers: { 'Retry-After': String(Math.ceil(rate.retryAfterMs / 1000)) },
+    });
   }
 
-  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || undefined);
-  const services = await listServices(false);
-  return NextResponse.json({
-    services: services.map((service) => ({
-      ...service,
-      displayName: service.name[locale] || service.name.ko,
-      displayDescription: service.description[locale] || service.description.ko,
-    })),
-  });
+  try {
+    const services = await listServices(false);
+    return NextResponse.json({
+      services: services.map((service) => ({
+        ...service,
+        displayName: service.name[locale] || service.name.ko,
+        displayDescription: service.description[locale] || service.description.ko,
+      })),
+    });
+  } catch (error) {
+    console.error('[booking/services] GET failed:', error);
+    return errorResponse(locale, 'booking_services_failed', 500);
+  }
 }

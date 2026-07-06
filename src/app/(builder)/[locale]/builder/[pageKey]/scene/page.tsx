@@ -14,6 +14,27 @@ import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
+const sceneCopy: Record<Locale, { rootTitle: string; rootDescription: string; pageTitle: (title: string) => string; pageDescription: (title: string) => string }> = {
+  ko: {
+    rootTitle: '장면 그래프 빌더',
+    rootDescription: '읽기 전용 빌더 장면 그래프 기반 보기입니다.',
+    pageTitle: (title: string) => `${title} 장면 그래프`,
+    pageDescription: (title: string) => `${title}의 읽기 전용 장면 그래프 기반 보기입니다.`,
+  },
+  'zh-hant': {
+    rootTitle: '場景圖建構器',
+    rootDescription: '唯讀的建構器場景圖基礎檢視。',
+    pageTitle: (title: string) => `${title} 場景圖`,
+    pageDescription: (title: string) => `${title} 的唯讀場景圖基礎檢視。`,
+  },
+  en: {
+    rootTitle: 'Scene Graph Builder',
+    rootDescription: 'Read-only builder scene graph foundation view.',
+    pageTitle: (title: string) => `${title} Scene Graph`,
+    pageDescription: (title: string) => `Read-only scene graph foundation view for ${title}.`,
+  },
+};
+
 type BuilderPageSceneRouteProps = {
   params: Promise<{
     locale: Locale;
@@ -24,12 +45,13 @@ type BuilderPageSceneRouteProps = {
 export async function generateMetadata({ params }: BuilderPageSceneRouteProps): Promise<Metadata> {
   const resolvedParams = await params;
   const locale = normalizeLocale(resolvedParams.locale);
+  const copy = sceneCopy[locale];
 
   if (!isBuilderPageKey(resolvedParams.pageKey)) {
     return buildSeoMetadata({
       locale,
-      title: 'Scene Graph Builder',
-      description: 'Read-only builder scene graph foundation view.',
+      title: copy.rootTitle,
+      description: copy.rootDescription,
       path: '/builder',
       noindex: true,
     });
@@ -39,8 +61,8 @@ export async function generateMetadata({ params }: BuilderPageSceneRouteProps): 
 
   return buildSeoMetadata({
     locale,
-    title: `${config.title} Scene Graph`,
-    description: `Read-only scene graph foundation view for ${config.title}.`,
+    title: copy.pageTitle(config.title),
+    description: copy.pageDescription(config.title),
     path: `/builder/${resolvedParams.pageKey}/scene`,
     noindex: true,
   });

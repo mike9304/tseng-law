@@ -11,9 +11,11 @@ const STORAGE_KEY = 'hojeong-ai-chat-collapsed';
 export default function QuickContactWidget({
   locale,
   content,
+  previewCollapsed = false,
 }: {
   locale: Locale;
   content?: SiteContent['quickContact'];
+  previewCollapsed?: boolean;
 }) {
   const pathname = usePathname();
   const isUtilityPage = Boolean(
@@ -21,6 +23,7 @@ export default function QuickContactWidget({
     || pathname?.match(/^\/(?:ko|zh-hant|en)\/(?:login|account)(?:\/|$)/)
     || pathname?.match(/^\/(?:ko|zh-hant|en)\/store\/checkout(?:\/|$)/),
   );
+  const hiddenByUtilityPage = isUtilityPage && !previewCollapsed;
   const resolvedContent = content ?? siteContent[locale].quickContact;
   // Start closed to match SSR, then sync with localStorage on mount
   const [chatOpen, setChatOpen] = useState(false);
@@ -31,18 +34,23 @@ export default function QuickContactWidget({
     locale === 'ko' ? 'AI 상담' : locale === 'zh-hant' ? 'AI 諮詢' : 'AI Chat';
 
   useEffect(() => {
-    if (isUtilityPage) {
+    if (previewCollapsed) {
+      setChatOpen(false);
+      setHydrated(true);
+      return;
+    }
+    if (hiddenByUtilityPage) {
       setChatOpen(false);
       setHydrated(true);
       return;
     }
     try {
       const collapsed = window.localStorage.getItem(STORAGE_KEY);
-      // First visit on smaller screens should not cover primary page controls.
-      // Once the visitor opens/closes the widget, honor that stored state.
+      // A first-time visitor (no stored preference) should never have the
+      // chat cover primary page controls on any viewport. Once the visitor
+      // opens/closes the widget, honor that stored state.
       if (collapsed == null) {
-        const compactViewport = window.matchMedia('(max-width: 1024px)').matches;
-        setChatOpen(!compactViewport);
+        setChatOpen(false);
       } else {
         setChatOpen(collapsed !== 'true');
       }
@@ -50,25 +58,29 @@ export default function QuickContactWidget({
       setChatOpen(false);
     }
     setHydrated(true);
-  }, [isUtilityPage]);
+  }, [hiddenByUtilityPage, previewCollapsed]);
 
   const handleClose = () => {
     restoreToggleOnCloseRef.current = true;
     setChatOpen(false);
-    try {
-      window.localStorage.setItem(STORAGE_KEY, 'true');
-    } catch {
-      /* ignore */
+    if (!previewCollapsed) {
+      try {
+        window.localStorage.setItem(STORAGE_KEY, 'true');
+      } catch {
+        /* ignore */
+      }
     }
   };
 
   const handleOpen = () => {
     restoreToggleOnCloseRef.current = false;
     setChatOpen(true);
-    try {
-      window.localStorage.setItem(STORAGE_KEY, 'false');
-    } catch {
-      /* ignore */
+    if (!previewCollapsed) {
+      try {
+        window.localStorage.setItem(STORAGE_KEY, 'false');
+      } catch {
+        /* ignore */
+      }
     }
   };
 
@@ -86,7 +98,7 @@ export default function QuickContactWidget({
     return null;
   }
 
-  if (isUtilityPage) {
+  if (hiddenByUtilityPage) {
     return null;
   }
 
@@ -98,8 +110,9 @@ export default function QuickContactWidget({
             ref={toggleRef}
             type="button"
             className="quick-contact-toggle"
-            aria-label={resolvedContent.buttonLabel}
+            aria-label={`${toggleText} ${resolvedContent.buttonLabel}`}
             aria-expanded={chatOpen}
+            aria-pressed={chatOpen}
             onClick={handleOpen}
           >
             {toggleText}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState, type KeyboardEvent, type MouseEvent } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent, type MouseEvent } from 'react';
 import {
   DndContext,
   DragOverlay,
@@ -17,12 +17,15 @@ import {
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
-import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
 import LayerSearchInput from './LayerSearchInput';
 import LayersTreeRow from './LayersTreeRow';
+import { getSandboxLayersPanelCopy, type SandboxLayersPanelCopy } from './sandbox-layers-panel-copy';
 import styles from './SandboxPage.module.css';
+
+const EMPTY_LAYER_NODES: BuilderCanvasNode[] = [];
 
 interface FlatLayerRow {
   node: BuilderCanvasNode;
@@ -38,20 +41,90 @@ interface LayerDropIntent {
   mode: LayerDropMode;
 }
 
-const KIND_LABEL: Record<string, string> = {
-  container: '컨테이너', section: '섹션', text: '텍스트', heading: '제목',
-  image: '이미지', button: '버튼', divider: '구분선', spacer: '여백',
-  icon: '아이콘', 'video-embed': '동영상', form: '폼', map: '지도',
-  composite: '복합 요소', group: '그룹',
-};
+function sameDropIntent(left: LayerDropIntent | null, right: LayerDropIntent | null): boolean {
+  if (left === right) return true;
+  if (!left || !right) return false;
+  return left.activeId === right.activeId
+    && left.targetId === right.targetId
+    && left.mode === right.mode;
+}
 
-function getLayerLabel(node: BuilderCanvasNode): string {
+function getDefaultCollapsedLayerIds(
+  childrenByParent: Map<string | null, BuilderCanvasNode[]>,
+): Set<string> {
+  const rootIds = new Set((childrenByParent.get(null) ?? []).map((node) => node.id));
+  const collapsed = new Set<string>();
+
+  for (const [parentId, children] of childrenByParent) {
+    if (!parentId || rootIds.has(parentId) || children.length === 0) continue;
+    collapsed.add(parentId);
+  }
+
+  return collapsed;
+}
+
+function getLayerLabel(node: BuilderCanvasNode, copy: SandboxLayersPanelCopy): string {
   const content = node.content as Record<string, unknown>;
-  const text = content.text ?? content.label ?? content.alt ?? content.title;
+  const semanticLabel = resolveLayerTechnicalLabel(content.label, copy)
+    ?? resolveLayerTechnicalLabel(node.id, copy);
+  const text = content.text ?? content.alt ?? content.title;
   if (typeof text === 'string' && text.trim()) {
     return text.trim().slice(0, 64);
   }
-  return KIND_LABEL[node.kind] ?? node.kind;
+  if (semanticLabel) {
+    return semanticLabel;
+  }
+  if (typeof content.label === 'string' && content.label.trim()) {
+    return content.label.trim().slice(0, 64);
+  }
+  return copy.kindLabels[node.kind] ?? node.kind;
+}
+
+export function resolveLayerTechnicalLabel(value: unknown, copy: SandboxLayersPanelCopy): string | null {
+  if (typeof value !== 'string') return null;
+  const normalized = value
+    .trim()
+    .toLowerCase()
+    .replace(/[_-]+/g, ' ')
+    .replace(/\s+/g, ' ');
+  if (!normalized || !/^[a-z0-9 ]+$/.test(normalized)) return null;
+
+  const tokens = normalized.split(' ');
+  if (tokens[0] === 'home') tokens.shift();
+
+  const labels: string[] = [];
+  for (let index = 0; index < tokens.length; index += 1) {
+    const token = tokens[index];
+    const nextToken = tokens[index + 1];
+    const compositeKey = nextToken ? `${token}-${nextToken}` : token;
+    const compositeSection = copy.row.semanticLabels.sections[compositeKey];
+    if (compositeSection) {
+      labels.push(compositeSection);
+      index += 1;
+      continue;
+    }
+
+    const sectionLabel = copy.row.semanticLabels.sections[token];
+    if (sectionLabel) {
+      labels.push(sectionLabel);
+      continue;
+    }
+
+    const roleLabel = copy.row.semanticLabels.roles[token];
+    if (roleLabel) {
+      labels.push(roleLabel);
+      continue;
+    }
+
+    if (/^\d+$/.test(token)) {
+      labels.push(token);
+      continue;
+    }
+
+    return null;
+  }
+
+  return labels.length > 0 ? labels.join(' ').slice(0, 64) : null;
 }
 
 function getSearchText(node: BuilderCanvasNode): string {
@@ -124,29 +197,29 @@ function reorderVisualLayers(
   return nextLayers;
 }
 
-export default function SandboxLayersPanel() {
-  const {
-    document,
-    selectedNodeId,
-    selectedNodeIds,
-    activeGroupId,
-    setSelectedNodeId,
-    toggleNodeSelection,
-    enterGroup,
-    updateNode,
-    reorderNodes,
-    moveNodeIntoContainer,
-    moveNodeOutOfContainer,
-  } = useBuilderCanvasStore();
+export default function SandboxLayersPanel({ locale = 'ko' }: { locale?: Locale }) {
+  const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? EMPTY_LAYER_NODES);
+  const nodesById = useBuilderCanvasStore((state) => state.nodesById);
+  const selectedNodeId = useBuilderCanvasStore((state) => state.selectedNodeId);
+  const selectedNodeIdSet = useBuilderCanvasStore((state) => state.selectedNodeIdSet);
+  const activeGroupId = useBuilderCanvasStore((state) => state.activeGroupId);
+  const setSelectedNodeId = useBuilderCanvasStore((state) => state.setSelectedNodeId);
+  const toggleNodeSelection = useBuilderCanvasStore((state) => state.toggleNodeSelection);
+  const enterGroup = useBuilderCanvasStore((state) => state.enterGroup);
+  const updateNode = useBuilderCanvasStore((state) => state.updateNode);
+  const reorderNodes = useBuilderCanvasStore((state) => state.reorderNodes);
+  const moveNodeIntoContainer = useBuilderCanvasStore((state) => state.moveNodeIntoContainer);
+  const moveNodeOutOfContainer = useBuilderCanvasStore((state) => state.moveNodeOutOfContainer);
   const [open, setOpen] = useState(true);
   const [query, setQuery] = useState('');
   const [collapsedIds, setCollapsedIds] = useState<Set<string>>(() => new Set());
   const [activeId, setActiveId] = useState<string | null>(null);
   const [hoveredLayerId, setHoveredLayerId] = useState<string | null>(null);
   const [dropIntent, setDropIntent] = useState<LayerDropIntent | null>(null);
+  const dropIntentRef = useRef<LayerDropIntent | null>(null);
+  const collapsedTreeSignatureRef = useRef('');
+  const copy = useMemo(() => getSandboxLayersPanelCopy(locale), [locale]);
 
-  const nodes = useMemo(() => document?.nodes ?? [], [document?.nodes]);
-  const nodesById = useMemo(() => getCanvasNodesById(nodes), [nodes]);
   const normalizedQuery = query.trim().toLowerCase();
 
   const childrenByParent = useMemo(() => {
@@ -162,6 +235,18 @@ export default function SandboxLayersPanel() {
     }
     return map;
   }, [nodes, nodesById]);
+
+  const topLevelTreeSignature = useMemo(
+    () => (childrenByParent.get(null) ?? []).map((node) => node.id).join('|'),
+    [childrenByParent],
+  );
+
+  useEffect(() => {
+    if (!nodes.length || !topLevelTreeSignature) return;
+    if (collapsedTreeSignatureRef.current === topLevelTreeSignature) return;
+    collapsedTreeSignatureRef.current = topLevelTreeSignature;
+    setCollapsedIds(getDefaultCollapsedLayerIds(childrenByParent));
+  }, [childrenByParent, nodes, topLevelTreeSignature]);
 
   const searchState = useMemo(() => {
     const directMatches = new Set<string>();
@@ -227,6 +312,7 @@ export default function SandboxLayersPanel() {
 
   const handleDragStart = useCallback((event: DragStartEvent) => {
     setActiveId(String(event.active.id));
+    dropIntentRef.current = null;
     setDropIntent(null);
   }, []);
 
@@ -267,7 +353,10 @@ export default function SandboxLayersPanel() {
 
   const handleDragMove = useCallback(
     (event: DragMoveEvent) => {
-      setDropIntent(resolveLayerDropIntent(event));
+      const nextDropIntent = resolveLayerDropIntent(event);
+      if (sameDropIntent(dropIntentRef.current, nextDropIntent)) return;
+      dropIntentRef.current = nextDropIntent;
+      setDropIntent(nextDropIntent);
     },
     [resolveLayerDropIntent],
   );
@@ -275,7 +364,8 @@ export default function SandboxLayersPanel() {
   const handleDragEnd = useCallback(
     (event: DragEndEvent) => {
       setActiveId(null);
-      const resolvedDropIntent = resolveLayerDropIntent(event) ?? dropIntent;
+      const resolvedDropIntent = resolveLayerDropIntent(event) ?? dropIntentRef.current;
+      dropIntentRef.current = null;
       setDropIntent(null);
       const { active, over } = event;
       if (!over || active.id === over.id || !resolvedDropIntent) return;
@@ -333,7 +423,6 @@ export default function SandboxLayersPanel() {
     },
     [
       allVisualLayers,
-      dropIntent,
       moveNodeIntoContainer,
       moveNodeOutOfContainer,
       nodesById,
@@ -345,7 +434,12 @@ export default function SandboxLayersPanel() {
 
   const handleDragCancel = useCallback(() => {
     setActiveId(null);
+    dropIntentRef.current = null;
     setDropIntent(null);
+  }, []);
+
+  const handleHoverEnd = useCallback(() => {
+    setHoveredLayerId(null);
   }, []);
 
   const handleSelect = useCallback(
@@ -409,24 +503,29 @@ export default function SandboxLayersPanel() {
     <section className={styles.panelSection} data-builder-layers-panel="true">
       <header className={styles.panelSectionHeader}>
         <div>
-          <span>Layers</span>
-          <strong>{nodes.length} nodes</strong>
+          <span>{copy.title}</span>
+          <strong>{copy.nodeCountLabel(nodes.length)}</strong>
         </div>
         <button
           type="button"
           className={styles.panelHeaderButton}
-          title={open ? '레이어 패널 접기' : '레이어 패널 열기'}
+          title={open ? copy.collapseTitle : copy.expandTitle}
           onClick={() => setOpen((current) => !current)}
         >
-          {open ? 'Hide' : 'Show'}
+          {open ? copy.hideLabel : copy.showLabel}
         </button>
       </header>
       <div className={`${styles.panelBody} ${!open ? styles.panelBodyCollapsed : ''}`}>
         {nodes.length === 0 ? (
-          <p className={styles.panelEmpty}>아직 node 가 없습니다. catalog 에서 추가하세요.</p>
+          <p className={styles.panelEmpty}>{copy.emptyLabel}</p>
         ) : (
           <>
-            <LayerSearchInput value={query} resultCount={matchCount} onChange={setQuery} />
+            <LayerSearchInput
+              value={query}
+              resultCount={matchCount}
+              copy={copy.search}
+              onChange={setQuery}
+            />
             <DndContext
               sensors={sensors}
               collisionDetection={closestCenter}
@@ -450,21 +549,22 @@ export default function SandboxLayersPanel() {
                         key={node.id}
                         node={node}
                         depth={depth}
-                        label={getLayerLabel(node)}
+                        label={getLayerLabel(node, copy)}
                         childCount={childCount}
                         isExpanded={isExpanded}
-                        isSelected={selectedNodeIds.includes(node.id)}
+                        isSelected={selectedNodeIdSet.has(node.id)}
                         isPrimary={selectedNodeId === node.id}
                         isActiveGroup={activeGroupId === node.id}
                         isMatched={isMatched}
                         isDimmed={isDimmed}
                         dropMode={dropIntent?.targetId === node.id ? dropIntent.mode : null}
+                        copy={copy}
                         onSelect={handleSelect}
                         onToggleExpanded={handleToggleExpanded}
                         onToggleVisibility={handleToggleVisibility}
                         onToggleLock={handleToggleLock}
                         onHoverStart={setHoveredLayerId}
-                        onHoverEnd={() => setHoveredLayerId(null)}
+                        onHoverEnd={handleHoverEnd}
                         onEnterGroup={handleEnterGroup}
                       />
                     );
@@ -474,14 +574,14 @@ export default function SandboxLayersPanel() {
               <DragOverlay>
                 {activeNode ? (
                   <div className={styles.layerDragPreview}>
-                    <strong>{getLayerLabel(activeNode)}</strong>
-                    <small>{activeNode.kind} · z {activeNode.zIndex}</small>
+                    <strong>{getLayerLabel(activeNode, copy)}</strong>
+                    <small>{copy.kindLabels[activeNode.kind] ?? activeNode.kind} · z {activeNode.zIndex}</small>
                   </div>
                 ) : null}
               </DragOverlay>
             </DndContext>
             <p className={styles.layerPanelHint}>
-              Drop on the middle of a container to nest. Drop above or below a row to reorder or move beside that row.
+              {copy.dropHintLabel}
             </p>
           </>
         )}

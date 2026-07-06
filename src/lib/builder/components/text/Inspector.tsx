@@ -5,7 +5,9 @@ import FontPicker from '@/components/builder/editor/FontPicker';
 import LinkPicker from '@/components/builder/editor/LinkPicker';
 import ThemeTextPresetPicker from '@/components/builder/editor/ThemeTextPresetPicker';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
+import { getTextControlsCopy } from '@/components/builder/editor/text-controls-copy';
 import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
+import { localizedTextDefault } from './text-copy';
 import {
   BUILDER_RICH_TEXT_FORMAT,
   type BuilderRichText,
@@ -20,7 +22,7 @@ import {
   resolveThemeColor,
   resolveThemeTextTypography,
 } from '@/lib/builder/site/theme';
-import styles from '@/components/builder/canvas/SandboxPage.module.css';
+import styles from './TextInspector.module.css';
 
 function richTextFromDoc(plainText: string, doc: TipTapDocJson): BuilderRichText {
   return {
@@ -47,12 +49,12 @@ function quoteRichText(text: string): BuilderRichText {
   });
 }
 
-function bulletListRichText(text: string): BuilderRichText {
+export function bulletListRichText(text: string, fallbackItems: string[]): BuilderRichText {
   const lines = text
     .split(/\r\n?|\n/g)
     .map((line) => line.trim())
     .filter(Boolean);
-  const items = lines.length > 0 ? lines : ['첫 번째 항목', '두 번째 항목', '세 번째 항목'];
+  const items = lines.length > 0 ? lines : fallbackItems;
   return richTextFromDoc(items.join('\n'), {
     type: 'doc',
     content: [
@@ -77,9 +79,12 @@ export default function TextInspector({
   onUpdate,
   disabled = false,
   linkPickerContext,
+  locale = 'en',
 }: BuilderComponentInspectorProps) {
   const textNode = node as BuilderTextCanvasNode;
   const theme = useBuilderTheme();
+  const copy = getTextControlsCopy(locale);
+  const text = localizedTextDefault(textNode.content.text, locale);
   const typography = resolveThemeTextTypography(textNode.content, theme);
   const paletteTokens = THEME_COLOR_TOKENS.map((token) => ({
     token,
@@ -91,87 +96,89 @@ export default function TextInspector({
   };
 
   return (
-    <>
-      <label>
-        <span>Theme preset</span>
+    <div className={styles.root} data-builder-text-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.themePresetLabel}</span>
         <ThemeTextPresetPicker
           value={textNode.content.themePreset}
           disabled={disabled}
+          locale={locale}
           onChange={(key) => onUpdate(createThemeTextPresetPatch(key, theme))}
           onClear={() => onUpdate({ themePreset: undefined })}
         />
       </label>
-      <label>
-        <span>Text</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.textLabel}</span>
         <textarea
-          value={textNode.content.text}
+          value={text}
           rows={4}
           disabled={disabled}
+          className={`${styles.control} ${styles.textarea}`}
           onChange={(event) => {
             const text = event.target.value;
             onUpdate({ text, richText: richTextFromPlainText(text) });
           }}
         />
-        <small style={{ color: '#b45309', fontSize: '0.72rem', lineHeight: 1.35 }}>
-          ⚠ 텍스트만 편집하면 서식이 사라집니다. 캔버스에서 직접 편집하세요.
-        </small>
+        <small className={styles.warning}>{copy.textInspector.warning}</small>
       </label>
-      <fieldset style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '8px 10px', margin: 0 }}>
-        <legend style={{ fontSize: '0.75rem', fontWeight: 600, color: '#334155', padding: '0 4px' }}>Rich text shortcuts</legend>
-        <div className={styles.inspectorActionRow}>
+      <fieldset className={styles.fieldset}>
+        <legend className={styles.legend}>{copy.textInspector.shortcutHeading}</legend>
+        <div className={styles.actionRow}>
           <button
             type="button"
             className={styles.actionButton}
             disabled={disabled}
             onClick={() => {
-              const richText = quoteRichText(textNode.content.text);
+              const richText = quoteRichText(text);
               onUpdate({ richText, text: richText.plainText, quoteStyle: 'classic', themePreset: 'quote' });
             }}
           >
-            Quote
+            {copy.textInspector.quoteLabel}
           </button>
           <button
             type="button"
             className={styles.actionButton}
             disabled={disabled}
             onClick={() => {
-              const richText = bulletListRichText(textNode.content.text);
+              const richText = bulletListRichText(text, copy.textInspector.bulletListFallbackItems);
               onUpdate({ richText, text: richText.plainText, quoteStyle: 'none', columns: 1 });
             }}
           >
-            Bullet list
+            {copy.textInspector.bulletListLabel}
           </button>
           <button
             type="button"
             className={styles.actionButton}
             disabled={disabled}
-            onClick={() => onUpdate({ richText: richTextFromPlainText(textNode.content.text) })}
+            onClick={() => onUpdate({ richText: richTextFromPlainText(text) })}
           >
-            Plain block
+            {copy.textInspector.plainBlockLabel}
           </button>
         </div>
       </fieldset>
-      <label>
-        <span>Font</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.fontLabel}</span>
         <FontPicker
           value={typography.fontFamily}
           disabled={disabled}
+          locale={locale}
           onChange={(fontFamily) => updateDetachedTypography({ fontFamily })}
         />
       </label>
-      <label>
-        <span>Font size</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.fontSizeLabel}</span>
         <input
           type="number"
           min={12}
           max={160}
           value={typography.fontSize}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => updateDetachedTypography({ fontSize: Number(event.target.value) })}
         />
       </label>
-      <label>
-        <span>Color</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.colorLabel}</span>
         <ColorPicker
           value={typography.color}
           paletteTokens={paletteTokens}
@@ -179,21 +186,22 @@ export default function TextInspector({
           onChange={(color: BuilderColorValue) => updateDetachedTypography({ color })}
         />
       </label>
-      <label>
-        <span>Weight</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.weightLabel}</span>
         <select
           value={typography.fontWeight}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => updateDetachedTypography({ fontWeight: event.target.value })}
         >
-          <option value="regular">Regular</option>
-          <option value="medium">Medium</option>
-          <option value="bold">Bold</option>
+          <option value="regular">{copy.textInspector.fontWeightRegular}</option>
+          <option value="medium">{copy.textInspector.fontWeightMedium}</option>
+          <option value="bold">{copy.textInspector.fontWeightBold}</option>
         </select>
       </label>
-      <label>
-        <span>Weight (numeric)</span>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.numericWeightLabel}</span>
+        <div className={styles.rangeRow}>
           <input
             type="range"
             min={100}
@@ -207,46 +215,46 @@ export default function TextInspector({
                 fontWeightNumeric: next === 0 ? undefined : next,
               });
             }}
-            style={{ flex: 1 }}
+            className={styles.range}
           />
-          <span style={{ minWidth: 36, fontSize: '0.75rem', color: '#475569' }}>
+          <span className={styles.value}>
             {textNode.content.fontWeightNumeric ?? '—'}
           </span>
           {textNode.content.fontWeightNumeric !== undefined ? (
             <button
               type="button"
               disabled={disabled}
-              style={{ fontSize: '0.7rem', cursor: 'pointer', background: 'none', border: '1px solid #cbd5e1', borderRadius: 4, padding: '1px 6px', color: '#64748b' }}
+              className={styles.clearButton}
               onClick={() => updateDetachedTypography({ fontWeightNumeric: undefined })}
             >
-              Clear
+              {copy.textInspector.clearLabel}
             </button>
           ) : null}
         </div>
-        <small style={{ color: '#64748b', fontSize: '0.7rem' }}>
-          비어있으면 위 enum (Regular/Medium/Bold) 사용. 100~900 설정 시 우선.
-        </small>
+        <small className={styles.helpText}>{copy.textInspector.numericWeightHelp}</small>
       </label>
-      <label>
-        <span>Style</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.styleLabel}</span>
         <select
           value={textNode.content.fontStyle ?? 'normal'}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) =>
             updateDetachedTypography({
               fontStyle: event.target.value === 'italic' ? 'italic' : undefined,
             })
           }
         >
-          <option value="normal">Normal</option>
-          <option value="italic">Italic</option>
+          <option value="normal">{copy.textInspector.styleNormal}</option>
+          <option value="italic">{copy.textInspector.styleItalic}</option>
         </select>
       </label>
-      <label>
-        <span>Decoration</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.decorationLabel}</span>
         <select
           value={textNode.content.textDecoration ?? 'none'}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => {
             const v = event.target.value;
             updateDetachedTypography({
@@ -254,26 +262,27 @@ export default function TextInspector({
             });
           }}
         >
-          <option value="none">None</option>
-          <option value="underline">Underline</option>
-          <option value="line-through">Line-through</option>
-          <option value="underline line-through">Both</option>
+          <option value="none">{copy.textInspector.decorationNone}</option>
+          <option value="underline">{copy.textInspector.decorationUnderline}</option>
+          <option value="line-through">{copy.textInspector.decorationLineThrough}</option>
+          <option value="underline line-through">{copy.textInspector.decorationBoth}</option>
         </select>
       </label>
-      <label>
-        <span>Align</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.alignLabel}</span>
         <select
           value={textNode.content.align}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ align: event.target.value })}
         >
-          <option value="left">Left</option>
-          <option value="center">Center</option>
-          <option value="right">Right</option>
+          <option value="left">{copy.textInspector.alignOptionLeft}</option>
+          <option value="center">{copy.textInspector.alignOptionCenter}</option>
+          <option value="right">{copy.textInspector.alignOptionRight}</option>
         </select>
       </label>
-      <label>
-        <span>Line height</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.lineHeightLabel}</span>
         <input
           type="range"
           min={0.5}
@@ -281,12 +290,13 @@ export default function TextInspector({
           step={0.05}
           value={typography.lineHeight}
           disabled={disabled}
+          className={styles.range}
           onChange={(event) => updateDetachedTypography({ lineHeight: Number(event.target.value) })}
         />
-        <span>{typography.lineHeight.toFixed(2)}</span>
+        <span className={styles.value}>{typography.lineHeight.toFixed(2)}</span>
       </label>
-      <label>
-        <span>Letter spacing</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.letterSpacingLabel}</span>
         <input
           type="number"
           min={-2}
@@ -294,72 +304,77 @@ export default function TextInspector({
           step={0.5}
           value={typography.letterSpacing}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => updateDetachedTypography({ letterSpacing: Number(event.target.value) })}
         />
       </label>
-      <label>
-        <span>Vertical align</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.verticalAlignLabel}</span>
         <select
           value={textNode.content.verticalAlign ?? 'top'}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ verticalAlign: event.target.value })}
         >
-          <option value="top">Top</option>
-          <option value="center">Center</option>
-          <option value="bottom">Bottom</option>
+          <option value="top">{copy.textInspector.verticalAlignTop}</option>
+          <option value="center">{copy.textInspector.verticalAlignCenter}</option>
+          <option value="bottom">{copy.textInspector.verticalAlignBottom}</option>
         </select>
       </label>
-      <label>
-        <span>Text transform</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.textTransformLabel}</span>
         <select
           value={textNode.content.textTransform ?? 'none'}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ textTransform: event.target.value })}
         >
-          <option value="none">None</option>
-          <option value="uppercase">Uppercase</option>
-          <option value="lowercase">Lowercase</option>
-          <option value="capitalize">Capitalize</option>
+          <option value="none">{copy.textInspector.textTransformNone}</option>
+          <option value="uppercase">{copy.textInspector.textTransformUppercase}</option>
+          <option value="lowercase">{copy.textInspector.textTransformLowercase}</option>
+          <option value="capitalize">{copy.textInspector.textTransformCapitalize}</option>
         </select>
       </label>
-      <fieldset style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '8px 10px', margin: 0 }}>
-        <legend style={{ fontSize: '0.75rem', fontWeight: 600, color: '#334155', padding: '0 4px' }}>Text effects</legend>
-        <label>
-          <span>Columns</span>
+      <fieldset className={styles.fieldset}>
+        <legend className={styles.legend}>{copy.textInspector.textEffectsHeading}</legend>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.textInspector.columnsLabel}</span>
           <input
             type="number"
             min={1}
             max={4}
             value={textNode.content.columns ?? 1}
             disabled={disabled}
+            className={styles.control}
             onChange={(event) => onUpdate({ columns: Number(event.target.value) })}
           />
         </label>
-        <label>
-          <span>Column gap</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.textInspector.columnGapLabel}</span>
           <input
             type="number"
             min={0}
             max={96}
             value={textNode.content.columnGap ?? 24}
             disabled={disabled || (textNode.content.columns ?? 1) <= 1}
+            className={styles.control}
             onChange={(event) => onUpdate({ columnGap: Number(event.target.value) })}
           />
         </label>
-        <label>
-          <span>Quote style</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.textInspector.quoteStyleLabel}</span>
           <select
             value={textNode.content.quoteStyle ?? 'none'}
             disabled={disabled}
+            className={styles.control}
             onChange={(event) => onUpdate({ quoteStyle: event.target.value })}
           >
-            <option value="none">None</option>
-            <option value="classic">Classic rule</option>
-            <option value="pull">Pull quote</option>
+            <option value="none">{copy.textInspector.quoteStyleNone}</option>
+            <option value="classic">{copy.textInspector.quoteStyleClassic}</option>
+            <option value="pull">{copy.textInspector.quoteStylePull}</option>
           </select>
         </label>
-        <label>
-          <span>Marquee</span>
+        <label className={styles.checkboxRow}>
           <input
             type="checkbox"
             checked={Boolean(textNode.content.marquee?.enabled)}
@@ -376,17 +391,19 @@ export default function TextInspector({
               })
             }
           />
+          <span>{copy.textInspector.marqueeLabel}</span>
         </label>
         {textNode.content.marquee?.enabled ? (
           <>
-            <label>
-              <span>Marquee speed</span>
+            <label className={styles.field}>
+              <span className={styles.label}>{copy.textInspector.marqueeSpeedLabel}</span>
               <input
                 type="number"
                 min={5}
                 max={120}
                 value={textNode.content.marquee.speed ?? 22}
                 disabled={disabled}
+                className={styles.control}
                 onChange={(event) =>
                   onUpdate({
                     marquee: {
@@ -398,11 +415,12 @@ export default function TextInspector({
                 }
               />
             </label>
-            <label>
-              <span>Direction</span>
+            <label className={styles.field}>
+              <span className={styles.label}>{copy.textInspector.directionLabel}</span>
               <select
                 value={textNode.content.marquee.direction ?? 'left'}
                 disabled={disabled}
+                className={styles.control}
                 onChange={(event) =>
                   onUpdate({
                     marquee: {
@@ -413,14 +431,13 @@ export default function TextInspector({
                   })
                 }
               >
-                <option value="left">Left</option>
-                <option value="right">Right</option>
+                <option value="left">{copy.textInspector.marqueeDirectionLeft}</option>
+                <option value="right">{copy.textInspector.marqueeDirectionRight}</option>
               </select>
             </label>
           </>
         ) : null}
-        <label>
-          <span>Text on path</span>
+        <label className={styles.checkboxRow}>
           <input
             type="checkbox"
             checked={Boolean(textNode.content.textPath?.enabled)}
@@ -437,14 +454,16 @@ export default function TextInspector({
               })
             }
           />
+          <span>{copy.textInspector.textOnPathLabel}</span>
         </label>
         {textNode.content.textPath?.enabled ? (
           <>
-            <label>
-              <span>Path curve</span>
+            <label className={styles.field}>
+              <span className={styles.label}>{copy.textInspector.pathCurveLabel}</span>
               <select
                 value={textNode.content.textPath.curve ?? 'arc'}
                 disabled={disabled}
+                className={styles.control}
                 onChange={(event) =>
                   onUpdate({
                     textPath: {
@@ -455,18 +474,19 @@ export default function TextInspector({
                   })
                 }
               >
-                <option value="arc">Arc</option>
-                <option value="wave">Wave</option>
+                <option value="arc">{copy.textInspector.pathCurveArc}</option>
+                <option value="wave">{copy.textInspector.pathCurveWave}</option>
               </select>
             </label>
-            <label>
-              <span>Path baseline</span>
+            <label className={styles.field}>
+              <span className={styles.label}>{copy.textInspector.pathBaselineLabel}</span>
               <input
                 type="range"
                 min={20}
                 max={90}
                 value={textNode.content.textPath.baseline ?? 62}
                 disabled={disabled}
+                className={styles.range}
                 onChange={(event) =>
                   onUpdate({
                     textPath: {
@@ -477,13 +497,13 @@ export default function TextInspector({
                   })
                 }
               />
-              <span>{textNode.content.textPath.baseline ?? 62}</span>
+              <span className={styles.value}>{textNode.content.textPath.baseline ?? 62}</span>
             </label>
           </>
         ) : null}
       </fieldset>
-      <label>
-        <span>Background color</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.textInspector.backgroundColorLabel}</span>
         <ColorPicker
           value={textNode.content.backgroundColor}
           paletteTokens={paletteTokens}
@@ -494,28 +514,27 @@ export default function TextInspector({
           <button
             type="button"
             disabled={disabled}
-            style={{ fontSize: '0.72rem', marginTop: 2, cursor: 'pointer', background: 'none', border: '1px solid #cbd5e1', borderRadius: 4, padding: '2px 6px', color: '#64748b' }}
+            className={styles.clearButton}
             onClick={() => onUpdate({ backgroundColor: '' })}
           >
-            Clear
+            {copy.textInspector.clearLabel}
           </button>
         )}
       </label>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 4 }}>
-        <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#475569' }}>
-          Link
-        </span>
+      <div className={styles.linkSection}>
+        <span className={styles.sectionLabel}>{copy.textInspector.linkLabel}</span>
         <LinkPicker
           value={(textNode.content.link ?? null) as LinkValue | null}
           onChange={(link) => onUpdate({ link: link ?? undefined })}
           context={linkPickerContext}
           disabled={disabled}
+          locale={locale}
         />
       </div>
-      <fieldset style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '8px 10px', margin: 0 }}>
-        <legend style={{ fontSize: '0.75rem', fontWeight: 600, color: '#334155', padding: '0 4px' }}>Text shadow</legend>
-        <label>
-          <span>X</span>
+      <fieldset className={styles.fieldset}>
+        <legend className={styles.legend}>{copy.textInspector.textShadowHeading}</legend>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.textInspector.xLabel}</span>
           <input
             type="number"
             min={-50}
@@ -523,6 +542,7 @@ export default function TextInspector({
             step={1}
             value={textNode.content.textShadow?.x ?? 0}
             disabled={disabled}
+            className={styles.control}
             onChange={(event) =>
               onUpdate({
                 textShadow: {
@@ -535,8 +555,8 @@ export default function TextInspector({
             }
           />
         </label>
-        <label>
-          <span>Y</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.textInspector.yLabel}</span>
           <input
             type="number"
             min={-50}
@@ -544,6 +564,7 @@ export default function TextInspector({
             step={1}
             value={textNode.content.textShadow?.y ?? 0}
             disabled={disabled}
+            className={styles.control}
             onChange={(event) =>
               onUpdate({
                 textShadow: {
@@ -556,8 +577,8 @@ export default function TextInspector({
             }
           />
         </label>
-        <label>
-          <span>Blur</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.textInspector.blurLabel}</span>
           <input
             type="number"
             min={0}
@@ -565,6 +586,7 @@ export default function TextInspector({
             step={1}
             value={textNode.content.textShadow?.blur ?? 0}
             disabled={disabled}
+            className={styles.control}
             onChange={(event) =>
               onUpdate({
                 textShadow: {
@@ -577,12 +599,13 @@ export default function TextInspector({
             }
           />
         </label>
-        <label>
-          <span>Color</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.textInspector.colorLabel}</span>
           <input
             type="color"
             value={normalizeHex(resolveThemeColor(textNode.content.textShadow?.color ?? '#000000', theme))}
             disabled={disabled}
+            className={`${styles.control} ${styles.colorInput}`}
             onChange={(event) =>
               onUpdate({
                 textShadow: {
@@ -599,14 +622,14 @@ export default function TextInspector({
           <button
             type="button"
             disabled={disabled}
-            style={{ fontSize: '0.72rem', marginTop: 4, cursor: 'pointer', background: 'none', border: '1px solid #cbd5e1', borderRadius: 4, padding: '2px 6px', color: '#64748b' }}
+            className={styles.clearButton}
             onClick={() => onUpdate({ textShadow: undefined })}
           >
-            Clear shadow
+            {copy.textInspector.clearShadowLabel}
           </button>
         )}
       </fieldset>
-    </>
+    </div>
   );
 }
 

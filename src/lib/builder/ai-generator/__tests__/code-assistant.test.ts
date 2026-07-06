@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import {
+  applySelectedDiffHunks,
   buildCodeAssistantPrompt,
+  buildUnifiedDiffResult,
   buildUnifiedDiff,
   codeAssistantResponseSchema,
   codeAssistantSchema,
@@ -16,6 +18,12 @@ describe('code-assistant schema', () => {
     });
     expect(parsed.language).toBe('ts');
     expect(parsed.action).toBe('explain');
+  });
+
+  it('accepts canvas-friendly code block languages', () => {
+    expect(codeAssistantSchema.parse({ code: '<div />', action: 'explain', language: 'html' }).language).toBe('html');
+    expect(codeAssistantSchema.parse({ code: '.x{color:red}', action: 'comment', language: 'css' }).language).toBe('css');
+    expect(codeAssistantSchema.parse({ code: '{"ok":true}', action: 'fix', language: 'json' }).language).toBe('json');
   });
 
   it('rejects empty code and over-length code', () => {
@@ -40,6 +48,19 @@ describe('code-assistant prompt builder', () => {
     expect(prompt.userPrompt).toContain('function noop()');
     expect(prompt.systemPrompt).toContain('JavaScript');
     expect(prompt.systemPrompt).toContain('JSON');
+  });
+
+  it('uses canvas-oriented guidance for non-Node code snippets', () => {
+    const parsed = codeAssistantSchema.parse({
+      code: '<section>Hello</section>',
+      action: 'comment',
+      language: 'html',
+      context: 'This lives in a canvas codeBlock node.',
+    });
+    const prompt = buildCodeAssistantPrompt(parsed);
+    expect(prompt.systemPrompt).toContain('builder canvas or editor');
+    expect(prompt.systemPrompt).toContain('HTML');
+    expect(prompt.userPrompt).toContain('canvas codeBlock node');
   });
 
   it('switches directive per action', () => {
@@ -109,14 +130,69 @@ describe('buildUnifiedDiff', () => {
     expect(buildUnifiedDiff('a\nb', 'a\nb')).toBe('');
   });
 
-  it('returns a unified diff with header and +/- lines when changed', () => {
+  it('returns a focused unified diff with context when changed', () => {
     const diff = buildUnifiedDiff('a\nb', 'a\nc', 'fn.ts');
     expect(diff).toContain('--- a/fn.ts');
     expect(diff).toContain('+++ b/fn.ts');
-    expect(diff).toContain('-a');
     expect(diff).toContain('-b');
-    expect(diff).toContain('+a');
     expect(diff).toContain('+c');
+    expect(diff).toContain(' a');
+    expect(diff).not.toContain('-a');
+    expect(diff).not.toContain('+a');
+  });
+
+  it('splits distant changes into separate semantic hunks', () => {
+    const before = Array.from({ length: 12 }, (_, index) => `line ${index + 1}`);
+    const after = [...before];
+    after[1] = 'changed 2';
+    after[9] = 'changed 10';
+
+    const diff = buildUnifiedDiff(before.join('\n'), after.join('\n'), 'fn.ts');
+    expect(diff.match(/^@@/gm)).toHaveLength(2);
+    expect(diff).toContain('-line 2');
+    expect(diff).toContain('+changed 2');
+    expect(diff).toContain('-line 10');
+    expect(diff).toContain('+changed 10');
+  });
+
+  it('does not emit a phantom deletion for empty input', () => {
+    const diff = buildUnifiedDiff('', 'return true;', 'fn.ts');
+    expect(diff).toContain('@@ -0,0 +1,1 @@');
+    expect(diff).toContain('+return true;');
+    expect(diff).not.toContain('-\n');
+  });
+
+  it('returns structured hunks for chunk-level review', () => {
+    const before = Array.from({ length: 12 }, (_, index) => `line ${index + 1}`);
+    const after = [...before];
+    after[1] = 'changed 2';
+    after[9] = 'changed 10';
+
+    const result = buildUnifiedDiffResult(before.join('\n'), after.join('\n'), 'fn.ts');
+    expect(result.text.match(/^@@/gm)).toHaveLength(2);
+    expect(result.hunks).toHaveLength(2);
+    expect(result.hunks[0].lines.some((line) => line.type === 'delete' && line.text === 'line 2')).toBe(true);
+    expect(result.hunks[1].lines.some((line) => line.type === 'insert' && line.text === 'changed 10')).toBe(true);
+  });
+});
+
+describe('applySelectedDiffHunks', () => {
+  it('applies only the selected semantic hunk', () => {
+    const before = Array.from({ length: 12 }, (_, index) => `line ${index + 1}`);
+    const after = [...before];
+    after[1] = 'changed 2';
+    after[9] = 'changed 10';
+    const result = buildUnifiedDiffResult(before.join('\n'), after.join('\n'), 'fn.ts');
+
+    const patched = applySelectedDiffHunks(before.join('\n'), result.hunks, [result.hunks[1].id]);
+    expect(patched).not.toBeNull();
+    expect(patched?.split('\n')[1]).toBe('line 2');
+    expect(patched?.split('\n')[9]).toBe('changed 10');
+  });
+
+  it('rejects a selected hunk when the current source no longer matches', () => {
+    const result = buildUnifiedDiffResult('return 1;', 'return 2;', 'fn.ts');
+    expect(applySelectedDiffHunks('return 3;', result.hunks, [result.hunks[0].id])).toBeNull();
   });
 });
 

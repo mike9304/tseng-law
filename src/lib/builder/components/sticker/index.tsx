@@ -1,14 +1,24 @@
 import type { CSSProperties } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderStickerCanvasNode } from '@/lib/builder/canvas/types';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  getVisualWidgetsCopy,
+  localizedVisualText,
+  STICKER_LEGACY_DEFAULTS,
+} from '../visual-widgets-copy';
 
 function StickerRender({
   node,
+  locale = 'ko',
 }: {
   node: BuilderStickerCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getVisualWidgetsCopy(normalizeLocale(locale));
+  const label = localizedVisualText(c.label, copy.sticker.defaultLabel, STICKER_LEGACY_DEFAULTS.label);
   const baseStyle: CSSProperties = {
     background: c.background,
     color: c.color,
@@ -23,38 +33,41 @@ function StickerRender({
       style={baseStyle}
     >
       <span aria-hidden="true">{c.emoji}</span>
-      {c.label ? <strong>{c.label}</strong> : null}
+      {label ? <strong>{label}</strong> : null}
     </div>
   );
 }
 
 function StickerInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const sNode = node as BuilderStickerCanvasNode;
   const c = sNode.content;
+  const copy = getVisualWidgetsCopy(normalizeLocale(locale));
+  const label = localizedVisualText(c.label, copy.sticker.defaultLabel, STICKER_LEGACY_DEFAULTS.label);
   return (
     <>
       <label>
-        <span>이모지/심볼</span>
+        <span>{copy.sticker.inspector.emoji}</span>
         <input type="text" value={c.emoji} disabled={disabled} onChange={(event) => onUpdate({ emoji: event.target.value })} />
       </label>
       <label>
-        <span>라벨</span>
-        <input type="text" value={c.label} disabled={disabled} onChange={(event) => onUpdate({ label: event.target.value })} />
+        <span>{copy.sticker.inspector.label}</span>
+        <input type="text" value={label} disabled={disabled} onChange={(event) => onUpdate({ label: event.target.value })} />
       </label>
       <label>
-        <span>배경</span>
+        <span>{copy.sticker.inspector.background}</span>
         <input type="text" value={c.background} disabled={disabled} onChange={(event) => onUpdate({ background: event.target.value })} />
       </label>
       <label>
-        <span>글자색</span>
+        <span>{copy.sticker.inspector.color}</span>
         <input type="text" value={c.color} disabled={disabled} onChange={(event) => onUpdate({ color: event.target.value })} />
       </label>
       <label>
-        <span>회전 (deg, -45~45)</span>
+        <span>{copy.sticker.inspector.rotation}</span>
         <input
           type="number"
           min={-45}
@@ -65,15 +78,15 @@ function StickerInspector({
         />
       </label>
       <label>
-        <span>스타일</span>
+        <span>{copy.sticker.inspector.style}</span>
         <select
           value={c.variant}
           disabled={disabled}
           onChange={(event) => onUpdate({ variant: event.target.value as BuilderStickerCanvasNode['content']['variant'] })}
         >
-          <option value="badge">Badge</option>
-          <option value="pill">Pill</option>
-          <option value="banner">Banner</option>
+          <option value="badge">{copy.sticker.inspector.variants.badge}</option>
+          <option value="pill">{copy.sticker.inspector.variants.pill}</option>
+          <option value="banner">{copy.sticker.inspector.variants.banner}</option>
         </select>
       </label>
     </>
@@ -87,7 +100,7 @@ export default defineComponent({
   icon: '⭐',
   defaultContent: {
     emoji: '⭐',
-    label: '추천',
+    label: STICKER_LEGACY_DEFAULTS.label,
     background: '#fde68a',
     color: '#92400e',
     rotation: -8,

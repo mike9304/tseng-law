@@ -1,5 +1,7 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderFormCanvasNode } from '@/lib/builder/canvas/types';
+import { FORM_KO_DEFAULTS, getFormControlsCopy, localizedFormControlText } from './form-controls-copy';
+import styles from './FormInspector.module.css';
 import {
   DEFAULT_FLEX,
   DEFAULT_GRID,
@@ -8,28 +10,9 @@ import {
   type GridConfig,
 } from '@/lib/builder/canvas/layout-modes';
 
-const sectionLabelStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  letterSpacing: '0.05em',
-  color: '#64748b',
-  marginTop: 12,
-  marginBottom: 4,
-  display: 'block',
-};
-
-const selectStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '4px 6px',
-  fontSize: '0.85rem',
-  border: '1px solid #e2e8f0',
-  borderRadius: 6,
-  background: '#fff',
-};
-
 export default function FormInspector({
   node,
+  locale,
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
@@ -38,91 +21,103 @@ export default function FormInspector({
   const layoutMode: ContainerLayoutMode = content.layoutMode ?? 'absolute';
   const flexConfig: FlexConfig = content.flexConfig ?? DEFAULT_FLEX;
   const gridConfig: GridConfig = content.gridConfig ?? DEFAULT_GRID;
+  const copy = getFormControlsCopy(locale ?? 'en');
+  const successMessage = localizedFormControlText(
+    content.successMessage,
+    copy.formDefaults.successMessage,
+    FORM_KO_DEFAULTS.successMessage,
+  );
 
   return (
-    <>
-      <label>
-        <span>Form name (식별자)</span>
+    <div className={styles.root} data-builder-form-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.formInspector.formNameLabel}</span>
         <input
+          className={styles.control}
           type="text"
           value={content.name}
           disabled={disabled}
           onChange={(event) => onUpdate({ name: event.target.value })}
-          placeholder="contact-form"
+          placeholder={copy.formInspector.formNamePlaceholder}
         />
       </label>
-      <label>
-        <span>Submit to</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.formInspector.submitToLabel}</span>
         <select
-          style={selectStyle}
+          className={styles.control}
           value={content.submitTo}
           disabled={disabled}
           onChange={(event) => onUpdate({ submitTo: event.target.value })}
         >
-          <option value="storage">Storage (저장만)</option>
-          <option value="email">Email</option>
-          <option value="webhook">Webhook</option>
+          <option value="storage">{copy.formInspector.storageLabel}</option>
+          <option value="email">{copy.formInspector.emailLabel}</option>
+          <option value="webhook">{copy.formInspector.webhookLabel}</option>
         </select>
       </label>
       {content.submitTo === 'email' ? (
-        <label>
-          <span>Target email</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.formInspector.targetEmailLabel}</span>
           <input
+            className={styles.control}
             type="email"
             value={content.targetEmail ?? ''}
             disabled={disabled}
             onChange={(event) => onUpdate({ targetEmail: event.target.value || undefined })}
-            placeholder="contact@example.com"
+            placeholder={copy.formInspector.targetEmailPlaceholder}
           />
         </label>
       ) : null}
       {content.submitTo === 'webhook' ? (
-        <label>
-          <span>Webhook URL</span>
+        <label className={styles.field}>
+          <span className={styles.label}>{copy.formInspector.webhookUrlLabel}</span>
           <input
+            className={styles.control}
             type="url"
             value={content.webhookUrl ?? ''}
             disabled={disabled}
             onChange={(event) => onUpdate({ webhookUrl: event.target.value || undefined })}
-            placeholder="https://example.com/webhook"
+            placeholder={copy.formInspector.webhookUrlPlaceholder}
           />
         </label>
       ) : null}
-      <label>
-        <span>Success message</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.formInspector.successMessageLabel}</span>
         <textarea
-          value={content.successMessage}
+          className={`${styles.control} ${styles.textarea}`}
+          value={successMessage}
           rows={2}
           disabled={disabled}
           onChange={(event) => onUpdate({ successMessage: event.target.value })}
         />
       </label>
-      <label>
-        <span>Redirect URL (선택)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.formInspector.redirectUrlLabel}</span>
         <input
+          className={styles.control}
           type="text"
           value={content.redirectUrl ?? ''}
           disabled={disabled}
           onChange={(event) => onUpdate({ redirectUrl: event.target.value })}
-          placeholder="/thank-you"
+          placeholder={copy.formInspector.redirectUrlPlaceholder}
         />
       </label>
-      <label>
-        <span>Captcha</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.formInspector.captchaLabel}</span>
         <select
-          style={selectStyle}
+          className={styles.control}
           value={content.captcha ?? 'none'}
           disabled={disabled}
           onChange={(event) => onUpdate({ captcha: event.target.value })}
         >
-          <option value="none">None</option>
+          <option value="none">{copy.formInspector.noneLabel}</option>
           <option value="hcaptcha">hCaptcha</option>
           <option value="turnstile">Turnstile</option>
         </select>
       </label>
-      <label>
-        <span>Steps JSON (선택)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.formInspector.stepsJsonLabel}</span>
         <textarea
+          className={`${styles.control} ${styles.textarea}`}
           rows={4}
           value={JSON.stringify(content.steps ?? [], null, 2)}
           disabled={disabled}
@@ -134,32 +129,33 @@ export default function FormInspector({
               // Keep the last valid value while the admin is typing.
             }
           }}
-          placeholder='[{"id":"step-1","title":"Step 1","fieldNodeIds":["form-input-abc"]}]'
+          placeholder={copy.formInspector.stepsJsonPlaceholder}
         />
       </label>
-      <label>
-        <span>Auto reply</span>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={content.autoReplyEnabled ?? false}
           disabled={disabled}
           onChange={(event) => onUpdate({ autoReplyEnabled: event.target.checked })}
         />
+        <span>{copy.formInspector.autoReplyLabel}</span>
       </label>
-      <label>
-        <span>Auto reply template</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.formInspector.autoReplyTemplateLabel}</span>
         <textarea
+          className={`${styles.control} ${styles.textarea}`}
           rows={3}
           value={content.autoReplyTemplate ?? ''}
           disabled={disabled}
           onChange={(event) => onUpdate({ autoReplyTemplate: event.target.value })}
-          placeholder="문의가 접수되었습니다. 곧 연락드리겠습니다."
+          placeholder={copy.formDefaults.autoReplyTemplatePlaceholder}
         />
       </label>
 
-      <span style={sectionLabelStyle}>Layout Mode</span>
+      <span className={styles.sectionLabel}>{copy.formInspector.layoutModeLabel}</span>
       <select
-        style={selectStyle}
+        className={styles.control}
         value={layoutMode}
         disabled={disabled}
         onChange={(event) => {
@@ -174,18 +170,18 @@ export default function FormInspector({
           onUpdate(patch);
         }}
       >
-        <option value="absolute">Absolute</option>
-        <option value="flex">Flex</option>
-        <option value="grid">Grid</option>
+        <option value="absolute">{copy.formInspector.absoluteLabel}</option>
+        <option value="flex">{copy.formInspector.flexLabel}</option>
+        <option value="grid">{copy.formInspector.gridLabel}</option>
       </select>
 
       {layoutMode === 'flex' ? (
         <>
-          <span style={sectionLabelStyle}>Flex Settings</span>
-          <label>
-            <span>Direction</span>
+          <span className={styles.sectionLabel}>{copy.formInspector.flexSettingsLabel}</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.formInspector.directionLabel}</span>
             <select
-              style={selectStyle}
+              className={styles.control}
               value={flexConfig.direction}
               disabled={disabled}
               onChange={(event) =>
@@ -194,13 +190,14 @@ export default function FormInspector({
                 })
               }
             >
-              <option value="row">Row</option>
-              <option value="column">Column</option>
+              <option value="row">{copy.formInspector.rowLabel}</option>
+              <option value="column">{copy.formInspector.columnLabel}</option>
             </select>
           </label>
-          <label>
-            <span>Gap</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.formInspector.gapLabel}</span>
             <input
+              className={styles.control}
               type="number"
               min={0}
               max={200}
@@ -216,10 +213,11 @@ export default function FormInspector({
 
       {layoutMode === 'grid' ? (
         <>
-          <span style={sectionLabelStyle}>Grid Settings</span>
-          <label>
-            <span>Columns</span>
+          <span className={styles.sectionLabel}>{copy.formInspector.gridSettingsLabel}</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.formInspector.columnsLabel}</span>
             <input
+              className={styles.control}
               type="number"
               min={1}
               max={12}
@@ -230,9 +228,10 @@ export default function FormInspector({
               }
             />
           </label>
-          <label>
-            <span>Row gap</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.formInspector.rowGapLabel}</span>
             <input
+              className={styles.control}
               type="number"
               min={0}
               max={200}
@@ -245,6 +244,6 @@ export default function FormInspector({
           </label>
         </>
       ) : null}
-    </>
+    </div>
   );
 }

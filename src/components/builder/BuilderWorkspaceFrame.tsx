@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
+import { getAdminNavCopy } from '@/lib/builder/admin-nav/nav-copy';
+import type { Locale } from '@/lib/locales';
 
 type BuilderWorkspaceRailKey = 'pages' | 'layers' | 'assets';
 
@@ -23,7 +25,12 @@ export default function BuilderWorkspaceFrame({
   inspector,
   children,
   surfaceTone = 'default',
+  locale,
   backLink,
+  navigationLabel,
+  footerLabel,
+  footerDescription,
+  routeLabel,
 }: {
   title: string;
   description: string;
@@ -36,12 +43,24 @@ export default function BuilderWorkspaceFrame({
   inspector: ReactNode;
   children: ReactNode;
   surfaceTone?: 'default' | 'canvas-priority';
+  locale?: Locale;
   /**
    * Optional back link rendered at the top of the canvas stage head so
    * users always have a clear way back to the main builder editor.
    */
   backLink?: { href: string; label: string };
+  navigationLabel?: string;
+  footerLabel?: string;
+  footerDescription?: string;
+  routeLabel?: string;
 }) {
+  const shellCopy = getWorkspaceFrameCopy(locale);
+  const effectiveNavigationLabel = navigationLabel ?? shellCopy.navigationLabel;
+  const effectiveFooterLabel = footerLabel ?? shellCopy.footerLabel;
+  const effectiveFooterDescription = footerDescription ?? shellCopy.footerDescription;
+  const effectiveRouteLabel =
+    routeLabel ?? (surfaceTone === 'canvas-priority' ? shellCopy.canvasRouteLabel : shellCopy.builderRouteLabel);
+
   return (
     <div
       className={`builder-route-root${
@@ -58,7 +77,7 @@ export default function BuilderWorkspaceFrame({
             className={`builder-workspace-sidebar${
               surfaceTone === 'canvas-priority' ? ' builder-workspace-sidebar--canvas-priority' : ''
             }`}
-            aria-label="Builder navigation"
+            aria-label={effectiveNavigationLabel}
           >
             <nav className="builder-app-rail">
               <div className="builder-app-rail-brand" aria-hidden>
@@ -94,8 +113,8 @@ export default function BuilderWorkspaceFrame({
                 })}
               </div>
               <div className="builder-app-rail-footer">
-                <strong>Builder</strong>
-                <span>Real systems only. No fake tabs.</span>
+                <strong>{effectiveFooterLabel}</strong>
+                <span>{effectiveFooterDescription}</span>
               </div>
             </nav>
             <div
@@ -155,7 +174,7 @@ export default function BuilderWorkspaceFrame({
                   }`}
                 >
                   <span>{stageUrl}</span>
-                  <span>{surfaceTone === 'canvas-priority' ? 'canvas route' : 'canonical builder route'}</span>
+                  <span>{effectiveRouteLabel}</span>
                 </div>
                 <div
                   className={`builder-canvas-stage-meta${
@@ -199,5 +218,36 @@ function getRailIcon(key: BuilderWorkspaceRailKey) {
       return 'As';
     default:
       return key;
+  }
+}
+
+function getWorkspaceFrameCopy(locale?: Locale) {
+  const navCopy = locale ? getAdminNavCopy(locale) : getAdminNavCopy('en');
+  switch (locale) {
+    case 'ko':
+      return {
+        navigationLabel: '빌더 탐색',
+        footerLabel: '빌더',
+        footerDescription: '실제 시스템만 사용합니다. 가짜 탭은 없습니다.',
+        builderRouteLabel: '빌더 기준 경로',
+        canvasRouteLabel: '캔버스 경로',
+      };
+    case 'zh-hant':
+      return {
+        navigationLabel: '建構器導覽',
+        footerLabel: '建構器',
+        footerDescription: '只保留真實系統，不放假分頁。',
+        builderRouteLabel: '建構器基準路由',
+        canvasRouteLabel: '畫布路由',
+      };
+    case 'en':
+    default:
+      return {
+        navigationLabel: navCopy.ariaLabel,
+        footerLabel: 'Builder',
+        footerDescription: 'Real systems only. No fake tabs.',
+        builderRouteLabel: 'canonical builder route',
+        canvasRouteLabel: 'canvas route',
+      };
   }
 }

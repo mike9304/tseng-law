@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { primaryAttorneySlug } from '@/data/attorney-profiles';
-import { serviceAreas } from '@/data/service-details';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
+import { readAttorneyProfileSourceRecords } from '@/lib/builder/lawyers/source';
+import { readServiceAreaSourceRecords } from '@/lib/builder/services/source';
 import { getAllColumnPosts } from '@/lib/columns';
 import { locales } from '@/lib/locales';
 import { buildAbsoluteUrl, getLanguageAlternates, getLocalizedPath } from '@/lib/seo';
@@ -50,6 +52,8 @@ function createEntry(
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages: MetadataRoute.Sitemap = [];
   const columns = getAllColumnPosts('ko');
+  const serviceAreaRecords = await readServiceAreaSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko');
+  const attorneyRecords = await readAttorneyProfileSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko');
 
   for (const locale of locales) {
     for (const path of STATIC_PATHS) {
@@ -61,14 +65,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       );
     }
 
-    pages.push(
-      createEntry(locale, `/lawyers/${primaryAttorneySlug}`, {
-        changeFrequency: 'monthly',
-        priority: 0.86,
-      })
-    );
+    for (const attorney of attorneyRecords) {
+      pages.push(
+        createEntry(locale, `/lawyers/${attorney.slug || primaryAttorneySlug}`, {
+          changeFrequency: 'monthly',
+          priority: 0.86,
+        })
+      );
+    }
 
-    for (const area of serviceAreas) {
+    for (const area of serviceAreaRecords) {
       pages.push(
         createEntry(locale, `/services/${area.slug}`, {
           changeFrequency: 'monthly',

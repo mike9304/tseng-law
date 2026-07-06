@@ -1,27 +1,33 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { Locale } from '@/lib/locales';
-import { usePublishedOverlayFocus } from '@/components/builder/published/overlayFocus';
 
 const HIDE_UNTIL_KEY = 'hojeong-year-end-event-hide-until';
+const SESSION_DISMISSED_KEY = 'hojeong-year-end-event-dismissed-session';
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
 type PopupCopy = {
-  badge: string;
-  title: string;
-  body: string;
-  points: string[];
-  cta: string;
-  close: string;
-  closeForDay: string;
+  readonly badge: string;
+  readonly title: string;
+  readonly body: string;
+  readonly points: readonly string[];
+  readonly cta: string;
+  readonly close: string;
+  readonly closeForDay: string;
+};
+
+type YearEndEventPopupProps = {
+  readonly locale: Locale;
+  readonly previewOpen?: boolean;
+  readonly onPreviewClose?: () => void;
 };
 
 const copyByLocale: Record<Locale, PopupCopy> = {
   ko: {
-    badge: '2026 EVENT',
+    badge: '2026 행사',
     title: '2026년 기념 리뷰 이벤트',
     body:
       '법무법인 호정을 이용하신 모든 고객님을 대상으로 무료 30분 상담 리뷰 이벤트를 진행합니다. 변호사와 직원이 함께 Google Meet 30분 상담을 진행하며, 상담 후 리뷰를 남겨주시면 참여가 완료됩니다.',
@@ -31,7 +37,7 @@ const copyByLocale: Record<Locale, PopupCopy> = {
     closeForDay: '오늘 하루 보지 않기'
   },
   'zh-hant': {
-    badge: '2026 EVENT',
+    badge: '2026 活動',
     title: '2026年紀念評論活動',
     body:
       '昊鼎國際法律事務所針對所有客戶提供免費 30 分鐘諮詢評論活動。由律師與團隊共同進行 30 分鐘 Google Meet 諮詢，諮詢後留下評論即可完成參與。',
@@ -52,83 +58,97 @@ const copyByLocale: Record<Locale, PopupCopy> = {
   }
 };
 
-export default function YearEndEventPopup({ locale }: { locale: Locale }) {
+export default function YearEndEventPopup({
+  locale,
+  previewOpen = false,
+  onPreviewClose,
+}: YearEndEventPopupProps) {
   const pathname = usePathname();
   const isUtilityPage = pathname?.includes('/bookings/manage/') ?? false;
   const normalizedPath = pathname?.replace(/\/+$/, '') || `/${locale}`;
   const isEligiblePage = normalizedPath === `/${locale}`;
   const [open, setOpen] = useState(false);
-  const overlayRef = useRef<HTMLDivElement | null>(null);
-  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
-  const openerRef = useRef<HTMLElement | null>(null);
   const copy = useMemo(() => copyByLocale[locale], [locale]);
+  const popupVisible = previewOpen || (!isUtilityPage && isEligiblePage && open);
+  const dismissForSession = useCallback(() => {
+    if (previewOpen) {
+      onPreviewClose?.();
+      return;
+    }
+    try {
+      sessionStorage.setItem(SESSION_DISMISSED_KEY, 'true');
+    } catch (error) {
+      if (!(error instanceof Error)) throw error;
+    }
+    setOpen(false);
+  }, [onPreviewClose, previewOpen]);
 
   useEffect(() => {
+    if (previewOpen) {
+      setOpen(false);
+      return;
+    }
     if (isUtilityPage || !isEligiblePage) {
       setOpen(false);
       return;
     }
     if (typeof window === 'undefined') return;
     try {
+      if (sessionStorage.getItem(SESSION_DISMISSED_KEY) === 'true') return;
       const hideUntil = Number(localStorage.getItem(HIDE_UNTIL_KEY) ?? '0');
       if (hideUntil > Date.now()) return;
-    } catch {
-      // noop
+      sessionStorage.setItem(SESSION_DISMISSED_KEY, 'true');
+    } catch (error) {
+      if (!(error instanceof Error)) throw error;
     }
     setOpen(true);
-  }, [isEligiblePage, isUtilityPage]);
-
-  usePublishedOverlayFocus({
-    open: open && !isUtilityPage && isEligiblePage,
-    overlayRef,
-    initialFocusRef: closeButtonRef,
-    openerRef,
-  });
+  }, [isEligiblePage, isUtilityPage, previewOpen]);
 
   useEffect(() => {
-    if (!open || isUtilityPage || !isEligiblePage) return;
+    if (!popupVisible) return;
     const onEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         event.preventDefault();
         event.stopPropagation();
-        setOpen(false);
+        dismissForSession();
       }
     };
     window.addEventListener('keydown', onEscape, true);
     return () => {
       window.removeEventListener('keydown', onEscape, true);
     };
-  }, [isEligiblePage, open, isUtilityPage]);
+  }, [dismissForSession, popupVisible]);
 
   const hideForDay = () => {
+    if (previewOpen) {
+      onPreviewClose?.();
+      return;
+    }
     try {
       localStorage.setItem(HIDE_UNTIL_KEY, String(Date.now() + ONE_DAY_MS));
-    } catch {
-      // noop
+    } catch (error) {
+      if (!(error instanceof Error)) throw error;
     }
-    setOpen(false);
+    dismissForSession();
   };
 
-  if (isUtilityPage || !isEligiblePage || !open) return null;
+  if (!popupVisible) return null;
 
   return (
     <div
       className="year-end-popup-backdrop"
       role="dialog"
-      aria-modal="true"
+      aria-modal="false"
       aria-label={copy.title}
-      ref={overlayRef}
-      onClick={() => setOpen(false)}
     >
-      <div className="year-end-popup" onClick={(event) => event.stopPropagation()}>
+      <div className="year-end-popup">
         <div className="year-end-popup-top">
           <span className="year-end-popup-badge">{copy.badge}</span>
           <button
             type="button"
             className="year-end-popup-close"
-            onClick={() => setOpen(false)}
+            onClick={dismissForSession}
             aria-label={copy.close}
-            ref={closeButtonRef}
           >
             ×
           </button>
@@ -145,7 +165,7 @@ export default function YearEndEventPopup({ locale }: { locale: Locale }) {
             </li>
           ))}
         </ul>
-        <Link href={`/${locale}/contact`} className="button year-end-popup-cta" onClick={() => setOpen(false)}>
+        <Link href={`/${locale}/contact`} className="button year-end-popup-cta" onClick={dismissForSession}>
           {copy.cta}
         </Link>
         <div className="year-end-popup-actions">

@@ -12,7 +12,7 @@ test.describe('M82 preview modal focus trap', () => {
       await page.keyboard.press('Enter');
 
       const previewDialog = page.getByRole('dialog', { name: '페이지 미리보기' });
-      const desktopButton = previewDialog.getByRole('button', { name: /Desktop/ });
+      const desktopButton = previewDialog.getByRole('button', { name: /Desktop|데스크톱/ });
       const closeButton = previewDialog.getByRole('button', { name: '미리보기 닫기' });
 
       await expect(previewDialog).toBeVisible();

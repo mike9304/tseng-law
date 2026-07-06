@@ -136,6 +136,189 @@ export default function BookingPackagesAdmin({
   const [creditDraft, setCreditDraft] = useState<CreditDraft | null>(null);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const copy = {
+    ko: {
+      toolbar: (packageCount: number, creditCount: number) => `${packageCount}개의 패키지 · ${creditCount}개의 고객 크레딧 장부`,
+      grantCredit: '크레딧 지급',
+      newPackage: '새 패키지',
+      sessionPackages: '세션 패키지',
+      packagesDescription: '패키지는 고객 크레딧이 사용할 수 있는 서비스를 정의합니다.',
+      customerCredits: '고객 크레딧',
+      customerCreditsDescription: '크레딧은 고객 이메일로 매칭되며 적합한 유료 예약이 확정되면 차감됩니다.',
+      noPackageNotes: '패키지 메모 없음.',
+      noExpiryDefault: '기본 만료 없음',
+      manualPrice: '수동 가격',
+      active: '활성',
+      inactive: '비활성',
+      servicesLabel: '서비스',
+      allServices: '모든 서비스',
+      edit: '편집',
+      deactivate: '비활성화',
+      editPackageTitle: '패키지 편집',
+      newPackageTitle: '새 패키지',
+      editCreditTitle: '고객 크레딧 편집',
+      newCreditTitle: '고객 크레딧 지급',
+      close: '닫기',
+      nameKo: '이름 KO',
+      nameEn: '이름 EN',
+      nameZh: '이름 ZH',
+      credits: '크레딧',
+      validityDays: '유효 기간(일)',
+      priceAmount: '가격 금액',
+      currency: '통화',
+      descriptionKo: '설명 KO',
+      descriptionEn: '설명 EN',
+      descriptionZh: '설명 ZH',
+      activeLabel: '활성',
+      eligibleServices: '적용 가능한 서비스',
+      eligibleServicesHint: '모두 선택 해제하면 모든 유료 예약 서비스에 크레딧을 적용합니다.',
+      savePackage: '패키지 저장',
+      saveCredit: '크레딧 저장',
+      saving: '저장 중...',
+      cancel: '취소',
+      packageLabel: '패키지',
+      customerEmail: '고객 이메일',
+      customerName: '고객 이름',
+      totalCredits: '총 크레딧',
+      remainingCredits: '남은 크레딧',
+      expires: '만료일',
+      status: '상태',
+      note: '메모',
+      revoke: '회수',
+      activeStatus: '활성',
+      usedStatus: '사용됨',
+      expiredStatus: '만료됨',
+      revokedStatus: '회수됨',
+      packagePrefix: '패키지:',
+      redemptions: '사용 내역:',
+      remaining: (remaining: number, total: number) => `${remaining}/${total}개 남음`,
+      expiresAt: (date: string) => `만료 ${date}`,
+      noExpiry: '만료 없음',
+      saveFailed: '패키지를 저장하지 못했습니다.',
+      creditSaveFailed: '고객 크레딧을 저장하지 못했습니다.',
+    },
+    'zh-hant': {
+      toolbar: (packageCount: number, creditCount: number) => `${packageCount} 個方案 · ${creditCount} 個客戶點數帳本`,
+      grantCredit: '發放點數',
+      newPackage: '新增方案',
+      sessionPackages: '方案套組',
+      packagesDescription: '方案可定義客戶點數可兌換哪些服務。',
+      customerCredits: '客戶點數',
+      customerCreditsDescription: '點數會依客戶電子郵件配對，當符合資格的付費預約確認後即扣減。',
+      noPackageNotes: '沒有方案備註。',
+      noExpiryDefault: '預設沒有到期日',
+      manualPrice: '手動價格',
+      active: '啟用',
+      inactive: '停用',
+      servicesLabel: '服務',
+      allServices: '所有服務',
+      edit: '編輯',
+      deactivate: '停用',
+      editPackageTitle: '編輯方案',
+      newPackageTitle: '新增方案',
+      editCreditTitle: '編輯客戶點數',
+      newCreditTitle: '發放客戶點數',
+      close: '關閉',
+      nameKo: '名稱 KO',
+      nameEn: '名稱 EN',
+      nameZh: '名稱 ZH',
+      credits: '點數',
+      validityDays: '有效天數',
+      priceAmount: '價格金額',
+      currency: '幣別',
+      descriptionKo: '說明 KO',
+      descriptionEn: '說明 EN',
+      descriptionZh: '說明 ZH',
+      activeLabel: '啟用',
+      eligibleServices: '適用服務',
+      eligibleServicesHint: '全部取消勾選時，點數可套用到任何付費預約服務。',
+      savePackage: '儲存方案',
+      saveCredit: '儲存點數',
+      saving: '儲存中...',
+      cancel: '取消',
+      packageLabel: '方案',
+      customerEmail: '客戶電子郵件',
+      customerName: '客戶名稱',
+      totalCredits: '總點數',
+      remainingCredits: '剩餘點數',
+      expires: '到期日',
+      status: '狀態',
+      note: '備註',
+      revoke: '撤銷',
+      activeStatus: '啟用',
+      usedStatus: '已使用',
+      expiredStatus: '已過期',
+      revokedStatus: '已撤銷',
+      packagePrefix: '方案：',
+      redemptions: '兌換次數：',
+      remaining: (remaining: number, total: number) => `剩餘 ${remaining}/${total} 點`,
+      expiresAt: (date: string) => `到期 ${date}`,
+      noExpiry: '沒有到期日',
+      saveFailed: '無法儲存方案。',
+      creditSaveFailed: '無法儲存客戶點數。',
+    },
+    en: {
+      toolbar: (packageCount: number, creditCount: number) => `${packageCount} packages · ${creditCount} customer credit ledgers.`,
+      grantCredit: 'Grant credit',
+      newPackage: 'New package',
+      sessionPackages: 'Session packages',
+      packagesDescription: 'Packages define which services customer credits can redeem.',
+      customerCredits: 'Customer credits',
+      customerCreditsDescription: 'Credits are matched by customer email and consumed when an eligible paid booking is confirmed.',
+      noPackageNotes: 'No package notes.',
+      noExpiryDefault: 'No expiry default',
+      manualPrice: 'Manual price',
+      active: 'Active',
+      inactive: 'Inactive',
+      servicesLabel: 'Services',
+      allServices: 'All services',
+      edit: 'Edit',
+      deactivate: 'Deactivate',
+      editPackageTitle: 'Edit package',
+      newPackageTitle: 'New package',
+      editCreditTitle: 'Edit customer credit',
+      newCreditTitle: 'Grant customer credit',
+      close: 'Close',
+      nameKo: 'Name KO',
+      nameEn: 'Name EN',
+      nameZh: 'Name ZH',
+      credits: 'Credits',
+      validityDays: 'Validity days',
+      priceAmount: 'Price amount',
+      currency: 'Currency',
+      descriptionKo: 'Description KO',
+      descriptionEn: 'Description EN',
+      descriptionZh: 'Description ZH',
+      activeLabel: 'Active',
+      eligibleServices: 'Eligible services',
+      eligibleServicesHint: 'Leave all unchecked to let credits apply to any paid booking service.',
+      savePackage: 'Save package',
+      saveCredit: 'Save credit',
+      saving: 'Saving...',
+      cancel: 'Cancel',
+      packageLabel: 'Package',
+      customerEmail: 'Customer email',
+      customerName: 'Customer name',
+      totalCredits: 'Total credits',
+      remainingCredits: 'Remaining credits',
+      expires: 'Expires',
+      status: 'Status',
+      note: 'Note',
+      revoke: 'Revoke',
+      activeStatus: 'Active',
+      usedStatus: 'Used',
+      expiredStatus: 'Expired',
+      revokedStatus: 'Revoked',
+      packagePrefix: 'Package:',
+      redemptions: 'Redemptions:',
+      remaining: (remaining: number, total: number) => `${remaining}/${total} remaining`,
+      expiresAt: (date: string) => `Expires ${date}`,
+      noExpiry: 'No expiry',
+      saveFailed: 'Unable to save package.',
+      creditSaveFailed: 'Unable to save customer credit.',
+    },
+  } as const;
+  const c = copy[locale];
   const packageById = useMemo(() => new Map(packages.map((pkg) => [pkg.packageId, pkg])), [packages]);
   const serviceById = useMemo(() => new Map(services.map((service) => [service.serviceId, service])), [services]);
   const activePackages = packages.filter((pkg) => pkg.isActive);
@@ -146,24 +329,27 @@ export default function BookingPackagesAdmin({
     setSaving(true);
     setError(null);
     try {
+      const params = new URLSearchParams({ locale });
       const url = packageDraft.packageId
-        ? `/api/builder/bookings/packages/${packageDraft.packageId}`
-        : '/api/builder/bookings/packages';
+        ? `/api/builder/bookings/packages/${packageDraft.packageId}?${params.toString()}`
+        : `/api/builder/bookings/packages?${params.toString()}`;
       const res = await fetch(url, {
         method: packageDraft.packageId ? 'PATCH' : 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'same-origin',
         body: JSON.stringify(packagePayload(packageDraft)),
       });
-      if (!res.ok) throw new Error('save failed');
-      const data = (await res.json()) as { package: BookingPackage };
+      const data = (await res.json().catch(() => null)) as { package?: BookingPackage; error?: string } | null;
+      const savedPackage = data?.package;
+      if (!res.ok || !savedPackage) throw new Error(data?.error || 'save failed');
       setPackages((current) => {
-        const without = current.filter((item) => item.packageId !== data.package.packageId);
-        return [...without, data.package].sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+        const without = current.filter((item) => item.packageId !== savedPackage.packageId);
+        return [...without, savedPackage].sort((a, b) => a.createdAt.localeCompare(b.createdAt));
       });
       setPackageDraft(null);
-    } catch {
-      setError('패키지를 저장하지 못했습니다.');
+    } catch (err) {
+      const message = err instanceof Error && err.message !== 'save failed' ? err.message : c.saveFailed;
+      setError(message);
     } finally {
       setSaving(false);
     }
@@ -174,31 +360,35 @@ export default function BookingPackagesAdmin({
     setSaving(true);
     setError(null);
     try {
+      const params = new URLSearchParams({ locale });
       const url = creditDraft.creditId
-        ? `/api/builder/bookings/package-credits/${creditDraft.creditId}`
-        : '/api/builder/bookings/package-credits';
+        ? `/api/builder/bookings/package-credits/${creditDraft.creditId}?${params.toString()}`
+        : `/api/builder/bookings/package-credits?${params.toString()}`;
       const res = await fetch(url, {
         method: creditDraft.creditId ? 'PATCH' : 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'same-origin',
         body: JSON.stringify(creditPayload(creditDraft, Boolean(creditDraft.creditId))),
       });
-      if (!res.ok) throw new Error('save failed');
-      const data = (await res.json()) as { credit: BookingPackageCredit };
+      const data = (await res.json().catch(() => null)) as { credit?: BookingPackageCredit; error?: string } | null;
+      const savedCredit = data?.credit;
+      if (!res.ok || !savedCredit) throw new Error(data?.error || 'save failed');
       setCredits((current) => {
-        const without = current.filter((item) => item.creditId !== data.credit.creditId);
-        return [...without, data.credit].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+        const without = current.filter((item) => item.creditId !== savedCredit.creditId);
+        return [...without, savedCredit].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
       });
       setCreditDraft(null);
-    } catch {
-      setError('고객 크레딧을 저장하지 못했습니다.');
+    } catch (err) {
+      const message = err instanceof Error && err.message !== 'save failed' ? err.message : c.creditSaveFailed;
+      setError(message);
     } finally {
       setSaving(false);
     }
   };
 
   const deactivatePackage = async (pkg: BookingPackage) => {
-    const res = await fetch(`/api/builder/bookings/packages/${pkg.packageId}`, {
+    const params = new URLSearchParams({ locale });
+    const res = await fetch(`/api/builder/bookings/packages/${pkg.packageId}?${params.toString()}`, {
       method: 'DELETE',
       credentials: 'same-origin',
     });
@@ -209,7 +399,8 @@ export default function BookingPackagesAdmin({
   };
 
   const revokeCredit = async (credit: BookingPackageCredit) => {
-    const res = await fetch(`/api/builder/bookings/package-credits/${credit.creditId}`, {
+    const params = new URLSearchParams({ locale });
+    const res = await fetch(`/api/builder/bookings/package-credits/${credit.creditId}?${params.toString()}`, {
       method: 'DELETE',
       credentials: 'same-origin',
     });
@@ -222,7 +413,7 @@ export default function BookingPackagesAdmin({
   return (
     <>
       <div className={styles.toolbar} data-booking-packages-page="true">
-        <div className={styles.muted}>{packages.length} packages · {credits.length} customer credit ledgers.</div>
+        <div className={styles.muted}>{c.toolbar(packages.length, credits.length)}</div>
         <div className={styles.inlineActions}>
           <button
             className={styles.buttonSecondary}
@@ -231,10 +422,10 @@ export default function BookingPackagesAdmin({
             onClick={() => setCreditDraft(draftFromCredit(undefined, defaultPackageId))}
             disabled={!defaultPackageId}
           >
-            Grant credit
+            {c.grantCredit}
           </button>
           <button className={styles.button} type="button" onClick={() => setPackageDraft(draftFromPackage())}>
-            New package
+            {c.newPackage}
           </button>
         </div>
       </div>
@@ -243,8 +434,8 @@ export default function BookingPackagesAdmin({
       <section className={styles.panel} data-booking-packages-admin="true">
         <div className={styles.sectionHeader}>
           <div>
-            <h2 className={styles.cardTitle}>Session packages</h2>
-            <p className={styles.muted}>Packages define which services customer credits can redeem.</p>
+            <h2 className={styles.cardTitle}>{c.sessionPackages}</h2>
+            <p className={styles.muted}>{c.packagesDescription}</p>
           </div>
         </div>
         <div className={styles.grid}>
@@ -256,17 +447,17 @@ export default function BookingPackagesAdmin({
               <article className={styles.card} key={pkg.packageId} data-booking-package-card={pkg.packageId}>
                 <div className={styles.cardBody}>
                   <h3 className={styles.cardTitle}>{textForLocale(pkg.name, locale)}</h3>
-                  <p className={styles.muted}>{textForLocale(pkg.description, locale) || 'No package notes.'}</p>
+                  <p className={styles.muted}>{textForLocale(pkg.description, locale) || c.noPackageNotes}</p>
                   <div className={styles.metaRow}>
-                    <span className={styles.chip}>{pkg.credits} credits</span>
-                    <span className={styles.chip}>{pkg.validityDays ? `${pkg.validityDays} days` : 'No expiry default'}</span>
-                    <span className={styles.chip}>{pkg.priceAmount ? `${pkg.priceCurrency ?? 'TWD'} ${pkg.priceAmount.toLocaleString()}` : 'Manual price'}</span>
-                    <span className={styles.chip}>{pkg.isActive ? 'Active' : 'Inactive'}</span>
+                    <span className={styles.chip}>{`${pkg.credits} ${c.credits}`}</span>
+                    <span className={styles.chip}>{pkg.validityDays ? `${pkg.validityDays} ${locale === 'ko' ? '일' : locale === 'zh-hant' ? '天' : 'days'}` : c.noExpiryDefault}</span>
+                    <span className={styles.chip}>{pkg.priceAmount ? `${pkg.priceCurrency ?? 'TWD'} ${pkg.priceAmount.toLocaleString()}` : c.manualPrice}</span>
+                    <span className={styles.chip}>{pkg.isActive ? c.active : c.inactive}</span>
                   </div>
-                  <p className={styles.muted}>Services: {serviceNames.join(', ') || 'All services'}</p>
+                  <p className={styles.muted}>{`${c.servicesLabel}: ${serviceNames.join(', ') || c.allServices}`}</p>
                   <div className={styles.actions}>
-                    <button className={styles.buttonSecondary} type="button" onClick={() => setPackageDraft(draftFromPackage(pkg))}>Edit</button>
-                    {pkg.isActive ? <button className={styles.buttonSecondary} type="button" onClick={() => deactivatePackage(pkg)}>Deactivate</button> : null}
+                    <button className={styles.buttonSecondary} type="button" onClick={() => setPackageDraft(draftFromPackage(pkg))}>{c.edit}</button>
+                    {pkg.isActive ? <button className={styles.buttonSecondary} type="button" onClick={() => deactivatePackage(pkg)}>{c.deactivate}</button> : null}
                   </div>
                 </div>
               </article>
@@ -278,8 +469,8 @@ export default function BookingPackagesAdmin({
       <section className={styles.panel} style={{ marginTop: 18 }}>
         <div className={styles.sectionHeader}>
           <div>
-            <h2 className={styles.cardTitle}>Customer credits</h2>
-            <p className={styles.muted}>Credits are matched by customer email and consumed when an eligible paid booking is confirmed.</p>
+            <h2 className={styles.cardTitle}>{c.customerCredits}</h2>
+            <p className={styles.muted}>{c.customerCreditsDescription}</p>
           </div>
         </div>
         <div className={styles.grid}>
@@ -296,15 +487,15 @@ export default function BookingPackagesAdmin({
                   <h3 className={styles.cardTitle}>{credit.customerName || credit.customerEmail}</h3>
                   <p className={styles.muted}>{credit.customerEmail}</p>
                   <div className={styles.metaRow}>
-                    <span className={styles.chip} data-booking-credit-remaining={credit.creditId}>{credit.remainingCredits}/{credit.totalCredits} remaining</span>
-                    <span className={styles.chip}>{credit.status}</span>
-                    <span className={styles.chip} data-booking-credit-expiry={credit.creditId}>{credit.expiresAt ? `Expires ${credit.expiresAt.slice(0, 10)}` : 'No expiry'}</span>
+                    <span className={styles.chip} data-booking-credit-remaining={credit.creditId}>{c.remaining(credit.remainingCredits, credit.totalCredits)}</span>
+                    <span className={styles.chip}>{credit.status === 'active' ? c.activeStatus : credit.status === 'used' ? c.usedStatus : credit.status === 'expired' ? c.expiredStatus : c.revokedStatus}</span>
+                    <span className={styles.chip} data-booking-credit-expiry={credit.creditId}>{credit.expiresAt ? c.expiresAt(credit.expiresAt.slice(0, 10)) : c.noExpiry}</span>
                   </div>
-                  <p className={styles.muted}>Package: {textForLocale(pkg?.name, locale) || credit.packageId}</p>
-                  <p className={styles.muted}>Redemptions: {credit.redemptions?.filter((entry) => !entry.restoredAt).length ?? 0}</p>
+                  <p className={styles.muted}>{`${c.packageLabel} ${textForLocale(pkg?.name, locale) || credit.packageId}`}</p>
+                  <p className={styles.muted}>{`${c.redemptions} ${credit.redemptions?.filter((entry) => !entry.restoredAt).length ?? 0}`}</p>
                   <div className={styles.actions}>
-                    <button className={styles.buttonSecondary} type="button" onClick={() => setCreditDraft(draftFromCredit(credit, defaultPackageId))}>Edit</button>
-                    {credit.status !== 'revoked' ? <button className={styles.buttonSecondary} type="button" data-booking-credit-revoke={credit.creditId} onClick={() => revokeCredit(credit)}>Revoke</button> : null}
+                    <button className={styles.buttonSecondary} type="button" onClick={() => setCreditDraft(draftFromCredit(credit, defaultPackageId))}>{c.edit}</button>
+                    {credit.status !== 'revoked' ? <button className={styles.buttonSecondary} type="button" data-booking-credit-revoke={credit.creditId} onClick={() => revokeCredit(credit)}>{c.revoke}</button> : null}
                   </div>
                 </div>
               </article>
@@ -317,18 +508,18 @@ export default function BookingPackagesAdmin({
         <div className={styles.modalBackdrop}>
           <div className={styles.modal}>
             <div className={styles.modalHeader}>
-              <h2 className={styles.modalTitle}>{packageDraft.packageId ? 'Edit package' : 'New package'}</h2>
-              <button className={styles.buttonSecondary} type="button" onClick={() => setPackageDraft(null)}>Close</button>
+              <h2 className={styles.modalTitle}>{packageDraft.packageId ? c.editPackageTitle : c.newPackageTitle}</h2>
+              <button className={styles.buttonSecondary} type="button" onClick={() => setPackageDraft(null)}>{c.close}</button>
             </div>
             <div className={styles.formGrid}>
-              <label className={styles.field}><span className={styles.label}>Name KO</span><input className={styles.input} value={packageDraft.nameKo} onChange={(event) => setPackageDraft({ ...packageDraft, nameKo: event.target.value })} /></label>
-              <label className={styles.field}><span className={styles.label}>Name EN</span><input className={styles.input} value={packageDraft.nameEn} onChange={(event) => setPackageDraft({ ...packageDraft, nameEn: event.target.value })} /></label>
-              <label className={styles.field}><span className={styles.label}>Name ZH</span><input className={styles.input} value={packageDraft.nameZh} onChange={(event) => setPackageDraft({ ...packageDraft, nameZh: event.target.value })} /></label>
-              <label className={styles.field}><span className={styles.label}>Credits</span><input className={styles.input} type="number" min={1} max={250} value={packageDraft.credits} onChange={(event) => setPackageDraft({ ...packageDraft, credits: Number(event.target.value) })} /></label>
-              <label className={styles.field}><span className={styles.label}>Validity days</span><input className={styles.input} type="number" min={1} value={packageDraft.validityDays} onChange={(event) => setPackageDraft({ ...packageDraft, validityDays: Number(event.target.value) })} /></label>
-              <label className={styles.field}><span className={styles.label}>Price amount</span><input className={styles.input} type="number" min={0} value={packageDraft.priceAmount} onChange={(event) => setPackageDraft({ ...packageDraft, priceAmount: Number(event.target.value) })} /></label>
+              <label className={styles.field}><span className={styles.label}>{c.nameKo}</span><input className={styles.input} value={packageDraft.nameKo} onChange={(event) => setPackageDraft({ ...packageDraft, nameKo: event.target.value })} /></label>
+              <label className={styles.field}><span className={styles.label}>{c.nameEn}</span><input className={styles.input} value={packageDraft.nameEn} onChange={(event) => setPackageDraft({ ...packageDraft, nameEn: event.target.value })} /></label>
+              <label className={styles.field}><span className={styles.label}>{c.nameZh}</span><input className={styles.input} value={packageDraft.nameZh} onChange={(event) => setPackageDraft({ ...packageDraft, nameZh: event.target.value })} /></label>
+              <label className={styles.field}><span className={styles.label}>{c.credits}</span><input className={styles.input} type="number" min={1} max={250} value={packageDraft.credits} onChange={(event) => setPackageDraft({ ...packageDraft, credits: Number(event.target.value) })} /></label>
+              <label className={styles.field}><span className={styles.label}>{c.validityDays}</span><input className={styles.input} type="number" min={1} value={packageDraft.validityDays} onChange={(event) => setPackageDraft({ ...packageDraft, validityDays: Number(event.target.value) })} /></label>
+              <label className={styles.field}><span className={styles.label}>{c.priceAmount}</span><input className={styles.input} type="number" min={0} value={packageDraft.priceAmount} onChange={(event) => setPackageDraft({ ...packageDraft, priceAmount: Number(event.target.value) })} /></label>
               <label className={styles.field}>
-                <span className={styles.label}>Currency</span>
+                <span className={styles.label}>{c.currency}</span>
                 <select className={styles.select} value={packageDraft.priceCurrency} onChange={(event) => setPackageDraft({ ...packageDraft, priceCurrency: event.target.value as PackageDraft['priceCurrency'] })}>
                   <option value="TWD">TWD</option>
                   <option value="KRW">KRW</option>
@@ -337,12 +528,12 @@ export default function BookingPackagesAdmin({
                   <option value="EUR">EUR</option>
                 </select>
               </label>
-              <label className={styles.field}><span className={styles.label}><input type="checkbox" checked={packageDraft.isActive} onChange={(event) => setPackageDraft({ ...packageDraft, isActive: event.target.checked })} /> Active</span></label>
-              <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>Description KO</span><textarea className={styles.textarea} value={packageDraft.descriptionKo} onChange={(event) => setPackageDraft({ ...packageDraft, descriptionKo: event.target.value })} /></label>
-              <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>Description EN</span><textarea className={styles.textarea} value={packageDraft.descriptionEn} onChange={(event) => setPackageDraft({ ...packageDraft, descriptionEn: event.target.value })} /></label>
-              <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>Description ZH</span><textarea className={styles.textarea} value={packageDraft.descriptionZh} onChange={(event) => setPackageDraft({ ...packageDraft, descriptionZh: event.target.value })} /></label>
+              <label className={styles.field}><span className={styles.label}><input type="checkbox" checked={packageDraft.isActive} onChange={(event) => setPackageDraft({ ...packageDraft, isActive: event.target.checked })} /> {c.activeLabel}</span></label>
+              <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>{c.descriptionKo}</span><textarea className={styles.textarea} value={packageDraft.descriptionKo} onChange={(event) => setPackageDraft({ ...packageDraft, descriptionKo: event.target.value })} /></label>
+              <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>{c.descriptionEn}</span><textarea className={styles.textarea} value={packageDraft.descriptionEn} onChange={(event) => setPackageDraft({ ...packageDraft, descriptionEn: event.target.value })} /></label>
+              <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>{c.descriptionZh}</span><textarea className={styles.textarea} value={packageDraft.descriptionZh} onChange={(event) => setPackageDraft({ ...packageDraft, descriptionZh: event.target.value })} /></label>
               <fieldset className={`${styles.field} ${styles.fieldFull}`}>
-                <legend className={styles.label}>Eligible services</legend>
+                <legend className={styles.label}>{c.eligibleServices}</legend>
                 <div className={styles.metaRow}>
                   {services.map((service) => (
                     <label className={styles.chip} key={service.serviceId}>
@@ -360,12 +551,12 @@ export default function BookingPackagesAdmin({
                     </label>
                   ))}
                 </div>
-                <p className={styles.muted}>Leave all unchecked to let credits apply to any paid booking service.</p>
+                <p className={styles.muted}>{c.eligibleServicesHint}</p>
               </fieldset>
             </div>
             <div className={styles.actions}>
-              <button className={styles.button} type="button" onClick={savePackage} disabled={saving}>{saving ? 'Saving...' : 'Save package'}</button>
-              <button className={styles.buttonSecondary} type="button" onClick={() => setPackageDraft(null)}>Cancel</button>
+              <button className={styles.button} type="button" onClick={savePackage} disabled={saving}>{saving ? c.saving : c.savePackage}</button>
+              <button className={styles.buttonSecondary} type="button" onClick={() => setPackageDraft(null)}>{c.cancel}</button>
             </div>
           </div>
         </div>
@@ -375,35 +566,35 @@ export default function BookingPackagesAdmin({
         <div className={styles.modalBackdrop}>
           <div className={styles.modal}>
             <div className={styles.modalHeader}>
-              <h2 className={styles.modalTitle}>{creditDraft.creditId ? 'Edit customer credit' : 'Grant customer credit'}</h2>
-              <button className={styles.buttonSecondary} type="button" onClick={() => setCreditDraft(null)}>Close</button>
+              <h2 className={styles.modalTitle}>{creditDraft.creditId ? c.editCreditTitle : c.newCreditTitle}</h2>
+              <button className={styles.buttonSecondary} type="button" onClick={() => setCreditDraft(null)}>{c.close}</button>
             </div>
             <div className={styles.formGrid}>
               <label className={`${styles.field} ${styles.fieldFull}`}>
-                <span className={styles.label}>Package</span>
+                <span className={styles.label}>{c.packageLabel}</span>
                 <select className={styles.select} value={creditDraft.packageId} onChange={(event) => setCreditDraft({ ...creditDraft, packageId: event.target.value })} disabled={Boolean(creditDraft.creditId)}>
                   {packages.map((pkg) => <option key={pkg.packageId} value={pkg.packageId}>{textForLocale(pkg.name, locale)}</option>)}
                 </select>
               </label>
-              <label className={styles.field}><span className={styles.label}>Customer email</span><input className={styles.input} type="email" value={creditDraft.customerEmail} onChange={(event) => setCreditDraft({ ...creditDraft, customerEmail: event.target.value })} disabled={Boolean(creditDraft.creditId)} /></label>
-              <label className={styles.field}><span className={styles.label}>Customer name</span><input className={styles.input} value={creditDraft.customerName} onChange={(event) => setCreditDraft({ ...creditDraft, customerName: event.target.value })} /></label>
-              <label className={styles.field}><span className={styles.label}>Total credits</span><input className={styles.input} type="number" min={1} max={250} value={creditDraft.totalCredits} onChange={(event) => setCreditDraft({ ...creditDraft, totalCredits: Number(event.target.value) })} /></label>
-              <label className={styles.field}><span className={styles.label}>Remaining credits</span><input className={styles.input} type="number" min={0} max={250} value={creditDraft.remainingCredits} onChange={(event) => setCreditDraft({ ...creditDraft, remainingCredits: Number(event.target.value) })} /></label>
-              <label className={styles.field}><span className={styles.label}>Expires</span><input className={styles.input} type="date" value={creditDraft.expiresAtDate} onChange={(event) => setCreditDraft({ ...creditDraft, expiresAtDate: event.target.value })} /></label>
+              <label className={styles.field}><span className={styles.label}>{c.customerEmail}</span><input className={styles.input} type="email" value={creditDraft.customerEmail} onChange={(event) => setCreditDraft({ ...creditDraft, customerEmail: event.target.value })} disabled={Boolean(creditDraft.creditId)} /></label>
+              <label className={styles.field}><span className={styles.label}>{c.customerName}</span><input className={styles.input} value={creditDraft.customerName} onChange={(event) => setCreditDraft({ ...creditDraft, customerName: event.target.value })} /></label>
+              <label className={styles.field}><span className={styles.label}>{c.totalCredits}</span><input className={styles.input} type="number" min={1} max={250} value={creditDraft.totalCredits} onChange={(event) => setCreditDraft({ ...creditDraft, totalCredits: Number(event.target.value) })} /></label>
+              <label className={styles.field}><span className={styles.label}>{c.remainingCredits}</span><input className={styles.input} type="number" min={0} max={250} value={creditDraft.remainingCredits} onChange={(event) => setCreditDraft({ ...creditDraft, remainingCredits: Number(event.target.value) })} /></label>
+              <label className={styles.field}><span className={styles.label}>{c.expires}</span><input className={styles.input} type="date" value={creditDraft.expiresAtDate} onChange={(event) => setCreditDraft({ ...creditDraft, expiresAtDate: event.target.value })} /></label>
               <label className={styles.field}>
-                <span className={styles.label}>Status</span>
+                <span className={styles.label}>{c.status}</span>
                 <select className={styles.select} value={creditDraft.status} onChange={(event) => setCreditDraft({ ...creditDraft, status: event.target.value as CreditDraft['status'] })}>
-                  <option value="active">Active</option>
-                  <option value="used">Used</option>
-                  <option value="expired">Expired</option>
-                  <option value="revoked">Revoked</option>
+                  <option value="active">{c.activeStatus}</option>
+                  <option value="used">{c.usedStatus}</option>
+                  <option value="expired">{c.expiredStatus}</option>
+                  <option value="revoked">{c.revokedStatus}</option>
                 </select>
               </label>
-              <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>Note</span><textarea className={styles.textarea} value={creditDraft.note} onChange={(event) => setCreditDraft({ ...creditDraft, note: event.target.value })} /></label>
+              <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>{c.note}</span><textarea className={styles.textarea} value={creditDraft.note} onChange={(event) => setCreditDraft({ ...creditDraft, note: event.target.value })} /></label>
             </div>
             <div className={styles.actions}>
-              <button className={styles.button} type="button" onClick={saveCredit} disabled={saving || !creditDraft.packageId || !creditDraft.customerEmail}>{saving ? 'Saving...' : 'Save credit'}</button>
-              <button className={styles.buttonSecondary} type="button" onClick={() => setCreditDraft(null)}>Cancel</button>
+              <button className={styles.button} type="button" onClick={saveCredit} disabled={saving || !creditDraft.packageId || !creditDraft.customerEmail}>{saving ? c.saving : c.saveCredit}</button>
+              <button className={styles.buttonSecondary} type="button" onClick={() => setCreditDraft(null)}>{c.cancel}</button>
             </div>
           </div>
         </div>

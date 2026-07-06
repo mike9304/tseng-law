@@ -4,6 +4,7 @@ import { useEffect, type Dispatch, type SetStateAction } from 'react';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import { createShortcutHandler, NUDGE_LARGE_PX, NUDGE_PX, type CanvasAction } from '@/lib/builder/canvas/shortcuts';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { filterViewportVisibleNodes } from '@/lib/builder/canvas/responsive';
 import type { ZoomState } from '@/lib/builder/canvas/zoom';
 import { zoomIn as stepZoomIn, zoomOut as stepZoomOut } from '@/lib/builder/canvas/zoom';
 
@@ -81,9 +82,12 @@ export function useCanvasKeyboardShortcuts({
           break;
         case 'selectAll': {
           const storeState = useBuilderCanvasStore.getState();
-          const allNodes = (storeState.document?.nodes ?? []).filter((node) => (
-            node.visible
-            && (storeState.activeGroupId ? node.parentId === storeState.activeGroupId : true)
+          // viewport-hidden 노드는 렌더되지 않으므로 select-all 에서도 제외(render gate 일치).
+          const allNodes = filterViewportVisibleNodes(
+            storeState.document?.nodes ?? [],
+            storeState.viewport,
+          ).filter((node) => (
+            storeState.activeGroupId ? node.parentId === storeState.activeGroupId : true
           ));
           setSelectedNodeIds(allNodes.map((node) => node.id), allNodes[allNodes.length - 1]?.id ?? null);
           break;

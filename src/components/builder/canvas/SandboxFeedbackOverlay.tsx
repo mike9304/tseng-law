@@ -1,11 +1,14 @@
 'use client';
 
 import type { ActivityChip, SandboxToast } from '@/components/builder/canvas/SandboxPageChrome';
+import type { Locale } from '@/lib/locales';
+import { getSandboxFeedbackOverlayCopy } from './sandbox-feedback-copy';
 import styles from './SandboxPage.module.css';
 
 type DraftSaveState = 'idle' | 'saving' | 'saved' | 'error';
 
 interface SandboxFeedbackOverlayProps {
+  locale: Locale;
   draftSaveState: DraftSaveState;
   activityChips: ActivityChip[];
   toasts: SandboxToast[];
@@ -17,18 +20,15 @@ function getSaveStatusClassName(draftSaveState: Exclude<DraftSaveState, 'idle'>)
   return `${styles.saveStatusChip} ${styles[`saveStatusChip${statusSuffix}` as keyof typeof styles]}`;
 }
 
-function getSaveStatusLabel(draftSaveState: Exclude<DraftSaveState, 'idle'>) {
-  if (draftSaveState === 'saving') return 'Saving…';
-  if (draftSaveState === 'saved') return 'Saved';
-  return 'Save failed';
-}
-
 export default function SandboxFeedbackOverlay({
+  locale,
   draftSaveState,
   activityChips,
   toasts,
   onDismissToast,
 }: SandboxFeedbackOverlayProps) {
+  const copy = getSandboxFeedbackOverlayCopy(locale);
+
   return (
     <>
       <div className={styles.lowerLeftChipStack} aria-live="polite" aria-atomic="false">
@@ -36,9 +36,10 @@ export default function SandboxFeedbackOverlay({
           <div
             className={getSaveStatusClassName(draftSaveState)}
             data-save-status-chip={draftSaveState}
+            data-builder-save-status={draftSaveState}
           >
             <span className={styles.saveStatusGlyph} data-save-status-glyph aria-hidden="true" />
-            <strong>{getSaveStatusLabel(draftSaveState)}</strong>
+            <strong>{copy.saveStatusLabels[draftSaveState]}</strong>
           </div>
         ) : null}
         {activityChips.map((chip) => (

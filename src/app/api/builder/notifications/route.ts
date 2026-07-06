@@ -1,11 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
 import {
   createNotification,
   listNotifications,
   markAllRead,
 } from '@/lib/builder/notifications/notification-store';
 import type { BuilderNotificationKind } from '@/lib/builder/notifications/notification-model';
+import {
+  getBuilderNotificationsApiErrorPayload,
+  type BuilderNotificationsApiErrorCode,
+} from '@/lib/builder/notifications/notifications-api-copy';
+import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -19,20 +24,47 @@ const ALLOWED_KINDS: BuilderNotificationKind[] = [
   'publish',
 ];
 
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderNotificationsApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderNotificationsApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
+function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
+  const queryLocale = request.nextUrl.searchParams.get('locale') ?? undefined;
+  if (isLocale(queryLocale)) return queryLocale;
+  if (payload && typeof payload === 'object') {
+    const locale = (payload as { locale?: unknown }).locale;
+    if (typeof locale === 'string' && isLocale(locale)) return locale;
+  }
+  return normalizeLocale(queryLocale);
+}
+
 export async function GET(request: NextRequest) {
-  const auth = await guardMutation(request, { allowReadOnly: true });
+  const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
   const url = new URL(request.url);
-  const kindParam = url.searchParams.get('kind') as BuilderNotificationKind | null;
-  const unreadOnly = url.searchParams.get('unreadOnly') === '1';
-  const limit = Number(url.searchParams.get('limit') ?? 50);
-  const items = await listNotifications({
-    kind: kindParam && ALLOWED_KINDS.includes(kindParam) ? kindParam : undefined,
-    unreadOnly,
-    limit: Number.isFinite(limit) && limit > 0 ? Math.min(limit, 200) : 50,
-  });
-  const unread = items.filter((n) => !n.readAt).length;
-  return NextResponse.json({ ok: true, notifications: items, total: items.length, unread });
+  const locale = resolveRequestLocale(request);
+  try {
+    const kindParam = url.searchParams.get('kind') as BuilderNotificationKind | null;
+    const unreadOnly = url.searchParams.get('unreadOnly') === '1';
+    const limit = Number(url.searchParams.get('limit') ?? 50);
+    const items = await listNotifications({
+      kind: kindParam && ALLOWED_KINDS.includes(kindParam) ? kindParam : undefined,
+      unreadOnly,
+      limit: Number.isFinite(limit) && limit > 0 ? Math.min(limit, 200) : 50,
+    });
+    const unread = items.filter((n) => !n.readAt).length;
+    return NextResponse.json({ ok: true, notifications: items, total: items.length, unread });
+  } catch (error) {
+    console.error('[builder/notifications] GET failed:', error);
+    return errorResponse(locale, 'notifications_list_failed', 500);
+  }
 }
 
 /**
@@ -57,23 +89,31 @@ function isInternalRequest(request: NextRequest): boolean {
 }
 
 export async function POST(request: NextRequest) {
+  let errorLocale = resolveRequestLocale(request);
   if (!isInternalRequest(request)) {
-    return NextResponse.json({ error: 'internal_only' }, { status: 403 });
+    return errorResponse(errorLocale, 'internal_only', 403);
   }
-  const raw = await request.json().catch(() => null) as {
+  let raw: {
     kind?: unknown;
     subject?: unknown;
     body?: unknown;
     audience?: unknown;
     link?: unknown;
+    locale?: unknown;
   } | null;
+  try {
+    raw = await request.json();
+    errorLocale = resolveRequestLocale(request, raw);
+  } catch {
+    return errorResponse(errorLocale, 'invalid_json', 400);
+  }
   const kind = raw?.kind as BuilderNotificationKind | undefined;
   if (!kind || !ALLOWED_KINDS.includes(kind)) {
-    return NextResponse.json({ error: 'invalid_kind' }, { status: 400 });
+    return errorResponse(errorLocale, 'invalid_kind', 400);
   }
   const subject = typeof raw?.subject === 'string' ? raw.subject : '';
   if (!subject.trim()) {
-    return NextResponse.json({ error: 'subject_required' }, { status: 400 });
+    return errorResponse(errorLocale, 'subject_required', 400);
   }
   const body = typeof raw?.body === 'string' ? raw.body : '';
   const link = typeof raw?.link === 'string' ? raw.link : undefined;
@@ -98,10 +138,8 @@ export async function POST(request: NextRequest) {
     });
     return NextResponse.json({ ok: true, notification }, { status: 201 });
   } catch (error) {
-    return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'create_failed' },
-      { status: 400 },
-    );
+    console.error('[builder/notifications] POST failed:', error);
+    return errorResponse(errorLocale, 'notification_create_failed', 500);
   }
 }
 
@@ -109,10 +147,17 @@ export async function PUT(request: NextRequest) {
   // Bulk "mark all read".
   const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
-  const raw = await request.json().catch(() => null) as { kind?: unknown } | null;
-  const kind = raw?.kind as BuilderNotificationKind | undefined;
-  const updated = await markAllRead({
-    kind: kind && ALLOWED_KINDS.includes(kind) ? kind : undefined,
-  });
-  return NextResponse.json({ ok: true, updated });
+  let errorLocale = resolveRequestLocale(request);
+  try {
+    const raw = await request.json().catch(() => null) as { kind?: unknown; locale?: unknown } | null;
+    errorLocale = resolveRequestLocale(request, raw);
+    const kind = raw?.kind as BuilderNotificationKind | undefined;
+    const updated = await markAllRead({
+      kind: kind && ALLOWED_KINDS.includes(kind) ? kind : undefined,
+    });
+    return NextResponse.json({ ok: true, updated });
+  } catch (error) {
+    console.error('[builder/notifications] PUT failed:', error);
+    return errorResponse(errorLocale, 'notification_update_failed', 500);
+  }
 }

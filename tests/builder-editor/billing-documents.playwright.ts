@@ -85,7 +85,7 @@ test('/ko/admin-builder/commerce/documents manages automatic billing policy', as
   await page.locator('[data-billing-manual-instruction-body="orders-bank_transfer"]').fill('Bank: Test Trust\nMemo: invoice number');
   await expect(page.locator('[data-billing-auto-policy-save]')).toBeEnabled();
   await page.locator('[data-billing-auto-policy-save]').click();
-  await expect(page.locator('[data-billing-auto-policy-notice]')).toContainText('saved');
+  await expect(page.locator('[data-billing-auto-policy-notice]')).toContainText('자동 발행 정책이 저장되었습니다.');
 
   const settingsResponse = await request.get('/api/builder/billing-documents/settings', {
     headers: { Authorization: authHeader },
@@ -231,7 +231,7 @@ test('/ko/admin-builder/commerce/documents creates booking invoice payment links
     await expect(row).toBeVisible();
     await expect(row).toHaveAttribute('data-billing-document-currency-code', 'TWD');
     await expect(page.locator(`[data-billing-document-currency="${rowKey}"]`)).toContainText('TWD');
-    await expect(page.locator(`[data-billing-document-payment-link-status="${rowKey}"]`)).toContainText('No pay link');
+    await expect(page.locator(`[data-billing-document-payment-link-status="${rowKey}"]`)).toContainText('결제 링크 없음');
 
     const createResponse = page.waitForResponse((response) =>
       response.url().includes(`/api/builder/billing-documents/booking/${bookingId}/${invoice.documentId}/payment-link`)
@@ -250,9 +250,9 @@ test('/ko/admin-builder/commerce/documents creates booking invoice payment links
     expect(createPayload.document.paymentLinkStatus).toBe('active');
     expect(createPayload.document.paymentLinkPath).toContain('/api/billing-documents/booking/');
     expect(createPayload.document.paymentLinkEvents).toEqual([expect.objectContaining({ type: 'created' })]);
-    await expect(page.locator(`[data-billing-document-payment-link-status="${rowKey}"]`)).toContainText('Pay link active');
+    await expect(page.locator(`[data-billing-document-payment-link-status="${rowKey}"]`)).toContainText('결제 링크 활성');
     await page.locator(`[data-billing-document-activity-toggle="${rowKey}"]`).click();
-    await expect(page.locator(`[data-billing-document-payment-link-history="${rowKey}"]`)).toContainText('Pay link created');
+    await expect(page.locator(`[data-billing-document-payment-link-history="${rowKey}"]`)).toContainText('결제 링크 생성');
     await expect(page.locator(`[data-billing-document-payment="${rowKey}"]`)).toBeVisible();
 
     const webhookEventId = `evt_billing_ui_${token}`;
@@ -330,14 +330,15 @@ test('/ko/admin-builder/commerce/documents creates booking invoice payment links
     );
     await page.locator('[data-billing-documents-refresh]').click();
     await refreshWebhooks;
-    await expect(page.locator(`[data-billing-document-webhook-status="${rowKey}"]`)).toContainText('Webhook ignored');
+    await expect(page.locator(`[data-billing-document-webhook-status="${rowKey}"]`)).toContainText('웹훅 무시됨');
     await expect(page.locator(`[data-billing-document-webhook-history="${rowKey}"]`)).toContainText(webhookEventId.slice(0, 10));
     await expect(page.locator(`[data-billing-document-webhook-history="${rowKey}"]`)).toContainText('payment_intent.requires_action');
     await expect(page.locator(`[data-billing-document-webhook-history="${rowKey}"] [data-billing-document-webhook-replay]`).first()).toBeVisible();
-    await expect(page.locator('[data-billing-document-webhook-exceptions]')).toContainText('Billing webhook exceptions');
+    await expect(page.locator('[data-billing-document-webhook-exceptions]')).toContainText('청구 웹훅 예외');
     await expect(page.locator('[data-billing-document-webhook-exceptions]')).toContainText(unmatchedWebhookEventId.slice(0, 10));
     await expect(page.locator('[data-billing-document-webhook-exceptions]')).toContainText(`missing-doc-${token}`);
     await expect(page.locator('[data-billing-document-webhook-exceptions] [data-billing-document-webhook-exception-replay]').first()).toBeVisible();
+    await expect(page.locator('[data-payment-analytics-attention]')).toContainText('웹훅 무시됨');
 
     const publicPayResponse = await request.get(createPayload.document.paymentLinkPath);
     expect(publicPayResponse.status()).toBe(200);
@@ -359,7 +360,7 @@ test('/ko/admin-builder/commerce/documents creates booking invoice payment links
     await page.locator(`[data-billing-document-manual-payment-toggle="${rowKey}"]`).click();
     const manualForm = page.locator(`[data-billing-document-manual-payment-form="${rowKey}"]`);
     await expect(manualForm).toBeVisible();
-    await expect(page.locator(`[data-billing-document-manual-payment-helper="${rowKey}"]`)).toContainText('Only succeeded');
+    await expect(page.locator(`[data-billing-document-manual-payment-helper="${rowKey}"]`)).toContainText('성공한 결제만');
     await expect(page.locator(`[data-billing-document-manual-payment-currency="${rowKey}"]`)).toContainText('TWD');
     await page.locator(`[data-billing-document-manual-payment-status="${rowKey}"]`).selectOption('failed');
     await page.locator(`[data-billing-document-manual-payment-amount="${rowKey}"]`).fill('10.00');
@@ -382,7 +383,7 @@ test('/ko/admin-builder/commerce/documents creates booking invoice payment links
     expect(failedManualPayload.document.paymentStatus).toBe('unpaid');
     expect(failedManualPayload.document.paymentLinkStatus).toBe('active');
     expect(failedManualPayload.document.paymentLinkPath).toBe(createPayload.document.paymentLinkPath);
-    await expect(page.locator(`[data-billing-document-payment-link-status="${rowKey}"]`)).toContainText('Pay link active');
+    await expect(page.locator(`[data-billing-document-payment-link-status="${rowKey}"]`)).toContainText('결제 링크 활성');
 
     await page.locator(`[data-billing-document-manual-payment-status="${rowKey}"]`).selectOption('succeeded');
     await page.locator(`[data-billing-document-manual-payment-amount="${rowKey}"]`).fill('20.00');
@@ -419,10 +420,11 @@ test('/ko/admin-builder/commerce/documents creates booking invoice payment links
     expect(manualPayload.document.paymentLinkEvents).toEqual(expect.arrayContaining([
       expect.objectContaining({ type: 'revoked', reason: 'balance_changed', paymentId: manualPayload.manualPayment.paymentId }),
     ]));
-    await expect(page.locator(`[data-billing-document-payment-status="${rowKey}"]`)).toContainText('partially paid');
-    await expect(page.locator(`[data-billing-document-payment-link-reconcile="${rowKey}"]`)).toContainText('Pay link needs renewal');
-    await expect(page.locator(`[data-billing-document-payment-link-history="${rowKey}"]`)).toContainText('Pay link stale after payment');
-    await expect(page.locator(`[data-billing-document-create-payment="${rowKey}"]`)).toContainText('Renew pay');
+    await expect(page.locator(`[data-billing-document-payment-status="${rowKey}"]`)).toContainText('부분 결제됨');
+    await expect(page.locator(`[data-billing-document-payment-link-reconcile="${rowKey}"]`)).toContainText('결제 링크 갱신 필요');
+    await expect(page.locator(`[data-billing-document-payment-link-history="${rowKey}"]`)).toContainText('결제 후 링크 갱신 필요');
+    await expect(page.locator(`[data-billing-document-create-payment="${rowKey}"]`)).toContainText('결제 링크 갱신');
+    await expect(page.locator('[data-payment-analytics-attention]')).toContainText('오래된 결제 링크');
 
     const notificationResponse = await request.get(`/api/builder/commerce/notifications?locale=${LOCALE}&type=billing.payment_received.customer`, {
       headers,

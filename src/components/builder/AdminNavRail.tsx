@@ -15,6 +15,7 @@
  * CSS modules per the codebase pattern).
  */
 
+import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -22,10 +23,14 @@ import {
   ADMIN_NAV_TREE,
   adminHref,
   findActiveItem,
-  type AdminNavBadge,
   type AdminNavItem,
   type AdminNavTree,
 } from '@/lib/builder/admin-nav/nav-config';
+import {
+  getAdminNavCopy,
+  getAdminNavItemLabel,
+  getAdminNavSectionLabel,
+} from '@/lib/builder/admin-nav/nav-copy';
 
 interface AdminNavRailProps {
   /** Override the nav tree (useful for tests / permission filtering). */
@@ -36,16 +41,12 @@ interface AdminNavRailProps {
 
 const PATHNAME_REGEX = /^\/(ko|en|zh-hant)\/admin-builder(?:\/(.*))?$/;
 
-const BADGE_STYLE: Record<AdminNavBadge, { background: string; color: string; label: string }> = {
-  beta: { background: '#fde68a', color: '#92400e', label: 'BETA' },
-  new: { background: '#bbf7d0', color: '#166534', label: 'NEW' },
-};
-
 export default function AdminNavRail({ tree = ADMIN_NAV_TREE, locale: localeProp }: AdminNavRailProps) {
   const pathname = usePathname() ?? '';
   const match = pathname.match(PATHNAME_REGEX);
   const locale = localeProp ?? match?.[1] ?? 'ko';
   const rest = match?.[2] ?? '';
+  const copy = getAdminNavCopy(locale);
 
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -68,15 +69,16 @@ export default function AdminNavRail({ tree = ADMIN_NAV_TREE, locale: localeProp
   // Hide rail entirely on the admin-builder root (editor canvas keeps full bleed).
   if (!match || rest === '') return null;
 
+  const editorHref = `/${locale}/admin-builder`;
   const railContent = (
     <nav
       data-builder-admin-nav-rail="true"
-      aria-label="빌더 관리 내비게이션"
+      aria-label={copy.ariaLabel}
       style={{
         display: 'flex',
         flexDirection: 'column',
         gap: 18,
-        padding: '18px 12px',
+        padding: isMobile ? '64px 12px 18px' : '18px 12px',
         minWidth: 220,
         width: 220,
         background: '#0f172a',
@@ -88,8 +90,8 @@ export default function AdminNavRail({ tree = ADMIN_NAV_TREE, locale: localeProp
         boxSizing: 'border-box',
       }}
     >
-      <Link
-        href={`/${locale}/admin-builder`}
+      <a
+        href={editorHref}
         data-builder-admin-rail-back="true"
         style={{
           display: 'inline-flex',
@@ -105,8 +107,8 @@ export default function AdminNavRail({ tree = ADMIN_NAV_TREE, locale: localeProp
         }}
       >
         <span aria-hidden style={{ fontSize: 14 }}>←</span>
-        <span>편집기로 돌아가기</span>
-      </Link>
+        <span>{copy.backLabel}</span>
+      </a>
 
       {tree.sections.map((section) => (
         <div key={section.heading} data-builder-admin-rail-section={section.heading}>
@@ -121,7 +123,7 @@ export default function AdminNavRail({ tree = ADMIN_NAV_TREE, locale: localeProp
               marginBottom: 4,
             }}
           >
-            {section.heading}
+            {getAdminNavSectionLabel(locale, section.heading)}
           </div>
           <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 2 }}>
             {section.items.map((item) => (
@@ -139,7 +141,7 @@ export default function AdminNavRail({ tree = ADMIN_NAV_TREE, locale: localeProp
         <button
           type="button"
           aria-expanded={drawerOpen}
-          aria-label={drawerOpen ? '관리 메뉴 닫기' : '관리 메뉴 열기'}
+          aria-label={drawerOpen ? copy.closeMenuLabel : copy.openMenuLabel}
           data-builder-admin-rail-toggle="true"
           onClick={() => setDrawerOpen((open) => !open)}
           style={{
@@ -158,7 +160,7 @@ export default function AdminNavRail({ tree = ADMIN_NAV_TREE, locale: localeProp
             boxShadow: '0 10px 30px rgba(15, 23, 42, 0.35)',
           }}
         >
-          {drawerOpen ? '✕ 메뉴 닫기' : '☰ 관리 메뉴'}
+          {drawerOpen ? copy.closeMenuButton : copy.openMenuButton}
         </button>
         {drawerOpen ? (
           <div
@@ -188,8 +190,31 @@ interface NavLinkProps {
   active: boolean;
 }
 
+function Badge({ kind, locale }: { kind: 'beta' | 'new'; locale: string }) {
+  const copy = getAdminNavCopy(locale);
+  const background = kind === 'beta' ? '#fde68a' : '#bbf7d0';
+  const color = kind === 'beta' ? '#92400e' : '#166534';
+  const label = kind === 'beta' ? copy.betaBadge : copy.newBadge;
+  return (
+    <span
+      style={{
+        background,
+        color,
+        fontSize: 9,
+        fontWeight: 800,
+        padding: '2px 6px',
+        borderRadius: 999,
+        letterSpacing: 0.5,
+      }}
+    >
+      {label}
+    </span>
+  );
+}
+
 function NavLink({ item, locale, active }: NavLinkProps) {
   const href = adminHref(locale, item.href);
+  const label = getAdminNavItemLabel(locale, item.label);
   return (
     <li>
       <Link
@@ -215,28 +240,9 @@ function NavLink({ item, locale, active }: NavLinkProps) {
             {item.icon}
           </span>
         ) : null}
-        <span style={{ flex: 1 }}>{item.label}</span>
-        {item.badge ? <Badge kind={item.badge} /> : null}
+        <span style={{ flex: 1 }}>{label}</span>
+        {item.badge ? <Badge kind={item.badge} locale={locale} /> : null}
       </Link>
     </li>
-  );
-}
-
-function Badge({ kind }: { kind: AdminNavBadge }) {
-  const { background, color, label } = BADGE_STYLE[kind];
-  return (
-    <span
-      style={{
-        background,
-        color,
-        fontSize: 9,
-        fontWeight: 800,
-        padding: '2px 6px',
-        borderRadius: 999,
-        letterSpacing: 0.5,
-      }}
-    >
-      {label}
-    </span>
   );
 }

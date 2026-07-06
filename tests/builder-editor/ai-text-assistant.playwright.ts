@@ -125,13 +125,18 @@ async function createBuilderPage(
     });
     if (!(await waitForRateLimit(response))) break;
   }
-  expect(response).toBeTruthy();
-  response = response!;
+  if (!response) {
+    throw new Error('Failed to create a builder page after retries.');
+  }
   expect(response.status()).toBe(200);
   const payload = (await response.json()) as { success?: boolean; pageId?: string; error?: string };
   expect(payload.success, payload.error).toBe(true);
-  expect(payload.pageId).toBeTruthy();
-  return payload.pageId!;
+  const pageId = payload.pageId;
+  expect(pageId).toBeTruthy();
+  if (typeof pageId !== 'string' || pageId.length === 0) {
+    throw new Error('Builder page creation did not return a page id.');
+  }
+  return pageId;
 }
 
 async function openBuilderPageById(page: Page, pageId: string, scope: string): Promise<void> {
@@ -203,9 +208,10 @@ test.describe('AI text assistant', () => {
     let pageId: string | null = null;
     try {
       const document = makeTextDocument({ token, rootId: 'ai-text-root', textId, text: sourceText });
-      pageId = await createBuilderPage(page.request, slug, `AI text rewrite ${token}`, document);
+      const createdPageId = await createBuilderPage(page.request, slug, `AI text rewrite ${token}`, document);
+      pageId = createdPageId;
 
-      await openBuilderPageById(page, pageId, 'rewrite');
+      await openBuilderPageById(page, createdPageId, 'rewrite');
       await selectNodeWithHandles(page, textId);
       await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 40, y: 40 }, force: true });
       const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
@@ -237,15 +243,40 @@ test.describe('AI text assistant', () => {
 
       await expect(aiPanel).toBeHidden();
 
-      // Commit the editor by clicking outside.
-      await page.locator('header[class*="topBar"]').click({ position: { x: 20, y: 20 }, force: true });
+      await page.locator('[data-builder-canvas-viewport="desktop"]').click({ position: { x: 8, y: 8 }, force: true });
       await expect(editorShell).toBeHidden();
 
       await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(rewrittenText);
 
       await expect.poll(
         async () => {
-          const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
+          const node = (await draftNodes(page, createdPageId)).find((candidate) => candidate.id === textId);
+          return node?.content?.text ?? null;
+        },
+        { timeout: 15_000 },
+      ).toBe(rewrittenText);
+
+      const stageToolbar = page.locator('[data-builder-stage-toolbar="true"]').first();
+      await expect(stageToolbar).toBeVisible();
+      const undoButton = stageToolbar.getByRole('button', { name: '실행 취소' });
+      const redoButton = stageToolbar.getByRole('button', { name: '다시 실행' });
+      await expect(undoButton).toBeEnabled();
+      await undoButton.click();
+      await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(sourceText);
+      await expect.poll(
+        async () => {
+          const node = (await draftNodes(page, createdPageId)).find((candidate) => candidate.id === textId);
+          return node?.content?.text ?? null;
+        },
+        { timeout: 15_000 },
+      ).toBe(sourceText);
+
+      await expect(redoButton).toBeEnabled();
+      await redoButton.click();
+      await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(rewrittenText);
+      await expect.poll(
+        async () => {
+          const node = (await draftNodes(page, createdPageId)).find((candidate) => candidate.id === textId);
           return node?.content?.text ?? null;
         },
         { timeout: 15_000 },
@@ -303,7 +334,7 @@ test.describe('AI text assistant', () => {
       await expect(aiPanel).toBeVisible();
 
       // Click the Translate action chip
-      await aiPanel.getByRole('radio', { name: 'Translate' }).click();
+      await aiPanel.getByRole('radio', { name: /Translate|번역/ }).click();
       const localeSelect = aiPanel.getByLabel('번역 대상 언어');
       await expect(localeSelect).toBeVisible();
       await localeSelect.selectOption('en');

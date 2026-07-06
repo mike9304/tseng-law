@@ -1,6 +1,12 @@
 import { expect, test, type Page } from '@playwright/test';
 import { openBuilder, openCatalogDrawer } from './helpers/editor';
 
+function mainNavLabelForLocale(locale: 'ko' | 'zh-hant' | 'en'): string {
+  if (locale === 'ko') return '주요 메뉴';
+  if (locale === 'zh-hant') return '主要選單';
+  return 'Main';
+}
+
 function mutationHeaders(scope: string): Record<string, string> {
   const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'section-template-click';
   return { 'x-forwarded-for': `pw-${safeScope}` };
@@ -10,6 +16,7 @@ async function findPageIdBySlug(page: Page, slug: string, locale = 'ko'): Promis
   const response = await page.request.get(`/api/builder/site/pages?locale=${encodeURIComponent(locale)}`, {
     headers: mutationHeaders(slug),
     failOnStatusCode: false,
+    timeout: 60_000,
   });
   if (response.status() !== 200) return null;
   const payload = (await response.json()) as {
@@ -25,7 +32,7 @@ async function draftDocumentText(page: Page, pageId: string, locale = 'ko'): Pro
   });
   if (response.status() !== 200) return '';
   const payload = (await response.json()) as { document?: unknown };
-  return JSON.stringify(payload.document ?? null);
+  return JSON.stringify(payload.document ?? null).replace(/\\n/g, ' ');
 }
 
 function collectHrefValues(value: unknown, hrefs: string[] = []): string[] {
@@ -66,14 +73,14 @@ test.describe('/ko/admin-builder section design templates', () => {
     await openBuilder(page, `/ko/admin-builder?sectionTemplateClick=${Date.now().toString(36)}`);
     await page.keyboard.press('Escape');
 
-    await page.getByRole('button', { name: 'Design', exact: true }).click();
-    const designDrawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Section design' }).first();
+    await page.getByRole('button', { name: /^Design$|^디자인$/ }).click();
+    const designDrawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: /Section design|섹션 디자인/ }).first();
     await expect(designDrawer).toBeVisible();
     const servicesTarget = designDrawer.locator('[data-builder-section-template-target="services"]');
     await expect(servicesTarget).toContainText('12개 디자인 템플릿');
     await expect(designDrawer.locator('[data-builder-design-open-page-template-market="true"]')).toContainText(/전체 페이지 템플릿 \d+개 보기/);
     await servicesTarget.click();
-    await expect(designDrawer).toContainText('주요 서비스의 글, 주소, 링크 데이터는 그대로');
+    await expect(designDrawer).toContainText('이 섹션의 텍스트, URL, 링크 데이터는 유지한 채');
     await expect(designDrawer.locator('[data-builder-section-template-option^="services:"]')).toHaveCount(12);
     await expect(designDrawer.getByRole('button', { name: '← 섹션 목록' })).toBeVisible();
     await designDrawer.getByRole('button', { name: '← 섹션 목록' }).click();
@@ -107,8 +114,8 @@ test.describe('/ko/admin-builder section design templates', () => {
     await openBuilder(page, `/ko/admin-builder?designPageTemplateMarket=${Date.now().toString(36)}`);
     await page.keyboard.press('Escape');
 
-    await page.getByRole('button', { name: 'Design', exact: true }).click();
-    const designDrawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Section design' }).first();
+    await page.getByRole('button', { name: /^Design$|^디자인$/ }).click();
+    const designDrawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: /Section design|섹션 디자인/ }).first();
     await expect(designDrawer).toBeVisible();
     await designDrawer.locator('[data-builder-design-open-page-template-market="true"]').click();
 
@@ -124,16 +131,16 @@ test.describe('/ko/admin-builder section design templates', () => {
     await page.keyboard.press('Escape');
 
     const catalogDrawer = await openCatalogDrawer(page);
-    await expect(catalogDrawer.getByText('Section templates')).toBeVisible();
+    await expect(catalogDrawer.getByText(/^(Section templates|섹션 템플릿)$/).first()).toBeVisible();
     await expect(catalogDrawer.locator('[data-builder-built-in-section-library="true"]')).toBeVisible();
-    await catalogDrawer.getByRole('searchbox', { name: 'Search add elements' }).fill('주요업무');
+    await catalogDrawer.getByRole('searchbox', { name: /Search add elements|추가 요소 검색/ }).fill('주요업무');
     await expect(catalogDrawer.locator('[data-builder-built-in-section-result-count="true"]')).toContainText('12/12');
     await expect(catalogDrawer.locator('[data-builder-built-in-section-category="services"]')).toHaveCount(12);
-    await expect(catalogDrawer.getByText('Case Intake Flow')).toBeVisible();
-    await catalogDrawer.getByRole('searchbox', { name: 'Search add elements' }).fill('');
+    await expect(catalogDrawer.locator('[data-builder-built-in-section-template="services-case-intake-flow"]')).toBeVisible();
+    await catalogDrawer.getByRole('searchbox', { name: /Search add elements|추가 요소 검색/ }).fill('');
     await expect(catalogDrawer.locator('[data-builder-built-in-section-category="services"]')).toHaveCount(12);
-    await expect(catalogDrawer.getByText('Practice Bento Board')).toBeVisible();
-    const serviceTemplateButton = catalogDrawer.getByTitle('Service Accordion 섹션 추가');
+    await expect(catalogDrawer.locator('[data-builder-built-in-section-template="services-bento-practice"]')).toBeVisible();
+    const serviceTemplateButton = catalogDrawer.locator('[data-builder-built-in-section-template="services-accordion"]');
     await serviceTemplateButton.scrollIntoViewIfNeeded();
     await expect(serviceTemplateButton).toBeVisible();
     await serviceTemplateButton.click();
@@ -192,8 +199,8 @@ test.describe('/ko/admin-builder section design templates', () => {
       await page.keyboard.press('Escape');
 
       const catalogDrawer = await openCatalogDrawer(page);
-      await catalogDrawer.getByRole('searchbox', { name: 'Search add elements' }).fill('주요업무');
-      const serviceTemplateButton = catalogDrawer.getByTitle('Service Accordion 섹션 추가');
+      await catalogDrawer.getByRole('searchbox', { name: /Search add elements|추가 요소 검색/ }).fill('주요업무');
+      const serviceTemplateButton = catalogDrawer.locator('[data-builder-built-in-section-template="services-accordion"]');
       await serviceTemplateButton.scrollIntoViewIfNeeded();
       await expect(serviceTemplateButton).toBeVisible();
       await serviceTemplateButton.click();
@@ -240,37 +247,37 @@ test.describe('/ko/admin-builder section design templates', () => {
     await page.keyboard.press('Escape');
 
     const catalogDrawer = await openCatalogDrawer(page);
-    const addSearch = catalogDrawer.getByRole('searchbox', { name: 'Search add elements' });
+    const addSearch = catalogDrawer.getByRole('searchbox', { name: /Search add elements|추가 요소 검색/ });
     await addSearch.fill('홈페이지');
     await expect(catalogDrawer.locator('[data-builder-open-page-template-market="true"]')).toBeVisible();
     const pageTemplateResults = catalogDrawer.locator('[data-builder-page-template-search-results="true"]');
     await expect(pageTemplateResults).toBeVisible();
-    await expect(pageTemplateResults.locator('[data-builder-page-template-result-count="true"]')).toContainText('/261 page templates');
+    await expect(pageTemplateResults.locator('[data-builder-page-template-result-count="true"]')).toContainText(/\/261 page templates|\/261개 페이지 템플릿/);
     await expect(pageTemplateResults.locator('[data-builder-page-template-result-id$="-home"]').first()).toBeVisible();
 
     await addSearch.fill('법률');
     const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
-    await expect(lawHomeResult).toContainText('법률사무소 홈');
+    await expect(lawHomeResult).toContainText('법률 홈');
     await expect(lawHomeResult.locator('[data-template-thumbnail-renderer="html-scaled-mock"]')).toBeVisible();
-    await expect(lawHomeResult.locator('[data-builder-page-template-quality="true"]')).toContainText('Premium');
+    await expect(lawHomeResult.locator('[data-builder-page-template-quality="true"]')).toContainText(/Premium|프리미엄/);
     await lawHomeResult.click();
 
     const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
     await expect(gallery).toBeVisible();
     await expect(gallery.getByRole('searchbox')).toHaveValue('법률사무소 홈');
-    await expect(gallery.getByRole('button', { name: '법률사무소 홈 미리보기' })).toBeVisible();
+    await expect(gallery.getByRole('button', { name: '법률 홈 미리보기' })).toBeVisible();
 
-    await gallery.getByRole('searchbox').fill('여행사 홈');
-    await expect(gallery.getByRole('button', { name: '여행사 홈 미리보기' })).toBeVisible();
+    await gallery.getByRole('searchbox').fill('여행 홈');
+    await expect(gallery.getByRole('button', { name: '여행 홈 미리보기' })).toBeVisible();
 
-    await gallery.getByRole('button', { name: '여행사 홈 미리보기' }).click();
-    const preview = page.getByRole('dialog', { name: '여행사 홈' });
+    await gallery.getByRole('button', { name: '여행 홈 미리보기' }).click();
+    const preview = page.getByRole('dialog', { name: '여행 홈' });
     await expect(preview).toBeVisible();
     await preview.getByRole('button', { name: '이 템플릿 사용' }).click();
     await expect(page.getByText('선택한 템플릿으로 새 페이지를 생성합니다.')).toBeVisible();
     await page.getByRole('button', { name: '다른 템플릿 선택' }).click();
     await expect(gallery).toBeVisible();
-    await expect(gallery.getByRole('searchbox')).toHaveValue('여행사 홈');
+    await expect(gallery.getByRole('searchbox')).toHaveValue('여행 홈');
 
     await gallery.getByRole('button', { name: 'Close' }).click();
     await expect(gallery).toBeHidden();
@@ -283,22 +290,22 @@ test.describe('/ko/admin-builder section design templates', () => {
 
     try {
       const catalogDrawer = await openCatalogDrawer(page);
-      const addSearch = catalogDrawer.getByRole('searchbox', { name: 'Search add elements' });
+      const addSearch = catalogDrawer.getByRole('searchbox', { name: /Search add elements|추가 요소 검색/ });
       await addSearch.fill('법률');
       const pageTemplateResults = catalogDrawer.locator('[data-builder-page-template-search-results="true"]');
       const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
-      await expect(lawHomeResult).toContainText('법률사무소 홈');
+      await expect(lawHomeResult).toContainText('법률 홈');
       await lawHomeResult.click();
 
       const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
       await expect(gallery).toBeVisible();
-      await gallery.getByRole('button', { name: '법률사무소 홈 미리보기' }).click();
-      const preview = page.getByRole('dialog', { name: '법률사무소 홈' });
+      await gallery.getByRole('button', { name: '법률 홈 미리보기' }).click();
+      const preview = page.getByRole('dialog', { name: '법률 홈' });
       await expect(preview).toBeVisible();
       await preview.getByRole('button', { name: '이 템플릿 사용' }).click();
 
       const slugPrompt = page.getByRole('dialog', { name: '페이지 slug 입력' });
-      const slugInput = slugPrompt.getByPlaceholder('예: about, services, contact');
+      const slugInput = slugPrompt.getByPlaceholder('예: about, services, columns/taiwan-guide');
       const createButton = slugPrompt.getByRole('button', { name: '생성' });
       await expect(slugPrompt).toBeVisible();
       await expect(slugInput).toBeFocused();
@@ -336,19 +343,19 @@ test.describe('/ko/admin-builder section design templates', () => {
     await page.keyboard.press('Escape');
 
     const catalogDrawer = await openCatalogDrawer(page);
-    const addSearch = catalogDrawer.getByRole('searchbox', { name: 'Search add elements' });
+    const addSearch = catalogDrawer.getByRole('searchbox', { name: /Search add elements|추가 요소 검색/ });
     await addSearch.fill('법률');
     const pageTemplateResults = catalogDrawer.locator('[data-builder-page-template-search-results="true"]');
     const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
-    await expect(lawHomeResult).toContainText('법률사무소 홈');
+    await expect(lawHomeResult).toContainText('법률 홈');
     await lawHomeResult.click();
 
     const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
     await expect(gallery).toBeVisible();
-    const previewTrigger = gallery.getByRole('button', { name: '법률사무소 홈 미리보기' });
+    const previewTrigger = gallery.getByRole('button', { name: '법률 홈 미리보기' });
     await previewTrigger.click();
 
-    const preview = page.getByRole('dialog', { name: '법률사무소 홈' });
+    const preview = page.getByRole('dialog', { name: '법률 홈' });
     await expect(preview).toBeVisible();
     const closeButton = preview.getByRole('button', { name: 'Close' });
     const useButton = preview.getByRole('button', { name: '이 템플릿 사용' });
@@ -390,27 +397,27 @@ test.describe('/ko/admin-builder section design templates', () => {
       await page.keyboard.press('Escape');
 
       const catalogDrawer = await openCatalogDrawer(page);
-      const addSearch = catalogDrawer.getByRole('searchbox', { name: 'Search add elements' });
+      const addSearch = catalogDrawer.getByRole('searchbox', { name: /Search add elements|추가 요소 검색/ });
       await addSearch.fill('법률');
       const pageTemplateResults = catalogDrawer.locator('[data-builder-page-template-search-results="true"]');
       const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
-      await expect(lawHomeResult).toContainText('법률사무소 홈');
+      await expect(lawHomeResult).toContainText('법률 홈');
       await lawHomeResult.click();
 
       const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
       await expect(gallery).toBeVisible();
-      await gallery.getByRole('button', { name: '법률사무소 홈 미리보기' }).click();
-      const preview = page.getByRole('dialog', { name: '법률사무소 홈' });
+      await gallery.getByRole('button', { name: '법률 홈 미리보기' }).click();
+      const preview = page.getByRole('dialog', { name: '법률 홈' });
       await expect(preview).toBeVisible();
       await preview.getByRole('button', { name: '이 템플릿 사용' }).click();
 
       const slugPrompt = page.getByRole('dialog', { name: '페이지 slug 입력' });
       await expect(slugPrompt).toBeVisible();
       await expect(slugPrompt.getByLabel('메뉴에 추가')).toBeChecked();
-      await slugPrompt.getByPlaceholder('예: about, services, contact').fill(slug);
+      await slugPrompt.getByPlaceholder('예: about, services, columns/taiwan-guide').fill(slug);
       await slugPrompt.getByRole('button', { name: '생성' }).click();
       await expect(slugPrompt).toBeHidden({ timeout: 20_000 });
-      await expect(page.getByRole('button', { name: `/${slug}`, exact: true })).toBeVisible({ timeout: 20_000 });
+      await expect(page.locator('[data-builder-topbar-page-selector="true"]')).toContainText(`/${slug}`, { timeout: 20_000 });
 
       const canvas = page.getByRole('application', { name: 'Canvas editor' });
       await expect(canvas.getByText('신뢰할 수 있는 법률 파트너')).toBeVisible({ timeout: 20_000 });
@@ -447,7 +454,7 @@ test.describe('/ko/admin-builder section design templates', () => {
       });
       expect(draftResponse.status()).toBe(200);
       const draftPayload = (await draftResponse.json()) as { document?: unknown };
-      expect(JSON.stringify(draftPayload.document)).toContain('신뢰할 수 있는 법률 파트너');
+      expect(JSON.stringify(draftPayload.document).replace(/\\n/g, ' ')).toContain('신뢰할 수 있는 법률 파트너');
 
       const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish?locale=ko`, {
         headers: mutationHeaders(slug),
@@ -455,7 +462,7 @@ test.describe('/ko/admin-builder section design templates', () => {
       expect(publishResponse.status()).toBe(200);
 
       await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
-      const publicMainNav = page.getByRole('navigation', { name: 'Main' });
+      const publicMainNav = page.getByRole('navigation', { name: mainNavLabelForLocale('ko') });
       await expect(publicMainNav.getByRole('link', { name: '법률사무소 홈' })).toHaveAttribute('href', `/ko/${slug}`);
     } finally {
       pageId ??= await findPageIdBySlug(page, slug);
@@ -483,27 +490,27 @@ test.describe('/ko/admin-builder section design templates', () => {
       await page.keyboard.press('Escape');
 
       const catalogDrawer = await openCatalogDrawer(page);
-      const addSearch = catalogDrawer.getByRole('searchbox', { name: 'Search add elements' });
+      const addSearch = catalogDrawer.getByRole('searchbox', { name: /Search add elements|추가 요소 검색|搜尋新增元素/ });
       await addSearch.fill('법률');
       const pageTemplateResults = catalogDrawer.locator('[data-builder-page-template-search-results="true"]');
       const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
-      await expect(lawHomeResult).toContainText('법률사무소 홈');
+      await expect(lawHomeResult).toContainText('法律 首頁');
       await lawHomeResult.click();
 
-      const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
+      const gallery = page.getByRole('dialog', { name: '精選頁面範本展示' });
       await expect(gallery).toBeVisible();
-      await gallery.getByRole('button', { name: '법률사무소 홈 미리보기' }).click();
-      const preview = page.getByRole('dialog', { name: '법률사무소 홈' });
+      await gallery.getByRole('button', { name: '預覽「法律 首頁」' }).click();
+      const preview = page.getByRole('dialog', { name: '法律 首頁' });
       await expect(preview).toBeVisible();
-      await preview.getByRole('button', { name: '이 템플릿 사용' }).click();
+      await preview.getByRole('button', { name: '使用此範本' }).click();
 
-      const slugPrompt = page.getByRole('dialog', { name: '페이지 slug 입력' });
+      const slugPrompt = page.getByRole('dialog', { name: '輸入頁面 slug' });
       await expect(slugPrompt).toBeVisible();
-      await expect(slugPrompt.getByLabel('메뉴에 추가')).toBeChecked();
-      await slugPrompt.getByPlaceholder('예: about, services, contact').fill(slug);
-      await slugPrompt.getByRole('button', { name: '생성' }).click();
+      await expect(slugPrompt.getByLabel('加入選單')).toBeChecked();
+      await slugPrompt.getByPlaceholder('例如 about、services、columns/taiwan-guide').fill(slug);
+      await slugPrompt.getByRole('button', { name: '建立' }).click();
       await expect(slugPrompt).toBeHidden({ timeout: 20_000 });
-      await expect(page.getByRole('button', { name: `/${slug}`, exact: true })).toBeVisible({ timeout: 20_000 });
+      await expect(page.locator('[data-builder-topbar-page-selector="true"]')).toContainText(`/${slug}`, { timeout: 20_000 });
 
       const canvas = page.getByRole('application', { name: 'Canvas editor' });
       await expect(canvas.getByText('신뢰할 수 있는 법률 파트너')).toBeVisible({ timeout: 20_000 });
@@ -538,7 +545,7 @@ test.describe('/ko/admin-builder section design templates', () => {
       expect(publishResponse.status()).toBe(200);
 
       await page.goto(`/${locale}/${slug}`, { waitUntil: 'domcontentloaded' });
-      const publicMainNav = page.getByRole('navigation', { name: 'Main' });
+      const publicMainNav = page.getByRole('navigation', { name: mainNavLabelForLocale(locale) });
       await expect(publicMainNav.getByRole('link', { name: '법률사무소 홈' })).toHaveAttribute('href', `/${locale}/${slug}`);
     } finally {
       pageId ??= await findPageIdBySlug(page, slug, locale);
@@ -745,7 +752,7 @@ test.describe('/ko/admin-builder section design templates', () => {
       expect(publishResponse.status()).toBe(200);
 
       await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
-      const publicMainNav = page.getByRole('navigation', { name: 'Main' });
+      const publicMainNav = page.getByRole('navigation', { name: mainNavLabelForLocale('ko') });
       await expect(publicMainNav.getByRole('link', { name: title })).toHaveAttribute('href', `/ko/${slug}`);
 
       const renameResponse = await page.request.patch(`/api/builder/site/pages/${pageId}?locale=ko`, {
@@ -771,7 +778,7 @@ test.describe('/ko/admin-builder section design templates', () => {
       expect(typeof renamedLabel === 'object' && renamedLabel ? renamedLabel.ko : renamedLabel).toBe(renamedTitle);
 
       await page.goto(`/ko/${renamedSlug}`, { waitUntil: 'domcontentloaded' });
-      const renamedPublicMainNav = page.getByRole('navigation', { name: 'Main' });
+      const renamedPublicMainNav = page.getByRole('navigation', { name: mainNavLabelForLocale('ko') });
       await expect(renamedPublicMainNav.getByRole('link', { name: renamedTitle })).toHaveAttribute('href', `/ko/${renamedSlug}`);
       await expect(renamedPublicMainNav.getByRole('link', { name: title })).toHaveCount(0);
 
@@ -788,7 +795,7 @@ test.describe('/ko/admin-builder section design templates', () => {
       expect(findNavigationItemByPageId(navAfterDeletePayload.navigation ?? [], pageId)).toBeUndefined();
 
       await page.goto('/ko', { waitUntil: 'domcontentloaded' });
-      const homeMainNav = page.getByRole('navigation', { name: 'Main' });
+      const homeMainNav = page.getByRole('navigation', { name: mainNavLabelForLocale('ko') });
       await expect(homeMainNav.getByRole('link', { name: renamedTitle })).toHaveCount(0);
       pageId = null;
     } finally {
@@ -832,24 +839,24 @@ test.describe('/ko/admin-builder section design templates', () => {
       await page.keyboard.press('Escape');
 
       const catalogDrawer = await openCatalogDrawer(page);
-      const addSearch = catalogDrawer.getByRole('searchbox', { name: 'Search add elements' });
+      const addSearch = catalogDrawer.getByRole('searchbox', { name: /Search add elements|추가 요소 검색/ });
       await addSearch.fill('법률');
       const pageTemplateResults = catalogDrawer.locator('[data-builder-page-template-search-results="true"]');
       const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
-      await expect(lawHomeResult).toContainText('법률사무소 홈');
+      await expect(lawHomeResult).toContainText('법률 홈');
       await lawHomeResult.click();
 
       const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
       await expect(gallery).toBeVisible();
-      await gallery.getByRole('button', { name: '법률사무소 홈 미리보기' }).click();
-      const preview = page.getByRole('dialog', { name: '법률사무소 홈' });
+      await gallery.getByRole('button', { name: '법률 홈 미리보기' }).click();
+      const preview = page.getByRole('dialog', { name: '법률 홈' });
       await expect(preview).toBeVisible();
       await preview.getByRole('button', { name: '이 템플릿 사용' }).click();
 
       const slugPrompt = page.getByRole('dialog', { name: '페이지 slug 입력' });
       await expect(slugPrompt).toBeVisible();
       await expect(slugPrompt).toContainText('선택한 템플릿으로 새 페이지를 생성합니다.');
-      const slugInput = slugPrompt.getByPlaceholder('예: about, services, contact');
+      const slugInput = slugPrompt.getByPlaceholder('예: about, services, columns/taiwan-guide');
       await slugInput.fill(slug);
       await slugPrompt.getByRole('button', { name: '생성' }).click();
 

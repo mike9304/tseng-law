@@ -14,6 +14,11 @@ import {
   renderBillingDocumentPdf,
   trackBillingDocumentAccess,
 } from '@/lib/builder/billing-documents';
+import {
+  getBuilderBillingDocumentsApiErrorPayload,
+  type BuilderBillingDocumentsApiErrorCode,
+} from '@/lib/builder/billing-documents-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -23,6 +28,17 @@ async function manualInstructionsForTarget(target: BillingAutomationTarget): Pro
   return billingManualPaymentInstructionsForTarget(settings, target);
 }
 
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderBillingDocumentsApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
 export async function GET(
   request: NextRequest,
   { params }: { params: { source: string; ownerId: string; documentId: string } },
@@ -30,14 +46,15 @@ export async function GET(
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
 
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const source = parseBillingDocumentSource(params.source);
   if (!source) {
-    return NextResponse.json({ ok: false, error: 'invalid_document_source' }, { status: 400 });
+    return errorResponse(errorLocale, 'invalid_document_source', 400);
   }
 
   const document = await getBillingDocument(source, params.ownerId, params.documentId);
   if (!document) {
-    return NextResponse.json({ ok: false, error: 'document_not_found' }, { status: 404 });
+    return errorResponse(errorLocale, 'document_not_found', 404);
   }
 
   const format = request.nextUrl.searchParams.get('format') === 'html' ? 'html' : 'pdf';

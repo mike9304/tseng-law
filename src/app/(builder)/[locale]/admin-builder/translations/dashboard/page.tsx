@@ -5,6 +5,7 @@ import { buildSeoMetadata } from '@/lib/seo';
 import { buildTranslationDashboard } from '@/lib/builder/translations/dashboard-model';
 import { DEFAULT_TRANSLATION_SOURCE_LOCALE } from '@/lib/builder/translations/sync';
 import TranslationDashboardClient from '@/components/builder/translations/TranslationDashboardClient';
+import { getTranslationCopy } from '@/components/builder/translations/translation-copy';
 
 export const dynamic = 'force-dynamic';
 
@@ -14,10 +15,11 @@ export function generateMetadata({
   params: { locale: Locale };
 }): Metadata {
   const locale = normalizeLocale(params.locale);
+  const copy = getTranslationCopy(locale);
   return buildSeoMetadata({
     locale,
-    title: 'Translation Dashboard',
-    description: 'Per-page translation status across all locales.',
+    title: copy.dashboardTitle,
+    description: copy.dashboardDescription,
     path: '/admin-builder/translations/dashboard',
     noindex: true,
   });
@@ -28,9 +30,10 @@ export default async function BuilderTranslationDashboardPage({
   searchParams,
 }: {
   params: { locale: Locale };
-  searchParams?: { sourceLocale?: string };
+  searchParams?: { sourceLocale?: string; status?: string };
 }) {
   const routeLocale = normalizeLocale(params.locale);
+  const copy = getTranslationCopy(routeLocale);
   const sourceLocale = normalizeLocale(
     searchParams?.sourceLocale ?? DEFAULT_TRANSLATION_SOURCE_LOCALE,
   );
@@ -49,10 +52,10 @@ export default async function BuilderTranslationDashboardPage({
       >
         <div>
           <h1 style={{ margin: 0, fontSize: 22, fontWeight: 700 }}>
-            Translation Dashboard
+            {copy.dashboardTitle}
           </h1>
           <p style={{ margin: '6px 0 0', fontSize: 13, color: '#475569' }}>
-            Per-page translation status across all locales. Source locale:{' '}
+            {copy.dashboardDescription} {copy.managerSourceLocale}:{' '}
             <strong>{sourceLocale}</strong>
           </p>
         </div>
@@ -64,13 +67,14 @@ export default async function BuilderTranslationDashboardPage({
             textDecoration: 'none',
           }}
         >
-          ← Entry-level view
+          ← {copy.dashboardEntryLink}
         </Link>
       </header>
 
       <TranslationDashboardClient
         initialPayload={payload}
         routeLocale={routeLocale}
+        initialStatus={searchParams?.status}
       />
     </div>
   );

@@ -5,6 +5,7 @@ import { readColumnBundle } from '@/lib/builder/columns/storage';
 import ColumnEditor from '@/components/builder/columns/ColumnEditor';
 import ColumnFrontmatterPanel from '@/components/builder/columns/ColumnFrontmatterPanel';
 import ColumnLocaleLinker from '@/components/builder/columns/ColumnLocaleLinker';
+import { getColumnEditCopy } from '@/components/builder/columns/column-edit-copy';
 import {
   estimateReadingTime,
   getCategoryLabel,
@@ -12,10 +13,19 @@ import {
 } from '@/components/builder/columns/blogAdminMeta';
 
 export const dynamic = 'force-dynamic';
-export const metadata: Metadata = {
-  title: 'Column Editor',
-  robots: { index: false, follow: false },
-};
+
+export function generateMetadata({
+  params,
+}: {
+  params: { locale: string; slug: string };
+}): Metadata {
+  const locale = normalizeLocale(params.locale);
+  const copy = getColumnEditCopy(locale);
+  return {
+    title: copy.pageTitle,
+    robots: { index: false, follow: false },
+  };
+}
 
 export default async function ColumnEditPage({
   params,
@@ -23,6 +33,7 @@ export default async function ColumnEditPage({
   params: { locale: string; slug: string };
 }) {
   const locale: Locale = normalizeLocale(params.locale);
+  const copy = getColumnEditCopy(locale);
   const slug = params.slug;
 
   const bundle = await readColumnBundle(locale, slug);
@@ -31,18 +42,18 @@ export default async function ColumnEditPage({
   if (!column) {
     return (
       <main className="column-editor-page" style={{ padding: '2rem', fontFamily: 'system-ui' }}>
-        <h1>칼럼을 찾을 수 없습니다</h1>
+        <h1>{copy.notFoundTitle}</h1>
         <p>
-          <code>{slug}</code> (locale: {locale}) 에 해당하는 draft 가 없습니다.
+          <code>{slug}</code> (locale: {locale}) {copy.notFoundDescription}
         </p>
-        <a href={`/${locale}/admin-builder/columns`}>← 목록으로</a>
+        <a href={`/${locale}/admin-builder/columns`}>{copy.backToList}</a>
         <a
           className="column-builder-return-dock column-builder-return-dock--single"
           href={`/${locale}/admin-builder`}
-          aria-label="편집 홈 메뉴로 돌아가기"
+          aria-label={copy.backToHomeAria}
         >
           <span>←</span>
-          <strong>편집기 홈으로 돌아가기</strong>
+          <strong>{copy.backToHome}</strong>
         </a>
       </main>
     );
@@ -51,33 +62,34 @@ export default async function ColumnEditPage({
   const category = getColumnBlogCategory(column.frontmatter);
   const authorName = column.frontmatter.author?.name ?? '호정국제 법률사무소';
   const readingTime = estimateReadingTime(`${column.summary} ${column.bodyMarkdown} ${column.bodyHtml}`);
+  const dateLocale = locale === 'zh-hant' ? 'zh-Hant-TW' : locale === 'ko' ? 'ko-KR' : 'en-US';
 
   return (
     <main className="column-editor-page">
-      <div className="column-builder-return-dock" aria-label="Column editor quick navigation">
+      <div className="column-builder-return-dock" aria-label={copy.quickNavAria}>
         <a
           className="column-builder-return-primary"
           href={`/${locale}/admin-builder`}
-          aria-label="편집 홈 메뉴로 돌아가기"
+          aria-label={copy.backToHomeAria}
         >
           <span>←</span>
-          <strong>편집 홈 메뉴</strong>
+          <strong>{copy.backToHome}</strong>
         </a>
         <a
           className="column-builder-return-secondary"
           href={`/${locale}/admin-builder/columns`}
-          aria-label="칼럼 목록으로 돌아가기"
+          aria-label={copy.breadcrumbList}
         >
-          칼럼 목록
+          {copy.breadcrumbList}
         </a>
       </div>
       <header className="column-editor-page-header">
         <div>
-          <nav className="column-editor-breadcrumb" aria-label="Column editor navigation">
-            <a href={`/${locale}/admin-builder`}>← 편집기 홈으로 돌아가기</a>
-            <a href={`/${locale}/admin-builder/columns`}>칼럼 목록</a>
+          <nav className="column-editor-breadcrumb" aria-label={copy.breadcrumbAria}>
+            <a href={`/${locale}/admin-builder`}>{copy.breadcrumbHome}</a>
+            <a href={`/${locale}/admin-builder/columns`}>{copy.breadcrumbList}</a>
           </nav>
-          <h1>{column.title || 'Untitled column'}</h1>
+          <h1>{column.title || copy.untitledColumn}</h1>
         </div>
         <a
           className="admin-console-ghost-btn"
@@ -85,7 +97,7 @@ export default async function ColumnEditPage({
           target="_blank"
           rel="noreferrer"
         >
-          공개 페이지 열기
+          {copy.openPublicPage}
         </a>
       </header>
 
@@ -103,8 +115,8 @@ export default async function ColumnEditPage({
           />
           <details className="column-editor-advanced-shell">
             <summary>
-              <span>고급 설정</span>
-              <strong>카테고리, 대표 이미지, 번역, 미리보기</strong>
+              <span>{copy.advancedSummaryTitle}</span>
+              <strong>{copy.advancedSummaryDescription}</strong>
             </summary>
             <div className="column-editor-advanced-grid">
               <div className="column-editor-meta-rail">
@@ -112,6 +124,7 @@ export default async function ColumnEditPage({
                   slug={slug}
                   locale={locale}
                   initial={column.frontmatter}
+                  hasPublished={Boolean(bundle.published || column.frontmatter.slugRedirectFrom)}
                 />
                 <ColumnLocaleLinker
                   slug={slug}
@@ -122,8 +135,8 @@ export default async function ColumnEditPage({
               <aside className="column-editor-preview-rail">
                 <div className="column-preview-card">
                   <div className="column-preview-toolbar">
-                    <span>Preview</span>
-                    <strong>{readingTime}분 읽기</strong>
+                    <span>{copy.previewLabel}</span>
+                    <strong>{readingTime}{copy.previewReadingTimeSuffix}</strong>
                   </div>
                   {column.frontmatter.featuredImage ? (
                     // eslint-disable-next-line @next/next/no-img-element
@@ -143,13 +156,13 @@ export default async function ColumnEditPage({
                       <span>{authorName}</span>
                       <span>
                         {column.frontmatter.publishedAt
-                          ? new Date(column.frontmatter.publishedAt).toLocaleDateString('ko-KR')
-                          : 'Draft'}
+                          ? new Date(column.frontmatter.publishedAt).toLocaleDateString(dateLocale)
+                          : copy.draftLabel}
                       </span>
                     </div>
                     <article
                       className="column-preview-article"
-                      dangerouslySetInnerHTML={{ __html: column.bodyHtml || '<p>본문 미리보기</p>' }}
+                      dangerouslySetInnerHTML={{ __html: column.bodyHtml || `<p>${copy.previewFallback}</p>` }}
                     />
                   </div>
                 </div>

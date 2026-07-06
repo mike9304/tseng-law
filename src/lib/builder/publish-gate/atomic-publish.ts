@@ -19,7 +19,9 @@
 import { mkdir, readFile, rm, writeFile } from 'fs/promises';
 import path from 'path';
 import { randomUUID } from 'crypto';
+import { revalidatePath } from 'next/cache';
 import {
+  deletePageCanvasRecord,
   readPageCanvasRecordState,
   readSiteDocument,
   writePageCanvasRecord,
@@ -29,6 +31,7 @@ import {
 import type { BuilderSiteDocument } from '@/lib/builder/site/types';
 import type { PageCanvasRecord } from '@/lib/builder/site/types';
 import { defaultLocale, type Locale } from '@/lib/locales';
+import { buildSitePagePath } from '@/lib/builder/site/paths';
 
 export type PublishTransactionStatus = 'pending' | 'committed' | 'rolled-back';
 
@@ -171,9 +174,11 @@ export async function rollbackPublishTransaction(id: string): Promise<PublishTra
   for (const pageId of existing.pageIds) {
     const snapshot = existing.snapshots.publishedRecords[pageId];
     if (!snapshot) {
-      // No prior published variant — best we can do is leave a tombstone
-      // record at revision 0. Writing the captured null would be ideal, but
-      // we keep the file present to honour the existing publish read path.
+      try {
+        await deletePageCanvasRecord(existing.siteId, pageId, 'published');
+      } catch (err) {
+        console.warn('[atomic-publish] rollback page delete failed', { pageId, err });
+      }
       continue;
     }
     try {
@@ -188,9 +193,26 @@ export async function rollbackPublishTransaction(id: string): Promise<PublishTra
   // orchestrator made before the failure.
   if (existing.snapshots.siteDoc) {
     try {
-      await writeSiteDocument(existing.snapshots.siteDoc, { preserveNavigation: true });
+      await writeSiteDocument(existing.snapshots.siteDoc, {
+        preserveNavigation: true,
+        preserveLatestPublishMeta: false,
+      });
     } catch (err) {
       console.warn('[atomic-publish] rollback site write failed', err);
+    }
+  }
+
+  if (existing.snapshots.siteDoc?.pages?.length) {
+    const rollbackPaths = new Set<string>();
+    for (const page of existing.snapshots.siteDoc.pages) {
+      rollbackPaths.add(buildSitePagePath(existing.locale, page.isHomePage ? '' : page.slug || ''));
+    }
+    for (const targetPath of rollbackPaths) {
+      try {
+        revalidatePath(targetPath);
+      } catch (err) {
+        console.warn('[atomic-publish] rollback revalidate failed', targetPath, err);
+      }
     }
   }
 

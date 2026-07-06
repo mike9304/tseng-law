@@ -179,8 +179,8 @@ export async function createOrder(input: CommerceOrderCreateInput): Promise<Comm
   };
   const saved = await saveOrder(order);
   // F109 — fire app extension hooks listening on commerce.order-created.
-  void import('@/lib/builder/apps/hooks-registry').then(({ dispatchAppHook }) => (
-    dispatchAppHook({
+  void import('@/lib/builder/apps/hook-runtime').then(({ dispatchAppHookEvent }) => (
+    dispatchAppHookEvent({
       kind: 'commerce.order-created',
       payload: {
         orderId: saved.orderId,

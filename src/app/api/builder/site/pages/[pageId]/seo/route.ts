@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { ZodError, z } from 'zod';
+import { ZodError } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { normalizeLocale } from '@/lib/locales';
-import type { BuilderNavItem, BuilderSeoMetadata } from '@/lib/builder/site/types';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
 import { buildDefaultSeoMetadata } from '@/lib/builder/seo/defaults';
 import {
@@ -12,274 +11,29 @@ import {
   localeToHreflangTag,
 } from '@/lib/builder/seo/hreflang';
 import {
-  normalizeSeoSlugInput,
   validateBuilderPageSeo,
 } from '@/lib/builder/seo/validation';
-import { generateRedirectId, validateRedirectInput } from '@/lib/builder/site/redirects';
+import { resolveLocaleSeo } from '@/lib/builder/translations/seo-projection';
 import { getSiteUrl } from '@/lib/seo';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  applyLocalizedSeoPatch,
+  applySeoPatch,
+  appendRedirectIfValid,
+  type RedirectCreationWarning,
+  updateNavigationHref,
+} from './route-mutations';
+import { parseSeoRequest } from './route-schema';
+import {
+  errorResponse,
+  invalidJsonPayloadResponse,
+  pageNotFoundResponse,
+  unknownErrorResponse,
+  validationErrorResponse,
+} from './route-responses';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
-
-const optionalSeoString = (max: number) =>
-  z.preprocess(
-    (value) => {
-      if (typeof value !== 'string') return value;
-      const trimmed = value.trim();
-      return trimmed.length > 0 ? trimmed : undefined;
-    },
-    z.string().max(max).optional(),
-  );
-
-const builderSeoMetadataSchema = z.object({
-  title: optionalSeoString(300),
-  description: optionalSeoString(500),
-  ogTitle: optionalSeoString(300),
-  ogDescription: optionalSeoString(500),
-  ogImage: optionalSeoString(2000),
-  twitterCard: z.enum(['summary', 'summary_large_image']).optional(),
-  twitterTitle: optionalSeoString(300),
-  twitterDescription: optionalSeoString(500),
-  twitterImage: optionalSeoString(2000),
-  canonical: optionalSeoString(2000),
-  noIndex: z.boolean().optional(),
-  noFollow: z.boolean().optional(),
-  additionalMetaTags: z.array(z.object({
-    id: z.string().trim().min(1).max(120),
-    name: z.string().trim().min(1).max(120),
-    content: z.string().trim().min(1).max(1000),
-  }).strict()).max(10).optional(),
-  structuredData: z.object({
-    legalService: z.boolean().optional(),
-    organization: z.boolean().optional(),
-    localBusiness: z.boolean().optional(),
-    faqPage: z.enum(['auto', 'off']).optional(),
-    breadcrumbList: z.boolean().optional(),
-  }).strict().optional(),
-  overrideState: z.record(z.string(), z.boolean()).optional(),
-  focusKeyword: optionalSeoString(80),
-  structuredDataBlocks: z.array(z.object({
-    id: z.string().trim().min(1).max(120),
-    type: z.enum(['LegalService', 'Organization', 'LocalBusiness', 'FAQPage', 'Article', 'BreadcrumbList', 'Custom']),
-    label: optionalSeoString(120),
-    enabled: z.boolean(),
-    json: optionalSeoString(10000),
-  }).strict()).max(5).optional(),
-}).strict();
-
-const seoRequestSchema = z.object({
-  slug: optionalSeoString(200),
-  seo: builderSeoMetadataSchema.optional(),
-  createRedirect: z.boolean().optional(),
-}).strict();
-
-interface ParsedSeoRequest {
-  slug?: string;
-  seoPayload: BuilderSeoMetadata;
-  rawSeoBody: unknown;
-  createRedirect: boolean;
-}
-
-interface RedirectCreationWarning {
-  from: string;
-  to: string;
-  field: 'from' | 'to' | 'type';
-  message: string;
-}
-
-function validationErrorResponse(error: ZodError): NextResponse {
-  return NextResponse.json(
-    {
-      ok: false,
-      error: 'validation_error',
-      issues: error.flatten(),
-    },
-    { status: 400 },
-  );
-}
-
-function unknownErrorResponse(error: unknown): NextResponse {
-  const message = error instanceof Error ? error.message : 'unknown_error';
-  return NextResponse.json({ ok: false, error: message }, { status: 500 });
-}
-
-function pageNotFoundResponse(pageId: string): NextResponse {
-  return NextResponse.json(
-    { ok: false, error: `Page not found: ${pageId}` },
-    { status: 404 },
-  );
-}
-
-function hasOwnKey(input: unknown, key: keyof BuilderSeoMetadata): boolean {
-  return typeof input === 'object' && input !== null && Object.prototype.hasOwnProperty.call(input, key);
-}
-
-function parseSeoRequest(rawBody: unknown): ParsedSeoRequest {
-  if (typeof rawBody === 'object' && rawBody !== null && ('seo' in rawBody || 'slug' in rawBody)) {
-    const payload = seoRequestSchema.parse(rawBody);
-    return {
-      slug: payload.slug ? normalizeSeoSlugInput(payload.slug) : payload.slug,
-      seoPayload: payload.seo ?? {},
-      rawSeoBody: payload.seo ?? {},
-      createRedirect: payload.createRedirect === true,
-    };
-  }
-
-  const seoPayload = builderSeoMetadataSchema.parse(rawBody);
-  return {
-    seoPayload,
-    rawSeoBody: rawBody,
-    createRedirect: false,
-  };
-}
-
-function appendRedirectIfValid(
-  site: Awaited<ReturnType<typeof readSiteDocument>>,
-  input: {
-    from: string;
-    to: string;
-    type: 301;
-    isActive: true;
-    note: string;
-  },
-  now: string,
-): { created: boolean; warning?: RedirectCreationWarning } {
-  const redirectError = validateRedirectInput(input, site.redirects ?? []);
-  if (redirectError) {
-    return {
-      created: false,
-      warning: {
-        from: input.from,
-        to: input.to,
-        field: redirectError.field,
-        message: redirectError.message,
-      },
-    };
-  }
-  site.redirects = [
-    ...(site.redirects ?? []),
-    {
-      redirectId: generateRedirectId(),
-      ...input,
-      createdAt: now,
-      updatedAt: now,
-    },
-  ];
-  return { created: true };
-}
-
-function updateNavigationHref(
-  items: BuilderNavItem[],
-  pageId: string,
-  nextHref: string,
-): BuilderNavItem[] {
-  return items.map((item) => ({
-    ...item,
-    href: item.pageId === pageId ? nextHref : item.href,
-    children: item.children ? updateNavigationHref(item.children, pageId, nextHref) : item.children,
-  }));
-}
-
-function applySeoPatch(
-  existingSeo: BuilderSeoMetadata | undefined,
-  payload: BuilderSeoMetadata,
-  rawBody: unknown,
-): BuilderSeoMetadata | undefined {
-  const nextSeo: BuilderSeoMetadata = { ...(existingSeo ?? {}) };
-
-  if (hasOwnKey(rawBody, 'title')) {
-    if (payload.title) nextSeo.title = payload.title;
-    else delete nextSeo.title;
-  }
-
-  if (hasOwnKey(rawBody, 'description')) {
-    if (payload.description) nextSeo.description = payload.description;
-    else delete nextSeo.description;
-  }
-
-  if (hasOwnKey(rawBody, 'ogTitle')) {
-    if (payload.ogTitle) nextSeo.ogTitle = payload.ogTitle;
-    else delete nextSeo.ogTitle;
-  }
-
-  if (hasOwnKey(rawBody, 'ogDescription')) {
-    if (payload.ogDescription) nextSeo.ogDescription = payload.ogDescription;
-    else delete nextSeo.ogDescription;
-  }
-
-  if (hasOwnKey(rawBody, 'ogImage')) {
-    if (payload.ogImage) nextSeo.ogImage = payload.ogImage;
-    else delete nextSeo.ogImage;
-  }
-
-  if (hasOwnKey(rawBody, 'twitterCard')) {
-    if (payload.twitterCard) nextSeo.twitterCard = payload.twitterCard;
-    else delete nextSeo.twitterCard;
-  }
-
-  if (hasOwnKey(rawBody, 'twitterTitle')) {
-    if (payload.twitterTitle) nextSeo.twitterTitle = payload.twitterTitle;
-    else delete nextSeo.twitterTitle;
-  }
-
-  if (hasOwnKey(rawBody, 'twitterDescription')) {
-    if (payload.twitterDescription) nextSeo.twitterDescription = payload.twitterDescription;
-    else delete nextSeo.twitterDescription;
-  }
-
-  if (hasOwnKey(rawBody, 'twitterImage')) {
-    if (payload.twitterImage) nextSeo.twitterImage = payload.twitterImage;
-    else delete nextSeo.twitterImage;
-  }
-
-  if (hasOwnKey(rawBody, 'canonical')) {
-    if (payload.canonical) nextSeo.canonical = payload.canonical;
-    else delete nextSeo.canonical;
-  }
-
-  if (hasOwnKey(rawBody, 'noIndex')) {
-    if (payload.noIndex) nextSeo.noIndex = true;
-    else delete nextSeo.noIndex;
-  }
-
-  if (hasOwnKey(rawBody, 'noFollow')) {
-    if (payload.noFollow) nextSeo.noFollow = true;
-    else delete nextSeo.noFollow;
-  }
-
-  if (hasOwnKey(rawBody, 'additionalMetaTags')) {
-    if (payload.additionalMetaTags && payload.additionalMetaTags.length > 0) {
-      nextSeo.additionalMetaTags = payload.additionalMetaTags;
-    } else {
-      delete nextSeo.additionalMetaTags;
-    }
-  }
-
-  if (hasOwnKey(rawBody, 'structuredData')) {
-    if (payload.structuredData) nextSeo.structuredData = payload.structuredData;
-    else delete nextSeo.structuredData;
-  }
-
-  if (hasOwnKey(rawBody, 'overrideState')) {
-    if (payload.overrideState && Object.keys(payload.overrideState).length > 0) nextSeo.overrideState = payload.overrideState;
-    else delete nextSeo.overrideState;
-  }
-
-  if (hasOwnKey(rawBody, 'focusKeyword')) {
-    if (payload.focusKeyword) nextSeo.focusKeyword = payload.focusKeyword;
-    else delete nextSeo.focusKeyword;
-  }
-
-  if (hasOwnKey(rawBody, 'structuredDataBlocks')) {
-    if (payload.structuredDataBlocks && payload.structuredDataBlocks.length > 0) {
-      nextSeo.structuredDataBlocks = payload.structuredDataBlocks;
-    } else {
-      delete nextSeo.structuredDataBlocks;
-    }
-  }
-
-  return Object.keys(nextSeo).length > 0 ? nextSeo : undefined;
-}
 
 export async function GET(
   request: NextRequest,
@@ -288,18 +42,21 @@ export async function GET(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
+
   try {
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const site = await readSiteDocument(siteId, locale);
     const page = site.pages.find((entry) => entry.pageId === params.pageId);
 
     if (!page) {
-      return pageNotFoundResponse(params.pageId);
+      return pageNotFoundResponse(params.pageId, locale);
     }
 
     const siteUrl = getSiteUrl();
     const hreflang = buildHreflangAlternates(page, siteUrl, site.pages);
     const missingLocales = findMissingLocales(page, site.pages);
+    const effectiveSeoForLocale = resolveLocaleSeo(page, locale);
     const siblings = Object.entries(page.linkedPageIds ?? {})
       .map(([loc, linkedId]) => {
         if (!linkedId) return null;
@@ -327,7 +84,7 @@ export async function GET(
         linkedPageIds: page.linkedPageIds ?? {},
         noIndex: Boolean(page.noIndex),
       },
-      seo: page.seo ?? {},
+      seo: resolveLocaleSeo(page, locale),
       defaultSeo: buildDefaultSeoMetadata({
         page,
         site,
@@ -343,15 +100,15 @@ export async function GET(
       missingLocales,
       sitemapIncluded,
       validation: validateBuilderPageSeo({
-        page,
+        page: { ...page, seo: { ...(page.seo ?? {}), ...effectiveSeoForLocale } },
         site,
-        seo: page.seo,
+        seo: { ...(page.seo ?? {}), ...effectiveSeoForLocale },
         siteUrl,
       }),
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
-    return unknownErrorResponse(error);
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
+    return unknownErrorResponse(locale);
   }
 }
 
@@ -362,42 +119,45 @@ export async function PATCH(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
+
   try {
     const rawBody = await request.json();
     const { slug, seoPayload, rawSeoBody, createRedirect } = parseSeoRequest(rawBody);
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const site = await readSiteDocument(siteId, locale);
     const page = site.pages.find((entry) => entry.pageId === params.pageId);
 
     if (!page) {
-      return pageNotFoundResponse(params.pageId);
+      return pageNotFoundResponse(params.pageId, locale);
     }
 
     const now = new Date().toISOString();
-    const nextSeo = applySeoPatch(page.seo, seoPayload, rawSeoBody);
+    const sourceLocale = page.locale;
+    const nextSeo = locale === sourceLocale
+      ? applySeoPatch(page.seo, seoPayload, rawSeoBody)
+      : applyLocalizedSeoPatch(page.seo, seoPayload, rawSeoBody, locale);
     const nextSlug = slug !== undefined ? slug : page.slug;
     const previousSlug = page.slug;
     const previousPath = buildSitePagePath(page.locale, previousSlug);
     const nextPath = buildSitePagePath(page.locale, page.isHomePage ? '' : nextSlug);
+    const effectiveSeoForValidation = locale === sourceLocale
+      ? nextSeo
+      : resolveLocaleSeo({ ...page, seo: nextSeo }, locale);
     const validation = validateBuilderPageSeo({
-      page: { ...page, slug: nextSlug, seo: nextSeo },
+      page: { ...page, slug: nextSlug, seo: effectiveSeoForValidation },
       site,
-      seo: nextSeo,
+      seo: effectiveSeoForValidation,
       slug: nextSlug,
       siteUrl: getSiteUrl(),
     });
     const blockers = validation.filter((issue) => issue.severity === 'blocker');
 
     if (blockers.length > 0) {
-      return NextResponse.json(
-        {
-          ok: false,
-          error: 'validation_error',
-          issues: blockers,
-          validation,
-        },
-        { status: 400 },
-      );
+      return errorResponse(locale, 'validation_error', 400, {
+        issues: blockers,
+        validation,
+      });
     }
 
     page.slug = nextSlug;
@@ -414,8 +174,20 @@ export async function PATCH(
         isActive: true,
         note: `Auto-created after SEO slug change for ${page.pageId}`,
       }, now);
-      redirectCreated = redirectResult.created;
+      redirectCreated = redirectResult.created || redirectCreated;
       if (redirectResult.warning) redirectWarnings.push(redirectResult.warning);
+
+      if (page.dynamicItem) {
+        const wildcardRedirectResult = appendRedirectIfValid(site, {
+          from: `${previousPath}/*`,
+          to: `${nextPath}/*`,
+          type: 301 as const,
+          isActive: true,
+          note: `Auto-created for dynamic item URLs after SEO slug change for ${page.pageId}`,
+        }, now);
+        redirectCreated = wildcardRedirectResult.created || redirectCreated;
+        if (wildcardRedirectResult.warning) redirectWarnings.push(wildcardRedirectResult.warning);
+      }
     }
     site.navigation = updateNavigationHref(
       site.navigation,
@@ -434,7 +206,7 @@ export async function PATCH(
         locale: page.locale,
         isHomePage: page.isHomePage,
       },
-      seo: page.seo ?? {},
+      seo: resolveLocaleSeo(page, locale),
       defaultSeo: buildDefaultSeoMetadata({
         page,
         site,
@@ -450,10 +222,10 @@ export async function PATCH(
       redirectWarnings,
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+      return invalidJsonPayloadResponse(locale);
     }
-    return unknownErrorResponse(error);
+    return unknownErrorResponse(locale);
   }
 }

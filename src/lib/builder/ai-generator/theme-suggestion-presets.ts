@@ -1,0 +1,106 @@
+import type {
+  ThemeSuggestionPreset,
+  ThemeVibe,
+} from '@/lib/builder/ai-generator/theme-suggestion-types';
+
+export const THEME_SUGGESTION_PRESETS = {
+  modern: {
+    rationale: 'Sharp blue primary with neutral grays for a contemporary tech feel.',
+    colors: {
+      primary: '#2563eb',
+      secondary: '#0f172a',
+      accent: '#7c3aed',
+      background: '#ffffff',
+      text: '#0f172a',
+      muted: '#64748b',
+    },
+    fonts: { heading: 'Inter, system-ui, sans-serif', body: 'Inter, system-ui, sans-serif' },
+    radii: { sm: 4, md: 8, lg: 16 },
+    effects: { radiusPreset: 'medium', shadowPreset: 'medium' },
+    typographyScale: { baseSize: 16, ratio: 1.25 },
+  },
+  warm: {
+    rationale: 'Earthy ochre and terracotta tones for an approachable, human feel.',
+    colors: {
+      primary: '#c2410c',
+      secondary: '#7c2d12',
+      accent: '#f59e0b',
+      background: '#fffbeb',
+      text: '#1c1917',
+      muted: '#78716c',
+    },
+    fonts: { heading: 'Merriweather, Georgia, serif', body: 'Source Sans Pro, system-ui, sans-serif' },
+    radii: { sm: 6, md: 12, lg: 20 },
+    effects: { radiusPreset: 'soft', shadowPreset: 'soft' },
+    typographyScale: { baseSize: 17, ratio: 1.25 },
+  },
+  professional: {
+    rationale: 'Conservative navy primary with refined grays - suits legal/finance brands.',
+    colors: {
+      primary: '#1e3a8a',
+      secondary: '#1e293b',
+      accent: '#0891b2',
+      background: '#f8fafc',
+      text: '#0f172a',
+      muted: '#475569',
+    },
+    fonts: { heading: 'Playfair Display, Georgia, serif', body: 'Source Sans Pro, system-ui, sans-serif' },
+    radii: { sm: 3, md: 6, lg: 12 },
+    effects: { radiusPreset: 'medium', shadowPreset: 'soft' },
+    typographyScale: { baseSize: 16, ratio: 1.2 },
+  },
+  playful: {
+    rationale: 'Vibrant pink + violet with sunny accent - friendly and energetic.',
+    colors: {
+      primary: '#db2777',
+      secondary: '#7c3aed',
+      accent: '#facc15',
+      background: '#fdf4ff',
+      text: '#1e1b4b',
+      muted: '#a855f7',
+    },
+    fonts: { heading: 'Poppins, system-ui, sans-serif', body: 'Poppins, system-ui, sans-serif' },
+    radii: { sm: 10, md: 18, lg: 28 },
+    effects: { radiusPreset: 'soft', shadowPreset: 'medium' },
+    typographyScale: { baseSize: 16, ratio: 1.333 },
+  },
+  luxury: {
+    rationale: 'Deep charcoal background with gold accent for premium positioning.',
+    colors: {
+      primary: '#a16207',
+      secondary: '#78350f',
+      accent: '#fbbf24',
+      background: '#18181b',
+      text: '#fafafa',
+      muted: '#a1a1aa',
+    },
+    fonts: { heading: 'Playfair Display, serif', body: 'Lato, system-ui, sans-serif' },
+    radii: { sm: 2, md: 6, lg: 12 },
+    effects: { radiusPreset: 'medium', shadowPreset: 'strong' },
+    typographyScale: { baseSize: 17, ratio: 1.333 },
+  },
+  minimal: {
+    rationale: 'Strict monochrome with single accent - content-first design.',
+    colors: {
+      primary: '#0a0a0a',
+      secondary: '#404040',
+      accent: '#16a34a',
+      background: '#ffffff',
+      text: '#0a0a0a',
+      muted: '#737373',
+    },
+    fonts: { heading: 'IBM Plex Sans, system-ui, sans-serif', body: 'IBM Plex Sans, system-ui, sans-serif' },
+    radii: { sm: 0, md: 2, lg: 4 },
+    effects: { radiusPreset: 'sharp', shadowPreset: 'none' },
+    typographyScale: { baseSize: 16, ratio: 1.2 },
+  },
+} satisfies Record<ThemeVibe, ThemeSuggestionPreset>;
+
+export const VIBE_KEYWORDS = {
+  modern: ['modern', 'tech', 'startup', 'sleek', 'minimalist tech', 'saas'],
+  warm: ['warm', 'cozy', 'rustic', 'earthy', 'natural', 'organic'],
+  professional: ['professional', 'law', 'legal', 'finance', 'corporate', 'conservative', 'trustworthy', 'enterprise'],
+  playful: ['playful', 'fun', 'kids', 'creative', 'vibrant', 'energetic'],
+  luxury: ['luxury', 'premium', 'high-end', 'exclusive', 'elegant', 'sophisticated'],
+  minimal: ['minimal', 'simple', 'clean', 'plain', 'content-first'],
+} satisfies Record<ThemeVibe, readonly string[]>;

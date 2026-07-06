@@ -485,6 +485,7 @@ test.describe('/ko/admin-builder inline text editing', () => {
     const slug = `g-editor-${token}`;
     const textId = `inline-text-${token}`;
     const originalText = `W03 original ${token}`;
+    const canceledText = `W03 canceled ${token}`;
     const editedText = `W03 edited ${token}`;
     let pageId: string | null = null;
     await page.setExtraHTTPHeaders(mutationHeaders(token));
@@ -534,7 +535,24 @@ test.describe('/ko/admin-builder inline text editing', () => {
       await expect(page.locator('[class*="selectionToolbar"]:visible')).toHaveCount(0);
 
       const editable = editorShell.locator('.ProseMirror').first();
-      const boldButton = toolbar.getByRole('button', { name: 'Bold' });
+      await editable.fill(canceledText);
+      await page.keyboard.press('Escape');
+      await expect(editorShell).toBeHidden();
+      await expect.poll(async () => {
+        const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
+        return {
+          text: node?.content?.text ?? null,
+          richPlainText: node?.content?.richText?.plainText ?? null,
+        };
+      }, { timeout: 15_000 }).toEqual({
+        text: originalText,
+        richPlainText: originalText,
+      });
+
+      await textNode.dblclick({ position: { x: 30, y: 30 }, force: true });
+      await expect(editorShell).toBeVisible();
+      await expect(editable).toContainText(originalText);
+      const boldButton = toolbar.getByRole('button', { name: /^Bold$|^굵게$/ });
       await expect(boldButton).toHaveAttribute('aria-pressed', 'false');
       await editable.fill(editedText);
       await editable.press(`${shortcutModifier}+A`);
@@ -549,7 +567,8 @@ test.describe('/ko/admin-builder inline text editing', () => {
       });
       expect(activeButtonVisual.backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
       expect(activeButtonVisual.color).toBe('rgb(255, 255, 255)');
-      await page.keyboard.press('Escape');
+      await editable.focus();
+      await page.keyboard.press('Enter');
       await expect(editorShell).toBeHidden();
       await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(editedText);
 

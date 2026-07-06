@@ -11,15 +11,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { BuilderNotification } from '@/lib/builder/notifications/notification-model';
-
-const KIND_LABELS: Record<BuilderNotification['kind'], string> = {
-  comment: 'Comment',
-  approval: 'Approval',
-  order: 'Order',
-  booking: 'Booking',
-  'app-install': 'App',
-  publish: 'Publish',
-};
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 const KIND_TONES: Record<BuilderNotification['kind'], string> = {
   comment: '#0ea5e9',
@@ -82,17 +74,54 @@ function formatRelative(iso: string): string {
   return `${Math.floor(ms / 86_400_000)}d`;
 }
 
+export function getNotificationInboxCopy(locale: Locale) {
+  const kindLabels: Record<BuilderNotification['kind'], string> = {
+    comment: locale === 'ko' ? '댓글' : locale === 'zh-hant' ? '留言' : 'Comment',
+    approval: locale === 'ko' ? '승인' : locale === 'zh-hant' ? '核准' : 'Approval',
+    order: locale === 'ko' ? '주문' : locale === 'zh-hant' ? '訂單' : 'Order',
+    booking: locale === 'ko' ? '예약' : locale === 'zh-hant' ? '預約' : 'Booking',
+    'app-install': locale === 'ko' ? '앱' : locale === 'zh-hant' ? '應用程式' : 'App',
+    publish: locale === 'ko' ? '게시' : locale === 'zh-hant' ? '發布' : 'Publish',
+  };
+
+  return {
+    buttonLabel: (unreadCount: number) => {
+      if (locale === 'ko') return unreadCount > 0 ? `알림 (${unreadCount}개 읽지 않음)` : '알림';
+      if (locale === 'zh-hant') return unreadCount > 0 ? `通知（${unreadCount} 則未讀）` : '通知';
+      return unreadCount > 0 ? `Notifications (${unreadCount} unread)` : 'Notifications';
+    },
+    dialogLabel: locale === 'ko' ? '알림함' : locale === 'zh-hant' ? '通知收件匣' : 'Notification inbox',
+    title: locale === 'ko' ? '알림' : locale === 'zh-hant' ? '通知' : 'Notifications',
+    markAllRead: locale === 'ko' ? '모두 읽음' : locale === 'zh-hant' ? '全部標為已讀' : 'Mark all read',
+    loading: locale === 'ko' ? '불러오는 중...' : locale === 'zh-hant' ? '載入中...' : 'Loading...',
+    failedPrefix: locale === 'ko' ? '실패' : locale === 'zh-hant' ? '失敗' : 'Failed',
+    empty: locale === 'ko' ? '알림이 없습니다.' : locale === 'zh-hant' ? '沒有通知。' : 'No notifications.',
+    noDetails: locale === 'ko' ? '세부 정보 없음' : locale === 'zh-hant' ? '沒有詳細資料' : 'no details',
+    loadFailed: locale === 'ko' ? '알림을 불러오지 못했습니다.' : locale === 'zh-hant' ? '無法載入通知。' : 'Unable to load notifications.',
+    kindLabels,
+  } as const;
+}
+
+function appendLocale(url: string, locale: Locale, extra?: Record<string, string | number>): string {
+  const params = new URLSearchParams({ locale, ...Object.fromEntries(Object.entries(extra ?? {}).map(([key, value]) => [key, String(value)])) });
+  return `${url}${url.includes('?') ? '&' : '?'}${params.toString()}`;
+}
+
 export interface NotificationInboxProps {
   /** Override fetch endpoint for testing. */
   endpoint?: string;
+  locale?: Locale;
   /** Poll interval in ms while the dropdown is open. */
   pollMs?: number;
 }
 
 export default function NotificationInbox({
   endpoint = '/api/builder/notifications',
+  locale = 'ko',
   pollMs = 60_000,
 }: NotificationInboxProps) {
+  const effectiveLocale = normalizeLocale(locale);
+  const copy = useMemo(() => getNotificationInboxCopy(effectiveLocale), [effectiveLocale]);
   const [items, setItems] = useState<BuilderNotification[]>([]);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -105,16 +134,16 @@ export default function NotificationInbox({
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${endpoint}?limit=20`, { credentials: 'same-origin' });
-      if (!res.ok) throw new Error(`status_${res.status}`);
-      const json = (await res.json()) as { notifications?: BuilderNotification[] };
+      const res = await fetch(appendLocale(endpoint, effectiveLocale, { limit: 20 }), { credentials: 'same-origin' });
+      const json = (await res.json().catch(() => ({}))) as { notifications?: BuilderNotification[]; error?: string };
+      if (!res.ok) throw new Error(json.error || copy.loadFailed);
       setItems(Array.isArray(json.notifications) ? json.notifications : []);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'load_failed');
+      setError(err instanceof Error ? err.message : copy.loadFailed);
     } finally {
       setLoading(false);
     }
-  }, [endpoint]);
+  }, [copy.loadFailed, effectiveLocale, endpoint]);
 
   useEffect(() => {
     void load();
@@ -144,11 +173,11 @@ export default function NotificationInbox({
     async (notification: BuilderNotification) => {
       if (!notification.readAt) {
         try {
-          await fetch(`${endpoint}/${notification.id}`, {
+          await fetch(appendLocale(`${endpoint}/${notification.id}`, effectiveLocale), {
             method: 'PATCH',
             credentials: 'same-origin',
             headers: { 'Content-Type': 'application/json' },
-            body: '{}',
+            body: JSON.stringify({ locale: effectiveLocale }),
           });
           setItems((current) =>
             current.map((n) => (n.id === notification.id ? { ...n, readAt: new Date().toISOString() } : n)),
@@ -161,29 +190,29 @@ export default function NotificationInbox({
         window.location.href = notification.link;
       }
     },
-    [endpoint],
+    [effectiveLocale, endpoint],
   );
 
   const onMarkAll = useCallback(async () => {
     try {
-      await fetch(endpoint, {
+      await fetch(appendLocale(endpoint, effectiveLocale), {
         method: 'PUT',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
-        body: '{}',
+        body: JSON.stringify({ locale: effectiveLocale }),
       });
       setItems((current) => current.map((n) => (n.readAt ? n : { ...n, readAt: new Date().toISOString() })));
     } catch {
       // ignore
     }
-  }, [endpoint]);
+  }, [effectiveLocale, endpoint]);
 
   return (
     <div ref={containerRef} style={{ position: 'relative' }}>
       <button
         type="button"
         style={BELL_BUTTON_STYLE}
-        aria-label={`Notifications${unreadCount > 0 ? ` (${unreadCount} unread)` : ''}`}
+        aria-label={copy.buttonLabel(unreadCount)}
         onClick={() => setOpen((o) => !o)}
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -193,9 +222,9 @@ export default function NotificationInbox({
         {unreadCount > 0 ? <span style={BADGE_STYLE}>{unreadCount > 99 ? '99+' : unreadCount}</span> : null}
       </button>
       {open ? (
-        <div style={DROPDOWN_STYLE} role="dialog" aria-label="Notification inbox">
+        <div style={DROPDOWN_STYLE} role="dialog" aria-label={copy.dialogLabel}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 12px' }}>
-            <strong style={{ fontSize: 14 }}>Notifications</strong>
+            <strong style={{ fontSize: 14 }}>{copy.title}</strong>
             <button
               type="button"
               onClick={() => void onMarkAll()}
@@ -208,17 +237,17 @@ export default function NotificationInbox({
                 fontSize: 12,
               }}
             >
-              Mark all read
+              {copy.markAllRead}
             </button>
           </div>
           {loading && items.length === 0 ? (
-            <div style={{ padding: 16, fontSize: 13, color: '#64748b' }}>Loading...</div>
+            <div style={{ padding: 16, fontSize: 13, color: '#64748b' }}>{copy.loading}</div>
           ) : null}
           {error ? (
-            <div style={{ padding: 12, fontSize: 12, color: '#dc2626' }}>Failed: {error}</div>
+            <div style={{ padding: 12, fontSize: 12, color: '#dc2626' }}>{copy.failedPrefix}: {error}</div>
           ) : null}
           {!loading && items.length === 0 && !error ? (
-            <div style={{ padding: 16, fontSize: 13, color: '#64748b' }}>No notifications.</div>
+            <div style={{ padding: 16, fontSize: 13, color: '#64748b' }}>{copy.empty}</div>
           ) : null}
           <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
             {items.map((n) => (
@@ -253,7 +282,7 @@ export default function NotificationInbox({
                     <span style={{ marginLeft: 'auto', fontSize: 11, color: '#94a3b8' }}>{formatRelative(n.createdAt)}</span>
                   </div>
                   <div style={{ fontSize: 12, color: '#475569' }}>
-                    {KIND_LABELS[n.kind]} · {n.body || '(no details)'}
+                    {copy.kindLabels[n.kind]} · {n.body || `(${copy.noDetails})`}
                   </div>
                 </button>
               </li>

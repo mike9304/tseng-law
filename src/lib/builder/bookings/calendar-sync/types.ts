@@ -18,6 +18,7 @@ export interface CalendarConnection {
   status: 'connected' | 'error' | 'revoked';
   lastError?: string;
   lastSyncedAt?: string;
+  lastSyncResult?: CalendarSyncResult;
   eventMappings?: CalendarEventMapping[];
   createdAt: string;
   updatedAt: string;
@@ -27,7 +28,29 @@ export interface CalendarSyncResult {
   ok: boolean;
   pushed: number;
   pulled: number;
+  bookingUpdates: number;
+  blockedUpdates: number;
+  reconciliationFeed: CalendarSyncReconciliationEntry[];
   errors: Array<{ kind: string; message: string }>;
+}
+
+export interface CalendarSyncReconciliationEntry {
+  externalId: string;
+  summary: string;
+  kind: 'booking' | 'block';
+  status:
+    | 'updated'
+    | 'created'
+    | 'cancelled'
+    | 'removed'
+    | 'ignored'
+    | 'ignored-invalid-range'
+    | 'ignored-own-event'
+    | 'ignored-unmatched'
+    | 'error';
+  source?: 'token' | 'pull' | 'push';
+  bookingId?: string;
+  note?: string;
 }
 
 export interface ExternalCalendarEvent {

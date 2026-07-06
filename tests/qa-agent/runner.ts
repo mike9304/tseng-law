@@ -1,3 +1,4 @@
+import { execSync } from 'node:child_process';
 import { chromium, type BrowserContext, type Page } from '@playwright/test';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
@@ -11,21 +12,7 @@ import type {
   CheckpointFinding,
   CheckpointResult,
 } from './types';
-import { W02_selectionHandles } from './scenarios/W02-selection-handles';
-import { W03_inlineTextEdit } from './scenarios/W03-inline-text-edit';
-import { W04_addPanel } from './scenarios/W04-add-panel';
-import { W07_resize } from './scenarios/W07-resize';
-import { W08_rotation } from './scenarios/W08-rotation';
-import { W14_pagesCrud } from './scenarios/W14-pages-crud';
-
-const ALL_CHECKPOINTS: CheckpointDefinition[] = [
-  W02_selectionHandles,
-  W03_inlineTextEdit,
-  W04_addPanel,
-  W07_resize,
-  W08_rotation,
-  W14_pagesCrud,
-];
+import { ALL_CHECKPOINTS } from './checkpoint-registry';
 
 const BASE_URL = process.env.BASE_URL ?? 'http://127.0.0.1:3000';
 const USERNAME = process.env.BUILDER_SMOKE_USERNAME ?? process.env.CMS_ADMIN_USERNAME ?? 'admin';
@@ -33,6 +20,12 @@ const PASSWORD = process.env.BUILDER_SMOKE_PASSWORD ?? process.env.CMS_ADMIN_PAS
 const REPORT_ROOT = process.env.QA_REPORT_ROOT ?? path.resolve(process.cwd(), 'qa-reports');
 const ENABLE_VISION = process.env.QA_DISABLE_VISION !== '1';
 const ENABLE_SUMMARY = process.env.QA_DISABLE_SUMMARY !== '1';
+// Sweep determinism: supervisor-supplied shell command that rm+cp-refreshes the
+// BUILDER_SITE_ROOT fixture dir before each checkpoint, so earlier scenarios'
+// on-disk mutations (e.g. added/deleted nodes, open popovers) don't leak into
+// later ones (documented flake class — e.g. W36 fails only in full sweeps).
+// Unset = no-op, preserving default single-checkpoint behavior.
+const FIXTURE_RESET_CMD = process.env.QA_FIXTURE_RESET_CMD;
 
 function tsSlug(d: Date): string {
   const iso = d.toISOString().replace(/[:.]/g, '-');
@@ -51,6 +44,17 @@ async function ensureDevServer(): Promise<void> {
     throw new Error(
       `dev server (${BASE_URL}) 에 닿지 않습니다. 먼저 \`npm run dev\` 를 별도 터미널에서 실행하세요. 원인: ${(err as Error).message}`,
     );
+  }
+}
+
+function resetFixturesIfConfigured(): void {
+  if (!FIXTURE_RESET_CMD) return;
+  const t0 = Date.now();
+  try {
+    execSync(FIXTURE_RESET_CMD, { stdio: 'pipe', timeout: 30_000 });
+    console.log(`[qa-agent] fixture reset ok (${Date.now() - t0}ms)`);
+  } catch (err) {
+    console.warn(`[qa-agent] fixture reset FAILED (${Date.now() - t0}ms): ${(err as Error).message}`);
   }
 }
 
@@ -176,6 +180,7 @@ async function main(): Promise<void> {
       : ALL_CHECKPOINTS;
     for (const def of targets) {
       console.log(`[qa-agent] running ${def.id} ${def.title}`);
+      resetFixturesIfConfigured();
       const r = await runCheckpoint(context, def, reportDir);
       if (ENABLE_VISION && ollama.available && ollama.models.includes(process.env.QA_VISION_MODEL ?? 'qwen2.5vl:32b')) {
         console.log(`[qa-agent]   vision review (${r.evidence.length} screenshots)`);

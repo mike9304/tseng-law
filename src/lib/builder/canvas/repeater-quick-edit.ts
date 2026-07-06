@@ -1,6 +1,10 @@
 import { resolveBuilderCollectionItemFocusFromNodeId } from '@/lib/builder/collection-focus';
 import type { BuilderCanvasNode } from './types';
 
+type BuilderCanvasNodeLookup =
+  | readonly BuilderCanvasNode[]
+  | ReadonlyMap<string, BuilderCanvasNode>;
+
 export type BuilderCanvasRepeaterQuickEdit =
   | {
       kind: 'service';
@@ -25,13 +29,13 @@ export type BuilderCanvasRepeaterQuickEdit =
     };
 
 export function resolveBuilderCanvasRepeaterQuickEdit(
-  nodes: BuilderCanvasNode[],
+  nodes: BuilderCanvasNodeLookup,
   selectedNodeId: string | null | undefined
 ): BuilderCanvasRepeaterQuickEdit | null {
   const focus = resolveBuilderCollectionItemFocusFromNodeId(selectedNodeId);
   if (!focus) return null;
 
-  const nodesById = new Map(nodes.map((node) => [node.id, node]));
+  const nodesById = resolveNodeLookupMap(nodes);
   if (focus.sectionKey === 'home.services') {
     const rootNodeId = `home-services-card-${focus.index}`;
     return {
@@ -60,7 +64,20 @@ export function resolveBuilderCanvasRepeaterQuickEdit(
   };
 }
 
-function getExistingNodeId(nodesById: Map<string, BuilderCanvasNode>, nodeId: string) {
+function isNodeLookupMap(
+  nodes: BuilderCanvasNodeLookup,
+): nodes is ReadonlyMap<string, BuilderCanvasNode> {
+  return typeof (nodes as ReadonlyMap<string, BuilderCanvasNode>).get === 'function';
+}
+
+function resolveNodeLookupMap(nodes: BuilderCanvasNodeLookup): ReadonlyMap<string, BuilderCanvasNode> {
+  if (isNodeLookupMap(nodes)) return nodes;
+  return new Map<string, BuilderCanvasNode>(
+    nodes.map((node): [string, BuilderCanvasNode] => [node.id, node]),
+  );
+}
+
+function getExistingNodeId(nodesById: ReadonlyMap<string, BuilderCanvasNode>, nodeId: string) {
   return nodesById.has(nodeId) ? nodeId : null;
 }
 

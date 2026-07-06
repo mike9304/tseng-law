@@ -1,13 +1,13 @@
+import React from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderSiteSearchCanvasNode } from '@/lib/builder/canvas/types';
 import { normalizeLocale, type Locale } from '@/lib/locales';
-
-const SEARCH_KIND_OPTIONS: Array<{ id: 'page' | 'blog' | 'faq' | 'portfolio'; label: string }> = [
-  { id: 'page', label: '페이지' },
-  { id: 'blog', label: '칼럼' },
-  { id: 'faq', label: 'FAQ' },
-  { id: 'portfolio', label: '포트폴리오' },
-];
+import {
+  getSiteSearchCopy,
+  SITE_SEARCH_LEGACY_DEFAULT_VALUES,
+  localizedSiteSearchLegacyText,
+  SITE_SEARCH_LEGACY_DEFAULTS,
+} from './site-search-copy';
 
 function SiteSearchRender({
   node,
@@ -19,6 +19,9 @@ function SiteSearchRender({
 }) {
   const c = node.content;
   const effectiveLocale = normalizeLocale(c.locale || locale || 'ko');
+  const copy = getSiteSearchCopy(effectiveLocale);
+  const placeholder = localizedSiteSearchLegacyText(c.placeholder, copy.defaultPlaceholder, SITE_SEARCH_LEGACY_DEFAULT_VALUES.placeholder) || copy.defaultPlaceholder;
+  const submitLabel = localizedSiteSearchLegacyText(c.submitLabel, copy.defaultSubmitLabel, SITE_SEARCH_LEGACY_DEFAULT_VALUES.submitLabel) || copy.defaultSubmitLabel;
   const resultsId = `builder-site-search-results-${node.id}`;
   // Static markup; client-side enhancement (live results) is wired in
   // SiteSearchPublishedClient when present, otherwise the form falls back
@@ -38,8 +41,8 @@ function SiteSearchRender({
       <input
         type="search"
         name="q"
-        placeholder={c.placeholder}
-        aria-label={c.placeholder}
+        placeholder={placeholder}
+        aria-label={placeholder}
         aria-autocomplete="list"
         aria-controls={c.showResultsInline ? resultsId : undefined}
         aria-expanded={c.showResultsInline ? false : undefined}
@@ -47,7 +50,7 @@ function SiteSearchRender({
         data-builder-site-search-input="true"
       />
       {c.kinds.length > 0 ? <input type="hidden" name="kinds" value={c.kinds.join(',')} /> : null}
-      <button type="submit">{c.submitLabel}</button>
+      <button type="submit">{submitLabel}</button>
       {c.showResultsInline ? (
         <div
           className="builder-site-search-results"
@@ -63,11 +66,15 @@ function SiteSearchRender({
 
 function SiteSearchInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const n = node as BuilderSiteSearchCanvasNode;
   const c = n.content;
+  const copy = getSiteSearchCopy(locale);
+  const placeholder = localizedSiteSearchLegacyText(c.placeholder, copy.defaultPlaceholder, SITE_SEARCH_LEGACY_DEFAULT_VALUES.placeholder);
+  const submitLabel = localizedSiteSearchLegacyText(c.submitLabel, copy.defaultSubmitLabel, SITE_SEARCH_LEGACY_DEFAULT_VALUES.submitLabel);
   const toggleKind = (kind: 'page' | 'blog' | 'faq' | 'portfolio', checked: boolean) => {
     const next = checked
       ? Array.from(new Set([...c.kinds, kind]))
@@ -77,25 +84,25 @@ function SiteSearchInspector({
   return (
     <>
       <label>
-        <span>플레이스홀더</span>
+        <span>{copy.placeholderLabel}</span>
         <input
           type="text"
-          value={c.placeholder}
+          value={placeholder}
           disabled={disabled}
           onChange={(event) => onUpdate({ placeholder: event.target.value })}
         />
       </label>
       <label>
-        <span>검색 버튼 라벨</span>
+        <span>{copy.searchButtonLabel}</span>
         <input
           type="text"
-          value={c.submitLabel}
+          value={submitLabel}
           disabled={disabled}
           onChange={(event) => onUpdate({ submitLabel: event.target.value })}
         />
       </label>
       <label>
-        <span>결과 인라인 표시</span>
+        <span>{copy.showInlineResultsLabel}</span>
         <input
           type="checkbox"
           checked={c.showResultsInline}
@@ -104,22 +111,22 @@ function SiteSearchInspector({
         />
       </label>
       <fieldset>
-        <legend>검색 범위</legend>
-        <p>선택하지 않으면 전체 검색</p>
-        {SEARCH_KIND_OPTIONS.map((option) => (
-          <label key={option.id}>
-            <span>{option.label}</span>
+        <legend>{copy.searchScopeLegend}</legend>
+        <p>{copy.searchScopeHint}</p>
+        {Object.entries(copy.kindLabels).map(([id, label]) => (
+          <label key={id}>
+            <span>{label}</span>
             <input
               type="checkbox"
-              checked={c.kinds.includes(option.id)}
+              checked={c.kinds.includes(id as 'page' | 'blog' | 'faq' | 'portfolio')}
               disabled={disabled}
-              onChange={(event) => toggleKind(option.id, event.target.checked)}
+              onChange={(event) => toggleKind(id as 'page' | 'blog' | 'faq' | 'portfolio', event.target.checked)}
             />
           </label>
         ))}
       </fieldset>
       <label>
-        <span>최대 결과수</span>
+        <span>{copy.maxResultsLabel}</span>
         <input
           type="number"
           min={1}
@@ -130,11 +137,11 @@ function SiteSearchInspector({
         />
       </label>
       <label>
-        <span>로케일 override</span>
+        <span>{copy.localeOverrideLabel}</span>
         <input
           type="text"
           value={c.locale}
-          placeholder="페이지 로케일 사용"
+          placeholder={copy.localeOverridePlaceholder}
           disabled={disabled}
           onChange={(event) => onUpdate({ locale: event.target.value })}
         />
@@ -149,8 +156,8 @@ export default defineComponent({
   category: 'advanced',
   icon: '🔍',
   defaultContent: {
-    placeholder: '어떻게 도와드릴까요?',
-    submitLabel: '검색',
+    placeholder: SITE_SEARCH_LEGACY_DEFAULTS.placeholder,
+    submitLabel: SITE_SEARCH_LEGACY_DEFAULTS.submitLabel,
     showResultsInline: true,
     kinds: [],
     locale: '',

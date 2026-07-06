@@ -1,0 +1,349 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 21100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(8px);
+  animation: saveSectionBackdropIn 150ms ease;
+}
+
+.panel {
+  position: relative;
+  width: min(760px, 95vw);
+  max-height: min(720px, 88vh);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  border-radius: 12px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(248, 250, 252, 0.98) 100%),
+    #fff;
+  box-shadow: 0 28px 76px rgba(15, 23, 42, 0.24);
+  animation: saveSectionPanelIn 180ms ease;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: start;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.titleBlock {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.title {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.02rem;
+  font-weight: 900;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.intro {
+  max-width: 560px;
+  margin: 0;
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 650;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.closeButton {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dbe2ea;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #475569;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease;
+  cursor: pointer;
+}
+
+.closeButton svg {
+  width: 15px;
+  height: 15px;
+}
+
+.closeButton:hover {
+  border-color: rgba(17, 109, 255, 0.36);
+  background: #f8fbff;
+  color: #0f172a;
+}
+
+.closeButton:active {
+  transform: scale(0.96);
+}
+
+.closeButton:focus-visible,
+.input:focus-visible,
+.secondaryButton:focus-visible,
+.primaryButton:focus-visible {
+  outline: 2px solid rgba(17, 109, 255, 0.62);
+  outline-offset: 2px;
+}
+
+.formShell {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1fr);
+  overflow: auto;
+}
+
+.previewPane {
+  min-width: 0;
+  padding: 18px;
+  border-right: 1px solid #e2e8f0;
+  background:
+    radial-gradient(circle at 18px 18px, rgba(17, 109, 255, 0.08), transparent 26px),
+    linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+}
+
+.previewFrame {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.46);
+  border-radius: 10px;
+  background:
+    linear-gradient(45deg, rgba(226, 232, 240, 0.55) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(226, 232, 240, 0.55) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(226, 232, 240, 0.55) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(226, 232, 240, 0.55) 75%),
+    #fff;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+  background-size: 16px 16px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.72), 0 12px 28px rgba(15, 23, 42, 0.09);
+}
+
+.previewFrame svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.formPane {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 18px;
+  background: #fff;
+}
+
+.field {
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.fieldLabel {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 650;
+  line-height: 1.35;
+  padding: 9px 10px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+  transition: border-color 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.input:hover {
+  border-color: #94a3b8;
+}
+
+.input:focus {
+  border-color: rgba(17, 109, 255, 0.72);
+  background: #fbfdff;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.12);
+}
+
+.textarea {
+  min-height: 78px;
+  resize: vertical;
+}
+
+.select {
+  min-height: 39px;
+}
+
+.errorMessage {
+  padding: 9px 11px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 14px 18px;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.secondaryButton,
+.primaryButton {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 0 14px;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 850;
+  line-height: 1;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.secondaryButton {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #334155;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  border-color: #94a3b8;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.primaryButton {
+  border: 1px solid #0b5bd3;
+  background: #116dff;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(17, 109, 255, 0.2);
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  border-color: #0957ce;
+  background: #0b5bd3;
+}
+
+.secondaryButton:active,
+.primaryButton:active {
+  transform: translateY(1px);
+}
+
+.secondaryButton:disabled,
+.primaryButton:disabled {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.primaryButton:disabled {
+  border-color: #cbd5e1;
+  background: #cbd5e1;
+  color: #f8fafc;
+  box-shadow: none;
+}
+
+@keyframes saveSectionBackdropIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes saveSectionPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 720px) {
+  .backdrop {
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .panel {
+    width: min(100%, 520px);
+    max-height: calc(100vh - 32px);
+  }
+
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  .previewPane {
+    border-right: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .previewFrame {
+    max-height: 180px;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+  }
+
+  .secondaryButton,
+  .primaryButton {
+    flex: 1 1 140px;
+  }
+}

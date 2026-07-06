@@ -10,7 +10,7 @@ import {
   builderAppWidgetMatchesSearch,
   type BuilderRegisteredAppWidget,
 } from '@/lib/builder/apps/widgets';
-import type { BuilderCanvasNode, BuilderCanvasNodeKind } from '@/lib/builder/canvas/types';
+import type { BuilderCanvasDocument, BuilderCanvasNode, BuilderCanvasNodeKind } from '@/lib/builder/canvas/types';
 import { insertSectionSnapshot } from '@/lib/builder/sections/insertSection';
 import {
   getBuiltInSectionSearchResults,
@@ -23,12 +23,26 @@ import type { Locale } from '@/lib/locales';
 import TemplateThumbnailRenderer from './TemplateThumbnailRenderer';
 import { SandboxCatalogWidgetSection } from './SandboxCatalogWidgetSection';
 import {
+  BUILDER_APP_WIDGET_DRAG_MIME,
+  BUILDER_NODE_KIND_DRAG_MIME,
+} from './canvasCatalogDrop';
+import {
   DECORATIVE_WIDGET_PRESETS,
   DESIGNER_WIDGET_PRESETS,
   GALLERY_WIDGET_PRESETS,
   INTERACTIVE_WIDGET_PRESETS,
   LAYOUT_WIDGET_PRESETS,
   LOCATION_WIDGET_PRESETS,
+  localizeDecorativeWidgetPreset,
+  localizeDesignerWidgetPreset,
+  localizeGalleryWidgetPreset,
+  localizeInteractiveWidgetPreset,
+  localizeLayoutWidgetPreset,
+  localizeLocationWidgetPreset,
+  localizeMediaWidgetPreset,
+  localizeNavigationWidgetPreset,
+  localizeSocialWidgetPreset,
+  localizeTextWidgetPreset,
   MEDIA_WIDGET_PRESETS,
   NAVIGATION_WIDGET_PRESETS,
   SOCIAL_WIDGET_PRESETS,
@@ -46,18 +60,21 @@ import {
 } from './SandboxCatalogPanel.presets';
 import {
   CATEGORY_ICONS,
-  CATEGORY_LABELS,
   CATEGORY_ORDER,
-  CATEGORY_SUBLABELS,
   compareByCategoryPriority,
   componentMatchesSearch,
   decorativeWidgetMatchesSearch,
   designerWidgetMatchesSearch,
   FEATURED_KINDS,
   galleryWidgetMatchesSearch,
+  getCatalogCategoryCopy,
+  getComponentCatalogDisplayName,
   getDisplayCategory,
   getPageTemplateMeta,
+  getPageTemplatePreviewName,
+  getPageTemplatePreviewTags,
   getPageTemplateQualityLabel,
+  getSandboxCatalogPanelCopy,
   interactiveWidgetMatchesSearch,
   layoutWidgetMatchesSearch,
   locationWidgetMatchesSearch,
@@ -66,6 +83,7 @@ import {
   normalizeSearchTerm,
   PAGE_TEMPLATE_PREVIEW_LIMIT,
   pageTemplateMatchesSearch,
+  pageTemplatePreviewMatchesSearch,
   pageTemplateSearchScore,
   resolveCenteredNode,
   resolveSectionInsertOffset,
@@ -73,6 +91,8 @@ import {
   textWidgetMatchesSearch,
 } from './SandboxCatalogPanel.helpers';
 import styles from './SandboxPage.module.css';
+
+const EMPTY_CATALOG_NODES: BuilderCanvasDocument['nodes'] = [];
 
 export default function SandboxCatalogPanel({
   locale,
@@ -83,7 +103,13 @@ export default function SandboxCatalogPanel({
   appWidgets?: BuilderRegisteredAppWidget[];
   onOpenPageTemplates?: (query?: string) => void;
 }) {
-  const { document, addNode, addNodes, setSelectedNodeId, setDraftSaveState } = useBuilderCanvasStore();
+  const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? EMPTY_CATALOG_NODES);
+  const hasDocument = useBuilderCanvasStore((state) => state.document != null);
+  const documentLocale = useBuilderCanvasStore((state) => state.document?.locale);
+  const addNode = useBuilderCanvasStore((state) => state.addNode);
+  const addNodes = useBuilderCanvasStore((state) => state.addNodes);
+  const setSelectedNodeId = useBuilderCanvasStore((state) => state.setSelectedNodeId);
+  const setDraftSaveState = useBuilderCanvasStore((state) => state.setDraftSaveState);
   const [open, setOpen] = useState(true);
   const [query, setQuery] = useState('');
   const addSequenceRef = useRef(0);
@@ -91,10 +117,10 @@ export default function SandboxCatalogPanel({
     'built-in-sections': true,
     'saved-sections': true,
   });
-  const nodes = document?.nodes ?? [];
   const components = listComponents();
   const pageTemplateCatalog = useMemo(() => getAllTemplates(), []);
-  const effectiveLocale: Locale = locale ?? (document?.locale as Locale) ?? 'ko';
+  const effectiveLocale: Locale = locale ?? (documentLocale as Locale) ?? 'ko';
+  const catalogCopy = getSandboxCatalogPanelCopy(effectiveLocale);
   const normalizedQuery = normalizeSearchTerm(query);
 
   const featuredComponents = useMemo(() => (
@@ -104,44 +130,64 @@ export default function SandboxCatalogPanel({
   ), [components]);
 
   const visibleTextWidgetPresets = useMemo(
-    () => TEXT_WIDGET_PRESETS.filter((preset) => textWidgetMatchesSearch(preset, normalizedQuery)),
-    [normalizedQuery],
+    () => TEXT_WIDGET_PRESETS
+      .map((preset) => localizeTextWidgetPreset(preset, effectiveLocale))
+      .filter((preset) => textWidgetMatchesSearch(preset, normalizedQuery)),
+    [effectiveLocale, normalizedQuery],
   );
   const visibleMediaWidgetPresets = useMemo(
-    () => MEDIA_WIDGET_PRESETS.filter((preset) => mediaWidgetMatchesSearch(preset, normalizedQuery)),
-    [normalizedQuery],
+    () => MEDIA_WIDGET_PRESETS
+      .map((preset) => localizeMediaWidgetPreset(preset, effectiveLocale))
+      .filter((preset) => mediaWidgetMatchesSearch(preset, normalizedQuery)),
+    [effectiveLocale, normalizedQuery],
   );
   const visibleGalleryWidgetPresets = useMemo(
-    () => GALLERY_WIDGET_PRESETS.filter((preset) => galleryWidgetMatchesSearch(preset, normalizedQuery)),
-    [normalizedQuery],
+    () => GALLERY_WIDGET_PRESETS
+      .map((preset) => localizeGalleryWidgetPreset(preset, effectiveLocale))
+      .filter((preset) => galleryWidgetMatchesSearch(preset, normalizedQuery)),
+    [effectiveLocale, normalizedQuery],
   );
   const visibleLayoutWidgetPresets = useMemo(
-    () => LAYOUT_WIDGET_PRESETS.filter((preset) => layoutWidgetMatchesSearch(preset, normalizedQuery)),
-    [normalizedQuery],
+    () => LAYOUT_WIDGET_PRESETS
+      .map((preset) => localizeLayoutWidgetPreset(preset, effectiveLocale))
+      .filter((preset) => layoutWidgetMatchesSearch(preset, normalizedQuery)),
+    [effectiveLocale, normalizedQuery],
   );
   const visibleInteractiveWidgetPresets = useMemo(
-    () => INTERACTIVE_WIDGET_PRESETS.filter((preset) => interactiveWidgetMatchesSearch(preset, normalizedQuery)),
-    [normalizedQuery],
+    () => INTERACTIVE_WIDGET_PRESETS
+      .map((preset) => localizeInteractiveWidgetPreset(preset, effectiveLocale))
+      .filter((preset) => interactiveWidgetMatchesSearch(preset, normalizedQuery)),
+    [effectiveLocale, normalizedQuery],
   );
   const visibleNavigationWidgetPresets = useMemo(
-    () => NAVIGATION_WIDGET_PRESETS.filter((preset) => navigationWidgetMatchesSearch(preset, normalizedQuery)),
-    [normalizedQuery],
+    () => NAVIGATION_WIDGET_PRESETS
+      .map((preset) => localizeNavigationWidgetPreset(preset, effectiveLocale))
+      .filter((preset) => navigationWidgetMatchesSearch(preset, normalizedQuery)),
+    [effectiveLocale, normalizedQuery],
   );
   const visibleSocialWidgetPresets = useMemo(
-    () => SOCIAL_WIDGET_PRESETS.filter((preset) => socialWidgetMatchesSearch(preset, normalizedQuery)),
-    [normalizedQuery],
+    () => SOCIAL_WIDGET_PRESETS
+      .map((preset) => localizeSocialWidgetPreset(preset, effectiveLocale))
+      .filter((preset) => socialWidgetMatchesSearch(preset, normalizedQuery)),
+    [effectiveLocale, normalizedQuery],
   );
   const visibleLocationWidgetPresets = useMemo(
-    () => LOCATION_WIDGET_PRESETS.filter((preset) => locationWidgetMatchesSearch(preset, normalizedQuery)),
-    [normalizedQuery],
+    () => LOCATION_WIDGET_PRESETS
+      .map((preset) => localizeLocationWidgetPreset(preset, effectiveLocale))
+      .filter((preset) => locationWidgetMatchesSearch(preset, normalizedQuery)),
+    [effectiveLocale, normalizedQuery],
   );
   const visibleDecorativeWidgetPresets = useMemo(
-    () => DECORATIVE_WIDGET_PRESETS.filter((preset) => decorativeWidgetMatchesSearch(preset, normalizedQuery)),
-    [normalizedQuery],
+    () => DECORATIVE_WIDGET_PRESETS
+      .map((preset) => localizeDecorativeWidgetPreset(preset, effectiveLocale))
+      .filter((preset) => decorativeWidgetMatchesSearch(preset, normalizedQuery)),
+    [effectiveLocale, normalizedQuery],
   );
   const visibleDesignerWidgetPresets = useMemo(
-    () => DESIGNER_WIDGET_PRESETS.filter((preset) => designerWidgetMatchesSearch(preset, normalizedQuery)),
-    [normalizedQuery],
+    () => DESIGNER_WIDGET_PRESETS
+      .map((preset) => localizeDesignerWidgetPreset(preset, effectiveLocale))
+      .filter((preset) => designerWidgetMatchesSearch(preset, normalizedQuery)),
+    [effectiveLocale, normalizedQuery],
   );
   const visibleAppWidgets = useMemo(
     () => appWidgets.filter((widget) => builderAppWidgetMatchesSearch(widget, normalizedQuery)),
@@ -158,14 +204,17 @@ export default function SandboxCatalogPanel({
   const matchingPageTemplates = useMemo(
     () => (normalizedQuery
       ? pageTemplateCatalog
-        .filter((template) => pageTemplateMatchesSearch(template, normalizedQuery))
+        .filter((template) => (
+          pageTemplateMatchesSearch(template, normalizedQuery)
+          || pageTemplatePreviewMatchesSearch(template, effectiveLocale, normalizedQuery)
+        ))
         .sort((left, right) => (
           pageTemplateSearchScore(right, normalizedQuery)
           - pageTemplateSearchScore(left, normalizedQuery)
           || left.name.localeCompare(right.name, 'ko')
         ))
       : []),
-    [normalizedQuery, pageTemplateCatalog],
+    [effectiveLocale, normalizedQuery, pageTemplateCatalog],
   );
   const visiblePageTemplatePreviews = matchingPageTemplates.slice(0, PAGE_TEMPLATE_PREVIEW_LIMIT);
 
@@ -187,8 +236,8 @@ export default function SandboxCatalogPanel({
       .filter((category) => (buckets.get(category) ?? []).length > 0)
       .map((category) => {
         const filteredComponents = [...(buckets.get(category) ?? [])]
-          .filter((component) => componentMatchesSearch(component, normalizedQuery))
-          .sort((left, right) => compareByCategoryPriority(category, left, right));
+          .filter((component) => componentMatchesSearch(component, normalizedQuery, effectiveLocale))
+          .sort((left, right) => compareByCategoryPriority(category, left, right, effectiveLocale));
 
         return {
           category,
@@ -196,7 +245,7 @@ export default function SandboxCatalogPanel({
         };
       })
       .filter(({ components: categoryComponents }) => categoryComponents.length > 0);
-  }, [components, normalizedQuery]);
+  }, [components, effectiveLocale, normalizedQuery]);
 
   const visibleComponentCount = groupedCategories.reduce(
     (count, group) => count + group.components.length,
@@ -499,7 +548,7 @@ export default function SandboxCatalogPanel({
   }
 
   function handleInsertBuiltInSection(template: BuiltInSectionTemplate) {
-    if (!document) return;
+    if (!hasDocument) return;
     const result = insertSectionSnapshot(
       template.nodes,
       template.rootNodeId,
@@ -515,23 +564,23 @@ export default function SandboxCatalogPanel({
     <section className={styles.panelSection}>
       <header className={styles.panelSectionHeader}>
         <div>
-          <span>Catalog</span>
+          <span>{catalogCopy.title}</span>
           <strong>
-            {normalizedQuery ? `${visibleCatalogCount}/${totalCatalogCount}` : totalCatalogCount} items
+            {catalogCopy.countLabel(visibleCatalogCount, totalCatalogCount, Boolean(normalizedQuery))}
           </strong>
         </div>
         <button
           type="button"
           className={styles.panelHeaderButton}
-          title={open ? '카탈로그 접기' : '카탈로그 열기'}
+          title={open ? catalogCopy.collapseTitle : catalogCopy.expandTitle}
           onClick={() => setOpen((current) => !current)}
         >
-          {open ? 'Hide' : 'Show'}
+          {open ? catalogCopy.collapseLabel : catalogCopy.expandLabel}
         </button>
       </header>
       <div className={`${styles.panelBody} ${!open ? styles.panelBodyCollapsed : ''}`}>
         <p className={styles.panelCopy}>
-          registry 컴포넌트를 카테고리별로 묶었습니다. drag 로 캔버스에 추가하거나 quick-add 로 중앙에 바로 생성합니다.
+          {catalogCopy.intro}
         </p>
         {onOpenPageTemplates ? (
           <button
@@ -540,40 +589,43 @@ export default function SandboxCatalogPanel({
             data-builder-open-page-template-market="true"
             onClick={() => onOpenPageTemplates(query)}
           >
-            전체 페이지 템플릿 261개 보기
+            {catalogCopy.openPageTemplates(pageTemplateCatalog.length)}
           </button>
         ) : null}
 
         <label className={styles.catalogSearchLabel}>
-          <span>Search elements</span>
+          <span>{catalogCopy.searchLabel}</span>
           <input
             type="search"
-            aria-label="Search add elements"
+            aria-label={catalogCopy.searchAriaLabel}
             className={styles.catalogSearchInput}
-            placeholder="Text, button, image..."
+            placeholder={catalogCopy.searchPlaceholder}
             value={query}
             onChange={(event) => setQuery(event.currentTarget.value)}
           />
         </label>
 
-        <div className={styles.catalogQuickStrip} aria-label="Popular add elements">
-          {featuredComponents.map((component) => (
-            <button
-              key={component.kind}
-              type="button"
-              className={styles.catalogQuickButton}
-              data-builder-add-quick-kind={component.kind}
-              onClick={() => handleQuickAdd(component.kind as BuilderCanvasNodeKind)}
-            >
-              <span>{component.icon}</span>
-              <strong>{component.displayName}</strong>
-            </button>
-          ))}
+        <div className={styles.catalogQuickStrip} aria-label={catalogCopy.quickStripAriaLabel}>
+          {featuredComponents.map((component) => {
+            const displayName = getComponentCatalogDisplayName(component, effectiveLocale);
+            return (
+              <button
+                key={component.kind}
+                type="button"
+                className={styles.catalogQuickButton}
+                data-builder-add-quick-kind={component.kind}
+                onClick={() => handleQuickAdd(component.kind as BuilderCanvasNodeKind)}
+              >
+                <span>{component.icon}</span>
+                <strong>{displayName}</strong>
+              </button>
+            );
+          })}
         </div>
 
         {normalizedQuery ? (
           <div className={styles.catalogResultMeta} aria-live="polite">
-            Showing {visibleCatalogCount} result{visibleCatalogCount === 1 ? '' : 's'} for “{query.trim()}”
+            {catalogCopy.resultSummary(visibleCatalogCount, query.trim())}
           </div>
         ) : null}
 
@@ -586,12 +638,12 @@ export default function SandboxCatalogPanel({
               <span className={styles.catalogCategoryMeta}>
                 <span className={styles.catalogCategoryIcon}>PG</span>
                 <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Page template showroom</span>
+                  <span className={styles.catalogCategoryName}>{catalogCopy.pageTemplateShowroom}</span>
                   <span
                     className={styles.catalogCategoryHint}
                     data-builder-page-template-result-count="true"
                   >
-                    {matchingPageTemplates.length}/{pageTemplateCatalog.length} page templates
+                    {catalogCopy.pageTemplateCount(matchingPageTemplates.length, pageTemplateCatalog.length)}
                   </span>
                 </span>
               </span>
@@ -600,118 +652,122 @@ export default function SandboxCatalogPanel({
                 className={styles.catalogQuickAddButton}
                 onClick={() => onOpenPageTemplates(query)}
               >
-                전체 결과 보기
+                {catalogCopy.viewAllResults}
               </button>
             </div>
 
             <div style={{ display: 'grid', gap: 10 }}>
-              {visiblePageTemplatePreviews.map((template) => (
-                <button
-                  key={template.id}
-                  type="button"
-                  data-builder-page-template-result-id={template.id}
-                  onClick={() => onOpenPageTemplates(template.name)}
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: '96px minmax(0, 1fr)',
-                    gap: 10,
-                    alignItems: 'stretch',
-                    minHeight: 88,
-                    border: '1px solid var(--editor-border-hairline, #dbe2ea)',
-                    borderRadius: 8,
-                    background: 'var(--editor-panel-elevated, #fff)',
-                    color: 'var(--editor-fg-primary, #0f172a)',
-                    padding: 8,
-                    textAlign: 'left',
-                    cursor: 'pointer',
-                    boxShadow: '0 6px 18px rgba(15, 23, 42, 0.06)',
-                  }}
-                >
-                  <span
+              {visiblePageTemplatePreviews.map((template) => {
+                const previewName = getPageTemplatePreviewName(template, effectiveLocale);
+                const previewTags = getPageTemplatePreviewTags(template, effectiveLocale);
+                return (
+                  <button
+                    key={template.id}
+                    type="button"
+                    data-builder-page-template-result-id={template.id}
+                    onClick={() => onOpenPageTemplates(template.name)}
                     style={{
-                      display: 'block',
-                      minWidth: 0,
-                      overflow: 'hidden',
+                      display: 'grid',
+                      gridTemplateColumns: '96px minmax(0, 1fr)',
+                      gap: 10,
+                      alignItems: 'stretch',
+                      minHeight: 88,
                       border: '1px solid var(--editor-border-hairline, #dbe2ea)',
-                      borderRadius: 7,
-                      background: 'var(--editor-bg, #f4f5f7)',
+                      borderRadius: 8,
+                      background: 'var(--editor-panel-elevated, #fff)',
+                      color: 'var(--editor-fg-primary, #0f172a)',
+                      padding: 8,
+                      textAlign: 'left',
+                      cursor: 'pointer',
+                      boxShadow: '0 6px 18px rgba(15, 23, 42, 0.06)',
                     }}
                   >
-                    <TemplateThumbnailRenderer template={template} width={160} height={96} eager />
-                  </span>
-                  <span style={{ display: 'grid', alignContent: 'start', minWidth: 0, gap: 5 }}>
                     <span
                       style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 6,
+                        display: 'block',
                         minWidth: 0,
+                        overflow: 'hidden',
+                        border: '1px solid var(--editor-border-hairline, #dbe2ea)',
+                        borderRadius: 7,
+                        background: 'var(--editor-bg, #f4f5f7)',
                       }}
                     >
-                      <strong
-                        style={{
-                          minWidth: 0,
-                          overflow: 'hidden',
-                          fontSize: '0.78rem',
-                          fontWeight: 850,
-                          textOverflow: 'ellipsis',
-                          whiteSpace: 'nowrap',
-                        }}
-                      >
-                        {template.name}
-                      </strong>
-                      <span
-                        data-builder-page-template-quality="true"
-                        style={{
-                          flex: '0 0 auto',
-                          borderRadius: 999,
-                          background: template.qualityTier === 'premium' ? '#111827' : 'var(--editor-bg, #f4f5f7)',
-                          color: template.qualityTier === 'premium' ? '#fff' : 'var(--editor-fg-muted, #64748b)',
-                          padding: '2px 6px',
-                          fontSize: '0.6rem',
-                          fontWeight: 850,
-                          lineHeight: 1.2,
-                        }}
-                      >
-                        {getPageTemplateQualityLabel(template)}
-                      </span>
+                      <TemplateThumbnailRenderer template={template} width={160} height={96} eager locale={effectiveLocale} />
                     </span>
-                    <small
-                      style={{
-                        color: 'var(--editor-fg-muted, #64748b)',
-                        fontSize: '0.68rem',
-                        fontWeight: 750,
-                        lineHeight: 1.35,
-                      }}
-                    >
-                      {getPageTemplateMeta(template)}
-                    </small>
-                    <span
-                      style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        gap: 4,
-                      }}
-                    >
-                      {(template.tags ?? []).slice(0, 2).map((tag) => (
-                        <span
-                          key={tag}
+                    <span style={{ display: 'grid', alignContent: 'start', minWidth: 0, gap: 5 }}>
+                      <span
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 6,
+                          minWidth: 0,
+                        }}
+                      >
+                        <strong
                           style={{
-                            borderRadius: 999,
-                            background: 'var(--editor-accent-soft, #eff6ff)',
-                            color: 'var(--editor-accent, #116dff)',
-                            padding: '2px 6px',
-                            fontSize: '0.6rem',
-                            fontWeight: 800,
+                            minWidth: 0,
+                            overflow: 'hidden',
+                            fontSize: '0.78rem',
+                            fontWeight: 850,
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap',
                           }}
                         >
-                          {tag}
+                          {previewName}
+                        </strong>
+                        <span
+                          data-builder-page-template-quality="true"
+                          style={{
+                            flex: '0 0 auto',
+                            borderRadius: 999,
+                            background: template.qualityTier === 'premium' ? '#111827' : 'var(--editor-bg, #f4f5f7)',
+                            color: template.qualityTier === 'premium' ? '#fff' : 'var(--editor-fg-muted, #64748b)',
+                            padding: '2px 6px',
+                            fontSize: '0.6rem',
+                            fontWeight: 850,
+                            lineHeight: 1.2,
+                          }}
+                        >
+                          {getPageTemplateQualityLabel(template, effectiveLocale)}
                         </span>
-                      ))}
+                      </span>
+                      <small
+                        style={{
+                          color: 'var(--editor-fg-muted, #64748b)',
+                          fontSize: '0.68rem',
+                          fontWeight: 750,
+                          lineHeight: 1.35,
+                        }}
+                      >
+                        {getPageTemplateMeta(template, effectiveLocale)}
+                      </small>
+                      <span
+                        style={{
+                          display: 'flex',
+                          flexWrap: 'wrap',
+                          gap: 4,
+                        }}
+                      >
+                        {previewTags.slice(0, 2).map((tag) => (
+                          <span
+                            key={tag}
+                            style={{
+                              borderRadius: 999,
+                              background: 'var(--editor-accent-soft, #eff6ff)',
+                              color: 'var(--editor-accent, #116dff)',
+                              padding: '2px 6px',
+                              fontSize: '0.6rem',
+                              fontWeight: 800,
+                            }}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </span>
                     </span>
-                  </span>
-                </button>
-              ))}
+                  </button>
+                );
+              })}
             </div>
           </div>
         ) : null}
@@ -726,17 +782,18 @@ export default function SandboxCatalogPanel({
               className={`${styles.catalogCategoryButton} ${
                 (categoryOpen['app-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
               }`}
+              data-add-category="app-widgets"
               onClick={() => toggleCategory('app-widgets')}
             >
               <span className={styles.catalogCategoryMeta}>
                 <span className={styles.catalogCategoryIcon}>APP</span>
                 <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>App widgets</span>
+                  <span className={styles.catalogCategoryName}>{catalogCopy.appWidgetsName}</span>
                   <span
                     className={styles.catalogCategoryHint}
                     data-builder-app-widget-count="true"
                   >
-                    Enabled apps · {visibleAppWidgets.length} widgets
+                    {catalogCopy.appWidgetsHint(visibleAppWidgets.length)}
                   </span>
                 </span>
               </span>
@@ -765,15 +822,15 @@ export default function SandboxCatalogPanel({
                         className={styles.catalogDragButton}
                         title={
                           widget.insertable
-                            ? `${widget.name} 캔버스로 드래그하여 추가`
-                            : widget.unavailableReason ?? 'Widget runtime is not available yet.'
+                            ? catalogCopy.dragTitle(widget.name)
+                            : widget.unavailableReason ?? catalogCopy.widgetRuntimeUnavailable
                         }
                         draggable={widget.insertable}
                         disabled={!widget.insertable}
                         onDragStart={(event) => {
                           if (!widget.canvasKind) return;
-                          event.dataTransfer.setData('application/x-builder-node-kind', widget.canvasKind);
-                          event.dataTransfer.setData('application/x-builder-app-widget', JSON.stringify({
+                          event.dataTransfer.setData(BUILDER_NODE_KIND_DRAG_MIME, widget.canvasKind);
+                          event.dataTransfer.setData(BUILDER_APP_WIDGET_DRAG_MIME, JSON.stringify({
                             appId: widget.appId,
                             widgetId: widget.widgetId,
                             defaultContent: widget.defaultContent ?? {},
@@ -785,10 +842,10 @@ export default function SandboxCatalogPanel({
                         <span className={styles.catalogCardIcon}>{iconLabel}</span>
                         <span className={styles.catalogCardName}>{widget.name}</span>
                         <span className={styles.catalogCardMeta}>
-                          {widget.appName} · {widget.area} widget
+                          {catalogCopy.appWidgetMeta(widget.appName, widget.area)}
                         </span>
                         <span className={styles.catalogCardMeta}>
-                          {widget.description ?? `Provided by ${widget.appName}`}
+                          {widget.description ?? catalogCopy.appWidgetDescriptionFallback(widget.appName)}
                         </span>
                       </button>
 
@@ -798,13 +855,13 @@ export default function SandboxCatalogPanel({
                         data-builder-app-widget-add={widget.id}
                         title={
                           widget.insertable
-                            ? `${widget.name} 캔버스 중앙에 추가`
-                            : widget.unavailableReason ?? 'Widget runtime is not available yet.'
+                            ? catalogCopy.quickAddTitle(widget.name)
+                            : widget.unavailableReason ?? catalogCopy.widgetRuntimeUnavailable
                         }
                         disabled={!widget.insertable}
                         onClick={() => handleAddAppWidget(widget)}
                       >
-                        {widget.insertable ? 'Quick add' : 'Runtime unavailable'}
+                        {widget.insertable ? catalogCopy.quickAdd : catalogCopy.runtimeUnavailable}
                       </button>
                     </div>
                   );
@@ -817,8 +874,8 @@ export default function SandboxCatalogPanel({
         <SandboxCatalogWidgetSection
           categoryId="text-widgets"
           icon="T"
-          name="Text widget pack"
-          hint={`H1-H6, rich text, path, columns, quote, list, marquee · ${visibleTextWidgetPresets.length}`}
+          name={catalogCopy.widgetSections.text.name}
+          hint={catalogCopy.widgetSections.text.hint(visibleTextWidgetPresets.length)}
           presets={visibleTextWidgetPresets}
           isOpen={categoryOpen['text-widgets'] ?? true}
           dataAttribute="data-builder-text-widget-preset"
@@ -830,8 +887,8 @@ export default function SandboxCatalogPanel({
         <SandboxCatalogWidgetSection
           categoryId="media-widgets"
           icon="◩"
-          name="Media widget pack"
-          hint={`lightbox, hotspots, compare, video, audio, icons · ${visibleMediaWidgetPresets.length}`}
+          name={catalogCopy.widgetSections.media.name}
+          hint={catalogCopy.widgetSections.media.hint(visibleMediaWidgetPresets.length)}
           presets={visibleMediaWidgetPresets}
           isOpen={categoryOpen['media-widgets'] ?? true}
           dataAttribute="data-builder-media-widget-preset"
@@ -842,8 +899,8 @@ export default function SandboxCatalogPanel({
         <SandboxCatalogWidgetSection
           categoryId="gallery-widgets"
           icon="▧"
-          name="Gallery widget pack"
-          hint={`grid, masonry, slider, slideshow, thumbnail, pro, caption, filter · ${visibleGalleryWidgetPresets.length}`}
+          name={catalogCopy.widgetSections.gallery.name}
+          hint={catalogCopy.widgetSections.gallery.hint(visibleGalleryWidgetPresets.length)}
           presets={visibleGalleryWidgetPresets}
           isOpen={categoryOpen['gallery-widgets'] ?? true}
           dataAttribute="data-builder-gallery-widget-preset"
@@ -854,8 +911,8 @@ export default function SandboxCatalogPanel({
         <SandboxCatalogWidgetSection
           categoryId="layout-widgets"
           icon="▦"
-          name="Layout widget pack"
-          hint={`strip, box, columns, repeater, tabs, accordion, slideshow, hover · ${visibleLayoutWidgetPresets.length}`}
+          name={catalogCopy.widgetSections.layout.name}
+          hint={catalogCopy.widgetSections.layout.hint(visibleLayoutWidgetPresets.length)}
           presets={visibleLayoutWidgetPresets}
           isOpen={categoryOpen['layout-widgets'] ?? true}
           dataAttribute="data-builder-layout-widget-preset"
@@ -866,8 +923,8 @@ export default function SandboxCatalogPanel({
         <SandboxCatalogWidgetSection
           categoryId="interactive-widgets"
           icon="◉"
-          name="Interactive widget pack"
-          hint={`countdown, progress, rating, notification, back-to-top · ${visibleInteractiveWidgetPresets.length}`}
+          name={catalogCopy.widgetSections.interactive.name}
+          hint={catalogCopy.widgetSections.interactive.hint(visibleInteractiveWidgetPresets.length)}
           presets={visibleInteractiveWidgetPresets}
           isOpen={categoryOpen['interactive-widgets'] ?? true}
           dataAttribute="data-builder-interactive-widget-preset"
@@ -878,8 +935,8 @@ export default function SandboxCatalogPanel({
         <SandboxCatalogWidgetSection
           categoryId="navigation-widgets"
           icon="≡"
-          name="Navigation widget pack"
-          hint={`menu, dropdown, mega, anchor, breadcrumbs · ${visibleNavigationWidgetPresets.length}`}
+          name={catalogCopy.widgetSections.navigation.name}
+          hint={catalogCopy.widgetSections.navigation.hint(visibleNavigationWidgetPresets.length)}
           presets={visibleNavigationWidgetPresets}
           isOpen={categoryOpen['navigation-widgets'] ?? true}
           dataAttribute="data-builder-navigation-widget-preset"
@@ -890,8 +947,8 @@ export default function SandboxCatalogPanel({
         <SandboxCatalogWidgetSection
           categoryId="social-widgets"
           icon="@"
-          name="Social widget pack"
-          hint={`social-bar, share, embed, floating chat · ${visibleSocialWidgetPresets.length}`}
+          name={catalogCopy.widgetSections.social.name}
+          hint={catalogCopy.widgetSections.social.hint(visibleSocialWidgetPresets.length)}
           presets={visibleSocialWidgetPresets}
           isOpen={categoryOpen['social-widgets'] ?? true}
           dataAttribute="data-builder-social-widget-preset"
@@ -902,8 +959,8 @@ export default function SandboxCatalogPanel({
         <SandboxCatalogWidgetSection
           categoryId="location-widgets"
           icon="📍"
-          name="Maps & Location pack"
-          hint={`address, hours, multi-map · ${visibleLocationWidgetPresets.length}`}
+          name={catalogCopy.widgetSections.location.name}
+          hint={catalogCopy.widgetSections.location.hint(visibleLocationWidgetPresets.length)}
           presets={visibleLocationWidgetPresets}
           isOpen={categoryOpen['location-widgets'] ?? true}
           dataAttribute="data-builder-location-widget-preset"
@@ -914,8 +971,8 @@ export default function SandboxCatalogPanel({
         <SandboxCatalogWidgetSection
           categoryId="decorative-widgets"
           icon="◆"
-          name="Decorative widget pack"
-          hint={`shape, pattern, parallax, frame, sticker, designer accents · ${visibleDecorativeWidgetPresets.length}`}
+          name={catalogCopy.widgetSections.decorative.name}
+          hint={catalogCopy.widgetSections.decorative.hint(visibleDecorativeWidgetPresets.length)}
           presets={visibleDecorativeWidgetPresets}
           isOpen={categoryOpen['decorative-widgets'] ?? true}
           dataAttribute="data-builder-decorative-widget-preset"
@@ -926,8 +983,8 @@ export default function SandboxCatalogPanel({
         <SandboxCatalogWidgetSection
           categoryId="designer-widgets"
           icon="✦"
-          name="Designer blocks pack"
-          hint={`counter, testimonial, service, profile, pricing, timeline · ${visibleDesignerWidgetPresets.length}`}
+          name={catalogCopy.widgetSections.designer.name}
+          hint={catalogCopy.widgetSections.designer.hint(visibleDesignerWidgetPresets.length)}
           presets={visibleDesignerWidgetPresets}
           isOpen={categoryOpen['designer-widgets'] ?? true}
           dataAttribute="data-builder-designer-widget-preset"
@@ -943,6 +1000,7 @@ export default function SandboxCatalogPanel({
               className={`${styles.catalogCategoryButton} ${
                 (categoryOpen['built-in-sections'] ?? true) ? styles.catalogCategoryButtonOpen : ''
               }`}
+              data-add-category="built-in-sections"
               onClick={() => {
                 setCategoryOpen((current) => ({
                   ...current,
@@ -953,9 +1011,9 @@ export default function SandboxCatalogPanel({
               <span className={styles.catalogCategoryMeta}>
                 <span className={styles.catalogCategoryIcon}>▤</span>
                 <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Section templates</span>
+                  <span className={styles.catalogCategoryName}>{catalogCopy.sectionTemplatesName}</span>
                   <span className={styles.catalogCategoryHint}>
-                    전문 디자인팩 · {visibleBuiltInSectionTemplates.length}
+                    {catalogCopy.sectionTemplatesHint(visibleBuiltInSectionTemplates.length)}
                   </span>
                 </span>
               </span>
@@ -966,6 +1024,7 @@ export default function SandboxCatalogPanel({
 
             {(categoryOpen['built-in-sections'] ?? true) ? (
               <BuiltInSectionsPanel
+                locale={effectiveLocale}
                 query={normalizedQuery}
                 onInsert={handleInsertBuiltInSection}
               />
@@ -981,6 +1040,7 @@ export default function SandboxCatalogPanel({
               className={`${styles.catalogCategoryButton} ${
                 (categoryOpen['saved-sections'] ?? true) ? styles.catalogCategoryButtonOpen : ''
               }`}
+              data-add-category="saved-sections"
               onClick={() => {
                 setCategoryOpen((current) => ({
                   ...current,
@@ -991,9 +1051,9 @@ export default function SandboxCatalogPanel({
               <span className={styles.catalogCategoryMeta}>
                 <span className={styles.catalogCategoryIcon}>★</span>
                 <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Saved sections</span>
+                  <span className={styles.catalogCategoryName}>{catalogCopy.savedSectionsName}</span>
                   <span className={styles.catalogCategoryHint}>
-                    내가 저장한 섹션 라이브러리
+                    {catalogCopy.savedSectionsHint}
                   </span>
                 </span>
               </span>
@@ -1010,11 +1070,13 @@ export default function SandboxCatalogPanel({
 
         {groupedCategories.map(({ category, components: categoryComponents }) => {
           const isOpen = categoryOpen[category] ?? true;
+          const categoryCopy = getCatalogCategoryCopy(category, effectiveLocale);
           return (
             <div key={category} className={styles.catalogCategorySection}>
               <button
                 type="button"
                 className={`${styles.catalogCategoryButton} ${isOpen ? styles.catalogCategoryButtonOpen : ''}`}
+                data-add-category={category}
                 onClick={() => {
                   setCategoryOpen((current) => ({
                     ...current,
@@ -1025,9 +1087,9 @@ export default function SandboxCatalogPanel({
                 <span className={styles.catalogCategoryMeta}>
                   <span className={styles.catalogCategoryIcon}>{CATEGORY_ICONS[category]}</span>
                   <span className={styles.catalogCategoryTitle}>
-                    <span className={styles.catalogCategoryName}>{CATEGORY_LABELS[category]}</span>
+                    <span className={styles.catalogCategoryName}>{categoryCopy.label}</span>
                     <span className={styles.catalogCategoryHint}>
-                      {CATEGORY_SUBLABELS[category]} · {categoryComponents.length}
+                      {categoryCopy.sublabel} · {categoryComponents.length}
                     </span>
                   </span>
                 </span>
@@ -1038,34 +1100,37 @@ export default function SandboxCatalogPanel({
 
               {isOpen ? (
                 <div className={styles.catalogSectionGrid}>
-                  {categoryComponents.map((component) => (
-                    <div key={component.kind} className={styles.catalogCard} data-builder-add-card={component.kind}>
-                      <button
-                        type="button"
-                        className={styles.catalogDragButton}
-                        data-builder-add-card-kind={component.kind}
-                        title={`${component.displayName} — 캔버스로 드래그하여 추가`}
-                        draggable
-                        onDragStart={(event) => {
-                          event.dataTransfer.setData('application/x-builder-node-kind', component.kind);
-                          event.dataTransfer.effectAllowed = 'copy';
-                        }}
-                      >
-                        <span className={styles.catalogCardIcon}>{component.icon}</span>
-                        <span className={styles.catalogCardName}>{component.displayName}</span>
-                        <span className={styles.catalogCardMeta}>{component.kind} · drag to canvas</span>
-                      </button>
+                  {categoryComponents.map((component) => {
+                    const displayName = getComponentCatalogDisplayName(component, effectiveLocale);
+                    return (
+                      <div key={component.kind} className={styles.catalogCard} data-builder-add-card={component.kind}>
+                        <button
+                          type="button"
+                          className={styles.catalogDragButton}
+                          data-builder-add-card-kind={component.kind}
+                          title={catalogCopy.dragTitle(displayName)}
+                          draggable
+                          onDragStart={(event) => {
+                            event.dataTransfer.setData(BUILDER_NODE_KIND_DRAG_MIME, component.kind);
+                            event.dataTransfer.effectAllowed = 'copy';
+                          }}
+                        >
+                          <span className={styles.catalogCardIcon}>{component.icon}</span>
+                          <span className={styles.catalogCardName}>{displayName}</span>
+                          <span className={styles.catalogCardMeta}>{catalogCopy.dragMeta(component.kind)}</span>
+                        </button>
 
-                      <button
-                        type="button"
-                        className={styles.catalogQuickAddButton}
-                        title={`${component.displayName} 캔버스 중앙에 추가`}
-                        onClick={() => handleQuickAdd(component.kind as BuilderCanvasNodeKind)}
-                      >
-                        Quick add
-                      </button>
-                    </div>
-                  ))}
+                        <button
+                          type="button"
+                          className={styles.catalogQuickAddButton}
+                          title={catalogCopy.quickAddTitle(displayName)}
+                          onClick={() => handleQuickAdd(component.kind as BuilderCanvasNodeKind)}
+                        >
+                          {catalogCopy.quickAdd}
+                        </button>
+                      </div>
+                    );
+                  })}
                 </div>
               ) : null}
             </div>
@@ -1074,8 +1139,8 @@ export default function SandboxCatalogPanel({
 
         {normalizedQuery && visibleCatalogCount === 0 ? (
           <div className={styles.catalogEmptyState}>
-            <strong>No matching elements</strong>
-            <span>Try text, image, button, form, section.</span>
+            <strong>{catalogCopy.emptyTitle}</strong>
+            <span>{catalogCopy.emptyHint}</span>
           </div>
         ) : null}
       </div>

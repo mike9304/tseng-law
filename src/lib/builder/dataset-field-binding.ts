@@ -14,6 +14,7 @@ import type {
 import {
   createDefaultBuilderPageDatasets,
   getBuilderBindableTarget,
+  resolveAttorneyProfileDatasetItems,
   resolveInsightsDatasetPosts,
   resolveServicesDatasetItems,
 } from '@/lib/builder/datasets';
@@ -21,6 +22,7 @@ import { sanitizeLinkValue } from '@/lib/builder/links';
 import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import type {
   BuilderDatasetTargetId,
+  BuilderAttorneyProfileItem,
   BuilderPageDocument,
   BuilderServiceItem,
 } from '@/lib/builder/types';
@@ -30,12 +32,24 @@ export interface BuilderDatasetFieldBindingContext {
   posts: ColumnPost[];
   document?: Pick<BuilderPageDocument, 'pageKey' | 'datasets'>;
   serviceItems?: BuilderServiceItem[];
+  attorneyItems?: BuilderAttorneyProfileItem[];
+  runtimeRecordsByTarget?: Partial<Record<BuilderDatasetTargetId, readonly BuilderDatasetRuntimeRecord[]>>;
   recordIndexOverride?: number;
 }
 
+export interface BuilderDatasetRuntimeRecord {
+  recordId: string;
+  primaryLabel: string;
+  secondaryLabel: string;
+  routePath: string;
+  fieldValues: Record<string, string>;
+}
+
 type ResolvedBuilderDatasetRecord =
+  | { targetId: 'runtime'; record: BuilderDatasetRuntimeRecord }
   | { targetId: 'home.insights.feed'; record: ColumnPost }
-  | { targetId: 'home.services.list'; record: BuilderServiceItem };
+  | { targetId: 'home.services.list'; record: BuilderServiceItem }
+  | { targetId: 'home.attorney.profile'; record: BuilderAttorneyProfileItem };
 
 export function applyBuilderDatasetBindingToNode(
   node: BuilderCanvasNode,
@@ -76,10 +90,14 @@ export function resolveBuilderDatasetFieldValue({
   if (!resolved) return null;
 
   switch (resolved.targetId) {
+    case 'runtime':
+      return readRuntimeRecordField(resolved.record, fieldId);
     case 'home.insights.feed':
       return readColumnField(resolved.record, fieldId, context.locale);
     case 'home.services.list':
       return readServiceField(resolved.record, fieldId);
+    case 'home.attorney.profile':
+      return readAttorneyField(resolved.record, fieldId);
     default:
       return assertNever(resolved);
   }
@@ -326,6 +344,13 @@ function resolveBuilderDatasetRecords(
   recordIndex: number
 ): ResolvedBuilderDatasetRecord[] {
   const index = normalizeRecordIndex(recordIndex);
+  const runtimeRecords = context.runtimeRecordsByTarget?.[targetId];
+  if (runtimeRecords) {
+    return runtimeRecords
+      .slice(index)
+      .map((record) => ({ targetId: 'runtime', record }));
+  }
+
   const document = getDocumentForTarget(context, targetId);
 
   switch (targetId) {
@@ -342,6 +367,14 @@ function resolveBuilderDatasetRecords(
       )
         .slice(index)
         .map((record) => ({ targetId, record }));
+    case 'home.attorney.profile':
+      return resolveAttorneyProfileDatasetItems(
+        document,
+        context.locale,
+        context.attorneyItems
+      )
+        .slice(index)
+        .map((record) => ({ targetId, record }));
     default:
       return assertNever(targetId);
   }
@@ -353,6 +386,11 @@ function resolveBuilderDatasetRecord(
   recordIndex: number
 ): ResolvedBuilderDatasetRecord | null {
   const index = normalizeRecordIndex(recordIndex);
+  const runtimeRecord = context.runtimeRecordsByTarget?.[targetId]?.[index];
+  if (runtimeRecord) {
+    return { targetId: 'runtime', record: runtimeRecord };
+  }
+
   const document = getDocumentForTarget(context, targetId);
 
   switch (targetId) {
@@ -366,6 +404,14 @@ function resolveBuilderDatasetRecord(
         context.locale,
         context.posts,
         context.serviceItems
+      )[index];
+      return record ? { targetId, record } : null;
+    }
+    case 'home.attorney.profile': {
+      const record = resolveAttorneyProfileDatasetItems(
+        document,
+        context.locale,
+        context.attorneyItems
       )[index];
       return record ? { targetId, record } : null;
     }
@@ -428,10 +474,14 @@ function readResolvedRecordField(
   locale: Locale
 ): string | null {
   switch (resolved.targetId) {
+    case 'runtime':
+      return readRuntimeRecordField(resolved.record, fieldId);
     case 'home.insights.feed':
       return readColumnField(resolved.record, fieldId, locale);
     case 'home.services.list':
       return readServiceField(resolved.record, fieldId);
+    case 'home.attorney.profile':
+      return readAttorneyField(resolved.record, fieldId);
     default:
       return assertNever(resolved);
   }
@@ -452,6 +502,15 @@ function normalizeImageFieldValue(value: string | null): string | null {
 }
 
 function readGalleryRecordTags(resolved: ResolvedBuilderDatasetRecord): string[] | undefined {
+  if (resolved.targetId === 'runtime') {
+    return [
+      resolved.record.fieldValues.category,
+      resolved.record.fieldValues.categoryLabel,
+    ]
+      .map((tag) => tag?.trim() ?? '')
+      .filter(Boolean)
+      .slice(0, 8);
+  }
   if (resolved.targetId !== 'home.insights.feed') return undefined;
   return [resolved.record.category, resolved.record.categoryLabel]
     .map((tag) => tag.trim())
@@ -474,6 +533,63 @@ function readServiceField(item: BuilderServiceItem, fieldId: string): string | n
       return item.details?.join('\n') ?? '';
     default:
       return null;
+  }
+}
+
+function readAttorneyField(item: BuilderAttorneyProfileItem, fieldId: string): string | null {
+  switch (fieldId) {
+    case 'slug':
+      return item.slug;
+    case 'name':
+    case 'label':
+      return item.name;
+    case 'role':
+      return item.role;
+    case 'title':
+      return item.title;
+    case 'description':
+      return item.description;
+    case 'summary':
+      return item.summary.join('\n');
+    case 'email':
+      return item.email;
+    case 'image':
+    case 'src':
+      return item.image;
+    case 'imageAltText':
+    case 'imageAlt':
+    case 'alt':
+      return item.imageAltText;
+    case 'imageFocalX':
+    case 'focalX':
+      return String(item.imageFocalPoint.x);
+    case 'imageFocalY':
+    case 'focalY':
+      return String(item.imageFocalPoint.y);
+    case 'href':
+    case 'url':
+      return item.href;
+    default:
+      return null;
+  }
+}
+
+function readRuntimeRecordField(record: BuilderDatasetRuntimeRecord, fieldId: string): string | null {
+  switch (fieldId) {
+    case 'recordId':
+      return record.recordId;
+    case 'title':
+    case 'name':
+    case 'label':
+      return record.fieldValues[fieldId] || record.primaryLabel;
+    case 'description':
+    case 'summary':
+      return record.fieldValues[fieldId] || record.secondaryLabel;
+    case 'href':
+    case 'url':
+      return record.fieldValues[fieldId] || record.routePath;
+    default:
+      return record.fieldValues[fieldId] ?? null;
   }
 }
 

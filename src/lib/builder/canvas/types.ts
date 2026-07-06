@@ -80,6 +80,7 @@ export const builderCanvasNodeKinds = [
   'gallery',
   'map',
   'customEmbed',
+  'codeBlock',
   'columnCard',
   'columnList',
   'attorneyCard',
@@ -125,6 +126,11 @@ export const builderCanvasNodeKinds = [
   'service-feature-card',
   // Phase 25 — Public surfaces
   'site-search',
+  // Native Members widgets
+  'member-login',
+  'member-account-summary',
+  'member-profile-form',
+  'member-bookings-list',
 ] as const;
 
 /**
@@ -148,6 +154,7 @@ export function isTextShapedKind(kind: string): boolean {
     kind === 'text'
     || kind === 'heading'
     || kind === 'button'
+    || kind === 'codeBlock'
     || kind === 'notification-bar'
     || kind === 'address-block'
     || kind === 'business-hours'
@@ -172,6 +179,8 @@ export const compositeComponentKeys = [
   'legacy-page-faq',
   'legacy-page-pricing',
   'legacy-page-reviews',
+  'legacy-page-columns',
+  'legacy-page-videos',
   'legacy-page-privacy',
   'legacy-page-disclaimer',
 ] as const;
@@ -471,7 +480,7 @@ const textCanvasNodeSchema = baseCanvasNodeSchema.extend({
   content: z.object({
     text: z.string().max(1000),
     richText: textRichTextSchema,
-    fontSize: z.number().int().min(12).max(160),
+    fontSize: z.number().min(12).max(160),
     color: builderColorValueSchema,
     fontWeight: z.enum(['regular', 'medium', 'bold']),
     // Optional numeric weight (100~900). When present it takes precedence
@@ -512,7 +521,7 @@ const textCanvasNodeSchema = baseCanvasNodeSchema.extend({
     }).optional(),
     link: linkValueSchema.nullish(),
     className: z.string().max(256).optional(),
-    as: z.enum(['div', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'time', 'input']).optional(),
+    as: z.enum(['div', 'span', 'p', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'time', 'input']).optional(),
     inputType: z.enum(['text', 'search', 'email', 'url', 'tel']).optional(),
     name: z.string().max(120).optional(),
     placeholder: z.string().max(300).optional(),
@@ -534,6 +543,8 @@ const imageCanvasNodeSchema = baseCanvasNodeSchema.extend({
   content: z.object({
     src: z.string().max(2000),
     alt: z.string().max(300),
+    srcByLocale: z.partialRecord(sandboxLocaleSchema, z.string().max(2000)).optional(),
+    altByLocale: z.partialRecord(sandboxLocaleSchema, z.string().max(300)).optional(),
     fit: z.enum(['cover', 'contain']),
     cropAspect: z.string().max(20).optional(),
     clickAction: z.enum(['none', 'link', 'lightbox', 'popup']).default('none').optional(),
@@ -560,7 +571,22 @@ const imageCanvasNodeSchema = baseCanvasNodeSchema.extend({
     svg: z
       .object({
         enabled: z.boolean().default(true),
-        name: z.enum(['scales', 'shield', 'building', 'spark']).default('scales'),
+        name: z.enum([
+          'scales',
+          'shield',
+          'building',
+          'spark',
+          'service-0',
+          'service-1',
+          'service-2',
+          'service-3',
+          'service-4',
+          'service-5',
+          'pricing-consultation',
+          'pricing-litigation',
+          'pricing-company',
+          'pricing-retainer',
+        ]).default('scales'),
         color: builderColorValueSchema,
       })
       .optional(),
@@ -615,7 +641,7 @@ const headingCanvasNodeSchema = baseCanvasNodeSchema.extend({
     color: builderColorValueSchema,
     align: z.enum(['left', 'center', 'right']),
     fontFamily: z.string().max(120).optional(),
-    fontSize: z.number().int().min(12).max(160).optional(),
+    fontSize: z.number().min(12).max(160).optional(),
     fontWeight: z.enum(['regular', 'medium', 'bold']).optional(),
     fontWeightNumeric: z
       .number()
@@ -683,7 +709,7 @@ const containerCanvasNodeSchema = baseCanvasNodeSchema.extend({
     sticky: z.boolean().default(false).optional(),
     anchorTarget: z.string().max(120).optional(),
     className: z.string().max(256).optional(),
-    as: z.enum(['div', 'section', 'article', 'aside', 'header', 'footer', 'main', 'nav', 'form']).optional(),
+    as: z.enum(['div', 'section', 'article', 'aside', 'header', 'footer', 'main', 'nav', 'form', 'h2', 'h3', 'h4', 'ul']).optional(),
     htmlId: z.string().max(120).optional(),
     dataTone: z.string().max(32).optional(),
     sectionTemplateId: z.enum(['services', 'insights', 'faq', 'offices']).optional(),
@@ -1210,6 +1236,18 @@ const customEmbedCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+const codeBlockCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('codeBlock'),
+  content: z.object({
+    title: z.string().max(120).default(''),
+    language: z.enum(['ts', 'js', 'tsx', 'jsx', 'json', 'html', 'css', 'bash', 'text']).default('ts'),
+    code: z.string().max(20000).default(''),
+    runMode: z.enum(['inline', 'function']).default('inline'),
+    functionSlug: z.string().max(80).default(''),
+    showLineNumbers: z.boolean().default(true),
+  }),
+});
+
 const columnCardCanvasNodeSchema = baseCanvasNodeSchema.extend({
   kind: z.literal('columnCard'),
   content: z.object({
@@ -1316,7 +1354,7 @@ const bookingWidgetCanvasNodeSchema = baseCanvasNodeSchema.extend({
   content: z.object({
     eyebrow: z.string().max(120).default(''),
     title: z.string().max(200).default(''),
-    locale: sandboxLocaleSchema.default('ko'),
+    locale: sandboxLocaleSchema.optional(),
     serviceId: z.string().max(120).default(''),
     staffId: z.string().max(120).default(''),
     successMessage: z.string().max(500).default('예약이 완료되었습니다'),
@@ -1751,14 +1789,75 @@ const serviceFeatureCardCanvasNodeSchema = baseCanvasNodeSchema.extend({
 const siteSearchCanvasNodeSchema = baseCanvasNodeSchema.extend({
   kind: z.literal('site-search'),
   content: z.object({
-    placeholder: z.string().max(120).default('검색...'),
-    submitLabel: z.string().max(40).default('Search'),
+    placeholder: z.string().max(120).default('어떻게 도와드릴까요?'),
+    submitLabel: z.string().max(40).default('검색'),
     showResultsInline: z.boolean().default(true),
     /** Filter results by kind. Empty = all. */
     kinds: z.array(z.enum(['page', 'blog', 'faq', 'portfolio'])).max(4).default([]),
     /** Locale override; when empty, uses the page locale. */
     locale: z.string().max(20).default(''),
     maxResults: z.number().int().min(1).max(20).default(8),
+  }),
+});
+
+const memberLoginCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('member-login'),
+  content: z.object({
+    title: z.string().max(120).default('회원 로그인'),
+    subtitle: z.string().max(240).default('로그인하거나 계정을 만들어 회원 전용 콘텐츠로 이동합니다.'),
+    defaultMode: z.enum(['login', 'signup']).default('login'),
+    showSignup: z.boolean().default(true),
+    nextPath: z.string().max(500).default(''),
+    loginLabel: z.string().max(60).default('로그인'),
+    signupLabel: z.string().max(60).default('회원가입'),
+  }),
+});
+
+const memberAccountSummaryCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('member-account-summary'),
+  content: z.object({
+    title: z.string().max(120).default('내 계정'),
+    subtitle: z.string().max(240).default('회원 정보와 전용 페이지를 한 곳에서 확인합니다.'),
+    profileLabel: z.string().max(60).default('프로필'),
+    bookingsLabel: z.string().max(60).default('예약'),
+    premiumLabel: z.string().max(60).default('프리미엄'),
+    loginLabel: z.string().max(60).default('로그인'),
+    profileHref: z.string().max(500).default(''),
+    bookingsHref: z.string().max(500).default(''),
+    premiumHref: z.string().max(500).default(''),
+    loginHref: z.string().max(500).default(''),
+    showBookings: z.boolean().default(true),
+    showPremium: z.boolean().default(true),
+  }),
+});
+
+const memberProfileFormCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('member-profile-form'),
+  content: z.object({
+    title: z.string().max(120).default('회원 프로필'),
+    subtitle: z.string().max(240).default('회원 이름과 연락처를 직접 수정합니다.'),
+    nameLabel: z.string().max(60).default('이름'),
+    phoneLabel: z.string().max(60).default('전화번호'),
+    saveLabel: z.string().max(60).default('프로필 저장'),
+    savingLabel: z.string().max(60).default('저장 중...'),
+    savedLabel: z.string().max(80).default('저장되었습니다.'),
+    loginLabel: z.string().max(60).default('로그인'),
+    loginHref: z.string().max(500).default(''),
+  }),
+});
+
+const memberBookingsListCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('member-bookings-list'),
+  content: z.object({
+    title: z.string().max(120).default('내 예약'),
+    subtitle: z.string().max(240).default('회원 이메일과 일치하는 상담 예약을 보여줍니다.'),
+    upcomingLabel: z.string().max(80).default('다가오는 예약'),
+    pastLabel: z.string().max(80).default('지난 예약'),
+    emptyUpcomingLabel: z.string().max(120).default('예정된 예약이 없습니다.'),
+    emptyPastLabel: z.string().max(120).default('지난 예약 내역이 없습니다.'),
+    loginLabel: z.string().max(60).default('로그인'),
+    loginHref: z.string().max(500).default(''),
+    showPast: z.boolean().default(true),
   }),
 });
 
@@ -1803,6 +1902,7 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   galleryCanvasNodeSchema,
   mapCanvasNodeSchema,
   customEmbedCanvasNodeSchema,
+  codeBlockCanvasNodeSchema,
   columnCardCanvasNodeSchema,
   columnListCanvasNodeSchema,
   attorneyCardCanvasNodeSchema,
@@ -1841,6 +1941,10 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   teamMemberCardCanvasNodeSchema,
   serviceFeatureCardCanvasNodeSchema,
   siteSearchCanvasNodeSchema,
+  memberLoginCanvasNodeSchema,
+  memberAccountSummaryCanvasNodeSchema,
+  memberProfileFormCanvasNodeSchema,
+  memberBookingsListCanvasNodeSchema,
 ]);
 
 export type BuilderTextCanvasNode = z.infer<typeof textCanvasNodeSchema>;
@@ -1883,6 +1987,7 @@ export type BuilderProductGalleryCanvasNode = z.infer<typeof productGalleryCanva
 export type BuilderGalleryCanvasNode = z.infer<typeof galleryCanvasNodeSchema>;
 export type BuilderMapCanvasNode = z.infer<typeof mapCanvasNodeSchema>;
 export type BuilderCustomEmbedCanvasNode = z.infer<typeof customEmbedCanvasNodeSchema>;
+export type BuilderCodeBlockCanvasNode = z.infer<typeof codeBlockCanvasNodeSchema>;
 export type BuilderColumnCardCanvasNode = z.infer<typeof columnCardCanvasNodeSchema>;
 export type BuilderColumnListCanvasNode = z.infer<typeof columnListCanvasNodeSchema>;
 export type BuilderAttorneyCardCanvasNode = z.infer<typeof attorneyCardCanvasNodeSchema>;
@@ -1921,6 +2026,10 @@ export type BuilderTimelineCanvasNode = z.infer<typeof timelineCanvasNodeSchema>
 export type BuilderTeamMemberCardCanvasNode = z.infer<typeof teamMemberCardCanvasNodeSchema>;
 export type BuilderServiceFeatureCardCanvasNode = z.infer<typeof serviceFeatureCardCanvasNodeSchema>;
 export type BuilderSiteSearchCanvasNode = z.infer<typeof siteSearchCanvasNodeSchema>;
+export type BuilderMemberLoginCanvasNode = z.infer<typeof memberLoginCanvasNodeSchema>;
+export type BuilderMemberAccountSummaryCanvasNode = z.infer<typeof memberAccountSummaryCanvasNodeSchema>;
+export type BuilderMemberProfileFormCanvasNode = z.infer<typeof memberProfileFormCanvasNodeSchema>;
+export type BuilderMemberBookingsListCanvasNode = z.infer<typeof memberBookingsListCanvasNodeSchema>;
 export type BuilderCanvasNode = z.infer<typeof builderCanvasNodeSchema>;
 
 export const builderCanvasDocumentSchema = z.object({
@@ -1999,11 +2108,11 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
           text: locale === 'ko'
             ? '텍스트, 이미지, 버튼을 직접 배치하고 드래그/리사이즈 동작을 검증하는 Phase 1 sandbox 입니다.'
             : 'Phase 1 sandbox for direct placement, drag, and resize of text, image, and button nodes.',
-          fontSize: 17,
+          fontSize: 17.28,
           color: '#475569',
           fontWeight: 'regular',
           align: 'left',
-          lineHeight: 1.25,
+          lineHeight: 1.82,
           letterSpacing: 0,
           fontFamily: 'system-ui',
         },
@@ -2116,40 +2225,221 @@ function localizeLocalePrefixedHrefs(value: unknown, locale: Locale): unknown {
   return changed ? next : value;
 }
 
-function normalizeCanvasNode(node: BuilderCanvasNode, index: number, locale: Locale): BuilderCanvasNode {
+const INLINE_SERVICE_ICON_PLACEHOLDER_SRC = '/images/placeholder-image.svg';
+const LEGACY_SERVICE_ICON_ID_PATTERN = /^home-services-card-([0-5])-icon-svg$/;
+const LEGACY_SERVICE_ICON_SRC_PATTERN = /^\/images\/home-services\/icon-([0-5])\.svg$/;
+const SERVICE_ICON_SVG_NAME_BY_INDEX = {
+  '0': 'service-0',
+  '1': 'service-1',
+  '2': 'service-2',
+  '3': 'service-3',
+  '4': 'service-4',
+  '5': 'service-5',
+} satisfies Record<string, NonNullable<BuilderImageCanvasNode['content']['svg']>['name']>;
+
+type ServiceIconIndex = keyof typeof SERVICE_ICON_SVG_NAME_BY_INDEX;
+
+function isServiceIconIndex(value: string | undefined): value is ServiceIconIndex {
+  return typeof value === 'string'
+    && Object.prototype.hasOwnProperty.call(SERVICE_ICON_SVG_NAME_BY_INDEX, value);
+}
+
+function getLegacyServiceIconSvgName(
+  nodeId: string,
+  src: string,
+): NonNullable<BuilderImageCanvasNode['content']['svg']>['name'] | null {
+  const idIndex = LEGACY_SERVICE_ICON_ID_PATTERN.exec(nodeId)?.[1];
+  const srcIndex = LEGACY_SERVICE_ICON_SRC_PATTERN.exec(src)?.[1];
+  if (!isServiceIconIndex(idIndex) || idIndex !== srcIndex) return null;
+  return SERVICE_ICON_SVG_NAME_BY_INDEX[idIndex];
+}
+
+function normalizeLegacyServiceIconNode(node: BuilderCanvasNode): BuilderCanvasNode {
+  if (node.kind !== 'image' || node.content.svg) return node;
+  const svgName = getLegacyServiceIconSvgName(node.id, node.content.src);
+  if (!svgName) return node;
+
   return {
+    ...node,
+    content: {
+      ...node.content,
+      src: INLINE_SERVICE_ICON_PLACEHOLDER_SRC,
+      svg: {
+        enabled: true,
+        name: svgName,
+        color: 'currentColor',
+      },
+    },
+  };
+}
+
+function normalizeCanvasNode(node: BuilderCanvasNode, index: number, locale: Locale): BuilderCanvasNode {
+  const normalizedNode = {
     ...node,
     parentId: node.parentId,
     zIndex: index,
     rotation: Math.max(0, Math.min(360, Math.round(node.rotation))),
     rect: {
-      x: Math.max(0, Math.round(node.rect.x)),
-      y: Math.max(0, Math.round(node.rect.y)),
+      x: Math.round(node.rect.x),
+      y: Math.round(node.rect.y),
       width: Math.max(40, Math.round(node.rect.width)),
       height: Math.max(32, Math.round(node.rect.height)),
     },
     content: localizeLocalePrefixedHrefs(node.content, locale),
   } as BuilderCanvasNode;
+  return normalizeLegacyServiceIconNode(normalizedNode);
 }
 
-export function normalizeCanvasDocument(
+function isObjectRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function sanitizeResponsiveDimension(value: unknown): unknown {
+  return typeof value === 'number' && (!Number.isFinite(value) || value <= 0) ? 1 : value;
+}
+
+function sanitizeResponsiveOverrideRect(override: unknown): unknown {
+  if (!isObjectRecord(override) || !isObjectRecord(override.rect)) return override;
+  const nextRect = {
+    ...override.rect,
+    width: sanitizeResponsiveDimension(override.rect.width),
+    height: sanitizeResponsiveDimension(override.rect.height),
+  };
+  if (nextRect.width === override.rect.width && nextRect.height === override.rect.height) {
+    return override;
+  }
+  return {
+    ...override,
+    rect: nextRect,
+  };
+}
+
+function sanitizeResponsiveConfigValue(responsive: unknown): unknown {
+  if (!isObjectRecord(responsive)) return responsive;
+  const tablet = sanitizeResponsiveOverrideRect(responsive.tablet);
+  const mobile = sanitizeResponsiveOverrideRect(responsive.mobile);
+  if (tablet === responsive.tablet && mobile === responsive.mobile) return responsive;
+  return {
+    ...responsive,
+    tablet,
+    mobile,
+  };
+}
+
+function sanitizeDocumentUpdatedBy(value: unknown): unknown {
+  if (typeof value !== 'string') return value;
+  const trimmed = value.trim();
+  return trimmed.length > 120 ? trimmed.slice(0, 120) : value;
+}
+
+function sanitizeCanvasDocumentInput(input: unknown): unknown {
+  if (!isObjectRecord(input) || !Array.isArray(input.nodes)) return input;
+  let changed = false;
+  const updatedBy = sanitizeDocumentUpdatedBy(input.updatedBy);
+  if (updatedBy !== input.updatedBy) changed = true;
+  const nodes = input.nodes.map((node) => {
+    if (!isObjectRecord(node)) return node;
+    const responsive = sanitizeResponsiveConfigValue(node.responsive);
+    if (responsive === node.responsive) return node;
+    changed = true;
+    return {
+      ...node,
+      responsive,
+    };
+  });
+  if (!changed) return input;
+  return {
+    ...input,
+    updatedBy,
+    nodes,
+  };
+}
+
+// Cascade-drop any node whose parentId no longer points at a kept node (so
+// dropping an invalid node also removes the subtree it orphaned).
+function dropOrphanCanvasNodes(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
+  let kept = nodes;
+  for (;;) {
+    const present = new Set(kept.map((node) => node.id));
+    const next = kept.filter((node) => !node.parentId || present.has(node.parentId));
+    if (next.length === kept.length) return next;
+    kept = next;
+  }
+}
+
+// R1: when the whole-document parse fails, salvage every schema-valid node and
+// drop ONLY the invalid ones (plus nodes orphaned by that drop), instead of
+// discarding the user's entire page for the sandbox template. Returns null only
+// when nothing salvageable remains, so the caller falls back safely. Never
+// alters valid nodes — invalid nodes are dropped, not coerced.
+function repairCanvasDocumentByNode(input: unknown, locale: Locale): BuilderCanvasDocument | null {
+  const sanitized = sanitizeCanvasDocumentInput(input);
+  if (!isObjectRecord(sanitized) || !Array.isArray(sanitized.nodes)) return null;
+  const validNodes: BuilderCanvasNode[] = [];
+  for (const node of sanitized.nodes) {
+    const parsedNode = builderCanvasNodeSchema.safeParse(node);
+    if (parsedNode.success) validNodes.push(parsedNode.data);
+  }
+  const keptNodes = dropOrphanCanvasNodes(validNodes);
+  if (keptNodes.length === 0) return null;
+  const fallback = createDefaultCanvasDocument(locale);
+  const candidate = {
+    version: 1 as const,
+    locale,
+    updatedAt: typeof sanitized.updatedAt === 'string' ? sanitized.updatedAt : fallback.updatedAt,
+    updatedBy:
+      typeof sanitized.updatedBy === 'string' && sanitized.updatedBy.trim()
+        ? sanitized.updatedBy
+        : fallback.updatedBy,
+    stageWidth: typeof sanitized.stageWidth === 'number' ? sanitized.stageWidth : fallback.stageWidth,
+    stageHeight:
+      typeof sanitized.stageHeight === 'number' ? sanitized.stageHeight : fallback.stageHeight,
+    nodes: keptNodes,
+  };
+  const reparsed = builderCanvasDocumentSchema.safeParse(candidate);
+  if (!reparsed.success) return null;
+  return {
+    ...reparsed.data,
+    locale,
+    nodes: [...reparsed.data.nodes]
+      .sort((left, right) => left.zIndex - right.zIndex)
+      .map((node, index) => normalizeCanvasNode(node, index, locale)),
+  };
+}
+
+/**
+ * Normalize for SAVE paths: returns null instead of the sandbox fallback when
+ * the input is unrepairable garbage. Persisting the fallback over an existing
+ * page is exactly the F15/R1 data-loss shape, so save routes must reject
+ * (null → 4xx) rather than write the placeholder document.
+ */
+export function normalizeCanvasDocumentForSave(
   input: unknown,
   locale: Locale,
-): BuilderCanvasDocument {
-  const fallback = createDefaultCanvasDocument(locale);
-  const parsed = builderCanvasDocumentSchema.safeParse(input);
+): BuilderCanvasDocument | null {
+  const parsed = builderCanvasDocumentSchema.safeParse(sanitizeCanvasDocumentInput(input));
   if (!parsed.success) {
     const issues = parsed.error.issues.slice(0, 3).map((i) => ({
       path: i.path.join('.'),
       code: i.code,
       message: i.message,
     }));
+    // R1: keep the user's valid nodes instead of nuking the whole page.
+    const repaired = repairCanvasDocumentByNode(input, locale);
+    if (repaired) {
+      // eslint-disable-next-line no-console
+      console.warn(
+        '[normalizeCanvasDocument] schema rejected — kept valid nodes via node-level repair (R1)',
+        { keptNodes: repaired.nodes.length, totalIssues: parsed.error.issues.length, sample: issues },
+      );
+      return repaired;
+    }
     // eslint-disable-next-line no-console
     console.warn(
-      '[normalizeCanvasDocument] schema rejected — falling back to sandbox template',
+      '[normalizeCanvasDocument] schema rejected and unrepairable',
       { totalIssues: parsed.error.issues.length, sample: issues },
     );
-    return fallback;
+    return null;
   }
 
   const nodes = [...parsed.data.nodes]
@@ -2161,4 +2451,16 @@ export function normalizeCanvasDocument(
     locale,
     nodes,
   };
+}
+
+export function normalizeCanvasDocument(
+  input: unknown,
+  locale: Locale,
+): BuilderCanvasDocument {
+  const normalized = normalizeCanvasDocumentForSave(input, locale);
+  if (normalized) return normalized;
+  // Read/render paths keep the sandbox fallback so the editor still loads.
+  // eslint-disable-next-line no-console
+  console.warn('[normalizeCanvasDocument] unrepairable input — falling back to sandbox template');
+  return createDefaultCanvasDocument(locale);
 }

@@ -9,6 +9,12 @@
  */
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
+import type { Locale } from '@/lib/locales';
+import { normalizeLocale } from '@/lib/locales';
+import {
+  type BuilderBlogApiErrorCode,
+  getBuilderBlogApiErrorPayload,
+} from '@/lib/builder/blog/blog-api-copy';
 import { columnLocaleSchema } from '@/lib/builder/columns/types';
 import { listAllBlogPosts, listBlogPosts } from '@/lib/builder/blog/column-adapter';
 import { filterPosts, sortPosts, type BlogPost } from '@/lib/builder/blog/blog-engine';
@@ -16,6 +22,18 @@ import { guardBuilderRead } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderBlogApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderBlogApiErrorPayload(locale, errorCode), ...extras },
+    { status },
+  );
+}
 
 const querySchema = z.object({
   locale: columnLocaleSchema,
@@ -31,6 +49,7 @@ const querySchema = z.object({
 });
 
 export async function GET(request: NextRequest) {
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   try {
     const sp = request.nextUrl.searchParams;
     const parsed = querySchema.parse({
@@ -79,14 +98,10 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     if (error instanceof ZodError) {
-      return NextResponse.json(
-        { ok: false, error: 'validation_error', issues: error.flatten() },
-        { status: 400 },
-      );
+      return errorResponse(errorLocale, 'validation_error', 400, { issues: error.flatten() });
     }
     // eslint-disable-next-line no-console
     console.error('[builder/blog/posts] GET failed:', error);
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    return errorResponse(errorLocale, 'blog_posts_load_failed', 500);
   }
 }

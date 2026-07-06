@@ -24,7 +24,6 @@
 import { readSiteDocument } from '@/lib/builder/site/persistence';
 import { publishAtomic, type AtomicPublishOutcome } from '@/lib/builder/publish-gate/atomic-publish-orchestrator';
 import { defaultLocale, type Locale } from '@/lib/locales';
-import type { BuilderDatasetCollectionId } from '@/lib/builder/types';
 import type { BuilderPageMeta } from '@/lib/builder/site/types';
 
 export interface PublishDynamicTemplateInput {
@@ -32,19 +31,19 @@ export interface PublishDynamicTemplateInput {
   pageIds: string[];
   locale?: Locale;
   /** Additional CMS collection ids the caller wants to include regardless of page references. */
-  extraCollectionIds?: BuilderDatasetCollectionId[];
+  extraCollectionIds?: string[];
 }
 
 export interface DynamicPageResolution {
   pageId: string;
   status: 'dynamic-list' | 'dynamic-item' | 'static' | 'missing';
-  collectionId?: BuilderDatasetCollectionId;
+  collectionId?: string;
 }
 
 export interface PublishDynamicTemplateOutcome {
   outcome: AtomicPublishOutcome;
   resolvedPages: DynamicPageResolution[];
-  referencedCollectionIds: BuilderDatasetCollectionId[];
+  referencedCollectionIds: string[];
 }
 
 /**
@@ -83,7 +82,7 @@ export async function publishDynamicTemplate(
   return {
     outcome,
     resolvedPages,
-    referencedCollectionIds: collectionIds as BuilderDatasetCollectionId[],
+    referencedCollectionIds: collectionIds,
   };
 }
 
@@ -95,7 +94,7 @@ export async function publishDynamicTemplate(
  */
 export function collectDynamicCollectionsForPages(
   pages: ReadonlyArray<BuilderPageMeta | undefined>,
-): BuilderDatasetCollectionId[] {
+): string[] {
   const resolutions = pages.map((page) => resolvePage(page?.pageId ?? '', page));
   return collectReferencedCollectionIds(resolutions, []);
 }
@@ -111,14 +110,14 @@ function resolvePage(
     return {
       pageId: page.pageId,
       status: 'dynamic-list',
-      collectionId: page.dynamicList.collectionId,
+      collectionId: page.dynamicList.cmsCollectionId || page.dynamicList.collectionId,
     };
   }
   if (page.dynamicItem) {
     return {
       pageId: page.pageId,
       status: 'dynamic-item',
-      collectionId: page.dynamicItem.collectionId,
+      collectionId: page.dynamicItem.cmsCollectionId || page.dynamicItem.collectionId,
     };
   }
   return { pageId: page.pageId, status: 'static' };
@@ -126,10 +125,10 @@ function resolvePage(
 
 function collectReferencedCollectionIds(
   resolved: DynamicPageResolution[],
-  extras: ReadonlyArray<BuilderDatasetCollectionId>,
-): BuilderDatasetCollectionId[] {
-  const seen = new Set<BuilderDatasetCollectionId>();
-  const collected: BuilderDatasetCollectionId[] = [];
+  extras: ReadonlyArray<string>,
+): string[] {
+  const seen = new Set<string>();
+  const collected: string[] = [];
   for (const entry of resolved) {
     if (!entry.collectionId) continue;
     if (seen.has(entry.collectionId)) continue;

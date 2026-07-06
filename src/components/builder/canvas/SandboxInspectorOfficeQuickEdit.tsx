@@ -13,9 +13,11 @@ import {
   telHrefFromPhone,
   type OfficeNodeGroup,
 } from '@/lib/builder/canvas/office-locations';
+import type { Locale } from '@/lib/locales';
 import { InspectorSection, LabeledRow, NumberStepper } from './InspectorControls';
 import nodeQuickStyles from './CanvasNodeQuickPanels.module.css';
 import styles from './SandboxPage.module.css';
+import { getSandboxInspectorOfficeQuickEditCopy } from './sandbox-inspector-office-quick-edit-copy';
 
 type UpdateNodeContent = (
   nodeId: string,
@@ -34,7 +36,7 @@ export default function SandboxInspectorOfficeQuickEdit({
   updateNodeContent,
 }: {
   officeQuickEdit: OfficeNodeGroup;
-  builderLocale: string;
+  builderLocale: Locale;
   disabled: boolean;
   updateNodeContent: UpdateNodeContent;
 }) {
@@ -45,11 +47,12 @@ export default function SandboxInspectorOfficeQuickEdit({
   const faxPrefix = labelPrefix(faxLabel, 'FAX');
   const generatedMapUrl = googleMapsSearchUrl(address);
   const officePresets = getOfficeLocationPresets(builderLocale);
+  const copy = getSandboxInspectorOfficeQuickEditCopy(builderLocale);
 
   return (
-    <InspectorSection label="Office sync" title="Wix-style location settings">
+    <InspectorSection label={copy.sectionLabel} title={copy.sectionTitle}>
       <div className={styles.inspectorField}>
-        <span className={styles.inspectorFieldLabel}>사무소 프리셋</span>
+        <span className={styles.inspectorFieldLabel}>{copy.presetsLabel}</span>
         <div className={nodeQuickStyles.nodeMapPresetGrid}>
           {officePresets.map((preset) => (
             <button
@@ -59,7 +62,7 @@ export default function SandboxInspectorOfficeQuickEdit({
                 address === preset.address ? nodeQuickStyles.nodeMapPresetButtonActive : ''
               }`}
               aria-pressed={address === preset.address}
-              aria-label={`${preset.title} office map preset`}
+              aria-label={copy.presetAriaLabel(preset.title)}
               disabled={disabled}
               onClick={() => {
                 updateNodeContent(officeQuickEdit.mapNode.id, {
@@ -94,11 +97,11 @@ export default function SandboxInspectorOfficeQuickEdit({
         </div>
       </div>
       <div className={styles.inspectorField}>
-        <span className={styles.inspectorFieldLabel}>사무소명</span>
+        <span className={styles.inspectorFieldLabel}>{copy.officeTitleLabel}</span>
         <input
           className={styles.inspectorInput}
           type="text"
-          aria-label="Office title synced value"
+          aria-label={copy.officeTitleAriaLabel}
           value={readNodeText(officeQuickEdit.titleNode)}
           disabled={disabled || !officeQuickEdit.titleNode}
           onChange={(event) => {
@@ -108,11 +111,11 @@ export default function SandboxInspectorOfficeQuickEdit({
         />
       </div>
       <div className={styles.inspectorField}>
-        <span className={styles.inspectorFieldLabel}>주소</span>
+        <span className={styles.inspectorFieldLabel}>{copy.addressLabel}</span>
         <textarea
           className={styles.inspectorTextarea}
           rows={2}
-          aria-label="Office address synced value"
+          aria-label={copy.addressAriaLabel}
           value={address}
           disabled={disabled}
           onChange={(event) => {
@@ -130,14 +133,14 @@ export default function SandboxInspectorOfficeQuickEdit({
         />
       </div>
       <div className={styles.inspectorFieldGrid}>
-        <LabeledRow label="Zoom">
+        <LabeledRow label={copy.zoomLabel}>
           <NumberStepper
             value={readMapZoom(officeQuickEdit.mapNode)}
             min={1}
             max={20}
             step={1}
             disabled={disabled}
-            ariaLabel="Office map zoom"
+            ariaLabel={copy.zoomAriaLabel}
             onChange={(nextValue) => {
               updateNodeContent(officeQuickEdit.mapNode.id, {
                 zoom: clampNumber(Math.round(nextValue), 1, 20),
@@ -145,11 +148,11 @@ export default function SandboxInspectorOfficeQuickEdit({
             }}
           />
         </LabeledRow>
-        <LabeledRow label="전화">
+        <LabeledRow label={copy.phoneLabel}>
           <input
             className={styles.inspectorInput}
             type="text"
-            aria-label="Office phone synced value"
+            aria-label={copy.phoneAriaLabel}
             value={labelValueAfterColon(phoneLabel)}
             disabled={disabled || !officeQuickEdit.phoneNode}
             onChange={(event) => {
@@ -165,11 +168,11 @@ export default function SandboxInspectorOfficeQuickEdit({
       </div>
       {officeQuickEdit.faxNode ? (
         <div className={styles.inspectorField}>
-          <span className={styles.inspectorFieldLabel}>팩스</span>
+          <span className={styles.inspectorFieldLabel}>{copy.faxLabel}</span>
           <input
             className={styles.inspectorInput}
             type="text"
-            aria-label="Office fax synced value"
+            aria-label={copy.faxAriaLabel}
             value={labelValueAfterColon(faxLabel)}
             disabled={disabled}
             onChange={(event) => {
@@ -183,12 +186,12 @@ export default function SandboxInspectorOfficeQuickEdit({
       ) : null}
       {officeQuickEdit.mapLinkNode ? (
         <div className={styles.inspectorField}>
-          <span className={styles.inspectorFieldLabel}>길찾기 URL</span>
+          <span className={styles.inspectorFieldLabel}>{copy.directionsUrlLabel}</span>
           <div style={{ display: 'flex', gap: 6 }}>
             <input
               className={styles.inspectorInput}
               type="url"
-              aria-label="Office map URL"
+              aria-label={copy.mapUrlAriaLabel}
               value={readButtonHref(officeQuickEdit.mapLinkNode)}
               disabled={disabled}
               onChange={(event) => {
@@ -205,7 +208,7 @@ export default function SandboxInspectorOfficeQuickEdit({
                 updateNodeContent(officeQuickEdit.mapLinkNode.id, { href: generatedMapUrl });
               }}
             >
-              주소로 생성
+              {copy.generateFromAddressLabel}
             </button>
           </div>
         </div>

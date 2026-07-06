@@ -19,8 +19,24 @@ import {
 import { BuilderPublishValidationError } from '@/lib/builder/validation';
 import { normalizeLocale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 
 export const runtime = 'nodejs';
+
+function errorResponse(
+  locale: ReturnType<typeof normalizeLocale>,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra: Record<string, unknown> = {},
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...extra },
+    { status },
+  );
+}
 
 export async function POST(
   request: NextRequest,
@@ -29,15 +45,15 @@ export async function POST(
   const auth = await guardMutation(request, { bucket: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+
   if (!isDefaultBuilderSiteId(params.siteId)) {
-    return NextResponse.json({ ok: false, error: 'Unknown builder site.' }, { status: 404 });
+    return errorResponse(locale, 'builder_site_not_found', 404);
   }
 
   if (!isBuilderPageKey(params.pageKey)) {
-    return NextResponse.json({ ok: false, error: 'Unknown builder page.' }, { status: 404 });
+    return errorResponse(locale, 'builder_page_not_found', 404);
   }
-
-  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   let body: unknown;
   try {
@@ -92,7 +108,7 @@ export async function POST(
         reason: 'draft_not_found',
       });
 
-      return NextResponse.json({ ok: false, error: 'No draft snapshot exists for this locale.' }, { status: 404 });
+      return errorResponse(locale, 'draft_not_found', 404);
     }
 
     const draftExpectation = expectedDraft ?? {
@@ -117,7 +133,7 @@ export async function POST(
         reason: 'draft_not_found',
       });
 
-      return NextResponse.json({ ok: false, error: 'No draft snapshot exists for this locale.' }, { status: 404 });
+      return errorResponse(locale, 'draft_not_found', 404);
     }
 
     const config = getBuilderPageConfig(params.pageKey);
@@ -143,14 +159,7 @@ export async function POST(
         blockerCount: error.issues.length,
       });
 
-      return NextResponse.json(
-        {
-          ok: false,
-          error: 'Builder publish validation failed before publish.',
-          issues: error.issues,
-        },
-        { status: 422 }
-      );
+      return errorResponse(locale, 'page_publish_validation_failed', 422, { issues: error.issues });
     }
 
     if (error instanceof BuilderSnapshotConflictError) {
@@ -161,14 +170,7 @@ export async function POST(
         reason: 'snapshot_conflict',
       });
 
-      return NextResponse.json(
-        {
-          ok: false,
-          error: 'Snapshot conflict. Reload the latest version before publishing again.',
-          conflict: error.conflict,
-        },
-        { status: 409 }
-      );
+      return errorResponse(locale, 'page_publish_conflict', 409, { conflict: error.conflict });
     }
 
     await recordPublishFailure({
@@ -178,6 +180,6 @@ export async function POST(
       reason: 'unexpected_error',
     });
 
-    throw error;
+    return errorResponse(locale, 'page_publish_failed', 500);
   }
 }

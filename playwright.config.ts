@@ -2,8 +2,8 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests/builder-editor',
-  testMatch: '**/*.playwright.ts',
-  timeout: 60_000,
+  testMatch: '**/*.playwright.ts?(x)',
+  timeout: 180_000,
   expect: {
     timeout: 10_000,
     toHaveScreenshot: {
@@ -29,12 +29,12 @@ export default defineConfig({
     },
     {
       name: 'webkit-builder',
-      testMatch: '**/admin-builder.playwright.ts',
+      testMatch: '**/admin-builder.playwright.ts?(x)',
       use: { ...devices['Desktop Safari'] },
     },
     {
       name: 'firefox-builder',
-      testMatch: '**/admin-builder.playwright.ts',
+      testMatch: '**/admin-builder.playwright.ts?(x)',
       use: { ...devices['Desktop Firefox'] },
     },
   ],

@@ -17,12 +17,10 @@ import type { Locale } from '@/lib/locales';
  *  - `paymentLinkRevokedByPaymentId`
  *  - `paymentLinkEvents` (audit history)
  *  - `paymentLinkRevokedBalanceDue`
- *  - the admin `downloadPath` (admin-only API; customers download via
- *    the token-authenticated share link path)
  *  - any audit/notes that may contain admin-only context
  *
- * Keeps token-authenticated public URLs (`paymentLinkPath`, `sharePath`) and
- * money/state labels suitable for member display.
+ * Keeps token-authenticated public URLs (`paymentLinkPath`, `sharePath`,
+ * `downloadPath`) and money/state labels suitable for member display.
  */
 export interface CustomerBillingDocumentDto {
   source: BillingDocumentSource;
@@ -54,10 +52,15 @@ export interface CustomerBillingDocumentDto {
   paymentLinkRenewalNeeded: boolean;
   sharePath: string;
   paymentLinkPath: string;
+  downloadPath: string;
 }
 
 function normalizeEmail(value: string): string {
   return value.trim().toLowerCase();
+}
+
+function normalizeEmails(emails: string[]): string[] {
+  return [...new Set(emails.map((email) => normalizeEmail(email)).filter(Boolean))];
 }
 
 /**
@@ -69,12 +72,13 @@ function normalizeEmail(value: string): string {
 export async function listCustomerBillingDocuments(
   email: string,
   options: { locale?: Locale } = {},
+  matchingEmails: string[] = [],
 ): Promise<CustomerBillingDocumentDto[]> {
-  const target = normalizeEmail(email);
-  if (!target) return [];
+  const targetEmails = normalizeEmails([email, ...matchingEmails]);
+  if (targetEmails.length === 0) return [];
   const rows = await listBillingDocuments({ locale: options.locale });
   return rows
-    .filter((row) => normalizeEmail(row.recipientEmail) === target)
+    .filter((row) => targetEmails.includes(normalizeEmail(row.recipientEmail)))
     .map((row) => ({
       source: row.source,
       documentId: row.documentId,
@@ -105,6 +109,7 @@ export async function listCustomerBillingDocuments(
       paymentLinkRenewalNeeded: row.paymentLinkRenewalNeeded,
       sharePath: row.sharePath,
       paymentLinkPath: row.paymentLinkPath,
+      downloadPath: row.sharePath ? `${row.sharePath}${row.sharePath.includes('?') ? '&' : '?'}format=pdf` : '',
     }));
 }
 

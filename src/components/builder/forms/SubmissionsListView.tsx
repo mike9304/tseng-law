@@ -1,18 +1,23 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import type { Locale } from '@/lib/locales';
 import type { FormSubmission } from '@/lib/builder/forms/form-engine';
 import SubmissionDetailModal from './SubmissionDetailModal';
+import { getFormsCopy } from './forms-copy';
 
 export default function SubmissionsListView({
   formIds,
   initialFormId,
   initialSubmissions,
+  locale,
 }: {
   formIds: string[];
   initialFormId: string;
   initialSubmissions: FormSubmission[];
+  locale: Locale;
 }) {
+  const copy = getFormsCopy(locale);
   const [activeFormId, setActiveFormId] = useState(initialFormId);
   const [submissions, setSubmissions] = useState(initialSubmissions);
   const [selected, setSelected] = useState<FormSubmission | null>(null);
@@ -67,17 +72,17 @@ export default function SubmissionsListView({
     <main style={{ minHeight: '100vh', background: '#f8fafc', color: '#0f172a', fontFamily: 'system-ui, sans-serif', padding: 24 }}>
       <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, marginBottom: 20 }}>
         <div>
-          <h1 style={{ margin: 0, fontSize: 24 }}>Form submissions</h1>
-          <p style={{ margin: '4px 0 0', color: '#64748b', fontSize: 14 }}>{activeFormId} · {filtered.length} shown</p>
+          <h1 style={{ margin: 0, fontSize: 24 }}>{copy.list.title}</h1>
+          <p style={{ margin: '4px 0 0', color: '#64748b', fontSize: 14 }}>{copy.list.summary(activeFormId, filtered.length)}</p>
         </div>
         <button type="button" onClick={exportCsv} disabled={filtered.length === 0} style={primaryButtonStyle}>
-          Export CSV
+          {copy.list.exportCsv}
         </button>
       </header>
 
       <section style={{ display: 'grid', gridTemplateColumns: '240px minmax(0, 1fr)', gap: 18 }}>
         <aside style={panelStyle}>
-          <strong style={panelTitleStyle}>Forms</strong>
+          <strong style={panelTitleStyle}>{copy.list.forms}</strong>
           <div style={{ display: 'grid', gap: 8, marginTop: 12 }}>
             {(formIds.length > 0 ? formIds : [activeFormId]).map((formId) => (
               <button
@@ -102,21 +107,21 @@ export default function SubmissionsListView({
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Search submissions"
+              placeholder={copy.list.searchPlaceholder}
               style={searchStyle}
             />
-            {loading ? <span style={{ color: '#64748b', fontSize: 13 }}>Loading...</span> : null}
+            {loading ? <span style={{ color: '#64748b', fontSize: 13 }}>{copy.list.loading}</span> : null}
           </div>
 
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff' }}>
               <thead>
                 <tr style={{ textAlign: 'left', borderBottom: '1px solid #e2e8f0' }}>
-                  <th style={thStyle}>Status</th>
-                  <th style={thStyle}>Submitted</th>
-                  <th style={thStyle}>Email</th>
-                  <th style={thStyle}>Name</th>
-                  <th style={thStyle}>Summary</th>
+                  <th style={thStyle}>{copy.list.status.status}</th>
+                  <th style={thStyle}>{copy.list.status.date}</th>
+                  <th style={thStyle}>{copy.list.status.name}</th>
+                  <th style={thStyle}>{copy.list.status.email}</th>
+                  <th style={thStyle}>{copy.list.status.summary}</th>
                 </tr>
               </thead>
               <tbody>
@@ -124,8 +129,8 @@ export default function SubmissionsListView({
                   <tr key={submission.submissionId} onClick={() => setSelected(submission)} style={{ cursor: 'pointer', borderBottom: '1px solid #f1f5f9', background: submission.read ? '#fff' : '#eff6ff' }}>
                     <td style={tdStyle}><span style={{ ...dotStyle, background: submission.read ? '#cbd5e1' : '#2563eb' }} /></td>
                     <td style={tdStyle}>{formatDate(submission.submittedAt)}</td>
-                    <td style={tdStyle}>{findField(submission, 'email')}</td>
                     <td style={tdStyle}>{findField(submission, 'name') || findField(submission, '이름')}</td>
+                    <td style={tdStyle}>{findField(submission, 'email')}</td>
                     <td style={tdStyle}>{summarize(submission)}</td>
                   </tr>
                 ))}
@@ -133,12 +138,14 @@ export default function SubmissionsListView({
             </table>
           </div>
           {filtered.length === 0 ? (
-            <div style={{ padding: 36, textAlign: 'center', color: '#94a3b8' }}>No submissions found.</div>
+            <div style={{ padding: 36, textAlign: 'center', color: '#94a3b8' }}>
+              {submissions.length === 0 ? copy.list.noSubmissionsYet : copy.list.noMatchingSubmissions}
+            </div>
           ) : null}
         </section>
       </section>
 
-      {selected ? <SubmissionDetailModal submission={selected} onClose={() => setSelected(null)} /> : null}
+      {selected ? <SubmissionDetailModal submission={selected} locale={locale} onClose={() => setSelected(null)} /> : null}
     </main>
   );
 }

@@ -1,7 +1,9 @@
 import { expect, test, type Page } from '@playwright/test';
 import { openBuilder, openCatalogDrawer } from './helpers/editor';
+import { getAiGeneratorCopy } from '@/components/builder/ai-generator/ai-generator-copy';
 
 const LOCALE = 'ko';
+const AI_GENERATOR_COPY = getAiGeneratorCopy(LOCALE);
 const AI_GENERATE_TIMEOUT_MS = 30_000;
 const authHeader = `Basic ${Buffer.from(
   `${process.env.BUILDER_SMOKE_USERNAME ?? process.env.CMS_ADMIN_USERNAME ?? 'admin'}:${process.env.BUILDER_SMOKE_PASSWORD ?? process.env.CMS_ADMIN_PASSWORD ?? 'local-review-2026!'}`,
@@ -35,6 +37,16 @@ function flattenNavigation(items: BuilderNavItemSummary[]): BuilderNavItemSummar
   return items.flatMap((item) => [item, ...flattenNavigation(item.children ?? [])]);
 }
 
+function futureLocalDatetimeInput(hoursFromNow: number): string {
+  const date = new Date(Date.now() + hoursFromNow * 60 * 60 * 1000);
+  const pad = (value: number) => String(value).padStart(2, '0');
+  return [
+    date.getFullYear(),
+    pad(date.getMonth() + 1),
+    pad(date.getDate()),
+  ].join('-') + `T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+}
+
 async function listNavigationItems(page: Page) {
   const response = await page.request.get(`/api/builder/site/navigation?locale=${LOCALE}`, {
     headers: { Authorization: authHeader },
@@ -57,6 +69,12 @@ async function createBuilderPage(page: Page, slug: string, title: string): Promi
 
 async function deleteBuilderPage(page: Page, pageId: string) {
   await page.request.delete(`/api/builder/site/pages/${encodeURIComponent(pageId)}?locale=${LOCALE}`, {
+    headers: { Authorization: authHeader },
+  }).catch(() => undefined);
+}
+
+async function cancelScheduledPublish(page: Page, pageId: string) {
+  await page.request.delete(`/api/builder/site/pages/${encodeURIComponent(pageId)}/scheduled-publish?locale=${LOCALE}`, {
     headers: { Authorization: authHeader },
   }).catch(() => undefined);
 }
@@ -171,23 +189,92 @@ test('/ko/admin-builder/ai-generator generates sitemap and content plan from exp
   await page.locator('[data-ai-generator-draft-preview-mode-button="mobile"]').click();
   await expect(draftPreview).toHaveAttribute('data-ai-generator-draft-preview-mode', 'mobile');
   await expect(draftPreview.locator('h3')).toBeVisible();
+  const responsiveFix = page.locator('[data-ai-generator-responsive-fix]');
+  await expect(responsiveFix).toHaveAttribute('data-ai-generator-responsive-fix-breakpoints', 'mobile,tablet');
+  await expect(responsiveFix).toHaveAttribute('data-ai-generator-responsive-fix-mode', 'copy_cta_tablet_balance');
   await page.locator('[data-ai-generator-apply-responsive-fix]').click();
   await expect(draftPreview).toHaveAttribute('data-ai-generator-draft-preview-mode', 'mobile');
   await expect(page.locator('[data-ai-generator-responsive-fix-status]')).toContainText('모바일 CTA');
+  await expect(page.locator('[data-ai-generator-responsive-fix-status]')).toContainText('태블릿 2열');
   await expect(page.locator('[data-ai-generator-visual-brief]')).toContainText('mobile-safe CTA spacing');
+  await expect(page.locator('[data-ai-generator-visual-brief]')).toContainText('tablet sections');
   await page.locator('[data-ai-generator-undo-responsive-fix]').click();
   await expect(draftPreview).toHaveAttribute('data-ai-generator-draft-preview-mode', 'desktop');
   await expect(page.locator('[data-ai-generator-responsive-fix-status]')).toContainText('되돌렸습니다');
-  await expect(page.locator('[data-ai-generator-designer-suggestions]')).toBeVisible();
+  const designerSuggestions = page.locator('[data-ai-generator-designer-suggestions]');
+  await expect(designerSuggestions).toBeVisible();
+  await expect(designerSuggestions).toHaveAttribute('data-ai-generator-designer-suggestion-top', 'editorial-trust');
+  await expect(designerSuggestions).toHaveAttribute('data-ai-generator-designer-suggestion-top-score', '94');
+  await expect(designerSuggestions).toHaveAttribute('data-ai-generator-designer-suggestion-top-layout-fit', '96');
+  await expect(designerSuggestions).toHaveAttribute('data-ai-generator-designer-suggestion-top-palette-fit', '92');
+  await expect(page.locator('[data-ai-generator-designer-suggestion="editorial-trust"]')).toHaveAttribute(
+    'data-ai-generator-designer-suggestion-rank',
+    '1',
+  );
+  await expect(page.locator('[data-ai-generator-designer-suggestion="editorial-trust"]')).toHaveAttribute(
+    'data-ai-generator-designer-suggestion-score',
+    '94',
+  );
+  const editorialTrustSuggestion = page.locator('[data-ai-generator-designer-suggestion="editorial-trust"]');
+  await expect(editorialTrustSuggestion).toHaveAttribute('data-ai-generator-designer-suggestion-layout-fit', '96');
+  await expect(editorialTrustSuggestion).toHaveAttribute('data-ai-generator-designer-suggestion-palette-fit', '92');
+  await expect(editorialTrustSuggestion).toHaveAttribute(
+    'data-ai-generator-designer-suggestion-design-pool-profile',
+    'law-editorial-credential',
+  );
+  await expect(editorialTrustSuggestion).toHaveAttribute('data-ai-generator-designer-suggestion-design-pool-fit', '96');
+  await expect(editorialTrustSuggestion.locator(
+    '[data-ai-generator-designer-suggestion-fit-preview="editorial-trust"]',
+  )).toBeVisible();
+  const editorialTrustDesignPool = editorialTrustSuggestion.locator(
+    '[data-ai-generator-designer-design-pool-match="editorial-trust"]',
+  );
+  await expect(editorialTrustDesignPool).toHaveAttribute(
+    'data-ai-generator-designer-design-pool-profile',
+    'law-editorial-credential',
+  );
+  await expect(editorialTrustDesignPool).toHaveAttribute('data-ai-generator-designer-design-pool-fit', '96');
+  await expect(editorialTrustSuggestion).toContainText('94% match');
+  await expect(editorialTrustSuggestion).toContainText('Layout 96');
+  await expect(editorialTrustSuggestion).toContainText('Palette 92');
+  await expect(editorialTrustSuggestion).toContainText('96% design-pool');
+  await expect(editorialTrustSuggestion).toContainText('law-editorial-credential');
+  await expect(editorialTrustSuggestion).toContainText('credential rhythm');
+  await expect(editorialTrustSuggestion).toContainText('Credential rail');
+  await expect(editorialTrustSuggestion).toContainText('industry fit');
+  const designerScoreExport = page.locator('[data-ai-generator-designer-score-export]');
+  await expect(designerScoreExport).toBeVisible();
+  await expect(designerScoreExport).toHaveAttribute('data-ai-generator-designer-score-export-count', '3');
+  await expect(designerScoreExport).toHaveAttribute('data-ai-generator-designer-score-export-top', 'editorial-trust');
+  await expect(designerScoreExport).toHaveAttribute(
+    'data-ai-generator-designer-score-export-payload',
+    /editorial-trust:1:94:96:92/,
+  );
+  await expect(designerScoreExport.locator(
+    '[data-ai-generator-designer-score-export-row="editorial-trust"]',
+  )).toHaveAttribute('data-ai-generator-designer-score-export-row-score', '94');
+  await expect(designerScoreExport.locator(
+    '[data-ai-generator-designer-score-export-row="editorial-trust"]',
+  )).toContainText('L96');
+  const designerServerScore = page.locator('[data-ai-generator-designer-server-score]');
+  await expect(designerServerScore).toHaveAttribute('data-ai-generator-designer-server-score-status', 'synced');
+  await expect(designerServerScore).toHaveAttribute('data-ai-generator-designer-server-score-top', 'editorial-trust');
+  await expect(designerServerScore).toHaveAttribute('data-ai-generator-designer-server-score-count', '3');
+  await expect(designerServerScore).toHaveAttribute('data-ai-generator-designer-server-score-match', 'true');
+  await expect(designerServerScore).toHaveAttribute(
+    'data-ai-generator-designer-server-score-payload',
+    /editorial-trust:1:94:96:92/,
+  );
+  await expect(designerServerScore).toContainText('Server score synced');
   await page.locator('[data-ai-generator-designer-suggestion="editorial-trust"]').click();
-  await expect(page.locator('[data-ai-generator-designer-suggestions]')).toHaveAttribute(
+  await expect(designerSuggestions).toHaveAttribute(
     'data-ai-generator-designer-suggestion-active',
     'editorial-trust',
   );
   await expect(page.locator('[data-ai-generator-designer-suggestion-status]')).toContainText('Editorial trust');
   await expect(page.locator('[data-ai-generator-design-treatment]')).toContainText('Designer polish');
   await page.locator('[data-ai-generator-undo-designer-suggestion]').click();
-  await expect(page.locator('[data-ai-generator-designer-suggestions]')).toHaveAttribute(
+  await expect(designerSuggestions).toHaveAttribute(
     'data-ai-generator-designer-suggestion-active',
     'none',
   );
@@ -427,11 +514,50 @@ test('/ko/admin-builder/ai-generator creates selected sitemap draft pages with s
 
   const token = Date.now().toString(36);
   const existingSlug = `ai-existing-${token}`;
+  const hierarchySlug = `resources-checklist-${token}`;
   const expectedSlugs = [`roadmap-${token}`];
   let existingPageId = '';
   let createdPages: CreatedDraftLink[] = [];
 
   try {
+    await page.route('**/api/builder/site/publish-checks', async (route) => {
+      const response = await route.fetch();
+      const payload = (await response.json()) as {
+        ok?: boolean;
+        suite?: {
+          results?: Array<{ id: string; severity: string; category?: string; message: string }>;
+          warningCount?: number;
+          blockerCount?: number;
+          infoCount?: number;
+          hasBlocker?: boolean;
+        };
+      };
+      const results = payload.suite?.results ?? [];
+      const warning = {
+        id: `ai-warning-override-${token}`,
+        severity: 'warning',
+        category: 'seo',
+        message: 'Mock warning for AI publish override review.',
+      };
+      await route.fulfill({
+        response,
+        contentType: 'application/json',
+        body: JSON.stringify({
+          ...payload,
+          suite: payload.suite
+            ? {
+                ...payload.suite,
+                results: [...results, warning],
+                warningCount: (payload.suite.warningCount ?? 0) + 1,
+                blockerCount: payload.suite.blockerCount ?? 0,
+                infoCount: payload.suite.infoCount ?? 0,
+                hasBlocker: payload.suite.hasBlocker ?? false,
+              }
+            : payload.suite,
+        }),
+      });
+    });
+
     existingPageId = await createBuilderPage(page, existingSlug, 'Existing AI sitemap page');
 
     await page.goto(`/${LOCALE}/admin-builder/ai-generator`, { waitUntil: 'domcontentloaded' });
@@ -441,7 +567,7 @@ test('/ko/admin-builder/ai-generator creates selected sitemap draft pages with s
     await page.locator('[data-ai-generator-pages]').fill([
       '홈',
       `Roadmap ${token}`,
-      `Guides ${token}`,
+      `Resources/Checklist ${token}`,
       existingSlug,
     ].join('\n'));
 
@@ -454,11 +580,94 @@ test('/ko/admin-builder/ai-generator creates selected sitemap draft pages with s
     await expect(page.locator('[data-ai-generator-selected-count]')).toContainText('3/3');
 	    const sitemapApplyReview = page.locator('[data-ai-generator-apply-review]');
 	    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-scope', 'sitemap');
-	    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-page-count', '3');
+    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-page-count', '3');
 	    await expect(sitemapApplyReview.locator('[data-ai-generator-apply-review-page]')).toHaveCount(3);
+    const applySectionDiff = page.locator('[data-ai-generator-apply-section-diff]');
+    await expect(applySectionDiff).toBeVisible();
+    await expect(applySectionDiff).toHaveAttribute('data-ai-generator-apply-section-diff-mode', 'create_draft');
+    await expect(applySectionDiff).toHaveAttribute('data-ai-generator-apply-section-diff-scope', 'sitemap');
+    await expect(applySectionDiff).toHaveAttribute('data-ai-generator-apply-section-diff-page-count', '3');
+    await expect(applySectionDiff).toHaveAttribute('data-ai-generator-apply-section-diff-section-count', '12');
+    await expect(applySectionDiff).toHaveAttribute('data-ai-generator-apply-section-diff-unique-count', '4');
+    await expect(applySectionDiff.locator(
+      `[data-ai-generator-apply-section-diff-page="${hierarchySlug}"][data-ai-generator-apply-section-diff-section="hero"]`,
+    )).toHaveAttribute('data-ai-generator-apply-section-diff-state', 'will_insert');
+    const applyVisualDiff = page.locator('[data-ai-generator-apply-visual-diff]');
+    await expect(applyVisualDiff).toBeVisible();
+    await expect(applyVisualDiff).toHaveAttribute('data-ai-generator-apply-visual-diff-mode', 'before_after');
+    await expect(applyVisualDiff).toHaveAttribute('data-ai-generator-apply-visual-diff-before', 'new_draft');
+    await expect(applyVisualDiff).toHaveAttribute('data-ai-generator-apply-visual-diff-after', 'generated_draft');
+    await expect(applyVisualDiff).toHaveAttribute('data-ai-generator-apply-visual-diff-page-count', '3');
+    await expect(applyVisualDiff).toHaveAttribute('data-ai-generator-apply-visual-diff-after-section-count', '12');
+    await expect(applyVisualDiff.locator(`[data-ai-generator-apply-visual-diff-row="${hierarchySlug}"]`)).toHaveAttribute(
+      'data-ai-generator-apply-visual-diff-row-after-sections',
+      '4',
+    );
+    const applyResponsiveReview = page.locator('[data-ai-generator-apply-responsive-review]');
+    await expect(applyResponsiveReview).toBeVisible();
+    await expect(applyResponsiveReview).toHaveAttribute(
+      'data-ai-generator-apply-responsive-review-mode',
+      'breakpoint_review',
+    );
+    await expect(applyResponsiveReview).toHaveAttribute(
+      'data-ai-generator-apply-responsive-review-breakpoint',
+      'mobile',
+    );
+    await expect(applyResponsiveReview).toHaveAttribute(
+      'data-ai-generator-apply-responsive-review-breakpoints',
+      'mobile,tablet',
+    );
+    await expect(applyResponsiveReview).toHaveAttribute('data-ai-generator-apply-responsive-review-page-count', '3');
+    await expect(applyResponsiveReview).toHaveAttribute('data-ai-generator-apply-responsive-review-issue-count', '9');
+    await expect(applyResponsiveReview).toHaveAttribute('data-ai-generator-apply-responsive-review-mobile-issue-count', '6');
+    await expect(applyResponsiveReview).toHaveAttribute('data-ai-generator-apply-responsive-review-tablet-issue-count', '3');
+    await expect(applyResponsiveReview).toHaveAttribute('data-ai-generator-apply-responsive-review-ready-count', '0');
+    const hierarchyResponsiveReviewRow = applyResponsiveReview.locator(
+      `[data-ai-generator-apply-responsive-review-row="${hierarchySlug}"]`,
+    );
+    await expect(hierarchyResponsiveReviewRow).toHaveAttribute(
+      'data-ai-generator-apply-responsive-review-row-breakpoint',
+      'mobile',
+    );
+    await expect(hierarchyResponsiveReviewRow).toHaveAttribute(
+      'data-ai-generator-apply-responsive-review-row-breakpoints',
+      'mobile,tablet',
+    );
+    await expect(hierarchyResponsiveReviewRow).toHaveAttribute(
+      'data-ai-generator-apply-responsive-review-row-status',
+      'review',
+    );
+    await expect(hierarchyResponsiveReviewRow).toHaveAttribute(
+      'data-ai-generator-apply-responsive-review-row-issues',
+      '3',
+    );
+    await expect(hierarchyResponsiveReviewRow).toHaveAttribute(
+      'data-ai-generator-apply-responsive-review-row-mobile-issues',
+      '2',
+    );
+    await expect(hierarchyResponsiveReviewRow).toHaveAttribute(
+      'data-ai-generator-apply-responsive-review-row-tablet-issues',
+      '1',
+    );
     const sitemapTreeOrder = page.locator('[data-ai-generator-sitemap-tree-order]');
     await expect(sitemapTreeOrder).toBeVisible();
     await expect(sitemapTreeOrder).toHaveAttribute('data-ai-generator-sitemap-tree-order-count', '3');
+    const sitemapTreeDiff = page.locator('[data-ai-generator-sitemap-tree-diff]');
+    await expect(sitemapTreeDiff).toBeVisible();
+    await expect(sitemapTreeDiff).toHaveAttribute('data-ai-generator-sitemap-tree-new-count', '2');
+    await expect(sitemapTreeDiff).toHaveAttribute('data-ai-generator-sitemap-tree-existing-count', '1');
+    await expect(sitemapTreeDiff).toHaveAttribute('data-ai-generator-sitemap-tree-hierarchy-count', '1');
+    const hierarchyDiffRow = sitemapTreeDiff.locator(`[data-ai-generator-sitemap-tree-diff-row="${hierarchySlug}"]`);
+    await expect(hierarchyDiffRow).toHaveAttribute('data-ai-generator-sitemap-tree-depth', '1');
+    await expect(hierarchyDiffRow).toHaveAttribute('data-ai-generator-sitemap-tree-parent', 'Resources');
+    await expect(hierarchyDiffRow).toHaveAttribute(
+      'data-ai-generator-sitemap-tree-hierarchy',
+      `Resources / Checklist ${token}`,
+    );
+    await expect(sitemapTreeDiff.locator(`[data-ai-generator-sitemap-tree-diff-row="${existingSlug}"]`)).toHaveAttribute(
+      'data-ai-generator-sitemap-tree-diff-state',
+      'will_skip_existing',
+    );
     await expect(sitemapTreeOrder.locator(`[data-ai-generator-sitemap-order-row="roadmap-${token}"]`)).toHaveAttribute(
       'data-ai-generator-sitemap-order-index',
       '0',
@@ -470,10 +679,11 @@ test('/ko/admin-builder/ai-generator creates selected sitemap draft pages with s
     );
     await expect(sitemapApplyReview.locator('[data-ai-generator-apply-review-page]').first()).toHaveAttribute(
       'data-ai-generator-apply-review-page-slug',
-      `guides-${token}`,
+      hierarchySlug,
     );
-	    await expect(page.locator('[data-ai-generator-page-status="planned"]')).toHaveCount(3);
-	    await page.locator(`[data-ai-generator-sitemap-page-checkbox="guides-${token}"]`).uncheck();
+	    await expect(page.locator('[data-ai-generator-page-status="planned"]')).toHaveCount(2);
+	    await expect(page.locator('[data-ai-generator-page-status="existing_page"]')).toHaveCount(1);
+	    await page.locator(`[data-ai-generator-sitemap-page-checkbox="${hierarchySlug}"]`).uncheck();
 	    await expect(page.locator('[data-ai-generator-selected-count]')).toContainText('2/3');
     await expect(sitemapTreeOrder).toHaveAttribute('data-ai-generator-sitemap-tree-order-count', '2');
     await expect(sitemapTreeOrder.locator(`[data-ai-generator-sitemap-order-row="roadmap-${token}"]`)).toHaveAttribute(
@@ -481,8 +691,22 @@ test('/ko/admin-builder/ai-generator creates selected sitemap draft pages with s
       '0',
     );
 	    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-page-count', '2');
-	    await expect(sitemapApplyReview.locator(`[data-ai-generator-apply-review-page-slug="guides-${token}"]`)).toHaveCount(0);
-	    await expect(page.locator('[data-ai-generator-page-status="planned"]')).toHaveCount(2);
+	    await expect(sitemapApplyReview.locator(`[data-ai-generator-apply-review-page-slug="${hierarchySlug}"]`)).toHaveCount(0);
+    await expect(applySectionDiff).toHaveAttribute('data-ai-generator-apply-section-diff-page-count', '2');
+    await expect(applySectionDiff).toHaveAttribute('data-ai-generator-apply-section-diff-section-count', '8');
+    await expect(applySectionDiff.locator(`[data-ai-generator-apply-section-diff-page="${hierarchySlug}"]`)).toHaveCount(0);
+    await expect(applyVisualDiff).toHaveAttribute('data-ai-generator-apply-visual-diff-page-count', '2');
+    await expect(applyVisualDiff).toHaveAttribute('data-ai-generator-apply-visual-diff-after-section-count', '8');
+    await expect(applyVisualDiff.locator(`[data-ai-generator-apply-visual-diff-row="${hierarchySlug}"]`)).toHaveCount(0);
+    await expect(applyResponsiveReview).toHaveAttribute('data-ai-generator-apply-responsive-review-page-count', '2');
+    await expect(applyResponsiveReview).toHaveAttribute('data-ai-generator-apply-responsive-review-issue-count', '6');
+    await expect(applyResponsiveReview).toHaveAttribute('data-ai-generator-apply-responsive-review-mobile-issue-count', '4');
+    await expect(applyResponsiveReview).toHaveAttribute('data-ai-generator-apply-responsive-review-tablet-issue-count', '2');
+    await expect(applyResponsiveReview.locator(
+      `[data-ai-generator-apply-responsive-review-row="${hierarchySlug}"]`,
+    )).toHaveCount(0);
+	    await expect(page.locator('[data-ai-generator-page-status="planned"]')).toHaveCount(1);
+	    await expect(page.locator('[data-ai-generator-page-status="existing_page"]')).toHaveCount(1);
 	    await expect(page.locator('[data-ai-generator-page-status="not_selected"]')).toHaveCount(1);
 	    await page.locator('[data-ai-generator-include-navigation-toggle]').check();
 	    await expect(page.locator('[data-ai-generator-include-navigation]')).toHaveAttribute(
@@ -491,12 +715,105 @@ test('/ko/admin-builder/ai-generator creates selected sitemap draft pages with s
 	    );
 	    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-navigation', 'enabled');
 	    await expect(page.locator('[data-ai-generator-navigation-helper]')).toContainText('공개 header');
+    await expect(sitemapTreeDiff).toHaveAttribute('data-ai-generator-sitemap-tree-navigation-count', '1');
+    await expect(sitemapTreeDiff.locator(`[data-ai-generator-sitemap-tree-diff-row="roadmap-${token}"]`)).toHaveAttribute(
+      'data-ai-generator-sitemap-tree-diff-state',
+      'will_add_nav',
+    );
+    const navigationTreeDiff = page.locator('[data-ai-generator-sitemap-navigation-diff]');
+    await expect(navigationTreeDiff).toBeVisible();
+    await expect(navigationTreeDiff).toHaveAttribute('data-ai-generator-sitemap-navigation-diff-append-count', '1');
+    await expect(navigationTreeDiff).toHaveAttribute('data-ai-generator-sitemap-navigation-diff-hidden-count', '1');
+    await expect(navigationTreeDiff.locator(`[data-ai-generator-sitemap-navigation-diff-row="roadmap-${token}"]`)).toHaveAttribute(
+      'data-ai-generator-sitemap-navigation-diff-state',
+      'will_append_hidden_until_publish',
+    );
+    await expect(navigationTreeDiff.locator(`[data-ai-generator-sitemap-navigation-diff-row="${existingSlug}"]`)).toHaveAttribute(
+      'data-ai-generator-sitemap-navigation-diff-state',
+      'page_exists_not_in_nav',
+    );
 
 	    await page.locator('[data-ai-generator-create-selected-drafts]').click();
 	    await expect(page.locator('[data-ai-generator-created-page]')).toBeVisible({ timeout: AI_GENERATE_TIMEOUT_MS });
 	    await expect(page.locator('[data-ai-generator-created-page]')).toHaveAttribute('data-ai-generator-created-page-count', '1');
+	    await expect(page.locator('[data-ai-generator-created-page]')).toHaveAttribute('data-ai-generator-created-page-published-count', '0');
 	    await expect(page.locator('[data-ai-generator-created-navigation-status]')).toContainText('Navigation updated');
 	    await expect(page.locator('[data-ai-generator-created-page-link]')).toHaveCount(1);
+	    await expect(page.locator('[data-ai-generator-created-page-publish-control]')).toHaveAttribute(
+	      'data-ai-generator-created-page-publish-status',
+	      'draft',
+	    );
+	    const publishPreflight = page.locator('[data-ai-generator-created-page-preflight]');
+	    await expect(publishPreflight).toHaveAttribute('data-ai-generator-created-page-preflight-status', 'ready', {
+	      timeout: AI_GENERATE_TIMEOUT_MS,
+	    });
+	    await expect(publishPreflight).toHaveAttribute('data-ai-generator-created-page-preflight-blockers', '0');
+	    await expect(publishPreflight).toHaveAttribute('data-ai-generator-created-page-preflight-warnings', /^[1-9]\d*$/);
+	    await expect(publishPreflight).toContainText('Publish ready');
+	    const publishTransaction = page.locator('[data-ai-generator-created-page-publish-transaction]');
+	    await expect(publishTransaction).toHaveAttribute(
+	      'data-ai-generator-created-page-publish-transaction-status',
+	      'warning_review',
+	    );
+	    await expect(publishTransaction).toHaveAttribute(
+	      'data-ai-generator-created-page-publish-transaction-mode',
+	      'immediate',
+	    );
+	    await expect(publishTransaction).toHaveAttribute(
+	      'data-ai-generator-created-page-publish-transaction-navigation',
+	      'queued_hidden_until_publish',
+	    );
+	    await expect(publishTransaction).toHaveAttribute(
+	      'data-ai-generator-created-page-publish-transaction-route',
+	      `/${LOCALE}/${expectedSlugs[0]}`,
+	    );
+	    await expect(publishTransaction).toContainText('Immediate publish transaction');
+	    const scheduleTransaction = page.locator('[data-ai-generator-created-page-schedule-transaction]');
+	    await expect(scheduleTransaction).toHaveAttribute(
+	      'data-ai-generator-created-page-schedule-status',
+	      'warning_review',
+	    );
+	    await expect(scheduleTransaction).toHaveAttribute(
+	      'data-ai-generator-created-page-schedule-mode',
+	      'scheduled',
+	    );
+	    await expect(scheduleTransaction).toHaveAttribute(
+	      'data-ai-generator-created-page-schedule-route',
+	      `/${LOCALE}/${expectedSlugs[0]}`,
+	    );
+	    const scheduleInput = page.locator('[data-ai-generator-created-page-schedule-input]');
+	    await expect(scheduleInput).toBeVisible();
+	    const warningOverride = page.locator('[data-ai-generator-created-page-warning-override]');
+	    await expect(warningOverride).toHaveAttribute(
+	      'data-ai-generator-created-page-warning-override-status',
+	      'required',
+	    );
+	    await expect(warningOverride).toHaveAttribute(
+	      'data-ai-generator-created-page-warning-override-warnings',
+	      /^[1-9]\d*$/,
+	    );
+	    await expect(page.locator('[data-ai-generator-created-page-publish]')).toBeDisabled();
+	    await expect(page.locator('[data-ai-generator-created-page-schedule]')).toBeDisabled();
+	    await page.locator('[data-ai-generator-created-page-warning-override-toggle]').check();
+	    await expect(warningOverride).toHaveAttribute(
+	      'data-ai-generator-created-page-warning-override-status',
+	      'acknowledged',
+	    );
+	    await expect(page.locator('[data-ai-generator-created-page-publish]')).toBeEnabled();
+	    await expect(page.locator('[data-ai-generator-created-page-schedule]')).toBeEnabled();
+	    await expect(publishTransaction).toHaveAttribute(
+	      'data-ai-generator-created-page-publish-transaction-status',
+	      'ready',
+	    );
+	    await expect(scheduleTransaction).toHaveAttribute(
+	      'data-ai-generator-created-page-schedule-status',
+	      'ready',
+	    );
+	    await expect(page.locator('[data-ai-generator-created-page-schedule]')).toHaveAttribute(
+	      'data-ai-generator-created-page-schedule-action',
+	      'schedule',
+	    );
+	    await expect(scheduleTransaction).toContainText('Scheduled publish transaction');
 	    await expect(page.locator('[data-ai-generator-skipped-pages]')).toContainText('duplicate_slug');
 	    await expect(page.locator('[data-ai-generator-page-status="created"]')).toHaveCount(1);
 	    await expect(page.locator('[data-ai-generator-page-status="duplicate_slug"]')).toHaveCount(1);
@@ -525,6 +842,78 @@ test('/ko/admin-builder/ai-generator creates selected sitemap draft pages with s
 	    });
 	    const publicHtml = await publicResponse.text();
 	    expect(publicHtml).not.toContain(`/${LOCALE}/${expectedSlugs[0]}`);
+
+    const customScheduleAt = futureLocalDatetimeInput(48);
+    await scheduleInput.fill(customScheduleAt);
+    await expect(scheduleInput).toHaveValue(customScheduleAt);
+    await page.locator('[data-ai-generator-created-page-schedule]').click();
+    await expect(page.locator('[data-ai-generator-publish-notice]')).toContainText('scheduled', {
+      timeout: AI_GENERATE_TIMEOUT_MS,
+    });
+    await expect(scheduleTransaction).toHaveAttribute(
+      'data-ai-generator-created-page-schedule-status',
+      'scheduled',
+    );
+    await expect(page.locator('[data-ai-generator-created-page-schedule]')).toHaveAttribute(
+      'data-ai-generator-created-page-schedule-action',
+      'cancel',
+    );
+    const scheduledAt = await scheduleTransaction.getAttribute('data-ai-generator-created-page-schedule-at');
+    expect(scheduledAt).toBeTruthy();
+    expect(new Date(scheduledAt ?? '').getTime()).toBeGreaterThan(Date.now() + 47 * 60 * 60 * 1000);
+
+    await page.locator('[data-ai-generator-created-page-schedule]').click();
+    await expect(page.locator('[data-ai-generator-publish-notice]')).toContainText('schedule cancelled', {
+      timeout: AI_GENERATE_TIMEOUT_MS,
+    });
+    await expect(scheduleTransaction).toHaveAttribute(
+      'data-ai-generator-created-page-schedule-status',
+      'ready',
+    );
+    await expect(scheduleTransaction).toHaveAttribute(
+      'data-ai-generator-created-page-schedule-at',
+      '',
+    );
+    await expect(page.locator('[data-ai-generator-created-page-schedule]')).toHaveAttribute(
+      'data-ai-generator-created-page-schedule-action',
+      'schedule',
+    );
+
+    await page.locator('[data-ai-generator-created-page-publish]').click();
+    await expect(page.locator('[data-ai-generator-publish-notice]')).toContainText('published', {
+      timeout: AI_GENERATE_TIMEOUT_MS,
+    });
+    await expect(page.locator('[data-ai-generator-created-page]')).toHaveAttribute(
+      'data-ai-generator-created-page-published-count',
+      '1',
+    );
+    await expect(page.locator('[data-ai-generator-created-page-publish-control]')).toHaveAttribute(
+      'data-ai-generator-created-page-publish-status',
+      'published',
+    );
+    await expect(page.locator('[data-ai-generator-created-page-publish-transaction]')).toHaveAttribute(
+      'data-ai-generator-created-page-publish-transaction-status',
+      'published',
+    );
+    await expect(page.locator('[data-ai-generator-created-page-publish-transaction]')).toHaveAttribute(
+      'data-ai-generator-created-page-publish-transaction-navigation',
+      'public_after_publish',
+    );
+    await expect(page.locator('[data-ai-generator-created-page-schedule-transaction]')).toHaveAttribute(
+      'data-ai-generator-created-page-schedule-status',
+      'published',
+    );
+    await expect(page.locator(`[data-ai-generator-sitemap-navigation-diff-row="${expectedSlugs[0]}"]`)).toHaveAttribute(
+      'data-ai-generator-sitemap-navigation-diff-state',
+      'public_after_publish',
+    );
+
+    await expect.poll(async () => {
+      const response = await page.request.get(`/${LOCALE}/${expectedSlugs[0]}`, {
+        headers: { Authorization: authHeader },
+      });
+      return response.status();
+    }).toBe(200);
 
 	    for (const created of createdPages) {
       const seoResponse = await page.request.get(`/api/builder/site/pages/${encodeURIComponent(created.pageId)}/seo?locale=${LOCALE}`, {
@@ -560,6 +949,7 @@ test('/ko/admin-builder/ai-generator creates selected sitemap draft pages with s
       )).toBe(true);
     }
   } finally {
+    await Promise.all(createdPages.map((created) => cancelScheduledPublish(page, created.pageId)));
     await Promise.all(createdPages.map((created) => deleteBuilderPage(page, created.pageId)));
     if (existingPageId) await deleteBuilderPage(page, existingPageId);
   }
@@ -569,7 +959,7 @@ test('/ko/admin-builder dashboard links to AI site generator', async ({ page }) 
   await page.setExtraHTTPHeaders({ Authorization: authHeader });
   await page.goto(`/${LOCALE}/admin-builder`, { waitUntil: 'domcontentloaded' });
 
-  await expect(page.getByRole('link', { name: /AI Site Generator/ }).first()).toHaveAttribute(
+  await expect(page.getByRole('link', { name: AI_GENERATOR_COPY.title, exact: true }).first()).toHaveAttribute(
     'href',
     `/${LOCALE}/admin-builder/ai-generator`,
   );
@@ -632,7 +1022,7 @@ test('/ko/admin-builder/ai-generator saves generated sections for reuse', async 
     await openBuilder(page, `/${LOCALE}/admin-builder?aiSavedSection=${encodeURIComponent(savedSectionId)}`);
     await page.keyboard.press('Escape');
     const catalogDrawer = await openCatalogDrawer(page);
-    await expect(catalogDrawer.getByText('Saved sections')).toBeVisible();
+    await expect(catalogDrawer.locator('[data-builder-saved-section-library="true"]')).toBeVisible();
     const savedSectionCard = catalogDrawer.locator(`[data-builder-saved-section-card="${savedSectionId}"]`);
     await expect(savedSectionCard).toBeVisible();
     await savedSectionCard.locator(`[data-builder-saved-section-insert="${savedSectionId}"]`).click();

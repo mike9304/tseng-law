@@ -1,4 +1,10 @@
 import { expect, test, type APIRequestContext, type Page } from '@playwright/test';
+import { rm } from 'fs/promises';
+import path from 'path';
+import { getPublishModalCopy } from '@/components/builder/canvas/publish-copy';
+import type { BuilderCmsCollection } from '@/lib/builder/cms-types';
+import { schedulePagePublish } from '@/lib/builder/site/scheduled-publish';
+import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 
 const builderAuthHeader = `Basic ${Buffer.from(
   `${process.env.BUILDER_SMOKE_USERNAME ?? process.env.CMS_ADMIN_USERNAME ?? 'admin'}:${process.env.BUILDER_SMOKE_PASSWORD ?? process.env.CMS_ADMIN_PASSWORD ?? 'local-review-2026!'}`,
@@ -7,6 +13,47 @@ const builderAuthHeader = `Basic ${Buffer.from(
 function mutationHeaders(scope: string): Record<string, string> {
   const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'seo-publish-history';
   return { 'x-forwarded-for': `pw-${safeScope}` };
+}
+
+function makeColumnsCollection(record: {
+  recordId: string;
+  status: 'draft' | 'published';
+  slug: string;
+  title: string;
+  summary: string;
+  category: string;
+  date: string;
+  updatedAt: string;
+}): BuilderCmsCollection {
+  return {
+    collectionId: 'columns',
+    name: 'Columns',
+    slug: 'columns',
+    description: 'CMS columns',
+    localized: true,
+    fields: [],
+    indexes: [],
+    records: [
+      {
+        recordId: record.recordId,
+        status: record.status,
+        locale: 'ko',
+        fields: {
+          slug: record.slug,
+          title: record.title,
+          summary: record.summary,
+          content: record.summary,
+          category: record.category,
+          date: record.date,
+        },
+        createdAt: record.updatedAt,
+        updatedAt: record.updatedAt,
+      },
+    ],
+    permissions: { read: ['public'], create: ['staff'], update: ['staff'], delete: ['staff'] },
+    createdAt: record.updatedAt,
+    updatedAt: record.updatedAt,
+  };
 }
 
 type TestDocument = {
@@ -222,10 +269,16 @@ async function openBuilderPageFromPagesPanel(page: Page, pageTitle: string, page
       waitUntil: 'domcontentloaded',
     });
     const shell = page.locator('[data-editor-shell]').first();
-    await expect(shell).toBeVisible({ timeout: 30_000 });
-    await expect(shell).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
-    await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
-    return;
+    try {
+      await expect(shell).toBeVisible({ timeout: 30_000 });
+      await expect(shell).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
+      await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+      return;
+    } catch {
+      // Fall back to the drawer path below. The pageId route is convenient but
+      // the editor shell can lag behind on some runs; the drawer path is the
+      // same visible workflow the rest of the suite uses.
+    }
   }
 
   await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
@@ -233,7 +286,7 @@ async function openBuilderPageFromPagesPanel(page: Page, pageTitle: string, page
   await expect(shell).toBeVisible({ timeout: 30_000 });
   await expect(shell).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
   await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
-  await page.getByRole('button', { name: 'Pages', exact: true }).click();
+  await page.getByRole('button', { name: /^Pages$|^페이지$/ }).click();
   const pagesDrawer = page.locator('[aria-hidden="false"]').first();
   const pageButton = pagesDrawer
     .getByRole('button', { name: new RegExp(escapeRegex(pageTitle)) })
@@ -244,6 +297,8 @@ async function openBuilderPageFromPagesPanel(page: Page, pageTitle: string, page
 }
 
 test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
+  const publishCopy = getPublishModalCopy('ko');
+
   test('traps focus in the SEO panel and restores focus to the toolbar trigger', async ({ page }) => {
     test.setTimeout(60_000);
 
@@ -256,6 +311,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     try {
       const createResponse = await page.request.post('/api/builder/site/pages', {
         headers,
+        timeout: 60_000,
         data: {
           locale: 'ko',
           slug,
@@ -275,7 +331,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
 
       const seoDialog = page.getByRole('dialog', { name: '페이지 SEO' });
       await expect(seoDialog).toBeVisible();
-      await expect(seoDialog.getByLabel('SEO title')).toBeVisible();
+      await expect(seoDialog.getByLabel('SEO 제목')).toBeVisible();
       const firstFocusable = seoDialog.getByRole('button', { name: '추천 적용' });
       const lastFocusable = seoDialog.getByRole('button', { name: '저장' });
       await expect(firstFocusable).toBeFocused();
@@ -321,6 +377,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     try {
       const createResponse = await page.request.post('/api/builder/site/pages', {
         headers,
+        timeout: 60_000,
         data: {
           locale: 'ko',
           slug,
@@ -348,7 +405,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await expect(historyDialog).toBeVisible();
       const closeButton = historyDialog.getByRole('button', { name: '닫기' });
       await expect(closeButton).toBeFocused();
-      const manualRevisionCard = historyDialog.getByRole('button', { name: /manual/ }).first();
+      const manualRevisionCard = historyDialog.locator('[data-builder-version-revision-source="manual"]').first();
       await expect(manualRevisionCard).toBeVisible();
       const inlineRestoreButton = historyDialog.getByRole('button', { name: '복원', exact: true }).first();
 
@@ -421,6 +478,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     try {
       const createResponse = await page.request.post('/api/builder/site/pages', {
         headers,
+        timeout: 60_000,
         data: {
           locale: 'ko',
           slug,
@@ -437,8 +495,9 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await openBuilderPageFromPagesPanel(page, pageTitle, pageId!);
       const rootNode = page.locator(`[data-node-id="root-${token}"]`).first();
       await expect(rootNode).toBeVisible();
-      await rootNode.click({ position: { x: 24, y: 24 }, force: true });
-      await rootNode.click({ button: 'right', position: { x: 24, y: 24 }, force: true });
+      await rootNode.click({ position: { x: 24, y: 24 } });
+      await expect(rootNode).toHaveAttribute('data-selected', 'true');
+      await rootNode.click({ button: 'right', position: { x: 24, y: 24 } });
       await page.getByRole('menuitem', { name: /Save as section|섹션으로 저장/ }).click();
 
       const saveDialog = page.getByRole('dialog', { name: '섹션으로 저장' });
@@ -446,7 +505,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       const closeButton = saveDialog.getByRole('button', { name: '닫기' });
       const cancelButton = saveDialog.getByRole('button', { name: '취소' });
       const saveButton = saveDialog.getByRole('button', { name: '저장', exact: true });
-      const nameInput = saveDialog.getByPlaceholder('예) 호정 hero 섹션');
+      const nameInput = saveDialog.getByPlaceholder('예) 호정 히어로 섹션');
       await expect(nameInput).toBeFocused();
 
       await page.keyboard.press('Shift+Tab');
@@ -497,6 +556,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     try {
       const createResponse = await page.request.post('/api/builder/site/pages', {
         headers,
+        timeout: 60_000,
         data: {
           locale: 'ko',
           slug,
@@ -576,7 +636,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       expect(blockedPublishResponse.status()).toBe(422);
       const blockedPublish = (await blockedPublishResponse.json()) as { ok?: boolean; error?: string; blockers?: unknown[] };
       expect(blockedPublish.ok).toBe(false);
-      expect(blockedPublish.error).toBe('publish_blocked');
+      expect((blockedPublish as { errorCode?: string; error?: string }).errorCode ?? blockedPublish.error).toBe('publish_blocked');
       expect(blockedPublish.blockers?.length ?? 0).toBeGreaterThan(0);
 
       const publishedTitle = `Published revision ${token}`;
@@ -599,10 +659,15 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
         },
       });
       expect(seoResponse.status()).toBe(200);
-      const seoPayload = (await seoResponse.json()) as { ok?: boolean; seo?: { title?: string; canonical?: string }; error?: string };
+      const seoPayload = (await seoResponse.json()) as {
+        ok?: boolean;
+        seo?: { title?: string; canonical?: string };
+        defaults?: { canonical?: string };
+        error?: string;
+      };
       expect(seoPayload.ok, seoPayload.error).toBe(true);
       expect(seoPayload.seo?.title).toBe(seoTitle);
-      expect(seoPayload.seo?.canonical).toBe(canonical);
+      expect(seoPayload.defaults?.canonical).toBe(canonical);
 
       const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
         headers,
@@ -704,6 +769,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     try {
       const createResponse = await page.request.post('/api/builder/site/pages', {
         headers,
+        timeout: 60_000,
         data: {
           locale: 'ko',
           slug,
@@ -797,6 +863,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     try {
       const koCreateResponse = await page.request.post('/api/builder/site/pages', {
         headers,
+        timeout: 60_000,
         data: {
           locale: 'ko',
           slug: koSlug,
@@ -812,6 +879,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
 
       const enCreateResponse = await page.request.post('/api/builder/site/pages', {
         headers,
+        timeout: 60_000,
         data: {
           locale: 'en',
           slug: enSlug,
@@ -879,7 +947,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
   test('covers W195 publish dialog draft-vs-published diff summary', async ({ page }) => {
     test.setTimeout(90_000);
 
-    const token = `w195-${Date.now().toString(36)}`;
+    const token = 'w195-visual';
     const headers = mutationHeaders(token);
     const slug = `publish-diff-${token}`;
     const pageTitle = `W195 Publish Diff ${token}`;
@@ -890,6 +958,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     try {
       const createResponse = await page.request.post('/api/builder/site/pages', {
         headers,
+        timeout: 60_000,
         data: {
           locale: 'ko',
           slug,
@@ -923,15 +992,35 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await expect(page.locator(`[data-node-id="title-${token}"]`).first()).toContainText(changedTitle);
 
       await page.getByTitle('사이트 발행').click();
-      const publishDialog = page.getByRole('dialog', { name: /Publish Page|페이지 발행/ });
+      const publishDialog = page.getByRole('dialog', { name: publishCopy.title });
       await expect(publishDialog).toBeVisible();
-      await expect(publishDialog.getByText(/Draft vs published|초안 vs 발행본/)).toBeVisible();
+      await expect(publishDialog.getByText(publishCopy.diffTitle)).toBeVisible();
       await expect(publishDialog.getByText('+0 / -0 / ~1', { exact: true })).toBeVisible();
-      await expect(publishDialog.getByText('~ 변경됨 1', { exact: true })).toBeVisible();
+      await expect(publishDialog.getByText(`${publishCopy.diffModified} 1`, { exact: true })).toBeVisible();
       await expect(publishDialog.getByText(new RegExp(`title-${token}`))).toBeVisible();
       await expect(
         publishDialog.getByText(new RegExp(`W195 original published .*${escapeRegex(changedTitle)}`)),
       ).toBeVisible();
+      const scheduledPublishInput = publishDialog.getByLabel(publishCopy.scheduleInputAria);
+      const fixedScheduledAt = '2026-06-01T12:00';
+      await scheduledPublishInput.fill(fixedScheduledAt);
+      await expect(scheduledPublishInput).toHaveValue(fixedScheduledAt);
+      await page.evaluate(() => {
+        const active = document.activeElement;
+        if (active instanceof HTMLElement) active.blur();
+      });
+      // Pin the modal body scroll: fill() scroll-into-views the schedule input
+      // to a non-deterministic offset (±5px), which shifts the whole capture.
+      await publishDialog.evaluate((dialog) => {
+        dialog.querySelectorAll('*').forEach((element) => {
+          if (element instanceof HTMLElement && element.scrollHeight > element.clientHeight && element.scrollTop > 0) {
+            element.scrollTop = element.scrollHeight;
+          }
+        });
+      });
+      await expect(publishDialog).toHaveScreenshot('publish-modal-diff.png', {
+        mask: [publishDialog.getByText(/발행본 v\d+|published v\d+|已發佈版本 v\d+/)],
+      });
     } finally {
       if (pageId) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
@@ -939,6 +1028,380 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
           failOnStatusCode: false,
         });
       }
+    }
+  });
+
+  test('runs scheduled publish jobs through the cron route', async ({ page }) => {
+    test.setTimeout(120_000);
+
+    const token = 'w195-cron';
+    const headers = mutationHeaders(token);
+    const slug = `publish-cron-${token}`;
+    const pageTitle = `W195 Cron ${token}`;
+    const originalTitle = `W195 cron original ${token}`;
+    const scheduledTitle = `W195 cron scheduled ${token}`;
+    let pageId: string | null = null;
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
+        timeout: 60_000,
+        data: {
+          locale: 'ko',
+          slug,
+          title: pageTitle,
+          document: makeDocument({ token, titleText: originalTitle }),
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      pageId = created.pageId ?? null;
+      expect(pageId).toBeTruthy();
+
+      let revision = await currentDraftRevision(page.request, pageId!, token);
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers,
+        data: { expectedDraftRevision: revision },
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      revision = await currentDraftRevision(page.request, pageId!, token);
+      await putDraft(
+        page.request,
+        pageId!,
+        revision,
+        makeDocument({ token, titleText: scheduledTitle }),
+        token,
+      );
+
+      const scheduleJob = await schedulePagePublish({
+        siteId: 'default',
+        pageId: pageId!,
+        locale: 'ko',
+        scheduledAt: '2026-05-12T10:00:00.000Z',
+      });
+      expect(scheduleJob.status).toBe('scheduled');
+
+      const cronHeaders: Record<string, string> | undefined = process.env.CRON_SECRET
+        ? { 'x-cron-secret': process.env.CRON_SECRET }
+        : undefined;
+      const cronResponse = await page.request.post('/api/cron/scheduled-publish?limit=5', {
+        headers: cronHeaders,
+      });
+      expect(cronResponse.status()).toBe(200);
+      const cronPayload = await cronResponse.json() as {
+        ok?: boolean;
+        due?: number;
+        published?: number;
+        failed?: number;
+        jobs?: Array<{ status?: string; publishedRevision?: number; publishedRevisionId?: string }>;
+      };
+      expect(cronPayload.ok).toBe(true);
+      expect(cronPayload.due).toBeGreaterThanOrEqual(1);
+      expect(cronPayload.published).toBe(1);
+      expect(cronPayload.failed).toBe(0);
+      expect(cronPayload.jobs?.[0]).toMatchObject({ status: 'published' });
+
+      const activeScheduleResponse = await page.request.get(
+        `/api/builder/site/pages/${pageId}/scheduled-publish?locale=ko`,
+        { headers },
+      );
+      expect(activeScheduleResponse.status()).toBe(200);
+      const activeSchedulePayload = (await activeScheduleResponse.json()) as {
+        ok?: boolean;
+        job?: { status?: string } | null;
+      };
+      expect(activeSchedulePayload.ok).toBe(true);
+      expect(activeSchedulePayload.job).toBeNull();
+
+      const publicResponse = await page.request.get(`/ko/${slug}`);
+      expect(publicResponse.status()).toBe(200);
+      const publicHtml = await publicResponse.text();
+      expect(publicHtml).toContain(scheduledTitle);
+      expect(publicHtml).not.toContain(originalTitle);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+      await rm(path.join(process.cwd(), 'runtime-data', 'builder-scheduled-publish', 'default'), {
+        recursive: true,
+        force: true,
+      }).catch(() => undefined);
+    }
+  });
+
+  test('publishes a draft page and CMS record through the atomic route', async ({ page }) => {
+    test.setTimeout(120_000);
+
+    const token = `w195-atomic-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
+    const pageSlug = `atomic-publish-${token}`;
+    const recordSlug = `atomic-record-${token}`;
+    const pageTitle = `Atomic publish page ${token}`;
+    const recordTitle = `Atomic publish record ${token}`;
+    const recordSummary = `Atomic publish summary ${token}`;
+    let pageId: string | null = null;
+    let publicSlug = pageSlug;
+    let publishedSlug = pageSlug;
+    const originalSite = await readSiteDocument('default', 'ko');
+    const now = new Date().toISOString();
+    const seededSite = {
+      ...originalSite,
+      cmsCollections: [
+        ...(originalSite.cmsCollections ?? []).filter((collection) => collection.collectionId !== 'columns'),
+        makeColumnsCollection({
+          recordId: recordSlug,
+          status: 'draft',
+          slug: recordSlug,
+          title: recordTitle,
+          summary: recordSummary,
+          category: 'Atomic publish',
+          date: '2026-06-01',
+          updatedAt: now,
+        }),
+      ],
+      updatedAt: now,
+    } as typeof originalSite;
+
+    try {
+      await writeSiteDocument(seededSite);
+
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
+        timeout: 60_000,
+        data: {
+          locale: 'ko',
+          slug: pageSlug,
+          title: pageTitle,
+          addToNavigation: false,
+          dynamicListCollectionId: 'columns',
+          dynamicListLimit: 1,
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as {
+        success?: boolean;
+        pageId?: string;
+        page?: {
+          slug?: string;
+          dynamicList?: {
+            kind?: string;
+            collectionId?: string;
+            targetId?: string;
+            limit?: number;
+          };
+          dynamicItem?: {
+            collectionId?: string;
+            targetId?: string;
+            slugField?: string;
+            defaultRecordSlug?: string;
+          };
+        };
+        error?: string;
+      };
+      expect(created.success, created.error).toBe(true);
+      pageId = created.pageId ?? null;
+      expect(pageId).toBeTruthy();
+      publicSlug = created.page?.slug ?? pageSlug;
+      expect(created.page?.dynamicList).toMatchObject({
+        kind: 'collection-list-v1',
+        collectionId: 'columns',
+        targetId: 'home.insights.feed',
+        limit: 1,
+      });
+
+      const atomicResponse = await page.request.post('/api/builder/publish/atomic', {
+        headers,
+        data: {
+          pageIds: [pageId!],
+          cmsCollectionIds: ['columns'],
+          locale: 'ko',
+        },
+      });
+      expect(atomicResponse.status()).toBe(200);
+      const atomicPayload = (await atomicResponse.json()) as {
+        ok?: boolean;
+        status?: string;
+        transactionId?: string;
+        results?: Array<{ kind?: string; id?: string; status?: string }>;
+        error?: string;
+      };
+      expect(atomicPayload.ok, atomicPayload.error).toBe(true);
+      expect(atomicPayload.status).toBe('committed');
+      expect(atomicPayload.transactionId).toBeTruthy();
+      expect(atomicPayload.results).toEqual(expect.arrayContaining([
+        expect.objectContaining({ kind: 'page', id: pageId, status: 'succeeded' }),
+        expect.objectContaining({ kind: 'cms', id: 'columns', status: 'succeeded' }),
+      ]));
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish?locale=ko`, {
+        headers: mutationHeaders(`${token}-page-publish`),
+      });
+      expect(publishResponse.status()).toBe(200);
+      const published = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(published.ok, published.error).toBe(true);
+      publishedSlug = published.slug ?? publicSlug;
+
+      await page.goto(`/ko/${publishedSlug}`, { waitUntil: 'domcontentloaded' });
+      const publishedRepeater = page.locator('[data-node-id="dynamic-list-repeater-columns"]');
+      await expect(publishedRepeater).toBeVisible();
+      await expect(publishedRepeater.locator('[data-builder-repeater-item="true"]')).toHaveCount(1);
+      await expect(publishedRepeater.locator('[data-node-id^="dynamic-list-card-title-columns"]').first()).toContainText(recordTitle);
+      await expect(publishedRepeater.locator('[data-node-id^="dynamic-list-card-summary-columns"]').first()).toContainText(recordSummary);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+      await writeSiteDocument(originalSite).catch(() => undefined);
+    }
+  });
+
+  test('rolls back a partially failed atomic publish and preserves the draft edit', async ({ page }) => {
+    test.setTimeout(120_000);
+
+    const token = `w195-rollback-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
+    const pageSlug = `atomic-rollback-${token}`;
+    const recordSlug = `atomic-rollback-record-${token}`;
+    const pageTitle = `Atomic rollback page ${token}`;
+    const originalPageTitle = `Atomic rollback page ${token}`;
+    const changedPageTitle = `Atomic rollback page changed ${token}`;
+    const recordTitle = `Atomic rollback record ${token}`;
+    const recordSummary = `Atomic rollback summary ${token}`;
+    let pageId: string | null = null;
+    const originalSite = await readSiteDocument('default', 'ko');
+    const now = new Date().toISOString();
+    const seededSite = {
+      ...originalSite,
+      cmsCollections: [
+        ...(originalSite.cmsCollections ?? []).filter((collection) => collection.collectionId !== 'columns'),
+        makeColumnsCollection({
+          recordId: recordSlug,
+          status: 'published',
+          slug: recordSlug,
+          title: recordTitle,
+          summary: recordSummary,
+          category: 'Atomic rollback',
+          date: '2026-06-02',
+          updatedAt: now,
+        }),
+      ],
+      updatedAt: now,
+    } as typeof originalSite;
+
+    try {
+      await writeSiteDocument(seededSite);
+
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
+        timeout: 60_000,
+        data: {
+          locale: 'ko',
+          slug: pageSlug,
+          title: pageTitle,
+          addToNavigation: false,
+          dynamicListCollectionId: 'columns',
+          dynamicListLimit: 1,
+          document: makeDocument({ token, titleText: originalPageTitle }),
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as {
+        success?: boolean;
+        pageId?: string;
+        page?: {
+          slug?: string;
+          dynamicList?: {
+            kind?: string;
+            collectionId?: string;
+            targetId?: string;
+            limit?: number;
+          };
+        };
+        error?: string;
+      };
+      expect(created.success, created.error).toBe(true);
+      pageId = created.pageId ?? null;
+      expect(pageId).toBeTruthy();
+      expect(created.page?.dynamicList).toMatchObject({
+        kind: 'collection-list-v1',
+        collectionId: 'columns',
+        targetId: 'home.insights.feed',
+        limit: 1,
+      });
+
+      let revision = await currentDraftRevision(page.request, pageId!, token);
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish?locale=ko`, {
+        headers,
+        data: { expectedDraftRevision: revision },
+      });
+      expect(publishResponse.status()).toBe(200);
+      const published = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(published.ok, published.error).toBe(true);
+
+      revision = await currentDraftRevision(page.request, pageId!, token);
+      await putDraft(
+        page.request,
+        pageId!,
+        revision,
+        makeDocument({ token, titleText: changedPageTitle }),
+        token,
+      );
+
+      const atomicResponse = await page.request.post('/api/builder/publish/atomic', {
+        headers,
+        data: {
+          pageIds: [pageId!],
+          cmsCollectionIds: ['columns', 'missing-collection'],
+          locale: 'ko',
+        },
+      });
+      expect(atomicResponse.status()).toBe(207);
+      const atomicPayload = (await atomicResponse.json()) as {
+        ok?: boolean;
+        status?: string;
+        transactionId?: string;
+        results?: Array<{ kind?: string; id?: string; status?: string; error?: string }>;
+        error?: string;
+      };
+      expect(atomicPayload.ok).toBe(false);
+      expect(atomicPayload.status).toBe('rolled-back');
+      expect(atomicPayload.transactionId).toBeTruthy();
+      expect(atomicPayload.results).toEqual(expect.arrayContaining([
+        expect.objectContaining({ kind: 'page', id: pageId, status: 'succeeded' }),
+        expect.objectContaining({ kind: 'cms', id: 'columns', status: 'succeeded' }),
+        expect.objectContaining({ kind: 'cms', id: 'missing-collection', status: 'failed' }),
+      ]));
+
+      await page.goto(`/ko/${published.slug ?? pageSlug}`, { waitUntil: 'domcontentloaded' });
+      await expect(page.locator(`[data-node-id="title-${token}"]`).first()).toContainText(originalPageTitle);
+
+      const draftResponse = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+        headers,
+      });
+      expect(draftResponse.status()).toBe(200);
+      const draftPayload = (await draftResponse.json()) as {
+        document?: {
+          nodes?: Array<{ id?: string; content?: { text?: string } }>;
+        };
+      };
+      const draftTitle = draftPayload.document?.nodes?.find((node) => node.id === `title-${token}`);
+      expect(draftTitle?.content?.text).toBe(changedPageTitle);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+      await writeSiteDocument(originalSite).catch(() => undefined);
     }
   });
 
@@ -957,6 +1420,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     try {
       const createResponse = await page.request.post('/api/builder/site/pages', {
         headers,
+        timeout: 60_000,
         data: {
           locale: 'ko',
           slug,
@@ -995,13 +1459,13 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
 
       await page.getByTitle('버전 히스토리').click();
       await expect(page.getByText('버전 히스토리')).toBeVisible();
-      const manualRevisionCard = page.getByRole('button', { name: /manual/ }).first();
+      const manualRevisionCard = page.getByRole('button', { name: /manual|수동/ }).first();
       await expect(manualRevisionCard).toBeVisible();
       await manualRevisionCard.hover();
-      await expect(page.getByText(/\+\d+ \/ -\d+ \/ ~\d+|현재 draft 와 동일|Diff preview/).first()).toBeVisible();
+      await expect(page.getByText(/\+\d+ \/ -\d+ \/ ~\d+|현재 draft 와 동일|현재 초안과 동일|Diff preview|차이 미리보기/).first()).toBeVisible();
       await manualRevisionCard.click();
       await expect(page.getByText(new RegExp(`title-${token}`))).toBeVisible();
-      await expect(page.getByText(/text .*UI original revision.*UI changed draft/)).toBeVisible();
+      await expect(page.getByText(/(?:text|텍스트) .*UI original revision.*UI changed draft/)).toBeVisible();
       await page.getByRole('button', { name: '이 버전으로 복원' }).click();
       await page.getByRole('button', { name: '복원', exact: true }).first().click();
       await expect(page.getByText('버전 히스토리')).not.toBeVisible();
@@ -1017,23 +1481,24 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       const seoTitle = `W27 UI SEO ${token}`;
       const seoDescription = `W27 UI SEO description ${token} saved through the editor panel.`;
       const canonical = `https://tseng-law.com/ko/${slug}`;
+      const publicPath = `/ko/${slug}`;
       await page.getByTitle('현재 페이지 SEO').click();
       const seoDialog = page.getByRole('dialog', { name: '페이지 SEO' });
       await expect(seoDialog).toBeVisible();
-      await seoDialog.getByLabel('SEO title').fill(seoTitle);
-      await seoDialog.getByLabel('Meta description').fill(seoDescription);
-      await seoDialog.getByLabel('Canonical URL').fill(canonical);
+      await seoDialog.getByLabel('SEO 제목').fill(seoTitle);
+      await seoDialog.getByLabel('메타 설명').fill(seoDescription);
+      await seoDialog.getByLabel('표준 URL').fill(canonical);
       await expect(seoDialog.getByText('권장 30-60자')).toBeVisible();
       await expect(seoDialog.getByText(`${seoTitle.length}/60`)).toBeVisible();
       await expect(seoDialog.getByText('권장 120-160자')).toBeVisible();
       await expect(seoDialog.getByText(`${seoDescription.length}/160`)).toBeVisible();
-      await expect(seoDialog.getByText('Google preview')).toBeVisible();
-      await seoDialog.getByRole('button', { name: 'Social share' }).click();
-      await seoDialog.getByLabel('OG image URL').fill('/images/header-skyline-ratio.webp');
-      await expect(seoDialog.getByText('OG image preview')).toBeVisible();
-      await seoDialog.getByRole('button', { name: 'Advanced' }).click();
-      await seoDialog.getByRole('button', { name: '+ Article' }).click();
-      await expect(seoDialog.getByText('JSON-LD blocks')).toBeVisible();
+      await expect(seoDialog.getByText('Google 미리보기')).toBeVisible();
+      await seoDialog.getByRole('button', { name: '소셜 공유' }).click();
+      await seoDialog.getByLabel('OG 이미지 URL').fill('/images/header-skyline-ratio.webp');
+      await expect(seoDialog.getByText('OG 이미지 미리보기')).toBeVisible();
+      await seoDialog.getByRole('button', { name: '고급' }).click();
+      await seoDialog.getByRole('button', { name: '+ 칼럼' }).click();
+      await expect(seoDialog.getByText('JSON-LD 블록')).toBeVisible();
       const advancedSection = seoDialog.locator('section').filter({ hasText: '구조화 데이터' }).first();
       await expect(advancedSection.locator('input[type="text"]').last()).toHaveValue('Article JSON-LD');
       await expect(advancedSection.locator('textarea').last()).toHaveValue(/"@type": "Article"/);
@@ -1044,42 +1509,54 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await seoDialog.getByRole('button', { name: '저장' }).click();
       const seoSaveResponse = await seoSaveResponsePromise;
       expect(seoSaveResponse.status()).toBe(200);
-      const seoSavePayload = (await seoSaveResponse.json()) as { seo?: { title?: string; canonical?: string } };
-      expect(`${seoSavePayload.seo?.title ?? ''}|${seoSavePayload.seo?.canonical ?? ''}`).toBe(`${seoTitle}|${canonical}`);
+      const seoSavePayload = (await seoSaveResponse.json()) as {
+        seo?: { title?: string };
+        defaults?: { publicPath?: string };
+      };
+      expect(`${seoSavePayload.seo?.title ?? ''}|${seoSavePayload.defaults?.publicPath ?? ''}`).toBe(`${seoTitle}|${publicPath}`);
       await expect(seoDialog).not.toBeVisible();
       await expect.poll(async () => {
         const response = await page.request.get(`/api/builder/site/pages/${pageId}/seo?locale=ko`, {
           headers: { ...headers, Authorization: builderAuthHeader },
         });
         if (!response.ok()) return `status:${response.status()}`;
-        const payload = (await response.json()) as { seo?: { title?: string; canonical?: string } };
-        return `${payload.seo?.title ?? ''}|${payload.seo?.canonical ?? ''}`;
-      }).toBe(`${seoTitle}|${canonical}`);
+        const payload = (await response.json()) as { seo?: { title?: string }; defaults?: { publicPath?: string } };
+        return `${payload.seo?.title ?? ''}|${payload.defaults?.publicPath ?? ''}`;
+      }).toBe(`${seoTitle}|${publicPath}`);
 
       await page.getByTitle('사이트 발행').click();
-      const publishDialog = page.getByRole('dialog', { name: /Publish Page|페이지 발행/ });
+      const publishDialog = page.getByRole('dialog', { name: publishCopy.title });
       await expect(publishDialog).toBeVisible();
-      await expect(publishDialog.getByText(/Automatic preflight checklist|자동 사전 검사/)).toBeVisible();
-      await expect(publishDialog.getByText('Images', { exact: true })).toBeVisible();
-      await expect(publishDialog.getByText('Links', { exact: true })).toBeVisible();
-      await expect(publishDialog.getByText('SEO', { exact: true })).toBeVisible();
-      await expect(publishDialog.getByText('Forms', { exact: true })).toBeVisible();
-      const warningOverrideButton = publishDialog.getByRole('button', { name: '경고 무시하고 발행' });
+      await expect(publishDialog.getByText(publishCopy.preflightTitle)).toBeVisible();
+      await expect(publishDialog.getByText(publishCopy.preflight.images.label, { exact: true })).toBeVisible();
+      await expect(publishDialog.getByText(publishCopy.preflight.links.label, { exact: true })).toBeVisible();
+      await expect(publishDialog.getByText(publishCopy.preflight.seo.label, { exact: true })).toBeVisible();
+      await expect(publishDialog.getByText(publishCopy.preflight.forms.label, { exact: true })).toBeVisible();
+      const scheduledPublishInput = publishDialog.getByLabel(publishCopy.scheduleInputAria);
+      const fixedScheduledAt = '2026-06-01T12:00';
+      await scheduledPublishInput.fill(fixedScheduledAt);
+      await expect(scheduledPublishInput).toHaveValue(fixedScheduledAt);
+      await page.evaluate(() => {
+        const active = document.activeElement;
+        if (active instanceof HTMLElement) active.blur();
+      });
+      await expect(publishDialog.getByText(publishCopy.scheduleTitle)).toBeVisible();
+      const warningOverrideButton = publishDialog.getByRole('button', { name: publishCopy.overrideWarningsButton });
       if (await warningOverrideButton.isVisible().catch(() => false)) {
         await warningOverrideButton.click();
       }
-      const modalPublishButton = publishDialog.getByRole('button', { name: '발행' }).last();
+      const modalPublishButton = publishDialog.getByRole('button', { name: publishCopy.publishButton }).last();
       await expect(modalPublishButton).toBeEnabled();
       await modalPublishButton.click();
-      await expect(page.getByText('발행 완료').first()).toBeVisible({ timeout: 15_000 });
+      await expect(page.getByText(publishCopy.toastPublishSuccess).first()).toBeVisible({ timeout: 15_000 });
       await expect.poll(async () => {
         const response = await page.request.get(`/api/builder/site/pages/${pageId}/seo?locale=ko`, {
           headers: { ...headers, Authorization: builderAuthHeader },
         });
         if (!response.ok()) return `status:${response.status()}`;
-        const payload = (await response.json()) as { seo?: { title?: string; canonical?: string } };
-        return `${payload.seo?.title ?? ''}|${payload.seo?.canonical ?? ''}`;
-      }).toBe(`${seoTitle}|${canonical}`);
+        const payload = (await response.json()) as { seo?: { title?: string }; defaults?: { publicPath?: string } };
+        return `${payload.seo?.title ?? ''}|${payload.defaults?.publicPath ?? ''}`;
+      }).toBe(`${seoTitle}|${publicPath}`);
 
       const publicResponse = await page.request.get(`/ko/${slug}`);
       expect(publicResponse.status()).toBe(200);

@@ -18,12 +18,21 @@ import { useEffect } from 'react';
  * clickable element; the component wires a `click` listener that POSTs to
  * /api/experiments/event.
  */
+function currentLocale(): string {
+  const segment = window.location.pathname.split('/').filter(Boolean)[0];
+  if (segment === 'ko' || segment === 'zh-hant' || segment === 'en') return segment;
+  const htmlLang = document.documentElement.lang;
+  if (htmlLang === 'ko' || htmlLang === 'zh-hant' || htmlLang === 'en') return htmlLang;
+  return 'ko';
+}
+
 export default function ExperimentVariantSwap() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const nodes = Array.from(document.querySelectorAll<HTMLElement>('[data-builder-experiment-id]'));
     if (nodes.length === 0) return;
 
+    const locale = currentLocale();
     const experimentIds = Array.from(new Set(nodes.map((n) => n.dataset.builderExperimentId ?? '').filter(Boolean)));
     const variantByExperiment: Record<string, string> = {};
 
@@ -31,7 +40,7 @@ export default function ExperimentVariantSwap() {
     (async () => {
       for (const experimentId of experimentIds) {
         try {
-          const res = await fetch(`/api/experiments/assign?experimentId=${encodeURIComponent(experimentId)}`, {
+          const res = await fetch(`/api/experiments/assign?experimentId=${encodeURIComponent(experimentId)}&locale=${encodeURIComponent(locale)}`, {
             credentials: 'include',
           });
           if (!res.ok) continue;
@@ -70,7 +79,7 @@ export default function ExperimentVariantSwap() {
       const experimentId = wrapper?.dataset.builderExperimentId ?? '';
       const variantId = variantByExperiment[experimentId] ?? wrapper?.dataset.builderExperimentVariant ?? '';
       if (!goal || !experimentId || !variantId) return;
-      void fetch('/api/experiments/event', {
+      void fetch(`/api/experiments/event?locale=${encodeURIComponent(locale)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ experimentId, variantId, goal }),

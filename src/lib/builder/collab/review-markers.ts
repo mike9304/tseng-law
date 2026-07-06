@@ -15,7 +15,7 @@
  * Per-site write mutex is identical to comments-store's pattern.
  */
 
-import { readFile, writeFile, mkdir } from 'fs/promises';
+import { readFile, writeFile, mkdir, rename, rm } from 'fs/promises';
 import path from 'path';
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 
@@ -104,10 +104,19 @@ async function readFileSafe(siteId: string): Promise<ReviewMarkersFile> {
   return { version: 1, markers: [] };
 }
 
+// temp-write + rename so a crash mid-write can never leave a truncated
+// destination; rename(2) is atomic on the same filesystem.
 async function writeFileAtomic(siteId: string, file: ReviewMarkersFile): Promise<void> {
   const target = fileFor(siteId);
   await mkdir(path.dirname(target), { recursive: true });
-  await writeFile(target, JSON.stringify(file), 'utf8');
+  const tmpPath = `${target}.tmp-${process.pid}-${Math.random().toString(36).slice(2)}`;
+  try {
+    await writeFile(tmpPath, JSON.stringify(file), 'utf8');
+    await rename(tmpPath, target);
+  } catch (error) {
+    await rm(tmpPath, { force: true }).catch(() => {});
+    throw error;
+  }
 }
 
 function generateMarkerId(): string {

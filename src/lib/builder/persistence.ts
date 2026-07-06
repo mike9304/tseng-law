@@ -838,11 +838,20 @@ function summarizeBuilderSnapshotHistoryRecord(
 }
 
 function resolveBuilderSnapshotStore(): BuilderSnapshotStore {
-  if (process.env.BLOB_READ_WRITE_TOKEN?.trim()) {
+  if (shouldUseBlobBuilderSnapshotStore()) {
     return createBlobBuilderSnapshotStore();
   }
 
   return createFileBuilderSnapshotStore();
+}
+
+function shouldUseBlobBuilderSnapshotStore(): boolean {
+  if (!process.env.BLOB_READ_WRITE_TOKEN?.trim()) return false;
+  if (process.env.CONSULTATION_LOG_BACKEND === 'local') return false;
+  if (process.env.BUILDER_SNAPSHOT_BACKEND === 'local') return false;
+  if (process.env.BUILDER_SITE_BACKEND === 'local') return false;
+  if (process.env.NODE_ENV !== 'production' && process.env.BUILDER_USE_BLOB_IN_DEV !== '1') return false;
+  return true;
 }
 
 function createBlobBuilderSnapshotStore(): BuilderSnapshotStore {
@@ -980,14 +989,24 @@ function isBlobNotFoundError(error: unknown): boolean {
 }
 
 function normalizeExpectedRevision(value?: number): number | null {
+  // undefined = no expectation (skip the optimistic-concurrency check).
+  // A DEFINED-but-malformed value must NOT be treated as "no expectation" —
+  // doing so silently bypasses the conflict guard and lets a garbage
+  // expectedRevision clobber concurrent edits. Reject it instead. (R4)
+  if (value === undefined) return null;
   if (typeof value !== 'number' || !Number.isFinite(value) || value < 0) {
-    return value === undefined ? null : null;
+    throw new Error(`Invalid expectedRevision: ${String(value)}`);
   }
   return Math.trunc(value);
 }
 
 function normalizeExpectedSavedAt(value?: string): string | null {
-  if (typeof value !== 'string') return value === undefined ? null : null;
+  if (value === undefined) return null;
+  // Same as above: a defined-but-non-string value must be rejected, not
+  // silently dropped to null (which would skip the conflict guard). (R4)
+  if (typeof value !== 'string') {
+    throw new Error(`Invalid expectedSavedAt: ${String(value)}`);
+  }
   const trimmed = value.trim();
   return trimmed ? trimmed : null;
 }

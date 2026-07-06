@@ -1,11 +1,13 @@
 import { defineComponent } from '../define';
 import ColumnCardInspector from './Inspector';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import type { BuilderTheme } from '@/lib/builder/site/types';
 import {
   legacyCardStyleToVariant,
   resolveCardVariantStyle,
 } from '@/lib/builder/site/component-variants';
 import styles from './ColumnCard.module.css';
+import { getDomainCardWidgetsCopy } from '../domain-card-widgets-copy';
 
 interface ColumnCardContent {
   slug: string;
@@ -20,11 +22,14 @@ interface ColumnCardContent {
 function ColumnCardRender({
   node,
   theme,
+  locale = 'ko',
 }: {
   node: { content: ColumnCardContent };
   theme?: BuilderTheme;
+  locale?: Locale;
 }) {
   const { title = '', date = '', summary = '', slug = '' } = node.content;
+  const copy = getDomainCardWidgetsCopy(normalizeLocale(locale));
   const variantStyle = resolveCardVariantStyle(
     node.content.variant ?? legacyCardStyleToVariant(node.content.cardStyle),
     theme,
@@ -45,7 +50,7 @@ function ColumnCardRender({
           WebkitBackdropFilter: variantStyle.WebkitBackdropFilter,
         }}
       >
-        Column Card
+        {copy.columnCard.empty}
       </div>
     );
   }

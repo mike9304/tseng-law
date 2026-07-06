@@ -22,6 +22,7 @@ import {
   type BuilderSceneNode,
   type BuilderSceneSummary,
 } from '@/lib/builder/scene';
+import { getBuilderWorkspaceCopy } from '@/lib/builder/workspace-copy';
 import type { BuilderPageKey } from '@/lib/builder/types';
 import type { Locale } from '@/lib/locales';
 
@@ -50,6 +51,8 @@ export default function BuilderSceneWorkspaceShell({
     savedAt: string | null;
   };
 }) {
+  const copy = getBuilderWorkspaceCopy(locale);
+  const sceneCopy = getSceneWorkspaceCopy(locale);
   const [searchQuery, setSearchQuery] = useState('');
   const deferredSearchQuery = useDeferredValue(searchQuery);
   const [sceneState, setSceneState] = useState(scene);
@@ -156,24 +159,29 @@ export default function BuilderSceneWorkspaceShell({
 
   return (
     <BuilderWorkspaceFrame
-      title="Scene layers foundation"
-      description="Searchable layers, generic selection, breadcrumbs, and inspector shell built on the compatibility scene graph."
+      locale={locale}
+      title={sceneCopy.routeTitle}
+      description={sceneCopy.routeDescription}
       activeRail="layers"
       stageUrl={buildBuilderPageSceneHref(locale, pageKey)}
       railItems={[
-        { key: 'pages', label: 'Pages', description: 'Page entry points', href: `/${locale}/builder` },
-        { key: 'layers', label: 'Layers', description: 'Hierarchy and selection', active: true },
-        { key: 'assets', label: 'Assets', description: 'Recent builder media', href: `/${locale}/builder` },
+        { key: 'pages', label: copy.pagesLabel, description: copy.pagesDescription, href: `/${locale}/builder` },
+        { key: 'layers', label: copy.sceneLayersLabel, description: copy.sceneSidebarDescription, active: true },
+        { key: 'assets', label: copy.assetsLabel, description: copy.assetsDescription, href: `/${locale}/builder` },
       ]}
       leftMeta={
         <>
-          <span className="builder-stage-pill builder-stage-pill--accent">Scene layers</span>
-          <span className="builder-stage-pill">Workspace {workspace.name}</span>
-          <span className="builder-stage-pill">Site {site.name}</span>
+          <span className="builder-stage-pill builder-stage-pill--accent">{sceneCopy.sceneLayersPill}</span>
           <span className="builder-stage-pill">
-            {requestedMode === 'edit' ? 'Edit-capable page' : 'Preview-only page'}
+            {sceneCopy.workspaceLabel} {workspace.name}
           </span>
-          <span className="builder-stage-pill">{getSelectionLabel(selectedNodes.length)}</span>
+          <span className="builder-stage-pill">
+            {sceneCopy.siteLabel} {site.name}
+          </span>
+          <span className="builder-stage-pill">
+            {sceneCopy.pageModeLabel[requestedMode]}
+          </span>
+          <span className="builder-stage-pill">{getSelectionLabel(sceneCopy, selectedNodes.length)}</span>
         </>
       }
       rightMeta={
@@ -187,8 +195,8 @@ export default function BuilderSceneWorkspaceShell({
       leftSidebar={
         <div className="builder-scene-sidebar">
           <section className="builder-preview-inspector-card builder-dashboard-sidebar">
-            <h2>Page routes</h2>
-            <p>Scene graph views exist only for real builder-owned static pages.</p>
+            <h2>{copy.sceneSidebarTitle}</h2>
+            <p>{copy.sceneSidebarDescription}</p>
             <div className="builder-dashboard-nav-list">
               {pages.map((page) => (
                 <Link
@@ -197,8 +205,10 @@ export default function BuilderSceneWorkspaceShell({
                   className={`builder-dashboard-nav-card${page.pageKey === pageKey ? ' is-active' : ''}`}
                 >
                   <strong>{page.title}</strong>
-                  <span>{page.editable ? 'Edit-capable document' : 'Preview-only document'}</span>
-                  <small>{page.sectionCount} sections</small>
+                  <span>{page.editable ? sceneCopy.editableDocumentLabel : sceneCopy.previewOnlyDocumentLabel}</span>
+                  <small>
+                    {page.sectionCount} {sceneCopy.sectionsLabel}
+                  </small>
                 </Link>
               ))}
             </div>
@@ -207,21 +217,25 @@ export default function BuilderSceneWorkspaceShell({
           <section className="builder-preview-inspector-card">
             <div className="builder-scene-search-head">
               <div>
-                <h2>Layers</h2>
-                <p>Search and inspect the compatibility scene hierarchy without pretending live edit parity.</p>
+                <h2>{copy.sceneLayersLabel}</h2>
+                <p>{copy.sceneSidebarDescription}</p>
               </div>
-              <span className="builder-stage-pill">{visibleNodeCount} visible</span>
+              <span className="builder-stage-pill">
+                {visibleNodeCount} {sceneCopy.visibleLabel}
+              </span>
             </div>
             <label className="builder-scene-search">
-              <span className="builder-scene-search__label">Search layers</span>
+              <span className="builder-scene-search__label">{copy.sceneLayersLabel}</span>
               <input
                 type="search"
                 value={searchQuery}
                 onChange={(event) => setSearchQuery(event.target.value)}
-                placeholder="Search by label, kind, section, surface, or dataset"
+                placeholder={
+                  sceneCopy.searchPlaceholder
+                }
               />
             </label>
-            <div className="builder-scene-layer-tree" role="tree" aria-label="Scene layers tree">
+            <div className="builder-scene-layer-tree" role="tree" aria-label={sceneCopy.layersTreeAriaLabel}>
               <SceneLayersTreeNode
                 nodeId={sceneState.rootNodeId}
                 scene={sceneState}
@@ -237,6 +251,7 @@ export default function BuilderSceneWorkspaceShell({
                 onDragOverTarget={updateDropState}
                 onDropTarget={handleDrop}
                 depth={0}
+                copy={sceneCopy}
               />
             </div>
           </section>
@@ -245,7 +260,7 @@ export default function BuilderSceneWorkspaceShell({
       inspector={
         <>
           <section className="builder-preview-inspector-card">
-            <h2>Selection</h2>
+            <h2>{sceneCopy.selectionTitle}</h2>
             {primaryNode ? (
               <>
                 <div className="builder-scene-selection-summary">
@@ -289,138 +304,141 @@ export default function BuilderSceneWorkspaceShell({
               </>
             ) : (
               <ul className="builder-preview-inspector-notes">
-                <li>No node selected. Choose a node from the layers tree or scene canvas.</li>
+                <li>{sceneCopy.noNodeSelectedLabel}</li>
               </ul>
             )}
           </section>
 
           <section className="builder-preview-inspector-card">
-            <h2>Inspector shell</h2>
+            <h2>{sceneCopy.inspectorTitle}</h2>
             {primaryNode ? (
               <dl className="builder-preview-inspector-list">
                 <div>
-                  <dt>Source kind</dt>
+                  <dt>{sceneCopy.sourceKindLabel}</dt>
                   <dd>{primaryNode.sourceKind}</dd>
                 </div>
                 <div>
-                  <dt>Parent</dt>
-                  <dd>{primaryNode.parentNodeId ?? 'None'}</dd>
+                  <dt>{sceneCopy.parentLabel}</dt>
+                  <dd>{primaryNode.parentNodeId ?? sceneCopy.noneLabel}</dd>
                 </div>
                 <div>
-                  <dt>Children</dt>
+                  <dt>{sceneCopy.childrenLabel}</dt>
                   <dd>{primaryNode.childNodeIds.length}</dd>
                 </div>
                 <div>
-                  <dt>Section</dt>
-                  <dd>{primaryNode.sectionKey ?? 'Not section-bound'}</dd>
+                  <dt>{sceneCopy.sectionLabel}</dt>
+                  <dd>{primaryNode.sectionKey ?? sceneCopy.notSectionBoundLabel}</dd>
                 </div>
                 <div>
-                  <dt>Surface</dt>
-                  <dd>{primaryNode.surfaceId ?? 'Not surface-bound'}</dd>
+                  <dt>{sceneCopy.surfaceLabel}</dt>
+                  <dd>{primaryNode.surfaceId ?? sceneCopy.notSurfaceBoundLabel}</dd>
                 </div>
                 <div>
-                  <dt>Dataset</dt>
-                  <dd>{primaryNode.datasetId ?? 'Not dataset-bound'}</dd>
+                  <dt>{sceneCopy.datasetLabel}</dt>
+                  <dd>{primaryNode.datasetId ?? sceneCopy.notDatasetBoundLabel}</dd>
                 </div>
                 <div>
-                  <dt>Dataset target</dt>
-                  <dd>{primaryNode.datasetTargetId ?? 'Not a repeater target'}</dd>
+                  <dt>{sceneCopy.datasetTargetLabel}</dt>
+                  <dd>{primaryNode.datasetTargetId ?? sceneCopy.notRepeaterTargetLabel}</dd>
                 </div>
                 <div>
-                  <dt>Collection</dt>
-                  <dd>{primaryNode.datasetCollectionId ?? 'Not collection-bound'}</dd>
+                  <dt>{sceneCopy.collectionLabel}</dt>
+                  <dd>{primaryNode.datasetCollectionId ?? sceneCopy.notCollectionBoundLabel}</dd>
                 </div>
                 <div>
-                  <dt>Repeater preview</dt>
-                  <dd>{primaryNode.repeaterItems?.length ? `${primaryNode.repeaterItems.length} records` : 'No preview records'}</dd>
+                  <dt>{sceneCopy.repeaterPreviewLabel}</dt>
+                  <dd>
+                    {primaryNode.repeaterItems?.length
+                      ? sceneCopy.recordsLabel(primaryNode.repeaterItems.length)
+                      : sceneCopy.noPreviewRecordsLabel}
+                  </dd>
                 </div>
                 <div>
-                  <dt>State</dt>
-                  <dd>{formatNodeState(primaryNode)}</dd>
+                  <dt>{sceneCopy.stateLabel}</dt>
+                  <dd>{formatNodeState(locale, primaryNode)}</dd>
                 </div>
               </dl>
             ) : (
               <ul className="builder-preview-inspector-notes">
-                <li>The generic inspector shell is live, but no node is selected.</li>
+                <li>{sceneCopy.noInspectorSelectionLabel}</li>
               </ul>
             )}
           </section>
 
           <section className="builder-preview-inspector-card">
-            <h2>Scene summary</h2>
+            <h2>{sceneCopy.sceneSummaryTitle}</h2>
             <dl className="builder-preview-inspector-list">
               <div>
-                  <dt>Root</dt>
+                <dt>{sceneCopy.rootLabel}</dt>
                 <dd>{sceneState.rootNodeId}</dd>
               </div>
               <div>
-                <dt>Nodes</dt>
+                <dt>{sceneCopy.nodesLabel}</dt>
                 <dd>{summary.nodeCount}</dd>
               </div>
               <div>
-                <dt>Sections</dt>
+                <dt>{sceneCopy.sectionsLabel}</dt>
                 <dd>{summary.sectionCount}</dd>
               </div>
               <div>
-                <dt>Declared surfaces</dt>
+                <dt>{sceneCopy.declaredSurfacesLabel}</dt>
                 <dd>{summary.surfaceCount}</dd>
               </div>
               <div>
-                <dt>Dataset nodes</dt>
+                <dt>{sceneCopy.datasetNodesLabel}</dt>
                 <dd>{summary.datasetNodeCount}</dd>
               </div>
               <div>
-                <dt>Snapshot source</dt>
+                <dt>{sceneCopy.snapshotSourceLabel}</dt>
                 <dd>{snapshot.source}</dd>
               </div>
             </dl>
           </section>
 
           <section className="builder-preview-inspector-card">
-            <h2>Foundation scope</h2>
+            <h2>{sceneCopy.foundationScopeTitle}</h2>
             <ul className="builder-preview-inspector-notes">
-              <li>Layers/search/selection/breadcrumbs are now real on the compatibility scene route.</li>
-              <li>
-                Drag reorder now exists as a local proof surface on the compatibility scene route, but persistence,
-                resize, snapping geometry, and property editing parity are still absent.
-              </li>
-              <li>The current source is still the semantic-section document, not the final persisted scene runtime.</li>
+              {sceneCopy.foundationScopeItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
           </section>
 
           <section className="builder-preview-inspector-card">
-            <h2>Drag session</h2>
+            <h2>{sceneCopy.dragSessionTitle}</h2>
             {draggedNodeId ? (
               <ul className="builder-preview-inspector-notes">
-                <li>Dragging: {draggedNodeId}</li>
+                <li>
+                  {sceneCopy.draggingLabel}: {draggedNodeId}
+                </li>
                 {dropState ? (
                   <li>
                     {dropState.valid
-                      ? `Drop ${dropState.placement} ${dropState.targetNodeId}`
-                      : `Rejected: ${dropState.reason}`}
+                      ? sceneCopy.dropLabel(dropState.placement, dropState.targetNodeId)
+                      : sceneCopy.rejectedLabel(dropState.reason)}
                   </li>
                 ) : (
-                  <li>Move over a sibling node to see a valid or rejected drop target.</li>
+                  <li>{sceneCopy.dragHintLabel}</li>
                 )}
               </ul>
             ) : (
               <ul className="builder-preview-inspector-notes">
-                <li>No drag session active. Drag from layers rows or scene cards.</li>
+                <li>{sceneCopy.noDragSessionLabel}</li>
               </ul>
             )}
           </section>
 
           <section className="builder-preview-inspector-card">
-            <h2>Back links</h2>
+            <h2>{sceneCopy.backLinksTitle}</h2>
             <ul className="builder-preview-inspector-notes">
               <li>
                 <Link href={buildBuilderPageHref(locale, pageKey, requestedMode)} className="builder-link-inline">
-                  Return to page workspace
+                  {sceneCopy.returnToPageWorkspaceLabel}
                 </Link>
               </li>
               <li>
                 <Link href={buildBuilderPageHref(locale, pageKey, 'preview')} className="builder-link-inline">
-                  Open page preview
+                  {sceneCopy.openPagePreviewLabel}
                 </Link>
               </li>
             </ul>
@@ -430,21 +448,22 @@ export default function BuilderSceneWorkspaceShell({
     >
       <div className="builder-dashboard-canvas-copy builder-scene-shell">
         <div className="builder-dashboard-mode-row">
-          <span className="builder-stage-pill builder-stage-pill--accent">Scene graph</span>
-          <span className="builder-stage-pill">Source {snapshot.source}</span>
-          <span className="builder-stage-pill">Revision v{snapshot.revision}</span>
-          <span className="builder-stage-pill">{snapshot.savedAt ?? 'Not persisted yet'}</span>
-          <span className="builder-stage-pill">{getSelectionLabel(selectedNodes.length)}</span>
+          <span className="builder-stage-pill builder-stage-pill--accent">{sceneCopy.sceneGraphLabel}</span>
+          <span className="builder-stage-pill">
+            {sceneCopy.sourceLabel} {snapshot.source}
+          </span>
+          <span className="builder-stage-pill">
+            {sceneCopy.revisionLabel} v{snapshot.revision}
+          </span>
+          <span className="builder-stage-pill">{snapshot.savedAt ?? sceneCopy.notPersistedLabel}</span>
+          <span className="builder-stage-pill">{getSelectionLabel(sceneCopy, selectedNodes.length)}</span>
         </div>
 
         <section className="builder-preview-inspector-card">
           <div className="builder-scene-canvas-head">
             <div>
-              <h2>Scene canvas</h2>
-              <p>
-                This is still a compatibility scene, but the selection shell is now live. Selecting in layers or here
-                keeps the inspector and breadcrumbs synchronized.
-              </p>
+              <h2>{sceneCopy.sceneCanvasTitle}</h2>
+              <p>{sceneCopy.sceneCanvasDescription}</p>
             </div>
             {primaryNode ? (
               <div className="builder-scene-focus-meta">
@@ -470,6 +489,7 @@ export default function BuilderSceneWorkspaceShell({
               onDragOverTarget={updateDropState}
               onDropTarget={handleDrop}
               depth={0}
+              copy={sceneCopy}
             />
           </div>
         </section>
@@ -493,6 +513,7 @@ function SceneLayersTreeNode({
   onDragOverTarget,
   onDropTarget,
   depth,
+  copy,
 }: {
   nodeId: string;
   scene: BuilderSceneDocument;
@@ -512,6 +533,7 @@ function SceneLayersTreeNode({
   ) => void;
   onDropTarget: (event: React.DragEvent<HTMLElement>, targetNodeId: string) => void;
   depth: number;
+  copy: ReturnType<typeof getSceneWorkspaceCopy>;
 }) {
   const node = scene.nodes[nodeId];
 
@@ -554,10 +576,10 @@ function SceneLayersTreeNode({
           <small>{node.nodeKind}</small>
         </span>
         <span className="builder-scene-layer-row__meta">
-          {node.hidden ? <span className="builder-stage-pill">hidden</span> : null}
-          {node.locked ? <span className="builder-stage-pill builder-stage-pill--locked">locked</span> : null}
-          {node.surfaceId ? <span className="builder-stage-pill">surface</span> : null}
-          {node.datasetId ? <span className="builder-stage-pill">dataset</span> : null}
+          {node.hidden ? <span className="builder-stage-pill">{copy.hiddenLabel}</span> : null}
+          {node.locked ? <span className="builder-stage-pill builder-stage-pill--locked">{copy.lockedLabel}</span> : null}
+          {node.surfaceId ? <span className="builder-stage-pill">{copy.surfaceBadgeLabel}</span> : null}
+          {node.datasetId ? <span className="builder-stage-pill">{copy.datasetBadgeLabel}</span> : null}
         </span>
       </button>
       {node.childNodeIds.length > 0 ? (
@@ -579,6 +601,7 @@ function SceneLayersTreeNode({
               onDragOverTarget={onDragOverTarget}
               onDropTarget={onDropTarget}
               depth={depth + 1}
+              copy={copy}
             />
           ))}
         </div>
@@ -602,6 +625,7 @@ function SceneCanvasNode({
   onDragOverTarget,
   onDropTarget,
   depth,
+  copy,
 }: {
   nodeId: string;
   scene: BuilderSceneDocument;
@@ -621,6 +645,7 @@ function SceneCanvasNode({
   ) => void;
   onDropTarget: (event: React.DragEvent<HTMLElement>, targetNodeId: string) => void;
   depth: number;
+  copy: ReturnType<typeof getSceneWorkspaceCopy>;
 }) {
   const node = scene.nodes[nodeId];
 
@@ -661,11 +686,11 @@ function SceneCanvasNode({
         <span className="builder-stage-pill builder-stage-pill--accent">{node.nodeKind}</span>
         <strong>{node.label}</strong>
         <span className="builder-stage-pill">{node.nodeId}</span>
-        {node.sectionKey ? <span className="builder-stage-pill">section {node.sectionKey}</span> : null}
-        {node.surfaceId ? <span className="builder-stage-pill">surface {node.surfaceId}</span> : null}
-        {node.datasetId ? <span className="builder-stage-pill">dataset {node.datasetId}</span> : null}
-        {node.hidden ? <span className="builder-stage-pill">hidden</span> : null}
-        {node.locked ? <span className="builder-stage-pill builder-stage-pill--locked">locked</span> : null}
+        {node.sectionKey ? <span className="builder-stage-pill">{copy.sectionPrefix} {node.sectionKey}</span> : null}
+        {node.surfaceId ? <span className="builder-stage-pill">{copy.surfacePrefix} {node.surfaceId}</span> : null}
+        {node.datasetId ? <span className="builder-stage-pill">{copy.datasetPrefix} {node.datasetId}</span> : null}
+        {node.hidden ? <span className="builder-stage-pill">{copy.hiddenLabel}</span> : null}
+        {node.locked ? <span className="builder-stage-pill builder-stage-pill--locked">{copy.lockedLabel}</span> : null}
       </button>
       {node.notes.length > 0 ? (
         <ul className="builder-preview-inspector-notes">
@@ -683,7 +708,7 @@ function SceneCanvasNode({
                   <strong>{item.title}</strong>
                   <span>{item.description}</span>
                 </div>
-                <span className="builder-stage-pill">Repeater item</span>
+                <span className="builder-stage-pill">{copy.repeaterItemLabel}</span>
               </div>
               <div className="builder-dashboard-page-meta">
                 <span>{item.itemId}</span>
@@ -712,6 +737,7 @@ function SceneCanvasNode({
               onDragOverTarget={onDragOverTarget}
               onDropTarget={onDropTarget}
               depth={depth + 1}
+              copy={copy}
             />
           ))}
         </div>
@@ -720,32 +746,180 @@ function SceneCanvasNode({
   );
 }
 
-function formatNodeState(node: BuilderSceneNode) {
+function formatNodeState(locale: Locale, node: BuilderSceneNode) {
   if (node.hidden && node.locked) {
-    return 'Hidden · locked';
+    return locale === 'ko' ? '숨김 · 잠김' : locale === 'zh-hant' ? '隱藏 · 鎖定' : 'Hidden · locked';
   }
 
   if (node.hidden) {
-    return 'Hidden';
+    return locale === 'ko' ? '숨김' : locale === 'zh-hant' ? '隱藏' : 'Hidden';
   }
 
   if (node.locked) {
-    return 'Locked';
+    return locale === 'ko' ? '잠김' : locale === 'zh-hant' ? '鎖定' : 'Locked';
   }
 
-  return 'Visible · editable state not claimed here';
+  return locale === 'ko'
+    ? '표시됨 · 편집 상태는 여기서 선언되지 않음'
+    : locale === 'zh-hant'
+      ? '可見 · 此處未宣告可編輯狀態'
+      : 'Visible · editable state not claimed here';
 }
 
-function getSelectionLabel(selectionCount: number) {
+function getSceneWorkspaceCopy(locale: Locale) {
+  return {
+    routeTitle: locale === 'ko' ? '페이지 경로 장면' : locale === 'zh-hant' ? '頁面路由場景' : 'Page routes scene',
+    routeDescription:
+      locale === 'ko'
+        ? '검색 가능한 레이어, 일반 선택, 브레드크럼, 검사기 셸은 호환 scene graph 위에 구축됩니다.'
+        : locale === 'zh-hant'
+          ? '可搜尋圖層、一般選取、麵包屑與檢視面板都建立在相容的 scene graph 上。'
+          : 'Searchable layers, generic selection, breadcrumbs, and inspector shell built on the compatibility scene graph.',
+    sceneLayersPill: locale === 'ko' ? 'Scene 레이어' : locale === 'zh-hant' ? 'Scene 圖層' : 'Scene layers',
+    workspaceLabel: locale === 'ko' ? '작업공간' : locale === 'zh-hant' ? '工作區' : 'Workspace',
+    siteLabel: locale === 'ko' ? '사이트' : locale === 'zh-hant' ? '網站' : 'Site',
+    pageModeLabel:
+      locale === 'ko'
+        ? { edit: '편집 가능 페이지', preview: '미리보기 전용 페이지', 'publish-review': '게시 검토 페이지' }
+        : locale === 'zh-hant'
+          ? { edit: '可編輯頁面', preview: '僅供預覽頁面', 'publish-review': '發佈審查頁面' }
+          : { edit: 'Edit-capable page', preview: 'Preview-only page', 'publish-review': 'Publish-review page' },
+    editableDocumentLabel:
+      locale === 'ko' ? '편집 가능 문서' : locale === 'zh-hant' ? '可編輯文件' : 'Edit-capable document',
+    previewOnlyDocumentLabel:
+      locale === 'ko' ? '미리보기 전용 문서' : locale === 'zh-hant' ? '僅供預覽文件' : 'Preview-only document',
+    sectionsLabel: locale === 'ko' ? '섹션' : locale === 'zh-hant' ? '區段' : 'sections',
+    visibleLabel: locale === 'ko' ? '표시됨' : locale === 'zh-hant' ? '可見' : 'visible',
+    searchPlaceholder:
+      locale === 'ko'
+        ? '레이블, 종류, 섹션, 표면 또는 데이터셋으로 검색'
+        : locale === 'zh-hant'
+          ? '依標籤、類型、區段、表面或資料集搜尋'
+          : 'Search by label, kind, section, surface, or dataset',
+    layersTreeAriaLabel:
+      locale === 'ko' ? 'Scene 레이어 트리' : locale === 'zh-hant' ? 'Scene 圖層樹' : 'Scene layers tree',
+    selectionTitle: locale === 'ko' ? '선택' : locale === 'zh-hant' ? '選取' : 'Selection',
+    noNodeSelectedLabel:
+      locale === 'ko'
+        ? '선택된 노드가 없습니다. 레이어 트리나 scene canvas에서 노드를 선택하세요.'
+        : locale === 'zh-hant'
+          ? '目前沒有選取節點。請從圖層樹或 scene 畫布選擇一個節點。'
+          : 'No node selected. Choose a node from the layers tree or scene canvas.',
+    inspectorTitle: locale === 'ko' ? '검사기 셸' : locale === 'zh-hant' ? '檢視面板殼層' : 'Inspector shell',
+    sourceKindLabel: locale === 'ko' ? '소스 종류' : locale === 'zh-hant' ? '來源種類' : 'Source kind',
+    parentLabel: locale === 'ko' ? '부모' : locale === 'zh-hant' ? '父節點' : 'Parent',
+    noneLabel: locale === 'ko' ? '없음' : locale === 'zh-hant' ? '無' : 'None',
+    childrenLabel: locale === 'ko' ? '자식' : locale === 'zh-hant' ? '子節點' : 'Children',
+    sectionLabel: locale === 'ko' ? '섹션' : locale === 'zh-hant' ? '區段' : 'Section',
+    surfaceLabel: locale === 'ko' ? '표면' : locale === 'zh-hant' ? '表面' : 'Surface',
+    datasetLabel: locale === 'ko' ? '데이터셋' : locale === 'zh-hant' ? '資料集' : 'Dataset',
+    datasetTargetLabel: locale === 'ko' ? '데이터셋 대상' : locale === 'zh-hant' ? '資料集目標' : 'Dataset target',
+    collectionLabel: locale === 'ko' ? '컬렉션' : locale === 'zh-hant' ? '集合' : 'Collection',
+    repeaterPreviewLabel: locale === 'ko' ? '반복기 미리보기' : locale === 'zh-hant' ? '重複器預覽' : 'Repeater preview',
+    stateLabel: locale === 'ko' ? '상태' : locale === 'zh-hant' ? '狀態' : 'State',
+    notSectionBoundLabel:
+      locale === 'ko' ? '섹션에 묶이지 않음' : locale === 'zh-hant' ? '未綁定區段' : 'Not section-bound',
+    notSurfaceBoundLabel:
+      locale === 'ko' ? '표면에 묶이지 않음' : locale === 'zh-hant' ? '未綁定表面' : 'Not surface-bound',
+    notDatasetBoundLabel:
+      locale === 'ko' ? '데이터셋에 묶이지 않음' : locale === 'zh-hant' ? '未綁定資料集' : 'Not dataset-bound',
+    notRepeaterTargetLabel:
+      locale === 'ko' ? '반복기 대상 아님' : locale === 'zh-hant' ? '非重複器目標' : 'Not a repeater target',
+    notCollectionBoundLabel:
+      locale === 'ko' ? '컬렉션에 묶이지 않음' : locale === 'zh-hant' ? '未綁定集合' : 'Not collection-bound',
+    recordsLabel: (count: number) => (locale === 'ko' ? `${count}개 레코드` : locale === 'zh-hant' ? `${count} 筆記錄` : `${count} records`),
+    noPreviewRecordsLabel:
+      locale === 'ko' ? '미리보기 레코드 없음' : locale === 'zh-hant' ? '沒有預覽記錄' : 'No preview records',
+    noInspectorSelectionLabel:
+      locale === 'ko'
+        ? '일반 검사기 셸은 실행 중이지만 선택된 노드가 없습니다.'
+        : locale === 'zh-hant'
+          ? '一般檢視面板殼層已啟動，但目前沒有選取節點。'
+          : 'The generic inspector shell is live, but no node is selected.',
+    sceneSummaryTitle: locale === 'ko' ? 'Scene 요약' : locale === 'zh-hant' ? 'Scene 摘要' : 'Scene summary',
+    rootLabel: locale === 'ko' ? '루트' : locale === 'zh-hant' ? '根節點' : 'Root',
+    nodesLabel: locale === 'ko' ? '노드' : locale === 'zh-hant' ? '節點' : 'Nodes',
+    declaredSurfacesLabel: locale === 'ko' ? '선언된 표면' : locale === 'zh-hant' ? '已宣告表面' : 'Declared surfaces',
+    datasetNodesLabel: locale === 'ko' ? '데이터셋 노드' : locale === 'zh-hant' ? '資料集節點' : 'Dataset nodes',
+    snapshotSourceLabel: locale === 'ko' ? '스냅샷 출처' : locale === 'zh-hant' ? '快照來源' : 'Snapshot source',
+    foundationScopeTitle: locale === 'ko' ? '기초 범위' : locale === 'zh-hant' ? '基礎範圍' : 'Foundation scope',
+    foundationScopeItems:
+      locale === 'ko'
+        ? [
+            '레이어/검색/선택/브레드크럼은 이제 호환 scene route에서 실제로 동작합니다.',
+            '드래그 재정렬은 호환 scene route에서 로컬 증명 표면으로 존재하지만, 지속성, 리사이즈, 스냅팅 기하, 속성 편집 패리티는 아직 없습니다.',
+            '현재 소스는 아직 최종 지속 scene runtime이 아니라 semantic-section 문서입니다.',
+          ]
+        : locale === 'zh-hant'
+          ? [
+              '圖層／搜尋／選取／麵包屑現在已在相容的 scene 路由上真實可用。',
+              '拖曳排序已作為相容 scene 路由上的本地證明表面，但持久化、縮放、吸附幾何與屬性編輯 parity 仍未提供。',
+              '目前來源仍是 semantic-section 文件，而不是最終持久化的 scene runtime。',
+            ]
+          : [
+              'Layers/search/selection/breadcrumbs are now real on the compatibility scene route.',
+              'Drag reorder now exists as a local proof surface on the compatibility scene route, but persistence, resize, snapping geometry, and property editing parity are still absent.',
+              'The current source is still the semantic-section document, not the final persisted scene runtime.',
+            ],
+    dragSessionTitle: locale === 'ko' ? '드래그 세션' : locale === 'zh-hant' ? '拖曳工作階段' : 'Drag session',
+    draggingLabel: locale === 'ko' ? '드래그 중' : locale === 'zh-hant' ? '拖曳中' : 'Dragging',
+    dropLabel: (placement: string, targetNodeId: string) =>
+      locale === 'ko'
+        ? `드롭 ${placement} ${targetNodeId}`
+        : locale === 'zh-hant'
+          ? `放置 ${placement} ${targetNodeId}`
+          : `Drop ${placement} ${targetNodeId}`,
+    rejectedLabel: (reason: string) =>
+      locale === 'ko' ? `거부됨: ${reason}` : locale === 'zh-hant' ? `已拒絕：${reason}` : `Rejected: ${reason}`,
+    dragHintLabel:
+      locale === 'ko'
+        ? '유효하거나 거부된 드롭 대상을 보려면 형제 노드 위로 이동하세요.'
+        : locale === 'zh-hant'
+          ? '將滑鼠移到同層節點上即可看到有效或被拒絕的放置目標。'
+          : 'Move over a sibling node to see a valid or rejected drop target.',
+    noDragSessionLabel:
+      locale === 'ko' ? '활성 드래그 세션이 없습니다. 레이어 행이나 scene 카드에서 드래그하세요.' : locale === 'zh-hant' ? '沒有作用中的拖曳工作階段。請從圖層列或 scene 卡片拖曳。' : 'No drag session active. Drag from layers rows or scene cards.',
+    backLinksTitle: locale === 'ko' ? '되돌아가기 링크' : locale === 'zh-hant' ? '返回連結' : 'Back links',
+    returnToPageWorkspaceLabel:
+      locale === 'ko' ? '페이지 작업공간으로 돌아가기' : locale === 'zh-hant' ? '返回頁面工作區' : 'Return to page workspace',
+    openPagePreviewLabel:
+      locale === 'ko' ? '페이지 미리보기 열기' : locale === 'zh-hant' ? '開啟頁面預覽' : 'Open page preview',
+    sceneGraphLabel: locale === 'ko' ? '장면 그래프' : locale === 'zh-hant' ? '場景圖' : 'Scene graph',
+    sourceLabel: locale === 'ko' ? '출처' : locale === 'zh-hant' ? '來源' : 'Source',
+    revisionLabel: locale === 'ko' ? '리비전' : locale === 'zh-hant' ? '修訂版' : 'Revision',
+    notPersistedLabel: locale === 'ko' ? '아직 지속 저장되지 않음' : locale === 'zh-hant' ? '尚未持久化' : 'Not persisted yet',
+    sceneCanvasTitle: locale === 'ko' ? 'Scene 캔버스' : locale === 'zh-hant' ? 'Scene 畫布' : 'Scene canvas',
+    sceneCanvasDescription:
+      locale === 'ko'
+        ? '이것은 아직 호환 scene이지만 선택 셸은 이제 실행 중입니다. 레이어 또는 여기에서 선택하면 검사기와 브레드크럼이 동기화됩니다.'
+        : locale === 'zh-hant'
+          ? '這仍然是相容 scene，但選取殼層現在已啟動。在圖層或此處選取會讓檢視面板與麵包屑保持同步。'
+          : 'This is still a compatibility scene, but the selection shell is now live. Selecting in layers or here keeps the inspector and breadcrumbs synchronized.',
+    hiddenLabel: locale === 'ko' ? '숨김' : locale === 'zh-hant' ? '隱藏' : 'hidden',
+    lockedLabel: locale === 'ko' ? '잠김' : locale === 'zh-hant' ? '鎖定' : 'locked',
+    surfaceBadgeLabel: locale === 'ko' ? '표면' : locale === 'zh-hant' ? '表面' : 'surface',
+    datasetBadgeLabel: locale === 'ko' ? '데이터셋' : locale === 'zh-hant' ? '資料集' : 'dataset',
+    sectionPrefix: locale === 'ko' ? '섹션' : locale === 'zh-hant' ? '區段' : 'section',
+    surfacePrefix: locale === 'ko' ? '표면' : locale === 'zh-hant' ? '表面' : 'surface',
+    datasetPrefix: locale === 'ko' ? '데이터셋' : locale === 'zh-hant' ? '資料集' : 'dataset',
+    repeaterItemLabel: locale === 'ko' ? '반복기 항목' : locale === 'zh-hant' ? '重複器項目' : 'Repeater item',
+    noSelectionLabel: locale === 'ko' ? '선택 없음' : locale === 'zh-hant' ? '未選取' : 'No selection',
+    oneSelectionLabel: locale === 'ko' ? '노드 1개 선택됨' : locale === 'zh-hant' ? '已選取 1 個節點' : '1 node selected',
+    manySelectionsLabel: (count: number) =>
+      locale === 'ko' ? `${count}개 노드 선택됨` : locale === 'zh-hant' ? `${count} 個節點已選取` : `${count} nodes selected`,
+  } as const;
+}
+
+function getSelectionLabel(copy: ReturnType<typeof getSceneWorkspaceCopy>, selectionCount: number) {
   if (selectionCount === 0) {
-    return 'No selection';
+    return copy.noSelectionLabel;
   }
 
   if (selectionCount === 1) {
-    return '1 node selected';
+    return copy.oneSelectionLabel;
   }
 
-  return `${selectionCount} nodes selected`;
+  return copy.manySelectionsLabel(selectionCount);
 }
 
 function resolveDropPlacement(

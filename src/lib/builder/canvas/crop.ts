@@ -25,15 +25,23 @@ export interface FocalPoint {
 export const DEFAULT_CROP: CropRect = { x: 0, y: 0, width: 1, height: 1 };
 export const DEFAULT_FOCAL: FocalPoint = { x: 0.5, y: 0.5 };
 
-export const ASPECT_RATIOS = [
-  { label: 'Free', value: null },
-  { label: '1:1', value: 1 },
-  { label: '4:3', value: 4 / 3 },
-  { label: '3:2', value: 3 / 2 },
-  { label: '16:9', value: 16 / 9 },
-  { label: '2:3', value: 2 / 3 },
-  { label: '3:4', value: 3 / 4 },
-  { label: '9:16', value: 9 / 16 },
+export type AspectRatioKey = 'free' | 'square' | 'fourThree' | 'threeTwo' | 'sixteenNine' | 'twoThree' | 'threeFour' | 'nineSixteen';
+
+export interface AspectRatioPreset {
+  key: AspectRatioKey;
+  label: string;
+  value: number | null;
+}
+
+export const ASPECT_RATIOS: readonly AspectRatioPreset[] = [
+  { key: 'free', label: 'Free', value: null },
+  { key: 'square', label: '1:1', value: 1 },
+  { key: 'fourThree', label: '4:3', value: 4 / 3 },
+  { key: 'threeTwo', label: '3:2', value: 3 / 2 },
+  { key: 'sixteenNine', label: '16:9', value: 16 / 9 },
+  { key: 'twoThree', label: '2:3', value: 2 / 3 },
+  { key: 'threeFour', label: '3:4', value: 3 / 4 },
+  { key: 'nineSixteen', label: '9:16', value: 9 / 16 },
 ] as const;
 
 export function cropToClipPath(crop: CropRect): string {

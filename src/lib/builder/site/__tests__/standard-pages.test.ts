@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   REQUIRED_STANDARD_PAGE_SLUGS,
+  isStandardPageSlug,
   matchesStandardPageSlugForLocale,
   needsStandardPageSeedForLocale,
 } from '@/lib/builder/site/standard-pages';
@@ -55,5 +56,13 @@ describe('needsStandardPageSeedForLocale', () => {
     expect(matchesStandardPageSlugForLocale(page('', 'ko', { home: true }), 'ko', '')).toBe(true);
     expect(matchesStandardPageSlugForLocale(page('services', 'zh-hant'), 'ko', 'services')).toBe(false);
     expect(matchesStandardPageSlugForLocale(page('services', 'ko'), 'ko', 'services')).toBe(true);
+  });
+
+  it('identifies public standard slugs that should keep production chrome', () => {
+    expect(isStandardPageSlug('')).toBe(true);
+    expect(isStandardPageSlug('about')).toBe(true);
+    expect(isStandardPageSlug('faq')).toBe(true);
+    expect(isStandardPageSlug('videos')).toBe(true);
+    expect(isStandardPageSlug('custom-campaign')).toBe(false);
   });
 });

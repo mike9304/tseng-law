@@ -1,4 +1,5 @@
-import { expect, test, type Locator, type Page } from '@playwright/test';
+import { expect, test, type APIRequestContext, type Locator, type Page } from '@playwright/test';
+import { getColumnEditCopy } from '@/components/builder/columns/column-edit-copy';
 
 const tinyPng = Buffer.from(
   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=',
@@ -8,6 +9,43 @@ const tinyPng = Buffer.from(
 interface UploadedAsset {
   filename: string;
   url: string;
+}
+
+type RedirectRecord = {
+  redirectId: string;
+  from: string;
+  to: string;
+  type: number;
+  isActive: boolean;
+  note?: string;
+};
+
+function mutationHeaders(scope: string): Record<string, string> {
+  const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'columns-ui';
+  return { 'x-forwarded-for': `pw-${safeScope}` };
+}
+
+async function listRedirects(
+  request: APIRequestContext,
+  scope: string,
+): Promise<RedirectRecord[]> {
+  const response = await request.get('/api/builder/site/redirects?locale=ko', {
+    headers: mutationHeaders(scope),
+  });
+  expect(response.status()).toBe(200);
+  const payload = (await response.json()) as { redirects?: RedirectRecord[] };
+  return payload.redirects ?? [];
+}
+
+async function deleteRedirect(
+  request: APIRequestContext,
+  redirectId: string,
+  scope: string,
+): Promise<void> {
+  await request.delete(`/api/builder/site/redirects/${encodeURIComponent(redirectId)}?locale=ko`, {
+    headers: mutationHeaders(scope),
+    failOnStatusCode: false,
+  });
 }
 
 async function uploadAsset(page: Page, filename: string): Promise<UploadedAsset> {
@@ -188,6 +226,162 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
     }
   });
 
+  test('creates 301 redirects when a published column slug is renamed and republished', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const scope = `column-slug-${token}`;
+    const oldSlug = `column-old-${token}`;
+    const interimSlug = `column-mid-${token}`;
+    const newSlug = `column-new-${token}`;
+    const redirectNote = `auto:record-slug-rename(columns,${oldSlug}→${newSlug})`;
+
+    try {
+      const createResponse = await page.request.post('/api/builder/columns?locale=ko', {
+        headers: mutationHeaders(`${scope}-create`),
+        data: {
+          locale: 'ko',
+          slug: oldSlug,
+          title: `Column Slug Old ${token}`,
+          summary: `Column slug redirect summary ${token}`,
+          bodyMarkdown: `Column slug redirect body ${token}`,
+          bodyHtml: `<p>Column slug redirect body ${token}</p>`,
+        },
+      });
+      expect(createResponse.status()).toBe(201);
+
+      const firstPublishResponse = await page.request.post(
+        `/api/builder/columns/${oldSlug}/publish?locale=ko&skipEmbeddings=1`,
+        { headers: mutationHeaders(`${scope}-publish-old`) },
+      );
+      expect(firstPublishResponse.status()).toBe(200);
+      const firstPublishPayload = await firstPublishResponse.json() as {
+        success?: boolean;
+        slug?: string;
+        error?: string;
+      };
+      expect(firstPublishPayload.success, firstPublishPayload.error).toBe(true);
+      expect(firstPublishPayload.slug).toBe(oldSlug);
+
+      const renameResponse = await page.request.patch(`/api/builder/columns/${oldSlug}?locale=ko`, {
+        headers: mutationHeaders(`${scope}-rename`),
+        data: { slug: interimSlug },
+      });
+      expect(renameResponse.status()).toBe(200);
+      const renamePayload = await renameResponse.json() as {
+        ok?: boolean;
+        column?: { slug?: string; frontmatter?: { slugRedirectFrom?: string } };
+        slugRedirect?: { status?: string; from?: string; to?: string };
+        error?: string;
+      };
+      expect(renamePayload.ok, renamePayload.error).toBe(true);
+      expect(renamePayload.column?.slug).toBe(interimSlug);
+      expect(renamePayload.column?.frontmatter?.slugRedirectFrom).toBe(oldSlug);
+      expect(renamePayload.slugRedirect).toMatchObject({
+        status: 'pending-publish',
+        from: `/ko/columns/${oldSlug}`,
+        to: `/ko/columns/${interimSlug}`,
+      });
+
+      const oldDraftResponse = await page.request.get(`/api/builder/columns/${oldSlug}?locale=ko`);
+      const oldDraftPayload = await oldDraftResponse.json() as {
+        draft?: unknown;
+        published?: { slug?: string };
+      };
+      expect(oldDraftPayload.draft).toBeFalsy();
+      expect(oldDraftPayload.published?.slug).toBe(oldSlug);
+
+      const secondRenameResponse = await page.request.patch(`/api/builder/columns/${interimSlug}?locale=ko`, {
+        headers: mutationHeaders(`${scope}-rename-again`),
+        data: { slug: newSlug },
+      });
+      expect(secondRenameResponse.status()).toBe(200);
+      const secondRenamePayload = await secondRenameResponse.json() as {
+        ok?: boolean;
+        column?: { slug?: string; frontmatter?: { slugRedirectFrom?: string } };
+        slugRedirect?: { status?: string; from?: string; to?: string };
+        error?: string;
+      };
+      expect(secondRenamePayload.ok, secondRenamePayload.error).toBe(true);
+      expect(secondRenamePayload.column?.slug).toBe(newSlug);
+      expect(secondRenamePayload.column?.frontmatter?.slugRedirectFrom).toBe(oldSlug);
+      expect(secondRenamePayload.slugRedirect).toMatchObject({
+        status: 'pending-publish',
+        from: `/ko/columns/${oldSlug}`,
+        to: `/ko/columns/${newSlug}`,
+      });
+
+      const interimDraftResponse = await page.request.get(`/api/builder/columns/${interimSlug}?locale=ko`);
+      const interimDraftPayload = await interimDraftResponse.json() as { draft?: unknown };
+      expect(interimDraftPayload.draft).toBeFalsy();
+
+      const secondPublishResponse = await page.request.post(
+        `/api/builder/columns/${newSlug}/publish?locale=ko&skipEmbeddings=1`,
+        { headers: mutationHeaders(`${scope}-publish-new`) },
+      );
+      expect(secondPublishResponse.status()).toBe(200);
+      const secondPublishPayload = await secondPublishResponse.json() as {
+        success?: boolean;
+        slug?: string;
+        slugRedirect?: {
+          status?: string;
+          redirects?: RedirectRecord[];
+          redirect?: RedirectRecord;
+          skipReason?: string;
+        };
+        error?: string;
+      };
+      expect(secondPublishPayload.success, secondPublishPayload.error).toBe(true);
+      expect(secondPublishPayload.slug).toBe(newSlug);
+      expect(secondPublishPayload.slugRedirect?.status).toBe('created');
+      expect(secondPublishPayload.slugRedirect?.redirects ?? []).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            from: `/ko/columns/${oldSlug}`,
+            to: `/ko/columns/${newSlug}`,
+            type: 301,
+            isActive: true,
+          }),
+        ]),
+      );
+
+      const redirects = await listRedirects(page.request, `${scope}-list`);
+      expect(redirects).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            from: `/ko/columns/${oldSlug}`,
+            to: `/ko/columns/${newSlug}`,
+            type: 301,
+            isActive: true,
+            note: redirectNote,
+          }),
+        ]),
+      );
+
+      await expect.poll(async () => {
+        const response = await page.request.get(`/ko/columns/${oldSlug}`, {
+          failOnStatusCode: false,
+          maxRedirects: 0,
+        });
+        return {
+          status: response.status(),
+          location: response.headers().location ?? '',
+        };
+      }, { timeout: 10_000 }).toEqual(expect.objectContaining({
+        status: 301,
+        location: expect.stringContaining(`/ko/columns/${newSlug}`),
+      }));
+    } finally {
+      const redirects = await listRedirects(page.request, `${scope}-cleanup`);
+      await Promise.all(
+        redirects
+          .filter((redirect) => redirect.note === redirectNote)
+          .map((redirect) => deleteRedirect(page.request, redirect.redirectId, `${scope}-cleanup`)),
+      );
+      await page.request.delete(`/api/builder/columns/${newSlug}?locale=ko&includePublished=1`).catch(() => undefined);
+      await page.request.delete(`/api/builder/columns/${interimSlug}?locale=ko&includePublished=1`).catch(() => undefined);
+      await page.request.delete(`/api/builder/columns/${oldSlug}?locale=ko&includePublished=1`).catch(() => undefined);
+    }
+  });
+
   test('creates, edits, inserts media, publishes, verifies, and cleans up a column through the UI', async ({ page }) => {
     const token = Date.now().toString(36);
     const editedTitle = `G-Editor UI 칼럼 수정 ${token}`;
@@ -196,12 +390,13 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
     let uploadedAsset: UploadedAsset | null = null;
 
     try {
+      const editCopy = getColumnEditCopy('ko');
       uploadedAsset = await uploadAsset(page, `column-${token}.png`);
 
       await page.goto('/ko/admin-builder/columns?new=1', { waitUntil: 'domcontentloaded' });
       await expect(page).toHaveURL(/\/ko\/admin-builder\/columns\/[^/]+\/edit$/);
       await expect(page.getByRole('link', { name: '← 편집기 홈으로 돌아가기' })).toHaveAttribute('href', '/ko/admin-builder');
-      await expect(page.getByRole('link', { name: '칼럼 목록', exact: true })).toHaveAttribute('href', '/ko/admin-builder/columns');
+      await expect(page.locator('.column-builder-return-secondary').first()).toHaveAttribute('href', '/ko/admin-builder/columns');
       await expect(page.getByText('편집기 홈으로 돌아가기').first()).toBeVisible();
       const editorReturnDock = page.getByRole('link', { name: '편집 홈 메뉴로 돌아가기' });
       await expect(editorReturnDock).toBeVisible();
@@ -222,18 +417,18 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
       await expect(frontmatterPanel).toBeVisible();
       await titleInput.fill(editedTitle);
       await bodyEditor.fill(editedBody);
-      await page.getByRole('button', { name: 'Image' }).click();
-      const assetDialog = page.getByRole('dialog', { name: 'Asset library' });
+      await page.getByRole('button', { name: editCopy.editor.imageButton }).click();
+      const assetDialog = page.getByRole('dialog').first();
       await expect(assetDialog).toBeVisible();
       await assetDialog.getByRole('searchbox').fill(token);
       await assetDialog
         .locator('article')
         .filter({ hasText: uploadedAsset.filename })
-        .getByRole('button', { name: 'Use image' })
+        .getByRole('button', { name: /이미지 사용|使用圖片|Use image/ })
         .click();
       await expect(bodyEditor.locator('img')).toHaveAttribute('src', new RegExp(uploadedAsset.filename));
 
-      await page.getByRole('button', { name: '저장' }).click();
+      await page.getByRole('button', { name: '저장', exact: true }).click();
       await expect(page.locator('.column-editor-save-state')).toContainText('저장됨', { timeout: 10_000 });
       await expect.poll(async () => {
         const response = await page.request.get(`/api/builder/columns/${slug ?? ''}?locale=ko`);
@@ -277,7 +472,7 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
       await page.goto('/ko/admin-builder/columns', { waitUntil: 'domcontentloaded' });
       await expect(page.getByRole('link', { name: '← 편집기 홈으로 돌아가기' })).toHaveAttribute('href', '/ko/admin-builder');
       await expect(page.getByText('편집기 홈으로 돌아가기').first()).toBeVisible();
-      const managerReturnDock = page.getByRole('link', { name: '편집 홈 메뉴로 돌아가기' });
+      const managerReturnDock = page.locator('.column-manager-back-btn');
       await expect(managerReturnDock).toBeVisible();
       await expect(managerReturnDock).toHaveAttribute('href', '/ko/admin-builder');
       await expect(page.locator('.column-post-grid h3 a').filter({ hasText: editedTitle }).first()).toBeVisible();

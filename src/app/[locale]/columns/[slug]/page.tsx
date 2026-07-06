@@ -16,6 +16,40 @@ import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildSeoMetadata } from '@/l
 
 export const dynamic = 'force-dynamic';
 
+const copy: Record<Locale, {
+  backLabel: string;
+  attorneyHeading: string;
+  guideTitle: string;
+  consultationTitle: string;
+  consultationText: string;
+  consultationButton: string;
+}> = {
+  ko: {
+    backLabel: '← 칼럼 목록으로',
+    attorneyHeading: '이 글 검토 변호사',
+    guideTitle: '함께 보는 주제',
+    consultationTitle: '상담 예약',
+    consultationText: '대만 법률 관련 궁금한 점이 있으시면 언제든 문의해 주세요.',
+    consultationButton: '문의하기',
+  },
+  'zh-hant': {
+    backLabel: '← 返回專欄列表',
+    attorneyHeading: '審閱本文的律師',
+    guideTitle: '延伸主題',
+    consultationTitle: '預約諮詢',
+    consultationText: '如有任何台灣法律相關問題，歡迎隨時聯繫我們。',
+    consultationButton: '聯絡我們',
+  },
+  en: {
+    backLabel: '← Back to columns',
+    attorneyHeading: 'Reviewing Attorney',
+    guideTitle: 'Related Topics',
+    consultationTitle: 'Book Consultation',
+    consultationText: 'If you have any questions about Taiwan law, feel free to contact us.',
+    consultationButton: 'Contact Us',
+  },
+};
+
 export async function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Promise<Metadata> {
   const locale = normalizeLocale(params.locale);
 
@@ -55,11 +89,9 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
   const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
   const nextPost = currentIndex >= 0 && currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 
-  const backLabel = locale === 'ko' ? '← 칼럼 목록으로' : locale === 'zh-hant' ? '← 返回專欄列表' : '← Back to columns';
+  const t = copy[locale];
   const authorName = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng';
   const authorProfilePath = getAttorneyProfilePath(locale);
-  const attorneyHeading = locale === 'ko' ? '이 글 검토 변호사' : locale === 'zh-hant' ? '審閱本文的律師' : 'Reviewing Attorney';
-  const guideTitle = locale === 'ko' ? '함께 보는 주제' : locale === 'zh-hant' ? '延伸主題' : 'Related Topics';
   const guideLinks =
     post.category === 'formation'
       ? [
@@ -128,7 +160,7 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
             <div className="blog-hero-overlay" />
           </div>
           <div className="container blog-hero-inner">
-            <Link href={`/${locale}/columns`} className="blog-back-link">{backLabel}</Link>
+            <Link href={`/${locale}/columns`} className="blog-back-link">{t.backLabel}</Link>
             <span className="blog-category-badge">{post.categoryLabel}</span>
             <h1 className="blog-hero-title">{post.title}</h1>
             <div className="blog-meta">
@@ -150,23 +182,17 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
             </div>
             <aside className="blog-sidebar">
               <div className="blog-sidebar-card">
-                <h3 className="blog-sidebar-title">{locale === 'ko' ? '상담 예약' : locale === 'zh-hant' ? '預約諮詢' : 'Book Consultation'}</h3>
-                <p className="blog-sidebar-text">
-                  {locale === 'ko'
-                    ? '대만 법률 관련 궁금한 점이 있으시면 언제든 문의해 주세요.'
-                    : locale === 'zh-hant'
-                      ? '如有任何台灣法律相關問題，歡迎隨時聯繫我們。'
-                      : 'If you have any questions about Taiwan law, feel free to contact us.'}
-                </p>
+                <h3 className="blog-sidebar-title">{t.consultationTitle}</h3>
+                <p className="blog-sidebar-text">{t.consultationText}</p>
                 <Link href={`/${locale}/contact`} className="button blog-sidebar-btn">
-                  {locale === 'ko' ? '문의하기' : locale === 'zh-hant' ? '聯絡我們' : 'Contact Us'}
+                  {t.consultationButton}
                 </Link>
               </div>
               <div className="blog-sidebar-card blog-sidebar-card--attorney">
-                <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
+                <AttorneyAuthorityCard locale={locale} heading={t.attorneyHeading} />
               </div>
               <div className="blog-sidebar-card">
-                <h3 className="blog-sidebar-title">{guideTitle}</h3>
+                <h3 className="blog-sidebar-title">{t.guideTitle}</h3>
                 <ul className="blog-related-list">
                   {guideLinks.map((item) => (
                     <li key={item.href}>

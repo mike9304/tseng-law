@@ -39,6 +39,7 @@ describe('published responsive stylesheet', () => {
     expect(css).toContain('@media (min-width: 768px) and (max-width: 1023px)');
     expect(css).toContain('@media (max-width: 767px)');
     expect(css).toContain('[data-node-id="node-1"]');
+    expect(css).toContain('position: absolute !important');
     expect(css).toContain('left: 32px !important');
     expect(css).toContain('font-size: 28px !important');
     expect(css).toContain('left: 16px !important');
@@ -64,8 +65,35 @@ describe('published responsive stylesheet', () => {
       }),
     ]);
 
-    expect(css).toContain('[data-node-id="section-a"] { margin-top: 0px !important; min-height: 220px !important; }');
-    expect(css).toContain('[data-node-id="section-b"] { margin-top: 24px !important; min-height: 300px !important; }');
+    expect(css).toContain('.builder-pub-node[data-node-id="section-a"] { margin-top: 0px !important; min-height: 220px !important; }');
+    expect(css).toContain('.builder-pub-node[data-node-id="section-b"] { margin-top: 24px !important; min-height: 300px !important; }');
+  });
+
+  it('excludes viewport-hidden flow sections from mobile gap calculations', () => {
+    const css = buildResponsiveStylesheet([
+      node({
+        id: 'section-a',
+        kind: 'composite',
+        rect: { x: 0, y: 0, width: 1280, height: 240 },
+        responsive: { mobile: { rect: { y: 0, height: 120 } } },
+      }),
+      node({
+        id: 'section-hidden',
+        kind: 'composite',
+        rect: { x: 0, y: 260, width: 1280, height: 400 },
+        responsive: { mobile: { rect: { y: 140, height: 300 }, hidden: true } },
+      }),
+      node({
+        id: 'section-b',
+        kind: 'composite',
+        rect: { x: 0, y: 680, width: 1280, height: 300 },
+        responsive: { mobile: { rect: { y: 164, height: 180 } } },
+      }),
+    ]);
+
+    expect(css).toContain('.builder-pub-node[data-node-id="section-hidden"] { min-height: 300px !important; display: none !important; }');
+    expect(css).toContain('.builder-pub-node[data-node-id="section-b"] { margin-top: 44px !important; min-height: 180px !important; }');
+    expect(css).not.toContain('.builder-pub-node[data-node-id="section-b"] { margin-top: 0px !important; min-height: 180px !important; }');
   });
 
   it('uses flow gaps instead of left/top offsets for responsive flex children', () => {
@@ -91,11 +119,35 @@ describe('published responsive stylesheet', () => {
     ]);
 
     const flowARules = css.split('\n').filter((line) => line.includes('[data-node-id="flow-a"]'));
+    expect(flowARules.some((line) => line.includes('position: absolute'))).toBe(false);
     expect(flowARules.some((line) => line.includes('left:'))).toBe(false);
     expect(flowARules.some((line) => line.includes('top:') && !line.includes('margin-top'))).toBe(false);
     expect(flowARules.some((line) => line.includes('width: 220px !important'))).toBe(true);
     expect(flowARules.some((line) => line.includes('height: 120px !important'))).toBe(true);
     expect(flowARules.some((line) => line.includes('margin-top: 80px !important'))).toBe(true);
-    expect(css).toContain('[data-node-id="flow-b"] { margin-top: 30px !important; }');
+    expect(css).toContain('.builder-pub-node[data-node-id="flow-b"] { margin-top: 30px !important; }');
   });
+
+  it('keeps a top-level page root in flow when responsive height reserves footer space', () => {
+    const css = buildResponsiveStylesheet([
+      node({
+        id: 'columns-page-root',
+        kind: 'container',
+        content: { as: 'main', layoutMode: 'absolute' },
+        rect: { x: 0, y: 0, width: 1280, height: 2660 },
+        responsive: {
+          tablet: { rect: { x: 0, y: 0, width: 768, height: 3610 } },
+          mobile: { rect: { x: 0, y: 0, width: 375, height: 6408 } },
+        },
+      }),
+    ]);
+
+    const rootRules = css.split('\n').filter((line) => line.includes('[data-node-id="columns-page-root"]'));
+    expect(rootRules.some((line) => line.includes('position: relative !important'))).toBe(true);
+    expect(rootRules.some((line) => line.includes('position: absolute'))).toBe(false);
+    expect(rootRules.some((line) => line.includes('left:'))).toBe(false);
+    expect(rootRules.some((line) => line.includes('top:'))).toBe(false);
+    expect(rootRules.some((line) => line.includes('height: 6408px !important'))).toBe(true);
+  });
+
 });

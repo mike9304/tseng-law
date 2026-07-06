@@ -6,19 +6,9 @@ import {
   SEO_TITLE_MAX,
   SEO_TITLE_MIN,
 } from '@/lib/builder/seo/validation';
-import {
-  checkboxGridStyle,
-  checkboxRowStyle,
-  fieldStyle,
-  helpTextStyle,
-  inputStyle,
-  labelStyle,
-  previewCardStyle,
-  sectionStyle,
-  sectionTitleStyle,
-  textareaStyle,
-  twoColumnStyle,
-} from './SeoPanel.styles';
+import type { Locale } from '@/lib/locales';
+import styles from './SeoPanelBasicsTab.module.css';
+import { getSeoPanelBasicsCopy } from './seo-panel-basics-copy';
 
 export type SeoBasicsTextField = 'slug' | 'canonical' | 'title' | 'description';
 export type SeoBasicsBooleanField = 'noIndex' | 'noFollow';
@@ -30,7 +20,7 @@ interface SeoBasicsPage {
 
 interface SeoPanelBasicsTabProps {
   active: boolean;
-  locale: string;
+  locale: Locale;
   page?: SeoBasicsPage | null;
   defaults?: {
     canonical?: string;
@@ -50,18 +40,19 @@ interface SeoPanelBasicsTabProps {
   onChangeCreateRedirect: (value: boolean) => void;
 }
 
-function counterColor(length: number, min: number, max: number): string {
-  if (length === 0) return '#94a3b8';
-  if (length < min || length > max) return '#d97706';
-  return '#16a34a';
+function counterTone(length: number, min: number, max: number): 'muted' | 'warning' | 'success' {
+  if (length === 0) return 'muted';
+  if (length < min || length > max) return 'warning';
+  return 'success';
 }
 
-function fieldCounter(value: string, min: number, max: number) {
+function fieldCounter(value: string, min: number, max: number, label: string) {
+  const length = value.trim().length;
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, fontSize: '0.72rem' }}>
-      <span style={helpTextStyle}>권장 {min}-{max}자</span>
-      <strong style={{ color: counterColor(value.trim().length, min, max) }}>
-        {value.trim().length}/{max}
+    <div className={styles.counterRow}>
+      <span className={styles.helpText}>{label}</span>
+      <strong className={styles.counterValue} data-tone={counterTone(length, min, max)}>
+        {length}/{max}
       </strong>
     </div>
   );
@@ -86,104 +77,115 @@ export function SeoPanelBasicsTab({
   onChangeBooleanField,
   onChangeCreateRedirect,
 }: SeoPanelBasicsTabProps) {
+  const t = getSeoPanelBasicsCopy(locale);
   return (
     <>
-      <section style={{ ...sectionStyle, display: active ? 'grid' : 'none' }}>
-        <h3 style={sectionTitleStyle}>기본 검색 설정</h3>
-        <div style={twoColumnStyle}>
-          <div style={fieldStyle}>
-            <label style={labelStyle} htmlFor="builder-seo-slug">Slug</label>
+      <section className={styles.section} data-active={active ? 'true' : 'false'}>
+        <h3 className={styles.sectionTitle}>{t.basicsTitle}</h3>
+        <div className={styles.twoColumn}>
+          <div className={styles.field}>
+            <label className={styles.label} htmlFor="builder-seo-slug">{t.slug}</label>
             <input
               id="builder-seo-slug"
               type="text"
               value={slug}
               disabled={Boolean(page?.isHomePage)}
-              placeholder="page-slug"
-              style={inputStyle}
+              placeholder={t.slugPlaceholder}
+              className={styles.input}
               onChange={(event) => onChangeTextField('slug', event.target.value)}
             />
-            <span style={helpTextStyle}>최종 public URL은 /{locale}/{slug || ''} 입니다.</span>
+            <span className={styles.helpText}>{t.slugHelp(locale, slug)}</span>
           </div>
-          <div style={fieldStyle}>
-            <label style={labelStyle} htmlFor="builder-seo-canonical">Canonical URL</label>
+          <div className={styles.field}>
+            <label className={styles.label} htmlFor="builder-seo-canonical">{t.canonical}</label>
             <input
               id="builder-seo-canonical"
               type="url"
               value={canonical}
-              placeholder={defaults?.canonical || 'https://example.com/page'}
-              style={inputStyle}
+              placeholder={defaults?.canonical || t.canonicalPlaceholder}
+              className={styles.input}
               onChange={(event) => onChangeTextField('canonical', event.target.value)}
             />
-            <span style={helpTextStyle}>비우면 기본 public URL을 canonical로 사용합니다.</span>
+            <span className={styles.helpText}>{t.canonicalHelp}</span>
           </div>
         </div>
         {!page?.isHomePage && page && page.slug !== slug ? (
-          <label style={checkboxRowStyle}>
+          <label className={styles.checkboxRow}>
             <input
               type="checkbox"
               checked={createRedirect}
               onChange={(event) => onChangeCreateRedirect(event.target.checked)}
             />
             <span>
-              <strong>301 redirect 생성</strong><br />
-              저장 시 기존 URL /{locale}/{page.slug}에서 새 URL로 이동 규칙을 추가합니다.
+              <strong>{t.createRedirect}</strong><br />
+              {t.createRedirectBody1(locale, page.slug)}
               <br />
-              기존 redirect 규칙이 같은 URL을 쓰면 SEO는 저장되고 redirect만 건너뜁니다.
+              {t.createRedirectBody2}
             </span>
           </label>
         ) : null}
 
-        <div style={fieldStyle}>
-          <label style={labelStyle} htmlFor="builder-seo-title">SEO title</label>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="builder-seo-title">{t.title}</label>
           <input
             id="builder-seo-title"
             type="text"
             value={title}
-            placeholder="예: 국제 소송 전문 로펌 | 호정국제"
-            style={inputStyle}
+            placeholder={t.titlePlaceholder}
+            className={styles.input}
             onChange={(event) => onChangeTextField('title', event.target.value)}
           />
-          {fieldCounter(title, SEO_TITLE_MIN, SEO_TITLE_MAX)}
+          {fieldCounter(
+            title,
+            SEO_TITLE_MIN,
+            SEO_TITLE_MAX,
+            t.recommendedCounter(SEO_TITLE_MIN, SEO_TITLE_MAX),
+          )}
         </div>
 
-        <div style={fieldStyle}>
-          <label style={labelStyle} htmlFor="builder-seo-description">Meta description</label>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="builder-seo-description">{t.description}</label>
           <textarea
             id="builder-seo-description"
             value={description}
-            placeholder="검색 결과에 노출할 페이지 설명을 입력하세요."
-            style={textareaStyle}
+            placeholder={t.descriptionPlaceholder}
+            className={`${styles.input} ${styles.textarea}`}
             onChange={(event) => onChangeTextField('description', event.target.value)}
           />
-          {fieldCounter(description, SEO_DESCRIPTION_MIN, SEO_DESCRIPTION_MAX)}
+          {fieldCounter(
+            description,
+            SEO_DESCRIPTION_MIN,
+            SEO_DESCRIPTION_MAX,
+            t.recommendedCounter(SEO_DESCRIPTION_MIN, SEO_DESCRIPTION_MAX),
+          )}
         </div>
 
-        <div style={checkboxGridStyle}>
-          <label style={checkboxRowStyle}>
+        <div className={styles.checkboxGrid}>
+          <label className={styles.checkboxRow}>
             <input
               type="checkbox"
               checked={noIndex}
               onChange={(event) => onChangeBooleanField('noIndex', event.target.checked)}
             />
-            <span><strong>noindex</strong><br />검색 결과에서 제외합니다.</span>
+            <span><strong>{t.noIndex}</strong><br />{t.noIndexBody}</span>
           </label>
-          <label style={checkboxRowStyle}>
+          <label className={styles.checkboxRow}>
             <input
               type="checkbox"
               checked={noFollow}
               onChange={(event) => onChangeBooleanField('noFollow', event.target.checked)}
             />
-            <span><strong>nofollow</strong><br />페이지 링크 신호 전달을 막습니다.</span>
+            <span><strong>{t.noFollow}</strong><br />{t.noFollowBody}</span>
           </label>
         </div>
       </section>
 
-      <section style={{ ...sectionStyle, display: active ? 'grid' : 'none' }}>
-        <h3 style={sectionTitleStyle}>Google preview</h3>
-        <div style={previewCardStyle}>
-          <div style={{ color: '#202124', fontSize: '0.74rem', wordBreak: 'break-all' }}>{canonicalPreview}</div>
-          <div style={{ color: '#1a0dab', fontSize: '1rem', lineHeight: 1.3 }}>{searchTitle}</div>
-          <div style={{ color: '#4d5156', fontSize: '0.8rem', lineHeight: 1.45 }}>{searchDescription}</div>
+      <section className={styles.section} data-active={active ? 'true' : 'false'}>
+        <h3 className={styles.sectionTitle}>{t.preview}</h3>
+        <div className={styles.previewCard}>
+          <div className={styles.previewUrl}>{canonicalPreview}</div>
+          <div className={styles.previewTitle}>{searchTitle}</div>
+          <div className={styles.previewDescription}>{searchDescription}</div>
         </div>
       </section>
     </>

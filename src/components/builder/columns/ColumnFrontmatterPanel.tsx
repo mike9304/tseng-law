@@ -1,12 +1,14 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   BLOG_ADMIN_AUTHORS,
   BLOG_ADMIN_CATEGORIES,
   getCategoryLabel,
   getColumnBlogCategory,
 } from '@/components/builder/columns/blogAdminMeta';
+import { getColumnEditCopy } from '@/components/builder/columns/column-edit-copy';
 import type { Locale } from '@/lib/locales';
 import type { ColumnFrontmatter } from '@/lib/builder/columns/types';
 
@@ -14,6 +16,7 @@ interface ColumnFrontmatterPanelProps {
   slug: string;
   locale: Locale;
   initial: ColumnFrontmatter;
+  hasPublished?: boolean;
   onSaveStatus?: (status: 'saving' | 'saved' | 'error') => void;
 }
 
@@ -40,6 +43,15 @@ function fromDateTimeValue(value: string): string | null {
   return date.toISOString();
 }
 
+function normalizeColumnSlugDraft(value: string): string {
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 120);
+}
+
 function uniqueTags(tags: string[]): string[] {
   return [...new Set(tags.map((tag) => tag.trim()).filter(Boolean))].slice(0, 20);
 }
@@ -48,9 +60,15 @@ export default function ColumnFrontmatterPanel({
   slug,
   locale,
   initial,
+  hasPublished = false,
   onSaveStatus,
 }: ColumnFrontmatterPanelProps) {
+  const copy = getColumnEditCopy(locale);
+  const router = useRouter();
   const initialCategory = getColumnBlogCategory(initial);
+  const [slugDraft, setSlugDraft] = useState(slug);
+  const [slugStatus, setSlugStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
+  const [slugMessage, setSlugMessage] = useState<string | null>(null);
   const [lastmod, setLastmod] = useState(toDateValue(initial.lastmod));
   const [reviewStatus, setReviewStatus] = useState(initial.attorneyReviewStatus || 'pending');
   const [freshness, setFreshness] = useState(initial.freshness || 'unknown');
@@ -75,6 +93,14 @@ export default function ColumnFrontmatterPanel({
     () => BLOG_ADMIN_CATEGORIES.find((category) => category.slug === blogCategory) ?? BLOG_ADMIN_CATEGORIES[6],
     [blogCategory],
   );
+  const normalizedSlugDraft = useMemo(() => normalizeColumnSlugDraft(slugDraft), [slugDraft]);
+  const slugChanged = Boolean(normalizedSlugDraft) && normalizedSlugDraft !== slug;
+
+  useEffect(() => {
+    setSlugDraft(slug);
+    setSlugStatus('idle');
+    setSlugMessage(null);
+  }, [slug]);
 
   const buildPayload = useCallback(() => {
     const isoLastmod = lastmod
@@ -185,19 +211,73 @@ export default function ColumnFrontmatterPanel({
     setTagDraft('');
   }
 
+  async function saveSlug() {
+    if (!normalizedSlugDraft) {
+      setSlugStatus('error');
+      setSlugMessage(copy.frontmatter.slugSaveError);
+      return;
+    }
+    if (!slugChanged) {
+      setSlugDraft(normalizedSlugDraft);
+      setSlugMessage(copy.frontmatter.slugSame);
+      return;
+    }
+
+    setSlugStatus('saving');
+    setSlugMessage(null);
+    onSaveStatus?.('saving');
+    try {
+      const res = await fetch(
+        `/api/builder/columns/${encodeURIComponent(slug)}?locale=${encodeURIComponent(locale)}`,
+        {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify({ slug: normalizedSlugDraft }),
+        },
+      );
+      const payload = await res.json().catch(() => ({})) as {
+        ok?: boolean;
+        error?: string;
+        column?: { slug?: string };
+        slugRedirect?: { status?: string; from?: string; to?: string };
+      };
+      if (!res.ok || !payload.ok || !payload.column?.slug) {
+        throw new Error(payload.error ?? `${copy.frontmatter.slugSaveError} (${res.status}).`);
+      }
+
+      const nextSlug = payload.column.slug;
+      setSlugDraft(nextSlug);
+      setSlugStatus('saved');
+      const redirectFrom = payload.slugRedirect?.from ?? '';
+      const redirectTo = payload.slugRedirect?.to ?? '';
+      setSlugMessage(
+        payload.slugRedirect?.status === 'pending-publish'
+          ? copy.frontmatter.slugSavedRedirect(redirectFrom, redirectTo)
+          : copy.frontmatter.slugSaved,
+      );
+      onSaveStatus?.('saved');
+      router.replace(`/${locale}/admin-builder/columns/${encodeURIComponent(nextSlug)}/edit`);
+    } catch (error) {
+      setSlugStatus('error');
+      setSlugMessage(error instanceof Error ? error.message : copy.frontmatter.slugSaveError);
+      onSaveStatus?.('error');
+    }
+  }
+
   return (
     <aside className="column-frontmatter-panel">
       <div className="column-panel-heading">
-        <span>Settings</span>
-        <h3>글 설정</h3>
+        <span>{copy.frontmatter.settings}</span>
+        <h3>{copy.frontmatter.panelHeading}</h3>
       </div>
 
       <details className="column-panel-section column-panel-details" open>
-        <summary>발행</summary>
+        <summary>{copy.frontmatter.publish}</summary>
         <label className="column-toggle-row">
           <span>
-            <strong>Featured</strong>
-            <em>목록과 위젯에서 우선 노출</em>
+            <strong>{copy.frontmatter.featuredTitle}</strong>
+            <em>{copy.frontmatter.featuredDescription}</em>
           </span>
           <input
             type="checkbox"
@@ -207,7 +287,7 @@ export default function ColumnFrontmatterPanel({
         </label>
 
         <label className="column-editor-field">
-          <span>발행일</span>
+          <span>{copy.frontmatter.publishDate}</span>
           <input
             type="datetime-local"
             value={publishedAt}
@@ -216,15 +296,51 @@ export default function ColumnFrontmatterPanel({
         </label>
 
         <label className="column-editor-field">
-          <span>최종 수정일</span>
+          <span>{copy.frontmatter.lastModified}</span>
           <input type="date" value={lastmod} onChange={(event) => setLastmod(event.target.value)} />
         </label>
+
+        <div className="column-editor-field column-slug-editor" data-column-slug-editor>
+          <span>{copy.frontmatter.slugLabel}</span>
+          <small>
+            {copy.frontmatter.slugHint}
+          </small>
+          <div className="column-slug-row">
+            <input
+              type="text"
+              value={slugDraft}
+              aria-label={copy.frontmatter.slugInputAria}
+              onChange={(event) => setSlugDraft(event.target.value)}
+              onBlur={() => setSlugDraft(normalizedSlugDraft || slugDraft.trim())}
+            />
+            <button
+              type="button"
+              className="column-editor-btn-save"
+              disabled={slugStatus === 'saving' || !slugChanged}
+              onClick={() => void saveSlug()}
+            >
+              {slugStatus === 'saving' ? copy.frontmatter.saving : copy.frontmatter.saveSlug}
+            </button>
+          </div>
+          <small className="column-slug-preview">
+            /{locale}/columns/{normalizedSlugDraft || '{slug}'}
+            {hasPublished ? copy.slugPreviewPublished : copy.slugPreviewDraft}
+          </small>
+          {slugMessage ? (
+            <small
+              className={`column-slug-status is-${slugStatus}`}
+              role={slugStatus === 'error' ? 'alert' : 'status'}
+            >
+              {slugMessage}
+            </small>
+          ) : null}
+        </div>
       </details>
 
       <details className="column-panel-section column-panel-details" open>
-        <summary>분류</summary>
+        <summary>{copy.frontmatter.category}</summary>
         <label className="column-editor-field">
-          <span>카테고리</span>
+          <span>{copy.frontmatter.category}</span>
           <select value={blogCategory} onChange={(event) => setBlogCategory(event.target.value)}>
             {BLOG_ADMIN_CATEGORIES.map((category) => (
               <option key={category.slug} value={category.slug}>
@@ -235,7 +351,7 @@ export default function ColumnFrontmatterPanel({
         </label>
 
         <label className="column-editor-field">
-          <span>태그</span>
+          <span>{copy.frontmatter.tags}</span>
           <div className="column-tag-editor">
             <div>
               {tags.map((tag) => (
@@ -243,7 +359,7 @@ export default function ColumnFrontmatterPanel({
                   type="button"
                   key={tag}
                   onClick={() => setTags((current) => current.filter((item) => item !== tag))}
-                  aria-label={`${tag} 태그 제거`}
+                  aria-label={copy.frontmatter.tagRemove(tag)}
                 >
                   #{tag}
                 </button>
@@ -260,16 +376,16 @@ export default function ColumnFrontmatterPanel({
                   addTag(tagDraft);
                 }
               }}
-              placeholder="태그 입력 후 Enter"
+              placeholder={copy.frontmatter.tagPlaceholder}
             />
           </div>
         </label>
       </details>
 
       <details className="column-panel-section column-panel-details">
-        <summary>저자</summary>
+        <summary>{copy.frontmatter.author}</summary>
         <label className="column-editor-field">
-          <span>프리셋</span>
+          <span>{copy.frontmatter.authorPreset}</span>
           <select
             value={authorName}
             onChange={(event) => {
@@ -289,39 +405,39 @@ export default function ColumnFrontmatterPanel({
           </select>
         </label>
         <label className="column-editor-field">
-          <span>저자명</span>
+          <span>{copy.frontmatter.authorName}</span>
           <input value={authorName} onChange={(event) => setAuthorName(event.target.value)} />
         </label>
         <label className="column-editor-field">
-          <span>직책</span>
+          <span>{copy.frontmatter.authorTitle}</span>
           <input value={authorTitle} onChange={(event) => setAuthorTitle(event.target.value)} />
         </label>
         <label className="column-editor-field">
-          <span>사진 URL</span>
+          <span>{copy.frontmatter.authorPhoto}</span>
           <input value={authorPhoto} onChange={(event) => setAuthorPhoto(event.target.value)} />
         </label>
       </details>
 
       <details className="column-panel-section column-panel-details">
-        <summary>대표 이미지</summary>
+        <summary>{copy.frontmatter.featuredImage}</summary>
         <label className="column-editor-field">
-          <span>Featured image URL</span>
+          <span>{copy.frontmatter.featuredImage}</span>
           <input
             value={featuredImage}
             onChange={(event) => setFeaturedImage(event.target.value)}
-            placeholder="https://..."
+            placeholder={copy.frontmatter.featuredImagePlaceholder}
           />
         </label>
       </details>
 
       <details className="column-panel-section column-panel-details">
-        <summary>SEO</summary>
+        <summary>{copy.frontmatter.seo}</summary>
         <label className="column-editor-field">
-          <span>SEO title</span>
+          <span>{copy.frontmatter.seoTitle}</span>
           <input value={seoTitle} onChange={(event) => setSeoTitle(event.target.value)} maxLength={200} />
         </label>
         <label className="column-editor-field">
-          <span>SEO description</span>
+          <span>{copy.frontmatter.seoDescription}</span>
           <textarea
             value={seoDescription}
             onChange={(event) => setSeoDescription(event.target.value)}
@@ -330,13 +446,13 @@ export default function ColumnFrontmatterPanel({
           />
         </label>
         <label className="column-editor-field">
-          <span>OG image URL</span>
+          <span>{copy.frontmatter.seoOgImage}</span>
           <input value={seoOgImage} onChange={(event) => setSeoOgImage(event.target.value)} />
         </label>
         <label className="column-toggle-row">
           <span>
-            <strong>No index</strong>
-            <em>검색엔진 색인 제외</em>
+            <strong>{copy.frontmatter.noIndexTitle}</strong>
+            <em>{copy.frontmatter.noIndexDescription}</em>
           </span>
           <input
             type="checkbox"
@@ -347,28 +463,28 @@ export default function ColumnFrontmatterPanel({
       </details>
 
       <details className="column-panel-section column-panel-details">
-        <summary>검토</summary>
+        <summary>{copy.frontmatter.review}</summary>
         <label className="column-editor-field">
-          <span>변호사 검토</span>
+          <span>{copy.frontmatter.reviewStatus}</span>
           <select
             value={reviewStatus}
             onChange={(event) => setReviewStatus(event.target.value as ColumnFrontmatter['attorneyReviewStatus'])}
           >
-            <option value="pending">검토 대기</option>
-            <option value="reviewed">검토 완료</option>
-            <option value="needs-revision">수정 필요</option>
+            <option value="pending">{copy.frontmatter.reviewPending}</option>
+            <option value="reviewed">{copy.frontmatter.reviewReviewed}</option>
+            <option value="needs-revision">{copy.frontmatter.reviewNeedsRevision}</option>
           </select>
         </label>
 
         <label className="column-editor-field">
-          <span>신선도</span>
+          <span>{copy.frontmatter.freshness}</span>
           <select
             value={freshness}
             onChange={(event) => setFreshness(event.target.value as ColumnFrontmatter['freshness'])}
           >
-            <option value="fresh">최신</option>
-            <option value="review_needed">재검토 필요</option>
-            <option value="unknown">불명</option>
+            <option value="fresh">{copy.frontmatter.freshnessFresh}</option>
+            <option value="review_needed">{copy.frontmatter.freshnessReviewNeeded}</option>
+            <option value="unknown">{copy.frontmatter.freshnessUnknown}</option>
           </select>
         </label>
       </details>

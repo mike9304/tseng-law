@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { recordCmsRecordEvent } from '@/lib/builder/audit/record';
 import {
   BuilderCmsPermissionError,
   BuilderCmsValidationError,
@@ -88,7 +89,20 @@ export async function PATCH(
     if (!record) {
       return NextResponse.json({ ok: false, error: 'Unknown CMS record.' }, { status: 404 });
     }
-    return NextResponse.json({ ok: true, actor: routeActor.actor, record });
+    await recordCmsRecordEvent({
+      request,
+      type: 'updated',
+      siteId: params.siteId,
+      collectionId: params.collectionId,
+      recordId: params.recordId,
+    });
+    return NextResponse.json({
+      ok: true,
+      actor: routeActor.actor,
+      record,
+      redirectCreated: record.redirectCreated ?? false,
+      redirectWarnings: record.redirectWarnings ?? [],
+    });
   } catch (error) {
     if (error instanceof BuilderCmsPermissionError) {
       return NextResponse.json({ ok: false, error: error.message }, { status: 403 });
@@ -138,6 +152,13 @@ export async function DELETE(
     if (!deleted) {
       return NextResponse.json({ ok: false, error: 'Unknown CMS record.' }, { status: 404 });
     }
+    await recordCmsRecordEvent({
+      request,
+      type: 'deleted',
+      siteId: params.siteId,
+      collectionId: params.collectionId,
+      recordId: params.recordId,
+    });
     return NextResponse.json({ ok: true, actor: routeActor.actor });
   } catch (error) {
     if (error instanceof BuilderCmsPermissionError) {

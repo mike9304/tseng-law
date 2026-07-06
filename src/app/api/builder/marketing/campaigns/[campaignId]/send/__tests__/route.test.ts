@@ -43,11 +43,11 @@ function makeCampaign(overrides: Partial<Campaign> = {}): Campaign {
   };
 }
 
-function postRequest(body: unknown): NextRequest {
-  return new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-1/send', {
+function postRequest(body: unknown, query = ''): NextRequest {
+  return new NextRequest(`https://law.example.test/api/builder/marketing/campaigns/cmp-1/send${query ? `?${query}` : ''}`, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(body),
+    body: typeof body === 'string' ? body : JSON.stringify(body),
   });
 }
 
@@ -62,7 +62,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
   it('routes to sendTestEmail when payload contains testEmail', async () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
-    const response = await route.POST(postRequest({ testEmail: 'me@example.test' }), {
+    const response = await route.POST(postRequest({ testEmail: 'me@example.test' }, 'locale=en'), {
       params: { campaignId: 'cmp-1' },
     });
     const payload = await response.json();
@@ -76,7 +76,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
   it('runs a batch dispatch when no testEmail is provided', async () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
-    const response = await route.POST(postRequest({ batchSize: 25 }), {
+    const response = await route.POST(postRequest({ batchSize: 25 }, 'locale=en'), {
       params: { campaignId: 'cmp-1' },
     });
     const payload = await response.json();
@@ -104,12 +104,87 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
   it('returns 400 when testEmail is malformed', async () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
-    const response = await route.POST(postRequest({ testEmail: 'not-an-email' }), {
+    const response = await route.POST(postRequest({ testEmail: 'not-an-email' }, 'locale=zh-hant'), {
       params: { campaignId: 'cmp-1' },
     });
+    const payload = await response.json();
 
     expect(response.status).toBe(400);
+    expect(payload).toMatchObject({
+      ok: false,
+      error: '請確認活動發送請求。',
+      errorCode: 'invalid_send_payload',
+    });
     expect(sendTestEmail).not.toHaveBeenCalled();
+  });
+
+  it('returns localized invalid JSON errors', async () => {
+    vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
+    const route = await import('../route');
+    const response = await route.POST(postRequest('{', 'locale=en'), {
+      params: { campaignId: 'cmp-1' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Check the marketing request format.',
+      errorCode: 'invalid_json',
+    });
+    expect(sendTestEmail).not.toHaveBeenCalled();
+  });
+
+  it('localizes failed test-send results without leaking provider details', async () => {
+    vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
+    vi.mocked(sendTestEmail).mockResolvedValueOnce({ ok: false, error: 'provider secret leaked' });
+    const route = await import('../route');
+    const response = await route.POST(postRequest({ testEmail: 'me@example.test' }, 'locale=en'), {
+      params: { campaignId: 'cmp-1' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload).toEqual({
+      ok: false,
+      mode: 'test',
+      error: 'Unable to send the test email.',
+      errorCode: 'campaign_test_send_failed',
+    });
+    expect(JSON.stringify(payload)).not.toContain('provider secret leaked');
+  });
+
+  it('localizes batch result errors without leaking dispatcher details', async () => {
+    vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
+    vi.mocked(sendCampaignBatch).mockResolvedValueOnce({
+      ok: false,
+      attempted: 1,
+      succeeded: 0,
+      failed: 1,
+      remaining: 0,
+      errors: [{ email: 'lead@example.test', error: 'batch secret leaked' }],
+    });
+    const route = await import('../route');
+    const response = await route.POST(postRequest({ batchSize: 1 }, 'locale=zh-hant'), {
+      params: { campaignId: 'cmp-1' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload).toMatchObject({
+      mode: 'batch',
+      ok: false,
+      error: '無法完成活動發送。',
+      errorCode: 'campaign_batch_send_failed',
+      errors: [
+        {
+          email: 'lead@example.test',
+          error: '無法完成活動發送。',
+          errorCode: 'campaign_batch_send_failed',
+        },
+      ],
+    });
+    expect(JSON.stringify(payload)).not.toContain('batch secret leaked');
   });
 
   it('refuses anonymous callers (guardMutation deny)', async () => {

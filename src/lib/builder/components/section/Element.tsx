@@ -1,11 +1,21 @@
 import type { BuilderSectionCanvasNode } from '@/lib/builder/canvas/types';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  getLayoutNavigationWidgetsCopy,
+  localizedLayoutText,
+  SECTION_LEGACY_DEFAULTS,
+} from '../layout-navigation-widgets-copy';
 
 export default function SectionElement({
   node,
+  locale = 'ko',
 }: {
   node: BuilderSectionCanvasNode;
+  locale?: Locale;
 }) {
   const guideWidth = Math.min(node.rect.width - 48, node.content.maxWidth);
+  const copy = getLayoutNavigationWidgetsCopy(normalizeLocale(locale)).section;
+  const label = localizedLayoutText(node.content.label, copy.defaultLabel, SECTION_LEGACY_DEFAULTS.label);
 
   return (
     <div
@@ -45,7 +55,7 @@ export default function SectionElement({
           textTransform: 'uppercase',
         }}
       >
-        {node.content.label}
+        {label}
       </div>
       <div
         style={{
@@ -56,7 +66,7 @@ export default function SectionElement({
           fontSize: '13px',
         }}
       >
-        max width {node.content.maxWidth}px
+        {copy.maxWidthDisplay} {node.content.maxWidth}px
       </div>
     </div>
   );

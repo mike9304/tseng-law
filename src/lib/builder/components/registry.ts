@@ -31,6 +31,7 @@ import './audio';
 import './lottie';
 import './map';
 import './customEmbed';
+import './codeBlock';
 import './icon';
 import './spacer';
 import './divider';
@@ -114,3 +115,9 @@ import './timeline';
 import './teamMemberCard';
 import './serviceFeatureCard';
 import './siteSearch';
+
+// Native Members widgets
+import './memberLogin';
+import './memberAccountSummary';
+import './memberProfileForm';
+import './memberBookingsList';

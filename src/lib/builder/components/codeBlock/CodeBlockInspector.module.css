@@ -1,0 +1,177 @@
+.root {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  color: #334155;
+  display: grid;
+  font-size: 0.78rem;
+  gap: 5px;
+}
+
+.label {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.control {
+  background: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  color: #0f172a;
+  font: inherit;
+  font-size: 0.82rem;
+  outline: none;
+  padding: 7px 10px;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+  width: 100%;
+}
+
+.textarea {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  line-height: 1.45;
+  min-height: 220px;
+  resize: vertical;
+}
+
+.control:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.14);
+}
+
+.control:disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.checkboxRow {
+  align-items: center;
+  color: #334155;
+  display: inline-grid;
+  font-size: 0.82rem;
+  gap: 8px;
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.checkboxRow input {
+  accent-color: #116dff;
+  height: 15px;
+  margin: 0;
+  width: 15px;
+}
+
+.checkboxRow input:focus-visible {
+  outline: 2px solid #116dff;
+  outline-offset: 2px;
+}
+
+.checkboxRow input:disabled,
+.checkboxRow input:disabled + span {
+  cursor: not-allowed;
+  opacity: 0.56;
+}
+
+.caption {
+  color: #64748b;
+  font-size: 0.68rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.runPanel {
+  border-top: 1px solid #e2e8f0;
+  display: grid;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.runButton {
+  align-items: center;
+  background: #116dff;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 34px;
+  padding: 8px 12px;
+}
+
+.runButton:focus-visible {
+  outline: 2px solid #116dff;
+  outline-offset: 2px;
+}
+
+.runButton:disabled {
+  background: #cbd5e1;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.runOutput,
+.runLogs {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  padding: 8px;
+}
+
+.runOutput[data-error='true'] {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.runOutput pre {
+  color: #0f172a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  margin: 0;
+  max-height: 160px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.runStatus {
+  color: #475569;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.runLogs ul {
+  display: grid;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.runLogs li {
+  color: #334155;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.logLevel {
+  color: #116dff;
+  font-weight: 800;
+  text-transform: uppercase;
+}

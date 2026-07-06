@@ -8,6 +8,7 @@ import {
   buildBuilderDynamicRouteHref,
   buildBuilderDynamicTemplateHref,
 } from '@/lib/builder/hrefs';
+import { getBuilderWorkspaceCopy } from '@/lib/builder/workspace-copy';
 import type { BuilderSiteOverview } from '@/lib/builder/site';
 import type { Locale } from '@/lib/locales';
 
@@ -32,16 +33,18 @@ export default function BuilderDynamicTemplateWorkspaceShell({
   const routeRegistryHref = buildBuilderDynamicRouteHref(locale, detail.routeId, {
     previewRecordId: initialPreviewRecordId,
   });
+  const copy = getBuilderWorkspaceCopy(locale);
 
   return (
     <BuilderWorkspaceFrame
+      locale={locale}
       title={`${detail.title} template`}
       description="Dynamic template editor v0. This surface exposes record preview selection and block-level template controls before full canvas editing lands."
       activeRail="pages"
       stageUrl={templateStageUrl}
       railItems={[
-        { key: 'pages', label: 'Pages', description: 'Workspace inventory', href: `/${locale}/builder`, active: true },
-        { key: 'assets', label: 'Assets', description: 'Recent builder media', href: `/${locale}/builder` },
+        { key: 'pages', label: copy.pagesLabel, description: copy.pagesDescription, href: `/${locale}/builder`, active: true },
+        { key: 'assets', label: copy.assetsLabel, description: copy.assetsDescription, href: `/${locale}/builder` },
       ]}
       leftMeta={
         <>
@@ -61,8 +64,8 @@ export default function BuilderDynamicTemplateWorkspaceShell({
       }
       leftSidebar={
         <section className="builder-preview-inspector-card builder-dashboard-sidebar">
-          <h2>Dynamic templates</h2>
-          <p>Explicit ownership entries now expose a v0 block editor and record preview contract.</p>
+          <h2>{copy.dynamicTemplateSidebarTitle}</h2>
+          <p>{copy.dynamicTemplateSidebarDescription}</p>
           <div className="builder-dashboard-nav-list">
             {overview.dynamicTemplates.map((template) => (
               <Link
@@ -81,10 +84,10 @@ export default function BuilderDynamicTemplateWorkspaceShell({
       inspector={
         <>
           <section className="builder-preview-inspector-card">
-            <h2>Ownership policy</h2>
+            <h2>{copy.dynamicTemplateOwnershipTitle}</h2>
             <ul className="builder-preview-inspector-notes">
-              {detail.exclusions.map((exclusion) => (
-                <li key={exclusion}>{exclusion}</li>
+              {copy.dynamicTemplateOwnershipItems.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </section>

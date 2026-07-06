@@ -5,6 +5,11 @@ import {
   createReviewSession,
   listReviewSessions,
 } from '@/lib/builder/security/review-tokens';
+import {
+  getBuilderReviewSessionsApiErrorPayload,
+  type BuilderReviewSessionsApiErrorCode,
+} from '@/lib/builder/security/review-sessions-api-copy';
+import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -12,13 +17,33 @@ export const dynamic = 'force-dynamic';
 const createSchema = z.object({
   branchOrPageId: z.string().trim().min(1).max(180),
   ttlMs: z.number().int().positive().max(1000 * 60 * 60 * 24 * 30).optional(),
+  locale: z.string().trim().max(20).optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderReviewSessionsApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getBuilderReviewSessionsApiErrorPayload(locale, errorCode), ...extras },
+    { status },
   );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
+function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
+  const queryLocale = request.nextUrl.searchParams.get('locale') ?? undefined;
+  if (isLocale(queryLocale)) return queryLocale;
+  if (payload && typeof payload === 'object') {
+    const locale = (payload as { locale?: unknown }).locale;
+    if (typeof locale === 'string' && isLocale(locale)) return locale;
+  }
+  return normalizeLocale(queryLocale);
 }
 
 export async function GET(request: NextRequest) {
@@ -27,8 +52,14 @@ export async function GET(request: NextRequest) {
     permission: 'edit-pages',
   });
   if (auth instanceof NextResponse) return auth;
-  const sessions = await listReviewSessions();
-  return NextResponse.json({ ok: true, sessions });
+  const locale = resolveRequestLocale(request);
+  try {
+    const sessions = await listReviewSessions();
+    return NextResponse.json({ ok: true, sessions });
+  } catch (error) {
+    console.error('[builder/review-sessions] GET failed:', error);
+    return errorResponse(locale, 'review_sessions_list_failed', 500);
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -38,8 +69,11 @@ export async function POST(request: NextRequest) {
   });
   if (auth instanceof NextResponse) return auth;
 
+  let errorLocale = resolveRequestLocale(request);
   try {
-    const input = createSchema.parse(await request.json());
+    const body = await request.json();
+    errorLocale = resolveRequestLocale(request, body);
+    const input = createSchema.parse(body);
     const result = await createReviewSession({
       branchOrPageId: input.branchOrPageId,
       ttlMs: input.ttlMs,
@@ -50,13 +84,11 @@ export async function POST(request: NextRequest) {
       { status: 201 },
     );
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+      return errorResponse(errorLocale, 'invalid_json', 400);
     }
-    return NextResponse.json(
-      { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
-      { status: 400 },
-    );
+    console.error('[builder/review-sessions] POST failed:', error);
+    return errorResponse(errorLocale, 'review_session_create_failed', 500);
   }
 }

@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  PAGE_TRANSITION_OPTIONS,
   type PageTransition,
 } from '@/lib/builder/animations/presets';
 import {
@@ -9,17 +8,12 @@ import {
   type BuilderTheme,
 } from '@/lib/builder/site/types';
 import {
-  THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
 } from '@/lib/builder/site/theme';
-import {
-  fieldStyle,
-  inputStyle,
-  labelStyle,
-  sectionHeadingStyle,
-  sectionStyle,
-  twoColumnStyle,
-} from './SiteSettingsModal.styles';
+import type { Locale } from '@/lib/locales';
+import { getSiteSettingsCopy } from './site-settings-copy';
+import styles from './SiteSettingsAdvancedTab.module.css';
+import { TranslationReleaseSettingsPanel } from './TranslationReleaseSettingsPanel';
 
 interface SiteSettingsAdvancedTabProps {
   pageTransition: PageTransition;
@@ -29,6 +23,7 @@ interface SiteSettingsAdvancedTabProps {
   onChangePageTransition: (value: PageTransition) => void;
   onChangePageTransitionDurationMs: (value: number) => void;
   onChangeThemeColor: (key: keyof BuilderTheme['colors'], value: string) => void;
+  locale: Locale;
 }
 
 export function SiteSettingsAdvancedTab({
@@ -39,36 +34,38 @@ export function SiteSettingsAdvancedTab({
   onChangePageTransition,
   onChangePageTransitionDurationMs,
   onChangeThemeColor,
+  locale,
 }: SiteSettingsAdvancedTabProps) {
+  const copy = getSiteSettingsCopy(locale);
   return (
-    <div style={sectionStyle}>
-      <div style={sectionHeadingStyle}>Motion</div>
-      <div style={twoColumnStyle}>
-        <div style={fieldStyle}>
-          <label style={labelStyle}>Page transition</label>
+    <div className={styles.root}>
+      <div className={styles.sectionHeading}>{copy.advanced.motionHeading}</div>
+      <div className={styles.fieldGrid}>
+        <div className={styles.field}>
+          <label className={styles.label}>{copy.advanced.pageTransitionLabel}</label>
           <select
-            aria-label="Page transition"
+            aria-label={copy.advanced.pageTransitionLabel}
             value={pageTransition}
-            style={inputStyle}
+            className={styles.input}
             onChange={(event) => onChangePageTransition(event.target.value as PageTransition)}
           >
-            {PAGE_TRANSITION_OPTIONS.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
+            {(Object.keys(copy.advanced.pageTransitionOptions) as PageTransition[]).map((value) => (
+              <option key={value} value={value}>
+                {copy.advanced.pageTransitionOptions[value]}
               </option>
             ))}
           </select>
         </div>
-        <div style={fieldStyle}>
-          <label style={labelStyle}>Duration</label>
+        <div className={styles.field}>
+          <label className={styles.label}>{copy.advanced.pageTransitionDurationLabel}</label>
           <input
-            aria-label="Page transition duration"
+            aria-label={copy.advanced.pageTransitionDurationLabel}
             type="number"
             min={80}
             max={3000}
             step={20}
             value={pageTransitionDurationMs}
-            style={inputStyle}
+            className={styles.input}
             disabled={pageTransition === 'none'}
             onChange={(event) => {
               const raw = Number(event.target.value);
@@ -80,33 +77,27 @@ export function SiteSettingsAdvancedTab({
           />
         </div>
       </div>
-      <p style={{ margin: 0, color: '#64748b', fontSize: '0.76rem', lineHeight: 1.45 }}>
-        Published 페이지 wrapper에 fade/slide/scale 전환을 적용합니다. 방문자가 reduced motion을 켜면 자동으로 꺼집니다.
-      </p>
+      <p className={styles.description}>{copy.advanced.pageTransitionDescription}</p>
 
-      <div style={sectionHeadingStyle}>Theme colors</div>
+      <TranslationReleaseSettingsPanel locale={locale} />
+
+      <div className={styles.sectionHeading}>{copy.advanced.themeColorsHeading}</div>
       {THEME_COLOR_TOKENS.map((token) => (
-        <div key={token} style={fieldStyle}>
-          <label style={labelStyle}>{THEME_COLOR_LABELS[token]}</label>
-          <div style={{ display: 'grid', gridTemplateColumns: '56px 1fr', gap: 8, alignItems: 'center' }}>
+        <div key={token} className={styles.field}>
+          <label className={styles.label}>{copy.advanced.themeColorLabels[token]}</label>
+          <div className={styles.colorRow}>
             <input
               type="color"
               value={isValidHexColor(theme.colors[token]) ? theme.colors[token] : DEFAULT_THEME.colors[token]}
-              style={{ width: 56, height: 38, padding: 4, border: '1px solid #e2e8f0', borderRadius: 8, background: '#fff', cursor: 'pointer' }}
+              className={styles.colorInput}
               onChange={(event) => onChangeThemeColor(token, event.target.value)}
             />
             <input
               type="text"
               value={theme.colors[token]}
               placeholder="#123B63"
-              style={inputStyle}
+              className={styles.input}
               onChange={(event) => onChangeThemeColor(token, event.target.value)}
-              onFocus={(event) => {
-                event.currentTarget.style.borderColor = '#116dff';
-              }}
-              onBlur={(event) => {
-                event.currentTarget.style.borderColor = '#e2e8f0';
-              }}
             />
           </div>
         </div>

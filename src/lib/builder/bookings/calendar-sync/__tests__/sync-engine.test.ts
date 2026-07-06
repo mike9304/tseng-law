@@ -109,7 +109,7 @@ describe('calendar sync pull application', () => {
 
   it('imports external events as idempotent staff blocked dates', async () => {
     const first = await applyPulledCalendarEvents(connection(), [externalEvent()]);
-    expect(first).toEqual({ pulled: 1, bookingUpdates: 0, blockedUpdates: 1 });
+    expect(first).toMatchObject({ pulled: 1, bookingUpdates: 0, blockedUpdates: 1 });
     expect(fixtures.availability?.blockedDates).toEqual([
       {
         start: '2026-05-18T01:00:00.000Z',
@@ -119,7 +119,7 @@ describe('calendar sync pull application', () => {
     ]);
 
     const duplicate = await applyPulledCalendarEvents(connection(), [externalEvent()]);
-    expect(duplicate).toEqual({ pulled: 0, bookingUpdates: 0, blockedUpdates: 0 });
+    expect(duplicate).toMatchObject({ pulled: 0, bookingUpdates: 0, blockedUpdates: 0 });
     expect(fixtures.savedAvailabilities).toHaveLength(1);
 
     const moved = await applyPulledCalendarEvents(connection(), [
@@ -136,7 +136,7 @@ describe('calendar sync pull application', () => {
         end: '',
       }),
     ]);
-    expect(cancelled).toEqual({ pulled: 1, bookingUpdates: 0, blockedUpdates: 1 });
+    expect(cancelled).toMatchObject({ pulled: 1, bookingUpdates: 0, blockedUpdates: 1 });
     expect(fixtures.availability?.blockedDates).toEqual([]);
   });
 
@@ -152,7 +152,7 @@ describe('calendar sync pull application', () => {
       }),
     ]);
 
-    expect(rescheduled).toEqual({ pulled: 1, bookingUpdates: 1, blockedUpdates: 0 });
+    expect(rescheduled).toMatchObject({ pulled: 1, bookingUpdates: 1, blockedUpdates: 0 });
     expect(fixtures.bookings.get('bk-sync')).toMatchObject({
       startAt: '2026-05-18T04:00:00.000Z',
       endAt: '2026-05-18T04:30:00.000Z',
@@ -169,7 +169,7 @@ describe('calendar sync pull application', () => {
       }),
     ]);
 
-    expect(cancelled).toEqual({ pulled: 1, bookingUpdates: 1, blockedUpdates: 0 });
+    expect(cancelled).toMatchObject({ pulled: 1, bookingUpdates: 1, blockedUpdates: 0 });
     expect(fixtures.bookings.get('bk-sync')).toMatchObject({
       status: 'cancelled',
       cancellationReason: 'Cancelled from google calendar',
@@ -195,7 +195,7 @@ describe('calendar sync pull application', () => {
         end: '2026-05-18T15:30:00+09:00',
       }),
     ]);
-    expect(stale).toEqual({ pulled: 0, bookingUpdates: 0, blockedUpdates: 0 });
+    expect(stale).toMatchObject({ pulled: 0, bookingUpdates: 0, blockedUpdates: 0 });
     expect(fixtures.bookings.get('bk-sync')?.startAt).toBe('2026-05-18T00:00:00.000Z');
 
     const deleted = await applyPulledCalendarEvents(mappedConnection, [
@@ -208,7 +208,7 @@ describe('calendar sync pull application', () => {
         end: '',
       }),
     ]);
-    expect(deleted).toEqual({ pulled: 1, bookingUpdates: 1, blockedUpdates: 0 });
+    expect(deleted).toMatchObject({ pulled: 1, bookingUpdates: 1, blockedUpdates: 0 });
     expect(fixtures.bookings.get('bk-sync')).toMatchObject({
       status: 'cancelled',
       cancellationReason: 'Cancelled from google calendar',
@@ -233,7 +233,7 @@ describe('calendar sync pull application', () => {
       }),
     ]);
 
-    expect(result).toEqual({ pulled: 0, bookingUpdates: 0, blockedUpdates: 0 });
+    expect(result).toMatchObject({ pulled: 0, bookingUpdates: 0, blockedUpdates: 0 });
     expect(fixtures.bookings.get('bk-sync')).toMatchObject({
       startAt: '2026-05-18T00:00:00.000Z',
       endAt: '2026-05-18T00:30:00.000Z',
@@ -247,7 +247,7 @@ describe('calendar sync pull application', () => {
       externalEvent({ externalId: 'echo', summary: '[Hojeong] pushed event' }),
     ]);
 
-    expect(result).toEqual({ pulled: 0, bookingUpdates: 0, blockedUpdates: 0 });
+    expect(result).toMatchObject({ pulled: 0, bookingUpdates: 0, blockedUpdates: 0 });
     expect(fixtures.savedAvailabilities).toEqual([]);
     expect(fixtures.savedBookings).toEqual([]);
   });

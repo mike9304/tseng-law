@@ -8,13 +8,13 @@ import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { validateCsrf } from '@/lib/builder/security/csrf';
 import {
   checkAssetUploadRateLimit,
+  checkDraftSaveRateLimit,
   checkMutationRateLimit,
   checkPublishRateLimit,
   type RateLimitResult,
 } from '@/lib/builder/security/rate-limit';
 import type { BuilderPermission } from '@/lib/builder/security/permissions';
-import { hasBuilderPermission } from '@/lib/builder/security/permissions';
-import type { UserRole } from '@/lib/builder/collab/collab-engine';
+import { userHasPermission } from '@/lib/builder/security/resolve-permission';
 
 export interface GuardResult {
   username: string;
@@ -22,7 +22,7 @@ export interface GuardResult {
   permission?: BuilderPermission;
 }
 
-type GuardBucket = 'mutation' | 'publish' | 'asset';
+type GuardBucket = 'mutation' | 'publish' | 'asset' | 'draft';
 
 interface GuardOptions {
   bucket?: GuardBucket;
@@ -31,66 +31,66 @@ interface GuardOptions {
   permission?: BuilderPermission;
 }
 
-/**
- * Until a real per-user role store lands, the single admin user behind
- * basic-auth is treated as the implicit `owner` role. Keeping this
- * indirection lets us swap in real RBAC without rewriting route call sites.
- */
-function resolveRoleForAdmin(): UserRole {
-  return 'owner';
-}
-
 function rateLimitForBucket(bucket: GuardBucket, ip: string): Promise<RateLimitResult> {
   switch (bucket) {
     case 'publish':
       return checkPublishRateLimit(ip);
     case 'asset':
       return checkAssetUploadRateLimit(ip);
+    case 'draft':
+      return checkDraftSaveRateLimit(ip);
     case 'mutation':
     default:
       return checkMutationRateLimit(ip);
   }
 }
 
-export function guardMutation(
+function missingPermissionResponse(permission: BuilderPermission): NextResponse {
+  return NextResponse.json({ error: `Missing permission: ${permission}` }, { status: 403 });
+}
+
+export async function guardMutation(
   request: NextRequest,
   options: GuardOptions = {},
 ): Promise<GuardResult | NextResponse> {
   // 1. Auth
   const auth = requireBuilderAdminAuth(request);
-  if (auth instanceof NextResponse) return Promise.resolve(auth);
+  if (auth instanceof NextResponse) return auth;
 
   // 2. CSRF
   const csrf = validateCsrf(request);
-  if (csrf) return Promise.resolve(csrf);
+  if (csrf) return csrf;
 
   // 3. Permission gate
   if (options.permission) {
-    const role = resolveRoleForAdmin();
-    if (!hasBuilderPermission(role, options.permission)) {
-      return Promise.resolve(
-        NextResponse.json(
-          { error: `Missing permission: ${options.permission}` },
-          { status: 403 },
-        ),
-      );
+    if (!(await userHasPermission(auth.username, options.permission))) {
+      return missingPermissionResponse(options.permission);
     }
   }
 
   // 4. Rate limit
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
-  return rateLimitForBucket(options.bucket ?? 'mutation', ip).then((rl) => {
-    if (!rl.allowed) {
-      return NextResponse.json(
-        { error: 'Too many requests' },
-        { status: 429, headers: { 'Retry-After': String(Math.ceil(rl.retryAfterMs / 1000)) } },
-      );
-    }
+  const rl = await rateLimitForBucket(options.bucket ?? 'mutation', ip);
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: 'Too many requests' },
+      { status: 429, headers: { 'Retry-After': String(Math.ceil(rl.retryAfterMs / 1000)) } },
+    );
+  }
 
-    return { username: auth.username, permission: options.permission };
-  });
+  return { username: auth.username, permission: options.permission };
 }
 
 export function guardBuilderRead(request: NextRequest): GuardResult | NextResponse {
   return requireBuilderAdminAuth(request);
+}
+
+export async function guardBuilderReadWithPermission(
+  request: NextRequest,
+  permission: BuilderPermission,
+): Promise<GuardResult | NextResponse> {
+  const auth = requireBuilderAdminAuth(request);
+  if (auth instanceof NextResponse) return auth;
+  if (!(await userHasPermission(auth.username, permission))) return missingPermissionResponse(permission);
+  return { username: auth.username, permission };
 }

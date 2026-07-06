@@ -8,6 +8,7 @@ import type {
   BuilderImageBackground,
   ThemeColorToken,
 } from '@/lib/builder/site/theme';
+import type { Locale } from '@/lib/locales';
 import {
   isGradientBackgroundValue,
   isImageBackgroundValue,
@@ -15,6 +16,7 @@ import {
 } from '@/lib/builder/site/theme';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
 import ColorPicker from '@/components/builder/editor/ColorPicker';
+import { getBackgroundEditorCopy, type BackgroundMode } from '@/components/builder/editor/background-editor-copy';
 
 interface ThemeSwatch {
   token: ThemeColorToken;
@@ -28,8 +30,6 @@ interface BuilderAssetListItem {
   size?: number;
   uploadedAt?: string;
 }
-
-type BackgroundMode = 'solid' | 'gradient' | 'image' | 'none';
 
 const DEFAULT_GRADIENT: BuilderGradientBackground = {
   kind: 'gradient',
@@ -131,12 +131,6 @@ function normalizeMode(value: BuilderBackgroundValue | undefined): BackgroundMod
   return 'solid';
 }
 
-function inferLocale(): string {
-  if (typeof window === 'undefined') return 'ko';
-  const segment = window.location.pathname.split('/').filter(Boolean)[0];
-  return segment || 'ko';
-}
-
 function parseLegacyGradient(value: string): BuilderGradientBackground {
   const angleMatch = value.match(/(\d+)deg/);
   const colors = value.match(/#[0-9a-fA-F]{6}|rgba?\([^)]+\)/g) ?? ['#123b63', '#1e5a96'];
@@ -186,15 +180,18 @@ function clampNumber(value: number, min: number, max: number): number {
 export default function BackgroundEditor({
   value,
   disabled = false,
+  locale = 'ko',
   paletteTokens,
   onChange,
 }: {
   value: BuilderBackgroundValue;
   disabled?: boolean;
+  locale?: Locale;
   paletteTokens: ThemeSwatch[];
   onChange: (value: BuilderBackgroundValue) => void;
 }) {
   const theme = useBuilderTheme();
+  const copy = getBackgroundEditorCopy(locale);
   const [mode, setMode] = useState<BackgroundMode>(() => normalizeMode(value));
   const [assetOpen, setAssetOpen] = useState(false);
   const [assets, setAssets] = useState<BuilderAssetListItem[]>([]);
@@ -212,7 +209,7 @@ export default function BackgroundEditor({
       setLoadingAssets(true);
       setAssetError(null);
       try {
-        const response = await fetch(`/api/builder/assets?locale=${encodeURIComponent(inferLocale())}&limit=18`, {
+        const response = await fetch(`/api/builder/assets?locale=${encodeURIComponent(locale)}&limit=18`, {
           credentials: 'same-origin',
         });
         const payload = (await response.json().catch(() => ({}))) as {
@@ -222,12 +219,12 @@ export default function BackgroundEditor({
         };
         if (cancelled) return;
         if (!response.ok || payload.ok === false) {
-          setAssetError(payload.error ?? 'Failed to load assets.');
+          setAssetError(payload.error ?? copy.assetLoadError);
           return;
         }
         setAssets(payload.assets ?? []);
       } catch {
-        if (!cancelled) setAssetError('Failed to load assets.');
+        if (!cancelled) setAssetError(copy.assetLoadError);
       } finally {
         if (!cancelled) setLoadingAssets(false);
       }
@@ -236,7 +233,7 @@ export default function BackgroundEditor({
     return () => {
       cancelled = true;
     };
-  }, [assetOpen]);
+  }, [assetOpen, copy.assetLoadError, locale]);
 
   const gradient = useMemo(() => getGradient(value), [value]);
   const image = useMemo(() => getImage(value), [value]);
@@ -277,11 +274,11 @@ export default function BackgroundEditor({
     <div style={panelStyle}>
       <div style={modeRowStyle}>
         {([
-          ['solid', 'Solid'],
-          ['gradient', 'Gradient'],
-          ['image', 'Image'],
-          ['none', 'None'],
-        ] as const).map(([key, label]) => (
+          'solid',
+          'gradient',
+          'image',
+          'none',
+        ] as const).map((key) => (
           <button
             key={key}
             type="button"
@@ -289,18 +286,19 @@ export default function BackgroundEditor({
             disabled={disabled}
             onClick={() => selectMode(key)}
           >
-            {label}
+            {copy.modeLabels[key]}
           </button>
         ))}
       </div>
 
       {mode === 'solid' ? (
         <div style={fieldStyle}>
-          <span style={labelStyle}>Fill color</span>
+          <span style={labelStyle}>{copy.fillColorLabel}</span>
           <ColorPicker
             value={getSolid(value)}
             paletteTokens={paletteTokens}
             disabled={disabled}
+            locale={locale}
             onChange={onChange}
           />
         </div>
@@ -309,20 +307,20 @@ export default function BackgroundEditor({
       {mode === 'gradient' ? (
         <>
           <div style={inlineRowStyle}>
-            <span style={labelStyle}>Type</span>
+            <span style={labelStyle}>{copy.gradientTypeLabel}</span>
             <select
               style={inputStyle}
               value={gradient.type}
               disabled={disabled}
               onChange={(event) => updateGradient({ type: event.target.value === 'radial' ? 'radial' : 'linear' })}
             >
-              <option value="linear">Linear</option>
-              <option value="radial">Radial</option>
+              <option value="linear">{copy.gradientTypeOptions.linear}</option>
+              <option value="radial">{copy.gradientTypeOptions.radial}</option>
             </select>
           </div>
           {gradient.type === 'linear' ? (
             <div style={inlineRowStyle}>
-              <span style={labelStyle}>Angle</span>
+              <span style={labelStyle}>{copy.angleLabel}</span>
               <input
                 style={inputStyle}
                 type="number"
@@ -337,11 +335,12 @@ export default function BackgroundEditor({
           {gradient.stops.map((stop, index) => (
             <div key={index} style={{ display: 'grid', gridTemplateColumns: '1fr 68px 28px', gap: 6, alignItems: 'end' }}>
               <div style={fieldStyle}>
-                <span style={labelStyle}>Stop {index + 1}</span>
+                <span style={labelStyle}>{copy.stopLabel(index + 1)}</span>
                 <ColorPicker
                   value={stop.color}
                   paletteTokens={paletteTokens}
                   disabled={disabled}
+                  locale={locale}
                   onChange={(color) => updateStop(index, { color })}
                 />
               </div>
@@ -352,13 +351,14 @@ export default function BackgroundEditor({
                 max={100}
                 value={stop.position}
                 disabled={disabled}
-                aria-label={`Stop ${index + 1} position`}
+                aria-label={copy.stopPositionAriaLabel(index + 1)}
                 onChange={(event) => updateStop(index, { position: clampNumber(Number(event.target.value), 0, 100) })}
               />
               <button
                 type="button"
                 style={modeButtonStyle(false)}
                 disabled={disabled || gradient.stops.length <= 2}
+                aria-label={copy.removeStopAriaLabel(index + 1)}
                 onClick={() => updateGradient({ stops: gradient.stops.filter((_, stopIndex) => stopIndex !== index) })}
               >
                 -
@@ -376,7 +376,7 @@ export default function BackgroundEditor({
               ],
             })}
           >
-            Add stop
+            {copy.addStopLabel}
           </button>
         </>
       ) : null}
@@ -384,12 +384,12 @@ export default function BackgroundEditor({
       {mode === 'image' ? (
         <>
           <div style={fieldStyle}>
-            <span style={labelStyle}>Image URL</span>
+            <span style={labelStyle}>{copy.imageUrlLabel}</span>
             <input
               style={inputStyle}
               type="url"
               value={image.src}
-              placeholder="https://example.com/image.jpg"
+              placeholder={copy.imageUrlPlaceholder}
               disabled={disabled}
               onChange={(event) => updateImage({ src: event.target.value })}
             />
@@ -400,14 +400,14 @@ export default function BackgroundEditor({
             disabled={disabled}
             onClick={() => setAssetOpen((open) => !open)}
           >
-            Choose from assets
+            {copy.chooseAssetsLabel}
           </button>
           {assetOpen ? (
             <div style={fieldStyle}>
-              {loadingAssets ? <span style={labelStyle}>Loading assets...</span> : null}
+              {loadingAssets ? <span style={labelStyle}>{copy.loadingAssetsLabel}</span> : null}
               {assetError ? <span style={{ ...labelStyle, color: '#dc2626' }}>{assetError}</span> : null}
               {!loadingAssets && assets.length === 0 && !assetError ? (
-                <span style={labelStyle}>No assets found.</span>
+                <span style={labelStyle}>{copy.noAssetsLabel}</span>
               ) : null}
               <div style={assetGridStyle}>
                 {assets.map((asset) => (
@@ -433,58 +433,59 @@ export default function BackgroundEditor({
           ) : null}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
             <div style={fieldStyle}>
-              <span style={labelStyle}>Size</span>
+              <span style={labelStyle}>{copy.imageSizeLabel}</span>
               <select
                 style={inputStyle}
                 value={image.size}
                 disabled={disabled}
                 onChange={(event) => updateImage({ size: event.target.value as BuilderImageBackground['size'] })}
               >
-                <option value="cover">Cover</option>
-                <option value="contain">Contain</option>
-                <option value="auto">Auto</option>
+                <option value="cover">{copy.imageSizeOptions.cover}</option>
+                <option value="contain">{copy.imageSizeOptions.contain}</option>
+                <option value="auto">{copy.imageSizeOptions.auto}</option>
               </select>
             </div>
             <div style={fieldStyle}>
-              <span style={labelStyle}>Repeat</span>
+              <span style={labelStyle}>{copy.imageRepeatLabel}</span>
               <select
                 style={inputStyle}
                 value={image.repeat}
                 disabled={disabled}
                 onChange={(event) => updateImage({ repeat: event.target.value as BuilderImageBackground['repeat'] })}
               >
-                <option value="no-repeat">No repeat</option>
-                <option value="repeat">Repeat</option>
-                <option value="repeat-x">Repeat X</option>
-                <option value="repeat-y">Repeat Y</option>
+                <option value="no-repeat">{copy.imageRepeatOptions['no-repeat']}</option>
+                <option value="repeat">{copy.imageRepeatOptions.repeat}</option>
+                <option value="repeat-x">{copy.imageRepeatOptions['repeat-x']}</option>
+                <option value="repeat-y">{copy.imageRepeatOptions['repeat-y']}</option>
               </select>
             </div>
           </div>
           <div style={fieldStyle}>
-            <span style={labelStyle}>Position</span>
+            <span style={labelStyle}>{copy.imagePositionLabel}</span>
             <select
               style={inputStyle}
               value={image.position}
               disabled={disabled}
               onChange={(event) => updateImage({ position: event.target.value as BuilderImageBackground['position'] })}
             >
-              <option value="center">Center</option>
-              <option value="top">Top</option>
-              <option value="bottom">Bottom</option>
-              <option value="left">Left</option>
-              <option value="right">Right</option>
-              <option value="top-left">Top left</option>
-              <option value="top-right">Top right</option>
-              <option value="bottom-left">Bottom left</option>
-              <option value="bottom-right">Bottom right</option>
+              <option value="center">{copy.imagePositionOptions.center}</option>
+              <option value="top">{copy.imagePositionOptions.top}</option>
+              <option value="bottom">{copy.imagePositionOptions.bottom}</option>
+              <option value="left">{copy.imagePositionOptions.left}</option>
+              <option value="right">{copy.imagePositionOptions.right}</option>
+              <option value="top-left">{copy.imagePositionOptions['top-left']}</option>
+              <option value="top-right">{copy.imagePositionOptions['top-right']}</option>
+              <option value="bottom-left">{copy.imagePositionOptions['bottom-left']}</option>
+              <option value="bottom-right">{copy.imagePositionOptions['bottom-right']}</option>
             </select>
           </div>
           <div style={fieldStyle}>
-            <span style={labelStyle}>Overlay</span>
+            <span style={labelStyle}>{copy.overlayLabel}</span>
             <ColorPicker
               value={image.overlayColor ?? 'transparent'}
               paletteTokens={paletteTokens}
               disabled={disabled}
+              locale={locale}
               onChange={(color) => updateImage({ overlayColor: color })}
             />
             <input
@@ -494,6 +495,7 @@ export default function BackgroundEditor({
               max={100}
               value={image.overlayOpacity ?? 0}
               disabled={disabled}
+              aria-label={copy.overlayOpacityAriaLabel}
               onChange={(event) => updateImage({ overlayOpacity: clampNumber(Number(event.target.value), 0, 100) })}
             />
           </div>

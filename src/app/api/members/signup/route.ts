@@ -6,6 +6,11 @@ import {
   MEMBER_SESSION_COOKIE,
   publicMember,
 } from '@/lib/builder/members/members-engine';
+import {
+  getMembersApiErrorPayload,
+  type MembersApiErrorCode,
+} from '@/lib/builder/members/members-api-copy';
+import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -17,16 +22,48 @@ const signupSchema = z.object({
   locale: z.string().trim().max(20).optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+const duplicateEmailEngineMessages = new Set(['duplicate_email', '이미 가입된 이메일입니다.']);
+
+function errorResponse(
+  locale: Locale,
+  errorCode: MembersApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getMembersApiErrorPayload(locale, errorCode), ...extras },
+    { status },
   );
 }
 
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
+function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
+  const queryLocale = request.nextUrl.searchParams.get('locale') ?? undefined;
+  if (isLocale(queryLocale)) return queryLocale;
+  if (payload && typeof payload === 'object') {
+    const locale = (payload as { locale?: unknown }).locale;
+    if (typeof locale === 'string' && isLocale(locale)) return locale;
+  }
+  return normalizeLocale(queryLocale);
+}
+
+function signupErrorCode(error: unknown): MembersApiErrorCode {
+  if (error instanceof Error) {
+    const { message } = error;
+    if (duplicateEmailEngineMessages.has(message)) return 'duplicate_email';
+  }
+  return 'member_signup_failed';
+}
+
 export async function POST(request: NextRequest) {
+  let errorLocale = resolveRequestLocale(request);
   try {
-    const input = signupSchema.parse(await request.json());
+    const body = await request.json();
+    errorLocale = resolveRequestLocale(request, body);
+    const input = signupSchema.parse(body);
     const member = await createMember({
       email: input.email,
       name: input.name,
@@ -35,7 +72,7 @@ export async function POST(request: NextRequest) {
     });
     const session = await loginMember(input.email, input.password);
     if (!session) {
-      return NextResponse.json({ ok: false, error: 'session_create_failed' }, { status: 500 });
+      return errorResponse(errorLocale, 'session_create_failed', 500);
     }
 
     const response = NextResponse.json({ ok: true, member: publicMember(member) }, { status: 201 });
@@ -48,13 +85,12 @@ export async function POST(request: NextRequest) {
     });
     return response;
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+      return errorResponse(errorLocale, 'invalid_json', 400);
     }
-    return NextResponse.json(
-      { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
-      { status: 400 },
-    );
+    const errorCode = signupErrorCode(error);
+    if (errorCode !== 'duplicate_email') console.error('[members/signup] POST failed:', error);
+    return errorResponse(errorLocale, errorCode, errorCode === 'duplicate_email' ? 409 : 500);
   }
 }

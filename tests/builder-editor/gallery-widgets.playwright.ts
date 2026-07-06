@@ -30,7 +30,7 @@ test.describe('/ko/admin-builder gallery widget pack', () => {
       await page.keyboard.press('Escape');
 
       const drawer = await openCatalogDrawer(page);
-      await expect(drawer.getByText('Gallery widget pack')).toBeVisible();
+      await expect(drawer.getByText(/Gallery widget pack|갤러리 위젯 팩/)).toBeVisible();
 
       const presets = [
         'gallery-grid',

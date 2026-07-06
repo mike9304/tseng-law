@@ -14,9 +14,11 @@ import {
 import type { AppHookEvent } from '@/lib/builder/apps/hooks-model';
 import { clearLogs, listLogs } from '@/lib/builder/dev/logs-store';
 
-const REGISTRY_FILE = path.join(process.cwd(), 'runtime-data', 'apps', 'hook-registrations.json');
+// 파일별 격리 경로 — 병렬 워커가 공유 레지스트리 파일을 경쟁하지 않도록.
+const REGISTRY_FILE = path.join(process.cwd(), 'runtime-data', 'apps', 'hooks-registry-test-registrations.json');
 
 async function cleanStore(): Promise<void> {
+  process.env.BUILDER_APP_HOOK_REGISTRY_PATH = REGISTRY_FILE;
   try { await rm(REGISTRY_FILE, { force: true }); } catch { /* ignore */ }
 }
 
@@ -45,6 +47,7 @@ describe('hooks-registry', () => {
     __resetHooksForTests();
     clearLogs('app');
     await cleanStore();
+    delete process.env.BUILDER_APP_HOOK_REGISTRY_PATH;
   });
 
   it('dispatches handlers ordered by priority desc, then insertion', async () => {
@@ -214,7 +217,6 @@ describe('hooks-registry', () => {
       hasHandler: false, // record survived but no handler is bound yet.
     });
 
-    // Dispatch must NOT call the dormant record.
     const summary = await dispatchAppHook(publishEvent());
     expect(summary).toMatchObject({ invoked: 0, failed: 0 });
   });

@@ -44,4 +44,82 @@ describe('findPageMetaForLocale', () => {
 
     expect(findPageMetaForLocale([koPricing], 'zh-hant', 'pricing')?.pageId).toBe('ko-pricing');
   });
+
+  it('resolves a locale-specific slug override ahead of the base slug projection', () => {
+    const koAbout = page('ko-about', 'ko', 'about', '2026-05-01T00:00:00.000Z', {
+      slugByLocale: { en: 'about-us' },
+    } as Partial<BuilderPageMeta>);
+    const enAbout = page('en-about', 'en', 'about', '2026-05-12T00:00:00.000Z');
+
+    expect(findPageMetaForLocale([koAbout, enAbout], 'en', 'about-us')?.pageId).toBe('ko-about');
+  });
+
+  it('keeps the source page visible for a localized slug even when a linked target page exists', () => {
+    const koAbout = page('ko-about', 'ko', 'about', '2026-05-01T00:00:00.000Z', {
+      slugByLocale: { en: 'about-us' },
+      linkedPageIds: { en: 'en-about' },
+    } as Partial<BuilderPageMeta>);
+    const enAbout = page('en-about', 'en', 'about', '2026-05-12T00:00:00.000Z');
+
+    expect(findPageMetaForLocale([koAbout, enAbout], 'en', 'about-us')?.pageId).toBe('ko-about');
+  });
+
+  describe('internal sandbox / QA / probe pages', () => {
+    const INTERNAL_SANDBOX_SLUGS = [
+      'visual-template-pet-home-mqzemq7q',
+      'public-animation-mqzrfcqb',
+      'custom-preview-mr0kw8u4',
+      'db-probe-1783017761',
+    ] as const;
+
+    it.each(INTERNAL_SANDBOX_SLUGS)(
+      'does not resolve a published internal sandbox page by slug (%s)',
+      (slug) => {
+        const leaked = page(`p-${slug}`, 'ko', slug, '2026-05-01T00:00:00.000Z');
+        expect(findPageMetaForLocale([leaked], 'ko', slug)).toBeUndefined();
+      },
+    );
+
+    it('still resolves real customer pages alongside published internal sandbox pages', () => {
+      const about = page('p-about', 'ko', 'about', '2026-05-01T00:00:00.000Z');
+      const leaked = page(
+        'p-leak',
+        'ko',
+        'custom-preview-mr0kw8u4',
+        '2026-05-02T00:00:00.000Z',
+      );
+
+      expect(findPageMetaForLocale([about, leaked], 'ko', 'about')?.pageId).toBe('p-about');
+      expect(
+        findPageMetaForLocale([about, leaked], 'ko', 'custom-preview-mr0kw8u4'),
+      ).toBeUndefined();
+    });
+
+    it('keeps legitimate customer pages resolvable even when they share a broad prefix', () => {
+      const real = [
+        page('p-landing', 'ko', 'custom-landing', '2026-05-01T00:00:00.000Z'),
+        page('p-services', 'ko', 'services/detention', '2026-05-01T00:00:00.000Z'),
+        page('p-reviews', 'ko', 'reviews', '2026-05-01T00:00:00.000Z'),
+      ];
+
+      expect(findPageMetaForLocale(real, 'ko', 'custom-landing')?.pageId).toBe('p-landing');
+      expect(findPageMetaForLocale(real, 'ko', 'services/detention')?.pageId).toBe('p-services');
+      expect(findPageMetaForLocale(real, 'ko', 'reviews')?.pageId).toBe('p-reviews');
+    });
+
+    it('can still resolve internal sandbox pages when explicitly opted in', () => {
+      const leaked = page(
+        'p-leak',
+        'ko',
+        'visual-template-pet-home-mqzemq7q',
+        '2026-05-01T00:00:00.000Z',
+      );
+
+      expect(
+        findPageMetaForLocale([leaked], 'ko', 'visual-template-pet-home-mqzemq7q', {
+          includeInternalSandbox: true,
+        })?.pageId,
+      ).toBe('p-leak');
+    });
+  });
 });

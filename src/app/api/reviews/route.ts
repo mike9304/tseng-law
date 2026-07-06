@@ -1,18 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { put, list } from '@vercel/blob';
 import { createHash } from 'crypto';
+import {
+  readReviews,
+  readReviewsForMutation,
+  writeReviews,
+  type Review,
+} from '@/lib/reviews/storage';
 
-export type Review = {
-  id: string;
-  nickname: string;
-  rating: number;
-  service: string;
-  content: string;
-  createdAt: string;
-  status: 'approved' | 'pending';
-};
-
-const BLOB_NAME = 'reviews.json';
 const SERVICE_ALLOWLIST = new Set([
   '',
   'consultation',
@@ -28,13 +22,6 @@ const SERVICE_ALLOWLIST = new Set([
 const submissionAttempts = new Map<string, number>();
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 
-function normalizeReviews(reviews: Review[]) {
-  return reviews.map((review) => ({
-    ...review,
-    status: review.status ?? 'approved',
-  }));
-}
-
 function getClientKey(req: NextRequest) {
   const forwardedFor = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
   return createHash('sha256').update(forwardedFor).digest('hex');
@@ -44,37 +31,54 @@ function hasBlockedPattern(value: string) {
   return /https?:\/\//i.test(value) || /www\./i.test(value) || /<[^>]+>/.test(value);
 }
 
+function isLocalDevelopmentOrigin(origin: URL): boolean {
+  if (process.env.NODE_ENV === 'production') return false;
+  return origin.hostname === 'localhost' || origin.hostname === '127.0.0.1' || origin.hostname === '[::1]';
+}
+
+function isLoopbackHostname(hostname: string): boolean {
+  return hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '[::1]';
+}
+
+function isSameOriginOrLoopbackAlias(origin: URL, requestUrl: URL): boolean {
+  if (origin.host === requestUrl.host) return true;
+  return isLoopbackHostname(origin.hostname)
+    && isLoopbackHostname(requestUrl.hostname)
+    && origin.port === requestUrl.port;
+}
+
 function isAllowedOrigin(req: NextRequest) {
   const origin = req.headers.get('origin');
   if (!origin) return true;
 
   try {
-    const host = new URL(origin).host;
-    return host === 'tseng-law.com' || host === 'www.tseng-law.com' || host === 'localhost:3000' || host === '127.0.0.1:3000';
+    const parsed = new URL(origin);
+    return isSameOriginOrLoopbackAlias(parsed, req.nextUrl)
+      || parsed.host === 'tseng-law.com'
+      || parsed.host === 'www.tseng-law.com'
+      || isLocalDevelopmentOrigin(parsed);
   } catch {
     return false;
   }
 }
 
-async function readReviews(): Promise<Review[]> {
-  try {
-    const { blobs } = await list({ prefix: BLOB_NAME });
-    if (blobs.length === 0) return [];
-    const blob = blobs[0];
-    const res = await fetch(blob.downloadUrl);
-    return normalizeReviews(await res.json());
-  } catch (err) {
-    console.error('[Reviews] readReviews error:', err);
-    return [];
-  }
+function valueFor(body: unknown, key: string): unknown {
+  if (typeof body !== 'object' || body === null) return undefined;
+  return Reflect.get(body, key);
 }
 
-async function writeReviews(reviews: Review[]): Promise<void> {
-  await put(BLOB_NAME, JSON.stringify(reviews, null, 2), {
-    access: 'private',
-    addRandomSuffix: false,
-    allowOverwrite: true,
-  });
+function stringValueFor(body: unknown, key: string): string | undefined {
+  const value = valueFor(body, key);
+  return typeof value === 'string' ? value : undefined;
+}
+
+function numberValueFor(body: unknown, key: string): number | undefined {
+  const value = valueFor(body, key);
+  return typeof value === 'number' ? value : undefined;
+}
+
+function errorMessage(error: unknown): string {
+  return error instanceof Error ? error.message : String(error);
 }
 
 export async function GET() {
@@ -82,22 +86,19 @@ export async function GET() {
   const sorted = reviews
     .filter((review) => review.status === 'approved')
     .sort(
-    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-  );
+      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+    );
   return NextResponse.json(sorted);
 }
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-
-    const { nickname, rating, service, content, website } = body as {
-      nickname?: string;
-      rating?: number;
-      service?: string;
-      content?: string;
-      website?: string;
-    };
+    const nickname = stringValueFor(body, 'nickname');
+    const rating = numberValueFor(body, 'rating');
+    const service = stringValueFor(body, 'service');
+    const content = stringValueFor(body, 'content');
+    const website = stringValueFor(body, 'website');
 
     if (!isAllowedOrigin(req)) {
       return NextResponse.json(
@@ -190,7 +191,7 @@ export async function POST(req: NextRequest) {
       status: 'pending',
     };
 
-    const reviews = await readReviews();
+    const reviews = await readReviewsForMutation();
     reviews.push(review);
     await writeReviews(reviews);
 
@@ -201,7 +202,7 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     console.error('[Reviews] POST error:', err);
     return NextResponse.json(
-      { error: String(err) },
+      { error: errorMessage(err) },
       { status: 500 }
     );
   }

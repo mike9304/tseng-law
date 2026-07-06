@@ -58,7 +58,7 @@ export default function ShippingRulesClient({ locale, siteTitle, initialRules }:
     setBusy(true);
     setNotice('Saving shipping rules...');
     try {
-      const response = await fetch('/api/builder/commerce/shipping-rules', {
+      const response = await fetch(`/api/builder/commerce/shipping-rules?locale=${encodeURIComponent(locale)}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ rules }),

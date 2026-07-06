@@ -4,6 +4,13 @@ import { useEffect, useRef, useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderAddressBlockCanvasNode } from '@/lib/builder/canvas/types';
 import { safeHref } from '@/lib/builder/links';
+import type { Locale } from '@/lib/locales';
+import {
+  getLocationWidgetsCopy,
+  localizedAddressBlockContent,
+  LOCATION_WIDGETS_LEGACY_DEFAULTS,
+} from '../location-widgets-copy';
+import styles from './AddressBlockInspector.module.css';
 
 function buildAddressString(c: BuilderAddressBlockCanvasNode['content']): string {
   return [c.line1, c.line2, c.cityRegion, c.postalCode, c.country].filter(Boolean).join(', ');
@@ -12,11 +19,14 @@ function buildAddressString(c: BuilderAddressBlockCanvasNode['content']): string
 function AddressBlockRender({
   node,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderAddressBlockCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
-  const c = node.content;
+  const copy = getLocationWidgetsCopy(locale);
+  const c = localizedAddressBlockContent(node.content, copy.addressBlock.defaultContent);
   const [copied, setCopied] = useState(false);
   const copiedTimerRef = useRef<number | null>(null);
   const address = buildAddressString(c);
@@ -56,12 +66,12 @@ function AddressBlockRender({
       <div className="builder-location-address-actions">
         {c.showCopyButton ? (
           <button type="button" onClick={() => void copyAddress()}>
-            {copied ? '복사됨' : '주소 복사'}
+            {copied ? copy.addressBlock.copiedButton : copy.addressBlock.copyButton}
           </button>
         ) : null}
         {c.showDirectionsLink && directionsHref ? (
           <a href={directionsHref} target="_blank" rel="noopener noreferrer">
-            길찾기
+            {copy.addressBlock.directionsLink}
           </a>
         ) : null}
       </div>
@@ -71,54 +81,57 @@ function AddressBlockRender({
 
 function AddressBlockInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const aNode = node as BuilderAddressBlockCanvasNode;
-  const c = aNode.content;
+  const locationCopy = getLocationWidgetsCopy(locale).addressBlock;
+  const c = localizedAddressBlockContent(aNode.content, locationCopy.defaultContent);
+  const copy = locationCopy.inspector;
   return (
-    <>
-      <label>
-        <span>라벨</span>
-        <input type="text" value={c.label} disabled={disabled} onChange={(event) => onUpdate({ label: event.target.value })} />
+    <div className={styles.root} data-builder-address-block-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.label}</span>
+        <input type="text" value={c.label} disabled={disabled} className={styles.control} onChange={(event) => onUpdate({ label: event.target.value })} />
       </label>
-      <label>
-        <span>1행</span>
-        <input type="text" value={c.line1} disabled={disabled} onChange={(event) => onUpdate({ line1: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.line1}</span>
+        <input type="text" value={c.line1} disabled={disabled} className={styles.control} onChange={(event) => onUpdate({ line1: event.target.value })} />
       </label>
-      <label>
-        <span>2행</span>
-        <input type="text" value={c.line2} disabled={disabled} onChange={(event) => onUpdate({ line2: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.line2}</span>
+        <input type="text" value={c.line2} disabled={disabled} className={styles.control} onChange={(event) => onUpdate({ line2: event.target.value })} />
       </label>
-      <label>
-        <span>도시/지역</span>
-        <input type="text" value={c.cityRegion} disabled={disabled} onChange={(event) => onUpdate({ cityRegion: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.cityRegion}</span>
+        <input type="text" value={c.cityRegion} disabled={disabled} className={styles.control} onChange={(event) => onUpdate({ cityRegion: event.target.value })} />
       </label>
-      <label>
-        <span>우편번호</span>
-        <input type="text" value={c.postalCode} disabled={disabled} onChange={(event) => onUpdate({ postalCode: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.postalCode}</span>
+        <input type="text" value={c.postalCode} disabled={disabled} className={styles.control} onChange={(event) => onUpdate({ postalCode: event.target.value })} />
       </label>
-      <label>
-        <span>국가</span>
-        <input type="text" value={c.country} disabled={disabled} onChange={(event) => onUpdate({ country: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.country}</span>
+        <input type="text" value={c.country} disabled={disabled} className={styles.control} onChange={(event) => onUpdate({ country: event.target.value })} />
       </label>
-      <label>
-        <span>전화</span>
-        <input type="text" value={c.phone} disabled={disabled} onChange={(event) => onUpdate({ phone: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.phone}</span>
+        <input type="text" value={c.phone} disabled={disabled} className={styles.control} onChange={(event) => onUpdate({ phone: event.target.value })} />
       </label>
-      <label>
-        <span>길찾기 URL (자동 생성 override)</span>
-        <input type="text" value={c.directionsHref} disabled={disabled} onChange={(event) => onUpdate({ directionsHref: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.directionsHref}</span>
+        <input type="text" value={c.directionsHref} disabled={disabled} className={styles.control} onChange={(event) => onUpdate({ directionsHref: event.target.value })} />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showCopyButton} disabled={disabled} onChange={(event) => onUpdate({ showCopyButton: event.target.checked })} />
-        <span>복사 버튼</span>
+        <span>{copy.showCopyButton}</span>
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showDirectionsLink} disabled={disabled} onChange={(event) => onUpdate({ showDirectionsLink: event.target.checked })} />
-        <span>길찾기 링크</span>
+        <span>{copy.showDirectionsLink}</span>
       </label>
-    </>
+    </div>
   );
 }
 
@@ -127,18 +140,7 @@ export default defineComponent({
   displayName: '주소 블록',
   category: 'advanced',
   icon: '📍',
-  defaultContent: {
-    label: '본 사무소',
-    line1: '서울특별시 강남구',
-    line2: '테헤란로 152',
-    cityRegion: '강남구',
-    postalCode: '06236',
-    country: '대한민국',
-    phone: '+82 2-0000-0000',
-    showCopyButton: true,
-    showDirectionsLink: true,
-    directionsHref: '',
-  },
+  defaultContent: { ...LOCATION_WIDGETS_LEGACY_DEFAULTS.addressBlock },
   defaultStyle: {},
   defaultRect: { width: 320, height: 220 },
   Render: AddressBlockRender,

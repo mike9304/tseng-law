@@ -7,10 +7,12 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-  title: 'SEO Dashboard',
-  robots: { index: false, follow: false },
-};
+function getSeoDashboardMetadata(locale: Locale): Metadata {
+  return {
+    title: locale === 'ko' ? 'SEO 대시보드' : locale === 'zh-hant' ? 'SEO 儀表板' : 'SEO Dashboard',
+    robots: { index: false, follow: false },
+  };
+}
 
 export default async function BuilderSeoDashboardPage({
   params,
@@ -31,4 +33,9 @@ export default async function BuilderSeoDashboardPage({
       initialOverview={buildBuilderSeoOverview({ site, canvasesByPageId })}
     />
   );
+}
+
+export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+  const locale: Locale = normalizeLocale(params.locale);
+  return getSeoDashboardMetadata(locale);
 }

@@ -1,129 +1,140 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import type { OpsHealthSnapshot } from '@/lib/builder/ops/health-model';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import {
+  buildOpsDashboardExportFile,
+  buildOpsDashboardExportFilename,
+  serializeOpsDashboardExportFile,
+} from '@/lib/builder/ops/dashboard-export';
+import type { OpsDashboardAlert, OpsDashboardSnapshot, OpsDashboardTrendPoint } from '@/lib/builder/ops/dashboard';
+import type { UnifiedLogType } from '@/lib/builder/ops/logs-aggregator';
+import type { OpsAlertReport } from '@/lib/builder/ops/alert-report-model';
+import type { Locale } from '@/lib/locales';
+import { OpsOverviewDetails } from './OpsOverviewDetails';
+import { formatOpsDateTime, OpsOverviewMetrics } from './OpsOverviewMetrics';
+import { OpsAlertReportView } from './OpsAlertReportView';
+import { parseDashboardPayload, parseUnifiedLogTypeFilter, readResponsePayload } from './dashboardPayloads';
 
-function fmtRelative(iso: string | undefined): string {
-  if (!iso) return '—';
-  const t = Date.parse(iso);
-  if (!Number.isFinite(t)) return iso;
-  return new Date(t).toLocaleString('ko-KR');
-}
-
-interface KpiCardProps {
-  label: string;
-  value: string | number;
-  hint?: string;
-  tone?: 'ok' | 'warn' | 'unknown';
-}
-
-function KpiCard({ label, value, hint, tone = 'ok' }: KpiCardProps) {
-  const color = tone === 'warn' ? '#b91c1c' : tone === 'unknown' ? '#64748b' : '#16a34a';
-  return (
-    <div
-      data-ops-kpi-card={label}
-      style={{
-        flex: '1 1 180px', padding: 16, border: '1px solid #e2e8f0', borderRadius: 8,
-        background: '#fff', display: 'flex', flexDirection: 'column', gap: 4, minWidth: 180,
-      }}
-    >
-      <span style={{ fontSize: 11, fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: 0.4 }}>
-        {label}
-      </span>
-      <span style={{ fontSize: 22, fontWeight: 700, color }}>{value}</span>
-      {hint ? <span style={{ fontSize: 12, color: '#64748b' }}>{hint}</span> : null}
-    </div>
-  );
-}
-
-export default function OpsOverview() {
-  const [snapshot, setSnapshot] = useState<OpsHealthSnapshot | null>(null);
+export default function OpsOverview({ locale }: { readonly locale: Locale }) {
+  const [snapshot, setSnapshot] = useState<OpsDashboardSnapshot | null>(null);
+  const [history, setHistory] = useState<readonly OpsDashboardTrendPoint[]>([]);
+  const [alerts, setAlerts] = useState<readonly OpsDashboardAlert[]>([]);
+  const [alertReport, setAlertReport] = useState<OpsAlertReport | null>(null);
   const [refreshing, setRefreshing] = useState(false);
+  const [exporting, setExporting] = useState(false);
   const [error, setError] = useState('');
+  const [typeFilter, setTypeFilter] = useState<'' | UnifiedLogType>('');
 
-  async function loadCached() {
-    setError('');
-    try {
-      const res = await fetch('/api/builder/ops/health', { credentials: 'same-origin' });
-      if (!res.ok) throw new Error(res.statusText);
-      const payload = await res.json() as { snapshot?: OpsHealthSnapshot };
-      if (payload.snapshot) setSnapshot(payload.snapshot);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'failed to load');
-    }
-  }
-
-  async function recollect() {
+  const refreshSnapshot = useCallback(async () => {
     setRefreshing(true);
     setError('');
     try {
-      const res = await fetch('/api/builder/ops/health', {
-        method: 'POST', credentials: 'same-origin',
-      });
+      const qs = typeFilter ? `?type=${encodeURIComponent(typeFilter)}` : '';
+      const res = await fetch(`/api/builder/ops/dashboard${qs}`, { credentials: 'same-origin' });
       if (!res.ok) throw new Error(res.statusText);
-      const payload = await res.json() as { snapshot?: OpsHealthSnapshot };
-      if (payload.snapshot) setSnapshot(payload.snapshot);
+      const payload = parseDashboardPayload(await readResponsePayload(res));
+      setSnapshot(payload.snapshot);
+      setHistory(payload.history);
+      setAlerts(payload.alerts);
+      setAlertReport(payload.alertReport);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'failed to refresh');
+      setError(err instanceof Error ? err.message : 'failed to load');
     } finally {
       setRefreshing(false);
     }
-  }
+  }, [typeFilter]);
 
-  useEffect(() => { void loadCached(); }, []);
+  useEffect(() => {
+    void refreshSnapshot();
+  }, [refreshSnapshot]);
+
+  const exportPayload = useMemo(() => {
+    if (!snapshot) return null;
+    const limit = snapshot.logs.entries.length || 10;
+    return buildOpsDashboardExportFile({
+      snapshot,
+      type: typeFilter,
+      limit,
+    });
+  }, [snapshot, typeFilter]);
+
+  const handleExport = useCallback(() => {
+    if (!exportPayload || exporting) return;
+    setExporting(true);
+    try {
+      const blob = new Blob([serializeOpsDashboardExportFile(exportPayload)], { type: 'application/json;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = buildOpsDashboardExportFilename(typeFilter);
+      link.click();
+      URL.revokeObjectURL(url);
+    } finally {
+      setExporting(false);
+    }
+  }, [exportPayload, exporting, typeFilter]);
 
   return (
     <div data-ops-overview="true" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+        <label style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#64748b' }}>
+          log scope
+          <select
+            value={typeFilter}
+            onChange={(event) => setTypeFilter(parseUnifiedLogTypeFilter(event.currentTarget.value))}
+            style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 12 }}
+          >
+            <option value="">all</option>
+            <option value="audit">audit</option>
+            <option value="dev">dev</option>
+            <option value="security">security</option>
+            <option value="error">error</option>
+          </select>
+        </label>
         <button
           type="button"
           disabled={refreshing}
-          onClick={recollect}
+          onClick={() => void refreshSnapshot()}
           data-ops-overview-refresh="true"
           style={{
-            padding: '6px 12px', border: 0, borderRadius: 6, fontSize: 12, fontWeight: 700,
-            background: refreshing ? '#94a3b8' : '#0f172a', color: '#fff',
+            padding: '6px 12px',
+            border: 0,
+            borderRadius: 6,
+            fontSize: 12,
+            fontWeight: 700,
+            background: refreshing ? '#94a3b8' : '#0f172a',
+            color: '#fff',
             cursor: refreshing ? 'not-allowed' : 'pointer',
           }}
         >
           {refreshing ? '수집 중...' : '지금 수집'}
         </button>
+        <button
+          type="button"
+          disabled={!exportPayload || exporting}
+          onClick={handleExport}
+          style={{
+            padding: '6px 12px',
+            border: '1px solid #cbd5e1',
+            background: '#fff',
+            borderRadius: 6,
+            fontSize: 12,
+            cursor: !exportPayload || exporting ? 'not-allowed' : 'pointer',
+          }}
+        >
+          {exporting ? '내보내는 중...' : '대시보드 JSON'}
+        </button>
         <span style={{ fontSize: 12, color: '#64748b' }}>
-          마지막 수집: {fmtRelative(snapshot?.gatheredAt)}
+          마지막 수집: {formatOpsDateTime(snapshot?.generatedAt ?? snapshot?.health.gatheredAt)}
         </span>
         {error ? <span style={{ marginLeft: 'auto', fontSize: 12, color: '#dc2626' }}>{error}</span> : null}
       </div>
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-        <KpiCard
-          label="Deploy"
-          value={snapshot?.deploys.status ?? 'unknown'}
-          hint={fmtRelative(snapshot?.deploys.lastDeployAt)}
-          tone={snapshot?.deploys.status === 'ok' ? 'ok' : 'unknown'}
-        />
-        <KpiCard
-          label="Cache keys"
-          value={snapshot?.cache.runtimeCacheKeys ?? 0}
-          hint={`last write ${fmtRelative(snapshot?.cache.lastClearedAt)}`}
-        />
-        <KpiCard
-          label="Backups"
-          value={snapshot?.storage.backupCount ?? 0}
-          hint={`latest ${fmtRelative(snapshot?.storage.lastBackupAt)}`}
-        />
-        <KpiCard
-          label="Logs 24h"
-          value={snapshot?.logs.last24hCount ?? 0}
-          hint={`errors ${snapshot?.logs.errorCount ?? 0}`}
-          tone={(snapshot?.logs.errorCount ?? 0) > 0 ? 'warn' : 'ok'}
-        />
-        <KpiCard
-          label="Security 24h"
-          value={snapshot?.security.last24hEvents ?? 0}
-          hint={`denied ${snapshot?.security.deniedRequests ?? 0}`}
-          tone={(snapshot?.security.deniedRequests ?? 0) > 0 ? 'warn' : 'ok'}
-        />
-      </div>
+      <OpsOverviewMetrics snapshot={snapshot} />
+
+      <OpsAlertReportView report={alertReport} fallbackAlerts={alerts} />
+
+      <OpsOverviewDetails locale={locale} snapshot={snapshot} history={history} />
     </div>
   );
 }

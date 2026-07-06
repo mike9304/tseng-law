@@ -169,8 +169,14 @@ test('native Events app publishes admin-created event pages, widgets, calendar, 
     const adminJson = await adminResponse.json() as { total?: number; error?: string };
     expect(adminJson.total ?? 0, adminJson.error).toBeGreaterThan(0);
 
+    await page.goto(`/${LOCALE}/events`, { waitUntil: 'domcontentloaded' });
+    await expect(page.locator('[data-public-events-page="true"]')).toContainText('이벤트');
+
     await page.goto(`/${LOCALE}/events/${event.slug}`, { waitUntil: 'domcontentloaded' });
     await expect(page.locator('[data-public-event-detail="true"]')).toContainText(`F45 이벤트 앱 세미나 ${token}`);
+    await expect(page.locator('[data-public-event-detail="true"]')).toContainText('이벤트 목록으로');
+    await expect(page.locator('[data-public-event-detail="true"]')).toContainText('이벤트');
+    await expect(page.locator('[data-builder-event-rsvp="true"]')).toContainText('이벤트 신청');
     await expect(page.locator('[data-builder-event-rsvp="true"]')).toContainText('TWD 1,200');
     await page.locator('[data-builder-event-rsvp="true"] input[name="name"]').fill('F45 RSVP User');
     await page.locator('[data-builder-event-rsvp="true"] input[name="email"]').fill(`f45-${token}@example.com`);

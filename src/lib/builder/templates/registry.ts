@@ -1,5 +1,6 @@
 import type { PageTemplate, TemplateCatalogItem } from './types';
-import { createTemplateCatalogItem, enrichTemplate } from './metadata';
+import { applyContrastFloor, createTemplateCatalogItem, enrichTemplate } from './metadata';
+import { responsivizeMobile } from './_shared/responsivize';
 
 import { lawAboutTemplate } from './law/law-about';
 import { lawAttorneysTemplate } from './law/law-attorneys';
@@ -609,8 +610,17 @@ const allTemplates: PageTemplate[] = [
 
 ];
 
+// One-time (module load): give every template a mobile single-column reflow so the published
+// site / editor preview reflow on phones instead of keeping the 1280px desktop layout. Homes
+// built via buildIndustryHome already carry responsive overrides → skipped; the hand-authored
+// subpages get them here. Verified across home/pricing/stat-band/gallery/services layouts.
+for (const t of allTemplates) {
+  const hasResponsive = t.document.nodes.some((n) => (n as { responsive?: unknown }).responsive != null);
+  if (!hasResponsive) responsivizeMobile(t.document.nodes);
+}
+
 export function getAllTemplates(): PageTemplate[] {
-  return allTemplates.map(enrichTemplate);
+  return allTemplates.map((t) => applyContrastFloor(enrichTemplate(t)));
 }
 
 export function getTemplateCategories(): TemplateCategory[] {
@@ -629,7 +639,7 @@ export function getTemplatesByCategory(
 
 export function getTemplateById(id: string): PageTemplate | undefined {
   const template = allTemplates.find((t) => t.id === id);
-  return template ? enrichTemplate(template) : undefined;
+  return template ? applyContrastFloor(enrichTemplate(template)) : undefined;
 }
 
 export function getTemplateCatalog(): TemplateCatalogItem[] {

@@ -1,0 +1,94 @@
+.root {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  color: #334155;
+  display: grid;
+  font-size: 0.78rem;
+  gap: 5px;
+}
+
+.label {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.control {
+  background: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  color: #0f172a;
+  font: inherit;
+  font-size: 0.82rem;
+  outline: none;
+  padding: 7px 10px;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+  width: 100%;
+}
+
+.control:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.14);
+}
+
+.control:disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.assetRow {
+  display: flex;
+  gap: 6px;
+}
+
+.assetInput {
+  flex: 1;
+  min-width: 0;
+}
+
+.assetButton {
+  align-items: center;
+  background: #0f172a;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  justify-content: center;
+  min-height: 34px;
+  min-width: 38px;
+  padding: 7px 10px;
+  transition:
+    background-color 140ms ease,
+    box-shadow 140ms ease,
+    opacity 140ms ease;
+}
+
+.assetButton:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(17, 109, 255, 0.18),
+    0 0 0 1px #ffffff inset;
+  outline: none;
+}
+
+.assetButton:hover:not(:disabled) {
+  background: #1e293b;
+}
+
+.assetButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

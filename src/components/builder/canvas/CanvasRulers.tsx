@@ -1,32 +1,81 @@
 'use client';
 
-import type { PointerEvent } from 'react';
+import { useState, type PointerEvent } from 'react';
+import type { ReferenceGuide } from '@/lib/builder/canvas/editor-prefs';
+import { isGuideReleaseInsideCanvas } from '@/components/builder/canvas/useCanvasReferenceGuides';
 import styles from './SandboxPage.module.css';
 
+type Axis = ReferenceGuide['axis'];
+
 type CanvasRulersProps = {
-  onCreateGuide?: (axis: 'horizontal' | 'vertical', position: number) => void;
+  /** Pointerdown on a ruler begins a drag-to-create guide (Wix parity). */
+  onGuideDragStart?: (axis: Axis) => void;
+  /** Live preview position while dragging (axis fixed by the originating ruler). */
+  onGuideDragMove?: (axis: Axis, clientX: number, clientY: number) => void;
+  /** Released inside the canvas: persist the guide at the resolved position. */
+  onGuideDragCommit?: (axis: Axis, clientX: number, clientY: number) => void;
+  /** Released over a ruler / outside the canvas: discard the draft guide. */
+  onGuideDragCancel?: () => void;
   stageHeight: number;
   stageWidth: number;
   zoom: number;
 };
 
-export default function CanvasRulers({ onCreateGuide, stageHeight, stageWidth, zoom }: CanvasRulersProps) {
-  const handleTopPointerDown = (event: PointerEvent<HTMLDivElement>) => {
-    if (!onCreateGuide || event.button !== 0) return;
+const RULER_Z_INDEX = 45020;
+type RulerDrag = { axis: Axis; pointerId: number } | null;
+
+export default function CanvasRulers({
+  onGuideDragStart,
+  onGuideDragMove,
+  onGuideDragCommit,
+  onGuideDragCancel,
+  stageHeight,
+  stageWidth,
+  zoom,
+}: CanvasRulersProps) {
+  const [drag, setDrag] = useState<RulerDrag>(null);
+  const interactive = Boolean(onGuideDragStart);
+
+  const beginDrag = (axis: Axis) => (event: PointerEvent<HTMLDivElement>) => {
+    if (!interactive || event.button !== 0) return;
     event.preventDefault();
     event.stopPropagation();
-    const rect = event.currentTarget.getBoundingClientRect();
-    const scale = rect.width > 0 ? rect.width / stageWidth : zoom;
-    onCreateGuide('vertical', Math.max(0, Math.min(stageWidth, Math.round((event.clientX - rect.left) / scale))));
+    try {
+      event.currentTarget.setPointerCapture(event.pointerId);
+    } catch {
+      /* releasePointerCapture/setPointerCapture can throw if the node is detached */
+    }
+    setDrag({ axis, pointerId: event.pointerId });
+    onGuideDragStart?.(axis);
   };
 
-  const handleLeftPointerDown = (event: PointerEvent<HTMLDivElement>) => {
-    if (!onCreateGuide || event.button !== 0) return;
-    event.preventDefault();
-    event.stopPropagation();
-    const rect = event.currentTarget.getBoundingClientRect();
-    const scale = rect.height > 0 ? rect.height / stageHeight : zoom;
-    onCreateGuide('horizontal', Math.max(0, Math.min(stageHeight, Math.round((event.clientY - rect.top) / scale))));
+  const handlePointerMove = (event: PointerEvent<HTMLDivElement>) => {
+    if (!drag || event.pointerId !== drag.pointerId) return;
+    onGuideDragMove?.(drag.axis, event.clientX, event.clientY);
+  };
+
+  const finishDrag = (event: PointerEvent<HTMLDivElement>, commit: boolean) => {
+    if (!drag || event.pointerId !== drag.pointerId) return;
+    try {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    } catch {
+      /* ignore */
+    }
+    const axis = drag.axis;
+    setDrag(null);
+    if (commit && onGuideDragCommit) {
+      onGuideDragCommit(axis, event.clientX, event.clientY);
+    } else {
+      onGuideDragCancel?.();
+    }
+  };
+
+  const handlePointerUp = (event: PointerEvent<HTMLDivElement>) => {
+    finishDrag(event, isGuideReleaseInsideCanvas(event.clientX, event.clientY));
+  };
+
+  const handlePointerCancel = (event: PointerEvent<HTMLDivElement>) => {
+    finishDrag(event, false);
   };
 
   return (
@@ -37,8 +86,16 @@ export default function CanvasRulers({ onCreateGuide, stageHeight, stageWidth, z
         data-builder-floating-ui="true"
         aria-label="Horizontal ruler"
         role="presentation"
-        style={{ minHeight: 12 / Math.max(zoom, 0.1), pointerEvents: onCreateGuide ? 'auto' : 'none', zIndex: 10020 }}
-        onPointerDown={handleTopPointerDown}
+        style={{
+          minHeight: 12 / Math.max(zoom, 0.1),
+          cursor: 'crosshair',
+          pointerEvents: interactive ? 'auto' : 'none',
+          zIndex: RULER_Z_INDEX,
+        }}
+        onPointerDown={beginDrag('vertical')}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
       >
         {Array.from({ length: Math.floor(stageWidth / 40) + 1 }).map((_, index) => (
           <span
@@ -56,8 +113,16 @@ export default function CanvasRulers({ onCreateGuide, stageHeight, stageWidth, z
         data-builder-floating-ui="true"
         aria-label="Vertical ruler"
         role="presentation"
-        style={{ minWidth: 12 / Math.max(zoom, 0.1), pointerEvents: onCreateGuide ? 'auto' : 'none', zIndex: 10020 }}
-        onPointerDown={handleLeftPointerDown}
+        style={{
+          minWidth: 12 / Math.max(zoom, 0.1),
+          cursor: 'crosshair',
+          pointerEvents: interactive ? 'auto' : 'none',
+          zIndex: RULER_Z_INDEX,
+        }}
+        onPointerDown={beginDrag('horizontal')}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
       >
         {Array.from({ length: Math.floor(stageHeight / 40) + 1 }).map((_, index) => (
           <span

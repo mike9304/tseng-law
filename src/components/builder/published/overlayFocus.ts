@@ -16,6 +16,12 @@ export type PublishedOverlayOpenDetail = {
   opener?: HTMLElement | null;
 };
 
+export type ScrollSnapshot = {
+  readonly element: HTMLElement;
+  readonly left: number;
+  readonly top: number;
+};
+
 export function resolvePublishedOverlayOpener(candidate?: HTMLElement | null): HTMLElement | null {
   if (candidate instanceof HTMLElement && candidate.isConnected) return candidate;
 
@@ -30,6 +36,63 @@ export function resolvePublishedOverlayOpener(candidate?: HTMLElement | null): H
   }
 
   return null;
+}
+
+function canScroll(element: HTMLElement): boolean {
+  return (
+    element.scrollWidth > element.clientWidth ||
+    element.scrollHeight > element.clientHeight ||
+    element.scrollLeft !== 0 ||
+    element.scrollTop !== 0
+  );
+}
+
+function appendScrollSnapshot(
+  snapshots: ScrollSnapshot[],
+  seen: Set<HTMLElement>,
+  element: Element | null,
+): void {
+  if (!(element instanceof HTMLElement)) return;
+  if (seen.has(element) || !canScroll(element)) return;
+  seen.add(element);
+  snapshots.push({
+    element,
+    left: element.scrollLeft,
+    top: element.scrollTop,
+  });
+}
+
+export function captureOverlayScrollSnapshots(start: HTMLElement | null): ScrollSnapshot[] {
+  const snapshots: ScrollSnapshot[] = [];
+  const seen = new Set<HTMLElement>();
+  let current = start;
+  while (current) {
+    appendScrollSnapshot(snapshots, seen, current);
+    current = current.parentElement;
+  }
+  appendScrollSnapshot(snapshots, seen, document.scrollingElement);
+  appendScrollSnapshot(snapshots, seen, document.documentElement);
+  appendScrollSnapshot(snapshots, seen, document.body);
+  return snapshots;
+}
+
+export function restoreOverlayScrollSnapshots(snapshots: readonly ScrollSnapshot[]): void {
+  for (const snapshot of snapshots) {
+    if (!snapshot.element.isConnected) continue;
+    snapshot.element.scrollLeft = snapshot.left;
+    snapshot.element.scrollTop = snapshot.top;
+  }
+}
+
+export function scheduleOverlayScrollRestore(snapshots: readonly ScrollSnapshot[]): void {
+  restoreOverlayScrollSnapshots(snapshots);
+  window.setTimeout(() => restoreOverlayScrollSnapshots(snapshots), 0);
+  window.setTimeout(() => restoreOverlayScrollSnapshots(snapshots), 50);
+  window.setTimeout(() => restoreOverlayScrollSnapshots(snapshots), 150);
+  window.requestAnimationFrame(() => {
+    restoreOverlayScrollSnapshots(snapshots);
+    window.requestAnimationFrame(() => restoreOverlayScrollSnapshots(snapshots));
+  });
 }
 
 function getFocusableElements(container: HTMLElement): HTMLElement[] {
@@ -57,11 +120,14 @@ export function usePublishedOverlayFocus({
     const overlay = overlayRef.current;
     if (!overlay) return undefined;
 
+    const scrollSnapshots = captureOverlayScrollSnapshots(openerRef.current);
+    const restoreCapturedScroll = () => restoreOverlayScrollSnapshots(scrollSnapshots);
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
 
     const focusFirst = () => {
       (initialFocusRef.current ?? getFocusableElements(overlay)[0] ?? overlay).focus({ preventScroll: true });
+      scheduleOverlayScrollRestore(scrollSnapshots);
     };
 
     const focusFrame = window.requestAnimationFrame(focusFirst);
@@ -98,10 +164,14 @@ export function usePublishedOverlayFocus({
       overlay.removeEventListener('keydown', handleKeyDown, true);
       document.removeEventListener('focusin', handleFocusIn);
       document.body.style.overflow = previousOverflow;
+      restoreCapturedScroll();
       const opener = openerRef.current;
       openerRef.current = null;
       window.setTimeout(() => {
-        if (opener?.isConnected) opener.focus({ preventScroll: true });
+        if (opener?.isConnected) {
+          opener.focus({ preventScroll: true });
+        }
+        scheduleOverlayScrollRestore(scrollSnapshots);
       }, 0);
     };
   }, [initialFocusRef, openerRef, open, overlayRef]);

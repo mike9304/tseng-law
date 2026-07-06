@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { recordCmsRecordEvent } from '@/lib/builder/audit/record';
 import {
   BuilderCmsPermissionError,
   BuilderCmsValidationError,
@@ -9,6 +10,7 @@ import { isBuilderCollectionId } from '@/lib/builder/cms';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { resolveBuilderCmsRouteActor } from '@/lib/builder/cms-route-actor';
+import { emitCmsRecordCreatedHook } from '@/lib/builder/apps/lifecycle-emitters';
 
 export async function GET(
   request: NextRequest,
@@ -85,6 +87,21 @@ export async function POST(
     if (!record) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
     }
+    emitCmsRecordCreatedHook({
+      kind: 'cms.record-created',
+      payload: {
+        collectionId: params.collectionId,
+        recordId: record.recordId,
+        ...(locale ? { locale } : {}),
+      },
+    });
+    await recordCmsRecordEvent({
+      request,
+      type: 'created',
+      siteId: params.siteId,
+      collectionId: params.collectionId,
+      recordId: record.recordId,
+    });
     return NextResponse.json({ ok: true, actor: routeActor.actor, record }, { status: 201 });
   } catch (error) {
     if (error instanceof BuilderCmsPermissionError) {

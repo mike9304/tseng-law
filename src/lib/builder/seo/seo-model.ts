@@ -12,7 +12,11 @@ import {
   type HreflangAlternate,
 } from '@/lib/builder/seo/hreflang';
 import { buildSitePageAbsoluteUrl } from '@/lib/builder/site/paths';
-import { mergeSeoWithDefaults } from '@/lib/builder/seo/defaults';
+import { buildDefaultSeoMetadata, mergeSeoWithDefaults } from '@/lib/builder/seo/defaults';
+import { resolveLocaleSeo } from '@/lib/builder/translations/seo-projection';
+import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
+import { isInternalSandboxPage } from '@/lib/builder/site/internal-pages';
+import { resolveLiveRouteSeoDefault } from '@/lib/builder/seo/live-route-defaults';
 
 export interface PageSeoData {
   title: string;
@@ -31,6 +35,12 @@ export interface PageSeoData {
   hreflang: HreflangAlternate[];
   structuredData?: Record<string, unknown>;
 }
+
+export const OPEN_GRAPH_LOCALE: Record<Locale, string> = {
+  ko: 'ko_KR',
+  'zh-hant': 'zh_TW',
+  en: 'en_US',
+};
 
 export function buildBuilderPageAbsoluteUrl(
   siteUrl: string,
@@ -65,18 +75,55 @@ export function buildPageSeo(
   allPages: BuilderPageMeta[],
   site?: BuilderSiteDocument | null,
 ): PageSeoData {
-  const seo = mergeSeoWithDefaults({ page, site, siteUrl, locale });
-  const slug = page.slug || '';
+  const localizedSeo = resolveLocaleSeo(page, locale);
+  const seo = mergeSeoWithDefaults({
+    page,
+    site,
+    siteUrl,
+    locale,
+    seo: {
+      ...(page.seo ?? {}),
+      ...localizedSeo,
+    },
+  });
+  const slug = resolveLocaleSlug(page, locale) || '';
   const url = buildBuilderPageAbsoluteUrl(siteUrl, locale, slug);
-  const title = seo.title || page.title[locale] || page.title.ko || '';
-  const description = seo.description || '';
+  const effectiveSeo = {
+    ...(page.seo ?? {}),
+    ...localizedSeo,
+  };
+  const routeSeoDefault = resolveLiveRouteSeoDefault(locale, slug);
+  const explicitTitle = effectiveSeo.title?.trim() || undefined;
+  const explicitDescription = effectiveSeo.description?.trim() || undefined;
+  const explicitOgTitle = effectiveSeo.ogTitle?.trim() || undefined;
+  const explicitOgDescription = effectiveSeo.ogDescription?.trim() || undefined;
+  const explicitTwitterTitle = effectiveSeo.twitterTitle?.trim() || undefined;
+  const explicitTwitterDescription = effectiveSeo.twitterDescription?.trim() || undefined;
+  const title =
+    explicitTitle ||
+    routeSeoDefault?.title ||
+    seo.title ||
+    page.title[locale] ||
+    page.title.ko ||
+    '';
+  const defaultDescription =
+    buildDefaultSeoMetadata({ page, site, siteUrl, locale }).description || '';
+  const description =
+    explicitDescription ||
+    routeSeoDefault?.description ||
+    seo.description ||
+    defaultDescription;
   const ogImage = seo.ogImage;
-  const pageSeo = page.seo ?? {};
-  const hasExplicitTitle = Boolean(pageSeo.title?.trim());
-  const hasExplicitDescription = Boolean(pageSeo.description?.trim());
-  const ogTitle = pageSeo.ogTitle || (hasExplicitTitle ? title : seo.ogTitle) || title;
+  const hasRouteTitle = Boolean(!explicitTitle && routeSeoDefault?.title);
+  const hasRouteDescription = Boolean(!explicitDescription && routeSeoDefault?.description);
+  const ogTitle =
+    explicitOgTitle ||
+    (explicitTitle || hasRouteTitle ? title : seo.ogTitle) ||
+    title;
   const ogDescription =
-    pageSeo.ogDescription || (hasExplicitDescription ? description : seo.ogDescription) || description;
+    explicitOgDescription ||
+    (explicitDescription || hasRouteDescription ? description : seo.ogDescription) ||
+    description;
 
   // Centralised hreflang generation — includes x-default + every linked
   // sibling reachable via `linkedPageIds`.
@@ -89,10 +136,13 @@ export function buildPageSeo(
     ogDescription,
     ogImage,
     twitterCard: seo.twitterCard || (seo.twitterImage || ogImage ? 'summary_large_image' : 'summary'),
-    twitterTitle: pageSeo.twitterTitle || (hasExplicitTitle ? ogTitle : seo.twitterTitle) || ogTitle,
+    twitterTitle:
+      explicitTwitterTitle ||
+      (explicitTitle || hasRouteTitle ? ogTitle : seo.twitterTitle) ||
+      ogTitle,
     twitterDescription:
-      pageSeo.twitterDescription ||
-      (hasExplicitDescription ? ogDescription : seo.twitterDescription) ||
+      explicitTwitterDescription ||
+      (explicitDescription || hasRouteDescription ? ogDescription : seo.twitterDescription) ||
       ogDescription,
     twitterImage: seo.twitterImage || ogImage,
     canonical: normalizeCanonicalUrl(seo.canonical || url),
@@ -116,7 +166,7 @@ export function buildSitemapEntries(
   siteUrl: string,
 ): SitemapEntry[] {
   return pages
-    .filter((p) => p.publishedAt && !p.noIndex && !p.seo?.noIndex)
+    .filter((p) => p.publishedAt && !p.noIndex && !p.seo?.noIndex && !isInternalSandboxPage(p))
     .map((page) => {
       const loc = buildBuilderPageAbsoluteUrl(siteUrl, page.locale, page.slug);
       const hreflang: Array<{ locale: string; href: string }> = [];

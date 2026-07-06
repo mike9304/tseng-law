@@ -7,9 +7,18 @@ import CampaignEditor from '@/components/builder/marketing/CampaignEditor';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-  title: 'Edit Campaign',
-  robots: { index: false, follow: false },
+const copy = {
+  ko: { title: '캠페인 편집' },
+  'zh-hant': { title: '編輯活動' },
+  en: { title: 'Edit Campaign' },
+} as const;
+
+export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  return {
+    title: copy[locale].title,
+    robots: { index: false, follow: false },
+  };
 };
 
 export default async function CampaignEditPage({
@@ -25,7 +34,7 @@ export default async function CampaignEditPage({
   return (
     <main>
       <MarketingNav locale={locale} active="campaigns" />
-      <CampaignEditor campaign={campaign} />
+      <CampaignEditor campaign={campaign} locale={locale} />
     </main>
   );
 }

@@ -9,12 +9,19 @@
  * booking flow can degrade gracefully (skip meetingLink without erroring).
  */
 
+import { promises as fs } from 'fs';
+import path from 'path';
+
 interface ZoomCreateMeetingArgs {
   topic: string;
   startTimeISO: string;
   durationMinutes: number;
   timezone?: string;
   customerEmail?: string;
+}
+
+interface ZoomMockConfig {
+  meetingLinkBase?: string;
 }
 
 export type ZoomCreateMeetingResult =
@@ -41,7 +48,44 @@ async function fetchAccessToken(): Promise<string | null> {
   }
 }
 
+async function loadMockConfig(): Promise<ZoomMockConfig | null> {
+  // BUILDER_ZOOM_MOCK_ALLOW=1 keeps the mock available when a production
+  // build runs in a local/QA harness without real Zoom credentials.
+  if (process.env.NODE_ENV === 'production' && process.env.BUILDER_ZOOM_MOCK_ALLOW !== '1') return null;
+  if (process.env.BUILDER_ZOOM_MOCK_MEETING_LINK) {
+    return { meetingLinkBase: process.env.BUILDER_ZOOM_MOCK_MEETING_LINK };
+  }
+  const candidatePaths = [
+    process.env.BUILDER_ZOOM_MOCK_PATH,
+    path.join(process.cwd(), 'runtime-data', 'builder-bookings', 'zoom-mock.json'),
+    path.join('/Users/son7/Projects/tseng-law', 'runtime-data', 'builder-bookings', 'zoom-mock.json'),
+  ].filter((value): value is string => Boolean(value));
+  for (const mockPath of candidatePaths) {
+    try {
+      const raw = await fs.readFile(mockPath, 'utf8');
+      const parsed = JSON.parse(raw) as ZoomMockConfig | null;
+      if (parsed && typeof parsed === 'object') return parsed;
+    } catch {
+      // Try the next candidate path.
+    }
+  }
+  return { meetingLinkBase: 'https://meet.example.com/mock' };
+}
+
 export async function createZoomMeeting(args: ZoomCreateMeetingArgs): Promise<ZoomCreateMeetingResult> {
+  const mock = await loadMockConfig();
+  if (mock?.meetingLinkBase) {
+    const url = new URL(mock.meetingLinkBase);
+    url.searchParams.set('timezone', args.timezone ?? 'Asia/Seoul');
+    url.searchParams.set('start', args.startTimeISO);
+    url.searchParams.set('duration', String(Math.max(5, Math.min(720, args.durationMinutes))));
+    url.searchParams.set('topic', args.topic.slice(0, 200));
+    if (args.customerEmail) {
+      url.searchParams.set('customerEmail', args.customerEmail);
+    }
+    return { ok: true, meetingLink: url.toString(), meetingId: 'mock' };
+  }
+
   const token = await fetchAccessToken();
   if (!token) {
     const accountId = process.env.ZOOM_ACCOUNT_ID ?? '';

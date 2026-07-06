@@ -10,6 +10,7 @@ import {
   resolveCardVariantStyle,
 } from '@/lib/builder/site/component-variants';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { getBlogPostCardCopy, type BlogPostCardCopy } from './blog-post-card-copy';
 import styles from './BlogPostCard.module.css';
 
 interface BlogPostCardElementProps {
@@ -43,20 +44,6 @@ type CardVars = CSSProperties & {
   '--blog-card-image-bg': string;
 };
 
-const MOCK_POST: CardItem = {
-  postId: 'mock',
-  slug: 'mock',
-  locale: 'ko',
-  title: '대만 회사 설립 가이드',
-  excerpt: '외국인이 대만에서 법인을 설립하는 절차와 필요한 서류를 알아봅니다.',
-  category: 'company-formation',
-  authorName: '호정국제 법률사무소',
-  authorTitle: 'Taiwan Legal Desk',
-  date: '2026-04-12',
-  readingTimeMinutes: 6,
-  featured: true,
-};
-
 function fmtDate(iso?: string): string {
   if (!iso) return '';
   const d = new Date(iso);
@@ -64,10 +51,10 @@ function fmtDate(iso?: string): string {
   return d.toISOString().slice(0, 10);
 }
 
-function categoryMeta(slug?: string): { label: string; color: string } {
+function categoryMeta(slug: string | undefined, locale: Locale, fallbackLabel: string): { label: string; color: string } {
   const cat = DEFAULT_BLOG_CATEGORIES.find((c) => c.slug === slug);
   return {
-    label: cat?.name.ko ?? slug ?? '일반',
+    label: cat?.name[locale] ?? cat?.name.ko ?? slug ?? fallbackLabel,
     color: cat?.color ?? '#2d5c48',
   };
 }
@@ -109,12 +96,30 @@ function toCardItem(post: BlogPost): CardItem {
   };
 }
 
+function createMockPost(locale: Locale, copy: BlogPostCardCopy): CardItem {
+  return {
+    postId: 'mock',
+    slug: 'mock',
+    locale,
+    title: copy.runtime.mockPost.title,
+    excerpt: copy.runtime.mockPost.excerpt,
+    category: 'company-formation',
+    authorName: copy.runtime.mockPost.authorName,
+    authorTitle: copy.runtime.mockPost.authorTitle,
+    date: '2026-04-12',
+    readingTimeMinutes: 6,
+    featured: true,
+  };
+}
+
 function CardShell({
   item,
   content,
   href,
   notice,
   theme,
+  copy,
+  locale,
   tone = 'normal',
 }: {
   item: CardItem;
@@ -122,9 +127,11 @@ function CardShell({
   href?: string;
   notice?: string;
   theme?: BuilderTheme;
+  copy: BlogPostCardCopy;
+  locale: Locale;
   tone?: 'normal' | 'muted' | 'error';
 }) {
-  const meta = categoryMeta(item.category);
+  const meta = categoryMeta(item.category, locale, copy.runtime.generalCategory);
   const variantStyle = resolveCardVariantStyle(
     content.variant ?? legacyCardStyleToVariant(content.cardStyle),
     theme,
@@ -154,7 +161,7 @@ function CardShell({
               <span>{meta.label}</span>
             </div>
           )}
-          {item.featured ? <span className={styles.featuredBadge}>Featured</span> : null}
+          {item.featured ? <span className={styles.featuredBadge}>{copy.runtime.featuredBadge}</span> : null}
           {notice ? <span className={styles.noticeBadge}>{notice}</span> : null}
         </div>
       ) : null}
@@ -187,10 +194,10 @@ function CardShell({
             ) : null}
             <span className={styles.metaLine}>
               {content.showDate && item.date ? <span>{item.date}</span> : null}
-              {content.showReadingTime && item.readingTimeMinutes > 0 ? <span>{item.readingTimeMinutes}분 읽기</span> : null}
+              {content.showReadingTime && item.readingTimeMinutes > 0 ? <span>{copy.runtime.readingTime(item.readingTimeMinutes)}</span> : null}
             </span>
           </div>
-          <span className={styles.readMore}>자세히 보기</span>
+          <span className={styles.readMore}>{copy.runtime.readMore}</span>
         </div>
       </div>
     </>
@@ -198,7 +205,7 @@ function CardShell({
 
   if (href) {
     return (
-      <a className={className} href={href} aria-label={`${item.title} 글 보기`} style={vars} data-builder-blog-card="true">
+      <a className={className} href={href} aria-label={copy.runtime.cardAriaLabel(item.title)} style={vars} data-builder-blog-card="true">
         {body}
       </a>
     );
@@ -215,9 +222,11 @@ export default function BlogPostCardElement({ node, mode = 'edit', theme, locale
   const c = node.content;
   const isBuilder = mode !== 'published';
   const effectiveLocale = normalizeLocale(locale || 'ko');
+  const copy = getBlogPostCardCopy(effectiveLocale);
+  const mockPost = useMemo(() => createMockPost(effectiveLocale, copy), [copy, effectiveLocale]);
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<'not-found' | 'load-failed' | null>(null);
 
   useEffect(() => {
     if (!c.postId) {
@@ -245,14 +254,14 @@ export default function BlogPostCardElement({ node, mode = 'edit', theme, locale
         if (json?.ok && Array.isArray(json.posts)) {
           const match = (json.posts as BlogPost[]).find((p) => p.postId === c.postId || p.slug === c.postId);
           setPost(match ?? null);
-          if (!match) setError('Post not found');
+          if (!match) setError('not-found');
         } else {
-          setError(json?.error || 'Failed to load post');
+          setError('load-failed');
         }
       })
-      .catch((err) => {
+      .catch(() => {
         if (cancelled) return;
-        setError(err instanceof Error ? err.message : 'fetch_failed');
+        setError('load-failed');
       })
       .finally(() => {
         if (!cancelled) setLoading(false);
@@ -266,25 +275,39 @@ export default function BlogPostCardElement({ node, mode = 'edit', theme, locale
   const selectedItem = useMemo(() => (post ? toCardItem(post) : null), [post]);
 
   if (!c.postId) {
-    return <CardShell item={MOCK_POST} content={c} notice="Select post" theme={theme} tone="muted" />;
+    return <CardShell item={mockPost} content={c} notice={copy.runtime.selectPostNotice} theme={theme} copy={copy} locale={effectiveLocale} tone="muted" />;
   }
 
   if (loading && !selectedItem) {
-    return <CardShell item={{ ...MOCK_POST, title: 'Loading post...', excerpt: '선택한 블로그 글을 불러오는 중입니다.' }} content={c} notice="Loading" theme={theme} tone="muted" />;
+    return (
+      <CardShell
+        item={{ ...mockPost, title: copy.runtime.loadingTitle, excerpt: copy.runtime.loadingExcerpt }}
+        content={c}
+        notice={copy.runtime.loadingNotice}
+        theme={theme}
+        copy={copy}
+        locale={effectiveLocale}
+        tone="muted"
+      />
+    );
   }
 
   if (!selectedItem) {
     return (
       <CardShell
         item={{
-          ...MOCK_POST,
-          title: error ? `${error}: ${c.postId}` : `Post not found: ${c.postId}`,
-          excerpt: '블로그 관리자에서 공개 상태 또는 slug 값을 확인하세요.',
+          ...mockPost,
+          title: error === 'load-failed'
+            ? copy.runtime.failedToLoadPost(c.postId)
+            : copy.runtime.postNotFound(c.postId),
+          excerpt: copy.runtime.errorExcerpt,
           featured: false,
         }}
         content={c}
-        notice="Unavailable"
+        notice={copy.runtime.unavailableNotice}
         theme={theme}
+        copy={copy}
+        locale={effectiveLocale}
         tone="error"
       />
     );
@@ -296,6 +319,8 @@ export default function BlogPostCardElement({ node, mode = 'edit', theme, locale
       content={c}
       href={isBuilder ? `#${selectedItem.slug}` : `/${effectiveLocale}/columns/${selectedItem.slug}`}
       theme={theme}
+      copy={copy}
+      locale={effectiveLocale}
     />
   );
 }

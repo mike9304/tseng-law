@@ -6,6 +6,7 @@ import {
   normalizeBuilderAppCategory,
   normalizeBuilderAppStatus,
 } from '@/lib/builder/apps/installed';
+import { getBuilderAppsApiErrorPayload } from '@/lib/builder/apps/apps-api-copy';
 import { normalizeLocale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
@@ -16,11 +17,19 @@ export async function GET(request: NextRequest) {
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
-  const entries = await listBuilderAppCatalogEntries(DEFAULT_BUILDER_SITE_ID, locale, {
-    search: request.nextUrl.searchParams.get('search') ?? undefined,
-    category: normalizeBuilderAppCategory(request.nextUrl.searchParams.get('category')),
-    status: normalizeBuilderAppStatus(request.nextUrl.searchParams.get('status')),
-  });
+  try {
+    const entries = await listBuilderAppCatalogEntries(DEFAULT_BUILDER_SITE_ID, locale, {
+      search: request.nextUrl.searchParams.get('search') ?? undefined,
+      category: normalizeBuilderAppCategory(request.nextUrl.searchParams.get('category')),
+      status: normalizeBuilderAppStatus(request.nextUrl.searchParams.get('status')),
+    });
 
-  return NextResponse.json({ ok: true, entries });
+    return NextResponse.json({ ok: true, entries });
+  } catch (error) {
+    console.error('[builder/apps/catalog] list failed:', error);
+    return NextResponse.json(
+      { ok: false, ...getBuilderAppsApiErrorPayload(locale, 'app_catalog_failed') },
+      { status: 500 },
+    );
+  }
 }

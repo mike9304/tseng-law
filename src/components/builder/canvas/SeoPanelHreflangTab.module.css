@@ -1,0 +1,149 @@
+.section {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.section[data-active='false'] {
+  display: none;
+}
+
+.titleBlock {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.titleBlock:not(:first-child) {
+  margin-top: 8px;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #0f172a;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.helpText {
+  color: #64748b;
+  font-size: 0.73rem;
+  line-height: 1.45;
+}
+
+.previewCard {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.emptyCard {
+  color: #64748b;
+}
+
+.list {
+  display: grid;
+  gap: 6px;
+}
+
+.alternateRow {
+  grid-template-columns: 90px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+}
+
+.siblingRow {
+  grid-template-columns: 90px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+}
+
+.hreflangCode {
+  color: #0f172a;
+  font-family: ui-monospace, Menlo, monospace;
+}
+
+.hreflangCode[data-default='true'] {
+  color: #0f766e;
+}
+
+.rowUrl,
+.siblingUrl {
+  min-width: 0;
+  color: #334155;
+  word-break: break-all;
+}
+
+.indexStatus {
+  color: #64748b;
+  font-size: 0.73rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.indexStatus[data-tone='warning'] {
+  color: #b45309;
+}
+
+.indexStatus[data-tone='success'] {
+  color: #15803d;
+}
+
+.warningCard {
+  border-color: #fcd34d;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 0.78rem;
+}
+
+.statusCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.statusCard[data-included='true'] {
+  border-color: #a7f3d0;
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.statusCard[data-included='false'] {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #7c2d12;
+}
+
+.statusLabel {
+  flex: 0 0 auto;
+}
+
+.statusHelp {
+  color: inherit;
+  font-size: 0.73rem;
+  line-height: 1.45;
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .alternateRow,
+  .siblingRow {
+    grid-template-columns: 1fr;
+  }
+
+  .statusCard {
+    flex-direction: column;
+  }
+
+  .statusHelp {
+    text-align: left;
+  }
+}

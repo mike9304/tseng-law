@@ -1,97 +1,117 @@
 import { useCallback } from 'react';
 import {
-  createCanvasNodeTemplate,
-} from '@/lib/builder/canvas/store';
-import { builderCanvasNodeKinds, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
+  BUILDER_APP_WIDGET_DRAG_MIME,
+  BUILDER_BUILT_IN_SECTION_TEMPLATE_DRAG_MIME,
+  BUILDER_NODE_KIND_DRAG_MIME,
+  BUILDER_SAVED_SECTION_DRAG_MIME,
+  BUILDER_WIDGET_PRESET_DRAG_MIME,
+  type CanvasDropTargetContext,
+  createBuiltInSectionDropSnapshot,
+  createCatalogDropNode,
+  isBuilderCatalogNodeKind,
+  parseBuiltInSectionTemplateDragData,
+  parseCatalogAppWidgetDragData,
+  parseCatalogWidgetPresetDragData,
+} from './canvasCatalogDrop';
+import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 
 type StagePoint = { x: number; y: number };
+const BUILDER_STAGE_DROP_MIME_TYPES = [
+  BUILDER_SAVED_SECTION_DRAG_MIME,
+  BUILDER_BUILT_IN_SECTION_TEMPLATE_DRAG_MIME,
+  BUILDER_NODE_KIND_DRAG_MIME,
+] as const;
 
 export function useCanvasStageDrop({
   addNode,
-  hoveredContainerId,
+  addNodes,
   nodeCount,
   onRequestInsertSavedSection,
-  resolveStagePosition,
+  resolveDropTargetContext,
+  setExternalDropTargetId,
   setDraftSaveState,
+  setSelectedNodeId,
 }: {
   addNode: (node: BuilderCanvasNode) => void;
-  hoveredContainerId: string | null;
+  addNodes: (nodes: BuilderCanvasNode[], rootNodeId?: string | null, parentNodeId?: string | null) => void;
   nodeCount: number;
-  onRequestInsertSavedSection?: (sectionId: string, position: StagePoint) => void;
-  resolveStagePosition: (clientX: number, clientY: number) => StagePoint;
+  onRequestInsertSavedSection?: (sectionId: string, position: StagePoint, parentNodeId: string | null) => void;
+  resolveDropTargetContext: (clientX: number, clientY: number) => CanvasDropTargetContext;
+  setExternalDropTargetId: (nodeId: string | null) => void;
   setDraftSaveState: (state: 'idle' | 'saving' | 'saved' | 'error') => void;
+  setSelectedNodeId: (nodeId: string | null) => void;
 }) {
   const handleStageDragOver = useCallback((event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     event.dataTransfer.dropEffect = 'copy';
-  }, []);
+    if (!hasBuilderStageDropData(event.dataTransfer)) {
+      setExternalDropTargetId(null);
+      return;
+    }
+    const target = resolveDropTargetContext(event.clientX, event.clientY);
+    setExternalDropTargetId(target.parentId);
+  }, [resolveDropTargetContext, setExternalDropTargetId]);
+
+  const handleStageDragLeave = useCallback((event: React.DragEvent<HTMLDivElement>) => {
+    const relatedTarget = event.relatedTarget;
+    if (relatedTarget instanceof Node && event.currentTarget.contains(relatedTarget)) return;
+    setExternalDropTargetId(null);
+  }, [setExternalDropTargetId]);
 
   const handleStageDrop = useCallback((event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-    const savedSectionId = event.dataTransfer.getData('application/x-builder-saved-section-id');
+    setExternalDropTargetId(null);
+    const savedSectionId = event.dataTransfer.getData(BUILDER_SAVED_SECTION_DRAG_MIME);
     if (savedSectionId && onRequestInsertSavedSection) {
-      const position = resolveStagePosition(event.clientX, event.clientY);
-      onRequestInsertSavedSection(savedSectionId, position);
+      const dropTarget = resolveDropTargetContext(event.clientX, event.clientY);
+      onRequestInsertSavedSection(savedSectionId, dropTarget.position, dropTarget.parentId);
       setDraftSaveState('saving');
       return;
     }
-    const kind = event.dataTransfer.getData('application/x-builder-node-kind');
-    if (!builderCanvasNodeKinds.includes(kind as (typeof builderCanvasNodeKinds)[number])) return;
-    const position = resolveStagePosition(event.clientX, event.clientY);
-    const template = createCanvasNodeTemplate(
-      kind as (typeof builderCanvasNodeKinds)[number],
-      position.x,
-      position.y,
-      nodeCount,
+
+    const sectionTemplate = parseBuiltInSectionTemplateDragData(
+      event.dataTransfer.getData(BUILDER_BUILT_IN_SECTION_TEMPLATE_DRAG_MIME),
     );
-    const appWidgetData = event.dataTransfer.getData('application/x-builder-app-widget');
-    if (appWidgetData) {
-      try {
-        const parsed = JSON.parse(appWidgetData) as {
-          appId?: unknown;
-          widgetId?: unknown;
-          defaultContent?: unknown;
-          defaultSize?: unknown;
-        };
-        if (typeof parsed.appId === 'string' && typeof parsed.widgetId === 'string') {
-          template.appWidget = {
-            appId: parsed.appId,
-            widgetId: parsed.widgetId,
-          };
-        }
-        if (parsed.defaultContent && typeof parsed.defaultContent === 'object' && !Array.isArray(parsed.defaultContent)) {
-          template.content = {
-            ...template.content,
-            ...(parsed.defaultContent as Record<string, unknown>),
-          } as BuilderCanvasNode['content'];
-        }
-        if (parsed.defaultSize && typeof parsed.defaultSize === 'object') {
-          const size = parsed.defaultSize as { width?: unknown; height?: unknown };
-          if (typeof size.width === 'number' && typeof size.height === 'number') {
-            template.rect = {
-              ...template.rect,
-              width: size.width,
-              height: size.height,
-            };
-          }
-        }
-      } catch {
-        // Ignore malformed drag metadata and fall back to a plain node.
-      }
+    if (sectionTemplate) {
+      const dropTarget = resolveDropTargetContext(event.clientX, event.clientY);
+      const result = createBuiltInSectionDropSnapshot(sectionTemplate, dropTarget.position);
+      if (result.nodes.length === 0) return;
+      addNodes(result.nodes, result.rootNodeId, dropTarget.parentId);
+      setSelectedNodeId(result.rootNodeId);
+      setDraftSaveState('saving');
+      return;
     }
-    if (hoveredContainerId) {
-      (template as { parentId?: string }).parentId = hoveredContainerId;
-    }
+
+    const kind = event.dataTransfer.getData(BUILDER_NODE_KIND_DRAG_MIME);
+    if (!isBuilderCatalogNodeKind(kind)) return;
+    const dropTarget = resolveDropTargetContext(event.clientX, event.clientY);
+    const appWidget = parseCatalogAppWidgetDragData(event.dataTransfer.getData(BUILDER_APP_WIDGET_DRAG_MIME));
+    const preset = parseCatalogWidgetPresetDragData(event.dataTransfer.getData(BUILDER_WIDGET_PRESET_DRAG_MIME));
+    const template = createCatalogDropNode({
+      appWidget,
+      kind,
+      nodeCount,
+      parentId: dropTarget.parentId,
+      position: dropTarget.position,
+      preset,
+    });
     addNode(template);
     setDraftSaveState('saving');
   }, [
     addNode,
-    hoveredContainerId,
+    addNodes,
     nodeCount,
     onRequestInsertSavedSection,
-    resolveStagePosition,
+    resolveDropTargetContext,
+    setExternalDropTargetId,
     setDraftSaveState,
+    setSelectedNodeId,
   ]);
 
-  return { handleStageDragOver, handleStageDrop };
+  return { handleStageDragLeave, handleStageDragOver, handleStageDrop };
+}
+
+function hasBuilderStageDropData(dataTransfer: DataTransfer): boolean {
+  const types = Array.from(dataTransfer.types);
+  return BUILDER_STAGE_DROP_MIME_TYPES.some((type) => types.includes(type));
 }

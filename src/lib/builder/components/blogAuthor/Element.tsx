@@ -5,6 +5,7 @@ import type { BuilderBlogAuthorCanvasNode } from '@/lib/builder/canvas/types';
 import type { BlogAuthor, BlogPost } from '@/lib/builder/blog/blog-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import styles from './BlogAuthor.module.css';
+import { getBlogAuthorCopy, type BlogAuthorCopy } from './blog-author-copy';
 
 interface BlogAuthorElementProps {
   node: BuilderBlogAuthorCanvasNode;
@@ -18,44 +19,46 @@ interface AuthorGroup {
   posts: BlogPost[];
 }
 
-const MOCK_AUTHORS: AuthorGroup[] = [
-  {
-    key: 'mock-team',
-    author: {
-      name: '호정국제 법률사무소',
-      title: 'Legal editorial team',
-      bio: '대만 법률 실무와 외국인 상담 경험을 바탕으로 칼럼을 검토합니다.',
-    },
-    posts: [
-      {
-        postId: 'mock-post-1',
-        slug: 'mock-post-1',
-        locale: 'ko',
-        title: '대만 회사설립 체크리스트',
-        excerpt: '법인 설립 전 확인해야 할 절차와 실무 쟁점.',
-        bodyHtml: '',
-        bodyMarkdown: '',
-        category: 'company-formation',
-        tags: [],
-        readingTimeMinutes: 4,
-        publishedAt: '2026-04-12',
-        updatedAt: '2026-04-12',
-        featured: false,
-        author: { name: '호정국제 법률사무소' },
-      },
-    ],
-  },
-];
-
 function initials(name: string): string {
   const compact = name.replace(/\s+/g, '').trim();
   return Array.from(compact).slice(0, 2).join('').toUpperCase() || 'AU';
 }
 
-function groupAuthors(posts: BlogPost[]): AuthorGroup[] {
+function createMockAuthors(locale: Locale, copy: BlogAuthorCopy): AuthorGroup[] {
+  return [
+    {
+      key: 'mock-team',
+      author: {
+        name: copy.mock.authorName,
+        title: copy.mock.authorTitle,
+        bio: copy.mock.authorBio,
+      },
+      posts: [
+        {
+          postId: 'mock-post-1',
+          slug: 'mock-post-1',
+          locale,
+          title: copy.mock.postTitle,
+          excerpt: copy.mock.postExcerpt,
+          bodyHtml: '',
+          bodyMarkdown: '',
+          category: 'company-formation',
+          tags: [],
+          readingTimeMinutes: 4,
+          publishedAt: '2026-04-12',
+          updatedAt: '2026-04-12',
+          featured: false,
+          author: { name: copy.mock.authorName },
+        },
+      ],
+    },
+  ];
+}
+
+function groupAuthors(posts: BlogPost[], fallbackAuthorName: string): AuthorGroup[] {
   const map = new Map<string, AuthorGroup>();
   for (const post of posts) {
-    const name = post.author?.name?.trim() || '호정국제 법률사무소';
+    const name = post.author?.name?.trim() || fallbackAuthorName;
     const key = name.toLowerCase();
     const current = map.get(key);
     if (current) {
@@ -80,6 +83,8 @@ export default function BlogAuthorElement({ node, mode = 'edit', locale }: BlogA
   const c = node.content;
   const isBuilder = mode !== 'published';
   const effectiveLocale = normalizeLocale(locale || 'ko');
+  const copy = getBlogAuthorCopy(effectiveLocale);
+  const mockAuthors = useMemo(() => createMockAuthors(effectiveLocale, copy), [copy, effectiveLocale]);
   const [posts, setPosts] = useState<BlogPost[] | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -113,15 +118,15 @@ export default function BlogAuthorElement({ node, mode = 'edit', locale }: BlogA
   }, [c.authorName, effectiveLocale, isBuilder]);
 
   const authors = useMemo(() => {
-    const grouped = posts ? groupAuthors(posts) : isBuilder ? MOCK_AUTHORS : [];
+    const grouped = posts ? groupAuthors(posts, copy.fallbackAuthorName) : isBuilder ? mockAuthors : [];
     if (!c.authorName) return grouped;
     return grouped.filter((group) => group.author.name === c.authorName);
-  }, [c.authorName, isBuilder, posts]);
+  }, [c.authorName, copy.fallbackAuthorName, isBuilder, mockAuthors, posts]);
 
   if (!isBuilder && loading) {
     return (
       <div className={styles.state} data-builder-blog-author="true" role="status">
-        Loading authors...
+        {copy.loading}
       </div>
     );
   }
@@ -129,7 +134,7 @@ export default function BlogAuthorElement({ node, mode = 'edit', locale }: BlogA
   if (authors.length === 0) {
     return (
       <div className={styles.state} data-builder-blog-author="true">
-        표시할 작성자가 없습니다.
+        {copy.empty}
       </div>
     );
   }

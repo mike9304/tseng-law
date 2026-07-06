@@ -3,15 +3,27 @@
 import { useEffect, useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderCounterCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import {
+  DATA_WIDGETS_LEGACY_DEFAULTS,
+  getDataWidgetsCopy,
+  localizedDataWidgetText,
+} from '../data-widgets-copy';
+import styles from '../DataWidgetInspector.module.css';
 
 function CounterRender({
   node,
+  locale = 'ko',
   mode = 'edit',
 }: {
   node: BuilderCounterCanvasNode;
+  locale?: Locale;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
+  const copy = getDataWidgetsCopy(locale);
+  const title = localizedDataWidgetText(c.title, copy.counter.defaultTitle, DATA_WIDGETS_LEGACY_DEFAULTS.counterTitle);
+  const suffix = localizedDataWidgetText(c.suffix, copy.counter.defaultSuffix, DATA_WIDGETS_LEGACY_DEFAULTS.counterSuffix);
   const [value, setValue] = useState<number>(mode === 'edit' ? c.target : 0);
 
   useEffect(() => {
@@ -39,9 +51,9 @@ function CounterRender({
 
   return (
     <div className="builder-datadisplay-counter" data-builder-datadisplay-widget="counter">
-      {c.title ? <strong>{c.title}</strong> : null}
+      {title ? <strong>{title}</strong> : null}
       <span className="builder-datadisplay-counter-value">
-        {c.prefix}{formatted}{c.suffix}
+        {c.prefix}{formatted}{suffix}
       </span>
     </div>
   );
@@ -49,48 +61,56 @@ function CounterRender({
 
 function CounterInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const cNode = node as BuilderCounterCanvasNode;
   const c = cNode.content;
+  const copy = getDataWidgetsCopy(locale);
+  const title = localizedDataWidgetText(c.title, copy.counter.defaultTitle, DATA_WIDGETS_LEGACY_DEFAULTS.counterTitle);
+  const suffix = localizedDataWidgetText(c.suffix, copy.counter.defaultSuffix, DATA_WIDGETS_LEGACY_DEFAULTS.counterSuffix);
   return (
-    <>
-      <label>
-        <span>제목</span>
-        <input type="text" value={c.title} disabled={disabled} onChange={(event) => onUpdate({ title: event.target.value })} />
+    <div className={styles.root} data-builder-data-widget-inspector="counter">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.counter.inspector.title}</span>
+        <input className={styles.control} type="text" value={title} disabled={disabled} onChange={(event) => onUpdate({ title: event.target.value })} />
       </label>
-      <label>
-        <span>목표값</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.counter.inspector.target}</span>
         <input
+          className={styles.control}
           type="number"
           value={c.target}
           disabled={disabled}
           onChange={(event) => onUpdate({ target: Number(event.target.value) })}
         />
       </label>
-      <label>
-        <span>접두/접미</span>
-        <div style={{ display: 'flex', gap: 6 }}>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.counter.inspector.prefixSuffix}</span>
+        <div className={styles.inlineFields}>
           <input
+            className={styles.control}
             type="text"
-            placeholder="prefix"
+            placeholder={copy.counter.inspector.prefixPlaceholder}
             value={c.prefix}
             disabled={disabled}
             onChange={(event) => onUpdate({ prefix: event.target.value })}
           />
           <input
+            className={styles.control}
             type="text"
-            placeholder="suffix"
-            value={c.suffix}
+            placeholder={copy.counter.inspector.suffixPlaceholder}
+            value={suffix}
             disabled={disabled}
             onChange={(event) => onUpdate({ suffix: event.target.value })}
           />
         </div>
       </label>
-      <label>
-        <span>소수점 자릿수</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.counter.inspector.decimals}</span>
         <input
+          className={styles.control}
           type="number"
           min={0}
           max={4}
@@ -99,9 +119,10 @@ function CounterInspector({
           onChange={(event) => onUpdate({ decimals: Number(event.target.value) })}
         />
       </label>
-      <label>
-        <span>애니메이션 (ms)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.counter.inspector.animationMs}</span>
         <input
+          className={styles.control}
           type="number"
           min={200}
           max={20000}
@@ -111,7 +132,7 @@ function CounterInspector({
           onChange={(event) => onUpdate({ durationMs: Number(event.target.value) })}
         />
       </label>
-    </>
+    </div>
   );
 }
 
@@ -121,8 +142,8 @@ export default defineComponent({
   category: 'advanced',
   icon: '#',
   defaultContent: {
-    title: '누적 자문',
-    suffix: '+ 건',
+    title: DATA_WIDGETS_LEGACY_DEFAULTS.counterTitle,
+    suffix: DATA_WIDGETS_LEGACY_DEFAULTS.counterSuffix,
     prefix: '',
     target: 1248,
     durationMs: 1500,

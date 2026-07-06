@@ -5,14 +5,19 @@ import type { ReferenceGuide } from '@/lib/builder/canvas/editor-prefs';
 
 type CustomGuidesOverlayProps = {
   guides: ReferenceGuide[];
+  /** Transient guide shown while dragging out of a ruler, before commit. */
+  draftGuide?: ReferenceGuide | null;
   onRemoveGuide: (guideId: string) => void;
   onStartGuideDrag: (guide: ReferenceGuide, event: PointerEvent<HTMLButtonElement>) => void;
   stageHeight: number;
   stageWidth: number;
 };
 
+const GUIDE_OVERLAY_Z_INDEX = 45010;
+
 export default function CustomGuidesOverlay({
   guides,
+  draftGuide,
   onRemoveGuide,
   onStartGuideDrag,
   stageHeight,
@@ -22,7 +27,7 @@ export default function CustomGuidesOverlay({
     <div
       data-builder-floating-ui="true"
       role="presentation"
-      style={{ inset: 0, pointerEvents: 'none', position: 'absolute', zIndex: 10010 }}
+      style={{ inset: 0, pointerEvents: 'none', position: 'absolute', zIndex: GUIDE_OVERLAY_Z_INDEX }}
     >
       {guides.map((guide) => {
         const vertical = guide.axis === 'vertical';
@@ -89,6 +94,28 @@ export default function CustomGuidesOverlay({
           </button>
         );
       })}
+      {draftGuide ? (() => {
+        const vertical = draftGuide.axis === 'vertical';
+        const color = draftGuide.color || '#e11d48';
+        return (
+          <div
+            data-builder-guide-draft="true"
+            data-builder-guide-axis={draftGuide.axis}
+            aria-hidden="true"
+            style={{
+              background: color,
+              boxShadow: `0 0 0 1px rgba(255,255,255,0.7)`,
+              left: vertical ? draftGuide.position : 0,
+              opacity: 0.55,
+              pointerEvents: 'none',
+              position: 'absolute',
+              top: vertical ? 0 : draftGuide.position,
+              width: vertical ? 1 : stageWidth,
+              height: vertical ? stageHeight : 1,
+            }}
+          />
+        );
+      })() : null}
     </div>
   );
 }

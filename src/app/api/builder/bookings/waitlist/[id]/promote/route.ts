@@ -16,6 +16,10 @@ import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { runBookingBillingAutomation } from '@/lib/builder/billing-document-automation';
 import { redeemPackageCreditForBooking, restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
+import { bookingServicePriceSnapshot } from '@/lib/builder/bookings/pricing';
+import { maybeCreateBookingZoomLink } from '@/lib/builder/bookings/zoom-handoff';
+import { getBookingWaitlistApiErrorPayload } from '@/lib/builder/bookings/bookings-copy';
+import { normalizeLocale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -23,19 +27,25 @@ export const dynamic = 'force-dynamic';
 export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   const existing = await getWaitlistEntry(params.id);
-  if (!existing) return NextResponse.json({ error: 'Waitlist entry not found' }, { status: 404 });
+  if (!existing) {
+    return NextResponse.json(getBookingWaitlistApiErrorPayload(locale, 'waitlist_not_found'), { status: 404 });
+  }
   if (existing.status === 'promoted' && existing.promotedBookingId) {
     return NextResponse.json({ waitlist: existing, promotedBookingId: existing.promotedBookingId }, { status: 200 });
   }
   if (existing.status === 'closed') {
-    return NextResponse.json({ error: 'Closed waitlist entries cannot be promoted.' }, { status: 409 });
+    return NextResponse.json(getBookingWaitlistApiErrorPayload(locale, 'waitlist_closed'), { status: 409 });
   }
 
   const parsed = bookingWaitlistPromoteSchema.safeParse(await request.json().catch(() => ({})));
   if (!parsed.success) {
-    return NextResponse.json({ error: 'Invalid waitlist promotion payload', details: parsed.error.issues.slice(0, 3) }, { status: 400 });
+    return NextResponse.json({
+      ...getBookingWaitlistApiErrorPayload(locale, 'invalid_waitlist_promotion_payload'),
+      details: parsed.error.issues.slice(0, 3),
+    }, { status: 400 });
   }
 
   const staffId = parsed.data.staffId ?? existing.staffId;
@@ -45,28 +55,33 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     getStaff(staffId),
   ]);
   if (!service || !service.isActive || !staff || !staff.isActive) {
-    return NextResponse.json({ error: 'Service or staff not available' }, { status: 404 });
+    return NextResponse.json(getBookingWaitlistApiErrorPayload(locale, 'service_or_staff_not_available'), { status: 404 });
   }
   if (service.staffIds.length > 0 && !service.staffIds.includes(staff.staffId)) {
-    return NextResponse.json({ error: 'Staff is not assigned to this service.' }, { status: 400 });
+    return NextResponse.json(getBookingWaitlistApiErrorPayload(locale, 'staff_not_assigned_to_service'), { status: 400 });
   }
 
   const slots = await computeAvailableSlots({ serviceId: service.serviceId, staffId, date });
   const slot = slots[0];
-  if (!slot) return NextResponse.json({ error: 'No available slot to promote this waitlist entry.' }, { status: 409 });
+  if (!slot) {
+    return NextResponse.json(getBookingWaitlistApiErrorPayload(locale, 'no_available_slot'), { status: 409 });
+  }
 
   const resourceIds = service.requiredResourceIds ?? [];
   const endAt = addBookingDuration(slot.startAt, service.durationMinutes);
   const slotKey = { serviceId: service.serviceId, staffId, startAt: slot.startAt, resourceIds };
   if (!acquireSlotLock(slotKey)) {
-    return NextResponse.json({ error: 'Selected slot is being booked by another request.' }, { status: 409 });
+    return NextResponse.json(getBookingWaitlistApiErrorPayload(locale, 'slot_lock_conflict'), { status: 409 });
   }
 
   try {
     const available = await isSlotAvailable(slotKey);
-    if (!available) return NextResponse.json({ error: 'Selected slot is no longer available.' }, { status: 409 });
+    if (!available) {
+      return NextResponse.json(getBookingWaitlistApiErrorPayload(locale, 'slot_unavailable'), { status: 409 });
+    }
 
     const bookingId = makeBookingId();
+    const price = bookingServicePriceSnapshot(service, { staffId, resourceIds: service.requiredResourceIds });
     const packageRedemption = service.paymentMode === 'paid'
       ? await redeemPackageCreditForBooking({
           bookingId,
@@ -74,6 +89,14 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
           serviceId: service.serviceId,
         })
       : null;
+
+    const zoom = await maybeCreateBookingZoomLink({
+      service,
+      staffId,
+      startTimeISO: slot.startAt,
+      customerName: existing.customer.name,
+      customerEmail: existing.customer.email,
+    });
 
     let booking: Booking = timestamped({
       bookingId,
@@ -85,8 +108,10 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       status: 'confirmed' as const,
       source: 'admin' as const,
       reminders: [],
-      paymentAmount: service.priceAmount ?? service.priceTwd ?? 0,
-      paymentCurrency: service.priceCurrency ?? 'TWD',
+      paymentAmount: price.totalAmount,
+      paymentCurrency: price.currency,
+      paymentDueNow: price.amountDueNow,
+      ...(price.depositAmount ? { depositAmount: price.depositAmount } : {}),
       billingDocuments: [],
       resourceIds,
       ...(packageRedemption
@@ -98,6 +123,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
         : {}),
       ...(existing.customerTimezone ? { customerTimezone: existing.customerTimezone } : {}),
       ...(service.paymentMode === 'paid' ? { paymentStatus: packageRedemption ? 'paid' as const : 'unpaid' as const } : {}),
+      ...(zoom?.meetingLink ? { meetingLink: zoom.meetingLink } : {}),
     });
     try {
       await saveBooking(booking);

@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
 import { loadSearchIndex, listQueryLogs } from '@/lib/builder/search/index-storage';
 import SearchAdminPanel from '@/components/builder/search/SearchAdminPanel';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-  title: 'Site Search Admin',
-  robots: { index: false, follow: false },
-};
+function getSearchAdminMetadata(locale: Locale): Metadata {
+  return {
+    title: locale === 'ko' ? '사이트 검색 관리자' : locale === 'zh-hant' ? '站內搜尋管理' : 'Site Search Admin',
+    robots: { index: false, follow: false },
+  };
+}
 
 interface QueryStat {
   query: string;
@@ -18,7 +21,12 @@ interface QueryStat {
   lastAt: string;
 }
 
-export default async function SearchAdminPage() {
+export default async function SearchAdminPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const locale = normalizeLocale(params.locale);
   const index = await loadSearchIndex();
   const logs = await listQueryLogs();
 
@@ -53,12 +61,17 @@ export default async function SearchAdminPage() {
   return (
     <main>
       <header style={{ padding: '16px 24px', borderBottom: '1px solid #e2e8f0' }}>
-        <h1 style={{ margin: 0, fontSize: 20 }}>Site Search</h1>
+        <h1 style={{ margin: 0, fontSize: 20 }}>{locale === 'ko' ? '사이트 검색' : locale === 'zh-hant' ? '站內搜尋' : 'Site Search'}</h1>
         <p style={{ margin: '4px 0 0', fontSize: 13, color: '#64748b' }}>
-          빌더 페이지 인덱스 관리 및 검색 쿼리 분석.
+          {locale === 'ko'
+            ? '빌더 페이지 인덱스 관리 및 검색 쿼리 분석.'
+            : locale === 'zh-hant'
+              ? '管理建構器頁面索引並分析搜尋查詢。'
+              : 'Manage builder page indexes and analyze search queries.'}
         </p>
       </header>
       <SearchAdminPanel
+        locale={locale}
         initialIndexSummary={{ builtAt: index?.builtAt ?? null, totals }}
         initialQueryStats={{
           totalQueries: logs.length,
@@ -69,4 +82,8 @@ export default async function SearchAdminPage() {
       />
     </main>
   );
+}
+
+export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+  return getSearchAdminMetadata(normalizeLocale(params.locale));
 }

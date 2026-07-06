@@ -116,6 +116,9 @@ describe('secrets-store', () => {
       scope: 'site',
       addedBy: 'admin',
     });
+    // ISO timestamps have millisecond resolution — create and rotate can land
+    // in the same tick on fast machines, so step past it before rotating.
+    await new Promise((resolve) => setTimeout(resolve, 2));
     const rotated = await rotateSecret(created.secret.id, 'new', 'rotator');
     expect(rotated.plaintext).toBe('new');
     expect(rotated.secret.lastRotatedAt).not.toBe(created.secret.lastRotatedAt);

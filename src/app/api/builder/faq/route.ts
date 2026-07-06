@@ -9,6 +9,11 @@ import {
   listFaqItems,
   validateFaqItem,
 } from '@/lib/builder/faq/faq-engine';
+import {
+  getBuilderFaqApiErrorPayload,
+  type BuilderFaqApiErrorCode,
+} from '@/lib/builder/faq/faq-api-copy';
+import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -32,16 +37,36 @@ const faqInputSchema = z.object({
   schemaEnabled: z.boolean().default(true),
 });
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderFaqApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getBuilderFaqApiErrorPayload(locale, errorCode), ...extras },
+    { status },
   );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
+function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
+  const queryLocale = request.nextUrl.searchParams.get('locale') ?? undefined;
+  if (isLocale(queryLocale)) return queryLocale;
+  if (payload && typeof payload === 'object') {
+    const locale = (payload as { locale?: unknown }).locale;
+    if (typeof locale === 'string' && isLocale(locale)) return locale;
+  }
+  return normalizeLocale(queryLocale);
 }
 
 export async function GET(request: NextRequest) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
+  const locale = resolveRequestLocale(request);
 
   try {
     const sp = request.nextUrl.searchParams;
@@ -67,12 +92,9 @@ export async function GET(request: NextRequest) {
       items,
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(locale, error);
     console.error('[builder/faq] GET failed:', error);
-    return NextResponse.json(
-      { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
-      { status: 500 },
-    );
+    return errorResponse(locale, 'faq_list_failed', 500);
   }
 }
 
@@ -80,23 +102,23 @@ export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
+  let errorLocale = resolveRequestLocale(request);
   try {
-    const input = faqInputSchema.parse(await request.json());
+    const body = await request.json();
+    errorLocale = resolveRequestLocale(request, body);
+    const input = faqInputSchema.parse(body);
     const item = await createFaqItem(input);
     const errors = validateFaqItem(item);
     if (errors.length > 0) {
-      return NextResponse.json({ ok: false, error: 'validation_error', errors }, { status: 400 });
+      return errorResponse(errorLocale, 'validation_error', 400);
     }
     return NextResponse.json({ ok: true, item }, { status: 201 });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+      return errorResponse(errorLocale, 'invalid_json', 400);
     }
     console.error('[builder/faq] POST failed:', error);
-    return NextResponse.json(
-      { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
-      { status: 500 },
-    );
+    return errorResponse(errorLocale, 'faq_create_failed', 500);
   }
 }

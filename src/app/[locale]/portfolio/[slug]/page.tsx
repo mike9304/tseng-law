@@ -30,15 +30,22 @@ export default async function PortfolioDetailPage({ params }: { params: { locale
   const locale = normalizeLocale(params.locale);
   const project = await findProjectBySlug(locale, params.slug);
   if (!project || project.status !== 'published') return notFound();
+  const backLabel = locale === 'ko'
+    ? '포트폴리오 목록으로'
+    : locale === 'zh-hant'
+      ? '返回作品集列表'
+      : 'Back to portfolio';
+  const eyebrow = locale === 'ko' ? '포트폴리오' : locale === 'zh-hant' ? '作品集' : 'Portfolio';
+  const galleryLabel = locale === 'ko' ? '프로젝트 갤러리' : locale === 'zh-hant' ? '專案圖庫' : 'Project gallery';
 
   return (
     <main className={styles.page} data-public-portfolio-detail="true">
       <section className={styles.hero}>
         <div className={styles.inner}>
           <Link className={styles.back} href={`/${locale}/portfolio`}>
-            {locale === 'ko' ? '포트폴리오 목록으로' : 'Back to portfolio'}
+            {backLabel}
           </Link>
-          <p className={styles.eyebrow}>Portfolio</p>
+          <p className={styles.eyebrow}>{eyebrow}</p>
           <h1>{project.title}</h1>
           <p>{project.summary}</p>
         </div>
@@ -49,7 +56,7 @@ export default async function PortfolioDetailPage({ params }: { params: { locale
           <p>{project.description}</p>
           <p>{project.body}</p>
           {project.gallery.length > 0 ? (
-            <div className={styles.gallery} aria-label="Project gallery">
+            <div className={styles.gallery} aria-label={galleryLabel}>
               {project.gallery.map((image) => (
                 <figure key={image.imageId} data-public-portfolio-gallery-image={image.imageId}>
                   <img src={image.url} alt={image.alt} />
@@ -62,17 +69,17 @@ export default async function PortfolioDetailPage({ params }: { params: { locale
 
         <aside className={styles.sideCard}>
           <div>
-            <span>{locale === 'ko' ? '카테고리' : 'Category'}</span>
+            <span>{locale === 'ko' ? '카테고리' : locale === 'zh-hant' ? '類別' : 'Category'}</span>
             <strong>{categoryLabel(project.category, locale)}</strong>
           </div>
           {project.client ? (
             <div>
-              <span>{locale === 'ko' ? '클라이언트' : 'Client'}</span>
+              <span>{locale === 'ko' ? '클라이언트' : locale === 'zh-hant' ? '客戶' : 'Client'}</span>
               <strong>{project.client}</strong>
             </div>
           ) : null}
           <div>
-            <span>{locale === 'ko' ? '완료일' : 'Completed'}</span>
+            <span>{locale === 'ko' ? '완료일' : locale === 'zh-hant' ? '完工日' : 'Completed'}</span>
             <strong>{project.completedAt}</strong>
           </div>
           {project.tags.length > 0 ? (

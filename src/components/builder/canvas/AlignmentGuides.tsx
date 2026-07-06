@@ -1,12 +1,13 @@
 'use client';
 
+import { memo } from 'react';
 import type { AlignmentGuide } from '@/lib/builder/canvas/snap';
 
 interface AlignmentGuidesProps {
   guides: AlignmentGuide[];
 }
 
-export default function AlignmentGuides({ guides }: AlignmentGuidesProps) {
+function AlignmentGuides({ guides }: AlignmentGuidesProps) {
   if (guides.length === 0) return null;
 
   return (
@@ -96,3 +97,5 @@ export default function AlignmentGuides({ guides }: AlignmentGuidesProps) {
     </>
   );
 }
+
+export default memo(AlignmentGuides);

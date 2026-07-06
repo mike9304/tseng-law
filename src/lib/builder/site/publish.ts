@@ -191,6 +191,15 @@ export async function publishPage(
   }
 
   const publishedSavedAt = new Date().toISOString();
+  try {
+    const writeOptions = draftState.record.updatedBy
+      ? { updatedBy: draftState.record.updatedBy }
+      : {};
+    await writePageCanvas(siteId, pageId, 'published', draftState.record.document, writeOptions);
+  } catch {
+    throw new PublishError('published_write_failed', 500);
+  }
+
   page.publishedAt = publishedSavedAt;
   page.publishedRevisionId = revisionResult.revisionId;
   page.publishedRevision = revisionResult.revision;
@@ -238,8 +247,8 @@ export async function publishPage(
   }).catch(() => undefined);
 
   // F109 — fire app extension hooks listening on publish.completed.
-  void import('@/lib/builder/apps/hooks-registry').then(({ dispatchAppHook }) => (
-    dispatchAppHook({
+  void import('@/lib/builder/apps/hook-runtime').then(({ dispatchAppHookEvent }) => (
+    dispatchAppHookEvent({
       kind: 'publish.completed',
       payload: {
         siteId,

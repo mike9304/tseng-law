@@ -28,10 +28,13 @@ import type { ColumnDocument } from '@/lib/builder/columns/types';
  */
 
 const BLOB_PREFIX = 'consultation-columns/';
+const VISUAL_LOAD_MORE_TEST_SLUG_PREFIX = 'visual-load-more';
 
 function isBlobBackend(): boolean {
   if (!process.env.BLOB_READ_WRITE_TOKEN) return false;
   if (process.env.CONSULTATION_LOG_BACKEND === 'local') return false;
+  if (process.env.BUILDER_COLUMNS_BACKEND === 'local') return false;
+  if (process.env.NODE_ENV !== 'production' && process.env.BUILDER_USE_BLOB_IN_DEV !== '1') return false;
   return true;
 }
 
@@ -155,6 +158,13 @@ function legacyCategoryToBlogCategory(category: ColumnCategory): string {
   return 'general';
 }
 
+function isMirroredLoadMoreTestPost(post: ColumnPost): boolean {
+  // Hard-coded quarantine for one-off visual load-more QA posts that were
+  // accidentally mirrored into the local Blob data; real authored columns do
+  // not use this slug prefix.
+  return post.slug.startsWith(VISUAL_LOAD_MORE_TEST_SLUG_PREFIX);
+}
+
 /**
  * In-memory cache of Blob-sourced posts, keyed by locale. Mirrors the
  * 5-minute TTL on the file cache in `column-knowledge.ts` so that the
@@ -240,12 +250,13 @@ export async function getAllColumnPostsIncludingBlob(locale: Locale): Promise<Co
 
   // Merge: builder storage first (local/blob published overlays), then direct
   // Blob fallback, then file entries whose slug isn't already covered.
-  const merged: ColumnPost[] = [...builderPosts, ...blobPosts];
-  const seen = new Set(merged.map((p) => p.slug));
-  for (const fp of filePosts) {
-    if (seen.has(fp.slug)) continue;
-    merged.push(fp);
-    seen.add(fp.slug);
+  const merged: ColumnPost[] = [];
+  const seen = new Set<string>();
+  for (const post of [...builderPosts, ...blobPosts, ...filePosts]) {
+    if (isMirroredLoadMoreTestPost(post)) continue;
+    if (seen.has(post.slug)) continue;
+    merged.push(post);
+    seen.add(post.slug);
   }
   return merged;
 }

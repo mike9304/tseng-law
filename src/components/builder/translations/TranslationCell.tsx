@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import type { TranslationEntry, TranslationStatus } from '@/lib/builder/translations/types';
 import { getTranslationStatus } from '@/lib/builder/translations/types';
+import { getTranslationCopy } from './translation-copy';
 import styles from './TranslationManager.module.css';
 
 const statusClass: Record<TranslationStatus, string> = {
@@ -28,6 +29,7 @@ export default function TranslationCell({
   onSave: (key: string, locale: Locale, text: string, status: TranslationStatus) => Promise<void>;
   onTranslate: (entry: TranslationEntry, locale: Locale) => Promise<void>;
 }) {
+  const copy = getTranslationCopy(locale);
   const value = entry.translations[locale]?.text ?? '';
   const status = getTranslationStatus(entry, locale);
   const [editing, setEditing] = useState(false);
@@ -69,7 +71,7 @@ export default function TranslationCell({
         />
         <div className={styles.cellActions}>
           <button className={styles.smallButton} disabled={saving} type="button" onClick={() => void save()}>
-            Save
+            {copy.cellSave}
           </button>
           <button
             className={styles.smallButton}
@@ -80,7 +82,7 @@ export default function TranslationCell({
               setEditing(false);
             }}
           >
-            Cancel
+            {copy.cellCancel}
           </button>
           <button
             className={styles.smallButton}
@@ -91,7 +93,7 @@ export default function TranslationCell({
               void onTranslate(entry, locale);
             }}
           >
-            AI translate
+            {copy.cellAiTranslate}
           </button>
         </div>
       </div>
@@ -106,7 +108,7 @@ export default function TranslationCell({
         title={status}
       />
       <span className={[styles.cellText, value ? '' : styles.placeholder].join(' ')}>
-        {value || (status === 'outdated' ? 'Outdated translation' : 'Click to translate')}
+        {value || (status === 'outdated' ? copy.cellOutdatedTranslation : copy.cellClickToTranslate)}
       </span>
     </button>
   );

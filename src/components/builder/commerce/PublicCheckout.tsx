@@ -113,7 +113,7 @@ const copy: Record<Locale, CheckoutCopy> = {
     discount: '할인',
     total: '총 결제 금액',
     confirmation: '주문 확인 완료',
-    confirmationHelp: 'F61에서 영구 주문 저장과 관리자 처리가 이어집니다.',
+    confirmationHelp: '주문이 안전하게 저장되었습니다. 확인 이메일을 보내 드리며, 담당자가 곧 처리합니다.',
     paymentStatus: '결제 상태',
     clear: '장바구니가 비워졌습니다.',
     error: '체크아웃 정보를 확인해 주세요.',
@@ -158,7 +158,7 @@ const copy: Record<Locale, CheckoutCopy> = {
     discount: '折扣',
     total: '應付總額',
     confirmation: '訂單確認完成',
-    confirmationHelp: 'F61 將接續永久訂單儲存與管理。',
+    confirmationHelp: '您的訂單已安全儲存。我們將寄送確認電子郵件，專人將盡快為您處理。',
     paymentStatus: '付款狀態',
     clear: '購物車已清空。',
     error: '請檢查結帳資訊。',
@@ -203,7 +203,7 @@ const copy: Record<Locale, CheckoutCopy> = {
     discount: 'Discount',
     total: 'Total due',
     confirmation: 'Order confirmed',
-    confirmationHelp: 'F61 will add permanent order storage and admin handling.',
+    confirmationHelp: 'Your order has been saved securely. A confirmation email is on its way and our team will process it shortly.',
     paymentStatus: 'Payment status',
     clear: 'Cart cleared.',
     error: 'Check the checkout details.',
@@ -338,7 +338,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
     const normalizedEmail = email.trim();
     if (cart.items.length === 0 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) return;
     setRecoveryState('saving');
-    const response = await fetch('/api/builder/commerce/cart-recovery', {
+    const response = await fetch(`/api/builder/commerce/cart-recovery?locale=${encodeURIComponent(locale)}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -358,7 +358,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
     setIsSubmitting(true);
     setError('');
 
-    const response = await fetch('/api/builder/commerce/checkout', {
+    const response = await fetch(`/api/builder/commerce/checkout?locale=${encodeURIComponent(locale)}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

@@ -1,0 +1,99 @@
+.root {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 5px;
+  color: #334155;
+  font-size: 0.78rem;
+}
+
+.label,
+.providerLabel {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.control {
+  width: 100%;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 0.82rem;
+  outline: none;
+  padding: 7px 10px;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    background-color 140ms ease;
+}
+
+.control:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.14);
+}
+
+.control:disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.providerGroup {
+  display: grid;
+  gap: 7px;
+}
+
+.providerGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.providerOption {
+  align-items: center;
+  border: 1px solid #dbe2ea;
+  border-radius: 999px;
+  color: #334155;
+  display: inline-grid;
+  font-size: 0.76rem;
+  font-weight: 700;
+  gap: 6px;
+  grid-template-columns: auto minmax(0, 1fr);
+  min-height: 30px;
+  padding: 5px 9px;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    background-color 140ms ease;
+}
+
+.providerOption:has(input:checked) {
+  background: #eef5ff;
+  border-color: #9bc2ff;
+  color: #0f3f8a;
+}
+
+.providerOption:has(input:focus-visible) {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.14);
+}
+
+.providerOption input {
+  accent-color: #116dff;
+  height: 14px;
+  margin: 0;
+  width: 14px;
+}
+
+.providerOption:has(input:disabled) {
+  cursor: not-allowed;
+  opacity: 0.56;
+}

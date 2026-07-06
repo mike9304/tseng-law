@@ -1,13 +1,18 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, type CSSProperties } from 'react';
 import {
   DEFAULT_FILTERS,
   FILTER_PRESETS,
   type ImageFilters,
 } from '@/lib/builder/canvas/filters';
+import {
+  getImageEditCopy,
+  type ImageEditCopy,
+} from '@/lib/builder/components/image/image-edit-copy';
+import type { Locale } from '@/lib/locales';
 
-const panelStyle: React.CSSProperties = {
+const panelStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   gap: 12,
@@ -19,13 +24,13 @@ const panelStyle: React.CSSProperties = {
   animation: 'fadeIn 150ms ease',
 };
 
-const sliderRowStyle: React.CSSProperties = {
+const sliderRowStyle: CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   gap: 8,
 };
 
-const labelStyle: React.CSSProperties = {
+const labelStyle: CSSProperties = {
   fontSize: '0.75rem',
   fontWeight: 600,
   color: '#334155',
@@ -33,21 +38,21 @@ const labelStyle: React.CSSProperties = {
   flexShrink: 0,
 };
 
-const sliderStyle: React.CSSProperties = {
+const sliderStyle: CSSProperties = {
   flex: 1,
   height: 4,
   accentColor: '#116dff',
   cursor: 'pointer',
 };
 
-const valueStyle: React.CSSProperties = {
+const valueStyle: CSSProperties = {
   fontSize: '0.72rem',
   color: '#64748b',
   minWidth: 32,
   textAlign: 'right',
 };
 
-const presetRowStyle: React.CSSProperties = {
+const presetRowStyle: CSSProperties = {
   display: 'flex',
   flexWrap: 'wrap',
   gap: 6,
@@ -55,7 +60,7 @@ const presetRowStyle: React.CSSProperties = {
   paddingTop: 10,
 };
 
-const presetBtnStyle: React.CSSProperties = {
+const presetBtnStyle: CSSProperties = {
   padding: '4px 10px',
   fontSize: '0.72rem',
   fontWeight: 600,
@@ -67,19 +72,19 @@ const presetBtnStyle: React.CSSProperties = {
   transition: 'background 120ms ease, border-color 120ms ease',
 };
 
-const headerStyle: React.CSSProperties = {
+const headerStyle: CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
 };
 
-const titleStyle: React.CSSProperties = {
+const titleStyle: CSSProperties = {
   fontSize: '0.78rem',
   fontWeight: 700,
   color: '#0f172a',
 };
 
-const closeBtnStyle: React.CSSProperties = {
+const closeBtnStyle: CSSProperties = {
   padding: '2px 8px',
   fontSize: '0.72rem',
   fontWeight: 600,
@@ -92,30 +97,33 @@ const closeBtnStyle: React.CSSProperties = {
 
 interface SliderDef {
   key: keyof ImageFilters;
-  label: string;
+  labelKey: keyof ImageEditCopy['dialog']['filterPresets'];
   min: number;
   max: number;
   unit: string;
 }
 
 const SLIDERS: SliderDef[] = [
-  { key: 'brightness', label: '밝기', min: 0, max: 200, unit: '%' },
-  { key: 'contrast', label: '대비', min: 0, max: 200, unit: '%' },
-  { key: 'saturation', label: '채도', min: 0, max: 200, unit: '%' },
-  { key: 'blur', label: '블러', min: 0, max: 20, unit: 'px' },
-  { key: 'grayscale', label: '흑백', min: 0, max: 100, unit: '%' },
-  { key: 'sepia', label: '세피아', min: 0, max: 100, unit: '%' },
+  { key: 'brightness', labelKey: 'brightness', min: 0, max: 200, unit: '%' },
+  { key: 'contrast', labelKey: 'contrast', min: 0, max: 200, unit: '%' },
+  { key: 'saturation', labelKey: 'saturation', min: 0, max: 200, unit: '%' },
+  { key: 'blur', labelKey: 'blur', min: 0, max: 20, unit: 'px' },
+  { key: 'grayscale', labelKey: 'bw', min: 0, max: 100, unit: '%' },
+  { key: 'sepia', labelKey: 'sepia', min: 0, max: 100, unit: '%' },
 ];
 
 export default function FilterPanel({
+  locale,
   filters,
   onChangeFilters,
   onClose,
 }: {
+  locale?: Locale | string;
   filters: ImageFilters;
   onChangeFilters: (filters: ImageFilters) => void;
   onClose: () => void;
 }) {
+  const copy = getImageEditCopy(locale);
   const handleSlider = useCallback(
     (key: keyof ImageFilters, value: number) => {
       onChangeFilters({ ...filters, [key]: value });
@@ -133,15 +141,15 @@ export default function FilterPanel({
   return (
     <div style={panelStyle}>
       <div style={headerStyle}>
-        <span style={titleStyle}>이미지 필터</span>
+        <span style={titleStyle}>{copy.dialog.filterPanelTitle}</span>
         <button type="button" style={closeBtnStyle} onClick={onClose}>
-          닫기
+          {copy.dialog.close}
         </button>
       </div>
 
       {SLIDERS.map((s) => (
         <div key={s.key} style={sliderRowStyle}>
-          <span style={labelStyle}>{s.label}</span>
+          <span style={labelStyle}>{copy.dialog.filterPresets[s.labelKey]}</span>
           <input
             type="range"
             min={s.min}
@@ -161,7 +169,7 @@ export default function FilterPanel({
       <div style={presetRowStyle}>
         {FILTER_PRESETS.map((p) => (
           <button
-            key={p.label}
+            key={p.key}
             type="button"
             style={presetBtnStyle}
             onClick={() => applyPreset(p.filters)}
@@ -174,7 +182,7 @@ export default function FilterPanel({
               (e.currentTarget as HTMLButtonElement).style.borderColor = '#cbd5e1';
             }}
           >
-            {p.label}
+            {copy.dialog.filterPresetLabels[p.key]}
           </button>
         ))}
       </div>

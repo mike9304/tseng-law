@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterAll, afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { promises as fs } from 'fs';
 import path from 'path';
 import {
@@ -47,13 +47,24 @@ async function rmrf(dir: string): Promise<void> {
 }
 
 describe('Wix parity integration smoke', () => {
-  beforeEach(async () => {
-    delete process.env.BLOB_READ_WRITE_TOKEN; // force file backend
+  const cleanStores = async () => {
     await rmrf(path.join(PROJECT_ROOT, 'runtime-data', 'webhooks'));
     await rmrf(path.join(PROJECT_ROOT, 'runtime-data', 'marketing-subscribers'));
     await rmrf(path.join(PROJECT_ROOT, 'runtime-data', 'experiments'));
     await rmrf(path.join(PROJECT_ROOT, 'runtime-data', 'migrations'));
     await rmrf(path.join(PROJECT_ROOT, 'runtime-data', 'backups'));
+  };
+
+  beforeEach(async () => {
+    delete process.env.BLOB_READ_WRITE_TOKEN; // force file backend
+    await cleanStores();
+  });
+
+  // The shared runtime-data is also served by the live QA server — leaving the
+  // last test's experiment/webhook stores behind pollutes Playwright suites
+  // (e.g. the experiments admin shell's empty state).
+  afterAll(async () => {
+    await cleanStores();
   });
 
   afterEach(() => {
@@ -113,7 +124,8 @@ describe('Wix parity integration smoke', () => {
     expect(summary.entryCount).toBeGreaterThanOrEqual(0);
     const backups = await listBackups();
     expect(backups).toHaveLength(1);
-  });
+  }, 20_000); // real migrations + backup snapshot do heavy file I/O; the default
+  // 5s timeout is flaky under full-suite I/O contention (passes in ~1.4s isolated).
 
   it('assigns A/B variants deterministically and the webhook signature verifies', async () => {
     const now = new Date().toISOString();
@@ -161,5 +173,6 @@ describe('Wix parity integration smoke', () => {
     // delivery record without throwing.
     const delivery = await dispatchToSubscription(subscription, 'form.submitted', { hello: 'world' });
     expect(delivery.webhookId).toBe(subscription.webhookId);
-  });
+  }, 20_000); // webhook dispatch + variant persistence hit real file I/O; the
+  // default 5s timeout is flaky under suite-wide I/O contention.
 });

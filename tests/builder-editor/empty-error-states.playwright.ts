@@ -198,7 +198,7 @@ test.describe('/ko/admin-builder M05 empty and error states', () => {
       body: JSON.stringify({ pages: [] }),
     }));
     await openBuilder(page, `/ko/admin-builder?m05-pages-empty=${Date.now().toString(36)}`);
-    await page.getByRole('button', { name: 'Pages' }).click();
+    await page.getByRole('button', { name: /^Pages$|^페이지$/ }).click();
     await expect(page.getByText('페이지가 없습니다.')).toBeVisible();
     await expect(page.getByRole('button', { name: '첫 페이지 만들기' })).toBeVisible();
   });
@@ -212,8 +212,8 @@ test.describe('/ko/admin-builder M05 empty and error states', () => {
     await openBuilder(page, `/ko/admin-builder?m05-assets-empty=${Date.now().toString(36)}`);
     const dialog = await openAssetLibrary(page);
     await expect(dialog.getByText('아직 업로드된 이미지가 없습니다.')).toBeVisible();
-    await expect(dialog.getByRole('button', { name: 'Upload image' }).last()).toBeVisible();
-    await expect(dialog.getByRole('button', { name: 'Retry' })).toBeVisible();
+    await expect(dialog.getByRole('button', { name: /Upload image|이미지 업로드/ }).last()).toBeVisible();
+    await expect(dialog.getByRole('button', { name: /^Retry$|^다시 시도$/ })).toBeVisible();
   });
 
   test('keeps the columns page visible when the blog feed has zero posts', async ({ page }) => {
@@ -223,12 +223,10 @@ test.describe('/ko/admin-builder M05 empty and error states', () => {
       body: JSON.stringify({ ok: true, total: 0, posts: [] }),
     }));
     await openBuilder(page, `/ko/admin-builder?m05-columns-empty=${Date.now().toString(36)}`);
-    await page.getByRole('button', { name: 'Columns' }).click();
-    const columnsButton = page.getByRole('button', { name: /칼럼 페이지로 이동|페이지 확인 중/ });
-    await expect(columnsButton).toBeVisible({ timeout: 20_000 });
-    await expect(columnsButton).toBeEnabled({ timeout: 20_000 });
-    await columnsButton.click();
-    await expect(page.getByText('Blog Feed · 등록된 글이 없습니다.').first()).toBeVisible({ timeout: 20_000 });
+    // Columns rail UX: clicking the rail button while not on the columns canvas loads the
+    // columns page directly (no intermediate drawer button).
+    await page.getByRole('button', { name: /^Columns$|^칼럼$/ }).click();
+    await expect(page.getByText(/(?:Blog Feed|블로그 피드) · 등록된 글이 없습니다\./).first()).toBeVisible({ timeout: 20_000 });
   });
 
   test('surfaces network save failures with a retry action', async ({ page }) => {

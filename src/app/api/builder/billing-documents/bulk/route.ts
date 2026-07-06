@@ -7,6 +7,11 @@ import {
   bulkVoidDocuments,
   parseBulkDocumentIds,
 } from '@/lib/builder/billing-documents-bulk';
+import {
+  getBuilderBillingDocumentsApiErrorPayload,
+  type BuilderBillingDocumentsApiErrorCode,
+} from '@/lib/builder/billing-documents-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -23,6 +28,12 @@ const filterSchema = z.object({
   locale: z.enum(['ko', 'zh-hant', 'en']).optional(),
   source: z.enum(['all', 'order', 'booking']).optional(),
   q: z.string().trim().max(200).optional(),
+}).optional();
+
+const localeProbeSchema = z.object({
+  filter: z.object({
+    locale: z.enum(['ko', 'zh-hant', 'en']).optional(),
+  }).optional(),
 }).optional();
 
 const bodySchema = z.discriminatedUnion('action', [
@@ -42,25 +53,50 @@ const bodySchema = z.discriminatedUnion('action', [
   }),
 ]);
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderBillingDocumentsApiErrorCode,
+  status: number,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
+    { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      ...getBuilderBillingDocumentsApiErrorPayload(locale, 'invalid_bulk_operation_payload'),
+      issues: error.flatten(),
+    },
     { status: 400 },
   );
+}
+
+function localeFromBody(raw: unknown): Locale | undefined {
+  const result = localeProbeSchema.safeParse(raw);
+  return result.success ? result.data?.filter?.locale : undefined;
 }
 
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { bucket: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
+  let errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+
   try {
     const raw = await request.json().catch(() => ({}));
+    errorLocale = normalizeLocale(
+      request.nextUrl.searchParams.get('locale') ?? localeFromBody(raw),
+    );
     const input = bodySchema.parse(raw);
 
     if (input.action === 'issue-invoice') {
       const targets = parseBulkDocumentIds(input.ids);
       if (targets.length === 0) {
-        return NextResponse.json({ ok: false, error: 'no_valid_targets' }, { status: 400 });
+        return errorResponse(errorLocale, 'no_valid_targets', 400);
       }
       const result = await bulkIssueInvoicesForOrders(targets, { notes: input.notes });
       return NextResponse.json({
@@ -80,7 +116,7 @@ export async function POST(request: NextRequest) {
     if (input.action === 'void') {
       const targets = parseBulkDocumentIds(input.ids);
       if (targets.length === 0) {
-        return NextResponse.json({ ok: false, error: 'no_valid_targets' }, { status: 400 });
+        return errorResponse(errorLocale, 'no_valid_targets', 400);
       }
       const result = await bulkVoidDocuments(targets, input.reason);
       return NextResponse.json({
@@ -107,8 +143,8 @@ export async function POST(request: NextRequest) {
       },
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     console.error('[builder/billing-documents/bulk] POST failed:', error);
-    return NextResponse.json({ ok: false, error: 'bulk_operation_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'bulk_operation_failed', 500);
   }
 }

@@ -5,7 +5,11 @@ import { buildHreflangAlternates } from '@/lib/builder/seo/hreflang';
 import { buildBuilderSeoOverview } from '@/lib/builder/seo/overview';
 import { buildPageSeo, buildSitemapEntries } from '@/lib/builder/seo/seo-model';
 import { buildSeoAssistantTasks } from '@/lib/builder/seo/assistant';
-import { buildDefaultSeoMetadata, expandSeoTemplate } from '@/lib/builder/seo/defaults';
+import {
+  buildDefaultSeoMetadata,
+  expandSeoTemplate,
+  getBuilderSeoDefaults,
+} from '@/lib/builder/seo/defaults';
 import {
   normalizeStructuredDataSettings,
   validateBuilderPageSeo,
@@ -62,6 +66,61 @@ describe('builder SEO model', () => {
     expect(seo.twitterImage).toBe('https://example.com/og.png');
   });
 
+  it('uses locale-specific SEO overrides when rendering public metadata', () => {
+    const seo = buildPageSeo(
+      page({
+        locale: 'ko',
+        seo: {
+          title: '소개',
+          description: '한국어 설명',
+          localizedOverrides: {
+            en: {
+              title: 'About us',
+              description: 'English description',
+              ogTitle: 'About OG',
+              twitterDescription: 'English tweet description',
+            },
+          },
+        } as never,
+      }),
+      'https://example.com',
+      'en',
+      [],
+    );
+
+    expect(seo.title).toBe('About us');
+    expect(seo.description).toBe('English description');
+    expect(seo.ogTitle).toBe('About OG');
+    expect(seo.twitterDescription).toBe('English tweet description');
+  });
+
+  it('uses localized slugs for public canonical and hreflang URLs', () => {
+    const ko = page({
+      slug: 'about',
+      seo: {
+        localizedOverrides: {
+          en: { title: 'About us' },
+        },
+      } as never,
+      slugByLocale: { en: 'about-us' },
+      linkedPageIds: { en: 'page-en' },
+    } as Partial<BuilderPageMeta>);
+    const en = page({
+      pageId: 'page-en',
+      locale: 'en',
+      slug: 'about',
+      title: { ko: '소개', en: 'About', 'zh-hant': '服務' },
+    });
+
+    const seo = buildPageSeo(ko, 'https://example.com', 'en', [ko, en]);
+    expect(seo.canonical).toBe('https://example.com/en/about-us');
+    expect(seo.title).toBe('About us');
+
+    const alternates = buildHreflangAlternates(ko, 'https://example.com', [ko, en]);
+    expect(alternates.map((entry) => entry.href)).toContain('https://example.com/en/about-us');
+    expect(alternates.map((entry) => entry.href)).toContain('https://example.com/ko/about');
+  });
+
   it('uses public non-/p URLs for hreflang and sitemap entries', () => {
     const ko = page({
       linkedPageIds: { en: 'page-en' },
@@ -82,6 +141,109 @@ describe('builder SEO model', () => {
     const entries = buildSitemapEntries(pages, 'https://example.com');
     expect(entries.map((entry) => entry.loc)).toContain('https://example.com/ko/services');
     expect(entries.some((entry) => entry.loc.includes('/p/'))).toBe(false);
+  });
+
+  it('emits hreflang for every locale for a home page without explicit linkedPageIds', () => {
+    const koHome = page({
+      pageId: 'home-ko',
+      slug: '',
+      isHomePage: true,
+      locale: 'ko',
+      title: { ko: '홈', en: 'Home', 'zh-hant': '首頁' },
+    });
+    const zhHome = page({
+      pageId: 'home-zh',
+      slug: '',
+      isHomePage: true,
+      locale: 'zh-hant',
+      title: { ko: '홈', en: 'Home', 'zh-hant': '首頁' },
+    });
+    const enHome = page({
+      pageId: 'home-en',
+      slug: '',
+      isHomePage: true,
+      locale: 'en',
+      title: { ko: '홈', en: 'Home', 'zh-hant': '首頁' },
+    });
+    const all = [koHome, zhHome, enHome];
+
+    const alternates = buildHreflangAlternates(koHome, 'https://example.com', all);
+    const tags = alternates.map((a) => a.hreflang);
+
+    expect(tags).toEqual(expect.arrayContaining(['ko', 'zh-Hant', 'en', 'x-default']));
+    expect(alternates.map((a) => a.href)).toEqual(
+      expect.arrayContaining([
+        'https://example.com/ko',
+        'https://example.com/zh-hant',
+        'https://example.com/en',
+      ]),
+    );
+    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko');
+  });
+
+  it('advertises static-fallback locales for the home page even without a builder en home', () => {
+    // Reproduces the reported /ko hreflang bug: /en home is served 200 by
+    // the legacy/static fallback route even though no builder en home page
+    // exists, so the implicit home linkage previously dropped `en`.
+    const koHome = page({
+      pageId: 'home-ko',
+      slug: '',
+      isHomePage: true,
+      locale: 'ko',
+      title: { ko: '홈', en: 'Home', 'zh-hant': '首頁' },
+    });
+    const zhHome = page({
+      pageId: 'home-zh',
+      slug: '',
+      isHomePage: true,
+      locale: 'zh-hant',
+      title: { ko: '홈', en: 'Home', 'zh-hant': '首頁' },
+    });
+    // NOTE: no builder en home page — only ko + zh-hant.
+    const all = [koHome, zhHome];
+
+    const alternates = buildHreflangAlternates(koHome, 'https://example.com', all);
+    const tags = alternates.map((a) => a.hreflang);
+
+    expect(tags).toEqual(expect.arrayContaining(['ko', 'zh-Hant', 'en', 'x-default']));
+    expect(alternates.find((a) => a.hreflang === 'en')?.href).toBe('https://example.com/en');
+    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko');
+  });
+
+  it('keeps a ko-only page ko-only (self + x-default, no other locales)', () => {
+    const koOnly = page({
+      pageId: 'page-ko-only',
+      slug: 'ko-only-page',
+      locale: 'ko',
+    });
+
+    const alternates = buildHreflangAlternates(koOnly, 'https://example.com', [koOnly]);
+    const tags = alternates.map((a) => a.hreflang);
+
+    expect(tags).toEqual(['ko', 'x-default']);
+    expect(tags).not.toContain('zh-Hant');
+    expect(tags).not.toContain('en');
+  });
+
+  it('advertises static-fallback locales for a standard-slug page without translations', () => {
+    // A builder page whose slug is a legacy-fallback slug (e.g. services)
+    // is reachable at /<locale>/services for every supported locale via the
+    // static fallback, so hreflang must point at them even with no linked
+    // builder translations. `slugByLocale` overrides are intentionally
+    // ignored for the static URL (the legacy route uses the canonical slug).
+    const servicesKo = page({
+      pageId: 'services-ko',
+      slug: 'services',
+      locale: 'ko',
+      slugByLocale: { en: 'our-services' } as never,
+    });
+
+    const alternates = buildHreflangAlternates(servicesKo, 'https://example.com', [servicesKo]);
+    const tags = alternates.map((a) => a.hreflang);
+
+    expect(tags).toEqual(expect.arrayContaining(['ko', 'zh-Hant', 'en', 'x-default']));
+    expect(alternates.find((a) => a.hreflang === 'en')?.href).toBe('https://example.com/en/services');
+    expect(alternates.find((a) => a.hreflang === 'zh-Hant')?.href).toBe('https://example.com/zh-hant/services');
   });
 
   it('flags duplicate slugs and invalid canonical URLs as blockers', () => {
@@ -175,6 +337,75 @@ describe('builder SEO model', () => {
     expect(overview.checklist.some((item) => item.id === 'keywords' && item.status === 'done')).toBe(true);
   });
 
+  it('uses locale-resolved firm name in the SEO overview checklist', () => {
+    const current = page({
+      locale: 'en',
+      title: { ko: '서비스', en: 'Services', 'zh-hant': '服務' },
+      seo: {
+        title: 'Services | Tseng Law',
+        description: 'Services page for Tseng Law.',
+      },
+    });
+    const overview = buildBuilderSeoOverview({
+      site: {
+        ...site([current]),
+        locale: 'en',
+        settings: {
+          firmName: '호정국제',
+          seoChecklist: {
+            businessName: '호정국제',
+            keywords: ['국제 법률'],
+            serviceMode: 'both',
+          },
+          localizedOverrides: {
+            en: {
+              firmName: 'Tseng Law',
+              seoChecklist: {
+                businessName: 'Tseng Law',
+                keywords: ['international law'],
+                serviceMode: 'online',
+              },
+            },
+          },
+        },
+      },
+      canvasesByPageId: new Map(),
+    });
+
+    expect(overview.checklist.find((item) => item.id === 'business-name')?.status).toBe('done');
+    expect(overview.checklist.find((item) => item.id === 'business-name')?.detail).toBe('Tseng Law');
+    expect(overview.checklistSettings).toMatchObject({
+      businessName: 'Tseng Law',
+      keywords: ['international law'],
+      serviceMode: 'online',
+    });
+  });
+
+  it('uses locale-specific page SEO values in the SEO overview validation', () => {
+    const current = page({
+      locale: 'en',
+      seo: {
+        localizedOverrides: {
+          en: {
+            title: 'About us',
+            description: 'English description',
+          },
+        },
+      } as never,
+    });
+    const overview = buildBuilderSeoOverview({
+      site: {
+        ...site([current]),
+        locale: 'en',
+      },
+      canvasesByPageId: new Map(),
+    });
+
+    expect(overview.pages[0].issues.some((issue) => issue.id === 'seo-title-missing')).toBe(false);
+    expect(overview.pages[0].issues.some((issue) => issue.id === 'seo-description-missing')).toBe(false);
+    expect(overview.pages[0].title).toBe('Services');
+  });
+
   it('expands Wix-style SEO variables from site defaults', () => {
     const current = page({ seo: undefined });
     const doc = {
@@ -215,6 +446,65 @@ describe('builder SEO model', () => {
       titleTag: '',
       metaDescription: '',
     })).toBe('서비스/호정국제');
+  });
+
+  it('resolves locale-specific SEO defaults from localized site settings', () => {
+    const current = page({ seo: undefined, locale: 'en' });
+    const doc = {
+      ...site([current]),
+      settings: {
+        firmName: '호정국제',
+        localizedOverrides: {
+          en: {
+            firmName: 'Tseng Law',
+            seoDefaults: {
+              patterns: {
+                titleTemplate: '{{pageName}} | Tseng Law',
+              },
+            },
+          },
+        },
+        seoDefaults: {
+          patterns: {
+            titleTemplate: '{{pageName}} | {{siteName}}',
+            descriptionTemplate: '{{pageName}} - {{businessName}}',
+          },
+        },
+      },
+    };
+
+    expect(getBuilderSeoDefaults(doc, 'en').patterns?.titleTemplate).toBe('{{pageName}} | Tseng Law');
+    const defaults = buildDefaultSeoMetadata({
+      page: current,
+      site: doc,
+      siteUrl: 'https://example.com',
+      locale: 'en',
+    });
+
+    expect(defaults.title).toBe('Services | Tseng Law');
+    expect(defaults.description).toBe('Services - Tseng Law');
+  });
+
+  it('uses locale-specific focus keyword when building SEO defaults', () => {
+    const current = page({
+      locale: 'en',
+      seo: {
+        focusKeyword: '국제 소송',
+        localizedOverrides: {
+          en: {
+            focusKeyword: 'international law',
+          },
+        },
+      } as never,
+    });
+    const defaults = buildDefaultSeoMetadata({
+      page: current,
+      site: site([current]),
+      siteUrl: 'https://example.com',
+      locale: 'en',
+    });
+
+    expect(defaults.focusKeyword).toBe('international law');
   });
 
   it('creates SEO assistant tasks from focus keyword and page content', () => {

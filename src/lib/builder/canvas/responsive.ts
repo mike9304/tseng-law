@@ -137,6 +137,18 @@ export function resolveViewportHidden(
 }
 
 /**
+ * 현재 viewport 에서 실제로 렌더되는(=선택 가능한) 노드만 남긴다.
+ * render gate(resolveViewportHidden)와 정확히 일치 — Cmd+A/marquee 가 화면에
+ * 보이지 않는 viewport-hidden 노드를 선택하던 불일치를 막는다.
+ */
+export function filterViewportVisibleNodes(
+  nodes: BuilderCanvasNode[],
+  viewport: Viewport,
+): BuilderCanvasNode[] {
+  return nodes.filter((node) => !resolveViewportHidden(node, viewport));
+}
+
+/**
  * Resolve effective fontSize for text/heading nodes.
  * Reads from `responsive.<vp>.fontSize` cascade, falling back to
  * `node.content.fontSize` (which exists on text + heading kinds).

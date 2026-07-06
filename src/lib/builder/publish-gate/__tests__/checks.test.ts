@@ -5,6 +5,8 @@ import {
   type BuilderCanvasDocument,
 } from '@/lib/builder/canvas/types';
 import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
+import { createBuilderFunction } from '@/lib/builder/dev/functions-model';
+import { checkCodeSlotDeployReadiness } from '../code-slot-checks';
 import { checkStaleDatasetBindings } from '../checks';
 import { runAllChecks } from '../gate-runner';
 
@@ -62,6 +64,26 @@ function makeImageNode(fieldId: string) {
   });
 }
 
+function makeCodeBlockNode(
+  id: string,
+  functionSlug: string,
+) {
+  return builderCanvasNodeSchema.parse({
+    id,
+    kind: 'codeBlock',
+    rect: { x: 0, y: 200, width: 420, height: 220 },
+    zIndex: 3,
+    content: {
+      title: `Slot ${id}`,
+      language: 'js',
+      code: 'ctx.log("fallback"); return true;',
+      runMode: 'function',
+      functionSlug,
+      showLineNumbers: true,
+    },
+  });
+}
+
 describe('publish gate dataset binding checks', () => {
   it('warns about missing and incompatible dataset field mappings before publish', async () => {
     const document = makeDocument([
@@ -96,5 +118,123 @@ describe('publish gate dataset binding checks', () => {
     ]);
 
     expect(checkStaleDatasetBindings(document)).toEqual([]);
+  });
+});
+
+describe('publish gate code slot deploy checks', () => {
+  it('blocks saved-function code slots when the binding is missing or unresolved', async () => {
+    const document = makeDocument([
+      makeCodeBlockNode('slot-missing-binding', ''),
+      makeCodeBlockNode('slot-missing-function', 'does-not-exist'),
+    ]);
+
+    const results = checkCodeSlotDeployReadiness(document, []);
+
+    expect(results).toEqual([
+      expect.objectContaining({
+        id: 'code-slot-function-unselected-slot-missing-binding',
+        severity: 'blocker',
+        category: 'dev',
+        affectedNodeIds: ['slot-missing-binding'],
+      }),
+      expect.objectContaining({
+        id: 'code-slot-function-missing-slot-missing-function',
+        severity: 'blocker',
+        category: 'dev',
+        affectedNodeIds: ['slot-missing-function'],
+      }),
+    ]);
+
+    const suite = await runAllChecks(document);
+    expect(suite.hasBlocker).toBe(true);
+    expect(suite.results.some((result) => result.id === 'code-slot-function-missing-slot-missing-function'))
+      .toBe(true);
+  });
+
+  it('blocks saved-function code slots when the selected function is disabled or empty', () => {
+    const disabled = createBuilderFunction({
+      name: 'Disabled function',
+      slug: 'disabled-slot',
+      code: 'return true;',
+      enabled: false,
+    });
+    const empty = createBuilderFunction({
+      name: 'Empty function',
+      slug: 'empty-slot',
+      code: '',
+    });
+    const document = makeDocument([
+      makeCodeBlockNode('slot-disabled-function', disabled.slug),
+      makeCodeBlockNode('slot-empty-function', empty.slug),
+    ]);
+
+    const results = checkCodeSlotDeployReadiness(document, [disabled, empty]);
+
+    expect(results).toEqual([
+      expect.objectContaining({
+        id: 'code-slot-function-disabled-slot-disabled-function',
+        severity: 'blocker',
+        category: 'dev',
+        affectedNodeIds: ['slot-disabled-function'],
+      }),
+      expect.objectContaining({
+        id: 'code-slot-function-empty-slot-empty-function',
+        severity: 'blocker',
+        category: 'dev',
+        affectedNodeIds: ['slot-empty-function'],
+      }),
+    ]);
+  });
+
+  it('blocks saved-function code slots when the function source has syntax errors or banned APIs', () => {
+    const syntaxError = createBuilderFunction({
+      name: 'Syntax error function',
+      slug: 'syntax-error-slot',
+      code: 'return ctx.now();\n}',
+    });
+    const bannedApi = createBuilderFunction({
+      name: 'Banned API function',
+      slug: 'banned-api-slot',
+      code: 'const fs = require("fs"); process.exit(1); return fs;',
+    });
+    const document = makeDocument([
+      makeCodeBlockNode('slot-syntax-error-function', syntaxError.slug),
+      makeCodeBlockNode('slot-banned-api-function', bannedApi.slug),
+    ]);
+
+    const results = checkCodeSlotDeployReadiness(document, [syntaxError, bannedApi]);
+
+    expect(results).toEqual([
+      expect.objectContaining({
+        id: 'code-slot-function-syntax-slot-syntax-error-function',
+        severity: 'blocker',
+        category: 'dev',
+        affectedNodeIds: ['slot-syntax-error-function'],
+      }),
+      expect.objectContaining({
+        id: 'code-slot-function-banned-api-slot-banned-api-function',
+        severity: 'blocker',
+        category: 'dev',
+        affectedNodeIds: ['slot-banned-api-function'],
+        message: expect.stringContaining('require'),
+      }),
+    ]);
+  });
+
+  it('allows safe saved-function code that only mentions banned API names in text', () => {
+    const safe = createBuilderFunction({
+      name: 'Safe function',
+      slug: 'safe-text-slot',
+      code: [
+        'const label = "process the request without require(\\"fs\\")";',
+        '// fetch("https://example.com") is documentation text only.',
+        'return label;',
+      ].join('\n'),
+    });
+    const document = makeDocument([
+      makeCodeBlockNode('slot-safe-function', safe.slug),
+    ]);
+
+    expect(checkCodeSlotDeployReadiness(document, [safe])).toEqual([]);
   });
 });

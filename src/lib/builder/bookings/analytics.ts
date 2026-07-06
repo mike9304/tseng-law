@@ -1,4 +1,4 @@
-import type { Booking, BookingService, Staff } from './types';
+import type { Booking, BookingService, BookingSource, Staff } from './types';
 import { textForLocale } from './types';
 import type { Locale } from '@/lib/locales';
 
@@ -39,6 +39,36 @@ export interface CustomerProfile {
   lastBookingAt?: string;
   nextBookingAt?: string;
   bookingIds: string[];
+}
+
+export interface BookingDashboardAlert {
+  id: string;
+  severity: 'info' | 'warn' | 'error';
+  title: string;
+  detail: string;
+}
+
+export interface BookingSourceBreakdownItem {
+  source: BookingSource;
+  label: string;
+  total: number;
+  completed: number;
+  cancelled: number;
+  revenueAmount: number;
+  completionRate: number;
+}
+
+export interface BookingSourceFunnelItem {
+  source: BookingSource;
+  label: string;
+  leads: number;
+  confirmed: number;
+  completed: number;
+  cancelled: number;
+  noShow: number;
+  leadToConfirmRate: number;
+  leadToCompletionRate: number;
+  noShowRate: number;
 }
 
 function roundRate(numerator: number, denominator: number): number {
@@ -187,6 +217,106 @@ export function buildCustomerProfiles(bookings: Booking[], nowMs = Date.now()): 
   });
 }
 
+export function buildBookingSourceBreakdown(bookings: Booking[], services: BookingService[]): BookingSourceBreakdownItem[] {
+  const serviceById = new Map(services.map((service) => [service.serviceId, service]));
+  const breakdown = new Map<BookingSource, BookingSourceBreakdownItem>([
+    ['web', { source: 'web', label: 'Web', total: 0, completed: 0, cancelled: 0, revenueAmount: 0, completionRate: 0 }],
+    ['admin', { source: 'admin', label: 'Admin', total: 0, completed: 0, cancelled: 0, revenueAmount: 0, completionRate: 0 }],
+  ]);
+
+  for (const booking of bookings) {
+    const bucket = breakdown.get(booking.source) ?? breakdown.get('web')!;
+    const service = serviceById.get(booking.serviceId);
+    bucket.total += 1;
+    bucket.completed += booking.status === 'completed' ? 1 : 0;
+    bucket.cancelled += booking.status === 'cancelled' ? 1 : 0;
+    bucket.revenueAmount += bookingRevenueAmount(booking, service);
+  }
+
+  return Array.from(breakdown.values()).map((item) => ({
+    ...item,
+    completionRate: roundRate(item.completed, item.total),
+  })).filter((item) => item.total > 0);
+}
+
+export function buildBookingSourceFunnelBreakdown(bookings: Booking[]): BookingSourceFunnelItem[] {
+  const groups = new Map<BookingSource, Booking[]>();
+  for (const booking of bookings) {
+    const group = groups.get(booking.source) ?? [];
+    group.push(booking);
+    groups.set(booking.source, group);
+  }
+
+  return Array.from(groups.entries())
+    .map(([source, group]) => {
+      const leads = group.length;
+      const confirmed = group.filter((booking) => booking.status === 'confirmed' || booking.status === 'completed' || booking.status === 'no-show').length;
+      const completed = group.filter((booking) => booking.status === 'completed').length;
+      const cancelled = group.filter((booking) => booking.status === 'cancelled').length;
+      const noShow = group.filter((booking) => booking.status === 'no-show').length;
+      return {
+        source,
+        label: source === 'web' ? 'Web' : 'Admin',
+        leads,
+        confirmed,
+        completed,
+        cancelled,
+        noShow,
+        leadToConfirmRate: roundRate(confirmed, leads),
+        leadToCompletionRate: roundRate(completed, leads),
+        noShowRate: roundRate(noShow, confirmed),
+      };
+    })
+    .sort((a, b) => a.label.localeCompare(b.label));
+}
+
+export function buildBookingDashboardAlerts(input: {
+  analytics: Pick<BookingAnalytics, 'noShow'>;
+  pendingBookings: number;
+  waitlistEntries: number;
+  trend: Array<{ day: string; total: number }>;
+}): BookingDashboardAlert[] {
+  const alerts: BookingDashboardAlert[] = [];
+  const { analytics, pendingBookings, waitlistEntries, trend } = input;
+  const peak = trend.reduce((max, point) => Math.max(max, point.total), 0);
+  const average = trend.length > 0 ? trend.reduce((sum, point) => sum + point.total, 0) / trend.length : 0;
+
+  if (analytics.noShow > 0) {
+    alerts.push({
+      id: 'no-show-follow-up',
+      severity: 'warn',
+      title: 'No-shows need follow-up',
+      detail: `${analytics.noShow} booking${analytics.noShow === 1 ? '' : 's'} were marked no-show and should be reviewed.`,
+    });
+  }
+  if (pendingBookings > 0) {
+    alerts.push({
+      id: 'pending-bookings',
+      severity: pendingBookings >= 3 ? 'warn' : 'info',
+      title: 'Pending bookings in queue',
+      detail: `${pendingBookings} pending booking${pendingBookings === 1 ? '' : 's'} need same-day attention.`,
+    });
+  }
+  if (waitlistEntries > 0) {
+    alerts.push({
+      id: 'waitlist-requests',
+      severity: 'info',
+      title: 'Waitlist requests waiting',
+      detail: `${waitlistEntries} waitlist request${waitlistEntries === 1 ? '' : 's'} are active.`,
+    });
+  }
+  if (trend.length >= 3 && peak >= 2 && average > 0 && peak >= average * 2) {
+    alerts.push({
+      id: 'trend-spike',
+      severity: 'info',
+      title: 'Booking spike detected',
+      detail: `Peak day volume is ${peak} bookings, more than double the ${Math.round(average * 10) / 10} average across the current trend window.`,
+    });
+  }
+
+  return alerts;
+}
+
 // ---------------------------------------------------------------------------
 // F84 — Booking funnel & utilization analytics.
 //
@@ -250,6 +380,16 @@ export interface PeakHourHeatmap {
   maxCount: number;
 }
 
+export interface BookingTrendPoint {
+  day: string;
+  total: number;
+  completed: number;
+  pending: number;
+  cancelled: number;
+  noShow: number;
+  revenueAmount: number;
+}
+
 export interface BookingFunnelOptions {
   /** Inclusive window start (ISO). */
   from?: string;
@@ -279,6 +419,12 @@ function applyFilters(bookings: Booking[], options: BookingFunnelOptions): Booki
     .filter((booking) => withinWindow(booking, options.from, options.to))
     .filter((booking) => !options.serviceId || booking.serviceId === options.serviceId)
     .filter((booking) => !options.staffId || booking.staffId === options.staffId);
+}
+
+function dayKeyUtc(iso: string): string {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return '';
+  return date.toISOString().slice(0, 10);
 }
 
 /**
@@ -431,11 +577,60 @@ export function buildPeakHourHeatmap(
   return { cells, maxCount };
 }
 
+export function buildBookingTrendSeries(
+  bookings: Booking[],
+  services: BookingService[],
+  options: BookingFunnelOptions = {},
+  days = 7,
+  nowMs = Date.now(),
+): BookingTrendPoint[] {
+  const filtered = applyFilters(bookings, options);
+  const serviceById = new Map(services.map((service) => [service.serviceId, service]));
+  // Guard against unparseable from/to filter values: Date.parse → NaN would make
+  // new Date(NaN).toISOString() throw RangeError and crash the whole analytics bundle.
+  const parsedTo = options.to ? Date.parse(options.to) : NaN;
+  const endMs = Number.isFinite(parsedTo) ? parsedTo : nowMs;
+  const parsedFrom = options.from ? Date.parse(options.from) : NaN;
+  const startMs = Number.isFinite(parsedFrom) ? parsedFrom : endMs - ((days - 1) * 24 * 60 * 60 * 1000);
+  const buckets = new Map<string, BookingTrendPoint>();
+
+  for (let index = 0; index < days; index += 1) {
+    const bucketDate = new Date(startMs + index * 24 * 60 * 60 * 1000);
+    const day = bucketDate.toISOString().slice(0, 10);
+    buckets.set(day, {
+      day,
+      total: 0,
+      completed: 0,
+      pending: 0,
+      cancelled: 0,
+      noShow: 0,
+      revenueAmount: 0,
+    });
+  }
+
+  for (const booking of filtered) {
+    const day = dayKeyUtc(booking.startAt);
+    const bucket = buckets.get(day);
+    if (!bucket) continue;
+    bucket.total += 1;
+    bucket.completed += booking.status === 'completed' ? 1 : 0;
+    bucket.pending += booking.status === 'pending' ? 1 : 0;
+    bucket.cancelled += booking.status === 'cancelled' ? 1 : 0;
+    bucket.noShow += booking.status === 'no-show' ? 1 : 0;
+    bucket.revenueAmount += bookingRevenueAmount(booking, serviceById.get(booking.serviceId));
+  }
+
+  return Array.from(buckets.values()).sort((a, b) => a.day.localeCompare(b.day));
+}
+
 export interface BookingAnalyticsBundle {
   funnel: BookingFunnelMetrics;
   serviceUtilization: ServiceUtilization[];
   staffUtilization: StaffUtilization[];
   peakHours: PeakHourHeatmap;
+  trend: BookingTrendPoint[];
+  sourceBreakdown: BookingSourceBreakdownItem[];
+  sourceFunnel: BookingSourceFunnelItem[];
 }
 
 /**
@@ -454,5 +649,8 @@ export function buildBookingAnalyticsBundle(
     serviceUtilization: buildServiceUtilization(bookings, services, locale, options),
     staffUtilization: buildStaffUtilization(bookings, staff, locale, options),
     peakHours: buildPeakHourHeatmap(bookings, options),
+    trend: buildBookingTrendSeries(bookings, services, options),
+    sourceBreakdown: buildBookingSourceBreakdown(bookings, services),
+    sourceFunnel: buildBookingSourceFunnelBreakdown(bookings),
   };
 }

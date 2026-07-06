@@ -1,0 +1,128 @@
+.root {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  color: #334155;
+  display: grid;
+  font-size: 0.78rem;
+  gap: 5px;
+}
+
+.label {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.control {
+  background: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  color: #0f172a;
+  font: inherit;
+  font-size: 0.82rem;
+  outline: none;
+  padding: 7px 10px;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+  width: 100%;
+}
+
+.textarea {
+  font-family: inherit;
+  line-height: 1.45;
+  min-height: 84px;
+  resize: vertical;
+}
+
+.control:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.14);
+}
+
+.control:disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.warning {
+  color: #b45309;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.rangeRow {
+  align-items: center;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+}
+
+.range {
+  accent-color: #116dff;
+  margin: 2px 0;
+  width: 100%;
+}
+
+.range:focus-visible {
+  outline: 2px solid #116dff;
+  outline-offset: 4px;
+}
+
+.range:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.value {
+  color: #475569;
+  font-size: 0.75rem;
+  min-width: 36px;
+  text-align: right;
+}
+
+.clearButton {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  color: #64748b;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    color 140ms ease;
+}
+
+.clearButton:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #334155;
+}
+
+.clearButton:focus-visible {
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.16);
+  outline: 2px solid #116dff;
+  outline-offset: 2px;
+}
+
+.clearButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.helpText {
+  color: #64748b;
+  font-size: 0.7rem;
+}

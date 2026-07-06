@@ -1,175 +1,164 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderBlogFeedCanvasNode } from '@/lib/builder/canvas/types';
 import { DEFAULT_BLOG_CATEGORIES } from '@/lib/builder/blog/blog-engine';
+import { getBlogFeedCopy } from './blog-feed-copy';
+import styles from '../BlogWidgetInspector.module.css';
 
-const sectionLabelStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  letterSpacing: '0.05em',
-  color: '#64748b',
-  marginTop: 12,
-  marginBottom: 4,
-  display: 'block',
-};
-
-const selectStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '4px 6px',
-  fontSize: '0.85rem',
-  border: '1px solid #e2e8f0',
-  borderRadius: 6,
-  background: '#fff',
-};
-
-export default function BlogFeedInspector({ node, onUpdate, disabled = false }: BuilderComponentInspectorProps) {
+export default function BlogFeedInspector({ node, locale, onUpdate, disabled = false }: BuilderComponentInspectorProps) {
   const fnode = node as BuilderBlogFeedCanvasNode;
   const c = fnode.content;
+  const copy = getBlogFeedCopy(locale);
 
   return (
-    <>
-      <span style={sectionLabelStyle}>Layout</span>
-      <label>
-        <span>Layout</span>
-        <select style={selectStyle} value={c.layout} disabled={disabled} onChange={(e) => onUpdate({ layout: e.target.value })}>
-          <option value="grid">Grid</option>
-          <option value="list">List</option>
-          <option value="masonry">Masonry</option>
-          <option value="featured-hero">Featured Hero</option>
+    <div className={styles.root} data-builder-blog-feed-inspector="true">
+      <span className={styles.sectionLabel}>{copy.inspector.layoutSection}</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.layoutLabel}</span>
+        <select className={styles.control} value={c.layout} disabled={disabled} onChange={(e) => onUpdate({ layout: e.target.value })}>
+          <option value="grid">{copy.inspector.layoutOptions.grid}</option>
+          <option value="list">{copy.inspector.layoutOptions.list}</option>
+          <option value="masonry">{copy.inspector.layoutOptions.masonry}</option>
+          <option value="featured-hero">{copy.inspector.layoutOptions['featured-hero']}</option>
         </select>
       </label>
-      <label>
-        <span>Columns</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.columns}</span>
         <input
           type="number"
           min={1}
           max={4}
           value={c.columns}
           disabled={disabled}
+          className={styles.control}
           onChange={(e) => onUpdate({ columns: Math.max(1, Math.min(4, Number(e.target.value) || 1)) })}
         />
       </label>
-      <label>
-        <span>Gap (px)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.gap}</span>
         <input
           type="number"
           min={0}
           max={64}
           value={c.gap}
           disabled={disabled}
+          className={styles.control}
           onChange={(e) => onUpdate({ gap: Math.max(0, Math.min(64, Number(e.target.value) || 0)) })}
         />
       </label>
-      <label>
-        <span>Posts per page</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.postsPerPage}</span>
         <input
           type="number"
           min={1}
           max={50}
           value={c.postsPerPage}
           disabled={disabled}
+          className={styles.control}
           onChange={(e) => onUpdate({ postsPerPage: Math.max(1, Math.min(50, Number(e.target.value) || 1)) })}
         />
       </label>
 
-      <span style={sectionLabelStyle}>Filter & Sort</span>
-      <label>
-        <span>Sort by</span>
-        <select style={selectStyle} value={c.sortBy} disabled={disabled} onChange={(e) => onUpdate({ sortBy: e.target.value })}>
-          <option value="newest">Newest first</option>
-          <option value="oldest">Oldest first</option>
-          <option value="featured-first">Featured first</option>
+      <span className={styles.sectionLabel}>{copy.inspector.filterSortSection}</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.sortBy}</span>
+        <select className={styles.control} value={c.sortBy} disabled={disabled} onChange={(e) => onUpdate({ sortBy: e.target.value })}>
+          <option value="newest">{copy.inspector.sortOptions.newest}</option>
+          <option value="oldest">{copy.inspector.sortOptions.oldest}</option>
+          <option value="featured-first">{copy.inspector.sortOptions['featured-first']}</option>
         </select>
       </label>
-      <label>
-        <span>Filter by category</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.filterByCategory}</span>
         <select
-          style={selectStyle}
+          className={styles.control}
           value={c.filterByCategory ?? ''}
           disabled={disabled}
           onChange={(e) => onUpdate({ filterByCategory: e.target.value || undefined })}
         >
-          <option value="">All categories</option>
+          <option value="">{copy.inspector.allCategories}</option>
           {DEFAULT_BLOG_CATEGORIES.map((cat) => (
-            <option key={cat.slug} value={cat.slug}>{cat.name.ko ?? cat.slug}</option>
+            <option key={cat.slug} value={cat.slug}>
+              {cat.name[locale ?? 'en'] ?? cat.name.en ?? cat.name.ko ?? cat.slug}
+            </option>
           ))}
         </select>
       </label>
-      <label>
-        <span>Filter by tag</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.inspector.filterByTag}</span>
         <input
           type="text"
           value={c.filterByTag ?? ''}
           disabled={disabled}
+          className={styles.control}
           onChange={(e) => onUpdate({ filterByTag: e.target.value || undefined })}
-          placeholder="e.g. wage"
+          placeholder={copy.inspector.tagPlaceholder}
         />
       </label>
 
-      <span style={sectionLabelStyle}>Display</span>
-      <label>
+      <span className={styles.sectionLabel}>{copy.inspector.displaySection}</span>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={c.showFeaturedImage}
           disabled={disabled}
           onChange={(e) => onUpdate({ showFeaturedImage: e.target.checked })}
         />
-        <span>Featured image</span>
+        <span>{copy.inspector.featuredImage}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={c.showCategory}
           disabled={disabled}
           onChange={(e) => onUpdate({ showCategory: e.target.checked })}
         />
-        <span>Category</span>
+        <span>{copy.inspector.category}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={c.showExcerpt}
           disabled={disabled}
           onChange={(e) => onUpdate({ showExcerpt: e.target.checked })}
         />
-        <span>Excerpt</span>
+        <span>{copy.inspector.excerpt}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={c.showAuthor}
           disabled={disabled}
           onChange={(e) => onUpdate({ showAuthor: e.target.checked })}
         />
-        <span>Author</span>
+        <span>{copy.inspector.author}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={c.showDate}
           disabled={disabled}
           onChange={(e) => onUpdate({ showDate: e.target.checked })}
         />
-        <span>Date</span>
+        <span>{copy.inspector.date}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={c.showReadingTime}
           disabled={disabled}
           onChange={(e) => onUpdate({ showReadingTime: e.target.checked })}
         />
-        <span>Reading time</span>
+        <span>{copy.inspector.readingTime}</span>
       </label>
-      <label>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={c.showTags}
           disabled={disabled}
           onChange={(e) => onUpdate({ showTags: e.target.checked })}
         />
-        <span>Tags</span>
+        <span>{copy.inspector.tags}</span>
       </label>
-    </>
+    </div>
   );
 }

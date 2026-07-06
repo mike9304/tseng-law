@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { guardMutation } from '@/lib/builder/security/guard';
+import { getBookingPackageCreditApiErrorPayload } from '@/lib/builder/bookings/bookings-copy';
 import { bookingPackageCreditUpdateSchema } from '@/lib/builder/bookings/types';
 import { getPackageCredit, savePackageCredit, timestamped } from '@/lib/builder/bookings/storage';
+import { normalizeLocale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -10,12 +12,21 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const existing = await getPackageCredit(params.id);
-  if (!existing) return NextResponse.json({ error: 'Package credit not found' }, { status: 404 });
+  if (!existing) {
+    return NextResponse.json(getBookingPackageCreditApiErrorPayload(locale, 'credit_not_found'), { status: 404 });
+  }
 
   const parsed = bookingPackageCreditUpdateSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) {
-    return NextResponse.json({ error: 'Invalid credit payload', details: parsed.error.issues.slice(0, 3) }, { status: 400 });
+    return NextResponse.json(
+      {
+        ...getBookingPackageCreditApiErrorPayload(locale, 'invalid_credit_payload'),
+        details: parsed.error.issues.slice(0, 3),
+      },
+      { status: 400 },
+    );
   }
 
   const totalCredits = parsed.data.totalCredits ?? existing.totalCredits;
@@ -37,8 +48,11 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const existing = await getPackageCredit(params.id);
-  if (!existing) return NextResponse.json({ error: 'Package credit not found' }, { status: 404 });
+  if (!existing) {
+    return NextResponse.json(getBookingPackageCreditApiErrorPayload(locale, 'credit_not_found'), { status: 404 });
+  }
 
   const next = timestamped({ ...existing, status: 'revoked' as const }, existing.createdAt);
   await savePackageCredit(next);

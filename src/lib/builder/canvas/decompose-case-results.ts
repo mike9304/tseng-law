@@ -38,8 +38,8 @@ const STAGE_HEIGHT = 600;
  * Decompose home-case-results composite into ~7 editable builder nodes.
  *
  * Tree:
- *   container#case-results-root  (as="section", className="section section--dark ...")
- *     container#case-results-content (className="split-content home-results-content")
+ *   container#home-case-results-root  (as="section", className="section section--dark ...")
+ *     container#home-case-results-content (className="split-content home-results-content")
  *       text#label     (className="section-label home-results-label")
  *       text#title     (as="h2", className="split-title home-results-title")
  *       container#divider (className="split-divider")
@@ -55,8 +55,8 @@ export function createCaseResultsDecomposedNodes(
   zIndexBase: number,
 ): BuilderCanvasNode[] {
   const copy = copyByLocale[locale];
-  const rootId = 'case-results-root';
-  const contentId = 'case-results-content';
+  const rootId = 'home-case-results-root';
+  const contentId = 'home-case-results-content';
   const nodes: BuilderCanvasNode[] = [];
 
   nodes.push({
@@ -123,7 +123,7 @@ export function createCaseResultsDecomposedNodes(
   };
 
   nodes.push({
-    id: 'case-results-label',
+    id: 'home-case-results-label',
     kind: 'text',
     rect: { x: 0, y: 0, width: 400, height: 40 },
     style: createDefaultCanvasNodeStyle(),
@@ -141,7 +141,7 @@ export function createCaseResultsDecomposedNodes(
   });
 
   nodes.push({
-    id: 'case-results-title',
+    id: 'home-case-results-title',
     kind: 'text',
     rect: { x: 0, y: 50, width: 720, height: 120 },
     style: createDefaultCanvasNodeStyle(),
@@ -159,7 +159,7 @@ export function createCaseResultsDecomposedNodes(
   });
 
   nodes.push({
-    id: 'case-results-divider',
+    id: 'home-case-results-divider',
     kind: 'container',
     rect: { x: 0, y: 180, width: 80, height: 4 },
     style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
@@ -183,7 +183,7 @@ export function createCaseResultsDecomposedNodes(
   });
 
   nodes.push({
-    id: 'case-results-desc',
+    id: 'home-case-results-desc',
     kind: 'text',
     rect: { x: 0, y: 200, width: 720, height: 80 },
     style: createDefaultCanvasNodeStyle(),
@@ -201,7 +201,7 @@ export function createCaseResultsDecomposedNodes(
   });
 
   nodes.push({
-    id: 'case-results-summary',
+    id: 'home-case-results-summary',
     kind: 'text',
     rect: { x: 0, y: 290, width: 720, height: 60 },
     style: createDefaultCanvasNodeStyle(),
@@ -219,7 +219,7 @@ export function createCaseResultsDecomposedNodes(
   });
 
   nodes.push({
-    id: 'case-results-cta',
+    id: 'home-case-results-cta',
     kind: 'button',
     rect: { x: 0, y: 360, width: 200, height: 36 },
     style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),

@@ -27,11 +27,21 @@ const legacyColumnAliases = {
 const nextConfig = {
   distDir,
   reactStrictMode: true,
+  experimental: {
+    // Runs src/instrumentation.ts at server startup: strips the blob token on
+    // non-production Vercel deploys so previews cannot touch production data.
+    instrumentationHook: true,
+  },
   webpack(config, { dev }) {
     if (dev) {
       config.watchOptions = {
         ...(config.watchOptions ?? {}),
-        ignored: '**/runtime-data/**',
+        ignored: [
+          '**/runtime-data/**',
+          '**/test-results/**',
+          '**/playwright-report/**',
+          '**/.debug-journal.md',
+        ],
       };
     }
     return config;
@@ -65,10 +75,12 @@ const nextConfig = {
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
-              "frame-ancestors 'none'",
+              // 'self' (not 'none'): the builder's preview modal iframes the
+              // site's own pages; third-party framing stays blocked.
+              "frame-ancestors 'self'",
             ].join('; '),
           },
-          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },

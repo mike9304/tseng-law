@@ -250,15 +250,15 @@ async function openBuilderPageById(page: Page, pageId: string, scope: string): P
 }
 
 async function openPagesDrawer(page: Page): Promise<Locator> {
-  const drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Pages' }).first();
+  const drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: /Pages|페이지/ }).first();
   if (
     await drawer.isVisible().catch(() => false)
-    && await drawer.getByText('Pages').first().isVisible().catch(() => false)
+    && await drawer.getByText(/Pages|페이지/).first().isVisible().catch(() => false)
   ) {
     return drawer;
   }
 
-  const pagesButton = page.getByRole('button', { name: 'Pages', exact: true });
+  const pagesButton = page.getByRole('button', { name: /^Pages$|^페이지$/ });
   await expect(pagesButton).toBeVisible();
   for (let attempt = 0; attempt < 3; attempt += 1) {
     await pagesButton.click({ force: true });
@@ -318,10 +318,10 @@ async function selectCanvasNodeById(page: Page, nodeId: string): Promise<void> {
   });
   if (await selected.isVisible({ timeout: 1_000 }).catch(() => false)) return;
 
-  await page.getByRole('button', { name: 'Layers', exact: true }).click({ force: true });
-  const drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Layers' }).first();
-  await expect(drawer.getByText('Layers').first()).toBeVisible();
-  await drawer.locator(`[title="text ${nodeId}"]`).click();
+  await page.getByRole('button', { name: /^Layers$|^레이어$/ }).click({ force: true });
+  const drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: /Layers|레이어/ }).first();
+  await expect(drawer.getByText(/Layers|레이어/).first()).toBeVisible();
+  await drawer.locator(`[title="text ${nodeId}"], [title="텍스트 ${nodeId}"]`).click();
   await expect(selected).toBeVisible();
 }
 
@@ -359,10 +359,10 @@ test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
       const child = page.locator(`[data-node-id="${childId}"]`).first();
       await expect(child).toContainText(childText);
       await expect(page.locator(`[data-node-id="${siblingId}"]`).first()).toContainText(siblingText);
-      await page.getByRole('button', { name: 'Layers', exact: true }).click();
+      await page.getByRole('button', { name: /^Layers$|^레이어$/ }).click();
       const layersDrawer = page.locator('aside[aria-hidden="false"]').first();
-      await expect(layersDrawer.getByText('Layers').first()).toBeVisible();
-      await layersDrawer.locator(`[title="container ${parentId}"]`).click();
+      await expect(layersDrawer.getByText(/Layers|레이어/).first()).toBeVisible();
+      await layersDrawer.locator(`[title="container ${parentId}"], [title="컨테이너 ${parentId}"]`).click();
       await expect(page.locator(`[data-node-id="${parentId}"][class*="nodeSelected"]`).first()).toBeVisible();
 
       await page.keyboard.press('Delete');
@@ -436,7 +436,7 @@ test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
       await openBuilderPageById(page, pageId!, 'delete-open');
       const node = page.locator(`[data-node-id="${nodeId}"]`).first();
       await expect(node).toContainText(text);
-      await node.click({ position: { x: 20, y: 20 }, force: true });
+      await selectCanvasNodeById(page, nodeId);
 
       await page.keyboard.press('Delete');
       await expect.poll(() => visibleLeafTextCount(page, text), { timeout: 5_000 }).toBe(0);
@@ -451,7 +451,7 @@ test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
         timeout: 15_000,
       }).toBe(1);
 
-      await page.locator(`[data-node-id="${nodeId}"]`).first().click({ position: { x: 20, y: 20 }, force: true });
+      await selectCanvasNodeById(page, nodeId);
       await page.keyboard.press('Backspace');
       await expect.poll(async () => countText(await draftNodes(page, pageId!), text), {
         timeout: 15_000,
@@ -477,8 +477,8 @@ test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
     const targetText = `W29 W30 target ${token}`;
     const sourceTitle = `W29 Source ${token}`;
     const targetTitle = `W30 Target ${token}`;
-    const sourceSlug = `g-editor-${token}-source`;
-    const targetSlug = `g-editor-${token}-target`;
+    const sourceSlug = `w29w30-editor-${token}-source`;
+    const targetSlug = `w29w30-editor-${token}-target`;
     let sourcePageId: string | null = null;
     let targetPageId: string | null = null;
     await page.setExtraHTTPHeaders(mutationHeaders(token));

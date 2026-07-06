@@ -9,6 +9,9 @@ import { listFaqSearchDocs } from '@/lib/builder/faq/faq-engine';
 import { listPortfolioSearchDocs } from '@/lib/builder/portfolio/portfolio-engine';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
+import { resolveLocaleSeo } from '@/lib/builder/translations/seo-projection';
+import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
+import { isInternalSandboxPage } from '@/lib/builder/site/internal-pages';
 import type { SearchDoc } from './types';
 
 /**
@@ -50,16 +53,19 @@ async function collectPageDocsForLocale(siteId: string, locale: Locale): Promise
   const docs: SearchDoc[] = [];
   for (const page of pages) {
     if (page.noIndex || page.seo?.noIndex) continue;
+    if (isInternalSandboxPage(page)) continue;
     const canvas = await readPageCanvas(siteId, page.pageId, 'published');
     const body = canvas ? extractTextFromDocument(canvas.nodes) : '';
     const title = page.title[locale] || page.title.ko || page.slug;
+    const seo = resolveLocaleSeo(page, locale);
+    const effectiveSlug = resolveLocaleSlug(page, locale);
     docs.push({
       id: `page:${locale}:${page.pageId}`,
       kind: 'page',
       locale,
       title,
-      url: buildSitePagePath(locale, page.isHomePage ? '' : page.slug),
-      summary: page.seo?.description,
+      url: buildSitePagePath(locale, page.isHomePage ? '' : effectiveSlug),
+      summary: seo.description ?? page.seo?.description,
       body,
       publishedAt: page.publishedAt,
     });

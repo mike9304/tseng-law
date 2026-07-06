@@ -1,11 +1,8 @@
 'use client';
 
-import {
-  helpTextStyle,
-  previewCardStyle,
-  sectionStyle,
-  sectionTitleStyle,
-} from './SeoPanel.styles';
+import type { Locale } from '@/lib/locales';
+import styles from './SeoPanelHreflangTab.module.css';
+import { getSeoPanelHreflangCopy } from './seo-panel-hreflang-copy';
 
 export interface HreflangAlternateResponse {
   hreflang: string;
@@ -23,6 +20,7 @@ export interface SiblingPageResponse {
 
 interface SeoPanelHreflangTabProps {
   active: boolean;
+  locale: Locale;
   hreflangAlternates: HreflangAlternateResponse[];
   siblings: SiblingPageResponse[];
   missingLocales: string[];
@@ -31,86 +29,65 @@ interface SeoPanelHreflangTabProps {
 
 export function SeoPanelHreflangTab({
   active,
+  locale,
   hreflangAlternates,
   siblings,
   missingLocales,
   sitemapIncluded,
 }: SeoPanelHreflangTabProps) {
+  const copy = getSeoPanelHreflangCopy(locale);
+
   return (
-    <section style={{ ...sectionStyle, display: active ? 'grid' : 'none' }}>
-      <div>
-        <h3 style={sectionTitleStyle}>Hreflang 대체 링크</h3>
-        <span style={helpTextStyle}>
-          Google에 노출되는 alternate-language URL 세트입니다. linkedPageIds(다국어 연결) 기반으로 생성되며,
-          x-default 항목은 기본 로케일을 가리킵니다.
-        </span>
+    <section className={styles.section} data-active={active ? 'true' : 'false'}>
+      <div className={styles.titleBlock}>
+        <h3 className={styles.sectionTitle}>{copy.title}</h3>
+        <span className={styles.helpText}>{copy.description}</span>
       </div>
       {hreflangAlternates.length === 0 ? (
-        <div style={{ ...previewCardStyle, color: '#64748b' }}>
-          아직 발행되지 않았거나 hreflang 데이터가 비어 있습니다.
+        <div className={`${styles.previewCard} ${styles.emptyCard}`}>
+          {copy.empty}
         </div>
       ) : (
-        <div style={{ display: 'grid', gap: 6 }}>
+        <div className={styles.list}>
           {hreflangAlternates.map((alt) => (
             <div
               key={`${alt.hreflang}:${alt.href}`}
-              style={{
-                ...previewCardStyle,
-                display: 'grid',
-                gridTemplateColumns: '90px 1fr',
-                alignItems: 'center',
-                gap: 8,
-                fontSize: '0.78rem',
-              }}
+              className={`${styles.previewCard} ${styles.alternateRow}`}
             >
               <strong
-                style={{
-                  color: alt.hreflang === 'x-default' ? '#0f766e' : '#0f172a',
-                  fontFamily: 'ui-monospace, Menlo, monospace',
-                }}
+                className={styles.hreflangCode}
+                data-default={alt.hreflang === 'x-default' ? 'true' : undefined}
               >
                 {alt.hreflang}
               </strong>
-              <span style={{ color: '#334155', wordBreak: 'break-all' }}>{alt.href}</span>
+              <span className={styles.rowUrl}>{alt.href}</span>
             </div>
           ))}
         </div>
       )}
 
-      <div style={{ marginTop: 8 }}>
-        <h3 style={sectionTitleStyle}>다국어 연결 페이지</h3>
-        <span style={helpTextStyle}>
-          BuilderPageMeta.linkedPageIds 에 등록된 형제 페이지입니다. 누락된 로케일은 페이지 설정에서 연결을 추가하세요.
-        </span>
+      <div className={styles.titleBlock}>
+        <h3 className={styles.sectionTitle}>{copy.siblingsTitle}</h3>
+        <span className={styles.helpText}>{copy.siblingsDescription}</span>
       </div>
       {siblings.length === 0 ? (
-        <div style={{ ...previewCardStyle, color: '#64748b' }}>
-          연결된 다국어 페이지가 없습니다.
+        <div className={`${styles.previewCard} ${styles.emptyCard}`}>
+          {copy.siblingsEmpty}
         </div>
       ) : (
-        <div style={{ display: 'grid', gap: 6 }}>
+        <div className={styles.list}>
           {siblings.map((sibling) => (
             <div
               key={sibling.pageId}
-              style={{
-                ...previewCardStyle,
-                display: 'grid',
-                gridTemplateColumns: '90px 1fr auto',
-                alignItems: 'center',
-                gap: 8,
-                fontSize: '0.78rem',
-              }}
+              className={`${styles.previewCard} ${styles.siblingRow}`}
             >
-              <strong style={{ fontFamily: 'ui-monospace, Menlo, monospace' }}>{sibling.hreflang}</strong>
-              <span style={{ color: '#334155' }}>/{sibling.locale}/{sibling.slug || ''}</span>
+              <strong className={styles.hreflangCode}>{sibling.hreflang}</strong>
+              <span className={styles.siblingUrl}>/{sibling.locale}/{sibling.slug || ''}</span>
               <span
-                style={{
-                  ...helpTextStyle,
-                  color: sibling.noIndex ? '#b45309' : '#15803d',
-                  fontWeight: 700,
-                }}
+                className={styles.indexStatus}
+                data-tone={sibling.noIndex ? 'warning' : 'success'}
               >
-                {sibling.noIndex ? 'noindex' : 'indexed'}
+                {sibling.noIndex ? copy.noIndex : copy.indexed}
               </span>
             </div>
           ))}
@@ -118,40 +95,23 @@ export function SeoPanelHreflangTab({
       )}
 
       {missingLocales.length > 0 ? (
-        <div
-          style={{
-            ...previewCardStyle,
-            background: '#fef3c7',
-            borderColor: '#fcd34d',
-            color: '#92400e',
-            fontSize: '0.78rem',
-          }}
-        >
-          <strong>누락된 로케일: </strong>
-          {missingLocales.join(', ')} — 페이지 설정에서 해당 로케일 페이지를 연결하세요.
+        <div className={`${styles.previewCard} ${styles.warningCard}`}>
+          <strong>{copy.missing}</strong>
+          {missingLocales.join(', ')} — {copy.missingHint}
         </div>
       ) : null}
 
-      <div style={{ marginTop: 8 }}>
-        <h3 style={sectionTitleStyle}>Sitemap 포함 상태</h3>
-        <span style={helpTextStyle}>
-          /sitemap.xml 에 이 페이지가 포함되는지 여부입니다. noIndex 설정 시 sitemap 에서도 제외됩니다.
-        </span>
+      <div className={styles.titleBlock}>
+        <h3 className={styles.sectionTitle}>{copy.sitemapTitle}</h3>
+        <span className={styles.helpText}>{copy.sitemapDescription}</span>
       </div>
       <div
-        style={{
-          ...previewCardStyle,
-          color: sitemapIncluded ? '#065f46' : '#7c2d12',
-          background: sitemapIncluded ? '#ecfdf5' : '#fef2f2',
-          borderColor: sitemapIncluded ? '#a7f3d0' : '#fecaca',
-          display: 'flex',
-          justifyContent: 'space-between',
-          gap: 8,
-        }}
+        className={`${styles.previewCard} ${styles.statusCard}`}
+        data-included={sitemapIncluded ? 'true' : 'false'}
       >
-        <strong>{sitemapIncluded ? 'Sitemap 포함됨' : 'Sitemap 제외'}</strong>
-        <span style={helpTextStyle}>
-          {sitemapIncluded ? '검색엔진 크롤 가능' : 'noIndex로 인해 색인 차단'}
+        <strong className={styles.statusLabel}>{sitemapIncluded ? copy.included : copy.excluded}</strong>
+        <span className={styles.statusHelp}>
+          {sitemapIncluded ? copy.crawlable : copy.blocked}
         </span>
       </div>
     </section>

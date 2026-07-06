@@ -19,36 +19,9 @@ import { isLinkSafe, linkValueFromLegacy } from '@/lib/builder/links';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
 import { validateBuilderPageSeo } from '@/lib/builder/seo/validation';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
+import type { CheckResult } from './check-types';
 
-export type CheckSeverity = 'blocker' | 'warning' | 'info';
-
-export type CheckCategory =
-  | 'links'
-  | 'images'
-  | 'seo'
-  | 'forms'
-  | 'data'
-  | 'responsive'
-  | 'accessibility'
-  | 'performance';
-
-export interface CheckResult {
-  id: string;
-  severity: CheckSeverity;
-  category: CheckCategory;
-  message: string;
-  affectedNodeIds?: string[];
-  fixHint?: string;
-}
-
-export interface PublishCheckSuite {
-  results: CheckResult[];
-  hasBlocker: boolean;
-  warningCount: number;
-  blockerCount: number;
-  infoCount: number;
-  checkedAt: string;
-}
+export type { CheckCategory, CheckResult, CheckSeverity, PublishCheckSuite } from './check-types';
 
 // ─── Helpers ──────────────────────────────────────────────────────
 

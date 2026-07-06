@@ -30,7 +30,7 @@ test.describe('/ko/admin-builder designer widget pack', () => {
       await page.keyboard.press('Escape');
 
       const drawer = await openCatalogDrawer(page);
-      await expect(drawer.getByText('Designer blocks pack')).toBeVisible();
+      await expect(drawer.getByText(/Designer blocks pack|디자이너 블록 팩/)).toBeVisible();
 
       const presets = [
         'designer-proof-counter',

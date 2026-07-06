@@ -4,6 +4,7 @@ import {
   getRecipientByToken,
   saveRecipient,
 } from '@/lib/builder/marketing/campaign-storage';
+import { dispatchMarketingAnalyticsEvent } from '@/lib/builder/marketing/analytics-integrations';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -29,10 +30,18 @@ export async function GET(request: NextRequest) {
   if (rate.allowed && token) {
     const recipient = await getRecipientByToken(token);
     if (recipient && !recipient.openedAt) {
-      await saveRecipient({
+      const openedAt = new Date().toISOString();
+      const nextRecipient = {
         ...recipient,
-        openedAt: new Date().toISOString(),
+        openedAt,
         status: recipient.status === 'sent' ? 'opened' : recipient.status,
+      };
+      await saveRecipient(nextRecipient);
+      await dispatchMarketingAnalyticsEvent({
+        kind: 'campaign-opened',
+        occurredAt: openedAt,
+        recipient: nextRecipient,
+        payload: { source: 'tracking-pixel' },
       });
     }
   }

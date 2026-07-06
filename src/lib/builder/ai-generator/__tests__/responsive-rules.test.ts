@@ -4,26 +4,31 @@ import {
   defaultSafeWidthFor,
   type ResponsiveTargetViewport,
 } from '@/lib/builder/ai-generator/responsive-rules';
-import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import {
+  builderCanvasNodeSchema,
+  type BuilderCanvasNode,
+} from '@/lib/builder/canvas/types';
+
+const baseStyle = {
+  backgroundColor: 'transparent',
+  borderColor: 'transparent',
+  borderStyle: 'solid',
+  borderWidth: 0,
+  borderRadius: 0,
+  shadowX: 0,
+  shadowY: 0,
+  shadowBlur: 0,
+  shadowSpread: 0,
+  shadowColor: 'transparent',
+  opacity: 100,
+} as const;
 
 function makeTextNode(overrides: Partial<BuilderCanvasNode> & { id: string; text?: string; fontSize?: number }): BuilderCanvasNode {
-  return {
+  return builderCanvasNodeSchema.parse({
     id: overrides.id,
     kind: 'text',
     rect: overrides.rect ?? { x: 0, y: 0, width: 600, height: 60 },
-    style: {
-      backgroundColor: 'transparent',
-      borderColor: 'transparent',
-      borderStyle: 'solid',
-      borderWidth: 0,
-      borderRadius: 0,
-      shadowX: 0,
-      shadowY: 0,
-      shadowBlur: 0,
-      shadowSpread: 0,
-      shadowColor: 'transparent',
-      opacity: 100,
-    },
+    style: baseStyle,
     zIndex: 0,
     rotation: 0,
     locked: overrides.locked ?? false,
@@ -38,32 +43,20 @@ function makeTextNode(overrides: Partial<BuilderCanvasNode> & { id: string; text
       letterSpacing: 0,
       fontFamily: 'system-ui',
     },
-  } as BuilderCanvasNode;
+  });
 }
 
 function makeContainerNode(overrides: Partial<BuilderCanvasNode> & { id: string; parentId?: string }): BuilderCanvasNode {
-  return {
+  return builderCanvasNodeSchema.parse({
     id: overrides.id,
     kind: 'container',
     parentId: overrides.parentId,
     rect: overrides.rect ?? { x: 0, y: 0, width: 500, height: 200 },
-    style: {
-      backgroundColor: 'transparent',
-      borderColor: 'transparent',
-      borderStyle: 'solid',
-      borderWidth: 0,
-      borderRadius: 0,
-      shadowX: 0,
-      shadowY: 0,
-      shadowBlur: 0,
-      shadowSpread: 0,
-      shadowColor: 'transparent',
-      opacity: 100,
-    },
+    style: baseStyle,
     zIndex: 0,
     rotation: 0,
-    locked: false,
-    visible: true,
+    locked: overrides.locked ?? false,
+    visible: overrides.visible ?? true,
     content: {
       label: 'container',
       background: 'transparent',
@@ -75,7 +68,51 @@ function makeContainerNode(overrides: Partial<BuilderCanvasNode> & { id: string;
       layoutMode: 'absolute',
       as: 'div',
     },
-  } as BuilderCanvasNode;
+  });
+}
+
+function makeImageNode(overrides: Partial<BuilderCanvasNode> & { id: string }): BuilderCanvasNode {
+  return builderCanvasNodeSchema.parse({
+    id: overrides.id,
+    kind: 'image',
+    rect: overrides.rect ?? { x: 0, y: 0, width: 240, height: 160 },
+    style: baseStyle,
+    zIndex: 0,
+    rotation: 0,
+    locked: overrides.locked ?? false,
+    visible: overrides.visible ?? true,
+    content: {
+      src: '/images/header-skyline-ratio.webp',
+      alt: 'Taipei skyline',
+      fit: 'cover',
+    },
+  });
+}
+
+function makeGalleryNode(overrides: Partial<BuilderCanvasNode> & { id: string }): BuilderCanvasNode {
+  return builderCanvasNodeSchema.parse({
+    id: overrides.id,
+    kind: 'gallery',
+    rect: overrides.rect ?? { x: 0, y: 0, width: 480, height: 280 },
+    style: baseStyle,
+    zIndex: 0,
+    rotation: 0,
+    locked: overrides.locked ?? false,
+    visible: overrides.visible ?? true,
+    content: {
+      images: [],
+      layout: 'grid',
+      columns: 3,
+      gap: 8,
+      showCaptions: false,
+      captionMode: 'below',
+      activeFilter: 'all',
+      autoplay: false,
+      interval: 4000,
+      thumbnailPosition: 'bottom',
+      proStyle: 'clean',
+    },
+  });
 }
 
 const MOBILE: ResponsiveTargetViewport = 'mobile';
@@ -154,5 +191,50 @@ describe('responsive-rules', () => {
     expect(result).toHaveLength(1);
     expect(result[0].mobileOverride.rect?.width).toBe(360);
     expect(result[0].mobileOverride.fontSize).toBeDefined();
+  });
+
+  it('suggests a mobile viewport clamp for an image positioned past the safe area', () => {
+    const node = makeImageNode({ id: 'image-off-right', rect: { x: 400, y: 20, width: 200, height: 140 } });
+    const result = scanResponsiveSuggestions({ canvas: { nodes: [node] }, viewport: MOBILE });
+
+    expect(result).toHaveLength(1);
+    expect(result[0].reason).toBe('node-overflows-viewport');
+    expect(result[0].mobileOverride.rect?.x).toBeGreaterThanOrEqual(16);
+    expect(result[0].mobileOverride.rect?.width).toBeLessThanOrEqual(360);
+  });
+
+  it('suggests a mobile viewport clamp for a container positioned left of the safe area', () => {
+    const node = makeContainerNode({ id: 'container-off-left', rect: { x: -40, y: 20, width: 300, height: 180 } });
+    const result = scanResponsiveSuggestions({ canvas: { nodes: [node] }, viewport: MOBILE });
+
+    expect(result).toHaveLength(1);
+    expect(result[0].reason).toBe('node-overflows-viewport');
+    expect(result[0].mobileOverride.rect?.x).toBeGreaterThanOrEqual(0);
+  });
+
+  it('suggests a tablet viewport width clamp for a gallery wider than the safe area', () => {
+    const node = makeGalleryNode({ id: 'gallery-wide', rect: { x: 0, y: 20, width: 900, height: 320 } });
+    const result = scanResponsiveSuggestions({ canvas: { nodes: [node] }, viewport: TABLET });
+
+    expect(result).toHaveLength(1);
+    expect(result[0].reason).toBe('node-overflows-viewport');
+    expect(result[0].mobileOverride.rect?.width).toBeLessThanOrEqual(720);
+  });
+
+  it('does not duplicate text width suggestions when the node also crosses the safe area', () => {
+    const node = makeTextNode({ id: 'wide-text-right', rect: { x: 80, y: 20, width: 900, height: 80 } });
+    const result = scanResponsiveSuggestions({ canvas: { nodes: [node] }, viewport: MOBILE });
+
+    expect(result).toHaveLength(1);
+    expect(result[0].reason).toBe('text-overflows-viewport');
+    expect(result[0].mobileOverride.rect?.width).toBe(360);
+  });
+
+  it('ignores locked or hidden media nodes that cross the safe area', () => {
+    const locked = makeImageNode({ id: 'locked-image', locked: true, rect: { x: 400, y: 20, width: 200, height: 140 } });
+    const hidden = makeImageNode({ id: 'hidden-image', visible: false, rect: { x: -40, y: 20, width: 200, height: 140 } });
+    const result = scanResponsiveSuggestions({ canvas: { nodes: [locked, hidden] }, viewport: MOBILE });
+
+    expect(result).toHaveLength(0);
   });
 });

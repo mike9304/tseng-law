@@ -17,25 +17,17 @@
 import { locales, defaultLocale, type Locale } from '@/lib/locales';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
+import type {
+  TranslationPublishWarning,
+  TranslationPublishWarningsPayload,
+} from './publish-warning-types';
 
-export type TranslationPublishWarningSeverity = 'warning' | 'error';
-export type TranslationPublishWarningKind = 'untranslated' | 'outdated' | 'broken-link';
-
-export interface TranslationPublishWarning {
-  severity: TranslationPublishWarningSeverity;
-  kind: TranslationPublishWarningKind;
-  pageId: string;
-  locale: Locale;
-  message: string;
-}
-
-export interface TranslationPublishWarningsPayload {
-  ok: true;
-  siteId: string;
-  sourceLocale: Locale;
-  syncedAt: string;
-  warnings: TranslationPublishWarning[];
-}
+export type {
+  TranslationPublishWarning,
+  TranslationPublishWarningKind,
+  TranslationPublishWarningsPayload,
+  TranslationPublishWarningSeverity,
+} from './publish-warning-types';
 
 function sourceTitleFor(page: BuilderPageMeta, sourceLocale: Locale): string {
   return page.title[sourceLocale] || page.title[page.locale] || page.slug || page.pageId;

@@ -1,0 +1,60 @@
+.componentLibraryRestoreReview {
+  min-height: 0;
+}
+
+.componentLibraryRestoreReviewPrimaryActions {
+  min-height: 28px;
+}
+
+.componentLibraryRestoreReviewVersionButton {
+  align-content: start;
+}
+
+.componentLibraryRestoreReviewVersionPreview {
+  display: block;
+  min-width: 0;
+}
+
+.componentLibraryRestoreReviewVersionPreview [data-builder-component-library-preview-tone] {
+  width: 100%;
+  height: 38px;
+}
+
+@media (max-width: 960px) {
+  .componentLibraryRestoreReview {
+    max-height: min(292px, calc(38dvh - 28px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-bottom: 46px;
+    scroll-padding-bottom: 50px;
+    scrollbar-width: thin;
+  }
+
+  .componentLibraryRestoreReviewPrimaryActions {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    margin: 0 -2px -2px;
+    padding-top: 5px;
+    background: var(--editor-panel-elevated, #fff);
+    box-shadow: 0 -8px 12px rgba(255, 255, 255, 0.92);
+  }
+}
+
+@media (max-width: 520px) {
+  .componentLibraryRestoreReview {
+    max-height: 248px;
+    padding-bottom: 44px;
+  }
+
+  .componentLibraryRestoreReviewPrimaryActions {
+    position: static;
+    margin: 0;
+    padding-top: 0;
+    box-shadow: none;
+  }
+
+  .componentLibraryRestoreReviewVersionPreview [data-builder-component-library-preview-tone] {
+    height: 34px;
+  }
+}

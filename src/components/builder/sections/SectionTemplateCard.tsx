@@ -1,68 +1,28 @@
 'use client';
 
-import { useMemo, type CSSProperties } from 'react';
+import { useMemo } from 'react';
+import {
+  BUILDER_BUILT_IN_SECTION_TEMPLATE_DRAG_MIME,
+  encodeBuiltInSectionTemplateDragData,
+} from '@/components/builder/canvas/canvasCatalogDrop';
+import type { Locale } from '@/lib/locales';
 import type { BuiltInSectionTemplate } from '@/lib/builder/sections/templates';
 import { buildSavedSectionThumbnailSvg } from '@/lib/builder/sections/thumbnail';
-
-const cardButtonStyle: CSSProperties = {
-  width: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 7,
-  padding: 8,
-  border: '1px solid #dbe4ee',
-  borderRadius: 10,
-  background: '#ffffff',
-  boxShadow: '0 4px 10px rgba(15, 23, 42, 0.04)',
-  cursor: 'pointer',
-  textAlign: 'left',
-};
-
-const thumbnailStyle: CSSProperties = {
-  width: '100%',
-  height: 70,
-  overflow: 'hidden',
-  borderRadius: 6,
-  background: '#f8fafc',
-};
-
-const nameStyle: CSSProperties = {
-  fontSize: '0.78rem',
-  fontWeight: 700,
-  color: '#0f172a',
-  whiteSpace: 'nowrap',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-};
-
-const descriptionStyle: CSSProperties = {
-  minHeight: 28,
-  fontSize: '0.68rem',
-  lineHeight: 1.35,
-  color: '#64748b',
-};
-
-const metaStyle: CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  width: 'fit-content',
-  padding: '1px 6px',
-  borderRadius: 999,
-  background: '#eef2ff',
-  color: '#3730a3',
-  fontSize: '0.64rem',
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  letterSpacing: 0.4,
-};
+import { getBuiltInSectionsPanelCopy, getBuiltInSectionTemplateDisplayCopy } from './section-panel-copy';
+import styles from './SectionLibraryPanel.module.css';
 
 export function SectionTemplateCard({
+  locale = 'ko',
   template,
   onClick,
 }: {
+  locale?: Locale;
   template: BuiltInSectionTemplate;
   onClick: () => void;
 }) {
+  const copy = getBuiltInSectionsPanelCopy(locale);
+  const templateCopy = getBuiltInSectionTemplateDisplayCopy(template, locale);
+  const addTitle = copy.addTemplateTitle(templateCopy.name);
   const svg = useMemo(
     () => buildSavedSectionThumbnailSvg(template.nodes, template.rootNodeId, 200, 70),
     [template.nodes, template.rootNodeId],
@@ -71,20 +31,28 @@ export function SectionTemplateCard({
   return (
     <button
       type="button"
-      style={cardButtonStyle}
+      className={styles.templateCard}
       data-builder-built-in-section-template={template.id}
       data-builder-built-in-section-category={template.category}
-      title={`${template.name} 섹션 추가`}
-      aria-label={`${template.name} 섹션 추가`}
+      title={addTitle}
+      aria-label={addTitle}
+      draggable
       onClick={onClick}
+      onDragStart={(event) => {
+        event.dataTransfer.setData(
+          BUILDER_BUILT_IN_SECTION_TEMPLATE_DRAG_MIME,
+          encodeBuiltInSectionTemplateDragData(template),
+        );
+        event.dataTransfer.effectAllowed = 'copy';
+      }}
     >
       <div
-        style={thumbnailStyle}
+        className={styles.templateThumbnail}
         dangerouslySetInnerHTML={{ __html: svg }}
       />
-      <span style={nameStyle}>{template.name}</span>
-      <span style={descriptionStyle}>{template.description}</span>
-      <span style={metaStyle}>{template.thumbnailHint ?? template.category}</span>
+      <span className={styles.templateName}>{templateCopy.name}</span>
+      <span className={styles.templateDescription}>{templateCopy.description}</span>
+      <span className={styles.templateMeta}>{templateCopy.thumbnailHint}</span>
     </button>
   );
 }

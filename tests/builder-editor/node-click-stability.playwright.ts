@@ -2,7 +2,7 @@ import { expect, test, type Page } from '@playwright/test';
 import { FAQ_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-faq';
 import { INSIGHTS_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-insights';
 import { SERVICES_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-services';
-import { createHomePageCanvasDocument } from '@/lib/builder/canvas/seed-home';
+import { createHomePageCanvasDocumentDecomposed } from '@/lib/builder/canvas/seed-home';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { openBuilder } from './helpers/editor';
 
@@ -18,7 +18,7 @@ function findNode(document: BuilderCanvasDocument, nodeId: string): BuilderCanva
 }
 
 function makeStaleBoundaryDocument(token: string): BuilderCanvasDocument {
-  const document = createHomePageCanvasDocument('ko');
+  const document = createHomePageCanvasDocumentDecomposed('ko');
   return {
     ...document,
     stageHeight: Math.max(880, document.stageHeight - 300),
@@ -330,7 +330,7 @@ test.describe('/ko/admin-builder node click stability', () => {
 
     const image = page.locator('[data-node-id="home-hero-media-image"]').first();
     await image.scrollIntoViewIfNeeded();
-    const assetDialog = page.getByRole('dialog', { name: 'Asset library' });
+    const assetDialog = page.getByRole('dialog', { name: /Asset library|자산 라이브러리/ });
     await image.click({ position: { x: 20, y: 20 }, force: true });
     await expectEditorSurfaceIntact(page);
     await expect(image).toHaveAttribute('data-selected', 'true');
@@ -338,8 +338,8 @@ test.describe('/ko/admin-builder node click stability', () => {
       await image.click({ position: { x: 20, y: 20 }, force: true });
     }
     await expect(assetDialog).toBeVisible();
-    await expect(assetDialog).toContainText('Select, upload, or remove builder images');
-    await assetDialog.getByRole('button', { name: 'Close' }).click();
+    await expect(assetDialog).toContainText(/Select, upload, or remove builder images|빌더 이미지를 선택, 업로드, 삭제하세요/);
+    await assetDialog.getByRole('button', { name: /^Close$|^닫기$/ }).click();
     await expect(assetDialog).toBeHidden();
     await expectEditorSurfaceIntact(page);
   });
@@ -488,7 +488,7 @@ test.describe('/ko/admin-builder node click stability', () => {
       await page.keyboard.press('Escape');
       await expectBoundaryControlsAsTopHitTargets(page);
 
-      const expectedSeed = createHomePageCanvasDocument('ko');
+      const expectedSeed = createHomePageCanvasDocumentDecomposed('ko');
       const expected = [
         findNode(expectedSeed, 'home-insights-root').rect.height,
         findNode(expectedSeed, 'home-services-root').rect.height,

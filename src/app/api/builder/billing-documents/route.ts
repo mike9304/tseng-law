@@ -6,6 +6,8 @@ import {
   parseBillingDocumentSource,
   type BillingDocumentSource,
 } from '@/lib/builder/billing-documents';
+import { getBuilderBillingDocumentsApiErrorPayload } from '@/lib/builder/billing-documents-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -16,9 +18,13 @@ const querySchema = z.object({
   source: z.enum(['all', 'order', 'booking']).default('all'),
 });
 
-function validationError(error: ZodError): NextResponse {
+function validationError(locale: Locale, error: ZodError): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
+    {
+      ok: false,
+      ...getBuilderBillingDocumentsApiErrorPayload(locale, 'validation_error'),
+      issues: error.flatten(),
+    },
     { status: 400 },
   );
 }
@@ -26,6 +32,8 @@ function validationError(error: ZodError): NextResponse {
 export async function GET(request: NextRequest) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
+
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   try {
     const sp = request.nextUrl.searchParams;
@@ -44,8 +52,11 @@ export async function GET(request: NextRequest) {
     });
     return NextResponse.json({ ok: true, documents, total: documents.length });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     console.error('[builder/billing-documents] GET failed:', error);
-    return NextResponse.json({ ok: false, error: 'billing_documents_failed' }, { status: 500 });
+    return NextResponse.json(
+      { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(errorLocale, 'billing_documents_failed') },
+      { status: 500 },
+    );
   }
 }

@@ -1,25 +1,38 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderBarChartCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import {
+  DATA_WIDGETS_LEGACY_DEFAULTS,
+  getDataWidgetsCopy,
+  localizedDataWidgetPoints,
+  localizedDataWidgetText,
+} from '../data-widgets-copy';
+import styles from '../DataWidgetInspector.module.css';
 
 function BarChartRender({
   node,
+  locale = 'ko',
 }: {
   node: BuilderBarChartCanvasNode;
+  locale?: Locale;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
-  const max = Math.max(1, ...c.points.map((p) => p.value));
+  const copy = getDataWidgetsCopy(locale);
+  const title = localizedDataWidgetText(c.title, copy.chart.defaults.barTitle, DATA_WIDGETS_LEGACY_DEFAULTS.barTitle);
+  const points = localizedDataWidgetPoints(c.points, copy.chart.defaults.barPoints, DATA_WIDGETS_LEGACY_DEFAULTS.barPoints);
+  const max = Math.max(1, ...points.map((p) => p.value));
   const W = 320;
   const H = 160;
   const innerW = W - 24;
   const innerH = H - 24;
-  const barW = c.points.length > 0 ? Math.max(8, (innerW - 8 * (c.points.length - 1)) / c.points.length) : 0;
+  const barW = points.length > 0 ? Math.max(8, (innerW - 8 * (points.length - 1)) / points.length) : 0;
 
   return (
     <div className="builder-datadisplay-chart" data-builder-datadisplay-widget="bar-chart">
-      {c.title ? <strong>{c.title}</strong> : null}
-      <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label={c.title || 'Bar chart'}>
-        {c.points.map((p, idx) => {
+      {title ? <strong>{title}</strong> : null}
+      <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label={title || copy.chart.barAria}>
+        {points.map((p, idx) => {
           const h = (p.value / max) * (innerH - 18);
           const x = 12 + idx * (barW + 8);
           const y = H - 12 - h;
@@ -61,36 +74,40 @@ function parsePoints(value: string): BuilderBarChartCanvasNode['content']['point
 
 function BarChartInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const bcNode = node as BuilderBarChartCanvasNode;
   const c = bcNode.content;
+  const copy = getDataWidgetsCopy(locale);
+  const title = localizedDataWidgetText(c.title, copy.chart.defaults.barTitle, DATA_WIDGETS_LEGACY_DEFAULTS.barTitle);
+  const points = localizedDataWidgetPoints(c.points, copy.chart.defaults.barPoints, DATA_WIDGETS_LEGACY_DEFAULTS.barPoints);
   return (
-    <>
-      <label>
-        <span>제목</span>
-        <input type="text" value={c.title} disabled={disabled} onChange={(event) => onUpdate({ title: event.target.value })} />
+    <div className={styles.root} data-builder-data-widget-inspector="bar-chart">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.chart.inspector.title}</span>
+        <input className={styles.control} type="text" value={title} disabled={disabled} onChange={(event) => onUpdate({ title: event.target.value })} />
       </label>
-      <label>
-        <span>데이터 (label | value)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.chart.inspector.points}</span>
         <textarea
+          className={`${styles.control} ${styles.textarea}`}
           rows={6}
-          style={{ fontFamily: 'inherit', resize: 'vertical' }}
-          value={pointsToText(c.points)}
+          value={pointsToText(points)}
           disabled={disabled}
           onChange={(event) => onUpdate({ points: parsePoints(event.target.value) })}
         />
       </label>
-      <label>
-        <span>색</span>
-        <input type="text" value={c.color} disabled={disabled} onChange={(event) => onUpdate({ color: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.chart.inspector.color}</span>
+        <input className={styles.control} type="text" value={c.color} disabled={disabled} onChange={(event) => onUpdate({ color: event.target.value })} />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showValueLabel} disabled={disabled} onChange={(event) => onUpdate({ showValueLabel: event.target.checked })} />
-        <span>값 라벨 표시</span>
+        <span>{copy.chart.inspector.showValueLabels}</span>
       </label>
-    </>
+    </div>
   );
 }
 
@@ -100,15 +117,8 @@ export default defineComponent({
   category: 'advanced',
   icon: '▮',
   defaultContent: {
-    title: '월별 자문 건수',
-    points: [
-      { label: 'Jan', value: 32 },
-      { label: 'Feb', value: 28 },
-      { label: 'Mar', value: 40 },
-      { label: 'Apr', value: 35 },
-      { label: 'May', value: 46 },
-      { label: 'Jun', value: 52 },
-    ],
+    title: DATA_WIDGETS_LEGACY_DEFAULTS.barTitle,
+    points: DATA_WIDGETS_LEGACY_DEFAULTS.barPoints.map((point) => ({ ...point })),
     color: '#1d4ed8',
     showValueLabel: true,
   },

@@ -1,29 +1,37 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import {
+  memo,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  type MouseEvent,
+} from 'react';
 import LinkPicker, { type LinkPickerContext } from '@/components/builder/editor/LinkPicker';
-import { useShortcutLabels } from '@/components/builder/canvas/hooks/useShortcutLabels';
+import { getLinkPickerCopy } from '@/components/builder/editor/link-picker-copy';
+import { useShortcutLabels, type ShortcutAction } from '@/components/builder/canvas/hooks/useShortcutLabels';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
-import { linkValueFromLegacy, type LinkValue } from '@/lib/builder/links';
+import type { LinkValue } from '@/lib/builder/links';
+import type { Locale } from '@/lib/locales';
+import SelectionToolbarActionButton from './SelectionToolbarActionButton';
+import {
+  formatSelectionToolbarSummary,
+  getSelectionLinkValue,
+  getSelectionToolbarAriaLabel,
+} from './selection-overlay-copy';
+import { useSelectionToolbarActions } from './useSelectionToolbarActions';
 import styles from './SandboxPage.module.css';
 
-function previewLinkHref(href: string | undefined): string {
-  if (!href) return '';
-  const trimmed = href.trim();
-  if (trimmed.length <= 24) return trimmed;
-  return `${trimmed.slice(0, 22)}…`;
-}
+const SELECTION_TOOLBAR_SHORTCUT_ACTIONS: ShortcutAction[] = [
+  'editLink',
+  'duplicate',
+  'bringForward',
+  'sendBackward',
+  'delete',
+];
 
-interface ToolbarAction {
-  key: string;
-  label: string;
-  icon: string;
-  title: string;
-  onClick: () => void;
-  disabled?: boolean;
-}
-
-export default function SelectionToolbar({
+function SelectionToolbar({
   selectedNodes,
   bbox,
   onEditText,
@@ -40,6 +48,7 @@ export default function SelectionToolbar({
   onBringForward,
   onSendBackward,
   onOpenMoreMenu,
+  locale,
 }: {
   selectedNodes: BuilderCanvasNode[];
   /** screen-pixel bounding box of selected nodes (already pan/zoom transformed) */
@@ -60,7 +69,8 @@ export default function SelectionToolbar({
   onDelete: () => void;
   onBringForward: () => void;
   onSendBackward: () => void;
-  onOpenMoreMenu: (event: React.MouseEvent) => void;
+  onOpenMoreMenu: (event: MouseEvent<HTMLButtonElement>) => void;
+  locale?: Locale;
 }) {
   const [internalLinkPopoverOpen, setInternalLinkPopoverOpen] = useState(false);
   const linkPopoverOpen = linkPopoverOpenProp ?? internalLinkPopoverOpen;
@@ -70,134 +80,71 @@ export default function SelectionToolbar({
     onLinkPopoverChange?.(resolved);
   }, [linkPopoverOpen, onLinkPopoverChange]);
 
-  const single = selectedNodes.length === 1 ? selectedNodes[0] : null;
+  const selectionCount = selectedNodes.length;
+  const single = selectionCount === 1 ? selectedNodes[0] : null;
   const isText = single?.kind === 'text' || single?.kind === 'heading';
   const isImage = single?.kind === 'image';
   const isButton = single?.kind === 'button';
   const canEditLink = isButton || showEditLink;
-  const anyLocked = selectedNodes.some((node) => node.locked);
-  const shortcutLabels = useShortcutLabels([
-    'editLink',
-    'duplicate',
-    'bringForward',
-    'sendBackward',
-    'delete',
-  ]);
-  const shortcutTitle = (title: string, action: 'editLink' | 'duplicate' | 'bringForward' | 'sendBackward' | 'delete') => {
+  const anyLocked = useMemo(() => selectedNodes.some((node) => node.locked), [selectedNodes]);
+  const shortcutLabels = useShortcutLabels(SELECTION_TOOLBAR_SHORTCUT_ACTIONS);
+  const copy = useMemo(() => getLinkPickerCopy(locale), [locale]);
+  const shortcutTitle = useCallback((title: string, action: ShortcutAction) => {
     const label = shortcutLabels.get(action)?.title;
     return label ? `${title} (${label})` : title;
-  };
+  }, [shortcutLabels]);
+  const toggleLinkPopover = useCallback(() => {
+    setLinkPopoverOpen((current) => !current);
+  }, [setLinkPopoverOpen]);
 
   useEffect(() => {
     if (!canEditLink) setLinkPopoverOpen(false);
   }, [canEditLink, setLinkPopoverOpen]);
 
-  if (selectedNodes.length === 0) return null;
+  const actions = useSelectionToolbarActions({
+    anyLocked,
+    canEditLink,
+    isImage,
+    isText,
+    linkTargetNode,
+    onBringForward,
+    onChangeLink,
+    onDelete,
+    onDuplicate,
+    onEditLink,
+    onEditText,
+    onOpenMoreMenu,
+    onReplaceImage,
+    onSendBackward,
+    onToggleLinkPopover: toggleLinkPopover,
+    selectionCount,
+    shortcutTitle,
+  });
+  const handleLinkPickerChange = useCallback((value: LinkValue | null) => {
+    if (!linkTargetNode || !onChangeLink) return;
+    onChangeLink(linkTargetNode.id, value);
+  }, [linkTargetNode, onChangeLink]);
+
+  if (selectionCount === 0) return null;
 
   const TOOLBAR_HEIGHT = 36;
   const GAP = 8;
+  const ROTATION_HANDLE_CLEARANCE = 52;
+  const handleClearance = selectionCount === 1 ? ROTATION_HANDLE_CLEARANCE : 0;
 
-  // Default place above; flip below if not enough room above
-  const placeAbove = bbox.y > TOOLBAR_HEIGHT + GAP + 8;
-  const top = placeAbove ? bbox.y - TOOLBAR_HEIGHT - GAP : bbox.y + bbox.height + GAP;
+  const placeAbove = bbox.y > TOOLBAR_HEIGHT + GAP + handleClearance + 8;
+  const top = placeAbove ? bbox.y - TOOLBAR_HEIGHT - GAP - handleClearance : bbox.y + bbox.height + GAP;
   const left = bbox.x + bbox.width / 2;
 
-  const actions: ToolbarAction[] = [];
-
-  // Link 액션을 첫 자리로 — 가장 자주 쓰는 편집. 현재 href 미리보기 또는 "링크 추가".
-  if (canEditLink) {
-    const currentLink = linkTargetNode ? getNodeLinkValue(linkTargetNode) : null;
-    const hasActiveLink = Boolean(currentLink?.href);
-    actions.push({
-      key: 'edit-link',
-      label: hasActiveLink ? previewLinkHref(currentLink?.href) : '링크 추가',
-      icon: '↪',
-      title: hasActiveLink
-        ? `현재: ${currentLink?.href}\n${shortcutTitle('클릭해서 편집', 'editLink')}`
-        : shortcutTitle('링크 추가', 'editLink'),
-      onClick: () => {
-        if (linkTargetNode && onChangeLink) {
-          setLinkPopoverOpen((current) => !current);
-          return;
-        }
-        onEditLink();
-      },
-      disabled: anyLocked,
-    });
-  }
-  if (isText) {
-    actions.push({
-      key: 'edit-text',
-      label: '텍스트 편집',
-      icon: 'T',
-      title: '텍스트 편집 (더블클릭)',
-      onClick: onEditText,
-      disabled: anyLocked,
-    });
-  }
-  if (isImage) {
-    actions.push({
-      key: 'replace-image',
-      label: '교체',
-      icon: '▣',
-      title: '이미지 교체',
-      onClick: onReplaceImage,
-      disabled: anyLocked,
-    });
-  }
-  actions.push(
-    {
-      key: 'duplicate',
-      label: '복제',
-      icon: '⎘',
-      title: shortcutTitle('복제', 'duplicate'),
-      onClick: onDuplicate,
-      disabled: anyLocked,
-    },
-    {
-      key: 'forward',
-      label: '앞',
-      icon: '↑',
-      title: shortcutTitle('한 단계 앞', 'bringForward'),
-      onClick: onBringForward,
-      disabled: selectedNodes.length !== 1 || anyLocked,
-    },
-    {
-      key: 'backward',
-      label: '뒤',
-      icon: '↓',
-      title: shortcutTitle('한 단계 뒤', 'sendBackward'),
-      onClick: onSendBackward,
-      disabled: selectedNodes.length !== 1 || anyLocked,
-    },
-    {
-      key: 'delete',
-      label: '삭제',
-      icon: '✕',
-      title: shortcutTitle('삭제', 'delete'),
-      onClick: onDelete,
-      disabled: anyLocked,
-    },
-    {
-      key: 'more',
-      label: '더보기',
-      icon: '⋯',
-      title: '더보기 (우클릭과 동일)',
-      onClick: () => {},
-    },
-  );
-
-  const linkValue = linkTargetNode ? getNodeLinkValue(linkTargetNode) : null;
+  const linkValue = linkTargetNode ? getSelectionLinkValue(linkTargetNode) : null;
   const popoverTop = top + TOOLBAR_HEIGHT + GAP;
-  const selectionSummary = selectedNodes.length === 1
-    ? selectedNodes[0].kind
-    : `${selectedNodes.length} items`;
+  const selectionSummary = formatSelectionToolbarSummary(selectedNodes, locale);
 
   return (
     <>
       <div
         role="toolbar"
-        aria-label="요소 빠른 작업"
+        aria-label={getSelectionToolbarAriaLabel(locale)}
         className={styles.selectionToolbar}
         style={{
           top: `${top}px`,
@@ -210,45 +157,22 @@ export default function SelectionToolbar({
         <span
           title={selectionSummary}
           className={styles.selectionToolbarSummary}
+          data-builder-selection-toolbar-summary="true"
         >
           {selectionSummary}
         </span>
-        {actions.map((action, index) => {
-          const isMore = action.key === 'more';
-          const separated = index > 0 && (action.key === 'duplicate' || action.key === 'more');
-          return (
-            <button
-              key={action.key}
-              type="button"
-              title={action.title}
-              disabled={action.disabled}
-              className={[
-                styles.selectionToolbarButton,
-                separated ? styles.selectionToolbarButtonSeparated : '',
-              ].filter(Boolean).join(' ')}
-              onClick={(event) => {
-                event.stopPropagation();
-                if (isMore) {
-                  onOpenMoreMenu(event);
-                } else {
-                  action.onClick();
-                }
-              }}
-            >
-              <span
-                className={styles.selectionToolbarIcon}
-                data-wide-icon={action.icon.length === 1 ? undefined : 'true'}
-              >
-                {action.icon}
-              </span>
-            </button>
-          );
-        })}
+        {actions.map((action, index) => (
+          <SelectionToolbarActionButton
+            key={action.key}
+            action={action}
+            index={index}
+          />
+        ))}
       </div>
       {linkPopoverOpen && linkTargetNode && onChangeLink ? (
         <div
           role="dialog"
-          aria-label="링크 편집"
+          aria-label={copy.link.dialogLabel}
           className={styles.selectionToolbarPopover}
           style={{
             top: `${popoverTop}px`,
@@ -260,8 +184,9 @@ export default function SelectionToolbar({
         >
           <LinkPicker
             value={linkValue}
-            onChange={(value) => onChangeLink(linkTargetNode.id, value)}
+            onChange={handleLinkPickerChange}
             context={linkPickerContext}
+            locale={locale}
           />
         </div>
       ) : null}
@@ -269,10 +194,4 @@ export default function SelectionToolbar({
   );
 }
 
-function getNodeLinkValue(node: BuilderCanvasNode): LinkValue | null {
-  if (node.kind === 'button') return linkValueFromLegacy(node.content);
-  if (node.kind === 'image' || node.kind === 'container') {
-    return (node.content.link ?? null) as LinkValue | null;
-  }
-  return null;
-}
+export default memo(SelectionToolbar);

@@ -6,6 +6,11 @@ import {
   getContact,
   updateContact,
 } from '@/lib/builder/crm/contact-store';
+import {
+  getBuilderCrmApiErrorPayload,
+  type BuilderCrmApiErrorCode,
+} from '@/lib/builder/crm/crm-api-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -20,31 +25,65 @@ const patchSchema = z.object({
   customFields: z.record(z.string().max(80), z.string().max(2000)).optional(),
 });
 
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderCrmApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderCrmApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   const auth = await guardMutation(request, { allowReadOnly: true, permission: 'view-contacts' });
   if (auth instanceof NextResponse) return auth;
-  const contact = await getContact(params.id);
-  if (!contact) return NextResponse.json({ error: 'Contact not found' }, { status: 404 });
-  return NextResponse.json({ ok: true, contact });
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
+  try {
+    const contact = await getContact(params.id);
+    if (!contact) return errorResponse(locale, 'contact_not_found', 404);
+    return NextResponse.json({ ok: true, contact });
+  } catch (error) {
+    console.error('[builder/crm/contacts/:id] load failed:', error);
+    return errorResponse(locale, 'contact_load_failed', 500);
+  }
 }
 
 export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
   const auth = await guardMutation(request, { permission: 'manage-contacts' });
   if (auth instanceof NextResponse) return auth;
-  const raw = await request.json().catch(() => null);
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
+  let raw: unknown;
+  try {
+    raw = await request.json();
+  } catch {
+    return errorResponse(locale, 'invalid_json', 400);
+  }
   const parsed = patchSchema.safeParse(raw);
   if (!parsed.success) {
-    return NextResponse.json({ error: 'Invalid patch payload' }, { status: 400 });
+    return errorResponse(locale, 'invalid_contact_payload', 400);
   }
-  const contact = await updateContact(params.id, parsed.data);
-  if (!contact) return NextResponse.json({ error: 'Contact not found' }, { status: 404 });
-  return NextResponse.json({ ok: true, contact });
+  try {
+    const contact = await updateContact(params.id, parsed.data);
+    if (!contact) return errorResponse(locale, 'contact_not_found', 404);
+    return NextResponse.json({ ok: true, contact });
+  } catch (error) {
+    console.error('[builder/crm/contacts/:id] update failed:', error);
+    return errorResponse(locale, 'contact_update_failed', 500);
+  }
 }
 
 export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
   const auth = await guardMutation(request, { permission: 'manage-contacts' });
   if (auth instanceof NextResponse) return auth;
-  const removed = await deleteContact(params.id);
-  if (!removed) return NextResponse.json({ error: 'Contact not found' }, { status: 404 });
-  return NextResponse.json({ ok: true });
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
+  try {
+    const removed = await deleteContact(params.id);
+    if (!removed) return errorResponse(locale, 'contact_not_found', 404);
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error('[builder/crm/contacts/:id] delete failed:', error);
+    return errorResponse(locale, 'contact_delete_failed', 500);
+  }
 }

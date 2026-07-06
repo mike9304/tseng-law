@@ -116,6 +116,7 @@ export default function MobileNavDrawer({
 
   const closeLabel = locale === 'ko' ? '닫기' : locale === 'zh-hant' ? '關閉' : 'Close';
   const drawerLabel = locale === 'ko' ? '모바일 메뉴' : locale === 'zh-hant' ? '行動選單' : 'Mobile menu';
+  const navLabel = locale === 'ko' ? '모바일 주요 메뉴' : locale === 'zh-hant' ? '行動主要選單' : 'Mobile main menu';
   const brandText = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
   const brandLogo = locale === 'zh-hant' ? '/images/brand/hovering-logo-zh.png' : '/images/brand/hovering-logo-ko.png';
   const labels =
@@ -166,7 +167,7 @@ export default function MobileNavDrawer({
             EN
           </Link>
         </div>
-        <nav className="drawer-nav">
+        <nav className="drawer-nav" aria-label={navLabel}>
           {content.nav.primary.map((item) => (
             <Link key={item.href} href={item.href} className="drawer-nav-link" onClick={onClose}>
               {item.label}

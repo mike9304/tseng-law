@@ -5,6 +5,7 @@ import {
   type TipTapDocJson,
 } from '@/lib/builder/rich-text/types';
 import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
+import type { Locale } from '@/lib/locales';
 
 export type TextWidgetKind = Extract<BuilderCanvasNodeKind, 'text' | 'heading'>;
 export type MediaWidgetKind = Extract<BuilderCanvasNodeKind, 'image' | 'video' | 'video-embed' | 'audio' | 'lottie' | 'icon'>;
@@ -39,6 +40,7 @@ export interface TextWidgetPreset {
   height: number;
   content: Record<string, unknown>;
   style?: Record<string, unknown>;
+  searchKeywords?: string[];
 }
 
 export interface MediaWidgetPreset {
@@ -51,6 +53,7 @@ export interface MediaWidgetPreset {
   height: number;
   content: Record<string, unknown>;
   style?: Record<string, unknown>;
+  searchKeywords?: string[];
 }
 
 export interface GalleryWidgetPreset {
@@ -63,6 +66,7 @@ export interface GalleryWidgetPreset {
   height: number;
   content: Record<string, unknown>;
   style?: Record<string, unknown>;
+  searchKeywords?: string[];
 }
 
 export interface LayoutWidgetPreset {
@@ -75,6 +79,7 @@ export interface LayoutWidgetPreset {
   height: number;
   content: Record<string, unknown>;
   style?: Record<string, unknown>;
+  searchKeywords?: string[];
 }
 
 export interface InteractiveWidgetPreset {
@@ -87,6 +92,7 @@ export interface InteractiveWidgetPreset {
   height: number;
   content: Record<string, unknown>;
   style?: Record<string, unknown>;
+  searchKeywords?: string[];
 }
 
 export interface NavigationWidgetPreset {
@@ -99,6 +105,7 @@ export interface NavigationWidgetPreset {
   height: number;
   content: Record<string, unknown>;
   style?: Record<string, unknown>;
+  searchKeywords?: string[];
 }
 
 export interface SocialWidgetPreset {
@@ -111,6 +118,7 @@ export interface SocialWidgetPreset {
   height: number;
   content: Record<string, unknown>;
   style?: Record<string, unknown>;
+  searchKeywords?: string[];
 }
 
 export interface LocationWidgetPreset {
@@ -123,6 +131,7 @@ export interface LocationWidgetPreset {
   height: number;
   content: Record<string, unknown>;
   style?: Record<string, unknown>;
+  searchKeywords?: string[];
 }
 
 export interface DecorativeWidgetPreset {
@@ -135,6 +144,7 @@ export interface DecorativeWidgetPreset {
   height: number;
   content: Record<string, unknown>;
   style?: Record<string, unknown>;
+  searchKeywords?: string[];
 }
 
 export interface DesignerWidgetPreset {
@@ -147,6 +157,7 @@ export interface DesignerWidgetPreset {
   height: number;
   content: Record<string, unknown>;
   style?: Record<string, unknown>;
+  searchKeywords?: string[];
 }
 
 function richTextFromDoc(plainText: string, doc: TipTapDocJson): BuilderRichText {
@@ -220,6 +231,97 @@ function listRichText(): BuilderRichText {
       },
     ],
   });
+}
+
+interface PresetDisplayCopy {
+  label: string;
+  description: string;
+}
+
+const TEXT_WIDGET_PRESET_COPY: Record<string, Record<Locale, PresetDisplayCopy>> = {
+  'heading-h1-h6': {
+    ko: { label: '제목 H1-H6', description: '레벨 전환 가능한 대제목' },
+    'zh-hant': { label: '標題 H1-H6', description: '可切換層級的大標題' },
+    en: { label: 'Heading H1-H6', description: 'Large heading with switchable levels' },
+  },
+  'rich-text': {
+    ko: { label: '리치 텍스트', description: '인라인 서식과 링크 포함' },
+    'zh-hant': { label: '富文字', description: '包含行內格式與連結' },
+    en: { label: 'Rich text', description: 'Inline formatting and links' },
+  },
+  'inspector-rte': {
+    ko: { label: '사이드 패널 서식', description: '사이드 패널에서 서식 전환' },
+    'zh-hant': { label: '側欄富文字', description: '在側邊面板切換文字格式' },
+    en: { label: 'Inspector RTE', description: 'Switch formatting from the side panel' },
+  },
+  'text-on-path': {
+    ko: { label: '곡선 텍스트', description: '아치/웨이브 곡선 텍스트' },
+    'zh-hant': { label: '曲線文字', description: '弧形與波浪路徑文字' },
+    en: { label: 'Text on path', description: 'Arc or wave path text' },
+  },
+  'multi-column': {
+    ko: { label: '다단 텍스트', description: '2~4단 긴 본문' },
+    'zh-hant': { label: '多欄文字', description: '2 至 4 欄長篇內文' },
+    en: { label: 'Multi-column', description: 'Long copy in 2-4 columns' },
+  },
+  quote: {
+    ko: { label: '인용문', description: '인용문 블록' },
+    'zh-hant': { label: '引言', description: '引用文字區塊' },
+    en: { label: 'Quote', description: 'Block quote' },
+  },
+  list: {
+    ko: { label: '목록', description: '불릿/단계형 목록' },
+    'zh-hant': { label: '列表', description: '項目符號或步驟列表' },
+    en: { label: 'List', description: 'Bullet or step list' },
+  },
+  marquee: {
+    ko: { label: '흐르는 텍스트', description: '움직이는 공지 텍스트' },
+    'zh-hant': { label: '跑馬燈文字', description: '移動式公告文字' },
+    en: { label: 'Marquee', description: 'Moving announcement text' },
+  },
+  'typography-preset': {
+    ko: { label: '타이포그래피 프리셋', description: '테마 프리셋 연결' },
+    'zh-hant': { label: '字體樣式預設', description: '連接主題文字樣式' },
+    en: { label: 'Typography preset', description: 'Connect to a theme preset' },
+  },
+  'link-text': {
+    ko: { label: '링크 텍스트', description: '페이지/앵커/외부 링크' },
+    'zh-hant': { label: '連結文字', description: '頁面、錨點或外部連結' },
+    en: { label: 'Link text', description: 'Page, anchor, or external link' },
+  },
+  'designer-eyebrow-label': {
+    ko: { label: '디자이너 보조 라벨', description: '섹션 상단용 작은 라벨' },
+    'zh-hant': { label: '設計眉標', description: '區段頂部的小型標籤' },
+    en: { label: 'Designer eyebrow', description: 'Small label for section tops' },
+  },
+  'designer-editorial-title': {
+    ko: { label: '에디토리얼 제목', description: '잡지형 큰 제목' },
+    'zh-hant': { label: '編輯風標題', description: '雜誌風大型標題' },
+    en: { label: 'Editorial title', description: 'Magazine-style large heading' },
+  },
+  'designer-pull-quote-panel': {
+    ko: { label: '강조 인용 패널', description: '강조 인용 패널' },
+    'zh-hant': { label: '重點引言面板', description: '醒目的引言面板' },
+    en: { label: 'Pull quote panel', description: 'Emphasized quote panel' },
+  },
+};
+
+export function getTextWidgetPresetDisplayCopy(id: string, locale: Locale = 'ko'): PresetDisplayCopy | undefined {
+  return TEXT_WIDGET_PRESET_COPY[id]?.[locale];
+}
+
+export function localizeTextWidgetPreset(preset: TextWidgetPreset, locale: Locale = 'ko'): TextWidgetPreset {
+  const copy = getTextWidgetPresetDisplayCopy(preset.id, locale);
+  if (!copy) return preset;
+  return {
+    ...preset,
+    ...copy,
+    searchKeywords: [
+      ...(preset.searchKeywords ?? []),
+      preset.label,
+      preset.description,
+    ],
+  };
 }
 
 export const TEXT_WIDGET_PRESETS: TextWidgetPreset[] = [
@@ -456,6 +558,112 @@ const MEDIA_IMAGE_A = '/images/header-skyline-buildings.webp';
 const MEDIA_IMAGE_B = '/images/header-skyline-buildings.png';
 const MEDIA_BLOG_IMAGE = '/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg';
 const PLACEHOLDER_IMAGE_SRC = '/images/placeholder-image.svg';
+
+const MEDIA_WIDGET_PRESET_COPY: Record<string, Record<Locale, PresetDisplayCopy>> = {
+  'lightbox-trigger': {
+    ko: { label: '라이트박스 이미지', description: '클릭하면 전체 화면 이미지' },
+    'zh-hant': { label: '燈箱圖片', description: '點擊後開啟全螢幕圖片' },
+    en: { label: 'Lightbox image', description: 'Opens a full-screen image on click' },
+  },
+  'image-hotspots': {
+    ko: { label: '이미지 핫스팟', description: '이미지 위 포인트와 툴팁' },
+    'zh-hant': { label: '圖片熱點', description: '圖片上的標記點與提示' },
+    en: { label: 'Image hotspots', description: 'Points and tooltips on an image' },
+  },
+  'before-after': {
+    ko: { label: '비포/애프터', description: '비교 슬라이더' },
+    'zh-hant': { label: '前後比較', description: '比較滑桿' },
+    en: { label: 'Before / After', description: 'Comparison slider' },
+  },
+  'hover-swap': {
+    ko: { label: '호버 이미지 전환', description: '마우스 오버 이미지 전환' },
+    'zh-hant': { label: '懸停圖片切換', description: '滑鼠懸停時切換圖片' },
+    en: { label: 'Hover swap', description: 'Swap images on hover' },
+  },
+  'image-click-action': {
+    ko: { label: '이미지 클릭 액션', description: '링크/팝업/라이트박스 전환' },
+    'zh-hant': { label: '圖片點擊動作', description: '切換連結、彈窗或燈箱' },
+    en: { label: 'Image click action', description: 'Switch between link, popup, or lightbox' },
+  },
+  'inline-svg-color': {
+    ko: { label: '인라인 SVG', description: '색상 편집 가능한 SVG' },
+    'zh-hant': { label: '內嵌 SVG', description: '可編輯顏色的 SVG' },
+    en: { label: 'Inline SVG', description: 'Editable-color SVG' },
+  },
+  'image-editorial-portrait': {
+    ko: { label: '에디토리얼 인물 사진', description: '인물/프로필용 고급 크롭' },
+    'zh-hant': { label: '編輯風人像', description: '人物與個人檔案用高級裁切' },
+    en: { label: 'Editorial portrait', description: 'Premium crop for people and profiles' },
+  },
+  'image-hero-cinematic': {
+    ko: { label: '시네마틱 히어로 이미지', description: '히어로 배경용 와이드 이미지' },
+    'zh-hant': { label: '電影感主視覺圖片', description: '適合主視覺背景的寬幅圖片' },
+    en: { label: 'Cinematic hero image', description: 'Wide image for hero backgrounds' },
+  },
+  'lottie-animation': {
+    ko: { label: 'Lottie 애니메이션', description: 'Lottie URL/속도/루프' },
+    'zh-hant': { label: 'Lottie 動畫', description: 'Lottie 網址、速度與循環' },
+    en: { label: 'Lottie animation', description: 'Lottie URL, speed, and loop settings' },
+  },
+  'mp4-video-box': {
+    ko: { label: 'MP4 비디오 박스', description: '업로드 MP4용 비디오 박스' },
+    'zh-hant': { label: 'MP4 影片盒', description: '上傳 MP4 用影片容器' },
+    en: { label: 'MP4 video box', description: 'Video box for uploaded MP4 files' },
+  },
+  'youtube-embed': {
+    ko: { label: 'YouTube 임베드', description: '커스텀 YouTube 래퍼' },
+    'zh-hant': { label: 'YouTube 嵌入', description: '自訂 YouTube 外框' },
+    en: { label: 'YouTube embed', description: 'Custom YouTube wrapper' },
+  },
+  'vimeo-embed': {
+    ko: { label: 'Vimeo 임베드', description: 'Vimeo URL/ID 지원' },
+    'zh-hant': { label: 'Vimeo 嵌入', description: '支援 Vimeo 網址或 ID' },
+    en: { label: 'Vimeo embed', description: 'Supports Vimeo URLs and IDs' },
+  },
+  'video-background': {
+    ko: { label: '비디오 배경', description: '섹션 배경용 영상' },
+    'zh-hant': { label: '影片背景', description: '區段背景用影片' },
+    en: { label: 'Video background', description: 'Video for section backgrounds' },
+  },
+  'audio-player': {
+    ko: { label: '오디오 플레이어', description: '파일 오디오 플레이어' },
+    'zh-hant': { label: '音訊播放器', description: '檔案音訊播放器' },
+    en: { label: 'Audio player', description: 'File audio player' },
+  },
+  'spotify-soundcloud': {
+    ko: { label: 'Spotify / SoundCloud', description: '음원 임베드 전환' },
+    'zh-hant': { label: 'Spotify / SoundCloud', description: '切換音訊嵌入來源' },
+    en: { label: 'Spotify / SoundCloud', description: 'Switch audio embeds' },
+  },
+  'gif-giphy': {
+    ko: { label: 'GIF / Giphy', description: 'GIF URL과 검색 메모' },
+    'zh-hant': { label: 'GIF / Giphy', description: 'GIF 網址與搜尋備註' },
+    en: { label: 'GIF / Giphy', description: 'GIF URL and search note' },
+  },
+  'icon-library': {
+    ko: { label: '아이콘 라이브러리', description: 'Lucide/FontAwesome 세트' },
+    'zh-hant': { label: '圖示庫', description: 'Lucide / FontAwesome 套件' },
+    en: { label: 'Icon library', description: 'Lucide and FontAwesome sets' },
+  },
+};
+
+export function getMediaWidgetPresetDisplayCopy(id: string, locale: Locale = 'ko'): PresetDisplayCopy | undefined {
+  return MEDIA_WIDGET_PRESET_COPY[id]?.[locale];
+}
+
+export function localizeMediaWidgetPreset(preset: MediaWidgetPreset, locale: Locale = 'ko'): MediaWidgetPreset {
+  const copy = getMediaWidgetPresetDisplayCopy(preset.id, locale);
+  if (!copy) return preset;
+  return {
+    ...preset,
+    ...copy,
+    searchKeywords: [
+      ...(preset.searchKeywords ?? []),
+      preset.label,
+      preset.description,
+    ],
+  };
+}
 
 export const MEDIA_WIDGET_PRESETS: MediaWidgetPreset[] = [
   {
@@ -778,6 +986,67 @@ const GALLERY_SAMPLE_IMAGES = [
   },
 ];
 
+const GALLERY_WIDGET_PRESET_COPY: Record<string, Record<Locale, PresetDisplayCopy>> = {
+  'gallery-grid': {
+    ko: { label: '그리드 갤러리', description: '균일 이미지 격자' },
+    'zh-hant': { label: '網格圖庫', description: '均勻排列的圖片網格' },
+    en: { label: 'Grid gallery', description: 'Even image grid' },
+  },
+  'gallery-masonry': {
+    ko: { label: '메이슨리 갤러리', description: '높이가 다른 자연 배치' },
+    'zh-hant': { label: '瀑布流圖庫', description: '不同高度的自然排列' },
+    en: { label: 'Masonry gallery', description: 'Natural layout with varied heights' },
+  },
+  'gallery-slider': {
+    ko: { label: '슬라이더 갤러리', description: '화살표와 페이지네이션' },
+    'zh-hant': { label: '滑桿圖庫', description: '含箭頭與分頁控制' },
+    en: { label: 'Slider gallery', description: 'Arrows and pagination controls' },
+  },
+  'gallery-slideshow': {
+    ko: { label: '슬라이드쇼', description: '풀블리드 자동 슬라이드' },
+    'zh-hant': { label: '幻燈片播放', description: '滿版自動播放幻燈片' },
+    en: { label: 'Slideshow', description: 'Full-bleed autoplay slides' },
+  },
+  'gallery-thumbnail': {
+    ko: { label: '썸네일 갤러리', description: '썸네일 네비게이션과 큰 이미지' },
+    'zh-hant': { label: '縮圖圖庫', description: '縮圖導覽搭配大型圖片' },
+    en: { label: 'Thumbnail gallery', description: 'Thumbnail navigation with a large image' },
+  },
+  'gallery-pro': {
+    ko: { label: '프로 갤러리', description: 'Wix Pro 스타일 모자이크' },
+    'zh-hant': { label: 'Pro 圖庫', description: 'Wix Pro 風格馬賽克排列' },
+    en: { label: 'Pro gallery', description: 'Wix Pro-style mosaic layout' },
+  },
+  'gallery-caption-overlay': {
+    ko: { label: '캡션 오버레이', description: '이미지별 캡션 오버레이' },
+    'zh-hant': { label: '標題覆蓋', description: '每張圖片的覆蓋標題' },
+    en: { label: 'Caption overlay', description: 'Caption overlay for each image' },
+  },
+  'gallery-filter': {
+    ko: { label: '필터형 갤러리', description: '태그 필터 pill 표시' },
+    'zh-hant': { label: '篩選圖庫', description: '顯示標籤篩選膠囊' },
+    en: { label: 'Filtered gallery', description: 'Tag filter pills' },
+  },
+};
+
+export function getGalleryWidgetPresetDisplayCopy(id: string, locale: Locale = 'ko'): PresetDisplayCopy | undefined {
+  return GALLERY_WIDGET_PRESET_COPY[id]?.[locale];
+}
+
+export function localizeGalleryWidgetPreset(preset: GalleryWidgetPreset, locale: Locale = 'ko'): GalleryWidgetPreset {
+  const copy = getGalleryWidgetPresetDisplayCopy(preset.id, locale);
+  if (!copy) return preset;
+  return {
+    ...preset,
+    ...copy,
+    searchKeywords: [
+      ...(preset.searchKeywords ?? []),
+      preset.label,
+      preset.description,
+    ],
+  };
+}
+
 export const GALLERY_WIDGET_PRESETS: GalleryWidgetPreset[] = [
   {
     id: 'gallery-grid',
@@ -926,6 +1195,92 @@ const LAYOUT_ITEMS = [
   { title: '전략 수립', description: '절차와 비용, 가능성을 안내합니다.', image: MEDIA_IMAGE_B },
   { title: '진행 공유', description: '단계별 변화를 투명하게 공유합니다.', image: '/images/blog/010-taiwan-gym-injury-lawsuit/featured-01.jpg' },
 ];
+
+const LAYOUT_WIDGET_PRESET_COPY: Record<string, Record<Locale, PresetDisplayCopy>> = {
+  'layout-strip': {
+    ko: { label: '스트립', description: '전폭 섹션 밴드' },
+    'zh-hant': { label: '長條區段', description: '全寬區段帶' },
+    en: { label: 'Strip', description: 'Full-width section band' },
+  },
+  'layout-box': {
+    ko: { label: '박스', description: '카드형 박스' },
+    'zh-hant': { label: '方塊', description: '卡片式方塊' },
+    en: { label: 'Box', description: 'Card-style box' },
+  },
+  'layout-columns': {
+    ko: { label: '2/3/4단 컬럼', description: '반응형 컬럼 프레임' },
+    'zh-hant': { label: '2/3/4 欄', description: '響應式欄位框架' },
+    en: { label: 'Columns 2/3/4', description: 'Responsive column frame' },
+  },
+  'layout-repeater': {
+    ko: { label: '리피터', description: '반복 카드 데이터' },
+    'zh-hant': { label: 'Repeater', description: '重複卡片資料' },
+    en: { label: 'Repeater', description: 'Repeating card data' },
+  },
+  'layout-tabs': {
+    ko: { label: '탭', description: '탭 전환 패널' },
+    'zh-hant': { label: '分頁', description: '可切換分頁面板' },
+    en: { label: 'Tabs', description: 'Switchable tab panel' },
+  },
+  'layout-accordion': {
+    ko: { label: '아코디언', description: '펼침형 정보 블록' },
+    'zh-hant': { label: '手風琴', description: '可展開資訊區塊' },
+    en: { label: 'Accordion', description: 'Expandable information block' },
+  },
+  'layout-slideshow-container': {
+    ko: { label: '슬라이드쇼 컨테이너', description: '콘텐츠 슬라이드 프레임' },
+    'zh-hant': { label: '幻燈片容器', description: '內容幻燈片框架' },
+    en: { label: 'Slideshow container', description: 'Content slide frame' },
+  },
+  'layout-hover-box': {
+    ko: { label: '호버 박스', description: '호버 상태 카드' },
+    'zh-hant': { label: '懸停盒', description: '具有懸停狀態的卡片' },
+    en: { label: 'Hover box', description: 'Card with hover state' },
+  },
+  'layout-sticky-anchor': {
+    ko: { label: '고정/앵커', description: '고정/앵커 타깃' },
+    'zh-hant': { label: '固定 / 錨點', description: '固定與錨點目標' },
+    en: { label: 'Sticky / Anchor', description: 'Sticky and anchor target' },
+  },
+  'layout-grid': {
+    ko: { label: '그리드 레이아웃', description: 'CSS grid 프레임' },
+    'zh-hant': { label: '網格版面', description: 'CSS grid 框架' },
+    en: { label: 'Grid layout', description: 'CSS grid frame' },
+  },
+  'designer-trust-bento': {
+    ko: { label: '디자이너 벤토', description: '신뢰 포인트 3단 카드' },
+    'zh-hant': { label: '設計 Bento', description: '三欄信任重點卡片' },
+    en: { label: 'Designer bento', description: 'Three-card trust point layout' },
+  },
+  'designer-process-accordion': {
+    ko: { label: '프로세스 아코디언', description: '상담 프로세스 패널' },
+    'zh-hant': { label: '流程手風琴', description: '諮詢流程面板' },
+    en: { label: 'Process accordion', description: 'Consultation process panel' },
+  },
+  'designer-story-slideshow': {
+    ko: { label: '스토리 슬라이드쇼', description: '이미지 오버레이 스토리' },
+    'zh-hant': { label: '故事幻燈片', description: '圖片覆蓋故事版面' },
+    en: { label: 'Story slideshow', description: 'Image-overlay story layout' },
+  },
+};
+
+export function getLayoutWidgetPresetDisplayCopy(id: string, locale: Locale = 'ko'): PresetDisplayCopy | undefined {
+  return LAYOUT_WIDGET_PRESET_COPY[id]?.[locale];
+}
+
+export function localizeLayoutWidgetPreset(preset: LayoutWidgetPreset, locale: Locale = 'ko'): LayoutWidgetPreset {
+  const copy = getLayoutWidgetPresetDisplayCopy(preset.id, locale);
+  if (!copy) return preset;
+  return {
+    ...preset,
+    ...copy,
+    searchKeywords: [
+      ...(preset.searchKeywords ?? []),
+      preset.label,
+      preset.description,
+    ],
+  };
+}
 
 export const LAYOUT_WIDGET_PRESETS: LayoutWidgetPreset[] = [
   {
@@ -1102,7 +1457,7 @@ export const LAYOUT_WIDGET_PRESETS: LayoutWidgetPreset[] = [
       borderWidth: 1,
       borderStyle: 'solid',
       borderColor: '#dbe2ea',
-      borderRadius: 999,
+      borderRadius: 48,
       padding: 14,
       sticky: true,
       anchorTarget: 'services',
@@ -1206,6 +1561,98 @@ export const LAYOUT_WIDGET_PRESETS: LayoutWidgetPreset[] = [
     },
   },
 ];
+
+const INTERACTIVE_WIDGET_PRESET_COPY: Record<string, Record<Locale, PresetDisplayCopy>> = {
+  'interactive-countdown-card': {
+    ko: { label: '카드형 카운트다운', description: '카드형 카운트다운' },
+    'zh-hant': { label: '卡片倒數', description: '卡片式倒數計時' },
+    en: { label: 'Countdown card', description: 'Card-style countdown' },
+  },
+  'interactive-countdown-compact': {
+    ko: { label: '컴팩트 카운트다운', description: '컴팩트 카운트다운' },
+    'zh-hant': { label: '精簡倒數', description: '精簡倒數計時' },
+    en: { label: 'Countdown compact', description: 'Compact countdown' },
+  },
+  'interactive-progress-bar': {
+    ko: { label: '진행 바', description: '가로 진행 바' },
+    'zh-hant': { label: '進度條', description: '水平進度條' },
+    en: { label: 'Progress bar', description: 'Horizontal progress bar' },
+  },
+  'interactive-progress-ring': {
+    ko: { label: '원형 진행률', description: '원형 진행률' },
+    'zh-hant': { label: '圓形進度', description: '圓環式進度' },
+    en: { label: 'Progress ring', description: 'Circular progress ring' },
+  },
+  'interactive-progress-segments': {
+    ko: { label: '세그먼트 진행률', description: '세그먼트 진행률' },
+    'zh-hant': { label: '分段進度', description: '分段式進度' },
+    en: { label: 'Progress segments', description: 'Segmented progress' },
+  },
+  'interactive-rating-stars': {
+    ko: { label: '별점', description: '별점 (5/5)' },
+    'zh-hant': { label: '星級評分', description: '星級評分 (5/5)' },
+    en: { label: 'Star rating', description: 'Star rating (5/5)' },
+  },
+  'interactive-rating-hearts': {
+    ko: { label: '하트 평점', description: '하트 평점' },
+    'zh-hant': { label: '愛心評分', description: '愛心樣式評分' },
+    en: { label: 'Heart rating', description: 'Heart-style rating' },
+  },
+  'interactive-notification-bar-info': {
+    ko: { label: '알림 바', description: '상단 공지 바' },
+    'zh-hant': { label: '通知列', description: '頂部公告列' },
+    en: { label: 'Notification bar', description: 'Top announcement bar' },
+  },
+  'interactive-notification-bar-warning': {
+    ko: { label: '경고 알림 바', description: '경고 톤 바' },
+    'zh-hant': { label: '警示公告列', description: '警示色調公告列' },
+    en: { label: 'Notice bar (warning)', description: 'Warning-tone notice bar' },
+  },
+  'interactive-back-to-top': {
+    ko: { label: '맨 위로', description: '맨 위로 버튼' },
+    'zh-hant': { label: '回到頂端', description: '回到頂端按鈕' },
+    en: { label: 'Back to top', description: 'Back-to-top button' },
+  },
+  'interactive-popup-trigger': {
+    ko: { label: '팝업 트리거', description: 'popup:slug 트리거 버튼' },
+    'zh-hant': { label: '彈窗觸發器', description: 'popup:slug 觸發按鈕' },
+    en: { label: 'Popup trigger', description: 'popup:slug trigger button' },
+  },
+  'interactive-lightbox-trigger': {
+    ko: { label: '라이트박스 트리거', description: 'lightbox:slug 트리거 버튼' },
+    'zh-hant': { label: '燈箱觸發器', description: 'lightbox:slug 觸發按鈕' },
+    en: { label: 'Lightbox trigger', description: 'lightbox:slug trigger button' },
+  },
+  'interactive-cookie-consent-open': {
+    ko: { label: '쿠키 설정', description: 'cookie-consent:open 트리거' },
+    'zh-hant': { label: 'Cookie 設定', description: 'cookie-consent:open 觸發器' },
+    en: { label: 'Cookie settings', description: 'cookie-consent:open trigger' },
+  },
+};
+
+export function getInteractiveWidgetPresetDisplayCopy(
+  id: string,
+  locale: Locale = 'ko',
+): PresetDisplayCopy | undefined {
+  return INTERACTIVE_WIDGET_PRESET_COPY[id]?.[locale];
+}
+
+export function localizeInteractiveWidgetPreset(
+  preset: InteractiveWidgetPreset,
+  locale: Locale = 'ko',
+): InteractiveWidgetPreset {
+  const copy = getInteractiveWidgetPresetDisplayCopy(preset.id, locale);
+  if (!copy) return preset;
+  return {
+    ...preset,
+    ...copy,
+    searchKeywords: [
+      ...(preset.searchKeywords ?? []),
+      preset.label,
+      preset.description,
+    ],
+  };
+}
 
 export const INTERACTIVE_WIDGET_PRESETS: InteractiveWidgetPreset[] = [
   {
@@ -1423,6 +1870,68 @@ export const INTERACTIVE_WIDGET_PRESETS: InteractiveWidgetPreset[] = [
   },
 ];
 
+const NAVIGATION_WIDGET_PRESET_COPY: Record<string, Record<Locale, PresetDisplayCopy>> = {
+  'nav-menu-horizontal': {
+    ko: { label: '가로 메뉴', description: '가로 메뉴 바' },
+    'zh-hant': { label: '水平選單', description: '水平選單列' },
+    en: { label: 'Horizontal menu', description: 'Horizontal menu bar' },
+  },
+  'nav-menu-vertical': {
+    ko: { label: '세로 메뉴', description: '세로 메뉴' },
+    'zh-hant': { label: '垂直選單', description: '垂直選單' },
+    en: { label: 'Vertical menu', description: 'Vertical menu' },
+  },
+  'nav-menu-dropdown': {
+    ko: { label: '드롭다운 메뉴', description: '드롭다운 계층' },
+    'zh-hant': { label: '下拉選單', description: '下拉階層選單' },
+    en: { label: 'Dropdown menu', description: 'Dropdown hierarchy' },
+  },
+  'nav-menu-mega': {
+    ko: { label: '메가 메뉴', description: '대형 드롭다운' },
+    'zh-hant': { label: 'Mega 選單', description: '大型下拉選單' },
+    en: { label: 'Mega menu', description: 'Large dropdown menu' },
+  },
+  'nav-anchor-menu': {
+    ko: { label: '앵커 메뉴', description: '섹션 점프 메뉴' },
+    'zh-hant': { label: '錨點選單', description: '區段跳轉選單' },
+    en: { label: 'Anchor menu', description: 'Section jump menu' },
+  },
+  'nav-breadcrumbs-chevron': {
+    ko: { label: '브레드크럼', description: '경로 표시' },
+    'zh-hant': { label: '麵包屑', description: '路徑顯示' },
+    en: { label: 'Breadcrumbs', description: 'Path display' },
+  },
+  'nav-breadcrumbs-slash': {
+    ko: { label: '브레드크럼 슬래시', description: '/ 구분자' },
+    'zh-hant': { label: '斜線麵包屑', description: '/ 分隔符' },
+    en: { label: 'Breadcrumbs (slash)', description: '/ separator' },
+  },
+};
+
+export function getNavigationWidgetPresetDisplayCopy(
+  id: string,
+  locale: Locale = 'ko',
+): PresetDisplayCopy | undefined {
+  return NAVIGATION_WIDGET_PRESET_COPY[id]?.[locale];
+}
+
+export function localizeNavigationWidgetPreset(
+  preset: NavigationWidgetPreset,
+  locale: Locale = 'ko',
+): NavigationWidgetPreset {
+  const copy = getNavigationWidgetPresetDisplayCopy(preset.id, locale);
+  if (!copy) return preset;
+  return {
+    ...preset,
+    ...copy,
+    searchKeywords: [
+      ...(preset.searchKeywords ?? []),
+      preset.label,
+      preset.description,
+    ],
+  };
+}
+
 export const NAVIGATION_WIDGET_PRESETS: NavigationWidgetPreset[] = [
   {
     id: 'nav-menu-horizontal',
@@ -1518,6 +2027,67 @@ export const NAVIGATION_WIDGET_PRESETS: NavigationWidgetPreset[] = [
   },
 ];
 
+const SOCIAL_WIDGET_PRESET_COPY: Record<string, Record<Locale, PresetDisplayCopy>> = {
+  'social-bar-row': {
+    ko: { label: '소셜 바', description: '소셜 링크 모음' },
+    'zh-hant': { label: '社群列', description: '社群連結集合' },
+    en: { label: 'Social bar', description: 'Set of social links' },
+  },
+  'social-share': {
+    ko: { label: '공유 버튼', description: '페이지 공유 4종' },
+    'zh-hant': { label: '分享按鈕', description: '四種頁面分享按鈕' },
+    en: { label: 'Share buttons', description: 'Four page sharing buttons' },
+  },
+  'social-instagram-feed': {
+    ko: { label: 'Instagram 피드', description: '인스타그램 그리드' },
+    'zh-hant': { label: 'Instagram 動態', description: 'Instagram 網格' },
+    en: { label: 'Instagram feed', description: 'Instagram grid' },
+  },
+  'social-youtube-subscribe': {
+    ko: { label: 'YouTube 구독', description: '유튜브 구독 위젯' },
+    'zh-hant': { label: 'YouTube 訂閱', description: 'YouTube 訂閱小工具' },
+    en: { label: 'YouTube subscribe', description: 'YouTube subscribe widget' },
+  },
+  'social-linkedin-follow': {
+    ko: { label: 'LinkedIn 팔로우', description: '링크드인 팔로우' },
+    'zh-hant': { label: 'LinkedIn 追蹤', description: 'LinkedIn 追蹤小工具' },
+    en: { label: 'LinkedIn follow', description: 'LinkedIn follow widget' },
+  },
+  'social-floating-whatsapp': {
+    ko: { label: 'WhatsApp 플로팅', description: 'WhatsApp 플로팅' },
+    'zh-hant': { label: 'WhatsApp 浮動聊天', description: 'WhatsApp 浮動按鈕' },
+    en: { label: 'WhatsApp floating', description: 'WhatsApp floating button' },
+  },
+  'social-floating-line': {
+    ko: { label: 'LINE 플로팅', description: 'LINE 플로팅' },
+    'zh-hant': { label: 'LINE 浮動聊天', description: 'LINE 浮動按鈕' },
+    en: { label: 'LINE floating', description: 'LINE floating button' },
+  },
+  'social-floating-kakao': {
+    ko: { label: 'Kakao 플로팅', description: '카카오 플로팅' },
+    'zh-hant': { label: 'Kakao 浮動聊天', description: 'Kakao 浮動按鈕' },
+    en: { label: 'Kakao floating', description: 'Kakao floating button' },
+  },
+};
+
+export function getSocialWidgetPresetDisplayCopy(id: string, locale: Locale = 'ko'): PresetDisplayCopy | undefined {
+  return SOCIAL_WIDGET_PRESET_COPY[id]?.[locale];
+}
+
+export function localizeSocialWidgetPreset(preset: SocialWidgetPreset, locale: Locale = 'ko'): SocialWidgetPreset {
+  const copy = getSocialWidgetPresetDisplayCopy(preset.id, locale);
+  if (!copy) return preset;
+  return {
+    ...preset,
+    ...copy,
+    searchKeywords: [
+      ...(preset.searchKeywords ?? []),
+      preset.label,
+      preset.description,
+    ],
+  };
+}
+
 export const SOCIAL_WIDGET_PRESETS: SocialWidgetPreset[] = [
   {
     id: 'social-bar-row',
@@ -1601,6 +2171,42 @@ export const SOCIAL_WIDGET_PRESETS: SocialWidgetPreset[] = [
   },
 ];
 
+const LOCATION_WIDGET_PRESET_COPY: Record<string, Record<Locale, PresetDisplayCopy>> = {
+  'location-address-block': {
+    ko: { label: '주소 블록', description: '주소 + 길찾기' },
+    'zh-hant': { label: '地址區塊', description: '地址與路線指引' },
+    en: { label: 'Address block', description: 'Address and directions' },
+  },
+  'location-business-hours': {
+    ko: { label: '영업 시간', description: '영업 시간 테이블' },
+    'zh-hant': { label: '營業時間', description: '營業時間表' },
+    en: { label: 'Business hours', description: 'Business hours table' },
+  },
+  'location-multi-map': {
+    ko: { label: '다중 위치 지도', description: '여러 지점 지도' },
+    'zh-hant': { label: '多地點地圖', description: '多個地點' },
+    en: { label: 'Multi-location map', description: 'Multiple locations' },
+  },
+};
+
+export function getLocationWidgetPresetDisplayCopy(id: string, locale: Locale = 'ko'): PresetDisplayCopy | undefined {
+  return LOCATION_WIDGET_PRESET_COPY[id]?.[locale];
+}
+
+export function localizeLocationWidgetPreset(preset: LocationWidgetPreset, locale: Locale = 'ko'): LocationWidgetPreset {
+  const copy = getLocationWidgetPresetDisplayCopy(preset.id, locale);
+  if (!copy) return preset;
+  return {
+    ...preset,
+    ...copy,
+    searchKeywords: [
+      ...(preset.searchKeywords ?? []),
+      preset.label,
+      preset.description,
+    ],
+  };
+}
+
 export const LOCATION_WIDGET_PRESETS: LocationWidgetPreset[] = [
   {
     id: 'location-address-block',
@@ -1633,6 +2239,67 @@ export const LOCATION_WIDGET_PRESETS: LocationWidgetPreset[] = [
     content: {},
   },
 ];
+
+const DESIGNER_WIDGET_PRESET_COPY: Record<string, Record<Locale, PresetDisplayCopy>> = {
+  'designer-proof-counter': {
+    ko: { label: '성과 카운터', description: '성과 숫자 강조' },
+    'zh-hant': { label: '成果計數器', description: '突顯成果數字' },
+    en: { label: 'Proof counter', description: 'Highlight proof metrics' },
+  },
+  'designer-case-metric-card': {
+    ko: { label: '사건 지표 카드', description: '신뢰 지표용 프리미엄 카드' },
+    'zh-hant': { label: '案件指標卡', description: '信任指標用精緻卡片' },
+    en: { label: 'Case metric card', description: 'Premium card for trust metrics' },
+  },
+  'designer-testimonial-card': {
+    ko: { label: '후기 카드', description: '후기 슬라이더 카드' },
+    'zh-hant': { label: '見證卡片', description: '見證輪播卡片' },
+    en: { label: 'Testimonial card', description: 'Testimonial slider card' },
+  },
+  'designer-service-gradient-card': {
+    ko: { label: '서비스 스포트라이트', description: '대표 서비스 카드' },
+    'zh-hant': { label: '服務焦點', description: '代表服務卡片' },
+    en: { label: 'Service spotlight', description: 'Featured service card' },
+  },
+  'designer-team-profile': {
+    ko: { label: '프로필 카드', description: '전문가 프로필' },
+    'zh-hant': { label: '個人檔案卡', description: '專家個人檔案' },
+    en: { label: 'Profile card', description: 'Expert profile' },
+  },
+  'designer-pricing-table': {
+    ko: { label: '가격 카드', description: '3단 가격 카드' },
+    'zh-hant': { label: '價格卡片', description: '三欄價格卡片' },
+    en: { label: 'Pricing cards', description: 'Three-tier pricing cards' },
+  },
+  'designer-timeline-roadmap': {
+    ko: { label: '사건 타임라인', description: '사건 진행 타임라인' },
+    'zh-hant': { label: '案件時間軸', description: '案件進度時間軸' },
+    en: { label: 'Case timeline', description: 'Case progress timeline' },
+  },
+  'designer-comparison-table': {
+    ko: { label: '비교표', description: '서비스 비교표' },
+    'zh-hant': { label: '比較表', description: '服務比較表' },
+    en: { label: 'Compare table', description: 'Service comparison table' },
+  },
+};
+
+export function getDesignerWidgetPresetDisplayCopy(id: string, locale: Locale = 'ko'): PresetDisplayCopy | undefined {
+  return DESIGNER_WIDGET_PRESET_COPY[id]?.[locale];
+}
+
+export function localizeDesignerWidgetPreset(preset: DesignerWidgetPreset, locale: Locale = 'ko'): DesignerWidgetPreset {
+  const copy = getDesignerWidgetPresetDisplayCopy(preset.id, locale);
+  if (!copy) return preset;
+  return {
+    ...preset,
+    ...copy,
+    searchKeywords: [
+      ...(preset.searchKeywords ?? []),
+      preset.label,
+      preset.description,
+    ],
+  };
+}
 
 export const DESIGNER_WIDGET_PRESETS: DesignerWidgetPreset[] = [
   {
@@ -1816,6 +2483,107 @@ export const DESIGNER_WIDGET_PRESETS: DesignerWidgetPreset[] = [
     },
   },
 ];
+
+const DECORATIVE_WIDGET_PRESET_COPY: Record<string, Record<Locale, PresetDisplayCopy>> = {
+  'decorative-shape-circle': {
+    ko: { label: '원형 도형', description: '원형 도형' },
+    'zh-hant': { label: '圓形圖形', description: '圓形圖形' },
+    en: { label: 'Circle shape', description: 'Circular shape' },
+  },
+  'decorative-shape-blob': {
+    ko: { label: '블롭 도형', description: '유기적인 블롭 도형' },
+    'zh-hant': { label: '不規則圖形', description: '有機感不規則圖形' },
+    en: { label: 'Blob shape', description: 'Organic blob shape' },
+  },
+  'decorative-shape-arrow': {
+    ko: { label: '화살표 도형', description: '화살표 도형' },
+    'zh-hant': { label: '箭頭圖形', description: '箭頭圖形' },
+    en: { label: 'Arrow shape', description: 'Arrow shape' },
+  },
+  'decorative-pattern-dots': {
+    ko: { label: '점 패턴', description: '점 배경 패턴' },
+    'zh-hant': { label: '圓點圖樣', description: '圓點背景圖樣' },
+    en: { label: 'Dots pattern', description: 'Dotted background pattern' },
+  },
+  'decorative-pattern-grid': {
+    ko: { label: '그리드 패턴', description: '그리드 배경 패턴' },
+    'zh-hant': { label: '格線圖樣', description: '格線背景圖樣' },
+    en: { label: 'Grid pattern', description: 'Grid background pattern' },
+  },
+  'decorative-pattern-waves': {
+    ko: { label: '물결 패턴', description: '물결 배경 패턴' },
+    'zh-hant': { label: '波浪圖樣', description: '波浪背景圖樣' },
+    en: { label: 'Waves pattern', description: 'Wave background pattern' },
+  },
+  'decorative-parallax': {
+    ko: { label: '패럴랙스 배경', description: '스크롤 반응 배경' },
+    'zh-hant': { label: '視差背景', description: '捲動反應背景' },
+    en: { label: 'Parallax background', description: 'Scroll-reactive background' },
+  },
+  'decorative-frame-solid': {
+    ko: { label: '프레임', description: '기본 프레임' },
+    'zh-hant': { label: '邊框', description: '基本邊框' },
+    en: { label: 'Frame', description: 'Basic frame' },
+  },
+  'decorative-frame-photo': {
+    ko: { label: '사진 프레임', description: '사진용 프레임' },
+    'zh-hant': { label: '相片邊框', description: '相片用邊框' },
+    en: { label: 'Photo frame', description: 'Frame for photos' },
+  },
+  'decorative-sticker-star': {
+    ko: { label: '별 스티커', description: '추천 강조 스티커' },
+    'zh-hant': { label: '星形貼紙', description: '推薦重點貼紙' },
+    en: { label: 'Star sticker', description: 'Recommendation highlight sticker' },
+  },
+  'decorative-sticker-banner': {
+    ko: { label: '배너 스티커', description: '리본 배너' },
+    'zh-hant': { label: '橫幅貼紙', description: '緞帶橫幅' },
+    en: { label: 'Banner sticker', description: 'Ribbon banner' },
+  },
+  'decorative-designer-corner-frame': {
+    ko: { label: '코너 프레임', description: '고급 코너 프레임' },
+    'zh-hant': { label: '角落邊框', description: '精緻角落邊框' },
+    en: { label: 'Corner frame', description: 'Premium corner frame' },
+  },
+  'decorative-designer-fine-line': {
+    ko: { label: '가는 구분선', description: '섹션용 얇은 구분선' },
+    'zh-hant': { label: '細分隔線', description: '區段用細分隔線' },
+    en: { label: 'Fine rule', description: 'Thin section divider' },
+  },
+  'decorative-designer-soft-halo': {
+    ko: { label: '소프트 헤일로', description: '은은한 배경 포인트' },
+    'zh-hant': { label: '柔和光暈', description: '柔和背景重點' },
+    en: { label: 'Soft halo', description: 'Subtle background accent' },
+  },
+  'decorative-designer-diagonal-pattern': {
+    ko: { label: '대각선 텍스처', description: '편집형 배경 텍스처' },
+    'zh-hant': { label: '對角紋理', description: '編輯感背景紋理' },
+    en: { label: 'Diagonal texture', description: 'Editorial background texture' },
+  },
+  'decorative-designer-premium-tag': {
+    ko: { label: '프리미엄 태그', description: '작은 강조 배지' },
+    'zh-hant': { label: '精選標籤', description: '小型重點徽章' },
+    en: { label: 'Premium tag', description: 'Small highlight badge' },
+  },
+};
+
+export function getDecorativeWidgetPresetDisplayCopy(id: string, locale: Locale = 'ko'): PresetDisplayCopy | undefined {
+  return DECORATIVE_WIDGET_PRESET_COPY[id]?.[locale];
+}
+
+export function localizeDecorativeWidgetPreset(preset: DecorativeWidgetPreset, locale: Locale = 'ko'): DecorativeWidgetPreset {
+  const copy = getDecorativeWidgetPresetDisplayCopy(preset.id, locale);
+  if (!copy) return preset;
+  return {
+    ...preset,
+    ...copy,
+    searchKeywords: [
+      ...(preset.searchKeywords ?? []),
+      preset.label,
+      preset.description,
+    ],
+  };
+}
 
 export const DECORATIVE_WIDGET_PRESETS: DecorativeWidgetPreset[] = [
   { id: 'decorative-shape-circle', label: 'Circle shape', description: '원형 도형', icon: '●', kind: 'shape', width: 160, height: 160, content: { shape: 'circle' } },

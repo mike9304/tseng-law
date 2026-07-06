@@ -27,7 +27,19 @@ function buildFaqPage(y: number, locale: Locale, zBase: number): { nodes: Builde
   return { nodes, height: cursor - y };
 }
 
-export const FAQ_PAGE_ROOT_HEIGHT = Math.max(...locales.map((locale) => buildFaqPage(0, locale, 0).height));
+// Per-locale page height. The document's `stageHeight` is only a FLOOR — the
+// published renderer resolves final height as max(stageHeight, deepest node
+// bottom) (see src/lib/builder/site/public-page.tsx). Each locale's decomposed
+// tree already ends tight (deepest node bottom === this height), so seeding a
+// page with ITS OWN locale height avoids padding shorter locales (ko/zh-hant)
+// up to the tallest (English) locale. Mirrors getAboutPageRootHeight /
+// getLawyersPageRootHeight — seed-pages.ts should pass this per locale instead
+// of the cross-locale max constant.
+export function getFaqPageRootHeight(locale: Locale): number {
+  return buildFaqPage(0, locale, 0).height;
+}
+
+export const FAQ_PAGE_ROOT_HEIGHT = Math.max(...locales.map((locale) => getFaqPageRootHeight(locale)));
 
 export function createFaqPageDecomposedNodes(y: number, locale: Locale, zBase: number): BuilderCanvasNode[] {
   return buildFaqPage(y, locale, zBase).nodes;

@@ -7,11 +7,23 @@ import {
 } from '@/lib/builder/persistence';
 import { recordPageRollback } from '@/lib/builder/audit/record';
 import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 
 export const runtime = 'nodejs';
 
-function badRequest(message: string) {
-  return NextResponse.json({ ok: false, error: message }, { status: 400 });
+function errorResponse(
+  locale: ReturnType<typeof normalizeBuilderHomeLocale>,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra: Record<string, unknown> = {},
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...extra },
+    { status },
+  );
 }
 
 export async function POST(request: NextRequest) {
@@ -24,11 +36,11 @@ export async function POST(request: NextRequest) {
   try {
     body = await request.json();
   } catch {
-    return badRequest('Invalid JSON body.');
+    return errorResponse(locale, 'invalid_json', 400);
   }
 
   if (!body || typeof body !== 'object' || Array.isArray(body)) {
-    return badRequest('revisionId is required.');
+    return errorResponse(locale, 'home_rollback_revision_required', 400);
   }
 
   const record = body as Record<string, unknown>;
@@ -38,7 +50,7 @@ export async function POST(request: NextRequest) {
       : null;
 
   if (!revisionId) {
-    return badRequest('revisionId is required.');
+    return errorResponse(locale, 'home_rollback_revision_required', 400);
   }
 
   const updatedBy =
@@ -65,7 +77,7 @@ export async function POST(request: NextRequest) {
     });
 
     if (!result) {
-      return NextResponse.json({ ok: false, error: 'Published revision record not found.' }, { status: 404 });
+      return errorResponse(locale, 'home_rollback_revision_not_found', 404);
     }
 
     await recordPageRollback({
@@ -85,20 +97,11 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     if (error instanceof BuilderSnapshotConflictError) {
-      return NextResponse.json(
-        {
-          ok: false,
-          error: 'Snapshot conflict. Reload the latest shared draft before rollback.',
-          conflict: error.conflict,
-        },
-        { status: 409 }
-      );
+      return errorResponse(locale, 'home_rollback_conflict', 409, {
+        conflict: error.conflict,
+      });
     }
 
-    if (error instanceof Error) {
-      return NextResponse.json({ ok: false, error: error.message }, { status: 400 });
-    }
-
-    throw error;
+    return errorResponse(locale, 'home_rollback_failed', 500);
   }
 }

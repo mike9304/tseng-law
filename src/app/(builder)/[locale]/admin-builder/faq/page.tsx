@@ -13,8 +13,13 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   const locale = normalizeLocale(params.locale);
   return buildSeoMetadata({
     locale,
-    title: 'Builder FAQ Admin',
-    description: 'FAQ 앱 질문, 카테고리, 공개 상태와 schema 설정을 관리합니다.',
+    title: locale === 'ko' ? 'FAQ 관리자' : locale === 'zh-hant' ? 'FAQ 管理員' : 'Builder FAQ Admin',
+    description:
+      locale === 'ko'
+        ? 'FAQ 질문, 카테고리, 공개 상태와 schema 설정을 관리합니다.'
+        : locale === 'zh-hant'
+          ? '管理 FAQ 問題、分類、公開狀態與 schema 設定。'
+          : 'Manage FAQ questions, categories, publication state, and schema settings.',
     path: '/admin-builder/faq',
     noindex: true,
   });

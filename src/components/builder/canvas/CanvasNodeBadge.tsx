@@ -2,6 +2,8 @@
 
 import { useShortcutLabels } from '@/components/builder/canvas/hooks/useShortcutLabels';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { currentBuilderLocale } from './canvasNodeUtils';
+import { getCanvasNodeBadgeCopy } from './canvas-shortcuts-copy';
 import { nodeLinkPreviewHref } from './canvasNodeUtils';
 import styles from './CanvasNodeBadge.module.css';
 
@@ -24,35 +26,37 @@ export function CanvasNodeBadge({
   const linkPreview = linkHref && linkHref.length > 16 ? `${linkHref.slice(0, 14)}…` : linkHref;
   const shortcutLabels = useShortcutLabels(['editLink']);
   const editLinkShortcutTitle = shortcutLabels.get('editLink')?.title;
+  const locale = currentBuilderLocale();
+  const copy = getCanvasNodeBadgeCopy(locale as Parameters<typeof getCanvasNodeBadgeCopy>[0]);
 
   return (
     <div className={styles.nodeBadge}>
       <span>{node.kind}</span>
       <strong>· {Math.round(width)}×{Math.round(height)}</strong>
-      {node.locked ? <em>locked</em> : null}
+      {node.locked ? <em className={styles.badgeItem} data-tone="locked">{copy.locked}</em> : null}
       {node.sticky ? (
         <em
-          title={`Pinned ${node.sticky.from === 'bottom' ? 'bottom' : 'top'} +${node.sticky.offset}px`}
-          style={{ color: '#60a5fa' }}
+          className={styles.badgeItem}
+          data-tone="sticky"
+          title={copy.sticky(node.sticky.from === 'bottom' ? 'bottom' : 'top', node.sticky.offset)}
         >
           📌
         </em>
       ) : null}
       {node.anchorName ? (
-        <em title={`Anchor: #${node.anchorName}`} style={{ color: '#34d399' }}>
+        <em className={styles.badgeItem} data-tone="anchor" title={copy.anchor(node.anchorName)}>
           ⚓ {node.anchorName}
         </em>
       ) : null}
-      {animationSummary ? <em title={animationSummary} style={{ color: '#a78bfa' }}>anim</em> : null}
+      {animationSummary ? (
+        <em className={styles.badgeItem} data-tone="animation" title={animationSummary}>{copy.animation}</em>
+      ) : null}
       {linkHref ? (
-        <em
-          title={`Link: ${linkHref}\n클릭하거나 ${editLinkShortcutTitle ?? '단축키'}로 편집`}
-          style={{
-            color: '#fbbf24',
-            cursor: 'pointer',
-            pointerEvents: 'auto',
-            userSelect: 'none',
-          }}
+        <button
+          type="button"
+          className={`${styles.badgeItem} ${styles.linkBadgeButton}`}
+          data-tone="link"
+          title={copy.link(linkHref, editLinkShortcutTitle ?? copy.shortcutFallback)}
           onClick={(event) => {
             event.stopPropagation();
             event.preventDefault();
@@ -72,8 +76,9 @@ export function CanvasNodeBadge({
             event.stopPropagation();
           }}
         >
-          🔗 {linkPreview}
-        </em>
+          <span className={styles.linkBadgeIcon} aria-hidden="true">🔗</span>
+          <span className={styles.linkBadgeText}>{linkPreview}</span>
+        </button>
       ) : null}
     </div>
   );

@@ -3,7 +3,23 @@ import Link from 'next/link';
 import type { Locale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 
-export default function Footer({ locale }: { locale: Locale }) {
+export type FooterLink = {
+  readonly label: string;
+  readonly href: string;
+};
+
+export type FooterLinkColumn = {
+  readonly title: string;
+  readonly links: readonly FooterLink[];
+};
+
+export default function Footer({
+  locale,
+  extraColumns = [],
+}: {
+  locale: Locale;
+  extraColumns?: readonly FooterLinkColumn[];
+}) {
   const footerContent = siteContent[locale].footer;
   const brandName = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
   const officeLabel = locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : 'Offices';
@@ -46,12 +62,26 @@ export default function Footer({ locale }: { locale: Locale }) {
           { label: 'Accessibility', href: '/en/accessibility' },
           { label: 'Sitemap', href: '/sitemap.xml' }
         ];
+  const socialLabels =
+    locale === 'ko'
+      ? { blog: '블로그', youtube: '유튜브', website: '공식 사이트' }
+      : locale === 'zh-hant'
+        ? { blog: '部落格', youtube: 'YouTube', website: '官方網站' }
+        : { blog: 'Blog', youtube: 'YouTube', website: 'Website' };
 
   return (
     <>
       <section className="footer-skyline" aria-hidden>
         <div className="skyline-image">
-          <Image src="/images/footer-ground-skyline-v2.webp" alt="" width={2600} height={778} />
+          <Image
+            src="/images/footer-ground-skyline-v2.webp"
+            alt=""
+            width={2600}
+            height={778}
+            loading="eager"
+            fetchPriority="low"
+            sizes="100vw"
+          />
         </div>
       </section>
       <footer className="site-footer">
@@ -73,14 +103,20 @@ export default function Footer({ locale }: { locale: Locale }) {
               <p className="footer-main-brand">{brandName}</p>
               <p className="footer-main-note">{footerContent.note}</p>
             </div>
-            {footerContent.columns.map((column) => (
+            {[...footerContent.columns, ...extraColumns].map((column) => (
               <nav key={column.title} className="footer-link-column" aria-label={column.title}>
                 <p className="footer-link-title">{column.title}</p>
                 <div className="footer-link-list">
                   {column.links.map((link) => (
-                    <Link key={link.href} href={link.href}>
-                      {link.label}
-                    </Link>
+                    link.href.startsWith('http') || link.href.startsWith('#') ? (
+                      <a key={link.href} href={link.href}>
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link key={link.href} href={link.href}>
+                        {link.label}
+                      </Link>
+                    )
                   ))}
                 </div>
               </nav>
@@ -110,19 +146,19 @@ export default function Footer({ locale }: { locale: Locale }) {
             <div className="footer-social">
               <span className="social-label">{locale === 'ko' ? '팔로우' : locale === 'zh-hant' ? '追蹤我們' : 'Follow'}</span>
               <div className="social-icons">
-                <a className="social-icon" href="https://blog.naver.com/wei_lawyer/223461663913" aria-label="Blog" target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href="https://blog.naver.com/wei_lawyer/223461663913" aria-label={socialLabels.blog} target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <path d="M14 2.5l3.5 3.5L7 16.5l-4.5 1 1-4.5L14 2.5z" />
                     <path d="M12 5l3 3" />
                   </svg>
                 </a>
-                <a className="social-icon" href="https://www.youtube.com/@weilawyer" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href="https://www.youtube.com/@weilawyer" aria-label={socialLabels.youtube} target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <rect x="2" y="4" width="16" height="12" rx="3" />
                     <polygon points="8,7.5 13,10 8,12.5" fill="currentColor" stroke="none" />
                   </svg>
                 </a>
-                <a className="social-icon" href="https://tseng-law.com/" aria-label="Website" target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href="https://tseng-law.com/" aria-label={socialLabels.website} target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <circle cx="10" cy="10" r="8" />
                     <ellipse cx="10" cy="10" rx="3.5" ry="8" />

@@ -42,32 +42,40 @@ import type {
   BuilderPageDatasetSort,
 } from '@/lib/builder/types';
 import type { BuilderPageDatasetBindingPatch } from '@/lib/builder/datasets';
+import {
+  clampVisitorValue,
+  readVisitorScalar,
+  sanitizeVisitorFieldId,
+  type VisitorDatasetQuery,
+} from '@/lib/builder/datasets-visitor-query';
+import {
+  parseVisitorPaginationParams,
+  type VisitorPagination,
+} from '@/lib/builder/datasets-visitor-pagination';
 
-const FILTER_VALUE_MAX_LEN = 120;
+export {
+  buildVisitorQueryString,
+  parseVisitorDatasetQuery,
+  type VisitorDatasetQuery,
+} from '@/lib/builder/datasets-visitor-query';
+export {
+  parseVisitorPaginationParams,
+  sliceVisitorRecords,
+  type VisitorPagination,
+} from '@/lib/builder/datasets-visitor-pagination';
+
 const MAX_VISITOR_FILTERS = 6;
 const MAX_VISITOR_SORTS = 3;
-const PAGE_MIN = 1;
-const PAGE_MAX = 500;
-const PER_PAGE_MIN = 1;
-const PER_PAGE_MAX = 60;
-const PER_PAGE_DEFAULT = 12;
 
-export interface VisitorDatasetQuery {
-  /** `filter[field]=value` form, decoded by the framework. */
-  filter?: Record<string, string | string[] | undefined>;
-  /** Comma-separated list of `field:dir` pairs (`title:asc,date:desc`). */
-  sort?: string | string[];
-  page?: string | string[];
-  perPage?: string | string[];
-  limit?: string | string[];
-  /** Optional operator hint per filter — defaults to `contains`. */
-  filterOp?: Record<string, string | string[] | undefined>;
+export interface VisitorDatasetFieldDefinition {
+  readonly fieldId: string;
+  readonly label: string;
 }
 
-export interface VisitorPagination {
-  page: number;
-  perPage: number;
-  offset: number;
+export interface VisitorDatasetFieldAccess {
+  readonly filterFields: readonly VisitorDatasetFieldDefinition[];
+  readonly sortFields: readonly VisitorDatasetFieldDefinition[];
+  readonly defaultLimit?: number;
 }
 
 export interface VisitorDatasetComposition {
@@ -91,14 +99,17 @@ export function composeVisitorDatasetPatch({
   targetId,
   binding,
   query,
+  fieldAccess,
 }: {
   targetId: BuilderDatasetTargetId;
   binding: BuilderPageDatasetBinding;
   query: VisitorDatasetQuery | null | undefined;
+  fieldAccess?: VisitorDatasetFieldAccess;
 }): VisitorDatasetComposition {
   const definition = getBuilderBindableTarget(targetId);
-  const filterWhitelist = new Set(definition.filterFields.map((field) => field.fieldId));
-  const sortWhitelist = new Set(definition.sortFields.map((field) => field.fieldId));
+  const resolvedFieldAccess = fieldAccess ?? definition;
+  const filterWhitelist = new Set(resolvedFieldAccess.filterFields.map((field) => field.fieldId));
+  const sortWhitelist = new Set(resolvedFieldAccess.sortFields.map((field) => field.fieldId));
 
   const filterPairs = readFilterPairs(query?.filter, query?.filterOp);
   const appliedFilters: BuilderPageDatasetFilter[] = [];
@@ -121,7 +132,9 @@ export function composeVisitorDatasetPatch({
     sortWhitelist,
   );
 
-  const editorLimit = typeof binding.limit === 'number' ? binding.limit : definition.defaultLimit;
+  const editorLimit = typeof binding.limit === 'number'
+    ? binding.limit
+    : resolvedFieldAccess.defaultLimit;
   const pagination = parseVisitorPaginationParams(query, editorLimit);
 
   const patch: BuilderPageDatasetBindingPatch = {
@@ -142,79 +155,6 @@ export function composeVisitorDatasetPatch({
   };
 }
 
-/**
- * Resolve `page` / `perPage` / `limit` from a visitor query into a normalized
- * pagination triple. `perPage` falls back to the editor-authored binding
- * limit so the visitor cannot widen the per-page count beyond what the
- * editor configured.
- */
-export function parseVisitorPaginationParams(
-  query: VisitorDatasetQuery | null | undefined,
-  editorLimit?: number,
-): VisitorPagination {
-  const rawPage = readScalar(query?.page);
-  const rawPerPage = readScalar(query?.perPage) ?? readScalar(query?.limit);
-  const page = clampInt(rawPage, PAGE_MIN, PAGE_MAX, PAGE_MIN);
-  const perPageCeiling = typeof editorLimit === 'number'
-    ? Math.max(PER_PAGE_MIN, Math.min(PER_PAGE_MAX, editorLimit))
-    : PER_PAGE_MAX;
-  const perPage = clampInt(rawPerPage, PER_PAGE_MIN, perPageCeiling, PER_PAGE_DEFAULT);
-  return {
-    page,
-    perPage,
-    offset: (page - 1) * perPage,
-  };
-}
-
-/**
- * Slice the resolved record list to the visitor's pagination window.
- * Mirrors the binding-level limit but is exposed so renderers that already
- * received the full filtered list can compute the visible window plus
- * pagination chrome (prev/next labels, total count).
- */
-export function sliceVisitorRecords<TRecord>(
-  records: readonly TRecord[],
-  pagination: VisitorPagination,
-): { items: TRecord[]; hasPrev: boolean; hasNext: boolean; totalPages: number } {
-  const totalPages = Math.max(1, Math.ceil(records.length / pagination.perPage));
-  const start = pagination.offset;
-  const end = start + pagination.perPage;
-  return {
-    items: records.slice(start, end),
-    hasPrev: pagination.page > 1,
-    hasNext: end < records.length,
-    totalPages,
-  };
-}
-
-/**
- * Build the visitor-facing query string (used by pagination chrome and
- * "clear filter" affordances). Empty/blank values are stripped.
- */
-export function buildVisitorQueryString(input: {
-  filters?: BuilderPageDatasetFilter[];
-  sort?: BuilderPageDatasetSort[];
-  page?: number;
-  perPage?: number;
-}): string {
-  const params = new URLSearchParams();
-  for (const filter of input.filters ?? []) {
-    if (!filter.fieldId || !filter.value) continue;
-    params.append(`filter[${filter.fieldId}]`, filter.value);
-    if (filter.operator && filter.operator !== 'contains') {
-      params.append(`filterOp[${filter.fieldId}]`, filter.operator);
-    }
-  }
-  const sortSegments = (input.sort ?? [])
-    .filter((entry) => entry.fieldId)
-    .map((entry) => `${entry.fieldId}:${entry.direction === 'desc' ? 'desc' : 'asc'}`);
-  if (sortSegments.length > 0) params.set('sort', sortSegments.join(','));
-  if (typeof input.page === 'number' && input.page > 1) params.set('page', String(input.page));
-  if (typeof input.perPage === 'number') params.set('perPage', String(input.perPage));
-  const serialized = params.toString();
-  return serialized ? `?${serialized}` : '';
-}
-
 function readFilterPairs(
   raw: VisitorDatasetQuery['filter'] | undefined,
   operatorRaw: VisitorDatasetQuery['filterOp'] | undefined,
@@ -222,11 +162,11 @@ function readFilterPairs(
   if (!raw) return [];
   const pairs: BuilderPageDatasetFilter[] = [];
   for (const key of Object.keys(raw)) {
-    const fieldId = sanitizeFieldId(key);
+    const fieldId = sanitizeVisitorFieldId(key);
     if (!fieldId) continue;
-    const value = clampValue(readScalar(raw[key]));
+    const value = clampVisitorValue(readVisitorScalar(raw[key]));
     if (!value) continue;
-    const operator = readFilterOperator(readScalar(operatorRaw?.[key]));
+    const operator = readFilterOperator(readVisitorScalar(operatorRaw?.[key]));
     pairs.push({ fieldId, operator, value });
   }
   return pairs;
@@ -246,7 +186,7 @@ function readSortPairs(
   const seen = new Set<string>();
   for (const token of tokens) {
     const [rawField, rawDir] = token.split(':');
-    const fieldId = sanitizeFieldId(rawField);
+    const fieldId = sanitizeVisitorFieldId(rawField);
     if (!fieldId) continue;
     if (!whitelist.has(fieldId)) {
       rejected.push(fieldId);
@@ -278,40 +218,6 @@ function mergeFilters(
   return merged;
 }
 
-function sanitizeFieldId(value: string | null | undefined): string {
-  if (typeof value !== 'string') return '';
-  const trimmed = value.trim();
-  if (!trimmed) return '';
-  if (trimmed.length > 64) return '';
-  if (!/^[A-Za-z0-9_.-]+$/.test(trimmed)) return '';
-  return trimmed;
-}
-
-function clampValue(value: string | null | undefined): string {
-  if (typeof value !== 'string') return '';
-  const trimmed = value.trim();
-  if (!trimmed) return '';
-  return trimmed.slice(0, FILTER_VALUE_MAX_LEN);
-}
-
-function readScalar(input: string | string[] | undefined): string | undefined {
-  if (input === undefined) return undefined;
-  if (Array.isArray(input)) return input.find((entry) => typeof entry === 'string' && entry.length > 0);
-  return input;
-}
-
 function readFilterOperator(input: string | undefined): BuilderDatasetFilterOperator {
   return input === 'equals' ? 'equals' : 'contains';
-}
-
-function clampInt(
-  raw: string | undefined,
-  min: number,
-  max: number,
-  fallback: number,
-): number {
-  if (typeof raw !== 'string') return fallback;
-  const parsed = Number.parseInt(raw, 10);
-  if (!Number.isFinite(parsed)) return fallback;
-  return Math.max(min, Math.min(max, parsed));
 }

@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { ASPECT_RATIOS } from '@/lib/builder/canvas/crop';
+import { getImageEditCopy } from '@/lib/builder/components/image/image-edit-copy';
+import type { Locale } from '@/lib/locales';
 import ModalShell from './ModalShell';
 
 const imageContainerStyle: React.CSSProperties = {
@@ -69,17 +71,20 @@ const confirmButtonStyle: React.CSSProperties = {
 
 export default function CropModal({
   open,
+  locale,
   imageSrc,
   currentAspect,
   onConfirm,
   onClose,
 }: {
   open: boolean;
+  locale?: Locale | string;
   imageSrc: string;
   currentAspect: string;
   onConfirm: (aspect: string) => void;
   onClose: () => void;
 }) {
+  const copy = getImageEditCopy(locale);
   const [selectedAspect, setSelectedAspect] = useState<string>(currentAspect || 'Free');
 
   useEffect(() => {
@@ -96,22 +101,23 @@ export default function CropModal({
 
   return (
     <ModalShell
-      title="Crop Image"
-      description="Choose a preview aspect ratio for this image."
-      ariaLabel="Crop Image"
+      title={copy.dialog.crop.modalTitle}
+      description={copy.dialog.crop.modalDescription}
+      ariaLabel={copy.dialog.crop.modalAriaLabel}
+      closeAriaLabel={copy.dialog.close}
       size="sm"
       onClose={onClose}
       footer={(
         <>
           <button type="button" style={cancelButtonStyle} onClick={onClose}>
-            Cancel
+            {copy.dialog.crop.cancel}
           </button>
           <button
             type="button"
             style={confirmButtonStyle}
             onClick={() => onConfirm(selectedAspect)}
           >
-            Apply
+            {copy.dialog.crop.apply}
           </button>
         </>
       )}
@@ -120,7 +126,7 @@ export default function CropModal({
             {imageSrc ? (
               <div style={{ position: 'relative' }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={imageSrc} alt="Crop preview" style={imageStyle} />
+                <img src={imageSrc} alt={copy.dialog.crop.previewAlt} style={imageStyle} />
                 {ratioValue && (
                   <div
                     style={{
@@ -148,12 +154,12 @@ export default function CropModal({
                 )}
               </div>
             ) : (
-              <span style={{ color: '#94a3b8', fontSize: '0.88rem' }}>No image</span>
+              <span style={{ color: '#94a3b8', fontSize: '0.88rem' }}>{copy.dialog.crop.noImage}</span>
             )}
           </div>
 
           <div style={{ marginTop: 14, fontSize: '0.78rem', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            Aspect Ratio
+            {copy.dialog.crop.aspectRatio}
           </div>
           <div style={ratioRowStyle}>
             {ASPECT_RATIOS.map((ratio) => (
@@ -163,7 +169,7 @@ export default function CropModal({
                 style={ratioButtonStyle(selectedAspect === ratio.label)}
                 onClick={() => setSelectedAspect(ratio.label)}
               >
-                {ratio.label}
+                {copy.dialog.crop.aspectRatioLabels[ratio.key]}
               </button>
             ))}
           </div>

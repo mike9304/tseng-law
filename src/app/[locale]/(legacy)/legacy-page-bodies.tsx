@@ -7,9 +7,12 @@ import FirmIntroductionSection from '@/components/FirmIntroductionSection';
 import ConsultationGuideSection from '@/components/ConsultationGuideSection';
 import PricingCards from '@/components/PricingCards';
 import ReviewBoard from '@/components/ReviewBoard';
+import ColumnsGrid, { type ColumnsGridFilters } from '@/components/ColumnsGrid';
+import AttorneyMediaHubView from '@/components/AttorneyMediaHubView';
 import LegalPageSections from '@/components/LegalPageSections';
 import ServicesBento from '@/components/ServicesBento';
 import FAQAccordion from '@/components/FAQAccordion';
+import VideoChannel from '@/components/VideoChannel';
 import JsonLd from '@/components/JsonLd';
 import { pageCopy } from '@/data/page-copy';
 import { faqContent } from '@/data/faq-content';
@@ -21,7 +24,24 @@ import {
   buildPersonJsonLd,
 } from '@/lib/seo';
 import type { Locale } from '@/lib/locales';
+import type { ColumnPost } from '@/lib/columns';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
+
+type ColumnsSearchParams = Record<string, string | string[] | undefined>;
+
+function firstSearchParamValue(value: string | string[] | undefined): string | undefined {
+  return Array.isArray(value) ? value[0] : value;
+}
+
+function toColumnGridFilters(searchParams?: ColumnsSearchParams): ColumnsGridFilters {
+  return {
+    category: firstSearchParamValue(searchParams?.category),
+    author: firstSearchParamValue(searchParams?.author),
+    q: firstSearchParamValue(searchParams?.q),
+    year: firstSearchParamValue(searchParams?.year),
+    month: firstSearchParamValue(searchParams?.month),
+  };
+}
 
 export function AboutLegacyPageBody({ locale }: { locale: Locale }) {
   const copy = pageCopy[locale].about;
@@ -176,6 +196,55 @@ export function ReviewsLegacyPageBody({ locale }: { locale: Locale }) {
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       <ReviewBoard locale={locale} />
+    </>
+  );
+}
+
+export function ColumnsLegacyPageBody({
+  locale,
+  posts,
+  searchParams,
+  visibleBlockIds,
+}: {
+  locale: Locale;
+  posts: ColumnPost[];
+  searchParams?: ColumnsSearchParams;
+  visibleBlockIds?: string[];
+}) {
+  const copy = pageCopy[locale].insights;
+  const headerLabel: Record<Locale, string> = {
+    ko: '칼럼',
+    'zh-hant': '專欄',
+    en: 'COLUMNS',
+  };
+  const showHero = isTemplateBlockVisible(visibleBlockIds, 'columns.list.hero');
+  const showRepeater = isTemplateBlockVisible(visibleBlockIds, 'columns.list.repeater');
+
+  return (
+    <>
+      {showHero ? (
+        <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description} />
+      ) : null}
+      {showRepeater ? (
+        <ColumnsGrid locale={locale} posts={posts} initialFilters={toColumnGridFilters(searchParams)} />
+      ) : null}
+    </>
+  );
+}
+
+export function VideosLegacyPageBody({
+  columnCount,
+  locale,
+}: {
+  columnCount: number;
+  locale: Locale;
+}) {
+  const copy = pageCopy[locale].videos;
+  return (
+    <>
+      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+      <AttorneyMediaHubView locale={locale} columnCount={columnCount} />
+      <VideoChannel locale={locale} />
     </>
   );
 }

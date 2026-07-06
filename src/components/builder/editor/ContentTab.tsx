@@ -3,10 +3,13 @@
 import { getComponent } from '@/lib/builder/components/registry';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import type { LinkPickerContext } from '@/components/builder/editor/LinkPicker';
+import type { Locale } from '@/lib/locales';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
+import { getContentTabCopy } from './content-tab-copy';
 
 export default function ContentTab({
   node,
+  locale,
   disabled = false,
   onUpdateContent,
   onRequestAssetLibrary,
@@ -14,6 +17,7 @@ export default function ContentTab({
   linkPickerContext,
 }: {
   node: BuilderCanvasNode;
+  locale?: Locale;
   disabled?: boolean;
   onUpdateContent: (content: Record<string, unknown>) => void;
   onRequestAssetLibrary?: () => void;
@@ -22,11 +26,12 @@ export default function ContentTab({
 }) {
   const component = getComponent(node.kind);
   const Inspector = component?.Inspector;
+  const copy = getContentTabCopy(locale ?? 'ko');
 
   if (!Inspector) {
     return (
       <p className={styles.inspectorHint}>
-        {node.kind} 은 아직 content inspector 가 연결되지 않았습니다.
+        {copy.missingInspectorMessage(node.kind)}
       </p>
     );
   }
@@ -35,6 +40,7 @@ export default function ContentTab({
     <div className={styles.inspectorFormStack} data-inspector-content-adapter="true">
       <Inspector
         node={node}
+        locale={locale}
         onUpdate={onUpdateContent}
         disabled={disabled}
         onRequestAssetLibrary={onRequestAssetLibrary}

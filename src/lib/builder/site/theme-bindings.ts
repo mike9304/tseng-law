@@ -1,4 +1,3 @@
-import type { CSSProperties } from 'react';
 import type {
   BuilderCanvasNode,
   BuilderCanvasNodeStyle,
@@ -23,44 +22,6 @@ export interface ThemeBindingIndicator {
   label: string;
   tone: ThemeBindingTone;
   title: string;
-}
-
-const BADGE_TONE_STYLES: Record<ThemeBindingTone, Pick<CSSProperties, 'background' | 'borderColor' | 'color'>> = {
-  linked: {
-    background: '#eff6ff',
-    borderColor: '#bfdbfe',
-    color: '#1d4ed8',
-  },
-  detached: {
-    background: '#f8fafc',
-    borderColor: '#cbd5e1',
-    color: '#475569',
-  },
-  custom: {
-    background: '#fffbeb',
-    borderColor: '#fde68a',
-    color: '#92400e',
-  },
-};
-
-export function getThemeBindingBadgeStyle(tone: ThemeBindingTone): CSSProperties {
-  return {
-    display: 'inline-flex',
-    alignItems: 'center',
-    width: 'fit-content',
-    minHeight: 18,
-    padding: '2px 7px',
-    border: `1px solid ${BADGE_TONE_STYLES[tone].borderColor}`,
-    borderRadius: 999,
-    background: BADGE_TONE_STYLES[tone].background,
-    color: BADGE_TONE_STYLES[tone].color,
-    fontSize: '0.62rem',
-    fontWeight: 800,
-    letterSpacing: 0,
-    lineHeight: 1,
-    textTransform: 'uppercase',
-    whiteSpace: 'nowrap',
-  };
 }
 
 export function getColorBindingIndicator(value: BuilderColorValue | undefined): ThemeBindingIndicator {

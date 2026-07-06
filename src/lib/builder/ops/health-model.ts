@@ -8,10 +8,7 @@
 
 export interface OpsHealthSnapshot {
   gatheredAt: string;
-  deploys: {
-    lastDeployAt?: string;
-    status: 'ok' | 'unknown';
-  };
+  deploys: OpsDeployHealth;
   cache: {
     runtimeCacheKeys: number;
     lastClearedAt?: string;
@@ -30,10 +27,22 @@ export interface OpsHealthSnapshot {
   };
 }
 
+export type OpsDeploySource = 'vercel' | 'local-build' | 'unknown';
+
+export interface OpsDeployHealth {
+  status: 'ok' | 'unknown';
+  source: OpsDeploySource;
+  lastDeployAt?: string;
+  environment?: string;
+  url?: string;
+  gitRef?: string;
+  gitCommitSha?: string;
+}
+
 export function emptyHealthSnapshot(now: string = new Date().toISOString()): OpsHealthSnapshot {
   return {
     gatheredAt: now,
-    deploys: { status: 'unknown' },
+    deploys: { status: 'unknown', source: 'unknown' },
     cache: { runtimeCacheKeys: 0 },
     storage: { backupCount: 0 },
     logs: { last24hCount: 0, errorCount: 0 },

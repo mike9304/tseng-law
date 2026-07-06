@@ -6,17 +6,27 @@ import type { BuilderTheme } from '@/lib/builder/site/types';
 import { resolveThemeColor } from '@/lib/builder/site/theme';
 import { resolveFormInputVariantStyle } from '@/lib/builder/site/component-variants';
 import { useFormFieldRuntime } from '@/lib/builder/forms/render-helpers';
+import type { Locale } from '@/lib/locales';
+import {
+  FORM_TEXTAREA_KO_DEFAULTS,
+  getFormControlsCopy,
+  localizedFormControlText,
+} from '../form/form-controls-copy';
 
 export default function FormTextareaElement({
   node,
   theme,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderFormTextareaCanvasNode;
   theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getFormControlsCopy(locale);
+  const label = localizedFormControlText(c.label, copy.fieldDefaults.textareaLabel, FORM_TEXTAREA_KO_DEFAULTS.label);
   const [focused, setFocused] = useState(false);
   const field = useFormFieldRuntime({ nodeId: node.id, name: c.name, showIf: c.showIf });
   const textColor = resolveThemeColor({ kind: 'token', token: 'text' }, theme) ?? '#0f172a';
@@ -39,7 +49,7 @@ export default function FormTextareaElement({
         opacity: mode !== 'published' && c.showIf ? 0.72 : 1,
       }}
     >
-      {c.label ? (
+      {label ? (
         <label
           style={{
             fontSize: 13,
@@ -48,7 +58,7 @@ export default function FormTextareaElement({
           }}
           htmlFor={`field-${node.id}`}
         >
-          {c.label}
+          {label}
           {c.required ? <span style={{ color: '#dc2626', marginLeft: 4 }}>*</span> : null}
         </label>
       ) : null}
@@ -61,7 +71,7 @@ export default function FormTextareaElement({
         minLength={c.minLength}
         maxLength={c.maxLength}
         rows={c.rows}
-        data-builder-field-label={c.label}
+        data-builder-field-label={label}
         data-builder-error-message={c.errorMessage}
         aria-invalid={field.error ? true : undefined}
         aria-describedby={field.error ? `field-${node.id}-error` : undefined}

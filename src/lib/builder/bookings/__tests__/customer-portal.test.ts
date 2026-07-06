@@ -97,9 +97,20 @@ describe('customer booking portal', () => {
       staffName: '담당 변호사',
       status: 'confirmed',
     });
-    expect(portal.upcoming[0]).not.toHaveProperty('managePath');
+    expect(portal.upcoming[0].managePath).toMatch(/^\/ko\/bookings\/manage\/.+$/);
     expect(portal.upcoming[0]).not.toHaveProperty('paymentIntentId');
     expect(portal.upcoming[0]).not.toHaveProperty('billingDocuments');
     expect(portal.upcoming[0]).not.toHaveProperty('manualPayments');
+  });
+
+  it('matches bookings against prior email aliases when the member changes email', async () => {
+    fixtures.bookings = [
+      booking({ bookingId: 'bk-alias', customer: { name: 'Client', email: 'old@example.com', locale: 'ko' } }),
+      booking({ bookingId: 'bk-ignored', customer: { name: 'Other', email: 'other@example.com', locale: 'ko' } }),
+    ];
+
+    const portal = await getCustomerBookingPortal('new@example.com', 'ko', '2027-01-01T00:00:00.000Z', ['old@example.com']);
+    expect(portal.email).toBe('new@example.com');
+    expect(portal.upcoming.map((item) => item.bookingId)).toEqual(['bk-alias']);
   });
 });

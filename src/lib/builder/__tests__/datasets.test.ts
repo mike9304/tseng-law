@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { ColumnPost } from '@/lib/columns';
+import type { BuilderCmsCollection } from '@/lib/builder/cms-types';
 import {
   createDefaultBuilderPageDatasets,
   getBuilderBindableTargets,
@@ -7,6 +8,7 @@ import {
   readBuilderDatasetRepeaterItems,
   replaceBuilderPageDatasetBinding,
   replaceBuilderPageDatasetLimit,
+  resolveAttorneyProfileDatasetItems,
   resolveServicesDatasetItems,
 } from '@/lib/builder/datasets';
 
@@ -42,6 +44,7 @@ describe('builder datasets', () => {
     expect(getBuilderBindableTargets('home').map((target) => target.targetId)).toEqual([
       'home.insights.feed',
       'home.services.list',
+      'home.attorney.profile',
     ]);
     expect(getBuilderBindableTargets('home')[0]?.bindableFields.map((field) => field.fieldId)).toEqual(
       expect.arrayContaining(['title', 'featuredImage', 'href'])
@@ -55,6 +58,9 @@ describe('builder datasets', () => {
     );
     expect(getBuilderBindableTargets('home')[1]?.bindableFields.map((field) => field.fieldId)).toEqual(
       expect.arrayContaining(['title', 'description', 'href'])
+    );
+    expect(getBuilderBindableTargets('home')[2]?.bindableFields.map((field) => field.fieldId)).toEqual(
+      expect.arrayContaining(['name', 'role', 'image', 'href'])
     );
 
     expect(createDefaultBuilderPageDatasets('home')).toMatchObject([
@@ -71,6 +77,13 @@ describe('builder datasets', () => {
         collectionId: 'service-areas',
         sort: [],
         limit: 6,
+      },
+      {
+        targetId: 'home.attorney.profile',
+        sectionKey: 'home.attorney',
+        collectionId: 'attorney-profiles',
+        sort: [],
+        limit: 1,
       },
     ]);
   });
@@ -97,6 +110,40 @@ describe('builder datasets', () => {
       slug: 'taiwan-company-establishment-basics',
       title: '대만 회사설립 기초편',
     });
+  });
+
+  it('filters source runtime service items by slug from href', () => {
+    const configuredDatasets = replaceBuilderPageDatasetBinding(
+      createDefaultBuilderPageDatasets('home'),
+      'home',
+      'home.services.list',
+      {
+        filters: [{ fieldId: 'slug', operator: 'equals', value: 'source-service' }],
+        sort: [],
+        limit: 1,
+      },
+    );
+
+    const items = resolveServicesDatasetItems(
+      { pageKey: 'home', datasets: configuredDatasets },
+      'ko',
+      posts,
+      [
+        {
+          title: 'Source service',
+          description: 'Source service description',
+          href: '/ko/services/source-service',
+        },
+      ],
+    );
+
+    expect(items).toEqual([
+      {
+        title: 'Source service',
+        description: 'Source service description',
+        href: '/ko/services/source-service',
+      },
+    ]);
   });
 
   it('applies dataset filters and sort order before runtime limits', () => {
@@ -160,8 +207,19 @@ describe('builder datasets', () => {
     expect(overviews.map((overview) => overview.targetId)).toEqual([
       'home.insights.feed',
       'home.services.list',
+      'home.attorney.profile',
     ]);
     expect(overviews.find((overview) => overview.targetId === 'home.services.list')).toMatchObject({
+      defaultCollectionId: 'service-areas',
+      modeOptions: ['list'],
+      filterFields: expect.arrayContaining([
+        expect.objectContaining({ fieldId: 'title' }),
+        expect.objectContaining({ fieldId: 'href' }),
+      ]),
+      sortFields: expect.arrayContaining([
+        expect.objectContaining({ fieldId: 'title' }),
+        expect.objectContaining({ fieldId: 'href' }),
+      ]),
       currentBinding: {
         collectionId: 'service-areas',
         limit: 6,
@@ -181,10 +239,86 @@ describe('builder datasets', () => {
         }),
       ]),
     });
+    expect(overviews.find((overview) => overview.targetId === 'home.attorney.profile')).toMatchObject({
+      defaultCollectionId: 'attorney-profiles',
+      modeOptions: ['list'],
+      currentBinding: {
+        collectionId: 'attorney-profiles',
+        limit: 1,
+      },
+      sampleRecords: expect.arrayContaining([
+        expect.objectContaining({
+          recordId: 'wei-tseng',
+          primaryLabel: '증준외 변호사',
+          routePath: '/ko/lawyers/wei-tseng',
+        }),
+      ]),
+    });
+  });
+
+  it('prefers published cms collections for dataset preview records', () => {
+    const document = {
+      pageKey: 'home' as const,
+      datasets: createDefaultBuilderPageDatasets('home'),
+    };
+    const cmsCollections: BuilderCmsCollection[] = [
+      {
+        collectionId: 'service-areas',
+        name: 'Service Areas',
+        slug: 'service-areas',
+        description: 'CMS service areas',
+        localized: true,
+        fields: [
+          { fieldId: 'field-slug', key: 'slug', label: 'Slug', type: 'slug', localized: false, repeated: false, required: true, unique: true },
+          { fieldId: 'field-title', key: 'title', label: 'Title', type: 'text', localized: false, repeated: false, required: true },
+          { fieldId: 'field-description', key: 'description', label: 'Description', type: 'text', localized: false, repeated: false, required: false },
+          { fieldId: 'field-key-points', key: 'keyPoints', label: 'Key points', type: 'string-list', localized: false, repeated: true, required: false },
+          { fieldId: 'field-column-slugs', key: 'columnSlugs', label: 'Related columns', type: 'string-list', localized: false, repeated: true, required: false },
+        ],
+        indexes: [],
+        records: [
+          {
+            recordId: 'cms-service-preview',
+            status: 'published',
+            locale: 'ko',
+            fields: {
+              slug: 'cms-service-preview',
+              title: 'CMS 서비스 미리보기',
+              description: 'CMS service preview description',
+              keyPoints: ['CMS key point'],
+              columnSlugs: ['taiwan-company-establishment-basics'],
+            },
+            createdAt: '2026-05-30T00:00:00.000Z',
+            updatedAt: '2026-05-30T00:00:00.000Z',
+          },
+        ],
+        permissions: { read: ['public'], create: ['staff'], update: ['staff'], delete: ['staff'] },
+        createdAt: '2026-05-30T00:00:00.000Z',
+        updatedAt: '2026-05-30T00:00:00.000Z',
+      } as BuilderCmsCollection,
+    ];
+
+    const overviews = readBuilderPageDatasetOverviews('home', document, 'ko', posts, { cmsCollections });
+
+    expect(overviews.find((overview) => overview.targetId === 'home.services.list')).toMatchObject({
+      sampleRecords: expect.arrayContaining([
+        expect.objectContaining({
+          recordId: 'cms-service-preview',
+          primaryLabel: 'CMS 서비스 미리보기',
+          secondaryLabel: expect.stringContaining('CMS service preview description'),
+        }),
+      ]),
+      repeaterItems: expect.arrayContaining([
+        expect.objectContaining({
+          itemId: 'cms-service-preview',
+          title: 'CMS 서비스 미리보기',
+        }),
+      ]),
+    });
   });
 
   it('projects any dataset target into generic repeater preview items', () => {
-    const [insightsBinding, servicesBinding] = createDefaultBuilderPageDatasets('home');
+    const [insightsBinding, servicesBinding, attorneyBinding] = createDefaultBuilderPageDatasets('home');
 
     expect(
       readBuilderDatasetRepeaterItems('home.insights.feed', insightsBinding!, 'ko', posts)[0]
@@ -201,5 +335,35 @@ describe('builder datasets', () => {
       title: '투자·법인설립',
       href: '/ko/services/investment',
     });
+
+    expect(
+      readBuilderDatasetRepeaterItems('home.attorney.profile', attorneyBinding!, 'ko', posts)[0]
+    ).toMatchObject({
+      itemId: 'wei-tseng',
+      title: '증준외 변호사',
+      href: '/ko/lawyers/wei-tseng',
+    });
+  });
+
+  it('applies attorney profile dataset filters to profile items', () => {
+    const configuredDatasets = replaceBuilderPageDatasetBinding(
+      createDefaultBuilderPageDatasets('home'),
+      'home',
+      'home.attorney.profile',
+      {
+        filters: [{ fieldId: 'slug', operator: 'equals', value: 'wei-tseng' }],
+        limit: 1,
+      }
+    );
+
+    const items = resolveAttorneyProfileDatasetItems({ pageKey: 'home', datasets: configuredDatasets }, 'ko');
+
+    expect(items).toEqual([
+      expect.objectContaining({
+        slug: 'wei-tseng',
+        name: '증준외 변호사',
+        href: '/ko/lawyers/wei-tseng',
+      }),
+    ]);
   });
 });

@@ -3,13 +3,29 @@ import { notFound } from 'next/navigation';
 import BuilderCollectionWorkspaceShell from '@/components/builder/BuilderCollectionWorkspaceShell';
 import {
   isBuilderCollectionId,
-  readBuilderCollectionDetail,
+  readBuilderCollectionDetailForSite,
 } from '@/lib/builder/cms';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { readBuilderSiteOverview } from '@/lib/builder/site';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
+
+const collectionCopy: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '빌더 컬렉션 세부 정보',
+    description: '호정 빌더 안의 읽기 전용 컬렉션 상세 화면입니다.',
+  },
+  'zh-hant': {
+    title: '建構器集合詳細資料',
+    description: '昊鼎建構器中的唯讀集合詳細頁。',
+  },
+  en: {
+    title: 'Builder Collection Detail',
+    description: 'Read-only collection detail inside the Hojeong builder.',
+  },
+};
 
 export function generateMetadata({
   params,
@@ -17,10 +33,11 @@ export function generateMetadata({
   params: { locale: Locale; collectionId: string };
 }): Metadata {
   const locale = normalizeLocale(params.locale);
+  const copy = collectionCopy[locale];
   return buildSeoMetadata({
     locale,
-    title: 'Builder Collection Detail',
-    description: 'Read-only collection detail inside the Hojeong builder.',
+    title: copy.title,
+    description: copy.description,
     path: `/builder/collections/${params.collectionId}`,
     noindex: true,
   });
@@ -38,7 +55,7 @@ export default async function BuilderCollectionDetailPage({
 
   const [overview, detail] = await Promise.all([
     readBuilderSiteOverview(locale),
-    Promise.resolve(readBuilderCollectionDetail(params.collectionId, locale)),
+    readBuilderCollectionDetailForSite(DEFAULT_BUILDER_SITE_ID, params.collectionId, locale),
   ]);
 
   return <BuilderCollectionWorkspaceShell locale={locale} overview={overview} detail={detail} />;

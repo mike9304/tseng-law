@@ -55,6 +55,10 @@ export default function BuilderFlexDevPage({
     cookieConsent: null,
     headerCanvas: null,
     footerCanvas: null,
+    datasetPreviewTargets: [],
+    columnPosts: [],
+    faqCategories: [],
+    faqItems: [],
   };
 
   return <PublishedSitePageView resolved={resolved} />;

@@ -343,7 +343,12 @@ function extractBuilderDynamicTemplateDraftSelectedRecordId(input: unknown): str
 }
 
 function resolveBuilderDynamicTemplateDraftStore(): BuilderDynamicTemplateDraftStore {
-  if (process.env.BLOB_READ_WRITE_TOKEN?.trim()) {
+  // Honor the same local-backend override as the site document store so QA
+  // harnesses never write template drafts to the production Blob store.
+  if (
+    process.env.BLOB_READ_WRITE_TOKEN?.trim()
+    && process.env.BUILDER_SITE_BACKEND !== 'local'
+  ) {
     return createBlobBuilderDynamicTemplateDraftStore();
   }
 

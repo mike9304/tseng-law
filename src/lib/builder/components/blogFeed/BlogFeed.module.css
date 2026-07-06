@@ -7,6 +7,148 @@
   container-type: inline-size;
 }
 
+.archiveRoot {
+  height: auto;
+  min-height: 100%;
+}
+
+.archiveRoot .feedSurface {
+  height: auto;
+}
+
+.archiveControls {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.archiveSearch {
+  display: grid;
+  gap: 10px;
+}
+
+.archiveSearchLabel {
+  color: #0f172a;
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.archiveSearchRow {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) auto auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.archiveSearchInput {
+  width: 100%;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 0 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  font: inherit;
+  outline: none;
+}
+
+.archiveSearchInput:focus-visible {
+  border-color: #2d5c48;
+  box-shadow: 0 0 0 3px rgba(45, 92, 72, 0.14);
+}
+
+.archiveButton,
+.archiveFilterButton,
+.archiveLoadMore {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2d5c48;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.archiveButton {
+  padding: 0 16px;
+  background: #2d5c48;
+  color: #fff;
+}
+
+.archiveButtonSecondary {
+  border-color: #cbd5e1;
+  background: #fff;
+  color: #334155;
+}
+
+.archiveButton:hover,
+.archiveLoadMore:hover {
+  background: #24483a;
+  border-color: #24483a;
+}
+
+.archiveButtonSecondary:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.archiveStatus {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.archiveFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.archiveFilterButton {
+  padding: 0 14px;
+  background: #fff;
+  color: #334155;
+}
+
+.archiveFilterButton:hover,
+.archiveFilterButtonActive {
+  border-color: #2d5c48;
+  background: rgba(45, 92, 72, 0.1);
+  color: #1f3f32;
+}
+
+.archivePagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.archiveLoadMore {
+  gap: 8px;
+  padding: 0 18px;
+  background: #2d5c48;
+  color: #fff;
+}
+
+.archiveLoadMoreMeta {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.82rem;
+}
+
 .feedSurface {
   display: grid;
   width: 100%;
@@ -334,6 +476,21 @@
 }
 
 @container (max-width: 760px) {
+  .archiveSearchRow {
+    grid-template-columns: 1fr;
+  }
+
+  .archiveButton,
+  .archiveFilterButton,
+  .archiveLoadMore {
+    width: 100%;
+  }
+
+  .archiveFilters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .layoutGrid .feedSurface,
   .layoutFeatured .feedSurface {
     grid-template-columns: 1fr;
@@ -365,5 +522,16 @@
 
   .cardHero .title {
     font-size: 1.16rem;
+  }
+}
+
+@container (min-width: 641px) and (max-width: 900px) {
+  .archiveRoot.layoutGrid .feedSurface,
+  .archiveRoot.layoutFeatured .feedSurface {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .archiveRoot.layoutMasonry .feedSurface {
+    column-count: 2;
   }
 }

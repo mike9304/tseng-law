@@ -12,11 +12,18 @@ import type { PageTemplate } from '@/lib/builder/templates/types';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { resolveCanvasNodeAbsoluteRect } from '@/lib/builder/canvas/tree';
 import { getTemplatePalette } from '@/lib/builder/templates/design-system';
+import type { Locale } from '@/lib/locales';
 import {
   buildThumbnailKey,
   getCachedThumbnail,
   setCachedThumbnail,
 } from './template-thumbnail-cache';
+import {
+  getPageTemplatePageTypeDisplayLabel,
+  getPageTemplatePreviewName,
+  getPageTemplateQualityLabel,
+  getPageTemplateStyleDisplayLabel,
+} from './SandboxCatalogPanel.helpers';
 
 const MAX_RENDERED_NODES = 60;
 type ThumbnailTone = 'light' | 'dark' | 'preview';
@@ -27,6 +34,7 @@ interface Props {
   height?: number;
   tone?: ThumbnailTone;
   eager?: boolean;
+  locale?: Locale;
 }
 
 function getThumbnailSource(template: PageTemplate): string | null {
@@ -40,7 +48,13 @@ function isContainerNode(node: BuilderCanvasNode): boolean {
   return node.kind === 'container' || node.kind === 'section' || node.kind === 'composite';
 }
 
-function renderThumbnail(template: PageTemplate, width: number, height: number, tone: ThumbnailTone): ReactElement {
+function renderThumbnail(
+  template: PageTemplate,
+  width: number,
+  height: number,
+  tone: ThumbnailTone,
+  locale: Locale,
+): ReactElement {
   const document = template.document;
   const palette = getTemplatePalette(template.paletteKey);
   const thumbnailSource = getThumbnailSource(template);
@@ -59,6 +73,11 @@ function renderThumbnail(template: PageTemplate, width: number, height: number, 
   const imageGradient = `linear-gradient(135deg, ${palette.surfaceAlt} 0%, ${palette.accentSoft} 48%, ${palette.accent} 100%)`;
   const glow = `radial-gradient(circle at 80% 12%, ${palette.accent}55 0%, ${palette.accent}00 60%)`;
   const toneOverlay = tone === 'dark' ? 'rgba(15, 23, 42, 0.26)' : tone === 'preview' ? 'rgba(255,255,255,0.08)' : 'transparent';
+  const previewName = getPageTemplatePreviewName(template, locale);
+  const meta = [
+    template.visualStyle ? getPageTemplateStyleDisplayLabel(template.visualStyle, locale) : null,
+    template.pageType ? getPageTemplatePageTypeDisplayLabel(template.pageType, locale) : null,
+  ].filter(Boolean).join(' / ');
 
   return (
     <div
@@ -112,6 +131,7 @@ function renderThumbnail(template: PageTemplate, width: number, height: number, 
             else if (node.kind === 'button' || node.kind === 'form-submit') background = palette.accent;
             else if (node.kind === 'heading') background = palette.ink;
             else if (node.kind === 'text') background = palette.mutedInk;
+            else if (node.kind === 'codeBlock') background = palette.ink;
             else if (node.kind === 'divider' || node.kind === 'spacer') background = palette.line;
             else if (node.kind === 'icon') background = palette.accent;
             else if (String(node.kind).startsWith('form')) background = palette.accentSoft;
@@ -155,9 +175,9 @@ function renderThumbnail(template: PageTemplate, width: number, height: number, 
       >
         <span style={{ width: 30, height: 4, flexShrink: 0, borderRadius: 2, background: palette.accent }} />
         <div style={{ minWidth: 0, overflow: 'hidden' }}>
-          <div style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{template.name}</div>
+          <div style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{previewName}</div>
           <div style={{ fontSize: 7.5, fontWeight: 600, opacity: 0.72 }}>
-            {[template.visualStyle, template.pageType].filter(Boolean).join(' / ')}
+            {meta}
           </div>
         </div>
       </div>
@@ -176,7 +196,7 @@ function renderThumbnail(template: PageTemplate, width: number, height: number, 
             letterSpacing: '0.05em',
           }}
         >
-          PREMIUM
+          {getPageTemplateQualityLabel(template, locale).toLocaleUpperCase(locale)}
         </div>
       ) : null}
     </div>
@@ -189,6 +209,7 @@ export default function TemplateThumbnailRenderer({
   height = 160,
   tone = 'light',
   eager = false,
+  locale = 'ko',
 }: Props) {
   const rootRef = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(eager);
@@ -215,13 +236,13 @@ export default function TemplateThumbnailRenderer({
 
   const content = useMemo(() => {
     if (!visible) return null;
-    const key = buildThumbnailKey(width, height, tone);
+    const key = buildThumbnailKey(width, height, tone, locale);
     const cached = getCachedThumbnail(template, key);
     if (cached) return cached;
-    const element = renderThumbnail(template, width, height, tone);
+    const element = renderThumbnail(template, width, height, tone, locale);
     setCachedThumbnail(template, key, element);
     return element;
-  }, [height, template, tone, visible, width]);
+  }, [height, locale, template, tone, visible, width]);
 
   return (
     <div

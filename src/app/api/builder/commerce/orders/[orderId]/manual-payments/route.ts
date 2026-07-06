@@ -1,10 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  getCommerceOrdersApiErrorPayload,
+  type CommerceOrdersApiErrorCode,
+} from '@/lib/builder/commerce/orders-api-copy';
 import { recordOrderManualPayment } from '@/lib/builder/commerce/orders-engine';
 import { queueBillingPaymentReceivedNotification, queueOrderUpdatedNotification } from '@/lib/builder/commerce/notifications-engine';
 import { runOrderBillingAutomation } from '@/lib/builder/billing-document-automation';
 import { getCurrentBillingInvoice } from '@/lib/builder/billing-documents';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -18,15 +23,40 @@ const manualPaymentSchema = z.object({
   idempotencyKey: z.string().trim().max(160).optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+const manualPaymentErrorCodes = new Set<CommerceOrdersApiErrorCode>([
+  'order_not_found',
+  'manual_payment_amount_invalid',
+  'manual_payment_exceeds_balance',
+  'order_not_manual_invoice',
+  'order_refund_locked',
+  'order_already_paid',
+  'manual_payment_failed',
+]);
+
+function manualPaymentErrorCode(error?: string): CommerceOrdersApiErrorCode {
+  return manualPaymentErrorCodes.has(error as CommerceOrdersApiErrorCode)
+    ? error as CommerceOrdersApiErrorCode
+    : 'manual_payment_failed';
+}
+
+function errorResponse(
+  locale: Locale,
+  errorCode: CommerceOrdersApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getCommerceOrdersApiErrorPayload(locale, errorCode), ...extras },
+    { status },
   );
 }
 
-function errorStatus(error?: string): number {
-  switch (error) {
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
+function errorStatus(errorCode: CommerceOrdersApiErrorCode): number {
+  switch (errorCode) {
     case 'order_not_found':
       return 404;
     case 'manual_payment_amount_invalid':
@@ -41,6 +71,7 @@ function errorStatus(error?: string): number {
 }
 
 export async function POST(request: NextRequest, { params }: { params: { orderId: string } }) {
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
@@ -51,7 +82,8 @@ export async function POST(request: NextRequest, { params }: { params: { orderId
       actor: 'admin',
     });
     if (!result.order || !result.manualPayment) {
-      return NextResponse.json({ ok: false, error: result.error ?? 'manual_payment_failed' }, { status: errorStatus(result.error) });
+      const errorCode = manualPaymentErrorCode(result.error);
+      return errorResponse(errorLocale, errorCode, errorStatus(errorCode));
     }
 
     let order = result.order;
@@ -88,9 +120,9 @@ export async function POST(request: NextRequest, { params }: { params: { orderId
     }
     return NextResponse.json({ ok: true, order, manualPayment: result.manualPayment });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
-    if (error instanceof SyntaxError) return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
+    if (error instanceof ZodError) return validationError(errorLocale, error);
+    if (error instanceof SyntaxError) return errorResponse(errorLocale, 'invalid_json', 400);
     console.error('[builder/commerce/orders/:id/manual-payments] POST failed:', error);
-    return NextResponse.json({ ok: false, error: 'manual_payment_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'manual_payment_failed', 500);
   }
 }

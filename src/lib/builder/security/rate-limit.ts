@@ -8,6 +8,7 @@
  * Limits:
  * - Publish: 10 per minute
  * - Asset upload: 30 per minute
+ * - Draft autosave: 180 per minute
  * - General mutation: 60 per minute
  */
 
@@ -160,14 +161,25 @@ export function resetRateLimitStore(): void {
   store.clear();
 }
 
+// QA harnesses drive every browser mutation from one IP (127.0.0.1), so the
+// per-IP buckets are env-tunable; production keeps the defaults.
+function limitFromEnv(name: string, fallback: number): number {
+  const raw = Number(process.env[name]);
+  return Number.isFinite(raw) && raw > 0 ? Math.trunc(raw) : fallback;
+}
+
 export function checkPublishRateLimit(ip: string): Promise<RateLimitResult> {
-  return checkRateLimit(`publish:${ip}`, 10, 60_000);
+  return checkRateLimit(`publish:${ip}`, limitFromEnv('BUILDER_PUBLISH_RATE_LIMIT', 10), 60_000);
 }
 
 export function checkAssetUploadRateLimit(ip: string): Promise<RateLimitResult> {
-  return checkRateLimit(`asset:${ip}`, 30, 60_000);
+  return checkRateLimit(`asset:${ip}`, limitFromEnv('BUILDER_ASSET_RATE_LIMIT', 30), 60_000);
+}
+
+export function checkDraftSaveRateLimit(ip: string): Promise<RateLimitResult> {
+  return checkRateLimit(`draft:${ip}`, limitFromEnv('BUILDER_DRAFT_RATE_LIMIT', 180), 60_000);
 }
 
 export function checkMutationRateLimit(ip: string): Promise<RateLimitResult> {
-  return checkRateLimit(`mutation:${ip}`, 60, 60_000);
+  return checkRateLimit(`mutation:${ip}`, limitFromEnv('BUILDER_MUTATION_RATE_LIMIT', 60), 60_000);
 }

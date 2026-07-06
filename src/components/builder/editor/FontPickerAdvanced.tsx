@@ -10,15 +10,24 @@ import {
   type KeyboardEvent as ReactKeyboardEvent,
 } from 'react';
 import { FONT_CATALOG, buildGoogleFontsUrl, fontFamilyCSS, type FontOption } from '@/lib/builder/canvas/fonts';
+import type { Locale } from '@/lib/locales';
 import { useBuilderTheme } from './BuilderThemeContext';
+import { getTextControlsCopy } from './text-controls-copy';
+import styles from './FontPickerAdvanced.module.css';
 
 export interface FontPickerProps {
   value: string;
   onChange: (fontFamily: string) => void;
   disabled?: boolean;
+  locale?: Locale;
 }
 
 type FontCategory = 'all' | FontOption['category'];
+
+type FontPickerStyleVars = CSSProperties & {
+  '--font-picker-current-family'?: string;
+  '--font-picker-preview-family'?: string;
+};
 
 const FOCUSABLE_SELECTOR = [
   'button:not([disabled])',
@@ -28,64 +37,16 @@ const FOCUSABLE_SELECTOR = [
   '[tabindex]:not([tabindex="-1"])',
 ].join(',');
 
-const SYSTEM_FONTS = [
-  { family: 'system-ui', category: 'sans-serif' as const, note: 'System' },
-  { family: 'sans-serif', category: 'sans-serif' as const, note: 'Generic' },
-  { family: 'serif', category: 'serif' as const, note: 'Generic' },
-  { family: 'monospace', category: 'monospace' as const, note: 'Generic' },
-];
+function currentFontStyle(fontFamily: string): FontPickerStyleVars {
+  return {
+    '--font-picker-current-family': fontFamilyCSS(fontFamily),
+  };
+}
 
-const wrapperStyle: CSSProperties = {
-  position: 'relative',
-  width: 220,
-  maxWidth: '100%',
-};
-
-const triggerStyle: CSSProperties = {
-  width: '100%',
-  minHeight: 36,
-  padding: '8px 10px',
-  border: '1px solid #cbd5e1',
-  borderRadius: 10,
-  background: '#fff',
-  color: '#0f172a',
-  fontSize: 13,
-  fontWeight: 750,
-  textAlign: 'left',
-  cursor: 'pointer',
-};
-
-const popoverStyle: CSSProperties = {
-  position: 'absolute',
-  top: 'calc(100% + 8px)',
-  left: 0,
-  zIndex: 70,
-  display: 'grid',
-  gap: 10,
-  width: 320,
-  maxWidth: 'min(320px, calc(100vw - 32px))',
-  maxHeight: 460,
-  overflow: 'hidden',
-  padding: 12,
-  border: '1px solid rgba(15, 23, 42, 0.12)',
-  borderRadius: 16,
-  background: '#fff',
-  boxShadow: '0 24px 60px rgba(15, 23, 42, 0.22)',
-};
-
-const listStyle: CSSProperties = {
-  display: 'grid',
-  gap: 5,
-  maxHeight: 270,
-  overflowY: 'auto',
-  paddingRight: 2,
-};
-
-function categoryLabel(category: FontCategory): string {
-  if (category === 'all') return 'All';
-  if (category === 'sans-serif') return 'Sans';
-  if (category === 'monospace') return 'Mono';
-  return category[0]!.toUpperCase() + category.slice(1);
+function previewFontStyle(fontFamily: string): FontPickerStyleVars {
+  return {
+    '--font-picker-preview-family': fontFamilyCSS(fontFamily),
+  };
 }
 
 function highlight(text: string, query: string) {
@@ -96,7 +57,7 @@ function highlight(text: string, query: string) {
   return (
     <>
       {text.slice(0, index)}
-      <mark style={{ background: '#fef08a', color: 'inherit', padding: 0 }}>{text.slice(index, index + normalized.length)}</mark>
+      <mark className={styles.highlight}>{text.slice(index, index + normalized.length)}</mark>
       {text.slice(index + normalized.length)}
     </>
   );
@@ -115,6 +76,7 @@ export default function FontPickerAdvanced({
   value,
   onChange,
   disabled = false,
+  locale = 'en',
 }: FontPickerProps) {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
@@ -122,6 +84,7 @@ export default function FontPickerAdvanced({
   const searchInputRef = useRef<HTMLInputElement | null>(null);
   const closingRef = useRef(false);
   const theme = useBuilderTheme();
+  const copy = getTextControlsCopy(locale);
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState<FontCategory>('all');
@@ -139,22 +102,28 @@ export default function FontPickerAdvanced({
       .map((family, index) => ({
         family,
         category: 'sans-serif' as const,
-        note: index === 0 ? 'Heading' : 'Body',
+        note: index === 0 ? copy.fontPicker.notes.heading : copy.fontPicker.notes.body,
       }));
-  }, [theme.fonts.body, theme.fonts.heading]);
+  }, [copy.fontPicker.notes.body, copy.fontPicker.notes.heading, theme.fonts.body, theme.fonts.heading]);
 
   const fontItems = useMemo(() => {
     const catalog = FONT_CATALOG.map((font) => ({
       family: font.family,
       category: font.category,
-      note: font.cjk ? 'CJK' : font.category,
+      note: font.cjk ? copy.fontPicker.notes.cjk : copy.fontPicker.notes.generic,
     }));
+    const systemFonts = [
+      { family: 'system-ui', category: 'sans-serif' as const, note: copy.fontPicker.notes.system },
+      { family: 'sans-serif', category: 'sans-serif' as const, note: copy.fontPicker.notes.generic },
+      { family: 'serif', category: 'serif' as const, note: copy.fontPicker.notes.generic },
+      { family: 'monospace', category: 'monospace' as const, note: copy.fontPicker.notes.generic },
+    ];
     const byFamily = new Map<string, { family: string; category: FontOption['category']; note?: string }>();
-    [...SYSTEM_FONTS, ...siteFonts, ...catalog].forEach((font) => {
+    [...systemFonts, ...siteFonts, ...catalog].forEach((font) => {
       if (!byFamily.has(font.family)) byFamily.set(font.family, font);
     });
     return Array.from(byFamily.values());
-  }, [siteFonts]);
+  }, [copy.fontPicker.notes, siteFonts]);
 
   const normalizedQuery = query.trim().toLowerCase();
   const filteredFonts = fontItems.filter((font) => {
@@ -253,16 +222,13 @@ export default function FontPickerAdvanced({
   }, [filteredFonts, open]);
 
   return (
-    <div ref={wrapperRef} style={wrapperStyle} data-font-picker>
+    <div ref={wrapperRef} className={styles.root} data-font-picker>
       <button
         ref={triggerRef}
         type="button"
         disabled={disabled}
-        style={{
-          ...triggerStyle,
-          fontFamily: fontFamilyCSS(currentFont),
-          opacity: disabled ? 0.6 : 1,
-        }}
+        className={styles.trigger}
+        style={currentFontStyle(currentFont)}
         onClick={() => {
           if (open) {
             closePopover();
@@ -277,58 +243,39 @@ export default function FontPickerAdvanced({
       {open ? (
         <div
           ref={panelRef}
-          style={popoverStyle}
+          className={styles.popover}
           role="dialog"
-          aria-label="Advanced font picker"
+          aria-label={copy.fontPicker.dialogTitle}
           tabIndex={-1}
           data-builder-font-picker-dialog="true"
           data-builder-popover-dialog="true"
           onKeyDownCapture={handlePanelKeyDown}
         >
-          <div style={{ display: 'grid', gap: 4 }}>
-            <strong style={{ color: '#0f172a', fontSize: 13 }}>Fonts</strong>
-            <span style={{ color: '#64748b', fontSize: 11 }}>
-              Search, filter, and preview site and Google fonts
-            </span>
+          <div className={styles.header}>
+            <strong className={styles.title}>{copy.fontPicker.dialogTitle}</strong>
+            <span className={styles.description}>{copy.fontPicker.dialogDescription}</span>
           </div>
 
           <input
             ref={searchInputRef}
             type="text"
             value={query}
-            placeholder="Search fonts"
+            placeholder={copy.fontPicker.searchPlaceholder}
             autoFocus
-            style={{
-              minHeight: 34,
-              padding: '7px 10px',
-              border: '1px solid #cbd5e1',
-              borderRadius: 9,
-              color: '#0f172a',
-              fontSize: 13,
-              outline: 'none',
-            }}
+            className={styles.textInput}
             onChange={(event) => setQuery(event.target.value)}
           />
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+          <div className={styles.categoryRow}>
             {(['all', 'sans-serif', 'serif', 'display', 'monospace'] as FontCategory[]).map((item) => (
               <button
                 key={item}
                 type="button"
-                style={{
-                  minHeight: 28,
-                  padding: '0 9px',
-                  border: item === category ? '1px solid #116dff' : '1px solid #cbd5e1',
-                  borderRadius: 999,
-                  background: item === category ? '#eff6ff' : '#fff',
-                  color: item === category ? '#1d4ed8' : '#475569',
-                  fontSize: 12,
-                  fontWeight: 800,
-                  cursor: 'pointer',
-                }}
+                className={styles.categoryButton}
+                data-active={item === category ? 'true' : undefined}
                 onClick={() => setCategory(item)}
               >
-                {categoryLabel(item)}
+                {copy.fontPicker.categories[item]}
               </button>
             ))}
           </div>
@@ -336,53 +283,37 @@ export default function FontPickerAdvanced({
           <input
             type="text"
             value={previewText}
-            style={{
-              minHeight: 32,
-              padding: '6px 9px',
-              border: '1px solid #e2e8f0',
-              borderRadius: 9,
-              color: '#334155',
-              fontSize: 12,
-            }}
+            className={styles.previewInput}
             onChange={(event) => setPreviewText(event.target.value)}
-            aria-label="Font preview text"
+            aria-label={copy.fontPicker.previewAriaLabel}
           />
 
           {fontLoadFailed ? (
-            <span style={{ color: '#92400e', fontSize: 11 }}>Google Fonts failed. Showing local fallbacks.</span>
+            <span className={styles.loadError}>{copy.fontPicker.fontLoadFailed}</span>
           ) : null}
 
-          <div style={listStyle}>
+          <div className={styles.list}>
             {filteredFonts.length > 0 ? filteredFonts.map((font) => (
               <button
                 key={`${font.family}-${font.note ?? 'font'}`}
                 type="button"
-                style={{
-                  width: '100%',
-                  minHeight: 44,
-                  padding: '7px 10px',
-                  border: font.family === currentFont ? '1px solid #116dff' : '1px solid transparent',
-                  borderRadius: 11,
-                  background: font.family === currentFont ? '#eff6ff' : '#fff',
-                  color: '#0f172a',
-                  cursor: 'pointer',
-                  textAlign: 'left',
-                }}
+                className={styles.fontOption}
+                data-active={font.family === currentFont ? 'true' : undefined}
                 onClick={() => {
                   onChange(font.family);
                   closePopover();
                 }}
               >
-                <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
-                  <strong style={{ fontSize: 13 }}>{highlight(font.family, query)}</strong>
-                  {font.note ? <em style={{ color: '#64748b', fontSize: 11, fontStyle: 'normal' }}>{font.note}</em> : null}
+                <span className={styles.fontOptionHeader}>
+                  <strong className={styles.fontFamily}>{highlight(font.family, query)}</strong>
+                  {font.note ? <em className={styles.fontNote}>{font.note}</em> : null}
                 </span>
-                <span style={{ display: 'block', marginTop: 3, color: '#475569', fontFamily: fontFamilyCSS(font.family), fontSize: 14 }}>
+                <span className={styles.fontPreview} style={previewFontStyle(font.family)}>
                   {previewText}
                 </span>
               </button>
             )) : (
-              <div style={{ padding: 10, color: '#94a3b8', fontSize: 12 }}>No matching fonts.</div>
+              <div className={styles.emptyState}>{copy.fontPicker.noMatches}</div>
             )}
           </div>
         </div>

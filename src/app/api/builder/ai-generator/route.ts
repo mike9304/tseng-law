@@ -11,6 +11,12 @@ import {
   readDraftCache,
   writeDraftCache,
 } from '@/lib/builder/ai-generator/cache';
+import {
+  appendAiIntakeVersion,
+  normalizeAiIntakeSiteId,
+} from '@/lib/builder/ai-generator/intake-versions-store';
+import type { GeneratedSiteDraft } from '@/lib/builder/ai-generator/orchestrator';
+import type { SiteSpec } from '@/lib/builder/ai-generator/site-spec';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -22,6 +28,37 @@ const promptSelectionRequestSchema = z.union([
     promptVersion: z.string().trim().max(120).optional(),
   }),
 ]);
+
+interface RecordGeneratedDraftInput {
+  request: NextRequest;
+  createdBy: string;
+  spec: SiteSpec;
+  draft: GeneratedSiteDraft;
+  promptVersion: string;
+}
+
+interface RecordGeneratedDraftResult {
+  versionId?: string;
+  versionWarning?: 'server_version_record_failed';
+}
+
+async function recordGeneratedDraftVersion(input: RecordGeneratedDraftInput): Promise<RecordGeneratedDraftResult> {
+  const siteId = normalizeAiIntakeSiteId(input.request.nextUrl.searchParams.get('siteId') ?? undefined);
+  try {
+    const version = await appendAiIntakeVersion({
+      siteId,
+      createdBy: input.createdBy,
+      spec: input.spec,
+      draft: input.draft,
+      promptVersion: input.promptVersion,
+    });
+    return { versionId: version.id };
+  } catch (error) {
+    if (!(error instanceof Error)) throw error;
+    console.warn(`[ai-generator] Failed to record intake version for ${siteId}: ${error.message}`);
+    return { versionWarning: 'server_version_record_failed' };
+  }
+}
 
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-pages' });
@@ -45,9 +82,23 @@ export async function POST(request: NextRequest) {
 
   const cached = readDraftCache(spec, promptVersion);
   if (cached) {
-    return NextResponse.json({ ok: true, cached: true, draft: cached });
+    const versionResult = await recordGeneratedDraftVersion({
+      request,
+      createdBy: auth.username,
+      spec,
+      draft: cached,
+      promptVersion,
+    });
+    return NextResponse.json({ ok: true, cached: true, ...versionResult, draft: cached });
   }
   const draft = await generateSiteDraft(spec, { promptVersion });
   writeDraftCache(spec, draft);
-  return NextResponse.json({ ok: true, cached: false, draft });
+  const versionResult = await recordGeneratedDraftVersion({
+    request,
+    createdBy: auth.username,
+    spec,
+    draft,
+    promptVersion,
+  });
+  return NextResponse.json({ ok: true, cached: false, ...versionResult, draft });
 }

@@ -11,8 +11,8 @@ vi.mock('@/lib/builder/marketing/dispatcher', () => ({
   dispatchPendingCampaigns: vi.fn(async () => ({ delivered: 0, failed: 0, skipped: 0 })),
 }));
 
-function cronRequest(): NextRequest {
-  return new NextRequest('https://law.example.test/api/marketing/cron/dispatch', {
+function cronRequest(query = ''): NextRequest {
+  return new NextRequest(`https://law.example.test/api/marketing/cron/dispatch${query}`, {
     method: 'POST',
   });
 }
@@ -25,9 +25,15 @@ describe('/api/marketing/cron/dispatch', () => {
   it('returns 401 when the request is not Vercel-cron authorized', async () => {
     vi.mocked(isCronAuthorized).mockReturnValue(false);
     const route = await import('../route');
-    const response = await route.POST(cronRequest());
+    const response = await route.POST(cronRequest('?locale=zh-hant'));
+    const payload = await response.json();
 
     expect(response.status).toBe(401);
+    expect(payload).toMatchObject({
+      ok: false,
+      error: '行銷請求未通過授權。',
+      errorCode: 'unauthorized',
+    });
     expect(dispatchPendingCampaigns).not.toHaveBeenCalled();
   });
 
@@ -53,10 +59,12 @@ describe('/api/marketing/cron/dispatch', () => {
     vi.mocked(isCronAuthorized).mockReturnValue(false);
     const route = await import('../route');
     const response = await route.GET(
-      new NextRequest('https://law.example.test/api/marketing/cron/dispatch'),
+      new NextRequest('https://law.example.test/api/marketing/cron/dispatch?locale=en'),
     );
+    const payload = await response.json();
 
     expect(response.status).toBe(401);
+    expect(payload.errorCode).toBe('unauthorized');
     expect(dispatchPendingCampaigns).not.toHaveBeenCalled();
   });
 });

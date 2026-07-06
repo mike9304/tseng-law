@@ -1,16 +1,21 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderSpacerCanvasNode } from '@/lib/builder/canvas/types';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import { getLayoutNavigationWidgetsCopy } from '../layout-navigation-widgets-copy';
 import styles from './Spacer.module.css';
 
 function SpacerRender({
   node,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderSpacerCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const size = Math.max(8, Math.min(400, node.content.size ?? 32));
   const isEdit = mode === 'edit';
+  const copy = getLayoutNavigationWidgetsCopy(normalizeLocale(locale)).spacer;
 
   if (isEdit) {
     return (
@@ -21,7 +26,7 @@ function SpacerRender({
           minHeight: size,
         }}
       >
-        Spacer {size}px
+        {copy.editLabel(size)}
       </div>
     );
   }
@@ -39,15 +44,17 @@ function SpacerRender({
 
 function SpacerInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const spacerNode = node as BuilderSpacerCanvasNode;
+  const copy = getLayoutNavigationWidgetsCopy(normalizeLocale(locale)).spacer.inspector;
 
   return (
     <>
       <label>
-        <span>Size (px)</span>
+        <span>{copy.size}</span>
         <input
           type="number"
           min={8}

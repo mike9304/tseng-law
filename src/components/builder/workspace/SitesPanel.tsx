@@ -1,12 +1,16 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import type {
   BuilderWorkspaceRole,
   BuilderWorkspaceSite,
 } from '@/lib/builder/workspace/account-model';
+import type { WorkspaceCopy } from '@/lib/builder/workspace/workspace-copy';
 
 interface SitesPanelProps {
+  locale: string;
+  copy: WorkspaceCopy['sites'];
   initialSites: BuilderWorkspaceSite[];
 }
 
@@ -35,7 +39,7 @@ const inputStyle: React.CSSProperties = {
   minWidth: 160,
 };
 
-export default function SitesPanel({ initialSites }: SitesPanelProps) {
+export default function SitesPanel({ locale, copy, initialSites }: SitesPanelProps) {
   const [sites, setSites] = useState(initialSites);
   const [siteId, setSiteId] = useState('');
   const [name, setName] = useState('');
@@ -48,13 +52,13 @@ export default function SitesPanel({ initialSites }: SitesPanelProps) {
     setError(null);
     setBusy(true);
     try {
-      const res = await fetch('/api/builder/workspace/sites', {
+      const res = await fetch(`/api/builder/workspace/sites?locale=${locale}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ siteId: siteId.trim(), name: name.trim() || undefined }),
+        body: JSON.stringify({ siteId: siteId.trim(), name: name.trim() || undefined, locale }),
       });
       const payload = await res.json().catch(() => ({}));
-      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? 'Failed to add site.');
+      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? copy.errors.add);
       setSites((prev) => {
         if (prev.some((entry) => entry.siteId === payload.site.siteId)) return prev;
         return [...prev, payload.site];
@@ -62,7 +66,7 @@ export default function SitesPanel({ initialSites }: SitesPanelProps) {
       setSiteId('');
       setName('');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to add site.');
+      setError(err instanceof Error ? err.message : copy.errors.add);
     } finally {
       setBusy(false);
     }
@@ -85,19 +89,19 @@ export default function SitesPanel({ initialSites }: SitesPanelProps) {
         <input
           value={siteId}
           onChange={(event) => setSiteId(event.target.value)}
-          placeholder="site-id"
+          placeholder={copy.siteIdPlaceholder}
           style={inputStyle}
-          aria-label="Site id"
+          aria-label={copy.siteIdLabel}
         />
         <input
           value={name}
           onChange={(event) => setName(event.target.value)}
-          placeholder="Display name (optional)"
+          placeholder={copy.siteNamePlaceholder}
           style={inputStyle}
-          aria-label="Site display name"
+          aria-label={copy.siteNameLabel}
         />
         <button type="submit" style={buttonStyle} disabled={busy} data-sites-add>
-          {busy ? 'Adding…' : 'Register site'}
+          {busy ? copy.adding : copy.register}
         </button>
       </form>
       {error ? (
@@ -114,9 +118,9 @@ export default function SitesPanel({ initialSites }: SitesPanelProps) {
           flexDirection: 'column',
           gap: 8,
         }}
-      >
+        >
         {sites.length === 0 ? (
-          <li style={{ color: '#64748b', fontSize: 13 }}>No sites registered yet.</li>
+          <li style={{ color: '#64748b', fontSize: 13 }}>{copy.noSites}</li>
         ) : null}
         {sites.map((site) => {
           const palette = ROLE_COLORS[site.role];
@@ -139,20 +143,42 @@ export default function SitesPanel({ initialSites }: SitesPanelProps) {
                 <strong style={{ fontSize: 14, color: '#0f172a' }}>{site.name}</strong>
                 <span style={{ fontSize: 12, color: '#64748b' }}>{site.siteId}</span>
               </div>
-              <span
-                data-site-role={site.role}
+              <div
                 style={{
-                  fontSize: 11,
-                  fontWeight: 600,
-                  textTransform: 'uppercase',
-                  padding: '4px 10px',
-                  borderRadius: 999,
-                  background: palette.bg,
-                  color: palette.fg,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'flex-end',
+                  gap: 8,
+                  flexWrap: 'wrap',
                 }}
               >
-                {site.role}
-              </span>
+                <Link
+                  href={`/${locale}/admin-builder?siteId=${encodeURIComponent(site.siteId)}`}
+                  data-site-open-editor={site.siteId}
+                  style={{
+                    color: '#1d4ed8',
+                    fontSize: 12,
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                  }}
+                >
+                  {copy.openEditor}
+                </Link>
+                <span
+                  data-site-role={site.role}
+                  style={{
+                    fontSize: 11,
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                    padding: '4px 10px',
+                    borderRadius: 999,
+                    background: palette.bg,
+                    color: palette.fg,
+                  }}
+                >
+                  {copy.role[site.role]}
+                </span>
+              </div>
             </li>
           );
         })}

@@ -1,0 +1,133 @@
+.shell {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  background: #ffffff;
+}
+
+.tabRail {
+  width: 220px;
+  flex: 0 0 220px;
+  padding: 16px 10px;
+  overflow-y: auto;
+  border-right: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+.tabButton {
+  display: grid;
+  width: 100%;
+  min-height: 40px;
+  align-items: center;
+  grid-template-columns: 4px 32px minmax(0, 1fr);
+  gap: 9px;
+  margin: 0 0 4px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #475569;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-align: left;
+  transition:
+    border-color 140ms ease,
+    background-color 140ms ease,
+    color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.tabButton:hover {
+  border-color: #dbeafe;
+  background: #f8fbff;
+  color: #123b63;
+}
+
+.tabButton:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgb(17 109 255 / 14%);
+  outline: none;
+}
+
+.tabButton[data-active='true'] {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  color: #123b63;
+}
+
+.tabIndicator {
+  width: 4px;
+  height: 22px;
+  border-radius: 2px;
+  background: transparent;
+}
+
+.tabButton[data-active='true'] .tabIndicator {
+  background: #116dff;
+}
+
+.tabIcon {
+  text-align: center;
+}
+
+.tabLabel {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+  padding: 24px 24px 96px;
+  overflow-y: auto;
+}
+
+.loading {
+  padding: 16px;
+  color: #475569;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.footerMessage {
+  font-weight: 700;
+}
+
+.footerMessage[data-tone='error'] {
+  color: #dc2626;
+}
+
+.footerMessage[data-tone='success'] {
+  color: #0f766e;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    flex-direction: column;
+  }
+
+  .tabRail {
+    display: grid;
+    width: auto;
+    flex: 0 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    max-height: 180px;
+    padding: 10px;
+    border-right: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .tabButton {
+    margin-bottom: 0;
+  }
+
+  .content {
+    padding: 18px 18px 88px;
+  }
+}

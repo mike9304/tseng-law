@@ -1,5 +1,7 @@
 import type {
+  BrandCustomColor,
   BrandKitAssets,
+  BrandSettings,
   BuilderSiteSettings,
   BuilderTheme,
   BuilderThemeColors,
@@ -803,6 +805,8 @@ export interface BrandKit {
   favicon?: string;
   ogImage?: string;
   assets?: BrandKitAssets;
+  palette?: string[];
+  customColors?: BrandCustomColor[];
   colors: {
     primary: string;
     secondary: string;
@@ -840,6 +844,74 @@ function normalizeRadiusScale(value: unknown, fallback: number): number {
   return Math.max(0, Math.min(64, Math.round(value)));
 }
 
+function normalizeBrandPalette(value: unknown, fallback?: string[]): string[] | undefined {
+  const source = Array.isArray(value) ? value : fallback ?? [];
+  const colors = source.flatMap((item) => {
+    if (typeof item !== 'string') return [];
+    const color = item.trim();
+    return /^#[0-9a-fA-F]{6}$/.test(color) ? [color.toLowerCase()] : [];
+  });
+  const unique = [...new Set(colors)].slice(0, 16);
+  return unique.length > 0 ? unique : undefined;
+}
+
+const HEX_COLOR_PATTERN = /^#[0-9a-fA-F]{6}$/;
+
+// Normalizes a list of { name, color } brand custom colors. Invalid entries
+// are dropped, hex values lowercased, names trimmed (capped at 40 chars), and
+// duplicates (same name + color) collapsed. Returns undefined when empty so the
+// persisted settings omit the field entirely (migration-safe: existing site
+// documents without `customColors` stay untouched).
+export function normalizeBrandCustomColors(
+  value: unknown,
+  fallback?: BrandCustomColor[],
+): BrandCustomColor[] | undefined {
+  const source = Array.isArray(value) ? value : fallback ?? [];
+  const seen = new Set<string>();
+  const result: BrandCustomColor[] = [];
+  for (const item of source) {
+    if (!item || typeof item !== 'object') continue;
+    const rawName = (item as { name?: unknown }).name;
+    const rawColor = (item as { color?: unknown }).color;
+    if (typeof rawColor !== 'string') continue;
+    const color = rawColor.trim().toLowerCase();
+    if (!HEX_COLOR_PATTERN.test(color)) continue;
+    const trimmedName = typeof rawName === 'string' ? rawName.trim().slice(0, 40) : '';
+    const name = trimmedName.length > 0 ? trimmedName : color;
+    const key = `${name}\u0000${color}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    result.push({ name, color });
+    if (result.length >= 16) break;
+  }
+  return result.length > 0 ? result : undefined;
+}
+
+// Builds the published-site CSS custom property declarations for brand custom
+// colors. Each color is emitted as `--builder-custom-color-<i>` (0-indexed,
+// deterministic) so consumers can reference a stable variable regardless of
+// the user-facing name. Custom colors are theme-agnostic (no dark derivation),
+// so the same declarations apply in light and dark modes.
+export function buildCustomColorCssVars(
+  customColors?: BrandCustomColor[],
+  indent = '          ',
+): string {
+  if (!customColors || customColors.length === 0) return '';
+  return customColors
+    .map((entry, index) => `--builder-custom-color-${index}: ${entry.color};`)
+    .join(`\n${indent}`);
+}
+
+// Sanitizes the `brand` section of BuilderSiteSettings into a clean
+// BrandSettings value (or undefined when empty). Shared by the settings route
+// merge/strip helpers so client and server agree on the persisted shape.
+export function sanitizeBrandSettings(value: unknown): BrandSettings | undefined {
+  if (!value || typeof value !== 'object') return undefined;
+  const source = value as { customColors?: unknown };
+  const customColors = normalizeBrandCustomColors(source.customColors);
+  return customColors && customColors.length > 0 ? { customColors } : undefined;
+}
+
 export function createBrandKitFromTheme(
   theme?: BuilderTheme,
   settings?: Partial<BuilderSiteSettings>,
@@ -853,6 +925,8 @@ export function createBrandKitFromTheme(
     favicon: settings?.favicon,
     ogImage: settings?.ogImage,
     assets: settings?.assets,
+    palette: [],
+    customColors: settings?.brand?.customColors,
     colors: {
       primary: colors.primary,
       secondary: colors.secondary,
@@ -888,6 +962,8 @@ export function normalizeBrandKit(value: unknown, fallback?: BrandKit): BrandKit
     favicon: optionalString(source.favicon) ?? fallbackKit.favicon,
     ogImage: optionalString(source.ogImage) ?? fallbackKit.ogImage,
     assets: normalizeBrandKitAssets(source.assets, fallbackKit.assets),
+    palette: normalizeBrandPalette(source.palette, fallbackKit.palette),
+    customColors: normalizeBrandCustomColors(source.customColors, fallbackKit.customColors),
     colors: {
       primary: safeString(colors.primary, fallbackKit.colors.primary),
       secondary: safeString(colors.secondary, fallbackKit.colors.secondary),

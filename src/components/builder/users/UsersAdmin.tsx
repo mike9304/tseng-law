@@ -7,6 +7,7 @@ import type {
 } from '@/lib/builder/security/user-role-store';
 import type { BuilderPermission } from '@/lib/builder/security/permissions';
 import type { Locale } from '@/lib/locales';
+import { getUsersAdminCopy } from './users-copy';
 
 interface UsersAdminProps {
   locale: Locale;
@@ -71,12 +72,14 @@ const cellStyle: React.CSSProperties = {
 };
 
 export default function UsersAdmin({
+  locale,
   initialUsers,
   roles,
   permissions,
   matrix,
   actorRole,
 }: UsersAdminProps) {
+  const copy = getUsersAdminCopy(locale);
   const [users, setUsers] = useState<BuilderUserRoleRecord[]>(initialUsers);
   const [username, setUsername] = useState('');
   const [role, setRole] = useState<BuilderRoleName>('editor');
@@ -95,13 +98,13 @@ export default function UsersAdmin({
     setError(null);
     setBusy('add');
     try {
-      const res = await fetch('/api/builder/security/users', {
+      const res = await fetch(`/api/builder/security/users?locale=${locale}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username: username.trim(), role }),
+        body: JSON.stringify({ username: username.trim(), role, locale }),
       });
       const payload = await res.json().catch(() => ({}));
-      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? 'Failed to add user.');
+      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? copy.createFailedLabel);
       setUsers((prev) => {
         const next = prev.filter((u) => u.username.toLowerCase() !== payload.user.username.toLowerCase());
         next.push(payload.user);
@@ -110,7 +113,7 @@ export default function UsersAdmin({
       setUsername('');
       setRole('editor');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to add user.');
+      setError(err instanceof Error ? err.message : copy.createFailedLabel);
     } finally {
       setBusy(null);
     }
@@ -122,39 +125,39 @@ export default function UsersAdmin({
     setBusy(`role-${target.username}`);
     try {
       const res = await fetch(
-        `/api/builder/security/users/${encodeURIComponent(target.username)}`,
+        `/api/builder/security/users/${encodeURIComponent(target.username)}?locale=${locale}`,
         {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ role: nextRole }),
+          body: JSON.stringify({ role: nextRole, locale }),
         },
       );
       const payload = await res.json().catch(() => ({}));
-      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? 'Failed to update role.');
+      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? copy.updateFailedLabel);
       setUsers((prev) =>
         prev.map((u) => (u.username === target.username ? payload.user : u)),
       );
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to update role.');
+      setError(err instanceof Error ? err.message : copy.updateFailedLabel);
     } finally {
       setBusy(null);
     }
   }
 
   async function handleRemove(target: BuilderUserRoleRecord) {
-    if (!confirm(`Remove ${target.username}?`)) return;
+    if (!confirm(copy.removingConfirm(target.username))) return;
     setError(null);
     setBusy(`remove-${target.username}`);
     try {
       const res = await fetch(
-        `/api/builder/security/users/${encodeURIComponent(target.username)}`,
+        `/api/builder/security/users/${encodeURIComponent(target.username)}?locale=${locale}`,
         { method: 'DELETE' },
       );
       const payload = await res.json().catch(() => ({}));
-      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? 'Failed to remove user.');
+      if (!res.ok || !payload?.ok) throw new Error(payload?.error ?? copy.removeFailedLabel);
       setUsers((prev) => prev.filter((u) => u.username !== target.username));
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to remove user.');
+      setError(err instanceof Error ? err.message : copy.removeFailedLabel);
     } finally {
       setBusy(null);
     }
@@ -162,9 +165,15 @@ export default function UsersAdmin({
 
   return (
     <div style={containerStyle}>
-      <h1 style={{ marginTop: 0 }}>Users & Roles</h1>
+      <h1 style={{ marginTop: 0 }}>{copy.title}</h1>
+      <p style={{ color: '#64748b', fontSize: 12, marginTop: 0, textTransform: 'uppercase', letterSpacing: 0.04 }}>
+        {copy.eyebrowLabel}
+      </p>
       <p style={{ color: '#475569', fontSize: 13 }}>
-        Per-user RBAC overlay on top of basic-auth. Acting role: <strong>{actorRole}</strong>.
+        {copy.description}
+      </p>
+      <p style={{ color: '#475569', fontSize: 13 }}>
+        {copy.roleIntroLabel} <strong>{copy.roleLabels[actorRole]}</strong>.
       </p>
 
       {error && (
@@ -173,42 +182,46 @@ export default function UsersAdmin({
 
       {canManage && (
         <section style={sectionStyle}>
-          <h2 style={{ marginTop: 0, fontSize: 15 }}>Add user</h2>
+          <h2 style={{ marginTop: 0, fontSize: 15 }}>{copy.addTitle}</h2>
           <form
             onSubmit={handleAdd}
             style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}
           >
             <input
               style={inputStyle}
-              placeholder="username"
+              aria-label={copy.usernameLabel}
+              placeholder={copy.usernamePlaceholder}
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
             <select
               style={{ ...inputStyle, maxWidth: 140 }}
+              aria-label={copy.roleLabel}
               value={role}
               onChange={(e) => setRole(e.target.value as BuilderRoleName)}
             >
               {roles.map((r) => (
-                <option key={r} value={r}>{r}</option>
+                <option key={r} value={r}>{copy.roleLabels[r]}</option>
               ))}
             </select>
             <button type="submit" disabled={busy !== null} style={buttonStyle}>
-              {busy === 'add' ? 'Adding...' : 'Add'}
+              {busy === 'add' ? copy.addingButtonLabel : copy.addButtonLabel}
             </button>
           </form>
         </section>
       )}
 
       <section style={sectionStyle}>
-        <h2 style={{ marginTop: 0, fontSize: 15 }}>Members ({sortedUsers.length})</h2>
+        <h2 style={{ marginTop: 0, fontSize: 15 }}>
+          {copy.membersTitle} ({sortedUsers.length})
+        </h2>
         <table style={tableStyle}>
           <thead>
             <tr style={{ textAlign: 'left', color: '#64748b' }}>
-              <th style={cellStyle}>Username</th>
-              <th style={cellStyle}>Role</th>
-              <th style={cellStyle}>Added</th>
-              <th style={cellStyle}>Last seen</th>
+              <th style={cellStyle}>{copy.usernameLabel}</th>
+              <th style={cellStyle}>{copy.roleLabel}</th>
+              <th style={cellStyle}>{copy.addedHeaderLabel}</th>
+              <th style={cellStyle}>{copy.lastSeenHeaderLabel}</th>
               <th style={cellStyle}></th>
             </tr>
           </thead>
@@ -231,7 +244,7 @@ export default function UsersAdmin({
                       ))}
                     </select>
                   ) : (
-                    user.role
+                    copy.roleLabels[user.role]
                   )}
                 </td>
                 <td style={cellStyle}>{user.addedAt.slice(0, 10)}</td>
@@ -244,7 +257,7 @@ export default function UsersAdmin({
                       disabled={busy !== null}
                       onClick={() => handleRemove(user)}
                     >
-                      Remove
+                      {copy.removeLabel}
                     </button>
                   )}
                 </td>
@@ -255,13 +268,13 @@ export default function UsersAdmin({
       </section>
 
       <section style={sectionStyle}>
-        <h2 style={{ marginTop: 0, fontSize: 15 }}>Permission matrix</h2>
+        <h2 style={{ marginTop: 0, fontSize: 15 }}>{copy.permissionMatrixTitle}</h2>
         <table style={tableStyle}>
           <thead>
             <tr style={{ textAlign: 'left', color: '#64748b' }}>
-              <th style={cellStyle}>Permission</th>
+              <th style={cellStyle}>{copy.permissionHeaderLabel}</th>
               {roles.map((r) => (
-                <th key={r} style={cellStyle}>{r}</th>
+                <th key={r} style={cellStyle}>{copy.roleLabels[r]}</th>
               ))}
             </tr>
           </thead>
@@ -271,7 +284,7 @@ export default function UsersAdmin({
                 <td style={cellStyle}>{perm}</td>
                 {roles.map((r) => (
                   <td key={r} style={cellStyle}>
-                    {matrix[r].includes(perm) ? 'yes' : '-'}
+                    {matrix[r].includes(perm) ? copy.yesLabel : copy.noLabel}
                   </td>
                 ))}
               </tr>

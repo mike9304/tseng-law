@@ -2,10 +2,26 @@ import { NextRequest, NextResponse } from 'next/server';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { listBookings, listServices, listStaff } from '@/lib/builder/bookings/storage';
 import { buildBookingAnalyticsBundle } from '@/lib/builder/bookings/analytics';
-import { isLocale, defaultLocale, type Locale } from '@/lib/locales';
+import { buildBookingPaymentAttribution } from '@/lib/builder/bookings/analytics-attribution';
+import {
+  getBookingAnalyticsApiErrorPayload,
+  type BookingAnalyticsApiErrorCode,
+} from '@/lib/builder/bookings/bookings-copy';
+import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BookingAnalyticsApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    getBookingAnalyticsApiErrorPayload(locale, errorCode),
+    { status },
+  );
+}
 
 /**
  * F84 — Booking analytics bundle. Returns funnel, per-service and
@@ -30,19 +46,16 @@ export async function GET(request: NextRequest) {
   const staffId = params.get('staffId') ?? undefined;
 
   const localeRaw = params.get('locale');
-  let locale: Locale = defaultLocale;
-  if (localeRaw) {
-    if (!isLocale(localeRaw)) {
-      return NextResponse.json({ error: 'Unknown locale' }, { status: 400 });
-    }
-    locale = localeRaw;
+  const locale = normalizeLocale(localeRaw || undefined);
+  if (localeRaw && !isLocale(localeRaw)) {
+    return errorResponse(locale, 'unknown_locale', 400);
   }
 
   if (from && Number.isNaN(Date.parse(from))) {
-    return NextResponse.json({ error: 'Invalid `from` timestamp' }, { status: 400 });
+    return errorResponse(locale, 'invalid_from_timestamp', 400);
   }
   if (to && Number.isNaN(Date.parse(to))) {
-    return NextResponse.json({ error: 'Invalid `to` timestamp' }, { status: 400 });
+    return errorResponse(locale, 'invalid_to_timestamp', 400);
   }
 
   const [bookings, services, staff] = await Promise.all([
@@ -51,18 +64,25 @@ export async function GET(request: NextRequest) {
     listStaff(true),
   ]);
 
-  const bundle = buildBookingAnalyticsBundle(bookings, services, staff, locale, {
+  const scopedBookings = bookings.filter((booking) => {
+    if (serviceId && booking.serviceId !== serviceId) return false;
+    if (staffId && booking.staffId !== staffId) return false;
+    return true;
+  });
+  const bundle = buildBookingAnalyticsBundle(scopedBookings, services, staff, locale, {
     from,
     to,
     serviceId,
     staffId,
   });
+  const paymentAttribution = buildBookingPaymentAttribution(scopedBookings, services, locale);
 
   return NextResponse.json({
     range: { from: from ?? null, to: to ?? null },
     serviceId: serviceId ?? null,
     staffId: staffId ?? null,
     locale,
+    paymentAttribution,
     ...bundle,
   });
 }

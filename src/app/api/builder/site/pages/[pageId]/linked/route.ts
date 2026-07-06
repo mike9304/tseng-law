@@ -2,6 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { guardBuilderRead } from '@/lib/builder/security/guard';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -13,6 +18,17 @@ interface LinkedPageInfo {
   title: string;
 }
 
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
 export async function GET(
   request: NextRequest,
   { params }: { params: { pageId: string } },
@@ -22,10 +38,11 @@ export async function GET(
 
   try {
     const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const siteId = resolveBuilderSiteIdFromRequest(request);
+    const site = await readSiteDocument(siteId, locale);
     const page = site.pages.find((candidate) => candidate.pageId === params.pageId);
     if (!page) {
-      return NextResponse.json({ ok: false, error: 'Page not found' }, { status: 404 });
+      return errorResponse(locale, 'page_not_found', 404);
     }
 
     const linkedPages: Record<string, LinkedPageInfo | null> = {};
@@ -54,8 +71,8 @@ export async function GET(
     }
 
     return NextResponse.json({ ok: true, linkedPages });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+  } catch {
+    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+    return errorResponse(locale, 'linked_pages_load_failed', 500);
   }
 }

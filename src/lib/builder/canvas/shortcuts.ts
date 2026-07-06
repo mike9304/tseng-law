@@ -306,6 +306,17 @@ function comboMatchesEvent(combo: string, e: KeyboardEvent): boolean {
 export function matchShortcut(e: KeyboardEvent): CanvasAction {
   if (isTextInput(e.target)) return null;
   if (isModalTarget(e.target)) return null;
+  // While any modal dialog is open (canvas-preview overlays included), Escape
+  // belongs to the dialog's own close handler. Those handlers listen on
+  // `document`, which fires after this window-capture handler, so consuming
+  // Escape here would leave the dialog open (e.g. the header search overlay).
+  if (
+    e.key === 'Escape'
+    && typeof document !== 'undefined'
+    && document.querySelector('[role="dialog"][aria-modal="true"], [data-modal-shell="true"]')
+  ) {
+    return null;
+  }
 
   const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
   if (!(e.metaKey || e.ctrlKey) && isMenuNavigationTarget(e.target, key)) return null;

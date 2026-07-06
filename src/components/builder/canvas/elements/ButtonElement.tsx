@@ -1,5 +1,7 @@
 import type { BuilderButtonCanvasNode } from '@/lib/builder/canvas/types';
 import { linkValueFromLegacy, sanitizeLinkValue } from '@/lib/builder/links';
+import type { Locale } from '@/lib/locales';
+import { getButtonInspectorCopy, localizedButtonLabel } from '@/lib/builder/components/button/button-copy';
 import type { BuilderTheme } from '@/lib/builder/site/types';
 import {
   getButtonVariantSuffix,
@@ -10,13 +12,17 @@ export default function ButtonElement({
   node,
   theme,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderButtonCanvasNode;
   theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const s = node.style;
   const { className, as, label } = node.content;
+  const copy = getButtonInspectorCopy(locale);
+  const buttonLabel = localizedButtonLabel(label, copy.defaultLabel);
   const link = sanitizeLinkValue(linkValueFromLegacy(node.content));
   const href = link?.href ?? '';
   const lightboxSlug = href.startsWith('lightbox:') ? href.slice('lightbox:'.length).trim() : '';
@@ -24,15 +30,18 @@ export default function ButtonElement({
 
   if (className) {
     const Tag = (as ?? (href ? 'a' : 'button')) as keyof JSX.IntrinsicElements;
+    const isClassedLinkStyle = node.content.style === 'link';
     const props: Record<string, unknown> = {
       className,
       style: {
         width: '100%',
-        height: '100%',
+        height: 'inherit',
+        minHeight: 'inherit',
         boxSizing: 'border-box',
-        display: 'inline-flex',
+        display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: isClassedLinkStyle ? 'flex-start' : 'center',
+        textAlign: isClassedLinkStyle ? 'left' : undefined,
         margin: 0,
       },
     };
@@ -51,7 +60,7 @@ export default function ButtonElement({
     }
     return (
       <Tag {...(props as Record<string, never>)}>
-        {label}
+        {buttonLabel}
       </Tag>
     );
   }
@@ -73,8 +82,9 @@ export default function ButtonElement({
     className: 'builder-button-element builder-widget-focusable',
     style: {
       width: '100%',
-      height: '100%',
-      display: 'inline-flex',
+      height: 'inherit',
+      minHeight: 'inherit',
+      display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       gap: variantStyles.gap,
@@ -113,7 +123,7 @@ export default function ButtonElement({
 
   return (
     <Tag {...(elementProps as Record<string, never>)}>
-      <span>{node.content.label}</span>
+      <span>{buttonLabel}</span>
       {suffix ? <span aria-hidden>{suffix}</span> : null}
     </Tag>
   );

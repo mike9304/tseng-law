@@ -21,12 +21,22 @@ function makePage(overrides?: Partial<BuilderPageMeta>): BuilderPageMeta {
 describe('projectSeoToLocales', () => {
   it('inherits source SEO when no overrides exist', () => {
     const page = makePage({
-      seo: { title: '소개 페이지', description: '한국어 설명', ogImage: '/og.png' },
+      seo: {
+        title: '소개 페이지',
+        description: '한국어 설명',
+        ogTitle: 'OG 소개',
+        ogDescription: 'OG 한국어 설명',
+        ogImage: '/og.png',
+        twitterTitle: '트위터 소개',
+        twitterDescription: '트위터 한국어 설명',
+      },
     });
     const map = projectSeoToLocales(page);
     expect(map.ko?.title).toBe('소개 페이지');
     expect(map.en?.title).toBe('소개 페이지');
     expect(map.en?.description).toBe('한국어 설명');
+    expect(map.en?.ogTitle).toBe('OG 소개');
+    expect(map.en?.twitterDescription).toBe('트위터 한국어 설명');
     expect(map['zh-hant']?.ogImage).toBe('/og.png');
   });
 
@@ -36,9 +46,12 @@ describe('projectSeoToLocales', () => {
         title: '소개',
         description: '한국어 설명',
         ogImage: '/og.png',
+        ogTitle: 'OG 소개',
+        twitterDescription: '트위터 한국어 설명',
+        focusKeyword: '국제 소송',
         // Additive field — see Files to modify for the type patch.
         localizedOverrides: {
-          en: { title: 'About us', description: 'English description' },
+          en: { title: 'About us', description: 'English description', ogTitle: 'About OG', twitterDescription: 'English tweet desc', focusKeyword: 'international law' },
           'zh-hant': { ogImage: '/og-zh.png' },
         },
       } as never,
@@ -46,6 +59,9 @@ describe('projectSeoToLocales', () => {
     const map = projectSeoToLocales(page);
     expect(map.en?.title).toBe('About us');
     expect(map.en?.description).toBe('English description');
+    expect(map.en?.ogTitle).toBe('About OG');
+    expect(map.en?.twitterDescription).toBe('English tweet desc');
+    expect(map.en?.focusKeyword).toBe('international law');
     // ogImage not overridden for en → falls back to source.
     expect(map.en?.ogImage).toBe('/og.png');
     expect(map['zh-hant']?.ogImage).toBe('/og-zh.png');
@@ -66,10 +82,13 @@ describe('resolveLocaleSeo', () => {
     const page = makePage({
       seo: {
         title: '소개',
-        localizedOverrides: { en: { title: 'About' } },
+        focusKeyword: '국제 소송',
+        localizedOverrides: { en: { title: 'About', focusKeyword: 'international law' } },
       } as never,
     });
     expect(resolveLocaleSeo(page, 'en').title).toBe('About');
+    expect(resolveLocaleSeo(page, 'en').focusKeyword).toBe('international law');
     expect(resolveLocaleSeo(page, 'ko').title).toBe('소개');
+    expect(resolveLocaleSeo(page, 'ko').focusKeyword).toBe('국제 소송');
   });
 });

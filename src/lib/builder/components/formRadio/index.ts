@@ -1,6 +1,7 @@
 import { defineComponent } from '../define';
 import FormRadioElement from './Element';
 import FormRadioInspector from './Inspector';
+import { FORM_RADIO_KO_DEFAULTS } from '../form/form-controls-copy';
 
 export default defineComponent({
   kind: 'form-radio',
@@ -9,11 +10,11 @@ export default defineComponent({
   icon: '◉',
   defaultContent: {
     name: 'choice',
-    label: '선택',
+    label: FORM_RADIO_KO_DEFAULTS.label,
     required: false,
     options: [
-      { value: 'option-1', label: '옵션 1' },
-      { value: 'option-2', label: '옵션 2' },
+      { value: 'option-1', label: `${FORM_RADIO_KO_DEFAULTS.optionLabelPrefix}1` },
+      { value: 'option-2', label: `${FORM_RADIO_KO_DEFAULTS.optionLabelPrefix}2` },
     ],
     defaultValue: '',
     layout: 'vertical' as const,

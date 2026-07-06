@@ -3,6 +3,7 @@ import {
   type BuilderInstalledApp,
 } from '@/lib/builder/apps/types';
 import type { Locale } from '@/lib/locales';
+import { getLiveChatWidgetCopy } from '@/lib/builder/live-chat/widget-copy';
 
 export const LIVE_CHAT_APP_ID = 'live-chat';
 
@@ -20,16 +21,20 @@ export interface ResolvedLiveChatSettings {
   source: 'app' | 'legacy-site-setting';
 }
 
-const DEFAULT_SETTINGS: Omit<ResolvedLiveChatSettings, 'source'> = {
-  title: '호정국제 상담',
-  introText: '이름과 이메일은 선택 사항입니다.',
-  offlineMessage: '지금은 답변이 지연될 수 있습니다. 메시지를 남겨주시면 확인 후 연락드리겠습니다.',
-  accentColor: '#0f172a',
-  placement: 'bottom-right',
-  emailRequired: false,
-  launcherEnabled: true,
-  launcherLabel: '실시간 상담',
-};
+function defaultSettings(locale: Locale = 'ko'): Omit<ResolvedLiveChatSettings, 'source'> {
+  const copy = getLiveChatWidgetCopy(locale);
+
+  return {
+    title: copy.defaultTitle,
+    introText: copy.defaultIntroText,
+    offlineMessage: copy.defaultOfflineMessage,
+    accentColor: '#0f172a',
+    placement: 'bottom-right',
+    emailRequired: false,
+    launcherEnabled: true,
+    launcherLabel: copy.defaultLauncherLabel,
+  };
+}
 
 function settingString(
   settings: Record<string, unknown>,
@@ -69,6 +74,7 @@ export function resolveLiveChatSettings(
 ): ResolvedLiveChatSettings | null {
   const apps = normalizeBuilderInstalledApps(installedApps);
   const chatApp = apps.find((app) => app.appId === LIVE_CHAT_APP_ID);
+  const defaults = defaultSettings(locale);
 
   if (chatApp) {
     if (chatApp.status !== 'enabled') return null;
@@ -76,24 +82,24 @@ export function resolveLiveChatSettings(
       ...(chatApp.settings ?? {}),
       ...(locale ? (chatApp.localizedSettings?.[locale] ?? {}) : {}),
     };
-    const launcherEnabled = settingBoolean(settings, 'launcher-enabled', DEFAULT_SETTINGS.launcherEnabled);
+    const launcherEnabled = settingBoolean(settings, 'launcher-enabled', defaults.launcherEnabled);
     if (!launcherEnabled) return null;
     return {
       source: 'app',
-      title: settingString(settings, 'title', DEFAULT_SETTINGS.title, 80),
-      introText: settingString(settings, 'intro-text', DEFAULT_SETTINGS.introText, 240),
-      offlineMessage: settingString(settings, 'offline-message', DEFAULT_SETTINGS.offlineMessage, 300),
-      accentColor: settingString(settings, 'accent-color', DEFAULT_SETTINGS.accentColor, 60),
-      placement: settingPlacement(settings, 'placement', DEFAULT_SETTINGS.placement),
-      emailRequired: settingBoolean(settings, 'email-required', DEFAULT_SETTINGS.emailRequired),
+      title: settingString(settings, 'title', defaults.title, 80),
+      introText: settingString(settings, 'intro-text', defaults.introText, 240),
+      offlineMessage: settingString(settings, 'offline-message', defaults.offlineMessage, 300),
+      accentColor: settingString(settings, 'accent-color', defaults.accentColor, 60),
+      placement: settingPlacement(settings, 'placement', defaults.placement),
+      emailRequired: settingBoolean(settings, 'email-required', defaults.emailRequired),
       launcherEnabled,
-      launcherLabel: settingString(settings, 'launcher-label', DEFAULT_SETTINGS.launcherLabel, 80),
+      launcherLabel: settingString(settings, 'launcher-label', defaults.launcherLabel, 80),
     };
   }
 
   if (legacySiteSettingEnabled) {
     return {
-      ...DEFAULT_SETTINGS,
+      ...defaults,
       source: 'legacy-site-setting',
     };
   }

@@ -15,20 +15,22 @@ import styles from './PortfolioPublic.module.css';
 
 export const dynamic = 'force-dynamic';
 
-const copy: Record<Locale, { title: string; description: string; eyebrow: string; empty: string; all: string }> = {
+const copy: Record<Locale, { title: string; description: string; eyebrow: string; empty: string; all: string; navLabel: string }> = {
   ko: {
     title: '포트폴리오',
     description: '대만 법률 자문, 회사 설립, 분쟁 대응 사례를 카테고리별로 확인하세요.',
-    eyebrow: 'Portfolio',
+    eyebrow: '포트폴리오',
     empty: '현재 공개된 포트폴리오가 없습니다.',
     all: '전체',
+    navLabel: '포트폴리오 카테고리',
   },
   'zh-hant': {
     title: '案例作品集',
     description: '依類別瀏覽台灣法律諮詢、公司設立與爭議處理案例。',
-    eyebrow: 'Portfolio',
+    eyebrow: '作品集',
     empty: '目前沒有公開案例。',
     all: '全部',
+    navLabel: '作品集分類',
   },
   en: {
     title: 'Portfolio',
@@ -36,6 +38,7 @@ const copy: Record<Locale, { title: string; description: string; eyebrow: string
     eyebrow: 'Portfolio',
     empty: 'No public portfolio projects are available.',
     all: 'All',
+    navLabel: 'Portfolio categories',
   },
 };
 
@@ -71,14 +74,16 @@ export default async function PortfolioPage({
     <main className={styles.page} data-public-portfolio-page="true">
       <section className={styles.hero}>
         <div className={styles.inner}>
-          <p className={styles.eyebrow}>{copy[locale].eyebrow}</p>
+          <p className={styles.eyebrow} data-public-portfolio-eyebrow="true">
+            {copy[locale].eyebrow}
+          </p>
           <h1>{copy[locale].title}</h1>
           <p>{copy[locale].description}</p>
         </div>
       </section>
 
       <div className={styles.inner}>
-        <nav className={styles.filters} aria-label="Portfolio categories">
+        <nav className={styles.filters} aria-label={copy[locale].navLabel} data-public-portfolio-filters="true">
           <Link href={`/${locale}/portfolio`} aria-current={!activeCategory ? 'true' : undefined}>
             {copy[locale].all}
           </Link>

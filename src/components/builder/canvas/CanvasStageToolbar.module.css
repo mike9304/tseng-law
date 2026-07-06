@@ -1,0 +1,105 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  border: 1px solid rgba(203, 213, 225, 0.78);
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.92);
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.button {
+  min-height: 34px;
+  padding: 0.25rem 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+  cursor: pointer;
+  font-size: 0.76rem;
+  font-weight: 760;
+  line-height: 1;
+  transition: background 150ms ease, border-color 150ms ease, box-shadow 150ms ease, color 150ms ease, transform 150ms ease;
+}
+
+.button:hover:not(:disabled) {
+  border-color: #93c5fd;
+  background: #f1f5f9;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.12);
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.button:focus-visible,
+.gridSizeInput:focus-visible {
+  outline: 2px solid #116dff;
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  box-shadow: none;
+}
+
+.button[data-active='true'] {
+  border-color: #116dff;
+  background: #116dff;
+  box-shadow: 0 12px 28px rgba(17, 109, 255, 0.22);
+  color: #ffffff;
+}
+
+.gridSizeControl {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #334155;
+  font-size: 0.7rem;
+  font-weight: 820;
+  line-height: 1;
+}
+
+.gridSizePrefix {
+  color: #64748b;
+  font-size: 0.68rem;
+  font-weight: 820;
+}
+
+.gridSizeInput {
+  width: 48px;
+  min-width: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #0f172a;
+  font: inherit;
+  text-align: center;
+}
+
+.gridSizeInput:disabled {
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+@media (max-width: 760px) {
+  .root {
+    max-width: calc(100vw - 24px);
+    overflow-x: auto;
+  }
+
+  .button {
+    flex: 0 0 auto;
+    padding-inline: 0.7rem;
+  }
+}

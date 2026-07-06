@@ -1,0 +1,181 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  min-width: 0;
+}
+
+.trigger {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  align-items: center;
+  width: 100%;
+  min-height: 36px;
+  gap: 8px;
+  padding: 6px 9px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.trigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.triggerSwatch {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: var(--color-picker-current, #0f172a);
+}
+
+.triggerValue {
+  min-width: 0;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 70;
+  display: grid;
+  width: 320px;
+  max-width: min(320px, calc(100vw - 32px));
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.panelTitleStack,
+.section {
+  display: grid;
+}
+
+.panelTitleStack {
+  gap: 4px;
+}
+
+.panelTitle {
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.panelDescription {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.section {
+  gap: 7px;
+}
+
+.sectionLabel {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.swatchGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 26px);
+  gap: 8px;
+}
+
+.swatchButton {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  border-radius: 8px;
+  background: var(--color-picker-swatch, transparent);
+  cursor: pointer;
+  outline: none;
+  outline-offset: 2px;
+}
+
+.swatchButton[data-active='true'] {
+  border: 2px solid #116dff;
+  outline: 2px solid rgba(17, 109, 255, 0.18);
+}
+
+.swatchButton:disabled {
+  cursor: not-allowed;
+}
+
+.colorInputRow {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 8px;
+}
+
+.nativeColorInput {
+  width: 44px;
+  height: 34px;
+  padding: 2px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+.textInput {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  color: #0f172a;
+  font-family: "JetBrains Mono", SFMono-Regular, Consolas, monospace;
+  font-size: 12px;
+  outline: none;
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.eyeDropperButton {
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.eyeDropperButton:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.errorText {
+  color: #92400e;
+  font-size: 11px;
+}

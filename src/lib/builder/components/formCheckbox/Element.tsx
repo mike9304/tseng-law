@@ -9,19 +9,30 @@ import {
   resolveFormInputVariantStyle,
 } from '@/lib/builder/site/component-variants';
 import { useFormFieldRuntime } from '@/lib/builder/forms/render-helpers';
+import type { Locale } from '@/lib/locales';
+import {
+  FORM_CHECKBOX_KO_DEFAULTS,
+  getFormControlsCopy,
+  localizedFormControlText,
+  localizedFormSelectOptionLabel,
+} from '../form/form-controls-copy';
 
 export default function FormCheckboxElement({
   node,
   theme,
   mode = 'edit',
+  locale = 'ko',
 }: {
   node: BuilderFormCheckboxCanvasNode;
   theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const copy = getFormControlsCopy(locale);
+  const label = localizedFormControlText(c.label, copy.fieldDefaults.checkboxLabel, FORM_CHECKBOX_KO_DEFAULTS.label);
   const field = useFormFieldRuntime({ nodeId: node.id, name: c.name, showIf: c.showIf });
-  const options = c.options && c.options.length > 0 ? c.options : [{ value: 'yes', label: c.label }];
+  const options = c.options && c.options.length > 0 ? c.options : [{ value: 'yes', label }];
   const variantKey = normalizeFormInputVariantKey(c.variant);
   const variantStyle = resolveFormInputVariantStyle(c.variant, theme, {
     error: Boolean(field.error),
@@ -33,7 +44,7 @@ export default function FormCheckboxElement({
     <div ref={field.rootRef} style={{ ...shellStyle, opacity: mode !== 'published' && c.showIf ? 0.72 : 1 }}>
       {options.length > 1 ? (
         <span style={groupLabelStyle}>
-          {c.label}
+          {label}
           {c.required ? <span style={{ color: '#dc2626', marginLeft: 4 }}>*</span> : null}
         </span>
       ) : null}
@@ -46,7 +57,7 @@ export default function FormCheckboxElement({
               value={option.value}
               defaultChecked={options.length === 1 ? c.defaultChecked : false}
               required={c.required && field.visible && options.length === 1}
-              data-builder-field-label={c.label}
+              data-builder-field-label={label}
               data-builder-error-message={c.errorMessage}
               aria-invalid={field.error ? true : undefined}
               aria-describedby={field.error ? `field-${node.id}-error` : undefined}
@@ -63,7 +74,7 @@ export default function FormCheckboxElement({
               }}
             />
             <span>
-              {options.length === 1 && index === 0 ? c.label : option.label}
+              {options.length === 1 && index === 0 ? label : localizedFormSelectOptionLabel(option.label, copy.fieldDefaults.selectOptionLabel)}
               {options.length === 1 && c.required ? <span style={{ color: '#dc2626', marginLeft: 4 }}>*</span> : null}
             </span>
           </label>

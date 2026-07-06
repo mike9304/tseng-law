@@ -74,6 +74,7 @@ export const columnFrontmatterSchema = z.object({
   featured: z.boolean().optional(),
   publishedAt: z.string().datetime({ offset: true }).optional(),
   seo: blogSeoSchema.optional(),
+  slugRedirectFrom: columnSlugSchema.optional(),
 });
 
 export const columnDocumentSchema = z.object({
@@ -121,6 +122,7 @@ export const createColumnInputSchema = z.object({
 });
 
 export const patchColumnInputSchema = z.object({
+  slug: columnSlugSchema.optional(),
   title: columnTitleSchema.optional(),
   summary: columnSummarySchema.optional(),
   bodyMarkdown: columnBodyMarkdownSchema.optional(),

@@ -19,9 +19,23 @@ export interface CaptureArgs {
  * Sentry if SENTRY_DSN is configured. Fire-and-forget: never throws and
  * never blocks the caller (the storage write is awaited but caught).
  */
+function safeStringifyError(err: unknown): string {
+  // captureBuilderError must never throw (it IS the error path). Raw JSON.stringify
+  // throws on circular refs / BigInt, so fall back to String() then a constant.
+  try {
+    return JSON.stringify(err) ?? String(err);
+  } catch {
+    try {
+      return String(err);
+    } catch {
+      return '[unserializable error]';
+    }
+  }
+}
+
 export async function captureBuilderError(args: CaptureArgs): Promise<CapturedError> {
   const err = args.error;
-  const message = err instanceof Error ? err.message : typeof err === 'string' ? err : JSON.stringify(err);
+  const message = err instanceof Error ? err.message : typeof err === 'string' ? err : safeStringifyError(err);
   const stack = err instanceof Error ? err.stack : undefined;
   const entry: CapturedError = {
     errorId: makeErrorId(),

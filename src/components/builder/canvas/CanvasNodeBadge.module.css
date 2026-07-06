@@ -6,7 +6,7 @@
   align-items: center;
   gap: 0.22rem;
   min-height: 20px;
-  max-width: min(320px, calc(100vw - 80px), 100%);
+  max-width: min(320px, calc(100vw - 80px));
   padding: 0.1rem 0.45rem;
   overflow: hidden;
   border-radius: 3px;
@@ -23,9 +23,17 @@
   transition: opacity 120ms ease;
 }
 
-:global([data-node-id]):hover > .nodeBadge,
-:global([data-selected='true']) > .nodeBadge {
+:global([data-node-id]):hover > .nodeBadge {
   opacity: 1;
+}
+
+:global([data-selected='true']) > .nodeBadge {
+  opacity: 0;
+}
+
+:global([data-selected='true']):hover > .nodeBadge,
+:global([data-selected='true']):focus-within > .nodeBadge {
+  opacity: 0;
 }
 
 /* Hover cascades to every ancestor `[data-node-id]`, so without this each
@@ -54,7 +62,8 @@
   text-overflow: ellipsis;
 }
 
-.nodeBadge em {
+.nodeBadge em,
+.badgeItem {
   min-width: 0;
   max-width: 100%;
   overflow: hidden;
@@ -62,4 +71,61 @@
   color: #fbbf24;
   font-weight: 700;
   text-overflow: ellipsis;
+}
+
+.badgeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.14rem;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.badgeItem[data-tone='locked'] {
+  color: #fbbf24;
+}
+
+.badgeItem[data-tone='sticky'] {
+  color: #60a5fa;
+}
+
+.badgeItem[data-tone='anchor'] {
+  color: #34d399;
+}
+
+.badgeItem[data-tone='animation'] {
+  color: #a78bfa;
+}
+
+.badgeItem[data-tone='link'] {
+  color: #fbbf24;
+}
+
+.linkBadgeButton {
+  min-width: 0;
+  max-width: min(12rem, 100%);
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+
+.linkBadgeIcon {
+  flex: 0 0 auto;
+}
+
+.linkBadgeText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.linkBadgeButton:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import styles from './SandboxPage.module.css';
 import type {
   ResponsiveSuggestion,
@@ -8,13 +8,19 @@ import type {
 } from '@/lib/builder/ai-generator/responsive-rules';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import type { Locale } from '@/lib/locales';
+import { getResponsiveAiCopy } from './responsive-ai-copy';
 
 interface ResponsiveAiPanelProps {
   pageId: string;
   locale: Locale;
   targetViewport: ResponsiveTargetViewport;
-  canvas: BuilderCanvasDocument;
+  getAnalysisCanvas: () => BuilderCanvasDocument;
+  canUndoLast: boolean;
+  onPreview: (suggestions: ResponsiveSuggestion[]) => void;
+  onCancelPreview: () => void;
+  onCommitPreview: () => void;
   onApply: (suggestions: ResponsiveSuggestion[]) => void;
+  onUndoLast: () => void;
   onClose: () => void;
 }
 
@@ -25,115 +31,226 @@ interface PanelRow {
   state: SuggestionState;
 }
 
-const REASON_LABEL: Record<ResponsiveSuggestion['reason'], string> = {
-  'text-overflows-viewport': '폭 초과 텍스트 축소',
-  'font-too-large': '큰 글꼴 축소',
-  'side-by-side-stack': '좌우 컨테이너 세로 정렬',
-};
+type ResponsiveScanResponse =
+  | { ok: true; suggestions: ResponsiveSuggestion[] }
+  | { ok: false; error?: string; message?: string };
 
-const VIEWPORT_LABEL: Record<ResponsiveTargetViewport, string> = {
-  mobile: '모바일',
-  tablet: '태블릿',
-};
+function suggestionKey(suggestion: ResponsiveSuggestion): string {
+  return `${suggestion.nodeId}:${suggestion.reason}`;
+}
 
 export default function ResponsiveAiPanel({
   pageId,
   locale,
   targetViewport,
-  canvas,
+  getAnalysisCanvas,
+  canUndoLast,
+  onPreview,
+  onCancelPreview,
+  onCommitPreview,
   onApply,
+  onUndoLast,
   onClose,
 }: ResponsiveAiPanelProps) {
   const [rows, setRows] = useState<PanelRow[]>([]);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [hasFetched, setHasFetched] = useState(false);
+  const [previewKeys, setPreviewKeys] = useState<readonly string[]>([]);
+  const [lastAppliedKeys, setLastAppliedKeys] = useState<readonly string[]>([]);
+  const previewKeysRef = useRef<readonly string[]>([]);
+  const requestIdRef = useRef(0);
+  const copy = useMemo(() => getResponsiveAiCopy(locale), [locale]);
 
   const pendingRows = useMemo(() => rows.filter((row) => row.state === 'pending'), [rows]);
   const appliedCount = useMemo(() => rows.filter((row) => row.state === 'applied').length, [rows]);
+  const hasPreview = previewKeys.length > 0;
+
+  const setPreviewKeyList = useCallback((keys: readonly string[]) => {
+    previewKeysRef.current = keys;
+    setPreviewKeys(keys);
+  }, []);
+
+  useEffect(() => {
+    requestIdRef.current += 1;
+    if (previewKeysRef.current.length > 0) {
+      onCancelPreview();
+      setPreviewKeyList([]);
+    }
+    setRows([]);
+    setPending(false);
+    setError(null);
+    setHasFetched(false);
+    setLastAppliedKeys([]);
+  }, [onCancelPreview, pageId, setPreviewKeyList, targetViewport]);
+
+  useEffect(() => () => {
+    requestIdRef.current += 1;
+    if (previewKeysRef.current.length > 0) {
+      onCancelPreview();
+      previewKeysRef.current = [];
+    }
+  }, [onCancelPreview]);
 
   const fetchSuggestions = useCallback(async () => {
+    if (hasPreview) {
+      onCancelPreview();
+      setPreviewKeyList([]);
+    }
+    const requestId = requestIdRef.current + 1;
+    requestIdRef.current = requestId;
     setPending(true);
     setError(null);
     try {
       const response = await fetch('/api/builder/ai-generator/responsive', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ pageId, locale, targetViewport, canvas }),
+        body: JSON.stringify({ pageId, locale, targetViewport, canvas: getAnalysisCanvas() }),
       });
-      const body = (await response.json().catch(() => null)) as
-        | { ok: true; suggestions: ResponsiveSuggestion[] }
-        | { ok: false; error?: string; message?: string }
-        | null;
+      const body: ResponsiveScanResponse | null = await response.json().catch(() => null);
+      if (requestIdRef.current !== requestId) return;
       if (!response.ok || !body || body.ok !== true) {
         const message = body && body.ok === false
-          ? body.message ?? body.error ?? '요청에 실패했습니다.'
-          : '요청에 실패했습니다.';
+          ? body.message ?? body.error ?? copy.requestFailedError
+          : copy.requestFailedError;
         setError(message);
         return;
       }
       setRows(body.suggestions.map((suggestion) => ({ suggestion, state: 'pending' as SuggestionState })));
+      setLastAppliedKeys([]);
       setHasFetched(true);
     } catch (err) {
-      setError(err instanceof Error ? err.message : '반응형 어시스턴트 호출에 실패했습니다.');
+      if (requestIdRef.current !== requestId) return;
+      setError(err instanceof Error ? err.message : copy.callFailedError);
     } finally {
-      setPending(false);
+      if (requestIdRef.current === requestId) setPending(false);
     }
-  }, [canvas, locale, pageId, targetViewport]);
+  }, [copy, getAnalysisCanvas, hasPreview, locale, onCancelPreview, pageId, setPreviewKeyList, targetViewport]);
+
+  const previewRows = useCallback((targetRows: readonly PanelRow[]) => {
+    if (targetRows.length === 0) return;
+    if (previewKeys.length > 0) onCancelPreview();
+    onPreview(targetRows.map((row) => row.suggestion));
+    setPreviewKeyList(targetRows.map((row) => suggestionKey(row.suggestion)));
+  }, [onCancelPreview, onPreview, previewKeys.length, setPreviewKeyList]);
+
+  const cancelPreview = useCallback(() => {
+    if (previewKeys.length === 0) return;
+    onCancelPreview();
+    setPreviewKeyList([]);
+  }, [onCancelPreview, previewKeys.length, setPreviewKeyList]);
+
+  const markRowsApplied = useCallback((keys: readonly string[]) => {
+    setRows((prev) =>
+      prev.map((entry) =>
+        keys.includes(suggestionKey(entry.suggestion)) ? { ...entry, state: 'applied' } : entry,
+      ),
+    );
+    setLastAppliedKeys(keys);
+    setPreviewKeyList([]);
+  }, [setPreviewKeyList]);
+
+  const applyRows = useCallback((targetRows: readonly PanelRow[]) => {
+    if (targetRows.length === 0) return;
+    const keys = targetRows.map((row) => suggestionKey(row.suggestion));
+    const previewMatchesTarget =
+      previewKeys.length === keys.length
+      && keys.every((key) => previewKeys.includes(key));
+
+    if (previewKeys.length > 0) {
+      if (previewMatchesTarget) {
+        onCommitPreview();
+      } else {
+        onCancelPreview();
+        onApply(targetRows.map((row) => row.suggestion));
+      }
+    } else {
+      onApply(targetRows.map((row) => row.suggestion));
+    }
+
+    markRowsApplied(keys);
+  }, [markRowsApplied, onApply, onCancelPreview, onCommitPreview, previewKeys]);
 
   const applyOne = useCallback(
     (nodeId: string) => {
       const row = rows.find((entry) => entry.suggestion.nodeId === nodeId && entry.state === 'pending');
       if (!row) return;
-      onApply([row.suggestion]);
-      setRows((prev) =>
-        prev.map((entry) =>
-          entry.suggestion.nodeId === nodeId ? { ...entry, state: 'applied' } : entry,
-        ),
-      );
+      applyRows([row]);
     },
-    [onApply, rows],
+    [applyRows, rows],
+  );
+
+  const previewOne = useCallback(
+    (nodeId: string) => {
+      const row = rows.find((entry) => entry.suggestion.nodeId === nodeId && entry.state === 'pending');
+      if (!row) return;
+      previewRows([row]);
+    },
+    [previewRows, rows],
   );
 
   const discardOne = useCallback((nodeId: string) => {
+    const row = rows.find((entry) => entry.suggestion.nodeId === nodeId);
+    if (row && previewKeys.includes(suggestionKey(row.suggestion))) cancelPreview();
     setRows((prev) =>
       prev.map((entry) =>
         entry.suggestion.nodeId === nodeId ? { ...entry, state: 'discarded' } : entry,
       ),
     );
-  }, []);
+  }, [cancelPreview, previewKeys, rows]);
 
   const applyAll = useCallback(() => {
-    const toApply = pendingRows.map((row) => row.suggestion);
-    if (toApply.length === 0) return;
-    onApply(toApply);
-    setRows((prev) => prev.map((entry) => (entry.state === 'pending' ? { ...entry, state: 'applied' } : entry)));
-  }, [onApply, pendingRows]);
+    applyRows(pendingRows);
+  }, [applyRows, pendingRows]);
+
+  const previewAll = useCallback(() => {
+    previewRows(pendingRows);
+  }, [pendingRows, previewRows]);
+
+  const undoLast = useCallback(() => {
+    if (!canUndoLast || lastAppliedKeys.length === 0) return;
+    if (previewKeys.length > 0) cancelPreview();
+    onUndoLast();
+    setRows((prev) =>
+      prev.map((entry) =>
+        lastAppliedKeys.includes(suggestionKey(entry.suggestion))
+          ? { ...entry, state: 'pending' }
+          : entry,
+      ),
+    );
+    setLastAppliedKeys([]);
+  }, [canUndoLast, cancelPreview, lastAppliedKeys, onUndoLast, previewKeys.length]);
+
+  const closePanel = useCallback(() => {
+    if (previewKeys.length > 0) onCancelPreview();
+    setPreviewKeyList([]);
+    onClose();
+  }, [onCancelPreview, onClose, previewKeys.length, setPreviewKeyList]);
 
   return (
     <div
       role="dialog"
-      aria-label="반응형 AI 어시스턴트"
+      aria-label={copy.dialogLabel}
       data-builder-responsive-ai-panel="true"
+      data-surface="topbar"
       className={styles.inlineTextAiPanel}
       onMouseDown={(event) => event.stopPropagation()}
       onPointerDown={(event) => event.stopPropagation()}
     >
       <header className={styles.inlineTextAiPanelHeader}>
-        <strong>반응형 AI ({VIEWPORT_LABEL[targetViewport]})</strong>
+        <strong>{copy.title(targetViewport)}</strong>
         <button
           type="button"
           className={styles.inlineTextAiPanelClose}
-          aria-label="반응형 어시스턴트 닫기"
-          onClick={onClose}
+          aria-label={copy.closeLabel}
+          onClick={closePanel}
         >
           ×
         </button>
       </header>
 
       <p className={styles.inlineTextAiPreviewText}>
-        현재 페이지에서 {VIEWPORT_LABEL[targetViewport]} 안전선({targetViewport === 'mobile' ? '360px' : '720px'})을
-        넘는 요소를 찾아 보정 제안을 만듭니다. 각 제안을 개별 또는 일괄 적용할 수 있습니다.
+        {copy.intro(targetViewport)}
       </p>
 
       {error ? (
@@ -148,63 +265,96 @@ export default function ResponsiveAiPanel({
           className={styles.inlineTextAiPrimaryButton}
           onClick={fetchSuggestions}
           disabled={pending}
+          data-builder-responsive-analyze="true"
         >
-          {pending ? '분석 중...' : hasFetched ? '다시 분석' : '분석 시작'}
+          {pending ? copy.analyzingLabel : hasFetched ? copy.reanalyzeLabel : copy.analyzeLabel}
         </button>
         <button
           type="button"
           className={styles.inlineTextAiPrimaryButton}
           onClick={applyAll}
           disabled={pendingRows.length === 0 || pending}
+          data-builder-responsive-apply-all="true"
         >
-          전체 적용 ({pendingRows.length})
+          {copy.applyAllLabel(pendingRows.length)}
+        </button>
+        <button
+          type="button"
+          className={styles.inlineTextAiGhostButton}
+          onClick={previewAll}
+          disabled={pendingRows.length === 0 || pending}
+          data-builder-responsive-preview-all="true"
+        >
+          {copy.previewAllLabel(pendingRows.length)}
+        </button>
+        <button
+          type="button"
+          className={styles.inlineTextAiGhostButton}
+          onClick={cancelPreview}
+          disabled={!hasPreview || pending}
+          data-builder-responsive-cancel-preview="true"
+        >
+          {copy.cancelPreviewLabel}
+        </button>
+        <button
+          type="button"
+          className={styles.inlineTextAiGhostButton}
+          onClick={undoLast}
+          disabled={!canUndoLast || lastAppliedKeys.length === 0 || pending}
+          data-builder-responsive-undo-last="true"
+          title={canUndoLast ? copy.undoLastLabel : copy.undoLastDisabledLabel}
+        >
+          {copy.undoLastLabel}
         </button>
         {appliedCount > 0 ? (
-          <span className={styles.inlineTextAiHistoryLabel}>{appliedCount}개 적용됨</span>
+          <span className={styles.inlineTextAiHistoryLabel}>{copy.appliedCountLabel(appliedCount)}</span>
         ) : null}
       </div>
 
       <ul className={styles.inlineTextAiPreview} aria-live="polite">
         {rows.length === 0 && hasFetched && !pending ? (
-          <li className={styles.inlineTextAiPreviewText}>제안이 없습니다. 모바일 안전선을 잘 지키고 있어요.</li>
+          <li className={styles.inlineTextAiPreviewText}>{copy.emptySuggestionsLabel}</li>
         ) : null}
         {rows.map(({ suggestion, state }) => (
           <li
             key={`${suggestion.nodeId}-${suggestion.reason}`}
+            data-builder-responsive-suggestion-row="true"
             data-state={state}
-            className={styles.inlineTextAiPreviewText}
-            style={{
-              opacity: state === 'pending' ? 1 : 0.55,
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 4,
-              padding: '8px 0',
-              borderBottom: '1px solid rgba(148, 163, 184, 0.2)',
-            }}
+            data-preview={previewKeys.includes(suggestionKey(suggestion)) ? 'true' : 'false'}
+            className={styles.responsiveAiSuggestionRow}
           >
-            <strong>{REASON_LABEL[suggestion.reason]}</strong>
-            <span style={{ fontSize: 12 }}>{suggestion.summary}</span>
-            <code style={{ fontSize: 11, opacity: 0.85 }}>node: {suggestion.nodeId}</code>
+            <strong>{copy.reasonLabels[suggestion.reason]}</strong>
+            <span className={styles.responsiveAiSuggestionSummary}>{suggestion.summary}</span>
+            <code className={styles.responsiveAiSuggestionNode}>{copy.nodePrefix}: {suggestion.nodeId}</code>
             {state === 'pending' ? (
-              <div style={{ display: 'flex', gap: 6 }}>
+              <div className={styles.responsiveAiSuggestionActions}>
+                <button
+                  type="button"
+                  className={styles.inlineTextAiGhostButton}
+                  onClick={() => previewOne(suggestion.nodeId)}
+                  disabled={pending}
+                  data-builder-responsive-preview-one="true"
+                >
+                  {copy.previewLabel}
+                </button>
                 <button
                   type="button"
                   className={styles.inlineTextAiPrimaryButton}
                   onClick={() => applyOne(suggestion.nodeId)}
                   data-builder-responsive-apply-one="true"
                 >
-                  적용
+                  {copy.applyLabel}
                 </button>
                 <button
                   type="button"
                   className={styles.inlineTextAiGhostButton}
                   onClick={() => discardOne(suggestion.nodeId)}
                 >
-                  제외
+                  {copy.discardLabel}
                 </button>
               </div>
             ) : (
-              <span style={{ fontSize: 11 }}>{state === 'applied' ? '적용됨' : '제외됨'}</span>
+              <span className={styles.responsiveAiSuggestionState}>{copy.stateLabels[state]}</span>
             )}
           </li>
         ))}

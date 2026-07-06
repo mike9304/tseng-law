@@ -7,12 +7,17 @@ import {
 import {
   DEFAULT_THEME,
   type BrandKitAssets,
+  type BrandSettings,
   type BuilderHeaderFooterConfig,
   type BuilderMobileBottomBar,
   type BuilderSiteSettings,
   type BuilderTheme,
   type DarkModeConfig,
 } from '@/lib/builder/site/types';
+import {
+  applyThemeSuggestionToTheme,
+  type ThemeSuggestion,
+} from '@/lib/builder/ai-generator/theme-suggestions';
 import {
   normalizeHeaderFooterMobileConfig,
   normalizeMobileBottomBar,
@@ -25,7 +30,6 @@ import {
   type ComponentDesignPresetPatchResult,
 } from '@/lib/builder/site/component-design-presets';
 import {
-  THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
   applyThemeRadiusPreset,
   applyThemeShadowPreset,
@@ -43,6 +47,7 @@ import {
   normalizeThemeEffects,
   normalizeThemeTextPresets,
   normalizeThemeTypographyScale,
+  sanitizeBrandSettings,
   type BrandKit,
 } from '@/lib/builder/site/theme';
 import { SiteSettingsDarkModeTab } from './SiteSettingsDarkModeTab';
@@ -57,9 +62,8 @@ import {
   type CustomThemePreset,
 } from './SiteSettingsPresetsTab';
 import { SiteSettingsTypographyTab } from './SiteSettingsTypographyTab';
-import {
-  formStyle,
-} from './SiteSettingsModal.styles';
+import styles from './SiteSettingsModal.module.css';
+import { getSiteSettingsCopy } from './site-settings-copy';
 
 interface SiteSettingsForm {
   firmName: string;
@@ -75,6 +79,7 @@ interface SiteSettingsForm {
   pageTransition: PageTransition;
   pageTransitionDurationMs: number;
   assets?: BrandKitAssets;
+  brand?: BrandSettings;
 }
 
 type SiteSettingsTab = 'general' | 'brand' | 'typography' | 'presets' | 'dark' | 'mobile' | 'advanced';
@@ -95,16 +100,6 @@ const EMPTY_SETTINGS: SiteSettingsForm = {
   pageTransition: 'none',
   pageTransitionDurationMs: 280,
 };
-
-const SETTINGS_TABS: Array<{ key: SiteSettingsTab; label: string; icon: string }> = [
-  { key: 'general', label: 'General', icon: 'G' },
-  { key: 'brand', label: 'Brand kit', icon: 'B' },
-  { key: 'typography', label: 'Typography', icon: 'A' },
-  { key: 'presets', label: 'Presets', icon: 'P' },
-  { key: 'dark', label: 'Dark mode', icon: 'D' },
-  { key: 'mobile', label: 'Mobile', icon: 'M' },
-  { key: 'advanced', label: 'Advanced', icon: '#' },
-];
 
 function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
   const colors = { ...DEFAULT_THEME.colors, ...theme?.colors };
@@ -156,6 +151,7 @@ function toSettingsForm(settings?: Partial<BuilderSiteSettings>): SiteSettingsFo
     pageTransition: settings?.pageTransition ?? 'none',
     pageTransitionDurationMs: settings?.pageTransitionDurationMs ?? 280,
     assets: settings?.assets,
+    brand: sanitizeBrandSettings(settings?.brand),
   };
 }
 
@@ -174,6 +170,7 @@ function toSettingsPayload(settings: SiteSettingsForm): BuilderSiteSettings {
     pageTransition: settings.pageTransition,
     pageTransitionDurationMs: settings.pageTransitionDurationMs,
     assets: settings.assets,
+    brand: sanitizeBrandSettings(settings.brand),
   };
 }
 
@@ -200,7 +197,7 @@ function safeStorage(): Storage | null {
   }
 }
 
-function readCustomThemePresets(): CustomThemePreset[] {
+function readCustomThemePresets(defaultName: string): CustomThemePreset[] {
   const storage = safeStorage();
   if (!storage) return [];
   try {
@@ -212,7 +209,7 @@ function readCustomThemePresets(): CustomThemePreset[] {
       if (!source.theme || typeof source.name !== 'string') return [];
       return [{
         id: typeof source.id === 'string' ? source.id : `theme-${source.name}`,
-        name: source.name.trim() || 'My Theme',
+        name: source.name.trim() || defaultName,
         savedAt: typeof source.savedAt === 'string' ? source.savedAt : new Date(0).toISOString(),
         theme: normalizeDesignTokenTheme({ theme: source.theme }, DEFAULT_THEME),
       }];
@@ -257,6 +254,9 @@ export default function SiteSettingsModal({
   onApplyComponentDesignPreset?: (presetKey: ComponentDesignPresetKey) => ComponentDesignPresetPatchResult;
   onClose: () => void;
 }) {
+  const normalizedLocale = normalizeLocale(locale);
+  const copy = getSiteSettingsCopy(normalizedLocale);
+  const customThemeDefaultName = copy.modal.myThemeName('');
   const [settings, setSettings] = useState<SiteSettingsForm>(EMPTY_SETTINGS);
   const [theme, setTheme] = useState<BuilderTheme>(DEFAULT_THEME);
   const [brandKit, setBrandKit] = useState<BrandKit>(() => createBrandKitFromTheme(DEFAULT_THEME, EMPTY_SETTINGS));
@@ -274,13 +274,17 @@ export default function SiteSettingsModal({
   function handleComponentDesignPresetApply(presetKey: ComponentDesignPresetKey, presetLabel: string) {
     const result = onApplyComponentDesignPreset?.(presetKey);
     if (!result || result.changedNodeIds.length === 0) {
-      setNotice(`${presetLabel} preset: 변경할 button/card/form 요소가 현재 페이지에 없습니다.`);
+      setNotice(copy.modal.componentPresetNoTargets(presetLabel));
       return;
     }
-    setNotice(
-      `${presetLabel} preset applied to ${result.changedNodeIds.length} components`
-      + ` (${result.counts.buttons} buttons, ${result.counts.cards} cards, ${result.counts.formFields} fields, ${result.counts.formSubmits} submits).`,
-    );
+    setNotice(copy.modal.componentPresetApplied(
+      presetLabel,
+      result.changedNodeIds.length,
+      result.counts.buttons,
+      result.counts.cards,
+      result.counts.formFields,
+      result.counts.formSubmits,
+    ));
   }
 
   const fetchSettings = useCallback(async () => {
@@ -301,34 +305,34 @@ export default function SiteSettingsModal({
         setMobileBottomBar(normalizeMobileBottomBar(data.mobileBottomBar, nextSettings));
         setBrandKit(createBrandKitFromTheme(nextTheme, nextSettings));
       } else {
-        setError(data.error || '사이트 설정을 불러오지 못했습니다.');
+        setError(data.error || copy.modal.loadError);
       }
     } catch {
-      setError('사이트 설정을 불러오지 못했습니다.');
+      setError(copy.modal.loadError);
     } finally {
       setLoading(false);
     }
-  }, [locale]);
+  }, [copy.modal.loadError, locale]);
 
   useEffect(() => {
     if (open) void fetchSettings();
   }, [open, fetchSettings]);
 
   useEffect(() => {
-    if (open) setCustomThemePresets(readCustomThemePresets());
-  }, [open]);
+    if (open) setCustomThemePresets(readCustomThemePresets(customThemeDefaultName));
+  }, [customThemeDefaultName, open]);
 
   const handleSave = async () => {
     for (const token of THEME_COLOR_TOKENS) {
       if (!isValidHexColor(theme.colors[token])) {
-        setError(`${THEME_COLOR_LABELS[token]} color는 #RRGGBB 형식이어야 합니다.`);
+        setError(copy.modal.invalidThemeColor(copy.advanced.themeColorLabels[token]));
         return;
       }
     }
     const resolvedDarkColors = normalizeDarkColors(theme.colors, theme.darkColors);
     for (const token of THEME_COLOR_TOKENS) {
       if (!isValidHexColor(resolvedDarkColors[token])) {
-        setError(`Dark ${THEME_COLOR_LABELS[token]} color는 #RRGGBB 형식이어야 합니다.`);
+        setError(copy.modal.invalidDarkColor(copy.advanced.themeColorLabels[token]));
         return;
       }
     }
@@ -362,20 +366,21 @@ export default function SiteSettingsModal({
       });
       const data = (await response.json().catch(() => ({}))) as SiteSettingsResponse;
       if (!response.ok) {
-        setError(data.error || '사이트 설정을 저장하지 못했습니다.');
+        setError(data.error || copy.modal.saveError);
         return;
       }
 
+      const savedSettings = data.settings ? { ...data.settings } : payload.settings;
       onSaved?.({
-        settings: payload.settings,
-        theme: payload.theme,
-        darkMode: payload.darkMode,
-        headerFooter: payload.headerFooter,
-        mobileBottomBar: payload.mobileBottomBar,
+        settings: savedSettings,
+        theme: data.theme ?? payload.theme,
+        darkMode: normalizeDarkModeConfig(data.darkMode),
+        headerFooter: data.headerFooter ?? payload.headerFooter,
+        mobileBottomBar: data.mobileBottomBar ?? payload.mobileBottomBar,
       });
       onClose();
     } catch {
-      setError('사이트 설정을 저장하지 못했습니다.');
+      setError(copy.modal.saveError);
     } finally {
       setSaving(false);
     }
@@ -442,7 +447,14 @@ export default function SiteSettingsModal({
     setTheme(nextTheme);
     setBrandKit(createBrandKitFromTheme(nextTheme, settings));
     setPendingPreset(null);
-    setNotice(`${preset.name} preset applied. 저장을 눌러 사이트에 반영하세요.`);
+    setNotice(copy.modal.presetApplied(preset.name));
+  };
+
+  const applyThemeSuggestion = (suggestion: ThemeSuggestion) => {
+    const nextTheme = applyThemeSuggestionToTheme(theme, suggestion);
+    setTheme(nextTheme);
+    setBrandKit(createBrandKitFromTheme(nextTheme, settings));
+    setNotice(copy.modal.presetApplied(`AI ${suggestion.vibe}`));
   };
 
   const applyBrandKitToState = (kit: BrandKit, message: string) => {
@@ -455,6 +467,7 @@ export default function SiteSettingsModal({
       favicon: kit.favicon ?? prev.favicon,
       ogImage: kit.ogImage ?? prev.ogImage,
       assets: kit.assets,
+      brand: sanitizeBrandSettings({ customColors: kit.customColors }) ?? prev.brand,
     }));
     setBrandKit(kit);
     setNotice(message);
@@ -475,7 +488,7 @@ export default function SiteSettingsModal({
     anchor.download = 'hojeong-brand-kit.json';
     anchor.click();
     URL.revokeObjectURL(url);
-    setNotice('Brand kit JSON을 내보냈습니다.');
+    setNotice(copy.modal.brandKitExported);
   };
 
   const importBrandKit = async (file: File) => {
@@ -483,10 +496,10 @@ export default function SiteSettingsModal({
       const text = await file.text();
       const parsed = JSON.parse(text) as unknown;
       const nextKit = normalizeBrandKit(parsed, brandKit);
-      applyBrandKitToState(nextKit, 'Brand kit JSON을 불러와 적용했습니다. 저장을 눌러 사이트에 반영하세요.');
+      applyBrandKitToState(nextKit, copy.modal.brandKitImported);
       setError(null);
     } catch {
-      setError('Brand kit JSON을 읽지 못했습니다.');
+      setError(copy.modal.brandKitReadError);
     }
   };
 
@@ -506,7 +519,7 @@ export default function SiteSettingsModal({
     anchor.download = 'hojeong-design-tokens.json';
     anchor.click();
     URL.revokeObjectURL(url);
-    setNotice('Design token JSON을 내보냈습니다.');
+    setNotice(copy.modal.tokenExported);
   };
 
   const importDesignTokens = async (file: File) => {
@@ -516,15 +529,15 @@ export default function SiteSettingsModal({
       const nextTheme = normalizeDesignTokenTheme(parsed, theme);
       setTheme(nextTheme);
       setBrandKit(createBrandKitFromTheme(nextTheme, settings));
-      setNotice('Design token JSON을 불러와 적용했습니다. 저장을 눌러 사이트에 반영하세요.');
+      setNotice(copy.modal.tokenImported);
       setError(null);
     } catch {
-      setError('Design token JSON을 읽지 못했습니다.');
+      setError(copy.modal.tokenReadError);
     }
   };
 
   const saveCurrentThemePreset = () => {
-    const name = settings.firmName ? `${settings.firmName} My Theme` : 'My Theme';
+    const name = copy.modal.myThemeName(settings.firmName);
     const preset: CustomThemePreset = {
       id: `theme-${Date.now()}`,
       name,
@@ -541,32 +554,32 @@ export default function SiteSettingsModal({
     const nextPresets = [preset, ...customThemePresets.filter((item) => item.name !== name)].slice(0, 12);
     writeCustomThemePresets(nextPresets);
     setCustomThemePresets(nextPresets);
-    setNotice(`${name} saved. 다른 사이트 설정에서도 My Themes에서 불러올 수 있습니다.`);
+    setNotice(copy.modal.themeSaved(name));
   };
 
   const applyCustomThemePreset = (preset: CustomThemePreset) => {
     const nextTheme = normalizeDesignTokenTheme({ theme: preset.theme }, theme);
     setTheme(nextTheme);
     setBrandKit(createBrandKitFromTheme(nextTheme, settings));
-    setNotice(`${preset.name} preset applied. 저장을 눌러 사이트에 반영하세요.`);
+    setNotice(copy.modal.presetApplied(preset.name));
   };
 
   const deleteCustomThemePreset = (id: string) => {
     const nextPresets = customThemePresets.filter((preset) => preset.id !== id);
     writeCustomThemePresets(nextPresets);
     setCustomThemePresets(nextPresets);
-    setNotice('My Theme preset deleted.');
+    setNotice(copy.modal.themeDeleted);
   };
 
   const footerHint = error ? (
-    <span style={{ color: '#dc2626' }}>{error}</span>
+    <span className={styles.footerMessage} data-tone="error">{error}</span>
   ) : notice ? (
-    <span style={{ color: '#0f766e' }}>{notice}</span>
+    <span className={styles.footerMessage} data-tone="success">{notice}</span>
   ) : null;
   const modalActions = [
-    { label: '취소', variant: 'secondary' as const, onClick: onClose },
+    { label: copy.modal.cancel, variant: 'secondary' as const, onClick: onClose },
     {
-      label: saving ? '저장 중...' : '저장',
+      label: saving ? copy.modal.saving : copy.modal.save,
       variant: 'primary' as const,
       loading: saving,
       disabled: saving || loading,
@@ -579,71 +592,57 @@ export default function SiteSettingsModal({
     <ModalShell
       open={open}
       onClose={onClose}
-      title="사이트 설정"
-      subtitle="Brand kit, Typography, Dark, Presets로 사이트 전체 디자인을 한 화면에서 통제합니다."
+      title={copy.modal.title}
+      subtitle={copy.modal.subtitle}
       size="xl"
       bodyFlush
       footerHint={footerHint}
       actions={modalActions}
     >
-      <div style={{ display: 'flex', flex: 1, minHeight: 0 }}>
+      <div className={styles.shell} data-site-settings-modal-shell="true">
         <nav
-          aria-label="설정 탭"
-          style={{
-            width: 220,
-            flex: '0 0 220px',
-            borderRight: '1px solid #e2e8f0',
-            background: '#ffffff',
-            padding: '16px 10px',
-            overflowY: 'auto',
-          }}
+          aria-label={copy.modal.tabAria}
+          className={styles.tabRail}
         >
-          {SETTINGS_TABS.map((tab) => {
+          {([
+            { key: 'general', label: copy.modal.tabs.general, icon: 'G' },
+            { key: 'brand', label: copy.modal.tabs.brand, icon: 'B' },
+            { key: 'typography', label: copy.modal.tabs.typography, icon: 'A' },
+            { key: 'presets', label: copy.modal.tabs.presets, icon: 'P' },
+            { key: 'dark', label: copy.modal.tabs.dark, icon: 'D' },
+            { key: 'mobile', label: copy.modal.tabs.mobile, icon: 'M' },
+            { key: 'advanced', label: copy.modal.tabs.advanced, icon: '#' },
+          ] as Array<{ key: SiteSettingsTab; label: string; icon: string }>).map((tab) => {
             const active = activeTab === tab.key;
             return (
-            <button
-              key={tab.key}
-              type="button"
-              style={{
-                width: '100%',
-                display: 'grid',
-                gridTemplateColumns: '4px 32px minmax(0, 1fr)',
-                alignItems: 'center',
-                gap: 9,
-                minHeight: 40,
-                marginBottom: 4,
-                border: `1px solid ${active ? '#bfdbfe' : 'transparent'}`,
-                borderRadius: 9,
-                background: active ? '#eff6ff' : 'transparent',
-                color: active ? '#123b63' : '#475569',
-                cursor: 'pointer',
-                fontSize: '0.8rem',
-                fontWeight: 800,
-                textAlign: 'left',
-              }}
-              onClick={() => setActiveTab(tab.key)}
-            >
-              <span aria-hidden style={{ width: 4, height: 22, borderRadius: 2, background: active ? '#116dff' : 'transparent' }} />
-              <span aria-hidden style={{ textAlign: 'center' }}>{tab.icon}</span>
-              <span>{tab.label}</span>
-            </button>
+              <button
+                key={tab.key}
+                type="button"
+                className={styles.tabButton}
+                data-active={active ? 'true' : undefined}
+                onClick={() => setActiveTab(tab.key)}
+              >
+                <span aria-hidden className={styles.tabIndicator} />
+                <span aria-hidden className={styles.tabIcon}>{tab.icon}</span>
+                <span className={styles.tabLabel}>{tab.label}</span>
+              </button>
             );
           })}
         </nav>
 
-        <div style={{ ...formStyle, padding: 24 }}>
+        <div className={styles.content}>
           {loading ? (
-            <div style={{ padding: 16, textAlign: 'center', color: '#475569', fontSize: '0.85rem' }}>
-              로딩 중...
+            <div className={styles.loading}>
+              {copy.modal.loading}
             </div>
           ) : activeTab === 'general' ? (
-            <SiteSettingsGeneralTab settings={settings} onUpdateField={updateField} />
+            <SiteSettingsGeneralTab settings={settings} onUpdateField={updateField} locale={normalizedLocale} />
           ) : activeTab === 'brand' ? (
             <BrandKitPanel
               value={brandKit}
               locale={normalizeLocale(locale)}
               onChange={setBrandKit}
-              onApply={() => applyBrandKitToState(brandKit, 'Brand kit을 현재 사이트 테마에 적용했습니다. 저장을 눌러 사이트에 반영하세요.')}
+              onApply={() => applyBrandKitToState(brandKit, copy.modal.brandKitApplied(copy.modal.tabs.brand))}
               onExport={exportBrandKit}
               onImport={(file) => void importBrandKit(file)}
             />
@@ -654,6 +653,7 @@ export default function SiteSettingsModal({
               settings={settings}
               onChangeHeaderFooter={setHeaderFooter}
               onChangeMobileBottomBar={setMobileBottomBar}
+              locale={normalizedLocale}
             />
           ) : activeTab === 'advanced' ? (
             <SiteSettingsAdvancedTab
@@ -674,6 +674,7 @@ export default function SiteSettingsModal({
                 }));
               }}
               onChangeThemeColor={updateThemeColor}
+              locale={normalizedLocale}
             />
           ) : activeTab === 'dark' ? (
             <SiteSettingsDarkModeTab
@@ -682,10 +683,12 @@ export default function SiteSettingsModal({
               isValidHexColor={isValidHexColor}
               onChangeDarkMode={setDarkMode}
               onChangeDarkThemeColor={updateDarkThemeColor}
+              locale={normalizedLocale}
             />
           ) : activeTab === 'typography' ? (
             <SiteSettingsTypographyTab
               theme={theme}
+              locale={normalizeLocale(locale)}
               onChangeThemeFont={updateThemeFont}
               onChangeTypographyScale={(baseSize, ratio) => {
                 setTheme((prev) => applyTypographyScaleToTheme({ ...prev, typographyScale: { baseSize, ratio } }));
@@ -694,23 +697,25 @@ export default function SiteSettingsModal({
             />
           ) : (
             <SiteSettingsPresetsTab
+              locale={normalizedLocale}
               theme={theme}
               customThemePresets={customThemePresets}
               pendingPreset={pendingPreset}
               onApplyComponentDesignPreset={handleComponentDesignPresetApply}
+              onApplyThemeSuggestion={applyThemeSuggestion}
               onExportDesignTokens={exportDesignTokens}
               onImportDesignTokens={importDesignTokens}
               onApplyRadiusPreset={(presetKey, presetLabel) => {
                 const nextTheme = applyThemeRadiusPreset(theme, presetKey);
                 setTheme(nextTheme);
                 setBrandKit(createBrandKitFromTheme(nextTheme, settings));
-                setNotice(`${presetLabel} radius preset applied. 저장을 눌러 사이트에 반영하세요.`);
+                setNotice(copy.modal.radiusApplied(presetLabel));
               }}
               onApplyShadowPreset={(presetKey, presetLabel) => {
                 const nextTheme = applyThemeShadowPreset(theme, presetKey);
                 setTheme(nextTheme);
                 setBrandKit(createBrandKitFromTheme(nextTheme, settings));
-                setNotice(`${presetLabel} shadow preset applied. 저장을 눌러 사이트에 반영하세요.`);
+                setNotice(copy.modal.shadowApplied(presetLabel));
               }}
               onSaveCurrentThemePreset={saveCurrentThemePreset}
               onApplyCustomThemePreset={applyCustomThemePreset}

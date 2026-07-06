@@ -5,6 +5,11 @@ import {
   listPaymentWebhookEvents,
   summarizePaymentWebhookEvents,
 } from '@/lib/builder/commerce/payment-webhooks-engine';
+import {
+  getCommercePaymentWebhooksApiErrorPayload,
+  type CommercePaymentWebhooksApiErrorCode,
+} from '@/lib/builder/commerce/payment-webhooks-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -15,9 +20,24 @@ const querySchema = z.object({
   status: z.enum(['all', 'processed', 'unmatched', 'failed', 'ignored']).default('all'),
 });
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: CommercePaymentWebhooksApiErrorCode,
+  status: number,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
+    { ok: false, ...getCommercePaymentWebhooksApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      ...getCommercePaymentWebhooksApiErrorPayload(locale, 'invalid_payment_webhook_filters'),
+      issues: error.flatten(),
+    },
     { status: 400 },
   );
 }
@@ -25,6 +45,8 @@ function validationError(error: ZodError): NextResponse {
 export async function GET(request: NextRequest) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
+
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   try {
     const sp = request.nextUrl.searchParams;
@@ -40,8 +62,8 @@ export async function GET(request: NextRequest) {
       kpis: summarizePaymentWebhookEvents(events),
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     console.error('[builder/commerce/payment-webhooks] GET failed:', error);
-    return NextResponse.json({ ok: false, error: 'payment_webhooks_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'payment_webhooks_failed', 500);
   }
 }

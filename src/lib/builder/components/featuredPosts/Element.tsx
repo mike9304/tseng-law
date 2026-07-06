@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import type { BuilderFeaturedPostsCanvasNode } from '@/lib/builder/canvas/types';
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
 import { DEFAULT_BLOG_CATEGORIES } from '@/lib/builder/blog/blog-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { getFeaturedPostsCopy } from './featured-posts-copy';
 
 interface FeaturedPostsElementProps {
   node: BuilderFeaturedPostsCanvasNode;
@@ -12,21 +13,16 @@ interface FeaturedPostsElementProps {
   locale?: Locale;
 }
 
-const MOCK = [
-  { postId: 'm1', slug: 'm1', title: '대만 회사 설립 가이드', excerpt: '외국인 법인 설립 절차 총정리.', category: 'company-formation' },
-  { postId: 'm2', slug: 'm2', title: '국제이혼 관할권 분쟁', excerpt: '국적이 다른 부부의 이혼소송 관할 결정.', category: 'family-law' },
-  { postId: 'm3', slug: 'm3', title: '교통사고 합의금 산정', excerpt: '대만 교통사고 합의금 적정선 산출.', category: 'traffic-accident' },
-];
-
-function categoryLabel(slug: string): string {
+function categoryLabel(slug: string, locale: Locale): string {
   const cat = DEFAULT_BLOG_CATEGORIES.find((c) => c.slug === slug);
-  return cat?.name.ko ?? slug;
+  return cat?.name[locale] ?? cat?.name.ko ?? slug;
 }
 
 export default function FeaturedPostsElement({ node, mode = 'edit', locale }: FeaturedPostsElementProps) {
   const c = node.content;
   const isBuilder = mode !== 'published';
   const effectiveLocale = normalizeLocale(locale || 'ko');
+  const copy = getFeaturedPostsCopy(effectiveLocale);
   const [posts, setPosts] = useState<BlogPost[] | null>(null);
 
   useEffect(() => {
@@ -45,7 +41,7 @@ export default function FeaturedPostsElement({ node, mode = 'edit', locale }: Fe
   }, [effectiveLocale, isBuilder, c.limit]);
 
   const items = useMemo(() => {
-    if (isBuilder) return MOCK.slice(0, c.limit);
+    if (isBuilder) return copy.element.mockPosts.slice(0, c.limit);
     return (posts ?? []).slice(0, c.limit).map((p) => ({
       postId: p.postId,
       slug: p.slug,
@@ -53,12 +49,12 @@ export default function FeaturedPostsElement({ node, mode = 'edit', locale }: Fe
       excerpt: p.excerpt,
       category: p.category,
     }));
-  }, [isBuilder, posts, c.limit]);
+  }, [copy.element.mockPosts, isBuilder, posts, c.limit]);
 
   if (items.length === 0) {
     return (
       <div data-builder-featured-posts="true" style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f1f5f9', border: '2px dashed #cbd5e1', borderRadius: 8, color: '#94a3b8', fontSize: 13 }}>
-        Featured Posts · 등록된 피처드 글이 없습니다.
+        {copy.element.emptyState}
       </div>
     );
   }
@@ -81,9 +77,9 @@ export default function FeaturedPostsElement({ node, mode = 'edit', locale }: Fe
             overflow: 'hidden',
           }}
         >
-          <span style={{ fontSize: 12, fontWeight: 700, opacity: 0.85, textTransform: 'uppercase' }}>
-            ★ {categoryLabel(first.category)}
-          </span>
+            <span style={{ fontSize: 12, fontWeight: 700, opacity: 0.85, textTransform: 'uppercase' }}>
+            {copy.element.featuredMarker} {copy.element.categoryPrefix} {categoryLabel(first.category, effectiveLocale)}
+            </span>
           <h2 style={{ margin: '8px 0', fontSize: 26, fontWeight: 800, lineHeight: 1.25 }}>{first.title}</h2>
           <p style={{ margin: 0, fontSize: 14, opacity: 0.9, lineHeight: 1.5 }}>{first.excerpt}</p>
         </a>
@@ -107,7 +103,7 @@ export default function FeaturedPostsElement({ node, mode = 'edit', locale }: Fe
                 }}
               >
                 <span style={{ fontSize: 11, fontWeight: 700, color: '#0b3b2e', textTransform: 'uppercase' }}>
-                  ★ {categoryLabel(p.category)}
+                  {copy.element.featuredMarker} {copy.element.categoryPrefix} {categoryLabel(p.category, effectiveLocale)}
                 </span>
                 <h3 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: '#0f172a', lineHeight: 1.3 }}>{p.title}</h3>
               </a>
@@ -127,7 +123,7 @@ export default function FeaturedPostsElement({ node, mode = 'edit', locale }: Fe
             href={isBuilder ? '#' : `/${effectiveLocale}/columns/${p.slug}`}
             style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: 16, textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', gap: 6 }}
           >
-            <span style={{ fontSize: 11, fontWeight: 700, color: '#0b3b2e', textTransform: 'uppercase' }}>★ {categoryLabel(p.category)}</span>
+            <span style={{ fontSize: 11, fontWeight: 700, color: '#0b3b2e', textTransform: 'uppercase' }}>{copy.element.featuredMarker} {copy.element.categoryPrefix} {categoryLabel(p.category, effectiveLocale)}</span>
             <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: '#0f172a', lineHeight: 1.3 }}>{p.title}</h3>
             <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.5 }}>{p.excerpt}</p>
           </a>
@@ -145,7 +141,7 @@ export default function FeaturedPostsElement({ node, mode = 'edit', locale }: Fe
           href={isBuilder ? '#' : `/${effectiveLocale}/columns/${p.slug}`}
           style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: 16, textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', gap: 4 }}
         >
-          <span style={{ fontSize: 11, fontWeight: 700, color: '#0b3b2e', textTransform: 'uppercase' }}>★ {categoryLabel(p.category)}</span>
+          <span style={{ fontSize: 11, fontWeight: 700, color: '#0b3b2e', textTransform: 'uppercase' }}>{copy.element.featuredMarker} {copy.element.categoryPrefix} {categoryLabel(p.category, effectiveLocale)}</span>
           <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: '#0f172a', lineHeight: 1.3 }}>{p.title}</h3>
           <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.4 }}>{p.excerpt}</p>
         </a>

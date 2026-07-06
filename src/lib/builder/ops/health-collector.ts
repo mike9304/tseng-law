@@ -13,6 +13,7 @@ import { listBackups as listLegacyBackups } from '@/lib/builder/backups/backup-e
 
 import {
   emptyHealthSnapshot,
+  type OpsDeployHealth,
   type OpsHealthSnapshot,
 } from './health-model';
 import { listCacheKeys } from './cache-introspection';
@@ -28,19 +29,53 @@ function isWithinLast24h(iso: string | undefined, now: number): boolean {
   return now - t <= DAY_MS;
 }
 
-async function safeReadDeployStamp(): Promise<string | undefined> {
-  const fromEnv = process.env.VERCEL_DEPLOYMENT_CREATED_AT
-    ?? process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF_TIME;
-  if (fromEnv) {
-    const parsed = Date.parse(fromEnv);
-    if (Number.isFinite(parsed)) return new Date(parsed).toISOString();
+function isoFromEnv(value: string | undefined): string | undefined {
+  if (!value) return undefined;
+  const parsed = Date.parse(value);
+  if (!Number.isFinite(parsed)) return undefined;
+  return new Date(parsed).toISOString();
+}
+
+function nonEmptyEnv(value: string | undefined): string | undefined {
+  const trimmed = value?.trim();
+  return trimmed ? trimmed : undefined;
+}
+
+function vercelUrl(value: string | undefined): string | undefined {
+  const trimmed = nonEmptyEnv(value);
+  if (!trimmed) return undefined;
+  if (trimmed.startsWith('https://') || trimmed.startsWith('http://')) return trimmed;
+  return `https://${trimmed}`;
+}
+
+async function readDeployMetadata(): Promise<OpsDeployHealth> {
+  const envDeployAt = isoFromEnv(process.env.VERCEL_DEPLOYMENT_CREATED_AT)
+    ?? isoFromEnv(process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF_TIME);
+  const environment = nonEmptyEnv(process.env.VERCEL_ENV);
+  const url = vercelUrl(process.env.VERCEL_URL);
+  const gitRef = nonEmptyEnv(process.env.VERCEL_GIT_COMMIT_REF);
+  const gitCommitSha = nonEmptyEnv(process.env.VERCEL_GIT_COMMIT_SHA);
+  if (envDeployAt || environment || url || gitRef || gitCommitSha) {
+    return {
+      status: envDeployAt ? 'ok' : 'unknown',
+      source: 'vercel',
+      ...(envDeployAt ? { lastDeployAt: envDeployAt } : {}),
+      ...(environment ? { environment } : {}),
+      ...(url ? { url } : {}),
+      ...(gitRef ? { gitRef } : {}),
+      ...(gitCommitSha ? { gitCommitSha } : {}),
+    };
   }
   try {
     const buildIdPath = path.join(process.cwd(), '.next', 'BUILD_ID');
     const st = await stat(buildIdPath);
-    return new Date(st.mtimeMs).toISOString();
+    return {
+      status: 'ok',
+      source: 'local-build',
+      lastDeployAt: new Date(st.mtimeMs).toISOString(),
+    };
   } catch {
-    return undefined;
+    return { status: 'unknown', source: 'unknown' };
   }
 }
 
@@ -50,10 +85,7 @@ export async function collectHealthSnapshot(now: Date = new Date()): Promise<Ops
 
   // Deploys ────────────────────────────────────────────────────────
   try {
-    const deployAt = await safeReadDeployStamp();
-    if (deployAt) {
-      snapshot.deploys = { lastDeployAt: deployAt, status: 'ok' };
-    }
+    snapshot.deploys = await readDeployMetadata();
   } catch { /* keep defaults */ }
 
   // Cache ──────────────────────────────────────────────────────────

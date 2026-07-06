@@ -18,12 +18,18 @@ import { devLogsRoot } from './paths';
 
 export type UnifiedLogType = 'audit' | 'dev' | 'security' | 'error';
 
+export interface UnifiedLogDetail {
+  label: string;
+  value: string;
+}
+
 export interface UnifiedLogEntry {
   source: UnifiedLogType;
   at: string;
   level: 'info' | 'warning' | 'error';
   summary: string;
   actorRef?: string;
+  details?: readonly UnifiedLogDetail[];
 }
 
 export interface LogAggregateResult {
@@ -31,15 +37,95 @@ export interface LogAggregateResult {
   entries: UnifiedLogEntry[];
 }
 
-function normalizeAuditEntry(event: AuditEvent): UnifiedLogEntry {
-  const isSecurity = event.type === 'publish.blocked' || event.type === 'publish.failure';
+function detail(label: string, value: string | undefined): readonly UnifiedLogDetail[] {
+  const normalized = value?.trim();
+  return normalized ? [{ label, value: normalized }] : [];
+}
+
+function idListDetail(label: string, ids: readonly string[] | undefined): readonly UnifiedLogDetail[] {
+  return ids?.length ? detail(label, ids.join(', ')) : [];
+}
+
+function normalizeCmsRecordsBulkLifecycleEntry(event: Extract<AuditEvent, { type: 'cms.records.bulk_lifecycle' }>): UnifiedLogEntry {
   return {
-    source: isSecurity ? 'security' : 'audit',
+    source: 'audit',
+    at: event.at,
+    level: 'info',
+    summary: `CMS lifecycle · ${event.action} · ${event.collectionId} · ${event.changedCount}/${event.requestedCount} changed`,
+    actorRef: event.actorRef,
+    details: [
+      { label: 'Collection', value: event.collectionId },
+      { label: 'Action', value: event.action },
+      { label: 'Changed', value: `${event.changedCount}/${event.requestedCount}` },
+      ...idListDetail('Records', event.recordIds),
+      ...detail('Locale', event.locale),
+      ...detail('Status', event.status),
+      ...detail('Slug field', event.slugField),
+      ...detail('Source field', event.sourceFieldKey),
+      ...detail('Slug pattern', event.slugPattern),
+      ...detail('Slug conflict', event.slugConflictRule),
+      ...idListDetail('Missing', event.missingRecordIds),
+      ...idListDetail('Skipped', event.skippedRecordIds),
+    ],
+  };
+}
+
+function normalizeStandardAuditEntry(event: AuditEvent, source: 'audit' | 'security'): UnifiedLogEntry {
+  return {
+    source,
     at: event.at,
     level: event.type === 'publish.failure' ? 'error' : 'info',
-    summary: `${event.type}${'pageId' in event && event.pageId ? ` · ${event.pageId}` : ''}`,
+    summary: `${event.type}${event.pageId ? ` · ${event.pageId}` : ''}`,
     actorRef: event.actorRef,
   };
+}
+
+function normalizeAuditEntry(event: AuditEvent): UnifiedLogEntry {
+  switch (event.type) {
+    case 'cms.records.bulk_lifecycle':
+      return normalizeCmsRecordsBulkLifecycleEntry(event);
+    case 'publish.blocked':
+    case 'publish.failure':
+      return normalizeStandardAuditEntry(event, 'security');
+    case 'security.user_created':
+    case 'security.user_updated':
+    case 'security.user_removed':
+      return normalizeStandardAuditEntry(event, 'security');
+    case 'cms.record_created':
+    case 'cms.record_updated':
+    case 'cms.record_deleted':
+      return {
+        source: 'audit',
+        at: event.at,
+        level: 'info',
+        summary: `CMS record · ${event.type.replace('cms.record_', '')} · ${event.collectionId} · ${event.recordId}`,
+        actorRef: event.actorRef,
+        details: [
+          { label: 'Collection', value: event.collectionId },
+          { label: 'Record', value: event.recordId },
+          ...detail('Site', event.siteId),
+        ],
+      };
+    case 'commerce.settings_updated':
+      return {
+        source: 'audit',
+        at: event.at,
+        level: 'info',
+        summary: `Commerce settings · ${event.area} updated`,
+        actorRef: event.actorRef,
+        details: [{ label: 'Area', value: event.area }],
+      };
+    case 'asset.upload':
+    case 'asset.delete':
+    case 'publish.success':
+    case 'publish.translation_site_review':
+    case 'page.rollback':
+    case 'column.create':
+    case 'column.update':
+    case 'column.delete':
+    case 'column.publish':
+      return normalizeStandardAuditEntry(event, 'audit');
+  }
 }
 
 function normalizeErrorEntry(entry: CapturedError): UnifiedLogEntry {

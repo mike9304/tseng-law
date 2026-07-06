@@ -7,6 +7,7 @@ import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel
 import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorPanel';
 import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
 import { BuilderThemeProvider } from '@/components/builder/editor/BuilderThemeContext';
+import { getCanvasShellCopy } from '@/components/builder/canvas/canvas-shell-copy';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { DEFAULT_THEME } from '@/lib/builder/site/types';
@@ -39,6 +40,7 @@ export default function GlobalCanvasEditor({
   slot,
   initialDocument,
 }: GlobalCanvasEditorProps) {
+  const text = getCanvasShellCopy(locale).globalCanvas;
   const {
     document,
     selectedNodeIds,
@@ -90,15 +92,9 @@ export default function GlobalCanvasEditor({
   const hasSelection = selectedNodeIds.length > 0;
   const stageWidth = document?.stageWidth ?? initialDocument.stageWidth ?? 1280;
   const stageHeight = document?.stageHeight ?? initialDocument.stageHeight ?? 120;
-
-  const saveLabel = useMemo(() => {
-    switch (saveState) {
-      case 'saving': return 'Saving…';
-      case 'saved': return 'Saved';
-      case 'error': return 'Save failed';
-      default: return '';
-    }
-  }, [saveState]);
+  const slotTitle = slot === 'header' ? text.headerTitle : text.footerTitle;
+  const slotLabel = slot === 'header' ? text.headerSlotLabel : text.footerSlotLabel;
+  const saveLabel = useMemo(() => text.saveStates[saveState], [saveState, text]);
 
   return (
     <BuilderThemeProvider value={DEFAULT_THEME}>
@@ -122,17 +118,14 @@ export default function GlobalCanvasEditor({
             borderBottom: '1px solid #334155',
             flex: '0 0 auto',
           }}
-        >
-          <Link
-            href={`/${locale}/admin-builder`}
-            style={{ color: '#cbd5e1', textDecoration: 'none', fontSize: 13 }}
           >
-            ← Admin
+          <Link href={`/${locale}/admin-builder`} style={{ color: '#cbd5e1', textDecoration: 'none', fontSize: 13 }}>
+            ← {text.backLabel}
           </Link>
           <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 8 }}>
-            <strong style={{ fontSize: 14 }}>{meta.title}</strong>
+            <strong style={{ fontSize: 14 }}>{slotTitle}</strong>
             <code style={{ color: '#94a3b8', fontSize: 12 }}>
-              {slot === 'header' ? 'site.header' : 'site.footer'}
+              {slotLabel}
             </code>
           </div>
           {saveLabel && (
@@ -165,6 +158,7 @@ export default function GlobalCanvasEditor({
             <button
               type="button"
               onClick={() => setDrawer((d) => (d === 'add' ? null : 'add'))}
+              data-global-canvas-drawer-button="add"
               style={{
                 padding: '12px 0',
                 background: drawer === 'add' ? '#0b3b2e' : 'transparent',
@@ -175,11 +169,13 @@ export default function GlobalCanvasEditor({
                 fontSize: 11,
               }}
             >
-              ＋<br />Add
+              ＋<br />
+              {text.addLabel}
             </button>
             <button
               type="button"
               onClick={() => setDrawer((d) => (d === 'layers' ? null : 'layers'))}
+              data-global-canvas-drawer-button="layers"
               style={{
                 padding: '12px 0',
                 background: drawer === 'layers' ? '#0b3b2e' : 'transparent',
@@ -190,7 +186,8 @@ export default function GlobalCanvasEditor({
                 fontSize: 11,
               }}
             >
-              ▥<br />Layers
+              ▥<br />
+              {text.layersLabel}
             </button>
           </nav>
 
@@ -206,7 +203,7 @@ export default function GlobalCanvasEditor({
               }}
             >
               {drawer === 'add' && <SandboxCatalogPanel />}
-              {drawer === 'layers' && <SandboxLayersPanel />}
+              {drawer === 'layers' && <SandboxLayersPanel locale={locale} />}
             </aside>
           )}
 
@@ -235,16 +232,15 @@ export default function GlobalCanvasEditor({
                 boxShadow: '0 24px 60px rgba(0,0,0,0.4)',
               }}
             >
-              <CanvasContainer />
+              <CanvasContainer locale={locale} />
             </div>
             <p style={{ color: '#cbd5e1', fontSize: 12, marginTop: 12 }}>
-              {stageWidth} × {stageHeight} — autosaved as{' '}
-              {slot === 'header' ? 'global header' : 'global footer'}
+              {stageWidth} × {stageHeight} — {text.autosaveLabel} {slotTitle}
             </p>
             {document && document.nodes.length === 0 && (
               <p style={{ color: '#cbd5e1', fontSize: 12, marginTop: 4, maxWidth: 480, textAlign: 'center' }}>
-                Empty canvas — published pages will fall back to the legacy {slot} component
-                until you add at least one node here.
+                {text.emptyCanvasLabel} — published pages will fall back to the {text.fallbackLabel}{' '}
+                {(slot === 'header' ? text.headerFallback : text.footerFallback)} until you add at least one node here.
               </p>
             )}
           </div>

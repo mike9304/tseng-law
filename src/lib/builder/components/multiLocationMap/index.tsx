@@ -1,14 +1,27 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderMultiLocationMapCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import {
+  getLocationWidgetsCopy,
+  localizedLocationWidgetText,
+  localizedMultiLocations,
+  LOCATION_WIDGETS_LEGACY_DEFAULTS,
+} from '../location-widgets-copy';
+import styles from './MultiLocationMapInspector.module.css';
 
 function MultiLocationMapRender({
   node,
+  locale = 'ko',
 }: {
   node: BuilderMultiLocationMapCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
-  const active = c.locations[c.activeIndex] ?? c.locations[0] ?? null;
+  const copy = getLocationWidgetsCopy(locale);
+  const title = localizedLocationWidgetText(c.title, copy.multiLocationMap.defaultTitle, LOCATION_WIDGETS_LEGACY_DEFAULTS.multiLocationMap.title);
+  const locations = localizedMultiLocations(c.locations, copy.multiLocationMap.defaultLocations);
+  const active = locations[c.activeIndex] ?? locations[0] ?? null;
   const mapsHref = active
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(active.address || active.name)}`
     : '#';
@@ -20,16 +33,16 @@ function MultiLocationMapRender({
       data-builder-location-list={c.showList ? 'true' : 'false'}
     >
       <header>
-        <strong>{c.title}</strong>
-        <small>{c.locations.length}개 지점</small>
+        <strong>{title}</strong>
+        <small>{copy.multiLocationMap.count(locations.length)}</small>
       </header>
       <div className="builder-location-multi-map-body">
         {c.showList ? (
           <ul>
-            {c.locations.length === 0 ? (
-              <li className="builder-location-empty"><em>지점을 인스펙터에서 추가하세요</em></li>
+            {locations.length === 0 ? (
+              <li className="builder-location-empty"><em>{copy.multiLocationMap.empty}</em></li>
             ) : (
-              c.locations.map((loc, idx) => (
+              locations.map((loc, idx) => (
                 <li key={`${loc.name}-${idx}`} data-active={idx === c.activeIndex ? 'true' : 'false'}>
                   <strong>{loc.name}</strong>
                   <span>{loc.address}</span>
@@ -46,7 +59,7 @@ function MultiLocationMapRender({
               <small>{active.lat.toFixed(4)}, {active.lng.toFixed(4)}</small>
             </>
           ) : (
-            <em>활성 지점 없음</em>
+            <em>{copy.multiLocationMap.noActive}</em>
           )}
         </a>
       </div>
@@ -77,43 +90,55 @@ function parseLocations(value: string): BuilderMultiLocationMapCanvasNode['conte
 
 function MultiLocationMapInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const mlmNode = node as BuilderMultiLocationMapCanvasNode;
   const c = mlmNode.content;
+  const multiCopy = getLocationWidgetsCopy(locale).multiLocationMap;
+  const copy = multiCopy.inspector;
+  const title = localizedLocationWidgetText(c.title, multiCopy.defaultTitle, LOCATION_WIDGETS_LEGACY_DEFAULTS.multiLocationMap.title);
+  const locations = localizedMultiLocations(c.locations, multiCopy.defaultLocations);
   return (
-    <>
-      <label>
-        <span>제목</span>
-        <input type="text" value={c.title} disabled={disabled} onChange={(event) => onUpdate({ title: event.target.value })} />
+    <div className={styles.root} data-builder-multi-location-map-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.title}</span>
+        <input
+          className={styles.control}
+          type="text"
+          value={title}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ title: event.target.value })}
+        />
       </label>
-      <label>
-        <span>지점 (name | address | lat | lng)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.locations}</span>
         <textarea
+          className={`${styles.control} ${styles.textarea}`}
           rows={6}
-          style={{ fontFamily: 'inherit', resize: 'vertical' }}
-          value={locationsToText(c.locations)}
+          value={locationsToText(locations)}
           disabled={disabled}
           onChange={(event) => onUpdate({ locations: parseLocations(event.target.value) })}
         />
       </label>
-      <label>
-        <span>활성 인덱스</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.activeIndex}</span>
         <input
+          className={styles.control}
           type="number"
           min={0}
-          max={Math.max(0, c.locations.length - 1)}
+          max={Math.max(0, locations.length - 1)}
           value={c.activeIndex}
           disabled={disabled}
           onChange={(event) => onUpdate({ activeIndex: Number(event.target.value) })}
         />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showList} disabled={disabled} onChange={(event) => onUpdate({ showList: event.target.checked })} />
-        <span>리스트 표시</span>
+        <span>{copy.showList}</span>
       </label>
-    </>
+    </div>
   );
 }
 
@@ -123,11 +148,8 @@ export default defineComponent({
   category: 'advanced',
   icon: '🗺',
   defaultContent: {
-    title: '지점 안내',
-    locations: [
-      { name: '서울 본점', address: '서울특별시 강남구 테헤란로 152', lat: 37.4994, lng: 127.0356 },
-      { name: '대만 지점', address: '台北市信義區市府路45號', lat: 25.0376, lng: 121.5640 },
-    ],
+    title: LOCATION_WIDGETS_LEGACY_DEFAULTS.multiLocationMap.title,
+    locations: LOCATION_WIDGETS_LEGACY_DEFAULTS.multiLocationMap.locations.map((location) => ({ ...location })),
     activeIndex: 0,
     showList: true,
   },

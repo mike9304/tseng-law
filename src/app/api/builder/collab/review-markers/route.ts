@@ -7,70 +7,89 @@ import {
   sanitizeMarkerText,
   type ReviewMarkerKind,
 } from '@/lib/builder/collab/review-markers';
+import {
+  getBuilderCollabApiErrorPayload,
+  type BuilderCollabApiErrorCode,
+} from '@/lib/builder/collab/collab-api-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  normalizeCollabId,
+  readJsonObject,
+  resolveCollabSiteIdFromRequest,
+} from '../request-parsing';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const MAX_ID_LEN = 200;
-
-function badRequest(message: string): NextResponse {
-  return NextResponse.json({ ok: false, error: message }, { status: 400 });
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderCollabApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderCollabApiErrorPayload(locale, errorCode) },
+    { status },
+  );
 }
 
-function normalizeId(value: unknown): string | null {
-  if (typeof value !== 'string') return null;
-  const trimmed = value.trim();
-  if (!trimmed || trimmed.length > MAX_ID_LEN) return null;
-  return trimmed;
+function badRequest(locale: Locale): NextResponse {
+  return errorResponse(locale, 'invalid_request', 400);
+}
+
+function resolveLocale(request: NextRequest): Locale {
+  return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 }
 
 export async function GET(request: NextRequest) {
   const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
+  const locale = resolveLocale(request);
 
-  const siteId = normalizeId(request.nextUrl.searchParams.get('siteId')) ?? 'default';
-  const pageId = normalizeId(request.nextUrl.searchParams.get('pageId')) ?? undefined;
-  const nodeId = normalizeId(request.nextUrl.searchParams.get('nodeId')) ?? undefined;
+  const siteId = resolveCollabSiteIdFromRequest(request);
+  const pageId = normalizeCollabId(request.nextUrl.searchParams.get('pageId')) ?? undefined;
+  const nodeId = normalizeCollabId(request.nextUrl.searchParams.get('nodeId')) ?? undefined;
   const rawKind = request.nextUrl.searchParams.get('kind');
   const kind: ReviewMarkerKind | undefined = isReviewMarkerKind(rawKind) ? rawKind : undefined;
   const includeResolved = request.nextUrl.searchParams.get('includeResolved') === '1';
 
-  const markers = await listReviewMarkers(siteId, {
-    pageId,
-    nodeId,
-    kind,
-    includeResolved,
-  });
-  return NextResponse.json({ ok: true, markers });
+  try {
+    const markers = await listReviewMarkers(siteId, {
+      pageId,
+      nodeId,
+      kind,
+      includeResolved,
+    });
+    return NextResponse.json({ ok: true, markers });
+  } catch (error) {
+    console.error('[builder/collab/review-markers] GET failed:', error);
+    return errorResponse(locale, 'review_markers_load_failed', 500);
+  }
 }
 
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
+  const locale = resolveLocale(request);
 
-  let body: {
-    siteId?: unknown;
-    pageId?: unknown;
-    nodeId?: unknown;
-    kind?: unknown;
-    text?: unknown;
-  };
+  let body: Record<string, unknown>;
   try {
-    body = (await request.json()) as typeof body;
+    const parsed = await readJsonObject(request);
+    if (!parsed) return badRequest(locale);
+    body = parsed;
   } catch {
-    return badRequest('Invalid JSON body');
+    return badRequest(locale);
   }
 
-  const siteId = normalizeId(body.siteId) ?? 'default';
-  const pageId = normalizeId(body.pageId);
-  const nodeId = normalizeId(body.nodeId);
-  if (!pageId) return badRequest('Missing pageId');
-  if (!nodeId) return badRequest('Missing nodeId');
+  const siteId = resolveCollabSiteIdFromRequest(request, body.siteId);
+  const pageId = normalizeCollabId(body.pageId);
+  const nodeId = normalizeCollabId(body.nodeId);
+  if (!pageId) return badRequest(locale);
+  if (!nodeId) return badRequest(locale);
   if (!isReviewMarkerKind(body.kind)) {
-    return badRequest('kind must be "comment", "todo", or "approval"');
+    return badRequest(locale);
   }
   const text = sanitizeMarkerText(body.text);
-  if (!text) return badRequest('Missing or empty text');
+  if (!text) return badRequest(locale);
 
   try {
     const marker = await createReviewMarker({
@@ -83,6 +102,7 @@ export async function POST(request: NextRequest) {
     });
     return NextResponse.json({ ok: true, marker });
   } catch (err) {
-    return badRequest(err instanceof Error ? err.message : 'Failed to create marker');
+    console.error('[builder/collab/review-markers] POST failed:', err);
+    return errorResponse(locale, 'review_marker_create_failed', 500);
   }
 }

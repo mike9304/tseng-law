@@ -126,6 +126,19 @@ describe('builder CMS record query', () => {
     expect(result).toMatchObject({ page: 2, pageCount: 2, pageSize: 1, total: 2 });
   });
 
+  it('filters publishable records with status is-not predicates', () => {
+    const result = queryBuilderCmsRecords(records, fields, {
+      filters: [
+        { filterId: 'status-published', fieldKey: 'status', operator: 'is-not', value: 'published' },
+        { filterId: 'status-archived', fieldKey: 'status', operator: 'is-not', value: 'archived' },
+      ],
+      sortBy: 'recordId',
+      sortDirection: 'asc',
+    });
+
+    expect(result.filteredRecordIds).toEqual(['record-b']);
+  });
+
   it('normalizes saved record views for local persistence', () => {
     const view = createBuilderCmsRecordSavedView({
       name: 'Published Taiwan',

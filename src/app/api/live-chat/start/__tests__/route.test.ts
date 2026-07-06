@@ -23,8 +23,9 @@ vi.mock('@/lib/builder/webhooks/dispatcher', () => ({
   emitEvent: vi.fn(),
 }));
 
-function makeRequest(body: unknown): NextRequest {
-  return new NextRequest('https://law.example.test/api/live-chat/start', {
+function makeRequest(body: unknown, localeQuery = ''): NextRequest {
+  const query = localeQuery ? `?locale=${localeQuery}` : '';
+  return new NextRequest(`https://law.example.test/api/live-chat/start${query}`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-forwarded-for': '127.0.0.7' },
     body: JSON.stringify(body),
@@ -63,32 +64,43 @@ describe('/api/live-chat/start', () => {
     );
   });
 
-  it('returns 429 when the start rate limit is exceeded', async () => {
+  it('returns localized 429 when the start rate limit is exceeded', async () => {
     vi.mocked(checkRateLimit).mockResolvedValueOnce({ allowed: false, remaining: 0, retryAfterMs: 5000 });
     const route = await import('../route');
-    const response = await route.POST(makeRequest({ message: '안녕하세요' }));
+    const response = await route.POST(makeRequest({ message: '안녕하세요' }, 'zh-hant'));
+    const payload = await response.json();
 
     expect(response.status).toBe(429);
+    expect(payload.errorCode).toBe('too_many_requests');
+    expect(payload.error).toBe('請稍後再試。');
+    expect(payload.error).not.toMatch(/[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]/);
     expect(saveConversation).not.toHaveBeenCalled();
   });
 
-  it('rejects empty message with 400', async () => {
+  it('rejects empty message with localized 400', async () => {
     const route = await import('../route');
-    const response = await route.POST(makeRequest({ message: '' }));
+    const response = await route.POST(makeRequest({ message: '', locale: 'en' }));
+    const payload = await response.json();
 
     expect(response.status).toBe(400);
+    expect(payload.errorCode).toBe('invalid_payload');
+    expect(payload.error).toBe('Check your message and try again.');
+    expect(payload.error).not.toMatch(/[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3\u4E00-\u9FFF]/);
     expect(saveConversation).not.toHaveBeenCalled();
   });
 
   it('rejects a body that is not valid JSON with 400', async () => {
     const route = await import('../route');
-    const request = new NextRequest('https://law.example.test/api/live-chat/start', {
+    const request = new NextRequest('https://law.example.test/api/live-chat/start?locale=en', {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'x-forwarded-for': '127.0.0.7' },
       body: 'not-json',
     });
 
     const response = await route.POST(request);
+    const payload = await response.json();
     expect(response.status).toBe(400);
+    expect(payload.errorCode).toBe('invalid_payload');
+    expect(payload.error).toBe('Check your message and try again.');
   });
 });

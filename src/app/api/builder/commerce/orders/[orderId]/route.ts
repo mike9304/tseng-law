@@ -2,9 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  getCommerceOrdersApiErrorPayload,
+  type CommerceOrdersApiErrorCode,
+} from '@/lib/builder/commerce/orders-api-copy';
 import { loadOrder, softDeleteOrder, updateOrderState } from '@/lib/builder/commerce/orders-engine';
 import { queueOrderUpdatedNotification } from '@/lib/builder/commerce/notifications-engine';
 import { runOrderBillingAutomation } from '@/lib/builder/billing-document-automation';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -16,23 +21,39 @@ const patchSchema = z.object({
   trackingNumber: z.string().trim().max(160).optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: CommerceOrdersApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getCommerceOrdersApiErrorPayload(locale, errorCode), ...extras },
+    { status },
   );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
 }
 
 export async function GET(request: NextRequest, { params }: { params: { orderId: string } }) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
-  const order = await loadOrder(params.orderId);
-  if (!order) return NextResponse.json({ ok: false, error: 'order_not_found' }, { status: 404 });
-  return NextResponse.json({ ok: true, order });
+  try {
+    const order = await loadOrder(params.orderId);
+    if (!order) return errorResponse(errorLocale, 'order_not_found', 404);
+    return NextResponse.json({ ok: true, order });
+  } catch (error) {
+    console.error('[builder/commerce/orders/:id] GET failed:', error);
+    return errorResponse(errorLocale, 'orders_failed', 500);
+  }
 }
 
 export async function PATCH(request: NextRequest, { params }: { params: { orderId: string } }) {
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
@@ -40,7 +61,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { orderI
     const input = patchSchema.parse(await request.json());
     const previous = await loadOrder(params.orderId);
     let order = await updateOrderState(params.orderId, { ...input, actor: 'admin' });
-    if (!order) return NextResponse.json({ ok: false, error: 'order_not_found' }, { status: 404 });
+    if (!order) return errorResponse(errorLocale, 'order_not_found', 404);
     if (order.payment.status === 'paid' && previous?.payment.status !== 'paid') {
       try {
         const billingAutomation = await runOrderBillingAutomation(order.orderId, { trigger: 'paid' });
@@ -52,10 +73,10 @@ export async function PATCH(request: NextRequest, { params }: { params: { orderI
     await Promise.allSettled([queueOrderUpdatedNotification(order, input)]);
     return NextResponse.json({ ok: true, order });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
-    if (error instanceof SyntaxError) return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
+    if (error instanceof ZodError) return validationError(errorLocale, error);
+    if (error instanceof SyntaxError) return errorResponse(errorLocale, 'invalid_json', 400);
     console.error('[builder/commerce/orders/:id] PATCH failed:', error);
-    return NextResponse.json({ ok: false, error: 'order_update_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'order_update_failed', 500);
   }
 }
 

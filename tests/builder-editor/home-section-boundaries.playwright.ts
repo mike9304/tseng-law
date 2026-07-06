@@ -94,9 +94,25 @@ async function expectHomeBoundaryControls(page: Page): Promise<void> {
   await expectLocatorBelow(insights, page.locator('#practice').first(), -1);
 }
 
+async function expectHeroQuickMenuIsLocalized(page: Page, locale: 'ko' | 'zh-hant'): Promise<void> {
+  const searchInput = page.locator('.hero-search-input').first();
+  await searchInput.focus();
+  await expect(page.locator('.hero-quick-menu')).toBeVisible();
+  const faqLabel = locale === 'ko' ? '자주 묻는 질문' : '常見問題';
+  await expect(page.locator('.hero-quick-menu-item', { hasText: faqLabel })).toBeVisible();
+  await expect(page.locator('.hero-quick-menu-item')).toHaveCount(6);
+  await searchInput.press('Escape').catch(() => {});
+}
+
+async function expectLocalizedFaqSectionLabel(page: Page, locale: 'ko' | 'zh-hant'): Promise<void> {
+  const faqLabel = locale === 'ko' ? '자주 묻는 질문' : '常見問題';
+  await expect(page.locator('#faq .section-label').first()).toContainText(faqLabel);
+}
+
 async function closeHomePopupIfPresent(page: Page): Promise<void> {
   const popup = page.locator('.year-end-popup-backdrop').first();
   if (await popup.isVisible().catch(() => false)) {
+    await expect(popup.locator('.year-end-popup-badge')).toBeVisible();
     await popup.getByRole('button', { name: '닫기' }).click();
     await expect(popup).toBeHidden();
   }
@@ -228,9 +244,40 @@ test.describe('/ko live home section boundaries', () => {
       await expectHomeSectionsDoNotOverlap(page);
       await expectNoHorizontalOverflow(page);
       await expectHomeBoundaryControls(page);
+      await expectHeroQuickMenuIsLocalized(page, 'ko');
+      await expectLocalizedFaqSectionLabel(page, 'ko');
       await expectAllServiceAccordions(page);
       await expectAllFaqAccordions(page);
       await expectOfficeAndContactControls(page);
     });
   }
+
 });
+
+for (const { locale, path, label } of [
+  { locale: 'ko', path: '/ko', label: '자주 묻는 질문' },
+  { locale: 'zh-hant', path: '/zh-hant', label: '常見問題' },
+] as const) {
+  test.describe(`localized hero quick menu ${locale}`, () => {
+    test(`shows the localized FAQ quick menu label`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 1000 });
+      await page.goto(path, { waitUntil: 'domcontentloaded' });
+      await page.locator('.hero-search-input').first().focus();
+      await expect(page.locator('.hero-quick-menu')).toBeVisible();
+      await expect(page.locator('.hero-quick-menu-item', { hasText: label })).toBeVisible();
+    });
+  });
+}
+
+for (const { locale, path } of [
+  { locale: 'ko', path: '/ko' },
+  { locale: 'zh-hant', path: '/zh-hant' },
+] as const) {
+  test.describe(`localized homepage FAQ section label ${locale}`, () => {
+    test(`shows the localized FAQ section label`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 1000 });
+      await page.goto(path, { waitUntil: 'domcontentloaded' });
+      await expectLocalizedFaqSectionLabel(page, locale);
+    });
+  });
+}

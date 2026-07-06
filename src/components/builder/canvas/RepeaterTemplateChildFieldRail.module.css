@@ -1,0 +1,103 @@
+.repeaterTemplateChildFieldRail {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.repeaterTemplateChildFieldChip {
+  display: inline-grid;
+  max-width: 196px;
+  min-width: 0;
+  min-height: 20px;
+  align-items: center;
+  grid-template-columns: auto minmax(0, auto) minmax(0, 1fr);
+  gap: 4px;
+  overflow: hidden;
+  padding: 3px 6px;
+  border: 1px solid color-mix(in srgb, var(--insp-accent, #2563eb) 24%, transparent);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--editor-panel, #fff) 96%, transparent);
+  color: var(--editor-fg-secondary, #334155);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.repeaterTemplateChildFieldChip:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--insp-accent, #2563eb) 44%, transparent);
+  background: color-mix(in srgb, var(--editor-panel, #fff) 92%, var(--insp-accent, #2563eb));
+}
+
+.repeaterTemplateChildFieldChip:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--insp-accent, #2563eb) 50%, transparent);
+  outline-offset: 1px;
+}
+
+.repeaterTemplateChildFieldChip:disabled {
+  cursor: default;
+  opacity: 0.68;
+}
+
+.repeaterTemplateChildFieldChip[data-builder-repeater-template-child-field-active='true'] {
+  border-color: color-mix(in srgb, var(--insp-accent, #2563eb) 55%, transparent);
+  background: color-mix(in srgb, var(--editor-panel, #fff) 86%, var(--insp-accent, #2563eb));
+}
+
+.repeaterTemplateChildFieldChip[data-builder-repeater-template-child-field-locked='true'] {
+  border-color: color-mix(in srgb, var(--editor-fg-muted, #64748b) 28%, transparent);
+  background: color-mix(in srgb, var(--editor-panel, #fff) 97%, var(--editor-fg-muted, #64748b));
+  color: var(--editor-fg-secondary, #334155);
+}
+
+.repeaterTemplateChildFieldChip strong,
+.repeaterTemplateChildFieldChip em,
+.repeaterTemplateChildFieldChip small {
+  min-width: 0;
+  overflow: hidden;
+  line-height: 1;
+  text-overflow: ellipsis;
+}
+
+.repeaterTemplateChildFieldChip strong {
+  flex: 0 0 auto;
+  color: var(--insp-accent, #2563eb);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.repeaterTemplateChildFieldChip em {
+  color: var(--editor-fg-secondary, #334155);
+  font-style: normal;
+  font-weight: 750;
+}
+
+.repeaterTemplateChildFieldChip small {
+  grid-column: 1 / -1;
+  color: color-mix(in srgb, var(--insp-accent, #2563eb) 72%, var(--editor-fg-secondary, #334155));
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.repeaterTemplateFieldLockLabel {
+  flex: 0 0 auto;
+  max-width: 40px;
+  overflow: hidden;
+  padding: 2px 4px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--editor-fg-muted, #64748b) 14%, transparent);
+  color: var(--editor-fg-secondary, #334155);
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

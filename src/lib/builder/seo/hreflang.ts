@@ -11,6 +11,7 @@
 import { defaultLocale, locales, type Locale } from '@/lib/locales';
 import type { BuilderPageMeta } from '@/lib/builder/site/types';
 import { buildSitePageAbsoluteUrl } from '@/lib/builder/site/paths';
+import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
 
 export interface HreflangAlternate {
   /** Locale tag in the IETF form expected by Google (e.g. zh-Hant). */
@@ -31,8 +32,52 @@ export function localeToHreflangTag(locale: Locale): string {
   return LOCALE_TO_HREFLANG[locale] ?? locale;
 }
 
+/**
+ * Slugs served by the static (legacy) fallback renderer in
+ * `src/app/[locale]/(legacy)/index.tsx`. Every site-supported locale
+ * resolves these slugs to a live 200 page via the `[locale]/[[...slug]]`
+ * route even when no builder page exists for that locale (e.g. `/en` and
+ * `/en/about` are served by the legacy renderer while only `/ko` has a
+ * builder page). Such locales must still be advertised in hreflang.
+ *
+ * Keep in sync with the legacy route switch. Note this is intentionally
+ * narrower than `REQUIRED_STANDARD_PAGE_SLUGS` (standard-pages.ts) —
+ * `columns`/`videos` are dynamic routes, not legacy-fallback slugs.
+ */
+const STATIC_FALLBACK_PAGE_SLUGS = new Set<string>([
+  '',
+  'about',
+  'services',
+  'contact',
+  'lawyers',
+  'faq',
+  'pricing',
+  'reviews',
+  'privacy',
+  'disclaimer',
+]);
+
+const PUBLIC_MULTILOCALE_ROUTE_SLUGS = new Set<string>([
+  ...STATIC_FALLBACK_PAGE_SLUGS,
+  'columns',
+  'videos',
+]);
+
+const HREFLANG_SORT_RANK: Record<string, number> = {
+  ko: 0,
+  'zh-Hant': 1,
+  en: 2,
+  'x-default': 3,
+};
+
 function pageUrl(siteUrl: string, locale: Locale, slug: string): string {
   return buildSitePageAbsoluteUrl(siteUrl, locale, slug);
+}
+
+function sortAlternates(alternates: HreflangAlternate[]): HreflangAlternate[] {
+  return [...alternates].sort((left, right) => (
+    (HREFLANG_SORT_RANK[left.hreflang] ?? 99) - (HREFLANG_SORT_RANK[right.hreflang] ?? 99)
+  ));
 }
 
 /**
@@ -54,7 +99,7 @@ export function buildHreflangAlternates(
   out.push({
     hreflang: localeToHreflangTag(page.locale),
     locale: page.locale,
-    href: pageUrl(siteUrl, page.locale, page.slug || ''),
+    href: pageUrl(siteUrl, page.locale, resolveLocaleSlug(page, page.locale) || ''),
   });
   seen.add(page.locale);
 
@@ -66,10 +111,51 @@ export function buildHreflangAlternates(
       if (seen.has(localeKey)) continue;
       const linked = allPages.find((p) => p.pageId === linkedId);
       if (!linked) continue;
+      const overrideSlug = page.slugByLocale?.[localeKey];
+      const hrefSlug = typeof overrideSlug === 'string' && overrideSlug.length > 0
+        ? overrideSlug
+        : linked.slug || '';
       out.push({
         hreflang: localeToHreflangTag(localeKey),
         locale: localeKey,
-        href: pageUrl(siteUrl, localeKey, linked.slug || ''),
+        href: pageUrl(siteUrl, localeKey, hrefSlug),
+      });
+      seen.add(localeKey);
+    }
+  }
+
+  // Implicit home-page linkage: each locale's home page is the translation
+  // of every other locale's home page, even without explicit `linkedPageIds`.
+  // Mirrors the convention in translations/page-targets.ts,
+  // translations/dashboard-model.ts and translations/publish-warnings.ts so
+  // that /ko (home) advertises zh-Hant + en alternates (W193). Non-home pages
+  // are NOT auto-linked by slug — hreflang must only point at real translations.
+  if (page.isHomePage) {
+    for (const localeKey of locales) {
+      if (seen.has(localeKey)) continue;
+      const home = allPages.find((p) => p.locale === localeKey && p.isHomePage);
+      if (!home) continue;
+      const overrideSlug = page.slugByLocale?.[localeKey];
+      const hrefSlug = typeof overrideSlug === 'string' && overrideSlug.length > 0
+        ? overrideSlug
+        : home.slug || '';
+      out.push({
+        hreflang: localeToHreflangTag(localeKey),
+        locale: localeKey,
+        href: pageUrl(siteUrl, localeKey, hrefSlug),
+      });
+      seen.add(localeKey);
+    }
+  }
+
+  const staticSlug = page.slug ?? '';
+  if (PUBLIC_MULTILOCALE_ROUTE_SLUGS.has(staticSlug)) {
+    for (const localeKey of locales) {
+      if (seen.has(localeKey)) continue;
+      out.push({
+        hreflang: localeToHreflangTag(localeKey),
+        locale: localeKey,
+        href: pageUrl(siteUrl, localeKey, staticSlug),
       });
       seen.add(localeKey);
     }
@@ -81,10 +167,10 @@ export function buildHreflangAlternates(
   out.push({
     hreflang: 'x-default',
     locale: defaultEntry?.locale ?? page.locale,
-    href: defaultEntry?.href ?? pageUrl(siteUrl, page.locale, page.slug || ''),
+    href: defaultEntry?.href ?? pageUrl(siteUrl, page.locale, resolveLocaleSlug(page, page.locale) || ''),
   });
 
-  return out;
+  return sortAlternates(out);
 }
 
 /**
@@ -116,6 +202,19 @@ export function findMissingLocales(
       if (linkedId && allPages.some((p) => p.pageId === linkedId)) {
         seen.add(loc as Locale);
       }
+    }
+  }
+  if (page.isHomePage) {
+    for (const localeKey of locales) {
+      if (seen.has(localeKey)) continue;
+      if (allPages.some((p) => p.locale === localeKey && p.isHomePage)) {
+        seen.add(localeKey);
+      }
+    }
+  }
+  if (PUBLIC_MULTILOCALE_ROUTE_SLUGS.has(page.slug ?? '')) {
+    for (const localeKey of locales) {
+      seen.add(localeKey);
     }
   }
   return locales.filter((l) => !seen.has(l));

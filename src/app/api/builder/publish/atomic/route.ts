@@ -6,7 +6,7 @@
  * published site never reflects a partial deploy.
  *
  * Body:
- *   { pageIds: string[], cmsCollectionIds: string[], locale?: 'ko'|'zh-hant'|'en' }
+ *   { pageIds: string[], cmsCollectionIds: string[], locale?: 'ko'|'zh-hant'|'en', deriveDynamicCollections?: boolean }
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -14,6 +14,7 @@ import { z } from 'zod';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { publishAtomic } from '@/lib/builder/publish-gate/atomic-publish-orchestrator';
+import { publishDynamicTemplate } from '@/lib/builder/dynamic-template-publish-coordinator';
 
 export const runtime = 'nodejs';
 
@@ -25,13 +26,14 @@ const bodySchema = z.object({
     .default([]),
   locale: z.enum(['ko', 'zh-hant', 'en']).optional(),
   siteId: z.string().trim().max(120).optional(),
+  deriveDynamicCollections: z.boolean().default(false),
 });
 
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { bucket: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
-  const raw = (await request.json().catch(() => ({}))) as unknown;
+  const raw: unknown = await request.json().catch(() => ({}));
   const parsed = bodySchema.safeParse(raw);
   if (!parsed.success) {
     return NextResponse.json(
@@ -39,7 +41,8 @@ export async function POST(request: NextRequest) {
       { status: 400 },
     );
   }
-  const { pageIds, cmsCollectionIds, locale, siteId } = parsed.data;
+  const { pageIds, cmsCollectionIds, locale, siteId, deriveDynamicCollections } = parsed.data;
+  const effectiveSiteId = siteId || DEFAULT_BUILDER_SITE_ID;
 
   if (pageIds.length === 0 && cmsCollectionIds.length === 0) {
     return NextResponse.json(
@@ -49,10 +52,27 @@ export async function POST(request: NextRequest) {
   }
 
   try {
+    if (deriveDynamicCollections) {
+      const coordinated = await publishDynamicTemplate({
+        pageIds,
+        extraCollectionIds: cmsCollectionIds,
+        siteId: effectiveSiteId,
+        locale,
+      });
+      return NextResponse.json(
+        {
+          ...coordinated.outcome,
+          resolvedPages: coordinated.resolvedPages,
+          referencedCollectionIds: coordinated.referencedCollectionIds,
+        },
+        { status: coordinated.outcome.ok ? 200 : 207 },
+      );
+    }
+
     const outcome = await publishAtomic({
       pageIds,
       cmsCollectionIds,
-      siteId: siteId || DEFAULT_BUILDER_SITE_ID,
+      siteId: effectiveSiteId,
       locale,
     });
     return NextResponse.json(outcome, { status: outcome.ok ? 200 : 207 });

@@ -2,8 +2,9 @@ import { defineComponent } from '../define';
 import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import HeadingElement from './Element';
 import HeadingInspector from './Inspector';
+import { HEADING_LEGACY_DEFAULT_TEXT } from './heading-copy';
 
-const defaultHeadingText = '헤딩을 입력하세요';
+const defaultHeadingText = HEADING_LEGACY_DEFAULT_TEXT;
 
 export default defineComponent({
   kind: 'heading',

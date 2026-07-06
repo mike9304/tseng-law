@@ -34,12 +34,16 @@ function makeCampaign(overrides: Partial<Campaign> = {}): Campaign {
   };
 }
 
-function patchRequest(body: unknown): NextRequest {
-  return new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-1', {
-    method: 'PATCH',
+function request(method: 'GET' | 'PATCH', query = '', body?: unknown): NextRequest {
+  return new NextRequest(`https://law.example.test/api/builder/marketing/campaigns/cmp-1${query ? `?${query}` : ''}`, {
+    method,
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(body),
+    body: body === undefined ? undefined : typeof body === 'string' ? body : JSON.stringify(body),
   });
+}
+
+function patchRequest(body: unknown): NextRequest {
+  return request('PATCH', '', body);
 }
 
 describe('/api/builder/marketing/campaigns/[campaignId]', () => {
@@ -54,7 +58,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
     const response = await route.GET(
-      new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-1'),
+      request('GET', 'locale=en'),
       { params: { campaignId: 'cmp-1' } },
     );
     const payload = await response.json();
@@ -67,16 +71,43 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     vi.mocked(getCampaign).mockResolvedValue(null);
     const route = await import('../route');
     const response = await route.GET(
-      new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-missing'),
+      new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-missing?locale=zh-hant'),
       { params: { campaignId: 'cmp-missing' } },
     );
+    const payload = await response.json();
+
     expect(response.status).toBe(404);
+    expect(payload).toEqual({
+      ok: false,
+      error: '找不到活動。',
+      errorCode: 'campaign_not_found',
+    });
+  });
+
+  it('GET returns localized load failures without leaking exception details', async () => {
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    vi.mocked(getCampaign).mockRejectedValueOnce(new Error('campaign load secret leaked'));
+    const route = await import('../route');
+    const response = await route.GET(request('GET', 'locale=en'), {
+      params: { campaignId: 'cmp-1' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Unable to load the campaign.',
+      errorCode: 'campaign_load_failed',
+    });
+    expect(JSON.stringify(payload)).not.toContain('campaign load secret leaked');
+    expect(consoleError).toHaveBeenCalledWith('[builder/marketing/campaigns/:id] load failed:', expect.any(Error));
+    consoleError.mockRestore();
   });
 
   it('PATCH renames a draft campaign', async () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
-    const response = await route.PATCH(patchRequest({ name: 'Renamed' }), {
+    const response = await route.PATCH(request('PATCH', 'locale=en', { name: 'Renamed' }), {
       params: { campaignId: 'cmp-1' },
     });
     const payload = await response.json();
@@ -89,11 +120,17 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
   it('PATCH refuses editing a campaign already in flight (409)', async () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign({ status: 'sending' }));
     const route = await import('../route');
-    const response = await route.PATCH(patchRequest({ name: 'Renamed' }), {
+    const response = await route.PATCH(request('PATCH', 'locale=zh-hant', { name: 'Renamed' }), {
       params: { campaignId: 'cmp-1' },
     });
+    const payload = await response.json();
 
     expect(response.status).toBe(409);
+    expect(payload).toEqual({
+      ok: false,
+      error: '發送中或已發送的活動無法修改。',
+      errorCode: 'campaign_in_flight',
+    });
     expect(saveCampaign).not.toHaveBeenCalled();
   });
 
@@ -115,6 +152,62 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
       params: { campaignId: 'cmp-missing' },
     });
     expect(response.status).toBe(404);
+  });
+
+  it('PATCH returns localized invalid JSON errors', async () => {
+    vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
+    const route = await import('../route');
+    const response = await route.PATCH(request('PATCH', 'locale=en', '{'), {
+      params: { campaignId: 'cmp-1' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Check the marketing request format.',
+      errorCode: 'invalid_json',
+    });
+    expect(saveCampaign).not.toHaveBeenCalled();
+  });
+
+  it('PATCH returns localized invalid update errors while preserving details', async () => {
+    vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
+    const route = await import('../route');
+    const response = await route.PATCH(request('PATCH', 'locale=ko', { name: '' }), {
+      params: { campaignId: 'cmp-1' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(payload).toMatchObject({
+      ok: false,
+      error: '캠페인 업데이트 정보를 확인해 주세요.',
+      errorCode: 'invalid_campaign_update',
+    });
+    expect(payload.details).toBeTruthy();
+    expect(saveCampaign).not.toHaveBeenCalled();
+  });
+
+  it('PATCH returns localized update failures without leaking exception details', async () => {
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
+    vi.mocked(saveCampaign).mockRejectedValueOnce(new Error('campaign update secret leaked'));
+    const route = await import('../route');
+    const response = await route.PATCH(request('PATCH', 'locale=en', { name: 'Renamed' }), {
+      params: { campaignId: 'cmp-1' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Unable to update the campaign.',
+      errorCode: 'campaign_update_failed',
+    });
+    expect(JSON.stringify(payload)).not.toContain('campaign update secret leaked');
+    expect(consoleError).toHaveBeenCalledWith('[builder/marketing/campaigns/:id] update failed:', expect.any(Error));
+    consoleError.mockRestore();
   });
 
   it('PATCH refuses anonymous callers (guardMutation deny)', async () => {

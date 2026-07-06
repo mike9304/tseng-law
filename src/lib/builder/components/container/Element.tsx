@@ -14,6 +14,8 @@ import {
   DEFAULT_GRID,
   type ContainerLayoutMode,
 } from '@/lib/builder/canvas/layout-modes';
+import { getContainerGalleryCopy } from '../container-gallery-copy';
+import type { Locale } from '@/lib/locales';
 
 function isDarkSolidColor(value: string): boolean {
   const hex = value.trim().match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i)?.[1];
@@ -37,14 +39,17 @@ export default function ContainerElement({
   node,
   theme,
   mode = 'edit',
+  locale = 'ko',
   children,
 }: {
   node: BuilderContainerCanvasNode;
   theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
   children?: ReactNode;
 }) {
   const content = node.content;
+  const copy = getContainerGalleryCopy(locale);
   const layoutMode = content.layoutMode ?? 'absolute';
   const { className, as, htmlId, dataTone, aiSectionTemplateKind } = content;
   const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
@@ -135,7 +140,7 @@ export default function ContainerElement({
       return (
         <div className="builder-layout-hoverbox" data-builder-layout-widget="hoverBox">
           <strong>{active?.title ?? content.label}</strong>
-          <p>{active?.description ?? 'Hover content'}</p>
+          <p>{active?.description ?? copy.container.hoverContentFallback}</p>
         </div>
       );
     }
@@ -191,6 +196,7 @@ export default function ContainerElement({
       style: {
         width: '100%',
         height: '100%',
+        minHeight: 'inherit',
         boxSizing: 'border-box' as const,
         position: 'relative' as const,
         pointerEvents: mode === 'edit' && hasChildren ? 'none' as const : undefined,

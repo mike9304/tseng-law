@@ -35,34 +35,133 @@ export interface SnapReferenceGuide {
 
 const SNAP_THRESHOLD = 6;
 const MAX_SPACING_GUIDE_PX = 96;
+const EMPTY_ALIGNMENT_GUIDES: AlignmentGuide[] = [];
+type SpacingGuide = AlignmentGuide & { gap: number };
 
-function edges(r: Rect) {
+function createEdges(x: number, y: number, width: number, height: number) {
   return {
-    left: r.x,
-    right: r.x + r.width,
-    top: r.y,
-    bottom: r.y + r.height,
-    centerX: r.x + r.width / 2,
-    centerY: r.y + r.height / 2,
+    left: x,
+    right: x + width,
+    top: y,
+    bottom: y + height,
+    centerX: x + width / 2,
+    centerY: y + height / 2,
   };
 }
 
-type RectEdges = ReturnType<typeof edges>;
+type RectEdges = ReturnType<typeof createEdges>;
+export type SnapCandidateEdges = RectEdges;
+export type SnapEdgeScratch = {
+  finalEdges: SnapCandidateEdges;
+  movingEdges: SnapCandidateEdges;
+  referenceGuideEdges: SnapCandidateEdges;
+};
+
+function writeEdges(
+  target: SnapCandidateEdges,
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+): SnapCandidateEdges {
+  target.left = x;
+  target.right = x + width;
+  target.top = y;
+  target.bottom = y + height;
+  target.centerX = x + width / 2;
+  target.centerY = y + height / 2;
+  return target;
+}
+
+export function createSnapEdgeScratch(): SnapEdgeScratch {
+  return {
+    finalEdges: createEdges(0, 0, 0, 0),
+    movingEdges: createEdges(0, 0, 0, 0),
+    referenceGuideEdges: createEdges(0, 0, 0, 0),
+  };
+}
+
+export function createSnapCandidateEdge(candidate: Rect): SnapCandidateEdges {
+  return createEdges(candidate.x, candidate.y, candidate.width, candidate.height);
+}
+
+export function createSnapCandidateEdges(candidates: readonly Rect[]): SnapCandidateEdges[] {
+  const candidateEdges: SnapCandidateEdges[] = new Array(candidates.length);
+  for (let index = 0; index < candidates.length; index += 1) {
+    candidateEdges[index] = createSnapCandidateEdge(candidates[index]);
+  }
+  return candidateEdges;
+}
 
 function rangesOverlap(aStart: number, aEnd: number, bStart: number, bEnd: number) {
   return Math.min(aEnd, bEnd) > Math.max(aStart, bStart);
 }
 
-function considerGuide(
-  current: (AlignmentGuide & { gap: number }) | null,
-  guide: AlignmentGuide & { gap: number },
-) {
-  if (guide.gap <= 0 || guide.gap > MAX_SPACING_GUIDE_PX) return current;
-  if (!current || guide.gap < current.gap) return guide;
-  return current;
+function canUseSpacingGuide(current: SpacingGuide | null, gap: number): boolean {
+  return gap > 0 && gap <= MAX_SPACING_GUIDE_PX && (!current || gap < current.gap);
 }
 
-function removeGuideGap(guide: AlignmentGuide & { gap: number }): AlignmentGuide {
+function considerSpacingGuide(
+  current: SpacingGuide | null,
+  axis: AlignmentGuide['axis'],
+  position: number,
+  from: number,
+  to: number,
+  gap: number,
+): SpacingGuide | null {
+  if (!canUseSpacingGuide(current, gap)) return current;
+  return {
+    axis,
+    position,
+    from,
+    to,
+    tone: 'spacing',
+    label: `${gap}px`,
+    gap,
+  };
+}
+
+function considerHorizontalCandidateSpacingGuide(
+  current: SpacingGuide | null,
+  finalEdges: RectEdges,
+  otherEdges: RectEdges,
+  from: number,
+  to: number,
+  gap: number,
+): SpacingGuide | null {
+  if (!canUseSpacingGuide(current, gap)) return current;
+  return {
+    axis: 'horizontal',
+    position: (Math.max(finalEdges.top, otherEdges.top) + Math.min(finalEdges.bottom, otherEdges.bottom)) / 2,
+    from,
+    to,
+    tone: 'spacing',
+    label: `${gap}px`,
+    gap,
+  };
+}
+
+function considerVerticalCandidateSpacingGuide(
+  current: SpacingGuide | null,
+  finalEdges: RectEdges,
+  otherEdges: RectEdges,
+  from: number,
+  to: number,
+  gap: number,
+): SpacingGuide | null {
+  if (!canUseSpacingGuide(current, gap)) return current;
+  return {
+    axis: 'vertical',
+    position: (Math.max(finalEdges.left, otherEdges.left) + Math.min(finalEdges.right, otherEdges.right)) / 2,
+    from,
+    to,
+    tone: 'spacing',
+    label: `${gap}px`,
+    gap,
+  };
+}
+
+function removeGuideGap(guide: SpacingGuide): AlignmentGuide {
   return {
     axis: guide.axis,
     position: guide.position,
@@ -82,46 +181,116 @@ function rectIntersects(a: Rect, b: Rect): boolean {
   );
 }
 
+export function snapCandidateIntersectsBounds(
+  candidate: Rect,
+  bounds: SnapCandidateBounds,
+): boolean {
+  return rectIntersects(candidate, bounds);
+}
+
 export function filterSnapCandidatesByBounds(
   candidates: Rect[],
   bounds: SnapCandidateBounds | null | undefined,
 ): Rect[] {
   if (!bounds) return candidates;
-  return candidates.filter((candidate) => rectIntersects(candidate, bounds));
+  let filteredCandidates: Rect[] | null = null;
+  for (let index = 0; index < candidates.length; index += 1) {
+    const candidate = candidates[index];
+    if (snapCandidateIntersectsBounds(candidate, bounds)) {
+      filteredCandidates?.push(candidate);
+    } else if (!filteredCandidates) {
+      filteredCandidates = candidates.slice(0, index);
+    }
+  }
+  return filteredCandidates ?? candidates;
 }
 
-function addVerticalAlignmentGuide(
-  guides: AlignmentGuide[],
+function addVerticalAlignmentGuidesForValue(
+  guides: AlignmentGuide[] | null,
   finalEdges: RectEdges,
   otherEdges: RectEdges,
-  meVal: number,
   otherVal: number,
-) {
-  if (Math.abs(meVal - otherVal) >= 1) return;
-  guides.push({
-    axis: 'vertical',
-    position: otherVal,
-    from: Math.min(finalEdges.top, otherEdges.top),
-    to: Math.max(finalEdges.bottom, otherEdges.bottom),
-    tone: 'alignment',
-  });
+): AlignmentGuide[] | null {
+  const matchesLeft = Math.abs(finalEdges.left - otherVal) < 1;
+  const matchesRight = Math.abs(finalEdges.right - otherVal) < 1;
+  const matchesCenterX = Math.abs(finalEdges.centerX - otherVal) < 1;
+  if (!matchesLeft && !matchesRight && !matchesCenterX) return guides;
+
+  const from = Math.min(finalEdges.top, otherEdges.top);
+  const to = Math.max(finalEdges.bottom, otherEdges.bottom);
+  const nextGuides = guides ?? [];
+  if (matchesLeft) {
+    nextGuides.push({
+      axis: 'vertical',
+      position: otherVal,
+      from,
+      to,
+      tone: 'alignment',
+    });
+  }
+  if (matchesRight) {
+    nextGuides.push({
+      axis: 'vertical',
+      position: otherVal,
+      from,
+      to,
+      tone: 'alignment',
+    });
+  }
+  if (matchesCenterX) {
+    nextGuides.push({
+      axis: 'vertical',
+      position: otherVal,
+      from,
+      to,
+      tone: 'alignment',
+    });
+  }
+  return nextGuides;
 }
 
-function addHorizontalAlignmentGuide(
-  guides: AlignmentGuide[],
+function addHorizontalAlignmentGuidesForValue(
+  guides: AlignmentGuide[] | null,
   finalEdges: RectEdges,
   otherEdges: RectEdges,
-  meVal: number,
   otherVal: number,
-) {
-  if (Math.abs(meVal - otherVal) >= 1) return;
-  guides.push({
-    axis: 'horizontal',
-    position: otherVal,
-    from: Math.min(finalEdges.left, otherEdges.left),
-    to: Math.max(finalEdges.right, otherEdges.right),
-    tone: 'alignment',
-  });
+): AlignmentGuide[] | null {
+  const matchesTop = Math.abs(finalEdges.top - otherVal) < 1;
+  const matchesBottom = Math.abs(finalEdges.bottom - otherVal) < 1;
+  const matchesCenterY = Math.abs(finalEdges.centerY - otherVal) < 1;
+  if (!matchesTop && !matchesBottom && !matchesCenterY) return guides;
+
+  const from = Math.min(finalEdges.left, otherEdges.left);
+  const to = Math.max(finalEdges.right, otherEdges.right);
+  const nextGuides = guides ?? [];
+  if (matchesTop) {
+    nextGuides.push({
+      axis: 'horizontal',
+      position: otherVal,
+      from,
+      to,
+      tone: 'alignment',
+    });
+  }
+  if (matchesBottom) {
+    nextGuides.push({
+      axis: 'horizontal',
+      position: otherVal,
+      from,
+      to,
+      tone: 'alignment',
+    });
+  }
+  if (matchesCenterY) {
+    nextGuides.push({
+      axis: 'horizontal',
+      position: otherVal,
+      from,
+      to,
+      tone: 'alignment',
+    });
+  }
+  return nextGuides;
 }
 
 /**
@@ -139,8 +308,48 @@ export function computeSnap(
   canvasSize: { width: number; height: number },
   referenceGuides: SnapReferenceGuide[] = [],
 ): SnapResult {
+  return computeSnapFromEdges(
+    moving,
+    createSnapCandidateEdges(others),
+    gridSize,
+    canvasSize,
+    referenceGuides,
+  );
+}
+
+export function computeSnapFromEdges(
+  moving: Rect,
+  otherEdges: readonly SnapCandidateEdges[],
+  gridSize: number,
+  canvasSize: { width: number; height: number },
+  referenceGuides: SnapReferenceGuide[] = [],
+): SnapResult {
+  const snappedRect = { x: 0, y: 0, width: 0, height: 0 };
+  const guides = writeSnapFromEdges(
+    snappedRect,
+    moving,
+    otherEdges,
+    gridSize,
+    canvasSize,
+    referenceGuides,
+  );
+  return {
+    snappedRect,
+    guides,
+  };
+}
+
+export function writeSnapFromEdges(
+  snappedRect: Rect,
+  moving: Rect,
+  otherEdges: readonly SnapCandidateEdges[],
+  gridSize: number,
+  canvasSize: { width: number; height: number },
+  referenceGuides: SnapReferenceGuide[] = [],
+  scratch?: SnapEdgeScratch,
+): AlignmentGuide[] {
   let { x, y } = moving;
-  const guides: AlignmentGuide[] = [];
+  let guides: AlignmentGuide[] | null = null;
 
   // 1. Grid snap
   if (gridSize > 0) {
@@ -154,53 +363,124 @@ export function computeSnap(
   let snapX = x;
   let snapY = y;
 
-  const meEdges = edges({ ...moving, x, y });
-  const considerX = (meVal: number, otherVal: number) => {
-    const d = Math.abs(meVal - otherVal);
-    if (d < bestDx) {
-      bestDx = d;
-      snapX = x + (otherVal - meVal);
-    }
-  };
-  const considerY = (meVal: number, otherVal: number) => {
-    const d = Math.abs(meVal - otherVal);
-    if (d < bestDy) {
-      bestDy = d;
-      snapY = y + (otherVal - meVal);
-    }
-  };
+  const meEdges = scratch
+    ? writeEdges(scratch.movingEdges, x, y, moving.width, moving.height)
+    : createEdges(x, y, moving.width, moving.height);
+  let distance = 0;
 
-  for (const other of others) {
-    const oe = edges(other);
-
+  for (let index = 0; index < otherEdges.length; index += 1) {
+    const oe = otherEdges[index];
+    if (!oe) continue;
     // Vertical guides (snap x-axis)
-    considerX(meEdges.left, oe.left);
-    considerX(meEdges.left, oe.right);
-    considerX(meEdges.right, oe.left);
-    considerX(meEdges.right, oe.right);
-    considerX(meEdges.centerX, oe.centerX);
-    considerX(meEdges.left, oe.centerX);
-    considerX(meEdges.right, oe.centerX);
+    distance = Math.abs(meEdges.left - oe.left);
+    if (distance < bestDx) {
+      bestDx = distance;
+      snapX = x + (oe.left - meEdges.left);
+    }
+    distance = Math.abs(meEdges.left - oe.right);
+    if (distance < bestDx) {
+      bestDx = distance;
+      snapX = x + (oe.right - meEdges.left);
+    }
+    distance = Math.abs(meEdges.right - oe.left);
+    if (distance < bestDx) {
+      bestDx = distance;
+      snapX = x + (oe.left - meEdges.right);
+    }
+    distance = Math.abs(meEdges.right - oe.right);
+    if (distance < bestDx) {
+      bestDx = distance;
+      snapX = x + (oe.right - meEdges.right);
+    }
+    distance = Math.abs(meEdges.centerX - oe.centerX);
+    if (distance < bestDx) {
+      bestDx = distance;
+      snapX = x + (oe.centerX - meEdges.centerX);
+    }
+    distance = Math.abs(meEdges.left - oe.centerX);
+    if (distance < bestDx) {
+      bestDx = distance;
+      snapX = x + (oe.centerX - meEdges.left);
+    }
+    distance = Math.abs(meEdges.right - oe.centerX);
+    if (distance < bestDx) {
+      bestDx = distance;
+      snapX = x + (oe.centerX - meEdges.right);
+    }
 
     // Horizontal guides (snap y-axis)
-    considerY(meEdges.top, oe.top);
-    considerY(meEdges.top, oe.bottom);
-    considerY(meEdges.bottom, oe.top);
-    considerY(meEdges.bottom, oe.bottom);
-    considerY(meEdges.centerY, oe.centerY);
-    considerY(meEdges.top, oe.centerY);
-    considerY(meEdges.bottom, oe.centerY);
+    distance = Math.abs(meEdges.top - oe.top);
+    if (distance < bestDy) {
+      bestDy = distance;
+      snapY = y + (oe.top - meEdges.top);
+    }
+    distance = Math.abs(meEdges.top - oe.bottom);
+    if (distance < bestDy) {
+      bestDy = distance;
+      snapY = y + (oe.bottom - meEdges.top);
+    }
+    distance = Math.abs(meEdges.bottom - oe.top);
+    if (distance < bestDy) {
+      bestDy = distance;
+      snapY = y + (oe.top - meEdges.bottom);
+    }
+    distance = Math.abs(meEdges.bottom - oe.bottom);
+    if (distance < bestDy) {
+      bestDy = distance;
+      snapY = y + (oe.bottom - meEdges.bottom);
+    }
+    distance = Math.abs(meEdges.centerY - oe.centerY);
+    if (distance < bestDy) {
+      bestDy = distance;
+      snapY = y + (oe.centerY - meEdges.centerY);
+    }
+    distance = Math.abs(meEdges.top - oe.centerY);
+    if (distance < bestDy) {
+      bestDy = distance;
+      snapY = y + (oe.centerY - meEdges.top);
+    }
+    distance = Math.abs(meEdges.bottom - oe.centerY);
+    if (distance < bestDy) {
+      bestDy = distance;
+      snapY = y + (oe.centerY - meEdges.bottom);
+    }
   }
 
-  for (const guide of referenceGuides) {
+  for (let index = 0; index < referenceGuides.length; index += 1) {
+    const guide = referenceGuides[index];
+    if (!guide) continue;
     if (guide.axis === 'vertical') {
-      considerX(meEdges.left, guide.position);
-      considerX(meEdges.right, guide.position);
-      considerX(meEdges.centerX, guide.position);
+      distance = Math.abs(meEdges.left - guide.position);
+      if (distance < bestDx) {
+        bestDx = distance;
+        snapX = x + (guide.position - meEdges.left);
+      }
+      distance = Math.abs(meEdges.right - guide.position);
+      if (distance < bestDx) {
+        bestDx = distance;
+        snapX = x + (guide.position - meEdges.right);
+      }
+      distance = Math.abs(meEdges.centerX - guide.position);
+      if (distance < bestDx) {
+        bestDx = distance;
+        snapX = x + (guide.position - meEdges.centerX);
+      }
     } else {
-      considerY(meEdges.top, guide.position);
-      considerY(meEdges.bottom, guide.position);
-      considerY(meEdges.centerY, guide.position);
+      distance = Math.abs(meEdges.top - guide.position);
+      if (distance < bestDy) {
+        bestDy = distance;
+        snapY = y + (guide.position - meEdges.top);
+      }
+      distance = Math.abs(meEdges.bottom - guide.position);
+      if (distance < bestDy) {
+        bestDy = distance;
+        snapY = y + (guide.position - meEdges.bottom);
+      }
+      distance = Math.abs(meEdges.centerY - guide.position);
+      if (distance < bestDy) {
+        bestDy = distance;
+        snapY = y + (guide.position - meEdges.centerY);
+      }
     }
   }
 
@@ -222,193 +502,151 @@ export function computeSnap(
   if (bestDy <= SNAP_THRESHOLD) y = snapY;
 
   // Build guide lines for snapped axes
-  const finalEdges = edges({ x, y, width: moving.width, height: moving.height });
-  let horizontalSpacingGuide: (AlignmentGuide & { gap: number }) | null = null;
-  let verticalSpacingGuide: (AlignmentGuide & { gap: number }) | null = null;
+  const finalEdges = scratch
+    ? writeEdges(scratch.finalEdges, x, y, moving.width, moving.height)
+    : createEdges(x, y, moving.width, moving.height);
+  let horizontalSpacingGuide: SpacingGuide | null = null;
+  let verticalSpacingGuide: SpacingGuide | null = null;
 
-  for (const other of others) {
-    const oe = edges(other);
+  for (let index = 0; index < otherEdges.length; index += 1) {
+    const oe = otherEdges[index];
+    if (!oe) continue;
     // Vertical guides
-    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.left, oe.left);
-    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.right, oe.left);
-    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerX, oe.left);
-    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.left, oe.right);
-    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.right, oe.right);
-    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerX, oe.right);
-    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.left, oe.centerX);
-    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.right, oe.centerX);
-    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerX, oe.centerX);
+    guides = addVerticalAlignmentGuidesForValue(guides, finalEdges, oe, oe.left);
+    guides = addVerticalAlignmentGuidesForValue(guides, finalEdges, oe, oe.right);
+    guides = addVerticalAlignmentGuidesForValue(guides, finalEdges, oe, oe.centerX);
 
     // Horizontal guides
-    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.top, oe.top);
-    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.bottom, oe.top);
-    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerY, oe.top);
-    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.top, oe.bottom);
-    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.bottom, oe.bottom);
-    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerY, oe.bottom);
-    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.top, oe.centerY);
-    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.bottom, oe.centerY);
-    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerY, oe.centerY);
+    guides = addHorizontalAlignmentGuidesForValue(guides, finalEdges, oe, oe.top);
+    guides = addHorizontalAlignmentGuidesForValue(guides, finalEdges, oe, oe.bottom);
+    guides = addHorizontalAlignmentGuidesForValue(guides, finalEdges, oe, oe.centerY);
 
     if (rangesOverlap(finalEdges.top, finalEdges.bottom, oe.top, oe.bottom)) {
-      const yPosition = (Math.max(finalEdges.top, oe.top) + Math.min(finalEdges.bottom, oe.bottom)) / 2;
       if (finalEdges.left >= oe.right) {
         const gap = Math.round(finalEdges.left - oe.right);
-        horizontalSpacingGuide = considerGuide(horizontalSpacingGuide, {
-          axis: 'horizontal',
-          position: yPosition,
-          from: oe.right,
-          to: finalEdges.left,
-          tone: 'spacing',
-          label: `${gap}px`,
+        horizontalSpacingGuide = considerHorizontalCandidateSpacingGuide(
+          horizontalSpacingGuide,
+          finalEdges,
+          oe,
+          oe.right,
+          finalEdges.left,
           gap,
-        });
+        );
       }
       if (oe.left >= finalEdges.right) {
         const gap = Math.round(oe.left - finalEdges.right);
-        horizontalSpacingGuide = considerGuide(horizontalSpacingGuide, {
-          axis: 'horizontal',
-          position: yPosition,
-          from: finalEdges.right,
-          to: oe.left,
-          tone: 'spacing',
-          label: `${gap}px`,
+        horizontalSpacingGuide = considerHorizontalCandidateSpacingGuide(
+          horizontalSpacingGuide,
+          finalEdges,
+          oe,
+          finalEdges.right,
+          oe.left,
           gap,
-        });
+        );
       }
     }
 
     if (rangesOverlap(finalEdges.left, finalEdges.right, oe.left, oe.right)) {
-      const xPosition = (Math.max(finalEdges.left, oe.left) + Math.min(finalEdges.right, oe.right)) / 2;
       if (finalEdges.top >= oe.bottom) {
         const gap = Math.round(finalEdges.top - oe.bottom);
-        verticalSpacingGuide = considerGuide(verticalSpacingGuide, {
-          axis: 'vertical',
-          position: xPosition,
-          from: oe.bottom,
-          to: finalEdges.top,
-          tone: 'spacing',
-          label: `${gap}px`,
+        verticalSpacingGuide = considerVerticalCandidateSpacingGuide(
+          verticalSpacingGuide,
+          finalEdges,
+          oe,
+          oe.bottom,
+          finalEdges.top,
           gap,
-        });
+        );
       }
       if (oe.top >= finalEdges.bottom) {
         const gap = Math.round(oe.top - finalEdges.bottom);
-        verticalSpacingGuide = considerGuide(verticalSpacingGuide, {
-          axis: 'vertical',
-          position: xPosition,
-          from: finalEdges.bottom,
-          to: oe.top,
-          tone: 'spacing',
-          label: `${gap}px`,
+        verticalSpacingGuide = considerVerticalCandidateSpacingGuide(
+          verticalSpacingGuide,
+          finalEdges,
+          oe,
+          finalEdges.bottom,
+          oe.top,
           gap,
-        });
+        );
       }
     }
   }
 
-  for (const guide of referenceGuides) {
+  for (let index = 0; index < referenceGuides.length; index += 1) {
+    const guide = referenceGuides[index];
+    if (!guide) continue;
     if (guide.axis === 'vertical') {
-      addVerticalAlignmentGuide(
-        guides,
-        finalEdges,
-        { left: guide.position, right: guide.position, top: 0, bottom: canvasSize.height, centerX: guide.position, centerY: canvasSize.height / 2 },
-        finalEdges.left,
-        guide.position,
-      );
-      addVerticalAlignmentGuide(
-        guides,
-        finalEdges,
-        { left: guide.position, right: guide.position, top: 0, bottom: canvasSize.height, centerX: guide.position, centerY: canvasSize.height / 2 },
-        finalEdges.right,
-        guide.position,
-      );
-      addVerticalAlignmentGuide(
-        guides,
-        finalEdges,
-        { left: guide.position, right: guide.position, top: 0, bottom: canvasSize.height, centerX: guide.position, centerY: canvasSize.height / 2 },
-        finalEdges.centerX,
-        guide.position,
-      );
+      const guideEdges = scratch
+        ? writeEdges(scratch.referenceGuideEdges, guide.position, 0, 0, canvasSize.height)
+        : createEdges(guide.position, 0, 0, canvasSize.height);
+      guides = addVerticalAlignmentGuidesForValue(guides, finalEdges, guideEdges, guide.position);
     } else {
-      addHorizontalAlignmentGuide(
-        guides,
-        finalEdges,
-        { left: 0, right: canvasSize.width, top: guide.position, bottom: guide.position, centerX: canvasSize.width / 2, centerY: guide.position },
-        finalEdges.top,
-        guide.position,
-      );
-      addHorizontalAlignmentGuide(
-        guides,
-        finalEdges,
-        { left: 0, right: canvasSize.width, top: guide.position, bottom: guide.position, centerX: canvasSize.width / 2, centerY: guide.position },
-        finalEdges.bottom,
-        guide.position,
-      );
-      addHorizontalAlignmentGuide(
-        guides,
-        finalEdges,
-        { left: 0, right: canvasSize.width, top: guide.position, bottom: guide.position, centerX: canvasSize.width / 2, centerY: guide.position },
-        finalEdges.centerY,
-        guide.position,
-      );
+      const guideEdges = scratch
+        ? writeEdges(scratch.referenceGuideEdges, 0, guide.position, canvasSize.width, 0)
+        : createEdges(0, guide.position, canvasSize.width, 0);
+      guides = addHorizontalAlignmentGuidesForValue(guides, finalEdges, guideEdges, guide.position);
     }
   }
 
   // Canvas center guides
   if (Math.abs(finalEdges.centerX - cx) < 1) {
+    guides ??= [];
     guides.push({ axis: 'vertical', position: cx, from: 0, to: canvasSize.height, tone: 'alignment' });
   }
   if (Math.abs(finalEdges.centerY - cy) < 1) {
+    guides ??= [];
     guides.push({ axis: 'horizontal', position: cy, from: 0, to: canvasSize.width, tone: 'alignment' });
   }
 
-  horizontalSpacingGuide = considerGuide(horizontalSpacingGuide, {
-    axis: 'horizontal',
-    position: finalEdges.centerY,
-    from: 0,
-    to: finalEdges.left,
-    tone: 'spacing',
-    label: `${Math.round(finalEdges.left)}px`,
-    gap: Math.round(finalEdges.left),
-  });
-  horizontalSpacingGuide = considerGuide(horizontalSpacingGuide, {
-    axis: 'horizontal',
-    position: finalEdges.centerY,
-    from: finalEdges.right,
-    to: canvasSize.width,
-    tone: 'spacing',
-    label: `${Math.round(canvasSize.width - finalEdges.right)}px`,
-    gap: Math.round(canvasSize.width - finalEdges.right),
-  });
-  verticalSpacingGuide = considerGuide(verticalSpacingGuide, {
-    axis: 'vertical',
-    position: finalEdges.centerX,
-    from: 0,
-    to: finalEdges.top,
-    tone: 'spacing',
-    label: `${Math.round(finalEdges.top)}px`,
-    gap: Math.round(finalEdges.top),
-  });
-  verticalSpacingGuide = considerGuide(verticalSpacingGuide, {
-    axis: 'vertical',
-    position: finalEdges.centerX,
-    from: finalEdges.bottom,
-    to: canvasSize.height,
-    tone: 'spacing',
-    label: `${Math.round(canvasSize.height - finalEdges.bottom)}px`,
-    gap: Math.round(canvasSize.height - finalEdges.bottom),
-  });
+  let gap = Math.round(finalEdges.left);
+  horizontalSpacingGuide = considerSpacingGuide(
+    horizontalSpacingGuide,
+    'horizontal',
+    finalEdges.centerY,
+    0,
+    finalEdges.left,
+    gap,
+  );
+  gap = Math.round(canvasSize.width - finalEdges.right);
+  horizontalSpacingGuide = considerSpacingGuide(
+    horizontalSpacingGuide,
+    'horizontal',
+    finalEdges.centerY,
+    finalEdges.right,
+    canvasSize.width,
+    gap,
+  );
+  gap = Math.round(finalEdges.top);
+  verticalSpacingGuide = considerSpacingGuide(
+    verticalSpacingGuide,
+    'vertical',
+    finalEdges.centerX,
+    0,
+    finalEdges.top,
+    gap,
+  );
+  gap = Math.round(canvasSize.height - finalEdges.bottom);
+  verticalSpacingGuide = considerSpacingGuide(
+    verticalSpacingGuide,
+    'vertical',
+    finalEdges.centerX,
+    finalEdges.bottom,
+    canvasSize.height,
+    gap,
+  );
 
   if (horizontalSpacingGuide) {
+    guides ??= [];
     guides.push(removeGuideGap(horizontalSpacingGuide));
   }
   if (verticalSpacingGuide) {
+    guides ??= [];
     guides.push(removeGuideGap(verticalSpacingGuide));
   }
 
-  return {
-    snappedRect: { x, y, width: moving.width, height: moving.height },
-    guides,
-  };
+  snappedRect.x = x;
+  snappedRect.y = y;
+  snappedRect.width = moving.width;
+  snappedRect.height = moving.height;
+  return guides ?? EMPTY_ALIGNMENT_GUIDES;
 }

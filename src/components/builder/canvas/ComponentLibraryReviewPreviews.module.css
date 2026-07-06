@@ -1,0 +1,56 @@
+.componentLibraryReviewPreviews {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 7px;
+  min-width: 0;
+}
+
+.componentLibraryReviewPreviewCard {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+  padding: 7px;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 7px;
+  background: var(--editor-panel-elevated, #fff);
+}
+
+.componentLibraryReviewPreviewLabel {
+  overflow: hidden;
+  color: var(--editor-fg-secondary, #475569);
+  font-size: 0.6rem;
+  font-weight: 950;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.componentLibraryReviewPreviewFrame {
+  display: block;
+  min-width: 0;
+}
+
+.componentLibraryReviewPreviewFrame [data-builder-component-library-preview-tone] {
+  width: 100%;
+  height: 50px;
+}
+
+@media (max-width: 520px) {
+  .componentLibraryReviewPreviews {
+    gap: 6px;
+  }
+
+  .componentLibraryReviewPreviewCard {
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .componentLibraryReviewPreviewLabel {
+    font-size: 0.58rem;
+  }
+
+  .componentLibraryReviewPreviewFrame [data-builder-component-library-preview-tone] {
+    height: 42px;
+  }
+}

@@ -4,13 +4,13 @@ import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import type { BuilderProductGalleryCanvasNode } from '@/lib/builder/canvas/types';
 import {
   commerceInventoryAvailability,
-  type CommerceAvailabilityState,
   type CommerceProduct,
   type CommerceProductCategory,
   type CommerceProductSortBy,
 } from '@/lib/builder/commerce/products-shared';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import styles from './ProductGallery.module.css';
+import { getProductGalleryCopy, type ProductGalleryCopy } from './product-gallery-copy';
 
 interface ProductGalleryElementProps {
   node: BuilderProductGalleryCanvasNode;
@@ -22,116 +22,109 @@ type RootStyle = CSSProperties & {
   '--product-gallery-columns': string;
 };
 
-const sortOptions: Array<{ value: CommerceProductSortBy; label: string }> = [
-  { value: 'updated-desc', label: '최신순' },
-  { value: 'title-asc', label: '이름순' },
-  { value: 'price-asc', label: '낮은 가격순' },
-  { value: 'price-desc', label: '높은 가격순' },
-];
+const sortOptions: CommerceProductSortBy[] = ['updated-desc', 'title-asc', 'price-asc', 'price-desc'];
 
-const availabilityLabel: Record<CommerceAvailabilityState, string> = {
-  'in-stock': '판매 중',
-  'low-stock': '재고 소량',
-  'out-of-stock': '품절',
-  backorder: '예약 가능',
-  disabled: '비활성',
-};
-
-const MOCK_PRODUCTS: CommerceProduct[] = [
-  {
-    productId: 'product-gallery-mock-1',
-    locale: 'ko',
-    slug: 'taiwan-startup-guide',
-    title: '대만 창업 준비 가이드',
-    description: '회사 형태, 세무, 노무 체크리스트를 정리한 디지털 가이드입니다.',
-    body: '대만 창업 준비 가이드 예시 상품입니다.',
-    status: 'active',
-    sku: 'TW-STARTUP-GUIDE-KO',
-    priceCents: 390000,
-    currency: 'TWD',
-    inventory: {
-      trackInventory: false,
-      quantity: 0,
-      lowStockThreshold: 0,
-      allowBackorder: true,
-    },
-    media: [
-      {
-        mediaId: 'startup-guide-cover',
-        type: 'image',
-        url: '/images/001-taiwan-company-establishment-basics/featured-01.jpg',
-        alt: '대만 창업 준비 가이드 표지',
-        sortOrder: 1,
+function getMockProducts(locale: Locale, copy: ProductGalleryCopy): CommerceProduct[] {
+  const [guide, consultation] = copy.mock.products;
+  return [
+    {
+      productId: 'product-gallery-mock-1',
+      locale,
+      slug: 'taiwan-startup-guide',
+      title: guide.title,
+      description: guide.description,
+      body: guide.body,
+      status: 'active',
+      sku: 'TW-STARTUP-GUIDE-KO',
+      priceCents: 390000,
+      currency: 'TWD',
+      inventory: {
+        trackInventory: false,
+        quantity: 0,
+        lowStockThreshold: 0,
+        allowBackorder: true,
       },
-    ],
-    options: [{ optionId: 'format', name: 'Format', values: ['PDF', 'Consultation bundle'] }],
-    variants: [],
-    categoryIds: ['digital-guides'],
-    tags: ['대만창업'],
-    seo: {},
-    createdAt: '2026-05-20T00:00:00.000Z',
-    updatedAt: '2026-05-20T00:00:00.000Z',
-  },
-  {
-    productId: 'product-gallery-mock-2',
-    locale: 'ko',
-    slug: 'taiwan-consultation-package',
-    title: '대만 법률 상담 패키지',
-    description: '계약, 고용, 법인 설립 쟁점을 1회 상담으로 정리하는 패키지입니다.',
-    body: '대만 법률 상담 패키지 예시 상품입니다.',
-    status: 'active',
-    sku: 'TW-CONSULT-KO',
-    priceCents: 990000,
-    currency: 'TWD',
-    inventory: {
-      trackInventory: true,
-      quantity: 3,
-      lowStockThreshold: 3,
-      allowBackorder: false,
+      media: [
+        {
+          mediaId: 'startup-guide-cover',
+          type: 'image',
+          url: '/images/001-taiwan-company-establishment-basics/featured-01.jpg',
+          alt: guide.mediaAlt,
+          sortOrder: 1,
+        },
+      ],
+      options: [{ optionId: 'format', name: guide.optionName, values: guide.optionValues }],
+      variants: [],
+      categoryIds: ['digital-guides'],
+      tags: [guide.tag],
+      seo: {},
+      createdAt: '2026-05-20T00:00:00.000Z',
+      updatedAt: '2026-05-20T00:00:00.000Z',
     },
-    media: [
-      {
-        mediaId: 'consultation-cover',
-        type: 'image',
-        url: '/images/004-taiwan-employment-contract-guide/featured-01.jpg',
-        alt: '대만 법률 상담 패키지',
-        sortOrder: 1,
+    {
+      productId: 'product-gallery-mock-2',
+      locale,
+      slug: 'taiwan-consultation-package',
+      title: consultation.title,
+      description: consultation.description,
+      body: consultation.body,
+      status: 'active',
+      sku: 'TW-CONSULT-KO',
+      priceCents: 990000,
+      currency: 'TWD',
+      inventory: {
+        trackInventory: true,
+        quantity: 3,
+        lowStockThreshold: 3,
+        allowBackorder: false,
       },
-    ],
-    options: [],
-    variants: [],
-    categoryIds: ['consultation'],
-    tags: ['상담'],
-    seo: {},
-    createdAt: '2026-05-20T00:00:00.000Z',
-    updatedAt: '2026-05-20T00:00:00.000Z',
-  },
-];
+      media: [
+        {
+          mediaId: 'consultation-cover',
+          type: 'image',
+          url: '/images/004-taiwan-employment-contract-guide/featured-01.jpg',
+          alt: consultation.mediaAlt,
+          sortOrder: 1,
+        },
+      ],
+      options: [],
+      variants: [],
+      categoryIds: ['consultation'],
+      tags: [consultation.tag],
+      seo: {},
+      createdAt: '2026-05-20T00:00:00.000Z',
+      updatedAt: '2026-05-20T00:00:00.000Z',
+    },
+  ];
+}
 
-const MOCK_CATEGORIES: CommerceProductCategory[] = [
-  {
-    categoryId: 'digital-guides',
-    locale: 'ko',
-    slug: 'digital-guides',
-    name: '디지털 가이드',
-    description: '',
-    status: 'active',
-    sortOrder: 10,
-    productCount: 1,
-    seo: {},
-  },
-  {
-    categoryId: 'consultation',
-    locale: 'ko',
-    slug: 'consultation',
-    name: '상담 패키지',
-    description: '',
-    status: 'active',
-    sortOrder: 20,
-    productCount: 1,
-    seo: {},
-  },
-];
+function getMockCategories(locale: Locale, copy: ProductGalleryCopy): CommerceProductCategory[] {
+  const [digitalGuides, consultation] = copy.mock.categories;
+  return [
+    {
+      categoryId: 'digital-guides',
+      locale,
+      slug: 'digital-guides',
+      name: digitalGuides.name,
+      description: '',
+      status: 'active',
+      sortOrder: 10,
+      productCount: 1,
+      seo: {},
+    },
+    {
+      categoryId: 'consultation',
+      locale,
+      slug: 'consultation',
+      name: consultation.name,
+      description: '',
+      status: 'active',
+      sortOrder: 20,
+      productCount: 1,
+      seo: {},
+    },
+  ];
+}
 
 function formatPrice(product: CommerceProduct): string {
   return new Intl.NumberFormat(product.locale === 'ko' ? 'ko-KR' : product.locale === 'zh-hant' ? 'zh-TW' : 'en-US', {
@@ -141,10 +134,10 @@ function formatPrice(product: CommerceProduct): string {
   }).format(product.priceCents / 100);
 }
 
-function categoryLabel(product: CommerceProduct, categories: CommerceProductCategory[]): string {
+function categoryLabel(product: CommerceProduct, categories: CommerceProductCategory[], fallback: string): string {
   const categoryId = product.categoryIds[0] ?? '';
   const match = categories.find((category) => category.slug === categoryId || category.categoryId === categoryId);
-  return match?.name || categoryId || 'Collection';
+  return match?.name || categoryId || fallback;
 }
 
 function productHref(locale: Locale, product: CommerceProduct): string {
@@ -155,6 +148,7 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
   const c = node.content;
   const isBuilder = mode !== 'published';
   const effectiveLocale = normalizeLocale(locale || 'ko');
+  const copy = getProductGalleryCopy(effectiveLocale);
   const [products, setProducts] = useState<CommerceProduct[] | null>(null);
   const [categories, setCategories] = useState<CommerceProductCategory[] | null>(null);
   const [activeCategory, setActiveCategory] = useState(c.category ?? '');
@@ -223,13 +217,13 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
   }, [activeCategory, effectiveLocale, isBuilder, sortBy]);
 
   const categoryItems = useMemo(() => {
-    return categories ?? (isBuilder ? MOCK_CATEGORIES : []);
-  }, [categories, isBuilder]);
+    return categories ?? (isBuilder ? getMockCategories(effectiveLocale, copy) : []);
+  }, [categories, copy, effectiveLocale, isBuilder]);
 
   const sourceProducts = useMemo(() => {
-    const source = products ?? (isBuilder ? MOCK_PRODUCTS : []);
+    const source = products ?? (isBuilder ? getMockProducts(effectiveLocale, copy) : []);
     return source.filter((product) => !activeCategory || product.categoryIds.includes(activeCategory));
-  }, [activeCategory, isBuilder, products]);
+  }, [activeCategory, copy, effectiveLocale, isBuilder, products]);
 
   const pageSize = Math.max(1, Math.min(24, c.pageSize));
   const totalPages = Math.max(1, Math.ceil(sourceProducts.length / pageSize));
@@ -242,11 +236,11 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
   };
 
   if (!isBuilder && loading) {
-    return <div className={styles.state} data-builder-product-gallery="true" role="status">Loading products...</div>;
+    return <div className={styles.state} data-builder-product-gallery="true" role="status">{copy.loading}</div>;
   }
 
   if (!isBuilder && failed) {
-    return <div className={styles.state} data-builder-product-gallery="true" role="status">상품을 불러오지 못했습니다.</div>;
+    return <div className={styles.state} data-builder-product-gallery="true" role="status">{copy.error}</div>;
   }
 
   return (
@@ -261,14 +255,14 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
       {(c.showCategoryFilter || c.showSort) ? (
         <div className={styles.toolbar}>
           {c.showCategoryFilter ? (
-            <div className={styles.filters} aria-label="Product categories" data-builder-product-gallery-category-filter>
+            <div className={styles.filters} aria-label={copy.categoriesAriaLabel} data-builder-product-gallery-category-filter>
               <button
                 type="button"
                 className={styles.filter}
                 aria-pressed={!activeCategory}
                 onClick={() => setActiveCategory('')}
               >
-                전체
+                {copy.allCategories}
               </button>
               {categoryItems.map((category) => (
                 <button
@@ -288,10 +282,10 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
 
           {c.showSort ? (
             <label className={styles.sort} data-builder-product-gallery-sort>
-              <span>정렬</span>
+              <span>{copy.sortLabel}</span>
               <select value={sortBy} onChange={(event) => setSortBy(event.target.value as CommerceProductSortBy)}>
                 {sortOptions.map((option) => (
-                  <option key={option.value} value={option.value}>{option.label}</option>
+                  <option key={option} value={option}>{copy.sortOptions[option]}</option>
                 ))}
               </select>
             </label>
@@ -300,7 +294,7 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
       ) : null}
 
       {visibleProducts.length === 0 ? (
-        <div className={styles.state}>표시할 상품이 없습니다.</div>
+        <div className={styles.state}>{copy.empty}</div>
       ) : (
         <div className={`${styles.grid} ${c.layout === 'list' ? styles.list : ''}`}>
           {visibleProducts.map((product) => {
@@ -316,7 +310,7 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
               >
                 {media?.url ? <img src={media.url} alt={media.alt} /> : <div className={styles.fallback} aria-hidden />}
                 <div className={styles.body}>
-                  <span className={styles.badge}>{categoryLabel(product, categoryItems)}</span>
+                  <span className={styles.badge}>{categoryLabel(product, categoryItems, copy.collectionFallback)}</span>
                   <a
                     href={productHref(effectiveLocale, product)}
                     className={styles.title}
@@ -330,7 +324,7 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
                     <strong>{formatPrice(product)}</strong>
                   </div>
                   <div className={styles.actions}>
-                    <span className={styles.availability}>{availabilityLabel[availability]}</span>
+                    <span className={styles.availability}>{copy.availabilityLabels[availability]}</span>
                     {c.showQuickView ? (
                       <button
                         type="button"
@@ -338,7 +332,7 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
                         data-builder-product-gallery-quick-view-open={product.productId}
                         onClick={() => setQuickViewProductId(product.productId)}
                       >
-                        빠른 보기
+                        {copy.quickView}
                       </button>
                     ) : null}
                   </div>
@@ -352,33 +346,39 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
       {totalPages > 1 ? (
         <div className={styles.pagination} data-builder-product-gallery-pagination>
           <button type="button" disabled={currentPage === 0} onClick={() => setPageIndex((value) => Math.max(0, value - 1))}>
-            이전
+            {copy.previousPage}
           </button>
           <span>{currentPage + 1} / {totalPages}</span>
           <button type="button" disabled={currentPage >= totalPages - 1} onClick={() => setPageIndex((value) => Math.min(totalPages - 1, value + 1))}>
-            다음
+            {copy.nextPage}
           </button>
         </div>
       ) : null}
 
       {quickViewProduct ? (
-        <div className={styles.quickView} data-builder-product-gallery-quick-view="true" role="dialog" aria-modal="false">
+        <div
+          className={styles.quickView}
+          data-builder-product-gallery-quick-view="true"
+          role="dialog"
+          aria-label={copy.quickViewDialog}
+          aria-modal="false"
+        >
           <div>
-            <span className={styles.badge}>{categoryLabel(quickViewProduct, categoryItems)}</span>
+            <span className={styles.badge}>{categoryLabel(quickViewProduct, categoryItems, copy.collectionFallback)}</span>
             <strong>{quickViewProduct.title}</strong>
             <p>{quickViewProduct.body || quickViewProduct.description}</p>
             <dl>
               <div>
-                <dt>SKU</dt>
+                <dt>{copy.sku}</dt>
                 <dd>{quickViewProduct.sku}</dd>
               </div>
               <div>
-                <dt>가격</dt>
+                <dt>{copy.price}</dt>
                 <dd>{formatPrice(quickViewProduct)}</dd>
               </div>
               <div>
-                <dt>옵션</dt>
-                <dd>{quickViewProduct.options.map((option) => option.name).join(', ') || '기본 상품'}</dd>
+                <dt>{copy.options}</dt>
+                <dd>{quickViewProduct.options.map((option) => option.name).join(', ') || copy.defaultProduct}</dd>
               </div>
             </dl>
             <a
@@ -386,10 +386,10 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
               className={styles.detailLink}
               data-builder-product-gallery-quick-view-detail-link={quickViewProduct.slug}
             >
-              상세 보기
+              {copy.detail}
             </a>
           </div>
-          <button type="button" onClick={() => setQuickViewProductId(null)}>닫기</button>
+          <button type="button" onClick={() => setQuickViewProductId(null)}>{copy.close}</button>
         </div>
       ) : null}
     </section>

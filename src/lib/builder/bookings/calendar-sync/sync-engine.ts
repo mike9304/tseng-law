@@ -11,7 +11,7 @@ import {
 import { listConnections, saveConnection } from './storage';
 import { refreshGoogleAccessToken, listEventsFromGoogle, pushEventToGoogle, updateEventInGoogle } from './google';
 import { refreshOutlookAccessToken, listEventsFromOutlook, pushEventToOutlook, updateEventInOutlook } from './outlook';
-import type { CalendarConnection, CalendarEventMapping, CalendarSyncResult, ExternalCalendarEvent } from './types';
+import type { CalendarConnection, CalendarEventMapping, CalendarSyncReconciliationEntry, CalendarSyncResult, ExternalCalendarEvent } from './types';
 import type { Booking, StaffAvailability } from '@/lib/builder/bookings/types';
 
 /**
@@ -173,13 +173,47 @@ async function canApplyBookingRange(
   );
 }
 
+function reconciliationEntry(
+  event: ExternalCalendarEvent,
+  kind: CalendarSyncReconciliationEntry['kind'],
+  status: CalendarSyncReconciliationEntry['status'],
+  note?: string,
+  bookingId?: string | null,
+): CalendarSyncReconciliationEntry {
+  return {
+    externalId: event.externalId,
+    summary: event.summary,
+    kind,
+    status,
+    note,
+    ...(bookingId ? { bookingId } : {}),
+  };
+}
+
+function providerErrorEntry(
+  connection: CalendarConnection,
+  source: NonNullable<CalendarSyncReconciliationEntry['source']>,
+  summary: string,
+  note: string,
+): CalendarSyncReconciliationEntry {
+  return {
+    externalId: `${connection.provider}-${source}-${connection.connectionId}`,
+    summary,
+    kind: source === 'push' ? 'booking' : 'block',
+    status: 'error',
+    source,
+    note,
+  };
+}
+
 export async function applyPulledCalendarEvents(
   connection: CalendarConnection,
   events: ExternalCalendarEvent[],
-): Promise<{ pulled: number; bookingUpdates: number; blockedUpdates: number }> {
+): Promise<{ pulled: number; bookingUpdates: number; blockedUpdates: number; reconciliationFeed: CalendarSyncReconciliationEntry[] }> {
   let pulled = 0;
   let bookingUpdates = 0;
   let blockedUpdates = 0;
+  const reconciliationFeed: CalendarSyncReconciliationEntry[] = [];
   const availability = await getStaffAvailability(connection.staffId);
   let blockedDates = [...availability.blockedDates];
   let blockedChanged = false;
@@ -188,7 +222,10 @@ export async function applyPulledCalendarEvents(
     const bookingId = bookingIdFromEvent(connection, event);
     if (bookingId) {
       const booking = await getBooking(bookingId);
-      if (!booking || booking.staffId !== connection.staffId) continue;
+      if (!booking || booking.staffId !== connection.staffId) {
+        reconciliationFeed.push(reconciliationEntry(event, 'booking', 'ignored-unmatched', 'matching booking not found', bookingId));
+        continue;
+      }
       if (event.status === 'cancelled') {
         if (booking.status !== 'cancelled') {
           await saveBooking(timestamped({
@@ -199,12 +236,21 @@ export async function applyPulledCalendarEvents(
           }, booking.createdAt));
           bookingUpdates += 1;
           pulled += 1;
+          reconciliationFeed.push(reconciliationEntry(event, 'booking', 'cancelled', 'booking cancelled from provider', bookingId));
+        } else {
+          reconciliationFeed.push(reconciliationEntry(event, 'booking', 'ignored', 'booking already cancelled', bookingId));
         }
         continue;
       }
       const eventToApply = normalizeEventRange(event);
-      if (!eventToApply) continue;
-      if (!(await canApplyBookingRange(booking, eventToApply, availability))) continue;
+      if (!eventToApply) {
+        reconciliationFeed.push(reconciliationEntry(event, 'booking', 'ignored-invalid-range', 'provider event range was invalid', bookingId));
+        continue;
+      }
+      if (!(await canApplyBookingRange(booking, eventToApply, availability))) {
+        reconciliationFeed.push(reconciliationEntry(event, 'booking', 'ignored', 'provider event conflicted with current availability or another booking', bookingId));
+        continue;
+      }
       if (!isSameRange({ start: booking.startAt, end: booking.endAt }, eventToApply)) {
         await saveBooking(timestamped({
           ...booking,
@@ -213,11 +259,17 @@ export async function applyPulledCalendarEvents(
         }, booking.createdAt));
         bookingUpdates += 1;
         pulled += 1;
+        reconciliationFeed.push(reconciliationEntry(event, 'booking', 'updated', 'booking start/end updated from provider', bookingId));
+      } else {
+        reconciliationFeed.push(reconciliationEntry(event, 'booking', 'ignored', 'booking already matched provider time', bookingId));
       }
       continue;
     }
 
-    if (event.summary.startsWith('[Hojeong]')) continue;
+    if (event.summary.startsWith('[Hojeong]')) {
+      reconciliationFeed.push(reconciliationEntry(event, 'block', 'ignored-own-event', 'ignored an internal Hojeong push event'));
+      continue;
+    }
 
     const reasonPrefix = blockReasonPrefix(connection, event);
     if (event.status === 'cancelled') {
@@ -228,12 +280,18 @@ export async function applyPulledCalendarEvents(
         blockedChanged = true;
         blockedUpdates += removed;
         pulled += removed;
+        reconciliationFeed.push(reconciliationEntry(event, 'block', 'removed', `removed ${removed} external busy block${removed > 1 ? 's' : ''}`));
+      } else {
+        reconciliationFeed.push(reconciliationEntry(event, 'block', 'ignored-unmatched', 'no matching external busy block found'));
       }
       continue;
     }
 
     const eventToApply = normalizeEventRange(event);
-    if (!eventToApply) continue;
+    if (!eventToApply) {
+      reconciliationFeed.push(reconciliationEntry(event, 'block', 'ignored-invalid-range', 'provider event range was invalid'));
+      continue;
+    }
 
     const reason = blockReason(connection, eventToApply);
     const existingIndex = blockedDates.findIndex((block) => block.reason === reason);
@@ -248,12 +306,16 @@ export async function applyPulledCalendarEvents(
         blockedChanged = true;
         blockedUpdates += 1;
         pulled += 1;
+        reconciliationFeed.push(reconciliationEntry(event, 'block', 'updated', 'updated external busy block range'));
+      } else {
+        reconciliationFeed.push(reconciliationEntry(event, 'block', 'ignored', 'external busy block already matched provider time'));
       }
     } else {
       blockedDates.push(nextBlock);
       blockedChanged = true;
       blockedUpdates += 1;
       pulled += 1;
+      reconciliationFeed.push(reconciliationEntry(event, 'block', 'created', 'created external busy block from provider event'));
     }
   }
 
@@ -264,17 +326,23 @@ export async function applyPulledCalendarEvents(
     });
   }
 
-  return { pulled, bookingUpdates, blockedUpdates };
+  return { pulled, bookingUpdates, blockedUpdates, reconciliationFeed: reconciliationFeed.slice(0, 8) };
 }
 
 export async function syncConnection(connection: CalendarConnection): Promise<CalendarSyncResult> {
-  const result: CalendarSyncResult = { ok: true, pushed: 0, pulled: 0, errors: [] };
+  const result: CalendarSyncResult = { ok: true, pushed: 0, pulled: 0, bookingUpdates: 0, blockedUpdates: 0, reconciliationFeed: [], errors: [] };
 
   const tokenResult = await refreshAccessToken(connection);
   if (!tokenResult.ok || !tokenResult.token) {
     result.ok = false;
     result.errors.push({ kind: 'token', message: tokenResult.error ?? 'unknown' });
-    await saveConnection({ ...connection, status: 'error', lastError: tokenResult.error });
+    result.reconciliationFeed = [providerErrorEntry(connection, 'token', `${connection.provider} token refresh failed`, tokenResult.error ?? 'unknown')];
+    await saveConnection({
+      ...connection,
+      status: 'error',
+      lastError: tokenResult.error,
+      lastSyncResult: result,
+    });
     return result;
   }
 
@@ -284,8 +352,12 @@ export async function syncConnection(connection: CalendarConnection): Promise<Ca
   if (pulled.ok) {
     const applied = await applyPulledCalendarEvents({ ...connection, eventMappings }, pulled.events);
     result.pulled += applied.pulled;
+    result.bookingUpdates += applied.bookingUpdates;
+    result.blockedUpdates += applied.blockedUpdates;
+    result.reconciliationFeed = applied.reconciliationFeed;
   } else {
     result.errors.push({ kind: 'pull', message: pulled.error });
+    result.reconciliationFeed.push(providerErrorEntry(connection, 'pull', `${connection.provider} pull failed`, pulled.error));
   }
 
   // Future-dated, confirmed bookings only. Run after pull so provider deletes
@@ -305,6 +377,7 @@ export async function syncConnection(connection: CalendarConnection): Promise<Ca
       }
     } else {
       result.errors.push({ kind: 'push', message: pushed.error ?? 'unknown' });
+      result.reconciliationFeed.push(providerErrorEntry(connection, 'push', `${connection.provider} push failed`, pushed.error ?? 'unknown'));
     }
   }
 
@@ -314,6 +387,7 @@ export async function syncConnection(connection: CalendarConnection): Promise<Ca
     status: result.errors.length === 0 ? 'connected' : 'error',
     lastError: result.errors[0]?.message,
     lastSyncedAt: new Date().toISOString(),
+    lastSyncResult: result,
   });
 
   if (result.errors.length > 0) result.ok = false;

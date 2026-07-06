@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  getBuilderEventsApiErrorPayload,
+  type BuilderEventsApiErrorCode,
+} from '@/lib/builder/events/events-api-copy';
 import {
   deleteEvent,
   loadEvent,
@@ -31,57 +36,93 @@ const patchSchema = z.object({
   ticketCurrency: z.enum(['TWD', 'KRW', 'USD', 'JPY', 'EUR']).optional(),
 });
 
-function validationError(error: ZodError): NextResponse {
+function requestLocale(request: NextRequest, input?: unknown): Locale {
+  if (typeof input === 'string') return normalizeLocale(input);
+  return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+}
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderEventsApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    {
+      ok: false,
+      ...getBuilderEventsApiErrorPayload(locale, errorCode),
+      ...(extra ?? {}),
+    },
+    { status },
   );
 }
 
+function validationErrorResponse(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
 export async function GET(request: NextRequest, { params }: { params: { eventId: string } }) {
+  const locale = requestLocale(request);
   const scope = request.nextUrl.searchParams.get('scope') ?? 'public';
   if (scope === 'all') {
     const auth = requireBuilderAdminAuth(request);
     if (auth instanceof NextResponse) return auth;
   }
 
-  const event = await loadEvent(params.eventId);
-  if (!event || (scope !== 'all' && event.status !== 'published')) {
-    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  try {
+    const event = await loadEvent(params.eventId);
+    if (!event || (scope !== 'all' && event.status !== 'published')) {
+      return errorResponse(locale, 'event_not_found', 404);
+    }
+    return NextResponse.json({ ok: true, event });
+  } catch (error) {
+    console.error('[builder/events/:eventId] GET failed:', error);
+    return errorResponse(locale, 'event_load_failed', 500);
   }
-  return NextResponse.json({ ok: true, event });
 }
 
 export async function PATCH(request: NextRequest, { params }: { params: { eventId: string } }) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = requestLocale(request);
+
   try {
     const event = await loadEvent(params.eventId);
-    if (!event) return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
-    const patch = patchSchema.parse(await request.json());
+    if (!event) return errorResponse(locale, 'event_not_found', 404);
+
+    let body: unknown;
+    try {
+      body = await request.json();
+    } catch (error) {
+      console.error('[builder/events/:eventId] PATCH JSON parse failed:', error);
+      return errorResponse(locale, 'invalid_json', 400);
+    }
+
+    const patch = patchSchema.parse(body);
     const saved = await saveEvent({ ...event, ...patch });
     const errors = validateEvent(saved);
     if (errors.length > 0) {
-      return NextResponse.json({ ok: false, error: 'validation_error', errors }, { status: 400 });
+      return errorResponse(locale, 'validation_error', 400);
     }
     return NextResponse.json({ ok: true, event: saved });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
-    if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
-    }
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
     console.error('[builder/events/:eventId] PATCH failed:', error);
-    return NextResponse.json(
-      { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
-      { status: 500 },
-    );
+    return errorResponse(locale, 'event_update_failed', 500);
   }
 }
 
 export async function DELETE(request: NextRequest, { params }: { params: { eventId: string } }) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
-  await deleteEvent(params.eventId);
-  return NextResponse.json({ ok: true });
+  const locale = requestLocale(request);
+
+  try {
+    await deleteEvent(params.eventId);
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error('[builder/events/:eventId] DELETE failed:', error);
+    return errorResponse(locale, 'event_delete_failed', 500);
+  }
 }

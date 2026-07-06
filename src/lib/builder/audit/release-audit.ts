@@ -26,6 +26,7 @@ export interface CheckpointRow {
 
 const STATUS_EMOJI_MAP: ReadonlyArray<readonly [string, CheckpointStatus]> = [
   ['🟢', 'green'],
+  ['✅', 'green'],
   ['🟡', 'yellow'],
   ['🔴', 'red'],
   ['⚫', 'black'],
@@ -33,8 +34,9 @@ const STATUS_EMOJI_MAP: ReadonlyArray<readonly [string, CheckpointStatus]> = [
 
 const ROW_PATTERN = /^\|\s*([FW]\d{1,3})\s*\|/;
 const SEPARATOR_PATTERN = /^\|\s*-{2,}/;
-const HEADER_PATTERN = /^\|\s*ID\s*\|/i;
 const SECTION_PATTERN = /^##\s+/;
+const DEFAULT_STATUS_CELL_INDEX = 4;
+const W_LAYER_STATUS_CELL_INDEX = 3;
 
 /**
  * Parse a checkpoint markdown document and return one entry per F/W row.
@@ -53,16 +55,25 @@ export function parseCheckpointStatuses(markdown: string): CheckpointRow[] {
   const lines = markdown.split(/\r?\n/);
   const rows: CheckpointRow[] = [];
   let lastRow: CheckpointRow | null = null;
+  let statusCellIndex: number | null = null;
 
   for (const rawLine of lines) {
     const line = rawLine.trimEnd();
 
     if (SECTION_PATTERN.test(line)) {
       lastRow = null;
+      statusCellIndex = null;
       continue;
     }
 
-    if (SEPARATOR_PATTERN.test(line) || HEADER_PATTERN.test(line)) {
+    const headerStatusCellIndex = parseHeaderStatusCellIndex(line);
+    if (headerStatusCellIndex !== null) {
+      statusCellIndex = headerStatusCellIndex;
+      lastRow = null;
+      continue;
+    }
+
+    if (SEPARATOR_PATTERN.test(line)) {
       lastRow = null;
       continue;
     }
@@ -80,20 +91,30 @@ export function parseCheckpointStatuses(markdown: string): CheckpointRow[] {
     }
 
     const cells = splitMarkdownRow(line);
-    if (cells.length < 5) {
+    if (cells.length < 4) {
       lastRow = null;
       continue;
     }
 
-    const [idCell, areaCell, checkpointCell, , statusCell] = cells;
+    const activeStatusCellIndex = statusCellIndex ?? fallbackStatusCellIndex(cells.length);
+    if (activeStatusCellIndex >= cells.length) {
+      lastRow = null;
+      continue;
+    }
+
+    const idCell = cells[0];
+    const areaCell = cells[1];
+    const checkpointCell = cells[2];
+    const statusCell = cells[activeStatusCellIndex];
     const statusInfo = extractStatus(statusCell);
+    const noteTail = cells.slice(activeStatusCellIndex + 1).join(' | ').trim();
 
     const row: CheckpointRow = {
       id: idCell.trim(),
       area: areaCell.trim(),
       checkpoint: checkpointCell.trim(),
       status: statusInfo.status,
-      note: statusInfo.note,
+      note: joinNotes(statusInfo.note, noteTail),
     };
 
     rows.push(row);
@@ -101,6 +122,23 @@ export function parseCheckpointStatuses(markdown: string): CheckpointRow[] {
   }
 
   return rows;
+}
+
+function parseHeaderStatusCellIndex(line: string): number | null {
+  if (!line.startsWith('|')) return null;
+
+  const cells = splitMarkdownRow(line).map((cell) => cell.trim().toLowerCase());
+  const firstCell = cells[0];
+  if (firstCell !== 'id' && firstCell !== '#') return null;
+
+  const statusIndex = cells.findIndex((cell) => cell === 'status' || cell === '상태');
+  return statusIndex === -1 ? null : statusIndex;
+}
+
+function fallbackStatusCellIndex(cellCount: number): number {
+  return cellCount >= DEFAULT_STATUS_CELL_INDEX + 1
+    ? DEFAULT_STATUS_CELL_INDEX
+    : W_LAYER_STATUS_CELL_INDEX;
 }
 
 function splitMarkdownRow(line: string): string[] {
@@ -122,6 +160,12 @@ function extractStatus(cell: string): { status: CheckpointStatus | null; note: s
   }
 
   return { status: null, note: trimmed };
+}
+
+function joinNotes(first: string, second: string): string {
+  if (!first) return second;
+  if (!second) return first;
+  return `${first} ${second}`;
 }
 
 export interface CheckpointTally {

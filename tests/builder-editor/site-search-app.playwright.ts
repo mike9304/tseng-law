@@ -195,6 +195,9 @@ test('native site search app uses one index for inline results, fallback results
     pageId = await createPublishedPage(page.request, slug, token);
 
     await page.goto(`/${LOCALE}/${slug}?enabled=${token}`, { waitUntil: 'domcontentloaded' });
+    await expect(page.locator('a.header-logo:not(.drawer-brand):visible')).toHaveAttribute('aria-label', '홈');
+    await expect(page.locator('nav.main-nav:visible')).toHaveAttribute('aria-label', '주요 메뉴');
+    await expect(page.locator('.footer-social .social-icon').first()).toHaveAttribute('aria-label', '블로그');
     const widgetNode = page.locator(`[data-node-id="search-widget-${token}"]`);
     await expect(widgetNode).toHaveAttribute('data-builder-app-widget', 'app:site-search:search-box');
     await expect(widgetNode).toHaveAttribute('data-builder-app-runtime-status', 'enabled');
@@ -208,8 +211,16 @@ test('native site search app uses one index for inline results, fallback results
 
     await input.press('Enter');
     await expect(page).toHaveURL(new RegExp(`/${LOCALE}/search\\?`));
+    await expect(page.locator('.search-tabs')).toContainText('자주 묻는 질문');
     await expect(page.locator('.search-results-section')).toContainText(`검색 포트폴리오 ${token}`);
     await expect(page.locator('.search-results-section')).toContainText('포트폴리오');
+
+    await page.goto('/zh-hant/search?q=portfolio&tab=faq', { waitUntil: 'domcontentloaded' });
+    await expect(page.locator('a.header-logo:not(.drawer-brand):visible')).toHaveAttribute('aria-label', '首頁');
+    await expect(page.locator('nav.main-nav:visible')).toHaveAttribute('aria-label', '主要選單');
+    await expect(page.locator('.footer-social .social-icon').first()).toHaveAttribute('aria-label', '部落格');
+    await expect(page.locator('section.page-header [data-builder-surface-key="section-label"]')).toContainText('SEARCH');
+    await expect(page.locator('.search-tabs')).toContainText('常見問題');
 
     const apiResponse = await page.request.get(`/api/search?locale=${LOCALE}&kinds=portfolio&q=${encodeURIComponent(token)}`);
     expect(apiResponse.status()).toBe(200);

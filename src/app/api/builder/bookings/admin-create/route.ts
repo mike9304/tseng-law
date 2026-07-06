@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { addBookingDuration, isSlotAvailable } from '@/lib/builder/bookings/availability';
+import { getBookingMutationApiErrorPayload } from '@/lib/builder/bookings/bookings-copy';
 import { bookingCreateSchema, type Booking } from '@/lib/builder/bookings/types';
 import { getService, getStaff, makeBookingId, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
 import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
@@ -8,6 +9,8 @@ import { runBookingBillingAutomation } from '@/lib/builder/billing-document-auto
 import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
 import { redeemPackageCreditForBooking, restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
 import { bookingServicePriceSnapshot } from '@/lib/builder/bookings/pricing';
+import { maybeCreateBookingZoomLink } from '@/lib/builder/bookings/zoom-handoff';
+import { normalizeLocale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -16,15 +19,34 @@ export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const parsed = bookingCreateSchema.safeParse({ ...(await request.json().catch(() => null)), source: 'admin' });
   if (!parsed.success) {
-    return NextResponse.json({ error: 'Invalid booking payload', details: parsed.error.issues.slice(0, 3) }, { status: 400 });
+    return NextResponse.json(
+      {
+        ...getBookingMutationApiErrorPayload(locale, 'invalid_booking_payload'),
+        details: parsed.error.issues.slice(0, 3),
+      },
+      { status: 400 },
+    );
   }
 
   const service = await getService(parsed.data.serviceId);
   const staff = await getStaff(parsed.data.staffId);
-  if (!service || !staff) return NextResponse.json({ error: 'Service or staff not found' }, { status: 404 });
-  const price = bookingServicePriceSnapshot(service);
+  if (!service || !staff) {
+    return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'service_or_staff_not_found'), { status: 404 });
+  }
+  const price = bookingServicePriceSnapshot(service, (() => {
+    const opts: Parameters<typeof bookingServicePriceSnapshot>[1] = {
+      staffId: parsed.data.staffId,
+      resourceIds: service.requiredResourceIds,
+    };
+    if (parsed.data.discountCode) {
+      opts.discountCode = parsed.data.discountCode;
+      opts.locale = parsed.data.customer.locale;
+    }
+    return opts;
+  })());
 
   const resourceIds = service.requiredResourceIds ?? [];
   const endAt = addBookingDuration(parsed.data.startAt, service.durationMinutes);
@@ -35,13 +57,15 @@ export async function POST(request: NextRequest) {
     resourceIds,
   };
   if (!acquireSlotLock(slotKey)) {
-    return NextResponse.json({ error: 'Selected slot is being booked by another request.' }, { status: 409 });
+    return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'slot_lock_conflict'), { status: 409 });
   }
 
   let booking: Booking | null = null;
   try {
     const available = await isSlotAvailable(slotKey);
-    if (!available) return NextResponse.json({ error: 'Selected slot is no longer available' }, { status: 409 });
+    if (!available) {
+      return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'slot_unavailable'), { status: 409 });
+    }
 
     const bookingId = makeBookingId();
     const packageRedemption = service.paymentMode === 'paid' && !parsed.data.paymentIntentId && parsed.data.status !== 'cancelled'
@@ -51,6 +75,14 @@ export async function POST(request: NextRequest) {
           serviceId: service.serviceId,
         })
       : null;
+
+    const zoom = await maybeCreateBookingZoomLink({
+      service,
+      staffId: staff.staffId,
+      startTimeISO: parsed.data.startAt,
+      customerName: parsed.data.customer.name,
+      customerEmail: parsed.data.customer.email,
+    });
 
     booking = timestamped({
       bookingId,
@@ -66,6 +98,7 @@ export async function POST(request: NextRequest) {
       paymentCurrency: price.currency,
       paymentDueNow: price.amountDueNow,
       ...(price.depositAmount ? { depositAmount: price.depositAmount } : {}),
+      ...(price.discountCode && price.discountAmount ? { discountCode: price.discountCode, discountAmount: price.discountAmount } : {}),
       billingDocuments: [],
       resourceIds,
       ...(packageRedemption
@@ -82,6 +115,7 @@ export async function POST(request: NextRequest) {
           }
         : {}),
       ...(parsed.data.customerTimezone ? { customerTimezone: parsed.data.customerTimezone } : {}),
+      ...(zoom?.meetingLink ? { meetingLink: zoom.meetingLink } : {}),
     });
     try {
       await saveBooking(booking);
@@ -97,13 +131,13 @@ export async function POST(request: NextRequest) {
     releaseSlotLock(slotKey);
   }
   if (!booking) {
-    return NextResponse.json({ error: 'Booking could not be created.' }, { status: 500 });
+    return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'booking_create_failed'), { status: 500 });
   }
   try {
     const billingAutomation = await runBookingBillingAutomation(booking.bookingId, { trigger: 'created' });
     if (billingAutomation?.owner) booking = billingAutomation.owner;
   } catch (error) {
-    console.error('[builder/bookings/admin-create] billing automation failed:', error);
+    console.error('[builder/bookings/admin-create] billing automation failed:', error instanceof Error ? error.message : String(error));
   }
   await sendBookingConfirmation(booking, { service, staff });
 

@@ -8,7 +8,11 @@ import { DEFAULT_TRANSLATION_SOURCE_LOCALE } from '@/lib/builder/translations/sy
 import { findTargetPageMeta } from '@/lib/builder/translations/edit-store';
 import { extractTranslatableNodes } from '@/lib/builder/translations/auto-translate';
 import { resolveLocaleSeo } from '@/lib/builder/translations/seo-projection';
+import { listImageNodesForLocaleEditor } from '@/lib/builder/translations/locale-media';
 import TranslationEditor from '@/components/builder/translations/TranslationEditor';
+import LocaleSlugEditor from '@/components/builder/translations/LocaleSlugEditor';
+import LocaleMediaEditor from '@/components/builder/translations/LocaleMediaEditor';
+import { getTranslationCopy } from '@/components/builder/translations/translation-copy';
 
 export const dynamic = 'force-dynamic';
 
@@ -18,10 +22,11 @@ export function generateMetadata({
   params: { locale: Locale };
 }): Metadata {
   const locale = normalizeLocale(params.locale);
+  const copy = getTranslationCopy(locale);
   return buildSeoMetadata({
     locale,
-    title: 'Edit Translation',
-    description: 'Side-by-side per-page translation editor.',
+    title: copy.editorTitle,
+    description: copy.editorDescription,
     path: '/admin-builder/translations',
     noindex: true,
   });
@@ -40,6 +45,7 @@ export default async function TranslationEditorPage({
   searchParams?: SearchParams;
 }) {
   const routeLocale = normalizeLocale(params.locale);
+  const copy = getTranslationCopy(routeLocale);
   const sourceLocale = normalizeLocale(
     searchParams?.source ?? DEFAULT_TRANSLATION_SOURCE_LOCALE,
   );
@@ -55,8 +61,10 @@ export default async function TranslationEditorPage({
 
   const sourceCanvas = await readPageCanvas('default', sourcePage.pageId, 'draft');
   const sources = sourceCanvas ? extractTranslatableNodes(sourceCanvas) : [];
+  const sourceMediaRows = sourceCanvas ? listImageNodesForLocaleEditor(sourceCanvas) : [];
 
   const initialTargetValues: Record<string, string> = {};
+  let initialTargetMedia: ReadonlyArray<ReturnType<typeof listImageNodesForLocaleEditor>[number]> = [];
   if (targetPage) {
     const targetCanvas = await readPageCanvas('default', targetPage.pageId, 'draft');
     if (targetCanvas) {
@@ -64,11 +72,13 @@ export default async function TranslationEditorPage({
       for (const item of targetSources) {
         initialTargetValues[item.nodeId] = item.text;
       }
+      initialTargetMedia = listImageNodesForLocaleEditor(targetCanvas);
     }
   }
 
   const sourceSeo = resolveLocaleSeo(sourcePage, sourceLocale);
   const targetSeo = resolveLocaleSeo(sourcePage, targetLocale);
+  const targetMediaOverrideMap = new Map(initialTargetMedia.map((row) => [row.nodeId, row] as const));
 
   return (
     <div style={{ padding: '24px 32px', maxWidth: 1200, margin: '0 auto' }}>
@@ -86,7 +96,7 @@ export default async function TranslationEditorPage({
             href={`/${routeLocale}/admin-builder/translations/dashboard?sourceLocale=${sourceLocale}`}
             style={{ fontSize: 12, color: '#1e5a96', textDecoration: 'none' }}
           >
-            ← Dashboard
+            ← {copy.dashboardTitle}
           </Link>
           <h1 style={{ margin: '6px 0 0', fontSize: 22, fontWeight: 700 }}>
             {sourcePage.title[sourceLocale] || sourcePage.slug || sourcePage.pageId}
@@ -121,6 +131,26 @@ export default async function TranslationEditorPage({
         targetPageReady={Boolean(targetPage)}
         initialSourceSeo={sourceSeo}
         initialTargetSeo={targetSeo}
+      />
+      <LocaleSlugEditor
+        pageId={params.pageId}
+        sourceLocale={sourceLocale}
+        defaultSlug={sourcePage.slug || ''}
+        initialSlugByLocale={sourcePage.slugByLocale ?? {}}
+        embedded
+      />
+      <LocaleMediaEditor
+        siteId="default"
+        pageId={params.pageId}
+        sourceLocale={sourceLocale}
+        targetLocale={targetLocale}
+        rows={sourceMediaRows.map((row) => ({
+          nodeId: row.nodeId,
+          sourceSrc: row.src,
+          sourceAlt: row.alt,
+          initialOverrideSrc: targetMediaOverrideMap.get(row.nodeId)?.byLocale.src[targetLocale],
+          initialOverrideAlt: targetMediaOverrideMap.get(row.nodeId)?.byLocale.alt[targetLocale],
+        }))}
       />
     </div>
   );

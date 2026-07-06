@@ -1,8 +1,10 @@
 'use client';
 
-import { useMemo, useState, type FormEvent } from 'react';
+import { useEffect, useMemo, useState, type FormEvent } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import type { Locale } from '@/lib/locales';
 import type { SiteRedirect, SiteRedirectStatus } from '@/lib/builder/site/types';
+import { getRedirectManagerCopy, type RedirectManagerCopy } from './redirect-manager-copy';
 
 const STATUS_OPTIONS: SiteRedirectStatus[] = [301, 302, 307, 308];
 
@@ -14,11 +16,18 @@ type RedirectDraft = {
   note: string;
 };
 
+type RedirectApiDiagnostic = {
+  code?: string;
+  conflictingFrom?: string;
+  conflictingRedirectId?: string;
+};
+
 type RedirectApiResponse = {
   ok?: boolean;
   redirect?: SiteRedirect;
   error?: string;
   field?: string;
+  diagnostic?: RedirectApiDiagnostic;
 };
 
 function draftFromRedirect(redirect: SiteRedirect): RedirectDraft {
@@ -41,6 +50,17 @@ function emptyDraft(): RedirectDraft {
   };
 }
 
+function redirectFailureMessage(
+  payload: RedirectApiResponse,
+  fallback: string,
+  copy: RedirectManagerCopy,
+): string {
+  if (payload.diagnostic?.code === 'wildcard-overlap' && payload.diagnostic.conflictingFrom) {
+    return copy.wildcardOverlapError.replace('{from}', payload.diagnostic.conflictingFrom);
+  }
+  return payload.error || fallback;
+}
+
 export default function RedirectsListView({
   locale,
   initialRedirects,
@@ -48,16 +68,50 @@ export default function RedirectsListView({
   locale: Locale;
   initialRedirects: SiteRedirect[];
 }) {
+  const pathname = usePathname();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const copy = getRedirectManagerCopy(locale);
   const [redirects, setRedirects] = useState<SiteRedirect[]>(initialRedirects);
   const [drafts, setDrafts] = useState<Record<string, RedirectDraft>>(() =>
     Object.fromEntries(initialRedirects.map((redirect) => [redirect.redirectId, draftFromRedirect(redirect)])),
   );
   const [newDraft, setNewDraft] = useState<RedirectDraft>(emptyDraft);
+  const [query, setQuery] = useState(() => searchParams.get('q')?.trim() ?? '');
   const [busyId, setBusyId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
 
   const activeCount = useMemo(() => redirects.filter((redirect) => redirect.isActive).length, [redirects]);
+  const filteredRedirects = useMemo(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+    if (!normalizedQuery) return redirects;
+    return redirects.filter((redirect) => {
+      const kind = redirect.from.endsWith('/*') ? 'wildcard suffix-preserving' : 'exact';
+      return [
+        redirect.from,
+        redirect.to,
+        redirect.note ?? '',
+        kind,
+        redirect.isActive ? copy.activeSearchTokens[0] : `inactive ${copy.activeSearchTokens[0]}`,
+        redirect.from.endsWith('/*') ? copy.wildcardSearchTokens[0] : copy.exactLabel.toLowerCase(),
+      ].some((value) => value.toLowerCase().includes(normalizedQuery));
+    });
+  }, [copy.activeSearchTokens, copy.exactLabel, copy.wildcardSearchTokens, query, redirects]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams.toString());
+    const trimmed = query.trim();
+    if (trimmed) {
+      params.set('q', trimmed);
+    } else {
+      params.delete('q');
+    }
+    const nextHref = params.toString() ? `${pathname}?${params.toString()}` : pathname;
+    if (params.toString() !== searchParams.toString()) {
+      router.replace(nextHref, { scroll: false });
+    }
+  }, [pathname, query, router, searchParams]);
 
   function apiUrl(id?: string): string {
     const base = id
@@ -93,7 +147,7 @@ export default function RedirectsListView({
       });
       const payload = (await response.json().catch(() => ({}))) as RedirectApiResponse;
       if (!response.ok || !payload.ok || !payload.redirect) {
-        throw new Error(payload.error || 'Failed to create redirect');
+        throw new Error(redirectFailureMessage(payload, copy.addError, copy));
       }
       setRedirects((current) => [payload.redirect!, ...current]);
       setDrafts((current) => ({
@@ -101,9 +155,9 @@ export default function RedirectsListView({
         [payload.redirect!.redirectId]: draftFromRedirect(payload.redirect!),
       }));
       setNewDraft(emptyDraft());
-      setMessage('Redirect rule created.');
+      setMessage(copy.addSuccess);
     } catch (createError) {
-      setError(createError instanceof Error ? createError.message : 'Failed to create redirect');
+      setError(createError instanceof Error ? createError.message : copy.addError);
     } finally {
       setBusyId(null);
     }
@@ -127,7 +181,7 @@ export default function RedirectsListView({
       });
       const payload = (await response.json().catch(() => ({}))) as RedirectApiResponse;
       if (!response.ok || !payload.ok || !payload.redirect) {
-        throw new Error(payload.error || 'Failed to update redirect');
+        throw new Error(redirectFailureMessage(payload, copy.saveError, copy));
       }
       setRedirects((current) =>
         current.map((redirect) => (redirect.redirectId === id ? payload.redirect! : redirect)),
@@ -136,16 +190,16 @@ export default function RedirectsListView({
         ...current,
         [id]: draftFromRedirect(payload.redirect!),
       }));
-      setMessage('Redirect rule saved.');
+      setMessage(copy.saveSuccess);
     } catch (saveError) {
-      setError(saveError instanceof Error ? saveError.message : 'Failed to update redirect');
+      setError(saveError instanceof Error ? saveError.message : copy.saveError);
     } finally {
       setBusyId(null);
     }
   }
 
   async function handleDelete(id: string) {
-    if (!window.confirm('Delete this redirect rule?')) return;
+    if (!window.confirm(`${copy.deleteConfirmPrefix} ${copy.ruleLabel}?`)) return;
     setError(null);
     setMessage(null);
     setBusyId(id);
@@ -156,7 +210,7 @@ export default function RedirectsListView({
       });
       const payload = (await response.json().catch(() => ({}))) as RedirectApiResponse;
       if (!response.ok || !payload.ok) {
-        throw new Error(payload.error || 'Failed to delete redirect');
+        throw new Error(payload.error || copy.deleteError);
       }
       setRedirects((current) => current.filter((redirect) => redirect.redirectId !== id));
       setDrafts((current) => {
@@ -164,9 +218,9 @@ export default function RedirectsListView({
         delete next[id];
         return next;
       });
-      setMessage('Redirect rule deleted.');
+      setMessage(copy.deleteSuccess);
     } catch (deleteError) {
-      setError(deleteError instanceof Error ? deleteError.message : 'Failed to delete redirect');
+      setError(deleteError instanceof Error ? deleteError.message : copy.deleteError);
     } finally {
       setBusyId(null);
     }
@@ -178,11 +232,15 @@ export default function RedirectsListView({
         <header style={{ display: 'flex', justifyContent: 'space-between', gap: 18, marginBottom: 22 }}>
           <div>
             <p style={{ color: '#64748b', fontSize: 12, fontWeight: 800, letterSpacing: '0.08em', margin: '0 0 7px', textTransform: 'uppercase' }}>
-              SEO redirects
+              {copy.sectionLabel}
             </p>
-            <h1 style={{ fontSize: 30, lineHeight: 1.15, margin: 0 }}>Redirect Rules</h1>
+            <h1 style={{ fontSize: 30, lineHeight: 1.15, margin: 0 }}>{copy.heading}</h1>
             <p style={{ color: '#64748b', fontSize: 14, margin: '8px 0 0' }}>
-              {redirects.length} rules, {activeCount} active for {locale}
+              {copy.description
+                .replace('{visible}', String(filteredRedirects.length))
+                .replace('{total}', String(redirects.length))
+                .replace('{active}', String(activeCount))
+                .replace('{locale}', locale)}
             </p>
           </div>
         </header>
@@ -201,21 +259,21 @@ export default function RedirectsListView({
           }}
         >
           <input
-            aria-label="Source path"
-            placeholder="/old-path"
+            aria-label={copy.sourceLabel}
+            placeholder={copy.sourcePlaceholder}
             value={newDraft.from}
             onChange={(event) => setNewDraft((current) => ({ ...current, from: event.target.value }))}
             style={inputStyle}
           />
           <input
-            aria-label="Destination path"
-            placeholder="/new-path"
+            aria-label={copy.destinationLabel}
+            placeholder={copy.destinationPlaceholder}
             value={newDraft.to}
             onChange={(event) => setNewDraft((current) => ({ ...current, to: event.target.value }))}
             style={inputStyle}
           />
           <select
-            aria-label="Redirect status"
+            aria-label={copy.statusLabel}
             value={newDraft.type}
             onChange={(event) =>
               setNewDraft((current) => ({ ...current, type: Number(event.target.value) as SiteRedirectStatus }))
@@ -229,15 +287,51 @@ export default function RedirectsListView({
             ))}
           </select>
           <button type="submit" disabled={busyId === 'new'} style={primaryButtonStyle}>
-            Add rule
+            {copy.createButton}
           </button>
           <input
-            aria-label="Note"
-            placeholder="Optional note"
+            aria-label={copy.noteLabel}
+            placeholder={copy.notePlaceholder}
             value={newDraft.note}
             onChange={(event) => setNewDraft((current) => ({ ...current, note: event.target.value }))}
             style={{ ...inputStyle, gridColumn: '1 / -1' }}
           />
+          <p style={{ color: '#64748b', fontSize: 12, gridColumn: '1 / -1', margin: 0 }}>
+            <span dangerouslySetInnerHTML={{ __html: copy.helper }} />
+          </p>
+        </form>
+
+        <form
+          onSubmit={(event) => event.preventDefault()}
+          style={{
+            background: '#fff',
+            border: '1px solid #dbe3ef',
+            borderRadius: 8,
+            display: 'grid',
+            gap: 12,
+            gridTemplateColumns: 'minmax(240px, 1fr) auto',
+            marginBottom: 16,
+            padding: 16,
+          }}
+        >
+          <input
+            aria-label={copy.searchPlaceholder}
+            placeholder={copy.searchPlaceholder}
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            style={inputStyle}
+          />
+          {query.trim() ? (
+              <button
+              type="button"
+              onClick={() => setQuery('')}
+              style={secondaryButtonStyle}
+            >
+              {copy.clearSearch}
+            </button>
+          ) : (
+            <div />
+          )}
         </form>
 
         {error ? <div style={errorStyle}>{error}</div> : null}
@@ -245,21 +339,24 @@ export default function RedirectsListView({
 
         <div style={{ background: '#fff', border: '1px solid #dbe3ef', borderRadius: 8, overflow: 'hidden' }}>
           {redirects.length === 0 ? (
-            <div style={{ color: '#64748b', padding: 28, textAlign: 'center' }}>No redirect rules yet.</div>
+            <div style={{ color: '#64748b', padding: 28, textAlign: 'center' }}>{copy.emptyState}</div>
+          ) : filteredRedirects.length === 0 ? (
+            <div style={{ color: '#64748b', padding: 28, textAlign: 'center' }}>{copy.emptyFilteredState}</div>
           ) : (
             <table style={{ borderCollapse: 'collapse', width: '100%' }}>
               <thead>
                 <tr style={{ background: '#eef3f9', color: '#475569', fontSize: 12, textAlign: 'left' }}>
-                  <th style={thStyle}>From</th>
-                  <th style={thStyle}>To</th>
-                  <th style={thStyle}>Status</th>
-                  <th style={thStyle}>Active</th>
-                  <th style={thStyle}>Note</th>
-                  <th style={thStyle}>Actions</th>
+                  <th style={thStyle}>{copy.fromColumn}</th>
+                  <th style={thStyle}>{copy.toColumn}</th>
+                  <th style={thStyle}>{copy.kindColumn}</th>
+                  <th style={thStyle}>{copy.statusColumn}</th>
+                  <th style={thStyle}>{copy.activeColumn}</th>
+                  <th style={thStyle}>{copy.noteColumn}</th>
+                  <th style={thStyle}>{copy.actionsColumn}</th>
                 </tr>
               </thead>
               <tbody>
-                {redirects.map((redirect) => {
+                {filteredRedirects.map((redirect) => {
                   const draft = drafts[redirect.redirectId] ?? draftFromRedirect(redirect);
                   const disabled = busyId === redirect.redirectId;
                   return (
@@ -281,6 +378,16 @@ export default function RedirectsListView({
                           onChange={(event) => setDraftValue(redirect.redirectId, { to: event.target.value })}
                           style={inputStyle}
                         />
+                      </td>
+                      <td style={{ ...tdStyle, fontSize: 13 }}>
+                        {redirect.from.endsWith('/*') ? (
+                          <div style={{ display: 'grid', gap: 4 }}>
+                            <span style={wildcardPillStyle}>{copy.wildcardLabel}</span>
+                            <span style={{ color: '#64748b' }}>{copy.wildcardDescription}</span>
+                          </div>
+                        ) : (
+                          <span style={{ color: '#64748b' }}>{copy.exactLabel}</span>
+                        )}
                       </td>
                       <td style={tdStyle}>
                         <select
@@ -309,7 +416,7 @@ export default function RedirectsListView({
                             disabled={disabled}
                             onChange={(event) => setDraftValue(redirect.redirectId, { isActive: event.target.checked })}
                           />
-                          Enabled
+                          {copy.enabledLabel}
                         </label>
                       </td>
                       <td style={tdStyle}>
@@ -328,7 +435,7 @@ export default function RedirectsListView({
                           onClick={() => handleSave(redirect.redirectId)}
                           style={secondaryButtonStyle}
                         >
-                          Save
+                          {copy.saveButton}
                         </button>
                         <button
                           type="button"
@@ -336,7 +443,7 @@ export default function RedirectsListView({
                           onClick={() => handleDelete(redirect.redirectId)}
                           style={dangerButtonStyle}
                         >
-                          Delete
+                          {copy.deleteButton}
                         </button>
                       </td>
                     </tr>
@@ -393,6 +500,20 @@ const dangerButtonStyle = {
   fontWeight: 800,
   minHeight: 34,
   padding: '0 12px',
+};
+
+const wildcardPillStyle = {
+  alignSelf: 'start',
+  background: '#f1f5f9',
+  border: '1px solid #cbd5e1',
+  borderRadius: 999,
+  color: '#334155',
+  display: 'inline-flex',
+  fontSize: 11,
+  fontWeight: 800,
+  letterSpacing: '0.04em',
+  padding: '3px 8px',
+  textTransform: 'uppercase',
 };
 
 const thStyle = {

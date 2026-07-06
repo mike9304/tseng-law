@@ -11,6 +11,107 @@ import {
 } from '@/lib/builder/canvas/responsive';
 
 describe('M07 responsive schema lock', () => {
+  it('sanitizes legacy zero responsive rect dimensions instead of falling back', () => {
+    const normalized = normalizeCanvasDocument({
+      version: 1,
+      locale: 'ko',
+      updatedAt: '2026-05-10T00:00:00.000Z',
+      updatedBy: 'm07-legacy-zero-test',
+      stageWidth: 1280,
+      stageHeight: 320,
+      nodes: [
+        {
+          id: 'legacy-zero-responsive-node',
+          kind: 'container',
+          rect: { x: 0, y: 0, width: 1280, height: 240 },
+          style: createDefaultCanvasNodeStyle(),
+          zIndex: 0,
+          rotation: 0,
+          locked: false,
+          visible: true,
+          responsive: {
+            tablet: { rect: { x: 0, y: 0, width: 0, height: 0 } },
+            mobile: { rect: { x: 0, y: 0, width: 0, height: 0 } },
+          },
+          content: {
+            label: 'Legacy zero responsive node',
+            background: 'transparent',
+            borderColor: 'transparent',
+            borderStyle: 'solid',
+            borderWidth: 0,
+            borderRadius: 0,
+            padding: 0,
+          },
+        },
+      ],
+    }, 'ko');
+
+    const node = normalized.nodes.find((entry) => entry.id === 'legacy-zero-responsive-node');
+    expect(normalized.nodes).toHaveLength(1);
+    expect(node?.responsive?.tablet?.rect).toMatchObject({ width: 1, height: 1 });
+    expect(node?.responsive?.mobile?.rect).toMatchObject({ width: 1, height: 1 });
+  });
+
+  it('preserves negative local rect coordinates for section-overhang desktop nodes', () => {
+    const normalized = normalizeCanvasDocument({
+      version: 1,
+      locale: 'ko',
+      updatedAt: '2026-07-06T00:00:00.000Z',
+      updatedBy: 'desktop-overhang-test',
+      stageWidth: 1280,
+      stageHeight: 880,
+      nodes: [
+        {
+          id: 'section',
+          kind: 'container',
+          rect: { x: 0, y: 820, width: 1280, height: 420 },
+          style: createDefaultCanvasNodeStyle(),
+          zIndex: 0,
+          rotation: 0,
+          locked: false,
+          visible: true,
+          content: {
+            label: 'Section',
+            background: 'transparent',
+            borderColor: 'transparent',
+            borderStyle: 'solid',
+            borderWidth: 0,
+            borderRadius: 0,
+            padding: 0,
+            as: 'section',
+          },
+        },
+        {
+          id: 'overhanging-search',
+          parentId: 'section',
+          kind: 'container',
+          rect: { x: 80, y: -36, width: 760, height: 72 },
+          style: createDefaultCanvasNodeStyle(),
+          zIndex: 1,
+          rotation: 0,
+          locked: false,
+          visible: true,
+          content: {
+            label: 'Overhanging search',
+            background: 'transparent',
+            borderColor: 'transparent',
+            borderStyle: 'solid',
+            borderWidth: 0,
+            borderRadius: 0,
+            padding: 0,
+          },
+        },
+      ],
+    }, 'ko');
+
+    expect(normalized.nodes.find((entry) => entry.id === 'overhanging-search')?.rect).toMatchObject({
+      x: 80,
+      y: -36,
+      width: 760,
+      height: 72,
+    });
+  });
+
   it('keeps viewport overrides under responsive.<viewport> and cascades to mobile', () => {
     const normalized = normalizeCanvasDocument({
       version: 1,

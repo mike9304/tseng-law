@@ -427,7 +427,7 @@ export default function FormSchemaEditor({
                   type="text"
                   aria-label="CMS site ID"
                   data-form-cms-site-input
-                  placeholder="siteId 기본값"
+                  placeholder="사이트 ID (비우면 기본값)"
                   value={schema.cmsMapping.siteId ?? ''}
                   onChange={(e) => updateCmsMapping({ siteId: e.target.value || undefined })}
                   style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -436,7 +436,7 @@ export default function FormSchemaEditor({
                   type="text"
                   aria-label="CMS locale"
                   data-form-cms-locale-input
-                  placeholder="locale"
+                  placeholder="로케일 · 예: ko"
                   value={schema.cmsMapping.locale ?? ''}
                   onChange={(e) => updateCmsMapping({ locale: e.target.value || undefined })}
                   style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -513,7 +513,7 @@ export default function FormSchemaEditor({
                           type="text"
                           aria-label={`${field.label} CMS field key`}
                           data-form-cms-field-input={field.id}
-                          placeholder="CMS field key"
+                          placeholder="CMS 필드 키 · 영문·숫자·밑줄 · 예: summary"
                           value={mapping?.cmsFieldKey ?? ''}
                           onChange={(e) => updateCmsFieldMapping(field.id, e.target.value)}
                           style={{ padding: '5px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -537,7 +537,7 @@ export default function FormSchemaEditor({
               type="text"
               aria-label="Honeypot field name"
               data-form-anti-spam-honeypot
-              placeholder="honeypot field name"
+              placeholder="숨김 입력 필드 이름 · 예: website"
               value={schema.antiSpam?.honeypotFieldName ?? ''}
               onChange={(e) => updateAntiSpam({ honeypotFieldName: e.target.value || undefined })}
               style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -547,7 +547,7 @@ export default function FormSchemaEditor({
               min={0}
               aria-label="Minimum submit milliseconds"
               data-form-anti-spam-minimum-submit
-              placeholder="minimum submit ms"
+              placeholder="최소 제출 시간(ms) · 예: 3000"
               value={schema.antiSpam?.minimumSubmitMs ?? ''}
               onChange={(e) => updateAntiSpam({ minimumSubmitMs: e.target.value === '' ? undefined : Number(e.target.value) })}
               style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -557,7 +557,7 @@ export default function FormSchemaEditor({
               min={0}
               aria-label="Duplicate window milliseconds"
               data-form-anti-spam-duplicate-window
-              placeholder="duplicate window ms"
+              placeholder="중복 제출 차단 기간(ms) · 예: 60000"
               value={schema.antiSpam?.duplicateWindowMs ?? ''}
               onChange={(e) => updateAntiSpam({ duplicateWindowMs: e.target.value === '' ? undefined : Number(e.target.value) })}
               style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -665,7 +665,7 @@ export default function FormSchemaEditor({
                   {field.type === 'select' || field.type === 'radio' || field.type === 'checkbox' ? (
                     <input
                       type="text"
-                      placeholder="옵션 (쉼표 구분)"
+                      placeholder="옵션 · 쉼표 구분 · 예: 회사설립, 이혼, 상속"
                       value={(field.options ?? []).join(', ')}
                       onChange={(e) => updateField(field.id, { options: e.target.value.split(',').map((s) => s.trim()).filter(Boolean) })}
                       style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -676,21 +676,21 @@ export default function FormSchemaEditor({
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 6 }}>
                       <input
                         type="number"
-                        placeholder="min length"
+                        placeholder="최소 길이 · 예: 2"
                         value={field.validation?.minLength ?? ''}
                         onChange={(e) => updateFieldValidation(field.id, { minLength: e.target.value === '' ? undefined : Number(e.target.value) })}
                         style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
                       />
                       <input
                         type="number"
-                        placeholder="max length"
+                        placeholder="최대 길이 · 예: 100"
                         value={field.validation?.maxLength ?? ''}
                         onChange={(e) => updateFieldValidation(field.id, { maxLength: e.target.value === '' ? undefined : Number(e.target.value) })}
                         style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
                       />
                       <input
                         type="text"
-                        placeholder="regex pattern"
+                        placeholder="정규식(최대 500자) · 예: ^[A-Za-z]+$"
                         value={field.validation?.pattern ?? ''}
                         onChange={(e) => updateFieldValidation(field.id, { pattern: e.target.value || undefined })}
                         style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -702,14 +702,14 @@ export default function FormSchemaEditor({
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 6, alignItems: 'center' }}>
                       <input
                         type="number"
-                        placeholder="min"
+                        placeholder="최소값 · 예: 0"
                         value={field.validation?.min ?? ''}
                         onChange={(e) => updateFieldValidation(field.id, { min: e.target.value === '' ? undefined : Number(e.target.value) })}
                         style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
                       />
                       <input
                         type="number"
-                        placeholder="max"
+                        placeholder="최대값 · 예: 100"
                         value={field.validation?.max ?? ''}
                         onChange={(e) => updateFieldValidation(field.id, { max: e.target.value === '' ? undefined : Number(e.target.value) })}
                         style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -717,7 +717,7 @@ export default function FormSchemaEditor({
                       <input
                         type="number"
                         min={0}
-                        placeholder="step"
+                        placeholder="간격 · 예: 1"
                         value={field.validation?.step ?? ''}
                         onChange={(e) => updateFieldValidation(field.id, { step: e.target.value === '' ? undefined : Number(e.target.value) })}
                         style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -754,7 +754,7 @@ export default function FormSchemaEditor({
                     <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 6 }}>
                       <input
                         type="text"
-                        placeholder="image/*,.pdf,.docx"
+                        placeholder="파일 형식 · 예: image/*,.pdf,.docx"
                         value={field.validation?.accept ?? ''}
                         onChange={(e) => updateFieldValidation(field.id, { accept: e.target.value || undefined })}
                         style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -762,7 +762,7 @@ export default function FormSchemaEditor({
                       <input
                         type="number"
                         min={0}
-                        placeholder="max bytes"
+                        placeholder="최대 파일 크기(바이트) · 예: 10485760"
                         value={field.validation?.maxFileSize ?? ''}
                         onChange={(e) => updateFieldValidation(field.id, { maxFileSize: e.target.value === '' ? undefined : Number(e.target.value) })}
                         style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
@@ -804,7 +804,7 @@ export default function FormSchemaEditor({
                           {field.conditionalOn.operator !== 'empty' && field.conditionalOn.operator !== 'not-empty' ? (
                             <input
                               type="text"
-                              placeholder="값"
+                              placeholder="비교 값 · 예: 회사설립"
                               value={field.conditionalOn.value ?? ''}
                               onChange={(e) => updateField(field.id, {
                                 conditionalOn: { ...field.conditionalOn!, value: e.target.value },

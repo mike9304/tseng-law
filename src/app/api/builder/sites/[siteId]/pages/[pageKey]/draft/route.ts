@@ -5,14 +5,26 @@ import {
   writeBuilderPageSnapshot,
 } from '@/lib/builder/persistence';
 import { isBuilderPageKey, isDefaultBuilderSiteId } from '@/lib/builder/site';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 import type { BuilderPageDocument, BuilderPageState } from '@/lib/builder/types';
 import { normalizeLocale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
-function badRequest(message: string) {
-  return NextResponse.json({ ok: false, error: message }, { status: 400 });
+function errorResponse(
+  locale: ReturnType<typeof normalizeLocale>,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra: Record<string, unknown> = {},
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...extra },
+    { status },
+  );
 }
 
 function parseWritableBody(body: unknown): {
@@ -49,37 +61,37 @@ export async function PUT(
   request: NextRequest,
   { params }: { params: { siteId: string; pageKey: string } }
 ) {
-  const auth = await guardMutation(request, { permission: 'edit-pages' });
+  const auth = await guardMutation(request, { bucket: 'draft', permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+
   if (!isDefaultBuilderSiteId(params.siteId)) {
-    return NextResponse.json({ ok: false, error: 'Unknown builder site.' }, { status: 404 });
+    return errorResponse(locale, 'builder_site_not_found', 404);
   }
 
   if (!isBuilderPageKey(params.pageKey)) {
-    return NextResponse.json({ ok: false, error: 'Unknown builder page.' }, { status: 404 });
+    return errorResponse(locale, 'builder_page_not_found', 404);
   }
-
-  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return badRequest('Invalid JSON body.');
+    return errorResponse(locale, 'invalid_json', 400);
   }
 
   const writable = parseWritableBody(body);
   if (!writable) {
-    return badRequest('document and state are required.');
+    return errorResponse(locale, 'validation_error', 400);
   }
 
   if (writable.document.pageKey !== params.pageKey) {
-    return badRequest('Page key mismatch.');
+    return errorResponse(locale, 'validation_error', 400);
   }
 
   if (writable.document.locale !== locale) {
-    return badRequest('Locale mismatch.');
+    return errorResponse(locale, 'draft_locale_mismatch', 400);
   }
 
   try {
@@ -97,16 +109,9 @@ export async function PUT(
     return NextResponse.json(buildBuilderSnapshotResponse(result));
   } catch (error) {
     if (error instanceof BuilderSnapshotConflictError) {
-      return NextResponse.json(
-        {
-          ok: false,
-          error: 'Snapshot conflict. Reload the latest version before saving again.',
-          conflict: error.conflict,
-        },
-        { status: 409 }
-      );
+      return errorResponse(locale, 'draft_conflict', 409, { conflict: error.conflict });
     }
 
-    throw error;
+    return errorResponse(locale, 'draft_save_failed', 500);
   }
 }

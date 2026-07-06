@@ -12,35 +12,40 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import type {
   TranslationPublishWarning,
   TranslationPublishWarningsPayload,
-} from '@/lib/builder/translations/publish-warnings';
+} from '@/lib/builder/translations/publish-warning-types';
+import { buildTranslationPublishWarningReviewQuery } from '@/lib/builder/translations/query';
 import type { Locale } from '@/lib/locales';
+import TranslationPublishWarningRow from './TranslationPublishWarningRow';
+import { getTranslationCopy } from './translation-copy';
 
 const POLL_MS = 30_000;
 
-const KIND_LABELS: Record<TranslationPublishWarning['kind'], string> = {
-  untranslated: 'Missing',
-  outdated: 'Outdated',
-  'broken-link': 'Broken link',
+const BANNER_PALETTE: Record<
+  TranslationPublishWarning['severity'],
+  { bg: string; border: string }
+> = {
+  error: { bg: '#fef2f2', border: '#fecaca' },
+  warning: { bg: '#fffbeb', border: '#fde68a' },
 };
 
-const SEVERITY_PALETTE: Record<
-  TranslationPublishWarning['severity'],
-  { bg: string; border: string; chipBg: string; chipFg: string }
-> = {
-  error: { bg: '#fef2f2', border: '#fecaca', chipBg: '#dc2626', chipFg: '#fff' },
-  warning: { bg: '#fffbeb', border: '#fde68a', chipBg: '#b45309', chipFg: '#fff' },
-};
+function errorName(error: unknown): string | undefined {
+  if (typeof error !== 'object' || error === null || !('name' in error)) return undefined;
+  return typeof error.name === 'string' ? error.name : undefined;
+}
 
 interface PanelProps {
   sourceLocale: Locale;
+  routeLocale: Locale;
   /** Optional seed payload from SSR to avoid a flash before the first poll. */
   initialPayload?: TranslationPublishWarningsPayload;
 }
 
 export default function TranslationPublishWarningsPanel({
   sourceLocale,
+  routeLocale,
   initialPayload,
 }: PanelProps) {
+  const copy = getTranslationCopy(routeLocale);
   const [warnings, setWarnings] = useState<TranslationPublishWarning[]>(
     initialPayload?.warnings ?? [],
   );
@@ -48,12 +53,17 @@ export default function TranslationPublishWarningsPanel({
     initialPayload?.syncedAt,
   );
   const [error, setError] = useState<string | null>(null);
+  const KIND_LABELS: Record<TranslationPublishWarning['kind'], string> = {
+    untranslated: copy.publishMissing,
+    outdated: copy.publishOutdated,
+    'broken-link': copy.publishBrokenLink,
+  };
 
   const fetchWarnings = useCallback(
     async (signal: AbortSignal): Promise<void> => {
       try {
         const response = await fetch(
-          `/api/builder/translations/publish-warnings?sourceLocale=${encodeURIComponent(sourceLocale)}`,
+          `/api/builder/translations/publish-warnings?sourceLocale=${encodeURIComponent(sourceLocale)}&locale=${encodeURIComponent(routeLocale)}`,
           { signal, cache: 'no-store' },
         );
         if (!response.ok) {
@@ -66,11 +76,11 @@ export default function TranslationPublishWarningsPanel({
         setLastSyncedAt(data.syncedAt);
         setError(null);
       } catch (err) {
-        if ((err as { name?: string })?.name === 'AbortError') return;
-        setError(err instanceof Error ? err.message : 'unknown error');
+        if (errorName(err) === 'AbortError') return;
+        setError(err instanceof Error ? err.message : copy.publishError);
       }
     },
-    [sourceLocale],
+    [copy.publishError, routeLocale, sourceLocale],
   );
 
   useEffect(() => {
@@ -106,10 +116,10 @@ export default function TranslationPublishWarningsPanel({
           color: '#166534',
         }}
       >
-        All translations look ready to publish.
+        {copy.publishReady}
         {lastSyncedAt ? (
           <span style={{ marginLeft: 8, color: '#65a30d', fontSize: 11 }}>
-            Last checked {new Date(lastSyncedAt).toLocaleTimeString()}
+            {copy.publishUpdated} {new Date(lastSyncedAt).toLocaleTimeString()}
           </span>
         ) : null}
       </div>
@@ -118,7 +128,7 @@ export default function TranslationPublishWarningsPanel({
 
   const errorCount = sorted.filter((w) => w.severity === 'error').length;
   const warningCount = sorted.length - errorCount;
-  const banner = errorCount > 0 ? SEVERITY_PALETTE.error : SEVERITY_PALETTE.warning;
+  const banner = errorCount > 0 ? BANNER_PALETTE.error : BANNER_PALETTE.warning;
 
   return (
     <div
@@ -142,20 +152,14 @@ export default function TranslationPublishWarningsPanel({
         }}
       >
         <strong style={{ fontSize: 13 }}>
-          {errorCount > 0
-            ? `${errorCount} blocker${errorCount > 1 ? 's' : ''}`
-            : `${warningCount} warning${warningCount > 1 ? 's' : ''}`}
-          {errorCount > 0 && warningCount > 0
-            ? ` and ${warningCount} warning${warningCount > 1 ? 's' : ''}`
-            : ''}
-          {' '}before publish
+          {copy.publishBeforePublish(errorCount, warningCount)}
         </strong>
         <span style={{ fontSize: 11, color: '#7c2d12' }}>
           {error
-            ? `sync failed: ${error}`
+            ? copy.dashboardSyncFailed(error)
             : lastSyncedAt
-              ? `Updated ${new Date(lastSyncedAt).toLocaleTimeString()}`
-              : 'syncing...'}
+              ? `${copy.publishUpdated} ${new Date(lastSyncedAt).toLocaleTimeString()}`
+              : copy.publishSyncing}
         </span>
       </div>
       <ul
@@ -169,44 +173,21 @@ export default function TranslationPublishWarningsPanel({
         }}
       >
         {sorted.slice(0, 40).map((w, idx) => {
-          const palette = SEVERITY_PALETTE[w.severity];
+          const reviewQuery = buildTranslationPublishWarningReviewQuery(w, sourceLocale);
           return (
-            <li
+            <TranslationPublishWarningRow
               key={`${w.pageId}:${w.locale}:${w.kind}:${idx}`}
-              style={{
-                display: 'flex',
-                alignItems: 'baseline',
-                gap: 8,
-                fontSize: 12,
-                color: '#1f2937',
-              }}
-            >
-              <span
-                style={{
-                  display: 'inline-block',
-                  background: palette.chipBg,
-                  color: palette.chipFg,
-                  borderRadius: 999,
-                  fontSize: 10,
-                  fontWeight: 600,
-                  padding: '2px 8px',
-                  textTransform: 'uppercase',
-                  letterSpacing: 0.4,
-                }}
-              >
-                {KIND_LABELS[w.kind]}
-              </span>
-              <span style={{ flex: 1 }}>{w.message}</span>
-              <span style={{ color: '#64748b', fontSize: 11 }}>
-                {w.locale}
-              </span>
-            </li>
+              warning={w}
+              kindLabel={KIND_LABELS[w.kind]}
+              reviewHref={`/${routeLocale}/admin-builder/translations?${reviewQuery}`}
+              reviewLabel={copy.publishReviewAction}
+            />
           );
         })}
       </ul>
       {sorted.length > 40 ? (
         <div style={{ marginTop: 6, fontSize: 11, color: '#7c2d12' }}>
-          +{sorted.length - 40} more...
+          {copy.publishMore(sorted.length - 40)}
         </div>
       ) : null}
     </div>

@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import {
+  getCommerceOrdersApiErrorPayload,
+  type CommerceOrdersApiErrorCode,
+} from '@/lib/builder/commerce/orders-api-copy';
 import { filterOrders } from '@/lib/builder/commerce/orders-engine';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -14,16 +19,26 @@ const querySchema = z.object({
   fulfillmentStatus: z.enum(['all', 'unfulfilled', 'processing', 'fulfilled', 'cancelled']).default('all'),
 });
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: CommerceOrdersApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getCommerceOrdersApiErrorPayload(locale, errorCode), ...extras },
+    { status },
   );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
 }
 
 export async function GET(request: NextRequest) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   try {
     const sp = request.nextUrl.searchParams;
@@ -37,8 +52,8 @@ export async function GET(request: NextRequest) {
     const orders = await filterOrders(parsed);
     return NextResponse.json({ ok: true, orders, total: orders.length });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     console.error('[builder/commerce/orders] GET failed:', error);
-    return NextResponse.json({ ok: false, error: 'orders_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'orders_failed', 500);
   }
 }

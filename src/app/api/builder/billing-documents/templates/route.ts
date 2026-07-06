@@ -6,6 +6,8 @@ import {
   createBillingDocumentTemplate,
   listBillingDocumentTemplates,
 } from '@/lib/builder/billing-documents-templates';
+import { getBuilderBillingDocumentsApiErrorPayload } from '@/lib/builder/billing-documents-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -21,9 +23,13 @@ const createSchema = z.object({
   isDefault: z.boolean().optional().default(false),
 });
 
-function validationError(error: ZodError): NextResponse {
+function validationError(locale: Locale, error: ZodError): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
+    {
+      ok: false,
+      ...getBuilderBillingDocumentsApiErrorPayload(locale, 'invalid_template_payload'),
+      issues: error.flatten(),
+    },
     { status: 400 },
   );
 }
@@ -31,18 +37,23 @@ function validationError(error: ZodError): NextResponse {
 export async function GET(request: NextRequest) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   try {
     const templates = await listBillingDocumentTemplates();
     return NextResponse.json({ ok: true, templates, total: templates.length });
   } catch (error) {
     console.error('[builder/billing-documents/templates] GET failed:', error);
-    return NextResponse.json({ ok: false, error: 'templates_list_failed' }, { status: 500 });
+    return NextResponse.json(
+      { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(errorLocale, 'templates_list_failed') },
+      { status: 500 },
+    );
   }
 }
 
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   try {
     const raw = await request.json().catch(() => ({}));
     const input = createSchema.parse(raw);
@@ -58,8 +69,11 @@ export async function POST(request: NextRequest) {
     });
     return NextResponse.json({ ok: true, template }, { status: 201 });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     console.error('[builder/billing-documents/templates] POST failed:', error);
-    return NextResponse.json({ ok: false, error: 'template_create_failed' }, { status: 500 });
+    return NextResponse.json(
+      { ok: false, ...getBuilderBillingDocumentsApiErrorPayload(errorLocale, 'template_create_failed') },
+      { status: 500 },
+    );
   }
 }

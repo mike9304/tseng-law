@@ -1,7 +1,13 @@
 'use client';
 
-import { useShortcutLabels } from '@/components/builder/canvas/hooks/useShortcutLabels';
-import styles from './SandboxPage.module.css';
+import { memo, useCallback, useMemo, type ChangeEvent } from 'react';
+import type { Locale } from '@/lib/locales';
+import { getCanvasStageToolbarCopy } from '@/components/builder/canvas/canvas-stage-toolbar-copy';
+import { useShortcutLabels, type ShortcutAction } from '@/components/builder/canvas/hooks/useShortcutLabels';
+import stageToolbarStyles from './CanvasStageToolbar.module.css';
+import shellStyles from './SandboxPage.module.css';
+
+const STAGE_TOOLBAR_SHORTCUT_ACTIONS: ShortcutAction[] = ['undo', 'redo', 'toggleGrid'];
 
 type CanvasStageToolbarProps = {
   canRedo: boolean;
@@ -10,112 +16,99 @@ type CanvasStageToolbarProps = {
   handleUndo: () => void;
   gridEnabled: boolean;
   gridSize: number;
+  locale?: Locale;
   setContextMenu: (menu: null) => void;
   onToggleGrid: () => void;
   onGridSizeChange: (size: number) => void;
 };
 
-export default function CanvasStageToolbar({
+function CanvasStageToolbar({
   canRedo,
   canUndo,
   gridEnabled,
   gridSize,
   handleRedo,
   handleUndo,
+  locale = 'ko',
   onGridSizeChange,
   onToggleGrid,
   setContextMenu,
 }: CanvasStageToolbarProps) {
-  const shortcutLabels = useShortcutLabels(['undo', 'redo', 'toggleGrid']);
-  const shortcutTitle = (title: string, action: 'undo' | 'redo' | 'toggleGrid') => {
+  const copy = useMemo(() => getCanvasStageToolbarCopy(locale), [locale]);
+  const shortcutLabels = useShortcutLabels(STAGE_TOOLBAR_SHORTCUT_ACTIONS);
+  const shortcutTitle = useCallback((title: string, action: ShortcutAction) => {
     const label = shortcutLabels.get(action)?.title;
     return label ? `${title} (${label})` : title;
-  };
+  }, [shortcutLabels]);
+  const handleToggleGridClick = useCallback(() => {
+    setContextMenu(null);
+    onToggleGrid();
+  }, [onToggleGrid, setContextMenu]);
+  const handleGridSizeInputChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    onGridSizeChange(Number(event.target.value));
+  }, [onGridSizeChange]);
+  const handleUndoClick = useCallback(() => {
+    setContextMenu(null);
+    handleUndo();
+  }, [handleUndo, setContextMenu]);
+  const handleRedoClick = useCallback(() => {
+    setContextMenu(null);
+    handleRedo();
+  }, [handleRedo, setContextMenu]);
 
   return (
     <div
-      className={styles.canvasToolbar}
+      className={`${shellStyles.canvasToolbar} ${stageToolbarStyles.root}`}
       data-builder-floating-ui="true"
-      style={{ pointerEvents: 'auto', zIndex: 10030 }}
+      data-builder-stage-toolbar="true"
     >
       <button
         type="button"
-        className={styles.toolbarButton}
+        className={stageToolbarStyles.button}
         data-active={gridEnabled ? 'true' : undefined}
         aria-pressed={gridEnabled}
-        title={shortcutTitle('그리드 스냅', 'toggleGrid')}
-        style={gridEnabled ? {
-          background: '#116dff',
-          borderColor: '#116dff',
-          color: '#fff',
-          boxShadow: '0 12px 28px rgba(17, 109, 255, 0.22)',
-        } : undefined}
-        onClick={() => {
-          setContextMenu(null);
-          onToggleGrid();
-        }}
+        title={shortcutTitle(copy.gridSnapTitle, 'toggleGrid')}
+        onClick={handleToggleGridClick}
       >
-        그리드
+        {copy.gridButtonLabel}
       </button>
       <label
-        title="그리드 크기"
-        style={{
-          alignItems: 'center',
-          display: 'inline-flex',
-          gap: 4,
-          minHeight: 34,
-          padding: '0 8px',
-          border: '1px solid rgba(148, 163, 184, 0.45)',
-          borderRadius: 999,
-          background: 'rgba(255, 255, 255, 0.92)',
-          color: '#334155',
-          fontSize: 11,
-          fontWeight: 800,
-        }}
+        className={stageToolbarStyles.gridSizeControl}
+        title={copy.gridSizeTitle}
       >
-        <span>px</span>
+        <span className={stageToolbarStyles.gridSizePrefix}>px</span>
         <input
-          aria-label="Grid size"
+          className={stageToolbarStyles.gridSizeInput}
+          aria-label={copy.gridSizeAriaLabel}
           disabled={!gridEnabled}
           min={4}
           max={80}
           step={4}
           type="number"
           value={gridSize}
-          style={{
-            width: 48,
-            border: 0,
-            background: 'transparent',
-            color: '#0f172a',
-            font: 'inherit',
-          }}
-          onChange={(event) => onGridSizeChange(Number(event.target.value))}
+          onChange={handleGridSizeInputChange}
         />
       </label>
       <button
         type="button"
-        className={styles.toolbarButton}
-        title={shortcutTitle('실행 취소', 'undo')}
-        onClick={() => {
-          setContextMenu(null);
-          handleUndo();
-        }}
+        className={stageToolbarStyles.button}
+        title={shortcutTitle(copy.undoTitle, 'undo')}
+        onClick={handleUndoClick}
         disabled={!canUndo}
       >
-        실행 취소
+        {copy.undoButtonLabel}
       </button>
       <button
         type="button"
-        className={styles.toolbarButton}
-        title={shortcutTitle('다시 실행', 'redo')}
-        onClick={() => {
-          setContextMenu(null);
-          handleRedo();
-        }}
+        className={stageToolbarStyles.button}
+        title={shortcutTitle(copy.redoTitle, 'redo')}
+        onClick={handleRedoClick}
         disabled={!canRedo}
       >
-        다시 실행
+        {copy.redoButtonLabel}
       </button>
     </div>
   );
 }
+
+export default memo(CanvasStageToolbar);

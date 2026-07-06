@@ -1,13 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { readPageCanvas, writePageCanvas } from '@/lib/builder/site/persistence';
-import { normalizeLocale } from '@/lib/locales';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { normalizeCanvasDocument, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import {
   buildChildrenMap,
   getCanvasNodeDescendantIds,
   resolveCanvasNodeAbsoluteRect,
 } from '@/lib/builder/canvas/tree';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 
@@ -15,6 +20,18 @@ let moveCounter = 0;
 function newMovedId(): string {
   moveCounter += 1;
   return `moved-${Date.now()}-${moveCounter}`;
+}
+
+function moveErrorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra: Record<string, unknown> = {},
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...extra },
+    { status },
+  );
 }
 
 /**
@@ -34,37 +51,42 @@ export async function POST(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
-  let body: { sourcePageId?: string; nodeIds?: string[] };
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  let body: { siteId?: string; sourcePageId?: string; nodeIds?: string[] };
   try {
     body = (await request.json()) as { sourcePageId?: string; nodeIds?: string[] };
   } catch {
-    return NextResponse.json({ ok: false, error: 'Invalid JSON' }, { status: 400 });
+    return moveErrorResponse(locale, 'invalid_json', 400);
   }
 
   const targetPageId = params.pageId;
+  const siteId = resolveBuilderSiteIdFromRequest(request, body.siteId);
   const sourcePageId = body.sourcePageId?.trim();
   const requestedIds = Array.isArray(body.nodeIds) ? body.nodeIds.filter((id) => typeof id === 'string') : [];
 
   if (!sourcePageId) {
-    return NextResponse.json({ ok: false, error: 'sourcePageId required' }, { status: 400 });
+    return moveErrorResponse(locale, 'move_source_page_required', 400);
   }
   if (sourcePageId === targetPageId) {
-    return NextResponse.json({ ok: false, error: 'source and target are same page' }, { status: 400 });
+    return moveErrorResponse(locale, 'move_same_page', 400);
   }
   if (requestedIds.length === 0) {
-    return NextResponse.json({ ok: false, error: 'nodeIds required' }, { status: 400 });
+    return moveErrorResponse(locale, 'move_node_ids_required', 400);
   }
 
-  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-
-  const sourceDraft = await readPageCanvas('default', sourcePageId, 'draft');
+  let sourceDraft: Awaited<ReturnType<typeof readPageCanvas>> = null;
+  let targetDraft: Awaited<ReturnType<typeof readPageCanvas>> = null;
+  try {
+    sourceDraft = await readPageCanvas(siteId, sourcePageId, 'draft');
+    targetDraft = await readPageCanvas(siteId, targetPageId, 'draft');
+  } catch {
+    return moveErrorResponse(locale, 'move_drafts_load_failed', 500);
+  }
   if (!sourceDraft) {
-    return NextResponse.json({ ok: false, error: 'source draft not found' }, { status: 404 });
+    return moveErrorResponse(locale, 'move_source_draft_not_found', 404);
   }
-
-  const targetDraft = await readPageCanvas('default', targetPageId, 'draft');
   if (!targetDraft) {
-    return NextResponse.json({ ok: false, error: 'target draft not found' }, { status: 404 });
+    return moveErrorResponse(locale, 'move_target_draft_not_found', 404);
   }
 
   const sourceNormalized = normalizeCanvasDocument(sourceDraft, locale);
@@ -84,7 +106,7 @@ export async function POST(
   }
 
   if (movingIdSet.size === 0) {
-    return NextResponse.json({ ok: false, error: 'no matching nodes to move' }, { status: 404 });
+    return moveErrorResponse(locale, 'move_no_matching_nodes', 404);
   }
 
   // Determine which moved nodes are top-level (their parent is NOT in the moving set)
@@ -174,24 +196,17 @@ export async function POST(
 
   // Write target first (the destination must succeed); only delete from source if target write succeeded
   try {
-    await writePageCanvas('default', targetPageId, 'draft', nextTarget);
-  } catch (error) {
-    const message = error instanceof Error ? error.message : 'target_write_failed';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    await writePageCanvas(siteId, targetPageId, 'draft', nextTarget);
+  } catch {
+    return moveErrorResponse(locale, 'move_target_write_failed', 500);
   }
   try {
-    await writePageCanvas('default', sourcePageId, 'draft', nextSource);
-  } catch (error) {
-    const message = error instanceof Error ? error.message : 'source_write_failed';
+    await writePageCanvas(siteId, sourcePageId, 'draft', nextSource);
+  } catch {
     // Target was written but source delete failed — caller should retry to clean up source
-    return NextResponse.json(
-      {
-        ok: false,
-        error: `target_succeeded_source_failed: ${message}`,
-        target: { pageId: targetPageId, nodeCount: nextTargetNodes.length },
-      },
-      { status: 500 },
-    );
+    return moveErrorResponse(locale, 'move_source_write_failed', 500, {
+      target: { pageId: targetPageId, nodeCount: nextTargetNodes.length },
+    });
   }
 
   return NextResponse.json({

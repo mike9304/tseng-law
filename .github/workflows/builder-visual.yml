@@ -1,0 +1,76 @@
+name: Builder Visual Regression
+
+# WIX-PERFECT #5 follow-up: gate template visual-regression in CI.
+#
+# Why a dedicated job in the Playwright Docker image:
+# The repo's snapshotPathTemplate omits {platform}, so baselines are single-render. They are
+# authored locally on macOS (darwin) and would false-fail on ubuntu-latest due to font/render
+# differences — which is exactly why the existing visual suite was never CI-gated. Running inside
+# the pinned Playwright container (Linux render in CI == the render used to make the baselines)
+# removes that mismatch. To regenerate committed baselines for this job, run the SAME image
+# locally (see scripts/visual-baselines-docker.sh) so authored == CI render.
+#
+# Until Linux baselines are committed, this job generates them in-container and verifies
+# stability (two consecutive renders agree within the per-test 3% tolerance) so a real template
+# regression still turns red within a run. Once committed, drop --update-snapshots from step 1.
+
+on:
+  pull_request:
+    paths:
+      - 'src/lib/builder/templates/**'
+      - 'src/lib/builder/decompose/**'
+      - 'src/components/builder/published/**'
+      - 'tests/builder-editor/visual-regression.playwright.ts'
+      - 'tests/visual/baseline/**'
+      - 'public/images/**'
+      - 'playwright.config.ts'
+  workflow_dispatch:
+
+jobs:
+  builder-visual:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.59.1-noble
+    env:
+      NEXT_PUBLIC_SENTRY_DSN: ''
+      BUILDER_ALLOWED_ORIGINS: 'http://localhost:3000,https://tseng-law.com'
+      BASE_URL: 'http://localhost:3000'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Boot built app
+        run: |
+          npm run start -- -p 3000 > /tmp/visual-next.log 2>&1 &
+          for i in $(seq 1 60); do
+            if curl -fsS -u admin:local-review-2026! http://localhost:3000/ko/admin-builder > /dev/null 2>&1; then
+              echo "app up"; break
+            fi
+            sleep 2
+          done
+          curl -fsS -u admin:local-review-2026! http://localhost:3000/ko/admin-builder > /dev/null
+      - name: Template visual baselines (generate if missing, in-container render)
+        run: |
+          npx playwright test --config=playwright.config.ts \
+            tests/builder-editor/visual-regression.playwright.ts \
+            --project=chromium-builder -g "template visual regression" \
+            --update-snapshots --workers=2
+      - name: Template visual regression (must be stable on re-render)
+        run: |
+          npx playwright test --config=playwright.config.ts \
+            tests/builder-editor/visual-regression.playwright.ts \
+            --project=chromium-builder -g "template visual regression" \
+            --workers=2
+      - name: Upload visual artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-diffs
+          path: |
+            test-results/**
+            tests/visual/baseline/**
+          retention-days: 7

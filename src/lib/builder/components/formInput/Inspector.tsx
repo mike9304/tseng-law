@@ -1,91 +1,81 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderFormInputCanvasNode } from '@/lib/builder/canvas/types';
 import {
+  FORM_INPUT_KO_DEFAULTS,
+  getFormControlsCopy,
+  localizedFormControlText,
+} from '../form/form-controls-copy';
+import {
   FORM_INPUT_VARIANTS,
   normalizeFormInputVariantKey,
 } from '@/lib/builder/site/component-variants';
-
-const selectStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '4px 6px',
-  fontSize: '0.85rem',
-  border: '1px solid #e2e8f0',
-  borderRadius: 6,
-  background: '#fff',
-};
-
-const CONDITION_OPTIONS = [
-  { value: 'equals', label: 'equals' },
-  { value: 'notEquals', label: 'not equals' },
-  { value: 'contains', label: 'contains' },
-  { value: 'isEmpty', label: 'is empty' },
-  { value: 'isNotEmpty', label: 'is not empty' },
-] as const;
+import styles from '../form/FormControlInspector.module.css';
 
 export default function FormInputInspector({
   node,
+  locale,
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const inputNode = node as BuilderFormInputCanvasNode;
   const c = inputNode.content;
+  const copy = getFormControlsCopy(locale ?? 'ko');
+  const label = localizedFormControlText(c.label, copy.fieldDefaults.inputLabel, FORM_INPUT_KO_DEFAULTS.label);
 
   return (
-    <>
+    <div className={styles.root} data-builder-form-field-inspector="input">
       <label>
-        <span>Field name</span>
+        <span>{copy.fieldInspector.fieldNameLabel}</span>
         <input
           type="text"
           value={c.name}
           disabled={disabled}
           onChange={(event) => onUpdate({ name: event.target.value })}
-          placeholder="email"
+          placeholder={copy.fieldInspector.fieldNamePlaceholder}
         />
       </label>
       <label>
-        <span>Label</span>
+        <span>{copy.fieldInspector.labelLabel}</span>
         <input
           type="text"
-          value={c.label}
+          value={label}
           disabled={disabled}
           onChange={(event) => onUpdate({ label: event.target.value })}
-          placeholder="이메일"
+          placeholder={copy.fieldInspector.inputLabelPlaceholder}
         />
       </label>
       <label>
-        <span>Type</span>
+        <span>{copy.fieldInspector.typeLabel}</span>
         <select
-          style={selectStyle}
           value={c.type}
           disabled={disabled}
           onChange={(event) => onUpdate({ type: event.target.value })}
         >
-          <option value="text">Text</option>
-          <option value="email">Email</option>
-          <option value="tel">Tel</option>
-          <option value="number">Number</option>
-          <option value="url">URL</option>
-          <option value="password">Password</option>
-          <option value="date">Date</option>
+          <option value="text">{copy.fieldInspector.typeOptions.text}</option>
+          <option value="email">{copy.fieldInspector.typeOptions.email}</option>
+          <option value="tel">{copy.fieldInspector.typeOptions.tel}</option>
+          <option value="number">{copy.fieldInspector.typeOptions.number}</option>
+          <option value="url">{copy.fieldInspector.typeOptions.url}</option>
+          <option value="password">{copy.fieldInspector.typeOptions.password}</option>
+          <option value="date">{copy.fieldInspector.typeOptions.date}</option>
         </select>
       </label>
       <label>
-        <span>Input variant</span>
+        <span>{copy.fieldInspector.inputVariantLabel}</span>
         <select
-          style={selectStyle}
           value={normalizeFormInputVariantKey(c.variant)}
           disabled={disabled}
           onChange={(event) => onUpdate({ variant: event.target.value })}
         >
           {FORM_INPUT_VARIANTS.map((variant) => (
             <option key={variant.key} value={variant.key}>
-              {variant.label}
+              {copy.fieldInspector.inputVariantLabels[variant.key]}
             </option>
           ))}
         </select>
       </label>
       <label>
-        <span>Placeholder</span>
+        <span>{copy.fieldInspector.placeholderLabel}</span>
         <input
           type="text"
           value={c.placeholder ?? ''}
@@ -94,7 +84,7 @@ export default function FormInputInspector({
         />
       </label>
       <label>
-        <span>Default value</span>
+        <span>{copy.fieldInspector.defaultValueLabel}</span>
         <input
           type="text"
           value={c.defaultValue ?? ''}
@@ -103,7 +93,7 @@ export default function FormInputInspector({
         />
       </label>
       <label>
-        <span>Required</span>
+        <span>{copy.fieldInspector.requiredLabel}</span>
         <input
           type="checkbox"
           checked={c.required}
@@ -112,7 +102,7 @@ export default function FormInputInspector({
         />
       </label>
       <label>
-        <span>Min length</span>
+        <span>{copy.fieldInspector.minLengthLabel}</span>
         <input
           type="number"
           min={0}
@@ -125,7 +115,7 @@ export default function FormInputInspector({
         />
       </label>
       <label>
-        <span>Max length</span>
+        <span>{copy.fieldInspector.maxLengthLabel}</span>
         <input
           type="number"
           min={1}
@@ -138,19 +128,19 @@ export default function FormInputInspector({
         />
       </label>
       <label>
-        <span>Pattern (regex)</span>
+        <span>{copy.fieldInspector.patternLabel}</span>
         <input
           type="text"
           value={c.pattern ?? ''}
           disabled={disabled}
           onChange={(event) => onUpdate({ pattern: event.target.value || undefined })}
-          placeholder="^[a-zA-Z0-9]+$"
+          placeholder={copy.fieldInspector.patternPlaceholder}
         />
       </label>
       {c.type === 'number' ? (
         <>
           <label>
-            <span>Minimum</span>
+            <span>{copy.fieldInspector.minimumLabel}</span>
             <input
               type="number"
               value={c.numericMin ?? ''}
@@ -161,7 +151,7 @@ export default function FormInputInspector({
             />
           </label>
           <label>
-            <span>Maximum</span>
+            <span>{copy.fieldInspector.maximumLabel}</span>
             <input
               type="number"
               value={c.numericMax ?? ''}
@@ -172,7 +162,7 @@ export default function FormInputInspector({
             />
           </label>
           <label>
-            <span>Step</span>
+            <span>{copy.fieldInspector.stepLabel}</span>
             <input
               type="number"
               min={0}
@@ -184,7 +174,7 @@ export default function FormInputInspector({
             />
           </label>
           <label>
-            <span>Allow decimals</span>
+            <span>{copy.fieldInspector.allowDecimalsLabel}</span>
             <input
               type="checkbox"
               checked={c.allowDecimals}
@@ -195,12 +185,12 @@ export default function FormInputInspector({
         </>
       ) : null}
       <label>
-        <span>Show if field</span>
+        <span>{copy.fieldInspector.showIfFieldLabel}</span>
         <input
           type="text"
           value={c.showIf?.fieldName ?? ''}
           disabled={disabled}
-          placeholder="caseType"
+          placeholder={copy.fieldInspector.conditionalFieldPlaceholder}
           onChange={(event) =>
             onUpdate({
               showIf: event.target.value
@@ -212,23 +202,22 @@ export default function FormInputInspector({
       </label>
       {c.showIf ? (
         <label>
-          <span>Condition</span>
+          <span>{copy.fieldInspector.conditionLabel}</span>
           <select
-            style={selectStyle}
             value={c.showIf.operator}
             disabled={disabled}
             onChange={(event) => onUpdate({ showIf: { ...c.showIf!, operator: event.target.value as typeof c.showIf.operator } })}
           >
-            {CONDITION_OPTIONS.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
+            {Object.entries(copy.fieldInspector.conditionOptions).map(([value, label]) => (
+              <option key={value} value={value}>
+                {label}
               </option>
             ))}
           </select>
         </label>
       ) : null}
       <label>
-        <span>Show if value</span>
+        <span>{copy.fieldInspector.conditionValueLabel}</span>
         <input
           type="text"
           value={c.showIf?.value ?? ''}
@@ -237,7 +226,7 @@ export default function FormInputInspector({
         />
       </label>
       <label>
-        <span>Custom error</span>
+        <span>{copy.fieldInspector.customErrorLabel}</span>
         <input
           type="text"
           value={c.errorMessage ?? ''}
@@ -245,6 +234,6 @@ export default function FormInputInspector({
           onChange={(event) => onUpdate({ errorMessage: event.target.value })}
         />
       </label>
-    </>
+    </div>
   );
 }

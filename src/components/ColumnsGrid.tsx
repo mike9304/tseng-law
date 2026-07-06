@@ -40,7 +40,7 @@ const searchCopy = {
 
 type ColumnCategory = 'formation' | 'legal' | 'case';
 
-interface ColumnListItem {
+export interface ColumnListItem {
   slug: string;
   title: string;
   date: string;
@@ -55,7 +55,7 @@ interface ColumnListItem {
   summary: string;
 }
 
-interface ColumnsGridFilters {
+export interface ColumnsGridFilters {
   category?: string;
   author?: string;
   q?: string;
@@ -69,7 +69,7 @@ const categoryLabels = {
   en: { all: 'All', formation: 'Company Setup', legal: 'Legal Info', case: 'Case Studies' }
 } as const;
 
-function normalizeFilterValue(value: string | string[] | undefined): string {
+function normalizeFilterValue(value: string | string[] | null | undefined): string {
   return Array.isArray(value) ? value[0] ?? '' : value ?? '';
 }
 
@@ -97,36 +97,64 @@ export default function ColumnsGrid({
 }) {
   const labels = categoryLabels[locale];
   const byline = locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾俊瑋律師審閱' : 'Reviewed by Wei Tseng';
-  const requestedCategory = normalizeFilterValue(initialFilters.category);
-  const requestedAuthor = normalizeFilterValue(initialFilters.author);
-  const requestedQuery = normalizeFilterValue(initialFilters.q);
-  const requestedYear = normalizeFilterValue(initialFilters.year);
-  const requestedMonth = normalizeFilterValue(initialFilters.month);
-  const initialActive = requestedCategory === 'formation' || requestedCategory === 'legal' || requestedCategory === 'case'
-    ? requestedCategory
-    : 'all';
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const requestedCategory = normalizeFilterValue(searchParams ? searchParams.get('category') : initialFilters.category);
+  const requestedAuthor = normalizeFilterValue(searchParams ? searchParams.get('author') : initialFilters.author);
+  const requestedQuery = normalizeFilterValue(searchParams ? searchParams.get('q') : initialFilters.q);
+  const requestedYear = normalizeFilterValue(searchParams ? searchParams.get('year') : initialFilters.year);
+  const requestedMonth = normalizeFilterValue(searchParams ? searchParams.get('month') : initialFilters.month);
+  const requestedPageRaw = searchParams?.get('page') ?? '';
+  const requestedPage = Math.max(1, Number.parseInt(requestedPageRaw, 10) || 1);
+  const initialActive = requestedCategory === 'formation' || requestedCategory === 'legal' || requestedCategory === 'case'
+    ? requestedCategory
+    : 'all';
   const [active, setActive] = useState<ColumnCategory | 'all'>(initialActive);
   const [searchInput, setSearchInput] = useState(requestedQuery);
-  const [visibleCount, setVisibleCount] = useState(COLUMNS_PAGE_SIZE);
+  const [appliedQuery, setAppliedQuery] = useState(requestedQuery);
+  const [page, setPage] = useState(requestedPage);
   const searchLabels = searchCopy[locale];
 
   useEffect(() => {
     setSearchInput(requestedQuery);
+    setAppliedQuery(requestedQuery);
   }, [requestedQuery]);
 
-  const updateSearchParam = (nextQuery: string) => {
-    const next = new URLSearchParams(searchParams?.toString() ?? '');
-    const trimmed = nextQuery.trim();
-    if (trimmed) {
-      next.set('q', trimmed);
-    } else {
-      next.delete('q');
+  useEffect(() => {
+    setPage(requestedPage);
+  }, [requestedPage]);
+
+  useEffect(() => {
+    if (requestedCategory === 'formation' || requestedCategory === 'legal' || requestedCategory === 'case') {
+      setActive(requestedCategory);
+      return;
     }
+    if (requestedCategory) setActive('all');
+  }, [requestedCategory]);
+
+  const updateUrlSearchParams = (mutate: (next: URLSearchParams) => void, navigation: 'push' | 'replace' = 'replace') => {
+    const next = new URLSearchParams(searchParams?.toString() ?? '');
+    mutate(next);
     const target = pathname ? `${pathname}${next.toString() ? `?${next.toString()}` : ''}` : '';
+    if (typeof window !== 'undefined') {
+      window.history[navigation === 'push' ? 'pushState' : 'replaceState'](null, '', target || '?');
+    }
     router.replace(target || '?', { scroll: false });
+  };
+
+  const updateSearchParam = (nextQuery: string) => {
+    const trimmed = nextQuery.trim();
+    setAppliedQuery(trimmed);
+    setPage(1);
+    updateUrlSearchParams((next) => {
+      if (trimmed) {
+        next.set('q', trimmed);
+      } else {
+        next.delete('q');
+      }
+      next.delete('page');
+    });
   };
   const filtered = useMemo(
     () =>
@@ -141,18 +169,12 @@ export default function ColumnsGrid({
           const month = post.date.slice(5, 7).replace(/^0/, '');
           if (month !== requestedMonth.replace(/^0/, '')) return false;
         }
-        return postMatchesQuery(post, requestedQuery);
+        return postMatchesQuery(post, appliedQuery);
       }),
-    [active, posts, requestedAuthor, requestedCategory, requestedMonth, requestedQuery, requestedYear],
+    [active, appliedQuery, posts, requestedAuthor, requestedCategory, requestedMonth, requestedYear],
   );
 
-  // Reset pagination whenever the filter result set changes so the user
-  // doesn't see "Load more" jump from page 3 to page 1 silently after
-  // toggling a category chip.
-  useEffect(() => {
-    setVisibleCount(COLUMNS_PAGE_SIZE);
-  }, [active, requestedAuthor, requestedCategory, requestedMonth, requestedQuery, requestedYear]);
-
+  const visibleCount = page * COLUMNS_PAGE_SIZE;
   const visiblePosts = filtered.slice(0, visibleCount);
   const remainingCount = Math.max(0, filtered.length - visibleCount);
   const loadMoreCopy = loadMoreLabels[locale];
@@ -192,7 +214,7 @@ export default function ColumnsGrid({
             <button type="submit" className="columns-search-submit">
               {searchLabels.submit}
             </button>
-            {requestedQuery ? (
+            {appliedQuery ? (
               <button
                 type="button"
                 className="columns-search-clear"
@@ -206,7 +228,7 @@ export default function ColumnsGrid({
               </button>
             ) : null}
           </div>
-          {requestedQuery ? (
+          {appliedQuery ? (
             <p className="columns-search-status" data-columns-search-results={filtered.length}>
               {searchLabels.resultCount(filtered.length)}
             </p>
@@ -216,8 +238,14 @@ export default function ColumnsGrid({
           {cats.map((cat) => (
             <button
               key={cat.id}
-              onClick={() => setActive(cat.id)}
-              disabled={Boolean(requestedCategory || requestedAuthor || requestedQuery || requestedYear || requestedMonth)}
+              onClick={() => {
+                setActive(cat.id);
+                setPage(1);
+                updateUrlSearchParams((next) => {
+                  next.delete('page');
+                });
+              }}
+              disabled={Boolean(requestedCategory || requestedAuthor || appliedQuery || requestedYear || requestedMonth)}
               className={`columns-filter-btn ${active === cat.id ? 'active' : ''}`}
             >
               {cat.label}
@@ -259,7 +287,13 @@ export default function ColumnsGrid({
             <button
               type="button"
               className="columns-load-more"
-              onClick={() => setVisibleCount((value) => value + COLUMNS_PAGE_SIZE)}
+              onClick={() => {
+                const nextPage = page + 1;
+                setPage(nextPage);
+                updateUrlSearchParams((next) => {
+                  next.set('page', String(nextPage));
+                }, 'push');
+              }}
               data-columns-load-more="true"
             >
               {loadMoreCopy.button}

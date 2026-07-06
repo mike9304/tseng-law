@@ -9,14 +9,15 @@ import {
   type EditorTheme,
   type EditorPreferences,
 } from '@/lib/builder/canvas/editor-prefs';
+import EditorChromeIcon, { type EditorChromeIconName } from './EditorChromeIcon';
 import styles from './SandboxPage.module.css';
 
 const ORDER: EditorTheme[] = ['light', 'dark', 'auto'];
 
-const LABEL: Record<EditorTheme, string> = {
-  light: '☀',
-  dark: '☾',
-  auto: '◐',
+const ICON: Record<EditorTheme, EditorChromeIconName> = {
+  light: 'themeLight',
+  dark: 'themeDark',
+  auto: 'themeAuto',
 };
 
 function applyTheme(theme: EditorTheme): void {
@@ -52,13 +53,13 @@ export default function EditorThemeToggle() {
   return (
     <button
       type="button"
-      className={styles.topBarChip}
+      className={`${styles.topBarChip} ${styles.topBarIconButton}`}
       onClick={nextTheme}
       title={`Editor theme: ${theme}`}
       aria-label={`editor theme ${theme}`}
       data-builder-editor-theme-toggle={theme}
     >
-      <span style={{ fontSize: 14 }}>{LABEL[theme]}</span>
+      <EditorChromeIcon name={ICON[theme]} className={styles.topBarSvgIcon} />
     </button>
   );
 }

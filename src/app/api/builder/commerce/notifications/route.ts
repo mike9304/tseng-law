@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
+import { recordCommerceSettingsUpdated } from '@/lib/builder/audit/record';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
@@ -12,6 +13,11 @@ import {
   loadNotificationSettings,
   saveNotificationSettings,
 } from '@/lib/builder/commerce/notifications-engine';
+import {
+  getCommerceNotificationsApiErrorPayload,
+  type CommerceNotificationsApiErrorCode,
+} from '@/lib/builder/commerce/notifications-api-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -22,9 +28,24 @@ const querySchema = z.object({
   status: z.string().default('all'),
 });
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: CommerceNotificationsApiErrorCode,
+  status: number,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
+    { ok: false, ...getCommerceNotificationsApiErrorPayload(locale, errorCode) },
+    { status },
+  );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      ...getCommerceNotificationsApiErrorPayload(locale, 'invalid_notification_filters'),
+      issues: error.flatten(),
+    },
     { status: 400 },
   );
 }
@@ -32,6 +53,8 @@ function validationError(error: ZodError): NextResponse {
 export async function GET(request: NextRequest) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
+
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   try {
     const sp = request.nextUrl.searchParams;
@@ -52,9 +75,9 @@ export async function GET(request: NextRequest) {
     const recoveries = await listRecoveryCarts({ locale: parsed.locale });
     return NextResponse.json({ ok: true, settings, events, recoveries });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     console.error('[builder/commerce/notifications] GET failed:', error);
-    return NextResponse.json({ ok: false, error: 'notifications_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'notifications_failed', 500);
   }
 }
 
@@ -62,13 +85,16 @@ export async function PATCH(request: NextRequest) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+
   try {
     const body = await request.json();
     const settings = await saveNotificationSettings(body?.settings ?? body);
+    await recordCommerceSettingsUpdated({ request, area: 'notifications' });
     return NextResponse.json({ ok: true, settings });
   } catch (error) {
-    if (error instanceof SyntaxError) return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
+    if (error instanceof SyntaxError) return errorResponse(errorLocale, 'invalid_json', 400);
     console.error('[builder/commerce/notifications] PATCH failed:', error);
-    return NextResponse.json({ ok: false, error: 'notifications_save_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'notifications_save_failed', 500);
   }
 }

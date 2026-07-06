@@ -2,10 +2,18 @@
 
 import BookingFlowSteps from '@/components/builder/bookings/BookingFlowSteps';
 import type { BuilderBookingWidgetCanvasNode } from '@/lib/builder/canvas/types';
+import { getBookingFlowCopy } from '@/lib/builder/bookings/bookings-copy';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  BOOKING_WIDGET_LEGACY_DEFAULTS,
+  getBookingWidgetCopy,
+  localizedBookingWidgetText,
+} from './booking-widget-copy';
 
 interface BookingWidgetElementProps {
   node: BuilderBookingWidgetCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }
 
 const shellStyle: React.CSSProperties = {
@@ -101,14 +109,22 @@ function normalizeOptionalId(value: string | undefined): string | undefined {
   return trimmed ? trimmed : undefined;
 }
 
-function BookingWidgetPreview({ node }: { node: BuilderBookingWidgetCanvasNode }) {
-  const serviceLabel = normalizeOptionalId(node.content.serviceId) ?? 'All active services';
-  const staffLabel = normalizeOptionalId(node.content.staffId) ?? 'Any assigned staff';
+function BookingWidgetPreview({ node, locale: renderLocale }: { node: BuilderBookingWidgetCanvasNode; locale?: Locale }) {
+  const locale = normalizeLocale((node.content.locale as Locale | string | undefined) ?? renderLocale);
+  const copy = getBookingFlowCopy(locale);
+  const widgetCopy = getBookingWidgetCopy(locale);
+  const serviceLabel = normalizeOptionalId(node.content.serviceId) ?? copy.preview.allActiveServices;
+  const staffLabel = normalizeOptionalId(node.content.staffId) ?? copy.preview.anyAssignedStaff;
+  const successMessage = localizedBookingWidgetText(
+    node.content.successMessage,
+    widgetCopy.defaults.successMessage,
+    BOOKING_WIDGET_LEGACY_DEFAULTS.successMessage,
+  );
 
   return (
     <div style={previewShellStyle}>
       <div style={stepsStyle}>
-        {['Service', 'Staff', 'Date & time', 'Info'].map((label, index) => (
+        {copy.steps.map((label, index) => (
           <div key={label} style={index === 0 ? activeStepStyle : stepStyle}>
             {index + 1}. {label}
           </div>
@@ -117,19 +133,19 @@ function BookingWidgetPreview({ node }: { node: BuilderBookingWidgetCanvasNode }
       <div style={optionGridStyle}>
         <div style={optionStyle}>
           <strong style={{ color: '#172033' }}>{serviceLabel}</strong>
-          <p style={mutedStyle}>Service cards load from the booking API on the published page.</p>
+          <p style={mutedStyle}>{copy.preview.serviceCards}</p>
         </div>
         <div style={optionStyle}>
           <strong style={{ color: '#172033' }}>{staffLabel}</strong>
-          <p style={mutedStyle}>Available staff and time slots are resolved during booking.</p>
+          <p style={mutedStyle}>{copy.preview.staffCards}</p>
         </div>
       </div>
-      <div style={noticeStyle}>{node.content.successMessage}</div>
+      <div style={noticeStyle}>{successMessage}</div>
     </div>
   );
 }
 
-export default function BookingWidgetElement({ node, mode = 'edit' }: BookingWidgetElementProps) {
+export default function BookingWidgetElement({ node, mode = 'edit', locale: renderLocale }: BookingWidgetElementProps) {
   const {
     eyebrow,
     title,
@@ -142,34 +158,66 @@ export default function BookingWidgetElement({ node, mode = 'edit' }: BookingWid
     attachmentLinksLabel,
     customFieldLabels,
   } = node.content;
+  const widgetLocale = normalizeLocale((locale as Locale | string | undefined) ?? renderLocale);
+  const widgetCopy = getBookingWidgetCopy(widgetLocale);
+  const displayEyebrow = localizedBookingWidgetText(
+    eyebrow,
+    widgetCopy.defaults.eyebrow,
+    BOOKING_WIDGET_LEGACY_DEFAULTS.eyebrow,
+  );
+  const displayTitle = localizedBookingWidgetText(
+    title,
+    widgetCopy.defaults.title,
+    BOOKING_WIDGET_LEGACY_DEFAULTS.title,
+  );
+  const displaySuccessMessage = localizedBookingWidgetText(
+    successMessage,
+    widgetCopy.defaults.successMessage,
+    BOOKING_WIDGET_LEGACY_DEFAULTS.successMessage,
+  );
+  const displayCaseSummaryLabel = localizedBookingWidgetText(
+    caseSummaryLabel,
+    widgetCopy.defaults.caseSummaryLabel,
+    BOOKING_WIDGET_LEGACY_DEFAULTS.caseSummaryLabel,
+  );
+  const displayAttachmentLinksLabel = localizedBookingWidgetText(
+    attachmentLinksLabel,
+    widgetCopy.defaults.attachmentLinksLabel,
+    BOOKING_WIDGET_LEGACY_DEFAULTS.attachmentLinksLabel,
+  );
+  const displayCustomFieldLabels = localizedBookingWidgetText(
+    customFieldLabels,
+    widgetCopy.defaults.customFieldLabels,
+    BOOKING_WIDGET_LEGACY_DEFAULTS.customFieldLabels,
+  );
   const serviceId = normalizeOptionalId(node.content.serviceId);
   const staffId = normalizeOptionalId(node.content.staffId);
   const redirectUrl = normalizeOptionalId(redirectAfterBooking);
-  const hasHeader = Boolean(eyebrow || title);
+  const hasHeader = Boolean(displayEyebrow || displayTitle);
 
   return (
     <section style={shellStyle}>
       {hasHeader ? (
         <header style={{ display: 'grid', gap: 8 }}>
-          {eyebrow ? <p style={eyebrowStyle}>{eyebrow}</p> : null}
-          {title ? <h2 style={titleStyle}>{title}</h2> : null}
+          {displayEyebrow ? <p style={eyebrowStyle}>{displayEyebrow}</p> : null}
+          {displayTitle ? <h2 style={titleStyle}>{displayTitle}</h2> : null}
         </header>
       ) : null}
       {mode === 'published' ? (
         <BookingFlowSteps
-          locale={locale}
+          locale={widgetLocale}
           serviceId={serviceId}
           staffId={staffId}
-          successMessage={successMessage}
+          successMessage={displaySuccessMessage}
           redirectAfterBooking={redirectUrl}
           showCaseSummary={showCaseSummary}
-          caseSummaryLabel={caseSummaryLabel}
+          caseSummaryLabel={displayCaseSummaryLabel}
           showAttachmentLinks={showAttachmentLinks}
-          attachmentLinksLabel={attachmentLinksLabel}
-          customFieldLabels={customFieldLabels}
+          attachmentLinksLabel={displayAttachmentLinksLabel}
+          customFieldLabels={displayCustomFieldLabels}
         />
       ) : (
-        <BookingWidgetPreview node={node} />
+        <BookingWidgetPreview node={node} locale={renderLocale} />
       )}
     </section>
   );

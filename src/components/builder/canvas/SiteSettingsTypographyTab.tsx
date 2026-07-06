@@ -1,12 +1,13 @@
 'use client';
 
+import type { CSSProperties } from 'react';
 import ColorPicker from '@/components/builder/editor/ColorPicker';
 import FontPicker from '@/components/builder/editor/FontPicker';
+import type { Locale } from '@/lib/locales';
 import {
   type BuilderTheme,
 } from '@/lib/builder/site/types';
 import {
-  THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
   THEME_TEXT_PRESET_KEYS,
   type BuilderColorValue,
@@ -16,66 +17,96 @@ import {
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
 import { resolveTypographyScale } from '@/lib/builder/site/typography-scale';
-import {
-  fieldStyle,
-  inputStyle,
-  labelStyle,
-  sectionHeadingStyle,
-  sectionStyle,
-  twoColumnStyle,
-} from './SiteSettingsModal.styles';
+import { getTextControlsCopy } from '@/components/builder/editor/text-controls-copy';
+import { getSiteSettingsCopy } from './site-settings-copy';
+import styles from './SiteSettingsTypographyTab.module.css';
 
 type TypographyScaleRatio = NonNullable<BuilderTheme['typographyScale']>['ratio'];
 
+type TypographyTabStyleVars = CSSProperties & {
+  '--site-typography-preview-family'?: string;
+  '--site-typography-preview-size'?: string;
+  '--site-typography-preview-weight'?: number;
+  '--site-typography-preset-color'?: string;
+  '--site-typography-preset-family'?: string;
+  '--site-typography-preset-size'?: string;
+};
+
 interface SiteSettingsTypographyTabProps {
   theme: BuilderTheme;
+  locale: Locale;
   onChangeThemeFont: (key: 'heading' | 'body', value: string) => void;
   onChangeTypographyScale: (baseSize: number, ratio: TypographyScaleRatio) => void;
   onChangeTextPreset: (key: ThemeTextPresetKey, patch: Partial<ThemeTextPreset>) => void;
 }
 
+function scalePreviewSampleStyle(
+  theme: BuilderTheme,
+  numericSize: number,
+  isHeading: boolean,
+): TypographyTabStyleVars {
+  return {
+    '--site-typography-preview-family': isHeading ? theme.fonts.heading : theme.fonts.body,
+    '--site-typography-preview-size': `${Math.max(11, Math.min(22, numericSize / 3.5))}px`,
+    '--site-typography-preview-weight': isHeading ? 800 : 500,
+  };
+}
+
+function presetPreviewStyle(preset: ThemeTextPreset, theme: BuilderTheme): TypographyTabStyleVars {
+  return {
+    '--site-typography-preset-color': resolveThemeColor(preset.color, theme),
+    '--site-typography-preset-family': preset.fontFamily,
+    '--site-typography-preset-size': `${Math.min(22, Math.max(14, preset.fontSize * 0.48))}px`,
+  };
+}
+
 export function SiteSettingsTypographyTab({
   theme,
+  locale,
   onChangeThemeFont,
   onChangeTypographyScale,
   onChangeTextPreset,
 }: SiteSettingsTypographyTabProps) {
   const textPresets = normalizeThemeTextPresets(theme.themeTextPresets);
   const typographyScalePreview = resolveTypographyScale(theme);
+  const copy = getTextControlsCopy(locale);
+  const siteCopy = getSiteSettingsCopy(locale);
   const paletteTokens = THEME_COLOR_TOKENS.map((token) => ({
     token,
-    label: THEME_COLOR_LABELS[token],
+    label: siteCopy.advanced.themeColorLabels[token],
     color: theme.colors[token],
   }));
 
   return (
-    <div style={sectionStyle}>
-      <div style={sectionHeadingStyle}>Site fonts</div>
-      <div style={twoColumnStyle}>
-        <div style={fieldStyle}>
-          <label style={labelStyle}>Heading font</label>
+    <div className={styles.root}>
+      <div className={styles.sectionHeading}>{copy.siteSettingsTypography.siteFontsHeading}</div>
+      <div className={styles.fieldGrid}>
+        <div className={styles.field}>
+          <label className={styles.label}>{copy.siteSettingsTypography.headingFontLabel}</label>
           <FontPicker
             value={theme.fonts.heading}
+            locale={locale}
             onChange={(fontFamily) => onChangeThemeFont('heading', fontFamily)}
           />
         </div>
 
-        <div style={fieldStyle}>
-          <label style={labelStyle}>Body font</label>
+        <div className={styles.field}>
+          <label className={styles.label}>{copy.siteSettingsTypography.bodyFontLabel}</label>
           <FontPicker
             value={theme.fonts.body}
+            locale={locale}
             onChange={(fontFamily) => onChangeThemeFont('body', fontFamily)}
           />
         </div>
       </div>
 
-      <div style={sectionHeadingStyle}>Typography scale (W184)</div>
-      <div style={twoColumnStyle}>
-        <div style={fieldStyle}>
-          <label style={labelStyle}>Base size (px)</label>
+      <div className={styles.sectionHeading}>{copy.siteSettingsTypography.typographyScaleHeading}</div>
+      <div className={styles.fieldGrid}>
+        <div className={styles.field}>
+          <label className={styles.label}>{copy.siteSettingsTypography.baseSizeLabel}</label>
           <input
             type="number"
-            aria-label="Typography base size"
+            aria-label={copy.siteSettingsTypography.baseSizeLabel}
             min={10}
             max={28}
             value={theme.typographyScale?.baseSize ?? 16}
@@ -84,85 +115,62 @@ export function SiteSettingsTypographyTab({
               const ratio = theme.typographyScale?.ratio ?? 1.25;
               onChangeTypographyScale(baseSize, ratio);
             }}
-            style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }}
+            className={styles.input}
           />
         </div>
-        <div style={fieldStyle}>
-          <label style={labelStyle}>Ratio</label>
+        <div className={styles.field}>
+          <label className={styles.label}>{copy.siteSettingsTypography.ratioLabel}</label>
           <select
-            aria-label="Typography scale ratio"
+            aria-label={copy.siteSettingsTypography.ratioLabel}
             value={theme.typographyScale?.ratio ?? 1.25}
             onChange={(event) => {
               const ratio = Number(event.target.value) as TypographyScaleRatio;
               const baseSize = theme.typographyScale?.baseSize ?? 16;
               onChangeTypographyScale(baseSize, ratio);
             }}
-            style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }}
+            className={styles.input}
           >
-            <option value={1.125}>1.125 — Major Second</option>
-            <option value={1.2}>1.2 — Minor Third</option>
-            <option value={1.25}>1.25 — Major Third</option>
-            <option value={1.333}>1.333 — Perfect Fourth</option>
-            <option value={1.414}>1.414 — Aug. Fourth</option>
-            <option value={1.5}>1.5 — Perfect Fifth</option>
+            {copy.siteSettingsTypography.ratioOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
           </select>
         </div>
       </div>
-      <p style={{ fontSize: 11, color: '#64748b', margin: '4px 0 12px' }}>
-        기본 heading 사이즈(h1~h6)를 base × ratio^level 로 자동 계산합니다.
-        노드 인스펙터에서 fontSize 를 직접 입력하면 그 값이 우선합니다.
-      </p>
+      <p className={styles.description}>{copy.siteSettingsTypography.description}</p>
 
       <div
         data-builder-typography-scale-preview="true"
-        style={{
-          display: 'grid',
-          gap: 6,
-          border: '1px solid #e2e8f0',
-          borderRadius: 10,
-          padding: 10,
-          background: '#f8fafc',
-          marginBottom: 14,
-        }}
+        className={styles.scalePreview}
       >
         {[
-          ['H1', typographyScalePreview.h1],
-          ['H2', typographyScalePreview.h2],
-          ['H3', typographyScalePreview.h3],
-          ['H4', typographyScalePreview.h4],
-          ['H5', typographyScalePreview.h5],
-          ['H6', typographyScalePreview.h6],
-          ['Body', typographyScalePreview.body],
-        ].map(([label, size]) => {
+          ['h1', typographyScalePreview.h1],
+          ['h2', typographyScalePreview.h2],
+          ['h3', typographyScalePreview.h3],
+          ['h4', typographyScalePreview.h4],
+          ['h5', typographyScalePreview.h5],
+          ['h6', typographyScalePreview.h6],
+          ['body', typographyScalePreview.body],
+        ].map(([rowKey, size]) => {
+          const key = rowKey as keyof typeof copy.siteSettingsTypography.scalePreviewRows;
+          const isHeading = key !== 'body';
+          const label = copy.siteSettingsTypography.scalePreviewRows[key];
           const numericSize = Number(size);
           return (
             <div
-              key={label}
-              data-builder-typography-scale-preview-row={String(label).toLowerCase()}
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '48px minmax(0, 1fr) 52px',
-                alignItems: 'center',
-                gap: 10,
-                minHeight: 30,
-              }}
+              key={key}
+              data-builder-typography-scale-preview-row={key}
+              className={styles.scalePreviewRow}
             >
-              <span style={{ color: '#64748b', fontSize: 11, fontWeight: 800 }}>{label}</span>
+              <span className={styles.scalePreviewLabel}>{label}</span>
               <span
-                style={{
-                  minWidth: 0,
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
-                  whiteSpace: 'nowrap',
-                  color: '#0f172a',
-                  fontFamily: String(label).startsWith('H') ? theme.fonts.heading : theme.fonts.body,
-                  fontSize: Math.max(11, Math.min(22, numericSize / 3.5)),
-                  fontWeight: String(label).startsWith('H') ? 800 : 500,
-                }}
+                className={styles.scalePreviewSample}
+                style={scalePreviewSampleStyle(theme, numericSize, isHeading)}
               >
-                호정국제 법률사무소
+                {copy.siteSettingsTypography.previewSample}
               </span>
-              <span style={{ color: '#334155', fontSize: 11, fontWeight: 800, textAlign: 'right' }}>
+              <span className={styles.scalePreviewSize}>
                 {Math.round(numericSize)}px
               </span>
             </div>
@@ -170,99 +178,97 @@ export function SiteSettingsTypographyTab({
         })}
       </div>
 
-      <div style={sectionHeadingStyle}>Theme text presets</div>
+      <div className={styles.sectionHeading}>{copy.siteSettingsTypography.themeTextPresetsHeading}</div>
       {THEME_TEXT_PRESET_KEYS.map((key) => {
         const preset = textPresets[key];
         return (
           <section
             key={key}
-            style={{ border: '1px solid #e2e8f0', borderRadius: 10, padding: 12, display: 'flex', flexDirection: 'column', gap: 12 }}
+            className={styles.presetCard}
           >
-            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12 }}>
+            <div className={styles.presetHeader}>
               <strong
-                style={{
-                  fontFamily: preset.fontFamily,
-                  fontSize: Math.min(22, Math.max(14, preset.fontSize * 0.48)),
-                  color: resolveThemeColor(preset.color, theme),
-                  lineHeight: 1.1,
-                }}
+                className={styles.presetPreview}
+                style={presetPreviewStyle(preset, theme)}
               >
-                제목 텍스트
+                {copy.themePresetPicker.previewText}
               </strong>
-              <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#64748b' }}>{preset.label}</span>
+              <span className={styles.presetName}>{preset.label}</span>
             </div>
 
-            <div style={twoColumnStyle}>
-              <div style={fieldStyle}>
-                <label style={labelStyle}>Label</label>
+            <div className={styles.fieldGrid}>
+              <div className={styles.field}>
+                <label className={styles.label}>{copy.siteSettingsTypography.presetLabelLabel}</label>
                 <input
                   type="text"
                   value={preset.label}
-                  style={inputStyle}
+                  className={styles.input}
                   onChange={(event) => onChangeTextPreset(key, { label: event.target.value })}
                 />
               </div>
-              <div style={fieldStyle}>
-                <label style={labelStyle}>Font</label>
+              <div className={styles.field}>
+                <label className={styles.label}>{copy.siteSettingsTypography.presetFontLabel}</label>
                 <FontPicker
                   value={preset.fontFamily}
+                  locale={locale}
                   onChange={(fontFamily) => onChangeTextPreset(key, { fontFamily })}
                 />
               </div>
-              <div style={fieldStyle}>
-                <label style={labelStyle}>Size</label>
+              <div className={styles.field}>
+                <label className={styles.label}>{copy.siteSettingsTypography.presetSizeLabel}</label>
                 <input
                   type="number"
                   min={12}
                   max={160}
                   value={preset.fontSize}
-                  style={inputStyle}
+                  className={styles.input}
                   onChange={(event) => onChangeTextPreset(key, { fontSize: Number(event.target.value) })}
                 />
               </div>
-              <div style={fieldStyle}>
-                <label style={labelStyle}>Weight</label>
+              <div className={styles.field}>
+                <label className={styles.label}>{copy.siteSettingsTypography.presetWeightLabel}</label>
                 <select
                   value={preset.fontWeight}
-                  style={inputStyle}
+                  className={styles.input}
                   onChange={(event) => onChangeTextPreset(key, { fontWeight: event.target.value as ThemeTextPreset['fontWeight'] })}
                 >
-                  <option value="regular">Regular</option>
-                  <option value="medium">Medium</option>
-                  <option value="bold">Bold</option>
+                  <option value="regular">{copy.textInspector.fontWeightRegular}</option>
+                  <option value="medium">{copy.textInspector.fontWeightMedium}</option>
+                  <option value="bold">{copy.textInspector.fontWeightBold}</option>
                 </select>
               </div>
-              <div style={fieldStyle}>
-                <label style={labelStyle}>Line height</label>
+              <div className={styles.field}>
+                <label className={styles.label}>{copy.textInspector.lineHeightLabel}</label>
                 <input
                   type="number"
                   min={0.5}
                   max={4}
                   step={0.05}
                   value={preset.lineHeight}
-                  style={inputStyle}
+                  className={styles.input}
                   onChange={(event) => onChangeTextPreset(key, { lineHeight: Number(event.target.value) })}
                 />
               </div>
-              <div style={fieldStyle}>
-                <label style={labelStyle}>Letter spacing</label>
+              <div className={styles.field}>
+                <label className={styles.label}>{copy.textInspector.letterSpacingLabel}</label>
                 <input
                   type="number"
                   min={-2}
                   max={10}
                   step={0.5}
                   value={preset.letterSpacing}
-                  style={inputStyle}
+                  className={styles.input}
                   onChange={(event) => onChangeTextPreset(key, { letterSpacing: Number(event.target.value) })}
                 />
               </div>
             </div>
 
-            <div style={fieldStyle}>
-              <label style={labelStyle}>Color</label>
+            <div className={styles.field}>
+              <label className={styles.label}>{copy.textInspector.colorLabel}</label>
               <ColorPicker
                 value={preset.color}
                 paletteTokens={paletteTokens}
+                locale={locale}
                 onChange={(color: BuilderColorValue) => onChangeTextPreset(key, { color })}
               />
             </div>

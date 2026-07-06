@@ -7,30 +7,50 @@ interface Counts {
   contacts: number;
   automations: number;
   integrations: number;
+  outbox: number;
 }
 
-type Tab = 'contacts' | 'automations' | 'integrations';
+export type CrmTab = 'contacts' | 'automations' | 'integrations' | 'outbox';
 
 interface Props {
-  initialTab: Tab;
+  initialTab: CrmTab;
   locale: Locale;
   counts: Counts;
-  /** Children must be exactly 3 panels in [contacts, automations, integrations] order. */
-  children: [ReactNode, ReactNode, ReactNode];
+  children: [ReactNode, ReactNode, ReactNode, ReactNode];
 }
 
-const LABELS: Record<Tab, string> = {
-  contacts: '연락처',
-  automations: '자동화',
-  integrations: '외부 연동',
+const LABELS: Record<Locale, Record<CrmTab, string>> = {
+  ko: {
+    contacts: '연락처',
+    automations: '자동화',
+    integrations: '외부 연동',
+    outbox: '발송함',
+  },
+  'zh-hant': {
+    contacts: '聯絡人',
+    automations: '自動化',
+    integrations: '外部整合',
+    outbox: '寄送紀錄',
+  },
+  en: {
+    contacts: 'Contacts',
+    automations: 'Automations',
+    integrations: 'Integrations',
+    outbox: 'Outbox',
+  },
 };
 
-const ORDER: Tab[] = ['contacts', 'automations', 'integrations'];
+const COPY = {
+  ko: 'CRM 탭',
+  'zh-hant': 'CRM 分頁',
+  en: 'CRM tabs',
+} satisfies Record<Locale, string>;
+
+const ORDER: CrmTab[] = ['contacts', 'automations', 'integrations', 'outbox'];
 
 export default function CrmTabsClient({ initialTab, locale, counts, children }: Props) {
-  const [active, setActive] = useState<Tab>(initialTab);
-  const indexByTab: Record<Tab, number> = { contacts: 0, automations: 1, integrations: 2 };
-  void locale;
+  const [active, setActive] = useState<CrmTab>(initialTab);
+  const indexByTab: Record<CrmTab, number> = { contacts: 0, automations: 1, integrations: 2, outbox: 3 };
 
   return (
     <div>
@@ -44,7 +64,7 @@ export default function CrmTabsClient({ initialTab, locale, counts, children }: 
           overflowX: 'auto',
         }}
         role="tablist"
-        aria-label="CRM tabs"
+        aria-label={COPY[locale]}
       >
         {ORDER.map((tab) => {
           const isActive = active === tab;
@@ -69,7 +89,7 @@ export default function CrmTabsClient({ initialTab, locale, counts, children }: 
                 whiteSpace: 'nowrap',
               }}
             >
-              {LABELS[tab]} ({counts[tab]})
+              {LABELS[locale][tab]} ({counts[tab]})
             </button>
           );
         })}

@@ -31,7 +31,7 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
   ko: {
     'taiwan-lawyer': {
       slug: 'taiwan-lawyer',
-      label: 'SEARCH GUIDE',
+      label: '검색 가이드',
       title: '대만변호사 안내',
       description: '한국 고객이 찾는 대만변호사 상담 범위, 진행 방식, 관련 서비스와 칼럼을 정리한 안내 페이지입니다.',
       keywords: ['대만변호사', '증준외 변호사', '한국어 가능한 대만 변호사', '대만 소송 변호사', '대만 회사설립 변호사'],
@@ -92,7 +92,7 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
     },
     'taiwan-company-setup-lawyer': {
       slug: 'taiwan-company-setup-lawyer',
-      label: 'SEARCH GUIDE',
+      label: '검색 가이드',
       title: '대만 회사설립 변호사 안내',
       description: '대만 회사설립, 투자 승인, 지사·자회사 선택, 인허가와 운영 리스크까지 검토하는 변호사 상담 안내입니다.',
       keywords: ['대만 회사설립 변호사', '대만 법인설립 변호사', '대만 투자 변호사', '증준외 변호사', '대만 자회사 지사'],
@@ -158,7 +158,7 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
     },
     'taiwan-litigation-lawyer': {
       slug: 'taiwan-litigation-lawyer',
-      label: 'SEARCH GUIDE',
+      label: '검색 가이드',
       title: '대만 소송 변호사 안내',
       description: '대만 민사소송, 손해배상, 형사 대응, 가사 분쟁에서 한국 고객이 먼저 확인해야 할 포인트를 정리한 안내입니다.',
       keywords: ['대만 소송 변호사', '대만 민사소송 변호사', '대만 손해배상 변호사', '대만 형사소송 변호사', '증준외 변호사'],
@@ -226,7 +226,7 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
   'zh-hant': {
     'taiwan-lawyer': {
       slug: 'taiwan-lawyer',
-      label: 'SEARCH GUIDE',
+      label: '搜尋指南',
       title: '台灣律師指南',
       description: '整理韓國客戶常找的台灣律師諮詢範圍、聯絡方式、相關服務與文章入口。',
       keywords: ['台灣律師', '曾俊瑋律師', '韓文 台灣律師', '台灣訴訟律師', '台灣公司設立律師'],
@@ -287,7 +287,7 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
     },
     'taiwan-company-setup-lawyer': {
       slug: 'taiwan-company-setup-lawyer',
-      label: 'SEARCH GUIDE',
+      label: '搜尋指南',
       title: '台灣公司設立律師指南',
       description: '整理台灣公司設立、投資核准、分公司與子公司選擇、許可與營運風險等律師諮詢重點。',
       keywords: ['台灣公司設立律師', '台灣法人設立律師', '台灣投資律師', '曾俊瑋律師', '台灣子公司 分公司'],
@@ -353,7 +353,7 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
     },
     'taiwan-litigation-lawyer': {
       slug: 'taiwan-litigation-lawyer',
-      label: 'SEARCH GUIDE',
+      label: '搜尋指南',
       title: '台灣訴訟律師指南',
       description: '整理台灣民事訴訟、損害賠償、刑事應對與家事爭議中，韓國客戶最先需要確認的重點。',
       keywords: ['台灣訴訟律師', '台灣民事訴訟律師', '台灣損害賠償律師', '台灣刑事律師', '曾俊瑋律師'],

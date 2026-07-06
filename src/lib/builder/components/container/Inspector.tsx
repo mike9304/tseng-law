@@ -14,34 +14,8 @@ import {
   type FlexConfig,
   type GridConfig,
 } from '@/lib/builder/canvas/layout-modes';
-
-const sectionLabelStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  letterSpacing: '0.05em',
-  color: '#64748b',
-  marginTop: 12,
-  marginBottom: 4,
-  display: 'block',
-};
-
-const selectStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '4px 6px',
-  fontSize: '0.85rem',
-  border: '1px solid #e2e8f0',
-  borderRadius: 6,
-  background: '#fff',
-};
-
-const smallInputStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '4px 6px',
-  fontSize: '0.85rem',
-  border: '1px solid #e2e8f0',
-  borderRadius: 6,
-};
+import { getContainerGalleryCopy } from '../container-gallery-copy';
+import styles from './ContainerInspector.module.css';
 
 function layoutItemsToText(items: BuilderContainerCanvasNode['content']['layoutItems']): string {
   return (items ?? [])
@@ -68,6 +42,7 @@ function parseLayoutItems(value: string): BuilderContainerCanvasNode['content'][
 
 export default function ContainerInspector({
   node,
+  locale,
   onUpdate,
   disabled = false,
   linkPickerContext,
@@ -77,58 +52,62 @@ export default function ContainerInspector({
   const layoutMode: ContainerLayoutMode = content.layoutMode ?? 'absolute';
   const flexConfig: FlexConfig = content.flexConfig ?? DEFAULT_FLEX;
   const gridConfig: GridConfig = content.gridConfig ?? DEFAULT_GRID;
+  const copy = getContainerGalleryCopy(locale ?? 'en');
 
   return (
-    <>
-      <label>
-        <span>Label</span>
+    <div className={styles.root} data-builder-container-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.container.label}</span>
         <input
           type="text"
           value={content.label}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ label: event.target.value })}
         />
       </label>
-      <label>
-        <span>Padding</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.container.padding}</span>
         <input
           type="number"
           min={0}
           max={96}
           value={content.padding}
           disabled={disabled}
+          className={styles.control}
           onChange={(event) => onUpdate({ padding: Number(event.target.value) })}
         />
       </label>
-      <label>
-        <span>Card variant</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.container.cardVariant}</span>
         <select
-          style={selectStyle}
+          className={styles.control}
           value={normalizeCardVariantKey(content.variant ?? legacyCardStyleToVariant(content.cardStyle))}
           disabled={disabled}
           onChange={(event) => onUpdate({ variant: event.target.value })}
         >
           {CARD_VARIANTS.map((variant) => (
             <option key={variant.key} value={variant.key}>
-              {variant.label}
+              {copy.container.cardVariants[variant.key]}
             </option>
           ))}
         </select>
       </label>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 8 }}>
-        <span style={sectionLabelStyle}>Click Link</span>
+      <div className={styles.linkSection}>
+        <span className={styles.sectionLabel}>{copy.container.clickLink}</span>
         <LinkPicker
           value={(content.link ?? null) as LinkValue | null}
           onChange={(link) => onUpdate({ link: link ?? undefined })}
           context={linkPickerContext}
           disabled={disabled}
+          locale={locale}
         />
       </div>
 
       {/* ── Layout Mode ────────────────────────────────────── */}
-      <span style={sectionLabelStyle}>Layout Mode</span>
+      <span className={styles.sectionLabel}>{copy.container.layoutMode}</span>
       <select
-        style={selectStyle}
+        className={styles.control}
         value={layoutMode}
         disabled={disabled}
         onChange={(e) => {
@@ -143,77 +122,77 @@ export default function ContainerInspector({
           onUpdate(patch);
         }}
       >
-        <option value="absolute">Absolute (default)</option>
-        <option value="flex">Flex</option>
-        <option value="grid">Grid</option>
-        <option value="strip">Strip</option>
-        <option value="box">Box</option>
-        <option value="columns">Columns</option>
-        <option value="repeater">Repeater</option>
-        <option value="tabs">Tabs</option>
-        <option value="accordion">Accordion</option>
-        <option value="slideshow">Slideshow container</option>
-        <option value="hoverBox">Hover box</option>
+        <option value="absolute">{copy.container.layoutModes.absolute}</option>
+        <option value="flex">{copy.container.layoutModes.flex}</option>
+        <option value="grid">{copy.container.layoutModes.grid}</option>
+        <option value="strip">{copy.container.layoutModes.strip}</option>
+        <option value="box">{copy.container.layoutModes.box}</option>
+        <option value="columns">{copy.container.layoutModes.columns}</option>
+        <option value="repeater">{copy.container.layoutModes.repeater}</option>
+        <option value="tabs">{copy.container.layoutModes.tabs}</option>
+        <option value="accordion">{copy.container.layoutModes.accordion}</option>
+        <option value="slideshow">{copy.container.layoutModes.slideshow}</option>
+        <option value="hoverBox">{copy.container.layoutModes.hoverBox}</option>
       </select>
 
       {['columns', 'repeater', 'tabs', 'accordion', 'slideshow', 'hoverBox'].includes(layoutMode) ? (
         <>
-          <span style={sectionLabelStyle}>Layout Items</span>
-          <label>
-            <span>Items (title | description | image)</span>
+          <span className={styles.sectionLabel}>{copy.container.layoutItems}</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.container.layoutItemsHint}</span>
             <textarea
               rows={5}
-              style={{ ...smallInputStyle, resize: 'vertical', fontFamily: 'inherit' }}
+              className={`${styles.control} ${styles.textarea}`}
               value={layoutItemsToText(content.layoutItems)}
               disabled={disabled}
               onChange={(event) => onUpdate({ layoutItems: parseLayoutItems(event.target.value) })}
             />
           </label>
-          <label>
-            <span>Active index</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.container.activeIndex}</span>
             <input
               type="number"
-              style={smallInputStyle}
               min={0}
               max={20}
               value={content.activeIndex ?? 0}
               disabled={disabled}
+              className={styles.control}
               onChange={(event) => onUpdate({ activeIndex: Number(event.target.value) })}
             />
           </label>
         </>
       ) : null}
 
-      <span style={sectionLabelStyle}>Anchor / Sticky</span>
-      <label>
-        <span>Anchor target</span>
+      <span className={styles.sectionLabel}>{copy.container.anchorSticky}</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.container.anchorTarget}</span>
         <input
           type="text"
-          style={smallInputStyle}
           value={content.anchorTarget ?? ''}
           disabled={disabled}
-          placeholder="services"
+          className={styles.control}
+          placeholder={copy.container.anchorTargetPlaceholder}
           onChange={(event) => onUpdate({ anchorTarget: event.target.value || undefined })}
         />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={Boolean(content.sticky)}
           disabled={disabled}
           onChange={(event) => onUpdate({ sticky: event.target.checked })}
         />
-        <span>Sticky on published page</span>
+        <span>{copy.container.stickyLabel}</span>
       </label>
 
       {/* ── Flex Controls ──────────────────────────────────── */}
       {layoutMode === 'flex' && (
         <>
-          <span style={sectionLabelStyle}>Flex Settings</span>
-          <label>
-            <span>Direction</span>
+          <span className={styles.sectionLabel}>{copy.container.flexSettings}</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.container.direction}</span>
             <select
-              style={selectStyle}
+              className={styles.control}
               value={flexConfig.direction}
               disabled={disabled}
               onChange={(e) =>
@@ -222,14 +201,14 @@ export default function ContainerInspector({
                 })
               }
             >
-              <option value="row">Row</option>
-              <option value="column">Column</option>
+              <option value="row">{copy.container.flexDirection.row}</option>
+              <option value="column">{copy.container.flexDirection.column}</option>
             </select>
           </label>
-          <label>
-            <span>Wrap</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.container.wrap}</span>
             <select
-              style={selectStyle}
+              className={styles.control}
               value={flexConfig.wrap ? 'wrap' : 'nowrap'}
               disabled={disabled}
               onChange={(e) =>
@@ -238,14 +217,14 @@ export default function ContainerInspector({
                 })
               }
             >
-              <option value="wrap">Wrap</option>
-              <option value="nowrap">No Wrap</option>
+              <option value="wrap">{copy.container.flexWrap.wrap}</option>
+              <option value="nowrap">{copy.container.flexWrap.nowrap}</option>
             </select>
           </label>
-          <label>
-            <span>Justify Content</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.container.justifyContent}</span>
             <select
-              style={selectStyle}
+              className={styles.control}
               value={flexConfig.justifyContent}
               disabled={disabled}
               onChange={(e) =>
@@ -257,18 +236,18 @@ export default function ContainerInspector({
                 })
               }
             >
-              <option value="flex-start">Start</option>
-              <option value="center">Center</option>
-              <option value="flex-end">End</option>
-              <option value="space-between">Space Between</option>
-              <option value="space-around">Space Around</option>
-              <option value="space-evenly">Space Evenly</option>
+              <option value="flex-start">{copy.container.flexJustify['flex-start']}</option>
+              <option value="center">{copy.container.flexJustify.center}</option>
+              <option value="flex-end">{copy.container.flexJustify['flex-end']}</option>
+              <option value="space-between">{copy.container.flexJustify['space-between']}</option>
+              <option value="space-around">{copy.container.flexJustify['space-around']}</option>
+              <option value="space-evenly">{copy.container.flexJustify['space-evenly']}</option>
             </select>
           </label>
-          <label>
-            <span>Align Items</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.container.alignItems}</span>
             <select
-              style={selectStyle}
+              className={styles.control}
               value={flexConfig.alignItems}
               disabled={disabled}
               onChange={(e) =>
@@ -280,21 +259,21 @@ export default function ContainerInspector({
                 })
               }
             >
-              <option value="flex-start">Start</option>
-              <option value="center">Center</option>
-              <option value="flex-end">End</option>
-              <option value="stretch">Stretch</option>
+              <option value="flex-start">{copy.container.flexAlign['flex-start']}</option>
+              <option value="center">{copy.container.flexAlign.center}</option>
+              <option value="flex-end">{copy.container.flexAlign['flex-end']}</option>
+              <option value="stretch">{copy.container.flexAlign.stretch}</option>
             </select>
           </label>
-          <label>
-            <span>Gap</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.container.gap}</span>
             <input
               type="number"
-              style={smallInputStyle}
               min={0}
               max={200}
               value={flexConfig.gap}
               disabled={disabled}
+              className={styles.control}
               onChange={(e) =>
                 onUpdate({
                   flexConfig: { ...flexConfig, gap: Number(e.target.value) },
@@ -308,16 +287,16 @@ export default function ContainerInspector({
       {/* ── Grid Controls ──────────────────────────────────── */}
       {layoutMode === 'grid' && (
         <>
-          <span style={sectionLabelStyle}>Grid Settings</span>
-          <label>
-            <span>Columns</span>
+          <span className={styles.sectionLabel}>{copy.container.gridSettings}</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.container.columns}</span>
             <input
               type="number"
-              style={smallInputStyle}
               min={1}
               max={12}
               value={gridConfig.columns}
               disabled={disabled}
+              className={styles.control}
               onChange={(e) =>
                 onUpdate({
                   gridConfig: { ...gridConfig, columns: Number(e.target.value) },
@@ -325,15 +304,15 @@ export default function ContainerInspector({
               }
             />
           </label>
-          <label>
-            <span>Rows</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.container.rows}</span>
             <input
               type="number"
-              style={smallInputStyle}
               min={1}
               max={12}
               value={gridConfig.rows}
               disabled={disabled}
+              className={styles.control}
               onChange={(e) =>
                 onUpdate({
                   gridConfig: { ...gridConfig, rows: Number(e.target.value) },
@@ -341,15 +320,15 @@ export default function ContainerInspector({
               }
             />
           </label>
-          <label>
-            <span>Column Gap</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.container.columnGap}</span>
             <input
               type="number"
-              style={smallInputStyle}
               min={0}
               max={200}
               value={gridConfig.columnGap}
               disabled={disabled}
+              className={styles.control}
               onChange={(e) =>
                 onUpdate({
                   gridConfig: { ...gridConfig, columnGap: Number(e.target.value) },
@@ -357,15 +336,15 @@ export default function ContainerInspector({
               }
             />
           </label>
-          <label>
-            <span>Row Gap</span>
+          <label className={styles.field}>
+            <span className={styles.label}>{copy.container.rowGap}</span>
             <input
               type="number"
-              style={smallInputStyle}
               min={0}
               max={200}
               value={gridConfig.rowGap}
               disabled={disabled}
+              className={styles.control}
               onChange={(e) =>
                 onUpdate({
                   gridConfig: { ...gridConfig, rowGap: Number(e.target.value) },
@@ -375,6 +354,6 @@ export default function ContainerInspector({
           </label>
         </>
       )}
-    </>
+    </div>
   );
 }

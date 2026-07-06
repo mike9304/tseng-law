@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError } from 'zod';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import {
+  getBuilderColumnsApiErrorPayload,
+  type BuilderColumnsApiErrorCode,
+} from '@/lib/builder/columns/columns-api-copy';
 import { recordColumnEvent } from '@/lib/builder/audit/record';
 import { listColumns, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
 import { guardMutation } from '@/lib/builder/security/guard';
@@ -13,25 +18,36 @@ import {
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-function validationErrorResponse(error: ZodError): NextResponse {
+function requestLocale(request: NextRequest, input?: unknown): Locale {
+  if (typeof input === 'string') return normalizeLocale(input);
+  return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+}
+
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderColumnsApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
     {
       ok: false,
-      error: 'validation_error',
-      issues: error.flatten(),
+      ...getBuilderColumnsApiErrorPayload(locale, errorCode),
+      ...(extra ?? {}),
     },
-    { status: 400 },
+    { status },
   );
 }
 
-function unknownErrorResponse(error: unknown): NextResponse {
-  const message = error instanceof Error ? error.message : 'unknown_error';
-  return NextResponse.json({ ok: false, error: message }, { status: 500 });
+function validationErrorResponse(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
 }
 
 export async function GET(request: NextRequest) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
+
+  const errorLocale = requestLocale(request);
 
   try {
     const locale = columnLocaleSchema.parse(request.nextUrl.searchParams.get('locale') ?? 'ko');
@@ -43,10 +59,10 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     if (error instanceof ZodError) {
-      return validationErrorResponse(error);
+      return validationErrorResponse(errorLocale, error);
     }
     console.error('[builder/columns] GET failed:', error);
-    return unknownErrorResponse(error);
+    return errorResponse(errorLocale, 'columns_list_failed', 500);
   }
 }
 
@@ -54,19 +70,27 @@ export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
+  let body: unknown;
   try {
-    const input = createColumnInputSchema.parse(await request.json());
+    body = await request.json();
+  } catch (error) {
+    console.error('[builder/columns] POST JSON parse failed:', error);
+    return errorResponse(requestLocale(request), 'invalid_json', 400);
+  }
+
+  const errorLocale = requestLocale(
+    request,
+    body && typeof body === 'object' && 'locale' in body ? (body as { locale?: unknown }).locale : undefined,
+  );
+
+  try {
+    const input = createColumnInputSchema.parse(body);
     const existing = await readColumnBundle(input.locale, input.slug);
     if (existing.preferred) {
-      return NextResponse.json(
-        {
-          ok: false,
-          error: 'Column already exists.',
-          slug: input.slug,
-          locale: input.locale,
-        },
-        { status: 409 },
-      );
+      return errorResponse(input.locale, 'column_already_exists', 409, {
+        slug: input.slug,
+        locale: input.locale,
+      });
     }
 
     const now = new Date().toISOString();
@@ -117,12 +141,9 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     if (error instanceof ZodError) {
-      return validationErrorResponse(error);
-    }
-    if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+      return validationErrorResponse(errorLocale, error);
     }
     console.error('[builder/columns] POST failed:', error);
-    return unknownErrorResponse(error);
+    return errorResponse(errorLocale, 'column_create_failed', 500);
   }
 }

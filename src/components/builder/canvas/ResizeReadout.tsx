@@ -1,5 +1,6 @@
 'use client';
 
+import { memo } from 'react';
 import styles from './SandboxPage.module.css';
 import type { OverlayRect } from './DragGhost';
 
@@ -11,7 +12,7 @@ interface ResizeReadoutProps {
   panY: number;
 }
 
-export default function ResizeReadout({
+function ResizeReadout({
   currentRect,
   pointer,
   zoom,
@@ -19,14 +20,17 @@ export default function ResizeReadout({
   panY,
 }: ResizeReadoutProps) {
   if (!currentRect) return null;
-
-  const left = pointer ? pointer.x + 12 : (currentRect.x + currentRect.width) * zoom + panX + 12;
-  const top = pointer ? pointer.y + 12 : (currentRect.y + currentRect.height) * zoom + panY + 12;
+  const readoutLeft = pointer
+    ? pointer.x + 12
+    : (currentRect.x + currentRect.width) * zoom + panX + 12;
+  const readoutTop = pointer
+    ? pointer.y + 12
+    : (currentRect.y + currentRect.height) * zoom + panY + 12;
 
   return (
     <div
       className={styles.canvasOverlayResizeReadout}
-      style={{ left: `${left}px`, top: `${top}px` }}
+      style={{ left: `${readoutLeft}px`, top: `${readoutTop}px` }}
       aria-live="polite"
     >
       {Math.round(currentRect.width)}{' '}
@@ -35,3 +39,5 @@ export default function ResizeReadout({
     </div>
   );
 }
+
+export default memo(ResizeReadout);

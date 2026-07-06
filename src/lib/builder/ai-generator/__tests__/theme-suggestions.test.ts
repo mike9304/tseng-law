@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import type { BuilderTheme } from '@/lib/builder/site/types';
+import { DEFAULT_THEME_TEXT_PRESETS } from '@/lib/builder/site/theme';
 import {
+  applyThemeSuggestionToTheme,
   analyzeThemeHarmony,
   contrastRatio,
   deriveAccentFromPrimary,
@@ -51,6 +53,48 @@ describe('suggestThemeFromPrompt', () => {
   it('returns rationale text', () => {
     const result = suggestThemeFromPrompt('luxury hotel');
     expect(result.rationale).toContain('gold');
+  });
+
+  it('suggests component style tokens with the palette', () => {
+    const result = suggestThemeFromPrompt('luxury hotel');
+    expect(result.radii).toEqual({ sm: 2, md: 6, lg: 12 });
+    expect(result.effects).toEqual({ radiusPreset: 'medium', shadowPreset: 'strong' });
+    expect(result.typographyScale).toEqual({ baseSize: 17, ratio: 1.333 });
+  });
+
+  it('applies a suggestion without dropping existing non-suggestion theme fields', () => {
+    const current: BuilderTheme = {
+      colors: {
+        primary: '#111111',
+        secondary: '#222222',
+        accent: '#333333',
+        background: '#ffffff',
+        text: '#101010',
+        muted: '#555555',
+      },
+      darkColors: {
+        primary: '#dddddd',
+        secondary: '#cccccc',
+        accent: '#bbbbbb',
+        background: '#000000',
+        text: '#ffffff',
+        muted: '#999999',
+      },
+      fonts: { heading: 'Old Heading', body: 'Old Body' },
+      radii: { sm: 4, md: 8, lg: 16 },
+      themeTextPresets: DEFAULT_THEME_TEXT_PRESETS,
+    };
+    const suggestion = suggestThemeFromPrompt('modern saas');
+    const next = applyThemeSuggestionToTheme(current, suggestion);
+
+    expect(next.colors).toEqual(suggestion.colors);
+    expect(next.fonts).toEqual(suggestion.fonts);
+    expect(next.radii).toEqual(suggestion.radii);
+    expect(next.effects).toEqual(suggestion.effects);
+    expect(next.typographyScale).toEqual(suggestion.typographyScale);
+    expect(next.darkColors).toBe(current.darkColors);
+    expect(next.themeTextPresets).toBe(current.themeTextPresets);
+    expect(applyThemeSuggestionToTheme(next, suggestion)).toEqual(next);
   });
 });
 

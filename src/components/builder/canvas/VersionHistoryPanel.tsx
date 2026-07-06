@@ -4,45 +4,23 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import {
   computeDocumentDiff,
+  formatDiffNodeKind,
   formatDocumentDiffSummary,
   summarizeDiffNode,
   summarizeDocumentDiff,
   type DocumentDiff,
   type DocumentDiffSummary,
 } from '@/lib/builder/canvas/document-diff';
+import { getDocumentDiffCopy } from '@/lib/builder/canvas/document-diff-copy';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import EditorChromeIcon from './EditorChromeIcon';
+import styles from './VersionHistoryPanel.module.css';
 import {
-  backdropStyle,
-  bodyStyle,
-  cancelBtnStyle,
-  closeBtnStyle,
-  codeStyle,
-  confirmBtnRow,
-  confirmOverlayStyle,
-  confirmRestoreBtnStyle,
-  confirmTextStyle,
-  dateStyle,
-  diffItemStyle,
-  diffListStyle,
-  diffPreviewChipStyle,
-  diffStatStyle,
-  headerStyle,
-  inlineRestoreButtonStyle,
-  metaStyle,
-  panelStyle,
-  previewStyle,
-  restoreBtnDisabledStyle,
-  restoreBtnStyle,
-  revisionCardFooterStyle,
-  sectionHeading,
-  sourceBadgeStyle,
-  summaryStyle,
-  timelineDotStyle,
-  timelineItemStyle,
-  timelineRailStyle,
-  timelineStyle,
-  titleStyle,
-} from './VersionHistoryPanel.styles';
+  getVersionHistoryCopy,
+  type VersionHistoryCopy,
+  type VersionHistorySource,
+} from './version-history-copy';
 
 interface Revision {
   revisionId: string;
@@ -67,10 +45,10 @@ const FOCUSABLE_SELECTOR = [
   '[tabindex]:not([tabindex="-1"])',
 ].join(',');
 
-function formatDate(iso: string): string {
+function formatDate(iso: string, locale: string): string {
   try {
     const d = new Date(iso);
-    return d.toLocaleString('ko-KR', {
+    return d.toLocaleString(locale, {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
@@ -82,11 +60,19 @@ function formatDate(iso: string): string {
   }
 }
 
-function formatSourceLabel(source?: string): string {
-  if (source === 'publish') return 'published snapshot';
-  if (source === 'rollback-backup') return 'rollback backup';
-  if (source === 'manual') return 'manual save';
-  return 'saved revision';
+function formatSourceLabel(copy: VersionHistoryCopy, source?: string): string {
+  return copy.sourceLabels[getRevisionSourceKey(source)];
+}
+
+function formatSourceBadgeLabel(copy: VersionHistoryCopy, source: string): string {
+  const sourceKey = getRevisionSourceKey(source);
+  if (sourceKey === 'saved') return copy.sourceLabels.saved;
+  return copy.sourceBadgeLabels[sourceKey];
+}
+
+function getRevisionSourceKey(source?: string): VersionHistorySource {
+  if (source === 'publish' || source === 'rollback-backup' || source === 'manual') return source;
+  return 'saved';
 }
 
 function getFocusableElements(container: HTMLElement): HTMLElement[] {
@@ -100,6 +86,7 @@ function getFocusableElements(container: HTMLElement): HTMLElement[] {
 
 export default function VersionHistoryPanel({
   open,
+  locale,
   pageId,
   siteId,
   draftMeta,
@@ -107,12 +94,16 @@ export default function VersionHistoryPanel({
   onRestored,
 }: {
   open: boolean;
+  locale?: Locale | string;
   pageId: string;
   siteId: string;
   draftMeta?: DraftMeta | null;
   onClose: () => void;
   onRestored?: (draftMeta: DraftMeta, document?: BuilderCanvasDocument) => void;
 }) {
+  const copy = getVersionHistoryCopy(locale);
+  const diffCopy = getDocumentDiffCopy(locale);
+  const siteQuery = useMemo(() => new URLSearchParams({ siteId }).toString(), [siteId]);
   const replaceDocument = useBuilderCanvasStore((s) => s.replaceDocument);
   const currentDocument = useBuilderCanvasStore((s) => s.document);
 
@@ -160,7 +151,7 @@ export default function VersionHistoryPanel({
     setLoading(true);
     try {
       const res = await fetch(
-        `/api/builder/site/pages/${encodeURIComponent(pageId)}/revisions`,
+        `/api/builder/site/pages/${encodeURIComponent(pageId)}/revisions?${siteQuery}`,
         { credentials: 'same-origin' },
       );
       if (res.ok) {
@@ -172,13 +163,13 @@ export default function VersionHistoryPanel({
     } finally {
       setLoading(false);
     }
-  }, [pageId]);
+  }, [pageId, siteQuery]);
 
   const fetchCurrentDraftMeta = useCallback(async () => {
     if (!pageId) return;
     try {
       const res = await fetch(
-        `/api/builder/site/pages/${encodeURIComponent(pageId)}/draft`,
+        `/api/builder/site/pages/${encodeURIComponent(pageId)}/draft?${siteQuery}`,
         { credentials: 'same-origin' },
       );
       if (res.ok) {
@@ -195,7 +186,7 @@ export default function VersionHistoryPanel({
     } catch {
       // silent
     }
-  }, [pageId]);
+  }, [pageId, siteQuery]);
 
   const loadRevisionDoc = useCallback(
     async (revisionId: string) => {
@@ -204,7 +195,7 @@ export default function VersionHistoryPanel({
       setSelectedDoc(null);
       try {
         const res = await fetch(
-          `/api/builder/site/pages/${encodeURIComponent(pageId)}/revisions?revisionId=${encodeURIComponent(revisionId)}`,
+          `/api/builder/site/pages/${encodeURIComponent(pageId)}/revisions?${new URLSearchParams({ siteId, revisionId }).toString()}`,
           { credentials: 'same-origin' },
         );
         if (res.ok) {
@@ -217,7 +208,7 @@ export default function VersionHistoryPanel({
         setLoadingDoc(false);
       }
     },
-    [pageId],
+    [pageId, siteId],
   );
 
   const loadHoverSummary = useCallback(
@@ -225,19 +216,19 @@ export default function VersionHistoryPanel({
       if (!currentDocument || hoverSummaries[revisionId]) return;
       try {
         const res = await fetch(
-          `/api/builder/site/pages/${encodeURIComponent(pageId)}/revisions?revisionId=${encodeURIComponent(revisionId)}`,
+          `/api/builder/site/pages/${encodeURIComponent(pageId)}/revisions?${new URLSearchParams({ siteId, revisionId }).toString()}`,
           { credentials: 'same-origin' },
         );
         if (!res.ok) return;
         const data = (await res.json()) as { document?: BuilderCanvasDocument };
         if (!data.document) return;
-        const summary = summarizeDocumentDiff(computeDocumentDiff(currentDocument, data.document));
+        const summary = summarizeDocumentDiff(computeDocumentDiff(currentDocument, data.document, diffCopy));
         setHoverSummaries((current) => ({ ...current, [revisionId]: summary }));
       } catch {
         // silent
       }
     },
-    [currentDocument, hoverSummaries, pageId],
+    [currentDocument, diffCopy, hoverSummaries, pageId, siteId],
   );
 
   useEffect(() => {
@@ -346,8 +337,8 @@ export default function VersionHistoryPanel({
 
   const diff = useMemo<DocumentDiff | null>(() => {
     if (!currentDocument || !selectedDoc) return null;
-    return computeDocumentDiff(currentDocument, selectedDoc);
-  }, [currentDocument, selectedDoc]);
+    return computeDocumentDiff(currentDocument, selectedDoc, diffCopy);
+  }, [currentDocument, diffCopy, selectedDoc]);
 
   const handleRestore = async (revisionId: string) => {
     setRestoring(true);
@@ -384,17 +375,17 @@ export default function VersionHistoryPanel({
 
   return (
     <div
-      style={backdropStyle}
+      className={styles.backdrop}
       onClick={(e) => {
         if (e.target === e.currentTarget) closePanel();
       }}
     >
       <div
         ref={panelRef}
-        style={{ ...panelStyle, position: 'relative' }}
+        className={styles.panel}
         role="dialog"
         aria-modal="true"
-        aria-label="버전 히스토리"
+        aria-label={copy.dialogAriaLabel}
         tabIndex={-1}
         data-builder-version-history-dialog="true"
         onKeyDownCapture={handlePanelKeyDown}
@@ -402,156 +393,164 @@ export default function VersionHistoryPanel({
         {confirmId && (
           <div
             ref={confirmRef}
-            style={confirmOverlayStyle}
+            className={styles.confirmOverlay}
             role="alertdialog"
             aria-modal="true"
-            aria-label="리비전 복원 확인"
+            aria-label={copy.confirmAriaLabel}
             tabIndex={-1}
             data-builder-version-restore-dialog="true"
           >
-            <p style={confirmTextStyle}>
-              이 리비전으로 복원하시겠습니까?<br />
-              현재 draft 는 자동으로 백업된 후 덮어씌워집니다.
-            </p>
-            <div style={confirmBtnRow}>
-              <button
-                type="button"
-                style={cancelBtnStyle}
-                onClick={closeRestoreConfirm}
-                disabled={restoring}
-              >
-                취소
-              </button>
-              <button
-                type="button"
-                style={confirmRestoreBtnStyle}
-                onClick={() => handleRestore(confirmId)}
-                disabled={restoring}
-              >
-                {restoring ? '복원 중...' : '복원'}
-              </button>
+            <div className={styles.confirmPanel}>
+              <p className={styles.confirmText}>
+                {copy.confirmQuestion}<br />
+                {copy.confirmWarning}
+              </p>
+              <div className={styles.confirmActions}>
+                <button
+                  type="button"
+                  className={styles.secondaryButton}
+                  onClick={closeRestoreConfirm}
+                  disabled={restoring}
+                >
+                  {copy.cancel}
+                </button>
+                <button
+                  type="button"
+                  className={styles.dangerButton}
+                  onClick={() => handleRestore(confirmId)}
+                  disabled={restoring}
+                >
+                  {restoring ? copy.restoring : copy.restore}
+                </button>
+              </div>
             </div>
           </div>
         )}
 
-        <div style={headerStyle}>
-          <span style={titleStyle}>버전 히스토리</span>
-          <button type="button" style={closeBtnStyle} onClick={closePanel}>
-            닫기
+        <div className={styles.header}>
+          <div className={styles.titleBlock}>
+            <span className={styles.titleLabel}>{copy.currentDraft}</span>
+            <span className={styles.title}>{copy.title}</span>
+          </div>
+          <button
+            type="button"
+            className={styles.closeButton}
+            title={copy.close}
+            aria-label={copy.close}
+            onClick={closePanel}
+          >
+            <EditorChromeIcon name="close" />
           </button>
         </div>
 
-        <div style={bodyStyle}>
-          {/* ── Timeline ── */}
-          <div style={timelineStyle}>
-            <span style={timelineRailStyle} aria-hidden="true" />
-            <div
-              style={{
-                ...timelineItemStyle(false),
-                background: '#fff',
-                borderColor: '#116dff',
-              }}
-            >
-              <span style={timelineDotStyle(true)} aria-hidden="true" />
-              <div style={dateStyle}>현재 Draft</div>
-              <div style={metaStyle}>
-                revision {currentDraftMeta?.revision ?? 0}
-                {currentDraftMeta?.savedAt ? ` — ${formatDate(currentDraftMeta.savedAt)}` : ''}
-                {' — '}
-                노드 {currentDocument?.nodes.length ?? 0}개 — 편집 중
+        <div className={styles.body}>
+          <div className={styles.timeline}>
+            <span className={styles.timelineRail} aria-hidden="true" />
+            <div className={styles.timelineItem} data-current="true">
+              <span className={styles.timelineDot} aria-hidden="true" />
+              <div className={styles.dateLine}>{copy.currentDraft}</div>
+              <div className={styles.metaLine}>
+                {copy.revisionLabel(currentDraftMeta?.revision ?? 0)}
+                {currentDraftMeta?.savedAt ? ` - ${formatDate(currentDraftMeta.savedAt, copy.dateLocale)}` : ''}
+                {' - '}
+                {copy.draftMetaLabel(currentDocument?.nodes.length ?? 0)}
               </div>
-              <div style={summaryStyle}>Live draft · 마지막 저장본 기준</div>
+              <div className={styles.summaryLine}>{copy.liveDraftSummary}</div>
             </div>
 
             {loading ? (
-              <div style={{ padding: 12, fontSize: '0.82rem', color: '#94a3b8', textAlign: 'center' }}>
-                리비전 로딩 중...
+              <div className={styles.stateMessage}>
+                {copy.loadingRevisions}
               </div>
             ) : revisions.length === 0 ? (
-              <div style={{ padding: 12, fontSize: '0.82rem', color: '#94a3b8', textAlign: 'center' }}>
-                저장된 리비전이 없습니다.<br />
-                발행 또는 수동 스냅샷 시 자동 생성됩니다.
+              <div className={styles.stateMessage}>
+                {copy.noRevisionsTitle}<br />
+                {copy.noRevisionsHint}
               </div>
             ) : (
-              revisions.map((rev) => (
-                <div
-                  key={rev.revisionId}
-                  style={timelineItemStyle(rev.revisionId === selectedId)}
-                  onClick={() => loadRevisionDoc(rev.revisionId)}
-                  onMouseEnter={() => {
-                    setHoveringId(rev.revisionId);
-                    void loadHoverSummary(rev.revisionId);
-                  }}
-                  onMouseLeave={() => setHoveringId((current) => (current === rev.revisionId ? null : current))}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') void loadRevisionDoc(rev.revisionId);
-                  }}
-                >
-                  <span style={timelineDotStyle(rev.revisionId === selectedId)} aria-hidden="true" />
-                  {hoveringId === rev.revisionId ? (
-                    <span style={diffPreviewChipStyle}>{formatDocumentDiffSummary(hoverSummaries[rev.revisionId])}</span>
-                  ) : null}
-                  <div style={dateStyle}>
-                    {formatDate(rev.savedAt)}
-                    {rev.source ? <span style={sourceBadgeStyle(rev.source)}>{rev.source}</span> : null}
+              revisions.map((rev) => {
+                const sourceKey = getRevisionSourceKey(rev.source);
+                return (
+                  <div
+                    key={rev.revisionId}
+                    className={styles.timelineItem}
+                    data-active={rev.revisionId === selectedId ? 'true' : 'false'}
+                    data-builder-version-revision-source={sourceKey}
+                    onClick={() => loadRevisionDoc(rev.revisionId)}
+                    onMouseEnter={() => {
+                      setHoveringId(rev.revisionId);
+                      void loadHoverSummary(rev.revisionId);
+                    }}
+                    onMouseLeave={() => setHoveringId((current) => (current === rev.revisionId ? null : current))}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') void loadRevisionDoc(rev.revisionId);
+                    }}
+                  >
+                    <span className={styles.timelineDot} aria-hidden="true" />
+                    {hoveringId === rev.revisionId ? (
+                      <span className={styles.diffPreviewChip}>{formatDocumentDiffSummary(hoverSummaries[rev.revisionId], diffCopy)}</span>
+                    ) : null}
+                    <div className={styles.dateLine}>
+                      {formatDate(rev.savedAt, copy.dateLocale)}
+                      {rev.source ? (
+                        <span className={styles.sourceBadge} data-source={sourceKey}>{formatSourceBadgeLabel(copy, rev.source)}</span>
+                      ) : null}
+                    </div>
+                    <div className={styles.metaLine}>{copy.nodeCountLabel(rev.nodeCount)}</div>
+                    <div className={styles.summaryLine}>{copy.changeSummaryLabel(formatSourceLabel(copy, rev.source))}</div>
+                    <div className={styles.revisionFooter}>
+                      <span className={styles.metaLine}>{copy.hoverDiffPreview}</span>
+                      <button
+                        type="button"
+                        className={styles.inlineRestoreButton}
+                        disabled={restoring}
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          openRestoreConfirm(rev.revisionId);
+                        }}
+                      >
+                        {copy.restore}
+                      </button>
+                    </div>
                   </div>
-                  <div style={metaStyle}>노드 {rev.nodeCount}개</div>
-                  <div style={summaryStyle}>
-                    변경 요약 · {formatSourceLabel(rev.source)}
-                  </div>
-                  <div style={revisionCardFooterStyle}>
-                    <span style={metaStyle}>hover 시 diff preview</span>
-                    <button
-                      type="button"
-                      style={inlineRestoreButtonStyle}
-                      disabled={restoring}
-                      onClick={(event) => {
-                        event.stopPropagation();
-                        openRestoreConfirm(rev.revisionId);
-                      }}
-                    >
-                      복원
-                    </button>
-                  </div>
-                </div>
-              ))
+                );
+              })
             )}
           </div>
 
-          {/* ── Diff preview ── */}
-          <div style={previewStyle}>
+          <div className={styles.preview}>
             {!selectedId ? (
-              <div style={{ color: '#94a3b8', fontSize: '0.88rem', padding: 24, textAlign: 'center' }}>
-                좌측에서 리비전을 선택하면 현재 draft 와의 차이를 표시합니다.
+              <div className={styles.previewState}>
+                {copy.selectRevisionPrompt}
               </div>
             ) : loadingDoc ? (
-              <div style={{ color: '#94a3b8', fontSize: '0.88rem', padding: 24, textAlign: 'center' }}>
-                리비전 문서 로딩 중...
+              <div className={styles.previewState}>
+                {copy.loadingRevisionDocument}
               </div>
             ) : !selectedDoc ? (
-              <div style={{ color: '#dc2626', fontSize: '0.88rem', padding: 24, textAlign: 'center' }}>
-                리비전 문서를 불러오지 못했습니다.
+              <div className={styles.previewState} data-tone="error">
+                {copy.revisionDocumentLoadFailed}
               </div>
             ) : (
               <>
-                <div style={diffStatStyle}>
-                  <span style={{ color: '#16a34a' }}>+ 추가됨 {diff?.added.length ?? 0}</span>
-                  <span style={{ color: '#dc2626' }}>− 삭제됨 {diff?.removed.length ?? 0}</span>
-                  <span style={{ color: '#ca8a04' }}>~ 변경됨 {diff?.modified.length ?? 0}</span>
-                  <span style={{ color: '#64748b', marginLeft: 'auto' }}>
-                    노드 {selectedDoc.nodes.length}개
+                <div className={styles.diffStats}>
+                  <span className={styles.diffStat} data-kind="add">{copy.addedCount(diff?.added.length ?? 0)}</span>
+                  <span className={styles.diffStat} data-kind="remove">{copy.removedCount(diff?.removed.length ?? 0)}</span>
+                  <span className={styles.diffStat} data-kind="modify">{copy.modifiedCount(diff?.modified.length ?? 0)}</span>
+                  <span className={styles.diffStat} data-kind="total">
+                    {copy.nodeCountLabel(selectedDoc.nodes.length)}
                   </span>
                 </div>
 
                 {diff && diff.added.length > 0 ? (
-                  <div>
-                    <div style={{ ...sectionHeading, color: '#16a34a' }}>추가된 노드 (현재에만 존재)</div>
-                    <ul style={diffListStyle}>
+                  <div className={styles.diffSection}>
+                    <div className={styles.sectionHeading} data-kind="add">{copy.addedSection}</div>
+                    <ul className={styles.diffList}>
                       {diff.added.map((n) => (
-                        <li key={n.id} style={diffItemStyle('add')}>
-                          <code style={codeStyle}>{n.id}</code> — {summarizeDiffNode(n)}
+                        <li key={n.id} className={styles.diffItem} data-kind="add">
+                          <code className={styles.code}>{n.id}</code> - {summarizeDiffNode(n, diffCopy)}
                         </li>
                       ))}
                     </ul>
@@ -559,12 +558,12 @@ export default function VersionHistoryPanel({
                 ) : null}
 
                 {diff && diff.removed.length > 0 ? (
-                  <div>
-                    <div style={{ ...sectionHeading, color: '#dc2626' }}>제거된 노드 (이 리비전에만 존재)</div>
-                    <ul style={diffListStyle}>
+                  <div className={styles.diffSection}>
+                    <div className={styles.sectionHeading} data-kind="remove">{copy.removedSection}</div>
+                    <ul className={styles.diffList}>
                       {diff.removed.map((n) => (
-                        <li key={n.id} style={diffItemStyle('remove')}>
-                          <code style={codeStyle}>{n.id}</code> — {summarizeDiffNode(n)}
+                        <li key={n.id} className={styles.diffItem} data-kind="remove">
+                          <code className={styles.code}>{n.id}</code> - {summarizeDiffNode(n, diffCopy)}
                         </li>
                       ))}
                     </ul>
@@ -572,12 +571,14 @@ export default function VersionHistoryPanel({
                 ) : null}
 
                 {diff && diff.modified.length > 0 ? (
-                  <div>
-                    <div style={{ ...sectionHeading, color: '#ca8a04' }}>변경된 노드</div>
-                    <ul style={diffListStyle}>
+                  <div className={styles.diffSection}>
+                    <div className={styles.sectionHeading} data-kind="modify">{copy.modifiedSection}</div>
+                    <ul className={styles.diffList}>
                       {diff.modified.map((n) => (
-                        <li key={n.id} style={diffItemStyle('modify')}>
-                          <code style={codeStyle}>{n.id}</code> — {n.kind} · {n.changes.join(' · ')}
+                        <li key={n.id} className={styles.diffItem} data-kind="modify">
+                          <code className={styles.code}>{n.id}</code>
+                          {' - '}
+                          {formatDiffNodeKind(n.kind, diffCopy)} - {n.changes.join(' / ')}
                         </li>
                       ))}
                     </ul>
@@ -585,19 +586,19 @@ export default function VersionHistoryPanel({
                 ) : null}
 
                 {diff && diff.added.length === 0 && diff.removed.length === 0 && diff.modified.length === 0 ? (
-                  <div style={{ color: '#64748b', fontSize: '0.85rem' }}>
-                    현재 draft 와 동일합니다.
+                  <div className={styles.previewState}>
+                    {copy.sameAsDraft}
                   </div>
                 ) : null}
 
-                <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'flex-end' }}>
+                <div className={styles.restoreActionRow}>
                   <button
                     type="button"
-                    style={selectedId ? restoreBtnStyle : restoreBtnDisabledStyle}
+                    className={styles.restoreButton}
                     onClick={() => selectedId && openRestoreConfirm(selectedId)}
                     disabled={!selectedId}
                   >
-                    이 버전으로 복원
+                    {copy.restoreThisVersion}
                   </button>
                 </div>
               </>

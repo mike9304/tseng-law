@@ -1,6 +1,7 @@
 import { defineComponent } from '../define';
 import ButtonElement from '@/components/builder/canvas/elements/ButtonElement';
 import ButtonInspector from './Inspector';
+import { BUTTON_LEGACY_DEFAULT_LABEL } from './button-copy';
 
 export default defineComponent({
   kind: 'button',
@@ -8,7 +9,7 @@ export default defineComponent({
   category: 'basic',
   icon: '▢',
   defaultContent: {
-    label: '버튼',
+    label: BUTTON_LEGACY_DEFAULT_LABEL,
     href: '',
     target: undefined,
     rel: undefined,

@@ -1,7 +1,9 @@
 'use client';
 
 import type { ChangeEvent, DragEvent, ReactNode, RefObject } from 'react';
+import type { Locale } from '@/lib/locales';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
+import { getAssetLibraryChromeCopy } from './asset-library-chrome-copy';
 
 export type AssetSortMode = 'date-desc' | 'date-asc' | 'name-asc' | 'name-desc';
 
@@ -13,6 +15,7 @@ export interface AssetFolderTreeItem {
 
 interface AssetLibraryChromeProps {
   children: ReactNode;
+  locale: Locale;
   folderTree: AssetFolderTreeItem[];
   activeFolder: string;
   newFolderName: string;
@@ -38,6 +41,7 @@ interface AssetLibraryChromeProps {
 
 export function AssetLibraryChrome({
   children,
+  locale,
   folderTree,
   activeFolder,
   newFolderName,
@@ -60,6 +64,8 @@ export function AssetLibraryChrome({
   onChangeNewTagName,
   onCreateTag,
 }: AssetLibraryChromeProps) {
+  const text = getAssetLibraryChromeCopy(locale);
+
   function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
     const file = event.target.files?.[0];
     event.currentTarget.value = '';
@@ -75,7 +81,7 @@ export function AssetLibraryChrome({
   return (
     <>
       <aside className={styles.assetFolderTree}>
-        <span className={styles.modalEyebrow}>Folders</span>
+        <span className={styles.modalEyebrow}>{text.folders}</span>
         {folderTree.map((folder) => (
           <button
             key={folder.id}
@@ -91,39 +97,39 @@ export function AssetLibraryChrome({
           <input
             className={styles.inspectorInput}
             value={newFolderName}
-            placeholder="New folder"
+            placeholder={text.newFolder}
             onChange={(event) => onChangeNewFolderName(event.target.value)}
             onKeyDown={(event) => {
               if (event.key === 'Enter') onCreateFolder();
             }}
           />
-          <button type="button" className={styles.actionButton} onClick={onCreateFolder}>Add</button>
+          <button type="button" className={styles.actionButton} onClick={onCreateFolder}>{text.add}</button>
         </div>
       </aside>
 
       <section className={styles.assetLibraryMain}>
         <div className={styles.modalToolbar}>
           <label className={styles.modalSearchField}>
-            <span>Search</span>
+            <span>{text.search}</span>
             <input
               className={styles.inspectorInput}
               type="search"
               value={search}
-              placeholder="filename"
+              placeholder={text.filename}
               onChange={(event) => onChangeSearch(event.target.value)}
             />
           </label>
           <label className={styles.modalSearchField}>
-            <span>Sort</span>
+            <span>{text.sort}</span>
             <select
               className={styles.inspectorInput}
               value={sortMode}
               onChange={(event) => onChangeSortMode(event.target.value as AssetSortMode)}
             >
-              <option value="date-desc">Newest first</option>
-              <option value="date-asc">Oldest first</option>
-              <option value="name-asc">Name A-Z</option>
-              <option value="name-desc">Name Z-A</option>
+              <option value="date-desc">{text.newest}</option>
+              <option value="date-asc">{text.oldest}</option>
+              <option value="name-asc">{text.nameAsc}</option>
+              <option value="name-desc">{text.nameDesc}</option>
             </select>
           </label>
           <div className={styles.modalToolbarActions}>
@@ -133,7 +139,7 @@ export function AssetLibraryChrome({
               disabled={isLoading}
               onClick={onRefresh}
             >
-              Refresh
+              {text.refresh}
             </button>
             <button
               type="button"
@@ -141,7 +147,7 @@ export function AssetLibraryChrome({
               disabled={isUploading}
               onClick={() => inputRef.current?.click()}
             >
-              {isUploading ? 'Uploading…' : 'Upload image'}
+              {isUploading ? text.uploading : text.upload}
             </button>
             <input
               ref={inputRef}
@@ -159,7 +165,7 @@ export function AssetLibraryChrome({
             className={`${styles.assetTagChip} ${activeTag === 'all' ? styles.assetTagChipActive : ''}`}
             onClick={() => onChangeActiveTag('all')}
           >
-            All tags
+            {text.allTags}
           </button>
           {tags.map((tag) => (
             <button
@@ -174,13 +180,13 @@ export function AssetLibraryChrome({
           <input
             className={styles.assetTagInput}
             value={newTagName}
-            placeholder="New tag"
+            placeholder={text.newTag}
             onChange={(event) => onChangeNewTagName(event.target.value)}
             onKeyDown={(event) => {
               if (event.key === 'Enter') onCreateTag();
             }}
           />
-          <button type="button" className={styles.assetTagChip} onClick={onCreateTag}>Create</button>
+          <button type="button" className={styles.assetTagChip} onClick={onCreateTag}>{text.create}</button>
         </div>
 
         <button
@@ -194,8 +200,8 @@ export function AssetLibraryChrome({
           }}
           onDrop={handleDrop}
         >
-          <strong>{isUploading ? 'Uploading image…' : 'Drop image here or click to upload'}</strong>
-          <span>JPG, PNG, WEBP, GIF, AVIF · max 8 MB</span>
+          <strong>{isUploading ? text.uploading : text.dropTitle}</strong>
+          <span>{text.dropHint}</span>
         </button>
 
         {children}

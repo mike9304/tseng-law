@@ -1,13 +1,24 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderTimelineCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import {
+  getNavigationDecorativeCopy,
+  localizedTimelineItems,
+  TIMELINE_LEGACY_DEFAULT_ITEMS,
+} from '../navigation-decorative-copy';
+import styles from './TimelineInspector.module.css';
 
 function TimelineRender({
   node,
+  locale = 'ko',
 }: {
   node: BuilderTimelineCanvasNode;
+  locale?: Locale;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
+  const copy = getNavigationDecorativeCopy(locale);
+  const items = localizedTimelineItems(c.items, copy.timeline);
   return (
     <ol
       className="builder-datadisplay-timeline"
@@ -15,10 +26,10 @@ function TimelineRender({
       data-builder-timeline-orientation={c.orientation}
       style={{ '--builder-timeline-accent': c.accentColor } as React.CSSProperties}
     >
-      {c.items.length === 0 ? (
-        <li><em>타임라인 항목을 인스펙터에서 추가하세요</em></li>
+      {items.length === 0 ? (
+        <li><em>{copy.timeline.empty}</em></li>
       ) : (
-        c.items.map((item, idx) => (
+        items.map((item, idx) => (
           <li key={`${item.year}-${idx}`}>
             <span className="builder-datadisplay-timeline-year">{item.year}</span>
             <strong>{item.title}</strong>
@@ -53,39 +64,43 @@ function parseItems(value: string): BuilderTimelineCanvasNode['content']['items'
 
 function TimelineInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const tNode = node as BuilderTimelineCanvasNode;
   const c = tNode.content;
+  const copy = getNavigationDecorativeCopy(locale);
+  const items = localizedTimelineItems(c.items, copy.timeline);
   return (
-    <>
-      <label>
-        <span>방향</span>
+    <div className={styles.root} data-builder-timeline-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.timeline.inspector.orientation}</span>
         <select
+          className={styles.control}
           value={c.orientation}
           disabled={disabled}
           onChange={(event) => onUpdate({ orientation: event.target.value as BuilderTimelineCanvasNode['content']['orientation'] })}
         >
-          <option value="vertical">Vertical</option>
-          <option value="horizontal">Horizontal</option>
+          <option value="vertical">{copy.timeline.inspector.orientations.vertical}</option>
+          <option value="horizontal">{copy.timeline.inspector.orientations.horizontal}</option>
         </select>
       </label>
-      <label>
-        <span>강조 색</span>
-        <input type="text" value={c.accentColor} disabled={disabled} onChange={(event) => onUpdate({ accentColor: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.timeline.inspector.accentColor}</span>
+        <input className={styles.control} type="text" value={c.accentColor} disabled={disabled} onChange={(event) => onUpdate({ accentColor: event.target.value })} />
       </label>
-      <label>
-        <span>항목 (year | title | description)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.timeline.inspector.items}</span>
         <textarea
+          className={`${styles.control} ${styles.textarea}`}
           rows={6}
-          style={{ fontFamily: 'inherit', resize: 'vertical' }}
-          value={itemsToText(c.items)}
+          value={itemsToText(items)}
           disabled={disabled}
           onChange={(event) => onUpdate({ items: parseItems(event.target.value) })}
         />
       </label>
-    </>
+    </div>
   );
 }
 
@@ -95,12 +110,7 @@ export default defineComponent({
   category: 'advanced',
   icon: '⌒',
   defaultContent: {
-    items: [
-      { year: '2018', title: '호정국제 설립', description: '서울·타이베이 동시 개소' },
-      { year: '2020', title: '대만 변호사 파트너십' },
-      { year: '2023', title: '연 자문 200건 돌파' },
-      { year: '2025', title: '한·대 양국 자문 100% 디지털화' },
-    ],
+    items: TIMELINE_LEGACY_DEFAULT_ITEMS.map((item) => ({ ...item })),
     orientation: 'vertical' as const,
     accentColor: '#0f172a',
   },

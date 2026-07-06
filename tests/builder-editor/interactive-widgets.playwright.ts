@@ -30,7 +30,7 @@ test.describe('/ko/admin-builder interactive widget pack', () => {
       await page.keyboard.press('Escape');
 
       const drawer = await openCatalogDrawer(page);
-      await expect(drawer.getByText('Interactive widget pack')).toBeVisible();
+      await expect(drawer.getByText(/Interactive widget pack|인터랙션 위젯 팩/)).toBeVisible();
 
       const presets = [
         'interactive-countdown-card',

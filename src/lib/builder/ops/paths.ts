@@ -14,12 +14,28 @@ export function opsHealthSnapshotFile(): string {
   return path.join(opsRoot(), 'health-snapshot.json');
 }
 
+export function opsDashboardHistoryFile(): string {
+  return path.join(opsRoot(), 'dashboard-history.json');
+}
+
+export function opsAlertReportFile(): string {
+  return path.join(opsRoot(), 'alert-report.json');
+}
+
 export function opsBackupsIndexFile(): string {
   return path.join(opsRoot(), 'backups.json');
 }
 
 export function opsBackupsDir(): string {
   return path.join(opsRoot(), 'backups');
+}
+
+export function opsBackupRestoreDrillReportFile(): string {
+  return path.join(opsRoot(), 'backup-restore-drill.json');
+}
+
+export function opsCachePurgeReportFile(): string {
+  return path.join(opsRoot(), 'cache-purge-report.json');
 }
 
 export function cacheRoot(): string {

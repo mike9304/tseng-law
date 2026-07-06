@@ -291,9 +291,14 @@ export async function receivePaymentWebhookEvent(
     paymentStatus: input.paymentStatus,
     amountCents: input.amountCents,
     currency: input.currency,
+    feeCents: input.feeCents,
+    netAmountCents: input.netAmountCents,
+    balanceTransactionId: input.balanceTransactionId,
     status: 'unmatched',
     replayCount: 0,
-    signatureVerified: true,
+    // Record the caller's real verification result. The live commerce route passes `true`
+    // after verifyWebhookSignature() succeeds; direct callers must opt in explicitly.
+    signatureVerified: input.signatureVerified === true,
     payload: input.payload,
     receivedAt: now,
     updatedAt: now,

@@ -1,16 +1,15 @@
+// allow: SIZE_OK - pre-existing public page renderer; legacy composites share published dataset preload wiring here.
 import type { Metadata } from 'next';
-import { getAllColumnPosts } from '@/lib/columns';
 import type { Locale } from '@/lib/locales';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import {
   readFooterCanvas,
   readHeaderCanvas,
   readLightboxCanvas,
-  readPageCanvas,
   readSiteDocument,
 } from '@/lib/builder/site/persistence';
 import { readBuilderPageSnapshot } from '@/lib/builder/persistence';
-import { readRevisionDocument } from '@/lib/builder/site/publish';
+import { readPublishedPageCanvas } from '@/lib/builder/site/published-canvas';
 import { getComponent } from '@/lib/builder/components/registry';
 import { buildGoogleFontsUrl } from '@/lib/builder/canvas/fonts';
 import { buildChildrenMap, resolveCanvasNodeAbsoluteRect } from '@/lib/builder/canvas/tree';
@@ -19,8 +18,13 @@ import type {
   BuilderCanvasDocument,
 } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
-import { buildResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
-import { computeTopLevelFlowSectionMetrics, isTopLevelFlowSection } from '@/lib/builder/canvas/flow';
+import { buildPublishedResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
+import {
+  computeTopLevelFlowSectionMetrics,
+  compareTopLevelStacking,
+  isCollapsedServicesAccordionDetailNode,
+  isTopLevelFlowSection,
+} from '@/lib/builder/canvas/flow';
 import type {
   BuilderLightbox,
   BuilderNavItem,
@@ -32,6 +36,7 @@ import type {
 } from '@/lib/builder/site/types';
 import {
   THEME_COLOR_TOKENS,
+  buildCustomColorCssVars,
   buildHoverTransform,
   collectThemeFontFamilies,
   createDarkColorsFromLight,
@@ -41,12 +46,13 @@ import {
 } from '@/lib/builder/site/theme';
 import { buildPageSeo } from '@/lib/builder/seo/seo-model';
 import {
-  findBuilderCollectionRecordSeo,
-  isBuilderCollectionId,
-} from '@/lib/builder/cms';
-import { buildBuilderRecordJsonLd } from '@/lib/builder/seo/record-jsonld';
+  isPublishedDynamicItemRecordRoutable,
+  resolvePublishedDynamicItemRecordJsonLd,
+  resolvePublishedDynamicItemRecordSeo,
+} from '@/lib/builder/site/published-dynamic-item-seo';
 import {
   generateBreadcrumbSchema,
+  generateFAQSchema,
   generateLegalServiceSchema,
   generateLocalBusinessSchema,
   generateOrganizationSchema,
@@ -66,8 +72,10 @@ import { buildPublishedSurfaceFrame } from '@/lib/builder/site/published-node-fr
 import { getHomeSectionTemplateMetadata } from '@/lib/builder/canvas/section-templates';
 import { getSiteUrl } from '@/lib/seo';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
+import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
 import { filterNavigationForLocale } from '@/lib/builder/site/navigation';
 import { findPageMetaForLocaleWithDynamicContext } from '@/lib/builder/site/page-resolution';
+import { isStandardPageSlug } from '@/lib/builder/site/standard-pages';
 import {
   normalizeHeaderFooterMobileConfig,
   normalizeMobileBottomBar,
@@ -102,10 +110,27 @@ import {
   resolveBuilderDatasetBindingRecordCount,
   type BuilderDatasetFieldBindingContext,
 } from '@/lib/builder/dataset-field-binding';
-import { createDefaultBuilderPageDatasets } from '@/lib/builder/datasets';
+import {
+  createDefaultBuilderPageDatasets,
+  readBuilderPageDatasetOverviews,
+  type BuilderDataBindingPreviewTarget,
+} from '@/lib/builder/datasets';
+import { DynamicListVisitorControls } from '@/lib/builder/site/DynamicListVisitorControls';
+import { resolveDynamicListPublishedContentHeight } from '@/lib/builder/site/published-dynamic-list-layout';
+import { resolvePublishedDynamicListRuntime } from '@/lib/builder/site/published-dynamic-list-runtime';
 import { buildBuilderDynamicListDatasetDocument } from '@/lib/builder/dynamic-list-pages';
 import { buildBuilderDynamicItemDatasetDocument } from '@/lib/builder/dynamic-item-pages';
 import type { BuilderPageDocument } from '@/lib/builder/types';
+import { projectImageNodeForLocale } from '@/lib/builder/translations/locale-media';
+import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
+import { getAllColumnPosts, type ColumnPost } from '@/lib/columns';
+import {
+  faqItemsToSchemaItems,
+  listFaqCategories,
+  listFaqItems,
+  type BuilderFaqCategory,
+  type BuilderFaqItem,
+} from '@/lib/builder/faq/faq-engine';
 
 interface ResolvedLightbox {
   meta: BuilderLightbox;
@@ -124,6 +149,10 @@ export interface ResolvedPublishedSitePage {
   headerCanvas: BuilderCanvasDocument | null;
   footerCanvas: BuilderCanvasDocument | null;
   datasetDocument?: Pick<BuilderPageDocument, 'pageKey' | 'datasets'>;
+  datasetPreviewTargets?: BuilderDataBindingPreviewTarget[];
+  columnPosts: ColumnPost[];
+  faqCategories: BuilderFaqCategory[];
+  faqItems: BuilderFaqItem[];
   dynamicItemRecordSlug?: string;
 }
 
@@ -148,25 +177,41 @@ function buildThemeInitScript(
   return `(function(){try{var saved=${allowVisitorToggle ? "localStorage.getItem('builder-theme')" : 'null'};if(saved!=='light'&&saved!=='dark'){saved=null;}var defaultMode='${defaultMode}';var prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;var theme=saved||(defaultMode==='auto'?(prefersDark?'dark':'light'):defaultMode);document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme='${safeMode}';}})();`;
 }
 
-async function readPublishedPageCanvas(pageMeta: BuilderPageMeta): Promise<BuilderCanvasDocument | null> {
-  if (pageMeta.publishedRevisionId) {
-    return readRevisionDocument(pageMeta.pageId, pageMeta.publishedRevisionId);
-  }
-
-  return readPageCanvas(DEFAULT_BUILDER_SITE_ID, pageMeta.pageId, 'published');
-}
-
 export async function resolvePublishedSitePage(
   locale: Locale,
   slugPath: string,
 ): Promise<ResolvedPublishedSitePage | null> {
   const site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, locale);
   const pageMatch = findPageMetaForLocaleWithDynamicContext(site.pages, locale, slugPath);
-  const pageMeta = pageMatch?.page;
-  if (!pageMeta?.publishedAt) return null;
+  if (!pageMatch?.page.publishedAt) return null;
+  const pageMeta = pageMatch.page;
+  if (
+    pageMeta.dynamicItem
+    && pageMatch.dynamicItemRecordSlug
+    && !isPublishedDynamicItemRecordRoutable({
+      dynamicItem: pageMeta.dynamicItem,
+      locale,
+      recordSlug: pageMatch.dynamicItemRecordSlug,
+      site,
+    })
+  ) {
+    return null;
+  }
 
   const canvas = await readPublishedPageCanvas(pageMeta);
   if (!canvas?.nodes?.length) return null;
+  const compositeKeys = new Set(canvas.nodes.flatMap((node) => (
+    node.kind === 'composite' ? [node.content.componentKey] : []
+  )));
+  const isHomePage = slugPath === '' || pageMeta.isHomePage === true;
+  const isColumnsArchivePage = slugPath === 'columns';
+  const hasFaqExplorerComposite = compositeKeys.has('legacy-page-faq');
+  const hasColumnArchivePostConsumer =
+    isHomePage ||
+    isColumnsArchivePage ||
+    compositeKeys.has('insights-archive') ||
+    compositeKeys.has('legacy-page-columns');
+  const hasVideosColumnCounter = compositeKeys.has('legacy-page-videos');
 
   const allLightboxes = (site.lightboxes ?? []).filter((lb) => lb.locale === locale);
   const lightboxes: ResolvedLightbox[] = [];
@@ -179,10 +224,15 @@ export async function resolvePublishedSitePage(
 
   // Global header/footer canvases — only render when present and non-empty.
   // Otherwise the legacy SiteHeader/SiteFooter components are used as fallback.
-  const [headerCanvas, footerCanvas, homeDatasetSnapshot] = await Promise.all([
+  const [headerCanvas, footerCanvas, homeDatasetSnapshot, datasetPosts, faqCategories, faqItems] = await Promise.all([
     readHeaderCanvas(DEFAULT_BUILDER_SITE_ID),
     readFooterCanvas(DEFAULT_BUILDER_SITE_ID),
     readBuilderPageSnapshot('home', 'published', locale).catch(() => null),
+    hasColumnArchivePostConsumer
+      ? getAllColumnPostsIncludingBlob(locale)
+      : Promise.resolve(hasVideosColumnCounter ? getAllColumnPosts(locale) : []),
+    hasFaqExplorerComposite ? Promise.resolve(listFaqCategories()) : Promise.resolve([]),
+    hasFaqExplorerComposite ? listFaqItems({ locale, status: 'published' }) : Promise.resolve([]),
   ]);
 
   const popups = (site.popups ?? []).filter((p) => p.locale === locale && p.active);
@@ -197,6 +247,18 @@ export async function resolvePublishedSitePage(
       pageKey: 'home' as const,
       datasets: createDefaultBuilderPageDatasets('home'),
     };
+  const datasetPreviewTargets = datasetDocument.pageKey === 'home'
+    ? readBuilderPageDatasetOverviews('home', datasetDocument, locale, datasetPosts, site).map((overview) => ({
+      targetId: overview.targetId,
+      title: overview.title,
+      collectionId: overview.currentBinding.collectionId,
+      mode: overview.currentBinding.mode,
+      filters: overview.currentBinding.filters ?? [],
+      sort: overview.currentBinding.sort ?? [],
+      limit: overview.currentBinding.limit,
+      records: overview.sampleRecords,
+    }))
+    : [];
 
   return {
     locale,
@@ -210,6 +272,10 @@ export async function resolvePublishedSitePage(
     headerCanvas: headerCanvas && headerCanvas.nodes.length > 0 ? headerCanvas : null,
     footerCanvas: footerCanvas && footerCanvas.nodes.length > 0 ? footerCanvas : null,
     datasetDocument,
+    datasetPreviewTargets,
+    columnPosts: datasetPosts,
+    faqCategories,
+    faqItems,
     dynamicItemRecordSlug: pageMatch?.dynamicItemRecordSlug,
   };
 }
@@ -232,17 +298,15 @@ export async function buildPublishedSitePageMetadata(
   const siteUrl = getSiteUrl();
   const seoData = buildPageSeo(resolved.pageMeta, siteUrl, locale, resolved.site.pages, resolved.site);
 
-  // F23 — when the page is a CMS dynamic item page and a record slug matched,
-  // override page-template SEO with the per-record SEO (title/description/
-  // canonical/og image/noIndex) so each generated record URL has its own
-  // metadata instead of a shared template.
   const dynamicItem = resolved.pageMeta.dynamicItem;
-  if (dynamicItem && resolved.dynamicItemRecordSlug && isBuilderCollectionId(dynamicItem.collectionId)) {
-    const recordSeo = findBuilderCollectionRecordSeo(
-      dynamicItem.collectionId,
+  if (dynamicItem && resolved.dynamicItemRecordSlug) {
+    const recordSeo = resolvePublishedDynamicItemRecordSeo({
+      dynamicItem,
       locale,
-      resolved.dynamicItemRecordSlug,
-    );
+      recordSlug: resolved.dynamicItemRecordSlug,
+      site: resolved.site,
+      slugPath: resolved.slugPath,
+    });
     if (recordSeo) {
       const canonical = resolveAbsoluteSeoUrl(siteUrl, recordSeo.canonicalPath);
       seoData.title = recordSeo.title;
@@ -288,7 +352,7 @@ export async function buildPublishedSitePageMetadata(
       title: seoData.ogTitle,
       description: seoData.ogDescription,
       images: ogImage ? [ogImage] : [],
-      siteName: resolved.site.settings?.firmName || resolved.site.name,
+      siteName: settings?.firmName || resolved.site.name,
     },
     twitter: {
       card: seoData.twitterCard,
@@ -309,17 +373,30 @@ export async function buildPublishedSitePageMetadata(
   };
 }
 
-export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishedSitePage }) {
+export async function PublishedSitePageView({
+  resolved,
+  searchParams,
+}: {
+  resolved: ResolvedPublishedSitePage;
+  searchParams?: Record<string, string | string[] | undefined>;
+}) {
   const { site, canvas, locale, slugPath } = resolved;
   const datasetDocument = resolved.datasetDocument ?? {
     pageKey: 'home' as const,
     datasets: createDefaultBuilderPageDatasets('home'),
   };
-  const datasetBindingContext = {
+  const datasetPreviewTargets = resolved.datasetPreviewTargets ?? [];
+  const dynamicListRuntime = resolvePublishedDynamicListRuntime({
+    datasetDocument,
+    dynamicList: resolved.pageMeta.dynamicList,
     locale,
-    posts: getAllColumnPosts(locale),
-    document: datasetDocument,
-  };
+    searchParams,
+    site,
+    slugPath,
+  });
+  const dynamicListConfig = dynamicListRuntime.config;
+  const datasetBindingContext = dynamicListRuntime.bindingContext;
+  const dynamicListSlice = dynamicListRuntime.slice;
   const usedFonts = new Set<string>();
 
   for (const node of canvas.nodes) {
@@ -338,13 +415,18 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
     pages: site.pages,
     publishedOnly: true,
   });
-  const settings = site.settings;
+  const settings = resolveBuilderSiteSettings(site.settings, locale);
   const liveChatSettings = resolveLiveChatSettings(site.installedApps, settings?.liveChatWidgetEnabled, locale);
   const theme = site.theme;
   const headerFooterConfig = normalizeHeaderFooterMobileConfig(site.headerFooter);
   const mobileBottomBar = normalizeMobileBottomBar(site.mobileBottomBar, settings);
   const darkModeConfig = resolveDarkModeConfig(site.darkMode);
-  const themeInitScript = buildThemeInitScript(darkModeConfig.defaultMode, darkModeConfig.allowVisitorToggle);
+  const useLegacyPublicChrome = isStandardPageSlug(slugPath)
+    && !resolved.headerCanvas
+    && !resolved.footerCanvas;
+  const useBuilderChrome = !useLegacyPublicChrome;
+  const allowPublishedThemeToggle = useBuilderChrome && darkModeConfig.allowVisitorToggle;
+  const themeInitScript = buildThemeInitScript(darkModeConfig.defaultMode, allowPublishedThemeToggle);
   const darkColors = theme.darkColors ?? createDarkColorsFromLight(theme.colors);
   const cssVarColors: BuilderTheme['colors'] = {
     primary: 'var(--builder-color-primary)',
@@ -365,8 +447,13 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
   const darkCssVars = THEME_COLOR_TOKENS
     .map((token) => `--builder-color-${token}: ${darkColors[token]};`)
     .join('\n          ');
+  // Brand kit custom palette colors — emitted as `--builder-custom-color-<i>`.
+  // These supplement the fixed theme tokens and stay constant across light/dark
+  // (no automatic dark derivation), so they only need to be declared once on
+  // :root and cascade into both themes.
+  const customColorCssVars = buildCustomColorCssVars(settings?.brand?.customColors);
   const visibleNodes = canvas.nodes.filter((node) => node.visible !== false);
-  const responsiveStylesheet = buildResponsiveStylesheet(canvas.nodes);
+  const responsiveStylesheet = buildPublishedResponsiveStylesheet(canvas.nodes);
   const childrenMap = buildChildrenMap(visibleNodes);
   const nodesById = new Map(canvas.nodes.map((node) => [node.id, node]));
   const siteUrl = getSiteUrl();
@@ -378,13 +465,13 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
   });
   const structuredSettings = normalizeStructuredDataSettings(mergeStructuredDataSettings(resolved.pageMeta, site));
   const legalServiceSchema = structuredSettings.legalService
-    ? generateLegalServiceSchema(site.settings || {}, siteUrl)
+    ? generateLegalServiceSchema(settings || {}, siteUrl)
     : null;
   const organizationSchema = structuredSettings.organization
-    ? generateOrganizationSchema(site.settings || {}, siteUrl)
+    ? generateOrganizationSchema(settings || {}, siteUrl)
     : null;
   const localBusinessSchema = structuredSettings.localBusiness
-    ? generateLocalBusinessSchema(site.settings || {}, siteUrl)
+    ? generateLocalBusinessSchema(settings || {}, siteUrl)
     : null;
   const pagePath = buildSitePagePath(locale, slugPath);
   const breadcrumbSchema = structuredSettings.breadcrumbList
@@ -401,44 +488,81 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
     locale,
   });
   const customStructuredDataPayloads = buildCustomStructuredDataPayloads(mergedSeo.structuredDataBlocks);
+  const faqExplorerSchemaItems = structuredSettings.faqPage !== 'off'
+    ? faqItemsToSchemaItems(resolved.faqItems)
+    : [];
+  const faqExplorerSchema = faqExplorerSchemaItems.length > 0
+    ? generateFAQSchema(faqExplorerSchemaItems)
+    : null;
 
-  // F23 — when the page is a CMS dynamic item page and a record slug matched,
-  // emit a per-record schema.org payload (Article for columns, LegalService
-  // for service-areas, Attorney for attorney-profiles) so each generated
-  // record URL surfaces its own structured data.
   const dynamicItemMeta = resolved.pageMeta.dynamicItem;
-  const recordJsonLd = (dynamicItemMeta && resolved.dynamicItemRecordSlug && isBuilderCollectionId(dynamicItemMeta.collectionId))
-    ? buildBuilderRecordJsonLd({
-        collectionId: dynamicItemMeta.collectionId,
+  const recordJsonLd = dynamicItemMeta && resolved.dynamicItemRecordSlug
+    ? resolvePublishedDynamicItemRecordJsonLd({
+        dynamicItem: dynamicItemMeta,
         locale,
         recordSlug: resolved.dynamicItemRecordSlug,
+        site,
         siteUrl,
+        slugPath,
       })
     : null;
   const topLevelNodes = visibleNodes.filter((node) => !node.parentId);
   const hasTopLevelComposite = topLevelNodes.some(isTopLevelFlowSection);
   const flowSectionMetrics = computeTopLevelFlowSectionMetrics(visibleNodes);
 
+  // Desktop safety net: pin each top-level flow section's min-height via
+  // CSS !important so the designer-intended height survives even when
+  // client-side hydration/dynamic-list re-rendering strips the inline
+  // min-height (observed on home-services-root / home-faq-root). Scoped to
+  // desktop (min-width:1024) so the responsive tablet/mobile stylesheet
+  // (narrower breakpoints) still overrides on smaller viewports.
+  const desktopFlowSectionMinHeightCss = [...flowSectionMetrics.entries()]
+    .filter(([, metric]) => Boolean(metric) && metric.minHeight > 0)
+    .map(([id, metric]) => `[data-node-id="${id}"]{min-height:${metric.minHeight}px !important}`)
+    .join('\n');
+
   // Render composites first (they participate in document flow with
   // computed margin-top), then absolute non-composites on top. Without
   // this, a non-composite widget placed between two composite sections
   // (e.g. a site-search bar in a gap) ended up partially covered by the
   // next composite because later DOM siblings stack above earlier ones
-  // when z-indexes match.
-  const renderedTopLevelNodes = [...topLevelNodes].sort((left, right) => {
-    const leftIsComposite = isTopLevelFlowSection(left);
-    const rightIsComposite = isTopLevelFlowSection(right);
-    if (leftIsComposite && rightIsComposite) {
-      return left.rect.y - right.rect.y || left.zIndex - right.zIndex;
-    }
-    if (leftIsComposite && !rightIsComposite) return -1;
-    if (!leftIsComposite && rightIsComposite) return 1;
-    return left.rect.y - right.rect.y || left.zIndex - right.zIndex;
-  });
+  // when z-indexes match. The comparator is shared with the editor stage
+  // (CanvasStageNodes) via flow.compareTopLevelStacking so the two cannot
+  // drift apart.
+  const renderedTopLevelNodes = [...topLevelNodes].sort(compareTopLevelStacking);
+  const dynamicListPublishedContentHeight = dynamicListConfig && dynamicListSlice
+    ? resolveDynamicListPublishedContentHeight({
+        childrenMap,
+        nodes: visibleNodes,
+        nodesById,
+        recordCount: dynamicListSlice.items.length,
+        targetId: dynamicListConfig.targetId,
+      })
+    : 0;
   const publishedContentHeight = visibleNodes.reduce((maxHeight, node) => {
+    if (isCollapsedServicesAccordionDetailNode(node)) return maxHeight;
     const absoluteRect = resolveCanvasNodeAbsoluteRect(node, nodesById);
     return Math.max(maxHeight, absoluteRect.y + absoluteRect.height);
-  }, canvas.stageHeight);
+  }, Math.max(canvas.stageHeight, dynamicListPublishedContentHeight));
+
+  // Office location tabs: mirror the editor's officeLayoutDisplay gate
+  // (CanvasNode.tsx). The designer marks the initially-active tab via the
+  // `active` class (decompose-offices.ts bakes `tab-button active` on index 0).
+  // Only that layout renders on first paint; PublishedInteractions.tsx toggles
+  // the active layout on tab click. Without this gate all three office layouts
+  // render together and overlap (they share the same rect.y inside
+  // home-offices-container). Data is left untouched.
+  const initialActiveOfficeIndex = (() => {
+    for (const candidate of visibleNodes) {
+      const match = /^home-offices-tab-(\d+)$/.exec(candidate.id);
+      if (!match) continue;
+      const className = (candidate.content as { className?: string }).className ?? '';
+      if (/(?:^|\s)active(?:\s|$)/.test(className)) {
+        return Number(match[1]);
+      }
+    }
+    return 0;
+  })();
 
   function renderPublishedNode(
     node: BuilderCanvasNode,
@@ -446,7 +570,8 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
     parentLayoutMode?: ParentLayoutMode,
     bindingContext: BuilderDatasetFieldBindingContext = datasetBindingContext,
   ): JSX.Element {
-    const renderedNode = applyBuilderDatasetBindingToNode(node, bindingContext);
+    const localeProjectedNode = projectImageNodeForLocale(node, locale);
+    const renderedNode = applyBuilderDatasetBindingToNode(localeProjectedNode, bindingContext);
     const component = getComponent(renderedNode.kind);
     const childNodes = (childrenMap[renderedNode.id] ?? [])
       .map((childId) => nodesById.get(childId))
@@ -485,6 +610,17 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
     });
     const sectionTemplate = getHomeSectionTemplateMetadata(renderedNode);
 
+    // Published office-tab gate: hide every office layout except the initially
+    // active one (mirrors editor officeLayoutDisplay). The active layout keeps
+    // its natural display so `.office-layout { display: grid }` wins; inactive
+    // layouts get an inline `display:none`. PublishedInteractions.tsx owns the
+    // runtime toggle on tab click.
+    const officeLayoutMatch = /^home-offices-layout-(\d+)$/.exec(renderedNode.id);
+    const officeLayoutDisplay =
+      officeLayoutMatch && Number(officeLayoutMatch[1]) !== initialActiveOfficeIndex
+        ? 'none'
+        : undefined;
+
     // Lightbox trigger detection: button with href starting with `lightbox:`
     let lightboxTarget: string | undefined;
     if (renderedNode.kind === 'button') {
@@ -499,8 +635,14 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
       && renderedNode.content.layoutMode === 'repeater'
       && Boolean(renderedNode.dataBinding)
       && childNodes.length > 0;
+    const isDynamicListRepeater =
+      Boolean(dynamicListConfig)
+      && renderedNode.dataBinding?.targetId === dynamicListConfig?.targetId
+      && Boolean(dynamicListSlice);
     const repeaterRecordCount = isRepeaterTemplate && renderedNode.dataBinding
-      ? resolveBuilderDatasetBindingRecordCount(bindingContext, renderedNode.dataBinding, 12)
+      ? isDynamicListRepeater
+        ? dynamicListSlice?.items.length ?? 0
+        : resolveBuilderDatasetBindingRecordCount(bindingContext, renderedNode.dataBinding, 12)
       : 0;
     const repeaterTemplateHeight = childNodes.reduce((height, child) => (
       Math.max(height, child.rect.y + child.rect.height)
@@ -510,9 +652,21 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
     ), 0);
     const appRuntime = resolveBuilderAppWidgetRuntimeForNode(renderedNode, site.installedApps ?? []);
     const canRenderAppWidget = !appRuntime || appRuntime.status === 'enabled';
+    const compositeDatasetProps = renderedNode.kind === 'composite'
+      ? {
+        datasetPreviewTargets,
+        columnPosts: resolved.columnPosts,
+        faqCategories: resolved.faqCategories,
+        faqItems: resolved.faqItems,
+        searchParams,
+      }
+      : {};
     const renderedChildren = isRepeaterTemplate && repeaterRecordCount > 0
       ? Array.from({ length: repeaterRecordCount }, (_, recordIndex) => {
           const recordKey = `${renderedNode.id}__record-${recordIndex + 1}`;
+          const recordIndexOverride = isDynamicListRepeater && dynamicListRuntime.pagination
+            ? dynamicListRuntime.pagination.offset + recordIndex
+            : recordIndex;
           return (
             <div
               key={recordKey}
@@ -536,38 +690,115 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
                 undefined,
                 {
                   ...bindingContext,
-                  recordIndexOverride: recordIndex,
+                  recordIndexOverride,
                 },
               ))}
             </div>
           );
         })
       : isRepeaterTemplate
-        ? [
-            <div
-              key={`${renderedNode.id}__empty`}
-              className="builder-pub-repeater-empty"
-              data-builder-repeater-empty="true"
-              role="status"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '100%',
-                minHeight: Math.max(72, Math.min(180, repeaterTemplateHeight || renderedNode.rect.height)),
-                padding: 16,
-                border: '1px dashed rgba(148, 163, 184, 0.55)',
-                borderRadius: 12,
-                background: 'rgba(248, 250, 252, 0.74)',
-                color: 'rgba(71, 85, 105, 0.92)',
-                fontSize: 14,
-                fontWeight: 700,
-                textAlign: 'center',
-              }}
-            >
-              {locale === 'ko' ? '표시할 항목이 없습니다.' : 'No items available.'}
-            </div>,
-          ]
+        ? dynamicListRuntime.hasFilteredEmptyState
+          ? [
+              <div
+                key={`${renderedNode.id}__filtered-empty`}
+                className="builder-pub-repeater-empty"
+                data-builder-dynamic-list-empty-state="true"
+                role="status"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: 10,
+                  width: '100%',
+                  minHeight: Math.max(72, Math.min(180, repeaterTemplateHeight || renderedNode.rect.height)),
+                  padding: 16,
+                  border: '1px dashed rgba(148, 163, 184, 0.55)',
+                  borderRadius: 12,
+                  background: 'rgba(248, 250, 252, 0.74)',
+                  color: 'rgba(71, 85, 105, 0.92)',
+                  fontSize: 14,
+                  fontWeight: 700,
+                  textAlign: 'center',
+                }}
+                >
+                  <span>{locale === 'ko' ? '현재 필터에 맞는 항목이 없습니다.' : 'No matching items.'}</span>
+                  {dynamicListRuntime.filterSummary.length > 0 ? (
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        justifyContent: 'center',
+                        gap: 8,
+                      }}
+                    >
+                      {dynamicListRuntime.filterSummary.map((summary) => (
+                        <a
+                          key={summary.label}
+                          href={summary.href}
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            minHeight: 26,
+                            padding: '3px 10px',
+                            borderRadius: 999,
+                            background: 'rgba(15,23,42,.06)',
+                            fontSize: 12,
+                            fontWeight: 600,
+                            color: 'inherit',
+                            textDecoration: 'none',
+                          }}
+                        >
+                          {summary.label}
+                        </a>
+                      ))}
+                    </div>
+                  ) : null}
+                  <a
+                    href={dynamicListRuntime.pagePath}
+                    style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    minHeight: 32,
+                    padding: '6px 12px',
+                    borderRadius: 999,
+                    border: '1px solid rgba(15,23,42,.12)',
+                    background: 'rgba(255,255,255,.9)',
+                    color: 'var(--builder-color-text)',
+                    textDecoration: 'none',
+                    fontSize: 13,
+                    fontWeight: 700,
+                  }}
+                >
+                  {locale === 'ko' ? '필터 지우기' : 'Clear filters'}
+                </a>
+              </div>,
+            ]
+          : [
+              <div
+                key={`${renderedNode.id}__empty`}
+                className="builder-pub-repeater-empty"
+                data-builder-repeater-empty="true"
+                role="status"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '100%',
+                  minHeight: Math.max(72, Math.min(180, repeaterTemplateHeight || renderedNode.rect.height)),
+                  padding: 16,
+                  border: '1px dashed rgba(148, 163, 184, 0.55)',
+                  borderRadius: 12,
+                  background: 'rgba(248, 250, 252, 0.74)',
+                  color: 'rgba(71, 85, 105, 0.92)',
+                  fontSize: 14,
+                  fontWeight: 700,
+                  textAlign: 'center',
+                }}
+              >
+                {locale === 'ko' ? '표시할 항목이 없습니다.' : 'No items available.'}
+              </div>,
+            ]
         : childNodes.map((child) => renderPublishedNode(child, false, childParentLayoutMode, bindingContext));
 
     return (
@@ -630,6 +861,7 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
                 ? Math.max(renderedNode.zIndex, 1)
                 : renderedNode.zIndex,
           overflow: flowAsSection ? 'visible' : undefined,
+          display: officeLayoutDisplay,
           transform: baseTransform,
           ...backgroundStyle,
           borderRadius: renderedNode.style?.borderRadius ? `${renderedNode.style.borderRadius}px` : undefined,
@@ -680,12 +912,24 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
           </>
         ) : component ? (
           isContainerLikeKind(renderedNode.kind) ? (
-            <component.Render node={renderedNode} mode="published" theme={publishedTheme} locale={locale}>
+            <component.Render
+              node={renderedNode}
+              mode="published"
+              theme={publishedTheme}
+              locale={locale}
+              {...compositeDatasetProps}
+            >
               {renderedChildren}
             </component.Render>
           ) : (
             <>
-              <component.Render node={renderedNode} mode="published" theme={publishedTheme} locale={locale} />
+              <component.Render
+                node={renderedNode}
+                mode="published"
+                theme={publishedTheme}
+                locale={locale}
+                {...compositeDatasetProps}
+              />
               {renderedChildren}
             </>
           )
@@ -718,7 +962,7 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: themeInitScript }}
       />
-      <div data-builder-published-page="true" style={{ display: 'none' }} />
+      {useBuilderChrome ? <div data-builder-published-page="true" style={{ display: 'none' }} /> : null}
       {fontsUrl && (
         <>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -738,17 +982,18 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
           <link rel="preload" as="image" href={src} />
         ) : null;
       })()}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         html { scroll-behavior: smooth; }
         :root {
           color-scheme: light;
           ${lightCssVars}
+          ${customColorCssVars}
         }
         :root[data-theme='dark'] {
           color-scheme: dark;
           ${darkCssVars}
         }
-        body {
+        :root[data-theme='dark'] body {
           background: var(--builder-color-background);
           color: var(--builder-color-text);
           transition: background 200ms ease, color 200ms ease;
@@ -771,11 +1016,13 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
           box-shadow: var(--builder-hover-box-shadow) !important;
           transform: var(--builder-hover-transform) !important;
         }
-        .builder-pub-node[data-node-id='home-hero-root'] {
-          z-index: 30000 !important;
+        .builder-pub-main {
+          padding-top: 0 !important;
         }
-        .builder-pub-node[data-node-id='home-insights-root'] {
-          z-index: 20000 !important;
+        .builder-pub-node[data-node-id='home-hero-root'],
+        .builder-pub-node[data-node-id='home-hero'] {
+          margin-top: calc(var(--header-offset-desktop) * -1) !important;
+          padding-top: var(--header-offset-desktop);
         }
         .builder-pub-node[data-node-id='home-hero-quick-menu'] {
           display: none;
@@ -783,6 +1030,32 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
         .builder-pub-node[data-node-id='home-hero-search-wrap']:hover [data-node-id='home-hero-quick-menu'],
         .builder-pub-node[data-node-id='home-hero-search-wrap']:focus-within [data-node-id='home-hero-quick-menu'] {
           display: block;
+        }
+        .builder-pub-node[data-node-id='home-hero-root'] + .builder-pub-node[data-builder-flow-section='true'] .section,
+        .builder-pub-node[data-node-id='home-hero'] + .builder-pub-node[data-builder-flow-section='true'] .section {
+          padding-top: clamp(3.2rem, 7.2vw, 5rem);
+        }
+        /*
+         * The legacy pricing page styles .pricing-disclaimer as a narrow,
+         * auto-centered text block (max-width:680px; margin:auto). When the
+         * builder decompose reuses that class on a container node, the inner
+         * wrapper is the offset parent for an absolutely-positioned full-width
+         * child text node — so the marketing max-width/margin shrinks and shifts
+         * the wrapper, pushing the child past the viewport and forcing a
+         * horizontal scrollbar. Neutralize the marketing width/margin only when
+         * the class renders inside the published builder (never on the legacy
+         * page, which has no .builder-pub-node ancestor); text-align:center and
+         * the .pricing-disclaimer p typography are preserved. Margin is also
+         * reset because builder nodes already encode the vertical spacing in
+         * their rects; replaying the marketing margin pushes absolute children
+         * into the CTA below.
+         */
+        .builder-pub-node .pricing-disclaimer {
+          max-width: none;
+          margin: 0;
+        }
+        .builder-pub-node .pricing-cta {
+          margin: 0;
         }
         .builder-pub-node[data-builder-section-template='services'][data-section-variant='elevated'] .services-detail-card,
         .builder-pub-node[data-builder-section-template='faq'][data-section-variant='elevated'] .faq-item,
@@ -957,66 +1230,416 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
         @media (max-width: 768px) {
           .builder-pub-main {
             position: static !important;
+            box-sizing: border-box !important;
+            width: 100% !important;
             display: flex !important;
             flex-direction: column !important;
             align-items: stretch !important;
-            padding: 16px !important;
-            gap: 12px !important;
+            padding: 0 16px !important;
+            gap: 0 !important;
             min-height: auto !important;
+          }
+          .builder-pub-main[data-builder-chrome='true'] {
+            padding-top: 72px !important;
           }
           .builder-pub-node {
             position: relative !important;
             left: auto !important;
             top: auto !important;
             width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
             height: auto !important;
             min-height: 60px;
+          }
+          .builder-pub-node[data-node-id^='page-pricing-card-'][data-node-id$='-icon-svg'] {
+            height: 40px !important;
+            min-height: 0 !important;
+          }
+          .builder-pub-node[data-node-id='page-pricing-cta-wrap'] {
+            height: 47px !important;
+            min-height: 47px !important;
+          }
+          .builder-pub-node[data-node-id$='-page-header-root'] {
+            height: 310px !important;
+            min-height: 310px !important;
+          }
+          .builder-pub-node[data-node-id$='-page-header-container'] {
+            height: 230px !important;
+            min-height: 0 !important;
+          }
+          .builder-pub-node[data-node-id$='-breadcrumb'] {
+            height: 23px !important;
+            min-height: 0 !important;
+          }
+          .builder-pub-node[data-node-id$='-page-header-label'] {
+            height: 22px !important;
+            min-height: 0 !important;
+          }
+          .builder-pub-node[data-node-id$='-page-header-title'] {
+            height: 36px !important;
+            min-height: 36px !important;
+          }
+          .builder-pub-node[data-node-id$='-page-header-description'] {
+            height: 27px !important;
+            min-height: 27px !important;
+          }
+          .builder-pub-node[data-node-id$='-page-header-divider'],
+          .builder-pub-node[data-node-id$='-page-header-divider-ornament'] {
+            height: 12px !important;
+            min-height: 0 !important;
           }
           .builder-pub-node[data-builder-flow-section='true'] {
             margin-top: 0 !important;
             min-height: auto !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-root'] + .builder-pub-node[data-builder-flow-section='true'] .section,
+          .builder-pub-node[data-node-id='home-hero'] + .builder-pub-node[data-builder-flow-section='true'] .section {
+            padding-top: clamp(2.8rem, 8vw, 4rem);
           }
           .builder-pub-node img {
             position: relative !important;
             width: 100% !important;
             height: auto !important;
           }
+          .builder-pub-main > .builder-pub-node {
+            width: auto !important;
+            max-width: 100% !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-root'],
+          .builder-pub-node[data-node-id='home-hero'] {
+            overflow: hidden !important;
+            min-height: clamp(560px, 78vh, 680px) !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-media'],
+          .builder-pub-node[data-node-id^='home-hero-media-image'] {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+          }
+          .builder-pub-node[data-node-id^='home-hero-media-image'] .builder-image-media-frame,
+          .builder-pub-node[data-node-id^='home-hero-media-image'] img {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+          }
+          .builder-pub-node[data-node-id='home-hero-inner'] {
+            position: absolute !important;
+            left: 24px !important;
+            right: 24px !important;
+            top: 118px !important;
+            width: auto !important;
+            height: auto !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-copy'] {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 18px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-label'],
+          .builder-pub-node[data-node-id='home-hero-title'],
+          .builder-pub-node[data-node-id='home-hero-subtitle'],
+          .builder-pub-node[data-node-id='home-hero-links'],
+          .builder-pub-node[data-node-id='home-hero-columns-link'] {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            width: 100% !important;
+            height: auto !important;
+            min-height: 0 !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-search-wrapper'] {
+            position: absolute !important;
+            left: 24px !important;
+            right: 24px !important;
+            top: auto !important;
+            bottom: 28px !important;
+            width: auto !important;
+            height: auto !important;
+            transform: none !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-search-container'],
+          .builder-pub-node[data-node-id='home-hero-search-wrap'],
+          .builder-pub-node[data-node-id='home-hero-search-bar'] {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-search-bar'] form,
+          .builder-pub-node[data-node-id='home-hero-search-bar'] .hero-search-bar {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-search-input'] {
+            flex: 1 1 auto !important;
+            width: auto !important;
+            min-width: 0 !important;
+            height: auto !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-search-input'] input,
+          .builder-pub-node[data-node-id='home-hero-search-input'] .hero-search-input {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-search-button'] {
+            flex: 0 0 auto !important;
+            width: 56px !important;
+            height: 56px !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-quick-menu'] {
+            left: 0 !important;
+            top: calc(100% + 8px) !important;
+            width: 100% !important;
+            max-height: min(318px, calc(100vh - 220px));
+            overflow: auto;
+          }
+          .builder-pub-node[data-node-id^='home-hero-quick-menu-item-'] {
+            width: 100% !important;
+          }
+          .builder-pub-node[data-node-id='home-hero-scroll-arrow'] {
+            display: none !important;
+          }
+          .builder-pub-repeater-item > .builder-pub-node[data-node-id^='dynamic-list-card-button'] {
+            width: min(100%, 148px) !important;
+            min-height: 42px;
+          }
+          .builder-pub-node[data-builder-section-template][data-builder-section-template] [data-node-id^='home-services-card-'][data-node-id],
+          .builder-pub-node[data-builder-section-template][data-builder-section-template] [data-node-id^='home-faq-item-'][data-node-id],
+          .builder-pub-node[data-builder-section-template][data-builder-section-template] [data-node-id='home-insights-featured'][data-node-id],
+          .builder-pub-node[data-builder-section-template][data-builder-section-template] [data-node-id='home-insights-list-wrap'][data-node-id],
+          .builder-pub-node[data-builder-section-template][data-builder-section-template] [data-node-id^='home-offices-layout-'][data-node-id] {
+            position: relative !important;
+            left: auto !important;
+            right: auto !important;
+            top: auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+          }
         }
-      `}</style>
+      ` }} />
+      {desktopFlowSectionMinHeightCss ? (
+        <style data-builder-flow-section-desktop="true" dangerouslySetInnerHTML={{ __html: `@media (min-width:1024px){\n${desktopFlowSectionMinHeightCss}\n}` }} />
+      ) : null}
       {responsiveStylesheet ? (
         // Per-node viewport overrides — emitted last so they win over the
         // generic mobile fallback above. Each node's tablet/mobile rect or
         // hidden flag becomes a `[data-node-id="..."]` rule inside @media.
-        <style data-builder-responsive="true">{responsiveStylesheet}</style>
+        <style data-builder-responsive="true" dangerouslySetInnerHTML={{ __html: responsiveStylesheet }} />
       ) : null}
+      {/* r2 overflow follow-up (verified 2026-07-03 via Playwright at 375/768/1280).
+          Emitted after the responsive stylesheet so it overrides the per-node
+          tablet/mobile overrides that replay desktop coordinates on these section
+          children (stats/insights/offices/attorney). Specificity is intentionally
+          raised (.builder-pub-main prefix / node-scoped) so the rules survive the
+          client-side re-emission that otherwise lets equal-specificity (0,2,0)
+          generic-block rules win after hydration. Does NOT alter the desktop
+          min-height safety net or the .builder-pub-main padding-top:0 rule. */}
+      <style data-builder-r2-overflow="true" dangerouslySetInnerHTML={{ __html: `
+        .builder-pub-node[data-node-id='home-hero-search-wrapper'] .hero-search-wrapper {
+          left: 0 !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+        @media (min-width: 1024px) {
+          .builder-pub-node[data-node-id='home-case-results-content'] {
+            left: -1px !important;
+          }
+        }
+        .builder-pub-node .reveal-stagger > * {
+          opacity: 1;
+        }
+        @media (max-width: 768px) {
+          .builder-pub-main .builder-pub-node[data-node-id='home-hero-root'],
+          .builder-pub-main .builder-pub-node[data-node-id='home-hero'] {
+            margin-top: calc(-72px - 16px) !important;
+          }
+          .builder-pub-main .builder-pub-node[data-node-id='home-hero-search-wrapper'] {
+            left: 0 !important;
+            right: 0 !important;
+          }
+          .builder-pub-node .reveal-stagger > * {
+            transform: translateY(20px);
+          }
+          .builder-pub-main > .builder-pub-node[data-node-id^='page-'][data-node-id$='-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='about-page-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='services-page-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='contact-page-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='lawyers-page-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='faq-page-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='pricing-page-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='reviews-page-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-hero'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-insights'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-services'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-attorney'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-case-results'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-stats'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-faq'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-offices'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-contact'] {
+            width: calc(100% + 32px) !important;
+            max-width: none !important;
+            margin-left: -16px !important;
+            margin-right: -16px !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-lawyers-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-reviews-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-page-header-root'] > .page-header,
+          .builder-pub-main > .builder-pub-node[data-node-id='page-lawyers-page-header-root'] > .page-header,
+          .builder-pub-main > .builder-pub-node[data-node-id='page-reviews-page-header-root'] > .page-header {
+            height: 336px !important;
+            min-height: 336px !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-node-id$='-page-header-root'] > .page-header > .builder-pub-node[data-node-id$='-page-header-container'] {
+            left: 17.6px !important;
+            top: 48px !important;
+            width: calc(100% - 35.2px) !important;
+            height: 207px !important;
+            min-height: 0 !important;
+          }
+          .builder-pub-main.builder-pub-main > .builder-pub-node[data-node-id='home-hero'] {
+            margin-top: calc(var(--header-offset-desktop) * -1) !important;
+            margin-bottom: 14px !important;
+            padding-top: var(--header-offset-desktop) !important;
+          }
+        }
+        @media (max-width: 1023px) {
+          .site .builder-pub-main.builder-pub-main {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            padding-block-start: 0 !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-node-id='home-insights'] {
+            margin-top: -14px !important;
+            margin-bottom: 14px !important;
+          }
+          .builder-pub-main .builder-pub-node[data-node-id='columns-page-root'],
+          .builder-pub-main .builder-pub-node[data-node-id='columns-page-root-composite'] {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            min-height: 0 !important;
+          }
+          .builder-pub-main .builder-pub-node[data-node-id='columns-page-root'] > main,
+          .builder-pub-main .builder-pub-node[data-node-id='columns-page-root-composite'] > div {
+            height: auto !important;
+            min-height: 0 !important;
+          }
+          .builder-pub-node[data-node-id^='home-insights-'][data-node-id$='-readtime'] {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .builder-pub-node[data-node-id^='home-insights-item-'],
+          .builder-pub-node[data-node-id^='home-insights-featured-'] {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          .builder-pub-node[data-node-id^='home-stats-card-'],
+          .builder-pub-node[data-node-id^='home-stats-label-'],
+          .builder-pub-node[data-node-id^='home-stats-progress'],
+          .builder-pub-node[data-node-id^='home-stats-number-'] {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+          }
+          .builder-pub-node[data-node-id^='home-attorney-badge-'] {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .builder-pub-main .builder-pub-node[data-node-id^='home-services-card-'][data-node-id$='-header'] {
+            width: 230px !important;
+            max-width: 230px !important;
+          }
+          .builder-pub-main .builder-pub-node[data-node-id^='home-services-card-'][data-node-id$='-icon'] {
+            width: 46px !important;
+            height: 46px !important;
+            flex: 0 0 46px !important;
+          }
+          .builder-pub-main .builder-pub-node[data-node-id^='home-services-card-'][data-node-id$='-title'] {
+            width: 172px !important;
+            max-width: 172px !important;
+            min-width: 0 !important;
+            flex: 1 1 172px !important;
+          }
+          .builder-pub-main .builder-pub-node[data-node-id^='home-services-card-'][data-node-id$='-chevron'] {
+            width: 20px !important;
+            max-width: 20px !important;
+            flex: 0 0 20px !important;
+          }
+          .builder-pub-node[data-node-id^='home-offices-tab-'] {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-node-id='columns-page-root'] {
+            width: calc(100% + 32px) !important;
+            max-width: none !important;
+            margin-left: -16px !important;
+            margin-right: -16px !important;
+          }
+        }
+      ` }} />
+      {/* Record-specific schema first — it is the page's primary entity. */}
+      {recordJsonLd ? <JsonLd data={recordJsonLd} /> : null}
       {legalServiceSchema ? <JsonLd data={legalServiceSchema} /> : null}
       {organizationSchema ? <JsonLd data={organizationSchema} /> : null}
       {localBusinessSchema ? <JsonLd data={localBusinessSchema} /> : null}
       {breadcrumbSchema ? <JsonLd data={breadcrumbSchema} /> : null}
-      {recordJsonLd ? <JsonLd data={recordJsonLd} /> : null}
+      {faqExplorerSchema ? <JsonLd data={faqExplorerSchema} /> : null}
       {structuredDataPayloads.map((payload) => (
         <JsonLd key={payload.id} data={payload.data} />
       ))}
       {customStructuredDataPayloads.map((payload) => (
         <JsonLd key={payload.id} data={payload.data} />
       ))}
-      {darkModeConfig.allowVisitorToggle ? (
+      {allowPublishedThemeToggle ? (
         <DarkModeToggle
           defaultMode={darkModeConfig.defaultMode}
-          allowVisitorToggle={darkModeConfig.allowVisitorToggle}
+          allowVisitorToggle={allowPublishedThemeToggle}
         />
       ) : null}
       <AnimationsRoot />
       <AppRuntimeLoader />
       <SiteSearchEnhancer />
       <ExperimentVariantSwap />
-      {liveChatSettings ? <LiveChatWidget {...liveChatSettings} enabled={liveChatSettings.launcherEnabled} /> : null}
+      {useBuilderChrome && liveChatSettings ? <LiveChatWidget {...liveChatSettings} enabled={liveChatSettings.launcherEnabled} locale={locale} /> : null}
       <PublishedInteractions />
       <PageTransitionWrapper
         preset={settings?.pageTransition ?? 'none'}
         durationMs={settings?.pageTransitionDurationMs ?? 280}
       >
-      {resolved.headerCanvas ? (
+      {useBuilderChrome && resolved.headerCanvas ? (
         <GlobalCanvasSection
           canvas={resolved.headerCanvas}
           theme={publishedTheme}
@@ -1026,7 +1649,7 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
           locale={locale}
           currentSlug={slugPath}
         />
-      ) : (
+      ) : useBuilderChrome ? (
         <SiteHeader
           siteName={site.name}
           settings={settings}
@@ -1037,9 +1660,10 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
           mobileSticky={headerFooterConfig.mobileSticky}
           mobileHamburger={headerFooterConfig.mobileHamburger}
         />
-      )}
+      ) : null}
       <main
         className="builder-pub-main"
+        data-builder-chrome={useBuilderChrome ? 'true' : 'false'}
         style={{
           // Canvas stage width is 1280 (see canvas/responsive.ts).
           // Published main used to be 1200, so any widget the designer
@@ -1049,20 +1673,43 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
           margin: '0 auto',
           position: 'relative',
           minHeight: Math.max(publishedContentHeight, 720),
-          fontFamily: theme?.fonts.body,
-          color: 'var(--builder-color-text)',
-          background: 'var(--builder-color-background)',
+          // Light mode: inherit color/background/font from body so the
+          // public green theme (globals.css) is used, not the builder's
+          // blue/gray fallback vars. Dark mode overrides these via the
+          // :root[data-theme='dark'] body rule in the inline <style> above.
+          // Only honor a brand-kit body font when the designer picked one;
+          // skip the generic 'system-ui, sans-serif' fallback so the public
+          // site's IBM Plex Sans KR / Noto Serif KR font stack wins.
+          fontFamily:
+            theme?.fonts.body && theme.fonts.body !== 'system-ui, sans-serif'
+              ? theme.fonts.body
+              : undefined,
         }}
       >
         {renderedTopLevelNodes.map((node) => renderPublishedNode(node, true))}
       </main>
-      {resolved.footerCanvas ? (
+      {dynamicListConfig && dynamicListSlice && dynamicListRuntime.pagination ? (
+        <DynamicListVisitorControls
+          basePath={dynamicListRuntime.pagePath}
+          locale={locale}
+          pagination={dynamicListRuntime.pagination}
+          searchParams={searchParams}
+          searchTerm={dynamicListRuntime.searchTerm}
+          slice={dynamicListSlice}
+          sortOptions={dynamicListRuntime.sortOptions}
+          sortQuery={dynamicListRuntime.sortQuery}
+          totalRecordCount={dynamicListRuntime.totalRecordCount}
+          visitorFilters={dynamicListRuntime.filters}
+          visitorFilterSummary={dynamicListRuntime.filterSummary}
+        />
+      ) : null}
+      {useBuilderChrome && resolved.footerCanvas ? (
         <GlobalCanvasSection
           canvas={resolved.footerCanvas}
           theme={publishedTheme}
           tag="footer"
         />
-      ) : (
+      ) : useBuilderChrome ? (
         <SiteFooter
           siteName={site.name}
           settings={settings}
@@ -1070,8 +1717,8 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
           navItems={navItems}
           locale={locale}
         />
-      )}
-      <MobileBottomBar config={mobileBottomBar} theme={publishedTheme} />
+      ) : null}
+      {useBuilderChrome ? <MobileBottomBar config={mobileBottomBar} theme={publishedTheme} /> : null}
       {resolved.lightboxes.length > 0 && (
         <>
           <LightboxMount slugs={resolved.lightboxes.map((lb) => lb.meta.slug)} />

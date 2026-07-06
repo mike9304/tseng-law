@@ -4,6 +4,7 @@ import SitesPanel from '@/components/builder/workspace/SitesPanel';
 import MembersPanel from '@/components/builder/workspace/MembersPanel';
 import SharedAssetsPanel from '@/components/builder/workspace/SharedAssetsPanel';
 import AnalyticsPanel from '@/components/builder/workspace/AnalyticsPanel';
+import { getWorkspaceCopy } from '@/lib/builder/workspace/workspace-copy';
 import {
   ensureDefaultAccount,
   listMembers,
@@ -14,11 +15,6 @@ import { listAccountCollections } from '@/lib/builder/workspace/shared-cms';
 import { buildWorkspaceAnalyticsRollup } from '@/lib/builder/workspace/analytics-aggregate';
 
 export const dynamic = 'force-dynamic';
-
-export const metadata: Metadata = {
-  title: 'Workspace · Hojeong Builder',
-  robots: { index: false, follow: false },
-};
 
 type TabId = 'overview' | 'sites' | 'members' | 'assets' | 'analytics';
 
@@ -60,6 +56,7 @@ export default async function WorkspacePage({
   searchParams?: { tab?: string };
 }) {
   const locale = params.locale;
+  const copy = getWorkspaceCopy(locale);
   const tab = parseTab(searchParams?.tab);
 
   await ensureDefaultAccount();
@@ -71,29 +68,30 @@ export default async function WorkspacePage({
     listAccountCollections().catch(() => []),
     buildWorkspaceAnalyticsRollup().catch(() => null),
   ]);
+  const operationTotals = analytics?.operations;
 
   const tabs: Array<{ id: TabId; label: string; count?: number }> = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'sites', label: 'Sites', count: sites.length },
-    { id: 'members', label: 'Members', count: members.length },
-    { id: 'assets', label: 'Shared Assets', count: sharedAssets.length },
-    { id: 'analytics', label: 'Analytics' },
+    { id: 'overview', label: copy.tabs.overview },
+    { id: 'sites', label: copy.tabs.sites, count: sites.length },
+    { id: 'members', label: copy.tabs.members, count: members.length },
+    { id: 'assets', label: copy.tabs.sharedAssets, count: operationTotals?.sharedAssetCount ?? sharedAssets.length },
+    { id: 'analytics', label: copy.tabs.analytics },
   ];
 
   return (
     <main data-workspace-page style={{ padding: '24px', maxWidth: 1280, margin: '0 auto' }}>
       <header style={{ marginBottom: 20 }}>
         <p style={{ margin: 0, fontSize: 12, color: '#64748b', letterSpacing: 0.4, textTransform: 'uppercase' }}>
-          Workspace
+          {copy.pageEyebrow}
         </p>
         <h1 style={{ margin: '4px 0 0', fontSize: 24, color: '#0f172a' }}>{account.name}</h1>
         <p style={{ margin: '6px 0 0', fontSize: 13, color: '#64748b' }}>
-          Owner {account.ownerEmail} · Account id {account.id}
+          {copy.ownerLabel} {account.ownerEmail} · {copy.accountIdLabel} {account.id}
         </p>
       </header>
 
       <nav
-        aria-label="Workspace sections"
+        aria-label={copy.sectionsLabel}
         data-workspace-tabs
         style={{
           display: 'flex',
@@ -128,19 +126,30 @@ export default async function WorkspacePage({
       <section data-workspace-panel={tab}>
         {tab === 'overview' && (
           <WorkspaceOverview
+            locale={locale}
+            copy={copy}
             account={account}
             siteCount={sites.length}
             memberCount={members.length}
-            sharedAssetCount={sharedAssets.length}
-            collectionCount={collections.length}
+            sharedAssetCount={operationTotals?.sharedAssetCount ?? sharedAssets.length}
+            collectionCount={operationTotals?.cmsCollectionCount ?? collections.length}
             analytics={analytics}
           />
         )}
-        {tab === 'sites' && <SitesPanel initialSites={sites} />}
-        {tab === 'members' && <MembersPanel initialMembers={members} />}
-        {tab === 'assets' && <SharedAssetsPanel initialAssets={sharedAssets} />}
-        {tab === 'analytics' && <AnalyticsPanel analytics={analytics} collections={collections} />}
+        {tab === 'sites' && <SitesPanel locale={locale} copy={copy.sites} initialSites={sites} />}
+        {tab === 'members' && <MembersPanel locale={locale} copy={copy.members} initialMembers={members} />}
+        {tab === 'assets' && <SharedAssetsPanel locale={locale} copy={copy.sharedAssets} initialAssets={sharedAssets} />}
+        {tab === 'analytics' && <AnalyticsPanel copy={copy.analytics} analytics={analytics} collections={collections} />}
       </section>
     </main>
   );
+}
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const copy = getWorkspaceCopy(params.locale);
+  return {
+    title: `${copy.pageTitle} · Hojeong Builder`,
+    description: copy.pageDescription,
+    robots: { index: false, follow: false },
+  };
 }

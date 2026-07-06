@@ -1,6 +1,7 @@
 import { defineComponent } from '../define';
 import FormTextareaElement from './Element';
 import FormTextareaInspector from './Inspector';
+import { FORM_TEXTAREA_KO_DEFAULTS } from '../form/form-controls-copy';
 
 export default defineComponent({
   kind: 'form-textarea',
@@ -9,7 +10,7 @@ export default defineComponent({
   icon: '☰',
   defaultContent: {
     name: 'message',
-    label: '메시지',
+    label: FORM_TEXTAREA_KO_DEFAULTS.label,
     placeholder: '',
     rows: 4,
     required: false,

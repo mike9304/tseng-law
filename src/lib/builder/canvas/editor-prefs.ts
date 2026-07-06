@@ -46,6 +46,22 @@ export interface ElementComment {
   resolvedAt?: string;
 }
 
+export interface ComponentLibraryPreferenceVersion {
+  nodeJson: string;
+  savedAt: string;
+  label?: string;
+}
+
+export interface ComponentLibraryPreferenceEntry {
+  id: string;
+  name: string;
+  nodeJson: string;
+  createdAt: string;
+  updatedAt?: string;
+  pinned?: boolean;
+  versions?: readonly ComponentLibraryPreferenceVersion[];
+}
+
 export interface AlignDistributeConfig {
   /** When true, the toolbar shows the matrix grid (3x3) helper. */
   showMatrix: boolean;
@@ -67,12 +83,7 @@ export interface EditorPreferences {
   alignDistribute: AlignDistributeConfig;
   customKeybindings: CustomKeybinding[];
   comments: ElementComment[];
-  componentLibrary: Array<{
-    id: string;
-    name: string;
-    nodeJson: string;   // serialized BuilderCanvasNode
-    createdAt: string;
-  }>;
+  componentLibrary: ComponentLibraryPreferenceEntry[];
 }
 
 export const DEFAULT_EDITOR_PREFS: EditorPreferences = {
@@ -118,6 +129,44 @@ function normalizeReferenceGuide(value: unknown): ReferenceGuide | null {
     position,
     label: typeof value.label === 'string' ? value.label : undefined,
     color: typeof value.color === 'string' ? value.color : undefined,
+  };
+}
+
+function normalizeComponentLibraryVersion(value: unknown): ComponentLibraryPreferenceVersion | null {
+  if (!isRecord(value)) return null;
+  if (typeof value.nodeJson !== 'string' || value.nodeJson.trim().length === 0) return null;
+  if (typeof value.savedAt !== 'string' || value.savedAt.trim().length === 0) return null;
+  const label = typeof value.label === 'string' ? value.label.trim().slice(0, 80) : '';
+  return {
+    nodeJson: value.nodeJson.trim(),
+    savedAt: value.savedAt.trim(),
+    ...(label ? { label } : {}),
+  };
+}
+
+function normalizeComponentLibraryEntry(value: unknown): ComponentLibraryPreferenceEntry | null {
+  if (
+    !isRecord(value)
+    || typeof value.id !== 'string'
+    || typeof value.name !== 'string'
+    || typeof value.nodeJson !== 'string'
+    || typeof value.createdAt !== 'string'
+  ) {
+    return null;
+  }
+  const versions = Array.isArray(value.versions)
+    ? value.versions
+      .map(normalizeComponentLibraryVersion)
+      .filter((version): version is ComponentLibraryPreferenceVersion => Boolean(version))
+    : [];
+  return {
+    id: value.id,
+    name: value.name,
+    nodeJson: value.nodeJson,
+    createdAt: value.createdAt,
+    ...(typeof value.updatedAt === 'string' ? { updatedAt: value.updatedAt } : {}),
+    ...(value.pinned === true ? { pinned: true } : {}),
+    ...(versions.length > 0 ? { versions } : {}),
   };
 }
 
@@ -179,13 +228,9 @@ export function normalizeEditorPreferences(value: unknown): EditorPreferences {
       ))
       : DEFAULT_EDITOR_PREFS.comments,
     componentLibrary: Array.isArray(source.componentLibrary)
-      ? source.componentLibrary.filter((item): item is EditorPreferences['componentLibrary'][number] => (
-        isRecord(item)
-        && typeof item.id === 'string'
-        && typeof item.name === 'string'
-        && typeof item.nodeJson === 'string'
-        && typeof item.createdAt === 'string'
-      ))
+      ? source.componentLibrary
+        .map(normalizeComponentLibraryEntry)
+        .filter((entry): entry is ComponentLibraryPreferenceEntry => Boolean(entry))
       : DEFAULT_EDITOR_PREFS.componentLibrary,
   };
 }
@@ -215,6 +260,9 @@ export function applyEditorPreferencesToDocument(prefs: EditorPreferences): void
   const normalized = normalizeEditorPreferences(prefs);
   document.documentElement.dataset.builderEditorTheme = normalized.theme;
   document.documentElement.dataset.builderOutline = normalized.outline.enabled ? 'true' : 'false';
+  document.documentElement.dataset.builderOutlineHideContent = (
+    normalized.outline.enabled && normalized.outline.hideContent
+  ) ? 'true' : 'false';
   document.documentElement.dataset.builderPixelGrid = normalized.pixelGrid.enabled ? 'true' : 'false';
   document.documentElement.style.setProperty('--builder-pixel-grid-size', `${normalized.pixelGrid.size}px`);
   document.documentElement.style.setProperty('--builder-pixel-grid-color', normalized.pixelGrid.color);
@@ -232,6 +280,83 @@ export function saveAndBroadcastEditorPreferences(prefs: EditorPreferences): voi
 
 export function makeGuideId(): string {
   return `gd-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+/**
+ * Phase 29 W217 — guide creation/reposition helpers.
+ *
+ * Guides live in editor preferences (not the canvas document), mirroring how
+ * grid/rulers prefs are stored, so they are intentionally NOT part of the
+ * document undo history. These pure functions encapsulate the immutable
+ * preference updates the editor guide hook performs, and are unit-tested in
+ * isolation (see __tests__/reference-guides.test.ts).
+ */
+export const REFERENCE_GUIDE_COLOR = '#e11d48';
+
+export function boundGuidePosition(
+  axis: ReferenceGuide['axis'],
+  position: number,
+  stageWidth: number,
+  stageHeight: number,
+): number {
+  const max = axis === 'vertical' ? stageWidth : stageHeight;
+  const safeMax = Number.isFinite(max) && max > 0 ? max : 0;
+  if (!Number.isFinite(position)) return 0;
+  return Math.max(0, Math.min(safeMax, Math.round(position)));
+}
+
+export function describeGuideLabel(axis: ReferenceGuide['axis'], position: number): string {
+  return `${axis === 'vertical' ? 'X' : 'Y'} ${Math.round(position)}px`;
+}
+
+export function createReferenceGuideEntry(
+  axis: ReferenceGuide['axis'],
+  position: number,
+  stageWidth: number,
+  stageHeight: number,
+): ReferenceGuide {
+  const bounded = boundGuidePosition(axis, position, stageWidth, stageHeight);
+  return {
+    id: makeGuideId(),
+    axis,
+    position: bounded,
+    label: describeGuideLabel(axis, bounded),
+    color: REFERENCE_GUIDE_COLOR,
+  };
+}
+
+export function addReferenceGuideToPrefs(
+  prefs: EditorPreferences,
+  guide: ReferenceGuide,
+): EditorPreferences {
+  return { ...prefs, referenceGuides: [...prefs.referenceGuides, guide] };
+}
+
+export function removeReferenceGuideFromPrefs(
+  prefs: EditorPreferences,
+  guideId: string,
+): EditorPreferences {
+  return {
+    ...prefs,
+    referenceGuides: prefs.referenceGuides.filter((guide) => guide.id !== guideId),
+  };
+}
+
+export function repositionReferenceGuideInPrefs(
+  prefs: EditorPreferences,
+  guideId: string,
+  position: number,
+  stageWidth: number,
+  stageHeight: number,
+): EditorPreferences {
+  return {
+    ...prefs,
+    referenceGuides: prefs.referenceGuides.map((guide) => {
+      if (guide.id !== guideId) return guide;
+      const bounded = boundGuidePosition(guide.axis, position, stageWidth, stageHeight);
+      return { ...guide, position: bounded, label: describeGuideLabel(guide.axis, bounded) };
+    }),
+  };
 }
 
 export function makeCommentId(): string {

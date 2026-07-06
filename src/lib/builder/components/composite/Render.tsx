@@ -1,6 +1,8 @@
 'use client';
 
+// allow: SIZE_OK - pre-existing composite dispatcher; videos parity only registers legacy-page-videos.
 import type { BuilderCompositeCanvasNode } from '@/lib/builder/canvas/types';
+import PageHeader from '@/components/PageHeader';
 import HeroSearch from '@/components/HeroSearch';
 import ServicesBento from '@/components/ServicesBento';
 import HomeContactCta from '@/components/HomeContactCta';
@@ -10,23 +12,49 @@ import HomeCaseResultsSplit from '@/components/HomeCaseResultsSplit';
 import HomeStatsSection from '@/components/HomeStatsSection';
 import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
+import FaqPublicExplorer from '@/components/faq/FaqPublicExplorer';
 import {
   AboutLegacyPageBody,
   ServicesLegacyPageBody,
   ContactLegacyPageBody,
   LawyersLegacyPageBody,
-  FaqLegacyPageBody,
   PricingLegacyPageBody,
   ReviewsLegacyPageBody,
+  ColumnsLegacyPageBody,
+  VideosLegacyPageBody,
   PrivacyLegacyPageBody,
   DisclaimerLegacyPageBody,
 } from '@/app/[locale]/(legacy)/legacy-page-bodies';
 import type { Locale } from '@/lib/locales';
+import type { ColumnPost } from '@/lib/columns';
 import { insightsArchive } from '@/data/insights-archive';
 import { faqContent } from '@/data/faq-content';
+import { pageCopy } from '@/data/page-copy';
+import {
+  DEFAULT_FAQ_CATEGORIES,
+  getFaqCategoryLabel,
+  sortFaqItems,
+  type BuilderFaqCategory,
+  type BuilderFaqItem,
+} from '@/lib/builder/faq/faq-shared';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import { useEffect, useRef } from 'react';
+import { useBuilderDatasetPreviewTargets } from '@/components/builder/canvas/BuilderDatasetPreviewContext';
+import type { BuilderDataBindingPreviewTarget } from '@/lib/builder/datasets';
+
+type DatasetPreviewTargets = readonly BuilderDataBindingPreviewTarget[];
+
+type InsightsSectionPost = {
+  slug: string;
+  title: string;
+  date: string;
+  dateDisplay: string;
+  readTime: string;
+  categoryLabel: string;
+  featuredImage: string;
+  summary: string;
+};
 
 function resolveLocale(config: Record<string, unknown> | undefined): Locale {
   const raw = config?.locale;
@@ -34,7 +62,58 @@ function resolveLocale(config: Record<string, unknown> | undefined): Locale {
   return 'ko';
 }
 
-function resolveInsightsPosts(locale: Locale) {
+function resolveInsightsPreviewPosts(
+  targets: DatasetPreviewTargets,
+): InsightsSectionPost[] {
+  const target = targets.find((candidate) => candidate.targetId === 'home.insights.feed');
+  if (!target?.records.length) return [];
+
+  return target.records.flatMap((record) => {
+    const fields = record.fieldValues;
+    const slug = fields.slug || record.recordId;
+    const title = fields.title || record.primaryLabel;
+    const featuredImage = fields.featuredImage || fields.image || fields.src;
+    if (!slug || !title || !featuredImage) return [];
+
+    return [{
+      slug,
+      title,
+      date: fields.date ?? '',
+      dateDisplay: fields.dateDisplay || fields.date || '',
+      readTime: fields.readTime ?? '',
+      categoryLabel: fields.categoryLabel ?? '',
+      featuredImage,
+      summary: fields.summary || record.secondaryLabel || '',
+    }];
+  });
+}
+
+function mapColumnPostsToInsightsPosts(posts: readonly ColumnPost[]): InsightsSectionPost[] {
+  return posts.map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    date: post.date,
+    dateDisplay: post.dateDisplay || post.date,
+    readTime: post.readTime,
+    categoryLabel: post.categoryLabel,
+    featuredImage: post.featuredImage,
+    summary: post.summary,
+  }));
+}
+
+function resolveInsightsPosts(
+  locale: Locale,
+  previewTargets: DatasetPreviewTargets,
+  columnPosts: readonly ColumnPost[],
+  _mode: 'edit' | 'preview' | 'published',
+): InsightsSectionPost[] {
+  if (columnPosts.length > 0) {
+    return mapColumnPostsToInsightsPosts(columnPosts);
+  }
+
+  const previewPosts = resolveInsightsPreviewPosts(previewTargets);
+  if (previewPosts.length > 0) return previewPosts;
+
   const archive = insightsArchive[locale === 'en' ? 'ko' : locale];
   if (!archive) return [];
   return archive.posts.map((post) => ({
@@ -49,31 +128,102 @@ function resolveInsightsPosts(locale: Locale) {
   }));
 }
 
+function slugifyFallbackFaqQuestion(question: string): string {
+  const slug = question
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9가-힣一-龥ぁ-んァ-ン]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 80);
+  return slug || 'faq';
+}
+
+function fallbackFaqItems(locale: Locale): BuilderFaqItem[] {
+  return sortFaqItems(faqContent[locale].map((item, index) => {
+    const category = DEFAULT_FAQ_CATEGORIES[index] ?? DEFAULT_FAQ_CATEGORIES[DEFAULT_FAQ_CATEGORIES.length - 1];
+    const categoryId = category?.categoryId ?? 'consultation';
+    return {
+      faqId: `fallback-${locale}-${index + 1}`,
+      slug: slugifyFallbackFaqQuestion(item.question),
+      locale,
+      question: item.question,
+      answer: item.answer,
+      categoryId,
+      tags: [getFaqCategoryLabel(categoryId, locale)],
+      status: 'published',
+      sortOrder: (index + 1) * 10,
+      schemaEnabled: true,
+      createdAt: '2026-05-20T00:00:00.000Z',
+      updatedAt: '2026-05-20T00:00:00.000Z',
+    };
+  }));
+}
+
+export function compositeFallbackCopy(locale: Locale): {
+  insightsUnavailable: string;
+  missingTitle: string;
+  missingDescription: string;
+} {
+  if (locale === 'zh-hant') {
+    return {
+      insightsUnavailable: '無法載入專欄資料。',
+      missingTitle: 'Composite registry 未註冊',
+      missingDescription: '新的 composite kind 必須加入 components/composite/Render.tsx 的 switch。',
+    };
+  }
+  if (locale === 'en') {
+    return {
+      insightsUnavailable: 'Insights data unavailable.',
+      missingTitle: 'Composite registry missing',
+      missingDescription: 'Add the new composite kind to the switch in components/composite/Render.tsx.',
+    };
+  }
+  return {
+    insightsUnavailable: '칼럼 데이터를 불러올 수 없습니다.',
+    missingTitle: 'Composite registry 누락',
+    missingDescription: '새 composite kind가 components/composite/Render.tsx switch에 추가되어야 합니다.',
+  };
+}
+
 export default function CompositeRender({
   node,
+  datasetPreviewTargets,
+  columnPosts = [],
+  faqCategories = DEFAULT_FAQ_CATEGORIES,
+  faqItems,
+  searchParams,
   mode = 'edit',
 }: {
   node: BuilderCompositeCanvasNode;
+  datasetPreviewTargets?: DatasetPreviewTargets;
+  columnPosts?: ColumnPost[];
+  faqCategories?: BuilderFaqCategory[];
+  faqItems?: BuilderFaqItem[];
+  searchParams?: Record<string, string | string[] | undefined>;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const { componentKey, config } = node.content;
   const locale = resolveLocale(config);
+  const contextDatasetPreviewTargets = useBuilderDatasetPreviewTargets();
+  const effectiveDatasetPreviewTargets = datasetPreviewTargets ?? contextDatasetPreviewTargets;
   const interactive = mode !== 'edit';
+  const fallbackCopy = compositeFallbackCopy(locale);
 
   const body = (() => {
     switch (componentKey) {
       case 'hero-search':
-        return <HeroSearch locale={locale} />;
+        return <HeroSearch locale={locale} scrollHref={mode === 'edit' ? `/${locale}#insights` : undefined} />;
       case 'services-bento':
-        return <ServicesBento locale={locale} />;
+        return <ServicesBento locale={locale} id="practice" />;
       case 'home-contact-cta':
         return <HomeContactCta locale={locale} />;
       case 'insights-archive': {
-        const posts = resolveInsightsPosts(locale);
+        const posts = resolveInsightsPosts(locale, effectiveDatasetPreviewTargets, columnPosts, mode);
         if (posts.length === 0) {
           return (
             <div style={{ padding: 24, color: '#94a3b8', fontSize: 13 }}>
-              Insights data unavailable.
+              {fallbackCopy.insightsUnavailable}
             </div>
           );
         }
@@ -110,12 +260,29 @@ export default function CompositeRender({
         return <ContactLegacyPageBody locale={locale} />;
       case 'legacy-page-lawyers':
         return <LawyersLegacyPageBody locale={locale} />;
-      case 'legacy-page-faq':
-        return <FaqLegacyPageBody locale={locale} />;
+      case 'legacy-page-faq': {
+        const copy = pageCopy[locale].faq;
+        return (
+          <>
+            <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+            <FaqPublicExplorer
+              locale={locale}
+              categories={faqCategories}
+              items={faqItems ?? fallbackFaqItems(locale)}
+              initialCategory={typeof searchParams?.category === 'string' ? searchParams.category : undefined}
+              initialQuery={typeof searchParams?.q === 'string' ? searchParams.q : undefined}
+            />
+          </>
+        );
+      }
       case 'legacy-page-pricing':
         return <PricingLegacyPageBody locale={locale} />;
       case 'legacy-page-reviews':
         return <ReviewsLegacyPageBody locale={locale} />;
+      case 'legacy-page-columns':
+        return <ColumnsLegacyPageBody locale={locale} posts={columnPosts} searchParams={searchParams} />;
+      case 'legacy-page-videos':
+        return <VideosLegacyPageBody locale={locale} columnCount={columnPosts.length} />;
       case 'legacy-page-privacy':
         return <PrivacyLegacyPageBody locale={locale} />;
       case 'legacy-page-disclaimer':
@@ -135,10 +302,10 @@ export default function CompositeRender({
               borderRadius: 8,
             }}
           >
-            <strong>Composite registry 누락</strong>
+            <strong>{fallbackCopy.missingTitle}</strong>
             <div style={{ marginTop: 4, fontFamily: 'ui-monospace, Menlo, monospace' }}>{componentKey}</div>
             <div style={{ marginTop: 4, color: '#7f1d1d' }}>
-              새 composite kind 가 components/composite/Render.tsx switch 에 추가되어야 합니다.
+              {fallbackCopy.missingDescription}
             </div>
           </div>
         );

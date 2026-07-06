@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
   listExperiments,
@@ -10,29 +11,68 @@ import {
   experimentCreateSchema,
   type Experiment,
 } from '@/lib/builder/experiments/types';
+import {
+  getExperimentsApiErrorPayload,
+  type ExperimentsApiErrorCode,
+} from '@/lib/builder/experiments/experiments-api-copy';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
+function requestLocale(request: NextRequest, input?: unknown): Locale {
+  if (typeof input === 'string') return normalizeLocale(input);
+  return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+}
+
+function errorResponse(
+  locale: Locale,
+  errorCode: ExperimentsApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      ...getExperimentsApiErrorPayload(locale, errorCode),
+      ...(extra ?? {}),
+    },
+    { status },
+  );
+}
+
 export async function GET(request: NextRequest) {
   const auth = await guardMutation(request, { allowReadOnly: true, permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
-  const experiments = await listExperiments();
-  return NextResponse.json({ ok: true, experiments, total: experiments.length });
+  const locale = requestLocale(request);
+
+  try {
+    const experiments = await listExperiments();
+    return NextResponse.json({ ok: true, experiments, total: experiments.length });
+  } catch (error) {
+    console.error('[builder/experiments] GET failed:', error);
+    return errorResponse(locale, 'experiments_list_failed', 500);
+  }
 }
 
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
-  const raw = await request.json().catch(() => null);
+  const fallbackLocale = requestLocale(request);
+  let raw: unknown;
+  try {
+    raw = await request.json();
+  } catch (error) {
+    console.error('[builder/experiments] POST JSON parse failed:', error);
+    return errorResponse(fallbackLocale, 'invalid_json', 400);
+  }
+  const locale = requestLocale(request, (raw as { locale?: unknown } | null)?.locale);
   const parsed = experimentCreateSchema.safeParse(raw);
   if (!parsed.success) {
-    return NextResponse.json({ error: 'Invalid experiment', details: parsed.error.issues.slice(0, 3) }, { status: 400 });
+    return errorResponse(locale, 'validation_error', 400, { details: parsed.error.issues.slice(0, 3) });
   }
-  // Reject duplicate variantIds within the experiment.
   const ids = parsed.data.variants.map((v) => v.variantId);
   if (new Set(ids).size !== ids.length) {
-    return NextResponse.json({ error: 'Variant ids must be unique' }, { status: 400 });
+    return errorResponse(locale, 'duplicate_variant_ids', 400);
   }
   const now = new Date().toISOString();
   const experiment: Experiment = {
@@ -47,6 +87,11 @@ export async function POST(request: NextRequest) {
     createdAt: now,
     updatedAt: now,
   };
-  await saveExperiment(experiment);
-  return NextResponse.json({ ok: true, experiment }, { status: 201 });
+  try {
+    await saveExperiment(experiment);
+    return NextResponse.json({ ok: true, experiment }, { status: 201 });
+  } catch (error) {
+    console.error('[builder/experiments] POST failed:', error);
+    return errorResponse(locale, 'experiment_create_failed', 500);
+  }
 }

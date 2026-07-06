@@ -1,0 +1,295 @@
+.root {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.sectionHeading {
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.field {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+}
+
+.label {
+  color: #334155;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  font-size: 0.85rem;
+  outline: none;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    opacity 140ms ease;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+}
+
+.input:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgb(17 109 255 / 14%);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.description {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.policyPanel {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.policyHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 12px;
+}
+
+.roleGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.roleToggle {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 10px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  background: #fff;
+  color: #334155;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.roleToggle input {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  accent-color: #116dff;
+}
+
+.roleToggle span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.policyActions {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 34px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    border-color 140ms ease,
+    background 140ms ease,
+    opacity 140ms ease;
+}
+
+.primaryButton {
+  border: 1px solid #116dff;
+  background: #116dff;
+  color: #fff;
+  padding: 7px 13px;
+}
+
+.secondaryButton {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #334155;
+  padding: 7px 11px;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.successText,
+.errorText {
+  min-height: 18px;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.successText {
+  color: #047857;
+}
+
+.errorText {
+  color: #b91c1c;
+}
+
+.queueHeader {
+  color: #334155;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.approvalReport {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  color: #475569;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.queueEmpty {
+  padding: 12px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  color: #64748b;
+  font-size: 0.78rem;
+  background: #fff;
+}
+
+.approvalQueue {
+  display: grid;
+  gap: 8px;
+  max-height: 146px;
+  overflow-y: auto;
+}
+
+.approvalRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.approvalMeta {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.approvalMeta strong,
+.approvalMeta span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.approvalMeta strong {
+  color: #0f172a;
+  font-size: 0.82rem;
+}
+
+.approvalMeta span {
+  color: #64748b;
+  font-size: 0.74rem;
+}
+
+.approvalActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.colorRow {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+
+.colorInput {
+  width: 56px;
+  height: 38px;
+  padding: 4px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.colorInput:focus-visible {
+  border-color: #116dff;
+  box-shadow: 0 0 0 3px rgb(17 109 255 / 14%);
+  outline: none;
+}
+
+@media (max-width: 760px) {
+  .fieldGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .policyHeader,
+  .approvalRow {
+    grid-template-columns: 1fr;
+  }
+
+  .roleGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .approvalActions {
+    justify-content: stretch;
+  }
+
+  .approvalActions button {
+    flex: 1;
+  }
+}

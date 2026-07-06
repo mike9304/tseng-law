@@ -60,7 +60,7 @@ function renderHomeSectionSurface({
 }) {
   switch (section.sectionKey) {
     case 'home.hero':
-      return <HeroSearch key={section.id} locale={locale} />;
+      return <HeroSearch key={section.id} locale={locale} scrollHref={`/${locale}#insights`} />;
     case 'home.insights':
       return <InsightsArchiveSection key={section.id} locale={locale} posts={posts} />;
     case 'home.services':

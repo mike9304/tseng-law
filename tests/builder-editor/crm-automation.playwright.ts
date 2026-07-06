@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { z } from 'zod';
 
 function mutationHeaders(scope: string): Record<string, string> {
   const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'crm-auto';
@@ -9,6 +10,21 @@ function mutationHeaders(scope: string): Record<string, string> {
     authorization: `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`,
   };
 }
+
+const automationResponseSchema = z.object({
+  automation: z.object({ id: z.string() }),
+});
+
+const contactResponseSchema = z.object({
+  contact: z.object({ id: z.string() }),
+});
+
+const outboxResponseSchema = z.object({
+  entries: z.array(z.object({
+    contactEmail: z.string(),
+    templateId: z.string().optional(),
+  })),
+});
 
 test.describe('CRM automations admin', () => {
   test.setTimeout(120_000);
@@ -65,6 +81,59 @@ test.describe('CRM automations admin', () => {
         await page.waitForTimeout(150);
       }
       expect(tagsConfirmed).toBe(true);
+    } finally {
+      if (contactId) {
+        await page.request
+          .delete(`/api/builder/crm/contacts/${contactId}`, { headers })
+          .catch(() => undefined);
+      }
+      if (automationId) {
+        await page.request
+          .delete(`/api/builder/crm/automations/${automationId}`, { headers })
+          .catch(() => undefined);
+      }
+    }
+  });
+
+  test('shows contact-created email stubs in the CRM outbox tab', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const email = `pw-outbox-${token}@example.com`;
+    const headers = mutationHeaders(`outbox-${token}`);
+    await page.setExtraHTTPHeaders(headers);
+
+    let automationId: string | null = null;
+    let contactId: string | null = null;
+
+    try {
+      const automationRes = await page.request.post('/api/builder/crm/automations', {
+        headers,
+        data: {
+          name: `Outbox welcome ${token}`,
+          trigger: { kind: 'contact-created' },
+          action: { kind: 'send-email-stub', templateId: `welcome-${token}` },
+          enabled: true,
+        },
+      });
+      expect(automationRes.status()).toBe(201);
+      automationId = automationResponseSchema.parse(await automationRes.json()).automation.id;
+
+      const contactRes = await page.request.post('/api/builder/crm/contacts', {
+        headers,
+        data: { email, name: 'Outbox Lead', source: 'manual' },
+      });
+      expect(contactRes.status()).toBe(201);
+      contactId = contactResponseSchema.parse(await contactRes.json()).contact.id;
+
+      const outboxRes = await page.request.get('/api/builder/crm/outbox?recent=100', { headers });
+      expect(outboxRes.status()).toBe(200);
+      const outbox = outboxResponseSchema.parse(await outboxRes.json());
+      expect(outbox.entries.some((entry) => entry.contactEmail === email && entry.templateId === `welcome-${token}`)).toBe(true);
+
+      await page.goto('/ko/admin-builder/crm?tab=outbox');
+      await expect(page.getByTestId('crm-outbox-admin')).toBeVisible();
+      await expect(page.getByTestId('crm-tab-outbox')).toContainText('발송함');
+      await expect(page.getByTestId('crm-outbox-admin')).toContainText(email);
+      await expect(page.getByTestId('crm-outbox-admin')).toContainText(`welcome-${token}`);
     } finally {
       if (contactId) {
         await page.request

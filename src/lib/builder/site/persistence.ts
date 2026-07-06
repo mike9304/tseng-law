@@ -9,8 +9,8 @@
  * Blob when BLOB_READ_WRITE_TOKEN is set, file otherwise.
  */
 
-import { get, put } from '@vercel/blob';
-import { readFile, writeFile, mkdir } from 'fs/promises';
+import { del, get, put } from '@vercel/blob';
+import { readFile, writeFile, mkdir, rm, rename } from 'fs/promises';
 import path from 'path';
 import { defaultLocale, type Locale } from '@/lib/locales';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
@@ -34,10 +34,11 @@ import { normalizeBuilderInstalledApps, normalizeBuilderUninstalledApps } from '
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
 import { normalizeMobileSchemaForSiteDocument } from '@/lib/builder/site/mobile-schema';
+import { isBlobBlockedForDeployEnv } from '@/lib/builder/storage/blob-env-guard';
+import { withCanvasMutex } from '@/lib/builder/collab/canvas-mutex';
 
 const BLOB_PREFIX = 'builder-site';
 let siteWriteQueue: Promise<void> = Promise.resolve();
-const pageCanvasWriteQueues = new Map<string, Promise<void>>();
 
 type WriteSiteDocumentOptions = {
   /**
@@ -74,10 +75,19 @@ type WriteSiteDocumentOptions = {
    * preserving unrelated pages created by concurrent writers.
    */
   deletePageIds?: readonly string[];
+  /**
+   * CMS source-collection override writers (services/lawyers slug + copy
+   * overrides) are the only paths that intend to change
+   * `sourceCollectionOverrides`. Every other partial site write loaded an
+   * older snapshot, so the latest persisted overrides win by default to
+   * avoid lost updates; override writers opt in with this flag.
+   */
+  sourceCollectionOverridesUpdated?: boolean;
 };
 
 function isBlobBackend(): boolean {
   if (!process.env.BLOB_READ_WRITE_TOKEN) return false;
+  if (isBlobBlockedForDeployEnv()) return false;
   if (process.env.CONSULTATION_LOG_BACKEND === 'local') return false;
   if (process.env.BUILDER_SITE_BACKEND === 'local') return false;
   if (process.env.NODE_ENV !== 'production' && process.env.BUILDER_USE_BLOB_IN_DEV !== '1') return false;
@@ -85,6 +95,8 @@ function isBlobBackend(): boolean {
 }
 
 function localRoot(): string {
+  const override = process.env.BUILDER_SITE_ROOT?.trim();
+  if (override) return override;
   return path.join(process.cwd(), 'runtime-data', 'builder-site');
 }
 
@@ -429,7 +441,10 @@ export async function writeSiteDocument(
     const redirectMergedDoc = reconcileSiteDocumentRedirectsForWrite(publishMetaMergedDoc, latestDoc, options);
     const appMergedDoc = reconcileSiteDocumentInstalledAppsForWrite(redirectMergedDoc, latestDoc, options);
     const appArchiveMergedDoc = reconcileSiteDocumentUninstalledAppsForWrite(appMergedDoc, latestDoc, options);
-    const mergedDoc = reconcileSiteDocumentNavigationForWrite(appArchiveMergedDoc, latestDoc, options);
+    const sourceOverridesMergedDoc = options.sourceCollectionOverridesUpdated || !latestDoc
+      ? appArchiveMergedDoc
+      : { ...appArchiveMergedDoc, sourceCollectionOverrides: latestDoc.sourceCollectionOverrides };
+    const mergedDoc = reconcileSiteDocumentNavigationForWrite(sourceOverridesMergedDoc, latestDoc, options);
     const normalizedDoc = normalizeSiteDocumentLifecycle(mergedDoc, normalizedSiteId);
     const pathname = sitePathname(normalizedSiteId);
     const json = JSON.stringify(normalizedDoc);
@@ -438,7 +453,7 @@ export async function writeSiteDocument(
     } else {
       const dir = path.join(localRoot(), normalizedSiteId);
       await mkdir(dir, { recursive: true });
-      await writeFile(path.join(dir, 'site.json'), json, 'utf8');
+      await writeFileAtomicLocal(path.join(dir, 'site.json'), json);
     }
   } finally {
     releaseWrite();
@@ -474,34 +489,14 @@ function pagePathname(siteId: string, pageId: string, variant: PageVariant): str
   return `${BLOB_PREFIX}/${normalizeBuilderSiteId(siteId)}/pages/${pageId}.${suffix}`;
 }
 
-function pageCanvasQueueKey(siteId: string, pageId: string, variant: PageVariant): string {
-  return `${normalizeBuilderSiteId(siteId)}:${pageId}:${variant}`;
-}
-
 async function withPageCanvasWriteLock<T>(
   siteId: string,
   pageId: string,
   variant: PageVariant,
   task: () => Promise<T>,
 ): Promise<T> {
-  const key = pageCanvasQueueKey(siteId, pageId, variant);
-  const previousWrite = pageCanvasWriteQueues.get(key) ?? Promise.resolve();
-  let releaseWrite!: () => void;
-  const currentWrite = new Promise<void>((resolve) => {
-    releaseWrite = resolve;
-  });
-  const queuedWrite = previousWrite.catch(() => undefined).then(() => currentWrite);
-  pageCanvasWriteQueues.set(key, queuedWrite);
-
-  await previousWrite.catch(() => undefined);
-  try {
-    return await task();
-  } finally {
-    releaseWrite();
-    if (pageCanvasWriteQueues.get(key) === queuedWrite) {
-      pageCanvasWriteQueues.delete(key);
-    }
-  }
+  void variant;
+  return withCanvasMutex(normalizeBuilderSiteId(siteId), pageId, task);
 }
 
 function isRecordLike(input: unknown): input is PageCanvasRecord {
@@ -537,15 +532,28 @@ async function readPageCanvasPayload(
         const text = await new Response(result.stream).text();
         return JSON.parse(text) as unknown;
       }
-    } catch { /* fallthrough */ }
+      // Non-200 (e.g. 404) = genuinely absent.
+      return null;
+    } catch (error) {
+      // R2: only a "not found" is absence. A transient/parse failure must NOT be
+      // reported as null — that would let a caller overwrite real content with a
+      // fresh blank record. Surface it so the caller aborts.
+      const message = error instanceof Error ? error.message.toLowerCase() : '';
+      if (message.includes('not found') || message.includes('404')) return null;
+      throw error;
+    }
   } else {
     try {
       const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
       const text = await readFile(filePath, 'utf8');
       return JSON.parse(text) as unknown;
-    } catch { /* fallthrough */ }
+    } catch (error) {
+      // R2: ENOENT = genuinely absent → null. Any other error (permission,
+      // corrupt/half-written JSON, etc.) must rethrow, never be masked as absence.
+      if ((error as NodeJS.ErrnoException | null)?.code === 'ENOENT') return null;
+      throw error;
+    }
   }
-  return null;
 }
 
 async function writePageCanvasPayload(
@@ -561,7 +569,35 @@ async function writePageCanvasPayload(
   } else {
     const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
     await mkdir(path.dirname(filePath), { recursive: true });
-    await writeFile(filePath, json, 'utf8');
+    await writeFileAtomicLocal(filePath, json);
+  }
+}
+
+// R3: write to a temp file then atomically rename into place, so a crash/OOM
+// mid-write can never leave a truncated/corrupt destination (site.json, page
+// documents). rename(2) is atomic on the same filesystem.
+async function writeFileAtomicLocal(filePath: string, data: string): Promise<void> {
+  const tmpPath = `${filePath}.tmp-${process.pid}-${Math.random().toString(36).slice(2)}`;
+  try {
+    await writeFile(tmpPath, data, 'utf8');
+    await rename(tmpPath, filePath);
+  } catch (error) {
+    await rm(tmpPath, { force: true }).catch(() => {});
+    throw error;
+  }
+}
+
+async function deletePageCanvasPayload(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant,
+): Promise<void> {
+  const pn = pagePathname(siteId, pageId, variant);
+  if (isBlobBackend()) {
+    await del(pn);
+  } else {
+    const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
+    await rm(filePath, { force: true });
   }
 }
 
@@ -598,6 +634,15 @@ export async function writePageCanvasRecord(
 ): Promise<void> {
   await withPageCanvasWriteLock(siteId, pageId, variant, () =>
     writePageCanvasPayload(siteId, pageId, variant, record));
+}
+
+export async function deletePageCanvasRecord(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant = 'draft',
+): Promise<void> {
+  await withPageCanvasWriteLock(siteId, pageId, variant, () =>
+    deletePageCanvasPayload(siteId, pageId, variant));
 }
 
 export async function updatePageCanvasRecord(
@@ -892,7 +937,7 @@ export async function writeLightboxCanvas(
   } else {
     const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
     await mkdir(path.dirname(filePath), { recursive: true });
-    await writeFile(filePath, json, 'utf8');
+    await writeFileAtomicLocal(filePath, json);
   }
 }
 
@@ -947,7 +992,7 @@ async function writeGlobalCanvas(
   } else {
     const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
     await mkdir(path.dirname(filePath), { recursive: true });
-    await writeFile(filePath, json, 'utf8');
+    await writeFileAtomicLocal(filePath, json);
   }
 }
 
@@ -1123,32 +1168,22 @@ export async function deleteSection(
 // ─── Publish ──────────────────────────────────────────────────────
 
 export async function publishPage(siteId: string, pageId: string, locale: Locale): Promise<boolean> {
-  // eslint-disable-next-line no-console
-  console.log('[publishPage] start siteId=%s pageId=%s locale=%s', siteId, pageId, locale);
   const draft = await readPageCanvas(siteId, pageId, 'draft');
   if (!draft) {
-    // eslint-disable-next-line no-console
-    console.log('[publishPage] draft not found, abort');
     return false;
   }
-  // eslint-disable-next-line no-console
-  console.log('[publishPage] draft found, nodes=%d', draft.nodes?.length ?? 0);
   await writePageCanvas(siteId, pageId, 'published', draft);
-  // eslint-disable-next-line no-console
-  console.log('[publishPage] published canvas written');
   const site = await readSiteDocument(siteId, locale);
   const page = site.pages.find((p) => p.pageId === pageId);
-  // eslint-disable-next-line no-console
-  console.log('[publishPage] site doc pageIds=%s, match=%s', site.pages.map((p) => p.pageId).join(','), page ? 'YES' : 'NO');
   if (page) {
-    page.publishedAt = new Date().toISOString();
-    page.updatedAt = new Date().toISOString();
+    const publishedAt = new Date().toISOString();
+    page.publishedAt = publishedAt;
+    page.publishedSavedAt = publishedAt;
+    delete page.publishedRevisionId;
+    delete page.publishedRevision;
+    delete page.lastPublishedDraftRevision;
+    page.updatedAt = publishedAt;
     await writeSiteDocument(site);
-    // eslint-disable-next-line no-console
-    console.log('[publishPage] site doc written with publishedAt=%s', page.publishedAt);
-  } else {
-    // eslint-disable-next-line no-console
-    console.log('[publishPage] page NOT found in site doc — publishedAt NOT set');
   }
   return true;
 }

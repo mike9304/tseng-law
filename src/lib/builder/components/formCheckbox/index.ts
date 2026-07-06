@@ -1,6 +1,7 @@
 import { defineComponent } from '../define';
 import FormCheckboxElement from './Element';
 import FormCheckboxInspector from './Inspector';
+import { FORM_CHECKBOX_KO_DEFAULTS } from '../form/form-controls-copy';
 
 export default defineComponent({
   kind: 'form-checkbox',
@@ -9,7 +10,7 @@ export default defineComponent({
   icon: '☑',
   defaultContent: {
     name: 'consent',
-    label: '동의합니다',
+    label: FORM_CHECKBOX_KO_DEFAULTS.label,
     required: false,
     defaultChecked: false,
     options: undefined,

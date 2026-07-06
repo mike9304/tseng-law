@@ -55,7 +55,20 @@ describe('editor preferences normalization', () => {
         { id: 'comment-2', nodeId: 'node-2', body: 'Missing author', createdAt: '2026-05-13T00:00:00.000Z' },
       ],
       componentLibrary: [
-        { id: 'component-1', name: 'CTA', nodeJson: '{}', createdAt: '2026-05-13T00:00:00.000Z' },
+        {
+          id: 'component-1',
+          name: 'CTA',
+          nodeJson: '{}',
+          createdAt: '2026-05-13T00:00:00.000Z',
+          updatedAt: '2026-05-14T00:00:00.000Z',
+          pinned: true,
+          versions: [
+            { nodeJson: '{"id":"old"}', savedAt: '2026-05-13T00:00:00.000Z', label: ' Initial hero ' },
+            { nodeJson: '{"id":"empty-label"}', savedAt: '2026-05-12T12:00:00.000Z', label: '   ' },
+            { nodeJson: '', savedAt: '2026-05-12T00:00:00.000Z' },
+            { nodeJson: '{"id":"missing-date"}' },
+          ],
+        },
         { id: 'component-2', name: 'Broken', createdAt: '2026-05-13T00:00:00.000Z' },
       ],
       alignDistribute: { guideTolerancePx: 0 },
@@ -69,6 +82,19 @@ describe('editor preferences normalization', () => {
     expect(prefs.referenceGuides).toEqual([{ id: 'valid-guide', axis: 'vertical', position: 144 }]);
     expect(prefs.customKeybindings).toEqual([{ action: 'duplicate', combo: 'Mod+D' }]);
     expect(prefs.comments).toHaveLength(1);
-    expect(prefs.componentLibrary).toHaveLength(1);
+    expect(prefs.componentLibrary).toEqual([
+      {
+        id: 'component-1',
+        name: 'CTA',
+        nodeJson: '{}',
+        createdAt: '2026-05-13T00:00:00.000Z',
+        updatedAt: '2026-05-14T00:00:00.000Z',
+        pinned: true,
+        versions: [
+          { nodeJson: '{"id":"old"}', savedAt: '2026-05-13T00:00:00.000Z', label: 'Initial hero' },
+          { nodeJson: '{"id":"empty-label"}', savedAt: '2026-05-12T12:00:00.000Z' },
+        ],
+      },
+    ]);
   });
 });

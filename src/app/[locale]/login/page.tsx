@@ -6,9 +6,11 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-  title: 'Member login',
-};
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  const title = locale === 'ko' ? '회원 로그인' : locale === 'zh-hant' ? '會員登入' : 'Member sign in';
+  return { title };
+}
 
 function safeNext(locale: Locale, value?: string | string[]): string {
   const raw = Array.isArray(value) ? value[0] : value;

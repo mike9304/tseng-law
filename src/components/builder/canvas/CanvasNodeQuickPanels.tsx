@@ -9,6 +9,7 @@ import {
   readNodeText,
   type OfficeLocationPreset,
 } from '@/lib/builder/canvas/office-locations';
+import type { BuilderCodeBlockCanvasNode } from '@/lib/builder/canvas/types';
 import {
   BLOG_FEED_LAYOUT_PRESETS,
   currentBuilderLocale,
@@ -39,6 +40,9 @@ type CanvasNodeQuickPanelsProps = {
   currentSectionTemplateVariant: string;
   onSectionTemplateVariantChange: (variantKey: string) => void;
   showBlogFeedQuickEdit: boolean;
+  showCodeBlockQuickEdit: boolean;
+  codeBlockNode: BuilderCodeBlockCanvasNode | null;
+  onOpenCodeAssistant: () => void;
   blogFeedLayout: BlogFeedLayoutPreset['key'];
   onBlogFeedLayoutChange: (preset: BlogFeedLayoutPreset) => void;
   showColumnQuickActions: boolean;
@@ -85,6 +89,9 @@ export function CanvasNodeQuickPanels({
   currentSectionTemplateVariant,
   onSectionTemplateVariantChange,
   showBlogFeedQuickEdit,
+  showCodeBlockQuickEdit,
+  codeBlockNode,
+  onOpenCodeAssistant,
   blogFeedLayout,
   onBlogFeedLayoutChange,
   showColumnQuickActions,
@@ -185,6 +192,31 @@ export function CanvasNodeQuickPanels({
               {preset.label}
             </button>
           ))}
+        </div>
+      ) : null}
+
+      {showCodeBlockQuickEdit && codeBlockNode ? (
+        <div
+          className={styles.nodeQuickActions}
+          data-builder-code-block-quick-edit="true"
+          onPointerDown={(event) => {
+            event.stopPropagation();
+          }}
+          onMouseDown={(event) => {
+            event.stopPropagation();
+          }}
+          onClick={(event) => {
+            event.stopPropagation();
+          }}
+        >
+          <span className={styles.nodeBlogFeedQuickLabel}>Code block</span>
+          <button
+            type="button"
+            className={styles.nodeQuickActionPrimary}
+            onClick={onOpenCodeAssistant}
+          >
+            AI code
+          </button>
         </div>
       ) : null}
 

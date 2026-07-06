@@ -1,5 +1,6 @@
 'use client';
 
+import { memo, useMemo } from 'react';
 import styles from './SandboxPage.module.css';
 import type { OverlayRect } from './DragGhost';
 
@@ -20,25 +21,29 @@ interface SnapDistanceLabelProps {
 }
 
 const SHOW_THRESHOLD_PX = 64;
+const EMPTY_DISTANCE_MEASUREMENTS: DistanceMeasurement[] = [];
 
-function centerX(rect: OverlayRect): number {
-  return rect.x + rect.width / 2;
-}
+export function getSnapDistanceMeasurements(
+  active: OverlayRect | null,
+  others: readonly OverlayRect[],
+): DistanceMeasurement[] {
+  if (!active || others.length === 0) return EMPTY_DISTANCE_MEASUREMENTS;
 
-function centerY(rect: OverlayRect): number {
-  return rect.y + rect.height / 2;
-}
-
-function computeDistances(active: OverlayRect, others: OverlayRect[]): DistanceMeasurement[] {
-  const result: DistanceMeasurement[] = [];
   const aLeft = active.x;
   const aRight = active.x + active.width;
   const aTop = active.y;
   const aBottom = active.y + active.height;
-  let rightBest: { rect: OverlayRect; gap: number } | null = null;
-  let leftBest: { rect: OverlayRect; gap: number } | null = null;
-  let bottomBest: { rect: OverlayRect; gap: number } | null = null;
-  let topBest: { rect: OverlayRect; gap: number } | null = null;
+  const activeCenterX = active.x + active.width / 2;
+  const activeCenterY = active.y + active.height / 2;
+  let result: DistanceMeasurement[] | null = null;
+  let rightBestRect: OverlayRect | null = null;
+  let rightBestGap = Number.POSITIVE_INFINITY;
+  let leftBestRect: OverlayRect | null = null;
+  let leftBestGap = Number.POSITIVE_INFINITY;
+  let bottomBestRect: OverlayRect | null = null;
+  let bottomBestGap = Number.POSITIVE_INFINITY;
+  let topBestRect: OverlayRect | null = null;
+  let topBestGap = Number.POSITIVE_INFINITY;
 
   for (const other of others) {
     const oLeft = other.x;
@@ -50,79 +55,90 @@ function computeDistances(active: OverlayRect, others: OverlayRect[]): DistanceM
 
     if (verticalOverlap && oLeft >= aRight) {
       const gap = oLeft - aRight;
-      if (gap > 0 && gap <= SHOW_THRESHOLD_PX && (!rightBest || gap < rightBest.gap)) {
-        rightBest = { rect: other, gap };
+      if (gap > 0 && gap <= SHOW_THRESHOLD_PX && gap < rightBestGap) {
+        rightBestRect = other;
+        rightBestGap = gap;
       }
     }
     if (verticalOverlap && oRight <= aLeft) {
       const gap = aLeft - oRight;
-      if (gap > 0 && gap <= SHOW_THRESHOLD_PX && (!leftBest || gap < leftBest.gap)) {
-        leftBest = { rect: other, gap };
+      if (gap > 0 && gap <= SHOW_THRESHOLD_PX && gap < leftBestGap) {
+        leftBestRect = other;
+        leftBestGap = gap;
       }
     }
     if (horizontalOverlap && oTop >= aBottom) {
       const gap = oTop - aBottom;
-      if (gap > 0 && gap <= SHOW_THRESHOLD_PX && (!bottomBest || gap < bottomBest.gap)) {
-        bottomBest = { rect: other, gap };
+      if (gap > 0 && gap <= SHOW_THRESHOLD_PX && gap < bottomBestGap) {
+        bottomBestRect = other;
+        bottomBestGap = gap;
       }
     }
     if (horizontalOverlap && oBottom <= aTop) {
       const gap = aTop - oBottom;
-      if (gap > 0 && gap <= SHOW_THRESHOLD_PX && (!topBest || gap < topBest.gap)) {
-        topBest = { rect: other, gap };
+      if (gap > 0 && gap <= SHOW_THRESHOLD_PX && gap < topBestGap) {
+        topBestRect = other;
+        topBestGap = gap;
       }
     }
   }
 
-  if (rightBest) {
+  if (rightBestRect) {
+    result ??= [];
     result.push({
       key: 'right',
-      gap: rightBest.gap,
+      gap: rightBestGap,
       orientation: 'horizontal',
-      x: aRight + rightBest.gap / 2,
-      y: (centerY(active) + centerY(rightBest.rect)) / 2,
+      x: aRight + rightBestGap / 2,
+      y: (activeCenterY + rightBestRect.y + rightBestRect.height / 2) / 2,
     });
   }
-  if (leftBest) {
+  if (leftBestRect) {
+    result ??= [];
     result.push({
       key: 'left',
-      gap: leftBest.gap,
+      gap: leftBestGap,
       orientation: 'horizontal',
-      x: leftBest.rect.x + leftBest.rect.width + leftBest.gap / 2,
-      y: (centerY(active) + centerY(leftBest.rect)) / 2,
+      x: leftBestRect.x + leftBestRect.width + leftBestGap / 2,
+      y: (activeCenterY + leftBestRect.y + leftBestRect.height / 2) / 2,
     });
   }
-  if (bottomBest) {
+  if (bottomBestRect) {
+    result ??= [];
     result.push({
       key: 'bottom',
-      gap: bottomBest.gap,
+      gap: bottomBestGap,
       orientation: 'vertical',
-      x: (centerX(active) + centerX(bottomBest.rect)) / 2,
-      y: aBottom + bottomBest.gap / 2,
+      x: (activeCenterX + bottomBestRect.x + bottomBestRect.width / 2) / 2,
+      y: aBottom + bottomBestGap / 2,
     });
   }
-  if (topBest) {
+  if (topBestRect) {
+    result ??= [];
     result.push({
       key: 'top',
-      gap: topBest.gap,
+      gap: topBestGap,
       orientation: 'vertical',
-      x: (centerX(active) + centerX(topBest.rect)) / 2,
-      y: topBest.rect.y + topBest.rect.height + topBest.gap / 2,
+      x: (activeCenterX + topBestRect.x + topBestRect.width / 2) / 2,
+      y: topBestRect.y + topBestRect.height + topBestGap / 2,
     });
   }
 
-  return result;
+  return result ?? EMPTY_DISTANCE_MEASUREMENTS;
 }
 
-export default function SnapDistanceLabel({
+function SnapDistanceLabel({
   activeRect,
   otherRects,
   zoom,
   panX,
   panY,
 }: SnapDistanceLabelProps) {
-  if (!activeRect || otherRects.length === 0) return null;
-  const measurements = computeDistances(activeRect, otherRects);
+  const measurements = useMemo(
+    () => getSnapDistanceMeasurements(activeRect, otherRects),
+    [activeRect, otherRects],
+  );
+
   if (measurements.length === 0) return null;
 
   return (
@@ -145,3 +161,5 @@ export default function SnapDistanceLabel({
     </>
   );
 }
+
+export default memo(SnapDistanceLabel);

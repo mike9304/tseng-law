@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
@@ -6,6 +7,15 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 import styles from '@/components/members/MembersArea.module.css';
 
 export const dynamic = 'force-dynamic';
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  const title = locale === 'ko' ? '프리미엄 회원 영역' : locale === 'zh-hant' ? '進階會員區' : 'Premium member area';
+  return {
+    title,
+    robots: { index: false, follow: false },
+  };
+}
 
 export default async function MemberPremiumPage({ params }: { params: { locale: Locale } }) {
   const locale = normalizeLocale(params.locale);

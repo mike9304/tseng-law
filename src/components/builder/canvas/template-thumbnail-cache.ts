@@ -11,8 +11,8 @@ interface TemplateCacheEntry {
 const MAX_ENTRIES_PER_TEMPLATE = 6;
 const cache = new WeakMap<PageTemplate, TemplateCacheEntry>();
 
-export function buildThumbnailKey(width: number, height: number, tone: string): ThumbnailKey {
-  return `${width}x${height}@${tone}`;
+export function buildThumbnailKey(width: number, height: number, tone: string, variant = 'default'): ThumbnailKey {
+  return `${width}x${height}@${tone}:${variant}`;
 }
 
 export function getCachedThumbnail(template: PageTemplate, key: ThumbnailKey): ReactElement | undefined {

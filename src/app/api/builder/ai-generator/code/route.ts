@@ -14,7 +14,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
   buildCodeAssistantPrompt,
-  buildUnifiedDiff,
+  buildUnifiedDiffResult,
   codeAssistantResponseSchema,
   codeAssistantSchema,
   CODE_ASSISTANT_ACTIONS,
@@ -55,8 +55,27 @@ function maxTokensFor(action: CodeAssistantInput['action']): number {
   return 1400;
 }
 
-function diffFilename(language: 'js' | 'ts'): string {
-  return language === 'js' ? 'function.js' : 'function.ts';
+function diffFilename(language: string): string {
+  switch (language) {
+    case 'js':
+      return 'function.js';
+    case 'jsx':
+      return 'function.jsx';
+    case 'tsx':
+      return 'function.tsx';
+    case 'json':
+      return 'snippet.json';
+    case 'html':
+      return 'snippet.html';
+    case 'css':
+      return 'snippet.css';
+    case 'bash':
+      return 'snippet.sh';
+    case 'text':
+      return 'snippet.txt';
+    default:
+      return 'function.ts';
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -161,8 +180,8 @@ export async function POST(request: NextRequest) {
 
   const { explanation, fixedCode } = parsedResult.data;
   const trimmedFixed = fixedCode && fixedCode.trim() ? fixedCode : null;
-  const diff = trimmedFixed && trimmedFixed !== input.code
-    ? buildUnifiedDiff(input.code, trimmedFixed, diffFilename(input.language))
+  const diffResult = trimmedFixed && trimmedFixed !== input.code
+    ? buildUnifiedDiffResult(input.code, trimmedFixed, diffFilename(input.language))
     : undefined;
 
   return NextResponse.json({
@@ -172,7 +191,8 @@ export async function POST(request: NextRequest) {
     language: input.language,
     result: explanation,
     fixedCode: trimmedFixed ?? undefined,
-    diff,
+    diff: diffResult?.text,
+    diffHunks: diffResult?.hunks,
     supportedActions: CODE_ASSISTANT_ACTIONS,
     finishReason: payload.choices?.[0]?.finish_reason ?? null,
   });

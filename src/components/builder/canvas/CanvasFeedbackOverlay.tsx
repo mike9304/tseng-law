@@ -1,43 +1,55 @@
 'use client';
 
-import type { ZoomState } from '@/lib/builder/canvas/zoom';
+import { memo } from 'react';
 import DragGhost, { type OverlayRect } from './DragGhost';
 import MultiSelectionBoundingBox from './MultiSelectionBoundingBox';
 import ResizeReadout from './ResizeReadout';
 import SnapDistanceLabel from './SnapDistanceLabel';
+import type { Locale } from '@/lib/locales';
 
 interface CanvasFeedbackOverlayProps {
   interactionMode: 'move' | 'resize' | null;
   startRects: OverlayRect[];
   currentRects: OverlayRect[];
+  locale?: Locale;
   resizeRect: OverlayRect | null;
   resizePointer: { x: number; y: number } | null;
   multiSelectionBbox: OverlayRect | null;
   selectedCount: number;
   snapActiveRect: OverlayRect | null;
   snapOtherRects: OverlayRect[];
-  zoomState: Pick<ZoomState, 'zoom' | 'panX' | 'panY'>;
+  zoom: number;
+  panX: number;
+  panY: number;
 }
 
-export default function CanvasFeedbackOverlay({
+function CanvasFeedbackOverlay({
   interactionMode,
   startRects,
   currentRects,
+  locale,
   resizeRect,
   resizePointer,
   multiSelectionBbox,
   selectedCount,
   snapActiveRect,
   snapOtherRects,
-  zoomState,
+  zoom,
+  panX,
+  panY,
 }: CanvasFeedbackOverlayProps) {
-  const { zoom, panX, panY } = zoomState;
+  const dragGhostMode = interactionMode && startRects.length > 0 ? interactionMode : null;
+  const shouldRenderResizeReadout = Boolean(interactionMode === 'resize' && resizeRect);
+  const shouldRenderMultiSelectionBbox = Boolean(!interactionMode && multiSelectionBbox && selectedCount >= 2);
+  const shouldRenderSnapDistanceLabel = Boolean(
+    interactionMode && snapActiveRect && snapOtherRects.length > 0,
+  );
 
   return (
     <>
-      {interactionMode ? (
+      {dragGhostMode ? (
         <DragGhost
-          mode={interactionMode}
+          mode={dragGhostMode}
           startRects={startRects}
           currentRects={currentRects}
           zoom={zoom}
@@ -45,7 +57,7 @@ export default function CanvasFeedbackOverlay({
           panY={panY}
         />
       ) : null}
-      {interactionMode === 'resize' ? (
+      {shouldRenderResizeReadout ? (
         <ResizeReadout
           currentRect={resizeRect}
           pointer={resizePointer}
@@ -54,10 +66,14 @@ export default function CanvasFeedbackOverlay({
           panY={panY}
         />
       ) : null}
-      {!interactionMode ? (
-        <MultiSelectionBoundingBox bbox={multiSelectionBbox} selectedCount={selectedCount} />
+      {shouldRenderMultiSelectionBbox ? (
+        <MultiSelectionBoundingBox
+          bbox={multiSelectionBbox}
+          locale={locale}
+          selectedCount={selectedCount}
+        />
       ) : null}
-      {interactionMode ? (
+      {shouldRenderSnapDistanceLabel ? (
         <SnapDistanceLabel
           activeRect={snapActiveRect}
           otherRects={snapOtherRects}
@@ -69,3 +85,5 @@ export default function CanvasFeedbackOverlay({
     </>
   );
 }
+
+export default memo(CanvasFeedbackOverlay);

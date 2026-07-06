@@ -1,6 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
+import {
+  interpolateTimelineFrame,
+  parseRuntimeTimelineKeyframes,
+  type RuntimeTimelineKeyframe,
+} from './motionTimelineRuntime';
 
 function clamp(value: number, min: number, max: number): number {
   return Math.max(min, Math.min(max, value));
@@ -31,6 +36,18 @@ function composeBackgroundParallaxPosition(basePosition: string, offset: number)
   return positions.join(', ');
 }
 
+function isInInitialViewport(node: HTMLElement): boolean {
+  const rect = node.getBoundingClientRect();
+  const viewportWidth = window.innerWidth || document.documentElement.clientWidth || 1;
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 1;
+  return rect.width > 0
+    && rect.height > 0
+    && rect.bottom > 0
+    && rect.right > 0
+    && rect.top < viewportHeight
+    && rect.left < viewportWidth;
+}
+
 export default function AnimationsRoot() {
   useEffect(() => {
     const entranceNodes = Array.from(
@@ -59,6 +76,12 @@ export default function AnimationsRoot() {
 
       entranceNodes.forEach((node) => {
         node.dataset.animState = node.dataset.animState || 'pending';
+        if (isInInitialViewport(node)) {
+          node.dataset.animState = 'visible';
+          if (node.dataset.animOnce !== 'false') {
+            return;
+          }
+        }
         observer?.observe(node);
       });
     } else {
@@ -66,6 +89,7 @@ export default function AnimationsRoot() {
         node.dataset.animState = 'visible';
       });
     }
+    document.documentElement.dataset.builderAnimationsReady = 'true';
 
     const scrollNodes = Array.from(
       document.querySelectorAll<HTMLElement>('[data-anim-scroll]'),
@@ -227,72 +251,48 @@ export default function AnimationsRoot() {
       clickListeners.push({ node, listener });
     });
 
-    // Phase 22 W173 — Motion timeline runtime.
-    interface ParsedKeyframe {
-      offset?: number;
-      timeOffset?: number;
-      transform?: string;
-      opacity?: number;
-      properties?: {
-        transform?: string;
-        opacity?: number;
-      };
-      easing?: string;
-    }
-    interface RuntimeKeyframe {
-      offset: number;
-      transform?: string;
-      opacity?: number;
-      easing?: string;
-    }
     const timelineNodes = Array.from(
       document.querySelectorAll<HTMLElement>('[data-anim-timeline]'),
     );
-    const timelineSpecs: Array<{ node: HTMLElement; keyframes: RuntimeKeyframe[]; mode: 'scroll' | 'time'; durationMs: number; startedAt: number }> = [];
+    const timelineSpecs: Array<{ node: HTMLElement; keyframes: RuntimeTimelineKeyframe[]; mode: 'scroll' | 'time'; durationMs: number; startedAt: number; baseCenterY: number }> = [];
     timelineNodes.forEach((node) => {
       try {
-        const parsed = JSON.parse(node.dataset.animTimeline ?? '[]') as ParsedKeyframe[];
-        if (!Array.isArray(parsed) || parsed.length === 0) return;
-        const keyframes = parsed
-          .map((keyframe) => ({
-            offset: clamp(Number(keyframe.offset ?? keyframe.timeOffset ?? 0), 0, 1),
-            transform: keyframe.transform ?? keyframe.properties?.transform,
-            opacity: keyframe.opacity ?? keyframe.properties?.opacity,
-            easing: keyframe.easing,
-          }))
-          .sort((a, b) => a.offset - b.offset);
+        const parsed: unknown = JSON.parse(node.dataset.animTimeline ?? '[]');
+        const keyframes = parseRuntimeTimelineKeyframes(parsed);
+        if (keyframes.length === 0) return;
+        const rect = node.getBoundingClientRect();
         timelineSpecs.push({
           node,
           keyframes,
-          mode: (node.dataset.animTimelineMode as 'scroll' | 'time') || 'time',
+          mode: node.dataset.animTimelineMode === 'scroll' ? 'scroll' : 'time',
           durationMs: Number(node.dataset.animTimelineDuration) || 1200,
           startedAt: performance.now(),
+          baseCenterY: rect.top + window.scrollY + rect.height / 2,
         });
       } catch {
-        /* ignore malformed timeline */
+        return;
       }
     });
 
-    function interpolate(spec: typeof timelineSpecs[number], progress: number): void {
-      const kfs = spec.keyframes;
-      let a = kfs[0];
-      let b = kfs[kfs.length - 1];
-      for (let i = 0; i < kfs.length - 1; i++) {
-        if (progress >= kfs[i].offset && progress <= kfs[i + 1].offset) {
-          a = kfs[i];
-          b = kfs[i + 1];
-          break;
+    function refreshTimelineBaseMetrics(): void {
+      for (const spec of timelineSpecs) {
+        const previousTransform = spec.node.style.getPropertyValue('--builder-anim-timeline-transform');
+        if (previousTransform) spec.node.style.removeProperty('--builder-anim-timeline-transform');
+        const rect = spec.node.getBoundingClientRect();
+        spec.baseCenterY = rect.top + window.scrollY + rect.height / 2;
+        if (previousTransform) {
+          spec.node.style.setProperty('--builder-anim-timeline-transform', previousTransform);
         }
       }
-      const span = b.offset - a.offset || 1;
-      const t = (progress - a.offset) / span;
-      if (a.transform || b.transform) {
-        spec.node.style.setProperty('--builder-anim-timeline-transform', t > 0.5 ? (b.transform ?? 'none') : (a.transform ?? 'none'));
+    }
+
+    function interpolate(spec: typeof timelineSpecs[number], progress: number): void {
+      const frame = interpolateTimelineFrame(spec.keyframes, progress);
+      if (frame.transform) {
+        spec.node.style.setProperty('--builder-anim-timeline-transform', frame.transform);
       }
-      if (a.opacity !== undefined || b.opacity !== undefined) {
-        const av = a.opacity ?? 1;
-        const bv = b.opacity ?? 1;
-        spec.node.style.setProperty('--builder-anim-timeline-opacity', String(av + (bv - av) * t));
+      if (frame.opacity !== undefined) {
+        spec.node.style.setProperty('--builder-anim-timeline-opacity', String(frame.opacity));
       }
     }
 
@@ -304,9 +304,8 @@ export default function AnimationsRoot() {
           const elapsed = (now - spec.startedAt) % spec.durationMs;
           interpolate(spec, elapsed / spec.durationMs);
         } else {
-          const rect = spec.node.getBoundingClientRect();
           const vh = window.innerHeight || 1;
-          const raw = 1 - (rect.top + rect.height / 2) / vh;
+          const raw = 1 - ((spec.baseCenterY - window.scrollY) / vh);
           const progress = Math.max(0, Math.min(1, raw));
           interpolate(spec, progress);
         }
@@ -315,6 +314,7 @@ export default function AnimationsRoot() {
     }
     if (timelineSpecs.length > 0) {
       timelineFrame = window.requestAnimationFrame(tickTimeline);
+      window.addEventListener('resize', refreshTimelineBaseMetrics);
     }
 
     return () => {
@@ -322,6 +322,7 @@ export default function AnimationsRoot() {
       exitObserver?.disconnect();
       if (animationFrame) window.cancelAnimationFrame(animationFrame);
       if (timelineFrame) window.cancelAnimationFrame(timelineFrame);
+      window.removeEventListener('resize', refreshTimelineBaseMetrics);
       clickTimers.forEach((timer) => window.clearTimeout(timer));
       clickListeners.forEach(({ node, listener }) => {
         node.removeEventListener('click', listener);
@@ -332,12 +333,12 @@ export default function AnimationsRoot() {
   }, []);
 
   return (
-    <style>{`
+    <style dangerouslySetInnerHTML={{ __html: `
       .builder-pub-node[data-anim-entrance] {
         transform-origin: center center;
         will-change: opacity, transform, clip-path;
       }
-      .builder-pub-node[data-anim-entrance][data-anim-state='pending'] {
+      html[data-builder-animations-ready='true'] .builder-pub-node[data-anim-entrance][data-anim-state='pending'] {
         opacity: var(--builder-anim-initial-opacity, 0) !important;
         transform: var(--builder-anim-initial-transform, var(--builder-base-transform, none)) !important;
         clip-path: var(--builder-anim-initial-clip-path, inset(0 0 0 0));
@@ -427,6 +428,6 @@ export default function AnimationsRoot() {
           filter: none !important;
         }
       }
-    `}</style>
+    ` }} />
   );
 }

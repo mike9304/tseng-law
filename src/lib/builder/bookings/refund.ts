@@ -1,5 +1,5 @@
 import type { Booking, BookingCancellationPolicy, BookingService } from './types';
-import { getService } from './storage';
+import { getCancellationPolicy, getService } from './storage';
 
 /**
  * Shared cancel-refund logic used by /api/booking/cancel and
@@ -10,7 +10,7 @@ import { getService } from './storage';
 
 interface CancellationPolicyShape extends Pick<
   BookingCancellationPolicy,
-  'policyId' | 'name' | 'description' | 'fullRefundHoursBefore' | 'partialRefundHoursBefore' | 'partialRefundPercent'
+  'policyId' | 'name' | 'description' | 'fullRefundHoursBefore' | 'partialRefundHoursBefore' | 'partialRefundPercent' | 'cancellationFeePercent'
 > {
   cancelHoursBefore: number;
   rescheduleHoursBefore: number;
@@ -28,7 +28,9 @@ export interface BookingSelfServicePolicy {
   fullRefundHoursBefore: number;
   partialRefundHoursBefore: number;
   partialRefundPercent: number;
+  cancellationFeePercent: number;
   refundDecision: RefundDecision;
+  refundAmountCents?: number;
   cancelBlockedReason?: string;
   rescheduleBlockedReason?: string;
 }
@@ -42,39 +44,7 @@ const DEFAULT_SELF_SERVICE_POLICY: CancellationPolicyShape = {
   fullRefundHoursBefore: 0,
   partialRefundHoursBefore: 0,
   partialRefundPercent: 0,
-};
-
-const CANCELLATION_POLICIES: Record<string, CancellationPolicyShape> = {
-  'standard-24h': {
-    policyId: 'standard-24h',
-    name: 'Standard policy',
-    description: 'Full refund 24 hours before start, partial refund 6 hours before start.',
-    cancelHoursBefore: 0,
-    rescheduleHoursBefore: 6,
-    fullRefundHoursBefore: 24,
-    partialRefundHoursBefore: 6,
-    partialRefundPercent: 50,
-  },
-  'strict-48h': {
-    policyId: 'strict-48h',
-    name: 'Strict policy',
-    description: 'Full refund 48 hours before start, partial refund 24 hours before start.',
-    cancelHoursBefore: 6,
-    rescheduleHoursBefore: 24,
-    fullRefundHoursBefore: 48,
-    partialRefundHoursBefore: 24,
-    partialRefundPercent: 50,
-  },
-  'flexible-6h': {
-    policyId: 'flexible-6h',
-    name: 'Flexible policy',
-    description: 'Full refund 6 hours before start.',
-    cancelHoursBefore: 0,
-    rescheduleHoursBefore: 0,
-    fullRefundHoursBefore: 6,
-    partialRefundHoursBefore: 0,
-    partialRefundPercent: 0,
-  },
+  cancellationFeePercent: 0,
 };
 
 export type RefundDecision = 'full' | 'partial' | 'none';
@@ -83,6 +53,7 @@ export interface RefundOutcome {
   decision: RefundDecision;
   hoursUntilStart: number;
   refundResult: { ok: boolean; refundId?: string; error?: string } | null;
+  refundAmountCents?: number;
   partialAmountCents?: number;
 }
 
@@ -95,27 +66,70 @@ function refundDecisionFor(
   policy: CancellationPolicyShape | null,
   hoursUntilStart: number,
 ): RefundDecision {
-  if (!policy || booking.paymentStatus !== 'paid') return 'none';
+  if (!policy || !hasRefundableOnlinePayment(booking)) return 'none';
   if (hoursUntilStart >= policy.fullRefundHoursBefore) return 'full';
   if (policy.partialRefundPercent > 0 && hoursUntilStart >= policy.partialRefundHoursBefore) return 'partial';
   return 'none';
 }
 
-export function resolveCancellationPolicy(service?: BookingService | null): CancellationPolicyShape | null {
+function hasRefundableOnlinePayment(booking: Booking): boolean {
+  return booking.paymentStatus === 'paid' || booking.paymentStatus === 'partially_paid';
+}
+
+function refundableOnlineAmount(booking: Booking, service: BookingService): number {
+  const onlinePaidAmount = Math.max(0, Math.floor(booking.onlinePaidAmount ?? 0));
+  if (onlinePaidAmount > 0) return onlinePaidAmount;
+  const totalAmount = Math.max(0, Math.floor(booking.paymentAmount ?? service.priceAmount ?? service.priceTwd ?? 0));
+  const dueNowAmount = Math.max(0, Math.floor(booking.paymentDueNow ?? 0));
+  if (booking.paymentStatus === 'partially_paid') {
+    return dueNowAmount > 0 ? Math.min(dueNowAmount, totalAmount) : 0;
+  }
+  return totalAmount;
+}
+
+function refundAmountForDecision(
+  booking: Booking,
+  service: BookingService | null | undefined,
+  policy: CancellationPolicyShape | null,
+  decision: RefundDecision,
+): number {
+  if (!policy || !hasRefundableOnlinePayment(booking) || decision === 'none' || !service) return 0;
+  const gross = refundableOnlineAmount(booking, service);
+  if (gross <= 0) return 0;
+  const baseRefund = decision === 'full'
+    ? gross
+    : Math.floor((gross * policy.partialRefundPercent) / 100);
+  if (baseRefund <= 0) return 0;
+  const fee = Math.floor((baseRefund * policy.cancellationFeePercent) / 100);
+  return Math.max(0, baseRefund - fee);
+}
+
+function toCancellationPolicyShape(policy: BookingCancellationPolicy): CancellationPolicyShape {
+  return {
+    policyId: policy.policyId,
+    name: policy.name,
+    description: policy.description,
+    cancelHoursBefore: policy.cancelHoursBefore,
+    rescheduleHoursBefore: policy.rescheduleHoursBefore,
+    fullRefundHoursBefore: policy.fullRefundHoursBefore,
+    partialRefundHoursBefore: policy.partialRefundHoursBefore,
+    partialRefundPercent: policy.partialRefundPercent,
+    cancellationFeePercent: policy.cancellationFeePercent,
+  };
+}
+
+export async function resolveCancellationPolicy(service?: BookingService | null): Promise<CancellationPolicyShape | null> {
   if (!service?.cancellationPolicyId) return null;
-  return CANCELLATION_POLICIES[service.cancellationPolicyId] ?? CANCELLATION_POLICIES['standard-24h'];
+  const policy = await getCancellationPolicy(service.cancellationPolicyId);
+  return policy ? toCancellationPolicyShape(policy) : null;
 }
 
-async function loadPolicyForService(serviceId: string): Promise<CancellationPolicyShape | null> {
-  return resolveCancellationPolicy(await getService(serviceId));
-}
-
-export function evaluateBookingSelfServicePolicy(
+export async function evaluateBookingSelfServicePolicy(
   booking: Booking,
   service?: BookingService | null,
   now = Date.now(),
-): BookingSelfServicePolicy {
-  const policy = resolveCancellationPolicy(service);
+): Promise<BookingSelfServicePolicy> {
+  const policy = await resolveCancellationPolicy(service);
   const effectivePolicy = policy ?? DEFAULT_SELF_SERVICE_POLICY;
   const hoursUntilStart = hoursUntil(booking.startAt, now);
   const isManageableStatus = booking.status === 'pending' || booking.status === 'confirmed';
@@ -135,7 +149,9 @@ export function evaluateBookingSelfServicePolicy(
     fullRefundHoursBefore: effectivePolicy.fullRefundHoursBefore,
     partialRefundHoursBefore: effectivePolicy.partialRefundHoursBefore,
     partialRefundPercent: effectivePolicy.partialRefundPercent,
+    cancellationFeePercent: effectivePolicy.cancellationFeePercent,
     refundDecision: refundDecisionFor(booking, policy, hoursUntilStart),
+    refundAmountCents: refundAmountForDecision(booking, service, policy, refundDecisionFor(booking, policy, hoursUntilStart)),
     ...(!canCancel
       ? { cancelBlockedReason: !isManageableStatus ? 'Booking is no longer active.' : hoursUntilStart <= 0 ? 'Booking has already started.' : `Cancellation requires at least ${effectivePolicy.cancelHoursBefore} hours before start.` }
       : {}),
@@ -169,29 +185,25 @@ async function attemptStripeRefund(paymentIntentId: string, amountCents?: number
 }
 
 export async function computeRefundForCancel(booking: Booking, service?: BookingService): Promise<RefundOutcome> {
-  const policy = service ? resolveCancellationPolicy(service) : await loadPolicyForService(booking.serviceId);
+  const resolvedService = service ?? await getService(booking.serviceId);
+  const policy = resolvedService ? await resolveCancellationPolicy(resolvedService) : null;
   const hoursUntilStart = hoursUntil(booking.startAt);
   const decision = refundDecisionFor(booking, policy, hoursUntilStart);
-
+  const refundAmountCents = refundAmountForDecision(booking, resolvedService, policy, decision);
   let partialAmountCents: number | undefined;
   let refundResult: RefundOutcome['refundResult'] = null;
-  if (decision !== 'none' && booking.paymentIntentId) {
-    if (decision === 'partial' && policy) {
-      const svc = service ?? (await getService(booking.serviceId));
-      if (svc?.priceAmount && svc.priceAmount > 0) {
-        partialAmountCents = Math.max(
-          1,
-          Math.floor((svc.priceAmount * policy.partialRefundPercent) / 100),
-        );
-      }
+  if (decision !== 'none' && refundAmountCents > 0 && booking.paymentIntentId) {
+    if (decision === 'partial') {
+      partialAmountCents = refundAmountCents;
     }
-    refundResult = await attemptStripeRefund(booking.paymentIntentId, partialAmountCents);
+    refundResult = await attemptStripeRefund(booking.paymentIntentId, refundAmountCents);
   }
 
   return {
     decision,
     hoursUntilStart,
     refundResult,
+    refundAmountCents,
     partialAmountCents,
   };
 }

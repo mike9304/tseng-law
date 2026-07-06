@@ -16,12 +16,12 @@ const copy: Record<Locale, { title: string; description: string; eyebrow: string
   ko: {
     title: '스토어',
     description: '대만 법률 실무에 필요한 가이드, 상담 패키지, 디지털 상품을 컬렉션별로 확인하세요.',
-    eyebrow: 'Store',
+    eyebrow: '스토어',
   },
   'zh-hant': {
     title: '商店',
     description: '依系列瀏覽台灣法律實務指南、諮詢套組與數位商品。',
-    eyebrow: 'Store',
+    eyebrow: '商店',
   },
   en: {
     title: 'Store',

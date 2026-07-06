@@ -1,0 +1,140 @@
+.repeaterTemplateChildControls {
+  position: absolute;
+  top: calc(4px / var(--canvas-zoom, 1));
+  left: calc(4px / var(--canvas-zoom, 1));
+  z-index: 50020;
+  display: grid;
+  max-width: min(360px, calc(100vw - 96px));
+  gap: 4px;
+  pointer-events: auto;
+}
+
+.repeaterTemplateChildBadge {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  gap: 6px;
+  padding: 4px 7px;
+  border: 1px solid color-mix(in srgb, var(--insp-accent, #2563eb) 36%, transparent);
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--editor-panel, #fff) 97%, var(--insp-accent, #2563eb));
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
+  color: var(--editor-fg-primary, #0f172a);
+  cursor: pointer;
+  font-family: inherit;
+  pointer-events: auto;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.repeaterTemplateChildBadge:hover {
+  border-color: color-mix(in srgb, var(--insp-accent, #2563eb) 46%, transparent);
+  background: color-mix(in srgb, var(--editor-panel, #fff) 90%, var(--insp-accent, #2563eb));
+}
+
+.repeaterTemplateChildBadge:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--insp-accent, #2563eb) 58%, transparent);
+  outline-offset: 2px;
+}
+
+.repeaterTemplateChildBadge span,
+.repeaterTemplateChildBadge strong {
+  min-width: 0;
+  overflow: hidden;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+}
+
+.repeaterTemplateChildBadge span {
+  color: var(--insp-accent, #2563eb);
+  font-size: 10px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.repeaterTemplateChildBadge strong {
+  color: var(--editor-fg-primary, #0f172a);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.repeaterTemplateChildLockToggle {
+  appearance: none;
+  display: inline-flex;
+  width: max-content;
+  max-width: 112px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 7px;
+  border: 1px solid color-mix(in srgb, var(--insp-accent, #2563eb) 24%, transparent);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--editor-panel, #fff) 96%, transparent);
+  color: var(--insp-accent, #2563eb);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.repeaterTemplateChildLockToggle:hover {
+  border-color: color-mix(in srgb, var(--insp-accent, #2563eb) 44%, transparent);
+  background: color-mix(in srgb, var(--editor-panel, #fff) 92%, var(--insp-accent, #2563eb));
+}
+
+.repeaterTemplateChildLockToggle:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--insp-accent, #2563eb) 50%, transparent);
+  outline-offset: 1px;
+}
+
+.repeaterTemplateChildLockToggle[data-builder-repeater-template-child-lock-state='locked'] {
+  border-color: color-mix(in srgb, var(--editor-fg-muted, #64748b) 28%, transparent);
+  background: color-mix(in srgb, var(--editor-panel, #fff) 97%, var(--editor-fg-muted, #64748b));
+  color: var(--editor-fg-secondary, #334155);
+}
+
+.repeaterTemplateChildGroupButton,
+.repeaterTemplateChildDuplicateButton,
+.repeaterTemplateChildUngroupButton {
+  appearance: none;
+  display: inline-flex;
+  width: max-content;
+  max-width: 132px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 7px;
+  border: 1px solid color-mix(in srgb, var(--insp-accent, #2563eb) 24%, transparent);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--editor-panel, #fff) 96%, transparent);
+  color: var(--insp-accent, #2563eb);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.repeaterTemplateChildGroupButton:hover,
+.repeaterTemplateChildDuplicateButton:hover,
+.repeaterTemplateChildUngroupButton:hover {
+  border-color: color-mix(in srgb, var(--insp-accent, #2563eb) 44%, transparent);
+  background: color-mix(in srgb, var(--editor-panel, #fff) 92%, var(--insp-accent, #2563eb));
+}
+
+.repeaterTemplateChildGroupButton:focus-visible,
+.repeaterTemplateChildDuplicateButton:focus-visible,
+.repeaterTemplateChildUngroupButton:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--insp-accent, #2563eb) 50%, transparent);
+  outline-offset: 1px;
+}

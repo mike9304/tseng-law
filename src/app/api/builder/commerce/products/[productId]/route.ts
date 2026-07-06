@@ -3,6 +3,10 @@ import { ZodError, z } from 'zod';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
+  getCommerceProductsApiErrorPayload,
+  type CommerceProductsApiErrorCode,
+} from '@/lib/builder/commerce/products-api-copy';
+import {
   archiveProduct,
   deleteProduct,
   duplicateProduct,
@@ -14,6 +18,7 @@ import type {
   CommerceInventory,
   CommerceProduct,
 } from '@/lib/builder/commerce/products-shared';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -98,44 +103,63 @@ function mergeInventory(
   return patch ? { ...base, ...patch } : base;
 }
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: CommerceProductsApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getCommerceProductsApiErrorPayload(locale, errorCode), ...extras },
+    { status },
   );
 }
 
-function commerceError(error: unknown): NextResponse {
-  if (error instanceof Error && error.message.startsWith('commerce_product_sku_conflict:')) {
-    return NextResponse.json({ ok: false, error: 'sku_conflict', message: error.message }, { status: 409 });
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
+function isSkuConflictError(error: unknown): boolean {
+  if (!(error instanceof Error)) return false;
+  const { message } = error;
+  return message.startsWith('commerce_product_sku_conflict:');
+}
+
+function commerceError(locale: Locale, fallbackCode: CommerceProductsApiErrorCode, error: unknown): NextResponse {
+  if (isSkuConflictError(error)) {
+    return errorResponse(locale, 'sku_conflict', 409);
   }
-  return NextResponse.json(
-    { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
-    { status: 500 },
-  );
+  return errorResponse(locale, fallbackCode, 500);
 }
 
 export async function GET(request: NextRequest, { params }: { params: { productId: string } }) {
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const scope = request.nextUrl.searchParams.get('scope') ?? 'public';
   if (scope === 'all') {
     const auth = requireBuilderAdminAuth(request);
     if (auth instanceof NextResponse) return auth;
   }
 
-  const product = await loadProduct(params.productId);
-  if (!product || (scope !== 'all' && product.status !== 'active')) {
-    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  try {
+    const product = await loadProduct(params.productId);
+    if (!product || (scope !== 'all' && product.status !== 'active')) {
+      return errorResponse(errorLocale, 'product_not_found', 404);
+    }
+    return NextResponse.json({ ok: true, product });
+  } catch (error) {
+    console.error('[builder/commerce/products/:productId] GET failed:', error);
+    return commerceError(errorLocale, 'products_failed', error);
   }
-  return NextResponse.json({ ok: true, product });
 }
 
 export async function PATCH(request: NextRequest, { params }: { params: { productId: string } }) {
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
   try {
     const product = await loadProduct(params.productId);
-    if (!product) return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+    if (!product) return errorResponse(errorLocale, 'product_not_found', 404);
     const patch = patchSchema.parse(await request.json());
     const nextProduct: CommerceProduct = {
       ...product,
@@ -145,17 +169,18 @@ export async function PATCH(request: NextRequest, { params }: { params: { produc
     };
     const saved = await saveProduct(nextProduct);
     const errors = validateProduct(saved);
-    if (errors.length > 0) return NextResponse.json({ ok: false, error: 'validation_error', errors }, { status: 400 });
+    if (errors.length > 0) return errorResponse(errorLocale, 'validation_error', 400, { errors });
     return NextResponse.json({ ok: true, product: saved });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
-    if (error instanceof SyntaxError) return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+    if (error instanceof ZodError) return validationError(errorLocale, error);
+    if (error instanceof SyntaxError) return errorResponse(errorLocale, 'invalid_json', 400);
     console.error('[builder/commerce/products/:productId] PATCH failed:', error);
-    return commerceError(error);
+    return commerceError(errorLocale, 'product_save_failed', error);
   }
 }
 
 export async function POST(request: NextRequest, { params }: { params: { productId: string } }) {
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
@@ -164,19 +189,25 @@ export async function POST(request: NextRequest, { params }: { params: { product
     const product = action === 'duplicate'
       ? await duplicateProduct(params.productId)
       : await archiveProduct(params.productId);
-    if (!product) return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+    if (!product) return errorResponse(errorLocale, 'product_not_found', 404);
     return NextResponse.json({ ok: true, product }, { status: action === 'duplicate' ? 201 : 200 });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
-    if (error instanceof SyntaxError) return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+    if (error instanceof ZodError) return validationError(errorLocale, error);
+    if (error instanceof SyntaxError) return errorResponse(errorLocale, 'invalid_json', 400);
     console.error('[builder/commerce/products/:productId] POST failed:', error);
-    return commerceError(error);
+    return commerceError(errorLocale, 'product_action_failed', error);
   }
 }
 
 export async function DELETE(request: NextRequest, { params }: { params: { productId: string } }) {
+  const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
-  await deleteProduct(params.productId);
-  return NextResponse.json({ ok: true });
+  try {
+    await deleteProduct(params.productId);
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error('[builder/commerce/products/:productId] DELETE failed:', error);
+    return commerceError(errorLocale, 'product_action_failed', error);
+  }
 }

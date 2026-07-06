@@ -2,9 +2,17 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { readPageCanvas, readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
-import { normalizeLocale } from '@/lib/locales';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getSiteUrl } from '@/lib/seo';
 import { buildSeoAssistantTasks } from '@/lib/builder/seo/assistant';
+import { resolveLocaleSeo } from '@/lib/builder/translations/seo-projection';
+import { getSeoRouteErrorCopy } from '@/lib/builder/seo/route-copy';
+import type { BuilderSeoMetadata } from '@/lib/builder/site/types';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
+import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -20,18 +28,69 @@ const assistantPatchSchema = z.object({
   ),
 }).strict();
 
-function validationErrorResponse(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+  extra: Record<string, unknown> = {},
+  errorOverride?: string,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    {
+      ok: false,
+      ...getBuilderSiteApiErrorPayload(locale, errorCode),
+      ...(errorOverride ? { error: errorOverride } : {}),
+      ...extra,
+    },
+    { status },
   );
 }
 
-function notFound(pageId: string): NextResponse {
-  return NextResponse.json(
-    { ok: false, error: `Page not found: ${pageId}` },
-    { status: 404 },
-  );
+function validationErrorResponse(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
+function notFound(pageId: string, locale: Locale): NextResponse {
+  const copy = getSeoRouteErrorCopy(locale, 'seo-assistant');
+  return errorResponse(locale, 'page_not_found', 404, { pageId }, copy.pageNotFound(pageId));
+}
+
+function invalidJsonPayloadResponse(locale: Locale): NextResponse {
+  const copy = getSeoRouteErrorCopy(locale, 'seo-assistant');
+  return errorResponse(locale, 'invalid_json', 400, {}, copy.invalidJsonPayload);
+}
+
+function unknownErrorResponse(locale: Locale): NextResponse {
+  return errorResponse(locale, 'seo_assistant_request_failed', 500);
+}
+
+function applyLocalizedFocusKeyword(
+  existingSeo: BuilderSeoMetadata | undefined,
+  pageLocale: string,
+  locale: string,
+  focusKeyword: string | undefined,
+): BuilderSeoMetadata | undefined {
+  const nextSeo: BuilderSeoMetadata = { ...(existingSeo ?? {}) };
+  if (pageLocale === locale) {
+    if (focusKeyword) nextSeo.focusKeyword = focusKeyword;
+    else delete nextSeo.focusKeyword;
+    return Object.keys(nextSeo).length > 0 ? nextSeo : undefined;
+  }
+
+  const overrides = { ...(nextSeo.localizedOverrides ?? {}) };
+  const currentOverride = { ...(overrides[locale as keyof NonNullable<BuilderSeoMetadata['localizedOverrides']>] ?? {}) };
+  if (focusKeyword) currentOverride.focusKeyword = focusKeyword;
+  else delete currentOverride.focusKeyword;
+
+  if (Object.keys(currentOverride).length > 0) {
+    overrides[locale as keyof NonNullable<BuilderSeoMetadata['localizedOverrides']>] = currentOverride;
+  } else {
+    delete overrides[locale as keyof NonNullable<BuilderSeoMetadata['localizedOverrides']>];
+  }
+
+  if (Object.keys(overrides).length > 0) nextSeo.localizedOverrides = overrides;
+  else delete nextSeo.localizedOverrides;
+  return Object.keys(nextSeo).length > 0 ? nextSeo : undefined;
 }
 
 export async function GET(
@@ -41,26 +100,29 @@ export async function GET(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
+
   try {
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const site = await readSiteDocument(siteId, locale);
     const page = site.pages.find((entry) => entry.pageId === params.pageId);
-    if (!page) return notFound(params.pageId);
-    const canvas = await readPageCanvas('default', page.pageId, 'draft');
+    if (!page) return notFound(params.pageId, locale);
+    const canvas = await readPageCanvas(siteId, page.pageId, 'draft');
+    const effectiveSeo = resolveLocaleSeo(page, locale);
+    const effectivePage = { ...page, seo: { ...(page.seo ?? {}), ...effectiveSeo } };
 
     return NextResponse.json({
       ok: true,
-      focusKeyword: page.seo?.focusKeyword ?? '',
+      focusKeyword: effectiveSeo.focusKeyword ?? page.seo?.focusKeyword ?? '',
       tasks: buildSeoAssistantTasks({
-        page,
+        page: effectivePage,
         site,
         canvas,
         siteUrl: getSiteUrl(),
       }),
     });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+  } catch {
+    return unknownErrorResponse(locale);
   }
 }
 
@@ -71,38 +133,38 @@ export async function PATCH(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const siteId = resolveBuilderSiteIdFromRequest(request);
+
   try {
     const payload = assistantPatchSchema.parse(await request.json());
-    const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-    const site = await readSiteDocument('default', locale);
+    const site = await readSiteDocument(siteId, locale);
     const page = site.pages.find((entry) => entry.pageId === params.pageId);
-    if (!page) return notFound(params.pageId);
+    if (!page) return notFound(params.pageId, locale);
 
-    page.seo = { ...(page.seo ?? {}) };
-    if (payload.focusKeyword) page.seo.focusKeyword = payload.focusKeyword;
-    else delete page.seo.focusKeyword;
-    if (Object.keys(page.seo).length === 0) page.seo = undefined;
+    page.seo = applyLocalizedFocusKeyword(page.seo, page.locale, locale, payload.focusKeyword);
     page.updatedAt = new Date().toISOString();
     site.updatedAt = page.updatedAt;
     await writeSiteDocument(site);
 
-    const canvas = await readPageCanvas('default', page.pageId, 'draft');
+    const canvas = await readPageCanvas(siteId, page.pageId, 'draft');
+    const effectiveSeo = resolveLocaleSeo(page, locale);
+    const effectivePage = { ...page, seo: { ...(page.seo ?? {}), ...effectiveSeo } };
     return NextResponse.json({
       ok: true,
-      focusKeyword: page.seo?.focusKeyword ?? '',
+      focusKeyword: effectiveSeo.focusKeyword ?? page.seo?.focusKeyword ?? '',
       tasks: buildSeoAssistantTasks({
-        page,
+        page: effectivePage,
         site,
         canvas,
         siteUrl: getSiteUrl(),
       }),
     });
   } catch (error) {
-    if (error instanceof ZodError) return validationErrorResponse(error);
+    if (error instanceof ZodError) return validationErrorResponse(locale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'Invalid JSON payload.' }, { status: 400 });
+      return invalidJsonPayloadResponse(locale);
     }
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    return unknownErrorResponse(locale);
   }
 }

@@ -10,11 +10,14 @@
 
 import { listMessagesForConversation } from './storage';
 import type { ChatMessage } from './types';
+import { getLiveChatSseErrorPayload, type LiveChatSseErrorCode } from './widget-copy';
+import { defaultLocale, type Locale } from '@/lib/locales';
 
 interface StreamArgs {
   conversationId: string;
   /** Role that initiated the subscription — used to filter "self" messages out so the sender doesn't echo. */
   observerRole: 'visitor' | 'admin';
+  locale?: Locale;
   /** Poll interval ms; clamped to [500, 5000]. */
   pollMs?: number;
   /** Max stream lifetime ms; clamped to [10_000, 600_000]. */
@@ -28,6 +31,11 @@ export function buildChatStream(args: StreamArgs): ReadableStream<Uint8Array> {
   const started = Date.now();
   let cancelled = false;
   let lastSentAt = '';
+  const locale = args.locale ?? defaultLocale;
+
+  const errorEvent = (errorCode: LiveChatSseErrorCode) => (
+    `event: error\ndata: ${JSON.stringify(getLiveChatSseErrorPayload(locale, errorCode))}\n\n`
+  );
 
   return new ReadableStream<Uint8Array>({
     async start(controller) {
@@ -41,8 +49,8 @@ export function buildChatStream(args: StreamArgs): ReadableStream<Uint8Array> {
           lastSentAt = message.at;
         }
         controller.enqueue(encoder.encode(`event: ready\ndata: ${JSON.stringify({ ok: true })}\n\n`));
-      } catch (err) {
-        controller.enqueue(encoder.encode(`event: error\ndata: ${JSON.stringify({ error: err instanceof Error ? err.message : 'unknown' })}\n\n`));
+      } catch {
+        controller.enqueue(encoder.encode(errorEvent('stream_initial_failed')));
       }
 
       const tick = async (): Promise<void> => {
@@ -65,8 +73,8 @@ export function buildChatStream(args: StreamArgs): ReadableStream<Uint8Array> {
             lastSentAt = message.at;
           }
           controller.enqueue(encoder.encode(`event: ping\ndata: ${JSON.stringify({ at: new Date().toISOString() })}\n\n`));
-        } catch (err) {
-          controller.enqueue(encoder.encode(`event: error\ndata: ${JSON.stringify({ error: err instanceof Error ? err.message : 'poll' })}\n\n`));
+        } catch {
+          controller.enqueue(encoder.encode(errorEvent('stream_poll_failed')));
         }
         setTimeout(tick, pollMs);
       };

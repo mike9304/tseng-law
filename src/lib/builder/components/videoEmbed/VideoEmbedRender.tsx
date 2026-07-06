@@ -1,6 +1,8 @@
 'use client';
 
 import type { BuilderVideoEmbedCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import { getUtilityAdvancedWidgetsCopy } from '../utility-advanced-widgets-copy';
 import styles from './VideoEmbed.module.css';
 
 interface VideoEmbedFlags {
@@ -83,12 +85,16 @@ function resolveEmbedUrl(
 
 export default function VideoEmbedRender({
   node,
+  locale = 'ko',
 }: {
   node: BuilderVideoEmbedCanvasNode;
+  locale?: Locale;
 }) {
   const { provider, src, autoplay, loop, muted, controls, posterImage } = node.content;
   const flags: VideoEmbedFlags = { autoplay, loop, muted, controls };
   const embedUrl = resolveEmbedUrl(provider, src, flags);
+  const copy = getUtilityAdvancedWidgetsCopy(locale).videoEmbed;
+  const providerLabel = copy.inspector.providers[provider];
 
   if (!embedUrl) {
     return (
@@ -107,7 +113,7 @@ export default function VideoEmbedRender({
         >
           <polygon points="5 3 19 12 5 21 5 3" />
         </svg>
-        <span>{src ? `잘못된 ${provider} URL` : '영상 URL을 입력하세요'}</span>
+        <span>{src ? copy.runtime.invalidUrl(providerLabel) : copy.runtime.emptyUrl}</span>
       </div>
     );
   }
@@ -118,7 +124,7 @@ export default function VideoEmbedRender({
     >
       <iframe
         src={embedUrl}
-        title="Video embed"
+        title={copy.runtime.iframeTitle}
         className={styles.iframe}
         allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
         allowFullScreen

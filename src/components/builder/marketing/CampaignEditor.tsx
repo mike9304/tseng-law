@@ -1,25 +1,58 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { z } from 'zod';
 import type { Campaign } from '@/lib/builder/marketing/campaign-types';
-import type { EmailTemplate } from '@/lib/builder/marketing/templates/types';
 import type { Locale } from '@/lib/locales';
+import {
+  CampaignEditorSidebar,
+  type CampaignEditorFormPatch,
+  type CampaignEditorFormState,
+  type CampaignEditorMessage,
+  type TemplateSummary,
+} from './CampaignEditorSidebar';
+import { CAMPAIGN_EDITOR_COPY, LOCALE_KEYS, LOCALE_LABEL } from './campaign-editor-copy';
+import { localizedMarketingApiPath } from './marketing-api-path';
 
 interface Props {
   campaign: Campaign;
+  locale?: Locale;
 }
 
-interface TemplateSummary {
-  templateId: string;
-  name: string;
-  category?: string;
+const templateSummarySchema = z.object({
+  templateId: z.string(),
+  name: z.string(),
+  category: z.string().optional(),
+});
+
+const templateListSchema = z.object({
+  templates: z.array(templateSummarySchema),
+});
+
+const renderedTemplateSchema = z.object({
+  template: z.object({ name: z.string() }),
+  html: z.string(),
+  text: z.string(),
+});
+
+const errorPayloadSchema = z.object({
+  error: z.string().optional(),
+});
+
+async function readErrorReason(response: Response): Promise<string | null> {
+  try {
+    const raw: unknown = await response.json();
+    const parsed = errorPayloadSchema.safeParse(raw);
+    return parsed.success ? parsed.data.error ?? null : null;
+  } catch (error) {
+    if (error instanceof Error) return null;
+    throw error;
+  }
 }
 
-type LocaleKey = Locale;
-const LOCALE_LABEL: Record<LocaleKey, string> = { ko: '한국어', 'zh-hant': '繁體中文', en: 'English' };
-
-export default function CampaignEditor({ campaign }: Props) {
-  const [form, setForm] = useState({
+export default function CampaignEditor({ campaign, locale = 'ko' }: Props) {
+  const text = CAMPAIGN_EDITOR_COPY[locale];
+  const [form, setForm] = useState<CampaignEditorFormState>({
     name: campaign.name,
     fromName: campaign.fromName,
     fromAddress: campaign.fromAddress,
@@ -29,65 +62,86 @@ export default function CampaignEditor({ campaign }: Props) {
     bodyText: { ...campaign.bodyText },
     scheduledAt: campaign.scheduledAt ?? '',
   });
-  const [activeLocale, setActiveLocale] = useState<LocaleKey>('ko');
+  const [activeLocale, setActiveLocale] = useState<Locale>('ko');
   const [saving, setSaving] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState<CampaignEditorMessage | null>(null);
   const [templates, setTemplates] = useState<TemplateSummary[]>([]);
   const [applyingTemplateId, setApplyingTemplateId] = useState('');
 
   useEffect(() => {
     let cancelled = false;
-    (async () => {
-      const res = await fetch('/api/builder/marketing/templates', { credentials: 'same-origin' });
-      if (!res.ok || cancelled) return;
-      const payload = (await res.json()) as { templates: TemplateSummary[] };
-      setTemplates(payload.templates);
-    })();
+
+    async function loadTemplates(): Promise<void> {
+      try {
+        const res = await fetch(localizedMarketingApiPath(locale, '/api/builder/marketing/templates'), {
+          credentials: 'same-origin',
+        });
+        if (!res.ok || cancelled) return;
+        const raw: unknown = await res.json();
+        const parsed = templateListSchema.safeParse(raw);
+        if (parsed.success && !cancelled) setTemplates(parsed.data.templates);
+      } catch (error) {
+        if (error instanceof Error) return;
+        throw error;
+      }
+    }
+
+    void loadTemplates();
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [locale]);
 
   async function applyTemplate(templateId: string) {
     if (!templateId) return;
     setApplyingTemplateId(templateId);
-    setMessage('');
+    setMessage(null);
     try {
-      const res = await fetch(`/api/builder/marketing/templates/${templateId}?render=html`, {
+      const res = await fetch(localizedMarketingApiPath(locale, `/api/builder/marketing/templates/${templateId}?render=html`), {
         credentials: 'same-origin',
       });
       if (!res.ok) {
-        const payload = (await res.json().catch(() => ({}))) as { error?: string };
-        setMessage(`템플릿 적용 실패: ${payload.error ?? res.statusText}`);
+        const reason = await readErrorReason(res);
+        setMessage({ kind: 'error', text: text.templateApplyFailed(reason ?? text.requestFailed) });
         return;
       }
-      const payload = (await res.json()) as { template: EmailTemplate; html: string; text: string };
+      const raw: unknown = await res.json();
+      const parsed = renderedTemplateSchema.safeParse(raw);
+      if (!parsed.success) {
+        setMessage({ kind: 'error', text: text.templateApplyFailed(text.requestFailed) });
+        return;
+      }
+      const payload = parsed.data;
       setForm((f) => ({
         ...f,
         bodyHtml: { ko: payload.html, 'zh-hant': payload.html, en: payload.html },
         bodyText: { ko: payload.text, 'zh-hant': payload.text, en: payload.text },
       }));
-      setMessage(`템플릿 "${payload.template.name}" 적용 — 로케일별 본문 수정 필요`);
+      setMessage({ kind: 'success', text: text.templateApplied(payload.template.name) });
     } finally {
       setApplyingTemplateId('');
     }
   }
 
-  function setSubjectFor(locale: LocaleKey, value: string) {
-    setForm((f) => ({ ...f, subject: { ...f.subject, [locale]: value } }));
+  function setSubjectFor(targetLocale: Locale, value: string) {
+    setForm((f) => ({ ...f, subject: { ...f.subject, [targetLocale]: value } }));
   }
-  function setBodyHtmlFor(locale: LocaleKey, value: string) {
-    setForm((f) => ({ ...f, bodyHtml: { ...f.bodyHtml, [locale]: value } }));
+  function setBodyHtmlFor(targetLocale: Locale, value: string) {
+    setForm((f) => ({ ...f, bodyHtml: { ...f.bodyHtml, [targetLocale]: value } }));
   }
-  function setBodyTextFor(locale: LocaleKey, value: string) {
-    setForm((f) => ({ ...f, bodyText: { ...f.bodyText, [locale]: value } }));
+  function setBodyTextFor(targetLocale: Locale, value: string) {
+    setForm((f) => ({ ...f, bodyText: { ...f.bodyText, [targetLocale]: value } }));
+  }
+
+  function patchForm(patch: CampaignEditorFormPatch) {
+    setForm((current) => ({ ...current, ...patch }));
   }
 
   async function save() {
     setSaving(true);
-    setMessage('');
+    setMessage(null);
     try {
-      const res = await fetch(`/api/builder/marketing/campaigns/${campaign.campaignId}`, {
+      const res = await fetch(localizedMarketingApiPath(locale, `/api/builder/marketing/campaigns/${campaign.campaignId}`), {
         method: 'PATCH',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
@@ -103,10 +157,10 @@ export default function CampaignEditor({ campaign }: Props) {
         }),
       });
       if (!res.ok) {
-        const payload = (await res.json().catch(() => ({}))) as { error?: string };
-        setMessage(`저장 실패: ${payload.error ?? res.statusText}`);
+        const reason = await readErrorReason(res);
+        setMessage({ kind: 'error', text: text.saveFailed(reason ?? text.requestFailed) });
       } else {
-        setMessage('저장 완료');
+        setMessage({ kind: 'success', text: text.saveSuccess });
       }
     } finally {
       setSaving(false);
@@ -114,10 +168,10 @@ export default function CampaignEditor({ campaign }: Props) {
   }
 
   return (
-    <div style={{ padding: 24, display: 'grid', gridTemplateColumns: '1fr 320px', gap: 24 }}>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <div style={{ padding: 24, display: 'flex', alignItems: 'flex-start', gap: 24, flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16, flex: '1 1 560px', minWidth: 280 }}>
         <div style={{ display: 'flex', gap: 8 }}>
-          {(Object.keys(LOCALE_LABEL) as LocaleKey[]).map((loc) => (
+          {LOCALE_KEYS.map((loc) => (
             <button
               key={loc}
               type="button"
@@ -139,7 +193,7 @@ export default function CampaignEditor({ campaign }: Props) {
         </div>
 
         <label style={{ display: 'flex', flexDirection: 'column', gap: 4, fontSize: 12 }}>
-          제목 ({LOCALE_LABEL[activeLocale]})
+          {text.subjectLabel} ({LOCALE_LABEL[activeLocale]})
           <input
             type="text"
             value={form.subject[activeLocale]}
@@ -149,7 +203,7 @@ export default function CampaignEditor({ campaign }: Props) {
         </label>
 
         <label style={{ display: 'flex', flexDirection: 'column', gap: 4, fontSize: 12 }}>
-          본문 HTML ({LOCALE_LABEL[activeLocale]})
+          {text.bodyHtmlLabel} ({LOCALE_LABEL[activeLocale]})
           <textarea
             rows={18}
             value={form.bodyHtml[activeLocale]}
@@ -159,7 +213,7 @@ export default function CampaignEditor({ campaign }: Props) {
         </label>
 
         <label style={{ display: 'flex', flexDirection: 'column', gap: 4, fontSize: 12 }}>
-          본문 텍스트 ({LOCALE_LABEL[activeLocale]})
+          {text.bodyTextLabel} ({LOCALE_LABEL[activeLocale]})
           <textarea
             rows={6}
             value={form.bodyText[activeLocale]}
@@ -169,61 +223,19 @@ export default function CampaignEditor({ campaign }: Props) {
         </label>
       </div>
 
-      <aside style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-        <strong style={{ fontSize: 12, color: '#64748b', textTransform: 'uppercase' }}>설정</strong>
-
-        <label style={{ display: 'flex', flexDirection: 'column', gap: 4, fontSize: 12 }}>
-          캠페인 이름
-          <input type="text" value={form.name} onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))} style={{ padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6 }} />
-        </label>
-        <label style={{ display: 'flex', flexDirection: 'column', gap: 4, fontSize: 12 }}>
-          발신자 이름
-          <input type="text" value={form.fromName} onChange={(e) => setForm((f) => ({ ...f, fromName: e.target.value }))} style={{ padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6 }} />
-        </label>
-        <label style={{ display: 'flex', flexDirection: 'column', gap: 4, fontSize: 12 }}>
-          발신자 주소
-          <input type="email" value={form.fromAddress} onChange={(e) => setForm((f) => ({ ...f, fromAddress: e.target.value }))} style={{ padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6 }} />
-        </label>
-        <label style={{ display: 'flex', flexDirection: 'column', gap: 4, fontSize: 12 }}>
-          세그먼트 태그 (쉼표 구분; 비우면 전체)
-          <input type="text" value={form.segmentTags} onChange={(e) => setForm((f) => ({ ...f, segmentTags: e.target.value }))} style={{ padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6 }} />
-        </label>
-        <label style={{ display: 'flex', flexDirection: 'column', gap: 4, fontSize: 12 }}>
-          예약 발송
-          <input type="datetime-local" value={form.scheduledAt ? form.scheduledAt.slice(0, 16) : ''} onChange={(e) => setForm((f) => ({ ...f, scheduledAt: e.target.value }))} style={{ padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6 }} />
-        </label>
-
-        <button type="button" disabled={saving} onClick={save} style={{ marginTop: 8, padding: '10px 16px', border: 0, background: saving ? '#94a3b8' : '#0f172a', color: '#fff', borderRadius: 8, cursor: saving ? 'not-allowed' : 'pointer', fontWeight: 700 }}>
-          {saving ? '저장 중...' : '저장'}
-        </button>
-        {message ? <div style={{ fontSize: 12, color: message.includes('실패') ? '#dc2626' : '#16a34a' }}>{message}</div> : null}
-
-        <hr style={{ border: 0, borderTop: '1px solid #e2e8f0', margin: '8px 0' }} />
-        <strong style={{ fontSize: 11, color: '#64748b', textTransform: 'uppercase' }}>템플릿 적용</strong>
-        <select
-          value=""
-          onChange={(e) => applyTemplate(e.target.value)}
-          disabled={Boolean(applyingTemplateId)}
-          style={{ padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 12 }}
-        >
-          <option value="">— 템플릿 선택 —</option>
-          {templates.map((t) => (
-            <option key={t.templateId} value={t.templateId}>
-              {t.name}{t.category ? ` (${t.category})` : ''}
-            </option>
-          ))}
-        </select>
-        <span style={{ fontSize: 10, color: '#94a3b8' }}>
-          선택한 템플릿의 HTML/텍스트가 모든 로케일에 적용됩니다. 로케일별로 수정하세요.
-        </span>
-
-        <hr style={{ border: 0, borderTop: '1px solid #e2e8f0', margin: '8px 0' }} />
-        <div style={{ fontSize: 11, color: '#64748b', lineHeight: 1.5 }}>
-          상태: <strong>{campaign.status}</strong>
-          <br />
-          수신: {campaign.stats.recipients} · 오픈: {campaign.stats.opens} · 클릭: {campaign.stats.clicks}
-        </div>
-      </aside>
+      <CampaignEditorSidebar
+        campaign={campaign}
+        locale={locale}
+        text={text}
+        form={form}
+        saving={saving}
+        message={message}
+        templates={templates}
+        applyingTemplateId={applyingTemplateId}
+        onFormPatch={patchForm}
+        onSave={save}
+        onApplyTemplate={applyTemplate}
+      />
     </div>
   );
 }

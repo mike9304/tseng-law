@@ -18,12 +18,22 @@ export default function BuilderReadonlyPagePreview({
   document: BuilderPageDocument;
   children: ReactNode;
 }) {
+  const copy = getReadonlyPagePreviewCopy(locale);
+
   return (
     <>
-      <section className="section section--light" data-tone="light">
+      <div data-builder-page-preview-runtime="true">
+        {children}
+      </div>
+
+      <section
+        className="section section--light"
+        data-builder-page-preview-diagnostics="true"
+        data-tone="light"
+      >
         <div className="container">
-          <div className="section-label">BUILDER PREVIEW</div>
-          <h1 className="section-title">{title}</h1>
+          <div className="section-label">{copy.sectionLabel}</div>
+          <h2 className="section-title">{title}</h2>
           <p className="section-lede">{description}</p>
           <div className="builder-preview-section-grid" style={{ marginTop: '2rem' }}>
             {document.root.children.map((section) => {
@@ -41,10 +51,10 @@ export default function BuilderReadonlyPagePreview({
                     {definition.componentName}
                   </div>
                   <div className="builder-preview-section-card-targets">
-                    page: {pageKey} · locale: {locale}
+                    {copy.pageLabel} {pageKey} · {copy.localeLabel} {locale}
                   </div>
                   <div className="builder-preview-section-card-targets">
-                    supports: {definition.supportedTargets.join(', ')}
+                    {copy.supportsLabel}: {definition.supportedTargets.join(', ')}
                   </div>
                 </div>
               );
@@ -52,8 +62,15 @@ export default function BuilderReadonlyPagePreview({
           </div>
         </div>
       </section>
-
-      {children}
     </>
   );
+}
+
+function getReadonlyPagePreviewCopy(locale: Locale) {
+  return {
+    sectionLabel: locale === 'ko' ? '빌더 미리보기' : locale === 'zh-hant' ? '建構器預覽' : 'BUILDER PREVIEW',
+    pageLabel: locale === 'ko' ? '페이지:' : locale === 'zh-hant' ? '頁面：' : 'page:',
+    localeLabel: locale === 'ko' ? '로케일:' : locale === 'zh-hant' ? '語言：' : 'locale:',
+    supportsLabel: locale === 'ko' ? '지원 대상' : locale === 'zh-hant' ? '支援對象' : 'supports',
+  } as const;
 }

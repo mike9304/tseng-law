@@ -13,6 +13,8 @@ import {
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
 
+export const SELECTED_CANVAS_NODE_Z_INDEX_BOOST = 30000;
+
 export function buildCanvasNodeRenderStyles({
   animationPreviewPhase,
   effectiveFontSize,
@@ -23,6 +25,7 @@ export function buildCanvasNodeRenderStyles({
   isDimmedRoot,
   isEditing,
   isHovered,
+  isAccordionPreviewOpen,
   isTextShapedNode,
   node,
   officeLayoutDisplay,
@@ -46,6 +49,7 @@ export function buildCanvasNodeRenderStyles({
   isDimmedRoot: boolean;
   isEditing: boolean;
   isHovered: boolean;
+  isAccordionPreviewOpen?: boolean;
   isTextShapedNode: boolean;
   node: BuilderCanvasNode;
   officeLayoutDisplay: string | undefined;
@@ -99,6 +103,17 @@ export function buildCanvasNodeRenderStyles({
   const nodePointerEvents = isDimmedRoot || isActiveGroupFrame
     ? 'none'
     : 'auto';
+  const isClosedServicesAccordionBody =
+    !isAccordionPreviewOpen && /^home-services-card-\d+-body$/.test(node.id);
+  const isClosedServicesAccordionDetail =
+    !isAccordionPreviewOpen
+    && /^home-services-card-\d+-(?:detail-\d+|checklist|columns|more)$/.test(node.id);
+  const isClosedFaqAccordionBody =
+    !isAccordionPreviewOpen && /^home-faq-item-\d+-answer-wrap$/.test(node.id);
+  const isClosedFaqAccordionDetail =
+    !isAccordionPreviewOpen && /^home-faq-item-\d+-answer$/.test(node.id);
+  const isClosedAccordionBody = isClosedServicesAccordionBody || isClosedFaqAccordionBody;
+  const isClosedAccordionDetail = isClosedServicesAccordionDetail || isClosedFaqAccordionDetail;
 
   const stickyConfig = node.sticky;
   // For P0-02.2.1: when a top-level flow section is actively being dragged, bypass
@@ -125,7 +140,9 @@ export function buildCanvasNodeRenderStyles({
         : useFlowWrapper ? undefined : `${effectiveRect.y}px`,
       bottom: useSticky && stickyConfig?.from === 'bottom' ? (stickyConfig?.offset ?? 0) : undefined,
       width: isActiveTopLevelFlowSection ? '100%' : `${effectiveRect.width}px`,
-      height: isActiveTopLevelFlowSection
+      height: isClosedAccordionBody
+        ? '0px'
+        : isActiveTopLevelFlowSection
         ? 'auto'
         : `${previewExpandedHeight ?? effectiveRect.height}px`,
       // For top-level flow sections (composites), use the design rect.height only as minHeight floor
@@ -141,19 +158,25 @@ export function buildCanvasNodeRenderStyles({
       zIndex: useSticky
         ? Math.max(node.zIndex + 10 + selectionZIndexBoost, 100) // +10 is editor chrome (rulers/grid/selection overlays); sticky min-100 for parity with published
         : useFlowWrapper
-          ? (selected ? 10010 : undefined)
+          ? (selected ? SELECTED_CANVAS_NODE_Z_INDEX_BOOST + 10 : undefined)
           : node.zIndex + 10 + selectionZIndexBoost,
-      // transform (rotation + previewOffsetY) applied directly on the sticky-positioned element.
-      // This creates a new stacking context (per CSS spec) but exactly matches published
-      // behavior in public-page.tsx:463. Acceptable parity for M175; inner wrapper refactor
-      // deferred if rotation+sticky visual drift is observed in practice.
+      // transform (rotation + previewOffsetY) applied directly on the positioned element.
+      // CRITICAL parity with public-page.tsx:525 (`baseTransform = rotation ? rotate() : undefined`):
+      // we must OMIT the transform entirely when there is no rotation and no preview offset.
+      // An unconditional `rotate(0deg)` still establishes a new stacking context (per CSS spec),
+      // which traps an overflowing child (e.g. home-hero-search-wrapper, z-index>0) inside its
+      // section wrapper — the following section then paints over the child's straddling bottom.
+      // Omitting it lets the child escape to the root stacking context and paint above later
+      // section backgrounds, exactly matching the published render.
       transform: previewOffsetY
         ? `translateY(${previewOffsetY}px) rotate(${node.rotation}deg)`
-        : `rotate(${node.rotation}deg)`,
-      transformOrigin: 'center center',
+        : node.rotation
+          ? `rotate(${node.rotation}deg)`
+          : undefined,
+      transformOrigin: previewOffsetY || node.rotation ? 'center center' : undefined,
       opacity: isDimmedRoot ? 0.3 : 1,
       pointerEvents: nodePointerEvents,
-      display: officeLayoutDisplay,
+      display: isClosedAccordionDetail ? 'none' : officeLayoutDisplay,
       outline: isActiveGroupFrame ? '2px dashed rgba(37, 99, 235, 0.72)' : undefined,
       outlineOffset: isActiveGroupFrame ? 4 : undefined,
       fontSize: effectiveFontSize ? `${effectiveFontSize}px` : undefined,
@@ -168,7 +191,9 @@ export function buildCanvasNodeRenderStyles({
           : undefined,
       // Published sets overflow:visible for flow composites so inner content (e.g. absolutely
       // positioned children of the section) are not clipped by the flow wrapper.
-      overflow: isActiveTopLevelFlowSection ? 'visible' : undefined,
+      overflow: isClosedAccordionBody
+        ? 'hidden'
+        : isActiveTopLevelFlowSection ? 'visible' : undefined,
     },
     bodyStyle: {
       position: 'relative',
@@ -188,9 +213,13 @@ export function buildCanvasNodeRenderStyles({
             ? '0 0 0 1px rgba(147, 197, 253, 0.5)'
             : 'none'),
       opacity: renderedOpacity,
-      height: isTextShapedNode ? 'auto' : undefined,
-      minHeight: isTextShapedNode ? `${effectiveRect.height}px` : undefined,
-      overflow: isEditing || isContainerLikeNode || selected ? 'visible' : undefined,
+      height: isActiveTopLevelFlowSection
+        ? '100%'
+        : isTextShapedNode ? 'auto' : undefined,
+      minHeight: isActiveTopLevelFlowSection
+        ? 'inherit'
+        : isTextShapedNode ? `${effectiveRect.height}px` : undefined,
+      overflow: isEditing || isContainerLikeNode || isActiveTopLevelFlowSection || selected ? 'visible' : undefined,
       pointerEvents: isEditing ? 'auto' : 'none',
       transform: bodyTransform,
       transformOrigin: bodyTransform || editorAnimationStyle.transformOrigin ? 'center center' : undefined,

@@ -1,12 +1,16 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderLottieCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import { getMediaWidgetsCopy } from '../media-widgets-copy';
+import styles from './LottieInspector.module.css';
 
 function isEmbeddableLottieUrl(src: string): boolean {
   return /^https:\/\/(lottie\.host|assets[0-9]?\.lottiefiles\.com|lottiefiles\.com)\//.test(src);
 }
 
-function LottieRender({ node }: { node: BuilderLottieCanvasNode }) {
+function LottieRender({ node, locale = 'ko' }: { node: BuilderLottieCanvasNode; locale?: Locale }) {
   const { src, label, autoplay, loop, speed } = node.content;
+  const copy = getMediaWidgetsCopy(locale);
   const canEmbed = src && isEmbeddableLottieUrl(src);
 
   if (canEmbed) {
@@ -18,7 +22,7 @@ function LottieRender({ node }: { node: BuilderLottieCanvasNode }) {
     return (
       <iframe
         src={`${src}${separator}${params.toString()}`}
-        title={label || 'Lottie animation'}
+        title={label || copy.lottie.fallbackLabel}
         data-builder-media-widget="lottie"
         style={{
           width: '100%',
@@ -58,7 +62,7 @@ function LottieRender({ node }: { node: BuilderLottieCanvasNode }) {
           <span />
           <span />
         </div>
-        <strong style={{ fontSize: 13 }}>{label || 'Lottie animation'}</strong>
+        <strong style={{ fontSize: 13 }}>{label || copy.lottie.fallbackLabel}</strong>
       </div>
     </div>
   );
@@ -66,68 +70,64 @@ function LottieRender({ node }: { node: BuilderLottieCanvasNode }) {
 
 function LottieInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const lottieNode = node as BuilderLottieCanvasNode;
   const content = lottieNode.content;
+  const copy = getMediaWidgetsCopy(locale);
   const srcIsEmbeddable = content.src ? isEmbeddableLottieUrl(content.src) : false;
 
   return (
-    <>
-      <label>
-        <span>Lottie URL</span>
+    <div className={styles.root} data-builder-lottie-inspector="true">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.lottie.inspector.url}</span>
         <input
+          className={styles.control}
           type="text"
           value={content.src}
           disabled={disabled}
-          placeholder="https://lottie.host/embed/<id>/<hash>.lottie"
+          placeholder={copy.lottie.inspector.urlPlaceholder}
           onChange={(event) => onUpdate({ src: event.target.value })}
         />
       </label>
       {!content.src ? (
-        <p style={{ margin: 0, color: '#64748b', fontSize: '0.72rem', lineHeight: 1.5 }}>
+        <p className={styles.helpText}>
           <a
             href="https://lottiefiles.com/featured"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: '#1d4ed8', textDecoration: 'underline' }}
+            className={styles.helpLink}
           >
             lottiefiles.com
           </a>
-          에서 애니메이션을 고른 뒤 <strong>Embed</strong> 탭의{' '}
-          <code>iframe src=&quot;...&quot;</code> URL을 복사해 붙여넣으세요. 자체 자산을
-          쓰려면 <code>lottie.host</code>에 업로드한 후 동일한 형식의 임베드 URL을 사용하세요.
+          {copy.lottie.inspector.emptyHint.spaceAfterSource ? ' ' : ''}
+          {copy.lottie.inspector.emptyHint.start}{' '}
+          <strong>{copy.lottie.inspector.emptyHint.embedTab}</strong> {copy.lottie.inspector.emptyHint.middle}{' '}
+          <code>{copy.lottie.inspector.emptyHint.iframeUrl}</code> {copy.lottie.inspector.emptyHint.end}{' '}
+          <code>{copy.lottie.inspector.emptyHint.host}</code>{copy.lottie.inspector.emptyHint.spaceBeforeFinal ? ' ' : ''}
+          {copy.lottie.inspector.emptyHint.final}
         </p>
       ) : !srcIsEmbeddable ? (
-        <p
-          style={{
-            margin: 0,
-            color: '#b45309',
-            fontSize: '0.72rem',
-            lineHeight: 1.5,
-            background: '#fffbeb',
-            border: '1px solid #fcd34d',
-            borderRadius: 6,
-            padding: '6px 8px',
-          }}
-        >
-          ⚠ <code>lottie.host</code> / <code>lottiefiles.com</code> 외 호스트는 CSP가 차단합니다.
-          현재 URL은 미리보기로만 표시되고 발행된 페이지에서는 빈 placeholder가 됩니다.
+        <p className={styles.warningText}>
+          ⚠ <code>lottie.host</code> / <code>lottiefiles.com</code> {copy.lottie.inspector.unsupportedHostWarning}
         </p>
       ) : null}
-      <label>
-        <span>Label</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.lottie.inspector.label}</span>
         <input
+          className={styles.control}
           type="text"
           value={content.label}
           disabled={disabled}
           onChange={(event) => onUpdate({ label: event.target.value })}
         />
       </label>
-      <label>
-        <span>Speed {content.speed}x</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.lottie.inspector.speed(content.speed)}</span>
         <input
+          className={styles.range}
           type="range"
           min={0.25}
           max={4}
@@ -137,25 +137,25 @@ function LottieInspector({
           onChange={(event) => onUpdate({ speed: Number(event.target.value) })}
         />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={content.autoplay}
           disabled={disabled}
           onChange={(event) => onUpdate({ autoplay: event.target.checked })}
         />
-        <span>Autoplay</span>
+        <span>{copy.lottie.inspector.autoplay}</span>
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+      <label className={styles.checkboxRow}>
         <input
           type="checkbox"
           checked={content.loop}
           disabled={disabled}
           onChange={(event) => onUpdate({ loop: event.target.checked })}
         />
-        <span>Loop</span>
+        <span>{copy.lottie.inspector.loop}</span>
       </label>
-    </>
+    </div>
   );
 }
 

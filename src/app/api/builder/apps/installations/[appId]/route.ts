@@ -9,7 +9,11 @@ import {
   restoreUninstalledBuilderApp,
   uninstallBuilderApp,
 } from '@/lib/builder/apps/installed';
-import { normalizeLocale } from '@/lib/locales';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  getBuilderAppsApiErrorPayload,
+  type BuilderAppsApiErrorCode,
+} from '@/lib/builder/apps/apps-api-copy';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -36,31 +40,54 @@ interface RouteParams {
   };
 }
 
+function errorResponse(
+  locale: Locale,
+  errorCode: BuilderAppsApiErrorCode,
+  status: number,
+  extra?: Record<string, unknown>,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderAppsApiErrorPayload(locale, errorCode), ...(extra ?? {}) },
+    { status },
+  );
+}
+
 export async function PATCH(request: NextRequest, { params }: RouteParams) {
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
-  const payload = lifecyclePayloadSchema.parse(await request.json());
-  const result = 'action' in payload
-    ? payload.action === 'rollback'
-      ? await rollbackBuilderApp(DEFAULT_BUILDER_SITE_ID, locale, params.appId, auth.username)
-      : await restoreUninstalledBuilderApp(DEFAULT_BUILDER_SITE_ID, locale, params.appId, auth.username)
-    : payload.status === 'enabled'
-      ? await enableBuilderApp(DEFAULT_BUILDER_SITE_ID, locale, params.appId, auth.username)
-      : await disableBuilderApp(DEFAULT_BUILDER_SITE_ID, locale, params.appId, auth.username);
+  let payload: z.infer<typeof lifecyclePayloadSchema>;
+  try {
+    payload = lifecyclePayloadSchema.parse(await request.json());
+  } catch (error) {
+    return errorResponse(locale, error instanceof z.ZodError ? 'invalid_request' : 'invalid_json', 400);
+  }
+  let result: Awaited<ReturnType<typeof enableBuilderApp>>;
+  try {
+    result = 'action' in payload
+      ? payload.action === 'rollback'
+        ? await rollbackBuilderApp(DEFAULT_BUILDER_SITE_ID, locale, params.appId, auth.username)
+        : await restoreUninstalledBuilderApp(DEFAULT_BUILDER_SITE_ID, locale, params.appId, auth.username)
+      : payload.status === 'enabled'
+        ? await enableBuilderApp(DEFAULT_BUILDER_SITE_ID, locale, params.appId, auth.username)
+        : await disableBuilderApp(DEFAULT_BUILDER_SITE_ID, locale, params.appId, auth.username);
+  } catch (error) {
+    console.error('[builder/apps/installations/:appId] lifecycle failed:', error);
+    return errorResponse(locale, 'app_action_failed', 500);
+  }
 
   if (!result) {
-    return NextResponse.json({ ok: false, error: 'app_not_installed' }, { status: 404 });
+    return errorResponse(locale, 'app_not_installed', 404);
   }
   if (result.rollbackUnavailable) {
-    return NextResponse.json({ ok: false, error: 'app_rollback_unavailable', ...result }, { status: 409 });
+    return errorResponse(locale, 'app_rollback_unavailable', 409, result as unknown as Record<string, unknown>);
   }
   if (result.restoreUnavailable) {
-    return NextResponse.json({ ok: false, error: 'app_restore_unavailable', ...result }, { status: 409 });
+    return errorResponse(locale, 'app_restore_unavailable', 409, result as unknown as Record<string, unknown>);
   }
   if (result.migrationFailed) {
-    return NextResponse.json({ ok: false, error: 'app_migration_failed', ...result }, { status: 409 });
+    return errorResponse(locale, 'app_migration_failed', 409, result as unknown as Record<string, unknown>);
   }
   return NextResponse.json({ ok: true, ...result });
 }
@@ -71,18 +98,29 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
   const text = await request.text();
-  const payload = text.trim()
-    ? uninstallPayloadSchema.parse(JSON.parse(text) as unknown)
-    : { cleanupMode: undefined };
-  const result = await uninstallBuilderApp(
-    DEFAULT_BUILDER_SITE_ID,
-    locale,
-    params.appId,
-    auth.username,
-    payload.cleanupMode,
-  );
+  let payload: z.infer<typeof uninstallPayloadSchema> | { cleanupMode: undefined };
+  try {
+    payload = text.trim()
+      ? uninstallPayloadSchema.parse(JSON.parse(text) as unknown)
+      : { cleanupMode: undefined };
+  } catch (error) {
+    return errorResponse(locale, error instanceof z.ZodError ? 'invalid_request' : 'invalid_json', 400);
+  }
+  let result: Awaited<ReturnType<typeof uninstallBuilderApp>>;
+  try {
+    result = await uninstallBuilderApp(
+      DEFAULT_BUILDER_SITE_ID,
+      locale,
+      params.appId,
+      auth.username,
+      payload.cleanupMode,
+    );
+  } catch (error) {
+    console.error('[builder/apps/installations/:appId] uninstall failed:', error);
+    return errorResponse(locale, 'app_action_failed', 500);
+  }
   if (!result) {
-    return NextResponse.json({ ok: false, error: 'app_not_found' }, { status: 404 });
+    return errorResponse(locale, 'app_not_found', 404);
   }
   return NextResponse.json({ ok: true, ...result });
 }

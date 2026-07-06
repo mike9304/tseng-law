@@ -1,8 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import type {
+  BuilderCanvasNode,
   BuilderCanvasDocument,
   BuilderImageCanvasNode,
 } from '@/lib/builder/canvas/types';
+import { normalizeCanvasDocument } from '@/lib/builder/canvas/types';
 import {
   applyImageLocaleOverride,
   listImageNodesForLocaleEditor,
@@ -44,18 +46,59 @@ function makeImageNode(
   return node;
 }
 
-function makeCanvas(node: BuilderImageCanvasNode): BuilderCanvasDocument {
+function makeTextNode(): BuilderCanvasNode {
+  return {
+    id: 'text-1',
+    kind: 'text',
+    rect: { x: 0, y: 0, width: 200, height: 80 },
+    style: {
+      backgroundColor: 'transparent',
+      borderColor: '#cbd5e1',
+      borderStyle: 'solid',
+      borderWidth: 0,
+      borderRadius: 12,
+      shadowX: 0,
+      shadowY: 0,
+      shadowBlur: 0,
+      shadowSpread: 0,
+      shadowColor: 'rgba(0,0,0,0.1)',
+      opacity: 100,
+    },
+    zIndex: 0,
+    rotation: 0,
+    locked: false,
+    visible: true,
+    content: {
+      text: '본문',
+      fontSize: 16,
+      color: '#111827',
+      fontWeight: 'regular',
+      align: 'left',
+      lineHeight: 1.25,
+      letterSpacing: 0,
+    },
+  };
+}
+
+function makeCanvas(node: BuilderCanvasNode): BuilderCanvasDocument {
   return {
     version: 1,
-    canvasId: 'canvas-1',
-    pageId: 'page-1',
     locale: 'ko',
+    updatedAt: '2026-05-20T00:00:00.000Z',
+    updatedBy: 'locale-media-test',
     stageWidth: 1280,
     stageHeight: 720,
     nodes: [node],
-    createdAt: '2026-05-20T00:00:00.000Z',
-    updatedAt: '2026-05-20T00:00:00.000Z',
-  } as unknown as BuilderCanvasDocument;
+  };
+}
+
+function expectImageNode(canvas: BuilderCanvasDocument): BuilderImageCanvasNode {
+  const node = canvas.nodes.find(
+    (candidate): candidate is BuilderImageCanvasNode => candidate.kind === 'image',
+  );
+  expect(node).toBeTruthy();
+  if (!node) throw new Error('Expected image node.');
+  return node;
 }
 
 describe('resolveLocaleImageContent', () => {
@@ -73,7 +116,7 @@ describe('resolveLocaleImageContent', () => {
         ...makeImageNode().content,
         srcByLocale: { en: '/images/en.jpg' },
         altByLocale: { en: 'English alt' },
-      } as never,
+      },
     });
     expect(resolveLocaleImageContent(node, 'en')).toEqual({
       src: '/images/en.jpg',
@@ -86,7 +129,7 @@ describe('resolveLocaleImageContent', () => {
       content: {
         ...makeImageNode().content,
         srcByLocale: { 'zh-hant': '/images/zh.jpg' },
-      } as never,
+      },
     });
     const resolved = resolveLocaleImageContent(node, 'zh-hant');
     expect(resolved.src).toBe('/images/zh.jpg');
@@ -98,7 +141,7 @@ describe('resolveLocaleImageContent', () => {
       content: {
         ...makeImageNode().content,
         srcByLocale: { en: '' },
-      } as never,
+      },
     });
     expect(resolveLocaleImageContent(node, 'en').src).toBe('/images/source.jpg');
   });
@@ -110,7 +153,7 @@ describe('projectImageNodeForLocale', () => {
       content: {
         ...makeImageNode().content,
         srcByLocale: { en: '/images/en.jpg' },
-      } as never,
+      },
     });
     const projected = projectImageNodeForLocale(node, 'en');
     expect(projected).not.toBe(node);
@@ -123,11 +166,31 @@ describe('projectImageNodeForLocale', () => {
   });
 
   it('passes non-image nodes through unchanged', () => {
-    const textNode = {
-      ...makeImageNode(),
-      kind: 'text',
-    } as unknown as BuilderImageCanvasNode;
+    const textNode = makeTextNode();
     expect(projectImageNodeForLocale(textNode, 'en')).toBe(textNode);
+  });
+});
+
+describe('normalizeCanvasDocument locale image fields', () => {
+  it('preserves locale image override bags for published render projection', () => {
+    const normalized = normalizeCanvasDocument(
+      makeCanvas(
+        makeImageNode({
+          content: {
+            ...makeImageNode().content,
+            srcByLocale: { en: '/images/en.jpg' },
+            altByLocale: { en: 'English alt' },
+          },
+        }),
+      ),
+      'en',
+    );
+    const node = expectImageNode(normalized);
+
+    expect(resolveLocaleImageContent(node, 'en')).toEqual({
+      src: '/images/en.jpg',
+      alt: 'English alt',
+    });
   });
 });
 
@@ -137,13 +200,9 @@ describe('applyImageLocaleOverride', () => {
     const next = applyImageLocaleOverride(canvas, 'img-1', 'en', {
       src: '/images/en.jpg',
     });
-    const node = next.nodes[0] as BuilderImageCanvasNode;
-    const bag = node.content as unknown as {
-      srcByLocale?: Record<string, string>;
-      altByLocale?: Record<string, string>;
-    };
-    expect(bag.srcByLocale?.en).toBe('/images/en.jpg');
-    expect(bag.altByLocale).toBeUndefined();
+    const node = expectImageNode(next);
+    expect(node.content.srcByLocale?.en).toBe('/images/en.jpg');
+    expect(node.content.altByLocale).toBeUndefined();
   });
 
   it('empty-string override clears that locale slot', () => {
@@ -152,15 +211,13 @@ describe('applyImageLocaleOverride', () => {
         content: {
           ...makeImageNode().content,
           srcByLocale: { en: '/images/en.jpg', 'zh-hant': '/images/zh.jpg' },
-        } as never,
+        },
       }),
     );
     const next = applyImageLocaleOverride(canvas, 'img-1', 'en', { src: '' });
-    const bag = (next.nodes[0] as BuilderImageCanvasNode).content as unknown as {
-      srcByLocale?: Record<string, string>;
-    };
-    expect(bag.srcByLocale?.en).toBeUndefined();
-    expect(bag.srcByLocale?.['zh-hant']).toBe('/images/zh.jpg');
+    const node = expectImageNode(next);
+    expect(node.content.srcByLocale?.en).toBeUndefined();
+    expect(node.content.srcByLocale?.['zh-hant']).toBe('/images/zh.jpg');
   });
 
   it('returns the same canvas when the nodeId is unknown', () => {
@@ -176,7 +233,7 @@ describe('listImageNodesForLocaleEditor', () => {
         content: {
           ...makeImageNode().content,
           srcByLocale: { en: '/images/en.jpg' },
-        } as never,
+        },
       }),
     );
     const rows = listImageNodesForLocaleEditor(canvas);

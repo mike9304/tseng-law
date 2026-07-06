@@ -3,6 +3,7 @@ import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persiste
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 
 const LOCALE = 'ko';
+const SHELL_LOCALES = ['ko', 'zh-hant'] as const;
 const APP_ID = 'site-search';
 const BOOKING_APP_ID = 'appointments-lite';
 
@@ -37,6 +38,26 @@ async function setInstalledAppVersion(appId: string, version: string) {
   });
 }
 
+async function expectAppMarketShell(page: import('@playwright/test').Page, locale: 'ko' | 'zh-hant') {
+  const title = locale === 'ko' ? '앱 마켓' : '應用市集';
+  const description = locale === 'ko'
+    ? '로컬 앱 카탈로그와 설치 수명주기를 관리합니다.'
+    : '管理本地應用目錄與安裝生命週期。';
+  const search = locale === 'ko' ? '검색' : '搜尋';
+  const category = locale === 'ko' ? '카테고리' : '類別';
+  const status = locale === 'ko' ? '상태' : '狀態';
+  const installedNativeApps = locale === 'ko' ? '설치된 네이티브 앱' : '已安裝的原生應用';
+
+  await expect(page.locator('[data-app-market] .builder-dashboard-page-head strong').first()).toHaveText(title);
+  await expect(page.locator('[data-app-market] .builder-dashboard-page-head span').first()).toContainText(description);
+  await expect(page.locator('[data-builder-admin-rail-back="true"]')).toContainText(locale === 'ko' ? '편집기로 돌아가기' : '返回編輯器');
+  await expect(page.locator('[data-app-market] [data-app-market-search]')).toHaveAttribute('placeholder', locale === 'ko' ? '앱, 권한, 위젯 검색' : '搜尋應用、權限、小工具');
+  await expect(page.locator('[data-app-market] label > span').first()).toHaveText(search);
+  await expect(page.locator('[data-app-market] label > span').nth(1)).toHaveText(category);
+  await expect(page.locator('[data-app-market] label > span').nth(2)).toHaveText(status);
+  await expect(page.locator('[data-native-app-dashboard] .builder-dashboard-page-head strong').first()).toHaveText(installedNativeApps);
+}
+
 test('/ko/admin-builder/apps supports catalog search and app lifecycle controls', async ({ page }) => {
   const token = Date.now().toString(36);
   await uninstallIfPresent(page.request, `app-market-cleanup-before-${token}`);
@@ -44,6 +65,7 @@ test('/ko/admin-builder/apps supports catalog search and app lifecycle controls'
   try {
     await page.goto(`/${LOCALE}/admin-builder/apps?appMarket=${token}`, { waitUntil: 'domcontentloaded' });
     await expect(page.locator('[data-app-market]')).toBeVisible();
+    await expectAppMarketShell(page, 'ko');
     await expect(page.locator(`[data-app-card="${APP_ID}"]`)).toBeVisible();
 
     await page.locator('[data-app-market-search]').fill('search');
@@ -57,8 +79,8 @@ test('/ko/admin-builder/apps supports catalog search and app lifecycle controls'
     await expect(page.locator(`[data-app-version-health="${APP_ID}"]`)).toHaveAttribute('data-app-update-state', 'current');
     await expect(page.locator(`[data-app-version-health="${APP_ID}"]`)).toHaveAttribute('data-app-compat-state', 'compatible');
     await expect(page.locator(`[data-app-version-health="${APP_ID}"]`)).toHaveAttribute('data-app-rollback-state', 'unavailable');
-    await expect(page.locator(`[data-app-version-health="${APP_ID}"]`)).toContainText('Installed v1.0.0');
-    await expect(page.locator(`[data-app-migration-summary="${APP_ID}"]`)).toContainText('1/1 migrations applied');
+    await expect(page.locator(`[data-app-version-health="${APP_ID}"]`)).toContainText(/Installed v1\.0\.0|설치됨 v1\.0\.0/);
+    await expect(page.locator(`[data-app-migration-summary="${APP_ID}"]`)).toContainText(/1\/1 migrations applied|1\/1 마이그레이션 적용됨/);
     await expect(page.locator(`[data-app-migration-summary="${APP_ID}"]`)).toContainText('search-install-v1');
     await expect(page.locator('[data-native-app-dashboard]')).toBeVisible();
     await expect(page.locator(`[data-native-app-dashboard-card="${APP_ID}"]`)).toHaveAttribute('data-native-app-dashboard-status', 'enabled');
@@ -73,7 +95,7 @@ test('/ko/admin-builder/apps supports catalog search and app lifecycle controls'
     });
     expect(rollbackUnavailableResponse.status()).toBe(409);
     const rollbackUnavailablePayload = await rollbackUnavailableResponse.json() as { error?: string };
-    expect(rollbackUnavailablePayload.error).toBe('app_rollback_unavailable');
+    expect((rollbackUnavailablePayload as { errorCode?: string; error?: string }).errorCode ?? rollbackUnavailablePayload.error).toBe('app_rollback_unavailable');
 
     await setInstalledAppVersion(APP_ID, '0.9.0');
     await page.reload({ waitUntil: 'domcontentloaded' });
@@ -90,7 +112,7 @@ test('/ko/admin-builder/apps supports catalog search and app lifecycle controls'
     await page.locator(`[data-app-setting-field="${APP_ID}:placeholder"]`).fill(placeholder);
     await page.locator(`[data-app-setting-field="${APP_ID}:include-cms"]`).uncheck();
     await page.locator(`[data-app-settings-save="${APP_ID}"]`).click();
-    await expect(page.getByText('settings saved')).toBeVisible();
+    await expect(page.getByText(LOCALE === 'ko' ? '설정이 저장되었습니다.' : '設定已儲存。')).toBeVisible();
 
     const settingsResponse = await page.request.get(`/api/builder/apps/installations?locale=${LOCALE}`, {
       headers: mutationHeaders(`app-market-settings-read-${token}`),
@@ -179,7 +201,7 @@ test('/ko/admin-builder/apps supports catalog search and app lifecycle controls'
     await page.locator('[data-app-market-status-filter]').selectOption('not-installed');
     await expect(page.locator(`[data-app-card="${APP_ID}"]`)).toHaveAttribute('data-app-status', 'not-installed');
     await expect(page.locator(`[data-app-uninstall-summary="${APP_ID}"]`)).toHaveAttribute('data-app-uninstall-reversible', 'true');
-    await expect(page.locator(`[data-app-uninstall-summary="${APP_ID}"]`)).toContainText('Data kept for restore');
+    await expect(page.locator(`[data-app-uninstall-summary="${APP_ID}"]`)).toContainText(LOCALE === 'ko' ? '복구를 위해 데이터 보관됨' : '資料已保留以便還原');
     await expect(page.locator(`[data-app-action="restore-${APP_ID}"]`)).toBeVisible();
 
     await page.locator(`[data-app-action="restore-${APP_ID}"]`).click();
@@ -192,12 +214,28 @@ test('/ko/admin-builder/apps supports catalog search and app lifecycle controls'
     await page.locator('[data-app-market-status-filter]').selectOption('not-installed');
     await expect(page.locator(`[data-app-card="${APP_ID}"]`)).toHaveAttribute('data-app-status', 'not-installed');
     await expect(page.locator(`[data-app-uninstall-summary="${APP_ID}"]`)).toHaveAttribute('data-app-uninstall-reversible', 'false');
-    await expect(page.locator(`[data-app-uninstall-summary="${APP_ID}"]`)).toContainText('Data removed');
+    await expect(page.locator(`[data-app-uninstall-summary="${APP_ID}"]`)).toContainText(LOCALE === 'ko' ? '데이터 제거됨' : '資料已移除');
     await expect(page.locator(`[data-app-action="restore-${APP_ID}"]`)).toHaveCount(0);
   } finally {
     await uninstallIfPresent(page.request, `app-market-cleanup-after-${token}`);
   }
 });
+
+for (const locale of SHELL_LOCALES) {
+  if (locale === 'ko') continue;
+  test(`/${locale}/admin-builder/apps localizes the app market shell`, async ({ page }) => {
+    const token = Date.now().toString(36);
+    await uninstallIfPresent(page.request, `app-market-shell-cleanup-before-${token}`, APP_ID);
+    try {
+      await page.goto(`/${locale}/admin-builder/apps?shell=${token}`, { waitUntil: 'domcontentloaded' });
+      await expect(page.locator('[data-app-market]')).toBeVisible();
+      await expectAppMarketShell(page, locale);
+      await expect(page.locator('[data-native-app-dashboard]')).toBeVisible();
+    } finally {
+      await uninstallIfPresent(page.request, `app-market-shell-cleanup-after-${token}`, APP_ID);
+    }
+  });
+}
 
 test('/ko/admin-builder/apps exposes native app admin surfaces from the unified dashboard', async ({ page }) => {
   const token = Date.now().toString(36);

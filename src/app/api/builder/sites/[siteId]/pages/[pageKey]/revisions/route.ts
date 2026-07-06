@@ -7,13 +7,24 @@ import {
   readBuilderPageSnapshotHistoryDetail,
 } from '@/lib/builder/persistence';
 import { isBuilderPageKey, isDefaultBuilderSiteId } from '@/lib/builder/site';
+import {
+  getBuilderSiteApiErrorPayload,
+  type BuilderSiteApiErrorCode,
+} from '@/lib/builder/site/site-api-copy';
 import { normalizeLocale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
-function badRequest(message: string) {
-  return NextResponse.json({ ok: false, error: message }, { status: 400 });
+function errorResponse(
+  locale: ReturnType<typeof normalizeLocale>,
+  errorCode: BuilderSiteApiErrorCode,
+  status: number,
+): NextResponse {
+  return NextResponse.json(
+    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode) },
+    { status },
+  );
 }
 
 export async function GET(
@@ -23,36 +34,41 @@ export async function GET(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
+
   if (!isDefaultBuilderSiteId(params.siteId)) {
-    return NextResponse.json({ ok: false, error: 'Unknown builder site.' }, { status: 404 });
+    return errorResponse(locale, 'builder_site_not_found', 404);
   }
 
   if (!isBuilderPageKey(params.pageKey)) {
-    return NextResponse.json({ ok: false, error: 'Unknown builder page.' }, { status: 404 });
+    return errorResponse(locale, 'builder_page_not_found', 404);
   }
 
-  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const kindParam = request.nextUrl.searchParams.get('kind');
   const revisionId = request.nextUrl.searchParams.get('revisionId');
   const limitParam = request.nextUrl.searchParams.get('limit');
   const kind = kindParam ? (isBuilderSnapshotKind(kindParam) ? kindParam : null) : 'published';
 
   if (!kind) {
-    return badRequest('Invalid snapshot kind.');
+    return errorResponse(locale, 'revision_kind_invalid', 400);
   }
 
-  if (revisionId) {
-    const result = await readBuilderPageSnapshotHistoryDetail(params.pageKey, kind, locale, revisionId);
-    if (!result.record || !result.snapshot) {
-      return NextResponse.json({ ok: false, error: 'Revision record not found.' }, { status: 404 });
+  try {
+    if (revisionId) {
+      const result = await readBuilderPageSnapshotHistoryDetail(params.pageKey, kind, locale, revisionId);
+      if (!result.record || !result.snapshot) {
+        return errorResponse(locale, 'revision_not_found', 404);
+      }
+      return NextResponse.json(buildBuilderSnapshotHistoryDetailResponse(result));
     }
-    return NextResponse.json(buildBuilderSnapshotHistoryDetailResponse(result));
-  }
 
-  const parsedLimit =
-    typeof limitParam === 'string' && limitParam.trim()
-      ? Math.max(1, Math.min(20, Number.parseInt(limitParam, 10) || 8))
-      : 8;
-  const result = await listBuilderPageSnapshotHistory(params.pageKey, kind, locale, parsedLimit);
-  return NextResponse.json(buildBuilderSnapshotHistoryListResponse(result));
+    const parsedLimit =
+      typeof limitParam === 'string' && limitParam.trim()
+        ? Math.max(1, Math.min(20, Number.parseInt(limitParam, 10) || 8))
+        : 8;
+    const result = await listBuilderPageSnapshotHistory(params.pageKey, kind, locale, parsedLimit);
+    return NextResponse.json(buildBuilderSnapshotHistoryListResponse(result));
+  } catch {
+    return errorResponse(locale, 'revision_load_failed', 500);
+  }
 }

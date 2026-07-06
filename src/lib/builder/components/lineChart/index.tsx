@@ -1,5 +1,13 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderLineChartCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
+import {
+  DATA_WIDGETS_LEGACY_DEFAULTS,
+  getDataWidgetsCopy,
+  localizedDataWidgetPoints,
+  localizedDataWidgetText,
+} from '../data-widgets-copy';
+import styles from '../DataWidgetInspector.module.css';
 
 function buildPath(points: { x: number; y: number }[], smooth: boolean): string {
   if (points.length === 0) return '';
@@ -18,27 +26,32 @@ function buildPath(points: { x: number; y: number }[], smooth: boolean): string 
 
 function LineChartRender({
   node,
+  locale = 'ko',
 }: {
   node: BuilderLineChartCanvasNode;
+  locale?: Locale;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
+  const copy = getDataWidgetsCopy(locale);
+  const title = localizedDataWidgetText(c.title, copy.chart.defaults.lineTitle, DATA_WIDGETS_LEGACY_DEFAULTS.lineTitle);
+  const points = localizedDataWidgetPoints(c.points, copy.chart.defaults.linePoints, DATA_WIDGETS_LEGACY_DEFAULTS.linePoints);
   const W = 360;
   const H = 180;
   const innerW = W - 32;
   const innerH = H - 32;
-  if (c.points.length === 0) {
+  if (points.length === 0) {
     return (
       <div className="builder-datadisplay-chart" data-builder-datadisplay-widget="line-chart">
-        <em>데이터 없음</em>
+        <em>{copy.chart.empty}</em>
       </div>
     );
   }
-  const max = Math.max(...c.points.map((p) => p.value));
-  const min = Math.min(...c.points.map((p) => p.value));
+  const max = Math.max(...points.map((p) => p.value));
+  const min = Math.min(...points.map((p) => p.value));
   const range = max - min || 1;
-  const stepX = c.points.length > 1 ? innerW / (c.points.length - 1) : innerW;
-  const mapped = c.points.map((p, i) => ({
+  const stepX = points.length > 1 ? innerW / (points.length - 1) : innerW;
+  const mapped = points.map((p, i) => ({
     x: 16 + i * stepX,
     y: 16 + innerH - ((p.value - min) / range) * innerH,
   }));
@@ -46,13 +59,13 @@ function LineChartRender({
 
   return (
     <div className="builder-datadisplay-chart" data-builder-datadisplay-widget="line-chart">
-      {c.title ? <strong>{c.title}</strong> : null}
-      <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label={c.title || 'Line chart'}>
+      {title ? <strong>{title}</strong> : null}
+      <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label={title || copy.chart.lineAria}>
         <path d={path} fill="none" stroke={c.color} strokeWidth={2.5} strokeLinecap="round" />
         {c.showPoints ? mapped.map((p, idx) => (
           <circle key={idx} cx={p.x} cy={p.y} r={3} fill={c.color} />
         )) : null}
-        {c.points.map((p, idx) => (
+        {points.map((p, idx) => (
           <text key={`l-${idx}`} x={16 + idx * stepX} y={H - 4} fontSize={9} textAnchor="middle" fill="#64748b">
             {p.label}
           </text>
@@ -81,40 +94,44 @@ function parsePoints(value: string): BuilderLineChartCanvasNode['content']['poin
 
 function LineChartInspector({
   node,
+  locale = 'ko',
   onUpdate,
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const lcNode = node as BuilderLineChartCanvasNode;
   const c = lcNode.content;
+  const copy = getDataWidgetsCopy(locale);
+  const title = localizedDataWidgetText(c.title, copy.chart.defaults.lineTitle, DATA_WIDGETS_LEGACY_DEFAULTS.lineTitle);
+  const points = localizedDataWidgetPoints(c.points, copy.chart.defaults.linePoints, DATA_WIDGETS_LEGACY_DEFAULTS.linePoints);
   return (
-    <>
-      <label>
-        <span>제목</span>
-        <input type="text" value={c.title} disabled={disabled} onChange={(event) => onUpdate({ title: event.target.value })} />
+    <div className={styles.root} data-builder-data-widget-inspector="line-chart">
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.chart.inspector.title}</span>
+        <input className={styles.control} type="text" value={title} disabled={disabled} onChange={(event) => onUpdate({ title: event.target.value })} />
       </label>
-      <label>
-        <span>데이터 (label | value)</span>
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.chart.inspector.points}</span>
         <textarea
+          className={`${styles.control} ${styles.textarea}`}
           rows={6}
-          style={{ fontFamily: 'inherit', resize: 'vertical' }}
-          value={pointsToText(c.points)}
+          value={pointsToText(points)}
           disabled={disabled}
           onChange={(event) => onUpdate({ points: parsePoints(event.target.value) })}
         />
       </label>
-      <label>
-        <span>색</span>
-        <input type="text" value={c.color} disabled={disabled} onChange={(event) => onUpdate({ color: event.target.value })} />
+      <label className={styles.field}>
+        <span className={styles.label}>{copy.chart.inspector.color}</span>
+        <input className={styles.control} type="text" value={c.color} disabled={disabled} onChange={(event) => onUpdate({ color: event.target.value })} />
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.smooth} disabled={disabled} onChange={(event) => onUpdate({ smooth: event.target.checked })} />
-        <span>부드러운 곡선</span>
+        <span>{copy.chart.inspector.smoothCurve}</span>
       </label>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+      <label className={styles.checkboxRow}>
         <input type="checkbox" checked={c.showPoints} disabled={disabled} onChange={(event) => onUpdate({ showPoints: event.target.checked })} />
-        <span>포인트 표시</span>
+        <span>{copy.chart.inspector.showPoints}</span>
       </label>
-    </>
+    </div>
   );
 }
 
@@ -124,14 +141,8 @@ export default defineComponent({
   category: 'advanced',
   icon: '⌇',
   defaultContent: {
-    title: '연간 자문 추세',
-    points: [
-      { label: '2021', value: 120 },
-      { label: '2022', value: 154 },
-      { label: '2023', value: 168 },
-      { label: '2024', value: 195 },
-      { label: '2025', value: 230 },
-    ],
+    title: DATA_WIDGETS_LEGACY_DEFAULTS.lineTitle,
+    points: DATA_WIDGETS_LEGACY_DEFAULTS.linePoints.map((point) => ({ ...point })),
     color: '#0ea5e9',
     smooth: true,
     showPoints: true,

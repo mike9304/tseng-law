@@ -1,5 +1,5 @@
 import { expect, test, type APIRequestContext, type Locator, type Page } from '@playwright/test';
-import { createHomePageCanvasDocument } from '@/lib/builder/canvas/seed-home';
+import { createHomePageCanvasDocument, createHomePageCanvasDocumentDecomposed } from '@/lib/builder/canvas/seed-home';
 import { readHeaderCanvas, readSiteDocument, writeHeaderCanvas, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { createDefaultCookieConsent, createDefaultPopup, type BuilderCookieConsent, type BuilderHeaderFooterConfig, type BuilderSiteSettings } from '@/lib/builder/site/types';
 
@@ -136,14 +136,14 @@ async function expectPublicBoundaryControlsWork(
   await expectTopHitTarget(page, 'home-hero-search-button');
   await expectTopHitTarget(page, 'home-insights-view-all');
   await expectComputedZIndex(page, 'home-hero-root', '30000');
-  await expectComputedZIndex(page, 'home-insights-root', '20000');
+  await expectComputedZIndex(page, 'home-insights-root', 'auto');
   if (options.checkHorizontalOverflow) await expectNoHorizontalOverflow(page);
   await expectRootStackNoOverlap(page, [
     'home-hero-root',
     'home-insights-root',
     'home-services-root',
     'home-attorney-root',
-    'case-results-root',
+    'home-case-results-root',
     'home-stats-root',
     'home-faq-root',
     'home-offices-root',
@@ -391,11 +391,20 @@ function makePublishedInteractionDocument(token: string): TestDocument {
 }
 
 function makePublishedHomeBoundaryDocument(token: string): TestDocument {
-  const document = createHomePageCanvasDocument('ko');
+  const document = createHomePageCanvasDocumentDecomposed('ko');
   return {
     ...document,
     updatedAt: new Date().toISOString(),
     updatedBy: `published-home-boundary-${token}`,
+  } as TestDocument;
+}
+
+function makePublishedHomeCompositeDocument(token: string): TestDocument {
+  const document = createHomePageCanvasDocument('ko');
+  return {
+    ...document,
+    updatedAt: new Date().toISOString(),
+    updatedBy: `published-home-composite-${token}`,
   } as TestDocument;
 }
 
@@ -719,6 +728,43 @@ test.describe('/ko published builder interactions', () => {
     }
   });
 
+  test('applies fullbleed hero rule to composite home-hero id on the published page', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-published-composite-fullbleed-${token}`;
+    let pageId: string | null = null;
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Published Home Composite Fullbleed ${token}`,
+        makePublishedHomeCompositeDocument(token),
+      );
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: {},
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+
+      // Regression: the published home renders the hero as the composite id
+      // `home-hero` (not the decomposed `home-hero-root`). The fullbleed rule
+      // must cover both ids so the composite hero stacks above the header.
+      const hero = page.locator('[data-node-id="home-hero"]').first();
+      await expect(hero).toBeVisible();
+      await expect.poll(async () => hero.evaluate((el) => window.getComputedStyle(el).zIndex)).toBe('30000');
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
   test('opens site lightbox and popup overlays from keyboard triggers with focus restore', async ({ page }) => {
     const token = Date.now().toString(36);
     const slug = `g-editor-published-overlays-${token}`;
@@ -790,7 +836,7 @@ test.describe('/ko published builder interactions', () => {
       await lightboxWrapper.press('Enter');
       const lightboxDialog = page.locator(`[data-lightbox-overlay="${lightboxSlug}"]`);
       await expect(lightboxDialog).toBeVisible();
-      const lightboxClose = lightboxDialog.getByRole('button', { name: 'Close' });
+      const lightboxClose = lightboxDialog.getByRole('button', { name: /^Close$|^닫기$/ });
       await expect(lightboxClose).toBeFocused();
       await page.keyboard.press('Escape');
       await expect(lightboxDialog).toHaveCount(0);
@@ -809,7 +855,7 @@ test.describe('/ko published builder interactions', () => {
       await popupTrigger.press('Space');
       const popupDialog = page.locator(`[data-popup-overlay="${popupSlug}"]`);
       await expect(popupDialog).toBeVisible();
-      const popupClose = popupDialog.getByRole('button', { name: 'Close' });
+      const popupClose = popupDialog.getByRole('button', { name: /^Close$|^닫기$/ });
       await expect(popupClose).toBeFocused();
       await page.keyboard.press('Escape');
       await expect(popupDialog).toHaveCount(0);
@@ -899,7 +945,7 @@ test.describe('/ko published builder interactions', () => {
       }, lightboxSlug);
       const lightboxDialog = page.locator(`[data-lightbox-overlay="${lightboxSlug}"]`);
       await expect(lightboxDialog).toBeVisible();
-      await expect(lightboxDialog.getByRole('button', { name: 'Close' })).toBeFocused();
+      await expect(lightboxDialog.getByRole('button', { name: /^Close$|^닫기$/ })).toBeFocused();
       await page.keyboard.press('Escape');
       await expect(lightboxDialog).toHaveCount(0);
       await expect(lightboxWrapper).toBeFocused();
@@ -909,7 +955,7 @@ test.describe('/ko published builder interactions', () => {
       await expect(popupTrigger).toBeFocused();
       const popupDialog = page.locator(`[data-popup-overlay="${popupSlug}"]`);
       await expect(popupDialog).toBeVisible({ timeout: 5000 });
-      await expect(popupDialog.getByRole('button', { name: 'Close' })).toBeFocused();
+      await expect(popupDialog.getByRole('button', { name: /^Close$|^닫기$/ })).toBeFocused();
       await page.keyboard.press('Escape');
       await expect(popupDialog).toHaveCount(0);
       await expect(popupTrigger).toBeFocused();
@@ -1076,7 +1122,7 @@ test.describe('/ko published builder interactions', () => {
       await expect(page.getByRole('dialog', { name: `Gallery focus one ${token}` })).toBeVisible();
       const dialog = page.locator('.builder-gallery-lightbox');
       await expect(dialog).toBeVisible();
-      const closeButton = dialog.getByRole('button', { name: 'Close' });
+      const closeButton = dialog.getByRole('button', { name: /^Close$|^닫기$/ });
       await expect(closeButton).toBeFocused();
       await page.keyboard.press('ArrowRight');
       await expect(dialog.locator('.builder-gallery-lightbox-counter')).toContainText('2 / 2');
@@ -1168,10 +1214,10 @@ test.describe('/ko published builder interactions', () => {
       await toggle.press('Enter');
 
       const drawer = page.locator('#site-mobile-nav-drawer');
-      const dialog = page.getByRole('dialog', { name: 'Mobile menu' });
+      const dialog = page.getByRole('dialog', { name: '모바일 메뉴' });
       await expect(drawer).toHaveAttribute('data-builder-mobile-drawer', 'open');
       await expect(dialog).toBeVisible();
-      const closeButton = dialog.getByRole('button', { name: 'Close' });
+      const closeButton = dialog.getByRole('button', { name: '닫기' });
       await expect(closeButton).toBeFocused();
 
       await page.keyboard.press('Shift+Tab');
@@ -1418,8 +1464,8 @@ test.describe('/ko published builder interactions', () => {
         window.localStorage.setItem('hojeong-ai-chat-collapsed', 'true');
         window.localStorage.setItem('hojeong-year-end-event-hide-until', String(Date.now() + 24 * 60 * 60 * 1000));
       });
-      await page.goto('/ko', { waitUntil: 'domcontentloaded' });
-      await page.waitForLoadState('networkidle');
+      await page.goto('/ko', { waitUntil: 'commit' });
+      await page.waitForLoadState('load');
 
       const trigger = page.getByRole('button', { name: '빠른 상담 열기' });
       await expect(trigger).toBeVisible();
@@ -1472,6 +1518,7 @@ test.describe('/ko published builder interactions', () => {
 
       const dialog = page.getByRole('dialog', { name: '모바일 메뉴' });
       await expect(dialog).toBeVisible();
+      await expect(dialog.locator('.drawer-nav')).toHaveAttribute('aria-label', '모바일 주요 메뉴');
       await expect(toggle).toHaveAttribute('aria-label', '메뉴 닫기');
       await expect(toggle).toHaveAttribute('aria-expanded', 'true');
       const closeButton = dialog.getByRole('button', { name: '닫기' });
@@ -1515,26 +1562,23 @@ test.describe('/ko published builder interactions', () => {
     }
   });
 
-  test('traps focus in the public year-end event popup', async ({ page }) => {
+  test('keeps the public year-end event popup non-blocking', async ({ page }) => {
     await page.addInitScript(() => {
       window.localStorage.setItem('hojeong-ai-chat-collapsed', 'true');
       window.localStorage.removeItem('hojeong-year-end-event-hide-until');
+      window.sessionStorage.removeItem('hojeong-year-end-event-dismissed-session');
     });
 
     try {
       await page.goto('/ko', { waitUntil: 'domcontentloaded' });
-      await page.waitForLoadState('networkidle');
+      await page.waitForLoadState('load');
 
       const dialog = page.getByRole('dialog', { name: '2026년 기념 리뷰 이벤트' });
       await expect(dialog).toBeVisible();
+      await expect(dialog).toHaveAttribute('aria-modal', 'false');
+      await expect(dialog).toHaveCSS('pointer-events', 'none');
       const closeButton = dialog.getByRole('button', { name: '닫기' });
-      const hideButton = dialog.getByRole('button', { name: '오늘 하루 보지 않기' });
-      await expect(closeButton).toBeFocused();
-
-      await page.keyboard.press('Shift+Tab');
-      await expect(hideButton).toBeFocused();
-      await page.keyboard.press('Tab');
-      await expect(closeButton).toBeFocused();
+      await expect(closeButton).toHaveCSS('pointer-events', 'auto');
 
       await page.evaluate(() => {
         const probe = document.createElement('button');
@@ -1544,14 +1588,90 @@ test.describe('/ko published builder interactions', () => {
         document.body.appendChild(probe);
         probe.focus();
       });
-      await expect(closeButton).toBeFocused();
+      await expect(page.locator('[data-year-end-popup-focus-probe]')).toBeFocused();
 
-      await page.keyboard.press('Escape');
+      await page.getByRole('link', { name: '업무분야', exact: true }).click();
+      await page.waitForURL('**/ko/services');
+      await expect(dialog).toHaveCount(0);
+
+      await page.locator('header .header-logo').click();
+      await page.waitForURL('**/ko');
       await expect(dialog).toHaveCount(0);
     } finally {
       await page.evaluate(() => {
         window.localStorage.removeItem('hojeong-ai-chat-collapsed');
         window.localStorage.removeItem('hojeong-year-end-event-hide-until');
+        window.sessionStorage.removeItem('hojeong-year-end-event-dismissed-session');
+      }).catch(() => undefined);
+    }
+  });
+
+  test('keeps the public home hero image after navigating away and back', async ({ page }) => {
+    const publicMainNavRoundTrips = [
+      { href: '/ko/services', label: '업무분야' },
+      { href: '/ko/lawyers', label: '변호사소개' },
+      { href: '/ko/pricing', label: '비용안내' },
+      { href: '/ko/columns', label: '호정칼럼' },
+      { href: '/ko/videos', label: '미디어센터' },
+      { href: '/ko/reviews', label: '고객후기' },
+    ] as const;
+
+    const expectHeroImageReady = async () => {
+      const activeSlide = page.locator('.hero-media-item[data-active="true"]').first();
+      const image = activeSlide.locator('.hero-media-image').first();
+      await expect(activeSlide).toBeVisible();
+      await expect(image).toBeVisible();
+      await expect.poll(async () => image.evaluate((element) => (
+        element instanceof HTMLImageElement
+        && element.complete
+        && element.naturalWidth > 0
+        && element.naturalHeight > 0
+      ))).toBe(true);
+      await expect.poll(async () => activeSlide.evaluate((element) => (
+        Number(window.getComputedStyle(element).opacity) > 0.5
+      ))).toBe(true);
+      await expect.poll(async () => page.locator('.hero-media').first().evaluate((element) => {
+        const rect = element.getBoundingClientRect();
+        const style = window.getComputedStyle(element);
+        return rect.width > 0
+          && rect.height > 0
+          && style.display !== 'none'
+          && style.visibility !== 'hidden'
+          && Number(style.opacity) !== 0;
+      })).toBe(true);
+    };
+
+    await page.addInitScript(() => {
+      window.localStorage.setItem('hojeong-ai-chat-collapsed', 'true');
+      window.localStorage.setItem('hojeong-year-end-event-hide-until', String(Date.now() + 24 * 60 * 60 * 1000));
+      window.sessionStorage.setItem('hojeong-year-end-event-dismissed-session', 'true');
+    });
+
+    try {
+      await page.goto('/ko', { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('load');
+      await expectHeroImageReady();
+
+      for (const navItem of publicMainNavRoundTrips) {
+        await page.getByRole('link', { name: navItem.label, exact: true }).click();
+        await page.waitForURL(`**${navItem.href}`);
+        await page.locator('header .header-logo').click();
+        await page.waitForURL('**/ko');
+        await page.waitForLoadState('load');
+        await expectHeroImageReady();
+      }
+
+      await page.getByRole('link', { name: '호정칼럼', exact: true }).click();
+      await page.waitForURL('**/ko/columns');
+      await page.goBack({ waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('load');
+      await expect(page).toHaveURL(/\/ko\/?$/);
+      await expectHeroImageReady();
+    } finally {
+      await page.evaluate(() => {
+        window.localStorage.removeItem('hojeong-ai-chat-collapsed');
+        window.localStorage.removeItem('hojeong-year-end-event-hide-until');
+        window.sessionStorage.removeItem('hojeong-year-end-event-dismissed-session');
       }).catch(() => undefined);
     }
   });
@@ -1689,7 +1809,7 @@ test.describe('/ko published builder interactions', () => {
       await page.waitForLoadState('networkidle');
 
       const mobileWidget = page.locator(`[data-node-id="published-menu-bar-${token}"] [data-builder-nav-widget="menu-bar"]`);
-      const hamburger = mobileWidget.getByRole('button', { name: 'open menu' });
+      const hamburger = mobileWidget.getByRole('button', { name: /open menu|메뉴 열기/ });
       const mobilePanel = mobileWidget.locator('[data-builder-menu-mobile-panel="true"]');
       await expect(hamburger).toBeVisible();
       await expect(mobilePanel).toHaveAttribute('data-builder-menu-mobile-open', 'false');
@@ -1811,7 +1931,7 @@ test.describe('/ko published builder interactions', () => {
       await lightboxTrigger.click();
       const lightboxDialog = page.getByRole('dialog', { name: `Published lightbox image ${token}` });
       await expect(lightboxDialog).toBeVisible();
-      const lightboxClose = lightboxDialog.getByRole('button', { name: 'Close lightbox' });
+      const lightboxClose = lightboxDialog.getByRole('button', { name: /Close lightbox|라이트박스 닫기/ });
       await expect(lightboxClose).toBeFocused();
       await lightboxDialog.locator('.builder-media-modal-image').click();
       await expect(lightboxDialog).toBeVisible();
@@ -1831,9 +1951,9 @@ test.describe('/ko published builder interactions', () => {
       const popupTrigger = page.locator(`[data-node-id="published-popup-image-${token}"] .builder-media-click-frame`);
       await expect(popupTrigger).toBeVisible();
       await popupTrigger.click();
-      const popupDialog = page.getByRole('dialog', { name: `Published popup image ${token} popup` });
+      const popupDialog = page.getByRole('dialog', { name: new RegExp(`Published popup image ${token} (popup|팝업)`) });
       await expect(popupDialog).toBeVisible();
-      const popupClose = popupDialog.getByRole('button', { name: 'Close popup' });
+      const popupClose = popupDialog.getByRole('button', { name: /Close popup|팝업 닫기/ });
       await expect(popupClose).toBeFocused();
       await page.evaluate(() => {
         const probe = document.createElement('button');

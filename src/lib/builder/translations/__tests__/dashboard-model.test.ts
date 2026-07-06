@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { createDefaultSiteDocument } from '@/lib/builder/site/types';
-import { buildTranslationDashboardFromSite } from '@/lib/builder/translations/dashboard-model';
+import {
+  buildTranslationDashboardFromSite,
+} from '@/lib/builder/translations/dashboard-model';
+import { buildTranslationDashboardSummary } from '@/lib/builder/translations/dashboard-summary';
 
 function seededSite() {
   const site = createDefaultSiteDocument('ko', 'test-site');
@@ -95,5 +98,34 @@ describe('buildTranslationDashboardFromSite', () => {
     const aboutRow = rows.find((row) => row.slug === 'about');
     const enEntry = aboutRow?.entries.find((entry) => entry.locale === 'en');
     expect(enEntry?.targetPageId).toBe('page-about-en');
+  });
+
+  it('summarizes dashboard health by status and locale', () => {
+    const site = seededSite();
+    const rows = buildTranslationDashboardFromSite(site, 'ko');
+    const summary = buildTranslationDashboardSummary(rows, ['zh-hant', 'en']);
+
+    expect(summary.totalPages).toBe(3);
+    expect(summary.totalCells).toBe(6);
+    expect(summary.published).toBe(1);
+    expect(summary.outdated).toBe(1);
+    expect(summary.untranslated).toBe(4);
+    expect(summary.draft).toBe(0);
+    expect(summary.needsAttention).toBe(5);
+    expect(summary.locales).toHaveLength(2);
+
+    const zh = summary.locales.find((entry) => entry.locale === 'zh-hant');
+    expect(zh?.published).toBe(1);
+    expect(zh?.untranslated).toBe(2);
+    expect(zh?.draft).toBe(0);
+    expect(zh?.needsAttention).toBe(2);
+    expect(zh?.completionRate).toBe(33);
+
+    const en = summary.locales.find((entry) => entry.locale === 'en');
+    expect(en?.published).toBe(0);
+    expect(en?.outdated).toBe(1);
+    expect(en?.untranslated).toBe(2);
+    expect(en?.draft).toBe(0);
+    expect(en?.completionRate).toBe(0);
   });
 });

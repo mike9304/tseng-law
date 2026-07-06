@@ -31,6 +31,10 @@ export interface AdminNavSection {
   items: AdminNavItem[];
 }
 
+export interface AdminNavQuickLink extends AdminNavItem {
+  sectionHeading: string;
+}
+
 export interface AdminNavTree {
   sections: AdminNavSection[];
 }
@@ -42,6 +46,8 @@ export const ADMIN_NAV_TREE: AdminNavTree = {
       items: [
         { label: '빌더 홈', href: '', icon: '🏠', exact: true },
         { label: 'CMS', href: '/cms', icon: '🗂', requirePermission: 'edit-pages' },
+        { label: '서비스 소스', href: '/services', icon: '📚', requirePermission: 'edit-pages' },
+        { label: '변호사 소스', href: '/lawyers', icon: '⚖️', requirePermission: 'edit-pages' },
         { label: 'AI 생성기', href: '/ai-generator', icon: '✨', badge: 'beta', requirePermission: 'edit-pages' },
         { label: '커스텀 코드', href: '/custom-code', icon: '🧩', requirePermission: 'settings' },
         { label: '번역', href: '/translations', icon: '🌐', requirePermission: 'edit-pages' },
@@ -55,6 +61,7 @@ export const ADMIN_NAV_TREE: AdminNavTree = {
         { label: 'CRM', href: '/crm', icon: '👥', requirePermission: 'manage-contacts' },
         { label: '마케팅', href: '/marketing', icon: '📣', requirePermission: 'manage-campaigns' },
         { label: '폼', href: '/forms', icon: '📝', requirePermission: 'manage-forms' },
+        { label: '후기', href: '/reviews', icon: '★', requirePermission: 'manage-forms' },
         { label: '이벤트', href: '/events', icon: '🎫', requirePermission: 'edit-pages' },
       ],
     },
@@ -104,26 +111,60 @@ export function adminHref(locale: string, href: string): string {
   return `${base}${href.startsWith('/') ? href : `/${href}`}`;
 }
 
+function adminPathFromHref(href: string): string {
+  const trimmed = href.trim();
+  if (!trimmed) return '';
+
+  try {
+    const url = new URL(trimmed, 'https://builder.local');
+    return `${url.pathname}${url.search}`;
+  } catch (error) {
+    if (error instanceof TypeError) {
+      const [pathWithoutHash = ''] = trimmed.split('#', 1);
+      return pathWithoutHash;
+    }
+    throw error;
+  }
+}
+
 /**
  * Returns the item that best matches the current pathname. Longer hrefs
  * win so `/cms/collections` matches the CMS item, not the root.
  */
 export function findActiveItem(tree: AdminNavTree, locale: string, pathname: string): AdminNavItem | null {
   let best: { item: AdminNavItem; score: number } | null = null;
+  const currentPath = adminPathFromHref(pathname);
   for (const section of tree.sections) {
     for (const item of section.items) {
       const fullHref = adminHref(locale, item.href);
       if (item.exact) {
-        if (pathname === fullHref) return item;
+        if (currentPath === fullHref) return item;
         continue;
       }
-      if (pathname === fullHref || pathname.startsWith(`${fullHref}/`) || pathname.startsWith(`${fullHref}?`)) {
+      if (currentPath === fullHref || currentPath.startsWith(`${fullHref}/`) || currentPath.startsWith(`${fullHref}?`)) {
         const score = fullHref.length;
         if (!best || score > best.score) best = { item, score };
       }
     }
   }
   return best?.item ?? null;
+}
+
+export function findActiveAdminNavLink(
+  tree: AdminNavTree,
+  locale: string,
+  pathname: string,
+): AdminNavQuickLink | null {
+  const item = findActiveItem(tree, locale, pathname);
+  if (!item) return null;
+
+  for (const section of tree.sections) {
+    if (section.items.includes(item)) {
+      return { ...item, sectionHeading: section.heading };
+    }
+  }
+
+  return null;
 }
 
 export interface PermissionPredicate {
@@ -147,4 +188,18 @@ export function filterAdminNavTree(tree: AdminNavTree, allow: PermissionPredicat
     }
   }
   return { sections };
+}
+
+/**
+ * Flattens the tree into a section-aware list that can power compact
+ * workspace switchers and command palettes.
+ */
+export function flattenAdminNavTree(tree: AdminNavTree = ADMIN_NAV_TREE): AdminNavQuickLink[] {
+  const items: AdminNavQuickLink[] = [];
+  for (const section of tree.sections) {
+    for (const item of section.items) {
+      items.push({ ...item, sectionHeading: section.heading });
+    }
+  }
+  return items;
 }

@@ -17,11 +17,14 @@
  */
 
 import { locales, type Locale } from '@/lib/locales';
-import { readSiteDocument } from '@/lib/builder/site/persistence';
 import type {
   BuilderPageMeta,
   BuilderSiteDocument,
 } from '@/lib/builder/site/types';
+import {
+  buildTranslationDashboardCoverageSummaries,
+  type TranslationDashboardCoverageSummary,
+} from './dashboard-coverage';
 
 export type TranslationRowStatus =
   | 'untranslated'
@@ -61,7 +64,30 @@ export interface TranslationDashboardPayload {
   sourceLocale: Locale;
   targetLocales: Locale[];
   rows: TranslationDashboardRow[];
+  coverageSummaries: readonly TranslationDashboardCoverageSummary[];
   syncedAt: string;
+}
+
+export interface TranslationDashboardLocaleSummary {
+  locale: Locale;
+  totalCells: number;
+  untranslated: number;
+  draft: number;
+  published: number;
+  outdated: number;
+  needsAttention: number;
+  completionRate: number;
+}
+
+export interface TranslationDashboardSummary {
+  totalPages: number;
+  totalCells: number;
+  untranslated: number;
+  draft: number;
+  published: number;
+  outdated: number;
+  needsAttention: number;
+  locales: TranslationDashboardLocaleSummary[];
 }
 
 function titleForSource(page: BuilderPageMeta, sourceLocale: Locale): string {
@@ -169,14 +195,20 @@ export async function buildTranslationDashboard(
   siteId: string,
   sourceLocale: Locale,
 ): Promise<TranslationDashboardPayload> {
+  const { readSiteDocument } = await import('@/lib/builder/site/persistence');
   const site = await readSiteDocument(siteId, sourceLocale);
+  const targetLocales = locales.filter((locale) => locale !== sourceLocale);
   const rows = buildTranslationDashboardFromSite(site, sourceLocale);
   return {
     ok: true,
     siteId,
     sourceLocale,
-    targetLocales: locales.filter((locale) => locale !== sourceLocale),
+    targetLocales,
     rows,
+    coverageSummaries: buildTranslationDashboardCoverageSummaries(
+      site.translations ?? [],
+      targetLocales,
+    ),
     syncedAt: new Date().toISOString(),
   };
 }

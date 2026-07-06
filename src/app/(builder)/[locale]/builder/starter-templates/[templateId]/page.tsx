@@ -11,16 +11,32 @@ import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
+const starterTemplateCopy: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '빌더 스타터 템플릿 세부 정보',
+    description: '호정 빌더 안의 템플릿 우선 스타터 상세 화면입니다.',
+  },
+  'zh-hant': {
+    title: '建構器起始範本詳細資料',
+    description: '昊鼎建構器中的範本優先起始詳細頁。',
+  },
+  en: {
+    title: 'Builder Starter Template Detail',
+    description: 'Template-first starter detail inside the Hojeong builder.',
+  },
+};
+
 export function generateMetadata({
   params,
 }: {
   params: { locale: Locale; templateId: string };
 }): Metadata {
   const locale = normalizeLocale(params.locale);
+  const copy = starterTemplateCopy[locale];
   return buildSeoMetadata({
     locale,
-    title: 'Builder Starter Template Detail',
-    description: 'Template-first starter detail inside the Hojeong builder.',
+    title: copy.title,
+    description: copy.description,
     path: `/builder/starter-templates/${params.templateId}`,
     noindex: true,
   });

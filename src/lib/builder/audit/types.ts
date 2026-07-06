@@ -1,16 +1,27 @@
-import { z } from 'zod';
+import { auditEventSchema } from '@/lib/builder/audit/event-schemas';
+import { assertNoForbiddenKeys } from '@/lib/builder/audit/sensitive-keys';
+export { assertNoForbiddenKeys, FORBIDDEN_KEYS } from '@/lib/builder/audit/sensitive-keys';
 
 export type AuditEventType =
   | 'asset.upload'
   | 'asset.delete'
   | 'publish.success'
+  | 'publish.translation_site_review'
   | 'publish.blocked'
   | 'publish.failure'
   | 'page.rollback'
   | 'column.create'
   | 'column.update'
   | 'column.delete'
-  | 'column.publish';
+  | 'column.publish'
+  | 'cms.records.bulk_lifecycle'
+  | 'cms.record_created'
+  | 'cms.record_updated'
+  | 'cms.record_deleted'
+  | 'security.user_created'
+  | 'security.user_updated'
+  | 'security.user_removed'
+  | 'commerce.settings_updated';
 
 export interface AuditEventBase {
   type: AuditEventType;
@@ -38,6 +49,23 @@ export interface PublishSuccessEvent extends AuditEventBase {
   pageId: string;
   revision: number;
   revisionId: string;
+}
+
+export interface PublishTranslationSiteReviewEvent extends AuditEventBase {
+  type: 'publish.translation_site_review';
+  siteId: string;
+  pageId: string;
+  action: 'publish' | 'schedule';
+  sourceLocale: string;
+  syncedAt: string;
+  totalCount: number;
+  currentPageCount: number;
+  otherPageCount: number;
+  warningCount: number;
+  errorCount: number;
+  reviewHref: string;
+  scheduledAt?: string;
+  jobId?: string;
 }
 
 export interface PublishBlockedEvent extends AuditEventBase {
@@ -68,150 +96,65 @@ export interface ColumnEvent extends AuditEventBase {
   locale: string;
 }
 
+export type CmsRecordsBulkLifecycleAction =
+  | 'delete'
+  | 'generate-slugs'
+  | 'repair-slug-conflicts'
+  | 'status';
+
+export interface CmsRecordsBulkLifecycleEvent extends AuditEventBase {
+  type: 'cms.records.bulk_lifecycle';
+  siteId: string;
+  collectionId: string;
+  action: CmsRecordsBulkLifecycleAction;
+  recordIds: readonly string[];
+  requestedCount: number;
+  changedCount: number;
+  locale?: string;
+  status?: string;
+  slugField?: string;
+  sourceFieldKey?: string;
+  slugPattern?: string;
+  slugConflictRule?: string;
+  missingRecordIds?: readonly string[];
+  skippedRecordIds?: readonly string[];
+}
+
+export interface SecurityUserEvent extends AuditEventBase {
+  type: 'security.user_created' | 'security.user_updated' | 'security.user_removed';
+  username: string;
+  role?: string;
+}
+
+export interface CmsRecordEvent extends AuditEventBase {
+  type: 'cms.record_created' | 'cms.record_updated' | 'cms.record_deleted';
+  siteId: string;
+  collectionId: string;
+  recordId: string;
+}
+
+export type CommerceSettingsArea = 'payments' | 'currency' | 'notifications' | 'webhooks';
+
+export interface CommerceSettingsUpdatedEvent extends AuditEventBase {
+  type: 'commerce.settings_updated';
+  area: CommerceSettingsArea;
+}
+
 export type AuditEvent =
   | AssetUploadEvent
   | AssetDeleteEvent
   | PublishSuccessEvent
+  | PublishTranslationSiteReviewEvent
   | PublishBlockedEvent
   | PublishFailureEvent
   | PageRollbackEvent
-  | ColumnEvent;
-
-export const FORBIDDEN_KEYS = new Set([
-  'body',
-  'rawBody',
-  'request',
-  'response',
-  'authorization',
-  'cookie',
-  'password',
-  'token',
-  'apiKey',
-  'submission',
-  'formValue',
-  'webhook',
-  'webhookUrl',
-  'fileBytes',
-  'imageBytes',
-]);
-
-const auditString = z.string().trim().min(1).max(240);
-const auditIdString = z.string().trim().min(1).max(320);
-const isoDateTime = z.string().datetime({ offset: true });
-
-const auditEventBaseSchema = z.object({
-  at: isoDateTime,
-  actorRef: auditString.optional(),
-  siteId: auditString.optional(),
-  pageId: auditString.optional(),
-});
-
-export const auditEventSchema = z.discriminatedUnion('type', [
-  auditEventBaseSchema
-    .extend({
-      type: z.literal('asset.upload'),
-      assetId: auditIdString,
-      mime: auditString,
-      size: z.number().int().nonnegative(),
-    })
-    .strict(),
-  auditEventBaseSchema
-    .extend({
-      type: z.literal('asset.delete'),
-      assetId: auditIdString,
-    })
-    .strict(),
-  auditEventBaseSchema
-    .extend({
-      type: z.literal('publish.success'),
-      siteId: auditString,
-      pageId: auditString,
-      revision: z.number().int().nonnegative(),
-      revisionId: auditIdString,
-    })
-    .strict(),
-  auditEventBaseSchema
-    .extend({
-      type: z.literal('publish.blocked'),
-      siteId: auditString,
-      pageId: auditString,
-      blockerCount: z.number().int().nonnegative(),
-    })
-    .strict(),
-  auditEventBaseSchema
-    .extend({
-      type: z.literal('publish.failure'),
-      siteId: auditString,
-      pageId: auditString,
-      reason: auditString.max(120),
-    })
-    .strict(),
-  auditEventBaseSchema
-    .extend({
-      type: z.literal('page.rollback'),
-      siteId: auditString,
-      pageId: auditString,
-      revisionId: auditIdString,
-      backupRevisionId: auditIdString.optional(),
-    })
-    .strict(),
-  auditEventBaseSchema
-    .extend({
-      type: z.literal('column.create'),
-      slug: auditString,
-      locale: auditString,
-    })
-    .strict(),
-  auditEventBaseSchema
-    .extend({
-      type: z.literal('column.update'),
-      slug: auditString,
-      locale: auditString,
-    })
-    .strict(),
-  auditEventBaseSchema
-    .extend({
-      type: z.literal('column.delete'),
-      slug: auditString,
-      locale: auditString,
-    })
-    .strict(),
-  auditEventBaseSchema
-    .extend({
-      type: z.literal('column.publish'),
-      slug: auditString,
-      locale: auditString,
-    })
-    .strict(),
-]) satisfies z.ZodType<AuditEvent>;
+  | ColumnEvent
+  | CmsRecordsBulkLifecycleEvent
+  | SecurityUserEvent
+  | CmsRecordEvent
+  | CommerceSettingsUpdatedEvent;
 
 export function parseAuditEvent(event: unknown): AuditEvent {
   assertNoForbiddenKeys(event);
   return auditEventSchema.parse(event);
-}
-
-export function assertNoForbiddenKeys(value: unknown): void {
-  visitAuditValue(value, new Set(), []);
-}
-
-function visitAuditValue(value: unknown, seen: Set<object>, path: string[]): void {
-  if (!value || typeof value !== 'object') return;
-  if (seen.has(value)) return;
-  seen.add(value);
-
-  if (Array.isArray(value)) {
-    value.forEach((entry, index) => visitAuditValue(entry, seen, [...path, String(index)]));
-    return;
-  }
-
-  for (const [key, entry] of Object.entries(value as Record<string, unknown>)) {
-    const normalizedKey = key.toLowerCase();
-    for (const forbiddenKey of FORBIDDEN_KEYS) {
-      if (normalizedKey === forbiddenKey.toLowerCase()) {
-        const dottedPath = [...path, key].join('.');
-        throw new Error(`Audit event contains forbidden key: ${dottedPath}`);
-      }
-    }
-    visitAuditValue(entry, seen, [...path, key]);
-  }
 }

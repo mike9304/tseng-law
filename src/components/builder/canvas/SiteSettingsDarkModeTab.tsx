@@ -1,23 +1,45 @@
 'use client';
 
+import type { CSSProperties } from 'react';
 import {
   type BuilderTheme,
   type DarkModeConfig,
 } from '@/lib/builder/site/types';
 import {
-  THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
   createDarkColorsFromLight,
   normalizeDarkColors,
 } from '@/lib/builder/site/theme';
-import {
-  fieldStyle,
-  inputStyle,
-  labelStyle,
-  sectionHeadingStyle,
-  sectionStyle,
-  twoColumnStyle,
-} from './SiteSettingsModal.styles';
+import type { Locale } from '@/lib/locales';
+import { getSiteSettingsCopy } from './site-settings-copy';
+import styles from './SiteSettingsDarkModeTab.module.css';
+
+type DarkModePreviewStyleVars = CSSProperties & {
+  '--site-dark-preview-border'?: string;
+  '--site-dark-preview-bg'?: string;
+  '--site-dark-preview-text'?: string;
+  '--site-dark-preview-secondary'?: string;
+  '--site-dark-preview-muted'?: string;
+  '--site-dark-preview-primary'?: string;
+  '--site-dark-preview-heading-font'?: string;
+  '--site-dark-preview-chip-radius'?: string;
+};
+
+function themePreviewStyle(
+  theme: BuilderTheme,
+  colors: BuilderTheme['colors'],
+): DarkModePreviewStyleVars {
+  return {
+    '--site-dark-preview-border': colors.muted,
+    '--site-dark-preview-bg': colors.background,
+    '--site-dark-preview-text': colors.text,
+    '--site-dark-preview-secondary': colors.secondary,
+    '--site-dark-preview-muted': colors.muted,
+    '--site-dark-preview-primary': colors.primary,
+    '--site-dark-preview-heading-font': theme.fonts.heading,
+    '--site-dark-preview-chip-radius': `${theme.radii.md}px`,
+  };
+}
 
 interface SiteSettingsDarkModeTabProps {
   darkMode: Required<DarkModeConfig>;
@@ -25,6 +47,7 @@ interface SiteSettingsDarkModeTabProps {
   isValidHexColor: (value: string) => boolean;
   onChangeDarkMode: (next: Required<DarkModeConfig>) => void;
   onChangeDarkThemeColor: (key: keyof BuilderTheme['colors'], value: string) => void;
+  locale: Locale;
 }
 
 export function SiteSettingsDarkModeTab({
@@ -33,55 +56,46 @@ export function SiteSettingsDarkModeTab({
   isValidHexColor,
   onChangeDarkMode,
   onChangeDarkThemeColor,
+  locale,
 }: SiteSettingsDarkModeTabProps) {
   const darkColors = normalizeDarkColors(theme.colors, theme.darkColors);
+  const copy = getSiteSettingsCopy(locale);
 
   const renderThemePreview = (
     label: string,
     colors: BuilderTheme['colors'],
   ) => (
     <div
-      style={{
-        border: `1px solid ${colors.muted}`,
-        borderRadius: 12,
-        background: colors.background,
-        color: colors.text,
-        padding: 14,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 10,
-        minHeight: 144,
-      }}
+      className={styles.previewCard}
+      style={themePreviewStyle(theme, colors)}
     >
-      <strong style={{ fontFamily: theme.fonts.heading, color: colors.text }}>
+      <strong className={styles.previewTitle}>
         {label}
       </strong>
-      <span style={{ color: colors.secondary, fontSize: '0.78rem', lineHeight: 1.45 }}>
-        Published 페이지의 DarkModeToggle이 이 색상 세트 사이를 전환합니다.
-      </span>
-      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-        <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, background: colors.primary, color: colors.background, fontSize: '0.78rem', fontWeight: 800 }}>
-          Primary
+      <span className={styles.previewDescription}>{copy.dark.lightModeDescription}</span>
+      <div className={styles.previewChipRow}>
+        <span className={styles.previewChip} data-tone="primary">
+          {copy.dark.previewPrimary}
         </span>
-        <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, border: `1px solid ${colors.secondary}`, color: colors.secondary, fontSize: '0.78rem', fontWeight: 800 }}>
-          Secondary
+        <span className={styles.previewChip} data-tone="secondary">
+          {copy.dark.previewSecondary}
         </span>
-        <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, background: colors.muted, color: colors.text, fontSize: '0.78rem', fontWeight: 800 }}>
-          Muted
+        <span className={styles.previewChip} data-tone="muted">
+          {copy.dark.previewMuted}
         </span>
       </div>
     </div>
   );
 
   return (
-    <div style={sectionStyle}>
-      <div style={sectionStyle}>
-        <div style={sectionHeadingStyle}>Dark mode runtime</div>
-        <div style={fieldStyle}>
-          <label style={labelStyle}>Default mode</label>
+    <div className={styles.root}>
+      <div className={styles.section}>
+        <div className={styles.sectionHeading}>{copy.dark.runtimeHeading}</div>
+        <div className={styles.field}>
+          <label className={styles.label}>{copy.dark.defaultModeLabel}</label>
           <select
             value={darkMode.defaultMode}
-            style={inputStyle}
+            className={styles.input}
             onChange={(event) => {
               const value = event.target.value;
               onChangeDarkMode({
@@ -90,15 +104,16 @@ export function SiteSettingsDarkModeTab({
               });
             }}
           >
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-            <option value="auto">Auto</option>
+            <option value="light">{copy.dark.light}</option>
+            <option value="dark">{copy.dark.dark}</option>
+            <option value="auto">{copy.dark.auto}</option>
           </select>
         </div>
-        <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.78rem', fontWeight: 700, color: '#334155' }}>
+        <label className={styles.checkboxLabel}>
           <input
             type="checkbox"
             checked={darkMode.allowVisitorToggle}
+            className={styles.checkbox}
             onChange={(event) => {
               onChangeDarkMode({
                 ...darkMode,
@@ -106,38 +121,32 @@ export function SiteSettingsDarkModeTab({
               });
             }}
           />
-          Allow visitor toggle
+          {copy.dark.allowToggle}
         </label>
       </div>
 
-      <div style={sectionHeadingStyle}>Light / Dark simultaneous preview</div>
-      <div style={twoColumnStyle}>
-        {renderThemePreview('Light preview', theme.colors)}
-        {renderThemePreview('Dark preview', darkColors)}
+      <div className={styles.sectionHeading}>{copy.dark.lightDarkPreviewHeading}</div>
+      <div className={styles.previewGrid}>
+        {renderThemePreview(copy.dark.previewHeader('light'), theme.colors)}
+        {renderThemePreview(copy.dark.previewHeader('dark'), darkColors)}
       </div>
 
       {THEME_COLOR_TOKENS.map((token) => (
-        <div key={token} style={fieldStyle}>
-          <label style={labelStyle}>Dark {THEME_COLOR_LABELS[token]}</label>
-          <div style={{ display: 'grid', gridTemplateColumns: '56px 1fr', gap: 8, alignItems: 'center' }}>
+        <div key={token} className={styles.field}>
+          <label className={styles.label}>{copy.dark.colorLabel(copy.advanced.themeColorLabels[token])}</label>
+          <div className={styles.colorRow}>
             <input
               type="color"
               value={isValidHexColor(darkColors[token]) ? darkColors[token] : createDarkColorsFromLight(theme.colors)[token]}
-              style={{ width: 56, height: 38, padding: 4, border: '1px solid #e2e8f0', borderRadius: 8, background: '#fff', cursor: 'pointer' }}
+              className={styles.colorInput}
               onChange={(event) => onChangeDarkThemeColor(token, event.target.value)}
             />
             <input
               type="text"
               value={darkColors[token]}
               placeholder="#0f172a"
-              style={inputStyle}
+              className={styles.input}
               onChange={(event) => onChangeDarkThemeColor(token, event.target.value)}
-              onFocus={(event) => {
-                event.currentTarget.style.borderColor = '#116dff';
-              }}
-              onBlur={(event) => {
-                event.currentTarget.style.borderColor = '#e2e8f0';
-              }}
             />
           </div>
         </div>

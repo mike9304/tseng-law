@@ -222,6 +222,16 @@ export default function PublishedInteractions() {
   useEffect(() => {
     const serviceCards = findByNodeIdPattern(/^home-services-card-\d+$/);
     const faqItems = findByNodeIdPattern(/^home-faq-item-\d+$/);
+    const officeTabs = findByNodeIdPattern(/^home-offices-tab-\d+$/);
+    const officeLayouts = findByNodeIdPattern(/^home-offices-layout-\d+$/);
+    const officeTabIndexFromElement = (element: HTMLElement): number | null => {
+      const match = /^home-offices-tab-(\d+)$/.exec(element.dataset.nodeId ?? '');
+      return match ? Number(match[1]) : null;
+    };
+    const officeLayoutIndexFromElement = (element: HTMLElement): number | null => {
+      const match = /^home-offices-layout-(\d+)$/.exec(element.dataset.nodeId ?? '');
+      return match ? Number(match[1]) : null;
+    };
 
     const setOpenService = (activeCard: HTMLElement | null) => {
       const isOpen = Boolean(activeCard);
@@ -312,6 +322,22 @@ export default function PublishedInteractions() {
       }
     };
 
+    const setActiveOffice = (activeIndex: number) => {
+      for (const tab of officeTabs) {
+        const isActive = officeTabIndexFromElement(tab) === activeIndex;
+        const button = tab.querySelector<HTMLElement>('.tab-button');
+        toggleClass(button, 'active', isActive);
+        if (button) button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      }
+      for (const layout of officeLayouts) {
+        const isActive = officeLayoutIndexFromElement(layout) === activeIndex;
+        // Clear inline display on the active layout so `.office-layout {
+        // display: grid }` wins; hide the rest. Mirrors the server-render gate
+        // (officeLayoutDisplay) in public-page.tsx.
+        layout.style.display = isActive ? '' : 'none';
+      }
+    };
+
     for (const card of serviceCards) {
       const toggle = card.querySelector<HTMLElement>('.services-detail-toggle') ?? card;
       const bodyId = ensureId(
@@ -336,12 +362,36 @@ export default function PublishedInteractions() {
       if (answerId) question.setAttribute('aria-controls', answerId);
     }
 
+    for (const tab of officeTabs) {
+      const button = tab.querySelector<HTMLElement>('.tab-button');
+      if (button) {
+        button.setAttribute('role', 'tab');
+        button.setAttribute('tabindex', '0');
+      }
+    }
+
     const hash = window.location.hash ? window.location.hash.slice(1) : '';
     const initialServiceCard = hash
       ? serviceCards.find((card) => card.querySelector(`#${CSS.escape(hash)}`)) ?? null
       : null;
     setOpenService(initialServiceCard);
     setOpenFaq(null);
+
+    // Office tabs: assert the initial active state. The active tab/layout are
+    // already baked in by the server render (public-page.tsx officeLayoutDisplay
+    // + decompose `active` class), but re-asserting here keeps the client-side
+    // re-render honest and seeds activeOfficeIndex for the click handler.
+    let activeOfficeIndex = 0;
+    for (const tab of officeTabs) {
+      if (tab.querySelector('.tab-button.active')) {
+        const index = officeTabIndexFromElement(tab);
+        if (index != null) {
+          activeOfficeIndex = index;
+          break;
+        }
+      }
+    }
+    setActiveOffice(activeOfficeIndex);
 
     const handleClick = (event: MouseEvent) => {
       if (!(event.target instanceof HTMLElement)) return;
@@ -360,6 +410,18 @@ export default function PublishedInteractions() {
         if (item && faqItems.includes(item)) {
           event.preventDefault();
           setOpenFaq(item.dataset.builderExpanded === 'true' ? null : item);
+        }
+      }
+
+      if (event.target.closest('.tab-button')) {
+        const tab = closestByNodeIdPattern(event.target, /^home-offices-tab-\d+$/);
+        if (tab && officeTabs.includes(tab)) {
+          const index = officeTabIndexFromElement(tab);
+          if (index != null) {
+            event.preventDefault();
+            setActiveOffice(index);
+            return;
+          }
         }
       }
     };
@@ -382,6 +444,18 @@ export default function PublishedInteractions() {
         if (item && faqItems.includes(item)) {
           event.preventDefault();
           setOpenFaq(item.dataset.builderExpanded === 'true' ? null : item);
+        }
+      }
+
+      if (event.target.closest('.tab-button')) {
+        const tab = closestByNodeIdPattern(event.target, /^home-offices-tab-\d+$/);
+        if (tab && officeTabs.includes(tab)) {
+          const index = officeTabIndexFromElement(tab);
+          if (index != null) {
+            event.preventDefault();
+            setActiveOffice(index);
+            return;
+          }
         }
       }
     };

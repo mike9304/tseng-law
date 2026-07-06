@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import type { BuilderBlogArchiveCanvasNode } from '@/lib/builder/canvas/types';
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { getBlogArchiveCopy } from './blog-archive-copy';
 
 interface BlogArchiveElementProps {
   node: BuilderBlogArchiveCanvasNode;
@@ -45,6 +46,7 @@ export default function BlogArchiveElement({ node, mode = 'edit', locale }: Blog
   const c = node.content;
   const isBuilder = mode !== 'published';
   const effectiveLocale = normalizeLocale(locale || 'ko');
+  const copy = getBlogArchiveCopy(effectiveLocale);
   const [posts, setPosts] = useState<BlogPost[] | null>(null);
 
   useEffect(() => {
@@ -105,10 +107,10 @@ export default function BlogArchiveElement({ node, mode = 'edit', locale }: Blog
       }}
     >
       <h3 style={{ margin: 0, fontSize: 14, fontWeight: 700, color: '#0f172a', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-        Archive
+        {copy.element.title}
       </h3>
       {grouped.length === 0 && (
-        <span style={{ fontSize: 12, color: '#94a3b8' }}>등록된 글이 없습니다.</span>
+        <span style={{ fontSize: 12, color: '#94a3b8' }}>{copy.element.emptyState}</span>
       )}
       {grouped.map((group, i) => {
         const expanded = c.expandLatest ? i === 0 : false;
@@ -143,7 +145,7 @@ export default function BlogArchiveElement({ node, mode = 'edit', locale }: Blog
                       data-builder-blog-archive-link={`${r.year}-${String(r.month).padStart(2, '0')}`}
                       style={{ display: 'flex', minHeight: 44, alignItems: 'center', justifyContent: 'space-between', textDecoration: 'none', color: '#475569', fontSize: 12 }}
                     >
-                      <span>{r.year}-{String(r.month).padStart(2, '0')}</span>
+                      <span>{copy.element.yearMonthLabel(r.year, r.month)}</span>
                       {c.showCount && <span style={{ color: '#94a3b8' }}>({r.count})</span>}
                     </a>
                   </li>

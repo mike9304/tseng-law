@@ -16,6 +16,10 @@ import {
   normalizeCheckoutShippingMethod,
   type CommerceCheckoutConfirmation,
 } from '@/lib/builder/commerce/checkout-shared';
+import {
+  getCommerceCheckoutApiErrorPayload,
+  type CommerceCheckoutApiErrorCode,
+} from '@/lib/builder/commerce/checkout-api-copy';
 import { loadCurrencySettings } from '@/lib/builder/commerce/currency-engine';
 import {
   makeCartItemId,
@@ -38,7 +42,7 @@ import {
   type CommerceProductMedia,
   type CommerceProductVariant,
 } from '@/lib/builder/commerce/products-shared';
-import type { Locale } from '@/lib/locales';
+import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -60,11 +64,29 @@ function clientIp(request: NextRequest): string {
   );
 }
 
-function validationError(error: ZodError): NextResponse {
+function errorResponse(
+  locale: Locale,
+  errorCode: CommerceCheckoutApiErrorCode,
+  status: number,
+  extras?: Record<string, unknown>,
+  init?: ResponseInit,
+): NextResponse {
   return NextResponse.json(
-    { ok: false, error: 'validation_error', issues: error.flatten() },
-    { status: 400 },
+    { ok: false, ...getCommerceCheckoutApiErrorPayload(locale, errorCode), ...extras },
+    { ...init, status },
   );
+}
+
+function validationError(locale: Locale, error: ZodError): NextResponse {
+  return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
+}
+
+function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
+  if (payload && typeof payload === 'object' && 'locale' in payload) {
+    const locale = (payload as { locale?: unknown }).locale;
+    if (typeof locale === 'string' && isLocale(locale)) return locale;
+  }
+  return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 }
 
 function confirmationNumber(): string {
@@ -154,18 +176,23 @@ async function reconcileCheckoutCart(
 }
 
 export async function POST(request: NextRequest) {
-  
+  let errorLocale = resolveRequestLocale(request);
   // builder-route-guard: allow-public — intentional public visitor endpoint
-const rate = await checkRateLimit(`commerce-checkout:${clientIp(request)}`, 12, 60_000);
+  const rate = await checkRateLimit(`commerce-checkout:${clientIp(request)}`, 12, 60_000);
   if (!rate.allowed) {
-    return NextResponse.json(
-      { ok: false, error: 'too_many_requests' },
-      { status: 429, headers: { 'Retry-After': String(Math.ceil(rate.retryAfterMs / 1000)) } },
+    return errorResponse(
+      errorLocale,
+      'too_many_requests',
+      429,
+      undefined,
+      { headers: { 'Retry-After': String(Math.ceil(rate.retryAfterMs / 1000)) } },
     );
   }
 
   try {
-    const input = checkoutSchema.parse(await request.json());
+    const payload = await request.json();
+    errorLocale = resolveRequestLocale(request, payload);
+    const input = checkoutSchema.parse(payload);
     const currencySettings = await loadCurrencySettings();
     const supportedCurrencies = checkoutCurrenciesForCurrencySettings(currencySettings);
     const requestedCurrency = normalizeCheckoutCurrency(input.cart && typeof input.cart === 'object'
@@ -188,7 +215,7 @@ const rate = await checkRateLimit(`commerce-checkout:${clientIp(request)}`, 12, 
     ];
 
     if (errors.length > 0) {
-      return NextResponse.json({ ok: false, error: 'checkout_validation_error', errors }, { status: 400 });
+      return errorResponse(errorLocale, 'checkout_validation_error', 400, { errors });
     }
 
     const taxRules = await loadTaxRules();
@@ -251,11 +278,11 @@ const rate = await checkRateLimit(`commerce-checkout:${clientIp(request)}`, 12, 
 
     return NextResponse.json({ ok: true, checkout, quote, order });
   } catch (error) {
-    if (error instanceof ZodError) return validationError(error);
+    if (error instanceof ZodError) return validationError(errorLocale, error);
     if (error instanceof SyntaxError) {
-      return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
+      return errorResponse(errorLocale, 'invalid_json', 400);
     }
     console.error('[builder/commerce/checkout] POST failed:', error);
-    return NextResponse.json({ ok: false, error: 'checkout_failed' }, { status: 500 });
+    return errorResponse(errorLocale, 'checkout_failed', 500);
   }
 }

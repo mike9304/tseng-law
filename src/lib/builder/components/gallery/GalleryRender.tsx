@@ -1,41 +1,16 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent } from 'react';
 import { createPortal } from 'react-dom';
 import type { BuilderGalleryCanvasNode } from '@/lib/builder/canvas/types';
 import { usePublishedOverlayFocus } from '@/components/builder/published/overlayFocus';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import { getContainerGalleryCopy } from '../container-gallery-copy';
 
 type GalleryImage = BuilderGalleryCanvasNode['content']['images'][number];
 
 const EMPTY_GALLERY_IMAGES: GalleryImage[] = [];
-
-const FALLBACK_IMAGES: GalleryImage[] = [
-  {
-    src: '/images/header-skyline-buildings.webp',
-    alt: 'Gallery skyline',
-    caption: '상담 공간',
-    tags: ['office'],
-  },
-  {
-    src: '/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg',
-    alt: 'Gallery legal article',
-    caption: '기업 법무',
-    tags: ['service'],
-  },
-  {
-    src: '/images/blog/010-taiwan-gym-injury-lawsuit/featured-01.jpg',
-    alt: 'Gallery litigation article',
-    caption: '분쟁 해결',
-    tags: ['case'],
-  },
-  {
-    src: '/images/team/son-jungmin.jpg',
-    alt: 'Gallery attorney',
-    caption: '한국어 상담',
-    tags: ['team'],
-  },
-];
 
 function uniqueTags(images: GalleryImage[]): string[] {
   const tags = new Set<string>();
@@ -102,9 +77,11 @@ function GalleryTile({
 export default function GalleryRender({
   node,
   mode,
+  locale,
 }: {
   node: BuilderGalleryCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const {
     images = EMPTY_GALLERY_IMAGES,
@@ -119,10 +96,12 @@ export default function GalleryRender({
     thumbnailPosition = 'bottom',
     proStyle = 'clean',
   } = node.content;
-  const normalizedImages = useMemo(
-    () => (images.length ? images : mode === 'published' ? EMPTY_GALLERY_IMAGES : FALLBACK_IMAGES),
-    [images, mode],
-  );
+  const renderCopy = getContainerGalleryCopy(normalizeLocale(locale)).gallery;
+  const normalizedImages = images.length
+    ? images
+    : mode === 'published'
+      ? EMPTY_GALLERY_IMAGES
+      : renderCopy.fallbackImages;
   const tags = useMemo(() => uniqueTags(normalizedImages), [normalizedImages]);
   const filteredImages = activeFilter === 'all'
     ? normalizedImages
@@ -200,7 +179,7 @@ export default function GalleryRender({
           data-builder-gallery-filter={tag}
           data-active={activeFilter === tag}
         >
-          {tag === 'all' ? 'All' : tag}
+          {tag === 'all' ? renderCopy.all : tag}
         </span>
       ))}
     </div>
@@ -251,7 +230,7 @@ export default function GalleryRender({
             <button
               type="button"
               className="builder-gallery-arrow builder-gallery-arrow-prev"
-              aria-label="Previous gallery image"
+              aria-label={renderCopy.previous}
               onClick={() => setActiveIndex((current) => (current - 1 + displayImages.length) % displayImages.length)}
             >
               ‹
@@ -259,7 +238,7 @@ export default function GalleryRender({
             <button
               type="button"
               className="builder-gallery-arrow builder-gallery-arrow-next"
-              aria-label="Next gallery image"
+              aria-label={renderCopy.next}
               onClick={() => setActiveIndex((current) => (current + 1) % displayImages.length)}
             >
               ›
@@ -269,7 +248,7 @@ export default function GalleryRender({
                 <button
                   key={`${image.src}-dot-${index}`}
                   type="button"
-                  aria-label={`Go to gallery image ${index + 1}`}
+                  aria-label={renderCopy.goTo(index)}
                   data-active={activeIndex === index}
                   onClick={() => setActiveIndex(index)}
                 />
@@ -310,7 +289,7 @@ export default function GalleryRender({
               type="button"
               data-active={activeIndex === index}
               onClick={() => setActiveIndex(index)}
-              aria-label={`Select thumbnail ${index + 1}`}
+              aria-label={renderCopy.selectThumbnail(index)}
             >
               <Image
                 src={image.src}
@@ -359,7 +338,7 @@ export default function GalleryRender({
       onClick={closeLightbox}
       role="dialog"
       aria-modal="true"
-      aria-label={lightboxImage.alt || lightboxImage.caption || 'Gallery image'}
+      aria-label={lightboxImage.alt || lightboxImage.caption || renderCopy.lightboxLabel}
       tabIndex={-1}
     >
       <button
@@ -367,12 +346,12 @@ export default function GalleryRender({
         type="button"
         className="builder-gallery-lightbox-close"
         onClick={closeLightbox}
-        aria-label="Close"
+        aria-label={renderCopy.lightboxClose}
       >
         ×
       </button>
       {displayImages.length > 1 ? (
-        <button type="button" className="builder-gallery-lightbox-prev" onClick={(event) => { event.stopPropagation(); goPrev(); }} aria-label="Previous">
+        <button type="button" className="builder-gallery-lightbox-prev" onClick={(event) => { event.stopPropagation(); goPrev(); }} aria-label={renderCopy.lightboxPrevious}>
           ‹
         </button>
       ) : null}
@@ -386,7 +365,7 @@ export default function GalleryRender({
         />
       </div>
       {displayImages.length > 1 ? (
-        <button type="button" className="builder-gallery-lightbox-next" onClick={(event) => { event.stopPropagation(); goNext(); }} aria-label="Next">
+        <button type="button" className="builder-gallery-lightbox-next" onClick={(event) => { event.stopPropagation(); goNext(); }} aria-label={renderCopy.lightboxNext}>
           ›
         </button>
       ) : null}

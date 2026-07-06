@@ -5,31 +5,9 @@ import type {
   BuilderStructuredDataBlock,
   BuilderStructuredDataBlockType,
 } from '@/lib/builder/site/types';
-import {
-  checkboxGridStyle,
-  checkboxRowStyle,
-  fieldStyle,
-  formActionsStyle,
-  ghostButtonStyle,
-  helpTextStyle,
-  inputStyle,
-  labelStyle,
-  previewCardStyle,
-  sectionStyle,
-  sectionTitleStyle,
-  textareaStyle,
-  twoColumnStyle,
-} from './SeoPanel.styles';
-
-const STRUCTURED_DATA_BLOCK_TYPES: Array<{ type: BuilderStructuredDataBlockType; label: string }> = [
-  { type: 'Article', label: 'Article' },
-  { type: 'FAQPage', label: 'FAQPage' },
-  { type: 'LegalService', label: 'LegalService' },
-  { type: 'Organization', label: 'Organization' },
-  { type: 'LocalBusiness', label: 'LocalBusiness' },
-  { type: 'BreadcrumbList', label: 'BreadcrumbList' },
-  { type: 'Custom', label: 'Custom' },
-];
+import type { Locale } from '@/lib/locales';
+import styles from './SeoPanelAdvancedTab.module.css';
+import { getSeoPanelAdvancedCopy } from './seo-panel-advanced-copy';
 
 interface StructuredDataSettings {
   legalService: boolean;
@@ -41,6 +19,7 @@ interface StructuredDataSettings {
 
 interface SeoPanelAdvancedTabProps {
   active: boolean;
+  locale: Locale;
   additionalMetaTags: BuilderSeoAdditionalMetaTag[];
   structuredData: StructuredDataSettings;
   structuredDataBlocks: BuilderStructuredDataBlock[];
@@ -63,6 +42,7 @@ interface SeoPanelAdvancedTabProps {
 
 export function SeoPanelAdvancedTab({
   active,
+  locale,
   additionalMetaTags,
   structuredData,
   structuredDataBlocks,
@@ -75,50 +55,46 @@ export function SeoPanelAdvancedTab({
   onUpdateStructuredDataBlock,
   onRemoveStructuredDataBlock,
 }: SeoPanelAdvancedTabProps) {
+  const copy = getSeoPanelAdvancedCopy(locale);
   return (
     <>
-      <section style={{ ...sectionStyle, display: active ? 'grid' : 'none' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'center' }}>
-          <div>
-            <h3 style={sectionTitleStyle}>Advanced SEO meta tags</h3>
-            <span style={helpTextStyle}>Wix Advanced SEO의 additional meta tags에 해당합니다. name/content meta tag로 public head에 반영됩니다.</span>
+      <section className={styles.section} data-active={active ? 'true' : 'false'}>
+        <div className={styles.sectionHeader}>
+          <div className={styles.titleBlock}>
+            <h3 className={styles.sectionTitle}>{copy.title}</h3>
+            <span className={styles.helpText}>{copy.help}</span>
           </div>
-          <button type="button" style={ghostButtonStyle} onClick={onAddAdditionalMetaTag}>
-            + Meta
+          <button type="button" className={styles.ghostButton} onClick={onAddAdditionalMetaTag}>
+            {copy.addMeta}
           </button>
         </div>
         {additionalMetaTags.length === 0 ? (
-          <div style={{ ...previewCardStyle, color: '#64748b', fontSize: '0.78rem' }}>
-            Additional meta tag가 없습니다.
+          <div className={`${styles.previewCard} ${styles.emptyCard}`}>
+            {copy.noTags}
           </div>
         ) : (
-          <div style={{ display: 'grid', gap: 8 }}>
+          <div className={styles.metaList}>
             {additionalMetaTags.map((tag) => (
               <div
                 key={tag.id}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'minmax(120px, 0.8fr) minmax(180px, 1.2fr) auto',
-                  gap: 8,
-                  alignItems: 'center',
-                }}
+                className={styles.metaRow}
               >
                 <input
                   type="text"
                   value={tag.name}
-                  placeholder="meta name"
-                  style={inputStyle}
+                  placeholder={copy.metaName}
+                  className={styles.input}
                   onChange={(event) => onUpdateAdditionalMetaTag(tag.id, 'name', event.target.value)}
                 />
                 <input
                   type="text"
                   value={tag.content}
-                  placeholder="meta content"
-                  style={inputStyle}
+                  placeholder={copy.metaContent}
+                  className={styles.input}
                   onChange={(event) => onUpdateAdditionalMetaTag(tag.id, 'content', event.target.value)}
                 />
-                <button type="button" style={ghostButtonStyle} onClick={() => onRemoveAdditionalMetaTag(tag.id)}>
-                  삭제
+                <button type="button" className={styles.ghostButton} onClick={() => onRemoveAdditionalMetaTag(tag.id)}>
+                  {copy.delete}
                 </button>
               </div>
             ))}
@@ -126,10 +102,10 @@ export function SeoPanelAdvancedTab({
         )}
       </section>
 
-      <section style={{ ...sectionStyle, display: active ? 'grid' : 'none' }}>
-        <h3 style={sectionTitleStyle}>구조화 데이터</h3>
-        <div style={checkboxGridStyle}>
-          <label style={checkboxRowStyle}>
+      <section className={styles.section} data-active={active ? 'true' : 'false'}>
+        <h3 className={styles.sectionTitle}>{copy.structuredTitle}</h3>
+        <div className={styles.checkboxGrid}>
+          <label className={styles.checkboxRow}>
             <input
               type="checkbox"
               checked={structuredData.legalService}
@@ -137,7 +113,7 @@ export function SeoPanelAdvancedTab({
             />
             <span>LegalService</span>
           </label>
-          <label style={checkboxRowStyle}>
+          <label className={styles.checkboxRow}>
             <input
               type="checkbox"
               checked={structuredData.organization}
@@ -145,7 +121,7 @@ export function SeoPanelAdvancedTab({
             />
             <span>Organization</span>
           </label>
-          <label style={checkboxRowStyle}>
+          <label className={styles.checkboxRow}>
             <input
               type="checkbox"
               checked={structuredData.localBusiness}
@@ -153,7 +129,7 @@ export function SeoPanelAdvancedTab({
             />
             <span>LocalBusiness</span>
           </label>
-          <label style={checkboxRowStyle}>
+          <label className={styles.checkboxRow}>
             <input
               type="checkbox"
               checked={structuredData.breadcrumbList}
@@ -162,81 +138,81 @@ export function SeoPanelAdvancedTab({
             <span>BreadcrumbList</span>
           </label>
         </div>
-        <div style={fieldStyle}>
-          <label style={labelStyle} htmlFor="builder-seo-faq-schema">FAQPage</label>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="builder-seo-faq-schema">{copy.faqLabel}</label>
           <select
             id="builder-seo-faq-schema"
             value={structuredData.faqPage}
-            style={inputStyle}
+            className={styles.input}
             onChange={(event) => onUpdateStructuredField('faqPage', event.target.value as 'auto' | 'off')}
           >
-            <option value="auto">FAQ widgets에서 자동 생성</option>
-            <option value="off">끄기</option>
+            <option value="auto">{copy.faqAuto}</option>
+            <option value="off">{copy.faqOff}</option>
           </select>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'center' }}>
-          <div>
-            <h4 style={{ ...sectionTitleStyle, fontSize: '0.78rem' }}>JSON-LD blocks</h4>
-            <span style={helpTextStyle}>Article, FAQPage 같은 schema.org 블록을 페이지별로 저장합니다.</span>
+        <div className={styles.sectionHeader}>
+          <div className={styles.titleBlock}>
+            <h4 className={styles.subTitle}>{copy.jsonLdTitle}</h4>
+            <span className={styles.helpText}>{copy.jsonLdHelp}</span>
           </div>
-          <button type="button" style={ghostButtonStyle} onClick={() => onAddStructuredDataBlock('Article')}>
-            + Article
+          <button type="button" className={styles.ghostButton} onClick={() => onAddStructuredDataBlock('Article')}>
+            {copy.addArticle}
           </button>
         </div>
         {structuredDataBlocks.length === 0 ? (
-          <div style={{ ...previewCardStyle, color: '#64748b', fontSize: '0.78rem' }}>
-            추가 JSON-LD 블록이 없습니다.
+          <div className={`${styles.previewCard} ${styles.emptyCard}`}>
+            {copy.noBlocks}
           </div>
         ) : (
-          <div style={{ display: 'grid', gap: 8 }}>
+          <div className={styles.blockList}>
             {structuredDataBlocks.map((block) => (
-              <div key={block.id} style={previewCardStyle}>
-                <div style={twoColumnStyle}>
-                  <label style={fieldStyle}>
-                    <span style={labelStyle}>Type</span>
+              <div key={block.id} className={styles.previewCard}>
+                <div className={styles.twoColumn}>
+                  <label className={styles.field}>
+                    <span className={styles.label}>{copy.type}</span>
                     <select
                       value={block.type}
-                      style={inputStyle}
+                      className={styles.input}
                       onChange={(event) => onChangeStructuredDataBlockType(
                         block.id,
                         event.target.value as BuilderStructuredDataBlockType,
                       )}
                     >
-                      {STRUCTURED_DATA_BLOCK_TYPES.map((option) => (
+                      {copy.structuredDataBlockTypes.map((option) => (
                         <option key={option.type} value={option.type}>
                           {option.label}
                         </option>
                       ))}
                     </select>
                   </label>
-                  <label style={fieldStyle}>
-                    <span style={labelStyle}>Label</span>
+                  <label className={styles.field}>
+                    <span className={styles.label}>{copy.label}</span>
                     <input
                       type="text"
                       value={block.label ?? ''}
-                      style={inputStyle}
+                      className={styles.input}
                       onChange={(event) => onUpdateStructuredDataBlock(block.id, { label: event.target.value })}
                     />
                   </label>
                 </div>
                 <textarea
                   value={block.json ?? ''}
-                  style={textareaStyle}
+                  className={`${styles.input} ${styles.textarea}`}
                   rows={5}
                   onChange={(event) => onUpdateStructuredDataBlock(block.id, { json: event.target.value })}
                 />
-                <div style={formActionsStyle}>
-                  <label style={{ ...checkboxRowStyle, marginRight: 'auto' }}>
+                <div className={styles.formActions}>
+                  <label className={`${styles.checkboxRow} ${styles.useRow}`}>
                     <input
                       type="checkbox"
                       checked={block.enabled}
                       onChange={(event) => onUpdateStructuredDataBlock(block.id, { enabled: event.target.checked })}
                     />
-                    <span>사용</span>
+                    <span>{copy.use}</span>
                   </label>
-                  <span style={helpTextStyle}>{block.type}</span>
-                  <button type="button" style={ghostButtonStyle} onClick={() => onRemoveStructuredDataBlock(block.id)}>
-                    삭제
+                  <span className={styles.blockType}>{block.type}</span>
+                  <button type="button" className={styles.ghostButton} onClick={() => onRemoveStructuredDataBlock(block.id)}>
+                    {copy.delete}
                   </button>
                 </div>
               </div>

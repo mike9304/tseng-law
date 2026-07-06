@@ -1,5 +1,6 @@
 import { expect, test, type APIRequestContext, type Page } from '@playwright/test';
 import { dayOfWeeks } from '@/lib/builder/bookings/types';
+import { getBookingFlowCopy } from '@/lib/builder/bookings/bookings-copy';
 
 const baseStyle = {
   backgroundColor: 'transparent',
@@ -158,6 +159,7 @@ test.describe('M25 Bookings services, staff, slots, and public widget', () => {
     const token = Date.now().toString(36);
     const slug = `g-editor-m25-bookings-${token}`;
     const headers = mutationHeaders(token);
+    const copy = getBookingFlowCopy('ko');
     let pageId: string | null = null;
     let serviceId: string | null = null;
     let staffId: string | null = null;
@@ -264,44 +266,46 @@ test.describe('M25 Bookings services, staff, slots, and public widget', () => {
       const flow = page.locator('[data-booking-flow="true"]').first();
       await expect(flow).toBeVisible();
       await expect(flow.locator(`[data-booking-service-id="${serviceId}"]`)).toHaveAttribute('data-active', 'true');
-      await flow.getByRole('button', { name: 'Continue' }).click();
+      await flow.getByRole('button', { name: copy.labels.continue }).click();
 
       await expect(flow.locator(`[data-booking-staff-id="${staffId}"]`)).toBeVisible();
-      await flow.getByRole('button', { name: 'Continue' }).click();
+      await flow.getByRole('button', { name: copy.labels.continue }).click();
 
       const slotButton = flow.locator('[data-booking-slot-start]').first();
       await expect(slotButton).toBeVisible();
       const selectedSlot = await slotButton.getAttribute('data-booking-slot-start');
       expect(selectedSlot).toBeTruthy();
       await slotButton.click();
-      await flow.getByRole('button', { name: 'Continue' }).click();
+      await flow.getByRole('button', { name: copy.labels.continue }).click();
 
-      await flow.getByLabel('Name').fill(`M25 고객 ${token}`);
-      await flow.getByLabel('Email').fill(`m25-${token}@example.com`);
-      await flow.getByLabel('Phone').fill('+82-10-0000-0000');
-      await flow.getByLabel('Notes').fill('공개 위젯에서 작성한 예약 메모');
+      await flow.getByLabel(copy.labels.name, { exact: true }).fill(`M25 고객 ${token}`);
+      await flow.getByLabel(copy.labels.email).fill(`m25-${token}@example.com`);
+      await flow.getByLabel(copy.labels.phone).fill('+82-10-0000-0000');
+      await flow.getByLabel(copy.labels.notes).fill('공개 위젯에서 작성한 예약 메모');
       await flow.getByLabel('사건 개요').fill('계약 분쟁 초기 검토가 필요합니다.');
       await flow.getByLabel('첨부 링크').fill('https://example.com/evidence.pdf');
       await flow.getByLabel('희망 상담 언어').fill('한국어');
       await flow.getByLabel('상대방 이름').fill('테스트 상대방');
       await flow.locator('input[type="checkbox"]').check();
-      await expect(flow.getByRole('button', { name: 'Confirm booking' })).toBeDisabled();
+      await expect(flow.getByRole('button', { name: copy.labels.confirmBooking })).toBeDisabled();
 
       const widgetPaymentResponse = page.waitForResponse((response) =>
         response.url().includes('/api/booking/payment-intent') && response.request().method() === 'POST',
       );
-      await flow.getByRole('button', { name: '결제 준비' }).click();
+      await flow.getByRole('button', { name: copy.labels.paymentPrepare }).click();
       expect((await widgetPaymentResponse).status()).toBe(200);
+      await expect(flow.locator('[data-booking-payment-panel="true"]')).toContainText(copy.labels.paymentElement);
       await expect(flow.locator('[data-booking-payment-element="stub"]')).toBeVisible();
-      await flow.getByRole('button', { name: '테스트 결제 완료' }).click();
+      await expect(flow.locator('[data-booking-payment-element="stub"]')).toContainText(copy.labels.paymentStubTitle);
+      await flow.getByRole('button', { name: copy.labels.paymentStubComplete }).click();
       await expect(flow.locator('[data-booking-payment-confirmed="true"]')).toBeVisible();
-      await expect(flow.getByRole('button', { name: 'Confirm booking' })).toBeEnabled();
+      await expect(flow.getByRole('button', { name: copy.labels.confirmBooking })).toBeEnabled();
 
       const bookResponsePromise = page.waitForResponse((response) =>
         response.url().includes('/api/booking/book') && response.request().method() === 'POST',
         { timeout: 30_000 },
       );
-      await flow.getByRole('button', { name: 'Confirm booking' }).click();
+      await flow.getByRole('button', { name: copy.labels.confirmBooking }).click();
       const bookResponse = await bookResponsePromise;
       expect(bookResponse.status()).toBe(201);
       const bookPayload = (await bookResponse.json()) as {

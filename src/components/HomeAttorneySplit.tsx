@@ -53,6 +53,8 @@ export default function HomeAttorneySplit({ locale }: { locale: Locale }) {
           alt={`${lead.name} ${lead.role}`}
           width={1200}
           height={900}
+          loading="eager"
+          sizes="(max-width: 900px) 100vw, 50vw"
           className="person-photo"
           data-builder-surface-key={homeAttorneyImageSurfaceIds[0]}
         />

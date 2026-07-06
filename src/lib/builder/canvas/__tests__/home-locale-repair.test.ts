@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { createHomePageCanvasDocument } from '../seed-home';
+// Locale repair targets the editable decomposed home (granular text nodes).
+import { createHomePageCanvasDocumentDecomposed as createHomePageCanvasDocument } from '../seed-home';
 import { repairHomeCanvasLocale } from '../home-locale-repair';
 
 describe('home canvas locale repair', () => {

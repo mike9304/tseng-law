@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { createDefaultSiteDocument } from '@/lib/builder/site/types';
 import { buildTranslationPublishWarnings } from '@/lib/builder/translations/publish-warnings';
+import { buildTranslationPublishWarningReviewQuery } from '@/lib/builder/translations/query';
 
 function seededSite() {
   const site = createDefaultSiteDocument('ko', 'test-site');
@@ -61,8 +62,9 @@ describe('buildTranslationPublishWarnings', () => {
     // default home page (slug '') has neither en nor zh-hant — both should warn.
     const home = site.pages.find((page) => page.isHomePage && page.locale === 'ko');
     expect(home).toBeTruthy();
+    if (!home) throw new Error('Expected a seeded ko home page');
     expect(
-      untranslated.filter((w) => w.pageId === home!.pageId).map((w) => w.locale).sort(),
+      untranslated.filter((w) => w.pageId === home.pageId).map((w) => w.locale).sort(),
     ).toEqual(['en', 'zh-hant']);
   });
 
@@ -122,5 +124,40 @@ describe('buildTranslationPublishWarnings', () => {
     ];
     const warnings = buildTranslationPublishWarnings(site, 'ko');
     expect(warnings).toEqual([]);
+  });
+
+  it('builds manager review queries for each publish-warning kind', () => {
+    expect(
+      buildTranslationPublishWarningReviewQuery(
+        {
+          kind: 'untranslated',
+          pageId: 'page-about-ko',
+          locale: 'zh-hant',
+        },
+        'ko',
+      ),
+    ).toBe('sourceLocale=ko&category=pages&search=page-about-ko&status=missing&target=zh-hant');
+
+    expect(
+      buildTranslationPublishWarningReviewQuery(
+        {
+          kind: 'outdated',
+          pageId: 'page-about-ko',
+          locale: 'en',
+        },
+        'ko',
+      ),
+    ).toBe('sourceLocale=ko&category=pages&search=page-about-ko&status=outdated&target=en');
+
+    expect(
+      buildTranslationPublishWarningReviewQuery(
+        {
+          kind: 'broken-link',
+          pageId: 'page-contact-ko',
+          locale: 'zh-hant',
+        },
+        'ko',
+      ),
+    ).toBe('sourceLocale=ko&category=pages&search=page-contact-ko&target=zh-hant');
   });
 });

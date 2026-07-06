@@ -2,13 +2,17 @@ import type { BuilderCanvasNode } from './types';
 import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
 import {
   buildChildrenMap,
-  getCanvasNodeDescendantIds,
   parentUsesFlowLayout,
   resolveCanvasNodeAbsoluteRect,
   resolveCanvasNodeAbsoluteRectForViewport,
 } from './tree';
 
 type CanvasRect = BuilderCanvasNode['rect'];
+type ResolvedFlowSiblingEntry = {
+  node: BuilderCanvasNode;
+  y: number;
+  height: number;
+};
 
 function effectiveRect(node: BuilderCanvasNode, viewport?: Viewport): CanvasRect {
   return viewport ? resolveViewportRect(node, viewport) : node.rect;
@@ -24,22 +28,43 @@ function compareFlowNodes(left: BuilderCanvasNode, right: BuilderCanvasNode): nu
     left.id.localeCompare(right.id);
 }
 
+function isFloatingHeroQuickMenuNode(section: BuilderCanvasNode, node: BuilderCanvasNode): boolean {
+  return section.id === 'home-hero-root' && (
+    node.id === 'home-hero-quick-menu' ||
+    node.id.startsWith('home-hero-quick-menu-item-') ||
+    node.id === 'home-hero-scroll-arrow'
+  );
+}
+
+export function isCollapsedServicesAccordionDetailNode(node: BuilderCanvasNode): boolean {
+  return /^home-services-card-\d+-(?:body|checklist|columns|columns-list|more|detail-\d+|column-\d+|columns-label)$/.test(node.id);
+}
+
+function isCollapsedSectionHiddenNode(section: BuilderCanvasNode, node: BuilderCanvasNode): boolean {
+  return section.id === 'home-services-root' && isCollapsedServicesAccordionDetailNode(node);
+}
+
 function resolveSectionContentHeight(
   section: BuilderCanvasNode,
-  nodes: BuilderCanvasNode[],
+  nodesById: Map<string, BuilderCanvasNode>,
+  childrenMap: Record<string, string[]>,
   viewport?: Viewport,
 ): number {
-  const nodesById = new Map(nodes.map((node) => [node.id, node]));
-  const childrenMap = buildChildrenMap(nodes);
   const sectionRect = viewport
     ? resolveCanvasNodeAbsoluteRectForViewport(section, nodesById, viewport)
     : resolveCanvasNodeAbsoluteRect(section, nodesById);
-  const descendantIds = getCanvasNodeDescendantIds(section.id, childrenMap);
   let contentBottom = sectionRect.y + sectionRect.height;
+  const stack = [...(childrenMap[section.id] ?? [])];
 
-  for (const descendantId of descendantIds) {
+  while (stack.length > 0) {
+    const descendantId = stack.pop();
+    if (!descendantId) continue;
     const descendant = nodesById.get(descendantId);
-    if (!descendant || descendant.visible === false) continue;
+    if (!descendant || isFloatingHeroQuickMenuNode(section, descendant)) continue;
+    if (isCollapsedSectionHiddenNode(section, descendant)) continue;
+    const childIds = childrenMap[descendantId];
+    if (childIds) stack.push(...childIds);
+    if (descendant.visible === false) continue;
     const descendantRect = viewport
       ? resolveCanvasNodeAbsoluteRectForViewport(descendant, nodesById, viewport)
       : resolveCanvasNodeAbsoluteRect(descendant, nodesById);
@@ -63,6 +88,35 @@ export function isTopLevelFlowSection(node: BuilderCanvasNode): boolean {
 }
 
 /**
+ * The single source of truth for ordering top-level page nodes into DOM paint
+ * order. Used by BOTH the published renderer (public-page.tsx) and the editor
+ * stage (CanvasStageNodes.tsx) so the two can never drift apart.
+ *
+ * Rule: flow (composite / `as: section`) nodes are emitted first in
+ * document-flow order (rect.y ASC, then zIndex ASC); absolute non-flow
+ * widgets are emitted afterwards. Because later DOM siblings win ties when
+ * z-indexes match, emitting a non-flow widget AFTER the sections that
+ * surround it guarantees the widget paints ON TOP instead of being covered
+ * by the next section's relative stacking context. This is the guard against
+ * the "node placed between two page sections gets hidden" regression
+ * (2026-07-02). Pair with the positive baseline z-index assigned to top-level
+ * absolute nodes at render time.
+ */
+export function compareTopLevelStacking(
+  left: BuilderCanvasNode,
+  right: BuilderCanvasNode,
+): number {
+  const leftIsComposite = isTopLevelFlowSection(left);
+  const rightIsComposite = isTopLevelFlowSection(right);
+  if (leftIsComposite && rightIsComposite) {
+    return left.rect.y - right.rect.y || left.zIndex - right.zIndex;
+  }
+  if (leftIsComposite && !rightIsComposite) return -1;
+  if (!leftIsComposite && rightIsComposite) return 1;
+  return left.rect.y - right.rect.y || left.zIndex - right.zIndex;
+}
+
+/**
  * Generalized computation of marginTop / minHeight metrics for a group of
  * "flow siblings" — nodes that share the same flow parent context.
  * Examples:
@@ -82,19 +136,33 @@ export function computeFlowSiblingMetrics(
 ): Map<string, { marginTop: number; minHeight: number }> {
   if (!siblings || siblings.length === 0) return new Map();
 
-  const resolvedEntries = siblings.map((node) => {
+  const metrics = new Map<string, { marginTop: number; minHeight: number }>();
+  if (siblings.length === 1) {
+    const node = siblings[0];
     const rect = viewport ? resolveViewportRect(node, viewport) : node.rect;
-    return { node, y: rect.y, height: rect.height };
-  }).sort((left, right) =>
+    metrics.set(node.id, {
+      marginTop: Math.max(0, rect.y),
+      minHeight: rect.height,
+    });
+    return metrics;
+  }
+
+  const resolvedEntries = new Array<ResolvedFlowSiblingEntry>(siblings.length);
+  for (let index = 0; index < siblings.length; index += 1) {
+    const node = siblings[index];
+    const rect = viewport ? resolveViewportRect(node, viewport) : node.rect;
+    resolvedEntries[index] = { node, y: rect.y, height: rect.height };
+  }
+  resolvedEntries.sort((left, right) =>
     left.y - right.y
     || left.node.zIndex - right.node.zIndex
     || left.node.id.localeCompare(right.node.id),
   );
 
-  const metrics = new Map<string, { marginTop: number; minHeight: number }>();
   let previousFlowBottom = 0;
 
-  for (const entry of resolvedEntries) {
+  for (let index = 0; index < resolvedEntries.length; index += 1) {
+    const entry = resolvedEntries[index];
     const marginTop = Math.max(0, entry.y - previousFlowBottom);
     metrics.set(entry.node.id, {
       marginTop,
@@ -121,17 +189,41 @@ export function computeTopLevelFlowSectionMetrics(
   nodes: BuilderCanvasNode[],
   viewport?: Viewport,
 ): Map<string, { marginTop: number; minHeight: number }> {
-  const topLevelNodes = nodes.filter((node) => !node.parentId);
+  const nodesById = new Map<string, BuilderCanvasNode>();
+  for (let index = 0; index < nodes.length; index += 1) {
+    const node = nodes[index];
+    nodesById.set(node.id, node);
+  }
 
-  const flowTopLevelCompositeNodes = topLevelNodes
-    .filter(isTopLevelFlowSection)
-    .map((node) => {
-      const rect = effectiveRect(node, viewport);
-      return withRect(node, {
-        ...rect,
-        height: Math.max(rect.height, resolveSectionContentHeight(node, nodes, viewport)),
-      });
-    });
+  return computeTopLevelFlowSectionMetricsFromIndex({
+    childrenMap: buildChildrenMap(nodes),
+    nodes,
+    nodesById,
+    viewport,
+  });
+}
+
+export function computeTopLevelFlowSectionMetricsFromIndex({
+  childrenMap,
+  nodes,
+  nodesById,
+  viewport,
+}: {
+  childrenMap: Record<string, string[]>;
+  nodes: readonly BuilderCanvasNode[];
+  nodesById: Map<string, BuilderCanvasNode>;
+  viewport?: Viewport;
+}): Map<string, { marginTop: number; minHeight: number }> {
+  const flowTopLevelCompositeNodes: BuilderCanvasNode[] = [];
+  for (let index = 0; index < nodes.length; index += 1) {
+    const node = nodes[index];
+    if (node.parentId || !isTopLevelFlowSection(node)) continue;
+    const rect = effectiveRect(node, viewport);
+    flowTopLevelCompositeNodes.push(withRect(node, {
+      ...rect,
+      height: Math.max(rect.height, resolveSectionContentHeight(node, nodesById, childrenMap, viewport)),
+    }));
+  }
 
   return computeFlowSiblingMetrics(flowTopLevelCompositeNodes);
 }

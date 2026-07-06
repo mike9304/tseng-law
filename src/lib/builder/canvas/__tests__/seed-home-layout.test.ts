@@ -33,6 +33,14 @@ function textNodeText(node: BuilderCanvasNode | undefined): string | undefined {
   return node.content.text;
 }
 
+function requireNode(nodesById: ReadonlyMap<string, BuilderCanvasNode>, id: string): BuilderCanvasNode {
+  const node = nodesById.get(id);
+  if (!node) {
+    throw new Error(`Expected ${id} to exist.`);
+  }
+  return node;
+}
+
 function isImageNode(node: BuilderCanvasNode): node is BuilderImageCanvasNode {
   return node.kind === 'image';
 }
@@ -68,6 +76,18 @@ const EXPECTED_ZH_HANT_DECOMPOSED_SECTION_RECTS = [
   { id: 'home-contact-root', y: 7943, height: 543 },
 ] as const;
 
+const EXPECTED_KO_DECOMPOSED_SECTION_RECTS = [
+  { id: 'home-hero-root', y: 0, height: 788 },
+  { id: 'home-insights-root', y: 788, height: 1277 },
+  { id: 'home-services-root', y: 2065, height: 1279 },
+  { id: 'home-attorney-root', y: 3344, height: 926 },
+  { id: 'home-case-results-root', y: 4270, height: 800 },
+  { id: 'home-stats-root', y: 5070, height: 621 },
+  { id: 'home-faq-root', y: 5691, height: 1333 },
+  { id: 'home-offices-root', y: 7024, height: 919 },
+  { id: 'home-contact-root', y: 7943, height: 532 },
+] as const;
+
 describe('home seed canvas layout', () => {
   it('keeps visible seed nodes within the desktop stage width', () => {
     const doc = createHomePageCanvasDocument('ko');
@@ -89,23 +109,14 @@ describe('home seed canvas layout', () => {
     expect(offenders).toEqual([]);
   });
 
-  it('keeps boundary controls clear of the following home section', () => {
-    const doc = createHomePageCanvasDocument('ko');
+  it('keeps legacy boundary controls clear of the following home section', () => {
+    const doc = createHomePageCanvasDocument('en');
     const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
-    const heroRoot = nodesById.get('home-hero-root');
-    const heroSearch = nodesById.get('home-hero-search-wrap');
-    const insightsRoot = nodesById.get('home-insights-root');
-    const insightsCta = nodesById.get('home-insights-view-all');
 
-    expect(heroRoot).toBeDefined();
-    expect(heroSearch).toBeDefined();
-    expect(insightsRoot).toBeDefined();
-    expect(insightsCta).toBeDefined();
-
-    const heroRootRect = resolveCanvasNodeAbsoluteRectForViewport(heroRoot!, nodesById, 'desktop');
-    const heroSearchRect = resolveCanvasNodeAbsoluteRectForViewport(heroSearch!, nodesById, 'desktop');
-    const insightsRootRect = resolveCanvasNodeAbsoluteRectForViewport(insightsRoot!, nodesById, 'desktop');
-    const insightsCtaRect = resolveCanvasNodeAbsoluteRectForViewport(insightsCta!, nodesById, 'desktop');
+    const heroRootRect = resolveCanvasNodeAbsoluteRectForViewport(requireNode(nodesById, 'home-hero-root'), nodesById, 'desktop');
+    const heroSearchRect = resolveCanvasNodeAbsoluteRectForViewport(requireNode(nodesById, 'home-hero-search-wrap'), nodesById, 'desktop');
+    const insightsRootRect = resolveCanvasNodeAbsoluteRectForViewport(requireNode(nodesById, 'home-insights-root'), nodesById, 'desktop');
+    const insightsCtaRect = resolveCanvasNodeAbsoluteRectForViewport(requireNode(nodesById, 'home-insights-view-all'), nodesById, 'desktop');
 
     // Live hero keeps the search bar ~83px clear of the hero bottom edge
     // (public probe: bar 786-848 inside hero 111-931). The editor smoke
@@ -182,21 +193,16 @@ describe('home seed canvas layout', () => {
   it('keeps home hero title and subtitle hit targets separated', () => {
     const doc = createHomePageCanvasDocument('ko');
     const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
-    const title = nodesById.get('home-hero-title');
-    const subtitle = nodesById.get('home-hero-subtitle');
 
-    expect(title).toBeDefined();
-    expect(subtitle).toBeDefined();
-
-    const titleRect = resolveCanvasNodeAbsoluteRectForViewport(title!, nodesById, 'desktop');
-    const subtitleRect = resolveCanvasNodeAbsoluteRectForViewport(subtitle!, nodesById, 'desktop');
+    const titleRect = resolveCanvasNodeAbsoluteRectForViewport(requireNode(nodesById, 'home-hero-title'), nodesById, 'desktop');
+    const subtitleRect = resolveCanvasNodeAbsoluteRectForViewport(requireNode(nodesById, 'home-hero-subtitle'), nodesById, 'desktop');
 
     expect(rectsOverlap(titleRect, subtitleRect)).toBe(false);
     expect(subtitleRect.y - (titleRect.y + titleRect.height)).toBeGreaterThanOrEqual(24);
   });
 
-  it('places the decomposed home hero copy on the published desktop grid', () => {
-    const doc = createHomePageCanvasDocument('ko');
+  it('places the legacy decomposed home hero copy on the published desktop grid', () => {
+    const doc = createHomePageCanvasDocument('en');
     const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
     const inner = nodesById.get('home-hero-inner');
     const copy = nodesById.get('home-hero-copy');
@@ -304,20 +310,67 @@ describe('home seed canvas layout', () => {
     expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 198, width: 1136, height: 548 });
   });
 
-  it('keeps ko and en decomposed child geometry unchanged by zh-hant calibration', () => {
-    (['ko', 'en'] as const).forEach((locale) => {
-      const doc = createHomePageCanvasDocument(locale);
-      const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
+  it('matches ko decomposed home section geometry to the measured composite flow', () => {
+    const doc = createHomePageCanvasDocument('ko');
 
-      expect(nodesById.has('home-hero-overlay')).toBe(false);
-      expect(nodesById.get('home-hero-inner')?.rect).toMatchObject({ x: 51, y: 184, width: 1178, height: 483 });
-      expect(nodesById.get('home-hero-links')?.rect).toMatchObject({ x: 0, y: 338, width: 260, height: 32 });
-      expect(nodesById.get('home-hero-search-wrapper')?.rect).toMatchObject({ x: 0, y: HERO_SEARCH_WRAPPER_Y, width: 1280, height: 62 });
-      expect(nodesById.get('home-faq-container')?.rect).toMatchObject({ x: 72, y: 88, width: 1136, height: 1280 });
-      expect(nodesById.get('home-offices-container')?.rect).toMatchObject({ x: 72, y: 88, width: 1136, height: 600 });
-      expect(nodesById.get('home-offices-tabs')?.rect).toMatchObject({ x: 0, y: 116, width: 560, height: 36 });
-      expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 184, width: 1136, height: 420 });
-    });
+    expect(doc.stageHeight).toBe(8477);
+    expect(
+      doc.nodes
+        .filter((node) => !node.parentId && /^home-.+-root$/.test(node.id))
+        .map((node) => ({
+          id: node.id,
+          y: node.rect.y,
+          height: node.rect.height,
+        })),
+    ).toEqual(EXPECTED_KO_DECOMPOSED_SECTION_RECTS);
+  });
+
+  it('matches ko decomposed child anchors to the measured composite render', () => {
+    const doc = createHomePageCanvasDocument('ko');
+    const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
+
+    const anchorRects = [
+      ['home-hero-title', 217],
+      ['home-hero-subtitle', 408],
+      ['home-hero-links', 499],
+      ['home-hero-search-input', 713],
+      ['home-insights-title', 917],
+      ['home-insights-featured-title', 1577],
+      ['home-services-title', 2256],
+      ['home-services-card-0', 2389],
+      ['home-attorney-label', 3610],
+      ['home-attorney-title', 3649],
+      ['home-attorney-cta', 3976],
+      ['home-case-results-title', 4528],
+      ['home-case-results-cta', 4822],
+      ['home-stats-title', 5261],
+      ['home-faq-title', 5880],
+      ['home-faq-item-0', 5973],
+      ['home-offices-tabs', 7305],
+      ['home-contact-title', 8133],
+      ['home-contact-primary', 8287],
+    ] as const;
+
+    expect(nodesById.get('home-hero-overlay')).toBeDefined();
+    expect(textNodeText(nodesById.get('home-faq-label'))).toBe('자주 묻는 질문');
+    expect(anchorRects.map(([id, y]) => {
+      const node = requireNode(nodesById, id);
+      return [id, resolveCanvasNodeAbsoluteRectForViewport(node, nodesById, 'desktop').y, y];
+    })).toEqual(anchorRects.map(([id, y]) => [id, y, y]));
+  });
+
+  it('keeps en decomposed child geometry unchanged by localized calibration', () => {
+    const doc = createHomePageCanvasDocument('en');
+    const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
+
+    expect(nodesById.has('home-hero-overlay')).toBe(false);
+    expect(nodesById.get('home-hero-inner')?.rect).toMatchObject({ x: 51, y: 184, width: 1178, height: 483 });
+    expect(nodesById.get('home-hero-links')?.rect).toMatchObject({ x: 0, y: 338, width: 260, height: 32 });
+    expect(nodesById.get('home-hero-search-wrapper')?.rect).toMatchObject({ x: 0, y: HERO_SEARCH_WRAPPER_Y, width: 1280, height: 62 });
+    expect(nodesById.get('home-faq-container')?.rect).toMatchObject({ x: 72, y: 88, width: 1136, height: 1280 });
+    expect(nodesById.get('home-offices-container')?.rect).toMatchObject({ x: 72, y: 88, width: 1136, height: 600 });
+    expect(nodesById.get('home-offices-tabs')?.rect).toMatchObject({ x: 0, y: 116, width: 560, height: 36 });
+    expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 184, width: 1136, height: 420 });
   });
 
   it('keeps zh-hant non-overlay descendants inside their localized section bounds', () => {

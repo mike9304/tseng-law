@@ -33,15 +33,15 @@ const EXPECTED_DEFAULT_SECTION_RECTS = [
   { id: 'home-contact', y: 7942, height: 516 },
 ] as const;
 const EXPECTED_ZH_HANT_SECTION_RECTS = [
-  { id: 'home-hero', y: 0, height: 820 },
-  { id: 'home-insights', y: 820, height: 1247 },
-  { id: 'home-services', y: 2067, height: 1279 },
-  { id: 'home-attorney', y: 3346, height: 926 },
-  { id: 'home-case-results', y: 4272, height: 843 },
-  { id: 'home-stats', y: 5115, height: 622 },
-  { id: 'home-faq', y: 5737, height: 1333 },
-  { id: 'home-offices', y: 7070, height: 919 },
-  { id: 'home-contact', y: 7989, height: 543 },
+  { id: 'home-hero', y: 0, height: 774 },
+  { id: 'home-insights', y: 774, height: 1247 },
+  { id: 'home-services', y: 2021, height: 1279 },
+  { id: 'home-attorney', y: 3300, height: 926 },
+  { id: 'home-case-results', y: 4226, height: 843 },
+  { id: 'home-stats', y: 5069, height: 622 },
+  { id: 'home-faq', y: 5691, height: 1333 },
+  { id: 'home-offices', y: 7024, height: 919 },
+  { id: 'home-contact', y: 7943, height: 543 },
 ] as const;
 
 function countResponsiveNodes(doc: BuilderCanvasDocument): number {
@@ -104,7 +104,7 @@ describe('live-reflecting composite home seed', () => {
   it('uses zh-hant composite section heights measured from the localized home flow', () => {
     const doc = createHomePageCanvasDocument('zh-hant');
 
-    expect(doc.stageHeight).toBe(8534);
+    expect(doc.stageHeight).toBe(8488);
     expect(doc.nodes.map((node) => ({
       id: node.id,
       y: node.rect.y,

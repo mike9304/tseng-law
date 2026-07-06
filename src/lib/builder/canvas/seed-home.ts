@@ -8,6 +8,7 @@ import {
 } from './decompose-case-results';
 import {
   createHeroDecomposedNodes,
+  HERO_MEDIA_IMAGE_NODE_IDS,
   HERO_SECTION_ROOT_HEIGHT,
 } from './decompose-hero';
 import {
@@ -64,6 +65,7 @@ type CompositeSpec = {
 
 type DecomposedSpec = {
   kind: 'decomposed';
+  key: CompositeSectionKey;
   builder: (y: number, locale: Locale, zBase: number) => BuilderCanvasNode[];
   height: number;
 };
@@ -73,15 +75,15 @@ type HomeSectionSpec = CompositeSpec | DecomposedSpec;
 // Editable, granular home layout — the "decompose to edit" target and the
 // subject of the layout regression test. Section order matches the live home.
 const decomposedHomeSections: HomeSectionSpec[] = [
-  { kind: 'decomposed', builder: createHeroDecomposedNodes,      height: HERO_SECTION_ROOT_HEIGHT },
-  { kind: 'decomposed', builder: createInsightsDecomposedNodes,  height: INSIGHTS_SECTION_ROOT_HEIGHT },
-  { kind: 'decomposed', builder: createServicesDecomposedNodes,  height: SERVICES_SECTION_ROOT_HEIGHT },
-  { kind: 'decomposed', builder: createAttorneyDecomposedNodes,  height: ATTORNEY_SECTION_ROOT_HEIGHT },
-  { kind: 'decomposed', builder: createCaseResultsDecomposedNodes, height: CASE_RESULTS_ROOT_HEIGHT },
-  { kind: 'decomposed', builder: createStatsDecomposedNodes,     height: STATS_SECTION_ROOT_HEIGHT },
-  { kind: 'decomposed', builder: createFaqDecomposedNodes,       height: FAQ_SECTION_ROOT_HEIGHT },
-  { kind: 'decomposed', builder: createOfficesDecomposedNodes,   height: OFFICES_SECTION_ROOT_HEIGHT },
-  { kind: 'decomposed', builder: createContactDecomposedNodes,   height: CONTACT_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', key: 'hero',        builder: createHeroDecomposedNodes,      height: HERO_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', key: 'insights',    builder: createInsightsDecomposedNodes,  height: INSIGHTS_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', key: 'services',    builder: createServicesDecomposedNodes,  height: SERVICES_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', key: 'attorney',    builder: createAttorneyDecomposedNodes,  height: ATTORNEY_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', key: 'caseResults', builder: createCaseResultsDecomposedNodes, height: CASE_RESULTS_ROOT_HEIGHT },
+  { kind: 'decomposed', key: 'stats',       builder: createStatsDecomposedNodes,     height: STATS_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', key: 'faq',         builder: createFaqDecomposedNodes,       height: FAQ_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', key: 'offices',     builder: createOfficesDecomposedNodes,   height: OFFICES_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', key: 'contact',     builder: createContactDecomposedNodes,   height: CONTACT_SECTION_ROOT_HEIGHT },
 ];
 
 // Live-reflecting home: each section is a `composite` node rendering the SAME
@@ -110,7 +112,7 @@ const MEASURED_SECTION_HEIGHTS_BY_LOCALE = {
   ko: MEASURED_SECTION_HEIGHTS,
   en: MEASURED_SECTION_HEIGHTS,
   'zh-hant': {
-    hero: 820,
+    hero: 774,
     insights: 1247,
     services: 1279,
     attorney: 926,
@@ -121,6 +123,89 @@ const MEASURED_SECTION_HEIGHTS_BY_LOCALE = {
     contact: 543,
   },
 } satisfies Record<Locale, CompositeSectionHeights>;
+
+const ZH_HANT_DECOMPOSED_SECTION_HEIGHTS = MEASURED_SECTION_HEIGHTS_BY_LOCALE['zh-hant'];
+const ROOT_NODE_IDS = {
+  hero: 'home-hero-root', insights: 'home-insights-root', services: 'home-services-root',
+  attorney: 'home-attorney-root', caseResults: 'home-case-results-root', stats: 'home-stats-root',
+  faq: 'home-faq-root', offices: 'home-offices-root', contact: 'home-contact-root',
+} as const satisfies Record<CompositeSectionKey, string>;
+
+type LocalizedGeometryInput = {
+  readonly key: CompositeSectionKey;
+  readonly locale: Locale;
+  readonly nodes: BuilderCanvasNode[];
+  readonly height: number;
+};
+
+function setNodeRect(
+  nodesById: ReadonlyMap<string, BuilderCanvasNode>,
+  id: string,
+  rect: Partial<BuilderCanvasNode['rect']>,
+): void {
+  const node = nodesById.get(id);
+  if (!node) return;
+  node.rect = { ...node.rect, ...rect };
+}
+
+function shiftDirectChildrenY(
+  nodes: BuilderCanvasNode[],
+  parentId: string,
+  deltaY: number,
+): void {
+  nodes.filter((node) => node.parentId === parentId).forEach((node) => {
+    node.rect = { ...node.rect, y: node.rect.y + deltaY };
+  });
+}
+
+function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): BuilderCanvasNode[] {
+  if (input.locale !== 'zh-hant') return input.nodes;
+
+  const nodesById = new Map(input.nodes.map((node) => [node.id, node]));
+  setNodeRect(nodesById, ROOT_NODE_IDS[input.key], { height: input.height });
+
+  switch (input.key) {
+    case 'hero':
+      setNodeRect(nodesById, 'home-hero-media', { height: input.height });
+      HERO_MEDIA_IMAGE_NODE_IDS.forEach((id) => setNodeRect(nodesById, id, { height: input.height }));
+      setNodeRect(nodesById, 'home-hero-scroll-arrow', { y: input.height - 74 });
+      break;
+    case 'insights':
+      setNodeRect(nodesById, 'home-insights-container', { height: input.height - 160 });
+      break;
+    case 'services':
+      setNodeRect(nodesById, 'home-services-container', { height: input.height - 88 });
+      break;
+    case 'attorney':
+      setNodeRect(nodesById, 'home-attorney-image-wrap', { height: input.height });
+      setNodeRect(nodesById, 'home-attorney-image', { height: input.height });
+      setNodeRect(nodesById, 'home-attorney-badge', { y: input.height - 160 });
+      setNodeRect(nodesById, 'home-attorney-content', { height: input.height });
+      shiftDirectChildrenY(input.nodes, 'home-attorney-content', 103);
+      break;
+    case 'caseResults':
+      setNodeRect(nodesById, 'home-case-results-content', { height: input.height });
+      shiftDirectChildrenY(input.nodes, 'home-case-results-content', 122);
+      break;
+    case 'faq':
+      setNodeRect(nodesById, 'home-faq-container', { height: 1206 });
+      break;
+    case 'offices':
+      setNodeRect(nodesById, 'home-offices-container', { height: 743 });
+      [0, 1, 2].forEach((index) => {
+        const layoutId = `home-offices-layout-${index}`;
+        setNodeRect(nodesById, layoutId, { height: 548 });
+        setNodeRect(nodesById, `${layoutId}-map`, { height: 548 });
+        setNodeRect(nodesById, `${layoutId}-card`, { height: 548 });
+        setNodeRect(nodesById, `${layoutId}-card-map-link`, { y: 430 });
+      });
+      break;
+    case 'stats':
+    case 'contact':
+      break;
+  }
+  return input.nodes;
+}
 
 function createCompositeHomeSections(locale: Locale): CompositeSpec[] {
   const heights = MEASURED_SECTION_HEIGHTS_BY_LOCALE[locale];
@@ -166,15 +251,23 @@ function buildHomeDocument(locale: Locale, sections: HomeSectionSpec[]): Builder
   let zBase = 0;
 
   sections.forEach((spec) => {
+    const sectionHeight = spec.kind === 'decomposed' && locale === 'zh-hant'
+      ? ZH_HANT_DECOMPOSED_SECTION_HEIGHTS[spec.key]
+      : spec.height;
     if (spec.kind === 'composite') {
       nodes.push(createCompositeNode(spec, y, zBase, locale));
       zBase += 1;
     } else {
-      const decomposed = spec.builder(y, locale, zBase);
+      const decomposed = applyLocalizedDecomposedGeometry({
+        key: spec.key,
+        locale,
+        nodes: spec.builder(y, locale, zBase),
+        height: sectionHeight,
+      });
       nodes.push(...decomposed);
       zBase += decomposed.length;
     }
-    y += spec.height;
+    y += sectionHeight;
   });
   if (sections.some((spec) => spec.kind === 'decomposed')) {
     responsivize(nodes);

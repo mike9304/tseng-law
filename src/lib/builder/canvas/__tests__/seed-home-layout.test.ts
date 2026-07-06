@@ -56,6 +56,18 @@ function createColumnPost(overrides: Partial<ColumnPost> & Pick<ColumnPost, 'slu
   return post;
 }
 
+const EXPECTED_ZH_HANT_DECOMPOSED_SECTION_RECTS = [
+  { id: 'home-hero-root', y: 0, height: 774 },
+  { id: 'home-insights-root', y: 774, height: 1247 },
+  { id: 'home-services-root', y: 2021, height: 1279 },
+  { id: 'home-attorney-root', y: 3300, height: 926 },
+  { id: 'home-case-results-root', y: 4226, height: 843 },
+  { id: 'home-stats-root', y: 5069, height: 622 },
+  { id: 'home-faq-root', y: 5691, height: 1333 },
+  { id: 'home-offices-root', y: 7024, height: 919 },
+  { id: 'home-contact-root', y: 7943, height: 543 },
+] as const;
+
 describe('home seed canvas layout', () => {
   it('keeps visible seed nodes within the desktop stage width', () => {
     const doc = createHomePageCanvasDocument('ko');
@@ -219,6 +231,49 @@ describe('home seed canvas layout', () => {
 
   it('keeps non-overlay home section descendants inside their section bounds', () => {
     const doc = createHomePageCanvasDocument('ko');
+    const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
+    const childrenMap = buildChildrenMap(doc.nodes);
+    const overlaySectionIds = new Set(['home-hero-root']);
+    const offenders = doc.nodes
+      .filter((node) => !node.parentId && /^home-.+-root$/.test(node.id) && !overlaySectionIds.has(node.id))
+      .flatMap((root) => {
+        const rootRect = resolveCanvasNodeAbsoluteRectForViewport(root, nodesById, 'desktop');
+        return getCanvasNodeDescendantIds(root.id, childrenMap)
+          .map((descendantId) => {
+            const descendant = nodesById.get(descendantId);
+            if (!descendant || descendant.visible === false) return null;
+            const rect = resolveCanvasNodeAbsoluteRectForViewport(descendant, nodesById, 'desktop');
+            return {
+              id: descendant.id,
+              sectionId: root.id,
+              bottom: rect.y + rect.height,
+              sectionBottom: rootRect.y + rootRect.height,
+            };
+          })
+          .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry))
+          .filter((entry) => entry.bottom > entry.sectionBottom + 1);
+      });
+
+    expect(offenders).toEqual([]);
+  });
+
+  it('matches zh-hant decomposed home section geometry to the localized composite flow', () => {
+    const doc = createHomePageCanvasDocument('zh-hant');
+
+    expect(doc.stageHeight).toBe(8488);
+    expect(
+      doc.nodes
+        .filter((node) => !node.parentId && /^home-.+-root$/.test(node.id))
+        .map((node) => ({
+          id: node.id,
+          y: node.rect.y,
+          height: node.rect.height,
+        })),
+    ).toEqual(EXPECTED_ZH_HANT_DECOMPOSED_SECTION_RECTS);
+  });
+
+  it('keeps zh-hant non-overlay descendants inside their localized section bounds', () => {
+    const doc = createHomePageCanvasDocument('zh-hant');
     const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
     const childrenMap = buildChildrenMap(doc.nodes);
     const overlaySectionIds = new Set(['home-hero-root']);

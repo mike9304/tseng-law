@@ -9,6 +9,8 @@ import {
   createPageHeaderSectionNodes,
 } from './decompose-page-shared';
 
+const ZH_HANT_DESKTOP_BOTTOM_RESERVE = 175;
+
 function buildAboutPage(y: number, locale: Locale, zBase: number): { nodes: BuilderCanvasNode[]; height: number } {
   const page = pageCopy[locale].about;
   let cursor = y;
@@ -46,10 +48,41 @@ function buildAboutPage(y: number, locale: Locale, zBase: number): { nodes: Buil
   cursor += contact.height;
 
   if (locale === 'zh-hant') {
+    const headerRoot = nodes.find((node) => node.id === 'page-about-page-header-root');
+    if (headerRoot) {
+      headerRoot.zIndex = zBase + 380;
+    }
+    nodes.push(createZhHantAboutDesktopParityNode(zBase + 390, locale));
     nodes.push(createZhHantAboutMobileParityNode(y, zBase + 400, locale));
   }
 
   return { nodes, height: cursor - y };
+}
+
+function createZhHantAboutDesktopParityNode(
+  zIndex: number,
+  locale: Locale,
+): BuilderCanvasNode {
+  return {
+    id: 'about-desktop-parity',
+    kind: 'composite',
+    parentId: 'page-about-page-header-root',
+    rect: { x: 0, y: 0, width: 1280, height: 428 },
+    style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
+    zIndex,
+    rotation: 0,
+    locked: false,
+    visible: true,
+    anchorName: 'desktop-parity-about',
+    responsive: {
+      mobile: { hidden: true },
+      tablet: { hidden: true },
+    },
+    content: {
+      componentKey: 'legacy-page-about',
+      config: { locale },
+    },
+  };
 }
 
 function createZhHantAboutMobileParityNode(
@@ -87,7 +120,8 @@ function createZhHantAboutMobileParityNode(
 // Mirrors getLawyersPageRootHeight — seed-pages.ts should pass this per locale
 // (like the lawyers page) instead of the cross-locale max constant.
 export function getAboutPageRootHeight(locale: Locale): number {
-  return buildAboutPage(0, locale, 0).height;
+  const pageHeight = buildAboutPage(0, locale, 0).height;
+  return locale === 'zh-hant' ? pageHeight + ZH_HANT_DESKTOP_BOTTOM_RESERVE : pageHeight;
 }
 
 export const ABOUT_PAGE_ROOT_HEIGHT = Math.max(...locales.map((locale) => getAboutPageRootHeight(locale)));

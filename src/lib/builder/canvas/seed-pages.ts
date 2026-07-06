@@ -68,6 +68,7 @@ const STAGE_WIDTH = 1280;
 const SITE_PAGE_SEED_VERSION = 'site-page-seed-v22';
 const COLUMNS_PAGE_ROOT_HEIGHT = 2660;
 const ZH_HANT_CONTACT_PAGE_ROOT_HEIGHT = 3033;
+const ZH_HANT_PRICING_PAGE_ROOT_HEIGHT = 1380;
 const ZH_HANT_REVIEWS_PAGE_ROOT_HEIGHT = 1754;
 const seedSitePagesInFlight = new Map<string, Promise<void>>();
 const COLLAPSED_RESPONSIVE_RECT_SIZE = 1;
@@ -1514,6 +1515,30 @@ function applyZhHantReviewsDesktopBaseline(document: BuilderCanvasDocument): Bui
   return document;
 }
 
+function applyZhHantPricingDesktopBaseline(document: BuilderCanvasDocument): BuilderCanvasDocument {
+  const nodesById = new Map(document.nodes.map((node) => [node.id, node]));
+  document.stageHeight = ZH_HANT_PRICING_PAGE_ROOT_HEIGHT;
+
+  setDesktopRect(nodesById, 'page-pricing-section-root', { height: 952 });
+  setDesktopRect(nodesById, 'page-pricing-section-container', { height: 768 });
+  setDesktopRect(nodesById, 'page-pricing-grid', { height: 505 });
+  setDesktopRect(nodesById, 'page-pricing-disclaimer-wrap', { y: 669 });
+  setDesktopRect(nodesById, 'page-pricing-cta-wrap', { y: 724 });
+
+  for (let index = 0; index < 4; index += 1) {
+    const note = nodesById.get(`page-pricing-card-${index}-note`);
+    setDesktopRect(nodesById, `page-pricing-card-${index}`, { height: 505 });
+    setDesktopRect(nodesById, `page-pricing-card-${index}-icon`, { x: 24, y: 32, width: 52, height: 52 });
+    setDesktopRect(nodesById, `page-pricing-card-${index}-icon-svg`, { x: 6, y: 6, width: 40, height: 40 });
+    setDesktopRect(nodesById, `page-pricing-card-${index}-title`, { y: 102 });
+    setDesktopRect(nodesById, `page-pricing-card-${index}-price`, { y: 141 });
+    setDesktopRect(nodesById, `page-pricing-card-${index}-details`, { y: 188 });
+    if (note) setDesktopRect(nodesById, note.id, { y: note.rect.y - 20 });
+  }
+
+  return document;
+}
+
 export function buildLegacyCompositePageCanvas(
   locale: Locale,
   componentKey: LegacyCompositeKey,
@@ -1607,7 +1632,12 @@ function buildPricingCompositePageCanvas(locale: Locale): BuilderCanvasDocument 
 }
 
 function buildPricingPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createDecomposedPageCanvasDocument(locale, createPricingPageDecomposedNodes(0, locale, 0), getPricingPageRootHeight(locale));
+  const document = createDecomposedPageCanvasDocument(
+    locale,
+    createPricingPageDecomposedNodes(0, locale, 0),
+    getPricingPageRootHeight(locale),
+  );
+  return locale === 'zh-hant' ? applyZhHantPricingDesktopBaseline(document) : document;
 }
 
 function buildReviewsPageCanvas(locale: Locale): BuilderCanvasDocument {

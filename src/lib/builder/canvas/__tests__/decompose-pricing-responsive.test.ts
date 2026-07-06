@@ -76,6 +76,27 @@ describe('pricing page responsive decomposition', () => {
     expect(details).toMatchObject({ x: 25, y: 260, width: 290, height: 96 });
   });
 
+  it('keeps zh-hant desktop pricing geometry aligned to the standalone baseline', () => {
+    const doc = STANDARD_PAGE_DECOMPOSERS.pricing('zh-hant');
+    const nodes = nodesById(doc);
+
+    expect(doc.stageHeight).toBe(1380);
+    expect(nodes.get('page-pricing-section-root')?.rect).toMatchObject({ y: 428, width: 1280, height: 952 });
+    expect(nodes.get('page-pricing-section-container')?.rect).toMatchObject({ x: 51, y: 88, width: 1178, height: 768 });
+    expect(nodes.get('page-pricing-grid')?.rect).toMatchObject({ y: 120, width: 1178, height: 505 });
+    expect(nodes.get('page-pricing-disclaimer-wrap')?.rect).toMatchObject({ y: 669, width: 680 });
+    expect(nodes.get('page-pricing-cta-wrap')?.rect).toMatchObject({ y: 724, width: 220, height: 44 });
+
+    for (let index = 0; index < 4; index += 1) {
+      expect(nodes.get(`page-pricing-card-${index}`)?.rect).toMatchObject({ y: 0, width: 276, height: 505 });
+      expect(nodes.get(`page-pricing-card-${index}-icon`)?.rect).toMatchObject({ x: 24, y: 32, width: 52, height: 52 });
+      expect(nodes.get(`page-pricing-card-${index}-icon-svg`)?.rect).toMatchObject({ x: 6, y: 6, width: 40, height: 40 });
+      expect(nodes.get(`page-pricing-card-${index}-title`)?.rect).toMatchObject({ y: 102, width: 228 });
+      expect(nodes.get(`page-pricing-card-${index}-price`)?.rect).toMatchObject({ y: 141, width: 228 });
+      expect(nodes.get(`page-pricing-card-${index}-details`)?.rect).toMatchObject({ y: 188, width: 228 });
+    }
+  });
+
   it('keeps tablet pricing CTA below the card grid and disclaimer', () => {
     const doc = STANDARD_PAGE_DECOMPOSERS.pricing('ko');
     const nodes = nodesById(doc);

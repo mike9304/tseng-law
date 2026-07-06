@@ -67,6 +67,8 @@ import { estimateTextHeight } from './decompose-page-shared';
 const STAGE_WIDTH = 1280;
 const SITE_PAGE_SEED_VERSION = 'site-page-seed-v22';
 const COLUMNS_PAGE_ROOT_HEIGHT = 2660;
+const ZH_HANT_CONTACT_PAGE_ROOT_HEIGHT = 3033;
+const ZH_HANT_REVIEWS_PAGE_ROOT_HEIGHT = 1754;
 const seedSitePagesInFlight = new Map<string, Promise<void>>();
 const COLLAPSED_RESPONSIVE_RECT_SIZE = 1;
 const LEGACY_PAGE_COMPOSITE_PREFIX = 'legacy-page-';
@@ -207,6 +209,27 @@ function setResponsiveFontSize(
       fontSize: Math.max(8, Math.min(160, Math.round(fontSize))),
     },
   };
+}
+
+function setDesktopRect(
+  nodesById: Map<string, BuilderCanvasNode>,
+  nodeId: string,
+  rect: Partial<CanvasRect>,
+): void {
+  const node = nodesById.get(nodeId);
+  if (!node) return;
+  node.rect = { ...node.rect, ...rect };
+}
+
+function setDesktopContainerAbsoluteLayout(
+  nodesById: Map<string, BuilderCanvasNode>,
+  nodeId: string,
+): void {
+  const node = nodesById.get(nodeId);
+  if (node?.kind !== 'container') return;
+  node.content.layoutMode = 'absolute';
+  delete node.content.flexConfig;
+  delete node.content.gridConfig;
 }
 
 function getContentString(node: BuilderCanvasNode | undefined, key: 'label' | 'text'): string {
@@ -1391,6 +1414,106 @@ function hasLegacyReviewClassCollision(document: BuilderCanvasDocument | null): 
   )));
 }
 
+function applyZhHantContactDesktopBaseline(document: BuilderCanvasDocument): BuilderCanvasDocument {
+  const nodesById = new Map(document.nodes.map((node) => [node.id, node]));
+  document.stageHeight = ZH_HANT_CONTACT_PAGE_ROOT_HEIGHT;
+
+  setDesktopRect(nodesById, 'page-contact-guide-root', { y: 428, height: 602 });
+  setDesktopRect(nodesById, 'page-contact-guide-container', { x: 51, y: 88, width: 1178, height: 426 });
+  setDesktopRect(nodesById, 'page-contact-guide-label', { y: 0, height: 32 });
+  setDesktopRect(nodesById, 'page-contact-guide-title', { y: 42, width: 760, height: 46 });
+  setDesktopRect(nodesById, 'page-contact-guide-description', { y: 106, width: 760, height: 34 });
+  setDesktopRect(nodesById, 'page-contact-guide-divider', { y: 158, height: 32 });
+  setDesktopRect(nodesById, 'page-contact-guide-divider-ornament', { x: 529, y: 6, width: 120, height: 12 });
+  setDesktopRect(nodesById, 'page-contact-guide-grid', { y: 214, height: 212 });
+  setDesktopContainerAbsoluteLayout(nodesById, 'page-contact-guide-grid');
+  for (let index = 0; index < 3; index += 1) {
+    setDesktopRect(nodesById, `page-contact-guide-card-${index}`, {
+      x: index * 400,
+      y: 0,
+      width: 376,
+      height: 212,
+    });
+    setDesktopRect(nodesById, `page-contact-guide-card-${index}-title`, { width: 328 });
+    setDesktopRect(nodesById, `page-contact-card-${index}-list`, { width: 328 });
+  }
+
+  setDesktopRect(nodesById, 'page-contact-contact-root', { y: 1030, height: 964 });
+  setDesktopRect(nodesById, 'page-contact-contact-container', { x: 51, y: 88, width: 1178, height: 788 });
+  setDesktopRect(nodesById, 'page-contact-inquiries-label', { y: 0, height: 32 });
+  setDesktopRect(nodesById, 'page-contact-inquiries-grid', { y: 44, height: 366 });
+  setDesktopContainerAbsoluteLayout(nodesById, 'page-contact-inquiries-grid');
+  for (let index = 0; index < 4; index += 1) {
+    const isSecondRow = index === 3;
+    setDesktopRect(nodesById, `page-contact-inquiries-card-${index}`, {
+      x: isSecondRow ? 0 : index * 400,
+      y: isSecondRow ? 230 : 0,
+      width: 376,
+      height: isSecondRow ? 136 : 171,
+    });
+    setDesktopRect(nodesById, `page-contact-inquiries-card-${index}-title`, { width: 328 });
+    setDesktopRect(nodesById, `page-contact-inquiries-block-${index}-list`, { width: 328 });
+    for (let itemIndex = 0; itemIndex < 3; itemIndex += 1) {
+      setDesktopRect(nodesById, `page-contact-inquiries-block-${index}-item-${itemIndex}`, { width: 328 });
+    }
+  }
+  setDesktopRect(nodesById, 'page-contact-locations-label', { y: 454, height: 32 });
+  setDesktopRect(nodesById, 'page-contact-locations-grid', { y: 498, height: 206 });
+  setDesktopContainerAbsoluteLayout(nodesById, 'page-contact-locations-grid');
+  for (let index = 0; index < 3; index += 1) {
+    setDesktopRect(nodesById, `page-contact-locations-card-${index}`, {
+      x: index * 400,
+      y: 0,
+      width: 376,
+      height: 206,
+    });
+    setDesktopRect(nodesById, `page-contact-locations-card-${index}-title`, { width: 328 });
+    setDesktopRect(nodesById, `page-contact-locations-block-${index}-list`, { width: 328 });
+    for (let itemIndex = 0; itemIndex < 3; itemIndex += 1) {
+      setDesktopRect(nodesById, `page-contact-locations-block-${index}-item-${itemIndex}`, { width: 328 });
+    }
+  }
+  setDesktopRect(nodesById, 'page-contact-contact-cta', { y: 744, width: 180, height: 44 });
+
+  setDesktopRect(nodesById, 'home-offices-root', { y: 1994, height: 760 });
+  setDesktopRect(nodesById, 'home-offices-container', { x: 72, y: 88, width: 1136, height: 600 });
+  setDesktopRect(nodesById, 'home-offices-label', { y: 0, height: 32 });
+  setDesktopRect(nodesById, 'home-offices-title', { y: 40, width: 520, height: 56 });
+  setDesktopRect(nodesById, 'home-offices-tabs', { y: 116, width: 560, height: 36 });
+  for (let index = 0; index < 3; index += 1) {
+    setDesktopRect(nodesById, `home-offices-tab-${index}`, {
+      x: index * 120,
+      y: 0,
+      width: 104,
+      height: 32,
+    });
+    setDesktopRect(nodesById, `home-offices-layout-${index}`, {
+      y: 184,
+      width: 1136,
+      height: 420,
+    });
+    setDesktopRect(nodesById, `home-offices-layout-${index}-map`, {
+      width: 660,
+      height: 420,
+    });
+    setDesktopRect(nodesById, `home-offices-layout-${index}-card`, {
+      x: 700,
+      y: 0,
+      width: 436,
+      height: 420,
+    });
+  }
+
+  return document;
+}
+
+function applyZhHantReviewsDesktopBaseline(document: BuilderCanvasDocument): BuilderCanvasDocument {
+  const nodesById = new Map(document.nodes.map((node) => [node.id, node]));
+  document.stageHeight = ZH_HANT_REVIEWS_PAGE_ROOT_HEIGHT;
+  setDesktopRect(nodesById, 'page-reviews-section-root', { y: 472 });
+  return document;
+}
+
 export function buildLegacyCompositePageCanvas(
   locale: Locale,
   componentKey: LegacyCompositeKey,
@@ -1455,7 +1578,12 @@ function buildContactCompositePageCanvas(locale: Locale): BuilderCanvasDocument 
 }
 
 function buildContactPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createDecomposedPageCanvasDocument(locale, createContactPageDecomposedNodes(0, locale, 0), CONTACT_PAGE_ROOT_HEIGHT);
+  const document = createDecomposedPageCanvasDocument(
+    locale,
+    createContactPageDecomposedNodes(0, locale, 0),
+    CONTACT_PAGE_ROOT_HEIGHT,
+  );
+  return locale === 'zh-hant' ? applyZhHantContactDesktopBaseline(document) : document;
 }
 
 function buildLawyersCompositePageCanvas(locale: Locale): BuilderCanvasDocument {
@@ -1483,7 +1611,12 @@ function buildPricingPageCanvas(locale: Locale): BuilderCanvasDocument {
 }
 
 function buildReviewsPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createDecomposedPageCanvasDocument(locale, createReviewsPageDecomposedNodes(0, locale, 0), REVIEWS_PAGE_ROOT_HEIGHT);
+  const document = createDecomposedPageCanvasDocument(
+    locale,
+    createReviewsPageDecomposedNodes(0, locale, 0),
+    REVIEWS_PAGE_ROOT_HEIGHT,
+  );
+  return locale === 'zh-hant' ? applyZhHantReviewsDesktopBaseline(document) : document;
 }
 
 export function buildReviewsCompositePageCanvas(locale: Locale): BuilderCanvasDocument {

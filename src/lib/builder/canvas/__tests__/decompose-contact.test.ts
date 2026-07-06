@@ -66,6 +66,41 @@ describe('standard contact page decomposer', () => {
     expect(nodes.get('home-offices-layout-0-card')?.rect).toMatchObject({ x: 704, width: 474, height: 422 });
   });
 
+  it('keeps the zh-hant standalone baseline section geometry', () => {
+    const doc = STANDARD_PAGE_DECOMPOSERS.contact('zh-hant');
+    const nodes = nodesById(doc.nodes);
+
+    expect(doc.stageHeight).toBe(3033);
+    expect(nodes.get('page-contact-page-header-root')?.rect).toMatchObject({ y: 0, width: 1280, height: 428 });
+    expect(nodes.get('page-contact-guide-root')?.rect).toMatchObject({ y: 428, width: 1280, height: 602 });
+    expect(nodes.get('page-contact-contact-root')?.rect).toMatchObject({ y: 1030, width: 1280, height: 964 });
+    expect(nodes.get('home-offices-root')?.rect).toMatchObject({ y: 1994, width: 1280, height: 760 });
+
+    expect(nodes.get('page-contact-guide-container')?.rect).toMatchObject({ x: 51, y: 88, width: 1178, height: 426 });
+    expect(nodes.get('page-contact-guide-grid')?.rect).toMatchObject({ y: 214, width: 1178, height: 212 });
+    expect(nodes.get('page-contact-guide-grid')?.content).toMatchObject({ layoutMode: 'absolute' });
+    expect(nodes.get('page-contact-guide-card-0')?.rect).toMatchObject({ x: 0, y: 0, width: 376, height: 212 });
+    expect(nodes.get('page-contact-guide-card-1')?.rect).toMatchObject({ x: 400, y: 0, width: 376, height: 212 });
+    expect(nodes.get('page-contact-guide-card-2')?.rect).toMatchObject({ x: 800, y: 0, width: 376, height: 212 });
+
+    expect(nodes.get('page-contact-contact-container')?.rect).toMatchObject({ x: 51, y: 88, width: 1178, height: 788 });
+    expect(nodes.get('page-contact-inquiries-grid')?.rect).toMatchObject({ y: 44, width: 1178, height: 366 });
+    expect(nodes.get('page-contact-inquiries-grid')?.content).toMatchObject({ layoutMode: 'absolute' });
+    expect(nodes.get('page-contact-inquiries-card-0')?.rect).toMatchObject({ x: 0, y: 0, width: 376, height: 171 });
+    expect(nodes.get('page-contact-inquiries-card-1')?.rect).toMatchObject({ x: 400, y: 0, width: 376, height: 171 });
+    expect(nodes.get('page-contact-inquiries-card-2')?.rect).toMatchObject({ x: 800, y: 0, width: 376, height: 171 });
+    expect(nodes.get('page-contact-inquiries-card-3')?.rect).toMatchObject({ x: 0, y: 230, width: 376, height: 136 });
+    expect(nodes.get('page-contact-locations-grid')?.rect).toMatchObject({ y: 498, width: 1178, height: 206 });
+    expect(nodes.get('page-contact-locations-grid')?.content).toMatchObject({ layoutMode: 'absolute' });
+    expect(nodes.get('page-contact-contact-cta')?.rect).toMatchObject({ y: 744, width: 180, height: 44 });
+
+    expect(nodes.get('home-offices-container')?.rect).toMatchObject({ x: 72, y: 88, width: 1136, height: 600 });
+    expect(nodes.get('home-offices-tabs')?.rect).toMatchObject({ y: 116, width: 560, height: 36 });
+    expect(nodes.get('home-offices-layout-0')?.rect).toMatchObject({ y: 184, width: 1136, height: 420 });
+    expect(nodes.get('home-offices-layout-0-map')?.rect).toMatchObject({ x: 0, width: 660, height: 420 });
+    expect(nodes.get('home-offices-layout-0-card')?.rect).toMatchObject({ x: 700, y: 0, width: 436, height: 420 });
+  });
+
   it('keeps section offsets relative when built below an existing canvas region', () => {
     const nodes = nodesById(createContactPageDecomposedNodes(200, 'ko', 0));
 

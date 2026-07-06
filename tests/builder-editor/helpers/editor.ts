@@ -3,15 +3,6 @@ import { expect, type Locator, type Page } from '@playwright/test';
 export async function openBuilder(page: Page, path = '/ko/admin-builder'): Promise<void> {
   await page.goto(path, { waitUntil: 'domcontentloaded' });
   await waitForEditorReady(page);
-  // Standard pages (including home) are seeded as live-mirroring `composite`
-  // nodes so the editor opens as an exact mirror of the shipped site. Element-
-  // level editing requires the decomposed node tree produced by the in-app
-  // "decompose to edit" action (PageSwitcher → /api/builder/site/pages/decompose,
-  // STANDARD_PAGE_DECOMPOSERS). When a test opens the home editor and finds it
-  // still composite (a section node is present but its child nodes are not),
-  // trigger the same decompose API and reload so the editable tree is available.
-  // Idempotent and self-limiting: it only fires when home is composite, so it is
-  // a no-op for already-decomposed home and for non-home editor routes.
   if (await homeNeedsDecompose(page)) {
     const locale = path.match(/\/(ko|zh-hant|en)\//)?.[1] ?? 'ko';
     await page.request
@@ -20,17 +11,10 @@ export async function openBuilder(page: Page, path = '/ko/admin-builder'): Promi
         data: { slug: '', locale },
       })
       .catch(() => undefined);
-    await page.goto(withDecomposedHomeFlag(page.url()), { waitUntil: 'domcontentloaded' });
+    await page.goto(page.url(), { waitUntil: 'domcontentloaded' });
     await waitForEditorReady(page);
   }
   await waitForHomeHeroImage(page);
-}
-
-function withDecomposedHomeFlag(path: string): string {
-  const isAbsolute = /^https?:\/\//.test(path);
-  const url = new URL(path, 'http://builder.local');
-  url.searchParams.set('decomposedHome', '1');
-  return isAbsolute ? url.toString() : `${url.pathname}${url.search}${url.hash}`;
 }
 
 async function waitForEditorReady(page: Page): Promise<void> {

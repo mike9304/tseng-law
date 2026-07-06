@@ -14,20 +14,17 @@ import { SEED_VERSION } from './seed-home';
  * Two hard rules, both learned from the 2026-07-02 home data-loss event:
  * 1. A record stamped 'admin' (editor draft PUT) is user work and is never
  *    implicitly reseeded — only ?reseed=1 (force) may replace it.
- * 2. Absence of the 'admin' marker is NOT evidence of pristineness: the
- *    decompose route, parity-migration rewrites, and translation sync all
- *    persist real content without stamping the record. The destructive
- *    pristine-decomposed-seed replacement therefore requires the POSITIVE
- *    seed marker below; unmarked records are preserved.
+ * 2. A stored decomposed home draft is the editable canvas and must remain the
+ *    editor default. The live-matching composite seed is only for missing,
+ *    empty, legacy, broken, or explicitly forced drafts.
  */
 
 export const USER_DRAFT_UPDATED_BY = 'admin';
 
 /**
  * Record-level marker for factory seed writes (seed pipeline, builder-entry
- * reseed). Only records carrying this marker are eligible for the implicit
- * pristine-decomposed-seed replacement; an unmarked record may be real content
- * from a writer that predates stamping, so it is never implicitly destroyed.
+ * reseed). It is retained for render migrations, but it must not make a valid
+ * decomposed home draft reseedable on editor load.
  */
 export const SEED_DRAFT_UPDATED_BY = 'seed';
 
@@ -47,7 +44,6 @@ export type HomeDraftReseedReason =
   | 'missing-draft'
   | 'empty-draft'
   | 'legacy-seed'
-  | 'pristine-decomposed-seed'
   | 'missing-hero'
   | 'legacy-sandbox-draft';
 
@@ -64,7 +60,6 @@ export type HomeDraftRecordLike = {
 export type HomeDraftReseedInput = {
   readonly isHomePage: boolean;
   readonly force: boolean;
-  readonly allowPristineDecomposedHome: boolean;
   readonly record: HomeDraftRecordLike | null;
 };
 
@@ -83,17 +78,12 @@ export function decideHomeDraftReseed(input: HomeDraftReseedInput): HomeDraftRes
   const isLegacySeed =
     (docUpdatedBy.startsWith('home-seed-v') && !isCurrentSeed) || docUpdatedBy === 'site-page-seed';
   const isUserSavedDraft = recordUpdatedBy === USER_DRAFT_UPDATED_BY;
-  const isSeedWriteRecord = recordUpdatedBy === SEED_DRAFT_UPDATED_BY;
   const hasHero = nodes.some((node) => node.id === 'home-hero-root' || node.id === 'home-hero');
-  const hasDecomposedHero = nodes.some((node) => node.id === 'home-hero-root');
   const isLegacySandboxDraft = nodes.some((node) => LEGACY_SANDBOX_NODE_IDS.has(node.id));
 
   if (nodes.length === 0) return { reseed: true, reason: 'empty-draft' };
   if (isUserSavedDraft) return NO_RESEED;
   if (isLegacySeed) return { reseed: true, reason: 'legacy-seed' };
-  if (hasDecomposedHero && isCurrentSeed && isSeedWriteRecord && !input.allowPristineDecomposedHome) {
-    return { reseed: true, reason: 'pristine-decomposed-seed' };
-  }
   if (!hasHero) return { reseed: true, reason: 'missing-hero' };
   if (isLegacySandboxDraft) return { reseed: true, reason: 'legacy-sandbox-draft' };
   return NO_RESEED;

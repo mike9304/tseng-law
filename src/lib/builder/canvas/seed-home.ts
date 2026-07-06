@@ -103,17 +103,39 @@ const MEASURED_SECTION_HEIGHTS = {
   contact: 516,
 } as const;
 
-const compositeHomeSections: CompositeSpec[] = [
-  { kind: 'composite', id: 'home-hero',          componentKey: 'hero-search',       height: MEASURED_SECTION_HEIGHTS.hero },
-  { kind: 'composite', id: 'home-insights',      componentKey: 'insights-archive',  height: MEASURED_SECTION_HEIGHTS.insights },
-  { kind: 'composite', id: 'home-services',      componentKey: 'services-bento',    height: MEASURED_SECTION_HEIGHTS.services },
-  { kind: 'composite', id: 'home-attorney',      componentKey: 'home-attorney',     height: MEASURED_SECTION_HEIGHTS.attorney },
-  { kind: 'composite', id: 'home-case-results',  componentKey: 'home-case-results', height: MEASURED_SECTION_HEIGHTS.caseResults },
-  { kind: 'composite', id: 'home-stats',         componentKey: 'home-stats',        height: MEASURED_SECTION_HEIGHTS.stats },
-  { kind: 'composite', id: 'home-faq',           componentKey: 'faq-accordion',     height: MEASURED_SECTION_HEIGHTS.faq },
-  { kind: 'composite', id: 'home-offices',       componentKey: 'office-map-tabs',   height: MEASURED_SECTION_HEIGHTS.offices },
-  { kind: 'composite', id: 'home-contact',       componentKey: 'home-contact-cta',  height: MEASURED_SECTION_HEIGHTS.contact },
-];
+type CompositeSectionKey = keyof typeof MEASURED_SECTION_HEIGHTS;
+type CompositeSectionHeights = Record<CompositeSectionKey, number>;
+
+const MEASURED_SECTION_HEIGHTS_BY_LOCALE = {
+  ko: MEASURED_SECTION_HEIGHTS,
+  en: MEASURED_SECTION_HEIGHTS,
+  'zh-hant': {
+    hero: 820,
+    insights: 1247,
+    services: 1279,
+    attorney: 926,
+    caseResults: 843,
+    stats: 622,
+    faq: 1333,
+    offices: 919,
+    contact: 543,
+  },
+} satisfies Record<Locale, CompositeSectionHeights>;
+
+function createCompositeHomeSections(locale: Locale): CompositeSpec[] {
+  const heights = MEASURED_SECTION_HEIGHTS_BY_LOCALE[locale];
+  return [
+    { kind: 'composite', id: 'home-hero',          componentKey: 'hero-search',       height: heights.hero },
+    { kind: 'composite', id: 'home-insights',      componentKey: 'insights-archive',  height: heights.insights },
+    { kind: 'composite', id: 'home-services',      componentKey: 'services-bento',    height: heights.services },
+    { kind: 'composite', id: 'home-attorney',      componentKey: 'home-attorney',     height: heights.attorney },
+    { kind: 'composite', id: 'home-case-results',  componentKey: 'home-case-results', height: heights.caseResults },
+    { kind: 'composite', id: 'home-stats',         componentKey: 'home-stats',        height: heights.stats },
+    { kind: 'composite', id: 'home-faq',           componentKey: 'faq-accordion',     height: heights.faq },
+    { kind: 'composite', id: 'home-offices',       componentKey: 'office-map-tabs',   height: heights.offices },
+    { kind: 'composite', id: 'home-contact',       componentKey: 'home-contact-cta',  height: heights.contact },
+  ];
+}
 
 function createCompositeNode(
   spec: CompositeSpec,
@@ -172,7 +194,7 @@ function buildHomeDocument(locale: Locale, sections: HomeSectionSpec[]): Builder
 // Default home seed: live-reflecting COMPOSITE stack — mirrors the live
 // tseng-law.com home exactly (section content is edited via the data admins).
 export function createHomePageCanvasDocument(locale: Locale): BuilderCanvasDocument {
-  return buildHomeDocument(locale, compositeHomeSections);
+  return buildHomeDocument(locale, createCompositeHomeSections(locale));
 }
 
 // Editable decomposed home — the "decompose to edit" target and the subject of

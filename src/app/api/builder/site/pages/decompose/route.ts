@@ -7,12 +7,14 @@ import { matchesStandardPageSlugForLocale } from '@/lib/builder/site/standard-pa
 import { readSiteDocument, writePageCanvas } from '@/lib/builder/site/persistence';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import {
-  getBuilderSiteApiErrorPayload,
+  builderJsonResponse,
+  builderSiteErrorResponse,
   type BuilderSiteApiErrorCode,
-} from '@/lib/builder/site/site-api-copy';
+} from '@/app/api/builder/site/_shared/route-responses';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+export const maxDuration = 60;
 
 // "Decompose to edit": standard pages are seeded as live-reflecting `composite`
 // nodes that render the real tseng-law.com component exactly, but a composite is
@@ -26,11 +28,9 @@ function errorResponse(
   locale: Locale,
   code: BuilderSiteApiErrorCode,
   status: number,
+  cause?: unknown,
 ): NextResponse {
-  return NextResponse.json(
-    { ok: false, ...getBuilderSiteApiErrorPayload(locale, code) },
-    { status },
-  );
+  return builderSiteErrorResponse(locale, code, status, cause);
 }
 
 export async function POST(request: NextRequest) {
@@ -43,8 +43,8 @@ export async function POST(request: NextRequest) {
   try {
     const text = await request.text();
     body = text.trim() ? (JSON.parse(text) as DecomposeBody) : {};
-  } catch {
-    return errorResponse(requestLocale, 'invalid_json', 400);
+  } catch (error) {
+    return errorResponse(requestLocale, 'invalid_json', 400, error);
   }
   if (!body || typeof body !== 'object' || Array.isArray(body)) {
     return errorResponse(requestLocale, 'seed_body_invalid', 400);
@@ -68,8 +68,8 @@ export async function POST(request: NextRequest) {
   try {
     const site = await readSiteDocument(siteId, locale);
     pageId = site.pages.find((page) => matchesStandardPageSlugForLocale(page, locale, slug))?.pageId;
-  } catch {
-    return errorResponse(locale, 'seed_failed', 500);
+  } catch (error) {
+    return errorResponse(locale, 'seed_failed', 500, error);
   }
   if (!pageId) {
     return errorResponse(locale, 'seed_body_invalid', 400);
@@ -82,9 +82,9 @@ export async function POST(request: NextRequest) {
     await writePageCanvas(siteId, pageId, 'draft', decomposer(locale), {
       updatedBy: USER_DRAFT_UPDATED_BY,
     });
-  } catch {
-    return errorResponse(locale, 'seed_failed', 500);
+  } catch (error) {
+    return errorResponse(locale, 'seed_failed', 500, error);
   }
 
-  return NextResponse.json({ ok: true, siteId, locale, slug, pageId });
+  return builderJsonResponse({ ok: true, siteId, locale, slug, pageId });
 }

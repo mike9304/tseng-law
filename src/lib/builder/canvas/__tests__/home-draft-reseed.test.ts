@@ -17,7 +17,6 @@ function baseInput(overrides: Partial<HomeDraftReseedInput>): HomeDraftReseedInp
   return {
     isHomePage: true,
     force: false,
-    allowPristineDecomposedHome: false,
     record: null,
     ...overrides,
   };
@@ -76,18 +75,18 @@ describe('decideHomeDraftReseed', () => {
     });
   });
 
-  it('reseeds a pristine decomposed home whose record carries the explicit seed write marker', () => {
+  it('keeps a seed-marked decomposed home as the editable draft by default', () => {
     const record = {
       updatedBy: SEED_DRAFT_UPDATED_BY,
       document: withDocumentUpdatedBy(createHomePageCanvasDocumentDecomposed('ko'), SEED_VERSION),
     };
     expect(decideHomeDraftReseed(baseInput({ record }))).toEqual({
-      reseed: true,
-      reason: 'pristine-decomposed-seed',
+      reseed: false,
+      reason: null,
     });
   });
 
-  it('treats seed-suffixed document updatedBy as still pristine when the record is seed-marked', () => {
+  it('keeps a seed-suffixed decomposed home as the editable draft when the record is seed-marked', () => {
     const record = {
       updatedBy: SEED_DRAFT_UPDATED_BY,
       document: withDocumentUpdatedBy(
@@ -96,8 +95,8 @@ describe('decideHomeDraftReseed', () => {
       ),
     };
     expect(decideHomeDraftReseed(baseInput({ record }))).toEqual({
-      reseed: true,
-      reason: 'pristine-decomposed-seed',
+      reseed: false,
+      reason: null,
     });
   });
 
@@ -157,13 +156,15 @@ describe('decideHomeDraftReseed', () => {
     });
   });
 
-  it('keeps a pristine decomposed home when decomposedHome=1 explicitly allows it', () => {
+  it('keeps a seed-marked composite home untouched', () => {
     const record = {
-      document: withDocumentUpdatedBy(createHomePageCanvasDocumentDecomposed('ko'), SEED_VERSION),
+      updatedBy: SEED_DRAFT_UPDATED_BY,
+      document: withDocumentUpdatedBy(createHomePageCanvasDocument('ko'), SEED_VERSION),
     };
-    expect(
-      decideHomeDraftReseed(baseInput({ record, allowPristineDecomposedHome: true })),
-    ).toEqual({ reseed: false, reason: null });
+    expect(decideHomeDraftReseed(baseInput({ record }))).toEqual({
+      reseed: false,
+      reason: null,
+    });
   });
 
   it('reseeds when the home draft lost its hero entirely', () => {

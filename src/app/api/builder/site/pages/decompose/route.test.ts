@@ -113,4 +113,29 @@ describe('/api/builder/site/pages/decompose', () => {
     // data-loss event).
     expect(mockedWrite.mock.calls[0][4]).toMatchObject({ updatedBy: USER_DRAFT_UPDATED_BY });
   });
+
+  it('returns the sanitized production failure cause when the draft write fails', async () => {
+    mockedRead.mockResolvedValueOnce({
+      pages: [{ pageId: 'p-about', slug: 'about', locale: 'en', isHomePage: false }],
+    } as unknown as Awaited<ReturnType<typeof readSiteDocument>>);
+    mockedWrite.mockRejectedValueOnce(
+      new Error('Blob put failed: token=super-secret authorization=Bearer abc123'),
+    );
+    const response = await route.POST(
+      postRequest(JSON.stringify({ slug: 'about', locale: 'en', siteId: 'default' })),
+    );
+    const data = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(data).toMatchObject({
+      ok: false,
+      error: 'Unable to seed the site pages.',
+      errorCode: 'seed_failed',
+      errorCause: 'Blob put failed: token=[redacted] authorization=[redacted]',
+    });
+  });
+
+  it('sets a longer Vercel function duration for page decomposition', () => {
+    expect(route.maxDuration).toBe(60);
+  });
 });

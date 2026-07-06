@@ -1503,12 +1503,11 @@ export default async function BuilderMainPage({
   searchParams,
 }: {
   params: { locale: string };
-  searchParams?: { pageId?: string; reseed?: string; siteId?: string; decomposedHome?: string };
+  searchParams?: { pageId?: string; reseed?: string; siteId?: string };
 }) {
   const locale: Locale = normalizeLocale(params.locale);
   const siteId = resolveBuilderSiteIdFromValue(searchParams?.siteId);
   const force = searchParams?.reseed === '1';
-  const allowPristineDecomposedHome = searchParams?.decomposedHome === '1';
 
   // Try to load from site document (multi-page model). Seeding every request is
   // expensive because it checks each page canvas; only do it when metadata is missing.
@@ -1566,7 +1565,6 @@ export default async function BuilderMainPage({
     const reseedDecision = decideHomeDraftReseed({
       isHomePage: isInitialHomePage,
       force,
-      allowPristineDecomposedHome,
       record: pageCanvasRecord,
     });
     const needsReseed = reseedDecision.reseed;

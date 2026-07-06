@@ -4,12 +4,14 @@ import { guardMutation } from '@/lib/builder/security/guard';
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import {
-  getBuilderSiteApiErrorPayload,
+  builderJsonResponse,
+  builderSiteErrorResponse,
   type BuilderSiteApiErrorCode,
-} from '@/lib/builder/site/site-api-copy';
+} from '@/app/api/builder/site/_shared/route-responses';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+export const maxDuration = 120;
 
 type SeedRequestBody = {
   locale?: unknown;
@@ -28,11 +30,9 @@ function errorResponse(
   locale: Locale,
   errorCode: BuilderSiteApiErrorCode,
   status: number,
+  cause?: unknown,
 ): NextResponse {
-  return NextResponse.json(
-    { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode) },
-    { status },
-  );
+  return builderSiteErrorResponse(locale, errorCode, status, cause);
 }
 
 export async function POST(request: NextRequest) {
@@ -43,8 +43,8 @@ export async function POST(request: NextRequest) {
   let body: SeedRequestBody | null;
   try {
     body = await readJsonBody(request);
-  } catch {
-    return errorResponse(requestLocale, 'invalid_json', 400);
+  } catch (error) {
+    return errorResponse(requestLocale, 'invalid_json', 400, error);
   }
 
   if (!body) {
@@ -64,9 +64,9 @@ export async function POST(request: NextRequest) {
 
   try {
     await seedSitePages(siteId, locale);
-  } catch {
-    return errorResponse(locale, 'seed_failed', 500);
+  } catch (error) {
+    return errorResponse(locale, 'seed_failed', 500, error);
   }
 
-  return NextResponse.json({ ok: true, siteId, locale });
+  return builderJsonResponse({ ok: true, siteId, locale });
 }

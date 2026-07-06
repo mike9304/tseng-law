@@ -891,9 +891,6 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
       new DOMMatrixReadOnly(window.getComputedStyle(element).transform).m42
     ))).toBeGreaterThanOrEqual(-2);
 
-    // Re-enter via openBuilder: a plain goto resets a pristine decomposed home
-    // back to the composite live-mirror (homeDraftIsPristineDecomposedSeed),
-    // dropping the decomposed nodes this block asserts on.
     await openBuilder(page, '/ko/admin-builder');
     await waitForEditorCss(page);
     await recoverFromDevChunkOverlay(page);

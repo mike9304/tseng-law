@@ -21,6 +21,28 @@ const EXPECTED_COMPOSITE_KEYS = [
   'home-contact-cta',
 ];
 const LOCALES: Locale[] = ['ko', 'zh-hant', 'en'];
+const EXPECTED_DEFAULT_SECTION_RECTS = [
+  { id: 'home-hero', y: 0, height: 788 },
+  { id: 'home-insights', y: 788, height: 1277 },
+  { id: 'home-services', y: 2065, height: 1278 },
+  { id: 'home-attorney', y: 3343, height: 926 },
+  { id: 'home-case-results', y: 4269, height: 800 },
+  { id: 'home-stats', y: 5069, height: 621 },
+  { id: 'home-faq', y: 5690, height: 1333 },
+  { id: 'home-offices', y: 7023, height: 919 },
+  { id: 'home-contact', y: 7942, height: 516 },
+] as const;
+const EXPECTED_ZH_HANT_SECTION_RECTS = [
+  { id: 'home-hero', y: 0, height: 820 },
+  { id: 'home-insights', y: 820, height: 1247 },
+  { id: 'home-services', y: 2067, height: 1279 },
+  { id: 'home-attorney', y: 3346, height: 926 },
+  { id: 'home-case-results', y: 4272, height: 843 },
+  { id: 'home-stats', y: 5115, height: 622 },
+  { id: 'home-faq', y: 5737, height: 1333 },
+  { id: 'home-offices', y: 7070, height: 919 },
+  { id: 'home-contact', y: 7989, height: 543 },
+] as const;
 
 function countResponsiveNodes(doc: BuilderCanvasDocument): number {
   return doc.nodes.filter((node) => Boolean(node.responsive?.tablet?.rect || node.responsive?.mobile?.rect)).length;
@@ -64,6 +86,30 @@ describe('live-reflecting composite home seed', () => {
 
     expect(countResponsiveNodes(doc)).toBe(0);
     expect(buildResponsiveStylesheet(doc.nodes)).toBe('');
+  });
+
+  it('keeps ko and en on the existing composite seed geometry', () => {
+    for (const locale of ['ko', 'en'] satisfies Locale[]) {
+      const doc = createHomePageCanvasDocument(locale);
+
+      expect(doc.stageHeight).toBe(8460);
+      expect(doc.nodes.map((node) => ({
+        id: node.id,
+        y: node.rect.y,
+        height: node.rect.height,
+      }))).toEqual(EXPECTED_DEFAULT_SECTION_RECTS);
+    }
+  });
+
+  it('uses zh-hant composite section heights measured from the localized home flow', () => {
+    const doc = createHomePageCanvasDocument('zh-hant');
+
+    expect(doc.stageHeight).toBe(8534);
+    expect(doc.nodes.map((node) => ({
+      id: node.id,
+      y: node.rect.y,
+      height: node.rect.height,
+    }))).toEqual(EXPECTED_ZH_HANT_SECTION_RECTS);
   });
 
   it('keeps responsive CSS for the decomposed edit target', () => {

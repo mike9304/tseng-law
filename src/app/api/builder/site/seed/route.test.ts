@@ -67,7 +67,12 @@ describe('/api/builder/site/seed', () => {
       ok: false,
       error: 'Unable to seed the site pages.',
       errorCode: 'seed_failed',
+      errorCause: 'raw seed failure',
     });
     expect(data.error).not.toContain('raw seed failure');
+  });
+
+  it('sets a longer Vercel function duration for full-site seeding', () => {
+    expect(route.maxDuration).toBe(120);
   });
 });

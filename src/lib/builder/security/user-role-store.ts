@@ -12,6 +12,7 @@
 
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
+import { getConfiguredBasicAuthUsernames } from '@/lib/builder/security/basic-auth-users';
 
 export const BUILDER_ROLE_NAMES = [
   'owner',
@@ -149,11 +150,25 @@ async function withWriteLock<T>(task: () => Promise<T>): Promise<T> {
 }
 
 function configuredOwnerUsername(): string {
-  return normalizeUsername(
-    process.env.BUILDER_USERNAME
-      ?? process.env.CMS_ADMIN_USERNAME
-      ?? 'admin',
-  );
+  const basicAuthOwner = getConfiguredBasicAuthUsernames()[0];
+  for (const candidate of [
+    process.env.BUILDER_USERNAME,
+    process.env.CMS_ADMIN_USERNAME,
+    basicAuthOwner,
+    'admin',
+  ]) {
+    const username = normalizeUsername(candidate);
+    if (username) return username;
+  }
+  return '';
+}
+
+function warnOwnerSeedPersistSkipped(error: unknown): void {
+  if (error instanceof Error) {
+    console.warn('[user-role-store] owner seed persist skipped (read-only fs?):', error);
+    return;
+  }
+  console.warn('[user-role-store] owner seed persist skipped (read-only fs?):', error);
 }
 
 async function ensureSeed(): Promise<void> {
@@ -178,7 +193,11 @@ async function ensureSeed(): Promise<void> {
       addedAt: nowIso(),
       addedBy: SEED_ADDED_BY,
     };
-    await persistDocument({ users: [...doc.users, fresh] });
+    try {
+      await persistDocument({ users: [...doc.users, fresh] });
+    } catch (error) {
+      warnOwnerSeedPersistSkipped(error);
+    }
     seeded = true;
   });
 }

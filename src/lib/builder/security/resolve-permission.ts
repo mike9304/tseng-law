@@ -11,26 +11,38 @@
 
 import { hasRoleAccess } from '@/lib/builder/security/role-permissions';
 import type { BuilderPermission } from '@/lib/builder/security/permissions';
+import { getConfiguredBasicAuthUsernames } from '@/lib/builder/security/basic-auth-users';
 import {
   type BuilderRoleName,
   getUserRole,
   normalizeUsername,
 } from '@/lib/builder/security/user-role-store';
 
-function configuredOwnerUsername(): string {
-  return normalizeUsername(
-    process.env.BUILDER_USERNAME
-      ?? process.env.CMS_ADMIN_USERNAME
-      ?? 'admin',
-  );
+function configuredOwnerUsernames(): readonly string[] {
+  const usernames: string[] = [];
+  const seen = new Set<string>();
+  for (const candidate of [
+    process.env.BUILDER_USERNAME,
+    process.env.CMS_ADMIN_USERNAME,
+    ...getConfiguredBasicAuthUsernames(),
+  ]) {
+    const username = normalizeUsername(candidate);
+    if (!username) continue;
+    const key = username.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    usernames.push(username);
+  }
+  if (usernames.length === 0) usernames.push('admin');
+  return usernames;
 }
 
 function isConfiguredOwnerUsername(username: string): boolean {
   const normalized = normalizeUsername(username);
-  const owner = configuredOwnerUsername();
   return Boolean(normalized)
-    && Boolean(owner)
-    && normalized.toLowerCase() === owner.toLowerCase();
+    && configuredOwnerUsernames().some(
+      (owner) => normalized.toLowerCase() === owner.toLowerCase(),
+    );
 }
 
 export async function resolveUserRole(username: string): Promise<BuilderRoleName> {

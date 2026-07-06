@@ -1,7 +1,7 @@
-import { mkdtempSync, rmSync } from 'fs';
+import { chmodSync, mkdtempSync, rmSync } from 'fs';
 import { tmpdir } from 'os';
 import path from 'path';
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   __resetUserRoleStorageRootForTests,
   __setUserRoleStorageRootForTests,
@@ -14,6 +14,7 @@ import {
 
 const ORIGINAL_BUILDER = process.env.BUILDER_USERNAME;
 const ORIGINAL_CMS = process.env.CMS_ADMIN_USERNAME;
+const ORIGINAL_BASIC_AUTH_USERS = process.env.BUILDER_BASIC_AUTH_USERS;
 
 let tempRoot: string;
 
@@ -22,15 +23,19 @@ beforeEach(() => {
   __setUserRoleStorageRootForTests(tempRoot);
   process.env.BUILDER_USERNAME = 'admin';
   delete process.env.CMS_ADMIN_USERNAME;
+  delete process.env.BUILDER_BASIC_AUTH_USERS;
 });
 
 afterEach(() => {
   __resetUserRoleStorageRootForTests();
+  chmodSync(tempRoot, 0o700);
   rmSync(tempRoot, { recursive: true, force: true });
-  if (ORIGINAL_BUILDER) process.env.BUILDER_USERNAME = ORIGINAL_BUILDER;
-  else delete process.env.BUILDER_USERNAME;
-  if (ORIGINAL_CMS) process.env.CMS_ADMIN_USERNAME = ORIGINAL_CMS;
-  else delete process.env.CMS_ADMIN_USERNAME;
+  if (ORIGINAL_BUILDER === undefined) delete process.env.BUILDER_USERNAME;
+  else process.env.BUILDER_USERNAME = ORIGINAL_BUILDER;
+  if (ORIGINAL_CMS === undefined) delete process.env.CMS_ADMIN_USERNAME;
+  else process.env.CMS_ADMIN_USERNAME = ORIGINAL_CMS;
+  if (ORIGINAL_BASIC_AUTH_USERS === undefined) delete process.env.BUILDER_BASIC_AUTH_USERS;
+  else process.env.BUILDER_BASIC_AUTH_USERS = ORIGINAL_BASIC_AUTH_USERS;
 });
 
 describe('user-role-store seed', () => {
@@ -58,6 +63,39 @@ describe('user-role-store seed', () => {
     delete process.env.CMS_ADMIN_USERNAME;
     const users = await listUserRoles();
     expect(users[0].username).toBe('admin');
+  });
+
+  it('uses the first basic auth username when legacy owner env vars are blank', async () => {
+    __resetUserRoleStorageRootForTests();
+    __setUserRoleStorageRootForTests(tempRoot);
+    process.env.BUILDER_USERNAME = '';
+    process.env.CMS_ADMIN_USERNAME = '';
+    process.env.BUILDER_BASIC_AUTH_USERS = JSON.stringify([
+      { username: 'hojeong-admin', password: 'x' },
+    ]);
+
+    const users = await listUserRoles();
+
+    expect(users[0].username).toBe('hojeong-admin');
+    expect(users[0].role).toBe('owner');
+  });
+
+  it('keeps read paths working when owner seed persistence fails', async () => {
+    __resetUserRoleStorageRootForTests();
+    __setUserRoleStorageRootForTests(path.join(tempRoot, 'security'));
+    chmodSync(tempRoot, 0o500);
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
+
+    try {
+      await expect(getUserRole('x')).resolves.toBeNull();
+      await expect(listUserRoles()).resolves.toEqual([]);
+      expect(warn).toHaveBeenCalledWith(
+        '[user-role-store] owner seed persist skipped (read-only fs?):',
+        expect.anything(),
+      );
+    } finally {
+      warn.mockRestore();
+    }
   });
 });
 

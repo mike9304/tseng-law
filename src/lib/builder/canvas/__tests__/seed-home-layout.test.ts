@@ -45,6 +45,13 @@ function isImageNode(node: BuilderCanvasNode): node is BuilderImageCanvasNode {
   return node.kind === 'image';
 }
 
+function absoluteRect(
+  nodesById: Map<string, BuilderCanvasNode>,
+  id: string,
+): Rect {
+  return resolveCanvasNodeAbsoluteRectForViewport(requireNode(nodesById, id), nodesById, 'desktop');
+}
+
 function createColumnPost(overrides: Partial<ColumnPost> & Pick<ColumnPost, 'slug' | 'title'>): ColumnPost {
   const post: ColumnPost = {
     slug: overrides.slug,
@@ -310,6 +317,61 @@ describe('home seed canvas layout', () => {
     expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 198, width: 1136, height: 548 });
   });
 
+  it('matches zh-hant attorney decomposition to the composite split portrait geometry', () => {
+    const doc = createHomePageCanvasDocument('zh-hant');
+    const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
+    const image = requireNode(nodesById, 'home-attorney-image');
+
+    expect(isImageNode(image)).toBe(true);
+    if (!isImageNode(image)) {
+      throw new Error('Expected home-attorney-image to be an image node.');
+    }
+    expect(image.content).toMatchObject({
+      src: '/_next/image?url=%2Fimages%2Fteam%2Ftseng-junwei%2Epng&w=640&q=75',
+      fit: 'cover',
+      alt: '曾俊瑋 代表律師',
+      gif: { provider: 'manual' },
+      filters: {
+        brightness: 93,
+        contrast: 98,
+        saturation: 93,
+        blur: 0,
+        grayscale: 0,
+        sepia: 0,
+      },
+    });
+
+    expect(absoluteRect(nodesById, 'home-attorney-image-wrap')).toMatchObject({ x: 0, y: 3442, width: 576, height: 644 });
+    expect(absoluteRect(nodesById, 'home-attorney-image')).toMatchObject({ x: 0, y: 3442, width: 576, height: 644 });
+    expect(absoluteRect(nodesById, 'home-attorney-badge')).toMatchObject({ x: 0, y: 4009, width: 533, height: 77 });
+    expect(absoluteRect(nodesById, 'home-attorney-label')).toMatchObject({ x: 653, y: 3580, width: 550, height: 21 });
+    expect(absoluteRect(nodesById, 'home-attorney-title')).toMatchObject({ x: 653, y: 3618, width: 550, height: 86 });
+    expect(absoluteRect(nodesById, 'home-attorney-divider')).toMatchObject({ x: 653, y: 3710, width: 40, height: 32 });
+    expect(absoluteRect(nodesById, 'home-attorney-intro-1')).toMatchObject({ x: 653, y: 3747, width: 540, height: 27 });
+    expect(absoluteRect(nodesById, 'home-attorney-intro-2')).toMatchObject({ x: 653, y: 3790, width: 540, height: 27 });
+    expect(absoluteRect(nodesById, 'home-attorney-summary')).toMatchObject({ x: 653, y: 3833, width: 540, height: 27 });
+    expect(absoluteRect(nodesById, 'home-attorney-contact-line')).toMatchObject({ x: 653, y: 3876, width: 540, height: 27 });
+    expect(absoluteRect(nodesById, 'home-attorney-cta')).toMatchObject({ x: 653, y: 3919, width: 550, height: 29 });
+
+    expect(textNodeText(nodesById.get('home-attorney-label'))).toBe('ABOUT');
+    expect(textNodeText(nodesById.get('home-attorney-title'))).toBe('曾俊瑋律師，專注服務韓國客戶的台灣法律夥伴');
+    expect(textNodeText(nodesById.get('home-attorney-intro-1'))).toBe('專精企業與個人案件，提供韓文與日文法律溝通。');
+    expect(textNodeText(nodesById.get('home-attorney-intro-2'))).toBe('曾代理韓國留學生健身傷害求償案，獲判新台幣 157 萬元。');
+    expect(textNodeText(nodesById.get('home-attorney-summary'))).toBe('擁有 10+ 年實務經驗，曾參與韓國 SBS 晨間節目並持續經營 WEI Lawyer 法律內容。');
+    expect(textNodeText(nodesById.get('home-attorney-contact-line'))).toBe('曾俊瑋 · 代表律師 · wei@hoveringlaw.com.tw');
+
+    const divider = requireNode(nodesById, 'home-attorney-divider');
+    expect(divider).toMatchObject({
+      kind: 'divider',
+      content: {
+        orientation: 'horizontal',
+        thickness: 2,
+        color: '#16382d',
+        style: 'solid',
+      },
+    });
+  });
+
   it('matches ko decomposed home section geometry to the measured composite flow', () => {
     const doc = createHomePageCanvasDocument('ko');
 
@@ -371,6 +433,56 @@ describe('home seed canvas layout', () => {
     expect(nodesById.get('home-offices-container')?.rect).toMatchObject({ x: 72, y: 88, width: 1136, height: 600 });
     expect(nodesById.get('home-offices-tabs')?.rect).toMatchObject({ x: 0, y: 116, width: 560, height: 36 });
     expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 184, width: 1136, height: 420 });
+  });
+
+  it('keeps ko and en attorney geometry unchanged by the zh-hant calibration', () => {
+    const attorneyIds = [
+      'home-attorney-image-wrap',
+      'home-attorney-image',
+      'home-attorney-badge',
+      'home-attorney-content',
+      'home-attorney-label',
+      'home-attorney-title',
+      'home-attorney-divider',
+      'home-attorney-intro-1',
+      'home-attorney-intro-2',
+      'home-attorney-summary',
+      'home-attorney-contact-line',
+      'home-attorney-cta',
+    ] as const;
+    const koDoc = createHomePageCanvasDocument('ko');
+    const enDoc = createHomePageCanvasDocument('en');
+    const koNodesById = new Map(koDoc.nodes.map((node) => [node.id, node]));
+    const enNodesById = new Map(enDoc.nodes.map((node) => [node.id, node]));
+
+    expect(attorneyIds.map((id) => [id, absoluteRect(koNodesById, id)])).toEqual([
+      ['home-attorney-image-wrap', { x: 0, y: 3485, width: 576, height: 644 }],
+      ['home-attorney-image', { x: 0, y: 3485, width: 576, height: 644 }],
+      ['home-attorney-badge', { x: 22, y: 4031, width: 533, height: 77 }],
+      ['home-attorney-content', { x: 576, y: 3485, width: 704, height: 644 }],
+      ['home-attorney-label', { x: 576, y: 3610, width: 180, height: 28 }],
+      ['home-attorney-title', { x: 576, y: 3649, width: 560, height: 86 }],
+      ['home-attorney-divider', { x: 576, y: 3759, width: 80, height: 4 }],
+      ['home-attorney-intro-1', { x: 576, y: 3787, width: 560, height: 58 }],
+      ['home-attorney-intro-2', { x: 576, y: 3857, width: 560, height: 58 }],
+      ['home-attorney-summary', { x: 576, y: 3927, width: 560, height: 82 }],
+      ['home-attorney-contact-line', { x: 576, y: 3995, width: 560, height: 40 }],
+      ['home-attorney-cta', { x: 576, y: 3976, width: 220, height: 28 }],
+    ]);
+    expect(attorneyIds.map((id) => [id, absoluteRect(enNodesById, id)])).toEqual([
+      ['home-attorney-image-wrap', { x: 0, y: 3326, width: 576, height: 720 }],
+      ['home-attorney-image', { x: 0, y: 3326, width: 576, height: 720 }],
+      ['home-attorney-badge', { x: 24, y: 3886, width: 528, height: 108 }],
+      ['home-attorney-content', { x: 576, y: 3326, width: 704, height: 720 }],
+      ['home-attorney-label', { x: 576, y: 3418, width: 180, height: 28 }],
+      ['home-attorney-title', { x: 576, y: 3462, width: 560, height: 96 }],
+      ['home-attorney-divider', { x: 576, y: 3572, width: 80, height: 4 }],
+      ['home-attorney-intro-1', { x: 576, y: 3600, width: 560, height: 58 }],
+      ['home-attorney-intro-2', { x: 576, y: 3670, width: 560, height: 58 }],
+      ['home-attorney-summary', { x: 576, y: 3740, width: 560, height: 82 }],
+      ['home-attorney-contact-line', { x: 576, y: 3836, width: 560, height: 40 }],
+      ['home-attorney-cta', { x: 576, y: 3900, width: 220, height: 28 }],
+    ]);
   });
 
   it('keeps zh-hant non-overlay descendants inside their localized section bounds', () => {

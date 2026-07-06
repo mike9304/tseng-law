@@ -1,4 +1,4 @@
-import type { BuilderCanvasDocument, BuilderCanvasNode, CompositeComponentKey } from './types';
+import type { BuilderCanvasDocument, BuilderCanvasNode, BuilderImageCanvasNode, CompositeComponentKey } from './types';
 import { createDefaultCanvasNodeStyle } from './types';
 import { responsivize } from '@/lib/builder/templates/_shared/responsivize';
 import type { Locale } from '@/lib/locales';
@@ -162,6 +162,30 @@ function setNodeRect(
   node.rect = { ...node.rect, ...rect };
 }
 
+function setImageNodeContent(
+  nodesById: ReadonlyMap<string, BuilderCanvasNode>,
+  id: string,
+  content: Partial<BuilderImageCanvasNode['content']>,
+): void {
+  const node = nodesById.get(id);
+  if (node?.kind !== 'image') return;
+  node.content = { ...node.content, ...content };
+}
+
+function replaceNode(
+  nodes: BuilderCanvasNode[],
+  nodesById: Map<string, BuilderCanvasNode>,
+  id: string,
+  createNextNode: (node: BuilderCanvasNode) => BuilderCanvasNode,
+): void {
+  const node = nodesById.get(id);
+  if (!node) return;
+  const nextNode = createNextNode(node);
+  const index = nodes.findIndex((candidate) => candidate.id === id);
+  if (index >= 0) nodes[index] = nextNode;
+  nodesById.set(id, nextNode);
+}
+
 function shiftDirectChildrenY(
   nodes: BuilderCanvasNode[],
   parentId: string,
@@ -304,11 +328,43 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
         setNodeRect(nodesById, 'home-attorney-contact-line', { y: 510 });
         setNodeRect(nodesById, 'home-attorney-cta', { y: 491 });
       } else {
-        setNodeRect(nodesById, 'home-attorney-image-wrap', { height: input.height });
-        setNodeRect(nodesById, 'home-attorney-image', { height: input.height });
-        setNodeRect(nodesById, 'home-attorney-badge', { y: input.height - 160 });
-        setNodeRect(nodesById, 'home-attorney-content', { height: input.height });
-        shiftDirectChildrenY(input.nodes, 'home-attorney-content', 103);
+        setNodeRect(nodesById, 'home-attorney-image-wrap', { y: 142, height: 644 });
+        setNodeRect(nodesById, 'home-attorney-image', { y: 0, height: 644 });
+        setImageNodeContent(nodesById, 'home-attorney-image', {
+          src: '/_next/image?url=%2Fimages%2Fteam%2Ftseng-junwei%2Epng&w=640&q=75',
+          gif: { provider: 'manual' },
+          filters: {
+            brightness: 93,
+            contrast: 98,
+            saturation: 93,
+            blur: 0,
+            grayscale: 0,
+            sepia: 0,
+          },
+        });
+        setNodeRect(nodesById, 'home-attorney-badge', { x: 0, y: 567, width: 533, height: 77 });
+        setNodeRect(nodesById, 'home-attorney-badge-name', { x: 17, y: 17, width: 497, height: 19 });
+        setNodeRect(nodesById, 'home-attorney-badge-role', { x: 17, y: 39, width: 497, height: 22 });
+        setNodeRect(nodesById, 'home-attorney-content', { y: 141, height: 644 });
+        setNodeRect(nodesById, 'home-attorney-label', { x: 77, y: 139, width: 550, height: 21 });
+        setNodeRect(nodesById, 'home-attorney-title', { x: 77, y: 177, width: 550, height: 86 });
+        replaceNode(input.nodes, nodesById, 'home-attorney-divider', (node): BuilderCanvasNode => ({
+          ...node,
+          kind: 'divider',
+          rect: { ...node.rect, x: 77, y: 269, width: 40, height: 32 },
+          style: createDefaultCanvasNodeStyle({ backgroundColor: 'transparent', borderRadius: 0 }),
+          content: {
+            orientation: 'horizontal',
+            thickness: 2,
+            color: '#16382d',
+            style: 'solid',
+          },
+        }));
+        setNodeRect(nodesById, 'home-attorney-intro-1', { x: 77, y: 306, width: 540, height: 27 });
+        setNodeRect(nodesById, 'home-attorney-intro-2', { x: 77, y: 349, width: 540, height: 27 });
+        setNodeRect(nodesById, 'home-attorney-summary', { x: 77, y: 392, width: 540, height: 27 });
+        setNodeRect(nodesById, 'home-attorney-contact-line', { x: 77, y: 435, width: 540, height: 27 });
+        setNodeRect(nodesById, 'home-attorney-cta', { x: 77, y: 478, width: 550, height: 29 });
       }
       break;
     case 'caseResults':

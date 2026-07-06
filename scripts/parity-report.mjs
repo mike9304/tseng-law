@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 // parity-report.mjs — tseng-law 라이브 vs 로컬 시각 패리티 판정기
 // ---------------------------------------------------------------------------
-// Playwright 로 라이브/로컬 각 페이지·뷰포트 조합의 풀페이지 스크린샷 쌍을 캡처한
-// 뒤(팝업 닫기 · document.fonts.ready 대기 · 스크롤 워밍업), PNG 를 pixelmatch /
-// PIL 없이 node 내장 zlib 만으로 직접 디코딩해 같은 높이/너비로 크롭한 뒤 픽셀·행
-// 단위 diff 율을 계산한다. 페이지별 diff% 와 높이차 테이블을 콘솔 + JSON 으로 출력.
+// Playwright 로 라이브/로컬 각 페이지·뷰포트 조합을 실제 뷰포트 단위로 스크롤 캡처해
+// 한 장으로 스티칭한 뒤(팝업 닫기 · 애니메이션/로테이터 freeze · lazy 이미지 대기),
+// PNG 를 pixelmatch / PIL 없이 node 내장 zlib 만으로 직접 디코딩해 같은 높이/너비로
+// 크롭한 뒤 픽셀·행 단위 diff 율을 계산한다. 페이지별 diff% 와 높이차 테이블을 콘솔
+// + JSON 으로 출력.
 //
 // 사용:
 //   node scripts/parity-report.mjs \
@@ -12,10 +13,14 @@
 //     --pages=/ko,/ko/about,/ko/columns,/ko/pricing,/ko/services,/ko/lawyers,/ko/videos,/ko/reviews \
 //     --viewports=1280x900,375x812
 //
+// 옵션:
+//   --fast       기존 Playwright fullPage 캡처 경로 사용
+//   --no-freeze  prefers-reduced-motion/freeze CSS/known rotator 고정을 끔
+//
 // 주의: 이 스크립트는 서버를 기동하지 않는다. 로컬은 이미 --local 포트에서 떠 있어야 한다.
 // ---------------------------------------------------------------------------
 import { chromium } from 'playwright';
-import { inflateSync } from 'node:zlib';
+import { deflateSync, inflateSync } from 'node:zlib';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 
@@ -23,6 +28,9 @@ import { dirname, join } from 'node:path';
 function arg(name, def) {
   const hit = process.argv.slice(2).find((a) => a.startsWith(`--${name}=`));
   return hit ? hit.slice(name.length + 3) : def;
+}
+function flag(name) {
+  return process.argv.slice(2).includes(`--${name}`);
 }
 const LIVE = arg('live', 'https://tseng-law.com').replace(/\/$/, '');
 const LOCAL = arg('local', 'http://127.0.0.1:4643').replace(/\/$/, '');
@@ -35,6 +43,8 @@ const OUT_JSON = arg('out', '/private/tmp/claude-501/-Users-son7/c3602988-f51c-4
 // 픽셀이 "다르다"고 판정하는 채널 합산 차이 임계값(안티에일리어싱 노이즈 무시용)
 const THRESH = Number(arg('threshold', '48'));
 const SAVE_SHOTS = arg('shots', '1') !== '0';
+const FAST_CAPTURE = flag('fast');
+const FREEZE_CAPTURE = !flag('no-freeze');
 const OUT_DIR = dirname(OUT_JSON);
 const SHOTS_DIR = join(OUT_DIR, 'parity-shots');
 
@@ -42,6 +52,7 @@ const SHOTS_DIR = join(OUT_DIR, 'parity-shots');
 // colorType 0/2/4/6, bitDepth 8, non-interlaced 지원 (Playwright 출력 커버)
 const PNG_SIG = [137, 80, 78, 71, 13, 10, 26, 10];
 const CHANNELS_BY_TYPE = { 0: 1, 2: 3, 4: 2, 6: 4 };
+let CRC_TABLE = null;
 
 function decodePng(buffer) {
   for (let i = 0; i < 8; i++) if (buffer[i] !== PNG_SIG[i]) throw new Error('PNG 시그니처 아님');
@@ -103,6 +114,90 @@ function decodePng(buffer) {
   return { width, height, channels, data: out };
 }
 
+function crcTable() {
+  if (CRC_TABLE) return CRC_TABLE;
+  CRC_TABLE = new Uint32Array(256);
+  for (let n = 0; n < 256; n++) {
+    let c = n;
+    for (let k = 0; k < 8; k++) c = (c & 1) ? (0xedb88320 ^ (c >>> 1)) : (c >>> 1);
+    CRC_TABLE[n] = c >>> 0;
+  }
+  return CRC_TABLE;
+}
+
+function crc32(buffer) {
+  const table = crcTable();
+  let c = 0xffffffff;
+  for (const byte of buffer) c = table[(c ^ byte) & 0xff] ^ (c >>> 8);
+  return (c ^ 0xffffffff) >>> 0;
+}
+
+function pngChunk(type, data = Buffer.alloc(0)) {
+  const typeBuf = Buffer.from(type, 'ascii');
+  const out = Buffer.allocUnsafe(12 + data.length);
+  out.writeUInt32BE(data.length, 0);
+  typeBuf.copy(out, 4);
+  data.copy(out, 8);
+  out.writeUInt32BE(crc32(Buffer.concat([typeBuf, data])), 8 + data.length);
+  return out;
+}
+
+function encodePngRgba(width, height, rgba) {
+  const ihdr = Buffer.allocUnsafe(13);
+  ihdr.writeUInt32BE(width, 0);
+  ihdr.writeUInt32BE(height, 4);
+  ihdr[8] = 8;  // bit depth
+  ihdr[9] = 6;  // RGBA
+  ihdr[10] = 0; // compression
+  ihdr[11] = 0; // filter
+  ihdr[12] = 0; // interlace
+
+  const stride = width * 4;
+  const raw = Buffer.allocUnsafe((stride + 1) * height);
+  for (let y = 0; y < height; y++) {
+    const rawStart = y * (stride + 1);
+    raw[rawStart] = 0;
+    rgba.copy(raw, rawStart + 1, y * stride, y * stride + stride);
+  }
+  return Buffer.concat([
+    Buffer.from(PNG_SIG),
+    pngChunk('IHDR', ihdr),
+    pngChunk('IDAT', deflateSync(raw)),
+    pngChunk('IEND'),
+  ]);
+}
+
+function rgbAt(image, offset) {
+  if (image.channels === 1 || image.channels === 2) {
+    const gray = image.data[offset];
+    return [gray, gray, gray];
+  }
+  return [image.data[offset], image.data[offset + 1], image.data[offset + 2]];
+}
+
+function toRgba(image) {
+  if (image.channels === 4) return image.data;
+  const out = Buffer.allocUnsafe(image.width * image.height * 4);
+  for (let y = 0; y < image.height; y++) {
+    for (let x = 0; x < image.width; x++) {
+      const src = (y * image.width + x) * image.channels;
+      const dest = (y * image.width + x) * 4;
+      if (image.channels === 1 || image.channels === 2) {
+        out[dest] = image.data[src];
+        out[dest + 1] = image.data[src];
+        out[dest + 2] = image.data[src];
+        out[dest + 3] = image.channels === 2 ? image.data[src + 1] : 255;
+      } else {
+        out[dest] = image.data[src];
+        out[dest + 1] = image.data[src + 1];
+        out[dest + 2] = image.data[src + 2];
+        out[dest + 3] = 255;
+      }
+    }
+  }
+  return out;
+}
+
 // --- 픽셀·행 단위 diff -------------------------------------------------------
 function diffImages(A, B, threshold) {
   const w = Math.min(A.width, B.width);
@@ -118,9 +213,11 @@ function diffImages(A, B, threshold) {
     for (let x = 0; x < w; x++) {
       const ia = baseA + x * chA;
       const ib = baseB + x * chB;
-      const dr = Math.abs(A.data[ia] - B.data[ib]);
-      const dg = Math.abs(A.data[ia + 1] - B.data[ib + 1]);
-      const db = Math.abs(A.data[ia + 2] - B.data[ib + 2]);
+      const [ar, ag, ab] = rgbAt(A, ia);
+      const [br, bg, bb] = rgbAt(B, ib);
+      const dr = Math.abs(ar - br);
+      const dg = Math.abs(ag - bg);
+      const db = Math.abs(ab - bb);
       if (dr + dg + db > threshold) { diffPixels++; rowDiff++; }
     }
     if (rowDiff / w > 0.02) rowsDiffered++; // 행 픽셀 2% 초과 변화 시 "다른 행"
@@ -131,6 +228,204 @@ function diffImages(A, B, threshold) {
     comparedW: w,
     comparedH: h,
   };
+}
+
+// --- 캡처 안정화 -------------------------------------------------------------
+const FREEZE_CSS = [
+  '*,*::before,*::after{animation:none!important;transition:none!important;caret-color:transparent!important;}',
+  'html{scroll-behavior:auto!important;}',
+  '.hero-media-item{transition:none!important;}',
+].join('');
+
+async function installEarlyFreeze(page) {
+  await page.addInitScript((css) => {
+    const install = () => {
+      if (document.getElementById('parity-freeze-style')) return;
+      const parent = document.head || document.documentElement;
+      if (!parent) return;
+      const style = document.createElement('style');
+      style.id = 'parity-freeze-style';
+      style.textContent = css;
+      parent.appendChild(style);
+    };
+    install();
+    document.addEventListener('DOMContentLoaded', install, { once: true });
+  }, FREEZE_CSS).catch(() => {});
+}
+
+async function applyFreeze(page) {
+  await page.addStyleTag({ content: FREEZE_CSS }).catch(() => {});
+  await page.evaluate(() => {
+    document.querySelectorAll('video').forEach((video) => {
+      try {
+        video.pause();
+        video.currentTime = 0;
+      } catch { /* 무시 */ }
+    });
+    const heroSlides = Array.from(document.querySelectorAll('.hero-media-item[data-active]'));
+    heroSlides.forEach((slide, index) => {
+      slide.setAttribute('data-active', index === 0 ? 'true' : 'false');
+    });
+    document.querySelectorAll('.hero-highlights-track').forEach((track) => {
+      track.style.transition = 'none';
+      track.style.transform = 'translate3d(0, 0, 0)';
+    });
+    document.querySelectorAll('.hero-highlights-dot').forEach((dot, index) => {
+      dot.classList.toggle('active', index === 0);
+      dot.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
+    });
+    document.querySelectorAll('.hero-typing').forEach((typing) => {
+      typing.querySelectorAll('.hero-typing-cursor').forEach((cursor) => cursor.remove());
+    });
+  }).catch(() => {});
+}
+
+async function waitForFonts(page) {
+  await page.evaluate(() => (
+    document.fonts && document.fonts.ready ? document.fonts.ready.then(() => true) : true
+  )).catch(() => {});
+}
+
+async function waitForViewportImages(page, timeout = 2000) {
+  await page.waitForFunction(() => {
+    const viewportW = window.innerWidth || document.documentElement.clientWidth || 0;
+    const viewportH = window.innerHeight || document.documentElement.clientHeight || 0;
+    const images = Array.from(document.images).filter((img) => {
+      const rect = img.getBoundingClientRect();
+      return rect.width > 0 && rect.height > 0 &&
+        rect.right >= 0 && rect.left <= viewportW &&
+        rect.bottom >= 0 && rect.top <= viewportH;
+    });
+    return images.every((img) => {
+      if (!img.currentSrc && !img.src) return true;
+      return img.complete && img.naturalWidth > 0;
+    });
+  }, undefined, { timeout }).catch(() => {});
+}
+
+async function pageDims(page) {
+  return page.evaluate(() => {
+    const doc = document.documentElement;
+    const body = document.body;
+    const w = Math.max(
+      doc.scrollWidth,
+      body ? body.scrollWidth : 0,
+      doc.clientWidth,
+      window.innerWidth,
+    );
+    const h = Math.max(
+      doc.scrollHeight,
+      body ? body.scrollHeight : 0,
+      doc.offsetHeight,
+      body ? body.offsetHeight : 0,
+      doc.clientHeight,
+      window.innerHeight,
+    );
+    return { w: Math.ceil(w), h: Math.ceil(h) };
+  }).catch(() => ({ w: 0, h: 0 }));
+}
+
+async function settleViewport(page, y, freeze) {
+  await page.evaluate((nextY) => window.scrollTo(0, nextY), y).catch(() => {});
+  await page.waitForTimeout(120);
+  await page.waitForLoadState('networkidle', { timeout: 700 }).catch(() => {});
+  await waitForViewportImages(page, 2000);
+  await page.waitForTimeout(220);
+  if (freeze) await applyFreeze(page);
+}
+
+async function setViewportChromeHidden(page, hidden) {
+  await page.evaluate((shouldHide) => {
+    const attr = 'data-parity-hidden-chrome';
+    const empty = '__parity_empty__';
+    if (!shouldHide) {
+      document.querySelectorAll(`[${attr}]`).forEach((element) => {
+        const previous = element.getAttribute(attr);
+        if (previous === empty) element.style.removeProperty('visibility');
+        else element.style.visibility = previous || '';
+        element.removeAttribute(attr);
+      });
+      return;
+    }
+
+    const viewportH = window.innerHeight || document.documentElement.clientHeight || 0;
+    Array.from(document.body ? document.body.querySelectorAll('*') : []).forEach((element) => {
+      if (!(element instanceof HTMLElement)) return;
+      if (element.closest(`[${attr}]`)) return;
+      const style = window.getComputedStyle(element);
+      if (style.position !== 'fixed' && style.position !== 'sticky') return;
+      const rect = element.getBoundingClientRect();
+      if (rect.width < 1 || rect.height < 1) return;
+      const stuckToViewportEdge = rect.top <= 2 || rect.bottom >= viewportH - 2;
+      if (style.position !== 'fixed' && !stuckToViewportEdge) return;
+      element.setAttribute(attr, element.style.visibility || empty);
+      element.style.visibility = 'hidden';
+    });
+  }, hidden).catch(() => {});
+}
+
+async function warmPageForLazyLoad(page, freeze) {
+  let dims = await pageDims(page);
+  const viewport = page.viewportSize() || { width: dims.w || 1280, height: 900 };
+  const step = Math.max(1, viewport.height);
+  const totalH = Math.max(1, dims.h);
+  for (let y = 0; y < totalH; y += step) {
+    const maxScrollY = Math.max(0, (await pageDims(page)).h - viewport.height);
+    await settleViewport(page, Math.min(y, maxScrollY), freeze);
+  }
+  await settleViewport(page, 0, freeze);
+}
+
+async function captureFastFullPage(page, freeze) {
+  await warmPageForLazyLoad(page, freeze);
+  await dismissPopups(page);
+  await settleViewport(page, 0, freeze);
+  return page.screenshot({
+    fullPage: true,
+    type: 'png',
+    animations: freeze ? 'disabled' : 'allow',
+  });
+}
+
+async function captureStitched(page, freeze) {
+  await warmPageForLazyLoad(page, freeze);
+  await dismissPopups(page);
+  const dims = await pageDims(page);
+  const viewport = page.viewportSize() || { width: dims.w || 1280, height: 900 };
+  const width = Math.max(1, viewport.width);
+  const height = Math.max(1, dims.h || viewport.height);
+  const viewportH = Math.max(1, viewport.height);
+  const out = Buffer.alloc(width * height * 4, 255);
+
+  for (let y = 0; y < height; y += viewportH) {
+    const rows = Math.min(viewportH, height - y);
+    const maxScrollY = Math.max(0, height - viewportH);
+    const requestedScrollY = Math.min(y, maxScrollY);
+    await settleViewport(page, requestedScrollY, freeze);
+    await setViewportChromeHidden(page, y > 0);
+    const actualScrollY = await page.evaluate(() => Math.round(window.scrollY || 0)).catch(() => requestedScrollY);
+    const clipY = Math.max(0, Math.min(viewportH - rows, y - actualScrollY));
+    const pieceBuf = await page.screenshot({
+      type: 'png',
+      clip: { x: 0, y: clipY, width, height: rows },
+      animations: freeze ? 'disabled' : 'allow',
+    });
+    const piece = decodePng(pieceBuf);
+    const rgba = toRgba(piece);
+    const copyWidth = Math.min(width, piece.width);
+    const copyRows = Math.min(rows, piece.height);
+    for (let row = 0; row < copyRows; row++) {
+      rgba.copy(
+        out,
+        ((y + row) * width) * 4,
+        (row * piece.width) * 4,
+        (row * piece.width + copyWidth) * 4,
+      );
+    }
+  }
+  await setViewportChromeHidden(page, false);
+  await settleViewport(page, 0, freeze);
+  return encodePngRgba(width, height, out);
 }
 
 // --- 팝업/배너 닫기 (best-effort) -------------------------------------------
@@ -160,43 +455,28 @@ async function capture(context, url) {
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(String(e && e.message ? e.message : e)));
+  if (FREEZE_CAPTURE) {
+    await page.emulateMedia({ reducedMotion: 'reduce' }).catch(() => {});
+    await installEarlyFreeze(page);
+  }
   let navOk = true;
   try {
-    await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
   } catch {
     navOk = false;
-    try { await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 }); } catch { /* 무시 */ }
+    try { await page.goto(url, { waitUntil: 'load', timeout: 30000 }); } catch { /* 무시 */ }
   }
+  if (FREEZE_CAPTURE) await applyFreeze(page);
+  await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
   await dismissPopups(page);
-  // 애니메이션/트랜지션 정지 → 스크린샷 안정화
-  await page.addStyleTag({
-    content: `*,*::before,*::after{animation-duration:0s!important;animation-delay:0s!important;` +
-      `transition-duration:0s!important;transition-delay:0s!important;caret-color:transparent!important;}` +
-      `html{scroll-behavior:auto!important;}`,
-  }).catch(() => {});
-  // 폰트 로드 대기
-  await page.evaluate(() => (document.fonts && document.fonts.ready ? document.fonts.ready.then(() => true) : true)).catch(() => {});
-  // 스크롤 워밍업 (lazy-load / reveal 트리거)
-  await page.evaluate(async () => {
-    await new Promise((res) => {
-      let y = 0;
-      const step = () => {
-        window.scrollTo(0, y);
-        y += Math.max(400, Math.floor(window.innerHeight * 0.8));
-        if (y < document.body.scrollHeight + window.innerHeight) setTimeout(step, 70);
-        else { window.scrollTo(0, 0); setTimeout(res, 400); }
-      };
-      step();
-    });
-  }).catch(() => {});
-  await dismissPopups(page); // 스크롤 후 뜬 팝업 재차 닫기
-  await page.waitForTimeout(500);
-  const dims = await page.evaluate(() => ({
-    w: document.documentElement.scrollWidth,
-    h: document.documentElement.scrollHeight,
-  })).catch(() => ({ w: 0, h: 0 }));
+  await waitForFonts(page);
   let buf = null;
-  try { buf = await page.screenshot({ fullPage: true, type: 'png' }); } catch { /* 무시 */ }
+  try {
+    buf = FAST_CAPTURE
+      ? await captureFastFullPage(page, FREEZE_CAPTURE)
+      : await captureStitched(page, FREEZE_CAPTURE);
+  } catch { /* 무시 */ }
+  const dims = await pageDims(page);
   await page.close();
   return { buf, dims, errors, navOk };
 }
@@ -215,6 +495,7 @@ async function main() {
       const context = await browser.newContext({
         viewport: { width: vp.w, height: vp.h },
         deviceScaleFactor: 1,
+        reducedMotion: FREEZE_CAPTURE ? 'reduce' : 'no-preference',
       });
       for (const p of PAGES) {
         const liveUrl = LIVE + p;

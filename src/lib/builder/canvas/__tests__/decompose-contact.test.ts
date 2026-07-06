@@ -101,6 +101,31 @@ describe('standard contact page decomposer', () => {
     expect(nodes.get('home-offices-layout-0-card')?.rect).toMatchObject({ x: 700, y: 0, width: 436, height: 420 });
   });
 
+  it('keeps zh-hant contact office tab layouts in one responsive slot', () => {
+    const doc = STANDARD_PAGE_DECOMPOSERS.contact('zh-hant');
+    const nodes = nodesById(doc.nodes);
+    const layout0 = expectNode(nodes, 'home-offices-layout-0');
+    const layout1 = expectNode(nodes, 'home-offices-layout-1');
+    const layout2 = expectNode(nodes, 'home-offices-layout-2');
+    const officeRoot = expectNode(nodes, 'home-offices-root');
+
+    const mobileY = [
+      layout0.responsive?.mobile?.rect?.y,
+      layout1.responsive?.mobile?.rect?.y,
+      layout2.responsive?.mobile?.rect?.y,
+    ];
+    const tabletY = [
+      layout0.responsive?.tablet?.rect?.y,
+      layout1.responsive?.tablet?.rect?.y,
+      layout2.responsive?.tablet?.rect?.y,
+    ];
+
+    expect(mobileY).toEqual([170, 170, 170]);
+    expect(tabletY).toEqual([192, 192, 192]);
+    expect(officeRoot.responsive?.mobile?.rect).toMatchObject({ width: 375, height: 908 });
+    expect(officeRoot.responsive?.tablet?.rect).toMatchObject({ width: 736, height: 1064 });
+  });
+
   it('keeps section offsets relative when built below an existing canvas region', () => {
     const nodes = nodesById(createContactPageDecomposedNodes(200, 'ko', 0));
 

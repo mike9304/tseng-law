@@ -1474,6 +1474,9 @@ export async function PublishedSitePageView({
         .builder-pub-node .reveal-stagger > * {
           opacity: 1;
         }
+        .builder-pub-main .builder-pub-node[data-anchor^='mobile-parity-standalone-'] {
+          display: none !important;
+        }
         @media (max-width: 768px) {
           .builder-pub-main .builder-pub-node[data-node-id='home-hero-root'],
           .builder-pub-main .builder-pub-node[data-node-id='home-hero'] {
@@ -1577,6 +1580,31 @@ export async function PublishedSitePageView({
           .builder-pub-main > .builder-pub-node[data-node-id='page-about-firm-intro-root'],
           .builder-pub-main > .builder-pub-node[data-node-id='page-about-attorney-root'],
           .builder-pub-main > .builder-pub-node[data-node-id='page-about-contact-root'] {
+            display: none !important;
+          }
+          ` : ''}
+          ${locale === 'zh-hant' && ['contact', 'lawyers', 'reviews', 'services', 'pricing'].includes(slugPath) ? `
+          .builder-pub-main .builder-pub-node[data-anchor^='mobile-parity-standalone-'] {
+            display: block !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-anchor^='mobile-parity-standalone-'] {
+            width: calc(100% + 32px) !important;
+            max-width: none !important;
+            margin-left: -16px !important;
+            margin-right: -16px !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-node-id='page-contact-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-contact-guide-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-contact-contact-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-offices-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-lawyers-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-lawyers-attorney-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-reviews-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-reviews-section-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-services-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-services-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-pricing-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-pricing-section-root'] {
             display: none !important;
           }
           ` : ''}

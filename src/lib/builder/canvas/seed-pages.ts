@@ -63,6 +63,7 @@ import {
   createHomeContainerNode,
 } from './decompose-home-shared';
 import { estimateTextHeight } from './decompose-page-shared';
+import { getOfficesResponsiveOverride } from './decompose-offices';
 
 const STAGE_WIDTH = 1280;
 const SITE_PAGE_SEED_VERSION = 'site-page-seed-v22';
@@ -1260,6 +1261,48 @@ function repairReviewsDecomposedResponsiveLayout(nodesById: Map<string, BuilderC
   repairReviewsTabletLayout(nodesById);
 }
 
+function applyOfficesResponsiveOverride(
+  node: BuilderCanvasNode,
+  viewport: ResponsiveViewport,
+): void {
+  const override = getOfficesResponsiveOverride(node.id, viewport);
+  if (!override) return;
+  if (override.rect) setResponsiveRect(node, viewport, override.rect);
+  if (override.fontSize) setResponsiveFontSize(node, viewport, override.fontSize);
+  if (typeof override.hidden === 'boolean') {
+    const existing = node.responsive ?? {};
+    node.responsive = {
+      ...existing,
+      [viewport]: {
+        ...(existing[viewport] ?? {}),
+        hidden: override.hidden,
+      },
+    };
+  }
+}
+
+function repairContactResponsiveLayout(nodesById: Map<string, BuilderCanvasNode>): void {
+  const officeRoot = nodesById.get('home-offices-root');
+  if (!nodesById.has('page-contact-page-header-root') || !officeRoot) return;
+
+  setMobileRect(officeRoot, { x: 0, width: 375, height: 908 });
+  setMobileRect(nodesById.get('home-offices-container'), { x: 16, y: 48, width: 343, height: 812 });
+  setMobileRect(nodesById.get('home-offices-label'), { x: 0, y: 8, width: 180, height: 28 });
+  setMobileRect(nodesById.get('home-offices-title'), { x: 0, y: 47, width: 343, height: 60 });
+  setMobileRect(nodesById.get('home-offices-tabs'), { x: 0, y: 126, width: 343, height: 46 });
+
+  setTabletRect(officeRoot, { x: 16, width: 736, height: 1064 });
+  setTabletRect(nodesById.get('home-offices-container'), { x: 31, y: 92, width: 675, height: 880 });
+  setTabletRect(nodesById.get('home-offices-label'), { x: 0, y: 8, width: 180, height: 28 });
+  setTabletRect(nodesById.get('home-offices-title'), { x: 0, y: 47, width: 675, height: 60 });
+  setTabletRect(nodesById.get('home-offices-tabs'), { x: 0, y: 126, width: 675, height: 46 });
+
+  for (const node of nodesById.values()) {
+    applyOfficesResponsiveOverride(node, 'mobile');
+    applyOfficesResponsiveOverride(node, 'tablet');
+  }
+}
+
 function repairLegacyCompositeResponsiveLayout(nodesById: Map<string, BuilderCanvasNode>): void {
   const composite = [...nodesById.values()].find(isLegacyPageCompositeNode);
   if (!composite) return;
@@ -1346,6 +1389,7 @@ function createDecomposedPageCanvasDocument(
   repairServicesResponsiveLayout(nodesById);
   repairColumnsResponsiveLayout(nodesById);
   repairReviewsDecomposedResponsiveLayout(nodesById);
+  repairContactResponsiveLayout(nodesById);
   repairLegacyCompositeResponsiveLayout(nodesById);
   restackTopLevelFlowSectionsResponsive(nodes);
   return {
@@ -1582,6 +1626,56 @@ function buildMeasuredLegacyCompositePageCanvas(
   return buildLegacyCompositePageCanvas(locale, componentKey, geometry.desktop, geometry.rootId);
 }
 
+const ZH_HANT_STANDALONE_MOBILE_PARITY_KEYS = new Set<LegacyCompositeKey>([
+  'legacy-page-services',
+  'legacy-page-contact',
+  'legacy-page-lawyers',
+  'legacy-page-pricing',
+  'legacy-page-reviews',
+]);
+
+function createZhHantStandaloneMobileParityNode(
+  document: BuilderCanvasDocument,
+  componentKey: LegacyCompositeKey,
+): BuilderCanvasNode | null {
+  const geometry = LEGACY_COMPOSITE_GEOMETRY[componentKey];
+  if (!geometry || !ZH_HANT_STANDALONE_MOBILE_PARITY_KEYS.has(componentKey)) return null;
+  const slug = componentKey.replace('legacy-page-', '');
+
+  return {
+    id: `${slug}-mobile-parity`,
+    kind: 'composite',
+    rect: { x: 0, y: 0, width: 1, height: 1 },
+    style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
+    zIndex: 10_000,
+    rotation: 0,
+    locked: false,
+    visible: true,
+    anchorName: `mobile-parity-standalone-${slug}`,
+    responsive: {
+      mobile: { rect: { x: 0, y: 0, width: 375, height: geometry.mobile } },
+      tablet: { rect: { x: 0, y: 0, width: 768, height: geometry.tablet } },
+    },
+    content: {
+      componentKey,
+      config: { locale: document.locale },
+    },
+  };
+}
+
+function withZhHantStandaloneMobileParity(
+  document: BuilderCanvasDocument,
+  componentKey: LegacyCompositeKey,
+): BuilderCanvasDocument {
+  if (document.locale !== 'zh-hant') return document;
+  const parityNode = createZhHantStandaloneMobileParityNode(document, componentKey);
+  if (!parityNode) return document;
+  return {
+    ...document,
+    nodes: [...document.nodes, parityNode],
+  };
+}
+
 function buildAboutCompositePageCanvas(locale: Locale): BuilderCanvasDocument {
   return buildMeasuredLegacyCompositePageCanvas(locale, 'legacy-page-about');
 }
@@ -1595,7 +1689,10 @@ function buildServicesCompositePageCanvas(locale: Locale): BuilderCanvasDocument
 }
 
 function buildServicesPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createDecomposedPageCanvasDocument(locale, createServicesPageDecomposedNodes(0, locale, 0), getServicesPageRootHeight(locale));
+  return withZhHantStandaloneMobileParity(
+    createDecomposedPageCanvasDocument(locale, createServicesPageDecomposedNodes(0, locale, 0), getServicesPageRootHeight(locale)),
+    'legacy-page-services',
+  );
 }
 
 function buildContactCompositePageCanvas(locale: Locale): BuilderCanvasDocument {
@@ -1608,7 +1705,8 @@ function buildContactPageCanvas(locale: Locale): BuilderCanvasDocument {
     createContactPageDecomposedNodes(0, locale, 0),
     CONTACT_PAGE_ROOT_HEIGHT,
   );
-  return locale === 'zh-hant' ? applyZhHantContactDesktopBaseline(document) : document;
+  const withMobileParity = withZhHantStandaloneMobileParity(document, 'legacy-page-contact');
+  return locale === 'zh-hant' ? applyZhHantContactDesktopBaseline(withMobileParity) : withMobileParity;
 }
 
 function buildLawyersCompositePageCanvas(locale: Locale): BuilderCanvasDocument {
@@ -1616,7 +1714,10 @@ function buildLawyersCompositePageCanvas(locale: Locale): BuilderCanvasDocument 
 }
 
 function buildLawyersPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createDecomposedPageCanvasDocument(locale, createLawyersPageDecomposedNodes(0, locale, 0), getLawyersPageRootHeight(locale));
+  return withZhHantStandaloneMobileParity(
+    createDecomposedPageCanvasDocument(locale, createLawyersPageDecomposedNodes(0, locale, 0), getLawyersPageRootHeight(locale)),
+    'legacy-page-lawyers',
+  );
 }
 
 export function buildFaqCompositePageCanvas(locale: Locale): BuilderCanvasDocument {
@@ -1637,7 +1738,8 @@ function buildPricingPageCanvas(locale: Locale): BuilderCanvasDocument {
     createPricingPageDecomposedNodes(0, locale, 0),
     getPricingPageRootHeight(locale),
   );
-  return locale === 'zh-hant' ? applyZhHantPricingDesktopBaseline(document) : document;
+  const withMobileParity = withZhHantStandaloneMobileParity(document, 'legacy-page-pricing');
+  return locale === 'zh-hant' ? applyZhHantPricingDesktopBaseline(withMobileParity) : withMobileParity;
 }
 
 function buildReviewsPageCanvas(locale: Locale): BuilderCanvasDocument {
@@ -1646,7 +1748,8 @@ function buildReviewsPageCanvas(locale: Locale): BuilderCanvasDocument {
     createReviewsPageDecomposedNodes(0, locale, 0),
     REVIEWS_PAGE_ROOT_HEIGHT,
   );
-  return locale === 'zh-hant' ? applyZhHantReviewsDesktopBaseline(document) : document;
+  const withMobileParity = withZhHantStandaloneMobileParity(document, 'legacy-page-reviews');
+  return locale === 'zh-hant' ? applyZhHantReviewsDesktopBaseline(withMobileParity) : withMobileParity;
 }
 
 export function buildReviewsCompositePageCanvas(locale: Locale): BuilderCanvasDocument {

@@ -17,6 +17,63 @@ const OFFICES_ROOT_HEIGHT = 760;
 
 export const OFFICES_SECTION_ROOT_HEIGHT = OFFICES_ROOT_HEIGHT;
 
+export type OfficesResponsiveViewport = 'mobile' | 'tablet';
+
+export type OfficesResponsiveOverride = {
+  rect?: Partial<BuilderCanvasNode['rect']>;
+  hidden?: boolean;
+  fontSize?: number;
+};
+
+export function getOfficesResponsiveOverride(
+  nodeId: string,
+  viewport: OfficesResponsiveViewport,
+): OfficesResponsiveOverride | null {
+  const isTablet = viewport === 'tablet';
+  const tabMatch = /^home-offices-tab-(\d+)$/.exec(nodeId);
+  if (tabMatch) {
+    const index = Number(tabMatch[1]);
+    return isTablet
+      ? { rect: { x: index * 118, y: 0, width: 104, height: 32 } }
+      : { rect: { x: index * 104, y: 0, width: 96, height: 32 } };
+  }
+  if (/^home-offices-layout-\d+$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 192, width: 675, height: 689 } }
+      : { rect: { x: 0, y: 170, width: 308, height: 652 } };
+  }
+  if (/^home-offices-layout-\d+-map$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 0, width: 675, height: 371 } }
+      : { rect: { x: 0, y: 0, width: 308, height: 340 } };
+  }
+  if (/^home-offices-layout-\d+-card$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 387, width: 675, height: 301 } }
+      : { rect: { x: 0, y: 356, width: 308, height: 296 } };
+  }
+  if (/^home-offices-layout-\d+-card-label$/.test(nodeId)) return { rect: { x: 24, y: 24, width: 120, height: 24 } };
+  if (/^home-offices-layout-\d+-card-title$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 24, y: 66, width: 240, height: 34 } }
+      : { rect: { x: 24, y: 66, width: 260, height: 34 } };
+  }
+  if (/^home-offices-layout-\d+-card-address$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 24, y: 116, width: 627, height: 58 } }
+      : { rect: { x: 24, y: 116, width: 260, height: 58 } };
+  }
+  if (/^home-offices-layout-\d+-card-phone$/.test(nodeId)) return { rect: { x: 24, y: 188, width: 220, height: 24 } };
+  if (/^home-offices-layout-\d+-card-fax$/.test(nodeId)) return { rect: { x: 24, y: 222, width: 220, height: 24 } };
+  if (/^home-offices-layout-\d+-card-map-link$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 24, y: 278, width: 280, height: 40 } }
+      : { rect: { x: 24, y: 278, width: 260, height: 40 } };
+  }
+
+  return null;
+}
+
 export function createOfficesDecomposedNodes(
   rootY: number,
   locale: Locale,

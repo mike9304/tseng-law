@@ -1498,7 +1498,7 @@ export async function PublishedSitePageView({
              overflow clipping — measured worse than the scrollbar). Proper
              per-band responsive rects are a post-handoff program (T16). */
           .builder-pub-main .builder-pub-node[data-node-id='home-hero-media'],
-          .builder-pub-main .builder-pub-node[data-node-id='home-hero-media-image'] {
+          .builder-pub-main .builder-pub-node[data-node-id^='home-hero-media-image'] {
             width: 100% !important;
           }
         }

@@ -71,7 +71,6 @@ import {
   useBuilderFaqItems,
 } from './BuilderDatasetPreviewContext';
 import { CanvasNodeSelectionOverlay } from './CanvasNodeSelectionOverlay';
-import { InsightsArchiveListPreview } from './CanvasInsightsPreview';
 import { SelectedRepeaterTemplateChildControls } from './SelectedRepeaterTemplateChildControls';
 import { RepeaterTemplateCanvasHud } from './RepeaterTemplateCanvasHud';
 import {
@@ -539,6 +538,10 @@ const CanvasNode = memo(function CanvasNode({
   // Top-level flow sections never use sticky (they use flow wrapper instead).
   const useSticky = Boolean(node.sticky) && !parentUsesFlowLayout && !isFlowSection;
   const nestedChildren = visibleChildrenByParentId.get(node.id) ?? EMPTY_CANVAS_NODE_CHILDREN;
+  const hideRedundantLegacyInsightsComposite = node.id === 'home-insights'
+    && node.kind === 'composite'
+    && nodesById.has('home-insights-list-wrap')
+    && nodesById.has('home-insights-item-0-title');
   const findNodeOrAncestor = (startId: string, pattern: RegExp) => {
     let cursor: string | null = startId;
     while (cursor) {
@@ -1206,7 +1209,6 @@ const CanvasNode = memo(function CanvasNode({
     || node.kind === 'member-profile-form'
     || node.kind === 'member-bookings-list';
   const showSelectionHandles = selected && !node.locked && isInteractive && !isEditing;
-  const showInsightsListPreview = node.id === 'home-insights-list-wrap' && isInteractive;
   const { animationSummary, bodyStyle, nodeStyle } = buildCanvasNodeRenderStyles({
     animationPreviewPhase,
     effectiveFontSize,
@@ -1233,7 +1235,7 @@ const CanvasNode = memo(function CanvasNode({
     theme,
   });
 
-  if (isHiddenAtViewport) {
+  if (isHiddenAtViewport || hideRedundantLegacyInsightsComposite) {
     return null;
   }
 
@@ -1510,7 +1512,6 @@ const CanvasNode = memo(function CanvasNode({
         {body}
         {!isContainerLikeNode ? renderNestedChildNodes() : null}
       </div>
-      {showInsightsListPreview ? <InsightsArchiveListPreview locale={builderLocale} /> : null}
       {showCodeBlockQuickEdit && codeBlockNode && codeAssistantOpen ? (
         <CodeAssistantPanel
           locale={builderLocale as Locale}

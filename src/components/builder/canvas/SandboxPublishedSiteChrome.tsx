@@ -180,7 +180,7 @@ export default function SandboxPublishedSiteChrome({
             currentSlug={currentSlug}
             onNavigate={onHeaderNavigate}
             mobileMode={compactHeaderPreview}
-            canonicalStandardNav={false}
+            canonicalStandardNav
             builderEditable
             activeBuilderNavItemId={activeNavItemId}
             onRequestEditNavItem={onRequestEditNavItem}

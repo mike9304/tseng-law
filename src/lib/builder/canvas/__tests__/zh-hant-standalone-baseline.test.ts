@@ -1,8 +1,10 @@
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { STANDARD_PAGE_DECOMPOSERS } from '../seed-pages';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '../types';
 
-type StandaloneSlug = 'contact' | 'lawyers' | 'reviews' | 'pricing' | 'services';
+type StandaloneSlug = 'about' | 'contact' | 'lawyers' | 'reviews' | 'pricing' | 'services';
 
 type RectExpectation = {
   readonly id: string;
@@ -41,6 +43,16 @@ function expectNode(nodes: Map<string, BuilderCanvasNode>, nodeId: string): Buil
 }
 
 const desktopBaselines: readonly DesktopBaselineCase[] = [
+  {
+    slug: 'about',
+    stageHeight: 4943,
+    rects: [
+      { id: 'page-about-page-header-root', rect: { y: 0, width: 1280, height: 428 } },
+      { id: 'page-about-firm-intro-root', rect: { y: 428, width: 1280, height: 1027 } },
+      { id: 'page-about-attorney-root', rect: { y: 1455, width: 1280, height: 2207 } },
+      { id: 'page-about-contact-root', rect: { y: 3662, width: 1280, height: 1106 } },
+    ],
+  },
   {
     slug: 'contact',
     stageHeight: 3057,
@@ -117,6 +129,7 @@ const desktopBaselines: readonly DesktopBaselineCase[] = [
 ];
 
 const mobileParityCases: readonly MobileParityCase[] = [
+  { slug: 'about', mobileHeight: 8205, tabletHeight: 7498 },
   { slug: 'contact', mobileHeight: 3850, tabletHeight: 4053 },
   { slug: 'lawyers', mobileHeight: 4706, tabletHeight: 4474 },
   { slug: 'reviews', mobileHeight: 1458, tabletHeight: 1599 },
@@ -125,6 +138,7 @@ const mobileParityCases: readonly MobileParityCase[] = [
 ];
 
 const desktopParityCases: readonly DesktopParityCase[] = [
+  { slug: 'about', desktopHeight: 4943 },
   { slug: 'contact', desktopHeight: 3057 },
   { slug: 'lawyers', desktopHeight: 2653 },
   { slug: 'reviews', desktopHeight: 1711 },
@@ -178,6 +192,7 @@ describe('zh-hant standalone decomposed baseline contracts', () => {
       const parityNode = expectNode(nodes, `${slug}-desktop-parity`);
 
       expect(parityNode.kind).toBe('composite');
+      expect(parityNode.parentId).toBeUndefined();
       expect(parityNode.anchorName).toBe(`desktop-parity-standalone-${slug}`);
       expect(parityNode.rect).toEqual({
         x: 0,
@@ -187,4 +202,15 @@ describe('zh-hant standalone decomposed baseline contracts', () => {
       });
     },
   );
+
+  it('routes zh-hant about through the same published standalone parity selectors as the other pages', () => {
+    const publishedPage = readFileSync(join(process.cwd(), 'src/lib/builder/site/public-page.tsx'), 'utf8');
+
+    expect(publishedPage).toContain("['about', 'contact', 'lawyers', 'reviews', 'pricing'].includes(slugPath)");
+    expect(publishedPage).toContain("['about', 'contact', 'lawyers', 'reviews', 'services', 'pricing'].includes(slugPath)");
+    expect(publishedPage).toContain("data-anchor='desktop-parity-standalone-${slugPath}'");
+    expect(publishedPage).toContain("data-anchor^='mobile-parity-standalone-'");
+    expect(publishedPage).not.toContain('mobile-parity-about');
+    expect(publishedPage).not.toContain('desktop-parity-about');
+  });
 });

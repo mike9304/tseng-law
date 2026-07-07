@@ -1017,9 +1017,6 @@ export async function PublishedSitePageView({
         .builder-pub-node[data-anchor^='mobile-parity-home-'] {
           display: none !important;
         }
-        .builder-pub-node[data-anchor='mobile-parity-about'] {
-          display: none !important;
-        }
         .builder-pub-node[data-builder-hover='true']:hover {
           background: var(--builder-hover-background) !important;
           border-color: var(--builder-hover-border-color) !important;
@@ -1480,7 +1477,7 @@ export async function PublishedSitePageView({
         .builder-pub-main .builder-pub-node[data-anchor^='desktop-parity-standalone-'] {
           display: none !important;
         }
-        ${locale === 'zh-hant' && ['contact', 'lawyers', 'reviews', 'pricing'].includes(slugPath) ? `
+        ${locale === 'zh-hant' && ['about', 'contact', 'lawyers', 'reviews', 'pricing'].includes(slugPath) ? `
         @media (min-width: 769px) {
           .builder-pub-main .builder-pub-node[data-anchor='desktop-parity-standalone-${slugPath}'] {
             display: block !important;
@@ -1491,6 +1488,10 @@ export async function PublishedSitePageView({
             margin-left: 0 !important;
             margin-right: 0 !important;
           }
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-firm-intro-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-attorney-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-contact-root'],
           .builder-pub-main > .builder-pub-node[data-node-id='page-contact-page-header-root'],
           .builder-pub-main > .builder-pub-node[data-node-id='page-contact-guide-root'],
           .builder-pub-main > .builder-pub-node[data-node-id='page-contact-contact-root'],
@@ -1594,24 +1595,7 @@ export async function PublishedSitePageView({
             min-height: 1577px !important;
           }
           ` : ''}
-          ${locale === 'zh-hant' && slugPath === 'about' ? `
-          .builder-pub-main .builder-pub-node[data-anchor='mobile-parity-about'] {
-            display: block !important;
-          }
-          .builder-pub-main > .builder-pub-node[data-anchor='mobile-parity-about'] {
-            width: calc(100% + 32px) !important;
-            max-width: none !important;
-            margin-left: -16px !important;
-            margin-right: -16px !important;
-          }
-          .builder-pub-main > .builder-pub-node[data-node-id='page-about-page-header-root'],
-          .builder-pub-main > .builder-pub-node[data-node-id='page-about-firm-intro-root'],
-          .builder-pub-main > .builder-pub-node[data-node-id='page-about-attorney-root'],
-          .builder-pub-main > .builder-pub-node[data-node-id='page-about-contact-root'] {
-            display: none !important;
-          }
-          ` : ''}
-          ${locale === 'zh-hant' && ['contact', 'lawyers', 'reviews', 'services', 'pricing'].includes(slugPath) ? `
+          ${locale === 'zh-hant' && ['about', 'contact', 'lawyers', 'reviews', 'services', 'pricing'].includes(slugPath) ? `
           .builder-pub-main .builder-pub-node[data-anchor^='mobile-parity-standalone-'] {
             display: block !important;
           }
@@ -1621,6 +1605,10 @@ export async function PublishedSitePageView({
             margin-left: -16px !important;
             margin-right: -16px !important;
           }
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-firm-intro-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-attorney-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-contact-root'],
           .builder-pub-main > .builder-pub-node[data-node-id='page-contact-page-header-root'],
           .builder-pub-main > .builder-pub-node[data-node-id='page-contact-guide-root'],
           .builder-pub-main > .builder-pub-node[data-node-id='page-contact-contact-root'],

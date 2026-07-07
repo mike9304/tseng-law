@@ -1716,6 +1716,7 @@ function buildMeasuredLegacyCompositePageCanvas(
 }
 
 const ZH_HANT_STANDALONE_MOBILE_PARITY_KEYS = new Set<LegacyCompositeKey>([
+  'legacy-page-about',
   'legacy-page-services',
   'legacy-page-contact',
   'legacy-page-lawyers',
@@ -1724,6 +1725,7 @@ const ZH_HANT_STANDALONE_MOBILE_PARITY_KEYS = new Set<LegacyCompositeKey>([
 ]);
 
 const ZH_HANT_STANDALONE_DESKTOP_PARITY_KEYS = new Set<LegacyCompositeKey>([
+  'legacy-page-about',
   'legacy-page-contact',
   'legacy-page-lawyers',
   'legacy-page-pricing',
@@ -1815,7 +1817,13 @@ function buildAboutCompositePageCanvas(locale: Locale): BuilderCanvasDocument {
 }
 
 function buildAboutPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createDecomposedPageCanvasDocument(locale, createAboutPageDecomposedNodes(0, locale, 0), getAboutPageRootHeight(locale));
+  const document = createDecomposedPageCanvasDocument(
+    locale,
+    createAboutPageDecomposedNodes(0, locale, 0),
+    getAboutPageRootHeight(locale),
+  );
+  const withMobileParity = withZhHantStandaloneMobileParity(document, 'legacy-page-about');
+  return withZhHantStandaloneDesktopParity(withMobileParity, 'legacy-page-about');
 }
 
 function buildServicesCompositePageCanvas(locale: Locale): BuilderCanvasDocument {

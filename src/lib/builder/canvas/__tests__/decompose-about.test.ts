@@ -28,18 +28,20 @@ describe('standard about page decomposer', () => {
     expect(doc.stageHeight - contentBottom).toBe(175);
   });
 
-  it('preserves the zh-hant mobile and tablet legacy parity overlay', () => {
+  it('uses the zh-hant standalone legacy parity overlays', () => {
     const doc = STANDARD_PAGE_DECOMPOSERS.about('zh-hant');
     const nodes = nodesById(doc);
     const desktopParityNode = expectNode(nodes, 'about-desktop-parity');
     const parityNode = expectNode(nodes, 'about-mobile-parity');
 
-    expect(expectNode(nodes, 'page-about-page-header-root').zIndex).toBe(380);
-    expect(desktopParityNode.parentId).toBe('page-about-page-header-root');
-    expect(desktopParityNode.rect).toMatchObject({ x: 0, y: 0, width: 1280, height: 428 });
-    expect(desktopParityNode.responsive?.mobile?.hidden).toBe(true);
-    expect(desktopParityNode.responsive?.tablet?.hidden).toBe(true);
-    expect(parityNode.responsive?.mobile?.rect).toMatchObject({ x: 0, width: 375, height: 8205 });
-    expect(parityNode.responsive?.tablet?.rect).toMatchObject({ x: 0, width: 768, height: 7498 });
+    expect(expectNode(nodes, 'page-about-page-header-root').zIndex).toBe(0);
+    expect(desktopParityNode.parentId).toBeUndefined();
+    expect(desktopParityNode.anchorName).toBe('desktop-parity-standalone-about');
+    expect(desktopParityNode.rect).toEqual({ x: 0, y: 0, width: 1280, height: 4943 });
+    expect(parityNode.parentId).toBeUndefined();
+    expect(parityNode.anchorName).toBe('mobile-parity-standalone-about');
+    expect(parityNode.rect).toEqual({ x: 0, y: 0, width: 1, height: 1 });
+    expect(parityNode.responsive?.mobile?.rect).toEqual({ x: 0, y: 0, width: 375, height: 8205 });
+    expect(parityNode.responsive?.tablet?.rect).toEqual({ x: 0, y: 0, width: 768, height: 7498 });
   });
 });

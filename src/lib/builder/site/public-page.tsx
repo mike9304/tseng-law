@@ -1477,6 +1477,17 @@ export async function PublishedSitePageView({
         .builder-pub-main .builder-pub-node[data-anchor^='desktop-parity-standalone-'] {
           display: none !important;
         }
+        ${locale === 'zh-hant' && !slugPath ? `
+        /* ≥1360px the case-results H2 grows to three lines (viewport-scaled
+           type) and its fixed-rect body paragraph gets invaded by ~10px.
+           Push the body down only on wide viewports; 1280 geometry (the
+           parity baseline) is untouched. */
+        @media (min-width: 1360px) {
+          .builder-pub-main .builder-pub-node[data-node-id='home-case-results-desc'] {
+            top: 224px !important;
+          }
+        }
+        ` : ''}
         ${locale === 'zh-hant' && ['about', 'contact', 'lawyers', 'reviews', 'pricing'].includes(slugPath) ? `
         @media (min-width: 769px) {
           .builder-pub-main .builder-pub-node[data-anchor='desktop-parity-standalone-${slugPath}'] {

@@ -66,7 +66,7 @@ const desktopBaselines: readonly DesktopBaselineCase[] = [
   },
   {
     slug: 'lawyers',
-    stageHeight: 2653,
+    stageHeight: 2635,
     rects: [
       { id: 'page-lawyers-page-header-root', rect: { y: 0, width: 1280, height: 428 } },
       { id: 'page-lawyers-attorney-root', rect: { y: 428, width: 1280, height: 2203 } },

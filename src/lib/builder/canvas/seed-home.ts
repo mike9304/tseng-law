@@ -726,13 +726,17 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
       );
       if (input.locale === 'ko') {
         setNodeRect(nodesById, 'home-hero-inner', { y: 161 });
-        setNodeRect(nodesById, 'home-hero-search-wrapper', { x: 51, y: 713, width: 760 });
+        // The published render pins the search bar via CSS (bottom:28px with
+        // its form straddling the hero/insights boundary). Keep the document
+        // rect at that straddled position so the editor canvas shows the bar
+        // where visitors actually see it instead of tucked inside the hero.
+        setNodeRect(nodesById, 'home-hero-search-wrapper', { x: 51, y: 743, width: 760 });
         setNodeRect(nodesById, 'home-hero-search-container', { width: 760 });
         setNodeRect(nodesById, 'home-hero-scroll-arrow', { y: 700 });
       } else {
         setNodeRect(nodesById, 'home-hero-inner', { y: 175 });
         setNodeRect(nodesById, 'home-hero-links', { y: 286 });
-        setNodeRect(nodesById, 'home-hero-search-wrapper', { x: 51, y: 712, width: 1151 });
+        setNodeRect(nodesById, 'home-hero-search-wrapper', { x: 51, y: 743, width: 1151 });
         setNodeRect(nodesById, 'home-hero-scroll-arrow', { y: input.height - 74 });
       }
       break;

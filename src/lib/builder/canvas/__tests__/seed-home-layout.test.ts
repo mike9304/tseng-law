@@ -296,7 +296,7 @@ describe('home seed canvas layout', () => {
 
     expect(nodesById.get('home-hero-inner')?.rect).toMatchObject({ x: 51, y: 175, width: 1178, height: 483 });
     expect(nodesById.get('home-hero-links')?.rect).toMatchObject({ x: 0, y: 286, width: 260, height: 32 });
-    expect(nodesById.get('home-hero-search-wrapper')?.rect).toMatchObject({ x: 51, y: 712, width: 1151, height: 62 });
+    expect(nodesById.get('home-hero-search-wrapper')?.rect).toMatchObject({ x: 51, y: 743, width: 1151, height: 62 });
 
     const overlay = nodesById.get('home-hero-overlay');
     expect(overlay).toBeDefined();
@@ -395,7 +395,7 @@ describe('home seed canvas layout', () => {
       ['home-hero-title', 217],
       ['home-hero-subtitle', 408],
       ['home-hero-links', 499],
-      ['home-hero-search-input', 713],
+      ['home-hero-search-input', 743],
       ['home-insights-title', 917],
       ['home-insights-featured-title', 1577],
       ['home-services-title', 2256],

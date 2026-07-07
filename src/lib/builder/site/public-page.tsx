@@ -1499,10 +1499,18 @@ export async function PublishedSitePageView({
             ${locale === 'zh-hant' ? `width: 100% !important;
             max-width: none !important;
             margin-left: 0 !important;
-            margin-right: 0 !important;` : `/* ko/en live composite roots render at their 1280 rect width,
-            centered — the overlay must match (zh live is full-bleed). */
-            margin-left: auto !important;
-            margin-right: auto !important;`}
+            margin-right: 0 !important;` : (() => {
+              // ko/en live composite roots render at their rect width (1280),
+              // centered, so at wider viewports the section bands keep the
+              // live gutters. Top-level flow rendering emits width:100%, so
+              // the rect width must be pinned explicitly (margins alone were
+              // measured to change nothing at 1440).
+              const overlayWidth = canvas.nodes.find((node) => node.anchorName === `desktop-parity-standalone-${slugPath}`)?.rect.width;
+              return `margin-left: auto !important;
+            margin-right: auto !important;${overlayWidth ? `
+            width: ${overlayWidth}px !important;
+            max-width: 100% !important;` : ''}`;
+            })()}
             ${(() => {
               // The live composite root renders at its measured FIXED height
               // (content may overflow into the bottom whitespace at wide

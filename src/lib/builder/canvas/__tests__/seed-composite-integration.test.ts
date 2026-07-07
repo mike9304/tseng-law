@@ -1,3 +1,4 @@
+import { isStandalonePublishParityAnchor } from '../decomposable-slugs';
 import { afterAll, describe, expect, it } from 'vitest';
 import { rm } from 'fs/promises';
 import path from 'path';
@@ -75,7 +76,11 @@ describe('seedSitePages end-to-end publishes live-reflecting standard page compo
     expect(publishedComposite?.content.componentKey).toBe('legacy-page-services');
     expect(draft.nodes.some((node) => node.id === 'page-services-page-header-root')).toBe(true);
     expect(draft.nodes.some((node) => node.id === 'home-services-root')).toBe(true);
-    expect(draft.nodes.some((node) => node.kind === 'composite' && node.content.componentKey === 'legacy-page-services')).toBe(false);
+    // Standalone publish-parity overlays are the only composites allowed in
+    // the editable draft (hidden in the editor, shown on publish).
+    expect(draft.nodes.some((node) => node.kind === 'composite'
+      && node.content.componentKey === 'legacy-page-services'
+      && !isStandalonePublishParityAnchor(node.anchorName))).toBe(false);
   }, 30_000);
 
   it('repairs a composite services draft back to the editable decomposed services draft', async () => {
@@ -124,7 +129,7 @@ describe('seedSitePages end-to-end publishes live-reflecting standard page compo
 
     const poisonedPublished = await readPageCanvas(POISONED_SITE_ID, aboutMeta.pageId, 'published');
     expect(poisonedPublished?.nodes.length).toBeGreaterThan(LEGACY_COMPOSITE_NODE_COUNT);
-    expect(poisonedPublished?.nodes.some((node) => node.kind === 'composite')).toBe(false);
+    expect(poisonedPublished?.nodes.some((node) => node.kind === 'composite' && !isStandalonePublishParityAnchor(node.anchorName))).toBe(false);
     expect(poisonedPublished?.updatedBy).toBe(poisoned.updatedBy);
 
     await seedSitePages(POISONED_SITE_ID, LOCALE);

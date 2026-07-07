@@ -1490,7 +1490,7 @@ export async function PublishedSitePageView({
           }
         }
         ` : ''}
-        ${locale === 'zh-hant' && ['about', 'contact', 'lawyers', 'reviews', 'pricing'].includes(slugPath) ? `
+        ${['about', 'contact', 'lawyers', 'reviews', 'pricing'].includes(slugPath) ? `
         @media (min-width: 769px) {
           .builder-pub-main .builder-pub-node[data-anchor='desktop-parity-standalone-${slugPath}'] {
             display: block !important;
@@ -1500,6 +1500,25 @@ export async function PublishedSitePageView({
             max-width: none !important;
             margin-left: 0 !important;
             margin-right: 0 !important;
+            ${(() => {
+              // The live composite root renders at its measured FIXED height
+              // (content may overflow into the bottom whitespace at wide
+              // viewports — ko about grows +49px at 1440). Top-level flow
+              // rendering only emits min-height, so pin the overlay to its
+              // rect height to reproduce the composite page byte-for-byte.
+              const overlayHeight = canvas.nodes.find((node) => node.anchorName === `desktop-parity-standalone-${slugPath}`)?.rect.height;
+              return overlayHeight ? `height: ${overlayHeight}px !important;
+            min-height: ${overlayHeight}px !important;
+            max-height: ${overlayHeight}px !important;` : '';
+            })()}
+          }
+          /* The overlay's fixed height defines the page height exactly like
+             the live composite root does — the hidden decomposed tree's stage
+             must not floor the main box beyond it (it left a 75px blank tail
+             on ko about/pricing: stage 5018 vs overlay bottom 5054). */
+          .builder-pub-main:has(> .builder-pub-node[data-anchor='desktop-parity-standalone-${slugPath}']) {
+            min-height: 0 !important;
+            height: auto !important;
           }
           .builder-pub-main > .builder-pub-node[data-node-id='page-about-page-header-root'],
           .builder-pub-main > .builder-pub-node[data-node-id='page-about-firm-intro-root'],
@@ -1608,7 +1627,7 @@ export async function PublishedSitePageView({
             min-height: 1577px !important;
           }
           ` : ''}
-          ${locale === 'zh-hant' && ['about', 'contact', 'lawyers', 'reviews', 'services', 'pricing'].includes(slugPath) ? `
+          ${['about', 'contact', 'lawyers', 'reviews', 'services', 'pricing'].includes(slugPath) ? `
           .builder-pub-main .builder-pub-node[data-anchor^='mobile-parity-standalone-'] {
             display: block !important;
           }

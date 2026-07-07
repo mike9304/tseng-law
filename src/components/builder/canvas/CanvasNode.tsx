@@ -6,6 +6,7 @@ import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type {
   BuilderCanvasNode,
 } from '@/lib/builder/canvas/types';
+import { isStandalonePublishParityAnchor } from '@/lib/builder/canvas/decomposable-slugs';
 import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
 import {
   applyBuilderDatasetPreviewBindingToNode,
@@ -542,6 +543,14 @@ const CanvasNode = memo(function CanvasNode({
     && node.kind === 'composite'
     && nodesById.has('home-insights-list-wrap')
     && nodesById.has('home-insights-item-0-title');
+  // Standalone publish-parity overlays (desktop/mobile-parity-standalone-*)
+  // exist ONLY for the published render: they replicate the whole legacy page
+  // pixel-true above the decomposed nodes. In the editor they would cover the
+  // canvas and capture every click (measured on zh about: 1190×4597 overlay,
+  // pointer-events auto), so the canvas never renders them — the decomposed
+  // nodes below are the editing surface.
+  const hideStandalonePublishParityOverlay = node.kind === 'composite'
+    && isStandalonePublishParityAnchor(node.anchorName);
   const findNodeOrAncestor = (startId: string, pattern: RegExp) => {
     let cursor: string | null = startId;
     while (cursor) {
@@ -1235,7 +1244,7 @@ const CanvasNode = memo(function CanvasNode({
     theme,
   });
 
-  if (isHiddenAtViewport || hideRedundantLegacyInsightsComposite) {
+  if (isHiddenAtViewport || hideRedundantLegacyInsightsComposite || hideStandalonePublishParityOverlay) {
     return null;
   }
 
@@ -1270,6 +1279,11 @@ const CanvasNode = memo(function CanvasNode({
         if (event.metaKey || event.ctrlKey || event.shiftKey) return;
         if (event.target === event.currentTarget) return;
         if (isSelectionChromePointerTarget(event.target)) return;
+        // Touch: a selected top-level section spans the whole viewport width,
+        // so on phones it doubles as the scroll surface — body presses must
+        // scroll, not drag the section (sections still move via inspector or
+        // desktop drag).
+        if (event.pointerType === 'touch' && isFlowSection) return;
         scheduleTouchContextMenu(event);
         onMoveStart(node.id, event);
         event.stopPropagation();
@@ -1298,8 +1312,16 @@ const CanvasNode = memo(function CanvasNode({
         if (!isInteractive) return;
         if (event.button !== 0) return;
         const additive = event.metaKey || event.ctrlKey || event.shiftKey;
+        // Touch: a finger landing on an UNSELECTED node is far more often a
+        // scroll gesture than a move intent — starting the one-gesture drag
+        // here made phone scrolling fling arbitrary nodes off their sections
+        // (measured: 14 nodes displaced up to 581px in one phone session).
+        // On touch the first tap only selects; dragging requires the node
+        // (not an ancestor) to already be selected, which the capture-phase
+        // handler above covers.
+        const isTouchPointer = event.pointerType === 'touch';
         syncInteractivePreviewForSelection();
-        if (!additive) {
+        if (!additive && !isTouchPointer) {
           const storeState = useBuilderCanvasStore.getState();
           let selectedAncestorId = findSelectedNodeOrAncestorId(node.id, storeState.selectedNodeIdSet, storeState.nodesById);
           if (!selectedAncestorId || selectedAncestorId === node.id) {
@@ -1313,6 +1335,11 @@ const CanvasNode = memo(function CanvasNode({
         }
         if (additive || node.locked) {
           onSelect(node.id, additive);
+          return;
+        }
+        if (isTouchPointer) {
+          scheduleTouchContextMenu(event);
+          onSelect(node.id, false);
           return;
         }
         scheduleTouchContextMenu(event);

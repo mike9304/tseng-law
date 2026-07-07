@@ -13,7 +13,8 @@ describe('createAttorneyProfileSectionNodes', () => {
     const nodesById = new Map(document.nodes.map((node) => [node.id, node]));
 
     expect(document.stageHeight).toBe(2653);
-    expect(document.nodes).toHaveLength(124);
+    // 124 decomposed nodes + the 2 standalone publish-parity overlays (desktop/mobile)
+    expect(document.nodes).toHaveLength(126);
     expect(nodesById.get('page-lawyers-attorney-root')?.rect).toMatchObject({
       y: 428,
       width: 1280,

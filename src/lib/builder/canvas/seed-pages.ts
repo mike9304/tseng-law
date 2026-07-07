@@ -6,6 +6,7 @@ import {
   type BuilderCanvasDocument,
   createDefaultCanvasNodeStyle,
 } from '@/lib/builder/canvas/types';
+import { isStandalonePublishParityAnchor } from './decomposable-slugs';
 import { isTopLevelFlowSection } from './flow';
 import { legalPageContent } from '@/data/legal-pages';
 import { pageCopy } from '@/data/page-copy';
@@ -1432,6 +1433,11 @@ function createDecomposedPageCanvasDocument(
 }
 
 function isLegacyPageCompositeNode(node: BuilderCanvasNode): node is BuilderCompositeCanvasNode {
+  // Standalone publish-parity overlays are also legacy-page composites, but
+  // they ride ON TOP of a decomposed tree — counting them here would make a
+  // decomposed page pass the live-composite shape checks and silently disable
+  // the seed repair path.
+  if (isStandalonePublishParityAnchor(node.anchorName)) return false;
   return node.kind === 'composite' && node.content.componentKey.startsWith(LEGACY_PAGE_COMPOSITE_PREFIX);
 }
 
@@ -1745,7 +1751,7 @@ function buildMeasuredLegacyCompositePageCanvas(
   return buildLegacyCompositePageCanvas(locale, componentKey, geometry.desktop, geometry.rootId);
 }
 
-const ZH_HANT_STANDALONE_MOBILE_PARITY_KEYS = new Set<LegacyCompositeKey>([
+const STANDALONE_MOBILE_PARITY_KEYS = new Set<LegacyCompositeKey>([
   'legacy-page-about',
   'legacy-page-services',
   'legacy-page-contact',
@@ -1754,7 +1760,7 @@ const ZH_HANT_STANDALONE_MOBILE_PARITY_KEYS = new Set<LegacyCompositeKey>([
   'legacy-page-reviews',
 ]);
 
-const ZH_HANT_STANDALONE_DESKTOP_PARITY_KEYS = new Set<LegacyCompositeKey>([
+const STANDALONE_DESKTOP_PARITY_KEYS = new Set<LegacyCompositeKey>([
   'legacy-page-about',
   'legacy-page-contact',
   'legacy-page-lawyers',
@@ -1762,12 +1768,12 @@ const ZH_HANT_STANDALONE_DESKTOP_PARITY_KEYS = new Set<LegacyCompositeKey>([
   'legacy-page-reviews',
 ]);
 
-function createZhHantStandaloneDesktopParityNode(
+function createStandaloneDesktopParityNode(
   document: BuilderCanvasDocument,
   componentKey: LegacyCompositeKey,
 ): BuilderCanvasNode | null {
   const geometry = LEGACY_COMPOSITE_GEOMETRY[componentKey];
-  if (!geometry || !ZH_HANT_STANDALONE_DESKTOP_PARITY_KEYS.has(componentKey)) return null;
+  if (!geometry || !STANDALONE_DESKTOP_PARITY_KEYS.has(componentKey)) return null;
   const slug = componentKey.replace('legacy-page-', '');
 
   return {
@@ -1787,12 +1793,12 @@ function createZhHantStandaloneDesktopParityNode(
   };
 }
 
-function createZhHantStandaloneMobileParityNode(
+function createStandaloneMobileParityNode(
   document: BuilderCanvasDocument,
   componentKey: LegacyCompositeKey,
 ): BuilderCanvasNode | null {
   const geometry = LEGACY_COMPOSITE_GEOMETRY[componentKey];
-  if (!geometry || !ZH_HANT_STANDALONE_MOBILE_PARITY_KEYS.has(componentKey)) return null;
+  if (!geometry || !STANDALONE_MOBILE_PARITY_KEYS.has(componentKey)) return null;
   const slug = componentKey.replace('legacy-page-', '');
 
   return {
@@ -1816,12 +1822,17 @@ function createZhHantStandaloneMobileParityNode(
   };
 }
 
-function withZhHantStandaloneDesktopParity(
+// Applied to ALL locales: the published page shows this composite replica
+// (pixel-true, it renders the real legacy component) while the decomposed
+// nodes stay the editing surface — the editor canvas never renders
+// standalone-parity anchors (CanvasNode guard). Originally zh-hant-only;
+// generalized after the ko T7 gate measured decomposed ko publishes at
+// 5.6–14.7% diff vs live (about Δh +75), which made granular publish unsafe.
+function withStandaloneDesktopParity(
   document: BuilderCanvasDocument,
   componentKey: LegacyCompositeKey,
 ): BuilderCanvasDocument {
-  if (document.locale !== 'zh-hant') return document;
-  const parityNode = createZhHantStandaloneDesktopParityNode(document, componentKey);
+  const parityNode = createStandaloneDesktopParityNode(document, componentKey);
   if (!parityNode) return document;
   return {
     ...document,
@@ -1829,12 +1840,11 @@ function withZhHantStandaloneDesktopParity(
   };
 }
 
-function withZhHantStandaloneMobileParity(
+function withStandaloneMobileParity(
   document: BuilderCanvasDocument,
   componentKey: LegacyCompositeKey,
 ): BuilderCanvasDocument {
-  if (document.locale !== 'zh-hant') return document;
-  const parityNode = createZhHantStandaloneMobileParityNode(document, componentKey);
+  const parityNode = createStandaloneMobileParityNode(document, componentKey);
   if (!parityNode) return document;
   return {
     ...document,
@@ -1852,8 +1862,8 @@ function buildAboutPageCanvas(locale: Locale): BuilderCanvasDocument {
     createAboutPageDecomposedNodes(0, locale, 0),
     getAboutPageRootHeight(locale),
   );
-  const withMobileParity = withZhHantStandaloneMobileParity(document, 'legacy-page-about');
-  return withZhHantStandaloneDesktopParity(withMobileParity, 'legacy-page-about');
+  const withMobileParity = withStandaloneMobileParity(document, 'legacy-page-about');
+  return withStandaloneDesktopParity(withMobileParity, 'legacy-page-about');
 }
 
 function buildServicesCompositePageCanvas(locale: Locale): BuilderCanvasDocument {
@@ -1861,7 +1871,7 @@ function buildServicesCompositePageCanvas(locale: Locale): BuilderCanvasDocument
 }
 
 function buildServicesPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return withZhHantStandaloneMobileParity(
+  return withStandaloneMobileParity(
     createDecomposedPageCanvasDocument(locale, createServicesPageDecomposedNodes(0, locale, 0), getServicesPageRootHeight(locale)),
     'legacy-page-services',
   );
@@ -1877,9 +1887,9 @@ function buildContactPageCanvas(locale: Locale): BuilderCanvasDocument {
     createContactPageDecomposedNodes(0, locale, 0),
     CONTACT_PAGE_ROOT_HEIGHT,
   );
-  const withMobileParity = withZhHantStandaloneMobileParity(document, 'legacy-page-contact');
+  const withMobileParity = withStandaloneMobileParity(document, 'legacy-page-contact');
   const withDesktopBaseline = locale === 'zh-hant' ? applyZhHantContactDesktopBaseline(withMobileParity) : withMobileParity;
-  return withZhHantStandaloneDesktopParity(withDesktopBaseline, 'legacy-page-contact');
+  return withStandaloneDesktopParity(withDesktopBaseline, 'legacy-page-contact');
 }
 
 function buildLawyersCompositePageCanvas(locale: Locale): BuilderCanvasDocument {
@@ -1887,12 +1897,12 @@ function buildLawyersCompositePageCanvas(locale: Locale): BuilderCanvasDocument 
 }
 
 function buildLawyersPageCanvas(locale: Locale): BuilderCanvasDocument {
-  const document = withZhHantStandaloneMobileParity(
+  const document = withStandaloneMobileParity(
     createDecomposedPageCanvasDocument(locale, createLawyersPageDecomposedNodes(0, locale, 0), getLawyersPageRootHeight(locale)),
     'legacy-page-lawyers',
   );
   const withDesktopBaseline = locale === 'zh-hant' ? applyZhHantLawyersDesktopBaseline(document) : document;
-  return withZhHantStandaloneDesktopParity(withDesktopBaseline, 'legacy-page-lawyers');
+  return withStandaloneDesktopParity(withDesktopBaseline, 'legacy-page-lawyers');
 }
 
 export function buildFaqCompositePageCanvas(locale: Locale): BuilderCanvasDocument {
@@ -1913,13 +1923,13 @@ function buildPricingPageCanvas(locale: Locale): BuilderCanvasDocument {
     createPricingPageDecomposedNodes(0, locale, 0),
     getPricingPageRootHeight(locale),
   );
-  const withMobileParity = withZhHantStandaloneMobileParity(document, 'legacy-page-pricing');
+  const withMobileParity = withStandaloneMobileParity(document, 'legacy-page-pricing');
   const withDesktopBaseline = locale === 'zh-hant'
     ? applyZhHantPricingDesktopBaseline(withMobileParity)
     : locale === 'ko'
       ? applyKoPricingDesktopEditorBaseline(withMobileParity)
       : withMobileParity;
-  return withZhHantStandaloneDesktopParity(withDesktopBaseline, 'legacy-page-pricing');
+  return withStandaloneDesktopParity(withDesktopBaseline, 'legacy-page-pricing');
 }
 
 function buildReviewsPageCanvas(locale: Locale): BuilderCanvasDocument {
@@ -1928,8 +1938,8 @@ function buildReviewsPageCanvas(locale: Locale): BuilderCanvasDocument {
     createReviewsPageDecomposedNodes(0, locale, 0),
     REVIEWS_PAGE_ROOT_HEIGHT,
   );
-  const withMobileParity = withZhHantStandaloneMobileParity(document, 'legacy-page-reviews');
-  return withZhHantStandaloneDesktopParity(withMobileParity, 'legacy-page-reviews');
+  const withMobileParity = withStandaloneMobileParity(document, 'legacy-page-reviews');
+  return withStandaloneDesktopParity(withMobileParity, 'legacy-page-reviews');
 }
 
 export function buildReviewsCompositePageCanvas(locale: Locale): BuilderCanvasDocument {

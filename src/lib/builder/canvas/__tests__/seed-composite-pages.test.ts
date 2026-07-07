@@ -9,7 +9,7 @@ import {
 } from '../seed-pages';
 import { buildResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
 import { builderCanvasDocumentSchema, type BuilderCanvasDocument, type BuilderCanvasNode } from '../types';
-import { DECOMPOSABLE_PAGE_SLUGS } from '../decomposable-slugs';
+import { DECOMPOSABLE_PAGE_SLUGS, isStandalonePublishParityAnchor } from '../decomposable-slugs';
 import { computeTopLevelFlowSectionMetrics } from '../flow';
 import { REQUIRED_STANDARD_PAGE_SLUGS } from '@/lib/builder/site/standard-pages';
 import type { Locale } from '@/lib/locales';
@@ -109,7 +109,10 @@ describe('legacy composite page seeds reflect the live site', () => {
     expect(legacyHelper.nodes).toHaveLength(2);
 
     expect(editable.nodes.length).toBeGreaterThan(2);
-    expect(editable.nodes.some((node) => node.kind === 'composite')).toBe(false);
+    // The only composite nodes in the editable tree are the standalone
+    // publish-parity overlays (hidden in the editor, shown on publish).
+    expect(editable.nodes.some((node) => node.kind === 'composite' && !isStandalonePublishParityAnchor(node.anchorName))).toBe(false);
+    expect(editable.nodes.some((node) => node.kind === 'composite' && isStandalonePublishParityAnchor(node.anchorName))).toBe(true);
     expect(editable.nodes.some((node) => node.id === 'page-reviews-form-wrap')).toBe(true);
   });
 

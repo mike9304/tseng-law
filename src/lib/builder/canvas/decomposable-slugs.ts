@@ -21,3 +21,14 @@ export const DECOMPOSABLE_PAGE_SLUGS = [
   'privacy',
   'disclaimer',
 ] as const;
+
+// Standalone publish-parity overlays (seed-pages withStandalone*Parity) are
+// composite nodes that exist ONLY for the published render: they replicate the
+// legacy page pixel-true above the decomposed nodes. Both the editor canvas
+// (which must never render them) and the seed repair predicates (which must
+// not mistake them for a live-composite page shape) share this check.
+export function isStandalonePublishParityAnchor(anchorName: string | undefined): boolean {
+  return typeof anchorName === 'string'
+    && (anchorName.startsWith('desktop-parity-standalone-')
+      || anchorName.startsWith('mobile-parity-standalone-'));
+}

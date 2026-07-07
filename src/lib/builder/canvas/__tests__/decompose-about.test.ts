@@ -13,6 +13,33 @@ function expectNode(nodes: Map<string, BuilderCanvasNode>, id: string): BuilderC
 }
 
 describe('standard about page decomposer', () => {
+  it('keeps ko attorney source captions below education and experience rows', () => {
+    const doc = STANDARD_PAGE_DECOMPOSERS.about('ko');
+    const nodes = nodesById(doc);
+    const cardIds = [
+      'page-about-lead-card',
+      'page-about-staff-card-0',
+      'page-about-staff-card-1',
+      'page-about-partner-card',
+    ] as const;
+
+    for (const cardId of cardIds) {
+      const source = expectNode(nodes, `${cardId}-source`);
+      const education = expectNode(nodes, `${cardId}-education-section`);
+      const experience = expectNode(nodes, `${cardId}-experience-section`);
+      const actions = expectNode(nodes, `${cardId}-actions`);
+      const card = expectNode(nodes, cardId);
+      const sourceFloor = Math.max(
+        education.rect.y + education.rect.height,
+        experience.rect.y + experience.rect.height,
+      );
+
+      expect(source.rect.y - sourceFloor, cardId).toBeGreaterThanOrEqual(32);
+      expect(actions.rect.y).toBeGreaterThanOrEqual(source.rect.y + source.rect.height);
+      expect(actions.rect.y + actions.rect.height).toBeLessThanOrEqual(card.rect.height);
+    }
+  });
+
   it('keeps zh-hant desktop height aligned to the legacy composite reserve without moving sections', () => {
     const doc = STANDARD_PAGE_DECOMPOSERS.about('zh-hant');
     const nodes = nodesById(doc);

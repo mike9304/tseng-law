@@ -317,6 +317,22 @@ describe('home seed canvas layout', () => {
     expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 198, width: 1178, height: 422 });
   });
 
+  it('keeps the zh-hant case result title clear of the body copy', () => {
+    const doc = createHomePageCanvasDocument('zh-hant');
+    const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
+    const title = absoluteRect(nodesById, 'home-case-results-title');
+    const desc = absoluteRect(nodesById, 'home-case-results-desc');
+
+    expect(nodesById.get('home-case-results-label')?.rect).toMatchObject({ x: 78 });
+    expect(nodesById.get('home-case-results-title')?.rect).toMatchObject({ x: 78, y: 172, width: 720, height: 172 });
+    expect(nodesById.get('home-case-results-divider')?.rect).toMatchObject({ x: 78, y: 344 });
+    expect(nodesById.get('home-case-results-desc')?.rect).toMatchObject({ x: 78, y: 356, width: 720, height: 80 });
+    expect(nodesById.get('home-case-results-summary')?.rect).toMatchObject({ x: 78, y: 446 });
+    expect(nodesById.get('home-case-results-cta')?.rect).toMatchObject({ x: 78, y: 516 });
+    expect(rectsOverlap(title, desc)).toBe(false);
+    expect(desc.y - (title.y + title.height)).toBeGreaterThanOrEqual(12);
+  });
+
   it('matches zh-hant attorney decomposition to the composite split portrait geometry', () => {
     const doc = createHomePageCanvasDocument('zh-hant');
     const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));

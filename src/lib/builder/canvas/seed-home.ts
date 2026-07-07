@@ -821,6 +821,12 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
       } else {
         setNodeRect(nodesById, 'home-case-results-content', { height: input.height });
         shiftDirectChildrenY(input.nodes, 'home-case-results-content', 122);
+        setNodeRect(nodesById, 'home-case-results-label', { x: 78 });
+        setNodeRect(nodesById, 'home-case-results-title', { x: 78, height: 172 });
+        setNodeRect(nodesById, 'home-case-results-divider', { x: 78, y: 344 });
+        setNodeRect(nodesById, 'home-case-results-desc', { x: 78, y: 356 });
+        setNodeRect(nodesById, 'home-case-results-summary', { x: 78, y: 446 });
+        setNodeRect(nodesById, 'home-case-results-cta', { x: 78, y: 516 });
       }
       break;
     case 'faq':

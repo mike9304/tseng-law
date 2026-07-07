@@ -882,6 +882,36 @@ function repairPricingResponsiveLayout(nodes: BuilderCanvasNode[]): void {
   repairPricingTabletLayout(nodesById);
 }
 
+function applyKoPricingDesktopEditorBaseline(document: BuilderCanvasDocument): BuilderCanvasDocument {
+  const nodesById = new Map(document.nodes.map((node) => [node.id, node]));
+
+  [0, 3].forEach((index) => {
+    setDesktopRect(nodesById, `page-pricing-card-${index}-price`, {
+      x: 24,
+      y: 161,
+      width: 228,
+      height: 72,
+    });
+    setDesktopRect(nodesById, `page-pricing-card-${index}-amount`, {
+      x: 0,
+      y: 0,
+      width: 228,
+      height: 48,
+    });
+    setDesktopRect(nodesById, `page-pricing-card-${index}-unit`, {
+      x: 0,
+      y: 50,
+      width: 228,
+      height: 22,
+    });
+    setDesktopRect(nodesById, `page-pricing-card-${index}-details`, {
+      y: 260,
+    });
+  });
+
+  return document;
+}
+
 function repairPageHeaderMobileLayout(nodes: BuilderCanvasNode[]): void {
   const nodesById = new Map(nodes.map((node) => [node.id, node]));
   const roots = nodes.filter((node) => node.id.endsWith('-page-header-root'));
@@ -1884,7 +1914,11 @@ function buildPricingPageCanvas(locale: Locale): BuilderCanvasDocument {
     getPricingPageRootHeight(locale),
   );
   const withMobileParity = withZhHantStandaloneMobileParity(document, 'legacy-page-pricing');
-  const withDesktopBaseline = locale === 'zh-hant' ? applyZhHantPricingDesktopBaseline(withMobileParity) : withMobileParity;
+  const withDesktopBaseline = locale === 'zh-hant'
+    ? applyZhHantPricingDesktopBaseline(withMobileParity)
+    : locale === 'ko'
+      ? applyKoPricingDesktopEditorBaseline(withMobileParity)
+      : withMobileParity;
   return withZhHantStandaloneDesktopParity(withDesktopBaseline, 'legacy-page-pricing');
 }
 

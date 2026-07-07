@@ -17,6 +17,30 @@ function rect(node: BuilderCanvasNode | undefined, viewport: Viewport): BuilderC
 }
 
 describe('pricing page responsive decomposition', () => {
+  it('keeps ko desktop NT dollar prices on one line before the bullet list', () => {
+    const doc = STANDARD_PAGE_DECOMPOSERS.pricing('ko');
+    const nodes = nodesById(doc);
+
+    for (const index of [0, 3] as const) {
+      const price = nodes.get(`page-pricing-card-${index}-price`);
+      const amount = nodes.get(`page-pricing-card-${index}-amount`);
+      const unit = nodes.get(`page-pricing-card-${index}-unit`);
+      const details = nodes.get(`page-pricing-card-${index}-details`);
+
+      expect(price).toBeDefined();
+      expect(amount).toBeDefined();
+      expect(unit).toBeDefined();
+      expect(details).toBeDefined();
+      if (!price || !amount || !unit || !details) {
+        throw new Error(`missing ko pricing desktop price nodes for card ${index}`);
+      }
+      expect(price?.rect).toMatchObject({ x: 24, y: 161, width: 228, height: 72 });
+      expect(amount?.rect).toMatchObject({ x: 0, y: 0, width: 228, height: 48 });
+      expect(unit?.rect).toMatchObject({ x: 0, y: 50, width: 228, height: 22 });
+      expect(details.rect.y).toBeGreaterThanOrEqual(price.rect.y + price.rect.height + 24);
+    }
+  });
+
   it('stacks mobile pricing cards in source order and keeps CTA after the disclaimer', () => {
     const doc = STANDARD_PAGE_DECOMPOSERS.pricing('ko');
     const nodes = nodesById(doc);

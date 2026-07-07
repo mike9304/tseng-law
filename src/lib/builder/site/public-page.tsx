@@ -1490,17 +1490,14 @@ export async function PublishedSitePageView({
             margin-left: auto !important;
             margin-right: auto !important;
           }
-          /* The zh home hero media is a fixed 1280px image node — the only
-             overflower on that page in this band; tracking the viewport is
-             safe for a cover image. NOTE: decomposed privacy/disclaimer and zh
-             services still scroll ~205px here (their absolute containers
-             assume the 1280 stage and their text/card content would be CUT by
-             overflow clipping — measured worse than the scrollbar). Proper
-             per-band responsive rects are a post-handoff program (T16). */
-          .builder-pub-main .builder-pub-node[data-node-id='home-hero-media'],
-          .builder-pub-main .builder-pub-node[data-node-id^='home-hero-media-image'] {
-            width: 100% !important;
-          }
+          /* NOTE (T16, post-handoff program): DECOMPOSED pages own no rects
+             for this band — zh home, privacy/disclaimer, zh services scroll
+             horizontally (205-256px) because their whole absolute tree
+             assumes the 1280 stage. Partial per-node caps make it WORSE
+             (a viewport-capped hero image under a still-1280 overlay), and
+             overflow clipping CUTS card content — both measured and
+             reverted. Only a per-band responsive pass (rects or scaling)
+             fixes this class. */
         }
         ${locale === 'zh-hant' && !slugPath ? `
         /* ≥1360px the case-results H2 grows ~21px taller (viewport-scaled

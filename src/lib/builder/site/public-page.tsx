@@ -1490,6 +1490,17 @@ export async function PublishedSitePageView({
             margin-left: auto !important;
             margin-right: auto !important;
           }
+          /* The zh home hero media is a fixed 1280px image node — the only
+             overflower on that page in this band; tracking the viewport is
+             safe for a cover image. NOTE: decomposed privacy/disclaimer and zh
+             services still scroll ~205px here (their absolute containers
+             assume the 1280 stage and their text/card content would be CUT by
+             overflow clipping — measured worse than the scrollbar). Proper
+             per-band responsive rects are a post-handoff program (T16). */
+          .builder-pub-main .builder-pub-node[data-node-id='home-hero-media'],
+          .builder-pub-main .builder-pub-node[data-node-id='home-hero-media-image'] {
+            width: 100% !important;
+          }
         }
         ${locale === 'zh-hant' && !slugPath ? `
         /* ≥1360px the case-results H2 grows ~21px taller (viewport-scaled

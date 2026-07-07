@@ -5508,9 +5508,12 @@
   padding-bottom: 0;
 }
 
-.stage :global([data-node-id='home-hero-root']) {
-  z-index: 30000 !important;
-}
+/* NOTE: an unconditional `[data-node-id='home-hero-root'] { z-index: 30000 }`
+   rule used to live here. It pinned the hero section above every other canvas
+   node, so any element the author dropped over the hero area (fresh inserts
+   land there) could not be clicked or dragged until selected via other means.
+   The quick-edit variant below (:has([data-builder-hero-search-quick-edit]))
+   still lifts the hero only while the search quick-edit is open. */
 
 .stage :global([data-node-id='home-hero-root'] > [data-builder-node-body='true']),
 .stage :global([data-node-id='home-hero-root'] > [data-builder-node-body='true'] > .hero) {

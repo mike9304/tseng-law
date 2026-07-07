@@ -1496,10 +1496,13 @@ export async function PublishedSitePageView({
             display: block !important;
           }
           .builder-pub-main > .builder-pub-node[data-anchor='desktop-parity-standalone-${slugPath}'] {
-            width: 100% !important;
+            ${locale === 'zh-hant' ? `width: 100% !important;
             max-width: none !important;
             margin-left: 0 !important;
-            margin-right: 0 !important;
+            margin-right: 0 !important;` : `/* ko/en live composite roots render at their 1280 rect width,
+            centered — the overlay must match (zh live is full-bleed). */
+            margin-left: auto !important;
+            margin-right: auto !important;`}
             ${(() => {
               // The live composite root renders at its measured FIXED height
               // (content may overflow into the bottom whitespace at wide

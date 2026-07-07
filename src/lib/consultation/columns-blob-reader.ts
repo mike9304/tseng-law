@@ -166,12 +166,17 @@ function isMirroredLoadMoreTestPost(post: ColumnPost): boolean {
 }
 
 /**
- * In-memory cache of Blob-sourced posts, keyed by locale. Mirrors the
- * 5-minute TTL on the file cache in `column-knowledge.ts` so that the
- * merged list refreshes after a publish without forcing every chat
- * request to re-list the blob bucket.
+ * In-memory cache of Blob-sourced posts, keyed by locale.
+ *
+ * TTL is deliberately SHORT: this cache is per-lambda-instance, so
+ * invalidateBlobColumnsCache() after a publish/delete only reaches the
+ * instance that handled the mutation — every other instance keeps serving
+ * the stale list until expiry. At the previous 5-minute TTL a deleted
+ * column stayed publicly readable (200, full body) for up to 5 minutes
+ * (measured 2026-07-07 on post-mrabyzjk). 45s keeps the blob list cost
+ * negligible while admin actions reflect near-immediately.
  */
-const CACHE_TTL_MS = 5 * 60 * 1000;
+const CACHE_TTL_MS = 45 * 1000;
 const blobPostsCache = new Map<Locale, { posts: ColumnPost[]; expires: number }>();
 
 async function listBlobPostsForLocale(locale: Locale): Promise<ColumnPost[]> {
@@ -179,23 +184,28 @@ async function listBlobPostsForLocale(locale: Locale): Promise<ColumnPost[]> {
   const cached = blobPostsCache.get(locale);
   if (cached && cached.expires > now) return cached.posts;
 
-  const out: ColumnPost[] = [];
+  let out: ColumnPost[] = [];
   try {
     const result = await list({ prefix: `${BLOB_PREFIX}${locale}/` });
     // Only published variants — drafts live alongside but are skipped here.
     const publishedBlobs = result.blobs.filter((b) => b.pathname.endsWith('.published.json'));
-    for (const blob of publishedBlobs) {
+    // Fetch in parallel: the previous sequential loop cost ~100ms × N posts
+    // (3–4s page loads on the column manager and public archive with 30+
+    // published columns).
+    const fetched = await Promise.all(publishedBlobs.map(async (blob) => {
       try {
         const doc = await get(blob.pathname, { access: 'private', useCache: false });
-        if (!doc || doc.statusCode !== 200 || !doc.stream) continue;
+        if (!doc || doc.statusCode !== 200 || !doc.stream) return null;
         const text = await new Response(doc.stream).text();
         const parsed = JSON.parse(text) as ColumnDocumentFromBlob;
-        if (parsed.version !== 1 || !parsed.slug) continue;
-        out.push(blobDocToColumnPost(parsed));
+        if (parsed.version !== 1 || !parsed.slug) return null;
+        return blobDocToColumnPost(parsed);
       } catch (error) {
         console.warn('[columns-blob-reader] failed to read blob', blob.pathname, error);
+        return null;
       }
-    }
+    }));
+    out = fetched.filter((post): post is ColumnPost => post !== null);
   } catch (error) {
     // List failure (auth, network, missing token) — degrade silently to
     // file-only. The caller already handles an empty blob list.

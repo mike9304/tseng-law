@@ -1477,6 +1477,20 @@ export async function PublishedSitePageView({
         .builder-pub-main .builder-pub-node[data-anchor^='desktop-parity-standalone-'] {
           display: none !important;
         }
+        /* Legacy-composite page roots carry a fixed 1280px inline width; on
+           769–1279px viewports (iPad landscape, small laptops) that forced a
+           256px horizontal scroll (measured at 1024px on faq/columns/about).
+           The wrapped legacy component is fluid, so capping to the viewport
+           renders it exactly like the original responsive page. */
+        @media (min-width: 769px) and (max-width: 1279px) {
+          .builder-pub-main > .builder-pub-node[data-node-id$='-page-root'],
+          .builder-pub-main .builder-pub-node[data-node-id$='-page-root-composite'] {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
+        }
         ${locale === 'zh-hant' && !slugPath ? `
         /* ≥1360px the case-results H2 grows ~21px taller (viewport-scaled
            type) and invades the fixed-position body paragraph by ~10px.

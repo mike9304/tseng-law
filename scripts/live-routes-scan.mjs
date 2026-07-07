@@ -29,6 +29,9 @@ for (const loc of locales) {
       status = resp?.status() ?? 0;
     } catch (e) { errs.push('NAV: ' + String(e).slice(0, 60)); }
     await page.waitForTimeout(800);
+    // 가로 오버플로 검사(T15: 컴포지트 루트 고정폭이 769-1279px에서 256px 스크롤 유발했던 클래스)
+    const hOverflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth).catch(() => 0);
+    if (hOverflow > 2) errs.push(`H-OVERFLOW ${hOverflow}px`);
     if (status !== 200 || errs.length > 0) {
       issues++;
       console.log(`✗ ${loc}/${slug || '(home)'} status=${status} errors=${errs.length}`, errs.slice(0, 3));

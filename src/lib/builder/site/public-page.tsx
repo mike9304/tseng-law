@@ -1477,6 +1477,19 @@ export async function PublishedSitePageView({
         .builder-pub-main .builder-pub-node[data-anchor^='desktop-parity-standalone-'] {
           display: none !important;
         }
+        ${locale === 'zh-hant' && !slugPath ? `
+        /* ≥1360px the case-results H2 grows ~21px taller (viewport-scaled
+           type) and invades the fixed-position body paragraph by ~10px.
+           The body's measured published inline top is 356px (NOT the
+           document rect y of 200 — it is positioned inside split-content);
+           push it to 380px on wide viewports only. 1280, the parity
+           baseline, is untouched. */
+        @media (min-width: 1360px) {
+          .builder-pub-main .builder-pub-node[data-node-id='home-case-results-desc'] {
+            top: 380px !important;
+          }
+        }
+        ` : ''}
         ${locale === 'zh-hant' && ['about', 'contact', 'lawyers', 'reviews', 'pricing'].includes(slugPath) ? `
         @media (min-width: 769px) {
           .builder-pub-main .builder-pub-node[data-anchor='desktop-parity-standalone-${slugPath}'] {

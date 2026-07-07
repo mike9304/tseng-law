@@ -689,6 +689,58 @@ function valuesMatchQuery(values: Array<string | number | boolean | null | undef
   return values.some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
+// New elements used to land at the fixed stage center (y≈420), which is off
+// screen whenever the author has scrolled down a long page — the add appears
+// to do nothing. Place them at the center of the *visible* canvas viewport
+// instead; fall back to the stage center when the DOM isn't available (SSR,
+// tests) or the stage can't be found.
+function resolveStageViewportCenterY(nodeHeight: number): number | null {
+  if (typeof document === 'undefined' || typeof window === 'undefined') return null;
+  // Exact module-class prefix: several wrappers share the "SandboxPage_stage"
+  // substring (stageSurface/stageViewport at scale 1) — only the innermost
+  // "SandboxPage_stage__…" element carries the zoom transform we must invert.
+  const stage = document.querySelector('[class*="SandboxPage_stage__"]');
+  if (!(stage instanceof HTMLElement)) return null;
+  const stageRect = stage.getBoundingClientRect();
+  if (stageRect.width <= 0) return null;
+  const scale = stageRect.width / STAGE_WIDTH;
+  if (!Number.isFinite(scale) || scale <= 0) return null;
+  let scroller: HTMLElement | null = stage.parentElement;
+  while (scroller && scroller !== document.body) {
+    const overflowY = window.getComputedStyle(scroller).overflowY;
+    if (overflowY === 'auto' || overflowY === 'scroll') break;
+    scroller = scroller.parentElement;
+  }
+  const usesWindow = !scroller || scroller === document.body;
+  const viewTop = usesWindow ? 0 : scroller!.getBoundingClientRect().top;
+  const viewHeight = usesWindow ? window.innerHeight : scroller!.clientHeight;
+  if (viewHeight <= 0) return null;
+  const docCenterY = (viewTop + viewHeight / 2 - stageRect.top) / scale;
+  if (!Number.isFinite(docCenterY)) return null;
+  return Math.max(nodeHeight / 2, docCenterY);
+}
+
+/**
+ * After adding, make sure the author actually sees the new element: scroll
+ * the canvas so the node is centered. Runs on the next frames because the
+ * node renders asynchronously after the store update.
+ */
+export function scrollCanvasNodeIntoView(nodeId: string): void {
+  if (typeof document === 'undefined' || typeof window === 'undefined') return;
+  let attempts = 0;
+  const tryScroll = () => {
+    const el = document.querySelector(`[class*="SandboxPage_stage__"] [data-node-id="${nodeId}"]`)
+      ?? document.querySelector(`[data-node-id="${nodeId}"]`);
+    if (el instanceof HTMLElement) {
+      el.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'smooth' });
+      return;
+    }
+    attempts += 1;
+    if (attempts < 10) window.requestAnimationFrame(tryScroll);
+  };
+  window.requestAnimationFrame(tryScroll);
+}
+
 export function resolveCenteredNode(
   kind: BuilderCanvasNodeKind,
   existingCount: number,
@@ -696,12 +748,17 @@ export function resolveCenteredNode(
 ) {
   const seed = createCanvasNodeTemplate(kind, 0, 0, existingCount);
   const cascadeOffset = (cascadeSeed % 12) * 22;
+  const viewportCenterY = resolveStageViewportCenterY(seed.rect.height);
   return {
     ...seed,
     rect: {
       ...seed.rect,
       x: Math.round((STAGE_WIDTH - seed.rect.width) / 2 + cascadeOffset),
-      y: Math.round((STAGE_HEIGHT - seed.rect.height) / 2 + cascadeOffset),
+      y: Math.round(
+        (viewportCenterY !== null
+          ? viewportCenterY - seed.rect.height / 2
+          : (STAGE_HEIGHT - seed.rect.height) / 2) + cascadeOffset,
+      ),
     },
   };
 }

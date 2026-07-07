@@ -86,6 +86,7 @@ import {
   pageTemplatePreviewMatchesSearch,
   pageTemplateSearchScore,
   resolveCenteredNode,
+  scrollCanvasNodeIntoView,
   resolveSectionInsertOffset,
   socialWidgetMatchesSearch,
   textWidgetMatchesSearch,
@@ -264,7 +265,10 @@ export default function SandboxCatalogPanel({
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
     addSequenceRef.current += 1;
-    addNode(resolveCenteredNode(kind, nodes.length + sequence, sequence));
+    const node = resolveCenteredNode(kind, nodes.length + sequence, sequence);
+    addNode(node);
+    scrollCanvasNodeIntoView(node.id);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 
@@ -293,6 +297,7 @@ export default function SandboxCatalogPanel({
     } as BuilderCanvasNode;
 
     addNode(node);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 
@@ -318,6 +323,7 @@ export default function SandboxCatalogPanel({
     } as BuilderCanvasNode;
 
     addNode(node);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 
@@ -343,6 +349,7 @@ export default function SandboxCatalogPanel({
     } as BuilderCanvasNode;
 
     addNode(node);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 
@@ -368,6 +375,7 @@ export default function SandboxCatalogPanel({
     } as BuilderCanvasNode;
 
     addNode(node);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 
@@ -394,6 +402,7 @@ export default function SandboxCatalogPanel({
     } as BuilderCanvasNode;
 
     addNode(node);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 
@@ -419,6 +428,7 @@ export default function SandboxCatalogPanel({
     } as BuilderCanvasNode;
 
     addNode(node);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 
@@ -444,6 +454,7 @@ export default function SandboxCatalogPanel({
     } as BuilderCanvasNode;
 
     addNode(node);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 
@@ -469,6 +480,7 @@ export default function SandboxCatalogPanel({
     } as BuilderCanvasNode;
 
     addNode(node);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 
@@ -494,6 +506,7 @@ export default function SandboxCatalogPanel({
     } as BuilderCanvasNode;
 
     addNode(node);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 
@@ -519,6 +532,7 @@ export default function SandboxCatalogPanel({
     } as BuilderCanvasNode;
 
     addNode(node);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 
@@ -544,6 +558,7 @@ export default function SandboxCatalogPanel({
     } as BuilderCanvasNode;
 
     addNode(node);
+    scrollCanvasNodeIntoView(node.id);
     setDraftSaveState('saving');
   }
 

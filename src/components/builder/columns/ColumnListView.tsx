@@ -327,11 +327,13 @@ export default function ColumnListView({
     }
   }
 
-  async function handleDelete(slug: string) {
+  async function handleDelete(slug: string, includePublished = false) {
     setActionError(null);
     setBusySlug(slug);
     try {
-      const response = await fetch(buildColumnsApiUrl(slug, contentLocale), {
+      const url = buildColumnsApiUrl(slug, contentLocale)
+        + (includePublished ? '&includePublished=1' : '');
+      const response = await fetch(url, {
         method: 'DELETE',
         credentials: 'same-origin',
       });
@@ -339,7 +341,20 @@ export default function ColumnListView({
       if (!response.ok || !payload?.ok) {
         throw new Error(payload?.error || '삭제에 실패했습니다.');
       }
-      setColumns((current) => current.filter((item) => item.slug !== slug));
+      if (payload.publishedStillExists) {
+        // Draft removed but the published copy survives — keep the row (it
+        // used to vanish here and "come back" on refresh, reading as a
+        // failed delete).
+        setColumns((current) =>
+          current.map((item) =>
+            item.slug === slug
+              ? { ...item, hasDraft: false, preferredSource: 'published' }
+              : item,
+          ),
+        );
+      } else {
+        setColumns((current) => current.filter((item) => item.slug !== slug));
+      }
     } catch (error) {
       setActionError(error instanceof Error ? error.message : '삭제에 실패했습니다.');
     } finally {
@@ -614,6 +629,20 @@ export default function ColumnListView({
                           }}
                         >
                           {deleteBusy ? '처리 중' : 'Draft 삭제'}
+                        </button>
+                        <button
+                          type="button"
+                          disabled={deleteBusy}
+                          onClick={() => {
+                            const accepted = window.confirm(
+                              `"${column.title}" (${column.slug}) 칼럼을 완전히 삭제할까요?\n초안과 발행본이 모두 삭제되고, 공개 사이트에서도 사라집니다.`,
+                            );
+                            if (accepted) {
+                              void handleDelete(column.slug, true);
+                            }
+                          }}
+                        >
+                          {deleteBusy ? '처리 중' : '완전 삭제'}
                         </button>
                       </div>
                     </details>

@@ -39,7 +39,7 @@ const PAGES = arg('pages', '/ko,/ko/about,/ko/columns,/ko/pricing,/ko/services,/
 const VIEWPORTS = arg('viewports', '1280x900,375x812')
   .split(',').map((s) => s.trim()).filter(Boolean)
   .map((s) => { const [w, h] = s.split('x').map(Number); return { w, h, label: s }; });
-const OUT_JSON = arg('out', '/private/tmp/claude-501/-Users-son7/c3602988-f51c-449e-b85c-8fb5daea9654/scratchpad/parity-report.json');
+const OUT_JSON = arg('out', join(process.cwd(), 'tmp', 'parity-report.json'));
 // 픽셀이 "다르다"고 판정하는 채널 합산 차이 임계값(안티에일리어싱 노이즈 무시용)
 const THRESH = Number(arg('threshold', '48'));
 const SAVE_SHOTS = arg('shots', '1') !== '0';

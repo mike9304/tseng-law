@@ -8,7 +8,11 @@ import {
   createPageHeaderSectionNodes,
 } from './decompose-page-shared';
 
-const ZH_HANT_DESKTOP_BOTTOM_RESERVE = 175;
+// Published zh-hant about shows the standalone legacy-composite parity overlay
+// (decomposed roots are CSS-hidden), so the stage must stay pinned to the
+// composite's measured desktop height — a taller decomposed tree would only add
+// blank space below the overlay after publish.
+const ZH_HANT_DESKTOP_COMPOSITE_HEIGHT = 4943;
 const KO_ATTORNEY_SOURCE_GAP = 32;
 
 function findNode(nodes: BuilderCanvasNode[], id: string): BuilderCanvasNode | undefined {
@@ -111,7 +115,7 @@ function buildAboutPage(y: number, locale: Locale, zBase: number): { nodes: Buil
 // (like the lawyers page) instead of the cross-locale max constant.
 export function getAboutPageRootHeight(locale: Locale): number {
   const pageHeight = buildAboutPage(0, locale, 0).height;
-  return locale === 'zh-hant' ? pageHeight + ZH_HANT_DESKTOP_BOTTOM_RESERVE : pageHeight;
+  return locale === 'zh-hant' ? Math.max(pageHeight, ZH_HANT_DESKTOP_COMPOSITE_HEIGHT) : pageHeight;
 }
 
 export const ABOUT_PAGE_ROOT_HEIGHT = Math.max(...locales.map((locale) => getAboutPageRootHeight(locale)));

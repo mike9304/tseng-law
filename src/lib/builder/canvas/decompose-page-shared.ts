@@ -17,6 +17,11 @@ import {
 export type DecomposedSectionBuild = {
   nodes: BuilderCanvasNode[];
   height: number;
+  // Extra height added only to cover the ≥32px persisted-rect clamp on
+  // sub-32px text rows (see NORMALIZED_MIN_NODE_HEIGHT). Glyphs never occupy
+  // it, so outer sections may reclaim it from their own empty bottom padding
+  // to keep live-measured page totals pinned.
+  phantomHeight?: number;
 };
 
 export const PAGE_STAGE_WIDTH = HOME_STAGE_WIDTH;
@@ -34,6 +39,16 @@ const SECTION_BOTTOM = 88;
 // top (right after the padding) — matching the live legacy <PageHeader> flow exactly.
 const PAGE_HEADER_SECTION_TOP = 102;
 const PAGE_HEADER_SECTION_BOTTOM = 77;
+
+// normalizeCanvasDocument (types.ts normalizeCanvasNode) clamps every persisted
+// node rect to height ≥ 32. Any builder that stacks children from estimated
+// text heights below this floor must size containers with the clamped value or
+// the saved rows overflow their parent.
+const NORMALIZED_MIN_NODE_HEIGHT = 32;
+
+// ul bullet indent (globals.css `.attorney-list { padding-left: 1.1rem }` ≈ 18px)
+// — the row's text column is this much narrower than the row rect.
+const BULLET_LIST_TEXT_INDENT = 18;
 
 const attorneyLabels = {
   ko: {
@@ -294,11 +309,27 @@ function createBulletListNodes({
   lineHeight?: number;
   gap?: number;
 }): DecomposedSectionBuild {
-  const heights = items.map((item) => estimateTextHeight(item, width, fontSize, lineHeight));
+  // Bulleted rows render their text inside the ul's `padding-left: 1.1rem`
+  // (globals.css .attorney-list / .contact-list ≈ 18px), so wrap estimation
+  // must use the narrower text column or borderline rows are predicted
+  // single-line while the browser wraps them to two (the about '학력'/'경력'
+  // label-over-row ink collisions).
+  const textWidth = Math.max(1, width - BULLET_LIST_TEXT_INDENT);
+  const heights = items.map((item) => estimateTextHeight(item, textWidth, fontSize, lineHeight));
   // Clamp to a positive floor: an empty items array would otherwise produce a
   // 0-height container, which violates canvasRectSchema.positive() and fails the
   // whole document. (R1 companion — admin-editable lists can be empty.)
   const totalHeight = Math.max(1, heights.reduce((sum, height) => sum + height, 0) + Math.max(0, items.length - 1) * gap);
+  // normalizeCanvasDocument clamps every persisted rect to height ≥ 32
+  // (types.ts normalizeCanvasNode), so a single-line LAST row estimated at
+  // 24–27px is stored 32px tall and extends past totalHeight. Report the
+  // allowance so stacking callers whose next element sits directly below the
+  // list (attorney-card section labels) can reserve room for it; callers whose
+  // surrounding padding already covers it may ignore it.
+  const lastHeight = heights.length > 0 ? heights[heights.length - 1] : 0;
+  const phantomHeight = items.length === 0
+    ? 0
+    : Math.max(0, NORMALIZED_MIN_NODE_HEIGHT - lastHeight);
   const listId = `${prefix}-list`;
   const nodes: BuilderCanvasNode[] = [
     createHomeContainerNode({
@@ -336,7 +367,7 @@ function createBulletListNodes({
     );
     cursor += height + gap;
   });
-  return { nodes, height: totalHeight };
+  return { nodes, height: totalHeight, phantomHeight };
 }
 
 export function createPageHeaderSectionNodes({
@@ -852,11 +883,15 @@ function buildMemberCardNodes({
   sectionDefs.forEach((section, index) => {
     const sectionId = `${prefix}-${section.key}-section`;
     const listRootId = section.list.nodes[0]?.id ?? `${prefix}-${section.key}-list`;
+    // The next section's label sits flush below this one, so the section (and
+    // its list rect) must cover the ≥32px persisted row clamp or the label
+    // collides with the last row's glyphs (the about '학력'/'경력' overlap).
+    const listExtent = section.list.height + (section.list.phantomHeight ?? 0);
     nodes.push(
       createHomeContainerNode({
         id: sectionId,
         parentId: `${prefix}-info`,
-        rect: { x: 0, y: infoCursor, width: infoWidth, height: section.list.height + sectionListOffset },
+        rect: { x: 0, y: infoCursor, width: infoWidth, height: listExtent + sectionListOffset },
         zIndex: 3 + index * 3,
         label: `${prefix} ${section.key} section`,
         className: 'attorney-card-section',
@@ -874,14 +909,14 @@ function buildMemberCardNodes({
       {
         ...section.list.nodes[0],
         parentId: sectionId,
-        rect: { x: 0, y: sectionListOffset, width: infoWidth, height: section.list.height },
+        rect: { x: 0, y: sectionListOffset, width: infoWidth, height: listExtent },
       },
       ...section.list.nodes.slice(1).map((node) => ({
         ...node,
         parentId: listRootId,
       })),
     );
-    infoCursor += section.list.height + sectionListOffset;
+    infoCursor += listExtent + sectionListOffset;
   });
 
   infoCursor += 8;
@@ -951,6 +986,18 @@ function buildMemberCardNodes({
   const cardHeight = targetHeight !== undefined && naturalCardHeight <= targetHeight
     ? targetHeight
     : naturalCardHeight;
+  // Only the clamp allowance that actually LEAKED into cardHeight (a card whose
+  // bottom gap absorbed it reports 0), so outer sections can reclaim exactly
+  // this much from their own bottom padding.
+  const listPhantom = [introList, educationList, experienceList].reduce(
+    (sum, list) => sum + (list.phantomHeight ?? 0),
+    0,
+  );
+  const naturalWithoutPhantom = Math.max(photoHeight, infoY + infoCursor - listPhantom);
+  const cardHeightWithoutPhantom = targetHeight !== undefined && naturalWithoutPhantom <= targetHeight
+    ? targetHeight
+    : naturalWithoutPhantom;
+  const phantomHeight = Math.max(0, cardHeight - cardHeightWithoutPhantom);
   nodes[0] = {
     ...nodes[0],
     rect: { x, y, width, height: cardHeight },
@@ -968,7 +1015,7 @@ function buildMemberCardNodes({
     rect: { x: infoX, y: infoY, width: infoWidth, height: infoCursor },
   };
 
-  return { nodes, height: cardHeight };
+  return { nodes, height: cardHeight, phantomHeight };
 }
 
 export function createAttorneyProfileSectionNodes(
@@ -1037,6 +1084,9 @@ export function createAttorneyProfileSectionNodes(
   ];
 
   let cursor = 42 + titleHeight + 18 + descriptionHeight + 138;
+  // Clamp allowance that leaked into wrap heights below; reclaimed from this
+  // section's own bottom padding so live-measured page totals stay pinned.
+  let phantomLeak = 0;
 
   if (lead) {
     const leadWrapId = `${prefix}-lead-wrap`;
@@ -1086,6 +1136,7 @@ export function createAttorneyProfileSectionNodes(
       ...leadBuild.nodes,
     );
     cursor += leadCardTop + leadBuild.height + leadWrapBottomGap + leadToStaffGap;
+    phantomLeak += leadBuild.phantomHeight ?? 0;
   }
 
   if (staff.length > 0) {
@@ -1117,9 +1168,13 @@ export function createAttorneyProfileSectionNodes(
       rows.push(chunk);
     }
     let rowCursor = 0;
+    let rowCursorWithoutPhantom = 0;
     const gridNodes: BuilderCanvasNode[] = [];
     rows.forEach((row, rowIndex) => {
       const rowHeight = Math.max(...row.map((entry) => entry.build.height));
+      rowCursorWithoutPhantom += Math.max(
+        ...row.map((entry) => entry.build.height - (entry.build.phantomHeight ?? 0)),
+      ) + 32;
       row.forEach((entry, columnIndex) => {
         entry.build.nodes.forEach((node, nodeIndex) => {
           // Only the card ROOT (parentId === gridId) is positioned in grid
@@ -1145,6 +1200,10 @@ export function createAttorneyProfileSectionNodes(
     const rowGridHeight = Math.max(0, rowCursor - 32);
     const gridHeight = Math.max(rowGridHeight, 503);
     const staffWrapHeight = Math.max(40 + rowGridHeight, 515);
+    // Leak accounting must respect the wrap's own 515px floor — a row whose
+    // clamp allowance is still absorbed by the floor adds no height.
+    const staffWrapHeightWithoutPhantom = Math.max(40 + Math.max(0, rowCursorWithoutPhantom - 32), 515);
+    phantomLeak += Math.max(0, staffWrapHeight - staffWrapHeightWithoutPhantom);
     const staffToPartnerGap = 76;
     nodes.push(
       createHomeContainerNode({
@@ -1218,10 +1277,16 @@ export function createAttorneyProfileSectionNodes(
       ...partnerBuild.nodes,
     );
     cursor += partnerCardTop + partnerBuild.height + partnerWrapBottomGap + sectionBottomHairline;
+    phantomLeak += partnerBuild.phantomHeight ?? 0;
   }
 
   const containerHeight = cursor;
-  const rootHeight = SECTION_TOP + containerHeight + SECTION_BOTTOM;
+  // Reclaim the clamp allowance from this section's empty bottom padding
+  // (floor 16px) so live-measured page totals (lawyers ko 2653 / zh 2635,
+  // about zh attorney root 2207, …) stay pinned while the cards keep enough
+  // room for their ≥32px persisted rows.
+  const sectionBottom = Math.max(16, SECTION_BOTTOM - phantomLeak);
+  const rootHeight = SECTION_TOP + containerHeight + sectionBottom;
   nodes[0] = {
     ...nodes[0],
     rect: { x: 0, y, width: PAGE_STAGE_WIDTH, height: rootHeight },

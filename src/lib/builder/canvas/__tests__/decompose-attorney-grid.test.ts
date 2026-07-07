@@ -3,6 +3,11 @@ import { STANDARD_PAGE_DECOMPOSERS } from '../seed-pages';
 import { PAGE_CONTAINER_WIDTH, createAttorneyProfileSectionNodes } from '../decompose-page-shared';
 
 describe('createAttorneyProfileSectionNodes', () => {
+  // Card/inner heights include the ≥32px persisted-row clamp allowance on each
+  // intro/education/experience list (decompose-page-shared phantomHeight) so
+  // section labels clear the previous list's rows; the attorney ROOT reclaims
+  // the same amount from its bottom padding, keeping root/stage pinned to the
+  // live-measured totals (stage 2653, root 2207).
   it('regenerates the live-aligned lawyers page geometry from source', () => {
     const document = STANDARD_PAGE_DECOMPOSERS.lawyers('ko');
     const nodesById = new Map(document.nodes.map((node) => [node.id, node]));
@@ -18,24 +23,24 @@ describe('createAttorneyProfileSectionNodes', () => {
       x: 51,
       y: 88,
       width: 1178,
-      height: 2031,
+      height: 2062,
     });
     expect(nodesById.get('page-lawyers-lead-wrap')?.rect).toMatchObject({
       y: 278,
-      height: 630,
+      height: 643,
     });
     expect(nodesById.get('page-lawyers-lead-card')?.rect).toMatchObject({
       y: 48,
       width: 1178,
-      height: 536,
+      height: 549,
     });
     expect(nodesById.get('page-lawyers-lead-card-info')?.rect).toMatchObject({
       x: 372,
       width: 806,
-      height: 536,
+      height: 549,
     });
     expect(nodesById.get('page-lawyers-staff-wrap')?.rect).toMatchObject({
-      y: 950,
+      y: 963,
       height: 515,
     });
     expect(nodesById.get('page-lawyers-staff-grid')?.rect).toMatchObject({
@@ -46,25 +51,25 @@ describe('createAttorneyProfileSectionNodes', () => {
     expect(nodesById.get('page-lawyers-staff-card-0')?.rect).toMatchObject({
       x: 0,
       width: 548,
-      height: 442,
+      height: 458,
     });
     expect(nodesById.get('page-lawyers-staff-card-1')?.rect).toMatchObject({
       x: 588,
       width: 548,
-      height: 410,
+      height: 426,
     });
     expect(nodesById.get('page-lawyers-partner-wrap')?.rect).toMatchObject({
-      y: 1541,
-      height: 485,
+      y: 1554,
+      height: 503,
     });
     expect(nodesById.get('page-lawyers-partner-card')?.rect).toMatchObject({
       width: 1178,
-      height: 380,
+      height: 398,
     });
     expect(nodesById.get('page-lawyers-partner-card-info')?.rect).toMatchObject({
       x: 200,
       width: 940,
-      height: 380,
+      height: 398,
     });
   });
 

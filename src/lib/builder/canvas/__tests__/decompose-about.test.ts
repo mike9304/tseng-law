@@ -40,6 +40,44 @@ describe('standard about page decomposer', () => {
     }
   });
 
+  it('keeps section labels clear of the previous list rows after the ≥32px save clamp', () => {
+    // normalizeCanvasDocument clamps every persisted rect to height ≥ 32; the
+    // stacking math must already account for that or single-line rows (est.
+    // 24–27px) stick out below their section and collide with the next label
+    // (the ko about '학력'/'경력' editor overlap).
+    const clamp = (height: number) => Math.max(32, Math.round(height));
+    for (const locale of ['ko', 'zh-hant', 'en'] as const) {
+      const doc = STANDARD_PAGE_DECOMPOSERS.about(locale);
+      const byParent = new Map<string, BuilderCanvasNode[]>();
+      for (const node of doc.nodes) {
+        if (!node.parentId) continue;
+        const list = byParent.get(node.parentId) ?? [];
+        list.push(node);
+        byParent.set(node.parentId, list);
+      }
+      const sections = doc.nodes.filter((node) => /-(intro|education|experience)-section$/.test(node.id));
+      for (const section of sections) {
+        for (const child of byParent.get(section.id) ?? []) {
+          if (child.id.endsWith('-label')) continue;
+          const rows = byParent.get(child.id) ?? [];
+          const rowsBottom = rows.reduce(
+            (max, row) => Math.max(max, row.rect.y + clamp(row.rect.height)),
+            0,
+          );
+          expect(
+            child.rect.y + child.rect.height,
+            `${locale} ${child.id} must contain its clamped rows`,
+          ).toBeGreaterThanOrEqual(child.rect.y + rowsBottom);
+          expect(
+            section.rect.height,
+            `${locale} ${section.id} must contain ${child.id}`,
+          ).toBeGreaterThanOrEqual(child.rect.y + child.rect.height);
+        }
+      }
+      expect(sections.length).toBeGreaterThan(0);
+    }
+  });
+
   it('keeps zh-hant desktop height aligned to the legacy composite reserve without moving sections', () => {
     const doc = STANDARD_PAGE_DECOMPOSERS.about('zh-hant');
     const nodes = nodesById(doc);

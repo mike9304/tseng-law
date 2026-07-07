@@ -42,6 +42,7 @@ import {
 } from '@/lib/builder/canvas/editor-prefs';
 import {
   buildChildrenMap,
+  getCanvasNodeDescendantIds,
   resolveCanvasNodeAbsoluteRectForViewport,
 } from '@/lib/builder/canvas/tree';
 import { isTopLevelFlowSection } from '@/lib/builder/canvas/flow';
@@ -198,7 +199,31 @@ export default function CanvasContainer({
   const updateSingleNodeRectForViewport = useBuilderCanvasStore((state) => state.updateSingleNodeRectForViewport);
   const updateResponsiveOverride = useBuilderCanvasStore((state) => state.updateResponsiveOverride);
   const updateNodeContent = useBuilderCanvasStore((state) => state.updateNodeContent);
-  const deleteSelectedNode = useBuilderCanvasStore((state) => state.deleteSelectedNode);
+  const deleteSelectedNodeAction = useBuilderCanvasStore((state) => state.deleteSelectedNode);
+  // Deleting a container silently removes every descendant with it. On a
+  // decomposed page a single mis-click can select a section wrapper, and one
+  // Delete wipes dozens of nodes (observed: hero copy block, 7 nodes). Ask
+  // before any delete that would remove more nodes than were selected.
+  const deleteSelectedNode = useCallback(() => {
+    const state = useBuilderCanvasStore.getState();
+    if (!state.document || state.selectedNodeIds.length === 0) return;
+    const unlockedRootIds = state.document.nodes
+      .filter((node) => state.selectedNodeIdSet.has(node.id) && !node.locked)
+      .map((node) => node.id);
+    const descendantCount = unlockedRootIds.reduce(
+      (sum, nodeId) => sum + getCanvasNodeDescendantIds(nodeId, state.childrenMap).length,
+      0,
+    );
+    if (descendantCount > 0 && typeof window !== 'undefined') {
+      const messages: Record<string, string> = {
+        ko: `선택한 ${unlockedRootIds.length}개 요소에 포함된 하위 요소 ${descendantCount}개도 함께 삭제됩니다. 계속할까요? (실행 취소 가능)`,
+        'zh-hant': `選取的 ${unlockedRootIds.length} 個元素包含 ${descendantCount} 個子元素，將一併刪除。要繼續嗎？（可復原）`,
+        en: `Deleting ${unlockedRootIds.length} selected element(s) will also remove ${descendantCount} nested element(s). Continue? (Undo available)`,
+      };
+      if (!window.confirm(messages[locale ?? 'ko'] ?? messages.ko)) return;
+    }
+    deleteSelectedNodeAction();
+  }, [deleteSelectedNodeAction, locale]);
   const nudgeSelectedNode = useBuilderCanvasStore((state) => state.nudgeSelectedNode);
   const storeChildrenMap = useBuilderCanvasStore((state) => state.childrenMap);
   const currentViewport = useBuilderCanvasStore((state) => state.viewport);

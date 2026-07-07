@@ -1418,7 +1418,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const activeGroupRect = activeGroupNode
         ? resolveCanvasNodeAbsoluteRect(activeGroupNode, nodesById)
         : null;
-      const nextNode = explicitInsertionParent
+      const baseNode = explicitInsertionParent
         ? {
             ...node,
             parentId: explicitInsertionParent.id,
@@ -1430,6 +1430,18 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
             rect: resolveCanvasNodeLocalRect(node.rect, activeGroupRect),
           }
         : node;
+      // Decomposed documents carry z-indexes in the hundreds; a freshly added
+      // node with a small default z lands *behind* existing sections, so the
+      // very node the author just inserted cannot be clicked or dragged.
+      // Raise (never lower) new nodes above everything currently on the page.
+      const maxZ = state.document.nodes.reduce(
+        (max, existing) => Math.max(max, existing.zIndex ?? 0),
+        0,
+      );
+      const nextNode = {
+        ...baseNode,
+        zIndex: Math.max(baseNode.zIndex ?? 0, maxZ + 1),
+      };
       const document = updateNodes(state.document, (nodes) => [...nodes, nextNode]);
       return applyCommittedDocument(state, document, nextNode.id);
     }),

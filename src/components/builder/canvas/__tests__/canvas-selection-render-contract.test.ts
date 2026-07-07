@@ -997,6 +997,7 @@ describe('canvas selection render contract', () => {
 
   it('keeps the home hero and closed header overlays visually clean in the editor', () => {
     const adminBuilderPage = read('src/app/(builder)/[locale]/admin-builder/page.tsx');
+    const canvasNode = read('src/components/builder/canvas/CanvasNode.tsx');
     const sandboxPageCss = read('src/components/builder/canvas/SandboxPage.module.css');
     const globalCss = read('src/app/globals.css');
 
@@ -1021,6 +1022,17 @@ describe('canvas selection render contract', () => {
     expect(sandboxPageCss).toContain(".stage :global([data-node-id='home-hero-media-image-2']),");
     expect(sandboxPageCss).toContain('pointer-events: none;');
     expect(sandboxPageCss).toContain(".stage :global([data-node-id='home-hero-search-wrapper'] > [data-builder-node-body='true'] > .hero-search-wrapper)");
+    const heroSearchWrapperEditorRule = sandboxPageCss.match(/\.stage :global\(\[data-node-id='home-hero-search-wrapper'\] > \[data-builder-node-body='true'\] > \.hero-search-wrapper\) \{\n(?:  .+\n)+\}/)?.[0] ?? '';
+    expect(heroSearchWrapperEditorRule).toContain('position: relative !important;');
+    expect(heroSearchWrapperEditorRule).toContain('left: auto !important;');
+    expect(heroSearchWrapperEditorRule).toContain('right: auto !important;');
+    expect(heroSearchWrapperEditorRule).toContain('bottom: auto !important;');
+    expect(heroSearchWrapperEditorRule).toContain('width: 100% !important;');
+    expect(heroSearchWrapperEditorRule).toContain('transform: none !important;');
+    expect(canvasNode).toContain('function resolveHomeHeroSearchEditorRect(');
+    expect(canvasNode).toContain('const HOME_HERO_SEARCH_BASELINE_Y = 618;');
+    expect(canvasNode).toContain('const renderRect = resolveHomeHeroSearchEditorRect(node, effectiveRect, nodesById, viewport);');
+    expect(canvasNode).toContain('effectiveRect: renderRect,');
     expect(sandboxPageCss).toContain(".stage :global([data-node-id='home-hero-scroll-arrow'] > [data-builder-node-body='true'] > .hero-scroll-arrow)");
     expect(globalCss).toContain("[data-node-id^='home-hero-media-image'] img");
     expect(globalCss).toContain('filter: brightness(78%) saturate(104%) contrast(102%);');

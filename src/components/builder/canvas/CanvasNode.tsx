@@ -156,6 +156,10 @@ const EMPTY_PREVIEW_INDICES: number[] = [];
 const EMPTY_PREVIEW_INDEX_SET: ReadonlySet<number> = new Set<number>();
 const EMPTY_CANVAS_NODE_CHILDREN: readonly BuilderCanvasNode[] = [];
 const EMPTY_CANVAS_NODE_IDS: readonly string[] = [];
+const HOME_HERO_ROOT_NODE_ID = 'home-hero-root';
+const HOME_HERO_SEARCH_WRAPPER_NODE_ID = 'home-hero-search-wrapper';
+const HOME_HERO_SEARCH_BASELINE_Y = 618;
+const HOME_HERO_SEARCH_STRADDLE_OVERLAP_Y = 45;
 
 function parseCssNumber(value: string): number | undefined {
   const parsed = Number.parseFloat(value);
@@ -185,6 +189,34 @@ function captureInlineTextVisualStyle(root: HTMLDivElement | null): InlineTextVi
     letterSpacing: style.letterSpacing,
     textDecoration: style.textDecorationLine,
     textTransform: style.textTransform,
+  };
+}
+
+function resolveHomeHeroSearchEditorRect(
+  node: BuilderCanvasNode,
+  effectiveRect: ReturnType<typeof resolveViewportRect>,
+  nodesById: ReadonlyMap<string, BuilderCanvasNode>,
+  viewport: Viewport,
+): ReturnType<typeof resolveViewportRect> {
+  if (
+    viewport !== 'desktop'
+    || node.id !== HOME_HERO_SEARCH_WRAPPER_NODE_ID
+    || node.parentId !== HOME_HERO_ROOT_NODE_ID
+  ) {
+    return effectiveRect;
+  }
+
+  const heroRoot = nodesById.get(HOME_HERO_ROOT_NODE_ID);
+  if (!heroRoot) return effectiveRect;
+
+  const heroRootRect = resolveViewportRect(heroRoot, viewport);
+  const targetY = heroRootRect.height - HOME_HERO_SEARCH_STRADDLE_OVERLAP_Y;
+  const yCorrection = targetY - HOME_HERO_SEARCH_BASELINE_Y;
+  if (!Number.isFinite(yCorrection) || Math.abs(yCorrection) < 0.5) return effectiveRect;
+
+  return {
+    ...effectiveRect,
+    y: effectiveRect.y + yCorrection,
   };
 }
 
@@ -294,6 +326,7 @@ const CanvasNode = memo(function CanvasNode({
   const isOnlySelectedNode = useBuilderCanvasStore((s) => s.selectedNodeId === node.id && s.selectedNodeIds.length === 1);
   const nodesById = useBuilderCanvasStore((s) => s.nodesById);
   const effectiveRect = resolveViewportRect(node, viewport);
+  const renderRect = resolveHomeHeroSearchEditorRect(node, effectiveRect, nodesById, viewport);
   const isHiddenAtViewport = viewport !== 'desktop' && resolveViewportHidden(node, viewport);
   const effectiveFontSize = resolveViewportFontSize(node, viewport);
   const currentMapAddress = node.kind === 'map' ? readMapAddress(node) : '';
@@ -1177,7 +1210,7 @@ const CanvasNode = memo(function CanvasNode({
   const { animationSummary, bodyStyle, nodeStyle } = buildCanvasNodeRenderStyles({
     animationPreviewPhase,
     effectiveFontSize,
-    effectiveRect,
+    effectiveRect: renderRect,
     isActiveGroupFrame,
     isContainerLikeNode,
     isContainerWithChildren,
@@ -1366,8 +1399,8 @@ const CanvasNode = memo(function CanvasNode({
     >
       <CanvasNodeBadge
         node={node}
-        width={effectiveRect.width}
-        height={effectiveRect.height}
+        width={renderRect.width}
+        height={renderRect.height}
         animationSummary={animationSummary}
         onSelect={onSelect}
       />
@@ -1525,8 +1558,8 @@ const CanvasNode = memo(function CanvasNode({
         show={showSelectionHandles}
         nodeId={node.id}
         nodeKind={node.kind}
-        width={effectiveRect.width}
-        height={effectiveRect.height}
+        width={renderRect.width}
+        height={renderRect.height}
         rotationReadout={rotationReadout}
         onRotationPointerDown={handleRotationPointerDown}
         onResizeStart={onResizeStart}

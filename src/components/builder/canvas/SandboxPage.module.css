@@ -5953,7 +5953,12 @@
 }
 
 .stage :global([data-node-id='home-hero-search-wrapper'] > [data-builder-node-body='true'] > .hero-search-wrapper) {
-  width: calc(100% - var(--page-gutter) - var(--right-rail-size) - var(--edge-safe-right)) !important;
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  transform: none !important;
 }
 
 .stage :global([data-node-id='home-hero-scroll-arrow'] > [data-builder-node-body='true']),

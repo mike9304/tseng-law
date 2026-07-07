@@ -5542,6 +5542,17 @@
   font-family: var(--font-body) !important;
 }
 
+/* Editor-only optical breathing room for attorney-card section labels
+   ('소개'/'학력'/'경력'). The decomposed geometry keeps live-pinned card
+   totals, which leaves the label glyphs sitting ~0–7px under the previous
+   list's rows; the live composite shows ~16px (.attorney-card-section
+   margin-top + list margin-bottom). Padding inside the label's ≥32px
+   persisted box shifts only the glyphs — no rect, document, or published
+   render impact. */
+.stage :global(.attorney-card-label) {
+  padding-top: 8px;
+}
+
 .stage :global([data-node-id='home-hero-root'] .hero),
 .stage :global([data-node-id='home-hero-root'] .hero-subtitle),
 .stage :global([data-node-id='home-hero-root'] .section-label),

@@ -30,6 +30,27 @@ describe('builder site header responsive contract', () => {
     expect(css).toContain(".globalHeaderRegion :global(.builder-site-header .mobile-toggle) {\n    display: inline-flex;");
   });
 
+  test('keeps long ko editor header preview labels separated before truncation', () => {
+    const css = read('src/components/builder/canvas/SandboxPage.module.css');
+
+    const longestKoLabels = [
+      '호정 한국·대만 업무팀',
+      '曾俊瑋(준외) 변호사 미디어·채널',
+      '문의 및 연락처',
+      '자주 묻는 질문',
+      '고객후기',
+    ];
+
+    expect(longestKoLabels.every((label) => label.length >= 4)).toBe(true);
+    expect(css).toContain(
+      ".globalHeaderRegion :global(.builder-site-header .nav-list) {\n  justify-content: flex-end;\n  gap: clamp(2px, 0.25cqi, 4px);",
+    );
+    expect(css).toContain("column-gap: clamp(2px, 0.25cqi, 4px);");
+    expect(css).toContain(".globalHeaderRegion :global(.builder-site-header .nav-item) {\n  flex: 0 1 auto;\n  min-width: 0;");
+    expect(css).toContain("max-width: clamp(72px, 9cqi, 132px);");
+    expect(css).toContain("white-space: nowrap;");
+  });
+
   test('keeps rulers and custom guides above flow sections but below toolbar chrome', () => {
     const canvasRulers = read('src/components/builder/canvas/CanvasRulers.tsx');
     const customGuides = read('src/components/builder/canvas/CustomGuidesOverlay.tsx');

@@ -1490,24 +1490,30 @@
 
 .globalHeaderRegion :global(.builder-site-header .nav-list) {
   justify-content: flex-end;
-  gap: 0;
+  gap: clamp(2px, 0.25cqi, 4px);
+  column-gap: clamp(2px, 0.25cqi, 4px);
   row-gap: 2px;
   flex-wrap: nowrap;
   overflow: hidden;
 }
 
 .globalHeaderRegion :global(.builder-site-header .nav-item) {
+  flex: 0 1 auto;
   min-width: 0;
 }
 
 .globalHeaderRegion :global(.builder-site-header .nav-link) {
+  flex: 0 1 auto;
   min-height: 36px;
-  max-width: 112px;
+  min-width: 0;
+  max-width: clamp(72px, 9cqi, 132px);
+  box-sizing: border-box;
   padding: 0 5px;
   overflow: hidden;
   border-radius: 12px;
   font-size: 0.76rem;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .globalHeaderRegion :global(.builder-site-header .header-actions) {

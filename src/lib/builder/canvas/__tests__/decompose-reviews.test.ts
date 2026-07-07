@@ -16,13 +16,13 @@ describe('standard reviews page decomposer', () => {
     expect(nodes.get('page-reviews-section-root')?.rect).toMatchObject({ y: 428, height: 1282 });
   });
 
-  it('keeps the zh-hant standalone baseline gap after the page header', () => {
+  it('keeps the zh-hant standalone reviews section flush after the page header', () => {
     const doc = STANDARD_PAGE_DECOMPOSERS.reviews('zh-hant');
     const nodes = nodesById(doc.nodes);
 
-    expect(doc.stageHeight).toBe(1754);
+    expect(doc.stageHeight).toBe(1711);
     expect(nodes.get('page-reviews-page-header-root')?.rect).toMatchObject({ y: 0, height: 428 });
-    expect(nodes.get('page-reviews-section-root')?.rect).toMatchObject({ y: 472, height: 1282 });
+    expect(nodes.get('page-reviews-section-root')?.rect).toMatchObject({ y: 428, height: 1282 });
     expect(nodes.get('page-reviews-section-container')?.rect).toMatchObject({ x: 51, y: 141, width: 1178, height: 1001 });
     expect(nodes.get('page-reviews-form-wrap')?.rect).toMatchObject({ x: 269, y: 0, width: 640, height: 759 });
     expect(nodes.get('page-reviews-list-title')?.rect).toMatchObject({ y: 816, width: 1178, height: 24 });

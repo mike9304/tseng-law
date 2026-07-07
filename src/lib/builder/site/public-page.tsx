@@ -1477,6 +1477,34 @@ export async function PublishedSitePageView({
         .builder-pub-main .builder-pub-node[data-anchor^='mobile-parity-standalone-'] {
           display: none !important;
         }
+        .builder-pub-main .builder-pub-node[data-anchor^='desktop-parity-standalone-'] {
+          display: none !important;
+        }
+        ${locale === 'zh-hant' && ['contact', 'lawyers', 'reviews', 'pricing'].includes(slugPath) ? `
+        @media (min-width: 769px) {
+          .builder-pub-main .builder-pub-node[data-anchor='desktop-parity-standalone-${slugPath}'] {
+            display: block !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-anchor='desktop-parity-standalone-${slugPath}'] {
+            width: 100% !important;
+            max-width: none !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-node-id='page-contact-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-contact-guide-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-contact-contact-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-offices-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-lawyers-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-lawyers-attorney-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-reviews-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-reviews-section-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-pricing-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-pricing-section-root'] {
+            display: none !important;
+          }
+        }
+        ` : ''}
         @media (max-width: 768px) {
           .builder-pub-main .builder-pub-node[data-node-id='home-hero-root'],
           .builder-pub-main .builder-pub-node[data-node-id='home-hero'] {

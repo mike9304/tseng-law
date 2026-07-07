@@ -853,6 +853,7 @@ export default function SandboxCatalogPanel({
                           }));
                           event.dataTransfer.effectAllowed = 'copy';
                         }}
+                        onClick={() => handleAddAppWidget(widget)}
                       >
                         <span className={styles.catalogCardIcon}>{iconLabel}</span>
                         <span className={styles.catalogCardName}>{widget.name}</span>
@@ -1129,6 +1130,7 @@ export default function SandboxCatalogPanel({
                             event.dataTransfer.setData(BUILDER_NODE_KIND_DRAG_MIME, component.kind);
                             event.dataTransfer.effectAllowed = 'copy';
                           }}
+                          onClick={() => handleQuickAdd(component.kind as BuilderCanvasNodeKind)}
                         >
                           <span className={styles.catalogCardIcon}>{component.icon}</span>
                           <span className={styles.catalogCardName}>{displayName}</span>

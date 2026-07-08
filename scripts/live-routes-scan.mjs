@@ -14,11 +14,17 @@ const pages = ['', 'about', 'services', 'contact', 'lawyers', 'pricing', 'review
 const locales = ['ko', 'zh-hant'];
 
 const browser = await chromium.launch();
-const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+const desktop = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+// Phones the audit measured overflow at (390 is the reported zh-home case).
+// The 769-1279 composite band (T15) and the 375/390 mobile band (zh-home FAQ +
+// split-content) are BOTH regression classes the standing scan must catch.
+const measureOverflow = (page) => page.evaluate(
+  () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+).catch(() => 0);
 let issues = 0;
 for (const loc of locales) {
   for (const slug of pages) {
-    const page = await ctx.newPage();
+    const page = await desktop.newPage();
     const errs = [];
     page.on('console', (m) => { if (m.type() === 'error') errs.push(m.text().slice(0, 100)); });
     page.on('pageerror', (e) => errs.push('PAGEERROR: ' + String(e).slice(0, 100)));
@@ -29,19 +35,31 @@ for (const loc of locales) {
       status = resp?.status() ?? 0;
     } catch (e) { errs.push('NAV: ' + String(e).slice(0, 60)); }
     await page.waitForTimeout(800);
-    // 가로 오버플로 검사(T15: 컴포지트 루트 고정폭이 769-1279px에서 256px 스크롤 유발했던 클래스)
-    const hOverflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth).catch(() => 0);
-    if (hOverflow > 2) errs.push(`H-OVERFLOW ${hOverflow}px`);
+    const hOverflow = await measureOverflow(page);
+    if (hOverflow > 2) errs.push(`H-OVERFLOW(1280) ${hOverflow}px`);
+    await page.close();
+
+    // Mobile overflow pass (390px phone). The zh-hant home FAQ/split-content
+    // overflow (~21px) was invisible to the desktop-only scan; check it too.
+    const mp = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true });
+    const mpage = await mp.newPage();
+    try {
+      await mpage.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
+      await mpage.waitForTimeout(600);
+      const mOverflow = await measureOverflow(mpage);
+      if (mOverflow > 2) errs.push(`H-OVERFLOW(390) ${mOverflow}px`);
+    } catch { /* mobile nav failure is captured by the desktop status already */ }
+    await mp.close();
+
     if (status !== 200 || errs.length > 0) {
       issues++;
       console.log(`✗ ${loc}/${slug || '(home)'} status=${status} errors=${errs.length}`, errs.slice(0, 3));
     } else {
       console.log(`✓ ${loc}/${slug || '(home)'}`);
     }
-    await page.close();
   }
 }
-console.log(issues === 0 ? 'ROUTES+CONSOLE: ALL CLEAN' : `ISSUES: ${issues}`);
-await ctx.close();
+console.log(issues === 0 ? 'ROUTES+CONSOLE+MOBILE: ALL CLEAN' : `ISSUES: ${issues}`);
+await desktop.close();
 await browser.close();
 process.exit(issues === 0 ? 0 : 1);

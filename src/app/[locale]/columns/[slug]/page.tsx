@@ -12,7 +12,7 @@ import {
   isBuilderDynamicTemplateBlockVisible,
   readBuilderDynamicTemplatePublishedBlockVisibility,
 } from '@/lib/builder/dynamic-template-drafts';
-import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildSeoMetadata } from '@/lib/seo';
+import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -23,6 +23,7 @@ const copy: Record<Locale, {
   consultationTitle: string;
   consultationText: string;
   consultationButton: string;
+  faqHeading: string;
 }> = {
   ko: {
     backLabel: '← 칼럼 목록으로',
@@ -31,6 +32,7 @@ const copy: Record<Locale, {
     consultationTitle: '상담 예약',
     consultationText: '대만 법률 관련 궁금한 점이 있으시면 언제든 문의해 주세요.',
     consultationButton: '문의하기',
+    faqHeading: '자주 묻는 질문',
   },
   'zh-hant': {
     backLabel: '← 返回專欄列表',
@@ -39,6 +41,7 @@ const copy: Record<Locale, {
     consultationTitle: '預約諮詢',
     consultationText: '如有任何台灣法律相關問題，歡迎隨時聯繫我們。',
     consultationButton: '聯絡我們',
+    faqHeading: '常見問題',
   },
   en: {
     backLabel: '← Back to columns',
@@ -47,6 +50,7 @@ const copy: Record<Locale, {
     consultationTitle: 'Book Consultation',
     consultationText: 'If you have any questions about Taiwan law, feel free to contact us.',
     consultationButton: 'Contact Us',
+    faqHeading: 'Frequently Asked Questions',
   },
 };
 
@@ -110,6 +114,15 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
 
   const prevLabel = locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : '← Previous';
   const nextLabel = locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : 'Next →';
+
+  // FAQ (FAQPage schema + plain-text "자주 묻는 질문" section). Only the two
+  // indexed, hand-authored locales (ko / zh-hant) carry an `faq` array; the
+  // en route overlays ko frontmatter onto translated copy, so we skip it there
+  // to avoid rendering Korean answers under an English heading.
+  const faqItems = post.faq ?? [];
+  const showFaq = faqItems.length > 0 && (locale === 'ko' || locale === 'zh-hant');
+  const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, locale) : null;
+
   const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
     'columns.item-template',
     locale
@@ -152,6 +165,7 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
           />
         </>
       ) : null}
+      {showSeo && faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       {showHero ? (
         <section className="blog-hero" data-tone="dark">
           <div className="blog-hero-bg">
@@ -179,6 +193,19 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
           <div className="container blog-container">
             <div className="blog-body">
               <ColumnContent content={post.content} />
+              {showBody && showFaq ? (
+                <section className="column-faq" aria-label={t.faqHeading}>
+                  <h2 className="blog-heading column-faq-heading">{t.faqHeading}</h2>
+                  <dl className="column-faq-list">
+                    {faqItems.map((item, index) => (
+                      <div className="column-faq-item" key={`${index}-${item.q}`}>
+                        <dt className="column-faq-question">{item.q}</dt>
+                        <dd className="column-faq-answer">{item.a}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </section>
+              ) : null}
             </div>
             <aside className="blog-sidebar">
               <div className="blog-sidebar-card">

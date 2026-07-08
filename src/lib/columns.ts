@@ -6,6 +6,11 @@ import { insightsArchive, type InsightPost } from '../data/insights-archive';
 
 export type ColumnCategory = 'formation' | 'legal' | 'case';
 
+export interface ColumnFaqItem {
+  q: string;
+  a: string;
+}
+
 export interface ColumnPost {
   slug: string;
   title: string;
@@ -20,6 +25,33 @@ export interface ColumnPost {
   featuredImage: string;
   content: string;
   summary: string;
+  faq?: ColumnFaqItem[];
+}
+
+/**
+ * Normalize the optional `faq` frontmatter array into a clean `{ q, a }[]`.
+ *
+ * Frontmatter shape (gray-matter / YAML):
+ *   faq:
+ *     - q: "질문"
+ *       a: "답"
+ *
+ * Drops anything that is not an object or is missing a non-empty `q`/`a`
+ * string so malformed entries can never reach the FAQPage JSON-LD or the
+ * rendered "자주 묻는 질문" section. Exported for unit testing.
+ */
+export function normalizeColumnFaq(raw: unknown): ColumnFaqItem[] {
+  if (!Array.isArray(raw)) return [];
+  return raw
+    .map((item) => {
+      if (item == null || typeof item !== 'object') return null;
+      const record = item as Record<string, unknown>;
+      const q = typeof record.q === 'string' ? record.q.trim() : '';
+      const a = typeof record.a === 'string' ? record.a.trim() : '';
+      if (!q || !a) return null;
+      return { q, a };
+    })
+    .filter((item): item is ColumnFaqItem => item !== null);
 }
 
 const COLUMNS_DIR = path.join(process.cwd(), 'src/content/columns');
@@ -161,6 +193,7 @@ export function getAllColumnPosts(locale: Locale = 'ko'): ColumnPost[] {
     const fallbackDateDisplay = (data.date_display as string) || '';
     const fallbackReadTime = (data.read_time as string) || '';
     const fallbackSummary = extractSummary(fixedContent);
+    const faq = normalizeColumnFaq(data.faq);
 
     let title = fallbackTitle;
     let dateDisplay = fallbackDateDisplay;
@@ -195,6 +228,7 @@ export function getAllColumnPosts(locale: Locale = 'ko'): ColumnPost[] {
       featuredImage,
       content: contentText,
       summary,
+      ...(faq.length ? { faq } : {}),
     };
   });
   return posts.sort((a, b) => b.date.localeCompare(a.date));

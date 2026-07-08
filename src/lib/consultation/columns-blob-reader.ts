@@ -258,6 +258,15 @@ export async function getAllColumnPostsIncludingBlob(locale: Locale): Promise<Co
 
   if (builderPosts.length === 0 && blobPosts.length === 0) return filePosts;
 
+  // faq lives only in file frontmatter (src/content/columns/*.md); it is not
+  // part of the builder/Blob ColumnDocument shape. A builder/Blob post that
+  // shadows a file post by slug would therefore drop the FAQ and break the
+  // FAQPage JSON-LD, so backfill faq from the file copy by slug.
+  const fileFaqBySlug = new Map<string, NonNullable<ColumnPost['faq']>>();
+  for (const post of filePosts) {
+    if (post.faq && post.faq.length > 0) fileFaqBySlug.set(post.slug, post.faq);
+  }
+
   // Merge: builder storage first (local/blob published overlays), then direct
   // Blob fallback, then file entries whose slug isn't already covered.
   const merged: ColumnPost[] = [];
@@ -265,7 +274,8 @@ export async function getAllColumnPostsIncludingBlob(locale: Locale): Promise<Co
   for (const post of [...builderPosts, ...blobPosts, ...filePosts]) {
     if (isMirroredLoadMoreTestPost(post)) continue;
     if (seen.has(post.slug)) continue;
-    merged.push(post);
+    const faq = post.faq ?? fileFaqBySlug.get(post.slug);
+    merged.push(faq ? { ...post, faq } : post);
     seen.add(post.slug);
   }
   return merged;

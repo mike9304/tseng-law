@@ -70,6 +70,11 @@ type CollectionPageJsonLdInput = {
   }>;
 };
 
+type FaqJsonLdItem = {
+  q: string;
+  a: string;
+};
+
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
 const DEFAULT_SOCIAL_IMAGE = '/images/header-skyline-ratio.webp';
 const LOGO_IMAGE = '/images/brand/hovering-seal-red-512.png';
@@ -473,4 +478,40 @@ export function buildCollectionPageJsonLd({
 
 export function getOrganizationName(locale: Locale): string {
   return organizationName[locale];
+}
+
+/**
+ * Build an `FAQPage` (https://schema.org/FAQPage) JSON-LD object from a list
+ * of `{ q, a }` pairs. Used by column detail pages whose frontmatter carries
+ * an optional `faq` array, so AI answer engines (ChatGPT / Perplexity / etc.)
+ * can cite the firm's own answers.
+ *
+ * Returns `null` when there are no valid items so callers can skip injecting
+ * an empty FAQPage block (Google rich-result eligibility requires ≥1 Q/A).
+ */
+export function buildFaqJsonLd(items: FaqJsonLdItem[], locale?: Locale) {
+  const valid = (Array.isArray(items) ? items : [])
+    .filter((item): item is FaqJsonLdItem => Boolean(item && item.q && item.a))
+    .map((item) => ({ q: String(item.q), a: String(item.a) }));
+
+  if (valid.length === 0) return null;
+
+  const node: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: valid.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: a,
+      },
+    })),
+  };
+
+  if (locale) {
+    node.inLanguage = getLocaleLanguageTag(locale);
+  }
+
+  return node;
 }

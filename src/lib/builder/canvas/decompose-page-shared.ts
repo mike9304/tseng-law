@@ -920,19 +920,25 @@ function buildMemberCardNodes({
   });
 
   infoCursor += 8;
+  // Display the clean localized attribution label instead of the raw scraped
+  // source URL — the URLs carry a Korean slug ('…복제-대표변호사-증준외') that
+  // read as leftover-draft text on the zh-hant/en visitor pages. Height is kept
+  // computed from the original URL string so the reserved rect (and every card
+  // geometry pinned to it) is unchanged; only the shown text differs.
+  const sourceReservedHeight = estimateTextHeight(`${copy.source}: ${member.sourceUrl}`, infoWidth, 14, 1.6);
   nodes.push(
     createHomeTextNode({
       id: `${prefix}-source`,
       parentId: `${prefix}-info`,
-      rect: { x: 0, y: infoCursor, width: infoWidth, height: estimateTextHeight(`${copy.source}: ${member.sourceUrl}`, infoWidth, 14, 1.6) },
+      rect: { x: 0, y: infoCursor, width: infoWidth, height: sourceReservedHeight },
       zIndex: 20,
-      text: `${copy.source}: ${member.sourceUrl}`,
+      text: copy.source,
       className: 'attorney-card-source',
       as: 'p',
       fontSize: 14,
     }),
   );
-  infoCursor += estimateTextHeight(`${copy.source}: ${member.sourceUrl}`, infoWidth, 14, 1.6) + sourceBottomGap;
+  infoCursor += sourceReservedHeight + sourceBottomGap;
 
   const actionHeight = 44;
   const actionButtonHeight = 40;

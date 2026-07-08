@@ -92,8 +92,7 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Loca
         </div>
 
         <p className="attorney-card-source">
-          {l.source}:{' '}
-          <a href={member.sourceUrl} target="_blank" rel="noreferrer" className="link-underline">{member.sourceUrl}</a>
+          <a href={member.sourceUrl} target="_blank" rel="noreferrer" className="link-underline">{l.source}</a>
         </p>
         <div className="attorney-card-actions">
           {profileHref ? (

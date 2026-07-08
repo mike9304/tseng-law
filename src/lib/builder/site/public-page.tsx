@@ -333,7 +333,12 @@ export async function buildPublishedSitePageMetadata(
   const settings = resolved.site.settings;
   const favicon = resolveBuilderBrandAssetUrl(settings?.assets?.faviconAssetId) ?? settings?.favicon;
   const siteOgImage = resolveBuilderBrandAssetUrl(settings?.assets?.ogImageAssetId) ?? settings?.ogImage;
-  const ogImage = seoData.ogImage ? (resolveBuilderBrandAssetUrl(seoData.ogImage) ?? seoData.ogImage) : siteOgImage;
+  // Absolute default so every page always emits an og:image/twitter:image —
+  // otherwise social crawlers (LINE/KakaoTalk/Facebook/X, which don't run JS)
+  // render link previews with no image. The declared twitter:card is
+  // summary_large_image, so a wide hero asset is the right fallback.
+  const DEFAULT_SOCIAL_IMAGE = resolveAbsoluteSeoUrl(siteUrl, '/images/header-skyline-ratio.webp');
+  const ogImage = (seoData.ogImage ? (resolveBuilderBrandAssetUrl(seoData.ogImage) ?? seoData.ogImage) : siteOgImage) || DEFAULT_SOCIAL_IMAGE;
   const twitterImage = seoData.twitterImage
     ? (resolveBuilderBrandAssetUrl(seoData.twitterImage) ?? seoData.twitterImage)
     : ogImage;
@@ -353,6 +358,8 @@ export async function buildPublishedSitePageMetadata(
     title: seoData.title,
     description: seoData.description,
     openGraph: {
+      type: 'website',
+      url: seoData.canonical,
       title: seoData.ogTitle,
       description: seoData.ogDescription,
       images: ogImage ? [ogImage] : [],

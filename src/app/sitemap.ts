@@ -118,5 +118,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.warn('[sitemap] builder pages collection failed:', error);
   }
 
-  return pages;
+  // Deduplicate by URL: the STATIC_PATHS loop and the builder-published
+  // collection both emit home/about/services/… for ko & zh-hant (22 dupes),
+  // producing conflicting lastmod/priority for the same <loc>. Keep one entry
+  // per URL — prefer the freshest lastModified, then the higher priority.
+  const byUrl = new Map<string, MetadataRoute.Sitemap[number]>();
+  const ts = (v: string | Date | undefined): number =>
+    v == null ? 0 : (v instanceof Date ? v.getTime() : new Date(v).getTime());
+  for (const entry of pages) {
+    const existing = byUrl.get(entry.url);
+    if (!existing) {
+      byUrl.set(entry.url, entry);
+      continue;
+    }
+    const takeNew = ts(entry.lastModified) > ts(existing.lastModified)
+      || (ts(entry.lastModified) === ts(existing.lastModified)
+        && (entry.priority ?? 0) > (existing.priority ?? 0));
+    if (takeNew) byUrl.set(entry.url, entry);
+  }
+
+  return [...byUrl.values()];
 }

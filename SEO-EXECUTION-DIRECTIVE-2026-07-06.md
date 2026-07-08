@@ -25,10 +25,10 @@ STEP 0(작업트리 안전 확인)은 매번 먼저. 워커 산출물은 검수 
 | 1 | Google Search Console + Bing 등록 | **사용자** | ☐ | |
 | 2 | 네이버 서치어드바이저 등록 | **사용자** | ☐ | |
 | 3 | Google Business Profile 등록 | **사용자** | ☐ | |
-| 4 | WO-SEO-5: 구도메인 301 코드 | **GLM 5.2**+검수 | ⏳ 진행중(07-09 발주, log: ~/glm-workorders/tseng-law-seo/logs/wo-seo-5.log) | |
-| 5 | 구도메인 DNS를 Vercel로 이전 | **사용자** | ☐ | |
-| 6 | WO-SEO-1: llms.txt + FAQ 스키마 | Codex+검수 | ☐ | |
-| 7 | WO-SEO-2: 필러 페이지 2종 | Codex+검수 | ☐ | |
+| 4 | WO-SEO-5: 구도메인 301 코드 | GLM 5.2+검수 | ✅ 커밋 f2d8b2d0 + main 배포 (게이트 그린, 전 호스트 no-op) | 07-09 |
+| 5 | 구도메인 DNS를 Vercel로 이전 | **사용자** | 🔓 준비됨 — 코드 배포 완료, 사장님 진행 가능 | |
+| 6 | WO-SEO-1: llms.txt + FAQ 스키마 | GLM 5.2+검수 | ✅ 커밋 59d7ecd8 + 배포 (인프라+칼럼10편 FAQ+테스트22+merge버그수정, FAQPage 렌더 curl 검증) | 07-09 |
+| 7 | WO-SEO-2: 필러 페이지 2종 | **GLM 5.2**+검수 | ☐ 다음 | |
 | 8 | WO-SEO-3a: 칼럼 4편 (C1~C4) | Codex+검수 | ☐ | |
 | 9 | 변호사 검수 사이클 (3a분) | **사용자(변호사)** | ☐ | |
 | 10 | WO-SEO-3b: 칼럼 4편 (C5~C8) + 검수 | Codex+사용자 | ☐ | |

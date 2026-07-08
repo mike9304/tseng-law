@@ -23,7 +23,11 @@ const browser = await chromium.launch();
 
 const measureOverflow = (page) => page.evaluate(
   () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
-).catch(() => 0);
+);
+
+function shortError(error) {
+  return String(error).slice(0, 80);
+}
 
 // 한 페이지의 전 뷰포트 검사(1280 데스크톱 + 1024 태블릿/소형노트북 + 390 모바일).
 // The 769-1279 composite/decomposed band (T15/T16) and the 375/390 mobile band
@@ -42,10 +46,11 @@ async function scanOne(loc, slug) {
   try {
     const resp = await page.goto(url, { waitUntil: 'load', timeout: 45000 });
     status = resp?.status() ?? 0;
-  } catch (e) { errs.push('NAV: ' + String(e).slice(0, 60)); }
-  await page.waitForTimeout(800);
-  const hOverflow = await measureOverflow(page);
-  if (hOverflow > 2) errs.push(`H-OVERFLOW(1280) ${hOverflow}px`);
+    if (status !== 200) errs.push(`STATUS(1280) ${status}`);
+    await page.waitForTimeout(800);
+    const hOverflow = await measureOverflow(page);
+    if (hOverflow > 2) errs.push(`H-OVERFLOW(1280) ${hOverflow}px`);
+  } catch (e) { errs.push('CHECK-FAIL(1280): ' + shortError(e)); }
   await desktop.close();
 
   // Mid-band pass (1024px desktop/tablet landscape). T16 proved this band can
@@ -53,11 +58,13 @@ async function scanOne(loc, slug) {
   const bp = await browser.newContext({ viewport: { width: 1024, height: 900 } });
   const bpage = await bp.newPage();
   try {
-    await bpage.goto(url, { waitUntil: 'load', timeout: 45000 });
+    const resp = await bpage.goto(url, { waitUntil: 'load', timeout: 45000 });
+    const bStatus = resp?.status() ?? 0;
+    if (bStatus !== 200) errs.push(`STATUS(1024) ${bStatus}`);
     await bpage.waitForTimeout(600);
     const bOverflow = await measureOverflow(bpage);
     if (bOverflow > 2) errs.push(`H-OVERFLOW(1024) ${bOverflow}px`);
-  } catch { /* mid-band nav failure is captured by the desktop status already */ }
+  } catch (e) { errs.push('CHECK-FAIL(1024): ' + shortError(e)); }
   await bp.close();
 
   // Mobile overflow pass (390px phone). The zh-hant home FAQ/split-content
@@ -65,11 +72,13 @@ async function scanOne(loc, slug) {
   const mp = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true });
   const mpage = await mp.newPage();
   try {
-    await mpage.goto(url, { waitUntil: 'load', timeout: 45000 });
+    const resp = await mpage.goto(url, { waitUntil: 'load', timeout: 45000 });
+    const mStatus = resp?.status() ?? 0;
+    if (mStatus !== 200) errs.push(`STATUS(390) ${mStatus}`);
     await mpage.waitForTimeout(600);
     const mOverflow = await measureOverflow(mpage);
     if (mOverflow > 2) errs.push(`H-OVERFLOW(390) ${mOverflow}px`);
-  } catch { /* mobile nav failure is captured by the desktop status already */ }
+  } catch (e) { errs.push('CHECK-FAIL(390): ' + shortError(e)); }
   await mp.close();
 
   return { status, errs };

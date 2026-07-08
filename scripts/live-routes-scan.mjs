@@ -13,11 +13,22 @@ const BASE = (baseArg ? baseArg.slice(7) : 'https://tseng-law.com').replace(/\/$
 const pages = ['', 'about', 'services', 'contact', 'lawyers', 'pricing', 'reviews', 'columns', 'faq', 'videos', 'privacy', 'disclaimer'];
 const locales = ['ko', 'zh-hant'];
 
+// KNOWN, documented, deferred (T16, post-handoff): decomposed pages own no
+// responsive rects in the 1024-1279 band, so their 1280-stage absolute layout
+// bleeds ~205-256px there. These are already tracked; keep the standing gate a
+// clean NEW-regression signal by not re-flagging them. `<loc>/<slug>@<vp>`.
+const KNOWN_OVERFLOW = new Set([
+  'zh-hant/privacy@1024', 'zh-hant/disclaimer@1024',
+  'ko/privacy@1024', 'ko/disclaimer@1024',
+  'zh-hant/services@1024', 'zh-hant/@1024',
+]);
+
 const browser = await chromium.launch();
 const desktop = await browser.newContext({ viewport: { width: 1280, height: 900 } });
 // Phones the audit measured overflow at (390 is the reported zh-home case).
-// The 769-1279 composite band (T15) and the 375/390 mobile band (zh-home FAQ +
-// split-content) are BOTH regression classes the standing scan must catch.
+// The 769-1279 composite/decomposed band (T15/T16) and the 375/390 mobile band
+// (zh-home FAQ + split-content) are BOTH regression classes the standing scan
+// must catch.
 const measureOverflow = (page) => page.evaluate(
   () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
 ).catch(() => 0);
@@ -39,6 +50,18 @@ for (const loc of locales) {
     if (hOverflow > 2) errs.push(`H-OVERFLOW(1280) ${hOverflow}px`);
     await page.close();
 
+    // Mid-band pass (1024px desktop/tablet landscape). T16 proved this band can
+    // overflow even when both 1280px desktop and 390px phone checks are clean.
+    const bp = await browser.newContext({ viewport: { width: 1024, height: 900 } });
+    const bpage = await bp.newPage();
+    try {
+      await bpage.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
+      await bpage.waitForTimeout(600);
+      const bOverflow = await measureOverflow(bpage);
+      if (bOverflow > 2 && !KNOWN_OVERFLOW.has(`${loc}/${slug}@1024`)) errs.push(`H-OVERFLOW(1024) ${bOverflow}px`);
+    } catch { /* mid-band nav failure is captured by the desktop status already */ }
+    await bp.close();
+
     // Mobile overflow pass (390px phone). The zh-hant home FAQ/split-content
     // overflow (~21px) was invisible to the desktop-only scan; check it too.
     const mp = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true });
@@ -59,7 +82,7 @@ for (const loc of locales) {
     }
   }
 }
-console.log(issues === 0 ? 'ROUTES+CONSOLE+MOBILE: ALL CLEAN' : `ISSUES: ${issues}`);
+console.log(issues === 0 ? 'ROUTES+CONSOLE+1280+1024+390: ALL CLEAN' : `ISSUES: ${issues}`);
 await desktop.close();
 await browser.close();
 process.exit(issues === 0 ? 0 : 1);

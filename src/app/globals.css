@@ -5907,6 +5907,24 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   word-break: keep-all;
 }
 
+/* On narrow phones the Korean-oriented `keep-all` prevents Traditional
+   Chinese (which has no spaces) from breaking between Han characters, so a
+   long zh-hant FAQ question forces its grid item wider than the viewport
+   (~21px horizontal scroll on the zh-hant home at 390px). Below 480px let the
+   question wrap normally and allow the grid item to shrink. Scoped to phones
+   so desktop/tablet parity is untouched; Korean already fits, so adding break
+   opportunities does not reflow it. */
+@media (max-width: 480px) {
+  .faq-question button > span:first-child,
+  .faq-question[role='button'] > span:first-child {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+  .faq-item {
+    min-width: 0;
+  }
+}
+
 .faq-item:hover {
   background: rgba(245, 249, 244, 0.96);
 }
@@ -17779,6 +17797,14 @@ html[lang='zh-Hant'] h3 {
   /* Section / split content padding tighten */
   .split-content {
     padding: 2rem 1.25rem 2.4rem;
+    /* Grid/flex children default to min-width:auto (= min-content), which let
+       the attorney split-content and its portrait bleed ~9px past a 375px
+       section (zh-hant home horizontal scroll). Allow them to shrink to the
+       column so the mobile-stacked layout fits the viewport. */
+    min-width: 0;
+  }
+  .split-image {
+    min-width: 0;
   }
 
   /* Section title sizes calmer on mobile */

@@ -436,6 +436,11 @@ export async function PublishedSitePageView({
     && !resolved.headerCanvas
     && !resolved.footerCanvas;
   const useBuilderChrome = !useLegacyPublicChrome;
+  const requiresMidBandStageScale =
+    (locale === 'zh-hant' && slugPath === '') ||
+    slugPath === 'privacy' ||
+    slugPath === 'disclaimer' ||
+    (locale === 'zh-hant' && slugPath === 'services');
   const allowPublishedThemeToggle = useBuilderChrome && darkModeConfig.allowVisitorToggle;
   const themeInitScript = buildThemeInitScript(darkModeConfig.defaultMode, allowPublishedThemeToggle);
   const darkColors = theme.darkColors ?? createDarkColorsFromLight(theme.colors);
@@ -1497,15 +1502,43 @@ export async function PublishedSitePageView({
             margin-left: auto !important;
             margin-right: auto !important;
           }
-          /* NOTE (T16, post-handoff program): DECOMPOSED pages own no rects
-             for this band — zh home, privacy/disclaimer, zh services scroll
-             horizontally (205-256px) because their whole absolute tree
-             assumes the 1280 stage. Partial per-node caps make it WORSE
-             (a viewport-capped hero image under a still-1280 overlay), and
-             overflow clipping CUTS card content — both measured and
-             reverted. Only a per-band responsive pass (rects or scaling)
-             fixes this class. */
+          /* NOTE (T16): decomposed 1280-stage routes are handled by the
+             route-scoped scale block below. Keep using full-stage scaling here;
+             measured partial per-node caps and overflow clipping both broke
+             content parity at 1024px. */
         }
+        ${requiresMidBandStageScale ? `
+        /* T16: these decomposed routes own a fixed 1280px absolute layout with
+           NO responsive rects for the 769-1279px band, so they scroll
+           horizontally there (measured 205-256px). The prior attempt used
+           transform scale with calc((100vw - 2px) / 1280px) — a dead no-op:
+           calc(length / length) is invalid in scale() so the var was empty AND
+           transform only shrinks VISUALLY (the 1280 layout box still drives
+           scrollWidth). CSS zoom shrinks the LAYOUT box (collapsing height too),
+           so it actually removes the overflow. It cannot take a vw-proportional
+           value in CSS (same length/length wall), so it is stepped: each step's
+           zoom = lowerBound/1280, which guarantees content within the viewport
+           across the whole step (<=64px right gutter, far better than a
+           horizontal scroll). Scoped to these routes; >=1280 and <=768 are
+           untouched. Verified by
+           tests/builder-editor/public-standard-midband-overflow.playwright.ts
+           (document overflow <=2px at 1024px). */
+        @media (min-width: 769px) and (max-width: 1279px) {
+          .builder-pub-main {
+            width: 1280px !important;
+            max-width: none !important;
+            min-height: 0 !important;
+          }
+        }
+        @media (min-width: 1216px) and (max-width: 1279px) { .builder-pub-main { zoom: 0.95; } }
+        @media (min-width: 1152px) and (max-width: 1215px) { .builder-pub-main { zoom: 0.90; } }
+        @media (min-width: 1088px) and (max-width: 1151px) { .builder-pub-main { zoom: 0.85; } }
+        @media (min-width: 1024px) and (max-width: 1087px) { .builder-pub-main { zoom: 0.80; } }
+        @media (min-width: 960px)  and (max-width: 1023px) { .builder-pub-main { zoom: 0.75; } }
+        @media (min-width: 896px)  and (max-width: 959px)  { .builder-pub-main { zoom: 0.70; } }
+        @media (min-width: 832px)  and (max-width: 895px)  { .builder-pub-main { zoom: 0.65; } }
+        @media (min-width: 769px)  and (max-width: 831px)  { .builder-pub-main { zoom: 0.60; } }
+        ` : ''}
         ${locale === 'zh-hant' && !slugPath ? `
         /* ≥1360px the case-results H2 grows ~21px taller (viewport-scaled
            type) and invades the fixed-position body paragraph by ~10px.

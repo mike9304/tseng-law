@@ -27,12 +27,13 @@
 
 세션 흐름: 사용자가 target W__ 지정 → Manager(Claude Opus)가 SESSION.md 작성 → 워커 agent 발주 / Codex 프롬프트 제공 → 통합 → 브라우저 검증 → Wix 체크포인트.md 갱신 → 계획서 § 16 Changelog 한 줄 → SESSION.md 리셋.
 
-## 현재 상태 (2026-07-03 기준)
+## 현재 상태 (2026-07-08 기준)
 
 - **Wix 체크포인트 점수**: 🟢 **225 / 225** (`npm run audit:w-checkpoints` PASS, 225 green / 0 yellow / 0 red). 전체 제품 체크포인트도 `npm run audit:release` PASS, 120 green / 0 yellow / 0 red.
 - **로컬 handoff 게이트**: `npm run qa`, clean `npm run build`, `NEXT_DIST_DIR=.next-build npm run test:builder-smoke`, `npm run typecheck`, `git diff --check` 통과.
-- **아직 전역 완료로 선언하지 말 조건**: production admin-builder 인증 smoke, 외부 provider/credential QA(Stripe/Zoom/메일/캘린더/AI 등), live deploy 후 공개 정적자산 200 재확인, 전체 dirty worktree 정리/리뷰.
-- **2026-07-03 라이브 발견 사항**: production `/ko/columns`에서 `/images/placeholder-article-hero.jpg`가 배포 누락으로 404. Clean `HEAD` 검증 결과 최소 배포 범위는 `public/images/placeholder-*` 정적자산 묶음 + `src/lib/builder/site/redirect-match.ts`이며, 다음 배포 후 raw/optimizer URL 재확인 필요.
+- **아직 전역 완료로 선언하지 말 조건**: production admin-builder 인증 smoke, 외부 provider/credential QA(Stripe/Zoom/메일/캘린더/AI 등), 전체 dirty worktree 정리/리뷰.
+- **2026-07-08 post-deploy 정적자산 확인**: `https://tseng-law.com/images/placeholder-article-hero.jpg`와 `_next/image?url=%2Fimages%2Fplaceholder-article-hero.jpg&w=1200&q=75` 모두 `200 image/jpeg`. 2026-07-03 `/ko/columns` placeholder 404 배포 누락은 현재 라이브에서 재현되지 않음.
+- **2026-07-08 handoff blocker gate**: `npm run gate:handoff-blockers -- --base=https://tseng-law.com` 추가. 정적자산+admin auth boundary+production auth smoke+provider credential readiness를 시크릿 출력 없이 반복 점검하며, 현재는 인증/provider open rows 때문에 exit 1이 정상.
 - **W07 최신 근거**: 2026-07-02 Codex가 현재 production seed의 풀폭 `home-hero` composite에서 SE handle이 inspector 뒤에 가려지던 canvas fit 결함을 `CanvasContainer` visible scroll-root 기준 fit으로 수정. `QA_ONLY=W07` real builder QA pass/0 findings, report `/tmp/tseng-w07-qa/2026-07-02T01-14-39/report.md`.
 - **W08 최신 근거**: 2026-07-02 Codex가 실제 `/Users/son7/Projects/tseng-law` isolated builder `http://127.0.0.1:4536`에서 `home-hero-label` 선택 후 회전 핸들 real mouse drag를 재검증. 8 resize handles, rotate cursor `grab`, transform `matrix(1, 0, 0, 1, 0, 0)` -> `matrix(0, 1, -1, 0, 0, 0)`, readout `90°`, Undo enabled, browser errors 0. Report `/tmp/tseng-w08-qa/2026-07-02T01-36-33-944Z/report.md`. Computer Use MCP는 timeout이라 Safari GUI 증거는 System Events/실제 스크린샷으로 보강.
 - **F0 (메인 사이트 → 빌더)**: 코드 완료 + local 좌표 포지셔닝 버그 fix 완료. `/ko` 390 builder-pub-node 로 홈 decompose (home-seed-v6, service icon 노드 +6 포함). `/ko/{about,services,contact,lawyers,faq,pricing,reviews,privacy,disclaimer}` 각각 decompose-page-*.ts 로 30~193 builder-pub-node 렌더 (S-06).
@@ -109,10 +110,10 @@
 
 ## 다음 큰 블로커 (우선순위)
 
-1. **배포 전 worktree 정리**: 현재 대량 dirty tree라 production deploy는 clean build/atomic commit 기준으로만 진행. Placeholder 404 수정 최소 staged 범위는 `public/images/placeholder-*` + `src/lib/builder/site/redirect-match.ts`.
+1. **배포 전 worktree 정리**: 현재 대량 dirty tree라 production deploy는 clean build/atomic commit 기준으로만 진행. 2026-07-08 현재 HEAD/origin은 `c95c8a88`이며 `.omo/` evidence와 일부 로컬 산출물이 untracked로 남아 있음.
 2. **Production admin-builder 인증 smoke**: `.env.local` credentials로 `https://tseng-law.com` GET smoke는 401. 실제 production builder credentials 또는 Vercel env 확인 필요.
 3. **외부 provider QA**: Stripe, Zoom, Google/Outlook calendar, Resend/SMTP, DeepL/OpenAI, Upstash 등 live credential/provider smoke는 현재 머신의 env만으로 완료 불가.
-4. **Post-deploy 확인**: 배포 후 `/images/placeholder-article-hero.jpg`와 `_next/image?...placeholder-article-hero.jpg...`가 200인지 확인.
+4. **반복 게이트**: 위 blocker 재확인은 `npm run gate:handoff-blockers -- --base=https://tseng-law.com`로 수행. exit 1은 blocker가 남았다는 의미이며, 현재 static asset과 no-auth boundary는 PASS.
 
 ## 레포 / 운영 환경
 

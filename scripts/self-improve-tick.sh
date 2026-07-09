@@ -7,8 +7,8 @@
 #
 # 하는 일: LIVE 검사 축(샌드박스 불필요)을 돌려 회귀/결함을 감지하고 evidence에 리포트.
 #   1) live-routes-scan   : ko/zh 24페이지 200 + 콘솔 0 + 오버플로 0 (1280/1024/390)
-#   2) handoff-blockers   : 정적자산+auth 경계 code FAIL 여부 (provider open은 결함 아님)
-#   3) new-landing        : 새 SEO 랜딩 4종 200 + <title>
+#   2) handoff-blockers   : 정적자산+auth 경계 code FAIL 여부 (fresh artifact 강제; provider open은 결함 아님)
+#   3) live-seo-scan      : 전 페이지 title(유일)·desc·canonical·hreflang·JSON-LD파싱·본문 sentinel(soft-404 방어)
 # 종료코드: 0 = 이번 tick converged green, 1 = 실제 발견(사람이 트리아지/하청).
 #
 # 사용:   scripts/self-improve-tick.sh
@@ -38,30 +38,32 @@ else
 fi
 
 echo "[tick] 2/3 handoff-blockers readiness …"
-if npm run gate:handoff-blockers:json -- --base="$BASE" >/dev/null 2>&1; then :; fi
-if [ -f .omo/evidence/handoff-blockers-latest.json ]; then
-  fail=$(node -e "try{const r=require(process.cwd()+'/.omo/evidence/handoff-blockers-latest.json');console.log(r.counts?.fail ?? 0)}catch{console.log(-1)}" 2>/dev/null)
-  open=$(node -e "try{const r=require(process.cwd()+'/.omo/evidence/handoff-blockers-latest.json');console.log(r.counts?.open ?? 0)}catch{console.log(-1)}" 2>/dev/null)
-  if [ "${fail:-0}" != "0" ]; then
+rm -f .omo/evidence/handoff-blockers-latest.json   # L24: stale artifact false-clean 방지 — 반드시 fresh만 읽는다
+npm run gate:handoff-blockers:json -- --base="$BASE" >/dev/null 2>&1
+if [ ! -f .omo/evidence/handoff-blockers-latest.json ]; then
+  echo "- handoff: gate가 fresh artifact 미생성 (게이트 실패/미실행) — FINDING" >> "$OUT"; findings=$((findings+1))
+else
+  fail=$(node -e "try{const r=require(process.cwd()+'/.omo/evidence/handoff-blockers-latest.json');const f=r.counts&&r.counts.fail;console.log(Number.isInteger(f)?f:'BAD')}catch{console.log('BAD')}" 2>/dev/null)
+  open=$(node -e "try{const r=require(process.cwd()+'/.omo/evidence/handoff-blockers-latest.json');console.log((r.counts&&r.counts.open)??'?')}catch{console.log('?')}" 2>/dev/null)
+  if [ "$fail" = "BAD" ]; then
+    echo "- handoff: artifact malformed/no counts.fail — FINDING" >> "$OUT"; findings=$((findings+1))
+  elif [ "$fail" != "0" ]; then
     echo "- handoff: code FAIL=$fail (real blocker)" >> "$OUT"; findings=$((findings+1))
   else
     echo "- handoff: no code FAIL (open=$open = customer provider creds only)" >> "$OUT"
   fi
-else
-  echo "- handoff: gate did not produce artifact (skipped)" >> "$OUT"
 fi
 
-echo "[tick] 3/3 new landing pages …"
-newbad=0
-for u in \
-  "$BASE/ko/guides/taiwan-company-setup" \
-  "$BASE/zh-hant/guides/taiwan-company-setup" \
-  "$BASE/ko/korean-lawyer-in-taiwan" \
-  "$BASE/zh-hant/korean-lawyer-in-taiwan"; do
-  code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "$u")
-  [ "$code" != "200" ] && { echo "    NON-200 ($code) $u" >> "$OUT"; newbad=$((newbad+1)); }
-done
-if [ "$newbad" = "0" ]; then echo "- new-landing: all 200" >> "$OUT"; else echo "- new-landing: $newbad non-200" >> "$OUT"; findings=$((findings+1)); fi
+echo "[tick] 3/3 SEO integrity (title·desc·canonical·hreflang·JSON-LD·body sentinel, 28 URL) …"
+seo_out="$(node scripts/live-seo-scan.mjs --base="$BASE" 2>&1)"
+seo_exit=$?
+if [ "$seo_exit" = "0" ] && print -r -- "$seo_out" | grep -q 'ALL CLEAN'; then
+  echo "- seo-integrity: CLEAN ($(print -r -- "$seo_out" | tail -1))" >> "$OUT"
+else
+  echo "- seo-integrity: ISSUES (exit=$seo_exit) — body/title/hreflang/JSON-LD/soft-404 회귀" >> "$OUT"
+  print -r -- "$seo_out" | grep '^✗' | sed 's/^/    /' >> "$OUT"
+  findings=$((findings+1))
+fi
 
 echo >> "$OUT"
 if [ "$findings" = "0" ]; then

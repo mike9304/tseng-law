@@ -45,6 +45,11 @@ const THRESH = Number(arg('threshold', '48'));
 const SAVE_SHOTS = arg('shots', '1') !== '0';
 const FAST_CAPTURE = flag('fast');
 const FREEZE_CAPTURE = !flag('no-freeze');
+// 높이 드리프트 게이트: diff%는 공통 최소높이로 크롭해 계산하므로 stageHeight 높이차(Δh)에
+// 눈이 먼다. |Δh|가 이 임계(px)를 넘으면 heightGate failure로 집계한다(기본 16px).
+const MAX_HEIGHT_DIFF = Number(arg('max-height-diff', '16'));
+// --gate-height가 있을 때만 height failure를 종료코드(2)로 승격한다(하위호환: 기본 off).
+const GATE_HEIGHT = flag('gate-height');
 const OUT_DIR = dirname(OUT_JSON);
 const SHOTS_DIR = join(OUT_DIR, 'parity-shots');
 
@@ -552,6 +557,11 @@ async function main() {
   const valid = results.filter((r) => r.diffPct != null);
   const avgDiff = valid.length ? +(valid.reduce((s, r) => s + r.diffPct, 0) / valid.length).toFixed(2) : null;
 
+  // 높이 드리프트 실패(미시딩 샌드박스/height 회귀가 diff%만으로 false-clean되는 것을 잡음)
+  const heightFailures = results
+    .filter((r) => r.heightDiff != null && Math.abs(r.heightDiff) > MAX_HEIGHT_DIFF)
+    .map((r) => ({ page: r.page, viewport: r.viewport, heightDiff: r.heightDiff }));
+
   const report = {
     generatedAt: new Date().toISOString(),
     live: LIVE,
@@ -561,6 +571,11 @@ async function main() {
     pages: PAGES,
     elapsedSec,
     avgDiffPct: avgDiff,
+    heightGate: {
+      thresholdPx: MAX_HEIGHT_DIFF,
+      count: heightFailures.length,
+      failures: heightFailures,
+    },
     shotsDir: SAVE_SHOTS ? SHOTS_DIR : null,
     results,
     rankingByViewport: byViewport,
@@ -586,8 +601,23 @@ async function main() {
       console.log(`  ${i + 1}. ${r.page.padEnd(16)} ${r.diffPct != null ? r.diffPct + '%' : '(실패)'}  Δh=${r.heightDiff}px`);
     });
   }
+  // 높이 드리프트 섹션 (diff%가 못 보는 stageHeight 불일치)
+  if (heightFailures.length) {
+    console.log(`\n[HEIGHT DRIFT] |Δh| > ${MAX_HEIGHT_DIFF}px (${heightFailures.length}):`);
+    for (const f of heightFailures) {
+      console.log(`  ${f.page.padEnd(20)} ${f.viewport}  Δh=${f.heightDiff}px`);
+    }
+  } else {
+    console.log(`\n[HEIGHT DRIFT] none (≤${MAX_HEIGHT_DIFF}px)`);
+  }
   console.log(`\nJSON 저장: ${OUT_JSON}`);
   if (SAVE_SHOTS) console.log(`스크린샷: ${SHOTS_DIR}`);
+
+  // --gate-height일 때만 height failure를 종료코드로 승격(기본 동작 불변)
+  if (GATE_HEIGHT && heightFailures.length) {
+    console.log(`HEIGHT GATE FAIL: ${heightFailures.length} page(s) exceed ${MAX_HEIGHT_DIFF}px`);
+    process.exitCode = 2;
+  }
 }
 
 main().catch((e) => { console.error('치명적 오류:', e); process.exit(1); });

@@ -39,6 +39,14 @@ Detect(축별 병렬) → Verify(아티팩트 기각, L3) → Synthesize → **C
   ```
 - 발견 확인: `.omo/evidence/self-improve-tick-*.md` (exit 1 = 사람/하청 트리아지).
 
+## known-pending (승인 대기 알려진 발견)
+무인 tick은 **신규 회귀와 "알려진·승인 대기" 발견을 구분**한다(알림 피로 방지). 현재 known-pending =
+home-parity의 zh홈 드리프트(fix 검증 완료, 재발행 승인 대기). tick 종료코드/ver디ct:
+- 0 new + 0 known → `CONVERGED GREEN` (exit 0)
+- 0 new + N known → `GREEN (0 new; N known-pending)` (exit 0 — routine 녹색 유지)
+- ≥1 new → `M NEW finding(s)` (exit 1 — 알림)
+zh홈 재발행 완료 시 `SELF_IMPROVE_HOME_PARITY_ACK=0`으로 두거나 ACK 해제(그러면 재발 드리프트는 hard finding).
+
 ## 발견 시 절차
 1. 리포트의 축·증거 확인 → **적대적 재검증**(L3: +71 같은 샌드박스/캡처 아티팩트, 일시 글리치 기각).
 2. 진짜 결함이면: 근본원인 파일:라인 추적 → 수정(하청 GLM/Codex 또는 직접) → 게이트 red재현→green.

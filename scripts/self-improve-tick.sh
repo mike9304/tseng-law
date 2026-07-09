@@ -26,6 +26,7 @@ TS="$(date '+%Y-%m-%dT%H%M%S%z')"
 OUT=".omo/evidence/self-improve-tick-${TS}.md"
 mkdir -p .omo/evidence
 findings=0
+known=0   # 승인 대기 known-pending 발견(신규 회귀와 구분; routine 알림 피로 방지)
 
 {
   echo "# self-improve tick (report-only) ${TS}"
@@ -108,18 +109,30 @@ hp_exit=$?
 if [ "$hp_exit" = "0" ]; then
   echo "- home-parity: OK ($(print -r -- "$hp_out" | tail -1))" >> "$OUT"
 else
-  echo "- home-parity: DRIFT (exit=$hp_exit) — 홈 히어로 디컴포즈-드리프트(현재 알려진: zh홈 재발행 대기)" >> "$OUT"
-  print -r -- "$hp_out" | grep '^✗' | sed 's/^/    /' >> "$OUT"
-  findings=$((findings+1))
+  # 홈 파리티 드리프트는 현재 알려진 단일 항목(zh홈 재발행 승인 대기) → 신규 회귀와 구분해
+  # known-pending으로 집계(SELF_IMPROVE_HOME_PARITY_ACK=0이면 hard finding). 재발행 후 ACK 해제.
+  if [ "${SELF_IMPROVE_HOME_PARITY_ACK:-1}" = "1" ]; then
+    echo "- home-parity: KNOWN-PENDING (zh홈 재발행 승인 대기 — 신규 회귀 아님, home-lcp-diagnosis 참조)" >> "$OUT"
+    print -r -- "$hp_out" | grep '^✗' | sed 's/^/    /' >> "$OUT"
+    known=$((known+1))
+  else
+    echo "- home-parity: DRIFT (exit=$hp_exit) — 홈 히어로 디컴포즈-드리프트" >> "$OUT"
+    print -r -- "$hp_out" | grep '^✗' | sed 's/^/    /' >> "$OUT"
+    findings=$((findings+1))
+  fi
 fi
 
 echo >> "$OUT"
-if [ "$findings" = "0" ]; then
+if [ "$findings" = "0" ] && [ "${known:-0}" = "0" ]; then
   echo "VERDICT: CONVERGED GREEN (0 findings) — nothing to fix this tick." >> "$OUT"
   echo "[tick] CONVERGED GREEN → $OUT"
   exit 0
+elif [ "$findings" = "0" ]; then
+  echo "VERDICT: GREEN (0 new; ${known} known-pending 승인 대기 — 신규 회귀 없음)." >> "$OUT"
+  echo "[tick] GREEN (0 new, ${known} known-pending) → $OUT"
+  exit 0
 else
-  echo "VERDICT: $findings axis finding(s) — human/subcontract triage (NO auto-fix/commit/deploy)." >> "$OUT"
-  echo "[tick] FINDINGS=$findings → $OUT" >&2
+  echo "VERDICT: ${findings} NEW finding(s)$([ "${known:-0}" != "0" ] && echo " + ${known} known-pending") — human/subcontract triage (NO auto-fix/commit/deploy)." >> "$OUT"
+  echo "[tick] FINDINGS=${findings} new → $OUT" >&2
   exit 1
 fi

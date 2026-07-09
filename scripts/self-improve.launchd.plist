@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  자기개선 시스템 v2 — 무인 routine (report-only) 정의.
+  하는 일: 하루 2회(09:07, 21:07) self-improve-tick.sh 를 돌려 LIVE 축 회귀를 감지·리포트.
+  자율 경계: Detect + Report 만. 커밋·푸시·배포 안 함(스크립트가 강제).
+  활성화(사용자가 직접):
+    cp scripts/self-improve.launchd.plist ~/Library/LaunchAgents/com.son7.tseng-selfimprove.plist
+    launchctl load ~/Library/LaunchAgents/com.son7.tseng-selfimprove.plist
+  비활성화:
+    launchctl unload ~/Library/LaunchAgents/com.son7.tseng-selfimprove.plist
+  발견 확인: .omo/evidence/self-improve-tick-*.md (exit 1 = 실제 발견 → 사람/하청 트리아지)
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.son7.tseng-selfimprove</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>-c</string>
+    <string>cd /Users/son7/Projects/tseng-law &amp;&amp; scripts/self-improve-tick.sh</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key><string>/Users/son7/.nvm/versions/node/v24.14.1/bin:/usr/local/bin:/usr/bin:/bin</string>
+  </dict>
+  <key>WorkingDirectory</key><string>/Users/son7/Projects/tseng-law</string>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>7</integer></dict>
+    <dict><key>Hour</key><integer>21</integer><key>Minute</key><integer>7</integer></dict>
+  </array>
+  <key>StandardOutPath</key><string>/Users/son7/Projects/tseng-law/.omo/evidence/self-improve-routine.log</string>
+  <key>StandardErrorPath</key><string>/Users/son7/Projects/tseng-law/.omo/evidence/self-improve-routine.err.log</string>
+  <key>RunAtLoad</key><false/>
+</dict>
+</plist>

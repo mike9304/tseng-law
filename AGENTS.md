@@ -33,7 +33,7 @@
 - **로컬 handoff 게이트**: `npm run qa`, clean `npm run build`, `NEXT_DIST_DIR=.next-build npm run test:builder-smoke`, `npm run typecheck`, `git diff --check` 통과.
 - **아직 전역 완료로 선언하지 말 조건**: production admin-builder 인증 smoke, 외부 provider/credential QA(Stripe/Zoom/메일/캘린더/AI 등), 전체 dirty worktree 정리/리뷰.
 - **2026-07-08 post-deploy 정적자산 확인**: `https://tseng-law.com/images/placeholder-article-hero.jpg`와 `_next/image?url=%2Fimages%2Fplaceholder-article-hero.jpg&w=1200&q=75` 모두 `200 image/jpeg`. 2026-07-03 `/ko/columns` placeholder 404 배포 누락은 현재 라이브에서 재현되지 않음.
-- **2026-07-08 handoff blocker gate**: `npm run gate:handoff-blockers -- --base=https://tseng-law.com` 추가. 정적자산+admin auth boundary+production auth smoke+provider credential readiness를 시크릿 출력 없이 반복 점검하며, 현재는 인증/provider open rows 때문에 exit 1이 정상.
+- **2026-07-08 handoff blocker gate**: `npm run gate:handoff-blockers -- --base=https://tseng-law.com` 추가. 정적자산+admin auth boundary+production auth smoke+provider credential readiness를 시크릿 출력 없이 반복 점검하며, 기본 게이트는 인증/provider open rows에도 hard/nonzero(exit 1)이다. 스케줄러용 JSON은 `--json --metadata --soft-open --output=<path>` 또는 `npm run gate:handoff-blockers:json -- --base=https://tseng-law.com`로 `.omo/evidence/handoff-blockers-latest.json`에 저장한다. metadata artifact는 `generatedAt`, `softOpen`, `effectiveExitCode`를 포함해 OPEN-only tick exit 0과 payload `ok:false`를 구분한다. FAIL row는 계속 exit 1이며 자체 회귀검증은 `npm run test:handoff-blockers`.
 - **W07 최신 근거**: 2026-07-02 Codex가 현재 production seed의 풀폭 `home-hero` composite에서 SE handle이 inspector 뒤에 가려지던 canvas fit 결함을 `CanvasContainer` visible scroll-root 기준 fit으로 수정. `QA_ONLY=W07` real builder QA pass/0 findings, report `/tmp/tseng-w07-qa/2026-07-02T01-14-39/report.md`.
 - **W08 최신 근거**: 2026-07-02 Codex가 실제 `/Users/son7/Projects/tseng-law` isolated builder `http://127.0.0.1:4536`에서 `home-hero-label` 선택 후 회전 핸들 real mouse drag를 재검증. 8 resize handles, rotate cursor `grab`, transform `matrix(1, 0, 0, 1, 0, 0)` -> `matrix(0, 1, -1, 0, 0, 0)`, readout `90°`, Undo enabled, browser errors 0. Report `/tmp/tseng-w08-qa/2026-07-02T01-36-33-944Z/report.md`. Computer Use MCP는 timeout이라 Safari GUI 증거는 System Events/실제 스크린샷으로 보강.
 - **F0 (메인 사이트 → 빌더)**: 코드 완료 + local 좌표 포지셔닝 버그 fix 완료. `/ko` 390 builder-pub-node 로 홈 decompose (home-seed-v6, service icon 노드 +6 포함). `/ko/{about,services,contact,lawyers,faq,pricing,reviews,privacy,disclaimer}` 각각 decompose-page-*.ts 로 30~193 builder-pub-node 렌더 (S-06).
@@ -110,10 +110,10 @@
 
 ## 다음 큰 블로커 (우선순위)
 
-1. **배포 전 worktree 정리**: 현재 대량 dirty tree라 production deploy는 clean build/atomic commit 기준으로만 진행. 2026-07-08 현재 HEAD/origin은 `c95c8a88`이며 `.omo/` evidence와 일부 로컬 산출물이 untracked로 남아 있음.
-2. **Production admin-builder 인증 smoke**: `.env.local` credentials로 `https://tseng-law.com` GET smoke는 401. 실제 production builder credentials 또는 Vercel env 확인 필요.
+1. **배포 전 worktree 정리**: 현재 대량 dirty tree라 production deploy는 clean build/atomic commit 기준으로만 진행. 2026-07-08 현재 HEAD/origin은 `9a979c14`이며 `.omo/` evidence와 일부 로컬 산출물이 untracked로 남아 있음.
+2. **Production admin-builder 인증 smoke**: 현재 로컬 env credential 후보로는 `https://tseng-law.com` GET smoke가 401일 수 있음. production admin credentials로 실행해야 PASS 판정 가능하며, 시크릿 값 출력 금지.
 3. **외부 provider QA**: Stripe, Zoom, Google/Outlook calendar, Resend/SMTP, DeepL/OpenAI, Upstash 등 live credential/provider smoke는 현재 머신의 env만으로 완료 불가.
-4. **반복 게이트**: 위 blocker 재확인은 `npm run gate:handoff-blockers -- --base=https://tseng-law.com`로 수행. exit 1은 blocker가 남았다는 의미이며, 현재 static asset과 no-auth boundary는 PASS.
+4. **반복 게이트**: 위 blocker 재확인은 `npm run gate:handoff-blockers -- --base=https://tseng-law.com`로 수행. 기본 게이트는 OPEN/FAIL 모두 hard/nonzero이며 exit 1은 blocker가 남았다는 의미다. 스케줄러는 `--json --metadata --soft-open --output=<path>`를 붙여 `{ok,baseUrl,counts,results,generatedAt,softOpen,effectiveExitCode}` artifact를 남긴다. 기본 persisted artifact 명령은 `npm run gate:handoff-blockers:json -- --base=https://tseng-law.com`이며 `.omo/evidence/handoff-blockers-latest.json`을 갱신한다. `effectiveExitCode`는 `--soft-open` 때문에 OPEN-only tick이 exit 0이어도 payload `ok:false`를 보존한다. FAIL row는 계속 exit 1이고 현재 static asset과 no-auth boundary는 PASS.
 
 ## 레포 / 운영 환경
 

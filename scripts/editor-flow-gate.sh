@@ -27,10 +27,15 @@ echo "[editor-flow-gate] BASE_URL=$BASE_URL"
 # 서빙한다 → JS 미로드 → React 미하이드레이트 → useEffect 미실행 → UI 테스트가 제품버그처럼
 # false-fail. 페이지 200 워밍으론 안 고쳐진다. 클린 재시작(npm run dev = clean-next-build)이 정답.
 CHUNK_URL="$BASE_URL/_next/static/chunks/app/(builder)/%5Blocale%5D/admin-builder/layout.js"
-CHUNK_CODE=$(curl -s -o /dev/null -w '%{http_code}' "$CHUNK_URL" -u "$CRED_U:$CRED_P" --max-time 15 2>/dev/null)
-if [ "$CHUNK_CODE" = "404" ]; then
-  echo "[editor-flow-gate] ✗ PREFLIGHT: admin-builder 청크 404 (stale .next). 샌드박스를 클린 재시작하세요:"
-  echo "    lsof -ti :\${PORT} | xargs kill; BUILDER_SITE_ROOT=<sbx>/tseng-law-main-site BUILDER_SITE_BACKEND=local PORT=\${PORT} npm run dev"
+CHUNK_CODE=$(curl -s -o /dev/null -w '%{http_code}' "$CHUNK_URL" -u "$CRED_U:$CRED_P" --max-time 15 2>/dev/null || true)
+CHUNK_CODE="${CHUNK_CODE:-000}"
+if [ "$CHUNK_CODE" != "200" ]; then
+  if [ "$CHUNK_CODE" = "404" ]; then
+    echo "[editor-flow-gate] ✗ PREFLIGHT: admin-builder chunk fetch failed (HTTP=404, stale .next). 샌드박스를 클린 재시작하세요:"
+    echo "    lsof -ti :\${PORT} | xargs kill; BUILDER_SITE_ROOT=<sbx>/tseng-law-main-site BUILDER_SITE_BACKEND=local PORT=\${PORT} npm run dev"
+  else
+    echo "[editor-flow-gate] ✗ PREFLIGHT: admin-builder chunk fetch failed (HTTP=$CHUNK_CODE/unreachable). Check BASE_URL reachability and credentials."
+  fi
   exit 1
 fi
 echo "[editor-flow-gate] preflight OK (chunk HTTP=$CHUNK_CODE)"

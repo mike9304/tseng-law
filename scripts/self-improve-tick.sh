@@ -10,6 +10,7 @@
 #   2) handoff-blockers   : 정적자산+auth 경계 code FAIL 여부 (fresh artifact 강제; provider open은 결함 아님)
 #   3) live-seo-scan      : 전 페이지 title(유일)·desc·canonical·hreflang·JSON-LD파싱·본문 sentinel(soft-404 방어)
 #   4) live-sitemap-crawl : sitemap.xml 전 <loc>(동적 아티클/가이드 포함) 실제 fetch → non-200 탐지
+#   5) live-a11y-scan     : axe serious/critical 위반 baseline+delta (새 a11y 회귀만 발견, 기지 33은 baseline)
 # 종료코드: 0 = 이번 tick converged green, 1 = 실제 발견(사람이 트리아지/하청).
 #
 # 사용:   scripts/self-improve-tick.sh
@@ -30,7 +31,7 @@ findings=0
   echo
 } > "$OUT"
 
-echo "[tick] 1/4 routes+console+overflow …"
+echo "[tick] 1/5 routes+console+overflow …"
 routes_out="$(node scripts/live-routes-scan.mjs --base="$BASE" 2>&1 | tail -3)"
 if print -r -- "$routes_out" | grep -q 'ALL CLEAN'; then
   echo "- routes: CLEAN" >> "$OUT"
@@ -38,7 +39,7 @@ else
   echo "- routes: ISSUES" >> "$OUT"; print -r -- "$routes_out" | sed 's/^/    /' >> "$OUT"; findings=$((findings+1))
 fi
 
-echo "[tick] 2/4 handoff-blockers readiness …"
+echo "[tick] 2/5 handoff-blockers readiness …"
 rm -f .omo/evidence/handoff-blockers-latest.json   # L24: stale artifact false-clean 방지 — 반드시 fresh만 읽는다
 npm run gate:handoff-blockers:json -- --base="$BASE" >/dev/null 2>&1
 if [ ! -f .omo/evidence/handoff-blockers-latest.json ]; then
@@ -55,7 +56,7 @@ else
   fi
 fi
 
-echo "[tick] 3/4 SEO integrity (title·desc·canonical·hreflang·JSON-LD·body sentinel, 28 URL) …"
+echo "[tick] 3/5 SEO integrity (title·desc·canonical·hreflang·JSON-LD·body sentinel, 28 URL) …"
 seo_out="$(node scripts/live-seo-scan.mjs --base="$BASE" 2>&1)"
 seo_exit=$?
 if [ "$seo_exit" = "0" ] && print -r -- "$seo_out" | grep -q 'ALL CLEAN'; then
@@ -66,7 +67,7 @@ else
   findings=$((findings+1))
 fi
 
-echo "[tick] 4/4 sitemap broken-link crawl …"
+echo "[tick] 4/5 sitemap broken-link crawl …"
 crawl_out="$(node scripts/live-sitemap-crawl.mjs --base="$BASE" 2>&1)"
 crawl_exit=$?
 if [ "$crawl_exit" = "0" ] && print -r -- "$crawl_out" | grep -q 'ALL 200'; then
@@ -74,6 +75,17 @@ if [ "$crawl_exit" = "0" ] && print -r -- "$crawl_out" | grep -q 'ALL 200'; then
 else
   echo "- sitemap: ISSUES (exit=$crawl_exit) — 깨진 라우트/stale sitemap 항목" >> "$OUT"
   print -r -- "$crawl_out" | grep '^✗' | sed 's/^/    /' >> "$OUT"
+  findings=$((findings+1))
+fi
+
+echo "[tick] 5/5 a11y regression (axe serious/critical, baseline+delta) …"
+a11y_out="$(node scripts/live-a11y-scan.mjs --base="$BASE" 2>&1)"
+a11y_exit=$?
+if [ "$a11y_exit" = "0" ]; then
+  echo "- a11y: no new violations ($(print -r -- "$a11y_out" | tail -1))" >> "$OUT"
+else
+  echo "- a11y: NEW violations (exit=$a11y_exit) — a11y 회귀(baseline 밖)" >> "$OUT"
+  print -r -- "$a11y_out" | grep '^✗' | sed 's/^/    /' >> "$OUT"
   findings=$((findings+1))
 fi
 

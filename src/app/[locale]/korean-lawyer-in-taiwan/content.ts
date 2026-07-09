@@ -1,0 +1,239 @@
+import type { Locale } from '@/lib/locales';
+
+export const LANDING_SLUG = 'korean-lawyer-in-taiwan';
+
+type FaqItem = { q: string; a: string };
+
+export type LandingContent = {
+  metaTitle: string;
+  description: string;
+  keywords: string[];
+  heroLabel: string;
+  title: string;
+  /** Direct declarative paragraph AI engines can excerpt verbatim. */
+  lead: string[];
+  servicesHeading: string;
+  services: string[];
+  languagesHeading: string;
+  languages: string[];
+  officeHeading: string;
+  office: { lines: string[] };
+  faqHeading: string;
+  faq: FaqItem[];
+  ctaTitle: string;
+  ctaText: string;
+  ctaButton: string;
+};
+
+export const landingContent: Record<Locale, LandingContent> = {
+  ko: {
+    metaTitle: '한국어 가능한 대만 변호사 | 법무법인 호정 (타이베이)',
+    description:
+      '법무법인 호정(Hovering International Law Firm)은 타이베이 소재 대만 로펌으로, 대만 변호사 증준외가 한국어·중국어·일본어로 상담합니다. 대만 회사설립·민형사 소송·투자 자문을 다룹니다.',
+    keywords: [
+      '한국어 가능한 대만 변호사',
+      '대만 변호사',
+      '타이베이 변호사',
+      '대만 회사설립 변호사',
+      '대만 소송 변호사',
+      '증준외 변호사',
+    ],
+    heroLabel: 'KOREAN-SPEAKING TAIWAN LAWYER',
+    title: '한국어 가능한 대만 변호사 — 법무법인 호정',
+    lead: [
+      '법무법인 호정(Hovering International Law Firm)은 타이베이에 소재한 대만 로펌으로, 대만 변호사 증준외가 한국어·중국어·일본어로 상담합니다.',
+      '대만 회사설립, 민사·형사 소송, 투자 자문을 다루며, 한국 기업과 개인의 대만 법률 문제를 한국어 소통으로 안내합니다.',
+      '초기 상담에서 사실관계 정리, 관할·절차 설계, 문서 검토, 소송 대응까지 한 흐름으로 검토합니다.',
+    ],
+    servicesHeading: '업무 분야',
+    services: [
+      '대만 회사설립·법인 설립(자회사·지사·연락사무소)',
+      '대만 투자·투심회 승인·비자(취업허가증·거류증)',
+      '민사·형사 소송 및 손해배상·교통사고',
+      '계약 검토·채권 회수·부동산 분쟁',
+      '상표·지식재산권, 노사·가사·상속',
+    ],
+    languagesHeading: '언어별 상담 안내',
+    languages: [
+      '한국어: 한국 고객의 대만 법률 문제를 한국어로 설명하고 상담합니다.',
+      '중국어(번체): 대만 현지 서류·소송·계약을 번체 중국어로 직접 처리합니다.',
+      '일본어: 일본어 소통 고객의 대만 법률 자문도 가능합니다.',
+      '영어: 국제 거래·외국 기업의 대만 진출 자문을 영어로 지원합니다.',
+    ],
+    officeHeading: '오시는 길',
+    office: {
+      lines: [
+        '타이베이시 다퉁구 청더로 1단 35호 7층의2 (7F.-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City)',
+        '이메일: wei@hoveringlaw.com.tw',
+        '전화: +82-10-2992-9304 (한국) / 대만 상담 문의',
+      ],
+    },
+    faqHeading: '자주 묻는 질문',
+    faq: [
+      {
+        q: '한국어로 상담 가능한가요?',
+        a: '네. 법무법인 호정의 증준외 변호사가 한국어로 상담합니다. 대만 회사설립, 소송, 투자 자문 모두 한국어 소통으로 진행할 수 있습니다.',
+      },
+      {
+        q: '한국 기업의 대만 회사설립도 도와주시나요?',
+        a: '네. 자회사·지사·연락사무소 설립, 투심회 투자 승인, 비자(취업허가증·거류증), 세무 등기까지 설립 전 과정을 한국어로 안내합니다.',
+      },
+      {
+        q: '대만에서 한국인이 소송을 할 때 변호사가 필요한가요?',
+        a: '대만 법원 소송에서 외국인은 현지 법률 절차와 언어 모두에서 어려움을 겪을 수 있습니다. 증준외 변호사가 민사·형사 소송에서 한국어로 소통하며 대응을 안내합니다.',
+      },
+      {
+        q: '상담은 어떻게 신청하나요?',
+        a: '이메일(wei@hoveringlaw.com.tw) 또는 전화(+82-10-2992-9304)로 문의해 주시면, 사건 내용을 정리해 상담 흐름을 안내해 드립니다.',
+      },
+      {
+        q: '중국어·일본어 상담도 가능한가요?',
+        a: '네. 증준외 변호사는 한국어 외에 중국어(번체)·일본어로도 상담이 가능하며, 다국어 계약·서류 검토도 지원합니다.',
+      },
+    ],
+    ctaTitle: '대만 법률 문제, 한국어로 상담 받으세요',
+    ctaText:
+      '회사설립, 투자, 소송, 가사 분쟁 등 대만 법률 문제가 있으시면 한국어로 편하게 문의해 주세요. 자료를 보내주시면 상담 흐름을 안내해 드립니다.',
+    ctaButton: '상담 문의',
+  },
+  'zh-hant': {
+    metaTitle: '會說韓文的台灣律師 | 昊鼎國際法律事務所（台北）',
+    description:
+      '昊鼎國際法律事務所（Hovering International Law Firm）為台北的台灣律師事務所，曾俊瑋律師可以韓語、中文、日語提供諮詢，承辦台灣公司設立、民刑事案件與投資顧問。',
+    keywords: [
+      '會說韓文的台灣律師',
+      '台灣律師',
+      '台北律師',
+      '台灣公司設立律師',
+      '台灣訴訟律師',
+      '曾俊瑋律師',
+    ],
+    heroLabel: 'KOREAN-SPEAKING TAIWAN LAWYER',
+    title: '會說韓文的台灣律師 — 昊鼎國際法律事務所',
+    lead: [
+      '昊鼎國際法律事務所（Hovering International Law Firm）為台北的台灣律師事務所，曾俊瑋律師可以韓語、中文、日語提供諮詢。',
+      '承辦台灣公司設立、民刑事訴訟、投資顧問，以韓語溝通協助韓國企業與個人處理台灣法律問題。',
+      '從初步諮詢的事實整理、管轄與流程設計、文件審閱到訴訟因應，提供完整的一條龍服務。',
+    ],
+    servicesHeading: '服務領域',
+    services: [
+      '台灣公司設立（子公司·分公司·辦事處）',
+      '台灣投資·投審會核准·工作許可與居留證',
+      '民刑事訴訟、損害賠償、車禍案件',
+      '合約審閱·債權回收·不動產爭議',
+      '商標與智慧財產權、勞資·家事·繼承',
+    ],
+    languagesHeading: '各語言諮詢說明',
+    languages: [
+      '韓語：以韓語為韓國客戶說明並諮詢台灣法律問題。',
+      '中文（繁體）：直接以繁體中文處理台灣在地文件、訴訟與合約。',
+      '日語：亦提供日語溝通客戶的台灣法律顧問服務。',
+      '英語：以英語協助國際交易與外國企業來台投資顧問。',
+    ],
+    officeHeading: '事務所地址',
+    office: {
+      lines: [
+        '台北市大同區承德路一段35號7樓之2（7F.-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City）',
+        'Email：wei@hoveringlaw.com.tw',
+        '電話：+82-10-2992-9304（韓國）/ 台灣諮詢請來信',
+      ],
+    },
+    faqHeading: '常見問題',
+    faq: [
+      {
+        q: '可以用韓語諮詢嗎？',
+        a: '可以。昊鼎國際法律事務所的曾俊瑋律師以韓語提供諮詢，舉凡台灣公司設立、訴訟、投資顧問，皆可以韓語溝通進行。',
+      },
+      {
+        q: '可以協助韓國企業在台設立公司嗎？',
+        a: '可以。從子公司、分公司、辦事處設立，到投審會投資核准、工作許可與居留證、稅籍登記，全程以韓語說明。',
+      },
+      {
+        q: '韓國人在台灣打官司需要律師嗎？',
+        a: '在台灣法院訴訟中，外國人常面臨在地程序與語言的雙重困難。曾俊瑋律師在民事、刑事訴訟中以韓語溝通，協助因應。',
+      },
+      {
+        q: '如何預約諮詢？',
+        a: '請以 Email（wei@hoveringlaw.com.tw）或電話（+82-10-2992-9304）聯繫，整理案件內容後我們會安排諮詢流程。',
+      },
+      {
+        q: '也可以用中文或日語諮詢嗎？',
+        a: '可以。曾俊瑋律師除韓語外，亦可以中文（繁體）及日語諮詢，並支援多語合約與文件審閱。',
+      },
+    ],
+    ctaTitle: '台灣法律問題，用韓語諮詢',
+    ctaText:
+      '不論是公司設立、投資、訴訟或家事爭議，歡迎以韓語與我們聯繫。提供資料後，我們會安排諮詢流程。',
+    ctaButton: '聯絡諮詢',
+  },
+  en: {
+    metaTitle: 'Korean-Speaking Taiwan Lawyer | Hovering International Law Firm (Taipei)',
+    description:
+      'Hovering International Law Firm is a Taiwan law firm based in Taipei. Attorney Wei Tseng consults in Korean, Chinese, and Japanese, covering Taiwan company setup, civil and criminal litigation, and investment advisory.',
+    keywords: [
+      'Korean-speaking Taiwan lawyer',
+      'Taiwan lawyer',
+      'Taipei lawyer',
+      'Taiwan company setup lawyer',
+      'Taiwan litigation lawyer',
+      'Attorney Wei Tseng',
+    ],
+    heroLabel: 'KOREAN-SPEAKING TAIWAN LAWYER',
+    title: 'Korean-Speaking Taiwan Lawyer — Hovering International Law Firm',
+    lead: [
+      'Hovering International Law Firm is a Taiwan law firm based in Taipei. Attorney Wei Tseng consults in Korean, Chinese, and Japanese.',
+      'The firm handles Taiwan company setup, civil and criminal litigation, and investment advisory, guiding Korean companies and individuals through Taiwan legal matters in Korean.',
+      'From fact-finding and jurisdiction design in the first consultation to document review and litigation response, the firm works through the matter end to end.',
+    ],
+    servicesHeading: 'Practice Areas',
+    services: [
+      'Taiwan company setup (subsidiary, branch, liaison office)',
+      'Taiwan investment, Investment Commission approval, work permits and residence cards',
+      'Civil and criminal litigation, damages, and traffic accidents',
+      'Contract review, debt recovery, real estate disputes',
+      'Trademarks and intellectual property, labor, family, and inheritance',
+    ],
+    languagesHeading: 'Consultation by Language',
+    languages: [
+      'Korean: explains and consults on Taiwan legal matters for Korean clients.',
+      'Chinese (Traditional): handles Taiwan documents, litigation, and contracts directly in Traditional Chinese.',
+      'Japanese: also available for Japanese-speaking clients seeking Taiwan legal advice.',
+      'English: supports international transactions and foreign companies investing in Taiwan.',
+    ],
+    officeHeading: 'Office',
+    office: {
+      lines: [
+        '7F.-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City, Taiwan',
+        'Email: wei@hoveringlaw.com.tw',
+        'Phone: +82-10-2992-9304 (Korea) / contact us for Taiwan consultations',
+      ],
+    },
+    faqHeading: 'Frequently Asked Questions',
+    faq: [
+      {
+        q: 'Can I consult in Korean?',
+        a: 'Yes. Attorney Wei Tseng at Hovering International Law Firm consults in Korean. Taiwan company setup, litigation, and investment advisory can all be handled in Korean.',
+      },
+      {
+        q: 'Do you help Korean companies set up in Taiwan?',
+        a: 'Yes. From subsidiary, branch, and liaison office formation to Investment Commission approval, work permits and residence cards, and tax registration, the whole process is explained in Korean.',
+      },
+      {
+        q: 'Does a Korean national need a lawyer to litigate in Taiwan?',
+        a: 'In Taiwan courts, foreigners often face both procedural and language difficulties. Attorney Wei Tseng communicates in Korean and guides the response in civil and criminal cases.',
+      },
+      {
+        q: 'How do I request a consultation?',
+        a: 'Contact us by email (wei@hoveringlaw.com.tw) or phone (+82-10-2992-9304). After we review the matter, we will arrange the consultation flow.',
+      },
+      {
+        q: 'Can I also consult in Chinese or Japanese?',
+        a: 'Yes. In addition to Korean, Attorney Wei Tseng consults in Chinese (Traditional) and Japanese, and supports multilingual contract and document review.',
+      },
+    ],
+    ctaTitle: 'Taiwan legal matters — consult in Korean',
+    ctaText:
+      'Whether it is company setup, investment, litigation, or a family dispute, feel free to reach out in Korean. Share your materials and we will arrange a consultation flow.',
+    ctaButton: 'Book Consultation',
+  },
+};

@@ -124,3 +124,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 계약 체결 전에 미리 확인해보시기 바랍니다.
 
 *대만 법률에 관해 도움이 필요하거나 상담이 필요하시면, 언제든 댓글이나 연락주세요.*
+
+---
+
+> 더 보기: [대만 회사설립 종합 가이드 — 절차·비용·법인 형태 총정리](/ko/guides/taiwan-company-setup)

@@ -515,3 +515,60 @@ export function buildFaqJsonLd(items: FaqJsonLdItem[], locale?: Locale) {
 
   return node;
 }
+
+type HowToStepInput = {
+  name: string;
+  text: string;
+  url?: string;
+};
+
+type HowToJsonLdInput = {
+  name: string;
+  description?: string;
+  steps: HowToStepInput[];
+  totalTime?: string;
+  locale?: Locale;
+};
+
+/**
+ * Build a `HowTo` (https://schema.org/HowTo) JSON-LD object from an ordered
+ * list of `{ name, text }` steps. Used by SEO hub/guide pages so Google can
+ * render a step-by-step rich result. Steps missing a name or text are
+ * dropped; `totalTime` (ISO-8601 duration, e.g. "P3M") and `locale` are
+ * optional. Returns `null` when no valid steps remain so callers can skip
+ * emitting an empty HowTo block.
+ */
+export function buildHowToJsonLd({ name, description, steps, totalTime, locale }: HowToJsonLdInput) {
+  const valid = (Array.isArray(steps) ? steps : [])
+    .filter((step): step is HowToStepInput => Boolean(step && step.name && step.text))
+    .map((step) => ({
+      name: String(step.name),
+      text: String(step.text),
+      ...(step.url ? { url: String(step.url) } : {}),
+    }));
+
+  if (valid.length === 0) return null;
+
+  const node: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    step: valid.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      ...(step.url ? { url: step.url } : {}),
+    })),
+  };
+
+  if (totalTime) {
+    node.totalTime = totalTime;
+  }
+  if (locale) {
+    node.inLanguage = getLocaleLanguageTag(locale);
+  }
+
+  return node;
+}

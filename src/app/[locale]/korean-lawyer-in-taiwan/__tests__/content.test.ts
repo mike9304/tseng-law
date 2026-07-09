@@ -1,0 +1,48 @@
+import { describe, expect, it } from 'vitest';
+import { buildFaqJsonLd, buildLegalServiceJsonLd } from '@/lib/seo';
+import { locales } from '@/lib/locales';
+import { landingContent } from '../content';
+
+describe('korean-lawyer-in-taiwan content', () => {
+  it('provides content for every supported locale', () => {
+    for (const locale of locales) {
+      expect(landingContent[locale]).toBeDefined();
+    }
+  });
+
+  it('has a declarative lead, non-empty services/languages, and 5 FAQ items per locale', () => {
+    for (const locale of locales) {
+      const c = landingContent[locale];
+      expect(c.lead.length).toBeGreaterThanOrEqual(3);
+      expect(c.services.length).toBeGreaterThan(0);
+      expect(c.languages.length).toBeGreaterThan(0);
+      expect(c.faq).toHaveLength(5);
+      for (const item of c.faq) {
+        expect(item.q.trim()).not.toBe('');
+        expect(item.a.trim()).not.toBe('');
+      }
+    }
+  });
+
+  it('builds a non-null FAQPage JSON-LD with 5 entities per locale', () => {
+    for (const locale of locales) {
+      const c = landingContent[locale];
+      const faq = buildFaqJsonLd(c.faq, locale);
+      expect(faq).not.toBeNull();
+      expect(faq).toMatchObject({ '@type': 'FAQPage' });
+      expect((faq!.mainEntity as unknown[]).length).toBe(5);
+    }
+  });
+
+  it('builds a LegalService JSON-LD node per locale', () => {
+    for (const locale of locales) {
+      const c = landingContent[locale];
+      const node = buildLegalServiceJsonLd(locale, {
+        description: c.description,
+        path: 'korean-lawyer-in-taiwan',
+      });
+      expect(node).toMatchObject({ '@type': 'LegalService' });
+      expect(node.url).toContain('/korean-lawyer-in-taiwan');
+    }
+  });
+});

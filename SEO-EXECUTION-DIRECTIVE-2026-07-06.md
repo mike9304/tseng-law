@@ -3,6 +3,13 @@
 작성: 2026-07-06 Fable 5. 전략·근거는 `SEO-RANKING-PLAN-2026-07-06.md`(같은 폴더), 이 문서는 **실행 순서표**다.
 읽는 사람: 오케스트레이터 에이전트(Claude/Opus/Codex 세션) 또는 사장님 본인.
 
+## ⚠️ 2026-07-09 전략 수정 (중요)
+사용자 결정: **wei-wei-lawyer.com은 독립 유지, 도메인 통합(301 이전) 취소.** tseng-law.com만 강화한다.
+- STEP 4(WO-5 구도메인 301)·STEP 5(DNS 이전)는 **취소** — WO-5 코드는 revert됨(no-op였음).
+- 확인됨: tseng-law 칼럼은 이미 self-canonical(wei-wei로 안 넘김) → 사이트 분리해도 tseng-law가 불리해지지 않음.
+- 새 전략: 두 사이트 공존. tseng-law는 **차별화된 신규 콘텐츠**(WO-2 가이드·랜딩, WO-3 net-new 칼럼 = wei-wei에 없는 키워드)와 **독립 권위**(GBP·백링크·네이버·GSC)로 상위 노출. 중복 칼럼으로 wei-wei와 경쟁하기보다 신규 영역을 점유.
+- 권고: tseng-law 데이터의 wei-wei 아웃바운드 링크(team-members.ts·attorney-profiles.ts의 sourceUrl=wei-wei/about-8)를 tseng-law 자기 페이지로 바꾸면 권위 유출 방지(사용자 판단 대기).
+
 ## 이 문서 사용법
 
 1. 위에서 아래로 STEP 순서대로 진행한다. 각 STEP에 **담당 / 선행조건 / 정확한 명령·프롬프트 / 완료 판정**이 있다.
@@ -25,8 +32,8 @@ STEP 0(작업트리 안전 확인)은 매번 먼저. 워커 산출물은 검수 
 | 1 | Google Search Console + Bing 등록 | **사용자** | ☐ | |
 | 2 | 네이버 서치어드바이저 등록 | **사용자** | ☐ | |
 | 3 | Google Business Profile 등록 | **사용자** | ☐ | |
-| 4 | WO-SEO-5: 구도메인 301 코드 | GLM 5.2+검수 | ✅ 커밋 f2d8b2d0 + main 배포 (게이트 그린, 전 호스트 no-op) | 07-09 |
-| 5 | 구도메인 DNS를 Vercel로 이전 | **사용자** | 🔓 준비됨 — 코드 배포 완료, 사장님 진행 가능 | |
+| ~~4~~ | ~~WO-SEO-5: 구도메인 301 코드~~ | — | ❌ **취소·revert** (wei-wei 독립 유지 결정, 코드 no-op였음) | 07-09 |
+| ~~5~~ | ~~구도메인 DNS를 Vercel로 이전~~ | — | ❌ **취소** | — |
 | 6 | WO-SEO-1: llms.txt + FAQ 스키마 | GLM 5.2+검수 | ✅ 커밋 59d7ecd8 + 배포 (인프라+칼럼10편 FAQ+테스트22+merge버그수정, FAQPage 렌더 curl 검증) | 07-09 |
 | 7 | WO-SEO-2: 필러 페이지 2종 | GLM 5.2+검수 | ✅ 커밋 698032dc + 배포 (가이드 HowTo+FAQ, 랜딩 LegalService+FAQ, 6페이지 검증). ⚠️[변호사 검수 대기] | 07-09 |
 | 8 | WO-SEO-3a: 칼럼 4편 (C1~C4) | **GLM 5.2**+검수 | ☐ 대기 — net-new 법률콘텐츠 → 배포 전 변호사 검수 게이트 필수(사용자 결정) | |
@@ -73,7 +80,7 @@ pgrep -fl "codex exec|opencode" ; cd /Users/son7/Projects/tseng-law && git statu
 5. Bing: https://www.bing.com/webmasters → "GSC에서 가져오기" 클릭 → 1분 완료. (ChatGPT 검색이 Bing 색인을 쓴다 — AI 노출에 직접 효과)
 
 완료 판정: GSC에 도메인 속성 초록 체크 + sitemap "성공" 상태.
-⚠️ 구 사이트 `wei-wei-lawyer.com`도 GSC 속성이 없으면 **같은 방법으로 지금 등록**해 둘 것 — STEP 5의 "주소 변경 도구"에 반드시 필요하고, 소유 확인에 며칠 걸릴 수 있어 미리 해야 한다.
+~~⚠️ 구 사이트 wei-wei-lawyer.com도 GSC 등록~~ → **불필요**(2026-07-09 통합 취소). tseng-law.com만 등록하면 된다.
 
 ## STEP 2 — 네이버 서치어드바이저 (사용자, 20분)
 

@@ -121,15 +121,7 @@ const nextConfig = {
       {
         source: '/',
         destination: '/ko',
-        permanent: true,
-        // `next.config` redirects run before middleware, so the bare-root
-        // locale default would otherwise shadow the legacy-domain migration
-        // handled in src/middleware.ts. Exclude the legacy hosts here so
-        // middleware owns the whole wei-wei-lawyer.com 301 (home included).
-        missing: [
-          { type: 'host', value: 'wei-wei-lawyer.com' },
-          { type: 'host', value: 'www.wei-wei-lawyer.com' },
-        ],
+        permanent: true
       },
       {
         source: '/:path*',

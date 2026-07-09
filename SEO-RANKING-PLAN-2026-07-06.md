@@ -1,5 +1,7 @@
 # tseng-law.com 구글·AI 검색 상위 노출 마스터 플랜
 
+> ⚠️ **2026-07-09 전략 수정:** 사용자 결정으로 **도메인 통합(§2-1, G1) 취소** — wei-wei-lawyer.com은 독립 유지, tseng-law.com만 강화. 아래 §1 G1(구 사이트 301)과 §5-2(DNS 이전)는 **무효**. 대신: tseng-law는 이미 self-canonical이라 사이트 분리해도 불리하지 않고(확인됨), **차별화 신규 콘텐츠(가이드·랜딩·WO-3 net-new 칼럼)** + **독립 권위(GBP·백링크·네이버·GSC)**로 승부한다. 중복 칼럼으로 wei-wei와 경쟁하기보다 wei-wei에 없는 키워드·언어(zh/en)를 점유. 데이터의 wei-wei 아웃바운드 링크는 tseng-law 자기 페이지로 교체 권고(사용자 판단).
+
 작성: 2026-07-06 (Fable 5 진단 · 실행은 Codex GPT-5.5 xhigh 하청)
 목표: ① "대만 회사설립"·"대만 변호사" 구글 첫 페이지 ② AI 검색(ChatGPT/Claude/Perplexity/Gemini)에서 "한국어 가능한 대만 변호사" 질의 시 상위 인용
 

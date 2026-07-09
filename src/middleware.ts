@@ -3,7 +3,6 @@ import {
   findMatchingRedirect,
   loadActiveRedirects,
 } from '@/lib/builder/seo/redirects-edge';
-import { isWixLegacyHost, resolveWixRedirectTarget } from '@/lib/seo/wix-redirect-map';
 
 type BasicCredential = {
   readonly username: string;
@@ -260,28 +259,8 @@ async function handlePublicRedirect(request: NextRequest): Promise<NextResponse 
   return NextResponse.redirect(target, match.type);
 }
 
-/**
- * Canonical request host. Vercel fronts the app behind a proxy that sets
- * `x-forwarded-host` to the public domain; in local dev the plain `host`
- * header is the source of truth. The legacy-domain redirect needs the public
- * host either way.
- */
-function effectiveHost(request: NextRequest): string {
-  return request.headers.get('x-forwarded-host') ?? request.headers.get('host') ?? '';
-}
-
 export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
-
-  // Whole-site 301 for the legacy wei-wei-lawyer.com domain. This runs before
-  // admin auth on purpose: the legacy domain is being decommissioned and must
-  // never surface the admin UI. Mapped paths go to their canonical targets;
-  // every other path (including home) falls back to the Korean home. No-op
-  // for any other host, so it is safe to deploy before the DNS migration.
-  if (isWixLegacyHost(effectiveHost(request))) {
-    const target = new URL(resolveWixRedirectTarget(pathname));
-    return NextResponse.redirect(target, 301);
-  }
 
   if (CONSULTATION_ADMIN_PATH_RE.test(pathname)) {
     return handleAdminAuth(request, consultationAuthConfig(), 'Hojeong consultation admin');

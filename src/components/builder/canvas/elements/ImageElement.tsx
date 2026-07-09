@@ -392,7 +392,9 @@ export default function ImageElement({
   const imageSizes = isHeroBackground
     ? '100vw'
     : '(max-width: 1280px) 100vw, 360px';
-  const imageFallbackBackground = !svg && !compare && !node.content.gif
+  const usesImageFallbackBackground =
+    (mode !== 'published' || isHeroBackground) && !svg && !compare && !node.content.gif;
+  const imageFallbackBackground = usesImageFallbackBackground
     ? {
         backgroundImage: `url(${JSON.stringify(node.content.src)})`,
         backgroundPosition: imageObjectPosition ?? 'center',

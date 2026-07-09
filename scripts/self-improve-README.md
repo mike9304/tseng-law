@@ -21,6 +21,7 @@ LIVE 6축을 돌려 회귀를 감지하고 `.omo/evidence/self-improve-tick-<ts>
 | 4 | sitemap | `live-sitemap-crawl.mjs` | sitemap.xml 전 `<loc>`(동적 라우트 포함) 200 |
 | 5 | a11y | `live-a11y-scan.mjs` (+`a11y-baseline.json`) | axe serious/critical **baseline+delta**(새 위반만) |
 | 6 | cwv | `live-cwv-scan.mjs` | LCP/CLS **poor 게이트**(LCP>4s·CLS>0.25, 노이즈 무시) |
+| 7 | home-parity | `live-home-parity-scan.mjs` | ko/zh 홈 이미지 무게 파리티(홈 히어로 **디컴포즈-드리프트 가드**; ratio>2x/과대) |
 
 ### 2) 스마트 tick — `scripts/self-improve-tick-smart.sh` (감독형, sandbox)
 격리 dev 샌드박스 spin → `editor-flow-gate.sh`(자기시딩 columns 생성→편집→미디어→발행→삭제)

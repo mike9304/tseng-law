@@ -6746,6 +6746,7 @@
   font-size: 10px;
   color: #64748b;
   transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .rulerMark::before {
@@ -7126,11 +7127,22 @@
   background: var(--editor-panel-elevated, #fff);
   box-shadow: var(--editor-shadow-popover, 0 14px 32px rgba(15, 23, 42, 0.16));
   white-space: nowrap;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 140ms ease, opacity 140ms ease, box-shadow 140ms ease;
+  transform-origin: left bottom;
+  animation: inlineTextToolbarEnterAbove 160ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .inlineTextToolbar[data-placement='below'] {
   top: auto;
   bottom: -44px;
+  transform-origin: left top;
+  animation-name: inlineTextToolbarEnterBelow;
+}
+
+.inlineTextToolbar:hover {
+  box-shadow: var(--editor-shadow-popover, 0 14px 32px rgba(15, 23, 42, 0.2));
 }
 
 .inlineTextToolbarButton {
@@ -7148,6 +7160,7 @@
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease, transform 120ms ease;
 }
 
 .inlineTextToolbarButton:hover {
@@ -7162,6 +7175,20 @@
   color: var(--editor-fg-inverse, #fff);
 }
 
+.inlineTextToolbarButton:active {
+  transform: translateY(1px);
+}
+
+.inlineTextToolbarButton:focus-visible {
+  outline: 2px solid var(--editor-accent, #116dff);
+  outline-offset: 1px;
+}
+
+.inlineTextToolbarActionButton {
+  padding-inline: 10px;
+  letter-spacing: 0.01em;
+}
+
 .inlineTextToolbarButtonItalic {
   font-style: italic;
 }
@@ -7174,12 +7201,54 @@
   text-decoration: line-through;
 }
 
+.inlineTextToolbarButtonCancel {
+  color: var(--editor-fg-muted, #64748b);
+}
+
+.inlineTextToolbarButtonCancel:hover {
+  background: color-mix(in srgb, var(--editor-danger, #b91c1c) 10%, transparent);
+  color: var(--editor-danger, #b91c1c);
+}
+
+.inlineTextToolbarButtonCommit,
+.inlineTextToolbarButtonCommit:hover {
+  border-color: var(--editor-accent, #116dff);
+  background: var(--editor-accent, #116dff);
+  color: var(--editor-fg-inverse, #fff);
+}
+
+.inlineTextToolbarButtonCommit:hover {
+  background: var(--editor-accent-strong, #0b57d0);
+}
+
 .inlineTextToolbarDivider {
   width: 1px;
   height: 20px;
   margin: 0 4px;
   flex-shrink: 0;
   background: var(--editor-border-hairline, #dfe5eb);
+}
+
+@keyframes inlineTextToolbarEnterAbove {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes inlineTextToolbarEnterBelow {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .inlineTextLinkPopover {

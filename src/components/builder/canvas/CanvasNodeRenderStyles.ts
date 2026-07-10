@@ -100,9 +100,22 @@ export function buildCanvasNodeRenderStyles({
   const renderedOpacity = typeof editorAnimationStyle.opacity === 'number'
     ? (node.style.opacity / 100) * editorAnimationStyle.opacity
     : node.style.opacity / 100;
-  const nodePointerEvents = isDimmedRoot || isActiveGroupFrame
+  // A fully transparent wrapper would otherwise intercept clicks meant for the
+  // visible sibling beneath it (e.g. stacked cross-fade hero slides where only
+  // the top slide is opaque). Disable pointer events on unselected zero-opacity
+  // nodes so the click falls through; a selected node keeps them so its resize/
+  // move chrome stays usable after selecting it via the Layers panel. A locked
+  // decorative node (e.g. home-hero-overlay) also disables pointer events: its
+  // event handlers already refuse editing, so a capturing wrapper only shields
+  // the visible siblings beneath it. Users still find/unlock it via Layers.
+  // Existing higher-priority non-interactive states (dimmed root, active group
+  // frame) continue to win regardless of selection.
+  const isEffectivelyInvisible = renderedOpacity <= 0;
+  const nodePointerEvents = isDimmedRoot || isActiveGroupFrame || node.locked
     ? 'none'
-    : 'auto';
+    : isEffectivelyInvisible && !selected
+      ? 'none'
+      : 'auto';
   const isClosedServicesAccordionBody =
     !isAccordionPreviewOpen && /^home-services-card-\d+-body$/.test(node.id);
   const isClosedServicesAccordionDetail =

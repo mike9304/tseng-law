@@ -4,6 +4,8 @@ import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
 import { emitEditorPageSaveHook } from '@/lib/builder/apps/lifecycle-emitters';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { createDefaultCanvasNodeStyle } from '@/lib/builder/canvas/types';
+import { createHomePageCanvasDocumentDecomposed } from '@/lib/builder/canvas/seed-home';
+import { HERO_SEARCH_WRAPPER_Y } from '@/lib/builder/canvas/decompose-hero';
 import {
   canProjectPageToLocale,
   readPageCanvasRecordState,
@@ -286,6 +288,42 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
       '칼럼 아카이브',
       '업무분야',
     ]);
+  });
+
+  it('repairs legacy ko hero-search geometry through the read-only GET path without mutating metadata', async () => {
+    // Stored draft mirrors the pre-migration raw shape: hero-search wrapper at
+    // x0/y618/width1280 and a zh-hant-sized container (width1151).
+    const fixture = createHomePageCanvasDocumentDecomposed('ko');
+    for (const node of fixture.nodes) {
+      if (node.id === 'home-hero-search-wrapper') {
+        node.rect = { x: 0, y: HERO_SEARCH_WRAPPER_Y, width: 1280, height: 62 };
+      } else if (node.id === 'home-hero-search-container') {
+        node.rect = { x: 0, y: 0, width: 1151, height: 62 };
+      }
+    }
+    const storedUpdatedAt = fixture.updatedAt;
+    const storedUpdatedBy = fixture.updatedBy;
+    vi.mocked(readPageCanvasRecordState).mockResolvedValue(recordState(fixture));
+
+    const route = await import('../route');
+    const response = await route.GET(getRequest('page-published-only'), {
+      params: { pageId: 'page-published-only' },
+    });
+    const payload = await response.json();
+    const wrapper = payload.document.nodes.find(
+      (node: { id: string }) => node.id === 'home-hero-search-wrapper',
+    );
+    const container = payload.document.nodes.find(
+      (node: { id: string }) => node.id === 'home-hero-search-container',
+    );
+
+    expect(response.status).toBe(200);
+    expect(wrapper.rect).toEqual({ x: 51, y: HERO_SEARCH_WRAPPER_Y, width: 760, height: 62 });
+    expect(container.rect).toEqual({ x: 0, y: 0, width: 760, height: 62 });
+    // Read-only normalization must not rewrite record-level metadata.
+    expect(payload.document.updatedAt).toBe(storedUpdatedAt);
+    expect(payload.document.updatedBy).toBe(storedUpdatedBy);
+    expect(updatePageCanvasRecord).not.toHaveBeenCalled();
   });
 
   it('still returns 404 when both draft and published records are missing', async () => {

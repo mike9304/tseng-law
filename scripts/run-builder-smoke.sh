@@ -40,8 +40,47 @@ fi
 if [[ -d runtime-data/builder-bookings ]]; then
   cp -R runtime-data/builder-bookings "$ISOLATED_ROOT/"
 fi
-export BUILDER_BOOKINGS_ROOT="$ISOLATED_ROOT/builder-bookings"
 SERVER_LOG="$ISOLATED_ROOT/server.log"
+
+# ── Shared local-test config ──────────────────────────────────────────
+# Named LOCAL TEST ONLY secrets — never match production credentials.
+# Exporting these makes BOTH the server child AND the Playwright child
+# (whose specs import readSiteDocument/writeSiteDocument directly in the
+# Node process, and derive cron/auth headers from process.env) agree on
+# the same isolated persistence roots and auth secrets. Without this, the
+# browser-test Node process writes the real runtime-data/builder-site
+# while the server reads the isolated copy, and cron headers mismatch.
+SMOKE_CRON_SECRET="local-cron-secret"
+SMOKE_COMMERCE_WEBHOOK_SECRET="local-commerce-webhook-secret"
+SMOKE_BILLING_SHARE_SECRET="local-billing-share-secret"
+
+# Persistence roots — every backend points at the throwaway isolated copy
+# so neither the server nor direct-import test code can touch the real
+# runtime-data/builder-site.
+export BUILDER_SITE_ROOT="$ISOLATED_ROOT/builder-site"
+export BUILDER_BOOKINGS_ROOT="$ISOLATED_ROOT/builder-bookings"
+
+# Shared local-test secrets (cron auth, commerce webhook HMAC, billing share)
+export CRON_SECRET="$SMOKE_CRON_SECRET"
+export COMMERCE_PAYMENT_WEBHOOK_SECRET="$SMOKE_COMMERCE_WEBHOOK_SECRET"
+export BILLING_DOCUMENT_SHARE_SECRET="$SMOKE_BILLING_SHARE_SECRET"
+
+# Backends + stub/mock flags (local file backends, disable blob, allow stubs)
+export BLOB_READ_WRITE_TOKEN=
+export BUILDER_SITE_BACKEND=local
+export CONSULTATION_LOG_BACKEND=local
+export BOOKING_PAYMENT_ALLOW_STUB=1
+export BUILDER_ZOOM_MOCK_ALLOW=1
+export BOOKING_STRIPE_WEBHOOK_ALLOW_UNSIGNED=1
+export BILLING_DOCUMENT_STRIPE_WEBHOOK_ALLOW_UNSIGNED=1
+
+# Relaxed rate limits for the smoke run
+export BUILDER_MUTATION_RATE_LIMIT=2000
+export BUILDER_PUBLISH_RATE_LIMIT=500
+export BUILDER_ASSET_RATE_LIMIT=500
+
+# Build output dir (server locates the compiled .next build via this)
+export NEXT_DIST_DIR
 
 # ── Teardown — ALWAYS runs (trap on EXIT) ─────────────────────────────
 SERVER_PID=""
@@ -66,26 +105,10 @@ teardown() {
 }
 trap teardown EXIT
 
-# ── Start production server (mirrors scripts/start-qa-server.sh) ──────
-env \
-  BLOB_READ_WRITE_TOKEN= \
-  BUILDER_SITE_BACKEND=local \
-  CONSULTATION_LOG_BACKEND=local \
-  BOOKING_PAYMENT_ALLOW_STUB=1 \
-  BUILDER_ZOOM_MOCK_ALLOW=1 \
-  BOOKING_STRIPE_WEBHOOK_ALLOW_UNSIGNED=1 \
-  BILLING_DOCUMENT_STRIPE_WEBHOOK_ALLOW_UNSIGNED=1 \
-  COMMERCE_PAYMENT_WEBHOOK_SECRET=local-commerce-webhook-secret \
-  BILLING_DOCUMENT_SHARE_SECRET=local-billing-share-secret \
-  CRON_SECRET=local-cron-secret \
-  BUILDER_MUTATION_RATE_LIMIT=2000 \
-  BUILDER_PUBLISH_RATE_LIMIT=500 \
-  BUILDER_ASSET_RATE_LIMIT=500 \
-  BUILDER_SITE_ROOT="$ISOLATED_ROOT/builder-site" \
-  BUILDER_BOOKINGS_ROOT="$BUILDER_BOOKINGS_ROOT" \
-  NEXT_DIST_DIR="$NEXT_DIST_DIR" \
-  PORT="$SMOKE_PORT" \
-  npm run start >"$SERVER_LOG" 2>&1 &
+# ── Start production server ───────────────────────────────────────────
+# The server inherits all exported local-test config above. Only PORT is
+# server-specific (the Playwright child uses BASE_URL, not PORT).
+env PORT="$SMOKE_PORT" npm run start >"$SERVER_LOG" 2>&1 &
 SERVER_PID=$!
 
 # ── Wait for readiness (HTTP 200 on /ko, 1s poll, max 60s) ────────────
@@ -107,6 +130,9 @@ if [[ "$READY" != "1" ]]; then
 fi
 
 # ── Run the smoke (pass through any extra args, e.g. other specs) ─────
+# The Playwright child inherits the exported isolated roots + secrets so
+# specs that import readSiteDocument/writeSiteDocument or derive cron
+# headers operate on the isolated copy, never the real runtime-data.
 PLAYWRIGHT_EXIT=0
 BASE_URL="http://127.0.0.1:$SMOKE_PORT" \
   npx playwright test tests/builder-editor/admin-builder.playwright.ts \

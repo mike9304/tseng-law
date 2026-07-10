@@ -3,11 +3,14 @@ import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import type { PublishCheckSuite } from '@/lib/builder/publish-gate/gate-runner';
 import type { TranslationSiteWarningSummary } from '@/lib/builder/publish-gate/translation-site-summary';
+import { getDocumentDiffCopy } from '@/lib/builder/canvas/document-diff-copy';
 import { buildPreflightItems, CheckListItem, formatScheduledAt } from '../PublishModalPreflight';
 import {
   PublishTranslationSiteReview,
   PublishWarningOverrideReview,
 } from '../PublishModalIssues';
+import { PublishModalDiffPanel } from '../PublishModalDiffPanel';
+import type { PublishDiffState } from '../PublishModalTypes';
 import { getPublishModalCopy } from '../publish-copy';
 
 const suite: PublishCheckSuite = {
@@ -220,5 +223,32 @@ describe('publish modal copy', () => {
     expect(markup).toContain('data-builder-publish-site-translation-review="true"');
     expect(markup).toContain('data-builder-publish-site-translation-review-state="not-required"');
     expect(markup).not.toContain('data-builder-publish-site-translation-acknowledge="true"');
+  });
+
+  it('renders the diff panel as an accessible named region scoped for screenshots', () => {
+    const copy = getPublishModalCopy('ko');
+    const diffCopy = getDocumentDiffCopy('ko');
+    const publishDiff: PublishDiffState = {
+      status: 'ready',
+      diff: {
+        added: [],
+        removed: [],
+        modified: [{ id: 'title-1', kind: 'text', changes: ['text'] }],
+      },
+      summary: { added: 0, removed: 0, modified: 1 },
+      publishedRevision: 1,
+      publishedRevisionId: 'rev-1',
+    };
+    const markup = renderToStaticMarkup(createElement(PublishModalDiffPanel, {
+      copy,
+      diffCopy,
+      locale: 'ko',
+      publishDiff,
+    }));
+
+    expect(markup).toContain('<section');
+    expect(markup).toContain('data-builder-publish-diff-summary="true"');
+    expect(markup).toContain(`aria-label="${copy.diffTitle}"`);
+    expect(markup).toContain(copy.diffTitle);
   });
 });

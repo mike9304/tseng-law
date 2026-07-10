@@ -969,17 +969,24 @@ describe('canvas selection render contract', () => {
 
   it('repairs legacy home hero search node hierarchy before editor render', () => {
     const adminBuilderPage = read('src/app/(builder)/[locale]/admin-builder/page.tsx');
+    const migration = read('src/lib/builder/canvas/home-hero-search-migration.ts');
 
-    expect(adminBuilderPage).toContain('function upgradeHeroSearchForm(document: BuilderCanvasDocument, locale: Locale): BuilderCanvasDocument {');
-    expect(adminBuilderPage).toContain("HERO_SEARCH_WRAPPER_Y,\n  HERO_SECTION_ROOT_HEIGHT,");
-    expect(adminBuilderPage).toContain("parentId: 'home-hero-root',\n        rect: { x: 0, y: HERO_SEARCH_WRAPPER_Y, width: 1280, height: 62 },");
-    expect(adminBuilderPage).toContain("parentId: 'home-hero-search-wrapper',\n        rect: { x: 0, y: 0, width: 1151, height: 62 },");
-    expect(adminBuilderPage).toContain("parentId: 'home-hero-search-container',\n        rect: { x: 0, y: 0, width: 760, height: 62 },");
-    expect(adminBuilderPage).toContain("parentId: 'home-hero-search-wrap',\n        rect: { x: 0, y: 0, width: 760, height: 62 },");
-    expect(adminBuilderPage).toContain("parentId: 'home-hero-search-bar',\n        rect: { x: 0, y: 0, width: 700, height: 62 },");
-    expect(adminBuilderPage).toContain("parentId: 'home-hero-search-bar',\n        rect: { x: 700, y: 0, width: 60, height: 62 },");
-    expect(adminBuilderPage).toContain("parentId: 'home-hero-search-wrap',\n        rect: { ...node.rect, x: 0, y: 70, width: 760 },");
-    expect(adminBuilderPage).toContain("parentId: 'home-hero-quick-menu',");
+    // The editor page imports and calls the shared migration rather than
+    // defining its own private copy.
+    expect(adminBuilderPage).toContain("import { upgradeHomeHeroSearchForm } from '@/lib/builder/canvas/home-hero-search-migration';");
+    expect(adminBuilderPage).toContain('upgradeHomeHeroSearchForm(');
+
+    // Geometry values are covered by the focused migration unit test; here we
+    // keep the node parent/child hierarchy contract against the shared module.
+    expect(migration).toContain('export function upgradeHomeHeroSearchForm(');
+    expect(migration).toContain("import { HERO_SEARCH_WRAPPER_Y } from './decompose-hero';");
+    expect(migration).toContain("parentId: 'home-hero-root',");
+    expect(migration).toContain("parentId: 'home-hero-search-wrapper',");
+    expect(migration).toContain("parentId: 'home-hero-search-container',");
+    expect(migration).toContain("parentId: 'home-hero-search-wrap',");
+    expect(migration).toContain("parentId: 'home-hero-search-bar',");
+    expect(migration).toContain("parentId: 'home-hero-quick-menu',");
+    expect(migration).toContain('stampMetadata');
   });
 
   it('keeps decomposed hero quick menu FAQ labels aligned with the public home', () => {

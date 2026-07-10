@@ -47,7 +47,11 @@ export function PublishModalDiffPanel({
     : [];
 
   return (
-    <div className={styles.publishDiffPanel}>
+    <section
+      className={styles.publishDiffPanel}
+      aria-label={copy.diffTitle}
+      data-builder-publish-diff-summary="true"
+    >
       <div className={styles.checklistLabel}>
         <span>{copy.diffTitle}</span>
         <span className={styles.checklistStatus}>
@@ -100,6 +104,6 @@ export function PublishModalDiffPanel({
               : copy.diffFallback}
         </div>
       )}
-    </div>
+    </section>
   );
 }

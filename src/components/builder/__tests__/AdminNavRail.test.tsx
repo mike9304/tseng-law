@@ -1,9 +1,15 @@
 import React from 'react';
-import { describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 
+const navState = vi.hoisted(() => ({
+  pathname: '/ko/admin-builder/cms/collections',
+  search: '',
+}));
+
 vi.mock('next/navigation', () => ({
-  usePathname: () => '/ko/admin-builder/cms/collections',
+  usePathname: () => navState.pathname,
+  useSearchParams: () => new URLSearchParams(navState.search),
 }));
 
 vi.mock('next/link', () => ({
@@ -27,6 +33,11 @@ import {
 } from '@/lib/builder/admin-nav/recent-nav';
 
 describe('AdminNavRail', () => {
+  beforeEach(() => {
+    navState.pathname = '/ko/admin-builder/cms/collections';
+    navState.search = '';
+  });
+
   it('marks the CMS link active when pathname starts with /admin-builder/cms', () => {
     const html = renderToStaticMarkup(React.createElement(AdminNavRail));
     expect(html).toContain('빌더 관리 내비게이션');
@@ -38,6 +49,16 @@ describe('AdminNavRail', () => {
     expect(activeMatches.length).toBeGreaterThanOrEqual(1);
     // Active link should reference /ko/admin-builder/cms.
     expect(html).toMatch(/data-builder-admin-rail-link="\/cms"[^>]*data-active="true"/);
+  });
+
+  it('marks the security audit sub-link active (and not the bare /ops link) when pathname is /ops?tab=security', () => {
+    navState.pathname = '/ko/admin-builder/ops';
+    navState.search = 'tab=security';
+    const html = renderToStaticMarkup(React.createElement(AdminNavRail));
+    // The /ops?tab=security sub-link should be active.
+    expect(html).toMatch(/data-builder-admin-rail-link="\/ops\?tab=security"[^>]*data-active="true"/);
+    // The bare /ops link should NOT be active.
+    expect(html).not.toMatch(/data-builder-admin-rail-link="\/ops"[^>]*data-active="true"/);
   });
 });
 
@@ -66,6 +87,43 @@ describe('nav-config helpers', () => {
   });
 });
 
+describe('findActiveItem — URL/query matching', () => {
+  it('selects Ops for the bare /ops path', () => {
+    const item = findActiveItem(ADMIN_NAV_TREE, 'ko', '/ko/admin-builder/ops');
+    expect(item?.label).toBe('Ops');
+  });
+
+  it('selects 감사 로그 when tab=security is present', () => {
+    const item = findActiveItem(ADMIN_NAV_TREE, 'ko', '/ko/admin-builder/ops?tab=security');
+    expect(item?.label).toBe('감사 로그');
+  });
+
+  it('selects 감사 로그 regardless of leading extra params', () => {
+    const item = findActiveItem(ADMIN_NAV_TREE, 'ko', '/ko/admin-builder/ops?foo=1&tab=security');
+    expect(item?.label).toBe('감사 로그');
+  });
+
+  it('selects 감사 로그 regardless of trailing extra params', () => {
+    const item = findActiveItem(ADMIN_NAV_TREE, 'ko', '/ko/admin-builder/ops?tab=security&foo=1');
+    expect(item?.label).toBe('감사 로그');
+  });
+
+  it('falls back to Ops when the tab value does not match', () => {
+    const item = findActiveItem(ADMIN_NAV_TREE, 'ko', '/ko/admin-builder/ops?tab=other');
+    expect(item?.label).toBe('Ops');
+  });
+
+  it('ignores hash fragments when matching', () => {
+    const item = findActiveItem(ADMIN_NAV_TREE, 'ko', '/ko/admin-builder/ops?tab=security#audit');
+    expect(item?.label).toBe('감사 로그');
+  });
+
+  it('keeps the CMS nested-path match intact', () => {
+    const item = findActiveItem(ADMIN_NAV_TREE, 'ko', '/ko/admin-builder/cms/collections/x');
+    expect(item?.href).toBe('/cms');
+  });
+});
+
 describe('recent admin navigation helpers', () => {
   it('builds a localized history entry from the current admin path', () => {
     const entry = adminNavHistoryEntryForPath(
@@ -78,6 +136,20 @@ describe('recent admin navigation helpers', () => {
       label: '應用程式',
       href: '/zh-hant/admin-builder/apps',
       sectionHeading: '工作區',
+    });
+  });
+
+  it('builds a security audit history entry for the /ops?tab=security path', () => {
+    const entry = adminNavHistoryEntryForPath(
+      ADMIN_NAV_TREE,
+      'ko',
+      '/ko/admin-builder/ops?tab=security',
+    );
+
+    expect(entry).toEqual({
+      label: '감사 로그',
+      href: '/ko/admin-builder/ops?tab=security',
+      sectionHeading: '운영 / 보안',
     });
   });
 

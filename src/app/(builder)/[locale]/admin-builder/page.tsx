@@ -36,9 +36,9 @@ import {
 } from '@/lib/builder/canvas/seed-home';
 import {
   HERO_MEDIA_IMAGE_NODE_IDS,
-  HERO_SEARCH_WRAPPER_Y,
   HERO_SECTION_ROOT_HEIGHT,
 } from '@/lib/builder/canvas/decompose-hero';
+import { upgradeHomeHeroSearchForm } from '@/lib/builder/canvas/home-hero-search-migration';
 import { createInsightsDecomposedNodes, INSIGHTS_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-insights';
 import { FAQ_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-faq';
 import { SERVICES_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-services';
@@ -169,122 +169,6 @@ function needsFaqLiveCompositeDraftRepair(
     node.id === 'page-faq-faq-root' ||
     node.id.startsWith('page-faq-faq-item-')
   ));
-}
-
-function upgradeHeroSearchForm(document: BuilderCanvasDocument, locale: Locale): BuilderCanvasDocument {
-  let changed = false;
-  const searchButtonLabel = locale === 'ko' ? '검색' : locale === 'zh-hant' ? '搜尋' : 'Search';
-  const nextNodes: BuilderCanvasNode[] = [];
-  let hasInputNode = document.nodes.some((node) => node.id === 'home-hero-search-input');
-
-  for (const node of document.nodes) {
-    let result: { node: BuilderCanvasNode; changed: boolean } | null = null;
-
-    if (node.id === 'home-hero-search-wrapper') {
-      result = withNodePatch(node, {
-        parentId: 'home-hero-root',
-        rect: { x: 0, y: HERO_SEARCH_WRAPPER_Y, width: 1280, height: 62 },
-      });
-    } else if (node.id === 'home-hero-search-container') {
-      result = withNodePatch(node, {
-        parentId: 'home-hero-search-wrapper',
-        rect: { x: 0, y: 0, width: 1151, height: 62 },
-      });
-    } else if (node.id === 'home-hero-search-wrap') {
-      result = withNodePatch(node, {
-        parentId: 'home-hero-search-container',
-        rect: { x: 0, y: 0, width: 760, height: 62 },
-      });
-    } else if (node.id === 'home-hero-search-bar') {
-      result = withNodePatch(node, {
-        parentId: 'home-hero-search-wrap',
-        rect: { x: 0, y: 0, width: 760, height: 62 },
-        content: {
-          as: 'form',
-          action: `/${locale}/search`,
-          method: 'get',
-          layoutMode: 'flex',
-          flexConfig: {
-            direction: 'row',
-            wrap: false,
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: 0,
-          },
-        },
-      });
-    } else if (node.id === 'home-hero-search-placeholder' && !hasInputNode) {
-      const placeholder = node.content && 'text' in node.content && typeof node.content.text === 'string'
-        ? node.content.text
-        : '';
-      result = withNodePatch(node, {
-        id: 'home-hero-search-input',
-        parentId: 'home-hero-search-bar',
-        rect: { x: 0, y: 0, width: 700, height: 62 },
-        content: {
-          as: 'input',
-          inputType: 'search',
-          name: 'q',
-          placeholder,
-          ariaLabel: placeholder,
-        },
-      });
-      hasInputNode = true;
-    } else if (node.id === 'home-hero-search-placeholder') {
-      changed = true;
-      continue;
-    } else if (node.id === 'home-hero-search-input') {
-      const placeholder = node.content && 'text' in node.content && typeof node.content.text === 'string'
-        ? node.content.text
-        : '';
-      result = withNodePatch(node, {
-        parentId: 'home-hero-search-bar',
-        rect: { x: 0, y: 0, width: 700, height: 62 },
-        content: {
-          as: 'input',
-          inputType: 'search',
-          name: 'q',
-          placeholder,
-          ariaLabel: placeholder,
-        },
-      });
-    } else if (node.id === 'home-hero-search-button') {
-      result = withNodePatch(node, {
-        parentId: 'home-hero-search-bar',
-        rect: { x: 700, y: 0, width: 60, height: 62 },
-        content: {
-          as: 'button',
-          buttonType: 'submit',
-          ariaLabel: searchButtonLabel,
-        },
-      });
-    } else if (node.id === 'home-hero-quick-menu') {
-      result = withNodePatch(node, {
-        parentId: 'home-hero-search-wrap',
-        rect: { ...node.rect, x: 0, y: 70, width: 760 },
-      });
-    } else if (/^home-hero-quick-menu-item-\d+$/.test(node.id)) {
-      result = withNodePatch(node, {
-        parentId: 'home-hero-quick-menu',
-        rect: { ...node.rect, width: 760 },
-      });
-    }
-
-    if (result) {
-      changed = changed || result.changed;
-      nextNodes.push(result.node);
-    } else {
-      nextNodes.push(node);
-    }
-  }
-
-  if (!changed) return document;
-  return {
-    ...document,
-    updatedAt: new Date().toISOString(),
-    updatedBy: `${document.updatedBy || 'builder'}+hero-search-parity`,
-    nodes: nextNodes,
-  };
 }
 
 function upgradeHomeHeroEditorialPolish(document: BuilderCanvasDocument): BuilderCanvasDocument {
@@ -1633,7 +1517,7 @@ export default async function BuilderMainPage({
           upgradeHomeDecomposedTabletParity(
             upgradeHomeHeroResponsiveParity(
               upgradeHomeHeroEditorialPolish(
-                upgradeHeroSearchForm(
+                upgradeHomeHeroSearchForm(
                   upgradeHeroQuickMenu(
                     upgradeHomeFaqSection(
                       upgradeHomeServicesSection(

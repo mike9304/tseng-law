@@ -18,7 +18,7 @@
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import {
   ADMIN_NAV_TREE,
   adminHref,
@@ -43,6 +43,9 @@ const PATHNAME_REGEX = /^\/(ko|en|zh-hant)\/admin-builder(?:\/(.*))?$/;
 
 export default function AdminNavRail({ tree = ADMIN_NAV_TREE, locale: localeProp }: AdminNavRailProps) {
   const pathname = usePathname() ?? '';
+  const searchParams = useSearchParams();
+  const search = searchParams?.toString() ?? '';
+  const currentLocation = search ? `${pathname}?${search}` : pathname;
   const match = pathname.match(PATHNAME_REGEX);
   const locale = localeProp ?? match?.[1] ?? 'ko';
   const rest = match?.[2] ?? '';
@@ -62,9 +65,12 @@ export default function AdminNavRail({ tree = ADMIN_NAV_TREE, locale: localeProp
 
   useEffect(() => {
     setDrawerOpen(false);
-  }, [pathname]);
+  }, [currentLocation]);
 
-  const activeItem = useMemo(() => findActiveItem(tree, locale, pathname), [tree, locale, pathname]);
+  const activeItem = useMemo(
+    () => findActiveItem(tree, locale, currentLocation),
+    [tree, locale, currentLocation],
+  );
 
   // Hide rail entirely on the admin-builder root (editor canvas keeps full bleed).
   if (!match || rest === '') return null;

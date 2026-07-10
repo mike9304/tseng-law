@@ -283,6 +283,42 @@ async function expectClearanceBeforeFollowingSection(
   ), { timeout: 5_000 }).toBe('ok');
 }
 
+// The hero search form intentionally straddles the hero/Insights boundary for
+// public parity. The editor auto-fit scales the 1280px model into the stage,
+// so the painted overflow must be measured in the stage's CSS pixels. Assert
+// the search input/button really straddle the boundary (non-negative overflow
+// past both the hero bottom and the insights top) without exceeding the
+// intended ~24-model-px overflow plus rounding slack. Mirrors the scale-aware
+// contract in admin-builder.playwright.ts.
+async function expectHeroSearchStraddlesHeroInsightsBoundary(page: Page) {
+  const HERO_SEARCH_MODEL_WIDTH = 1280;
+  const STRADDLE_MODEL_OVERFLOW_PX = 24;
+
+  await expect.poll(async () => page.evaluate(
+    ({ modelWidth, straddleModelOverflow }) => {
+      const hero = document.querySelector('[data-node-id="home-hero-root"]')?.getBoundingClientRect();
+      const searchInput = document.querySelector('[data-node-id="home-hero-search-input"]')?.getBoundingClientRect();
+      const searchButton = document.querySelector('[data-node-id="home-hero-search-button"]')?.getBoundingClientRect();
+      const insights = document.querySelector('[data-node-id="home-insights-root"]')?.getBoundingClientRect();
+      if (!hero || !searchInput || !searchButton || !insights) return 'missing';
+      const scale = hero.width / modelWidth;
+      const overflowCap = straddleModelOverflow * scale + 2;
+      const checks: Array<[string, number]> = [
+        ['input-overflows-hero-bottom', searchInput.bottom - hero.bottom],
+        ['input-overflows-insights-top', searchInput.bottom - insights.top],
+        ['button-overflows-hero-bottom', searchButton.bottom - hero.bottom],
+        ['button-overflows-insights-top', searchButton.bottom - insights.top],
+      ];
+      for (const [name, overflow] of checks) {
+        if (overflow < 0) return `${name} below boundary (${Math.round(overflow)}px)`;
+        if (overflow > overflowCap) return `${name} exceeds cap (${Math.round(overflow)}px > ${Math.round(overflowCap)}px)`;
+      }
+      return 'ok';
+    },
+    { modelWidth: HERO_SEARCH_MODEL_WIDTH, straddleModelOverflow: STRADDLE_MODEL_OVERFLOW_PX },
+  ), { timeout: 5_000 }).toBe('ok');
+}
+
 test.describe('/ko/admin-builder node click stability', () => {
   test('does not move canvas nodes when a click has only pointer jitter', async ({ page }) => {
     await openBuilder(page, `/ko/admin-builder?nodeClickStability=${Date.now().toString(36)}`);
@@ -321,21 +357,23 @@ test.describe('/ko/admin-builder node click stability', () => {
     await expect(archive).toBeVisible();
     await expect(page.locator('[data-node-id="home-insights-title"]').first()).toBeVisible();
 
-    const previewLink = page.locator('[data-builder-insights-preview="true"] a[href]').first();
-    if (await previewLink.isVisible().catch(() => false)) {
-      await previewLink.click({ force: true });
-      await expectEditorSurfaceIntact(page);
-      await expect(archive).toBeVisible();
-    }
+    const featuredLinkNode = page.locator('[data-node-id="home-insights-featured-link"]').first();
+    await expect(featuredLinkNode).toBeVisible();
+    await expect(
+      featuredLinkNode.locator('button[data-tone="link"]'),
+    ).toHaveAttribute('title', /\/columns\//);
+    await featuredLinkNode.locator('a').first().click({ force: true });
+    await expectEditorSurfaceIntact(page);
+    await expect(archive).toBeVisible();
 
     const image = page.locator('[data-node-id="home-hero-media-image"]').first();
     await image.scrollIntoViewIfNeeded();
     const assetDialog = page.getByRole('dialog', { name: /Asset library|자산 라이브러리/ });
-    await image.click({ position: { x: 20, y: 20 }, force: true });
+    await image.click({ position: { x: 80, y: 20 } });
     await expectEditorSurfaceIntact(page);
     await expect(image).toHaveAttribute('data-selected', 'true');
     if (!(await assetDialog.isVisible().catch(() => false))) {
-      await image.click({ position: { x: 20, y: 20 }, force: true });
+      await image.click({ position: { x: 80, y: 20 } });
     }
     await expect(assetDialog).toBeVisible();
     await expect(assetDialog).toContainText(/Select, upload, or remove builder images|빌더 이미지를 선택, 업로드, 삭제하세요/);
@@ -407,15 +445,13 @@ test.describe('/ko/admin-builder node click stability', () => {
     await openBuilder(page, path);
     await page.keyboard.press('Escape');
     await expectBoundaryControlsAsTopHitTargets(page);
-    await expectClearanceBeforeFollowingSection(page, 'home-hero-search-input', 'home-insights-root', 72);
-    await expectClearanceBeforeFollowingSection(page, 'home-hero-search-button', 'home-insights-root', 72);
+    await expectHeroSearchStraddlesHeroInsightsBoundary(page);
     await expectClearanceBeforeFollowingSection(page, 'home-insights-view-all', 'home-services-root', 72);
 
     await openBuilder(page, path);
     await page.keyboard.press('Escape');
     await expectBoundaryControlsAsTopHitTargets(page);
-    await expectClearanceBeforeFollowingSection(page, 'home-hero-search-input', 'home-insights-root', 72);
-    await expectClearanceBeforeFollowingSection(page, 'home-hero-search-button', 'home-insights-root', 72);
+    await expectHeroSearchStraddlesHeroInsightsBoundary(page);
     await expectClearanceBeforeFollowingSection(page, 'home-insights-view-all', 'home-services-root', 72);
   });
 
@@ -490,8 +526,8 @@ test.describe('/ko/admin-builder node click stability', () => {
 
       const expectedSeed = createHomePageCanvasDocumentDecomposed('ko');
       const expected = [
-        findNode(expectedSeed, 'home-insights-root').rect.height,
-        findNode(expectedSeed, 'home-services-root').rect.height,
+        INSIGHTS_SECTION_ROOT_HEIGHT,
+        SERVICES_SECTION_ROOT_HEIGHT,
         findNode(expectedSeed, 'home-faq-root').rect.height,
         findNode(expectedSeed, 'home-faq-list').rect.height,
         true,

@@ -13,7 +13,7 @@
 
 import type { ReactNode } from 'react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import AdminNavRail from './AdminNavRail';
 import AdminBreadcrumb from './AdminBreadcrumb';
@@ -40,6 +40,9 @@ const ROOT_REGEX = /^\/(ko|en|zh-hant)\/admin-builder\/?$/;
 export default function AdminShell({ children }: AdminShellProps) {
   const router = useRouter();
   const pathname = usePathname() ?? '';
+  const searchParams = useSearchParams();
+  const search = searchParams?.toString() ?? '';
+  const currentLocation = search ? `${pathname}?${search}` : pathname;
   const locale = normalizeLocale(pathname.match(/^\/(ko|en|zh-hant)\//)?.[1] ?? 'ko');
   const copy = getAdminNavCopy(locale);
   const onEditorRoot = ROOT_REGEX.test(pathname);
@@ -57,7 +60,7 @@ export default function AdminShell({ children }: AdminShellProps) {
 
   useEffect(() => {
     const stored = normalizeAdminNavHistoryEntries(ADMIN_NAV_TREE, locale, readRecentAdminNav());
-    const currentEntry = adminNavHistoryEntryForPath(ADMIN_NAV_TREE, locale, pathname);
+    const currentEntry = adminNavHistoryEntryForPath(ADMIN_NAV_TREE, locale, currentLocation);
     if (!currentEntry) {
       writeRecentAdminNav(stored);
       setRecentNav(stored);
@@ -66,11 +69,11 @@ export default function AdminShell({ children }: AdminShellProps) {
     const next = pushRecentAdminNav(stored, currentEntry);
     writeRecentAdminNav(next);
     setRecentNav(next);
-  }, [locale, pathname]);
+  }, [locale, currentLocation]);
 
   const visibleRecentNav = useMemo(
-    () => buildRecentAdminNavTrail(recentNav, pathname),
-    [pathname, recentNav],
+    () => buildRecentAdminNavTrail(recentNav, currentLocation),
+    [currentLocation, recentNav],
   );
 
   const navigateToRecent = useCallback((entry: AdminNavHistoryEntry) => {

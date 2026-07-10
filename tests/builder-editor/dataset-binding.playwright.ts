@@ -964,7 +964,7 @@ test('/ko/admin-builder flags stale dataset field mappings before publish', asyn
     );
     await expectNoVisibleHorizontalOverflow(page, '[data-builder-data-binding-panel="true"]');
 
-    await page.getByTitle('사이트 발행').click();
+    await page.getByTitle('현재 페이지 발행').click();
     const publishDialog = page.getByRole('dialog', { name: /Publish Page|페이지 발행/ });
     await expect(publishDialog).toBeVisible();
     const dataPreflightItem = publishDialog.locator('[data-builder-publish-preflight-item="data"]');

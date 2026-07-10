@@ -5,14 +5,15 @@ import { pageCopy } from '@/data/page-copy';
 const KO_COLUMNS = getColumnsCopy('ko');
 const ZH_COLUMNS = getColumnsCopy('zh-hant');
 
-async function expectPublicColumnsLabel(page: Page, builderLabel: string, legacyLabel: string): Promise<void> {
-  const builderTitle = page.locator('[data-node-id="columns-page-title"]').first();
-  if (await builderTitle.isVisible().catch(() => false)) {
-    await expect(builderTitle).toContainText(builderLabel);
-    return;
-  }
-
-  await expect(page.locator('section.page-header [data-builder-surface-key="section-label"]')).toContainText(legacyLabel);
+async function expectPublicColumnsLabel(page: Page, title: string, label: string): Promise<void> {
+  // The Columns page is a non-decomposable composite whose public header is
+  // rendered by PageHeader inside columns-page-root-composite. Validate the
+  // semantic PageHeader surfaces directly rather than probing the removed
+  // standalone columns-page-title node.
+  const header = page.locator('section.page-header').first();
+  await expect(header).toBeVisible();
+  await expect(header.locator('[data-builder-surface-key="section-label"]')).toContainText(label);
+  await expect(header.locator('[data-builder-surface-key="headline"]')).toContainText(title);
 }
 
 test('localizes public column detail shell labels for ko and zh-hant', async ({ page }) => {

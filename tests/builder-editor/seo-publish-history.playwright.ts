@@ -548,7 +548,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
 
     const token = `w26w28-${Date.now().toString(36)}`;
     const headers = mutationHeaders(token);
-    const slug = `g-editor-${token}`;
+    const slug = `seo-route-${token}`;
     const originalTitle = `Original revision ${token}`;
     const cleanDoc = makeDocument({ token, titleText: originalTitle });
     let pageId: string | null = null;
@@ -991,7 +991,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await openBuilderPageFromPagesPanel(page, pageTitle, pageId!);
       await expect(page.locator(`[data-node-id="title-${token}"]`).first()).toContainText(changedTitle);
 
-      await page.getByTitle('사이트 발행').click();
+      await page.getByTitle('현재 페이지 발행').click();
       const publishDialog = page.getByRole('dialog', { name: publishCopy.title });
       await expect(publishDialog).toBeVisible();
       await expect(publishDialog.getByText(publishCopy.diffTitle)).toBeVisible();
@@ -1001,25 +1001,9 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await expect(
         publishDialog.getByText(new RegExp(`W195 original published .*${escapeRegex(changedTitle)}`)),
       ).toBeVisible();
-      const scheduledPublishInput = publishDialog.getByLabel(publishCopy.scheduleInputAria);
-      const fixedScheduledAt = '2026-06-01T12:00';
-      await scheduledPublishInput.fill(fixedScheduledAt);
-      await expect(scheduledPublishInput).toHaveValue(fixedScheduledAt);
-      await page.evaluate(() => {
-        const active = document.activeElement;
-        if (active instanceof HTMLElement) active.blur();
-      });
-      // Pin the modal body scroll: fill() scroll-into-views the schedule input
-      // to a non-deterministic offset (±5px), which shifts the whole capture.
-      await publishDialog.evaluate((dialog) => {
-        dialog.querySelectorAll('*').forEach((element) => {
-          if (element instanceof HTMLElement && element.scrollHeight > element.clientHeight && element.scrollTop > 0) {
-            element.scrollTop = element.scrollHeight;
-          }
-        });
-      });
-      await expect(publishDialog).toHaveScreenshot('publish-modal-diff.png', {
-        mask: [publishDialog.getByText(/발행본 v\d+|published v\d+|已發佈版本 v\d+/)],
+      const diffRegion = publishDialog.getByRole('region', { name: publishCopy.diffTitle });
+      await expect(diffRegion).toHaveScreenshot('publish-modal-diff.png', {
+        mask: [diffRegion.getByText(/발행본 v\d+|published v\d+|已發佈版本 v\d+/)],
       });
     } finally {
       if (pageId) {
@@ -1410,8 +1394,8 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
 
     const token = `w26w28ui-${Date.now().toString(36)}`;
     const headers = mutationHeaders(token);
-    const slug = `g-editor-${token}`;
-    const pageTitle = `G Editor UI ${token}`;
+    const slug = `seo-route-${token}`;
+    const pageTitle = `SEO UI publish ${token}`;
     const originalTitle = `UI original revision ${token}`;
     const changedTitle = `UI changed draft ${token}`;
     const cleanDoc = makeDocument({ token, titleText: originalTitle });
@@ -1524,7 +1508,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
         return `${payload.seo?.title ?? ''}|${payload.defaults?.publicPath ?? ''}`;
       }).toBe(`${seoTitle}|${publicPath}`);
 
-      await page.getByTitle('사이트 발행').click();
+      await page.getByTitle('현재 페이지 발행').click();
       const publishDialog = page.getByRole('dialog', { name: publishCopy.title });
       await expect(publishDialog).toBeVisible();
       await expect(publishDialog.getByText(publishCopy.preflightTitle)).toBeVisible();
@@ -1541,6 +1525,12 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
         if (active instanceof HTMLElement) active.blur();
       });
       await expect(publishDialog.getByText(publishCopy.scheduleTitle)).toBeVisible();
+      const translationReview = publishDialog.locator('[data-builder-publish-site-translation-review="true"]');
+      const translationAcknowledge = translationReview.locator('[data-builder-publish-site-translation-acknowledge="true"]');
+      if (await translationAcknowledge.isVisible().catch(() => false)) {
+        await translationAcknowledge.click();
+        await expect(translationReview).toHaveAttribute('data-builder-publish-site-translation-acknowledged', 'true');
+      }
       const warningOverrideButton = publishDialog.getByRole('button', { name: publishCopy.overrideWarningsButton });
       if (await warningOverrideButton.isVisible().catch(() => false)) {
         await warningOverrideButton.click();

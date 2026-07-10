@@ -111,40 +111,68 @@ export function adminHref(locale: string, href: string): string {
   return `${base}${href.startsWith('/') ? href : `/${href}`}`;
 }
 
-function adminPathFromHref(href: string): string {
+function splitPathAndQuery(href: string): { pathname: string; query: URLSearchParams } {
   const trimmed = href.trim();
-  if (!trimmed) return '';
-
+  if (!trimmed) return { pathname: '', query: new URLSearchParams() };
   try {
     const url = new URL(trimmed, 'https://builder.local');
-    return `${url.pathname}${url.search}`;
+    return { pathname: url.pathname, query: new URLSearchParams(url.search) };
   } catch (error) {
     if (error instanceof TypeError) {
       const [pathWithoutHash = ''] = trimmed.split('#', 1);
-      return pathWithoutHash;
+      const [pathPart = '', queryPart = ''] = pathWithoutHash.split('?');
+      return { pathname: pathPart, query: new URLSearchParams(queryPart ?? '') };
     }
     throw error;
   }
 }
 
+function queryParamsEqual(a: URLSearchParams, b: URLSearchParams): boolean {
+  const aEntries = Array.from(a.entries());
+  const bEntries = Array.from(b.entries());
+  if (aEntries.length !== bEntries.length) return false;
+  return aEntries.every(([key, value]) => b.get(key) === value);
+}
+
+function itemQuerySatisfied(itemQuery: URLSearchParams, currentQuery: URLSearchParams): boolean {
+  let ok = true;
+  itemQuery.forEach((value, key) => {
+    if (currentQuery.get(key) !== value) ok = false;
+  });
+  return ok;
+}
+
 /**
  * Returns the item that best matches the current pathname. Longer hrefs
- * win so `/cms/collections` matches the CMS item, not the root.
+ * win so `/cms/collections` matches the CMS item, not the root. Items
+ * that configure query parameters (e.g. `/ops?tab=security`) require the
+ * pathname to match AND every configured key/value to be present in the
+ * current URL; extra parameters and parameter order are ignored, and a
+ * query-specific item outranks the bare path item. Hash fragments never
+ * affect matching.
  */
 export function findActiveItem(tree: AdminNavTree, locale: string, pathname: string): AdminNavItem | null {
   let best: { item: AdminNavItem; score: number } | null = null;
-  const currentPath = adminPathFromHref(pathname);
+  const { pathname: currentPathname, query: currentQuery } = splitPathAndQuery(pathname);
   for (const section of tree.sections) {
     for (const item of section.items) {
-      const fullHref = adminHref(locale, item.href);
+      const { pathname: itemPathname, query: itemQuery } = splitPathAndQuery(item.href);
+      const fullPath = adminHref(locale, itemPathname);
+
       if (item.exact) {
-        if (currentPath === fullHref) return item;
-        continue;
+        if (currentPathname !== fullPath) continue;
+        if (!queryParamsEqual(itemQuery, currentQuery)) continue;
+        return item;
       }
-      if (currentPath === fullHref || currentPath.startsWith(`${fullHref}/`) || currentPath.startsWith(`${fullHref}?`)) {
-        const score = fullHref.length;
-        if (!best || score > best.score) best = { item, score };
-      }
+
+      const pathMatches = currentPathname === fullPath || currentPathname.startsWith(`${fullPath}/`);
+      if (!pathMatches) continue;
+
+      if (!itemQuerySatisfied(itemQuery, currentQuery)) continue;
+
+      const queryPart = itemQuery.toString();
+      const score = fullPath.length + (queryPart ? 1000 + queryPart.length : 0);
+      if (!best || score > best.score) best = { item, score };
     }
   }
   return best?.item ?? null;

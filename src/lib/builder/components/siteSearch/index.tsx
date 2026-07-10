@@ -43,10 +43,15 @@ function SiteSearchRender({
         name="q"
         placeholder={placeholder}
         aria-label={placeholder}
-        aria-autocomplete="list"
-        aria-controls={c.showResultsInline ? resultsId : undefined}
-        aria-expanded={c.showResultsInline ? false : undefined}
-        aria-haspopup={c.showResultsInline ? 'listbox' : undefined}
+        {...(c.showResultsInline
+          ? {
+              role: 'combobox',
+              'aria-autocomplete': 'list',
+              'aria-controls': resultsId,
+              'aria-expanded': false,
+              'aria-haspopup': 'listbox',
+            }
+          : {})}
         data-builder-site-search-input="true"
       />
       {c.kinds.length > 0 ? <input type="hidden" name="kinds" value={c.kinds.join(',')} /> : null}

@@ -26,6 +26,40 @@ const baseNode = {
   children: [],
 } as unknown as BuilderSiteSearchCanvasNode;
 
+describe('site search component combobox ARIA', () => {
+  const Render = siteSearchComponent.Render as React.ComponentType<{
+    node: BuilderSiteSearchCanvasNode;
+    locale?: 'ko' | 'zh-hant' | 'en';
+  }>;
+
+  it('marks the input as a combobox controller when results are inline', () => {
+    const inlineNode = baseNode;
+    const html = renderToStaticMarkup(<Render node={inlineNode} locale="ko" />);
+    const resultsId = 'builder-site-search-results-site-search-1';
+    expect(html).toContain('role="combobox"');
+    expect(html).toContain('aria-autocomplete="list"');
+    expect(html).toContain(`aria-controls="${resultsId}"`);
+    expect(html).toContain('aria-expanded="false"');
+    expect(html).toContain('aria-haspopup="listbox"');
+    expect(html).toContain(`id="${resultsId}"`);
+    expect(html).toContain('role="listbox"');
+  });
+
+  it('renders a plain search input and omits combobox-only attributes when results are not inline', () => {
+    const nonInlineNode = {
+      ...baseNode,
+      content: { ...baseNode.content, showResultsInline: false },
+    } as BuilderSiteSearchCanvasNode;
+    const html = renderToStaticMarkup(<Render node={nonInlineNode} locale="ko" />);
+    expect(html).not.toContain('role="combobox"');
+    expect(html).not.toContain('aria-autocomplete');
+    expect(html).not.toContain('aria-controls');
+    expect(html).not.toContain('aria-expanded');
+    expect(html).not.toContain('aria-haspopup');
+    expect(html).not.toContain('role="listbox"');
+  });
+});
+
 describe('site search component localization', () => {
   it('renders localized public fallback copy in zh-hant', () => {
     const Render = siteSearchComponent.Render as React.ComponentType<{

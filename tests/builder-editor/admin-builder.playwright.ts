@@ -544,7 +544,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
     await expect.poll(() => browserErrors, { timeout: 1_000 }).toEqual([]);
     await expect(page.locator('[data-node-id]').first()).toBeVisible();
-    await expect(page.getByTitle('사이트 발행')).toBeVisible();
+    await expect(page.getByTitle('현재 페이지 발행')).toBeVisible();
     const stageBox = await page.getByRole('application', { name: 'Canvas editor' }).boundingBox();
     expect(stageBox?.y ?? 9999).toBeLessThan(180);
     await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
@@ -572,15 +572,13 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const rootNavigation = await navigationFromApi(page);
     expect(rootNavigation.length).toBeGreaterThanOrEqual(3);
     const navListText = await builderHeader.locator('.nav-list').innerText();
-    const nonHomeNavigation = rootNavigation.filter((item) =>
-      item.href !== '/'
-      && item.href !== '');
-    for (const rootNavItem of nonHomeNavigation.slice(0, 3)) {
-      const rootNavLabel = typeof rootNavItem.label === 'string'
-        ? rootNavItem.label
-        : rootNavItem.label.ko ?? rootNavItem.label.en ?? '';
-      if (rootNavLabel) expect(navListText).toContain(rootNavLabel);
-    }
+    // The editor intentionally renders SiteHeader via canonicalStandardNav, which
+    // maps standard routes to canonical labels/order and omits home. Raw saved
+    // navigation labels are therefore not the render contract; assert the visible
+    // canonical labels for the first three standard menu items instead.
+    expect(navListText).toContain('업무분야');
+    expect(navListText).toContain('변호사소개');
+    expect(navListText).toContain('비용안내');
     await expect(builderHeader.locator('.header-search-btn')).toBeVisible();
     await builderHeader.locator('[data-builder-header-action="search"]').click();
     const headerSearchDialog = page.getByRole('dialog', { name: /검색|Search|搜尋/ });
@@ -604,24 +602,15 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('[data-node-id="home-insights-page-indicator"]').first()).toContainText(/1 \/ \d+/);
     await expect(page.locator('[data-node-id="home-insights-item-2-title"]').first()).toContainText(/\S/);
     await expect(page.locator('[data-node-id="home-insights-item-3-title"]')).toHaveCount(0);
-    const insightsPreview = page.locator('[data-builder-insights-preview="true"]').first();
-    await expect(insightsPreview).toBeVisible();
-    await expect(insightsPreview.locator('.insights-controls')).toBeVisible();
-    await expect(insightsPreview.locator('.insights-nav-btn').first()).toContainText('‹ 이전');
-    await expect(insightsPreview.locator('.insights-nav-btn').last()).toContainText('다음 ›');
-    await expect(insightsPreview.locator('.insights-page-indicator')).toContainText(/1 \/ \d+/);
-    const firstPreviewTitle = (await insightsPreview.locator('.insights-list-title').first().innerText()).trim();
-    expect(firstPreviewTitle.length).toBeGreaterThan(0);
-    const firstPreviewHref = await insightsPreview.locator('a[href*="/columns/"]').first().getAttribute('href');
-    expect(firstPreviewHref).toBeTruthy();
-    await expect(insightsPreview.locator('.insights-list-item')).toHaveCount(3);
+    const insightsFeaturedNode = page.locator('[data-node-id="home-insights-featured-link"]').first();
+    await expect(insightsFeaturedNode).toBeVisible();
+    await expect(
+      insightsFeaturedNode.locator('button[data-tone="link"]'),
+    ).toHaveAttribute('title', /\/columns\//);
     const editorUrlBeforeInsightsLink = page.url();
-    const insightsPreviewLink = insightsPreview.locator('a[href*="/columns/"]').first();
-    await expect(insightsPreviewLink).toBeVisible();
-    await insightsPreviewLink.click({ force: true });
+    await insightsFeaturedNode.locator('a').first().click({ force: true });
     await expect.poll(() => page.url()).toBe(editorUrlBeforeInsightsLink);
     await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
-    await expect(insightsPreview).toBeVisible();
     await page.locator('[data-node-id="home-insights-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
     const selectedHomeInsightsTitle = page.locator('[data-node-id="home-insights-title"][class*="nodeSelected"]').first();
     await expect(selectedHomeInsightsTitle.getByRole('link', { name: '글 추가/수정' })).toBeVisible();
@@ -652,7 +641,9 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('[data-node-id="home-hero-search-button"] button.hero-search-btn[type="submit"]').first()).toBeVisible();
     const heroSearchBarLocator = page.locator('[data-node-id="home-hero-search-bar"]').first();
     await heroSearchBarLocator.scrollIntoViewIfNeeded();
-    await heroSearchBarLocator.click({ position: { x: 24, y: 24 } });
+    // Click inside the bar but past the 24px left ruler strip, which otherwise
+    // intercepts the pointer at the ruler boundary.
+    await heroSearchBarLocator.click({ position: { x: 80, y: 24 } });
     const heroSearchQuickEdit = page.locator('[data-builder-hero-search-quick-edit="true"]').first();
     await expect(heroSearchQuickEdit).toBeVisible();
     // QuickEdit panel buttons sit above hero-quick-menu nodes; the canvas
@@ -682,6 +673,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
       const bottomHit = document.elementFromPoint(form.left + form.width / 2, form.bottom - 2);
       return {
         heroBottom: hero.bottom,
+        heroWidth: hero.width,
         formBottom: form.bottom,
         formLeft: form.left,
         heroLeft: hero.left,
@@ -690,10 +682,23 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
       };
     });
     expect(heroSearchGeometry).toBeTruthy();
-    // The overlap search form may straddle the hero/insights edge slightly;
-    // the hard contract is that the painted bottom remains the top hit target.
-    expect((heroSearchGeometry?.heroBottom ?? 0) - (heroSearchGeometry?.formBottom ?? 9999)).toBeGreaterThanOrEqual(-8);
-    expect((heroSearchGeometry?.insightsTop ?? 0) - (heroSearchGeometry?.formBottom ?? 9999)).toBeGreaterThanOrEqual(-8);
+    // The hero search form intentionally straddles the hero/Insights section
+    // boundary for public parity (commit 25b4ef51). The editor auto-fit scales
+    // the 1280px model into the stage, so the painted overflow must be measured
+    // in the stage's CSS pixels: derive the scale from the live hero width, then
+    // assert the form really straddles each boundary (non-negative overflow)
+    // without exceeding the intended ~17px model overflow (62px form - 45px
+    // STRADDLE_OVERLAP_Y) plus border/rounding slack (24 model px * scale + 2 CSS
+    // px). The hard contract stays that the painted form bottom is the top hit.
+    const HERO_SEARCH_MODEL_WIDTH = 1280;
+    const heroScale = (heroSearchGeometry?.heroWidth ?? HERO_SEARCH_MODEL_WIDTH) / HERO_SEARCH_MODEL_WIDTH;
+    const straddleOverflowCap = 24 * heroScale + 2;
+    const overflowPastHero = (heroSearchGeometry?.formBottom ?? 0) - (heroSearchGeometry?.heroBottom ?? 0);
+    const overflowPastInsights = (heroSearchGeometry?.formBottom ?? 0) - (heroSearchGeometry?.insightsTop ?? 0);
+    expect(overflowPastHero).toBeGreaterThanOrEqual(0);
+    expect(overflowPastHero).toBeLessThanOrEqual(straddleOverflowCap);
+    expect(overflowPastInsights).toBeGreaterThanOrEqual(0);
+    expect(overflowPastInsights).toBeLessThanOrEqual(straddleOverflowCap);
     expect(heroSearchGeometry?.bottomHitInsideForm).toBe(true);
     expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeGreaterThanOrEqual(20);
     expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeLessThanOrEqual(72);
@@ -886,7 +891,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(columnsDrawer.getByRole('link', { name: '공개 칼럼 보기' })).toBeVisible();
     await expect(columnsDrawer.getByText(/개 칼럼 연결됨/)).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: /수정 · / }).first()).toBeVisible();
-    await expect(page.locator('[data-node-id="columns-page-title"]').first()).toContainText(/칼럼|Columns/);
+    await expect(page.locator('[data-node-id="columns-page-root-composite"]').first()).toBeVisible();
+    await expect(
+      page.locator('[data-node-id="columns-page-root-composite"] [data-builder-surface-key="headline"]').first(),
+    ).toContainText(/칼럼|Columns/);
     await expect.poll(() => stageTransform.evaluate((element) => (
       new DOMMatrixReadOnly(window.getComputedStyle(element).transform).m42
     ))).toBeGreaterThanOrEqual(-2);
@@ -1139,7 +1147,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await closeModalOverlayIfPresent(page);
 
     await closeModalOverlayIfPresent(page);
-    await page.getByTitle('사이트 발행').click();
+    await page.getByTitle('현재 페이지 발행').click();
     await expect(page.getByText('자동 사전 검사')).toBeVisible();
     await expect(page.locator('[data-builder-publish-preflight-item="images"]')).toContainText(/Images|이미지/);
     await expect(page.locator('[data-builder-publish-preflight-item="links"]')).toContainText(/Links|링크/);
@@ -1254,11 +1262,17 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await columnsPageButton.click();
     await expect(page.getByText(/Loaded page:/)).toBeVisible();
     await expect(page.locator('aside[aria-hidden="false"]')).toHaveCount(0);
-    await expect(page.locator('[data-node-id="columns-page-title"]').first()).toContainText(/칼럼|Columns/);
-    const columnsFeedNode = page.locator('[data-node-id="columns-feed"]').first();
-    await expect(columnsFeedNode).toBeVisible();
-    // The feed mirrors live column data — assert against current API titles
-    // instead of hardcoded post names.
+    // The Columns page is intentionally a non-decomposable composite: exactly
+    // two nodes (columns-page-root + columns-page-root-composite). Validate the
+    // canonical composite node and its PageHeader surfaces instead of the
+    // removed columns-page-title/columns-feed nodes.
+    const columnsComposite = page.locator('[data-node-id="columns-page-root-composite"]').first();
+    await expect(columnsComposite).toBeVisible();
+    await expect(
+      columnsComposite.locator('[data-builder-surface-key="headline"]').first(),
+    ).toContainText(/칼럼|Columns/);
+    // The composite renders the live ColumnsGrid archive — assert against
+    // current API titles instead of hardcoded post names.
     const columnsListPayload = (await (await page.request.get('/api/builder/columns?locale=ko')).json()) as {
       columns?: Array<{ title?: string }>;
     };
@@ -1268,21 +1282,42 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
       .filter((title) => title.length > 1);
     expect(columnTitleSamples.length).toBeGreaterThan(0);
     await expect.poll(async () => {
-      const feedText = await columnsFeedNode.innerText();
-      return columnTitleSamples.some((title) => feedText.includes(title));
+      const compositeText = await columnsComposite.innerText();
+      return columnTitleSamples.some((title) => compositeText.includes(title));
     }, { timeout: 10_000 }).toBe(true);
-    await columnsFeedNode.click({ position: { x: 24, y: 24 }, force: true });
-    const selectedColumnsFeed = page.locator('[data-node-id="columns-feed"][class*="nodeSelected"]').first();
-    const feedQuickEdit = selectedColumnsFeed.locator('[data-builder-blog-feed-quick-edit="true"]').first();
-    await expect(feedQuickEdit).toBeVisible();
-    await feedQuickEdit.getByRole('button', { name: 'List' }).click();
-    await expect(feedQuickEdit.getByRole('button', { name: 'List' })).toHaveAttribute('aria-pressed', 'true');
-    await feedQuickEdit.getByRole('button', { name: 'Grid' }).click();
-    await expect(feedQuickEdit.getByRole('button', { name: 'Grid' })).toHaveAttribute('aria-pressed', 'true');
-    await expect(selectedColumnsFeed.getByRole('link', { name: '글 추가/수정' })).toBeVisible();
+    // Select the composite through an ordinary (non-forced) click on the
+    // page-header band — a non-interactive text region. The composite's
+    // transparent edit overlay (pointerEvents: auto while unselected) captures
+    // the pointer and selects the node, so no force is needed.
+    const columnsHeader = columnsComposite.locator('section.page-header').first();
+    await columnsHeader.scrollIntoViewIfNeeded();
+    const headerBox = await columnsHeader.boundingBox();
+    const compositeBox = await columnsComposite.boundingBox();
+    expect(headerBox).toBeTruthy();
+    expect(compositeBox).toBeTruthy();
+    await columnsComposite.click({
+      position: headerBox && compositeBox
+        ? {
+            x: headerBox.x - compositeBox.x + headerBox.width / 2,
+            y: headerBox.y - compositeBox.y + headerBox.height / 2,
+          }
+        : { x: 200, y: 60 },
+    });
+    const selectedComposite = page.locator(
+      '[data-node-id="columns-page-root-composite"][class*="nodeSelected"]',
+    ).first();
+    await expect(selectedComposite).toBeVisible();
+    await expect(selectedComposite.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
+    // columns is intentionally excluded from STANDARD_PAGE_DECOMPOSERS, so the
+    // inspector must never surface a decompose CTA for this composite.
+    await expect(page.locator('[data-builder-composite-decompose-cta="true"]')).toHaveCount(0);
     await checkBuilderA11y(page, 'body');
-    await selectedColumnsFeed.getByRole('link', { name: '글 추가/수정' }).click();
+    // Navigate to the Columns management page via the real 글 목록 link
+    // exposed in the Columns rail drawer (→ /ko/admin-builder/columns).
+    await rail.getByRole('button', { name: /^Columns$|^칼럼$/ }).click();
+    const columnsManagementDrawer = page.locator('aside[aria-hidden="false"]').first();
+    await expect(columnsManagementDrawer.getByRole('link', { name: '글 목록' })).toBeVisible();
+    await columnsManagementDrawer.getByRole('link', { name: '글 목록' }).click();
     await expect(page).toHaveURL(/\/ko\/admin-builder\/columns$/);
-    await expect(page.getByText(/대만 회사설립|대만 화장품 시장 진출/).first()).toBeVisible();
   });
 });

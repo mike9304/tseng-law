@@ -64,4 +64,10 @@ describe('builder site header responsive contract', () => {
     expect(customGuides).toContain("const GUIDE_OVERLAY_Z_INDEX = 45010;");
     expect(customGuides).toContain("zIndex: GUIDE_OVERLAY_Z_INDEX");
   });
+
+  test('keeps ruler tick labels from intercepting canvas pointer events', () => {
+    const css = read('src/components/builder/canvas/SandboxPage.module.css');
+
+    expect(css).toContain(".rulerMark {\n  position: absolute;\n  top: 4px;\n  font-size: 10px;\n  color: #64748b;\n  transform: translateX(-50%);\n  pointer-events: none;\n}");
+  });
 });

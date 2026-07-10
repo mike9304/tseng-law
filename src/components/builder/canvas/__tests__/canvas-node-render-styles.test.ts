@@ -256,3 +256,77 @@ describe('buildCanvasNodeRenderStyles — section overflow/stacking parity', () 
     expect(nodeStyle.height).toBe('56px');
   });
 });
+
+// Regression contract for stacked cross-fade slides (e.g. home-hero-media-image
+// is the only opaque hero image; -2/-3 carry style.opacity = 0). A transparent
+// wrapper with pointerEvents:auto would sit above the visible slide and intercept
+// the user's click, so Playwright (and a real user) cannot reach the visible
+// sibling beneath it. The contract: an unselected zero-opacity node lets clicks
+// pass through; once selected via the Layers panel it keeps pointer events so its
+// resize/move chrome remains usable; a fully visible node is unaffected.
+describe('buildCanvasNodeRenderStyles — transparent node pointer pass-through', () => {
+  function nodeWithOpacity(opacity: number): BuilderCanvasNode {
+    return compositeNode('home-hero-media-image-3', {
+      style: { ...createDefaultCanvasNodeStyle(), opacity },
+    });
+  }
+
+  it('an unselected zero-opacity node does not intercept clicks on the visible sibling beneath it', () => {
+    const invisible = nodeWithOpacity(0);
+    const { nodeStyle } = buildStyles(invisible, {
+      isTopLevelFlowSection: false,
+      selected: false,
+    });
+
+    expect(nodeStyle.pointerEvents).toBe('none');
+  });
+
+  it('a selected zero-opacity node keeps pointer events so its selection chrome stays usable', () => {
+    const invisible = nodeWithOpacity(0);
+    const { nodeStyle } = buildStyles(invisible, {
+      isTopLevelFlowSection: false,
+      selected: true,
+    });
+
+    expect(nodeStyle.pointerEvents).toBe('auto');
+  });
+
+  it('a fully visible node remains interactive', () => {
+    const visible = nodeWithOpacity(100);
+    const { nodeStyle } = buildStyles(visible, {
+      isTopLevelFlowSection: false,
+      selected: false,
+    });
+
+    expect(nodeStyle.pointerEvents).toBe('auto');
+  });
+});
+
+// Regression contract for locked decorative nodes (e.g. home-hero-overlay is
+// locked: true in the seed). A locked wrapper has no intended direct canvas
+// interaction — the CanvasNode event handlers already refuse editing locked
+// nodes — so a pointer-capturing wrapper only blocks clicks meant for the
+// visible siblings beneath it. Users find/unlock locked nodes via the Layers
+// panel, not by clicking the canvas wrapper. The contract: a locked visible
+// node never intercepts pointers; an unlocked visible node stays interactive.
+describe('buildCanvasNodeRenderStyles — locked node pointer pass-through', () => {
+  it('a locked visible node does not intercept clicks on the sibling beneath it', () => {
+    const locked = compositeNode('home-hero-overlay', { locked: true });
+    const { nodeStyle } = buildStyles(locked, {
+      isTopLevelFlowSection: false,
+      selected: false,
+    });
+
+    expect(nodeStyle.pointerEvents).toBe('none');
+  });
+
+  it('an unlocked visible node remains interactive', () => {
+    const unlocked = compositeNode('home-hero-overlay', { locked: false });
+    const { nodeStyle } = buildStyles(unlocked, {
+      isTopLevelFlowSection: false,
+      selected: false,
+    });
+
+    expect(nodeStyle.pointerEvents).toBe('auto');
+  });
+});

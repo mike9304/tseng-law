@@ -9,6 +9,7 @@ import {
 import { normalizeLocale } from '@/lib/locales';
 import { normalizeCanvasDocument, normalizeCanvasDocumentForSave } from '@/lib/builder/canvas/types';
 import { repairHomeCanvasLocale } from '@/lib/builder/canvas/home-locale-repair';
+import { upgradeHomeHeroSearchForm } from '@/lib/builder/canvas/home-hero-search-migration';
 import { emitEditorPageSaveHook } from '@/lib/builder/apps/lifecycle-emitters';
 import type { PageCanvasRecord } from '@/lib/builder/site/types';
 import {
@@ -66,9 +67,16 @@ function isHomeCanvasDocument(document: BuilderCanvasDocument): boolean {
   return document.nodes.some((node) => node.id === 'home-hero-root');
 }
 
+// Applies the locale repair then the shared hero-search render migration for
+// decomposed home documents. The hero-search migration runs read-only
+// (stampMetadata: false): the GET response must reflect the corrected initial
+// geometry without mutating record-level `updatedAt`/`updatedBy`, so a stored
+// `updatedBy=admin` draft is never implicitly rewritten (data-loss safety —
+// `canPersistHomeDraftRenderMigration` only governs persistence, not reads).
 function prepareDraftDocument(document: BuilderCanvasDocument, locale: ReturnType<typeof normalizeLocale>): BuilderCanvasDocument {
   if (isHomeCanvasDocument(document)) {
-    return repairHomeCanvasLocale({ ...document, locale }, locale);
+    const repaired = repairHomeCanvasLocale({ ...document, locale }, locale);
+    return upgradeHomeHeroSearchForm(repaired, locale, { stampMetadata: false });
   }
   return normalizeCanvasDocument(document, locale);
 }

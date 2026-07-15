@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
   createSection,
@@ -51,6 +51,16 @@ describe('/api/builder/site/section-library', () => {
     vi.mocked(guardMutation).mockResolvedValue({
       user: { id: 'u1', email: 'a@b' },
     } as unknown as Awaited<ReturnType<typeof guardMutation>>);
+    // generateSiteDraft (used below as test fixture setup, not part of the
+    // route under test) needs the deterministic local-demo stub path since
+    // no live AI provider is configured in the test environment. See
+    // src/lib/builder/ai-generator/__tests__/orchestrator.test.ts for the
+    // same pattern.
+    vi.stubEnv('AI_BUILDER_ALLOW_LOCAL_DEMO', 'true');
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
   });
 
   it('returns the saved-section list with safe thumbnails on GET', async () => {

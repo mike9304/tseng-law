@@ -922,7 +922,9 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           links: [
             { label: '대만 변호사', href: '/ko/taiwan-lawyer' },
             { label: '대만 회사설립', href: '/ko/taiwan-company-setup-lawyer' },
-            { label: '대만 소송', href: '/ko/taiwan-litigation-lawyer' }
+            { label: '대만 소송', href: '/ko/taiwan-litigation-lawyer' },
+            { label: '대만 회사설립 종합 가이드', href: '/ko/guides/taiwan-company-setup' },
+            { label: '한국어 가능한 대만 변호사', href: '/ko/korean-lawyer-in-taiwan' }
           ]
         }
       ],
@@ -1649,7 +1651,9 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           links: [
             { label: '台灣律師', href: '/zh-hant/taiwan-lawyer' },
             { label: '台灣公司設立', href: '/zh-hant/taiwan-company-setup-lawyer' },
-            { label: '台灣訴訟', href: '/zh-hant/taiwan-litigation-lawyer' }
+            { label: '台灣訴訟', href: '/zh-hant/taiwan-litigation-lawyer' },
+            { label: '台灣公司設立完整指南', href: '/zh-hant/guides/taiwan-company-setup' },
+            { label: '會說韓文的台灣律師', href: '/zh-hant/korean-lawyer-in-taiwan' }
           ]
         }
       ],
@@ -2330,7 +2334,9 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           links: [
             { label: 'Taiwan Lawyer', href: '/en/taiwan-lawyer' },
             { label: 'Taiwan Company Setup', href: '/en/taiwan-company-setup-lawyer' },
-            { label: 'Taiwan Litigation', href: '/en/taiwan-litigation-lawyer' }
+            { label: 'Taiwan Litigation', href: '/en/taiwan-litigation-lawyer' },
+            { label: 'Taiwan Company Setup Guide', href: '/en/guides/taiwan-company-setup' },
+            { label: 'Korean-Speaking Taiwan Lawyer', href: '/en/korean-lawyer-in-taiwan' }
           ]
         }
       ],

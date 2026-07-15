@@ -107,6 +107,39 @@ describe('builder CRM integrations API', () => {
     });
   });
 
+  it('accepts Mailchimp as a real integration kind', async () => {
+    const response = await POST(request('POST', 'locale=en', {
+      kind: 'mailchimp',
+      enabled: true,
+    }));
+    const data = await response.json();
+
+    expect(response.status).toBe(201);
+    expect(data).toMatchObject({
+      ok: true,
+      integration: {
+        id: 'int_1',
+        kind: 'mailchimp',
+        enabled: true,
+      },
+    });
+  });
+
+  it('rejects the legacy Mailchimp storage label on create', async () => {
+    const response = await POST(request('POST', 'locale=en', {
+      kind: 'mailchimp-stub',
+      enabled: true,
+    }));
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({
+      ok: false,
+      errorCode: 'invalid_integration_payload',
+    });
+    expect(mutateIntegrationsMock).not.toHaveBeenCalled();
+  });
+
   it('returns localized create failures without leaking exception details', async () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     mutateIntegrationsMock.mockRejectedValueOnce(new Error('integration create secret leaked'));

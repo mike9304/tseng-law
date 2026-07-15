@@ -735,6 +735,7 @@ export default function BookingFlowSteps({
               {payment.status === 'creating' ? <p className={styles.muted}>{copy.labels.paymentLoading}</p> : null}
               {payment.status === 'ready' && payment.stub ? (
                 <div className={styles.paymentElementMock} data-booking-payment-element="stub">
+                  <span role="status" data-booking-demo-disclosure="payment" aria-label="DEMO DATA">DEMO DATA · {locale === 'ko' ? '개발용 결제 화면이며 실제 결제가 처리되지 않습니다.' : locale === 'zh-hant' ? '開發用付款畫面，不會處理真實付款。' : 'Development payment UI; no real charge is processed.'}</span>
                   <strong>{copy.labels.paymentStubTitle}</strong>
                   <span>{copy.labels.paymentStubSubtitle}</span>
                   <button className={styles.button} type="button" onClick={confirmPayment}>{copy.labels.paymentStubComplete}</button>

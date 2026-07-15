@@ -17,6 +17,10 @@ import {
 } from '@/lib/builder/ai-generator/intake-versions-store';
 import type { GeneratedSiteDraft } from '@/lib/builder/ai-generator/orchestrator';
 import type { SiteSpec } from '@/lib/builder/ai-generator/site-spec';
+import {
+  isAiContentGenerationError,
+  isProviderGeneratedSiteContent,
+} from '@/lib/builder/ai-generator/content-generator';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -60,6 +64,25 @@ async function recordGeneratedDraftVersion(input: RecordGeneratedDraftInput): Pr
   }
 }
 
+function generationFailureResponse(error: unknown): NextResponse | null {
+  if (!isAiContentGenerationError(error)) return null;
+  return NextResponse.json({
+    ok: false,
+    error: error.code,
+    message: error.message,
+  }, { status: error.httpStatus });
+}
+
+function localDemoFailureResponse(): NextResponse {
+  return NextResponse.json({
+    ok: false,
+    error: 'ai_content_local_demo_only',
+    message: 'Local demo content cannot be used as generated site content.',
+    source: 'local-demo',
+    stub: true,
+  }, { status: 503 });
+}
+
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
@@ -81,7 +104,7 @@ export async function POST(request: NextRequest) {
   }
 
   const cached = readDraftCache(spec, promptVersion);
-  if (cached) {
+  if (cached && isProviderGeneratedSiteContent(cached.content)) {
     const versionResult = await recordGeneratedDraftVersion({
       request,
       createdBy: auth.username,
@@ -91,7 +114,17 @@ export async function POST(request: NextRequest) {
     });
     return NextResponse.json({ ok: true, cached: true, ...versionResult, draft: cached });
   }
-  const draft = await generateSiteDraft(spec, { promptVersion });
+  let draft: GeneratedSiteDraft;
+  try {
+    draft = await generateSiteDraft(spec, { promptVersion });
+  } catch (error) {
+    const failure = generationFailureResponse(error);
+    if (failure) return failure;
+    throw error;
+  }
+  if (!isProviderGeneratedSiteContent(draft.content)) {
+    return localDemoFailureResponse();
+  }
   writeDraftCache(spec, draft);
   const versionResult = await recordGeneratedDraftVersion({
     request,

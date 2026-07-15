@@ -5,7 +5,10 @@ import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persiste
 import { DEFAULT_TRANSLATION_SOURCE_LOCALE } from '@/lib/builder/translations/sync';
 import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
 import { normalizeHeaderFooterMobileConfig, normalizeMobileBottomBar } from '@/lib/builder/site/mobile-schema';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  resolveBuilderSiteIdForMutationFromRequest,
+  resolveBuilderSiteIdFromRequest,
+} from '@/lib/builder/site/admin-routing';
 import { normalizeLocale } from '@/lib/locales';
 import {
   mergeHeaderFooterMobileConfig,
@@ -53,7 +56,9 @@ export async function PUT(request: NextRequest) {
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   try {
     const payload = settingsPayloadSchema.parse(await request.json());
     const site = await readSiteDocument(siteId, locale);

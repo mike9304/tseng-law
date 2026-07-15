@@ -15,6 +15,7 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 import {
   normalizeCollabId,
   readJsonObject,
+  resolveCollabMutationSiteIdFromRequest,
   resolveCollabSiteIdFromRequest,
 } from '../request-parsing';
 
@@ -80,7 +81,9 @@ export async function POST(request: NextRequest) {
     return badRequest(locale);
   }
 
-  const siteId = resolveCollabSiteIdFromRequest(request, body.siteId);
+  const siteResolution = resolveCollabMutationSiteIdFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   const pageId = normalizeCollabId(body.pageId);
   const nodeId = normalizeCollabId(body.nodeId);
   if (!pageId) return badRequest(locale);

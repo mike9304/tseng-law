@@ -13,7 +13,7 @@ interface Props {
 const KIND_COLOR: Record<CrmIntegrationKind, string> = {
   'slack-webhook': '#4a154b',
   'generic-webhook': '#0f172a',
-  'mailchimp-stub': '#ffd43b',
+  mailchimp: '#ffd43b',
 };
 
 interface DraftState {
@@ -28,7 +28,7 @@ const INTEGRATIONS_COPY = {
     kindLabel: {
       'slack-webhook': 'Slack',
       'generic-webhook': '일반 Webhook',
-      'mailchimp-stub': 'Mailchimp (스텁)',
+      mailchimp: 'Mailchimp',
     },
     addIntegration: '+ 연동 추가',
     save: '저장',
@@ -52,7 +52,7 @@ const INTEGRATIONS_COPY = {
     kindLabel: {
       'slack-webhook': 'Slack',
       'generic-webhook': '一般 Webhook',
-      'mailchimp-stub': 'Mailchimp（stub）',
+      mailchimp: 'Mailchimp',
     },
     addIntegration: '+ 新增整合',
     save: '儲存',
@@ -76,7 +76,7 @@ const INTEGRATIONS_COPY = {
     kindLabel: {
       'slack-webhook': 'Slack',
       'generic-webhook': 'Generic webhook',
-      'mailchimp-stub': 'Mailchimp (stub)',
+      mailchimp: 'Mailchimp',
     },
     addIntegration: '+ Add integration',
     save: 'Save',
@@ -120,7 +120,7 @@ export default function IntegrationsAdmin({ initialIntegrations, locale }: Props
   const [error, setError] = useState('');
 
   async function createOne() {
-    if (draft.kind !== 'mailchimp-stub' && !draft.webhookUrl.trim()) {
+    if (draft.kind !== 'mailchimp' && !draft.webhookUrl.trim()) {
       setError(copy.webhookRequired);
       return;
     }
@@ -228,7 +228,7 @@ export default function IntegrationsAdmin({ initialIntegrations, locale }: Props
               </option>
             ))}
           </select>
-          {draft.kind !== 'mailchimp-stub' ? (
+          {draft.kind !== 'mailchimp' ? (
             <input
               type="url"
               placeholder="https://hooks.slack.com/services/..."

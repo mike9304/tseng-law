@@ -9,14 +9,19 @@ import {
 import { normalizeLocale } from '@/lib/locales';
 import { normalizeCanvasDocument, normalizeCanvasDocumentForSave } from '@/lib/builder/canvas/types';
 import { repairHomeCanvasLocale } from '@/lib/builder/canvas/home-locale-repair';
+import { upgradeHomeEditorLayoutParity } from '@/lib/builder/canvas/home-editor-layout-parity';
 import { upgradeHomeHeroSearchForm } from '@/lib/builder/canvas/home-hero-search-migration';
 import { emitEditorPageSaveHook } from '@/lib/builder/apps/lifecycle-emitters';
 import type { PageCanvasRecord } from '@/lib/builder/site/types';
+import { PageCanvasCasConflictError } from '@/lib/builder/site/page-canvas-versioned-store';
 import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
 } from '@/lib/builder/site/site-api-copy';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  resolveBuilderSiteIdForMutationFromRequest,
+  resolveBuilderSiteIdFromRequest,
+} from '@/lib/builder/site/admin-routing';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 
 export const runtime = 'nodejs';
@@ -53,6 +58,42 @@ function draftWriteErrorCode(message: string): BuilderSiteApiErrorCode {
     : 'draft_conflict';
 }
 
+function sanitizePhysicalConflictCurrent(
+  value: unknown,
+): { revision: number; savedAt: string } | null {
+  if (!value || typeof value !== 'object') return null;
+
+  let revision: unknown;
+  let savedAt: unknown;
+  try {
+    revision = Reflect.get(value, 'revision');
+    savedAt = Reflect.get(value, 'savedAt');
+  } catch {
+    return null;
+  }
+
+  if (typeof savedAt !== 'string') return null;
+
+  let canonicalSavedAt: string;
+  try {
+    const parsedSavedAt = Date.parse(savedAt);
+    if (!Number.isFinite(parsedSavedAt)) return null;
+    canonicalSavedAt = new Date(parsedSavedAt).toISOString();
+  } catch {
+    return null;
+  }
+
+  if (
+    !Number.isSafeInteger(revision)
+    || (revision as number) < 0
+    || savedAt !== canonicalSavedAt
+  ) {
+    return null;
+  }
+
+  return { revision: revision as number, savedAt };
+}
+
 class DraftWriteError extends Error {
   constructor(
     readonly status: 409 | 428,
@@ -76,7 +117,8 @@ function isHomeCanvasDocument(document: BuilderCanvasDocument): boolean {
 function prepareDraftDocument(document: BuilderCanvasDocument, locale: ReturnType<typeof normalizeLocale>): BuilderCanvasDocument {
   if (isHomeCanvasDocument(document)) {
     const repaired = repairHomeCanvasLocale({ ...document, locale }, locale);
-    return upgradeHomeHeroSearchForm(repaired, locale, { stampMetadata: false });
+    const layoutRepaired = upgradeHomeEditorLayoutParity(repaired, locale, { stampMetadata: false });
+    return upgradeHomeHeroSearchForm(layoutRepaired, locale, { stampMetadata: false });
   }
   return normalizeCanvasDocument(document, locale);
 }
@@ -156,8 +198,9 @@ export async function PUT(
   }
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
-  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   let mismatch: NextResponse | null = null;
   try {
     mismatch = await localeMismatchResponse(params.pageId, locale, siteId);
@@ -216,6 +259,11 @@ export async function PUT(
     if (error instanceof DraftWriteError) {
       return errorResponse(locale, draftWriteErrorCode(error.message), error.status, {
         current: error.current,
+      });
+    }
+    if (error instanceof PageCanvasCasConflictError) {
+      return errorResponse(locale, 'draft_conflict', 409, {
+        current: sanitizePhysicalConflictCurrent(error.current),
       });
     }
     return errorResponse(locale, 'draft_save_failed', 500);

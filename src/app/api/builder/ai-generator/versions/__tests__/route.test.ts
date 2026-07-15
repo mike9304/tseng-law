@@ -10,6 +10,9 @@ vi.mock('@/lib/builder/security/guard', () => ({
 }));
 
 vi.mock('@/lib/builder/ai-generator/intake-versions-store', () => ({
+  AI_INTAKE_RESTORE_ERROR_CODE: 'intake_version_untrusted',
+  AI_INTAKE_RESTORE_BLOCKED_MESSAGE:
+    '출처가 검증된 OpenAI 생성 결과만 복원할 수 있습니다. 이 기록은 미리보기/이력 용도입니다.',
   appendAiIntakeVersion: vi.fn(),
   diffAiIntakeVersions: vi.fn(() => ({
     isEmpty: false,
@@ -17,6 +20,30 @@ vi.mock('@/lib/builder/ai-generator/intake-versions-store', () => ({
     draftChanges: [{ field: 'pageCount', before: 1, after: 2 }],
   })),
   getAiIntakeVersion: vi.fn(),
+  isIntakeVersionRestorable: vi.fn((record: {
+    siteId?: string;
+    createdAt?: string;
+    promptVersion?: string;
+    spec?: unknown;
+    draft?: Record<string, unknown>;
+  }, expectedSiteId?: string) => {
+    const draft = record?.draft;
+    const content = draft?.content as Record<string, unknown> | undefined;
+    const plan = draft?.plan as Record<string, unknown> | undefined;
+    const blueprint = draft?.blueprint as Record<string, unknown> | undefined;
+    return Boolean(
+      record.siteId === expectedSiteId
+      && content?.source === 'openai'
+      && content.stub === false
+      && draft?.palette
+      && blueprint?.palettes
+      && plan?.visualBrief
+      && plan.brandBrief
+      && record.promptVersion === draft.promptVersion
+      && !Number.isNaN(new Date(record.createdAt ?? '').getTime())
+      && !Number.isNaN(new Date(String(draft.generatedAt ?? '')).getTime()),
+    );
+  }),
   listAiIntakeVersions: vi.fn(),
   normalizeAiIntakeSiteId: vi.fn((siteId?: string) => siteId ?? 'tseng-law-main-site'),
 }));
@@ -57,6 +84,8 @@ function draft(companyName: string): GeneratedSiteDraft {
       hero: { sectionId: 'hero', headline: `${companyName} headline`, body: 'Body' },
       sections: [],
       metaDescription: 'Meta',
+      source: 'openai' as const,
+      stub: false,
     },
     plan: {
       sitemap: [{ title: 'Home', slug: '/', purpose: 'Home', sections: ['hero'] }],
@@ -102,6 +131,9 @@ describe('/api/builder/ai-generator/versions', () => {
         pageCount: 1,
         sectionCount: 0,
         heroHeadline: 'New Law headline',
+        provenance: 'openai-verified',
+        restorable: true,
+        provenanceWarning: 'OpenAI 생성 결과로 신뢰할 수 있습니다.',
       },
     ]);
 
@@ -123,7 +155,7 @@ describe('/api/builder/ai-generator/versions', () => {
       siteId: 'builder-alpha',
       createdAt: '2026-07-03T00:00:00.000Z',
       createdBy: 'admin',
-      promptVersion: 'v1',
+      promptVersion: 'ai-site-builder-2026-05-21-af',
       spec: spec('Old Law'),
       draft: draft('Old Law'),
     };
@@ -170,5 +202,131 @@ describe('/api/builder/ai-generator/versions', () => {
     expect(store.getAiIntakeVersion).toHaveBeenNthCalledWith(3, 'builder-alpha', 'ver_2');
     expect(store.getAiIntakeVersion).toHaveBeenNthCalledWith(4, 'builder-alpha', 'ver_1');
     expect(guardMutation).toHaveBeenCalledWith(expect.any(NextRequest), { permission: 'edit-pages' });
+  });
+
+  it('fails closed for a legacy restore record lacking provenance and leaks no draft', async () => {
+    const store = await import('@/lib/builder/ai-generator/intake-versions-store');
+    const legacyDraft = draft('Legacy Law') as GeneratedSiteDraft;
+    delete (legacyDraft.content as { source?: unknown }).source;
+    delete (legacyDraft.content as { stub?: unknown }).stub;
+    const legacyRecord = {
+      id: 'ver_legacy',
+      siteId: 'builder-alpha',
+      createdAt: '2026-07-03T00:00:00.000Z',
+      createdBy: 'admin',
+      promptVersion: 'v0',
+      spec: spec('Legacy Law'),
+      draft: legacyDraft,
+    };
+    vi.mocked(store.getAiIntakeVersion).mockResolvedValueOnce(legacyRecord);
+
+    const restoreRoute = await import('../[id]/restore/route');
+    const response = await restoreRoute.POST(
+      request('https://law.example.test/api/builder/ai-generator/versions/ver_legacy/restore?siteId=builder-alpha', 'POST'),
+      { params: { id: 'ver_legacy' } },
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(422);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'intake_version_untrusted',
+      message: '출처가 검증된 OpenAI 생성 결과만 복원할 수 있습니다. 이 기록은 미리보기/이력 용도입니다.',
+    });
+    expect(payload.draft).toBeUndefined();
+    expect(payload.spec).toBeUndefined();
+    expect(payload.version).toBeUndefined();
+    const serialized = JSON.stringify(payload);
+    expect(serialized).not.toContain('openai');
+    expect(serialized).not.toContain('Legacy Law');
+    expect(serialized).not.toContain('secret');
+    expect(store.isIntakeVersionRestorable).toHaveBeenCalledWith(legacyRecord, 'builder-alpha');
+  });
+
+  it('fails closed for a local-demo / stub restore record and leaks no draft', async () => {
+    const store = await import('@/lib/builder/ai-generator/intake-versions-store');
+    const demoDraft = draft('Demo Law') as GeneratedSiteDraft;
+    (demoDraft.content as { source?: unknown }).source = 'local-demo';
+    (demoDraft.content as { stub?: unknown }).stub = true;
+    const demoRecord = {
+      id: 'ver_demo',
+      siteId: 'builder-alpha',
+      createdAt: '2026-07-03T00:00:00.000Z',
+      createdBy: 'admin',
+      promptVersion: 'v0',
+      spec: spec('Demo Law'),
+      draft: demoDraft,
+    };
+    vi.mocked(store.getAiIntakeVersion).mockResolvedValueOnce(demoRecord);
+
+    const restoreRoute = await import('../[id]/restore/route');
+    const response = await restoreRoute.POST(
+      request('https://law.example.test/api/builder/ai-generator/versions/ver_demo/restore?siteId=builder-alpha', 'POST'),
+      { params: { id: 'ver_demo' } },
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(422);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'intake_version_untrusted',
+      message: '출처가 검증된 OpenAI 생성 결과만 복원할 수 있습니다. 이 기록은 미리보기/이력 용도입니다.',
+    });
+    expect(payload.draft).toBeUndefined();
+    expect(payload.spec).toBeUndefined();
+    expect(payload.version).toBeUndefined();
+    const serialized = JSON.stringify(payload);
+    expect(serialized).not.toContain('openai');
+    expect(serialized).not.toContain('local-demo');
+    expect(serialized).not.toContain('Demo Law');
+    expect(serialized).not.toContain('secret');
+  });
+
+  it.each([
+    ['missing visual brief', (record: Record<string, unknown>) => {
+      const draftValue = record.draft as Record<string, unknown>;
+      delete ((draftValue.plan as Record<string, unknown>)).visualBrief;
+    }],
+    ['invalid record date', (record: Record<string, unknown>) => {
+      record.createdAt = 'not-a-date';
+    }],
+    ['record/draft version mismatch', (record: Record<string, unknown>) => {
+      record.promptVersion = 'spoofed-version';
+    }],
+    ['cross-site ledger record', (record: Record<string, unknown>) => {
+      record.siteId = 'builder-other';
+    }],
+    ['source/stub spoof types', (record: Record<string, unknown>) => {
+      const draftValue = record.draft as Record<string, unknown>;
+      const content = draftValue.content as Record<string, unknown>;
+      content.source = ['openai'];
+      content.stub = 0;
+    }],
+  ])('returns 422 without draft data for malformed self-labelled record: %s', async (_label, mutate) => {
+    const store = await import('@/lib/builder/ai-generator/intake-versions-store');
+    const record = JSON.parse(JSON.stringify({
+      id: 'ver_adversarial',
+      siteId: 'builder-alpha',
+      createdAt: '2026-07-03T00:00:01.000Z',
+      createdBy: 'admin',
+      promptVersion: 'ai-site-builder-2026-05-21-af',
+      spec: spec('Adversarial Law'),
+      draft: draft('Adversarial Law'),
+    })) as Record<string, unknown>;
+    mutate(record);
+    vi.mocked(store.getAiIntakeVersion).mockResolvedValueOnce(record as never);
+
+    const restoreRoute = await import('../[id]/restore/route');
+    const response = await restoreRoute.POST(
+      request('https://law.example.test/api/builder/ai-generator/versions/ver_adversarial/restore?siteId=builder-alpha', 'POST'),
+      { params: { id: 'ver_adversarial' } },
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(422);
+    expect(payload.error).toBe('intake_version_untrusted');
+    expect(payload).not.toHaveProperty('draft');
+    expect(payload).not.toHaveProperty('spec');
+    expect(payload).not.toHaveProperty('version');
   });
 });

@@ -17,6 +17,7 @@ beforeEach(async () => {
 afterEach(async () => {
   process.chdir(ORIGINAL_CWD);
   await fs.rm(tmpRoot, { recursive: true, force: true });
+  vi.unstubAllEnvs();
   vi.restoreAllMocks();
   delete process.env.CRM_WEBHOOK_SECRET;
 });
@@ -57,7 +58,7 @@ describe('CRM automation engine', () => {
     expect(reloaded?.tags.sort()).toEqual(['lead', 'nurture'].sort());
   });
 
-  it('send-email-stub appends to the outbox file', async () => {
+  it('simulate-email explicitly appends a non-production simulation to the outbox file', async () => {
     const { mutateAutomations, readOutbox } = await import('@/lib/builder/crm/automation-model');
     const { runAutomationsForEvent } = await import('@/lib/builder/crm/automation-engine');
     const { createContact } = await import('@/lib/builder/crm/contact-store');
@@ -69,7 +70,7 @@ describe('CRM automation engine', () => {
           id: 'email-1',
           name: 'Welcome email',
           trigger: { kind: 'contact-created' },
-          action: { kind: 'send-email-stub', templateId: 'welcome' },
+          action: { kind: 'simulate-email', templateId: 'welcome' },
           enabled: true,
           createdAt: new Date().toISOString(),
         },
@@ -97,7 +98,7 @@ describe('CRM automation engine', () => {
           id: 'vip-only',
           name: 'VIP notice',
           trigger: { kind: 'tag-added', matchTag: 'vip' },
-          action: { kind: 'send-email-stub', templateId: 'vip-welcome' },
+          action: { kind: 'simulate-email', templateId: 'vip-welcome' },
           enabled: true,
           createdAt: new Date().toISOString(),
         },
@@ -181,7 +182,7 @@ describe('CRM automation engine', () => {
           id: 'only-contact-us',
           name: 'Contact-us-only',
           trigger: { kind: 'form-submitted', matchFormName: 'contact-us' },
-          action: { kind: 'send-email-stub', templateId: 'thanks' },
+          action: { kind: 'simulate-email', templateId: 'thanks' },
           enabled: true,
           createdAt: new Date().toISOString(),
         },
@@ -215,7 +216,7 @@ describe('CRM automation engine', () => {
           id: 'off',
           name: 'Off',
           trigger: { kind: 'contact-created' },
-          action: { kind: 'send-email-stub', templateId: 'unused' },
+          action: { kind: 'simulate-email', templateId: 'unused' },
           enabled: false,
           createdAt: new Date().toISOString(),
         },
@@ -233,5 +234,85 @@ describe('CRM automation engine', () => {
     };
     await runAutomationsForEvent({ kind: 'contact-created', contact });
     expect(await readOutbox()).toHaveLength(0);
+  });
+
+  it('blocks email simulation in production regardless of legacy allow flags without outbox mutation or secret leakage', async () => {
+    const { mutateAutomations, readOutbox } = await import('@/lib/builder/crm/automation-model');
+    const {
+      CRM_EMAIL_SIMULATION_UNAVAILABLE,
+      runAutomationsForEvent,
+    } = await import('@/lib/builder/crm/automation-engine');
+
+    await mutateAutomations(() => ({
+      next: [{
+        id: 'production-email-simulation',
+        name: 'Must not deliver',
+        trigger: { kind: 'contact-created' },
+        action: { kind: 'simulate-email', templateId: 'private-template' },
+        enabled: true,
+        createdAt: new Date().toISOString(),
+      }],
+      result: null,
+    }));
+
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_CRM_EMAIL_STUB', '1');
+    vi.stubEnv('ALLOW_STUB_EMAILS', '1');
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const contact = {
+      id: 'ct_prod',
+      email: 'private-contact@example.com',
+      source: 'manual' as const,
+      tags: [],
+      createdAt: new Date().toISOString(),
+      lastActivityAt: new Date().toISOString(),
+    };
+
+    await runAutomationsForEvent({
+      kind: 'contact-created',
+      contact,
+      payload: { secret: 'must-not-appear-in-log-or-outbox' },
+    });
+
+    expect(await readOutbox()).toEqual([]);
+    await expect(fs.stat(path.join(tmpRoot, 'runtime-data', 'crm', 'outbox.json'))).rejects.toMatchObject({
+      code: 'ENOENT',
+    });
+    expect(consoleError).toHaveBeenCalledWith('[crm/automation] action unavailable', {
+      automationId: 'production-email-simulation',
+      actionKind: 'simulate-email',
+      errorCode: CRM_EMAIL_SIMULATION_UNAVAILABLE,
+    });
+    const logged = JSON.stringify(consoleError.mock.calls);
+    expect(logged).not.toContain('private-contact@example.com');
+    expect(logged).not.toContain('must-not-appear-in-log-or-outbox');
+    expect(logged).not.toContain('private-template');
+  });
+
+  it('normalizes legacy send-email-stub records on read and persists the honest kind on the next write', async () => {
+    const crmDir = path.join(tmpRoot, 'runtime-data', 'crm');
+    const automationsPath = path.join(crmDir, 'automations.json');
+    await fs.mkdir(crmDir, { recursive: true });
+    await fs.writeFile(automationsPath, JSON.stringify({
+      version: 1,
+      updatedAt: '2026-01-01T00:00:00.000Z',
+      automations: [{
+        id: 'legacy-email-stub',
+        name: 'Legacy simulation',
+        trigger: { kind: 'contact-created' },
+        action: { kind: 'send-email-stub', templateId: 'legacy-template' },
+        enabled: true,
+        createdAt: '2026-01-01T00:00:00.000Z',
+      }],
+    }), 'utf8');
+
+    const { mutateAutomations, readAutomations } = await import('@/lib/builder/crm/automation-model');
+    const normalized = await readAutomations();
+    expect(normalized[0].action).toEqual({ kind: 'simulate-email', templateId: 'legacy-template' });
+
+    await mutateAutomations((current) => ({ next: current, result: null }));
+    const persisted = await fs.readFile(automationsPath, 'utf8');
+    expect(persisted).toContain('simulate-email');
+    expect(persisted).not.toContain('send-email-stub');
   });
 });

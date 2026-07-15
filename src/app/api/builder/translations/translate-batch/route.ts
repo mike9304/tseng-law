@@ -46,6 +46,24 @@ function resolveRequestLocale(body: unknown): Locale {
   return 'ko';
 }
 
+function clientResults(
+  batch: Awaited<ReturnType<typeof translateBatchViaRouter>>,
+  locale: Locale,
+) {
+  return batch.results.map((result) => {
+    if (result.ok) return { key: result.key, ok: true, text: result.text };
+    const errorCode = result.reason === 'unconfigured'
+      ? 'translation_provider_unconfigured'
+      : 'translation_provider_failed';
+    return {
+      key: result.key,
+      ok: false,
+      error: getBuilderTranslationsApiErrorPayload(locale, errorCode).error,
+      errorCode,
+    };
+  });
+}
+
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
@@ -63,6 +81,9 @@ export async function POST(request: NextRequest) {
     const body = parsed.data;
     const sourceLocale = normalizeLocale(body.sourceLocale ?? 'ko');
     const targetLocale = normalizeLocale(body.targetLocale ?? 'en');
+    if (sourceLocale === targetLocale) {
+      return errorResponse(errorLocale, 'invalid_request', 400);
+    }
     const entries = body.entries.slice(0, 25);
     const batch = await translateBatchViaRouter({
       sourceLocale,
@@ -70,14 +91,19 @@ export async function POST(request: NextRequest) {
       preferProvider: body.provider,
       items: entries,
     });
-    const results = batch.results.map((result) => {
-      if (result.ok) return { key: result.key, ok: true, text: result.text };
-      return { key: result.key, ok: false, error: result.error ?? result.reason };
-    });
+    const results = clientResults(batch, errorLocale);
 
-    return NextResponse.json({ ok: true, results, summary: batch.summary });
-  } catch (error) {
-    console.error('[builder/translations/translate-batch] batch failed:', error);
+    const ok = batch.summary.failed === 0;
+    const allUnconfigured = batch.summary.succeeded === 0
+      && batch.results.length > 0
+      && batch.results.every((result) => !result.ok && result.reason === 'unconfigured');
+    const status = ok ? 200 : allUnconfigured ? 503 : 502;
+
+    return NextResponse.json({ ok, results, summary: batch.summary }, { status });
+  } catch {
+    console.error('[builder/translations/translate-batch] batch failed', {
+      code: 'translation_batch_failed',
+    });
     return errorResponse(resolveRequestLocale(rawBody), 'translation_batch_failed', 500);
   }
 }

@@ -28,6 +28,12 @@ function errorResponse(
   );
 }
 
+function logAutomationFailure(action: 'list' | 'create'): void {
+  console.error(`[builder/crm/automations] ${action} failed`, {
+    errorCode: action === 'list' ? 'automations_list_failed' : 'automation_create_failed',
+  });
+}
+
 export async function GET(request: NextRequest) {
   const auth = await guardMutation(request, { allowReadOnly: true, permission: 'view-contacts' });
   if (auth instanceof NextResponse) return auth;
@@ -35,8 +41,8 @@ export async function GET(request: NextRequest) {
   try {
     const automations = await readAutomations();
     return NextResponse.json({ ok: true, automations, total: automations.length });
-  } catch (error) {
-    console.error('[builder/crm/automations] list failed:', error);
+  } catch {
+    logAutomationFailure('list');
     return errorResponse(locale, 'automations_list_failed', 500);
   }
 }
@@ -72,8 +78,8 @@ export async function POST(request: NextRequest) {
       result: automation,
     }));
     return NextResponse.json({ ok: true, automation }, { status: 201 });
-  } catch (error) {
-    console.error('[builder/crm/automations] create failed:', error);
+  } catch {
+    logAutomationFailure('create');
     return errorResponse(locale, 'automation_create_failed', 500);
   }
 }

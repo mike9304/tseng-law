@@ -1,7 +1,7 @@
 /**
- * Outbound integration channels: Slack webhook, generic webhook, Mailchimp
- * stub. Single-file storage at `runtime-data/crm/integrations.json` to match
- * the other CRM artifacts.
+ * Outbound integration channels: Slack webhook, generic webhook, and
+ * Mailchimp. Single-file storage at `runtime-data/crm/integrations.json` to
+ * match the other CRM artifacts.
  */
 
 import { promises as fs } from 'fs';
@@ -10,7 +10,9 @@ import { randomBytes } from 'node:crypto';
 import { get, put } from '@vercel/blob';
 import { z } from 'zod';
 
-export type CrmIntegrationKind = 'slack-webhook' | 'generic-webhook' | 'mailchimp-stub';
+export type CrmIntegrationKind = 'slack-webhook' | 'generic-webhook' | 'mailchimp';
+
+type LegacyCrmIntegrationKind = 'mailchimp-stub';
 
 export interface CrmIntegration {
   id: string;
@@ -26,6 +28,18 @@ export interface CrmIntegrationsFile {
   updatedAt: string;
   integrations: CrmIntegration[];
 }
+
+type StoredCrmIntegration = Omit<CrmIntegration, 'kind'> & {
+  kind: CrmIntegrationKind | LegacyCrmIntegrationKind;
+};
+
+type StoredCrmIntegrationsFile = Omit<CrmIntegrationsFile, 'integrations'> & {
+  integrations: StoredCrmIntegration[];
+};
+
+type CrmIntegrationWriteInput = Omit<CrmIntegration, 'kind'> & {
+  kind: CrmIntegrationKind | LegacyCrmIntegrationKind;
+};
 
 function rootDir(): string {
   return path.join(process.cwd(), 'runtime-data', 'crm');
@@ -43,7 +57,7 @@ function isBlobBackend(): boolean {
 }
 
 export const integrationCreateSchema = z.object({
-  kind: z.enum(['slack-webhook', 'generic-webhook', 'mailchimp-stub']),
+  kind: z.enum(['slack-webhook', 'generic-webhook', 'mailchimp']),
   webhookUrl: z.string().trim().url().max(2000).optional(),
   settings: z.record(z.string().max(80), z.unknown()).optional(),
   enabled: z.boolean().default(true),
@@ -73,12 +87,12 @@ async function withLock<T>(task: () => Promise<T>): Promise<T> {
   }
 }
 
-async function readBackend(): Promise<CrmIntegrationsFile> {
+async function readBackend(): Promise<StoredCrmIntegrationsFile> {
   if (isBlobBackend()) {
     try {
       const result = await get(BLOB_PATH, { access: 'private', useCache: false });
       if (result?.statusCode === 200 && result.stream) {
-        return JSON.parse(await new Response(result.stream).text()) as CrmIntegrationsFile;
+        return JSON.parse(await new Response(result.stream).text()) as StoredCrmIntegrationsFile;
       }
     } catch {
       /* fallthrough */
@@ -86,7 +100,7 @@ async function readBackend(): Promise<CrmIntegrationsFile> {
     return emptyFile();
   }
   try {
-    return JSON.parse(await fs.readFile(integrationsPath(), 'utf8')) as CrmIntegrationsFile;
+    return JSON.parse(await fs.readFile(integrationsPath(), 'utf8')) as StoredCrmIntegrationsFile;
   } catch {
     return emptyFile();
   }
@@ -108,11 +122,18 @@ async function writeBackend(file: CrmIntegrationsFile): Promise<void> {
 
 export async function readIntegrations(): Promise<CrmIntegration[]> {
   const file = await readBackend();
-  return Array.isArray(file.integrations) ? file.integrations : [];
+  return Array.isArray(file.integrations) ? file.integrations.map(normalizeStoredIntegration) : [];
+}
+
+function normalizeStoredIntegration(integration: StoredCrmIntegration): CrmIntegration {
+  return {
+    ...integration,
+    kind: integration.kind === 'mailchimp-stub' ? 'mailchimp' : integration.kind,
+  };
 }
 
 export async function mutateIntegrations<T>(
-  updater: (current: CrmIntegration[]) => { next: CrmIntegration[]; result: T },
+  updater: (current: CrmIntegration[]) => { next: CrmIntegrationWriteInput[]; result: T },
 ): Promise<T> {
   return withLock(async () => {
     const current = await readIntegrations();
@@ -120,7 +141,7 @@ export async function mutateIntegrations<T>(
     await writeBackend({
       version: 1,
       updatedAt: new Date().toISOString(),
-      integrations: next,
+      integrations: next.map(normalizeStoredIntegration),
     });
     return result;
   });

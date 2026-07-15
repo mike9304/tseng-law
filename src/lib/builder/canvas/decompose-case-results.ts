@@ -160,8 +160,8 @@ export function createCaseResultsDecomposedNodes(
 
   nodes.push({
     id: 'home-case-results-divider',
-    kind: 'container',
-    rect: { x: 0, y: 180, width: 80, height: 4 },
+    kind: 'divider',
+    rect: { x: 78, y: 172, width: 40, height: 32 },
     style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
     zIndex: 3,
     rotation: 0,
@@ -169,16 +169,10 @@ export function createCaseResultsDecomposedNodes(
     visible: true,
     parentId: contentId,
     content: {
-      label: 'divider',
-      background: 'transparent',
-      borderColor: '#cbd5e1',
-      borderStyle: 'solid',
-      borderWidth: 0,
-      borderRadius: 0,
-      padding: 0,
-      layoutMode: 'absolute',
-      className: 'split-divider',
-      as: 'div',
+      orientation: 'horizontal',
+      thickness: 2,
+      color: '#9f8752',
+      style: 'solid',
     },
   });
 

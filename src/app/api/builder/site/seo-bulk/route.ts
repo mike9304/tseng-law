@@ -10,7 +10,7 @@ import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
 } from '@/lib/builder/site/site-api-copy';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -75,7 +75,9 @@ export async function PATCH(request: NextRequest) {
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   try {
     const payload = bulkSchema.parse(await request.json());
     const site = await readSiteDocument(siteId, locale);

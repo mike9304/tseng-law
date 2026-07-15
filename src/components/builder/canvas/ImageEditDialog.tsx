@@ -30,6 +30,36 @@ type EditedImageAsset = {
   filename: string;
   url: string;
 };
+export type AiImageEditSuccessPayload = {
+  readonly ok: true;
+  readonly provider: 'openai';
+  readonly model: 'gpt-image-2';
+  readonly stub: false;
+  readonly operation: 'edit';
+  readonly dimensions: {
+    readonly width: number;
+    readonly height: number;
+  };
+  readonly format: 'webp';
+  readonly mime: 'image/webp';
+  readonly auditState: 'attempted';
+  readonly asset: {
+    readonly filename: string;
+    readonly url: string;
+    readonly contentType: 'image/webp';
+  };
+  readonly source: {
+    readonly locale: string;
+    readonly filename: string;
+    readonly url: string;
+    readonly dimensions: {
+      readonly width: number;
+      readonly height: number;
+    };
+    readonly format: 'png' | 'jpeg' | 'webp';
+    readonly mime: 'image/png' | 'image/jpeg' | 'image/webp';
+  };
+};
 type AiReviewHistoryState = {
   entries: Array<EditedImageAsset | null>;
   index: number;
@@ -58,6 +88,176 @@ const DEFAULT_AI_BRUSH_SIZE = 8;
 const DEFAULT_AI_MASK_FEATHER = 0;
 const DEFAULT_AI_MASK_EDGE = 0;
 const EMPTY_AI_REVIEW_HISTORY: AiReviewHistoryState = { entries: [], index: -1 };
+const AI_IMAGE_EDIT_REQUEST_SIZE = '1536x1024';
+const AI_IMAGE_EDIT_REQUEST_WIDTH = 1536;
+const AI_IMAGE_EDIT_REQUEST_HEIGHT = 1024;
+
+function isPlainObject(value: unknown): value is Record<string, unknown> {
+  if (typeof value !== 'object' || value === null || Array.isArray(value)) return false;
+  try {
+    const prototype = Object.getPrototypeOf(value);
+    return prototype === Object.prototype || prototype === null;
+  } catch {
+    return false;
+  }
+}
+
+function isNonEmptyString(value: unknown): value is string {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+function isCanonicalBuilderAssetFilename(value: unknown): value is string {
+  return typeof value === 'string' && /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(value);
+}
+
+function isBuilderLocale(value: unknown): value is Locale {
+  return value === 'ko' || value === 'en' || value === 'zh-hant';
+}
+
+function isPositiveInteger(value: unknown): value is number {
+  return typeof value === 'number' && Number.isInteger(value) && value > 0;
+}
+
+function parseSupportedImageFormatMimePair(format: unknown, mime: unknown) {
+  if (format === 'png' && mime === 'image/png') return { format, mime } as const;
+  if (format === 'jpeg' && mime === 'image/jpeg') return { format, mime } as const;
+  if (format === 'webp' && mime === 'image/webp') return { format, mime } as const;
+  return null;
+}
+
+function filenameMatchesImageFormat(filename: string, format: unknown): boolean {
+  const dotIndex = filename.lastIndexOf('.');
+  if (dotIndex <= 0 || dotIndex === filename.length - 1) return false;
+  const extension = filename.slice(dotIndex + 1).toLowerCase();
+  if (format === 'jpeg') return extension === 'jpg' || extension === 'jpeg';
+  return extension === format;
+}
+
+function expectedSourceFromUrl(sourceUrl: string) {
+  if (
+    sourceUrl.trim() !== sourceUrl
+    || sourceUrl.includes('?')
+    || sourceUrl.includes('#')
+    || sourceUrl.includes('\\')
+  ) {
+    return null;
+  }
+  const segments = sourceUrl.split('/');
+  if (
+    segments.length !== 6
+    || segments[0] !== ''
+    || segments[1] !== 'api'
+    || segments[2] !== 'builder'
+    || segments[3] !== 'assets'
+    || !isBuilderLocale(segments[4])
+    || !isCanonicalBuilderAssetFilename(segments[5])
+  ) {
+    return null;
+  }
+  return {
+    locale: segments[4],
+    filename: segments[5],
+    url: sourceUrl,
+  };
+}
+
+export function readAiImageEditErrorMessage(_value: unknown, fallback: string): string {
+  return fallback;
+}
+
+export function parseAiImageEditSuccessResponse(
+  value: unknown,
+  expectedSourceUrl: string,
+): AiImageEditSuccessPayload | null {
+  const expectedSource = expectedSourceFromUrl(expectedSourceUrl);
+  if (!expectedSource || !isPlainObject(value)) return null;
+
+  try {
+    const dimensions = value.dimensions;
+    const asset = value.asset;
+    const source = value.source;
+    if (!isPlainObject(dimensions) || !isPlainObject(asset) || !isPlainObject(source)) return null;
+    const sourceDimensions = source.dimensions;
+    if (!isPlainObject(sourceDimensions)) return null;
+
+    const ok = value.ok;
+    const provider = value.provider;
+    const model = value.model;
+    const stub = value.stub;
+    const operation = value.operation;
+    const width = dimensions.width;
+    const height = dimensions.height;
+    const format = value.format;
+    const mime = value.mime;
+    const auditState = value.auditState;
+    const assetUrl = asset.url;
+    const assetFilename = asset.filename;
+    const assetContentType = asset.contentType;
+    const sourceUrl = source.url;
+    const sourceLocale = source.locale;
+    const sourceFilename = source.filename;
+    const sourceWidth = sourceDimensions.width;
+    const sourceHeight = sourceDimensions.height;
+    const sourceMetadata = parseSupportedImageFormatMimePair(source.format, source.mime);
+    if (
+      ok !== true
+      || provider !== 'openai'
+      || model !== 'gpt-image-2'
+      || stub !== false
+      || operation !== 'edit'
+      || width !== AI_IMAGE_EDIT_REQUEST_WIDTH
+      || height !== AI_IMAGE_EDIT_REQUEST_HEIGHT
+      || format !== 'webp'
+      || mime !== 'image/webp'
+      || auditState !== 'attempted'
+      || !isNonEmptyString(assetUrl)
+      || !isCanonicalBuilderAssetFilename(assetFilename)
+      || !filenameMatchesImageFormat(assetFilename, 'webp')
+      || assetContentType !== 'image/webp'
+      || assetUrl !== `/api/builder/assets/${expectedSource.locale}/${assetFilename}`
+      || sourceUrl !== expectedSource.url
+      || sourceLocale !== expectedSource.locale
+      || sourceFilename !== expectedSource.filename
+      || !isPositiveInteger(sourceWidth)
+      || !isPositiveInteger(sourceHeight)
+      || !sourceMetadata
+      || !filenameMatchesImageFormat(expectedSource.filename, sourceMetadata.format)
+    ) {
+      return null;
+    }
+
+    const normalizedDimensions = Object.freeze({ width, height });
+    const normalizedAsset = Object.freeze({
+      url: assetUrl,
+      filename: assetFilename,
+      contentType: 'image/webp' as const,
+    });
+    const normalizedSourceDimensions = Object.freeze({ width: sourceWidth, height: sourceHeight });
+    const normalizedSource = Object.freeze({
+      locale: expectedSource.locale,
+      filename: expectedSource.filename,
+      url: expectedSource.url,
+      dimensions: normalizedSourceDimensions,
+      format: sourceMetadata.format,
+      mime: sourceMetadata.mime,
+    });
+    return Object.freeze({
+      ok: true,
+      provider: 'openai',
+      model: 'gpt-image-2',
+      stub: false,
+      operation: 'edit',
+      dimensions: normalizedDimensions,
+      format: 'webp',
+      mime: 'image/webp',
+      auditState: 'attempted',
+      asset: normalizedAsset,
+      source: normalizedSource,
+    });
+  } catch {
+    return null;
+  }
+}
 
 const AI_VARIATION_PRESETS = [
   'premiumBright',
@@ -292,12 +492,12 @@ export default function ImageEditDialog({
   const previewFilter = !isDefaultFilters(draftFilters) ? filtersToCSS(draftFilters) : undefined;
   const builderAssetUrl = useMemo(() => {
     const trimmed = dialogImageSrc.trim();
-    if (trimmed.startsWith('/api/builder/assets/')) return trimmed;
+    if (expectedSourceFromUrl(trimmed)) return trimmed;
     if (typeof window === 'undefined') return null;
     try {
       const parsed = new URL(trimmed, window.location.origin);
       if (parsed.origin !== window.location.origin || parsed.search || parsed.hash) return null;
-      return parsed.pathname.startsWith('/api/builder/assets/') ? parsed.pathname : null;
+      return expectedSourceFromUrl(parsed.pathname) ? parsed.pathname : null;
     } catch {
       return null;
     }
@@ -451,28 +651,26 @@ export default function ImageEditDialog({
           assetUrl: builderAssetUrl,
           prompt,
           mask: maskPayload ?? undefined,
-          size: '1536x1024',
+          size: AI_IMAGE_EDIT_REQUEST_SIZE,
           quality: 'medium',
           outputFormat: 'webp',
           outputCompression: 82,
         }),
       });
-      const payload = (await response.json().catch(() => ({}))) as {
-        ok?: boolean;
-        error?: string;
-        message?: string;
-        asset?: EditedImageAsset;
-      };
-      if (!response.ok || !payload.ok || !payload.asset?.url) {
-        throw new Error(payload.message || payload.error || copy.dialog.ai.imageEditFailed);
+      const rawPayload: unknown = await response.json().catch(() => null);
+      if (!response.ok) {
+        throw new Error(readAiImageEditErrorMessage(rawPayload, copy.dialog.ai.imageEditFailed));
       }
-      pushAiReviewSelection(payload.asset);
+      const payload = parseAiImageEditSuccessResponse(rawPayload, builderAssetUrl);
+      if (!payload) throw new Error(copy.dialog.ai.imageEditFailed);
+      const editedAsset = payload.asset;
+      pushAiReviewSelection(editedAsset);
       setAiEditedAssets((current) => [
-        payload.asset!,
-        ...current.filter((asset) => asset.url !== payload.asset!.url),
+        editedAsset,
+        ...current.filter((asset) => asset.url !== editedAsset.url),
       ].slice(0, 4));
       setAiNoticeTone('success');
-      setAiNotice(copy.dialog.ai.editedImageReady(payload.asset.filename));
+      setAiNotice(copy.dialog.ai.editedImageReady(editedAsset.filename));
     } catch (error) {
       setAiNoticeTone('error');
       setAiNotice(error instanceof Error ? error.message : copy.dialog.ai.imageEditFailed);

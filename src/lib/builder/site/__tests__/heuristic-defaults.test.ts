@@ -47,7 +47,8 @@ describe('deriveHeuristicAnimation', () => {
     const node = mk({ kind: 'text', content: { className: `prefix ${hint} suffix` } });
     const result = deriveHeuristicAnimation(node);
     expect(result?.entrance?.preset).toBe('slide-up');
-    expect(result?.entrance?.duration).toBe(520);
+    expect(result?.entrance?.duration).toBe(420);
+    expect(result?.entrance?.easing).toBe('cubic-bezier(0.16, 1, 0.3, 1)');
     expect(result?.entrance?.triggerOnce).toBe(true);
   });
 
@@ -73,7 +74,7 @@ describe('deriveHeuristicAnimation', () => {
     'split-text',
     'split-image',
     'card-title',
-  ])('card-like hint "%s" on container → slide-up 480ms', (hint) => {
+  ])('card-like hint "%s" on container → restrained slide-up', (hint) => {
     const node = mk({
       kind: 'container',
       content: { className: `wrap ${hint}` },
@@ -81,7 +82,7 @@ describe('deriveHeuristicAnimation', () => {
     });
     const result = deriveHeuristicAnimation(node);
     expect(result?.entrance?.preset).toBe('slide-up');
-    expect(result?.entrance?.duration).toBe(480);
+    expect(result?.entrance?.duration).toBe(380);
   });
 
   it('container without card-like hint → undefined', () => {
@@ -89,7 +90,7 @@ describe('deriveHeuristicAnimation', () => {
     expect(deriveHeuristicAnimation(node)).toBeUndefined();
   });
 
-  it('large image (≥400×240) → fade-in 600ms', () => {
+  it('large image (≥400×240) → soft fade-in', () => {
     const node = mk({
       kind: 'image',
       content: { src: '/x.jpg' },
@@ -97,7 +98,7 @@ describe('deriveHeuristicAnimation', () => {
     });
     const result = deriveHeuristicAnimation(node);
     expect(result?.entrance?.preset).toBe('fade-in');
-    expect(result?.entrance?.duration).toBe(600);
+    expect(result?.entrance?.duration).toBe(440);
   });
 
   it('image just under threshold (399×239) → undefined', () => {
@@ -143,7 +144,7 @@ describe('deriveHeuristicHoverStyle', () => {
     const result = deriveHeuristicHoverStyle(node);
     expect(result?.translateY).toBe(-2);
     expect(result?.shadowBlur).toBe(18);
-    expect(result?.transitionMs).toBe(200);
+    expect(result?.transitionMs).toBe(180);
   });
 
   it.each(['text', 'heading', 'image', 'container'])(

@@ -36,7 +36,7 @@ vi.mock('@/lib/builder/bookings/storage', () => ({
 }));
 
 vi.mock('@/lib/builder/bookings/notifications', () => ({
-  sendBookingCancellation: vi.fn(async () => undefined),
+  sendBookingCancellation: vi.fn(async () => ({ ok: true, provider: 'resend', id: 'email-1' })),
 }));
 
 vi.mock('@/lib/builder/bookings/slot-lock', () => ({
@@ -235,5 +235,47 @@ describe('/api/builder/bookings/[id]', () => {
       service: expect.objectContaining({ serviceId: 'svc-route-test' }),
       staff: expect.objectContaining({ staffId: 'staff-route-test' }),
     });
+    expect(payload.emailDelivery).toEqual({ ok: true });
+  });
+
+  it('keeps a persisted admin cancellation successful when the email provider is unconfigured', async () => {
+    vi.mocked(getBooking).mockResolvedValueOnce(booking());
+    vi.mocked(getService).mockResolvedValueOnce(service());
+    vi.mocked(getStaff).mockResolvedValueOnce(staff());
+    vi.mocked(sendBookingCancellation).mockResolvedValueOnce({
+      ok: false,
+      provider: 'resend',
+      reason: 'unconfigured',
+    });
+
+    const route = await import('../route');
+    const response = await route.PATCH(patchRequest({ status: 'cancelled' }, 'en'), {
+      params: { id: 'bk-route-test' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload.booking.status).toBe('cancelled');
+    expect(payload.emailDelivery).toEqual({ ok: false, reason: 'unconfigured' });
+    expect(saveBooking).toHaveBeenCalledWith(payload.booking);
+  });
+
+  it('keeps a persisted admin cancellation successful when cancellation email rendering throws', async () => {
+    vi.mocked(getBooking).mockResolvedValueOnce(booking());
+    vi.mocked(getService).mockResolvedValueOnce(service());
+    vi.mocked(getStaff).mockResolvedValueOnce(staff());
+    vi.mocked(sendBookingCancellation).mockRejectedValueOnce(new Error('secret template failure'));
+
+    const route = await import('../route');
+    const response = await route.PATCH(patchRequest({ status: 'cancelled' }, 'en'), {
+      params: { id: 'bk-route-test' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload.booking.status).toBe('cancelled');
+    expect(payload.emailDelivery).toEqual({ ok: false, reason: 'internal_error' });
+    expect(JSON.stringify(payload)).not.toContain('secret template failure');
+    expect(saveBooking).toHaveBeenCalledWith(payload.booking);
   });
 });

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
 import {
-  createOpsBackupStub,
+  createOpsBackup,
   deleteOpsBackup,
   listOpsBackups,
 } from '@/lib/builder/ops/backups-store';
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
   if (!sourcePath) {
     return NextResponse.json({ error: 'sourcePath required' }, { status: 400 });
   }
-  const record = await createOpsBackupStub(sourcePath, note);
+  const record = await createOpsBackup(sourcePath, note);
   return NextResponse.json(
     { ok: record.status === 'ok', record },
     { status: record.status === 'ok' ? 201 : 422 },

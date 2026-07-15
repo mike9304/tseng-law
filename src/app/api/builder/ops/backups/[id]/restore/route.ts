@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { guardMutation } from '@/lib/builder/security/guard';
-import { restoreOpsBackupStub } from '@/lib/builder/ops/backups-store';
+import { restoreOpsBackup } from '@/lib/builder/ops/backups-store';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -12,7 +12,7 @@ export async function POST(
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
   const { id } = await params;
-  const result = await restoreOpsBackupStub(id);
+  const result = await restoreOpsBackup(id);
   if (!result.ok) {
     return NextResponse.json({ ok: false, error: result.error }, { status: 422 });
   }

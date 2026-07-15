@@ -62,4 +62,36 @@ describe('translation provider diagnostics history', () => {
       },
     ]);
   });
+
+  it('fails closed for an explicitly selected mock provider in production even when a real provider is configured', () => {
+    const report = buildTranslationProviderReadinessReport({
+      NODE_ENV: 'production',
+      TRANSLATION_PROVIDER: ' mock ',
+      OPENAI_API_KEY: 'sk-configured',
+      DEEPL_API_KEY: undefined,
+    });
+
+    expect(report.selectedProvider).toBe('mock');
+    expect(report.providers).toEqual(expect.arrayContaining([
+      expect.objectContaining({ id: 'openai', configured: true, selected: false }),
+    ]));
+    expect(report.checks).toEqual(expect.arrayContaining([
+      expect.objectContaining({ id: 'router_provider', status: 'fail' }),
+    ]));
+    expect(report.ok).toBe(false);
+  });
+
+  it('reports a normalized explicit mock provider as local/demo readiness outside production', () => {
+    const report = buildTranslationProviderReadinessReport({
+      NODE_ENV: 'development',
+      TRANSLATION_PROVIDER: ' MoCk ',
+      DEEPL_API_KEY: 'configured:fx',
+    });
+
+    expect(report.selectedProvider).toBe('mock');
+    expect(report.checks).toEqual(expect.arrayContaining([
+      expect.objectContaining({ id: 'router_provider', status: 'warn' }),
+    ]));
+    expect(report.ok).toBe(true);
+  });
 });

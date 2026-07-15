@@ -21,7 +21,14 @@ vi.mock('@/lib/builder/marketing/subscriber-storage', () => ({
 }));
 
 vi.mock('@/lib/builder/marketing/dispatcher', () => ({
-  sendCampaignBatch: vi.fn(async () => ({ ok: true, attempted: 50, delivered: 48, failed: 2 })),
+  sendCampaignBatch: vi.fn(async () => ({
+    ok: true,
+    attempted: 50,
+    succeeded: 48,
+    failed: 2,
+    remaining: 0,
+    errors: [],
+  })),
   sendTestEmail: vi.fn(async () => ({ ok: true })),
 }));
 
@@ -86,6 +93,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
     expect(sendCampaignBatch).toHaveBeenCalledWith({
       campaignId: 'cmp-1',
       batchSize: 25,
+      resetFailed: true,
     });
     expect(sendTestEmail).not.toHaveBeenCalled();
   });
@@ -184,7 +192,43 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
         },
       ],
     });
+    // Honest counts are preserved alongside the localized failure detail.
+    expect(payload.succeeded).toBe(0);
+    expect(payload.failed).toBe(1);
+    expect(payload.remaining).toBe(0);
     expect(JSON.stringify(payload)).not.toContain('batch secret leaked');
+  });
+
+  it('preserves honest partial-delivery counts when the dispatcher reports mixed results', async () => {
+    vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
+    vi.mocked(sendCampaignBatch).mockResolvedValueOnce({
+      ok: false,
+      attempted: 3,
+      succeeded: 2,
+      failed: 1,
+      remaining: 0,
+      errors: [{ email: 'c@example.test', error: 'provider down' }],
+    });
+    const route = await import('../route');
+    const response = await route.POST(postRequest({ batchSize: 3 }, 'locale=en'), {
+      params: { campaignId: 'cmp-1' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload).toMatchObject({
+      mode: 'batch',
+      ok: false,
+      errorCode: 'campaign_batch_send_failed',
+    });
+    expect(payload.succeeded).toBe(2);
+    expect(payload.failed).toBe(1);
+    expect(payload.remaining).toBe(0);
+    expect(sendCampaignBatch).toHaveBeenCalledWith({
+      campaignId: 'cmp-1',
+      batchSize: 3,
+      resetFailed: true,
+    });
   });
 
   it('refuses anonymous callers (guardMutation deny)', async () => {

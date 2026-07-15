@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   AI_GENERATOR_BLUEPRINT_VERSION,
   AI_GENERATOR_CONTENT_VERSION,
@@ -10,8 +10,12 @@ import { siteSpecSchema } from '@/lib/builder/ai-generator/site-spec';
 import { selectBlueprint } from '@/lib/builder/ai-generator/template-selector';
 
 describe('AI site generator', () => {
+  beforeEach(() => {
+    vi.stubEnv('AI_BUILDER_ALLOW_LOCAL_DEMO', 'true');
+  });
   afterEach(() => {
     delete process.env.OPENAI_API_KEY;
+    vi.unstubAllEnvs();
   });
 
   it('falls back to deterministic stub content when no LLM key is configured', async () => {

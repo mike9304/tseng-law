@@ -7,7 +7,7 @@
  *
  * Uses gpt-4o-mini with response_format=json_object to produce a strict
  * section spec, then runs the deterministic section-builder to assemble
- * BuilderCanvasNodes. Falls back to a stub spec when no LLM key is set.
+ * BuilderCanvasNodes. Production fails closed when the provider is not ready.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -19,6 +19,11 @@ import {
   type AiSectionKind,
   type AiSectionSpec,
 } from '@/lib/builder/ai-generator/section-builder';
+import {
+  AiContentGenerationError,
+  isLocalDemoGenerationAllowed,
+  type AiContentGenerationErrorCode,
+} from '@/lib/builder/ai-generator/content-generator';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -36,8 +41,11 @@ type OpenAiChatPayload = {
     message?: { content?: string };
     finish_reason?: string;
   }>;
-  error?: { message?: string; type?: string; code?: string };
 };
+
+type SectionProviderResult =
+  | { ok: true; spec: AiSectionSpec; model: string }
+  | { ok: false; error: AiContentGenerationError };
 
 const llmSpecSchema = z.object({
   sectionKind: z.enum(AI_SECTION_KINDS),
@@ -168,10 +176,32 @@ function coerceSpec(parsed: z.infer<typeof llmSpecSchema>): AiSectionSpec {
   return spec;
 }
 
+function hasMeaningfulListItems(spec: z.infer<typeof llmSpecSchema>): boolean {
+  return Boolean(spec.items && spec.items.length >= 3 && spec.items.length <= 6);
+}
+
+function isSemanticallyValidSpec(
+  spec: z.infer<typeof llmSpecSchema>,
+  requestedKind?: AiSectionKind,
+): boolean {
+  if (requestedKind && spec.sectionKind !== requestedKind) return false;
+  switch (spec.sectionKind) {
+    case 'features':
+    case 'testimonials':
+    case 'faq':
+      return hasMeaningfulListItems(spec);
+    case 'hero':
+    case 'cta':
+      return Boolean(spec.subhead?.trim() && spec.ctaLabel?.trim() && !spec.items?.length);
+    default:
+      return false;
+  }
+}
+
 async function callOpenAi(
   input: z.infer<typeof requestSchema>,
   apiKey: string,
-): Promise<{ spec: AiSectionSpec; model: string } | { error: string; status: number }> {
+): Promise<SectionProviderResult> {
   const model = sectionAssistantModel();
   const systemPrompt = buildSystemPrompt(input);
   const userPrompt = [
@@ -182,10 +212,12 @@ async function callOpenAi(
     '',
     'Return only the JSON object.',
   ].join('\n');
-  let response: Response;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20_000);
   try {
-    response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
@@ -201,31 +233,39 @@ async function callOpenAi(
         ],
       }),
     });
-  } catch (err) {
-    return { error: err instanceof Error ? err.message : 'OpenAI request failed.', status: 502 };
-  }
-  const payload = (await response.json().catch(() => ({}))) as OpenAiChatPayload;
-  if (!response.ok) {
-    return {
-      error: payload.error?.message ?? 'AI section generator failed.',
-      status: response.status,
-    };
-  }
-  const content = payload.choices?.[0]?.message?.content;
-  if (!content) {
-    return { error: 'AI section generator returned empty content.', status: 502 };
-  }
-  let json: unknown;
-  try {
-    json = JSON.parse(content);
+    const payload = (await response.json().catch(() => null)) as OpenAiChatPayload | null;
+    if (!response.ok) {
+      return { ok: false, error: new AiContentGenerationError('ai_content_provider_rejected') };
+    }
+    const content = payload?.choices?.[0]?.message?.content;
+    if (!content) {
+      return { ok: false, error: new AiContentGenerationError('ai_content_invalid_response') };
+    }
+    let json: unknown;
+    try {
+      json = JSON.parse(content);
+    } catch {
+      return { ok: false, error: new AiContentGenerationError('ai_content_invalid_response') };
+    }
+    const parsed = llmSpecSchema.safeParse(json);
+    if (!parsed.success || !isSemanticallyValidSpec(parsed.data, input.sectionKind)) {
+      return { ok: false, error: new AiContentGenerationError('ai_content_invalid_response') };
+    }
+    return { ok: true, spec: coerceSpec(parsed.data), model };
   } catch {
-    return { error: 'AI section generator returned non-JSON content.', status: 502 };
+    return { ok: false, error: new AiContentGenerationError('ai_content_provider_unavailable') };
+  } finally {
+    clearTimeout(timeout);
   }
-  const parsed = llmSpecSchema.safeParse(json);
-  if (!parsed.success) {
-    return { error: 'AI section generator returned an unexpected JSON shape.', status: 502 };
-  }
-  return { spec: coerceSpec(parsed.data), model };
+}
+
+function providerFailureResponse(code: AiContentGenerationErrorCode): NextResponse {
+  const error = new AiContentGenerationError(code);
+  return NextResponse.json({
+    ok: false,
+    error: error.code,
+    message: error.message,
+  }, { status: error.httpStatus });
 }
 
 export async function POST(request: NextRequest) {
@@ -244,32 +284,40 @@ export async function POST(request: NextRequest) {
   const input = parsed.data;
   const apiKey = openAiApiKey();
 
-  let spec: AiSectionSpec;
-  let usedFallback = false;
-  let model = sectionAssistantModel();
   if (!apiKey) {
-    spec = fallbackSpec(input);
-    usedFallback = true;
-  } else {
-    const result = await callOpenAi(input, apiKey);
-    if ('error' in result) {
-      return NextResponse.json(
-        { ok: false, error: 'openai_section_failed', message: result.error },
-        { status: result.status },
-      );
+    if (!isLocalDemoGenerationAllowed()) {
+      return providerFailureResponse('ai_content_provider_unconfigured');
     }
-    spec = result.spec;
-    model = result.model;
-    if (input.sectionKind && spec.sectionKind !== input.sectionKind) {
-      spec.sectionKind = input.sectionKind;
-    }
+    const spec = fallbackSpec(input);
+    const built = buildSectionNodes({ spec, locale: input.locale });
+    return NextResponse.json({
+      ok: false,
+      error: 'ai_section_local_demo_only',
+      message: 'Local demo section content is not provider-generated and cannot be applied.',
+      source: 'local-demo',
+      stub: true,
+      usedFallback: true,
+      model: sectionAssistantModel(),
+      sectionKind: spec.sectionKind,
+      spec,
+      rootId: built.rootId,
+      nodes: built.nodes,
+    }, { status: 503 });
   }
+
+  const result = await callOpenAi(input, apiKey);
+  if (!result.ok) {
+    return providerFailureResponse(result.error.code);
+  }
+  const spec = result.spec;
 
   const built = buildSectionNodes({ spec, locale: input.locale });
   return NextResponse.json({
     ok: true,
-    model,
-    usedFallback,
+    source: 'openai',
+    stub: false,
+    model: result.model,
+    usedFallback: false,
     sectionKind: spec.sectionKind,
     spec,
     rootId: built.rootId,

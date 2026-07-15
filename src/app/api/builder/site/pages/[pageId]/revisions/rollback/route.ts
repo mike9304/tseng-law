@@ -21,7 +21,7 @@ import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
 } from '@/lib/builder/site/site-api-copy';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 
@@ -64,8 +64,9 @@ export async function POST(
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const pageId = params.pageId;
   const body = await readJsonObject(request);
-  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
-  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
 
   const revisionId = typeof body.revisionId === 'string' ? body.revisionId.trim() : '';
 
@@ -99,7 +100,7 @@ export async function POST(
 
   // Return the restored document and draft meta for client-side replaceDocument
   // plus revision-aware follow-up actions such as publish.
-  const restored = await readRevisionDocument(pageId, revisionId).catch(() => null);
+  const restored = await readRevisionDocument(siteId, pageId, revisionId).catch(() => null);
   const restoredState = await readPageCanvasRecordState(siteId, pageId, 'draft').catch((error) => {
     if (error instanceof Error) return null;
     throw error;

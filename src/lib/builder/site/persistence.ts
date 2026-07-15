@@ -10,10 +10,14 @@
  */
 
 import { del, get, put } from '@vercel/blob';
-import { readFile, writeFile, mkdir, rm, rename } from 'fs/promises';
+import { mkdir, realpath } from 'fs/promises';
+import { isDeepStrictEqual } from 'node:util';
 import path from 'path';
 import { defaultLocale, type Locale } from '@/lib/locales';
-import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import {
+  builderCanvasDocumentSchema,
+  type BuilderCanvasDocument,
+} from '@/lib/builder/canvas/types';
 import {
   type BuilderSiteDocument,
   type BuilderPageMeta,
@@ -31,11 +35,51 @@ import {
 } from './types';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { normalizeBuilderInstalledApps, normalizeBuilderUninstalledApps } from '@/lib/builder/apps/types';
-import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
+import {
+  normalizeBuilderSiteId,
+  requireBuilderSiteIdForMutation,
+} from '@/lib/builder/site/identity';
 import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
 import { normalizeMobileSchemaForSiteDocument } from '@/lib/builder/site/mobile-schema';
 import { isBlobBlockedForDeployEnv } from '@/lib/builder/storage/blob-env-guard';
 import { withCanvasMutex } from '@/lib/builder/collab/canvas-mutex';
+import { assertSiteDocumentInvariants } from '@/lib/builder/site/site-invariants';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
+import {
+  PAGE_CANVAS_CAS_ACTIVATION_MARKER,
+  PAGE_CANVAS_CAS_MARKER_ENV,
+  PAGE_CANVAS_CAS_MODE_ENV,
+  PAGE_CANVAS_CAS_ROOT_ENV,
+  PageCanvasCasConflictError,
+  PageCanvasCasMigrationRequiredError,
+  createPageCanvasVersionedStore,
+  resolvePageCanvasCasLocalRoot,
+  resolvePageCanvasPersistenceMode,
+  type PageCanvasCasCoordinate,
+  type PageCanvasCasSnapshot,
+  type PageCanvasVersionedStore,
+} from '@/lib/builder/site/page-canvas-versioned-store';
+import {
+  PERSISTENCE_ERROR_CODES,
+  PersistenceInvalidDataError,
+  PersistenceMissingError,
+  isPersistenceError,
+} from '@/lib/builder/storage/persistence-errors';
+import {
+  atomicRemoveLocalJson,
+  atomicWriteLocalJson,
+  readLocalJsonFile,
+  withLocalJsonWriteLease,
+} from '@/lib/builder/storage/local-json-write-lease.mjs';
+
+export {
+  PAGE_CANVAS_CAS_ACTIVATION_MARKER,
+  PAGE_CANVAS_CAS_MARKER_ENV,
+  PAGE_CANVAS_CAS_MODE_ENV,
+  PAGE_CANVAS_CAS_ROOT_ENV,
+  PageCanvasCasConflictError,
+  PageCanvasCasMigrationRequiredError,
+};
 
 const BLOB_PREFIX = 'builder-site';
 let siteWriteQueue: Promise<void> = Promise.resolve();
@@ -100,6 +144,12 @@ function localRoot(): string {
   return path.join(process.cwd(), 'runtime-data', 'builder-site');
 }
 
+async function prepareLocalJsonRoot(): Promise<string> {
+  const root = path.resolve(localRoot());
+  await mkdir(root, { recursive: true });
+  return realpath(root);
+}
+
 // ─── Site document ────────────────────────────────────────────────
 
 function sitePathname(siteId: string): string {
@@ -110,20 +160,23 @@ async function loadSiteDocument(siteId: string): Promise<BuilderSiteDocument | n
   const normalizedSiteId = normalizeBuilderSiteId(siteId);
   const pathname = sitePathname(normalizedSiteId);
   if (isBlobBackend()) {
-    try {
-      const result = await get(pathname, { access: 'private', useCache: false });
-      if (result?.statusCode === 200 && result.stream) {
-        const text = await new Response(result.stream).text();
-        return normalizeSiteDocumentLifecycle(JSON.parse(text) as BuilderSiteDocument, normalizedSiteId);
-      }
-    } catch { /* fallthrough */ }
+    const result = await get(pathname, { access: 'private', useCache: false });
+    if (!result || (result as { statusCode?: number }).statusCode === 404) return null;
+    if (result.statusCode !== 200 || !result.stream) {
+      throw new Error(`Unexpected builder site Blob response status: ${result.statusCode}`);
+    }
+    const text = await new Response(result.stream).text();
+    return normalizeSiteDocumentLifecycle(JSON.parse(text) as BuilderSiteDocument, normalizedSiteId);
   } else {
-    try {
-      const text = await readFile(path.join(localRoot(), normalizedSiteId, 'site.json'), 'utf8');
-      return normalizeSiteDocumentLifecycle(JSON.parse(text) as BuilderSiteDocument, normalizedSiteId);
-    } catch { /* fallthrough */ }
+    const allowedRoot = await prepareLocalJsonRoot();
+    const targetPath = path.join(allowedRoot, normalizedSiteId, 'site.json');
+    const snapshot = await readLocalJsonFile(targetPath, { allowedRoot });
+    if (snapshot.kind === 'missing') return null;
+    return normalizeSiteDocumentLifecycle(
+      JSON.parse(snapshot.bytes.toString('utf8')) as BuilderSiteDocument,
+      normalizedSiteId,
+    );
   }
-  return null;
 }
 
 export async function readSiteDocument(siteId: string, locale: Locale): Promise<BuilderSiteDocument> {
@@ -137,15 +190,39 @@ export async function readSiteDocument(siteId: string, locale: Locale): Promise<
 }
 
 export async function ensureSiteDocument(siteId: string, locale: Locale): Promise<BuilderSiteDocument> {
-  const normalizedSiteId = normalizeBuilderSiteId(siteId);
-  const existing = await loadSiteDocument(normalizedSiteId);
-  if (existing) return existing;
-  const fresh = normalizeSiteDocumentLifecycle(
-    createDefaultSiteDocument(locale, normalizedSiteId),
-    normalizedSiteId,
-  );
-  await writeSiteDocument(fresh);
-  return fresh;
+  const normalizedSiteId = requireBuilderSiteIdForMutation(siteId);
+  if (isBlobBackend()) {
+    const existing = await loadSiteDocument(normalizedSiteId);
+    if (existing) return existing;
+    const fresh = normalizeSiteDocumentLifecycle(
+      createDefaultSiteDocument(locale, normalizedSiteId),
+      normalizedSiteId,
+    );
+    await writeSiteDocument(fresh);
+    return fresh;
+  }
+
+  const allowedRoot = await prepareLocalJsonRoot();
+  const dir = path.join(allowedRoot, normalizedSiteId);
+  await mkdir(dir, { recursive: true });
+  const targetPath = path.join(dir, 'site.json');
+  return withLocalJsonWriteLease(targetPath, { allowedRoot }, async (lease) => {
+    const current = await readLocalJsonFile(lease);
+    if (current.kind === 'present') {
+      return normalizeSiteDocumentLifecycle(
+        JSON.parse(current.bytes.toString('utf8')) as BuilderSiteDocument,
+        normalizedSiteId,
+      );
+    }
+    const fresh = prepareSiteDocumentForWrite(
+      createDefaultSiteDocument(locale, normalizedSiteId),
+      normalizedSiteId,
+      null,
+      {},
+    );
+    await atomicWriteLocalJson(lease, JSON.stringify(fresh), { expectedGeneration: null });
+    return fresh;
+  });
 }
 
 export function mergeUntouchedPageSeoForWrite(
@@ -416,10 +493,62 @@ export function reconcileSiteDocumentUninstalledAppsForWrite(
   };
 }
 
+function prepareSiteDocumentForWrite(
+  doc: BuilderSiteDocument,
+  normalizedSiteId: string,
+  latestDoc: BuilderSiteDocument | null,
+  options: WriteSiteDocumentOptions,
+): BuilderSiteDocument {
+  const invariantOptions = {
+    forbidInternalSandboxPages:
+      normalizedSiteId === DEFAULT_BUILDER_SITE_ID && process.env.NODE_ENV === 'production',
+  };
+  assertSiteDocumentInvariants(doc, invariantOptions);
+  if (latestDoc) assertSiteDocumentInvariants(latestDoc, invariantOptions);
+  const navigationMergedDoc = options.preserveNavigation && latestDoc
+    ? { ...doc, navigation: latestDoc.navigation ?? doc.navigation }
+    : doc;
+  const seoMergedDoc = mergeUntouchedPageSeoForWrite(
+    { ...navigationMergedDoc, siteId: normalizedSiteId },
+    latestDoc,
+  );
+  const pageMergedDoc = reconcileSiteDocumentPagesForWrite(seoMergedDoc, latestDoc, options);
+  const publishMetaMergedDoc = options.preserveLatestPublishMeta === false
+    ? pageMergedDoc
+    : mergeLatestPagePublishMetaForWrite(pageMergedDoc, latestDoc);
+  const redirectMergedDoc = reconcileSiteDocumentRedirectsForWrite(
+    publishMetaMergedDoc,
+    latestDoc,
+    options,
+  );
+  const appMergedDoc = reconcileSiteDocumentInstalledAppsForWrite(
+    redirectMergedDoc,
+    latestDoc,
+    options,
+  );
+  const appArchiveMergedDoc = reconcileSiteDocumentUninstalledAppsForWrite(
+    appMergedDoc,
+    latestDoc,
+    options,
+  );
+  const sourceOverridesMergedDoc = options.sourceCollectionOverridesUpdated || !latestDoc
+    ? appArchiveMergedDoc
+    : { ...appArchiveMergedDoc, sourceCollectionOverrides: latestDoc.sourceCollectionOverrides };
+  const mergedDoc = reconcileSiteDocumentNavigationForWrite(
+    sourceOverridesMergedDoc,
+    latestDoc,
+    options,
+  );
+  const normalizedDoc = normalizeSiteDocumentLifecycle(mergedDoc, normalizedSiteId);
+  assertSiteDocumentInvariants(normalizedDoc, invariantOptions);
+  return normalizedDoc;
+}
+
 export async function writeSiteDocument(
   doc: BuilderSiteDocument,
   options: WriteSiteDocumentOptions = {},
 ): Promise<void> {
+  const mutationSiteId = requireBuilderSiteIdForMutation(doc.siteId);
   const previousWrite = siteWriteQueue;
   let releaseWrite!: () => void;
   siteWriteQueue = new Promise<void>((resolve) => {
@@ -428,32 +557,41 @@ export async function writeSiteDocument(
 
   await previousWrite;
   try {
-    const normalizedSiteId = normalizeBuilderSiteId(doc.siteId);
-    const latestDoc = await loadSiteDocument(normalizedSiteId);
-    const navigationMergedDoc = options.preserveNavigation && latestDoc
-      ? { ...doc, navigation: latestDoc.navigation ?? doc.navigation }
-      : doc;
-    const seoMergedDoc = mergeUntouchedPageSeoForWrite({ ...navigationMergedDoc, siteId: normalizedSiteId }, latestDoc);
-    const pageMergedDoc = reconcileSiteDocumentPagesForWrite(seoMergedDoc, latestDoc, options);
-    const publishMetaMergedDoc = options.preserveLatestPublishMeta === false
-      ? pageMergedDoc
-      : mergeLatestPagePublishMetaForWrite(pageMergedDoc, latestDoc);
-    const redirectMergedDoc = reconcileSiteDocumentRedirectsForWrite(publishMetaMergedDoc, latestDoc, options);
-    const appMergedDoc = reconcileSiteDocumentInstalledAppsForWrite(redirectMergedDoc, latestDoc, options);
-    const appArchiveMergedDoc = reconcileSiteDocumentUninstalledAppsForWrite(appMergedDoc, latestDoc, options);
-    const sourceOverridesMergedDoc = options.sourceCollectionOverridesUpdated || !latestDoc
-      ? appArchiveMergedDoc
-      : { ...appArchiveMergedDoc, sourceCollectionOverrides: latestDoc.sourceCollectionOverrides };
-    const mergedDoc = reconcileSiteDocumentNavigationForWrite(sourceOverridesMergedDoc, latestDoc, options);
-    const normalizedDoc = normalizeSiteDocumentLifecycle(mergedDoc, normalizedSiteId);
+    const normalizedSiteId = mutationSiteId;
     const pathname = sitePathname(normalizedSiteId);
-    const json = JSON.stringify(normalizedDoc);
     if (isBlobBackend()) {
+      const latestDoc = await loadSiteDocument(normalizedSiteId);
+      const normalizedDoc = prepareSiteDocumentForWrite(
+        doc,
+        normalizedSiteId,
+        latestDoc,
+        options,
+      );
+      const json = JSON.stringify(normalizedDoc);
       await put(pathname, json, { access: 'private', allowOverwrite: true, contentType: 'application/json' });
     } else {
-      const dir = path.join(localRoot(), normalizedSiteId);
+      const allowedRoot = await prepareLocalJsonRoot();
+      const dir = path.join(allowedRoot, normalizedSiteId);
       await mkdir(dir, { recursive: true });
-      await writeFileAtomicLocal(path.join(dir, 'site.json'), json);
+      const targetPath = path.join(dir, 'site.json');
+      await withLocalJsonWriteLease(targetPath, { allowedRoot }, async (lease) => {
+        const current = await readLocalJsonFile(lease);
+        const latestDoc = current.kind === 'missing'
+          ? null
+          : normalizeSiteDocumentLifecycle(
+              JSON.parse(current.bytes.toString('utf8')) as BuilderSiteDocument,
+              normalizedSiteId,
+            );
+        const normalizedDoc = prepareSiteDocumentForWrite(
+          doc,
+          normalizedSiteId,
+          latestDoc,
+          options,
+        );
+        await atomicWriteLocalJson(lease, JSON.stringify(normalizedDoc), {
+          expectedGeneration: current.kind === 'missing' ? null : current.generation,
+        });
+      });
     }
   } finally {
     releaseWrite();
@@ -496,7 +634,7 @@ async function withPageCanvasWriteLock<T>(
   task: () => Promise<T>,
 ): Promise<T> {
   void variant;
-  return withCanvasMutex(normalizeBuilderSiteId(siteId), pageId, task);
+  return withCanvasMutex(requireBuilderSiteIdForMutation(siteId), pageId, task);
 }
 
 function isRecordLike(input: unknown): input is PageCanvasRecord {
@@ -504,10 +642,25 @@ function isRecordLike(input: unknown): input is PageCanvasRecord {
   const value = input as Partial<PageCanvasRecord>;
   return (
     typeof value.revision === 'number' &&
-    Number.isFinite(value.revision) &&
+    Number.isInteger(value.revision) &&
+    value.revision >= 0 &&
     typeof value.savedAt === 'string' &&
+    Number.isFinite(Date.parse(value.savedAt)) &&
+    (value.updatedBy === undefined || typeof value.updatedBy === 'string') &&
     !!value.document &&
     typeof value.document === 'object'
+  );
+}
+
+function isPageCanvasRecordCandidate(input: unknown): boolean {
+  return Boolean(
+    input
+    && typeof input === 'object'
+    && (
+      Object.prototype.hasOwnProperty.call(input, 'revision')
+      || Object.prototype.hasOwnProperty.call(input, 'savedAt')
+      || Object.prototype.hasOwnProperty.call(input, 'document')
+    ),
   );
 }
 
@@ -519,41 +672,178 @@ function legacyRecordFromDocument(document: BuilderCanvasDocument): PageCanvasRe
   };
 }
 
+export type BuilderCanvasPersistenceErrorCode = 'read_failed' | 'invalid_data';
+
+/**
+ * Stable, provider-neutral error for persisted canvas reads.
+ *
+ * The original failure is retained as a non-enumerable cause for server-side
+ * diagnostics, while the public message deliberately excludes provider text,
+ * credentials, and local filesystem paths.
+ */
+export class BuilderCanvasPersistenceError extends Error {
+  readonly cause!: unknown;
+  readonly statusCode: number | undefined;
+
+  constructor(
+    readonly code: BuilderCanvasPersistenceErrorCode,
+    readonly backend: 'blob' | 'local',
+    options: { cause?: unknown; statusCode?: number } = {},
+  ) {
+    super(code === 'invalid_data'
+      ? 'Stored builder canvas data is invalid'
+      : 'Builder canvas persistence read failed');
+    this.name = 'BuilderCanvasPersistenceError';
+    this.statusCode = options.statusCode;
+    Object.defineProperty(this, 'cause', {
+      configurable: false,
+      enumerable: false,
+      value: options.cause,
+      writable: false,
+    });
+  }
+}
+
+function readExactHttpStatus(value: unknown): number | undefined {
+  if (!value || typeof value !== 'object') return undefined;
+  for (const property of ['statusCode', 'status'] as const) {
+    let candidate: unknown;
+    try {
+      candidate = Reflect.get(value, property);
+    } catch {
+      continue;
+    }
+    if (typeof candidate === 'number' && Number.isInteger(candidate)) return candidate;
+  }
+  return undefined;
+}
+
+function validateStoredCanvasDocument(value: unknown): BuilderCanvasDocument {
+  // Parse for validation only. Returning the original object preserves legacy
+  // unknown fields while still refusing corrupt documents at the read boundary.
+  builderCanvasDocumentSchema.parse(value);
+  return value as BuilderCanvasDocument;
+}
+
+function validateStoredPageCanvasPayload(value: unknown): unknown {
+  if (isPageCanvasRecordCandidate(value) && !isRecordLike(value)) {
+    throw new TypeError('Invalid page canvas record envelope');
+  }
+  if (isRecordLike(value)) {
+    validateStoredCanvasDocument(value.document);
+    return value;
+  }
+  return validateStoredCanvasDocument(value);
+}
+
+function parseStoredCanvasJson<T>(
+  text: string,
+  backend: 'blob' | 'local',
+  validate: (value: unknown) => T,
+): T {
+  let value: unknown;
+  try {
+    value = JSON.parse(text) as unknown;
+  } catch (error) {
+    throw new BuilderCanvasPersistenceError('invalid_data', backend, { cause: error });
+  }
+  return validateCanvasValue(value, backend, validate);
+}
+
+function validateCanvasValue<T>(
+  value: unknown,
+  backend: 'blob' | 'local',
+  validate: (input: unknown) => T,
+): T {
+  try {
+    return validate(value);
+  } catch (error) {
+    if (error instanceof BuilderCanvasPersistenceError) throw error;
+    throw new BuilderCanvasPersistenceError('invalid_data', backend, { cause: error });
+  }
+}
+
+async function readStoredCanvasPayload<T>(
+  pathname: string,
+  validate: (value: unknown) => T,
+): Promise<T | null> {
+  if (isBlobBackend()) {
+    let result: Awaited<ReturnType<typeof get>> | null;
+    try {
+      result = await get(pathname, { access: 'private', useCache: false });
+    } catch (error) {
+      const statusCode = readExactHttpStatus(error);
+      if (statusCode === 404) return null;
+      throw new BuilderCanvasPersistenceError('read_failed', 'blob', {
+        cause: error,
+        statusCode,
+      });
+    }
+
+    if (result === null) return null;
+    if (result === undefined) {
+      throw new BuilderCanvasPersistenceError('read_failed', 'blob');
+    }
+    const statusCode = readExactHttpStatus(result);
+    if (statusCode === 404) return null;
+    if (statusCode !== 200 || !result.stream) {
+      throw new BuilderCanvasPersistenceError('read_failed', 'blob', { statusCode });
+    }
+
+    try {
+      const text = await new Response(result.stream).text();
+      return parseStoredCanvasJson(text, 'blob', validate);
+    } catch (error) {
+      if (error instanceof BuilderCanvasPersistenceError) throw error;
+      throw new BuilderCanvasPersistenceError('read_failed', 'blob', {
+        cause: error,
+        statusCode,
+      });
+    }
+  }
+
+  const allowedRoot = await prepareLocalJsonRoot();
+  const filePath = path.join(allowedRoot, pathname.replace(`${BLOB_PREFIX}/`, ''));
+  try {
+    const snapshot = await readLocalJsonFile(filePath, { allowedRoot });
+    if (snapshot.kind === 'missing') return null;
+    return parseStoredCanvasJson(snapshot.bytes.toString('utf8'), 'local', validate);
+  } catch (error) {
+    if (error instanceof BuilderCanvasPersistenceError) throw error;
+    throw new BuilderCanvasPersistenceError('read_failed', 'local', { cause: error });
+  }
+}
+
 async function readPageCanvasPayload(
   siteId: string,
   pageId: string,
   variant: PageVariant,
 ): Promise<unknown | null> {
   const pn = pagePathname(siteId, pageId, variant);
-  if (isBlobBackend()) {
-    try {
-      const result = await get(pn, { access: 'private', useCache: false });
-      if (result?.statusCode === 200 && result.stream) {
-        const text = await new Response(result.stream).text();
-        return JSON.parse(text) as unknown;
-      }
-      // Non-200 (e.g. 404) = genuinely absent.
-      return null;
-    } catch (error) {
-      // R2: only a "not found" is absence. A transient/parse failure must NOT be
-      // reported as null — that would let a caller overwrite real content with a
-      // fresh blank record. Surface it so the caller aborts.
-      const message = error instanceof Error ? error.message.toLowerCase() : '';
-      if (message.includes('not found') || message.includes('404')) return null;
-      throw error;
-    }
-  } else {
-    try {
-      const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
-      const text = await readFile(filePath, 'utf8');
-      return JSON.parse(text) as unknown;
-    } catch (error) {
-      // R2: ENOENT = genuinely absent → null. Any other error (permission,
-      // corrupt/half-written JSON, etc.) must rethrow, never be masked as absence.
-      if ((error as NodeJS.ErrnoException | null)?.code === 'ENOENT') return null;
-      throw error;
-    }
-  }
+  return readStoredCanvasPayload(pn, validateStoredPageCanvasPayload);
+}
+
+async function writeLocalJsonPayload(pathname: string, data: string): Promise<void> {
+  const allowedRoot = await prepareLocalJsonRoot();
+  const filePath = path.join(allowedRoot, pathname.replace(`${BLOB_PREFIX}/`, ''));
+  await mkdir(path.dirname(filePath), { recursive: true });
+  await withLocalJsonWriteLease(filePath, { allowedRoot }, async (lease) => {
+    const current = await readLocalJsonFile(lease);
+    await atomicWriteLocalJson(lease, data, {
+      expectedGeneration: current.kind === 'missing' ? null : current.generation,
+    });
+  });
+}
+
+async function removeLocalJsonPayload(pathname: string): Promise<void> {
+  const allowedRoot = await prepareLocalJsonRoot();
+  const filePath = path.join(allowedRoot, pathname.replace(`${BLOB_PREFIX}/`, ''));
+  await mkdir(path.dirname(filePath), { recursive: true });
+  await withLocalJsonWriteLease(filePath, { allowedRoot }, async (lease) => {
+    const current = await readLocalJsonFile(lease);
+    if (current.kind === 'missing') return;
+    await atomicRemoveLocalJson(lease, { expectedGeneration: current.generation });
+  });
 }
 
 async function writePageCanvasPayload(
@@ -562,28 +852,14 @@ async function writePageCanvasPayload(
   variant: PageVariant,
   payload: unknown,
 ): Promise<void> {
-  const pn = pagePathname(siteId, pageId, variant);
+  const pn = pagePathname(requireBuilderSiteIdForMutation(siteId), pageId, variant);
+  const backend = isBlobBackend() ? 'blob' : 'local';
+  validateCanvasValue(payload, backend, validateStoredPageCanvasPayload);
   const json = JSON.stringify(payload);
-  if (isBlobBackend()) {
+  if (backend === 'blob') {
     await put(pn, json, { access: 'private', allowOverwrite: true, contentType: 'application/json' });
   } else {
-    const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
-    await mkdir(path.dirname(filePath), { recursive: true });
-    await writeFileAtomicLocal(filePath, json);
-  }
-}
-
-// R3: write to a temp file then atomically rename into place, so a crash/OOM
-// mid-write can never leave a truncated/corrupt destination (site.json, page
-// documents). rename(2) is atomic on the same filesystem.
-async function writeFileAtomicLocal(filePath: string, data: string): Promise<void> {
-  const tmpPath = `${filePath}.tmp-${process.pid}-${Math.random().toString(36).slice(2)}`;
-  try {
-    await writeFile(tmpPath, data, 'utf8');
-    await rename(tmpPath, filePath);
-  } catch (error) {
-    await rm(tmpPath, { force: true }).catch(() => {});
-    throw error;
+    await writeLocalJsonPayload(pn, json);
   }
 }
 
@@ -592,19 +868,85 @@ async function deletePageCanvasPayload(
   pageId: string,
   variant: PageVariant,
 ): Promise<void> {
-  const pn = pagePathname(siteId, pageId, variant);
+  const pn = pagePathname(requireBuilderSiteIdForMutation(siteId), pageId, variant);
   if (isBlobBackend()) {
     await del(pn);
   } else {
-    const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
-    await rm(filePath, { force: true });
+    await removeLocalJsonPayload(pn);
   }
 }
 
-export async function readPageCanvasRecordState(
+function pageCanvasCasBackend(): 'blob' | 'local' {
+  return isBlobBackend() ? 'blob' : 'local';
+}
+
+function pageCanvasCasCoordinate(
   siteId: string,
   pageId: string,
-  variant: PageVariant = 'draft',
+  variant: PageVariant,
+  mutation: boolean,
+): PageCanvasCasCoordinate {
+  const normalizedSiteId = mutation
+    ? requireBuilderSiteIdForMutation(siteId)
+    : normalizeBuilderSiteId(siteId);
+  // Reuse the legacy path boundary so both stores accept exactly the same
+  // page-id alphabet even though the CAS adapter hashes local keys.
+  pagePathname(normalizedSiteId, pageId, variant);
+  return { siteId: normalizedSiteId, pageId, variant };
+}
+
+function createActivatedPageCanvasStore(): {
+  backend: 'blob' | 'local';
+  store: PageCanvasVersionedStore;
+} {
+  const backend = pageCanvasCasBackend();
+  const store = createPageCanvasVersionedStore({
+    backend,
+    ...(backend === 'blob'
+      ? { blobToken: process.env.BLOB_READ_WRITE_TOKEN }
+      : {
+          localRoot: resolvePageCanvasCasLocalRoot(localRoot()),
+          // expand/cutover already require the exact activation handshake.
+          // This keeps staged local production cutovers operable without
+          // weakening FileCas's safe default for unrelated callers.
+          productionMutationPolicy: 'allow' as const,
+        }),
+  });
+  return { backend, store };
+}
+
+async function readPageCanvasCasSnapshot(
+  store: PageCanvasVersionedStore,
+  coordinate: PageCanvasCasCoordinate,
+): Promise<PageCanvasCasSnapshot | null> {
+  try {
+    return await store.read(coordinate);
+  } catch (error) {
+    if (
+      error instanceof PersistenceMissingError
+      || (isPersistenceError(error) && error.code === PERSISTENCE_ERROR_CODES.MISSING)
+    ) {
+      return null;
+    }
+    throw error;
+  }
+}
+
+function canvasReadErrorFromCas(
+  error: unknown,
+  backend: 'blob' | 'local',
+): BuilderCanvasPersistenceError {
+  if (error instanceof BuilderCanvasPersistenceError) return error;
+  if (isPersistenceError(error) && error.code === PERSISTENCE_ERROR_CODES.INVALID_DATA) {
+    return new BuilderCanvasPersistenceError('invalid_data', backend, { cause: error });
+  }
+  return new BuilderCanvasPersistenceError('read_failed', backend, { cause: error });
+}
+
+async function readLegacyPageCanvasRecordState(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant,
 ): Promise<PageCanvasRecordState | null> {
   const payload = await readPageCanvasPayload(siteId, pageId, variant);
   if (!payload) return null;
@@ -615,6 +957,129 @@ export async function readPageCanvasRecordState(
     record: legacyRecordFromDocument(payload as BuilderCanvasDocument),
     isEnvelope: false,
   };
+}
+
+async function readCasPageCanvasRecordState(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant,
+  mode: 'expand' | 'cutover',
+): Promise<PageCanvasRecordState | null> {
+  const coordinate = pageCanvasCasCoordinate(siteId, pageId, variant, false);
+  const { backend, store } = createActivatedPageCanvasStore();
+  try {
+    const snapshot = await readPageCanvasCasSnapshot(store, coordinate);
+    if (mode === 'expand') {
+      const legacy = await readLegacyPageCanvasRecordState(siteId, pageId, variant);
+      if (snapshot && !legacy) {
+        throw new PersistenceInvalidDataError(
+          'Page canvas CAS record has no legacy source during expand verification',
+        );
+      }
+      if (snapshot && legacy && !isDeepStrictEqual(snapshot.record, legacy.record)) {
+        throw new PersistenceInvalidDataError(
+          'Page canvas CAS and legacy records diverge during expand verification',
+        );
+      }
+      return snapshot
+        ? { record: snapshot.record, isEnvelope: true }
+        : legacy;
+    }
+    if (snapshot) return { record: snapshot.record, isEnvelope: true };
+    // Cutover is authoritative: a missing CAS record is missing even if stale
+    // legacy bytes still exist. Invalid/unavailable CAS never reaches here.
+    return null;
+  } catch (error) {
+    throw canvasReadErrorFromCas(error, backend);
+  }
+}
+
+async function currentCasSnapshotForMutation(
+  store: PageCanvasVersionedStore,
+  coordinate: PageCanvasCasCoordinate,
+  mode: 'expand' | 'cutover',
+): Promise<PageCanvasCasSnapshot | null> {
+  // Expand is a read/verification phase. It intentionally freezes application
+  // mutations so rollback to legacy cannot resurrect deleted or stale bytes.
+  if (mode === 'expand') throw new PageCanvasCasMigrationRequiredError();
+  const snapshot = await readPageCanvasCasSnapshot(store, coordinate);
+  if (snapshot) return snapshot;
+
+  // Cutover reads never fall back, but mutations still inspect legacy
+  // existence to detect an incomplete backfill before creating a CAS record.
+  const legacy = await readLegacyPageCanvasRecordState(
+    coordinate.siteId,
+    coordinate.pageId,
+    coordinate.variant,
+  );
+  if (legacy) throw new PageCanvasCasMigrationRequiredError();
+  return null;
+}
+
+async function throwCasConflictWithCurrent(
+  store: PageCanvasVersionedStore,
+  coordinate: PageCanvasCasCoordinate,
+  cause: unknown,
+): Promise<never> {
+  const current = await readPageCanvasCasSnapshot(store, coordinate);
+  throw new PageCanvasCasConflictError(current
+    ? { revision: current.record.revision, savedAt: current.record.savedAt }
+    : null, { cause });
+}
+
+async function commitPageCanvasRecordCas(
+  store: PageCanvasVersionedStore,
+  coordinate: PageCanvasCasCoordinate,
+  current: PageCanvasCasSnapshot | null,
+  record: PageCanvasRecord,
+): Promise<PageCanvasRecord> {
+  try {
+    const committed = current
+      ? await store.compareAndSet(coordinate, current.storageVersion, record)
+      : await store.create(coordinate, record);
+    return committed.record;
+  } catch (error) {
+    if (isPersistenceError(error) && error.code === PERSISTENCE_ERROR_CODES.CONFLICT) {
+      return throwCasConflictWithCurrent(store, coordinate, error);
+    }
+    throw error;
+  }
+}
+
+async function updatePageCanvasRecordCas(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant,
+  updater: PageCanvasRecordUpdater,
+  mode: 'expand' | 'cutover',
+): Promise<PageCanvasRecord> {
+  const coordinate = pageCanvasCasCoordinate(siteId, pageId, variant, true);
+  const { store } = createActivatedPageCanvasStore();
+  const current = await currentCasSnapshotForMutation(store, coordinate, mode);
+  const state: PageCanvasRecordState | null = current
+    ? { record: current.record, isEnvelope: true }
+    : null;
+  // Full-document replacement is deliberately evaluated once. A stale CAS
+  // re-read is used only to report the conflict; it never re-runs the updater.
+  const next = await updater(state);
+  return commitPageCanvasRecordCas(store, coordinate, current, next);
+}
+
+export async function readPageCanvasRecordState(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant = 'draft',
+): Promise<PageCanvasRecordState | null> {
+  let mode: ReturnType<typeof resolvePageCanvasPersistenceMode>;
+  try {
+    mode = resolvePageCanvasPersistenceMode();
+  } catch (error) {
+    throw canvasReadErrorFromCas(error, pageCanvasCasBackend());
+  }
+  if (mode === 'legacy') {
+    return readLegacyPageCanvasRecordState(siteId, pageId, variant);
+  }
+  return readCasPageCanvasRecordState(siteId, pageId, variant, mode);
 }
 
 export async function readPageCanvasRecord(
@@ -632,8 +1097,20 @@ export async function writePageCanvasRecord(
   record: PageCanvasRecord,
   variant: PageVariant = 'draft',
 ): Promise<void> {
-  await withPageCanvasWriteLock(siteId, pageId, variant, () =>
-    writePageCanvasPayload(siteId, pageId, variant, record));
+  await withPageCanvasWriteLock(siteId, pageId, variant, async () => {
+    const mode = resolvePageCanvasPersistenceMode();
+    if (mode === 'legacy') {
+      await writePageCanvasPayload(siteId, pageId, variant, record);
+      return;
+    }
+    await updatePageCanvasRecordCas(
+      siteId,
+      pageId,
+      variant,
+      () => record,
+      mode,
+    );
+  });
 }
 
 export async function deletePageCanvasRecord(
@@ -641,8 +1118,26 @@ export async function deletePageCanvasRecord(
   pageId: string,
   variant: PageVariant = 'draft',
 ): Promise<void> {
-  await withPageCanvasWriteLock(siteId, pageId, variant, () =>
-    deletePageCanvasPayload(siteId, pageId, variant));
+  await withPageCanvasWriteLock(siteId, pageId, variant, async () => {
+    const mode = resolvePageCanvasPersistenceMode();
+    if (mode === 'legacy') {
+      await deletePageCanvasPayload(siteId, pageId, variant);
+      return;
+    }
+
+    const coordinate = pageCanvasCasCoordinate(siteId, pageId, variant, true);
+    const { store } = createActivatedPageCanvasStore();
+    const current = await currentCasSnapshotForMutation(store, coordinate, mode);
+    if (!current) return;
+    try {
+      await store.compareAndDelete(coordinate, current.storageVersion);
+    } catch (error) {
+      if (isPersistenceError(error) && error.code === PERSISTENCE_ERROR_CODES.CONFLICT) {
+        await throwCasConflictWithCurrent(store, coordinate, error);
+      }
+      throw error;
+    }
+  });
 }
 
 export async function updatePageCanvasRecord(
@@ -652,7 +1147,11 @@ export async function updatePageCanvasRecord(
   updater: PageCanvasRecordUpdater,
 ): Promise<PageCanvasRecord> {
   return withPageCanvasWriteLock(siteId, pageId, variant, async () => {
-    const state = await readPageCanvasRecordState(siteId, pageId, variant);
+    const mode = resolvePageCanvasPersistenceMode();
+    if (mode !== 'legacy') {
+      return updatePageCanvasRecordCas(siteId, pageId, variant, updater, mode);
+    }
+    const state = await readLegacyPageCanvasRecordState(siteId, pageId, variant);
     const record = await updater(state);
     await writePageCanvasPayload(siteId, pageId, variant, record);
     return record;
@@ -699,7 +1198,8 @@ export async function createPage(
   slug: string,
   title: string,
 ): Promise<BuilderPageMeta> {
-  const site = await ensureSiteDocument(siteId, locale);
+  const mutationSiteId = requireBuilderSiteIdForMutation(siteId);
+  const site = await ensureSiteDocument(mutationSiteId, locale);
   const pageId = generatePageId();
   const meta: BuilderPageMeta = {
     pageId,
@@ -731,7 +1231,8 @@ function removeNavigationItemsForPage(items: BuilderNavItem[], pageId: string): 
 }
 
 export async function deletePage(siteId: string, pageId: string, locale: Locale): Promise<void> {
-  const site = await ensureSiteDocument(siteId, locale);
+  const mutationSiteId = requireBuilderSiteIdForMutation(siteId);
+  const site = await ensureSiteDocument(mutationSiteId, locale);
   site.pages = site.pages.filter((p) => p.pageId !== pageId);
   site.navigation = removeNavigationItemsForPage(site.navigation, pageId);
   site.updatedAt = new Date().toISOString();
@@ -849,7 +1350,8 @@ export async function createLightbox(
   slug: string,
   name: string,
 ): Promise<BuilderLightbox> {
-  const site = await readSiteDocument(siteId, locale);
+  const mutationSiteId = requireBuilderSiteIdForMutation(siteId);
+  const site = await readSiteDocument(mutationSiteId, locale);
   if (!site.lightboxes) site.lightboxes = [];
   const lb = createDefaultLightbox(locale, slug, name);
   site.lightboxes.push(lb);
@@ -864,7 +1366,8 @@ export async function updateLightbox(
   id: string,
   patch: Partial<Omit<BuilderLightbox, 'id' | 'createdAt'>>,
 ): Promise<BuilderLightbox | null> {
-  const site = await readSiteDocument(siteId, locale);
+  const mutationSiteId = requireBuilderSiteIdForMutation(siteId);
+  const site = await readSiteDocument(mutationSiteId, locale);
   if (!site.lightboxes) site.lightboxes = [];
   const index = site.lightboxes.findIndex((lb) => lb.id === id);
   if (index === -1) return null;
@@ -886,7 +1389,8 @@ export async function deleteLightbox(
   locale: Locale,
   id: string,
 ): Promise<boolean> {
-  const site = await readSiteDocument(siteId, locale);
+  const mutationSiteId = requireBuilderSiteIdForMutation(siteId);
+  const site = await readSiteDocument(mutationSiteId, locale);
   if (!site.lightboxes) return false;
   const before = site.lightboxes.length;
   site.lightboxes = site.lightboxes.filter((lb) => lb.id !== id);
@@ -907,22 +1411,7 @@ export async function readLightboxCanvas(
   lightboxId: string,
 ): Promise<BuilderCanvasDocument | null> {
   const pn = lightboxPathname(siteId, lightboxId);
-  if (isBlobBackend()) {
-    try {
-      const result = await get(pn, { access: 'private', useCache: false });
-      if (result?.statusCode === 200 && result.stream) {
-        const text = await new Response(result.stream).text();
-        return JSON.parse(text) as BuilderCanvasDocument;
-      }
-    } catch { /* fallthrough */ }
-  } else {
-    try {
-      const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
-      const text = await readFile(filePath, 'utf8');
-      return JSON.parse(text) as BuilderCanvasDocument;
-    } catch { /* fallthrough */ }
-  }
-  return null;
+  return readStoredCanvasPayload(pn, validateStoredCanvasDocument);
 }
 
 export async function writeLightboxCanvas(
@@ -930,14 +1419,14 @@ export async function writeLightboxCanvas(
   lightboxId: string,
   doc: BuilderCanvasDocument,
 ): Promise<void> {
-  const pn = lightboxPathname(siteId, lightboxId);
+  const pn = lightboxPathname(requireBuilderSiteIdForMutation(siteId), lightboxId);
+  const backend = isBlobBackend() ? 'blob' : 'local';
+  validateCanvasValue(doc, backend, validateStoredCanvasDocument);
   const json = JSON.stringify(doc);
-  if (isBlobBackend()) {
+  if (backend === 'blob') {
     await put(pn, json, { access: 'private', allowOverwrite: true, contentType: 'application/json' });
   } else {
-    const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
-    await mkdir(path.dirname(filePath), { recursive: true });
-    await writeFileAtomicLocal(filePath, json);
+    await writeLocalJsonPayload(pn, json);
   }
 }
 
@@ -962,22 +1451,7 @@ async function readGlobalCanvas(
   slot: 'header' | 'footer',
 ): Promise<BuilderCanvasDocument | null> {
   const pn = globalCanvasPathname(siteId, slot);
-  if (isBlobBackend()) {
-    try {
-      const result = await get(pn, { access: 'private', useCache: false });
-      if (result?.statusCode === 200 && result.stream) {
-        const text = await new Response(result.stream).text();
-        return JSON.parse(text) as BuilderCanvasDocument;
-      }
-    } catch { /* fallthrough */ }
-  } else {
-    try {
-      const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
-      const text = await readFile(filePath, 'utf8');
-      return JSON.parse(text) as BuilderCanvasDocument;
-    } catch { /* fallthrough */ }
-  }
-  return null;
+  return readStoredCanvasPayload(pn, validateStoredCanvasDocument);
 }
 
 async function writeGlobalCanvas(
@@ -985,14 +1459,14 @@ async function writeGlobalCanvas(
   slot: 'header' | 'footer',
   doc: BuilderCanvasDocument,
 ): Promise<void> {
-  const pn = globalCanvasPathname(siteId, slot);
+  const pn = globalCanvasPathname(requireBuilderSiteIdForMutation(siteId), slot);
+  const backend = isBlobBackend() ? 'blob' : 'local';
+  validateCanvasValue(doc, backend, validateStoredCanvasDocument);
   const json = JSON.stringify(doc);
-  if (isBlobBackend()) {
+  if (backend === 'blob') {
     await put(pn, json, { access: 'private', allowOverwrite: true, contentType: 'application/json' });
   } else {
-    const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
-    await mkdir(path.dirname(filePath), { recursive: true });
-    await writeFileAtomicLocal(filePath, json);
+    await writeLocalJsonPayload(pn, json);
   }
 }
 
@@ -1021,7 +1495,8 @@ export async function ensureGlobalHeaderFooterIds(
   siteId: string,
   locale: Locale,
 ): Promise<boolean> {
-  const site = await readSiteDocument(siteId, locale);
+  const mutationSiteId = requireBuilderSiteIdForMutation(siteId);
+  const site = await readSiteDocument(mutationSiteId, locale);
   const current = site.headerFooter ?? {};
   const wantHeader = typeof current.headerCanvasId === 'string'
     ? current.headerCanvasId
@@ -1082,7 +1557,8 @@ export async function createSection(
     nodes: BuilderCanvasNode[];
   },
 ): Promise<SavedSection> {
-  const site = await readSiteDocument(siteId, locale);
+  const mutationSiteId = requireBuilderSiteIdForMutation(siteId);
+  const site = await readSiteDocument(mutationSiteId, locale);
   if (!site.sectionLibrary) site.sectionLibrary = [];
   const now = new Date().toISOString();
   const section: SavedSection = {
@@ -1109,7 +1585,8 @@ export async function updateSection(
   sectionId: string,
   patch: Partial<Omit<SavedSection, 'sectionId' | 'createdAt' | 'nodes' | 'rootNodeId'>>,
 ): Promise<SavedSection | null> {
-  const site = await readSiteDocument(siteId, locale);
+  const mutationSiteId = requireBuilderSiteIdForMutation(siteId);
+  const site = await readSiteDocument(mutationSiteId, locale);
   if (!site.sectionLibrary) site.sectionLibrary = [];
   const index = site.sectionLibrary.findIndex((s) => s.sectionId === sectionId);
   if (index === -1) return null;
@@ -1134,7 +1611,8 @@ export async function incrementSectionUsage(
   locale: Locale,
   sectionId: string,
 ): Promise<SavedSection | null> {
-  const site = await readSiteDocument(siteId, locale);
+  const mutationSiteId = requireBuilderSiteIdForMutation(siteId);
+  const site = await readSiteDocument(mutationSiteId, locale);
   if (!site.sectionLibrary) return null;
   const index = site.sectionLibrary.findIndex((s) => s.sectionId === sectionId);
   if (index === -1) return null;
@@ -1155,7 +1633,8 @@ export async function deleteSection(
   locale: Locale,
   sectionId: string,
 ): Promise<boolean> {
-  const site = await readSiteDocument(siteId, locale);
+  const mutationSiteId = requireBuilderSiteIdForMutation(siteId);
+  const site = await readSiteDocument(mutationSiteId, locale);
   if (!site.sectionLibrary) return false;
   const before = site.sectionLibrary.length;
   site.sectionLibrary = site.sectionLibrary.filter((s) => s.sectionId !== sectionId);
@@ -1168,12 +1647,13 @@ export async function deleteSection(
 // ─── Publish ──────────────────────────────────────────────────────
 
 export async function publishPage(siteId: string, pageId: string, locale: Locale): Promise<boolean> {
-  const draft = await readPageCanvas(siteId, pageId, 'draft');
+  const mutationSiteId = requireBuilderSiteIdForMutation(siteId);
+  const draft = await readPageCanvas(mutationSiteId, pageId, 'draft');
   if (!draft) {
     return false;
   }
-  await writePageCanvas(siteId, pageId, 'published', draft);
-  const site = await readSiteDocument(siteId, locale);
+  await writePageCanvas(mutationSiteId, pageId, 'published', draft);
+  const site = await readSiteDocument(mutationSiteId, locale);
   const page = site.pages.find((p) => p.pageId === pageId);
   if (page) {
     const publishedAt = new Date().toISOString();

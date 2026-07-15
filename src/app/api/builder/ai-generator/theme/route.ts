@@ -17,7 +17,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { userHasPermission } from '@/lib/builder/security/resolve-permission';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { normalizeLocale } from '@/lib/locales';
 import {
@@ -131,7 +131,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Missing permission: settings' }, { status: 403 });
     }
     const locale = normalizeLocale(parsed.data.locale ?? request.nextUrl.searchParams.get('locale') ?? 'ko');
-    const siteId = resolveBuilderSiteIdFromRequest(request);
+    const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request);
+    if (!siteResolution.ok) return siteResolution.response;
+    const siteId = siteResolution.siteId;
     const site = await readSiteDocument(siteId, locale);
     site.theme = mergeTheme(applyThemeSuggestionToTheme(mergeTheme(site.theme), parsed.data.suggestion));
     site.updatedAt = new Date().toISOString();

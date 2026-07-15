@@ -5,6 +5,7 @@ import type { BuilderEventListCanvasNode } from '@/lib/builder/canvas/types';
 import type { BuilderEvent } from '@/lib/builder/events/events-shared';
 import { DEFAULT_EVENT_CATEGORIES } from '@/lib/builder/events/events-shared';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { WidgetDataDisclosure } from '../_shared/WidgetDataDisclosure';
 import { getEventWidgetsCopy } from '../event-widgets-copy';
 import styles from './EventList.module.css';
 
@@ -91,6 +92,7 @@ export default function EventListElement({ node, mode = 'edit', locale }: EventL
       data-builder-event-list="true"
       style={rootStyle}
     >
+      {isBuilder ? <WidgetDataDisclosure locale={effectiveLocale} /> : null}
       {items.map((event) => {
         const href = isBuilder ? '#' : `/${effectiveLocale}/events/${event.slug}`;
         const remaining = Math.max(0, event.capacity - event.registeredCount);

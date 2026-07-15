@@ -36,7 +36,10 @@ vi.mock('@/lib/builder/bookings/storage', () => ({
 }));
 
 vi.mock('@/lib/builder/bookings/notifications', () => ({
-  sendBookingConfirmation: vi.fn(async () => undefined),
+  sendBookingConfirmation: vi.fn(async () => ({
+    ok: true,
+    customer: { ok: true, provider: 'resend' },
+  })),
 }));
 
 vi.mock('@/lib/builder/billing-document-automation', () => ({
@@ -128,6 +131,10 @@ describe('/api/builder/bookings/admin-create', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     vi.mocked(guardMutation).mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    vi.mocked(sendBookingConfirmation).mockResolvedValue({
+      ok: true,
+      customer: { ok: true, provider: 'resend' },
+    });
   });
 
   it('returns localized errors for invalid admin booking payloads', async () => {
@@ -204,6 +211,10 @@ describe('/api/builder/bookings/admin-create', () => {
       createdAt: '2026-05-01T00:00:00.000Z',
       updatedAt: '2026-05-02T00:00:00.000Z',
     }));
+    expect(payload.emailDelivery).toEqual({
+      ok: true,
+      customer: { ok: true },
+    });
     expect(makeBookingId).toHaveBeenCalled();
     expect(timestamped).toHaveBeenCalled();
     expect(saveBooking).toHaveBeenCalledWith(payload.booking);
@@ -211,6 +222,45 @@ describe('/api/builder/bookings/admin-create', () => {
       service: expect.objectContaining({ serviceId: 'svc-route-test' }),
       staff: expect.objectContaining({ staffId: 'staff-route-test' }),
     });
+  });
+
+  it('keeps an admin booking successful and reports sanitized provider delivery failures', async () => {
+    vi.mocked(getService).mockResolvedValueOnce(service());
+    vi.mocked(getStaff).mockResolvedValueOnce(staff());
+    vi.mocked(sendBookingConfirmation).mockResolvedValueOnce({
+      ok: false,
+      customer: { ok: false, provider: 'resend', reason: 'provider_error', status: 502 },
+      admin: { ok: false, provider: 'resend', reason: 'unconfigured' },
+    });
+
+    const route = await import('../route');
+    const response = await route.POST(postRequest(validBookingPayload(), 'en'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(201);
+    expect(saveBooking).toHaveBeenCalledTimes(1);
+    expect(payload.emailDelivery).toEqual({
+      ok: false,
+      customer: { ok: false, reason: 'provider_error' },
+      admin: { ok: false, reason: 'unconfigured' },
+    });
+    expect(JSON.stringify(payload.emailDelivery)).not.toContain('502');
+    expect(JSON.stringify(payload.emailDelivery)).not.toContain('resend');
+  });
+
+  it('keeps an admin booking successful when confirmation rendering throws', async () => {
+    vi.mocked(getService).mockResolvedValueOnce(service());
+    vi.mocked(getStaff).mockResolvedValueOnce(staff());
+    vi.mocked(sendBookingConfirmation).mockRejectedValueOnce(new Error('secret client@example.com render failure'));
+
+    const route = await import('../route');
+    const response = await route.POST(postRequest(validBookingPayload(), 'en'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(201);
+    expect(saveBooking).toHaveBeenCalledTimes(1);
+    expect(payload.emailDelivery).toEqual({ ok: false, reason: 'internal_error' });
+    expect(JSON.stringify(payload)).not.toContain('secret client@example.com render failure');
   });
 
   it('passes required resource ids into the price snapshot and records the resolved total', async () => {

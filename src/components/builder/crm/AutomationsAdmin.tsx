@@ -25,12 +25,25 @@ interface DraftState {
   addTag: string;
 }
 
+export function isEmailSimulationAvailable(nodeEnv = process.env.NODE_ENV): boolean {
+  return nodeEnv !== 'production';
+}
+
+export function isAutomationToggleReadOnly(
+  actionKind: CrmAutomationActionKind,
+  nodeEnv = process.env.NODE_ENV,
+): boolean {
+  return nodeEnv === 'production' && actionKind === 'simulate-email';
+}
+
+const EMAIL_SIMULATION_AVAILABLE = isEmailSimulationAvailable();
+
 const EMPTY: DraftState = {
   name: '',
   triggerKind: 'contact-created',
   matchTag: '',
   matchFormName: '',
-  actionKind: 'send-email-stub',
+  actionKind: EMAIL_SIMULATION_AVAILABLE ? 'simulate-email' : 'add-tag',
   templateId: '',
   webhookUrl: '',
   addTag: '',
@@ -44,7 +57,7 @@ const AUTOMATIONS_COPY = {
       'form-submitted': '폼 제출',
     },
     actionLabel: {
-      'send-email-stub': '이메일 발송 (스텁)',
+      'simulate-email': '이메일 시뮬레이션 (개발 전용)',
       'add-tag': '태그 추가',
       webhook: '웹훅 호출',
     },
@@ -81,7 +94,7 @@ const AUTOMATIONS_COPY = {
       'form-submitted': '表單送出',
     },
     actionLabel: {
-      'send-email-stub': '寄送 Email（stub）',
+      'simulate-email': 'Email 模擬（僅限開發環境）',
       'add-tag': '新增標籤',
       webhook: '呼叫 Webhook',
     },
@@ -118,7 +131,7 @@ const AUTOMATIONS_COPY = {
       'form-submitted': 'Form submitted',
     },
     actionLabel: {
-      'send-email-stub': 'Send email (stub)',
+      'simulate-email': 'Simulate email (development only)',
       'add-tag': 'Add tag',
       webhook: 'Call webhook',
     },
@@ -334,13 +347,15 @@ export default function AutomationsAdmin({ initialAutomations, locale }: Props) 
             data-testid="crm-automation-action-kind"
             style={inputStyle}
           >
-            {(Object.keys(copy.actionLabel) as CrmAutomationActionKind[]).map((k) => (
+            {(Object.keys(copy.actionLabel) as CrmAutomationActionKind[])
+              .filter((kind) => kind !== 'simulate-email' || EMAIL_SIMULATION_AVAILABLE)
+              .map((k) => (
               <option key={k} value={k}>
                 {copy.actionLabel[k]}
               </option>
-            ))}
+              ))}
           </select>
-          {draft.actionKind === 'send-email-stub' ? (
+          {draft.actionKind === 'simulate-email' ? (
             <input
               type="text"
               placeholder={copy.templateIdPlaceholder}
@@ -406,7 +421,9 @@ export default function AutomationsAdmin({ initialAutomations, locale }: Props) 
                 </td>
               </tr>
             ) : (
-              automations.map((a) => (
+              automations.map((a) => {
+                const productionSimulationIsReadOnly = isAutomationToggleReadOnly(a.action.kind);
+                return (
                 <tr key={a.id} data-testid={`crm-automation-row-${a.id}`} style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={td}>{a.name}</td>
                   <td style={td}>
@@ -422,9 +439,12 @@ export default function AutomationsAdmin({ initialAutomations, locale }: Props) 
                   <td style={td}>
                     <button
                       type="button"
-                      disabled={busy}
+                      disabled={busy || productionSimulationIsReadOnly}
                       onClick={() => void toggleEnabled(a)}
                       data-testid={`crm-automation-toggle-${a.id}`}
+                      title={productionSimulationIsReadOnly
+                        ? copy.actionLabel['simulate-email']
+                        : undefined}
                       style={{
                         ...ghostButton,
                         background: a.enabled ? '#16a34a' : '#94a3b8',
@@ -447,7 +467,8 @@ export default function AutomationsAdmin({ initialAutomations, locale }: Props) 
                     </button>
                   </td>
                 </tr>
-              ))
+                );
+              })
             )}
           </tbody>
         </table>

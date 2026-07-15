@@ -118,7 +118,7 @@ describe('builder animation rendering', () => {
       previewPhase: null,
     });
     expect(editorStyle.opacity).toBe(0.75);
-    expect(editorStyle.transition).toContain('opacity 180ms ease');
+    expect(editorStyle.transition).toContain('opacity 180ms cubic-bezier(0.16, 1, 0.3, 1)');
   });
 
   it('exposes background parallax as a published scroll effect', () => {

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import type { BuilderProductGalleryCanvasNode } from '@/lib/builder/canvas/types';
+import { WidgetDataDisclosure } from '../_shared/WidgetDataDisclosure';
 import {
   commerceInventoryAvailability,
   type CommerceProduct,
@@ -252,6 +253,7 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
       data-builder-product-gallery-page={currentPage + 1}
       style={rootStyle}
     >
+      {isBuilder ? <WidgetDataDisclosure locale={effectiveLocale} /> : null}
       {(c.showCategoryFilter || c.showSort) ? (
         <div className={styles.toolbar}>
           {c.showCategoryFilter ? (

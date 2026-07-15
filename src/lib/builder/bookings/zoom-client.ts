@@ -26,16 +26,26 @@ interface ZoomMockConfig {
 
 export type ZoomCreateMeetingResult =
   | { ok: true; meetingLink: string; meetingId: string }
-  | { ok: false; reason: 'unconfigured' | 'token' | 'meeting' | 'network'; details?: string };
+  | { ok: false; reason: 'unconfigured' | 'token' | 'meeting' | 'network' };
 
-async function fetchAccessToken(): Promise<string | null> {
+interface ZoomCredentials {
+  accountId: string;
+  clientId: string;
+  clientSecret: string;
+}
+
+function loadCredentials(): ZoomCredentials | null {
   const accountId = process.env.ZOOM_ACCOUNT_ID ?? '';
   const clientId = process.env.ZOOM_CLIENT_ID ?? '';
   const clientSecret = process.env.ZOOM_CLIENT_SECRET ?? '';
   if (!accountId || !clientId || !clientSecret) return null;
+  return { accountId, clientId, clientSecret };
+}
+
+async function fetchAccessToken(credentials: ZoomCredentials): Promise<string | null> {
   try {
-    const basic = Buffer.from(`${clientId}:${clientSecret}`, 'utf8').toString('base64');
-    const url = `https://zoom.us/oauth/token?grant_type=account_credentials&account_id=${encodeURIComponent(accountId)}`;
+    const basic = Buffer.from(`${credentials.clientId}:${credentials.clientSecret}`, 'utf8').toString('base64');
+    const url = `https://zoom.us/oauth/token?grant_type=account_credentials&account_id=${encodeURIComponent(credentials.accountId)}`;
     const res = await fetch(url, {
       method: 'POST',
       headers: { Authorization: `Basic ${basic}` },
@@ -49,16 +59,15 @@ async function fetchAccessToken(): Promise<string | null> {
 }
 
 async function loadMockConfig(): Promise<ZoomMockConfig | null> {
-  // BUILDER_ZOOM_MOCK_ALLOW=1 keeps the mock available when a production
-  // build runs in a local/QA harness without real Zoom credentials.
-  if (process.env.NODE_ENV === 'production' && process.env.BUILDER_ZOOM_MOCK_ALLOW !== '1') return null;
+  // Mock meetings are a development/test aid only. Production must fail
+  // closed when real Zoom credentials are unavailable.
+  if (process.env.NODE_ENV === 'production') return null;
   if (process.env.BUILDER_ZOOM_MOCK_MEETING_LINK) {
     return { meetingLinkBase: process.env.BUILDER_ZOOM_MOCK_MEETING_LINK };
   }
   const candidatePaths = [
     process.env.BUILDER_ZOOM_MOCK_PATH,
     path.join(process.cwd(), 'runtime-data', 'builder-bookings', 'zoom-mock.json'),
-    path.join('/Users/son7/Projects/tseng-law', 'runtime-data', 'builder-bookings', 'zoom-mock.json'),
   ].filter((value): value is string => Boolean(value));
   for (const mockPath of candidatePaths) {
     try {
@@ -69,7 +78,9 @@ async function loadMockConfig(): Promise<ZoomMockConfig | null> {
       // Try the next candidate path.
     }
   }
-  return { meetingLinkBase: 'https://meet.example.com/mock' };
+  // Never invent a mock meeting implicitly. Simulation must be explicitly
+  // opted into via BUILDER_ZOOM_MOCK_MEETING_LINK or BUILDER_ZOOM_MOCK_PATH.
+  return null;
 }
 
 export async function createZoomMeeting(args: ZoomCreateMeetingArgs): Promise<ZoomCreateMeetingResult> {
@@ -86,10 +97,11 @@ export async function createZoomMeeting(args: ZoomCreateMeetingArgs): Promise<Zo
     return { ok: true, meetingLink: url.toString(), meetingId: 'mock' };
   }
 
-  const token = await fetchAccessToken();
+  const credentials = loadCredentials();
+  if (!credentials) return { ok: false, reason: 'unconfigured' };
+
+  const token = await fetchAccessToken(credentials);
   if (!token) {
-    const accountId = process.env.ZOOM_ACCOUNT_ID ?? '';
-    if (!accountId) return { ok: false, reason: 'unconfigured' };
     return { ok: false, reason: 'token' };
   }
 
@@ -118,20 +130,15 @@ export async function createZoomMeeting(args: ZoomCreateMeetingArgs): Promise<Zo
     });
 
     if (!res.ok) {
-      const text = await res.text().catch(() => '');
-      return { ok: false, reason: 'meeting', details: text.slice(0, 200) };
+      return { ok: false, reason: 'meeting' };
     }
 
     const data = (await res.json()) as { join_url?: string; id?: number | string };
     if (!data.join_url || !data.id) {
-      return { ok: false, reason: 'meeting', details: 'missing join_url or id' };
+      return { ok: false, reason: 'meeting' };
     }
     return { ok: true, meetingLink: data.join_url, meetingId: String(data.id) };
-  } catch (err) {
-    return {
-      ok: false,
-      reason: 'network',
-      details: err instanceof Error ? err.message : String(err),
-    };
+  } catch {
+    return { ok: false, reason: 'network' };
   }
 }

@@ -38,6 +38,7 @@ const automation: CrmAutomation = {
 
 describe('builder CRM automation detail API', () => {
   beforeEach(() => {
+    vi.unstubAllEnvs();
     vi.clearAllMocks();
     guardMutationMock.mockResolvedValue({ username: 'crm-admin@example.test' } as never);
     mutateAutomationsMock.mockImplementation(async (updater) => updater([automation]).result as never);
@@ -70,6 +71,77 @@ describe('builder CRM automation detail API', () => {
     expect(mutateAutomationsMock).not.toHaveBeenCalled();
   });
 
+  it('rejects patching to the legacy email-stub action before storage mutation', async () => {
+    const response = await PATCH(request('PATCH', 'locale=en', {
+      action: { kind: 'send-email-stub', templateId: 'legacy' },
+    }), routeContext);
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({ ok: false, errorCode: 'invalid_automation_patch' });
+    expect(mutateAutomationsMock).not.toHaveBeenCalled();
+  });
+
+  it('rejects patching to email simulation in production before storage mutation', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_CRM_EMAIL_STUB', '1');
+
+    const response = await PATCH(request('PATCH', 'locale=en', {
+      action: { kind: 'simulate-email', templateId: 'not-a-delivery' },
+    }), routeContext);
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({ ok: false, errorCode: 'invalid_automation_patch' });
+    expect(mutateAutomationsMock).not.toHaveBeenCalled();
+  });
+
+  it('rejects enabling a persisted email simulation in production before the write commits', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    let writeCommitted = false;
+    mutateAutomationsMock.mockImplementationOnce(async (updater) => {
+      const result = updater([{
+        ...automation,
+        action: { kind: 'simulate-email', templateId: 'legacy-normalized' },
+        enabled: false,
+      }]);
+      writeCommitted = true;
+      return result.result as never;
+    });
+
+    const response = await PATCH(request('PATCH', 'locale=en', { enabled: true }), routeContext);
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toEqual({
+      ok: false,
+      error: 'Check the automation update details.',
+      errorCode: 'invalid_automation_patch',
+    });
+    expect(writeCommitted).toBe(false);
+  });
+
+  it('rejects status-only edits on a persisted production simulation before the write commits', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    let writeCommitted = false;
+    mutateAutomationsMock.mockImplementationOnce(async (updater) => {
+      const result = updater([{
+        ...automation,
+        action: { kind: 'simulate-email', templateId: 'legacy-normalized' },
+        enabled: true,
+      }]);
+      writeCommitted = true;
+      return result.result as never;
+    });
+
+    const response = await PATCH(request('PATCH', 'locale=en', { enabled: false }), routeContext);
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({ ok: false, errorCode: 'invalid_automation_patch' });
+    expect(writeCommitted).toBe(false);
+  });
+
   it('returns localized not-found errors', async () => {
     mutateAutomationsMock.mockImplementationOnce(async (updater) => updater([]).result as never);
 
@@ -98,7 +170,10 @@ describe('builder CRM automation detail API', () => {
       errorCode: 'automation_update_failed',
     });
     expect(JSON.stringify(data)).not.toContain('automation update secret leaked');
-    expect(consoleError).toHaveBeenCalledWith('[builder/crm/automations/:id] update failed:', expect.any(Error));
+    expect(consoleError).toHaveBeenCalledWith('[builder/crm/automations/:id] update failed', {
+      errorCode: 'automation_update_failed',
+    });
+    expect(JSON.stringify(consoleError.mock.calls)).not.toContain('automation update secret leaked');
     consoleError.mockRestore();
   });
 
@@ -116,7 +191,10 @@ describe('builder CRM automation detail API', () => {
       errorCode: 'automation_delete_failed',
     });
     expect(JSON.stringify(data)).not.toContain('automation delete secret leaked');
-    expect(consoleError).toHaveBeenCalledWith('[builder/crm/automations/:id] delete failed:', expect.any(Error));
+    expect(consoleError).toHaveBeenCalledWith('[builder/crm/automations/:id] delete failed', {
+      errorCode: 'automation_delete_failed',
+    });
+    expect(JSON.stringify(consoleError.mock.calls)).not.toContain('automation delete secret leaked');
     consoleError.mockRestore();
   });
 });

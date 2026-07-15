@@ -175,24 +175,16 @@ async function openBuilderPageById(page: Page, pageId: string, scope: string): P
 async function selectNodeWithHandles(page: Page, nodeId: string): Promise<ReturnType<Page['locator']>> {
   const node = page.locator(`[data-node-id="${nodeId}"]`).first();
   await expect(node).toBeVisible({ timeout: 15_000 });
-
-  for (let attempt = 0; attempt < 5; attempt += 1) {
-    const box = await node.boundingBox();
-    await node.click({
-      position: box
-        ? {
-          x: Math.max(1, Math.min(box.width - 1, box.width / 2)),
-          y: Math.max(1, Math.min(box.height - 1, box.height / 2)),
-        }
-        : { x: 24, y: 24 },
-      force: true,
-    });
-    const selected = page.locator(`[data-node-id="${nodeId}"][class*="nodeSelected"]`).first();
-    const handleCount = await selected.locator('[class*="resizeHandle"]:visible').count().catch(() => 0);
-    if (handleCount === 8) return selected;
-    await page.waitForTimeout(200);
-  }
-
+  await node.scrollIntoViewIfNeeded();
+  const box = await node.boundingBox();
+  await node.click({
+    position: box
+      ? {
+        x: Math.max(1, Math.min(box.width - 1, box.width / 2)),
+        y: Math.max(1, Math.min(box.height - 1, box.height / 2)),
+      }
+      : { x: 24, y: 24 },
+  });
   const selected = page.locator(`[data-node-id="${nodeId}"][class*="nodeSelected"]`).first();
   await expect(selected.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
   return selected;
@@ -248,7 +240,7 @@ test.describe('/ko/admin-builder inline text editing', () => {
       });
       expect(beforeVisual.fontSize).toBeGreaterThan(48);
 
-      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 }, force: true });
+      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 } });
       const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
       const editable = editorShell.locator('.ProseMirror').first();
       await expect(editorShell).toBeVisible();
@@ -277,7 +269,7 @@ test.describe('/ko/admin-builder inline text editing', () => {
       expect(editorVisual.blockMarginBottom).toBe(0);
 
       await editable.fill(editedText);
-      await page.locator('header[class*="topBar"]').click({ position: { x: 20, y: 20 }, force: true });
+      await page.locator('header[class*="topBar"]').click({ position: { x: 20, y: 20 } });
 
       await expect(editorShell).toBeHidden();
       await expect(page.locator('[data-node-id][data-selected="true"]')).toHaveCount(0);
@@ -392,7 +384,7 @@ test.describe('/ko/admin-builder inline text editing', () => {
       });
       expect(beforeVisual.fontSize).toBeGreaterThan(32);
 
-      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 }, force: true });
+      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 } });
       const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
       const editable = editorShell.locator('.ProseMirror').first();
       await expect(editorShell).toBeVisible();
@@ -415,7 +407,7 @@ test.describe('/ko/admin-builder inline text editing', () => {
       expect(editorVisual.blockMarginBottom).toBe(0);
 
       await editable.fill(editedText);
-      await page.locator('header[class*="topBar"]').click({ position: { x: 20, y: 20 }, force: true });
+      await page.locator('header[class*="topBar"]').click({ position: { x: 20, y: 20 } });
       await expect(editorShell).toBeHidden();
       await expect(page.locator('[data-node-id][data-selected="true"]')).toHaveCount(0);
       await expect(page.locator('[class*="selectionPill"]:visible')).toHaveCount(0);
@@ -480,6 +472,13 @@ test.describe('/ko/admin-builder inline text editing', () => {
   test('edits text inline with Wix-like toolbar and persists after reload', async ({ page }) => {
     test.setTimeout(90_000);
 
+    const duplicateExtensionWarnings: string[] = [];
+    page.on('console', (message) => {
+      if (message.type() === 'warning' && message.text().includes('Duplicate extension names')) {
+        duplicateExtensionWarnings.push(message.text());
+      }
+    });
+
     const token = `w03-${Date.now().toString(36)}`;
     const title = `W03 Inline ${token}`;
     const slug = `g-editor-${token}`;
@@ -508,12 +507,21 @@ test.describe('/ko/admin-builder inline text editing', () => {
       await expect(textNode).toContainText(originalText);
       await selectNodeWithHandles(page, textId);
 
-      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 }, force: true });
+      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 } });
       const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
       const toolbar = page.locator('[data-builder-inline-text-toolbar="true"]').first();
       await expect(editorShell).toBeVisible();
       await expect(toolbar).toBeVisible();
       await expect(toolbar).toHaveAttribute('data-placement', /above|below/);
+      const commitAction = toolbar.locator('[data-builder-inline-text-action="commit"]');
+      const cancelAction = toolbar.locator('[data-builder-inline-text-action="cancel"]');
+      await expect(commitAction).toBeVisible();
+      await expect(commitAction).toContainText('완료');
+      await expect(commitAction).toHaveAttribute('aria-keyshortcuts', 'Control+Enter Meta+Enter');
+      await expect(cancelAction).toBeVisible();
+      await expect(cancelAction).toContainText('취소');
+      await expect(cancelAction).toHaveAttribute('aria-keyshortcuts', 'Escape');
+      expect(duplicateExtensionWarnings).toEqual([]);
       const toolbarVisual = await toolbar.evaluate((element) => {
         const style = window.getComputedStyle(element);
         return {
@@ -535,6 +543,10 @@ test.describe('/ko/admin-builder inline text editing', () => {
       await expect(page.locator('[class*="selectionToolbar"]:visible')).toHaveCount(0);
 
       const editable = editorShell.locator('.ProseMirror').first();
+      await expect.poll(() => editable.evaluate((element) => {
+        const selection = window.getSelection();
+        return Boolean(selection?.isCollapsed && selection.anchorNode && element.contains(selection.anchorNode));
+      })).toBe(true);
       await editable.fill(canceledText);
       await page.keyboard.press('Escape');
       await expect(editorShell).toBeHidden();
@@ -549,26 +561,51 @@ test.describe('/ko/admin-builder inline text editing', () => {
         richPlainText: originalText,
       });
 
-      await textNode.dblclick({ position: { x: 30, y: 30 }, force: true });
+      await textNode.dblclick({ position: { x: 30, y: 30 } });
       await expect(editorShell).toBeVisible();
       await expect(editable).toContainText(originalText);
+      const linkButton = toolbar.getByRole('button', { name: /^Link$|^링크$/ });
+      await linkButton.click();
+      const linkDialog = toolbar.getByRole('dialog', { name: /링크|Link/ }).first();
+      await expect(linkDialog).toBeVisible();
+      const hrefInput = linkDialog.locator('[data-builder-href-input="true"]');
+      await hrefInput.focus();
+      await hrefInput.press('Escape');
+      await expect(linkDialog).toBeHidden();
+      await expect(editorShell).toBeVisible();
+      await expect(linkButton).toBeFocused();
+
+      await editable.fill('First paragraph');
+      await editable.press('End');
+      await editable.press('Enter');
+      await editable.type('Second paragraph');
+      await expect(editable.locator('p')).toHaveCount(2);
+      await editable.press('Shift+Enter');
+      await editable.type('soft break');
+      await expect(editable.locator('br')).toHaveCount(1);
+
       const boldButton = toolbar.getByRole('button', { name: /^Bold$|^굵게$/ });
       await expect(boldButton).toHaveAttribute('aria-pressed', 'false');
       await editable.fill(editedText);
-      await editable.press(`${shortcutModifier}+A`);
-      await boldButton.click();
+      await editable.selectText();
+      await expect.poll(() => editable.evaluate(() => window.getSelection()?.toString() ?? ''))
+        .toBe(editedText);
+      await boldButton.focus();
+      await boldButton.press('Enter');
       await expect(boldButton).toHaveAttribute('aria-pressed', 'true');
-      const activeButtonVisual = await boldButton.evaluate((element) => {
+      await expect(editable.locator('strong')).toContainText(editedText);
+      await expect.poll(async () => boldButton.evaluate((element) => {
         const style = window.getComputedStyle(element);
         return {
           backgroundColor: style.backgroundColor,
           color: style.color,
         };
+      })).toEqual({
+        backgroundColor: 'rgb(17, 109, 255)',
+        color: 'rgb(255, 255, 255)',
       });
-      expect(activeButtonVisual.backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
-      expect(activeButtonVisual.color).toBe('rgb(255, 255, 255)');
       await editable.focus();
-      await page.keyboard.press('Enter');
+      await commitAction.click();
       await expect(editorShell).toBeHidden();
       await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(editedText);
 
@@ -623,6 +660,32 @@ test.describe('/ko/admin-builder inline text editing', () => {
         };
       }, { timeout: 15_000 }).toEqual({ text: editedText, bold: true });
 
+      await textNode.dblclick({ position: { x: 30, y: 30 } });
+      await expect(editorShell).toBeVisible();
+      await editable.fill(canceledText);
+      await cancelAction.click();
+      await expect(editorShell).toBeHidden();
+      await expect.poll(async () => {
+        const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
+        return node?.content?.text ?? null;
+      }, { timeout: 15_000 }).toBe(editedText);
+
+      await textNode.dblclick({ position: { x: 30, y: 30 } });
+      await expect(editorShell).toBeVisible();
+      await editable.focus();
+      await editable.press(`${shortcutModifier}+Enter`);
+      await expect(editorShell).toBeHidden();
+
+      await textNode.dblclick({ position: { x: 30, y: 30 } });
+      await expect(editorShell).toBeVisible();
+      await editable.focus();
+      await editable.press('Tab');
+      await expect(editorShell).toBeHidden();
+      await expect.poll(() => page.evaluate(() => {
+        const active = document.activeElement;
+        return active !== document.body && !active?.closest('[data-builder-inline-text-editor="true"]');
+      })).toBe(true);
+
       await openBuilderPageById(page, pageId, 'reload');
       await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(editedText, {
         timeout: 15_000,
@@ -665,7 +728,7 @@ test.describe('/ko/admin-builder inline text editing', () => {
 
       await openBuilderPageById(page, pageId, 'outside-click');
       await selectNodeWithHandles(page, textId);
-      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 }, force: true });
+      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 } });
 
       const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
       const editable = editorShell.locator('.ProseMirror').first();
@@ -683,7 +746,6 @@ test.describe('/ko/admin-builder inline text editing', () => {
           x: Math.max(10, Math.floor(stageBox.width * 0.86)),
           y: Math.max(10, Math.floor(stageBox.height * 0.82)),
         },
-        force: true,
       });
 
       await expect(editorShell).toBeHidden();

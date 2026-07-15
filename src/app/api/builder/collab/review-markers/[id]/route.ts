@@ -17,7 +17,7 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 import {
   normalizeCollabId,
   readJsonObject,
-  resolveCollabSiteIdFromRequest,
+  resolveCollabMutationSiteIdFromRequest,
 } from '../../request-parsing';
 
 export const runtime = 'nodejs';
@@ -46,10 +46,6 @@ function resolveLocale(request: NextRequest): Locale {
   return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 }
 
-function requireSiteId(request: NextRequest): string {
-  return resolveCollabSiteIdFromRequest(request);
-}
-
 export async function PATCH(
   request: NextRequest,
   { params }: { params: { id: string } },
@@ -60,7 +56,9 @@ export async function PATCH(
 
   const id = normalizeCollabId(params.id);
   if (!id) return badRequest(locale);
-  const siteId = requireSiteId(request);
+  const siteResolution = resolveCollabMutationSiteIdFromRequest(request);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
 
   let body: Record<string, unknown>;
   try {
@@ -119,7 +117,9 @@ export async function DELETE(
 
   const id = normalizeCollabId(params.id);
   if (!id) return badRequest(locale);
-  const siteId = requireSiteId(request);
+  const siteResolution = resolveCollabMutationSiteIdFromRequest(request);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
 
   try {
     const deleted = await deleteReviewMarker(siteId, id);

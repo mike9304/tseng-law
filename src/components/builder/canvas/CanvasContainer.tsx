@@ -45,7 +45,10 @@ import {
   getCanvasNodeDescendantIds,
   resolveCanvasNodeAbsoluteRectForViewport,
 } from '@/lib/builder/canvas/tree';
-import { isTopLevelFlowSection } from '@/lib/builder/canvas/flow';
+import {
+  computeEffectiveViewportStageHeight,
+  isTopLevelFlowSection,
+} from '@/lib/builder/canvas/flow';
 import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import {
   BUILDER_FAQ_ACCORDION_SECTION_HEIGHT,
@@ -369,11 +372,18 @@ export default function CanvasContainer({
   const stageWidth = currentViewport === 'desktop'
     ? documentStageWidth
     : VIEWPORT_WIDTHS[currentViewport];
-  const stageHeight = displayDocument?.stageHeight ?? DEFAULT_STAGE_HEIGHT;
+  const documentStageHeight = displayDocument?.stageHeight ?? DEFAULT_STAGE_HEIGHT;
   const interactivePreview = useBuilderCanvasStore((state) => state.interactivePreview);
   const storeNodesById = useBuilderCanvasStore((state) => state.nodesById);
   const nodesById = storeDocument ? storeNodesById : fallbackNodesById;
   const childrenMap = storeDocument ? storeChildrenMap : fallbackChildrenMap;
+  const viewportStageHeight = useMemo(() => computeEffectiveViewportStageHeight({
+    childrenMap,
+    fallbackStageHeight: documentStageHeight,
+    nodes,
+    nodesById,
+    viewport: currentViewport,
+  }), [childrenMap, currentViewport, documentStageHeight, nodes, nodesById]);
   const previewStageExtra = useMemo(() => {
     const servicesRoot = nodesById.get('home-services-root');
     const faqRoot = nodesById.get('home-faq-root');
@@ -392,7 +402,7 @@ export default function CanvasContainer({
     interactivePreview.servicesRevealedIndices,
     nodesById,
   ]);
-  const effectiveStageHeight = stageHeight + previewStageExtra;
+  const effectiveStageHeight = viewportStageHeight + previewStageExtra;
   const { rootVisibleNodes, visibleContainerNodes, visibleNodes } = useMemo(
     () => getVisibleCanvasNodeBuckets(nodes),
     [nodes],
@@ -454,6 +464,7 @@ export default function CanvasContainer({
     commitMutationSession,
     currentViewport,
     gridSnapSize: editorPrefs.pixelGrid.enabled ? editorPrefs.pixelGrid.size : 0,
+    interactionResetKey: viewportResetKey,
     nodesById,
     onToast,
     referenceGuides: editorPrefs.referenceGuides,
@@ -891,6 +902,7 @@ export default function CanvasContainer({
               onCanvasPageLink={onCanvasPageLink}
               interaction={interaction}
               locale={locale}
+              renderScopeKey={viewportResetKey}
             />
 
             <CanvasCollabCursorsLayer

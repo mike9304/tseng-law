@@ -1,7 +1,10 @@
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
-import AutomationsAdmin from '../AutomationsAdmin';
+import AutomationsAdmin, {
+  isAutomationToggleReadOnly,
+  isEmailSimulationAvailable,
+} from '../AutomationsAdmin';
 import ContactsAdmin from '../ContactsAdmin';
 import IntegrationsAdmin from '../IntegrationsAdmin';
 import OutboxAdmin from '../OutboxAdmin';
@@ -9,6 +12,13 @@ import OutboxAdmin from '../OutboxAdmin';
 const HANGUL = /[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]/;
 
 describe('CRM admin localization', () => {
+  it('does not offer or toggle email simulations in production', () => {
+    expect(isEmailSimulationAvailable('production')).toBe(false);
+    expect(isAutomationToggleReadOnly('simulate-email', 'production')).toBe(true);
+    expect(isAutomationToggleReadOnly('add-tag', 'production')).toBe(false);
+    expect(isEmailSimulationAvailable('development')).toBe(true);
+  });
+
   it('renders localized contacts admin chrome in zh-hant', () => {
     const html = renderToStaticMarkup(
       <ContactsAdmin
@@ -102,7 +112,8 @@ describe('CRM admin localization', () => {
       />,
     );
 
-    expect(html).toContain('寄送紀錄');
+    expect(html).toContain('Email 模擬紀錄');
+    expect(html).toContain('並非實際寄送紀錄');
     expect(html).toContain('自動化');
     expect(html).toContain('範本');
     expect(html).toContain('lead@example.test');

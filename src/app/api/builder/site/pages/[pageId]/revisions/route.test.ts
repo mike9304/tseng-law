@@ -116,6 +116,11 @@ describe('/api/builder/site/pages/[pageId]/revisions', () => {
       error: '找不到頁面修訂。',
       errorCode: 'revision_not_found',
     });
+    expect(mockedReadRevisionDocument).toHaveBeenCalledWith(
+      siteDocument.siteId,
+      'page-1',
+      'rev-missing',
+    );
   });
 
   it('returns localized stable-code JSON when revision list loading fails', async () => {
@@ -130,6 +135,7 @@ describe('/api/builder/site/pages/[pageId]/revisions', () => {
       errorCode: 'revision_load_failed',
     });
     expect(data.error).not.toContain('raw revision list failure');
+    expect(mockedListRevisions).toHaveBeenCalledWith(siteDocument.siteId, 'page-1');
   });
 
   it('returns localized stable-code JSON when there is no draft to snapshot', async () => {
@@ -158,5 +164,23 @@ describe('/api/builder/site/pages/[pageId]/revisions', () => {
       errorCode: 'revision_create_failed',
     });
     expect(data.error).not.toContain('revision_write_failed');
+    expect(mockedRecordRevision).toHaveBeenCalledWith(
+      siteDocument.siteId,
+      'page-1',
+      document,
+      { source: 'manual' },
+    );
+  });
+
+  it('rejects a malformed snapshot site id before any revision read or write', async () => {
+    const response = await route.POST(postRequest({ siteId: ['workspace-site-b'], document }), {
+      params: { pageId: 'page-1' },
+    });
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({ ok: false, success: false, errorCode: 'invalid_site_id' });
+    expect(mockedReadPageCanvasRecordState).not.toHaveBeenCalled();
+    expect(mockedRecordRevision).not.toHaveBeenCalled();
   });
 });

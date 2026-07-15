@@ -26,8 +26,12 @@ import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
 } from '@/lib/builder/site/site-api-copy';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  resolveBuilderSiteIdForMutationFromRequest,
+  resolveBuilderSiteIdFromRequest,
+} from '@/lib/builder/site/admin-routing';
 import { normalizeMemberAccessInput } from '@/lib/builder/site/member-access-input';
+import { SiteInvariantError, type SiteInvariantIssue } from '@/lib/builder/site/site-invariants';
 import type { CreatePageRequestBody } from './create-page-request';
 import {
   createCreatePageDynamicCanvas,
@@ -89,6 +93,34 @@ function pageRouteErrorResponse(
   );
 }
 
+function sanitizeSiteInvariantIssues(issues: readonly SiteInvariantIssue[]) {
+  return issues.map((issue) => ({
+    code: issue.code,
+    ...(issue.pageId !== undefined ? { pageId: issue.pageId } : {}),
+    ...(issue.conflictingPageId !== undefined ? { conflictingPageId: issue.conflictingPageId } : {}),
+    ...(issue.locale !== undefined ? { locale: issue.locale } : {}),
+    ...(issue.slug !== undefined ? { slug: issue.slug } : {}),
+    ...(issue.field !== undefined ? { field: issue.field } : {}),
+  }));
+}
+
+function siteInvariantConflictResponse(
+  locale: Locale,
+  error: SiteInvariantError,
+): NextResponse {
+  const copy = getBuilderSiteApiErrorPayload(locale, 'page_create_failed');
+  return NextResponse.json(
+    {
+      ok: false,
+      success: false,
+      error: copy.error,
+      errorCode: 'site_invariant_conflict',
+      issues: sanitizeSiteInvariantIssues(error.issues),
+    },
+    { status: 409 },
+  );
+}
+
 export async function GET(request: NextRequest) {
   const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
@@ -117,8 +149,9 @@ export async function POST(request: NextRequest) {
   }
 
   const locale = normalizeLocale(body.locale || request.nextUrl.searchParams.get('locale') || 'ko');
-  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
-  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   const rawDynamicListCollectionId = body.dynamicListCollectionId?.trim();
   const dynamicListCollectionId = isSupportedDynamicListCollectionId(rawDynamicListCollectionId)
     ? rawDynamicListCollectionId
@@ -272,7 +305,10 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json({ success: true, pageId: page.pageId, page: createdPage });
-  } catch {
+  } catch (error) {
+    if (error instanceof SiteInvariantError) {
+      return siteInvariantConflictResponse(locale, error);
+    }
     return pageRouteErrorResponse(locale, 'page_create_failed', 500);
   }
 }

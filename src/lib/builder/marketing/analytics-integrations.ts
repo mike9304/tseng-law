@@ -159,7 +159,7 @@ async function dispatchOne(
     case 'slack-webhook':
       await postWebhook(integration, buildSlackPayload(event), fetchImpl);
       return;
-    case 'mailchimp-stub':
+    case 'mailchimp':
       return;
     default:
       return assertNever(integration.kind);

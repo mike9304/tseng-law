@@ -9512,7 +9512,7 @@ Rule: gap candidates stay open until reproduced, fixed, and checked in the edito
 - 목표:
   - ops backup register에서 생성한 JSON backup을 원본 runtime-data 파일로 되돌릴 수 있게 해서, recovery drill이 실제로 작동하는지 검증한다.
 - 변경:
-  - `src/lib/builder/ops/backups-store.ts` — `restoreOpsBackupStub()`와 `getOpsBackupById()`를 추가해 backup payload를 원본 sourcePath로 다시 복사할 수 있게 했다.
+  - `src/lib/builder/ops/backups-store.ts` — `restoreOpsBackup()`와 `getOpsBackupById()`를 추가해 backup payload를 원본 sourcePath로 다시 복사할 수 있게 했다.
   - `src/app/api/builder/ops/backups/[id]/restore/route.ts` — settings-guarded restore API를 추가했다.
   - `src/components/builder/ops/BackupsPanel.tsx` — 각 ok backup에 복원 버튼을 추가해 원본 파일 덮어쓰기 복구를 수행할 수 있게 했다.
   - `src/lib/builder/ops/__tests__/backups-store.test.ts` — restore round trip test를 추가했다.

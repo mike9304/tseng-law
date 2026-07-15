@@ -14,21 +14,21 @@ async function assertCrmShell(page: Page, locale: 'ko' | 'zh-hant') {
   const copy = locale === 'ko'
     ? {
         heading: 'CRM',
-        summary: '연락처, 자동화, 외부 연동, 발송 기록을 관리합니다.',
+        summary: '연락처, 자동화, 외부 연동, 개발용 이메일 시뮬레이션을 관리합니다.',
         tablist: 'CRM 탭',
         contacts: '연락처',
         automations: '자동화',
         integrations: '외부 연동',
-        outbox: '발송함',
+        outbox: '이메일 시뮬레이션',
       }
     : {
         heading: 'CRM',
-        summary: '管理聯絡人、自動化、外部整合與寄送紀錄。',
+        summary: '管理聯絡人、自動化、外部整合與開發用 Email 模擬。',
         tablist: 'CRM 分頁',
         contacts: '聯絡人',
         automations: '自動化',
         integrations: '外部整合',
-        outbox: '寄送紀錄',
+        outbox: 'Email 模擬',
       };
 
   await page.goto(`/${locale}/admin-builder/crm`, { waitUntil: 'domcontentloaded' });

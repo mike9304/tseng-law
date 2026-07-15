@@ -4,6 +4,7 @@ import type { ColumnPost, ColumnCategory } from '@/lib/columns';
 import { getAllColumnPosts } from '@/lib/columns';
 import { listColumnBundles } from '@/lib/builder/columns/storage';
 import type { ColumnDocument } from '@/lib/builder/columns/types';
+import { filterPublicColumnPosts } from '@/lib/builder/columns/public-post-filter';
 
 /**
  * Blob-aware column reader that merges file-based legal columns
@@ -28,7 +29,6 @@ import type { ColumnDocument } from '@/lib/builder/columns/types';
  */
 
 const BLOB_PREFIX = 'consultation-columns/';
-const VISUAL_LOAD_MORE_TEST_SLUG_PREFIX = 'visual-load-more';
 
 function isBlobBackend(): boolean {
   if (!process.env.BLOB_READ_WRITE_TOKEN) return false;
@@ -158,13 +158,6 @@ function legacyCategoryToBlogCategory(category: ColumnCategory): string {
   return 'general';
 }
 
-function isMirroredLoadMoreTestPost(post: ColumnPost): boolean {
-  // Hard-coded quarantine for one-off visual load-more QA posts that were
-  // accidentally mirrored into the local Blob data; real authored columns do
-  // not use this slug prefix.
-  return post.slug.startsWith(VISUAL_LOAD_MORE_TEST_SLUG_PREFIX);
-}
-
 /**
  * In-memory cache of Blob-sourced posts, keyed by locale.
  *
@@ -256,7 +249,9 @@ export async function getAllColumnPostsIncludingBlob(locale: Locale): Promise<Co
   const builderPosts = await listBuilderStoragePostsForLocale(locale);
   const blobPosts = isBlobBackend() ? await listBlobPostsForLocale(locale) : [];
 
-  if (builderPosts.length === 0 && blobPosts.length === 0) return filePosts;
+  if (builderPosts.length === 0 && blobPosts.length === 0) {
+    return filterPublicColumnPosts(filePosts);
+  }
 
   // faq lives only in file frontmatter (src/content/columns/*.md); it is not
   // part of the builder/Blob ColumnDocument shape. A builder/Blob post that
@@ -271,8 +266,7 @@ export async function getAllColumnPostsIncludingBlob(locale: Locale): Promise<Co
   // Blob fallback, then file entries whose slug isn't already covered.
   const merged: ColumnPost[] = [];
   const seen = new Set<string>();
-  for (const post of [...builderPosts, ...blobPosts, ...filePosts]) {
-    if (isMirroredLoadMoreTestPost(post)) continue;
+  for (const post of filterPublicColumnPosts([...builderPosts, ...blobPosts, ...filePosts])) {
     if (seen.has(post.slug)) continue;
     const faq = post.faq ?? fileFaqBySlug.get(post.slug);
     merged.push(faq ? { ...post, faq } : post);

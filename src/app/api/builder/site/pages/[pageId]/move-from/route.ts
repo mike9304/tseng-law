@@ -12,7 +12,7 @@ import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
 } from '@/lib/builder/site/site-api-copy';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 
@@ -60,7 +60,9 @@ export async function POST(
   }
 
   const targetPageId = params.pageId;
-  const siteId = resolveBuilderSiteIdFromRequest(request, body.siteId);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   const sourcePageId = body.sourcePageId?.trim();
   const requestedIds = Array.isArray(body.nodeIds) ? body.nodeIds.filter((id) => typeof id === 'string') : [];
 

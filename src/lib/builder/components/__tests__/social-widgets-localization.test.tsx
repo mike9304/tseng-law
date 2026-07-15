@@ -260,4 +260,68 @@ describe('social widgets localization', () => {
     expect(css).toContain('.checkboxRow');
     expect(css).toContain('.control:focus-visible');
   });
+
+  it('discloses an unavailable social embed in preview and published across ko/zh-hant/en without synthetic tiles', () => {
+    const Render = socialEmbedComponent.Render as React.ComponentType<{
+      node: BuilderSocialEmbedCanvasNode;
+      locale?: 'ko' | 'zh-hant' | 'en';
+      mode?: 'edit' | 'preview' | 'published';
+    }>;
+    const node = {
+      kind: 'social-embed',
+      content: {
+        provider: 'instagram-feed',
+        handle: '',
+        channelId: '',
+        layout: 'grid',
+        count: 6,
+        showHeader: true,
+      },
+    } as unknown as BuilderSocialEmbedCanvasNode;
+
+    const locales = ['ko', 'zh-hant', 'en'] as const;
+
+    for (const locale of locales) {
+      const copy = getSocialWidgetsCopy(locale);
+      for (const mode of ['preview', 'published'] as const) {
+        const html = renderToStaticMarkup(<Render node={node} locale={locale} mode={mode} />);
+
+        expect(html).toContain('data-builder-demo-disclosure="social-embed-placeholder"');
+        expect(html).toContain(copy.socialEmbed.unavailableTitle);
+        expect(html).toContain(copy.socialEmbed.unavailableMessage);
+        expect(html).not.toContain('data-builder-social-tile');
+        expect(html).not.toContain('data-builder-social-count');
+        expect(html).not.toContain('builder-social-embed-grid');
+      }
+    }
+  });
+
+  it('keeps social embed edit guidance with disclosure and no synthetic tiles across ko/zh-hant/en', () => {
+    const Render = socialEmbedComponent.Render as React.ComponentType<{
+      node: BuilderSocialEmbedCanvasNode;
+      locale?: 'ko' | 'zh-hant' | 'en';
+      mode?: 'edit' | 'preview' | 'published';
+    }>;
+    const node = {
+      kind: 'social-embed',
+      content: {
+        provider: 'tiktok-feed',
+        handle: '@creator',
+        channelId: '',
+        layout: 'list',
+        count: 4,
+        showHeader: false,
+      },
+    } as unknown as BuilderSocialEmbedCanvasNode;
+
+    for (const locale of ['ko', 'zh-hant', 'en'] as const) {
+      const copy = getSocialWidgetsCopy(locale);
+      const html = renderToStaticMarkup(<Render node={node} locale={locale} mode="edit" />);
+
+      expect(html).toContain('data-builder-demo-disclosure="social-embed-placeholder"');
+      expect(html).toContain(copy.socialEmbed.editPlaceholder(copy.socialEmbed.providers['tiktok-feed']));
+      expect(html).toContain(copy.socialEmbed.editSdkHint);
+      expect(html).not.toContain('data-builder-social-tile');
+    }
+  });
 });

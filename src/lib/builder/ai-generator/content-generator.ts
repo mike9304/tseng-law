@@ -3,11 +3,11 @@ import type { SiteSpec } from './site-spec';
 import type { SiteBlueprint } from './template-selector';
 
 /**
- * PR #11 — LLM-backed (or stubbed) section content generator.
+ * PR #11 — LLM-backed section content generator.
  *
- * Produces a `GeneratedSiteContent` keyed by section id. When OPENAI_API_KEY
- * is unset, falls back to deterministic stub content so the wizard still
- * produces a previewable page in dev.
+ * Produces a `GeneratedSiteContent` keyed by section id. Nonproduction may
+ * return a clearly-labelled local demo result, but production always fails
+ * closed when the configured provider is unavailable or returns bad data.
  */
 
 export interface GeneratedSection {
@@ -22,6 +22,51 @@ export interface GeneratedSiteContent {
   hero: GeneratedSection;
   sections: GeneratedSection[];
   metaDescription: string;
+  /** Missing on legacy cached drafts. Only `openai` is provider-generated. */
+  source?: 'openai' | 'local-demo';
+  /** Missing on legacy cached drafts. Provider content is explicitly false. */
+  stub?: boolean;
+}
+
+export type AiContentGenerationErrorCode =
+  | 'ai_content_provider_unconfigured'
+  | 'ai_content_provider_rejected'
+  | 'ai_content_provider_unavailable'
+  | 'ai_content_invalid_response';
+
+const AI_CONTENT_ERROR_MESSAGES: Record<AiContentGenerationErrorCode, string> = {
+  ai_content_provider_unconfigured: 'AI content provider is not configured.',
+  ai_content_provider_rejected: 'AI content provider rejected the request.',
+  ai_content_provider_unavailable: 'AI content provider is unavailable.',
+  ai_content_invalid_response: 'AI content provider returned an invalid response.',
+};
+
+export class AiContentGenerationError extends Error {
+  readonly code: AiContentGenerationErrorCode;
+  readonly httpStatus: 502 | 503;
+
+  constructor(code: AiContentGenerationErrorCode) {
+    super(AI_CONTENT_ERROR_MESSAGES[code]);
+    this.name = 'AiContentGenerationError';
+    this.code = code;
+    this.httpStatus = code === 'ai_content_provider_unconfigured' ? 503 : 502;
+  }
+}
+
+export function isAiContentGenerationError(error: unknown): error is AiContentGenerationError {
+  return error instanceof AiContentGenerationError;
+}
+
+export function isProviderGeneratedSiteContent(
+  content: GeneratedSiteContent,
+): content is GeneratedSiteContent & { source: 'openai'; stub: false } {
+  return content.source === 'openai' && content.stub === false;
+}
+
+/** Local canned output is opt-in and must never be enabled in production. */
+export function isLocalDemoGenerationAllowed(): boolean {
+  return process.env.NODE_ENV !== 'production'
+    && process.env.AI_BUILDER_ALLOW_LOCAL_DEMO === 'true';
 }
 
 const SECTION_PROMPTS: Record<string, string> = {
@@ -99,11 +144,9 @@ function fallbackSection(sectionId: string, spec: SiteSpec, blueprint: SiteBluep
   }
 }
 
-interface LlmResult {
-  ok: boolean;
-  content?: GeneratedSiteContent;
-  error?: string;
-}
+type LlmResult =
+  | { ok: true; content: GeneratedSiteContent & { source: 'openai'; stub: false } }
+  | { ok: false; code: AiContentGenerationErrorCode };
 
 const LOCALE_NAME: Record<Locale, string> = {
   ko: 'Korean',
@@ -133,12 +176,58 @@ function buildLlmPrompt(spec: SiteSpec, blueprint: SiteBlueprint): string {
   ].join('\n');
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function isGeneratedSection(value: unknown): value is GeneratedSection {
+  if (!isRecord(value)) return false;
+  if (typeof value.sectionId !== 'string' || !value.sectionId.trim()) return false;
+  if (typeof value.headline !== 'string' || !value.headline.trim()) return false;
+  if (typeof value.body !== 'string' || !value.body.trim()) return false;
+  if (value.ctaLabel !== undefined && (
+    typeof value.ctaLabel !== 'string'
+    || !value.ctaLabel.trim()
+  )) return false;
+  if (value.bullets !== undefined && (
+    !Array.isArray(value.bullets)
+    || !value.bullets.every((bullet) => typeof bullet === 'string' && Boolean(bullet.trim()))
+  )) return false;
+  return true;
+}
+
+function parseGeneratedSiteContent(
+  value: unknown,
+  blueprint: SiteBlueprint,
+): GeneratedSiteContent | null {
+  if (!isRecord(value)) return null;
+  if (!isGeneratedSection(value.hero) || value.hero.sectionId !== 'hero') return null;
+  if (!Array.isArray(value.sections) || !value.sections.every(isGeneratedSection)) return null;
+  if (
+    typeof value.metaDescription !== 'string'
+    || !value.metaDescription.trim()
+    || value.metaDescription.trim().length > 160
+  ) return null;
+  const expectedSectionIds = blueprint.sections.filter((sectionId) => sectionId !== 'hero');
+  if (new Set(expectedSectionIds).size !== expectedSectionIds.length) return null;
+  if (value.sections.length !== expectedSectionIds.length) return null;
+  if (!value.sections.every((section, index) => section.sectionId === expectedSectionIds[index])) return null;
+  return {
+    hero: value.hero,
+    sections: value.sections,
+    metaDescription: value.metaDescription,
+  };
+}
+
 async function callOpenAi(spec: SiteSpec, blueprint: SiteBlueprint): Promise<LlmResult> {
   const apiKey = process.env.OPENAI_API_KEY ?? '';
-  if (!apiKey) return { ok: false, error: 'OPENAI_API_KEY unset' };
+  if (!apiKey) return { ok: false, code: 'ai_content_provider_unconfigured' };
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20_000);
   try {
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
@@ -155,30 +244,36 @@ async function callOpenAi(spec: SiteSpec, blueprint: SiteBlueprint): Promise<Llm
     });
     const payload = (await res.json().catch(() => null)) as {
       choices?: Array<{ message?: { content?: string } }>;
-      error?: { message?: string };
     } | null;
-    if (!res.ok) return { ok: false, error: payload?.error?.message ?? `${res.status}` };
+    if (!res.ok) return { ok: false, code: 'ai_content_provider_rejected' };
     const content = payload?.choices?.[0]?.message?.content;
-    if (!content) return { ok: false, error: 'empty content' };
+    if (!content) return { ok: false, code: 'ai_content_invalid_response' };
     try {
-      const parsed = JSON.parse(content) as GeneratedSiteContent;
-      if (!parsed.hero || !Array.isArray(parsed.sections)) {
-        return { ok: false, error: 'malformed payload' };
-      }
-      return { ok: true, content: parsed };
+      const parsed = parseGeneratedSiteContent(JSON.parse(content), blueprint);
+      if (!parsed) return { ok: false, code: 'ai_content_invalid_response' };
+      return {
+        ok: true,
+        content: { ...parsed, source: 'openai', stub: false },
+      };
     } catch {
-      return { ok: false, error: 'invalid JSON' };
+      return { ok: false, code: 'ai_content_invalid_response' };
     }
-  } catch (err) {
-    return { ok: false, error: err instanceof Error ? err.message : String(err) };
+  } catch {
+    return { ok: false, code: 'ai_content_provider_unavailable' };
+  } finally {
+    clearTimeout(timeout);
   }
 }
 
 export async function generateSiteContent(spec: SiteSpec, blueprint: SiteBlueprint): Promise<GeneratedSiteContent> {
   const llm = await callOpenAi(spec, blueprint);
-  if (llm.ok && llm.content) return llm.content;
+  if (llm.ok) return llm.content;
 
-  // Deterministic fallback used in dev / when LLM unavailable.
+  if (!isLocalDemoGenerationAllowed()) {
+    throw new AiContentGenerationError(llm.code);
+  }
+
+  // Nonproduction-only preview copy. API callers must not persist it as AI output.
   const heroFallback = fallbackSection('hero', spec, blueprint);
   const sections = blueprint.sections
     .filter((s) => s !== 'hero')
@@ -187,5 +282,7 @@ export async function generateSiteContent(spec: SiteSpec, blueprint: SiteBluepri
     hero: heroFallback,
     sections,
     metaDescription: `${spec.companyName} — ${spec.industry.replace('-', ' ')} services. ${spec.slogan ?? ''}`.trim().slice(0, 160),
+    source: 'local-demo',
+    stub: true,
   };
 }

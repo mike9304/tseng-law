@@ -272,6 +272,7 @@ describe('canvas store transient updates', () => {
   it('clears selection by default when replacing the document', () => {
     useBuilderCanvasStore.getState().replaceDocument(documentFixture());
     useBuilderCanvasStore.getState().setSelectedNodeId('first');
+    useBuilderCanvasStore.getState().setSelectedSurfaceKey('hero.title');
 
     useBuilderCanvasStore.getState().replaceDocument({
       ...documentFixture(),
@@ -282,6 +283,7 @@ describe('canvas store transient updates', () => {
     expect(state.selectedNodeId).toBeNull();
     expect(state.selectedNodeIds).toEqual([]);
     expect(state.selectedNodeIdSet.size).toBe(0);
+    expect(state.selectedSurfaceKey).toBeNull();
   });
 
   it('preserves valid selection when replacing the current page document with preserveSelection', () => {

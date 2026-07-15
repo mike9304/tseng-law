@@ -105,6 +105,12 @@ describe('builder column storage backend', () => {
           updatedAt: '2031-01-01T00:00:00.000Z',
         },
         {
+          slug: 'post-mrcv6h2k',
+          title: 'G-Editor UI 칼럼 수정 mrcv6gic',
+          summary: '중단된 UI 테스트가 남긴 공개 레코드',
+          updatedAt: '2032-01-01T00:00:00.000Z',
+        },
+        {
           slug: 'local-real-column',
           title: '실제 로컬 칼럼',
           summary: '실제 칼럼 요약',
@@ -162,6 +168,7 @@ describe('builder column storage backend', () => {
       );
       expect(posts.some((post) => post.slug.startsWith('visual-load-more'))).toBe(false);
       expect(posts.some((post) => post.title.startsWith('Visual Load More'))).toBe(false);
+      expect(posts.some((post) => post.title.startsWith('G-Editor UI'))).toBe(false);
     } finally {
       await rm(root, { recursive: true, force: true });
     }

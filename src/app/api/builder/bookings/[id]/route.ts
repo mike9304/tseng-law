@@ -108,8 +108,19 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   } finally {
     if (acquiredSlotKey) releaseSlotLock(acquiredSlotKey);
   }
+  let emailDelivery;
   if (existing.status !== 'cancelled' && next.status === 'cancelled') {
-    await sendBookingCancellation(next, { service, staff });
+    try {
+      const delivery = await sendBookingCancellation(next, { service, staff });
+      emailDelivery = delivery.ok
+        ? { ok: true as const }
+        : { ok: false as const, reason: delivery.reason };
+    } catch {
+      emailDelivery = { ok: false as const, reason: 'internal_error' as const };
+    }
   }
-  return NextResponse.json({ booking: next });
+  return NextResponse.json({
+    booking: next,
+    ...(emailDelivery ? { emailDelivery } : {}),
+  });
 }

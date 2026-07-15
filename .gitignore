@@ -52,3 +52,7 @@ DEPLOY-RUNBOOK.md
 .codex/
 SELF-IMPROVE-LOOP.md
 AGENT-STATE.json
+
+# scratch / audit evidence (regenerable, huge)
+tmp/
+.omo/

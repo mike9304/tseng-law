@@ -41,6 +41,7 @@ const automation = {
 
 describe('builder CRM automations API', () => {
   beforeEach(() => {
+    vi.unstubAllEnvs();
     vi.clearAllMocks();
     guardMutationMock.mockResolvedValue({ username: 'crm-admin@example.test' } as never);
     makeAutomationIdMock.mockReturnValue('auto_1');
@@ -70,7 +71,10 @@ describe('builder CRM automations API', () => {
       errorCode: 'automations_list_failed',
     });
     expect(JSON.stringify(data)).not.toContain('automation list secret leaked');
-    expect(consoleError).toHaveBeenCalledWith('[builder/crm/automations] list failed:', expect.any(Error));
+    expect(consoleError).toHaveBeenCalledWith('[builder/crm/automations] list failed', {
+      errorCode: 'automations_list_failed',
+    });
+    expect(JSON.stringify(consoleError.mock.calls)).not.toContain('automation list secret leaked');
     consoleError.mockRestore();
   });
 
@@ -110,6 +114,39 @@ describe('builder CRM automations API', () => {
     });
   });
 
+  it('rejects new legacy send-email-stub inputs before storage mutation', async () => {
+    const response = await POST(request('POST', 'locale=en', {
+      name: 'Legacy email action',
+      trigger: { kind: 'contact-created' },
+      action: { kind: 'send-email-stub', templateId: 'welcome' },
+      enabled: true,
+    }));
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({ ok: false, errorCode: 'invalid_automation_payload' });
+    expect(mutateAutomationsMock).not.toHaveBeenCalled();
+  });
+
+  it('rejects email simulation creation in production regardless of allow flags', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_CRM_EMAIL_STUB', '1');
+    vi.stubEnv('ALLOW_STUB_EMAILS', '1');
+
+    const response = await POST(request('POST', 'locale=en', {
+      name: 'Production simulation',
+      trigger: { kind: 'contact-created' },
+      action: { kind: 'simulate-email', templateId: 'welcome' },
+      enabled: true,
+    }));
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({ ok: false, errorCode: 'invalid_automation_payload' });
+    expect(JSON.stringify(data)).not.toContain('ALLOW_CRM_EMAIL_STUB');
+    expect(mutateAutomationsMock).not.toHaveBeenCalled();
+  });
+
   it('returns localized create failures without leaking exception details', async () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     mutateAutomationsMock.mockRejectedValueOnce(new Error('automation create secret leaked'));
@@ -129,7 +166,10 @@ describe('builder CRM automations API', () => {
       errorCode: 'automation_create_failed',
     });
     expect(JSON.stringify(data)).not.toContain('automation create secret leaked');
-    expect(consoleError).toHaveBeenCalledWith('[builder/crm/automations] create failed:', expect.any(Error));
+    expect(consoleError).toHaveBeenCalledWith('[builder/crm/automations] create failed', {
+      errorCode: 'automation_create_failed',
+    });
+    expect(JSON.stringify(consoleError.mock.calls)).not.toContain('automation create secret leaked');
     consoleError.mockRestore();
   });
 });

@@ -143,20 +143,33 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish', () => {
   });
 
   it('returns localized stable-code JSON when saving a scheduled publish fails', async () => {
-    mockedSchedulePagePublish.mockRejectedValueOnce(new Error('raw scheduled save failure'));
+    mockedSchedulePagePublish.mockRejectedValueOnce(Object.assign(
+      new Error('draft_conflict rawError=file-v1:opaque-secret ETag="opaque-etag"'),
+      {
+        rawError: 'hostile raw storage failure',
+        storageVersion: 'file-v1:opaque-secret',
+        etag: '"opaque-etag"',
+      },
+    ));
     const response = await route.POST(request('POST', {
       scheduledAt: '2099-01-01T00:00:00.000Z',
       locale: 'zh-hant',
+      translationSiteReview,
     }), { params: { pageId: 'page-1' } });
     const data = await response.json();
 
     expect(response.status).toBe(500);
-    expect(data).toMatchObject({
+    expect(data).toEqual({
       ok: false,
       error: '無法儲存排程發布。',
       errorCode: 'scheduled_publish_save_failed',
     });
-    expect(data.error).not.toContain('raw scheduled save failure');
+    const serializedPayload = JSON.stringify(data);
+    expect(serializedPayload).not.toContain('draft_conflict');
+    expect(serializedPayload).not.toContain('rawError');
+    expect(serializedPayload).not.toContain('file-v1:opaque-secret');
+    expect(serializedPayload).not.toContain('opaque-etag');
+    expect(mockedRecordTranslationPublishPolicyReview).not.toHaveBeenCalled();
   });
 
   it('returns localized stable-code JSON when cancelling scheduled publishes fails', async () => {
@@ -177,11 +190,16 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish', () => {
     const response = await route.POST(request('POST', {
       scheduledAt: '2099-01-01T00:00:00.000Z',
       locale: 'ko',
-      expectedDraftRevision: 12,
+      expectedDraftRevision: 12.9,
       translationSiteReview,
     }), { params: { pageId: 'page-1' } });
 
     expect(response.status).toBe(200);
+    expect(mockedSchedulePagePublish).toHaveBeenCalledWith(expect.objectContaining({
+      siteId: 'tseng-law-main-site',
+      pageId: 'page-1',
+      expectedDraftRevision: 12,
+    }));
     expect(mockedRecordTranslationPublishPolicyReview).toHaveBeenCalledWith({
       request: expect.any(Request),
       siteId: 'tseng-law-main-site',

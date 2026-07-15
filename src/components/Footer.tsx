@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Locale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
+import { getPublishedBaseFooterColumns } from '@/components/footer-link-policy';
 
 export type FooterLink = {
   readonly label: string;
@@ -21,6 +22,7 @@ export default function Footer({
   extraColumns?: readonly FooterLinkColumn[];
 }) {
   const footerContent = siteContent[locale].footer;
+  const publishedBaseColumns = getPublishedBaseFooterColumns(footerContent.columns);
   const brandName = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
   const officeLabel = locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : 'Offices';
   const offices =
@@ -103,7 +105,7 @@ export default function Footer({
               <p className="footer-main-brand">{brandName}</p>
               <p className="footer-main-note">{footerContent.note}</p>
             </div>
-            {[...footerContent.columns, ...extraColumns].map((column) => (
+            {[...publishedBaseColumns, ...extraColumns].map((column) => (
               <nav key={column.title} className="footer-link-column" aria-label={column.title}>
                 <p className="footer-link-title">{column.title}</p>
                 <div className="footer-link-list">

@@ -1,4 +1,8 @@
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  resolveBuilderSiteIdForMutationFromRequest,
+  resolveBuilderSiteIdFromRequest,
+  type BuilderMutationSiteIdResolution,
+} from '@/lib/builder/site/admin-routing';
 
 const MAX_COLLAB_ID_LENGTH = 200;
 
@@ -20,6 +24,13 @@ export function resolveCollabSiteIdFromRequest(
 ): string {
   const explicit = typeof explicitSiteId === 'string' ? explicitSiteId : null;
   return resolveBuilderSiteIdFromRequest(request, explicit);
+}
+
+export function resolveCollabMutationSiteIdFromRequest(
+  request: Request,
+  explicitSiteId?: unknown,
+): BuilderMutationSiteIdResolution {
+  return resolveBuilderSiteIdForMutationFromRequest(request, explicitSiteId);
 }
 
 function isJsonObject(value: unknown): value is Record<string, unknown> {

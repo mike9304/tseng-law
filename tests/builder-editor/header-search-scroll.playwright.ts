@@ -8,11 +8,16 @@ test('/ko/admin-builder header search preserves canvas horizontal scroll', async
   await expect(canvasColumn).toBeVisible();
   await expect.poll(() => canvasColumn.evaluate((element) => element.scrollLeft)).toBe(0);
 
-  await page.locator('.builder-site-header .header-search-btn').first().click();
+  const searchButton = page.locator('.builder-site-header .header-search-btn').first();
+  await searchButton.scrollIntoViewIfNeeded();
+  const before = await canvasColumn.evaluate((element) => element.scrollLeft);
+  expect(before).toBeGreaterThan(0);
+
+  await searchButton.click();
   await expect(page.locator('.search-overlay[data-open="true"]')).toBeVisible();
-  await expect.poll(() => canvasColumn.evaluate((element) => element.scrollLeft)).toBe(0);
+  await expect.poll(() => canvasColumn.evaluate((element) => element.scrollLeft)).toBe(before);
 
   await page.locator('.search-overlay button[aria-label="닫기"]').click();
   await expect(page.locator('.search-overlay')).toHaveCount(0);
-  await expect.poll(() => canvasColumn.evaluate((element) => element.scrollLeft)).toBe(0);
+  await expect.poll(() => canvasColumn.evaluate((element) => element.scrollLeft)).toBe(before);
 });

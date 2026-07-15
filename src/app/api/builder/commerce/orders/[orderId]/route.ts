@@ -59,7 +59,14 @@ export async function PATCH(request: NextRequest, { params }: { params: { orderI
 
   try {
     const input = patchSchema.parse(await request.json());
+    if (process.env.NODE_ENV === 'production' && input.paymentStatus === 'authorized_stub') {
+      return errorResponse(errorLocale, 'order_update_failed', 422);
+    }
     const previous = await loadOrder(params.orderId);
+    if (!previous) return errorResponse(errorLocale, 'order_not_found', 404);
+    if (process.env.NODE_ENV === 'production' && previous.payment.status === 'authorized_stub') {
+      return errorResponse(errorLocale, 'order_update_failed', 422);
+    }
     let order = await updateOrderState(params.orderId, { ...input, actor: 'admin' });
     if (!order) return errorResponse(errorLocale, 'order_not_found', 404);
     if (order.payment.status === 'paid' && previous?.payment.status !== 'paid') {

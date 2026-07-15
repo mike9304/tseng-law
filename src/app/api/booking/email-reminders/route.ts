@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { isCronAuthorized } from '@/lib/builder/security/cron-auth';
-import { getService, getStaff, listBookings, saveBooking } from '@/lib/builder/bookings/storage';
 import {
-  isBookingEmailConfigured,
-  sendBookingReminder,
-} from '@/lib/builder/bookings/notifications';
+  appendBookingReminderMarker,
+  getService,
+  getStaff,
+  listBookings,
+} from '@/lib/builder/bookings/storage';
+import { sendBookingReminder } from '@/lib/builder/bookings/notifications';
 import type { Booking, BookingReminderType } from '@/lib/builder/bookings/types';
 import { reminderWindowsForService } from '@/lib/builder/bookings/reminders';
 
@@ -18,8 +20,13 @@ function alreadySent(booking: Booking, type: BookingReminderType): boolean {
 async function dispatch(): Promise<{
   scanned: number;
   sent: number;
+  failed: number;
   skipped: number;
-  errors: Array<{ bookingId: string; reason: string }>;
+  errors: Array<{
+    bookingId: string;
+    type: BookingReminderType | 'metadata';
+    reason: string;
+  }>;
 }> {
   const now = Date.now();
   const horizon = now + 25 * 60 * 60 * 1000;
@@ -29,8 +36,13 @@ async function dispatch(): Promise<{
   });
 
   let sent = 0;
+  let failed = 0;
   let skipped = 0;
-  const errors: Array<{ bookingId: string; reason: string }> = [];
+  const errors: Array<{
+    bookingId: string;
+    type: BookingReminderType | 'metadata';
+    reason: string;
+  }> = [];
 
   for (const booking of bookings) {
     if (booking.status !== 'confirmed') {
@@ -42,40 +54,76 @@ async function dispatch(): Promise<{
       skipped += 1;
       continue;
     }
-    const service = await getService(booking.serviceId);
-    const staff = await getStaff(booking.staffId);
-    const windows = reminderWindowsForService(service, 'email');
+    let service: Awaited<ReturnType<typeof getService>>;
+    let staff: Awaited<ReturnType<typeof getStaff>>;
+    let windows: ReturnType<typeof reminderWindowsForService>;
+    try {
+      service = await getService(booking.serviceId);
+      staff = await getStaff(booking.staffId);
+      windows = reminderWindowsForService(service, 'email');
+    } catch {
+      failed += 1;
+      errors.push({
+        bookingId: booking.bookingId,
+        type: 'metadata',
+        reason: 'internal_error',
+      });
+      continue;
+    }
     const minutesToStart = (startMs - now) / 60000;
+    let currentBooking = booking;
 
     for (const win of windows) {
-      if (alreadySent(booking, win.type)) continue;
+      if (alreadySent(currentBooking, win.type)) continue;
       const targetMinutes = win.hoursAhead * 60;
       const delta = Math.abs(minutesToStart - targetMinutes);
       if (delta > win.toleranceMinutes) continue;
-      if (!isBookingEmailConfigured()) {
-        skipped += 1;
-        errors.push({ bookingId: booking.bookingId, reason: 'resend unconfigured' });
-        continue;
-      }
 
       try {
-        await sendBookingReminder(booking, { service, staff });
-        await saveBooking({
-          ...booking,
-          reminders: [...booking.reminders, { sentAt: new Date().toISOString(), type: win.type }],
-          updatedAt: new Date().toISOString(),
+        const delivery = await sendBookingReminder(currentBooking, {
+          reminderType: win.type,
+          service,
+          staff,
         });
+        if (!delivery.ok) {
+          failed += 1;
+          errors.push({
+            bookingId: currentBooking.bookingId,
+            type: win.type,
+            reason: delivery.reason,
+          });
+          continue;
+        }
+
+        try {
+          const markerResult = await appendBookingReminderMarker(currentBooking.bookingId, {
+            sentAt: new Date().toISOString(),
+            type: win.type,
+          });
+          if (!markerResult.ok) throw new Error('booking_not_found');
+          currentBooking = markerResult.booking;
+        } catch {
+          failed += 1;
+          errors.push({
+            bookingId: booking.bookingId,
+            type: win.type,
+            reason: 'marker_persist_failed_after_delivery',
+          });
+          continue;
+        }
         sent += 1;
-      } catch (error) {
+      } catch {
+        failed += 1;
         errors.push({
           bookingId: booking.bookingId,
-          reason: error instanceof Error ? error.message : 'email reminder failed',
+          type: win.type,
+          reason: 'internal_error',
         });
       }
     }
   }
 
-  return { scanned: bookings.length, sent, skipped, errors };
+  return { scanned: bookings.length, sent, failed, skipped, errors };
 }
 
 export async function POST(request: NextRequest) {
@@ -83,8 +131,28 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const result = await dispatch();
-  return NextResponse.json({ ok: true, ...result });
+  try {
+    const result = await dispatch();
+    if (result.errors.length === 0) {
+      return NextResponse.json({ ok: true, ...result });
+    }
+
+    const hasInternalFailure = result.errors.some((error) => (
+      error.reason === 'internal_error' || error.reason === 'marker_persist_failed_after_delivery'
+    ));
+    const hasProviderFailure = result.errors.some((error) => error.reason === 'provider_error');
+    const status = hasInternalFailure ? 500 : hasProviderFailure ? 502 : 503;
+    return NextResponse.json({ ok: false, ...result }, { status });
+  } catch {
+    return NextResponse.json({
+      ok: false,
+      scanned: 0,
+      sent: 0,
+      failed: 1,
+      skipped: 0,
+      errors: [{ bookingId: 'dispatch', type: 'dispatch', reason: 'internal_error' }],
+    }, { status: 500 });
+  }
 }
 
 export async function GET(request: NextRequest) {

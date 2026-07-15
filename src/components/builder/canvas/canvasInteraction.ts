@@ -28,6 +28,7 @@ export type InteractionState =
   | {
       type: 'move';
       nodeId: string;
+      clickSelectionNodeId?: string;
       nodeIds: string[];
       nodeIdSet: ReadonlySet<string>;
       canDirectPreview: boolean;

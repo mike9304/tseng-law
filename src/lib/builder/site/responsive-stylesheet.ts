@@ -12,6 +12,7 @@ import {
   type Viewport,
   VIEWPORT_BREAKPOINTS,
 } from '@/lib/builder/canvas/responsive';
+import { repairLegalPageMobileLayout } from '@/lib/builder/canvas/legal-responsive';
 import { applyPublishedResponsiveAutoFit } from '@/lib/builder/site/published-responsive-autofit';
 
 const TABLET_MAX = VIEWPORT_BREAKPOINTS.tablet + 255;
@@ -224,5 +225,6 @@ export function buildResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
 }
 
 export function buildPublishedResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
-  return buildResponsiveStylesheet(applyPublishedResponsiveAutoFit(nodes));
+  const repairedNodes = repairLegalPageMobileLayout(nodes);
+  return buildResponsiveStylesheet(applyPublishedResponsiveAutoFit(repairedNodes));
 }

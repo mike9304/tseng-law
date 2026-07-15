@@ -72,6 +72,10 @@ export async function guardMutation(
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
   const rl = await rateLimitForBucket(options.bucket ?? 'mutation', ip);
   if (!rl.allowed) {
+    if (rl.reason === 'backend_unavailable') {
+      return NextResponse.json({ error: 'rate_limit_unavailable' }, { status: 503 });
+    }
+
     return NextResponse.json(
       { error: 'Too many requests' },
       { status: 429, headers: { 'Retry-After': String(Math.ceil(rl.retryAfterMs / 1000)) } },

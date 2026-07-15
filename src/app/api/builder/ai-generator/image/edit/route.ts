@@ -7,7 +7,10 @@ import {
   uploadBuilderImageAsset,
 } from '@/lib/builder/assets';
 import { recordAssetUpload } from '@/lib/builder/audit/record';
-import { validateImageBytes } from '@/lib/builder/canvas/upload-validation';
+import {
+  inspectImageBinary,
+  validatePngAlphaMask,
+} from '@/lib/builder/ai-generator/image-binary-validation';
 import { normalizeBuilderHomeLocale } from '@/lib/builder/persistence';
 import { guardMutation } from '@/lib/builder/security/guard';
 
@@ -20,7 +23,7 @@ const imageEditSchema = z.object({
   assetUrl: z.string().trim().min(1).max(420).optional(),
   prompt: z.string().trim().min(20).max(1400),
   mask: z.object({
-    dataUrl: z.string().trim().min(32).max(8_000_000),
+    dataUrl: z.string().min(32).max(8_000_000),
     description: z.string().trim().max(180).optional(),
   }).optional(),
   size: z.enum(['1024x1024', '1536x1024', '1024x1536', 'auto']).default('1536x1024'),
@@ -29,17 +32,21 @@ const imageEditSchema = z.object({
   outputCompression: z.number().int().min(0).max(100).default(82),
 });
 
-type OpenAiImageEditPayload = {
-  data?: Array<{
-    b64_json?: string;
-    revised_prompt?: string;
-  }>;
-  error?: {
-    message?: string;
-    type?: string;
-    code?: string;
-  };
-};
+const OPENAI_IMAGE_EDIT_TIMEOUT_MS = 20_000;
+const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
+const MAX_IMAGE_PIXELS = 16_777_216;
+const MAX_IMAGE_DECODED_BYTES = 64 * 1024 * 1024;
+const MAX_IMAGE_BASE64_LENGTH = Math.ceil(MAX_IMAGE_BYTES / 3) * 4;
+
+const openAiEditResponseSchema = z.object({
+  data: z
+    .object({
+      b64_json: z.string().min(1),
+      revised_prompt: z.string().optional(),
+    })
+    .array()
+    .min(1),
+});
 
 const CONTENT_TYPE_BY_FORMAT = {
   png: 'image/png',
@@ -47,7 +54,17 @@ const CONTENT_TYPE_BY_FORMAT = {
   webp: 'image/webp',
 } as const;
 
-const SUPPORTED_SOURCE_IMAGE_TYPES = new Set(['image/png', 'image/jpeg', 'image/webp']);
+const FILE_EXTENSION_BY_FORMAT = {
+  png: 'png',
+  jpeg: 'jpg',
+  webp: 'webp',
+} as const;
+
+const SOURCE_FORMAT_BY_MIME = {
+  'image/png': 'png',
+  'image/jpeg': 'jpeg',
+  'image/webp': 'webp',
+} as const;
 
 function openAiApiKey(): string {
   return process.env.OPENAI_API_KEY?.trim() ?? '';
@@ -66,24 +83,69 @@ function normalizeEditPrompt(prompt: string): string {
   ].join(' ');
 }
 
-function decodePngDataUrl(dataUrl: string): Buffer | null {
-  const match = /^data:image\/png;base64,([A-Za-z0-9+/=]+)$/.exec(dataUrl);
-  if (!match) return null;
+function decodeStrictBase64(encoded: string): Buffer | null {
+  if (
+    encoded.length === 0
+    || encoded.length > MAX_IMAGE_BASE64_LENGTH
+    || !/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$/.test(encoded)
+  ) {
+    return null;
+  }
   try {
-    return Buffer.from(match[1], 'base64');
+    const decoded = Buffer.from(encoded, 'base64');
+    return decoded.toString('base64') === encoded ? decoded : null;
   } catch {
     return null;
   }
 }
 
-function pngHasAlphaChannel(content: Buffer): boolean {
-  if (content.byteLength < 26) return false;
-  const signature = '89504e470d0a1a0a';
-  if (content.subarray(0, 8).toString('hex') !== signature) return false;
-  const ihdrType = content.subarray(12, 16).toString('ascii');
-  if (ihdrType !== 'IHDR') return false;
-  const colorType = content[25];
-  return colorType === 4 || colorType === 6;
+function decodePngDataUrl(dataUrl: string): Buffer | null {
+  const prefix = 'data:image/png;base64,';
+  if (!dataUrl.startsWith(prefix)) return null;
+  const encoded = dataUrl.slice(prefix.length);
+  return decodeStrictBase64(encoded);
+}
+
+function dimensionsForRequestedSize(size: z.infer<typeof imageEditSchema>['size']) {
+  if (size === 'auto') return null;
+  const [width, height] = size.split('x').map(Number);
+  return { width, height };
+}
+
+function isCanonicalUploadTimestamp(value: string): boolean {
+  const timestamp = Date.parse(value);
+  if (!Number.isFinite(timestamp)) return false;
+  return new Date(timestamp).toISOString() === value;
+}
+
+function isAttestedEditedAsset(
+  asset: Awaited<ReturnType<typeof uploadBuilderImageAsset>>,
+  input: {
+    locale: string;
+    format: keyof typeof FILE_EXTENSION_BY_FORMAT;
+    mime: string;
+    byteLength: number;
+  },
+): boolean {
+  const extension = FILE_EXTENSION_BY_FORMAT[input.format];
+  const safeFilename = (
+    asset.filename.length <= 128
+    && /^[a-z0-9]+(?:-[a-z0-9]+)*\.[a-z0-9]+$/.test(asset.filename)
+    && asset.filename.endsWith(`.${extension}`)
+  );
+  if (!safeFilename) return false;
+
+  const expectedPathname = `builder/assets/${input.locale}/${asset.filename}`;
+  const expectedUrl = `/api/builder/assets/${input.locale}/${asset.filename}`;
+  return (
+    asset.locale === input.locale
+    && (asset.backend === 'file' || asset.backend === 'blob')
+    && asset.pathname === expectedPathname
+    && asset.url === expectedUrl
+    && asset.contentType === input.mime
+    && asset.size === input.byteLength
+    && isCanonicalUploadTimestamp(asset.uploadedAt)
+  );
 }
 
 function resolveSourceReference(input: z.infer<typeof imageEditSchema>) {
@@ -154,12 +216,39 @@ export async function POST(request: NextRequest) {
       { status: 404 },
     );
   }
-  if (!SUPPORTED_SOURCE_IMAGE_TYPES.has(source.contentType)) {
+  const declaredSourceFormat = SOURCE_FORMAT_BY_MIME[source.contentType as keyof typeof SOURCE_FORMAT_BY_MIME];
+  if (!declaredSourceFormat) {
     return NextResponse.json(
       {
         ok: false,
         error: 'unsupported_source_image_type',
         message: 'Image 2.0 editing currently supports PNG, JPEG, and WEBP builder assets.',
+      },
+      { status: 415 },
+    );
+  }
+
+  let sourceInspection: ReturnType<typeof inspectImageBinary>;
+  try {
+    sourceInspection = inspectImageBinary(source.content, {
+      declaredMime: source.contentType as keyof typeof SOURCE_FORMAT_BY_MIME,
+      maxBytes: MAX_IMAGE_BYTES,
+      maxPixels: MAX_IMAGE_PIXELS,
+      maxDecodedBytes: MAX_IMAGE_DECODED_BYTES,
+    });
+  } catch {
+    sourceInspection = { valid: false, reason: 'inspection_failed' };
+  }
+  if (
+    !sourceInspection.valid
+    || sourceInspection.format !== declaredSourceFormat
+    || sourceInspection.mime !== source.contentType
+  ) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: 'invalid_source_image',
+        message: 'Source image bytes could not be validated.',
       },
       { status: 415 },
     );
@@ -173,7 +262,29 @@ export async function POST(request: NextRequest) {
   formData.set('prompt', prompt);
   if (input.mask) {
     const maskContent = decodePngDataUrl(input.mask.dataUrl);
-    if (!maskContent || !pngHasAlphaChannel(maskContent)) {
+    let maskInspection: ReturnType<typeof validatePngAlphaMask> | null = null;
+    if (maskContent) {
+      try {
+        maskInspection = validatePngAlphaMask(maskContent, {
+          width: sourceInspection.width,
+          height: sourceInspection.height,
+          maxBytes: MAX_IMAGE_BYTES,
+          maxPixels: MAX_IMAGE_PIXELS,
+          maxDecodedBytes: MAX_IMAGE_DECODED_BYTES,
+        });
+      } catch {
+        maskInspection = null;
+      }
+    }
+    if (
+      !maskContent
+      || !maskInspection?.valid
+      || maskInspection.format !== 'png'
+      || maskInspection.mime !== 'image/png'
+      || !maskInspection.hasAlpha
+      || maskInspection.width !== sourceInspection.width
+      || maskInspection.height !== sourceInspection.height
+    ) {
       return NextResponse.json(
         {
           ok: false,
@@ -195,68 +306,243 @@ export async function POST(request: NextRequest) {
     formData.set('output_compression', String(input.outputCompression));
   }
 
-  const response = await fetch('https://api.openai.com/v1/images/edits', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: formData,
-  });
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), OPENAI_IMAGE_EDIT_TIMEOUT_MS);
 
-  const payload = (await response.json().catch(() => ({}))) as OpenAiImageEditPayload;
-  if (!response.ok) {
+  let validatedItem: { imageBytes: Buffer; revisedPrompt: string | undefined } | null = null;
+  try {
+    let response: Response;
+    try {
+      response = await fetch('https://api.openai.com/v1/images/edits', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: formData,
+        signal: controller.signal,
+      });
+    } catch {
+      if (controller.signal.aborted) {
+        return NextResponse.json(
+          {
+            ok: false,
+            error: 'openai_image_edit_timeout',
+            message: 'Image edit timed out.',
+          },
+          { status: 504 },
+        );
+      }
+      return NextResponse.json(
+        {
+          ok: false,
+          error: 'openai_image_edit_network_error',
+          message: 'Image edit request failed.',
+        },
+        { status: 502 },
+      );
+    }
+
+    if (controller.signal.aborted) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: 'openai_image_edit_timeout',
+          message: 'Image edit timed out.',
+        },
+        { status: 504 },
+      );
+    }
+
+    if (!response.ok) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: 'openai_image_edit_provider_error',
+          message: 'Image edit provider returned an error.',
+        },
+        { status: 502 },
+      );
+    }
+
+    let providerJson: unknown;
+    try {
+      providerJson = await response.json();
+    } catch {
+      if (controller.signal.aborted) {
+        return NextResponse.json(
+          {
+            ok: false,
+            error: 'openai_image_edit_timeout',
+            message: 'Image edit timed out.',
+          },
+          { status: 504 },
+        );
+      }
+      return NextResponse.json(
+        {
+          ok: false,
+          error: 'invalid_openai_image_edit_response',
+          message: 'Image edit returned a malformed response.',
+        },
+        { status: 502 },
+      );
+    }
+
+    if (controller.signal.aborted) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: 'openai_image_edit_timeout',
+          message: 'Image edit timed out.',
+        },
+        { status: 504 },
+      );
+    }
+
+    const providerParsed = openAiEditResponseSchema.safeParse(providerJson);
+    if (!providerParsed.success) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: 'invalid_openai_image_edit_response',
+          message: 'Image edit returned a malformed response.',
+        },
+        { status: 502 },
+      );
+    }
+
+    const imageBytes = decodeStrictBase64(providerParsed.data.data[0].b64_json);
+    if (!imageBytes) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: 'invalid_openai_image_edit_response',
+          message: 'Image edit returned a malformed response.',
+        },
+        { status: 502 },
+      );
+    }
+
+    validatedItem = {
+      imageBytes,
+      revisedPrompt: providerParsed.data.data[0].revised_prompt,
+    };
+  } finally {
+    clearTimeout(timeoutId);
+  }
+
+  if (!validatedItem) {
     return NextResponse.json(
       {
         ok: false,
-        error: payload.error?.code ?? payload.error?.type ?? 'openai_image_edit_failed',
-        message: payload.error?.message ?? 'Image 2.0 editing failed.',
+        error: 'invalid_openai_image_edit_response',
+        message: 'Image edit returned a malformed response.',
       },
-      { status: response.status },
-    );
-  }
-
-  const imageBase64 = payload.data?.[0]?.b64_json;
-  if (!imageBase64) {
-    return NextResponse.json(
-      { ok: false, error: 'missing_image_payload', message: 'Image 2.0 did not return edited image data.' },
       { status: 502 },
     );
   }
 
-  const content = Buffer.from(imageBase64, 'base64');
+  const { imageBytes: content, revisedPrompt } = validatedItem;
   const contentType = CONTENT_TYPE_BY_FORMAT[input.outputFormat];
-  const outputFile = new File([content], filenameForEditedAsset(input.outputFormat), { type: contentType });
-  const byteCheck = await validateImageBytes(outputFile);
-  if (!byteCheck.valid) {
+  let outputInspection: ReturnType<typeof inspectImageBinary>;
+  try {
+    outputInspection = inspectImageBinary(content, {
+      declaredMime: contentType,
+      maxBytes: MAX_IMAGE_BYTES,
+      maxPixels: MAX_IMAGE_PIXELS,
+      maxDecodedBytes: MAX_IMAGE_DECODED_BYTES,
+    });
+  } catch {
+    outputInspection = { valid: false, reason: 'inspection_failed' };
+  }
+  const requestedDimensions = dimensionsForRequestedSize(input.size);
+  if (
+    !outputInspection.valid
+    || outputInspection.format !== input.outputFormat
+    || outputInspection.mime !== contentType
+    || (requestedDimensions !== null
+      && (outputInspection.width !== requestedDimensions.width
+        || outputInspection.height !== requestedDimensions.height))
+  ) {
     return NextResponse.json(
       {
         ok: false,
         error: 'invalid_edited_image',
-        message: byteCheck.error ?? 'Edited image bytes could not be validated.',
-        sniffed: byteCheck.sniffed,
+        message: 'Edited image bytes could not be validated.',
+      },
+      { status: 502 },
+    );
+  }
+  const outputFile = new File(
+    [new Uint8Array(content)],
+    filenameForEditedAsset(input.outputFormat),
+    { type: contentType },
+  );
+
+  let asset: Awaited<ReturnType<typeof uploadBuilderImageAsset>>;
+  try {
+    asset = await uploadBuilderImageAsset({ locale: sourceReference.locale, file: outputFile });
+  } catch {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: 'edited_image_asset_upload_failed',
+        message: 'Edited image asset storage could not be confirmed.',
+        uploadState: 'unknown',
+      },
+      { status: 502 },
+    );
+  }
+  if (!isAttestedEditedAsset(asset, {
+    locale: sourceReference.locale,
+    format: outputInspection.format,
+    mime: outputInspection.mime,
+    byteLength: content.byteLength,
+  })) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: 'edited_image_asset_upload_failed',
+        message: 'Edited image asset storage could not be confirmed.',
+        uploadState: 'unknown',
       },
       { status: 502 },
     );
   }
 
-  const asset = await uploadBuilderImageAsset({ locale: sourceReference.locale, file: outputFile });
   await recordAssetUpload({
     request,
     assetId: asset.filename,
     mime: asset.contentType,
     size: asset.size,
-  });
+  }).catch(() => undefined);
 
   return NextResponse.json({
     ok: true,
+    provider: 'openai',
     model: 'gpt-image-2',
+    stub: false,
+    operation: 'edit',
     prompt,
-    revisedPrompt: payload.data?.[0]?.revised_prompt,
+    revisedPrompt,
     source: {
       locale: sourceReference.locale,
       filename: sourceReference.filename,
       url: sourceReference.url,
+      dimensions: {
+        width: sourceInspection.width,
+        height: sourceInspection.height,
+      },
+      format: sourceInspection.format,
+      mime: sourceInspection.mime,
     },
+    dimensions: {
+      width: outputInspection.width,
+      height: outputInspection.height,
+    },
+    format: outputInspection.format,
+    mime: outputInspection.mime,
     asset,
+    auditState: 'attempted',
   });
 }

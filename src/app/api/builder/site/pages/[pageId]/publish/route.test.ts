@@ -120,6 +120,23 @@ describe('/api/builder/site/pages/[pageId]/publish', () => {
     vi.mocked(evaluateTranslationReleasePolicyForPublish).mockResolvedValue(allowedReleaseDecision);
   });
 
+  it('rejects a malformed publish site id before policy or publish access', async () => {
+    const route = await import('./route');
+    const response = await route.POST(
+      postRequest('ko', { siteId: '../../x' }),
+      { params: { pageId: 'page-1' } },
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(payload).toMatchObject({ ok: false, success: false, errorCode: 'invalid_site_id' });
+    expect(evaluateTranslationReleasePolicyForPublish).not.toHaveBeenCalled();
+    expect(publishPage).not.toHaveBeenCalled();
+    expect(recordPublishBlocked).not.toHaveBeenCalled();
+    expect(recordPublishFailure).not.toHaveBeenCalled();
+    expect(recordPublishSuccess).not.toHaveBeenCalled();
+  });
+
   it('returns localized publish-blocked messages while preserving blocker details', async () => {
     const blocker: CheckResult = {
       id: 'seo-title',
@@ -152,8 +169,40 @@ describe('/api/builder/site/pages/[pageId]/publish', () => {
     expect(recordPublishFailure).not.toHaveBeenCalled();
   });
 
+  it('returns a stable safe draft-stale conflict and audits only the losing publish', async () => {
+    vi.mocked(publishPage).mockRejectedValue(
+      new PublishError('draft_stale', 409, { current: { revision: 13 } }),
+    );
+
+    const route = await import('./route');
+    const response = await route.POST(postRequest('en', {
+      expectedDraftRevision: 12,
+      translationSiteReview,
+    }), { params: { pageId: 'page-1' } });
+    const payload = await response.json();
+
+    expect(response.status).toBe(409);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'draft_stale',
+      errorCode: 'draft_stale',
+      errorMessage: 'The draft is not current.',
+      current: { revision: 13 },
+    });
+    expect(recordPublishFailure).toHaveBeenCalledWith(expect.objectContaining({
+      siteId: 'tseng-law-main-site',
+      pageId: 'page-1',
+      reason: 'draft_stale',
+    }));
+    expect(recordPublishBlocked).not.toHaveBeenCalled();
+    expect(recordPublishSuccess).not.toHaveBeenCalled();
+    expect(recordTranslationPublishPolicyReview).not.toHaveBeenCalled();
+  });
+
   it('does not expose raw internal publish failures', async () => {
-    vi.mocked(publishPage).mockRejectedValue(new Error('blob token leaked'));
+    vi.mocked(publishPage).mockRejectedValue(
+      new Error('draft_conflict rawError=file-v1:opaque-secret ETag="opaque-etag"'),
+    );
 
     const route = await import('./route');
     const response = await route.POST(postRequest('ko'), { params: { pageId: 'page-1' } });
@@ -165,7 +214,11 @@ describe('/api/builder/site/pages/[pageId]/publish', () => {
       error: '페이지를 게시하지 못했습니다.',
       errorCode: 'page_publish_failed',
     });
-    expect(JSON.stringify(payload)).not.toContain('blob token leaked');
+    const serializedPayload = JSON.stringify(payload);
+    expect(serializedPayload).not.toContain('draft_conflict');
+    expect(serializedPayload).not.toContain('rawError');
+    expect(serializedPayload).not.toContain('file-v1:opaque-secret');
+    expect(serializedPayload).not.toContain('opaque-etag');
     expect(recordPublishFailure).toHaveBeenCalledWith(
       expect.objectContaining({
         siteId: 'tseng-law-main-site',
@@ -174,6 +227,8 @@ describe('/api/builder/site/pages/[pageId]/publish', () => {
       }),
     );
     expect(recordPublishBlocked).not.toHaveBeenCalled();
+    expect(recordPublishSuccess).not.toHaveBeenCalled();
+    expect(recordTranslationPublishPolicyReview).not.toHaveBeenCalled();
   });
 
   it('keeps the success response shape', async () => {

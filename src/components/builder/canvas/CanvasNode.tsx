@@ -145,6 +145,78 @@ interface InlineTextVisualStyle {
   textTransform?: string;
 }
 
+export interface InlineTextCaretCoords {
+  x: number;
+  y: number;
+}
+
+type InlineTextTargetElement = Pick<HTMLElement, 'dataset' | 'getBoundingClientRect'>;
+
+const inlineTextCaretCoordsByNodeId = new Map<string, InlineTextCaretCoords>();
+
+export function rememberInlineTextCaretCoords(nodeId: string, coords: InlineTextCaretCoords): void {
+  if (!Number.isFinite(coords.x) || !Number.isFinite(coords.y)) {
+    inlineTextCaretCoordsByNodeId.delete(nodeId);
+    return;
+  }
+  inlineTextCaretCoordsByNodeId.set(nodeId, coords);
+}
+
+export function readInlineTextCaretCoords(nodeId: string): InlineTextCaretCoords | null {
+  return inlineTextCaretCoordsByNodeId.get(nodeId) ?? null;
+}
+
+export function clearInlineTextCaretCoords(nodeId: string): void {
+  inlineTextCaretCoordsByNodeId.delete(nodeId);
+}
+
+export function createInlineTextTypographySession() {
+  let frozen = false;
+  return {
+    capture(capture: () => boolean): boolean {
+      if (frozen) return false;
+      const captured = capture();
+      if (captured) frozen = true;
+      return captured;
+    },
+    reset(): void {
+      frozen = false;
+    },
+    isFrozen(): boolean {
+      return frozen;
+    },
+  };
+}
+
+function closestCanvasNodeElement(target: EventTarget | null): InlineTextTargetElement | null {
+  const closest = (target as { closest?: (selector: string) => Element | null } | null)?.closest;
+  if (typeof closest !== 'function') return null;
+  return closest.call(target, '[data-node-id]') as InlineTextTargetElement | null;
+}
+
+export function resolveInlineTextEditTarget(
+  target: EventTarget | null,
+  nodesById: ReadonlyMap<string, BuilderCanvasNode>,
+): { nodeId: string; element: InlineTextTargetElement } | null {
+  const element = closestCanvasNodeElement(target);
+  if (!element) return null;
+  const candidateId = element.dataset.nodeId;
+  const candidate = candidateId ? nodesById.get(candidateId) : null;
+  if (
+    !candidate
+    || (candidate.kind !== 'text' && candidate.kind !== 'heading')
+    || candidate.locked
+  ) return null;
+
+  const rect = element.getBoundingClientRect();
+  const hidden = typeof HTMLElement !== 'undefined'
+    && element instanceof HTMLElement
+    && window.getComputedStyle(element).visibility === 'hidden';
+  return rect.width > 0 && rect.height > 0 && !hidden
+    ? { nodeId: candidate.id, element }
+    : null;
+}
+
 export type CanvasNodeInnerFlowPreviewGapInfo = {
   parentId: string;
   insertionIndex: number;
@@ -312,6 +384,10 @@ const CanvasNode = memo(function CanvasNode({
     richText?: BuilderRichText;
     text: string;
   } | null>(null);
+  const typographySessionRef = useRef<ReturnType<typeof createInlineTextTypographySession> | null>(null);
+  if (!typographySessionRef.current) {
+    typographySessionRef.current = createInlineTextTypographySession();
+  }
   const mapQuickAddressRef = useRef<HTMLTextAreaElement>(null);
   const updateNode = useBuilderCanvasStore((s) => s.updateNode);
   const addChildNode = useBuilderCanvasStore((s) => s.addChildNode);
@@ -338,22 +414,29 @@ const CanvasNode = memo(function CanvasNode({
     // captures the real rendered typography (e.g. a `.hero-title` class at
     // ~73.6px). Once the inline editor has mounted, a second capture would read
     // the editor's own base font (16px) and clobber that value, visibly
-    // shrinking class-styled titles while editing. Skip re-capture if the inline
-    // editor already exists under this node so the first capture wins.
-    if (nodeRef.current?.querySelector('[data-builder-inline-text-editor="true"]')) return;
-    if (node.kind === 'text' || node.kind === 'heading') {
-      const content = node.content as Record<string, unknown>;
-      inlineEditOriginalContentRef.current = {
-        nodeId: node.id,
-        text: typeof content.text === 'string' ? content.text : '',
-        ...(isBuilderRichText(content.richText) ? { richText: content.richText } : {}),
-      };
-    }
-    setInlineTextVisualStyle(captureInlineTextVisualStyle(nodeRef.current));
+    // shrinking class-styled titles while editing. Freeze the first valid
+    // snapshot for the entire editing session so re-capture can never overwrite
+    // the real display metrics.
+    typographySessionRef.current?.capture(() => {
+      if (nodeRef.current?.querySelector('[data-builder-inline-text-editor="true"]')) return false;
+      if (node.kind === 'text' || node.kind === 'heading') {
+        const content = node.content as Record<string, unknown>;
+        inlineEditOriginalContentRef.current = {
+          nodeId: node.id,
+          text: typeof content.text === 'string' ? content.text : '',
+          ...(isBuilderRichText(content.richText) ? { richText: content.richText } : {}),
+        };
+      }
+      setInlineTextVisualStyle(captureInlineTextVisualStyle(nodeRef.current));
+      return true;
+    });
   }, [node.content, node.id, node.kind]);
 
   useEffect(() => {
     setInlineTextVisualStyle(null);
+    typographySessionRef.current?.reset();
+    clearInlineTextCaretCoords(node.id);
+    return () => clearInlineTextCaretCoords(node.id);
   }, [node.id]);
 
   const { rotationReadout, handleRotationPointerDown } = useCanvasNodeRotation({
@@ -381,32 +464,29 @@ const CanvasNode = memo(function CanvasNode({
     onInlineEditingChange,
     onBeforeStartEditing: captureInlineTextStyleForEditing,
   });
-  const startInlineEditFromNode = useCallback(() => {
-    if (isTextKind) {
+  const startInlineEditFromNode = useCallback((
+    clickTarget: EventTarget | null,
+    coords: InlineTextCaretCoords,
+  ) => {
+    const target = resolveInlineTextEditTarget(clickTarget, nodesById);
+    if (!target) return false;
+
+    rememberInlineTextCaretCoords(target.nodeId, coords);
+    if (target.nodeId === node.id && isTextKind) {
       handleDoubleClick();
       return true;
     }
 
-    const rootEl = nodeRef.current;
-    if (!rootEl) return false;
-    const candidates = Array.from(rootEl.querySelectorAll<HTMLElement>('[data-node-id]'))
-      .map((element) => {
-        const candidateId = element.dataset.nodeId;
-        const candidate = candidateId ? nodesById.get(candidateId) : null;
-        if (!candidate || (candidate.kind !== 'text' && candidate.kind !== 'heading') || candidate.locked) return null;
-        const rect = element.getBoundingClientRect();
-        if (rect.width <= 0 || rect.height <= 0 || window.getComputedStyle(element).visibility === 'hidden') return null;
-        return { id: candidate.id, area: rect.width * rect.height };
-      })
-      .filter((candidate): candidate is { id: string; area: number } => candidate !== null)
-      .sort((left, right) => right.area - left.area);
-
-    const target = candidates[0];
-    if (!target) return false;
-    onSelect(target.id, false);
-    document.dispatchEvent(new CustomEvent('builder:start-text-edit', { detail: { nodeId: target.id } }));
+    onSelect(target.nodeId, false);
+    document.dispatchEvent(new CustomEvent('builder:start-text-edit', {
+      detail: {
+        nodeId: target.nodeId,
+        clientX: coords.x,
+        clientY: coords.y,
+      },
+    }));
     return true;
-  }, [handleDoubleClick, isTextKind, nodesById, onSelect]);
+  }, [handleDoubleClick, isTextKind, node.id, nodesById, onSelect]);
   const animationPreviewPhase = useCanvasNodeAnimationPreview({
     animation: node.animation,
     nodeId: node.id,
@@ -1169,6 +1249,7 @@ const CanvasNode = memo(function CanvasNode({
     <InlineTextEditor
       initialText={String(textContent.text || '')}
       initialRichText={initialRichText}
+      initialCaretCoords={readInlineTextCaretCoords(node.id)}
       fontSize={inlineTextVisualStyle?.fontSize ?? typography?.fontSize ?? 16}
       color={inlineTextVisualStyle?.color ?? resolveThemeColor(typography?.color, theme)}
       fontWeight={inlineTextVisualStyle?.fontWeight ?? (typography ? resolveFontWeightCss(typography) : 'regular')}
@@ -1185,6 +1266,8 @@ const CanvasNode = memo(function CanvasNode({
       onBlur={() => {
         setInlineTextVisualStyle(null);
         inlineEditOriginalContentRef.current = null;
+        typographySessionRef.current?.reset();
+        clearInlineTextCaretCoords(node.id);
         handleInlineBlur();
       }}
     />
@@ -1277,7 +1360,7 @@ const CanvasNode = memo(function CanvasNode({
         if (!selected || !isInteractive || node.locked) return;
         if (event.button !== 0 || event.detail >= 2 || event.altKey) return;
         if (event.metaKey || event.ctrlKey || event.shiftKey) return;
-        if (event.target === event.currentTarget) return;
+        if (event.target === event.currentTarget && event.pointerType !== 'touch') return;
         if (isSelectionChromePointerTarget(event.target)) return;
         // Touch: a selected top-level section spans the whole viewport width,
         // so on phones it doubles as the scroll surface — body presses must
@@ -1292,7 +1375,6 @@ const CanvasNode = memo(function CanvasNode({
         event.stopPropagation();
         if (event.detail >= 2 && isInteractive && !node.locked) {
           event.preventDefault();
-          startInlineEditFromNode();
           return;
         }
         if (event.altKey && node.parentId) {
@@ -1349,12 +1431,6 @@ const CanvasNode = memo(function CanvasNode({
       onPointerUp={clearTouchContextMenu}
       onPointerCancel={clearTouchContextMenu}
       onPointerLeave={clearTouchContextMenu}
-      onClickCapture={(event) => {
-        if (event.detail < 2 || node.locked || !isInteractive) return;
-        if (!startInlineEditFromNode()) return;
-        event.preventDefault();
-        event.stopPropagation();
-      }}
       onContextMenu={(event) => {
         clearTouchContextMenu();
         event.stopPropagation();
@@ -1364,13 +1440,10 @@ const CanvasNode = memo(function CanvasNode({
       }}
       onDoubleClickCapture={(event) => {
         if (node.locked || !isInteractive) return;
-        if (!startInlineEditFromNode()) return;
+        if (isSelectionChromePointerTarget(event.target)) return;
+        if (!startInlineEditFromNode(event.target, { x: event.clientX, y: event.clientY })) return;
         event.preventDefault();
         event.stopPropagation();
-      }}
-      onDoubleClick={(event) => {
-        event.stopPropagation();
-        startInlineEditFromNode();
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -1392,9 +1465,8 @@ const CanvasNode = memo(function CanvasNode({
       }}
       onClick={(event) => {
         event.stopPropagation();
-        if (event.detail >= 2 && isInteractive && !node.locked) {
+        if (event.detail >= 2) {
           event.preventDefault();
-          startInlineEditFromNode();
           return;
         }
         // Prevent nested anchors / form-submit buttons inside widgets from

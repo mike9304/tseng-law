@@ -23,6 +23,8 @@ import { normalizeBookingTimezone } from '@/lib/builder/bookings/timezone';
 const BOOKINGS_ROOT = process.env.BUILDER_BOOKINGS_ROOT ?? path.join(process.cwd(), 'runtime-data', 'builder-bookings');
 const BLOB_PREFIX = 'builder-bookings/';
 
+const bookingWriteQueues = new Map<string, Promise<void>>();
+
 type Collection =
   | 'services'
   | 'staff'
@@ -127,6 +129,38 @@ async function listJson<T>(collection: Collection): Promise<T[]> {
 
 function nowIso(): string {
   return new Date().toISOString();
+}
+
+async function withBookingWriteLock<T>(bookingId: string, operation: () => Promise<T>): Promise<T> {
+  const previous = bookingWriteQueues.get(bookingId) ?? Promise.resolve();
+  let release!: () => void;
+  const gate = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  const queued = previous.catch(() => undefined).then(() => gate);
+  bookingWriteQueues.set(bookingId, queued);
+
+  await previous.catch(() => undefined);
+  try {
+    return await operation();
+  } finally {
+    release();
+    if (bookingWriteQueues.get(bookingId) === queued) {
+      bookingWriteQueues.delete(bookingId);
+    }
+  }
+}
+
+function unionBookingReminders(
+  persisted: Booking['reminders'],
+  incoming: Booking['reminders'],
+): Booking['reminders'] {
+  const byType = new Map<Booking['reminders'][number]['type'], Booking['reminders'][number]>();
+  for (const reminder of persisted) byType.set(reminder.type, reminder);
+  for (const reminder of incoming) {
+    if (!byType.has(reminder.type)) byType.set(reminder.type, reminder);
+  }
+  return [...byType.values()];
 }
 
 function defaultCancellationPolicies(): BookingCancellationPolicy[] {
@@ -639,22 +673,48 @@ export async function getBooking(bookingId: string): Promise<Booking | null> {
 }
 
 export async function saveBooking(booking: Booking): Promise<void> {
-  // F109 — fire bookings.reservation-created only the first time we see this id.
-  const prior = await readJson<Booking>('bookings', booking.bookingId);
-  await writeJson('bookings', booking.bookingId, booking);
-  if (!prior) {
-    void import('@/lib/builder/apps/hook-runtime').then(({ dispatchAppHookEvent }) => (
-      dispatchAppHookEvent({
-        kind: 'bookings.reservation-created',
-        payload: {
-          bookingId: booking.bookingId,
-          serviceId: booking.serviceId,
-          staffId: booking.staffId,
-          startAt: booking.startAt,
-        },
-      })
-    )).catch(() => undefined);
-  }
+  await withBookingWriteLock(booking.bookingId, async () => {
+    // F109 — fire bookings.reservation-created only the first time we see this id.
+    const prior = await readJson<Booking>('bookings', booking.bookingId);
+    const nextBooking = prior
+      ? { ...booking, reminders: unionBookingReminders(prior.reminders, booking.reminders) }
+      : booking;
+    await writeJson('bookings', booking.bookingId, nextBooking);
+    if (!prior) {
+      void import('@/lib/builder/apps/hook-runtime').then(({ dispatchAppHookEvent }) => (
+        dispatchAppHookEvent({
+          kind: 'bookings.reservation-created',
+          payload: {
+            bookingId: booking.bookingId,
+            serviceId: booking.serviceId,
+            staffId: booking.staffId,
+            startAt: booking.startAt,
+          },
+        })
+      )).catch(() => undefined);
+    }
+  });
+}
+
+export async function appendBookingReminderMarker(
+  bookingId: string,
+  marker: Booking['reminders'][number],
+): Promise<{ ok: true; booking: Booking } | { ok: false; reason: 'not_found' }> {
+  return withBookingWriteLock(bookingId, async () => {
+    const latest = await readJson<Booking>('bookings', bookingId);
+    if (!latest) return { ok: false, reason: 'not_found' };
+    if (latest.reminders.some((reminder) => reminder.type === marker.type)) {
+      return { ok: true, booking: latest };
+    }
+
+    const updated: Booking = {
+      ...latest,
+      reminders: unionBookingReminders(latest.reminders, [marker]),
+      updatedAt: nowIso(),
+    };
+    await writeJson('bookings', bookingId, updated);
+    return { ok: true, booking: updated };
+  });
 }
 
 export async function getWaitlistEntry(waitlistId: string): Promise<BookingWaitlistEntry | null> {

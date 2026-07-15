@@ -259,7 +259,7 @@ function paymentStatusLabel(locale: Locale, status: string | null | undefined): 
       case 'partially_paid':
         return '부분 결제됨';
       case 'authorized_stub':
-        return '승인됨';
+        return '샌드박스 승인 (테스트 · 미수납)';
       case 'paid':
         return '결제 완료';
       case 'failed':
@@ -288,7 +288,7 @@ function paymentStatusLabel(locale: Locale, status: string | null | undefined): 
       case 'partially_paid':
         return '部分付款';
       case 'authorized_stub':
-        return '已授權';
+        return '沙盒授權（測試，未收款）';
       case 'paid':
         return '已付款';
       case 'failed':
@@ -310,6 +310,7 @@ function paymentStatusLabel(locale: Locale, status: string | null | undefined): 
         return status;
     }
   }
+  if (status === 'authorized_stub') return 'Sandbox authorization (test, not collected)';
   return status.replace(/_/g, ' ');
 }
 
@@ -1657,6 +1658,15 @@ function wrapPdfLine(value: string, maxLength = 92): string[] {
   return lines;
 }
 
+function pdfPaymentDetailValue(row: BuilderBillingDocumentRow, detail: BillingDocumentDetail): string {
+  if (detail.label === 'Payment' && row.paymentStatus === 'authorized_stub') {
+    // The built-in PDF Helvetica font is ASCII-only. Keep this legacy status readable
+    // and explicit instead of reducing the localized label to question marks.
+    return 'Sandbox authorization (test, not collected)';
+  }
+  return detail.value;
+}
+
 export function renderBillingDocumentPdf(row: BuilderBillingDocumentRow, options: BillingDocumentRenderOptions = {}): Buffer {
   const issued = new Date(row.issuedAt).toLocaleString(intlLocale(row.locale));
   const manualInstructionLines = shouldRenderManualInstructions(row, options.manualInstructions)
@@ -1678,7 +1688,7 @@ export function renderBillingDocumentPdf(row: BuilderBillingDocumentRow, options
     `Recipient: ${row.customerLabel}`,
     `Email: ${row.recipientEmail}`,
     '',
-    ...row.details.map((detail) => `${detail.label}: ${detail.value}`),
+    ...row.details.map((detail) => `${detail.label}: ${pdfPaymentDetailValue(row, detail)}`),
     '',
     'Items',
     ...row.lines.flatMap((line) => wrapPdfLine(`- ${line.label} ${line.quantity ? `x${line.quantity}` : ''} ${line.amountLabel ?? ''}`)),

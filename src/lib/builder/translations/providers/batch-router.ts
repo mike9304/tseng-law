@@ -4,7 +4,7 @@ import {
   emitProviderResultProgress,
   summarizeBatchResult,
 } from './progress';
-import { readCache, rememberResult, selectProvider } from './router-core';
+import { isProductionEnvironment, readCache, rememberResult, selectProvider } from './router-core';
 import { translateViaRouter, type RouterArgs } from './single-router';
 import { recordUsage } from './usage';
 import type {
@@ -104,10 +104,41 @@ async function translateBatchWithSingles(
   return summarizeBatchResult(results[0]?.provider ?? 'mock', 'single-fallback', results);
 }
 
+function unconfiguredBatchResult(args: RouterBatchArgs): TranslationProviderBatchResult {
+  const results: TranslationProviderBatchEntryResult[] = args.items.map((item) => ({
+    key: item.key,
+    ok: false,
+    provider: 'mock',
+    reason: 'unconfigured',
+  }));
+  emitBatchProgress(args.onProgress, {
+    provider: 'mock',
+    mode: 'native-batch',
+    requested: args.items.length,
+    cached: 0,
+    sent: 0,
+    succeeded: 0,
+    failed: results.length,
+    name: 'provider-response',
+  });
+  return {
+    results,
+    summary: {
+      provider: 'mock',
+      mode: 'native-batch',
+      requested: args.items.length,
+      succeeded: 0,
+      failed: results.length,
+    },
+  };
+}
+
 export async function translateBatchViaRouter(args: RouterBatchArgs): Promise<TranslationProviderBatchResult> {
   if (args.sourceLocale === args.targetLocale) return mockBatchResult(args);
   const selected = selectProvider(args.preferProvider);
-  if ('mock' in selected) return mockBatchResult(args);
+  if ('mock' in selected) {
+    return isProductionEnvironment() ? unconfiguredBatchResult(args) : mockBatchResult(args);
+  }
   if (!selected.translateBatch) return translateBatchWithSingles(args, selected.id);
 
   emitBatchProgress(args.onProgress, {

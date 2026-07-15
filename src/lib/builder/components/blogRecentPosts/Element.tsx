@@ -5,6 +5,7 @@ import type { BuilderBlogRecentPostsCanvasNode } from '@/lib/builder/canvas/type
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
 import { DEFAULT_BLOG_CATEGORIES } from '@/lib/builder/blog/blog-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { WidgetDataDisclosure } from '../_shared/WidgetDataDisclosure';
 import { getBlogRecentPostsCopy, type BlogRecentPostMock } from './blog-recent-posts-copy';
 import styles from './BlogRecentPosts.module.css';
 
@@ -112,6 +113,7 @@ export default function BlogRecentPostsElement({
       className={`${styles.recentRoot} ${c.layout === 'cards' ? styles.recentCards : styles.recentList}`}
       data-builder-blog-recent-posts="true"
     >
+      {isBuilder ? <WidgetDataDisclosure locale={effectiveLocale} /> : null}
       {items.map((item) => (
         <a
           key={item.postId}

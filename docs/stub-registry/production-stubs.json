@@ -1,0 +1,848 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "translation-mock-provider",
+      "category": "translation",
+      "sourcePath": "src/lib/builder/translations/providers/router-core.ts",
+      "sourcePattern": "return \\{ mock: true \\}",
+      "sourceExpectedOccurrences": 3,
+      "occurrencePatterns": ["(?:id|preferProvider|envId) === 'mock'|return \\{ mock: true \\}"],
+      "expectedOccurrences": 6,
+      "productionGuardAnchors": [
+        {
+          "sourcePath": "src/lib/builder/translations/providers/single-router.ts",
+          "sourcePattern": "if \\(isProductionEnvironment\\(\\)\\) \\{[\\s\\S]{0,160}?return \\{ ok: false, reason: 'unconfigured', provider: 'mock' \\};",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/lib/builder/translations/providers/batch-router.ts",
+          "sourcePattern": "return isProductionEnvironment\\(\\) \\? unconfiguredBatchResult\\(args\\) : mockBatchResult\\(args\\);",
+          "expectedOccurrences": 1
+        }
+      ],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "Mock translation is allowed for local wiring only; production routing fails closed when no real provider is configured."
+    },
+    {
+      "id": "translation-mock-single-result",
+      "category": "translation",
+      "sourcePath": "src/lib/builder/translations/providers/single-router.ts",
+      "sourcePattern": "provider: 'mock'",
+      "sourceExpectedOccurrences": 3,
+      "occurrencePatterns": ["provider: 'mock'", "mockResult", "'mock' in selected"],
+      "expectedOccurrences": 6,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/translations/providers/single-router.ts",
+        "sourcePattern": "if \\(isProductionEnvironment\\(\\)\\) \\{[\\s\\S]{0,160}?return \\{ ok: false, reason: 'unconfigured', provider: 'mock' \\};",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "Single-item mock results are development-only; production returns unconfigured instead of source-text success."
+    },
+    {
+      "id": "translation-mock-batch-result",
+      "category": "translation",
+      "sourcePath": "src/lib/builder/translations/providers/batch-router.ts",
+      "sourcePattern": "provider: 'mock'",
+      "sourceExpectedOccurrences": 7,
+      "occurrencePatterns": ["provider: 'mock'|provider \\?\\? 'mock'"],
+      "expectedOccurrences": 8,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/translations/providers/batch-router.ts",
+        "sourcePattern": "return isProductionEnvironment\\(\\) \\? unconfiguredBatchResult\\(args\\) : mockBatchResult\\(args\\);",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "Batch mock results are development-only; production returns failed unconfigured items."
+    },
+    {
+      "id": "translation-mock-api-input",
+      "category": "translation",
+      "sourcePath": "src/app/api/builder/translations/translate/route.ts",
+      "sourcePattern": "'openai' \\|\\| value === 'deepl' \\|\\| value === 'mock'",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["value === 'mock'"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/translations/providers/single-router.ts",
+        "sourcePattern": "if \\(isProductionEnvironment\\(\\)\\) \\{[\\s\\S]{0,160}?return \\{ ok: false, reason: 'unconfigured', provider: 'mock' \\};",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "The API may parse an explicit mock request, but production provider routing fails closed."
+    },
+    {
+      "id": "translation-mock-batch-api-input",
+      "category": "translation",
+      "sourcePath": "src/app/api/builder/translations/translate-batch/route.ts",
+      "sourcePattern": "provider: z\\.enum\\(\\['openai', 'deepl', 'mock'\\]\\)",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["provider: z\\.enum\\(\\['openai', 'deepl', 'mock'\\]\\)"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/translations/providers/batch-router.ts",
+        "sourcePattern": "return isProductionEnvironment\\(\\) \\? unconfiguredBatchResult\\(args\\) : mockBatchResult\\(args\\);",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "The batch API may parse an explicit mock request, but production provider routing fails closed."
+    },
+    {
+      "id": "translation-mock-stream-api-input",
+      "category": "translation",
+      "sourcePath": "src/app/api/builder/translations/translate-batch/stream/route.ts",
+      "sourcePattern": "provider: z\\.enum\\(\\['openai', 'deepl', 'mock'\\]\\)",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["provider: z\\.enum\\(\\['openai', 'deepl', 'mock'\\]\\)"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/translations/providers/batch-router.ts",
+        "sourcePattern": "return isProductionEnvironment\\(\\) \\? unconfiguredBatchResult\\(args\\) : mockBatchResult\\(args\\);",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "The streaming batch API may parse an explicit mock request, but production provider routing fails closed."
+    },
+    {
+      "id": "booking-stripe-payment-dev-stub",
+      "category": "payments",
+      "sourcePath": "src/app/api/booking/payment-intent/route.ts",
+      "sourcePattern": "STRIPE_SECRET_KEY missing in production",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["stub: true"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/app/api/booking/payment-intent/route.ts",
+        "sourcePattern": "if \\(process\\.env\\.NODE_ENV === 'production'\\) \\{[\\s\\S]{0,240}?return errorResponse\\(locale, 'booking_payment_provider_not_configured', 503\\);",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "bookings",
+      "notes": "The stub payment intent is development-only; production always fails closed when Stripe is not configured."
+    },
+    {
+      "id": "booking-zoom-development-mock",
+      "category": "video-meetings",
+      "sourcePath": "src/lib/builder/bookings/zoom-client.ts",
+      "sourcePattern": "NODE_ENV === 'production'\\) return null",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["meetingId: 'mock'"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/bookings/zoom-client.ts",
+        "sourcePattern": "if \\(process\\.env\\.NODE_ENV === 'production'\\) return null;",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "bookings",
+      "notes": "Mock meetings are development-only; production always bypasses mock configuration and requires real Zoom credentials."
+    },
+    {
+      "id": "booking-stripe-unsigned-webhook-dev",
+      "category": "payments-webhook",
+      "sourcePath": "src/app/api/booking/stripe-webhook/route.ts",
+      "sourcePattern": "accepting unsigned events in dev only",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["accepting unsigned events in dev only"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/app/api/booking/stripe-webhook/route.ts",
+        "sourcePattern": "if \\(process\\.env\\.NODE_ENV === 'production'\\) \\{[\\s\\S]{0,180}?return NextResponse\\.json\\(\\{ error: 'Webhook not configured' \\}, \\{ status: 503 \\}\\);",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "bookings",
+      "notes": "Unsigned booking webhook events are accepted only outside production; production returns 503 without a signing secret."
+    },
+    {
+      "id": "billing-stripe-unsigned-webhook-dev",
+      "category": "payments-webhook",
+      "sourcePath": "src/app/api/billing-documents/stripe-webhook/route.ts",
+      "sourcePattern": "accepting unsigned dev events",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["accepting unsigned dev events"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/app/api/billing-documents/stripe-webhook/route.ts",
+        "sourcePattern": "if \\(process\\.env\\.NODE_ENV === 'production'\\) \\{[\\s\\S]{0,220}?return NextResponse\\.json\\(\\{ ok: false, error: 'stripe_webhook_not_configured' \\}, \\{ status: 503 \\}\\);",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "billing",
+      "notes": "Unsigned billing webhook events are accepted only outside production; production returns 503 without a signing secret."
+    },
+    {
+      "id": "booking-resend-unconfigured",
+      "category": "email",
+      "sourcePath": "src/lib/builder/bookings/notifications.ts",
+      "sourcePattern": "ok: false, provider: 'resend', reason: 'unconfigured'",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["ok: false, provider: 'resend', reason: 'unconfigured'"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/bookings/notifications.ts",
+        "sourcePattern": "return \\{ ok: false, provider: 'resend', reason: 'unconfigured' \\};",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "intentional-fallback",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "bookings",
+      "notes": "Missing Resend configuration returns an explicit failure rather than a delivered-email success."
+    },
+    {
+      "id": "booking-twilio-unconfigured",
+      "category": "sms",
+      "sourcePath": "src/lib/builder/bookings/sms-client.ts",
+      "sourcePattern": "ok: false, reason: 'unconfigured'",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["ok: false, reason: 'unconfigured'"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/bookings/sms-client.ts",
+        "sourcePattern": "return \\{ ok: false, reason: 'unconfigured' \\};",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "intentional-fallback",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "bookings",
+      "notes": "Missing Twilio configuration is an explicit non-delivery result."
+    },
+    {
+      "id": "marketing-email-stub",
+      "category": "email",
+      "sourcePath": "src/lib/builder/marketing/email-provider.ts",
+      "sourcePattern": "provider === 'stub'",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["(?:[Mm][Oo][Cc][Kk]|[Ss][Tt][Uu][Bb])"],
+      "expectedOccurrences": 8,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/marketing/email-provider.ts",
+        "sourcePattern": "if \\(env\\.NODE_ENV === 'production'\\) \\{[\\s\\S]{0,220}?return \\{ ok: false, provider: 'stub', error: 'No marketing email provider configured in production' \\};",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "marketing",
+      "notes": "The deterministic stub may succeed locally but production returns an explicit failure."
+    },
+    {
+      "id": "marketing-email-stub-readiness",
+      "category": "email",
+      "sourcePath": "src/lib/builder/marketing/deliverability.ts",
+      "sourcePattern": "provider === 'stub'",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["(?:[Mm][Oo][Cc][Kk]|[Ss][Tt][Uu][Bb])"],
+      "expectedOccurrences": 3,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/marketing/email-provider.ts",
+        "sourcePattern": "if \\(env\\.NODE_ENV === 'production'\\) \\{[\\s\\S]{0,220}?return \\{ ok: false, provider: 'stub', error: 'No marketing email provider configured in production' \\};",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "marketing",
+      "notes": "Deliverability readiness explicitly treats the stub provider as not production-ready."
+    },
+    {
+      "id": "commerce-sandbox-payment-provider",
+      "category": "payments",
+      "sourcePath": "src/lib/builder/commerce/payment-providers.ts",
+      "sourcePattern": "stub: true",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["stub: true"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [
+        {
+          "sourcePath": "src/app/api/builder/commerce/checkout/route.ts",
+          "sourcePattern": "if \\(process\\.env\\.NODE_ENV === 'production' && input\\.paymentAdapter === 'sandbox-card'\\) \\{[\\s\\S]{0,160}?return errorResponse\\(errorLocale, 'payment_provider_not_configured', 503\\);",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/app/api/builder/commerce/payment-intents/route.ts",
+          "sourcePattern": "if \\(process\\.env\\.NODE_ENV === 'production' && requestedProvider === 'sandbox-card'\\) \\{[\\s\\S]{0,160}?return errorResponse\\(errorLocale, 'payment_provider_not_configured', 503\\);",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/app/api/builder/commerce/payment-webhooks/[provider]/route.ts",
+          "sourcePattern": "if \\(process\\.env\\.NODE_ENV === 'production' && params\\.provider === 'sandbox-card'\\) \\{[\\s\\S]{0,160}?return errorResponse\\(errorLocale, 'payment_webhook_not_configured', 503\\);",
+          "expectedOccurrences": 1
+        }
+      ],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "commerce",
+      "notes": "Sandbox-card intents remain available for development, but production checkout, payment-intent, and webhook routes return 503 before mutation; manual-invoice is a real offline workflow with stub:false."
+    },
+    {
+      "id": "social-instagram-placeholder",
+      "category": "social",
+      "sourcePath": "src/lib/builder/components/social-widgets-copy.ts",
+      "sourcePattern": "external embed placeholder",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["external embed placeholder"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [
+        {
+          "sourcePath": "src/lib/builder/components/social-widgets-copy.ts",
+          "sourcePattern": "editPlaceholder: \\(provider\\) => `\\$\\{provider\\} external embed placeholder`",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/lib/builder/components/socialEmbed/index.tsx",
+          "sourcePattern": "builder-social-embed-unavailable",
+          "expectedOccurrences": 1
+        }
+      ],
+      "productionPolicy": "placeholder-only",
+      "operationalSuccessAllowedInProduction": false,
+      "surfaceKind": "rendered-placeholder",
+      "visibleDisclosureAnchors": [
+        {
+          "sourcePath": "src/lib/builder/components/socialEmbed/index.tsx",
+          "sourcePattern": "copy\\.socialEmbed\\.unavailable(?:Title|Message)",
+          "expectedOccurrences": 2,
+          "renderedSelector": "[data-builder-demo-disclosure=\"social-embed-placeholder\"]",
+          "productSourcePath": "src/lib/builder/components/socialEmbed/index.tsx",
+          "productSourcePattern": "data-builder-demo-disclosure=\"social-embed-placeholder\"",
+          "productExpectedOccurrences": 2,
+          "sourceReferencePattern": "data-builder-demo-disclosure",
+          "sourceReferenceExpectedOccurrences": 2
+        }
+      ],
+      "owner": "builder-components",
+      "notes": "The social embed renders a stable disclosure selector on both edit and public branches; the public unavailable branch visibly renders copy.socialEmbed.unavailableTitle and copy.socialEmbed.unavailableMessage. Presentation-only until a real provider/runtime integration is implemented."
+    },
+    {
+      "id": "in-memory-rate-limit-fallback",
+      "category": "security",
+      "sourcePath": "src/lib/builder/security/rate-limit.ts",
+      "sourcePattern": "process\\.env\\.NODE_ENV !== 'production'",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["checkInMemoryRateLimit"],
+      "expectedOccurrences": 4,
+      "productionGuardAnchors": [
+        {
+          "sourcePath": "src/lib/builder/security/rate-limit.ts",
+          "sourcePattern": "return process\\.env\\.NODE_ENV !== 'production';",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/lib/builder/security/rate-limit.ts",
+          "sourcePattern": ": backendUnavailable\\(\\);",
+          "expectedOccurrences": 2
+        }
+      ],
+      "productionPolicy": "intentional-fallback",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "The process-local limiter is development-only; production Upstash absence or failure returns allowed:false with backend_unavailable so guards respond 503."
+    },
+    {
+      "id": "mailchimp-legacy-storage-normalization",
+      "category": "legacy-migration",
+      "sourcePath": "src/lib/builder/crm/integrations-model.ts",
+      "sourcePattern": "mailchimp-stub",
+      "sourceExpectedOccurrences": 2,
+      "occurrencePatterns": ["mailchimp-stub"],
+      "expectedOccurrences": 2,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/crm/integrations-model.ts",
+        "sourcePattern": "kind: z\\.enum\\(\\['slack-webhook', 'generic-webhook', 'mailchimp'\\]\\)",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "crm",
+      "notes": "Storage-only compatibility normalizes the legacy mailchimp-stub value to mailchimp; public/API inputs reject the legacy kind and it cannot be an operational provider."
+    },
+    {
+      "id": "translation-mock-stream-client-schema",
+      "category": "translation",
+      "sourcePath": "src/components/builder/translations/translation-batch-stream.ts",
+      "sourcePattern": "provider: z\\.enum\\(\\['openai', 'deepl', 'mock'\\]\\)",
+      "sourceExpectedOccurrences": 2,
+      "occurrencePatterns": ["provider: z\\.enum\\(\\['openai', 'deepl', 'mock'\\]\\)", "'mock-complete'", "provider: 'openai' \\| 'deepl' \\| 'mock'"],
+      "expectedOccurrences": 4,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/translations/providers/batch-router.ts",
+        "sourcePattern": "return isProductionEnvironment\\(\\) \\? unconfiguredBatchResult\\(args\\) : mockBatchResult\\(args\\);",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "The client accepts mock-shaped stream events for local wiring and response parsing, while production translation routes fail closed without a real provider."
+    },
+    {
+      "id": "translation-mock-readiness-schema",
+      "category": "translation",
+      "sourcePath": "src/components/builder/translations/translation-provider-readiness-schemas.ts",
+      "sourcePattern": "z\\.literal\\('mock'\\)",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["z\\.literal\\('mock'\\)"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/translations/providers/diagnostics.ts",
+        "sourcePattern": "status: production \\? 'fail' : 'warn'",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "surfaceKind": "non-rendered",
+      "owner": "builder-platform",
+      "notes": "The client readiness schema parses selectedProvider mock for local diagnostics, while the server diagnostics report marks the mock-selected router status fail in production and warn outside production."
+    },
+    {
+      "id": "marketing-email-stub-client-schema",
+      "category": "email",
+      "sourcePath": "src/components/builder/marketing/DeliverabilityPanel.tsx",
+      "sourcePattern": "provider: z\\.enum\\(\\['resend', 'mailchimp-transactional', 'stub'\\]\\)",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["provider: z\\.enum\\(\\['resend', 'mailchimp-transactional', 'stub'\\]\\)"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/marketing/email-provider.ts",
+        "sourcePattern": "if \\(env\\.NODE_ENV === 'production'\\) \\{[\\s\\S]{0,220}?return \\{ ok: false, provider: 'stub', error: 'No marketing email provider configured in production' \\};",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "marketing",
+      "notes": "The UI parser can display explicit stub diagnostics, but the production provider path returns failure and cannot report delivery success."
+    },
+    {
+      "id": "crm-email-legacy-storage-normalization",
+      "category": "legacy-migration",
+      "sourcePath": "src/lib/builder/crm/automation-model.ts",
+      "sourcePattern": "send-email-stub",
+      "sourceExpectedOccurrences": 2,
+      "occurrencePatterns": ["send-email-stub"],
+      "expectedOccurrences": 2,
+      "productionGuardAnchors": [
+        {
+          "sourcePath": "src/lib/builder/crm/automation-model.ts",
+          "sourcePattern": "if \\(action\\.kind === 'simulate-email' && process\\.env\\.NODE_ENV === 'production'\\) \\{[\\s\\S]{0,220}?context\\.addIssue\\(",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/lib/builder/crm/automation-engine.ts",
+          "sourcePattern": "case 'simulate-email': \\{[\\s\\S]{0,180}?if \\(process\\.env\\.NODE_ENV === 'production'\\) \\{[\\s\\S]{0,120}?throw new CrmAutomationActionUnavailableError\\(\\);",
+          "expectedOccurrences": 1
+        }
+      ],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "crm",
+      "notes": "Legacy stored send-email-stub actions normalize to the explicitly development-only simulate-email action; new production input and execution both fail closed."
+    },
+    {
+      "id": "crm-email-development-simulation",
+      "category": "email",
+      "sourcePath": "src/lib/builder/crm/automation-engine.ts",
+      "sourcePattern": "case 'simulate-email'",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["case 'simulate-email'"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/lib/builder/crm/automation-engine.ts",
+        "sourcePattern": "case 'simulate-email': \\{[\\s\\S]{0,180}?if \\(process\\.env\\.NODE_ENV === 'production'\\) \\{[\\s\\S]{0,120}?throw new CrmAutomationActionUnavailableError\\(\\);",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "crm",
+      "notes": "Email simulation is available only outside production; production schema validation and the execution engine reject it before any outbox write."
+    },
+    {
+      "id": "ai-generator-deterministic-content-fallback",
+      "category": "ai-generation",
+      "sourcePath": "src/lib/builder/ai-generator/content-generator.ts",
+      "sourcePattern": "function fallbackSection",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["fallbackSection\\(", "stub: true"],
+      "expectedOccurrences": 4,
+      "productionGuardAnchors": [
+        {
+          "sourcePath": "src/lib/builder/ai-generator/content-generator.ts",
+          "sourcePattern": "export function isLocalDemoGenerationAllowed\\(\\): boolean \\{\\s+return process\\.env\\.NODE_ENV !== 'production'\\s+&& process\\.env\\.AI_BUILDER_ALLOW_LOCAL_DEMO === 'true';\\s+\\}",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/lib/builder/ai-generator/content-generator.ts",
+          "sourcePattern": "if \\(!isLocalDemoGenerationAllowed\\(\\)\\) \\{\\s+throw new AiContentGenerationError\\(llm\\.code\\);\\s+\\}",
+          "expectedOccurrences": 1
+        }
+      ],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "Deterministic demo content is nonproduction-only; production throws a typed 503/502 error before fallback content can be returned or persisted."
+    },
+    {
+      "id": "ai-generator-local-demo-api-rejection",
+      "category": "ai-generation",
+      "sourcePath": "src/app/api/builder/ai-generator/route.ts",
+      "sourcePattern": "stub: true",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["stub: true"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [
+        {
+          "sourcePath": "src/app/api/builder/ai-generator/route.ts",
+          "sourcePattern": "function localDemoFailureResponse\\(\\): NextResponse \\{[\\s\\S]{0,320}?ok: false,[\\s\\S]{0,220}?stub: true,[\\s\\S]{0,80}?status: 503",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/app/api/builder/ai-generator/route.ts",
+          "sourcePattern": "if \\(!isProviderGeneratedSiteContent\\(draft\\.content\\)\\) \\{[\\s\\S]{0,100}?return localDemoFailureResponse\\(\\);",
+          "expectedOccurrences": 1
+        }
+      ],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "The generation API returns ok:false/503 and never caches or versions local demo content as provider-generated output."
+    },
+    {
+      "id": "ai-generator-local-demo-apply-rejection",
+      "category": "ai-generation",
+      "sourcePath": "src/app/api/builder/ai-generator/apply/route.ts",
+      "sourcePattern": "stub: true",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["stub: true"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [{
+        "sourcePath": "src/app/api/builder/ai-generator/apply/route.ts",
+        "sourcePattern": "if \\(!isProviderGeneratedSiteContent\\(draft\\.content\\)\\) \\{[\\s\\S]{0,420}?ok: false,[\\s\\S]{0,240}?stub: true,[\\s\\S]{0,100}?status: 503",
+        "expectedOccurrences": 1
+      }],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "The apply API rejects local demo content with ok:false/503 before any site mutation."
+    },
+    {
+      "id": "ai-section-local-demo-rejection",
+      "category": "ai-generation",
+      "sourcePath": "src/app/api/builder/ai-generator/section/route.ts",
+      "sourcePattern": "stub: true",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["stub: true"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [
+        {
+          "sourcePath": "src/lib/builder/ai-generator/content-generator.ts",
+          "sourcePattern": "export function isLocalDemoGenerationAllowed\\(\\): boolean \\{\\s+return process\\.env\\.NODE_ENV !== 'production'\\s+&& process\\.env\\.AI_BUILDER_ALLOW_LOCAL_DEMO === 'true';\\s+\\}",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/app/api/builder/ai-generator/section/route.ts",
+          "sourcePattern": "if \\(!apiKey\\) \\{\\s+if \\(!isLocalDemoGenerationAllowed\\(\\)\\) \\{\\s+return providerFailureResponse\\('ai_content_provider_unconfigured'\\);\\s+\\}",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/app/api/builder/ai-generator/section/route.ts",
+          "sourcePattern": "ok: false,[\\s\\S]{0,260}?stub: true,[\\s\\S]{0,260}?status: 503",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/app/api/builder/ai-generator/section/route.ts",
+          "sourcePattern": "if \\(!result\\.ok\\) \\{[\\s\\S]{0,100}?return providerFailureResponse\\(result\\.error\\.code\\);",
+          "expectedOccurrences": 1
+        }
+      ],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "Missing or failed providers cannot return fallback section success in production; local demo output is explicitly ok:false/stub:true and provider failures return typed 503/502 responses."
+    },
+    {
+      "id": "ai-page-spec-local-demo-rejection",
+      "category": "ai-generation",
+      "sourcePath": "src/app/api/builder/ai-generator/page-spec/route.ts",
+      "sourcePattern": "stub: true",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["stub: true"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [
+        {
+          "sourcePath": "src/lib/builder/ai-generator/content-generator.ts",
+          "sourcePattern": "export function isLocalDemoGenerationAllowed\\(\\): boolean \\{\\s+return process\\.env\\.NODE_ENV !== 'production'\\s+&& process\\.env\\.AI_BUILDER_ALLOW_LOCAL_DEMO === 'true';\\s+\\}",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/app/api/builder/ai-generator/page-spec/route.ts",
+          "sourcePattern": "if \\(!apiKey\\) \\{\\s+if \\(!isLocalDemoGenerationAllowed\\(\\)\\) \\{\\s+return providerFailureResponse\\('ai_content_provider_unconfigured'\\);\\s+\\}",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/app/api/builder/ai-generator/page-spec/route.ts",
+          "sourcePattern": "ok: false,[\\s\\S]{0,260}?stub: true,[\\s\\S]{0,260}?status: 503",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/app/api/builder/ai-generator/page-spec/route.ts",
+          "sourcePattern": "if \\(!llmResult\\.ok\\) \\{[\\s\\S]{0,100}?return providerFailureResponse\\(llmResult\\.error\\.code\\);",
+          "expectedOccurrences": 1
+        }
+      ],
+      "productionPolicy": "blocked",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "Missing or failed providers cannot return deterministic page-spec success in production; local demo output is ok:false/stub:true and provider failures are typed errors."
+    },
+    {
+      "id": "app-hook-code-metadata-only-partial-success",
+      "category": "app-hooks",
+      "sourcePath": "src/app/api/builder/apps/hooks/route.ts",
+      "sourcePattern": "code-body-stored-as-stub",
+      "sourceExpectedOccurrences": 1,
+      "occurrencePatterns": ["code-body-stored-as-stub"],
+      "expectedOccurrences": 1,
+      "productionGuardAnchors": [
+        {
+          "sourcePath": "src/app/api/builder/apps/hooks/route.ts",
+          "sourcePattern": "codeStubNote = `code-body-stored-as-stub \\(secret-store-unavailable; bytes=\\$\\{trimmedCode\\.length\\}\\)`;",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/app/api/builder/apps/hooks/route.ts",
+          "sourcePattern": "\\.\\.\\.\\(codeStubNote \\? \\{ codeStubNote \\} : \\{\\}\\)",
+          "expectedOccurrences": 1
+        },
+        {
+          "sourcePath": "src/app/api/builder/apps/hooks/route.ts",
+          "sourcePattern": "ok: true,[\\s\\S]{0,100}?hasHandler: false[\\s\\S]{0,100}?status: 201",
+          "expectedOccurrences": 1
+        }
+      ],
+      "productionPolicy": "intentional-fallback",
+      "operationalSuccessAllowedInProduction": false,
+      "owner": "builder-platform",
+      "notes": "Accepted partial success stores hook metadata only when code-secret persistence fails. The response and registry both keep operational handler success false via hasHandler:false and preserve codeStubNote for operator visibility."
+    }
+  ],
+  "candidateInventory": [
+    {"id":"broad-account-document-email-status","category":"email","sourcePath":"src/app/[locale]/account/bookings/[bookingId]/documents/[documentId]/email/route.ts","expectedOccurrences":1,"owner":"bookings","notes":"Broad scan inventory for emailed_stub handling; unresolved until its operational semantics are reviewed."},
+    {"id":"broad-booking-payment-intent-stub","category":"payments","sourcePath":"src/app/api/booking/payment-intent/route.ts","expectedOccurrences":5,"owner":"bookings","notes":"Broad scan inventory for pi_stub_dev and payment stub response shapes."},
+    {"id":"broad-ai-page-spec-stub","category":"ai-generation","sourcePath":"src/app/api/builder/ai-generator/page-spec/route.ts","expectedOccurrences":2,"owner":"builder-platform","notes":"Broad scan inventory for local AI page-spec demo markers."},
+    {"id":"broad-app-hook-stub-note","category":"app-hooks","sourcePath":"src/app/api/builder/apps/hooks/route.ts","expectedOccurrences":5,"owner":"builder-platform","notes":"Broad scan inventory for metadata-only code stub notes."},
+    {"id":"broad-manual-payment-email-status","category":"payments","sourcePath":"src/app/api/builder/billing-documents/[source]/[ownerId]/[documentId]/manual-payments/route.ts","expectedOccurrences":1,"owner":"billing","notes":"Broad scan inventory for emailed_stub compatibility in manual payment mutation."},
+    {"id":"broad-commerce-notification-stub-status","category":"email","sourcePath":"src/app/api/builder/commerce/notifications/route.ts","expectedOccurrences":1,"owner":"commerce","notes":"Broad scan inventory for sent_stub notification status handling."},
+    {"id":"broad-commerce-order-patch-stub","category":"payments","sourcePath":"src/app/api/builder/commerce/orders/[orderId]/route.ts","expectedOccurrences":2,"owner":"commerce","notes":"Broad scan inventory for authorized_stub input and production rejection."},
+    {"id":"broad-commerce-order-list-stub","category":"payments","sourcePath":"src/app/api/builder/commerce/orders/route.ts","expectedOccurrences":1,"owner":"commerce","notes":"Broad scan inventory for authorized_stub order filtering."},
+    {
+      "id": "broad-ai-generator-wizard-demo",
+      "category": "ai-generation",
+      "sourcePath": "src/components/builder/ai-generator/AiGeneratorWizard.tsx",
+      "expectedOccurrences": 5,
+      "productionGuardAnchors": [
+        {"sourcePath":"src/components/builder/ai-generator/AiGeneratorWizard.tsx","sourcePattern":"const entryTrusted = !entryPolicy\\.viewOnly;","expectedOccurrences":1},
+        {"sourcePath":"src/components/builder/ai-generator/AiGeneratorWizard.tsx","sourcePattern":"disabled=\\{!entryPolicy\\.canRestore\\}","expectedOccurrences":1}
+      ],
+      "productionPolicy": "placeholder-only",
+      "surfaceKind": "rendered-demo",
+      "visibleDisclosureAnchors": [{
+        "sourcePath": "src/components/builder/ai-generator/AiGeneratorWizard.tsx",
+        "sourcePattern": "AI_PROVENANCE_LABELS\\[entryPolicy\\.provenance\\]",
+        "expectedOccurrences": 1,
+        "renderedSelector": "[data-ai-generator-history-provenance-warning]",
+        "productSourcePath": "src/components/builder/ai-generator/AiGeneratorWizard.tsx",
+        "productSourcePattern": "'local-demo': '로컬 데모/미리보기 \\(실제 AI 출력 아님\\)'",
+        "productExpectedOccurrences": 1,
+        "sourceReferencePattern": "AI_PROVENANCE_LABELS\\[entryPolicy\\.provenance\\]",
+        "sourceReferenceExpectedOccurrences": 1
+      }],
+      "owner": "builder-platform",
+      "notes": "Untrusted local-demo history is visibly labelled and remains view-only with restore disabled."
+    },
+    {
+      "id": "broad-booking-dashboard-email-stub",
+      "category": "email",
+      "sourcePath": "src/components/builder/bookings/BookingDashboardAdmin.tsx",
+      "expectedOccurrences": 10,
+      "productionGuardAnchors": [{"sourcePath":"src/components/builder/bookings/BookingDashboardAdmin.tsx","sourcePattern":"\\{hasStubData \\? <p role=\"status\" data-booking-demo-disclosure=\"dashboard\"","expectedOccurrences":1}],
+      "productionPolicy": "placeholder-only",
+      "surfaceKind": "rendered-demo",
+      "visibleDisclosureAnchors": [{
+        "sourcePath": "src/components/builder/bookings/BookingDashboardAdmin.tsx",
+        "sourcePattern": "STUB DATA",
+        "expectedOccurrences": 2,
+        "renderedSelector": "[data-booking-demo-disclosure=\"dashboard\"]",
+        "productSourcePath": "src/components/builder/bookings/BookingDashboardAdmin.tsx",
+        "productSourcePattern": "hasStubData \\? <p role=\"status\" data-booking-demo-disclosure=\"dashboard\"",
+        "productExpectedOccurrences": 1,
+        "sourceReferencePattern": "data-booking-demo-disclosure=\"dashboard\"",
+        "sourceReferenceExpectedOccurrences": 1
+      }],
+      "owner": "bookings",
+      "notes": "Development payment and email records are conditionally and visibly labelled STUB DATA."
+    },
+    {
+      "id": "broad-booking-flow-payment-stub",
+      "category": "payments",
+      "sourcePath": "src/components/builder/bookings/BookingFlowSteps.tsx",
+      "expectedOccurrences": 17,
+      "productionGuardAnchors": [{"sourcePath":"src/components/builder/bookings/BookingFlowSteps.tsx","sourcePattern":"\\{payment\\.status === 'ready' && payment\\.stub \\? \\(","expectedOccurrences":1}],
+      "productionPolicy": "placeholder-only",
+      "surfaceKind": "rendered-demo",
+      "visibleDisclosureAnchors": [{
+        "sourcePath": "src/components/builder/bookings/BookingFlowSteps.tsx",
+        "sourcePattern": "DEMO DATA",
+        "expectedOccurrences": 2,
+        "renderedSelector": "[data-booking-demo-disclosure=\"payment\"]",
+        "productSourcePath": "src/components/builder/bookings/BookingFlowSteps.tsx",
+        "productSourcePattern": "data-booking-payment-element=\"stub\"",
+        "productExpectedOccurrences": 1,
+        "sourceReferencePattern": "data-booking-demo-disclosure=\"payment\"",
+        "sourceReferenceExpectedOccurrences": 1
+      }],
+      "owner": "bookings",
+      "notes": "The development payment element renders only for stub payment state and is visibly labelled DEMO DATA."
+    },
+    {
+      "id": "broad-template-thumbnail-html-mock",
+      "category": "builder-preview",
+      "sourcePath": "src/components/builder/canvas/TemplateThumbnailRenderer.tsx",
+      "expectedOccurrences": 2,
+      "productionGuardAnchors": [{"sourcePath":"src/components/builder/canvas/TemplateThumbnailRenderer.tsx","sourcePattern":"\\{thumbnailSource \\? \\(","expectedOccurrences":1}],
+      "productionPolicy": "placeholder-only",
+      "surfaceKind": "rendered-placeholder",
+      "visibleDisclosureAnchors": [{
+        "sourcePath": "src/components/builder/canvas/TemplateThumbnailRenderer.tsx",
+        "sourcePattern": "(?:데모 미리보기|示範預覽|Demo preview)",
+        "expectedOccurrences": 3,
+        "renderedSelector": "[data-builder-demo-disclosure=\"html-scaled-mock\"]",
+        "productSourcePath": "src/components/builder/canvas/TemplateThumbnailRenderer.tsx",
+        "productSourcePattern": "data-builder-demo-disclosure=\"html-scaled-mock\"",
+        "productExpectedOccurrences": 1,
+        "sourceReferencePattern": "data-builder-demo-disclosure=\"html-scaled-mock\"",
+        "sourceReferenceExpectedOccurrences": 1
+      }],
+      "owner": "builder-platform",
+      "notes": "The HTML-scaled fallback is conditionally rendered and visibly labelled as a localized demo preview."
+    },
+    {"id":"broad-ai-section-fallback-disclosure-copy","category":"ai-generation","sourcePath":"src/components/builder/canvas/ai-section-generator-copy.ts","expectedOccurrences":3,"surfaceKind":"non-rendered","owner":"builder-platform","notes":"Dead/unreachable copy: the section API returns local demo as ok:false/503 and the panel rejects before preview.usedFallback can become true, so this fallbackNotice is never rendered. Retained as honest non-rendered inventory."},
+    {
+      "id": "broad-billing-documents-client-status",
+      "category": "email",
+      "sourcePath": "src/components/builder/commerce/BillingDocumentsClient.tsx",
+      "expectedOccurrences": 7,
+      "productionGuardAnchors": [{"sourcePath":"src/components/builder/commerce/BillingDocumentsClient.tsx","sourcePattern":"\\{document\\.status === 'emailed_stub' \\? \\(","expectedOccurrences":1}],
+      "productionPolicy": "placeholder-only",
+      "surfaceKind": "rendered-demo",
+      "visibleDisclosureAnchors": [{
+        "sourcePath": "src/components/builder/commerce/BillingDocumentsClient.tsx",
+        "sourcePattern": "STUB DATA",
+        "expectedOccurrences": 2,
+        "renderedSelector": "[data-billing-demo-disclosure=\"email\"]",
+        "productSourcePath": "src/components/builder/commerce/BillingDocumentsClient.tsx",
+        "productSourcePattern": "document\\.status === 'emailed_stub' \\? \\(",
+        "productExpectedOccurrences": 1,
+        "sourceReferencePattern": "data-billing-demo-disclosure=\"email\"",
+        "sourceReferenceExpectedOccurrences": 1
+      }],
+      "owner": "billing",
+      "notes": "Development-only emailed records are conditionally and visibly labelled STUB DATA."
+    },
+    {
+      "id": "broad-order-manager-stub-status",
+      "category": "payments",
+      "sourcePath": "src/components/builder/commerce/OrderManagerClient.tsx",
+      "expectedOccurrences": 7,
+      "productionGuardAnchors": [{"sourcePath":"src/components/builder/commerce/OrderManagerClient.tsx","sourcePattern":"\\{order\\.payment\\.status === 'authorized_stub' \\|\\| order\\.payment\\.stub \\? \\(","expectedOccurrences":1}],
+      "productionPolicy": "placeholder-only",
+      "surfaceKind": "rendered-demo",
+      "visibleDisclosureAnchors": [{
+        "sourcePath": "src/components/builder/commerce/OrderManagerClient.tsx",
+        "sourcePattern": "DEMO DATA",
+        "expectedOccurrences": 2,
+        "renderedSelector": "[data-commerce-demo-disclosure=\"payment\"]",
+        "productSourcePath": "src/components/builder/commerce/OrderManagerClient.tsx",
+        "productSourcePattern": "order\\.payment\\.status === 'authorized_stub' \\|\\| order\\.payment\\.stub",
+        "productExpectedOccurrences": 1,
+        "sourceReferencePattern": "data-commerce-demo-disclosure=\"payment\"",
+        "sourceReferenceExpectedOccurrences": 1
+      }],
+      "owner": "commerce",
+      "notes": "Sandbox payment authorization is conditionally and visibly labelled DEMO DATA."
+    },
+    {"id":"broad-functions-admin-node-stub","category":"developer-functions","sourcePath":"src/components/builder/dev/functions-admin-utils.ts","expectedOccurrences":1,"productionGuardAnchors":[{"sourcePath":"src/app/api/builder/dev/functions/[id]/invoke/route.ts","sourcePattern":"guardMutation\\(request, \\{ permission: 'settings' \\}\\)","expectedOccurrences":1},{"sourcePath":"src/lib/builder/dev/function-invoker.ts","sourcePattern":"BUILDER_FUNCTION_INVOCATION_RUNTIME = 'worker-vm'","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-placeholder","visibleDisclosureAnchors":[{"sourcePath":"src/components/builder/dev/FunctionsAdmin.tsx","sourcePattern":"DEMO","expectedOccurrences":1,"renderedSelector":"[data-builder-dev-disclosure=\"function-sandbox\"]","productSourcePath":"src/components/builder/dev/functions-admin-utils.ts","productSourcePattern":"runtime: 'node-stub'","productExpectedOccurrences":1,"sourceReferencePattern":"data-builder-dev-disclosure=\"function-sandbox\"","sourceReferenceExpectedOccurrences":1}],"owner":"builder-platform","notes":"The developer-functions UI renders an always-visible DEMO disclosure that the stored node-stub token is a non-executing placeholder and test runs use the bounded worker-vm sandbox; the invoke operation stays settings-authenticated."},
+    {"id":"broad-ai-content-stub-markers","category":"ai-generation","sourcePath":"src/lib/builder/ai-generator/content-generator.ts","expectedOccurrences":6,"owner":"builder-platform","notes":"Broad scan inventory for local-demo and verified provider stub markers."},
+    {"id":"broad-ai-intake-stub-markers","category":"ai-generation","sourcePath":"src/lib/builder/ai-generator/intake-versions-store.ts","expectedOccurrences":3,"owner":"builder-platform","notes":"Broad scan inventory for persisted local-demo and provider stub markers."},
+    {"id":"broad-app-hook-registry-stub-notes","category":"app-hooks","sourcePath":"src/lib/builder/apps/hooks-registry.ts","expectedOccurrences":12,"owner":"builder-platform","notes":"Broad scan inventory for persisted codeStubNote compatibility fields."},
+    {"id":"broad-billing-document-automation-status","category":"email","sourcePath":"src/lib/builder/billing-document-automation.ts","expectedOccurrences":2,"owner":"billing","notes":"Broad scan inventory for emailed_stub billing automation paths."},
+    {"id":"broad-billing-document-statuses","category":"payments","sourcePath":"src/lib/builder/billing-documents.ts","expectedOccurrences":16,"owner":"billing","notes":"Broad scan inventory for emailed_stub, authorized_stub, and explicit non-stub billing paths."},
+    {"id":"broad-booking-billing-document-status","category":"email","sourcePath":"src/lib/builder/bookings/billing-documents.ts","expectedOccurrences":5,"owner":"bookings","notes":"Broad scan inventory for emailed_stub booking billing lifecycle."},
+    {
+      "id": "broad-booking-payment-stub-copy",
+      "category": "payments",
+      "sourcePath": "src/lib/builder/bookings/bookings-copy.ts",
+      "expectedOccurrences": 3,
+      "productionGuardAnchors": [{"sourcePath":"src/components/builder/bookings/BookingFlowSteps.tsx","sourcePattern":"\\{payment\\.status === 'ready' && payment\\.stub \\? \\(","expectedOccurrences":1}],
+      "productionPolicy": "placeholder-only",
+      "surfaceKind": "rendered-demo",
+      "visibleDisclosureAnchors": [{
+        "sourcePath": "src/components/builder/bookings/BookingFlowSteps.tsx",
+        "sourcePattern": "copy\\.labels\\.paymentStub(?:Title|Subtitle|Complete)",
+        "expectedOccurrences": 3,
+        "renderedSelector": "[data-booking-payment-element=\"stub\"]",
+        "productSourcePath": "src/lib/builder/bookings/bookings-copy.ts",
+        "productSourcePattern": "paymentStub(?:Title|Subtitle|Complete):",
+        "productExpectedOccurrences": 3,
+        "sourceReferencePattern": "copy\\.labels\\.paymentStub(?:Title|Subtitle|Complete)",
+        "sourceReferenceExpectedOccurrences": 3
+      }],
+      "owner": "bookings",
+      "notes": "All three localized development-payment labels render inside the guarded stub payment element."
+    },
+    {"id":"broad-booking-payments-email-status","category":"payments","sourcePath":"src/lib/builder/bookings/payments.ts","expectedOccurrences":1,"owner":"bookings","notes":"Broad scan inventory for emailed_stub invoice eligibility."},
+    {"id":"broad-zoom-mock-runtime","category":"video-meetings","sourcePath":"src/lib/builder/bookings/zoom-client.ts","expectedOccurrences":15,"owner":"bookings","notes":"Broad scan inventory for mock Zoom configuration, file fallback, and meeting result paths."},
+    {"id":"broad-commerce-notification-status","category":"email","sourcePath":"src/lib/builder/commerce/notifications-shared.ts","expectedOccurrences":2,"owner":"commerce","notes":"Broad scan inventory for sent_stub notification state parsing."},
+    {"id":"broad-commerce-order-engine-stubs","category":"payments","sourcePath":"src/lib/builder/commerce/orders-engine.ts","expectedOccurrences":7,"owner":"commerce","notes":"Broad scan inventory for authorized_stub, emailed_stub, and rf_stub order mutations."},
+    {"id":"broad-commerce-order-shared-stubs","category":"payments","sourcePath":"src/lib/builder/commerce/orders-shared.ts","expectedOccurrences":8,"owner":"commerce","notes":"Broad scan inventory for authorized_stub and emailed_stub shared order normalization."},
+    {"id":"broad-commerce-payment-provider-stubs","category":"payments","sourcePath":"src/lib/builder/commerce/payment-providers.ts","expectedOccurrences":7,"owner":"commerce","notes":"Broad scan inventory for sandbox-card stub metadata and authorized_stub conversion."},
+    {"id":"broad-commerce-webhook-stub-status","category":"payments","sourcePath":"src/lib/builder/commerce/payment-webhooks-shared.ts","expectedOccurrences":2,"owner":"commerce","notes":"Broad scan inventory for authorized_stub payment webhook status mapping."},
+    {"id":"broad-blog-archive-mock-feed","category":"widget-demo","sourcePath":"src/lib/builder/components/blogArchive/Element.tsx","expectedOccurrences":2,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/blogArchive/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/blogArchive/Element.tsx","productSourcePattern":"(?:import \\{ WidgetDataDisclosure \\} from '../_shared/WidgetDataDisclosure';|<WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Builder-only mock feed is guarded and visibly labelled by the shared demo disclosure."},
+    {"id":"broad-blog-author-mock-feed","category":"widget-demo","sourcePath":"src/lib/builder/components/blogAuthor/Element.tsx","expectedOccurrences":14,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/blogAuthor/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/blogAuthor/Element.tsx","productSourcePattern":"(?:import \\{ WidgetDataDisclosure \\} from '../_shared/WidgetDataDisclosure';|<WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Builder-only mock author data is guarded and visibly labelled by the shared demo disclosure."},
+    {"id":"broad-blog-author-mock-copy","category":"widget-demo","sourcePath":"src/lib/builder/components/blogAuthor/blog-author-copy.ts","expectedOccurrences":4,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/blogAuthor/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/blogAuthor/Element.tsx","productSourcePattern":"(?:from './blog-author-copy'|WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Blog-author mock copy is consumed by the builder-only BlogAuthor Element, which renders the shared demo disclosure under isBuilder."},
+    {"id":"broad-blog-feed-mock-consumer","category":"widget-demo","sourcePath":"src/lib/builder/components/blogFeed/Element.tsx","expectedOccurrences":2,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/blogFeed/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/blogFeed/Element.tsx","productSourcePattern":"(?:import \\{ WidgetDataDisclosure \\} from '../_shared/WidgetDataDisclosure';|<WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Builder-only mock feed is guarded and visibly labelled by the shared demo disclosure."},
+    {"id":"broad-blog-feed-mock-copy","category":"widget-demo","sourcePath":"src/lib/builder/components/blogFeed/blog-feed-copy.ts","expectedOccurrences":8,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/blogFeed/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/blogFeed/Element.tsx","productSourcePattern":"(?:from './blog-feed-copy'|WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Blog-feed mockPosts copy is consumed by the builder-only BlogFeed Element, which renders the shared demo disclosure under isBuilder."},
+    {"id":"broad-blog-feed-mock-items","category":"widget-demo","sourcePath":"src/lib/builder/components/blogFeed/blog-feed-items.ts","expectedOccurrences":7,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/blogFeed/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/blogFeed/Element.tsx","productSourcePattern":"(?:from './blog-feed-items'|WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Generated blog-feed mock items are consumed by the builder-only BlogFeed Element, which renders the shared demo disclosure under isBuilder."},
+    {"id":"broad-blog-post-card-mock","category":"widget-demo","sourcePath":"src/lib/builder/components/blogPostCard/Element.tsx","expectedOccurrences":12,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/blogPostCard/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/blogPostCard/Element.tsx","productSourcePattern":"(?:import \\{ WidgetDataDisclosure \\} from '../_shared/WidgetDataDisclosure';|<WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Builder-only blog-post-card mock item is guarded and visibly labelled by the shared demo disclosure."},
+    {"id":"broad-blog-post-card-mock-copy","category":"widget-demo","sourcePath":"src/lib/builder/components/blogPostCard/blog-post-card-copy.ts","expectedOccurrences":4,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/blogPostCard/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/blogPostCard/Element.tsx","productSourcePattern":"(?:from './blog-post-card-copy'|WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Blog-post-card mock copy is consumed by the builder-only BlogPostCard Element, which renders the shared demo disclosure under isBuilder."},
+    {"id":"broad-blog-recent-mock-feed","category":"widget-demo","sourcePath":"src/lib/builder/components/blogRecentPosts/Element.tsx","expectedOccurrences":4,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/blogRecentPosts/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/blogRecentPosts/Element.tsx","productSourcePattern":"(?:import \\{ WidgetDataDisclosure \\} from '../_shared/WidgetDataDisclosure';|<WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Builder-only recent mock feed is guarded and visibly labelled by the shared demo disclosure."},
+    {"id":"broad-blog-recent-mock-copy","category":"widget-demo","sourcePath":"src/lib/builder/components/blogRecentPosts/blog-recent-posts-copy.ts","expectedOccurrences":6,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/blogRecentPosts/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/blogRecentPosts/Element.tsx","productSourcePattern":"(?:from './blog-recent-posts-copy'|WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Recent-posts mockPosts copy is consumed by the builder-only BlogRecentPosts Element, which renders the shared demo disclosure under isBuilder."},
+    {"id":"broad-event-widget-mock-copy","category":"widget-demo","sourcePath":"src/lib/builder/components/event-widgets-copy.ts","expectedOccurrences":16,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/eventCalendar/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1},{"sourcePath":"src/lib/builder/components/eventList/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1},{"sourcePath":"src/lib/builder/components/eventRsvp/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1},{"sourcePath":"src/lib/builder/components/eventCalendar/Element.tsx","sourcePattern":"isBuilder \\? copy\\.mockEvents\\.calendar : \\[\\]","expectedOccurrences":1},{"sourcePath":"src/lib/builder/components/eventList/Element.tsx","sourcePattern":"isBuilder \\? copy\\.mockEvents\\.list : \\[\\]","expectedOccurrences":1},{"sourcePath":"src/lib/builder/components/eventRsvp/Element.tsx","sourcePattern":"isBuilder \\? \\[copy\\.mockEvents\\.rsvp\\] : \\[\\]","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/eventCalendar/Element.tsx","productSourcePattern":"(?:from '../event-widgets-copy'|WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1},{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/eventList/Element.tsx","productSourcePattern":"(?:from '../event-widgets-copy'|WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1},{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/eventRsvp/Element.tsx","productSourcePattern":"(?:from '../event-widgets-copy'|WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Event widget mockEvents and IDs are consumed by three builder-only event widgets (calendar, list, RSVP), each rendering the shared demo disclosure under isBuilder."},
+    {"id":"broad-event-calendar-mock-feed","category":"widget-demo","sourcePath":"src/lib/builder/components/eventCalendar/Element.tsx","expectedOccurrences":2,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/eventCalendar/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/eventCalendar/Element.tsx","productSourcePattern":"(?:import \\{ WidgetDataDisclosure \\} from '../_shared/WidgetDataDisclosure';|<WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Builder-only mock calendar feed is guarded and visibly labelled by the shared demo disclosure."},
+    {"id":"broad-event-list-mock-feed","category":"widget-demo","sourcePath":"src/lib/builder/components/eventList/Element.tsx","expectedOccurrences":2,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/eventList/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/eventList/Element.tsx","productSourcePattern":"(?:import \\{ WidgetDataDisclosure \\} from '../_shared/WidgetDataDisclosure';|<WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Builder-only mock event list is guarded and visibly labelled by the shared demo disclosure."},
+    {"id":"broad-event-rsvp-mock-feed","category":"widget-demo","sourcePath":"src/lib/builder/components/eventRsvp/Element.tsx","expectedOccurrences":2,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/eventRsvp/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/eventRsvp/Element.tsx","productSourcePattern":"(?:import \\{ WidgetDataDisclosure \\} from '../_shared/WidgetDataDisclosure';|<WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Builder-only mock RSVP event is guarded and visibly labelled by the shared demo disclosure."},
+    {"id":"broad-featured-posts-mock-feed","category":"widget-demo","sourcePath":"src/lib/builder/components/featuredPosts/Element.tsx","expectedOccurrences":2,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/featuredPosts/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/featuredPosts/Element.tsx","productSourcePattern":"(?:import \\{ WidgetDataDisclosure \\} from '../_shared/WidgetDataDisclosure';|<WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Builder-only featured-posts mockPosts fallback is guarded and visibly labelled by the shared demo disclosure."},
+    {"id":"broad-featured-posts-mock-copy","category":"widget-demo","sourcePath":"src/lib/builder/components/featuredPosts/featured-posts-copy.ts","expectedOccurrences":6,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/featuredPosts/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/featuredPosts/Element.tsx","productSourcePattern":"(?:from './featured-posts-copy'|WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Featured-posts mock copy is consumed by the builder-only FeaturedPosts Element, which renders the shared demo disclosure under isBuilder."},
+    {"id":"broad-portfolio-mock-feed","category":"widget-demo","sourcePath":"src/lib/builder/components/portfolioList/Element.tsx","expectedOccurrences":2,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/portfolioList/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/portfolioList/Element.tsx","productSourcePattern":"(?:import \\{ WidgetDataDisclosure \\} from '../_shared/WidgetDataDisclosure';|<WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Builder-only mock projects are guarded and visibly labelled by the shared demo disclosure."},
+    {"id":"broad-portfolio-mock-copy","category":"widget-demo","sourcePath":"src/lib/builder/components/portfolioList/portfolio-list-copy.ts","expectedOccurrences":10,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/portfolioList/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/portfolioList/Element.tsx","productSourcePattern":"(?:from './portfolio-list-copy'|WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Portfolio mockProjects copy and IDs are consumed by the builder-only PortfolioList Element, which renders the shared demo disclosure under isBuilder."},
+    {"id":"broad-product-gallery-mock-feed","category":"widget-demo","sourcePath":"src/lib/builder/components/productGallery/Element.tsx","expectedOccurrences":8,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/productGallery/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/productGallery/Element.tsx","productSourcePattern":"(?:import \\{ WidgetDataDisclosure \\} from '../_shared/WidgetDataDisclosure';|<WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Builder-only mock products and categories are guarded and visibly labelled by the shared demo disclosure."},
+    {"id":"broad-product-gallery-mock-copy","category":"widget-demo","sourcePath":"src/lib/builder/components/productGallery/product-gallery-copy.ts","expectedOccurrences":4,"productionGuardAnchors":[{"sourcePath":"src/lib/builder/components/productGallery/Element.tsx","sourcePattern":"\\{isBuilder \\? <WidgetDataDisclosure locale=\\{effectiveLocale\\} /> : null\\}","expectedOccurrences":1}],"productionPolicy":"placeholder-only","surfaceKind":"rendered-demo","visibleDisclosureAnchors":[{"sourcePath":"src/lib/builder/components/_shared/WidgetDataDisclosure.tsx","sourcePattern":"Demo data disclosure","expectedOccurrences":1,"renderedSelector":"[data-builder-demo-disclosure]","productSourcePath":"src/lib/builder/components/productGallery/Element.tsx","productSourcePattern":"(?:from './product-gallery-copy'|WidgetDataDisclosure locale=\\{effectiveLocale\\} />)","productExpectedOccurrences":2,"sourceReferencePattern":"data-builder-demo-disclosure","sourceReferenceExpectedOccurrences":1}],"owner":"builder-components","notes":"Product-gallery mock copy is consumed by the builder-only ProductGallery Element, which renders the shared demo disclosure under isBuilder."},
+    {"id":"broad-functions-node-stub-runtime","category":"developer-functions","sourcePath":"src/lib/builder/dev/functions-model.ts","expectedOccurrences":1,"owner":"builder-platform","notes":"Non-rendered stored metadata only: the dead node-stub field is never read to select execution, and actual invocation uses the bounded worker-vm runtime. Intentionally remains open inventory."},
+    {"id":"broad-payment-analytics-stub-status","category":"payments","sourcePath":"src/lib/builder/payment-analytics.ts","expectedOccurrences":1,"owner":"commerce","notes":"Broad scan inventory for authorized_stub analytics handling."},
+    {"id":"broad-translation-batch-mock-runtime","category":"translation","sourcePath":"src/lib/builder/translations/providers/batch-router.ts","expectedOccurrences":13,"owner":"builder-platform","notes":"Broad scan inventory for mock translation batch runtime and event shapes."},
+    {"id":"broad-translation-diagnostics-mock","category":"translation","sourcePath":"src/lib/builder/translations/providers/diagnostics.ts","expectedOccurrences":10,"surfaceKind":"rendered-demo","owner":"builder-platform","notes":"Translation diagnostics remain open until tied to a rendered selector, visible marker, and product reference."}
+  ]
+}

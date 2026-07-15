@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent } from 'react';
 import { useSearchParams } from 'next/navigation';
 import {
   type BuilderPageSummary,
@@ -11,7 +11,6 @@ import SandboxEditorWorkspace from '@/components/builder/canvas/SandboxEditorWor
 import type { SiteHeaderMemberNavPreview } from '@/components/builder/published/SiteHeader';
 import SandboxStatusBar, {
   type EditorDensity,
-  type EditorThemeMode,
 } from '@/components/builder/canvas/SandboxStatusBar';
 import { BuilderThemeProvider } from '@/components/builder/editor/BuilderThemeContext';
 import SandboxModalsRoot, {
@@ -24,6 +23,7 @@ import { insertSavedSection } from '@/lib/builder/sections/insertSection';
 import { getCanvasNodeDescendantIds } from '@/lib/builder/canvas/tree';
 import SandboxTopBar, { type CollabPresenceEntry, type ViewportMode } from '@/components/builder/canvas/SandboxTopBar';
 import type { MemberPreviewMode } from '@/components/builder/canvas/SandboxTopBar';
+import DraftConflictBanner from '@/components/builder/canvas/DraftConflictBanner';
 import GoogleFontsLoader from '@/components/builder/canvas/GoogleFontsLoader';
 import ResponsiveAiPanel from '@/components/builder/canvas/ResponsiveAiPanel';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
@@ -49,15 +49,15 @@ import type { Locale } from '@/lib/locales';
 import { useSandboxSiteState } from './hooks/useSandboxSiteState';
 import type { DraftMeta } from './hooks/useSandboxSiteState';
 import styles from './SandboxPage.module.css';
+import chromeStyles from './SandboxChrome.module.css';
 import {
   SAVE_BADGE_TTL_MS,
   TOAST_TTL_MS,
   VIEWPORT_WIDTHS,
-  conflictBannerStyle,
-  conflictReloadButtonStyle,
   getDraftConflictCopy,
   getPublicChromeCopy,
   getSandboxPageFeedbackCopy,
+  isBuilderAdminNavigationHref,
   type ActivityChip,
   type SandboxToast,
   type ToastOptions,
@@ -268,10 +268,6 @@ export default function SandboxPage({
   const [historyOpen, setHistoryOpen] = useState(false);
   const [activeDrawer, setActiveDrawer] = useState<SandboxDrawerPanel | null>(null);
   const [clientReady, setClientReady] = useState(false);
-  const usesColumnsShortcutFlow = useMemo(
-    () => searchParams.get('publicChromeColumnsShortcut') !== '0',
-    [searchParams],
-  );
   const queryMemberPreviewMode = useMemo(
     () => memberPreviewModeFromParam(searchParams.get('memberPreview')),
     [searchParams],
@@ -286,7 +282,6 @@ export default function SandboxPage({
   const [previewOpen, setPreviewOpen] = useState(false);
   const [responsiveAiOpen, setResponsiveAiOpen] = useState(false);
   const [editorDensity, setEditorDensity] = useState<EditorDensity>('cozy');
-  const [editorThemeMode, setEditorThemeMode] = useState<EditorThemeMode>('light');
   const [movePickerNodeIds, setMovePickerNodeIds] = useState<string[] | null>(null);
   const [saveSectionPayload, setSaveSectionPayload] = useState<SaveSectionPayload | null>(null);
   const [presenceEntries, setPresenceEntries] = useState<CollabPresenceEntry[]>([]);
@@ -294,15 +289,10 @@ export default function SandboxPage({
   const childrenMap = useBuilderCanvasStore((state) => state.childrenMap);
   const addNodes = useBuilderCanvasStore((state) => state.addNodes);
   const storeViewport = useBuilderCanvasStore((state) => state.viewport);
-  const navigationCopy = useMemo(() => getNavigationCopy(locale), [locale]);
-  const publicChromeCopy = useMemo(() => getPublicChromeCopy(locale), [locale]);
-  const draftConflictCopy = useMemo(() => getDraftConflictCopy(locale), [locale]);
-  const pageFeedbackCopy = useMemo(() => getSandboxPageFeedbackCopy(locale), [locale]);
   const handleViewportChange = useCallback((nextViewport: ViewportMode) => {
     setViewport(nextViewport);
     setStoreViewport(nextViewport);
   }, [setStoreViewport]);
-  const openPublishPanel = useCallback(() => setPublishOpen(true), []);
   const openSeoPanel = useCallback(() => setSeoOpen(true), []);
   const openSettingsPanel = useCallback(() => setSettingsOpen(true), []);
   const openHistoryPanel = useCallback(() => setHistoryOpen(true), []);
@@ -342,12 +332,8 @@ export default function SandboxPage({
   useEffect(() => {
     try {
       const savedDensity = window.localStorage.getItem('builder:editor-density') as EditorDensity | null;
-      const savedTheme = window.localStorage.getItem('builder:editor-theme') as EditorThemeMode | null;
       if (savedDensity === 'compact' || savedDensity === 'cozy' || savedDensity === 'comfortable') {
         setEditorDensity(savedDensity);
-      }
-      if (savedTheme === 'light' || savedTheme === 'dark') {
-        setEditorThemeMode(savedTheme);
       }
     } catch {
       // localStorage is optional in private or restricted browser contexts.
@@ -358,15 +344,6 @@ export default function SandboxPage({
     setEditorDensity(density);
     try {
       window.localStorage.setItem('builder:editor-density', density);
-    } catch {
-      // best effort
-    }
-  }, []);
-
-  const updateEditorThemeMode = useCallback((mode: EditorThemeMode) => {
-    setEditorThemeMode(mode);
-    try {
-      window.localStorage.setItem('builder:editor-theme', mode);
     } catch {
       // best effort
     }
@@ -409,6 +386,7 @@ export default function SandboxPage({
   }, []);
 
   const {
+    activeCanvasLocale,
     activePageId,
     canDecomposeCurrentPage,
     columnPostsSummary,
@@ -416,6 +394,7 @@ export default function SandboxPage({
     currentSlugState,
     draftConflict,
     draftMeta,
+    hasDraftConflict,
     headerNavItems,
     linkPickerSitePages,
     saveBlockReason,
@@ -434,7 +413,8 @@ export default function SandboxPage({
     handleOpenColumnsPage,
     handlePagesChange,
     handlePublishDraftSaved,
-    handleReloadDraftAfterConflict,
+    handleDownloadDraftConflictRecovery,
+    handleUseServerDraftAfterConflict,
     handleSelectPage,
     refreshColumnsPageIfNeeded,
   } = useSandboxSiteState({
@@ -459,6 +439,47 @@ export default function SandboxPage({
       setActiveDrawer('pages');
     },
   });
+
+  const navigationCopy = useMemo(
+    () => getNavigationCopy(activeCanvasLocale),
+    [activeCanvasLocale],
+  );
+  const publicChromeCopy = useMemo(
+    () => getPublicChromeCopy(activeCanvasLocale),
+    [activeCanvasLocale],
+  );
+  const draftConflictCopy = useMemo(
+    () => getDraftConflictCopy(activeCanvasLocale),
+    [activeCanvasLocale],
+  );
+  const pageFeedbackCopy = useMemo(
+    () => getSandboxPageFeedbackCopy(activeCanvasLocale),
+    [activeCanvasLocale],
+  );
+
+  const openPublishPanel = useCallback(() => {
+    if (hasDraftConflict) {
+      pushToast(draftConflictCopy.publishBlockedReason, 'error', { ttlMs: 8000 });
+      return;
+    }
+    setPublishOpen(true);
+  }, [draftConflictCopy.publishBlockedReason, hasDraftConflict, pushToast]);
+
+  useEffect(() => {
+    if (hasDraftConflict) setPublishOpen(false);
+  }, [hasDraftConflict]);
+
+  const blockAdminNavigationDuringConflict = useCallback((event: ReactMouseEvent<HTMLElement>) => {
+    if (!hasDraftConflict) return;
+    const target = event.target instanceof Element ? event.target : null;
+    const anchor = target?.closest<HTMLAnchorElement>('a[href]') ?? null;
+    const href = anchor?.getAttribute('href');
+    if (!href || !isBuilderAdminNavigationHref(href)) return;
+    event.preventDefault();
+    event.stopPropagation();
+    event.nativeEvent.stopImmediatePropagation();
+    pushToast(draftConflictCopy.navigationBlockedReason, 'error', { ttlMs: 8000 });
+  }, [draftConflictCopy.navigationBlockedReason, hasDraftConflict, pushToast]);
 
   const responsiveAiTargetViewport = responsiveTargetViewportFrom(viewport);
   const canOpenResponsiveAi = Boolean(responsiveAiTargetViewport && canvasDocument && activePageId);
@@ -524,7 +545,7 @@ export default function SandboxPage({
     let cancelled = false;
     const syncPresence = async () => {
       try {
-        const response = await fetch(`/api/builder/collab/presence?${new URLSearchParams({ locale, siteId }).toString()}`, {
+        const response = await fetch(`/api/builder/collab/presence?${new URLSearchParams({ locale: activeCanvasLocale, siteId }).toString()}`, {
           method: 'POST',
           credentials: 'include',
           headers: { 'Content-Type': 'application/json' },
@@ -550,7 +571,7 @@ export default function SandboxPage({
       cancelled = true;
       window.clearInterval(timer);
     };
-  }, [activePageId, clientReady, locale, selectedNodeId, siteId]);
+  }, [activeCanvasLocale, activePageId, clientReady, selectedNodeId, siteId]);
 
   useEffect(() => {
     if (!clientReady || !activePageId) {
@@ -579,7 +600,7 @@ export default function SandboxPage({
       cancelled = true;
       window.clearInterval(timer);
     };
-  }, [activePageId, clientReady, siteId]);
+  }, [activeCanvasLocale, activePageId, clientReady, siteId]);
 
   const handleApplyComponentDesignPreset = useCallback((presetKey: ComponentDesignPresetKey): ComponentDesignPresetPatchResult => {
     const preset = getComponentDesignPreset(presetKey);
@@ -654,17 +675,17 @@ export default function SandboxPage({
       mobileAutoFitKeyRef.current = null;
       return;
     }
-    const autoFitKey = `${activePageId ?? 'page'}:${canvasDocument?.nodes.length ?? 0}`;
+    const autoFitKey = `${activeCanvasLocale}:${activePageId ?? 'page'}:${canvasDocument?.nodes.length ?? 0}`;
     if (mobileAutoFitKeyRef.current === autoFitKey) return;
     mobileAutoFitKeyRef.current = autoFitKey;
     applyMobileAutoFit(VIEWPORT_WIDTHS.mobile ?? 375);
-  }, [applyMobileAutoFit, canvasDocument?.nodes.length, activePageId, viewport]);
+  }, [activeCanvasLocale, activePageId, applyMobileAutoFit, canvasDocument?.nodes.length, viewport]);
 
   useEffect(() => {
     const column = canvasColumnRef.current;
     if (!column) return;
     column.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-  }, [activePageId, currentSlugState]);
+  }, [activeCanvasLocale, activePageId, currentSlugState]);
 
   const selectedNode = useMemo(
     () => (selectedNodeId ? nodesById.get(selectedNodeId) ?? null : null),
@@ -673,24 +694,24 @@ export default function SandboxPage({
   const linkPickerLightboxes = useMemo(
     () =>
       siteLightboxes
-        .filter((lightbox) => lightbox.locale === locale)
+        .filter((lightbox) => lightbox.locale === activeCanvasLocale)
         .map((lightbox) => ({
           id: lightbox.id,
           slug: lightbox.slug,
           name: lightbox.name,
         })),
-    [locale, siteLightboxes],
+    [activeCanvasLocale, siteLightboxes],
   );
   const linkPickerPopups = useMemo(
     () =>
       sitePopups
-        .filter((popup) => popup.locale === locale)
+        .filter((popup) => popup.locale === activeCanvasLocale)
         .map((popup) => ({
           id: popup.id,
           slug: popup.slug,
           name: popup.name,
         })),
-    [locale, sitePopups],
+    [activeCanvasLocale, sitePopups],
   );
   const assetLibraryNode = useMemo(
     () => (assetLibraryNodeId ? nodesById.get(assetLibraryNodeId) ?? null : null),
@@ -777,7 +798,7 @@ export default function SandboxPage({
         headers: { 'Content-Type': 'application/json' },
         credentials: 'same-origin',
         body: JSON.stringify({
-          locale,
+          locale: activeCanvasLocale,
           navigation: result.items,
         }),
       });
@@ -793,7 +814,7 @@ export default function SandboxPage({
       pushToast(pageFeedbackCopy.navNameSaveFailed, 'error');
       return false;
     }
-  }, [headerNavItems, locale, navigationCopy.titles.untitled, pageFeedbackCopy, pushActivityChip, pushToast, setNavItemsState]);
+  }, [activeCanvasLocale, headerNavItems, navigationCopy.titles.untitled, pageFeedbackCopy, pushActivityChip, pushToast, setNavItemsState]);
 
   const handleRequestAddNavChild = useCallback((parentItemId: string) => {
     setActiveDrawer('nav');
@@ -816,7 +837,7 @@ export default function SandboxPage({
       headers: { 'Content-Type': 'application/json' },
       credentials: 'same-origin',
       body: JSON.stringify({
-        locale,
+        locale: activeCanvasLocale,
         navigation: result.items,
       }),
     })
@@ -832,7 +853,7 @@ export default function SandboxPage({
         setNavItemsState(headerNavItems);
         pushToast(pageFeedbackCopy.navOrderSaveFailed, 'error');
       });
-  }, [headerNavItems, locale, pageFeedbackCopy, pushActivityChip, pushToast, setNavItemsState]);
+  }, [activeCanvasLocale, headerNavItems, pageFeedbackCopy, pushActivityChip, pushToast, setNavItemsState]);
 
   const handleRequestSaveAsSection = useCallback(
     (rootNodeId: string) => {
@@ -859,7 +880,7 @@ export default function SandboxPage({
     async (sectionId: string, position: { x: number; y: number }, parentNodeId: string | null = null) => {
       try {
         const response = await fetch(
-          `/api/builder/site/section-library/${sectionId}?locale=${encodeURIComponent(locale)}`,
+          `/api/builder/site/section-library/${sectionId}?locale=${encodeURIComponent(activeCanvasLocale)}`,
           { credentials: 'same-origin' },
         );
         if (!response.ok) {
@@ -880,7 +901,7 @@ export default function SandboxPage({
         setSelectedNodeId(result.rootNodeId);
         pushToast(pageFeedbackCopy.savedSectionAdded(data.section.name), 'success');
         void fetch(
-          `/api/builder/site/section-library/${sectionId}?locale=${encodeURIComponent(locale)}`,
+          `/api/builder/site/section-library/${sectionId}?locale=${encodeURIComponent(activeCanvasLocale)}`,
           {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
@@ -893,7 +914,7 @@ export default function SandboxPage({
         pushToast(message, 'error');
       }
     },
-    [addNodes, locale, pageFeedbackCopy, pushToast, setSelectedNodeId],
+    [activeCanvasLocale, addNodes, pageFeedbackCopy, pushToast, setSelectedNodeId],
   );
 
   const canvasWrapperStyle: React.CSSProperties = viewportWidth
@@ -983,7 +1004,7 @@ export default function SandboxPage({
     }
 
     if (!href || /^(https?:|mailto:|tel:|#)/.test(href)) {
-      const navItemId = findNavigationItemIdByHref(headerNavItems, href, locale);
+      const navItemId = findNavigationItemIdByHref(headerNavItems, href, activeCanvasLocale);
       setActiveDrawer('nav');
       if (navItemId) {
         setActiveNavItemId(navItemId);
@@ -999,7 +1020,7 @@ export default function SandboxPage({
     }
 
     handleCanvasHeaderNavigate(href);
-  }, [handleCanvasHeaderNavigate, headerNavItems, locale, pageFeedbackCopy, pushToast]);
+  }, [activeCanvasLocale, handleCanvasHeaderNavigate, headerNavItems, pageFeedbackCopy, pushToast]);
 
   useEffect(() => {
     if (activeDrawer === 'columns') refreshColumnsPageIfNeeded();
@@ -1008,17 +1029,18 @@ export default function SandboxPage({
   return (
     <BuilderThemeProvider value={siteThemeState}>
       <main
-        className={styles.shell}
+        className={`${styles.shell} ${chromeStyles.shell}`}
         data-editor-shell
         data-editor-ready={clientReady ? 'true' : 'false'}
         data-editor-density={editorDensity}
-        data-editor-theme={editorThemeMode}
+        onClickCapture={blockAdminNavigationDuringConflict}
+        onAuxClickCapture={blockAdminNavigationDuringConflict}
+        onContextMenuCapture={blockAdminNavigationDuringConflict}
       >
         <GoogleFontsLoader extraFamilies={collectThemeFontFamilies(siteThemeState)} />
         <SandboxTopBar
-          locale={locale}
+          locale={activeCanvasLocale}
           siteId={siteId}
-          draftSaveState={draftSaveState}
           selectedSummary={
             selectedNodeIds.length > 1
               ? pageFeedbackCopy.selectionSummaryMultiple(selectedNodeIds.length)
@@ -1042,6 +1064,9 @@ export default function SandboxPage({
           siteName={siteName}
           currentSlug={currentSlugState}
           saveBlockReason={saveBlockReason}
+          draftConflictActive={hasDraftConflict}
+          draftConflictNavigationReason={draftConflictCopy.navigationBlockedReason}
+          draftConflictPublishReason={draftConflictCopy.publishBlockedReason}
           memberPreviewMode={memberPreviewMode}
           onMemberPreviewModeChange={setMemberPreviewMode}
           presenceEntries={presenceEntries}
@@ -1050,7 +1075,7 @@ export default function SandboxPage({
         {responsiveAiOpen && responsiveAiTargetViewport && canvasDocument && activePageId ? (
           <ResponsiveAiPanel
             pageId={activePageId}
-            locale={locale}
+            locale={activeCanvasLocale}
             targetViewport={responsiveAiTargetViewport}
             getAnalysisCanvas={getResponsiveAnalysisCanvas}
             canUndoLast={canUndo}
@@ -1064,22 +1089,17 @@ export default function SandboxPage({
         ) : null}
 
         {draftConflict ? (
-          <div style={conflictBannerStyle} role="alert">
-            <span>
-              {draftConflictCopy.message}
-            </span>
-            <button
-              type="button"
-              style={conflictReloadButtonStyle}
-              onClick={handleReloadDraftAfterConflict}
-            >
-              {draftConflictCopy.reloadLabel}
-            </button>
-          </div>
+          <DraftConflictBanner
+            conflict={draftConflict}
+            copy={draftConflictCopy}
+            locale={activeCanvasLocale}
+            onDownloadLocalBackup={handleDownloadDraftConflictRecovery}
+            onUseServerLatest={handleUseServerDraftAfterConflict}
+          />
         ) : null}
 
         <SandboxEditorWorkspace
-          locale={locale}
+          locale={activeCanvasLocale}
           siteId={siteId}
           activeDrawer={activeDrawer}
           activePageId={activePageId}
@@ -1103,7 +1123,6 @@ export default function SandboxPage({
           canvasWrapperStyle={canvasWrapperStyle}
           canvasColumnRef={canvasColumnRef}
           publicChromeCopy={publicChromeCopy}
-          publicChromeColumnsShortcut={usesColumnsShortcutFlow}
           collabCursors={collabCursors}
           linkPickerLightboxes={linkPickerLightboxes}
           linkPickerPopups={linkPickerPopups}
@@ -1154,7 +1173,7 @@ export default function SandboxPage({
         />
 
         <SandboxModalsRoot
-          locale={locale}
+          locale={activeCanvasLocale}
           siteId={siteId}
           document={canvasDocument}
           siteName={siteName}
@@ -1170,7 +1189,7 @@ export default function SandboxPage({
           assetLibraryNode={assetLibraryNode}
           imageEditorNode={imageEditorNode}
           imageEditorRequest={imageEditorRequest}
-          publishOpen={publishOpen}
+          publishOpen={publishOpen && !hasDraftConflict}
           seoOpen={seoOpen}
           settingsOpen={settingsOpen}
           historyOpen={historyOpen}
@@ -1221,21 +1240,18 @@ export default function SandboxPage({
         />
 
         <SandboxFeedbackOverlay
-          locale={locale}
+          locale={activeCanvasLocale}
           draftSaveState={draftSaveState}
           activityChips={activityChips}
           toasts={toasts}
           onDismissToast={dismissToast}
         />
         <SandboxStatusBar
-          locale={locale}
+          locale={activeCanvasLocale}
           viewport={viewport}
-          draftSaveState={draftSaveState}
           selectionCount={selectedNodeIds.length}
           density={editorDensity}
-          themeMode={editorThemeMode}
           onDensityChange={updateEditorDensity}
-          onThemeModeChange={updateEditorThemeMode}
         />
       </main>
     </BuilderThemeProvider>

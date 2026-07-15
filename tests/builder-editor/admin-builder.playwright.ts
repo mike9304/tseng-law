@@ -714,25 +714,12 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(heroQuickMenu).toContainText('연락처');
     const publicChrome = page.locator('[data-builder-public-chrome="true"]').first();
     await expect(publicChrome).toBeVisible();
-    // Exact-match the shortcut label: once the panel is open it adds a
-    // '칼럼 관리' action button that would also match a loose /칼럼/ regex.
-    const publicChromeShortcut = publicChrome.getByRole('button', { name: /^(칼럼|Columns|專欄)$/ });
-    await expect(publicChromeShortcut).toBeVisible();
-    await expect(publicChromeShortcut).toHaveAttribute('aria-pressed', 'false');
-    await expect(publicChrome.locator('.quick-contact, .scroll-top, .floating-ai-chat')).toHaveCount(0);
-    const publicChromeEvent = publicChrome.getByRole('button', { name: /이벤트 팝업/ }).first();
-    await expect(publicChromeEvent).toBeVisible();
-    await expect(publicChromeEvent).toHaveAttribute('aria-pressed', 'false');
+    await expect(publicChrome.locator('.quick-contact-toggle')).toBeVisible();
+    await expect(publicChrome.locator('.quick-contact-toggle')).toHaveText('AI 상담');
+    await expect(publicChrome.locator('.scroll-top')).toHaveCount(1);
+    await expect(publicChrome.getByRole('button', { name: /^(칼럼|Columns|專欄)$/ })).toHaveCount(0);
+    await expect(publicChrome.getByRole('button', { name: /이벤트 팝업/ })).toHaveCount(0);
     await expect(page.getByRole('dialog', { name: '2026년 기념 리뷰 이벤트' })).toHaveCount(0);
-    await publicChromeEvent.click();
-    await expect(publicChromeEvent).toHaveAttribute('aria-pressed', 'true');
-    await expect(page.getByRole('dialog', { name: '2026년 기념 리뷰 이벤트' })).toBeVisible();
-    await page.getByRole('button', { name: '닫기' }).click();
-    await expect(publicChromeEvent).toHaveAttribute('aria-pressed', 'false');
-    await expect(page.getByRole('dialog', { name: '2026년 기념 리뷰 이벤트' })).toHaveCount(0);
-    await publicChromeShortcut.click();
-    await expect(publicChrome.getByRole('button', { name: '칼럼 관리' })).toBeVisible();
-    await publicChromeShortcut.click();
     await expect(publicChrome.getByRole('button', { name: '칼럼 관리' })).toHaveCount(0);
     await page.keyboard.press('Escape');
     await page.mouse.move(12, 120);

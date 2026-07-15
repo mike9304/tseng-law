@@ -7,10 +7,31 @@ import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 import { isBlobBlockedForDeployEnv } from '@/lib/builder/storage/blob-env-guard';
 import type { GeneratedSiteDraft } from './orchestrator';
-import { siteSpecSchema, type SiteSpec } from './site-spec';
+import {
+  INDUSTRIES,
+  siteSpecSchema,
+  type SiteSpec,
+} from './site-spec';
 
 export const AI_INTAKE_VERSION_CAP = 24;
 export const DEFAULT_AI_INTAKE_SITE_ID = DEFAULT_BUILDER_SITE_ID;
+
+export type AiIntakeProvenance = 'openai-verified' | 'local-demo' | 'legacy-unverified';
+
+export const AI_INTAKE_UNTRUSTED_APPEND_ERROR = 'AI intake version ledger rejected an untrusted draft';
+
+export const AI_INTAKE_RESTORE_ERROR_CODE = 'intake_version_untrusted';
+
+export const AI_INTAKE_RESTORE_BLOCKED_MESSAGE =
+  '출처가 검증된 OpenAI 생성 결과만 복원할 수 있습니다. 이 기록은 미리보기/이력 용도입니다.';
+
+const AI_INTAKE_PROVENANCE_WARNINGS: Record<AiIntakeProvenance, string> = {
+  'openai-verified': 'OpenAI 생성 결과로 신뢰할 수 있습니다.',
+  'local-demo':
+    '로컬 데모/미리보기 생성안입니다. 실제 AI 출력이 아니므로 복원·적용할 수 없습니다.',
+  'legacy-unverified':
+    '과거 생성 이력으로 출처가 검증되지 않았습니다. 미리보기/이력 용도이며 복원·적용할 수 없습니다.',
+};
 
 export interface AiIntakeVersionRecord {
   readonly id: string;
@@ -34,6 +55,9 @@ export interface AiIntakeVersionSummary {
   readonly pageCount: number;
   readonly sectionCount: number;
   readonly heroHeadline: string;
+  readonly provenance: AiIntakeProvenance;
+  readonly restorable: boolean;
+  readonly provenanceWarning: string;
 }
 
 export type AiIntakeDiffValue = string | number | readonly string[] | null;
@@ -76,44 +100,202 @@ type AiIntakeStorageBackend = 'blob' | 'file';
 
 const BLOB_PREFIX = 'builder-ai-intake';
 const siteIdSchema = z.string().trim().min(1).max(80).regex(/^[a-zA-Z0-9_-]+$/);
-const generatedDraftShapeSchema = z.object({
+const canonicalIsoInstantSchema = z.string().refine((value) => {
+  const date = new Date(value);
+  return !Number.isNaN(date.getTime()) && date.toISOString() === value;
+}, 'Expected a canonical ISO-8601 UTC instant');
+const calendarDateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine((value) => {
+  const date = new Date(`${value}T00:00:00.000Z`);
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
+}, 'Expected a valid calendar date');
+const paletteSchema = z.object({
+  primary: z.string().trim().min(1),
+  secondary: z.string().trim().min(1),
+  accent: z.string().trim().min(1),
+  background: z.string().trim().min(1),
+}).passthrough();
+const blueprintSectionSchema = z.enum([
+  'hero',
+  'about',
+  'services',
+  'expertise',
+  'team',
+  'reviews',
+  'process',
+  'gallery',
+  'pricing',
+  'faq',
+  'contact',
+  'cta',
+]);
+const generatedSectionSchema = z.object({
+  sectionId: z.string().trim().min(1),
+  headline: z.string().trim().min(1),
+  body: z.string(),
+  ctaLabel: z.string().optional(),
+  bullets: z.array(z.string()).optional(),
+}).passthrough();
+const strictGeneratedDraftSchema = z.object({
   spec: siteSpecSchema,
+  blueprint: z.object({
+    industry: z.enum(INDUSTRIES),
+    sections: z.array(blueprintSectionSchema),
+    heroHeadlineHint: z.string().trim().min(1),
+    palettes: z.object({
+      warm: paletteSchema,
+      cool: paletteSchema,
+      neutral: paletteSchema,
+      'high-contrast': paletteSchema,
+      pastel: paletteSchema,
+    }),
+  }).passthrough(),
+  palette: paletteSchema,
   content: z.object({
-    hero: z.object({
-      headline: z.string(),
-      body: z.string(),
-    }).passthrough(),
-    sections: z.array(z.object({
-      sectionId: z.string(),
-    }).passthrough()),
+    hero: generatedSectionSchema,
+    sections: z.array(generatedSectionSchema),
+    metaDescription: z.string(),
+    source: z.literal('openai'),
+    stub: z.literal(false),
   }).passthrough(),
   plan: z.object({
     sitemap: z.array(z.object({
-      title: z.string(),
+      title: z.string().trim().min(1),
       slug: z.string(),
+      purpose: z.string(),
+      sections: z.array(z.string()),
     }).passthrough()),
+    contentPlan: z.array(z.object({
+      sectionId: z.string().trim().min(1),
+      title: z.string(),
+      intent: z.string(),
+    }).passthrough()),
+    visualBrief: z.object({
+      direction: z.string(),
+      imagePrompt: z.string(),
+      treatment: z.string(),
+      composition: z.string(),
+    }).passthrough(),
+    brandBrief: z.object({
+      audience: z.string(),
+      goals: z.array(z.string()),
+      keywords: z.array(z.string()),
+      constraints: z.string(),
+    }).passthrough(),
   }).passthrough(),
-  generatedAt: z.string(),
-  promptVersion: z.string(),
-}).passthrough();
+  generatedAt: canonicalIsoInstantSchema,
+  promptVersion: z.string().trim().min(1),
+  blueprintVersion: z.string().trim().min(1),
+  contentVersion: z.string().trim().min(1),
+  promptChangelog: z.array(z.object({
+    version: z.string().trim().min(1),
+    label: z.string(),
+    summary: z.string(),
+    createdAt: calendarDateSchema,
+    changes: z.array(z.string()),
+  }).passthrough()),
+}).passthrough().superRefine((draft, context) => {
+  if (draft.blueprint.industry !== draft.spec.industry) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['blueprint', 'industry'],
+      message: 'Blueprint industry must match draft spec industry',
+    });
+  }
+  if (!draft.promptChangelog.some((entry) => entry.version === draft.promptVersion)) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['promptChangelog'],
+      message: 'Prompt changelog must contain the active prompt version',
+    });
+  }
+});
 
-const generatedDraftSchema = z.custom<GeneratedSiteDraft>((value) => (
-  generatedDraftShapeSchema.safeParse(value).success
-));
+function isPlainRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
 
+const legacySpecSchema = z.custom<SiteSpec>(isPlainRecord);
+const legacyDraftSchema = z.custom<GeneratedSiteDraft>(isPlainRecord);
+
+// Ledger reads intentionally retain structurally damaged historical rows so the
+// UI can disclose them as legacy/unverified. The strict schemas below are the
+// only authority for append and restore decisions.
 const intakeVersionRecordSchema: z.ZodType<AiIntakeVersionRecord> = z.object({
   id: z.string().trim().min(1),
   siteId: siteIdSchema,
-  createdAt: z.string().trim().min(1),
+  createdAt: z.string(),
+  createdBy: z.string().trim().min(1),
+  promptVersion: z.string(),
+  spec: legacySpecSchema,
+  draft: legacyDraftSchema,
+}).passthrough();
+
+const strictIntakeVersionRecordSchema = z.object({
+  id: z.string().trim().min(1),
+  siteId: siteIdSchema,
+  createdAt: canonicalIsoInstantSchema,
   createdBy: z.string().trim().min(1),
   promptVersion: z.string().trim().min(1),
   spec: siteSpecSchema,
-  draft: generatedDraftSchema,
+  draft: strictGeneratedDraftSchema,
+}).passthrough().superRefine((record, context) => {
+  if ('ledgerIntegrity' in record) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['ledgerIntegrity'],
+      message: 'Recovered malformed ledger rows are never restorable',
+    });
+  }
+  if (JSON.stringify(record.spec) !== JSON.stringify(record.draft.spec)) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['draft', 'spec'],
+      message: 'Record and draft specs must match',
+    });
+  }
+  if (record.promptVersion !== record.draft.promptVersion) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['draft', 'promptVersion'],
+      message: 'Record and draft prompt versions must match',
+    });
+  }
+  if (new Date(record.createdAt).getTime() < new Date(record.draft.generatedAt).getTime()) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['createdAt'],
+      message: 'Ledger timestamp cannot precede draft generation',
+    });
+  }
 });
 
-const intakeVersionFileSchema: z.ZodType<AiIntakeVersionFile> = z.object({
+export function isStrictGeneratedSiteDraft(value: unknown): value is GeneratedSiteDraft {
+  return strictGeneratedDraftSchema.safeParse(value).success;
+}
+
+export function classifyIntakeProvenance(draft: unknown): AiIntakeProvenance {
+  if (!isPlainRecord(draft) || !isPlainRecord(draft.content)) return 'legacy-unverified';
+  if (draft.content.source === 'local-demo' || draft.content.stub === true) return 'local-demo';
+  if (draft.content.source === 'openai'
+    && draft.content.stub === false
+    && isStrictGeneratedSiteDraft(draft)) {
+    return 'openai-verified';
+  }
+  return 'legacy-unverified';
+}
+
+export function isIntakeVersionRestorable(
+  record: unknown,
+  expectedSiteId?: string,
+): record is AiIntakeVersionRecord {
+  const parsed = strictIntakeVersionRecordSchema.safeParse(record);
+  if (!parsed.success) return false;
+  return expectedSiteId === undefined || parsed.data.siteId === normalizeSiteId(expectedSiteId);
+}
+
+const intakeVersionFileEnvelopeSchema = z.object({
   version: z.literal(1),
-  versions: z.array(intakeVersionRecordSchema),
+  versions: z.array(z.unknown()),
 });
 
 const SPEC_DIFF_FIELDS = [
@@ -172,7 +354,29 @@ function emptyVersionFile(): AiIntakeVersionFile {
 
 function parseVersionFile(raw: string, siteId: string): AiIntakeVersionFile {
   try {
-    return intakeVersionFileSchema.parse(JSON.parse(raw));
+    const envelope = intakeVersionFileEnvelopeSchema.parse(JSON.parse(raw));
+    return {
+      version: 1,
+      versions: envelope.versions.map((value, index) => {
+        const parsed = intakeVersionRecordSchema.safeParse(value);
+        if (parsed.success) return parsed.data;
+        const rawRecord = isPlainRecord(value) ? value : {};
+        return {
+          id: stringValue(rawRecord.id, `legacy-malformed-${index}`),
+          siteId: siteIdSchema.safeParse(rawRecord.siteId).success
+            ? rawRecord.siteId as string
+            : siteId,
+          createdAt: typeof rawRecord.createdAt === 'string' ? rawRecord.createdAt : '',
+          createdBy: stringValue(rawRecord.createdBy, 'legacy-unknown'),
+          promptVersion: typeof rawRecord.promptVersion === 'string' ? rawRecord.promptVersion : '',
+          spec: isPlainRecord(rawRecord.spec) ? rawRecord.spec as SiteSpec : {} as SiteSpec,
+          draft: isPlainRecord(rawRecord.draft)
+            ? rawRecord.draft as unknown as GeneratedSiteDraft
+            : {} as GeneratedSiteDraft,
+          ledgerIntegrity: 'malformed',
+        } as AiIntakeVersionRecord;
+      }),
+    };
   } catch (error) {
     if (error instanceof SyntaxError || error instanceof z.ZodError) {
       const ledgerError: Error & { cause?: unknown } = new Error(`AI intake version ledger for ${siteId} is unreadable`);
@@ -237,19 +441,54 @@ function makeVersionId(): string {
   return `ver_${Date.now().toString(36)}_${randomBytes(5).toString('hex')}`;
 }
 
-function summaryFromRecord(record: AiIntakeVersionRecord): AiIntakeVersionSummary {
+function recordValue(record: unknown, key: string): unknown {
+  return isPlainRecord(record) ? record[key] : undefined;
+}
+
+function stringValue(value: unknown, fallback: string): string {
+  return typeof value === 'string' && value.trim() ? value : fallback;
+}
+
+function arrayLength(value: unknown): number {
+  return Array.isArray(value) ? value.length : 0;
+}
+
+function summaryFromRecord(
+  record: AiIntakeVersionRecord,
+  expectedSiteId?: string,
+  expectedLocale?: SiteSpec['locale'],
+): AiIntakeVersionSummary {
+  const restorable = isIntakeVersionRestorable(record, expectedSiteId);
+  const draft = recordValue(record, 'draft');
+  const spec = recordValue(record, 'spec');
+  const content = recordValue(draft, 'content');
+  const plan = recordValue(draft, 'plan');
+  const hero = recordValue(content, 'hero');
+  const rawProvenance = classifyIntakeProvenance(draft);
+  const provenance: AiIntakeProvenance = restorable
+    ? 'openai-verified'
+    : rawProvenance === 'local-demo' ? 'local-demo' : 'legacy-unverified';
+  const industry = recordValue(spec, 'industry');
+  const locale = recordValue(spec, 'locale');
   return {
     id: record.id,
-    siteId: record.siteId,
+    siteId: expectedSiteId ?? record.siteId,
     createdAt: record.createdAt,
     createdBy: record.createdBy,
-    companyName: record.spec.companyName,
-    industry: record.spec.industry,
-    locale: record.spec.locale,
-    promptVersion: record.promptVersion,
-    pageCount: record.draft.plan.sitemap.length,
-    sectionCount: record.draft.content.sections.length,
-    heroHeadline: record.draft.content.hero.headline,
+    companyName: stringValue(recordValue(spec, 'companyName'), 'Legacy AI draft'),
+    industry: INDUSTRIES.includes(industry as SiteSpec['industry'])
+      ? industry as SiteSpec['industry']
+      : 'other',
+    locale: locale === 'ko' || locale === 'en' || locale === 'zh-hant'
+      ? locale
+      : expectedLocale ?? 'ko',
+    promptVersion: stringValue(record.promptVersion, 'unknown'),
+    pageCount: arrayLength(recordValue(plan, 'sitemap')),
+    sectionCount: arrayLength(recordValue(content, 'sections')),
+    heroHeadline: stringValue(recordValue(hero, 'headline'), 'Unavailable'),
+    provenance,
+    restorable,
+    provenanceWarning: AI_INTAKE_PROVENANCE_WARNINGS[provenance],
   };
 }
 
@@ -307,6 +546,9 @@ export async function appendAiIntakeVersion(
       spec: input.spec,
       draft: input.draft,
     };
+    if (!isIntakeVersionRestorable(record, siteId)) {
+      throw new Error(AI_INTAKE_UNTRUSTED_APPEND_ERROR);
+    }
     const cap = options.cap ?? AI_INTAKE_VERSION_CAP;
     const versions = [record, ...file.versions].slice(0, cap);
     await writeFileForSite(siteId, { version: 1, versions });
@@ -321,8 +563,12 @@ export async function listAiIntakeVersions(
   const siteId = normalizeSiteId(siteIdInput);
   const file = await readFileForSite(siteId);
   return file.versions
-    .filter((version) => !filter.locale || version.spec.locale === filter.locale)
-    .map(summaryFromRecord)
+    .filter((version) => {
+      if (!filter.locale) return true;
+      const rawLocale = recordValue(recordValue(version, 'spec'), 'locale');
+      return rawLocale === filter.locale || (rawLocale !== 'ko' && rawLocale !== 'en' && rawLocale !== 'zh-hant');
+    })
+    .map((version) => summaryFromRecord(version, siteId, filter.locale))
     .sort((left, right) => (left.createdAt < right.createdAt ? 1 : -1));
 }
 
@@ -339,13 +585,21 @@ export function diffAiIntakeVersions(
   before: AiIntakeVersionRecord,
   after: AiIntakeVersionRecord,
 ): AiIntakeVersionDiff {
+  const beforeDraft = recordValue(before, 'draft');
+  const afterDraft = recordValue(after, 'draft');
+  const beforePlan = recordValue(beforeDraft, 'plan');
+  const afterPlan = recordValue(afterDraft, 'plan');
+  const beforeContent = recordValue(beforeDraft, 'content');
+  const afterContent = recordValue(afterDraft, 'content');
+  const beforeHero = recordValue(beforeContent, 'hero');
+  const afterHero = recordValue(afterContent, 'hero');
   const specChanges = SPEC_DIFF_FIELDS
     .map((field) => changeFor(field, specValue(before.spec, field), specValue(after.spec, field)))
     .filter((change): change is AiIntakeDiffChange => Boolean(change));
   const draftChanges = [
-    changeFor('pageCount', before.draft.plan.sitemap.length, after.draft.plan.sitemap.length),
-    changeFor('sectionCount', before.draft.content.sections.length, after.draft.content.sections.length),
-    changeFor('heroHeadline', before.draft.content.hero.headline, after.draft.content.hero.headline),
+    changeFor('pageCount', arrayLength(recordValue(beforePlan, 'sitemap')), arrayLength(recordValue(afterPlan, 'sitemap'))),
+    changeFor('sectionCount', arrayLength(recordValue(beforeContent, 'sections')), arrayLength(recordValue(afterContent, 'sections'))),
+    changeFor('heroHeadline', stringValue(recordValue(beforeHero, 'headline'), ''), stringValue(recordValue(afterHero, 'headline'), '')),
     changeFor('promptVersion', before.promptVersion, after.promptVersion),
   ].filter((change): change is AiIntakeDiffChange => Boolean(change));
   return {

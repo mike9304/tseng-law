@@ -11,6 +11,7 @@ import {
 } from '@/lib/builder/animations/presets';
 
 export const ELASTIC_EASING_CSS = 'cubic-bezier(0.34, 1.56, 0.64, 1)';
+export const NATURAL_MOTION_EASING_CSS = 'cubic-bezier(0.16, 1, 0.3, 1)';
 
 export type AnimationPreviewPhase = 'initial' | 'visible' | null;
 
@@ -283,18 +284,18 @@ export function buildEditorAnimationStyle({
     filter = hoverDefinition.filter;
     const hoverDuration = cssMs(normalized.hover.transitionMs);
     transitionParts.push(
-      `opacity ${hoverDuration} ease`,
-      `transform ${hoverDuration} ease`,
-      `box-shadow ${hoverDuration} ease`,
-      `filter ${hoverDuration} ease`,
+      `opacity ${hoverDuration} ${NATURAL_MOTION_EASING_CSS}`,
+      `transform ${hoverDuration} ${NATURAL_MOTION_EASING_CSS}`,
+      `box-shadow ${hoverDuration} ${NATURAL_MOTION_EASING_CSS}`,
+      `filter ${hoverDuration} ${NATURAL_MOTION_EASING_CSS}`,
     );
   } else if (normalized.hover.preset !== 'none') {
     const hoverDuration = cssMs((normalized.hover as HoverAnimationConfig).transitionMs);
     transitionParts.push(
-      `opacity ${hoverDuration} ease`,
-      `transform ${hoverDuration} ease`,
-      `box-shadow ${hoverDuration} ease`,
-      `filter ${hoverDuration} ease`,
+      `opacity ${hoverDuration} ${NATURAL_MOTION_EASING_CSS}`,
+      `transform ${hoverDuration} ${NATURAL_MOTION_EASING_CSS}`,
+      `box-shadow ${hoverDuration} ${NATURAL_MOTION_EASING_CSS}`,
+      `filter ${hoverDuration} ${NATURAL_MOTION_EASING_CSS}`,
     );
   }
 

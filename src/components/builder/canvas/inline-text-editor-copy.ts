@@ -3,6 +3,12 @@ import type { Locale } from '@/lib/locales';
 export interface InlineTextEditorCopy {
   placeholder: string;
   toolbarAriaLabel: string;
+  commitAriaLabel: string;
+  commitTitle: string;
+  commitButtonText: string;
+  cancelAriaLabel: string;
+  cancelTitle: string;
+  cancelButtonText: string;
   boldAriaLabel: string;
   boldTitle: string;
   italicAriaLabel: string;
@@ -34,6 +40,12 @@ export function getInlineTextEditorCopy(locale: Locale): InlineTextEditorCopy {
     return {
       placeholder: '輸入文字...',
       toolbarAriaLabel: '行內文字格式工具列',
+      commitAriaLabel: '完成編輯並儲存',
+      commitTitle: '完成並儲存 (Enter)',
+      commitButtonText: '完成',
+      cancelAriaLabel: '取消編輯',
+      cancelTitle: '取消 (Esc)',
+      cancelButtonText: '取消',
       boldAriaLabel: '粗體',
       boldTitle: '粗體 (Cmd+B)',
       italicAriaLabel: '斜體',
@@ -65,6 +77,12 @@ export function getInlineTextEditorCopy(locale: Locale): InlineTextEditorCopy {
     return {
       placeholder: 'Enter text...',
       toolbarAriaLabel: 'Inline text formatting toolbar',
+      commitAriaLabel: 'Finish editing and save',
+      commitTitle: 'Finish and save (Enter)',
+      commitButtonText: 'Done',
+      cancelAriaLabel: 'Cancel editing',
+      cancelTitle: 'Cancel (Esc)',
+      cancelButtonText: 'Cancel',
       boldAriaLabel: 'Bold',
       boldTitle: 'Bold (Cmd+B)',
       italicAriaLabel: 'Italic',
@@ -95,6 +113,12 @@ export function getInlineTextEditorCopy(locale: Locale): InlineTextEditorCopy {
   return {
     placeholder: '텍스트 입력...',
     toolbarAriaLabel: '인라인 텍스트 서식 도구',
+    commitAriaLabel: '편집을 마치고 저장',
+    commitTitle: '완료 및 저장 (Enter)',
+    commitButtonText: '완료',
+    cancelAriaLabel: '편집 취소',
+    cancelTitle: '취소 (Esc)',
+    cancelButtonText: '취소',
     boldAriaLabel: '굵게',
     boldTitle: '굵게 (Cmd+B)',
     italicAriaLabel: '기울임',

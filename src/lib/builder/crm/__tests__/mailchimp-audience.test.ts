@@ -180,7 +180,7 @@ describe('Mailchimp audience sync', () => {
         ...current,
         {
           id: 'int_mailchimp',
-          kind: 'mailchimp-stub',
+          kind: 'mailchimp',
           settings: {
             apiKey: 'abc-us6',
             audienceId: 'aud_123',

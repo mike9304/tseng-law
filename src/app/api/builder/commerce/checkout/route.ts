@@ -193,6 +193,9 @@ export async function POST(request: NextRequest) {
     const payload = await request.json();
     errorLocale = resolveRequestLocale(request, payload);
     const input = checkoutSchema.parse(payload);
+    if (process.env.NODE_ENV === 'production' && input.paymentAdapter === 'sandbox-card') {
+      return errorResponse(errorLocale, 'payment_provider_not_configured', 503);
+    }
     const currencySettings = await loadCurrencySettings();
     const supportedCurrencies = checkoutCurrenciesForCurrencySettings(currencySettings);
     const requestedCurrency = normalizeCheckoutCurrency(input.cart && typeof input.cart === 'object'

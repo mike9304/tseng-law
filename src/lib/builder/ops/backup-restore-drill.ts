@@ -5,9 +5,9 @@ import { z } from 'zod';
 
 import type { BuilderBackupRestoreDrillReport } from './backups-model';
 import {
-  createOpsBackupStub,
+  createOpsBackup,
   deleteOpsBackup,
-  restoreOpsBackupStub,
+  restoreOpsBackup,
 } from './backups-store';
 import { opsBackupRestoreDrillReportFile, opsRoot } from './paths';
 
@@ -32,7 +32,7 @@ function makeDrillId(now: Date): string {
 }
 
 function drillSourcePath(id: string): string {
-  return path.join(process.cwd(), 'runtime-data', 'ops', 'restore-drills', `${id}.json`);
+  return path.join(opsRoot(), 'restore-drills', `${id}.json`);
 }
 
 async function persistDrillReport(report: BuilderBackupRestoreDrillReport): Promise<BuilderBackupRestoreDrillReport> {
@@ -82,7 +82,7 @@ export async function runOpsBackupRestoreDrill(now: Date = new Date()): Promise<
   try {
     await mkdir(path.dirname(sourcePath), { recursive: true });
     await writeFile(sourcePath, sourcePayload, 'utf8');
-    const backup = await createOpsBackupStub(sourcePath, `restore drill ${id}`, now);
+    const backup = await createOpsBackup(sourcePath, `restore drill ${id}`, now);
     backupId = backup.id;
     if (backup.status !== 'ok') {
       return persistDrillReport(failedReport({
@@ -97,7 +97,7 @@ export async function runOpsBackupRestoreDrill(now: Date = new Date()): Promise<
     }
 
     await writeFile(sourcePath, mutatedPayload, 'utf8');
-    const restored = await restoreOpsBackupStub(backup.id);
+    const restored = await restoreOpsBackup(backup.id);
     if (!restored.ok) {
       return persistDrillReport(failedReport({
         id,

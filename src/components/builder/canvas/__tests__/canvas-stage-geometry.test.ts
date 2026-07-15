@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { getCanvasOverlapCandidatesAtPoint } from '../useCanvasStageGeometry';
+import {
+  clientPointToViewportContent,
+  getCanvasOverlapCandidatesAtPoint,
+} from '../useCanvasStageGeometry';
 import { createDefaultCanvasNodeStyle, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
 
 function node({
@@ -46,6 +49,16 @@ function node({
 }
 
 describe('canvas stage geometry', () => {
+  it('removes the viewport border from client coordinates', () => {
+    expect(clientPointToViewportContent(
+      451,
+      301,
+      { left: 100, top: 50 },
+      1,
+      1,
+    )).toEqual({ x: 350, y: 250 });
+  });
+
   it('keeps only the top overlap candidates without sorting the full matched set', () => {
     const nodes = Array.from({ length: 12 }, (_, index) => node({
       id: `overlap-${index}`,

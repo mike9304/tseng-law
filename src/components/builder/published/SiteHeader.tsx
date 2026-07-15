@@ -103,13 +103,6 @@ function navigationTranslationManagerHref(locale: Locale, navItemId: string, tar
   return `/${locale}/admin-builder/translations?${params.toString()}`;
 }
 
-function resetBuilderCanvasHorizontalScroll(opener: HTMLElement): void {
-  const scrollRoot = opener.closest('[data-builder-canvas-scroll-root="true"]');
-  if (scrollRoot instanceof HTMLElement) {
-    scrollRoot.scrollLeft = 0;
-  }
-}
-
 function matchingHeaderSpec(item: BuilderNavItem, locale: Locale): HeaderNavSpec | null {
   return HEADER_NAV_SPECS.find((spec) => {
     const path = localizedPath(locale, spec.slug);
@@ -387,11 +380,10 @@ export default function SiteHeader({
   }, [closeMegaMenuNow, searchOpen]);
 
   const openSearchFromHeader = useCallback((opener: HTMLElement) => {
-    if (builderEditable) resetBuilderCanvasHorizontalScroll(opener);
     const scrollSnapshots = captureOverlayScrollSnapshots(opener);
     setSearchOpen(true);
     scheduleOverlayScrollRestore(scrollSnapshots);
-  }, [builderEditable]);
+  }, []);
 
   usePublishedOverlayFocus({
     open: mobileMenuOpen,

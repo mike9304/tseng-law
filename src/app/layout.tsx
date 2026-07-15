@@ -51,6 +51,11 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<style>.reveal,.reveal-stagger > *{opacity:1;transform:none;pointer-events:auto;transition:none}</style>`,
+          }}
+        />
       </head>
       <body>{children}</body>
     </html>

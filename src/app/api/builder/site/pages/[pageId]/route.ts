@@ -16,7 +16,8 @@ import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
 } from '@/lib/builder/site/site-api-copy';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
+import { SiteInvariantError, type SiteInvariantIssue } from '@/lib/builder/site/site-invariants';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -78,6 +79,35 @@ function validationErrorResponse(locale: Locale, error: ZodError): NextResponse 
       issues: error.flatten(),
     },
     { status: 400 },
+  );
+}
+
+function sanitizeSiteInvariantIssues(issues: readonly SiteInvariantIssue[]) {
+  return issues.map((issue) => ({
+    code: issue.code,
+    ...(issue.pageId !== undefined ? { pageId: issue.pageId } : {}),
+    ...(issue.conflictingPageId !== undefined ? { conflictingPageId: issue.conflictingPageId } : {}),
+    ...(issue.locale !== undefined ? { locale: issue.locale } : {}),
+    ...(issue.slug !== undefined ? { slug: issue.slug } : {}),
+    ...(issue.field !== undefined ? { field: issue.field } : {}),
+  }));
+}
+
+function siteInvariantConflictResponse(
+  locale: Locale,
+  error: SiteInvariantError,
+  operationErrorCode: 'page_update_failed' | 'page_delete_failed',
+): NextResponse {
+  const copy = getBuilderSiteApiErrorPayload(locale, operationErrorCode);
+  return NextResponse.json(
+    {
+      ok: false,
+      success: false,
+      error: copy.error,
+      errorCode: 'site_invariant_conflict',
+      issues: sanitizeSiteInvariantIssues(error.issues),
+    },
+    { status: 409 },
   );
 }
 
@@ -175,8 +205,14 @@ export async function PATCH(
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
 
   try {
-    const payload = updatePageSchema.parse(await request.json());
-    const siteId = resolveBuilderSiteIdFromRequest(request, payload.siteId);
+    const rawPayload: unknown = await request.json();
+    const explicitSiteId = rawPayload && typeof rawPayload === 'object' && !Array.isArray(rawPayload)
+      ? (rawPayload as Record<string, unknown>).siteId
+      : undefined;
+    const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, explicitSiteId);
+    if (!siteResolution.ok) return siteResolution.response;
+    const siteId = siteResolution.siteId;
+    const payload = updatePageSchema.parse(rawPayload);
     const site = await readSiteDocument(siteId, locale);
     const page = site.pages.find((entry) => entry.pageId === params.pageId);
 
@@ -279,6 +315,9 @@ export async function PATCH(
     if (error instanceof SyntaxError) {
       return errorResponse(locale, 'invalid_json', 400);
     }
+    if (error instanceof SiteInvariantError) {
+      return siteInvariantConflictResponse(locale, error, 'page_update_failed');
+    }
     return errorResponse(locale, 'page_update_failed', 500);
   }
 }
@@ -291,7 +330,9 @@ export async function DELETE(
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
 
   try {
     const site = await readSiteDocument(siteId, locale);
@@ -307,7 +348,10 @@ export async function DELETE(
 
     await deletePage(siteId, params.pageId, locale);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    if (error instanceof SiteInvariantError) {
+      return siteInvariantConflictResponse(locale, error, 'page_delete_failed');
+    }
     return errorResponse(locale, 'page_delete_failed', 500);
   }
 }

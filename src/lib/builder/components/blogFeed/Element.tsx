@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import type { BuilderBlogFeedCanvasNode } from '@/lib/builder/canvas/types';
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { WidgetDataDisclosure } from '../_shared/WidgetDataDisclosure';
 import { BlogFeedCard } from './BlogFeedCard';
 import { getBlogFeedCopy } from './blog-feed-copy';
 import { getMockPosts, parseBlogPostsPayload, toFeedItem } from './blog-feed-items';
@@ -203,6 +204,7 @@ function BlogFeedElementCore({
       className={rootClassName}
       style={rootStyle}
     >
+      {isBuilder ? <WidgetDataDisclosure locale={effectiveLocale} /> : null}
       {archive ? (
         <PublishedBlogFeedArchiveControls
           locale={effectiveLocale}

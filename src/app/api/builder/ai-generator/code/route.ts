@@ -8,6 +8,15 @@
  * Uses gpt-4o-mini with response_format=json_object. For fix/optimize/comment
  * we compute the unified diff server-side from the LLM's full `fixedCode`
  * rather than trust an LLM to emit valid diff headers.
+ *
+ * Fail-closed contract:
+ * - explain must never yield an applicable fixedCode/diff; a provider-supplied
+ *   fixedCode for explain is rejected.
+ * - fix/optimize/comment require a nonempty fixedCode after trimming, otherwise
+ *   the route returns a sanitized non-2xx instead of a false success.
+ * - All provider/network/shape failures return a stable sanitized payload that
+ *   never echoes provider status, error fields, response body, model details,
+ *   API key, prompt/code/context, or Zod issue details.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -24,13 +33,18 @@ import {
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
+const PROVIDER_TIMEOUT_MS = 20_000;
+
 type OpenAiChatPayload = {
   choices?: Array<{
     message?: { content?: string };
     finish_reason?: string;
   }>;
-  error?: { message?: string; type?: string; code?: string };
 };
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
 
 function openAiApiKey(): string {
   return process.env.OPENAI_API_KEY?.trim() ?? '';
@@ -78,6 +92,21 @@ function diffFilename(language: string): string {
   }
 }
 
+/**
+ * Stable, sanitized failure payload for any provider/network/contract problem.
+ * The error code and message are fixed internal strings only; this must never
+ * echo provider status, error code/type/message, response body, model details,
+ * API key, prompt/code/context, or Zod issue details. Provider statuses are
+ * normalized to 502.
+ */
+function sanitizedProviderFailure(
+  error: string,
+  message: string,
+  status = 502,
+): NextResponse {
+  return NextResponse.json({ ok: false, error, message }, { status });
+}
+
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { bucket: 'mutation', permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
@@ -106,10 +135,13 @@ export async function POST(request: NextRequest) {
   const { systemPrompt, userPrompt } = buildCodeAssistantPrompt(input);
   const model = codeAssistantModel();
 
-  let response: Response;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), PROVIDER_TIMEOUT_MS);
+  let payload: OpenAiChatPayload;
   try {
-    response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
@@ -125,34 +157,41 @@ export async function POST(request: NextRequest) {
         ],
       }),
     });
-  } catch (err) {
-    return NextResponse.json(
-      {
-        ok: false,
-        error: 'openai_code_request_failed',
-        message: err instanceof Error ? err.message : 'OpenAI request failed.',
-      },
-      { status: 502 },
-    );
-  }
 
-  const payload = (await response.json().catch(() => ({}))) as OpenAiChatPayload;
-  if (!response.ok) {
-    return NextResponse.json(
-      {
-        ok: false,
-        error: payload.error?.code ?? payload.error?.type ?? 'openai_code_assistant_failed',
-        message: payload.error?.message ?? 'AI code assistant failed.',
-      },
-      { status: response.status },
-    );
-  }
+    if (!response.ok) {
+      // Provider non-2xx: normalize to a stable sanitized 502 without reading
+      // or echoing the provider status, error code/type/message, or body.
+      return sanitizedProviderFailure(
+        'openai_code_assistant_failed',
+        'AI code assistant failed.',
+      );
+    }
 
+    // Keep the same bounded timeout alive while consuming the response body.
+    // Fetch can resolve after headers while json() remains stalled indefinitely.
+    const rawPayload: unknown = await response.json();
+    if (!isRecord(rawPayload)) {
+      return sanitizedProviderFailure(
+        'invalid_code_response_shape',
+        'AI code assistant returned an unexpected JSON shape.',
+      );
+    }
+    payload = rawPayload as OpenAiChatPayload;
+  } catch {
+    // Network/body rejection or bounded-timeout abort. Fixed internal message
+    // only; never surface AbortError/network text, provider data, or secrets.
+    return sanitizedProviderFailure(
+      'openai_code_request_failed',
+      'The AI code assistant request failed.',
+    );
+  } finally {
+    clearTimeout(timeout);
+  }
   const content = payload.choices?.[0]?.message?.content;
   if (!content) {
-    return NextResponse.json(
-      { ok: false, error: 'missing_code_payload', message: 'AI code assistant did not return any content.' },
-      { status: 502 },
+    return sanitizedProviderFailure(
+      'missing_code_payload',
+      'AI code assistant did not return any content.',
     );
   }
 
@@ -160,27 +199,56 @@ export async function POST(request: NextRequest) {
   try {
     json = JSON.parse(content);
   } catch {
-    return NextResponse.json(
-      { ok: false, error: 'invalid_code_payload', message: 'AI code assistant returned non-JSON content.' },
-      { status: 502 },
+    return sanitizedProviderFailure(
+      'invalid_code_payload',
+      'AI code assistant returned non-JSON content.',
     );
   }
+
   const parsedResult = codeAssistantResponseSchema.safeParse(json);
   if (!parsedResult.success) {
-    return NextResponse.json(
-      {
-        ok: false,
-        error: 'invalid_code_response_shape',
-        message: 'AI code assistant returned an unexpected JSON shape.',
-        details: parsedResult.error.issues.slice(0, 3),
-      },
-      { status: 502 },
+    // Malformed response shape: sanitized 502 with no Zod issue details, since
+    // those could echo provider-produced field values.
+    return sanitizedProviderFailure(
+      'invalid_code_response_shape',
+      'AI code assistant returned an unexpected JSON shape.',
     );
   }
 
   const { explanation, fixedCode } = parsedResult.data;
   const trimmedFixed = fixedCode && fixedCode.trim() ? fixedCode : null;
-  const diffResult = trimmedFixed && trimmedFixed !== input.code
+
+  // Action-specific contract enforcement (without touching the shared schema).
+  if (input.action === 'explain') {
+    // explain must never carry an applicable fixedCode/diff. If the provider
+    // returned nonblank fixedCode anyway, fail closed rather than risk a
+    // downstream apply via CodeAssistantPanel/CanvasNode/FunctionCodeEditor.
+    if (trimmedFixed) {
+      return sanitizedProviderFailure(
+        'invalid_code_response_shape',
+        'AI code assistant returned an unexpected JSON shape.',
+      );
+    }
+    return NextResponse.json({
+      ok: true,
+      model,
+      action: input.action,
+      language: input.language,
+      result: explanation,
+      supportedActions: CODE_ASSISTANT_ACTIONS,
+      finishReason: payload.choices?.[0]?.finish_reason ?? null,
+    });
+  }
+
+  // fix / optimize / comment require a nonempty drop-in replacement for ok:true.
+  if (!trimmedFixed) {
+    return sanitizedProviderFailure(
+      'invalid_code_response_shape',
+      'AI code assistant returned an unexpected JSON shape.',
+    );
+  }
+
+  const diffResult = trimmedFixed !== input.code
     ? buildUnifiedDiffResult(input.code, trimmedFixed, diffFilename(input.language))
     : undefined;
 
@@ -190,7 +258,7 @@ export async function POST(request: NextRequest) {
     action: input.action,
     language: input.language,
     result: explanation,
-    fixedCode: trimmedFixed ?? undefined,
+    fixedCode: trimmedFixed,
     diff: diffResult?.text,
     diffHunks: diffResult?.hunks,
     supportedActions: CODE_ASSISTANT_ACTIONS,

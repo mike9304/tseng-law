@@ -32,20 +32,21 @@ function SocialEmbedRender({
         </header>
       ) : null}
       {isEdit ? (
-        <div className="builder-social-embed-placeholder">
+        <div
+          className="builder-social-embed-placeholder"
+          data-builder-demo-disclosure="social-embed-placeholder"
+        >
           <em>{copy.socialEmbed.editPlaceholder(providerLabel)}</em>
           <small>({copy.socialEmbed.editSdkHint})</small>
         </div>
       ) : (
         <div
-          className="builder-social-embed-grid"
-          data-builder-social-count={c.count}
+          className="builder-social-embed-placeholder builder-social-embed-unavailable"
+          data-builder-demo-disclosure="social-embed-placeholder"
+          data-builder-social-provider-label={providerLabel}
         >
-          {Array.from({ length: c.count }, (_, idx) => (
-            <div key={idx} data-builder-social-tile={idx + 1}>
-              <small>{providerLabel}/{idx + 1}</small>
-            </div>
-          ))}
+          <strong>{copy.socialEmbed.unavailableTitle}</strong>
+          <small>{copy.socialEmbed.unavailableMessage}</small>
         </div>
       )}
     </div>

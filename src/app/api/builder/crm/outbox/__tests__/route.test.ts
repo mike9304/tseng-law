@@ -73,7 +73,7 @@ describe('builder CRM outbox API', () => {
     expect(response.status).toBe(500);
     expect(data).toEqual({
       ok: false,
-      error: '無法載入寄送紀錄。',
+      error: '無法載入 Email 模擬紀錄。',
       errorCode: 'outbox_list_failed',
     });
     expect(JSON.stringify(data)).not.toContain('outbox secret leaked');

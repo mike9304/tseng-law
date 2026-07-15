@@ -70,7 +70,60 @@ function orderFilePath(orderId: string): string {
   return path.join(commerceRoot(), 'orders', `${orderId}.json`);
 }
 
-async function writeJson(blobPath: string, filePath: string, data: unknown): Promise<void> {
+type PersistedOrderRead =
+  | { kind: 'absent' }
+  | { kind: 'present'; record: StoredCommerceOrder }
+  | { kind: 'ambiguous' };
+
+async function readPersistedOrderForGuard(
+  blobPath: string,
+  filePath: string,
+): Promise<PersistedOrderRead> {
+  if (getBackend() === 'blob') {
+    let result: Awaited<ReturnType<typeof get>>;
+    try {
+      result = await get(blobPath, { access: 'private', useCache: false });
+    } catch {
+      return { kind: 'ambiguous' };
+    }
+    if (result === null) return { kind: 'absent' };
+    if (result.statusCode !== 200 || !result.stream) return { kind: 'ambiguous' };
+    try {
+      const raw = await new Response(result.stream).text();
+      return { kind: 'present', record: JSON.parse(raw) as StoredCommerceOrder };
+    } catch {
+      return { kind: 'ambiguous' };
+    }
+  }
+
+  let raw: string;
+  try {
+    raw = await fs.readFile(filePath, 'utf8');
+  } catch (error) {
+    const code = (error as NodeJS.ErrnoException | undefined)?.code;
+    return code === 'ENOENT' ? { kind: 'absent' } : { kind: 'ambiguous' };
+  }
+  try {
+    return { kind: 'present', record: JSON.parse(raw) as StoredCommerceOrder };
+  } catch {
+    return { kind: 'ambiguous' };
+  }
+}
+
+async function writeJson(blobPath: string, filePath: string, data: StoredCommerceOrder): Promise<void> {
+  const isTombstoneWrite = data.deleted === true;
+  if (process.env.NODE_ENV === 'production' && !isTombstoneWrite) {
+    if (data.payment.status === 'authorized_stub') {
+      throw new Error('commerce_order_stub_payment_not_writable');
+    }
+    const persisted = await readPersistedOrderForGuard(blobPath, filePath);
+    if (
+      persisted.kind === 'ambiguous'
+      || (persisted.kind === 'present' && persisted.record.payment?.status === 'authorized_stub')
+    ) {
+      throw new Error('commerce_order_stub_payment_not_writable');
+    }
+  }
   const body = JSON.stringify(data, null, 2);
   if (getBackend() === 'blob') {
     await put(blobPath, body, {

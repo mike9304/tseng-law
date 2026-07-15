@@ -10,6 +10,7 @@ import {
   resolveCardVariantStyle,
 } from '@/lib/builder/site/component-variants';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { WidgetDataDisclosure } from '../_shared/WidgetDataDisclosure';
 import { getBlogPostCardCopy, type BlogPostCardCopy } from './blog-post-card-copy';
 import styles from './BlogPostCard.module.css';
 
@@ -218,6 +219,58 @@ function CardShell({
   );
 }
 
+function StatusShell({
+  content,
+  status,
+  title,
+  excerpt,
+  notice,
+  theme,
+  tone = 'muted',
+}: {
+  content: CardContent;
+  status: string;
+  title: string;
+  excerpt?: string;
+  notice?: string;
+  theme?: BuilderTheme;
+  tone?: 'normal' | 'muted' | 'error';
+}) {
+  const variantStyle = resolveCardVariantStyle(
+    content.variant ?? legacyCardStyleToVariant(content.cardStyle),
+    theme,
+  );
+  const neutral = '#2d5c48';
+  const vars: CardVars = {
+    '--blog-card-category-color': neutral,
+    '--blog-card-category-bg': hexToRgba(neutral, 0.1),
+    '--blog-card-image-bg': imageGradient(neutral),
+    ...variantStyle,
+  };
+  const className = [
+    styles.card,
+    tone === 'muted' ? styles.cardMuted : '',
+    tone === 'error' ? styles.cardError : '',
+  ].filter(Boolean).join(' ');
+
+  return (
+    <article
+      className={className}
+      style={vars}
+      data-builder-blog-card="true"
+      data-builder-blog-card-status={status}
+    >
+      <div className={styles.body}>
+        <div className={styles.topline}>
+          {notice ? <span className={styles.inlineNotice}>{notice}</span> : null}
+        </div>
+        <h3 className={styles.title}>{title}</h3>
+        {excerpt ? <p className={styles.excerpt}>{excerpt}</p> : null}
+      </div>
+    </article>
+  );
+}
+
 export default function BlogPostCardElement({ node, mode = 'edit', theme, locale }: BlogPostCardElementProps) {
   const c = node.content;
   const isBuilder = mode !== 'published';
@@ -274,53 +327,120 @@ export default function BlogPostCardElement({ node, mode = 'edit', theme, locale
 
   const selectedItem = useMemo(() => (post ? toCardItem(post) : null), [post]);
 
-  if (!c.postId) {
-    return <CardShell item={mockPost} content={c} notice={copy.runtime.selectPostNotice} theme={theme} copy={copy} locale={effectiveLocale} tone="muted" />;
-  }
+  const hasPostId = Boolean(c.postId);
 
-  if (loading && !selectedItem) {
-    return (
+  let content: ReactNode;
+  if (selectedItem) {
+    content = (
       <CardShell
-        item={{ ...mockPost, title: copy.runtime.loadingTitle, excerpt: copy.runtime.loadingExcerpt }}
+        item={selectedItem}
         content={c}
-        notice={copy.runtime.loadingNotice}
+        href={isBuilder ? `#${selectedItem.slug}` : `/${effectiveLocale}/columns/${selectedItem.slug}`}
         theme={theme}
         copy={copy}
         locale={effectiveLocale}
-        tone="muted"
       />
     );
-  }
-
-  if (!selectedItem) {
-    return (
-      <CardShell
-        item={{
-          ...mockPost,
-          title: error === 'load-failed'
-            ? copy.runtime.failedToLoadPost(c.postId)
-            : copy.runtime.postNotFound(c.postId),
-          excerpt: copy.runtime.errorExcerpt,
-          featured: false,
-        }}
-        content={c}
-        notice={copy.runtime.unavailableNotice}
-        theme={theme}
-        copy={copy}
-        locale={effectiveLocale}
-        tone="error"
-      />
-    );
+  } else if (isBuilder) {
+    if (!c.postId) {
+      content = (
+        <CardShell
+          item={mockPost}
+          content={c}
+          notice={copy.runtime.selectPostNotice}
+          theme={theme}
+          copy={copy}
+          locale={effectiveLocale}
+          tone="muted"
+        />
+      );
+    } else if (loading) {
+      content = (
+        <CardShell
+          item={{ ...mockPost, title: copy.runtime.loadingTitle, excerpt: copy.runtime.loadingExcerpt }}
+          content={c}
+          notice={copy.runtime.loadingNotice}
+          theme={theme}
+          copy={copy}
+          locale={effectiveLocale}
+          tone="muted"
+        />
+      );
+    } else {
+      content = (
+        <CardShell
+          item={{
+            ...mockPost,
+            title: error === 'load-failed'
+              ? copy.runtime.failedToLoadPost(c.postId)
+              : copy.runtime.postNotFound(c.postId),
+            excerpt: copy.runtime.errorExcerpt,
+            featured: false,
+          }}
+          content={c}
+          notice={copy.runtime.unavailableNotice}
+          theme={theme}
+          copy={copy}
+          locale={effectiveLocale}
+          tone="error"
+        />
+      );
+    }
+  } else {
+    if (!hasPostId) {
+      content = (
+        <StatusShell
+          content={c}
+          status="unconfigured"
+          title={copy.runtime.publishedNoPostTitle}
+          excerpt={copy.runtime.publishedNoPostExcerpt}
+          theme={theme}
+          tone="muted"
+        />
+      );
+    } else if (loading) {
+      content = (
+        <StatusShell
+          content={c}
+          status="loading"
+          notice={copy.runtime.loadingNotice}
+          title={copy.runtime.publishedLoadingTitle}
+          excerpt={copy.runtime.publishedLoadingExcerpt}
+          theme={theme}
+          tone="muted"
+        />
+      );
+    } else if (error === 'load-failed') {
+      content = (
+        <StatusShell
+          content={c}
+          status="load-failed"
+          notice={copy.runtime.unavailableNotice}
+          title={copy.runtime.publishedUnavailableTitle}
+          excerpt={copy.runtime.publishedUnavailableExcerpt}
+          theme={theme}
+          tone="error"
+        />
+      );
+    } else {
+      content = (
+        <StatusShell
+          content={c}
+          status="not-found"
+          notice={copy.runtime.unavailableNotice}
+          title={copy.runtime.publishedUnavailableTitle}
+          excerpt={copy.runtime.publishedUnavailableExcerpt}
+          theme={theme}
+          tone="error"
+        />
+      );
+    }
   }
 
   return (
-    <CardShell
-      item={selectedItem}
-      content={c}
-      href={isBuilder ? `#${selectedItem.slug}` : `/${effectiveLocale}/columns/${selectedItem.slug}`}
-      theme={theme}
-      copy={copy}
-      locale={effectiveLocale}
-    />
+    <>
+      {isBuilder ? <WidgetDataDisclosure locale={effectiveLocale} /> : null}
+      {content}
+    </>
   );
 }

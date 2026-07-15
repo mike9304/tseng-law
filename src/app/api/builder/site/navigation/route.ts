@@ -10,7 +10,10 @@ import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
 } from '@/lib/builder/site/site-api-copy';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  resolveBuilderSiteIdForMutationFromRequest,
+  resolveBuilderSiteIdFromRequest,
+} from '@/lib/builder/site/admin-routing';
 import { upgradePublicHeaderNavigation } from '@/lib/builder/site/public-header-navigation';
 import type { Locale } from '@/lib/locales';
 
@@ -86,8 +89,9 @@ export async function PUT(request: NextRequest) {
   }
 
   const locale = normalizeLocale(body.locale || 'ko');
-  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
-  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
 
   if (!Array.isArray(body.navigation)) {
     return errorResponse(locale, 'navigation_required', 400);

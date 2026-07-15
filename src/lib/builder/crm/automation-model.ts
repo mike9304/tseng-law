@@ -1,7 +1,7 @@
 /**
  * CRM automation primitives. Persisted as a single JSON document at
  * `runtime-data/crm/automations.json` plus a sibling `outbox.json` for
- * stubbed email sends.
+ * explicit non-production email simulations.
  */
 
 import { promises as fs } from 'fs';
@@ -11,7 +11,8 @@ import { get, put } from '@vercel/blob';
 import { z } from 'zod';
 
 export type CrmAutomationTriggerKind = 'contact-created' | 'tag-added' | 'form-submitted';
-export type CrmAutomationActionKind = 'send-email-stub' | 'add-tag' | 'webhook';
+export type CrmAutomationActionKind = 'simulate-email' | 'add-tag' | 'webhook';
+type LegacyCrmAutomationActionKind = 'send-email-stub';
 
 export interface CrmAutomationTrigger {
   kind: CrmAutomationTriggerKind;
@@ -41,7 +42,7 @@ export interface CrmAutomationsFile {
   automations: CrmAutomation[];
 }
 
-export interface CrmEmailStubEntry {
+export interface CrmEmailSimulationEntry {
   entryId: string;
   automationId: string;
   contactId: string;
@@ -54,7 +55,22 @@ export interface CrmEmailStubEntry {
 export interface CrmOutboxFile {
   version: 1;
   updatedAt: string;
-  entries: CrmEmailStubEntry[];
+  entries: CrmEmailSimulationEntry[];
+}
+
+/** @deprecated Use CrmEmailSimulationEntry. Kept for source compatibility only. */
+export type CrmEmailStubEntry = CrmEmailSimulationEntry;
+
+type PersistedCrmAutomation = Omit<CrmAutomation, 'action'> & {
+  action: Omit<CrmAutomationAction, 'kind'> & {
+    kind: CrmAutomationActionKind | LegacyCrmAutomationActionKind;
+  };
+};
+
+interface PersistedCrmAutomationsFile {
+  version: 1;
+  updatedAt: string;
+  automations: PersistedCrmAutomation[];
 }
 
 function rootDir(): string {
@@ -76,6 +92,21 @@ function isBlobBackend(): boolean {
   return true;
 }
 
+const automationActionSchema = z.object({
+  kind: z.enum(['simulate-email', 'add-tag', 'webhook']),
+  templateId: z.string().trim().max(120).optional(),
+  webhookUrl: z.string().trim().url().max(2000).optional(),
+  addTag: z.string().trim().max(64).optional(),
+}).superRefine((action, context) => {
+  if (action.kind === 'simulate-email' && process.env.NODE_ENV === 'production') {
+    context.addIssue({
+      code: 'custom',
+      path: ['kind'],
+      message: 'Email simulation is unavailable in production.',
+    });
+  }
+});
+
 export const automationCreateSchema = z.object({
   name: z.string().trim().min(1).max(120),
   trigger: z.object({
@@ -83,12 +114,7 @@ export const automationCreateSchema = z.object({
     matchTag: z.string().trim().max(64).optional(),
     matchFormName: z.string().trim().max(120).optional(),
   }),
-  action: z.object({
-    kind: z.enum(['send-email-stub', 'add-tag', 'webhook']),
-    templateId: z.string().trim().max(120).optional(),
-    webhookUrl: z.string().trim().url().max(2000).optional(),
-    addTag: z.string().trim().max(64).optional(),
-  }),
+  action: automationActionSchema,
   enabled: z.boolean().default(true),
 });
 
@@ -156,8 +182,24 @@ const automationsHolder = { get current() { return automationsQueue; }, set curr
 const outboxHolder = { get current() { return outboxQueue; }, set current(value: Promise<void>) { outboxQueue = value; } };
 
 export async function readAutomations(): Promise<CrmAutomation[]> {
-  const file = await readJson<CrmAutomationsFile>(AUTOMATIONS_BLOB, automationsFile(), emptyAutomations());
-  return Array.isArray(file.automations) ? file.automations : [];
+  const file = await readJson<PersistedCrmAutomationsFile>(
+    AUTOMATIONS_BLOB,
+    automationsFile(),
+    emptyAutomations(),
+  );
+  if (!Array.isArray(file.automations)) return [];
+  return file.automations.map((automation) => {
+    if (automation.action?.kind !== 'send-email-stub') {
+      return automation as CrmAutomation;
+    }
+    return {
+      ...automation,
+      action: {
+        ...automation.action,
+        kind: 'simulate-email',
+      },
+    };
+  });
 }
 
 export async function saveAutomations(automations: CrmAutomation[]): Promise<void> {
@@ -187,12 +229,12 @@ export async function mutateAutomations<T>(
   });
 }
 
-export async function readOutbox(): Promise<CrmEmailStubEntry[]> {
+export async function readOutbox(): Promise<CrmEmailSimulationEntry[]> {
   const file = await readJson<CrmOutboxFile>(OUTBOX_BLOB, outboxFile(), emptyOutbox());
   return Array.isArray(file.entries) ? file.entries : [];
 }
 
-export async function appendOutboxEntry(entry: CrmEmailStubEntry): Promise<void> {
+export async function appendOutboxEntry(entry: CrmEmailSimulationEntry): Promise<void> {
   await withQueue(outboxHolder, async () => {
     const current = await readJson<CrmOutboxFile>(OUTBOX_BLOB, outboxFile(), emptyOutbox());
     const next: CrmOutboxFile = {

@@ -40,6 +40,7 @@ export type FunctionsCopy = {
   deleteSuccess: string;
   unsavedChanges: string;
   aiApplySuccess: string;
+  sandboxNotice: string;
 };
 
 const COPY: Record<'ko' | 'zh-hant' | 'en', FunctionsCopy> = {
@@ -89,6 +90,7 @@ const COPY: Record<'ko' | 'zh-hant' | 'en', FunctionsCopy> = {
     deleteSuccess: '함수를 삭제했습니다.',
     unsavedChanges: '저장되지 않은 변경사항',
     aiApplySuccess: 'AI 제안 코드를 적용했습니다. 저장해야 반영됩니다.',
+    sandboxNotice: '테스트 실행은 권한이 제한된 worker-vm 샌드박스에서만 동작합니다. 이 데모 영역은 프로덕션급 격리가 아니며, 실제 방문자에게 노출되거나 공개 실행되지 않습니다.',
   },
   'zh-hant': {
     title: '函數管理',
@@ -136,6 +138,7 @@ const COPY: Record<'ko' | 'zh-hant' | 'en', FunctionsCopy> = {
     deleteSuccess: '已刪除函式。',
     unsavedChanges: '尚未儲存的變更',
     aiApplySuccess: '已套用 AI 建議程式碼。請儲存後才會生效。',
+    sandboxNotice: '測試執行僅在受限的 worker-vm 沙盒中運作。此示範範圍並非生產級隔離，也不會對真實訪客公開執行。',
   },
   en: {
     title: 'Function Management',
@@ -183,6 +186,7 @@ const COPY: Record<'ko' | 'zh-hant' | 'en', FunctionsCopy> = {
     deleteSuccess: 'Deleted the function.',
     unsavedChanges: 'Unsaved changes',
     aiApplySuccess: 'Applied the AI-suggested code. Save to persist it.',
+    sandboxNotice: 'Test runs execute only in a bounded worker-vm sandbox. This demo boundary is not production-grade, is not a public execution surface, and does not run for real visitors.',
   },
 };
 

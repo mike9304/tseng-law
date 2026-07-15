@@ -14,6 +14,7 @@ import {
   normalizeCollabId,
   optionalCollabId,
   readJsonObject,
+  resolveCollabMutationSiteIdFromRequest,
   resolveCollabSiteIdFromRequest,
 } from '../request-parsing';
 
@@ -87,7 +88,9 @@ export async function POST(request: NextRequest) {
     return badRequest(locale);
   }
 
-  const siteId = resolveCollabSiteIdFromRequest(request, body.siteId);
+  const siteResolution = resolveCollabMutationSiteIdFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   const pageId = normalizeCollabId(body.pageId);
   const sessionId = normalizeCollabId(body.sessionId);
   if (!pageId) return badRequest(locale);

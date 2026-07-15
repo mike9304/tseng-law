@@ -72,7 +72,10 @@ function present(env: TranslationProviderEnv, key: string): boolean {
 
 function configuredProvider(env: TranslationProviderEnv): TranslationProviderDiagnosticId | 'mock' {
   const requested = env.TRANSLATION_PROVIDER?.trim().toLowerCase();
-  if (requested === 'openai' || requested === 'deepl') return requested;
+  if (requested === 'mock') return 'mock';
+  if (requested === 'openai' || requested === 'deepl') {
+    return present(env, requested === 'openai' ? 'OPENAI_API_KEY' : 'DEEPL_API_KEY') ? requested : 'mock';
+  }
   if (present(env, 'OPENAI_API_KEY')) return 'openai';
   if (present(env, 'DEEPL_API_KEY')) return 'deepl';
   return 'mock';
@@ -128,8 +131,8 @@ function routerCheck(selectedProvider: TranslationProviderDiagnosticId | 'mock',
     status: production ? 'fail' : 'warn',
     label: 'Router provider',
     detail: production
-      ? 'No production translation provider is configured; router will fall back to mock.'
-      : 'Router currently falls back to mock translation.',
+      ? 'Production translation fails closed because no configured real provider is selected; requests return unconfigured.'
+      : 'Router uses mock translation for local and demo environments.',
   };
 }
 

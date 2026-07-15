@@ -5,6 +5,7 @@ import type { BuilderEventCalendarCanvasNode } from '@/lib/builder/canvas/types'
 import type { BuilderEvent, CalendarMonth } from '@/lib/builder/events/events-shared';
 import { groupEventsByMonth } from '@/lib/builder/events/events-shared';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { WidgetDataDisclosure } from '../_shared/WidgetDataDisclosure';
 import { getEventWidgetsCopy } from '../event-widgets-copy';
 import styles from './EventCalendar.module.css';
 
@@ -71,6 +72,7 @@ export default function EventCalendarElement({ node, mode = 'edit', locale }: Ev
 
   return (
     <section className={styles.root} data-builder-event-calendar="true">
+      {isBuilder ? <WidgetDataDisclosure locale={effectiveLocale} /> : null}
       {months.map((month) => (
         <article key={month.yearMonth} className={styles.month}>
           <h3>{monthLabel(month.yearMonth)}</h3>

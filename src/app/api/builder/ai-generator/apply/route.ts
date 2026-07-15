@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { siteSpecSchema } from '@/lib/builder/ai-generator/site-spec';
+import type { SiteSpec } from '@/lib/builder/ai-generator/site-spec';
 import {
   generateSiteDraft,
   isSupportedAiGeneratorPromptVersion,
@@ -24,6 +25,10 @@ import {
 import type { BuilderNavItem, BuilderPageMeta, BuilderSeoMetadata } from '@/lib/builder/site/types';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
 import { normalizeLocale } from '@/lib/locales';
+import {
+  isAiContentGenerationError,
+  isProviderGeneratedSiteContent,
+} from '@/lib/builder/ai-generator/content-generator';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -135,6 +140,43 @@ type SkippedSitemapPage = {
   reason: 'home_page' | 'invalid_slug' | 'reserved_slug' | 'duplicate_slug';
 };
 
+type DraftGenerationAttempt =
+  | { ok: true; draft: GeneratedSiteDraft }
+  | { ok: false; response: NextResponse };
+
+async function generateApplicableDraft(
+  spec: SiteSpec,
+  promptVersion: string,
+): Promise<DraftGenerationAttempt> {
+  let draft: GeneratedSiteDraft;
+  try {
+    draft = await generateSiteDraft(spec, { promptVersion });
+  } catch (error) {
+    if (!isAiContentGenerationError(error)) throw error;
+    return {
+      ok: false,
+      response: NextResponse.json({
+        ok: false,
+        error: error.code,
+        message: error.message,
+      }, { status: error.httpStatus }),
+    };
+  }
+  if (!isProviderGeneratedSiteContent(draft.content)) {
+    return {
+      ok: false,
+      response: NextResponse.json({
+        ok: false,
+        error: 'ai_content_local_demo_only',
+        message: 'Local demo content cannot be applied to a site.',
+        source: 'local-demo',
+        stub: true,
+      }, { status: 503 }),
+    };
+  }
+  return { ok: true, draft };
+}
+
 function collectSitemapTargets(
   draft: GeneratedSiteDraft,
   existingSlugs: Set<string>,
@@ -229,7 +271,9 @@ export async function POST(request: NextRequest) {
     }
     targets = [{ slug, title: parsed.data.title ?? parsed.data.spec.companyName }];
   } else {
-    draft = await generateSiteDraft(parsed.data.spec, { promptVersion });
+    const generation = await generateApplicableDraft(parsed.data.spec, promptVersion);
+    if (!generation.ok) return generation.response;
+    draft = generation.draft;
     const selectedSlugs = parsed.data.pageSlugs
       ? new Set(parsed.data.pageSlugs.map(sitemapSlugToDraftSlug).filter(Boolean))
       : undefined;
@@ -260,7 +304,11 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  draft ??= await generateSiteDraft(parsed.data.spec, { promptVersion });
+  if (!draft) {
+    const generation = await generateApplicableDraft(parsed.data.spec, promptVersion);
+    if (!generation.ok) return generation.response;
+    draft = generation.draft;
+  }
   let totalNodeCount = 0;
   const createdPageIds: string[] = [];
   const createdPages: Array<{ pageId: string; slug: string; title: string; nodeCount: number }> = [];

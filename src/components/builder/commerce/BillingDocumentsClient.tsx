@@ -1403,6 +1403,9 @@ export default function BillingDocumentsClient({
               <span>{document.sourceLabel}</span>
               <strong>{document.typeLabel} {document.number}</strong>
               <small>{document.ownerLabel}</small>
+              {document.status === 'emailed_stub' ? (
+                <span role="status" data-billing-demo-disclosure="email" aria-label="STUB DATA">STUB DATA · {locale === 'ko' ? '개발용 이메일 발송 기록입니다.' : locale === 'zh-hant' ? '這是開發用寄信記錄。' : 'Development email record; no live email was sent.'}</span>
+              ) : null}
             </div>
             <div className={styles.customer}>
               <strong>{document.customerLabel}</strong>

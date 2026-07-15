@@ -45,7 +45,10 @@ vi.mock('@/lib/builder/bookings/storage', () => ({
 }));
 
 vi.mock('@/lib/builder/bookings/notifications', () => ({
-  sendBookingConfirmation: vi.fn(async () => undefined),
+  sendBookingConfirmation: vi.fn(async () => ({
+    ok: true,
+    customer: { ok: true, provider: 'resend' },
+  })),
 }));
 
 vi.mock('@/lib/builder/bookings/slot-lock', () => ({
@@ -146,6 +149,10 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     vi.mocked(guardMutation).mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    vi.mocked(sendBookingConfirmation).mockResolvedValue({
+      ok: true,
+      customer: { ok: true, provider: 'resend' },
+    });
   });
 
   it('returns localized not-found errors for missing waitlist entries', async () => {
@@ -331,6 +338,10 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
       status: 'promoted',
       promotedBookingId: 'bk-promoted-route-test',
     }));
+    expect(payload.emailDelivery).toEqual({
+      ok: true,
+      customer: { ok: true },
+    });
     expect(makeBookingId).toHaveBeenCalled();
     expect(timestamped).toHaveBeenCalledWith(expect.objectContaining({ bookingId: 'bk-promoted-route-test' }));
     expect(saveBooking).toHaveBeenCalledWith(payload.booking);
@@ -345,6 +356,55 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
       source: 'waitlist-promotion',
     }));
     expect(releaseSlotLock).toHaveBeenCalled();
+  });
+
+  it('keeps a promoted waitlist booking successful and reports sanitized provider delivery failures', async () => {
+    vi.mocked(getWaitlistEntry).mockResolvedValueOnce(waitlistEntry());
+    vi.mocked(getService).mockResolvedValueOnce(service());
+    vi.mocked(getStaff).mockResolvedValueOnce(staff());
+    vi.mocked(computeAvailableSlots).mockResolvedValueOnce([availableSlot]);
+    vi.mocked(sendBookingConfirmation).mockResolvedValueOnce({
+      ok: false,
+      customer: { ok: false, provider: 'resend', reason: 'provider_error', status: 429 },
+      admin: { ok: false, provider: 'resend', reason: 'unconfigured' },
+    });
+
+    const route = await import('../route');
+    const response = await route.POST(postRequest({}, 'en'), {
+      params: { id: 'wl-route-test' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(201);
+    expect(saveBooking).toHaveBeenCalledTimes(1);
+    expect(saveWaitlistEntry).toHaveBeenCalledTimes(1);
+    expect(payload.emailDelivery).toEqual({
+      ok: false,
+      customer: { ok: false, reason: 'provider_error' },
+      admin: { ok: false, reason: 'unconfigured' },
+    });
+    expect(JSON.stringify(payload.emailDelivery)).not.toContain('429');
+    expect(JSON.stringify(payload.emailDelivery)).not.toContain('resend');
+  });
+
+  it('keeps a promoted waitlist booking successful when confirmation rendering throws', async () => {
+    vi.mocked(getWaitlistEntry).mockResolvedValueOnce(waitlistEntry());
+    vi.mocked(getService).mockResolvedValueOnce(service());
+    vi.mocked(getStaff).mockResolvedValueOnce(staff());
+    vi.mocked(computeAvailableSlots).mockResolvedValueOnce([availableSlot]);
+    vi.mocked(sendBookingConfirmation).mockRejectedValueOnce(new Error('secret client@example.com render failure'));
+
+    const route = await import('../route');
+    const response = await route.POST(postRequest({}, 'en'), {
+      params: { id: 'wl-route-test' },
+    });
+    const payload = await response.json();
+
+    expect(response.status).toBe(201);
+    expect(saveBooking).toHaveBeenCalledTimes(1);
+    expect(saveWaitlistEntry).toHaveBeenCalledTimes(1);
+    expect(payload.emailDelivery).toEqual({ ok: false, reason: 'internal_error' });
+    expect(JSON.stringify(payload)).not.toContain('secret client@example.com render failure');
   });
 
   it('persists resource-specific deposit amounts when promoting paid waitlist entries', async () => {

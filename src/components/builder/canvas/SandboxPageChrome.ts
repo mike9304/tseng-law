@@ -34,8 +34,24 @@ export interface ActivityChip {
 }
 
 export interface DraftConflictCopy {
+  heading: string;
   message: string;
-  reloadLabel: string;
+  expectedRevisionLabel: string;
+  currentRevisionLabel: string;
+  currentSavedAtLabel: string;
+  unknownValue: string;
+  recoveryLabel: string;
+  recoveryBytesLabel: string;
+  recoveryChecksumLabel: string;
+  serverLatestLabel: string;
+  serverLatestDescription: string;
+  saveLocalLabel: string;
+  saveLocalUnavailableReason: string;
+  downloadLocalLabel: string;
+  downloadPendingLabel: string;
+  serverPendingLabel: string;
+  navigationBlockedReason: string;
+  publishBlockedReason: string;
 }
 
 export interface SandboxPageFeedbackCopy {
@@ -64,24 +80,83 @@ export interface SandboxPageFeedbackCopy {
   selectionSummaryNone: string;
 }
 
+export function isBuilderAdminNavigationHref(href: string): boolean {
+  const trimmed = href.trim();
+  if (!trimmed || trimmed.startsWith('#')) return false;
+  try {
+    const pathname = new URL(trimmed, 'https://builder.local').pathname;
+    return /(?:^|\/)admin-builder(?:\/|$)/.test(pathname);
+  } catch {
+    return false;
+  }
+}
+
 export function getDraftConflictCopy(locale: Locale): DraftConflictCopy {
   if (locale === 'zh-hant') {
     return {
-      message: '衝突 - 已在其他分頁儲存。請重新整理取得最新版，或先備份變更後再重新載入。',
-      reloadLabel: '重新整理',
+      heading: '草稿版本衝突',
+      message: '伺服器已有較新的草稿。本機編輯尚未同步，已被安全保留，解決衝突前不會自動儲存或切換頁面。',
+      expectedRevisionLabel: '本機原預期版本',
+      currentRevisionLabel: '目前伺服器版本',
+      currentSavedAtLabel: '伺服器儲存時間',
+      unknownValue: '未知',
+      recoveryLabel: '本機復原副本',
+      recoveryBytesLabel: '位元組',
+      recoveryChecksumLabel: 'SHA-256',
+      serverLatestLabel: '使用伺服器最新版',
+      serverLatestDescription: '載入前會先下載目前本機草稿的精確備份。',
+      saveLocalLabel: '儲存我的版本',
+      saveLocalUnavailableReason: '尚未提供具冪等鍵的原子版本比較 API，因此為避免覆蓋他人變更，此動作目前停用。',
+      downloadLocalLabel: '下載本機備份',
+      downloadPendingLabel: '正在準備備份…',
+      serverPendingLabel: '正在保留本機草稿並載入…',
+      navigationBlockedReason: '請先解決草稿版本衝突，再切換頁面、語言或管理功能。',
+      publishBlockedReason: '草稿版本衝突尚未解決，因此無法發佈或排程發佈。',
     };
   }
 
   if (locale === 'en') {
     return {
-      message: 'Conflict - saved in another tab. Refresh to load the latest version, or back up your changes before reloading.',
-      reloadLabel: 'Refresh',
+      heading: 'Draft version conflict',
+      message: 'A newer draft exists on the server. Your unsynced local edit is preserved and autosave and navigation are stopped until you resolve the conflict.',
+      expectedRevisionLabel: 'Locally expected revision',
+      currentRevisionLabel: 'Current server revision',
+      currentSavedAtLabel: 'Server saved at',
+      unknownValue: 'Unknown',
+      recoveryLabel: 'Local recovery copy',
+      recoveryBytesLabel: 'bytes',
+      recoveryChecksumLabel: 'SHA-256',
+      serverLatestLabel: 'Use server latest',
+      serverLatestDescription: 'An exact backup of the current local draft is downloaded before the server draft is loaded.',
+      saveLocalLabel: 'Save my version',
+      saveLocalUnavailableReason: 'This action is disabled until the API supports an atomic revision comparison with an idempotency key, so another editor’s work cannot be overwritten.',
+      downloadLocalLabel: 'Download local backup',
+      downloadPendingLabel: 'Preparing backup…',
+      serverPendingLabel: 'Preserving local draft and loading…',
+      navigationBlockedReason: 'Resolve the draft version conflict before changing page, locale, or admin section.',
+      publishBlockedReason: 'Publishing and scheduled publishing are disabled until the draft version conflict is resolved.',
     };
   }
 
   return {
-    message: '충돌 - 다른 탭에서 저장됨. 새로고침해서 최신본을 가져오거나, 변경사항을 다른 곳에 백업한 뒤 다시 불러오세요.',
-    reloadLabel: '새로고침',
+    heading: '초안 버전 충돌',
+    message: '서버에 더 최신 초안이 있습니다. 동기화되지 않은 로컬 편집본은 안전하게 보존되며, 충돌을 해결하기 전까지 자동 저장과 이동이 중단됩니다.',
+    expectedRevisionLabel: '로컬 예상 리비전',
+    currentRevisionLabel: '현재 서버 리비전',
+    currentSavedAtLabel: '서버 저장 시각',
+    unknownValue: '알 수 없음',
+    recoveryLabel: '로컬 복구본',
+    recoveryBytesLabel: '바이트',
+    recoveryChecksumLabel: 'SHA-256',
+    serverLatestLabel: '서버 최신본 사용',
+    serverLatestDescription: '서버 초안을 불러오기 전에 현재 로컬 초안의 정확한 백업을 먼저 다운로드합니다.',
+    saveLocalLabel: '내 버전 저장',
+    saveLocalUnavailableReason: '다른 편집자의 변경을 덮어쓰지 않도록, 멱등 키가 포함된 원자적 리비전 비교 API가 제공될 때까지 이 동작은 비활성화됩니다.',
+    downloadLocalLabel: '로컬 백업 다운로드',
+    downloadPendingLabel: '백업 준비 중…',
+    serverPendingLabel: '로컬 초안 보존 및 불러오기 중…',
+    navigationBlockedReason: '초안 버전 충돌을 먼저 해결한 뒤 페이지·언어·관리 메뉴를 이동하세요.',
+    publishBlockedReason: '초안 버전 충돌을 해결하기 전에는 발행과 예약 발행을 사용할 수 없습니다.',
   };
 }
 
@@ -189,10 +264,10 @@ export function getPublicChromeCopy(locale: Locale) {
 
 export const conflictBannerStyle: CSSProperties = {
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
+  alignItems: 'flex-start',
+  flexDirection: 'column',
   gap: 12,
-  padding: '10px 16px',
+  padding: '14px 16px',
   borderBottom: '1px solid #fecaca',
   background: '#fef2f2',
   color: '#991b1b',
@@ -201,7 +276,6 @@ export const conflictBannerStyle: CSSProperties = {
 };
 
 export const conflictReloadButtonStyle: CSSProperties = {
-  flexShrink: 0,
   border: '1px solid #991b1b',
   borderRadius: 6,
   background: '#fff',
@@ -210,4 +284,26 @@ export const conflictReloadButtonStyle: CSSProperties = {
   fontSize: '0.78rem',
   fontWeight: 700,
   padding: '6px 10px',
+};
+
+export const conflictDisabledButtonStyle: CSSProperties = {
+  ...conflictReloadButtonStyle,
+  borderColor: '#d6a7a7',
+  color: '#9f6b6b',
+  cursor: 'not-allowed',
+  opacity: 0.72,
+};
+
+export const conflictActionsStyle: CSSProperties = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 8,
+};
+
+export const conflictDetailsStyle: CSSProperties = {
+  display: 'grid',
+  gap: 4,
+  margin: 0,
+  fontSize: '0.76rem',
+  fontWeight: 500,
 };

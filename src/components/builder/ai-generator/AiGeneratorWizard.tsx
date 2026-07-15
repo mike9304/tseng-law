@@ -1,10 +1,12 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useState, type CSSProperties, type ReactNode } from 'react';
+import { z } from 'zod';
 import {
   COLOR_PREFERENCES,
   INDUSTRIES,
   TONES,
+  siteSpecSchema,
   type ColorPreference,
   type Industry,
   type SiteSpec,
@@ -40,7 +42,202 @@ type DraftVersionMetadata = Partial<Pick<
 type Draft = DraftCore & DraftVersionMetadata;
 type DraftPreviewFrame = 'desktop' | 'mobile';
 
-interface PromptHistoryEntry {
+export type AiDraftProvenance = 'openai-verified' | 'local-demo' | 'legacy-unverified';
+
+const canonicalIsoInstantSchema = z.string().refine((value) => {
+  const date = new Date(value);
+  return !Number.isNaN(date.getTime()) && date.toISOString() === value;
+}, 'Expected a canonical ISO-8601 UTC instant');
+const calendarDateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine((value) => {
+  const date = new Date(`${value}T00:00:00.000Z`);
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
+}, 'Expected a valid calendar date');
+const draftPaletteSchema = z.object({
+  primary: z.string().trim().min(1),
+  secondary: z.string().trim().min(1),
+  accent: z.string().trim().min(1),
+  background: z.string().trim().min(1),
+}).passthrough();
+const draftSectionSchema = z.object({
+  sectionId: z.string().trim().min(1),
+  headline: z.string().trim().min(1),
+  body: z.string(),
+  ctaLabel: z.string().optional(),
+  bullets: z.array(z.string()).optional(),
+}).passthrough();
+const draftContentSchema = z.object({
+  hero: draftSectionSchema,
+  sections: z.array(draftSectionSchema),
+  metaDescription: z.string(),
+}).passthrough();
+const draftSitemapPageSchema = z.object({
+  title: z.string().trim().min(1),
+  slug: z.string(),
+  purpose: z.string(),
+  sections: z.array(z.string()),
+}).passthrough();
+const draftContentPlanItemSchema = z.object({
+  sectionId: z.string().trim().min(1),
+  title: z.string(),
+  intent: z.string(),
+}).passthrough();
+const draftVisualBriefSchema = z.object({
+  direction: z.string(),
+  imagePrompt: z.string(),
+  treatment: z.string(),
+  composition: z.string(),
+}).passthrough();
+const draftBrandBriefSchema = z.object({
+  audience: z.string(),
+  goals: z.array(z.string()),
+  keywords: z.array(z.string()),
+  constraints: z.string(),
+}).passthrough();
+const draftPlanSchema = z.object({
+  sitemap: z.array(draftSitemapPageSchema),
+  contentPlan: z.array(draftContentPlanItemSchema),
+  visualBrief: draftVisualBriefSchema,
+  brandBrief: draftBrandBriefSchema,
+}).passthrough();
+const draftBlueprintSchema = z.object({
+  industry: z.enum(INDUSTRIES),
+  sections: z.array(z.enum([
+    'hero',
+    'about',
+    'services',
+    'expertise',
+    'team',
+    'reviews',
+    'process',
+    'gallery',
+    'pricing',
+    'faq',
+    'contact',
+    'cta',
+  ])),
+  heroHeadlineHint: z.string().trim().min(1),
+  palettes: z.record(z.string(), draftPaletteSchema),
+}).passthrough();
+const promptChangelogEntrySchema = z.object({
+  version: z.string().trim().min(1),
+  label: z.string(),
+  summary: z.string(),
+  createdAt: z.string(),
+  changes: z.array(z.string()),
+}).passthrough();
+const draftDisplaySchema = z.object({
+  spec: siteSpecSchema,
+  blueprint: draftBlueprintSchema,
+  palette: draftPaletteSchema,
+  content: draftContentSchema,
+  plan: draftPlanSchema,
+  generatedAt: z.string().optional(),
+  promptVersion: z.string().optional(),
+  blueprintVersion: z.string().optional(),
+  contentVersion: z.string().optional(),
+  promptChangelog: z.array(promptChangelogEntrySchema).optional(),
+}).passthrough();
+
+const restorableDraftSchema = draftDisplaySchema.extend({
+  generatedAt: canonicalIsoInstantSchema,
+  promptVersion: z.string().trim().min(1),
+  blueprintVersion: z.string().trim().min(1),
+  contentVersion: z.string().trim().min(1),
+  promptChangelog: z.array(promptChangelogEntrySchema.extend({
+    createdAt: calendarDateSchema,
+  })),
+  content: draftContentSchema.extend({
+    source: z.literal('openai'),
+    stub: z.literal(false),
+  }),
+}).superRefine((draftValue, context) => {
+  if (draftValue.blueprint.industry !== draftValue.spec.industry) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['blueprint', 'industry'],
+      message: 'Blueprint industry must match draft spec industry',
+    });
+  }
+  if (!COLOR_PREFERENCES.every((preference) => Boolean(draftValue.blueprint.palettes[preference]))) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['blueprint', 'palettes'],
+      message: 'Draft blueprint must include every supported palette',
+    });
+  }
+  if (!draftValue.promptChangelog.some((entry) => entry.version === draftValue.promptVersion)) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['promptChangelog'],
+      message: 'Prompt changelog must contain the active prompt version',
+    });
+  }
+});
+
+function unknownField(value: unknown, key: string): unknown {
+  return typeof value === 'object' && value !== null && !Array.isArray(value)
+    ? (value as Record<string, unknown>)[key]
+    : undefined;
+}
+
+export function parseRestorableDraft(value: unknown): Draft | null {
+  const parsed = restorableDraftSchema.safeParse(value);
+  return parsed.success ? parsed.data as Draft : null;
+}
+
+export function classifyDraftProvenance(draft: Draft | null | undefined): AiDraftProvenance {
+  const content = unknownField(draft, 'content');
+  const source = unknownField(content, 'source');
+  const stub = unknownField(content, 'stub');
+  if (source === 'local-demo' || stub === true) return 'local-demo';
+  if (source === 'openai' && stub === false && parseRestorableDraft(draft)) return 'openai-verified';
+  return 'legacy-unverified';
+}
+
+export function isDraftProviderGenerated(draft: Draft | null | undefined): boolean {
+  return classifyDraftProvenance(draft) === 'openai-verified';
+}
+
+export interface DraftProvenancePolicy {
+  readonly provenance: AiDraftProvenance;
+  readonly canRestore: boolean;
+  readonly canApply: boolean;
+  readonly canSave: boolean;
+  readonly viewOnly: boolean;
+}
+
+export function draftProvenancePolicy(draft: Draft | null | undefined): DraftProvenancePolicy {
+  const provenance = classifyDraftProvenance(draft);
+  const trusted = provenance === 'openai-verified';
+  return {
+    provenance,
+    canRestore: trusted,
+    canApply: trusted,
+    canSave: trusted,
+    viewOnly: !trusted,
+  };
+}
+
+const AI_PROVENANCE_LABELS: Record<AiDraftProvenance, string> = {
+  'openai-verified': 'OpenAI 생성 결과',
+  'local-demo': '로컬 데모/미리보기 (실제 AI 출력 아님)',
+  'legacy-unverified': '과거 생성 기록 (출처 미검증)',
+};
+
+const PROVENANCE_RESTORE_BLOCKED_NOTICE =
+  '출처가 검증된 OpenAI 생성 결과만 복원할 수 있습니다. 이 기록은 미리보기/이력 용도입니다.';
+const PROVENANCE_APPLY_BLOCKED_NOTICE =
+  '검증된 OpenAI 생성 결과만 사이트 draft로 적용할 수 있습니다.';
+const PROVENANCE_SAVE_BLOCKED_NOTICE =
+  '검증된 OpenAI 생성 결과만 Saved Sections에 저장할 수 있습니다.';
+const PROVENANCE_DRAFT_UNTRUSTED_NOTICE =
+  '현재 생성안은 출처가 검증된 OpenAI 결과가 아닙니다. 미리보기만 가능하며 적용·저장할 수 없습니다.';
+
+const SERVER_RESTORE_UNTRUSTED_ERROR_CODE = 'intake_version_untrusted';
+const PROVENANCE_RESTORE_FAILED_NOTICE = '서버 버전 복원에 실패했습니다.';
+const INVALID_GENERATED_DRAFT_NOTICE = '생성 결과의 무결성을 확인할 수 없어 draft에 반영하지 않았습니다.';
+
+export interface PromptHistoryEntry {
   id: string;
   createdAt: string;
   spec: SiteSpec;
@@ -69,6 +266,9 @@ interface ServerIntakeVersionSummary {
   pageCount: number;
   sectionCount: number;
   heroHeadline: string;
+  provenance?: AiDraftProvenance;
+  restorable?: boolean;
+  provenanceWarning?: string;
 }
 
 type ServerIntakeDiffValue = string | number | readonly string[] | null;
@@ -83,13 +283,6 @@ interface ServerIntakeVersionDiff {
   isEmpty: boolean;
   specChanges: ServerIntakeDiffChange[];
   draftChanges: ServerIntakeDiffChange[];
-}
-
-interface ServerVersionsResponse {
-  ok?: boolean;
-  versions?: ServerIntakeVersionSummary[];
-  error?: string;
-  message?: string;
 }
 
 interface ServerVersionRestoreResponse {
@@ -119,6 +312,144 @@ interface ServerVersionDiffState {
   leftId: string;
   rightId: string;
   diff: ServerIntakeVersionDiff;
+}
+
+const serverIntakeVersionSummarySchema = z.object({
+  id: z.string().trim().min(1),
+  siteId: z.string().trim().min(1),
+  createdAt: z.string(),
+  createdBy: z.string().trim().min(1),
+  companyName: z.string().trim().min(1),
+  industry: z.enum(INDUSTRIES),
+  locale: z.enum(['ko', 'en', 'zh-hant']),
+  promptVersion: z.string(),
+  pageCount: z.number().int().nonnegative(),
+  sectionCount: z.number().int().nonnegative(),
+  heroHeadline: z.string(),
+  provenance: z.enum(['openai-verified', 'local-demo', 'legacy-unverified']),
+  restorable: z.boolean(),
+  provenanceWarning: z.string().optional(),
+}).passthrough().transform((summary) => {
+  const verified = summary.provenance === 'openai-verified'
+    && summary.restorable === true
+    && canonicalIsoInstantSchema.safeParse(summary.createdAt).success;
+  return {
+    ...summary,
+    provenance: verified
+      ? 'openai-verified' as const
+      : summary.provenance === 'local-demo' ? 'local-demo' as const : 'legacy-unverified' as const,
+    restorable: verified,
+  };
+});
+const serverVersionsSuccessSchema = z.object({
+  ok: z.literal(true),
+  siteId: z.string().trim().min(1),
+  versions: z.array(serverIntakeVersionSummarySchema),
+}).passthrough();
+const generatedDraftSuccessSchema = z.object({
+  ok: z.literal(true),
+  cached: z.boolean().optional(),
+  versionId: z.string().optional(),
+  versionWarning: z.string().optional(),
+  draft: restorableDraftSchema,
+}).passthrough();
+const serverVersionRecordSchema = z.object({
+  id: z.string().trim().min(1),
+  siteId: z.string().trim().min(1),
+  createdAt: canonicalIsoInstantSchema,
+  createdBy: z.string().trim().min(1),
+  promptVersion: z.string().trim().min(1),
+  spec: siteSpecSchema,
+  draft: restorableDraftSchema,
+}).passthrough().superRefine((record, context) => {
+  if (record.promptVersion !== record.draft.promptVersion) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['draft', 'promptVersion'],
+      message: 'Record and draft prompt versions must match',
+    });
+  }
+  if (JSON.stringify(record.spec) !== JSON.stringify(record.draft.spec)) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['draft', 'spec'],
+      message: 'Record and draft specs must match',
+    });
+  }
+  if (new Date(record.createdAt).getTime() < new Date(record.draft.generatedAt).getTime()) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['createdAt'],
+      message: 'Ledger timestamp cannot precede draft generation',
+    });
+  }
+});
+const serverRestoreSuccessSchema = z.object({
+  ok: z.literal(true),
+  siteId: z.string().trim().min(1),
+  version: serverVersionRecordSchema,
+  spec: siteSpecSchema,
+  draft: restorableDraftSchema,
+}).passthrough().superRefine((payload, context) => {
+  if (payload.siteId !== payload.version.siteId
+    || JSON.stringify(payload.spec) !== JSON.stringify(payload.version.spec)
+    || JSON.stringify(payload.draft) !== JSON.stringify(payload.version.draft)) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['version'],
+      message: 'Restore payload duplicates must match the server ledger record',
+    });
+  }
+});
+
+export function parseServerVersionsResponse(
+  value: unknown,
+  expectedSiteId: string,
+  expectedLocale: Locale,
+): ServerIntakeVersionSummary[] | null {
+  const parsed = serverVersionsSuccessSchema.safeParse(value);
+  if (!parsed.success || parsed.data.siteId !== expectedSiteId) return null;
+  if (parsed.data.versions.some((version) => (
+    version.siteId !== expectedSiteId || version.locale !== expectedLocale
+  ))) return null;
+  return parsed.data.versions as ServerIntakeVersionSummary[];
+}
+
+export function parseGeneratedDraftResponse(
+  value: unknown,
+  expectedSpec: SiteSpec,
+  expectedPromptVersion: string,
+): DraftResponse | null {
+  const parsed = generatedDraftSuccessSchema.safeParse(value);
+  const normalizedExpectedSpec = siteSpecSchema.safeParse(expectedSpec);
+  if (!parsed.success || !normalizedExpectedSpec.success) return null;
+  if (parsed.data.draft.promptVersion !== expectedPromptVersion
+    || JSON.stringify(parsed.data.draft.spec) !== JSON.stringify(normalizedExpectedSpec.data)) {
+    return null;
+  }
+  return parsed.data as DraftResponse;
+}
+
+export function parseServerVersionRestoreResponse(
+  value: unknown,
+  expected: ServerIntakeVersionSummary,
+): ServerVersionRestoreResponse | null {
+  const parsed = serverRestoreSuccessSchema.safeParse(value);
+  if (!parsed.success) return null;
+  if (parsed.data.version.id !== expected.id
+    || parsed.data.version.siteId !== expected.siteId
+    || parsed.data.version.promptVersion !== expected.promptVersion
+    || parsed.data.version.createdAt !== expected.createdAt) {
+    return null;
+  }
+  return parsed.data as ServerVersionRestoreResponse;
+}
+
+function responseErrorMessage(value: unknown, fallback: string): string {
+  const message = unknownField(value, 'message');
+  if (typeof message === 'string' && message.trim()) return message;
+  const error = unknownField(value, 'error');
+  return typeof error === 'string' && error.trim() ? error : fallback;
 }
 
 interface ApplyResponse {
@@ -421,15 +752,40 @@ function aiGeneratorHistoryKey(locale: Locale): string {
   return `builder-ai-generator-history:${locale}`;
 }
 
-function isPromptHistoryEntry(value: unknown): value is PromptHistoryEntry {
-  if (!value || typeof value !== 'object') return false;
-  const entry = value as Partial<PromptHistoryEntry>;
-  return typeof entry.id === 'string'
-    && typeof entry.createdAt === 'string'
-    && Boolean(entry.spec)
-    && Boolean(entry.draft?.blueprint?.heroHeadlineHint)
-    && Boolean(entry.draft?.content?.hero?.headline)
-    && Array.isArray(entry.draft?.plan?.sitemap);
+const promptHistoryEntrySchema = z.object({
+  id: z.string().min(1),
+  createdAt: z.string(),
+  spec: siteSpecSchema,
+  draft: draftDisplaySchema,
+}).passthrough();
+
+export function parsePromptHistoryEntry(value: unknown): PromptHistoryEntry | null {
+  const result = promptHistoryEntrySchema.safeParse(value);
+  if (!result.success) return null;
+  return result.data as PromptHistoryEntry;
+}
+
+export function parsePromptHistoryEntries(values: unknown[]): PromptHistoryEntry[] {
+  return values
+    .map((value) => parsePromptHistoryEntry(value))
+    .filter((entry): entry is PromptHistoryEntry => entry !== null)
+    .slice(0, 6);
+}
+
+export function promptHistoryEntryProvenancePolicy(
+  entry: PromptHistoryEntry,
+): DraftProvenancePolicy {
+  const draftPolicy = draftProvenancePolicy(entry.draft);
+  // localStorage is user-controlled and carries no server attestation. Even a
+  // structurally perfect draft with provider-looking labels remains view-only.
+  const provenance = draftPolicy.provenance === 'local-demo' ? 'local-demo' : 'legacy-unverified';
+  return {
+    provenance,
+    canRestore: false,
+    canApply: false,
+    canSave: false,
+    viewOnly: true,
+  };
 }
 
 function splitList(value: string): string[] | undefined {
@@ -1057,7 +1413,7 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
     try {
       const stored = window.localStorage.getItem(aiGeneratorHistoryKey(locale));
       const parsed = stored ? JSON.parse(stored) : [];
-      setHistory(Array.isArray(parsed) ? parsed.filter(isPromptHistoryEntry).slice(0, 6) : []);
+      setHistory(Array.isArray(parsed) ? parsePromptHistoryEntries(parsed) : []);
     } catch {
       setHistory([]);
     }
@@ -1075,15 +1431,18 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
           credentials: 'same-origin',
         },
       );
-      const payload = (await response.json().catch(() => ({}))) as ServerVersionsResponse;
-      if (!response.ok || !Array.isArray(payload.versions)) {
+      const rawPayload: unknown = await response.json().catch(() => ({}));
+      const versions = response.ok
+        ? parseServerVersionsResponse(rawPayload, siteId, locale)
+        : null;
+      if (!versions) {
         setServerVersions([]);
-        setServerVersionsError(payload.message ?? payload.error ?? '서버 생성 기록을 불러오지 못했습니다.');
+        setServerVersionsError(responseErrorMessage(rawPayload, '서버 생성 기록을 불러오지 못했습니다.'));
         return [];
       }
-      setServerVersions(payload.versions);
+      setServerVersions(versions);
       if (options.notice) setServerVersionNotice(options.notice);
-      return payload.versions;
+      return versions;
     } catch (error) {
       setServerVersions([]);
       setServerVersionsError(error instanceof Error ? error.message : '서버 생성 기록을 불러오지 못했습니다.');
@@ -1219,6 +1578,10 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
 
   async function apply() {
     if (!draft) return;
+    if (!draftProvenancePolicy(draft).canApply) {
+      setError(PROVENANCE_APPLY_BLOCKED_NOTICE);
+      return;
+    }
     const slug = draftSlug.trim().replace(/^\/+|\/+$/g, '');
     const slugError = applyScope === 'single' ? validateDraftSlug(slug) : '';
     if (slugError) {
@@ -1541,7 +1904,18 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
     });
   }
 
-  function restoreDraftEntry(entry: PromptHistoryEntry, notice: string) {
+  function restoreDraftEntry(
+    entry: PromptHistoryEntry,
+    notice: string,
+    origin: 'local-history' | 'server-verified',
+  ) {
+    const canRestore = origin === 'server-verified'
+      ? draftProvenancePolicy(entry.draft).canRestore
+      : promptHistoryEntryProvenancePolicy(entry).canRestore;
+    if (!canRestore) {
+      setHistoryNotice(PROVENANCE_RESTORE_BLOCKED_NOTICE);
+      return;
+    }
     setIndustry(entry.spec.industry);
     setCompanyName(entry.spec.companyName);
     setSlogan(entry.spec.slogan ?? '');
@@ -1593,7 +1967,11 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
   }
 
   function restoreHistory(entry: PromptHistoryEntry) {
-    restoreDraftEntry(entry, '이전 생성안을 복원했습니다.');
+    if (!promptHistoryEntryProvenancePolicy(entry).canRestore) {
+      setHistoryNotice(PROVENANCE_RESTORE_BLOCKED_NOTICE);
+      return;
+    }
+    restoreDraftEntry(entry, '이전 생성안을 복원했습니다.', 'local-history');
   }
 
   function removeHistoryEntry(entryId: string) {
@@ -1637,6 +2015,11 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
   }
 
   async function restoreServerVersion(version: ServerIntakeVersionSummary) {
+    if (version.restorable !== true || version.provenance !== 'openai-verified') {
+      setServerVersionRestoringId(null);
+      setServerVersionNotice(PROVENANCE_RESTORE_BLOCKED_NOTICE);
+      return;
+    }
     setServerVersionRestoringId(version.id);
     setServerVersionsError('');
     setServerVersionNotice('');
@@ -1648,22 +2031,30 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
           credentials: 'same-origin',
         },
       );
-      const payload = (await response.json().catch(() => ({}))) as ServerVersionRestoreResponse;
-      const restoredSpec = payload.spec ?? payload.version?.spec;
-      const restoredDraft = payload.draft ?? payload.version?.draft;
-      if (!response.ok || !restoredSpec || !restoredDraft) {
-        setServerVersionsError(payload.message ?? payload.error ?? '서버 버전 복원에 실패했습니다.');
+      const rawPayload: unknown = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        setServerVersionNotice(
+          unknownField(rawPayload, 'error') === SERVER_RESTORE_UNTRUSTED_ERROR_CODE
+            ? PROVENANCE_RESTORE_BLOCKED_NOTICE
+            : PROVENANCE_RESTORE_FAILED_NOTICE,
+        );
+        return;
+      }
+      const payload = parseServerVersionRestoreResponse(rawPayload, version);
+      if (!payload?.spec || !payload.draft || !payload.version
+        || draftProvenancePolicy(payload.draft).canRestore === false) {
+        setServerVersionNotice(PROVENANCE_RESTORE_BLOCKED_NOTICE);
         return;
       }
       restoreDraftEntry({
         id: `server-${version.id}`,
-        createdAt: payload.version?.createdAt ?? version.createdAt,
-        spec: restoredSpec,
-        draft: restoredDraft,
-      }, '서버 생성 버전을 현재 draft로 복원했습니다.');
+        createdAt: payload.version.createdAt,
+        spec: payload.spec,
+        draft: payload.draft,
+      }, '서버 생성 버전을 현재 draft로 복원했습니다.', 'server-verified');
       setServerVersionNotice(`${version.companyName} 서버 버전을 복원했습니다.`);
-    } catch (error) {
-      setServerVersionsError(error instanceof Error ? error.message : '서버 버전 복원에 실패했습니다.');
+    } catch {
+      setServerVersionNotice(PROVENANCE_RESTORE_FAILED_NOTICE);
     } finally {
       setServerVersionRestoringId(null);
     }
@@ -1699,18 +2090,24 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
     setDesignerSuggestionNotice('');
     setAppliedDesignerSuggestionId('');
     try {
+      const requestedSpec = buildSpec();
       const res = await fetch(`/api/builder/ai-generator?siteId=${encodeURIComponent(siteId)}`, {
         method: 'POST',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          spec: buildSpec(),
+          spec: requestedSpec,
           promptVersion: selectedPromptVersion,
         }),
       });
-      const payload = (await res.json().catch(() => ({}))) as DraftResponse;
-      if (!res.ok || !payload.draft) {
-        setError(payload.message ?? payload.error ?? '생성 실패');
+      const rawPayload: unknown = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(responseErrorMessage(rawPayload, '생성 실패'));
+        return;
+      }
+      const payload = parseGeneratedDraftResponse(rawPayload, requestedSpec, selectedPromptVersion);
+      if (!payload?.draft) {
+        setError(INVALID_GENERATED_DRAFT_NOTICE);
         return;
       }
       setDraft(payload.draft);
@@ -1730,18 +2127,23 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
   }
 
   async function requestDraftForPromptVersion(promptVersion: string): Promise<Draft> {
+    const requestedSpec = buildSpec();
     const res = await fetch(`/api/builder/ai-generator?siteId=${encodeURIComponent(siteId)}`, {
       method: 'POST',
       credentials: 'same-origin',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        spec: buildSpec(),
+        spec: requestedSpec,
         promptVersion,
       }),
     });
-    const payload = (await res.json().catch(() => ({}))) as DraftResponse;
-    if (!res.ok || !payload.draft) {
-      throw new Error(payload.message ?? payload.error ?? '비교 생성 실패');
+    const rawPayload: unknown = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      throw new Error(responseErrorMessage(rawPayload, '비교 생성 실패'));
+    }
+    const payload = parseGeneratedDraftResponse(rawPayload, requestedSpec, promptVersion);
+    if (!payload?.draft) {
+      throw new Error(INVALID_GENERATED_DRAFT_NOTICE);
     }
     return payload.draft;
   }
@@ -1861,6 +2263,10 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
   }
 
   async function saveGeneratedSection(snapshot: GeneratedSectionSnapshot) {
+    if (!draftProvenancePolicy(draft).canSave) {
+      setError(PROVENANCE_SAVE_BLOCKED_NOTICE);
+      return;
+    }
     setSavingSectionRootId(snapshot.rootNodeId);
     setError('');
     setSectionSaveNotice('');
@@ -2166,6 +2572,9 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
   ), [generatedDraftComparison]);
   const activePromptVersion = draft?.promptVersion ?? 'legacy-local-draft';
   const activeBlueprintVersion = draft?.blueprintVersion ?? 'unknown-blueprint';
+  const activeDraftPolicy = draftProvenancePolicy(draft);
+  const activeDraftProvenance = activeDraftPolicy.provenance;
+  const isActiveDraftTrusted = !activeDraftPolicy.viewOnly;
   const activePromptChange = draft?.promptChangelog?.find((entry) => entry.version === activePromptVersion)
     ?? draft?.promptChangelog?.[0]
     ?? null;
@@ -2337,33 +2746,52 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
           {historyNotice ? <p className={styles.noticeText}>{historyNotice}</p> : null}
           {history.length > 0 ? (
             <div className={styles.historyList}>
-              {history.map((entry) => (
-                <article key={entry.id} className={styles.historyItem}>
-                  <div className={styles.historyItemMeta}>
-                    <strong>{entry.spec.companyName}</strong>
-                    <span>{formatHistoryDate(entry.createdAt)} · {entry.spec.tone}</span>
-                    <small>{entry.draft.plan.sitemap.length} pages · {entry.draft.content.hero.headline}</small>
-                  </div>
-                  <div className={styles.historyItemActions}>
-                    <button
-                      type="button"
-                      className={styles.ghostButton}
-                      onClick={() => restoreHistory(entry)}
-                      data-ai-generator-history-restore
-                    >
-                      복원
-                    </button>
-                    <button
-                      type="button"
-                      className={styles.dangerButton}
-                      onClick={() => removeHistoryEntry(entry.id)}
-                      aria-label={`${entry.spec.companyName} 생성 기록 삭제`}
-                    >
-                      삭제
-                    </button>
-                  </div>
-                </article>
-              ))}
+              {history.map((entry) => {
+                const entryPolicy = promptHistoryEntryProvenancePolicy(entry);
+                const entryTrusted = !entryPolicy.viewOnly;
+                return (
+                  <article
+                    key={entry.id}
+                    className={styles.historyItem}
+                    data-ai-generator-history-provenance={entryPolicy.provenance}
+                    data-ai-generator-history-untrusted={entryTrusted ? 'false' : 'true'}
+                  >
+                    <div className={styles.historyItemMeta}>
+                      <strong>{entry.spec.companyName}</strong>
+                      <span>{formatHistoryDate(entry.createdAt)} · {entry.spec.tone}</span>
+                      <small>{entry.draft.plan.sitemap.length} pages · {entry.draft.content.hero.headline}</small>
+                    </div>
+                    {entryTrusted ? null : (
+                      <p
+                        className={styles.noticeText}
+                        data-ai-generator-history-provenance-warning={entry.id}
+                      >
+                        {AI_PROVENANCE_LABELS[entryPolicy.provenance]} · 미리보기/이력 전용
+                      </p>
+                    )}
+                    <div className={styles.historyItemActions}>
+                      <button
+                        type="button"
+                        className={styles.ghostButton}
+                        onClick={() => restoreHistory(entry)}
+                        disabled={!entryPolicy.canRestore}
+                        data-ai-generator-history-restore
+                        data-ai-generator-history-restore-disabled={entryTrusted ? 'false' : 'true'}
+                      >
+                        복원
+                      </button>
+                      <button
+                        type="button"
+                        className={styles.dangerButton}
+                        onClick={() => removeHistoryEntry(entry.id)}
+                        aria-label={`${entry.spec.companyName} 생성 기록 삭제`}
+                      >
+                        삭제
+                      </button>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           ) : (
             <p className={styles.historyEmpty}>생성하면 최근 6개 프롬프트와 드래프트가 여기에 저장됩니다.</p>
@@ -2391,8 +2819,16 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
             <div className={styles.historyList}>
               {serverVersions.map((version, index) => {
                 const previous = serverVersions[index + 1];
+                const versionProvenance: AiDraftProvenance = version.provenance ?? 'legacy-unverified';
+                const versionRestorable = version.restorable === true && version.provenance === 'openai-verified';
                 return (
-                  <article key={version.id} className={styles.historyItem} data-ai-generator-server-version-id={version.id}>
+                  <article
+                    key={version.id}
+                    className={styles.historyItem}
+                    data-ai-generator-server-version-id={version.id}
+                    data-ai-generator-server-version-provenance={versionProvenance}
+                    data-ai-generator-server-version-restorable={versionRestorable ? 'true' : 'false'}
+                  >
                     <div className={styles.historyItemMeta}>
                       <strong>{version.companyName}</strong>
                       <span>{formatHistoryDate(version.createdAt)} · {version.createdBy}</span>
@@ -2402,6 +2838,14 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
                       <span>{version.promptVersion}</span>
                       <span>{version.sectionCount + 1} sections</span>
                     </div>
+                    {versionRestorable ? null : (
+                      <p
+                        className={styles.noticeText}
+                        data-ai-generator-server-version-provenance-warning={version.id}
+                      >
+                        {AI_PROVENANCE_LABELS[versionProvenance]} · 미리보기/이력 전용
+                      </p>
+                    )}
                     <div className={styles.historyItemActions}>
                       <button
                         type="button"
@@ -2416,8 +2860,9 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
                         type="button"
                         className={styles.ghostButton}
                         onClick={() => void restoreServerVersion(version)}
-                        disabled={serverVersionRestoringId === version.id}
+                        disabled={!versionRestorable || serverVersionRestoringId === version.id}
                         data-ai-generator-server-version-restore={version.id}
+                        data-ai-generator-server-version-restore-disabled={versionRestorable ? 'false' : 'true'}
                       >
                         {serverVersionRestoringId === version.id ? '복원 중' : '복원'}
                       </button>
@@ -2942,12 +3387,24 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
 
         {step === 6 && draft ? (
           <div className={styles.resultGrid}>
-            <section className={styles.previewPanel}>
+            <section
+              className={styles.previewPanel}
+              data-ai-generator-draft-provenance={activeDraftProvenance}
+              data-ai-generator-draft-trusted={isActiveDraftTrusted ? 'true' : 'false'}
+            >
               <div className={styles.panelHead}>
                 <span className={styles.eyebrow}>Draft</span>
                 <h2>{draft.content.hero.headline}</h2>
                 <p>{draft.content.hero.body}</p>
               </div>
+              {isActiveDraftTrusted ? null : (
+                <p
+                  className={styles.noticeText}
+                  data-ai-generator-draft-provenance-warning
+                >
+                  {PROVENANCE_DRAFT_UNTRUSTED_NOTICE}
+                </p>
+              )}
               <div className={styles.swatchRow}>
                 {(['primary', 'secondary', 'accent', 'background'] as const).map((key) => (
                   <span key={key}>
@@ -3643,10 +4100,11 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
                   <button
                     type="button"
                     className={styles.primaryButton}
-                    disabled={applying || Boolean(activeDraftSlugError) || (applyScope === 'sitemap' && selectedSitemapCount === 0)}
+                    disabled={applying || !activeDraftPolicy.canApply || Boolean(activeDraftSlugError) || (applyScope === 'sitemap' && selectedSitemapCount === 0)}
                     onClick={apply}
                     data-ai-generator-create-draft
                     data-ai-generator-create-selected-drafts
+                    data-ai-generator-create-draft-disabled-untrusted={isActiveDraftTrusted ? 'false' : 'true'}
                   >
                     {applying
                       ? '생성 중...'
@@ -4043,9 +4501,10 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
                         <button
                           type="button"
                           className={styles.secondaryButton}
-                          disabled={saving || Boolean(savedSectionId)}
+                          disabled={saving || Boolean(savedSectionId) || !activeDraftPolicy.canSave}
                           onClick={() => { void saveGeneratedSection(snapshot); }}
                           data-ai-generator-save-section
+                          data-ai-generator-save-section-disabled-untrusted={isActiveDraftTrusted ? 'false' : 'true'}
                         >
                           {savedSectionId ? '저장됨' : saving ? '저장 중...' : 'Saved Sections에 저장'}
                         </button>

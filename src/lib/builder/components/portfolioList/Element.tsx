@@ -5,6 +5,7 @@ import type { BuilderPortfolioListCanvasNode } from '@/lib/builder/canvas/types'
 import type { PortfolioProject } from '@/lib/builder/portfolio/portfolio-shared';
 import { DEFAULT_PORTFOLIO_CATEGORIES, categoryLabel } from '@/lib/builder/portfolio/portfolio-shared';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { WidgetDataDisclosure } from '../_shared/WidgetDataDisclosure';
 import { getPortfolioListCopy } from './portfolio-list-copy';
 import styles from './PortfolioList.module.css';
 
@@ -88,6 +89,7 @@ export default function PortfolioListElement({ node, mode = 'edit', locale }: Po
       data-builder-portfolio-layout={c.layout}
       style={rootStyle}
     >
+      {isBuilder ? <WidgetDataDisclosure locale={effectiveLocale} /> : null}
       {c.showCategoryFilter ? (
         <div className={styles.toolbar} aria-label={copy.categoryFilterLabel}>
           <button

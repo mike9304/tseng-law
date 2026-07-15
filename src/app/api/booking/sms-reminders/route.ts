@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { isCronAuthorized } from '@/lib/builder/security/cron-auth';
-import { listBookings, saveBooking, getService } from '@/lib/builder/bookings/storage';
+import {
+  appendBookingReminderMarker,
+  getService,
+  listBookings,
+} from '@/lib/builder/bookings/storage';
 import { sendSms } from '@/lib/builder/bookings/sms-client';
 import type { Booking, BookingReminderType } from '@/lib/builder/bookings/types';
 import { reminderWindowsForService } from '@/lib/builder/bookings/reminders';
@@ -14,8 +18,8 @@ export const dynamic = 'force-dynamic';
  * Designed for a cron schedule (e.g. every 15 minutes). Scans confirmed
  * bookings whose `startAt` falls in the next 24h / 1h window, and sends
  * a Twilio SMS if a matching reminder has not yet been recorded. Skips
- * bookings without a phone, cancelled bookings, or when Twilio is not
- * configured (degrades silently).
+ * bookings without a phone or cancelled bookings. Delivery and persistence
+ * failures are reported truthfully to the cron caller.
  *
  * Auth: requires `CRON_SECRET` matching the `x-cron-secret` header (or
  * Vercel Cron's `authorization: Bearer ${CRON_SECRET}`). Returns a JSON
@@ -43,8 +47,13 @@ function buildBody(booking: Booking, hoursAhead: number, serviceName?: string): 
 async function dispatch(): Promise<{
   scanned: number;
   sent: number;
+  failed: number;
   skipped: number;
-  errors: Array<{ bookingId: string; reason: string }>;
+  errors: Array<{
+    bookingId: string;
+    type: BookingReminderType | 'metadata';
+    reason: 'unconfigured' | 'provider_error' | 'internal_error' | 'marker_persist_failed_after_delivery';
+  }>;
 }> {
   const now = Date.now();
   const horizon = now + 25 * 60 * 60 * 1000;
@@ -54,8 +63,13 @@ async function dispatch(): Promise<{
   });
 
   let sent = 0;
+  let failed = 0;
   let skipped = 0;
-  const errors: Array<{ bookingId: string; reason: string }> = [];
+  const errors: Array<{
+    bookingId: string;
+    type: BookingReminderType | 'metadata';
+    reason: 'unconfigured' | 'provider_error' | 'internal_error' | 'marker_persist_failed_after_delivery';
+  }> = [];
 
   for (const booking of bookings) {
     if (booking.status !== 'confirmed') {
@@ -72,44 +86,106 @@ async function dispatch(): Promise<{
       continue;
     }
     const minutesToStart = (startMs - now) / 60000;
-    const service = await getService(booking.serviceId);
-    const windows = reminderWindowsForService(service, 'sms');
+    let service: Awaited<ReturnType<typeof getService>>;
+    let windows: ReturnType<typeof reminderWindowsForService>;
+    try {
+      service = await getService(booking.serviceId);
+      windows = reminderWindowsForService(service, 'sms');
+    } catch {
+      failed += 1;
+      errors.push({
+        bookingId: booking.bookingId,
+        type: 'metadata',
+        reason: 'internal_error',
+      });
+      continue;
+    }
     const serviceName = service?.name?.ko || service?.name?.en;
+    let currentBooking = booking;
 
     for (const win of windows) {
-      if (alreadySent(booking, win.type)) continue;
+      const phone = currentBooking.customer.phone;
+      if (!phone) {
+        skipped += 1;
+        break;
+      }
+      if (alreadySent(currentBooking, win.type)) continue;
       const targetMinutes = win.hoursAhead * 60;
       const delta = Math.abs(minutesToStart - targetMinutes);
       if (delta > win.toleranceMinutes) continue;
 
-      const sms = await sendSms({
-        toE164: booking.customer.phone,
-        body: buildBody(booking, win.hoursAhead, serviceName),
-      });
-      if (sms.ok) {
-        await saveBooking({
-          ...booking,
-          reminders: [...booking.reminders, { sentAt: new Date().toISOString(), type: win.type }],
-          updatedAt: new Date().toISOString(),
+      try {
+        const sms = await sendSms({
+          toE164: phone,
+          body: buildBody(currentBooking, win.hoursAhead, serviceName),
         });
+        if (!sms.ok) {
+          failed += 1;
+          errors.push({
+            bookingId: currentBooking.bookingId,
+            type: win.type,
+            reason: sms.reason === 'unconfigured' ? 'unconfigured' : 'provider_error',
+          });
+          continue;
+        }
+
+        try {
+          const markerResult = await appendBookingReminderMarker(currentBooking.bookingId, {
+            sentAt: new Date().toISOString(),
+            type: win.type,
+          });
+          if (!markerResult.ok) throw new Error('booking_not_found');
+          currentBooking = markerResult.booking;
+        } catch {
+          failed += 1;
+          errors.push({
+            bookingId: currentBooking.bookingId,
+            type: win.type,
+            reason: 'marker_persist_failed_after_delivery',
+          });
+          continue;
+        }
         sent += 1;
-      } else if (sms.reason === 'unconfigured') {
-        return { scanned: bookings.length, sent, skipped: skipped + 1, errors: [{ bookingId: booking.bookingId, reason: 'twilio unconfigured (aborting)' }] };
-      } else {
-        errors.push({ bookingId: booking.bookingId, reason: `${sms.reason}: ${sms.details ?? ''}` });
+      } catch {
+        failed += 1;
+        errors.push({
+          bookingId: currentBooking.bookingId,
+          type: win.type,
+          reason: 'internal_error',
+        });
       }
     }
   }
 
-  return { scanned: bookings.length, sent, skipped, errors };
+  return { scanned: bookings.length, sent, failed, skipped, errors };
 }
 
 export async function POST(request: NextRequest) {
   if (!authorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
-  const result = await dispatch();
-  return NextResponse.json({ ok: true, ...result });
+  try {
+    const result = await dispatch();
+    if (result.errors.length === 0) {
+      return NextResponse.json({ ok: true, ...result });
+    }
+
+    const hasInternalFailure = result.errors.some((error) => (
+      error.reason === 'internal_error' || error.reason === 'marker_persist_failed_after_delivery'
+    ));
+    const hasProviderFailure = result.errors.some((error) => error.reason === 'provider_error');
+    const status = hasInternalFailure ? 500 : hasProviderFailure ? 502 : 503;
+    return NextResponse.json({ ok: false, ...result }, { status });
+  } catch {
+    return NextResponse.json({
+      ok: false,
+      scanned: 0,
+      sent: 0,
+      failed: 1,
+      skipped: 0,
+      errors: [{ bookingId: 'dispatch', type: 'metadata', reason: 'internal_error' }],
+    }, { status: 500 });
+  }
 }
 
 export async function GET(request: NextRequest) {

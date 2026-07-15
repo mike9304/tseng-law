@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import type { BuilderCanvasNode } from '../types';
 import {
+  CANONICAL_DECOMPOSED_HOME_FLOW_SECTION_IDS,
   compareTopLevelStacking,
+  computeEffectiveViewportStageHeight,
   computeNewZIndexOrderForFlowSiblings,
   computeFlowSiblingMetrics,
   computeReorderedFlowSiblingRects,
@@ -10,6 +12,7 @@ import {
   computeTopLevelFlowSectionMetricsFromIndex,
   getFlowSiblingInsertionIndex,
   getFlowSiblingOriginalIndex,
+  isCanonicalDecomposedHomeFlowStack,
 } from '../flow';
 import { buildChildrenMap } from '../tree';
 
@@ -32,6 +35,30 @@ function node(overrides: TestNodeOverrides): BuilderCanvasNode {
 
 function nodesById(nodes: BuilderCanvasNode[]): Map<string, BuilderCanvasNode> {
   return new Map(nodes.map((item) => [item.id, item]));
+}
+
+function canonicalDecomposedHomeStack(): BuilderCanvasNode[] {
+  const sections = CANONICAL_DECOMPOSED_HOME_FLOW_SECTION_IDS.map((id, index) => node({
+    id,
+    kind: 'container',
+    content: { as: 'section' },
+    rect: { x: 0, y: index * 140, width: 1280, height: 100 },
+    responsive: {
+      tablet: { rect: { y: index * 110, height: 80 } },
+      mobile: { rect: { y: index * 90, height: 60 } },
+    },
+    zIndex: index,
+  }));
+  sections.push(node({
+    id: 'home-hero-overflowing-copy',
+    parentId: 'home-hero-root',
+    rect: { x: 0, y: 90, width: 300, height: 30 },
+    responsive: {
+      tablet: { rect: { y: 70, height: 20 } },
+      mobile: { rect: { y: 55, height: 15 } },
+    },
+  }));
+  return sections;
 }
 
 describe('builder canvas flow helpers', () => {
@@ -130,6 +157,32 @@ describe('builder canvas flow helpers', () => {
     ]);
 
     expect(metrics.get('home-hero-root')?.minHeight).toBe(820);
+  });
+
+  it('does not let the responsive hero search overlay inflate the home flow stack', () => {
+    const hero = node({
+      id: 'home-hero-root',
+      kind: 'container',
+      content: { as: 'section' },
+      rect: { x: 0, y: 0, width: 1280, height: 820 },
+      responsive: {
+        tablet: { rect: { x: 16, y: 0, width: 736, height: 680 } },
+        mobile: { rect: { x: 16, y: 0, width: 343, height: 680 } },
+      },
+    });
+    const searchWrapper = node({
+      id: 'home-hero-search-wrapper',
+      parentId: 'home-hero-root',
+      kind: 'container',
+      rect: { x: 51, y: 618, width: 760, height: 62 },
+      responsive: {
+        tablet: { rect: { x: 30, y: 649, width: 709, height: 62 } },
+        mobile: { rect: { x: 30, y: 649, width: 316, height: 62 } },
+      },
+    });
+
+    expect(computeTopLevelFlowSectionMetrics([hero, searchWrapper], 'tablet').get(hero.id)?.minHeight).toBe(680);
+    expect(computeTopLevelFlowSectionMetrics([hero, searchWrapper], 'mobile').get(hero.id)?.minHeight).toBe(680);
   });
 
   it('does not let the mobile-hidden home hero scroll arrow inflate the hero section height', () => {
@@ -232,6 +285,175 @@ describe('builder canvas flow helpers', () => {
 
     expect(indexedMetrics).toEqual(computeTopLevelFlowSectionMetrics(nodes));
     expect(indexedMetrics.get('section-a')?.minHeight).toBe(466);
+  });
+
+  it('renders the intact nine-section decomposed home as one contiguous canonical stack', () => {
+    const nodes = canonicalDecomposedHomeStack();
+
+    for (const viewport of ['desktop', 'tablet', 'mobile'] as const) {
+      const metrics = computeTopLevelFlowSectionMetrics(nodes, viewport);
+
+      expect(isCanonicalDecomposedHomeFlowStack(nodes, viewport)).toBe(true);
+      expect([...metrics.keys()]).toEqual(CANONICAL_DECOMPOSED_HOME_FLOW_SECTION_IDS);
+      expect([...metrics.values()].map((metric) => metric.marginTop)).toEqual(Array(9).fill(0));
+    }
+
+    expect(computeTopLevelFlowSectionMetrics(nodes).get('home-hero-root')?.minHeight).toBe(120);
+    expect(computeTopLevelFlowSectionMetrics(nodes, 'tablet').get('home-hero-root')?.minHeight).toBe(90);
+    expect(computeTopLevelFlowSectionMetrics(nodes, 'mobile').get('home-hero-root')?.minHeight).toBe(70);
+  });
+
+  it('derives the canonical home stage per viewport and includes absolute non-flow content', () => {
+    const nodes = canonicalDecomposedHomeStack();
+    nodes.push(
+      node({
+        id: 'floating-root',
+        kind: 'container',
+        rect: { x: 0, y: 930, width: 100, height: 10 },
+        responsive: {
+          tablet: { rect: { y: 740, height: 10 } },
+          mobile: { rect: { y: 560, height: 10 } },
+        },
+      }),
+      node({
+        id: 'floating-child',
+        parentId: 'floating-root',
+        rect: { x: 0, y: 30, width: 100, height: 20 },
+        responsive: {
+          tablet: { rect: { y: 15, height: 15 } },
+          mobile: { rect: { y: 10, height: 10 } },
+        },
+      }),
+    );
+
+    const height = (viewport: 'desktop' | 'tablet' | 'mobile') => (
+      computeEffectiveViewportStageHeight({
+        fallbackStageHeight: 9927,
+        nodes,
+        viewport,
+      })
+    );
+
+    expect(height('desktop')).toBe(980);
+    expect(height('tablet')).toBe(770);
+    expect(height('mobile')).toBe(580);
+  });
+
+  it('does not reserve canonical home height for descendants hidden at the active viewport', () => {
+    const nodes = canonicalDecomposedHomeStack();
+    nodes.push(node({
+      id: 'home-contact-responsive-hidden-overflow',
+      parentId: 'home-contact-root',
+      rect: { x: 0, y: 900, width: 300, height: 100 },
+      responsive: {
+        tablet: { hidden: true },
+      },
+    }));
+
+    expect(computeTopLevelFlowSectionMetrics(nodes, 'tablet').get('home-contact-root')?.minHeight).toBe(80);
+    expect(computeTopLevelFlowSectionMetrics(nodes, 'mobile').get('home-contact-root')?.minHeight).toBe(60);
+    expect(computeEffectiveViewportStageHeight({
+      fallbackStageHeight: 9927,
+      nodes,
+      viewport: 'mobile',
+    })).toBe(550);
+  });
+
+  it('keeps authored stage height and generic gaps for customized or reordered flow pages', () => {
+    const withExtraFlowSection = canonicalDecomposedHomeStack();
+    withExtraFlowSection.push(node({
+      id: 'custom-flow-section',
+      kind: 'container',
+      content: { as: 'section' },
+      rect: { x: 0, y: 1300, width: 1280, height: 100 },
+    }));
+    const withResponsiveHiddenExtraFlowSection = canonicalDecomposedHomeStack();
+    withResponsiveHiddenExtraFlowSection.push(node({
+      id: 'mobile-hidden-custom-flow-section',
+      kind: 'container',
+      content: { as: 'section' },
+      rect: { x: 0, y: 1300, width: 1280, height: 100 },
+      responsive: { mobile: { hidden: true } },
+    }));
+    const withBaseHiddenExtraFlowSection = canonicalDecomposedHomeStack();
+    withBaseHiddenExtraFlowSection.push(node({
+      id: 'base-hidden-custom-flow-section',
+      kind: 'container',
+      content: { as: 'section' },
+      rect: { x: 0, y: 1300, width: 1280, height: 100 },
+      visible: false,
+    }));
+    const withMissingCanonicalRoot = canonicalDecomposedHomeStack()
+      .filter((entry) => entry.id !== 'home-offices-root');
+    const withHiddenCanonicalRoot = canonicalDecomposedHomeStack().map((entry) => (
+      entry.id === 'home-offices-root'
+        ? {
+            ...entry,
+            responsive: {
+              ...entry.responsive,
+              mobile: { ...entry.responsive?.mobile, hidden: true },
+            },
+          } as BuilderCanvasNode
+        : entry
+    ));
+    const reordered = canonicalDecomposedHomeStack().map((entry) => {
+      if (entry.id === 'home-insights-root') {
+        return { ...entry, rect: { ...entry.rect, y: 280 } } as BuilderCanvasNode;
+      }
+      if (entry.id === 'home-services-root') {
+        return { ...entry, rect: { ...entry.rect, y: 140 } } as BuilderCanvasNode;
+      }
+      return entry;
+    });
+
+    expect(isCanonicalDecomposedHomeFlowStack(withExtraFlowSection)).toBe(false);
+    expect(computeTopLevelFlowSectionMetrics(withExtraFlowSection).get('home-insights-root')?.marginTop).toBe(20);
+    expect(computeEffectiveViewportStageHeight({
+      fallbackStageHeight: 9927,
+      nodes: withExtraFlowSection,
+      viewport: 'desktop',
+    })).toBe(9927);
+
+    expect(isCanonicalDecomposedHomeFlowStack(withResponsiveHiddenExtraFlowSection, 'mobile')).toBe(false);
+    expect(computeEffectiveViewportStageHeight({
+      fallbackStageHeight: 9927,
+      nodes: withResponsiveHiddenExtraFlowSection,
+      viewport: 'mobile',
+    })).toBe(9927);
+
+    const baseVisibleNodes = withBaseHiddenExtraFlowSection.filter((entry) => entry.visible);
+    const indexedBaseHiddenMetrics = computeTopLevelFlowSectionMetricsFromIndex({
+      childrenMap: buildChildrenMap(withBaseHiddenExtraFlowSection),
+      nodes: baseVisibleNodes,
+      nodesById: nodesById(withBaseHiddenExtraFlowSection),
+    });
+    expect(indexedBaseHiddenMetrics.get('home-insights-root')?.marginTop).toBe(20);
+    expect(computeEffectiveViewportStageHeight({
+      fallbackStageHeight: 9927,
+      nodes: withBaseHiddenExtraFlowSection,
+      viewport: 'desktop',
+    })).toBe(9927);
+
+    expect(isCanonicalDecomposedHomeFlowStack(withMissingCanonicalRoot)).toBe(false);
+    expect(isCanonicalDecomposedHomeFlowStack(withHiddenCanonicalRoot, 'mobile')).toBe(false);
+    expect(computeEffectiveViewportStageHeight({
+      fallbackStageHeight: 9927,
+      nodes: withHiddenCanonicalRoot,
+      viewport: 'mobile',
+    })).toBe(9927);
+
+    expect(isCanonicalDecomposedHomeFlowStack(reordered)).toBe(false);
+    expect(isCanonicalDecomposedHomeFlowStack(reordered, 'mobile')).toBe(false);
+    expect(computeEffectiveViewportStageHeight({
+      fallbackStageHeight: 9927,
+      nodes: reordered,
+      viewport: 'desktop',
+    })).toBe(9927);
+    expect(computeEffectiveViewportStageHeight({
+      fallbackStageHeight: 9927,
+      nodes: reordered,
+      viewport: 'mobile',
+    })).toBe(9927);
   });
 
   it('uses responsive viewport rects when reordering children inside flex containers', () => {

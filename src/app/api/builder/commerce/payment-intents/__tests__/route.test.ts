@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
   captureCommercePaymentIntent,
@@ -57,6 +57,10 @@ describe('builder commerce payment intents API', () => {
     captureCommercePaymentIntentMock.mockReturnValue({ ...intent, status: 'captured' } as never);
     createCommercePaymentIntentMock.mockReturnValue(intent as never);
     paymentIntentToOrderStatusMock.mockReturnValue('authorized_stub' as never);
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
   });
 
   it('returns localized validation errors using the body locale when available', async () => {
@@ -174,5 +178,39 @@ describe('builder commerce payment intents API', () => {
       paymentStatus: 'paid',
     });
     expect(captureCommercePaymentIntentMock).toHaveBeenCalledWith(intent, { simulateFailure: false });
+  });
+
+  it('fails closed for sandbox create and capture in production before provider execution', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+
+    const createResponse = await POST(postRequest('', {
+      provider: 'sandbox-card',
+      locale: 'zh-hant',
+      currency: 'TWD',
+      amountCents: 12345,
+    }));
+    expect(createResponse.status).toBe(503);
+    await expect(createResponse.json()).resolves.toEqual({
+      ok: false,
+      error: '所選付款服務提供者尚未在正式環境中設定。',
+      errorCode: 'payment_provider_not_configured',
+    });
+
+    const captureResponse = await POST(postRequest('', {
+      action: 'capture',
+      locale: 'en',
+      provider: 'manual-invoice',
+      paymentIntent: intent,
+    }));
+    expect(captureResponse.status).toBe(503);
+    await expect(captureResponse.json()).resolves.toEqual({
+      ok: false,
+      error: 'The selected payment provider is not configured for production.',
+      errorCode: 'payment_provider_not_configured',
+    });
+
+    expect(createCommercePaymentIntentMock).not.toHaveBeenCalled();
+    expect(captureCommercePaymentIntentMock).not.toHaveBeenCalled();
+    expect(paymentIntentToOrderStatusMock).not.toHaveBeenCalled();
   });
 });

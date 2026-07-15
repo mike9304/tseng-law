@@ -3,6 +3,11 @@ import { createDefaultCanvasNodeStyle } from './types';
 import { responsivize } from '@/lib/builder/templates/_shared/responsivize';
 import type { Locale } from '@/lib/locales';
 import {
+  PUBLISHED_HOME_COMPOSITE_HEIGHTS_BY_LOCALE,
+  PUBLISHED_HOME_COMPOSITE_STAGE_HEIGHT_BY_LOCALE,
+  type HomeCompositeSectionHeights,
+} from './home-composite-parity';
+import {
   createCaseResultsDecomposedNodes,
   CASE_RESULTS_ROOT_HEIGHT,
 } from './decompose-case-results';
@@ -52,8 +57,9 @@ import {
 // The underlying live React sections own their responsive layout; auto-fit
 // overrides inserted artificial mobile gaps and made the public home drift from
 // the real site.
-export const SEED_VERSION = 'home-seed-v12';
-export const PREVIOUS_SEED_VERSIONS = new Set(['home-seed-v6', 'home-seed-v7', 'home-seed-v8', 'home-seed-v9', 'home-seed-v10', 'home-seed-v11']);
+// v13: refresh the KO composite floors/stage from production measurements.
+export const SEED_VERSION = 'home-seed-v13';
+export const PREVIOUS_SEED_VERSIONS = new Set(['home-seed-v6', 'home-seed-v7', 'home-seed-v8', 'home-seed-v9', 'home-seed-v10', 'home-seed-v11', 'home-seed-v12']);
 
 const STAGE_WIDTH = 1280;
 
@@ -94,50 +100,19 @@ const decomposedHomeSections: HomeSectionSpec[] = [
 // via scripts/measure-home-sections.mjs. Used as the composite flow floor so the
 // editor canvas stacks sections exactly like the published page. Re-run that
 // script after content/layout changes and update these values.
-const MEASURED_SECTION_HEIGHTS = {
-  hero: 788,
-  insights: 1277,
-  services: 1278,
-  attorney: 926,
-  caseResults: 800,
-  stats: 621,
-  faq: 1333,
-  offices: 919,
-  contact: 516,
-} as const;
+type CompositeSectionKey = keyof typeof PUBLISHED_HOME_COMPOSITE_HEIGHTS_BY_LOCALE.en;
+type CompositeSectionHeights = HomeCompositeSectionHeights;
 
-type CompositeSectionKey = keyof typeof MEASURED_SECTION_HEIGHTS;
-type CompositeSectionHeights = Record<CompositeSectionKey, number>;
+const MEASURED_SECTION_HEIGHTS_BY_LOCALE = PUBLISHED_HOME_COMPOSITE_HEIGHTS_BY_LOCALE;
 
-const KO_MEASURED_SECTION_HEIGHTS = {
-  hero: 788,
-  insights: 1277,
+// The granular edit target retains its separately verified node geometry.
+// Composite floors above follow the public React sections; decomposed roots
+// also need room for their absolute-positioned editor children.
+const KO_DECOMPOSED_SECTION_HEIGHTS = {
+  ...MEASURED_SECTION_HEIGHTS_BY_LOCALE.ko,
   services: 1279,
-  attorney: 926,
-  caseResults: 800,
-  stats: 621,
-  faq: 1333,
   offices: 919,
-  contact: 532,
 } satisfies CompositeSectionHeights;
-
-const MEASURED_SECTION_HEIGHTS_BY_LOCALE = {
-  ko: KO_MEASURED_SECTION_HEIGHTS,
-  en: MEASURED_SECTION_HEIGHTS,
-  'zh-hant': {
-    hero: 774,
-    insights: 1247,
-    services: 1279,
-    attorney: 926,
-    caseResults: 843,
-    stats: 622,
-    faq: 1333,
-    offices: 919,
-    contact: 543,
-  },
-} satisfies Record<Locale, CompositeSectionHeights>;
-
-const KO_DECOMPOSED_SECTION_HEIGHTS = MEASURED_SECTION_HEIGHTS_BY_LOCALE.ko;
 const ZH_HANT_DECOMPOSED_SECTION_HEIGHTS = MEASURED_SECTION_HEIGHTS_BY_LOCALE['zh-hant'];
 const ZH_HANT_HERO_OVERLAY_BACKGROUND = 'radial-gradient(circle at 14% 28%, rgba(159, 135, 82, 0.18), transparent 36%), linear-gradient(180deg, transparent 55%, rgba(6, 16, 11, 0.55) 100%), linear-gradient(118deg, rgba(6, 16, 11, 0.82), rgba(6, 16, 11, 0.58) 42%, rgba(6, 16, 11, 0.22) 78%, rgba(6, 16, 11, 0.12))';
 const ROOT_NODE_IDS = {
@@ -813,11 +788,12 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
     case 'caseResults':
       if (input.locale === 'ko') {
         setNodeRect(nodesById, 'home-case-results-content', { y: 219, height: input.height - 219 });
-        setNodeRect(nodesById, 'home-case-results-title', { y: 39, height: 130 });
-        setNodeRect(nodesById, 'home-case-results-divider', { y: 180 });
-        setNodeRect(nodesById, 'home-case-results-desc', { y: 200 });
-        setNodeRect(nodesById, 'home-case-results-summary', { y: 290 });
-        setNodeRect(nodesById, 'home-case-results-cta', { y: 333 });
+        setNodeRect(nodesById, 'home-case-results-label', { x: 78 });
+        setNodeRect(nodesById, 'home-case-results-title', { x: 78, y: 39, height: 130 });
+        setNodeRect(nodesById, 'home-case-results-divider', { x: 78, y: 172, width: 40, height: 32 });
+        setNodeRect(nodesById, 'home-case-results-desc', { x: 78, y: 210 });
+        setNodeRect(nodesById, 'home-case-results-summary', { x: 78, y: 280 });
+        setNodeRect(nodesById, 'home-case-results-cta', { x: 78, y: 333 });
       } else {
         setNodeRect(nodesById, 'home-case-results-content', { height: input.height });
         shiftDirectChildrenY(input.nodes, 'home-case-results-content', 122);
@@ -891,15 +867,19 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
       break;
     case 'stats':
       if (input.locale === 'ko') {
-        setNodeRect(nodesById, 'home-stats-container', { x: 51, y: 151, width: 1178, height: input.height - 151 });
+        setNodeRect(nodesById, 'home-stats-container', { x: 51, y: 142, width: 1178, height: input.height - 142 });
+        setNodeRect(nodesById, 'home-stats-title', { y: 49, width: 1178, height: 56 });
+        setNodeRect(nodesById, 'home-stats-description', { y: 139, width: 720 });
+        setNodeRect(nodesById, 'home-stats-grid', { y: 200, width: 1178 });
       }
       break;
     case 'contact':
       if (input.locale === 'ko') {
         setNodeRect(nodesById, 'home-contact-container', { x: 51, y: 151, width: 1178, height: input.height - 151 });
-        setNodeRect(nodesById, 'home-contact-title', { y: 39 });
-        setNodeRect(nodesById, 'home-contact-description', { y: 111 });
-        setNodeRect(nodesById, 'home-contact-actions', { y: 193 });
+        setNodeRect(nodesById, 'home-contact-copy', { width: 1178 });
+        setNodeRect(nodesById, 'home-contact-title', { y: 39, width: 1178 });
+        setNodeRect(nodesById, 'home-contact-description', { y: 111, width: 720 });
+        setNodeRect(nodesById, 'home-contact-actions', { y: 193, width: 1178 });
       }
       break;
   }
@@ -991,13 +971,16 @@ function buildHomeDocument(locale: Locale, sections: HomeSectionSpec[]): Builder
     nodes.push(...mobileParityNodes);
   }
 
+  const isCompositeStack = sections.every((spec) => spec.kind === 'composite');
   return {
     version: 1,
     locale,
     updatedAt,
     updatedBy: SEED_VERSION,
     stageWidth: STAGE_WIDTH,
-    stageHeight: y + 2,
+    stageHeight: isCompositeStack
+      ? Math.max(y + 2, PUBLISHED_HOME_COMPOSITE_STAGE_HEIGHT_BY_LOCALE[locale])
+      : y + 2,
     nodes,
   };
 }

@@ -3,6 +3,7 @@ import os from 'os';
 import path from 'path';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Booking, BookingService, Staff } from '@/lib/builder/bookings/types';
+import type { BookingEmailDeliveryResult } from '@/lib/builder/bookings/notifications';
 
 const bookingFixtures = vi.hoisted(() => ({
   bookings: [] as Booking[],
@@ -25,6 +26,14 @@ const bookingFixtures = vi.hoisted(() => ({
   }),
 }));
 
+const bookingNotificationFixtures = vi.hoisted(() => ({
+  sendBookingBillingDocument: vi.fn(async (): Promise<BookingEmailDeliveryResult> => ({
+    ok: true,
+    provider: 'resend',
+    id: 'billing-automation-test',
+  })),
+}));
+
 vi.mock('@/lib/builder/bookings/storage', () => ({
   getBooking: vi.fn(async (bookingId: string) => bookingFixtures.bookings.find((entry) => entry.bookingId === bookingId) ?? null),
   getService: vi.fn(async (serviceId: string) => bookingFixtures.services.find((entry) => entry.serviceId === serviceId) ?? null),
@@ -35,6 +44,10 @@ vi.mock('@/lib/builder/bookings/storage', () => ({
   saveBooking: bookingFixtures.saveBooking,
   saveService: bookingFixtures.saveService,
   saveStaff: bookingFixtures.saveStaff,
+}));
+
+vi.mock('@/lib/builder/bookings/notifications', () => ({
+  sendBookingBillingDocument: bookingNotificationFixtures.sendBookingBillingDocument,
 }));
 
 import {
@@ -193,6 +206,12 @@ beforeEach(async () => {
   bookingFixtures.saveBooking.mockClear();
   bookingFixtures.saveService.mockClear();
   bookingFixtures.saveStaff.mockClear();
+  bookingNotificationFixtures.sendBookingBillingDocument.mockReset();
+  bookingNotificationFixtures.sendBookingBillingDocument.mockResolvedValue({
+    ok: true,
+    provider: 'resend',
+    id: 'billing-automation-test',
+  });
 });
 
 afterEach(async () => {
@@ -342,6 +361,82 @@ describe('builder billing documents', () => {
     expect(shared && validateBillingDocumentShareToken(shared, new URL(`http://localhost${shared.sharePath}`).searchParams.get('token'))).toBe(true);
     expect(paymentLink && validateBillingDocumentPaymentToken(paymentLink, new URL(`http://localhost${paymentLink.paymentLinkPath}`).searchParams.get('token'))).toBe(true);
   });
+
+  it.each([
+    ['ko', '샌드박스 승인 (테스트 · 미수납)', '승인됨'],
+    ['zh-hant', '沙盒授權（測試，未收款）', '已授權'],
+    ['en', 'Sandbox authorization (test, not collected)', 'Authorized'],
+  ] as const)(
+    'renders legacy authorized_stub orders honestly in %s without treating funds as collected',
+    async (locale, expectedLabel, misleadingLabel) => {
+      const address = normalizeCheckoutAddress({
+        country: 'TW',
+        region: 'Taipei',
+        city: 'Taipei',
+        postalCode: '100',
+        addressLine1: 'No. 3 Legacy Road',
+      });
+      const productId = `product-legacy-stub-${locale}`;
+      const cart = upsertCartItem(
+        makeEmptyCart(locale, 'TWD'),
+        item({ itemId: makeCartItemId(productId), productId, productSlug: productId }),
+        1,
+      );
+      const quote = createCommerceCheckoutQuote(cart, locale, 'pickup', address);
+      const order = await createOrder({
+        confirmationNumber: `TSENG-20260520-LEGACY-${locale}`,
+        locale,
+        currency: 'TWD',
+        customer: { name: 'Legacy Sandbox Client', email: `legacy-${locale}@example.com` },
+        shippingAddress: address,
+        lineItems: cart.items,
+        shipping: quote.shipping,
+        tax: quote.tax,
+        totals: quote.totals,
+        payment: {
+          adapter: 'sandbox-card',
+          status: 'authorized_stub',
+          label: 'Legacy sandbox authorization',
+          stub: true,
+          referenceId: `pi_legacy_stub_${locale}`,
+        },
+        now: '2026-05-20T00:00:00.000Z',
+      });
+      const invoice = await issueOrderDocument(order.orderId, { type: 'invoice', actor: 'admin' });
+
+      // Production blocks new stub writes, but must still render previously stored records honestly.
+      setNodeEnvForTest('production');
+      const row = await getBillingDocument('order', order.orderId, invoice.document!.documentId);
+      const listedRow = (await listBillingDocuments({ locale, source: 'order' }))
+        .find((entry) => entry.documentId === invoice.document!.documentId);
+
+      expect(row).toMatchObject({
+        paymentStatus: 'authorized_stub',
+        paymentStatusLabel: expectedLabel,
+        paymentLinkStatus: 'not_created',
+        paymentReconciliationStatus: 'not_created',
+        refundedAmount: 0,
+      });
+      expect(row?.totalAmount).toBeGreaterThan(0);
+      expect(row?.balanceDue).toBe(row?.totalAmount);
+      expect(listedRow).toMatchObject({
+        paymentStatus: 'authorized_stub',
+        paymentStatusLabel: expectedLabel,
+        paymentLinkStatus: 'not_created',
+        paymentReconciliationStatus: 'not_created',
+        totalAmount: row?.totalAmount,
+        balanceDue: row?.totalAmount,
+      });
+
+      const html = renderBillingDocumentHtml(row!);
+      expect(html).toContain(expectedLabel);
+      expect(html).not.toContain(`>Payment</th>\n        <td>${misleadingLabel}</td>`);
+
+      const pdf = renderBillingDocumentPdf(row!);
+      expect(pdf.subarray(0, 5).toString('utf8')).toBe('%PDF-');
+      expect(pdf.toString('latin1')).toContain('Payment: Sandbox authorization \\(test, not collected\\)');
+    },
+  );
 
   it('saves automatic issuance policy and issues order and booking documents without duplicates', async () => {
     const defaults = await loadBillingDocumentAutomationSettings();
@@ -547,6 +642,96 @@ describe('builder billing documents', () => {
     const bookingRows = rows.filter((row) => row.ownerId === 'bk-billing-docs');
     expect(orderRows.map((row) => row.type).sort()).toEqual(['invoice', 'receipt']);
     expect(bookingRows.map((row) => row.type).sort()).toEqual(['invoice', 'receipt']);
+  });
+
+  it.each([
+    ['unconfigured', 'email_unconfigured'],
+    ['provider_error', 'email_provider_error'],
+  ] as const)(
+    'keeps automatically issued booking documents current when email is %s',
+    async (reason, expectedError) => {
+      const settings = await saveBillingDocumentAutomationSettings({
+        orders: {
+          invoiceOnCreate: { enabled: false, email: false },
+          receiptOnPaid: { enabled: false, email: false },
+        },
+        bookings: {
+          invoiceOnCreate: { enabled: true, email: true },
+          receiptOnPaid: { enabled: false, email: false },
+        },
+      });
+      await saveService(service());
+      await saveStaff(staff());
+      await saveBooking(booking({
+        bookingId: `bk-email-${reason}`,
+        billingDocuments: [],
+      }));
+      bookingFixtures.saveBooking.mockClear();
+      bookingNotificationFixtures.sendBookingBillingDocument.mockResolvedValueOnce({
+        ok: false,
+        provider: 'resend',
+        reason,
+      });
+
+      const result = await runBookingBillingAutomation(`bk-email-${reason}`, {
+        trigger: 'created',
+        settings,
+      });
+
+      expect(result?.actions).toMatchObject([{
+        source: 'booking',
+        ownerId: `bk-email-${reason}`,
+        type: 'invoice',
+        created: true,
+        emailed: false,
+        error: expectedError,
+      }]);
+      expect(bookingNotificationFixtures.sendBookingBillingDocument).toHaveBeenCalledOnce();
+      expect(bookingFixtures.saveBooking).toHaveBeenCalledOnce();
+      expect(result?.owner.billingDocuments?.[0]?.status).toBe('issued');
+    },
+  );
+
+  it('preserves issued automation metadata when the emailed marker cannot be saved', async () => {
+    const settings = await saveBillingDocumentAutomationSettings({
+      orders: {
+        invoiceOnCreate: { enabled: false, email: false },
+        receiptOnPaid: { enabled: false, email: false },
+      },
+      bookings: {
+        invoiceOnCreate: { enabled: true, email: true },
+        receiptOnPaid: { enabled: false, email: false },
+      },
+    });
+    await saveService(service());
+    await saveStaff(staff());
+    await saveBooking(booking({ bookingId: 'bk-email-marker-failure', billingDocuments: [] }));
+    bookingFixtures.saveBooking.mockClear();
+    bookingFixtures.saveBooking.mockImplementationOnce(async (nextBooking) => {
+      const index = bookingFixtures.bookings.findIndex((entry) => entry.bookingId === nextBooking.bookingId);
+      if (index >= 0) bookingFixtures.bookings[index] = nextBooking;
+      else bookingFixtures.bookings.push(nextBooking);
+    });
+    bookingFixtures.saveBooking.mockRejectedValueOnce(new Error('private storage failure'));
+
+    const result = await runBookingBillingAutomation('bk-email-marker-failure', {
+      trigger: 'created',
+      settings,
+    });
+
+    expect(result?.actions).toMatchObject([{
+      source: 'booking',
+      ownerId: 'bk-email-marker-failure',
+      type: 'invoice',
+      created: true,
+      emailed: false,
+      error: 'marker_persist_failed_after_delivery',
+      documentId: expect.stringMatching(/^bdoc-/),
+      number: expect.stringMatching(/^INV-/),
+    }]);
+    expect(bookingNotificationFixtures.sendBookingBillingDocument).toHaveBeenCalledOnce();
+    expect(bookingFixtures.saveBooking).toHaveBeenCalledTimes(2);
+    expect(result?.owner.billingDocuments?.[0]?.status).toBe('issued');
   });
 
   it('builds hosted Stripe invoice sessions and settles paid webhooks idempotently', async () => {

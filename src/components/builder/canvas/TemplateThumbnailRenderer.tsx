@@ -152,6 +152,28 @@ function renderThumbnail(
             };
             return <div key={node.id} style={style} />;
           })}
+          <div
+            data-builder-demo-disclosure="html-scaled-mock"
+            style={{
+              position: 'absolute',
+              top: Math.max(8, offsetY + 8),
+              left: Math.max(8, offsetX + 8),
+              zIndex: MAX_RENDERED_NODES + 1,
+              padding: '4px 7px',
+              border: `1px solid ${palette.line}`,
+              borderRadius: 4,
+              background: `${palette.ink}dd`,
+              color: palette.inverse,
+              fontSize: 8,
+              fontWeight: 800,
+              letterSpacing: '0.04em',
+              lineHeight: 1.2,
+              pointerEvents: 'none',
+              textTransform: 'uppercase',
+            }}
+          >
+            {locale === 'ko' ? '데모 미리보기' : locale === 'zh-hant' ? '示範預覽' : 'Demo preview'}
+          </div>
         </>
       )}
       <div style={{ position: 'absolute', inset: 0, background: toneOverlay, pointerEvents: 'none' }} />

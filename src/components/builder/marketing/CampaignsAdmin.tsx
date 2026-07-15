@@ -31,7 +31,9 @@ const copy = {
     sendFailure: '발송 실패',
     testPrompt: '테스트 메일 받을 주소',
     batchConfirm: '실제 배치 발송을 진행하시겠습니까?',
-    batchResult: (succeeded: number, failed: number, remaining: number) => `발송: 성공 ${succeeded} / 실패 ${failed} / 잔여 ${remaining}`,
+    batchSuccess: (succeeded: number, remaining: number) => `발송 완료: 성공 ${succeeded} / 잔여 ${remaining}`,
+    batchPartial: (succeeded: number, failed: number, remaining: number) => `부분 발송: 성공 ${succeeded} / 실패 ${failed} / 잔여 ${remaining}`,
+    batchAllFailed: (failed: number, remaining: number) => `발송 실패: ${failed}건 실패 / 잔여 ${remaining}`,
     testSuccess: '테스트 메일 발송 완료',
     testFailure: '테스트 메일 실패',
     statusLabels: {
@@ -40,6 +42,7 @@ const copy = {
       sending: '발송중',
       sent: '발송완료',
       failed: '실패',
+      partial: '부분발송',
     },
   },
   'zh-hant': {
@@ -62,7 +65,9 @@ const copy = {
     sendFailure: '發送失敗',
     testPrompt: '測試郵件收件地址',
     batchConfirm: '是否要執行實際批次發送？',
-    batchResult: (succeeded: number, failed: number, remaining: number) => `發送：成功 ${succeeded} / 失敗 ${failed} / 剩餘 ${remaining}`,
+    batchSuccess: (succeeded: number, remaining: number) => `發送完成：成功 ${succeeded} / 剩餘 ${remaining}`,
+    batchPartial: (succeeded: number, failed: number, remaining: number) => `部分發送：成功 ${succeeded} / 失敗 ${failed} / 剩餘 ${remaining}`,
+    batchAllFailed: (failed: number, remaining: number) => `發送失敗：${failed} 筆失敗 / 剩餘 ${remaining}`,
     testSuccess: '測試郵件發送完成',
     testFailure: '測試郵件失敗',
     statusLabels: {
@@ -71,6 +76,7 @@ const copy = {
       sending: '發送中',
       sent: '已發送',
       failed: '失敗',
+      partial: '部分發送',
     },
   },
   en: {
@@ -93,7 +99,9 @@ const copy = {
     sendFailure: 'Send failed',
     testPrompt: 'Test recipient email',
     batchConfirm: 'Send the real batch now?',
-    batchResult: (succeeded: number, failed: number, remaining: number) => `Send: success ${succeeded} / failed ${failed} / remaining ${remaining}`,
+    batchSuccess: (succeeded: number, remaining: number) => `Send complete: ${succeeded} succeeded / ${remaining} remaining`,
+    batchPartial: (succeeded: number, failed: number, remaining: number) => `Partial send: ${succeeded} succeeded / ${failed} failed / ${remaining} remaining`,
+    batchAllFailed: (failed: number, remaining: number) => `Send failed: ${failed} failed / ${remaining} remaining`,
     testSuccess: 'Test email sent',
     testFailure: 'Test email failed',
     statusLabels: {
@@ -102,9 +110,10 @@ const copy = {
       sending: 'Sending',
       sent: 'Sent',
       failed: 'Failed',
+      partial: 'Partial',
     },
   },
-} as const;
+};
 
 const STATUS_COLOR: Record<Campaign['status'], string> = {
   draft: '#94a3b8',
@@ -112,12 +121,86 @@ const STATUS_COLOR: Record<Campaign['status'], string> = {
   sending: '#f59e0b',
   sent: '#16a34a',
   failed: '#dc2626',
+  partial: '#ea580c',
 };
+
+export type CampaignsAdminCopy = typeof copy['ko'];
 
 function localizedMarketingApiPath(locale: Locale, path: string): string {
   if (locale === 'ko') return path;
   const separator = path.includes('?') ? '&' : '?';
   return `${path}${separator}locale=${locale}`;
+}
+
+/** Pure selection of the operator alert from the batch/test response semantics.
+ * The route keeps HTTP 200 even when delivery failed, so the UI must inspect the
+ * JSON body (ok / counts) rather than res.ok alone. Returns null only when no
+ * alert should be shown (handled by the caller before fetching). */
+export function resolveCampaignSendAlert(
+  mode: 'test' | 'batch',
+  responseOk: boolean,
+  payload: { ok?: boolean; error?: string; succeeded?: number; failed?: number; remaining?: number },
+  text: CampaignsAdminCopy,
+): string {
+  if (!responseOk) {
+    return payload.error || text.sendFailure;
+  }
+  if (mode === 'test') {
+    return payload.ok ? text.testSuccess : text.testFailure;
+  }
+  const succeeded = payload.succeeded ?? 0;
+  const failed = payload.failed ?? 0;
+  const remaining = payload.remaining ?? 0;
+  if (payload.ok) {
+    return text.batchSuccess(succeeded, remaining);
+  }
+  const base =
+    succeeded > 0
+      ? text.batchPartial(succeeded, failed, remaining)
+      : text.batchAllFailed(failed, remaining);
+  return payload.error ? `${base}\n${payload.error}` : base;
+}
+
+export interface RunSendCampaignDeps {
+  mode: 'test' | 'batch';
+  campaignId: string;
+  locale: Locale;
+  text: CampaignsAdminCopy;
+  fetchImpl?: typeof fetch;
+  promptImpl?: (message: string) => string | null;
+  confirmImpl?: (message: string) => boolean;
+  alertImpl?: (message: string) => void;
+}
+
+/** Browser-gated send flow. Dependencies are injectable so the UI branch can be
+ * exercised with mocked fetch/alert/prompt/confirm instead of a live DOM. */
+export async function runSendCampaign(deps: RunSendCampaignDeps): Promise<void> {
+  const fetchImpl = deps.fetchImpl ?? fetch;
+  const promptImpl = deps.promptImpl ?? ((message: string) => window.prompt(message));
+  const confirmImpl = deps.confirmImpl ?? ((message: string) => window.confirm(message));
+  const alertImpl = deps.alertImpl ?? ((message: string) => window.alert(message));
+
+  const testEmail = deps.mode === 'test' ? promptImpl(deps.text.testPrompt) ?? '' : '';
+  if (deps.mode === 'test' && !testEmail.trim()) return;
+  if (deps.mode === 'batch' && !confirmImpl(deps.text.batchConfirm)) return;
+
+  const res = await fetchImpl(
+    localizedMarketingApiPath(deps.locale, `/api/builder/marketing/campaigns/${deps.campaignId}/send`),
+    {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(deps.mode === 'test' ? { testEmail: testEmail.trim() } : { batchSize: 50 }),
+    },
+  );
+  const payload = (await res.json().catch(() => ({}))) as {
+    ok?: boolean;
+    error?: string;
+    succeeded?: number;
+    failed?: number;
+    remaining?: number;
+  };
+  alertImpl(resolveCampaignSendAlert(deps.mode, res.ok, payload, deps.text));
 }
 
 export default function CampaignsAdmin({ initialCampaigns, locale }: Props) {
@@ -168,25 +251,7 @@ export default function CampaignsAdmin({ initialCampaigns, locale }: Props) {
   }
 
   async function sendCampaign(campaignId: string, mode: 'test' | 'batch') {
-    const testEmail = mode === 'test' ? window.prompt(text.testPrompt) ?? '' : '';
-    if (mode === 'test' && !testEmail.trim()) return;
-    if (mode === 'batch' && !window.confirm(text.batchConfirm)) return;
-    const res = await fetch(localizedMarketingApiPath(locale, `/api/builder/marketing/campaigns/${campaignId}/send`), {
-      method: 'POST',
-      credentials: 'same-origin',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(mode === 'test' ? { testEmail: testEmail.trim() } : { batchSize: 50 }),
-    });
-    const payload = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string; succeeded?: number; failed?: number; remaining?: number };
-    if (!res.ok) {
-      window.alert(payload.error || text.sendFailure);
-      return;
-    }
-    if (mode === 'test') {
-      window.alert(payload.ok ? text.testSuccess : text.testFailure);
-    } else {
-      window.alert(text.batchResult(payload.succeeded ?? 0, payload.failed ?? 0, payload.remaining ?? 0));
-    }
+    await runSendCampaign({ mode, campaignId, locale, text });
   }
 
   return (

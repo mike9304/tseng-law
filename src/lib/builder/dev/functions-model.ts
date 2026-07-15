@@ -47,7 +47,18 @@ function isBlobBackend(): boolean {
 }
 
 function localPath(): string {
-  return path.join(process.cwd(), 'runtime-data', 'builder-dev', 'functions.json');
+  // Honor the repo-wide runtime-data root contract (same env exported by
+  // start-qa-server.sh / qa-runtime-isolation-contract) so an isolated QA or
+  // test root actually redirects this store. Read at call time (never cached
+  // at module import) so per-test env stubs take effect. A blank/whitespace
+  // value is treated as unset so a scrubbed env cannot collapse the join into
+  // a bare `builder-dev/functions.json` relative to the repository root; it
+  // falls back to the established dev location instead.
+  const envRoot = process.env.BUILDER_RUNTIME_DATA_ROOT;
+  const root = envRoot && envRoot.trim() !== ''
+    ? envRoot
+    : path.join(process.cwd(), 'runtime-data');
+  return path.join(root, 'builder-dev', 'functions.json');
 }
 
 export async function readBuilderFunctions(): Promise<BuilderServerlessFunction[]> {

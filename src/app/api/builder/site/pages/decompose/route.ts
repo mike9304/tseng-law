@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { USER_DRAFT_UPDATED_BY } from '@/lib/builder/canvas/home-draft-reseed';
 import { STANDARD_PAGE_DECOMPOSERS } from '@/lib/builder/canvas/seed-pages';
 import { guardMutation } from '@/lib/builder/security/guard';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
 import { matchesStandardPageSlugForLocale } from '@/lib/builder/site/standard-pages';
 import { readSiteDocument, writePageCanvas } from '@/lib/builder/site/persistence';
 import { normalizeLocale, type Locale } from '@/lib/locales';
@@ -53,8 +53,9 @@ export async function POST(request: NextRequest) {
   const locale = normalizeLocale(
     typeof body.locale === 'string' ? body.locale : requestLocale,
   );
-  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
-  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   const slug = typeof body.slug === 'string' ? body.slug.trim() : '';
 
   const decomposer = STANDARD_PAGE_DECOMPOSERS[slug];

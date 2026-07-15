@@ -1,13 +1,8 @@
 'use client';
 
 import { type ReactNode, useMemo, useState } from 'react';
-import NavigationEditor from '@/components/builder/canvas/NavigationEditor';
-import PageSwitcher from '@/components/builder/canvas/PageSwitcher';
-import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
-import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
-import ComponentLibraryPanel from '@/components/builder/canvas/ComponentLibraryPanel';
+import dynamic from 'next/dynamic';
 import { ComponentLibraryShortcut } from '@/components/builder/canvas/ComponentLibraryShortcut';
-import UndoStackTimeline from '@/components/builder/canvas/UndoStackTimeline';
 import type { BuilderRegisteredAppWidget } from '@/lib/builder/apps/widgets';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import {
@@ -30,6 +25,53 @@ import type { Locale } from '@/lib/locales';
 import { getAiGeneratorCopy } from '@/components/builder/ai-generator/ai-generator-copy';
 import { getSandboxEditorRailCopy } from './sandbox-editor-rail-copy';
 import styles from './SandboxPage.module.css';
+
+const EMPTY_CANVAS_NODES: readonly BuilderCanvasNode[] = [];
+
+function DrawerPanelLoading() {
+  return (
+    <div
+      role="status"
+      aria-label="Loading panel"
+      aria-live="polite"
+      aria-busy="true"
+      data-builder-panel-loading="true"
+    >
+      Loading…
+    </div>
+  );
+}
+
+const DynamicPageSwitcher = dynamic(() => import('@/components/builder/canvas/PageSwitcher'), {
+  ssr: false,
+  loading: DrawerPanelLoading,
+});
+const DynamicNavigationEditor = dynamic(() => import('@/components/builder/canvas/NavigationEditor'), {
+  ssr: false,
+  loading: DrawerPanelLoading,
+});
+const DynamicSandboxCatalogPanel = dynamic(
+  () => import('@/components/builder/canvas/SandboxCatalogPanel'),
+  {
+    ssr: false,
+    loading: DrawerPanelLoading,
+  },
+);
+const DynamicComponentLibraryPanel = dynamic(
+  () => import('@/components/builder/canvas/ComponentLibraryPanel'),
+  {
+    ssr: false,
+    loading: DrawerPanelLoading,
+  },
+);
+const DynamicSandboxLayersPanel = dynamic(() => import('@/components/builder/canvas/SandboxLayersPanel'), {
+  ssr: false,
+  loading: DrawerPanelLoading,
+});
+const DynamicUndoStackTimeline = dynamic(() => import('@/components/builder/canvas/UndoStackTimeline'), {
+  ssr: false,
+  loading: DrawerPanelLoading,
+});
 
 export type SandboxDrawerPanel = 'pages' | 'add' | 'design' | 'layers' | 'nav' | 'columns' | 'history';
 
@@ -239,10 +281,17 @@ export default function SandboxEditorRail({
 }: SandboxEditorRailProps) {
   const [focusedSectionTemplateId, setFocusedSectionTemplateId] = useState<HomeSectionTemplateId | null>(null);
   const [pageTemplateGalleryRequest, setPageTemplateGalleryRequest] = useState({ id: 0, query: '' });
-  const pageTemplateCount = useMemo(() => getAllTemplates().length, []);
+  const designDrawerActive = activeDrawer === 'design';
+  const pageTemplateCount = useMemo(
+    () => (designDrawerActive ? getAllTemplates().length : 0),
+    [designDrawerActive],
+  );
+  const designNodes = designDrawerActive
+    ? (document?.nodes ?? EMPTY_CANVAS_NODES)
+    : EMPTY_CANVAS_NODES;
   const designerTargetSummary = useMemo(
-    () => summarizeComponentDesignTargets(document?.nodes ?? []),
-    [document?.nodes],
+    () => summarizeComponentDesignTargets(designNodes),
+    [designNodes],
   );
   const copy = useMemo(() => getSandboxEditorRailCopy(locale), [locale]);
   const aiGeneratorCopy = useMemo(() => getAiGeneratorCopy(locale), [locale]);
@@ -441,42 +490,43 @@ export default function SandboxEditorRail({
         className={`${styles.drawer} ${!activeDrawer ? styles.drawerHidden : ''}`}
         aria-hidden={!activeDrawer}
         data-builder-drawer={activeDrawer ?? undefined}
+        data-builder-drawer-boundary={activeDrawer ? 'true' : undefined}
+        onPointerDown={(event) => event.stopPropagation()}
+        onMouseDown={(event) => event.stopPropagation()}
       >
-        <div
-          className={styles.drawerBody}
-          hidden={activeDrawer !== 'pages'}
-          aria-hidden={activeDrawer !== 'pages'}
-        >
-          <PageSwitcher
-            locale={locale}
-            siteId={siteId}
-            activePageId={activePageId}
-            clipboardCount={clipboardCount}
-            columnPostsSummary={columnPostsSummary}
-            templateGalleryInitialSearch={pageTemplateGalleryRequest.query}
-            templateGalleryRequestId={pageTemplateGalleryRequest.id}
-            missingPageHref={missingPageHref}
-            onSelectPage={selectPageAndClose}
-            onPagesChange={onPagesChange}
-            onMissingPageHandled={onMissingPageHandled}
-            onToast={onToast}
-          />
-        </div>
+        {activeDrawer === 'pages' ? (
+          <div className={styles.drawerBody} data-builder-drawer-body="pages">
+            <DynamicPageSwitcher
+              locale={locale}
+              siteId={siteId}
+              activePageId={activePageId}
+              clipboardCount={clipboardCount}
+              columnPostsSummary={columnPostsSummary}
+              templateGalleryInitialSearch={pageTemplateGalleryRequest.query}
+              templateGalleryRequestId={pageTemplateGalleryRequest.id}
+              missingPageHref={missingPageHref}
+              onSelectPage={selectPageAndClose}
+              onPagesChange={onPagesChange}
+              onMissingPageHandled={onMissingPageHandled}
+              onToast={onToast}
+            />
+          </div>
+        ) : null}
 
         {activeDrawer === 'add' ? (
-          <div className={styles.drawerBody}>
+          <div className={styles.drawerBody} data-builder-drawer-body="add">
             <ComponentLibraryShortcut locale={locale} />
-            <SandboxCatalogPanel
+            <DynamicSandboxCatalogPanel
               locale={locale}
               appWidgets={appWidgets}
               onOpenPageTemplates={openPageTemplateGallery}
             />
-            <ComponentLibraryPanel locale={locale} />
+            <DynamicComponentLibraryPanel locale={locale} />
           </div>
         ) : null}
 
         {activeDrawer === 'design' ? (
-          <div className={styles.drawerBody}>
+          <div className={styles.drawerBody} data-builder-drawer-body="design">
             <section className={styles.panelSection} data-builder-design-section-templates="true">
               <header className={styles.panelSectionHeader}>
                 <div>
@@ -827,14 +877,14 @@ export default function SandboxEditorRail({
         ) : null}
 
         {activeDrawer === 'layers' ? (
-          <div className={styles.drawerBody}>
-            <SandboxLayersPanel locale={locale} />
+          <div className={styles.drawerBody} data-builder-drawer-body="layers">
+            <DynamicSandboxLayersPanel locale={locale} />
           </div>
         ) : null}
 
         {activeDrawer === 'nav' ? (
-          <div className={styles.drawerBody}>
-            <NavigationEditor
+          <div className={styles.drawerBody} data-builder-drawer-body="nav">
+            <DynamicNavigationEditor
               locale={locale}
               focusItemId={focusedNavItemId}
               addChildParentId={addNavChildParentId}
@@ -846,7 +896,7 @@ export default function SandboxEditorRail({
         ) : null}
 
         {activeDrawer === 'columns' ? (
-          <div className={styles.drawerBody}>
+          <div className={styles.drawerBody} data-builder-drawer-body="columns">
             <section className={styles.panelSection}>
               <header className={styles.panelSectionHeader}>
                 <div>
@@ -933,8 +983,8 @@ export default function SandboxEditorRail({
         ) : null}
 
         {activeDrawer === 'history' ? (
-          <div className={styles.drawerBody}>
-            <UndoStackTimeline />
+          <div className={styles.drawerBody} data-builder-drawer-body="history">
+            <DynamicUndoStackTimeline />
             <section className={styles.panelSection}>
               <header className={styles.panelSectionHeader}>
                 <div>

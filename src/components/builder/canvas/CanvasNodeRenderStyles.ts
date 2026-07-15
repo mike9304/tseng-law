@@ -69,7 +69,7 @@ export function buildCanvasNodeRenderStyles({
   nodeStyle: CSSProperties;
 } {
   const hasVisibleBorder = node.style.borderWidth > 0;
-  const activeHoverStyle = node.hoverStyle && isHovered ? node.hoverStyle : null;
+  const activeHoverStyle = node.hoverStyle && isHovered && !isEditing ? node.hoverStyle : null;
   const animationSummary = getAnimationSummary(node.animation);
   const editorAnimationStyle = buildEditorAnimationStyle({
     animation: node.animation,
@@ -89,8 +89,8 @@ export function buildCanvasNodeRenderStyles({
     || renderedShadowSpread !== 0
     || node.style.shadowX !== 0
     || node.style.shadowY !== 0;
-  const hoverTransition = node.hoverStyle
-    ? `background ${node.hoverStyle.transitionMs ?? 200}ms ease, border-color ${node.hoverStyle.transitionMs ?? 200}ms ease, box-shadow ${node.hoverStyle.transitionMs ?? 200}ms ease, transform ${node.hoverStyle.transitionMs ?? 200}ms ease`
+  const hoverTransition = node.hoverStyle && !isEditing
+    ? `background ${node.hoverStyle.transitionMs ?? 180}ms cubic-bezier(0.16, 1, 0.3, 1), border-color ${node.hoverStyle.transitionMs ?? 180}ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow ${node.hoverStyle.transitionMs ?? 180}ms cubic-bezier(0.16, 1, 0.3, 1), transform ${node.hoverStyle.transitionMs ?? 180}ms cubic-bezier(0.16, 1, 0.3, 1)`
     : undefined;
   const bodyTransform = mergeCssTransforms(
     activeHoverStyle ? buildHoverTransform(activeHoverStyle) : undefined,

@@ -41,7 +41,6 @@ export type SandboxEditorWorkspaceProps = {
   canvasWrapperStyle: CSSProperties;
   canvasColumnRef: RefObject<HTMLDivElement>;
   publicChromeCopy: PublicChromeCopy;
-  publicChromeColumnsShortcut: boolean;
   collabCursors?: CanvasCollabCursor[];
   linkPickerLightboxes: Array<{ id: string; slug: string; name: string }>;
   linkPickerPopups: Array<{ id: string; slug: string; name: string }>;

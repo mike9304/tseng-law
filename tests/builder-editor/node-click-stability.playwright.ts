@@ -346,6 +346,90 @@ test.describe('/ko/admin-builder node click stability', () => {
     expect(Math.abs(after.y - before.y)).toBeLessThan(1);
   });
 
+  test('selects attorney text directly when its root is already selected', async ({ page }) => {
+    await openBuilder(page, `/ko/admin-builder?attorneyTextClickStability=${Date.now().toString(36)}`);
+    await page.keyboard.press('Escape');
+
+    const root = page.locator('[data-node-id="home-attorney-root"]').first();
+    const title = page.locator('[data-node-id="home-attorney-title"]').first();
+    const intro = page.locator('[data-node-id="home-attorney-intro-1"]').first();
+    await root.scrollIntoViewIfNeeded();
+    await expect(root).toBeVisible();
+    await expect(title).toBeVisible();
+    await expect(intro).toBeVisible();
+
+    const before = {
+      root: await root.boundingBox(),
+      title: await title.boundingBox(),
+      intro: await intro.boundingBox(),
+    };
+    expect(before.root).not.toBeNull();
+    expect(before.title).not.toBeNull();
+    expect(before.intro).not.toBeNull();
+
+    const rootPoint = await page.evaluate(() => {
+      const nodeId = 'home-attorney-root';
+      const node = document.querySelector(`[data-node-id="${nodeId}"]`);
+      if (!node) throw new Error(`Missing canvas node: ${nodeId}`);
+
+      const rect = node.getBoundingClientRect();
+      const candidates = [
+        [0.05, 0.05], [0.5, 0.05], [0.95, 0.05],
+        [0.05, 0.5], [0.5, 0.5], [0.95, 0.5],
+        [0.05, 0.95], [0.5, 0.95], [0.95, 0.95],
+      ];
+      for (const [xRatio, yRatio] of candidates) {
+        const x = rect.left + (rect.width * xRatio);
+        const y = rect.top + (rect.height * yRatio);
+        const hitNodeId = document.elementFromPoint(x, y)
+          ?.closest('[data-node-id]')
+          ?.getAttribute('data-node-id');
+        if (hitNodeId === nodeId) return { x, y };
+      }
+
+      throw new Error(`No unobscured hit-test point found for ${nodeId}`);
+    });
+    await page.mouse.click(rootPoint.x, rootPoint.y);
+    await expect(root).toHaveAttribute('data-selected', 'true');
+
+    await title.click();
+    await expect(title).toHaveAttribute('data-selected', 'true');
+    await expect(root).not.toHaveAttribute('data-selected', 'true');
+    await expect(intro).not.toHaveAttribute('data-selected', 'true');
+
+    const titleTextBeforeEdit = await title.textContent();
+    await title.dblclick();
+    const inlineEditors = page.locator('[data-builder-inline-text-editor="true"]:visible');
+    await expect(inlineEditors).toHaveCount(1);
+    const titleEditor = title.locator('[data-builder-inline-text-editor="true"]');
+    await expect(titleEditor).toBeVisible();
+    expect(await titleEditor.evaluate((editor) => editor.closest('[data-node-id]')?.getAttribute('data-node-id')))
+      .toBe('home-attorney-title');
+
+    await page.keyboard.press('Escape');
+    await expect(titleEditor).toBeHidden();
+    await expect(title).toHaveAttribute('data-selected', 'true');
+    await expect(root).not.toHaveAttribute('data-selected', 'true');
+    await expect(intro).not.toHaveAttribute('data-selected', 'true');
+    await expect(title).toHaveText(titleTextBeforeEdit ?? '');
+
+    await intro.click();
+    await expect(intro).toHaveAttribute('data-selected', 'true');
+    await expect(title).not.toHaveAttribute('data-selected', 'true');
+    await expect(root).not.toHaveAttribute('data-selected', 'true');
+
+    for (const [name, locator] of [['root', root], ['title', title], ['intro', intro]] as const) {
+      const after = await locator.boundingBox();
+      expect(after, `Missing ${name} bounds after direct text clicks.`).not.toBeNull();
+      const initial = before[name];
+      if (!after || !initial) continue;
+      expect(Math.abs(after.x - initial.x)).toBeLessThan(1);
+      expect(Math.abs(after.y - initial.y)).toBeLessThan(1);
+      expect(Math.abs(after.width - initial.width)).toBeLessThan(1);
+      expect(Math.abs(after.height - initial.height)).toBeLessThan(1);
+    }
+  });
+
   test('keeps archive and image clicks inside the editor instead of blanking the canvas', async ({ page }) => {
     await openBuilder(page, `/ko/admin-builder?nodeSurfaceStability=${Date.now().toString(36)}`);
     await page.keyboard.press('Escape');

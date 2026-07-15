@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState, type Dispatch, type RefObject, type SetStateAction } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState, type Dispatch, type RefObject, type SetStateAction } from 'react';
 import type { ResizeHandle } from '@/components/builder/canvas/CanvasNode';
 import {
   clampRect,
@@ -28,7 +28,7 @@ import {
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
 import { isContainerLikeKind, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
-import { parentUsesFlowLayout } from '@/lib/builder/canvas/tree';
+import { isCanvasNodeAncestor, parentUsesFlowLayout } from '@/lib/builder/canvas/tree';
 import { createSnapEdgeScratch, writeSnapFromEdges } from '@/lib/builder/canvas/snap';
 import type { AlignmentGuide, SnapReferenceGuide } from '@/lib/builder/canvas/snap';
 import type { ZoomState } from '@/lib/builder/canvas/zoom';
@@ -53,6 +53,7 @@ type UseCanvasInteractionsArgs = {
   commitMutationSession: () => void;
   currentViewport: Viewport;
   gridSnapSize: number;
+  interactionResetKey?: string | null;
   nodesById: Map<string, BuilderCanvasNode>;
   onToast?: (message: string, tone: 'success' | 'error') => void;
   selectedNodeIds: string[];
@@ -88,6 +89,7 @@ type UseCanvasInteractionsArgs = {
 const MOVE_ACTIVATION_THRESHOLD_PX = 4;
 const MOVE_ACTIVATION_THRESHOLD_SQUARED = MOVE_ACTIVATION_THRESHOLD_PX * MOVE_ACTIVATION_THRESHOLD_PX;
 const EMPTY_ALIGNMENT_GUIDES: AlignmentGuide[] = [];
+const useIsomorphicLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 type MoveInteraction = Extract<NonNullable<InteractionState>, { type: 'move' }>;
 type ResizeInteraction = Extract<NonNullable<InteractionState>, { type: 'resize' }>;
@@ -109,6 +111,10 @@ type ResizePreviewStyleSnapshot = {
   width: string;
 };
 type InteractionPointerPosition = { x: number; y: number };
+type DirectPreviewScope = {
+  renderKey: string | null | undefined;
+  root: HTMLElement;
+};
 
 export function areAlignmentGuidesEqual(left: AlignmentGuide[], right: AlignmentGuide[]): boolean {
   if (left === right) return true;
@@ -468,6 +474,58 @@ export function resolveSelectedDomMoveTargetId(
   return selectedAncestorId && selectedAncestorId !== nodeId ? selectedAncestorId : nodeId;
 }
 
+export function resolveUnactivatedMoveSelectionId(
+  nodeId: string,
+  moveNodeId: string,
+  nodeKind: BuilderCanvasNode['kind'] | undefined,
+  options: {
+    additive?: boolean;
+    pointerType?: string;
+    selectedNodeCount?: number;
+    moveNodeSelected?: boolean;
+  } = {},
+): string | null {
+  if (options.additive || options.pointerType === 'touch') return null;
+  if (moveNodeId === nodeId) {
+    return options.selectedNodeCount && options.selectedNodeCount > 1 && options.moveNodeSelected
+      ? moveNodeId
+      : null;
+  }
+  if (nodeKind === 'text' || nodeKind === 'heading') return nodeId;
+  return null;
+}
+
+export function resolveInitialMoveContainerHit(
+  containerHitRects: readonly ContainerHitRect[],
+  startParentId: string | null,
+): ContainerHitRect | null {
+  if (!startParentId) return null;
+  return containerHitRects.find((candidate) => candidate.id === startParentId) ?? null;
+}
+
+export function resolvePreferredMoveContainerHit({
+  containerHitRects,
+  currentHoveredContainerHit,
+  nodesById,
+  startParentId,
+}: {
+  containerHitRects: readonly ContainerHitRect[];
+  currentHoveredContainerHit: ContainerHitRect | null;
+  nodesById: Map<string, BuilderCanvasNode>;
+  startParentId: string | null;
+}): ContainerHitRect | null {
+  const startParentHit = resolveInitialMoveContainerHit(containerHitRects, startParentId);
+  if (!currentHoveredContainerHit) return startParentHit;
+  if (
+    !startParentId
+    || currentHoveredContainerHit.id === startParentId
+    || !isCanvasNodeAncestor(currentHoveredContainerHit.id, startParentId, nodesById)
+  ) {
+    return currentHoveredContainerHit;
+  }
+  return startParentHit ?? currentHoveredContainerHit;
+}
+
 /**
  * Walks up the parentId chain to the top-level ancestor (the node whose parentId
  * is null). Used to know which top-level section a moved node currently lives in
@@ -513,22 +571,43 @@ function cssAttributeValue(value: string): string {
 export function isReusablePreviewElement(
   element: HTMLElement | null | undefined,
   nodeId: string,
+  scopeRoot?: HTMLElement | null,
 ): element is HTMLElement {
-  return Boolean(element?.isConnected && element.getAttribute('data-node-id') === nodeId);
+  return Boolean(
+    element?.isConnected
+      && element.getAttribute('data-node-id') === nodeId
+      && (!scopeRoot || scopeRoot.contains(element)),
+  );
 }
 
-function findNodeElement(nodeId: string, previewElements?: Map<string, HTMLElement>): HTMLElement | null {
-  const cached = previewElements?.get(nodeId);
-  if (isReusablePreviewElement(cached, nodeId)) {
+export function findScopedPreviewElement(
+  nodeId: string,
+  previewElements: Map<string, HTMLElement>,
+  scopeRoot: HTMLElement | null,
+): HTMLElement | null {
+  const cached = previewElements.get(nodeId);
+  if (isReusablePreviewElement(cached, nodeId, scopeRoot)) {
     return cached;
   }
-  const element = document.querySelector<HTMLElement>(`[data-node-id="${cssAttributeValue(nodeId)}"]`);
+
+  // Once an interaction has claimed a concrete element, never replace that
+  // identity by globally looking up a newly mounted node with the same id. A
+  // page switch can reuse ids while rendering completely different geometry.
+  if (cached || !scopeRoot?.isConnected) return null;
+
+  const element = scopeRoot.querySelector<HTMLElement>(`[data-node-id="${cssAttributeValue(nodeId)}"]`);
   if (element) {
-    previewElements?.set(nodeId, element);
-  } else {
-    previewElements?.delete(nodeId);
+    previewElements.set(nodeId, element);
   }
   return element;
+}
+
+function getClaimedPreviewElement(
+  nodeId: string,
+  previewElements: Map<string, HTMLElement>,
+): HTMLElement | null {
+  const element = previewElements.get(nodeId);
+  return element?.getAttribute('data-node-id') === nodeId ? element : null;
 }
 
 export function canUseDirectMovePreview(
@@ -546,10 +625,11 @@ function applyDirectMovePreview(
   rects: Map<string, BuilderCanvasNode['rect']>,
   previewNodeIds: Set<string>,
   previewElements: Map<string, HTMLElement>,
+  scopeRoot: HTMLElement | null,
 ) {
   for (const [nodeId, rect] of rects) {
     const startRect = activeInteraction.startRects[nodeId];
-    const element = findNodeElement(nodeId, previewElements);
+    const element = findScopedPreviewElement(nodeId, previewElements, scopeRoot);
     if (!startRect || !element) continue;
     const nextTranslate = getDirectMovePreviewTranslate(startRect, rect);
     if (element.style.getPropertyValue('translate') !== nextTranslate) {
@@ -568,9 +648,10 @@ function applyDirectMovePreviewForNode(
   rect: BuilderCanvasNode['rect'],
   previewNodeIds: Set<string>,
   previewElements: Map<string, HTMLElement>,
+  scopeRoot: HTMLElement | null,
 ) {
   const startRect = activeInteraction.startRects[nodeId];
-  const element = findNodeElement(nodeId, previewElements);
+  const element = findScopedPreviewElement(nodeId, previewElements, scopeRoot);
   if (!startRect || !element) return;
   const nextTranslate = getDirectMovePreviewTranslate(startRect, rect);
   if (element.style.getPropertyValue('translate') !== nextTranslate) {
@@ -587,8 +668,9 @@ function applyDirectResizePreview(
   rect: BuilderCanvasNode['rect'],
   originalStyles: Map<string, ResizePreviewStyleSnapshot>,
   previewElements: Map<string, HTMLElement>,
+  scopeRoot: HTMLElement | null,
 ) {
-  const element = findNodeElement(activeInteraction.nodeId, previewElements);
+  const element = findScopedPreviewElement(activeInteraction.nodeId, previewElements, scopeRoot);
   if (!element) return;
   if (!originalStyles.has(activeInteraction.nodeId)) {
     originalStyles.set(activeInteraction.nodeId, {
@@ -616,7 +698,7 @@ function clearDirectMovePreview(
   previewElements: Map<string, HTMLElement>,
 ) {
   for (const nodeId of previewNodeIds) {
-    const element = findNodeElement(nodeId, previewElements);
+    const element = getClaimedPreviewElement(nodeId, previewElements);
     if (element) {
       element.style.removeProperty('translate');
       delete element.dataset.builderDirectMovePreview;
@@ -631,7 +713,7 @@ function clearDirectResizePreviewMarkers(
   previewElements: Map<string, HTMLElement>,
 ) {
   for (const nodeId of originalStyles.keys()) {
-    const element = findNodeElement(nodeId, previewElements);
+    const element = getClaimedPreviewElement(nodeId, previewElements);
     if (element) {
       delete element.dataset.builderDirectResizePreview;
     }
@@ -645,7 +727,7 @@ function restoreDirectResizePreview(
   previewElements: Map<string, HTMLElement>,
 ) {
   for (const [nodeId, styles] of originalStyles) {
-    const element = findNodeElement(nodeId, previewElements);
+    const element = getClaimedPreviewElement(nodeId, previewElements);
     if (element) {
       element.style.left = styles.left;
       element.style.top = styles.top;
@@ -656,6 +738,229 @@ function restoreDirectResizePreview(
     previewElements.delete(nodeId);
   }
   originalStyles.clear();
+}
+
+function discardDirectPreviews(
+  previewNodeIds: Set<string>,
+  originalResizeStyles: Map<string, ResizePreviewStyleSnapshot>,
+  previewElements: Map<string, HTMLElement>,
+) {
+  previewNodeIds.clear();
+  originalResizeStyles.clear();
+  previewElements.clear();
+}
+
+export type InteractionMutationSessionController = {
+  activePointerId: () => number | null;
+  begin: (pointerId: number) => boolean;
+  cancel: (pointerId?: number) => boolean;
+  commit: (pointerId?: number) => boolean;
+};
+
+export function createInteractionMutationSessionController(callbacks: {
+  begin: () => void;
+  cancel: () => void;
+  commit: () => void;
+}): InteractionMutationSessionController {
+  let activePointerId: number | null = null;
+
+  const finish = (mode: 'cancel' | 'commit', pointerId?: number): boolean => {
+    if (activePointerId === null) return false;
+    if (pointerId !== undefined && pointerId !== activePointerId) return false;
+    activePointerId = null;
+    callbacks[mode]();
+    return true;
+  };
+
+  return {
+    activePointerId: () => activePointerId,
+    begin: (pointerId) => {
+      if (activePointerId === pointerId) return false;
+      if (activePointerId !== null) finish('cancel');
+      activePointerId = pointerId;
+      callbacks.begin();
+      return true;
+    },
+    cancel: (pointerId) => finish('cancel', pointerId),
+    commit: (pointerId) => finish('commit', pointerId),
+  };
+}
+
+export type PointerMoveCoalescerRefs = {
+  pending: { current: PointerMoveSnapshot };
+  hasPending: { current: boolean };
+  frame: { current: number | null };
+};
+
+export type PointerMoveCoalescer = {
+  setSample: (pointerId: number, clientX: number, clientY: number, shiftKey: boolean) => void;
+  flush: () => void;
+  cancel: () => void;
+  isScheduled: () => boolean;
+  hasPending: () => boolean;
+};
+
+/**
+ * Latest-sample-only rAF coalescer for canvas pointermove events. At most one
+ * frame is ever scheduled and at most one sample is processed per frame; the
+ * most recently written sample wins. Operates on caller-owned refs (shared with
+ * the page-reset / unmount lifecycle effects) so it never allocates per pointer
+ * sample — it only copies primitives into the existing scratch object.
+ */
+export function createPointerMoveCoalescer(options: {
+  refs: PointerMoveCoalescerRefs;
+  process: (sample: PointerMoveSnapshot) => void;
+  requestFrame: (callback: () => void) => number;
+  cancelFrame: (handle: number) => void;
+}): PointerMoveCoalescer {
+  const { refs, process, requestFrame, cancelFrame } = options;
+  let generation = 0;
+  let ownedFrameHandle: number | null = null;
+
+  const cancelOwnedFrame = () => {
+    generation += 1;
+    if (ownedFrameHandle !== null && refs.frame.current === ownedFrameHandle) {
+      cancelFrame(ownedFrameHandle);
+      refs.frame.current = null;
+    }
+    ownedFrameHandle = null;
+  };
+
+  return {
+    setSample(pointerId, clientX, clientY, shiftKey) {
+      const pending = refs.pending.current;
+      pending.pointerId = pointerId;
+      pending.clientX = clientX;
+      pending.clientY = clientY;
+      pending.shiftKey = shiftKey;
+      refs.hasPending.current = true;
+      if (refs.frame.current !== null) return;
+      const scheduledGeneration = ++generation;
+      const handle = requestFrame(() => {
+        if (
+          generation !== scheduledGeneration
+          || ownedFrameHandle !== handle
+          || refs.frame.current !== handle
+        ) {
+          return;
+        }
+        ownedFrameHandle = null;
+        refs.frame.current = null;
+        if (refs.hasPending.current) {
+          refs.hasPending.current = false;
+          process(refs.pending.current);
+        }
+      });
+      ownedFrameHandle = handle;
+      refs.frame.current = handle;
+    },
+    flush() {
+      cancelOwnedFrame();
+      if (refs.hasPending.current) {
+        refs.hasPending.current = false;
+        process(refs.pending.current);
+      }
+    },
+    cancel() {
+      cancelOwnedFrame();
+      refs.hasPending.current = false;
+    },
+    isScheduled() {
+      return refs.frame.current !== null;
+    },
+    hasPending() {
+      return refs.hasPending.current;
+    },
+  };
+}
+
+export type ActivePanReplacementGuard = {
+  begin: (pointerId: number, viewport: ZoomState) => void;
+  finish: (pointerId: number) => boolean;
+  observe: (pointerId: number, viewport: ZoomState) => boolean;
+  publish: (pointerId: number, panX: number, panY: number) => void;
+};
+
+/**
+ * Tracks the viewport state owned by one active pan. `observe` returns true at
+ * most once when a fit/zoom/reset replaces that state, allowing the hook to
+ * terminate the stale pointer interaction without rolling the replacement
+ * viewport back to the pan's start coordinates.
+ */
+export function createActivePanReplacementGuard(): ActivePanReplacementGuard {
+  let active: { pointerId: number; viewport: ZoomState } | null = null;
+
+  return {
+    begin(pointerId, viewport) {
+      active = { pointerId, viewport: { ...viewport } };
+    },
+    finish(pointerId) {
+      if (active?.pointerId !== pointerId) return false;
+      active = null;
+      return true;
+    },
+    observe(pointerId, viewport) {
+      if (active?.pointerId !== pointerId) return false;
+      const ownedViewport = active.viewport;
+      if (
+        ownedViewport.zoom === viewport.zoom
+        && ownedViewport.panX === viewport.panX
+        && ownedViewport.panY === viewport.panY
+      ) {
+        return false;
+      }
+      active = null;
+      return true;
+    },
+    publish(pointerId, panX, panY) {
+      if (active?.pointerId !== pointerId) return;
+      active.viewport.panX = panX;
+      active.viewport.panY = panY;
+    },
+  };
+}
+
+/**
+ * Computes the next panX/panY for a processed pan frame. Returns null when the
+ * computed coordinates are identical to the last published ones, so the caller
+ * can skip invoking the React zoom setter entirely for redundant frames.
+ */
+export function computePanZoomUpdate(params: {
+  startPanX: number;
+  startPanY: number;
+  deltaX: number;
+  deltaY: number;
+  lastPublishedPanX: number | null;
+  lastPublishedPanY: number | null;
+}): { panX: number; panY: number } | null {
+  const panX = params.startPanX + params.deltaX;
+  const panY = params.startPanY + params.deltaY;
+  if (params.lastPublishedPanX === panX && params.lastPublishedPanY === panY) return null;
+  return { panX, panY };
+}
+
+export type HoveredContainerUpdateDecision = {
+  nextHit: ContainerHitRect | null;
+  nextId: string | null;
+  shouldPublish: boolean;
+};
+
+/**
+ * Resolves whether a hovered-container hit should publish a new
+ * hovered-container state. Equality is by the meaningful id (not by
+ * ContainerHitRect object identity), so the same id represented by a fresh rect
+ * object does not trigger an extra React state write.
+ */
+export function resolveHoveredContainerUpdate(params: {
+  currentHoveredId: string | null;
+  nextHit: ContainerHitRect | null;
+}): HoveredContainerUpdateDecision {
+  const nextId = params.nextHit?.id ?? null;
+  return {
+    nextHit: params.nextHit,
+    nextId,
+    shouldPublish: params.currentHoveredId !== nextId,
+  };
 }
 
 export function useCanvasInteractions({
@@ -669,6 +974,7 @@ export function useCanvasInteractions({
   commitMutationSession,
   currentViewport,
   gridSnapSize,
+  interactionResetKey,
   nodesById,
   onToast,
   selectedNodeIds,
@@ -691,6 +997,8 @@ export function useCanvasInteractions({
   selectedNodeIdSet,
 }: UseCanvasInteractionsArgs) {
   const [interaction, setInteraction] = useState<InteractionState>(null);
+  const interactionRef = useRef<InteractionState>(interaction);
+  interactionRef.current = interaction;
   const [guides, setGuides] = useState<AlignmentGuide[]>(EMPTY_ALIGNMENT_GUIDES);
   const guidesRef = useRef<AlignmentGuide[]>(EMPTY_ALIGNMENT_GUIDES);
   const [interactionPointer, setInteractionPointer] = useState<InteractionPointerPosition | null>(null);
@@ -703,7 +1011,10 @@ export function useCanvasInteractions({
   const interactionGeometrySnapshotRef = useRef<InteractionGeometrySnapshot | null>(null);
   const moveInteractionSessionRef = useRef<MoveInteractionSession | null>(null);
   const moveActivationRef = useRef<{ pointerId: number; active: boolean } | null>(null);
-  const directMoveFastPreviewPointerRef = useRef<number | null>(null);
+  const lastPublishedPanRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+  const activePanReplacementGuardRef = useRef<ActivePanReplacementGuard | null>(null);
+  activePanReplacementGuardRef.current ??= createActivePanReplacementGuard();
+  const activePanReplacementGuard = activePanReplacementGuardRef.current;
   const overlapPickerClearedPointerRef = useRef<number | null>(null);
   const pendingPointerMoveRef = useRef<PointerMoveSnapshot>({
     pointerId: 0,
@@ -736,20 +1047,40 @@ export function useCanvasInteractions({
   const directPreviewNodeIdsRef = useRef<Set<string>>(new Set());
   const directPreviewElementsRef = useRef<Map<string, HTMLElement>>(new Map());
   const directResizePreviewStylesRef = useRef<Map<string, ResizePreviewStyleSnapshot>>(new Map());
+  const directPreviewScopeRef = useRef<DirectPreviewScope | null>(null);
   const [resizePreviewRect, setResizePreviewRect] = useState<BuilderCanvasNode['rect'] | null>(null);
   const resizePreviewRectRef = useRef<BuilderCanvasNode['rect'] | null>(null);
+  const mutationCallbacksRef = useRef({
+    begin: beginMutationSession,
+    cancel: cancelMutationSession,
+    commit: commitMutationSession,
+  });
+  mutationCallbacksRef.current.begin = beginMutationSession;
+  mutationCallbacksRef.current.cancel = cancelMutationSession;
+  mutationCallbacksRef.current.commit = commitMutationSession;
+  const mutationSessionControllerRef = useRef<InteractionMutationSessionController | null>(null);
+  mutationSessionControllerRef.current ??= createInteractionMutationSessionController({
+    begin: () => mutationCallbacksRef.current.begin(),
+    cancel: () => mutationCallbacksRef.current.cancel(),
+    commit: () => mutationCallbacksRef.current.commit(),
+  });
+  const mutationSessionController = mutationSessionControllerRef.current;
   pendingDirectMoveSnapEdgeScratchRef.current ??= createSnapEdgeScratch();
   const moveNodeIntoContainer = useBuilderCanvasStore((state) => state.moveNodeIntoContainer);
-  const setHoveredContainerIdIfChanged = useCallback((nextHoveredContainerId: string | null) => {
-    if (hoveredContainerIdRef.current === nextHoveredContainerId) return;
-    hoveredContainerIdRef.current = nextHoveredContainerId;
-    setHoveredContainerId(nextHoveredContainerId);
-  }, []);
   const setHoveredContainerHitIfChanged = useCallback((nextHit: ContainerHitRect | null) => {
-    if (hoveredContainerHitRef.current === nextHit) return;
+    // Always sync the sticky/preferred hit ref (its geometry may change even
+    // when the hovered id does not), but only publish hovered-container state
+    // when the meaningful id actually changes. Equality is id-based, never
+    // ContainerHitRect object identity.
     hoveredContainerHitRef.current = nextHit;
-    setHoveredContainerIdIfChanged(nextHit?.id ?? null);
-  }, [setHoveredContainerIdIfChanged]);
+    const decision = resolveHoveredContainerUpdate({
+      currentHoveredId: hoveredContainerIdRef.current,
+      nextHit,
+    });
+    if (!decision.shouldPublish) return;
+    hoveredContainerIdRef.current = decision.nextId;
+    setHoveredContainerId(decision.nextId);
+  }, []);
   const setInteractionPointerIfChanged = useCallback((nextPointer: InteractionPointerPosition | null) => {
     if (areInteractionPointersEqual(interactionPointerRef.current, nextPointer)) return;
     interactionPointerRef.current = nextPointer;
@@ -761,14 +1092,133 @@ export function useCanvasInteractions({
     resizePreviewRectRef.current = nextStateRect;
     setResizePreviewRect(nextStateRect);
   }, []);
+  const previousInteractionResetKeyRef = useRef(interactionResetKey);
 
-  useEffect(() => {
-    if (!activeViewport || activeViewport === currentViewport) return;
-    cancelMutationSession();
+  const getDirectPreviewScopeRoot = useCallback((): HTMLElement | null => {
+    const scope = directPreviewScopeRef.current;
+    return scope && scope.renderKey === interactionResetKey ? scope.root : null;
+  }, [interactionResetKey]);
+
+  useIsomorphicLayoutEffect(() => () => {
+    const activeInteraction = interactionRef.current;
+    if (activeInteraction) {
+      canceledInteractionPointerIdsRef.current.add(activeInteraction.pointerId);
+    }
+    if (activeInteraction?.type === 'pan') {
+      activePanReplacementGuard.finish(activeInteraction.pointerId);
+    }
+    mutationSessionController.cancel();
+    if (pointerMoveFrameRef.current !== null) {
+      window.cancelAnimationFrame(pointerMoveFrameRef.current);
+      pointerMoveFrameRef.current = null;
+    }
+    hasPendingPointerMoveRef.current = false;
+    // The canvas is leaving the tree, so restoring detached inline styles has
+    // no user-visible value and risks touching a concurrently remounted node.
+    discardDirectPreviews(
+      directPreviewNodeIdsRef.current,
+      directResizePreviewStylesRef.current,
+      directPreviewElementsRef.current,
+    );
+    directPreviewScopeRef.current = null;
+  }, [activePanReplacementGuard, mutationSessionController]);
+
+  useIsomorphicLayoutEffect(() => {
+    if (previousInteractionResetKeyRef.current === interactionResetKey) return;
+    previousInteractionResetKeyRef.current = interactionResetKey;
+    const activeInteraction = interactionRef.current;
+    if (activeInteraction) {
+      canceledInteractionPointerIdsRef.current.add(activeInteraction.pointerId);
+    }
+    if (activeInteraction?.type === 'pan') {
+      activePanReplacementGuard.finish(activeInteraction.pointerId);
+    }
+    mutationSessionController.cancel(activeInteraction?.pointerId);
+    if (pointerMoveFrameRef.current !== null) {
+      window.cancelAnimationFrame(pointerMoveFrameRef.current);
+      pointerMoveFrameRef.current = null;
+    }
+    hasPendingPointerMoveRef.current = false;
     interactionGeometrySnapshotRef.current = null;
     moveInteractionSessionRef.current = null;
     moveActivationRef.current = null;
-    directMoveFastPreviewPointerRef.current = null;
+    overlapPickerClearedPointerRef.current = null;
+    pendingDirectMoveRectRef.current = null;
+    lastDirectMoveFrameInputRef.current = null;
+    pendingDirectMoveRectsRef.current = null;
+    pendingDirectMoveRectsDraftRef.current.clear();
+    pendingDirectMoveRectDraftsByIdRef.current.clear();
+    pendingDirectResizeRectRef.current = null;
+    // The render key already belongs to the next page. Never write page-A
+    // snapshots during this boundary, even if React or the DOM reuses an id.
+    discardDirectPreviews(
+      directPreviewNodeIdsRef.current,
+      directResizePreviewStylesRef.current,
+      directPreviewElementsRef.current,
+    );
+    directPreviewScopeRef.current = null;
+    interactionRef.current = null;
+    setInteraction(null);
+    setActiveViewport(null);
+    setInteractionPointerIfChanged(null);
+    setResizePreviewRectIfChanged(null);
+    setGuidesIfChanged(guidesRef, setGuides, EMPTY_ALIGNMENT_GUIDES);
+    setHoveredContainerHitIfChanged(null);
+    setContextMenu(null);
+    setOverlapPicker(null);
+    setSelectionBox(null);
+    setIsSpacePressed(false);
+    setSelectedNodeIds([], null);
+    useBuilderCanvasStore.getState().setSelectedSurfaceKey(null);
+  }, [
+    interactionResetKey,
+    activePanReplacementGuard,
+    mutationSessionController,
+    setActiveViewport,
+    setContextMenu,
+    setHoveredContainerHitIfChanged,
+    setInteractionPointerIfChanged,
+    setOverlapPicker,
+    setResizePreviewRectIfChanged,
+    setSelectedNodeIds,
+    setSelectionBox,
+  ]);
+
+  useIsomorphicLayoutEffect(() => {
+    const activeInteraction = interactionRef.current;
+    if (
+      activeInteraction?.type !== 'pan'
+      || !activePanReplacementGuard.observe(activeInteraction.pointerId, zoomState)
+    ) {
+      return;
+    }
+
+    // A fit/zoom/reset owns the new viewport. End the old pan before passive
+    // effect recreation and never restore its stale startPan coordinates.
+    canceledInteractionPointerIdsRef.current.add(activeInteraction.pointerId);
+    if (pointerMoveFrameRef.current !== null) {
+      window.cancelAnimationFrame(pointerMoveFrameRef.current);
+      pointerMoveFrameRef.current = null;
+    }
+    hasPendingPointerMoveRef.current = false;
+    interactionRef.current = null;
+    setInteraction(null);
+    setActiveViewport(null);
+    setInteractionPointerIfChanged(null);
+    setGuidesIfChanged(guidesRef, setGuides, EMPTY_ALIGNMENT_GUIDES);
+  }, [
+    activePanReplacementGuard,
+    setActiveViewport,
+    setInteractionPointerIfChanged,
+    zoomState,
+  ]);
+
+  useEffect(() => {
+    if (!activeViewport || activeViewport === currentViewport) return;
+    mutationSessionController.cancel(interactionRef.current?.pointerId);
+    interactionGeometrySnapshotRef.current = null;
+    moveInteractionSessionRef.current = null;
+    moveActivationRef.current = null;
     overlapPickerClearedPointerRef.current = null;
     pendingDirectMoveRectRef.current = null;
     lastDirectMoveFrameInputRef.current = null;
@@ -778,6 +1228,7 @@ export function useCanvasInteractions({
     pendingDirectResizeRectRef.current = null;
     clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
     restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
+    directPreviewScopeRef.current = null;
     setActiveViewport(null);
     setInteraction(null);
     setInteractionPointerIfChanged(null);
@@ -786,8 +1237,8 @@ export function useCanvasInteractions({
     setHoveredContainerHitIfChanged(null);
   }, [
     activeViewport,
-    cancelMutationSession,
     currentViewport,
+    mutationSessionController,
     setActiveViewport,
     setHoveredContainerHitIfChanged,
     setInteractionPointerIfChanged,
@@ -803,11 +1254,13 @@ export function useCanvasInteractions({
       event.preventDefault();
       event.stopPropagation();
       canceledInteractionPointerIdsRef.current.add(activeInteraction.pointerId);
-      cancelMutationSession();
+      if (activeInteraction.type === 'pan') {
+        activePanReplacementGuard.finish(activeInteraction.pointerId);
+      }
+      mutationSessionController.cancel(activeInteraction.pointerId);
       interactionGeometrySnapshotRef.current = null;
       moveInteractionSessionRef.current = null;
       moveActivationRef.current = null;
-      directMoveFastPreviewPointerRef.current = null;
       overlapPickerClearedPointerRef.current = null;
       pendingDirectMoveRectRef.current = null;
       lastDirectMoveFrameInputRef.current = null;
@@ -817,6 +1270,7 @@ export function useCanvasInteractions({
       pendingDirectResizeRectRef.current = null;
       clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
       restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
+      directPreviewScopeRef.current = null;
       setInteraction(null);
       setActiveViewport(null);
       setInteractionPointerIfChanged(null);
@@ -830,8 +1284,9 @@ export function useCanvasInteractions({
     window.addEventListener('keydown', handleInteractionEscape, true);
     return () => window.removeEventListener('keydown', handleInteractionEscape, true);
   }, [
-    cancelMutationSession,
+    activePanReplacementGuard,
     interaction,
+    mutationSessionController,
     setActiveViewport,
     setContextMenu,
     setHoveredContainerHitIfChanged,
@@ -875,7 +1330,7 @@ export function useCanvasInteractions({
 
       const geometry = captureInteractionGeometry();
       interactionGeometrySnapshotRef.current = geometry;
-      beginMutationSession();
+      mutationSessionController.begin(moveInteraction.pointerId);
       const nextSession = createMoveInteractionSession({
         activeGroupId,
         childrenMap,
@@ -884,6 +1339,12 @@ export function useCanvasInteractions({
         rootVisibleNodes,
         visibleContainerNodes,
       });
+      if (!hoveredContainerHitRef.current) {
+        setHoveredContainerHitIfChanged(resolveInitialMoveContainerHit(
+          nextSession.containerHitRects,
+          moveInteraction.startParentId,
+        ));
+      }
       moveInteractionSessionRef.current = nextSession;
       return nextSession;
     }
@@ -894,10 +1355,26 @@ export function useCanvasInteractions({
       if (activeInteraction.type === 'pan') {
         const deltaX = pointer.clientX - activeInteraction.originX;
         const deltaY = pointer.clientY - activeInteraction.originY;
+        const nextPan = computePanZoomUpdate({
+          startPanX: activeInteraction.startPanX,
+          startPanY: activeInteraction.startPanY,
+          deltaX,
+          deltaY,
+          lastPublishedPanX: lastPublishedPanRef.current.x,
+          lastPublishedPanY: lastPublishedPanRef.current.y,
+        });
+        if (!nextPan) return;
+        lastPublishedPanRef.current.x = nextPan.panX;
+        lastPublishedPanRef.current.y = nextPan.panY;
+        activePanReplacementGuard.publish(
+          activeInteraction.pointerId,
+          nextPan.panX,
+          nextPan.panY,
+        );
         setZoomState((currentState) => ({
           ...currentState,
-          panX: activeInteraction.startPanX + deltaX,
-          panY: activeInteraction.startPanY + deltaY,
+          panX: nextPan.panX,
+          panY: nextPan.panY,
         }));
         return;
       }
@@ -919,51 +1396,12 @@ export function useCanvasInteractions({
         if (!moveActivation?.active) {
           moveActivationRef.current = { pointerId: activeInteraction.pointerId, active: true };
         }
-        if (
-          activeInteraction.nodeIds.length === 1
-          && activeInteraction.canDirectPreview
-          && !moveInteractionSessionRef.current
-          && directMoveFastPreviewPointerRef.current !== activeInteraction.pointerId
-        ) {
-          const nodeId = activeInteraction.nodeIds[0];
-          const baseAbsoluteRect = activeInteraction.startAbsoluteRects[nodeId];
-          const currentNode = nodesById.get(nodeId);
-          if (currentNode && baseAbsoluteRect) {
-            directMoveFastPreviewPointerRef.current = activeInteraction.pointerId;
-            beginMutationSession();
-            const tentative = pendingDirectMoveAbsoluteRectDraftRef.current;
-            tentative.x = baseAbsoluteRect.x + deltaX;
-            tentative.y = baseAbsoluteRect.y + deltaY;
-            tentative.width = baseAbsoluteRect.width;
-            tentative.height = baseAbsoluteRect.height;
-            const parentRect = currentNode.parentId
-              ? absoluteRectById.get(currentNode.parentId) ?? null
-              : null;
-            const allowOverflow = canFreeMoveNodeOnDesktop(currentNode, nodesById, activeInteraction.viewport);
-            const nextRect = pendingDirectMoveLocalRectDraftRef.current;
-            const didMovePreviewRectChange = writeLocalClampedRectForParent(
-              nextRect,
-              tentative,
-              parentRect,
-              parentRect?.width ?? stageWidth,
-              parentRect?.height ?? stageHeight,
-              allowOverflow,
-            );
-            pendingDirectMoveRectRef.current = nextRect;
-            pendingDirectMoveRectsRef.current = null;
-            setHoveredContainerHitIfChanged(null);
-            setGuidesIfChanged(guidesRef, setGuides, EMPTY_ALIGNMENT_GUIDES);
-            if (didMovePreviewRectChange || !directPreviewNodeIdsRef.current.has(nodeId)) {
-              applyDirectMovePreviewForNode(
-                activeInteraction,
-                nodeId,
-                nextRect,
-                directPreviewNodeIdsRef.current,
-                directPreviewElementsRef.current,
-              );
-            }
-          }
-        }
+        // A single activated move frame must calculate/apply only the final
+        // snapped/clamped preview. The first-frame unsnapped "fast" preview pass
+        // used to run here and was immediately overwritten by the snapped path
+        // below in the same processed frame (a redundant DOM write).
+        // beginMutationSession still happens exactly once via
+        // ensureMoveInteractionSession -> mutationSessionController.begin.
         const moveSession = ensureMoveInteractionSession(activeInteraction);
         if (!moveSession) return;
         if (overlapPickerClearedPointerRef.current !== activeInteraction.pointerId) {
@@ -1000,16 +1438,6 @@ export function useCanvasInteractions({
               nodeId,
               tentative,
             );
-            const centerX = tentative.x + tentative.width / 2;
-            const centerY = tentative.y + tentative.height / 2;
-            const hitContainer = findContainerHitCandidateForPoint(
-              centerX,
-              centerY,
-              moveSession.containerHitRects,
-              hoveredContainerHitRef.current,
-            );
-            setHoveredContainerHitIfChanged(hitContainer);
-
             const parentRect = currentNode.parentId
               ? currentAbsoluteRects.get(currentNode.parentId) ?? null
               : null;
@@ -1035,6 +1463,21 @@ export function useCanvasInteractions({
               parentRect?.height ?? stageHeight,
               allowOverflow,
             );
+            const preferredContainerHit = resolvePreferredMoveContainerHit({
+              containerHitRects: moveSession.containerHitRects,
+              currentHoveredContainerHit: hoveredContainerHitRef.current,
+              nodesById: currentNodesById,
+              startParentId: activeInteraction.startParentId,
+            });
+            const centerX = (parentRect?.x ?? 0) + nextRect.x + nextRect.width / 2;
+            const centerY = (parentRect?.y ?? 0) + nextRect.y + nextRect.height / 2;
+            const hitContainer = findContainerHitCandidateForPoint(
+              centerX,
+              centerY,
+              moveSession.containerHitRects,
+              preferredContainerHit,
+            );
+            setHoveredContainerHitIfChanged(hitContainer);
             if (activeInteraction.canDirectPreview) {
               pendingDirectMoveRectRef.current = nextRect;
               pendingDirectMoveRectsRef.current = null;
@@ -1045,6 +1488,7 @@ export function useCanvasInteractions({
                   nextRect,
                   directPreviewNodeIdsRef.current,
                   directPreviewElementsRef.current,
+                  getDirectPreviewScopeRoot(),
                 );
               }
             } else {
@@ -1119,6 +1563,7 @@ export function useCanvasInteractions({
             nextRects,
             directPreviewNodeIdsRef.current,
             directPreviewElementsRef.current,
+            getDirectPreviewScopeRoot(),
           );
         } else {
           pendingDirectMoveRectRef.current = null;
@@ -1180,74 +1625,99 @@ export function useCanvasInteractions({
           previewRect,
           directResizePreviewStylesRef.current,
           directPreviewElementsRef.current,
+          getDirectPreviewScopeRoot(),
         );
       }
       setResizePreviewRectIfChanged(previewRect);
     }
 
+    const pointerMoveCoalescer = createPointerMoveCoalescer({
+      refs: {
+        pending: pendingPointerMoveRef,
+        hasPending: hasPendingPointerMoveRef,
+        frame: pointerMoveFrameRef,
+      },
+      process: processPointerMove,
+      requestFrame: (callback) => window.requestAnimationFrame(callback),
+      cancelFrame: (handle) => window.cancelAnimationFrame(handle),
+    });
+
     function flushPendingPointerMove() {
-      if (pointerMoveFrameRef.current !== null) {
-        window.cancelAnimationFrame(pointerMoveFrameRef.current);
-        pointerMoveFrameRef.current = null;
-      }
-      const hasPendingPointerMove = hasPendingPointerMoveRef.current;
-      hasPendingPointerMoveRef.current = false;
-      if (hasPendingPointerMove) {
-        processPointerMove(pendingPointerMoveRef.current);
-      }
+      pointerMoveCoalescer.flush();
     }
 
     function handlePointerMove(event: PointerEvent) {
       if (event.pointerId !== activeInteraction.pointerId) return;
       if (canceledInteractionPointerIdsRef.current.has(activeInteraction.pointerId)) return;
+      pointerMoveCoalescer.setSample(event.pointerId, event.clientX, event.clientY, event.shiftKey);
+    }
 
-      const pendingPointerMove = pendingPointerMoveRef.current;
-      pendingPointerMove.pointerId = event.pointerId;
-      pendingPointerMove.clientX = event.clientX;
-      pendingPointerMove.clientY = event.clientY;
-      pendingPointerMove.shiftKey = event.shiftKey;
-      hasPendingPointerMoveRef.current = true;
-
-      if (pointerMoveFrameRef.current !== null) return;
-      pointerMoveFrameRef.current = window.requestAnimationFrame(() => {
-        pointerMoveFrameRef.current = null;
-        const hasPendingPointerMove = hasPendingPointerMoveRef.current;
-        hasPendingPointerMoveRef.current = false;
-        if (hasPendingPointerMove) {
-          processPointerMove(pendingPointerMoveRef.current);
+    function cancelPointerInteraction(pointerId: number) {
+      if (pointerId !== activeInteraction.pointerId) return;
+      canceledInteractionPointerIdsRef.current.add(pointerId);
+      pointerMoveCoalescer.cancel();
+      mutationSessionController.cancel(pointerId);
+      if (activeInteraction.type === 'pan') {
+        const shouldRestorePanStart = activePanReplacementGuard.finish(pointerId);
+        if (shouldRestorePanStart) {
+          setZoomState((currentState) => ({
+            ...currentState,
+            panX: activeInteraction.startPanX,
+            panY: activeInteraction.startPanY,
+          }));
         }
-      });
+      }
+      interactionGeometrySnapshotRef.current = null;
+      moveInteractionSessionRef.current = null;
+      moveActivationRef.current = null;
+      overlapPickerClearedPointerRef.current = null;
+      pendingDirectMoveRectRef.current = null;
+      lastDirectMoveFrameInputRef.current = null;
+      pendingDirectMoveRectsRef.current = null;
+      pendingDirectMoveRectsDraftRef.current.clear();
+      pendingDirectMoveRectDraftsByIdRef.current.clear();
+      pendingDirectResizeRectRef.current = null;
+      clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
+      restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
+      directPreviewScopeRef.current = null;
+      interactionRef.current = null;
+      setHoveredContainerHitIfChanged(null);
+      setInteraction(null);
+      setActiveViewport(null);
+      setInteractionPointerIfChanged(null);
+      setResizePreviewRectIfChanged(null);
+      setGuidesIfChanged(guidesRef, setGuides, EMPTY_ALIGNMENT_GUIDES);
+      setContextMenu(null);
+      setOverlapPicker(null);
+    }
+
+    function handlePointerCancel(event: PointerEvent) {
+      cancelPointerInteraction(event.pointerId);
     }
 
     function handlePointerUp(event: PointerEvent) {
       if (event.pointerId !== activeInteraction.pointerId) return;
-      flushPendingPointerMove();
       if (canceledInteractionPointerIdsRef.current.delete(activeInteraction.pointerId)) {
-        interactionGeometrySnapshotRef.current = null;
-        moveInteractionSessionRef.current = null;
-        moveActivationRef.current = null;
-        directMoveFastPreviewPointerRef.current = null;
-        overlapPickerClearedPointerRef.current = null;
-        pendingDirectMoveRectRef.current = null;
-        lastDirectMoveFrameInputRef.current = null;
-        pendingDirectMoveRectsRef.current = null;
-        pendingDirectMoveRectsDraftRef.current.clear();
-        pendingDirectMoveRectDraftsByIdRef.current.clear();
-        pendingDirectResizeRectRef.current = null;
-        clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
-        restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
-        setResizePreviewRectIfChanged(null);
         return;
+      }
+      flushPendingPointerMove();
+      if (activeInteraction.type === 'pan') {
+        activePanReplacementGuard.finish(activeInteraction.pointerId);
       }
       const activeMoveActivation = moveActivationRef.current?.pointerId === activeInteraction.pointerId
         ? moveActivationRef.current
         : null;
       if (activeInteraction.type === 'move' && !activeMoveActivation?.active) {
-        cancelMutationSession();
+        if (activeInteraction.clickSelectionNodeId) {
+          setSelectedNodeIds(
+            [activeInteraction.clickSelectionNodeId],
+            activeInteraction.clickSelectionNodeId,
+          );
+        }
+        mutationSessionController.cancel(activeInteraction.pointerId);
         interactionGeometrySnapshotRef.current = null;
         moveInteractionSessionRef.current = null;
         moveActivationRef.current = null;
-        directMoveFastPreviewPointerRef.current = null;
         overlapPickerClearedPointerRef.current = null;
         pendingDirectMoveRectRef.current = null;
         lastDirectMoveFrameInputRef.current = null;
@@ -1257,6 +1727,7 @@ export function useCanvasInteractions({
         pendingDirectResizeRectRef.current = null;
         clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
         restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
+        directPreviewScopeRef.current = null;
         setHoveredContainerHitIfChanged(null);
         setInteraction(null);
         setActiveViewport(null);
@@ -1289,12 +1760,20 @@ export function useCanvasInteractions({
         // historical center-point resolution.
         const preferSectionOverlap = currentNode !== null && geometry !== null
           && canFreeMoveNodeOnDesktop(currentNode, geometry.nodesById, activeInteraction.viewport);
+        const preferredContainerHit = geometry
+          ? resolvePreferredMoveContainerHit({
+              containerHitRects,
+              currentHoveredContainerHit: hoveredContainerHitRef.current,
+              nodesById: geometry.nodesById,
+              startParentId: activeInteraction.startParentId,
+            })
+          : hoveredContainerHitRef.current;
         return {
           resolved: true,
           containerId: resolvePendingMoveHoverContainerId({
             containerHitRects,
             parentAbsoluteRect,
-            preferredContainerHit: hoveredContainerHitRef.current,
+            preferredContainerHit,
             rect: pendingRect,
             preferSectionOverlap,
             topLevelSectionHitRects: preferSectionOverlap && geometry
@@ -1385,10 +1864,8 @@ export function useCanvasInteractions({
         && activeInteraction.nodeIds.length === 1
         && currentHoveredContainerId !== activeInteraction.startParentId,
       );
-      let didSpecialFlowReorderCommit = false;
-      let didSpecialFlowResizeCommit = false;
       if (willReparent && activeInteraction.type === 'move' && activeInteraction.viewport !== 'desktop') {
-        cancelMutationSession();
+        mutationSessionController.cancel(activeInteraction.pointerId);
         onToast?.('Reparenting is desktop-only in this build', 'error');
       } else {
         if (
@@ -1444,8 +1921,7 @@ export function useCanvasInteractions({
               if (origIndex === -1 || origIndex === insertionIndex) {
                 // No actual reorder (same slot or invalid). Restore original positions without
                 // creating a history entry. Prevents position drift when user drags within a slot.
-                cancelMutationSession();
-                didSpecialFlowReorderCommit = true;
+                mutationSessionController.cancel(activeInteraction.pointerId);
               } else {
                 const reorderRects = computeReorderedFlowSiblingRects(
                   freshNodes,
@@ -1479,10 +1955,8 @@ export function useCanvasInteractions({
                     'commit',
                     zIndexById,
                   );
-                  didSpecialFlowReorderCommit = true;
                 } else {
-                  cancelMutationSession();
-                  didSpecialFlowReorderCommit = true;
+                  mutationSessionController.cancel(activeInteraction.pointerId);
                 }
               }
             }
@@ -1536,24 +2010,24 @@ export function useCanvasInteractions({
                   activeInteraction.viewport,
                   'commit',
                 );
-                didSpecialFlowResizeCommit = true;
               }
             }
           }
         }
 
-        if (activeInteraction.type !== 'pan' && !didSpecialFlowReorderCommit && !didSpecialFlowResizeCommit) {
-          commitMutationSession();
+        if (activeInteraction.type !== 'pan') {
+          mutationSessionController.commit(activeInteraction.pointerId);
         }
       }
       setHoveredContainerHitIfChanged(null);
       interactionGeometrySnapshotRef.current = null;
       moveInteractionSessionRef.current = null;
       moveActivationRef.current = null;
-      directMoveFastPreviewPointerRef.current = null;
       overlapPickerClearedPointerRef.current = null;
       pendingDirectResizeRectRef.current = null;
       clearDirectResizePreviewMarkers(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
+      directPreviewScopeRef.current = null;
+      interactionRef.current = null;
       setInteraction(null);
       setActiveViewport(null);
       setInteractionPointerIfChanged(null);
@@ -1563,16 +2037,13 @@ export function useCanvasInteractions({
 
     window.addEventListener('pointermove', handlePointerMove);
     window.addEventListener('pointerup', handlePointerUp);
+    window.addEventListener('pointercancel', handlePointerCancel);
     return () => {
       window.removeEventListener('pointermove', handlePointerMove);
       window.removeEventListener('pointerup', handlePointerUp);
-      if (pointerMoveFrameRef.current !== null) {
-        window.cancelAnimationFrame(pointerMoveFrameRef.current);
-        pointerMoveFrameRef.current = null;
-      }
-      hasPendingPointerMoveRef.current = false;
+      window.removeEventListener('pointercancel', handlePointerCancel);
+      pointerMoveCoalescer.cancel();
       moveInteractionSessionRef.current = null;
-      directMoveFastPreviewPointerRef.current = null;
       pendingDirectMoveRectRef.current = null;
       lastDirectMoveFrameInputRef.current = null;
       pendingDirectMoveRectsRef.current = null;
@@ -1584,24 +2055,26 @@ export function useCanvasInteractions({
       setResizePreviewRectIfChanged(null);
     };
   }, [
-    cancelMutationSession,
     absoluteRectById,
+    activePanReplacementGuard,
     activeGroupId,
-    beginMutationSession,
     captureInteractionGeometry,
     childrenMap,
-    commitMutationSession,
+    getDirectPreviewScopeRoot,
     gridSnapSize,
     interaction,
     moveNodeIntoContainer,
+    mutationSessionController,
     nodesById,
     onToast,
     referenceGuides,
+    setContextMenu,
     setHoveredContainerHitIfChanged,
     setInteractionPointerIfChanged,
     setOverlapPicker,
     setActiveViewport,
     setResizePreviewRectIfChanged,
+    setSelectedNodeIds,
     setZoomState,
     stageHeight,
     stageWidth,
@@ -1614,6 +2087,10 @@ export function useCanvasInteractions({
   ]);
 
   const startPan = useCallback((event: React.PointerEvent) => {
+    const previousInteraction = interactionRef.current;
+    if (previousInteraction && previousInteraction.pointerId !== event.pointerId) {
+      canceledInteractionPointerIdsRef.current.add(previousInteraction.pointerId);
+    }
     setContextMenu(null);
     setOverlapPicker(null);
     setSelectionBox(null);
@@ -1629,8 +2106,12 @@ export function useCanvasInteractions({
     pendingDirectResizeRectRef.current = null;
     clearDirectMovePreview(directPreviewNodeIdsRef.current, directPreviewElementsRef.current);
     restoreDirectResizePreview(directResizePreviewStylesRef.current, directPreviewElementsRef.current);
+    directPreviewScopeRef.current = null;
+    mutationSessionController.cancel();
     setHoveredContainerHitIfChanged(null);
     setResizePreviewRectIfChanged(null);
+    lastPublishedPanRef.current = { x: zoomState.panX, y: zoomState.panY };
+    activePanReplacementGuard.begin(event.pointerId, zoomState);
     setInteraction({
       type: 'pan',
       pointerId: event.pointerId,
@@ -1639,21 +2120,43 @@ export function useCanvasInteractions({
       startPanX: zoomState.panX,
       startPanY: zoomState.panY,
     });
-  }, [setContextMenu, setHoveredContainerHitIfChanged, setOverlapPicker, setResizePreviewRectIfChanged, setSelectionBox, zoomState.panX, zoomState.panY]);
+  }, [activePanReplacementGuard, mutationSessionController, setContextMenu, setHoveredContainerHitIfChanged, setOverlapPicker, setResizePreviewRectIfChanged, setSelectionBox, zoomState]);
 
   const startMove = useCallback((nodeId: string, event: React.PointerEvent) => {
     event.preventDefault();
     event.stopPropagation();
+    const previousInteraction = interactionRef.current;
+    if (previousInteraction && previousInteraction.pointerId !== event.pointerId) {
+      canceledInteractionPointerIdsRef.current.add(previousInteraction.pointerId);
+    }
+    if (previousInteraction?.type === 'pan') {
+      activePanReplacementGuard.finish(previousInteraction.pointerId);
+    }
+    mutationSessionController.cancel(previousInteraction?.pointerId);
+    const hitNodeId = event.target instanceof HTMLElement
+      ? event.target.closest<HTMLElement>('[data-node-id]')?.dataset.nodeId ?? nodeId
+      : nodeId;
+    const additive = event.metaKey || event.ctrlKey || event.shiftKey;
     const moveNodeId = resolveSelectedDomMoveTargetId(
       nodeId,
       event.target,
-      event.metaKey || event.ctrlKey || event.shiftKey,
+      additive,
+    );
+    const clickSelectionNodeId = resolveUnactivatedMoveSelectionId(
+      hitNodeId,
+      moveNodeId,
+      nodesById.get(hitNodeId)?.kind,
+      {
+        additive,
+        pointerType: event.pointerType,
+        selectedNodeCount: selectedNodeIds.length,
+        moveNodeSelected: selectedNodeIdSet.has(moveNodeId),
+      },
     );
     setContextMenu(null);
     setOverlapPicker((current) => (current?.mode === 'list' ? null : current));
     overlapPickerClearedPointerRef.current = null;
     moveInteractionSessionRef.current = null;
-    directMoveFastPreviewPointerRef.current = null;
     pendingDirectMoveRectRef.current = null;
     lastDirectMoveFrameInputRef.current = null;
     pendingDirectMoveRectsRef.current = null;
@@ -1665,7 +2168,13 @@ export function useCanvasInteractions({
     setHoveredContainerHitIfChanged(null);
     setResizePreviewRectIfChanged(null);
     const nodeIds = getUnlockedMoveNodeIds(moveNodeId, selectedNodeIds, selectedNodeIdSet, nodesById);
-    if (nodeIds.length === 0) return;
+    if (nodeIds.length === 0) {
+      directPreviewScopeRef.current = null;
+      return;
+    }
+    directPreviewScopeRef.current = viewportRef.current
+      ? { renderKey: interactionResetKey, root: viewportRef.current }
+      : null;
     const nodeIdSet = nodeIds === selectedNodeIds ? selectedNodeIdSet : new Set(nodeIds);
     const interactionViewport = currentViewport;
     const { startRects, startAbsoluteRects } = buildMoveStartRectRecords(
@@ -1690,6 +2199,7 @@ export function useCanvasInteractions({
     const nextInteraction: MoveInteraction = {
       type: 'move',
       nodeId: moveNodeId,
+      ...(clickSelectionNodeId ? { clickSelectionNodeId } : {}),
       nodeIds,
       nodeIdSet,
       canDirectPreview: canUseDirectMovePreview(nodeIds, nodesById),
@@ -1709,7 +2219,10 @@ export function useCanvasInteractions({
     setInteraction(nextInteraction);
   }, [
     absoluteRectById,
+    activePanReplacementGuard,
     currentViewport,
+    interactionResetKey,
+    mutationSessionController,
     nodesById,
     selectedNodeIdSet,
     selectedNodeIds,
@@ -1722,11 +2235,19 @@ export function useCanvasInteractions({
     setResizePreviewRectIfChanged,
     stageHeight,
     stageWidth,
+    viewportRef,
   ]);
 
   const startResize = useCallback((nodeId: string, handle: ResizeHandle, event: React.PointerEvent) => {
     event.preventDefault();
     event.stopPropagation();
+    const previousInteraction = interactionRef.current;
+    if (previousInteraction && previousInteraction.pointerId !== event.pointerId) {
+      canceledInteractionPointerIdsRef.current.add(previousInteraction.pointerId);
+    }
+    if (previousInteraction?.type === 'pan') {
+      activePanReplacementGuard.finish(previousInteraction.pointerId);
+    }
     setOverlapPicker(null);
     moveActivationRef.current = null;
     overlapPickerClearedPointerRef.current = null;
@@ -1742,12 +2263,18 @@ export function useCanvasInteractions({
     setHoveredContainerHitIfChanged(null);
     setResizePreviewRectIfChanged(null);
     const targetNode = nodesById.get(nodeId);
-    if (!targetNode) return;
+    if (!targetNode) {
+      directPreviewScopeRef.current = null;
+      return;
+    }
+    directPreviewScopeRef.current = viewportRef.current
+      ? { renderKey: interactionResetKey, root: viewportRef.current }
+      : null;
     const interactionViewport = currentViewport;
     setSelectedNodeId(nodeId);
     setActiveViewport(interactionViewport);
     interactionGeometrySnapshotRef.current = captureInteractionGeometry();
-    beginMutationSession();
+    mutationSessionController.begin(event.pointerId);
     const viewportRect = viewportRef.current?.getBoundingClientRect();
     const viewportOriginX = viewportRect?.left ?? 0;
     const viewportOriginY = viewportRect?.top ?? 0;
@@ -1776,9 +2303,11 @@ export function useCanvasInteractions({
     });
   }, [
     absoluteRectById,
-    beginMutationSession,
+    activePanReplacementGuard,
     captureInteractionGeometry,
     currentViewport,
+    interactionResetKey,
+    mutationSessionController,
     nodesById,
     setOverlapPicker,
     setActiveViewport,

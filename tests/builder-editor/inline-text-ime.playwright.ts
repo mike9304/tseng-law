@@ -123,7 +123,9 @@ async function createBuilderPage(
 async function draftText(page: Page, pageId: string, textId: string): Promise<string> {
   const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`);
   if (!response.ok()) return '';
-  const payload = (await response.json()) as { document?: { nodes?: Array<Record<string, any>> } };
+  const payload = (await response.json()) as {
+    document?: { nodes?: Array<{ id?: unknown; content?: { text?: unknown } }> };
+  };
   const node = payload.document?.nodes?.find((candidate) => candidate.id === textId);
   return typeof node?.content?.text === 'string' ? node.content.text : '';
 }
@@ -139,7 +141,7 @@ async function textBody(page: Page, textId: string) {
 async function openInlineEditor(page: Page, textId: string) {
   const { node, body } = await textBody(page, textId);
   await node.scrollIntoViewIfNeeded();
-  await node.dblclick({ position: { x: 30, y: 30 }, force: true });
+  await node.dblclick({ position: { x: 30, y: 30 } });
   const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
   await expect(editorShell).toBeVisible();
   const editable = editorShell.locator('.ProseMirror').first();
@@ -147,18 +149,19 @@ async function openInlineEditor(page: Page, textId: string) {
   return { body, editorShell, editable };
 }
 
-async function dispatchImeComposition(editable: Locator, from: string, to: string) {
-  await editable.evaluate((element, payload) => {
-    element.dispatchEvent(new CompositionEvent('compositionstart', { bubbles: true, data: '' }));
-    element.dispatchEvent(new InputEvent('beforeinput', {
-      bubbles: true,
-      cancelable: true,
-      data: payload.from,
-      inputType: 'insertCompositionText',
-    }));
-    element.dispatchEvent(new CompositionEvent('compositionupdate', { bubbles: true, data: payload.from }));
-    element.dispatchEvent(new CompositionEvent('compositionend', { bubbles: true, data: payload.to }));
-  }, { from, to });
+async function typeImeComposition(page: Page, editable: Locator, composing: string, committed: string) {
+  await editable.focus();
+  const session = await page.context().newCDPSession(page);
+  try {
+    await session.send('Input.imeSetComposition', {
+      text: composing,
+      selectionStart: composing.length,
+      selectionEnd: composing.length,
+    });
+    await session.send('Input.insertText', { text: committed });
+  } finally {
+    await session.detach();
+  }
 }
 
 test.describe('/ko/admin-builder inline text IME', () => {
@@ -189,10 +192,13 @@ test.describe('/ko/admin-builder inline text IME', () => {
       await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&ime=${Date.now().toString(36)}`);
 
       const first = await openInlineEditor(page, textId);
-      await dispatchImeComposition(first.editable, '안녕', '안녕');
-      await dispatchImeComposition(first.editable, '한자', '漢字');
-      await first.editable.fill(nextText);
-      await page.keyboard.press('Escape');
+      await first.editable.fill('');
+      await typeImeComposition(page, first.editable, '안녕', '안녕');
+      await first.editable.type(' ');
+      await typeImeComposition(page, first.editable, '한자', '漢字');
+      await first.editable.type(` ${token}`);
+      await expect(first.editable).toContainText(nextText);
+      await first.editable.press(`${process.platform === 'darwin' ? 'Meta' : 'Control'}+Enter`);
       await expect(first.editorShell).toBeHidden();
       await expect(first.body).toContainText(nextText);
 

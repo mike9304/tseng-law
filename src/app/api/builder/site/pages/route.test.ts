@@ -15,6 +15,7 @@ import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { SEED_DRAFT_UPDATED_BY } from '@/lib/builder/canvas/home-draft-reseed';
 import { createDefaultCanvasDocument } from '@/lib/builder/canvas/types';
 import { createDefaultSiteDocument, type BuilderPageMeta, type BuilderSiteDocument } from '@/lib/builder/site/types';
+import { SiteInvariantError } from '@/lib/builder/site/site-invariants';
 import * as route from '@/app/api/builder/site/pages/route';
 
 vi.mock('next/cache', () => ({
@@ -129,6 +130,21 @@ describe('/api/builder/site/pages', () => {
       errorCode: 'invalid_json',
     });
     expect(mockedCreatePage).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    [{ locale: 'ko', slug: 'blocked', title: 'Blocked', siteId: ['workspace-site-b'] }, ''],
+    [{ locale: 'ko', slug: 'blocked', title: 'Blocked' }, '?siteId=..%2F..%2Fx'],
+  ])('rejects a supplied invalid create site id before canonical persistence access', async (body, query) => {
+    const response = await route.POST(postRequest(body, query));
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({ ok: false, success: false, errorCode: 'invalid_site_id' });
+    expect(mockedReadSiteDocument).not.toHaveBeenCalled();
+    expect(mockedCreatePage).not.toHaveBeenCalled();
+    expect(mockedWritePageCanvas).not.toHaveBeenCalled();
+    expect(mockedWriteSiteDocument).not.toHaveBeenCalled();
   });
 
   it('lists pages from the selected workspace site', async () => {
@@ -287,6 +303,40 @@ describe('/api/builder/site/pages', () => {
       errorCode: 'page_create_failed',
     });
     expect(data.error).not.toContain('raw create failure');
+  });
+
+  it('surfaces a concurrent create invariant conflict as sanitized 409 JSON', async () => {
+    mockedCreatePage.mockRejectedValueOnce(new SiteInvariantError([{
+      code: 'ROUTE_DUPLICATE',
+      message: 'raw storage conflict with private details',
+      pageId: 'page-new',
+      conflictingPageId: 'page-racing-writer',
+      locale: 'en',
+      slug: 'contact',
+      field: 'slug',
+    }]));
+
+    const response = await route.POST(postRequest({ locale: 'en', slug: 'contact', title: 'Contact' }));
+    const data = await response.json();
+
+    expect(response.status).toBe(409);
+    expect(data).toMatchObject({
+      ok: false,
+      success: false,
+      error: 'Unable to create the page.',
+      errorCode: 'site_invariant_conflict',
+      issues: [{
+        code: 'ROUTE_DUPLICATE',
+        pageId: 'page-new',
+        conflictingPageId: 'page-racing-writer',
+        locale: 'en',
+        slug: 'contact',
+        field: 'slug',
+      }],
+    });
+    expect(JSON.stringify(data)).not.toContain('raw storage conflict');
+    expect(data.issues[0]).not.toHaveProperty('message');
+    expect(data).not.toHaveProperty('stack');
   });
 
   it('preserves the page create success shape', async () => {

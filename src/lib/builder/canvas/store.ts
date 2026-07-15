@@ -926,6 +926,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         selectedNodeIdSet: options.preserveSelection
           ? createSelectedNodeIdSet(preservedSelection.selectedNodeIds)
           : EMPTY_SELECTED_NODE_ID_SET,
+        selectedSurfaceKey: null,
         draftSaveState: 'idle',
         interactivePreview: createDefaultInteractivePreviewState(),
         history: createHistory(document),

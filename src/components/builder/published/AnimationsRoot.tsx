@@ -50,6 +50,7 @@ function isInInitialViewport(node: HTMLElement): boolean {
 
 export default function AnimationsRoot() {
   useEffect(() => {
+    const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
     const entranceNodes = Array.from(
       document.querySelectorAll<HTMLElement>('[data-anim-entrance]'),
     ).filter((node) => node.dataset.animEntrance && node.dataset.animEntrance !== 'none');
@@ -71,7 +72,7 @@ export default function AnimationsRoot() {
             }
           }
         },
-        { threshold: 0.16, rootMargin: '0px 0px -8% 0px' },
+        { threshold: 0.08, rootMargin: '0px 0px -4% 0px' },
       );
 
       entranceNodes.forEach((node) => {
@@ -90,6 +91,47 @@ export default function AnimationsRoot() {
       });
     }
     document.documentElement.dataset.builderAnimationsReady = 'true';
+
+    // Legacy composite sections contain `.reveal-stagger` grids that normally
+    // receive state from the legacy <Reveal> wrapper. Builder composites do not
+    // have that wrapper, so observe those grids here instead of leaving every
+    // child permanently translated from its initial pose.
+    const staggerGroups = Array.from(
+      document.querySelectorAll<HTMLElement>('.builder-pub-node .reveal-stagger'),
+    );
+    let staggerObserver: IntersectionObserver | null = null;
+    const transitionsDisabled = staggerGroups.some((group) => {
+      const child = group.firstElementChild;
+      if (!(child instanceof HTMLElement)) return false;
+      const durations = getComputedStyle(child).transitionDuration
+        .split(',')
+        .map((duration) => Number.parseFloat(duration) || 0);
+      return durations.length > 0 && durations.every((duration) => duration === 0);
+    });
+
+    if (reducedMotion || transitionsDisabled || !('IntersectionObserver' in window)) {
+      staggerGroups.forEach((group) => {
+        group.dataset.builderRevealState = 'visible';
+      });
+    } else if (staggerGroups.length > 0) {
+      staggerObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const group = entry.target as HTMLElement;
+          group.dataset.builderRevealState = 'visible';
+          staggerObserver?.unobserve(group);
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -4% 0px' });
+
+      staggerGroups.forEach((group) => {
+        group.dataset.builderRevealState = 'pending';
+        if (isInInitialViewport(group)) {
+          group.dataset.builderRevealState = 'visible';
+        } else {
+          staggerObserver?.observe(group);
+        }
+      });
+    }
 
     const scrollNodes = Array.from(
       document.querySelectorAll<HTMLElement>('[data-anim-scroll]'),
@@ -118,13 +160,13 @@ export default function AnimationsRoot() {
         let effectTransform = '';
 
         if (effect === 'parallax-y') {
-          effectTransform = `translateY(${Math.round(centeredProgress * -intensity)}px)`;
+          effectTransform = `translateY(${(centeredProgress * -intensity).toFixed(2)}px)`;
         } else if (effect === 'background-parallax') {
           const computedStyle = getComputedStyle(node);
           const basePosition = node.style.getPropertyValue('--builder-bg-base-position').trim()
             || computedStyle.backgroundPosition
             || 'center center';
-          const offset = Math.round(centeredProgress * -intensity);
+          const offset = Number((centeredProgress * -intensity).toFixed(2));
           node.style.setProperty('--builder-bg-base-position', basePosition);
           node.style.setProperty('--builder-bg-parallax-position', composeBackgroundParallaxPosition(basePosition, offset));
         } else if (effect === 'scale-on-scroll') {
@@ -137,7 +179,7 @@ export default function AnimationsRoot() {
         } else if (effect === 'scrub-translate') {
           node.style.setProperty('--builder-anim-scrub-progress', progress.toFixed(3));
           node.style.setProperty('--builder-anim-intensity', String(intensity));
-          effectTransform = `translateY(${Math.round(progress * -intensity)}px)`;
+          effectTransform = `translateY(${(progress * -intensity).toFixed(2)}px)`;
         } else if (effect === 'scrub-opacity') {
           node.style.setProperty('--builder-anim-scrub-progress', progress.toFixed(3));
           node.style.setProperty('--builder-anim-intensity', String(intensity));
@@ -319,6 +361,7 @@ export default function AnimationsRoot() {
 
     return () => {
       observer?.disconnect();
+      staggerObserver?.disconnect();
       exitObserver?.disconnect();
       if (animationFrame) window.cancelAnimationFrame(animationFrame);
       if (timelineFrame) window.cancelAnimationFrame(timelineFrame);
@@ -348,10 +391,30 @@ export default function AnimationsRoot() {
         transform: var(--builder-anim-visible-transform, var(--builder-base-transform, none)) !important;
         clip-path: var(--builder-anim-visible-clip-path, inset(0 0 0 0));
         transition:
-          opacity var(--builder-anim-duration, 600ms) var(--builder-anim-easing, ease-out) var(--builder-anim-delay, 0ms),
-          transform var(--builder-anim-duration, 600ms) var(--builder-anim-easing, ease-out) var(--builder-anim-delay, 0ms),
-          clip-path var(--builder-anim-duration, 600ms) var(--builder-anim-easing, ease-out) var(--builder-anim-delay, 0ms);
+          opacity var(--builder-anim-duration, 420ms) var(--builder-anim-easing, cubic-bezier(0.16, 1, 0.3, 1)) var(--builder-anim-delay, 0ms),
+          transform var(--builder-anim-duration, 420ms) var(--builder-anim-easing, cubic-bezier(0.16, 1, 0.3, 1)) var(--builder-anim-delay, 0ms),
+          clip-path var(--builder-anim-duration, 420ms) var(--builder-anim-easing, cubic-bezier(0.16, 1, 0.3, 1)) var(--builder-anim-delay, 0ms);
       }
+      .builder-pub-node .reveal-stagger[data-builder-reveal-state='pending'] > * {
+        opacity: 0 !important;
+        transform: translate3d(0, 34px, 0) !important;
+        transition:
+          opacity 380ms cubic-bezier(0.16, 1, 0.3, 1),
+          transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .builder-pub-node .reveal-stagger[data-builder-reveal-state='visible'] > * {
+        opacity: 1 !important;
+        /* Published composite parity: production's resting grid pose is 20px. */
+        transform: translate3d(0, 20px, 0) !important;
+        transition:
+          opacity 380ms cubic-bezier(0.16, 1, 0.3, 1),
+          transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .builder-pub-node .reveal-stagger[data-builder-reveal-state] > *:nth-child(2) { transition-delay: 60ms; }
+      .builder-pub-node .reveal-stagger[data-builder-reveal-state] > *:nth-child(3) { transition-delay: 120ms; }
+      .builder-pub-node .reveal-stagger[data-builder-reveal-state] > *:nth-child(4) { transition-delay: 180ms; }
+      .builder-pub-node .reveal-stagger[data-builder-reveal-state] > *:nth-child(5) { transition-delay: 240ms; }
+      .builder-pub-node .reveal-stagger[data-builder-reveal-state] > *:nth-child(6) { transition-delay: 300ms; }
       .builder-pub-node[data-anim-scroll='pin'] {
         position: sticky !important;
         top: 24px;
@@ -375,10 +438,10 @@ export default function AnimationsRoot() {
         box-shadow: var(--builder-anim-hover-box-shadow) !important;
         filter: var(--builder-anim-hover-filter) !important;
         transition:
-          opacity var(--builder-anim-hover-transition, 200ms) ease,
-          transform var(--builder-anim-hover-transition, 200ms) ease,
-          box-shadow var(--builder-anim-hover-transition, 200ms) ease,
-          filter var(--builder-anim-hover-transition, 200ms) ease;
+          opacity var(--builder-anim-hover-transition, 180ms) cubic-bezier(0.16, 1, 0.3, 1),
+          transform var(--builder-anim-hover-transition, 180ms) cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow var(--builder-anim-hover-transition, 180ms) cubic-bezier(0.16, 1, 0.3, 1),
+          filter var(--builder-anim-hover-transition, 180ms) cubic-bezier(0.16, 1, 0.3, 1);
       }
       .builder-pub-node[data-anim-click] {
         cursor: pointer;
@@ -426,6 +489,11 @@ export default function AnimationsRoot() {
           transition: none !important;
           animation: none !important;
           filter: none !important;
+        }
+        .builder-pub-node .reveal-stagger[data-builder-reveal-state] > * {
+          opacity: 1 !important;
+          transform: translate3d(0, 20px, 0) !important;
+          transition: none !important;
         }
       }
     ` }} />

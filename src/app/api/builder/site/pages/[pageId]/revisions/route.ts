@@ -25,7 +25,10 @@ import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
 } from '@/lib/builder/site/site-api-copy';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  resolveBuilderSiteIdForMutationFromRequest,
+  resolveBuilderSiteIdFromRequest,
+} from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 
@@ -77,14 +80,14 @@ export async function GET(
     }
 
     if (revisionId) {
-      const detail = await readRevisionDocument(pageId, revisionId);
+      const detail = await readRevisionDocument(siteId, pageId, revisionId);
       if (!detail) {
         return errorResponse(locale, 'revision_not_found', 404);
       }
       return NextResponse.json({ ok: true, revisionId, document: detail });
     }
 
-    const revisions = await listRevisions(pageId);
+    const revisions = await listRevisions(siteId, pageId);
     return NextResponse.json({ ok: true, revisions });
   } catch {
     return errorResponse(locale, 'revision_load_failed', 500);
@@ -101,8 +104,9 @@ export async function POST(
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const pageId = params.pageId;
   const body = await readJsonObject(request);
-  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
-  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   const source = typeof body.source === 'string' ? body.source : 'manual';
 
   const parsedDocument = body.document === undefined
@@ -114,7 +118,7 @@ export async function POST(
 
   if (parsedDocument) {
     try {
-      const result = await recordRevision(pageId, parsedDocument.data, { source });
+      const result = await recordRevision(siteId, pageId, parsedDocument.data, { source });
       return NextResponse.json({ ok: true, revisionId: revisionIdFromResult(result) });
     } catch {
       return errorResponse(locale, 'revision_create_failed', 500);

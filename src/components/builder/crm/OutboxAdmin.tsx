@@ -1,45 +1,45 @@
-import type { CrmEmailStubEntry } from '@/lib/builder/crm/automation-model';
+import type { CrmEmailSimulationEntry } from '@/lib/builder/crm/automation-model';
 import type { Locale } from '@/lib/locales';
 
 interface Props {
-  initialEntries: CrmEmailStubEntry[];
+  initialEntries: CrmEmailSimulationEntry[];
   locale: Locale;
 }
 
 const OUTBOX_COPY = {
   ko: {
-    title: '발송 기록',
-    summary: '자동화가 생성한 이메일 스텁 발송 기록입니다.',
+    title: '이메일 시뮬레이션 기록',
+    summary: '개발 환경의 자동화 이메일 시뮬레이션 기록입니다. 실제 발송 내역이 아닙니다.',
     total: '전체',
     automation: '자동화',
     contact: '연락처',
     template: '템플릿',
     triggered: '생성 시각',
-    empty: '발송 기록이 없습니다.',
+    empty: '이메일 시뮬레이션 기록이 없습니다.',
     none: '없음',
     dateLocale: 'ko-KR',
   },
   'zh-hant': {
-    title: '寄送紀錄',
-    summary: '自動化產生的 Email stub 寄送紀錄。',
+    title: 'Email 模擬紀錄',
+    summary: '開發環境中的 Email 模擬紀錄，並非實際寄送紀錄。',
     total: '總計',
     automation: '自動化',
     contact: '聯絡人',
     template: '範本',
     triggered: '建立時間',
-    empty: '沒有寄送紀錄。',
+    empty: '沒有 Email 模擬紀錄。',
     none: '無',
     dateLocale: 'zh-TW',
   },
   en: {
-    title: 'Outbox',
-    summary: 'Email-stub delivery records created by CRM automations.',
+    title: 'Email simulation records',
+    summary: 'Development email simulations created by CRM automations. These are not deliveries.',
     total: 'Total',
     automation: 'Automation',
     contact: 'Contact',
     template: 'Template',
     triggered: 'Created',
-    empty: 'No outbox records.',
+    empty: 'No email simulation records.',
     none: 'None',
     dateLocale: 'en-US',
   },

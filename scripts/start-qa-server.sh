@@ -1,25 +1,579 @@
 #!/bin/zsh
-# QA harness server — production build with deterministic local backends and
-# test-friendly secrets. Used by the Playwright suite runs.
-# Usage: ./scripts/start-qa-server.sh   (foreground; Ctrl-C to stop)
-cd "$(dirname "$0")/.."
+# QA harness server — production build with deterministic, attested isolation.
+# Usage: ./scripts/start-qa-server.sh (foreground; Ctrl-C to stop)
+# Contract-only check: QA_ISOLATION_PREFLIGHT_ONLY=1 ./scripts/start-qa-server.sh
+set -eu
+set -o pipefail
+umask 077
 
-# Kill-switch: blank the Blob token so EVERY store module (site, pages,
-# bookings, commerce, revisions, forms, ...) falls back to local files.
-# Next.js env loading does not override variables already set in the
-# environment, so this beats .env.local.
+SCRIPT_DIR="${0:A:h}"
+REPO_ROOT="${SCRIPT_DIR:h}"
+CONTRACT_SCRIPT="$REPO_ROOT/scripts/qa-runtime-isolation-contract.mjs"
+CANONICAL_RUNTIME_ROOT="$REPO_ROOT/runtime-data"
+CANONICAL_AUDIT_ROOT="$REPO_ROOT/data/audit"
+PORT="${PORT:-3000}"
+QA_BASE_URL="http://127.0.0.1:$PORT"
+TMP_BASE="${TMPDIR:-/tmp}"
+
+# Reject symlink/alias roots before mktemp, copy, or mkdir can write anything.
+node "$CONTRACT_SCRIPT" validate-base \
+  --tmp-base "$TMP_BASE" \
+  --repository-root "$REPO_ROOT" \
+  >/dev/null
+TMP_BASE=$(cd "$TMP_BASE" && pwd -P)
+REPO_ROOT=$(cd "$REPO_ROOT" && pwd -P)
+CONTRACT_SCRIPT="$REPO_ROOT/scripts/qa-runtime-isolation-contract.mjs"
+CANONICAL_RUNTIME_ROOT="$REPO_ROOT/runtime-data"
+CANONICAL_AUDIT_ROOT="$REPO_ROOT/data/audit"
+DIST_DIR=$(node "$CONTRACT_SCRIPT" validate-dist \
+  --repository-root "$REPO_ROOT" \
+  --dist-dir "${NEXT_DIST_DIR:-.next-build}")
+
+QA_MANIFEST_PATH=$(node "$CONTRACT_SCRIPT" manifest-path \
+  --tmp-base "$TMP_BASE" \
+  --repository-root "$REPO_ROOT" \
+  --base-url "$QA_BASE_URL")
+
+if [[ "${QA_ISOLATION_PREFLIGHT_ONLY:-0}" != "1" ]] \
+  && lsof -tiTCP:"$PORT" -sTCP:LISTEN >/dev/null 2>&1
+then
+  echo "QA isolation refused: port $PORT is already in use" >&2
+  exit 2
+fi
+
+CANONICAL_CHECKSUM=$(node "$CONTRACT_SCRIPT" checksum "$CANONICAL_RUNTIME_ROOT")
+CANONICAL_AUDIT_CHECKSUM=$(node "$CONTRACT_SCRIPT" checksum "$CANONICAL_AUDIT_ROOT")
+
+QA_ISOLATED_ROOT=$(mktemp -d "$TMP_BASE/tseng-qa-server-XXXXXX")
+chmod 700 "$QA_ISOLATED_ROOT"
+QA_RUNTIME_ROOT="$QA_ISOLATED_ROOT/runtime-data"
+
+mkdir -p \
+  "$QA_RUNTIME_ROOT/builder-site" \
+  "$QA_RUNTIME_ROOT/builder-bookings" \
+  "$QA_RUNTIME_ROOT/builder-commerce" \
+  "$QA_RUNTIME_ROOT/billing" \
+  "$QA_RUNTIME_ROOT/builder-assets" \
+  "$QA_RUNTIME_ROOT/builder-revisions" \
+  "$QA_RUNTIME_ROOT/builder-scheduled-publish" \
+  "$QA_RUNTIME_ROOT/builder-cms-dynamic-item-policy-schedules" \
+  "$QA_RUNTIME_ROOT/translation-release-approvals" \
+  "$QA_RUNTIME_ROOT/builder-translation-release-policy" \
+  "$QA_RUNTIME_ROOT/translations/providers" \
+  "$QA_RUNTIME_ROOT/publish/transactions" \
+  "$QA_RUNTIME_ROOT/ai-intake" \
+  "$QA_RUNTIME_ROOT/apps" \
+  "$QA_RUNTIME_ROOT/builder-events" \
+  "$QA_RUNTIME_ROOT/builder-faq" \
+  "$QA_RUNTIME_ROOT/builder-members" \
+  "$QA_RUNTIME_ROOT/builder-portfolio" \
+  "$QA_RUNTIME_ROOT/commerce" \
+  "$QA_RUNTIME_ROOT/errors" \
+  "$QA_RUNTIME_ROOT/ops" \
+  "$QA_RUNTIME_ROOT/cache" \
+  "$QA_RUNTIME_ROOT/dev/logs" \
+  "$QA_RUNTIME_ROOT/consultation-columns" \
+  "$QA_RUNTIME_ROOT/consultation-logs" \
+  "$QA_RUNTIME_ROOT/reviews" \
+  "$QA_ISOLATED_ROOT/data/audit"
+
+# Copy only deterministic read fixtures. Private bookings and unrelated runtime
+# state never cross the canonical/QA boundary.
+if [[ -d "$CANONICAL_RUNTIME_ROOT/builder-site/tseng-law-main-site" ]]; then
+  cp -R \
+    "$CANONICAL_RUNTIME_ROOT/builder-site/tseng-law-main-site" \
+    "$QA_RUNTIME_ROOT/builder-site/"
+fi
+for booking_fixture in \
+  services \
+  staff \
+  availability \
+  cancellation-policies \
+  email-templates \
+  packages \
+  resources
+do
+  if [[ -d "$CANONICAL_RUNTIME_ROOT/builder-bookings/$booking_fixture" ]]; then
+    cp -R \
+      "$CANONICAL_RUNTIME_ROOT/builder-bookings/$booking_fixture" \
+      "$QA_RUNTIME_ROOT/builder-bookings/"
+  fi
+done
+
+# Runtime code reads content and BUILD_ID through process.cwd(). These copies
+# prevent legacy relative paths from resolving into the repository.
+mkdir -p "$QA_ISOLATED_ROOT/src" "$QA_ISOLATED_ROOT/.next"
+if [[ -d "$REPO_ROOT/src/content" ]]; then
+  cp -R "$REPO_ROOT/src/content" "$QA_ISOLATED_ROOT/src/"
+fi
+if [[ -f "$REPO_ROOT/$DIST_DIR/BUILD_ID" ]]; then
+  cp "$REPO_ROOT/$DIST_DIR/BUILD_ID" "$QA_ISOLATED_ROOT/.next/BUILD_ID"
+fi
+
+read -r QA_RUN_ID QA_NONCE <<< "$(node "$CONTRACT_SCRIPT" generate-identity)"
+
+export BUILDER_QA_ISOLATION_ROOT="$QA_ISOLATED_ROOT"
+export BUILDER_RUNTIME_DATA_ROOT="$QA_RUNTIME_ROOT"
+export BUILDER_SITE_ROOT="$QA_RUNTIME_ROOT/builder-site"
+export BUILDER_BOOKINGS_ROOT="$QA_RUNTIME_ROOT/builder-bookings"
+export BUILDER_ZOOM_MOCK_PATH="$QA_RUNTIME_ROOT/builder-bookings/zoom-mock.json"
+export BUILDER_COMMERCE_ROOT="$QA_RUNTIME_ROOT/builder-commerce"
+export BILLING_TEMPLATES_ROOT="$QA_RUNTIME_ROOT/billing"
+export BUILDER_ASSETS_ROOT="$QA_RUNTIME_ROOT/builder-assets"
+export BUILDER_REVISIONS_ROOT="$QA_RUNTIME_ROOT/builder-revisions"
+export BUILDER_SCHEDULED_PUBLISH_ROOT="$QA_RUNTIME_ROOT/builder-scheduled-publish"
+export BUILDER_CMS_DYNAMIC_ITEM_POLICY_SCHEDULE_ROOT="$QA_RUNTIME_ROOT/builder-cms-dynamic-item-policy-schedules"
+export BUILDER_TRANSLATION_RELEASE_APPROVAL_ROOT="$QA_RUNTIME_ROOT/translation-release-approvals"
+export BUILDER_TRANSLATION_RELEASE_POLICY_ROOT="$QA_RUNTIME_ROOT/builder-translation-release-policy"
+export BUILDER_TRANSLATION_PROVIDER_SMOKE_HISTORY_PATH="$QA_RUNTIME_ROOT/translations/providers"
+export PUBLISH_TX_ROOT="$QA_RUNTIME_ROOT/publish/transactions"
+export BUILDER_AI_INTAKE_ROOT="$QA_RUNTIME_ROOT/ai-intake"
+export BUILDER_APP_HOOK_REGISTRY_PATH="$QA_RUNTIME_ROOT/apps/hook-registrations.json"
+export BUILDER_APP_HOOK_DELIVERIES_PATH="$QA_RUNTIME_ROOT/apps/hook-deliveries.json"
+export BUILDER_EVENTS_ROOT="$QA_RUNTIME_ROOT/builder-events"
+export BUILDER_FAQ_ROOT="$QA_RUNTIME_ROOT/builder-faq"
+export BUILDER_MEMBERS_ROOT="$QA_RUNTIME_ROOT/builder-members"
+export BUILDER_PORTFOLIO_ROOT="$QA_RUNTIME_ROOT/builder-portfolio"
+export BUILDER_SUBSCRIPTIONS_PATH="$QA_RUNTIME_ROOT/commerce/subscriptions.json"
+export BUILDER_ERROR_LOG_PATH="$QA_RUNTIME_ROOT/errors"
+export BUILDER_OPS_DATA_PATH="$QA_RUNTIME_ROOT/ops"
+export BUILDER_OPS_CACHE_PATH="$QA_RUNTIME_ROOT/cache"
+export BUILDER_OPS_DEV_LOGS_PATH="$QA_RUNTIME_ROOT/dev/logs"
+export CONSULTATION_COLUMNS_DIR="$QA_RUNTIME_ROOT/consultation-columns"
+export CONSULTATION_LOG_DIR="$QA_RUNTIME_ROOT/consultation-logs"
+export REVIEWS_DATA_ROOT="$QA_RUNTIME_ROOT/reviews"
+export BUILDER_AUDIT_LOG_PATH="$QA_ISOLATED_ROOT/data/audit/builder-audit.jsonl"
+
+# Blanks are explicit so Next dotenv loading cannot resurrect inherited provider
+# credentials or test-only stub/unsigned/bypass switches.
 export BLOB_READ_WRITE_TOKEN=
+export ANTHROPIC_API_KEY=
+export OPENAI_API_KEY=
+export DEEPL_API_KEY=
+export STRIPE_SECRET_KEY=
+export STRIPE_PUBLISHABLE_KEY=
+export NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+export STRIPE_WEBHOOK_SECRET=
+export BILLING_DOCUMENT_STRIPE_WEBHOOK_SECRET=
+export COMMERCE_SANDBOX_CARD_WEBHOOK_SECRET=
+export ZOOM_ACCOUNT_ID=
+export ZOOM_CLIENT_ID=
+export ZOOM_CLIENT_SECRET=
+export BUILDER_ZOOM_MOCK_MEETING_LINK=
+export GOOGLE_OAUTH_CLIENT_ID=
+export GOOGLE_OAUTH_CLIENT_SECRET=
+export GOOGLE_OAUTH_REDIRECT_URI=
+export MS_OAUTH_CLIENT_ID=
+export MS_OAUTH_CLIENT_SECRET=
+export MS_OAUTH_REDIRECT_URI=
+export MS_OAUTH_TENANT=
+export RESEND_API_KEY=
+export SMTP_HOST=
+export SMTP_PORT=
+export SMTP_USER=
+export SMTP_PASS=
+export TWILIO_ACCOUNT_SID=
+export TWILIO_AUTH_TOKEN=
+export TWILIO_FROM_NUMBER=
+export MAILCHIMP_TRANSACTIONAL_API_KEY=
+export MANDRILL_API_KEY=
+export MAILCHIMP_TRANSACTIONAL_API_URL=
+export MAILCHIMP_MARKETING_API_KEY=
+export MAILCHIMP_API_KEY=
+export MAILCHIMP_AUDIENCE_ID=
+export MAILCHIMP_SERVER_PREFIX=
+export MAILCHIMP_MARKETING_API_URL=
+export SLACK_WEBHOOK_URL=
+export SENTRY_DSN=
+export NEXT_PUBLIC_SENTRY_DSN=
+export LINE_CHANNEL_SECRET=
+export LINE_CHANNEL_ACCESS_TOKEN=
+export VERCEL_TOKEN=
+export VERCEL_URL=
+export VERCEL_PROJECT_ID=
+export VERCEL_TEAM_ID=
+export UPSTASH_REDIS_REST_URL=
+export UPSTASH_REDIS_REST_TOKEN=
+export HCAPTCHA_SECRET=
+export NEXT_PUBLIC_HCAPTCHA_SITE_KEY=
+export TURNSTILE_SECRET=
+export NEXT_PUBLIC_TURNSTILE_SITE_KEY=
+export AI_PROVIDER=
+export TRANSLATION_PROVIDER=
+export MARKETING_EMAIL_PROVIDER=
+export BOOKINGS_ADMIN_EMAIL=
+export BOOKINGS_EMAIL_FROM=
+export FORMS_EMAIL_FROM=
+export CONSULTATION_NOTIFY_EMAIL=
+export NOTIFY_EMAIL=
+export NEXT_PUBLIC_CONSULTATION_PUBLIC_EMAIL=
+export BUILDER_BASIC_AUTH_USERS=
+export BUILDER_GATE_USER=
+export BUILDER_GATE_PASS=
+export CONSULTATION_EVAL_SECRET=
+export CONSULTATION_PURGE_SECRET=
+export BOOKING_PAYMENT_ALLOW_STUB=
+export BUILDER_ZOOM_MOCK_ALLOW=
+export BOOKING_STRIPE_WEBHOOK_ALLOW_UNSIGNED=
+export BILLING_DOCUMENT_STRIPE_WEBHOOK_ALLOW_UNSIGNED=
+export ALLOW_AI_GENERATOR_STUB=
+export ALLOW_CRM_EMAIL_STUB=
+export ALLOW_STUB_EMAILS=
+export ALLOW_STUB_PROVIDERS=
+export ALLOW_STUB=
+export ALLOW_MOCK=
+export ALLOW_UNSIGNED=
+export AUTH_BYPASS=
+export BUILDER_AUTH_BYPASS=
+
 export BUILDER_SITE_BACKEND=local
+export BUILDER_BOOKINGS_BACKEND=local
+export BUILDER_COMMERCE_BACKEND=local
+export BILLING_TEMPLATES_BACKEND=local
+export BUILDER_AI_INTAKE_BACKEND=local
+export BUILDER_COLUMNS_BACKEND=local
+export BUILDER_DEV_LOGS_BACKEND=local
+export BUILDER_EVENTS_BACKEND=local
+export BUILDER_FAQ_BACKEND=local
+export BUILDER_MEMBERS_BACKEND=local
+export BUILDER_PORTFOLIO_BACKEND=local
+export BUILDER_SHARED_ASSETS_BACKEND=local
+export BUILDER_SNAPSHOT_BACKEND=local
+export BUILDER_TRANSLATION_PROVIDER_SMOKE_BACKEND=local
+export REVIEWS_BACKEND=local
+export CRM_BACKEND=local
+export FORM_WEBHOOK_RETRY_BACKEND=local
 export CONSULTATION_LOG_BACKEND=local
-export BOOKING_PAYMENT_ALLOW_STUB=1
-export BUILDER_ZOOM_MOCK_ALLOW=1
-export BOOKING_STRIPE_WEBHOOK_ALLOW_UNSIGNED=1
-export BILLING_DOCUMENT_STRIPE_WEBHOOK_ALLOW_UNSIGNED=1
+export BUILDER_RATE_LIMIT_BACKEND=isolated-qa
+export BUILDER_USE_BLOB_IN_DEV=0
+export BUILDER_USE_BLOB_IN_PREVIEW=0
+export CMS_ADMIN_USERNAME=admin
+export CMS_ADMIN_PASSWORD='local-review-2026!'
+export BUILDER_SMOKE_USERNAME=admin
+export BUILDER_SMOKE_PASSWORD='local-review-2026!'
+export BUILDER_USERNAME=admin
+export CMS_SESSION_SECRET=local-qa-cms-session-secret
+export BUILDER_ADMIN_SESSION_SECRET=local-qa-builder-session-secret
+export NEXTAUTH_SECRET=local-qa-nextauth-secret
+export BUILDER_SECRET_KEK=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+export BUILDER_REVIEW_SECRET=local-qa-review-secret
+export BUILDER_INTERNAL_NOTIFY_SECRET=local-qa-notify-secret
+export BUILDER_WEBHOOK_SECRET=local-qa-builder-webhook-secret
+export CRM_TRACKING_SECRET=local-qa-crm-tracking-secret
+export CRM_WEBHOOK_SECRET=local-qa-crm-webhook-secret
+export OAUTH_STATE_SECRET=local-qa-oauth-state-secret
+export BOOKINGS_MANAGE_SECRET=local-qa-bookings-manage-secret
 export COMMERCE_PAYMENT_WEBHOOK_SECRET=local-commerce-webhook-secret
 export BILLING_DOCUMENT_SHARE_SECRET=local-billing-share-secret
 export CRON_SECRET=local-cron-secret
+export BUILDER_DRAFT_RATE_LIMIT=2000
 export BUILDER_MUTATION_RATE_LIMIT=2000
 export BUILDER_PUBLISH_RATE_LIMIT=500
 export BUILDER_ASSET_RATE_LIMIT=500
+export BUILDER_ALLOWED_ORIGINS="$QA_BASE_URL"
+export SITE_URL="$QA_BASE_URL"
+export NEXT_PUBLIC_SITE_URL="$QA_BASE_URL"
+export PUBLIC_SITE_ORIGIN="$QA_BASE_URL"
+export NEXT_PUBLIC_SITE_ORIGIN="$QA_BASE_URL"
+export QA_INTERNAL_REPOSITORY_ROOT="$REPO_ROOT"
+export QA_INTERNAL_RUN_ID="$QA_RUN_ID"
+export QA_INTERNAL_ATTESTATION_NONCE="$QA_NONCE"
+export QA_INTERNAL_BASE_URL="$QA_BASE_URL"
+export QA_INTERNAL_MANIFEST_PATH="$QA_MANIFEST_PATH"
 
-exec npm run start
+node "$CONTRACT_SCRIPT" prepare \
+  --tmp-base "$TMP_BASE" \
+  --repository-root "$REPO_ROOT" \
+  --base-url "$QA_BASE_URL" \
+  --isolated-root "$QA_ISOLATED_ROOT" \
+  --server-cwd "$QA_ISOLATED_ROOT" \
+  --owner-pid "$$" \
+  --run-id "$QA_RUN_ID" \
+  --nonce "$QA_NONCE" \
+  --canonical-checksum "$CANONICAL_CHECKSUM" \
+  --canonical-audit-checksum "$CANONICAL_AUDIT_CHECKSUM" \
+  >/dev/null
+
+echo "QA isolated runtime root (kept for forensics): $QA_ISOLATED_ROOT"
+echo "QA isolation manifest: $QA_MANIFEST_PATH"
+
+if [[ "${QA_ISOLATION_PREFLIGHT_ONLY:-0}" == "1" ]]; then
+  PREFLIGHT_RUNTIME_AFTER=$(node "$CONTRACT_SCRIPT" checksum "$CANONICAL_RUNTIME_ROOT")
+  PREFLIGHT_AUDIT_AFTER=$(node "$CONTRACT_SCRIPT" checksum "$CANONICAL_AUDIT_ROOT")
+  if [[ "$PREFLIGHT_RUNTIME_AFTER" != "$CANONICAL_CHECKSUM" ]] \
+    || [[ "$PREFLIGHT_AUDIT_AFTER" != "$CANONICAL_AUDIT_CHECKSUM" ]]
+  then
+    echo "QA isolation preflight FAIL: canonical runtime/audit checksum changed" >&2
+    exit 90
+  fi
+  echo "QA isolation preflight PASS (manifest remains starting; no server attestation)"
+  if [[ "${QA_KEEP_PREFLIGHT_MANIFEST:-0}" != "1" ]]; then
+    node "$CONTRACT_SCRIPT" remove-manifest \
+      --tmp-base "$TMP_BASE" \
+      --repository-root "$REPO_ROOT" \
+      --base-url "$QA_BASE_URL" \
+      --run-id "$QA_RUN_ID"
+  fi
+  exit 0
+fi
+
+cd "$QA_ISOLATED_ROOT"
+
+cleanup_qa() {
+  local original_status=$?
+  trap - EXIT INT TERM HUP
+  set +e
+  if [[ -n "${NEXT_SERVER_PID:-}" ]]; then
+    kill -TERM "$NEXT_SERVER_PID" 2>/dev/null || true
+    wait "$NEXT_SERVER_PID" 2>/dev/null || true
+  fi
+  node "$CONTRACT_SCRIPT" remove-manifest \
+    --tmp-base "$TMP_BASE" \
+    --repository-root "$REPO_ROOT" \
+    --base-url "$QA_BASE_URL" \
+    --run-id "$QA_RUN_ID" \
+    >/dev/null || true
+
+  local runtime_after
+  local audit_after
+  runtime_after=$(node "$CONTRACT_SCRIPT" checksum "$CANONICAL_RUNTIME_ROOT")
+  audit_after=$(node "$CONTRACT_SCRIPT" checksum "$CANONICAL_AUDIT_ROOT")
+  if [[ "$runtime_after" != "$CANONICAL_CHECKSUM" ]] \
+    || [[ "$audit_after" != "$CANONICAL_AUDIT_CHECKSUM" ]]
+  then
+    echo "QA isolation FAIL: canonical runtime/audit checksum changed" >&2
+    exit 90
+  fi
+  echo "QA isolation teardown PASS: canonical runtime/audit checksums unchanged"
+  exit "$original_status"
+}
+trap cleanup_qa EXIT
+trap 'exit 130' INT
+trap 'exit 143' TERM
+trap 'exit 129' HUP
+
+# The server receives only this explicit environment. Empty provider and bypass
+# values are deliberately included so project dotenv files cannot re-enable them.
+SERVER_ENV=(
+  "PATH=$PATH"
+  "HOME=${HOME:-$REPO_ROOT}"
+  "LANG=${LANG:-C.UTF-8}"
+  "TZ=${TZ:-Asia/Seoul}"
+  "TMPDIR=$TMP_BASE"
+  "PORT=$PORT"
+  "NODE_ENV=production"
+  "NEXT_DIST_DIR=$DIST_DIR"
+  "BUILDER_QA_ISOLATION_ROOT=$BUILDER_QA_ISOLATION_ROOT"
+  "QA_INTERNAL_REPOSITORY_ROOT=$QA_INTERNAL_REPOSITORY_ROOT"
+  "QA_INTERNAL_RUN_ID=$QA_INTERNAL_RUN_ID"
+  "QA_INTERNAL_ATTESTATION_NONCE=$QA_INTERNAL_ATTESTATION_NONCE"
+  "QA_INTERNAL_BASE_URL=$QA_INTERNAL_BASE_URL"
+  "QA_INTERNAL_MANIFEST_PATH=$QA_INTERNAL_MANIFEST_PATH"
+  "BUILDER_RUNTIME_DATA_ROOT=$BUILDER_RUNTIME_DATA_ROOT"
+  "BUILDER_SITE_ROOT=$BUILDER_SITE_ROOT"
+  "BUILDER_BOOKINGS_ROOT=$BUILDER_BOOKINGS_ROOT"
+  "BUILDER_ZOOM_MOCK_PATH=$BUILDER_ZOOM_MOCK_PATH"
+  "BUILDER_COMMERCE_ROOT=$BUILDER_COMMERCE_ROOT"
+  "BILLING_TEMPLATES_ROOT=$BILLING_TEMPLATES_ROOT"
+  "BUILDER_ASSETS_ROOT=$BUILDER_ASSETS_ROOT"
+  "BUILDER_REVISIONS_ROOT=$BUILDER_REVISIONS_ROOT"
+  "BUILDER_SCHEDULED_PUBLISH_ROOT=$BUILDER_SCHEDULED_PUBLISH_ROOT"
+  "BUILDER_CMS_DYNAMIC_ITEM_POLICY_SCHEDULE_ROOT=$BUILDER_CMS_DYNAMIC_ITEM_POLICY_SCHEDULE_ROOT"
+  "BUILDER_TRANSLATION_RELEASE_APPROVAL_ROOT=$BUILDER_TRANSLATION_RELEASE_APPROVAL_ROOT"
+  "BUILDER_TRANSLATION_RELEASE_POLICY_ROOT=$BUILDER_TRANSLATION_RELEASE_POLICY_ROOT"
+  "BUILDER_TRANSLATION_PROVIDER_SMOKE_HISTORY_PATH=$BUILDER_TRANSLATION_PROVIDER_SMOKE_HISTORY_PATH"
+  "PUBLISH_TX_ROOT=$PUBLISH_TX_ROOT"
+  "BUILDER_AI_INTAKE_ROOT=$BUILDER_AI_INTAKE_ROOT"
+  "BUILDER_APP_HOOK_REGISTRY_PATH=$BUILDER_APP_HOOK_REGISTRY_PATH"
+  "BUILDER_APP_HOOK_DELIVERIES_PATH=$BUILDER_APP_HOOK_DELIVERIES_PATH"
+  "BUILDER_EVENTS_ROOT=$BUILDER_EVENTS_ROOT"
+  "BUILDER_FAQ_ROOT=$BUILDER_FAQ_ROOT"
+  "BUILDER_MEMBERS_ROOT=$BUILDER_MEMBERS_ROOT"
+  "BUILDER_PORTFOLIO_ROOT=$BUILDER_PORTFOLIO_ROOT"
+  "BUILDER_SUBSCRIPTIONS_PATH=$BUILDER_SUBSCRIPTIONS_PATH"
+  "BUILDER_ERROR_LOG_PATH=$BUILDER_ERROR_LOG_PATH"
+  "BUILDER_OPS_DATA_PATH=$BUILDER_OPS_DATA_PATH"
+  "BUILDER_OPS_CACHE_PATH=$BUILDER_OPS_CACHE_PATH"
+  "BUILDER_OPS_DEV_LOGS_PATH=$BUILDER_OPS_DEV_LOGS_PATH"
+  "CONSULTATION_COLUMNS_DIR=$CONSULTATION_COLUMNS_DIR"
+  "CONSULTATION_LOG_DIR=$CONSULTATION_LOG_DIR"
+  "REVIEWS_DATA_ROOT=$REVIEWS_DATA_ROOT"
+  "BUILDER_AUDIT_LOG_PATH=$BUILDER_AUDIT_LOG_PATH"
+  "BUILDER_SITE_BACKEND=$BUILDER_SITE_BACKEND"
+  "BUILDER_BOOKINGS_BACKEND=$BUILDER_BOOKINGS_BACKEND"
+  "BUILDER_COMMERCE_BACKEND=$BUILDER_COMMERCE_BACKEND"
+  "BILLING_TEMPLATES_BACKEND=$BILLING_TEMPLATES_BACKEND"
+  "BUILDER_AI_INTAKE_BACKEND=$BUILDER_AI_INTAKE_BACKEND"
+  "BUILDER_COLUMNS_BACKEND=$BUILDER_COLUMNS_BACKEND"
+  "BUILDER_DEV_LOGS_BACKEND=$BUILDER_DEV_LOGS_BACKEND"
+  "BUILDER_EVENTS_BACKEND=$BUILDER_EVENTS_BACKEND"
+  "BUILDER_FAQ_BACKEND=$BUILDER_FAQ_BACKEND"
+  "BUILDER_MEMBERS_BACKEND=$BUILDER_MEMBERS_BACKEND"
+  "BUILDER_PORTFOLIO_BACKEND=$BUILDER_PORTFOLIO_BACKEND"
+  "BUILDER_SHARED_ASSETS_BACKEND=$BUILDER_SHARED_ASSETS_BACKEND"
+  "BUILDER_SNAPSHOT_BACKEND=$BUILDER_SNAPSHOT_BACKEND"
+  "BUILDER_TRANSLATION_PROVIDER_SMOKE_BACKEND=$BUILDER_TRANSLATION_PROVIDER_SMOKE_BACKEND"
+  "REVIEWS_BACKEND=$REVIEWS_BACKEND"
+  "CRM_BACKEND=$CRM_BACKEND"
+  "FORM_WEBHOOK_RETRY_BACKEND=$FORM_WEBHOOK_RETRY_BACKEND"
+  "CONSULTATION_LOG_BACKEND=$CONSULTATION_LOG_BACKEND"
+  "BUILDER_RATE_LIMIT_BACKEND=$BUILDER_RATE_LIMIT_BACKEND"
+  "BUILDER_USE_BLOB_IN_DEV=$BUILDER_USE_BLOB_IN_DEV"
+  "BUILDER_USE_BLOB_IN_PREVIEW=$BUILDER_USE_BLOB_IN_PREVIEW"
+  "CMS_ADMIN_USERNAME=$CMS_ADMIN_USERNAME"
+  "CMS_ADMIN_PASSWORD=$CMS_ADMIN_PASSWORD"
+  "BUILDER_SMOKE_USERNAME=$BUILDER_SMOKE_USERNAME"
+  "BUILDER_SMOKE_PASSWORD=$BUILDER_SMOKE_PASSWORD"
+  "BUILDER_USERNAME=$BUILDER_USERNAME"
+  "CMS_SESSION_SECRET=$CMS_SESSION_SECRET"
+  "BUILDER_ADMIN_SESSION_SECRET=$BUILDER_ADMIN_SESSION_SECRET"
+  "NEXTAUTH_SECRET=$NEXTAUTH_SECRET"
+  "BUILDER_SECRET_KEK=$BUILDER_SECRET_KEK"
+  "BUILDER_REVIEW_SECRET=$BUILDER_REVIEW_SECRET"
+  "BUILDER_INTERNAL_NOTIFY_SECRET=$BUILDER_INTERNAL_NOTIFY_SECRET"
+  "BUILDER_WEBHOOK_SECRET=$BUILDER_WEBHOOK_SECRET"
+  "CRM_TRACKING_SECRET=$CRM_TRACKING_SECRET"
+  "CRM_WEBHOOK_SECRET=$CRM_WEBHOOK_SECRET"
+  "OAUTH_STATE_SECRET=$OAUTH_STATE_SECRET"
+  "BOOKINGS_MANAGE_SECRET=$BOOKINGS_MANAGE_SECRET"
+  "COMMERCE_PAYMENT_WEBHOOK_SECRET=$COMMERCE_PAYMENT_WEBHOOK_SECRET"
+  "BILLING_DOCUMENT_SHARE_SECRET=$BILLING_DOCUMENT_SHARE_SECRET"
+  "CRON_SECRET=$CRON_SECRET"
+  "BUILDER_DRAFT_RATE_LIMIT=$BUILDER_DRAFT_RATE_LIMIT"
+  "BUILDER_MUTATION_RATE_LIMIT=$BUILDER_MUTATION_RATE_LIMIT"
+  "BUILDER_PUBLISH_RATE_LIMIT=$BUILDER_PUBLISH_RATE_LIMIT"
+  "BUILDER_ASSET_RATE_LIMIT=$BUILDER_ASSET_RATE_LIMIT"
+  "BUILDER_ALLOWED_ORIGINS=$BUILDER_ALLOWED_ORIGINS"
+  "SITE_URL=$SITE_URL"
+  "NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL"
+  "PUBLIC_SITE_ORIGIN=$PUBLIC_SITE_ORIGIN"
+  "NEXT_PUBLIC_SITE_ORIGIN=$NEXT_PUBLIC_SITE_ORIGIN"
+  "BLOB_READ_WRITE_TOKEN="
+  "ANTHROPIC_API_KEY="
+  "OPENAI_API_KEY="
+  "DEEPL_API_KEY="
+  "STRIPE_SECRET_KEY="
+  "STRIPE_PUBLISHABLE_KEY="
+  "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="
+  "STRIPE_WEBHOOK_SECRET="
+  "BILLING_DOCUMENT_STRIPE_WEBHOOK_SECRET="
+  "COMMERCE_SANDBOX_CARD_WEBHOOK_SECRET="
+  "ZOOM_ACCOUNT_ID="
+  "ZOOM_CLIENT_ID="
+  "ZOOM_CLIENT_SECRET="
+  "BUILDER_ZOOM_MOCK_MEETING_LINK="
+  "GOOGLE_OAUTH_CLIENT_ID="
+  "GOOGLE_OAUTH_CLIENT_SECRET="
+  "GOOGLE_OAUTH_REDIRECT_URI="
+  "MS_OAUTH_CLIENT_ID="
+  "MS_OAUTH_CLIENT_SECRET="
+  "MS_OAUTH_REDIRECT_URI="
+  "MS_OAUTH_TENANT="
+  "RESEND_API_KEY="
+  "SMTP_HOST="
+  "SMTP_PORT="
+  "SMTP_USER="
+  "SMTP_PASS="
+  "TWILIO_ACCOUNT_SID="
+  "TWILIO_AUTH_TOKEN="
+  "TWILIO_FROM_NUMBER="
+  "MAILCHIMP_TRANSACTIONAL_API_KEY="
+  "MANDRILL_API_KEY="
+  "MAILCHIMP_TRANSACTIONAL_API_URL="
+  "MAILCHIMP_MARKETING_API_KEY="
+  "MAILCHIMP_API_KEY="
+  "MAILCHIMP_AUDIENCE_ID="
+  "MAILCHIMP_SERVER_PREFIX="
+  "MAILCHIMP_MARKETING_API_URL="
+  "SLACK_WEBHOOK_URL="
+  "SENTRY_DSN="
+  "NEXT_PUBLIC_SENTRY_DSN="
+  "LINE_CHANNEL_SECRET="
+  "LINE_CHANNEL_ACCESS_TOKEN="
+  "VERCEL_TOKEN="
+  "VERCEL_URL="
+  "VERCEL_PROJECT_ID="
+  "VERCEL_TEAM_ID="
+  "UPSTASH_REDIS_REST_URL="
+  "UPSTASH_REDIS_REST_TOKEN="
+  "HCAPTCHA_SECRET="
+  "NEXT_PUBLIC_HCAPTCHA_SITE_KEY="
+  "TURNSTILE_SECRET="
+  "NEXT_PUBLIC_TURNSTILE_SITE_KEY="
+  "AI_PROVIDER="
+  "TRANSLATION_PROVIDER="
+  "MARKETING_EMAIL_PROVIDER="
+  "BOOKINGS_ADMIN_EMAIL="
+  "BOOKINGS_EMAIL_FROM="
+  "FORMS_EMAIL_FROM="
+  "CONSULTATION_NOTIFY_EMAIL="
+  "NOTIFY_EMAIL="
+  "NEXT_PUBLIC_CONSULTATION_PUBLIC_EMAIL="
+  "BUILDER_BASIC_AUTH_USERS="
+  "BUILDER_GATE_USER="
+  "BUILDER_GATE_PASS="
+  "CONSULTATION_EVAL_SECRET="
+  "CONSULTATION_PURGE_SECRET="
+  "BOOKING_PAYMENT_ALLOW_STUB="
+  "BUILDER_ZOOM_MOCK_ALLOW="
+  "BOOKING_STRIPE_WEBHOOK_ALLOW_UNSIGNED="
+  "BILLING_DOCUMENT_STRIPE_WEBHOOK_ALLOW_UNSIGNED="
+  "ALLOW_AI_GENERATOR_STUB="
+  "ALLOW_CRM_EMAIL_STUB="
+  "ALLOW_STUB_EMAILS="
+  "ALLOW_STUB_PROVIDERS="
+  "ALLOW_STUB="
+  "ALLOW_MOCK="
+  "ALLOW_UNSIGNED="
+  "AUTH_BYPASS="
+  "BUILDER_AUTH_BYPASS="
+)
+
+env -i "${SERVER_ENV[@]}" \
+  "$REPO_ROOT/node_modules/.bin/next" start "$REPO_ROOT" \
+  --hostname 127.0.0.1 --port "$PORT" &
+NEXT_SERVER_PID=$!
+
+ATTESTATION_RESPONSE="$QA_ISOLATED_ROOT/qa-attestation-response.json"
+ATTESTATION_READY=0
+ATTESTATION_DEADLINE=$((SECONDS + 60))
+while (( SECONDS < ATTESTATION_DEADLINE )); do
+  if ! kill -0 "$NEXT_SERVER_PID" 2>/dev/null; then
+    wait "$NEXT_SERVER_PID" || true
+    echo "QA isolation FAIL: server exited before attestation" >&2
+    exit 2
+  fi
+  QA_CHALLENGE=$(node "$CONTRACT_SCRIPT" generate-challenge)
+  if curl --fail --silent --max-time 2 \
+    --header "x-builder-qa-challenge: $QA_CHALLENGE" \
+    "$QA_BASE_URL/api/builder/_qa/attestation" \
+    >"$ATTESTATION_RESPONSE"
+  then
+    if ! node "$CONTRACT_SCRIPT" promote-ready \
+      --tmp-base "$TMP_BASE" \
+      --repository-root "$REPO_ROOT" \
+      --base-url "$QA_BASE_URL" \
+      --run-id "$QA_RUN_ID" \
+      --challenge "$QA_CHALLENGE" \
+      --server-pid "$NEXT_SERVER_PID" \
+      --response-file "$ATTESTATION_RESPONSE" \
+      >/dev/null
+    then
+      echo "QA isolation FAIL: invalid server attestation" >&2
+      exit 2
+    fi
+    ATTESTATION_READY=1
+    break
+  fi
+  sleep 0.25
+done
+rm -f "$ATTESTATION_RESPONSE"
+
+if [[ "$ATTESTATION_READY" != "1" ]]; then
+  echo "QA isolation FAIL: server attestation timed out after 60 seconds" >&2
+  exit 2
+fi
+echo "QA server attestation PASS: manifest promoted to ready"
+
+wait "$NEXT_SERVER_PID"
+NEXT_SERVER_PID=

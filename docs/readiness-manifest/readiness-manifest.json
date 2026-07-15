@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-13T00:00:00.000Z",
+  "rows": [
+    {
+      "id": "WB-R01-P0-ADMIN-AUTH",
+      "title": "Production admin-builder authentication smoke",
+      "priority": "P0",
+      "state": "OPEN",
+      "notes": "Requires production credentials and a real authenticated browser smoke; no unsupported verification claim is made."
+    },
+    {
+      "id": "WB-R01-P0-STRIPE",
+      "title": "Stripe production credential readiness",
+      "priority": "P0",
+      "state": "OPEN",
+      "provider": "none",
+      "requiresRealProvider": true,
+      "notes": "Requires live Stripe credentials and customer-environment QA."
+    },
+    {
+      "id": "WB-R01-P0-ZOOM",
+      "title": "Zoom production credential readiness",
+      "priority": "P0",
+      "state": "OPEN",
+      "provider": "none",
+      "requiresRealProvider": true,
+      "notes": "Requires live Zoom credentials and customer-environment QA."
+    },
+    {
+      "id": "WB-R01-P0-GOOGLE-CALENDAR",
+      "title": "Google Calendar production credential readiness",
+      "priority": "P0",
+      "state": "OPEN",
+      "provider": "none",
+      "requiresRealProvider": true,
+      "notes": "Requires live Google Calendar credentials and customer-environment QA."
+    },
+    {
+      "id": "WB-R01-P0-OUTLOOK-CALENDAR",
+      "title": "Outlook Calendar production credential readiness",
+      "priority": "P0",
+      "state": "OPEN",
+      "provider": "none",
+      "requiresRealProvider": true,
+      "notes": "Requires live Outlook Calendar credentials and customer-environment QA."
+    },
+    {
+      "id": "WB-R01-P0-RESEND",
+      "title": "Resend production credential readiness",
+      "priority": "P0",
+      "state": "OPEN",
+      "provider": "none",
+      "requiresRealProvider": true,
+      "notes": "Requires live Resend credentials and customer-environment QA."
+    },
+    {
+      "id": "WB-R01-P0-SMTP",
+      "title": "SMTP production credential readiness",
+      "priority": "P0",
+      "state": "OPEN",
+      "provider": "none",
+      "requiresRealProvider": true,
+      "notes": "Requires live SMTP credentials and customer-environment QA."
+    },
+    {
+      "id": "WB-R01-P0-TRANSLATION",
+      "title": "Translation production provider readiness",
+      "priority": "P0",
+      "state": "OPEN",
+      "provider": "none",
+      "requiresRealProvider": true,
+      "notes": "Requires a live OpenAI or DeepL provider and customer-environment QA."
+    },
+    {
+      "id": "WB-R01-P0-UPSTASH",
+      "title": "Upstash production credential readiness",
+      "priority": "P0",
+      "state": "OPEN",
+      "provider": "none",
+      "requiresRealProvider": true,
+      "notes": "Requires live Upstash credentials and customer-environment QA."
+    },
+    {
+      "id": "WB-R01-P0-VERCEL-BLOB",
+      "title": "Vercel Blob production credential readiness",
+      "priority": "P0",
+      "state": "OPEN",
+      "provider": "none",
+      "requiresRealProvider": true,
+      "notes": "Requires live Vercel Blob credentials and customer-environment QA."
+    },
+    {
+      "id": "WB-R01-P0-CLEAN-HANDOFF",
+      "title": "Clean worktree handoff build",
+      "priority": "P0",
+      "state": "STUB",
+      "notes": "The current worktree contains unrelated in-progress changes; this row remains a stub until an atomic clean handoff is produced."
+    },
+    {
+      "id": "WB-R01-P1-LOCAL-GATES",
+      "title": "Local builder regression gates",
+      "priority": "P1",
+      "state": "OPEN",
+      "notes": "Tracked separately from customer-environment readiness."
+    }
+  ]
+}

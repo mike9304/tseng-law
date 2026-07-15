@@ -75,7 +75,15 @@ export async function POST(request: NextRequest, { params }: { params: { locale:
 
   await saveBooking(cancelled);
   const staff = await getStaff(cancelled.staffId);
-  await sendBookingCancellation(cancelled, { service, staff });
+  let emailDelivery;
+  try {
+    const delivery = await sendBookingCancellation(cancelled, { service, staff });
+    emailDelivery = delivery.ok
+      ? { ok: true as const }
+      : { ok: false as const, reason: delivery.reason };
+  } catch {
+    emailDelivery = { ok: false as const, reason: 'internal_error' as const };
+  }
   emitEvent('booking.cancelled', {
     bookingId: cancelled.bookingId,
     reason: parsed.data.reason,
@@ -91,5 +99,6 @@ export async function POST(request: NextRequest, { params }: { params: { locale:
     refundResult: outcome.refundResult,
     refundAmountCents: outcome.refundAmountCents,
     hoursUntilStart: outcome.hoursUntilStart,
+    emailDelivery,
   });
 }

@@ -25,6 +25,12 @@ interface ArchivePost {
   summary: string;
 }
 
+export const INSIGHTS_IMAGE_FALLBACK = '/images/placeholder-article-hero.jpg';
+
+export function resolveInsightsImageSrc(src?: string | null): string {
+  return src?.trim() || INSIGHTS_IMAGE_FALLBACK;
+}
+
 const copyByLocale = {
   ko: {
     label: 'INSIGHTS',
@@ -103,7 +109,7 @@ export default function InsightsArchiveSection({
           <article className="insights-featured">
             <div className="insights-featured-media">
               <Image
-                src={featured.featuredImage}
+                src={resolveInsightsImageSrc(featured.featuredImage)}
                 alt={featured.title}
                 width={920}
                 height={540}
@@ -155,7 +161,7 @@ export default function InsightsArchiveSection({
                 <article key={post.slug} className="insights-list-item">
                   <div className="insights-list-thumb">
                     <Image
-                      src={post.featuredImage}
+                      src={resolveInsightsImageSrc(post.featuredImage)}
                       alt={post.title}
                       width={240}
                       height={160}

@@ -13,6 +13,30 @@ vi.mock('@/lib/builder/translations/providers/router', () => ({
 
 const translateBatchViaRouterMock = vi.mocked(translateBatchViaRouter);
 
+const sensitiveFailureFragments = [
+  '<html>',
+  'provider body',
+  'super-secret',
+  'query-secret',
+  '민감한 고객 사실관계',
+  'ECONNRESET',
+  'STACK_TRACE_MARKER',
+] as const;
+const rawProviderFailure = [
+  '<html>provider body</html>',
+  'Authorization: Bearer super-secret',
+  'https://provider.example/v2?api_key=query-secret',
+  '민감한 고객 사실관계',
+  'ECONNRESET network failure',
+  'STACK_TRACE_MARKER at sendRequest',
+].join(' | ');
+
+function expectNoSensitiveFailureDetails(serialized: string): void {
+  for (const fragment of sensitiveFailureFragments) {
+    expect(serialized).not.toContain(fragment);
+  }
+}
+
 function request(body: unknown): NextRequest {
   return new NextRequest('https://law.example.test/api/builder/translations/translate-batch', {
     method: 'POST',
@@ -50,6 +74,24 @@ describe('builder translations translate-batch API', () => {
       error: '請確認翻譯請求。',
       errorCode: 'invalid_request',
     });
+  });
+
+  it('rejects equal normalized source and target locales before invoking the router', async () => {
+    const response = await POST(request({
+      locale: 'zh-hant',
+      sourceLocale: 'zh-hant',
+      targetLocale: 'zh-hant',
+      entries: [{ key: 'page:home:title', sourceText: '標題' }],
+    }));
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toEqual({
+      ok: false,
+      error: '請確認翻譯請求。',
+      errorCode: 'invalid_request',
+    });
+    expect(translateBatchViaRouterMock).not.toHaveBeenCalled();
   });
 
   it('returns batch results through one provider-native router call without recursive translate HTTP calls', async () => {
@@ -114,7 +156,7 @@ describe('builder translations translate-batch API', () => {
   it('returns localized batch failures without leaking exception details', async () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     translateBatchViaRouterMock.mockRejectedValueOnce(
-      new Error('batch secret leaked'),
+      new Error(rawProviderFailure),
     );
 
     const response = await POST(request({
@@ -131,8 +173,114 @@ describe('builder translations translate-batch API', () => {
       error: 'Unable to complete the batch translation.',
       errorCode: 'translation_batch_failed',
     });
-    expect(JSON.stringify(data)).not.toContain('batch secret leaked');
-    expect(consoleError).toHaveBeenCalledWith('[builder/translations/translate-batch] batch failed:', expect.any(Error));
+    expectNoSensitiveFailureDetails(JSON.stringify(data));
+    expect(consoleError.mock.calls).toEqual([[
+      '[builder/translations/translate-batch] batch failed',
+      { code: 'translation_batch_failed' },
+    ]]);
+    expectNoSensitiveFailureDetails(JSON.stringify(consoleError.mock.calls));
     consoleError.mockRestore();
+  });
+
+  it('returns ok false and 503 when every entry fails because the provider is unconfigured', async () => {
+    translateBatchViaRouterMock.mockResolvedValueOnce({
+      results: [
+        { key: 'title', ok: false, provider: 'openai', reason: 'unconfigured', error: rawProviderFailure },
+        { key: 'body', ok: false, provider: 'openai', reason: 'unconfigured', error: rawProviderFailure },
+      ],
+      summary: {
+        provider: 'openai',
+        mode: 'native-batch',
+        requested: 2,
+        succeeded: 0,
+        failed: 2,
+      },
+    });
+
+    const response = await POST(request({
+      locale: 'en',
+      sourceLocale: 'ko',
+      targetLocale: 'en',
+      provider: 'openai',
+      entries: [
+        { key: 'title', sourceText: '제목' },
+        { key: 'body', sourceText: '본문' },
+      ],
+    }));
+    const data = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(data).toEqual({
+      ok: false,
+      results: [
+        {
+          key: 'title',
+          ok: false,
+          error: 'No translation provider is configured.',
+          errorCode: 'translation_provider_unconfigured',
+        },
+        {
+          key: 'body',
+          ok: false,
+          error: 'No translation provider is configured.',
+          errorCode: 'translation_provider_unconfigured',
+        },
+      ],
+      summary: {
+        provider: 'openai',
+        mode: 'native-batch',
+        requested: 2,
+        succeeded: 0,
+        failed: 2,
+      },
+    });
+    expectNoSensitiveFailureDetails(JSON.stringify(data));
+  });
+
+  it('replaces malformed provider fields with a sanitized stable failure DTO and a 502 status', async () => {
+    translateBatchViaRouterMock.mockResolvedValueOnce({
+      results: [
+        { key: 'title', ok: true, provider: 'deepl', text: 'Title' },
+        {
+          key: 'body',
+          ok: false,
+          provider: rawProviderFailure as never,
+          reason: rawProviderFailure as never,
+          error: rawProviderFailure,
+        },
+      ],
+      summary: {
+        provider: 'deepl',
+        mode: 'native-batch',
+        requested: 2,
+        succeeded: 1,
+        failed: 1,
+      },
+    });
+
+    const response = await POST(request({
+      locale: 'en',
+      sourceLocale: 'ko',
+      targetLocale: 'en',
+      entries: [
+        { key: 'title', sourceText: '제목' },
+        { key: 'body', sourceText: '본문' },
+      ],
+    }));
+    const data = await response.json();
+
+    expect(response.status).toBe(502);
+    expect(data.ok).toBe(false);
+    expect(data.results).toEqual([
+      { key: 'title', ok: true, text: 'Title' },
+      {
+        key: 'body',
+        ok: false,
+        error: 'Unable to complete the translation provider request.',
+        errorCode: 'translation_provider_failed',
+      },
+    ]);
+    expect(data.summary).toMatchObject({ succeeded: 1, failed: 1 });
+    expectNoSensitiveFailureDetails(JSON.stringify(data));
   });
 });

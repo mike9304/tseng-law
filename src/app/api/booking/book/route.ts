@@ -28,6 +28,43 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
+type EmailRecipientDelivery =
+  | { ok: true }
+  | { ok: false; reason: 'unconfigured' | 'provider_error' };
+
+type EmailDelivery =
+  | {
+    ok: boolean;
+    customer: EmailRecipientDelivery;
+    admin?: EmailRecipientDelivery;
+  }
+  | { ok: false; reason: 'internal_error' };
+
+function sanitizeEmailRecipient(
+  delivery: Awaited<ReturnType<typeof sendBookingConfirmation>>['customer'],
+): EmailRecipientDelivery {
+  return delivery.ok
+    ? { ok: true }
+    : { ok: false, reason: delivery.reason };
+}
+
+async function deliverBookingConfirmation(
+  booking: Booking,
+  context: Parameters<typeof sendBookingConfirmation>[1],
+): Promise<EmailDelivery> {
+  try {
+    const delivery = await sendBookingConfirmation(booking, context);
+    return {
+      ok: delivery.ok,
+      customer: sanitizeEmailRecipient(delivery.customer),
+      ...(delivery.admin ? { admin: sanitizeEmailRecipient(delivery.admin) } : {}),
+    };
+  } catch {
+    console.error('[booking/book] confirmation delivery failed');
+    return { ok: false, reason: 'internal_error' };
+  }
+}
+
 function getClientIp(request: NextRequest): string {
   return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
     || request.headers.get('x-real-ip')
@@ -128,12 +165,14 @@ export async function POST(request: NextRequest) {
       return errorResponse(locale, 'booking_create_payment_not_allowed', 400);
     }
 
-    // Server-side verify the paymentIntent so a client can't fabricate
-    // an id to hold a slot or bypass payment. When STRIPE_SECRET_KEY is
-    // unset (dev) we fall through and trust the client until the webhook
-    // arrives.
+    // Server-side verify the paymentIntent so a client can't fabricate an id
+    // to hold a slot or bypass payment. Development may use the local stub,
+    // but production must have Stripe configured and return a verified intent.
     let paymentSettled = false;
     if (service.paymentMode === 'paid' && parsed.data.paymentIntentId) {
+      if (process.env.NODE_ENV === 'production' && !process.env.STRIPE_SECRET_KEY) {
+        return errorResponse(locale, 'booking_payment_provider_not_configured', 503);
+      }
       const intent = await fetchPaymentIntentStatus(parsed.data.paymentIntentId);
       if (intent !== null) {
         // serviceId metadata must match to prevent reusing an intent for a
@@ -159,8 +198,7 @@ export async function POST(request: NextRequest) {
           });
         }
         paymentSettled = intent.status === 'succeeded';
-      } else if (process.env.NODE_ENV === 'production' && process.env.STRIPE_SECRET_KEY) {
-        // Key is set but verification failed: don't trust the intent.
+      } else if (process.env.NODE_ENV === 'production') {
         return errorResponse(locale, 'booking_create_payment_unverified', 402);
       }
     }
@@ -266,11 +304,7 @@ export async function POST(request: NextRequest) {
     } catch (error) {
       console.error('[booking/book] billing automation failed:', error instanceof Error ? error.message : String(error));
     }
-    try {
-      await sendBookingConfirmation(booking, { service, staff });
-    } catch (error) {
-      console.error('[booking/book] confirmation failed:', error instanceof Error ? error.message : String(error));
-    }
+    const emailDelivery = await deliverBookingConfirmation(booking, { service, staff });
     try {
       emitEvent('booking.created', {
         bookingId: booking.bookingId,
@@ -284,7 +318,7 @@ export async function POST(request: NextRequest) {
       console.error('[booking/book] webhook dispatch failed:', error instanceof Error ? error.message : String(error));
     }
 
-    return NextResponse.json({ bookingId: booking.bookingId, booking }, { status: 201 });
+    return NextResponse.json({ bookingId: booking.bookingId, booking, emailDelivery }, { status: 201 });
   } catch (error) {
     console.error('[booking/book] POST failed:', error instanceof Error ? error.message : String(error));
     return errorResponse(locale, 'booking_create_failed', 500);

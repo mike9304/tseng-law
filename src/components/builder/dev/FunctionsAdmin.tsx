@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import type { Locale } from '@/lib/locales';
 import { getFunctionsCopy } from './functions-copy';
 import { FunctionCodeEditor } from './FunctionCodeEditor';
@@ -22,6 +22,17 @@ import type {
   LogsResponse,
 } from './functions-admin-types';
 import { createEmptyFunctionDraft, formatFunctionResult } from './functions-admin-utils';
+
+const SANDBOX_NOTICE_STYLE: CSSProperties = {
+  margin: '0 16px 12px',
+  padding: '10px 12px',
+  border: '1px solid #f59e0b',
+  borderRadius: 8,
+  background: '#fffbeb',
+  color: '#92400e',
+  fontSize: 13,
+  lineHeight: 1.5,
+};
 
 export default function FunctionsAdmin({ locale }: { locale: Locale }) {
   const copy = getFunctionsCopy(locale);
@@ -206,6 +217,16 @@ export default function FunctionsAdmin({ locale }: { locale: Locale }) {
       />
 
       <section style={EDITOR_STYLE} aria-label={copy.editFunction}>
+        <p
+          role="status"
+          aria-label={copy.sandboxNotice}
+          data-builder-dev-disclosure="function-sandbox"
+          style={SANDBOX_NOTICE_STYLE}
+        >
+          <strong>DEMO</strong>
+          <span style={{ marginLeft: 6 }}>{copy.sandboxNotice}</span>
+        </p>
+
         <FunctionEditorToolbar
           aiUndoAvailable={aiUndoCode !== null}
           copy={copy}

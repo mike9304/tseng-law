@@ -176,8 +176,8 @@ export interface NormalizedAnimationConfig {
 
 export const DEFAULT_EXIT_ANIMATION: ExitAnimationConfig = {
   preset: 'none',
-  duration: 400,
-  easing: 'ease-out',
+  duration: 360,
+  easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
 };
 
 export const DEFAULT_LOOP_ANIMATION: LoopAnimationConfig = {
@@ -215,9 +215,9 @@ export interface HoverPresetDefinition {
 
 export const DEFAULT_ENTRANCE_ANIMATION: EntranceAnimationConfig = {
   preset: 'none',
-  duration: 600,
+  duration: 420,
   delay: 0,
-  easing: 'ease-out',
+  easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
   triggerOnce: true,
 };
 
@@ -228,7 +228,7 @@ export const DEFAULT_SCROLL_ANIMATION: ScrollAnimationConfig = {
 
 export const DEFAULT_HOVER_ANIMATION: HoverAnimationConfig = {
   preset: 'none',
-  transitionMs: 200,
+  transitionMs: 180,
 };
 
 export const DEFAULT_CLICK_ANIMATION: ClickAnimationConfig = {
@@ -265,7 +265,7 @@ export const ENTRANCE_PRESET_DEFINITIONS: Record<EntrancePreset, EntrancePresetD
     description: '중앙에서 확장되며 등장.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'scale(0.6)',
+    initialTransform: 'scale(0.92)',
     visibleTransform: 'scale(1)',
   },
   'expand-from-left': {
@@ -273,7 +273,7 @@ export const ENTRANCE_PRESET_DEFINITIONS: Record<EntrancePreset, EntrancePresetD
     description: '왼쪽 끝에서 확장.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'translateX(-20px) scale(0.8)',
+    initialTransform: 'translateX(-18px) scale(0.94)',
     visibleTransform: 'translateX(0) scale(1)',
   },
   'expand-from-right': {
@@ -281,7 +281,7 @@ export const ENTRANCE_PRESET_DEFINITIONS: Record<EntrancePreset, EntrancePresetD
     description: '오른쪽 끝에서 확장.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'translateX(20px) scale(0.8)',
+    initialTransform: 'translateX(18px) scale(0.94)',
     visibleTransform: 'translateX(0) scale(1)',
   },
   'slide-up': {
@@ -289,49 +289,49 @@ export const ENTRANCE_PRESET_DEFINITIONS: Record<EntrancePreset, EntrancePresetD
     description: 'Moves up from below while fading in.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'translateY(40px)',
+    initialTransform: 'translateY(24px)',
   },
   'slide-down': {
     label: 'Slide down',
     description: 'Moves down from above while fading in.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'translateY(-40px)',
+    initialTransform: 'translateY(-24px)',
   },
   'slide-left': {
     label: 'Slide left',
     description: 'Moves left from the right side while fading in.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'translateX(40px)',
+    initialTransform: 'translateX(24px)',
   },
   'slide-right': {
     label: 'Slide right',
     description: 'Moves right from the left side while fading in.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'translateX(-40px)',
+    initialTransform: 'translateX(-24px)',
   },
   'zoom-in': {
     label: 'Zoom in',
     description: 'Scales up into place.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'scale(0.6)',
+    initialTransform: 'scale(0.94)',
   },
   'zoom-out': {
     label: 'Zoom out',
     description: 'Scales down into place.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'scale(1.2)',
+    initialTransform: 'scale(1.06)',
   },
   'bounce-in': {
     label: 'Bounce in',
     description: 'Pops into place with an overshoot.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'scale(0.3)',
+    initialTransform: 'scale(0.86)',
     easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
   },
   'flip-x': {
@@ -369,14 +369,14 @@ export const ENTRANCE_PRESET_DEFINITIONS: Record<EntrancePreset, EntrancePresetD
     description: 'Rotates and scales into place.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'rotate(180deg) scale(0.5)',
+    initialTransform: 'rotate(14deg) scale(0.94)',
   },
   'float-up': {
     label: 'Float up',
     description: 'Longer upward float with a soft fade.',
     initialOpacity: 0,
     visibleOpacity: 1,
-    initialTransform: 'translateY(80px)',
+    initialTransform: 'translateY(36px)',
   },
 };
 

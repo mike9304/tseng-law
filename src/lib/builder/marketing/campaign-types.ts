@@ -2,7 +2,13 @@ import { z } from 'zod';
 import { locales } from '@/lib/locales';
 import type { LocalizedText } from '@/lib/builder/bookings/types';
 
-export type CampaignStatus = 'draft' | 'scheduled' | 'sending' | 'sent' | 'failed';
+export type CampaignStatus =
+  | 'draft'
+  | 'scheduled'
+  | 'sending'
+  | 'sent'
+  | 'failed'
+  | 'partial';
 
 export interface CampaignStats {
   recipients: number;

@@ -57,6 +57,19 @@ describe('/api/builder/site/seed', () => {
     expect(mockedSeedSitePages).not.toHaveBeenCalled();
   });
 
+  it.each([
+    [JSON.stringify({ siteId: 'undefined' }), ''],
+    [JSON.stringify({ siteId: ['workspace-site-b'] }), ''],
+    [JSON.stringify({}), '?siteId=..%2F..%2Fx'],
+  ])('rejects an invalid supplied site id before seeding', async (body, query) => {
+    const response = await route.POST(postRequest(body, query));
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({ ok: false, success: false, errorCode: 'invalid_site_id' });
+    expect(mockedSeedSitePages).not.toHaveBeenCalled();
+  });
+
   it('returns localized stable-code JSON when seeding fails', async () => {
     mockedSeedSitePages.mockRejectedValueOnce(new Error('raw seed failure'));
     const response = await route.POST(postRequest(JSON.stringify({ locale: 'en' })));

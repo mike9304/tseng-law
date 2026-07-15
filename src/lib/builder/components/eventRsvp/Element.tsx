@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useMemo, useState } from 'react';
 import type { BuilderEventRsvpCanvasNode } from '@/lib/builder/canvas/types';
 import type { BuilderEvent } from '@/lib/builder/events/events-shared';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { WidgetDataDisclosure } from '../_shared/WidgetDataDisclosure';
 import { EVENT_RSVP_LEGACY_DEFAULTS, getEventWidgetsCopy, localizedEventWidgetText } from '../event-widgets-copy';
 import styles from './EventRsvp.module.css';
 
@@ -103,6 +104,7 @@ export default function EventRsvpElement({ node, mode = 'edit', locale }: EventR
 
   return (
     <section className={styles.root} data-builder-event-rsvp="true">
+      {isBuilder ? <WidgetDataDisclosure locale={effectiveLocale} /> : null}
       <div className={styles.summary}>
         <span>{selectedEvent.date} {selectedEvent.time}</span>
         <strong>{selectedEvent.title}</strong>

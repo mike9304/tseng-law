@@ -45,8 +45,23 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     let document = issued.document;
     if (parsed.data.email) {
       const staff = await getStaff(booking.staffId);
-      await sendBookingBillingDocument(booking, document, { service: issued.service, staff });
-      const emailed = await markBookingBillingDocumentEmailed(booking.bookingId, document.documentId);
+      const delivery = await sendBookingBillingDocument(booking, document, { service: issued.service, staff });
+      if (!delivery.ok) {
+        const error = delivery.reason === 'unconfigured' ? 'email_unconfigured' : 'email_provider_error';
+        return NextResponse.json(
+          { ok: false, error, booking, document, reused: issued.reused },
+          { status: delivery.reason === 'unconfigured' ? 503 : 502 },
+        );
+      }
+      let emailed;
+      try {
+        emailed = await markBookingBillingDocumentEmailed(booking.bookingId, document.documentId);
+      } catch {
+        return NextResponse.json(
+          { ok: false, error: 'marker_persist_failed_after_delivery', booking, document },
+          { status: 500 },
+        );
+      }
       booking = emailed.booking;
       document = emailed.document;
     }

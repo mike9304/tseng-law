@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { seedSitePages } from '@/lib/builder/canvas/seed-pages';
 import { guardMutation } from '@/lib/builder/security/guard';
-import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
+import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import {
   builderJsonResponse,
@@ -56,11 +56,9 @@ export async function POST(request: NextRequest) {
       ? body.locale
       : request.nextUrl.searchParams.get('locale') || undefined,
   );
-  const siteId = normalizeBuilderSiteId(
-    typeof body.siteId === 'string'
-      ? body.siteId
-      : request.nextUrl.searchParams.get('siteId'),
-  );
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
 
   try {
     await seedSitePages(siteId, locale);

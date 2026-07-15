@@ -69,6 +69,7 @@ export const CAMPAIGN_EDITOR_COPY: Readonly<Record<Locale, CampaignEditorCopy>> 
       sending: '발송중',
       sent: '발송완료',
       failed: '실패',
+      partial: '부분발송',
     },
   },
   'zh-hant': {
@@ -101,6 +102,7 @@ export const CAMPAIGN_EDITOR_COPY: Readonly<Record<Locale, CampaignEditorCopy>> 
       sending: '發送中',
       sent: '已發送',
       failed: '失敗',
+      partial: '部分發送',
     },
   },
   en: {
@@ -133,6 +135,7 @@ export const CAMPAIGN_EDITOR_COPY: Readonly<Record<Locale, CampaignEditorCopy>> 
       sending: 'Sending',
       sent: 'Sent',
       failed: 'Failed',
+      partial: 'Partial',
     },
   },
 };

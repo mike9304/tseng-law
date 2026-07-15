@@ -163,7 +163,15 @@ export async function PATCH(request: NextRequest, { params }: { params: { token:
     const cancelled = await restorePackageCreditForBooking(applyRefundOutcome(result.booking, outcome, parsed.data.reason));
     const updated = timestamped(cancelled, result.booking.createdAt);
     await saveBooking(updated);
-    await sendBookingCancellation(updated, { service: result.service, staff: result.staff });
+    let emailDelivery;
+    try {
+      const delivery = await sendBookingCancellation(updated, { service: result.service, staff: result.staff });
+      emailDelivery = delivery.ok
+        ? { ok: true as const }
+        : { ok: false as const, reason: delivery.reason };
+    } catch {
+      emailDelivery = { ok: false as const, reason: 'internal_error' as const };
+    }
     emitEvent('booking.cancelled', {
       bookingId: updated.bookingId,
       reason: parsed.data.reason,
@@ -178,6 +186,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { token:
       refundResult: outcome.refundResult,
       refundAmountCents: outcome.refundAmountCents,
       hoursUntilStart: outcome.hoursUntilStart,
+      emailDelivery,
     });
   }
 

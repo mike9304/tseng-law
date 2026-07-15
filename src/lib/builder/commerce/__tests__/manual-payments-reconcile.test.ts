@@ -1,7 +1,7 @@
 import { promises as fs } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   applyReconciliation,
   listPendingReconciliations,
@@ -223,5 +223,65 @@ describe('manual payments reconciliation', () => {
     });
     const reloaded = await loadOrder(order.orderId);
     expect(reloaded?.audit.some((event) => event.type === 'payment.manual.reconciled')).toBe(true);
+  });
+});
+
+describe('production legacy authorized_stub laundering boundary', () => {
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it('rejects laundering a legacy authorized_stub to paid via applyReconciliation in production and preserves persisted bytes', async () => {
+    const address = normalizeCheckoutAddress({
+      country: 'TW',
+      region: 'Taipei',
+      city: 'Taipei',
+      postalCode: '100',
+      addressLine1: 'No. 1 Launder Recon Road',
+    });
+    const cart = upsertCartItem(makeEmptyCart('en', 'TWD'), item({ priceCents: 50000 }), 1);
+    const quote = createCommerceCheckoutQuote(cart, 'en', 'standard', address);
+    const order = await createOrder({
+      confirmationNumber: 'TSENG-RECON-LAUNDER',
+      locale: 'en',
+      currency: 'TWD',
+      customer: { name: 'Recon Launder', email: 'recon-launder@example.com' },
+      shippingAddress: address,
+      lineItems: cart.items,
+      couponCode: undefined,
+      shipping: quote.shipping,
+      tax: quote.tax,
+      totals: { ...quote.totals, grandTotalCents: 50000 },
+      payment: {
+        adapter: 'manual-invoice',
+        status: 'authorized_stub',
+        label: 'Manual invoice',
+        stub: true,
+        referenceId: 'manual-recon-launder',
+      },
+      now: new Date().toISOString(),
+    });
+
+    const recorded = await recordManualPayment(order.orderId, {
+      amountCents: 50000,
+      method: 'cash',
+      reference: 'CASH-RECON-LAUNDER',
+    });
+    expect(recorded.payment?.status).toBe('pending');
+
+    const filePath = path.join(tmpRoot, 'orders', `${order.orderId}.json`);
+    const snapshot = await fs.readFile(filePath, 'utf8');
+
+    vi.stubEnv('NODE_ENV', 'production');
+
+    await expect(
+      applyReconciliation(order.orderId, recorded.payment!.paymentId, 'succeeded'),
+    ).rejects.toThrow('commerce_order_stub_payment_not_writable');
+
+    expect(await fs.readFile(filePath, 'utf8')).toBe(snapshot);
+    const reloaded = await loadOrder(order.orderId);
+    expect(reloaded?.payment.status).toBe('authorized_stub');
+    const payment = reloaded?.manualPayments.find((entry) => entry.paymentId === recorded.payment!.paymentId);
+    expect(payment?.status).toBe('pending');
   });
 });

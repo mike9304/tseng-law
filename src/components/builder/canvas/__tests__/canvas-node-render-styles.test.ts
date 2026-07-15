@@ -39,11 +39,31 @@ function compositeNode(
   } satisfies BuilderCompositeCanvasNode;
 }
 
+function hoverableCompositeNode(
+  id: string,
+  overrides: Partial<BuilderCompositeCanvasNode> = {},
+): BuilderCompositeCanvasNode {
+  return compositeNode(id, {
+    hoverStyle: {
+      backgroundColor: '#dbeafe',
+      borderColor: '#2563eb',
+      shadowBlur: 24,
+      shadowColor: 'rgba(37, 99, 235, 0.22)',
+      shadowSpread: 0,
+      translateY: -4,
+      transitionMs: 240,
+    },
+    ...overrides,
+  });
+}
+
 function buildStyles(node: BuilderCanvasNode, opts: {
   isTopLevelFlowSection?: boolean;
   isContainerLikeNode?: boolean;
   isAccordionPreviewOpen?: boolean;
   selected?: boolean;
+  isHovered?: boolean;
+  isEditing?: boolean;
   previewOffsetY?: number;
   selectionZIndexBoost?: number;
 } = {}) {
@@ -52,6 +72,8 @@ function buildStyles(node: BuilderCanvasNode, opts: {
     isContainerLikeNode = true,
     isAccordionPreviewOpen = false,
     selected = false,
+    isHovered = false,
+    isEditing = false,
     previewOffsetY = 0,
     selectionZIndexBoost = 0,
   } = opts;
@@ -63,8 +85,8 @@ function buildStyles(node: BuilderCanvasNode, opts: {
     isContainerLikeNode,
     isContainerWithChildren: true,
     isDimmedRoot: false,
-    isEditing: false,
-    isHovered: false,
+    isEditing,
+    isHovered,
     isAccordionPreviewOpen,
     isTextShapedNode: false,
     node,
@@ -182,6 +204,25 @@ describe('buildCanvasNodeRenderStyles — section overflow/stacking parity', () 
     });
 
     expect(nodeStyle.transform).toBe('translateY(10px) rotate(0deg)');
+  });
+
+  it('keeps hover styling out of the editing surface so inline text editing stays steady', () => {
+    const section = hoverableCompositeNode('home-hero', { rotation: 0 });
+    const { bodyStyle } = buildStyles(section, {
+      isTopLevelFlowSection: true,
+      isHovered: true,
+    });
+    const { bodyStyle: editingBodyStyle } = buildStyles(section, {
+      isTopLevelFlowSection: true,
+      isHovered: true,
+      isEditing: true,
+    });
+
+    expect(bodyStyle.transform).toBe('translateY(-4px)');
+    expect(bodyStyle.boxShadow).toContain('rgba(37, 99, 235, 0.22)');
+    expect(editingBodyStyle.transform).toBeUndefined();
+    expect(editingBodyStyle.boxShadow).toBe('none');
+    expect(editingBodyStyle.transition).toBeUndefined();
   });
 
   it('collapses closed services accordion body nodes without relying on CSS modules', () => {

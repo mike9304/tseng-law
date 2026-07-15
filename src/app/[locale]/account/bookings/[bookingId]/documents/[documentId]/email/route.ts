@@ -31,8 +31,23 @@ export async function POST(_request: NextRequest, { params }: { params: { locale
 
   const service = await getService(sourceBooking.serviceId);
   const staff = await getStaff(sourceBooking.staffId);
-  await sendBookingBillingDocument(sourceBooking, document, { service, staff });
-  const emailed = await markBookingBillingDocumentEmailed(sourceBooking.bookingId, document.documentId);
+  const delivery = await sendBookingBillingDocument(sourceBooking, document, { service, staff });
+  if (!delivery.ok) {
+    const error = delivery.reason === 'unconfigured' ? 'email_unconfigured' : 'email_provider_error';
+    return NextResponse.json(
+      { ok: false, error, booking: sourceBooking, document },
+      { status: delivery.reason === 'unconfigured' ? 503 : 502 },
+    );
+  }
+  let emailed;
+  try {
+    emailed = await markBookingBillingDocumentEmailed(sourceBooking.bookingId, document.documentId);
+  } catch {
+    return NextResponse.json(
+      { ok: false, error: 'marker_persist_failed_after_delivery', booking: sourceBooking, document },
+      { status: 500 },
+    );
+  }
 
   return NextResponse.json({ ok: true, booking: emailed.booking, document: emailed.document });
 }

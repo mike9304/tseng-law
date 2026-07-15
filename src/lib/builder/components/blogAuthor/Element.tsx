@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { BuilderBlogAuthorCanvasNode } from '@/lib/builder/canvas/types';
 import type { BlogAuthor, BlogPost } from '@/lib/builder/blog/blog-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { WidgetDataDisclosure } from '../_shared/WidgetDataDisclosure';
 import styles from './BlogAuthor.module.css';
 import { getBlogAuthorCopy, type BlogAuthorCopy } from './blog-author-copy';
 
@@ -144,6 +145,7 @@ export default function BlogAuthorElement({ node, mode = 'edit', locale }: BlogA
       className={`${styles.authorRoot} ${c.layout === 'list' ? styles.authorList : styles.authorCard}`}
       data-builder-blog-author="true"
     >
+      {isBuilder ? <WidgetDataDisclosure locale={effectiveLocale} /> : null}
       {authors.map((group) => {
         const authorHref = `/${effectiveLocale}/columns?author=${encodeURIComponent(group.author.name)}`;
         return (

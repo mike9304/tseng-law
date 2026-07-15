@@ -4,6 +4,7 @@ import { guardMutation } from '@/lib/builder/security/guard';
 import { generateSiteDraft } from '@/lib/builder/ai-generator/orchestrator';
 import { readDraftCache, writeDraftCache } from '@/lib/builder/ai-generator/cache';
 import { appendAiIntakeVersion } from '@/lib/builder/ai-generator/intake-versions-store';
+import { AiContentGenerationError } from '@/lib/builder/ai-generator/content-generator';
 import type { GeneratedSiteDraft } from '@/lib/builder/ai-generator/orchestrator';
 import type { SiteSpec } from '@/lib/builder/ai-generator/site-spec';
 
@@ -63,6 +64,8 @@ function draft(): GeneratedSiteDraft {
       hero: { sectionId: 'hero', headline: '대만 법률 상담', body: 'Body' },
       sections: [],
       metaDescription: 'Meta',
+      source: 'openai',
+      stub: false,
     },
     plan: {
       sitemap: [{ title: 'Home', slug: '/', purpose: 'Home', sections: ['hero'] }],
@@ -100,6 +103,7 @@ function postRequest(body: unknown, siteId = 'builder-alpha'): NextRequest {
 describe('/api/builder/ai-generator', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    vi.mocked(readDraftCache).mockReturnValue(null);
     vi.mocked(generateSiteDraft).mockResolvedValue(draft());
   });
 
@@ -169,5 +173,68 @@ describe('/api/builder/ai-generator', () => {
     } finally {
       warnSpy.mockRestore();
     }
+  });
+
+  it('returns a sanitized false result and performs no recording writes when generation fails', async () => {
+    vi.mocked(generateSiteDraft).mockRejectedValueOnce(
+      new AiContentGenerationError('ai_content_provider_unconfigured'),
+    );
+
+    const route = await import('../route');
+    const response = await route.POST(postRequest({ spec }));
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'ai_content_provider_unconfigured',
+      message: 'AI content provider is not configured.',
+    });
+    expect(payload.draft).toBeUndefined();
+    expect(writeDraftCache).not.toHaveBeenCalled();
+    expect(appendAiIntakeVersion).not.toHaveBeenCalled();
+  });
+
+  it('never reports local demo content as a generated draft', async () => {
+    const localDemo = draft();
+    localDemo.content.source = 'local-demo';
+    localDemo.content.stub = true;
+    vi.mocked(generateSiteDraft).mockResolvedValueOnce(localDemo);
+
+    const route = await import('../route');
+    const response = await route.POST(postRequest({ spec }));
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'ai_content_local_demo_only',
+      message: 'Local demo content cannot be used as generated site content.',
+      source: 'local-demo',
+      stub: true,
+    });
+    expect(payload.draft).toBeUndefined();
+    expect(writeDraftCache).not.toHaveBeenCalled();
+    expect(appendAiIntakeVersion).not.toHaveBeenCalled();
+  });
+
+  it('does not trust an unlabelled cached draft as provider output', async () => {
+    const legacyCached = draft();
+    delete legacyCached.content.source;
+    delete legacyCached.content.stub;
+    vi.mocked(readDraftCache).mockReturnValue(legacyCached);
+    vi.mocked(generateSiteDraft).mockRejectedValueOnce(
+      new AiContentGenerationError('ai_content_provider_unavailable'),
+    );
+
+    const route = await import('../route');
+    const response = await route.POST(postRequest({ spec }));
+    const payload = await response.json();
+
+    expect(response.status).toBe(502);
+    expect(payload.ok).toBe(false);
+    expect(payload.error).toBe('ai_content_provider_unavailable');
+    expect(generateSiteDraft).toHaveBeenCalledTimes(1);
+    expect(appendAiIntakeVersion).not.toHaveBeenCalled();
   });
 });

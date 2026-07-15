@@ -67,11 +67,9 @@ interface StripeEvent {
 }
 
 export async function POST(request: NextRequest) {
-  const secret = process.env.STRIPE_WEBHOOK_SECRET ?? '';
+  const secret = process.env.STRIPE_WEBHOOK_SECRET?.trim() ?? '';
   if (!secret) {
-    // BOOKING_STRIPE_WEBHOOK_ALLOW_UNSIGNED=1 keeps the dev acceptance path
-    // available when a production build runs in a local/QA harness.
-    if (process.env.NODE_ENV === 'production' && process.env.BOOKING_STRIPE_WEBHOOK_ALLOW_UNSIGNED !== '1') {
+    if (process.env.NODE_ENV === 'production') {
       return NextResponse.json({ error: 'Webhook not configured' }, { status: 503 });
     }
     console.warn('[booking/stripe-webhook] STRIPE_WEBHOOK_SECRET unset — accepting unsigned events in dev only');

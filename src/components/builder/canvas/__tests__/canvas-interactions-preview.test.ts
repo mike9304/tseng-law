@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import {
   createSnapCandidateEdges,
@@ -34,6 +34,10 @@ import {
   isMoveActivationDistanceMet,
   resolvePendingMoveAbsoluteRect,
   resolvePendingMoveHoverContainerId,
+  resolveInitialMoveContainerHit,
+  resolvePreferredMoveContainerHit,
+  resolveSelectedDomMoveTargetId,
+  resolveUnactivatedMoveSelectionId,
   canFreeMoveNodeOnDesktop,
   resolveTopLevelAncestorId,
   collectTopLevelSectionHitRects,
@@ -288,6 +292,57 @@ describe('canvas move selection refresh', () => {
     expect(isSameMoveSelection(['node-b', 'node-a'], 'node-a', ['node-a', 'node-b'], 'node-a')).toBe(false);
     expect(isSameMoveSelection(['node-a'], 'node-a', ['node-a'], 'node-b')).toBe(false);
   });
+
+  it('defers exact text selection until a click while preserving selected-parent drag', () => {
+    class FakeHTMLElement {
+      closest(): unknown {
+        return {
+          parentElement: {
+            closest: () => ({ dataset: { nodeId: 'selected-parent' } }),
+          },
+        };
+      }
+    }
+
+    vi.stubGlobal('HTMLElement', FakeHTMLElement);
+    try {
+      const target = new FakeHTMLElement() as unknown as EventTarget;
+      expect(resolveSelectedDomMoveTargetId('text-child', target, false)).toBe('selected-parent');
+      expect(resolveUnactivatedMoveSelectionId('text-child', 'selected-parent', 'text')).toBe('text-child');
+      expect(resolveUnactivatedMoveSelectionId('heading-child', 'selected-parent', 'heading')).toBe('heading-child');
+      expect(resolveUnactivatedMoveSelectionId('button-child', 'selected-parent', 'button')).toBeNull();
+      expect(resolveUnactivatedMoveSelectionId('image-child', 'selected-parent', 'image')).toBeNull();
+      expect(resolveUnactivatedMoveSelectionId('text-child', 'text-child', 'text')).toBeNull();
+      expect(resolveUnactivatedMoveSelectionId('node-b', 'node-b', 'text', {
+        pointerType: 'mouse',
+        selectedNodeCount: 3,
+        moveNodeSelected: true,
+      })).toBe('node-b');
+      expect(resolveUnactivatedMoveSelectionId('node-b', 'node-b', 'text', {
+        pointerType: 'mouse',
+        selectedNodeCount: 1,
+        moveNodeSelected: true,
+      })).toBeNull();
+      expect(resolveUnactivatedMoveSelectionId('node-b', 'node-b', 'text', {
+        pointerType: 'mouse',
+        selectedNodeCount: 3,
+        moveNodeSelected: false,
+      })).toBeNull();
+      expect(resolveUnactivatedMoveSelectionId('node-b', 'node-b', 'text', {
+        additive: true,
+        pointerType: 'mouse',
+        selectedNodeCount: 3,
+        moveNodeSelected: true,
+      })).toBeNull();
+      expect(resolveUnactivatedMoveSelectionId('node-b', 'node-b', 'text', {
+        pointerType: 'touch',
+        selectedNodeCount: 3,
+        moveNodeSelected: true,
+      })).toBeNull();
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
 });
 
 describe('canvas move activation threshold', () => {
@@ -450,6 +505,42 @@ describe('canvas move start geometry helpers', () => {
     expect(findContainerHitCandidateForPoint(260, 160, candidates)).toBe(outer);
     expect(findContainerHitCandidateForPoint(260, 160, candidates, inner)).toBe(inner);
     expect(findContainerHitCandidateForPoint(900, 900, candidates, inner)).toBe(null);
+  });
+
+  it('seeds nested moves with their current parent instead of the outermost hit candidate', () => {
+    const outer = { id: 'outer', rect: { x: 0, y: 0, width: 800, height: 600 } };
+    const parent = { id: 'parent', rect: { x: 200, y: 120, width: 220, height: 180 } };
+    const candidates = [outer, parent];
+
+    expect(resolveInitialMoveContainerHit(candidates, 'parent')).toBe(parent);
+    expect(resolveInitialMoveContainerHit(candidates, 'missing')).toBeNull();
+    expect(resolveInitialMoveContainerHit(candidates, null)).toBeNull();
+    expect(findContainerHitCandidateForPoint(260, 160, candidates, parent)).toBe(parent);
+  });
+
+  it('revalidates the current parent at the snapped boundary instead of keeping an outer ancestor sticky', () => {
+    const rootNode = node({ id: 'home-hero-root', kind: 'container' });
+    const wrapperNode = node({ id: 'home-hero-search-wrapper', kind: 'container', parentId: rootNode.id });
+    const parentNode = node({ id: 'home-hero-search-container', kind: 'container', parentId: wrapperNode.id });
+    const movedNode = node({ id: 'home-hero-search-wrap', kind: 'container', parentId: parentNode.id });
+    const nodesById = new Map([rootNode, wrapperNode, parentNode, movedNode].map((item) => [item.id, item]));
+    const rootHit = { id: rootNode.id, rect: { x: 0, y: 0, width: 1280, height: 788 } };
+    const parentHit = { id: parentNode.id, rect: { x: 51, y: 618, width: 760, height: 62 } };
+    const containerHitRects = [rootHit, parentHit];
+    const preferredContainerHit = resolvePreferredMoveContainerHit({
+      containerHitRects,
+      currentHoveredContainerHit: rootHit,
+      nodesById,
+      startParentId: parentNode.id,
+    });
+
+    expect(preferredContainerHit).toBe(parentHit);
+    expect(resolvePendingMoveHoverContainerId({
+      containerHitRects,
+      parentAbsoluteRect: parentHit.rect,
+      preferredContainerHit,
+      rect: { x: 54, y: 31, width: 760, height: 62 },
+    })).toBe(parentNode.id);
   });
 
   it('resolves pending local move rects against parent absolute rects for drop hover', () => {

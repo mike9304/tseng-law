@@ -98,7 +98,15 @@ export async function POST(request: NextRequest) {
   }
   await saveBooking(updated);
   const staff = await getStaff(updated.staffId);
-  await sendBookingCancellation(updated, { service, staff });
+  let emailDelivery;
+  try {
+    const delivery = await sendBookingCancellation(updated, { service, staff });
+    emailDelivery = delivery.ok
+      ? { ok: true as const }
+      : { ok: false as const, reason: delivery.reason };
+  } catch {
+    emailDelivery = { ok: false as const, reason: 'internal_error' as const };
+  }
   emitEvent('booking.cancelled', {
     bookingId: updated.bookingId,
     reason: parsed.data.reason,
@@ -113,5 +121,6 @@ export async function POST(request: NextRequest) {
     refundResult: outcome.refundResult,
     refundAmountCents: outcome.refundAmountCents,
     hoursUntilStart: outcome.hoursUntilStart,
+    emailDelivery,
   });
 }

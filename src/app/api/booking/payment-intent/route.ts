@@ -137,9 +137,7 @@ export async function POST(request: NextRequest) {
 
     const stripeKey = process.env.STRIPE_SECRET_KEY ?? '';
     if (!stripeKey) {
-      // BOOKING_PAYMENT_ALLOW_STUB=1 keeps the dev stub available when a
-      // production build runs in a local/QA harness without Stripe keys.
-      if (process.env.NODE_ENV === 'production' && process.env.BOOKING_PAYMENT_ALLOW_STUB !== '1') {
+      if (process.env.NODE_ENV === 'production') {
         console.warn('[booking/payment-intent] STRIPE_SECRET_KEY missing in production');
         return errorResponse(locale, 'booking_payment_provider_not_configured', 503);
       }

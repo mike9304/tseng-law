@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { deletePage, readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { createDefaultSiteDocument, type BuilderPageMeta, type BuilderSiteDocument } from '@/lib/builder/site/types';
+import { SiteInvariantError } from '@/lib/builder/site/site-invariants';
 import * as route from '@/app/api/builder/site/pages/[pageId]/route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
@@ -84,6 +85,19 @@ describe('/api/builder/site/pages/[pageId]', () => {
     expect(mockedWriteSiteDocument).not.toHaveBeenCalled();
   });
 
+  it('rejects an array site id on PATCH before reading or writing the default site', async () => {
+    const response = await route.PATCH(
+      patchRequest({ siteId: ['workspace-site-b'], title: 'Blocked' }, '?locale=ko'),
+      { params: { pageId: 'page-about' } },
+    );
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({ ok: false, success: false, errorCode: 'invalid_site_id' });
+    expect(mockedReadSiteDocument).not.toHaveBeenCalled();
+    expect(mockedWriteSiteDocument).not.toHaveBeenCalled();
+  });
+
   it('returns localized stable-code JSON when updating a missing page', async () => {
     const response = await route.PATCH(patchRequest({ title: 'Missing' }, '?locale=ko'), {
       params: { pageId: 'missing-page' },
@@ -146,6 +160,42 @@ describe('/api/builder/site/pages/[pageId]', () => {
     expect(data.error).not.toContain('raw update failure');
   });
 
+  it('surfaces a projected slug write invariant conflict as sanitized 409 JSON', async () => {
+    mockedWriteSiteDocument.mockRejectedValueOnce(new SiteInvariantError([{
+      code: 'ROUTE_DUPLICATE',
+      message: 'raw projected route conflict with storage details',
+      pageId: 'page-about',
+      conflictingPageId: 'page-other',
+      locale: 'en',
+      slug: 'team',
+      field: 'slugByLocale',
+    }]));
+
+    const response = await route.PATCH(patchRequest({ slugByLocale: { en: 'team' } }, '?locale=en'), {
+      params: { pageId: 'page-about' },
+    });
+    const data = await response.json();
+
+    expect(response.status).toBe(409);
+    expect(data).toMatchObject({
+      ok: false,
+      success: false,
+      error: 'Unable to update the page.',
+      errorCode: 'site_invariant_conflict',
+      issues: [{
+        code: 'ROUTE_DUPLICATE',
+        pageId: 'page-about',
+        conflictingPageId: 'page-other',
+        locale: 'en',
+        slug: 'team',
+        field: 'slugByLocale',
+      }],
+    });
+    expect(JSON.stringify(data)).not.toContain('raw projected route conflict');
+    expect(data.issues[0]).not.toHaveProperty('message');
+    expect(data).not.toHaveProperty('stack');
+  });
+
   it('preserves the page update success shape', async () => {
     const response = await route.PATCH(patchRequest({ title: '새 제목' }, '?locale=ko'), {
       params: { pageId: 'page-about' },
@@ -206,6 +256,19 @@ describe('/api/builder/site/pages/[pageId]', () => {
     expect(mockedDeletePage).not.toHaveBeenCalled();
   });
 
+  it('rejects encoded traversal on DELETE before reading or deleting the default site', async () => {
+    const response = await route.DELETE(
+      deleteRequest('?locale=ko&siteId=..%2F..%2Fx'),
+      { params: { pageId: 'page-about' } },
+    );
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({ ok: false, success: false, errorCode: 'invalid_site_id' });
+    expect(mockedReadSiteDocument).not.toHaveBeenCalled();
+    expect(mockedDeletePage).not.toHaveBeenCalled();
+  });
+
   it('returns localized stable-code JSON when deleting a page fails', async () => {
     mockedDeletePage.mockRejectedValueOnce(new Error('raw delete failure'));
     const response = await route.DELETE(deleteRequest('?locale=en'), {
@@ -220,6 +283,33 @@ describe('/api/builder/site/pages/[pageId]', () => {
       errorCode: 'page_delete_failed',
     });
     expect(data.error).not.toContain('raw delete failure');
+  });
+
+  it('surfaces a delete invariant conflict as sanitized 409 JSON', async () => {
+    mockedDeletePage.mockRejectedValueOnce(new SiteInvariantError([{
+      code: 'AUTHORED_HOME_MISSING',
+      message: 'raw storage invariant details',
+      locale: 'ko',
+      field: 'isHomePage',
+    }]));
+
+    const response = await route.DELETE(deleteRequest('?locale=ko'), {
+      params: { pageId: 'page-about' },
+    });
+    const data = await response.json();
+
+    expect(response.status).toBe(409);
+    expect(data).toEqual({
+      ok: false,
+      success: false,
+      error: '페이지를 삭제하지 못했습니다.',
+      errorCode: 'site_invariant_conflict',
+      issues: [{
+        code: 'AUTHORED_HOME_MISSING',
+        locale: 'ko',
+        field: 'isHomePage',
+      }],
+    });
   });
 
   it('deletes pages from the selected workspace site', async () => {

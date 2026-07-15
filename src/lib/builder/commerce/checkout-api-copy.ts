@@ -4,6 +4,7 @@ export type CommerceCheckoutApiErrorCode =
   | 'validation_error'
   | 'checkout_validation_error'
   | 'invalid_json'
+  | 'payment_provider_not_configured'
   | 'checkout_failed'
   | 'too_many_requests';
 
@@ -17,6 +18,7 @@ const commerceCheckoutApiErrorMessages: Record<Locale, Record<CommerceCheckoutAp
     validation_error: '체크아웃 요청을 확인해 주세요.',
     checkout_validation_error: '체크아웃 정보를 확인해 주세요.',
     invalid_json: '체크아웃 요청 형식을 확인해 주세요.',
+    payment_provider_not_configured: '선택한 결제 제공업체는 운영 환경에 설정되지 않았습니다.',
     checkout_failed: '체크아웃을 완료하지 못했습니다.',
     too_many_requests: '요청이 너무 많습니다. 잠시 후 다시 시도해 주세요.',
   },
@@ -24,6 +26,7 @@ const commerceCheckoutApiErrorMessages: Record<Locale, Record<CommerceCheckoutAp
     validation_error: '請確認結帳請求。',
     checkout_validation_error: '請確認結帳資訊。',
     invalid_json: '請確認結帳請求格式。',
+    payment_provider_not_configured: '所選付款服務提供者尚未在正式環境中設定。',
     checkout_failed: '無法完成結帳。',
     too_many_requests: '請求過於頻繁，請稍後再試。',
   },
@@ -31,6 +34,7 @@ const commerceCheckoutApiErrorMessages: Record<Locale, Record<CommerceCheckoutAp
     validation_error: 'Check the checkout request.',
     checkout_validation_error: 'Check the checkout details.',
     invalid_json: 'Check the checkout request format.',
+    payment_provider_not_configured: 'The selected payment provider is not configured for production.',
     checkout_failed: 'Unable to complete checkout.',
     too_many_requests: 'Too many requests. Try again shortly.',
   },

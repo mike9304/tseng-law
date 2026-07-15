@@ -182,7 +182,7 @@
   color: #0f172a;
   box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
   text-align: left;
-  transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
 }
 
 .templateCard {
@@ -197,7 +197,6 @@
 .savedCard:hover {
   border-color: rgba(17, 109, 255, 0.34);
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
-  transform: translateY(-1px);
 }
 
 .savedCard:active {

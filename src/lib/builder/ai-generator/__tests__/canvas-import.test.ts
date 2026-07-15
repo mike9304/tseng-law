@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   builderCanvasDocumentSchema,
   isContainerLikeKind,
@@ -12,6 +12,10 @@ import {
 import { generateSiteDraft } from '@/lib/builder/ai-generator/orchestrator';
 
 describe('AI canvas importer', () => {
+  beforeEach(() => {
+    vi.stubEnv('NODE_ENV', 'test');
+    vi.stubEnv('AI_BUILDER_ALLOW_LOCAL_DEMO', 'true');
+  });
   it('creates schema-valid container sections whose children can render', async () => {
     const draft = await generateSiteDraft({
       industry: 'law',

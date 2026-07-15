@@ -20,7 +20,7 @@ describe('commerce payment providers', () => {
       provider: 'manual-invoice',
       status: 'requires_manual_payment',
       amountCents: 12000,
-      stub: true,
+      stub: false,
     });
     expect(paymentIntentToOrderStatus(manual)).toBe('requires_manual_payment');
 
@@ -71,5 +71,21 @@ describe('commerce payment providers', () => {
       amountCents: 5000,
     });
     expect(normalizeCommercePaymentIntent({ ...intent, currency: 'BAD' })).toBeNull();
+
+    const manual = createCommercePaymentIntent({
+      provider: 'manual-invoice',
+      locale: 'en',
+      currency: 'USD',
+      amountCents: 5000,
+    });
+    expect(normalizeCommercePaymentIntent({ ...manual, status: 'captured', stub: true })).toMatchObject({
+      provider: 'manual-invoice',
+      status: 'requires_manual_payment',
+      stub: false,
+    });
+    expect(normalizeCommercePaymentIntent({ ...intent, stub: false })).toMatchObject({
+      provider: 'sandbox-card',
+      stub: true,
+    });
   });
 });

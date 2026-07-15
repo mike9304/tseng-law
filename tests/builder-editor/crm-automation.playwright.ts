@@ -1,5 +1,4 @@
 import { expect, test } from '@playwright/test';
-import { z } from 'zod';
 
 function mutationHeaders(scope: string): Record<string, string> {
   const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'crm-auto';
@@ -10,21 +9,6 @@ function mutationHeaders(scope: string): Record<string, string> {
     authorization: `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`,
   };
 }
-
-const automationResponseSchema = z.object({
-  automation: z.object({ id: z.string() }),
-});
-
-const contactResponseSchema = z.object({
-  contact: z.object({ id: z.string() }),
-});
-
-const outboxResponseSchema = z.object({
-  entries: z.array(z.object({
-    contactEmail: z.string(),
-    templateId: z.string().optional(),
-  })),
-});
 
 test.describe('CRM automations admin', () => {
   test.setTimeout(120_000);
@@ -95,56 +79,62 @@ test.describe('CRM automations admin', () => {
     }
   });
 
-  test('shows contact-created email stubs in the CRM outbox tab', async ({ page }) => {
+  test('production QA blocks email simulation without automation or outbox mutation', async ({ page }) => {
     const token = Date.now().toString(36);
-    const email = `pw-outbox-${token}@example.com`;
     const headers = mutationHeaders(`outbox-${token}`);
     await page.setExtraHTTPHeaders(headers);
 
-    let automationId: string | null = null;
-    let contactId: string | null = null;
+    await page.goto('/ko/admin-builder/crm?tab=automations');
+    await page.getByTestId('crm-automation-create-toggle').click();
+    await expect(
+      page.getByTestId('crm-automation-action-kind').locator('option[value="simulate-email"]'),
+    ).toHaveCount(0);
+    await expect(page.getByTestId('crm-automation-action-kind')).not.toContainText('실제 발송');
 
-    try {
-      const automationRes = await page.request.post('/api/builder/crm/automations', {
-        headers,
-        data: {
-          name: `Outbox welcome ${token}`,
-          trigger: { kind: 'contact-created' },
-          action: { kind: 'send-email-stub', templateId: `welcome-${token}` },
-          enabled: true,
-        },
-      });
-      expect(automationRes.status()).toBe(201);
-      automationId = automationResponseSchema.parse(await automationRes.json()).automation.id;
+    const beforeAutomations = await page.request.get('/api/builder/crm/automations', { headers });
+    const beforeOutbox = await page.request.get('/api/builder/crm/outbox?recent=100', { headers });
+    expect(beforeAutomations.status()).toBe(200);
+    expect(beforeOutbox.status()).toBe(200);
+    const beforeAutomationPayload = (await beforeAutomations.json()) as {
+      automations: Array<{ name: string }>;
+    };
+    const beforeOutboxPayload = (await beforeOutbox.json()) as {
+      entries: Array<{ templateId?: string }>;
+    };
+    expect(beforeAutomationPayload.automations.some((item) => item.name === `Blocked simulation ${token}`)).toBe(false);
+    expect(beforeOutboxPayload.entries.some((item) => item.templateId === `blocked-${token}`)).toBe(false);
 
-      const contactRes = await page.request.post('/api/builder/crm/contacts', {
-        headers,
-        data: { email, name: 'Outbox Lead', source: 'manual' },
-      });
-      expect(contactRes.status()).toBe(201);
-      contactId = contactResponseSchema.parse(await contactRes.json()).contact.id;
+    const automationRes = await page.request.post('/api/builder/crm/automations', {
+      headers,
+      data: {
+        name: `Blocked simulation ${token}`,
+        trigger: { kind: 'contact-created' },
+        action: { kind: 'simulate-email', templateId: `blocked-${token}` },
+        enabled: true,
+      },
+    });
+    expect(automationRes.status()).toBe(400);
+    await expect(automationRes.json()).resolves.toMatchObject({
+      ok: false,
+      errorCode: 'invalid_automation_payload',
+    });
 
-      const outboxRes = await page.request.get('/api/builder/crm/outbox?recent=100', { headers });
-      expect(outboxRes.status()).toBe(200);
-      const outbox = outboxResponseSchema.parse(await outboxRes.json());
-      expect(outbox.entries.some((entry) => entry.contactEmail === email && entry.templateId === `welcome-${token}`)).toBe(true);
+    const afterAutomations = await page.request.get('/api/builder/crm/automations', { headers });
+    const afterOutbox = await page.request.get('/api/builder/crm/outbox?recent=100', { headers });
+    expect(afterAutomations.status()).toBe(200);
+    expect(afterOutbox.status()).toBe(200);
+    const afterAutomationPayload = (await afterAutomations.json()) as {
+      automations: Array<{ name: string }>;
+    };
+    const afterOutboxPayload = (await afterOutbox.json()) as {
+      entries: Array<{ templateId?: string }>;
+    };
+    expect(afterAutomationPayload.automations.some((item) => item.name === `Blocked simulation ${token}`)).toBe(false);
+    expect(afterOutboxPayload.entries.some((item) => item.templateId === `blocked-${token}`)).toBe(false);
 
-      await page.goto('/ko/admin-builder/crm?tab=outbox');
-      await expect(page.getByTestId('crm-outbox-admin')).toBeVisible();
-      await expect(page.getByTestId('crm-tab-outbox')).toContainText('발송함');
-      await expect(page.getByTestId('crm-outbox-admin')).toContainText(email);
-      await expect(page.getByTestId('crm-outbox-admin')).toContainText(`welcome-${token}`);
-    } finally {
-      if (contactId) {
-        await page.request
-          .delete(`/api/builder/crm/contacts/${contactId}`, { headers })
-          .catch(() => undefined);
-      }
-      if (automationId) {
-        await page.request
-          .delete(`/api/builder/crm/automations/${automationId}`, { headers })
-          .catch(() => undefined);
-      }
-    }
+    await page.goto('/ko/admin-builder/crm?tab=outbox');
+    await expect(page.getByTestId('crm-outbox-admin')).toBeVisible();
+    await expect(page.getByTestId('crm-tab-outbox')).toContainText('이메일 시뮬레이션');
+    await expect(page.getByTestId('crm-outbox-admin')).not.toContainText(`blocked-${token}`);
   });
 });

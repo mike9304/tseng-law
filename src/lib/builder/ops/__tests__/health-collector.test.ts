@@ -7,7 +7,7 @@ import {
   collectHealthSnapshot,
   readLatestHealthSnapshot,
 } from '@/lib/builder/ops/health-collector';
-import { createOpsBackupStub } from '@/lib/builder/ops/backups-store';
+import { createOpsBackup } from '@/lib/builder/ops/backups-store';
 
 let opsDir: string;
 let cacheDir: string;
@@ -101,7 +101,7 @@ describe('collectHealthSnapshot', () => {
   it.skip('counts ops backups in the storage field (skip — needs real runtime-data path for backup safety check)', async () => {
     const sourceFile = path.join(runtimeRoot, 'sample.json');
     await writeFile(sourceFile, JSON.stringify({ hello: 'world' }), 'utf8');
-    const record = await createOpsBackupStub(sourceFile, 'unit test');
+    const record = await createOpsBackup(sourceFile, 'unit test');
     expect(record.status).toBe('ok');
     const snapshot = await collectHealthSnapshot();
     expect(snapshot.storage.backupCount).toBeGreaterThanOrEqual(1);

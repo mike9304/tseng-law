@@ -24,19 +24,19 @@ const LABELS: Record<Locale, Record<CrmTab, string>> = {
     contacts: '연락처',
     automations: '자동화',
     integrations: '외부 연동',
-    outbox: '발송함',
+    outbox: '이메일 시뮬레이션',
   },
   'zh-hant': {
     contacts: '聯絡人',
     automations: '自動化',
     integrations: '外部整合',
-    outbox: '寄送紀錄',
+    outbox: 'Email 模擬',
   },
   en: {
     contacts: 'Contacts',
     automations: 'Automations',
     integrations: 'Integrations',
-    outbox: 'Outbox',
+    outbox: 'Email simulation',
   },
 };
 

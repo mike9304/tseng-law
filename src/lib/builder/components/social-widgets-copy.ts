@@ -40,6 +40,8 @@ export interface SocialWidgetsCopy {
     editPlaceholder: (provider: string) => string;
     editSdkHint: string;
     handleFallback: string;
+    unavailableTitle: string;
+    unavailableMessage: string;
     providers: Record<SocialEmbedProvider, string>;
     layouts: Record<SocialEmbedLayout, string>;
     inspector: {
@@ -122,6 +124,9 @@ const socialWidgetsCopy: Record<Locale, SocialWidgetsCopy> = {
       editPlaceholder: (provider) => `${provider} 외부 임베드 자리`,
       editSdkHint: '공개 페이지에서 SDK 로드',
       handleFallback: '@핸들',
+      unavailableTitle: '외부 피드 연결 안 됨',
+      unavailableMessage:
+        '연결된 소셜 공급자가 없어 실시간 피드를 표시할 수 없어요. 공급자를 연결하면 게시물이 이 영역에 표시됩니다.',
       providers: {
         'instagram-feed': 'Instagram 피드',
         'youtube-subscribe': 'YouTube 구독',
@@ -197,6 +202,9 @@ const socialWidgetsCopy: Record<Locale, SocialWidgetsCopy> = {
       editPlaceholder: (provider) => `${provider} 外部嵌入區塊`,
       editSdkHint: '公開頁面會載入 SDK',
       handleFallback: '@帳號',
+      unavailableTitle: '外部動態未連接',
+      unavailableMessage:
+        '尚未連接社群服務商，因此無法顯示即時動態。連接服務商後，貼文會出現在此區塊。',
       providers: {
         'instagram-feed': 'Instagram 動態',
         'youtube-subscribe': 'YouTube 訂閱',
@@ -272,6 +280,9 @@ const socialWidgetsCopy: Record<Locale, SocialWidgetsCopy> = {
       editPlaceholder: (provider) => `${provider} external embed placeholder`,
       editSdkHint: 'SDK loads on public pages',
       handleFallback: '@handle',
+      unavailableTitle: 'External feed not connected',
+      unavailableMessage:
+        'No social provider is connected, so the live feed cannot be shown. Connect a provider to display posts here.',
       providers: {
         'instagram-feed': 'Instagram feed',
         'youtube-subscribe': 'YouTube subscribe',

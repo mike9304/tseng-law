@@ -135,7 +135,7 @@ function paymentStatusLabel(status: CommerceOrderPaymentStatus): string {
     case 'partially_paid':
       return 'Partially paid';
     case 'authorized_stub':
-      return 'Authorized stub';
+      return 'Sandbox authorization (test, not collected)';
     case 'paid':
       return 'Paid';
     case 'failed':
@@ -196,7 +196,7 @@ export default function OrderManagerClient({ locale, siteTitle, initialOrders }:
     total: orders.length,
     confirmed: orders.filter((order) => order.status === 'confirmed').length,
     manual: orders.filter((order) => order.payment.status === 'requires_manual_payment' || order.payment.status === 'partially_paid').length,
-    paid: orders.filter((order) => order.payment.status === 'paid' || order.payment.status === 'authorized_stub').length,
+    paid: orders.filter((order) => order.payment.status === 'paid').length,
     partialRefund: orders.filter((order) => order.payment.status === 'partially_refunded').length,
     refunded: orders.filter((order) => order.payment.status === 'refunded').length,
     documents: orders.reduce((total, order) => total + order.documents.length, 0),
@@ -399,7 +399,7 @@ export default function OrderManagerClient({ locale, siteTitle, initialOrders }:
           <option value="all">All payment</option>
           <option value="requires_manual_payment">Manual payment</option>
           <option value="partially_paid">Partially paid</option>
-          <option value="authorized_stub">Authorized stub</option>
+          <option value="authorized_stub">Sandbox authorization (test, not collected)</option>
           <option value="paid">Paid</option>
           <option value="failed">Failed</option>
           <option value="partially_refunded">Partially refunded</option>
@@ -448,6 +448,9 @@ export default function OrderManagerClient({ locale, siteTitle, initialOrders }:
               <strong data-commerce-order-confirmation>{order.confirmationNumber}</strong>
               <span>{order.customer.name} · {order.customer.email}</span>
               <small>{new Date(order.createdAt).toLocaleString()}</small>
+              {order.payment.status === 'authorized_stub' || order.payment.stub ? (
+                <span role="status" data-commerce-demo-disclosure="payment" aria-label="DEMO DATA">DEMO DATA · Sandbox authorization; no real payment was collected.</span>
+              ) : null}
             </div>
             <div className={styles.totals}>
               <strong data-commerce-order-total>{formatPrice(locale, order.currency, order.totals.grandTotalCents)}</strong>
@@ -482,7 +485,7 @@ export default function OrderManagerClient({ locale, siteTitle, initialOrders }:
                 >
                   {paymentLocked ? <option value={order.payment.status}>{paymentStatusLabel(order.payment.status)}</option> : null}
                   <option value="requires_manual_payment">Manual payment</option>
-                  <option value="authorized_stub">Authorized stub</option>
+                  <option value="authorized_stub">Sandbox authorization (test, not collected)</option>
                   <option value="paid">Paid</option>
                   <option value="failed">Failed</option>
                 </select>

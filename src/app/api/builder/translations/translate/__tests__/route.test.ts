@@ -116,6 +116,32 @@ describe('builder translations translate API', () => {
     expect(JSON.stringify(data)).not.toContain('OPENAI_API_KEY');
   });
 
+  it('preserves fail-closed mock-provider errors without returning source text', async () => {
+    translateViaRouterMock.mockResolvedValueOnce({
+      ok: false,
+      provider: 'mock',
+      reason: 'unconfigured',
+    } as never);
+
+    const response = await POST(request('POST', {
+      sourceLocale: 'ko',
+      targetLocale: 'en',
+      sourceText: '안녕하세요',
+      provider: 'mock',
+      locale: 'en',
+    }));
+    const data = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(data).toEqual({
+      ok: false,
+      error: 'No translation provider is configured.',
+      errorCode: 'translation_provider_unconfigured',
+      provider: 'mock',
+    });
+    expect(JSON.stringify(data)).not.toContain('안녕하세요');
+  });
+
   it('returns localized provider failures without leaking exception details', async () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     translateViaRouterMock.mockRejectedValueOnce(new Error('translation provider secret leaked'));

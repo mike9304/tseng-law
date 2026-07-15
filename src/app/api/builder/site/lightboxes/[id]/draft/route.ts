@@ -4,7 +4,10 @@ import {
   readLightboxCanvas,
   writeLightboxCanvas,
 } from '@/lib/builder/site/persistence';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  resolveBuilderSiteIdForMutationFromRequest,
+  resolveBuilderSiteIdFromRequest,
+} from '@/lib/builder/site/admin-routing';
 import { normalizeLocale } from '@/lib/locales';
 import { normalizeCanvasDocumentForSave } from '@/lib/builder/canvas/types';
 import {
@@ -50,16 +53,18 @@ export async function PUT(
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
-  let body: { document?: unknown };
+  let body: { document?: unknown; siteId?: unknown };
   try {
-    body = (await request.json()) as { document?: unknown };
+    body = (await request.json()) as { document?: unknown; siteId?: unknown };
   } catch {
     const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
     return errorResponse(locale, 'invalid_json', 400);
   }
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   const normalized = normalizeCanvasDocumentForSave(body.document, locale);
   if (!normalized) {
     // Unrepairable payload: refuse instead of persisting the sandbox fallback

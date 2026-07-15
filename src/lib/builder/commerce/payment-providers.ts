@@ -86,12 +86,11 @@ export function normalizeCommercePaymentIntent(input: unknown): CommercePaymentI
   }
   const amountCents = Number(source.amountCents);
   if (!Number.isFinite(amountCents) || amountCents < 0) return null;
-  const status = source.status === 'requires_manual_payment'
-    || source.status === 'authorized'
-    || source.status === 'captured'
-    || source.status === 'failed'
-    ? source.status
-    : source.provider === 'manual-invoice' ? 'requires_manual_payment' : 'authorized';
+  const status = source.provider === 'manual-invoice'
+    ? 'requires_manual_payment'
+    : source.status === 'authorized' || source.status === 'captured' || source.status === 'failed'
+      ? source.status
+      : 'authorized';
   const now = new Date().toISOString();
 
   return {
@@ -103,7 +102,10 @@ export function normalizeCommercePaymentIntent(input: unknown): CommercePaymentI
     amountCents: Math.floor(amountCents),
     status,
     clientSecret: typeof source.clientSecret === 'string' ? source.clientSecret : undefined,
-    stub: source.stub !== false,
+    // Manual invoices are a real offline collection workflow. Sandbox card
+    // intents are always simulations, even if a persisted payload claims
+    // otherwise.
+    stub: source.provider === 'sandbox-card',
     failureCode: typeof source.failureCode === 'string' ? source.failureCode : undefined,
     createdAt: typeof source.createdAt === 'string' ? source.createdAt : now,
     updatedAt: typeof source.updatedAt === 'string' ? source.updatedAt : now,
@@ -123,7 +125,7 @@ export function createCommercePaymentIntent(input: CommercePaymentIntentInput): 
       currency: input.currency,
       amountCents,
       status: 'requires_manual_payment',
-      stub: true,
+      stub: false,
       createdAt: now,
       updatedAt: now,
     };

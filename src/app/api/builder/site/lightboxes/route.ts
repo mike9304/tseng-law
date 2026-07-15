@@ -7,7 +7,10 @@ import {
   writeLightboxCanvas,
 } from '@/lib/builder/site/persistence';
 import { createDefaultCanvasDocument } from '@/lib/builder/canvas/types';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  resolveBuilderSiteIdForMutationFromRequest,
+  resolveBuilderSiteIdFromRequest,
+} from '@/lib/builder/site/admin-routing';
 import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
@@ -44,9 +47,9 @@ export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
-  let body: { slug?: string; name?: string; locale?: string };
+  let body: { slug?: string; name?: string; locale?: string; siteId?: unknown };
   try {
-    body = (await request.json()) as { slug?: string; name?: string; locale?: string };
+    body = (await request.json()) as { slug?: string; name?: string; locale?: string; siteId?: unknown };
   } catch {
     const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
     return errorResponse(locale, 'invalid_json', 400);
@@ -55,7 +58,9 @@ export async function POST(request: NextRequest) {
   const locale = normalizeLocale(body.locale || 'ko');
   const slug = (body.slug ?? '').trim();
   const name = (body.name ?? '').trim() || 'Untitled lightbox';
-  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
 
   if (!slug || slug.length > 100 || !SLUG_RE.test(slug)) {
     return errorResponse(locale, 'invalid_lightbox_slug', 400);

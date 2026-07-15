@@ -115,25 +115,23 @@ async function parkDebouncedAutosave(page: Page): Promise<void> {
   `);
 }
 
-async function dragCatalogPresetToCanvas(
+async function dragCatalogPresetWithRealPointer(
   page: Page,
-  selector: string,
-  canvasPoint: { readonly x: number; readonly y: number },
+  preset: Locator,
+  stage: Locator,
+  canvasLocal: { readonly x: number; readonly y: number },
 ): Promise<void> {
-  await page.evaluate(({ point, sourceSelector }) => {
-    const source = document.querySelector<HTMLElement>(sourceSelector);
-    const stage = document.querySelector<HTMLElement>('[role="application"][aria-label="Canvas editor"]');
-    if (!source || !stage) throw new Error('page_switch_drop_target_missing');
-
-    const stageRect = stage.getBoundingClientRect();
-    const clientX = stageRect.left + point.x * (stageRect.width / stage.offsetWidth);
-    const clientY = stageRect.top + point.y * (stageRect.height / stage.offsetHeight);
-    const dataTransfer = new DataTransfer();
-
-    source.dispatchEvent(new DragEvent('dragstart', { bubbles: true, cancelable: true, dataTransfer }));
-    stage.dispatchEvent(new DragEvent('dragover', { bubbles: true, cancelable: true, clientX, clientY, dataTransfer }));
-    stage.dispatchEvent(new DragEvent('drop', { bubbles: true, cancelable: true, clientX, clientY, dataTransfer }));
-  }, { point: canvasPoint, sourceSelector: selector });
+  // Honest readiness: source and target must be visible with real rendered
+  // geometry before any pointer endpoint is touched. No synthetic events,
+  // no bypass flags, no fixed waits.
+  await expect(preset).toBeVisible();
+  await expect(stage).toBeVisible();
+  // Browser-native HTML5 drag: on darwin + Chromium/CDP a manual page.mouse
+  // down/move/up gesture completes without entering the dragstart/dragover/
+  // drop lifecycle for a native HTML5 draggable catalog preset, so no node is
+  // inserted. Playwright's Locator.dragTo is HTML5-aware and drives the real
+  // lifecycle, releasing at the canvas-local drop offset.
+  await preset.dragTo(stage, { targetPosition: { x: canvasLocal.x, y: canvasLocal.y } });
 }
 
 function hasInsertedRichText(document: BuilderCanvasDocument): boolean {
@@ -145,6 +143,110 @@ function hasInsertedRichText(document: BuilderCanvasDocument): boolean {
 }
 
 test.describe('/ko/admin-builder page switching draft persistence', () => {
+  test('clears shared-id selection and keeps each page geometry after a canceled pointer gesture', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = `interaction-${Date.now().toString(36)}`;
+    const firstSlug = `page-switch-interaction-a-${token}`;
+    const secondSlug = `page-switch-interaction-b-${token}`;
+    const sharedNodeId = `page-switch-shared-node-${token}`;
+    const firstSharedDocument = makePageDocument(token, sharedNodeId, `Shared page node A ${token}`);
+    const secondSharedDocument = makePageDocument(token, sharedNodeId, `Shared page node B ${token}`);
+    const secondSharedNode = secondSharedDocument.nodes.find((node) => node.id === sharedNodeId);
+    if (!secondSharedNode) throw new Error('page_switch_second_shared_node_missing');
+    secondSharedNode.rect = { x: 344, y: 388, width: 420, height: 96 };
+    const createdPages: Array<{ readonly id: string; readonly slug: string }> = [];
+
+    try {
+      const firstPageId = await createBuilderPage(
+        page.request,
+        firstSlug,
+        `Page switch interaction A ${token}`,
+        firstSharedDocument,
+      );
+      createdPages.push({ id: firstPageId, slug: firstSlug });
+      const secondPageId = await createBuilderPage(
+        page.request,
+        secondSlug,
+        `Page switch interaction B ${token}`,
+        secondSharedDocument,
+      );
+      createdPages.push({ id: secondPageId, slug: secondSlug });
+
+      await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(firstPageId)}&pageSwitchInteraction=${token}`);
+      const sharedNode = page.locator(`[data-node-id="${sharedNodeId}"]`);
+      await expect(sharedNode).toBeVisible({ timeout: 30_000 });
+      await sharedNode.click({ position: { x: 20, y: 20 } });
+      await expect(sharedNode).toHaveAttribute('data-selected', 'true');
+
+      const stage = page.getByRole('application', { name: 'Canvas editor' });
+
+      // Start a REAL move gesture on the shared node body. Honest hit testing: the
+      // grab point is derived from the rendered body box and the move assertion
+      // fails fast if the pointerdown did not land on the node.
+      const nodeBody = sharedNode.locator('[data-builder-node-body="true"]').first();
+      await expect(nodeBody).toBeVisible();
+      const bodyBox = await nodeBody.boundingBox();
+      if (!bodyBox) throw new Error('page_switch_shared_node_body_bounds_missing');
+      const grabPoint = {
+        x: bodyBox.x + Math.min(24, bodyBox.width / 4),
+        y: bodyBox.y + Math.min(24, bodyBox.height / 4),
+      };
+
+      await page.mouse.move(grabPoint.x, grabPoint.y);
+      await page.mouse.down();
+      await expect(stage).toHaveAttribute('data-canvas-interaction', 'move');
+      // Drag past the 4px activation threshold so the direct-move preview engages.
+      await page.mouse.move(grabPoint.x + 36, grabPoint.y + 24);
+      await expect(sharedNode).toHaveAttribute('data-builder-direct-move-preview', 'true');
+
+      // Cancel via the REAL Escape terminal path; the preview must revert.
+      await page.keyboard.press('Escape');
+      await expect(stage).toHaveAttribute('data-canvas-interaction', 'idle');
+      await expect(sharedNode).not.toHaveAttribute('data-builder-direct-move-preview', 'true');
+      await page.mouse.up();
+
+      // Switch to page B (same node id, different geometry) through the real UI.
+      const drawer = await openPagesDrawer(page);
+      const targetRow = drawer.locator(`[data-builder-page-row="${secondPageId}"]`);
+      await expect(targetRow).toBeVisible();
+      await targetRow.locator('button').nth(1).click();
+      await expect(drawer).not.toBeVisible({ timeout: 30_000 });
+
+      // Page B renders the shared id with its own geometry; the page-A selection
+      // must not leak across the page-identity boundary.
+      await expect(sharedNode).toBeVisible({ timeout: 30_000 });
+      await expect(sharedNode).not.toHaveAttribute('data-selected', 'true');
+      await expect(sharedNode).toHaveCSS('left', `${secondSharedNode.rect.x}px`);
+      await expect(sharedNode).toHaveCSS('top', `${secondSharedNode.rect.y}px`);
+      await expect(sharedNode).toHaveCSS('width', `${secondSharedNode.rect.width}px`);
+      await expect(sharedNode).toHaveCSS('height', `${secondSharedNode.rect.height}px`);
+
+      // The canceled gesture reverted and no superseded pointer leaked across the
+      // page switch, so each draft must still match its initial geometry. Polling
+      // the draft API (deterministic) replaces the fixed sleep; foreign/late
+      // pointer rejection is already locked by the focused lifecycle unit tests.
+      const firstInitialRect = firstSharedDocument.nodes.find((node) => node.id === sharedNodeId)?.rect;
+      const secondInitialRect = secondSharedNode.rect;
+      expect(firstInitialRect).toBeDefined();
+      await expect.poll(async () => {
+        const firstDocument = await getDraftDocument(page, firstPageId, firstSlug);
+        const secondDocument = await getDraftDocument(page, secondPageId, secondSlug);
+        return {
+          first: firstDocument.nodes.find((node) => node.id === sharedNodeId)?.rect,
+          second: secondDocument.nodes.find((node) => node.id === sharedNodeId)?.rect,
+        };
+      }, { timeout: 10_000 }).toEqual({ first: firstInitialRect, second: secondInitialRect });
+    } finally {
+      for (const createdPage of [...createdPages].reverse()) {
+        await page.request.delete(`/api/builder/site/pages/${createdPage.id}?locale=ko`, {
+          headers: mutationHeaders(createdPage.slug),
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
   test('flushes the current dirty draft before navigating to another page', async ({ page }) => {
     test.setTimeout(90_000);
 
@@ -181,7 +283,8 @@ test.describe('/ko/admin-builder page switching draft persistence', () => {
       const richTextPreset = catalogDrawer.locator('[data-builder-text-widget-preset="rich-text"]');
       await expect(richTextPreset).toBeVisible();
 
-      await dragCatalogPresetToCanvas(page, '[data-builder-text-widget-preset="rich-text"]', { x: 260, y: 230 });
+      const stage = page.getByRole('application', { name: 'Canvas editor' });
+      await dragCatalogPresetWithRealPointer(page, richTextPreset, stage, { x: 260, y: 230 });
       await expect(page.locator('[data-node-id^="text-"]').filter({ hasText: '굵게, 기울임' }).last()).toBeVisible();
       await switchToPage(page, secondPageId);
       await expect(page.locator(`[data-node-id="second-marker-${token}"]`)).toBeVisible({ timeout: 30_000 });

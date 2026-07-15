@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { loadOrder, softDeleteOrder, updateOrderState } from '@/lib/builder/commerce/orders-engine';
@@ -195,5 +195,124 @@ describe('builder commerce order detail API', () => {
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, deleted: true });
     expect(softDeleteOrderMock).toHaveBeenCalledWith('order-1');
+  });
+});
+
+describe('production authorized_stub payment status guard', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
+    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    loadOrderMock.mockResolvedValue(order as never);
+    softDeleteOrderMock.mockResolvedValue(true);
+    updateOrderStateMock.mockResolvedValue(order as never);
+    queueOrderUpdatedNotificationMock.mockResolvedValue({ ok: true } as never);
+    runOrderBillingAutomationMock.mockResolvedValue(null);
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it('rejects authorized_stub before load/update/notification/billing in production', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+
+    const response = await PATCH(request('locale=en', 'PATCH', { paymentStatus: 'authorized_stub' }), params);
+    const payload = await response.json();
+
+    expect(response.status).toBe(422);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Unable to update order.',
+      errorCode: 'order_update_failed',
+    });
+    expect(loadOrderMock).not.toHaveBeenCalled();
+    expect(updateOrderStateMock).not.toHaveBeenCalled();
+    expect(queueOrderUpdatedNotificationMock).not.toHaveBeenCalled();
+    expect(runOrderBillingAutomationMock).not.toHaveBeenCalled();
+  });
+
+  it('ignores ALLOW_STUB escape hatches in production', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+
+    const response = await PATCH(request('locale=en', 'PATCH', { paymentStatus: 'authorized_stub' }), params);
+    const payload = await response.json();
+
+    expect(response.status).toBe(422);
+    expect(payload).toMatchObject({ ok: false, errorCode: 'order_update_failed' });
+    expect(updateOrderStateMock).not.toHaveBeenCalled();
+    expect(loadOrderMock).not.toHaveBeenCalled();
+  });
+
+  it('still routes authorized_stub to the engine outside production', async () => {
+    vi.stubEnv('NODE_ENV', 'test');
+
+    const response = await PATCH(request('locale=en', 'PATCH', { paymentStatus: 'authorized_stub' }), params);
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload).toEqual({ ok: true, order });
+    expect(updateOrderStateMock).toHaveBeenCalledWith('order-1', {
+      paymentStatus: 'authorized_stub',
+      actor: 'admin',
+    });
+  });
+
+  it.each([
+    { label: 'tracking', body: { trackingNumber: 'TRK-LEGACY-1' } },
+    { label: 'fulfillment', body: { fulfillmentStatus: 'fulfilled' } },
+    { label: 'status', body: { status: 'cancelled' } },
+  ])('returns a stable 422 for a $label-only PATCH on a legacy authorized_stub order in production', async ({ body }) => {
+    vi.stubEnv('NODE_ENV', 'production');
+    loadOrderMock.mockResolvedValueOnce({ ...order, payment: { status: 'authorized_stub' } } as never);
+
+    const response = await PATCH(request('locale=ko', 'PATCH', body), params);
+    const payload = await response.json();
+
+    expect(response.status).toBe(422);
+    expect(payload).toEqual({
+      ok: false,
+      error: '주문을 업데이트하지 못했습니다.',
+      errorCode: 'order_update_failed',
+    });
+    expect(updateOrderStateMock).not.toHaveBeenCalled();
+    expect(queueOrderUpdatedNotificationMock).not.toHaveBeenCalled();
+    expect(runOrderBillingAutomationMock).not.toHaveBeenCalled();
+  });
+
+  it('returns a stable 422 for a paymentStatus paid PATCH on a legacy authorized_stub order in production without mutation/notification/billing', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    loadOrderMock.mockResolvedValueOnce({ ...order, payment: { status: 'authorized_stub' } } as never);
+
+    const response = await PATCH(request('locale=ko', 'PATCH', { paymentStatus: 'paid' }), params);
+    const payload = await response.json();
+
+    expect(response.status).toBe(422);
+    expect(payload).toEqual({
+      ok: false,
+      error: '주문을 업데이트하지 못했습니다.',
+      errorCode: 'order_update_failed',
+    });
+    expect(updateOrderStateMock).not.toHaveBeenCalled();
+    expect(queueOrderUpdatedNotificationMock).not.toHaveBeenCalled();
+    expect(runOrderBillingAutomationMock).not.toHaveBeenCalled();
+  });
+
+  it('still patches a legacy authorized_stub order outside production', async () => {
+    vi.stubEnv('NODE_ENV', 'test');
+    const legacyStubOrder = { ...order, payment: { status: 'authorized_stub' } };
+    loadOrderMock.mockResolvedValueOnce(legacyStubOrder as never);
+    updateOrderStateMock.mockResolvedValueOnce(legacyStubOrder as never);
+
+    const response = await PATCH(request('locale=en', 'PATCH', { trackingNumber: 'TRK-LEGACY-2' }), params);
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload).toEqual({ ok: true, order: legacyStubOrder });
+    expect(updateOrderStateMock).toHaveBeenCalledWith('order-1', {
+      trackingNumber: 'TRK-LEGACY-2',
+      actor: 'admin',
+    });
   });
 });

@@ -25,6 +25,19 @@ type RankedOverlapCandidate = {
   node: BuilderCanvasNode;
 };
 
+export function clientPointToViewportContent(
+  clientX: number,
+  clientY: number,
+  viewportRect: Pick<DOMRect, 'left' | 'top'>,
+  clientLeft: number,
+  clientTop: number,
+): Point {
+  return {
+    x: clientX - viewportRect.left - clientLeft,
+    y: clientY - viewportRect.top - clientTop,
+  };
+}
+
 function isPointInsideRect(point: Point, rect: BuilderCanvasNode['rect']): boolean {
   return point.x >= rect.x
     && point.x <= rect.x + rect.width
@@ -113,9 +126,17 @@ export function useCanvasStageGeometry({
   zoomState: ZoomState;
 }) {
   const resolveStagePosition = useCallback((clientX: number, clientY: number): Point => {
-    const rect = viewportRef.current?.getBoundingClientRect();
-    if (!rect) return { x: 48, y: 48 };
-    const nextPoint = screenToCanvas(clientX - rect.left, clientY - rect.top, zoomState);
+    const viewport = viewportRef.current;
+    const rect = viewport?.getBoundingClientRect();
+    if (!viewport || !rect) return { x: 48, y: 48 };
+    const localPoint = clientPointToViewportContent(
+      clientX,
+      clientY,
+      rect,
+      viewport.clientLeft,
+      viewport.clientTop,
+    );
+    const nextPoint = screenToCanvas(localPoint.x, localPoint.y, zoomState);
     return {
       x: Math.max(0, Math.min(stageWidth - 80, Math.round(nextPoint.x))),
       y: Math.max(0, Math.min(stageHeight - 48, Math.round(nextPoint.y))),
@@ -123,9 +144,17 @@ export function useCanvasStageGeometry({
   }, [stageHeight, stageWidth, viewportRef, zoomState]);
 
   const resolveCanvasPoint = useCallback((clientX: number, clientY: number): Point => {
-    const rect = viewportRef.current?.getBoundingClientRect();
-    if (!rect) return { x: 0, y: 0 };
-    const point = screenToCanvas(clientX - rect.left, clientY - rect.top, zoomState);
+    const viewport = viewportRef.current;
+    const rect = viewport?.getBoundingClientRect();
+    if (!viewport || !rect) return { x: 0, y: 0 };
+    const localPoint = clientPointToViewportContent(
+      clientX,
+      clientY,
+      rect,
+      viewport.clientLeft,
+      viewport.clientTop,
+    );
+    const point = screenToCanvas(localPoint.x, localPoint.y, zoomState);
     return {
       x: Math.max(0, Math.min(stageWidth, Math.round(point.x))),
       y: Math.max(0, Math.min(stageHeight, Math.round(point.y))),

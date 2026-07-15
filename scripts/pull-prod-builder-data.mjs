@@ -73,14 +73,96 @@
 
 // Intentionally limited to read-only blob APIs.
 import { list, get } from '@vercel/blob';
-import { readFile, writeFile, mkdir, rename, rm } from 'node:fs/promises';
+import { spawn } from 'node:child_process';
+import { constants as fsConstants } from 'node:fs';
+import { createHash, randomUUID } from 'node:crypto';
+import { lstat, open, readFile, readdir, realpath, rename, rmdir } from 'node:fs/promises';
+import os from 'node:os';
 import path from 'node:path';
 import process from 'node:process';
+import { fileURLToPath } from 'node:url';
+import {
+  atomicWriteLocalJson,
+  withLocalJsonWriteLease,
+} from '../src/lib/builder/storage/local-json-write-lease.mjs';
 
 const PLACEHOLDER = '<redacted>';
 const DEFAULT_PREFIX = 'builder-site';
 const DEFAULT_ENV = '.env.local';
 const DEFAULT_OUT = 'runtime-data-prod-mirror';
+const SCRIPT_PATH = fileURLToPath(import.meta.url);
+const REPO_ROOT = path.resolve(path.dirname(SCRIPT_PATH), '..');
+const REPO_RUNTIME_DATA_ROOT = path.join(REPO_ROOT, 'runtime-data');
+const PATH_SAFETY_ERROR = 'Unsafe mirror path: target must stay physically contained without symlink parents.';
+const CANONICAL_OVERLAP_ERROR = 'Mirror root overlaps an active content or canonical runtime-data root.';
+const MIRROR_MARKER_NAME = 'pull-prod-builder-data-mirror.owner.json';
+const LEGACY_MIRROR_MARKER_NAME = '.pull-prod-builder-data-mirror.json';
+const MIRROR_MARKER_KIND = 'pull-prod-builder-data-mirror';
+const RESERVED_MIRROR_SEGMENTS = new Set([
+  MIRROR_MARKER_NAME,
+  LEGACY_MIRROR_MARKER_NAME,
+  '.local-json-write-leases',
+]);
+const BOUND_PURGE_SOURCE = String.raw`
+const fs = require('node:fs');
+const expectedRoot = JSON.parse(fs.readFileSync(0, 'utf8'));
+const sameObject = (stats, expected) => String(stats.dev) === expected.dev && String(stats.ino) === expected.ino;
+const assertCwd = (expected) => {
+  const stats = fs.lstatSync('.', { bigint: true });
+  if (stats.isSymbolicLink() || !stats.isDirectory() || !sameObject(stats, expected)) {
+    throw new Error('bound purge directory changed');
+  }
+};
+const cleanBoundDirectory = (expected) => {
+  assertCwd(expected);
+  for (const name of fs.readdirSync('.')) {
+    const stats = fs.lstatSync(name, { bigint: true });
+    if (stats.isSymbolicLink() || stats.isFile()) {
+      fs.unlinkSync(name);
+      continue;
+    }
+    if (!stats.isDirectory()) throw new Error('unsupported mirror entry');
+    const child = { dev: String(stats.dev), ino: String(stats.ino) };
+    process.chdir(name);
+    assertCwd(child);
+    cleanBoundDirectory(child);
+    process.chdir('..');
+    assertCwd(expected);
+    const after = fs.lstatSync(name, { bigint: true });
+    if (after.isSymbolicLink() || !after.isDirectory() || !sameObject(after, child)) {
+      throw new Error('bound purge child changed');
+    }
+    fs.rmdirSync(name);
+  }
+  assertCwd(expected);
+};
+cleanBoundDirectory(expectedRoot);
+`;
+const BOUND_MKDIR_SOURCE = String.raw`
+const fs = require('node:fs');
+const payload = JSON.parse(fs.readFileSync(0, 'utf8'));
+const sameObject = (stats, expected) => String(stats.dev) === expected.dev && String(stats.ino) === expected.ino;
+const assertCwd = (expected) => {
+  const stats = fs.lstatSync('.', { bigint: true });
+  if (stats.isSymbolicLink() || !stats.isDirectory() || !sameObject(stats, expected)) {
+    throw new Error('bound mkdir directory changed');
+  }
+};
+let expected = payload.rootIdentity;
+assertCwd(expected);
+for (const segment of payload.segments) {
+  if (!/^[^/\\\0]+$/.test(segment) || segment === '.' || segment === '..') {
+    throw new Error('unsafe directory segment');
+  }
+  try { fs.mkdirSync(segment, { mode: 0o700 }); }
+  catch (error) { if (error?.code !== 'EEXIST') throw error; }
+  const child = fs.lstatSync(segment, { bigint: true });
+  if (child.isSymbolicLink() || !child.isDirectory()) throw new Error('unsafe directory');
+  expected = { dev: String(child.dev), ino: String(child.ino) };
+  process.chdir(segment);
+  assertCwd(expected);
+}
+`;
 
 // ─── Mirror plan ────────────────────────────────────────────────────
 //
@@ -146,7 +228,7 @@ function parseArgs(argv) {
     purge: false,
     help: false,
   };
-  for (const arg of argv.slice(2)) {
+  for (const arg of argv) {
     if (arg === '--help' || arg === '-h') {
       out.help = true;
     } else if (arg === '--purge') {
@@ -270,11 +352,355 @@ function scrub(value, secret) {
   return value.split(secret).join(PLACEHOLDER);
 }
 
-function relPathOf(pathname, prefix) {
-  // <prefix>/<siteId>/... -> <siteId>/... (or whatever follows the prefix)
-  if (pathname.startsWith(`${prefix}/`)) return pathname.slice(prefix.length + 1);
-  if (pathname.startsWith(`${prefix}`)) return pathname.slice(prefix.length);
-  return pathname;
+function isPathWithinOrEqual(parentPath, childPath) {
+  const relative = path.relative(parentPath, childPath);
+  return relative === '' || (relative !== '..' && !relative.startsWith(`..${path.sep}`) && !path.isAbsolute(relative));
+}
+
+function pathsOverlap(leftPath, rightPath) {
+  return isPathWithinOrEqual(leftPath, rightPath) || isPathWithinOrEqual(rightPath, leftPath);
+}
+
+async function lstatIfExists(targetPath) {
+  try {
+    return await lstat(targetPath);
+  } catch (error) {
+    if (error?.code === 'ENOENT') return null;
+    throw error;
+  }
+}
+
+async function resolvePhysicalCandidate(targetPath) {
+  const absolute = path.resolve(targetPath);
+  let current = absolute;
+  const missingSegments = [];
+  for (;;) {
+    const stats = await lstatIfExists(current);
+    if (stats) {
+      const physical = await realpath(current);
+      return path.resolve(physical, ...missingSegments.reverse());
+    }
+    const parent = path.dirname(current);
+    if (parent === current) throw new Error(PATH_SAFETY_ERROR);
+    missingSegments.push(path.basename(current));
+    current = parent;
+  }
+}
+
+async function assertExistingComponentsHaveNoSymlinks(targetPath) {
+  const absolute = path.resolve(targetPath);
+  const parsed = path.parse(absolute);
+  const components = absolute.slice(parsed.root.length).split(path.sep).filter(Boolean);
+  let current = parsed.root;
+  for (let index = 0; index < components.length; index += 1) {
+    current = path.join(current, components[index]);
+    const stats = await lstatIfExists(current);
+    if (!stats) break;
+    if (stats.isSymbolicLink()) throw new Error(PATH_SAFETY_ERROR);
+    if (index < components.length - 1 && !stats.isDirectory()) throw new Error(PATH_SAFETY_ERROR);
+  }
+}
+
+function safeBlobRelativePath(pathname, prefix) {
+  if (typeof pathname !== 'string' || !pathname.startsWith(`${prefix}/`)) {
+    throw new Error(`Unsafe blob pathname for prefix "${prefix}".`);
+  }
+  const relative = pathname.slice(prefix.length + 1);
+  const segments = relative.split('/');
+  const isReservedSegment = (segment) => {
+    const folded = segment.normalize('NFC').toLocaleLowerCase('en-US');
+    return RESERVED_MIRROR_SEGMENTS.has(folded) ||
+      /^\..+\.writer\.(?:lock|reclaim)$/.test(folded) ||
+      /^\..+\.txn-[^.]+\.(?:manifest|candidate|previous|detached)$/.test(folded) ||
+      /^\..+\.tmp$/.test(folded);
+  };
+  if (
+    !relative || path.isAbsolute(relative) ||
+    segments.some((segment) => !segment || segment === '.' || segment === '..' || isReservedSegment(segment))
+  ) {
+    throw new Error(`Unsafe blob pathname for prefix "${prefix}".`);
+  }
+  for (const segment of segments) {
+    let decoded;
+    try {
+      decoded = decodeURIComponent(segment);
+    } catch {
+      throw new Error(`Unsafe blob pathname for prefix "${prefix}".`);
+    }
+    if (
+      segment.includes('\\') || segment.includes('\0') || decoded === '.' || decoded === '..' ||
+      decoded.includes('/') || decoded.includes('\\') || decoded.includes('\0')
+    ) {
+      throw new Error(`Unsafe blob pathname for prefix "${prefix}".`);
+    }
+  }
+  return segments.join(path.sep);
+}
+
+export function resolveMirrorTargetPath(outDir, pathname, prefix) {
+  const absoluteOutDir = path.resolve(outDir);
+  const relative = safeBlobRelativePath(pathname, prefix);
+  const targetPath = path.resolve(absoluteOutDir, relative);
+  if (!isPathWithinOrEqual(absoluteOutDir, targetPath) || targetPath === absoluteOutDir) {
+    throw new Error(`Unsafe blob pathname for prefix "${prefix}".`);
+  }
+  return targetPath;
+}
+
+function resolveCanonicalContentRoots(cwd, environment, repoRuntimeDataRoot) {
+  const configuredBuilderRoot = environment.BUILDER_SITE_ROOT?.trim();
+  const configuredColumnsRoot = environment.CONSULTATION_COLUMNS_DIR?.trim();
+  const configuredFaqRoot = environment.BUILDER_FAQ_ROOT?.trim();
+  return [
+    path.resolve(cwd, 'runtime-data'),
+    configuredBuilderRoot ? path.resolve(cwd, configuredBuilderRoot) : null,
+    configuredColumnsRoot ? path.resolve(cwd, configuredColumnsRoot) : null,
+    configuredFaqRoot ? path.resolve(cwd, configuredFaqRoot) : null,
+    path.resolve(repoRuntimeDataRoot),
+  ].filter(Boolean);
+}
+
+export async function assertMirrorRootIsIsolated(
+  mirrorRoot,
+  {
+    cwd = process.cwd(),
+    environment = process.env,
+    repoRuntimeDataRoot = REPO_RUNTIME_DATA_ROOT,
+  } = {},
+) {
+  const absoluteMirrorRoot = path.resolve(cwd, mirrorRoot);
+  const canonicalRoots = resolveCanonicalContentRoots(cwd, environment, repoRuntimeDataRoot);
+
+  await assertExistingComponentsHaveNoSymlinks(absoluteMirrorRoot);
+  const physicalMirrorRoot = await resolvePhysicalCandidate(absoluteMirrorRoot);
+  for (const canonicalRoot of canonicalRoots) {
+    const physicalCanonicalRoot = await resolvePhysicalCandidate(canonicalRoot);
+    if (
+      pathsOverlap(absoluteMirrorRoot, canonicalRoot) ||
+      pathsOverlap(physicalMirrorRoot, physicalCanonicalRoot)
+    ) {
+      throw new Error(CANONICAL_OVERLAP_ERROR);
+    }
+  }
+  return absoluteMirrorRoot;
+}
+
+function sameObjectIdentity(left, right) {
+  return left.dev === right.dev && left.ino === right.ino;
+}
+
+async function ensureBoundDirectory(rootPath, targetPath) {
+  const root = path.resolve(rootPath);
+  const target = path.resolve(targetPath);
+  if (!isPathWithinOrEqual(root, target)) throw new Error(PATH_SAFETY_ERROR);
+  await assertExistingComponentsHaveNoSymlinks(root);
+  const rootStats = await lstatIfExists(root);
+  if (!rootStats || rootStats.isSymbolicLink() || !rootStats.isDirectory()) {
+    throw new Error('Mirror parent directory must already exist and be physical.');
+  }
+  const relative = path.relative(root, target);
+  if (!relative) return realpath(root);
+  const segments = relative.split(path.sep).filter(Boolean);
+
+  await new Promise((resolve, reject) => {
+    const child = spawn(process.execPath, ['-e', BOUND_MKDIR_SOURCE], {
+      cwd: root,
+      stdio: ['pipe', 'ignore', 'ignore'],
+    });
+    child.once('error', reject);
+    child.once('exit', (code, signal) => {
+      if (code === 0 && signal === null) resolve();
+      else reject(new Error('Bound mirror directory creation failed closed.'));
+    });
+    child.stdin.end(JSON.stringify({
+      rootIdentity: { dev: String(rootStats.dev), ino: String(rootStats.ino) },
+      segments,
+    }));
+  });
+
+  await assertExistingComponentsHaveNoSymlinks(target);
+  const physicalRoot = await realpath(root);
+  const physicalTarget = await realpath(target);
+  if (!isPathWithinOrEqual(physicalRoot, physicalTarget)) throw new Error(PATH_SAFETY_ERROR);
+  return physicalTarget;
+}
+
+async function ensureDirectoryFromNearestExistingAncestor(targetPath) {
+  const target = path.resolve(targetPath);
+  let ancestor = target;
+  for (;;) {
+    const stats = await lstatIfExists(ancestor);
+    if (stats) {
+      if (stats.isSymbolicLink() || !stats.isDirectory()) {
+        throw new Error('Mirror output ancestor must be a physical directory.');
+      }
+      return ensureBoundDirectory(ancestor, target);
+    }
+    const parent = path.dirname(ancestor);
+    if (parent === ancestor) throw new Error(PATH_SAFETY_ERROR);
+    ancestor = parent;
+  }
+}
+
+function mirrorRootLeaseTarget(mirrorRoot, leaseControlRoot) {
+  const digest = createHash('sha256').update(mirrorRoot).digest('hex').slice(0, 24);
+  return path.join(leaseControlRoot, `pull-prod-builder-data-${digest}.root-lease.json`);
+}
+
+function mirrorMarkerPayload(mirrorRoot) {
+  return JSON.stringify({
+    schemaVersion: 1,
+    kind: MIRROR_MARKER_KIND,
+    mirrorRoot,
+  });
+}
+
+async function readOwnedMirrorMarker(mirrorRoot) {
+  for (const markerName of [MIRROR_MARKER_NAME, LEGACY_MIRROR_MARKER_NAME]) {
+    const markerPath = path.join(mirrorRoot, markerName);
+    const markerStats = await lstatIfExists(markerPath);
+    if (!markerStats) continue;
+    if (markerStats.isSymbolicLink() || !markerStats.isFile()) throw new Error('Mirror ownership marker is unsafe.');
+
+    let handle;
+    try {
+      handle = await open(markerPath, fsConstants.O_RDONLY | fsConstants.O_NOFOLLOW);
+      const before = await handle.stat();
+      if (!sameObjectIdentity(markerStats, before)) throw new Error('Mirror ownership marker changed.');
+      const raw = await handle.readFile('utf8');
+      const after = await handle.stat();
+      if (!sameObjectIdentity(before, after) || before.size !== after.size || before.mtimeMs !== after.mtimeMs) {
+        throw new Error('Mirror ownership marker changed.');
+      }
+      const parsed = JSON.parse(raw);
+      if (
+        parsed?.schemaVersion !== 1 || parsed?.kind !== MIRROR_MARKER_KIND ||
+        parsed?.mirrorRoot !== mirrorRoot
+      ) {
+        throw new Error('Mirror ownership marker does not match this mirror root.');
+      }
+      return parsed;
+    } catch (error) {
+      if (error instanceof SyntaxError) throw new Error('Mirror ownership marker is invalid.');
+      throw error;
+    } finally {
+      await handle?.close().catch(() => {});
+    }
+  }
+  return null;
+}
+
+async function ensureOwnedMirrorMarker(mirrorRoot, allowedRoot, writeFileAtomic) {
+  if (await readOwnedMirrorMarker(mirrorRoot)) return;
+  const existingEntries = await readdir(mirrorRoot);
+  if (existingEntries.length > 0) {
+    throw new Error('Refusing to claim a nonempty directory that is not already an owned production mirror.');
+  }
+  const markerPath = path.join(mirrorRoot, MIRROR_MARKER_NAME);
+  await writeFileAtomic(markerPath, mirrorMarkerPayload(mirrorRoot), {
+    allowedRoot,
+    expectedGeneration: null,
+  });
+  if (!await readOwnedMirrorMarker(mirrorRoot)) throw new Error('Mirror ownership marker was not installed.');
+}
+
+async function writeWithLocalJsonLease(targetPath, data, options) {
+  return withLocalJsonWriteLease(targetPath, options, async (lease) => {
+    let expectedGeneration = options.expectedGeneration;
+    if (!Object.prototype.hasOwnProperty.call(options, 'expectedGeneration')) {
+      const snapshot = await lease.read();
+      expectedGeneration = snapshot.kind === 'missing' ? null : snapshot.generation;
+    }
+    return atomicWriteLocalJson(lease, data, { expectedGeneration });
+  });
+}
+
+async function restoreQuarantinedRoot(quarantinePath, mirrorRoot, expectedIdentity) {
+  const current = await lstatIfExists(quarantinePath);
+  if (
+    !current || current.isSymbolicLink() || !current.isDirectory() ||
+    !sameObjectIdentity(current, expectedIdentity)
+  ) {
+    throw new Error('Quarantined mirror data changed and was preserved.');
+  }
+  if (await lstatIfExists(mirrorRoot)) {
+    throw new Error('Purge aborted because the mirror namespace changed; quarantined data was preserved.');
+  }
+  await rename(quarantinePath, mirrorRoot);
+  const restored = await lstatIfExists(mirrorRoot);
+  if (!restored || !sameObjectIdentity(restored, expectedIdentity)) {
+    throw new Error('Quarantined mirror data could not be safely restored.');
+  }
+}
+
+async function emptyBoundMirrorDirectory(quarantinePath, expectedIdentity) {
+  await new Promise((resolve, reject) => {
+    const child = spawn(process.execPath, ['-e', BOUND_PURGE_SOURCE], {
+      cwd: quarantinePath,
+      stdio: ['pipe', 'ignore', 'ignore'],
+    });
+    child.once('error', reject);
+    child.once('exit', (code, signal) => {
+      if (code === 0 && signal === null) resolve();
+      else reject(new Error('Bound mirror purge failed closed.'));
+    });
+    child.stdin.end(JSON.stringify({
+      dev: String(expectedIdentity.dev),
+      ino: String(expectedIdentity.ino),
+    }));
+  });
+}
+
+async function purgeIsolatedMirrorRoot(mirrorRoot, safetyOptions, testHook) {
+  const before = await lstatIfExists(mirrorRoot);
+  if (!before) return;
+  if (before.isSymbolicLink() || !before.isDirectory()) throw new Error(PATH_SAFETY_ERROR);
+  if (!await readOwnedMirrorMarker(mirrorRoot)) {
+    throw new Error('Refusing --purge because this directory is not an owned production mirror.');
+  }
+  const protectedRoots = [];
+  for (const root of resolveCanonicalContentRoots(
+    safetyOptions.cwd,
+    safetyOptions.environment,
+    safetyOptions.repoRuntimeDataRoot,
+  )) {
+    const stats = await lstatIfExists(root);
+    if (stats && !stats.isSymbolicLink() && stats.isDirectory()) protectedRoots.push({ root, stats });
+  }
+
+  const quarantinePath = path.join(
+    path.dirname(mirrorRoot),
+    `.${path.basename(mirrorRoot)}.purge-${process.pid}-${randomUUID()}`,
+  );
+  if (await lstatIfExists(quarantinePath)) throw new Error('Purge quarantine path already exists.');
+  if (testHook) await testHook({ phase: 'before-purge-rename', mirrorRoot, quarantinePath });
+
+  await rename(mirrorRoot, quarantinePath);
+  const quarantined = await lstatIfExists(quarantinePath);
+  if (!quarantined || quarantined.isSymbolicLink() || !quarantined.isDirectory() || !sameObjectIdentity(before, quarantined)) {
+    if (quarantined) {
+      const displacedProtectedRoot = protectedRoots.find(({ stats }) => sameObjectIdentity(stats, quarantined));
+      await restoreQuarantinedRoot(
+        quarantinePath,
+        displacedProtectedRoot?.root ?? mirrorRoot,
+        quarantined,
+      );
+    }
+    throw new Error('Purge aborted because the mirror root changed during safety validation.');
+  }
+
+  try {
+    await assertMirrorRootIsIsolated(quarantinePath, safetyOptions);
+  } catch (error) {
+    await restoreQuarantinedRoot(quarantinePath, mirrorRoot, quarantined);
+    throw error;
+  }
+  await emptyBoundMirrorDirectory(quarantinePath, quarantined);
+  const emptied = await lstatIfExists(quarantinePath);
+  if (!emptied || emptied.isSymbolicLink() || !emptied.isDirectory() || !sameObjectIdentity(emptied, quarantined)) {
+    throw new Error('Purged mirror root changed before final removal.');
+  }
+  await rmdir(quarantinePath);
 }
 
 async function streamToText(stream) {
@@ -283,13 +709,13 @@ async function streamToText(stream) {
   return new TextDecoder('utf-8').decode(buf);
 }
 
-async function listAll(prefix, limit, secret) {
+async function listAll(prefix, limit, provider) {
   const all = [];
   let cursor;
   let page = 0;
   for (;;) {
     page += 1;
-    const result = await list({ prefix, limit, cursor });
+    const result = await provider.list({ prefix, limit, cursor });
     if (Array.isArray(result?.blobs)) {
       for (const b of result.blobs) {
         if (b && typeof b.pathname === 'string') all.push(b);
@@ -304,18 +730,6 @@ async function listAll(prefix, limit, secret) {
   return all;
 }
 
-async function writeAtomic(targetPath, text) {
-  await mkdir(path.dirname(targetPath), { recursive: true });
-  const tmpPath = `${targetPath}.tmp-${process.pid}-${Math.random().toString(36).slice(2)}`;
-  try {
-    await writeFile(tmpPath, text, 'utf8');
-    await rename(tmpPath, targetPath);
-  } catch (error) {
-    await rm(tmpPath, { force: true }).catch(() => {});
-    throw error;
-  }
-}
-
 /**
  * Mirror one blob prefix into outDir. READ-ONLY: list + get only.
  *
@@ -324,16 +738,17 @@ async function writeAtomic(targetPath, text) {
  * @param {string}   token  BLOB_READ_WRITE_TOKEN (for error scrubbing only)
  * @returns {Promise<{ label: string, prefix: string, listed: number, written: number, skipped: number, filtered: number, bytes: number, byKind: Record<string, number> | null, sample: Array<{ pathname: string, bytes: number, kind: string | null }> }>}
  */
-async function mirrorStore(target, limit, token) {
-  const { label, prefix, outDir, classify, filter } = target;
+async function mirrorStore(target, limit, token, { provider, stdout, stderr, writeFileAtomic }) {
+  const { label, prefix, outDir, allowedRoot, classify, filter } = target;
+  const safeLog = (value) => scrub(String(value), token);
 
-  process.stdout.write(`\n[list] ${label}\n`);
-  process.stdout.write(`  prefix : ${prefix}/  (Vercel Blob, list+get only — no put/del/copy)\n`);
-  process.stdout.write(`  outDir : ${outDir}\n`);
+  stdout.write(`\n[list] ${safeLog(label)}\n`);
+  stdout.write(`  prefix : ${safeLog(prefix)}/  (Vercel Blob, list+get only — no put/del/copy)\n`);
+  stdout.write(`  outDir : ${safeLog(outDir)}\n`);
 
-  const blobs = await listAll(`${prefix}/`, limit, token);
+  const blobs = await listAll(`${prefix}/`, limit, provider);
   if (blobs.length === 0) {
-    process.stdout.write(`  -> no blobs found under "${prefix}/".\n`);
+    stdout.write(`  -> no blobs found under "${safeLog(prefix)}/".\n`);
     return { label, prefix, listed: 0, written: 0, skipped: 0, filtered: 0, bytes: 0, byKind: null, sample: [] };
   }
 
@@ -342,8 +757,10 @@ async function mirrorStore(target, limit, token) {
   for (const b of blobs) {
     if (!byPath.has(b.pathname)) byPath.set(b.pathname, b);
   }
-  const uniq = Array.from(byPath.values());
-  process.stdout.write(`  -> ${uniq.length} unique blob(s)\n`);
+  const uniq = Array.from(byPath.values()).sort((left, right) => (
+    Buffer.compare(Buffer.from(left.pathname), Buffer.from(right.pathname))
+  ));
+  stdout.write(`  -> ${uniq.length} unique blob(s)\n`);
 
   let written = 0;
   let skipped = 0;
@@ -356,7 +773,9 @@ async function mirrorStore(target, limit, token) {
 
   for (const blob of uniq) {
     const { pathname } = blob;
-    const relPath = relPathOf(pathname, prefix);
+    const targetPath = resolveMirrorTargetPath(outDir, pathname, prefix);
+    const relPath = path.relative(outDir, targetPath).split(path.sep).join('/');
+    await assertExistingComponentsHaveNoSymlinks(targetPath);
 
     if (filter && !filter(relPath)) {
       filtered += 1;
@@ -370,22 +789,24 @@ async function mirrorStore(target, limit, token) {
 
     let result;
     try {
-      result = await get(pathname, { access: 'private', useCache: false });
+      result = await provider.get(pathname, { access: 'private', useCache: false });
     } catch (error) {
       const msg = scrub(error instanceof Error ? error.message : String(error), token);
-      process.stderr.write(`  [get ERROR] ${pathname}: ${msg} — skipped\n`);
+      stderr.write(`  [get ERROR] ${safeLog(pathname)}: ${msg} — skipped\n`);
       skipped += 1;
       continue;
     }
     if (!result || result.statusCode !== 200 || !result.stream) {
-      process.stderr.write(`  [get missing] ${pathname} (statusCode=${result?.statusCode ?? 'n/a'}) — skipped\n`);
+      stderr.write(
+        `  [get missing] ${safeLog(pathname)} ` +
+          `(statusCode=${safeLog(result?.statusCode ?? 'n/a')}) — skipped\n`,
+      );
       skipped += 1;
       continue;
     }
 
     const text = await streamToText(result.stream);
-    const targetPath = path.join(outDir, relPath);
-    await writeAtomic(targetPath, text);
+    await writeFileAtomic(targetPath, text, { allowedRoot });
 
     const bytes = Buffer.byteLength(text, 'utf8');
     totalBytes += bytes;
@@ -393,14 +814,14 @@ async function mirrorStore(target, limit, token) {
     sample.push({ pathname, bytes, kind });
   }
 
-  process.stdout.write(
+  stdout.write(
     `  -> written=${written}` +
       `${skipped ? ` skipped=${skipped}` : ''}` +
       `${filtered ? ` filtered=${filtered}` : ''}` +
       ` bytes=${totalBytes}\n`,
   );
   if (byKind) {
-    process.stdout.write(
+    stdout.write(
       `  by kind: site=${byKind.site} ` +
         `page.draft=${byKind['page-draft']} ` +
         `page.published=${byKind['page-published']} ` +
@@ -410,12 +831,12 @@ async function mirrorStore(target, limit, token) {
     );
   }
   if (sample.length > 0) {
-    process.stdout.write(`  sample pathnames:\n`);
+    stdout.write(`  sample pathnames:\n`);
     for (const s of sample.slice(0, 8)) {
-      process.stdout.write(`    ${s.pathname}  (${s.bytes} B)\n`);
+      stdout.write(`    ${safeLog(s.pathname)}  (${s.bytes} B)\n`);
     }
     if (sample.length > 8) {
-      process.stdout.write(`    ... and ${sample.length - 8} more\n`);
+      stdout.write(`    ... and ${sample.length - 8} more\n`);
     }
   }
 
@@ -435,87 +856,139 @@ function resolveTargets(args, explicitPrefix, explicitOut, mirrorRoot) {
   const classifierFor = (prefix) => (prefix === 'builder-site' ? classifyBuilderSiteBlob : undefined);
   if (explicitPrefix) {
     const prefix = args.prefix.endsWith('/') ? args.prefix.slice(0, -1) : args.prefix;
+    const prefixSegments = prefix.split('/');
+    if (
+      !prefix || prefix.includes('\\') || prefix.includes('\0') ||
+      prefixSegments.some((segment) => !segment || segment === '.' || segment === '..')
+    ) {
+      throw new Error('Unsafe blob prefix.');
+    }
     const outDir = explicitOut ? mirrorRoot : path.join(mirrorRoot, prefix);
     return [{ label: prefix, prefix, outDir, classify: classifierFor(prefix) }];
   }
   return MIRROR_TARGETS.map((t) => ({ ...t, outDir: path.join(mirrorRoot, t.prefix) }));
 }
 
-async function main() {
-  const args = parseArgs(process.argv);
+export async function runPullProdBuilderData({
+  args: rawArgs = [],
+  cwd = process.cwd(),
+  environment = process.env,
+  provider = { list, get },
+  stdout = process.stdout,
+  stderr = process.stderr,
+  token: providedToken,
+  repoRuntimeDataRoot = REPO_RUNTIME_DATA_ROOT,
+  writeFileAtomic = writeWithLocalJsonLease,
+  withRootLease = withLocalJsonWriteLease,
+  testHook,
+} = {}) {
+  const args = parseArgs(rawArgs);
   if (args.help) {
-    process.stdout.write(HELP);
-    return;
+    stdout.write(HELP);
+    return { help: true, totalListed: 0, totalWritten: 0, totalSkipped: 0, totalFiltered: 0, totalBytes: 0, perStore: [] };
   }
 
-  const token = await loadTokenFromEnvFile(args.envPath);
-  process.env.BLOB_READ_WRITE_TOKEN = token;
+  if (!writeFileAtomic || !withRootLease) throw new Error('Local JSON atomic writer is unavailable.');
+  const envPath = path.resolve(cwd, args.envPath);
+  const token = providedToken ?? await loadTokenFromEnvFile(envPath);
+  environment.BLOB_READ_WRITE_TOKEN = token;
 
-  const argv = process.argv;
-  const explicitPrefix = argv.some((a) => a.startsWith('--prefix='));
-  const explicitOut = argv.some((a) => a.startsWith('--out='));
+  const explicitPrefix = rawArgs.some((arg) => arg.startsWith('--prefix='));
+  const explicitOut = rawArgs.some((arg) => arg.startsWith('--out='));
 
-  const mirrorRoot = path.resolve(process.cwd(), args.outDir);
+  const safetyOptions = { cwd, environment, repoRuntimeDataRoot };
+  const mirrorRoot = await assertMirrorRootIsIsolated(args.outDir, safetyOptions);
   const targets = resolveTargets(args, explicitPrefix, explicitOut, mirrorRoot);
   const mode = explicitPrefix ? 'single-store' : 'multi-store';
+  const safeLog = (value) => scrub(String(value), token);
+  const mirrorParent = path.dirname(mirrorRoot);
+  await ensureDirectoryFromNearestExistingAncestor(mirrorParent);
+  await assertMirrorRootIsIsolated(mirrorRoot, safetyOptions);
+  const physicalTempRoot = await realpath(os.tmpdir());
+  const leaseControlRoot = path.join(physicalTempRoot, 'tseng-law-pull-prod-mirror-leases');
+  const allowedLeaseRoot = await ensureBoundDirectory(physicalTempRoot, leaseControlRoot);
+  const rootLeaseTarget = mirrorRootLeaseTarget(mirrorRoot, allowedLeaseRoot);
+  if (testHook) await testHook({ phase: 'before-root-lease', mirrorRoot, rootLeaseTarget });
 
-  process.stdout.write(
-    `[pull-prod-builder-data] READ-ONLY mirror (${mode})\n` +
-      `  mirror root : ${mirrorRoot}\n` +
-      `  env file    : ${path.resolve(process.cwd(), args.envPath)} (token ${PLACEHOLDER})\n` +
-      `  stores      : ${targets.map((t) => t.prefix).join(', ')}\n` +
-      `  contract    : list+get only — NEVER put/del/copy\n`,
-  );
-
-  if (args.purge) {
-    process.stdout.write(`  purge       : removing existing mirror root before mirroring\n`);
-    await rm(mirrorRoot, { recursive: true, force: true });
-  }
-
-  let totalListed = 0;
-  let totalWritten = 0;
-  let totalSkipped = 0;
-  let totalFiltered = 0;
-  let totalBytes = 0;
-  const perStore = [];
-
-  for (const target of targets) {
-    const r = await mirrorStore(target, args.limit, token);
-    totalListed += r.listed;
-    totalWritten += r.written;
-    totalSkipped += r.skipped;
-    totalFiltered += r.filtered;
-    totalBytes += r.bytes;
-    perStore.push(r);
-  }
-
-  // Grand summary
-  process.stdout.write(`\n[mirror complete]\n`);
-  process.stdout.write(`  stores        : ${perStore.length}\n`);
-  process.stdout.write(`  blobs listed  : ${totalListed}\n`);
-  process.stdout.write(`  files written : ${totalWritten}\n`);
-  if (totalSkipped > 0) process.stdout.write(`  files skipped : ${totalSkipped}\n`);
-  if (totalFiltered > 0) process.stdout.write(`  files filtered: ${totalFiltered} (e.g. search query logs)\n`);
-  process.stdout.write(`  total bytes   : ${totalBytes}\n`);
-  process.stdout.write(`\n  per store:\n`);
-  for (const r of perStore) {
-    process.stdout.write(
-      `    ${r.prefix.padEnd(26)} listed=${r.listed} written=${r.written}` +
-        `${r.skipped ? ` skipped=${r.skipped}` : ''}${r.filtered ? ` filtered=${r.filtered}` : ''}` +
-        ` bytes=${r.bytes}\n`,
+  return withRootLease(rootLeaseTarget, { allowedRoot: allowedLeaseRoot }, async () => {
+    if (testHook) await testHook({ phase: 'after-root-lease', mirrorRoot, rootLeaseTarget });
+    await assertMirrorRootIsIsolated(mirrorRoot, safetyOptions);
+    stdout.write(
+      `[pull-prod-builder-data] READ-ONLY mirror (${mode})\n` +
+        `  mirror root : ${safeLog(mirrorRoot)}\n` +
+        `  env file    : ${safeLog(envPath)} (token ${PLACEHOLDER})\n` +
+        `  stores      : ${safeLog(targets.map((t) => t.prefix).join(', '))}\n` +
+        `  contract    : list+get only — NEVER put/del/copy\n`,
     );
-  }
+
+    if (args.purge) {
+      stdout.write(`  purge       : removing existing mirror root before mirroring\n`);
+      await purgeIsolatedMirrorRoot(mirrorRoot, safetyOptions, testHook);
+    }
+    await ensureBoundDirectory(mirrorParent, mirrorRoot);
+    await assertMirrorRootIsIsolated(mirrorRoot, safetyOptions);
+    const physicalMirrorRoot = await realpath(mirrorRoot);
+    await ensureOwnedMirrorMarker(mirrorRoot, physicalMirrorRoot, writeFileAtomic);
+
+    for (const target of targets) {
+      if (!isPathWithinOrEqual(mirrorRoot, target.outDir)) throw new Error(PATH_SAFETY_ERROR);
+      const physicalTargetRoot = await ensureBoundDirectory(mirrorRoot, target.outDir);
+      if (!isPathWithinOrEqual(physicalMirrorRoot, physicalTargetRoot)) throw new Error(PATH_SAFETY_ERROR);
+      target.allowedRoot = physicalMirrorRoot;
+    }
+
+    let totalListed = 0;
+    let totalWritten = 0;
+    let totalSkipped = 0;
+    let totalFiltered = 0;
+    let totalBytes = 0;
+    const perStore = [];
+
+    for (const target of targets) {
+      const r = await mirrorStore(target, args.limit, token, { provider, stdout, stderr, writeFileAtomic });
+      totalListed += r.listed;
+      totalWritten += r.written;
+      totalSkipped += r.skipped;
+      totalFiltered += r.filtered;
+      totalBytes += r.bytes;
+      perStore.push(r);
+    }
+
+    // Grand summary
+    stdout.write(`\n[mirror complete]\n`);
+    stdout.write(`  stores        : ${perStore.length}\n`);
+    stdout.write(`  blobs listed  : ${totalListed}\n`);
+    stdout.write(`  files written : ${totalWritten}\n`);
+    if (totalSkipped > 0) stdout.write(`  files skipped : ${totalSkipped}\n`);
+    if (totalFiltered > 0) stdout.write(`  files filtered: ${totalFiltered} (e.g. search query logs)\n`);
+    stdout.write(`  total bytes   : ${totalBytes}\n`);
+    stdout.write(`\n  per store:\n`);
+    for (const r of perStore) {
+      stdout.write(
+        `    ${safeLog(r.prefix).padEnd(26)} listed=${r.listed} written=${r.written}` +
+          `${r.skipped ? ` skipped=${r.skipped}` : ''}${r.filtered ? ` filtered=${r.filtered}` : ''}` +
+          ` bytes=${r.bytes}\n`,
+      );
+    }
+    return { help: false, totalListed, totalWritten, totalSkipped, totalFiltered, totalBytes, perStore };
+  });
 }
 
-main().catch((error) => {
-  const token = process.env.BLOB_READ_WRITE_TOKEN;
-  const raw = error instanceof Error ? error.message : String(error);
-  const stack = error instanceof Error ? error.stack : undefined;
-  const msg = scrub(raw, token);
-  process.stderr.write(`\n[pull-prod-builder-data] FAILED: ${msg}\n`);
-  if (stack) {
-    // Scrub token from stack too, then print for diagnosis (token-safe).
-    process.stderr.write(scrub(stack, token) + '\n');
-  }
-  process.exit(1);
-});
+async function main() {
+  await runPullProdBuilderData({ args: process.argv.slice(2) });
+}
+
+if (process.argv[1] && path.resolve(process.argv[1]) === SCRIPT_PATH) {
+  main().catch((error) => {
+    const token = process.env.BLOB_READ_WRITE_TOKEN;
+    const raw = error instanceof Error ? error.message : String(error);
+    const stack = error instanceof Error ? error.stack : undefined;
+    const msg = scrub(raw, token);
+    process.stderr.write(`\n[pull-prod-builder-data] FAILED: ${msg}\n`);
+    if (stack) {
+      // Scrub token from stack too, then print for diagnosis (token-safe).
+      process.stderr.write(scrub(stack, token) + '\n');
+    }
+    process.exitCode = 1;
+  });
+}

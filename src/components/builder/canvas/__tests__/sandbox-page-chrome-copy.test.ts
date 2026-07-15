@@ -1,26 +1,42 @@
 import { describe, expect, it } from 'vitest';
-import { getDraftConflictCopy, getSandboxPageFeedbackCopy } from '../SandboxPageChrome';
+import {
+  getDraftConflictCopy,
+  getSandboxPageFeedbackCopy,
+  isBuilderAdminNavigationHref,
+} from '../SandboxPageChrome';
 
 describe('sandbox page chrome copy', () => {
+  it('recognizes every locale-scoped and absolute admin-builder navigation href', () => {
+    expect(isBuilderAdminNavigationHref('/ko/admin-builder/cms')).toBe(true);
+    expect(isBuilderAdminNavigationHref('/zh-hant/admin-builder/columns/post/edit?tab=seo')).toBe(true);
+    expect(isBuilderAdminNavigationHref('https://example.test/en/admin-builder/apps')).toBe(true);
+    expect(isBuilderAdminNavigationHref('/ko/columns')).toBe(false);
+    expect(isBuilderAdminNavigationHref('#section')).toBe(false);
+  });
+
   it('returns ko draft conflict copy', () => {
     const copy = getDraftConflictCopy('ko');
     expect(copy.message).toContain('충돌');
-    expect(copy.message).toContain('새로고침');
-    expect(copy.reloadLabel).toBe('새로고침');
+    expect(copy.message).toContain('로컬 편집본');
+    expect(copy.serverLatestLabel).toBe('서버 최신본 사용');
+    expect(copy.saveLocalUnavailableReason).toContain('멱등 키');
+    expect(copy.publishBlockedReason).toContain('예약 발행');
   });
 
   it('returns zh-hant draft conflict copy without Hangul', () => {
     const copy = getDraftConflictCopy('zh-hant');
     expect(copy.message).toContain('衝突');
-    expect(copy.reloadLabel).toBe('重新整理');
+    expect(copy.serverLatestLabel).toBe('使用伺服器最新版');
+    expect(copy.saveLocalUnavailableReason).toContain('冪等鍵');
     expect(Object.values(copy).join(' ')).not.toMatch(/[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]/);
   });
 
   it('returns en draft conflict copy without CJK', () => {
     const copy = getDraftConflictCopy('en');
     const cjk = /[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3\u4E00-\u9FFF]/;
-    expect(copy.message).toContain('Conflict');
-    expect(copy.reloadLabel).toBe('Refresh');
+    expect(copy.heading).toContain('conflict');
+    expect(copy.serverLatestLabel).toBe('Use server latest');
+    expect(copy.saveLocalUnavailableReason).toContain('idempotency key');
     expect(Object.values(copy).join(' ')).not.toMatch(cjk);
   });
 

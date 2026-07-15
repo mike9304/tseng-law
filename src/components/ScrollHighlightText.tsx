@@ -66,7 +66,7 @@ export default function ScrollHighlightText({
         }
         const keyword = highlightWords.some((word) => token.includes(word));
         const punctuation = isPunctuation(token);
-        const delay = punctuation ? 0 : revealIndex++ * 36;
+        const delay = punctuation ? 0 : Math.min(revealIndex++ * 24, 360);
         return (
           <span
             key={`${token}-${index}`}

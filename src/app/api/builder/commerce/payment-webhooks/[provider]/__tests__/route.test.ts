@@ -82,6 +82,30 @@ describe('commerce payment webhook route', () => {
     await expect(listPaymentWebhookEvents()).resolves.toHaveLength(0);
   });
 
+  it('rejects production sandbox webhooks even when a secret is configured', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    process.env.COMMERCE_SANDBOX_CARD_WEBHOOK_SECRET = 'configured-production-secret';
+    const raw = JSON.stringify({
+      id: 'evt_production_sandbox',
+      type: 'payment_intent.succeeded',
+      data: { object: { id: 'pi_production_sandbox', amount: 1234, currency: 'twd' } },
+    });
+
+    const response = await route.POST(request(
+      raw,
+      signWebhookPayload('configured-production-secret', raw),
+      { query: 'locale=ko' },
+    ), { params: { provider: 'sandbox-card' } });
+
+    expect(response.status).toBe(503);
+    await expect(response.json()).resolves.toEqual({
+      ok: false,
+      error: '결제 웹훅이 설정되지 않았습니다.',
+      errorCode: 'payment_webhook_not_configured',
+    });
+    await expect(listPaymentWebhookEvents()).resolves.toHaveLength(0);
+  });
+
   it('accepts valid signatures and stores masked unmatched events', async () => {
     const raw = JSON.stringify({
       id: 'evt_route_valid',

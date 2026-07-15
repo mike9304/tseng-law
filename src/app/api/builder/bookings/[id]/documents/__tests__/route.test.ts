@@ -41,7 +41,7 @@ vi.mock('@/lib/builder/bookings/billing-documents', () => {
 });
 
 vi.mock('@/lib/builder/bookings/notifications', () => ({
-  sendBookingBillingDocument: vi.fn(async () => undefined),
+  sendBookingBillingDocument: vi.fn(async () => ({ ok: true, provider: 'resend', id: 'email-route-test' } as const)),
 }));
 
 vi.mock('@/lib/builder/bookings/storage', () => ({
@@ -140,6 +140,11 @@ describe('/api/builder/bookings/[id]/documents', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     vi.mocked(guardMutation).mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    vi.mocked(sendBookingBillingDocument).mockResolvedValue({
+      ok: true,
+      provider: 'resend',
+      id: 'email-route-test',
+    });
   });
 
   it('returns localized validation errors for invalid document payloads', async () => {
@@ -251,5 +256,73 @@ describe('/api/builder/bookings/[id]/documents', () => {
       staff: assignedStaff,
     });
     expect(markBookingBillingDocumentEmailed).toHaveBeenCalledWith('bk-document-route-test', 'bdoc-route-test');
+  });
+
+  it.each([
+    ['unconfigured', 503, 'email_unconfigured'],
+    ['provider_error', 502, 'email_provider_error'],
+  ] as const)(
+    'keeps an issued document current when email delivery fails with %s',
+    async (reason, expectedStatus, expectedError) => {
+      const issuedBooking = booking();
+      const issuedDocument = document();
+      const issuedService = service();
+      vi.mocked(issueBookingBillingDocument).mockResolvedValueOnce({
+        booking: issuedBooking,
+        document: issuedDocument,
+        reused: false,
+        service: issuedService,
+      });
+      vi.mocked(sendBookingBillingDocument).mockResolvedValueOnce({
+        ok: false,
+        provider: 'resend',
+        reason,
+      });
+
+      const route = await import('../route');
+      const response = await route.POST(postRequest({ type: 'invoice', email: true }, 'en'), {
+        params: { id: 'bk-document-route-test' },
+      });
+
+      expect(response.status).toBe(expectedStatus);
+      await expect(response.json()).resolves.toEqual({
+        ok: false,
+        error: expectedError,
+        booking: issuedBooking,
+        document: issuedDocument,
+        reused: false,
+      });
+      expect(markBookingBillingDocumentEmailed).not.toHaveBeenCalled();
+      expect(issuedDocument.status).toBe('issued');
+    },
+  );
+
+  it('keeps the issued identity when the delivery marker cannot be persisted', async () => {
+    const issuedBooking = booking();
+    const issuedDocument = document();
+    vi.mocked(issueBookingBillingDocument).mockResolvedValueOnce({
+      booking: issuedBooking,
+      document: issuedDocument,
+      reused: false,
+      service: service(),
+    });
+    vi.mocked(markBookingBillingDocumentEmailed).mockRejectedValueOnce(
+      new Error('provider response and recipient must stay private'),
+    );
+
+    const route = await import('../route');
+    const response = await route.POST(postRequest({ type: 'invoice', email: true }, 'en'), {
+      params: { id: 'bk-document-route-test' },
+    });
+
+    expect(response.status).toBe(500);
+    await expect(response.json()).resolves.toEqual({
+      ok: false,
+      error: 'marker_persist_failed_after_delivery',
+      booking: issuedBooking,
+      document: issuedDocument,
+    });
+    expect(sendBookingBillingDocument).toHaveBeenCalledOnce();
+    expect(issuedDocument.status).toBe('issued');
   });
 });

@@ -14,7 +14,7 @@ import {
   buildTranslationReleasePolicyBlockedPayload,
   evaluateTranslationReleasePolicyForPublish,
 } from '@/lib/builder/publish-gate/translation-release-policy';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 
@@ -58,8 +58,9 @@ export async function POST(
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
   const body = (await request.json().catch(() => ({}))) as Record<string, unknown>;
-  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
-  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   const expectedDraftRevision =
     typeof body.expectedDraftRevision === 'number' && Number.isFinite(body.expectedDraftRevision)
       ? Math.trunc(body.expectedDraftRevision)

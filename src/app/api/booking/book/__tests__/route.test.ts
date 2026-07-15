@@ -44,7 +44,10 @@ vi.mock('@/lib/builder/bookings/storage', () => ({
 }));
 
 vi.mock('@/lib/builder/bookings/notifications', () => ({
-  sendBookingConfirmation: vi.fn(async () => undefined),
+  sendBookingConfirmation: vi.fn(async () => ({
+    ok: true,
+    customer: { ok: true, provider: 'resend' },
+  })),
 }));
 
 vi.mock('@/lib/builder/webhooks/dispatcher', () => ({
@@ -225,7 +228,10 @@ describe('/api/booking/book', () => {
       createdAt: '2026-06-03T00:00:00.000Z',
       updatedAt: '2026-06-03T00:00:00.000Z',
     }) as never);
-    sendBookingConfirmationMock.mockResolvedValue(undefined as never);
+    sendBookingConfirmationMock.mockResolvedValue({
+      ok: true,
+      customer: { ok: true, provider: 'resend' },
+    });
     fetchPaymentIntentStatusMock.mockResolvedValue(null);
     isPaymentIntentBookableMock.mockReturnValue(true);
     paymentIntentPriceMismatchMock.mockReturnValue(null);
@@ -266,6 +272,10 @@ describe('/api/booking/book', () => {
         source: 'web',
         customer: { email: 'client@example.com', locale: 'ko' },
       },
+      emailDelivery: {
+        ok: true,
+        customer: { ok: true },
+      },
     });
     expect(releaseSlotLockMock).toHaveBeenCalledTimes(1);
     expect(sendBookingConfirmationMock).toHaveBeenCalledWith(payload.booking, { service: freeService, staff });
@@ -273,6 +283,39 @@ describe('/api/booking/book', () => {
       bookingId: 'bk-1',
       serviceId: 'svc-1',
     }));
+  });
+
+  it('keeps a persisted booking successful and reports sanitized provider delivery failures', async () => {
+    sendBookingConfirmationMock.mockResolvedValueOnce({
+      ok: false,
+      customer: { ok: false, provider: 'resend', reason: 'provider_error', status: 503 },
+      admin: { ok: false, provider: 'resend', reason: 'unconfigured' },
+    });
+
+    const response = await POST(request('locale=ko'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(201);
+    expect(saveBookingMock).toHaveBeenCalledTimes(1);
+    expect(payload.emailDelivery).toEqual({
+      ok: false,
+      customer: { ok: false, reason: 'provider_error' },
+      admin: { ok: false, reason: 'unconfigured' },
+    });
+    expect(JSON.stringify(payload.emailDelivery)).not.toContain('503');
+    expect(JSON.stringify(payload.emailDelivery)).not.toContain('resend');
+  });
+
+  it('keeps a persisted booking successful when confirmation rendering throws', async () => {
+    sendBookingConfirmationMock.mockRejectedValueOnce(new Error('secret client@example.com render failure'));
+
+    const response = await POST(request('locale=ko'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(201);
+    expect(saveBookingMock).toHaveBeenCalledTimes(1);
+    expect(payload.emailDelivery).toEqual({ ok: false, reason: 'internal_error' });
+    expect(JSON.stringify(payload)).not.toContain('secret client@example.com render failure');
   });
 
   it('returns localized rate-limit errors with retry headers', async () => {
@@ -405,6 +448,9 @@ describe('/api/booking/book', () => {
   });
 
   it('confirms a pay-later booking without online payment and marks it unpaid with the full balance', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('STRIPE_SECRET_KEY', '');
+    vi.stubEnv('BOOKING_PAYMENT_ALLOW_STUB', '1');
     getServiceMock.mockResolvedValueOnce(payLaterService as never);
     bookingServicePriceSnapshotMock.mockReturnValueOnce({
       paymentRequired: false,
@@ -425,6 +471,43 @@ describe('/api/booking/book', () => {
     expect(savedBooking?.paymentAmount).toBe(120000);
     expect(savedBooking?.paymentDueNow).toBe(0);
     expect(savedBooking?.status).toBe('confirmed');
+  });
+
+  it('confirms a package-covered booking in production without Stripe', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('STRIPE_SECRET_KEY', '');
+    vi.stubEnv('BOOKING_PAYMENT_ALLOW_STUB', '1');
+    getServiceMock.mockResolvedValueOnce(paidService as never);
+    findApplicablePackageCreditMock.mockResolvedValueOnce({
+      credit: packageCredit,
+      package: bookingPackage,
+    });
+    redeemPackageCreditForBookingMock.mockResolvedValueOnce({
+      credit: packageCredit,
+      package: bookingPackage,
+    });
+    bookingServicePriceSnapshotMock.mockReturnValueOnce({
+      paymentRequired: true,
+      totalAmount: 120000,
+      currency: 'KRW',
+      amountDueNow: 50000,
+      depositAmount: 50000,
+      balanceDueAfterOnlinePayment: 70000,
+      isDeposit: true,
+      payLater: false,
+    });
+
+    const response = await POST(request('locale=en', localizedBookingBody('en')));
+
+    expect(response.status).toBe(201);
+    expect(fetchPaymentIntentStatusMock).not.toHaveBeenCalled();
+    const savedBooking = saveBookingMock.mock.calls[0]?.[0] as Booking | undefined;
+    expect(savedBooking).toMatchObject({
+      packageId: 'pkg-1',
+      packageCreditId: 'credit-1',
+      packageCreditsUsed: 1,
+      paymentStatus: 'paid',
+    });
   });
 
   it('rejects a payment intent submitted for a pay-later service', async () => {
@@ -691,6 +774,38 @@ describe('/api/booking/book', () => {
       error: '결제 정보를 확인하지 못했습니다.',
       errorCode: 'booking_create_payment_unverified',
     });
+    expect(saveBookingMock).not.toHaveBeenCalled();
+    expect(acquireSlotLockMock).not.toHaveBeenCalled();
+  });
+
+  it('fails closed before verification or saving when production Stripe is unconfigured', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('STRIPE_SECRET_KEY', '');
+    vi.stubEnv('BOOKING_PAYMENT_ALLOW_STUB', '1');
+    getServiceMock.mockResolvedValueOnce(paidService as never);
+    bookingServicePriceSnapshotMock.mockReturnValueOnce({
+      paymentRequired: true,
+      totalAmount: 120000,
+      currency: 'KRW',
+      amountDueNow: 50000,
+      depositAmount: 50000,
+      balanceDueAfterOnlinePayment: 70000,
+      isDeposit: true,
+      payLater: false,
+    });
+
+    const response = await POST(request('locale=en', localizedBookingBody('en', { paymentIntentId: 'pi_stub_dev' })));
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'The payment provider is not configured.',
+      errorCode: 'booking_payment_provider_not_configured',
+    });
+    expect(fetchPaymentIntentStatusMock).not.toHaveBeenCalled();
+    expect(acquireSlotLockMock).not.toHaveBeenCalled();
+    expect(saveBookingMock).not.toHaveBeenCalled();
   });
 
   it('returns localized slot lock conflicts', async () => {

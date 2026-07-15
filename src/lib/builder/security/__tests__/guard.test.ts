@@ -76,6 +76,39 @@ describe('guardMutation', () => {
     expect(result.status).toBe(403);
     expect(await result.json()).toEqual({ error: 'Missing permission: publish' });
   });
+
+  it('returns a sanitized 503 when the production rate-limit backend is unavailable', async () => {
+    checkMutationRateLimitMock.mockResolvedValueOnce({
+      allowed: false,
+      remaining: 0,
+      retryAfterMs: 0,
+      reason: 'backend_unavailable',
+    });
+
+    const result = await guardMutation(request());
+
+    expect(result).toBeInstanceOf(NextResponse);
+    if (!(result instanceof NextResponse)) throw new Error('Expected unavailable response.');
+    expect(result.status).toBe(503);
+    expect(await result.json()).toEqual({ error: 'rate_limit_unavailable' });
+    expect(result.headers.get('Retry-After')).toBeNull();
+  });
+
+  it('keeps actual rate-limit exhaustion mapped to 429', async () => {
+    checkMutationRateLimitMock.mockResolvedValueOnce({
+      allowed: false,
+      remaining: 0,
+      retryAfterMs: 2_500,
+    });
+
+    const result = await guardMutation(request());
+
+    expect(result).toBeInstanceOf(NextResponse);
+    if (!(result instanceof NextResponse)) throw new Error('Expected rate-limit response.');
+    expect(result.status).toBe(429);
+    expect(await result.json()).toEqual({ error: 'Too many requests' });
+    expect(result.headers.get('Retry-After')).toBe('3');
+  });
 });
 
 describe('guardBuilderRead', () => {

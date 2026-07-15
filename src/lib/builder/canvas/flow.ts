@@ -1,5 +1,9 @@
 import type { BuilderCanvasNode } from './types';
-import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
+import {
+  resolveViewportHidden,
+  resolveViewportRect,
+  type Viewport,
+} from '@/lib/builder/canvas/responsive';
 import {
   buildChildrenMap,
   parentUsesFlowLayout,
@@ -13,6 +17,20 @@ type ResolvedFlowSiblingEntry = {
   y: number;
   height: number;
 };
+
+export const CANONICAL_DECOMPOSED_HOME_FLOW_SECTION_IDS = [
+  'home-hero-root',
+  'home-insights-root',
+  'home-services-root',
+  'home-attorney-root',
+  'home-case-results-root',
+  'home-stats-root',
+  'home-faq-root',
+  'home-offices-root',
+  'home-contact-root',
+] as const;
+
+type FlowSectionMetric = { marginTop: number; minHeight: number };
 
 function effectiveRect(node: BuilderCanvasNode, viewport?: Viewport): CanvasRect {
   return viewport ? resolveViewportRect(node, viewport) : node.rect;
@@ -28,8 +46,28 @@ function compareFlowNodes(left: BuilderCanvasNode, right: BuilderCanvasNode): nu
     left.id.localeCompare(right.id);
 }
 
-function isFloatingHeroQuickMenuNode(section: BuilderCanvasNode, node: BuilderCanvasNode): boolean {
+function compareFlowNodesForViewport(
+  left: BuilderCanvasNode,
+  right: BuilderCanvasNode,
+  viewport?: Viewport,
+): number {
+  const leftRect = effectiveRect(left, viewport);
+  const rightRect = effectiveRect(right, viewport);
+  return leftRect.y - rightRect.y ||
+    left.zIndex - right.zIndex ||
+    left.id.localeCompare(right.id);
+}
+
+function hasCanonicalDecomposedHomeSectionOrder(sections: readonly BuilderCanvasNode[]): boolean {
+  for (let index = 0; index < sections.length; index += 1) {
+    if (sections[index]?.id !== CANONICAL_DECOMPOSED_HOME_FLOW_SECTION_IDS[index]) return false;
+  }
+  return true;
+}
+
+function isFloatingHeroOverlayNode(section: BuilderCanvasNode, node: BuilderCanvasNode): boolean {
   return section.id === 'home-hero-root' && (
+    node.id === 'home-hero-search-wrapper' ||
     node.id === 'home-hero-quick-menu' ||
     node.id.startsWith('home-hero-quick-menu-item-') ||
     node.id === 'home-hero-scroll-arrow'
@@ -49,6 +87,7 @@ function resolveSectionContentHeight(
   nodesById: Map<string, BuilderCanvasNode>,
   childrenMap: Record<string, string[]>,
   viewport?: Viewport,
+  respectViewportVisibility = false,
 ): number {
   const sectionRect = viewport
     ? resolveCanvasNodeAbsoluteRectForViewport(section, nodesById, viewport)
@@ -60,8 +99,12 @@ function resolveSectionContentHeight(
     const descendantId = stack.pop();
     if (!descendantId) continue;
     const descendant = nodesById.get(descendantId);
-    if (!descendant || isFloatingHeroQuickMenuNode(section, descendant)) continue;
+    if (!descendant || isFloatingHeroOverlayNode(section, descendant)) continue;
     if (isCollapsedSectionHiddenNode(section, descendant)) continue;
+    if (
+      respectViewportVisibility &&
+      resolveViewportHidden(descendant, viewport ?? 'desktop')
+    ) continue;
     const childIds = childrenMap[descendantId];
     if (childIds) stack.push(...childIds);
     if (descendant.visible === false) continue;
@@ -85,6 +128,47 @@ export function isTopLevelFlowSection(node: BuilderCanvasNode): boolean {
   if (node.kind === 'composite') return true;
   const content = node.content as { as?: unknown };
   return content.as === 'section';
+}
+
+function resolveCanonicalDecomposedHomeFlowSections(
+  nodes: readonly BuilderCanvasNode[],
+  viewport?: Viewport,
+): BuilderCanvasNode[] | null {
+  const visibilityViewport = viewport ?? 'desktop';
+  const flowSections: BuilderCanvasNode[] = [];
+
+  for (let index = 0; index < nodes.length; index += 1) {
+    const node = nodes[index];
+    if (!isTopLevelFlowSection(node)) continue;
+    flowSections.push(node);
+  }
+
+  if (flowSections.length !== CANONICAL_DECOMPOSED_HOME_FLOW_SECTION_IDS.length) return null;
+  if (flowSections.some((section) => resolveViewportHidden(section, visibilityViewport))) return null;
+
+  const desktopOrderedSections = [...flowSections]
+    .sort((left, right) => compareFlowNodesForViewport(left, right));
+  if (!hasCanonicalDecomposedHomeSectionOrder(desktopOrderedSections)) return null;
+
+  if (!viewport || viewport === 'desktop') return desktopOrderedSections;
+
+  const viewportOrderedSections = [...flowSections]
+    .sort((left, right) => compareFlowNodesForViewport(left, right, viewport));
+  if (!hasCanonicalDecomposedHomeSectionOrder(viewportOrderedSections)) return null;
+
+  return viewportOrderedSections;
+}
+
+/**
+ * Recognizes only the intact editable home stack. Reordered roots, hidden
+ * roots, or an added flow section deliberately fall back to the generic flow
+ * model so custom/freeform pages retain their authored geometry.
+ */
+export function isCanonicalDecomposedHomeFlowStack(
+  nodes: readonly BuilderCanvasNode[],
+  viewport?: Viewport,
+): boolean {
+  return resolveCanonicalDecomposedHomeFlowSections(nodes, viewport) !== null;
 }
 
 /**
@@ -133,7 +217,7 @@ export function compareTopLevelStacking(
 export function computeFlowSiblingMetrics(
   siblings: BuilderCanvasNode[],
   viewport?: Viewport,
-): Map<string, { marginTop: number; minHeight: number }> {
+): Map<string, FlowSectionMetric> {
   if (!siblings || siblings.length === 0) return new Map();
 
   const metrics = new Map<string, { marginTop: number; minHeight: number }>();
@@ -188,7 +272,7 @@ export function computeFlowSiblingMetrics(
 export function computeTopLevelFlowSectionMetrics(
   nodes: BuilderCanvasNode[],
   viewport?: Viewport,
-): Map<string, { marginTop: number; minHeight: number }> {
+): Map<string, FlowSectionMetric> {
   const nodesById = new Map<string, BuilderCanvasNode>();
   for (let index = 0; index < nodes.length; index += 1) {
     const node = nodes[index];
@@ -213,7 +297,34 @@ export function computeTopLevelFlowSectionMetricsFromIndex({
   nodes: readonly BuilderCanvasNode[];
   nodesById: Map<string, BuilderCanvasNode>;
   viewport?: Viewport;
-}): Map<string, { marginTop: number; minHeight: number }> {
+}): Map<string, FlowSectionMetric> {
+  // `CanvasStageNodes` supplies its base-visible node list together with a
+  // caller-owned full index. Recognize against the full index so a hidden
+  // custom flow root cannot masquerade as the exact nine-root home, while the
+  // generic metric path below still uses only rendered nodes.
+  const canonicalHomeSections = resolveCanonicalDecomposedHomeFlowSections(
+    [...nodesById.values()],
+    viewport,
+  );
+  if (canonicalHomeSections) {
+    const metrics = new Map<string, FlowSectionMetric>();
+    for (let index = 0; index < canonicalHomeSections.length; index += 1) {
+      const section = canonicalHomeSections[index];
+      const rect = effectiveRect(section, viewport);
+      metrics.set(section.id, {
+        // The canonical home is a single continuous page stack. Its authored
+        // y values are editor anchors, not intentional whitespace once a
+        // descendant expands a preceding section's effective height.
+        marginTop: 0,
+        minHeight: Math.max(
+          rect.height,
+          resolveSectionContentHeight(section, nodesById, childrenMap, viewport, true),
+        ),
+      });
+    }
+    return metrics;
+  }
+
   const flowTopLevelCompositeNodes: BuilderCanvasNode[] = [];
   for (let index = 0; index < nodes.length; index += 1) {
     const node = nodes[index];
@@ -226,6 +337,83 @@ export function computeTopLevelFlowSectionMetricsFromIndex({
   }
 
   return computeFlowSiblingMetrics(flowTopLevelCompositeNodes);
+}
+
+function resolveAbsoluteNonFlowContentBottom(
+  nodes: readonly BuilderCanvasNode[],
+  nodesById: Map<string, BuilderCanvasNode>,
+  childrenMap: Record<string, string[]>,
+  viewport: Viewport,
+): number {
+  let contentBottom = 0;
+  const visited = new Set<string>();
+
+  for (let index = 0; index < nodes.length; index += 1) {
+    const rootNode = nodes[index];
+    if (rootNode.parentId || isTopLevelFlowSection(rootNode)) continue;
+
+    const stack = [rootNode.id];
+    while (stack.length > 0) {
+      const nodeId = stack.pop();
+      if (!nodeId || visited.has(nodeId)) continue;
+      visited.add(nodeId);
+      const node = nodesById.get(nodeId);
+      if (!node || resolveViewportHidden(node, viewport)) continue;
+
+      const rect = resolveCanvasNodeAbsoluteRectForViewport(node, nodesById, viewport);
+      contentBottom = Math.max(contentBottom, rect.y + rect.height);
+
+      const childIds = childrenMap[nodeId];
+      if (childIds) stack.push(...childIds);
+    }
+  }
+
+  return Math.max(0, Math.ceil(contentBottom));
+}
+
+/**
+ * The document model has one shared stageHeight, which may be a mobile floor.
+ * For the intact decomposed home, derive the editor stage independently for
+ * each viewport from the continuous flow stack plus any absolute/freeform
+ * content. Every other page keeps the authored document height unchanged.
+ */
+export function computeEffectiveViewportStageHeight({
+  childrenMap: providedChildrenMap,
+  fallbackStageHeight,
+  nodes,
+  nodesById: providedNodesById,
+  viewport,
+}: {
+  childrenMap?: Record<string, string[]>;
+  fallbackStageHeight: number;
+  nodes: BuilderCanvasNode[];
+  nodesById?: Map<string, BuilderCanvasNode>;
+  viewport: Viewport;
+}): number {
+  const normalizedFallbackHeight = Number.isFinite(fallbackStageHeight)
+    ? Math.max(1, Math.ceil(fallbackStageHeight))
+    : 1;
+  const canonicalHomeSections = resolveCanonicalDecomposedHomeFlowSections(nodes, viewport);
+  if (!canonicalHomeSections) return normalizedFallbackHeight;
+
+  const nodesById = providedNodesById ?? new Map(nodes.map((node) => [node.id, node]));
+  const childrenMap = providedChildrenMap ?? buildChildrenMap(nodes);
+  let flowStackHeight = 0;
+
+  for (let index = 0; index < canonicalHomeSections.length; index += 1) {
+    const section = canonicalHomeSections[index];
+    const rect = effectiveRect(section, viewport);
+    flowStackHeight += Math.max(
+      rect.height,
+      resolveSectionContentHeight(section, nodesById, childrenMap, viewport, true),
+    );
+  }
+
+  return Math.max(
+    1,
+    Math.ceil(flowStackHeight),
+    resolveAbsoluteNonFlowContentBottom(nodes, nodesById, childrenMap, viewport),
+  );
 }
 
 /**

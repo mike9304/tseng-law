@@ -31,6 +31,7 @@ import {
 } from '@/lib/builder/admin-nav/quick-jump';
 import { getSandboxTopBarCopy } from './sandbox-top-bar-copy';
 import styles from './SandboxPage.module.css';
+import chromeStyles from './SandboxChrome.module.css';
 
 export type ViewportMode = 'desktop' | 'tablet' | 'mobile';
 export type MemberPreviewMode = 'signed-out' | 'free' | 'premium' | 'admin';
@@ -58,7 +59,6 @@ const MEMBER_PREVIEW_OPTIONS: Array<{ mode: MemberPreviewMode }> = [
 function SandboxTopBar({
   locale,
   siteId,
-  draftSaveState,
   selectedSummary,
   selectionCount,
   viewport,
@@ -76,13 +76,15 @@ function SandboxTopBar({
   siteName,
   currentSlug,
   saveBlockReason,
+  draftConflictActive = false,
+  draftConflictNavigationReason,
+  draftConflictPublishReason,
   memberPreviewMode,
   onMemberPreviewModeChange,
   presenceEntries = [],
 }: {
   locale: string;
   siteId: string;
-  draftSaveState: 'idle' | 'saving' | 'saved' | 'error';
   selectedSummary: string;
   selectionCount: number;
   viewport: ViewportMode;
@@ -100,12 +102,19 @@ function SandboxTopBar({
   siteName?: string;
   currentSlug?: string;
   saveBlockReason?: string | null;
+  draftConflictActive?: boolean;
+  draftConflictNavigationReason?: string;
+  draftConflictPublishReason?: string;
   memberPreviewMode: MemberPreviewMode;
   onMemberPreviewModeChange: (mode: MemberPreviewMode) => void;
   presenceEntries?: CollabPresenceEntry[];
 }) {
   const router = useRouter();
   const selectedNodeId = useBuilderCanvasStore((state) => state.selectedNodeId);
+  const canUndo = useBuilderCanvasStore((state) => state.canUndo);
+  const canRedo = useBuilderCanvasStore((state) => state.canRedo);
+  const undo = useBuilderCanvasStore((state) => state.undo);
+  const redo = useBuilderCanvasStore((state) => state.redo);
   const hasSelectedOverride = useBuilderCanvasStore((state) => {
     const selectedNode = state.selectedNodeId ? state.nodesById.get(state.selectedNodeId) ?? null : null;
     return Boolean(selectedNode && hasResponsiveOverride(selectedNode, viewport));
@@ -119,12 +128,16 @@ function SandboxTopBar({
   const resetResponsiveOverridesForViewport = useBuilderCanvasStore((state) => state.resetResponsiveOverridesForViewport);
   const normalizedLocale = normalizeLocale(locale);
   const copy = getSandboxTopBarCopy(normalizedLocale);
-  const saveLabel = copy.saveStateLabels[draftSaveState];
-  const saveClass = draftSaveState === 'saving' ? styles.statusBadgeSaving : draftSaveState === 'saved' ? styles.statusBadgeSaved : draftSaveState === 'error' ? styles.statusBadgeError : '';
   const canOpenSeo = Boolean(onOpenSeo && activePageId);
   const canResetSelectedViewport = viewport !== 'desktop' && Boolean(selectedNodeId) && hasSelectedOverride;
   const canResetPageViewport = viewport !== 'desktop' && hasPageViewportOverride;
   const responsiveAiEnabled = Boolean(onOpenResponsiveAi && canOpenResponsiveAi);
+  const navigationBlockedReason = draftConflictActive
+    ? draftConflictNavigationReason ?? copy.saveBlockedLabel
+    : saveBlockReason ?? null;
+  const publishBlockedReason = draftConflictActive
+    ? draftConflictPublishReason ?? copy.saveBlockedLabel
+    : saveBlockReason;
   const pageLabel = currentSlug?.trim() ? `/${currentSlug.trim()}` : copy.homePageLabel;
   const viewportLabel = copy.viewportLabels[viewport];
   const [recentNav, setRecentNav] = useState<AdminNavHistoryEntry[]>([]);
@@ -145,6 +158,7 @@ function SandboxTopBar({
   }, []);
 
   const navigateToAdminHref = useCallback((entry: AdminNavHistoryEntry) => {
+    if (navigationBlockedReason) return;
     setRecentNav((current) => {
       const next = pushRecentAdminNav(current, entry);
       writeRecentAdminNav(next);
@@ -152,12 +166,17 @@ function SandboxTopBar({
     });
     router.push(entry.href);
     setQuickJumpOpen(false);
-  }, [router]);
+  }, [navigationBlockedReason, router]);
 
   const openQuickJump = useCallback(() => {
+    if (navigationBlockedReason) return;
     setQuickJumpQuery('');
     setQuickJumpOpen(true);
-  }, []);
+  }, [navigationBlockedReason]);
+
+  useEffect(() => {
+    if (navigationBlockedReason) setQuickJumpOpen(false);
+  }, [navigationBlockedReason]);
 
   useEffect(() => {
     if (!quickJumpOpen) {
@@ -226,8 +245,11 @@ function SandboxTopBar({
       : `Current: ${pageSelectorLabel}`;
 
   return (
-    <header className={styles.topBar}>
-      <div className={styles.topBarTitle}>
+    <header
+      className={`${styles.topBar} ${chromeStyles.topBar}`}
+      data-builder-professional-topbar="true"
+    >
+      <div className={`${styles.topBarTitle} ${chromeStyles.identityCluster}`} data-builder-topbar-identity="true">
         <button
           type="button"
           className={styles.siteNameButton}
@@ -242,7 +264,8 @@ function SandboxTopBar({
           className={styles.pageDropdownButton}
           aria-label={pageSelectorAriaLabel}
           data-builder-topbar-page-selector="true"
-          title={copy.pageSelectTitle}
+          title={navigationBlockedReason ?? copy.pageSelectTitle}
+          disabled={Boolean(navigationBlockedReason || !onOpenPages)}
           onClick={onOpenPages}
         >
           <span className={styles.pageDropdownKicker}>{copy.pageControlLabel} </span>
@@ -251,9 +274,76 @@ function SandboxTopBar({
         </button>
       </div>
 
-      <div className={styles.topBarMeta}>
-        <div className={styles.topBarMetaCluster} data-builder-topbar-meta-cluster="navigation">
-          {onLocaleChange ? (
+      <div
+        className={chromeStyles.primaryCluster}
+        role="group"
+        aria-label={copy.primaryActionsAriaLabel}
+        data-builder-topbar-primary-cluster="true"
+      >
+        <button
+          type="button"
+          className={chromeStyles.primaryIconButton}
+          aria-label={copy.undoLabel}
+          title={copy.undoTitle}
+          disabled={!canUndo}
+          data-builder-topbar-primary="undo"
+          onClick={undo}
+        >
+          <EditorChromeIcon name="undo" className={chromeStyles.primaryIcon} />
+        </button>
+        <button
+          type="button"
+          className={chromeStyles.primaryIconButton}
+          aria-label={copy.redoLabel}
+          title={copy.redoTitle}
+          disabled={!canRedo}
+          data-builder-topbar-primary="redo"
+          onClick={redo}
+        >
+          <EditorChromeIcon name="redo" className={chromeStyles.primaryIcon} />
+        </button>
+        <button
+          type="button"
+          className={chromeStyles.previewButton}
+          data-builder-topbar-secondary="true"
+          data-builder-topbar-primary="preview"
+          title={copy.previewTitle}
+          disabled={!onOpenPreview}
+          onClick={onOpenPreview}
+        >
+          <EditorChromeIcon name="preview" className={chromeStyles.primaryIcon} />
+          <span>{copy.previewLabel}</span>
+        </button>
+        <button
+          type="button"
+          className={`${styles.publishButton} ${chromeStyles.publishButton}`}
+          title={publishBlockedReason ?? copy.publishTitle}
+          data-builder-publish-conflict-blocked={draftConflictActive ? 'true' : 'false'}
+          data-builder-topbar-primary="publish"
+          disabled={Boolean(publishBlockedReason)}
+          onClick={onPublish}
+        >
+          <EditorChromeIcon name="publish" className={styles.publishButtonIcon} />
+          <span>{copy.publishLabel}</span>
+        </button>
+      </div>
+
+      <details
+        className={chromeStyles.secondaryCluster}
+        data-builder-topbar-secondary-cluster="true"
+      >
+        <summary
+          className={chromeStyles.secondarySummary}
+          title={copy.secondaryActionsTitle}
+          aria-label={copy.secondaryActionsTitle}
+        >
+          <EditorChromeIcon name="moreHorizontal" className={chromeStyles.primaryIcon} />
+          <span>{copy.secondaryActionsLabel}</span>
+        </summary>
+        <div className={chromeStyles.secondaryPanel}>
+          <div className={`${styles.topBarMeta} ${chromeStyles.secondaryMeta}`}>
+            <div className={styles.topBarMetaCluster} data-builder-topbar-meta-cluster="navigation">
+          {onLocaleChange && !navigationBlockedReason ? (
             <LocaleSwitcher
               currentLocale={normalizedLocale}
               siteId={siteId}
@@ -261,12 +351,16 @@ function SandboxTopBar({
               onLocaleChange={onLocaleChange}
             />
           ) : (
-            <span className={styles.topBarChip}>{copy.localeFallbackLabel(locale)}</span>
+            <span className={styles.topBarChip} title={navigationBlockedReason ?? undefined}>
+              {copy.localeFallbackLabel(locale)}
+            </span>
           )}
           <label className={styles.quickJumpControl} title={copy.quickJumpSelectTitle}>
             <span>{copy.quickJumpSelectLabel}</span>
             <select
               aria-label={copy.quickJumpSelectTitle}
+              disabled={Boolean(navigationBlockedReason)}
+              title={navigationBlockedReason ?? copy.quickJumpSelectTitle}
               value=""
               onChange={(event) => {
                 const target = event.target.value;
@@ -301,13 +395,14 @@ function SandboxTopBar({
             type="button"
             className={styles.topBarChip}
             data-builder-admin-quickjump-open="true"
-            title={copy.quickJumpButtonTitle}
+            title={navigationBlockedReason ?? copy.quickJumpButtonTitle}
+            disabled={Boolean(navigationBlockedReason)}
             onClick={openQuickJump}
           >
             {copy.quickJumpButtonLabel}
           </button>
-        </div>
-        <div className={styles.topBarMetaCluster} data-builder-topbar-meta-cluster="preview">
+            </div>
+            <div className={styles.topBarMetaCluster} data-builder-topbar-meta-cluster="preview">
           <div
             className={`${styles.topBarChip} ${styles.topBarPresenceChip}`}
             data-builder-topbar-presence="true"
@@ -434,69 +529,43 @@ function SandboxTopBar({
               <span className={styles.breakpointResetLabel}>{copy.responsiveAiLabel}</span>
             </button>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
 
-      <div className={styles.topBarActions}>
-        <EditorPrefsButton />
-        <EditorThemeToggle />
-        {selectionCount > 0 ? (
-          <span className={styles.selectionPill} title={selectedSummary}>
-            {copy.selectionCountLabel(selectionCount)}
-          </span>
-        ) : null}
-        {draftSaveState === 'saving' && <span className={styles.savingSpinner} />}
-        {saveLabel && <span className={`${styles.topBarChip} ${saveClass}`} data-builder-topbar-status="true">{saveLabel}</span>}
-        {saveBlockReason ? (
-          <span className={`${styles.topBarChip} ${styles.statusBadgeError}`} title={saveBlockReason} data-builder-topbar-status="true">
-            {copy.saveBlockedLabel}
-          </span>
-        ) : null}
-        {onOpenHistory && (
-          <button
-            type="button"
-            className={`${styles.topBarChip} ${styles.topBarActionChip}`}
-            data-builder-topbar-secondary="true"
-            title={copy.historyTitle}
-            onClick={onOpenHistory}
-          >
-            <EditorChromeIcon name="history" className={styles.topBarActionIcon} />
-            <span>{copy.historyLabel}</span>
-          </button>
-        )}
-        <button
-          type="button"
-          className={`${styles.topBarChip} ${styles.topBarActionChip}`}
-          data-builder-topbar-secondary="true"
-          title={copy.previewTitle}
-          disabled={!onOpenPreview}
-          onClick={onOpenPreview}
-        >
-          <EditorChromeIcon name="preview" className={styles.topBarActionIcon} />
-          <span>{copy.previewLabel}</span>
-        </button>
-        <button
-          type="button"
-          className={`${styles.topBarChip} ${styles.topBarActionChip}`}
-          data-builder-topbar-secondary="true"
-          title={copy.seoTitle}
-          disabled={!canOpenSeo}
-          onClick={onOpenSeo}
-        >
-          <EditorChromeIcon name="seo" className={styles.topBarActionIcon} />
-          <span>SEO</span>
-        </button>
-        <button
-          type="button"
-          className={styles.publishButton}
-          title={copy.publishTitle}
-          disabled={Boolean(saveBlockReason)}
-          onClick={onPublish}
-        >
-          <EditorChromeIcon name="publish" className={styles.publishButtonIcon} />
-          <span>{copy.publishLabel}</span>
-        </button>
-      </div>
+          <div className={`${styles.topBarActions} ${chromeStyles.secondaryActions}`}>
+            <EditorPrefsButton />
+            <EditorThemeToggle />
+            {selectionCount > 0 ? (
+              <span className={styles.selectionPill} title={selectedSummary} data-builder-topbar-selection="true">
+                {copy.selectionCountLabel(selectionCount)}
+              </span>
+            ) : null}
+            {onOpenHistory && (
+              <button
+                type="button"
+                className={`${styles.topBarChip} ${styles.topBarActionChip}`}
+                data-builder-topbar-secondary="true"
+                title={copy.historyTitle}
+                onClick={onOpenHistory}
+              >
+                <EditorChromeIcon name="history" className={styles.topBarActionIcon} />
+                <span>{copy.historyLabel}</span>
+              </button>
+            )}
+            <button
+              type="button"
+              className={`${styles.topBarChip} ${styles.topBarActionChip}`}
+              data-builder-topbar-secondary="true"
+              title={copy.seoTitle}
+              disabled={!canOpenSeo}
+              onClick={onOpenSeo}
+            >
+              <EditorChromeIcon name="seo" className={styles.topBarActionIcon} />
+              <span>SEO</span>
+            </button>
+          </div>
+        </div>
+      </details>
 
       {quickJumpOpen ? (
         <ModalShell

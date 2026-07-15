@@ -6,7 +6,7 @@ import {
   deleteLightbox,
   updateLightbox,
 } from '@/lib/builder/site/persistence';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
 import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
@@ -56,7 +56,9 @@ export async function PATCH(
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   try {
     const body = await request.json();
     const patch = patchSchema.parse(body);
@@ -82,7 +84,9 @@ export async function DELETE(
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   const ok = await deleteLightbox(siteId, locale, params.id);
   if (!ok) {
     return errorResponse(locale, 'lightbox_not_found', 404);

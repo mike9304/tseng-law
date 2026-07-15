@@ -15,7 +15,7 @@ import {
   normalizeCollabId,
   optionalCollabId,
   readJsonObject,
-  resolveCollabSiteIdFromRequest,
+  resolveCollabMutationSiteIdFromRequest,
 } from '../../request-parsing';
 
 export const runtime = 'nodejs';
@@ -44,8 +44,10 @@ function resolveLocale(request: NextRequest): Locale {
   return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 }
 
-function requireQuery(request: NextRequest, locale: Locale): { siteId: string; pageId: string } | NextResponse {
-  const siteId = resolveCollabSiteIdFromRequest(request);
+function requireQuery(request: NextRequest, locale: Locale): { siteId: string; pageId: string } | Response {
+  const siteResolution = resolveCollabMutationSiteIdFromRequest(request);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   const pageId = normalizeCollabId(request.nextUrl.searchParams.get('pageId'));
   if (!pageId) return badRequest(locale);
   return { siteId, pageId };
@@ -63,7 +65,7 @@ export async function PATCH(
   if (!id) return badRequest(locale);
 
   const query = requireQuery(request, locale);
-  if (query instanceof NextResponse) return query;
+  if (query instanceof Response) return query;
 
   let body: Record<string, unknown>;
   try {
@@ -111,7 +113,7 @@ export async function DELETE(
   if (!id) return badRequest(locale);
 
   const query = requireQuery(request, locale);
-  if (query instanceof NextResponse) return query;
+  if (query instanceof Response) return query;
 
   try {
     const deleted = await deleteComment(query.siteId, query.pageId, id);

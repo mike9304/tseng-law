@@ -13,19 +13,39 @@ import {
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-type OpenAiChatPayload = {
-  choices?: Array<{
-    message?: {
-      content?: string;
-    };
-    finish_reason?: string;
-  }>;
-  error?: {
-    message?: string;
-    type?: string;
-    code?: string;
-  };
+const OPENAI_TEXT_TIMEOUT_MS = 20_000;
+
+type TextErrorCode =
+  | 'missing_openai_api_key'
+  | 'openai_text_timeout'
+  | 'openai_text_provider_failed'
+  | 'openai_text_network_failed'
+  | 'invalid_openai_text_response';
+
+const TEXT_ERROR_MESSAGE: Record<TextErrorCode, string> = {
+  missing_openai_api_key: 'The AI text assistant is not configured.',
+  openai_text_timeout: 'The AI text assistant took too long to respond.',
+  openai_text_provider_failed: 'The AI text assistant was unable to complete the request.',
+  openai_text_network_failed: 'The AI text assistant could not be reached.',
+  invalid_openai_text_response: 'The AI text assistant returned an unusable response.',
 };
+
+function textErrorStatus(code: TextErrorCode): number {
+  if (code === 'missing_openai_api_key') return 503;
+  if (code === 'openai_text_timeout') return 504;
+  return 502;
+}
+
+function textErrorResponse(code: TextErrorCode): NextResponse {
+  return NextResponse.json(
+    {
+      ok: false,
+      error: code,
+      message: TEXT_ERROR_MESSAGE[code],
+    },
+    { status: textErrorStatus(code) },
+  );
+}
 
 function openAiApiKey(): string {
   return process.env.OPENAI_API_KEY?.trim() ?? '';
@@ -57,20 +77,36 @@ function trimAssistantContent(content: string): string {
     .trim();
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+type ExtractedOpenAiText = { content: string; finishReason: string | null };
+
+function extractOpenAiText(payload: unknown): ExtractedOpenAiText | null {
+  if (!isRecord(payload)) return null;
+  const choices = payload.choices;
+  if (!Array.isArray(choices) || choices.length === 0) return null;
+  const firstChoice = choices[0];
+  if (!isRecord(firstChoice)) return null;
+  const message = firstChoice.message;
+  if (!isRecord(message)) return null;
+  const content = message.content;
+  if (typeof content !== 'string' || content.length === 0) return null;
+  const finishReasonValue = firstChoice.finish_reason;
+  return {
+    content,
+    finishReason: typeof finishReasonValue === 'string' ? finishReasonValue : null,
+  };
+}
+
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { bucket: 'mutation', permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
   const apiKey = openAiApiKey();
   if (!apiKey) {
-    return NextResponse.json(
-      {
-        ok: false,
-        error: 'missing_openai_api_key',
-        message: 'OPENAI_API_KEY is not configured for the AI text assistant.',
-      },
-      { status: 503 },
-    );
+    return textErrorResponse('missing_openai_api_key');
   }
 
   const raw = await request.json().catch(() => null);
@@ -86,10 +122,21 @@ export async function POST(request: NextRequest) {
   const { systemPrompt, userPrompt } = buildTextAssistantPrompt(input);
   const model = textAssistantModel();
 
-  let response: Response;
+  const controller = new AbortController();
+  let timedOut = false;
+  let timeoutHandle: ReturnType<typeof setTimeout> | undefined;
+  const deadline = new Promise<never>((_, reject) => {
+    timeoutHandle = setTimeout(() => {
+      timedOut = true;
+      controller.abort();
+      reject();
+    }, OPENAI_TEXT_TIMEOUT_MS);
+  });
+
   try {
-    response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const fetchPromise = fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
@@ -104,57 +151,57 @@ export async function POST(request: NextRequest) {
         ],
       }),
     });
-  } catch (err) {
-    return NextResponse.json(
-      {
-        ok: false,
-        error: 'openai_text_request_failed',
-        message: err instanceof Error ? err.message : 'OpenAI request failed.',
-      },
-      { status: 502 },
-    );
+
+    let response: Response;
+    try {
+      response = await Promise.race([fetchPromise, deadline]);
+    } catch {
+      if (timedOut) return textErrorResponse('openai_text_timeout');
+      return textErrorResponse('openai_text_network_failed');
+    }
+
+    if (!response.ok) {
+      return textErrorResponse('openai_text_provider_failed');
+    }
+
+    const jsonPromise = Promise.resolve().then(() => response.json());
+
+    let payload: unknown;
+    try {
+      payload = await Promise.race([jsonPromise, deadline]);
+    } catch (error) {
+      if (timedOut) return textErrorResponse('openai_text_timeout');
+      if (error instanceof SyntaxError) {
+        return textErrorResponse('invalid_openai_text_response');
+      }
+      return textErrorResponse('openai_text_network_failed');
+    }
+
+    const extracted = extractOpenAiText(payload);
+    if (!extracted) {
+      return textErrorResponse('invalid_openai_text_response');
+    }
+
+    const trimmed = trimAssistantContent(extracted.content);
+    if (!trimmed) {
+      return textErrorResponse('invalid_openai_text_response');
+    }
+
+    const text = clampLengthForAction(trimmed, input.action, input.text.length);
+
+    return NextResponse.json({
+      ok: true,
+      model,
+      action: input.action,
+      targetLocale: input.targetLocale ?? null,
+      tone: input.tone ?? null,
+      text,
+      finishReason: extracted.finishReason,
+      supportedActions: TEXT_ASSISTANT_ACTIONS,
+      supportedTones: TEXT_ASSISTANT_TONES,
+      supportedTargetLocales: TEXT_ASSISTANT_TARGET_LOCALES,
+    });
+  } finally {
+    if (timeoutHandle) clearTimeout(timeoutHandle);
   }
-
-  const payload = (await response.json().catch(() => ({}))) as OpenAiChatPayload;
-  if (!response.ok) {
-    return NextResponse.json(
-      {
-        ok: false,
-        error: payload.error?.code ?? payload.error?.type ?? 'openai_text_assistant_failed',
-        message: payload.error?.message ?? 'AI text assistant failed.',
-      },
-      { status: response.status },
-    );
-  }
-
-  const content = payload.choices?.[0]?.message?.content;
-  if (!content) {
-    return NextResponse.json(
-      { ok: false, error: 'missing_text_payload', message: 'AI text assistant did not return any content.' },
-      { status: 502 },
-    );
-  }
-
-  const trimmed = trimAssistantContent(content);
-  if (!trimmed) {
-    return NextResponse.json(
-      { ok: false, error: 'empty_text_payload', message: 'AI text assistant returned empty content.' },
-      { status: 502 },
-    );
-  }
-
-  const text = clampLengthForAction(trimmed, input.action, input.text.length);
-
-  return NextResponse.json({
-    ok: true,
-    model,
-    action: input.action,
-    targetLocale: input.targetLocale ?? null,
-    tone: input.tone ?? null,
-    text,
-    finishReason: payload.choices?.[0]?.finish_reason ?? null,
-    supportedActions: TEXT_ASSISTANT_ACTIONS,
-    supportedTones: TEXT_ASSISTANT_TONES,
-    supportedTargetLocales: TEXT_ASSISTANT_TARGET_LOCALES,
-  });
 }

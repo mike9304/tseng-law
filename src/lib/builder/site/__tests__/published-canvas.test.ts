@@ -7,6 +7,7 @@ import type { BuilderPageMeta } from '@/lib/builder/site/types';
 import { readPageCanvas } from '@/lib/builder/site/persistence';
 import { readRevisionDocument } from '@/lib/builder/site/publish';
 import { readPublishedPageCanvas } from '@/lib/builder/site/published-canvas';
+import { createHomePageCanvasDocument } from '@/lib/builder/canvas/seed-home';
 
 vi.mock('@/lib/builder/site/persistence', () => ({
   readPageCanvas: vi.fn(),
@@ -69,6 +70,33 @@ function pageMeta(publishedRevisionId?: string): BuilderPageMeta {
   };
 }
 
+function legacyFactoryCompositeHome(): BuilderCanvasDocument {
+  const current = createHomePageCanvasDocument('ko');
+  const heights = new Map<string, number>([
+    ['home-hero', 788],
+    ['home-insights', 1277],
+    ['home-services', 1278],
+    ['home-attorney', 926],
+    ['home-case-results', 800],
+    ['home-stats', 621],
+    ['home-faq', 1333],
+    ['home-offices', 919],
+    ['home-contact', 516],
+  ]);
+  let y = 0;
+  return {
+    ...current,
+    updatedBy: 'home-seed-v12',
+    stageHeight: 8460,
+    nodes: current.nodes.map((node) => {
+      const height = heights.get(node.id) ?? node.rect.height;
+      const next = { ...node, rect: { ...node.rect, y, height } };
+      y += height;
+      return next;
+    }),
+  };
+}
+
 beforeEach(() => {
   vi.mocked(readPageCanvas).mockReset();
   vi.mocked(readRevisionDocument).mockReset();
@@ -89,9 +117,11 @@ describe('readPublishedPageCanvas', () => {
     vi.mocked(readPageCanvas).mockResolvedValue(null);
     vi.mocked(readRevisionDocument).mockResolvedValue(revision);
 
-    await expect(readPublishedPageCanvas(pageMeta('rev-1'))).resolves.toEqual(revision);
-    expect(readPageCanvas).toHaveBeenCalledWith('tseng-law-main-site', 'home', 'published');
-    expect(readRevisionDocument).toHaveBeenCalledWith('home', 'rev-1');
+    await expect(
+      readPublishedPageCanvas(pageMeta('rev-1'), 'customer-site'),
+    ).resolves.toEqual(revision);
+    expect(readPageCanvas).toHaveBeenCalledWith('customer-site', 'home', 'published');
+    expect(readRevisionDocument).toHaveBeenCalledWith('customer-site', 'home', 'rev-1');
   });
 
   it('reads the published canvas directly when no revision is pinned', async () => {
@@ -119,5 +149,31 @@ describe('readPublishedPageCanvas', () => {
       name: 'service-2',
       color: 'currentColor',
     });
+  });
+
+  it('repairs only the exact legacy factory home geometry to the production baseline', async () => {
+    vi.mocked(readPageCanvas).mockResolvedValue(legacyFactoryCompositeHome());
+
+    const normalized = await readPublishedPageCanvas(pageMeta());
+    const offices = normalized?.nodes.find((node) => node.id === 'home-offices');
+    const contact = normalized?.nodes.find((node) => node.id === 'home-contact');
+
+    expect(normalized?.stageHeight).toBe(8504);
+    expect(offices?.rect).toMatchObject({ y: 7023, height: 909 });
+    expect(contact?.rect).toMatchObject({ y: 7932, height: 532 });
+  });
+
+  it('does not rewrite a user-adjusted composite that only resembles an old seed', async () => {
+    const customized = legacyFactoryCompositeHome();
+    customized.nodes = customized.nodes.map((node) => (
+      node.id === 'home-offices'
+        ? { ...node, rect: { ...node.rect, height: 918 } }
+        : node
+    ));
+    vi.mocked(readPageCanvas).mockResolvedValue(customized);
+
+    const normalized = await readPublishedPageCanvas(pageMeta());
+
+    expect(normalized).toEqual(customized);
   });
 });

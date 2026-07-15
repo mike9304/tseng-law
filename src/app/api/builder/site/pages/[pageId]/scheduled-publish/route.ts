@@ -16,7 +16,10 @@ import {
   buildTranslationReleasePolicyBlockedPayload,
   evaluateTranslationReleasePolicyForPublish,
 } from '@/lib/builder/publish-gate/translation-release-policy';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  resolveBuilderSiteIdForMutationFromRequest,
+  resolveBuilderSiteIdFromRequest,
+} from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -62,8 +65,9 @@ export async function POST(
 
   const parsedBody = await request.json().catch(() => ({}));
   const body = isRecord(parsedBody) ? parsedBody : {};
-  const explicitSiteId = typeof body.siteId === 'string' ? body.siteId : null;
-  const siteId = resolveBuilderSiteIdFromRequest(request, explicitSiteId);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   const locale = normalizeLocale(
     typeof body.locale === 'string'
       ? body.locale
@@ -137,7 +141,9 @@ export async function DELETE(
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
-  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
   try {
     const cancelled = await cancelScheduledPublishes(
       siteId,

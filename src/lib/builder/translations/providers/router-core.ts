@@ -13,6 +13,10 @@ const PROVIDERS: readonly TranslationProvider[] = [deeplProvider, openaiProvider
 const cache = new Map<string, TranslationProviderResult>();
 const CACHE_CAP = 1024;
 
+export function isProductionEnvironment(): boolean {
+  return process.env.NODE_ENV === 'production';
+}
+
 function cacheKey(provider: TranslationProviderId, args: TranslationProviderArgs): string {
   const digest = crypto.createHash('sha1').update(args.sourceText).digest('hex').slice(0, 16);
   return `${provider}:${args.sourceLocale}:${args.targetLocale}:${digest}`;
@@ -41,7 +45,7 @@ export function readCache(
 }
 
 function envProviderId(): TranslationProviderId | null {
-  const id = (process.env.TRANSLATION_PROVIDER ?? '').toLowerCase();
+  const id = (process.env.TRANSLATION_PROVIDER ?? '').trim().toLowerCase();
   if (id === 'deepl' || id === 'openai' || id === 'mock') return id;
   return null;
 }

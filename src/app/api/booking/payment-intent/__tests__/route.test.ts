@@ -169,6 +169,8 @@ describe('/api/booking/payment-intent', () => {
   });
 
   it('returns package-credit coverage while preserving success response shape', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('BOOKING_PAYMENT_ALLOW_STUB', '1');
     findApplicablePackageCreditMock.mockResolvedValueOnce({
       credit: packageCredit,
       package: bookingPackage,
@@ -293,6 +295,8 @@ describe('/api/booking/payment-intent', () => {
   });
 
   it('returns no-upfront-payment details for collect-later paid services', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('BOOKING_PAYMENT_ALLOW_STUB', '1');
     getServiceMock.mockResolvedValueOnce({ ...service, collectPaymentLater: true } as never);
     bookingServicePriceSnapshotMock.mockReturnValueOnce({
       paymentRequired: false,
@@ -341,8 +345,9 @@ describe('/api/booking/payment-intent', () => {
     });
   });
 
-  it('returns localized provider config errors in production', async () => {
+  it('fails closed in production even when the legacy stub override is set', async () => {
     vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('BOOKING_PAYMENT_ALLOW_STUB', '1');
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
 
     const response = await POST(request('locale=en'));
@@ -354,6 +359,8 @@ describe('/api/booking/payment-intent', () => {
       error: 'The payment provider is not configured.',
       errorCode: 'booking_payment_provider_not_configured',
     });
+    expect(payload).not.toHaveProperty('stub');
+    expect(payload).not.toHaveProperty('paymentIntentId');
     expect(warn).toHaveBeenCalledWith('[booking/payment-intent] STRIPE_SECRET_KEY missing in production');
     warn.mockRestore();
   });

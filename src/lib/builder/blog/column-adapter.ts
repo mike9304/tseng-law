@@ -10,6 +10,7 @@
 import type { Locale } from '@/lib/locales';
 import { listColumnBundles } from '@/lib/builder/columns/storage';
 import type { ColumnDocument } from '@/lib/builder/columns/types';
+import { isInternalColumnPost } from '@/lib/builder/columns/public-post-filter';
 import { estimateReadingTime, type BlogPost } from './blog-engine';
 
 const DEFAULT_AUTHOR = { name: '호정국제 법률사무소' } as const;
@@ -74,6 +75,7 @@ export async function listBlogPosts(locale: Locale): Promise<BlogPost[]> {
   return bundles
     .map((bundle) => bundle.published)
     .filter((doc): doc is ColumnDocument => Boolean(doc))
+    .filter((doc) => !isInternalColumnPost(doc))
     .filter((doc) => {
       const publishedAt = doc.frontmatter.publishedAt;
       return !publishedAt || Date.parse(publishedAt) <= now;

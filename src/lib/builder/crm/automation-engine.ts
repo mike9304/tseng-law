@@ -27,6 +27,16 @@ interface RunOptions {
 }
 
 const MAX_DEPTH = 3;
+export const CRM_EMAIL_SIMULATION_UNAVAILABLE = 'crm_email_simulation_unavailable';
+
+class CrmAutomationActionUnavailableError extends Error {
+  readonly code = CRM_EMAIL_SIMULATION_UNAVAILABLE;
+
+  constructor() {
+    super('CRM email simulation is unavailable in production.');
+    this.name = 'CrmAutomationActionUnavailableError';
+  }
+}
 
 function matchesTrigger(automation: CrmAutomation, event: CrmAutomationEvent): boolean {
   if (!automation.enabled) return false;
@@ -61,7 +71,10 @@ async function performAction(
 ): Promise<void> {
   const action = automation.action;
   switch (action.kind) {
-    case 'send-email-stub': {
+    case 'simulate-email': {
+      if (process.env.NODE_ENV === 'production') {
+        throw new CrmAutomationActionUnavailableError();
+      }
       await appendOutboxEntry({
         entryId: makeOutboxEntryId(),
         automationId: automation.id,
@@ -151,6 +164,14 @@ export async function runAutomationsForEvent(
     try {
       await performAction(automation, event, options);
     } catch (err) {
+      if (err instanceof CrmAutomationActionUnavailableError) {
+        console.error('[crm/automation] action unavailable', {
+          automationId: automation.id,
+          actionKind: automation.action.kind,
+          errorCode: err.code,
+        });
+        continue;
+      }
       console.error('[crm/automation] action failed for automation', automation.id, err);
     }
   }

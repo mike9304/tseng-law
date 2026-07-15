@@ -100,3 +100,54 @@ describe('featured posts localization', () => {
     expect(css).toContain('.control:focus-visible');
   });
 });
+
+describe('featured posts builder demo disclosure', () => {
+  const Render = featuredPostsComponent.Render as React.ComponentType<{
+    node: BuilderFeaturedPostsCanvasNode;
+    locale?: 'ko' | 'zh-hant' | 'en';
+    mode?: 'edit' | 'preview' | 'published';
+  }>;
+
+  function makeNode(layout: 'hero' | 'side-by-side' | 'stacked', limit = 3): BuilderFeaturedPostsCanvasNode {
+    return { kind: 'featured-posts', content: { limit, layout } } as unknown as BuilderFeaturedPostsCanvasNode;
+  }
+
+  function countDisclosures(html: string): number {
+    return (html.match(/data-builder-demo-disclosure/g) ?? []).length;
+  }
+
+  it.each(['hero', 'side-by-side', 'stacked'] as const)(
+    'renders exactly one demo disclosure before the %s layout in edit and preview, none in published',
+    (layout) => {
+      const node = makeNode(layout);
+      const editHtml = renderToStaticMarkup(<Render node={node} locale="zh-hant" mode="edit" />);
+      const previewHtml = renderToStaticMarkup(<Render node={node} locale="zh-hant" mode="preview" />);
+      const publishedHtml = renderToStaticMarkup(<Render node={node} locale="zh-hant" mode="published" />);
+
+      expect(countDisclosures(editHtml)).toBe(1);
+      expect(countDisclosures(previewHtml)).toBe(1);
+      expect(countDisclosures(publishedHtml)).toBe(0);
+
+      // Builder mock content still renders alongside the label.
+      expect(editHtml).toContain('台灣公司設立指南');
+      expect(previewHtml).toContain('台灣公司設立指南');
+
+      // The disclosure is the first node of the shared wrapper, ahead of the layout surface.
+      const editDisclosure = editHtml.indexOf('data-builder-demo-disclosure');
+      const editLayout = editHtml.indexOf('data-builder-featured-posts="true"');
+      expect(editDisclosure).toBeGreaterThanOrEqual(0);
+      expect(editLayout).toBeGreaterThan(editDisclosure);
+    },
+  );
+
+  it('renders exactly one demo disclosure for the builder empty state and none when published', () => {
+    const node = makeNode('stacked', 0);
+    const editHtml = renderToStaticMarkup(<Render node={node} locale="zh-hant" mode="edit" />);
+    const publishedHtml = renderToStaticMarkup(<Render node={node} locale="zh-hant" mode="published" />);
+
+    expect(countDisclosures(editHtml)).toBe(1);
+    expect(editHtml).toContain('尚無精選文章。');
+    expect(countDisclosures(publishedHtml)).toBe(0);
+    expect(publishedHtml).toContain('尚無精選文章。');
+  });
+});

@@ -15,6 +15,43 @@ import { normalizeLocale } from '@/lib/locales';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
+type EmailRecipientDelivery =
+  | { ok: true }
+  | { ok: false; reason: 'unconfigured' | 'provider_error' };
+
+type EmailDelivery =
+  | {
+    ok: boolean;
+    customer: EmailRecipientDelivery;
+    admin?: EmailRecipientDelivery;
+  }
+  | { ok: false; reason: 'internal_error' };
+
+function sanitizeEmailRecipient(
+  delivery: Awaited<ReturnType<typeof sendBookingConfirmation>>['customer'],
+): EmailRecipientDelivery {
+  return delivery.ok
+    ? { ok: true }
+    : { ok: false, reason: delivery.reason };
+}
+
+async function deliverBookingConfirmation(
+  booking: Booking,
+  context: Parameters<typeof sendBookingConfirmation>[1],
+): Promise<EmailDelivery> {
+  try {
+    const delivery = await sendBookingConfirmation(booking, context);
+    return {
+      ok: delivery.ok,
+      customer: sanitizeEmailRecipient(delivery.customer),
+      ...(delivery.admin ? { admin: sanitizeEmailRecipient(delivery.admin) } : {}),
+    };
+  } catch {
+    console.error('[builder/bookings/admin-create] confirmation delivery failed');
+    return { ok: false, reason: 'internal_error' };
+  }
+}
+
 export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
@@ -139,7 +176,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('[builder/bookings/admin-create] billing automation failed:', error instanceof Error ? error.message : String(error));
   }
-  await sendBookingConfirmation(booking, { service, staff });
+  const emailDelivery = await deliverBookingConfirmation(booking, { service, staff });
 
-  return NextResponse.json({ booking }, { status: 201 });
+  return NextResponse.json({ booking, emailDelivery }, { status: 201 });
 }

@@ -40,7 +40,7 @@ const COPY: Record<'ko' | 'zh-hant' | 'en', AiSectionGeneratorCopy> = {
     applyToCanvasLabel: '캔버스에 삽입',
     nodeCountLabel: (count) => `${count}개 노드`,
     ctaPreviewLabel: 'CTA',
-    fallbackNotice: '⚠ OPENAI_API_KEY가 없어 결정적 스텁 내용을 사용했습니다.',
+    fallbackNotice: '⚠ DEMO/STUB: OPENAI_API_KEY가 없어 결정적 데모 내용을 사용했습니다.',
     kindLabels: {
       hero: 'Hero',
       features: 'Features',
@@ -66,7 +66,7 @@ const COPY: Record<'ko' | 'zh-hant' | 'en', AiSectionGeneratorCopy> = {
     applyToCanvasLabel: '插入到畫布',
     nodeCountLabel: (count) => `${count} 個節點`,
     ctaPreviewLabel: 'CTA',
-    fallbackNotice: '⚠ 未設定 OPENAI_API_KEY，因此使用決定性 stub 內容。',
+    fallbackNotice: '⚠ DEMO/STUB：未設定 OPENAI_API_KEY，因此使用決定性示範內容。',
     kindLabels: {
       hero: '主視覺',
       features: '功能重點',
@@ -92,7 +92,7 @@ const COPY: Record<'ko' | 'zh-hant' | 'en', AiSectionGeneratorCopy> = {
     applyToCanvasLabel: 'Insert into canvas',
     nodeCountLabel: (count) => `${count} nodes`,
     ctaPreviewLabel: 'CTA',
-    fallbackNotice: '⚠ OPENAI_API_KEY is not set, so deterministic stub content was used.',
+    fallbackNotice: '⚠ DEMO/STUB: OPENAI_API_KEY is not set, so deterministic demo content was used.',
     kindLabels: {
       hero: 'Hero',
       features: 'Features grid',

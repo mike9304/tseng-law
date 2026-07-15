@@ -5,6 +5,7 @@ import type { BuilderFeaturedPostsCanvasNode } from '@/lib/builder/canvas/types'
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
 import { DEFAULT_BLOG_CATEGORIES } from '@/lib/builder/blog/blog-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { WidgetDataDisclosure } from '../_shared/WidgetDataDisclosure';
 import { getFeaturedPostsCopy } from './featured-posts-copy';
 
 interface FeaturedPostsElementProps {
@@ -51,17 +52,16 @@ export default function FeaturedPostsElement({ node, mode = 'edit', locale }: Fe
     }));
   }, [copy.element.mockPosts, isBuilder, posts, c.limit]);
 
+  let content: React.ReactNode;
   if (items.length === 0) {
-    return (
+    content = (
       <div data-builder-featured-posts="true" style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f1f5f9', border: '2px dashed #cbd5e1', borderRadius: 8, color: '#94a3b8', fontSize: 13 }}>
         {copy.element.emptyState}
       </div>
     );
-  }
-
-  if (c.layout === 'hero') {
+  } else if (c.layout === 'hero') {
     const [first, ...rest] = items;
-    return (
+    content = (
       <div data-builder-featured-posts="true" style={{ width: '100%', height: '100%', display: 'grid', gridTemplateColumns: rest.length ? '2fr 1fr' : '1fr', gap: 16, boxSizing: 'border-box' }}>
         <a
           href={isBuilder ? '#' : `/${effectiveLocale}/columns/${first.slug}`}
@@ -112,10 +112,8 @@ export default function FeaturedPostsElement({ node, mode = 'edit', locale }: Fe
         )}
       </div>
     );
-  }
-
-  if (c.layout === 'side-by-side') {
-    return (
+  } else if (c.layout === 'side-by-side') {
+    content = (
       <div data-builder-featured-posts="true" style={{ width: '100%', height: '100%', display: 'grid', gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))`, gap: 16 }}>
         {items.map((p) => (
           <a
@@ -130,22 +128,28 @@ export default function FeaturedPostsElement({ node, mode = 'edit', locale }: Fe
         ))}
       </div>
     );
+  } else {
+    content = (
+      <div data-builder-featured-posts="true" style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 12, overflow: 'auto' }}>
+        {items.map((p) => (
+          <a
+            key={p.postId}
+            href={isBuilder ? '#' : `/${effectiveLocale}/columns/${p.slug}`}
+            style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: 16, textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', gap: 4 }}
+          >
+            <span style={{ fontSize: 11, fontWeight: 700, color: '#0b3b2e', textTransform: 'uppercase' }}>{copy.element.featuredMarker} {copy.element.categoryPrefix} {categoryLabel(p.category, effectiveLocale)}</span>
+            <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: '#0f172a', lineHeight: 1.3 }}>{p.title}</h3>
+            <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.4 }}>{p.excerpt}</p>
+          </a>
+        ))}
+      </div>
+    );
   }
 
-  // stacked
   return (
-    <div data-builder-featured-posts="true" style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 12, overflow: 'auto' }}>
-      {items.map((p) => (
-        <a
-          key={p.postId}
-          href={isBuilder ? '#' : `/${effectiveLocale}/columns/${p.slug}`}
-          style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: 16, textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', gap: 4 }}
-        >
-          <span style={{ fontSize: 11, fontWeight: 700, color: '#0b3b2e', textTransform: 'uppercase' }}>{copy.element.featuredMarker} {copy.element.categoryPrefix} {categoryLabel(p.category, effectiveLocale)}</span>
-          <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: '#0f172a', lineHeight: 1.3 }}>{p.title}</h3>
-          <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.4 }}>{p.excerpt}</p>
-        </a>
-      ))}
-    </div>
+    <>
+      {isBuilder ? <WidgetDataDisclosure locale={effectiveLocale} /> : null}
+      {content}
+    </>
   );
 }

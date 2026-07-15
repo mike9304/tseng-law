@@ -9,6 +9,7 @@ import {
 import { readPageCanvasRecordState } from '@/lib/builder/site/persistence';
 import { recordPageRollback } from '@/lib/builder/audit/record';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import * as route from '@/app/api/builder/site/pages/[pageId]/revisions/rollback/route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
@@ -100,6 +101,11 @@ describe('/api/builder/site/pages/[pageId]/revisions/rollback', () => {
       error: '無法完成頁面回復。',
       errorCode: 'rollback_failed',
     });
+    expect(mockedRollbackToRevision).toHaveBeenCalledWith(
+      DEFAULT_BUILDER_SITE_ID,
+      'page-1',
+      'rev-missing',
+    );
   });
 
   it('returns localized stable-code JSON when rollback persistence fails', async () => {
@@ -116,5 +122,37 @@ describe('/api/builder/site/pages/[pageId]/revisions/rollback', () => {
       errorCode: 'rollback_failed',
     });
     expect(data.error).not.toContain('raw rollback write failure');
+    expect(mockedRollbackToRevision).toHaveBeenCalledWith(
+      DEFAULT_BUILDER_SITE_ID,
+      'page-1',
+      'rev-1',
+    );
+  });
+
+  it('returns the restored document from the same site revision namespace', async () => {
+    const response = await route.POST(postRequest({ revisionId: 'rev-1' }, '?locale=ko'), {
+      params: { pageId: 'page-1' },
+    });
+
+    expect(response.status).toBe(200);
+    expect(mockedReadRevisionDocument).toHaveBeenCalledWith(
+      DEFAULT_BUILDER_SITE_ID,
+      'page-1',
+      'rev-1',
+    );
+  });
+
+  it('rejects a malformed rollback site id before any revision read or write', async () => {
+    const response = await route.POST(postRequest({
+      siteId: ['workspace-site-b'],
+      revisionId: 'rev-1',
+    }), { params: { pageId: 'page-1' } });
+    const data = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(data).toMatchObject({ ok: false, success: false, errorCode: 'invalid_site_id' });
+    expect(mockedReadPageCanvasRecordState).not.toHaveBeenCalled();
+    expect(mockedRecordRevision).not.toHaveBeenCalled();
+    expect(mockedRollbackToRevision).not.toHaveBeenCalled();
   });
 });

@@ -84,6 +84,8 @@ export async function POST(
     const result = await sendCampaignBatch({
       campaignId: campaign.campaignId,
       batchSize: parsed.data.batchSize,
+      // Manual operator sends may retry a failed/partial campaign; cron never does.
+      resetFailed: true,
     });
     const payload = getBuilderMarketingApiErrorPayload(locale, 'campaign_batch_send_failed');
     const resultErrors = Array.isArray(result.errors) ? result.errors : [];

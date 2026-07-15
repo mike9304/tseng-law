@@ -1,7 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { DEFAULT_BUILDER_SITE_ID, LEGACY_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
-import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
+import {
+  BuilderSiteIdentityError,
+  normalizeBuilderSiteId,
+  requireBuilderSiteIdForMutation,
+} from '@/lib/builder/site/identity';
 
 describe('builder site identity', () => {
   it('accepts canonical and legacy default site ids for builder API routes', () => {
@@ -43,4 +47,42 @@ describe('normalizeBuilderSiteId', () => {
     expect(normalizeBuilderSiteId('-leading-dash')).toBe(DEFAULT_BUILDER_SITE_ID);
     expect(normalizeBuilderSiteId('site id with spaces')).toBe(DEFAULT_BUILDER_SITE_ID);
   });
+});
+
+describe('requireBuilderSiteIdForMutation', () => {
+  it('retains only the explicit legacy missing/default mappings', () => {
+    expect(requireBuilderSiteIdForMutation(undefined)).toBe(DEFAULT_BUILDER_SITE_ID);
+    expect(requireBuilderSiteIdForMutation(null)).toBe(DEFAULT_BUILDER_SITE_ID);
+    expect(requireBuilderSiteIdForMutation('')).toBe(DEFAULT_BUILDER_SITE_ID);
+    expect(requireBuilderSiteIdForMutation(LEGACY_BUILDER_SITE_ID)).toBe(DEFAULT_BUILDER_SITE_ID);
+    expect(requireBuilderSiteIdForMutation(DEFAULT_BUILDER_SITE_ID)).toBe(DEFAULT_BUILDER_SITE_ID);
+  });
+
+  it('passes safe custom ids without imposing a production-site policy', () => {
+    expect(requireBuilderSiteIdForMutation('customer-site_2')).toBe('customer-site_2');
+    expect(requireBuilderSiteIdForMutation('Site_2')).toBe('Site_2');
+  });
+
+  it.each(['undefined', 'Undefined', 'null', 'NULL'])(
+    'rejects serialized missing id %s',
+    (input) => {
+      expect(() => requireBuilderSiteIdForMutation(input)).toThrowError(
+        expect.objectContaining({
+          name: 'BuilderSiteIdentityError',
+          code: 'SERIALIZED_MISSING_SITE_ID',
+          input,
+        }),
+      );
+    },
+  );
+
+  it.each(['  ', '../../x', '..', 'a/b', 'a\\b', 'a.b', '-site', 'site id'])(
+    'rejects malformed mutation id %s',
+    (input) => {
+      expect(() => requireBuilderSiteIdForMutation(input)).toThrow(BuilderSiteIdentityError);
+      expect(() => requireBuilderSiteIdForMutation(input)).toThrowError(
+        expect.objectContaining({ code: 'MALFORMED_SITE_ID', input }),
+      );
+    },
+  );
 });

@@ -1,8 +1,8 @@
 /**
  * Fan-out for CRM events to enabled integrations. Slack payloads get a
  * Slack-shaped formatted body; generic webhooks receive the raw event.
- * Legacy `mailchimp-stub` integrations now route to Mailchimp Marketing
- * audience sync when API credentials are configured.
+ * Mailchimp integrations route to Mailchimp Marketing audience sync when API
+ * credentials are configured.
  *
  * Failures are caught per integration; one bad webhook can't break the rest.
  */
@@ -65,7 +65,7 @@ async function dispatchOne(
   fetchImpl: typeof fetch,
 ): Promise<void> {
   if (!integration.enabled) return;
-  if (integration.kind === 'mailchimp-stub') {
+  if (integration.kind === 'mailchimp') {
     const result = await syncMailchimpAudienceMember(event.contact, {
       settings: integration.settings,
       fetchImpl,

@@ -616,7 +616,7 @@ export async function PublishedSitePageView({
       ? `${renderedNode.style?.shadowX || 0}px ${renderedNode.style?.shadowY || 0}px ${hoverShadowBlur}px ${hoverShadowSpread}px ${resolveThemeColor(hoverShadowColor, publishedTheme)}`
       : undefined;
     const hoverTransform = buildHoverTransform(hoverStyle, baseTransform ?? '');
-    const hoverDuration = `${hoverStyle?.transitionMs ?? 200}ms`;
+    const hoverDuration = `${hoverStyle?.transitionMs ?? 180}ms`;
     const animationAttributes = getPublishedAnimationAttributes(effectiveAnimation);
     const animationStyle = buildPublishedAnimationStyle({
       animation: effectiveAnimation,
@@ -889,7 +889,7 @@ export async function PublishedSitePageView({
             : undefined,
           opacity: renderedNode.style?.opacity != null ? renderedNode.style.opacity / 100 : undefined,
           transition: hoverStyle
-            ? `background ${hoverDuration} ease, border-color ${hoverDuration} ease, box-shadow ${hoverDuration} ease, transform ${hoverDuration} ease`
+            ? `background ${hoverDuration} cubic-bezier(0.16, 1, 0.3, 1), border-color ${hoverDuration} cubic-bezier(0.16, 1, 0.3, 1), box-shadow ${hoverDuration} cubic-bezier(0.16, 1, 0.3, 1), transform ${hoverDuration} cubic-bezier(0.16, 1, 0.3, 1)`
             : undefined,
           ['--builder-hover-background' as string]: hoverBackgroundStyle?.background,
           ['--builder-hover-border-color' as string]: hoverStyle?.borderColor
@@ -1017,12 +1017,6 @@ export async function PublishedSitePageView({
         :target {
           scroll-margin-top: 80px;
         }
-        .builder-pub-main,
-        .builder-pub-node {
-          transition-property: background, background-color, border-color, box-shadow, color, transform;
-          transition-duration: 200ms;
-          transition-timing-function: ease;
-        }
         .builder-pub-node[data-lightbox-target] {
           cursor: pointer;
         }
@@ -1049,6 +1043,12 @@ export async function PublishedSitePageView({
         .builder-pub-node[data-node-id='home-hero-search-wrap']:hover [data-node-id='home-hero-quick-menu'],
         .builder-pub-node[data-node-id='home-hero-search-wrap']:focus-within [data-node-id='home-hero-quick-menu'] {
           display: block;
+        }
+        .builder-pub-node[data-node-id='home-hero']:has(.hero-search-dropdown-wrap:focus-within),
+        .builder-pub-node[data-node-id='home-hero']:has(.hero-quick-menu),
+        .builder-pub-node[data-node-id='home-hero-root']:has([data-node-id='home-hero-search-wrap']:hover),
+        .builder-pub-node[data-node-id='home-hero-root']:has([data-node-id='home-hero-search-wrap']:focus-within) {
+          z-index: 1000 !important;
         }
         .builder-pub-node[data-node-id='home-hero-root'] + .builder-pub-node[data-builder-flow-section='true'] .section,
         .builder-pub-node[data-node-id='home-hero'] + .builder-pub-node[data-builder-flow-section='true'] .section {

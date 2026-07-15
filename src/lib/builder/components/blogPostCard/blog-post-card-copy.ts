@@ -27,7 +27,13 @@ export interface BlogPostCardCopy {
     unavailableNotice: string;
     loadingTitle: string;
     loadingExcerpt: string;
+    publishedLoadingTitle: string;
+    publishedLoadingExcerpt: string;
     errorExcerpt: string;
+    publishedNoPostTitle: string;
+    publishedNoPostExcerpt: string;
+    publishedUnavailableTitle: string;
+    publishedUnavailableExcerpt: string;
     generalCategory: string;
     readMore: string;
     readingTime: (minutes: number) => string;
@@ -72,7 +78,13 @@ const BLOG_POST_CARD_COPY: Record<Locale | 'en', BlogPostCardCopy> = {
       unavailableNotice: '사용 불가',
       loadingTitle: '게시물 불러오는 중...',
       loadingExcerpt: '선택한 블로그 글을 불러오는 중입니다.',
+      publishedLoadingTitle: '글을 불러오는 중입니다',
+      publishedLoadingExcerpt: '잠시만 기다려 주세요.',
       errorExcerpt: '블로그 관리자에서 공개 상태 또는 slug 값을 확인하세요.',
+      publishedNoPostTitle: '표시할 글이 없습니다',
+      publishedNoPostExcerpt: '이 영역에는 현재 표시할 콘텐츠가 없습니다.',
+      publishedUnavailableTitle: '글을 표시할 수 없습니다',
+      publishedUnavailableExcerpt: '현재 이 글을 표시할 수 없습니다.',
       generalCategory: '일반',
       readMore: '자세히 보기',
       readingTime: (minutes) => `${minutes}분 읽기`,
@@ -128,7 +140,13 @@ const BLOG_POST_CARD_COPY: Record<Locale | 'en', BlogPostCardCopy> = {
       unavailableNotice: '無法使用',
       loadingTitle: '正在載入文章...',
       loadingExcerpt: '正在載入選取的部落格文章。',
+      publishedLoadingTitle: '正在載入文章',
+      publishedLoadingExcerpt: '請稍候。',
       errorExcerpt: '請在部落格管理員確認發布狀態或 slug 值。',
+      publishedNoPostTitle: '目前沒有可顯示的文章',
+      publishedNoPostExcerpt: '此區域目前沒有可顯示的內容。',
+      publishedUnavailableTitle: '目前無法顯示文章',
+      publishedUnavailableExcerpt: '目前無法提供此文章內容。',
       generalCategory: '一般',
       readMore: '閱讀更多',
       readingTime: (minutes) => `閱讀 ${minutes} 分鐘`,
@@ -184,7 +202,13 @@ const BLOG_POST_CARD_COPY: Record<Locale | 'en', BlogPostCardCopy> = {
       unavailableNotice: 'Unavailable',
       loadingTitle: 'Loading post...',
       loadingExcerpt: 'Loading the selected blog post.',
+      publishedLoadingTitle: 'Loading article',
+      publishedLoadingExcerpt: 'Please wait while the article loads.',
       errorExcerpt: 'Check the publish status or slug in the blog manager.',
+      publishedNoPostTitle: 'No article available',
+      publishedNoPostExcerpt: 'There is currently no article to display.',
+      publishedUnavailableTitle: 'Article unavailable',
+      publishedUnavailableExcerpt: 'This article is currently unavailable.',
       generalCategory: 'General',
       readMore: 'Read more',
       readingTime: (minutes) => `${minutes} min read`,

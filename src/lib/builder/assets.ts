@@ -1,13 +1,18 @@
 import { del, get, list, put } from '@vercel/blob';
-import { mkdir, readdir, readFile, rm, stat, writeFile } from 'fs/promises';
+import { lstat, realpath } from 'fs/promises';
 import path from 'path';
 import { randomUUID } from 'crypto';
 import { normalizeBuilderHomeLocale } from '@/lib/builder/persistence';
 import { getMaxUploadBytes, sanitizeSvgUploadText } from '@/lib/builder/canvas/upload-validation';
+import {
+  SafeLocalFsSafetyError,
+  isSafeLocalFsNotFoundError,
+  openSafeLocalFsRoot,
+  type SafeLocalFsRoot,
+} from '@/lib/builder/storage/safe-local-fs';
 import { isLocale, type Locale } from '@/lib/locales';
 
 const BUILDER_ASSET_ROOT = 'builder/assets';
-const BUILDER_ASSET_RUNTIME_ROOT = path.join(process.cwd(), 'runtime-data', 'builder-assets');
 const BUILDER_ASSET_URL_PREFIX = '/api/builder/assets/';
 const BUILDER_ASSET_LIBRARY_FILENAME = '__library.json';
 const RESERVED_ASSET_FOLDER_IDS = new Set(['all', 'recent', 'selected']);
@@ -133,7 +138,13 @@ export async function readBuilderAssetLibraryState(input: {
     const raw = await readAssetLibraryJson(pathname);
     if (!raw) return defaultAssetLibraryState();
     return normalizeAssetLibraryState(JSON.parse(raw));
-  } catch {
+  } catch (error) {
+    if (
+      error instanceof BuilderAssetRootConfigurationError
+      || error instanceof SafeLocalFsSafetyError
+    ) {
+      throw error;
+    }
     return defaultAssetLibraryState();
   }
 }
@@ -249,10 +260,11 @@ async function readAssetLibraryJson(pathname: string): Promise<string | null> {
     }
   }
 
+  const localRoot = await openBuilderAssetLocalFsRoot();
   try {
-    return await readFile(resolveRuntimeAssetPath(pathname), 'utf8');
+    return (await localRoot.readFile(pathname)).toString('utf8');
   } catch (error) {
-    if (isNodeNotFoundError(error)) return null;
+    if (isSafeLocalFsNotFoundError(error)) return null;
     throw error;
   }
 }
@@ -267,9 +279,9 @@ async function writeAssetLibraryJson(pathname: string, json: string): Promise<vo
     return;
   }
 
-  const resolvedPath = resolveRuntimeAssetPath(pathname);
-  await mkdir(path.dirname(resolvedPath), { recursive: true, mode: 0o700 });
-  await writeFile(resolvedPath, json, { mode: 0o600 });
+  const localRoot = await openBuilderAssetLocalFsRoot();
+  await localRoot.ensureDirectory(path.posix.dirname(pathname));
+  await localRoot.writeFile(pathname, json, { overwrite: true, mode: 0o600 });
 }
 
 function createBlobBuilderAssetStore(): BuilderAssetStore {
@@ -340,48 +352,45 @@ function createFileBuilderAssetStore(): BuilderAssetStore {
   return {
     backend: 'file',
     async read(pathname: string) {
+      const localRoot = await openBuilderAssetLocalFsRoot();
       try {
-        return await readFile(resolveRuntimeAssetPath(pathname));
+        return await localRoot.readFile(pathname);
       } catch (error) {
-        if (isNodeNotFoundError(error)) return null;
+        if (isSafeLocalFsNotFoundError(error)) return null;
         throw error;
       }
     },
     async write(pathname: string, content: Buffer) {
-      const resolvedPath = resolveRuntimeAssetPath(pathname);
-      await mkdir(path.dirname(resolvedPath), { recursive: true, mode: 0o700 });
-      await writeFile(resolvedPath, content, { mode: 0o600 });
+      const localRoot = await openBuilderAssetLocalFsRoot();
+      await localRoot.ensureDirectory(path.posix.dirname(pathname));
+      await localRoot.writeFile(pathname, content, { mode: 0o600 });
     },
     async list(locale: Locale, limit: number) {
-      const localeRoot = resolveRuntimeAssetPath(`${BUILDER_ASSET_ROOT}/${locale}`);
+      const localRoot = await openBuilderAssetLocalFsRoot();
+      const localeRoot = `${BUILDER_ASSET_ROOT}/${locale}`;
       let entries;
       try {
-        entries = await readdir(localeRoot, { withFileTypes: true });
+        entries = await localRoot.listRegularFiles(localeRoot);
       } catch (error) {
-        if (isNodeNotFoundError(error)) return [];
+        if (isSafeLocalFsNotFoundError(error)) return [];
         throw error;
       }
 
-      const assets = await Promise.all(
-        entries
-          .filter((entry) => entry.isFile())
-          .map(async (entry) => {
-            const contentType = inferImageContentType(entry.name);
-            if (!contentType) return null;
-            const pathname = `${BUILDER_ASSET_ROOT}/${locale}/${entry.name}`;
-            const metadata = await stat(path.join(localeRoot, entry.name));
-            return {
-              backend: 'file' as const,
-              locale,
-              pathname,
-              url: buildBuilderAssetUrl(locale, entry.name),
-              filename: entry.name,
-              contentType,
-              size: metadata.size,
-              uploadedAt: metadata.mtime.toISOString(),
-            };
-          })
-      );
+      const assets = entries.map((entry) => {
+        const contentType = inferImageContentType(entry.name);
+        if (!contentType) return null;
+        const pathname = `${BUILDER_ASSET_ROOT}/${locale}/${entry.name}`;
+        return {
+          backend: 'file' as const,
+          locale,
+          pathname,
+          url: buildBuilderAssetUrl(locale, entry.name),
+          filename: entry.name,
+          contentType,
+          size: entry.size,
+          uploadedAt: entry.mtime.toISOString(),
+        };
+      });
 
       return assets
         .filter(Boolean)
@@ -389,12 +398,8 @@ function createFileBuilderAssetStore(): BuilderAssetStore {
         .slice(0, limit) as BuilderAssetListItem[];
     },
     async delete(pathname: string) {
-      try {
-        await rm(resolveRuntimeAssetPath(pathname), { force: true });
-      } catch (error) {
-        if (isNodeNotFoundError(error)) return;
-        throw error;
-      }
+      const localRoot = await openBuilderAssetLocalFsRoot();
+      await localRoot.removeFile(pathname);
     },
   };
 }
@@ -594,8 +599,129 @@ function parseBuilderAssetPathname(pathname: string): BuilderAssetUrlReference |
   };
 }
 
-function resolveRuntimeAssetPath(pathname: string) {
-  return path.join(BUILDER_ASSET_RUNTIME_ROOT, pathname);
+class BuilderAssetRootConfigurationError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'BuilderAssetRootConfigurationError';
+  }
+}
+
+function resolveBuilderAssetRuntimeRoot(): string {
+  const configuredRoot = process.env.BUILDER_ASSETS_ROOT;
+  if (configuredRoot === undefined) {
+    return path.resolve(process.cwd(), 'runtime-data', 'builder-assets');
+  }
+
+  const trimmedRoot = configuredRoot.trim();
+  if (!path.isAbsolute(trimmedRoot)) {
+    throw new BuilderAssetRootConfigurationError(
+      'BUILDER_ASSETS_ROOT must be an absolute path.',
+    );
+  }
+
+  return path.resolve(trimmedRoot);
+}
+
+async function openBuilderAssetLocalFsRoot(): Promise<SafeLocalFsRoot> {
+  const configuredRoot = resolveBuilderAssetRuntimeRoot();
+  const physicalConstraint = resolveBuilderAssetPhysicalConstraint();
+  let constraintRoot: SafeLocalFsRoot | null = null;
+  let physicalRoot: string;
+
+  if (physicalConstraint) {
+    constraintRoot = await openExistingPhysicalRoot(physicalConstraint);
+    const relativeRoot = path.relative(physicalConstraint, configuredRoot);
+    if (!isContainedRelativePath(relativeRoot)) {
+      throw new BuilderAssetRootConfigurationError(
+        'BUILDER_ASSETS_ROOT must remain physically within BUILDER_QA_ISOLATION_ROOT.',
+      );
+    }
+    await constraintRoot.ensureDirectory(relativeRoot || '.');
+    await constraintRoot.ensureDirectory('.');
+    physicalRoot = path.resolve(constraintRoot.root, relativeRoot);
+  } else {
+    physicalRoot = await ensurePhysicalDirectoryTree(configuredRoot);
+  }
+
+  const localRoot = await openSafeLocalFsRoot(physicalRoot);
+
+  if (constraintRoot) {
+    await constraintRoot.ensureDirectory('.');
+    if (!isContainedPath(constraintRoot.root, localRoot.root)) {
+      throw new BuilderAssetRootConfigurationError(
+        'BUILDER_ASSETS_ROOT must remain physically within BUILDER_QA_ISOLATION_ROOT.',
+      );
+    }
+  }
+
+  return localRoot;
+}
+
+function resolveBuilderAssetPhysicalConstraint(): string | null {
+  const configured = process.env.BUILDER_QA_ISOLATION_ROOT;
+  if (configured === undefined) return null;
+  const trimmed = configured.trim();
+  if (!path.isAbsolute(trimmed)) {
+    throw new BuilderAssetRootConfigurationError(
+      'BUILDER_QA_ISOLATION_ROOT must be an absolute path.',
+    );
+  }
+  return path.resolve(trimmed);
+}
+
+async function openExistingPhysicalRoot(root: string): Promise<SafeLocalFsRoot> {
+  const physicalRoot = await realpath(root);
+  if (physicalRoot !== root) {
+    throw new BuilderAssetRootConfigurationError(
+      'BUILDER_QA_ISOLATION_ROOT must use its attested physical path.',
+    );
+  }
+  return openSafeLocalFsRoot(root);
+}
+
+async function ensurePhysicalDirectoryTree(root: string): Promise<string> {
+  const missingSegments: string[] = [];
+  let existingAncestor = root;
+  while (true) {
+    try {
+      const stats = await lstat(existingAncestor);
+      if (!stats.isDirectory() && !stats.isSymbolicLink()) {
+        throw new BuilderAssetRootConfigurationError(
+          'BUILDER_ASSETS_ROOT must resolve through directories only.',
+        );
+      }
+      break;
+    } catch (error) {
+      if (!isNodeNotFoundError(error)) throw error;
+      const parent = path.dirname(existingAncestor);
+      if (parent === existingAncestor) {
+        throw new BuilderAssetRootConfigurationError(
+          'BUILDER_ASSETS_ROOT must resolve through an existing directory.',
+        );
+      }
+      missingSegments.unshift(path.basename(existingAncestor));
+      existingAncestor = parent;
+    }
+  }
+
+  const physicalAncestor = await realpath(existingAncestor);
+  const safeAncestor = await openSafeLocalFsRoot(physicalAncestor);
+  if (missingSegments.length > 0) {
+    await safeAncestor.ensureDirectory(missingSegments.join(path.sep));
+  }
+  return path.join(safeAncestor.root, ...missingSegments);
+}
+
+function isContainedRelativePath(relative: string): boolean {
+  return relative === '' || (
+    relative !== '..'
+    && !relative.startsWith(`..${path.sep}`)
+    && !path.isAbsolute(relative)
+  );
+}
+
+function isContainedPath(root: string, candidate: string): boolean {
+  return isContainedRelativePath(path.relative(root, candidate));
 }
 
 function isBuilderImageMimeType(value: string): value is BuilderImageMimeType {

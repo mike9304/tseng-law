@@ -4,7 +4,10 @@ import path from 'path';
 import { NextRequest } from 'next/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { signWebhookPayload } from '@/lib/builder/webhooks/signature';
-import { listBillingDocumentWebhookEvents } from '@/lib/builder/billing-document-webhooks';
+import {
+  listBillingDocumentWebhookEvents,
+  receiveBillingDocumentWebhookEvent,
+} from '@/lib/builder/billing-document-webhooks';
 import * as route from '../route';
 import * as adminListRoute from '@/app/api/builder/billing-documents/webhooks/route';
 import * as adminReplayRoute from '@/app/api/builder/billing-documents/webhooks/events/[eventId]/replay/route';
@@ -41,6 +44,14 @@ vi.mock('@/lib/builder/commerce/notifications-engine', () => ({
   queueBillingPaymentReceivedNotification: vi.fn(async () => null),
 }));
 
+vi.mock('@/lib/builder/billing-document-webhooks', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@/lib/builder/billing-document-webhooks')>();
+  return {
+    ...actual,
+    receiveBillingDocumentWebhookEvent: vi.fn(actual.receiveBillingDocumentWebhookEvent),
+  };
+});
+
 let tmpRoot = '';
 let previousRoot: string | undefined;
 let previousBackend: string | undefined;
@@ -67,6 +78,7 @@ function adminHeaders(): HeadersInit {
 }
 
 beforeEach(async () => {
+  vi.clearAllMocks();
   previousRoot = process.env.BUILDER_COMMERCE_ROOT;
   previousBackend = process.env.BUILDER_COMMERCE_BACKEND;
   previousSecret = process.env.BILLING_DOCUMENT_STRIPE_WEBHOOK_SECRET;
@@ -81,11 +93,13 @@ beforeEach(async () => {
 });
 
 afterEach(async () => {
+  vi.unstubAllEnvs();
   process.env.BUILDER_COMMERCE_ROOT = previousRoot;
   process.env.BUILDER_COMMERCE_BACKEND = previousBackend;
   process.env.BILLING_DOCUMENT_STRIPE_WEBHOOK_SECRET = previousSecret;
   process.env.CMS_ADMIN_USERNAME = previousAdminUser;
   process.env.CMS_ADMIN_PASSWORD = previousAdminPassword;
+  vi.restoreAllMocks();
   if (tmpRoot) await fs.rm(tmpRoot, { recursive: true, force: true });
 });
 
@@ -219,5 +233,48 @@ describe('billing document Stripe webhook route', () => {
     const response = await route.POST(request(raw, 't=1,v1=bad'));
     expect(response.status).toBe(400);
     expect(await listBillingDocumentWebhookEvents()).toHaveLength(0);
+  });
+
+  it('fails closed in production without a secret even when legacy unsigned overrides are enabled', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('BILLING_DOCUMENT_STRIPE_WEBHOOK_SECRET', '');
+    vi.stubEnv('STRIPE_WEBHOOK_SECRET', '');
+    vi.stubEnv('BILLING_DOCUMENT_STRIPE_WEBHOOK_ALLOW_UNSIGNED', '1');
+    vi.stubEnv('BOOKING_STRIPE_WEBHOOK_ALLOW_UNSIGNED', '1');
+
+    const raw = '{not-json-and-must-not-be-parsed';
+    const response = await route.POST(request(raw, ''));
+
+    expect(response.status).toBe(503);
+    await expect(response.json()).resolves.toEqual({
+      ok: false,
+      error: 'stripe_webhook_not_configured',
+    });
+    expect(receiveBillingDocumentWebhookEvent).not.toHaveBeenCalled();
+    expect(await listBillingDocumentWebhookEvents()).toHaveLength(0);
+  });
+
+  it('keeps unsigned webhook acceptance limited to non-production development', async () => {
+    vi.stubEnv('NODE_ENV', 'development');
+    vi.stubEnv('BILLING_DOCUMENT_STRIPE_WEBHOOK_SECRET', '');
+    vi.stubEnv('STRIPE_WEBHOOK_SECRET', '');
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
+    const raw = JSON.stringify({
+      id: 'evt_billing_unsigned_dev',
+      type: 'unhandled.development_event',
+    });
+
+    const response = await route.POST(request(raw, ''));
+
+    expect(response.status).toBe(200);
+    await expect(response.json()).resolves.toEqual({
+      ok: true,
+      handled: false,
+      reason: 'unsupported_event',
+    });
+    expect(warn).toHaveBeenCalledWith(
+      '[billing-documents/stripe-webhook] webhook secret unset; accepting unsigned dev events',
+    );
+    expect(receiveBillingDocumentWebhookEvent).not.toHaveBeenCalled();
   });
 });

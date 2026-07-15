@@ -4,6 +4,7 @@ import type { ActivityChip, SandboxToast } from '@/components/builder/canvas/San
 import type { Locale } from '@/lib/locales';
 import { getSandboxFeedbackOverlayCopy } from './sandbox-feedback-copy';
 import styles from './SandboxPage.module.css';
+import chromeStyles from './SandboxChrome.module.css';
 
 type DraftSaveState = 'idle' | 'saving' | 'saved' | 'error';
 
@@ -37,6 +38,7 @@ export default function SandboxFeedbackOverlay({
             className={getSaveStatusClassName(draftSaveState)}
             data-save-status-chip={draftSaveState}
             data-builder-save-status={draftSaveState}
+            data-builder-topbar-status="true"
           >
             <span className={styles.saveStatusGlyph} data-save-status-glyph aria-hidden="true" />
             <strong>{copy.saveStatusLabels[draftSaveState]}</strong>
@@ -49,25 +51,41 @@ export default function SandboxFeedbackOverlay({
         ))}
       </div>
 
-      <div className={styles.toastStack} aria-live="polite" aria-atomic="true">
+      <div className={`${styles.toastStack} ${chromeStyles.toastStack}`}>
         {toasts.map((toast) => (
           <div
             key={toast.id}
-            className={`${styles.toast} ${toast.tone === 'error' ? styles.toastError : styles.toastSuccess}`}
+            className={`${styles.toast} ${chromeStyles.toast} ${toast.tone === 'error' ? styles.toastError : styles.toastSuccess}`}
+            role={toast.tone === 'error' ? 'alert' : 'status'}
+            aria-live={toast.tone === 'error' ? 'assertive' : 'polite'}
+            aria-atomic="true"
+            data-builder-toast={toast.tone}
           >
-            <span className={styles.toastMessage}>{toast.message}</span>
-            {toast.actionLabel && toast.onAction ? (
+            <span className={`${styles.toastMessage} ${chromeStyles.toastMessage}`}>{toast.message}</span>
+            <div className={chromeStyles.toastActions}>
+              {toast.actionLabel && toast.onAction ? (
+                <button
+                  type="button"
+                  className={styles.toastAction}
+                  onClick={() => {
+                    toast.onAction?.();
+                    onDismissToast(toast.id);
+                  }}
+                >
+                  {toast.actionLabel}
+                </button>
+              ) : null}
               <button
                 type="button"
-                className={styles.toastAction}
-                onClick={() => {
-                  toast.onAction?.();
-                  onDismissToast(toast.id);
-                }}
+                className={chromeStyles.toastDismiss}
+                aria-label={copy.dismissToastLabel}
+                title={copy.dismissToastLabel}
+                data-builder-toast-dismiss="true"
+                onClick={() => onDismissToast(toast.id)}
               >
-                {toast.actionLabel}
+                <span aria-hidden="true">×</span>
               </button>
-            ) : null}
+            </div>
           </div>
         ))}
       </div>

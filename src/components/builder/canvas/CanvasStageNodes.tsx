@@ -1,6 +1,7 @@
 'use client';
 
 import { Fragment, memo, useCallback, useMemo } from 'react';
+import { useEffect, useRef } from 'react';
 
 import CanvasNode, { type CanvasNodeInnerFlowPreviewGapInfo } from '@/components/builder/canvas/CanvasNode';
 import SelectionBox from '@/components/builder/canvas/SelectionBox';
@@ -19,6 +20,10 @@ import {
 } from '@/lib/builder/canvas/flow';
 import { parentUsesFlowLayout } from '@/lib/builder/canvas/tree';
 import { PREVIEW_GAP_STYLE } from './previewGapStyle';
+import {
+  CanvasRotationOwnerContext,
+  createCanvasRotationOwnerCoordinator,
+} from './hooks/useCanvasNodeRotation';
 import styles from './SandboxPage.module.css';
 
 type SelectionBoxRect = {
@@ -49,6 +54,7 @@ type CanvasStageNodesProps = {
   onCanvasPageLink?: (href: string) => void;
   interaction?: InteractionState | null;
   locale?: Locale;
+  renderScopeKey?: string | null;
 };
 
 type SortedRootNodeBuckets = {
@@ -329,8 +335,17 @@ function CanvasStageNodes({
   onCanvasPageLink,
   interaction,
   locale = 'ko',
+  renderScopeKey,
 }: CanvasStageNodesProps) {
   const copy = getCanvasStageNodesCopy(locale);
+  const rotationOwnerCoordinatorRef = useRef<ReturnType<typeof createCanvasRotationOwnerCoordinator> | null>(null);
+  if (!rotationOwnerCoordinatorRef.current) {
+    rotationOwnerCoordinatorRef.current = createCanvasRotationOwnerCoordinator();
+  }
+  const rotationOwnerCoordinator = rotationOwnerCoordinatorRef.current;
+  useEffect(() => () => {
+    rotationOwnerCoordinator.cancelActive();
+  }, [rotationOwnerCoordinator]);
   // Display-sorted root nodes for DOM render order parity with Published.
   // Mirrors the `renderedTopLevelNodes` logic from public-page.tsx:
   // top-level flow sections first, sorted by rect.y then zIndex; non-flow roots after.
@@ -404,7 +419,7 @@ function CanvasStageNodes({
   // Helper to avoid duplicating the long CanvasNode prop list in split rendering.
   const renderCanvasNode = (node: BuilderCanvasNode) => (
     <CanvasNode
-      key={node.id}
+      key={`${renderScopeKey ?? 'canvas'}:${node.id}`}
       node={node}
       onSelect={handleSelect}
       onContextMenu={handleContextMenu}
@@ -426,12 +441,12 @@ function CanvasStageNodes({
   );
 
   return (
-    <>
+    <CanvasRotationOwnerContext.Provider value={rotationOwnerCoordinator}>
       {/* Flow sections with preview gap inserted at live insertionIndex */}
       {flowSectionNodes.map((node, flowIdx) => {
         const showGapBefore = previewGapInfo !== null && previewGapInfo.insertionIndex === flowIdx;
         return (
-          <Fragment key={`flow-${node.id}`}>
+          <Fragment key={`flow-${renderScopeKey ?? 'canvas'}-${node.id}`}>
             {showGapBefore && (
               <div
                 key={`preview-gap-${flowIdx}`}
@@ -462,7 +477,7 @@ function CanvasStageNodes({
           <span>{copy.emptyCanvasBody}</span>
         </div>
       ) : null}
-    </>
+    </CanvasRotationOwnerContext.Provider>
   );
 }
 

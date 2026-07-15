@@ -7,9 +7,8 @@
  * Returns: { ok, spec, model, usedFallback }
  *
  * Calls gpt-4o-mini with response_format=json_object to refine the
- * deterministic spec. Falls back to deterministic builder on missing key
- * or invalid LLM output. The LLM is constrained to AI_SECTION_KINDS so
- * the returned sections compose directly with `buildSectionNodes`.
+ * deterministic spec. Production fails closed when provider configuration
+ * or output is invalid. The LLM is constrained to AI_SECTION_KINDS.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -22,6 +21,11 @@ import {
   type PageSpec,
 } from '@/lib/builder/ai-generator/page-spec-builder';
 import { AI_SECTION_KINDS } from '@/lib/builder/ai-generator/section-builder';
+import {
+  AiContentGenerationError,
+  isLocalDemoGenerationAllowed,
+  type AiContentGenerationErrorCode,
+} from '@/lib/builder/ai-generator/content-generator';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -42,13 +46,16 @@ type RequestInput = z.infer<typeof requestSchema>;
 
 type OpenAiChatPayload = {
   choices?: Array<{ message?: { content?: string }; finish_reason?: string }>;
-  error?: { message?: string; type?: string; code?: string };
 };
 
+type PageSpecProviderResult =
+  | { ok: true; spec: PageSpec; model: string }
+  | { ok: false; error: AiContentGenerationError };
+
 const llmSpecSchema = z.object({
-  pageTitle: z.string().trim().min(1).max(140).optional(),
-  pageDescription: z.string().trim().min(1).max(300).optional(),
-  reasoning: z.string().trim().max(600).optional(),
+  pageTitle: z.string().trim().min(1).max(140),
+  pageDescription: z.string().trim().min(1).max(300),
+  reasoning: z.string().trim().min(1).max(600),
   sections: z
     .array(
       z.object({
@@ -164,18 +171,52 @@ function coerceSpec(
   };
 }
 
+type ParsedPageSection = z.infer<typeof llmSpecSchema>['sections'][number];
+
+function hasMeaningfulListItems(section: ParsedPageSection): boolean {
+  return Boolean(section.items && section.items.length >= 3 && section.items.length <= 6);
+}
+
+function isSemanticallyValidSection(section: ParsedPageSection): boolean {
+  switch (section.sectionKind) {
+    case 'features':
+    case 'testimonials':
+    case 'faq':
+      return hasMeaningfulListItems(section);
+    case 'hero':
+    case 'cta':
+      return Boolean(section.subhead?.trim() && section.ctaLabel?.trim() && !section.items?.length);
+    default:
+      return false;
+  }
+}
+
+function isSemanticallyValidPageSpec(
+  parsed: z.infer<typeof llmSpecSchema>,
+  deterministic: PageSpec,
+): boolean {
+  const expectedKinds = deterministic.sections.map((section) => section.sectionKind);
+  if (parsed.sections.length !== expectedKinds.length) return false;
+  return parsed.sections.every((section, index) => (
+    section.sectionKind === expectedKinds[index]
+    && isSemanticallyValidSection(section)
+  ));
+}
+
 async function callOpenAi(
   input: RequestInput,
   deterministic: PageSpec,
   apiKey: string,
-): Promise<{ spec: PageSpec; model: string } | { error: string; status: number }> {
+): Promise<PageSpecProviderResult> {
   const model = pageSpecModel();
   const systemPrompt = buildSystemPrompt(input, deterministic);
   const userPrompt = buildUserPrompt(input);
-  let response: Response;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20_000);
   try {
-    response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
@@ -191,37 +232,43 @@ async function callOpenAi(
         ],
       }),
     });
-  } catch (err) {
+    const payload = (await response.json().catch(() => null)) as OpenAiChatPayload | null;
+    if (!response.ok) {
+      return { ok: false, error: new AiContentGenerationError('ai_content_provider_rejected') };
+    }
+    const content = payload?.choices?.[0]?.message?.content;
+    if (!content) {
+      return { ok: false, error: new AiContentGenerationError('ai_content_invalid_response') };
+    }
+    let json: unknown;
+    try {
+      json = JSON.parse(content);
+    } catch {
+      return { ok: false, error: new AiContentGenerationError('ai_content_invalid_response') };
+    }
+    const parsed = llmSpecSchema.safeParse(json);
+    if (!parsed.success || !isSemanticallyValidPageSpec(parsed.data, deterministic)) {
+      return { ok: false, error: new AiContentGenerationError('ai_content_invalid_response') };
+    }
     return {
-      error: err instanceof Error ? err.message : 'OpenAI request failed.',
-      status: 502,
+      ok: true,
+      spec: coerceSpec(parsed.data, deterministic),
+      model,
     };
-  }
-  const payload = (await response.json().catch(() => ({}))) as OpenAiChatPayload;
-  if (!response.ok) {
-    return {
-      error: payload.error?.message ?? 'AI page spec generator failed.',
-      status: response.status,
-    };
-  }
-  const content = payload.choices?.[0]?.message?.content;
-  if (!content) {
-    return { error: 'AI page spec generator returned empty content.', status: 502 };
-  }
-  let json: unknown;
-  try {
-    json = JSON.parse(content);
   } catch {
-    return { error: 'AI page spec generator returned non-JSON content.', status: 502 };
+    return { ok: false, error: new AiContentGenerationError('ai_content_provider_unavailable') };
+  } finally {
+    clearTimeout(timeout);
   }
-  const parsed = llmSpecSchema.safeParse(json);
-  if (!parsed.success) {
-    return {
-      error: 'AI page spec generator returned an unexpected JSON shape.',
-      status: 502,
-    };
-  }
-  return { spec: coerceSpec(parsed.data, deterministic), model };
+}
+
+function providerFailureResponse(code: AiContentGenerationErrorCode): NextResponse {
+  const error = new AiContentGenerationError(code);
+  return NextResponse.json({
+    ok: false,
+    error: error.code,
+    message: error.message,
+  }, { status: error.httpStatus });
 }
 
 export async function POST(request: NextRequest) {
@@ -250,26 +297,29 @@ export async function POST(request: NextRequest) {
   const apiKey = openAiApiKey();
 
   if (!apiKey) {
+    if (!isLocalDemoGenerationAllowed()) {
+      return providerFailureResponse('ai_content_provider_unconfigured');
+    }
     return NextResponse.json({
-      ok: true,
+      ok: false,
+      error: 'ai_page_spec_local_demo_only',
+      message: 'Local demo page specification is not provider-generated.',
+      source: 'local-demo',
+      stub: true,
       usedFallback: true,
       model: pageSpecModel(),
       spec: deterministic,
-    });
+    }, { status: 503 });
   }
 
   const llmResult = await callOpenAi(input, deterministic, apiKey);
-  if ('error' in llmResult) {
-    return NextResponse.json({
-      ok: true,
-      usedFallback: true,
-      model: pageSpecModel(),
-      warning: llmResult.error,
-      spec: deterministic,
-    });
+  if (!llmResult.ok) {
+    return providerFailureResponse(llmResult.error.code);
   }
   return NextResponse.json({
     ok: true,
+    source: 'openai',
+    stub: false,
     usedFallback: false,
     model: llmResult.model,
     spec: llmResult.spec,

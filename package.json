@@ -21,6 +21,7 @@
     "smoke:builder": "node scripts/smoke-builder-api.mjs",
     "audit:release": "node scripts/run-release-audit.mjs",
     "audit:w-checkpoints": "node scripts/run-w-checkpoint-audit.mjs",
+    "check:r02-stubs": "node scripts/run-production-stub-registry.mjs --check",
     "qa:agent": "node scripts/run-qa-agent.mjs",
     "qa:sweep": "node scripts/run-qa-sweep.mjs",
     "gate:handoff-blockers": "node scripts/handoff-blockers-gate.mjs",
@@ -37,7 +38,7 @@
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
-    "@sentry/nextjs": "^10.52.0",
+    "@sentry/nextjs": "^10.65.0",
     "@tiptap/extension-image": "^3.22.3",
     "@tiptap/extension-link": "^3.22.3",
     "@tiptap/extension-placeholder": "^3.22.3",
@@ -49,7 +50,7 @@
     "bcryptjs": "^3.0.3",
     "gray-matter": "^4.0.3",
     "next": "^14.2.0",
-    "nodemailer": "^8.0.1",
+    "nodemailer": "^9.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^10.1.0",
@@ -72,5 +73,10 @@
     "storybook": "^8.6.18",
     "typescript": "^5.4.0",
     "vitest": "^3.2.4"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "8.5.18"
+    }
   }
 }

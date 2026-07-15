@@ -15,7 +15,10 @@ import {
 } from '@/lib/builder/seo/validation';
 import { resolveLocaleSeo } from '@/lib/builder/translations/seo-projection';
 import { getSiteUrl } from '@/lib/seo';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import {
+  resolveBuilderSiteIdForMutationFromRequest,
+  resolveBuilderSiteIdFromRequest,
+} from '@/lib/builder/site/admin-routing';
 import {
   applyLocalizedSeoPatch,
   applySeoPatch,
@@ -120,7 +123,9 @@ export async function PATCH(
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const siteId = resolveBuilderSiteIdFromRequest(request);
+  const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request);
+  if (!siteResolution.ok) return siteResolution.response;
+  const siteId = siteResolution.siteId;
 
   try {
     const rawBody = await request.json();

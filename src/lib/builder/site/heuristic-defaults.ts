@@ -6,12 +6,14 @@ import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
  * 적용 규칙:
  * - 사용자가 node.animation/hoverStyle을 명시적으로 설정한 경우 절대 덮어쓰지 않음
  * - prefers-reduced-motion 환경에서는 globals.css가 transition/animation을 1ms로 강제 (효과 0)
- * - 모든 기본값은 200~600ms 내의 절제된 모션
+ * - 모든 기본값은 짧은 이동거리 + 자연스러운 감속 곡선 사용
  * - heuristic은 published runtime에서만 발동. editor preview에는 영향 없음
  */
 
 type DefaultAnimation = NonNullable<BuilderCanvasNode['animation']>;
 type DefaultHoverStyle = NonNullable<BuilderCanvasNode['hoverStyle']>;
+
+const NATURAL_EASING = 'cubic-bezier(0.16, 1, 0.3, 1)';
 
 const HERO_CLASS_HINTS = [
   'hero-title',
@@ -60,13 +62,13 @@ export function deriveHeuristicAnimation(
 
   if (isHeroLikeText(node)) {
     return {
-      entrance: { preset: 'slide-up', duration: 520, delay: 80, easing: 'ease-out', triggerOnce: true },
+      entrance: { preset: 'slide-up', duration: 420, delay: 60, easing: NATURAL_EASING, triggerOnce: true },
     };
   }
 
   if (isCardLikeContainer(node)) {
     return {
-      entrance: { preset: 'slide-up', duration: 480, delay: 0, easing: 'ease-out', triggerOnce: true },
+      entrance: { preset: 'slide-up', duration: 380, delay: 0, easing: NATURAL_EASING, triggerOnce: true },
     };
   }
 
@@ -75,7 +77,7 @@ export function deriveHeuristicAnimation(
     const h = node.rect?.height ?? 0;
     if (w >= 400 && h >= 240) {
       return {
-        entrance: { preset: 'fade-in', duration: 600, delay: 0, easing: 'ease-out', triggerOnce: true },
+        entrance: { preset: 'fade-in', duration: 440, delay: 0, easing: NATURAL_EASING, triggerOnce: true },
       };
     }
   }
@@ -90,7 +92,7 @@ export function deriveHeuristicHoverStyle(
 
   if (node.kind === 'button') {
     return {
-      transitionMs: 200,
+      transitionMs: 180,
       translateY: -2,
       shadowBlur: 18,
       shadowSpread: 0,

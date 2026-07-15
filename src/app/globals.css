@@ -5377,13 +5377,16 @@ html.has-cyber-cursor .button {
   backdrop-filter: blur(8px);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 180ms ease;
-  z-index: 320;
+  transition: opacity 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  /* Portaled to <body>; keep it above editor chrome, media lightboxes and
+     every page-local stacking context. */
+  z-index: 2147483000;
 }
 
 .search-overlay[data-open='true'] {
   opacity: 1;
   pointer-events: auto;
+  animation: searchOverlayIn 180ms ease-out both;
 }
 
 body:has(.search-overlay[data-open='true']) .floating-ai-chat {
@@ -5398,6 +5401,18 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   border-radius: var(--radius-md);
   padding: clamp(1.2rem, 3vw, 2rem);
   box-shadow: var(--shadow-lg);
+  transform-origin: center top;
+  animation: searchPanelIn 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes searchOverlayIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes searchPanelIn {
+  from { opacity: 0; transform: translate3d(0, 10px, 0) scale(0.985); }
+  to { opacity: 1; transform: none; }
 }
 
 .search-panel header {
@@ -7189,9 +7204,11 @@ a.floating-ai-chat-contact-item:hover strong {
 
 .reveal {
   opacity: 0;
-  transform: translateY(14px);
+  transform: translate3d(0, 10px, 0);
   pointer-events: none;
-  transition: opacity 560ms ease, transform 560ms ease;
+  transition:
+    opacity 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.is-visible {
@@ -7202,8 +7219,10 @@ a.floating-ai-chat-contact-item:hover strong {
 
 .reveal-stagger > * {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 500ms ease, transform 500ms ease;
+  transform: translate3d(0, 14px, 0);
+  transition:
+    opacity 380ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-stagger.visible > *,
@@ -7226,31 +7245,41 @@ a.floating-ai-chat-contact-item:hover strong {
 .reveal-stagger.visible > *:nth-child(2),
 .reveal-stagger.is-visible > *:nth-child(2),
 .reveal.is-visible .reveal-stagger > *:nth-child(2) {
-  transition-delay: 100ms;
+  transition-delay: 60ms;
 }
 
 .reveal-stagger.visible > *:nth-child(3),
 .reveal-stagger.is-visible > *:nth-child(3),
 .reveal.is-visible .reveal-stagger > *:nth-child(3) {
-  transition-delay: 200ms;
+  transition-delay: 120ms;
 }
 
 .reveal-stagger.visible > *:nth-child(4),
 .reveal-stagger.is-visible > *:nth-child(4),
 .reveal.is-visible .reveal-stagger > *:nth-child(4) {
-  transition-delay: 300ms;
+  transition-delay: 180ms;
 }
 
 .reveal-stagger.visible > *:nth-child(5),
 .reveal-stagger.is-visible > *:nth-child(5),
 .reveal.is-visible .reveal-stagger > *:nth-child(5) {
-  transition-delay: 400ms;
+  transition-delay: 240ms;
 }
 
 .reveal-stagger.visible > *:nth-child(6),
 .reveal-stagger.is-visible > *:nth-child(6),
 .reveal.is-visible .reveal-stagger > *:nth-child(6) {
-  transition-delay: 500ms;
+  transition-delay: 300ms;
+}
+
+@media (scripting: none) {
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    transition: none;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -7699,6 +7728,12 @@ a.floating-ai-chat-contact-item:hover strong {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 
@@ -8210,8 +8245,8 @@ a.floating-ai-chat-contact-item:hover strong {
   box-shadow: 0 20px 40px rgba(11, 24, 17, 0.18);
   overflow: auto;
   max-height: min(52vh, 360px);
-  z-index: 100;
-  animation: quickMenuIn 0.2s ease-out;
+  z-index: 1000;
+  animation: quickMenuIn 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 @keyframes quickMenuIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 .hero-quick-menu-item {
@@ -21977,24 +22012,6 @@ html[data-theme='dark'] .site-header-logo-dark {
   flex-direction: column;
   gap: 4px;
 }
-.builder-social-embed-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(80px, 1fr));
-  gap: 6px;
-}
-.builder-social-embed[data-builder-social-layout='list'] .builder-social-embed-grid {
-  grid-template-columns: 1fr;
-}
-.builder-social-embed-grid > div {
-  aspect-ratio: 1 / 1;
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  color: #64748b;
-}
 
 .builder-social-floating-chat {
   position: relative;
@@ -22295,8 +22312,8 @@ html[data-theme='dark'] .site-header-logo-dark {
 
 /* Phase 22 W172 — Page transition wrapper */
 [data-page-transition]:not([data-page-transition='none']) {
-  transition: opacity var(--builder-page-transition-ms, 280ms) ease-out,
-              transform var(--builder-page-transition-ms, 280ms) ease-out;
+  transition: opacity var(--builder-page-transition-ms, 280ms) cubic-bezier(0.16, 1, 0.3, 1),
+              transform var(--builder-page-transition-ms, 280ms) cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 [data-page-transition='fade'][data-page-transition-state='pending'] { opacity: 0; }
@@ -22315,7 +22332,6 @@ html[data-builder-outline='true'] [data-node-id] {
   outline: 1px dashed rgba(15, 23, 42, 0.45) !important;
   outline-offset: -1px;
   background: transparent !important;
-  filter: grayscale(0.6);
 }
 html[data-builder-outline='true'][data-builder-outline-hide-content='true'] img,
 html[data-builder-outline='true'][data-builder-outline-hide-content='true'] video,

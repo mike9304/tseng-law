@@ -14,21 +14,21 @@ export const dynamic = 'force-dynamic';
 const CRM_PAGE_COPY = {
   ko: {
     title: 'CRM',
-    description: '연락처, 자동화, 외부 연동, 발송 기록을 관리하는 CRM 관리자 화면입니다.',
+    description: '연락처, 자동화, 외부 연동, 개발용 이메일 시뮬레이션을 관리하는 CRM 관리자 화면입니다.',
     heading: 'CRM',
-    summary: '연락처, 자동화, 외부 연동, 발송 기록을 관리합니다.',
+    summary: '연락처, 자동화, 외부 연동, 개발용 이메일 시뮬레이션을 관리합니다.',
   },
   'zh-hant': {
     title: 'CRM',
-    description: '管理聯絡人、自動化、外部整合與寄送紀錄的 CRM 管理畫面。',
+    description: '管理聯絡人、自動化、外部整合與開發用 Email 模擬的 CRM 管理畫面。',
     heading: 'CRM',
-    summary: '管理聯絡人、自動化、外部整合與寄送紀錄。',
+    summary: '管理聯絡人、自動化、外部整合與開發用 Email 模擬。',
   },
   en: {
     title: 'CRM',
-    description: 'Manage contacts, automations, integrations, and outbox records in the CRM admin surface.',
+    description: 'Manage contacts, automations, integrations, and development email simulations in the CRM admin surface.',
     heading: 'CRM',
-    summary: 'Manage contacts, automations, integrations, and outbox records.',
+    summary: 'Manage contacts, automations, integrations, and development email simulations.',
   },
 } as const satisfies Record<Locale, {
   title: string;

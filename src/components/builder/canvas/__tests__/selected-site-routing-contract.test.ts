@@ -27,7 +27,7 @@ describe('selected workspace site routing contract', () => {
     expect(sandboxPage).toContain('siteId: string;');
     expect(sandboxPage).toContain('siteId,');
     expect(sandboxPage).toContain('useSandboxSiteState({');
-    expect(sandboxPage).toContain('new URLSearchParams({ locale, siteId }).toString()');
+    expect(sandboxPage).toContain('new URLSearchParams({ locale: activeCanvasLocale, siteId }).toString()');
     expect(sandboxPage).toContain('new URLSearchParams({ siteId, pageId: activePageId }).toString()');
     expect(sandboxPage).not.toContain("siteId: 'default'");
     expect(sandboxPage).not.toContain('siteId=default');
@@ -54,7 +54,7 @@ describe('selected workspace site routing contract', () => {
 
     expect(sandboxState).toContain('siteScopedQuery(locale, siteId)');
     expect(sandboxState).toContain('body: JSON.stringify({ siteId, expectedRevision, document: nextDocument })');
-    expect(sandboxState).toContain("body: JSON.stringify({\n        siteId,\n        locale,");
+    expect(sandboxState).toContain("body: JSON.stringify({\n        siteId,\n        locale: requestScope.locale,");
     expect(sandboxState).not.toContain("siteId: 'default'");
     expect(sandboxState).not.toContain('siteId=default');
 

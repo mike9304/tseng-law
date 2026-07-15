@@ -14,6 +14,7 @@ import {
   writePageCanvas,
 } from '@/lib/builder/site/persistence';
 import type { SiteSpec } from '@/lib/builder/ai-generator/site-spec';
+import { AiContentGenerationError } from '@/lib/builder/ai-generator/content-generator';
 
 vi.mock('@/lib/builder/security/guard', () => ({
   guardMutation: vi.fn(async () => ({ user: { id: 'admin-1', email: 'admin@example.test' } })),
@@ -126,6 +127,8 @@ describe('/api/builder/ai-generator/apply', () => {
         },
         sections: [],
         metaDescription: '대만 법률 상담',
+        source: 'openai',
+        stub: false,
       },
       plan: {
         sitemap: [{
@@ -233,6 +236,8 @@ describe('/api/builder/ai-generator/apply', () => {
         },
         sections: [],
         metaDescription: '대만 법률 상담',
+        source: 'openai',
+        stub: false,
       },
       plan: {
         sitemap: [
@@ -305,6 +310,8 @@ describe('/api/builder/ai-generator/apply', () => {
         },
         sections: [],
         metaDescription: '대만 법률 상담',
+        source: 'openai',
+        stub: false,
       },
       plan: {
         sitemap: [
@@ -351,6 +358,49 @@ describe('/api/builder/ai-generator/apply', () => {
     expect(payload.ok).toBe(false);
     expect(payload.error).toBe('no_selected_sitemap_pages');
     expect(createPage).not.toHaveBeenCalled();
+    expect(writePageCanvas).not.toHaveBeenCalled();
+  });
+
+  it('returns a sanitized failure without creating a page when provider generation fails', async () => {
+    vi.mocked(generateSiteDraft).mockRejectedValueOnce(
+      new AiContentGenerationError('ai_content_provider_unconfigured'),
+    );
+
+    const route = await import('../route');
+    const response = await route.POST(postRequest({ spec, slug: 'provider-failed' }));
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'ai_content_provider_unconfigured',
+      message: 'AI content provider is not configured.',
+    });
+    expect(createPage).not.toHaveBeenCalled();
+    expect(writeSiteDocument).not.toHaveBeenCalled();
+    expect(writePageCanvas).not.toHaveBeenCalled();
+  });
+
+  it('rejects local demo content before any page mutation', async () => {
+    const localDemo = await generateSiteDraft(spec);
+    localDemo.content.source = 'local-demo';
+    localDemo.content.stub = true;
+    vi.mocked(generateSiteDraft).mockResolvedValueOnce(localDemo);
+
+    const route = await import('../route');
+    const response = await route.POST(postRequest({ spec, slug: 'local-demo' }));
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'ai_content_local_demo_only',
+      message: 'Local demo content cannot be applied to a site.',
+      source: 'local-demo',
+      stub: true,
+    });
+    expect(createPage).not.toHaveBeenCalled();
+    expect(writeSiteDocument).not.toHaveBeenCalled();
     expect(writePageCanvas).not.toHaveBeenCalled();
   });
 });

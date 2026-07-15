@@ -13,6 +13,7 @@
  */
 
 import { randomUUID } from 'crypto';
+import { getQaRuntimeAttestation } from '@/lib/builder/security/qa-runtime-attestation';
 
 interface RateLimitEntry {
   timestamps: number[];
@@ -43,6 +44,20 @@ export interface RateLimitResult {
   allowed: boolean;
   remaining: number;
   retryAfterMs: number;
+  reason?: 'backend_unavailable';
+}
+
+function backendUnavailable(): RateLimitResult {
+  return {
+    allowed: false,
+    remaining: 0,
+    retryAfterMs: 0,
+    reason: 'backend_unavailable',
+  };
+}
+
+function allowsInMemoryFallback(): boolean {
+  return process.env.NODE_ENV !== 'production';
 }
 
 export async function checkRateLimit(
@@ -50,16 +65,36 @@ export async function checkRateLimit(
   maxRequests: number,
   windowMs: number,
 ): Promise<RateLimitResult> {
+  if (process.env.BUILDER_RATE_LIMIT_BACKEND === 'isolated-qa') {
+    try {
+      const attestation = getQaRuntimeAttestation();
+      if (
+        !attestation
+        || attestation.schemaVersion !== 3
+        || attestation.state !== 'ready'
+      ) {
+        return backendUnavailable();
+      }
+      return checkInMemoryRateLimit(key, maxRequests, windowMs);
+    } catch {
+      return backendUnavailable();
+    }
+  }
+
   const upstash = resolveUpstashConfig();
   if (upstash) {
     try {
       return await checkUpstashRateLimit(upstash, key, maxRequests, windowMs);
     } catch {
-      return checkInMemoryRateLimit(key, maxRequests, windowMs);
+      return allowsInMemoryFallback()
+        ? checkInMemoryRateLimit(key, maxRequests, windowMs)
+        : backendUnavailable();
     }
   }
 
-  return checkInMemoryRateLimit(key, maxRequests, windowMs);
+  return allowsInMemoryFallback()
+    ? checkInMemoryRateLimit(key, maxRequests, windowMs)
+    : backendUnavailable();
 }
 
 function checkInMemoryRateLimit(
@@ -137,8 +172,24 @@ async function checkUpstashRateLimit(
       throw new Error('upstash_rate_limit_failed');
     }
 
-    const results = await response.json() as Array<{ result?: unknown }>;
-    const countBefore = Number(results[1]?.result ?? 0);
+    const results: unknown = await response.json();
+    if (
+      !Array.isArray(results)
+      || results.length < 4
+      || results.slice(0, 4).some((item) => (
+        !item
+        || typeof item !== 'object'
+        || !Object.prototype.hasOwnProperty.call(item, 'result')
+        || Object.prototype.hasOwnProperty.call(item, 'error')
+        || typeof (item as { result?: unknown }).result !== 'number'
+        || !Number.isFinite((item as { result: number }).result)
+        || (item as { result: number }).result < 0
+      ))
+    ) {
+      throw new Error('upstash_rate_limit_invalid_response');
+    }
+
+    const countBefore = (results[1] as { result: number }).result;
     if (countBefore >= maxRequests) {
       return {
         allowed: false,

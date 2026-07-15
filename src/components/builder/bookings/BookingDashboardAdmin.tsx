@@ -544,6 +544,11 @@ export default function BookingDashboardAdmin({
     () => new Map(customerProfiles.map((profile) => [profile.email, profile])),
     [customerProfiles],
   );
+  const hasStubData = useMemo(() => bookings.some((booking) =>
+    (booking.billingDocuments ?? []).some((document) => document.status === 'emailed_stub')
+    || (booking.paymentIntentId ?? '').startsWith('pi_stub_')
+    || (booking.manualPayments ?? []).some((payment) => (payment.reference ?? '').startsWith('pm_stub_')),
+  ), [bookings]);
 
   useEffect(() => {
     skipNextUrlPushRef.current = true;
@@ -862,6 +867,7 @@ export default function BookingDashboardAdmin({
 
   return (
     <>
+      {hasStubData ? <p role="status" data-booking-demo-disclosure="dashboard" aria-label="STUB DATA">STUB DATA · {locale === 'ko' ? '개발용 결제·이메일 기록이 포함되어 있습니다.' : locale === 'zh-hant' ? '包含開發用付款與寄信記錄。' : 'Development payment/email records are included; they are not live transactions.'}</p> : null}
       <section className={styles.dashboardGrid} data-booking-dashboard="true">
         <div className={styles.statCard}>
           <span>{locale === 'ko' ? '전체' : locale === 'zh-hant' ? '全部' : 'Total'}</span>

@@ -1,4 +1,4 @@
-import { readCache, rememberResult, selectProvider } from './router-core';
+import { isProductionEnvironment, readCache, rememberResult, selectProvider } from './router-core';
 import { recordUsage } from './usage';
 import type {
   TranslationProviderArgs,
@@ -10,13 +10,20 @@ export interface RouterArgs extends TranslationProviderArgs {
   readonly preferProvider?: TranslationProviderId;
 }
 
+function mockResult(args: TranslationProviderArgs): TranslationProviderResult {
+  if (isProductionEnvironment()) {
+    return { ok: false, reason: 'unconfigured', provider: 'mock' };
+  }
+  return { ok: true, provider: 'mock', text: args.sourceText };
+}
+
 export async function translateViaRouter(args: RouterArgs): Promise<TranslationProviderResult> {
   if (args.sourceLocale === args.targetLocale) {
     return { ok: true, provider: 'mock', text: args.sourceText };
   }
   const selected = selectProvider(args.preferProvider);
   if ('mock' in selected) {
-    return { ok: true, provider: 'mock', text: args.sourceText };
+    return mockResult(args);
   }
   const cached = readCache(selected.id, args);
   if (cached) {

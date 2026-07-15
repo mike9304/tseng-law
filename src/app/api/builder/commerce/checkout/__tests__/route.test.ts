@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { DEFAULT_COMMERCE_CURRENCY_SETTINGS } from '@/lib/builder/commerce/currency-shared';
 import { loadCurrencySettings } from '@/lib/builder/commerce/currency-engine';
@@ -92,7 +92,7 @@ const paymentIntent = {
   currency: 'TWD',
   amountCents: 24000,
   status: 'requires_manual_payment',
-  stub: true,
+  stub: false,
   createdAt: '2026-06-03T00:00:00.000Z',
   updatedAt: '2026-06-03T00:00:00.000Z',
 };
@@ -101,7 +101,7 @@ const payment = {
   adapter: 'manual-invoice',
   status: 'requires_manual_payment',
   label: '수동 송장 결제',
-  stub: true,
+  stub: false,
   referenceId: 'pi_test',
 };
 
@@ -201,6 +201,10 @@ describe('builder commerce checkout API', () => {
     runOrderBillingAutomationMock.mockResolvedValue(null);
     loadShippingRulesMock.mockResolvedValue([] as never);
     loadTaxRulesMock.mockResolvedValue([] as never);
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
   });
 
   it('returns localized rate-limit errors using the query locale', async () => {
@@ -328,5 +332,28 @@ describe('builder commerce checkout API', () => {
       email: 'customer@example.com',
       orderId: 'order-1',
     }));
+  });
+
+  it('fails closed for sandbox checkout in production before order or payment mutation', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+
+    const response = await POST(postRequest('', {
+      ...validPayload,
+      locale: 'en',
+      paymentAdapter: 'sandbox-card',
+    }));
+
+    expect(response.status).toBe(503);
+    await expect(response.json()).resolves.toEqual({
+      ok: false,
+      error: 'The selected payment provider is not configured for production.',
+      errorCode: 'payment_provider_not_configured',
+    });
+    expect(loadCurrencySettingsMock).not.toHaveBeenCalled();
+    expect(createCommercePaymentIntentMock).not.toHaveBeenCalled();
+    expect(paymentIntentToOrderPaymentMock).not.toHaveBeenCalled();
+    expect(createOrderMock).not.toHaveBeenCalled();
+    expect(queueOrderCreatedNotificationsMock).not.toHaveBeenCalled();
+    expect(markRecoveryCartsConvertedMock).not.toHaveBeenCalled();
   });
 });

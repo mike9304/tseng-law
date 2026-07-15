@@ -27,11 +27,9 @@ type SandboxPublishedSiteChromeProps = {
   readonly activeNavItemId: string | null;
   readonly viewportWidth: number | null;
   readonly publicChromeCopy: PublicChromeCopy;
-  readonly publicChromeColumnsShortcut: boolean;
   readonly memberNavPreview?: SiteHeaderMemberNavPreview;
   readonly children: ReactNode;
   readonly onHeaderNavigate: (href: string) => void;
-  readonly onOpenColumnsPage: () => void;
   readonly onOpenSettings: () => void;
   readonly onSetActiveDrawer: (panel: 'nav' | null) => void;
   readonly onRequestEditNavItem: (itemId: string) => void;
@@ -58,11 +56,9 @@ export default function SandboxPublishedSiteChrome({
   activeNavItemId,
   viewportWidth,
   publicChromeCopy,
-  publicChromeColumnsShortcut,
   memberNavPreview,
   children,
   onHeaderNavigate,
-  onOpenColumnsPage,
   onOpenSettings,
   onSetActiveDrawer,
   onRequestEditNavItem,
@@ -219,9 +215,6 @@ export default function SandboxPublishedSiteChrome({
         locale={locale}
         activeDrawer={Boolean(activeDrawer)}
         copy={publicChromeCopy}
-        currentSlug={currentSlug}
-        columnsShortcut={publicChromeColumnsShortcut}
-        onOpenColumnsPage={onOpenColumnsPage}
         onFooterLinkActivation={onFooterLinkActivation}
       />
     </>

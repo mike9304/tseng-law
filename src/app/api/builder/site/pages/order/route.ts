@@ -11,7 +11,7 @@ import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
 } from '@/lib/builder/site/site-api-copy';
-import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
+import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -46,8 +46,14 @@ export async function PATCH(request: NextRequest) {
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
   try {
-    const payload = reorderPagesSchema.parse(await request.json());
-    const siteId = resolveBuilderSiteIdFromRequest(request, payload.siteId);
+    const rawPayload: unknown = await request.json();
+    const explicitSiteId = rawPayload && typeof rawPayload === 'object' && !Array.isArray(rawPayload)
+      ? (rawPayload as Record<string, unknown>).siteId
+      : undefined;
+    const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, explicitSiteId);
+    if (!siteResolution.ok) return siteResolution.response;
+    const siteId = siteResolution.siteId;
+    const payload = reorderPagesSchema.parse(rawPayload);
     const site = await readSiteDocument(siteId, locale);
     const visiblePages = projectPagesForLocale(site.pages, locale);
     const visiblePageIds = visiblePages.map((page) => page.pageId);

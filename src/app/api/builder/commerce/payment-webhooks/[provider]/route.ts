@@ -41,6 +41,9 @@ export async function POST(request: NextRequest, { params }: { params: { provide
   if (!isCommercePaymentProvider(params.provider)) {
     return errorResponse(errorLocale, 'payment_provider_not_found', 404);
   }
+  if (process.env.NODE_ENV === 'production' && params.provider === 'sandbox-card') {
+    return errorResponse(errorLocale, 'payment_webhook_not_configured', 503);
+  }
 
   const secret = providerSecret(params.provider);
   if (!secret) {

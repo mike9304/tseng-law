@@ -60,7 +60,7 @@ export function createContactDecomposedNodes(
     createHomeContainerNode({
       id: copyId,
       parentId: containerId,
-      rect: { x: 0, y: 0, width: 680, height: 180 },
+      rect: { x: 0, y: 0, width: 1178, height: 180 },
       zIndex: 0,
       label: 'home contact copy',
     }),
@@ -78,7 +78,7 @@ export function createContactDecomposedNodes(
     createHomeTextNode({
       id: 'home-contact-title',
       parentId: copyId,
-      rect: { x: 0, y: 42, width: 640, height: 56 },
+      rect: { x: 0, y: 39, width: 1178, height: 56 },
       zIndex: 1,
       text: title,
       className: 'section-title',
@@ -88,7 +88,7 @@ export function createContactDecomposedNodes(
     createHomeTextNode({
       id: 'home-contact-description',
       parentId: copyId,
-      rect: { x: 0, y: 114, width: 560, height: 58 },
+      rect: { x: 0, y: 111, width: 720, height: 58 },
       zIndex: 2,
       text: description,
       className: 'section-lede',
@@ -98,7 +98,7 @@ export function createContactDecomposedNodes(
     createHomeContainerNode({
       id: actionsId,
       parentId: containerId,
-      rect: { x: 0, y: 214, width: 520, height: 56 },
+      rect: { x: 0, y: 193, width: 1178, height: 56 },
       zIndex: 1,
       label: 'home contact actions',
       className: 'home-contact-actions',

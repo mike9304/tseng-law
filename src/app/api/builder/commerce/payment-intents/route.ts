@@ -58,6 +58,15 @@ export async function POST(request: NextRequest) {
     const payload = await request.json();
     errorLocale = resolveRequestLocale(request, payload);
     const input = intentSchema.parse(payload);
+    const requestedProvider = input.action === 'capture'
+      && input.paymentIntent
+      && typeof input.paymentIntent === 'object'
+      && 'provider' in input.paymentIntent
+      ? (input.paymentIntent as { provider?: unknown }).provider
+      : input.provider;
+    if (process.env.NODE_ENV === 'production' && requestedProvider === 'sandbox-card') {
+      return errorResponse(errorLocale, 'payment_provider_not_configured', 503);
+    }
     const intent = input.action === 'capture'
       ? captureCommercePaymentIntent(input.paymentIntent, { simulateFailure: input.simulateFailure })
       : createCommercePaymentIntent({

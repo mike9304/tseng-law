@@ -12,6 +12,7 @@ import {
   readSiteDocument,
   updatePageCanvasRecord,
 } from '@/lib/builder/site/persistence';
+import { PageCanvasCasConflictError } from '@/lib/builder/site/page-canvas-versioned-store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 
 vi.mock('@/lib/builder/security/guard', () => ({
@@ -241,6 +242,24 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
     vi.mocked(readSiteDocument).mockResolvedValue(siteDocument);
   });
 
+  it('rejects a serialized-missing draft site id before any canonical read or write', async () => {
+    const route = await import('../route');
+    const response = await route.PUT(
+      putRequest('page-published-only', {
+        siteId: 'undefined',
+        document: makeDocument('must-not-save'),
+      }),
+      { params: { pageId: 'page-published-only' } },
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(payload).toMatchObject({ ok: false, success: false, errorCode: 'invalid_site_id' });
+    expect(readSiteDocument).not.toHaveBeenCalled();
+    expect(readPageCanvasRecordState).not.toHaveBeenCalled();
+    expect(updatePageCanvasRecord).not.toHaveBeenCalled();
+  });
+
   it('loads the published canvas when the draft record is missing', async () => {
     const publishedDocument = makeDocument('published-only-section');
     vi.mocked(readPageCanvasRecordState).mockImplementation(async (_siteId, _pageId, variant = 'draft') => (
@@ -454,6 +473,197 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
       revision: 7,
       savedAt: '2026-05-20T00:10:00.000Z',
     });
+  });
+
+  it('commits one of two barriered draft saves and sanitizes the physical CAS loser', async () => {
+    const secretCause = new Error('secret-cas-cause-token');
+    const physicalConflict = new PageCanvasCasConflictError(
+      {
+        revision: 8,
+        savedAt: '2026-05-20T00:11:00.000Z',
+        storageVersion: 'opaque-storage-version',
+        etag: 'opaque-etag',
+        generation: 'opaque-generation',
+        token: 'opaque-token',
+        updatedBy: 'private-updater',
+        document: makeDocument('must-not-leak'),
+      } as never,
+      { cause: secretCause },
+    );
+    Object.assign(physicalConflict, { backendToken: 'opaque-error-token' });
+
+    let releaseWrites: () => void = () => {};
+    const writesReleased = new Promise<void>((resolve) => {
+      releaseWrites = resolve;
+    });
+    let reportBothProposals: () => void = () => {};
+    const bothProposalsReady = new Promise<void>((resolve) => {
+      reportBothProposals = resolve;
+    });
+    const proposedRecords: Array<Awaited<ReturnType<typeof updatePageCanvasRecord>>> = [];
+    let invocation = 0;
+    vi.mocked(updatePageCanvasRecord).mockImplementation(
+      async (_siteId, _pageId, _variant, updater) => {
+        const invocationIndex = invocation;
+        invocation += 1;
+        const proposed = await updater(recordState(makeDocument('shared-revision-seven')));
+        proposedRecords.push(proposed);
+        if (proposedRecords.length === 2) reportBothProposals();
+        await writesReleased;
+        if (invocationIndex === 0) return proposed;
+        throw physicalConflict;
+      },
+    );
+
+    const route = await import('../route');
+    const firstSave = route.PUT(
+      putRequest('page-published-only', {
+        expectedRevision: 7,
+        document: makeDocument('physical-contender-one'),
+      }),
+      { params: { pageId: 'page-published-only' } },
+    );
+    const secondSave = route.PUT(
+      putRequest('page-published-only', {
+        expectedRevision: 7,
+        document: makeDocument('physical-contender-two'),
+      }),
+      { params: { pageId: 'page-published-only' } },
+    );
+
+    await bothProposalsReady;
+    expect(proposedRecords).toHaveLength(2);
+    expect(proposedRecords.map((record) => record.revision)).toEqual([8, 8]);
+    expect(emitEditorPageSaveHook).not.toHaveBeenCalled();
+
+    releaseWrites();
+    const responses = await Promise.all([firstSave, secondSave]);
+    const winner = responses.find((response) => response.status === 200);
+    const loser = responses.find((response) => response.status === 409);
+    expect(winner).toBeDefined();
+    expect(loser).toBeDefined();
+    const winnerPayload = await winner!.json();
+    const loserPayload = await loser!.json();
+    const serializedLoser = JSON.stringify(loserPayload);
+
+    expect(responses.map((response) => response.status).sort()).toEqual([200, 409]);
+    expect(winnerPayload).toMatchObject({
+      ok: true,
+      draft: {
+        revision: 8,
+        updatedBy: 'admin',
+      },
+    });
+    expect(loserPayload).toEqual({
+      ok: false,
+      error: '다른 변경 사항이 먼저 저장되었습니다. 최신 초안을 다시 불러와 주세요.',
+      errorCode: 'draft_conflict',
+      current: {
+        revision: 8,
+        savedAt: '2026-05-20T00:11:00.000Z',
+      },
+    });
+    expect(Object.keys(loserPayload.current)).toEqual(['revision', 'savedAt']);
+    expect(serializedLoser).not.toMatch(
+      /secret|storageVersion|etag|generation|token|updatedBy|document|cause|stack|compare-and-set/i,
+    );
+    expect(emitEditorPageSaveHook).toHaveBeenCalledTimes(1);
+    expect(emitEditorPageSaveHook).toHaveBeenCalledWith({
+      kind: 'editor.page-save',
+      payload: {
+        siteId: DEFAULT_BUILDER_SITE_ID,
+        pageId: 'page-published-only',
+        revision: proposedRecords[0].revision,
+        savedAt: proposedRecords[0].savedAt,
+      },
+    });
+  });
+
+  it.each([
+    ['absent', null, false],
+    ['negative revision', { revision: -1, savedAt: '2026-05-20T00:11:00.000Z' }, false],
+    ['unsafe revision', { revision: Number.MAX_SAFE_INTEGER + 1, savedAt: '2026-05-20T00:11:00.000Z' }, false],
+    ['invalid savedAt', { revision: 8, savedAt: 'secret-invalid-date' }, false],
+    ['parseable RFC secret savedAt', { revision: 8, savedAt: 'Wed, 20 May 2026 00:11:00 GMT (secret-token)' }, true],
+    ['parseable prefixed secret savedAt', { revision: 8, savedAt: 'secret-token 2026-05-20' }, true],
+    ['date-only savedAt', { revision: 8, savedAt: '2026-05-20' }, true],
+    ['offset savedAt', { revision: 8, savedAt: '2026-05-20T09:11:00+09:00' }, true],
+  ])('returns null current for a physical CAS conflict with %s metadata', async (_label, current, isParseable) => {
+    if (isParseable && current) {
+      expect(Number.isFinite(Date.parse(current.savedAt))).toBe(true);
+    }
+    vi.mocked(updatePageCanvasRecord).mockRejectedValue(
+      new PageCanvasCasConflictError(current as never, {
+        cause: new Error('secret-malformed-current-cause'),
+      }),
+    );
+
+    const route = await import('../route');
+    const response = await route.PUT(
+      putRequest('page-published-only', {
+        expectedRevision: 7,
+        document: makeDocument('physical-loser'),
+      }),
+      { params: { pageId: 'page-published-only' } },
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(409);
+    expect(payload).toEqual({
+      ok: false,
+      error: '다른 변경 사항이 먼저 저장되었습니다. 최신 초안을 다시 불러와 주세요.',
+      errorCode: 'draft_conflict',
+      current: null,
+    });
+    expect(JSON.stringify(payload)).not.toMatch(/secret|cause|stack|compare-and-set/i);
+    expect(emitEditorPageSaveHook).not.toHaveBeenCalled();
+  });
+
+  it('preserves legacy draft writes without expectedRevision and increments the record', async () => {
+    vi.mocked(updatePageCanvasRecord).mockImplementation(
+      async (_siteId, _pageId, _variant, updater) => updater({
+        record: {
+          revision: 7,
+          savedAt: '2026-05-20T00:10:00.000Z',
+          updatedBy: 'legacy-writer',
+          document: makeDocument('legacy-current'),
+        },
+        isEnvelope: false,
+      }),
+    );
+
+    const route = await import('../route');
+    const response = await route.PUT(
+      putRequest('page-published-only', {
+        document: makeDocument('legacy-next'),
+      }),
+      { params: { pageId: 'page-published-only' } },
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload.draft).toMatchObject({ revision: 8, updatedBy: 'admin' });
+    expect(emitEditorPageSaveHook).toHaveBeenCalledTimes(1);
+  });
+
+  it('creates a missing draft at revision zero when expectedRevision is zero', async () => {
+    vi.mocked(updatePageCanvasRecord).mockImplementation(
+      async (_siteId, _pageId, _variant, updater) => updater(null),
+    );
+
+    const route = await import('../route');
+    const response = await route.PUT(
+      putRequest('page-published-only', {
+        expectedRevision: 0,
+        document: makeDocument('first-draft'),
+      }),
+      { params: { pageId: 'page-published-only' } },
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload.draft).toMatchObject({ revision: 0, updatedBy: 'admin' });
+    expect(emitEditorPageSaveHook).toHaveBeenCalledTimes(1);
   });
 
   it('emits an editor.page-save lifecycle hook after a successful draft save', async () => {

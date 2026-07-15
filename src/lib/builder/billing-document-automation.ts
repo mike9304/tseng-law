@@ -296,7 +296,12 @@ async function emailBookingDocument(
   booking: Booking,
   document: BookingBillingDocument,
   service: BookingService | null = null,
-): Promise<{ booking: Booking; document: BookingBillingDocument; emailed: boolean }> {
+): Promise<{
+  booking: Booking;
+  document: BookingBillingDocument;
+  emailed: boolean;
+  error?: 'email_unconfigured' | 'email_provider_error' | 'marker_persist_failed_after_delivery';
+}> {
   if (document.status === 'emailed_stub') {
     return { booking, document, emailed: false };
   }
@@ -304,9 +309,26 @@ async function emailBookingDocument(
     service ? Promise.resolve(service) : getService(booking.serviceId),
     getStaff(booking.staffId),
   ]);
-  await sendBookingBillingDocument(booking, document, { service: resolvedService, staff });
-  const emailed = await markBookingBillingDocumentEmailed(booking.bookingId, document.documentId);
-  return { booking: emailed.booking, document: emailed.document, emailed: true };
+  const delivery = await sendBookingBillingDocument(booking, document, { service: resolvedService, staff });
+  if (!delivery.ok) {
+    return {
+      booking,
+      document,
+      emailed: false,
+      error: delivery.reason === 'unconfigured' ? 'email_unconfigured' : 'email_provider_error',
+    };
+  }
+  try {
+    const emailed = await markBookingBillingDocumentEmailed(booking.bookingId, document.documentId);
+    return { booking: emailed.booking, document: emailed.document, emailed: true };
+  } catch {
+    return {
+      booking,
+      document,
+      emailed: false,
+      error: 'marker_persist_failed_after_delivery',
+    };
+  }
 }
 
 export async function runOrderBillingAutomation(
@@ -413,11 +435,13 @@ export async function runBookingBillingAutomation(
       current = issued.booking;
       let document = issued.document;
       let emailed = false;
+      let emailError: 'email_unconfigured' | 'email_provider_error' | 'marker_persist_failed_after_delivery' | undefined;
       if (rule.email) {
         const emailResult = await emailBookingDocument(current, document, issued.service);
         current = emailResult.booking;
         document = emailResult.document;
         emailed = emailResult.emailed;
+        emailError = emailResult.error;
       }
 
       actions.push({
@@ -428,6 +452,7 @@ export async function runBookingBillingAutomation(
         number: document.number,
         created: !issued.reused,
         emailed,
+        ...(emailError ? { error: emailError } : {}),
       });
     } catch (error) {
       actions.push({

@@ -303,7 +303,6 @@ function successfulOrderRefundTotal(order: CommerceOrder): number {
 function orderGrossCollected(order: CommerceOrder): number {
   if (
     order.payment.status === 'paid'
-    || order.payment.status === 'authorized_stub'
     || order.payment.status === 'partially_refunded'
     || order.payment.status === 'refunded'
   ) {
@@ -321,9 +320,11 @@ function orderRefundedAmount(order: CommerceOrder, grossCollected: number): numb
 }
 
 function orderOutstandingAmount(order: CommerceOrder): number {
+  if (order.payment.status === 'authorized_stub') {
+    return order.totals.grandTotalCents;
+  }
   if (
     order.payment.status === 'paid'
-    || order.payment.status === 'authorized_stub'
     || order.payment.status === 'partially_refunded'
     || order.payment.status === 'refunded'
   ) {
@@ -509,7 +510,7 @@ export function buildPaymentTrendSeries(
     const bucket = buckets.get(dayKeyUtc(order.createdAt));
     if (!bucket) continue;
     bucket.paymentAttempts += 1;
-    bucket.successfulPayments += order.payment.status === 'paid' || order.payment.status === 'authorized_stub' || order.payment.status === 'partially_paid' ? 1 : 0;
+    bucket.successfulPayments += order.payment.status === 'paid' || order.payment.status === 'partially_paid' ? 1 : 0;
     bucket.partialPayments += order.payment.status === 'partially_paid' || order.payment.status === 'partially_refunded' ? 1 : 0;
     bucket.failedPayments += order.payment.status === 'failed' ? 1 : 0;
     bucket.refundedPayments += order.payment.status === 'partially_refunded' || order.payment.status === 'refunded' ? 1 : 0;

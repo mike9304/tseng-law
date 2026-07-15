@@ -4,6 +4,7 @@ type FeedbackSaveState = 'saving' | 'saved' | 'error';
 
 export interface SandboxFeedbackOverlayCopy {
   saveStatusLabels: Record<FeedbackSaveState, string>;
+  dismissToastLabel: string;
 }
 
 const COPY: Record<Locale, SandboxFeedbackOverlayCopy> = {
@@ -13,6 +14,7 @@ const COPY: Record<Locale, SandboxFeedbackOverlayCopy> = {
       saved: '저장됨',
       error: '저장 실패',
     },
+    dismissToastLabel: '알림 닫기',
   },
   'zh-hant': {
     saveStatusLabels: {
@@ -20,6 +22,7 @@ const COPY: Record<Locale, SandboxFeedbackOverlayCopy> = {
       saved: '已儲存',
       error: '儲存失敗',
     },
+    dismissToastLabel: '關閉通知',
   },
   en: {
     saveStatusLabels: {
@@ -27,6 +30,7 @@ const COPY: Record<Locale, SandboxFeedbackOverlayCopy> = {
       saved: 'Saved',
       error: 'Save failed',
     },
+    dismissToastLabel: 'Dismiss notification',
   },
 };
 

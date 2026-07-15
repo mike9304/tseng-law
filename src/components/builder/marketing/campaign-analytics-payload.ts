@@ -1,6 +1,10 @@
 import { z } from 'zod';
 
-const campaignStatusSchema = z.enum(['draft', 'scheduled', 'sending', 'sent', 'failed']);
+// Must stay in sync with CampaignStatus (campaign-types.ts). The dispatcher can
+// mark a campaign 'partial' (mixed success/failure), and the stats route emits
+// campaign.status verbatim — omitting it here makes CampaignAnalyticsPanel's
+// safeParse drop a truthful partial campaign into the client error state.
+const campaignStatusSchema = z.enum(['draft', 'scheduled', 'sending', 'sent', 'failed', 'partial']);
 const recipientBreakdownSchema = z.object({
   pending: z.number(),
   sent: z.number(),

@@ -14,9 +14,12 @@ import {
   recordOrderManualPayment,
   refundableAmount,
   refundOrderPayment,
+  saveOrder,
   successfulManualPaymentTotal,
   softDeleteOrder,
+  supersedeOrderDocument,
   updateOrderState,
+  voidOrderDocument,
 } from '../orders-engine';
 import { createCommerceCheckoutQuote, normalizeCheckoutAddress } from '../checkout-shared';
 import {
@@ -491,5 +494,430 @@ describe('commerce orders engine', () => {
     });
     expect(emailed.order?.audit.some((event) => event.type === 'order.receipt.emailed')).toBe(true);
     expect((await loadOrder(order.orderId))?.documents).toHaveLength(2);
+  });
+});
+
+describe('production authorized_stub write boundary', () => {
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  function quoteForOne() {
+    const address = normalizeCheckoutAddress({
+      country: 'TW',
+      region: 'Taipei',
+      city: 'Taipei',
+      postalCode: '100',
+      addressLine1: 'No. 1 Stub Guard Road',
+    });
+    const cart = upsertCartItem(makeEmptyCart('ko', 'TWD'), item({ priceCents: 42000 }), 1);
+    return { address, quote: createCommerceCheckoutQuote(cart, 'ko', 'standard', address), lineItems: cart.items };
+  }
+
+  it('rejects authorized_stub update before filesystem mutation and leaves persisted bytes unchanged', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+    const { address, quote, lineItems } = quoteForOne();
+
+    const created = await createOrder({
+      confirmationNumber: 'TSENG-STUB-GUARD-UPDATE',
+      locale: 'ko',
+      currency: 'TWD',
+      customer: { name: 'Guard Customer', email: 'guard@example.com', phone: '0912' },
+      shippingAddress: address,
+      lineItems,
+      shipping: quote.shipping,
+      tax: quote.tax,
+      totals: quote.totals,
+      payment: { adapter: 'manual-invoice', status: 'requires_manual_payment', label: 'Manual invoice', stub: true },
+      now: '2026-05-20T00:00:00.000Z',
+    });
+
+    const filePath = path.join(tmpRoot, 'orders', `${created.orderId}.json`);
+    const snapshot = await fs.readFile(filePath, 'utf8');
+    expect(created.payment.status).toBe('requires_manual_payment');
+
+    await expect(
+      updateOrderState(created.orderId, { paymentStatus: 'authorized_stub', actor: 'admin' }),
+    ).rejects.toThrow('commerce_order_stub_payment_not_writable');
+
+    const afterAttempt = await fs.readFile(filePath, 'utf8');
+    expect(afterAttempt).toBe(snapshot);
+
+    const reloaded = await loadOrder(created.orderId);
+    expect(reloaded?.payment.status).toBe('requires_manual_payment');
+    expect(reloaded?.audit).toEqual(created.audit);
+  });
+
+  it('rejects creating an authorized_stub order before any filesystem mutation', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+    const { address, quote, lineItems } = quoteForOne();
+
+    await expect(createOrder({
+      confirmationNumber: 'TSENG-STUB-GUARD-CREATE',
+      locale: 'ko',
+      currency: 'TWD',
+      customer: { name: 'Create Guard', email: 'create-guard@example.com', phone: '0912' },
+      shippingAddress: address,
+      lineItems,
+      shipping: quote.shipping,
+      tax: quote.tax,
+      totals: quote.totals,
+      payment: { adapter: 'sandbox-card', status: 'authorized_stub', label: 'Sandbox card', stub: true },
+      now: '2026-05-20T00:00:00.000Z',
+    })).rejects.toThrow('commerce_order_stub_payment_not_writable');
+
+    const ordersDir = path.join(tmpRoot, 'orders');
+    const files = await fs.readdir(ordersDir).catch(() => [] as string[]);
+    expect(files).toHaveLength(0);
+  });
+
+  it('rejects an authorized_stub webhook write before filesystem mutation', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+    const { address, quote, lineItems } = quoteForOne();
+
+    const created = await createOrder({
+      confirmationNumber: 'TSENG-STUB-GUARD-WEBHOOK',
+      locale: 'ko',
+      currency: 'TWD',
+      customer: { name: 'Webhook Guard', email: 'webhook-guard@example.com', phone: '0912' },
+      shippingAddress: address,
+      lineItems,
+      shipping: quote.shipping,
+      tax: quote.tax,
+      totals: quote.totals,
+      payment: { adapter: 'sandbox-card', status: 'paid', label: 'Sandbox card', stub: true, referenceId: 'pi_stub_guard' },
+      now: '2026-05-20T00:00:00.000Z',
+    });
+
+    const filePath = path.join(tmpRoot, 'orders', `${created.orderId}.json`);
+    const snapshot = await fs.readFile(filePath, 'utf8');
+
+    await expect(
+      applyOrderPaymentWebhook({
+        referenceId: 'pi_stub_guard',
+        paymentStatus: 'authorized_stub',
+        eventId: 'evt_stub_downgrade',
+        eventType: 'payment_intent.downgraded',
+        provider: 'sandbox-card',
+      }),
+    ).rejects.toThrow('commerce_order_stub_payment_not_writable');
+
+    expect(await fs.readFile(filePath, 'utf8')).toBe(snapshot);
+    expect((await loadOrder(created.orderId))?.payment.status).toBe('paid');
+  });
+
+  it('permits a tombstone softDeleteOrder for a legacy authorized_stub order in production while preserving fields and reads', async () => {
+    vi.stubEnv('NODE_ENV', 'test');
+    const { address, quote, lineItems } = quoteForOne();
+
+    const created = await createOrder({
+      confirmationNumber: 'TSENG-STUB-SOFTDELETE',
+      locale: 'ko',
+      currency: 'TWD',
+      customer: { name: 'Soft Delete Guard', email: 'softdelete@example.com', phone: '0912' },
+      shippingAddress: address,
+      lineItems,
+      shipping: quote.shipping,
+      tax: quote.tax,
+      totals: quote.totals,
+      payment: { adapter: 'sandbox-card', status: 'authorized_stub', label: 'Sandbox card', stub: true },
+      now: '2026-05-20T00:00:00.000Z',
+    });
+    expect(created.payment.status).toBe('authorized_stub');
+
+    const filePath = path.join(tmpRoot, 'orders', `${created.orderId}.json`);
+    const before = JSON.parse(await fs.readFile(filePath, 'utf8'));
+
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+
+    const loaded = await loadOrder(created.orderId);
+    expect(loaded?.payment.status).toBe('authorized_stub');
+
+    expect(await softDeleteOrder(created.orderId)).toBe(true);
+
+    const after = JSON.parse(await fs.readFile(filePath, 'utf8'));
+    expect(after.deleted).toBe(true);
+    expect(after.payment).toEqual(before.payment);
+    expect(after.audit).toEqual(before.audit);
+    expect(after.customer).toEqual(before.customer);
+    expect(after.totals).toEqual(before.totals);
+    expect(after.lineItems).toEqual(before.lineItems);
+    expect(after.orderId).toBe(before.orderId);
+    expect(after.updatedAt).not.toBe(before.updatedAt);
+
+    expect(await loadOrder(created.orderId)).toBeNull();
+    expect((await listOrders()).map((entry) => entry.orderId)).not.toContain(created.orderId);
+  });
+
+  it('rejects issuing a document for a legacy authorized_stub order in production while preserving persisted bytes', async () => {
+    vi.stubEnv('NODE_ENV', 'test');
+    const { address, quote, lineItems } = quoteForOne();
+
+    const created = await createOrder({
+      confirmationNumber: 'TSENG-STUB-DOC-ISSUE',
+      locale: 'ko',
+      currency: 'TWD',
+      customer: { name: 'Doc Issue Guard', email: 'doc-issue@example.com', phone: '0912' },
+      shippingAddress: address,
+      lineItems,
+      shipping: quote.shipping,
+      tax: quote.tax,
+      totals: quote.totals,
+      payment: { adapter: 'sandbox-card', status: 'authorized_stub', label: 'Sandbox card', stub: true },
+      now: '2026-05-20T00:00:00.000Z',
+    });
+
+    const filePath = path.join(tmpRoot, 'orders', `${created.orderId}.json`);
+    const snapshot = await fs.readFile(filePath, 'utf8');
+
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+
+    await expect(
+      issueOrderDocument(created.orderId, { type: 'invoice', actor: 'admin' }),
+    ).rejects.toThrow('commerce_order_stub_payment_not_writable');
+
+    expect(await fs.readFile(filePath, 'utf8')).toBe(snapshot);
+    const reloaded = await loadOrder(created.orderId);
+    expect(reloaded?.documents).toEqual([]);
+    expect(reloaded?.payment.status).toBe('authorized_stub');
+  });
+
+  it('still permits legacy authorized_stub reads and sandbox writes outside production', async () => {
+    vi.stubEnv('NODE_ENV', 'test');
+    const { address, quote, lineItems } = quoteForOne();
+
+    const created = await createOrder({
+      confirmationNumber: 'TSENG-STUB-SANDBOX',
+      locale: 'ko',
+      currency: 'TWD',
+      customer: { name: 'Sandbox Customer', email: 'sandbox@example.com', phone: '0912' },
+      shippingAddress: address,
+      lineItems,
+      shipping: quote.shipping,
+      tax: quote.tax,
+      totals: quote.totals,
+      payment: { adapter: 'sandbox-card', status: 'authorized_stub', label: 'Sandbox card', stub: true },
+      now: '2026-05-20T00:00:00.000Z',
+    });
+
+    expect(created.payment.status).toBe('authorized_stub');
+    const reloaded = await loadOrder(created.orderId);
+    expect(reloaded?.payment.status).toBe('authorized_stub');
+  });
+});
+
+describe('production legacy authorized_stub laundering boundary', () => {
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  function quoteForOne() {
+    const address = normalizeCheckoutAddress({
+      country: 'TW',
+      region: 'Taipei',
+      city: 'Taipei',
+      postalCode: '100',
+      addressLine1: 'No. 1 Launder Guard Road',
+    });
+    const cart = upsertCartItem(makeEmptyCart('ko', 'TWD'), item({ priceCents: 42000 }), 1);
+    return { address, quote: createCommerceCheckoutQuote(cart, 'ko', 'standard', address), lineItems: cart.items };
+  }
+
+  async function seedLegacyStub(overrides: {
+    confirmationNumber: string;
+    adapter?: 'sandbox-card' | 'manual-invoice';
+    referenceId?: string;
+    customerEmail: string;
+  }) {
+    const { address, quote, lineItems } = quoteForOne();
+    return createOrder({
+      confirmationNumber: overrides.confirmationNumber,
+      locale: 'ko',
+      currency: 'TWD',
+      customer: { name: 'Launder Guard', email: overrides.customerEmail, phone: '0912' },
+      shippingAddress: address,
+      lineItems,
+      shipping: quote.shipping,
+      tax: quote.tax,
+      totals: quote.totals,
+      payment: {
+        adapter: overrides.adapter ?? 'sandbox-card',
+        status: 'authorized_stub',
+        label: overrides.adapter === 'manual-invoice' ? 'Manual invoice' : 'Sandbox card',
+        stub: true,
+        referenceId: overrides.referenceId,
+      },
+      now: '2026-05-20T00:00:00.000Z',
+    });
+  }
+
+  it('rejects laundering a legacy authorized_stub to paid via saveOrder in production and preserves persisted bytes', async () => {
+    vi.stubEnv('NODE_ENV', 'test');
+    const created = await seedLegacyStub({
+      confirmationNumber: 'TSENG-STUB-LAUNDER-SAVE',
+      customerEmail: 'launder-save@example.com',
+    });
+
+    const filePath = path.join(tmpRoot, 'orders', `${created.orderId}.json`);
+    const snapshot = await fs.readFile(filePath, 'utf8');
+
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+
+    await expect(
+      saveOrder({ ...created, payment: { ...created.payment, status: 'paid' } }),
+    ).rejects.toThrow('commerce_order_stub_payment_not_writable');
+
+    expect(await fs.readFile(filePath, 'utf8')).toBe(snapshot);
+    const reloaded = await loadOrder(created.orderId);
+    expect(reloaded?.payment.status).toBe('authorized_stub');
+  });
+
+  it('rejects laundering a legacy authorized_stub to paid via applyOrderPaymentWebhook in production and preserves persisted bytes', async () => {
+    vi.stubEnv('NODE_ENV', 'test');
+    const created = await seedLegacyStub({
+      confirmationNumber: 'TSENG-STUB-LAUNDER-WEBHOOK',
+      customerEmail: 'launder-webhook@example.com',
+      referenceId: 'pi_launder_webhook',
+    });
+
+    const filePath = path.join(tmpRoot, 'orders', `${created.orderId}.json`);
+    const snapshot = await fs.readFile(filePath, 'utf8');
+
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+
+    await expect(
+      applyOrderPaymentWebhook({
+        referenceId: 'pi_launder_webhook',
+        paymentStatus: 'paid',
+        eventId: 'evt_launder_paid',
+        eventType: 'payment_intent.succeeded',
+        provider: 'sandbox-card',
+      }),
+    ).rejects.toThrow('commerce_order_stub_payment_not_writable');
+
+    expect(await fs.readFile(filePath, 'utf8')).toBe(snapshot);
+    const reloaded = await loadOrder(created.orderId);
+    expect(reloaded?.payment.status).toBe('authorized_stub');
+  });
+
+  it('rejects laundering a legacy authorized_stub to paid via recordOrderManualPayment in production and preserves persisted bytes', async () => {
+    vi.stubEnv('NODE_ENV', 'test');
+    const created = await seedLegacyStub({
+      confirmationNumber: 'TSENG-STUB-LAUNDER-MANUAL',
+      adapter: 'manual-invoice',
+      customerEmail: 'launder-manual@example.com',
+    });
+
+    const filePath = path.join(tmpRoot, 'orders', `${created.orderId}.json`);
+    const snapshot = await fs.readFile(filePath, 'utf8');
+
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+
+    await expect(
+      recordOrderManualPayment(created.orderId, {
+        amountCents: created.totals.grandTotalCents,
+        method: 'cash',
+        reference: 'CASH-LAUNDER',
+        actor: 'admin',
+      }),
+    ).rejects.toThrow('commerce_order_stub_payment_not_writable');
+
+    expect(await fs.readFile(filePath, 'utf8')).toBe(snapshot);
+    const reloaded = await loadOrder(created.orderId);
+    expect(reloaded?.payment.status).toBe('authorized_stub');
+    expect(reloaded?.manualPayments).toEqual([]);
+  });
+
+  it('rejects marking a legacy authorized_stub order document emailed in production and preserves persisted bytes', async () => {
+    vi.stubEnv('NODE_ENV', 'test');
+    const created = await seedLegacyStub({
+      confirmationNumber: 'TSENG-STUB-LAUNDER-EMAIL',
+      adapter: 'manual-invoice',
+      customerEmail: 'launder-email@example.com',
+    });
+    const issued = await issueOrderDocument(created.orderId, { type: 'invoice', actor: 'admin' });
+    expect(issued.created).toBe(true);
+
+    const filePath = path.join(tmpRoot, 'orders', `${created.orderId}.json`);
+    const snapshot = await fs.readFile(filePath, 'utf8');
+
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+
+    await expect(
+      markOrderDocumentEmailed(created.orderId, issued.document!.documentId, { actor: 'admin' }),
+    ).rejects.toThrow('commerce_order_stub_payment_not_writable');
+
+    expect(await fs.readFile(filePath, 'utf8')).toBe(snapshot);
+    const reloaded = await loadOrder(created.orderId);
+    expect(reloaded?.payment.status).toBe('authorized_stub');
+    const doc = reloaded?.documents.find((entry) => entry.documentId === issued.document!.documentId);
+    expect(doc?.status).toBe('issued');
+    expect(doc?.emailedAt).toBeUndefined();
+  });
+
+  it('rejects voiding a legacy authorized_stub order document in production and preserves persisted bytes', async () => {
+    vi.stubEnv('NODE_ENV', 'test');
+    const created = await seedLegacyStub({
+      confirmationNumber: 'TSENG-STUB-LAUNDER-VOID',
+      adapter: 'manual-invoice',
+      customerEmail: 'launder-void@example.com',
+    });
+    const issued = await issueOrderDocument(created.orderId, { type: 'invoice', actor: 'admin' });
+    expect(issued.created).toBe(true);
+
+    const filePath = path.join(tmpRoot, 'orders', `${created.orderId}.json`);
+    const snapshot = await fs.readFile(filePath, 'utf8');
+
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+
+    await expect(
+      voidOrderDocument(created.orderId, issued.document!.documentId, { actor: 'admin' }),
+    ).rejects.toThrow('commerce_order_stub_payment_not_writable');
+
+    expect(await fs.readFile(filePath, 'utf8')).toBe(snapshot);
+    const reloaded = await loadOrder(created.orderId);
+    expect(reloaded?.payment.status).toBe('authorized_stub');
+    const doc = reloaded?.documents.find((entry) => entry.documentId === issued.document!.documentId);
+    expect(doc?.status).toBe('issued');
+    expect(doc?.voidedAt).toBeUndefined();
+  });
+
+  it('rejects superseding a legacy authorized_stub order document in production and preserves persisted bytes', async () => {
+    vi.stubEnv('NODE_ENV', 'test');
+    const created = await seedLegacyStub({
+      confirmationNumber: 'TSENG-STUB-LAUNDER-SUPERSEDE',
+      adapter: 'manual-invoice',
+      customerEmail: 'launder-supersede@example.com',
+    });
+    const issued = await issueOrderDocument(created.orderId, { type: 'invoice', actor: 'admin' });
+    expect(issued.created).toBe(true);
+
+    const filePath = path.join(tmpRoot, 'orders', `${created.orderId}.json`);
+    const snapshot = await fs.readFile(filePath, 'utf8');
+
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ALLOW_STUB', '1');
+
+    await expect(
+      supersedeOrderDocument(created.orderId, issued.document!.documentId, { actor: 'admin' }),
+    ).rejects.toThrow('commerce_order_stub_payment_not_writable');
+
+    expect(await fs.readFile(filePath, 'utf8')).toBe(snapshot);
+    const reloaded = await loadOrder(created.orderId);
+    expect(reloaded?.payment.status).toBe('authorized_stub');
+    expect(reloaded?.documents).toHaveLength(1);
+    const doc = reloaded?.documents.find((entry) => entry.documentId === issued.document!.documentId);
+    expect(doc?.status).toBe('issued');
+    expect(doc?.supersededByDocumentId).toBeUndefined();
   });
 });

@@ -44,6 +44,7 @@ import { FAQ_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-faq';
 import { SERVICES_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-services';
 import { upgradeStandardServicesPageDesktopParity } from '@/lib/builder/canvas/decompose-page-services';
 import { repairHomeCanvasLocale } from '@/lib/builder/canvas/home-locale-repair';
+import { upgradeHomeEditorLayoutParity } from '@/lib/builder/canvas/home-editor-layout-parity';
 import { buildFaqCompositePageCanvas, seedSitePages } from '@/lib/builder/canvas/seed-pages';
 import { upgradePublicHeaderNavigation } from '@/lib/builder/site/public-header-navigation';
 import { needsStandardPageSeedForLocale } from '@/lib/builder/site/standard-pages';
@@ -129,7 +130,11 @@ function prepareEditorCanvasDocument(
   isInitialHomePage: boolean,
 ): BuilderCanvasDocument {
   if (isInitialHomePage && isHomeCanvasDocument(document)) {
-    return repairHomeCanvasLocale({ ...document, locale }, locale);
+    return upgradeHomeEditorLayoutParity(
+      repairHomeCanvasLocale({ ...document, locale }, locale),
+      locale,
+      { stampMetadata: false },
+    );
   }
   return normalizeCanvasDocument(document, locale);
 }
@@ -1513,36 +1518,40 @@ export default async function BuilderMainPage({
   });
   const upgradedInitialDocument =
     isHomeCanvasDocument(standardServicesUpgradedInitialDocument)
-      ? upgradeHomeDecomposedMobileParity(
-          upgradeHomeDecomposedTabletParity(
-            upgradeHomeHeroResponsiveParity(
-              upgradeHomeHeroEditorialPolish(
-                upgradeHomeHeroSearchForm(
-                  upgradeHeroQuickMenu(
-                    upgradeHomeFaqSection(
-                      upgradeHomeServicesSection(
-                        upgradeHomeOfficesTabbedLayout(
-                          upgradeHomeInsightsSource(
-                            upgradeHomeCaseResultsNodeIds(
-                              upgradeHomeHeroBoundarySpacing(
-                                upgradeHomeHeroMediaImages(upgradeOfficeMapPlaceholders(standardServicesUpgradedInitialDocument), locale),
+      ? upgradeHomeEditorLayoutParity(
+          upgradeHomeDecomposedMobileParity(
+            upgradeHomeDecomposedTabletParity(
+              upgradeHomeHeroResponsiveParity(
+                upgradeHomeHeroEditorialPolish(
+                  upgradeHomeHeroSearchForm(
+                    upgradeHeroQuickMenu(
+                      upgradeHomeFaqSection(
+                        upgradeHomeServicesSection(
+                          upgradeHomeOfficesTabbedLayout(
+                            upgradeHomeInsightsSource(
+                              upgradeHomeCaseResultsNodeIds(
+                                upgradeHomeHeroBoundarySpacing(
+                                  upgradeHomeHeroMediaImages(upgradeOfficeMapPlaceholders(standardServicesUpgradedInitialDocument), locale),
+                                ),
                               ),
+                              locale,
+                              datasetPosts,
                             ),
                             locale,
-                            datasetPosts,
                           ),
-                          locale,
                         ),
+                        locale,
                       ),
                       locale,
                     ),
                     locale,
                   ),
-                  locale,
                 ),
               ),
             ),
           ),
+          locale,
+          { stampMetadata: false },
         )
       : standardServicesUpgradedInitialDocument;
   if (

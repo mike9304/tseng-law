@@ -20,25 +20,44 @@ const ICON: Record<EditorTheme, EditorChromeIconName> = {
   auto: 'themeAuto',
 };
 
-function applyTheme(theme: EditorTheme): void {
+function getEffectiveTheme(theme: EditorTheme, media?: MediaQueryList): 'light' | 'dark' {
+  if (theme !== 'auto') return theme;
+  return (media ?? window.matchMedia('(prefers-color-scheme: dark)')).matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme: EditorTheme, media?: MediaQueryList): void {
   if (typeof document === 'undefined') return;
   document.documentElement.dataset.builderEditorTheme = theme;
+  const effectiveTheme = getEffectiveTheme(theme, media);
+  document.querySelectorAll<HTMLElement>('[data-editor-shell]').forEach((shell) => {
+    shell.dataset.editorTheme = effectiveTheme;
+  });
 }
 
 export default function EditorThemeToggle() {
   const [theme, setTheme] = useState<EditorTheme>(DEFAULT_EDITOR_PREFS.theme);
 
   useEffect(() => {
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    let currentTheme = loadEditorPreferences().theme;
     const prefs = loadEditorPreferences();
     setTheme(prefs.theme);
-    applyTheme(prefs.theme);
+    applyTheme(prefs.theme, media);
     function handlePrefsChange(event: Event) {
       const next = (event as CustomEvent<EditorPreferences>).detail ?? loadEditorPreferences();
+      currentTheme = next.theme;
       setTheme(next.theme);
-      applyTheme(next.theme);
+      applyTheme(next.theme, media);
     }
+    const handleSystemThemeChange = () => {
+      if (currentTheme === 'auto') applyTheme(currentTheme, media);
+    };
     document.addEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
-    return () => document.removeEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
+    media.addEventListener('change', handleSystemThemeChange);
+    return () => {
+      document.removeEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
+      media.removeEventListener('change', handleSystemThemeChange);
+    };
   }, []);
 
   function nextTheme() {

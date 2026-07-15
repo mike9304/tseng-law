@@ -3,7 +3,8 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { isSlotAvailable } from '@/lib/builder/bookings/availability';
 import { verifyBookingManageToken } from '@/lib/builder/bookings/manage-token';
-import { getBooking, getService, getStaff } from '@/lib/builder/bookings/storage';
+import { getBooking, getService, getStaff, saveBooking } from '@/lib/builder/bookings/storage';
+import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
 import { evaluateBookingSelfServicePolicy, type BookingSelfServicePolicy } from '@/lib/builder/bookings/refund';
 import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
 import type { Booking, BookingService, Staff } from '@/lib/builder/bookings/types';
@@ -49,7 +50,7 @@ vi.mock('@/lib/builder/bookings/refund', () => ({
 }));
 
 vi.mock('@/lib/builder/bookings/notifications', () => ({
-  sendBookingCancellation: vi.fn(async () => undefined),
+  sendBookingCancellation: vi.fn(async () => ({ ok: true, provider: 'resend', id: 'email-1' })),
 }));
 
 vi.mock('@/lib/builder/bookings/packages', () => ({
@@ -151,6 +152,7 @@ const isSlotAvailableMock = vi.mocked(isSlotAvailable);
 const evaluateBookingSelfServicePolicyMock = vi.mocked(evaluateBookingSelfServicePolicy);
 const acquireSlotLockMock = vi.mocked(acquireSlotLock);
 const releaseSlotLockMock = vi.mocked(releaseSlotLock);
+const sendBookingCancellationMock = vi.mocked(sendBookingCancellation);
 
 describe('/api/booking/manage/[token]', () => {
   beforeEach(() => {
@@ -244,6 +246,38 @@ describe('/api/booking/manage/[token]', () => {
     expect(payload.errorCode).toBe('cancel_unavailable');
     expect(payload.error).toBe('이 예약은 취소할 수 없습니다.');
     expect(payload.policy.cancelBlockedReason).toBe('이 예약은 취소할 수 없습니다.');
+  });
+
+  it('keeps a persisted cancellation successful when the email provider reports failure', async () => {
+    sendBookingCancellationMock.mockResolvedValueOnce({
+      ok: false,
+      provider: 'resend',
+      reason: 'provider_error',
+      status: 503,
+    });
+
+    const response = await PATCH(request('PATCH', '', { action: 'cancel' }), context);
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload.ok).toBe(true);
+    expect(payload.booking.status).toBe('cancelled');
+    expect(payload.emailDelivery).toEqual({ ok: false, reason: 'provider_error' });
+    expect(saveBooking).toHaveBeenCalled();
+  });
+
+  it('keeps a persisted cancellation successful when cancellation email rendering throws', async () => {
+    sendBookingCancellationMock.mockRejectedValueOnce(new Error('sensitive rendering details'));
+
+    const response = await PATCH(request('PATCH', '', { action: 'cancel' }), context);
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload.ok).toBe(true);
+    expect(payload.booking.status).toBe('cancelled');
+    expect(payload.emailDelivery).toEqual({ ok: false, reason: 'internal_error' });
+    expect(JSON.stringify(payload)).not.toContain('sensitive rendering details');
+    expect(saveBooking).toHaveBeenCalled();
   });
 
   it('returns a localized stable code when the requested slot is locked', async () => {

@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import type { BuilderBlogArchiveCanvasNode } from '@/lib/builder/canvas/types';
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { WidgetDataDisclosure } from '../_shared/WidgetDataDisclosure';
 import { getBlogArchiveCopy } from './blog-archive-copy';
 
 interface BlogArchiveElementProps {
@@ -106,6 +107,7 @@ export default function BlogArchiveElement({ node, mode = 'edit', locale }: Blog
         overflow: 'auto',
       }}
     >
+      {isBuilder ? <WidgetDataDisclosure locale={effectiveLocale} /> : null}
       <h3 style={{ margin: 0, fontSize: 14, fontWeight: 700, color: '#0f172a', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
         {copy.element.title}
       </h3>

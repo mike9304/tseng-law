@@ -1,5 +1,6 @@
 import type { Locale } from '@/lib/locales';
 import { responsivize } from '@/lib/builder/templates/_shared/responsivize';
+import { repairLegalPageMobileLayout } from './legal-responsive';
 import {
   type BuilderCompositeCanvasNode,
   type BuilderCanvasNode,
@@ -1410,17 +1411,18 @@ function createDecomposedPageCanvasDocument(
   height: number,
 ): BuilderCanvasDocument {
   responsivize(nodes);
-  repairPageHeaderMobileLayout(nodes);
-  repairAttorneyMobileLayout(nodes);
-  repairAttorneyTabletLayout(nodes);
-  repairPricingResponsiveLayout(nodes);
-  const nodesById = new Map(nodes.map((node) => [node.id, node]));
+  const responsiveNodes = repairLegalPageMobileLayout(nodes);
+  repairPageHeaderMobileLayout(responsiveNodes);
+  repairAttorneyMobileLayout(responsiveNodes);
+  repairAttorneyTabletLayout(responsiveNodes);
+  repairPricingResponsiveLayout(responsiveNodes);
+  const nodesById = new Map(responsiveNodes.map((node) => [node.id, node]));
   repairServicesResponsiveLayout(nodesById);
   repairColumnsResponsiveLayout(nodesById);
   repairReviewsDecomposedResponsiveLayout(nodesById);
   repairContactResponsiveLayout(nodesById);
   repairLegacyCompositeResponsiveLayout(nodesById);
-  restackTopLevelFlowSectionsResponsive(nodes);
+  restackTopLevelFlowSectionsResponsive(responsiveNodes);
   return {
     version: 1,
     locale,
@@ -1428,7 +1430,7 @@ function createDecomposedPageCanvasDocument(
     updatedBy: SITE_PAGE_SEED_VERSION,
     stageWidth: STAGE_WIDTH,
     stageHeight: height,
-    nodes,
+    nodes: responsiveNodes,
   };
 }
 

@@ -430,3 +430,61 @@ describe('buildPaymentAnalytics', () => {
     expect(serializePaymentAnalyticsTrendCsv(summary)).toContain('day,paymentAttempts,successfulPayments,partialPayments,failedPayments,refundedPayments');
   });
 });
+
+describe('authorized_stub analytics isolation', () => {
+  it('counts legacy authorized_stub orders as attempts with zero collected/success/fees and full outstanding across every surface', () => {
+    const stubOrder = order({
+      orderId: 'order-authorized-stub',
+      totals: { itemCount: 1, subtotalCents: 30000, discountCents: 0, totalCents: 30000, shippingCents: 0, taxCents: 0, grandTotalCents: 30000 },
+      payment: { adapter: 'sandbox-card', status: 'authorized_stub', label: 'Sandbox', stub: true },
+    });
+    const paidOrder = order({
+      orderId: 'order-paid-control',
+      totals: { itemCount: 1, subtotalCents: 10000, discountCents: 0, totalCents: 10000, shippingCents: 0, taxCents: 0, grandTotalCents: 10000 },
+      payment: { adapter: 'sandbox-card', status: 'paid', label: 'Sandbox', stub: true },
+    });
+
+    const summary = buildPaymentAnalytics({
+      orders: [stubOrder, paidOrder],
+      bookings: [],
+      services: [],
+      now: '2026-05-20T05:00:00.000Z',
+    });
+
+    expect(summary.totals.paymentAttempts).toBe(2);
+    expect(summary.totals.successfulPayments).toBe(1);
+    expect(summary.totals.currencyTotals).toEqual([{
+      currency: 'TWD',
+      grossCollected: 10000,
+      refunded: 0,
+      netCollected: 10000,
+      outstanding: 30000,
+      refundShareRate: 0,
+    }]);
+
+    const today = summary.trend[6];
+    expect(today).toMatchObject({
+      day: '2026-05-20',
+      paymentAttempts: 2,
+      successfulPayments: 1,
+    });
+
+    const ordersFunnel = summary.sourceFunnel.find((item) => item.source === 'orders');
+    expect(ordersFunnel).toMatchObject({ paymentAttempts: 2, successfulPayments: 1 });
+    expect(ordersFunnel?.currencyTotals).toEqual([
+      expect.objectContaining({ currency: 'TWD', grossCollected: 10000, outstanding: 30000 }),
+    ]);
+
+    const sandbox = summary.providerBreakdown.find((item) => item.provider === 'sandbox-card');
+    expect(sandbox).toMatchObject({ paymentAttempts: 2, successfulPayments: 1 });
+    expect(sandbox?.currencyTotals).toEqual([
+      expect.objectContaining({ currency: 'TWD', grossCollected: 10000, outstanding: 30000 }),
+    ]);
+
+    const sandboxFee = summary.providerFeeBreakdown.find((item) => item.provider === 'sandbox-card');
+    expect(sandboxFee).toMatchObject({ estimatedFeeCents: 320, estimatedNetCollectedCents: 9680 });
+    expect(sandboxFee?.currencyTotals).toEqual([
+      expect.objectContaining({ currency: 'TWD', grossCollected: 10000, estimatedFee: 320 }),
+    ]);
+  });
+});

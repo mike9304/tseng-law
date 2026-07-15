@@ -51,10 +51,21 @@ function sseEvent(name: 'progress' | 'result' | 'error', payload: object): strin
   return `event: ${name}\ndata: ${JSON.stringify(payload)}\n\n`;
 }
 
-function clientResults(batch: Awaited<ReturnType<typeof translateBatchViaRouter>>) {
+function clientResults(
+  batch: Awaited<ReturnType<typeof translateBatchViaRouter>>,
+  locale: Locale,
+) {
   return batch.results.map((result) => {
     if (result.ok) return { key: result.key, ok: true, text: result.text };
-    return { key: result.key, ok: false, error: result.error ?? result.reason };
+    const errorCode = result.reason === 'unconfigured'
+      ? 'translation_provider_unconfigured'
+      : 'translation_provider_failed';
+    return {
+      key: result.key,
+      ok: false,
+      error: getBuilderTranslationsApiErrorPayload(locale, errorCode).error,
+      errorCode,
+    };
   });
 }
 
@@ -73,6 +84,9 @@ export async function POST(request: NextRequest) {
   const body = parsed.data;
   const sourceLocale = normalizeLocale(body.sourceLocale ?? 'ko');
   const targetLocale = normalizeLocale(body.targetLocale ?? 'en');
+  if (sourceLocale === targetLocale) {
+    return errorResponse(errorLocale, 'invalid_request', 400);
+  }
   const entries = body.entries.slice(0, 25);
   const encoder = new TextEncoder();
 
@@ -96,14 +110,15 @@ export async function POST(request: NextRequest) {
         send('result', {
           type: 'result',
           payload: {
-            ok: true,
-            results: clientResults(batch),
+            ok: batch.summary.failed === 0,
+            results: clientResults(batch, errorLocale),
             summary: batch.summary,
           },
         });
-      } catch (error) {
-        const batchError = error instanceof Error ? error : new Error(String(error));
-        console.error('[builder/translations/translate-batch/stream] batch failed:', batchError);
+      } catch {
+        console.error('[builder/translations/translate-batch/stream] batch failed', {
+          code: 'translation_batch_failed',
+        });
         send('error', {
           type: 'error',
           error: getBuilderTranslationsApiErrorPayload(errorLocale, 'translation_batch_failed').error,

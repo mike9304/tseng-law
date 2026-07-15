@@ -1,149 +1,150 @@
 #!/bin/zsh
-# run-builder-smoke.sh — run the admin-builder Playwright smoke against an
-# ISOLATED copy of builder-site data, via BUILDER_SITE_ROOT.
-#
-# Why: tests/builder-editor/admin-builder.playwright.ts hits
-# GET /ko/admin-builder?reseed=1 as its baseline, which factory-reseeds the
-# ko home draft+published. Pointing BUILDER_SITE_ROOT at a throwaway copy
-# means reseed=1 only ever destroys the isolated copy, never the shared
-# runtime-data/builder-site.
-#
-# Extension: other stores can be isolated the same way (e.g. set
-# BUILDER_EVENTS_ROOT / bookings / commerce roots to paths under
-# ISOLATED_ROOT). BUILDER_SITE_ROOT is handled in
-# src/lib/builder/site/persistence.ts (localRoot()).
+# Run the admin-builder smoke only through the attested QA harness. The harness
+# owns isolation, deterministic credentials/backends, manifest publication,
+# and canonical-data checksum verification.
 
-set -e
+set -eu
+set -o pipefail
 
-cd "$(dirname "$0")/.."
+SCRIPT_DIR="${0:A:h}"
+REPO_ROOT="${SCRIPT_DIR:h}"
+cd "$REPO_ROOT"
 
-# ── Config (env-overridable) ──────────────────────────────────────────
 : "${SMOKE_PORT:=4640}"
-: "${NEXT_DIST_DIR:=.next-loop-build}"
+: "${NEXT_DIST_DIR:?NEXT_DIST_DIR is required (build a clean dist before running the smoke)}"
+
+if [[ ! "$SMOKE_PORT" =~ '^[0-9]+$' ]] \
+  || (( SMOKE_PORT < 1 || SMOKE_PORT > 65535 ))
+then
+  echo "invalid SMOKE_PORT: expected an integer from 1 to 65535" >&2
+  exit 2
+fi
 
 if [[ ! -d "$NEXT_DIST_DIR" ]]; then
-  echo "dist dir missing — build first: NEXT_DIST_DIR=$NEXT_DIST_DIR npx next build" >&2
+  echo "dist dir missing: NEXT_DIST_DIR=$NEXT_DIST_DIR" >&2
   exit 1
 fi
 
-if lsof -ti :"$SMOKE_PORT" >/dev/null 2>&1; then
-  echo "port $SMOKE_PORT already in use — aborting (free it or set SMOKE_PORT)" >&2
-  exit 1
+if lsof -tiTCP:"$SMOKE_PORT" -sTCP:LISTEN >/dev/null 2>&1; then
+  echo "port $SMOKE_PORT already has a listener; refusing to start QA harness" >&2
+  exit 2
 fi
 
-# ── Isolated data root (throwaway; kept for forensics) ────────────────
-ISOLATED_ROOT=$(mktemp -d /tmp/tseng-smoke-XXXXXX)
-mkdir -p "$ISOLATED_ROOT/builder-site"
-if [[ -d runtime-data/builder-site/tseng-law-main-site ]]; then
-  cp -R runtime-data/builder-site/tseng-law-main-site "$ISOLATED_ROOT/builder-site/"
-fi
-if [[ -d runtime-data/builder-bookings ]]; then
-  cp -R runtime-data/builder-bookings "$ISOLATED_ROOT/"
-fi
-SERVER_LOG="$ISOLATED_ROOT/server.log"
+QA_BASE_URL="http://127.0.0.1:$SMOKE_PORT"
+MANIFEST_PATH=$(node "$REPO_ROOT/scripts/qa-runtime-isolation-contract.mjs" manifest-path \
+  --tmp-base "${TMPDIR:-/tmp}" \
+  --repository-root "$REPO_ROOT" \
+  --base-url "$QA_BASE_URL")
+FORENSICS_ROOT=$(mktemp -d "${TMPDIR:-/tmp}/tseng-builder-smoke-XXXXXX")
+HARNESS_LOG="$FORENSICS_ROOT/qa-harness.log"
+HARNESS_PID=""
 
-# ── Shared local-test config ──────────────────────────────────────────
-# Named LOCAL TEST ONLY secrets — never match production credentials.
-# Exporting these makes BOTH the server child AND the Playwright child
-# (whose specs import readSiteDocument/writeSiteDocument directly in the
-# Node process, and derive cron/auth headers from process.env) agree on
-# the same isolated persistence roots and auth secrets. Without this, the
-# browser-test Node process writes the real runtime-data/builder-site
-# while the server reads the isolated copy, and cron headers mismatch.
-SMOKE_CRON_SECRET="local-cron-secret"
-SMOKE_COMMERCE_WEBHOOK_SECRET="local-commerce-webhook-secret"
-SMOKE_BILLING_SHARE_SECRET="local-billing-share-secret"
-
-# Persistence roots — every backend points at the throwaway isolated copy
-# so neither the server nor direct-import test code can touch the real
-# runtime-data/builder-site.
-export BUILDER_SITE_ROOT="$ISOLATED_ROOT/builder-site"
-export BUILDER_BOOKINGS_ROOT="$ISOLATED_ROOT/builder-bookings"
-
-# Shared local-test secrets (cron auth, commerce webhook HMAC, billing share)
-export CRON_SECRET="$SMOKE_CRON_SECRET"
-export COMMERCE_PAYMENT_WEBHOOK_SECRET="$SMOKE_COMMERCE_WEBHOOK_SECRET"
-export BILLING_DOCUMENT_SHARE_SECRET="$SMOKE_BILLING_SHARE_SECRET"
-
-# Backends + stub/mock flags (local file backends, disable blob, allow stubs)
-export BLOB_READ_WRITE_TOKEN=
-export BUILDER_SITE_BACKEND=local
-export CONSULTATION_LOG_BACKEND=local
-export BOOKING_PAYMENT_ALLOW_STUB=1
-export BUILDER_ZOOM_MOCK_ALLOW=1
-export BOOKING_STRIPE_WEBHOOK_ALLOW_UNSIGNED=1
-export BILLING_DOCUMENT_STRIPE_WEBHOOK_ALLOW_UNSIGNED=1
-
-# Relaxed rate limits for the smoke run
-export BUILDER_MUTATION_RATE_LIMIT=2000
-export BUILDER_PUBLISH_RATE_LIMIT=500
-export BUILDER_ASSET_RATE_LIMIT=500
-
-# Build output dir (server locates the compiled .next build via this)
-export NEXT_DIST_DIR
-
-# ── Teardown — ALWAYS runs (trap on EXIT) ─────────────────────────────
-SERVER_PID=""
 teardown() {
+  local original_status=$?
+  local harness_status=0
+  trap - EXIT INT TERM HUP
   set +e
-  # Kill the background job (npm) if still alive …
-  if [[ -n "$SERVER_PID" ]] && kill -0 "$SERVER_PID" 2>/dev/null; then
-    kill "$SERVER_PID" 2>/dev/null
+  if [[ -n "$HARNESS_PID" ]] && kill -0 "$HARNESS_PID" 2>/dev/null; then
+    kill -TERM "$HARNESS_PID" 2>/dev/null
   fi
-  # … and the actual listener as a fallback (guard against empty output).
-  local pids
-  pids=$(lsof -ti :"$SMOKE_PORT" 2>/dev/null)
-  if [[ -n "$pids" ]]; then
-    echo "$pids" | xargs kill 2>/dev/null
+  if [[ -n "$HARNESS_PID" ]]; then
+    # start-qa-server.sh performs its canonical checksum proof in its own EXIT
+    # trap. Waiting here ensures that proof finishes before this wrapper exits.
+    wait "$HARNESS_PID" 2>/dev/null
+    harness_status=$?
   fi
-  # Forensics: do NOT delete ISOLATED_ROOT.
-  if [[ -n "$ISOLATED_ROOT" ]]; then
-    echo "  [teardown] isolated root kept for forensics: $ISOLATED_ROOT"
-    echo "  [teardown] server log: $SERVER_LOG"
-    echo "  [teardown] remove manually: rm -rf $ISOLATED_ROOT"
+  # SIGTERM (143) is the expected controlled shutdown. If Playwright passed
+  # but the harness checksum/lifecycle trap failed, preserve that hard failure.
+  if (( original_status == 0 && harness_status != 0 && harness_status != 143 )); then
+    original_status=$harness_status
   fi
+  echo "[smoke] QA harness log kept for forensics: $HARNESS_LOG"
+  echo "[smoke] wrapper artifacts kept for forensics: $FORENSICS_ROOT"
+  exit "$original_status"
 }
 trap teardown EXIT
+trap 'exit 130' INT
+trap 'exit 143' TERM
+trap 'exit 129' HUP
 
-# ── Start production server ───────────────────────────────────────────
-# The server inherits all exported local-test config above. Only PORT is
-# server-specific (the Playwright child uses BASE_URL, not PORT).
-env PORT="$SMOKE_PORT" npm run start >"$SERVER_LOG" 2>&1 &
-SERVER_PID=$!
+env \
+  PORT="$SMOKE_PORT" \
+  QA_BASE_URL="$QA_BASE_URL" \
+  NEXT_DIST_DIR="$NEXT_DIST_DIR" \
+  "$REPO_ROOT/scripts/start-qa-server.sh" >"$HARNESS_LOG" 2>&1 &
+HARNESS_PID=$!
 
-# ── Wait for readiness (HTTP 200 on /ko, 1s poll, max 60s) ────────────
-echo "[smoke] waiting for http://127.0.0.1:$SMOKE_PORT/ko (up to 60s)…"
-READY=0
-for i in {1..60}; do
-  code=$(curl -s -o /dev/null -w "%{http_code}" "http://127.0.0.1:$SMOKE_PORT/ko" 2>/dev/null || true)
-  if [[ "$code" == "200" ]]; then
-    READY=1
-    echo "[smoke] server ready after ${i}s"
+echo "[smoke] waiting for isolated QA harness at $QA_BASE_URL (up to 90s)"
+ready=0
+for second in {1..90}; do
+  if ! kill -0 "$HARNESS_PID" 2>/dev/null; then
+    echo "QA harness exited before readiness; last 40 log lines:" >&2
+    tail -n 40 "$HARNESS_LOG" >&2 || true
+    exit 1
+  fi
+
+  status=$(curl \
+    --silent \
+    --output /dev/null \
+    --write-out '%{http_code}' \
+    --max-time 1 \
+    "$QA_BASE_URL/ko" 2>/dev/null || true)
+  if [[ "$status" == "200" ]] && node -e '
+    const fs = require("node:fs");
+    const [manifestPath, baseUrl, repositoryRoot, ownerPidInput] = process.argv.slice(1);
+    const expectedOwnerPid = Number(ownerPidInput);
+    let descriptor;
+    const alive = (pid) => {
+      if (!Number.isSafeInteger(pid) || pid <= 0) return false;
+      try { process.kill(pid, 0); return true; }
+      catch (error) { return Boolean(error && error.code === "EPERM"); }
+    };
+    try {
+      descriptor = fs.openSync(manifestPath, fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW);
+      const stats = fs.fstatSync(descriptor);
+      if (!stats.isFile() || (stats.mode & 0o777) !== 0o600) process.exit(1);
+      const manifest = JSON.parse(fs.readFileSync(descriptor, "utf8"));
+      const ready = manifest
+        && manifest.schemaVersion === 3
+        && manifest.state === "ready"
+        && manifest.baseUrl === baseUrl
+        && manifest.manifestPath === manifestPath
+        && manifest.repositoryRoot === repositoryRoot
+        && /^[a-f0-9]{32}$/.test(manifest.runId)
+        && manifest.ownerPid === expectedOwnerPid
+        && alive(manifest.ownerPid)
+        && alive(manifest.serverPid);
+      process.exit(ready ? 0 : 1);
+    } catch { process.exit(1); }
+    finally { if (descriptor !== undefined) fs.closeSync(descriptor); }
+  ' "$MANIFEST_PATH" "$QA_BASE_URL" "$REPO_ROOT" "$HARNESS_PID" 2>/dev/null; then
+    ready=1
+    echo "[smoke] QA harness HTTP + ready-manifest gate passed after ${second}s"
     break
   fi
   sleep 1
 done
-if [[ "$READY" != "1" ]]; then
-  echo "[smoke] server did not become ready within 60s; last 20 lines of $SERVER_LOG:" >&2
-  tail -n 20 "$SERVER_LOG" >&2 || true
+
+if [[ "$ready" != "1" ]]; then
+  echo "QA harness did not become ready; last 40 log lines:" >&2
+  tail -n 40 "$HARNESS_LOG" >&2 || true
   exit 1
 fi
 
-# ── Run the smoke (pass through any extra args, e.g. other specs) ─────
-# The Playwright child inherits the exported isolated roots + secrets so
-# specs that import readSiteDocument/writeSiteDocument or derive cron
-# headers operate on the isolated copy, never the real runtime-data.
-PLAYWRIGHT_EXIT=0
-BASE_URL="http://127.0.0.1:$SMOKE_PORT" \
+# Playwright config reloads the fixed ready manifest and global setup proves a
+# fresh challenge-response attestation before any test is scheduled.
+set +e
+BASE_URL="$QA_BASE_URL" \
   npx playwright test tests/builder-editor/admin-builder.playwright.ts \
     --project=chromium-builder \
     --reporter=line \
-    "$@" || PLAYWRIGHT_EXIT=$?
+    "$@"
+playwright_status=$?
+set -e
 
-# ── Result ────────────────────────────────────────────────────────────
-if [[ "$PLAYWRIGHT_EXIT" -eq 0 ]]; then
-  echo "SMOKE PASS  (isolated root: $ISOLATED_ROOT, log: $SERVER_LOG)"
+if (( playwright_status == 0 )); then
+  echo "SMOKE PASS (harness log: $HARNESS_LOG)"
 else
-  echo "SMOKE FAIL (exit $PLAYWRIGHT_EXIT)  (isolated root: $ISOLATED_ROOT, log: $SERVER_LOG)"
+  echo "SMOKE FAIL (exit $playwright_status; harness log: $HARNESS_LOG)" >&2
 fi
-exit "$PLAYWRIGHT_EXIT"
+exit "$playwright_status"

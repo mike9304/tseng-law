@@ -38,6 +38,13 @@ export interface SandboxTopBarCopy {
   responsiveOverrideBadgeLabel: string;
   responsiveOverrideBadgeTitle: (viewportLabel: string) => string;
   selectionCountLabel: (count: number) => string;
+  primaryActionsAriaLabel: string;
+  undoTitle: string;
+  undoLabel: string;
+  redoTitle: string;
+  redoLabel: string;
+  secondaryActionsLabel: string;
+  secondaryActionsTitle: string;
   saveStateLabels: Record<TopBarSaveState, string>;
   saveBlockedLabel: string;
   historyTitle: string;
@@ -103,6 +110,13 @@ const COPY: Record<Locale, SandboxTopBarCopy> = {
     responsiveOverrideBadgeLabel: '오버라이드',
     responsiveOverrideBadgeTitle: (viewportLabel) => `${viewportLabel} 오버라이드 활성`,
     selectionCountLabel: (count) => `${count}개 선택됨`,
+    primaryActionsAriaLabel: '핵심 편집 작업',
+    undoTitle: '마지막 변경 실행 취소',
+    undoLabel: '실행 취소',
+    redoTitle: '마지막 변경 다시 실행',
+    redoLabel: '다시 실행',
+    secondaryActionsLabel: '도구',
+    secondaryActionsTitle: '보조 편집 도구 열기',
     saveStateLabels: {
       idle: '',
       saving: '저장 중...',
@@ -171,6 +185,13 @@ const COPY: Record<Locale, SandboxTopBarCopy> = {
     responsiveOverrideBadgeLabel: '覆寫',
     responsiveOverrideBadgeTitle: (viewportLabel) => `${viewportLabel} 覆寫已啟用`,
     selectionCountLabel: (count) => `已選取 ${count} 個`,
+    primaryActionsAriaLabel: '主要編輯動作',
+    undoTitle: '復原上一個變更',
+    undoLabel: '復原',
+    redoTitle: '重做上一個變更',
+    redoLabel: '重做',
+    secondaryActionsLabel: '工具',
+    secondaryActionsTitle: '開啟次要編輯工具',
     saveStateLabels: {
       idle: '',
       saving: '儲存中...',
@@ -239,6 +260,13 @@ const COPY: Record<Locale, SandboxTopBarCopy> = {
     responsiveOverrideBadgeLabel: 'override',
     responsiveOverrideBadgeTitle: (viewportLabel) => `${viewportLabel} override active`,
     selectionCountLabel: (count) => `${count} selected`,
+    primaryActionsAriaLabel: 'Primary editor actions',
+    undoTitle: 'Undo the last change',
+    undoLabel: 'Undo',
+    redoTitle: 'Redo the last change',
+    redoLabel: 'Redo',
+    secondaryActionsLabel: 'Tools',
+    secondaryActionsTitle: 'Open secondary editor tools',
     saveStateLabels: {
       idle: '',
       saving: 'Saving...',

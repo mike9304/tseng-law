@@ -5,7 +5,9 @@ import '@/lib/builder/components/_shared/widget-tokens.css';
 import '@/lib/builder/components/_shared/hover-states.css';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { getSiteUrl } from '@/lib/seo';
+import { getSearchEngineVerification, getSiteUrl } from '@/lib/seo';
+
+const searchEngineVerification = getSearchEngineVerification();
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
@@ -26,6 +28,7 @@ export const metadata: Metadata = {
     address: false,
     email: false,
   },
+  ...(searchEngineVerification ? { verification: searchEngineVerification } : {}),
   icons: {
     icon: [
       { url: '/favicon.ico' },

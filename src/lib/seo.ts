@@ -111,6 +111,26 @@ export function getSiteUrl(): string {
   return withProtocol.replace(/\/+$/, '');
 }
 
+export function getSearchEngineVerification(): Metadata['verification'] | undefined {
+  const naver = process.env.NAVER_SITE_VERIFICATION?.trim();
+  const bing = process.env.BING_SITE_VERIFICATION?.trim();
+  const google = process.env.GOOGLE_SITE_VERIFICATION?.trim();
+
+  if (!naver && !bing && !google) return undefined;
+
+  return {
+    ...(google ? { google } : {}),
+    ...(naver || bing
+      ? {
+          other: {
+            ...(naver ? { 'naver-site-verification': naver } : {}),
+            ...(bing ? { 'msvalidate.01': bing } : {}),
+          },
+        }
+      : {}),
+  };
+}
+
 export function getLocaleLanguageTag(locale: Locale): string {
   return locale === 'zh-hant' ? 'zh-Hant' : locale;
 }

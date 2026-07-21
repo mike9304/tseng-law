@@ -78,19 +78,19 @@ describe('standard about page decomposer', () => {
     }
   });
 
-  it('keeps zh-hant desktop height aligned to the legacy composite reserve without moving sections', () => {
+  it('expands the zh-hant desktop stage to contain the five-member attorney section', () => {
     const doc = STANDARD_PAGE_DECOMPOSERS.about('zh-hant');
     const nodes = nodesById(doc);
 
-    expect(doc.stageHeight).toBe(4943);
+    expect(doc.stageHeight).toBe(5166);
     expect(expectNode(nodes, 'page-about-page-header-root').rect).toMatchObject({ y: 0, width: 1280, height: 428 });
     expect(expectNode(nodes, 'page-about-firm-intro-root').rect).toMatchObject({ y: 428, width: 1280, height: 1027 });
-    expect(expectNode(nodes, 'page-about-attorney-root').rect).toMatchObject({ y: 1455, width: 1280, height: 2207 });
-    expect(expectNode(nodes, 'page-about-contact-root').rect).toMatchObject({ y: 3662, width: 1280, height: 1106 });
+    expect(expectNode(nodes, 'page-about-attorney-root').rect).toMatchObject({ y: 1455, width: 1280, height: 2605 });
+    expect(expectNode(nodes, 'page-about-contact-root').rect).toMatchObject({ y: 4060, width: 1280, height: 1106 });
 
     const contentBottom = expectNode(nodes, 'page-about-contact-root').rect.y
       + expectNode(nodes, 'page-about-contact-root').rect.height;
-    expect(doc.stageHeight - contentBottom).toBe(175);
+    expect(doc.stageHeight - contentBottom).toBe(0);
   });
 
   it('uses the zh-hant standalone legacy parity overlays', () => {

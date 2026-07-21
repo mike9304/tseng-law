@@ -45,12 +45,12 @@ function expectNode(nodes: Map<string, BuilderCanvasNode>, nodeId: string): Buil
 const desktopBaselines: readonly DesktopBaselineCase[] = [
   {
     slug: 'about',
-    stageHeight: 4943,
+    stageHeight: 5166,
     rects: [
       { id: 'page-about-page-header-root', rect: { y: 0, width: 1280, height: 428 } },
       { id: 'page-about-firm-intro-root', rect: { y: 428, width: 1280, height: 1027 } },
-      { id: 'page-about-attorney-root', rect: { y: 1455, width: 1280, height: 2207 } },
-      { id: 'page-about-contact-root', rect: { y: 3662, width: 1280, height: 1106 } },
+      { id: 'page-about-attorney-root', rect: { y: 1455, width: 1280, height: 2605 } },
+      { id: 'page-about-contact-root', rect: { y: 4060, width: 1280, height: 1106 } },
     ],
   },
   {
@@ -78,7 +78,7 @@ const desktopBaselines: readonly DesktopBaselineCase[] = [
   },
   {
     slug: 'lawyers',
-    stageHeight: 2635,
+    stageHeight: 3033,
     rects: [
       { id: 'page-lawyers-page-header-root', rect: { y: 0, width: 1280, height: 428 } },
       { id: 'page-lawyers-attorney-root', rect: { y: 428, width: 1280, height: 2203 } },
@@ -91,6 +91,7 @@ const desktopBaselines: readonly DesktopBaselineCase[] = [
       { id: 'page-lawyers-staff-grid', rect: { y: -3, width: 1178, height: 437 } },
       { id: 'page-lawyers-staff-card-0', rect: { x: 0, y: 0, width: 579, height: 437 } },
       { id: 'page-lawyers-staff-card-1', rect: { x: 599, y: 0, width: 579, height: 437 } },
+      { id: 'page-lawyers-staff-card-2', rect: { x: 0, y: 513, width: 548, height: 400 } },
       { id: 'page-lawyers-partner-wrap', rect: { y: 1420, width: 1178, height: 501 } },
       { id: 'page-lawyers-partner-card', rect: { y: 37, width: 1178, height: 416 } },
     ],

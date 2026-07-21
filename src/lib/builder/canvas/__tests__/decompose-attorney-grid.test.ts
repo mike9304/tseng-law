@@ -7,24 +7,24 @@ describe('createAttorneyProfileSectionNodes', () => {
   // intro/education/experience list (decompose-page-shared phantomHeight) so
   // section labels clear the previous list's rows; the attorney ROOT reclaims
   // the same amount from its bottom padding, keeping root/stage pinned to the
-  // live-measured totals (stage 2653, root 2207).
+  // live-measured totals for the current five-member team.
   it('regenerates the live-aligned lawyers page geometry from source', () => {
     const document = STANDARD_PAGE_DECOMPOSERS.lawyers('ko');
     const nodesById = new Map(document.nodes.map((node) => [node.id, node]));
 
-    expect(document.stageHeight).toBe(2653);
-    // 124 decomposed nodes + the 2 standalone publish-parity overlays (desktop/mobile)
-    expect(document.nodes).toHaveLength(126);
+    expect(document.stageHeight).toBe(3143);
+    // 148 decomposed nodes + the 2 standalone publish-parity overlays (desktop/mobile)
+    expect(document.nodes).toHaveLength(150);
     expect(nodesById.get('page-lawyers-attorney-root')?.rect).toMatchObject({
       y: 428,
       width: 1280,
-      height: 2207,
+      height: 2697,
     });
     expect(nodesById.get('page-lawyers-attorney-container')?.rect).toMatchObject({
       x: 51,
       y: 88,
       width: 1178,
-      height: 2062,
+      height: 2584,
     });
     expect(nodesById.get('page-lawyers-lead-wrap')?.rect).toMatchObject({
       y: 278,
@@ -42,12 +42,12 @@ describe('createAttorneyProfileSectionNodes', () => {
     });
     expect(nodesById.get('page-lawyers-staff-wrap')?.rect).toMatchObject({
       y: 963,
-      height: 515,
+      height: 1037,
     });
     expect(nodesById.get('page-lawyers-staff-grid')?.rect).toMatchObject({
       y: 40,
       width: 1178,
-      height: 503,
+      height: 997,
     });
     expect(nodesById.get('page-lawyers-staff-card-0')?.rect).toMatchObject({
       x: 0,
@@ -57,10 +57,16 @@ describe('createAttorneyProfileSectionNodes', () => {
     expect(nodesById.get('page-lawyers-staff-card-1')?.rect).toMatchObject({
       x: 588,
       width: 548,
-      height: 426,
+      height: 527,
+    });
+    expect(nodesById.get('page-lawyers-staff-card-2')?.rect).toMatchObject({
+      x: 0,
+      y: 559,
+      width: 548,
+      height: 438,
     });
     expect(nodesById.get('page-lawyers-partner-wrap')?.rect).toMatchObject({
-      y: 1554,
+      y: 2076,
       height: 503,
     });
     expect(nodesById.get('page-lawyers-partner-card')?.rect).toMatchObject({
@@ -102,7 +108,12 @@ describe('createAttorneyProfileSectionNodes', () => {
     const build = createAttorneyProfileSectionNodes('attorney-grid', 0, 'ko', 0);
     const nodesById = new Map(build.nodes.map((node) => [node.id, node]));
 
-    for (const cardId of ['attorney-grid-staff-card-0', 'attorney-grid-partner-card']) {
+    for (const cardId of [
+      'attorney-grid-staff-card-0',
+      'attorney-grid-staff-card-1',
+      'attorney-grid-staff-card-2',
+      'attorney-grid-partner-card',
+    ]) {
       const card = nodesById.get(cardId);
       const photo = nodesById.get(`${cardId}-photo`);
       const image = nodesById.get(`${cardId}-photo-image`);
@@ -149,32 +160,45 @@ describe('createAttorneyProfileSectionNodes', () => {
     const grid = nodesById.get('attorney-grid-staff-grid');
     const leftCard = nodesById.get('attorney-grid-staff-card-0');
     const rightCard = nodesById.get('attorney-grid-staff-card-1');
+    const lowerCard = nodesById.get('attorney-grid-staff-card-2');
 
     expect(grid).toBeDefined();
     expect(leftCard).toBeDefined();
     expect(rightCard).toBeDefined();
-    if (!grid || !leftCard || !rightCard) return;
+    expect(lowerCard).toBeDefined();
+    if (!grid || !leftCard || !rightCard || !lowerCard) return;
 
     expect(leftCard.parentId).toBe(grid.id);
     expect(rightCard.parentId).toBe(grid.id);
+    expect(lowerCard.parentId).toBe(grid.id);
     expect(rightCard.rect.x).toBeGreaterThan(leftCard.rect.x);
+    expect(lowerCard.rect.x).toBe(leftCard.rect.x);
+    expect(lowerCard.rect.y).toBeGreaterThan(leftCard.rect.y + leftCard.rect.height);
 
     const gridLevelStaffCards = build.nodes.filter((node) => (
       node.parentId === grid.id && /^attorney-grid-staff-card-\d+$/.test(node.id)
     ));
-    expect(gridLevelStaffCards).toHaveLength(2);
+    expect(gridLevelStaffCards).toHaveLength(3);
+    expect(gridLevelStaffCards.map((node) => (
+      node.kind === 'container' ? node.content.htmlId : undefined
+    ))).toEqual(['chang-rongxuan', 'chang-fangyu', 'son-jungmin']);
 
     const sharedDescendantSuffixes = ['photo', 'info', 'role', 'email', 'actions'] as const;
     for (const suffix of sharedDescendantSuffixes) {
       const leftDescendant = nodesById.get(`${leftCard.id}-${suffix}`);
       const rightDescendant = nodesById.get(`${rightCard.id}-${suffix}`);
+      const lowerDescendant = nodesById.get(`${lowerCard.id}-${suffix}`);
       expect(leftDescendant, `${leftCard.id}-${suffix}`).toBeDefined();
       expect(rightDescendant, `${rightCard.id}-${suffix}`).toBeDefined();
-      if (!leftDescendant || !rightDescendant) continue;
+      expect(lowerDescendant, `${lowerCard.id}-${suffix}`).toBeDefined();
+      if (!leftDescendant || !rightDescendant || !lowerDescendant) continue;
 
       expect(rightDescendant.parentId).not.toBe(grid.id);
+      expect(lowerDescendant.parentId).not.toBe(grid.id);
       expect(rightDescendant.rect.x).toBe(leftDescendant.rect.x);
+      expect(lowerDescendant.rect.x).toBe(leftDescendant.rect.x);
       expect(rightDescendant.rect.x).toBeLessThan(rightCard.rect.x);
+      expect(lowerDescendant.rect.y).toBeLessThan(lowerCard.rect.y);
     }
   });
 

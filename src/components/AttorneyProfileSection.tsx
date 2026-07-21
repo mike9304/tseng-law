@@ -44,13 +44,16 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Loca
   const l = labels[locale];
   const isLarge = size === 'large';
   const profileHref = member.profileSlug ? getAttorneyProfilePath(locale, member.profileSlug) : null;
+  const imageAlt = locale === 'ko'
+    ? `${member.role.includes('변호사') ? '대만변호사' : member.role} ${member.name} — 법무법인 호정 ${member.role}`
+    : `${member.name} ${member.role}`;
 
   return (
     <article id={member.id} className={`attorney-card ${isLarge ? 'attorney-card--lead' : 'attorney-card--sub'}`}>
       <div className={`attorney-card-photo ${isLarge ? 'attorney-card-photo--lead' : 'attorney-card-photo--sub'}`}>
         <Image
           src={member.photo}
-          alt={`${member.name} ${member.role}`}
+          alt={imageAlt}
           fill
           className="person-photo"
           style={{ objectFit: 'cover' }}

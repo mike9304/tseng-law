@@ -66,6 +66,20 @@ export const teamContent: Record<Locale, TeamContent> = {
         experience: ['교육부 법제처 사무원', '법무법인 호정 변호사'],
       },
       {
+        id: 'chang-fangyu',
+        name: '장방우',
+        role: '법무전문원',
+        email: 'fangyu@hoveringlaw.com.tw',
+        photo: '/images/team/chang-fangyu.jpg',
+        sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
+        intro: [
+          '다년간 여러 법률사무소에서 선임 법무전문원으로 근무하며, 소송 지원, 기업 법무 및 외국인 투자 관련 업무 등 다양한 법률 실무 경험을 쌓아온 베테랑 법무전문원입니다.',
+          '소송 지원, 회사 설립, 외국인 투자 승인, 각종 인허가 및 한국·대만 간 커뮤니케이션을 지원합니다.',
+        ],
+        education: ['동해대학교 법학 학사'],
+        experience: ['보인 법률사무소 선임 법무전문원', '무양국제 법률사무소 선임 법무전문원'],
+      },
+      {
         id: 'son-jungmin',
         name: '손정민',
         role: '한국 사무장',
@@ -138,6 +152,20 @@ export const teamContent: Record<Locale, TeamContent> = {
         experience: ['教育部法制處', '昊鼎國際法律事務所 律師'],
       },
       {
+        id: 'chang-fangyu',
+        name: '張芳瑀',
+        role: '法務專員',
+        email: 'fangyu@hoveringlaw.com.tw',
+        photo: '/images/team/chang-fangyu.jpg',
+        sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
+        intro: [
+          '曾於多家法律事務所擔任資深法務專員多年，累積訴訟支援、公司法務及外國人投資等多元法律實務經驗，是一位經驗豐富的法務專員。',
+          '協助訴訟支援、公司設立、外國人投資核准、各類許可申請及韓台溝通。',
+        ],
+        education: ['東海大學法律學系學士'],
+        experience: ['博胤法律事務所 資深法務專員', '慕陽國際法律事務所 資深法務專員'],
+      },
+      {
         id: 'son-jungmin',
         name: '孫貞旻',
         role: '韓國事務長',
@@ -208,6 +236,20 @@ export const teamContent: Record<Locale, TeamContent> = {
         ],
         education: ['LL.B., National Chung Hsing University'],
         experience: ['Ministry of Education, Legal Affairs Division', 'Attorney, Hovering International Law Firm']
+      },
+      {
+        id: 'chang-fangyu',
+        name: 'Fang-Yu Chang',
+        role: 'Paralegal',
+        email: 'fangyu@hoveringlaw.com.tw',
+        photo: '/images/team/chang-fangyu.jpg',
+        sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
+        intro: [
+          'A veteran paralegal with many years of experience as a senior paralegal at several law firms, covering litigation support, corporate legal affairs, and foreign investment matters.',
+          'Supports litigation, company formation, foreign investment approvals, permit applications, and Korea-Taiwan communications.'
+        ],
+        education: ['LL.B., Tunghai University'],
+        experience: ['Senior Paralegal, Boyin Law Firm', 'Senior Paralegal, Muyang International Law Firm']
       },
       {
         id: 'son-jungmin',

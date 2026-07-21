@@ -3835,6 +3835,23 @@ html.has-cyber-cursor .button {
   max-height: none !important;
 }
 
+/* 한국 사무실 블록으로 오시는길이 길어져 고정높이 빌더 루트를 넘침.
+   contact 루트는 절대배치 자식(composite)뿐이라 단순 height:auto는 0으로 붕괴 —
+   composite를 플로우(relative)로 전환해 루트가 콘텐츠 높이를 따라가게 한다(라이브 주입 실험 검증). */
+.site .builder-pub-node[data-node-id='contact-page-root-composite'] {
+  position: relative !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+.site .builder-pub-node[data-node-id='contact-page-root'] {
+  height: auto !important;
+  min-height: 0 !important;
+}
+.site [data-node-id='contact-page-root'] > main {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
 .attorney-group-title {
   font-size: 1.15rem; font-weight: 700; color: var(--primary); margin: 0 0 1.25rem;
   display: flex; align-items: center; gap: 0.75rem;

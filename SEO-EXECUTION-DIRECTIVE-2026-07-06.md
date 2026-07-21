@@ -16,6 +16,11 @@
 - **www→non-www 307(임시)→308(영구) 수정 완료**: 원인은 www.tseng-law.com이 Vercel 프로젝트에 미등록(엣지 기본 307). Vercel API로 프로젝트 도메인 redirect 308 등록, 라이브 `curl -I` 308 검증됨. (플랫폼 설정, 코드 아님)
 - **IndexNow 구현·커밋 94d31ea4**: `public/<key>.txt` + `src/lib/indexnow.ts`(submitIndexNow) + `scripts/indexnow-submit.mjs` + 테스트 4종. 콘텐츠 변경 배포 후 `node scripts/indexnow-submit.mjs` 실행 → Bing·네이버 등 IndexNow 참여 엔진에 즉시 색인 핑. (구현: Sonnet 5 하청 — **GLM 5.2는 2026-07-21 구독 만료, 발주 금지**)
 - **STEP 1 보정**: GSC 도메인 속성의 TXT 레코드는 Vercel이 아니라 **Cloudflare DNS**(dash.cloudflare.com — NS 실측 cloudflare)에 추가해야 한다.
+- **WO-A 커밋 490c7e8e**: sitemap 실제 lastmod(요청시각 폴백 제거)·changefreq 제거, 랜딩 3종 타이틀 강화(법인설립 병기, 소송 랜딩은 의도 분리), Threads sameAs 3곳. qa 6069 그린(플레이키 2건 단독 통과 확인)·build 그린(file backend).
+- **WO-3a 커밋 03ca2ac9**: 칼럼 C1~C4 초안(비용·회사형태·투심회·계좌개설, 각 3.7~4.6천자) [변호사 검수 대기]. 검수시트 docs/seo/review-sheet-2026-07-21.txt(마커 64건).
+- **STEP 13 문안 5종 작성**: docs/seo/outreach-campaign-2026-07-21.md (13a~13e + 디렉토리 15곳 조사표). 발송·등재는 사용자.
+- **STEP 14 셋업**: docs/seo/metrics-log.md 생성, 07-21 기준선 기록.
+- **⚠️ push 블로커**: 비대화식 SSH에서 키체인 접근 불가(-25308)·gh 토큰 만료. 사용자가 Studio에서 gh auth login 또는 GUI 터미널 git push 필요. 490c7e8e부터 로컬 대기 중.
 - 랜딩 4종(`korean-lawyer-in-taiwan`·`taiwan-lawyer`·`taiwan-company-setup-lawyer`·`taiwan-litigation-lawyer`)·FAQPage 스키마·llms.txt 라이브 200 확인 — 온사이트 AEO는 완비. 남은 병목 = STEP 1~3(사용자)과 인용원(STEP 13; wei-wei→tseng-law 백링크 0건 실측).
 
 ## 이 문서 사용법
@@ -45,13 +50,13 @@ STEP 0(작업트리 안전 확인)은 매번 먼저. 워커 산출물은 검수 
 | 6 | WO-SEO-1: llms.txt + FAQ 스키마 | GLM 5.2+검수 | ✅ 커밋 59d7ecd8 + 배포 (인프라+칼럼10편 FAQ+테스트22+merge버그수정, FAQPage 렌더 curl 검증) | 07-09 |
 | 7 | WO-SEO-2: 필러 페이지 2종 | GLM 5.2+검수 | ✅ 커밋 698032dc + 배포 (가이드 HowTo+FAQ, 랜딩 LegalService+FAQ, 6페이지 검증). ⚠️[변호사 검수 대기] | 07-09 |
 | 7.5 | IndexNow (키파일+lib+제출 스크립트) | Sonnet 5+검수 | ✅ 커밋 94d31ea4 + 배포 (QA 6069 그린·빌드 통과) | 07-21 |
-| 8 | WO-SEO-3a: 칼럼 4편 (C1~C4) | **Sonnet 5**+검수 | ☐ 대기 — net-new 법률콘텐츠 → 배포 전 변호사 검수 게이트 필수(사용자 결정) | |
+| 8 | WO-SEO-3a: 칼럼 4편 (C1~C4) | Codex gpt-5.6-sol+검수 | ✅ 커밋 03ca2ac9 [변호사 검수 대기·push 보류] | 07-21 |
 | 9 | 변호사 검수 사이클 (3a분) | **사용자(변호사)** | ☐ | |
 | 10 | WO-SEO-3b: 칼럼 4편 (C5~C8) + 검수 | Codex+사용자 | ☐ | |
 | 11 | WO-SEO-3c: 칼럼 4편 (C9~C12) + 검수 | Codex+사용자 | ☐ | |
 | 12 | 배포 후 라이브 일괄 검증 + 색인 요청 | 에이전트+사용자 | ☐ | |
-| 13 | 인용원 확보 캠페인 (문안은 에이전트, 발송은 사용자) | 혼합 | ☐ | |
-| 14 | 주간 측정 루틴 확립 | 에이전트 셋업 | ☐ | |
+| 13 | 인용원 확보 캠페인 (문안은 에이전트, 발송은 사용자) | 혼합 | ◐ 문안 5종 완료(outreach-campaign-2026-07-21.md), 발송 대기 | 07-21 |
+| 14 | 주간 측정 루틴 확립 | 에이전트 셋업 | ◐ metrics-log.md 생성·기준선 기록(GSC 등록 후 본가동) | 07-21 |
 | 15 | 4주차 리뷰 → 2라운드 계획 | 에이전트 | ☐ | |
 
 병렬 규칙: STEP 1·2·3(사용자, 브라우저)은 코드 STEP과 언제든 병렬. 코드 STEP(4,6,7,8,10,11)은 **동시에 하나만**(같은 레포). 13은 아무때나 병렬.

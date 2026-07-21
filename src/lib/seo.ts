@@ -252,7 +252,7 @@ export function buildWebsiteJsonLd(locale: Locale) {
         '@type': 'ImageObject',
         url: buildAbsoluteUrl(LOGO_IMAGE),
       },
-      sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913'],
+      sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913', 'https://www.threads.com/@lawyer.wei'],
     },
     potentialAction: {
       '@type': 'SearchAction',
@@ -282,7 +282,7 @@ export function buildLegalServiceJsonLd(
     email: 'wei@hoveringlaw.com.tw',
     areaServed: ['Taiwan', 'South Korea'],
     availableLanguage,
-    sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913'],
+    sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913', 'https://www.threads.com/@lawyer.wei'],
     contactPoint: [
       {
         '@type': 'ContactPoint',

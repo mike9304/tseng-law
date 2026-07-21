@@ -41,6 +41,7 @@ const commonSameAs = [
   'https://www.wei-wei-lawyer.com/about-8',
   'https://www.youtube.com/@weilawyer',
   'https://blog.naver.com/wei_lawyer/223461663913',
+  'https://www.threads.com/@lawyer.wei',
 ];
 
 export const attorneyProfiles: Record<Locale, Record<AttorneyProfileSlug, AttorneyProfile>> = {

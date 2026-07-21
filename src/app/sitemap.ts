@@ -35,15 +35,13 @@ function createEntry(
   path: string,
   options?: {
     lastModified?: string | Date;
-    changeFrequency?: 'daily' | 'weekly' | 'monthly';
     priority?: number;
     alternateLocales?: (typeof locales)[number][];
   }
 ): MetadataRoute.Sitemap[number] {
   return {
     url: buildAbsoluteUrl(getLocalizedPath(locale, path)),
-    lastModified: options?.lastModified ?? new Date(),
-    changeFrequency: options?.changeFrequency ?? 'weekly',
+    ...(options?.lastModified == null ? {} : { lastModified: options.lastModified }),
     priority: options?.priority ?? 0.8,
     alternates: {
       languages: getLanguageAlternates(path, options?.alternateLocales),
@@ -61,7 +59,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const path of STATIC_PATHS) {
       pages.push(
         createEntry(locale, path, {
-          changeFrequency: path === '' ? 'daily' : 'weekly',
           priority: path === '' ? 1 : 0.8,
         })
       );
@@ -70,7 +67,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const attorney of attorneyRecords) {
       pages.push(
         createEntry(locale, `/lawyers/${attorney.slug || primaryAttorneySlug}`, {
-          changeFrequency: 'monthly',
           priority: 0.86,
         })
       );
@@ -79,7 +75,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const area of serviceAreaRecords) {
       pages.push(
         createEntry(locale, `/services/${area.slug}`, {
-          changeFrequency: 'monthly',
           priority: 0.72,
         })
       );
@@ -92,8 +87,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const post of columns) {
       pages.push(
         createEntry(locale, `/columns/${post.slug}`, {
-          lastModified: post.date ? new Date(post.date) : new Date(),
-          changeFrequency: 'monthly',
+          lastModified: post.date || undefined,
           priority: 0.68,
           alternateLocales: ['ko', 'zh-hant'],
         })
@@ -110,7 +104,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       pages.push({
         url: entry.url,
         lastModified: entry.lastModified,
-        changeFrequency: entry.changeFrequency,
         priority: entry.priority,
         alternates: entry.alternates,
       });

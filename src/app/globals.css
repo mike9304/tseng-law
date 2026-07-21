@@ -5820,6 +5820,75 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   transform: translateY(-1px);
 }
 
+.office-taipei-extra {
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border-light);
+  display: grid;
+  gap: 0.9rem;
+}
+
+.office-rating-link {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: fit-content;
+  color: var(--text-heading);
+  text-decoration: none;
+}
+
+.office-rating-link:hover .office-rating-text {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.office-rating-stars {
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.office-rating-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-body);
+}
+
+.office-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.office-gallery-item {
+  position: relative;
+  min-height: 90px;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  background: var(--gray-100);
+}
+
+.office-korea {
+  margin-top: var(--space-8);
+}
+
+.office-korea .section-label {
+  margin-bottom: var(--space-2);
+}
+
+.office-korea-title {
+  margin-bottom: var(--space-4);
+}
+
+.office-map-wrap.office-map-wrap--naver,
+.office-map-wrap.office-map-wrap--naver iframe {
+  min-height: 360px;
+}
+
 /* ─── Messenger Chat Section ─── */
 .messenger-chat-section {
   padding: 3rem 0 2rem;
@@ -7892,6 +7961,10 @@ a.floating-ai-chat-contact-item:hover strong {
   .office-tabs .tab-button {
     flex: 1 1 calc(33.333% - 0.55rem);
     padding-inline: 0.45rem;
+  }
+
+  .office-gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .office-map-wrap,

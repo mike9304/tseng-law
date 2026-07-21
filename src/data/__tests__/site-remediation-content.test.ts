@@ -134,13 +134,25 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
     expect(css).toContain('height: auto !important;');
   });
 
-  it('1b-4 and 1b-5 put Taipei first and provide the Yangju Naver-only address card', () => {
+  it('1b-4 and 1b-5 put Taipei first, split out a standalone Korea office, and enrich the Taipei panel', () => {
     const officeTabs = readFileSync(path.join(root, 'src/components/OfficeMapTabs.tsx'), 'utf8');
     expect(officeTabs).toContain("const TAIPEI_EMBED_URL = 'https://maps.google.com/maps?q=25.0510767,121.5173077&z=16&output=embed'");
     expect(officeTabs).toContain("const TAIPEI_MAPS_URL = 'https://maps.app.goo.gl/mULpyAnQGz3M1GoQ6'");
     expect(officeTabs).toContain("mapLinkLabel: '네이버 지도에서 보기'");
-    expect(officeTabs).toContain("title: '대만 사업 컨설팅 사무실'");
     expect(officeTabs).toContain("current.embedUrl ? (");
+    expect(officeTabs).toContain('const taiwanOfficeData');
+    expect(officeTabs).toContain('const koreaOfficeData');
+    expect(officeTabs).toContain("title: '한국 사무실'");
+    expect(officeTabs).toContain("title: '韓國辦公室'");
+    expect(officeTabs).toContain("title: 'Korea Office'");
+    expect(officeTabs).not.toContain("title: '대만 사업 컨설팅 사무실'");
+    expect(officeTabs).toContain('map.naver.com/p/search/');
+    expect(officeTabs).toContain("const TAIPEI_RATING_VALUE = '5.0'");
+    expect(officeTabs).toContain('const TAIPEI_REVIEW_COUNT = 17');
+    expect(officeTabs).toContain('Google 플레이스 2026-07-21 기준, 수동 갱신');
+    expect(officeTabs).toContain('/images/office/taipei-01.jpg');
+    expect(officeTabs).toContain('/images/office/taipei-02.jpg');
+    expect(officeTabs).toContain('/images/office/taipei-03.jpg');
 
     for (const locale of ['ko', 'zh-hant', 'en'] as const) {
       const locations = siteContent[locale].contact.locations;

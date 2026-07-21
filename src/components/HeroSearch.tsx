@@ -70,7 +70,7 @@ export default function HeroSearch({ locale, scrollHref = '#insights' }: { local
 
   return (
     <section className="hero" id="hero" data-tone="dark">
-      <HeroMediaBackground />
+      <HeroMediaBackground locale={locale} />
       <div className="container hero-inner">
         <div className="hero-copy" data-builder-node-key="copy">
           <SectionLabel data-builder-surface-key={homeHeroTextSurfaceIds[0]}>

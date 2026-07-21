@@ -1,18 +1,25 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import type { Locale } from '@/lib/locales';
 
 type HeroMediaSlide = {
   image: string;
 };
 
-const slides: HeroMediaSlide[] = [
+const defaultSlides: HeroMediaSlide[] = [
   { image: '/images/hero-bg-01.webp' },
   { image: '/images/hero-bg-02.webp' },
   { image: '/images/hero-bg-03.webp' }
 ];
 
-export default function HeroMediaBackground() {
+// zh-hant은 대만 정체성이 분명한 타이베이 야경 단일 컷을 쓴다(사용자 승인 2026-07-22).
+const slidesByLocale: Partial<Record<Locale, HeroMediaSlide[]>> = {
+  'zh-hant': [{ image: '/images/hero-bg-taipei-night.webp' }],
+};
+
+export default function HeroMediaBackground({ locale }: { locale?: Locale } = {}) {
+  const slides = (locale && slidesByLocale[locale]) || defaultSlides;
   const [index, setIndex] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);
   // LCP: only the first frame is rendered on the server / first paint. The other

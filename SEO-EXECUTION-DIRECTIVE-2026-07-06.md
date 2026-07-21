@@ -16,6 +16,7 @@
 - **www→non-www 307(임시)→308(영구) 수정 완료**: 원인은 www.tseng-law.com이 Vercel 프로젝트에 미등록(엣지 기본 307). Vercel API로 프로젝트 도메인 redirect 308 등록, 라이브 `curl -I` 308 검증됨. (플랫폼 설정, 코드 아님)
 - **IndexNow 구현·커밋 94d31ea4**: `public/<key>.txt` + `src/lib/indexnow.ts`(submitIndexNow) + `scripts/indexnow-submit.mjs` + 테스트 4종. 콘텐츠 변경 배포 후 `node scripts/indexnow-submit.mjs` 실행 → Bing·네이버 등 IndexNow 참여 엔진에 즉시 색인 핑. (구현: Sonnet 5 하청 — **GLM 5.2는 2026-07-21 구독 만료, 발주 금지**)
 - **STEP 1 보정**: GSC 도메인 속성의 TXT 레코드는 Vercel이 아니라 **Cloudflare DNS**(dash.cloudflare.com — NS 실측 cloudflare)에 추가해야 한다.
+- **7/21 밤 WO-C/D/E 배포·라이브 검증 그린**: WO-C(sitemap noindex-en 9건 제외), WO-D(장방우 법무전문원 3로케일 추가 + ko alt "대만변호사 이름 — 법무법인 호정 직함" 패턴), WO-E(가이드 타이틀 "대만 법인설립·회사설립 절차·비용 총정리 (2026)"·H1·직답·FAQ 7개). 네이버 블로그용 사이트 오픈 안내 원고 작성(바탕화면 docx, 사용자 게시 대기).
 - **7/21 오후 색인 3사 완료**: GSC 색인 진단(색인14/미색인104 — 89건 발견됨-크롤안됨=권위부족 확정), 우선 5URL 색인요청 성공. Bing 웹마스터 GSC가져오기 등록+사이트맵(Processing). 네이버 소유확인+사이트맵+수집요청 5건. IndexNow 108 URL 핑(HTTP 200). WO-A/WO-B/네이버파일 푸시·배포·라이브검증 그린(새 타이틀 3종·실lastmod·Threads sameAs).
 - **WO-A 커밋 490c7e8e**: sitemap 실제 lastmod(요청시각 폴백 제거)·changefreq 제거, 랜딩 3종 타이틀 강화(법인설립 병기, 소송 랜딩은 의도 분리), Threads sameAs 3곳. qa 6069 그린(플레이키 2건 단독 통과 확인)·build 그린(file backend).
 - **WO-3a 커밋 03ca2ac9**: 칼럼 C1~C4 초안(비용·회사형태·투심회·계좌개설, 각 3.7~4.6천자) [변호사 검수 대기]. 검수시트 docs/seo/review-sheet-2026-07-21.txt(마커 64건).

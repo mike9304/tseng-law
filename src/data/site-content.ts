@@ -943,7 +943,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
   'zh-hant': {
     meta: {
       title: '昊鼎國際法律事務所',
-      description: '精通韓語、日語，提供台灣法律專業協助。'
+      description: '深耕韓國、日本企業來台投資與訴訟需求，提供在地化台灣法律專業協助。'
     },
     nav: {
       primary: [
@@ -969,12 +969,12 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         featured: [
           {
             title: '投資與訴訟全流程協助',
-            description: '為韓國、日本客戶提供在台投資及訴訟支援。',
+            description: '協助韓國、日本企業來台投資，並為相關訴訟提供全流程支援。',
             href: '/zh-hant/services'
           },
           {
-            title: '韓語、日語溝通',
-            description: '以韓語與日語清楚說明法律重點。',
+            title: '跨境法律溝通',
+            description: '以韓語、日語及中文提供清楚的法律說明。',
             href: '/zh-hant/about'
           }
         ],
@@ -1009,12 +1009,12 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     hero: {
       label: 'TAIWAN LEGAL',
-      title: '以韓語清楚說明台灣法律。',
-      subtitle: '精通韓語、日語的團隊協助處理台灣法律議題。',
+      title: '台灣法律，清楚說明。',
+      subtitle: '具備韓國、日本跨境實務經驗的專業團隊，協助處理台灣法律議題。',
       typingPhrases: [
         '台灣投資與公司設立起點',
         '台灣訴訟與實務經驗',
-        '台灣唯一韓語法律服務',
+        '台灣、韓國跨境法律的可靠夥伴',
         '韓國企業在台拓展夥伴'
       ],
       searchPlaceholder: '我們可以如何協助您？',
@@ -1125,7 +1125,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       label: 'ABOUT',
       title: '以清晰方式處理複雜的台灣法律',
       description:
-        "「昊」代表廣闊視野，「鼎」代表穩健基礎。憑藉韓語與日語溝通能力，從投資、公司設立到訴訟提供一站式法律支援。",
+        "「昊」代表廣闊視野，「鼎」代表穩健基礎。憑藉在韓國、日本市場的實務經驗與跨境法律網絡，從投資、公司設立到訴訟提供一站式法律支援。",
       highlightWords: ['韓語', '日語', '投資', '公司設立', '訴訟', '一站式'],
       items: [
         { target: 10, suffix: '+', label: '年經驗' },
@@ -1256,7 +1256,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           description: '從公司型態選擇（子公司、分公司、有限公司）到投審會審查、資本匯入、銀行開戶、營業場所確認，全程協助韓國企業落地台灣。涵蓋化妝品 PIF 登錄、物流業運輸執照等特殊行業許可，以及解散清算程序。',
           href: '/zh-hant/services#investment',
           details: [
-            '子公司 vs 分公司 vs 有限公司型態比較',
+            '公司型態比較：子公司、分公司、有限公司',
             '投審會核准程序代辦',
             '資本額匯入、籌備帳戶與正式帳戶轉換',
             '營業場所土地使用分區預先確認',
@@ -1265,7 +1265,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           ],
           relatedColumns: [
             { title: '台灣公司設立基礎篇', slug: 'taiwan-company-establishment-basics' },
-            { title: '子公司 VS 分公司', slug: 'taiwan-company-subsidiary-vs-branch' },
+            { title: '子公司與分公司比較', slug: 'taiwan-company-subsidiary-vs-branch' },
             { title: '進階篇 1：簽證與居留', slug: 'taiwan-company-establishment-advanced-1' },
             { title: '進階篇 2：資本與帳戶', slug: 'taiwan-company-establishment-advanced-2' },
             { title: '進階篇 3：營業場所', slug: 'taiwan-company-setup-pitch-location' },
@@ -1349,8 +1349,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     homeAttorney: {
       label: 'ABOUT',
-      title: '曾俊瑋律師，專注服務韓國客戶的台灣法律夥伴',
-      summary: '具備 10+ 年實務經驗、媒體露出與持續內容輸出，提供以實際案例為核心的法律協助。',
+      title: '曾俊瑋律師，韓國、台灣跨境法律的實務夥伴',
+      summary: '具備 10+ 年實務經驗、豐富媒體採訪經歷與持續內容產出，提供以實際案例為核心的法律協助。',
       ctaLabel: '查看律師簡介'
     },
     homeResults: {
@@ -1549,7 +1549,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       actions: [
         { label: 'AI 諮詢', value: 'AI 協助初步引導', href: '#ai-consultation' },
         { label: '電子郵件', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' },
-        { label: '電話 (韓國)', value: '010-2992-9304', href: 'tel:+821029929304' },
+        { label: '電話 (韓國)', value: '+82-10-2992-9304', href: 'tel:+821029929304' },
       ],
       cta: { label: '諮詢頁面', href: '/zh-hant/contact' }
     },
@@ -1616,7 +1616,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       description: '依案件類型安排投資、訴訟與公司設立諮詢流程。'
     },
     footer: {
-      note: '以韓語、日語溝通為基礎，承辦台灣各地的法律顧問與爭議案件。',
+      note: '深耕韓國、日本跨境法律事務，承辦台灣各地的法律顧問與爭議案件。',
       columns: [
         {
           title: '事務所',
@@ -2292,7 +2292,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       actions: [
         { label: 'AI Consult', value: 'AI-assisted initial guidance', href: '#ai-consultation' },
         { label: 'Email', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' },
-        { label: 'Phone (Korea)', value: '010-2992-9304', href: 'tel:+821029929304' },
+        { label: 'Phone (Korea)', value: '+82-10-2992-9304', href: 'tel:+821029929304' },
       ],
       cta: { label: 'Contact Page', href: '/en/contact' }
     },

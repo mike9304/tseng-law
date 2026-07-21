@@ -83,7 +83,7 @@ export const teamContent: Record<Locale, TeamContent> = {
         id: 'son-jungmin',
         name: '손정민',
         role: '한국 사무장',
-        email: 'wei@hoveringlaw.com.tw',
+        email: '',
         photo: '/images/team/son-jungmin.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외-1',
         intro: [
@@ -169,7 +169,7 @@ export const teamContent: Record<Locale, TeamContent> = {
         id: 'son-jungmin',
         name: '孫貞旻',
         role: '韓國事務長',
-        email: 'wei@hoveringlaw.com.tw',
+        email: '',
         photo: '/images/team/son-jungmin.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외-1',
         intro: [
@@ -255,7 +255,7 @@ export const teamContent: Record<Locale, TeamContent> = {
         id: 'son-jungmin',
         name: 'Jungmin Son',
         role: 'Korea Operations Manager',
-        email: 'wei@hoveringlaw.com.tw',
+        email: '',
         photo: '/images/team/son-jungmin.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외-1',
         intro: [
@@ -282,3 +282,4 @@ export const teamContent: Record<Locale, TeamContent> = {
     ]
   },
 };
+

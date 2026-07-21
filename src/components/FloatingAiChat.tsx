@@ -335,6 +335,7 @@ const COPY: Record<
     officesLabel: string;
     requireBoth: string;
     typingHint: string;
+    sendLabel: string;
     feedbackHelpful: string;
     feedbackUnhelpful: string;
     feedbackPending: string;
@@ -374,6 +375,7 @@ const COPY: Record<
     officesLabel: '사무소',
     requireBoth: '이름과 연락처를 입력해 주세요',
     typingHint: 'Enter로 전송',
+    sendLabel: '메시지 전송',
     feedbackHelpful: '도움이 됐어요',
     feedbackUnhelpful: '도움이 안 됐어요',
     feedbackPending: '전송 중...',
@@ -411,6 +413,7 @@ const COPY: Record<
     officesLabel: '據點',
     requireBoth: '請輸入姓名與聯絡方式',
     typingHint: 'Enter 送出',
+    sendLabel: '傳送訊息',
     feedbackHelpful: '有幫助',
     feedbackUnhelpful: '沒有幫助',
     feedbackPending: '傳送中...',
@@ -450,6 +453,7 @@ const COPY: Record<
     officesLabel: 'Offices',
     requireBoth: 'Please enter both name and contact',
     typingHint: 'Press Enter to send',
+    sendLabel: 'Send message',
     feedbackHelpful: 'This was helpful',
     feedbackUnhelpful: 'Not helpful',
     feedbackPending: 'Sending...',
@@ -549,6 +553,8 @@ export default function FloatingAiChat({
 
   useEffect(() => {
     if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
     const getFocusable = () => Array.from(
       dialogRef.current?.querySelectorAll<HTMLElement>(
         'button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
@@ -578,7 +584,10 @@ export default function FloatingAiChat({
       }
     };
     document.addEventListener('keydown', onKeyDown, true);
-    return () => document.removeEventListener('keydown', onKeyDown, true);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown, true);
+      document.body.style.overflow = previousOverflow;
+    };
   }, [open, onClose]);
 
   // Hydrate persisted feedback for this session on first render.
@@ -917,6 +926,7 @@ export default function FloatingAiChat({
       ref={dialogRef}
       className="floating-ai-chat"
       role="dialog"
+      aria-modal="true"
       aria-label={copy.title}
     >
       <div className="floating-ai-chat-header">
@@ -1033,7 +1043,13 @@ export default function FloatingAiChat({
         </div>
       </div>
 
-      <div className="floating-ai-chat-body" ref={scrollRef}>
+      <div
+        className="floating-ai-chat-body"
+        ref={scrollRef}
+        role="log"
+        aria-live="polite"
+        aria-relevant="additions text"
+      >
         {messages.map((msg, i) => {
           const showFeedback = msg.role === 'assistant' && i > 0;
           const feedbackState = feedbackByMessageId[msg.id];
@@ -1266,6 +1282,8 @@ export default function FloatingAiChat({
             <strong>{copy.formTitle}</strong>
             <input
               type="text"
+              aria-label={copy.nameLabel}
+              aria-describedby={formError ? 'floating-ai-chat-intake-error' : undefined}
               placeholder={copy.nameLabel}
               value={formName}
               onChange={(e) => setFormName(e.target.value)}
@@ -1273,12 +1291,16 @@ export default function FloatingAiChat({
             />
             <input
               type="text"
+              aria-label={copy.contactLabel}
+              aria-describedby={formError ? 'floating-ai-chat-intake-error' : undefined}
               placeholder={copy.contactLabel}
               value={formContact}
               onChange={(e) => setFormContact(e.target.value)}
               required
             />
             <textarea
+              aria-label={copy.summaryLabel}
+              aria-describedby={formError ? 'floating-ai-chat-intake-error' : undefined}
               placeholder={copy.summaryLabel}
               value={formSummary}
               onChange={(e) => setFormSummary(e.target.value)}
@@ -1287,13 +1309,21 @@ export default function FloatingAiChat({
             <label className="floating-ai-chat-consent">
               <input
                 type="checkbox"
+                aria-describedby={formError ? 'floating-ai-chat-intake-error' : undefined}
                 checked={formConsent}
                 onChange={(e) => setFormConsent(e.target.checked)}
               />
               <span>{copy.consentLabel}</span>
             </label>
             {formError && (
-              <p className="floating-ai-chat-error">{formError}</p>
+              <p
+                id="floating-ai-chat-intake-error"
+                className="floating-ai-chat-error"
+                role="alert"
+                aria-live="assertive"
+              >
+                {formError}
+              </p>
             )}
             <button type="submit" disabled={submitting}>
               {submitting ? copy.submitting : copy.submit}
@@ -1322,6 +1352,7 @@ export default function FloatingAiChat({
           <input
             ref={inputRef}
             type="text"
+            aria-label={copy.placeholder}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={copy.placeholder}
@@ -1338,7 +1369,7 @@ export default function FloatingAiChat({
               {copy.showForm}
             </button>
           )}
-          <button type="submit" disabled={loading || !input.trim()}>
+          <button type="submit" disabled={loading || !input.trim()} aria-label={copy.sendLabel}>
             ↑
           </button>
         </form>

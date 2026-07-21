@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import { isLocale, type Locale, locales } from '@/lib/locales';
-import LocaleSetter from '@/components/LocaleSetter';
 import '@/app/column-editor.css';
 import '@/components/builder/canvas/tokens/editorChrome.css';
 import '@/components/builder/canvas/inspector-tokens.css';
@@ -31,7 +30,6 @@ export default function BuilderLocaleLayout({
 
   return (
     <div className="builder-route-layout" data-locale={locale}>
-      <LocaleSetter locale={locale} />
       {children}
     </div>
   );

@@ -490,6 +490,7 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                   value={input}
                   onChange={(event) => setInput(event.target.value)}
                   placeholder={copy.placeholders.input}
+                  aria-label={copy.placeholders.input}
                   rows={4}
                 />
                 <button type="submit" className="button" disabled={chatPending || !input.trim()}>
@@ -560,11 +561,12 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
 
                 <form className="consultation-ai-form" onSubmit={handleSubmit}>
                   <label>
-                    <span>{copy.formLabels.name}</span>
+                    <span>{copy.formLabels.name} <span aria-hidden="true">*</span></span>
                     <input
                       value={lead.name || ''}
                       onChange={(event) => updateLead('name', event.target.value)}
                       placeholder={copy.placeholders.name}
+                      required
                     />
                   </label>
 
@@ -575,10 +577,12 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                       value={lead.email || ''}
                       onChange={(event) => updateLead('email', event.target.value)}
                       placeholder={copy.placeholders.email}
+                      aria-invalid={emailValue ? !emailValid : undefined}
+                      aria-describedby={emailValue && !emailValid ? 'consultation-email-error' : undefined}
                       style={emailValue && !emailValid ? { borderColor: '#ef4444' } : undefined}
                     />
                     {emailValue && !emailValid && (
-                      <span style={{ color: '#ef4444', fontSize: '12px' }}>
+                      <span id="consultation-email-error" role="alert" style={{ color: '#ef4444', fontSize: '12px' }}>
                         {locale === 'ko' ? '이메일 형식을 확인해 주세요' : locale === 'zh-hant' ? '請確認電子郵件格式' : 'Please check email format'}
                       </span>
                     )}
@@ -671,12 +675,13 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                   </div>
 
                   <label>
-                    <span>{copy.formLabels.summary}</span>
+                    <span>{copy.formLabels.summary} <span aria-hidden="true">*</span></span>
                     <textarea
                       rows={6}
                       value={lead.summary || ''}
                       onChange={(event) => updateLead('summary', event.target.value)}
                       placeholder={copy.placeholders.summary}
+                      required
                     />
                   </label>
 
@@ -694,8 +699,9 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                       type="checkbox"
                       checked={Boolean(lead.consent)}
                       onChange={(event) => updateLead('consent', event.target.checked)}
+                      required
                     />
-                    <span>{copy.formLabels.consent}</span>
+                    <span>{copy.formLabels.consent} <span aria-hidden="true">*</span></span>
                   </label>
 
                   <button type="submit" className="button" disabled={submitPending || !canSubmit}>
@@ -710,7 +716,11 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                   </div>
                 ) : null}
                 {submitError ? (
-                  <div className="consultation-ai-submit-status consultation-ai-submit-status--error">
+                  <div
+                    className="consultation-ai-submit-status consultation-ai-submit-status--error"
+                    role="alert"
+                    aria-live="assertive"
+                  >
                     {submitError}
                   </div>
                 ) : null}

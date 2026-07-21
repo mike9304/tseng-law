@@ -10,13 +10,28 @@ type OfficeInfo = {
   title: string;
   address: string;
   phone: string;
+  phoneLabel?: string;
   fax?: string;
-  embedUrl: string;
+  embedUrl?: string;
   mapsUrl: string;
+  mapLinkLabel?: string;
 };
+
+const TAIPEI_EMBED_URL = 'https://maps.google.com/maps?q=25.0510767,121.5173077&z=16&output=embed';
+const TAIPEI_MAPS_URL = 'https://maps.app.goo.gl/mULpyAnQGz3M1GoQ6';
+const YANGJU_NAVER_MAP_URL = 'https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%EC%A3%BC%EC%8B%9C%20%EC%98%A5%EC%A0%95%EB%8F%99%EB%A1%9C%20177%20%EC%88%98%ED%98%84%ED%94%84%EB%9D%BC%EC%9E%90%204%EC%B8%B5';
 
 const officeData: Record<Locale, OfficeInfo[]> = {
   ko: [
+    {
+      id: 'taipei',
+      title: '타이베이',
+      address: '台北市大同區承德路一段35號7樓之2',
+      phone: '04-2326-1862',
+      phoneLabel: '대표전화(타이중 본소)',
+      embedUrl: TAIPEI_EMBED_URL,
+      mapsUrl: TAIPEI_MAPS_URL
+    },
     {
       id: 'taichung',
       title: '타이중',
@@ -35,16 +50,24 @@ const officeData: Record<Locale, OfficeInfo[]> = {
       mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80'
     },
     {
-      id: 'taipei',
-      title: '타이베이',
-      address: '台北市大同區承德路一段35號7樓之2',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      embedUrl: 'https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2&t=&z=16&ie=UTF8&iwloc=B&output=embed',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2'
+      id: 'yangju',
+      title: '대만 사업 컨설팅 사무실',
+      address: '경기도 양주시 옥정동로 177 수현프라자 4층',
+      phone: '+82-10-2992-9304',
+      mapsUrl: YANGJU_NAVER_MAP_URL,
+      mapLinkLabel: '네이버 지도에서 보기'
     }
   ],
   'zh-hant': [
+    {
+      id: 'taipei',
+      title: '台北',
+      address: '台北市大同區承德路一段35號7樓之2',
+      phone: '04-2326-1862',
+      phoneLabel: '代表電話（台中本所）',
+      embedUrl: TAIPEI_EMBED_URL,
+      mapsUrl: TAIPEI_MAPS_URL
+    },
     {
       id: 'taichung',
       title: '台中',
@@ -63,16 +86,24 @@ const officeData: Record<Locale, OfficeInfo[]> = {
       mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80'
     },
     {
-      id: 'taipei',
-      title: '台北',
-      address: '台北市大同區承德路一段35號7樓之2',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      embedUrl: 'https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2&t=&z=16&ie=UTF8&iwloc=B&output=embed',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2'
+      id: 'yangju',
+      title: '台灣商務諮詢辦公室（韓國·楊州）',
+      address: '韓國京畿道楊州市玉井東路177號 Suhyeon Plaza 4樓',
+      phone: '+82-10-2992-9304',
+      mapsUrl: YANGJU_NAVER_MAP_URL,
+      mapLinkLabel: '在 Naver 地圖查看'
     }
   ],
   en: [
+    {
+      id: 'taipei',
+      title: 'Taipei',
+      address: '7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City',
+      phone: '04-2326-1862',
+      phoneLabel: 'Main line (Taichung headquarters)',
+      embedUrl: TAIPEI_EMBED_URL,
+      mapsUrl: TAIPEI_MAPS_URL
+    },
     {
       id: 'taichung',
       title: 'Taichung',
@@ -91,13 +122,12 @@ const officeData: Record<Locale, OfficeInfo[]> = {
       mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80'
     },
     {
-      id: 'taipei',
-      title: 'Taipei',
-      address: '7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      embedUrl: 'https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2&t=&z=16&ie=UTF8&iwloc=B&output=embed',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2'
+      id: 'yangju',
+      title: 'Taiwan Business Consulting Office (Yangju, Korea)',
+      address: '4F, Suhyeon Plaza, 177 Okjeongdong-ro, Yangju-si, Gyeonggi-do',
+      phone: '+82-10-2992-9304',
+      mapsUrl: YANGJU_NAVER_MAP_URL,
+      mapLinkLabel: 'View on Naver Map'
     }
   ]
 };
@@ -127,6 +157,7 @@ export default function OfficeMapTabs({
   const viewMapLabel =
     locale === 'ko' ? 'Google 지도에서 보기 (사진·리뷰)' : locale === 'zh-hant' ? '在 Google 地圖查看 (照片·評論)' : 'View on Google Maps (photos & reviews)';
   const mapPreviewLabel = locale === 'ko' ? '지도 미리보기' : locale === 'zh-hant' ? '地圖預覽' : 'Map preview';
+  const addressCardLabel = locale === 'ko' ? '한국 사무실 주소' : locale === 'zh-hant' ? '韓國辦公室地址' : 'Korea office address';
   const openMapLabel = locale === 'ko' ? '지도 열기' : locale === 'zh-hant' ? '開啟地圖' : 'Open map';
 
   if (!current) return null;
@@ -157,21 +188,25 @@ export default function OfficeMapTabs({
           ))}
         </div>
         <div className="office-layout">
-          <div className="office-map-wrap">
-            <iframe
-              key={current.id}
-              title={`${current.title} map`}
-              src={current.embedUrl}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
+          <div className={`office-map-wrap${current.embedUrl ? '' : ' office-map-wrap--address'}`}>
+            {current.embedUrl ? (
+              <iframe
+                key={current.id}
+                title={`${current.title} map`}
+                src={current.embedUrl}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            ) : null}
             <div
-              className="office-map-fallback"
-              data-office-map-fallback
+              className={current.embedUrl ? 'office-map-fallback' : 'office-address-card'}
+              data-office-map-fallback={current.embedUrl ? true : undefined}
             >
               <div className="office-map-fallback-panel">
-                <span className="office-map-fallback-kicker">{mapPreviewLabel}</span>
+                <span className="office-map-fallback-kicker">
+                  {current.embedUrl ? mapPreviewLabel : addressCardLabel}
+                </span>
                 <strong>{current.title}</strong>
                 <span>{current.address}</span>
                 <a
@@ -180,7 +215,7 @@ export default function OfficeMapTabs({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {openMapLabel}
+                  {current.mapLinkLabel ?? openMapLabel}
                 </a>
               </div>
             </div>
@@ -190,7 +225,7 @@ export default function OfficeMapTabs({
             <h3 className="card-title">{current.title}</h3>
             <p className="card-copy">{current.address}</p>
             <p className="card-copy">
-              {telLabel}:{' '}
+              {current.phoneLabel ?? telLabel}:{' '}
               <a className="link-underline phone-number" href={`tel:${current.phone.replace(/-/g, '')}`}>{current.phone}</a>
             </p>
             {current.fax && (
@@ -204,7 +239,7 @@ export default function OfficeMapTabs({
               target="_blank"
               rel="noopener noreferrer"
             >
-              {viewMapLabel}
+              {current.mapLinkLabel ?? viewMapLabel}
             </a>
           </article>
         </div>

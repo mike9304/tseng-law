@@ -229,7 +229,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         { label: '비용안내', href: '/ko/pricing' },
         { label: '호정칼럼', href: '/ko/columns' },
         { label: '미디어센터', href: '/ko/videos' },
-        { label: '고객후기', href: '/ko/reviews' }
+        { label: '오시는길', href: '/ko/contact#offices' }
       ],
       servicesMenu: {
         label: '업무분야',
@@ -860,6 +860,13 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       locationsLabel: '사무소 위치',
       locations: [
         {
+          title: '타이베이 사무소',
+          details: [
+            '台北市大同區承德路一段35號7樓之2',
+            '대표전화(타이중 본소): 04-2326-1862'
+          ]
+        },
+        {
           title: '타이중 사무소',
           details: [
             '臺中市北區館前路19號樓之1',
@@ -871,16 +878,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '가오슝 사무소',
           details: [
             '高雄市左營區安吉街233號',
-            'Tel: 04-2326-1862',
-            'Fax: 04-2326-1863'
-          ]
-        },
-        {
-          title: '타이베이 사무소',
-          details: [
-            '台北市大同區承德路一段35號7樓之2',
-            'Tel: 04-2326-1862',
-            'Fax: 04-2326-1863'
+            'Tel: 07-557-9797'
           ]
         }
       ],
@@ -954,7 +952,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         { label: '收費標準', href: '/zh-hant/pricing' },
         { label: '昊鼎專欄', href: '/zh-hant/columns' },
         { label: '媒體中心', href: '/zh-hant/videos' },
-        { label: '客戶評價', href: '/zh-hant/reviews' }
+        { label: '交通位置', href: '/zh-hant/contact#offices' }
       ],
       servicesMenu: {
         label: '服務領域',
@@ -1589,6 +1587,13 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       locationsLabel: '事務所據點',
       locations: [
         {
+          title: '台北所',
+          details: [
+            '台北市大同區承德路一段35號7樓之2',
+            '代表電話（台中本所）: 04-2326-1862'
+          ]
+        },
+        {
           title: '台中所',
           details: [
             '臺中市北區館前路19號樓之1',
@@ -1600,16 +1605,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '高雄所',
           details: [
             '高雄市左營區安吉街233號',
-            'Tel: 04-2326-1862',
-            'Fax: 04-2326-1863'
-          ]
-        },
-        {
-          title: '台北所',
-          details: [
-            '台北市大同區承德路一段35號7樓之2',
-            'Tel: 04-2326-1862',
-            'Fax: 04-2326-1863'
+            'Tel: 07-557-9797'
           ]
         }
       ],
@@ -1688,7 +1684,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         { label: 'Pricing', href: '/en/pricing' },
         { label: 'Columns', href: '/en/columns' },
         { label: 'Media Center', href: '/en/videos' },
-        { label: 'Reviews', href: '/en/reviews' }
+        { label: 'Directions', href: '/en/contact#offices' }
       ],
       servicesMenu: {
         ...base.nav.servicesMenu,
@@ -1869,7 +1865,13 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       title: 'A Clear Approach to Taiwan Legal Complexity',
       description:
         "The name 'Hovering' reflects both broad vision and stable foundations. We deliver one-stop support from investment and incorporation to litigation.",
-      highlightWords: ['Investment', 'Incorporation', 'Litigation', 'One-stop']
+      highlightWords: ['Investment', 'Incorporation', 'Litigation', 'One-stop'],
+      items: [
+        { target: 10, suffix: '+', label: 'Years of Experience' },
+        { target: 500, suffix: '+', label: 'Matters Handled' },
+        { target: 5, label: 'Office Locations' },
+        { target: 4, label: 'Languages Supported' }
+      ]
     },
     majorNews: {
       ...base.majorNews,
@@ -1995,6 +1997,14 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           title: 'Investment & Incorporation',
           description: 'End-to-end support from entity structuring to approvals, banking, permits, and launch.',
           href: '/en/services#investment',
+          details: [
+            'Compare entity structures: subsidiary, branch, and limited company',
+            'Investment Commission approval and application support',
+            'Capital remittance, preparatory accounts, and conversion to operating accounts',
+            'Advance review of zoning and permitted use for business premises',
+            'Industry-specific permits, including cosmetics PIF and logistics licensing',
+            'Lawful capital recovery through dissolution and liquidation'
+          ],
           relatedColumns: [
             { title: 'Taiwan Company Setup Basics', slug: 'taiwan-company-establishment-basics' },
             { title: 'Subsidiary vs Branch', slug: 'taiwan-company-subsidiary-vs-branch' },
@@ -2010,6 +2020,13 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           title: 'Civil Litigation & Damages',
           description: 'Contract disputes, tort claims, and consumer disputes with practical litigation strategy.',
           href: '/en/services#civil',
+          details: [
+            'Damages claims for personal injury and property loss',
+            'Breach-of-contract and commercial dispute representation',
+            'Consumer remedies and litigation against businesses',
+            'Fault analysis and compensation claims after traffic accidents',
+            'Korean-language litigation support for foreign clients'
+          ],
           relatedColumns: [
             { title: 'Gym Injury Case (TWD 1.57M)', slug: 'taiwan-gym-injury-lawsuit' },
             { title: 'Traffic Accident Response', slug: 'taiwan-traffic-accident-procedure' },
@@ -2020,6 +2037,13 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           title: 'Family Litigation',
           description: 'Divorce, property division, custody, and inheritance in cross-border family matters.',
           href: '/en/services#family',
+          details: [
+            'Divorce by agreement, including witness and household-registration requirements',
+            'Representation in divorce mediation and court proceedings',
+            'Parental rights, child custody, and visitation arrangements',
+            'Taiwan inheritance shares for spouses and children',
+            'Claims for distribution of remaining marital property'
+          ],
           relatedColumns: [
             { title: 'Taiwan Divorce Litigation Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
             { title: 'Inheritance & Custody Analysis', slug: 'taiwan-inheritance-custody-analysis' }
@@ -2029,6 +2053,12 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           title: 'Labor & Employment',
           description: 'Dismissal, severance, labor contracts, and workforce compliance in Taiwan.',
           href: '/en/services#labor',
+          details: [
+            'Severance calculations for economic dismissal',
+            'Exceptions allowing severance after voluntary resignation',
+            'Review of minimum service-period clauses',
+            'Taiwan employment-law advice for Korean businesses'
+          ],
           relatedColumns: [
             { title: 'Taiwan Severance Law', slug: 'taiwan-labor-severance-law' },
             { title: 'Voluntary Resignation Exceptions', slug: 'taiwan-voluntary-resignation-severance' },
@@ -2038,12 +2068,24 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         {
           title: 'Criminal Litigation',
           description: 'Investigation-stage support, defense, victim representation, and regulatory risk checks.',
-          href: '/en/services#criminal'
+          href: '/en/services#criminal',
+          details: [
+            'Counsel and representation during criminal investigations',
+            'Victim representation and criminal complaint procedures',
+            'Advance assessment of regulatory and criminal exposure',
+            'Korean-language interpretation support for foreign defendants'
+          ]
         },
         {
           title: 'IP & Financial Disputes',
           description: 'Trademark, patent, and copyright strategy plus finance and investment disputes.',
-          href: '/en/services#ip'
+          href: '/en/services#ip',
+          details: [
+            'Trademark clearance searches and Taiwan registration support',
+            'Patent and copyright infringement disputes',
+            'Litigation involving financial products and investment agreements',
+            'Brand and design protection strategy'
+          ]
         }
       ]
     },
@@ -2201,6 +2243,12 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       label: 'CHANNELS',
       title: 'Attorney Wei Tseng Public Channels',
       description: 'Explore Wei Tseng’s YouTube, blog, personal website, and official firm profile from one page.',
+      featured: {
+        title: 'WEI Lawyer YouTube Channel',
+        duration: 'YouTube',
+        href: 'https://www.youtube.com/@weilawyer',
+        image: '/images/video-feature.svg'
+      },
       items: [
         {
           title: 'Naver Blog: Taiwan Lawyer Wei Tseng',
@@ -2283,16 +2331,16 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       locationsLabel: 'Office Locations',
       locations: [
         {
+          title: 'Taipei Office',
+          details: ['7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City', 'Main line (Taichung headquarters): 04-2326-1862']
+        },
+        {
           title: 'Taichung Office',
           details: ['No. 19, Guanqian Rd., North Dist., Taichung City', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
         },
         {
           title: 'Kaohsiung Office',
           details: ['No. 233, Anji St., Zuoying Dist., Kaohsiung City', 'Tel: 07-557-9797']
-        },
-        {
-          title: 'Taipei Office',
-          details: ['7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
         }
       ],
       cta: { label: 'Contact Page', href: '/en/contact' }

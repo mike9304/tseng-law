@@ -388,59 +388,73 @@ const englishPostCopy: Record<string, { title: string; summary: string; keywords
   },
   'withdraw-capital': {
     title: 'How to Recover Capital When Closing a Taiwan Company',
-    summary: 'How dissolution and liquidation procedures are used to distribute remaining assets lawfully.'
+    summary: 'How dissolution and liquidation procedures are used to distribute remaining assets lawfully.',
+    keywords: ['dissolution', 'liquidation', 'capital recovery']
   },
   'logistics-business': {
     title: 'How to Operate a Logistics Business in Taiwan',
-    summary: 'Key legal requirements and practical procedures for entering the Taiwan logistics market.'
+    summary: 'Key legal requirements and practical procedures for entering the Taiwan logistics market.',
+    keywords: ['logistics', 'business licensing', 'Taiwan market entry']
   },
   'company-location': {
     title: 'Taiwan Company Setup: Advanced Guide 3 - Business Location',
-    summary: 'How to check zoning and local compliance requirements before selecting a business address.'
+    summary: 'How to check zoning and local compliance requirements before selecting a business address.',
+    keywords: ['business premises', 'zoning', 'location compliance']
   },
   'company-advanced-1': {
     title: 'Taiwan Company Setup: Advanced Guide 1',
-    summary: 'Frequently asked questions on post-incorporation work visa and ARC matters.'
+    summary: 'Frequently asked questions on post-incorporation work visa and ARC matters.',
+    keywords: ['work visa', 'ARC', 'company setup']
   },
   'subsidiary-vs-branch': {
     title: 'Taiwan Company Setup: Subsidiary vs Branch',
-    summary: 'A comparison of subsidiaries, branches, and representative offices in legal and tax structure.'
+    summary: 'A comparison of subsidiaries, branches, and representative offices in legal and tax structure.',
+    keywords: ['subsidiary', 'branch', 'representative office']
   },
   'company-basics': {
     title: 'Taiwan Company Setup Basics',
-    summary: 'An introductory overview of core incorporation procedures and required documents.'
+    summary: 'An introductory overview of core incorporation procedures and required documents.',
+    keywords: ['company setup', 'incorporation process', 'required documents']
   },
   'inheritance-custody': {
     title: 'Inheritance and Custody Issue Analysis',
-    summary: 'A cross-border family law analysis of inheritance shares and custody under Taiwan law.'
+    summary: 'A cross-border family law analysis of inheritance shares and custody under Taiwan law.',
+    keywords: ['inheritance', 'child custody', 'cross-border marriage']
   },
   'overtaking-accident': {
     title: 'Who Is Liable in an Overtaking Accident?',
-    summary: 'Practical standards for overtaking rules and fault allocation in Taiwan traffic accidents.'
+    summary: 'Practical standards for overtaking rules and fault allocation in Taiwan traffic accidents.',
+    keywords: ['traffic accident', 'overtaking', 'fault allocation']
   },
   'severance-exception': {
     title: 'Exceptions Where Voluntary Resignation May Still Qualify for Severance',
-    summary: 'Key exceptions under Taiwan labor law where severance remains claimable after voluntary resignation.'
+    summary: 'Key exceptions under Taiwan labor law where severance remains claimable after voluntary resignation.',
+    keywords: ['severance', 'labor law', 'voluntary resignation']
   },
   'divorce-qna': {
     title: 'Taiwan Divorce Mediation & Litigation Q&A',
-    summary: 'A practical Q&A guide to mediation and litigation in Taiwan divorce matters.'
+    summary: 'A practical Q&A guide to mediation and litigation in Taiwan divorce matters.',
+    keywords: ['divorce', 'mediation', 'family litigation']
   },
   'massage-law': {
     title: 'History and Regulation of Taiwan’s Massage Industry',
-    summary: 'A legal overview from historical development to current regulatory requirements.'
+    summary: 'A legal overview from historical development to current regulatory requirements.',
+    keywords: ['massage industry', 'regulation', 'legal history']
   },
   'mandatory-employment': {
     title: 'Disputes Over Mandatory Employment Period Clauses in Taiwan',
-    summary: 'Validity requirements and legal consequences of minimum service-period clauses.'
+    summary: 'Validity requirements and legal consequences of minimum service-period clauses.',
+    keywords: ['minimum service period', 'employment contract', 'labor dispute']
   },
   'labor-severance': {
     title: 'Taiwan Labor Law: Is Severance Really Hard to Receive?',
-    summary: 'A comparison of Taiwan and Korea severance systems with practical legal conditions.'
+    summary: 'A comparison of Taiwan and Korea severance systems with practical legal conditions.',
+    keywords: ['labor law', 'severance', 'dismissal']
   },
   'traffic-accident-procedure': {
     title: 'What to Do After a Traffic Accident in Taiwan',
-    summary: 'Step-by-step response flow: evidence, police report, insurance, and compensation claims.'
+    summary: 'Step-by-step response flow: evidence, police report, insurance, and compensation claims.',
+    keywords: ['traffic accident', 'insurance', 'compensation claim']
   }
 };
 

@@ -9,7 +9,6 @@ const labels = {
     intro: '소개',
     education: '학력',
     experience: '경력',
-    source: '원문 페이지',
     fullProfile: '상세 프로필',
     consult: '상담 문의',
     representative: '대표 변호사',
@@ -20,7 +19,6 @@ const labels = {
     intro: '簡介',
     education: '學歷',
     experience: '經歷',
-    source: '原始頁面',
     fullProfile: '完整簡介',
     consult: '聯絡諮詢',
     representative: '代表律師',
@@ -31,7 +29,6 @@ const labels = {
     intro: 'Introduction',
     education: 'Education',
     experience: 'Experience',
-    source: 'Source page',
     fullProfile: 'Full profile',
     consult: 'Book consultation',
     representative: 'Managing Attorney',
@@ -71,7 +68,9 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Loca
           )}
         </h3>
         <p className="attorney-card-role">{member.role}</p>
-        <a href={`mailto:${member.email}`} className="attorney-card-email">{member.email}</a>
+        {member.email ? (
+          <a href={`mailto:${member.email}`} className="attorney-card-email">{member.email}</a>
+        ) : null}
 
         <div className="attorney-card-section">
           <div className="attorney-card-label">{l.intro}</div>
@@ -94,9 +93,6 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Loca
           </ul>
         </div>
 
-        <p className="attorney-card-source">
-          <a href={member.sourceUrl} target="_blank" rel="noreferrer" className="link-underline">{l.source}</a>
-        </p>
         <div className="attorney-card-actions">
           {profileHref ? (
             <Link href={profileHref} className="button button--outline attorney-card-cta">
@@ -112,26 +108,37 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Loca
   );
 }
 
-export default function AttorneyProfileSection({ locale }: { locale: Locale }) {
+export default function AttorneyProfileSection({
+  locale,
+  showIntro = true,
+}: {
+  locale: Locale;
+  showIntro?: boolean;
+}) {
   const team = teamContent[locale];
+  const members = teamContent[locale].members;
   const l = labels[locale];
 
-  const lead = team.members.find((m) => m.id === 'tseng-junwei');
-  const staff = team.members.filter((m) => m.id !== 'tseng-junwei' && m.id !== 'huang-shengping');
-  const accountant = team.members.find((m) => m.id === 'huang-shengping');
+  const lead = members.find((m) => m.id === 'tseng-junwei');
+  const staff = members.filter((m) => m.id !== 'tseng-junwei' && m.id !== 'huang-shengping');
+  const accountant = members.find((m) => m.id === 'huang-shengping');
 
   return (
-    <section className="section section--light">
+    <section className="section section--light attorney-team-section">
       <div className="container">
-        <div className="section-label" data-builder-surface-key="section-label">
-          {team.label}
-        </div>
-        <h2 className="section-title" data-builder-surface-key="headline">
-          {team.title}
-        </h2>
-        <p className="section-lede" data-builder-surface-key="description">
-          {team.description}
-        </p>
+        {showIntro ? (
+          <>
+            <div className="section-label" data-builder-surface-key="section-label">
+              {team.label}
+            </div>
+            <h2 className="section-title" data-builder-surface-key="headline">
+              {team.title}
+            </h2>
+            <p className="section-lede" data-builder-surface-key="description">
+              {team.description}
+            </p>
+          </>
+        ) : null}
 
         {/* 대표 변호사 */}
         {lead && (

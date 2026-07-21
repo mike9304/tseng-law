@@ -6,7 +6,6 @@ import { siteContent } from '@/data/site-content';
 import JsonLd from '@/components/JsonLd';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import LocaleSetter from '@/components/LocaleSetter';
 import ScrollTopButton from '@/components/ScrollTopButton';
 import QuickContactWidget from '@/components/QuickContactWidget';
 import YearEndEventPopup from '@/components/YearEndEventPopup';
@@ -45,7 +44,6 @@ export default function LocaleLayout({
   const locale = resolveLocaleOrNotFound(params.locale);
   return (
     <div className="site" data-locale={locale} data-theme="parity">
-      <LocaleSetter locale={locale} />
       <JsonLd data={buildWebsiteJsonLd(locale)} />
       <JsonLd data={buildLegalServiceJsonLd(locale)} />
       <div data-legacy-chrome>

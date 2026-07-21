@@ -1,13 +1,25 @@
-/* eslint-disable @next/next/no-page-custom-font */
 import './globals.css';
 import './consultation-ai.css';
 import '@/lib/builder/components/_shared/widget-tokens.css';
 import '@/lib/builder/components/_shared/hover-states.css';
 import type { Metadata } from 'next';
+import { headers } from 'next/headers';
 import type { ReactNode } from 'react';
 import { getSearchEngineVerification, getSiteUrl } from '@/lib/seo';
+import { siteFontVariables } from './fonts';
 
 const searchEngineVerification = getSearchEngineVerification();
+
+export function resolveDocumentLanguage(pathname: string | null): 'ko' | 'zh-Hant' | 'en' {
+  const locale = pathname?.split('/').filter(Boolean)[0]?.toLowerCase();
+  if (locale === 'zh-hant') return 'zh-Hant';
+  if (locale === 'en') return 'en';
+  return 'ko';
+}
+
+function getRequestPathname(): string | null {
+  return headers().get('x-tseng-pathname');
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
@@ -45,22 +57,18 @@ export default function RootLayout({
 }: {
   children: ReactNode;
 }) {
+  const language = resolveDocumentLanguage(getRequestPathname());
+
   return (
-    <html suppressHydrationWarning>
+    <html lang={language} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
-          rel="stylesheet"
-        />
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<style>.reveal,.reveal-stagger > *{opacity:1;transform:none;pointer-events:auto;transition:none}</style>`,
           }}
         />
       </head>
-      <body>{children}</body>
+      <body className={siteFontVariables}>{children}</body>
     </html>
   );
 }

@@ -47,8 +47,7 @@ const pricingData: Record<Locale, PricingContent> = {
           '사건 유형·복합성에 따라 비용 상이',
           '정확한 견적은 상담 후 안내'
         ],
-        note: '사건 내용을 확인한 후 견적을 안내드립니다. 먼저 상담을 예약해 주세요.',
-        highlighted: true
+        note: '사건 내용을 확인한 후 견적을 안내드립니다. 먼저 상담을 예약해 주세요.'
       },
       {
         icon: 'company',
@@ -108,8 +107,7 @@ const pricingData: Record<Locale, PricingContent> = {
           '依案件類型與複雜度費用有所不同',
           '確切報價於諮詢後提供'
         ],
-        note: '確認案件內容後提供報價，請先預約諮詢。',
-        highlighted: true
+        note: '確認案件內容後提供報價，請先預約諮詢。'
       },
       {
         icon: 'company',
@@ -169,8 +167,7 @@ const pricingData: Record<Locale, PricingContent> = {
           'Fees vary by case type and complexity',
           'Exact quote provided after consultation'
         ],
-        note: 'We provide a quote after reviewing your case. Please book a consultation first.',
-        highlighted: true
+        note: 'We provide a quote after reviewing your case. Please book a consultation first.'
       },
       {
         icon: 'company',

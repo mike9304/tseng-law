@@ -154,12 +154,12 @@
   --text-strong: var(--text-heading);
   --text-muted: var(--text-secondary);
 
-  --font-heading-ko: 'Noto Serif KR', 'Nanum Myeongjo', Georgia, serif;
-  --font-heading-zh: 'Noto Serif TC', Georgia, serif;
-  --font-heading-en: 'Cormorant Garamond', 'Times New Roman', serif;
-  --font-body: 'IBM Plex Sans KR', 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body-zh: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+  --font-heading-ko: var(--font-noto-serif-kr-loaded), 'Nanum Myeongjo', Georgia, serif;
+  --font-heading-zh: var(--font-noto-serif-tc-loaded), Georgia, serif;
+  --font-heading-en: var(--font-cormorant-garamond-loaded), 'Times New Roman', serif;
+  --font-body: var(--font-ibm-plex-sans-kr-loaded), 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-zh: var(--font-noto-sans-tc-loaded), 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains-mono-loaded), 'SF Mono', 'Consolas', monospace;
   --font-sans: var(--font-body);
   --font-display: var(--font-heading-ko);
   --font-display-en: var(--font-heading-en);
@@ -175,6 +175,91 @@ html,
 body {
   margin: 0;
   padding: 0;
+}
+
+.not-found-page {
+  min-height: min(70vh, 760px);
+  display: grid;
+  place-items: center;
+  padding: clamp(5rem, 12vw, 9rem) 0;
+  background: var(--off-white);
+}
+
+.not-found-card,
+.global-error-main {
+  max-width: 720px;
+  text-align: center;
+}
+
+.not-found-code {
+  margin: 0;
+  color: var(--gold-dim);
+  font-family: var(--font-heading-en);
+  font-size: clamp(4.5rem, 14vw, 8rem);
+  line-height: 0.85;
+}
+
+.not-found-card h1,
+.global-error-main h1 {
+  margin: 1.5rem 0 0.75rem;
+  color: var(--text-heading);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.not-found-card > p:last-of-type,
+.global-error-main > p:last-of-type {
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.not-found-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.global-error-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--off-white, #f7faf6);
+  color: var(--text-body, #355145);
+  font-family: var(--font-body, system-ui, sans-serif);
+}
+
+.global-error-header,
+.global-error-footer {
+  padding: 1.25rem max(1.25rem, 5vw);
+  border-color: var(--border-light, #dbe6dc);
+  background: #fff;
+}
+
+.global-error-header {
+  border-bottom: 1px solid var(--border-light, #dbe6dc);
+}
+
+.global-error-header a {
+  color: var(--text-heading, #162e24);
+  font-family: var(--font-heading, Georgia, serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.global-error-main {
+  align-self: center;
+  justify-self: center;
+  padding: 4rem 1.25rem;
+}
+
+.global-error-footer {
+  border-top: 1px solid var(--border-light, #dbe6dc);
+  color: var(--text-secondary, #5f7869);
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 html {
@@ -238,6 +323,10 @@ textarea {
 
 html {
   scroll-padding-top: var(--header-offset-desktop, 96px);
+}
+
+.site main :where([id]) {
+  scroll-margin-top: calc(var(--header-offset-desktop) + 16px);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3733,6 +3822,19 @@ html.has-cyber-cursor .button {
 .attorney-staff-wrap { margin-top: 3rem; }
 .attorney-partner-wrap { margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border-light); }
 
+.page-header + .attorney-team-section {
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+/* Published lawyer pages use a legacy-composite overlay. Let its repaired
+   content define the height instead of retaining the old measured blank tail. */
+.site .builder-pub-main.builder-pub-main > .builder-pub-node[data-node-id='lawyers-page-root'] {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+
 .attorney-group-title {
   font-size: 1.15rem; font-weight: 700; color: var(--primary); margin: 0 0 1.25rem;
   display: flex; align-items: center; gap: 0.75rem;
@@ -4290,7 +4392,7 @@ html.has-cyber-cursor .button {
 .footer-legal-links a {
   font-size: 0.84rem;
   letter-spacing: -0.005em;
-  color: rgba(92, 76, 56, 0.78);
+  color: #4c3e2c;
   text-decoration: none;
   transition: color 180ms ease;
 }
@@ -5680,6 +5782,22 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   text-underline-offset: 0.18em;
 }
 
+.office-map-wrap--address {
+  display: grid;
+  place-items: center;
+  padding: clamp(1.25rem, 4vw, 3rem);
+}
+
+.office-address-card {
+  width: min(560px, 100%);
+}
+
+.office-address-card .office-map-fallback-panel {
+  width: 100%;
+  padding: clamp(1.4rem, 3vw, 2.25rem);
+  background: rgba(255, 255, 255, 0.96);
+}
+
 .office-card {
   align-self: stretch;
 }
@@ -5999,14 +6117,14 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 
 .year-end-popup-backdrop {
   position: fixed;
-  right: clamp(1rem, 2.5vw, 1.75rem);
-  bottom: clamp(1rem, 2.5vw, 1.75rem);
+  inset: 0;
   z-index: 72;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: min(420px, calc(100vw - 2rem));
-  pointer-events: none;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: clamp(1rem, 2.5vw, 1.75rem);
+  background: rgba(9, 20, 34, 0.28);
+  pointer-events: auto;
   animation: popupBackdropIn 350ms ease-out;
 }
 
@@ -6016,7 +6134,8 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 }
 
 .year-end-popup {
-  width: 100%;
+  width: min(420px, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
   position: relative;
   border-radius: 12px;
   border: 1px solid rgba(181, 140, 66, 0.35);
@@ -6028,7 +6147,8 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
     0 8px 18px rgba(9, 20, 34, 0.12),
     0 0 60px rgba(181, 140, 66, 0.06);
   padding: clamp(1rem, 2vw, 1.25rem);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   pointer-events: auto;
   animation: popupSlideIn 450ms cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -6060,6 +6180,84 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
+}
+
+.year-end-popup-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.year-end-popup-minimize {
+  min-height: 32px;
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text-secondary);
+  padding: 0 0.7rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+}
+
+.year-end-popup-minimize:hover,
+.year-end-popup-minimize:focus-visible {
+  border-color: var(--gold);
+  color: var(--gold-dim);
+}
+
+.year-end-popup-minimized {
+  position: fixed;
+  right: max(0.75rem, env(safe-area-inset-right));
+  bottom: max(0.75rem, env(safe-area-inset-bottom));
+  z-index: 72;
+  display: flex;
+  align-items: center;
+  max-width: min(360px, calc(100vw - 1.5rem));
+  overflow: hidden;
+  border: 1px solid rgba(181, 140, 66, 0.4);
+  border-radius: 999px;
+  background: #fffdf6;
+  box-shadow: 0 10px 28px rgba(9, 20, 34, 0.18);
+}
+
+.year-end-popup-pill {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 0;
+  background: transparent;
+  padding: 0.65rem 0.85rem;
+  color: var(--text-heading);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.year-end-popup-pill span {
+  flex: 0 0 auto;
+  color: var(--gold-dim);
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.year-end-popup-pill strong {
+  overflow: hidden;
+  font-size: 0.82rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.year-end-popup-pill-close {
+  align-self: stretch;
+  border: 0;
+  border-left: 1px solid var(--border-light);
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 0 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .year-end-popup-badge {
@@ -6516,7 +6714,8 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   position: fixed;
   bottom: 24px;
   right: clamp(0.75rem, 2vw, 1.75rem);
-  width: min(420px, calc(100vw - 1.5rem));
+  width: min(500px, 100vw);
+  max-width: calc(100vw - 1.5rem);
   max-height: min(640px, calc(100vh - 60px));
   background: #fff;
   border: 1px solid rgba(22, 56, 45, 0.14);
@@ -7463,6 +7662,31 @@ a.floating-ai-chat-contact-item:hover strong {
     padding-top: 72px;
   }
 
+  .site main :where([id]) {
+    scroll-margin-top: 88px;
+  }
+
+  .site:has(.quick-contact) main,
+  .site:has(.scroll-top[data-visible='true']) main {
+    padding-bottom: calc(7rem + env(safe-area-inset-bottom));
+  }
+
+  .quick-contact {
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: calc(4.75rem + env(safe-area-inset-bottom));
+  }
+
+  .scroll-top {
+    right: max(1.3rem, env(safe-area-inset-right));
+    bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+
+  .floating-ai-chat {
+    right: max(0.75rem, env(safe-area-inset-right));
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    max-height: calc(100dvh - 1.5rem - env(safe-area-inset-bottom));
+  }
+
   .section {
     padding: clamp(4rem, 9vw, 5rem) 0;
   }
@@ -7586,7 +7810,7 @@ a.floating-ai-chat-contact-item:hover strong {
   }
 
   .quick-contact {
-    bottom: 5.4rem;
+    bottom: calc(4.75rem + env(safe-area-inset-bottom));
   }
 
   .hero + .section,
@@ -7606,13 +7830,13 @@ a.floating-ai-chat-contact-item:hover strong {
   }
 
   .year-end-popup-backdrop {
-    right: 0.6rem;
-    bottom: 0.6rem;
-    width: calc(100vw - 1.2rem);
+    padding: 0;
   }
 
   .year-end-popup {
     width: 100%;
+    max-height: min(76dvh, 620px);
+    border-radius: 16px 16px 0 0;
   }
 
   .year-end-popup-actions {
@@ -7728,6 +7952,8 @@ a.floating-ai-chat-contact-item:hover strong {
   .reveal {
     opacity: 1;
     transform: none;
+    pointer-events: auto;
+    transition: none;
   }
 
   .reveal-stagger > * {
@@ -8339,7 +8565,7 @@ a.floating-ai-chat-contact-item:hover strong {
 .admin-login-copy h1,
 .admin-sidebar-head h1 {
   margin: 0.75rem 0;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-heading-en);
   font-size: clamp(2.2rem, 5vw, 3rem);
   line-height: 0.94;
 }
@@ -8919,7 +9145,7 @@ a.floating-ai-chat-contact-item:hover strong {
 .admin-editor textarea {
   min-height: 58vh;
   padding: 1.1rem 1.15rem;
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.81rem;
   line-height: 1.65;
   resize: vertical;
@@ -9067,7 +9293,7 @@ a.floating-ai-chat-contact-item:hover strong {
 .studio-topbar h2,
 .studio-main--placeholder h2 {
   margin: 0.5rem 0 0;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-heading-en);
   line-height: 0.95;
   color: #1d160e;
 }
@@ -16738,7 +16964,7 @@ button.builder-canvas-coach-pill {
 }
 
 .builder-columns-markdown {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 13px;
   line-height: 1.6;
   tab-size: 2;

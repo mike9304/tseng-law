@@ -118,7 +118,6 @@ export default function MobileNavDrawer({
   const drawerLabel = locale === 'ko' ? '모바일 메뉴' : locale === 'zh-hant' ? '行動選單' : 'Mobile menu';
   const navLabel = locale === 'ko' ? '모바일 주요 메뉴' : locale === 'zh-hant' ? '行動主要選單' : 'Mobile main menu';
   const brandText = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
-  const brandLogo = locale === 'zh-hant' ? '/images/brand/hovering-logo-zh.png' : '/images/brand/hovering-logo-ko.png';
   const labels =
     memberLabels ??
     (locale === 'ko'
@@ -145,7 +144,7 @@ export default function MobileNavDrawer({
         <div className="drawer-header">
           <Link className="header-logo drawer-brand" href={`/${locale}`} onClick={onClose}>
             <span className="logo-mark" aria-hidden>
-              <Image src={brandLogo} alt="" width={508} height={80} />
+              <Image src="/images/brand/hovering-seal-red-512.png" alt="" width={40} height={40} />
             </span>
             <span className="logo-kr">{brandText}</span>
           </Link>

@@ -231,10 +231,14 @@ function handleAdminAuth(
     });
   }
 
-  if (!options.issueBuilderSession) return NextResponse.next();
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-tseng-pathname', request.nextUrl.pathname);
+  const nextOptions = { request: { headers: requestHeaders } };
+
+  if (!options.issueBuilderSession) return NextResponse.next(nextOptions);
 
   return createBuilderAdminSessionToken(matchedUsername).then((token) => {
-    const response = NextResponse.next();
+    const response = NextResponse.next(nextOptions);
     response.cookies.set(BUILDER_ADMIN_SESSION_COOKIE, token, {
       httpOnly: true,
       sameSite: 'lax',
@@ -280,7 +284,9 @@ export async function middleware(request: NextRequest) {
     if (!(error instanceof Error)) throw error;
   }
 
-  return NextResponse.next();
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-tseng-pathname', pathname);
+  return NextResponse.next({ request: { headers: requestHeaders } });
 }
 
 export const config = {

@@ -150,7 +150,7 @@ export function LawyersLegacyPageBody({
       {showHero ? (
         <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       ) : null}
-      {showRepeater ? <AttorneyProfileSection locale={locale} /> : null}
+      {showRepeater ? <AttorneyProfileSection locale={locale} showIntro={false} /> : null}
     </>
   );
 }

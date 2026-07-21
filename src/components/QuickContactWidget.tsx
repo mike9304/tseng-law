@@ -7,6 +7,7 @@ import { siteContent, type SiteContent } from '@/data/site-content';
 import FloatingAiChat from '@/components/FloatingAiChat';
 
 const STORAGE_KEY = 'hojeong-ai-chat-collapsed';
+const AI_CHAT_ENABLED = process.env.NEXT_PUBLIC_ENABLE_AI_CHAT === 'true';
 
 export default function QuickContactWidget({
   locale,
@@ -94,7 +95,7 @@ export default function QuickContactWidget({
   }, [chatOpen]);
 
   // Avoid flashing the toggle button before hydration determines state.
-  if (!hydrated) {
+  if (!AI_CHAT_ENABLED || !hydrated) {
     return null;
   }
 

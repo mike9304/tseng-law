@@ -5,6 +5,26 @@ import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+vi.mock('next/font/google', () => {
+  const font = (options: { variable: string }) => ({
+    className: 'font-test',
+    style: { fontFamily: 'font-test' },
+    variable: options.variable,
+  });
+  return {
+    Cormorant_Garamond: font,
+    IBM_Plex_Sans_KR: font,
+    JetBrains_Mono: font,
+    Noto_Sans_TC: font,
+    Noto_Serif_KR: font,
+    Noto_Serif_TC: font,
+  };
+});
+
+vi.mock('next/headers', () => ({
+  headers: () => ({ get: () => null }),
+}));
+
 import RootLayout from '@/app/layout';
 import { installRevealLifecycle } from '../Reveal';
 

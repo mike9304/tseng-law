@@ -57,7 +57,6 @@ const pricingData: Record<Locale, PricingContent> = {
         unit: '',
         details: ['민사소송 (손해배상, 계약분쟁 등)', '형사소송 (고소, 변호)', '사건 유형·복합성에 따라 비용 상이', '정확한 견적은 상담 후 안내'],
         note: '사건 내용을 확인한 후 견적을 안내드립니다. 먼저 상담을 예약해 주세요.',
-        highlighted: true,
       },
       {
         icon: 'pricing-company',
@@ -96,7 +95,6 @@ const pricingData: Record<Locale, PricingContent> = {
         unit: '',
         details: ['民事訴訟（損害賠償、合約糾紛等）', '刑事訴訟（告訴、辯護）', '依案件類型與複雜度費用有所不同', '確切報價於諮詢後提供'],
         note: '確認案件內容後提供報價，請先預約諮詢。',
-        highlighted: true,
       },
       {
         icon: 'pricing-company',
@@ -135,7 +133,6 @@ const pricingData: Record<Locale, PricingContent> = {
         unit: '',
         details: ['Civil litigation (damages, contract disputes, etc.)', 'Criminal litigation (complaints, defense)', 'Fees vary by case type and complexity', 'Exact quote provided after consultation'],
         note: 'We provide a quote after reviewing your case. Please book a consultation first.',
-        highlighted: true,
       },
       {
         icon: 'pricing-company',

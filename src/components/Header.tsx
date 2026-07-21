@@ -46,7 +46,7 @@ function buildMainNavItems(locale: Locale): MainNavItem[] {
       { key: 'pricing', label: '비용안내', href: '/ko/pricing' },
       { key: 'insights', label: '호정칼럼', href: '/ko/columns' },
       { key: 'videos', label: '미디어센터', href: '/ko/videos' },
-      { key: 'reviews', label: '고객후기', href: '/ko/reviews' }
+      { key: 'directions', label: '오시는길', href: '/ko/contact#offices' }
     ];
   }
 
@@ -57,7 +57,7 @@ function buildMainNavItems(locale: Locale): MainNavItem[] {
       { key: 'pricing', label: '收費標準', href: '/zh-hant/pricing' },
       { key: 'insights', label: '昊鼎專欄', href: '/zh-hant/columns' },
       { key: 'videos', label: '媒體中心', href: '/zh-hant/videos' },
-      { key: 'reviews', label: '客戶評價', href: '/zh-hant/reviews' }
+      { key: 'directions', label: '交通位置', href: '/zh-hant/contact#offices' }
     ];
   }
 
@@ -67,7 +67,7 @@ function buildMainNavItems(locale: Locale): MainNavItem[] {
     { key: 'pricing', label: 'Pricing', href: '/en/pricing' },
     { key: 'insights', label: 'Columns', href: '/en/columns' },
     { key: 'videos', label: 'Media Center', href: '/en/videos' },
-    { key: 'reviews', label: 'Reviews', href: '/en/reviews' }
+    { key: 'directions', label: 'Directions', href: '/en/contact#offices' }
   ];
 }
 
@@ -185,7 +185,6 @@ function buildMegaPanels(locale: Locale): MegaPanel[] {
 export default function Header({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
   const brandText = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
-  const brandLogo = locale === 'zh-hant' ? '/images/brand/hovering-logo-zh.png' : '/images/brand/hovering-logo-ko.png';
   const pathname = usePathname();
   const [searchOpen, setSearchOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -453,7 +452,7 @@ export default function Header({ locale }: { locale: Locale }) {
         <div className="container header-main-inner">
           <Link className="header-logo" href={`/${locale}`} aria-label={homeLabel}>
             <span className="logo-mark" aria-hidden>
-              <Image src={brandLogo} alt="" width={508} height={80} priority />
+              <Image src="/images/brand/hovering-seal-red-512.png" alt="" width={40} height={40} priority />
             </span>
             <span className="logo-kr">{brandText}</span>
           </Link>
@@ -496,6 +495,9 @@ export default function Header({ locale }: { locale: Locale }) {
                     href={item.href}
                     className="nav-link"
                     aria-current={isCurrentPath(item.href) ? 'page' : undefined}
+                    aria-haspopup={hasMegaPanel(item.key) ? 'true' : undefined}
+                    aria-expanded={hasMegaPanel(item.key) ? openMenu === item.key : undefined}
+                    aria-controls={hasMegaPanel(item.key) ? `mega-panel-${item.key}` : undefined}
                     ref={(element) => {
                       linkRefs.current[item.key] = element;
                     }}
@@ -561,7 +563,12 @@ export default function Header({ locale }: { locale: Locale }) {
         onMouseLeave={scheduleCloseMegaMenu}
       >
         {megaPanels.map((panel) => (
-          <div key={panel.key} className={`mega-panel${openMenu === panel.key ? ' active' : ''}`} data-panel={panel.key}>
+          <div
+            key={panel.key}
+            id={`mega-panel-${panel.key}`}
+            className={`mega-panel${openMenu === panel.key ? ' active' : ''}`}
+            data-panel={panel.key}
+          >
             <div className="container">
               <div className="mega-layout">
                 <h2 className="mega-title">{panel.title}</h2>

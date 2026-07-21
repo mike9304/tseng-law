@@ -11,7 +11,6 @@ import {
 import { readBuilderPageSnapshot } from '@/lib/builder/persistence';
 import { readPublishedPageCanvas } from '@/lib/builder/site/published-canvas';
 import { getComponent } from '@/lib/builder/components/registry';
-import { buildGoogleFontsUrl } from '@/lib/builder/canvas/fonts';
 import { buildChildrenMap, resolveCanvasNodeAbsoluteRect } from '@/lib/builder/canvas/tree';
 import type {
   BuilderCanvasNode,
@@ -38,7 +37,6 @@ import {
   THEME_COLOR_TOKENS,
   buildCustomColorCssVars,
   buildHoverTransform,
-  collectThemeFontFamilies,
   createDarkColorsFromLight,
   resolveBuilderBrandAssetUrl,
   resolveBackgroundStyle,
@@ -408,20 +406,6 @@ export async function PublishedSitePageView({
   const dynamicListConfig = dynamicListRuntime.config;
   const datasetBindingContext = dynamicListRuntime.bindingContext;
   const dynamicListSlice = dynamicListRuntime.slice;
-  const usedFonts = new Set<string>();
-
-  for (const node of canvas.nodes) {
-    const content = node.content as Record<string, unknown>;
-    if (typeof content.fontFamily === 'string' && content.fontFamily !== 'system-ui') {
-      usedFonts.add(content.fontFamily);
-    }
-  }
-
-  for (const family of collectThemeFontFamilies(site.theme)) {
-    usedFonts.add(family);
-  }
-
-  const fontsUrl = buildGoogleFontsUrl([...usedFonts]);
   const navItems = filterNavigationForLocale(site.navigation || [], locale, {
     pages: site.pages,
     publishedOnly: true,
@@ -979,13 +963,6 @@ export async function PublishedSitePageView({
         dangerouslySetInnerHTML={{ __html: themeInitScript }}
       />
       {useBuilderChrome ? <div data-builder-published-page="true" style={{ display: 'none' }} /> : null}
-      {fontsUrl && (
-        <>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link rel="stylesheet" href={fontsUrl} />
-        </>
-      )}
       {(() => {
         const heroImage = canvas.nodes
           .filter((node) => node.kind === 'image' && node.visible !== false)

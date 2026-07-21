@@ -67,6 +67,7 @@ export default function FAQAccordion({
                   className={`faq-answer-wrap${isOpen ? ' is-open' : ''}`}
                   role="region"
                   aria-labelledby={buttonId}
+                  hidden={!isOpen}
                 >
                   <p className="faq-answer">{item.answer}</p>
                 </div>

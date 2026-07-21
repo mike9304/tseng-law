@@ -118,6 +118,18 @@ describe('admin middleware auth split', () => {
     expect(config.matcher).toEqual(expect.arrayContaining(expectedAdminMatchers));
   });
 
+  it('forwards the public pathname for root-layout SSR language selection', async () => {
+    const response = await middleware(adminRequest('/zh-hant/services'));
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get('x-middleware-override-headers')).toContain(
+      'x-tseng-pathname',
+    );
+    expect(response.headers.get('x-middleware-request-x-tseng-pathname')).toBe(
+      '/zh-hant/services',
+    );
+  });
+
   it('challenges unauthenticated dotted admin-builder subpaths', async () => {
     const response = await middleware(adminRequest('/ko/admin-builder/review.v2'));
 

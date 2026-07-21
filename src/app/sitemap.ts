@@ -30,6 +30,72 @@ const STATIC_PATHS = [
   '/accessibility',
 ] as const;
 
+type LocalizedSitemapRoute = {
+  locale: (typeof locales)[number];
+  path: string;
+};
+
+function getLocalizedSitemapRoute(url: string): LocalizedSitemapRoute | null {
+  let pathname: string;
+  try {
+    pathname = new URL(url).pathname;
+  } catch {
+    return null;
+  }
+
+  const [locale, ...segments] = pathname.split('/').filter(Boolean);
+  if (locale !== 'ko' && locale !== 'zh-hant' && locale !== 'en') {
+    return null;
+  }
+
+  return {
+    locale,
+    path: segments.length === 0 ? '' : `/${segments.join('/')}`,
+  };
+}
+
+/** Routes whose page metadata is noindex only for the English locale. */
+function isEnglishNoindexPath(path: string): boolean {
+  return path === '/faq'
+    || /^\/columns\/[^/]+$/.test(path)
+    || path === '/portfolio'
+    || /^\/portfolio\/[^/]+$/.test(path)
+    || path === '/events'
+    || /^\/events\/[^/]+$/.test(path)
+    || path === '/store'
+    || /^\/store\/(?:categories|products)\/[^/]+$/.test(path);
+}
+
+function applyLocaleIndexabilityRules(
+  entries: MetadataRoute.Sitemap,
+): MetadataRoute.Sitemap {
+  return entries.flatMap((entry) => {
+    const route = getLocalizedSitemapRoute(entry.url);
+    if (!route || !isEnglishNoindexPath(route.path)) {
+      return [entry];
+    }
+
+    if (route.locale === 'en') {
+      return [];
+    }
+
+    if (!entry.alternates?.languages) {
+      return [entry];
+    }
+
+    return [{
+      ...entry,
+      alternates: {
+        ...entry.alternates,
+        languages: Object.fromEntries(
+          Object.entries(entry.alternates.languages)
+            .filter(([language]) => language.toLowerCase() !== 'en'),
+        ),
+      },
+    }];
+  });
+}
+
 function createEntry(
   locale: (typeof locales)[number],
   path: string,
@@ -132,5 +198,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (takeNew) byUrl.set(entry.url, entry);
   }
 
-  return [...byUrl.values()];
+  return applyLocaleIndexabilityRules([...byUrl.values()]);
 }

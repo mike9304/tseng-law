@@ -1,10 +1,13 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getAllColumnPosts } from '@/lib/columns';
+import type { BuilderSitemapEntry } from '@/lib/builder/seo/sitemap-builder';
 
 const sourceMocks = vi.hoisted(() => ({
   readAttorneyProfileSourceRecords: vi.fn(async () => []),
   readServiceAreaSourceRecords: vi.fn(async () => []),
-  collectAllBuilderSitemapEntries: vi.fn(async () => []),
+  collectAllBuilderSitemapEntries: vi.fn<() => Promise<BuilderSitemapEntry[]>>(
+    async () => [],
+  ),
 }));
 
 vi.mock('@/lib/builder/lawyers/source', () => ({
@@ -23,7 +26,8 @@ describe('sitemap column lastModified', () => {
   beforeEach(() => {
     sourceMocks.readAttorneyProfileSourceRecords.mockClear();
     sourceMocks.readServiceAreaSourceRecords.mockClear();
-    sourceMocks.collectAllBuilderSitemapEntries.mockClear();
+    sourceMocks.collectAllBuilderSitemapEntries.mockReset();
+    sourceMocks.collectAllBuilderSitemapEntries.mockImplementation(async () => []);
   });
 
   it('uses each column frontmatter lastmod and preserves distinct dates', async () => {
@@ -45,5 +49,82 @@ describe('sitemap column lastModified', () => {
       columnEntry(second!.slug)?.lastModified,
     );
     expect(entries.every((entry) => entry.changeFrequency === undefined)).toBe(true);
+  });
+
+  it('excludes English-only noindex routes and removes their English hreflang', async () => {
+    const affectedPaths = [
+      '/faq',
+      '/columns/client-alert',
+      '/portfolio',
+      '/portfolio/cross-border-matter',
+      '/events',
+      '/events/taipei-seminar',
+      '/store',
+      '/store/categories/guides',
+      '/store/products/taiwan-business-guide',
+    ];
+    const indexablePath = '/columns';
+    const locales = ['ko', 'zh-hant', 'en'] as const;
+    const builderEntries = [...affectedPaths, indexablePath].flatMap((path) =>
+      locales.map((locale) => ({
+        url: `https://tseng-law.com/${locale}${path}`,
+        lastModified: new Date('2026-07-21T00:00:00.000Z'),
+        changeFrequency: 'weekly' as const,
+        priority: 0.7,
+        alternates: {
+          languages: {
+            ko: `https://tseng-law.com/ko${path}`,
+            'zh-Hant': `https://tseng-law.com/zh-hant${path}`,
+            en: `https://tseng-law.com/en${path}`,
+            'x-default': `https://tseng-law.com/ko${path}`,
+          },
+        },
+      })),
+    );
+    sourceMocks.collectAllBuilderSitemapEntries.mockImplementationOnce(
+      async () => builderEntries,
+    );
+
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+
+    const afterFilteringUrls = new Set(entries.map((entry) => entry.url));
+    const expectedRemovedUrls = affectedPaths.map(
+      (path) => `https://tseng-law.com/en${path}`,
+    );
+    const beforeFilteringUrls = new Set([
+      ...afterFilteringUrls,
+      ...expectedRemovedUrls,
+    ]);
+    expect({
+      beforeFiltering: beforeFilteringUrls.size,
+      afterFiltering: afterFilteringUrls.size,
+      removed: beforeFilteringUrls.size - afterFilteringUrls.size,
+    }).toEqual({
+      // 85 base entries + 30 builder fixtures - 6 duplicate URLs.
+      beforeFiltering: 109,
+      afterFiltering: 100,
+      removed: 9,
+    });
+
+    for (const path of affectedPaths) {
+      expect(entries.some((entry) => entry.url === `https://tseng-law.com/en${path}`)).toBe(false);
+
+      for (const locale of ['ko', 'zh-hant'] as const) {
+        const entry = entries.find(
+          (candidate) => candidate.url === `https://tseng-law.com/${locale}${path}`,
+        );
+        expect(entry, `${locale}${path} should remain in the sitemap`).toBeDefined();
+        expect(entry?.alternates?.languages).not.toHaveProperty('en');
+        expect(entry?.alternates?.languages).toHaveProperty('ko');
+        expect(entry?.alternates?.languages).toHaveProperty('zh-Hant');
+      }
+    }
+
+    const englishColumnsListing = entries.find(
+      (entry) => entry.url === `https://tseng-law.com/en${indexablePath}`,
+    );
+    expect(englishColumnsListing).toBeDefined();
+    expect(englishColumnsListing?.alternates?.languages).toHaveProperty('en');
   });
 });

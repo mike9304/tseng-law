@@ -242,6 +242,43 @@ export function planZhHeroImagePatch(zhDocument, options = {}) {
     widenToRoot(image, root, changes);
   }
 
+  // 실렌더 확인 결과: 보이는 히어로 배경은 image 자식 노드가 아니라 home-hero/home-hero-media
+  // 컨테이너의 자체 배경·로테이션 설정(style/content 내 문자열 경로)이 그린다.
+  // 히어로 서브트리 한정으로 구 자산 경로 문자열을 신 자산으로 전면 치환한다.
+  const OLD_HERO_SRCS = ['/images/hero-bg-01.webp', '/images/hero-bg-02.webp', '/images/hero-bg-03.webp'];
+  const heroSubtreeIds = new Set(['home-hero', HERO_ROOT_ID, HERO_MEDIA_ID, ...HERO_IMAGE_IDS]);
+  let grew = true;
+  while (grew) {
+    grew = false;
+    for (const node of nodes) {
+      if (node && !heroSubtreeIds.has(node.id) && heroSubtreeIds.has(node.parentId)) {
+        heroSubtreeIds.add(node.id);
+        grew = true;
+      }
+    }
+  }
+  const replaceDeep = (node, container, basePath) => {
+    const val = valueAt(node, basePath);
+    if (typeof val === 'string') {
+      let next = val;
+      for (const old of OLD_HERO_SRCS) {
+        if (next.includes(old)) next = next.split(old).join(HERO_IMAGE_SRC);
+      }
+      if (next !== val) {
+        recordChange(node, basePath, next, changes, 'hero container background src swap');
+      }
+      return;
+    }
+    if (isRecord(val) || Array.isArray(val)) {
+      for (const key of Object.keys(val)) replaceDeep(node, container, [...basePath, key]);
+    }
+  };
+  for (const node of nodes) {
+    if (!node || !heroSubtreeIds.has(node.id)) continue;
+    if (isRecord(node.style)) replaceDeep(node, node.style, ['style']);
+    if (isRecord(node.content)) replaceDeep(node, node.content, ['content']);
+  }
+
   if (changes.length > 0) {
     document.updatedAt = options.now ?? new Date().toISOString();
     document.updatedBy = SCRIPT_UPDATED_BY;

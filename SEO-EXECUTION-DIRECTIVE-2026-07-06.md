@@ -10,6 +10,14 @@
 - 새 전략: 두 사이트 공존. tseng-law는 **차별화된 신규 콘텐츠**(WO-2 가이드·랜딩, WO-3 net-new 칼럼 = wei-wei에 없는 키워드)와 **독립 권위**(GBP·백링크·네이버·GSC)로 상위 노출. 중복 칼럼으로 wei-wei와 경쟁하기보다 신규 영역을 점유.
 - 권고: tseng-law 데이터의 wei-wei 아웃바운드 링크(team-members.ts·attorney-profiles.ts의 sourceUrl=wei-wei/about-8)를 tseng-law 자기 페이지로 바꾸면 권위 유출 방지(사용자 판단 대기).
 
+## 🆕 2026-07-21 실측 업데이트 (Fable 5)
+
+- **Bing 인덱스 0건 실측**(DuckDuckGo `site:` 프록시 0건) — ChatGPT 검색은 Bing 인덱스 기반이므로 STEP 1의 Bing 등록이 AI 노출의 전제조건. Brave 인덱스(Claude·Perplexity 계열)에는 `/en` 등 일부만 색인 확인. 구글 색인 여부는 GSC 미등록이라 미확정(사용자 관찰: 미색인).
+- **www→non-www 307(임시)→308(영구) 수정 완료**: 원인은 www.tseng-law.com이 Vercel 프로젝트에 미등록(엣지 기본 307). Vercel API로 프로젝트 도메인 redirect 308 등록, 라이브 `curl -I` 308 검증됨. (플랫폼 설정, 코드 아님)
+- **IndexNow 구현·커밋 94d31ea4**: `public/<key>.txt` + `src/lib/indexnow.ts`(submitIndexNow) + `scripts/indexnow-submit.mjs` + 테스트 4종. 콘텐츠 변경 배포 후 `node scripts/indexnow-submit.mjs` 실행 → Bing·네이버 등 IndexNow 참여 엔진에 즉시 색인 핑. (구현: Sonnet 5 하청 — **GLM 5.2는 2026-07-21 구독 만료, 발주 금지**)
+- **STEP 1 보정**: GSC 도메인 속성의 TXT 레코드는 Vercel이 아니라 **Cloudflare DNS**(dash.cloudflare.com — NS 실측 cloudflare)에 추가해야 한다.
+- 랜딩 4종(`korean-lawyer-in-taiwan`·`taiwan-lawyer`·`taiwan-company-setup-lawyer`·`taiwan-litigation-lawyer`)·FAQPage 스키마·llms.txt 라이브 200 확인 — 온사이트 AEO는 완비. 남은 병목 = STEP 1~3(사용자)과 인용원(STEP 13; wei-wei→tseng-law 백링크 0건 실측).
+
 ## 이 문서 사용법
 
 1. 위에서 아래로 STEP 순서대로 진행한다. 각 STEP에 **담당 / 선행조건 / 정확한 명령·프롬프트 / 완료 판정**이 있다.
@@ -36,7 +44,8 @@ STEP 0(작업트리 안전 확인)은 매번 먼저. 워커 산출물은 검수 
 | ~~5~~ | ~~구도메인 DNS를 Vercel로 이전~~ | — | ❌ **취소** | — |
 | 6 | WO-SEO-1: llms.txt + FAQ 스키마 | GLM 5.2+검수 | ✅ 커밋 59d7ecd8 + 배포 (인프라+칼럼10편 FAQ+테스트22+merge버그수정, FAQPage 렌더 curl 검증) | 07-09 |
 | 7 | WO-SEO-2: 필러 페이지 2종 | GLM 5.2+검수 | ✅ 커밋 698032dc + 배포 (가이드 HowTo+FAQ, 랜딩 LegalService+FAQ, 6페이지 검증). ⚠️[변호사 검수 대기] | 07-09 |
-| 8 | WO-SEO-3a: 칼럼 4편 (C1~C4) | **GLM 5.2**+검수 | ☐ 대기 — net-new 법률콘텐츠 → 배포 전 변호사 검수 게이트 필수(사용자 결정) | |
+| 7.5 | IndexNow (키파일+lib+제출 스크립트) | Sonnet 5+검수 | ✅ 커밋 94d31ea4 + 배포 (QA 6069 그린·빌드 통과) | 07-21 |
+| 8 | WO-SEO-3a: 칼럼 4편 (C1~C4) | **Sonnet 5**+검수 | ☐ 대기 — net-new 법률콘텐츠 → 배포 전 변호사 검수 게이트 필수(사용자 결정) | |
 | 9 | 변호사 검수 사이클 (3a분) | **사용자(변호사)** | ☐ | |
 | 10 | WO-SEO-3b: 칼럼 4편 (C5~C8) + 검수 | Codex+사용자 | ☐ | |
 | 11 | WO-SEO-3c: 칼럼 4편 (C9~C12) + 검수 | Codex+사용자 | ☐ | |

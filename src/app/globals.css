@@ -3897,6 +3897,8 @@ html[lang='zh-Hant'] .hero-media {
 .attorney-card-photo--sub {
   position: relative; width: 100%; min-height: 240px; background: #f4f1ea;
   background: linear-gradient(145deg, rgba(18, 50, 79, 0.22), rgba(181, 140, 66, 0.24));
+  /* 모바일 1열에서 next/image가 자연 비율(507px)로 컨테이너(422px)를 넘쳐 이름 블록을 덮음 — 클리핑 필수 */
+  overflow: hidden;
 }
 
 .attorney-staff-grid {

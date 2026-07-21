@@ -5443,7 +5443,10 @@ html[lang='zh-Hant'] .hero-media {
 }
 
 .drawer-brand .logo-mark {
-  width: min(180px, 48vw);
+  /* Square seal — keep the box square instead of a leftover wide-wordmark
+     width so the mark renders full-size flush to the wordmark. */
+  width: 44px;
+  height: 44px;
 }
 
 .drawer-utilities {
@@ -7814,8 +7817,12 @@ a.floating-ai-chat-contact-item:hover strong {
 
   .hero-search-wrapper {
     position: absolute;
-    bottom: 0;
-    transform: translateY(50%);
+    /* Keep the search bar fully inside the hero on mobile: the published hero
+       node is force-clipped (overflow:hidden) to its box, so the old
+       translateY(50%) overlap left the lower half cut off at the section
+       boundary. Anchor it just above the hero's bottom edge instead. */
+    bottom: 1.5rem;
+    transform: none;
     left: 0.85rem;
     right: 0.85rem;
     margin-top: 0;
@@ -7828,8 +7835,9 @@ a.floating-ai-chat-contact-item:hover strong {
   }
 
   .hero-scroll-arrow {
-    right: 1rem;
-    bottom: 1rem;
+    /* The bottom-anchored search bar now occupies the hero's lower edge on
+       mobile; the decorative scroll hint would overlap its submit button. */
+    display: none;
   }
 
   .carousel-slide {
@@ -7949,7 +7957,10 @@ a.floating-ai-chat-contact-item:hover strong {
 
 @media (max-width: 640px) {
   .header-main .logo-mark {
-    width: clamp(104px, 27vw, 130px);
+    /* The brand mark is a square seal; keep the box square (matching the 34px
+       height above) so it renders full-size and flush to the wordmark rather
+       than shrunk inside a leftover wide-wordmark box. */
+    width: 34px;
   }
 
   .header-main .logo-kr {

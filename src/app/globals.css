@@ -3835,16 +3835,6 @@ html.has-cyber-cursor .button {
   max-height: none !important;
 }
 
-/* 한국 사무실 블록 추가로 오시는길 섹션이 길어져 고정 높이 빌더 루트를 넘침 — lawyers와 동일 처방 */
-.site .builder-pub-node[data-node-id='contact-page-root'],
-.site .builder-pub-node[data-node-id='contact-page-root-composite'],
-.site [data-node-id='contact-page-root'] > main,
-.site [data-node-id='contact-page-root-composite'] > main {
-  height: auto !important;
-  min-height: 0 !important;
-  max-height: none !important;
-}
-
 .attorney-group-title {
   font-size: 1.15rem; font-weight: 700; color: var(--primary); margin: 0 0 1.25rem;
   display: flex; align-items: center; gap: 0.75rem;

@@ -71,7 +71,7 @@ export const faqContent: Record<Locale, FAQItem[]> = {
     {
       question: '상담은 어떤 방식으로 진행되나요?',
       answer:
-        '대면 상담(타이베이 사무소) 또는 화상 상담(Zoom/Google Meet)이 가능합니다. 한국어와 중국어 모두 상담 가능하며, 사전 예약 후 1시간 단위로 진행됩니다. 상담 전 관련 자료를 미리 보내주시면 더 구체적인 답변이 가능합니다.'
+        '대면 상담(타이베이 사무소) 또는 화상 상담(Zoom/Google Meet)이 가능합니다. 한국어·중국어·일본어 모두 상담 가능하며, 사전 예약 후 1시간 단위로 진행됩니다. 상담 전 관련 자료를 미리 보내주시면 더 구체적인 답변이 가능합니다.'
     },
     {
       question: '물류업·화장품 등 특수 업종도 법인설립이 가능한가요?',
@@ -144,7 +144,7 @@ export const faqContent: Record<Locale, FAQItem[]> = {
     {
       question: '諮詢方式如何進行？',
       answer:
-        '可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。韓語與中文皆可諮詢，須事先預約，以一小時為單位。若事先提供相關資料，可獲得更具體的建議。'
+        '可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。韓語、中文、日語皆可諮詢，須事先預約，以一小時為單位。若事先提供相關資料，可獲得更具體的建議。'
     },
     {
       question: '物流業、化妝品等特殊產業也能設立公司嗎？',
@@ -217,7 +217,7 @@ export const faqContent: Record<Locale, FAQItem[]> = {
     {
       question: 'How are consultations conducted?',
       answer:
-        'We offer in-person consultations (Taipei office) or video consultations (Zoom/Google Meet). Consultations are available in Korean and Chinese. Appointments are required and scheduled in one-hour units. Sending relevant documents in advance allows for more detailed advice.'
+        'We offer in-person consultations (Taipei office) or video consultations (Zoom/Google Meet). Consultations are available in Korean, Chinese, and Japanese. Appointments are required and scheduled in one-hour units. Sending relevant documents in advance allows for more detailed advice.'
     },
     {
       question: 'Can you help with company setup for specialized industries like logistics or cosmetics?',

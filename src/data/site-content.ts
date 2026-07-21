@@ -1947,8 +1947,8 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           label: 'Seminars',
           items: [
             {
-              title: 'Recent seminar themes and speaking inquiries',
-              meta: 'Seminar',
+              title: 'Seminar materials in preparation',
+              meta: 'In Preparation',
               tag: 'Seminar',
               href: '/en/contact'
             }
@@ -2225,15 +2225,15 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       title: 'Legal Briefings',
       items: [
         {
-          title: 'Taiwan Investment Legal Briefing',
+          title: 'Taiwan Investment Legal Briefing (In Preparation)',
           summary: 'Key legal updates and structuring points for cross-border investment planning in Taiwan.',
-          date: 'Current Topics',
+          date: 'In Preparation',
           href: '/en/columns'
         },
         {
-          title: 'Real Estate & Construction Legal Briefing',
+          title: 'Real Estate & Construction Legal Briefing (In Preparation)',
           summary: 'Practical dispute and compliance issues drawn from current Taiwan real estate matters.',
-          date: 'Current Topics',
+          date: 'In Preparation',
           href: '/en/columns'
         }
       ]

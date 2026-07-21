@@ -43,6 +43,7 @@ export default function HeroSearch({ locale, scrollHref = '#insights' }: { local
   const hero = siteContent[locale].hero;
   const [focused, setFocused] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -51,6 +52,19 @@ export default function HeroSearch({ locale, scrollHref = '#insights' }: { local
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
   }, []);
+
+  useEffect(() => {
+    if (!focused) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        setFocused(false);
+        inputRef.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
+  }, [focused]);
 
   const menus = quickMenus[locale];
 
@@ -87,6 +101,7 @@ export default function HeroSearch({ locale, scrollHref = '#insights' }: { local
           <div data-builder-node-key="search" style={{ display: 'contents' }}>
             <form className="hero-search-bar overlap" action={`/${locale}/search`} method="get">
               <input
+                ref={inputRef}
                 className="search-input hero-search-input"
                 type="search"
                 name="q"

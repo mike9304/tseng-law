@@ -25,6 +25,7 @@ const STATIC_PATHS = [
   '/taiwan-litigation-lawyer',
   '/guides/taiwan-company-setup',
   '/korean-lawyer-in-taiwan',
+  '/reviews',
   '/privacy',
   '/disclaimer',
   '/accessibility',

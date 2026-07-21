@@ -154,7 +154,7 @@ export default function FaqPublicExplorer({
         <div className={styles.count} role="status">{text.count(filteredItems.length)}</div>
       </div>
 
-      <div className={styles.categoryRail} aria-label={categoryRailLabel}>
+      <div className={styles.categoryRail} role="group" aria-label={categoryRailLabel}>
         <a
           href={buildHref(pathname, (() => {
             const params = new URLSearchParams(searchParams?.toString() ?? '');
@@ -213,20 +213,22 @@ export default function FaqPublicExplorer({
                 data-public-faq-item={item.faqId}
                 data-public-faq-category={item.categoryId}
               >
-                <button
-                  id={buttonId}
-                  type="button"
-                  className={styles.question}
-                  aria-expanded={isOpen}
-                  aria-controls={panelId}
-                  onClick={() => handleQuestionToggle(item)}
-                >
-                  <span>
-                    <small>{categoryLabel(categories, item.categoryId, locale)}</small>
-                    {item.question}
-                  </span>
-                  <span aria-hidden className={styles.arrow}>{isOpen ? '-' : '+'}</span>
-                </button>
+                <h3 style={{ margin: 0, font: 'inherit' }}>
+                  <button
+                    id={buttonId}
+                    type="button"
+                    className={styles.question}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    onClick={() => handleQuestionToggle(item)}
+                  >
+                    <span>
+                      <small>{categoryLabel(categories, item.categoryId, locale)}</small>
+                      {item.question}
+                    </span>
+                    <span aria-hidden className={styles.arrow}>{isOpen ? '-' : '+'}</span>
+                  </button>
+                </h3>
                 <div
                   id={panelId}
                   className={styles.panel}

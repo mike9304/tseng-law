@@ -101,9 +101,9 @@ describe('sitemap column lastModified', () => {
       afterFiltering: afterFilteringUrls.size,
       removed: beforeFilteringUrls.size - afterFilteringUrls.size,
     }).toEqual({
-      // 85 base entries + 30 builder fixtures - 6 duplicate URLs.
-      beforeFiltering: 109,
-      afterFiltering: 100,
+      // 88 base entries + 30 builder fixtures - 6 duplicate URLs.
+      beforeFiltering: 112,
+      afterFiltering: 103,
       removed: 9,
     });
 

@@ -11,12 +11,12 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#aa1d1d',
     icons: [
       {
-        src: '/images/brand/hovering-seal-red-192.png',
+        src: '/images/brand/favicon-seal-red-192.png',
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        src: '/images/brand/hovering-seal-red-512.png',
+        src: '/images/brand/favicon-seal-red-512.png',
         sizes: '512x512',
         type: 'image/png',
       },

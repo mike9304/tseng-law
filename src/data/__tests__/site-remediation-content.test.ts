@@ -203,6 +203,29 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
     }
   });
 
+  it('uses dedicated safe-area favicon assets in root layout, manifest, and builder fallback', () => {
+    const dedicated192 = '/images/brand/favicon-seal-red-192.png';
+    const dedicated512 = '/images/brand/favicon-seal-red-512.png';
+
+    const layout = readFileSync(path.join(root, 'src/app/layout.tsx'), 'utf8');
+    expect(layout).toContain(dedicated192);
+    expect(layout).toContain(dedicated512);
+    expect(layout).toContain("/favicon.ico");
+    expect(layout).toContain('/apple-icon.png');
+
+    const manifest = readFileSync(path.join(root, 'src/app/manifest.ts'), 'utf8');
+    expect(manifest).toContain(dedicated192);
+    expect(manifest).toContain(dedicated512);
+
+    const publicPage = readFileSync(
+      path.join(root, 'src/lib/builder/site/public-page.tsx'),
+      'utf8',
+    );
+    expect(publicPage).toContain(dedicated192);
+    expect(publicPage).toContain(dedicated512);
+    expect(publicPage).toContain('dedicated safe-area');
+  });
+
   it('1b-7 replaces only the primary Reviews link with localized directions', () => {
     expect(siteContent.ko.nav.primary.at(-1)).toEqual({ label: '오시는길', href: '/ko/contact#offices' });
     expect(siteContent['zh-hant'].nav.primary.at(-1)).toEqual({ label: '交通位置', href: '/zh-hant/contact#offices' });

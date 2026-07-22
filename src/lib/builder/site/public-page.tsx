@@ -370,15 +370,16 @@ export async function buildPublishedSitePageMetadata(
       images: twitterImage ? [twitterImage] : undefined,
     },
     // Published pages must still expose the root-defined standard icons —
-    // especially the 192px seal (a 48px multiple Google prefers for the
-    // search-result favicon) — so a builder-supplied custom favicon augments,
-    // rather than replaces, that set (mirrors src/app/layout.tsx icons).
+    // especially the dedicated safe-area 192px favicon seal (a 48px multiple
+    // Google prefers for the search-result favicon) — so a builder-supplied
+    // custom favicon augments, rather than replaces, that set (mirrors
+    // src/app/layout.tsx icons).
     icons: {
       icon: [
         ...(favicon ? [favicon] : []),
         { url: '/favicon.ico' },
-        { url: '/images/brand/hovering-seal-red-192.png', sizes: '192x192', type: 'image/png' },
-        { url: '/images/brand/hovering-seal-red-512.png', sizes: '512x512', type: 'image/png' },
+        { url: '/images/brand/favicon-seal-red-192.png', sizes: '192x192', type: 'image/png' },
+        { url: '/images/brand/favicon-seal-red-512.png', sizes: '512x512', type: 'image/png' },
       ],
       shortcut: '/favicon.ico',
       apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],

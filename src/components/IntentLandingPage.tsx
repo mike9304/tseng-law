@@ -405,7 +405,7 @@ export default function IntentLandingPage({
         </section>
       ) : null}
 
-      <section className="section section--gray">
+      <section className="section section--light">
         <div className="container">
           <SectionLabel>{l.resourcesLabel}</SectionLabel>
           <h2 className="section-title">{l.resourcesTitle}</h2>

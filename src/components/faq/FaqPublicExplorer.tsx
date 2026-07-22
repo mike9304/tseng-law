@@ -213,7 +213,7 @@ export default function FaqPublicExplorer({
                 data-public-faq-item={item.faqId}
                 data-public-faq-category={item.categoryId}
               >
-                <h3 style={{ margin: 0, font: 'inherit' }}>
+                <h3 className={styles.heading}>
                   <button
                     id={buttonId}
                     type="button"

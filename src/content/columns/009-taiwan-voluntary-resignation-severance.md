@@ -92,3 +92,10 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 ''**시간**''이 매우 중요합니다.
 
 대부분의 경우 미리 준비한 쪽이 권리를 보장받게 됩니다.
+
+---
+
+> 더 보기:
+> - [대만 소송 변호사 안내](/ko/taiwan-litigation-lawyer)
+> - [한국어 가능한 대만 변호사](/ko/korean-lawyer-in-taiwan)
+> - [업무분야 — 노동](/ko/services/labor)

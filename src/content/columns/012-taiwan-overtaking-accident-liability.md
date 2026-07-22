@@ -140,3 +140,10 @@ A는 보험을 높게 들어 경제적으로 큰 피해는 없었지만
 모두 추월할 때 조심하세요!
 
 ![](../images/012-taiwan-overtaking-accident-liability/img-02.jpg)
+
+---
+
+> 더 보기:
+> - [대만 소송 변호사 안내](/ko/taiwan-litigation-lawyer)
+> - [한국어 가능한 대만 변호사](/ko/korean-lawyer-in-taiwan)
+> - [대만 교통사고 처리 절차](/ko/columns/taiwan-traffic-accident-procedure)

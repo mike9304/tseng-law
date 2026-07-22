@@ -168,3 +168,10 @@ featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jp
 **​**
 
 ​
+
+---
+
+> 더 보기:
+> - [대만 소송 변호사 안내](/ko/taiwan-litigation-lawyer)
+> - [한국어 가능한 대만 변호사](/ko/korean-lawyer-in-taiwan)
+> - [업무분야 — 노동](/ko/services/labor)

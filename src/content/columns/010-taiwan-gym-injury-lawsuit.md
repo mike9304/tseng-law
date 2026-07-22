@@ -175,3 +175,10 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 대만 헬스장에서 부상당한 경우, 자신의 권리를 적극적으로 주장해야 합니다.
 
 헬스장뿐만 아니라 가게 바닥이 미끄러워 넘어지거나, 문제가 있는 음식을 먹고 구토와 설사를 하거나, 전문 서비스를 받다가 건강을 해치거나 손해를 입는 경우에도 소비자 보호법에 따라 권리를 보호받을 수 있으니 꼭 소송을 제기해 자신의 권리를 지키시기 바랍니다.
+
+---
+
+> 더 보기:
+> - [대만 소송 변호사 안내](/ko/taiwan-litigation-lawyer)
+> - [한국어 가능한 대만 변호사](/ko/korean-lawyer-in-taiwan)
+> - [대만 변호사 검색 가이드](/ko/taiwan-lawyer)

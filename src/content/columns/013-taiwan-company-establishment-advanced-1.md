@@ -81,7 +81,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 심사위원을 설득할 수 있도록 상세히 설명하면 됩니다.
 
-이 부분은 변호사와 충분히 상담하시기 바랍니다.
+이 부분은 대만 변호사와 충분히 상담하시기 바랍니다.
 
 ​
 

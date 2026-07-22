@@ -6,11 +6,11 @@ import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import type { ReactNode } from 'react';
 import { getSearchEngineVerification, getSiteUrl } from '@/lib/seo';
-import { siteFontVariables } from './fonts';
+import { getLocaleFontClassName, type DocumentLanguage } from './fonts';
 
 const searchEngineVerification = getSearchEngineVerification();
 
-export function resolveDocumentLanguage(pathname: string | null): 'ko' | 'zh-Hant' | 'en' {
+export function resolveDocumentLanguage(pathname: string | null): DocumentLanguage {
   const locale = pathname?.split('/').filter(Boolean)[0]?.toLowerCase();
   if (locale === 'zh-hant') return 'zh-Hant';
   if (locale === 'en') return 'en';
@@ -58,9 +58,11 @@ export default function RootLayout({
   children: ReactNode;
 }) {
   const language = resolveDocumentLanguage(getRequestPathname());
+  // next/font variables must live on <html> so :root semantic tokens resolve.
+  const fontClassName = getLocaleFontClassName(language);
 
   return (
-    <html lang={language} suppressHydrationWarning>
+    <html lang={language} className={fontClassName} suppressHydrationWarning>
       <head>
         <noscript
           dangerouslySetInnerHTML={{
@@ -68,7 +70,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={siteFontVariables}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

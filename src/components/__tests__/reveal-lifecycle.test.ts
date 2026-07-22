@@ -12,9 +12,7 @@ vi.mock('next/font/google', () => {
     variable: options.variable,
   });
   return {
-    Cormorant_Garamond: font,
-    IBM_Plex_Sans_KR: font,
-    JetBrains_Mono: font,
+    Noto_Sans_KR: font,
     Noto_Sans_TC: font,
     Noto_Serif_KR: font,
     Noto_Serif_TC: font,

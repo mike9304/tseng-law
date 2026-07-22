@@ -81,8 +81,39 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(publicPage).not.toContain('fonts.googleapis.com');
     expect(publicPage).not.toContain('fontsUrl');
     expect(fonts).toContain("display: 'swap'");
-    expect(css).toContain('var(--font-ibm-plex-sans-kr-loaded)');
+    expect(fonts).toContain('preload: false');
+    // Locale-gated Noto pairs on <html> so :root semantic tokens resolve
+    expect(fonts).toContain('Noto_Sans_KR');
+    expect(fonts).toContain('Noto_Sans_TC');
+    expect(fonts).toContain('Noto_Serif_KR');
+    expect(fonts).toContain('Noto_Serif_TC');
+    expect(fonts).toContain('getLocaleFontClassName');
+    expect(fonts).not.toContain('Cormorant_Garamond');
+    expect(fonts).not.toContain('IBM_Plex_Sans_KR');
+    expect(fonts).not.toContain('JetBrains_Mono');
+    expect(layout).toContain('getLocaleFontClassName');
+    expect(layout).toContain('className={fontClassName}');
+    expect(layout).toMatch(/<html\s+lang=\{language\}\s+className=\{fontClassName\}/);
+    expect(css).toContain('var(--font-noto-sans-kr-loaded)');
+    expect(css).toContain('var(--font-noto-serif-kr-loaded)');
+    expect(css).toContain('var(--font-noto-sans-tc-loaded)');
     expect(css).toContain('var(--font-noto-serif-tc-loaded)');
+    expect(css).not.toContain('var(--font-ibm-plex-sans-kr-loaded)');
+    expect(css).not.toContain('var(--font-cormorant-garamond-loaded)');
+    expect(css).not.toContain('var(--font-jetbrains-mono-loaded)');
+    // System mono stack (no next/font mono payload)
+    expect(css).toMatch(/--font-mono:\s*ui-monospace/);
+    // Closed serif allowlist present; broad h1,h2,h3 serif enforcement removed from late block
+    expect(css).toContain('h1.blog-hero-title');
+    expect(css).toContain('h1.svc-hero-title');
+    expect(css).toContain('.page-header-title');
+    expect(css).toContain('.hero-title');
+    // Public H2/H3 forced sans (v1) — beats mega-title / CSS-module serif specificity
+    expect(css).toMatch(/\.site h2,\s*\n\.site h3\s*\{[^}]*font-family:\s*var\(--font-sans/);
+    // About composite-flow repair (not dead page-about-contact-root selector)
+    expect(css).toContain("data-node-id='about-page-root-composite'");
+    expect(css).toContain("data-node-id='about-page-root'] > main");
+    expect(css).not.toContain("data-node-id='page-about-contact-root'");
   });
 
   it('1-8 keeps the app icon at 512px or below and 32KB or below', () => {

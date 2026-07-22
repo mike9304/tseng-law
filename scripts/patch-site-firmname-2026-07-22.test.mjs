@@ -100,7 +100,71 @@ test('formatPatchPlan renders dry-run summary with findings', () => {
 test('parseArgs handles flags and rejects unsafe site ids', () => {
   assert.equal(parseArgs(['--apply']).apply, true);
   assert.equal(parseArgs([]).apply, false);
+  assert.equal(parseArgs([]).mode, 'replace');
+  assert.equal(parseArgs(['--set']).mode, 'set');
   assert.equal(parseArgs(['--site=my-site']).siteId, 'my-site');
   assert.throws(() => parseArgs(['--site=../evil']), /safe builder site id/);
   assert.throws(() => parseArgs(['--nope']), /Unknown argument/);
+});
+
+// ── --set mode ──────────────────────────────────────────────────────────────
+
+test('--set: absent firmName (site.name fallback case) is set to the new name', () => {
+  // Production case: firmName absent, og:site_name falls back to site.name.
+  const plan = planFirmNamePatch(siteDoc({ name: '호정국제', settings: { phone: '02' } }), {
+    mode: 'set',
+    now: '2026-07-22T00:00:00.000Z',
+  });
+  assert.equal(plan.ok, true);
+  assert.equal(plan.changes.length, 1);
+  assert.equal(plan.changes[0].path, 'settings.firmName');
+  assert.equal(plan.changes[0].newValue, NEW_FIRM_NAME);
+  assert.equal(plan.document.settings.firmName, NEW_FIRM_NAME);
+  assert.equal(plan.document.settings.phone, '02', 'other settings preserved');
+  assert.equal(plan.document.name, '호정국제', 'site.name untouched');
+  assert.equal(plan.document.updatedAt, '2026-07-22T00:00:00.000Z');
+});
+
+test('--set: empty-string firmName is set to the new name', () => {
+  const plan = planFirmNamePatch(siteDoc({ settings: { firmName: '   ' } }), { mode: 'set' });
+  assert.equal(plan.ok, true);
+  assert.equal(plan.changes.length, 1);
+  assert.equal(plan.document.settings.firmName, NEW_FIRM_NAME);
+});
+
+test('--set: creates settings object when settings is absent', () => {
+  const doc = siteDoc();
+  delete doc.settings;
+  const plan = planFirmNamePatch(doc, { mode: 'set' });
+  assert.equal(plan.ok, true);
+  assert.equal(plan.document.settings.firmName, NEW_FIRM_NAME);
+});
+
+test('--set: aborts (ok:false) when a different non-empty firmName already exists', () => {
+  const plan = planFirmNamePatch(siteDoc({ settings: { firmName: '다른 사무소' } }), { mode: 'set' });
+  assert.equal(plan.ok, false);
+  assert.equal(plan.changes.length, 0);
+  assert.match(plan.error, /refuses to overwrite/);
+  // input document must be returned unchanged
+  assert.equal(plan.document.settings.firmName, '다른 사무소');
+});
+
+test('--set: aborts rather than clobber a firmName still holding the old brand', () => {
+  // --set never touches an existing non-empty value; replace mode is for that.
+  const plan = planFirmNamePatch(siteDoc({ settings: { firmName: '호정국제' } }), { mode: 'set' });
+  assert.equal(plan.ok, false);
+  assert.match(plan.error, /refuses to overwrite/);
+});
+
+test('--set: idempotent no-op when firmName is already the new name', () => {
+  const plan = planFirmNamePatch(siteDoc({ settings: { firmName: NEW_FIRM_NAME } }), { mode: 'set' });
+  assert.equal(plan.ok, true);
+  assert.equal(plan.changes.length, 0);
+});
+
+test('formatPatchPlan renders ABORT for a failed --set plan', () => {
+  const plan = planFirmNamePatch(siteDoc({ settings: { firmName: '다른 사무소' } }), { mode: 'set' });
+  const text = formatPatchPlan(plan, 'dry-run');
+  assert.match(text, /ABORT:/);
+  assert.match(text, /No persistence write was attempted/);
 });

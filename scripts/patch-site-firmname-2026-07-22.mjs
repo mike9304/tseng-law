@@ -9,11 +9,17 @@
  * WebSite JSON-LD (lib/seo.ts) is already correct; only this Blob/Postgres
  * settings value is stale.
  *
+ * Two modes (both dry-run by default, both share the apply guards below):
+ * - default (--replace): replace `settings.firmName` only when it currently
+ *   contains the old brand marker "호정국제";
+ * - --set: create `settings.firmName` = "법무법인 호정" only when it is
+ *   absent/empty (og:site_name is then falling back to site.name); it aborts
+ *   rather than overwrite a different existing value.
+ *
  * Safety contract:
  * - dry-run is the default and performs no persistence write;
- * - only `settings.firmName` is changed, and only when it currently contains
- *   the old brand marker "호정국제" (so an empty local backend — whose default
- *   document has no settings.firmName — safely makes zero changes);
+ * - only `settings.firmName` is ever changed; site.name and translations are
+ *   never touched (an empty local backend safely makes zero changes);
  * - every other string leaf containing "호정국제" (site.name, localized
  *   overrides, seoChecklist.businessName, …) is reported but never changed;
  * - --apply re-reads the latest record, re-plans against it, writes a full
@@ -88,6 +94,7 @@ export function planFirmNamePatch(siteDocument, options = {}) {
   const now = options.now ?? new Date().toISOString();
   const marker = options.marker ?? OLD_BRAND_MARKER;
   const newFirmName = options.newFirmName ?? NEW_FIRM_NAME;
+  const mode = options.mode ?? 'replace';
   const document = structuredClone(siteDocument);
   const changes = [];
   const warnings = [];
@@ -95,7 +102,37 @@ export function planFirmNamePatch(siteDocument, options = {}) {
   const brandFindings = collectBrandFindings(document, marker);
 
   const currentFirmName = document?.settings?.firmName;
-  if (typeof currentFirmName === 'string' && currentFirmName.includes(marker)) {
+  const currentIsString = typeof currentFirmName === 'string';
+  const currentIsBlank = !currentIsString || currentFirmName.trim().length === 0;
+
+  if (mode === 'set') {
+    // --set: create firmName only when it is absent/empty (og:site_name is then
+    // falling back to site.name). Never overwrite an existing non-empty value —
+    // that stays the default 'replace' mode's job.
+    if (currentIsBlank) {
+      if (!isRecord(document.settings)) document.settings = {};
+      document.settings.firmName = newFirmName;
+      changes.push({
+        path: 'settings.firmName',
+        oldValue: currentFirmName,
+        newValue: newFirmName,
+        reason: 'firmName absent/empty; set so og:site_name stops falling back to site.name',
+      });
+    } else if (currentFirmName === newFirmName) {
+      // Already correct — idempotent no-op.
+    } else {
+      return {
+        ok: false,
+        error: `--set refuses to overwrite an existing settings.firmName (${JSON.stringify(currentFirmName)}). `
+          + 'Use the default replace mode if it holds the old brand, or fix it in the builder settings.',
+        document: structuredClone(siteDocument),
+        changes: [],
+        brandFindings,
+        warnings,
+      };
+    }
+  } else if (currentIsString && currentFirmName.includes(marker)) {
+    // Default 'replace' mode: swap the old brand out of an existing firmName.
     if (currentFirmName !== newFirmName) {
       document.settings.firmName = newFirmName;
       changes.push({
@@ -105,14 +142,14 @@ export function planFirmNamePatch(siteDocument, options = {}) {
         reason: 'retired brand firmName replacement',
       });
     }
-  } else if (typeof currentFirmName === 'string' && currentFirmName.length > 0) {
+  } else if (currentIsString && currentFirmName.length > 0) {
     // firmName is set to something without the old marker — leave it.
   } else {
     // No settings.firmName carrying the old brand. og:site_name may still be
     // falling back to site.name; that is reported (not changed) below.
     warnings.push(
-      'settings.firmName does not contain the old brand marker; no firmName write planned. '
-        + 'If a brand finding lists site.name, og:site_name is falling back to it — decide a follow-up.',
+      'settings.firmName does not contain the old brand marker; no replace planned. '
+        + 'If a brand finding lists site.name, og:site_name is falling back to it — use --set.',
     );
   }
 
@@ -133,6 +170,17 @@ export function formatPatchPlan(plan, mode = 'dry-run') {
   const lines = [
     `=== site settings firmName patch (${mode === 'apply' ? 'APPLY' : 'DRY RUN'}) ===`,
   ];
+  if (plan.ok === false) {
+    lines.push(`ABORT: ${plan.error}`);
+    if (plan.brandFindings && plan.brandFindings.length > 0) {
+      lines.push(`Brand scan: ${plan.brandFindings.length} field(s) contain "호정국제":`);
+      for (const finding of plan.brandFindings) {
+        lines.push(`    ${finding.path}: ${formatValue(finding.value)}`);
+      }
+    }
+    lines.push('No persistence write was attempted.');
+    return lines.join('\n');
+  }
   if (plan.changes.length === 0) {
     lines.push('No firmName change planned.');
   }
@@ -161,12 +209,15 @@ export function parseArgs(argv) {
   const options = {
     apply: false,
     help: false,
+    mode: 'replace',
     siteId: DEFAULT_SITE_ID,
     backupDir: DEFAULT_BACKUP_DIR,
   };
   for (const arg of argv) {
     if (arg === '--apply') options.apply = true;
     else if (arg === '--dry-run') options.apply = false;
+    else if (arg === '--set') options.mode = 'set';
+    else if (arg === '--replace') options.mode = 'replace';
     else if (arg === '--help' || arg === '-h') options.help = true;
     else if (arg.startsWith('--site=')) options.siteId = arg.slice('--site='.length);
     else if (arg.startsWith('--backup-dir=')) {
@@ -183,10 +234,14 @@ const HELP = `Usage: node scripts/patch-site-firmname-2026-07-22.mjs [options]\n
   + `Options:\n`
   + `  --dry-run             Read and print the plan only (default).\n`
   + `  --apply               Back up, then write the firmName change.\n`
+  + `  --replace             (default) Replace firmName only when it contains "${OLD_BRAND_MARKER}".\n`
+  + `  --set                 Set firmName to "${NEW_FIRM_NAME}" when it is absent/empty\n`
+  + `                        (aborts if a different non-empty value already exists).\n`
   + `  --site=<siteId>       Builder site id (default: ${DEFAULT_SITE_ID}).\n`
   + `  --backup-dir=<path>   Backup directory (default: runtime-data/backups).\n`
   + `  --help                Show this help.\n\n`
-  + `Only settings.firmName is changed, and only when it contains "${OLD_BRAND_MARKER}".\n`
+  + `Only settings.firmName is written. site.name and translations are never touched;\n`
+  + `every other "${OLD_BRAND_MARKER}" field is reported but left unchanged.\n`
   + `Storage selection is delegated to the existing builder-site persistence layer.\n`
   + `No credential value is printed.`;
 
@@ -242,21 +297,26 @@ export async function runFirmNamePatch(options, deps, io = {}) {
   const stdout = io.stdout ?? process.stdout;
 
   const initial = await deps.readSiteDocument(options.siteId, READ_LOCALE);
-  const plan = planFirmNamePatch(initial);
+  const plan = planFirmNamePatch(initial, { mode: options.mode });
   stdout.write(`${formatPatchPlan(plan, options.apply ? 'apply' : 'dry-run')}\n`);
 
+  if (!plan.ok) return { ok: false, applied: false, plan };
   if (plan.changes.length === 0) {
-    stdout.write('Nothing to write (no firmName carrying the old brand). Exiting safely.\n');
+    stdout.write('Nothing to write (no change needed). Exiting safely.\n');
     return { ok: true, applied: false, plan };
   }
   if (!options.apply) return { ok: true, applied: false, plan };
 
   // Re-read and re-plan against the latest record so a concurrent settings
-  // edit is preserved and a concurrent firmName fix is detected.
+  // edit is preserved and a concurrent firmName change is detected.
   const latest = await deps.readSiteDocument(options.siteId, READ_LOCALE);
-  const latestPlan = planFirmNamePatch(latest);
+  const latestPlan = planFirmNamePatch(latest, { mode: options.mode });
+  if (!latestPlan.ok) {
+    stdout.write(`${formatPatchPlan(latestPlan, 'apply')}\n`);
+    return { ok: false, applied: false, plan: latestPlan };
+  }
   if (latestPlan.changes.length === 0) {
-    stdout.write('firmName was already corrected by another writer; nothing to apply.\n');
+    stdout.write('firmName was already set/corrected by another writer; nothing to apply.\n');
     return { ok: true, applied: false, plan: latestPlan };
   }
 

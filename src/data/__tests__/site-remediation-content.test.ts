@@ -194,10 +194,11 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
     }
   });
 
-  it('1b-6 uses the square seal in desktop and mobile headers', () => {
+  it('1b-6 uses the safe-area square seal in desktop and mobile headers', () => {
     for (const component of ['Header.tsx', 'MobileNavDrawer.tsx']) {
       const source = readFileSync(path.join(root, 'src/components', component), 'utf8');
-      expect(source).toContain('src="/images/brand/hovering-seal-red-512.png"');
+      expect(source).toContain('src="/images/brand/favicon-seal-red-512.png"');
+      expect(source).not.toContain('src="/images/brand/hovering-seal-red-512.png"');
       expect(source).toContain('width={40} height={40}');
       expect(source).not.toContain('const brandLogo =');
     }

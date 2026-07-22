@@ -27,16 +27,18 @@ export type GuideContent = {
   faq: FaqItem[];
   relatedHeading: string;
   relatedColumns: Array<{ slug: string; title: string }>;
+  relatedResourcesHeading: string;
+  relatedResources: Array<{ href: string; label: string }>;
   ctaTitle: string;
   ctaText: string;
   ctaButton: string;
 };
 
 const relatedColumnsKo = [
-  { slug: '001-taiwan-company-establishment-basics', title: '대만 회사설립 -기초편-' },
-  { slug: '013-taiwan-company-establishment-advanced-1', title: '대만 회사설립 -심화편-1' },
-  { slug: '005-taiwan-company-establishment-advanced-2', title: '대만 회사설립 -심화편-2' },
-  { slug: '004-taiwan-company-subsidiary-vs-branch', title: '대만 회사설립 자회사 VS 지사' },
+  { slug: 'taiwan-company-establishment-basics', title: '대만 회사설립 -기초편-' },
+  { slug: 'taiwan-company-establishment-advanced-1', title: '대만 회사설립 -심화편-1' },
+  { slug: 'taiwan-company-establishment-advanced-2', title: '대만 회사설립 -심화편-2' },
+  { slug: 'taiwan-company-subsidiary-vs-branch', title: '대만 회사설립 자회사 VS 지사' },
 ];
 
 export const guideContent: Record<Locale, GuideContent> = {
@@ -146,6 +148,13 @@ export const guideContent: Record<Locale, GuideContent> = {
     ],
     relatedHeading: '관련 칼럼',
     relatedColumns: relatedColumnsKo,
+    relatedResourcesHeading: '관련 안내',
+    relatedResources: [
+      { href: 'korean-lawyer-in-taiwan', label: '한국어 가능한 대만 변호사' },
+      { href: 'taiwan-company-setup-lawyer', label: '대만 법인설립·회사설립 변호사 안내' },
+      { href: 'taiwan-lawyer', label: '대만 변호사 검색 가이드' },
+      { href: 'services/investment', label: '대만 투자·회사설립 관련 서비스' },
+    ],
     ctaTitle: '사안에 맞는 설립 방향을 정리하려면',
     ctaText:
       '업종·자본금·비자 필요 여부에 따라 자회사·지사·연락사무소 중 선택이 달라집니다. 자료를 보내주시면 증준외 변호사와 연결되는 상담 흐름을 안내해 드립니다.',
@@ -247,6 +256,13 @@ export const guideContent: Record<Locale, GuideContent> = {
     ],
     relatedHeading: '相關專欄',
     relatedColumns: relatedColumnsKo,
+    relatedResourcesHeading: '相關指南',
+    relatedResources: [
+      { href: 'korean-lawyer-in-taiwan', label: '可使用韓語溝通的台灣律師' },
+      { href: 'taiwan-company-setup-lawyer', label: '台灣公司設立律師指南' },
+      { href: 'taiwan-lawyer', label: '台灣律師搜尋指南' },
+      { href: 'services/investment', label: '台灣投資與公司設立服務' },
+    ],
     ctaTitle: '想釐清最適的設立架構',
     ctaText:
       '依行業、資本額與是否需要居留證，子公司、分公司與辦事處的選擇會不同。提供資料後，我們可安排與曾俊瑋律師的諮詢流程。',
@@ -348,6 +364,13 @@ export const guideContent: Record<Locale, GuideContent> = {
     ],
     relatedHeading: 'Related Columns',
     relatedColumns: relatedColumnsKo,
+    relatedResourcesHeading: 'Related Guides',
+    relatedResources: [
+      { href: 'korean-lawyer-in-taiwan', label: 'Korean-speaking Taiwan lawyer' },
+      { href: 'taiwan-company-setup-lawyer', label: 'Taiwan company setup lawyer guide' },
+      { href: 'taiwan-lawyer', label: 'Taiwan lawyer search guide' },
+      { href: 'services/investment', label: 'Taiwan investment and company setup services' },
+    ],
     ctaTitle: 'Clarify the right setup structure for your case',
     ctaText:
       'The choice between a subsidiary, branch, and liaison office depends on industry, capital, and whether you need a residence card. Share your materials and we will arrange a consultation flow with Attorney Wei Tseng.',

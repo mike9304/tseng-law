@@ -34,6 +34,8 @@ const labels = {
     columnsLabel: '관련 칼럼',
     columnsTitle: '관련 칼럼',
     readMore: '자세히 읽기 →',
+    resourcesLabel: '관련 안내',
+    resourcesTitle: '함께 보면 좋은 안내',
     attorneyHeading: '이 검색어와 가장 가까운 담당 변호사',
     ctaLabel: '다음 단계',
     ctaTitle: '사안에 맞는 방향을 바로 정리하려면',
@@ -58,6 +60,8 @@ const labels = {
     columnsLabel: '相關專欄',
     columnsTitle: '相關專欄',
     readMore: '閱讀全文 →',
+    resourcesLabel: '相關指南',
+    resourcesTitle: '延伸閱讀',
     attorneyHeading: '最適合處理此搜尋主題的律師',
     ctaLabel: '下一步',
     ctaTitle: '若想先快速整理方向',
@@ -82,6 +86,8 @@ const labels = {
     columnsLabel: 'RELATED COLUMNS',
     columnsTitle: 'Related Columns',
     readMore: 'Read full article →',
+    resourcesLabel: 'RELATED GUIDES',
+    resourcesTitle: 'Related Guidance',
     attorneyHeading: 'Lead attorney most relevant to this search',
     ctaLabel: 'NEXT STEP',
     ctaTitle: 'If you want the direction clarified quickly',
@@ -91,6 +97,90 @@ const labels = {
     pricing: 'View Pricing',
   },
 } as const;
+
+const relatedResources: Record<
+  IntentPageSlug,
+  Array<{ href: string; label: Record<Locale, string> }>
+> = {
+  'taiwan-lawyer': [
+    {
+      href: 'korean-lawyer-in-taiwan',
+      label: {
+        ko: '한국어 가능한 대만 변호사',
+        'zh-hant': '可使用韓語溝通的台灣律師',
+        en: 'Korean-speaking Taiwan lawyer',
+      },
+    },
+    {
+      href: 'taiwan-company-setup-lawyer',
+      label: {
+        ko: '대만 법인설립·회사설립 변호사 안내',
+        'zh-hant': '台灣公司設立律師指南',
+        en: 'Taiwan company setup lawyer guide',
+      },
+    },
+    {
+      href: 'taiwan-litigation-lawyer',
+      label: {
+        ko: '대만 소송 변호사 안내',
+        'zh-hant': '台灣訴訟律師指南',
+        en: 'Taiwan litigation lawyer guide',
+      },
+    },
+    {
+      href: 'guides/taiwan-company-setup',
+      label: {
+        ko: '대만 회사설립 종합 가이드',
+        'zh-hant': '台灣公司設立完整指南',
+        en: 'Complete Taiwan company setup guide',
+      },
+    },
+  ],
+  'taiwan-company-setup-lawyer': [
+    {
+      href: 'guides/taiwan-company-setup',
+      label: {
+        ko: '대만 회사설립 종합 가이드',
+        'zh-hant': '台灣公司設立完整指南',
+        en: 'Complete Taiwan company setup guide',
+      },
+    },
+    {
+      href: 'korean-lawyer-in-taiwan',
+      label: {
+        ko: '한국어 가능한 대만 변호사',
+        'zh-hant': '可使用韓語溝通的台灣律師',
+        en: 'Korean-speaking Taiwan lawyer',
+      },
+    },
+    {
+      href: 'taiwan-lawyer',
+      label: {
+        ko: '대만 변호사 검색 가이드',
+        'zh-hant': '台灣律師搜尋指南',
+        en: 'Taiwan lawyer search guide',
+      },
+    },
+  ],
+  'taiwan-litigation-lawyer': [
+    {
+      href: 'korean-lawyer-in-taiwan',
+      label: {
+        ko: '한국어 가능한 대만 변호사',
+        'zh-hant': '可使用韓語溝通的台灣律師',
+        en: 'Korean-speaking Taiwan lawyer',
+      },
+    },
+    {
+      href: 'taiwan-lawyer',
+      label: {
+        ko: '대만 변호사 검색 가이드',
+        'zh-hant': '台灣律師搜尋指南',
+        en: 'Taiwan lawyer search guide',
+      },
+    },
+  ],
+};
 
 export default function IntentLandingPage({
   locale,
@@ -314,6 +404,25 @@ export default function IntentLandingPage({
           </div>
         </section>
       ) : null}
+
+      <section className="section section--gray">
+        <div className="container">
+          <SectionLabel>{l.resourcesLabel}</SectionLabel>
+          <h2 className="section-title">{l.resourcesTitle}</h2>
+          <OrnamentDivider />
+          <article className="intent-panel">
+            <ul className="intent-article-list">
+              {relatedResources[slug].map((item) => (
+                <li key={item.href}>
+                  <Link href={`/${locale}/${item.href}`} className="link-underline">
+                    {item.label[locale]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </section>
 
       <FAQAccordion locale={locale} items={page.faq} sectionClassName="section section--gray" />
 

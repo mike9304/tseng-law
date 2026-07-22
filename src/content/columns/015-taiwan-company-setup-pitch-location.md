@@ -76,3 +76,10 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 이상으로, 추가 질문이 있으시면 언제든지 변호사에게 문의하시기 바랍니다.
 
 행정 기관의 규칙은 자주 변경될 수 있으므로, 법인 등록 전에 최신 규정을 확인하시는 것이 좋습니다.
+
+---
+
+> 더 보기:
+> - [대만 회사설립 종합 가이드 — 절차·비용·법인 형태 총정리](/ko/guides/taiwan-company-setup)
+> - [한국어 가능한 대만 변호사](/ko/korean-lawyer-in-taiwan)
+> - [대만 법인설립·회사설립 변호사 안내](/ko/taiwan-company-setup-lawyer)

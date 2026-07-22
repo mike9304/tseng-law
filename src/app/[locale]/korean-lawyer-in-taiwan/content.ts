@@ -20,6 +20,8 @@ export type LandingContent = {
   office: { lines: string[] };
   faqHeading: string;
   faq: FaqItem[];
+  relatedHeading: string;
+  relatedResources: Array<{ href: string; label: string }>;
   ctaTitle: string;
   ctaText: string;
   ctaButton: string;
@@ -91,6 +93,14 @@ export const landingContent: Record<Locale, LandingContent> = {
         a: '네. 증준외 변호사는 한국어 외에 중국어(번체)·일본어로도 상담이 가능하며, 다국어 계약·서류 검토도 지원합니다.',
       },
     ],
+    relatedHeading: '관련 안내',
+    relatedResources: [
+      { href: 'guides/taiwan-company-setup', label: '대만 회사설립 종합 가이드' },
+      { href: 'taiwan-company-setup-lawyer', label: '대만 법인설립·회사설립 변호사 안내' },
+      { href: 'taiwan-lawyer', label: '대만 변호사 검색 가이드' },
+      { href: 'taiwan-litigation-lawyer', label: '대만 소송 변호사 안내' },
+      { href: 'services', label: '대만 법률 서비스 전체 보기' },
+    ],
     ctaTitle: '대만 법률 문제, 한국어로 상담 받으세요',
     ctaText:
       '회사설립, 투자, 소송, 가사 분쟁 등 대만 법률 문제가 있으시면 한국어로 편하게 문의해 주세요. 자료를 보내주시면 상담 흐름을 안내해 드립니다.',
@@ -161,6 +171,14 @@ export const landingContent: Record<Locale, LandingContent> = {
         a: '可以。曾俊瑋律師除韓語外，亦可以中文（繁體）及日語諮詢，並支援多語合約與文件審閱。',
       },
     ],
+    relatedHeading: '相關指南',
+    relatedResources: [
+      { href: 'guides/taiwan-company-setup', label: '台灣公司設立完整指南' },
+      { href: 'taiwan-company-setup-lawyer', label: '台灣公司設立律師指南' },
+      { href: 'taiwan-lawyer', label: '台灣律師搜尋指南' },
+      { href: 'taiwan-litigation-lawyer', label: '台灣訴訟律師指南' },
+      { href: 'services', label: '查看所有台灣法律服務' },
+    ],
     ctaTitle: '台灣法律問題，用韓語諮詢',
     ctaText:
       '不論是公司設立、投資、訴訟或家事爭議，歡迎以韓語與我們聯繫。提供資料後，我們會安排諮詢流程。',
@@ -230,6 +248,14 @@ export const landingContent: Record<Locale, LandingContent> = {
         q: 'Can I also consult in Chinese or Japanese?',
         a: 'Yes. In addition to Korean, Attorney Wei Tseng consults in Chinese (Traditional) and Japanese, and supports multilingual contract and document review.',
       },
+    ],
+    relatedHeading: 'Related Guides',
+    relatedResources: [
+      { href: 'guides/taiwan-company-setup', label: 'Complete Taiwan company setup guide' },
+      { href: 'taiwan-company-setup-lawyer', label: 'Taiwan company setup lawyer guide' },
+      { href: 'taiwan-lawyer', label: 'Taiwan lawyer search guide' },
+      { href: 'taiwan-litigation-lawyer', label: 'Taiwan litigation lawyer guide' },
+      { href: 'services', label: 'View all Taiwan legal services' },
     ],
     ctaTitle: 'Taiwan legal matters — consult in Korean',
     ctaText:

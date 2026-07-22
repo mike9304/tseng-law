@@ -31,8 +31,8 @@
 - C1~C4(markers 포함) 푸시·배포 전 링크 타깃에 넣지 말 것.
 
 ## 완료 판정
-- [ ] P0 타깃 각각 inbound 문맥 링크 ≥2 (홈 글로벌 내비 제외)
-- [ ] outreach-campaign 문안 링크 타깃이 P0 URL
+- [x] P0 타깃 각각 inbound 문맥 링크 ≥2 (홈 글로벌 내비 제외) — 2026-07-22 구현 기준
+- [x] outreach-campaign 문안 링크 타깃이 P0 URL — P0 딥링크 4곳 반영
 - [ ] qa 그린, 라이브 스팟 200
 - [ ] 지시서 보드 STEP 8.5 ✅
 

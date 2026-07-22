@@ -111,3 +111,10 @@ faq:
 영구적으로 운영하지 않을 것이 확실하다면
 
 여전히 합법적인 해산·청산 절차를 진행해야 합니다.
+
+---
+
+> 더 보기:
+> - [대만 회사설립 종합 가이드 — 절차·비용·법인 형태 총정리](/ko/guides/taiwan-company-setup)
+> - [대만 회사설립 기초 칼럼](/ko/columns/taiwan-company-establishment-basics)
+> - [한국어 가능한 대만 변호사](/ko/korean-lawyer-in-taiwan)

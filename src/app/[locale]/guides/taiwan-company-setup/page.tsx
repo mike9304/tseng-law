@@ -172,6 +172,19 @@ export default function TaiwanCompanySetupGuidePage({ params }: { params: { loca
               </ul>
             </section>
 
+            <section className={styles.section}>
+              <h2 className={styles.heading}>{c.relatedResourcesHeading}</h2>
+              <ul className={styles.relatedList}>
+                {c.relatedResources.map((item) => (
+                  <li key={item.href}>
+                    <Link href={`/${locale}/${item.href}`} className={styles.relatedLink}>
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
             <div className={styles.cta}>
               <h2 className={styles.ctaTitle}>{c.ctaTitle}</h2>
               <p className={styles.ctaText}>{c.ctaText}</p>

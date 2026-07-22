@@ -16,6 +16,7 @@ describe('guides/taiwan-company-setup content', () => {
       expect(c.steps).toHaveLength(5);
       expect(c.faq).toHaveLength(locale === 'ko' ? 7 : 5);
       expect(c.relatedColumns).toHaveLength(4);
+      expect(c.relatedResources).toHaveLength(4);
       // Each step must have a name + text to survive HowTo filtering
       for (const step of c.steps) {
         expect(step.name.trim()).not.toBe('');
@@ -78,13 +79,26 @@ describe('guides/taiwan-company-setup content', () => {
 
   it('the related column slugs match the four expected source columns', () => {
     const expected = [
-      '001-taiwan-company-establishment-basics',
-      '013-taiwan-company-establishment-advanced-1',
-      '005-taiwan-company-establishment-advanced-2',
-      '004-taiwan-company-subsidiary-vs-branch',
+      'taiwan-company-establishment-basics',
+      'taiwan-company-establishment-advanced-1',
+      'taiwan-company-establishment-advanced-2',
+      'taiwan-company-subsidiary-vs-branch',
     ];
     const ko = guideContent.ko;
     expect(ko.relatedColumns.map((c) => c.slug)).toEqual(expected);
+  });
+
+  it('links every locale to the four related P0 resources', () => {
+    const expected = [
+      'korean-lawyer-in-taiwan',
+      'taiwan-company-setup-lawyer',
+      'taiwan-lawyer',
+      'services/investment',
+    ];
+
+    for (const locale of locales) {
+      expect(guideContent[locale].relatedResources.map((item) => item.href)).toEqual(expected);
+    }
   });
 
   it('canonicalizes the locale tag in the inLanguage field', () => {

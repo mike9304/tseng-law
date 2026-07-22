@@ -17,10 +17,25 @@ describe('korean-lawyer-in-taiwan content', () => {
       expect(c.services.length).toBeGreaterThan(0);
       expect(c.languages.length).toBeGreaterThan(0);
       expect(c.faq).toHaveLength(5);
+      expect(c.relatedResources).toHaveLength(5);
       for (const item of c.faq) {
         expect(item.q.trim()).not.toBe('');
         expect(item.a.trim()).not.toBe('');
       }
+    }
+  });
+
+  it('links every locale to the same five related P0 resources', () => {
+    const expected = [
+      'guides/taiwan-company-setup',
+      'taiwan-company-setup-lawyer',
+      'taiwan-lawyer',
+      'taiwan-litigation-lawyer',
+      'services',
+    ];
+
+    for (const locale of locales) {
+      expect(landingContent[locale].relatedResources.map((item) => item.href)).toEqual(expected);
     }
   });
 

@@ -120,3 +120,10 @@ featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
 한국 기업이 빠르게 대만 시장에 진출할 수 있도록 도와드립니다.
 
 궁금한 점이 있으시면 언제든지 저희에게 연락해주세요.
+
+---
+
+> 더 보기:
+> - [대만 회사설립 종합 가이드 — 절차·비용·법인 형태 총정리](/ko/guides/taiwan-company-setup)
+> - [한국어 가능한 대만 변호사](/ko/korean-lawyer-in-taiwan)
+> - [대만 법인설립·회사설립 변호사 안내](/ko/taiwan-company-setup-lawyer)

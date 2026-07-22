@@ -127,4 +127,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ---
 
-> 더 보기: [대만 회사설립 종합 가이드 — 절차·비용·법인 형태 총정리](/ko/guides/taiwan-company-setup)
+> 더 보기:
+> - [대만 회사설립 종합 가이드 — 절차·비용·법인 형태 총정리](/ko/guides/taiwan-company-setup)
+> - [한국어 가능한 대만 변호사](/ko/korean-lawyer-in-taiwan)
+> - [대만 법인설립·회사설립 변호사 안내](/ko/taiwan-company-setup-lawyer)

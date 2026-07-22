@@ -111,6 +111,19 @@ export default function KoreanLawyerInTaiwanPage({ params }: { params: { locale:
               </dl>
             </section>
 
+            <section className={styles.section}>
+              <h2 className={styles.heading}>{c.relatedHeading}</h2>
+              <ul className={styles.list}>
+                {c.relatedResources.map((item) => (
+                  <li className={styles.listItem} key={item.href}>
+                    <Link href={`/${locale}/${item.href}`} className={styles.relatedLink}>
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
             <div className={styles.cta}>
               <h2 className={styles.ctaTitle}>{c.ctaTitle}</h2>
               <p className={styles.ctaText}>{c.ctaText}</p>

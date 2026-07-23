@@ -452,7 +452,7 @@ export default function Header({ locale }: { locale: Locale }) {
         <div className="container header-main-inner">
           <Link className="header-logo" href={`/${locale}`} aria-label={homeLabel}>
             <span className="logo-mark" aria-hidden>
-              <Image src="/images/brand/favicon-seal-red-512.png" alt="" width={40} height={40} priority />
+              <Image src="/images/brand/hovering-seal-official.png" alt="" width={40} height={40} priority />
             </span>
             <span className="logo-kr">{brandText}</span>
           </Link>

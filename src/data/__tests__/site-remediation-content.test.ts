@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { readFileSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
@@ -194,14 +195,22 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
     }
   });
 
-  it('1b-6 uses the safe-area square seal in desktop and mobile headers', () => {
+  it('1b-6 uses the complete official seal in desktop and mobile headers', () => {
     for (const component of ['Header.tsx', 'MobileNavDrawer.tsx']) {
       const source = readFileSync(path.join(root, 'src/components', component), 'utf8');
-      expect(source).toContain('src="/images/brand/favicon-seal-red-512.png"');
+      expect(source).toContain('src="/images/brand/hovering-seal-official.png"');
+      expect(source).not.toContain('src="/images/brand/favicon-seal-red-512.png"');
       expect(source).not.toContain('src="/images/brand/hovering-seal-red-512.png"');
       expect(source).toContain('width={40} height={40}');
       expect(source).not.toContain('const brandLogo =');
     }
+
+    const officialSealPath = path.join(root, 'public/images/brand/hovering-seal-official.png');
+    const officialSeal = readFileSync(officialSealPath);
+    expect(statSync(officialSealPath).size).toBe(230656);
+    expect(createHash('sha256').update(officialSeal).digest('hex')).toBe(
+      '73c20bf8407d52560fe63f20953fd98e10a34e42924d916edd56ca1dc0e5a8d8',
+    );
   });
 
   it('uses dedicated safe-area favicon assets in root layout, manifest, and builder fallback', () => {

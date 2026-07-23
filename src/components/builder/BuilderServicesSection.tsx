@@ -7,62 +7,9 @@ import type { SiteContent } from '@/data/site-content';
 import { getServiceSlugs } from '@/data/service-details';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
+import ServicePracticeIcon from '@/components/ServicePracticeIcon';
 
 type BuilderServicesContent = Pick<SiteContent['services'], 'label' | 'title' | 'description' | 'items'>;
-
-function ServiceIcon({ index }: { index: number }) {
-  const common = {
-    fill: 'none',
-    stroke: 'currentColor',
-    strokeWidth: 1.6,
-    strokeLinecap: 'round' as const,
-  };
-
-  if (index === 0) {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path d="M4 18h16" {...common} />
-        <path d="M6 18V8h4v10" {...common} />
-        <path d="M14 18V5h4v13" {...common} />
-        <path d="M4 12l4-4 4 3 8-6" {...common} />
-      </svg>
-    );
-  }
-  if (index === 1) {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path d="M6 5h10l3 3v11H6z" {...common} />
-        <path d="M16 5v3h3" {...common} />
-        <path d="M9 13h7M9 17h5" {...common} />
-      </svg>
-    );
-  }
-  if (index === 2) {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path d="M3 12h18" {...common} />
-        <path d="M7 9l-4 3 4 3" {...common} />
-        <path d="M17 9l4 3-4 3" {...common} />
-        <path d="M10 7h4M10 17h4" {...common} />
-      </svg>
-    );
-  }
-  if (index === 3 || index === 4) {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path d="M12 3l7 3v6c0 4.5-2.6 7.6-7 9-4.4-1.4-7-4.5-7-9V6l7-3z" {...common} />
-        <path d="M9 12l2 2 4-4" {...common} />
-      </svg>
-    );
-  }
-
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden>
-      <path d="M5 19V7l7-3 7 3v12" {...common} />
-      <path d="M9 12h6M9 15h6" {...common} />
-    </svg>
-  );
-}
 
 export default function BuilderServicesSection({
   locale,
@@ -163,7 +110,7 @@ export default function BuilderServicesSection({
                   >
                     <div className="services-detail-header">
                       <span className="service-icon" aria-hidden>
-                        <ServiceIcon index={index} />
+                        <ServicePracticeIcon index={index} />
                       </span>
                       <h3 className="services-detail-title">{item.title}</h3>
                     </div>

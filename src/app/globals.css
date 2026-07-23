@@ -920,6 +920,50 @@ h1, h2, h3 {
     linear-gradient(135deg, #071224 0%, #0a1630 48%, #0c1832 100%);
 }
 
+/* Editorial split (composite HomeCaseResultsSplit): image left, ink copy right */
+.home-results-panel--editorial {
+  /* Public composite feel height ~786px (±10% → 707–865) */
+  min-height: 786px;
+  grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
+  border: 1px solid rgba(214, 196, 169, 0.24);
+  background: #071224;
+}
+
+/* Beat later equal-specificity `.section { padding: clamp(...) }` (and mobile
+   `.section` resets) so navy bands do not appear above/below the plate.
+   Element+class only for padding — keep class-only rules free for responsive
+   min-height/grid overrides. */
+section.home-results-panel--editorial {
+  padding: 0;
+}
+
+.home-results-panel--editorial .home-results-media {
+  min-height: 100%;
+  background: #f4efe4;
+}
+
+.home-results-panel--editorial .home-results-media-img {
+  width: 100%;
+  /* Beat global img height:auto + intrinsic 2048:880 letterbox on mobile.
+     !important only on this one property. */
+  height: 100% !important;
+  object-fit: cover;
+  /* Keep left architectural structure; avoid empty center-only crop */
+  object-position: 18% center;
+  transform: none;
+}
+
+.home-results-panel--editorial:hover .home-results-media-img,
+.home-results-panel--editorial:focus-within .home-results-media-img {
+  transform: none;
+}
+
+.home-results-panel--editorial .home-results-content {
+  max-width: none;
+  justify-content: center;
+  background: #071224;
+}
+
 .home-results-content {
   max-width: 760px;
 }
@@ -2376,6 +2420,47 @@ html[lang='zh-Hant'] .hero-media {
 .services-detail-card.is-open {
   border-color: var(--accent); background: var(--off-white);
   box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+}
+
+/* Home `#practice` only: quieter surfaces for code-native practice icons */
+#practice .services-detail-card {
+  border-radius: 4px;
+  box-shadow: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+#practice .services-detail-card:hover {
+  background: rgba(22, 58, 95, 0.03);
+  border-color: var(--gray-300);
+  box-shadow: none;
+}
+#practice .services-detail-card.is-open {
+  border-color: var(--purple-border);
+  background: var(--off-white);
+  box-shadow: none;
+}
+#practice .services-detail-toggle:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
+#practice .service-icon {
+  width: 46px;
+  height: 46px;
+  min-width: 40px;
+  min-height: 40px;
+  margin-bottom: 0;
+  border-radius: 4px;
+  transform: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+#practice .services-detail-card:hover .service-icon,
+#practice .services-detail-card:focus-within .service-icon {
+  border-color: var(--purple-border);
+  background: var(--purple-bg);
+  color: var(--gold);
+  transform: none;
+}
+#practice .services-detail-more:hover {
+  transform: none;
 }
 
 .services-anchor-alias {
@@ -7781,6 +7866,18 @@ a.floating-ai-chat-contact-item:hover strong {
 
   .split--img-right .split-image {
     order: -1;
+  }
+
+  /* Home results editorial: image plate 220–280px on tablet */
+  .home-results-panel--editorial {
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .home-results-panel--editorial .home-results-media {
+    aspect-ratio: auto;
+    max-height: none;
+    height: 250px;
   }
 }
 
@@ -18319,6 +18416,22 @@ h1.svc-hero-title {
   .home-results-title {
     font-size: clamp(1.6rem, 6.6vw, 2.2rem);
   }
+
+  /* Editorial results: image top / copy bottom on small screens */
+  .home-results-panel--editorial {
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .home-results-panel--editorial .home-results-media {
+    aspect-ratio: auto;
+    max-height: none;
+    height: 250px;
+  }
+
+  .home-results-panel--editorial .home-results-media-img {
+    object-position: 18% center;
+  }
 }
 
 /* Phones (<=480): tighter density, single column everywhere */
@@ -18339,6 +18452,10 @@ h1.svc-hero-title {
   .attorney-card-photo--sub {
     aspect-ratio: 4 / 5;
     max-width: 100%;
+  }
+
+  .home-results-panel--editorial .home-results-media {
+    height: 180px;
   }
 
   .split-content {

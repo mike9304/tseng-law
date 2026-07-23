@@ -1542,6 +1542,36 @@ export async function PublishedSitePageView({
             top: 380px !important;
           }
         }
+        /* Desktop zh-hant home: published tree still mounts both the old
+           decomposed services/results roots AND the newer composite nodes
+           (anchor mobile-parity-home-*). Those composites are the only shared
+           render source for the new practice SVGs + results editorial image
+           (same components as /ko /en). Mobile already swaps all home
+           sections to the parity overlays; desktop only needs these two
+           sections — the parity wrappers keep the same flow rect/min-height
+           so #stats and later sections stay put without seed/published JSON
+           rewrites. Do not flip other home-* roots on desktop. */
+        @media (min-width: 769px) {
+          .builder-pub-main > .builder-pub-node[data-node-id='home-services-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-case-results-root'] {
+            display: none !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-anchor='mobile-parity-home-services'],
+          .builder-pub-main > .builder-pub-node[data-anchor='mobile-parity-home-case-results'] {
+            display: block !important;
+          }
+          /* Published parity contract: wrapper is fixed min-height 843px
+             (inline height:auto; min-height:843px). Composite #results defaults
+             to 786px. min-height:inherit / percentage (100%) cannot fill the
+             slot: the wrapper height is indefinite (height:auto + min-height),
+             and an intermediate surface div with min-height:100% resolves to
+             content height (~590px), so #results inherits that broken chain
+             and leaves ~253px empty under the plate. Pin the published 843px
+             contract directly. Desktop-only — mobile parity heights untouched. */
+          .builder-pub-main > .builder-pub-node[data-anchor='mobile-parity-home-case-results'] #results {
+            min-height: 843px;
+          }
+        }
         ` : ''}
         ${['about', 'contact', 'lawyers', 'reviews', 'pricing'].includes(slugPath) ? `
         @media (min-width: 769px) {

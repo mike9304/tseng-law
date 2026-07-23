@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Locale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
 import {
@@ -5,6 +6,13 @@ import {
   homeResultsTextSurfaceIds,
 } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
+
+/** Wide Miora editorial plate — used only by home `#results`. */
+export const HOME_RESULTS_EDITORIAL_IMAGE_SRC =
+  '/images/editorial/cross-strait-results.webp';
+
+export const HOME_RESULTS_EDITORIAL_IMAGE_WIDTH = 2048;
+export const HOME_RESULTS_EDITORIAL_IMAGE_HEIGHT = 880;
 
 const copyByLocale = {
   ko: {
@@ -39,7 +47,25 @@ export default function HomeCaseResultsSplit({ locale }: { locale: Locale }) {
   const copy = copyByLocale[locale];
 
   return (
-    <section className="section section--dark split-section split--text-only home-results-panel" id="results" data-tone="dark">
+    <section
+      className="section section--dark split-section split--img-left home-results-panel home-results-panel--editorial"
+      id="results"
+      data-tone="dark"
+    >
+      <div
+        className="split-image home-results-media"
+        data-builder-node-key="media"
+        aria-hidden="true"
+      >
+        <Image
+          src={HOME_RESULTS_EDITORIAL_IMAGE_SRC}
+          alt=""
+          width={HOME_RESULTS_EDITORIAL_IMAGE_WIDTH}
+          height={HOME_RESULTS_EDITORIAL_IMAGE_HEIGHT}
+          sizes="(max-width: 900px) 100vw, 52vw"
+          className="home-results-media-img"
+        />
+      </div>
       <div className="split-content home-results-content" data-builder-node-key="copy">
         <div
           className="section-label home-results-label"

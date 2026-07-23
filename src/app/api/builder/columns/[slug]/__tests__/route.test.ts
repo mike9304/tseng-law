@@ -127,6 +127,52 @@ describe('/api/builder/columns/[slug]', () => {
     expect(JSON.stringify(data)).not.toContain('Unexpected');
   });
 
+  it('requests the draft rate-limit bucket for PATCH autosaves', async () => {
+    const current = column({ slug: 'sample-column', locale: 'ko' });
+    readColumnBundleMock.mockResolvedValueOnce(bundle({
+      slug: 'sample-column',
+      draft: current,
+      preferred: current,
+    }));
+
+    const response = await route.PATCH(
+      request('/api/builder/columns/sample-column?locale=ko', {
+        method: 'PATCH',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ title: 'updated' }),
+      }),
+      { params: { slug: 'sample-column' } },
+    );
+
+    expect(response.status).toBe(200);
+    expect(guardMutation).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      { bucket: 'draft' },
+    );
+  });
+
+  it('keeps DELETE on the mutation rate-limit bucket', async () => {
+    const current = column({ slug: 'sample-column', locale: 'ko', draft: true });
+    readColumnBundleMock.mockResolvedValueOnce(bundle({
+      slug: 'sample-column',
+      draft: current,
+      preferred: current,
+    }));
+
+    const response = await route.DELETE(
+      request('/api/builder/columns/sample-column?locale=ko', {
+        method: 'DELETE',
+      }),
+      { params: { slug: 'sample-column' } },
+    );
+
+    expect(response.status).toBe(200);
+    expect(guardMutation).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      { bucket: 'mutation' },
+    );
+  });
+
   it('returns localized stable-code JSON for slug conflicts', async () => {
     const current = column({ slug: 'sample-column', locale: 'ko' });
     const existing = column({ slug: 'existing-column', locale: 'ko' });

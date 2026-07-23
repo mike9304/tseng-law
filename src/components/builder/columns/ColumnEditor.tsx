@@ -9,6 +9,15 @@ import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import ColumnTranslationStatusAlert from '@/components/builder/translations/ColumnTranslationStatusAlert';
 import type { BuilderAssetListItem } from '@/lib/builder/assets';
 import { getColumnEditCopy } from '@/components/builder/columns/column-edit-copy';
+import {
+  executeColumnPublish,
+  executeColumnSave,
+  InflightSaveCoordinator,
+  mapColumnMutationError,
+  readMutationErrorBody,
+  withPublishBusyLock,
+  type SaveOutcome,
+} from '@/components/builder/columns/column-editor-ops';
 import type { Locale } from '@/lib/locales';
 
 interface ColumnEditorProps {
@@ -125,9 +134,12 @@ export default function ColumnEditor({
   const [summaryOpen, setSummaryOpen] = useState(false);
   const [assetLibraryOpen, setAssetLibraryOpen] = useState(false);
   const [saveStatus, setSaveStatus] = useState<'saving' | 'saved' | 'error'>('saved');
+  const [busy, setBusy] = useState(false);
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastSavedRef = useRef<string>('');
   const hydratedRef = useRef(false);
+  const saveCoordinatorRef = useRef(new InflightSaveCoordinator());
+  const publishBusyRef = useRef(false);
 
   const editor = useEditor({
     immediatelyRender: false,
@@ -153,50 +165,104 @@ export default function ColumnEditor({
     const bodyPlainText = editor.getText();
     const bodyMarkdown = serializeEditorMarkdown(editor.getJSON() as RichTextJson);
     const nextSummary = summary.trim() || buildAutoSummary(title, bodyPlainText, bodyHtml);
-    const payload = JSON.stringify({ title, summary: nextSummary, bodyHtml, bodyMarkdown });
-    return { payload, summary: nextSummary, bodyHtml, bodyMarkdown };
+    const body = { title, summary: nextSummary, bodyHtml, bodyMarkdown };
+    const payload = JSON.stringify(body);
+    return { payload, body, summary: nextSummary, bodyHtml, bodyMarkdown };
   }, [editor, title, summary]);
 
-  const save = useCallback(async () => {
+  const mapSaveHttpError = useCallback(async (res: Response) => {
+    const body = await readMutationErrorBody(res);
+    return mapColumnMutationError(
+      {
+        kind: 'save',
+        status: res.status,
+        error: body.error,
+        errorCode: body.errorCode,
+      },
+      copy.editor.saveAlerts,
+    );
+  }, [copy.editor.saveAlerts]);
+
+  const mapPublishHttpError = useCallback(async (res: Response) => {
+    const body = await readMutationErrorBody(res);
+    return mapColumnMutationError(
+      {
+        kind: 'publish',
+        status: res.status,
+        error: body.error,
+        errorCode: body.errorCode,
+      },
+      copy.editor.publishAlerts,
+    );
+  }, [copy.editor.publishAlerts]);
+
+  const cancelDebounce = useCallback(() => {
+    if (saveTimerRef.current) {
+      clearTimeout(saveTimerRef.current);
+      saveTimerRef.current = null;
+    }
+  }, []);
+
+  const save = useCallback(async (options?: { manageBusy?: boolean }): Promise<SaveOutcome> => {
+    const manageBusy = options?.manageBusy !== false;
     const nextPayload = buildPayload();
-    if (!nextPayload) return;
-    const { payload, summary: nextSummary, bodyHtml, bodyMarkdown } = nextPayload;
+    if (!nextPayload) return { status: 'noop' };
+    const { payload, body } = nextPayload;
+
     if (!hydratedRef.current) {
       lastSavedRef.current = payload;
       hydratedRef.current = true;
-      return;
+      return { status: 'success', payloadKey: payload };
     }
-    if (payload === lastSavedRef.current) return;
 
-    setSaveStatus('saving');
-    onSaveStatus?.('saving');
-    try {
-      const res = await fetch(
-        `/api/builder/columns/${encodeURIComponent(slug)}?locale=${encodeURIComponent(locale)}`,
-        {
-          method: 'PATCH',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ title, summary: nextSummary, bodyHtml, bodyMarkdown }),
-        },
-      );
-      if (res.ok) {
-        lastSavedRef.current = payload;
+    return saveCoordinatorRef.current.run(payload, async () => {
+      // Re-check after joining / waiting — another flight may have saved this payload.
+      if (payload === lastSavedRef.current) {
+        return { status: 'noop' };
+      }
+
+      if (manageBusy) setBusy(true);
+      setSaveStatus('saving');
+      onSaveStatus?.('saving');
+
+      const outcome = await executeColumnSave({
+        payloadKey: payload,
+        lastSavedKey: lastSavedRef.current,
+        hydrated: true,
+        skipIfUnchanged: true,
+        request: () => fetch(
+          `/api/builder/columns/${encodeURIComponent(slug)}?locale=${encodeURIComponent(locale)}`,
+          {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+          },
+        ),
+        mapHttpError: mapSaveHttpError,
+        mapNetworkError: () => copy.editor.saveAlerts.networkError,
+      });
+
+      if (outcome.status === 'success') {
+        lastSavedRef.current = outcome.payloadKey;
         setSaveStatus('saved');
         onSaveStatus?.('saved');
-      } else {
+      } else if (outcome.status === 'error') {
         setSaveStatus('error');
         onSaveStatus?.('error');
+      } else {
+        setSaveStatus('saved');
+        onSaveStatus?.('saved');
       }
-    } catch {
-      setSaveStatus('error');
-      onSaveStatus?.('error');
-    }
-  }, [buildPayload, slug, locale, title, onSaveStatus]);
+
+      if (manageBusy) setBusy(false);
+      return outcome;
+    });
+  }, [buildPayload, slug, locale, onSaveStatus, mapSaveHttpError, copy.editor.saveAlerts.networkError]);
 
   const scheduleSave = useCallback(() => {
     if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
     saveTimerRef.current = setTimeout(() => {
-      save();
+      void save();
     }, AUTOSAVE_DEBOUNCE_MS);
   }, [save]);
 
@@ -220,45 +286,66 @@ export default function ColumnEditor({
   }, [title, summary, scheduleSave]);
 
   const handlePublish = useCallback(async () => {
-    await save();
-    setSaveStatus('saving');
-    onSaveStatus?.('saving');
-    try {
-      const res = await fetch(
-        `/api/builder/columns/${encodeURIComponent(slug)}/publish?locale=${encodeURIComponent(locale)}`,
-        { method: 'POST' },
-      );
-      if (res.ok) {
-        const data = await res.json().catch(() => ({})) as {
-          slugRedirect?: {
-            status?: string;
-            redirects?: unknown[];
-            redirect?: unknown;
-            skipReason?: string;
-          } | null;
-        };
-        setSaveStatus('saved');
-        onSaveStatus?.('saved');
-        const redirectCount = data.slugRedirect?.redirects?.length
-          ?? (data.slugRedirect?.redirect ? 1 : 0);
-        const redirectCopy = redirectCount > 0
-          ? copy.editor.publishAlerts.redirect(redirectCount)
-          : data.slugRedirect?.status === 'skipped'
-            ? copy.editor.publishAlerts.redirectSkipped(data.slugRedirect.skipReason ?? 'no change')
-            : '';
-        alert(`${copy.editor.publishAlerts.success}${redirectCopy}`);
-      } else {
-        const data = await res.json().catch(() => ({}));
-        alert(copy.editor.publishAlerts.failure((data as { error?: string }).error || res.status));
-        setSaveStatus('error');
-        onSaveStatus?.('error');
-      }
-    } catch {
-      alert(copy.editor.publishAlerts.networkError);
-      setSaveStatus('error');
-      onSaveStatus?.('error');
+    await withPublishBusyLock(
+      {
+        isBusy: () => publishBusyRef.current,
+        setBusy: (next) => {
+          publishBusyRef.current = next;
+          setBusy(next);
+        },
+      },
+      async () => {
+        setSaveStatus('saving');
+        onSaveStatus?.('saving');
+
+        const result = await executeColumnPublish({
+          cancelDebounce,
+          isPublishBusy: false,
+          // Publish owns busy UI for the whole save→publish sequence.
+          ensureSaved: () => save({ manageBusy: false }),
+          requestPublish: () => fetch(
+            `/api/builder/columns/${encodeURIComponent(slug)}/publish?locale=${encodeURIComponent(locale)}`,
+            { method: 'POST' },
+          ),
+          mapHttpError: mapPublishHttpError,
+          mapNetworkError: () => copy.editor.publishAlerts.networkError,
+        });
+
+        if (result.status === 'success') {
+          setSaveStatus('saved');
+          onSaveStatus?.('saved');
+          const redirectCount = result.data.slugRedirect?.redirects?.length
+            ?? (result.data.slugRedirect?.redirect ? 1 : 0);
+          const redirectCopy = redirectCount > 0
+            ? copy.editor.publishAlerts.redirect(redirectCount)
+            : result.data.slugRedirect?.status === 'skipped'
+              ? copy.editor.publishAlerts.redirectSkipped(result.data.slugRedirect.skipReason ?? 'no change')
+              : '';
+          alert(`${copy.editor.publishAlerts.success}${redirectCopy}`);
+        } else if (result.status === 'save_failed' || result.status === 'error') {
+          alert(result.message);
+          setSaveStatus('error');
+          onSaveStatus?.('error');
+        }
+      },
+    );
+  }, [
+    cancelDebounce,
+    save,
+    slug,
+    locale,
+    onSaveStatus,
+    mapPublishHttpError,
+    copy.editor.publishAlerts,
+  ]);
+
+  const handleManualSave = useCallback(async () => {
+    cancelDebounce();
+    const outcome = await save();
+    if (outcome.status === 'error') {
+      alert(outcome.message);
     }
-  }, [save, slug, locale, onSaveStatus, copy]);
+  }, [cancelDebounce, save]);
 
   const insertAssetImage = useCallback((asset: BuilderAssetListItem) => {
     editor
@@ -267,6 +354,8 @@ export default function ColumnEditor({
       .setImage({ src: asset.url, alt: asset.filename, title: asset.filename })
       .run();
   }, [editor]);
+
+  const controlsDisabled = busy || publishBusyRef.current;
 
   return (
     <div className="column-editor-container">
@@ -292,10 +381,20 @@ export default function ColumnEditor({
           >
             {copy.editor.publicPage}
           </a>
-          <button type="button" className="column-editor-btn-save" onClick={() => save()}>
+          <button
+            type="button"
+            className="column-editor-btn-save"
+            onClick={() => { void handleManualSave(); }}
+            disabled={controlsDisabled}
+          >
             {copy.editor.save}
           </button>
-          <button type="button" className="column-editor-btn-publish" onClick={handlePublish}>
+          <button
+            type="button"
+            className="column-editor-btn-publish"
+            onClick={() => { void handlePublish(); }}
+            disabled={controlsDisabled}
+          >
             {copy.editor.publish}
           </button>
         </div>

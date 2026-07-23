@@ -1,9 +1,21 @@
 /**
  * Rate limiting for builder APIs.
  *
- * Uses Upstash Redis REST when UPSTASH_REDIS_REST_URL and
- * UPSTASH_REDIS_REST_TOKEN are present. Local review and tests keep the
- * existing in-memory sliding window fallback.
+ * Priority:
+ * 1. BUILDER_RATE_LIMIT_BACKEND=isolated-qa → attested in-memory only
+ * 2. Upstash Redis REST when fully configured
+ * 3. production: Vercel Blob durable fallback when Upstash is missing or fails
+ * 4. production: sanitized backend_unavailable if Blob is also missing/fails
+ * 5. non-production: bounded in-memory fallback
+ *
+ * Blob fallback notes:
+ * - Private blobs only (BLOB_READ_WRITE_TOKEN).
+ * - Pathnames use a fixed-length SHA-256 of the rate-limit key, never raw IPs.
+ * - Marker bodies are a non-empty fixed constant (Vercel Blob rejects empty body;
+ *   never IP, key, token, or other secrets).
+ * - list + put is not atomic under concurrency; overshoot is possible. This path is
+ *   intentionally limited to authenticated builder mutation rate limiting as a
+ *   durable production fallback, not a general-purpose atomic limiter.
  *
  * Limits:
  * - Publish: 10 per minute
@@ -12,7 +24,8 @@
  * - General mutation: 60 per minute
  */
 
-import { randomUUID } from 'crypto';
+import { createHash, randomUUID } from 'crypto';
+import { del, list, put } from '@vercel/blob';
 import { getQaRuntimeAttestation } from '@/lib/builder/security/qa-runtime-attestation';
 
 interface RateLimitEntry {
@@ -23,6 +36,21 @@ const store = new Map<string, RateLimitEntry>();
 const UPSTASH_TIMEOUT_MS = 1500;
 /** Hard cap so the in-memory fallback can't grow unbounded under IP rotation. */
 const STORE_CAP = 5000;
+
+/** Private blob prefix for durable production rate-limit markers. */
+const BLOB_RATE_PREFIX = 'builder/rate-limit/';
+/** Max blobs returned per list page (bounded pagination). */
+const BLOB_LIST_LIMIT = 100;
+/** Max list pages inspected per check (hard bound). */
+const BLOB_LIST_MAX_PAGES = 5;
+/** Max expired markers deleted per check (best-effort bounded cleanup). */
+const BLOB_CLEANUP_MAX_DELETES = 25;
+const BLOB_TIMEOUT_MS = 2000;
+/**
+ * Non-empty Blob put body. Vercel Blob rejects empty bodies (`body is required`).
+ * Fixed constant only — never raw IP, rate-limit key, token, or other secrets.
+ */
+export const BLOB_RATE_MARKER_BODY = '1';
 
 function cleanOld(entry: RateLimitEntry, windowMs: number): void {
   const cutoff = Date.now() - windowMs;
@@ -86,15 +114,20 @@ export async function checkRateLimit(
     try {
       return await checkUpstashRateLimit(upstash, key, maxRequests, windowMs);
     } catch {
-      return allowsInMemoryFallback()
-        ? checkInMemoryRateLimit(key, maxRequests, windowMs)
-        : backendUnavailable();
+      if (allowsInMemoryFallback()) {
+        return checkInMemoryRateLimit(key, maxRequests, windowMs);
+      }
+      // production: Upstash failed → durable Blob fallback, then fail-closed
+      return checkBlobRateLimitOrUnavailable(key, maxRequests, windowMs);
     }
   }
 
-  return allowsInMemoryFallback()
-    ? checkInMemoryRateLimit(key, maxRequests, windowMs)
-    : backendUnavailable();
+  if (allowsInMemoryFallback()) {
+    return checkInMemoryRateLimit(key, maxRequests, windowMs);
+  }
+
+  // production: no Upstash → durable Blob fallback, then fail-closed
+  return checkBlobRateLimitOrUnavailable(key, maxRequests, windowMs);
 }
 
 function checkInMemoryRateLimit(
@@ -205,6 +238,151 @@ async function checkUpstashRateLimit(
     };
   } finally {
     clearTimeout(timeout);
+  }
+}
+
+function resolveBlobToken(): string | null {
+  const token = process.env.BLOB_READ_WRITE_TOKEN?.trim();
+  return token || null;
+}
+
+/** Fixed-length hash of the rate-limit key (never raw IP). */
+export function hashRateLimitKey(key: string): string {
+  return createHash('sha256').update(key, 'utf8').digest('hex');
+}
+
+function parseMarkerTimestamp(pathname: string): number | null {
+  const base = pathname.split('/').pop() ?? '';
+  const stamp = base.split('-')[0];
+  if (!stamp || !/^\d+$/.test(stamp)) return null;
+  const value = Number(stamp);
+  return Number.isFinite(value) ? value : null;
+}
+
+/**
+ * Durable production fallback using private Vercel Blob markers.
+ * Not fully atomic under concurrent writers — see file header.
+ */
+async function checkBlobRateLimit(
+  token: string,
+  key: string,
+  maxRequests: number,
+  windowMs: number,
+): Promise<RateLimitResult> {
+  const now = Date.now();
+  const cutoff = now - windowMs;
+  const keyHash = hashRateLimitKey(key);
+  const prefix = `${BLOB_RATE_PREFIX}${keyHash}/`;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), BLOB_TIMEOUT_MS);
+
+  try {
+    const inWindow: Array<{ pathname: string; ts: number }> = [];
+    const expired: string[] = [];
+    let cursor: string | undefined;
+    let pages = 0;
+    let incomplete = false;
+
+    do {
+      pages += 1;
+      if (pages > BLOB_LIST_MAX_PAGES) {
+        incomplete = true;
+        break;
+      }
+
+      const page = await list({
+        prefix,
+        limit: BLOB_LIST_LIMIT,
+        cursor,
+        token,
+        abortSignal: controller.signal,
+      });
+
+      if (!page || !Array.isArray(page.blobs)) {
+        throw new Error('blob_rate_limit_invalid_list');
+      }
+
+      for (const blob of page.blobs) {
+        if (!blob || typeof blob.pathname !== 'string') {
+          throw new Error('blob_rate_limit_invalid_item');
+        }
+        const ts = parseMarkerTimestamp(blob.pathname);
+        if (ts === null) {
+          // Unparseable marker names are treated as backend failure (sanitized).
+          throw new Error('blob_rate_limit_invalid_item');
+        }
+        if (ts > cutoff) {
+          inWindow.push({ pathname: blob.pathname, ts });
+        } else {
+          expired.push(blob.pathname);
+        }
+      }
+
+      cursor = page.hasMore ? page.cursor : undefined;
+      if (page.hasMore && !cursor) {
+        throw new Error('blob_rate_limit_invalid_list');
+      }
+    } while (cursor);
+
+    // Bounded best-effort cleanup of expired markers (never unbounded delete).
+    const toDelete = expired.slice(0, BLOB_CLEANUP_MAX_DELETES);
+    if (toDelete.length > 0) {
+      try {
+        await del(toDelete, { token, abortSignal: controller.signal });
+      } catch {
+        // Cleanup is best-effort; rate decision still proceeds.
+      }
+    }
+
+    // If listing was truncated, refuse to under-count (fail-closed).
+    if (incomplete) {
+      return backendUnavailable();
+    }
+
+    inWindow.sort((a, b) => a.ts - b.ts);
+
+    if (inWindow.length >= maxRequests) {
+      const oldest = inWindow[0]?.ts ?? now;
+      return {
+        allowed: false,
+        remaining: 0,
+        retryAfterMs: Math.max(0, oldest + windowMs - now),
+      };
+    }
+
+    const markerName = `${now}-${randomUUID()}`;
+    const pathname = `${prefix}${markerName}`;
+    // Non-empty safe constant only — Vercel Blob rejects empty body; never IP/key/token.
+    await put(pathname, BLOB_RATE_MARKER_BODY, {
+      access: 'private',
+      addRandomSuffix: false,
+      contentType: 'text/plain',
+      token,
+      abortSignal: controller.signal,
+    });
+
+    return {
+      allowed: true,
+      remaining: Math.max(0, maxRequests - inWindow.length - 1),
+      retryAfterMs: 0,
+    };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function checkBlobRateLimitOrUnavailable(
+  key: string,
+  maxRequests: number,
+  windowMs: number,
+): Promise<RateLimitResult> {
+  const token = resolveBlobToken();
+  if (!token) return backendUnavailable();
+  try {
+    return await checkBlobRateLimit(token, key, maxRequests, windowMs);
+  } catch {
+    // Never surface Blob response/credential/raw upstream errors.
+    return backendUnavailable();
   }
 }
 

@@ -46,10 +46,18 @@ export interface ColumnEditCopy {
       placeholder: string;
       help: string;
     };
+    saveAlerts: {
+      rateLimitUnavailable: string;
+      tooManyRequests: string;
+      failure: (error: string | number) => string;
+      networkError: string;
+    };
     publishAlerts: {
       success: string;
       redirect: (count: number) => string;
       redirectSkipped: (reason: string) => string;
+      rateLimitUnavailable: string;
+      tooManyRequests: string;
       failure: (error: string | number) => string;
       networkError: string;
     };
@@ -153,10 +161,18 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
         placeholder: '비워두면 본문 앞부분으로 자동 생성됩니다.',
         help: '티스토리처럼 제목과 본문만 쓰면 자동으로 목록 설명이 저장됩니다. 필요한 경우에만 직접 입력하세요.',
       },
+      saveAlerts: {
+        rateLimitUnavailable: '저장 서비스를 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도해 주세요.',
+        tooManyRequests: '요청이 너무 많습니다. 잠시 후 다시 시도해 주세요.',
+        failure: (error) => `저장 실패: ${error}`,
+        networkError: '저장 중 네트워크 오류가 발생했습니다.',
+      },
       publishAlerts: {
         success: '발행 완료! AI 상담사 인덱싱이 백그라운드에서 진행됩니다.',
         redirect: (count) => `\n기존 slug URL 301 redirect ${count}개가 생성되었습니다.`,
         redirectSkipped: (reason) => `\nSlug redirect는 건너뛰었습니다 (${reason}).`,
+        rateLimitUnavailable: '발행 서비스를 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도해 주세요.',
+        tooManyRequests: '요청이 너무 많습니다. 잠시 후 다시 시도해 주세요.',
         failure: (error) => `발행 실패: ${error}`,
         networkError: '발행 중 네트워크 오류가 발생했습니다.',
       },
@@ -262,10 +278,18 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
         placeholder: '留白時會自動用本文開頭產生。',
         help: '像 Tistory 一樣，只要填標題與本文就會自動儲存列表說明；只有需要時才手動輸入。',
       },
+      saveAlerts: {
+        rateLimitUnavailable: '儲存服務暫時無法使用。請稍後再試。',
+        tooManyRequests: '請求過多。請稍後再試。',
+        failure: (error) => `儲存失敗：${error}`,
+        networkError: '儲存時發生網路錯誤。',
+      },
       publishAlerts: {
         success: '發佈完成！AI 顧問索引會在背景執行。',
         redirect: (count) => `\n已建立 ${count} 個舊 slug URL 的 301 redirect。`,
         redirectSkipped: (reason) => `\n已跳過 slug redirect（${reason}）。`,
+        rateLimitUnavailable: '發佈服務暫時無法使用。請稍後再試。',
+        tooManyRequests: '請求過多。請稍後再試。',
         failure: (error) => `發佈失敗：${error}`,
         networkError: '發佈時發生網路錯誤。',
       },
@@ -371,10 +395,18 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
         placeholder: 'Leave blank to auto-generate from the article intro.',
         help: 'Like Tistory, the list description is saved automatically when you only write a title and article. Enter it manually only when needed.',
       },
+      saveAlerts: {
+        rateLimitUnavailable: 'The save service is temporarily unavailable. Please try again shortly.',
+        tooManyRequests: 'Too many requests. Please try again shortly.',
+        failure: (error) => `Save failed: ${error}`,
+        networkError: 'A network error occurred while saving.',
+      },
       publishAlerts: {
         success: 'Published! AI assistant indexing is running in the background.',
         redirect: (count) => `\n${count} old slug URL 301 redirects were created.`,
         redirectSkipped: (reason) => `\nSlug redirect was skipped (${reason}).`,
+        rateLimitUnavailable: 'The publish service is temporarily unavailable. Please try again shortly.',
+        tooManyRequests: 'Too many requests. Please try again shortly.',
         failure: (error) => `Publish failed: ${error}`,
         networkError: 'A network error occurred while publishing.',
       },

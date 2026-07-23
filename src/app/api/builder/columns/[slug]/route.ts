@@ -140,7 +140,8 @@ export async function GET(request: NextRequest, context: ColumnRouteContext) {
 }
 
 export async function PATCH(request: NextRequest, context: ColumnRouteContext) {
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  // Draft autosave — use the higher-volume draft bucket, not general mutation.
+  const auth = await guardMutation(request, { bucket: 'draft' });
   if (auth instanceof NextResponse) return auth;
 
   let body: unknown;

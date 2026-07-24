@@ -3,7 +3,7 @@ title: "Taiwan Gym Injury Lawsuit"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2025-09-13"
 date_display: "September 13, 2025"
-read_time: "3 min read"
+read_time: "6 min read"
 categories:
   - "Case Study Analysis"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
@@ -17,74 +17,64 @@ Hello. I am Attorney Wei Tseng, a Taiwan lawyer.
 
 Today I would like to talk about a case that became a major issue in Taiwan.
 
-It is a case in which **a Korean student claimed damages against a listed gym in Taiwan**.
+It is a case in which **a Korean university student sought damages from a fitness chain operated by a publicly listed company in Taiwan**.
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Koreans are very fond of exercise and often go to the gym.
+Many people use gyms regularly, and exercise-related injuries can occur in Taiwan as elsewhere.
 
-But in Taiwan, accidents at gyms occur fairly often.
+Reported incidents have raised questions about supervision, equipment use, emergency response, and trainer-led instruction. Whether a gym operator is legally responsible depends on the facts, the applicable duties, causation, and the evidence.
 
-​
+In this matter, a Korean university student was injured while training under an instructor's supervision at a fitness chain operated by a publicly listed company in Taiwan.
 
-At some gyms, there are too few trainers on patrol, so staff fail to notice when a member is trapped under equipment during a workout, and fatal accidents have occurred.
+I represented the student in a damages claim. The first-instance court awarded TWD 1,570,000 in damages. The parties later reached a settlement on appeal.
 
-In other cases, trainers lack sufficient expertise and cause members to be injured during sessions—stories that often appear in Taiwanese news.
-
-​
-
-Previously, a Korean university student was injured while receiving trainer instruction at Taiwan’s largest listed gym.
-
-I assisted this Korean student in claiming damages against the gym and obtained a judgment for TWD 1,570,000.
-
-This case became a major topic of discussion in Taiwan’s fitness industry, sports community, legal profession, and broader legal circles.
+The case received substantial media coverage and online discussion in Taiwan.
 
 **News reports, discussions by netizens on Taiwan’s leading forum PTT, and online columns include the following:**
 
-[![男大生硬舉90公斤「椎間盤破裂」 怒告健身房求償](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
+![Male university student suffers a ruptured disc after deadlifting 90 kg and seeks damages from gym](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
-**男大生硬舉90公斤「椎間盤破裂」 怒告健身房求償**
+[Male university student suffers a ruptured disc after deadlifting 90 kg and seeks damages from gym](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
 
-[![韓男大生硬舉90kg椎間盤破裂一審獲賠157萬　健身工廠低調「二審已和解」](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
+![Korean male university student ruptures a disc while deadlifting 90 kg and is awarded TWD 1.57 million at first instance; Fitness Factory confirms settlement on appeal](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
 
-**韓男大生硬舉90kg椎間盤破裂一審獲賠157萬　健身工廠低調「二審已和解」**
+[Korean male university student ruptures a disc while deadlifting 90 kg and is awarded TWD 1.57 million at first instance; Fitness Factory confirms settlement on appeal](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
 
-[![韓男大生「硬舉90公斤」釀傷獲賠157萬 健身工廠二審低調和解](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
+![Korean male university student injured while deadlifting 90 kg is awarded TWD 1.57 million at first instance; Fitness Factory settles on appeal](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
 
-**韓男大生「硬舉90公斤」釀傷獲賠157萬 健身工廠二審低調和解**
+[Korean male university student injured while deadlifting 90 kg is awarded TWD 1.57 million at first instance; Fitness Factory settles on appeal](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
 
-[![男大生硬舉90公斤「椎間盤破裂」 怒告健身房求償](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)](https://news.ebc.net.tw/news/living/362075)
+![Male university student suffers a ruptured disc after deadlifting 90 kg and seeks damages from gym](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
 
-**男大生硬舉90公斤「椎間盤破裂」 怒告健身房求償**
+[Male university student suffers a ruptured disc after deadlifting 90 kg and seeks damages from gym](https://news.ebc.net.tw/news/living/362075)
 
-[![批踢踢實業坊 : [新聞]韓國男大生硬舉90公斤椎間盤破裂 健身工廠判賠157萬](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+![PTT news: Korean male university student ruptures a disc while deadlifting 90 kg; Fitness Factory ordered to pay TWD 1.57 million at first instance](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-**批踢踢實業坊 : [新聞]韓國男大生硬舉90公斤椎間盤破裂 健身工廠判賠157萬**
+[PTT news: Korean male university student ruptures a disc while deadlifting 90 kg; Fitness Factory ordered to pay TWD 1.57 million at first instance](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-[![BLOG : 韓國男大生體重70公斤硬舉90公斤 椎間盤破裂賠一百多萬？健身房錯了嗎？健身者的心態？](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)](https://blog.udn.com/blackjack/179081715)
+![Blog: A 70 kg Korean male university student deadlifts 90 kg and ruptures a disc—more than TWD 1 million in damages? Was the gym at fault? What was the exerciser's mindset?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-**BLOG : 韓國男大生體重70公斤硬舉90公斤 椎間盤破裂賠一百多萬？健身房錯了嗎？健身者的心態？**
+[Blog: A 70 kg Korean male university student deadlifts 90 kg and ruptures a disc—more than TWD 1 million in damages? Was the gym at fault? What was the exerciser's mindset?](https://blog.udn.com/blackjack/179081715)
 
-[![法律知識 : 男大生練硬舉椎間盤破裂，知名健身房判賠１５７萬！](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+![Legal commentary: Male university student ruptures a disc while deadlifting; well-known gym ordered to pay TWD 1.57 million at first instance](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-**法律知識 : 男大生練硬舉椎間盤破裂，知名健身房判賠１５７萬！**
+[Legal commentary: Male university student ruptures a disc while deadlifting; well-known gym ordered to pay TWD 1.57 million at first instance](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
-[![一起看判決👨‍⚖️【健身硬舉新手被要求舉90公斤導致急性椎間盤破裂】](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)](https://www.instagram.com/p/Crp4vJag7v3/)
+![Judgment review: Gym beginner asked to deadlift 90 kg, resulting in an acute disc rupture](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
-**一起看判決👨‍⚖️【健身硬舉新手被要求舉90公斤導致急性椎間盤破裂】**
+[Judgment review: Gym beginner asked to deadlift 90 kg, resulting in an acute disc rupture](https://www.instagram.com/p/Crp4vJag7v3/)
 
-![韓國男大生上教練課 硬舉90公斤結果椎間盤破裂？](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
+![Did a Korean male university student rupture a disc after deadlifting 90 kg during a personal-training session?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**韓國男大生上教練課 硬舉90公斤結果椎間盤破裂？**
+**Did a Korean male university student rupture a disc after deadlifting 90 kg during a personal-training session?**
 
-Because the case was reported by multiple Taiwanese news outlets, it attracted significant public attention.
+Because multiple Taiwanese outlets reported the matter, it attracted public attention.
 
-​
+Public discussion focused on two features:
 
-I believe this case sparked so much discussion for the following reasons:
-
-1. **Taiwanese consumers often have a weaker rights-protection mindset and are not fully aware that they can obtain damages. When they suffer harm after purchasing a product or service, many people in Taiwan find mediation and litigation cumbersome and doubt that the outcome will be satisfactory, so they simply give up. As a result, when a high-value damages case like this appears, people in Taiwan are often very surprised.**
-2. **The gym was Taiwan’s largest gym and, at the time, the only listed fitness brand company, while the victim was a Korean student. Both sides had distinctive identities, which drew even greater attention.**
+1. **The case raised practical questions about consumer remedies and the evidence needed to pursue a gym-injury claim.**
+2. **The defendant was a publicly listed company operating a large fitness chain, while the injured customer was a Korean university student.**
 
 **​**
 
@@ -92,53 +82,45 @@ Because of this case, many people injured at gyms have sent me questions.
 
 Here I will answer several frequently asked questions.
 
-These are important practical tips from a Taiwan lawyer—please remember them carefully.😊
+The following is general information, not legal advice for a particular case.
 
 ​
 
-**1. If you are injured while exercising at a gym, what lawsuits can you file in Taiwan?**
+**1. What legal routes may be available after a gym injury in Taiwan?**
 
-(1) Criminal complaint for negligent injury
+(1) A criminal complaint for negligent injury, if the legal elements are met
 
-(2) Civil action for damages
-
-​
-
-**2. Are there time limits for filing a lawsuit in Taiwan?**
-
-(1) The time limit for a criminal complaint for negligent injury is 6 months. (Code of Criminal Procedure Article 237)
-
-(2) The time limit for a civil damages claim is 2 years. (Civil Code Article 198)
+(2) A civil claim for damages
 
 ​
 
-**3. How do you preserve evidence after an accident?**
+**2. What time limits may apply?**
 
-There is a saying in Taiwan: “Where the burden of proof lies, so too lies the risk of losing the case.”
+(1) Under Criminal Code Article 287, negligent injury under Article 284 is an offense prosecutable only upon complaint. Under Code of Criminal Procedure Article 237, a person entitled to complain must file within six months after learning the offender's identity. ([Criminal Code Article 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001); [Code of Criminal Procedure Article 237](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001))
 
-The party that fails to present evidence often loses.
+(2) Under Civil Code Article 197, a tort damages claim generally must be exercised within two years after the claimant learns of both the injury and the person liable. A ten-year longstop runs from the wrongful act. ([Civil Code Article 197](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001))
 
-Moreover, the plaintiff bears a higher burden of proof.
+Other possible claims, and rules affecting limitation or complaint periods, depend on the facts. Seek case-specific advice promptly.
 
-Evidence is therefore extremely important, and Taiwanese judges decide cases based on the evidence.
+​
 
-The plaintiff must present evidence that the injury occurred at the gym.
+**3. How can evidence be preserved after an accident?**
 
-Gyms usually have CCTV installed, but after an injury it is almost impossible to obtain CCTV footage simply by asking the gym directly.
+A claimant generally needs evidence supporting liability, causation, and loss.
 
-Because the footage is unfavorable to the gym, the gym will refuse to provide it for various reasons.
+Relevant material may include CCTV footage, medical records, receipts, communications, witness accounts, and training records.
 
-Therefore, to preserve important CCTV footage quickly and prevent the gym from destroying it, you should take the following steps.
+A gym may decline an informal request for CCTV. To reduce the risk that relevant footage is overwritten or otherwise becomes unavailable, consider taking the following practical steps promptly.
 
 **​**
 
-**(1) Draft yourself, or ask a Taiwan lawyer to send, a certified content letter or a lawyer’s letter to the gym demanding that CCTV footage be preserved.**
+**(1) Send a formal written preservation request—by a content-certified letter or through counsel—identifying the relevant footage and asking the gym to preserve it.**
 
-This serves as evidence that you demanded preservation of the CCTV. If the gym destroys the evidence, that will work against it in litigation. In addition, sending a certified content letter or lawyer’s letter expresses an intention to take legal action, which puts pressure on the gym and often leads it to handle the matter more actively.
+The request documents when and what you asked the gym to preserve. Any evidentiary consequence of lost or deleted footage is for the court to assess based on the circumstances.
 
 ​
 
-**(2) File a police report so that the police can obtain the CCTV footage from the gym.​**
+**(2) If the facts may involve a criminal offense, report the matter promptly. The investigating authorities can then determine whether they have legal grounds to obtain or preserve the footage.​**
 
 **​**
 
@@ -150,31 +132,29 @@ This serves as evidence that you demanded preservation of the CCTV. If the gym d
 
 (3) Transportation expenses – Costs of travel to and from the hospital.
 
-(4) Loss of working capacity – If the injury leaves residual impairment, you can obtain an expert assessment of the percentage of loss of working capacity from a reliable hospital and calculate all “wage loss” until the plaintiff’s retirement. This may account for the largest portion of the damages award.
+(4) Loss of earning capacity – If lasting impairment is established, the court may consider medical and other expert evidence, the degree of impairment, the claimant's occupation and earnings, and the expected remaining working life. An impairment rating does not automatically establish the amount recoverable.
 
-(5) Loss of earnings due to inability to work – Wage loss incurred during the recovery period because the plaintiff could not work.
+(5) Lost earnings during recovery – Documented income lost during a period when the claimant could not work.
 
-(6) Solatium (emotional/mental damages) – The court decides the amount based on the severity of the injury and the financial circumstances of both parties.
+(6) Non-pecuniary damages – The court assesses the amount based on the severity of the injury, the parties' circumstances, and other case-specific factors.
 
-(7) Punitive damages – Under the Consumer Protection Act, where harm is caused by an enterprise operator’s intentional act, punitive damages of up to 5 times the amount of actual damages may be claimed; for gross negligence, up to 3 times; and for ordinary negligence, up to 1 times the amount of actual damages.​
+(7) Punitive damages – In litigation brought under the Consumer Protection Act, Article 51 allows a consumer to claim punitive damages of up to five times actual damages for injury caused by a business operator's intentional misconduct, up to three times for gross negligence, and up to the amount of actual damages for negligence. Whether the Act applies, and whether any punitive damages are awarded, depends on the facts and the court's assessment. ([Consumer Protection Act Article 51](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001))
 
 ​
 
-**5. Taiwan gyms are usually insured—so why don’t they pay compensation quickly?**
+**5. If a gym has liability insurance, why might compensation still be disputed?**
 
-The amount the gym can recover from its insurer is limited. If the customer’s claim exceeds the insurance coverage, the gym must make up the difference itself. In addition, Taiwanese insurers are often unwilling to pay readily for hard-to-quantify items such as loss of working capacity, solatium, and punitive damages until they see an expert report or a court judgment.
+Coverage limits, exclusions, causation, and the value of claimed losses may be disputed. Items such as loss of earning capacity and non-pecuniary damages often require medical, financial, or expert evidence. The insurer's and gym's positions depend on the policy and the facts; insurance does not determine liability or the amount of compensation by itself.
 
 ​
 
 That concludes this summary of frequently asked questions and answers.
 
-If you have further questions, please feel free to ask anytime.
+If you are injured at a gym in Taiwan, seek appropriate medical care, preserve relevant evidence, and obtain timely advice about the specific facts.
 
-​
+Depending on the circumstances, options may include negotiation, a consumer complaint or mediation, a criminal complaint, or a civil claim.
 
-If you are injured at a gym in Taiwan, you should actively assert your rights.
-
-Not only gyms—if you slip on a wet shop floor, suffer vomiting and diarrhea from defective food, or suffer harm to your health or other loss while receiving professional services—you may also protect your rights under the Consumer Protection Act. Be sure to pursue litigation to safeguard your rights when appropriate.
+Similar issues can arise after falls on business premises, food-related illness, or injury while receiving professional services. The available rights and remedies depend on the facts and the applicable law.
 
 ---
 

@@ -109,19 +109,19 @@ export const landingContent: Record<Locale, LandingContent> = {
   'zh-hant': {
     metaTitle: '會說韓文的台灣律師 | 昊鼎國際法律事務所（台北）',
     description:
-      '昊鼎國際法律事務所（Hovering International Law Firm）為台北的台灣律師事務所，曾俊瑋律師可以韓語、中文、日語提供諮詢，承辦台灣公司設立、民刑事案件與投資顧問。',
+      '昊鼎國際法律事務所（Hovering International Law Firm）為台北的台灣律師事務所，曾雋崴律師可以韓語、中文、日語提供諮詢，承辦台灣公司設立、民刑事案件與投資顧問。',
     keywords: [
       '會說韓文的台灣律師',
       '台灣律師',
       '台北律師',
       '台灣公司設立律師',
       '台灣訴訟律師',
-      '曾俊瑋律師',
+      '曾雋崴律師',
     ],
     heroLabel: 'KOREAN-SPEAKING TAIWAN LAWYER',
     title: '會說韓文的台灣律師 — 昊鼎國際法律事務所',
     lead: [
-      '昊鼎國際法律事務所（Hovering International Law Firm）為台北的台灣律師事務所，曾俊瑋律師可以韓語、中文、日語提供諮詢。',
+      '昊鼎國際法律事務所（Hovering International Law Firm）為台北的台灣律師事務所，曾雋崴律師可以韓語、中文、日語提供諮詢。',
       '承辦台灣公司設立、民刑事訴訟、投資顧問，以韓語溝通協助韓國企業與個人處理台灣法律問題。',
       '從初步諮詢的事實整理、管轄與流程設計、文件審閱到訴訟因應，提供完整的一條龍服務。',
     ],
@@ -152,7 +152,7 @@ export const landingContent: Record<Locale, LandingContent> = {
     faq: [
       {
         q: '可以用韓語諮詢嗎？',
-        a: '可以。昊鼎國際法律事務所的曾俊瑋律師以韓語提供諮詢，舉凡台灣公司設立、訴訟、投資顧問，皆可以韓語溝通進行。',
+        a: '可以。昊鼎國際法律事務所的曾雋崴律師以韓語提供諮詢，舉凡台灣公司設立、訴訟、投資顧問，皆可以韓語溝通進行。',
       },
       {
         q: '可以協助韓國企業在台設立公司嗎？',
@@ -160,7 +160,7 @@ export const landingContent: Record<Locale, LandingContent> = {
       },
       {
         q: '韓國人在台灣打官司需要律師嗎？',
-        a: '在台灣法院訴訟中，外國人常面臨在地程序與語言的雙重困難。曾俊瑋律師在民事、刑事訴訟中以韓語溝通，協助因應。',
+        a: '在台灣法院訴訟中，外國人常面臨在地程序與語言的雙重困難。曾雋崴律師在民事、刑事訴訟中以韓語溝通，協助因應。',
       },
       {
         q: '如何預約諮詢？',
@@ -168,7 +168,7 @@ export const landingContent: Record<Locale, LandingContent> = {
       },
       {
         q: '也可以用中文或日語諮詢嗎？',
-        a: '可以。曾俊瑋律師除韓語外，亦可以中文（繁體）及日語諮詢，並支援多語合約與文件審閱。',
+        a: '可以。曾雋崴律師除韓語外，亦可以中文（繁體）及日語諮詢，並支援多語合約與文件審閱。',
       },
     ],
     relatedHeading: '相關指南',

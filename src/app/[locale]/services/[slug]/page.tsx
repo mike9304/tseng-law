@@ -98,7 +98,7 @@ export async function generateMetadata({ params }: { params: { locale: Locale; s
   }
 
   const description = summarize(area.intro[locale]);
-  const lawyerKeyword = attorney?.name ?? (locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng');
+  const lawyerKeyword = attorney?.name ?? (locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾雋崴律師' : 'Attorney Wei Tseng');
 
   return buildSeoMetadata({
     locale,

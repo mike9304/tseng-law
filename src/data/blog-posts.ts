@@ -12,7 +12,7 @@ export type BlogPost = {
   sections: BlogSection[];
 };
 
-const author = '증준외 변호사 (曾俊瑋 律師)';
+const author = '증준외 변호사 (曾雋崴 律師)';
 
 export const blogPosts: Record<string, BlogPost> = {
   'cosmetics-market-entry': {

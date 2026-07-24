@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import Link from 'next/link';
 import PricingIcon, { type PricingIconName } from '@/components/PricingIcon';
 
@@ -20,7 +20,7 @@ type PricingContent = {
   ctaHref: string;
 };
 
-const pricingData: Record<Locale, PricingContent> = {
+const pricingData: Record<SiteLocale, PricingContent> = {
   ko: {
     currency: 'NTD (대만달러)',
     items: [
@@ -200,10 +200,72 @@ const pricingData: Record<Locale, PricingContent> = {
       'Fees above are baseline standards and may vary based on case characteristics, complexity, and urgency. Exact fees will be provided in writing after the initial consultation.',
     ctaLabel: 'Book a Consultation',
     ctaHref: '/en/contact'
+  },
+  ja: {
+    currency: 'NTD（ニュー台湾ドル）',
+    items: [
+      {
+        icon: 'consultation',
+        title: '一般法律相談',
+        price: 'NT$ 3,000',
+        unit: '/ 1時間',
+        details: [
+          '対面またはオンライン（ビデオ通話）での相談',
+          '韓国語・中国語・日本語での相談に対応',
+          '法的問題の分析と対応方針の提案',
+          '事前予約制'
+        ]
+      },
+      {
+        icon: 'litigation',
+        title: '民事・刑事訴訟',
+        price: '個別見積り',
+        unit: '',
+        details: [
+          '民事訴訟（損害賠償、契約紛争など）',
+          '刑事事件（告訴、弁護）',
+          '案件の種類・複雑性により費用が異なります',
+          '具体的なお見積りは相談後にご案内します'
+        ],
+        note:
+          '案件の内容を確認したうえでお見積りをご案内します。まずは法律相談をお申し込みください。'
+      },
+      {
+        icon: 'company',
+        title: '台湾での会社設立',
+        price: 'NT$ 50,000',
+        unit: '',
+        details: [
+          '資本金400万NTD以下の場合',
+          '株主1名の場合',
+          '投資許可・会社登記・営業登記を含みます',
+          '銀行への同行は別途費用',
+          '居留証（ARC）の申請代行は別途費用'
+        ],
+        note:
+          '資本金が400万NTDを超える場合、株主が複数の場合、または支店・合弁など通常と異なる形態の場合は、別途お見積りいたします。'
+      },
+      {
+        icon: 'retainer',
+        title: '年間法律顧問',
+        price: 'NT$ 50,000',
+        unit: '/ 1年',
+        details: [
+          '継続的な法律相談',
+          '契約書のレビューとリスク分析',
+          '労働法・商法に関する継続的な助言',
+          '月払いについては個別にご相談いただけます'
+        ]
+      }
+    ],
+    disclaimer:
+      '上記の費用は基本的な目安であり、案件の性質、複雑性、緊急性により変動する場合があります。正確な費用は、初回相談後に書面によるお見積りでご案内します。',
+    ctaLabel: '法律相談を申し込む',
+    ctaHref: '/ja/contact'
   }
 };
 
-export default function PricingCards({ locale }: { locale: Locale }) {
+export default function PricingCards({ locale }: { locale: SiteLocale }) {
   const data = pricingData[locale];
 
   return (

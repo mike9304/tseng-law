@@ -196,7 +196,7 @@ export function FaqLegacyPageBody({ locale }: { locale: Locale }) {
   );
 }
 
-export function PricingLegacyPageBody({ locale }: { locale: Locale }) {
+export function PricingLegacyPageBody({ locale }: { locale: SiteLocale }) {
   const copy = pageCopy[locale].pricing;
   return (
     <>

@@ -220,8 +220,8 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     pricing: {
       label: 'PRICING',
-      title: '費用案内',
-      description: '主要サービスの費用の目安です。'
+      title: '費用のご案内',
+      description: '昊鼎国際法律事務所の主要サービスについて、費用の目安をご案内します。'
     },
     reviews: {
       label: 'REVIEWS',

@@ -51,11 +51,6 @@ describe('Japanese About integration', () => {
     expect(dispatchedPage.props.locale).toBe('ja');
     expect(dispatchedPage.props.locale).not.toBe('en');
 
-    const pricingMetadata = getLegacyPageMetadata('pricing', 'ja');
-    const pricingPage = await renderLegacyPage('pricing', 'ja') as ReactElement<{ locale: string }>;
-    expect(pricingMetadata?.title).toBe(pageCopy.en.pricing.title);
-    expect(pricingPage.props.locale).toBe('en');
-
     const aboutBody = AboutLegacyPage({ locale: 'ja' }) as ReactElement<{ locale: string }>;
     expect(aboutBody.type).toBe(AboutLegacyPageBody);
     expect(aboutBody.props.locale).toBe('ja');

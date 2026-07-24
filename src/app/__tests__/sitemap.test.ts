@@ -105,8 +105,8 @@ describe('sitemap column lastModified', () => {
       // /contact, /lawyers, /lawyers/wei-tseng, /columns archive,
       // and 17 JA column details (+24).
       // Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 153,
-      afterFiltering: 144,
+      beforeFiltering: 150,
+      afterFiltering: 141,
       removed: 9,
     });
 
@@ -129,6 +129,44 @@ describe('sitemap column lastModified', () => {
     );
     expect(englishColumnsListing).toBeDefined();
     expect(englishColumnsListing?.alternates?.languages).toHaveProperty('en');
+  });
+
+  it('excludes builder-provided reviews pages in every locale and preserves other entries', async () => {
+    const reviewEntries = ['ko', 'zh-hant', 'en', 'ja'].map((locale) => ({
+      url: `https://tseng-law.com/${locale}/reviews`,
+      lastModified: new Date('2026-07-24T00:00:00.000Z'),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+      alternates: {
+        languages: {
+          [locale]: `https://tseng-law.com/${locale}/reviews`,
+        },
+      },
+    }));
+    const sentinelUrl = 'https://tseng-law.com/ko/reviews-policy';
+    sourceMocks.collectAllBuilderSitemapEntries.mockImplementationOnce(async () => [
+      ...reviewEntries,
+      {
+        url: sentinelUrl,
+        lastModified: new Date('2026-07-24T00:00:00.000Z'),
+        changeFrequency: 'weekly',
+        priority: 0.7,
+        alternates: {
+          languages: {
+            ko: sentinelUrl,
+          },
+        },
+      },
+    ]);
+
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const urls = new Set(entries.map((entry) => entry.url));
+
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+      expect(urls.has(`https://tseng-law.com/${locale}/reviews`)).toBe(false);
+    }
+    expect(urls.has(sentinelUrl)).toBe(true);
   });
 
   it('publishes Japanese About exactly once with four-language alternates', async () => {

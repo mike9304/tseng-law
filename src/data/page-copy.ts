@@ -225,8 +225,8 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     reviews: {
       label: 'REVIEWS',
-      title: 'お客様の声',
-      description: 'ご利用いただいたお客様からのご感想です。'
+      title: 'ご感想・レビュー',
+      description: 'このページでは、昊鼎国際法律事務所の相談・サービスに関する投稿を、内容確認後に掲載します。'
     }
   }
 };

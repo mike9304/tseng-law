@@ -1,9 +1,9 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
-type Review = {
+export type Review = {
   id: string;
   nickname: string;
   rating: number;
@@ -12,7 +12,7 @@ type Review = {
   createdAt: string;
 };
 
-const labels: Record<Locale, {
+export const reviewLabels: Record<SiteLocale, {
   formTitle: string;
   moderationNote: string;
   nickname: string;
@@ -35,6 +35,7 @@ const labels: Record<Locale, {
   totalReviews: string;
   avgRating: string;
   loading: string;
+  disclosure: string | null;
 }> = {
   ko: {
     formTitle: '후기 작성',
@@ -70,6 +71,7 @@ const labels: Record<Locale, {
     totalReviews: '건의 후기',
     avgRating: '평균 별점',
     loading: '불러오는 중...',
+    disclosure: null,
   },
   'zh-hant': {
     formTitle: '撰寫評價',
@@ -105,6 +107,7 @@ const labels: Record<Locale, {
     totalReviews: '則評價',
     avgRating: '平均評分',
     loading: '載入中...',
+    disclosure: null,
   },
   en: {
     formTitle: 'Write a Review',
@@ -140,6 +143,43 @@ const labels: Record<Locale, {
     totalReviews: 'reviews',
     avgRating: 'Average Rating',
     loading: 'Loading...',
+    disclosure: null,
+  },
+  ja: {
+    formTitle: 'ご感想を投稿する',
+    moderationNote: 'ご投稿は内容を確認し、掲載可能なもののみ公開します。個人情報、事件番号、外部リンクは記載しないでください。',
+    nickname: 'お名前・ニックネーム',
+    nicknamePh: 'お名前またはニックネーム',
+    rating: '評価',
+    service: 'ご利用のサービス',
+    servicePh: '選択してください',
+    serviceOptions: [
+      { value: '', label: '選択してください' },
+      { value: 'consultation', label: '法律相談' },
+      { value: 'civil', label: '民事訴訟' },
+      { value: 'criminal', label: '刑事事件' },
+      { value: 'company', label: '会社設立' },
+      { value: 'family', label: '家事事件' },
+      { value: 'labor', label: '労働法' },
+      { value: 'ip', label: '知的財産' },
+      { value: 'retainer', label: '顧問契約' },
+      { value: 'other', label: 'その他' },
+    ],
+    content: 'ご感想',
+    contentPh: 'ご利用になった相談・サービスについて、ご感想をお聞かせください。',
+    submit: '投稿する',
+    submitting: '投稿中…',
+    success: 'ご投稿を受け付けました。内容確認後、掲載可否を判断します。',
+    error: '投稿できませんでした。もう一度お試しください。',
+    validationError: 'お名前またはニックネームとご感想をご確認ください。ご感想は20文字以上で入力してください。',
+    rateLimitError: 'しばらく時間をおいてから、もう一度お試しください。同じ端末からの連続投稿は一時的に制限されます。',
+    spamError: 'リンクまたはHTMLタグを含む内容は投稿できません。',
+    reviewsTitle: '掲載中のご感想',
+    noReviews: '現在、掲載中のご感想はありません。',
+    totalReviews: '件',
+    avgRating: '平均評価',
+    loading: '読み込み中…',
+    disclosure: '掲載内容は投稿者個人の感想です。内容確認は行いますが、投稿者の本人確認または当事務所との利用関係を保証するものではなく、同様の結果を保証するものでもありません。',
   },
 };
 
@@ -148,11 +188,13 @@ function StarRating({
   onChange,
   readonly = false,
   size = 'md',
+  locale,
 }: {
   value: number;
   onChange?: (v: number) => void;
   readonly?: boolean;
   size?: 'sm' | 'md';
+  locale: SiteLocale;
 }) {
   const [hover, setHover] = useState(0);
   const sizeClass = size === 'sm' ? 'star-sm' : '';
@@ -168,7 +210,7 @@ function StarRating({
           onMouseEnter={() => !readonly && setHover(star)}
           onMouseLeave={() => !readonly && setHover(0)}
           disabled={readonly}
-          aria-label={`${star} star`}
+          aria-label={locale === 'ja' ? `${star}つ星` : `${star} star`}
         >
           ★
         </button>
@@ -177,7 +219,7 @@ function StarRating({
   );
 }
 
-function formatDate(iso: string, locale: Locale): string {
+export function formatReviewDate(iso: string, locale: SiteLocale): string {
   const d = new Date(iso);
   if (locale === 'ko') {
     return `${d.getFullYear()}. ${d.getMonth() + 1}. ${d.getDate()}.`;
@@ -185,16 +227,19 @@ function formatDate(iso: string, locale: Locale): string {
   if (locale === 'zh-hant') {
     return `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}`;
   }
+  if (locale === 'ja') {
+    return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
+  }
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
-function getServiceLabel(value: string, locale: Locale): string {
-  const opt = labels[locale].serviceOptions.find((o) => o.value === value);
+export function getReviewServiceLabel(value: string, locale: SiteLocale): string {
+  const opt = reviewLabels[locale].serviceOptions.find((o) => o.value === value);
   return opt?.label || value;
 }
 
-function getErrorMessage(locale: Locale, error?: string): string {
-  const t = labels[locale];
+export function getReviewErrorMessage(locale: SiteLocale, error?: string): string {
+  const t = reviewLabels[locale];
   if (!error) return t.error;
   if (
     error === 'nickname, rating, content are required' ||
@@ -216,8 +261,24 @@ function getErrorMessage(locale: Locale, error?: string): string {
   return t.error;
 }
 
-export default function ReviewBoard({ locale }: { locale: Locale }) {
-  const t = labels[locale];
+export function ReviewCard({ review, locale }: { review: Review; locale: SiteLocale }) {
+  return (
+    <div className="card review-card">
+      <div className="review-card-header">
+        <span className="review-card-nickname">{review.nickname}</span>
+        <StarRating value={review.rating} readonly size="sm" locale={locale} />
+        {review.service && (
+          <span className="review-card-service">{getReviewServiceLabel(review.service, locale)}</span>
+        )}
+        <span className="review-card-date">{formatReviewDate(review.createdAt, locale)}</span>
+      </div>
+      <p className="review-card-content">{review.content}</p>
+    </div>
+  );
+}
+
+export default function ReviewBoard({ locale }: { locale: SiteLocale }) {
+  const t = reviewLabels[locale];
   const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
   const [nickname, setNickname] = useState('');
@@ -277,7 +338,7 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
         await fetchReviews();
       } else {
         const data = await res.json().catch(() => null);
-        setMessage({ type: 'error', text: getErrorMessage(locale, data?.error) });
+        setMessage({ type: 'error', text: getReviewErrorMessage(locale, data?.error) });
       }
     } catch {
       setMessage({ type: 'error', text: t.error });
@@ -329,7 +390,7 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
 
             <div className="review-form-row">
               <label className="review-label">{t.rating}</label>
-              <StarRating value={rating} onChange={setRating} />
+              <StarRating value={rating} onChange={setRating} locale={locale} />
             </div>
 
             <div className="review-form-row">
@@ -382,7 +443,7 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
           <div className="review-summary">
             <div className="review-summary-stat">
               <span className="review-summary-number">{avg}</span>
-              <StarRating value={Math.round(Number(avg))} readonly size="sm" />
+              <StarRating value={Math.round(Number(avg))} readonly size="sm" locale={locale} />
               <span className="review-summary-label">{t.avgRating}</span>
             </div>
             <div className="review-summary-stat">
@@ -394,6 +455,7 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
 
         {/* ── Review List ── */}
         <h2 className="review-list-title">{t.reviewsTitle}</h2>
+        {t.disclosure && <p className="review-empty">{t.disclosure}</p>}
 
         {loading ? (
           <p className="review-empty">{t.loading}</p>
@@ -402,17 +464,7 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
         ) : (
           <div className="review-list">
             {reviews.map((r) => (
-              <div key={r.id} className="card review-card">
-                <div className="review-card-header">
-                  <span className="review-card-nickname">{r.nickname}</span>
-                  <StarRating value={r.rating} readonly size="sm" />
-                  {r.service && (
-                    <span className="review-card-service">{getServiceLabel(r.service, locale)}</span>
-                  )}
-                  <span className="review-card-date">{formatDate(r.createdAt, locale)}</span>
-                </div>
-                <p className="review-card-content">{r.content}</p>
-              </div>
+              <ReviewCard key={r.id} review={r} locale={locale} />
             ))}
           </div>
         )}

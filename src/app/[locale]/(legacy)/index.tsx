@@ -35,7 +35,7 @@ export function getLegacyPageMetadata(slugPath: string, locale: SiteLocale): Met
     case 'pricing':
       return getPricingLegacyMetadata(locale);
     case 'reviews':
-      return getReviewsLegacyMetadata(asLegacyLocale(locale));
+      return getReviewsLegacyMetadata(locale);
     case 'privacy':
       return getPrivacyLegacyMetadata(asLegacyLocale(locale));
     case 'disclaimer':
@@ -62,7 +62,7 @@ export async function renderLegacyPage(slugPath: string, locale: SiteLocale) {
     case 'pricing':
       return <PricingLegacyPage locale={locale} />;
     case 'reviews':
-      return <ReviewsLegacyPage locale={asLegacyLocale(locale)} />;
+      return <ReviewsLegacyPage locale={locale} />;
     case 'privacy':
       return <PrivacyLegacyPage locale={asLegacyLocale(locale)} />;
     case 'disclaimer':

@@ -206,7 +206,7 @@ export function PricingLegacyPageBody({ locale }: { locale: SiteLocale }) {
   );
 }
 
-export function ReviewsLegacyPageBody({ locale }: { locale: Locale }) {
+export function ReviewsLegacyPageBody({ locale }: { locale: SiteLocale }) {
   const copy = pageCopy[locale].reviews;
   return (
     <>

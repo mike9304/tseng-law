@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { SiteLocale } from '@/lib/locales';
 import { toBuilderLocale } from '@/lib/locales';
-import { buildLocalePath } from '@/lib/path-utils';
 import { siteContent } from '@/data/site-content';
+import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 import SearchOverlay from '@/components/SearchOverlay';
 import MobileNavDrawer from '@/components/MobileNavDrawer';
 import SmartLink from '@/components/SmartLink';
@@ -274,21 +274,6 @@ export default function Header({ locale }: { locale: SiteLocale }) {
     return found?.key ?? null;
   }, [isCurrentPath, mainNavItems]);
 
-  const { koPath, zhPath, enPath, jaPath } = useMemo(() => {
-    const current = pathname ?? '';
-    const pathWithoutLocale = current.replace(/^\/(ko|zh-hant|en|ja)(?=\/|$)/, '') || '/';
-    const jaTarget =
-      pathWithoutLocale === '/columns' || pathWithoutLocale.startsWith('/columns/')
-        ? buildLocalePath(current, 'ja')
-        : '/ja/columns';
-    return {
-      koPath: buildLocalePath(current, 'ko'),
-      zhPath: buildLocalePath(current, 'zh-hant'),
-      enPath: buildLocalePath(current, 'en'),
-      jaPath: jaTarget,
-    };
-  }, [pathname]);
-
   const currentPath = pathname ?? `/${locale}`;
   const memberLoginHref = `/${locale}/login?next=${encodeURIComponent(currentPath || `/${locale}/account`)}`;
   const canSeePremium = memberNav.member?.role === 'premium' || memberNav.member?.role === 'admin';
@@ -470,20 +455,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
                 </Link>
               )}
             </div>
-            <div className="utility-lang">
-              <Link href={koPath} aria-current={locale === 'ko' ? 'page' : undefined}>
-                KO
-              </Link>
-              <Link href={zhPath} aria-current={locale === 'zh-hant' ? 'page' : undefined}>
-                中文
-              </Link>
-              <Link href={enPath} aria-current={locale === 'en' ? 'page' : undefined}>
-                EN
-              </Link>
-              <Link href={jaPath} aria-current={locale === 'ja' ? 'page' : undefined}>
-                JA
-              </Link>
-            </div>
+            <LocaleFlagSwitcher locale={locale} className="utility-lang" />
           </nav>
         </div>
       </div>
@@ -635,7 +607,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
         open={drawerOpen}
         onClose={closeMobileDrawer}
         onSearch={openSearchFromMobileDrawer}
-        locale={toBuilderLocale(locale)}
+        locale={locale}
         memberNav={memberNav}
         memberLabels={memberLabels}
         memberLoginHref={memberLoginHref}

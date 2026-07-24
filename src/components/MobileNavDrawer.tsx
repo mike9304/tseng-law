@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { siteContent } from '@/data/site-content';
 import type { SiteLocale } from '@/lib/locales';
-import { buildLocalePath } from '@/lib/path-utils';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
+import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 
 type MemberNavState = {
   status: 'loading' | 'signed-out' | 'signed-in';
@@ -46,9 +46,6 @@ export default function MobileNavDrawer({
   const content = siteContent[locale];
   const pathname = usePathname();
   const current = pathname ?? '';
-  const koPath = buildLocalePath(current, 'ko');
-  const zhPath = buildLocalePath(current, 'zh-hant');
-  const enPath = buildLocalePath(current, 'en');
 
   useEffect(() => {
     if (open) {
@@ -156,15 +153,12 @@ export default function MobileNavDrawer({
           <button className="chip" type="button" onClick={onSearch} aria-label={content.nav.searchLabel}>
             {content.nav.searchLabel}
           </button>
-          <Link className="chip" href={koPath}>
-            KO
-          </Link>
-          <Link className="chip" href={zhPath}>
-            繁中
-          </Link>
-          <Link className="chip" href={enPath}>
-            EN
-          </Link>
+          <LocaleFlagSwitcher
+            locale={locale}
+            className="locale-flag-switcher--mobile"
+            linkClassName="chip"
+            onLocaleSelect={onClose}
+          />
         </div>
         <nav className="drawer-nav" aria-label={navLabel}>
           {content.nav.primary.map((item) => (

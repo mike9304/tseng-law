@@ -4738,6 +4738,27 @@ html[lang='zh-Hant'] .hero-media {
   overflow: hidden;
 }
 
+.locale-flag-switcher-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.locale-flag-switcher-flag {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.locale-flag-switcher-code {
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.locale-flag-switcher-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 .utility-lang > * {
   display: inline-flex;
 }
@@ -5559,7 +5580,26 @@ html[lang='zh-Hant'] .hero-media {
 .drawer-utilities {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.55rem;
+}
+
+.locale-flag-switcher--mobile {
+  display: inline-flex;
+  flex: 1 1 220px;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.locale-flag-switcher--mobile .locale-flag-switcher-link {
+  min-height: 44px;
+}
+
+.locale-flag-switcher--mobile .locale-flag-switcher-link[aria-current='page'] {
+  color: var(--accent-purple);
+  border-color: var(--accent-purple);
+  background: var(--accent-purple-bg);
+  font-weight: 700;
 }
 
 .drawer-nav {

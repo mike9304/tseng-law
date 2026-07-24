@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import { getPublishedBaseFooterColumns } from '@/components/footer-link-policy';
+import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 
 export type FooterLink = {
   readonly label: string;
@@ -156,17 +157,7 @@ export default function Footer({
                   {item.label}
                 </Link>
               ))}
-              <span className="footer-locale-switch">
-                <Link href="/ko" aria-current={locale === 'ko' ? 'page' : undefined}>
-                  KO
-                </Link>
-                <Link href="/zh-hant" aria-current={locale === 'zh-hant' ? 'page' : undefined}>
-                  中文
-                </Link>
-                <Link href="/en" aria-current={locale === 'en' ? 'page' : undefined}>
-                  EN
-                </Link>
-              </span>
+              <LocaleFlagSwitcher locale={locale} className="footer-locale-switch" />
             </div>
             <div className="footer-social">
               <span className="social-label">{locale === 'ko' ? '팔로우' : locale === 'zh-hant' ? '追蹤我們' : 'Follow'}</span>

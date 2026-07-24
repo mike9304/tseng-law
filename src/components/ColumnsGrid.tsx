@@ -109,9 +109,9 @@ export default function ColumnsGrid({
     locale === 'ko'
       ? '증준외 변호사 검토'
       : locale === 'zh-hant'
-        ? '曾俊瑋律師審閱'
+        ? '曾雋崴律師審閱'
         : locale === 'ja'
-          ? '曾俊瑋弁護士監修'
+          ? '曾雋崴弁護士監修'
           : 'Reviewed by Wei Tseng';
   const router = useRouter();
   const pathname = usePathname();

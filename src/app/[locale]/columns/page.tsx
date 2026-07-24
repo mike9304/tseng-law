@@ -133,9 +133,9 @@ export default async function ColumnsPage({
     locale === 'ko'
       ? '증준외 변호사'
       : locale === 'zh-hant'
-        ? '曾俊瑋律師'
+        ? '曾雋崴律師'
         : locale === 'ja'
-          ? '曾俊瑋弁護士'
+          ? '曾雋崴弁護士'
           : 'Attorney Wei Tseng';
   const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
     'columns.list-template',

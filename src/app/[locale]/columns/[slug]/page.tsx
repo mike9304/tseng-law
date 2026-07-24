@@ -125,9 +125,9 @@ export default async function ColumnDetailPage({ params }: { params: { locale: S
     locale === 'ko'
       ? '증준외 변호사'
       : locale === 'zh-hant'
-        ? '曾俊瑋律師'
+        ? '曾雋崴律師'
         : locale === 'ja'
-          ? '曾俊瑋弁護士'
+          ? '曾雋崴弁護士'
           : 'Attorney Wei Tseng';
   const authorProfilePath = getAttorneyProfilePath(toBuilderLocale(locale));
   // JA launch only guarantees /ja/columns*; cross-links use EN shells (not unsupported /ja/*).
@@ -200,11 +200,11 @@ export default async function ColumnDetailPage({ params }: { params: { locale: S
               authorUrl: authorProfilePath,
               authorSameAs: [
                 'https://www.hoveringlaw.com.tw/en/wei.html',
-                'https://www.wei-wei-lawyer.com/about-8',
+                'https://www.wei-wei-lawyer.com/lawyertseng',
                 'https://www.youtube.com/@weilawyer',
                 'https://blog.naver.com/wei_lawyer/223461663913',
               ],
-              authorAlternateNames: ['증준외', '曾俊瑋', 'Wei Tseng'],
+              authorAlternateNames: ['증준외', '曾雋崴', 'Wei Tseng'],
               articleSection: post.categoryLabel,
             })}
           />

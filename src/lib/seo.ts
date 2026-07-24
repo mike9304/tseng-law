@@ -257,22 +257,27 @@ export function buildBreadcrumbJsonLd(locale: SiteLocale, items: BreadcrumbItem[
   };
 }
 
-export function buildWebsiteJsonLd(locale: Locale) {
+export function buildWebsiteJsonLd(locale: SiteLocale) {
   const websiteUrl = buildAbsoluteUrl(getLocalizedPath(locale));
+  const localizedAlternateNames = organizationAlternateNames.filter(
+    (name) => name !== organizationName[locale] && (locale !== 'ja' || name !== organizationName.en),
+  );
 
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${websiteUrl}#website`,
     name: organizationName[locale],
-    alternateName: organizationAlternateNames.filter((name) => name !== organizationName[locale]),
+    alternateName: localizedAlternateNames,
     url: websiteUrl,
     inLanguage: getLocaleLanguageTag(locale),
     publisher: {
       '@type': 'Organization',
       '@id': `${buildAbsoluteUrl('/ko')}#organization`,
       name: organizationName[defaultLocale],
-      alternateName: organizationAlternateNames.filter((name) => name !== organizationName[defaultLocale]),
+      alternateName: organizationAlternateNames.filter(
+        (name) => name !== organizationName[defaultLocale] && (locale !== 'ja' || name !== organizationName.en),
+      ),
       url: buildAbsoluteUrl('/ko'),
       logo: {
         '@type': 'ImageObject',
@@ -289,7 +294,7 @@ export function buildWebsiteJsonLd(locale: Locale) {
 }
 
 export function buildLegalServiceJsonLd(
-  locale: Locale,
+  locale: SiteLocale,
   options?: {
     name?: string;
     description?: string;
@@ -322,14 +327,21 @@ export function buildLegalServiceJsonLd(
     employee: {
       '@type': 'Person',
       '@id': `${buildAbsoluteUrl(getLocalizedPath(locale, '/lawyers/wei-tseng'))}#person`,
-      name: locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾雋崴律師' : 'Attorney Wei Tseng',
+      name:
+        locale === 'ko'
+          ? '증준외 변호사'
+          : locale === 'zh-hant'
+            ? '曾雋崴律師'
+            : locale === 'ja'
+              ? '曾雋崴弁護士'
+              : 'Attorney Wei Tseng',
       url: buildAbsoluteUrl(getLocalizedPath(locale, '/lawyers/wei-tseng')),
     },
     image: buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE),
     logo: buildAbsoluteUrl(LOGO_IMAGE),
     address: {
       '@type': 'PostalAddress',
-      streetAddress: organizationAddress[locale],
+      streetAddress: locale === 'ja' ? organizationAddress['zh-hant'] : organizationAddress[locale],
       addressLocality: 'Taipei City',
       addressCountry: 'TW',
     },

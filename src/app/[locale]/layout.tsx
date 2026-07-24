@@ -46,8 +46,8 @@ export default function LocaleLayout({
   const hideJaProductChrome = locale === 'ja';
   return (
     <div className="site" data-locale={locale} data-theme="parity">
-      <JsonLd data={buildWebsiteJsonLd(toBuilderLocale(locale))} />
-      <JsonLd data={buildLegalServiceJsonLd(toBuilderLocale(locale))} />
+      <JsonLd data={buildWebsiteJsonLd(locale)} />
+      <JsonLd data={buildLegalServiceJsonLd(locale)} />
       <div data-legacy-chrome>
         <Header locale={locale} />
       </div>

@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import type { FAQItem } from '@/data/faq-content';
 
 export const primaryAttorneySlug = 'wei-tseng' as const;
@@ -44,7 +44,7 @@ const commonSameAs = [
   'https://www.threads.com/@lawyer.wei',
 ];
 
-export const attorneyProfiles: Record<Locale, Record<AttorneyProfileSlug, AttorneyProfile>> = {
+export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, AttorneyProfile>> = {
   ko: {
     'wei-tseng': {
       slug: 'wei-tseng',
@@ -258,9 +258,80 @@ export const attorneyProfiles: Record<Locale, Record<AttorneyProfileSlug, Attorn
       ],
     },
   },
+  ja: {
+    'wei-tseng': {
+      slug: 'wei-tseng',
+      name: '曾俊瑋弁護士',
+      alternateNames: ['曾俊瑋', '증준외', 'Wei Tseng', 'Attorney Wei Tseng'],
+      role: '台湾弁護士・代表弁護士',
+      title: '曾俊瑋台湾弁護士プロフィール',
+      description:
+        '韓国のクライアントによる台湾での会社設立、投資、訴訟、ビザ、商標・特許、法律顧問業務を支援する曾俊瑋台湾弁護士の経歴と代表事例をまとめたプロフィールです。',
+      email: 'wei@hoveringlaw.com.tw',
+      image: '/images/team/tseng-junwei.png',
+      summary: [
+        '曾俊瑋弁護士は、韓国・日本のクライアントによる台湾での投資、会社設立、訴訟、知的財産、ビザおよび法的リスクの検討を支援しています。',
+        '韓国語・中国語・日本語でのコミュニケーションを通じて、初回相談から各種手続の遂行、紛争対応まで一貫してサポートします。',
+        '韓国人留学生のジム負傷損害賠償事件で157万TWDの損害賠償を認める一審判決を獲得した代表事例があり、WEI Lawyerチャンネルや外部メディアを通じて台湾法を解説しています。',
+      ],
+      languages: ['韓国語', '中国語', '日本語'],
+      practiceAreas: ['台湾での会社設立', '台湾投資に関する法務顧問', '民事訴訟・損害賠償', '商標・特許', 'ビザ・在留', '家事・労働紛争'],
+      education: [
+        '国立台湾大学財務金融研究所 修士号取得',
+        '国立政治大学法律学科・金融学科ダブルメジャー（学士）',
+        '神戸大学・早稲田大学への交換留学',
+      ],
+      experience: ['趨勢法律事務所', '昊鼎国際法律事務所', '法律扶助基金会台中分会の扶助弁護士'],
+      notableMatters: [
+        '韓国人留学生のジム負傷事件で157万TWDの損害賠償を認める一審判決を獲得',
+        '韓国企業による台湾での会社設立、投資、ビザおよび事業運営リスクの検討を支援',
+        '商標・特許の出願、企業契約の審査、民事・家事・労働紛争に関する助言',
+      ],
+      internalLinks: [
+        { label: '台湾弁護士ガイド', href: '/ja/taiwan-lawyer' },
+        { label: '台湾会社設立弁護士ガイド', href: '/ja/taiwan-company-setup-lawyer' },
+        { label: '台湾会社設立サービス', href: '/ja/services/investment' },
+        { label: '民事訴訟・損害賠償サービス', href: '/ja/services/civil' },
+        { label: 'ジム負傷訴訟コラム', href: '/ja/columns/taiwan-gym-injury-lawsuit' },
+        { label: 'お問い合わせ・ご相談', href: '/ja/contact' },
+      ],
+      externalProfiles: [
+        { label: '昊鼎公式弁護士プロフィール', href: 'https://www.hoveringlaw.com.tw/zh/wei.html' },
+        { label: '個人プロフィールサイト', href: 'https://www.wei-wei-lawyer.com/about-8' },
+        { label: 'WEI Lawyer YouTube', href: 'https://www.youtube.com/@weilawyer' },
+        { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
+      ],
+      sameAs: commonSameAs,
+      keywords: ['曾俊瑋弁護士', '曾俊瑋台湾弁護士', '台湾弁護士', '韓国語対応の台湾弁護士', '台湾会社設立弁護士', '台湾訴訟弁護士'],
+      searchTerms: ['曾俊瑋台湾弁護士', '曾俊瑋弁護士', '韓国語対応の台湾弁護士', '台湾会社設立弁護士 曾俊瑋'],
+      proofPoints: [
+        '韓国語・中国語・日本語で相談できる台湾弁護士として、韓国のクライアントと直接コミュニケーションを行います。',
+        '台湾での会社設立、投資、ビザ、訴訟、商標・特許まで、韓国のクライアントに必要な手続の流れを一緒に設計します。',
+        '韓国人留学生のジム負傷損害賠償事件で157万TWDの損害賠償を認める一審判決を獲得した公開事例があります。',
+        '昊鼎の公式プロフィール、個人サイト、YouTube、Naver Blogなどの外部チャンネルで同一人物の情報を確認できます。',
+      ],
+      faq: [
+        {
+          question: '曾俊瑋弁護士は主にどのような案件を扱っていますか？',
+          answer:
+            '台湾での会社設立、台湾投資に関する法務顧問、民事訴訟・損害賠償、商標・特許、ビザ・在留、家事・労働紛争など、韓国のクライアントから相談の多い台湾法の問題を中心に対応しています。',
+        },
+        {
+          question: '曾俊瑋弁護士に韓国語で相談できますか？',
+          answer:
+            'はい。韓国語、中国語、日本語で事実関係や書類、手続の流れを整理できるため、韓国のクライアントにも台湾の手続を分かりやすくご案内できます。',
+        },
+        {
+          question: '曾俊瑋弁護士への相談はどのように始めればよいですか？',
+          answer:
+            'お問い合わせページから案件の概要と関連資料をお送りください。会社設立、投資、訴訟など案件の種類に応じて、初期検討の流れと必要な準備資料をご案内します。',
+        },
+      ],
+    },
+  },
 };
 
-export function getAttorneyProfile(locale: Locale, slug: string): AttorneyProfile | undefined {
+export function getAttorneyProfile(locale: SiteLocale, slug: string): AttorneyProfile | undefined {
   if (slug !== primaryAttorneySlug) {
     return undefined;
   }
@@ -272,6 +343,6 @@ export function getAttorneyProfileSlugs(): AttorneyProfileSlug[] {
   return [primaryAttorneySlug];
 }
 
-export function getAttorneyProfilePath(locale: Locale, slug: string = primaryAttorneySlug) {
+export function getAttorneyProfilePath(locale: SiteLocale, slug: string = primaryAttorneySlug) {
   return `/${locale}/lawyers/${slug}`;
 }

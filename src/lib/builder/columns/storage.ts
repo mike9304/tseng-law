@@ -173,7 +173,7 @@ function legacyPostToColumnDocument(post: ColumnPost & { locale: Locale }): Colu
       blogCategory: post.category,
       tags: [post.categoryLabel].filter(Boolean),
       author: {
-        name: post.locale === 'zh-hant' ? '曾俊瑋律師' : post.locale === 'en' ? 'Attorney Wei Tseng' : '증준외 변호사',
+        name: post.locale === 'zh-hant' ? '曾雋崴律師' : post.locale === 'en' ? 'Attorney Wei Tseng' : '증준외 변호사',
         title: post.locale === 'zh-hant' ? '台灣律師' : post.locale === 'en' ? 'Taiwan Attorney' : '대만 변호사',
       },
       featuredImage: post.featuredImage,

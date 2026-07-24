@@ -38,6 +38,21 @@ describe('buildBuilderRecordJsonLd', () => {
     expect((payload as { availableLanguage?: string[] }).availableLanguage).toContain('Korean');
   });
 
+  it('uses the canonical Traditional Chinese attorney name for a service-area record', () => {
+    const payload = buildBuilderRecordJsonLd({
+      collectionId: 'service-areas',
+      locale: 'zh-hant',
+      recordSlug: 'investment',
+      siteUrl: SITE_URL,
+    });
+
+    expect(payload).toMatchObject({
+      employee: {
+        name: '曾雋崴律師',
+      },
+    });
+  });
+
   it('returns Attorney schema for a known attorney profile record', () => {
     const payload = buildBuilderRecordJsonLd({
       collectionId: 'attorney-profiles',

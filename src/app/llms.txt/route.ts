@@ -35,8 +35,8 @@ function buildLlmsTxt(): string {
       url: pageUrl('/services'),
     },
     {
-      title: '변호사 소개 (Attorney Wei Tseng / 曾俊瑋律師)',
-      description: '한국어·중국어·일본어 구사 대만 변호사 증준외(曾俊瑋) 소개 페이지.',
+      title: '변호사 소개 (Attorney Wei Tseng / 曾雋崴律師)',
+      description: '한국어·중국어·일본어 구사 대만 변호사 증준외(曾雋崴) 소개 페이지.',
       url: pageUrl('/lawyers/wei-tseng'),
     },
     {

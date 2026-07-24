@@ -50,4 +50,13 @@ describe('/llms.txt', () => {
     expect(body).toContain('## 연락처');
     expect(body).toContain('wei@hoveringlaw.com.tw');
   });
+
+  it('uses the canonical attorney identity', async () => {
+    const response = await GET();
+    const body = await response.text();
+
+    expect(body).toContain('曾雋崴律師');
+    expect(body).toContain('증준외(曾雋崴)');
+    expect(body).not.toContain('曾俊瑋');
+  });
 });

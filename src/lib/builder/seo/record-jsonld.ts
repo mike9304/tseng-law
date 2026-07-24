@@ -61,7 +61,7 @@ export function buildBuilderRecordJsonLd({
       if (!area) return null;
       const attorney = getAttorneyProfile(locale, primaryAttorneySlug);
       const attorneyName = attorney?.name
-        ?? (locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng');
+        ?? (locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾雋崴律師' : 'Attorney Wei Tseng');
       return {
         '@context': 'https://schema.org',
         '@type': 'LegalService',

@@ -322,7 +322,7 @@ export function buildLegalServiceJsonLd(
     employee: {
       '@type': 'Person',
       '@id': `${buildAbsoluteUrl(getLocalizedPath(locale, '/lawyers/wei-tseng'))}#person`,
-      name: locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng',
+      name: locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾雋崴律師' : 'Attorney Wei Tseng',
       url: buildAbsoluteUrl(getLocalizedPath(locale, '/lawyers/wei-tseng')),
     },
     image: buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE),

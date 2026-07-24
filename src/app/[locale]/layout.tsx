@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 import ScrollTopButton from '@/components/ScrollTopButton';
 import QuickContactWidget from '@/components/QuickContactWidget';
 import YearEndEventPopup from '@/components/YearEndEventPopup';
-import { buildLegalServiceJsonLd, buildWebsiteJsonLd } from '@/lib/seo';
+import { buildLegalServiceJsonLd, buildWebsiteJsonLd, getOrganizationName } from '@/lib/seo';
 
 export const dynamicParams = false;
 
@@ -28,9 +28,14 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
   const locale = resolveLocaleOrNotFound(params.locale);
   const content = siteContent[locale];
+  const organizationName = getOrganizationName(locale);
   return {
     title: content.meta.title,
-    description: content.meta.description
+    description: content.meta.description,
+    applicationName: organizationName,
+    authors: [{ name: organizationName }],
+    creator: organizationName,
+    publisher: organizationName,
   };
 }
 

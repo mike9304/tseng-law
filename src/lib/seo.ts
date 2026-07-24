@@ -78,6 +78,7 @@ type FaqJsonLdItem = {
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
 const DEFAULT_SOCIAL_IMAGE = '/images/header-skyline-ratio.webp';
 const LOGO_IMAGE = '/images/brand/hovering-seal-red-512.png';
+const ORGANIZATION_ID = 'https://tseng-law.com/#organization';
 
 const organizationName: Record<SiteLocale, string> = {
   ko: '법무법인 호정',
@@ -95,7 +96,7 @@ const openGraphLocale: Record<SiteLocale, string> = {
   ja: 'ja_JP',
 };
 
-const availableLanguage = ['Korean', 'Traditional Chinese', 'English', 'Japanese'];
+const organizationLanguageTags = ['ko', 'zh-Hant', 'en', 'ja'];
 const organizationAddress: Record<Locale, string> = {
   ko: '타이베이시 다퉁구 청더로 1단 35호 7층의2',
   'zh-hant': '台北市大同區承德路一段35號7樓之2',
@@ -259,26 +260,25 @@ export function buildBreadcrumbJsonLd(locale: SiteLocale, items: BreadcrumbItem[
 
 export function buildWebsiteJsonLd(locale: SiteLocale) {
   const websiteUrl = buildAbsoluteUrl(getLocalizedPath(locale));
+  const localizedOrganizationName = getOrganizationName(locale);
   const localizedAlternateNames = organizationAlternateNames.filter(
-    (name) => name !== organizationName[locale] && (locale !== 'ja' || name !== organizationName.en),
+    (name) => name !== localizedOrganizationName && (locale !== 'ja' || name !== organizationName.en),
   );
 
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${websiteUrl}#website`,
-    name: organizationName[locale],
+    name: localizedOrganizationName,
     alternateName: localizedAlternateNames,
     url: websiteUrl,
     inLanguage: getLocaleLanguageTag(locale),
     publisher: {
       '@type': 'Organization',
-      '@id': `${buildAbsoluteUrl('/ko')}#organization`,
-      name: organizationName[defaultLocale],
-      alternateName: organizationAlternateNames.filter(
-        (name) => name !== organizationName[defaultLocale] && (locale !== 'ja' || name !== organizationName.en),
-      ),
-      url: buildAbsoluteUrl('/ko'),
+      '@id': ORGANIZATION_ID,
+      name: localizedOrganizationName,
+      alternateName: localizedAlternateNames,
+      url: websiteUrl,
       logo: {
         '@type': 'ImageObject',
         url: buildAbsoluteUrl(LOGO_IMAGE),
@@ -305,14 +305,15 @@ export function buildLegalServiceJsonLd(
   return {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
-    name: options?.name ?? organizationName[locale],
+    '@id': ORGANIZATION_ID,
+    name: options?.name ?? getOrganizationName(locale),
     description: options?.description,
     url: buildAbsoluteUrl(getLocalizedPath(locale, options?.path)),
     serviceType: options?.serviceType,
     telephone: '+82-10-2992-9304',
     email: 'wei@hoveringlaw.com.tw',
     areaServed: ['Taiwan', 'South Korea'],
-    availableLanguage,
+    knowsLanguage: organizationLanguageTags,
     sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913', 'https://www.threads.com/@lawyer.wei'],
     contactPoint: [
       {
@@ -320,7 +321,7 @@ export function buildLegalServiceJsonLd(
         contactType: 'customer service',
         telephone: '+82-10-2992-9304',
         email: 'wei@hoveringlaw.com.tw',
-        availableLanguage,
+        availableLanguage: organizationLanguageTags,
         url: buildAbsoluteUrl(getLocalizedPath(locale, '/contact')),
       },
     ],

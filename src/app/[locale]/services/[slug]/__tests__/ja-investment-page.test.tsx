@@ -12,7 +12,7 @@ import ServiceDetailPage, {
 } from '../page';
 
 const SITE_URL = 'https://tseng-law.com';
-const unsupportedJapaneseSlugs = ['labor', 'criminal', 'ip'] as const;
+const unsupportedJapaneseSlugs = ['criminal', 'ip'] as const;
 
 const navigationMocks = vi.hoisted(() => ({
   notFound: vi.fn((): never => {
@@ -140,11 +140,13 @@ describe('Japanese investment service-detail route', () => {
       { locale: 'ja', slug: 'investment' },
       { locale: 'ja', slug: 'civil' },
       { locale: 'ja', slug: 'family' },
+      { locale: 'ja', slug: 'labor' },
     ]));
     expect(params.filter(({ locale }) => locale === 'ja')).toEqual([
       { locale: 'ja', slug: 'investment' },
       { locale: 'ja', slug: 'civil' },
       { locale: 'ja', slug: 'family' },
+      { locale: 'ja', slug: 'labor' },
     ]);
     expect(sourceMocks.readRecords).toHaveBeenCalledTimes(1);
     expect(sourceMocks.readRecords).toHaveBeenCalledWith(

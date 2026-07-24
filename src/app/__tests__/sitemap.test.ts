@@ -103,10 +103,10 @@ describe('sitemap column lastModified', () => {
     }).toEqual({
       // Base includes EN file-backed columns + JA /about, /services, /pricing,
       // /contact, /lawyers, /lawyers/wei-tseng, /columns archive,
-      // 17 JA column details, and the JA investment/civil/family service details (+27).
+      // 17 JA column details, and the JA investment/civil/family/labor service details (+28).
       // Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 153,
-      afterFiltering: 144,
+      beforeFiltering: 154,
+      afterFiltering: 145,
       removed: 9,
     });
 
@@ -207,7 +207,7 @@ describe('sitemap column lastModified', () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
 
-    for (const slug of ['investment', 'civil', 'family']) {
+    for (const slug of ['investment', 'civil', 'family', 'labor']) {
       const japaneseEntries = entries.filter(
         (entry) => entry.url === `https://tseng-law.com/ja/services/${slug}`,
       );
@@ -223,7 +223,7 @@ describe('sitemap column lastModified', () => {
       });
     }
 
-    for (const slug of ['labor', 'criminal', 'ip']) {
+    for (const slug of ['criminal', 'ip']) {
       expect(entries).not.toContainEqual(expect.objectContaining({
         url: `https://tseng-law.com/ja/services/${slug}`,
       }));

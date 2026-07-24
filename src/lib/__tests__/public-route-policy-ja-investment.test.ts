@@ -8,7 +8,7 @@ describe('Japanese service-detail language switch policy', () => {
     ['/services/investment', '/ja/services/investment'],
     ['/services/civil', '/ja/services/civil'],
     ['/services/family', '/ja/services/family'],
-    ['/services/labor', '/ja/services'],
+    ['/services/labor', '/ja/services/labor'],
     ['/services/criminal', '/ja/services'],
     ['/services/ip', '/ja/services'],
     ['/columns/taiwan-company-establishment-basics', '/ja/columns/taiwan-company-establishment-basics'],

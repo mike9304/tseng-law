@@ -255,10 +255,15 @@ export default function Header({ locale }: { locale: SiteLocale }) {
             { label: '聯絡', href: '/zh-hant/contact' },
             { label: '據點', href: '/zh-hant/contact#offices' }
           ]
-        : [
-            { label: 'Contact', href: '/en/contact' },
-            { label: 'Offices', href: '/en/contact#offices' }
-          ];
+        : locale === 'ja'
+          ? [
+              { label: 'お問い合わせ', href: '/ja/contact' },
+              { label: 'アクセス', href: '/ja/contact#offices' }
+            ]
+          : [
+              { label: 'Contact', href: '/en/contact' },
+              { label: 'Offices', href: '/en/contact#offices' }
+            ];
 
   const mainNavItems = useMemo(() => buildMainNavItems(locale), [locale]);
   const megaPanels = useMemo(() => buildMegaPanels(locale), [locale]);
@@ -370,7 +375,13 @@ export default function Header({ locale }: { locale: SiteLocale }) {
   }, [closeMegaMenuNow, drawerOpen, searchOpen]);
 
   useEffect(() => {
+    if (locale === 'ja') {
+      setMemberNav({ status: 'signed-out' });
+      return;
+    }
+
     let active = true;
+    setMemberNav({ status: 'loading' });
 
     const loadMember = async () => {
       try {
@@ -400,7 +411,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
     return () => {
       active = false;
     };
-  }, [pathname]);
+  }, [locale, pathname]);
 
   useEffect(() => {
     if (drawerOpen || !restoreMobileToggleOnCloseRef.current) return;
@@ -428,33 +439,46 @@ export default function Header({ locale }: { locale: SiteLocale }) {
       </a>
       <div className="header-utility">
         <div className="container">
-          <nav className="utility-nav" aria-label={locale === 'ko' ? '보조 메뉴' : locale === 'zh-hant' ? '輔助選單' : 'Utility menu'}>
+          <nav
+            className="utility-nav"
+            aria-label={
+              locale === 'ko'
+                ? '보조 메뉴'
+                : locale === 'zh-hant'
+                  ? '輔助選單'
+                  : locale === 'ja'
+                    ? '補助メニュー'
+                    : 'Utility menu'
+            }
+          >
             {utilityLinks.map((item) => (
               <Link key={item.href} href={item.href}>
                 {item.label}
               </Link>
             ))}
-            <div className="utility-member-nav" data-member-nav-state={memberNav.status}>
-              {memberNav.status === 'signed-in' ? (
-                <>
-                  <Link href={`/${locale}/account`} data-member-role-link="account">
-                    {memberLabels.account}
-                  </Link>
-                  {canSeePremium ? (
-                    <Link href={`/${locale}/account/premium`} data-member-role-link="premium">
-                      {memberLabels.premium}
+            {locale !== 'ja' ? (
+              <div className="utility-member-nav" data-member-nav-state={memberNav.status}>
+                {memberNav.status === 'signed-in' ? (
+                  <>
+                    <Link href={`/${locale}/account`} data-member-role-link="account">
+                      {memberLabels.account}
                     </Link>
-                  ) : null}
-                  <button type="button" onClick={handleMemberLogout} data-member-role-link="logout">
-                    {memberLabels.logout}
-                  </button>
-                </>
-              ) : (
-                <Link href={memberLoginHref} data-member-role-link="login">
-                  {memberLabels.login}
-                </Link>
-              )}
-            </div>
+                    {canSeePremium ? (
+                      <Link href={`/${locale}/account/premium`} data-member-role-link="premium">
+                        {memberLabels.premium}
+                      </Link>
+                    ) : null}
+                    <button type="button" onClick={handleMemberLogout} data-member-role-link="logout">
+                      {memberLabels.logout}
+                    </button>
+                  </>
+                ) : (
+                  <Link href={memberLoginHref} data-member-role-link="login">
+                    {memberLabels.login}
+                  </Link>
+                )}
+              </div>
+            ) : null}
             <LocaleFlagSwitcher locale={locale} className="utility-lang" />
           </nav>
         </div>
@@ -462,7 +486,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
 
       <div className="header-main">
         <div className="container header-main-inner">
-          <Link className="header-logo" href={locale === 'ja' ? '/ja/columns' : `/${locale}`} aria-label={homeLabel}>
+          <Link className="header-logo" href={`/${locale}`} aria-label={homeLabel}>
             <span className="logo-mark" aria-hidden>
               <Image src="/images/brand/hovering-seal-official.png" alt="" width={40} height={40} priority />
             </span>
@@ -537,17 +561,19 @@ export default function Header({ locale }: { locale: SiteLocale }) {
           </nav>
 
           <div className="header-actions">
-            <button
-              className="header-search-btn"
-              type="button"
-              onClick={(event) => openSearchFromHeader(event.currentTarget)}
-              aria-label={searchLabel}
-            >
-              <svg className="header-search-icon" viewBox="0 0 24 24" aria-hidden>
-                <circle cx="11" cy="11" r="7.2" />
-                <line x1="16.5" y1="16.5" x2="21" y2="21" />
-              </svg>
-            </button>
+            {locale !== 'ja' ? (
+              <button
+                className="header-search-btn"
+                type="button"
+                onClick={(event) => openSearchFromHeader(event.currentTarget)}
+                aria-label={searchLabel}
+              >
+                <svg className="header-search-icon" viewBox="0 0 24 24" aria-hidden>
+                  <circle cx="11" cy="11" r="7.2" />
+                  <line x1="16.5" y1="16.5" x2="21" y2="21" />
+                </svg>
+              </button>
+            ) : null}
             <Link className="button nav-cta" href={content.nav.cta.href}>
               {content.nav.cta.label}
             </Link>
@@ -602,7 +628,9 @@ export default function Header({ locale }: { locale: SiteLocale }) {
 
       <div className={`mega-overlay${openMenu ? ' visible' : ''}`} id="megaOverlay" onClick={closeMegaMenuNow} />
 
-      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} locale={toBuilderLocale(locale)} />
+      {locale !== 'ja' ? (
+        <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} locale={toBuilderLocale(locale)} />
+      ) : null}
       <MobileNavDrawer
         open={drawerOpen}
         onClose={closeMobileDrawer}

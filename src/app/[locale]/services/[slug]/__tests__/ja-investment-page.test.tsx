@@ -12,7 +12,7 @@ import ServiceDetailPage, {
 } from '../page';
 
 const SITE_URL = 'https://tseng-law.com';
-const unsupportedJapaneseSlugs = ['civil', 'family', 'labor', 'criminal', 'ip'] as const;
+const unsupportedJapaneseSlugs = ['family', 'labor', 'criminal', 'ip'] as const;
 
 const navigationMocks = vi.hoisted(() => ({
   notFound: vi.fn((): never => {
@@ -127,7 +127,7 @@ describe('Japanese investment service-detail route', () => {
     expect(sourceMocks.readBySlug).not.toHaveBeenCalled();
   });
 
-  it('adds only Japanese investment to static params and reads builder records once', async () => {
+  it('adds only approved Japanese details to static params and reads builder records once', async () => {
     const params = await generateStaticParams();
 
     expect(params).toEqual(expect.arrayContaining([
@@ -138,9 +138,11 @@ describe('Japanese investment service-detail route', () => {
       { locale: 'zh-hant', slug: 'civil' },
       { locale: 'en', slug: 'civil' },
       { locale: 'ja', slug: 'investment' },
+      { locale: 'ja', slug: 'civil' },
     ]));
     expect(params.filter(({ locale }) => locale === 'ja')).toEqual([
       { locale: 'ja', slug: 'investment' },
+      { locale: 'ja', slug: 'civil' },
     ]);
     expect(sourceMocks.readRecords).toHaveBeenCalledTimes(1);
     expect(sourceMocks.readRecords).toHaveBeenCalledWith(

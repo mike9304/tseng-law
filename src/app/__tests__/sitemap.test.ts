@@ -103,10 +103,10 @@ describe('sitemap column lastModified', () => {
     }).toEqual({
       // Base includes EN file-backed columns + JA /about, /services, /pricing,
       // /contact, /lawyers, /lawyers/wei-tseng, /columns archive,
-      // 17 JA column details, and the JA investment service detail (+25).
+      // 17 JA column details, and the JA investment/civil service details (+26).
       // Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 151,
-      afterFiltering: 142,
+      beforeFiltering: 152,
+      afterFiltering: 143,
       removed: 9,
     });
 
@@ -203,24 +203,27 @@ describe('sitemap column lastModified', () => {
     });
   });
 
-  it('publishes only the approved Japanese investment detail with exact alternates', async () => {
+  it('publishes only the approved Japanese service details with exact alternates', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
-    const japaneseInvestmentEntries = entries.filter(
-      (entry) => entry.url === 'https://tseng-law.com/ja/services/investment',
-    );
 
-    expect(japaneseInvestmentEntries).toHaveLength(1);
-    expect(japaneseInvestmentEntries[0]?.priority).toBe(0.72);
-    expect(japaneseInvestmentEntries[0]?.alternates?.languages).toEqual({
-      ko: 'https://tseng-law.com/ko/services/investment',
-      'zh-Hant': 'https://tseng-law.com/zh-hant/services/investment',
-      en: 'https://tseng-law.com/en/services/investment',
-      ja: 'https://tseng-law.com/ja/services/investment',
-      'x-default': 'https://tseng-law.com/ko/services/investment',
-    });
+    for (const slug of ['investment', 'civil']) {
+      const japaneseEntries = entries.filter(
+        (entry) => entry.url === `https://tseng-law.com/ja/services/${slug}`,
+      );
 
-    for (const slug of ['civil', 'family', 'labor', 'criminal', 'ip']) {
+      expect(japaneseEntries).toHaveLength(1);
+      expect(japaneseEntries[0]?.priority).toBe(0.72);
+      expect(japaneseEntries[0]?.alternates?.languages).toEqual({
+        ko: `https://tseng-law.com/ko/services/${slug}`,
+        'zh-Hant': `https://tseng-law.com/zh-hant/services/${slug}`,
+        en: `https://tseng-law.com/en/services/${slug}`,
+        ja: `https://tseng-law.com/ja/services/${slug}`,
+        'x-default': `https://tseng-law.com/ko/services/${slug}`,
+      });
+    }
+
+    for (const slug of ['family', 'labor', 'criminal', 'ip']) {
       expect(entries).not.toContainEqual(expect.objectContaining({
         url: `https://tseng-law.com/ja/services/${slug}`,
       }));

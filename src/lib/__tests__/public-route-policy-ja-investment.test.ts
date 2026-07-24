@@ -6,7 +6,7 @@ describe('Japanese service-detail language switch policy', () => {
   it.each([
     ['/services', '/ja/services'],
     ['/services/investment', '/ja/services/investment'],
-    ['/services/civil', '/ja/services'],
+    ['/services/civil', '/ja/services/civil'],
     ['/services/family', '/ja/services'],
     ['/services/labor', '/ja/services'],
     ['/services/criminal', '/ja/services'],

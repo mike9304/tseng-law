@@ -109,20 +109,25 @@ const copy: Record<SiteLocale, {
   },
 };
 
+const publishedJapaneseServiceDetailSlugs = [
+  'investment',
+  'civil',
+] as const;
+
 function getJapaneseServiceRecord(slugInput: string): ServiceDetailRecord | null {
   const slug = normalizeServiceAreaSlug(slugInput);
-  if (slug !== 'investment') {
+  if (!(publishedJapaneseServiceDetailSlugs as readonly string[]).includes(slug)) {
     return null;
   }
 
-  const approved = getJapaneseServiceDetail('investment');
-  const base = getServiceArea('investment');
+  const approved = getJapaneseServiceDetail(slug);
+  const base = getServiceArea(slug);
   if (!approved || !base) {
     return null;
   }
 
   return {
-    slug: 'investment',
+    slug,
     title: approved.title,
     subtitle: approved.subtitle,
     intro: approved.intro,
@@ -165,6 +170,7 @@ export async function generateStaticParams() {
       slugs.map((slug) => ({ locale, slug })),
     ),
     { locale: 'ja', slug: 'investment' },
+    { locale: 'ja', slug: 'civil' },
   ];
 }
 

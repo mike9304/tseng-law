@@ -228,7 +228,7 @@ export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPos
     let title = fallbackTitle;
     let dateDisplay = fallbackDateDisplay;
     let readTime = fallbackReadTime;
-    let contentText = cleanContent;
+    const contentText = cleanContent;
     let summary = fallbackSummary;
 
     if (locale === 'en' && dir === COLUMNS_DIR) {

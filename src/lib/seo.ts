@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { Locale, SiteLocale } from '@/lib/locales';
-import { defaultLocale, locales, siteLocales } from '@/lib/locales';
+import { defaultLocale, locales } from '@/lib/locales';
 
 type ImageInput =
   | string

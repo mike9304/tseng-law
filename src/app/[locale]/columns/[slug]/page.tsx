@@ -169,7 +169,7 @@ export default async function ColumnDetailPage({ params }: { params: { locale: S
   const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.item.seo');
 
   const typography = resolveTypography(
-    locale,
+    toBuilderLocale(locale),
     (post.typography as ColumnTypography | undefined)
       ?? (post.typographyPresetId
         ? { presetId: post.typographyPresetId } as ColumnTypography

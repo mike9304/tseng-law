@@ -1,5 +1,3 @@
-import type { Locale } from '@/lib/locales';
-
 export type NavItem = {
   label: string;
   href: string;

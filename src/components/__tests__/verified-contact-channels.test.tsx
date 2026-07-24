@@ -132,6 +132,9 @@ describe('verified public contact channels', () => {
     expect(occurrences(html, '<a ')).toBe(1);
     expect(occurrences(html, `href="${verifiedMessengerHref}"`)).toBe(1);
     expect(html).toContain(
+      '<h3 class="messenger-card-platform" style="text-transform:none">KakaoTalkチャンネルでお問い合わせ</h3>',
+    );
+    expect(html).toContain(
       `href="${verifiedMessengerHref}" class="messenger-card messenger-card--primary messenger-card--kakao" target="_blank" rel="noopener noreferrer"`,
     );
   });
@@ -164,6 +167,8 @@ describe('verified public contact channels', () => {
       expect(occurrences(html, '<a ')).toBe(1);
       expect(occurrences(html, `href="${verifiedMessengerHref}"`)).toBe(1);
       expect(html).toContain('target="_blank" rel="noopener noreferrer"');
+      expect(html).toContain('<h3 class="messenger-card-platform">');
+      expect(html).not.toContain('style="text-transform:none"');
     }
   });
 

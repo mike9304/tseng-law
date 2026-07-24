@@ -126,7 +126,12 @@ export default function MessengerChatSection({ locale }: { locale: SiteLocale })
               <KakaoIcon />
             </div>
             <div className="messenger-card-body">
-              <h3 className="messenger-card-platform">{config.primary.label}</h3>
+              <h3
+                className="messenger-card-platform"
+                style={locale === 'ja' ? { textTransform: 'none' } : undefined}
+              >
+                {config.primary.label}
+              </h3>
               <p className="messenger-card-desc">{config.primary.description}</p>
             </div>
             <span className="messenger-card-arrow">→</span>

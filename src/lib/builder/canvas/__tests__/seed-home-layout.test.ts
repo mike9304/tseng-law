@@ -343,9 +343,9 @@ describe('home seed canvas layout', () => {
       throw new Error('Expected home-attorney-image to be an image node.');
     }
     expect(image.content).toMatchObject({
-      src: '/_next/image?url=%2Fimages%2Fteam%2Ftseng-junwei%2Epng&w=640&q=75',
+      src: '/_next/image?url=%2Fimages%2Fteam%2Fwei-tseng-official%2Epng&w=640&q=75',
       fit: 'cover',
-      alt: '曾俊瑋 代表律師',
+      alt: '曾雋崴 代表律師',
       gif: { provider: 'manual' },
       filters: {
         brightness: 93,
@@ -370,11 +370,11 @@ describe('home seed canvas layout', () => {
     expect(absoluteRect(nodesById, 'home-attorney-cta')).toMatchObject({ x: 653, y: 3919, width: 550, height: 29 });
 
     expect(textNodeText(nodesById.get('home-attorney-label'))).toBe('ABOUT');
-    expect(textNodeText(nodesById.get('home-attorney-title'))).toBe('曾俊瑋律師，專注服務韓國客戶的台灣法律夥伴');
+    expect(textNodeText(nodesById.get('home-attorney-title'))).toBe('曾雋崴律師，專注服務韓國客戶的台灣法律夥伴');
     expect(textNodeText(nodesById.get('home-attorney-intro-1'))).toBe('專精企業與個人案件，提供韓文與日文法律溝通。');
     expect(textNodeText(nodesById.get('home-attorney-intro-2'))).toBe('曾代理韓國留學生健身傷害求償案，獲判新台幣 157 萬元。');
     expect(textNodeText(nodesById.get('home-attorney-summary'))).toBe('擁有 10+ 年實務經驗，曾參與韓國 SBS 晨間節目並持續經營 WEI Lawyer 法律內容。');
-    expect(textNodeText(nodesById.get('home-attorney-contact-line'))).toBe('曾俊瑋 · 代表律師 · wei@hoveringlaw.com.tw');
+    expect(textNodeText(nodesById.get('home-attorney-contact-line'))).toBe('曾雋崴 · 代表律師 · wei@hoveringlaw.com.tw');
 
     const divider = requireNode(nodesById, 'home-attorney-divider');
     expect(divider).toMatchObject({

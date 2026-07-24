@@ -749,7 +749,7 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
         setNodeRect(nodesById, 'home-attorney-image-wrap', { y: 142, height: 644 });
         setNodeRect(nodesById, 'home-attorney-image', { y: 0, height: 644 });
         setImageNodeContent(nodesById, 'home-attorney-image', {
-          src: '/_next/image?url=%2Fimages%2Fteam%2Ftseng-junwei%2Epng&w=640&q=75',
+          src: '/_next/image?url=%2Fimages%2Fteam%2Fwei-tseng-official%2Epng&w=640&q=75',
           gif: { provider: 'manual' },
           filters: {
             brightness: 93,

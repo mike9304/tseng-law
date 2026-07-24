@@ -35,7 +35,7 @@ describe('builder site header responsive contract', () => {
 
     const longestKoLabels = [
       '호정 한국·대만 업무팀',
-      '曾俊瑋(준외) 변호사 미디어·채널',
+      '曾雋崴(준외) 변호사 미디어·채널',
       '문의 및 연락처',
       '자주 묻는 질문',
       '고객후기',

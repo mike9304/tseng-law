@@ -46,7 +46,7 @@ const nodeInsightsPreviewStyle: CSSProperties = {
 };
 
 function authorLabelForLocale(locale: InsightsLocale): string {
-  if (locale === 'zh-hant') return '曾俊瑋律師審閱';
+  if (locale === 'zh-hant') return '曾雋崴律師審閱';
   if (locale === 'en') return 'Reviewed by Wei Tseng';
   return '증준외 변호사 검토';
 }

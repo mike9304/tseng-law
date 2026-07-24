@@ -20,7 +20,7 @@ const copyByLocale = {
   },
   'zh-hant': {
     label: 'ABOUT',
-    title: '曾俊瑋律師，專注服務韓國客戶的台灣法律夥伴',
+    title: '曾雋崴律師，專注服務韓國客戶的台灣法律夥伴',
     summary:
       '擁有 10+ 年實務經驗，曾參與韓國 SBS 晨間節目並持續經營 WEI Lawyer 法律內容。',
     cta: '查看律師簡介',

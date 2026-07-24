@@ -115,7 +115,7 @@ export function createInsightsDecomposedNodes(
   const listWrapHeight = listTop + listHeight + listWrapBottomPadding;
   const gridHeight = Math.max(740, listWrapHeight);
   const authorLabel =
-    locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾俊瑋律師審閱' : 'Reviewed by Wei Tseng';
+    locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾雋崴律師審閱' : 'Reviewed by Wei Tseng';
   const authorHref = getAttorneyProfilePath(locale);
   const rootId = 'home-insights-root';
   const containerId = 'home-insights-container';

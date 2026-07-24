@@ -231,7 +231,7 @@ describe('builder dataset field binding', () => {
   it('binds attorney profile image, alt text, and profile links', () => {
     const rendered = applyBuilderDatasetBindingToNode(makeAttorneyImageNode(), context) as BuilderImageCanvasNode;
 
-    expect(rendered.content.src).toBe('/images/team/tseng-junwei.png');
+    expect(rendered.content.src).toBe('/images/team/wei-tseng-official.png');
     expect(rendered.content.alt).toBe('증준외 변호사');
     expect(rendered.content.link?.href).toBe('/ko/lawyers/wei-tseng');
     expect(resolveBuilderDatasetFieldValue({

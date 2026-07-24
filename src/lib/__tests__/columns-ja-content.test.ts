@@ -9,6 +9,14 @@ const KANA = /[\u3040-\u30ff]/;
 const root = process.cwd();
 const koDir = path.join(root, 'src/content/columns');
 const jaDir = path.join(root, 'src/content/columns-ja');
+const jaIdentityFiles = [
+  '001-taiwan-company-establishment-basics.md',
+  '003-taiwan-traffic-accident-procedure.md',
+  '004-taiwan-company-subsidiary-vs-branch.md',
+  '007-taiwan-divorce-lawsuit-qna.md',
+  '008-taiwan-labor-severance-law.md',
+  '010-taiwan-gym-injury-lawsuit.md',
+];
 
 const koFiles = fs
   .readdirSync(koDir)
@@ -57,5 +65,16 @@ describe('Japanese full column corpus + site locale', () => {
   it('does not name 구준엽 as Harlem Yu in JA inheritance column', () => {
     const post = getColumnPost('taiwan-inheritance-custody-analysis', 'ja');
     expect(post?.content ?? '').not.toMatch(/Harlem\s*Yu/i);
+  });
+
+  it('uses the official attorney name throughout the Japanese column corpus', () => {
+    const jaFiles = fs.readdirSync(jaDir).filter((name) => name.endsWith('.md'));
+    const corpus = jaFiles.map((name) => fs.readFileSync(path.join(jaDir, name), 'utf8')).join('\n');
+
+    expect(corpus).not.toContain('曾俊瑋');
+    for (const file of jaIdentityFiles) {
+      const content = fs.readFileSync(path.join(jaDir, file), 'utf8');
+      expect(content).toContain('曾雋崴');
+    }
   });
 });

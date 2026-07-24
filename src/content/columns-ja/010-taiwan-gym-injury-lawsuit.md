@@ -13,7 +13,7 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 ![代表画像](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
-こんにちは。台湾弁護士の曾俊瑋です。
+こんにちは。台湾弁護士の曾雋崴です。
 
 本日は、台湾で大きな話題となった事件についてお話ししたいと思います。
 

@@ -15,7 +15,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-こんにちは。台湾弁護士の曾俊瑋（Wei Tseng）です。
+こんにちは。台湾弁護士の曾雋崴（Wei Tseng）です。
 
 ​
 

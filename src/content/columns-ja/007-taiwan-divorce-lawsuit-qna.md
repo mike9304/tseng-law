@@ -13,7 +13,7 @@ featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
 
 ![代表画像](../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg)
 
-こんにちは、台湾弁護士の曾俊瑋です。
+こんにちは、台湾弁護士の曾雋崴です。
 
 韓国と台湾の結婚はますます増えています。
 

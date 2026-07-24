@@ -26,7 +26,7 @@ faq:
 
 ![](../images/004-taiwan-company-subsidiary-vs-branch/img-01.jpg)
 
-こんにちは。台湾弁護士の曾俊瑋（Wei Tseng）です。
+こんにちは。台湾弁護士の曾雋崴（Wei Tseng）です。
 
 以前、台湾の会社設立について
 
@@ -200,7 +200,7 @@ faq:
 
 
 
-以上、台湾弁護士の曾俊瑋でした。
+以上、台湾弁護士の曾雋崴でした。
 
 
 

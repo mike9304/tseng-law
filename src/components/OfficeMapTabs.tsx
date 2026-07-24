@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import SectionLabel from '@/components/SectionLabel';
 import { SurfaceText } from '@/lib/builder/surface-context';
 
@@ -27,19 +27,23 @@ const YANGJU_NAVER_MAP_URL = 'https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%
 const TAIPEI_RATING_VALUE = '5.0';
 const TAIPEI_REVIEW_COUNT = 17;
 
-function taipeiRatingSummary(locale: Locale) {
+function taipeiRatingSummary(locale: SiteLocale) {
   if (locale === 'ko') return `${TAIPEI_RATING_VALUE} · 리뷰 ${TAIPEI_REVIEW_COUNT}개`;
   if (locale === 'zh-hant') return `${TAIPEI_RATING_VALUE} · ${TAIPEI_REVIEW_COUNT} 則評論`;
+  if (locale === 'ja') return `${TAIPEI_RATING_VALUE}・クチコミ${TAIPEI_REVIEW_COUNT}件`;
   return `${TAIPEI_RATING_VALUE} · ${TAIPEI_REVIEW_COUNT} reviews`;
 }
 
-function taipeiRatingAriaLabel(locale: Locale) {
+function taipeiRatingAriaLabel(locale: SiteLocale) {
   if (locale === 'ko') return `구글 평점 ${TAIPEI_RATING_VALUE}, 리뷰 ${TAIPEI_REVIEW_COUNT}개`;
   if (locale === 'zh-hant') return `Google 評分 ${TAIPEI_RATING_VALUE}，${TAIPEI_REVIEW_COUNT} 則評論`;
+  if (locale === 'ja') {
+    return `Googleでの評価は${TAIPEI_RATING_VALUE}、クチコミは${TAIPEI_REVIEW_COUNT}件です`;
+  }
   return `Google rating ${TAIPEI_RATING_VALUE}, ${TAIPEI_REVIEW_COUNT} reviews`;
 }
 
-type TaipeiPhoto = { src: string; alt: Record<Locale, string> };
+type TaipeiPhoto = { src: string; alt: Record<SiteLocale, string> };
 
 const taipeiPhotos: TaipeiPhoto[] = [
   {
@@ -48,6 +52,7 @@ const taipeiPhotos: TaipeiPhoto[] = [
       ko: '법무법인 호정 타이베이 사무소 응접실',
       'zh-hant': '昊鼎國際法律事務所台北辦公室接待室',
       en: 'Hovering International Law Firm Taipei office reception room',
+      ja: '昊鼎国際法律事務所 台北事務所の応接室',
     },
   },
   {
@@ -56,6 +61,7 @@ const taipeiPhotos: TaipeiPhoto[] = [
       ko: '법무법인 호정 타이베이 사무소 집무실',
       'zh-hant': '昊鼎國際法律事務所台北辦公室律師辦公室',
       en: "Hovering International Law Firm Taipei office attorney's office",
+      ja: '昊鼎国際法律事務所 台北事務所の執務室',
     },
   },
   {
@@ -64,11 +70,48 @@ const taipeiPhotos: TaipeiPhoto[] = [
       ko: '법무법인 호정 타이베이 사무소 회의실',
       'zh-hant': '昊鼎國際法律事務所台北辦公室會議室',
       en: 'Hovering International Law Firm Taipei office meeting room',
+      ja: '昊鼎国際法律事務所 台北事務所の会議室',
     },
   },
 ];
 
-const taiwanOfficeData: Record<Locale, OfficeInfo[]> = {
+type TaiwanOfficeId = 'taipei' | 'taichung' | 'kaohsiung';
+type TaiwanOfficeInfo = OfficeInfo & { id: TaiwanOfficeId };
+
+const zhHantTaiwanOffices: TaiwanOfficeInfo[] = [
+  {
+    id: 'taipei',
+    title: '台北',
+    address: '台北市大同區承德路一段35號7樓之2',
+    embedUrl: TAIPEI_EMBED_URL,
+    mapsUrl: TAIPEI_MAPS_URL
+  },
+  {
+    id: 'taichung',
+    title: '台中',
+    address: '臺中市北區館前路19號樓之1',
+    phone: '04-2326-1862',
+    fax: '04-2326-1863',
+    embedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1500!2d120.6658294!3d24.1554306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9e732d2ffb%3A0xf5febc8f45f245fe!2z5piK6byO5ZyL6Zqb5rOV5b6L5LqL5YuZ5omAIOWPsOS4reaJgA!5e0!3m2!1szh-TW!2stw',
+    mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E5%8F%B0%E4%B8%AD%E6%89%80'
+  },
+  {
+    id: 'kaohsiung',
+    title: '高雄',
+    address: '高雄市左營區安吉街233號',
+    phone: '07-557-9797',
+    embedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1500!2d120.3078343!3d22.6620929!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e05034374bf33%3A0x1cb351715e1377c4!2z5piK6byO5ZyL6Zqb5rOV5b6L5LqL5YuZ5omAIOmrmOmbhOaJgA!5e0!3m2!1szh-TW!2stw',
+    mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80'
+  }
+];
+
+const japaneseTaiwanOfficeTitles: Record<TaiwanOfficeId, string> = {
+  taipei: '台北事務所',
+  taichung: '台中事務所',
+  kaohsiung: '高雄事務所',
+};
+
+const taiwanOfficeData: Record<SiteLocale, OfficeInfo[]> = {
   ko: [
     {
       id: 'taipei',
@@ -95,32 +138,7 @@ const taiwanOfficeData: Record<Locale, OfficeInfo[]> = {
       mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80'
     }
   ],
-  'zh-hant': [
-    {
-      id: 'taipei',
-      title: '台北',
-      address: '台北市大同區承德路一段35號7樓之2',
-      embedUrl: TAIPEI_EMBED_URL,
-      mapsUrl: TAIPEI_MAPS_URL
-    },
-    {
-      id: 'taichung',
-      title: '台中',
-      address: '臺中市北區館前路19號樓之1',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      embedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1500!2d120.6658294!3d24.1554306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9e732d2ffb%3A0xf5febc8f45f245fe!2z5piK6byO5ZyL6Zqb5rOV5b6L5LqL5YuZ5omAIOWPsOS4reaJgA!5e0!3m2!1szh-TW!2stw',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E5%8F%B0%E4%B8%AD%E6%89%80'
-    },
-    {
-      id: 'kaohsiung',
-      title: '高雄',
-      address: '高雄市左營區安吉街233號',
-      phone: '07-557-9797',
-      embedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1500!2d120.3078343!3d22.6620929!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e05034374bf33%3A0x1cb351715e1377c4!2z5piK6byO5ZyL6Zqb5rOV5b6L5LqL5YuZ5omAIOmrmOmbhOaJgA!5e0!3m2!1szh-TW!2stw',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80'
-    }
-  ],
+  'zh-hant': zhHantTaiwanOffices,
   en: [
     {
       id: 'taipei',
@@ -146,10 +164,23 @@ const taiwanOfficeData: Record<Locale, OfficeInfo[]> = {
       embedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1500!2d120.3078343!3d22.6620929!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e05034374bf33%3A0x1cb351715e1377c4!2z5piK6byO5ZyL6Zqb5rOV5b6L5LqL5YuZ5omAIOmrmOmbhOaJgA!5e0!3m2!1sen!2stw',
       mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80'
     }
-  ]
+  ],
+  ja: zhHantTaiwanOffices.map((office) => ({
+    ...office,
+    title: japaneseTaiwanOfficeTitles[office.id],
+  })),
 };
 
-const koreaOfficeData: Record<Locale, OfficeInfo> = {
+const zhHantKoreaOffice: OfficeInfo = {
+  id: 'yangju',
+  title: '韓國辦公室',
+  address: '韓國京畿道楊州市玉井東路177號 Suhyeon Plaza 4樓',
+  phone: '+82-10-2992-9304',
+  mapsUrl: YANGJU_NAVER_MAP_URL,
+  mapLinkLabel: '在 Naver 地圖查看'
+};
+
+const koreaOfficeData: Record<SiteLocale, OfficeInfo> = {
   ko: {
     id: 'yangju',
     title: '한국 사무실',
@@ -158,14 +189,7 @@ const koreaOfficeData: Record<Locale, OfficeInfo> = {
     mapsUrl: YANGJU_NAVER_MAP_URL,
     mapLinkLabel: '네이버 지도에서 보기'
   },
-  'zh-hant': {
-    id: 'yangju',
-    title: '韓國辦公室',
-    address: '韓國京畿道楊州市玉井東路177號 Suhyeon Plaza 4樓',
-    phone: '+82-10-2992-9304',
-    mapsUrl: YANGJU_NAVER_MAP_URL,
-    mapLinkLabel: '在 Naver 地圖查看'
-  },
+  'zh-hant': zhHantKoreaOffice,
   en: {
     id: 'yangju',
     title: 'Korea Office',
@@ -173,7 +197,12 @@ const koreaOfficeData: Record<Locale, OfficeInfo> = {
     phone: '+82-10-2992-9304',
     mapsUrl: YANGJU_NAVER_MAP_URL,
     mapLinkLabel: 'View on Naver Map'
-  }
+  },
+  ja: {
+    ...zhHantKoreaOffice,
+    title: '韓国事務所',
+    mapLinkLabel: 'NAVERマップで見る',
+  },
 };
 
 export default function OfficeMapTabs({
@@ -184,7 +213,7 @@ export default function OfficeMapTabs({
   labelSurfaceId = 'section-label',
   titleSurfaceId = 'headline',
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   id?: string;
   sectionClassName?: string;
   tone?: 'light' | 'dark';
@@ -195,15 +224,52 @@ export default function OfficeMapTabs({
   const koreaOffice = koreaOfficeData[locale];
   const [activeId, setActiveId] = useState(offices[0]?.id ?? '');
   const current = offices.find((office) => office.id === activeId) ?? offices[0];
-  const title = locale === 'ko' ? '오시는길' : locale === 'zh-hant' ? '事務所據點' : 'Office Locations';
-  const officeLabel = locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : 'Office';
-  const telLabel = locale === 'ko' ? '전화' : locale === 'zh-hant' ? '電話' : 'Phone';
-  const faxLabel = locale === 'ko' ? '팩스' : locale === 'zh-hant' ? '傳真' : 'Fax';
+  const title =
+    locale === 'ko'
+      ? '오시는길'
+      : locale === 'zh-hant'
+        ? '事務所據點'
+        : locale === 'ja'
+          ? '事務所所在地'
+          : 'Office Locations';
+  const officeLabel =
+    locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : locale === 'ja' ? '事務所' : 'Office';
+  const telLabel =
+    locale === 'ko' ? '전화' : locale === 'zh-hant' ? '電話' : locale === 'ja' ? '電話' : 'Phone';
+  const faxLabel =
+    locale === 'ko' ? '팩스' : locale === 'zh-hant' ? '傳真' : locale === 'ja' ? 'FAX' : 'Fax';
   const viewMapLabel =
-    locale === 'ko' ? 'Google 지도에서 보기 (사진·리뷰)' : locale === 'zh-hant' ? '在 Google 地圖查看 (照片·評論)' : 'View on Google Maps (photos & reviews)';
-  const mapPreviewLabel = locale === 'ko' ? '지도 미리보기' : locale === 'zh-hant' ? '地圖預覽' : 'Map preview';
-  const addressCardLabel = locale === 'ko' ? '한국 사무실 주소' : locale === 'zh-hant' ? '韓國辦公室地址' : 'Korea office address';
-  const openMapLabel = locale === 'ko' ? '지도 열기' : locale === 'zh-hant' ? '開啟地圖' : 'Open map';
+    locale === 'ko'
+      ? 'Google 지도에서 보기 (사진·리뷰)'
+      : locale === 'zh-hant'
+        ? '在 Google 地圖查看 (照片·評論)'
+        : locale === 'ja'
+          ? 'Google マップで見る（写真・口コミ）'
+          : 'View on Google Maps (photos & reviews)';
+  const mapPreviewLabel =
+    locale === 'ko'
+      ? '지도 미리보기'
+      : locale === 'zh-hant'
+        ? '地圖預覽'
+        : locale === 'ja'
+          ? '地図プレビュー'
+          : 'Map preview';
+  const addressCardLabel =
+    locale === 'ko'
+      ? '한국 사무실 주소'
+      : locale === 'zh-hant'
+        ? '韓國辦公室地址'
+        : locale === 'ja'
+          ? '韓国事務所の所在地'
+          : 'Korea office address';
+  const openMapLabel =
+    locale === 'ko'
+      ? '지도 열기'
+      : locale === 'zh-hant'
+        ? '開啟地圖'
+        : locale === 'ja'
+          ? '地図を開く'
+          : 'Open map';
 
   if (!current) return null;
 
@@ -237,7 +303,7 @@ export default function OfficeMapTabs({
             {current.embedUrl ? (
               <iframe
                 key={current.id}
-                title={`${current.title} map`}
+                title={locale === 'ja' ? `${current.title}の地図` : `${current.title} map`}
                 src={current.embedUrl}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

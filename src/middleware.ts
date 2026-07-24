@@ -119,8 +119,8 @@ async function createBuilderAdminSessionToken(username: string): Promise<string>
   return `${payload}.${await signSessionPayload(payload)}`;
 }
 
-const CONSULTATION_ADMIN_PATH_RE = /^\/(?:ko|zh-hant|en)\/admin-consultation(?:\/|$)/;
-const BUILDER_ADMIN_PATH_RE = /^\/(?:ko|zh-hant|en)\/admin-builder(?:\/|$)/;
+const CONSULTATION_ADMIN_PATH_RE = /^\/(?:ko|zh-hant|en|ja)\/admin-consultation(?:\/|$)/;
+const BUILDER_ADMIN_PATH_RE = /^\/(?:ko|zh-hant|en|ja)\/admin-builder(?:\/|$)/;
 
 function isObjectRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
@@ -293,8 +293,8 @@ export const config = {
   // Admin routes are listed before the public asset exclusion so dotted
   // admin subpaths still reach the Basic Auth checks inside `middleware()`.
   matcher: [
-    '/:locale(ko|zh-hant|en)/admin-consultation/:path*',
-    '/:locale(ko|zh-hant|en)/admin-builder/:path*',
+    '/:locale(ko|zh-hant|en|ja)/admin-consultation/:path*',
+    '/:locale(ko|zh-hant|en|ja)/admin-builder/:path*',
     '/((?!_next/static|_next/image|api/|favicon.ico|robots.txt|sitemap.xml|images/|fonts/|.*\\..*).*)',
   ],
 };

@@ -111,11 +111,57 @@ describe('admin middleware auth split', () => {
 
   it('matches admin paths before the public dotted-asset exclusion can skip them', () => {
     const expectedAdminMatchers = [
-      '/:locale(ko|zh-hant|en)/admin-consultation/:path*',
-      '/:locale(ko|zh-hant|en)/admin-builder/:path*',
+      '/:locale(ko|zh-hant|en|ja)/admin-consultation/:path*',
+      '/:locale(ko|zh-hant|en|ja)/admin-builder/:path*',
     ];
 
     expect(config.matcher).toEqual(expect.arrayContaining(expectedAdminMatchers));
+  });
+
+  it.each(['ko', 'zh-hant', 'en'] as const)(
+    'keeps existing %s admin auth challenges unchanged',
+    async (locale) => {
+      const consultationResponse = await middleware(
+        adminRequest(`/${locale}/admin-consultation`),
+      );
+      const builderResponse = await middleware(adminRequest(`/${locale}/admin-builder`));
+
+      expect(consultationResponse.status).toBe(401);
+      expect(consultationResponse.headers.get('www-authenticate')).toBe(
+        'Basic realm="Hojeong consultation admin", charset="UTF-8"',
+      );
+      expect(builderResponse.status).toBe(401);
+      expect(builderResponse.headers.get('www-authenticate')).toBe(
+        'Basic realm="Hojeong builder admin", charset="UTF-8"',
+      );
+    },
+  );
+
+  it('challenges unauthenticated Japanese admin-consultation requests', async () => {
+    const response = await middleware(adminRequest('/ja/admin-consultation'));
+
+    expect(response.status).toBe(401);
+    expect(response.headers.get('www-authenticate')).toBe(
+      'Basic realm="Hojeong consultation admin", charset="UTF-8"',
+    );
+  });
+
+  it('challenges unauthenticated dotted Japanese admin-consultation subpaths', async () => {
+    const response = await middleware(adminRequest('/ja/admin-consultation/export.csv'));
+
+    expect(response.status).toBe(401);
+    expect(response.headers.get('www-authenticate')).toBe(
+      'Basic realm="Hojeong consultation admin", charset="UTF-8"',
+    );
+  });
+
+  it('challenges unauthenticated Japanese admin-builder requests', async () => {
+    const response = await middleware(adminRequest('/ja/admin-builder'));
+
+    expect(response.status).toBe(401);
+    expect(response.headers.get('www-authenticate')).toBe(
+      'Basic realm="Hojeong builder admin", charset="UTF-8"',
+    );
   });
 
   it('forwards the public pathname for root-layout SSR language selection', async () => {

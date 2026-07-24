@@ -373,7 +373,7 @@ describe('home seed canvas layout', () => {
     expect(textNodeText(nodesById.get('home-attorney-title'))).toBe('曾雋崴律師，專注服務韓國客戶的台灣法律夥伴');
     expect(textNodeText(nodesById.get('home-attorney-intro-1'))).toBe('專精企業與個人案件，提供韓文與日文法律溝通。');
     expect(textNodeText(nodesById.get('home-attorney-intro-2'))).toBe('曾代理韓國留學生健身傷害求償案，獲判新台幣 157 萬元。');
-    expect(textNodeText(nodesById.get('home-attorney-summary'))).toBe('擁有 10+ 年實務經驗，曾參與韓國 SBS 晨間節目並持續經營 WEI Lawyer 法律內容。');
+    expect(textNodeText(nodesById.get('home-attorney-summary'))).toBe('具備法院訴訟實務與企業法律顧問經驗，曾為 SBS 新聞提供法律意見與解說，並持續透過 WEI Lawyer 發布法律資訊。');
     expect(textNodeText(nodesById.get('home-attorney-contact-line'))).toBe('曾雋崴 · 代表律師 · wei@hoveringlaw.com.tw');
 
     const divider = requireNode(nodesById, 'home-attorney-divider');

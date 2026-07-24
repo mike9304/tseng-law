@@ -17,7 +17,7 @@ const copyByLocale = {
     description:
       '대만 변호사 증준외는 한국어·일본어·중국어 커뮤니케이션 역량을 바탕으로 투자·법인설립·소송까지 연결된 전략을 제공합니다.',
     summary:
-      '10년 이상 실무 경험, SBS 모닝와이드 출연, WEI Lawyer 채널 운영을 통해 실제 사례 중심의 법률 지원을 이어가고 있습니다.',
+      '법원 소송 실무와 기업 법률고문 경험을 바탕으로, SBS 뉴스에 법률 의견과 해설을 제공하고 WEI Lawyer를 통해 법률정보를 꾸준히 발행하고 있습니다.',
     cta: '변호사 프로필 보기'
   },
   'zh-hant': {
@@ -26,7 +26,7 @@ const copyByLocale = {
     description:
       '曾雋崴律師具備韓語、日語、中文溝通能力，協助投資、公司設立與訴訟策略整合。',
     summary:
-      '擁有 10+ 年實務經驗，曾參與韓國 SBS 晨間節目並持續經營 WEI Lawyer 法律內容。',
+      '具備法院訴訟實務與企業法律顧問經驗，曾為 SBS 新聞提供法律意見與解說，並持續透過 WEI Lawyer 發布法律資訊。',
     cta: '查看律師簡介'
   },
   en: {
@@ -35,7 +35,7 @@ const copyByLocale = {
     description:
       'Attorney Wei Tseng provides integrated strategy across investment, incorporation, and litigation with Korean, Japanese, and Chinese communication support.',
     summary:
-      'With 10+ years of practical experience, media appearances, and continuous legal content publishing, we focus on real case-driven support.',
+      'With experience in court litigation and corporate legal advisory work, Attorney Wei Tseng has provided legal commentary and advice to SBS News and continues to publish legal information through WEI Lawyer.',
     cta: 'View Lawyer Profile'
   },
   ja: {
@@ -44,7 +44,7 @@ const copyByLocale = {
     description:
       '曾雋崴弁護士は韓国語・日本語・中国語でのコミュニケーションを強みに、投資・会社設立・訴訟まで一貫した戦略を提供します。',
     summary:
-      '10年以上の実務経験、メディア出演、WEI Lawyerチャンネル運営を通じて、実例に基づく法務支援を続けています。',
+      '裁判所での訴訟実務と企業の法律顧問としての経験を有し、SBSニュースに法律上の意見・解説を提供するとともに、WEI Lawyerを通じて法律情報を継続的に発信しています。',
     cta: '弁護士プロフィールを見る',
   },
 } as const;

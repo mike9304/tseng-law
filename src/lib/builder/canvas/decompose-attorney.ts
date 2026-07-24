@@ -15,21 +15,21 @@ const copyByLocale = {
     label: 'ABOUT',
     title: '증준외 변호사, 한국 고객을 위한 대만 법률 파트너',
     summary:
-      '10년 이상 실무 경험, SBS 모닝와이드 출연, WEI Lawyer 채널 운영을 통해 실제 사례 중심의 법률 지원을 이어가고 있습니다.',
+      '법원 소송 실무와 기업 법률고문 경험을 바탕으로, SBS 뉴스에 법률 의견과 해설을 제공하고 WEI Lawyer를 통해 법률정보를 꾸준히 발행하고 있습니다.',
     cta: '변호사 프로필 보기',
   },
   'zh-hant': {
     label: 'ABOUT',
     title: '曾雋崴律師，專注服務韓國客戶的台灣法律夥伴',
     summary:
-      '擁有 10+ 年實務經驗，曾參與韓國 SBS 晨間節目並持續經營 WEI Lawyer 法律內容。',
+      '具備法院訴訟實務與企業法律顧問經驗，曾為 SBS 新聞提供法律意見與解說，並持續透過 WEI Lawyer 發布法律資訊。',
     cta: '查看律師簡介',
   },
   en: {
     label: 'ABOUT',
     title: 'Attorney Wei Tseng, Taiwan Legal Partner for Korean Clients',
     summary:
-      'With 10+ years of practical experience, media appearances, and continuous legal content publishing, we focus on real case-driven support.',
+      'With experience in court litigation and corporate legal advisory work, Attorney Wei Tseng has provided legal commentary and advice to SBS News and continues to publish legal information through WEI Lawyer.',
     cta: 'View Lawyer Profile',
   },
 } as const;

@@ -2989,25 +2989,25 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       items: [
         {
           title: 'Naverブログ：台湾弁護士 曾俊瑋',
-          duration: 'Blog',
+          duration: 'ブログ',
           href: 'https://blog.naver.com/wei_lawyer/223461663913',
           image: '/images/video-1.svg'
         },
         {
           title: '個人サイト：台湾弁護士 曾俊瑋',
-          duration: 'Website',
+          duration: 'ウェブサイト',
           href: 'https://www.wei-wei-lawyer.com/',
           image: '/images/video-2.svg'
         },
         {
           title: '昊鼎国際法律事務所',
-          duration: 'Website',
+          duration: 'ウェブサイト',
           href: 'https://www.hoveringlaw.com.tw/en/wei.html',
           image: '/images/video-3.svg'
         },
         {
           title: 'お問い合わせ',
-          duration: 'Contact',
+          duration: 'お問い合わせ',
           href: '/ja/contact',
           image: '/images/video-4.svg'
         }

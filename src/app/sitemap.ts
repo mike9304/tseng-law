@@ -193,6 +193,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
   pages.push(
+    createEntry('ja', '/contact', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
     createEntry('ja', '/lawyers', {
       priority: 0.8,
       alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],

@@ -102,10 +102,11 @@ describe('sitemap column lastModified', () => {
       removed: beforeFilteringUrls.size - afterFilteringUrls.size,
     }).toEqual({
       // Base includes EN file-backed columns + JA /about, /services, /pricing,
-      // /lawyers, /lawyers/wei-tseng, /columns archive, and 17 JA column details (+23).
+      // /contact, /lawyers, /lawyers/wei-tseng, /columns archive,
+      // and 17 JA column details (+24).
       // Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 152,
-      afterFiltering: 143,
+      beforeFiltering: 153,
+      afterFiltering: 144,
       removed: 9,
     });
 
@@ -178,6 +179,24 @@ describe('sitemap column lastModified', () => {
       en: 'https://tseng-law.com/en/pricing',
       ja: 'https://tseng-law.com/ja/pricing',
       'x-default': 'https://tseng-law.com/ko/pricing',
+    });
+  });
+
+  it('publishes Japanese contact exactly once with four-language alternates', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const japaneseContactEntries = entries.filter(
+      (entry) => entry.url === 'https://tseng-law.com/ja/contact',
+    );
+
+    expect(japaneseContactEntries).toHaveLength(1);
+    expect(japaneseContactEntries[0]?.priority).toBe(0.8);
+    expect(japaneseContactEntries[0]?.alternates?.languages).toEqual({
+      ko: 'https://tseng-law.com/ko/contact',
+      'zh-Hant': 'https://tseng-law.com/zh-hant/contact',
+      en: 'https://tseng-law.com/en/contact',
+      ja: 'https://tseng-law.com/ja/contact',
+      'x-default': 'https://tseng-law.com/ko/contact',
     });
   });
 

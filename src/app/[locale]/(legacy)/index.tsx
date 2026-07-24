@@ -27,7 +27,7 @@ export function getLegacyPageMetadata(slugPath: string, locale: SiteLocale): Met
     case 'services':
       return getServicesLegacyMetadata(locale);
     case 'contact':
-      return getContactLegacyMetadata(asLegacyLocale(locale));
+      return getContactLegacyMetadata(locale);
     case 'lawyers':
       return getLawyersLegacyMetadata(locale);
     case 'faq':
@@ -54,7 +54,7 @@ export async function renderLegacyPage(slugPath: string, locale: SiteLocale) {
     case 'services':
       return <ServicesLegacyPage locale={locale} />;
     case 'contact':
-      return <ContactLegacyPage locale={asLegacyLocale(locale)} />;
+      return <ContactLegacyPage locale={locale} />;
     case 'lawyers':
       return <LawyersLegacyPage locale={locale} />;
     case 'faq':

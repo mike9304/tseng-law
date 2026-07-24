@@ -78,7 +78,7 @@ export function ServicesLegacyPageBody({
   );
 }
 
-export function ContactLegacyPageBody({ locale }: { locale: Locale }) {
+export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
   const copy = pageCopy[locale].contact;
   return (
     <>

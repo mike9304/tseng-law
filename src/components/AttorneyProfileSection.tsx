@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { teamContent, type TeamMember } from '@/data/team-members';
 
@@ -33,11 +33,21 @@ const labels = {
     consult: 'Book consultation',
     representative: 'Managing Attorney',
     teamTitle: 'Lawyers & Staff',
-    partnerTitle: 'Partner CPA'
+    partnerTitle: 'Partner CPA',
+  },
+  ja: {
+    intro: '紹介',
+    education: '学歴',
+    experience: '経歴',
+    fullProfile: '詳細プロフィール',
+    consult: '相談を申し込む',
+    representative: '代表弁護士',
+    teamTitle: '所属弁護士・スタッフ',
+    partnerTitle: '提携会計士',
   },
 } as const;
 
-function MemberCard({ member, locale, size }: { member: TeamMember; locale: Locale; size: 'large' | 'small' }) {
+function MemberCard({ member, locale, size }: { member: TeamMember; locale: SiteLocale; size: 'large' | 'small' }) {
   const l = labels[locale];
   const isLarge = size === 'large';
   const profileHref = member.profileSlug ? getAttorneyProfilePath(locale, member.profileSlug) : null;
@@ -112,7 +122,7 @@ export default function AttorneyProfileSection({
   locale,
   showIntro = true,
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   showIntro?: boolean;
 }) {
   const team = teamContent[locale];

@@ -173,7 +173,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // Japanese public columns surface (file-backed columns-ja only).
+  // Japanese public About and columns surfaces.
+  pages.push(
+    createEntry('ja', '/about', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
   pages.push(
     createEntry('ja', '/columns', {
       priority: 0.8,

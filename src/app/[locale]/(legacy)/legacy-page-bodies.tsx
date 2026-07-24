@@ -44,7 +44,7 @@ function toColumnGridFilters(searchParams?: ColumnsSearchParams): ColumnsGridFil
   };
 }
 
-export function AboutLegacyPageBody({ locale }: { locale: Locale }) {
+export function AboutLegacyPageBody({ locale }: { locale: SiteLocale }) {
   const copy = pageCopy[locale].about;
   return (
     <>

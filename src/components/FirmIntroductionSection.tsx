@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import SectionLabel from '@/components/SectionLabel';
 import { firmIntroductionContent } from '@/data/firm-introduction';
 
-export default function FirmIntroductionSection({ locale }: { locale: Locale }) {
+export default function FirmIntroductionSection({ locale }: { locale: SiteLocale }) {
   const content = firmIntroductionContent[locale];
 
   return (

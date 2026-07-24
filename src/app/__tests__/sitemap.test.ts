@@ -101,10 +101,10 @@ describe('sitemap column lastModified', () => {
       afterFiltering: afterFilteringUrls.size,
       removed: beforeFilteringUrls.size - afterFilteringUrls.size,
     }).toEqual({
-      // Base includes EN file-backed columns + JA /columns archive + 17 JA details (+18).
+      // Base includes EN file-backed columns + JA /about, /columns archive, and 17 JA details (+19).
       // Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 147,
-      afterFiltering: 138,
+      beforeFiltering: 148,
+      afterFiltering: 139,
       removed: 9,
     });
 
@@ -127,5 +127,22 @@ describe('sitemap column lastModified', () => {
     );
     expect(englishColumnsListing).toBeDefined();
     expect(englishColumnsListing?.alternates?.languages).toHaveProperty('en');
+  });
+
+  it('publishes Japanese About exactly once with four-language alternates', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const japaneseAboutEntries = entries.filter(
+      (entry) => entry.url === 'https://tseng-law.com/ja/about',
+    );
+
+    expect(japaneseAboutEntries).toHaveLength(1);
+    expect(japaneseAboutEntries[0]?.alternates?.languages).toEqual({
+      ko: 'https://tseng-law.com/ko/about',
+      'zh-Hant': 'https://tseng-law.com/zh-hant/about',
+      en: 'https://tseng-law.com/en/about',
+      ja: 'https://tseng-law.com/ja/about',
+      'x-default': 'https://tseng-law.com/ko/about',
+    });
   });
 });

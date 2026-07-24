@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import { contactPageContent } from '@/data/contact-page-content';
 import SectionLabel from '@/components/SectionLabel';
@@ -10,7 +10,7 @@ export default function ContactBlocks({
   locale,
   showMainHeader = true
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   showMainHeader?: boolean;
 }) {
   const { contact } = siteContent[locale];

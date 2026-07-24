@@ -18,12 +18,12 @@ function asLegacyLocale(locale: SiteLocale) {
 }
 
 export function getLegacyPageMetadata(slugPath: string, locale: SiteLocale): Metadata | null {
-  // Home/FAQ accept SiteLocale for Japanese body selection
+  // Home/About/FAQ accept SiteLocale for Japanese body selection
   switch (slugPath) {
     case '':
       return getHomeLegacyMetadata(locale);
     case 'about':
-      return getAboutLegacyMetadata(asLegacyLocale(locale));
+      return getAboutLegacyMetadata(locale);
     case 'services':
       return getServicesLegacyMetadata(asLegacyLocale(locale));
     case 'contact':
@@ -50,7 +50,7 @@ export async function renderLegacyPage(slugPath: string, locale: SiteLocale) {
     case '':
       return <HomeLegacyPage locale={locale} />;
     case 'about':
-      return <AboutLegacyPage locale={asLegacyLocale(locale)} />;
+      return <AboutLegacyPage locale={locale} />;
     case 'services':
       return <ServicesLegacyPage locale={asLegacyLocale(locale)} />;
     case 'contact':

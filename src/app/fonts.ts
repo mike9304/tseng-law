@@ -47,6 +47,12 @@ const serifTraditionalChinese = Noto_Serif_TC({
 
 export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en' | 'ja';
 
+const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
+const traditionalChineseFontClassName = [
+  sansTraditionalChinese.variable,
+  serifTraditionalChinese.variable,
+].join(' ');
+
 /**
  * CSS-variable class names for the active locale pair.
  * Must be applied where `:root` semantic tokens can resolve (typically `<html>`),
@@ -54,8 +60,18 @@ export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en' | 'ja';
  */
 export function getLocaleFontClassName(language: DocumentLanguage): string {
   if (language === 'zh-Hant') {
-    return [sansTraditionalChinese.variable, serifTraditionalChinese.variable].join(' ');
+    return traditionalChineseFontClassName;
   }
   // ko + en + ja → KR pair (CJK coverage sufficient for JA launch; dedicated JP faces later)
-  return [sansKorean.variable, serifKorean.variable].join(' ');
+  return koreanFontClassName;
+}
+
+export function getManagedLocaleFontClassNames(): string[] {
+  return Array.from(
+    new Set(
+      [koreanFontClassName, traditionalChineseFontClassName].flatMap((className) =>
+        className.split(/\s+/).filter(Boolean),
+      ),
+    ),
+  );
 }

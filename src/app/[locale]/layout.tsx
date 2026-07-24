@@ -4,14 +4,27 @@ import { notFound } from 'next/navigation';
 import { isSiteLocale, type SiteLocale, siteLocales, toBuilderLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import JsonLd from '@/components/JsonLd';
+import DocumentLocaleSync from '@/components/DocumentLocaleSync';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollTopButton from '@/components/ScrollTopButton';
 import QuickContactWidget from '@/components/QuickContactWidget';
 import YearEndEventPopup from '@/components/YearEndEventPopup';
+import {
+  getLocaleFontClassName,
+  getManagedLocaleFontClassNames,
+  type DocumentLanguage,
+} from '@/app/fonts';
 import { buildLegalServiceJsonLd, buildWebsiteJsonLd, getOrganizationName } from '@/lib/seo';
 
 export const dynamicParams = false;
+
+const documentLanguageByLocale: Record<SiteLocale, DocumentLanguage> = {
+  ko: 'ko',
+  'zh-hant': 'zh-Hant',
+  en: 'en',
+  ja: 'ja',
+};
 
 function resolveLocaleOrNotFound(locale: string): SiteLocale {
   if (!isSiteLocale(locale)) {
@@ -47,10 +60,16 @@ export default function LocaleLayout({
   params: { locale: string };
 }) {
   const locale = resolveLocaleOrNotFound(params.locale);
+  const language = documentLanguageByLocale[locale];
   // Hide non-JA product widgets on Japanese public surface (plan: columns+core pages first).
   const hideJaProductChrome = locale === 'ja';
   return (
     <div className="site" data-locale={locale} data-theme="parity">
+      <DocumentLocaleSync
+        language={language}
+        fontClassName={getLocaleFontClassName(language)}
+        managedFontClassNames={getManagedLocaleFontClassNames()}
+      />
       <JsonLd data={buildWebsiteJsonLd(locale)} />
       <JsonLd data={buildLegalServiceJsonLd(locale)} />
       <div data-legacy-chrome>

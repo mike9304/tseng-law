@@ -67,6 +67,13 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(layout).toContain('<html lang={language}');
     expect(layout).toContain("headers().get('x-tseng-pathname')");
     expect(publicLocaleLayout).not.toContain('LocaleSetter');
+    expect(publicLocaleLayout).toContain('<DocumentLocaleSync');
+    expect(publicLocaleLayout).toContain('language={language}');
+    expect(publicLocaleLayout).toContain('fontClassName={getLocaleFontClassName(language)}');
+    expect(publicLocaleLayout).toContain(
+      'managedFontClassNames={getManagedLocaleFontClassNames()}',
+    );
+    expect(publicLocaleLayout).toContain("'zh-hant': 'zh-Hant'");
     expect(builderLocaleLayout).not.toContain('LocaleSetter');
     expect(middleware).toContain("requestHeaders.set('x-tseng-pathname', pathname)");
     expect(notFound).toContain('title: { absolute: `${copy.title} | ${copy.brand}` }');
@@ -92,6 +99,7 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(fonts).toContain('Noto_Serif_KR');
     expect(fonts).toContain('Noto_Serif_TC');
     expect(fonts).toContain('getLocaleFontClassName');
+    expect(fonts).toContain('getManagedLocaleFontClassNames');
     expect(fonts).not.toContain('Cormorant_Garamond');
     expect(fonts).not.toContain('IBM_Plex_Sans_KR');
     expect(fonts).not.toContain('JetBrains_Mono');

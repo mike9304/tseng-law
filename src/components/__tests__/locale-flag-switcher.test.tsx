@@ -61,6 +61,34 @@ describe('LocaleFlagSwitcher', () => {
     expect(renderedLinks('en')[1]).toContain('href="/ja/columns"');
   });
 
+  it('preserves the translated Wei Tseng lawyer detail across all four language flags', () => {
+    navigationState.pathname = '/ja/lawyers/wei-tseng';
+
+    const links = renderedLinks('ja');
+    const expectedHrefs = [
+      '/ko/lawyers/wei-tseng',
+      '/ja/lawyers/wei-tseng',
+      '/zh-hant/lawyers/wei-tseng',
+      '/en/lawyers/wei-tseng',
+    ];
+
+    expect(links).toHaveLength(expectedHrefs.length);
+    expectedHrefs.forEach((href, index) => {
+      expect(links[index]).toContain(`href="${href}"`);
+    });
+    expect(links[0]).not.toContain('aria-current');
+    expect(links[1]).toContain('aria-current="page"');
+    expect(links[2]).not.toContain('aria-current');
+    expect(links[3]).not.toContain('aria-current');
+  });
+
+  it('falls back to the Japanese lawyer list for unsupported lawyer details', () => {
+    navigationState.pathname = '/en/lawyers/unsupported-attorney';
+
+    expect(localeFlagHref(navigationState.pathname, 'ja')).toBe('/ja/lawyers');
+    expect(renderedLinks('en')[1]).toContain('href="/ja/lawyers"');
+  });
+
   it('marks only the active locale as the current page', () => {
     navigationState.pathname = '/ja/columns/taiwan-investment';
     const links = renderedLinks('ja');

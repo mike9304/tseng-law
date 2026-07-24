@@ -50,6 +50,9 @@ export function jaLanguageSwitchTarget(pathWithoutLocale: string): string {
   if (clean === 'columns' || clean.startsWith('columns/')) {
     return `/ja/${clean}`;
   }
+  if (clean === 'lawyers/wei-tseng') {
+    return '/ja/lawyers/wei-tseng';
+  }
   if (isJaFullStaticPath(clean.split('/')[0] === clean ? clean : clean.split('/')[0] || '') && !clean.includes('/')) {
     return clean === '' ? '/ja' : `/ja/${clean}`;
   }

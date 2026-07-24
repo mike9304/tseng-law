@@ -95,14 +95,17 @@ export function LawyersLegacyPageBody({
   locale,
   visibleBlockIds,
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   visibleBlockIds?: string[];
 }) {
   const copy = pageCopy[locale].lawyers;
   const profile = getAttorneyProfile(locale, primaryAttorneySlug);
-  const showHero = isTemplateBlockVisible(visibleBlockIds, 'attorney-profiles.list.hero');
-  const showRepeater = isTemplateBlockVisible(visibleBlockIds, 'attorney-profiles.list.repeater');
-  const showSeo = isTemplateBlockVisible(visibleBlockIds, 'attorney-profiles.list.seo');
+  const showHero = locale === 'ja'
+    || isTemplateBlockVisible(visibleBlockIds, 'attorney-profiles.list.hero');
+  const showRepeater = locale === 'ja'
+    || isTemplateBlockVisible(visibleBlockIds, 'attorney-profiles.list.repeater');
+  const showSeo = locale === 'ja'
+    || isTemplateBlockVisible(visibleBlockIds, 'attorney-profiles.list.seo');
 
   return (
     <>
@@ -110,7 +113,16 @@ export function LawyersLegacyPageBody({
         <>
           <JsonLd
             data={buildBreadcrumbJsonLd(locale, [
-              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+              {
+                name: locale === 'ko'
+                  ? '홈'
+                  : locale === 'zh-hant'
+                    ? '首頁'
+                    : locale === 'ja'
+                      ? 'ホーム'
+                      : 'Home',
+                path: `/${locale}`,
+              },
               { name: copy.title, path: `/${locale}/lawyers` },
             ])}
           />

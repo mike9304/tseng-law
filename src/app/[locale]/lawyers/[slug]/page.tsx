@@ -7,11 +7,25 @@ import PageHeader from '@/components/PageHeader';
 import FAQAccordion from '@/components/FAQAccordion';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import {
+  attorneyProfiles,
+  primaryAttorneySlug,
+  type AttorneyProfile,
+} from '@/data/attorney-profiles';
+import {
   normalizeAttorneyProfileSlug,
   readAttorneyProfileSourceRecordBySlug,
   readAttorneyProfileSourceRecords,
+  type AttorneyProfileSourceRecord,
 } from '@/lib/builder/lawyers/source';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  buildDefaultAttorneyImageAltText,
+  defaultAttorneyImageFocalPoint,
+} from '@/lib/builder/lawyers/source-normalizers';
+import {
+  normalizeSiteLocale,
+  siteLocales,
+  type SiteLocale,
+} from '@/lib/locales';
 import {
   isBuilderDynamicTemplateBlockVisible,
   readBuilderDynamicTemplatePublishedBlockVisibility,
@@ -54,18 +68,62 @@ const sectionLabels = {
     contact: 'Book Consultation',
     searchTerms: 'Common Search Topics',
   },
+  ja: {
+    pageLabel: '弁護士プロフィール',
+    facts: '基本情報',
+    education: '学歴',
+    experience: '経歴',
+    matters: '主な取扱業務・実績',
+    internalLinks: '関連サービス・コンテンツ',
+    externalProfiles: '外部プロフィール・チャンネル',
+    contact: '相談を申し込む',
+    searchTerms: 'よく検索されるテーマ',
+  },
 } as const;
+
+function adaptJapaneseProfile(profile: AttorneyProfile): AttorneyProfileSourceRecord {
+  return {
+    ...profile,
+    sourceSlug: profile.slug,
+    imageAltText: buildDefaultAttorneyImageAltText(profile.name, profile.role),
+    imageFocalPoint: defaultAttorneyImageFocalPoint(),
+  };
+}
+
+function getJapaneseProfileBySlug(slugInput: string): AttorneyProfileSourceRecord | null {
+  const slug = normalizeAttorneyProfileSlug(slugInput);
+  if (slug !== primaryAttorneySlug) {
+    return null;
+  }
+  return adaptJapaneseProfile(attorneyProfiles.ja[primaryAttorneySlug]);
+}
+
+async function getProfile(locale: SiteLocale, slug: string): Promise<AttorneyProfileSourceRecord | null> {
+  if (locale === 'ja') {
+    return getJapaneseProfileBySlug(slug);
+  }
+  return readAttorneyProfileSourceRecordBySlug(DEFAULT_BUILDER_SITE_ID, locale, slug);
+}
 
 export async function generateStaticParams() {
   const slugs = (await readAttorneyProfileSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko')).map(
     (profile) => profile.slug,
   );
-  return ['ko', 'zh-hant', 'en'].flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+  return [
+    ...(['ko', 'zh-hant', 'en'] as const).flatMap((locale) =>
+      slugs.map((slug) => ({ locale, slug })),
+    ),
+    { locale: 'ja', slug: primaryAttorneySlug },
+  ];
 }
 
-export async function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Promise<Metadata> {
-  const locale = normalizeLocale(params.locale);
-  const profile = await readAttorneyProfileSourceRecordBySlug(DEFAULT_BUILDER_SITE_ID, locale, params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: SiteLocale; slug: string };
+}): Promise<Metadata> {
+  const locale = normalizeSiteLocale(params.locale);
+  const profile = await getProfile(locale, params.slug);
 
   if (!profile) {
     return {};
@@ -79,12 +137,17 @@ export async function generateMetadata({ params }: { params: { locale: Locale; s
     keywords: profile.keywords,
     images: profile.image,
     type: 'website',
+    ...(locale === 'ja' ? { alternateLocales: siteLocales } : {}),
   });
 }
 
-export default async function LawyerProfilePage({ params }: { params: { locale: Locale; slug: string } }) {
-  const locale = normalizeLocale(params.locale);
-  const profile = await readAttorneyProfileSourceRecordBySlug(DEFAULT_BUILDER_SITE_ID, locale, params.slug);
+export default async function LawyerProfilePage({
+  params,
+}: {
+  params: { locale: SiteLocale; slug: string };
+}) {
+  const locale = normalizeSiteLocale(params.locale);
+  const profile = await getProfile(locale, params.slug);
   const labels = sectionLabels[locale];
 
   if (!profile) {
@@ -96,16 +159,25 @@ export default async function LawyerProfilePage({ params }: { params: { locale: 
   }
 
   const profilePath = `/${locale}/lawyers/${profile.slug}`;
-  const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
-    'attorney-profiles.item-template',
-    locale
-  );
-  const showHero = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'attorney-profiles.item.hero');
-  const showBody = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'attorney-profiles.item.body');
-  const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'attorney-profiles.item.seo');
+  const templateVisibility = locale === 'ja'
+    ? null
+    : await readBuilderDynamicTemplatePublishedBlockVisibility(
+        'attorney-profiles.item-template',
+        locale
+      );
+  const showHero = templateVisibility
+    ? isBuilderDynamicTemplateBlockVisible(templateVisibility, 'attorney-profiles.item.hero')
+    : true;
+  const showBody = templateVisibility
+    ? isBuilderDynamicTemplateBlockVisible(templateVisibility, 'attorney-profiles.item.body')
+    : true;
+  const showSeo = templateVisibility
+    ? isBuilderDynamicTemplateBlockVisible(templateVisibility, 'attorney-profiles.item.seo')
+    : true;
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    inLanguage: locale,
     mainEntity: profile.faq.map((item) => ({
       '@type': 'Question',
       name: item.question,
@@ -122,8 +194,26 @@ export default async function LawyerProfilePage({ params }: { params: { locale: 
         <>
           <JsonLd
             data={buildBreadcrumbJsonLd(locale, [
-              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
-              { name: locale === 'ko' ? '변호사소개' : locale === 'zh-hant' ? '律師團隊' : 'Lawyers', path: `/${locale}/lawyers` },
+              {
+                name: locale === 'ko'
+                  ? '홈'
+                  : locale === 'zh-hant'
+                    ? '首頁'
+                    : locale === 'ja'
+                      ? 'ホーム'
+                      : 'Home',
+                path: `/${locale}`,
+              },
+              {
+                name: locale === 'ko'
+                  ? '변호사소개'
+                  : locale === 'zh-hant'
+                    ? '律師團隊'
+                    : locale === 'ja'
+                      ? '弁護士紹介'
+                      : 'Lawyers',
+                path: `/${locale}/lawyers`,
+              },
               { name: profile.name, path: profilePath },
             ])}
           />

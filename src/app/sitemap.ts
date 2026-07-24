@@ -173,7 +173,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // Japanese public About, services-list, and columns surfaces.
+  // Japanese public static and file-backed surfaces.
   pages.push(
     createEntry('ja', '/about', {
       priority: 0.8,
@@ -183,6 +183,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   pages.push(
     createEntry('ja', '/services', {
       priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/lawyers', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', `/lawyers/${primaryAttorneySlug}`, {
+      priority: 0.86,
       alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
     }),
   );

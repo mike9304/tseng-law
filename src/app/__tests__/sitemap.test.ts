@@ -101,11 +101,11 @@ describe('sitemap column lastModified', () => {
       afterFiltering: afterFilteringUrls.size,
       removed: beforeFilteringUrls.size - afterFilteringUrls.size,
     }).toEqual({
-      // Base includes EN file-backed columns + JA /about, /services, /columns archive,
-      // and 17 JA details (+20).
+      // Base includes EN file-backed columns + JA /about, /services, /lawyers,
+      // /lawyers/wei-tseng, /columns archive, and 17 JA column details (+22).
       // Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 149,
-      afterFiltering: 140,
+      beforeFiltering: 151,
+      afterFiltering: 142,
       removed: 9,
     });
 
@@ -161,6 +161,26 @@ describe('sitemap column lastModified', () => {
       en: 'https://tseng-law.com/en/services',
       ja: 'https://tseng-law.com/ja/services',
       'x-default': 'https://tseng-law.com/ko/services',
+    });
+  });
+
+  it.each([
+    '/lawyers',
+    '/lawyers/wei-tseng',
+  ])('publishes Japanese %s exactly once with four-language alternates', async (path) => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const japaneseEntries = entries.filter(
+      (entry) => entry.url === `https://tseng-law.com/ja${path}`,
+    );
+
+    expect(japaneseEntries).toHaveLength(1);
+    expect(japaneseEntries[0]?.alternates?.languages).toEqual({
+      ko: `https://tseng-law.com/ko${path}`,
+      'zh-Hant': `https://tseng-law.com/zh-hant${path}`,
+      en: `https://tseng-law.com/en${path}`,
+      ja: `https://tseng-law.com/ja${path}`,
+      'x-default': `https://tseng-law.com/ko${path}`,
     });
   });
 });

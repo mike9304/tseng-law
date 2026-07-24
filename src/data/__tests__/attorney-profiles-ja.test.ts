@@ -84,11 +84,25 @@ describe('Japanese attorney profile', () => {
   });
 
   it('uses Japanese-localized internal links only', () => {
-    expect(japaneseProfile.internalLinks).toHaveLength(6);
+    expect(japaneseProfile.internalLinks).toEqual([
+      { label: '台湾弁護士・チーム紹介', href: '/ja/lawyers' },
+      {
+        label: '台湾会社設立ガイド',
+        href: '/ja/columns/taiwan-company-establishment-basics',
+      },
+      { label: '台湾会社設立サービス', href: '/ja/services#investment' },
+      { label: '民事訴訟・損害賠償サービス', href: '/ja/services#civil' },
+      {
+        label: 'ジム負傷訴訟コラム',
+        href: '/ja/columns/taiwan-gym-injury-lawsuit',
+      },
+      { label: 'お問い合わせ・ご相談', href: '/ja/contact' },
+    ]);
 
-    for (const link of japaneseProfile.internalLinks) {
-      expect(link.href).toMatch(/^\/ja\//);
-    }
+    const internalLinkJson = JSON.stringify(japaneseProfile.internalLinks);
+    expect(internalLinkJson).not.toContain('/ja/taiwan-lawyer');
+    expect(internalLinkJson).not.toContain('/ja/taiwan-company-setup-lawyer');
+    expect(internalLinkJson).not.toMatch(/\/ja\/services\/[^"]+/);
   });
 
   it('does not leak Korean sentences or Korean internal links into visible Japanese copy', () => {
@@ -104,7 +118,27 @@ describe('Japanese attorney profile', () => {
     expect(getAttorneyProfilePath('ja')).toBe('/ja/lawyers/wei-tseng');
   });
 
-  it.each(['ko', 'zh-hant', 'en'] as const)('keeps the %s profile resolvable', (locale) => {
-    expect(getAttorneyProfile(locale, 'wei-tseng')).toBe(attorneyProfiles[locale]['wei-tseng']);
-  });
+  it.each(['ko', 'zh-hant', 'en', 'ja'] as const)(
+    'preserves the official identity sources and facts for the %s profile',
+    (locale) => {
+      const profile = attorneyProfiles[locale]['wei-tseng'];
+
+      expect(getAttorneyProfile(locale, 'wei-tseng')).toBe(profile);
+      expect(profile.email).toBe('wei@hoveringlaw.com.tw');
+      expect(profile.image).toBe('/images/team/wei-tseng-official.png');
+      expect(profile.sameAs).toEqual([
+        'https://www.hoveringlaw.com.tw/en/wei.html',
+        'https://www.hoveringlaw.com.tw/zh/wei.html',
+        'https://www.hoveringlaw.com.tw/kr/wei.html',
+        'https://www.wei-wei-lawyer.com/',
+        'https://www.wei-wei-lawyer.com/lawyertseng',
+        'https://www.youtube.com/@weilawyer',
+        'https://blog.naver.com/wei_lawyer/223461663913',
+        'https://www.threads.com/@lawyer.wei',
+      ]);
+      expect(JSON.stringify(profile)).toContain(
+        locale === 'en' ? 'TWD 1.57M' : '157',
+      );
+    },
+  );
 });

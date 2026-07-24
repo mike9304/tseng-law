@@ -36,7 +36,7 @@ describe('Japanese attorney profile', () => {
   });
 
   it('preserves the required identity, credentials, experience, and representative matter', () => {
-    expect(japaneseProfile.name).toBe('曾俊瑋弁護士');
+    expect(japaneseProfile.name).toBe('曾雋崴弁護士');
     expect(japaneseProfile.role).toBe('台湾弁護士・代表弁護士');
 
     const profileText = JSON.stringify(japaneseProfile);

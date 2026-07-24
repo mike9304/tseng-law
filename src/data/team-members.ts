@@ -38,8 +38,8 @@ export const teamContent: Record<Locale, TeamContent> = {
         name: '증준외',
         role: '대표 변호사',
         email: 'wei@hoveringlaw.com.tw',
-        photo: '/images/team/tseng-junwei.png',
-        sourceUrl: 'https://www.wei-wei-lawyer.com/about-8',
+        photo: '/images/team/wei-tseng-official.png',
+        sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
           '기업·개인 사건을 폭넓게 수행하며, 한국어·일본어 상담이 가능합니다.',
           '한국 유학생 헬스장 손해배상 사건에서 157만 대만달러 배상 판결을 이끈 사례가 있습니다.',
@@ -121,11 +121,11 @@ export const teamContent: Record<Locale, TeamContent> = {
       {
         id: 'tseng-junwei',
         profileSlug: 'wei-tseng',
-        name: '曾俊瑋',
+        name: '曾雋崴',
         role: '代表律師',
         email: 'wei@hoveringlaw.com.tw',
-        photo: '/images/team/tseng-junwei.png',
-        sourceUrl: 'https://www.wei-wei-lawyer.com/about-8',
+        photo: '/images/team/wei-tseng-official.png',
+        sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
           '專精企業與個人案件，提供韓文與日文法律溝通。',
           '曾代理韓國留學生健身傷害求償案，獲判新台幣 157 萬元。',
@@ -210,8 +210,8 @@ export const teamContent: Record<Locale, TeamContent> = {
         name: 'Wei Tseng',
         role: 'Managing Attorney',
         email: 'wei@hoveringlaw.com.tw',
-        photo: '/images/team/tseng-junwei.png',
-        sourceUrl: 'https://www.wei-wei-lawyer.com/about-8',
+        photo: '/images/team/wei-tseng-official.png',
+        sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
           'Handles a wide range of corporate and individual matters with Korean and Japanese consultation support.',
           'Represented a Korean student in a gym injury case and obtained a TWD 1.57M damages ruling.'
@@ -282,4 +282,3 @@ export const teamContent: Record<Locale, TeamContent> = {
     ]
   },
 };
-

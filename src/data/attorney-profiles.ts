@@ -38,7 +38,7 @@ const commonSameAs = [
   'https://www.hoveringlaw.com.tw/zh/wei.html',
   'https://www.hoveringlaw.com.tw/kr/wei.html',
   'https://www.wei-wei-lawyer.com/',
-  'https://www.wei-wei-lawyer.com/about-8',
+  'https://www.wei-wei-lawyer.com/lawyertseng',
   'https://www.youtube.com/@weilawyer',
   'https://blog.naver.com/wei_lawyer/223461663913',
   'https://www.threads.com/@lawyer.wei',
@@ -49,13 +49,13 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
     'wei-tseng': {
       slug: 'wei-tseng',
       name: '증준외 변호사',
-      alternateNames: ['증준외', '曾俊瑋', 'Wei Tseng', 'Attorney Wei Tseng'],
+      alternateNames: ['증준외', '曾雋崴', 'Wei Tseng', 'Attorney Wei Tseng'],
       role: '대만 변호사 · 대표 변호사',
       title: '증준외 대만변호사 프로필',
       description:
         '한국 고객의 대만 회사설립, 투자, 소송, 비자, 상표·특허, 법률자문을 지원하는 증준외 대만변호사의 경력과 대표 사례를 정리한 프로필 페이지입니다.',
       email: 'wei@hoveringlaw.com.tw',
-      image: '/images/team/tseng-junwei.png',
+      image: '/images/team/wei-tseng-official.png',
       summary: [
         '증준외 변호사는 한국·일본 고객의 대만 투자, 회사설립, 소송, 지식재산, 비자 및 리스크 검토 업무를 수행합니다.',
         '한국어·중국어·일본어 커뮤니케이션을 바탕으로 초기 상담부터 실행 및 분쟁 대응까지 한 흐름으로 지원합니다.',
@@ -84,7 +84,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       externalProfiles: [
         { label: '법무법인 호정 프로필', href: 'https://www.hoveringlaw.com.tw/kr/wei.html' },
-        { label: '개인 프로필 사이트', href: 'https://www.wei-wei-lawyer.com/about-8' },
+        { label: '개인 프로필 사이트', href: 'https://www.wei-wei-lawyer.com/lawyertseng' },
         { label: 'WEI Lawyer YouTube', href: 'https://www.youtube.com/@weilawyer' },
         { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
       ],
@@ -119,16 +119,16 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
   'zh-hant': {
     'wei-tseng': {
       slug: 'wei-tseng',
-      name: '曾俊瑋律師',
-      alternateNames: ['曾俊瑋', '증준외', 'Wei Tseng', 'Attorney Wei Tseng'],
+      name: '曾雋崴律師',
+      alternateNames: ['曾雋崴', '증준외', 'Wei Tseng', 'Attorney Wei Tseng'],
       role: '台灣律師 · 代表律師',
-      title: '曾俊瑋台灣律師簡介',
+      title: '曾雋崴台灣律師簡介',
       description:
-        '整理曾俊瑋台灣律師的學經歷、主要服務領域與代表案件，聚焦韓國客戶在台公司設立、投資、訴訟、簽證與智慧財產等法律需求。',
+        '整理曾雋崴台灣律師的學經歷、主要服務領域與代表案件，聚焦韓國客戶在台公司設立、投資、訴訟、簽證與智慧財產等法律需求。',
       email: 'wei@hoveringlaw.com.tw',
-      image: '/images/team/tseng-junwei.png',
+      image: '/images/team/wei-tseng-official.png',
       summary: [
-        '曾俊瑋律師長期協助韓國、日本客戶處理在台投資、公司設立、訴訟、智慧財產、簽證與法律風險評估。',
+        '曾雋崴律師長期協助韓國、日本客戶處理在台投資、公司設立、訴訟、智慧財產、簽證與法律風險評估。',
         '可提供韓文、中文、日文溝通，將諮詢、申請與爭議處理整合為同一策略流程。',
         '曾代理韓國留學生健身房受傷損害賠償案件，取得 157 萬 TWD 一審判決，並持續透過 WEI Lawyer 與外部媒體說明台灣法律議題。',
       ],
@@ -155,13 +155,13 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       externalProfiles: [
         { label: '昊鼎官方律師頁面', href: 'https://www.hoveringlaw.com.tw/zh/wei.html' },
-        { label: '個人網站簡介', href: 'https://www.wei-wei-lawyer.com/about-8' },
+        { label: '個人網站簡介', href: 'https://www.wei-wei-lawyer.com/lawyertseng' },
         { label: 'WEI Lawyer YouTube', href: 'https://www.youtube.com/@weilawyer' },
         { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
       ],
       sameAs: commonSameAs,
-      keywords: ['曾俊瑋 律師', '曾俊瑋台灣律師', '台灣律師', '韓文 台灣律師', '台灣公司設立 律師', '台灣訴訟 律師'],
-      searchTerms: ['曾俊瑋台灣律師', '曾俊瑋 律師', '韓文 台灣律師', '台灣公司設立 律師 曾俊瑋'],
+      keywords: ['曾雋崴 律師', '曾雋崴台灣律師', '台灣律師', '韓文 台灣律師', '台灣公司設立 律師', '台灣訴訟 律師'],
+      searchTerms: ['曾雋崴台灣律師', '曾雋崴 律師', '韓文 台灣律師', '台灣公司設立 律師 曾雋崴'],
       proofPoints: [
         '可用韓文、中文、日文直接對接韓國客戶與台灣在地程序。',
         '處理台灣公司設立、投資、訴訟、簽證與智慧財產等跨境法律需求。',
@@ -170,17 +170,17 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       faq: [
         {
-          question: '曾俊瑋律師主要處理哪些案件？',
+          question: '曾雋崴律師主要處理哪些案件？',
           answer:
             '以韓國客戶常見的台灣公司設立、投資法律顧問、民事訴訟與損害賠償、商標專利、簽證居留、家事與勞動爭議為核心。',
         },
         {
-          question: '可以用韓文與曾俊瑋律師諮詢嗎？',
+          question: '可以用韓文與曾雋崴律師諮詢嗎？',
           answer:
-            '可以。曾俊瑋律師可用韓文、中文、日文協助整理事實、文件與程序安排，讓韓國客戶更容易理解台灣法律流程。',
+            '可以。曾雋崴律師可用韓文、中文、日文協助整理事實、文件與程序安排，讓韓國客戶更容易理解台灣法律流程。',
         },
         {
-          question: '如何開始與曾俊瑋律師的諮詢？',
+          question: '如何開始與曾雋崴律師的諮詢？',
           answer:
             '可先透過聯絡頁面提供案件背景與文件，我們會依公司設立、投資、訴訟等不同需求安排初步檢視與後續流程。',
         },
@@ -191,16 +191,16 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
     'wei-tseng': {
       slug: 'wei-tseng',
       name: 'Attorney Wei Tseng',
-      alternateNames: ['Wei Tseng', '증준외', '曾俊瑋'],
+      alternateNames: ['Wei Tseng', '증준외', '曾雋崴'],
       role: 'Taiwan Attorney · Managing Attorney',
       title: 'Wei Tseng Taiwan Attorney Profile',
       description:
         'A dedicated profile for Wei Tseng, a Taiwan attorney focusing on company setup, investment, litigation, visa, and IP support for Korean and international clients.',
       email: 'wei@hoveringlaw.com.tw',
-      image: '/images/team/tseng-junwei.png',
+      image: '/images/team/wei-tseng-official.png',
       summary: [
         'Attorney Wei Tseng advises Korean and Japanese clients on Taiwan company setup, investment, litigation, intellectual property, visas, and legal risk review.',
-        'He works across Korean, Chinese, and Japanese communication to connect initial consultation, filings, execution, and dispute response into one strategy.',
+        'She works across Korean, Chinese, and Japanese communication to connect initial consultation, filings, execution, and dispute response into one strategy.',
         'Representative work includes a TWD 1.57M first-instance damages ruling in a Korean student gym injury case, alongside continuous legal publishing through WEI Lawyer and external media appearances.',
       ],
       languages: ['Korean', 'Chinese', 'Japanese'],
@@ -226,7 +226,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       externalProfiles: [
         { label: 'Hovering official profile', href: 'https://www.hoveringlaw.com.tw/en/wei.html' },
-        { label: 'Personal profile website', href: 'https://www.wei-wei-lawyer.com/about-8' },
+        { label: 'Personal profile website', href: 'https://www.wei-wei-lawyer.com/lawyertseng' },
         { label: 'WEI Lawyer YouTube', href: 'https://www.youtube.com/@weilawyer' },
         { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
       ],
@@ -235,15 +235,15 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       searchTerms: ['Wei Tseng Taiwan attorney', 'Attorney Wei Tseng', 'Taiwan lawyer for Korean clients', 'Wei Tseng company setup lawyer'],
       proofPoints: [
         'Wei Tseng works across Korean, Chinese, and Japanese communication for cross-border client matters.',
-        'His practice covers Taiwan company setup, investment, litigation, visas, and trademark or patent filings.',
+        'Her practice covers Taiwan company setup, investment, litigation, visas, and trademark or patent filings.',
         'A public representative case includes a TWD 1.57M first-instance damages ruling in a Korean student gym injury dispute.',
-        'His identity is corroborated across the Hovering profile, personal site, YouTube channel, and Naver Blog.',
+        'Her identity is corroborated across the Hovering profile, personal site, YouTube channel, and Naver Blog.',
       ],
       faq: [
         {
           question: 'What matters does Attorney Wei Tseng typically handle?',
           answer:
-            'He focuses on Taiwan company setup, investment legal advisory, civil litigation and damages, trademarks and patents, visas and residency, and cross-border family or labor disputes for Korean and international clients.',
+            'She focuses on Taiwan company setup, investment legal advisory, civil litigation and damages, trademarks and patents, visas and residency, and cross-border family or labor disputes for Korean and international clients.',
         },
         {
           question: 'Can Korean-speaking clients consult directly with Attorney Wei Tseng?',
@@ -261,16 +261,16 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
   ja: {
     'wei-tseng': {
       slug: 'wei-tseng',
-      name: '曾俊瑋弁護士',
-      alternateNames: ['曾俊瑋', '증준외', 'Wei Tseng', 'Attorney Wei Tseng'],
+      name: '曾雋崴弁護士',
+      alternateNames: ['曾雋崴', '증준외', 'Wei Tseng', 'Attorney Wei Tseng'],
       role: '台湾弁護士・代表弁護士',
-      title: '曾俊瑋台湾弁護士プロフィール',
+      title: '曾雋崴台湾弁護士プロフィール',
       description:
-        '韓国のクライアントによる台湾での会社設立、投資、訴訟、ビザ、商標・特許、法律顧問業務を支援する曾俊瑋台湾弁護士の経歴と代表事例をまとめたプロフィールです。',
+        '韓国のクライアントによる台湾での会社設立、投資、訴訟、ビザ、商標・特許、法律顧問業務を支援する曾雋崴台湾弁護士の経歴と代表事例をまとめたプロフィールです。',
       email: 'wei@hoveringlaw.com.tw',
-      image: '/images/team/tseng-junwei.png',
+      image: '/images/team/wei-tseng-official.png',
       summary: [
-        '曾俊瑋弁護士は、韓国・日本のクライアントによる台湾での投資、会社設立、訴訟、知的財産、ビザおよび法的リスクの検討を支援しています。',
+        '曾雋崴弁護士は、韓国・日本のクライアントによる台湾での投資、会社設立、訴訟、知的財産、ビザおよび法的リスクの検討を支援しています。',
         '韓国語・中国語・日本語でのコミュニケーションを通じて、初回相談から各種手続の遂行、紛争対応まで一貫してサポートします。',
         '韓国人留学生のジム負傷損害賠償事件で157万TWDの損害賠償を認める一審判決を獲得した代表事例があり、WEI Lawyerチャンネルや外部メディアを通じて台湾法を解説しています。',
       ],
@@ -297,13 +297,13 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       externalProfiles: [
         { label: '昊鼎公式弁護士プロフィール', href: 'https://www.hoveringlaw.com.tw/zh/wei.html' },
-        { label: '個人プロフィールサイト', href: 'https://www.wei-wei-lawyer.com/about-8' },
+        { label: '個人プロフィールサイト', href: 'https://www.wei-wei-lawyer.com/lawyertseng' },
         { label: 'WEI Lawyer YouTube', href: 'https://www.youtube.com/@weilawyer' },
         { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
       ],
       sameAs: commonSameAs,
-      keywords: ['曾俊瑋弁護士', '曾俊瑋台湾弁護士', '台湾弁護士', '韓国語対応の台湾弁護士', '台湾会社設立弁護士', '台湾訴訟弁護士'],
-      searchTerms: ['曾俊瑋台湾弁護士', '曾俊瑋弁護士', '韓国語対応の台湾弁護士', '台湾会社設立弁護士 曾俊瑋'],
+      keywords: ['曾雋崴弁護士', '曾雋崴台湾弁護士', '台湾弁護士', '韓国語対応の台湾弁護士', '台湾会社設立弁護士', '台湾訴訟弁護士'],
+      searchTerms: ['曾雋崴台湾弁護士', '曾雋崴弁護士', '韓国語対応の台湾弁護士', '台湾会社設立弁護士 曾雋崴'],
       proofPoints: [
         '韓国語・中国語・日本語で相談できる台湾弁護士として、韓国のクライアントと直接コミュニケーションを行います。',
         '台湾での会社設立、投資、ビザ、訴訟、商標・特許まで、韓国のクライアントに必要な手続の流れを一緒に設計します。',
@@ -312,17 +312,17 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       faq: [
         {
-          question: '曾俊瑋弁護士は主にどのような案件を扱っていますか？',
+          question: '曾雋崴弁護士は主にどのような案件を扱っていますか？',
           answer:
             '台湾での会社設立、台湾投資に関する法務顧問、民事訴訟・損害賠償、商標・特許、ビザ・在留、家事・労働紛争など、韓国のクライアントから相談の多い台湾法の問題を中心に対応しています。',
         },
         {
-          question: '曾俊瑋弁護士に韓国語で相談できますか？',
+          question: '曾雋崴弁護士に韓国語で相談できますか？',
           answer:
             'はい。韓国語、中国語、日本語で事実関係や書類、手続の流れを整理できるため、韓国のクライアントにも台湾の手続を分かりやすくご案内できます。',
         },
         {
-          question: '曾俊瑋弁護士への相談はどのように始めればよいですか？',
+          question: '曾雋崴弁護士への相談はどのように始めればよいですか？',
           answer:
             'お問い合わせページから案件の概要と関連資料をお送りください。会社設立、投資、訴訟など案件の種類に応じて、初期検討の流れと必要な準備資料をご案内します。',
         },

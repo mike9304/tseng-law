@@ -399,15 +399,23 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     stats: {
       label: 'ABOUT',
-      title: '복잡한 대만 법률을 명확하게 안내합니다',
+      title: '공식 프로필로 확인하는 국제 업무 기반',
       description:
-        "'호'(昊)는 광대한 하늘을, '정'(鼎)은 안정된 기초를 뜻합니다. 한국어·일본어 소통을 바탕으로 투자, 법인설립, 소송까지 원스톱으로 지원합니다.",
-      highlightWords: ['한국어', '일본어', '투자', '법인설립', '소송', '원스톱'],
+        '대만 4개 사무소와 중국어·한국어·일본어 실무 대응, 7개 주요 업무 분야, TOPIK 6급·JLPT N1 자격을 기준으로 정리했습니다.',
+      highlightWords: [
+        '대만 4개 사무소',
+        '중국어',
+        '한국어',
+        '일본어',
+        '7개 주요 업무 분야',
+        'TOPIK 6급',
+        'JLPT N1'
+      ],
       items: [
-        { target: 10, suffix: '+', label: '년 경력' },
-        { target: 500, suffix: '+', label: '처리 사건' },
-        { target: 5, label: '사무소' },
-        { target: 4, label: '개국어 지원' }
+        { target: 4, label: '대만 사무소' },
+        { target: 3, label: '실무 대응 언어' },
+        { target: 7, label: '주요 업무 분야' },
+        { target: 2, label: '최상위급 어학 자격' }
       ]
     },
     majorNews: {
@@ -1120,15 +1128,23 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     stats: {
       label: 'ABOUT',
-      title: '以清晰方式處理複雜的台灣法律',
+      title: '從官方資料看跨境服務基礎',
       description:
-        "「昊」代表廣闊視野，「鼎」代表穩健基礎。憑藉在韓國、日本市場的實務經驗與跨境法律網絡，從投資、公司設立到訴訟提供一站式法律支援。",
-      highlightWords: ['韓語', '日語', '投資', '公司設立', '訴訟', '一站式'],
+        '依官方律師簡介整理：4個台灣辦公據點、中文／韓文／日文3種業務溝通語言、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
+      highlightWords: [
+        '4個台灣辦公據點',
+        '中文',
+        '韓文',
+        '日文',
+        '7項主要執業領域',
+        'TOPIK 6級',
+        'JLPT N1'
+      ],
       items: [
-        { target: 10, suffix: '+', label: '年經驗' },
-        { target: 500, suffix: '+', label: '處理案件' },
-        { target: 5, label: '辦公據點' },
-        { target: 4, label: '語言服務' }
+        { target: 4, label: '台灣辦公據點' },
+        { target: 3, label: '業務溝通語言' },
+        { target: 7, label: '主要執業領域' },
+        { target: 2, label: '最高級別語言資格' }
       ]
     },
     majorNews: {
@@ -1858,15 +1874,24 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     stats: {
       ...base.stats,
       label: 'ABOUT',
-      title: 'A Clear Approach to Taiwan Legal Complexity',
+      title: 'Cross-Border Practice at a Glance',
       description:
-        "The name 'Hovering' reflects both broad vision and stable foundations. We deliver one-stop support from investment and incorporation to litigation.",
-      highlightWords: ['Investment', 'Incorporation', 'Litigation', 'One-stop'],
+        'Based on the official attorney profile: four Taiwan offices, three working languages—Chinese, Korean, and Japanese—seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1.',
+      highlightWords: [
+        'four Taiwan offices',
+        'three working languages',
+        'Chinese',
+        'Korean',
+        'Japanese',
+        'seven principal practice areas',
+        'TOPIK Level 6',
+        'JLPT N1'
+      ],
       items: [
-        { target: 10, suffix: '+', label: 'Years of Experience' },
-        { target: 500, suffix: '+', label: 'Matters Handled' },
-        { target: 5, label: 'Office Locations' },
-        { target: 4, label: 'Languages Supported' }
+        { target: 4, label: 'Taiwan Offices' },
+        { target: 3, label: 'Working Languages' },
+        { target: 7, label: 'Principal Practice Areas' },
+        { target: 2, label: 'Top-Level Language Qualifications' }
       ]
     },
     majorNews: {
@@ -2597,15 +2622,23 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
     stats: {
       ...base.stats,
       label: 'ABOUT',
-      title: '台湾法の複雑さを、明確に整理する',
+      title: '公式プロフィールで見る国際業務の基盤',
       description:
-        '「昊鼎」という名称は、広い視野と安定した基盤を表します。投資・会社設立から訴訟まで、ワンストップで支援します。',
-      highlightWords: ['投資', '会社設立', '訴訟', 'ワンストップ'],
+        '公式弁護士プロフィールに基づき、台湾4拠点、中国語・韓国語・日本語の3言語、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。',
+      highlightWords: [
+        '台湾4拠点',
+        '中国語',
+        '韓国語',
+        '日本語',
+        '7つの主要取扱分野',
+        'TOPIK 6級',
+        'JLPT N1'
+      ],
       items: [
-        { target: 10, suffix: '+', label: '年の実務経験' },
-        { target: 500, suffix: '+', label: '取扱案件' },
-        { target: 5, label: 'オフィス拠点' },
-        { target: 4, label: '対応言語' }
+        { target: 4, label: '台湾の事務所' },
+        { target: 3, label: '業務対応言語' },
+        { target: 7, label: '主要取扱分野' },
+        { target: 2, label: '最上位級の語学資格' }
       ]
     },
     majorNews: {

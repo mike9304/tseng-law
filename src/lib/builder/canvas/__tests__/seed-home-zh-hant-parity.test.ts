@@ -39,7 +39,7 @@ describe('zh-hant decomposed home parity nodes', () => {
     const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
 
     expect(textNodeText(nodesById.get('home-stats-label'))).toBe('ABOUT');
-    expect(textNodeText(nodesById.get('home-stats-title'))).toBe('以清晰方式處理複雜的台灣法律');
+    expect(textNodeText(nodesById.get('home-stats-title'))).toBe('從官方資料看跨境服務基礎');
     expect(nodesById.get('home-stats-container')?.rect).toMatchObject({ x: 51, width: 1178 });
     expect(nodesById.get('home-stats-title')?.rect).toMatchObject({ width: 1178, height: 54 });
     expect(nodesById.get('home-stats-description')?.rect).toMatchObject({ y: 201, width: 720, height: 72 });
@@ -52,10 +52,10 @@ describe('zh-hant decomposed home parity nodes', () => {
       progressBarKind: nodesById.get(`home-stats-progress-bar-${index}`)?.kind,
       progressBarText: textNodeText(nodesById.get(`home-stats-progress-bar-${index}`)),
     }))).toEqual([
-      { number: '10+', label: '年經驗', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
-      { number: '500+', label: '處理案件', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
-      { number: '5', label: '辦公據點', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
-      { number: '4', label: '語言服務', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
+      { number: '4', label: '台灣辦公據點', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
+      { number: '3', label: '業務溝通語言', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
+      { number: '7', label: '主要執業領域', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
+      { number: '2', label: '最高級別語言資格', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
     ]);
 
     expect([0, 1, 2].map((index) => nodeContentLabel(nodesById.get(`home-offices-tab-${index}`)))).toEqual([

@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
 export type TeamMember = {
   id: string;
@@ -21,7 +21,7 @@ export type TeamContent = {
   members: TeamMember[];
 };
 
-export const teamContent: Record<Locale, TeamContent> = {
+export const teamContent: Record<SiteLocale, TeamContent> = {
   ko: {
     label: 'OUR TEAM',
     title: '호정 한국·대만 업무팀',
@@ -280,5 +280,91 @@ export const teamContent: Record<Locale, TeamContent> = {
         experience: ['Chinshin CPA Firm']
       }
     ]
+  },
+  ja: {
+    label: 'チーム紹介',
+    title: '昊鼎 韓国・台湾業務チーム',
+    description: '昊鼎国際法律事務所の弁護士、パラリーガル、事務長、提携会計士をご紹介します。',
+    story: [
+      '昊鼎国際法律事務所では、韓国・日本のクライアントによる台湾への投資や、台湾での訴訟・法律相談を支援する実務チームを編成しています。',
+      '法律・会計・税務・行政の各実務を連携させ、案件の初期検討から紛争対応まで、一貫した方針でサポートします。',
+    ],
+    members: [
+      {
+        id: 'tseng-junwei',
+        profileSlug: 'wei-tseng',
+        name: '曾雋崴弁護士',
+        role: '台湾弁護士・代表弁護士',
+        email: 'wei@hoveringlaw.com.tw',
+        photo: '/images/team/wei-tseng-official.png',
+        sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
+        intro: [
+          '企業・個人の幅広い案件を担当し、韓国語・日本語でのご相談に対応しています。',
+          '韓国人留学生のジムでの負傷に関する損害賠償請求事件を代理し、一審で157万TWDの損害賠償を認める判決を得た実績があります。',
+        ],
+        education: [
+          '国立台湾大学財務金融研究所 修士号取得',
+          '国立政治大学法律学科・金融学科ダブルメジャー（学士）',
+          '神戸大学・早稲田大学への交換留学',
+        ],
+        experience: ['趨勢法律事務所', '昊鼎国際法律事務所', '法律扶助基金会台中分会の法律扶助担当弁護士'],
+      },
+      {
+        id: 'chang-rongxuan',
+        name: '張容瑄',
+        role: '台湾弁護士',
+        email: 'jhc@hoveringlaw.com.tw',
+        photo: '/images/team/chang-rongxuan.jpg',
+        sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외',
+        intro: [
+          '教育部法制処での勤務経験を生かし、行政争訟および民事事件を担当しています。',
+          '大学・教員の権利をめぐる紛争や、陳情・不服申立てに関する案件の対応経験が豊富です。',
+        ],
+        education: ['国立中興大学法律学科 学士号取得'],
+        experience: ['教育部法制処', '昊鼎国際法律事務所 弁護士'],
+      },
+      {
+        id: 'chang-fangyu',
+        name: '張芳瑀',
+        role: 'パラリーガル',
+        email: 'fangyu@hoveringlaw.com.tw',
+        photo: '/images/team/chang-fangyu.jpg',
+        sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
+        intro: [
+          '複数の法律事務所で長年にわたりシニアパラリーガルを務め、訴訟支援、企業法務、外国人投資関連業務など、幅広い法律実務の経験を積んでいます。',
+          '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、韓国・台湾間のコミュニケーションを支援します。',
+        ],
+        education: ['東海大学法律学科 学士号取得'],
+        experience: ['博胤法律事務所 シニアパラリーガル', '慕陽國際法律事務所 シニアパラリーガル'],
+      },
+      {
+        id: 'son-jungmin',
+        name: '孫貞旻',
+        role: '韓国事務長',
+        email: '',
+        photo: '/images/team/son-jungmin.jpg',
+        sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외-1',
+        intro: [
+          '韓国のクライアントからのお問い合わせ対応と相談日程の調整を担当しています。',
+          '情報工学の知見を生かして文書・業務システムを管理し、弁護士チームとクライアントの円滑なコミュニケーションを支えています。',
+        ],
+        education: ['国立成功大学でコンピュータサイエンスを専攻（学士）'],
+        experience: ['昊鼎国際法律事務所 韓国業務チーム'],
+      },
+      {
+        id: 'huang-shengping',
+        name: '黃勝平',
+        role: '提携会計士',
+        email: 'joe700619@chixin.com.tw',
+        photo: '/images/team/huang-shengping.jpg',
+        sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외-2',
+        intro: [
+          '国立政治大学で会計学の学士号と修士号を取得し、現在は会計事務所を運営しています。',
+          '法律・会計・税務上の課題を総合的に検討し、企業クライアントを支援しています。',
+        ],
+        education: ['国立政治大学 会計学修士号取得', '国立政治大学 会計学学士号取得'],
+        experience: ['勤信聯合會計師事務所'],
+      },
+    ],
   },
 };

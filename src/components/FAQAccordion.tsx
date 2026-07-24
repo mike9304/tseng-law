@@ -9,6 +9,13 @@ import { SurfaceText } from '@/lib/builder/surface-context';
 
 const parentheticalParticlePattern = /\)([은는이가을를과와])/g;
 
+const faqHeadings: Record<SiteLocale, { label: string; title: string }> = {
+  ko: { label: '자주 묻는 질문', title: '자주 묻는 질문' },
+  'zh-hant': { label: '常見問題', title: '常見問題' },
+  en: { label: 'FAQ', title: 'Frequently Asked Questions' },
+  ja: { label: 'FAQ', title: 'よくある質問' },
+};
+
 function formatFaqQuestion(question: string): string {
   return question.replace(parentheticalParticlePattern, ')\u2060$1');
 }
@@ -27,8 +34,7 @@ export default function FAQAccordion({
   tone?: 'light' | 'dark';
 }) {
   const [openIndex, setOpenIndex] = useState<number>(-1);
-  const sectionTitle = locale === 'ko' ? '자주 묻는 질문' : locale === 'zh-hant' ? '常見問題' : 'Frequently Asked Questions';
-  const sectionLabel = locale === 'ko' ? '자주 묻는 질문' : locale === 'zh-hant' ? '常見問題' : 'FAQ';
+  const { label: sectionLabel, title: sectionTitle } = faqHeadings[locale];
   const sectionClass = sectionClassName ?? 'section';
 
   return (

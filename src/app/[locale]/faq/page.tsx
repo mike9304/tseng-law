@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import PageHeader from '@/components/PageHeader';
 import JsonLd from '@/components/JsonLd';
+import FAQAccordion from '@/components/FAQAccordion';
 import FaqPublicExplorer from '@/components/faq/FaqPublicExplorer';
+import { faqContent } from '@/data/faq-content';
 import { pageCopy } from '@/data/page-copy';
 import {
   buildPublishedSitePageMetadata,
@@ -18,7 +20,12 @@ import {
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { checkAccess } from '@/lib/builder/members/members-engine';
 import { generateFAQSchema } from '@/lib/builder/seo/schema-org';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  normalizeSiteLocale,
+  siteLocales,
+  type Locale,
+  type SiteLocale,
+} from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -35,8 +42,19 @@ function buildPublishedPath(locale: Locale): string {
   return `/${locale}/${FAQ_SLUG}`;
 }
 
-export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
-  const locale = normalizeLocale(params.locale);
+export async function generateMetadata({ params }: { params: { locale: SiteLocale } }): Promise<Metadata> {
+  const locale = normalizeSiteLocale(params.locale);
+  if (locale === 'ja') {
+    const copy = pageCopy.ja.faq;
+    return buildSeoMetadata({
+      locale,
+      title: copy.title,
+      description: copy.description,
+      path: '/faq',
+      alternateLocales: siteLocales,
+    });
+  }
+
   const publishedMetadata = await buildPublishedSitePageMetadata(locale, FAQ_SLUG);
   if (publishedMetadata) return publishedMetadata;
 
@@ -54,10 +72,23 @@ export default async function FaqPage({
   params,
   searchParams,
 }: {
-  params: { locale: Locale };
+  params: { locale: SiteLocale };
   searchParams?: FaqSearchParams;
 }) {
-  const locale = normalizeLocale(params.locale);
+  const locale = normalizeSiteLocale(params.locale);
+  if (locale === 'ja') {
+    const copy = pageCopy.ja.faq;
+    const items = faqContent.ja;
+
+    return (
+      <>
+        <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+        <FAQAccordion locale={locale} items={items} />
+        <JsonLd data={generateFAQSchema(items)} />
+      </>
+    );
+  }
+
   const publishedPage = await resolvePublishedSitePage(locale, FAQ_SLUG);
   if (publishedPage) {
     const access = publishedPage.pageMeta.memberAccess;

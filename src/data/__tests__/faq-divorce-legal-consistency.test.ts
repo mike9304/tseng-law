@@ -38,8 +38,8 @@ const divorceFaqCases = [
     locale: 'ja',
     question: '韓国人が台湾で離婚するには、どのような手続きが必要ですか？',
     prohibitedWording: '裁判所の公証',
-    article1050Elements: ['書面による合意', '2名以上の証人の署名', '戸政機関への離婚登記'],
-    crossBorderGuidance: ['国際離婚', '準拠法', '管轄裁判所', '財産分与', '養育権'],
+    article1050Elements: ['書面で行い', '2名以上の証人が署名', '戸政機関で離婚登記'],
+    crossBorderGuidance: ['国際離婚', 'どの法が適用', '台湾で手続できるか', '財産分与', '親権'],
   },
 ] as const;
 

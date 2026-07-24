@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
 export type LegalPageKey = 'privacy' | 'disclaimer' | 'accessibility';
 
@@ -17,7 +17,7 @@ export type LegalPageContent = {
   sections: LegalPageSection[];
 };
 
-export const legalPageContent: Record<Locale, Record<LegalPageKey, LegalPageContent>> = {
+export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPageContent>> = {
   ko: {
     privacy: {
       label: 'PRIVACY',
@@ -307,6 +307,107 @@ export const legalPageContent: Record<Locale, Record<LegalPageKey, LegalPageCont
           title: 'Feedback',
           paragraphs: [
             'If you encounter an accessibility issue on the site, please let us know through email or the contact page so we can review it promptly.',
+          ],
+        },
+      ],
+    },
+  },
+  ja: {
+    privacy: {
+      label: 'PRIVACY',
+      title: 'プライバシーポリシー',
+      description:
+        'お問い合わせ、相談予約および本ウェブサイトのご利用に際して収集することのある情報と、その利用方法について説明します。',
+      effectiveDateLabel: '施行日',
+      effectiveDate: '2026-03-10',
+      sections: [
+        {
+          title: '収集する情報',
+          paragraphs: [
+            '昊鼎国際法律事務所は、お問い合わせ・ご相談の際に、氏名、連絡先、メールアドレス、会社名、案件の概要および関連する添付資料を収集することがあります。',
+            '本ウェブサイトの運営にあたり、セキュリティの維持およびサービスの改善を目的として、アクセスログ、ブラウザ情報、検索語句、参照元などの基本的な技術情報を収集することがあります。',
+          ],
+        },
+        {
+          title: '利用目的',
+          paragraphs: [
+            '収集した情報は、お問い合わせへの回答、相談日程の調整、案件に関するご要望の確認、ウェブサイトのセキュリティ維持およびサービス品質の改善に限って利用します。',
+          ],
+          items: [
+            'お問い合わせおよび相談予約への回答',
+            '対面またはビデオ通話による相談日程の調整',
+            'ウェブサイトの安全性、運営および利用体験の改善',
+          ],
+        },
+        {
+          title: '保管および第三者への提供',
+          paragraphs: [
+            '法令上の義務または案件対応上必要な場合を除き、当事務所が個人情報を販売することはありません。',
+            '案件対応に必要な場合、会計、翻訳または事務支援を行う専門家もしくは協力先に対し、必要な範囲に限って情報を提供することがあります。',
+          ],
+        },
+        {
+          title: 'お問い合わせ',
+          paragraphs: [
+            'プライバシーに関するお問い合わせは、wei@hoveringlaw.com.twまたはお問い合わせページからご連絡ください。',
+          ],
+        },
+      ],
+    },
+    disclaimer: {
+      label: 'DISCLAIMER',
+      title: '免責事項',
+      description:
+        '当ウェブサイトに掲載する一般情報の性質と、ご相談および委任関係が成立する条件について説明します。',
+      effectiveDateLabel: '施行日',
+      effectiveDate: '2026-03-10',
+      sections: [
+        {
+          title: '一般情報について',
+          paragraphs: [
+            '当ウェブサイトの記事、動画および解説は一般的な情報提供を目的とするものであり、個別の案件に対する法律上の助言または正式な法律サービスを構成するものではありません。',
+            '案件の結論は、事実関係、適用される法令および時期によって異なるため、具体的な案件については個別のご相談を通じて検討する必要があります。',
+          ],
+        },
+        {
+          title: 'ご相談および委任関係',
+          paragraphs: [
+            '当ウェブサイトの閲覧、メールの送信またはメッセージサービスを通じたお問い合わせのみをもって、弁護士と依頼者との委任関係が成立するものではありません。',
+            '正式な法律サービスは、案件の確認を経て、当事務所とご依頼者の双方が委任関係の成立を確認した場合に限り開始されます。',
+          ],
+        },
+        {
+          title: '外部リンクおよび結果の非保証',
+          paragraphs: [
+            '外部サイトへのリンクは利便性のために提供するものであり、第三者が提供する情報の正確性または最新性を保証するものではありません。',
+            '過去の事例、レビューまたは実績に関する情報は、将来の案件において同様の結果が得られることを保証するものではありません。',
+          ],
+        },
+      ],
+    },
+    accessibility: {
+      label: 'ACCESSIBILITY',
+      title: 'アクセシビリティについて',
+      description:
+        'さまざまな利用者が主要な情報を利用しやすくなるよう、当ウェブサイトが継続して取り組むアクセシビリティ改善の方針について説明します。',
+      effectiveDateLabel: '施行日',
+      effectiveDate: '2026-03-10',
+      sections: [
+        {
+          title: 'アクセシビリティへの取り組み',
+          paragraphs: [
+            '昊鼎国際法律事務所は、主要な情報をより理解しやすく、利用しやすくするため、キーボード操作、見出し構造、文字と背景のコントラストおよびページの読みやすさの改善に継続して取り組んでいます。',
+          ],
+          items: [
+            '明確なページタイトルとセクション構造',
+            'モバイルおよびデスクトップで読みやすいレイアウト',
+            '画像、ボタンおよびリンクの意味が伝わる表現の強化',
+          ],
+        },
+        {
+          title: '改善のご要望',
+          paragraphs: [
+            '当ウェブサイトの利用中にアクセシビリティ上の問題がございましたら、メールまたはお問い合わせページからお知らせください。優先して確認いたします。',
           ],
         },
       ],

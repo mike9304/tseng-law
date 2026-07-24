@@ -3,6 +3,10 @@ import path from 'node:path';
 import { describe, expect, test } from 'vitest';
 
 const css = readFileSync(path.join(process.cwd(), 'src/app/globals.css'), 'utf8');
+const columnPage = readFileSync(
+  path.join(process.cwd(), 'src/app/[locale]/columns/[slug]/page.tsx'),
+  'utf8',
+);
 
 function extractBlocks(source: string, header: string): Array<{ block: string; start: number; end: number }> {
   const blocks: Array<{ block: string; start: number; end: number }> = [];
@@ -57,6 +61,8 @@ describe('public column mobile overflow contract', () => {
     const mobileCss = target?.block ?? '';
     expect(ruleBody(mobileCss, '.blog-container')).toContain('grid-template-columns: 1fr');
     expect(ruleBody(mobileCss, '.blog-container > *')).toContain('min-width: 0');
+    expect(ruleBody(mobileCss, '.column-post-nav > *')).toContain('min-width: 0');
+    expect(ruleBody(mobileCss, '.column-post-nav > *')).toContain('overflow-wrap: anywhere');
     expect(ruleBody(mobileCss, '.blog-body')).toContain('padding: 1.5rem 1.2rem');
     expect(ruleBody(mobileCss, '.blog-container > .blog-body')).toContain('max-width: 100%');
     expect(ruleBody(mobileCss, '.blog-sidebar')).toContain('position: static');
@@ -70,5 +76,20 @@ describe('public column mobile overflow contract', () => {
         body.includes('max-width: 100%'),
       ),
     ).toBe(false);
+  });
+
+  test('keeps locale-aware prev and next links inside the scoped navigation', () => {
+    expect(columnPage).toContain('<nav className="container column-post-nav"');
+    expect(columnPage).toContain('href={`/${locale}/columns/${prevPost.slug}`}');
+    expect(columnPage).toContain('href={`/${locale}/columns/${nextPost.slug}`}');
+
+    const mediaBlocks = extractBlocks(css, '@media (max-width: 900px)');
+    const targetBlocks = mediaBlocks.filter(({ block }) => block.includes('.blog-container'));
+    const mobileCss = targetBlocks[0]?.block ?? '';
+
+    expect(ruleBody(mobileCss, '.column-post-nav > *')).toMatch(
+      /min-width:\s*0;\s*overflow-wrap:\s*anywhere;/,
+    );
+    expect(ruleBodies(css, 'nav.container > *')).toHaveLength(0);
   });
 });

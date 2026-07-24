@@ -286,7 +286,7 @@ export default async function ColumnDetailPage({ params }: { params: { locale: S
 
       {/* Prev / Next Navigation */}
       {showBody && (prevPost || nextPost) && (
-        <nav className="container" style={{
+        <nav className="container column-post-nav" style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'stretch',

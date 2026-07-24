@@ -2842,7 +2842,7 @@ html[lang='zh-Hant'] .hero-media {
 }
 
 @media (max-width: 900px) {
-  .svc-container { grid-template-columns: 1fr; }
+  .svc-container { grid-template-columns: minmax(0, 1fr); }
   .svc-sidebar { position: static; }
 }
 @media (max-width: 640px) {

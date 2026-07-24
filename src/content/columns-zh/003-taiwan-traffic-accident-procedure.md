@@ -15,7 +15,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-大家好，我是台灣律師曾俊瑋。
+大家好，我是台灣律師曾雋崴。
 
 ​
 
@@ -777,4 +777,4 @@ Q20. 如何找交通事故律師？
 
 ​
 
-以上是台灣律師曾俊瑋的分享。
+以上是台灣律師曾雋崴的分享。

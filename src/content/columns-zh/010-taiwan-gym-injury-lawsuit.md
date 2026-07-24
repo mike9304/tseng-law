@@ -13,7 +13,7 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 ![代表圖片](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
-大家好，我是台灣律師曾俊瑋。
+大家好，我是台灣律師曾雋崴。
 
 今天想和大家聊一個在台灣引起廣泛關注的案件。
 

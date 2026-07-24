@@ -13,7 +13,7 @@ featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
 
 ![代表圖片](../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg)
 
-您好，我是曾俊瑋台灣律師。
+您好，我是曾雋崴台灣律師。
 
 韓國與台灣之間的跨國婚姻越來越多。
 

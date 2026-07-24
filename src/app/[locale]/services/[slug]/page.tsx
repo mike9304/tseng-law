@@ -4,8 +4,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  normalizeSiteLocale,
+  siteLocales,
+  toBuilderLocale,
+  type SiteLocale,
+} from '@/lib/locales';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
+import { getJapaneseServiceDetail } from '@/data/service-details-ja';
+import { getServiceArea } from '@/data/service-details';
 import { getColumnPost } from '@/lib/columns';
 import JsonLd from '@/components/JsonLd';
 import {
@@ -21,7 +28,16 @@ import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buil
 
 export const dynamic = 'force-dynamic';
 
-const copy: Record<Locale, {
+type ServiceDetailRecord = {
+  slug: string;
+  title: string;
+  subtitle: string;
+  intro: string;
+  keyPoints: string[];
+  columnSlugs: string[];
+};
+
+const copy: Record<SiteLocale, {
   backLabel: string;
   keyPointsLabel: string;
   attorneyHeading: string;
@@ -77,57 +93,145 @@ const copy: Record<Locale, {
     reviewTail: ' and connects related columns with the consultation flow.',
     breadcrumbServices: 'Practice Areas',
   },
+  ja: {
+    backLabel: '← サービス一覧へ',
+    keyPointsLabel: '主なポイント',
+    attorneyHeading: 'この分野の担当弁護士',
+    columnsLabel: '関連コラム — 詳しく見る',
+    readMore: '記事を読む →',
+    contactLabel: '法律相談',
+    contactDesc: 'この分野に関するご相談は、お問い合わせフォームからお申し込みください。',
+    contactBtn: 'お問い合わせ',
+    emptyMsg: 'この分野の関連コラムを準備中です。',
+    reviewLead: 'このページは',
+    reviewTail: 'が内容を確認し、関連コラムと相談窓口をご案内しています。',
+    breadcrumbServices: '取扱業務',
+  },
 };
+
+function getJapaneseServiceRecord(slugInput: string): ServiceDetailRecord | null {
+  const slug = normalizeServiceAreaSlug(slugInput);
+  if (slug !== 'investment') {
+    return null;
+  }
+
+  const approved = getJapaneseServiceDetail('investment');
+  const base = getServiceArea('investment');
+  if (!approved || !base) {
+    return null;
+  }
+
+  return {
+    slug: 'investment',
+    title: approved.title,
+    subtitle: approved.subtitle,
+    intro: approved.intro,
+    keyPoints: approved.keyPoints,
+    columnSlugs: base.columnSlugs,
+  };
+}
+
+async function getServiceRecord(
+  locale: SiteLocale,
+  slugInput: string,
+): Promise<ServiceDetailRecord | null> {
+  if (locale === 'ja') {
+    return getJapaneseServiceRecord(slugInput);
+  }
+
+  const area = await readServiceAreaSourceRecordBySlug(
+    DEFAULT_BUILDER_SITE_ID,
+    locale,
+    slugInput,
+  );
+  if (!area) {
+    return null;
+  }
+
+  return {
+    slug: area.slug,
+    title: area.title[locale],
+    subtitle: area.subtitle[locale],
+    intro: area.intro[locale],
+    keyPoints: area.keyPoints[locale],
+    columnSlugs: area.columnSlugs,
+  };
+}
 
 export async function generateStaticParams() {
   const slugs = (await readServiceAreaSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko')).map((area) => area.slug);
-  return ['ko', 'zh-hant', 'en'].flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+  return [
+    ...(['ko', 'zh-hant', 'en'] as const).flatMap((locale) =>
+      slugs.map((slug) => ({ locale, slug })),
+    ),
+    { locale: 'ja', slug: 'investment' },
+  ];
 }
 
 function summarize(text: string, maxLength = 160) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
 }
 
-export async function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Promise<Metadata> {
-  const locale = normalizeLocale(params.locale);
-  const area = await readServiceAreaSourceRecordBySlug(DEFAULT_BUILDER_SITE_ID, locale, params.slug);
+export async function generateMetadata({ params }: { params: { locale: SiteLocale; slug: string } }): Promise<Metadata> {
+  const locale = normalizeSiteLocale(params.locale);
+  const area = await getServiceRecord(locale, params.slug);
   const attorney = getAttorneyProfile(locale, primaryAttorneySlug);
 
   if (!area) {
     return {};
   }
 
-  const description = summarize(area.intro[locale]);
-  const lawyerKeyword = attorney?.name ?? (locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾雋崴律師' : 'Attorney Wei Tseng');
+  const description = summarize(area.intro);
+  const lawyerKeyword = attorney?.name
+    ?? (locale === 'ko'
+      ? '증준외 변호사'
+      : locale === 'zh-hant'
+        ? '曾雋崴律師'
+        : locale === 'ja'
+          ? '曾雋崴弁護士'
+          : 'Attorney Wei Tseng');
 
   return buildSeoMetadata({
     locale,
-    title: area.title[locale],
+    title: area.title,
     description,
     path: `/services/${area.slug}`,
-    keywords: [area.title[locale], area.subtitle[locale], lawyerKeyword, locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan lawyer'],
+    keywords: [
+      area.title,
+      area.subtitle,
+      lawyerKeyword,
+      locale === 'ko'
+        ? '대만 변호사'
+        : locale === 'zh-hant'
+          ? '台灣律師'
+          : locale === 'ja'
+            ? '台湾弁護士'
+            : 'Taiwan lawyer',
+    ],
+    ...(locale === 'ja' ? { alternateLocales: siteLocales } : {}),
   });
 }
 
-export default async function ServiceDetailPage({ params }: { params: { locale: Locale; slug: string } }) {
-  const locale = normalizeLocale(params.locale);
-  const area = await readServiceAreaSourceRecordBySlug(DEFAULT_BUILDER_SITE_ID, locale, params.slug);
+export default async function ServiceDetailPage({ params }: { params: { locale: SiteLocale; slug: string } }) {
+  const locale = normalizeSiteLocale(params.locale);
+  const area = await getServiceRecord(locale, params.slug);
   if (!area) return notFound();
-  if (normalizeServiceAreaSlug(params.slug) !== area.slug) {
+  const routeSlug = locale === 'ja' ? params.slug : normalizeServiceAreaSlug(params.slug);
+  if (routeSlug !== area.slug) {
     permanentRedirect(`/${locale}/services/${area.slug}`);
   }
   const attorney = getAttorneyProfile(locale, primaryAttorneySlug);
-  const description = summarize(area.intro[locale]);
+  const description = summarize(area.intro);
   const t = copy[locale];
 
   const columns = area.columnSlugs
     .map((slug) => getColumnPost(slug, locale))
     .filter((c): c is NonNullable<typeof c> => c != null);
 
-  const points = area.keyPoints[locale];
+  const points = area.keyPoints;
   const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
     'service-areas.item-template',
-    locale
+    toBuilderLocale(locale)
   );
   const showHero = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.hero');
   const showBody = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.body');
@@ -139,17 +243,17 @@ export default async function ServiceDetailPage({ params }: { params: { locale: 
         <>
           <JsonLd
             data={buildBreadcrumbJsonLd(locale, [
-              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${locale}` },
               { name: t.breadcrumbServices, path: `/${locale}/services` },
-              { name: area.title[locale], path: `/${locale}/services/${area.slug}` },
+              { name: area.title, path: `/${locale}/services/${area.slug}` },
             ])}
           />
           <JsonLd
             data={buildLegalServiceJsonLd(locale, {
-              name: area.title[locale],
+              name: area.title,
               description,
               path: `/services/${area.slug}`,
-              serviceType: area.title[locale],
+              serviceType: area.title,
             })}
           />
           {attorney ? (
@@ -176,8 +280,8 @@ export default async function ServiceDetailPage({ params }: { params: { locale: 
         <section className="svc-hero" data-tone="dark">
           <div className="container svc-hero-inner">
             <Link href={`/${locale}/services`} className="svc-back-link">{t.backLabel}</Link>
-            <h1 className="svc-hero-title">{area.title[locale]}</h1>
-            <p className="svc-hero-subtitle">{area.subtitle[locale]}</p>
+            <h1 className="svc-hero-title">{area.title}</h1>
+            <p className="svc-hero-subtitle">{area.subtitle}</p>
           </div>
         </section>
       ) : null}
@@ -186,7 +290,7 @@ export default async function ServiceDetailPage({ params }: { params: { locale: 
         <article className="svc-article">
           <div className="container svc-container">
             <div className="svc-body">
-              <p className="svc-intro">{area.intro[locale]}</p>
+              <p className="svc-intro">{area.intro}</p>
               {attorney ? (
                 <p className="svc-review-note">
                   {t.reviewLead}

@@ -103,10 +103,10 @@ describe('sitemap column lastModified', () => {
     }).toEqual({
       // Base includes EN file-backed columns + JA /about, /services, /pricing,
       // /contact, /lawyers, /lawyers/wei-tseng, /columns archive,
-      // and 17 JA column details (+24).
+      // 17 JA column details, and the JA investment service detail (+25).
       // Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 150,
-      afterFiltering: 141,
+      beforeFiltering: 151,
+      afterFiltering: 142,
       removed: 9,
     });
 
@@ -201,6 +201,30 @@ describe('sitemap column lastModified', () => {
       ja: 'https://tseng-law.com/ja/services',
       'x-default': 'https://tseng-law.com/ko/services',
     });
+  });
+
+  it('publishes only the approved Japanese investment detail with exact alternates', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const japaneseInvestmentEntries = entries.filter(
+      (entry) => entry.url === 'https://tseng-law.com/ja/services/investment',
+    );
+
+    expect(japaneseInvestmentEntries).toHaveLength(1);
+    expect(japaneseInvestmentEntries[0]?.priority).toBe(0.72);
+    expect(japaneseInvestmentEntries[0]?.alternates?.languages).toEqual({
+      ko: 'https://tseng-law.com/ko/services/investment',
+      'zh-Hant': 'https://tseng-law.com/zh-hant/services/investment',
+      en: 'https://tseng-law.com/en/services/investment',
+      ja: 'https://tseng-law.com/ja/services/investment',
+      'x-default': 'https://tseng-law.com/ko/services/investment',
+    });
+
+    for (const slug of ['civil', 'family', 'labor', 'criminal', 'ip']) {
+      expect(entries).not.toContainEqual(expect.objectContaining({
+        url: `https://tseng-law.com/ja/services/${slug}`,
+      }));
+    }
   });
 
   it('publishes Japanese pricing exactly once with four-language alternates', async () => {

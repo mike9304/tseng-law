@@ -31,6 +31,31 @@ describe('Traditional Chinese full column corpus', () => {
     expect(getAllColumnPosts('zh-hant')).toHaveLength(17);
   });
 
+  it('contains no Hangul in public Traditional Chinese column copy', () => {
+    const hangul = /\p{Script=Hangul}/u;
+    const posts = getAllColumnPosts('zh-hant');
+
+    for (const post of posts) {
+      expect(post.title).not.toMatch(hangul);
+      expect(post.content).not.toMatch(hangul);
+      for (const item of post.faq ?? []) {
+        expect(item.q).not.toMatch(hangul);
+        expect(item.a).not.toMatch(hangul);
+      }
+    }
+  });
+
+  it('uses the correct Traditional Chinese registrant term in column 011 FAQ', () => {
+    const post = getAllColumnPosts('zh-hant').find(
+      ({ slug }) =>
+        slug === 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
+    );
+
+    expect(post).toBeDefined();
+    expect(post?.faq?.[1]?.a).toContain('產品登錄者');
+    expect(post?.faq?.[1]?.a).not.toContain('產品登록者');
+  });
+
   it('uses the official attorney name throughout the Traditional Chinese column corpus', () => {
     const zhFiles = fs.readdirSync(zhDir).filter((name) => name.endsWith('.md'));
     const corpus = zhFiles.map((name) => fs.readFileSync(path.join(zhDir, name), 'utf8')).join('\n');

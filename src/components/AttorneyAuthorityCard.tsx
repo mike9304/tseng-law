@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getAttorneyProfile, getAttorneyProfilePath, primaryAttorneySlug } from '@/data/attorney-profiles';
 import type { SiteLocale } from '@/lib/locales';
-import { toBuilderLocale } from '@/lib/locales';
 
 const cardLabels = {
   ko: {
@@ -46,8 +45,7 @@ export default function AttorneyAuthorityCard({
   locale: SiteLocale;
   heading?: string;
 }) {
-  const builderLocale = toBuilderLocale(locale);
-  const profile = getAttorneyProfile(builderLocale, primaryAttorneySlug);
+  const profile = getAttorneyProfile(locale, primaryAttorneySlug);
 
   if (!profile) {
     return null;
@@ -56,7 +54,7 @@ export default function AttorneyAuthorityCard({
   const labels = cardLabels[locale];
   const practiceAreas = profile.practiceAreas.slice(0, 4);
   const channels = profile.externalProfiles.slice(0, 3);
-  const profileHref = getAttorneyProfilePath(builderLocale, profile.slug);
+  const profileHref = getAttorneyProfilePath(locale, profile.slug);
 
   return (
     <section className="authority-card">

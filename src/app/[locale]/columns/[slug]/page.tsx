@@ -129,24 +129,37 @@ export default async function ColumnDetailPage({ params }: { params: { locale: S
         : locale === 'ja'
           ? '曾雋崴弁護士'
           : 'Attorney Wei Tseng';
-  const authorProfilePath = getAttorneyProfilePath(toBuilderLocale(locale));
-  // JA launch only guarantees /ja/columns*; cross-links use EN shells (not unsupported /ja/*).
-  const linkLocale = locale === 'ja' ? 'en' : locale;
+  const authorProfilePath = getAttorneyProfilePath(locale);
   const guideLinks =
-    post.category === 'formation'
-      ? [
-          { href: `/${linkLocale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : locale === 'ja' ? '台湾会社設立' : 'Taiwan Company Setup' },
-          { href: `/${linkLocale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : locale === 'ja' ? '台湾弁護士' : 'Taiwan Lawyer' },
-        ]
-      : post.category === 'case'
+    locale === 'ja'
+      ? post.category === 'formation'
         ? [
-            { href: `/${linkLocale}/taiwan-litigation-lawyer`, label: locale === 'ko' ? '대만 소송' : locale === 'zh-hant' ? '台灣訴訟' : locale === 'ja' ? '台湾訴訟' : 'Taiwan Litigation' },
-            { href: `/${linkLocale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : locale === 'ja' ? '台湾弁護士' : 'Taiwan Lawyer' },
+            { href: '/ja/services#investment', label: '台湾投資・会社設立' },
+            { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' },
           ]
-        : [
-            { href: `/${linkLocale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : locale === 'ja' ? '台湾弁護士' : 'Taiwan Lawyer' },
-            { href: `/${linkLocale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : locale === 'ja' ? '台湾会社設立' : 'Taiwan Company Setup' },
-          ];
+        : post.category === 'case'
+          ? [
+              { href: '/ja/services#civil', label: '台湾の民事紛争' },
+              { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' },
+            ]
+          : [
+              { href: '/ja/services', label: '取扱業務' },
+              { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' },
+            ]
+      : post.category === 'formation'
+        ? [
+            { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
+            { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
+          ]
+        : post.category === 'case'
+          ? [
+              { href: `/${locale}/taiwan-litigation-lawyer`, label: locale === 'ko' ? '대만 소송' : locale === 'zh-hant' ? '台灣訴訟' : 'Taiwan Litigation' },
+              { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
+            ]
+          : [
+              { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
+              { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
+            ];
 
   const prevLabel = locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : locale === 'ja' ? '← 前のコラム' : '← Previous';
   const nextLabel = locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : locale === 'ja' ? '次のコラム →' : 'Next →';
@@ -158,7 +171,7 @@ export default async function ColumnDetailPage({ params }: { params: { locale: S
   const faqItems = post.faq ?? [];
   // File-backed EN columns now carry translated FAQ; render for all locales with FAQ data.
   const showFaq = faqItems.length > 0;
-  const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, toBuilderLocale(locale)) : null;
+  const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, locale) : null;
 
   const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
     'columns.item-template',
@@ -181,15 +194,15 @@ export default async function ColumnDetailPage({ params }: { params: { locale: S
       {showSeo ? (
         <>
           <JsonLd
-            data={buildBreadcrumbJsonLd(toBuilderLocale(locale), [
-              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
-              { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : 'Columns', path: `/${locale}/columns` },
+            data={buildBreadcrumbJsonLd(locale, [
+              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${locale}` },
+              { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Columns', path: `/${locale}/columns` },
               { name: post.title, path: `/${locale}/columns/${post.slug}` },
             ])}
           />
           <JsonLd
             data={buildArticleJsonLd({
-              locale: toBuilderLocale(locale),
+              locale,
               title: post.title,
               description: post.summary,
               path: `/${locale}/columns/${post.slug}`,
@@ -260,7 +273,7 @@ export default async function ColumnDetailPage({ params }: { params: { locale: S
               <div className="blog-sidebar-card">
                 <h3 className="blog-sidebar-title">{t.consultationTitle}</h3>
                 <p className="blog-sidebar-text">{t.consultationText}</p>
-                <Link href={`/${linkLocale}/contact`} className="button blog-sidebar-btn">
+                <Link href={`/${locale}/contact`} className="button blog-sidebar-btn">
                   {t.consultationButton}
                 </Link>
               </div>

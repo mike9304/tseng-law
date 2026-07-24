@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import type { SiteLocale } from '@/lib/locales';
-import { toBuilderLocale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { teamContent } from '@/data/team-members';
@@ -52,8 +51,8 @@ const copyByLocale = {
 
 export default function HomeAttorneySplit({ locale }: { locale: SiteLocale }) {
   const copy = copyByLocale[locale];
-  const profilePath = getAttorneyProfilePath(toBuilderLocale(locale));
-  const lead = teamContent[toBuilderLocale(locale)].members[0];
+  const profilePath = getAttorneyProfilePath(locale);
+  const lead = teamContent[locale].members[0];
 
   return (
     <section className="section section--gray split-section split--img-left" id="about" data-tone="light">

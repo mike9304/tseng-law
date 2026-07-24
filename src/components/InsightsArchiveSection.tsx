@@ -90,7 +90,7 @@ export default function InsightsArchiveSection({
         : locale === 'ja'
           ? '曾雋崴弁護士監修'
           : 'Reviewed by Wei Tseng';
-  const authorHref = getAttorneyProfilePath(locale === 'ja' ? 'en' : locale);
+  const authorHref = getAttorneyProfilePath(locale);
   const [featured, ...rest] = posts;
   const listItems = rest;
   const pageSize = 3;

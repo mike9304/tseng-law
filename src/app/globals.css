@@ -2759,6 +2759,15 @@ html[lang='zh-Hant'] .hero-media {
 .authority-card-copy {
   display: grid;
   gap: 0.45rem;
+  min-width: 0;
+}
+
+.authority-card-name,
+.authority-card-role,
+.authority-card-summary {
+  min-width: 0;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
 .authority-card-name {

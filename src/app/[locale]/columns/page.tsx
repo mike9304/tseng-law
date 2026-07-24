@@ -150,14 +150,14 @@ export default async function ColumnsPage({
       {showSeo ? (
         <>
           <JsonLd
-            data={buildBreadcrumbJsonLd(toBuilderLocale(locale), [
-              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+            data={buildBreadcrumbJsonLd(locale, [
+              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${locale}` },
               { name: copy.title, path: `/${locale}/columns` },
             ])}
           />
           <JsonLd
             data={buildCollectionPageJsonLd({
-              locale: toBuilderLocale(locale),
+              locale,
               path: `/${locale}/columns`,
               name: copy.title,
               description: copy.description,

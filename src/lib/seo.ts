@@ -29,7 +29,7 @@ type BreadcrumbItem = {
 };
 
 type ArticleJsonLdInput = {
-  locale: Locale;
+  locale: SiteLocale;
   title: string;
   description: string;
   path: string;
@@ -527,7 +527,7 @@ export function getOrganizationName(locale: Locale | SiteLocale): string {
  * Returns `null` when there are no valid items so callers can skip injecting
  * an empty FAQPage block (Google rich-result eligibility requires ≥1 Q/A).
  */
-export function buildFaqJsonLd(items: FaqJsonLdItem[], locale?: Locale) {
+export function buildFaqJsonLd(items: FaqJsonLdItem[], locale?: SiteLocale) {
   const valid = (Array.isArray(items) ? items : [])
     .filter((item): item is FaqJsonLdItem => Boolean(item && item.q && item.a))
     .map((item) => ({ q: String(item.q), a: String(item.a) }));

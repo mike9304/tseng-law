@@ -44,7 +44,7 @@ type ArticleJsonLdInput = {
 };
 
 type PersonProfileJsonLdInput = {
-  locale: Locale;
+  locale: SiteLocale;
   path: string;
   name: string;
   alternateName?: string[];
@@ -59,7 +59,7 @@ type PersonProfileJsonLdInput = {
 };
 
 type CollectionPageJsonLdInput = {
-  locale: Locale;
+  locale: SiteLocale;
   path: string;
   name: string;
   description?: string;
@@ -244,7 +244,7 @@ export function buildSeoMetadata({
   };
 }
 
-export function buildBreadcrumbJsonLd(locale: Locale, items: BreadcrumbItem[]) {
+export function buildBreadcrumbJsonLd(locale: SiteLocale, items: BreadcrumbItem[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

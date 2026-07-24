@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import SmartLink from '@/components/SmartLink';
 import Reveal from '@/components/Reveal';
 
-export default function VideoChannel({ locale }: { locale: Locale }) {
+export default function VideoChannel({ locale }: { locale: SiteLocale }) {
   const { videos } = siteContent[locale];
   // Self-reveal: the `.reveal-stagger` grid needs a `.reveal.is-visible`
   // ancestor and callers don't provide one.

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { serviceAreas } from '@/data/service-details';
 import { getAttorneyProfile, getAttorneyProfilePath, primaryAttorneySlug } from '@/data/attorney-profiles';
 
@@ -56,6 +56,23 @@ const mediaHubLabels = {
     profile: 'View Wei Tseng Profile',
     contact: 'Media and Consultation',
   },
+  ja: {
+    label: '公開プロフィール',
+    title: '曾俊瑋弁護士のプロフィールと公開チャンネル',
+    description:
+      '曾俊瑋弁護士の公式プロフィール、外部掲載、YouTube、ブログ、主な台湾法の解説分野を一か所にまとめています。',
+    stats: {
+      languages: '対応言語',
+      services: '主な取扱分野',
+      columns: '公開コラム',
+      channels: '公式・外部チャンネル',
+    },
+    channels: '公式プロフィール・チャンネル',
+    topics: '主な解説テーマ',
+    matters: '主な取扱実績',
+    profile: '曾俊瑋弁護士のプロフィールを見る',
+    contact: 'メディア取材・法律相談のお問い合わせ',
+  },
 } as const;
 
 export default function AttorneyMediaHubView({
@@ -63,7 +80,7 @@ export default function AttorneyMediaHubView({
   locale,
 }: {
   columnCount: number;
-  locale: Locale;
+  locale: SiteLocale;
 }) {
   const profile = getAttorneyProfile(locale, primaryAttorneySlug);
 

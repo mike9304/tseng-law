@@ -24,7 +24,7 @@ import {
   buildCollectionPageJsonLd,
   buildPersonJsonLd,
 } from '@/lib/seo';
-import type { Locale } from '@/lib/locales';
+import type { Locale, SiteLocale } from '@/lib/locales';
 import type { ColumnPost } from '@/lib/columns';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 
@@ -239,7 +239,7 @@ export function VideosLegacyPageBody({
   locale,
 }: {
   columnCount: number;
-  locale: Locale;
+  locale: SiteLocale;
 }) {
   const copy = pageCopy[locale].videos;
   return (

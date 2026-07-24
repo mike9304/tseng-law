@@ -8,9 +8,23 @@ const root = process.cwd();
 const koDir = path.join(root, 'src/content/columns');
 const enDir = path.join(root, 'src/content/columns-en');
 const gymColumnPath = path.join(enDir, '010-taiwan-gym-injury-lawsuit.md');
+const overtakingColumnPath = path.join(
+  enDir,
+  '012-taiwan-overtaking-accident-liability.md',
+);
 const CJK_SCRIPTS = /[\p{Script=Han}\p{Script=Hangul}\p{Script=Hiragana}\p{Script=Katakana}]/u;
 
 const countOccurrences = (value: string, needle: string) => value.split(needle).length - 1;
+
+const countRenderedEnglishWords = (value: string) => {
+  const visibleText = value
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/^>\s?/gm, '')
+    .replace(/^[-*+]\s+/gm, '')
+    .replace(/[“”*_`]/g, ' ');
+  return visibleText.match(/[A-Za-z0-9]+(?:[.’-][A-Za-z0-9]+)*/g)?.length ?? 0;
+};
 
 const koFiles = fs
   .readdirSync(koDir)
@@ -71,6 +85,103 @@ describe('English full column corpus', () => {
       // Allow EN to be shorter, but not stub-level (< 35% of KO cleaned body)
       expect(en!.content.length).toBeGreaterThan(Math.floor(ko!.content.length * 0.35));
     }
+  });
+
+  it('keeps column 012 fully English, current-law scoped, and fact-specific', () => {
+    const raw = fs.readFileSync(overtakingColumnPath, 'utf8');
+    const post = getColumnPost('taiwan-overtaking-accident-liability', 'en');
+    expect(post).toBeTruthy();
+
+    const exactTitle = 'Who Is Liable in an Overtaking Accident?';
+    expect(raw.match(/^title:\s*"([^"]+)"$/m)?.[1]).toBe(exactTitle);
+    expect(raw.match(/^#\s.+$/gm)).toEqual([`# ${exactTitle}`]);
+    expect(post!.title).toBe(exactTitle);
+    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2025-09-13');
+    expect(raw.match(/^date_display:\s*"([^"]+)"$/m)?.[1]).toBe(
+      'September 13, 2025',
+    );
+    expect(post!.date).toBe('2025-09-13');
+    expect(post!.dateDisplay).toBe('September 13, 2025');
+
+    const loadedPublicContent = `${post!.title}\n${post!.content}`;
+    expect(raw).not.toMatch(CJK_SCRIPTS);
+    expect(loadedPublicContent).not.toMatch(CJK_SCRIPTS);
+
+    const renderedWordCount = countRenderedEnglishWords(post!.content);
+    expect(renderedWordCount).toBe(693);
+    expect(Math.ceil(renderedWordCount / 200)).toBe(4);
+    expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('4 min read');
+    expect(post!.readTime).toBe('4 min read');
+
+    const sourceUrl =
+      'https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability';
+    const officialRegulationsUrl =
+      'https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455';
+    const supplementaryUrl = 'https://gonews.com.tw/car/daily/21934/';
+    const featuredImage =
+      '../images/012-taiwan-overtaking-accident-liability/featured-01.jpg';
+    const incidentImage = '../images/012-taiwan-overtaking-accident-liability/img-01.jpg';
+    const internalLinks = [
+      '/en/taiwan-litigation-lawyer',
+      '/en/korean-lawyer-in-taiwan',
+      '/en/columns/taiwan-traffic-accident-procedure',
+    ];
+
+    expect(countOccurrences(raw, sourceUrl)).toBe(1);
+    expect(countOccurrences(raw, officialRegulationsUrl)).toBe(1);
+    expect(countOccurrences(raw, supplementaryUrl)).toBe(1);
+    expect(countOccurrences(raw, featuredImage)).toBe(2);
+    expect(countOccurrences(raw, incidentImage)).toBe(1);
+    for (const link of internalLinks) {
+      expect(countOccurrences(raw, link)).toBe(1);
+      expect(loadedPublicContent).toContain(`(${link})`);
+    }
+    expect(raw).toContain(
+      `[Illustrated guide to overtaking rules and steps](${supplementaryUrl})`,
+    );
+    expect(loadedPublicContent).toContain(`(${officialRegulationsUrl})`);
+    expect(loadedPublicContent).toContain(`(${supplementaryUrl})`);
+    expect(raw).not.toContain('img-02.jpg');
+    expect(raw).not.toMatch(/Korean version/i);
+
+    const article101Rules = [
+      'Article 101 prohibits overtaking on road sections with signs for bends, steep slopes, narrow bridges, tunnels, or intersections, and at railroad crossings or roadwork areas.',
+      'It also prohibits overtaking at places or road sections with school or hospital signs, with other no-overtaking signs or markings, when an oncoming vehicle is approaching, or when two or more vehicles are traveling in a line ahead.',
+      'When seeking to pass a vehicle in the same lane, the driver behind must first sound two short horn signals or flash the headlights once.',
+      'The driver must not repeatedly sound the horn or flash the headlights to force the vehicle ahead to yield.',
+      'The driver behind may pass only after the vehicle ahead has slowed and moved aside, or has indicated by hand signal or right turn signal that it is yielding.',
+      'The passing driver must then signal left, pass on the left while keeping at least 0.5 meters from the vehicle being passed, establish a safe distance, signal right, and return safely to the original lane.',
+    ];
+    for (const rule of article101Rules) {
+      expect(raw).toContain(rule);
+      expect(loadedPublicContent).toContain(rule);
+    }
+
+    expect(raw).toContain('In an anonymized matter handled by this firm');
+    expect(raw).toContain(
+      'According to those assessments, A was found primarily responsible for the collision.',
+    );
+    expect(raw).toContain('That conclusion was limited to the facts of this case.');
+    expect(raw).toContain(
+      'The assessments considered several circumstances together: A attempted to pass two vehicles traveling in a line ahead, entered the oncoming lane, was traveling at a speed that left too little time to brake, and had not given the prescribed horn or headlight signal.',
+    );
+    expect(raw).toContain(
+      'This case-specific result does not mean that one omitted signal will always determine liability.',
+    );
+
+    const forbiddenFormerClaims = [
+      'high insurance coverage',
+      'major financial harm',
+      'pain of losing a friend',
+      'torment A forever',
+      'avoid bearing an excessive share of accident liability',
+    ];
+    for (const claim of forbiddenFormerClaims) {
+      expect(raw).not.toContain(claim);
+    }
+    expect(raw).not.toMatch(/\bconsent\b/i);
+    expect(raw).not.toMatch(/\binsurance\b/i);
+    expect(raw).not.toMatch(/\baftereffects\b/i);
   });
 
   it('keeps column 010 fully English, legally qualified, and source-link complete', () => {

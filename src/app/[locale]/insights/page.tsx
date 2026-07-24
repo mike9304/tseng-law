@@ -1,7 +1,7 @@
 import { permanentRedirect } from 'next/navigation';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
 
-export default function InsightsPage({ params }: { params: { locale: Locale } }) {
-  const locale = normalizeLocale(params.locale);
+export default function InsightsPage({ params }: { params: { locale: SiteLocale } }) {
+  const locale = normalizeSiteLocale(params.locale);
   permanentRedirect(`/${locale}/columns`);
 }

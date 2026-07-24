@@ -5799,7 +5799,14 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 
 .legal-card {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  min-width: 0;
   gap: 1rem;
+}
+
+.legal-card > * {
+  min-width: 0;
 }
 
 .legal-card-copy {
@@ -5833,6 +5840,15 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   border-radius: 999px;
   background: var(--accent);
   transform: translateY(-50%);
+}
+
+.legal-card :where(h2, p, li) {
+  overflow-wrap: anywhere;
+}
+
+:lang(ja) .legal-card :where(h2, p, li),
+:lang(zh-Hant) .legal-card :where(h2, p, li) {
+  word-break: normal;
 }
 
 .contact-list {

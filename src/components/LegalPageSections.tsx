@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import type { LegalPageContent } from '@/data/legal-pages';
 import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/Reveal';
@@ -7,7 +7,7 @@ export default function LegalPageSections({
   locale,
   content,
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   content: LegalPageContent;
 }) {
   return (

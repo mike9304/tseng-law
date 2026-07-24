@@ -265,13 +265,22 @@ export function VideosLegacyPageBody({
   );
 }
 
-export function PrivacyLegacyPageBody({ locale }: { locale: Locale }) {
+export function PrivacyLegacyPageBody({ locale }: { locale: SiteLocale }) {
   const content = legalPageContent[locale].privacy;
   return (
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
-          { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+          {
+            name: locale === 'ko'
+              ? '홈'
+              : locale === 'zh-hant'
+                ? '首頁'
+                : locale === 'ja'
+                  ? 'ホーム'
+                  : 'Home',
+            path: `/${locale}`,
+          },
           { name: content.title, path: `/${locale}/privacy` },
         ])}
       />

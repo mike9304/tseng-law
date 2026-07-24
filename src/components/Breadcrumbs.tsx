@@ -8,11 +8,10 @@ export default function Breadcrumbs({ locale, current }: { locale: SiteLocale; c
     locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
   const navLabel =
     locale === 'ko' ? '현재 위치' : locale === 'zh-hant' ? '目前位置' : locale === 'ja' ? '現在位置' : 'Current location';
-  const homeHref = locale === 'ja' ? '/ja/columns' : `/${locale}`;
 
   return (
     <nav className="breadcrumb" aria-label={navLabel}>
-      <Link href={homeHref} className="breadcrumb-link">
+      <Link href={`/${locale}`} className="breadcrumb-link">
         {homeLabel}
       </Link>
       <span aria-hidden>/</span>

@@ -202,6 +202,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
   pages.push(
+    createEntry('ja', '/services/family', {
+      priority: 0.72,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
     createEntry('ja', '/pricing', {
       priority: 0.8,
       alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],

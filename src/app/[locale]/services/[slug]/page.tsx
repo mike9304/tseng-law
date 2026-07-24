@@ -112,6 +112,7 @@ const copy: Record<SiteLocale, {
 const publishedJapaneseServiceDetailSlugs = [
   'investment',
   'civil',
+  'family',
 ] as const;
 
 function getJapaneseServiceRecord(slugInput: string): ServiceDetailRecord | null {
@@ -171,6 +172,7 @@ export async function generateStaticParams() {
     ),
     { locale: 'ja', slug: 'investment' },
     { locale: 'ja', slug: 'civil' },
+    { locale: 'ja', slug: 'family' },
   ];
 }
 

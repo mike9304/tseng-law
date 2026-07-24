@@ -47,7 +47,11 @@ export function isJaUnsupportedPath(slugPath: string): boolean {
  */
 export function jaLanguageSwitchTarget(pathWithoutLocale: string): string {
   const clean = pathWithoutLocale.replace(/^\//, '') || '';
-  if (clean === 'services/investment' || clean === 'services/civil') {
+  if (
+    clean === 'services/investment'
+    || clean === 'services/civil'
+    || clean === 'services/family'
+  ) {
     return `/ja/${clean}`;
   }
   if (clean === 'columns' || clean.startsWith('columns/')) {

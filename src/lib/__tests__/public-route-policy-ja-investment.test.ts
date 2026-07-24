@@ -7,7 +7,7 @@ describe('Japanese service-detail language switch policy', () => {
     ['/services', '/ja/services'],
     ['/services/investment', '/ja/services/investment'],
     ['/services/civil', '/ja/services/civil'],
-    ['/services/family', '/ja/services'],
+    ['/services/family', '/ja/services/family'],
     ['/services/labor', '/ja/services'],
     ['/services/criminal', '/ja/services'],
     ['/services/ip', '/ja/services'],

@@ -53,6 +53,7 @@ export function jaLanguageSwitchTarget(pathWithoutLocale: string): string {
     || clean === 'services/family'
     || clean === 'services/labor'
     || clean === 'services/criminal'
+    || clean === 'services/ip'
   ) {
     return `/ja/${clean}`;
   }

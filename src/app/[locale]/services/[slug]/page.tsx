@@ -115,6 +115,7 @@ const publishedJapaneseServiceDetailSlugs = [
   'family',
   'labor',
   'criminal',
+  'ip',
 ] as const;
 
 function getJapaneseServiceRecord(slugInput: string): ServiceDetailRecord | null {
@@ -177,6 +178,7 @@ export async function generateStaticParams() {
     { locale: 'ja', slug: 'family' },
     { locale: 'ja', slug: 'labor' },
     { locale: 'ja', slug: 'criminal' },
+    { locale: 'ja', slug: 'ip' },
   ];
 }
 

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import type { SiteLocale } from '@/lib/locales';
-import { toBuilderLocale } from '@/lib/locales';
 import { AboutLegacyPage, getAboutLegacyMetadata } from './about-legacy';
 import { ContactLegacyPage, getContactLegacyMetadata } from './contact-legacy';
 import { DisclaimerLegacyPage, getDisclaimerLegacyMetadata } from './disclaimer-legacy';
@@ -12,13 +11,7 @@ import { PrivacyLegacyPage, getPrivacyLegacyMetadata } from './privacy-legacy';
 import { ReviewsLegacyPage, getReviewsLegacyMetadata } from './reviews-legacy';
 import { ServicesLegacyPage, getServicesLegacyMetadata } from './services-legacy';
 
-/** Map SiteLocale → builder Locale for legacy pages that still expect Locale. */
-function asLegacyLocale(locale: SiteLocale) {
-  return toBuilderLocale(locale);
-}
-
 export function getLegacyPageMetadata(slugPath: string, locale: SiteLocale): Metadata | null {
-  // Home/About/FAQ accept SiteLocale for Japanese body selection
   switch (slugPath) {
     case '':
       return getHomeLegacyMetadata(locale);
@@ -39,7 +32,7 @@ export function getLegacyPageMetadata(slugPath: string, locale: SiteLocale): Met
     case 'privacy':
       return getPrivacyLegacyMetadata(locale);
     case 'disclaimer':
-      return getDisclaimerLegacyMetadata(asLegacyLocale(locale));
+      return getDisclaimerLegacyMetadata(locale);
     default:
       return null;
   }
@@ -66,7 +59,7 @@ export async function renderLegacyPage(slugPath: string, locale: SiteLocale) {
     case 'privacy':
       return <PrivacyLegacyPage locale={locale} />;
     case 'disclaimer':
-      return <DisclaimerLegacyPage locale={asLegacyLocale(locale)} />;
+      return <DisclaimerLegacyPage locale={locale} />;
     default:
       return null;
   }

@@ -3,7 +3,6 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 
 import { legalPageContent } from '@/data/legal-pages';
-import { DisclaimerLegacyPage } from '../disclaimer-legacy';
 import { getLegacyPageMetadata, renderLegacyPage } from '../index';
 import { PrivacyLegacyPageBody } from '../legacy-page-bodies';
 import {
@@ -124,14 +123,15 @@ describe('Japanese privacy integration', () => {
     expect(metadata.alternates?.languages).not.toHaveProperty('ja');
   });
 
-  it('keeps Japanese disclaimer dispatch mapped to English', async () => {
-    const metadata = getLegacyPageMetadata('disclaimer', 'ja');
-    const page = await renderLegacyPage('disclaimer', 'ja') as ReactElement<{
+  it('keeps Japanese privacy dispatch direct after disclaimer localization', async () => {
+    const metadata = getLegacyPageMetadata('privacy', 'ja');
+    const page = await renderLegacyPage('privacy', 'ja') as ReactElement<{
       locale: string;
     }>;
 
-    expect(metadata?.title).toBe(legalPageContent.en.disclaimer.title);
-    expect(page.type).toBe(DisclaimerLegacyPage);
-    expect(page.props.locale).toBe('en');
+    expect(metadata?.title).toBe(legalPageContent.ja.privacy.title);
+    expect(metadata?.title).not.toBe(legalPageContent.en.privacy.title);
+    expect(page.type).toBe(PrivacyLegacyPage);
+    expect(page.props.locale).toBe('ja');
   });
 });

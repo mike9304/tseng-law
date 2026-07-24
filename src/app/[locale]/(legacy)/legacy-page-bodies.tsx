@@ -289,13 +289,22 @@ export function PrivacyLegacyPageBody({ locale }: { locale: SiteLocale }) {
   );
 }
 
-export function DisclaimerLegacyPageBody({ locale }: { locale: Locale }) {
+export function DisclaimerLegacyPageBody({ locale }: { locale: SiteLocale }) {
   const content = legalPageContent[locale].disclaimer;
   return (
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
-          { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+          {
+            name: locale === 'ko'
+              ? '홈'
+              : locale === 'zh-hant'
+                ? '首頁'
+                : locale === 'ja'
+                  ? 'ホーム'
+                  : 'Home',
+            path: `/${locale}`,
+          },
           { name: content.title, path: `/${locale}/disclaimer` },
         ])}
       />

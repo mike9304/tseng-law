@@ -1185,7 +1185,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           label: '媒體',
           items: [
             {
-              title: 'Naver 部落格：台灣律師 曾俊瑋',
+              title: 'Naver 部落格：台灣律師 曾雋崴',
               meta: '頻道',
               tag: 'Media',
               href: 'https://blog.naver.com/wei_lawyer/223461663913'
@@ -1346,7 +1346,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     homeAttorney: {
       label: 'ABOUT',
-      title: '曾俊瑋律師，韓國、台灣跨境法律的實務夥伴',
+      title: '曾雋崴律師，韓國、台灣跨境法律的實務夥伴',
       summary: '具備 10+ 年實務經驗、豐富媒體採訪經歷與持續內容產出，提供以實際案例為核心的法律協助。',
       ctaLabel: '查看律師簡介'
     },
@@ -1359,7 +1359,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     updates: {
       label: 'PROFILE',
-      title: '曾俊瑋 律師',
+      title: '曾雋崴 律師',
       tabs: [
         {
           id: 'education',
@@ -1498,8 +1498,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     videos: {
       label: 'CHANNELS',
-      title: '曾俊瑋律師公開頻道',
-      description: '集中整理曾俊瑋律師的 YouTube、部落格、個人網站與官方簡介。',
+      title: '曾雋崴律師公開頻道',
+      description: '集中整理曾雋崴律師的 YouTube、部落格、個人網站與官方簡介。',
       featured: {
         title: 'WEI Lawyer YouTube 頻道',
         duration: 'YouTube',
@@ -1508,13 +1508,13 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       },
       items: [
         {
-          title: 'Naver 部落格：台灣律師 曾俊瑋',
+          title: 'Naver 部落格：台灣律師 曾雋崴',
           duration: '部落格',
           href: 'https://blog.naver.com/wei_lawyer/223461663913',
           image: '/images/video-1.svg'
         },
         {
-          title: '個人網頁：台灣律師 曾俊瑋',
+          title: '個人網頁：台灣律師 曾雋崴',
           duration: '網站',
           href: 'https://www.wei-wei-lawyer.com/',
           image: '/images/video-2.svg'
@@ -2664,7 +2664,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           label: 'メディア',
           items: [
             {
-              title: 'Naverブログ：台湾弁護士 曾俊瑋',
+              title: 'Naverブログ：台湾弁護士 曾雋崴',
               meta: 'チャンネル',
               tag: 'メディア',
               href: 'https://blog.naver.com/wei_lawyer/223461663913'
@@ -2826,7 +2826,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
     },
     homeAttorney: {
       label: 'ABOUT',
-      title: '曾俊瑋弁護士——国際クライアントの台湾法パートナー',
+      title: '曾雋崴弁護士——国際クライアントの台湾法パートナー',
       summary:
         '10年以上の実務経験、メディア出演、継続的な法律コンテンツ発信を通じて、実案中心の支援に注力しています。',
       ctaLabel: '弁護士プロフィールを見る'
@@ -2842,7 +2842,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
     updates: {
       ...base.updates,
       label: 'PROFILE',
-      title: '曾俊瑋弁護士プロフィール',
+      title: '曾雋崴弁護士プロフィール',
       tabs: [
         {
           id: 'education',
@@ -2978,7 +2978,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
     videos: {
       ...base.videos,
       label: 'CHANNELS',
-      title: '曾俊瑋弁護士の公開チャンネル',
+      title: '曾雋崴弁護士の公開チャンネル',
       description: 'YouTube、ブログ、個人サイト、事務所公式プロフィールを一ページで確認できます。',
       featured: {
         title: 'WEI Lawyer YouTubeチャンネル',
@@ -2988,13 +2988,13 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       },
       items: [
         {
-          title: 'Naverブログ：台湾弁護士 曾俊瑋',
+          title: 'Naverブログ：台湾弁護士 曾雋崴',
           duration: 'ブログ',
           href: 'https://blog.naver.com/wei_lawyer/223461663913',
           image: '/images/video-1.svg'
         },
         {
-          title: '個人サイト：台湾弁護士 曾俊瑋',
+          title: '個人サイト：台湾弁護士 曾雋崴',
           duration: 'ウェブサイト',
           href: 'https://www.wei-wei-lawyer.com/',
           image: '/images/video-2.svg'

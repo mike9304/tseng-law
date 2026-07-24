@@ -28,9 +28,9 @@ const VIDEOS_SLUG = 'videos';
 
 const videoKeywords: Record<SiteLocale, string[]> = {
   ko: ['증준외 변호사', '대만 변호사 유튜브', '대만 법률 영상', '증준외 유튜브'],
-  'zh-hant': ['曾俊瑋 律師', '台灣律師 YouTube', '台灣法律影片', '曾俊瑋 頻道'],
+  'zh-hant': ['曾雋崴 律師', '台灣律師 YouTube', '台灣法律影片', '曾雋崴 頻道'],
   en: ['Attorney Wei Tseng', 'Taiwan legal videos', 'Taiwan lawyer YouTube', 'Wei Tseng channel'],
-  ja: ['曾俊瑋弁護士', '台湾法律動画', '台湾弁護士 YouTube', 'WEI Lawyerチャンネル'],
+  ja: ['曾雋崴弁護士', '台湾法律動画', '台湾弁護士 YouTube', 'WEI Lawyerチャンネル'],
 };
 
 function buildPublishedPath(locale: Locale): string {

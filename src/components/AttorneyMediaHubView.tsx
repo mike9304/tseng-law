@@ -24,9 +24,9 @@ const mediaHubLabels = {
   },
   'zh-hant': {
     label: 'PUBLIC PROFILE',
-    title: '曾俊瑋律師公開簡介與頻道',
+    title: '曾雋崴律師公開簡介與頻道',
     description:
-      '集中整理曾俊瑋律師的官方簡介、外部介紹、YouTube、部落格與主要法律主題。',
+      '集中整理曾雋崴律師的官方簡介、外部介紹、YouTube、部落格與主要法律主題。',
     stats: {
       languages: '可服務語言',
       services: '核心服務領域',
@@ -36,7 +36,7 @@ const mediaHubLabels = {
     channels: '官方簡介與頻道',
     topics: '主要說明主題',
     matters: '代表案例',
-    profile: '查看曾俊瑋律師簡介',
+    profile: '查看曾雋崴律師簡介',
     contact: '媒體與諮詢聯絡',
   },
   en: {
@@ -58,9 +58,9 @@ const mediaHubLabels = {
   },
   ja: {
     label: '公開プロフィール',
-    title: '曾俊瑋弁護士のプロフィールと公開チャンネル',
+    title: '曾雋崴弁護士のプロフィールと公開チャンネル',
     description:
-      '曾俊瑋弁護士の公式プロフィール、外部掲載、YouTube、ブログ、主な台湾法の解説分野を一か所にまとめています。',
+      '曾雋崴弁護士の公式プロフィール、外部掲載、YouTube、ブログ、主な台湾法の解説分野を一か所にまとめています。',
     stats: {
       languages: '対応言語',
       services: '主な取扱分野',
@@ -70,7 +70,7 @@ const mediaHubLabels = {
     channels: '公式プロフィール・チャンネル',
     topics: '主な解説テーマ',
     matters: '主な取扱実績',
-    profile: '曾俊瑋弁護士のプロフィールを見る',
+    profile: '曾雋崴弁護士のプロフィールを見る',
     contact: 'メディア取材・法律相談のお問い合わせ',
   },
 } as const;

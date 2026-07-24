@@ -136,7 +136,7 @@ describe('videos route builder parity', () => {
     expect(metadata.title).toBe(pageCopy.ja.videos.title);
     expect(metadata.description).toBe(pageCopy.ja.videos.description);
     expect(metadata.keywords).toEqual(expect.arrayContaining([
-      '曾俊瑋弁護士',
+      '曾雋崴弁護士',
       '台湾法律動画',
       'WEI Lawyerチャンネル',
     ]));
@@ -251,7 +251,7 @@ describe('videos route builder parity', () => {
     };
     expect(person).toMatchObject({
       '@type': 'Person',
-      name: attorneyProfiles.ja['wei-tseng'].name,
+      name: '曾雋崴弁護士',
       jobTitle: attorneyProfiles.ja['wei-tseng'].role,
     });
     expect(new URL(person.url).pathname).toBe('/ja/lawyers/wei-tseng');

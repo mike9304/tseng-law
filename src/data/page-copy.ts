@@ -96,8 +96,8 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     videos: {
       label: 'VIDEOS',
-      title: '曾俊瑋律師影音·頻道',
-      description: '集中查看曾俊瑋律師的官方簡介、YouTube、部落格與外部介紹。'
+      title: '曾雋崴律師影音·頻道',
+      description: '集中查看曾雋崴律師的官方簡介、YouTube、部落格與外部介紹。'
     },
     faq: {
       label: 'FAQ',
@@ -200,7 +200,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     videos: {
       label: 'VIDEOS',
-      title: '曾俊瑋弁護士メディア',
+      title: '曾雋崴弁護士メディア',
       description: '公式プロフィール、YouTube、ブログ等をまとめて確認できます。'
     },
     faq: {

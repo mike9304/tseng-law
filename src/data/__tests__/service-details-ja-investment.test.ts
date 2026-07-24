@@ -97,10 +97,10 @@ describe('Japanese investment service-detail content', () => {
       'civil',
       'family',
       'labor',
+      'criminal',
     ]);
 
     for (const slug of [
-      'criminal',
       'ip',
       'unknown',
       '__proto__',

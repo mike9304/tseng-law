@@ -1,10 +1,7 @@
-// Contact channel SSOT for public contact UI + AI consultation fallback.
-// Messenger URLs are the canonical firm channels already used site-wide.
-// Ownership/receive verification remains a human pre-production gate.
+// Verified contact-channel SSOT for public contact UI + AI consultation fallback.
 
 import type { SiteLocale } from '@/lib/locales';
 
-const LINE_URL = 'https://lin.ee/hojeong';
 const KAKAO_CHANNEL_URL = 'https://pf.kakao.com/_hojeong/chat';
 const PRIMARY_PHONE = '+82-10-2992-9304';
 const PRIMARY_EMAIL = 'wei@hoveringlaw.com.tw';
@@ -24,7 +21,6 @@ type DirectChannel = {
 type LocaleContent = {
   messenger: {
     primary: MessengerChannel;
-    secondary: MessengerChannel;
   };
   direct: {
     email: DirectChannel;
@@ -38,8 +34,7 @@ type LocaleContent = {
 export const contactPageContent: Record<SiteLocale, LocaleContent> = {
   ko: {
     messenger: {
-      primary: { href: LINE_URL, platform: 'LINE', label: 'LINE 채널 문의' },
-      secondary: { href: KAKAO_CHANNEL_URL, platform: 'KakaoTalk', label: '카카오톡 채널 상담' },
+      primary: { href: KAKAO_CHANNEL_URL, platform: 'KakaoTalk', label: '카카오톡 채널 상담' },
     },
     direct: {
       email: {
@@ -57,8 +52,7 @@ export const contactPageContent: Record<SiteLocale, LocaleContent> = {
   },
   'zh-hant': {
     messenger: {
-      primary: { href: LINE_URL, platform: 'LINE', label: 'LINE 頻道諮詢' },
-      secondary: { href: KAKAO_CHANNEL_URL, platform: 'KakaoTalk', label: 'KakaoTalk 頻道諮詢' },
+      primary: { href: KAKAO_CHANNEL_URL, platform: 'KakaoTalk', label: 'KakaoTalk 頻道諮詢' },
     },
     direct: {
       email: {
@@ -76,8 +70,7 @@ export const contactPageContent: Record<SiteLocale, LocaleContent> = {
   },
   en: {
     messenger: {
-      primary: { href: LINE_URL, platform: 'LINE', label: 'LINE channel chat' },
-      secondary: { href: KAKAO_CHANNEL_URL, platform: 'KakaoTalk', label: 'KakaoTalk channel' },
+      primary: { href: KAKAO_CHANNEL_URL, platform: 'KakaoTalk', label: 'KakaoTalk channel' },
     },
     direct: {
       email: {
@@ -96,11 +89,6 @@ export const contactPageContent: Record<SiteLocale, LocaleContent> = {
   ja: {
     messenger: {
       primary: {
-        href: LINE_URL,
-        platform: 'LINE',
-        label: 'LINEで相談',
-      },
-      secondary: {
         href: KAKAO_CHANNEL_URL,
         platform: 'KakaoTalk',
         label: 'KakaoTalkチャンネルで相談',

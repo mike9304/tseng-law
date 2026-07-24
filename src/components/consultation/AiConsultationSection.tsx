@@ -535,10 +535,6 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                     <span>{messenger.primary.platform}</span>
                     <strong>{messenger.primary.label}</strong>
                   </a>
-                  <a href={messenger.secondary.href} target="_blank" rel="noopener noreferrer">
-                    <span>{messenger.secondary.platform}</span>
-                    <strong>{messenger.secondary.label}</strong>
-                  </a>
                   <a href={`tel:${primaryOffice.phone.replace(/[^0-9+]/g, '')}`}>
                     <span>{locale === 'ko' ? '대표 전화' : locale === 'zh-hant' ? '代表電話' : 'Phone'}</span>
                     <strong>{primaryOffice.phone}</strong>

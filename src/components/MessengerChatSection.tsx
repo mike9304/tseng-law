@@ -7,18 +7,9 @@ interface MessengerConfig {
   sectionTitle: string;
   sectionDescription: string;
   primary: {
-    platform: string;
     label: string;
     description: string;
     href: string;
-    icon: 'kakao' | 'line';
-  };
-  secondary: {
-    platform: string;
-    label: string;
-    description: string;
-    href: string;
-    icon: 'kakao' | 'line';
   };
   features: string[];
   featuresTitle: string;
@@ -29,20 +20,11 @@ function getConfig(locale: Locale): MessengerConfig {
   if (locale === 'ko') {
     return {
       sectionTitle: '메신저 상담',
-      sectionDescription: '카카오톡 또는 LINE으로 편리하게 법률 상담을 시작하세요.',
+      sectionDescription: '검증된 메신저 채널로 편리하게 법률 상담을 시작하세요.',
       primary: {
-        platform: channels.secondary.platform,
-        label: '카카오톡 상담 시작',
-        description: '카카오톡 채널을 통해 빠르게 상담을 받으세요.',
-        href: channels.secondary.href,
-        icon: 'kakao'
-      },
-      secondary: {
-        platform: channels.primary.platform,
-        label: 'LINE 상담 시작',
-        description: '대만에서 LINE으로 바로 문의하세요.',
+        label: channels.primary.label,
+        description: '메시지를 남기면 확인 후 상담을 안내해 드립니다.',
         href: channels.primary.href,
-        icon: 'line'
       },
       features: [
         '법인설립·투자 관련 빠른 답변',
@@ -57,20 +39,11 @@ function getConfig(locale: Locale): MessengerConfig {
   if (locale === 'en') {
     return {
       sectionTitle: 'Messenger Consultation',
-      sectionDescription: 'Start your legal consultation quickly through KakaoTalk or LINE.',
+      sectionDescription: 'Start your legal consultation through our verified messenger channel.',
       primary: {
-        platform: channels.secondary.platform,
-        label: 'Start KakaoTalk Chat',
-        description: 'Get a quick response through our KakaoTalk channel.',
-        href: channels.secondary.href,
-        icon: 'kakao'
-      },
-      secondary: {
-        platform: channels.primary.platform,
-        label: 'Start LINE Chat',
-        description: 'Contact us directly on LINE from Taiwan or overseas.',
+        label: channels.primary.label,
+        description: 'Leave a message and we will follow up with consultation guidance.',
         href: channels.primary.href,
-        icon: 'line'
       },
       features: [
         'Quick answers for incorporation and investment questions',
@@ -84,20 +57,11 @@ function getConfig(locale: Locale): MessengerConfig {
 
   return {
     sectionTitle: '即時通訊諮詢',
-    sectionDescription: '透過 LINE 或 KakaoTalk 輕鬆開始法律諮詢。',
+    sectionDescription: '透過已驗證的即時通訊頻道輕鬆開始法律諮詢。',
     primary: {
-      platform: channels.primary.platform,
-      label: '開始 LINE 諮詢',
-      description: '透過 LINE 官方帳號快速獲得法律諮詢。',
+      label: channels.primary.label,
+      description: '請留下訊息，我們確認後將提供諮詢安排。',
       href: channels.primary.href,
-      icon: 'line'
-    },
-    secondary: {
-      platform: channels.secondary.platform,
-      label: '開始 KakaoTalk 諮詢',
-      description: '韓國客戶可透過 KakaoTalk 聯繫我們。',
-      href: channels.secondary.href,
-      icon: 'kakao'
     },
     features: [
       '公司設立·投資相關快速回覆',
@@ -120,21 +84,6 @@ function KakaoIcon() {
   );
 }
 
-function LineIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="28" height="28" className="messenger-icon" aria-hidden>
-      <path
-        d="M12 2C6.48 2 2 5.64 2 10.11c0 4 3.18 7.36 7.47 7.99.29.06.69.19.79.44.09.23.06.58.03.81l-.13.76c-.04.22-.17.85.75.46s4.96-2.92 6.77-5C19.82 13.16 22 11.83 22 10.11 22 5.64 17.52 2 12 2z"
-        fill="#06C755"
-      />
-      <path
-        d="M8.5 8.5h-1a.3.3 0 00-.3.3v3.4a.3.3 0 00.3.3h1a.3.3 0 00.3-.3v-1.1l1.4 1.3a.3.3 0 00.4 0 .3.3 0 000-.4l-1.4-1.3h1a.3.3 0 00.3-.3V9.1a.3.3 0 00-.1-.2L9.5 8.5h-1zM15 8.5h-1a.3.3 0 00-.3.3v1.3l-1.4-1.5a.3.3 0 00-.5.2v3.4a.3.3 0 00.3.3h1a.3.3 0 00.3-.3v-1.3l1.4 1.5a.3.3 0 00.5-.2V8.8a.3.3 0 00-.3-.3zM17.5 10h-1v-.8h1a.3.3 0 000-.7h-1.3a.3.3 0 00-.3.3v3.4a.3.3 0 00.3.3h1.3a.3.3 0 000-.7h-1v-.8h1a.3.3 0 000-.7z"
-        fill="#fff"
-      />
-    </svg>
-  );
-}
-
 export default function MessengerChatSection({ locale }: { locale: Locale }) {
   const config = getConfig(locale);
 
@@ -150,34 +99,16 @@ export default function MessengerChatSection({ locale }: { locale: Locale }) {
         <div className="messenger-grid">
           <a
             href={config.primary.href}
-            className={`messenger-card messenger-card--primary messenger-card--${config.primary.icon}`}
+            className="messenger-card messenger-card--primary messenger-card--kakao"
             target="_blank"
             rel="noopener noreferrer"
           >
             <div className="messenger-card-icon">
-              {config.primary.icon === 'kakao' ? <KakaoIcon /> : <LineIcon />}
+              <KakaoIcon />
             </div>
             <div className="messenger-card-body">
-              <h3 className="messenger-card-platform">{config.primary.platform}</h3>
-              <p className="messenger-card-label">{config.primary.label}</p>
+              <h3 className="messenger-card-platform">{config.primary.label}</h3>
               <p className="messenger-card-desc">{config.primary.description}</p>
-            </div>
-            <span className="messenger-card-arrow">→</span>
-          </a>
-
-          <a
-            href={config.secondary.href}
-            className={`messenger-card messenger-card--secondary messenger-card--${config.secondary.icon}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="messenger-card-icon">
-              {config.secondary.icon === 'kakao' ? <KakaoIcon /> : <LineIcon />}
-            </div>
-            <div className="messenger-card-body">
-              <h3 className="messenger-card-platform">{config.secondary.platform}</h3>
-              <p className="messenger-card-label">{config.secondary.label}</p>
-              <p className="messenger-card-desc">{config.secondary.description}</p>
             </div>
             <span className="messenger-card-arrow">→</span>
           </a>

@@ -95,6 +95,8 @@ export const columnTypographyStoredSchema = columnTypographySchema.optional().ca
 
 export const columnFrontmatterSchema = z.object({
   lastmod: z.string().datetime({ offset: true }),
+  dateDisplay: z.string().min(1).max(120).optional(),
+  readTime: z.string().min(1).max(80).optional(),
   attorneyReviewStatus: attorneyReviewStatusSchema,
   freshness: freshnessSchema,
   category: columnCategorySchema.optional(),

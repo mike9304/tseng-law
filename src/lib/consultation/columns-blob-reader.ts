@@ -2,7 +2,7 @@ import { get, list } from '@vercel/blob';
 import type { Locale } from '@/lib/locales';
 import type { ColumnPost, ColumnCategory } from '@/lib/columns';
 import { getAllColumnPosts } from '@/lib/columns';
-import { listColumnBundles } from '@/lib/builder/columns/storage';
+import { estimateColumnReadTimeLabel, listColumnBundles } from '@/lib/builder/columns/storage';
 import type { ColumnDocument } from '@/lib/builder/columns/types';
 import { filterPublicColumnPosts } from '@/lib/builder/columns/public-post-filter';
 
@@ -57,6 +57,8 @@ interface ColumnDocumentFromBlob {
   bodyHtml?: string;
   frontmatter?: {
     lastmod?: string;
+    dateDisplay?: string;
+    readTime?: string;
     attorneyReviewStatus?: 'pending' | 'reviewed' | 'needs-revision';
     freshness?: 'fresh' | 'review_needed' | 'unknown';
     category?: string;
@@ -91,7 +93,7 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
       ? doc.frontmatter.category
       : 'legal';
   const dateIso = doc.frontmatter?.lastmod || doc.updatedAt || new Date().toISOString();
-  const dateDisplay = dateIso.slice(0, 10);
+  const dateDisplay = doc.frontmatter?.dateDisplay || dateIso.slice(0, 10);
   // Body is whatever the editor produced — prefer markdown for AI ingestion
   // since the column-knowledge stripMarkdown flow expects markdown-ish text.
   const content = doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '';
@@ -101,7 +103,7 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
     title: doc.title || doc.slug,
     date: dateIso,
     dateDisplay,
-    readTime: estimateReadTime(content),
+    readTime: doc.frontmatter?.readTime || estimateReadTime(content, doc.locale),
     category,
     categoryLabel: categoryLabel(category, doc.locale),
     blogCategory: doc.frontmatter?.blogCategory || legacyCategoryToBlogCategory(category),
@@ -131,8 +133,8 @@ function builderDocToColumnPost(doc: ColumnDocument): ColumnPost {
     slug: doc.slug,
     title: doc.title || doc.slug,
     date: dateIso,
-    dateDisplay: dateIso.slice(0, 10),
-    readTime: estimateReadTime(content),
+    dateDisplay: doc.frontmatter.dateDisplay || dateIso.slice(0, 10),
+    readTime: doc.frontmatter.readTime || estimateReadTime(content, doc.locale),
     category,
     categoryLabel: categoryLabel(category, doc.locale),
     blogCategory: doc.frontmatter.blogCategory || legacyCategoryToBlogCategory(category),
@@ -173,10 +175,8 @@ function stripHtml(html: string): string {
   return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
-function estimateReadTime(content: string): string {
-  // ~200 chars per "minute" of reading for mixed CJK / latin legal text.
-  const minutes = Math.max(1, Math.round(content.length / 200));
-  return `${minutes} min`;
+function estimateReadTime(content: string, locale: Locale): string {
+  return estimateColumnReadTimeLabel(content, locale);
 }
 
 function categoryLabel(category: ColumnCategory, locale: Locale): string {

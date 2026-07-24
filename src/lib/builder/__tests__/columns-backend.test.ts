@@ -2,7 +2,7 @@ import { mkdir, mkdtemp, rm, writeFile } from 'fs/promises';
 import { tmpdir } from 'os';
 import path from 'path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { getColumnsStorageBackend } from '@/lib/builder/columns/storage';
+import { estimateColumnReadTimeLabel, getColumnsStorageBackend } from '@/lib/builder/columns/storage';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 
 describe('builder column storage backend', () => {
@@ -53,6 +53,8 @@ describe('builder column storage backend', () => {
           linkedSlugs: {},
           frontmatter: {
             lastmod: '2030-01-01T00:00:00.000Z',
+            dateDisplay: '2030년 1월 1일',
+            readTime: '7분 분량',
             attorneyReviewStatus: 'reviewed',
             freshness: 'fresh',
             category: 'case',
@@ -85,10 +87,97 @@ describe('builder column storage backend', () => {
         category: 'case',
         categoryLabel: '소송사례',
         featuredImage: '/images/placeholder-article-hero.jpg',
+        dateDisplay: '2030년 1월 1일',
+        readTime: '7분 분량',
       });
     } finally {
       await rm(root, { recursive: true, force: true });
     }
+  });
+
+  it('preserves legacy KO 017 dateDisplay and readTime through the public merged reader', async () => {
+    const root = await mkdtemp(path.join(tmpdir(), 'tseng-columns-'));
+
+    try {
+      vi.stubEnv('CONSULTATION_COLUMNS_DIR', root);
+      vi.stubEnv('BUILDER_COLUMNS_BACKEND', 'local');
+      vi.stubEnv('BLOB_READ_WRITE_TOKEN', '');
+      vi.stubEnv('BUILDER_USE_BLOB_IN_DEV', '');
+      vi.stubEnv('CONSULTATION_LOG_BACKEND', '');
+      vi.stubEnv('NODE_ENV', 'development');
+
+      const posts = await getAllColumnPostsIncludingBlob('ko');
+      const post = posts.find((item) => item.slug === 'taiwan-logistics-business-setup');
+
+      expect(post?.dateDisplay).toBe('2025년 9월 13일');
+      expect(post?.readTime).toBe('9분 분량');
+    } finally {
+      await rm(root, { recursive: true, force: true });
+    }
+  });
+
+  it.each([
+    { locale: 'ko' as const, body: '단어 '.repeat(181), expected: '2분 분량' },
+    { locale: 'zh-hant' as const, body: '字'.repeat(401), expected: '2分鐘閱讀' },
+    { locale: 'en' as const, body: 'word '.repeat(201), expected: '2 min read' },
+  ])('uses a localized fallback for a $locale runtime document without metadata', async ({
+    locale,
+    body,
+    expected,
+  }) => {
+    const root = await mkdtemp(path.join(tmpdir(), 'tseng-columns-'));
+
+    try {
+      const localeDir = path.join(root, locale);
+      const slug = `${locale.replace('-', '')}-runtime-fallback`;
+      await mkdir(localeDir, { recursive: true });
+      await writeFile(
+        path.join(localeDir, `${slug}.published.json`),
+        JSON.stringify({
+          version: 1,
+          slug,
+          locale,
+          title: 'Runtime fallback column',
+          summary: 'Fallback metadata test',
+          bodyMarkdown: body,
+          bodyHtml: '<p>Fallback metadata test</p>',
+          linkedSlugs: {},
+          frontmatter: {
+            lastmod: '2030-02-03T00:00:00.000Z',
+            attorneyReviewStatus: 'reviewed',
+            freshness: 'fresh',
+            category: 'legal',
+            publishedAt: '2030-02-03T00:00:00.000Z',
+          },
+          draft: false,
+          revision: 1,
+          updatedAt: '2030-02-03T00:00:00.000Z',
+          updatedBy: 'columns-backend-test',
+        }),
+        'utf8',
+      );
+
+      vi.stubEnv('CONSULTATION_COLUMNS_DIR', root);
+      vi.stubEnv('BUILDER_COLUMNS_BACKEND', 'local');
+      vi.stubEnv('BLOB_READ_WRITE_TOKEN', '');
+      vi.stubEnv('BUILDER_USE_BLOB_IN_DEV', '');
+      vi.stubEnv('CONSULTATION_LOG_BACKEND', '');
+      vi.stubEnv('NODE_ENV', 'development');
+
+      const posts = await getAllColumnPostsIncludingBlob(locale);
+      const post = posts.find((item) => item.slug === slug);
+
+      expect(post?.dateDisplay).toBe('2030-02-03');
+      expect(post?.readTime).toBe(expected);
+      expect(post?.readTime).not.toMatch(/^\d+ min$/);
+    } finally {
+      await rm(root, { recursive: true, force: true });
+    }
+  });
+
+  it('excludes Markdown syntax from fallback read-time estimates', () => {
+    expect(estimateColumnReadTimeLabel('**' + '字'.repeat(400) + '**', 'zh-hant')).toBe('1分鐘閱讀');
+    expect(estimateColumnReadTimeLabel('[word](https://example.com/path) '.repeat(200), 'en')).toBe('1 min read');
   });
 
   it('filters mirrored visual load-more test columns from the public reader', async () => {

@@ -167,6 +167,8 @@ function legacyPostToColumnDocument(post: ColumnPost & { locale: Locale }): Colu
     linkedSlugs: {},
     frontmatter: {
       lastmod,
+      dateDisplay: post.dateDisplay,
+      readTime: post.readTime,
       attorneyReviewStatus: 'reviewed',
       freshness: 'fresh',
       category: post.category,
@@ -310,6 +312,34 @@ function toColumnListItem(bundle: ColumnDocumentBundle): ColumnListItem | null {
     publishedUpdatedAt: bundle.published?.updatedAt ?? null,
     preferredSource: bundle.draft ? 'draft' : 'published',
   };
+}
+
+function markdownToVisibleText(content: string): string {
+  return content
+    .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/^ {0,3}(?:[-*_]\s*){3,}$/gm, ' ')
+    .replace(/^ {0,3}(?:#{1,6}\s*|>\s*|[-+*]\s+|\d+[.)]\s+)/gm, '')
+    .replace(/[*_~`]/g, '')
+    .replace(/\\([\\`*_[\]{}()#+\-.!>])/g, '$1');
+}
+
+export function estimateColumnReadTimeLabel(content: string, locale: Locale): string {
+  const visibleText = markdownToVisibleText(content);
+  if (locale === 'ko') {
+    const eojeols = visibleText.split(/\s+/).filter(Boolean).length;
+    const minutes = Math.max(1, Math.ceil(eojeols / 180));
+    return `${minutes}분 분량`;
+  }
+  if (locale === 'zh-hant') {
+    const characters = visibleText.replace(/\s+/g, '').length;
+    const minutes = Math.max(1, Math.ceil(characters / 400));
+    return `${minutes}分鐘閱讀`;
+  }
+  const words = visibleText.match(/[A-Za-z0-9]+(?:[.’-][A-Za-z0-9]+)*/g)?.length ?? 0;
+  const minutes = Math.max(1, Math.ceil(words / 200));
+  return `${minutes} min read`;
 }
 
 export function getColumnsStorageBackend(): ColumnBackend {

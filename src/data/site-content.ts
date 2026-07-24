@@ -931,7 +931,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           ]
         }
       ],
-      legal: '© 2026 법무법인 호정. All rights reserved.'
+      legal: '© 2026 법무법인 호정.'
     },
     search: {
       title: '검색',
@@ -1665,7 +1665,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           ]
         }
       ],
-      legal: '© 2026 昊鼎國際法律事務所. All rights reserved.'
+      legal: '© 2026 昊鼎國際法律事務所。'
     },
     search: {
       title: '搜尋',
@@ -2409,7 +2409,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           ]
         }
       ],
-      legal: '© 2026 Hovering International Law Firm. All rights reserved.'
+      legal: '© 2026 Hovering International Law Firm.'
     },
     search: {
       ...base.search,
@@ -3161,7 +3161,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           ]
         }
       ],
-      legal: '© 2026 昊鼎国際法律事務所. All rights reserved.'
+      legal: '© 2026 昊鼎国際法律事務所。'
     },
     search: {
       ...base.search,

@@ -26,6 +26,29 @@ function anchorForHref(html: string, href: string): string | undefined {
 
 describe('footer social localization', () => {
   it.each([
+    { locale: 'ko', legal: '© 2026 법무법인 호정.' },
+    { locale: 'zh-hant', legal: '© 2026 昊鼎國際法律事務所。' },
+    { locale: 'en', legal: '© 2026 Hovering International Law Firm.' },
+    { locale: 'ja', legal: '© 2026 昊鼎国際法律事務所。' },
+  ] as const)(
+    'renders the exact reviewed $locale copyright line',
+    ({ locale, legal }) => {
+      const html = renderFooter(locale);
+      const copyrightRow = html.match(
+        /<p class="footer-copyright-row">[\s\S]*?<\/p>/,
+      )?.[0];
+      const contentLegal = siteContent[locale].footer.legal;
+
+      expect(copyrightRow).toContain(legal);
+      expect(contentLegal).toBe(legal);
+      expect(html).not.toMatch(/all rights reserved/i);
+      expect(contentLegal).not.toMatch(/all rights reserved/i);
+      expect(contentLegal.match(/©/g)).toHaveLength(1);
+      expect(contentLegal).toContain('2026');
+    },
+  );
+
+  it.each([
     { locale: 'ko', heading: '팔로우' },
     { locale: 'ja', heading: 'フォロー' },
     { locale: 'zh-hant', heading: '追蹤我們' },

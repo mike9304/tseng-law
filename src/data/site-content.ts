@@ -3042,41 +3042,41 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       inquiries: [
         {
           title: 'ビジネス・投資',
-          details: ['電話: +82-10-2992-9304', 'メール: wei@hoveringlaw.com.tw']
+          details: ['電話：+82-10-2992-9304', 'メール：wei@hoveringlaw.com.tw']
         },
         {
           title: 'メディア取材',
           details: [
-            'メール: wei@hoveringlaw.com.tw',
-            'KakaoTalk: チャネルチャット',
+            'メール：wei@hoveringlaw.com.tw',
+            'KakaoTalk：チャンネルでお問い合わせ',
             '件名に【メディア取材】とご記入ください'
           ]
         },
         {
           title: '採用に関するお問い合わせ',
           details: [
-            'メール: wei@hoveringlaw.com.tw',
-            '電話: +82-10-2992-9304',
+            'メール：wei@hoveringlaw.com.tw',
+            '電話：+82-10-2992-9304',
             '件名に【採用】とご記入ください'
           ]
         },
         {
           title: '一般のお問い合わせ',
-          details: ['メール: wei@hoveringlaw.com.tw']
+          details: ['メール：wei@hoveringlaw.com.tw']
         }
       ],
-      locationsLabel: 'オフィス所在地',
+      locationsLabel: '事務所所在地',
       locations: [
         {
-          title: '台北オフィス',
+          title: '台北事務所',
           details: ['台北市大同区承徳路一段35号7F-2']
         },
         {
-          title: '台中オフィス',
+          title: '台中事務所',
           details: ['台中市北区館前路19号', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
         },
         {
-          title: '高雄オフィス',
+          title: '高雄事務所',
           details: ['高雄市左営区安吉街233号', 'Tel: 07-557-9797']
         }
       ],

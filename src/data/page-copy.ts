@@ -211,7 +211,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     contact: {
       label: 'CONTACT',
       title: 'お問い合わせ',
-      description: '問い合わせ種別、連絡先、事務所所在地をまとめてご案内します。'
+      description: 'お問い合わせ種別、連絡先、事務所所在地をまとめてご案内します。'
     },
     search: {
       label: 'SEARCH',

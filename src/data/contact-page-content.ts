@@ -91,7 +91,7 @@ export const contactPageContent: Record<SiteLocale, LocaleContent> = {
       primary: {
         href: KAKAO_CHANNEL_URL,
         platform: 'KakaoTalk',
-        label: 'KakaoTalkチャンネルで相談',
+        label: 'KakaoTalkチャンネルでお問い合わせ',
       },
     },
     direct: {

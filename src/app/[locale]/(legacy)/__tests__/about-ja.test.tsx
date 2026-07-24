@@ -101,7 +101,7 @@ describe('Japanese About integration', () => {
     expect(html).toContain('企業・個人の幅広い案件を担当');
     expect(html).toContain('お問い合わせ種別');
     expect(html).toContain('メール');
-    expect(html).toContain('台北オフィス');
+    expect(html).toContain('台北事務所');
     expect(html).not.toContain('Learn our story and meet the Korea-Taiwan legal team.');
   });
 

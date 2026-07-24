@@ -160,7 +160,7 @@ export default function Footer({
               <LocaleFlagSwitcher locale={locale} className="footer-locale-switch" />
             </div>
             <div className="footer-social">
-              <span className="social-label">{locale === 'ko' ? '팔로우' : locale === 'zh-hant' ? '追蹤我們' : 'Follow'}</span>
+              <span className="social-label">{locale === 'ko' ? '팔로우' : locale === 'zh-hant' ? '追蹤我們' : locale === 'ja' ? 'フォロー' : 'Follow'}</span>
               <div className="social-icons">
                 <a className="social-icon" href="https://blog.naver.com/wei_lawyer/223461663913" aria-label={socialLabels.blog} target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>

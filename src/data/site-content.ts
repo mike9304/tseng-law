@@ -2726,100 +2726,100 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       ...base.services,
       label: 'SERVICES',
       title: '主要サービス',
-      description: '台湾における投資・訴訟・顧問を体系的に支援します。',
+      description: '台湾における投資、訴訟、法務顧問業務を総合的に支援します。',
       items: [
         {
           title: '投資・会社設立',
-          description: '組織設計から許認可、銀行口座、各種許可、開業まで一気通貫で支援します。',
+          description: '台湾進出にあたり、事業形態（子会社・支店・有限会社）の選定から、経済部投資審議司への投資申請、資本金の送金、銀行口座の開設、事業所の確保まで一貫して支援します。化粧品・物流など業種別の許認可に加え、解散・清算による資本金回収手続についてもご案内します。',
           href: '/ja/services#investment',
           details: [
             '子会社・支店・有限会社など組織形態の比較',
-            '投資審議委員会（投審会）の承認・申請支援',
-            '資本送金、準備口座、営業口座への転換',
-            '事業所の用途・立地の事前確認',
+            '経済部投資審議司への投資申請・審査対応',
+            '資本金の送金、会社設立準備口座から正式口座への切替え',
+            '事業所の土地使用分区・用途適合性の事前確認',
             '化粧品PIFや物流許認可など業種別許可',
             '解散・清算による適法な資本回収'
           ],
           relatedColumns: [
             { title: '台湾会社設立の基本', slug: 'taiwan-company-establishment-basics' },
             { title: '子会社と支店の比較', slug: 'taiwan-company-subsidiary-vs-branch' },
-            { title: '応用ガイド1：ビザとARC', slug: 'taiwan-company-establishment-advanced-1' },
-            { title: '応用ガイド2：資本と口座', slug: 'taiwan-company-establishment-advanced-2' },
-            { title: '応用ガイド3：事業所の所在地', slug: 'taiwan-company-setup-pitch-location' },
+            { title: '応用編1：就業ビザ・居留証', slug: 'taiwan-company-establishment-advanced-1' },
+            { title: '応用編2：資本金・銀行口座', slug: 'taiwan-company-establishment-advanced-2' },
+            { title: '応用編3：営業場所の探し方', slug: 'taiwan-company-setup-pitch-location' },
             { title: '化粧品市場参入ガイド', slug: 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide' },
-            { title: '物流事業の設立', slug: 'taiwan-logistics-business-setup' },
-            { title: '資本回収の方法', slug: 'withdraw-capital-taiwan-company' }
+            { title: '台湾で物流業を経営する方法', slug: 'taiwan-logistics-business-setup' },
+            { title: '台湾会社の資本金回収方法', slug: 'withdraw-capital-taiwan-company' }
           ]
         },
         {
           title: '民事訴訟・損害賠償',
-          description: '契約紛争、不法行為、消費者紛争に実務的な訴訟戦略で対応します。',
+          description: '契約紛争、損害賠償、消費者被害など、民事事件全般に対応します。韓国人留学生のジム負傷事件では、一審で157万新台湾ドルの損害賠償を認める判決を得た実績があり、外国人依頼者による台湾での訴訟手続を日本語で一貫して支援します。',
           href: '/ja/services#civil',
           details: [
-            '人身・物的損害の損害賠償請求',
+            '人身損害・物的損害の賠償請求',
             '契約違反・商事紛争の代理',
-            '消費者救済と事業者への訴訟',
-            '交通事故後の過失分析と賠償請求',
-            '外国人当事者向け多言語訴訟支援'
+            '消費者被害の救済および事業者を相手方とする訴訟',
+            '交通事故の過失割合分析および損害賠償請求',
+            '外国人依頼者向けの日本語による訴訟対応支援'
           ],
           relatedColumns: [
-            { title: 'ジム傷害事件（TWD 1.57M）', slug: 'taiwan-gym-injury-lawsuit' },
-            { title: '交通事故への対応', slug: 'taiwan-traffic-accident-procedure' },
+            { title: '台湾ジム傷害訴訟（157万新台湾ドル）', slug: 'taiwan-gym-injury-lawsuit' },
+            { title: '台湾で交通事故が起きたとき', slug: 'taiwan-traffic-accident-procedure' },
             { title: '追越し事故の責任', slug: 'taiwan-overtaking-accident-liability' }
           ]
         },
         {
-          title: '家事訴訟',
-          description: '離婚、財産分与、親権、相続などクロスボーダー家事案件に対応します。',
+          title: '家事事件',
+          description: '離婚、財産分与、親権、相続などの家事事件に対応します。台湾を含む国際結婚に伴う協議離婚・調停離婚・裁判離婚の手続、外国人配偶者に関する戸政手続、法定相続順位および残余財産差額分配請求について、戦略的に支援します。',
           href: '/ja/services#family',
           details: [
-            '協議離婚（証人・戸籍手続きを含む）',
+            '協議離婚：2名以上の証人の署名と戸政事務所での離婚登記',
             '離婚調停・裁判手続きの代理',
-            '親権、監護、面会交流の調整',
-            '配偶者・子の台湾相続分',
-            '婚姻財産の残余分配請求'
+            '親権（監護権）の指定および面会交流',
+            '台湾相続法上の配偶者・子の法定相続分の算定',
+            '残余財産差額分配請求'
           ],
           relatedColumns: [
-            { title: '台湾離婚訴訟 Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
-            { title: '相続・監護の分析', slug: 'taiwan-inheritance-custody-analysis' }
+            { title: '台湾の離婚調停・訴訟Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
+            { title: '具俊曄氏と徐熙媛氏の遺産・親権問題の分析', slug: 'taiwan-inheritance-custody-analysis' }
           ]
         },
         {
           title: '労働・雇用',
-          description: '解雇、退職金、労働契約、労務コンプライアンスを台湾法に沿って支援します。',
+          description: '台湾法上の解雇、退職金（資遣費）、労働契約をめぐる紛争に対応します。退職金（資遣費）の算定（新制では勤続1年につき平均賃金0.5か月分、上限6か月分）、雇用主の違法行為等を理由に労働者側から契約を終了した場合の請求可否、最低勤務期間条項の有効性について、実務に即して助言します。',
           href: '/ja/services#labor',
           details: [
-            '経済的解雇における退職金の算定',
-            '自己都合退職後も退職金が認められる例外',
-            '最低服務期間条項のレビュー',
-            '外国企業向け台湾労働法アドバイス'
+            '退職金（資遣費）の算定（新制では勤続1年につき平均賃金0.5か月分、上限6か月分）',
+            '雇用主の違法行為等を理由に労働者側から契約を終了した場合の退職金（資遣費）請求',
+            '最低勤務期間条項の有効性審査',
+            '台湾進出企業向けの労働法アドバイス'
           ],
           relatedColumns: [
-            { title: '台湾の退職金制度', slug: 'taiwan-labor-severance-law' },
-            { title: '自己都合退職の例外', slug: 'taiwan-voluntary-resignation-severance' },
-            { title: '最低服務期間の問題', slug: 'taiwan-mandatory-employment-period' }
+            { title: '台湾の退職金（資遣費）制度', slug: 'taiwan-labor-severance-law' },
+            { title: '労働者側からの契約終了時に退職金（資遣費）を請求できる例外', slug: 'taiwan-voluntary-resignation-severance' },
+            { title: '台湾の最低勤務期間条項', slug: 'taiwan-mandatory-employment-period' }
           ]
         },
         {
-          title: '刑事訴訟',
-          description: '捜査段階の支援、弁護、被害者代理、規制リスク確認を行います。',
+          title: '刑事事件',
+          description: '台湾の刑事手続における捜査対応、被疑者・被告人の弁護、被害者代理、弁護人接見に対応します。資本金の不正な払戻しや無許可営業など、法令・規制違反に伴う刑事責任を事前に検討し、防御方針を策定します。',
           href: '/ja/services#criminal',
           details: [
-            '刑事捜査段階の助言・代理',
-            '被害者代理と刑事告訴手続き',
-            '規制・刑事リスクの事前評価',
-            '外国人被告人向け日本語通訳支援'
+            '捜査段階における弁護人接見・法的助言',
+            '被害者代理および告訴・告発手続',
+            '法令・規制違反に伴う刑事リスクの事前評価',
+            '外国人被疑者・被告人向けの日本語による手続支援'
           ]
         },
         {
           title: '知財・金融紛争',
-          description: '商標・特許・著作権戦略に加え、金融・投資紛争にも対応します。',
+          description: '商標・特許・著作権などの知的財産権の保護と、金融・投資関連の紛争に対応します。台湾進出時の先行商標調査、ブランド保護戦略の策定、金融商品・投資契約に関する紛争の事実関係分析および訴訟を支援します。',
           href: '/ja/services#ip',
           details: [
-            '商標クリアランス調査と台湾登録支援',
-            '特許・著作権侵害紛争',
+            '台湾における先行商標調査・登録申請支援',
+            '特許権・著作権侵害紛争への対応',
             '金融商品・投資契約に関する訴訟',
-            'ブランド・デザイン保護戦略'
+            'ブランド・デザインの保護戦略に関する助言'
           ]
         }
       ]

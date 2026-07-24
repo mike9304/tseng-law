@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
 type FirmIntroductionContent = {
   sectionLabel: string;
@@ -11,7 +11,7 @@ type FirmIntroductionContent = {
   sourceLabel: string;
 };
 
-export const firmIntroductionContent: Record<Locale, FirmIntroductionContent> = {
+export const firmIntroductionContent: Record<SiteLocale, FirmIntroductionContent> = {
   ko: {
     sectionLabel: 'ABOUT',
     title: '호정 소개',
@@ -64,5 +64,23 @@ export const firmIntroductionContent: Record<Locale, FirmIntroductionContent> = 
     logoAlt: 'Hovering International Law Firm logo',
     sourceUrl: 'https://www.hoveringlaw.com.tw/en/about.html',
     sourceLabel: 'Source: hoveringlaw.com.tw'
+  },
+  ja: {
+    sectionLabel: 'ABOUT',
+    title: '事務所紹介',
+    subtitle: '劉家宏弁護士、林嘉柏弁護士、林茂弘弁護士、袁裕倫弁護士および邵允亮弁護士により共同設立されました。',
+    paragraphs: [
+      '昊鼎国際法律事務所は2016年、国立台湾大学法学院出身の劉家宏弁護士、林嘉柏弁護士、林茂弘弁護士、袁裕倫弁護士および邵允亮弁護士により共同設立されました。「昊」は「果てしなく広がる空」を、「鼎」は「揺るぎない基盤」を意味します。「昊鼎」という名称には、高い志と堅固な基盤のもと、依頼者に専門性の高い法的サービスを提供し、信頼されるパートナーでありたいという思いが込められています。',
+      '当事務所の弁護士はいずれも台湾の有力大学で法学を修め、それぞれ異なる分野で長年の実務経験を積んでおり、複雑な紛争にも対応できる体制を整えています。高雄オフィスはコーポレートガバナンスを中心に、一般の民事・刑事・行政紛争についても豊富な取扱経験を有しています。台中オフィスは建設案件、知的財産、韓国・日本関連業務を専門とし、知的財産権の出願から法的紛争の解決まで、幅広い案件を取り扱っています。',
+      '2017年には屏東オフィスを開設し、地域の実情に即した法的サービスの提供を開始しました。同オフィスの責任者である謝宛均弁護士は、農業者団体の設立・運営・評価に関する豊富な実務経験を有し、多角的かつ包括的な法的支援を提供しています。',
+      '2020年には、邵允平公認会計士が正式に参画し、昊鼎会計士事務所を設立しました。これにより、事業主および富裕層の個人顧客に対し、会計・税務計画を一体的に支援する体制を整えました。',
+      '2024年には、事業主に法律・会計・税務・人事管理などを一体的に提供するため、邵允亮弁護士が昊鼎維仁法律事務所を設立しました。企業経営で生じるさまざまな課題にワンストップで対応することを目的としています。',
+      '同じく2024年、曾雋崴弁護士が当事務所に正式に加わり、韓国および日本の依頼者に対して、会社設立、ビザ申請、商標・特許出願、法的リスクの評価、法人税務に関する相談など、幅広い法的サービスを提供しています。',
+      'また、当事務所のメンバーは継続的に社会貢献活動に取り組んでいます。毎年、公益性の高い案件や法律扶助案件を受任するほか、無償の法的サービスや法律相談を行い、公正と正義という法の基本理念の実現に努めています。'
+    ],
+    logo: '/images/brand/hovering-logo-zh.png',
+    logoAlt: '昊鼎国際法律事務所のロゴ',
+    sourceUrl: 'https://www.hoveringlaw.com.tw/zh/about.html',
+    sourceLabel: '出典：hoveringlaw.com.tw'
   }
 };

@@ -230,7 +230,7 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
 
   const fetchReviews = useCallback(async () => {
     try {
-      const res = await fetch('/api/reviews');
+      const res = await fetch(`/api/reviews?locale=${locale}`);
       if (res.ok) {
         const data = await res.json();
         setReviews(data);
@@ -240,7 +240,7 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [locale]);
 
   useEffect(() => {
     fetchReviews();
@@ -263,6 +263,7 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
           service,
           content: content.trim(),
           website,
+          sourceLocale: locale,
         }),
       });
 

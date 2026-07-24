@@ -6,6 +6,7 @@ import {
   writeReviews,
   type Review,
 } from '@/lib/reviews/storage';
+import { isSiteLocale } from '@/lib/locales';
 
 const SERVICE_ALLOWLIST = new Set([
   '',
@@ -81,10 +82,25 @@ function errorMessage(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
 }
 
-export async function GET() {
+export function GET(): Promise<NextResponse>;
+export function GET(req: NextRequest): Promise<NextResponse>;
+export async function GET(
+  req: NextRequest = new NextRequest('http://localhost/api/reviews'),
+) {
+  const requestedLocale = req.nextUrl.searchParams.get('locale');
+  if (requestedLocale !== null && !isSiteLocale(requestedLocale)) {
+    return NextResponse.json(
+      { error: 'invalid source locale' },
+      { status: 400 },
+    );
+  }
+
   const reviews = await readReviews();
   const sorted = reviews
-    .filter((review) => review.status === 'approved')
+    .filter((review) => (
+      review.status === 'approved'
+      && (requestedLocale === null || review.sourceLocale === requestedLocale)
+    ))
     .sort(
       (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
     );
@@ -99,6 +115,14 @@ export async function POST(req: NextRequest) {
     const service = stringValueFor(body, 'service');
     const content = stringValueFor(body, 'content');
     const website = stringValueFor(body, 'website');
+    const sourceLocale = stringValueFor(body, 'sourceLocale');
+
+    if (!isSiteLocale(sourceLocale)) {
+      return NextResponse.json(
+        { error: 'invalid source locale' },
+        { status: 400 },
+      );
+    }
 
     if (!isAllowedOrigin(req)) {
       return NextResponse.json(
@@ -189,6 +213,7 @@ export async function POST(req: NextRequest) {
       content: content.trim(),
       createdAt: new Date().toISOString(),
       status: 'pending',
+      sourceLocale,
     };
 
     const reviews = await readReviewsForMutation();

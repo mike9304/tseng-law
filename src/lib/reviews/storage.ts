@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { get, put } from '@vercel/blob';
 import { z } from 'zod';
+import { siteLocales } from '@/lib/locales';
 
 const BLOB_NAME = 'reviews.json';
 const DEFAULT_REVIEWS_ROOT = path.join(process.cwd(), 'runtime-data', 'reviews');
@@ -13,7 +14,8 @@ const reviewSchema = z.object({
   service: z.string(),
   content: z.string(),
   createdAt: z.string(),
-  status: z.enum(['approved', 'pending']).default('approved'),
+  status: z.enum(['approved', 'pending']).default('pending'),
+  sourceLocale: z.enum(siteLocales).optional(),
 });
 
 const reviewsSchema = z.array(reviewSchema);

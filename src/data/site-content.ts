@@ -3117,11 +3117,14 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         {
           title: '人気トピック',
           links: [
-            { label: '台湾弁護士', href: '/ja/taiwan-lawyer' },
-            { label: '台湾会社設立', href: '/ja/taiwan-company-setup-lawyer' },
-            { label: '台湾訴訟', href: '/ja/taiwan-litigation-lawyer' },
-            { label: '台湾会社設立ガイド', href: '/ja/guides/taiwan-company-setup' },
-            { label: '韓国語対応の台湾弁護士', href: '/ja/korean-lawyer-in-taiwan' }
+            { label: '台湾弁護士', href: '/ja/lawyers' },
+            { label: '台湾会社設立', href: '/ja/services#investment' },
+            { label: '台湾訴訟', href: '/ja/services#civil' },
+            {
+              label: '台湾会社設立ガイド',
+              href: '/ja/columns/taiwan-company-establishment-basics'
+            },
+            { label: '韓国語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' }
           ]
         }
       ],

@@ -10,6 +10,7 @@ vi.mock('next/navigation', () => ({
 }));
 
 import Footer from '@/components/Footer';
+import { siteContent } from '@/data/site-content';
 import type { SiteLocale } from '@/lib/locales';
 
 function renderFooter(locale: SiteLocale): string {
@@ -37,11 +38,25 @@ describe('footer social localization', () => {
 
   it('preserves the Japanese footer contract', () => {
     const html = renderFooter('ja');
+    const expectedTopics = [
+      { label: '台湾弁護士', href: '/ja/lawyers' },
+      { label: '台湾会社設立', href: '/ja/services#investment' },
+      { label: '台湾訴訟', href: '/ja/services#civil' },
+      {
+        label: '台湾会社設立ガイド',
+        href: '/ja/columns/taiwan-company-establishment-basics',
+      },
+      { label: '韓国語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' },
+    ];
+    const popularTopics = siteContent.ja.footer.columns.find(
+      (column) => column.title === '人気トピック',
+    );
 
     expect(html).toContain(
       '<p class="footer-main-brand">昊鼎国際法律事務所</p>',
     );
     expect(html).toContain('aria-label="事務所"');
+    expect(popularTopics?.links).toEqual(expectedTopics);
 
     [
       { href: '/ja/contact#offices', labels: ['台北', '台中', '高雄'] },
@@ -64,6 +79,20 @@ describe('footer social localization', () => {
     expect(anchorForHref(html, 'https://tseng-law.com/')).toContain(
       'aria-label="公式サイト"',
     );
+
+    expectedTopics.slice(0, 3).forEach(({ href, label }) => {
+      expect(html).toContain(`href="${href}">${label}</a>`);
+    });
+
+    [
+      '/ja/taiwan-lawyer',
+      '/ja/taiwan-company-setup-lawyer',
+      '/ja/taiwan-litigation-lawyer',
+      '/ja/guides/taiwan-company-setup',
+      '/ja/korean-lawyer-in-taiwan',
+    ].forEach((href) => {
+      expect(html).not.toContain(`href="${href}"`);
+    });
 
     const switcher = html.match(
       /<div class="locale-flag-switcher footer-locale-switch"[\s\S]*?<\/div>/,

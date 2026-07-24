@@ -54,7 +54,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: '한국인이 대만에서 이혼하려면 어떤 절차가 필요한가요?',
       answer:
-        '대만에서의 이혼은 ①협의이혼(양측 합의 + 법원 공증)과 ②재판이혼(조정 → 소송)으로 나뉩니다. 한국-대만 간 국제이혼의 경우 준거법, 관할 법원, 재산 분할, 양육권 문제가 복잡해지므로 양국 법률에 모두 익숙한 변호사와 상담하는 것이 중요합니다.'
+        '대만에서의 이혼은 ①협의이혼(서면 합의, 2명 이상의 증인 서명, 호정기관(戶政機關)에 이혼등기)과 ②재판이혼(조정 → 소송)으로 나뉩니다. 한국-대만 간 국제이혼의 경우 준거법, 관할 법원, 재산 분할, 양육권 문제가 복잡해지므로 양국 법률에 모두 익숙한 변호사와 상담하는 것이 중요합니다.'
     },
     {
       question: '대만에서 양육권·친권은 어떻게 결정되나요?',
@@ -127,7 +127,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: '韓國人在台灣離婚需要什麼程序？',
       answer:
-        '台灣離婚分為①協議離婚（雙方合意＋法院公證）與②裁判離婚（調解→訴訟）。韓台跨國離婚涉及準據法、管轄法院、財產分割及親權等問題，建議諮詢熟悉兩國法律的律師。'
+        '台灣離婚分為①協議離婚（應以書面為之，經二人以上證人簽名，並向戶政機關辦理離婚登記）與②裁判離婚（調解→訴訟）。韓台跨國離婚涉及準據法、管轄法院、財產分割及親權等問題，建議諮詢熟悉兩國法律的律師。'
     },
     {
       question: '台灣的親權（監護權）如何判定？',
@@ -200,7 +200,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: 'What procedures does a Korean national need for divorce in Taiwan?',
       answer:
-        'Divorce in Taiwan is either (1) by mutual agreement (both parties consent + court notarization) or (2) judicial divorce (mediation then litigation). International divorce between Korea and Taiwan involves complex issues of applicable law, jurisdiction, property division, and custody, so consulting a lawyer familiar with both legal systems is essential.'
+        'Divorce in Taiwan is either (1) by mutual consent, which must be in writing, signed by at least two witnesses, and registered with the household administration authority, or (2) judicial divorce (mediation then litigation). International divorce between Korea and Taiwan involves complex issues of applicable law, jurisdiction, property division, and custody, so consulting a lawyer familiar with both legal systems is essential.'
     },
     {
       question: 'How is child custody determined in Taiwan?',
@@ -273,7 +273,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: '韓国人が台湾で離婚するには、どのような手続きが必要ですか？',
       answer:
-        '台湾での離婚は、①協議離婚（双方の合意＋裁判所の公証）と②裁判離婚（調停 → 訴訟）に分かれます。韓国と台湾の間の国際離婚では、準拠法、管轄裁判所、財産分与、養育権の問題が複雑になるため、両国の法律に精通した弁護士に相談することが重要です。'
+        '台湾での離婚は、①協議離婚（書面による合意、2名以上の証人の署名、戸政機関への離婚登記）と②裁判離婚（調停 → 訴訟）に分かれます。韓国と台湾の間の国際離婚では、準拠法、管轄裁判所、財産分与、養育権の問題が複雑になるため、両国の法律に精通した弁護士に相談することが重要です。'
     },
     {
       question: '台湾では養育権・親権はどのように決まりますか？',

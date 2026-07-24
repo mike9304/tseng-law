@@ -83,7 +83,7 @@ describe('Japanese investment service-detail content', () => {
     expect(getJapaneseServiceDetail('investment')?.keyPoints).toHaveLength(8);
   });
 
-  it('keeps the partial source isolated until all six services are ready', () => {
+  it('keeps all six reviewed records isolated behind the safe lookup', () => {
     expect(japaneseServiceDetailSlugs).toEqual([
       'investment',
       'civil',
@@ -98,14 +98,10 @@ describe('Japanese investment service-detail content', () => {
       'family',
       'labor',
       'criminal',
+      'ip',
     ]);
 
-    for (const slug of [
-      'ip',
-      'unknown',
-      '__proto__',
-      'constructor',
-    ]) {
+    for (const slug of ['unknown', '__proto__', 'constructor']) {
       expect(getJapaneseServiceDetail(slug)).toBeUndefined();
     }
   });

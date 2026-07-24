@@ -2,6 +2,8 @@
 // Messenger URLs are the canonical firm channels already used site-wide.
 // Ownership/receive verification remains a human pre-production gate.
 
+import type { SiteLocale } from '@/lib/locales';
+
 const LINE_URL = 'https://lin.ee/hojeong';
 const KAKAO_CHANNEL_URL = 'https://pf.kakao.com/_hojeong/chat';
 const PRIMARY_PHONE = '+82-10-2992-9304';
@@ -33,7 +35,7 @@ type LocaleContent = {
   };
 };
 
-export const contactPageContent: Record<'ko' | 'zh-hant' | 'en', LocaleContent> = {
+export const contactPageContent: Record<SiteLocale, LocaleContent> = {
   ko: {
     messenger: {
       primary: { href: LINE_URL, platform: 'LINE', label: 'LINE 채널 문의' },
@@ -85,6 +87,33 @@ export const contactPageContent: Record<'ko' | 'zh-hant' | 'en', LocaleContent> 
       },
       phone: {
         label: 'Phone',
+        value: PRIMARY_PHONE,
+        href: `tel:${PRIMARY_PHONE.replace(/[^\d+]/g, '')}`,
+      },
+    },
+    offices: { offices: [{ phone: PRIMARY_PHONE }] },
+  },
+  ja: {
+    messenger: {
+      primary: {
+        href: LINE_URL,
+        platform: 'LINE',
+        label: 'LINEで相談',
+      },
+      secondary: {
+        href: KAKAO_CHANNEL_URL,
+        platform: 'KakaoTalk',
+        label: 'KakaoTalkチャンネルで相談',
+      },
+    },
+    direct: {
+      email: {
+        label: 'メール',
+        value: PRIMARY_EMAIL,
+        href: `mailto:${PRIMARY_EMAIL}`,
+      },
+      phone: {
+        label: '電話',
         value: PRIMARY_PHONE,
         href: `tel:${PRIMARY_PHONE.replace(/[^\d+]/g, '')}`,
       },

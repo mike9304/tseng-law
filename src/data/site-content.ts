@@ -638,11 +638,11 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       ctaLabel: '변호사 프로필 보기'
     },
     homeResults: {
-      label: 'RESULTS',
-      title: '한국 학생 헬스장 부상 사건,\n157만 TWD 승소',
-      description: '한국 대학생이 대만 헬스장에서 트레이너 지도 중 중상을 입은 사건에서 손해배상 청구를 진행해 1심에서 157만 TWD 판결을 받았습니다.',
-      summary: '사실관계 입증, 손해 산정, 협상·소송 전략을 통합해 결과를 도출한 대표 사례입니다.',
-      ctaLabel: '소송사례 더 보기'
+      label: '사례 분석',
+      title: '한국 유학생 헬스장 부상 사건\n1심 157만 TWD 판결·항소심 화해',
+      description: '대만 헬스장에서 트레이너의 지도를 받아 운동하던 중 다친 한국인 대학생이 손해배상을 청구한 사건입니다. 1심에서 157만 TWD의 배상을 인정하는 판결이 내려졌고, 이후 항소심에서 당사자 간 화해로 종결되었습니다.',
+      summary: '사건 결과는 구체적인 사실관계와 증거에 따라 달라질 수 있으며, 이 사례는 과거 한 사건의 진행 경과를 소개합니다.',
+      ctaLabel: '소송사례 분석 보기'
     },
     updates: {
       label: 'PROFILE',
@@ -1367,11 +1367,11 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       ctaLabel: '查看律師簡介'
     },
     homeResults: {
-      label: 'RESULTS',
-      title: '韓國學生健身房受傷案件，\n一審獲判 157 萬 TWD',
-      description: '韓國大學生於台灣健身房在教練指導下受傷後提出損害賠償請求，一審取得 157 萬 TWD 判決。',
-      summary: '本案整合事實證明、損害計算與訴訟策略，屬代表性實績案例。',
-      ctaLabel: '查看更多案例'
+      label: '案例解析',
+      title: '韓國留學生健身房受傷案\n一審判賠157萬TWD，二審和解',
+      description: '韓國大學生在台灣健身房接受教練指導運動時受傷，因而提起損害賠償請求。一審判決賠償157萬TWD，其後於二審由雙方和解結案。',
+      summary: '案件結果會因具體事實與證據而異；本案例僅說明一件過往案件的處理經過。',
+      ctaLabel: '查看訴訟案例'
     },
     updates: {
       label: 'PROFILE',
@@ -2117,11 +2117,11 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       ctaLabel: 'View Lawyer Profile'
     },
     homeResults: {
-      label: 'RESULTS',
-      title: 'Korean Student Gym Injury Case,\nTWD 1.57M First-Instance Win',
-      description: 'In a case where a Korean university student suffered a serious injury during trainer-guided exercise at a Taiwan gym, we pursued damages and obtained a TWD 1.57M ruling in first instance.',
-      summary: 'This is a representative result built on integrated fact proof, damage calculation, negotiation, and litigation strategy.',
-      ctaLabel: 'View More Case Results'
+      label: 'CASE STUDY',
+      title: 'Korean Student Gym Injury Case\nTWD 1.57M Ruling, Then Appeal Settlement',
+      description: 'A Korean university student sought damages after being injured while training under an instructor’s supervision at a Taiwan gym. The first-instance court issued a TWD 1.57 million damages ruling; the case later concluded through a settlement on appeal.',
+      summary: 'Outcomes depend on the specific facts and evidence; this case study describes the course of one past matter.',
+      ctaLabel: 'View Case Studies'
     },
     updates: {
       ...base.updates,
@@ -2865,12 +2865,12 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       ctaLabel: '弁護士プロフィールを見る'
     },
     homeResults: {
-      label: 'RESULTS',
-      title: '韓国人留学生ジム傷害事件、\n一審でTWD 1.57M勝訴',
+      label: '事例紹介',
+      title: '韓国人留学生のジム負傷事件\n一審157万TWD判決後、控訴審で和解',
       description:
-        '台湾のジムでトレーナー指導下のトレーニング中に重傷を負った韓国人大学生の事件で、損害賠償を追及し、一審でTWD 1.57Mの判決を得ました。',
-      summary: '事実立証、損害算定、交渉、訴訟戦略を一体で組み立てた代表的成果です。',
-      ctaLabel: 'その他の実績を見る'
+        '台湾のジムでトレーナーの指導を受けて運動中に負傷した韓国人大学生が、損害賠償を請求した事例です。一審では157万TWDの損害賠償を認める判決が出され、その後、控訴審で当事者間の和解により終結しました。',
+      summary: '結果は具体的な事実関係や証拠により異なります。本事例は、過去の一案件の経過を紹介するものです。',
+      ctaLabel: '取扱事例を見る'
     },
     updates: {
       ...base.updates,

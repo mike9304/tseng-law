@@ -111,10 +111,32 @@ export default function MobileNavDrawer({
 
   if (!open) return null;
 
-  const closeLabel = locale === 'ko' ? '닫기' : locale === 'zh-hant' ? '關閉' : 'Close';
-  const drawerLabel = locale === 'ko' ? '모바일 메뉴' : locale === 'zh-hant' ? '行動選單' : 'Mobile menu';
-  const navLabel = locale === 'ko' ? '모바일 주요 메뉴' : locale === 'zh-hant' ? '行動主要選單' : 'Mobile main menu';
-  const brandText = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
+  const closeLabel =
+    locale === 'ko' ? '닫기' : locale === 'zh-hant' ? '關閉' : locale === 'ja' ? '閉じる' : 'Close';
+  const drawerLabel =
+    locale === 'ko'
+      ? '모바일 메뉴'
+      : locale === 'zh-hant'
+        ? '行動選單'
+        : locale === 'ja'
+          ? 'モバイルメニュー'
+          : 'Mobile menu';
+  const navLabel =
+    locale === 'ko'
+      ? '모바일 주요 메뉴'
+      : locale === 'zh-hant'
+        ? '行動主要選單'
+        : locale === 'ja'
+          ? 'モバイルメインメニュー'
+          : 'Mobile main menu';
+  const brandText =
+    locale === 'ko'
+      ? '법무법인 호정'
+      : locale === 'zh-hant'
+        ? '昊鼎國際法律事務所'
+        : locale === 'ja'
+          ? '昊鼎国際法律事務所'
+          : 'Hovering International Law Firm';
   const labels =
     memberLabels ??
     (locale === 'ko'
@@ -150,9 +172,11 @@ export default function MobileNavDrawer({
           </button>
         </div>
         <div className="drawer-utilities">
-          <button className="chip" type="button" onClick={onSearch} aria-label={content.nav.searchLabel}>
-            {content.nav.searchLabel}
-          </button>
+          {locale !== 'ja' ? (
+            <button className="chip" type="button" onClick={onSearch} aria-label={content.nav.searchLabel}>
+              {content.nav.searchLabel}
+            </button>
+          ) : null}
           <LocaleFlagSwitcher
             locale={locale}
             className="locale-flag-switcher--mobile"
@@ -168,34 +192,36 @@ export default function MobileNavDrawer({
           ))}
         </nav>
         <div className="drawer-footer">
-          <div className="utility-member-nav drawer-member-nav" data-member-nav-state={memberState.status}>
-            {memberState.status === 'signed-in' ? (
-              <>
-                <Link href={`/${locale}/account`} data-member-role-link="account" onClick={onClose}>
-                  {labels.account}
-                </Link>
-                {canSeePremium ? (
-                  <Link href={`/${locale}/account/premium`} data-member-role-link="premium" onClick={onClose}>
-                    {labels.premium}
+          {locale !== 'ja' ? (
+            <div className="utility-member-nav drawer-member-nav" data-member-nav-state={memberState.status}>
+              {memberState.status === 'signed-in' ? (
+                <>
+                  <Link href={`/${locale}/account`} data-member-role-link="account" onClick={onClose}>
+                    {labels.account}
                   </Link>
-                ) : null}
-                <button
-                  type="button"
-                  data-member-role-link="logout"
-                  onClick={() => {
-                    void onMemberLogout?.();
-                    onClose();
-                  }}
-                >
-                  {labels.logout}
-                </button>
-              </>
-            ) : (
-              <Link href={loginHref} data-member-role-link="login" onClick={onClose}>
-                {labels.login}
-              </Link>
-            )}
-          </div>
+                  {canSeePremium ? (
+                    <Link href={`/${locale}/account/premium`} data-member-role-link="premium" onClick={onClose}>
+                      {labels.premium}
+                    </Link>
+                  ) : null}
+                  <button
+                    type="button"
+                    data-member-role-link="logout"
+                    onClick={() => {
+                      void onMemberLogout?.();
+                      onClose();
+                    }}
+                  >
+                    {labels.logout}
+                  </button>
+                </>
+              ) : (
+                <Link href={loginHref} data-member-role-link="login" onClick={onClose}>
+                  {labels.login}
+                </Link>
+              )}
+            </div>
+          ) : null}
           <Link href={content.nav.cta.href} className="button" onClick={onClose}>
             {content.nav.cta.label}
           </Link>

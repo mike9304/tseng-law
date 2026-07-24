@@ -20,14 +20,14 @@ function badRequest(message: string) {
 function buildSubmitFallbackMessage(locale: ReturnType<typeof normalizeLocale>): string {
   const email = getConsultationPublicEmail();
   if (locale === 'ko') {
-    return `지금은 자동 접수가 완료되지 않았습니다. LINE / KakaoTalk / 전화 또는 ${email} 로 직접 문의해 주세요.`;
+    return `지금은 자동 접수가 완료되지 않았습니다. KakaoTalk, 전화 또는 ${email}로 직접 문의해 주세요.`;
   }
 
   if (locale === 'zh-hant') {
-    return `目前自動送件未完成，請改用 LINE / KakaoTalk / 電話，或直接寄信至 ${email}。`;
+    return `目前自動送件未完成，請改用 KakaoTalk、電話，或直接寄信至 ${email}。`;
   }
 
-  return `Automatic intake is unavailable right now. Please use LINE, KakaoTalk, phone, or email ${email} directly.`;
+  return `Automatic intake is unavailable right now. Please use KakaoTalk, phone, or email ${email} directly.`;
 }
 
 export async function POST(request: NextRequest) {

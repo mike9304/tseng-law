@@ -269,7 +269,7 @@ const FOLLOW_UP_MAP_KO: Record<FollowUpKey, FollowUpSuggestion[]> = {
   general: [
     { label: '상담 가능 분야', message: '호정국제는 어떤 법률 분야를 주로 다루고 있나요?' },
     { label: '상담 비용', message: '직접 변호사 상담 시 비용은 대략 어떻게 책정되나요?' },
-    { label: '연락 방식', message: '이메일 외에 LINE, 카카오톡, 전화 등 어떤 방식으로 연락할 수 있나요?' },
+    { label: '연락 방식', message: '이메일 외에 카카오톡이나 전화로도 연락할 수 있나요?' },
   ],
   unknown: [
     { label: '질문 예시', message: '어떤 유형의 질문에 AI가 먼저 답해 줄 수 있나요?' },
@@ -321,7 +321,7 @@ const FOLLOW_UP_MAP_ZH: Record<FollowUpKey, FollowUpSuggestion[]> = {
   general: [
     { label: '服務領域', message: '昊鼎國際法律事務所主要處理哪些法律領域？' },
     { label: '諮詢費用', message: '直接預約律師諮詢的費用大致如何計算？' },
-    { label: '聯絡方式', message: '除了 Email 之外，還可以透過 LINE、KakaoTalk 或電話聯絡嗎？' },
+    { label: '聯絡方式', message: '除了 Email 之外，還可以透過 KakaoTalk 或電話聯絡嗎？' },
   ],
   unknown: [
     { label: '可提問的問題', message: 'AI 可以先回答哪些類型的問題？' },
@@ -373,7 +373,7 @@ const FOLLOW_UP_MAP_EN: Record<FollowUpKey, FollowUpSuggestion[]> = {
   general: [
     { label: 'Practice areas', message: 'What legal areas does Hovering International mainly handle?' },
     { label: 'Consultation fees', message: 'How are direct lawyer consultation fees typically calculated?' },
-    { label: 'Contact channels', message: 'Besides email, can I reach the firm via LINE, KakaoTalk, or phone?' },
+    { label: 'Contact channels', message: 'Besides email, can I reach the firm via KakaoTalk or phone?' },
   ],
   unknown: [
     { label: 'Example questions', message: 'What kinds of questions can the AI answer first?' },

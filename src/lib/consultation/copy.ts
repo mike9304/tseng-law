@@ -81,7 +81,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     assistantInitialMessage:
       '안녕하세요. 호정 AI 상담 도우미입니다. 회사설립, 교통사고, 노동, 이혼·상속처럼 공개 칼럼으로 먼저 안내할 수 있는 질문은 간단히 정리해 드리고, 구체 사건은 사람 상담으로 연결해 드리겠습니다.',
     assistantFallbackError:
-      '지금은 AI 응답 연결이 불안정합니다. 아래 상담 신청란을 이용하시거나 LINE / KakaoTalk / 이메일로 바로 문의해 주세요.',
+      '지금은 AI 응답 연결이 불안정합니다. 아래 상담 신청란을 이용하시거나 KakaoTalk / 이메일로 바로 문의해 주세요.',
     assistantPendingLabel: 'AI가 질문을 정리하고 있습니다.',
     quickActionsLabel: '자주 시작하는 질문',
     quickActions: [
@@ -92,7 +92,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     ],
     channelsTitle: '사람 상담으로 바로 전환',
     channelsDescription:
-      '긴급하거나 사실관계가 복잡한 경우에는 AI 설명보다 LINE, KakaoTalk, 이메일, 전화가 더 적합합니다.',
+      '긴급하거나 사실관계가 복잡한 경우에는 AI 설명보다 KakaoTalk, 이메일, 전화가 더 적합합니다.',
     attorneyReviewTitle: '최종 판단은 대만 변호사 상담',
     attorneyReviewDescription:
       'AI 답변은 참고용이며 틀릴 수 있습니다. 구체 사건의 최종 판단과 대응 방향은 대만 변호사 검토가 필요합니다.',
@@ -105,7 +105,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     submitSuccess:
       '상담 요청이 접수되었습니다. 담당 검토용 이메일로 전달했고, 접수 번호는',
     submitFailure:
-      '지금은 자동 접수가 완료되지 않았습니다. LINE / KakaoTalk / 전화 또는 변호사 이메일로 바로 문의해 주세요.',
+      '지금은 자동 접수가 완료되지 않았습니다. KakaoTalk / 전화 또는 변호사 이메일로 바로 문의해 주세요.',
     sendLabel: '질문 보내기',
     sendingLabel: '질문 전송 중...',
     submitLabel: '상담 신청 보내기',
@@ -134,7 +134,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
       input: '예: 대만 회사를 설립하려면 절차가 어떻게 되나요?',
       name: '홍길동',
       email: 'name@example.com',
-      phoneOrMessenger: '전화번호, LINE ID, KakaoTalk ID 중 편한 방식',
+      phoneOrMessenger: '전화번호 또는 KakaoTalk ID 중 편한 방식',
       summary: '사건 배경, 현재 진행 상태, 가장 궁금한 점을 간단히 적어 주세요.',
       companyOrOrganization: '회사명 또는 소속이 있으면 적어 주세요.',
       countryOrResidence: '예: 한국 / 대만 / 일본',
@@ -144,7 +144,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     fieldPrompts: {
       name: '이름부터 알려주시면 접수 흐름을 이어갈 수 있습니다.',
       email: '연락받을 이메일을 알려주시면 좋습니다.',
-      phone_or_messenger: '전화번호나 LINE / KakaoTalk ID 중 편한 연락 수단을 남겨 주세요.',
+      phone_or_messenger: '전화번호나 KakaoTalk ID 중 편한 연락 수단을 남겨 주세요.',
       category: '문의 유형을 선택해 주시면 담당 검토 방향을 더 빨리 정리할 수 있습니다.',
       urgency: '언제가 가장 급한지 긴급도를 알려 주세요.',
       summary: '지금 상황을 2~3문장으로 요약해 주시면 접수 품질이 좋아집니다.',
@@ -172,7 +172,6 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     preferredContactOptions: [
       { value: 'email', label: '이메일' },
       { value: 'phone', label: '전화' },
-      { value: 'line', label: 'LINE' },
       { value: 'kakao', label: 'KakaoTalk' },
     ],
     riskLabels: {
@@ -193,7 +192,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     assistantInitialMessage:
       '您好，我是昊鼎 AI 諮詢助手。若是公司設立、車禍、勞動、離婚或繼承等已整理過的公開主題，我會先提供一般說明；若情況具體或緊急，會協助您轉人工諮詢。',
     assistantFallbackError:
-      '目前 AI 回覆連線不穩定。請改用下方諮詢表單，或直接透過 LINE / KakaoTalk / Email 聯繫我們。',
+      '目前 AI 回覆連線不穩定。請改用下方諮詢表單，或直接透過 KakaoTalk / Email 聯繫我們。',
     assistantPendingLabel: 'AI 正在整理您的問題。',
     quickActionsLabel: '常見起手問題',
     quickActions: [
@@ -204,7 +203,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     ],
     channelsTitle: '直接轉人工諮詢',
     channelsDescription:
-      '若案件緊急、涉及期限，或事實關係複雜，LINE、KakaoTalk、Email、電話會比 AI 更合適。',
+      '若案件緊急、涉及期限，或事實關係複雜，KakaoTalk、Email、電話會比 AI 更合適。',
     attorneyReviewTitle: '最終判斷請交由台灣律師',
     attorneyReviewDescription:
       'AI 回覆僅供初步參考，仍可能有誤。具體案件的最終法律判斷與應對方向，應由台灣律師確認。',
@@ -217,7 +216,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     submitSuccess:
       '諮詢需求已送出，並已整理寄送給負責檢閱的信箱。受理編號為',
     submitFailure:
-      '目前自動送件未完成，請改用 LINE / KakaoTalk / 電話，或直接使用律師 Email 聯繫我們。',
+      '目前自動送件未完成，請改用 KakaoTalk / 電話，或直接使用律師 Email 聯繫我們。',
     sendLabel: '送出問題',
     sendingLabel: '送出中...',
     submitLabel: '送出諮詢',
@@ -246,7 +245,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
       input: '例如：如果要在台灣設立公司，大致流程是什麼？',
       name: '王小明',
       email: 'name@example.com',
-      phoneOrMessenger: '電話、LINE ID、KakaoTalk ID 擇一即可',
+      phoneOrMessenger: '電話或 KakaoTalk ID 擇一即可',
       summary: '請簡單描述背景、目前進度與最想先確認的重點。',
       companyOrOrganization: '若有公司或單位，可一併填寫。',
       countryOrResidence: '例如：韓國 / 台灣 / 日本',
@@ -256,7 +255,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     fieldPrompts: {
       name: '請先留下姓名，方便接續整理諮詢資料。',
       email: '若方便，請留下 Email。',
-      phone_or_messenger: '請留下電話、LINE 或 KakaoTalk 中您方便聯繫的方式。',
+      phone_or_messenger: '請留下電話或 KakaoTalk 中您方便聯繫的方式。',
       category: '請選擇問題類型，方便判斷承辦方向。',
       urgency: '請說明急迫程度。',
       summary: '請用 2 到 3 句簡要描述目前情況。',
@@ -284,7 +283,6 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     preferredContactOptions: [
       { value: 'email', label: 'Email' },
       { value: 'phone', label: '電話' },
-      { value: 'line', label: 'LINE' },
       { value: 'kakao', label: 'KakaoTalk' },
     ],
     riskLabels: {
@@ -305,7 +303,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     assistantInitialMessage:
       'Hello. I am Hovering’s AI consultation assistant. I can help with general guidance on company setup, traffic accidents, labor issues, divorce, inheritance, and other topics covered by the firm’s public columns, then move you into human review when the case becomes specific or urgent.',
     assistantFallbackError:
-      'The AI connection is unstable right now. Please use the intake form below or contact the firm directly through LINE, KakaoTalk, or email.',
+      'The AI connection is unstable right now. Please use the intake form below or contact the firm directly through KakaoTalk or email.',
     assistantPendingLabel: 'The assistant is organizing your question.',
     quickActionsLabel: 'Common starting points',
     quickActions: [
@@ -316,7 +314,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     ],
     channelsTitle: 'Move directly to human review',
     channelsDescription:
-      'If the matter is urgent, deadline-driven, or fact-intensive, LINE, KakaoTalk, email, or phone will be more appropriate than AI guidance.',
+      'If the matter is urgent, deadline-driven, or fact-intensive, KakaoTalk, email, or phone will be more appropriate than AI guidance.',
     attorneyReviewTitle: 'Final judgment should come from a Taiwan lawyer',
     attorneyReviewDescription:
       'The AI response is only a first guide and can still be wrong. A Taiwan lawyer should review any case-specific decision or action plan.',
@@ -329,7 +327,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     submitSuccess:
       'Your consultation request has been received and forwarded by email for review. Your intake ID is',
     submitFailure:
-      'Automatic intake is unavailable right now. Please contact the firm directly through LINE, KakaoTalk, phone, or the lawyer review email.',
+      'Automatic intake is unavailable right now. Please contact the firm directly through KakaoTalk, phone, or the lawyer review email.',
     sendLabel: 'Send question',
     sendingLabel: 'Sending...',
     submitLabel: 'Send intake',
@@ -358,7 +356,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
       input: 'Example: What is the basic process for setting up a company in Taiwan?',
       name: 'Jane Doe',
       email: 'name@example.com',
-      phoneOrMessenger: 'Phone number, LINE ID, or KakaoTalk ID',
+      phoneOrMessenger: 'Phone number or KakaoTalk ID',
       summary: 'Briefly describe the background, current stage, and the main point you want reviewed first.',
       companyOrOrganization: 'If relevant, include your company or organization.',
       countryOrResidence: 'Example: Korea / Taiwan / Japan',
@@ -396,7 +394,6 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     preferredContactOptions: [
       { value: 'email', label: 'Email' },
       { value: 'phone', label: 'Phone' },
-      { value: 'line', label: 'LINE' },
       { value: 'kakao', label: 'KakaoTalk' },
     ],
     riskLabels: {

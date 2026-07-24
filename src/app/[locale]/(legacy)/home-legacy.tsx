@@ -15,7 +15,6 @@ import { faqContent } from '@/data/faq-content';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 import type { SiteLocale } from '@/lib/locales';
-import { toBuilderLocale } from '@/lib/locales';
 import { getAllColumnPosts, type ColumnPost } from '@/lib/columns';
 
 type HomeInsightArchivePosts = Parameters<typeof InsightsArchiveSection>[0]['posts'];
@@ -58,7 +57,7 @@ export function getHomeLegacyMetadata(locale: SiteLocale): Metadata {
   });
 }
 
-function LegacyHomePageBody({
+export function LegacyHomePageBody({
   locale,
   posts,
   faqItems,
@@ -89,7 +88,7 @@ function LegacyHomePageBody({
         <FAQAccordion locale={locale} items={faqItems} id="faq" sectionClassName="section section--gray" />
       </Reveal>
       <Reveal>
-        <OfficeMapTabs locale={toBuilderLocale(locale)} id="offices" sectionClassName="section section--light" />
+        <OfficeMapTabs locale={locale} id="offices" sectionClassName="section section--light" />
       </Reveal>
       <Reveal>
         <HomeContactCta locale={locale} />
@@ -121,14 +120,14 @@ function resolveLegacyHomeInsightPosts(locale: SiteLocale): HomeInsightArchivePo
 export function HomeLegacyPage({ locale }: { locale: SiteLocale }) {
   const faqItems = faqContent[locale] ?? faqContent.en;
   const allPosts = resolveLegacyHomeInsightPosts(locale);
-  const profile = getAttorneyProfile(toBuilderLocale(locale), primaryAttorneySlug);
+  const profile = getAttorneyProfile(locale, primaryAttorneySlug);
 
   return (
     <>
       {profile ? (
         <JsonLd
           data={buildPersonJsonLd({
-            locale: toBuilderLocale(locale),
+            locale,
             path: `/${locale}/lawyers/${profile.slug}`,
             name: profile.name,
             alternateName: profile.alternateNames,

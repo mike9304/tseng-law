@@ -47,6 +47,20 @@ const quickMenus = {
   ],
 } as const;
 
+const columnCtaLabels: Record<SiteLocale, string> = {
+  ko: '호정칼럼 보기',
+  'zh-hant': '查看專欄內容',
+  en: 'View Columns',
+  ja: 'コラムを見る',
+};
+
+const scrollArrowLabels: Record<SiteLocale, string> = {
+  ko: '아래로 스크롤',
+  'zh-hant': '向下滾動',
+  en: 'Scroll down',
+  ja: '下へスクロール',
+};
+
 export default function HeroSearch({ locale, scrollHref = '#insights' }: { locale: SiteLocale; scrollHref?: string }) {
   const hero = siteContent[locale].hero;
   const [focused, setFocused] = useState(false);
@@ -97,7 +111,7 @@ export default function HeroSearch({ locale, scrollHref = '#insights' }: { local
               data-builder-surface-key={homeHeroButtonSurfaceIds[0]}
             >
               <SurfaceText surfaceKey={homeHeroButtonSurfaceIds[0]}>
-                {locale === 'ko' ? '호정칼럼 보기' : locale === 'zh-hant' ? '查看專欄內容' : 'View Columns'}
+                {columnCtaLabels[locale]}
               </SurfaceText>
             </Link>
           </div>
@@ -145,7 +159,7 @@ export default function HeroSearch({ locale, scrollHref = '#insights' }: { local
       <a
         href={scrollHref}
         className="hero-scroll-arrow"
-        aria-label={locale === 'ko' ? '아래로 스크롤' : locale === 'zh-hant' ? '向下滾動' : 'Scroll down'}
+        aria-label={scrollArrowLabels[locale]}
       >
         <svg viewBox="0 0 28 28" aria-hidden>
           <polyline points="6,10 14,18 22,10" />

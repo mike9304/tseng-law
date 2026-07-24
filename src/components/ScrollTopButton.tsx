@@ -3,10 +3,17 @@
 import { useEffect, useState } from 'react';
 import type { SiteLocale } from '@/lib/locales';
 
+const scrollTopLabels: Record<SiteLocale, string> = {
+  ko: '상단으로 이동',
+  'zh-hant': '回到頂部',
+  en: 'Back to top',
+  ja: 'ページ上部へ戻る',
+};
+
 export default function ScrollTopButton({ locale }: { locale: SiteLocale }) {
   const [visible, setVisible] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const label = locale === 'ko' ? '상단으로 이동' : locale === 'zh-hant' ? '回到頂部' : 'Back to top';
+  const label = scrollTopLabels[locale];
 
   useEffect(() => {
     const media = window.matchMedia('(prefers-reduced-motion: reduce)');

@@ -1,6 +1,6 @@
 'use client';
 
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { contactPageContent } from '@/data/contact-page-content';
 
 interface MessengerConfig {
@@ -15,7 +15,7 @@ interface MessengerConfig {
   featuresTitle: string;
 }
 
-function getConfig(locale: Locale): MessengerConfig {
+function getConfig(locale: SiteLocale): MessengerConfig {
   const channels = contactPageContent[locale].messenger;
   if (locale === 'ko') {
     return {
@@ -55,6 +55,25 @@ function getConfig(locale: Locale): MessengerConfig {
     };
   }
 
+  if (locale === 'ja') {
+    return {
+      sectionTitle: 'メッセンジャーでのお問い合わせ',
+      sectionDescription: 'KakaoTalkチャンネルからお問い合わせいただけます。',
+      primary: {
+        label: channels.primary.label,
+        description: 'メッセージをお送りください。確認後、相談方法をご案内します。',
+        href: channels.primary.href,
+      },
+      features: [
+        '会社設立・投資に関するお問い合わせ',
+        '訴訟・紛争に関するお問い合わせ',
+        '相談方法・日程のご案内',
+        '資料送付に関する事前確認',
+      ],
+      featuresTitle: 'KakaoTalkでお問い合わせいただける内容',
+    };
+  }
+
   return {
     sectionTitle: '即時通訊諮詢',
     sectionDescription: '透過已驗證的即時通訊頻道輕鬆開始法律諮詢。',
@@ -84,7 +103,7 @@ function KakaoIcon() {
   );
 }
 
-export default function MessengerChatSection({ locale }: { locale: Locale }) {
+export default function MessengerChatSection({ locale }: { locale: SiteLocale }) {
   const config = getConfig(locale);
 
   return (

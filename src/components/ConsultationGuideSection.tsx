@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import Reveal from '@/components/Reveal';
@@ -97,9 +97,41 @@ const guideCopy = {
       },
     ],
   },
+  ja: {
+    label: 'GUIDE',
+    title: 'ご相談前の確認事項',
+    description:
+      '連絡手段と案件に関する資料をあらかじめ整理していただくと、相談日程の調整や内容の確認がスムーズです。',
+    cards: [
+      {
+        title: 'ご利用いただける連絡手段',
+        items: [
+          'KakaoTalk、メール、電話でお問い合わせいただけます。',
+          'ご希望の相談形式がある場合は、ご連絡時にお知らせください。',
+          'ご希望の使用言語がある場合は、ご連絡時にお知らせください。',
+        ],
+      },
+      {
+        title: 'ご用意いただきたい資料',
+        items: [
+          '契約書、見積書、公文書、メール、メッセージの履歴などの主要資料',
+          '会社名、当事者に関する情報、主な出来事の日付、現在の進行状況',
+          '写真、動画、判決書、届出書類など、事実関係を確認できる資料',
+        ],
+      },
+      {
+        title: 'ご相談の流れ',
+        items: [
+          'お問い合わせを受けた後、まず案件の種類と緊急性を確認します。',
+          '必要に応じて追加資料をお願いし、適切な相談方法をご案内します。',
+          '日程確定後、ご案内した方法で相談を行います。',
+        ],
+      },
+    ],
+  },
 } as const;
 
-export default function ConsultationGuideSection({ locale }: { locale: Locale }) {
+export default function ConsultationGuideSection({ locale }: { locale: SiteLocale }) {
   const content = guideCopy[locale];
 
   // Self-reveal: the `.reveal-stagger` card grid needs a `.reveal.is-visible`

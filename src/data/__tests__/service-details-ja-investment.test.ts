@@ -92,10 +92,13 @@ describe('Japanese investment service-detail content', () => {
       'criminal',
       'ip',
     ]);
-    expect(Object.keys(japaneseServiceDetails)).toEqual(['investment', 'civil']);
+    expect(Object.keys(japaneseServiceDetails)).toEqual([
+      'investment',
+      'civil',
+      'family',
+    ]);
 
     for (const slug of [
-      'family',
       'labor',
       'criminal',
       'ip',

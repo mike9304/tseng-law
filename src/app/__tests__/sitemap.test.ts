@@ -101,10 +101,11 @@ describe('sitemap column lastModified', () => {
       afterFiltering: afterFilteringUrls.size,
       removed: beforeFilteringUrls.size - afterFilteringUrls.size,
     }).toEqual({
-      // Base includes EN file-backed columns + JA /about, /columns archive, and 17 JA details (+19).
+      // Base includes EN file-backed columns + JA /about, /services, /columns archive,
+      // and 17 JA details (+20).
       // Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 148,
-      afterFiltering: 139,
+      beforeFiltering: 149,
+      afterFiltering: 140,
       removed: 9,
     });
 
@@ -143,6 +144,23 @@ describe('sitemap column lastModified', () => {
       en: 'https://tseng-law.com/en/about',
       ja: 'https://tseng-law.com/ja/about',
       'x-default': 'https://tseng-law.com/ko/about',
+    });
+  });
+
+  it('publishes Japanese services exactly once with four-language alternates', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const japaneseServicesEntries = entries.filter(
+      (entry) => entry.url === 'https://tseng-law.com/ja/services',
+    );
+
+    expect(japaneseServicesEntries).toHaveLength(1);
+    expect(japaneseServicesEntries[0]?.alternates?.languages).toEqual({
+      ko: 'https://tseng-law.com/ko/services',
+      'zh-Hant': 'https://tseng-law.com/zh-hant/services',
+      en: 'https://tseng-law.com/en/services',
+      ja: 'https://tseng-law.com/ja/services',
+      'x-default': 'https://tseng-law.com/ko/services',
     });
   });
 });

@@ -173,9 +173,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // Japanese public About and columns surfaces.
+  // Japanese public About, services-list, and columns surfaces.
   pages.push(
     createEntry('ja', '/about', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/services', {
       priority: 0.8,
       alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
     }),

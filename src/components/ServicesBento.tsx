@@ -24,8 +24,18 @@ export default function ServicesBento({
 }) {
   const { services } = siteContent[locale];
   const sectionClass = variant === 'alt' ? 'section section--gray alt' : 'section section--light';
-  const relatedLabel = locale === 'ko' ? '관련 칼럼' : locale === 'zh-hant' ? '相關專欄' : 'Related Columns';
-  const detailLabel = locale === 'ko' ? '자세히 보기 →' : locale === 'zh-hant' ? '查看詳情 →' : 'View details →';
+  const relatedLabel = locale === 'ko'
+    ? '관련 칼럼'
+    : locale === 'zh-hant'
+      ? '相關專欄'
+      : locale === 'ja'
+        ? '関連コラム'
+        : 'Related Columns';
+  const detailLabel = locale === 'ko'
+    ? '자세히 보기 →'
+    : locale === 'zh-hant'
+      ? '查看詳情 →'
+      : 'View details →';
   const serviceSlugs = getServiceSlugs();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const anchorToIndex = useMemo(() => {
@@ -146,7 +156,7 @@ export default function ServicesBento({
                         </div>
                       </div>
                     )}
-                    {serviceSlugs[index] && (
+                    {locale !== 'ja' && serviceSlugs[index] && (
                       <Link href={`/${locale}/services/${serviceSlugs[index]}`} className="services-detail-more">
                         {detailLabel}
                       </Link>

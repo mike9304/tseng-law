@@ -60,12 +60,14 @@ export function ServicesLegacyPageBody({
   locale,
   visibleBlockIds,
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   visibleBlockIds?: string[];
 }) {
   const copy = pageCopy[locale].services;
-  const showHero = isTemplateBlockVisible(visibleBlockIds, 'service-areas.list.hero');
-  const showRepeater = isTemplateBlockVisible(visibleBlockIds, 'service-areas.list.repeater');
+  const showHero = locale === 'ja'
+    || isTemplateBlockVisible(visibleBlockIds, 'service-areas.list.hero');
+  const showRepeater = locale === 'ja'
+    || isTemplateBlockVisible(visibleBlockIds, 'service-areas.list.repeater');
   return (
     <>
       {showHero ? (

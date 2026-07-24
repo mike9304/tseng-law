@@ -41,7 +41,7 @@ describe('Japanese About integration', () => {
     ]);
   });
 
-  it('passes ja through the About-only legacy dispatcher and all About children', async () => {
+  it('passes ja through the About legacy dispatcher and all About children', async () => {
     const dispatchedMetadata = getLegacyPageMetadata('about', 'ja');
     expect(dispatchedMetadata?.title).toBe(pageCopy.ja.about.title);
     expect(dispatchedMetadata?.title).not.toBe(pageCopy.en.about.title);
@@ -51,10 +51,10 @@ describe('Japanese About integration', () => {
     expect(dispatchedPage.props.locale).toBe('ja');
     expect(dispatchedPage.props.locale).not.toBe('en');
 
-    const servicesMetadata = getLegacyPageMetadata('services', 'ja');
-    const servicesPage = await renderLegacyPage('services', 'ja') as ReactElement<{ locale: string }>;
-    expect(servicesMetadata?.title).toBe(pageCopy.en.services.title);
-    expect(servicesPage.props.locale).toBe('en');
+    const pricingMetadata = getLegacyPageMetadata('pricing', 'ja');
+    const pricingPage = await renderLegacyPage('pricing', 'ja') as ReactElement<{ locale: string }>;
+    expect(pricingMetadata?.title).toBe(pageCopy.en.pricing.title);
+    expect(pricingPage.props.locale).toBe('en');
 
     const aboutBody = AboutLegacyPage({ locale: 'ja' }) as ReactElement<{ locale: string }>;
     expect(aboutBody.type).toBe(AboutLegacyPageBody);

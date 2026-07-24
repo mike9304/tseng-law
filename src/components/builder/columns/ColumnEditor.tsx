@@ -1,10 +1,7 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
-import StarterKit from '@tiptap/starter-kit';
-import Image from '@tiptap/extension-image';
-import Placeholder from '@tiptap/extension-placeholder';
 import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import ColumnTranslationStatusAlert from '@/components/builder/translations/ColumnTranslationStatusAlert';
 import type { BuilderAssetListItem } from '@/lib/builder/assets';
@@ -18,6 +15,13 @@ import {
   withPublishBusyLock,
   type SaveOutcome,
 } from '@/components/builder/columns/column-editor-ops';
+import { createColumnEditorExtensions } from '@/components/builder/columns/column-editor-extensions';
+import {
+  serializeEditorMarkdown,
+  type RichTextJson,
+} from '@/lib/builder/columns/serialize-markdown';
+import { resolveTypography } from '@/lib/builder/columns/typography';
+import type { ColumnTypography } from '@/lib/builder/columns/types';
 import type { Locale } from '@/lib/locales';
 
 interface ColumnEditorProps {
@@ -29,18 +33,12 @@ interface ColumnEditorProps {
     bodyHtml: string;
     bodyMarkdown: string;
   };
+  initialTypography?: ColumnTypography | null;
+  typography?: ColumnTypography | null;
   onSaveStatus?: (status: 'saving' | 'saved' | 'error') => void;
 }
 
 const AUTOSAVE_DEBOUNCE_MS = 1000;
-
-type RichTextJson = {
-  type?: string;
-  text?: string;
-  attrs?: Record<string, unknown>;
-  marks?: Array<{ type?: string; attrs?: Record<string, unknown> }>;
-  content?: RichTextJson[];
-};
 
 function stripHtml(value: string): string {
   return value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -52,80 +50,39 @@ function buildAutoSummary(title: string, bodyMarkdown: string, bodyHtml: string)
   return source.slice(0, 180);
 }
 
-function attrString(node: RichTextJson, key: string): string {
-  const value = node.attrs?.[key];
-  return typeof value === 'string' ? value : '';
-}
-
-function serializeInline(nodes: RichTextJson[] | undefined): string {
-  return (nodes ?? []).map(serializeMarkdownNode).join('');
-}
-
-function applyMarkdownMarks(text: string, marks: RichTextJson['marks']): string {
-  return (marks ?? []).reduce((current, mark) => {
-    if (mark.type === 'bold') return `**${current}**`;
-    if (mark.type === 'italic') return `*${current}*`;
-    if (mark.type === 'code') return `\`${current}\``;
-    if (mark.type === 'link') {
-      const href = typeof mark.attrs?.href === 'string' ? mark.attrs.href : '';
-      return href ? `[${current}](${href})` : current;
-    }
-    return current;
-  }, text);
-}
-
-function serializeListItem(node: RichTextJson, index?: number): string {
-  const marker = typeof index === 'number' ? `${index + 1}. ` : '- ';
-  const body = (node.content ?? [])
-    .map(serializeMarkdownNode)
-    .filter(Boolean)
-    .join('\n')
-    .replace(/\n/g, '\n  ');
-  return `${marker}${body}`;
-}
-
-function serializeMarkdownNode(node: RichTextJson): string {
-  if (node.type === 'text') return applyMarkdownMarks(node.text ?? '', node.marks);
-  if (node.type === 'paragraph') return serializeInline(node.content);
-  if (node.type === 'heading') {
-    const level = typeof node.attrs?.level === 'number' ? node.attrs.level : 2;
-    return `${'#'.repeat(Math.max(1, Math.min(6, level)))} ${serializeInline(node.content)}`.trim();
-  }
-  if (node.type === 'image') {
-    const src = attrString(node, 'src');
-    if (!src) return '';
-    const alt = attrString(node, 'alt') || attrString(node, 'title');
-    return `![${alt}](${src})`;
-  }
-  if (node.type === 'bulletList') {
-    return (node.content ?? []).map((item) => serializeListItem(item)).join('\n');
-  }
-  if (node.type === 'orderedList') {
-    return (node.content ?? []).map((item, index) => serializeListItem(item, index)).join('\n');
-  }
-  if (node.type === 'listItem') return serializeListItem(node);
-  if (node.type === 'blockquote') {
-    return (node.content ?? [])
-      .map(serializeMarkdownNode)
-      .join('\n')
-      .split('\n')
-      .map((line) => `> ${line}`)
-      .join('\n');
-  }
-  if (node.type === 'codeBlock') return `\`\`\`\n${serializeInline(node.content)}\n\`\`\``;
-  if (node.type === 'horizontalRule') return '---';
-  if (node.type === 'hardBreak') return '\n';
-  return (node.content ?? []).map(serializeMarkdownNode).filter(Boolean).join('\n\n');
-}
-
-function serializeEditorMarkdown(doc: RichTextJson): string {
-  return (doc.content ?? []).map(serializeMarkdownNode).filter(Boolean).join('\n\n').trim();
+function ToolbarButton({
+  label,
+  active,
+  disabled,
+  onClick,
+  ariaLabel,
+}: {
+  label: string;
+  active?: boolean;
+  disabled?: boolean;
+  onClick: () => void;
+  ariaLabel?: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      className={active ? 'is-active' : ''}
+      aria-pressed={typeof active === 'boolean' ? active : undefined}
+      aria-label={ariaLabel ?? label}
+    >
+      {label}
+    </button>
+  );
 }
 
 export default function ColumnEditor({
   slug,
   locale,
   initialContent,
+  initialTypography,
+  typography,
   onSaveStatus,
 }: ColumnEditorProps) {
   const copy = getColumnEditCopy(locale);
@@ -135,29 +92,55 @@ export default function ColumnEditor({
   const [assetLibraryOpen, setAssetLibraryOpen] = useState(false);
   const [saveStatus, setSaveStatus] = useState<'saving' | 'saved' | 'error'>('saved');
   const [busy, setBusy] = useState(false);
+  const [, setSelectionTick] = useState(0);
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastSavedRef = useRef<string>('');
   const hydratedRef = useRef(false);
   const saveCoordinatorRef = useRef(new InflightSaveCoordinator());
   const publishBusyRef = useRef(false);
 
+  const resolvedTypography = useMemo(
+    () => resolveTypography(locale, typography ?? initialTypography),
+    [locale, typography, initialTypography],
+  );
+
   const editor = useEditor({
     immediatelyRender: false,
-    extensions: [
-      StarterKit.configure({
-        heading: { levels: [1, 2, 3] },
-        link: { openOnClick: false, HTMLAttributes: { rel: 'noopener noreferrer nofollow' } },
-      }),
-      Image,
-      Placeholder.configure({ placeholder: copy.editor.bodyPlaceholder }),
-    ],
+    extensions: createColumnEditorExtensions(copy.editor.bodyPlaceholder),
     content: initialContent.bodyHtml || '<p></p>',
     editorProps: {
       attributes: {
-        class: 'column-editor-body',
+        class: `column-editor-body ${resolvedTypography.className}`,
+        style: Object.entries(resolvedTypography.cssVars)
+          .map(([key, value]) => `${key}: ${value}`)
+          .join('; '),
       },
     },
   });
+
+  useEffect(() => {
+    if (!editor) return;
+    const root = editor.view.dom as HTMLElement;
+    // Replace prior typography classes while keeping editor chrome classes.
+    Array.from(root.classList)
+      .filter((name) => name.startsWith('column-typo--'))
+      .forEach((name) => root.classList.remove(name));
+    root.classList.add(resolvedTypography.className);
+    Object.entries(resolvedTypography.cssVars).forEach(([key, value]) => {
+      root.style.setProperty(key, value);
+    });
+  }, [editor, resolvedTypography]);
+
+  useEffect(() => {
+    if (!editor) return;
+    const bump = () => setSelectionTick((value) => value + 1);
+    editor.on('selectionUpdate', bump);
+    editor.on('transaction', bump);
+    return () => {
+      editor.off('selectionUpdate', bump);
+      editor.off('transaction', bump);
+    };
+  }, [editor]);
 
   const buildPayload = useCallback(() => {
     if (!editor) return;
@@ -412,104 +395,106 @@ export default function ColumnEditor({
         </label>
       </div>
 
-      <div className="column-editor-toolbar">
-        <button
-          type="button"
+      <div className="column-editor-toolbar" role="toolbar" aria-label={copy.editor.toolbarAria}>
+        <ToolbarButton
+          label="P"
+          active={Boolean(editor?.isActive('paragraph'))}
+          disabled={controlsDisabled}
           onClick={() => editor?.chain().focus().setParagraph().run()}
-          className={editor?.isActive('paragraph') ? 'is-active' : ''}
-        >
-          P
-        </button>
-        <button
-          type="button"
+        />
+        <ToolbarButton
+          label="H1"
+          active={Boolean(editor?.isActive('heading', { level: 1 }))}
+          disabled={controlsDisabled}
           onClick={() => editor?.chain().focus().toggleHeading({ level: 1 }).run()}
-          className={editor?.isActive('heading', { level: 1 }) ? 'is-active' : ''}
-        >
-          H1
-        </button>
-        <button
-          type="button"
-          onClick={() => editor?.chain().focus().toggleBold().run()}
-          className={editor?.isActive('bold') ? 'is-active' : ''}
-        >
-          B
-        </button>
-        <button
-          type="button"
-          onClick={() => editor?.chain().focus().toggleItalic().run()}
-          className={editor?.isActive('italic') ? 'is-active' : ''}
-        >
-          I
-        </button>
-        <button
-          type="button"
-          onClick={() => editor?.chain().focus().toggleUnderline().run()}
-          className={editor?.isActive('underline') ? 'is-active' : ''}
-        >
-          U
-        </button>
-        <button
-          type="button"
+        />
+        <ToolbarButton
+          label="H2"
+          active={Boolean(editor?.isActive('heading', { level: 2 }))}
+          disabled={controlsDisabled}
           onClick={() => editor?.chain().focus().toggleHeading({ level: 2 }).run()}
-          className={editor?.isActive('heading', { level: 2 }) ? 'is-active' : ''}
-        >
-          H2
-        </button>
-        <button
-          type="button"
+        />
+        <ToolbarButton
+          label="H3"
+          active={Boolean(editor?.isActive('heading', { level: 3 }))}
+          disabled={controlsDisabled}
           onClick={() => editor?.chain().focus().toggleHeading({ level: 3 }).run()}
-          className={editor?.isActive('heading', { level: 3 }) ? 'is-active' : ''}
-        >
-          H3
-        </button>
-        <button
-          type="button"
+        />
+        <ToolbarButton
+          label="B"
+          active={Boolean(editor?.isActive('bold'))}
+          disabled={controlsDisabled}
+          onClick={() => editor?.chain().focus().toggleBold().run()}
+          ariaLabel={copy.editor.toolbarButtons.bold}
+        />
+        <ToolbarButton
+          label="I"
+          active={Boolean(editor?.isActive('italic'))}
+          disabled={controlsDisabled}
+          onClick={() => editor?.chain().focus().toggleItalic().run()}
+          ariaLabel={copy.editor.toolbarButtons.italic}
+        />
+        <ToolbarButton
+          label="U"
+          active={Boolean(editor?.isActive('underline'))}
+          disabled={controlsDisabled}
+          onClick={() => editor?.chain().focus().toggleUnderline().run()}
+          ariaLabel={copy.editor.toolbarButtons.underline}
+        />
+        <ToolbarButton
+          label="-"
+          active={Boolean(editor?.isActive('bulletList'))}
+          disabled={controlsDisabled}
           onClick={() => editor?.chain().focus().toggleBulletList().run()}
-          className={editor?.isActive('bulletList') ? 'is-active' : ''}
-        >
-          -
-        </button>
-        <button
-          type="button"
+        />
+        <ToolbarButton
+          label="1."
+          active={Boolean(editor?.isActive('orderedList'))}
+          disabled={controlsDisabled}
           onClick={() => editor?.chain().focus().toggleOrderedList().run()}
-          className={editor?.isActive('orderedList') ? 'is-active' : ''}
-        >
-          1.
-        </button>
-        <button
-          type="button"
+        />
+        <ToolbarButton
+          label={copy.editor.toolbarButtons.blockquote}
+          active={Boolean(editor?.isActive('blockquote'))}
+          disabled={controlsDisabled}
           onClick={() => editor?.chain().focus().toggleBlockquote().run()}
-          className={editor?.isActive('blockquote') ? 'is-active' : ''}
-        >
-          {copy.editor.toolbarButtons.blockquote}
-        </button>
-        <button
-          type="button"
+        />
+        <ToolbarButton
+          label={copy.editor.toolbarButtons.codeBlock}
+          active={Boolean(editor?.isActive('codeBlock'))}
+          disabled={controlsDisabled}
           onClick={() => editor?.chain().focus().toggleCodeBlock().run()}
-          className={editor?.isActive('codeBlock') ? 'is-active' : ''}
-        >
-          {copy.editor.toolbarButtons.codeBlock}
-        </button>
-        <button type="button" onClick={() => editor?.chain().focus().setHorizontalRule().run()}>
-          {copy.editor.toolbarButtons.horizontalRule}
-        </button>
-        <button
-          type="button"
+        />
+        <ToolbarButton
+          label={copy.editor.toolbarButtons.horizontalRule}
+          disabled={controlsDisabled}
+          onClick={() => editor?.chain().focus().setHorizontalRule().run()}
+        />
+        <ToolbarButton
+          label={copy.editor.toolbarButtons.link}
+          active={Boolean(editor?.isActive('link'))}
+          disabled={controlsDisabled}
           onClick={() => {
             const url = prompt(copy.editor.linkPrompt);
             if (url) editor?.chain().focus().setLink({ href: url }).run();
           }}
-          className={editor?.isActive('link') ? 'is-active' : ''}
-        >
-          {copy.editor.toolbarButtons.link}
-        </button>
-        <button
-          type="button"
-          aria-label={copy.editor.imageButtonAria}
+        />
+        <ToolbarButton
+          label={copy.editor.imageButton}
+          disabled={controlsDisabled}
           onClick={() => setAssetLibraryOpen(true)}
-        >
-          {copy.editor.imageButton}
-        </button>
+          ariaLabel={copy.editor.imageButtonAria}
+        />
+        <ToolbarButton
+          label={copy.editor.toolbarButtons.undo}
+          disabled={controlsDisabled || !editor?.can().undo()}
+          onClick={() => editor?.chain().focus().undo().run()}
+        />
+        <ToolbarButton
+          label={copy.editor.toolbarButtons.redo}
+          disabled={controlsDisabled || !editor?.can().redo()}
+          onClick={() => editor?.chain().focus().redo().run()}
+        />
       </div>
 
       <EditorContent editor={editor} />

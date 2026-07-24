@@ -8,8 +8,10 @@ import {
   getBuilderColumnsApiErrorPayload,
   type BuilderColumnsApiErrorCode,
 } from '@/lib/builder/columns/columns-api-copy';
+import { mergeFrontmatter } from '@/lib/builder/columns/merge-frontmatter';
+import { sanitizeColumnBodyHtml } from '@/lib/builder/columns/sanitize-body-html';
 import { deleteDraftColumn, deletePublishedColumn, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
-import { columnLocaleSchema, columnSlugSchema, patchColumnInputSchema, type ColumnDocument, type ColumnFrontmatter } from '@/lib/builder/columns/types';
+import { columnLocaleSchema, columnSlugSchema, patchColumnInputSchema, type ColumnDocument } from '@/lib/builder/columns/types';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { invalidateBlobColumnsCache } from '@/lib/consultation/columns-blob-reader';
 
@@ -45,67 +47,6 @@ function errorResponse(
 
 function validationErrorResponse(locale: Locale, error: ZodError): NextResponse {
   return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
-}
-
-function mergeFrontmatter(
-  base: ColumnFrontmatter,
-  incoming: Record<string, unknown> | undefined,
-  now: string,
-): ColumnFrontmatter {
-  const next: ColumnFrontmatter = {
-    ...base,
-    lastmod: now,
-  };
-  if (!incoming) return next;
-  if (typeof incoming.lastmod === 'string') next.lastmod = incoming.lastmod;
-  if (incoming.attorneyReviewStatus === 'pending' || incoming.attorneyReviewStatus === 'reviewed' || incoming.attorneyReviewStatus === 'needs-revision') {
-    next.attorneyReviewStatus = incoming.attorneyReviewStatus;
-  }
-  if (incoming.freshness === 'fresh' || incoming.freshness === 'review_needed' || incoming.freshness === 'unknown') {
-    next.freshness = incoming.freshness;
-  }
-  if (incoming.category === null) {
-    delete next.category;
-  } else if (incoming.category === 'formation' || incoming.category === 'legal' || incoming.category === 'case') {
-    next.category = incoming.category;
-  }
-
-  // Phase 14 blog meta — null clears, undefined preserves, value sets.
-  if ('blogCategory' in incoming) {
-    if (incoming.blogCategory === null) delete next.blogCategory;
-    else if (typeof incoming.blogCategory === 'string') next.blogCategory = incoming.blogCategory;
-  }
-  if ('tags' in incoming) {
-    if (incoming.tags === null) delete next.tags;
-    else if (Array.isArray(incoming.tags)) {
-      next.tags = incoming.tags.filter((t): t is string => typeof t === 'string');
-    }
-  }
-  if ('author' in incoming) {
-    if (incoming.author === null) delete next.author;
-    else if (incoming.author && typeof incoming.author === 'object') {
-      next.author = incoming.author as ColumnFrontmatter['author'];
-    }
-  }
-  if ('featuredImage' in incoming) {
-    if (incoming.featuredImage === null) delete next.featuredImage;
-    else if (typeof incoming.featuredImage === 'string') next.featuredImage = incoming.featuredImage;
-  }
-  if ('featured' in incoming) {
-    if (incoming.featured === null) delete next.featured;
-    else if (typeof incoming.featured === 'boolean') next.featured = incoming.featured;
-  }
-  if ('publishedAt' in incoming) {
-    if (incoming.publishedAt === null) delete next.publishedAt;
-    else if (typeof incoming.publishedAt === 'string') next.publishedAt = incoming.publishedAt;
-  }
-  if ('seo' in incoming) {
-    if (incoming.seo === null) delete next.seo;
-    else if (incoming.seo && typeof incoming.seo === 'object') {
-      next.seo = incoming.seo as ColumnFrontmatter['seo'];
-    }
-  }
-  return next;
 }
 
 export async function GET(request: NextRequest, context: ColumnRouteContext) {
@@ -193,7 +134,9 @@ export async function PATCH(request: NextRequest, context: ColumnRouteContext) {
       title: patch.title ?? base.title,
       summary: patch.summary ?? base.summary,
       bodyMarkdown: patch.bodyMarkdown ?? base.bodyMarkdown,
-      bodyHtml: patch.bodyHtml ?? base.bodyHtml,
+      bodyHtml: typeof patch.bodyHtml === 'string'
+        ? sanitizeColumnBodyHtml(patch.bodyHtml)
+        : base.bodyHtml,
       linkedSlugs: patch.linkedSlugs ? { ...base.linkedSlugs, ...patch.linkedSlugs } : base.linkedSlugs,
       frontmatter,
     };

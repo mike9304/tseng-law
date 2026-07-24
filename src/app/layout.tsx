@@ -1,4 +1,5 @@
 import './globals.css';
+import './column-typography.css';
 import './consultation-ai.css';
 import '@/lib/builder/components/_shared/widget-tokens.css';
 import '@/lib/builder/components/_shared/hover-states.css';

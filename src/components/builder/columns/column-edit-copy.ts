@@ -18,6 +18,7 @@ export interface ColumnEditCopy {
   previewLabel: string;
   previewReadingTimeSuffix: string;
   previewFallback: string;
+  previewMarkdownNote: string;
   draftLabel: string;
   slugPreviewPublished: string;
   slugPreviewDraft: string;
@@ -33,11 +34,17 @@ export interface ColumnEditCopy {
     imageButton: string;
     imageButtonAria: string;
     linkPrompt: string;
+    toolbarAria: string;
     toolbarButtons: {
+      bold: string;
+      italic: string;
+      underline: string;
       blockquote: string;
       codeBlock: string;
       horizontalRule: string;
       link: string;
+      undo: string;
+      redo: string;
     };
     summary: {
       label: string;
@@ -105,6 +112,24 @@ export interface ColumnEditCopy {
     freshnessFresh: string;
     freshnessReviewNeeded: string;
     freshnessUnknown: string;
+    typography: string;
+    typographyLabel: string;
+    typographyHelp: string;
+    bodySizeLabel: string;
+    lineHeightLabel: string;
+    headingWeightLabel: string;
+    sizeSm: string;
+    sizeMd: string;
+    sizeLg: string;
+    lineTight: string;
+    lineNormal: string;
+    lineRelaxed: string;
+    presetLabels: {
+      'body-sans': string;
+      'body-readable': string;
+      'display-serif': string;
+      compact: string;
+    };
   };
   localeLinker: {
     heading: string;
@@ -133,6 +158,7 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
     previewLabel: '미리보기',
     previewReadingTimeSuffix: '분 읽기',
     previewFallback: '본문 미리보기',
+    previewMarkdownNote: '저장된 마크다운 기준 · 공개 페이지와 동일한 렌더러',
     draftLabel: '초안',
     slugPreviewPublished: ' · 발행된 redirect 보호됨',
     slugPreviewDraft: ' · 초안 전용',
@@ -148,11 +174,17 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
       imageButton: '사진',
       imageButtonAria: '사진 삽입',
       linkPrompt: '링크 URL:',
+      toolbarAria: '본문 서식 도구',
       toolbarButtons: {
+        bold: '굵게',
+        italic: '기울임',
+        underline: '밑줄',
         blockquote: '인용',
         codeBlock: '코드',
         horizontalRule: '구분선',
         link: '링크',
+        undo: '실행 취소',
+        redo: '다시 실행',
       },
       summary: {
         label: '목록 설명',
@@ -220,6 +252,24 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
       freshnessFresh: '최신',
       freshnessReviewNeeded: '재검토 필요',
       freshnessUnknown: '불명',
+      typography: '글꼴 스타일',
+      typographyLabel: '본문 글꼴 스타일',
+      typographyHelp: '공개 페이지와 동일한 사이트 글꼴을 사용합니다. 임의 글꼴 URL은 사용할 수 없습니다.',
+      bodySizeLabel: '본문 크기',
+      lineHeightLabel: '줄 간격',
+      headingWeightLabel: '제목 굵기',
+      sizeSm: '작게',
+      sizeMd: '기본',
+      sizeLg: '크게',
+      lineTight: '좁게',
+      lineNormal: '기본',
+      lineRelaxed: '넓게',
+      presetLabels: {
+        'body-sans': '본문 산세리프',
+        'body-readable': '읽기 편한 본문',
+        'display-serif': '세리프 제목 강조',
+        compact: '컴팩트',
+      },
     },
     localeLinker: {
       heading: '다국어 연결',
@@ -250,6 +300,7 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
     previewLabel: '預覽',
     previewReadingTimeSuffix: '分鐘閱讀',
     previewFallback: '本文預覽',
+    previewMarkdownNote: '依已儲存 Markdown · 與公開頁相同渲染器',
     draftLabel: '草稿',
     slugPreviewPublished: ' · 已發佈 redirect 保護中',
     slugPreviewDraft: ' · 僅限草稿',
@@ -265,11 +316,17 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
       imageButton: '圖片',
       imageButtonAria: '插入圖片',
       linkPrompt: '連結 URL：',
+      toolbarAria: '本文格式工具列',
       toolbarButtons: {
+        bold: '粗體',
+        italic: '斜體',
+        underline: '底線',
         blockquote: '引用',
         codeBlock: '程式碼',
         horizontalRule: '分隔線',
         link: '連結',
+        undo: '復原',
+        redo: '重做',
       },
       summary: {
         label: '列表說明',
@@ -337,6 +394,24 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
       freshnessFresh: '最新',
       freshnessReviewNeeded: '需要重新檢查',
       freshnessUnknown: '未知',
+      typography: '字體樣式',
+      typographyLabel: '內文字體樣式',
+      typographyHelp: '使用與公開頁面相同的站內字體。不可使用任意字體 URL。',
+      bodySizeLabel: '內文字級',
+      lineHeightLabel: '行高',
+      headingWeightLabel: '標題字重',
+      sizeSm: '小',
+      sizeMd: '標準',
+      sizeLg: '大',
+      lineTight: '緊湊',
+      lineNormal: '標準',
+      lineRelaxed: '寬鬆',
+      presetLabels: {
+        'body-sans': '內文無襯線',
+        'body-readable': '易讀內文',
+        'display-serif': '襯線標題強調',
+        compact: '緊湊',
+      },
     },
     localeLinker: {
       heading: '多語言連結',
@@ -367,6 +442,7 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
     previewLabel: 'Preview',
     previewReadingTimeSuffix: 'min read',
     previewFallback: 'Article preview',
+    previewMarkdownNote: 'Saved markdown · same renderer as the public page',
     draftLabel: 'Draft',
     slugPreviewPublished: ' · published redirect protected',
     slugPreviewDraft: ' · draft only',
@@ -382,11 +458,17 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
       imageButton: 'Image',
       imageButtonAria: 'Insert image',
       linkPrompt: 'Link URL:',
+      toolbarAria: 'Body formatting toolbar',
       toolbarButtons: {
+        bold: 'Bold',
+        italic: 'Italic',
+        underline: 'Underline',
         blockquote: 'Quote',
         codeBlock: 'Code',
         horizontalRule: 'Divider',
         link: 'Link',
+        undo: 'Undo',
+        redo: 'Redo',
       },
       summary: {
         label: 'List description',
@@ -454,6 +536,24 @@ const COLUMN_EDIT_COPY: Record<Locale, ColumnEditCopy> = {
       freshnessFresh: 'Fresh',
       freshnessReviewNeeded: 'Needs review',
       freshnessUnknown: 'Unknown',
+      typography: 'Typography',
+      typographyLabel: 'Body type style',
+      typographyHelp: 'Uses the same site fonts as the public page. Arbitrary font URLs are not allowed.',
+      bodySizeLabel: 'Body size',
+      lineHeightLabel: 'Line height',
+      headingWeightLabel: 'Heading weight',
+      sizeSm: 'Small',
+      sizeMd: 'Medium',
+      sizeLg: 'Large',
+      lineTight: 'Tight',
+      lineNormal: 'Normal',
+      lineRelaxed: 'Relaxed',
+      presetLabels: {
+        'body-sans': 'Body sans',
+        'body-readable': 'Readable body',
+        'display-serif': 'Display serif headings',
+        compact: 'Compact',
+      },
     },
     localeLinker: {
       heading: 'Locale links',

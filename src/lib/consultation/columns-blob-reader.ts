@@ -70,6 +70,12 @@ interface ColumnDocumentFromBlob {
     };
     featuredImage?: string;
     publishedAt?: string;
+    typography?: {
+      presetId?: string;
+      bodySize?: 'sm' | 'md' | 'lg';
+      headingWeight?: '500' | '600' | '700';
+      lineHeight?: 'tight' | 'normal' | 'relaxed';
+    };
   };
   linkedSlugs?: { ko?: string; 'zh-hant'?: string; en?: string };
   draft?: boolean;
@@ -89,6 +95,7 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
   // Body is whatever the editor produced — prefer markdown for AI ingestion
   // since the column-knowledge stripMarkdown flow expects markdown-ish text.
   const content = doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '';
+  const typography = normalizeTypography(doc.frontmatter?.typography);
   return {
     slug: doc.slug,
     title: doc.title || doc.slug,
@@ -103,6 +110,12 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
     featuredImage: doc.frontmatter?.featuredImage || '',
     content,
     summary: doc.summary || '',
+    ...(typography
+      ? {
+          typography,
+          typographyPresetId: typography.presetId,
+        }
+      : {}),
   };
 }
 
@@ -113,6 +126,7 @@ function builderDocToColumnPost(doc: ColumnDocument): ColumnPost {
       : 'legal';
   const content = doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '';
   const dateIso = doc.frontmatter.publishedAt || doc.frontmatter.lastmod || doc.updatedAt;
+  const typography = normalizeTypography(doc.frontmatter.typography);
   return {
     slug: doc.slug,
     title: doc.title || doc.slug,
@@ -127,6 +141,31 @@ function builderDocToColumnPost(doc: ColumnDocument): ColumnPost {
     featuredImage: doc.frontmatter.featuredImage || '',
     content,
     summary: doc.summary || '',
+    ...(typography
+      ? {
+          typography,
+          typographyPresetId: typography.presetId,
+        }
+      : {}),
+  };
+}
+
+function normalizeTypography(value: unknown): ColumnPost['typography'] | undefined {
+  if (!value || typeof value !== 'object') return undefined;
+  const record = value as Record<string, unknown>;
+  const presetId = typeof record.presetId === 'string' ? record.presetId.trim() : '';
+  if (!presetId) return undefined;
+  return {
+    presetId,
+    ...(record.bodySize === 'sm' || record.bodySize === 'md' || record.bodySize === 'lg'
+      ? { bodySize: record.bodySize }
+      : {}),
+    ...(record.headingWeight === '500' || record.headingWeight === '600' || record.headingWeight === '700'
+      ? { headingWeight: record.headingWeight }
+      : {}),
+    ...(record.lineHeight === 'tight' || record.lineHeight === 'normal' || record.lineHeight === 'relaxed'
+      ? { lineHeight: record.lineHeight }
+      : {}),
   };
 }
 

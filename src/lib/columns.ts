@@ -26,6 +26,14 @@ export interface ColumnPost {
   content: string;
   summary: string;
   faq?: ColumnFaqItem[];
+  /** Allowlisted body typography preset id (e.g. ko-body-readable). */
+  typographyPresetId?: string;
+  typography?: {
+    presetId: string;
+    bodySize?: 'sm' | 'md' | 'lg';
+    headingWeight?: '500' | '600' | '700';
+    lineHeight?: 'tight' | 'normal' | 'relaxed';
+  };
 }
 
 /**

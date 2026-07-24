@@ -2,15 +2,8 @@ import type { Metadata } from 'next';
 import type { Locale } from '@/lib/locales';
 import { normalizeLocale } from '@/lib/locales';
 import { readColumnBundle } from '@/lib/builder/columns/storage';
-import ColumnEditor from '@/components/builder/columns/ColumnEditor';
-import ColumnFrontmatterPanel from '@/components/builder/columns/ColumnFrontmatterPanel';
-import ColumnLocaleLinker from '@/components/builder/columns/ColumnLocaleLinker';
+import ColumnEditWorkspace from '@/components/builder/columns/ColumnEditWorkspace';
 import { getColumnEditCopy } from '@/components/builder/columns/column-edit-copy';
-import {
-  estimateReadingTime,
-  getCategoryLabel,
-  getColumnBlogCategory,
-} from '@/components/builder/columns/blogAdminMeta';
 
 export const dynamic = 'force-dynamic';
 
@@ -59,11 +52,6 @@ export default async function ColumnEditPage({
     );
   }
 
-  const category = getColumnBlogCategory(column.frontmatter);
-  const authorName = column.frontmatter.author?.name ?? '호정국제 법률사무소';
-  const readingTime = estimateReadingTime(`${column.summary} ${column.bodyMarkdown} ${column.bodyHtml}`);
-  const dateLocale = locale === 'zh-hant' ? 'zh-Hant-TW' : locale === 'ko' ? 'ko-KR' : 'en-US';
-
   return (
     <main className="column-editor-page">
       <div className="column-builder-return-dock" aria-label={copy.quickNavAria}>
@@ -101,76 +89,12 @@ export default async function ColumnEditPage({
         </a>
       </header>
 
-      <div className="column-editor-grid column-editor-grid--writer">
-        <div className="column-editor-main-rail">
-          <ColumnEditor
-            slug={slug}
-            locale={locale}
-            initialContent={{
-              title: column.title,
-              summary: column.summary,
-              bodyHtml: column.bodyHtml,
-              bodyMarkdown: column.bodyMarkdown,
-            }}
-          />
-          <details className="column-editor-advanced-shell">
-            <summary>
-              <span>{copy.advancedSummaryTitle}</span>
-              <strong>{copy.advancedSummaryDescription}</strong>
-            </summary>
-            <div className="column-editor-advanced-grid">
-              <div className="column-editor-meta-rail">
-                <ColumnFrontmatterPanel
-                  slug={slug}
-                  locale={locale}
-                  initial={column.frontmatter}
-                  hasPublished={Boolean(bundle.published || column.frontmatter.slugRedirectFrom)}
-                />
-                <ColumnLocaleLinker
-                  slug={slug}
-                  locale={locale}
-                  linkedSlugs={column.linkedSlugs || {}}
-                />
-              </div>
-              <aside className="column-editor-preview-rail">
-                <div className="column-preview-card">
-                  <div className="column-preview-toolbar">
-                    <span>{copy.previewLabel}</span>
-                    <strong>{readingTime}{copy.previewReadingTimeSuffix}</strong>
-                  </div>
-                  {column.frontmatter.featuredImage ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img className="column-preview-image" src={column.frontmatter.featuredImage} alt="" />
-                  ) : (
-                    <div className="column-preview-image column-preview-image-placeholder">
-                      {column.title.slice(0, 2).toUpperCase() || 'HJ'}
-                    </div>
-                  )}
-                  <div className="column-preview-body">
-                    <span className="column-category-chip" style={{ background: category.color }}>
-                      {getCategoryLabel(category, locale)}
-                    </span>
-                    <h2>{column.title}</h2>
-                    <p className="column-preview-summary">{column.summary}</p>
-                    <div className="column-preview-meta">
-                      <span>{authorName}</span>
-                      <span>
-                        {column.frontmatter.publishedAt
-                          ? new Date(column.frontmatter.publishedAt).toLocaleDateString(dateLocale)
-                          : copy.draftLabel}
-                      </span>
-                    </div>
-                    <article
-                      className="column-preview-article"
-                      dangerouslySetInnerHTML={{ __html: column.bodyHtml || `<p>${copy.previewFallback}</p>` }}
-                    />
-                  </div>
-                </div>
-              </aside>
-            </div>
-          </details>
-        </div>
-      </div>
+      <ColumnEditWorkspace
+        slug={slug}
+        locale={locale}
+        column={column}
+        hasPublished={Boolean(bundle.published || column.frontmatter.slugRedirectFrom)}
+      />
     </main>
   );
 }

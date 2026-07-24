@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -12,6 +13,8 @@ import {
   isBuilderDynamicTemplateBlockVisible,
   readBuilderDynamicTemplatePublishedBlockVisibility,
 } from '@/lib/builder/dynamic-template-drafts';
+import { resolveTypography } from '@/lib/builder/columns/typography';
+import type { ColumnTypography } from '@/lib/builder/columns/types';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -131,6 +134,14 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
   const showBody = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.item.body');
   const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.item.seo');
 
+  const typography = resolveTypography(
+    locale,
+    (post.typography as ColumnTypography | undefined)
+      ?? (post.typographyPresetId
+        ? { presetId: post.typographyPresetId } as ColumnTypography
+        : undefined),
+  );
+
   return (
     <>
       {showSeo ? (
@@ -191,7 +202,11 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
       {showBody ? (
         <article className="blog-article">
           <div className="container blog-container">
-            <div className="blog-body">
+            <div
+              className={`blog-body ${typography.className}`}
+              data-column-typography={typography.presetId}
+              style={typography.cssVars as CSSProperties}
+            >
               <ColumnContent content={post.content} />
               {showBody && showFaq ? (
                 <section className="column-faq" aria-label={t.faqHeading}>

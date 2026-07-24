@@ -2,12 +2,13 @@
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { remarkUnderline } from '@/lib/builder/columns/remark-underline';
 
 export default function ColumnContent({ content }: { content: string }) {
   return (
-    <div className="column-markdown">
+    <div className="column-markdown" data-column-content="markdown">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
+        remarkPlugins={[remarkGfm, remarkUnderline]}
         components={{
           img: ({ src, alt }) => {
             if (!src) return null;
@@ -25,6 +26,7 @@ export default function ColumnContent({ content }: { content: string }) {
             <div className="column-table-wrap"><table>{children}</table></div>
           ),
           strong: ({ children }) => <strong style={{ fontWeight: 600 }}>{children}</strong>,
+          u: ({ children }) => <u className="column-underline">{children}</u>,
           a: ({ href, children }) => (
             <a href={href || '#'} target="_blank" rel="noopener noreferrer" className="link-underline">{children}</a>
           ),

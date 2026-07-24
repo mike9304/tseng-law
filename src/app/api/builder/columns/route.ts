@@ -8,6 +8,7 @@ import {
 } from '@/lib/builder/columns/columns-api-copy';
 import { recordColumnEvent } from '@/lib/builder/audit/record';
 import { listColumns, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
+import { sanitizeColumnBodyHtml } from '@/lib/builder/columns/sanitize-body-html';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
   createColumnInputSchema,
@@ -102,7 +103,7 @@ export async function POST(request: NextRequest) {
       title: input.title,
       summary: input.summary ?? '',
       bodyMarkdown: input.bodyMarkdown ?? '',
-      bodyHtml: input.bodyHtml ?? '',
+      bodyHtml: sanitizeColumnBodyHtml(input.bodyHtml ?? ''),
       linkedSlugs: input.linkedSlugs ?? {},
       frontmatter: {
         lastmod: fm?.lastmod ?? now,
@@ -117,6 +118,7 @@ export async function POST(request: NextRequest) {
         ...(typeof fm?.featured === 'boolean' ? { featured: fm.featured } : {}),
         ...(typeof fm?.publishedAt === 'string' ? { publishedAt: fm.publishedAt } : {}),
         ...(fm?.seo ? { seo: fm.seo } : {}),
+        ...(fm?.typography ? { typography: fm.typography } : {}),
       },
       draft: true,
       revision: 1,

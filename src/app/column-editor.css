@@ -1163,10 +1163,24 @@
   border-radius: 0 0 8px 8px;
   background: #ffffff;
   color: #1f2937;
-  font-size: 1rem;
-  line-height: 1.78;
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: var(--column-typo-size, 1rem);
+  line-height: var(--column-typo-leading, 1.78);
   outline: none;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.column-preview-note {
+  margin: 0;
+  padding: 0.35rem 0.85rem 0;
+  color: #667085;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.column-preview-article .column-markdown {
+  font: inherit;
 }
 
 .column-editor-body h1,

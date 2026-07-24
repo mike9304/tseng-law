@@ -10,7 +10,12 @@ import {
 } from '@/components/builder/columns/blogAdminMeta';
 import { getColumnEditCopy } from '@/components/builder/columns/column-edit-copy';
 import type { Locale } from '@/lib/locales';
-import type { ColumnFrontmatter } from '@/lib/builder/columns/types';
+import type { ColumnFrontmatter, ColumnTypography, ColumnTypographyPresetId } from '@/lib/builder/columns/types';
+import {
+  defaultTypographyForLocale,
+  listTypographyPresetsForLocale,
+  resolveTypography,
+} from '@/lib/builder/columns/typography';
 
 interface ColumnFrontmatterPanelProps {
   slug: string;
@@ -18,6 +23,14 @@ interface ColumnFrontmatterPanelProps {
   initial: ColumnFrontmatter;
   hasPublished?: boolean;
   onSaveStatus?: (status: 'saving' | 'saved' | 'error') => void;
+  onTypographyChange?: (typography: ColumnTypography) => void;
+}
+
+function roleFromPresetId(presetId: ColumnTypographyPresetId): keyof ReturnType<typeof getColumnEditCopy>['frontmatter']['presetLabels'] {
+  if (presetId.endsWith('body-readable')) return 'body-readable';
+  if (presetId.endsWith('display-serif')) return 'display-serif';
+  if (presetId.endsWith('compact')) return 'compact';
+  return 'body-sans';
 }
 
 const DEBOUNCE_MS = 1000;
@@ -62,10 +75,12 @@ export default function ColumnFrontmatterPanel({
   initial,
   hasPublished = false,
   onSaveStatus,
+  onTypographyChange,
 }: ColumnFrontmatterPanelProps) {
   const copy = getColumnEditCopy(locale);
   const router = useRouter();
   const initialCategory = getColumnBlogCategory(initial);
+  const resolvedInitialTypography = resolveTypography(locale, initial.typography);
   const [slugDraft, setSlugDraft] = useState(slug);
   const [slugStatus, setSlugStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [slugMessage, setSlugMessage] = useState<string | null>(null);
@@ -85,9 +100,36 @@ export default function ColumnFrontmatterPanel({
   const [seoDescription, setSeoDescription] = useState(initial.seo?.description ?? '');
   const [seoOgImage, setSeoOgImage] = useState(initial.seo?.ogImage ?? '');
   const [seoNoIndex, setSeoNoIndex] = useState(Boolean(initial.seo?.noIndex));
+  const [typographyPresetId, setTypographyPresetId] = useState<ColumnTypographyPresetId>(
+    resolvedInitialTypography.presetId,
+  );
+  const [bodySize, setBodySize] = useState<'sm' | 'md' | 'lg' | ''>(
+    initial.typography?.bodySize ?? '',
+  );
+  const [lineHeight, setLineHeight] = useState<'tight' | 'normal' | 'relaxed' | ''>(
+    initial.typography?.lineHeight ?? '',
+  );
+  const [headingWeight, setHeadingWeight] = useState<'500' | '600' | '700' | ''>(
+    initial.typography?.headingWeight ?? '',
+  );
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastSavedRef = useRef('');
   const hydratedRef = useRef(false);
+  const localePresets = useMemo(() => listTypographyPresetsForLocale(locale), [locale]);
+
+  const currentTypography = useMemo((): ColumnTypography => {
+    const base = defaultTypographyForLocale(locale);
+    return {
+      presetId: typographyPresetId || base.presetId,
+      ...(bodySize ? { bodySize } : {}),
+      ...(lineHeight ? { lineHeight } : {}),
+      ...(headingWeight ? { headingWeight } : {}),
+    };
+  }, [locale, typographyPresetId, bodySize, lineHeight, headingWeight]);
+
+  useEffect(() => {
+    onTypographyChange?.(currentTypography);
+  }, [currentTypography, onTypographyChange]);
 
   const selectedCategory = useMemo(
     () => BLOG_ADMIN_CATEGORIES.find((category) => category.slug === blogCategory) ?? BLOG_ADMIN_CATEGORIES[6],
@@ -128,6 +170,7 @@ export default function ColumnFrontmatterPanel({
           ...(seoOgImage.trim() ? { ogImage: seoOgImage.trim() } : {}),
           noIndex: seoNoIndex,
         },
+        typography: currentTypography,
       },
     };
     const serialized = JSON.stringify(payload);
@@ -149,6 +192,7 @@ export default function ColumnFrontmatterPanel({
     seoDescription,
     seoOgImage,
     seoNoIndex,
+    currentTypography,
   ]);
 
   const save = useCallback(async () => {
@@ -337,6 +381,61 @@ export default function ColumnFrontmatterPanel({
         </div>
       </details>
 
+      <details className="column-panel-section column-panel-details" open data-column-typography-panel>
+        <summary>{copy.frontmatter.typography}</summary>
+        <label className="column-editor-field">
+          <span>{copy.frontmatter.typographyLabel}</span>
+          <select
+            value={typographyPresetId}
+            aria-label={copy.frontmatter.typographyLabel}
+            onChange={(event) => setTypographyPresetId(event.target.value as ColumnTypographyPresetId)}
+          >
+            {localePresets.map((presetId) => (
+              <option key={presetId} value={presetId}>
+                {copy.frontmatter.presetLabels[roleFromPresetId(presetId)]}
+              </option>
+            ))}
+          </select>
+          <small>{copy.frontmatter.typographyHelp}</small>
+        </label>
+        <label className="column-editor-field">
+          <span>{copy.frontmatter.bodySizeLabel}</span>
+          <select
+            value={bodySize}
+            onChange={(event) => setBodySize(event.target.value as 'sm' | 'md' | 'lg' | '')}
+          >
+            <option value="">{copy.frontmatter.sizeMd} (default)</option>
+            <option value="sm">{copy.frontmatter.sizeSm}</option>
+            <option value="md">{copy.frontmatter.sizeMd}</option>
+            <option value="lg">{copy.frontmatter.sizeLg}</option>
+          </select>
+        </label>
+        <label className="column-editor-field">
+          <span>{copy.frontmatter.lineHeightLabel}</span>
+          <select
+            value={lineHeight}
+            onChange={(event) => setLineHeight(event.target.value as 'tight' | 'normal' | 'relaxed' | '')}
+          >
+            <option value="">{copy.frontmatter.lineNormal} (default)</option>
+            <option value="tight">{copy.frontmatter.lineTight}</option>
+            <option value="normal">{copy.frontmatter.lineNormal}</option>
+            <option value="relaxed">{copy.frontmatter.lineRelaxed}</option>
+          </select>
+        </label>
+        <label className="column-editor-field">
+          <span>{copy.frontmatter.headingWeightLabel}</span>
+          <select
+            value={headingWeight}
+            onChange={(event) => setHeadingWeight(event.target.value as '500' | '600' | '700' | '')}
+          >
+            <option value="">600 (default)</option>
+            <option value="500">500</option>
+            <option value="600">600</option>
+            <option value="700">700</option>
+          </select>
+        </label>
+      </details>
+
       <details className="column-panel-section column-panel-details" open>
         <summary>{copy.frontmatter.category}</summary>
         <label className="column-editor-field">
@@ -459,6 +558,61 @@ export default function ColumnFrontmatterPanel({
             checked={seoNoIndex}
             onChange={(event) => setSeoNoIndex(event.target.checked)}
           />
+        </label>
+      </details>
+
+      <details className="column-panel-section column-panel-details" open>
+        <summary>{copy.frontmatter.typography}</summary>
+        <label className="column-editor-field">
+          <span>{copy.frontmatter.typographyLabel}</span>
+          <select
+            value={typographyPresetId}
+            onChange={(event) => setTypographyPresetId(event.target.value as ColumnTypographyPresetId)}
+            aria-label={copy.frontmatter.typographyLabel}
+          >
+            {localePresets.map((id) => (
+              <option key={id} value={id}>
+                {copy.frontmatter.presetLabels[roleFromPresetId(id)] ?? id}
+              </option>
+            ))}
+          </select>
+          <small>{copy.frontmatter.typographyHelp}</small>
+        </label>
+        <label className="column-editor-field">
+          <span>{copy.frontmatter.bodySizeLabel}</span>
+          <select
+            value={bodySize}
+            onChange={(event) => setBodySize(event.target.value as 'sm' | 'md' | 'lg' | '')}
+          >
+            <option value="">{copy.frontmatter.sizeMd}</option>
+            <option value="sm">{copy.frontmatter.sizeSm}</option>
+            <option value="md">{copy.frontmatter.sizeMd}</option>
+            <option value="lg">{copy.frontmatter.sizeLg}</option>
+          </select>
+        </label>
+        <label className="column-editor-field">
+          <span>{copy.frontmatter.lineHeightLabel}</span>
+          <select
+            value={lineHeight}
+            onChange={(event) => setLineHeight(event.target.value as 'tight' | 'normal' | 'relaxed' | '')}
+          >
+            <option value="">{copy.frontmatter.lineNormal}</option>
+            <option value="tight">{copy.frontmatter.lineTight}</option>
+            <option value="normal">{copy.frontmatter.lineNormal}</option>
+            <option value="relaxed">{copy.frontmatter.lineRelaxed}</option>
+          </select>
+        </label>
+        <label className="column-editor-field">
+          <span>{copy.frontmatter.headingWeightLabel}</span>
+          <select
+            value={headingWeight}
+            onChange={(event) => setHeadingWeight(event.target.value as '500' | '600' | '700' | '')}
+          >
+            <option value="">600</option>
+            <option value="500">500</option>
+            <option value="600">600</option>
+            <option value="700">700</option>
+          </select>
         </label>
       </details>
 

@@ -1,0 +1,129 @@
+/**
+ * Column document typography presets.
+ * Uses only locale font tokens already loaded via src/app/fonts.ts / globals.css.
+ * Never injects external @font-face or arbitrary fontFamily strings.
+ */
+
+.column-typo--ko-body-sans,
+.column-typo--en-body-sans {
+  font-family: var(--font-body);
+  font-size: var(--column-typo-size, 1.0625rem);
+  line-height: var(--column-typo-leading, 1.75);
+}
+
+.column-typo--ko-body-readable,
+.column-typo--en-body-readable {
+  font-family: var(--font-body);
+  font-size: var(--column-typo-size, 1.125rem);
+  line-height: var(--column-typo-leading, 1.85);
+}
+
+.column-typo--ko-display-serif,
+.column-typo--en-display-serif {
+  font-family: var(--font-body);
+  font-size: var(--column-typo-size, 1.0625rem);
+  line-height: var(--column-typo-leading, 1.75);
+}
+
+.column-typo--ko-compact,
+.column-typo--en-compact {
+  font-family: var(--font-body);
+  font-size: var(--column-typo-size, 1rem);
+  line-height: var(--column-typo-leading, 1.65);
+}
+
+.column-typo--zh-body-sans {
+  font-family: var(--font-body-zh, var(--font-body));
+  font-size: var(--column-typo-size, 1.0625rem);
+  line-height: var(--column-typo-leading, 1.8);
+}
+
+.column-typo--zh-body-readable {
+  font-family: var(--font-body-zh, var(--font-body));
+  font-size: var(--column-typo-size, 1.125rem);
+  line-height: var(--column-typo-leading, 1.9);
+}
+
+.column-typo--zh-display-serif {
+  font-family: var(--font-body-zh, var(--font-body));
+  font-size: var(--column-typo-size, 1.0625rem);
+  line-height: var(--column-typo-leading, 1.8);
+}
+
+.column-typo--zh-compact {
+  font-family: var(--font-body-zh, var(--font-body));
+  font-size: var(--column-typo-size, 1rem);
+  line-height: var(--column-typo-leading, 1.7);
+}
+
+/* Heading emphasis for display-serif presets */
+.column-typo--ko-display-serif .blog-heading,
+.column-typo--ko-display-serif h1,
+.column-typo--ko-display-serif h2,
+.column-typo--ko-display-serif h3,
+.column-typo--en-display-serif .blog-heading,
+.column-typo--en-display-serif h1,
+.column-typo--en-display-serif h2,
+.column-typo--en-display-serif h3 {
+  font-family: var(--font-heading-ko, var(--font-heading));
+  font-weight: var(--column-typo-heading-weight, 700);
+}
+
+.column-typo--zh-display-serif .blog-heading,
+.column-typo--zh-display-serif h1,
+.column-typo--zh-display-serif h2,
+.column-typo--zh-display-serif h3 {
+  font-family: var(--font-heading-zh, var(--font-heading));
+  font-weight: var(--column-typo-heading-weight, 700);
+}
+
+.column-typo--ko-body-sans .blog-heading,
+.column-typo--ko-body-readable .blog-heading,
+.column-typo--en-body-sans .blog-heading,
+.column-typo--en-body-readable .blog-heading,
+.column-typo--zh-body-sans .blog-heading,
+.column-typo--zh-body-readable .blog-heading {
+  font-weight: var(--column-typo-heading-weight, 600);
+}
+
+.column-typo--ko-compact .blog-heading,
+.column-typo--ko-compact h2,
+.column-typo--ko-compact h3,
+.column-typo--en-compact .blog-heading,
+.column-typo--en-compact h2,
+.column-typo--en-compact h3,
+.column-typo--zh-compact .blog-heading,
+.column-typo--zh-compact h2,
+.column-typo--zh-compact h3 {
+  font-family: inherit;
+  font-weight: var(--column-typo-heading-weight, 600);
+}
+
+.column-underline {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+/* Editor body inherits the same preset classes */
+.column-editor-body.column-typo--ko-body-sans,
+.column-editor-body.column-typo--ko-body-readable,
+.column-editor-body.column-typo--ko-display-serif,
+.column-editor-body.column-typo--ko-compact,
+.column-editor-body.column-typo--en-body-sans,
+.column-editor-body.column-typo--en-body-readable,
+.column-editor-body.column-typo--en-display-serif,
+.column-editor-body.column-typo--en-compact {
+  font-family: var(--font-body);
+}
+
+.column-editor-body.column-typo--zh-body-sans,
+.column-editor-body.column-typo--zh-body-readable,
+.column-editor-body.column-typo--zh-display-serif,
+.column-editor-body.column-typo--zh-compact {
+  font-family: var(--font-body-zh, var(--font-body));
+}
+
+.column-editor-body[class*='column-typo--'] {
+  font-size: var(--column-typo-size, 1.0625rem);
+  line-height: var(--column-typo-leading, 1.75);
+}

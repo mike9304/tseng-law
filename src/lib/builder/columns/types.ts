@@ -61,6 +61,38 @@ export const blogCategorySlugSchema = z
 
 export const blogTagSchema = z.string().trim().min(1).max(80);
 
+/** Closed typography presets — never store arbitrary fontFamily/CSS. */
+export const columnTypographyPresetIdSchema = z.enum([
+  // ko
+  'ko-body-sans',
+  'ko-body-readable',
+  'ko-display-serif',
+  'ko-compact',
+  // zh-hant
+  'zh-body-sans',
+  'zh-body-readable',
+  'zh-display-serif',
+  'zh-compact',
+  // en
+  'en-body-sans',
+  'en-body-readable',
+  'en-display-serif',
+  'en-compact',
+]);
+
+export const columnTypographySchema = z.object({
+  presetId: columnTypographyPresetIdSchema,
+  bodySize: z.enum(['sm', 'md', 'lg']).optional(),
+  headingWeight: z.enum(['500', '600', '700']).optional(),
+  lineHeight: z.enum(['tight', 'normal', 'relaxed']).optional(),
+});
+
+/**
+ * Soft parse for stored documents: invalid/mismatched typography must not
+ * null the entire ColumnDocument — coerce by stripping the field.
+ */
+export const columnTypographyStoredSchema = columnTypographySchema.optional().catch(undefined);
+
 export const columnFrontmatterSchema = z.object({
   lastmod: z.string().datetime({ offset: true }),
   attorneyReviewStatus: attorneyReviewStatusSchema,
@@ -75,6 +107,8 @@ export const columnFrontmatterSchema = z.object({
   publishedAt: z.string().datetime({ offset: true }).optional(),
   seo: blogSeoSchema.optional(),
   slugRedirectFrom: columnSlugSchema.optional(),
+  // P0 typography presets (optional, additive; soft on read)
+  typography: columnTypographyStoredSchema,
 });
 
 export const columnDocumentSchema = z.object({
@@ -105,6 +139,8 @@ const frontmatterInputBase = {
   featured: z.boolean().nullable().optional(),
   publishedAt: z.string().datetime({ offset: true }).nullable().optional(),
   seo: blogSeoSchema.nullable().optional(),
+  // null clears → locale default at render; strict enum on write
+  typography: columnTypographySchema.nullable().optional(),
 };
 
 export const createColumnInputSchema = z.object({
@@ -138,6 +174,8 @@ export const patchColumnInputSchema = z.object({
 
 export type ColumnDocument = z.infer<typeof columnDocumentSchema>;
 export type ColumnFrontmatter = z.infer<typeof columnFrontmatterSchema>;
+export type ColumnTypography = z.infer<typeof columnTypographySchema>;
+export type ColumnTypographyPresetId = z.infer<typeof columnTypographyPresetIdSchema>;
 export type ColumnLinkedSlugs = z.infer<typeof columnLinkedSlugsSchema>;
 export type CreateColumnInput = z.infer<typeof createColumnInputSchema>;
 export type PatchColumnInput = z.infer<typeof patchColumnInputSchema>;

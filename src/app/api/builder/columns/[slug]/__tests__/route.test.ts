@@ -238,4 +238,95 @@ describe('/api/builder/columns/[slug]', () => {
     });
     expect(deletePublishedColumn).not.toHaveBeenCalled();
   });
+
+  it('merges typography on frontmatter PATCH and preserves it on body-only PATCH', async () => {
+    const current = column({
+      slug: 'sample-column',
+      locale: 'ko',
+      bodyHtml: '<p>safe</p>',
+      frontmatter: {
+        lastmod: '2026-06-03T00:00:00.000Z',
+        attorneyReviewStatus: 'pending',
+        freshness: 'unknown',
+        typography: { presetId: 'ko-body-sans' },
+      },
+    });
+    readColumnBundleMock.mockResolvedValueOnce(bundle({
+      slug: 'sample-column',
+      draft: current,
+      preferred: current,
+    }));
+
+    const typoRes = await route.PATCH(
+      request('/api/builder/columns/sample-column?locale=ko', {
+        method: 'PATCH',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          frontmatter: { typography: { presetId: 'ko-body-readable', bodySize: 'lg' } },
+        }),
+      }),
+      { params: { slug: 'sample-column' } },
+    );
+    expect(typoRes.status).toBe(200);
+    const savedAfterTypo = writeDraftColumnMock.mock.calls.at(-1)?.[0] as ColumnDocument;
+    expect(savedAfterTypo.frontmatter.typography).toEqual({
+      presetId: 'ko-body-readable',
+      bodySize: 'lg',
+    });
+    expect(savedAfterTypo.bodyHtml).toBe('<p>safe</p>');
+
+    readColumnBundleMock.mockResolvedValueOnce(bundle({
+      slug: 'sample-column',
+      draft: savedAfterTypo,
+      preferred: savedAfterTypo,
+    }));
+
+    const bodyRes = await route.PATCH(
+      request('/api/builder/columns/sample-column?locale=ko', {
+        method: 'PATCH',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          title: 'updated title',
+          bodyHtml: '<p>next</p><script>alert(1)</script><img src=x onerror=alert(1)>',
+          bodyMarkdown: 'next',
+        }),
+      }),
+      { params: { slug: 'sample-column' } },
+    );
+    expect(bodyRes.status).toBe(200);
+    const savedAfterBody = writeDraftColumnMock.mock.calls.at(-1)?.[0] as ColumnDocument;
+    expect(savedAfterBody.frontmatter.typography).toEqual({
+      presetId: 'ko-body-readable',
+      bodySize: 'lg',
+    });
+    expect(savedAfterBody.bodyHtml).not.toMatch(/script|onerror/i);
+    expect(savedAfterBody.bodyHtml).toContain('<p>next</p>');
+  });
+
+  it('clears typography when frontmatter.typography is null', async () => {
+    const current = column({
+      frontmatter: {
+        lastmod: '2026-06-03T00:00:00.000Z',
+        attorneyReviewStatus: 'pending',
+        freshness: 'unknown',
+        typography: { presetId: 'ko-compact' },
+      },
+    });
+    readColumnBundleMock.mockResolvedValueOnce(bundle({
+      draft: current,
+      preferred: current,
+    }));
+
+    const response = await route.PATCH(
+      request('/api/builder/columns/sample-column?locale=ko', {
+        method: 'PATCH',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ frontmatter: { typography: null } }),
+      }),
+      { params: { slug: 'sample-column' } },
+    );
+    expect(response.status).toBe(200);
+    const saved = writeDraftColumnMock.mock.calls.at(-1)?.[0] as ColumnDocument;
+    expect(saved.frontmatter.typography).toBeUndefined();
+  });
 });

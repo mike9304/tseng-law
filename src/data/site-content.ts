@@ -348,51 +348,51 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       title: '주요 실적',
       items: [
         {
-          title: '헬스장 사고',
-          amount: '157만 TWD',
-          summary: '헬스장 부상 사건에서 손해배상 승소.',
+          title: '헬스장 부상 손해배상',
+          amount: '1심 157만 TWD',
+          summary: '1심에서 157만 TWD 배상 판결 후 항소심에서 화해로 종결된 사례.',
           image: '/images/feature-1.svg',
           tag: '민사',
           href: '/ko/columns'
         },
         {
-          title: '의료분쟁',
+          title: '의료분쟁 손해배상',
           amount: '300만 TWD',
-          summary: '의료분쟁 사건에서 배상 판결.',
+          summary: '의료분쟁 피해자 가족이 대학병원으로부터 300만 TWD 손해배상을 받은 사례.',
           image: '/images/feature-2.svg',
           tag: '의료',
           href: '/ko/columns'
         },
         {
-          title: '투자손실 회수',
+          title: '마이너스 유가 선물 분쟁',
           amount: '수백만 TWD',
-          summary: '금융·투자 관련 손실 회수 지원.',
+          summary: '2020년 마이너스 유가 선물 사건에서 여러 투자자가 수백만 TWD 규모의 보상을 받은 사례.',
           image: '/images/feature-3.svg',
           tag: '금융',
           href: '/ko/columns'
         },
         {
-          title: '의료과실 사건',
+          title: '교통사고 손해배상',
           amount: '290만 TWD',
-          summary: '의료과실 관련 손해배상 사건 대응.',
+          summary: '교통사고 피해자가 290만 TWD 손해배상을 받은 사례.',
           image: '/images/feature-2.svg',
-          tag: '의료',
+          tag: '교통사고',
           href: '/ko/columns'
         },
         {
-          title: '이혼 재산분할',
+          title: '부부 잔여재산 분배',
           amount: '600만 TWD',
-          summary: '가사소송 재산분할 사건 수행.',
+          summary: '일본인 배우자가 전 배우자로부터 600만 TWD의 부부 잔여재산 분배금을 받은 사례.',
           image: '/images/feature-1.svg',
           tag: '가사',
           href: '/ko/columns'
         },
         {
-          title: '화장품 분쟁',
+          title: '제3자 상대 위자료',
           amount: '30만 TWD',
-          summary: '화장품 관련 거래 분쟁 해결.',
+          summary: '일본인 배우자가 제3자로부터 30만 TWD의 위자료를 받은 사례.',
           image: '/images/feature-3.svg',
-          tag: '상사',
+          tag: '가사',
           href: '/ko/columns'
         }
       ]
@@ -1077,51 +1077,51 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       title: '主要實績',
       items: [
         {
-          title: '健身房事故',
-          amount: '157萬 TWD',
-          summary: '健身房受傷案件獲賠償判決。',
+          title: '健身房受傷求償',
+          amount: '一審157萬 TWD',
+          summary: '一審判賠157萬 TWD，其後於二審和解結案。',
           image: '/images/feature-1.svg',
           tag: '民事',
           href: '/zh-hant/columns'
         },
         {
-          title: '醫療糾紛',
+          title: '醫療糾紛求償',
           amount: '300萬 TWD',
-          summary: '醫療糾紛案件獲得賠償。',
+          summary: '醫療糾紛被害家屬獲大學醫院賠償300萬 TWD。',
           image: '/images/feature-2.svg',
           tag: '醫療',
           href: '/zh-hant/columns'
         },
         {
-          title: '投資損失回收',
+          title: '負油價期貨爭議',
           amount: '數百萬 TWD',
-          summary: '金融投資爭議之損失回收支援。',
+          summary: '2020年負油價期貨事件中，多名投資人取得數百萬 TWD補償。',
           image: '/images/feature-3.svg',
           tag: '金融',
           href: '/zh-hant/columns'
         },
         {
-          title: '醫療過失',
+          title: '交通事故求償',
           amount: '290萬 TWD',
-          summary: '醫療過失損害賠償案件。',
+          summary: '交通事故被害人取得290萬 TWD損害賠償。',
           image: '/images/feature-2.svg',
-          tag: '醫療',
+          tag: '交通',
           href: '/zh-hant/columns'
         },
         {
-          title: '離婚財產分配',
+          title: '夫妻剩餘財產分配',
           amount: '600萬 TWD',
-          summary: '家事訴訟中的財產分割。',
+          summary: '日本籍配偶自前配偶取得600萬 TWD夫妻剩餘財產分配。',
           image: '/images/feature-1.svg',
           tag: '家事',
           href: '/zh-hant/columns'
         },
         {
-          title: '化妝品爭議',
+          title: '對第三人慰撫金請求',
           amount: '30萬 TWD',
-          summary: '化妝品交易糾紛處理。',
+          summary: '日本籍配偶向第三人取得30萬 TWD慰撫金。',
           image: '/images/feature-3.svg',
-          tag: '商務',
+          tag: '家事',
           href: '/zh-hant/columns'
         }
       ]
@@ -1822,51 +1822,51 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       title: 'Representative Outcomes',
       items: [
         {
-          title: 'Gym Injury Case',
-          amount: 'TWD 1.57M',
-          summary: 'Won damages in a gym injury case.',
+          title: 'Gym Injury Damages',
+          amount: 'TWD 1.57M · First Instance',
+          summary: 'A TWD 1.57M damages ruling was issued at first instance; the matter later settled on appeal.',
           image: '/images/feature-1.svg',
           tag: 'Civil',
           href: '/en/columns'
         },
         {
-          title: 'Medical Dispute',
-          amount: 'TWD 3.0M',
-          summary: 'Compensation awarded in a medical dispute.',
+          title: 'Medical Dispute Damages',
+          amount: 'TWD 3M',
+          summary: 'A victim’s family received TWD 3M in damages from a university hospital.',
           image: '/images/feature-2.svg',
           tag: 'Medical',
           href: '/en/columns'
         },
         {
-          title: 'Investment Loss Recovery',
-          amount: 'Multi-million TWD',
-          summary: 'Supported recovery in finance and investment disputes.',
+          title: 'Negative-Price Oil Futures',
+          amount: 'Multi-Million TWD',
+          summary: 'Multiple investors received multi-million-TWD compensation in the 2020 negative-price oil futures matter.',
           image: '/images/feature-3.svg',
           tag: 'Finance',
           href: '/en/columns'
         },
         {
-          title: 'Medical Malpractice',
+          title: 'Traffic Accident Damages',
           amount: 'TWD 2.9M',
-          summary: 'Handled malpractice damages claims.',
+          summary: 'A traffic accident victim received TWD 2.9M in damages.',
           image: '/images/feature-2.svg',
-          tag: 'Medical',
+          tag: 'Traffic',
           href: '/en/columns'
         },
         {
-          title: 'Divorce Property Division',
-          amount: 'TWD 6.0M',
-          summary: 'Represented high-value family property claims.',
+          title: 'Marital Residual-Property Distribution',
+          amount: 'TWD 6M',
+          summary: 'A Japanese spouse received TWD 6M in marital residual-property distribution from a former spouse.',
           image: '/images/feature-1.svg',
           tag: 'Family',
           href: '/en/columns'
         },
         {
-          title: 'Cosmetics Trade Dispute',
+          title: 'Third-Party Non-Pecuniary Damages',
           amount: 'TWD 0.3M',
-          summary: 'Resolved a cosmetics-related commercial dispute.',
+          summary: 'A Japanese spouse received TWD 0.3M in non-pecuniary damages from a third party.',
           image: '/images/feature-3.svg',
-          tag: 'Commercial',
+          tag: 'Family',
           href: '/en/columns'
         }
       ]
@@ -2570,51 +2570,51 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       title: '代表的な成果',
       items: [
         {
-          title: 'ジム傷害事件',
-          amount: 'TWD 1.57M',
-          summary: 'ジムでの傷害事件で損害賠償を勝訴。',
+          title: 'ジム負傷の損害賠償',
+          amount: '一審157万TWD',
+          summary: '一審で157万TWDの損害賠償を認める判決後、控訴審で和解により終結した事例。',
           image: '/images/feature-1.svg',
           tag: '民事',
           href: '/ja/columns'
         },
         {
-          title: '医療紛争',
-          amount: 'TWD 3.0M',
-          summary: '医療紛争で賠償判決を獲得。',
+          title: '医療紛争の損害賠償',
+          amount: '300万TWD',
+          summary: '医療紛争の被害者家族が大学病院から300万TWDの損害賠償を受けた事例。',
           image: '/images/feature-2.svg',
           tag: '医療',
           href: '/ja/columns'
         },
         {
-          title: '投資損失の回収',
-          amount: '数百万 TWD',
-          summary: '金融・投資紛争での回収を支援。',
+          title: '原油先物価格マイナス事件',
+          amount: '数百万TWD',
+          summary: '2020年の原油先物価格マイナス事件で、複数の投資家が数百万TWDの補償を受けた事例。',
           image: '/images/feature-3.svg',
           tag: '金融',
           href: '/ja/columns'
         },
         {
-          title: '医療過誤',
-          amount: 'TWD 2.9M',
-          summary: '医療過誤の損害賠償請求を担当。',
+          title: '交通事故の損害賠償',
+          amount: '290万TWD',
+          summary: '交通事故の被害者が290万TWDの損害賠償を受けた事例。',
           image: '/images/feature-2.svg',
-          tag: '医療',
+          tag: '交通事故',
           href: '/ja/columns'
         },
         {
-          title: '離婚の財産分与',
-          amount: 'TWD 6.0M',
-          summary: '高額な家事財産分与請求を代理。',
+          title: '夫婦残余財産の分配',
+          amount: '600万TWD',
+          summary: '日本人配偶者が元配偶者から600万TWDの夫婦残余財産分配を受けた事例。',
           image: '/images/feature-1.svg',
           tag: '家事',
           href: '/ja/columns'
         },
         {
-          title: '化粧品取引紛争',
-          amount: 'TWD 0.3M',
-          summary: '化粧品関連の商事紛争を解決。',
+          title: '第三者への慰謝料請求',
+          amount: '30万TWD',
+          summary: '日本人配偶者が第三者から30万TWDの慰謝料を受けた事例。',
           image: '/images/feature-3.svg',
-          tag: '商事',
+          tag: '家事',
           href: '/ja/columns'
         }
       ]

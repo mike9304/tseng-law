@@ -156,19 +156,42 @@ describe('/api/search', () => {
     expect(payload.indexMissing).toBe(true);
   });
 
-  it('returns localized rate-limit errors', async () => {
-    checkRateLimitMock.mockResolvedValueOnce({ allowed: false } as never);
+  it('returns localized rate-limit errors for genuine throttle', async () => {
+    checkRateLimitMock.mockResolvedValueOnce({
+      allowed: false,
+      retryAfterMs: 3100,
+    } as never);
 
     const response = await GET(request('locale=zh-hant&q=portfolio'));
     const payload = await response.json();
 
     expect(response.status).toBe(429);
+    expect(response.headers.get('Retry-After')).toBe('4');
     expect(payload).toEqual({
       ok: false,
       error: '搜尋請求過多，請稍後再試。',
       errorCode: 'too_many_requests',
     });
     expect(loadSearchIndexMock).not.toHaveBeenCalled();
+  });
+
+  it('returns 503 when rate-limit backend is unavailable', async () => {
+    checkRateLimitMock.mockResolvedValueOnce({
+      allowed: false,
+      retryAfterMs: 0,
+      reason: 'backend_unavailable',
+    } as never);
+
+    const response = await GET(request('locale=en&q=portfolio'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(response.headers.get('Retry-After')).toBeNull();
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Search protection is temporarily unavailable. Try again shortly.',
+      errorCode: 'rate_limit_unavailable',
+    });
   });
 
   it('returns localized index failures without leaking exception details', async () => {

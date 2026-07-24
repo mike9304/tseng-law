@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import SmartLink from '@/components/SmartLink';
 import {
@@ -7,7 +7,7 @@ import {
 } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
 
-export default function HomeContactCta({ locale }: { locale: Locale }) {
+export default function HomeContactCta({ locale }: { locale: SiteLocale }) {
   const content = siteContent[locale];
   const contact = content.contact;
   const representativeTel = content.quickContact.actions.find((action) => action.href.startsWith('tel:'));

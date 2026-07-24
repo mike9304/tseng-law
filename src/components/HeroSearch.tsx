@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import SectionLabel from '@/components/SectionLabel';
 import HeroMediaBackground from '@/components/HeroMediaBackground';
@@ -36,10 +36,18 @@ const quickMenus = {
     { label: 'FAQ', href: '/en/faq' },
     { label: 'Videos / Channel', href: '/en/videos' },
     { label: 'Contact', href: '/en/contact' }
-  ]
+  ],
+  ja: [
+    { label: '取扱業務', href: '/ja/services' },
+    { label: 'コラム', href: '/ja/columns' },
+    { label: '弁護士', href: '/ja/lawyers' },
+    { label: 'よくある質問', href: '/ja/faq' },
+    { label: '動画/チャンネル', href: '/ja/videos' },
+    { label: 'お問い合わせ', href: '/ja/contact' },
+  ],
 } as const;
 
-export default function HeroSearch({ locale, scrollHref = '#insights' }: { locale: Locale; scrollHref?: string }) {
+export default function HeroSearch({ locale, scrollHref = '#insights' }: { locale: SiteLocale; scrollHref?: string }) {
   const hero = siteContent[locale].hero;
   const [focused, setFocused] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);

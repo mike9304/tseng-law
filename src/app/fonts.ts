@@ -45,7 +45,7 @@ const serifTraditionalChinese = Noto_Serif_TC({
   variable: '--font-noto-serif-tc-loaded',
 });
 
-export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en';
+export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en' | 'ja';
 
 /**
  * CSS-variable class names for the active locale pair.
@@ -56,6 +56,6 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
   if (language === 'zh-Hant') {
     return [sansTraditionalChinese.variable, serifTraditionalChinese.variable].join(' ');
   }
-  // ko + en → KR sans/serif pair
+  // ko + en + ja → KR pair (CJK coverage sufficient for JA launch; dedicated JP faces later)
   return [sansKorean.variable, serifKorean.variable].join(' ');
 }

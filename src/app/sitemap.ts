@@ -3,8 +3,8 @@ import { primaryAttorneySlug } from '@/data/attorney-profiles';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { readAttorneyProfileSourceRecords } from '@/lib/builder/lawyers/source';
 import { readServiceAreaSourceRecords } from '@/lib/builder/services/source';
-import { getAllColumnPosts } from '@/lib/columns';
-import { locales } from '@/lib/locales';
+import { getAllColumnPosts, getAliasSlugs, resolveSlug } from '@/lib/columns';
+import { locales, siteLocales } from '@/lib/locales';
 import { buildAbsoluteUrl, getLanguageAlternates, getLocalizedPath } from '@/lib/seo';
 import { collectAllBuilderSitemapEntries } from '@/lib/builder/seo/sitemap-builder';
 
@@ -32,7 +32,7 @@ const STATIC_PATHS = [
 ] as const;
 
 type LocalizedSitemapRoute = {
-  locale: (typeof locales)[number];
+  locale: (typeof siteLocales)[number];
   path: string;
 };
 
@@ -45,7 +45,7 @@ function getLocalizedSitemapRoute(url: string): LocalizedSitemapRoute | null {
   }
 
   const [locale, ...segments] = pathname.split('/').filter(Boolean);
-  if (locale !== 'ko' && locale !== 'zh-hant' && locale !== 'en') {
+  if (locale !== 'ko' && locale !== 'zh-hant' && locale !== 'en' && locale !== 'ja') {
     return null;
   }
 
@@ -56,9 +56,24 @@ function getLocalizedSitemapRoute(url: string): LocalizedSitemapRoute | null {
 }
 
 /** Routes whose page metadata is noindex only for the English locale. */
+function isFileBackedEnglishColumnPath(path: string): boolean {
+  const match = path.match(/^\/columns\/([^/]+)$/);
+  if (!match) return false;
+  const rawSlug = match[1];
+  const known = new Set(getAllColumnPosts('ko').map((post) => post.slug));
+  // Accept both real slugs and short aliases that resolve to file-backed posts.
+  if (known.has(rawSlug) || known.has(resolveSlug(rawSlug))) return true;
+  if (getAliasSlugs().includes(rawSlug) && known.has(resolveSlug(rawSlug))) return true;
+  return false;
+}
+
 function isEnglishNoindexPath(path: string): boolean {
+  // Full EN file-backed columns (columns-en) are indexable.
+  // Builder/Blob EN column drafts without a file translation stay excluded.
+  if (/^\/columns\/[^/]+$/.test(path) && !isFileBackedEnglishColumnPath(path)) {
+    return true;
+  }
   return path === '/faq'
-    || /^\/columns\/[^/]+$/.test(path)
     || path === '/portfolio'
     || /^\/portfolio\/[^/]+$/.test(path)
     || path === '/events'
@@ -98,12 +113,12 @@ function applyLocaleIndexabilityRules(
 }
 
 function createEntry(
-  locale: (typeof locales)[number],
+  locale: (typeof siteLocales)[number],
   path: string,
   options?: {
     lastModified?: string | Date;
     priority?: number;
-    alternateLocales?: (typeof locales)[number][];
+    alternateLocales?: readonly (typeof siteLocales)[number][];
   }
 ): MetadataRoute.Sitemap[number] {
   return {
@@ -111,7 +126,7 @@ function createEntry(
     ...(options?.lastModified == null ? {} : { lastModified: options.lastModified }),
     priority: options?.priority ?? 0.8,
     alternates: {
-      languages: getLanguageAlternates(path, options?.alternateLocales),
+      languages: getLanguageAlternates(path, options?.alternateLocales ?? locales),
     },
   };
 }
@@ -147,19 +162,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       );
     }
 
-    if (locale === 'en') {
-      continue;
-    }
-
     for (const post of columns) {
       pages.push(
         createEntry(locale, `/columns/${post.slug}`, {
           lastModified: post.date || undefined,
           priority: 0.68,
-          alternateLocales: ['ko', 'zh-hant'],
+          alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
         })
       );
     }
+  }
+
+  // Japanese public columns surface (file-backed columns-ja only).
+  pages.push(
+    createEntry('ja', '/columns', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  for (const post of columns) {
+    pages.push(
+      createEntry('ja', `/columns/${post.slug}`, {
+        lastModified: post.date || undefined,
+        priority: 0.68,
+        alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+      }),
+    );
   }
 
   // SEO maturity — append builder-published pages. Failures here must

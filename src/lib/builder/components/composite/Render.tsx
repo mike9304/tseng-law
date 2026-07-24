@@ -114,18 +114,26 @@ function resolveInsightsPosts(
   const previewPosts = resolveInsightsPreviewPosts(previewTargets);
   if (previewPosts.length > 0) return previewPosts;
 
-  const archive = insightsArchive[locale === 'en' ? 'ko' : locale];
+  // Public published mode must not invent date-less archive cards.
+  // Edit/preview may fall back to locale-correct archive data only.
+  if (_mode === 'published') {
+    return [];
+  }
+
+  const archive = insightsArchive[locale];
   if (!archive) return [];
-  return archive.posts.map((post) => ({
-    slug: post.id,
-    title: post.title,
-    date: post.date ?? '',
-    dateDisplay: post.date ?? '',
-    readTime: post.readTime ?? '',
-    categoryLabel: archive.categories[post.category] ?? '',
-    featuredImage: post.image,
-    summary: post.summary,
-  }));
+  return archive.posts
+    .filter((post) => Boolean(post.date))
+    .map((post) => ({
+      slug: post.id,
+      title: post.title,
+      date: post.date ?? '',
+      dateDisplay: post.date ?? '',
+      readTime: post.readTime ?? '',
+      categoryLabel: archive.categories[post.category] ?? '',
+      featuredImage: post.image,
+      summary: post.summary,
+    }));
 }
 
 function slugifyFallbackFaqQuestion(question: string): string {

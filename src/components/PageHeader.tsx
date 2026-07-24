@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
 export default function PageHeader({
   locale,
@@ -11,7 +11,7 @@ export default function PageHeader({
   description,
   children
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   label: string;
   title: string;
   description?: string;

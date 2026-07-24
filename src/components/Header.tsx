@@ -4,7 +4,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
+import { toBuilderLocale } from '@/lib/locales';
 import { buildLocalePath } from '@/lib/path-utils';
 import { siteContent } from '@/data/site-content';
 import SearchOverlay from '@/components/SearchOverlay';
@@ -38,7 +39,17 @@ type MemberNavState = {
   member?: PublicSiteMember;
 };
 
-function buildMainNavItems(locale: Locale): MainNavItem[] {
+function buildMainNavItems(locale: SiteLocale): MainNavItem[] {
+  if (locale === 'ja') {
+    return [
+      { key: 'services', label: '取扱業務', href: '/ja/services' },
+      { key: 'lawyers', label: '弁護士紹介', href: '/ja/lawyers' },
+      { key: 'pricing', label: '費用案内', href: '/ja/pricing' },
+      { key: 'insights', label: 'コラム', href: '/ja/columns' },
+      { key: 'videos', label: 'メディア', href: '/ja/videos' },
+      { key: 'directions', label: 'アクセス', href: '/ja/contact#offices' },
+    ];
+  }
   if (locale === 'ko') {
     return [
       { key: 'services', label: '업무분야', href: '/ko/services' },
@@ -71,7 +82,18 @@ function buildMainNavItems(locale: Locale): MainNavItem[] {
   ];
 }
 
-function buildMegaPanels(locale: Locale): MegaPanel[] {
+function buildMegaPanels(locale: SiteLocale): MegaPanel[] {
+  if (locale === 'ja') {
+    return [
+      {
+        key: 'insights',
+        title: 'コラム',
+        links: [
+          { label: '全コラムを見る', href: '/ja/columns' },
+        ],
+      },
+    ];
+  }
   if (locale === 'ko') {
     return [
       {
@@ -182,9 +204,16 @@ function buildMegaPanels(locale: Locale): MegaPanel[] {
   ];
 }
 
-export default function Header({ locale }: { locale: Locale }) {
+export default function Header({ locale }: { locale: SiteLocale }) {
   const content = siteContent[locale];
-  const brandText = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
+  const brandText =
+    locale === 'ko'
+      ? '법무법인 호정'
+      : locale === 'zh-hant'
+        ? '昊鼎國際法律事務所'
+        : locale === 'ja'
+          ? '昊鼎国際法律事務所'
+          : 'Hovering International Law Firm';
   const pathname = usePathname();
   const [searchOpen, setSearchOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -200,18 +229,20 @@ export default function Header({ locale }: { locale: Locale }) {
   const closeTimeoutRef = useRef<number | null>(null);
   const mobileToggleRef = useRef<HTMLButtonElement | null>(null);
   const restoreMobileToggleOnCloseRef = useRef(false);
-  const menuLabel = locale === 'ko' ? '메뉴' : locale === 'zh-hant' ? '選單' : 'Menu';
-  const openMenuLabel = locale === 'ko' ? '메뉴 열기' : locale === 'zh-hant' ? '開啟選單' : 'Open menu';
-  const closeMenuLabel = locale === 'ko' ? '메뉴 닫기' : locale === 'zh-hant' ? '關閉選單' : 'Close menu';
-  const searchLabel = locale === 'ko' ? '검색 열기' : locale === 'zh-hant' ? '開啟搜尋' : 'Open search';
-  const skipLabel = locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : 'Skip to main content';
-  const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home';
-  const mainNavLabel = locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : 'Main';
+  const menuLabel = locale === 'ko' ? '메뉴' : locale === 'zh-hant' ? '選單' : locale === 'ja' ? 'メニュー' : 'Menu';
+  const openMenuLabel = locale === 'ko' ? '메뉴 열기' : locale === 'zh-hant' ? '開啟選單' : locale === 'ja' ? 'メニューを開く' : 'Open menu';
+  const closeMenuLabel = locale === 'ko' ? '메뉴 닫기' : locale === 'zh-hant' ? '關閉選單' : locale === 'ja' ? 'メニューを閉じる' : 'Close menu';
+  const searchLabel = locale === 'ko' ? '검색 열기' : locale === 'zh-hant' ? '開啟搜尋' : locale === 'ja' ? '検索を開く' : 'Open search';
+  const skipLabel = locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : locale === 'ja' ? '本文へ' : 'Skip to main content';
+  const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
+  const mainNavLabel = locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : locale === 'ja' ? 'メインメニュー' : 'Main';
   const memberLabels =
     locale === 'ko'
       ? { login: '로그인', account: '내 계정', premium: '프리미엄', logout: '로그아웃' }
       : locale === 'zh-hant'
         ? { login: '登入', account: '我的帳戶', premium: '進階內容', logout: '登出' }
+        : locale === 'ja'
+          ? { login: 'ログイン', account: 'アカウント', premium: 'プレミアム', logout: 'ログアウト' }
         : { login: 'Log in', account: 'My account', premium: 'Premium', logout: 'Log out' };
   const utilityLinks =
     locale === 'ko'
@@ -243,12 +274,18 @@ export default function Header({ locale }: { locale: Locale }) {
     return found?.key ?? null;
   }, [isCurrentPath, mainNavItems]);
 
-  const { koPath, zhPath, enPath } = useMemo(() => {
+  const { koPath, zhPath, enPath, jaPath } = useMemo(() => {
     const current = pathname ?? '';
+    const pathWithoutLocale = current.replace(/^\/(ko|zh-hant|en|ja)(?=\/|$)/, '') || '/';
+    const jaTarget =
+      pathWithoutLocale === '/columns' || pathWithoutLocale.startsWith('/columns/')
+        ? buildLocalePath(current, 'ja')
+        : '/ja/columns';
     return {
       koPath: buildLocalePath(current, 'ko'),
       zhPath: buildLocalePath(current, 'zh-hant'),
-      enPath: buildLocalePath(current, 'en')
+      enPath: buildLocalePath(current, 'en'),
+      jaPath: jaTarget,
     };
   }, [pathname]);
 
@@ -443,6 +480,9 @@ export default function Header({ locale }: { locale: Locale }) {
               <Link href={enPath} aria-current={locale === 'en' ? 'page' : undefined}>
                 EN
               </Link>
+              <Link href={jaPath} aria-current={locale === 'ja' ? 'page' : undefined}>
+                JA
+              </Link>
             </div>
           </nav>
         </div>
@@ -450,7 +490,7 @@ export default function Header({ locale }: { locale: Locale }) {
 
       <div className="header-main">
         <div className="container header-main-inner">
-          <Link className="header-logo" href={`/${locale}`} aria-label={homeLabel}>
+          <Link className="header-logo" href={locale === 'ja' ? '/ja/columns' : `/${locale}`} aria-label={homeLabel}>
             <span className="logo-mark" aria-hidden>
               <Image src="/images/brand/hovering-seal-official.png" alt="" width={40} height={40} priority />
             </span>
@@ -590,12 +630,12 @@ export default function Header({ locale }: { locale: Locale }) {
 
       <div className={`mega-overlay${openMenu ? ' visible' : ''}`} id="megaOverlay" onClick={closeMegaMenuNow} />
 
-      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} locale={locale} />
+      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} locale={toBuilderLocale(locale)} />
       <MobileNavDrawer
         open={drawerOpen}
         onClose={closeMobileDrawer}
         onSearch={openSearchFromMobileDrawer}
-        locale={locale}
+        locale={toBuilderLocale(locale)}
         memberNav={memberNav}
         memberLabels={memberLabels}
         memberLoginHref={memberLoginHref}

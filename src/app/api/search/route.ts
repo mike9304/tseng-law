@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'node:crypto';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { mapPublicRateLimitDenial } from '@/lib/builder/security/public-rate-limit-response';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import {
   getPublicSearchApiErrorPayload,
@@ -22,13 +23,14 @@ function errorResponse(
   locale: Locale,
   errorCode: PublicSearchApiErrorCode,
   status: number,
+  init?: ResponseInit,
 ): NextResponse {
   return NextResponse.json(
     {
       ok: false,
       ...getPublicSearchApiErrorPayload(locale, errorCode),
     },
-    { status },
+    { ...init, status },
   );
 }
 
@@ -55,7 +57,10 @@ export async function GET(request: NextRequest) {
   const ip = clientIp(request);
   const rate = await checkRateLimit(`search:${ip}`, 60, 60_000);
   if (!rate.allowed) {
-    return errorResponse(locale, 'too_many_requests', 429);
+    const decision = mapPublicRateLimitDenial(rate);
+    return errorResponse(locale, decision.errorCode, decision.status, {
+      headers: decision.headers,
+    });
   }
 
   if (query.length === 0) {

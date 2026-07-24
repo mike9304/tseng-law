@@ -3,8 +3,10 @@ import { redirect } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
+import { getAllColumnPosts } from '@/lib/columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { pageCopy } from '@/data/page-copy';
+import { toBuilderLocale } from '@/lib/locales';
 import {
   buildPublishedSitePageMetadata,
   PublishedSitePageView,
@@ -18,7 +20,7 @@ import {
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { checkAccess } from '@/lib/builder/members/members-engine';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildSeoMetadata } from '@/lib/seo';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,7 +28,7 @@ const COLUMNS_SLUG = 'columns';
 
 type ColumnsSearchParams = Record<string, string | string[] | undefined>;
 
-function buildPublishedPath(locale: Locale): string {
+function buildPublishedPath(locale: SiteLocale): string {
   return `/${locale}/${COLUMNS_SLUG}`;
 }
 
@@ -44,22 +46,27 @@ function toColumnGridFilters(searchParams?: ColumnsSearchParams) {
   };
 }
 
-const headerLabel: Record<Locale, string> = {
+const headerLabel: Record<SiteLocale, string> = {
   ko: '칼럼',
   'zh-hant': '專欄',
   en: 'COLUMNS',
+  ja: 'コラム',
 };
 
-const columnKeywords: Record<Locale, string[]> = {
+const columnKeywords: Record<SiteLocale, string[]> = {
   ko: ['대만 법률 칼럼', '대만 회사설립 정보', '대만 소송 사례', '대만 노동법', '대만 변호사 블로그'],
   'zh-hant': ['台灣法律專欄', '台灣公司設立資訊', '台灣訴訟案例', '台灣勞動法', '台灣律師文章'],
   en: ['Taiwan legal articles', 'Taiwan company setup guide', 'Taiwan litigation insights', 'Taiwan labor law', 'Taiwan legal blog'],
+  ja: ['台湾法律コラム', '台湾会社設立', '台湾訴訟事例', '台湾労働法', '台湾弁護士ブログ'],
 };
 
-export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
-  const locale = normalizeLocale(params.locale);
-  const publishedMetadata = await buildPublishedSitePageMetadata(locale, COLUMNS_SLUG);
-  if (publishedMetadata) return publishedMetadata;
+export async function generateMetadata({ params }: { params: { locale: SiteLocale } }): Promise<Metadata> {
+  const locale = normalizeSiteLocale(params.locale);
+  // JA is file-backed only — never project a KO builder page onto /ja/columns.
+  if (locale !== 'ja') {
+    const publishedMetadata = await buildPublishedSitePageMetadata(toBuilderLocale(locale), COLUMNS_SLUG);
+    if (publishedMetadata) return publishedMetadata;
+  }
 
   const copy = pageCopy[locale].insights;
 
@@ -69,6 +76,7 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
     description: copy.description,
     path: '/columns',
     keywords: columnKeywords[locale],
+    alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
   });
 }
 
@@ -76,12 +84,13 @@ export default async function ColumnsPage({
   params,
   searchParams,
 }: {
-  params: { locale: Locale };
+  params: { locale: SiteLocale };
   searchParams?: ColumnsSearchParams;
 }) {
-  const locale = normalizeLocale(params.locale);
+  const locale = normalizeSiteLocale(params.locale);
 
-  const publishedPage = await resolvePublishedSitePage(locale, COLUMNS_SLUG);
+  const publishedPage =
+    locale === 'ja' ? null : await resolvePublishedSitePage(toBuilderLocale(locale), COLUMNS_SLUG);
   if (publishedPage) {
     const access = publishedPage.pageMeta.memberAccess;
     if (access?.requireLogin) {
@@ -116,11 +125,21 @@ export default async function ColumnsPage({
   }
 
   const copy = pageCopy[locale].insights;
-  const posts = await getAllColumnPostsIncludingBlob(locale);
-  const byline = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng';
+  const posts =
+    locale === 'ja'
+      ? getAllColumnPosts('ja')
+      : await getAllColumnPostsIncludingBlob(toBuilderLocale(locale));
+  const byline =
+    locale === 'ko'
+      ? '증준외 변호사'
+      : locale === 'zh-hant'
+        ? '曾俊瑋律師'
+        : locale === 'ja'
+          ? '曾俊瑋弁護士'
+          : 'Attorney Wei Tseng';
   const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
     'columns.list-template',
-    locale
+    toBuilderLocale(locale)
   );
   const showHero = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.list.hero');
   const showRepeater = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.list.repeater');
@@ -131,14 +150,14 @@ export default async function ColumnsPage({
       {showSeo ? (
         <>
           <JsonLd
-            data={buildBreadcrumbJsonLd(locale, [
+            data={buildBreadcrumbJsonLd(toBuilderLocale(locale), [
               { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
               { name: copy.title, path: `/${locale}/columns` },
             ])}
           />
           <JsonLd
             data={buildCollectionPageJsonLd({
-              locale,
+              locale: toBuilderLocale(locale),
               path: `/${locale}/columns`,
               name: copy.title,
               description: copy.description,

@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import type { Locale } from './locales';
-import { insightsArchive, type InsightPost } from '../data/insights-archive';
+import type { Locale, SiteLocale } from './locales';
+import { insightsArchive } from '../data/insights-archive';
 
 export type ColumnCategory = 'formation' | 'legal' | 'case';
 
@@ -64,27 +64,62 @@ export function normalizeColumnFaq(raw: unknown): ColumnFaqItem[] {
 
 const COLUMNS_DIR = path.join(process.cwd(), 'src/content/columns');
 const COLUMNS_ZH_DIR = path.join(process.cwd(), 'src/content/columns-zh');
+const COLUMNS_EN_DIR = path.join(process.cwd(), 'src/content/columns-en');
+const COLUMNS_JA_DIR = path.join(process.cwd(), 'src/content/columns-ja');
 
-function getColumnsDir(locale: Locale): string {
-  if (locale === 'zh-hant' && fs.existsSync(COLUMNS_ZH_DIR)) {
+function getColumnsDir(locale: Locale | SiteLocale): string {
+  if (locale === 'zh-hant') {
+    if (!fs.existsSync(COLUMNS_ZH_DIR)) {
+      throw new Error('Missing Chinese column directory: src/content/columns-zh');
+    }
     return COLUMNS_ZH_DIR;
+  }
+  if (locale === 'en') {
+    if (!fs.existsSync(COLUMNS_EN_DIR)) {
+      throw new Error('Missing English column directory: src/content/columns-en');
+    }
+    return COLUMNS_EN_DIR;
+  }
+  if (locale === 'ja') {
+    if (!fs.existsSync(COLUMNS_JA_DIR)) {
+      throw new Error('Missing Japanese column directory: src/content/columns-ja');
+    }
+    return COLUMNS_JA_DIR;
   }
   return COLUMNS_DIR;
 }
 
 function categoryFromString(cat: string): ColumnCategory {
-  if (cat.includes('법인설립') || cat.includes('公司設立')) return 'formation';
-  if (cat.includes('소송사례') || cat.includes('訴訟案例')) return 'case';
+  if (
+    cat.includes('법인설립')
+    || cat.includes('公司設立')
+    || cat.includes('台湾会社設立')
+    || /company setup|company formation|incorporation/i.test(cat)
+  ) {
+    return 'formation';
+  }
+  if (
+    cat.includes('소송사례')
+    || cat.includes('訴訟案例')
+    || cat.includes('訴訟事例')
+    || /case study|litigation case|lawsuit case/i.test(cat)
+  ) {
+    return 'case';
+  }
   return 'legal';
 }
 
-function categoryLabelFn(cat: ColumnCategory, locale: Locale): string {
+function categoryLabelFn(cat: ColumnCategory, locale: Locale | SiteLocale): string {
   if (locale === 'zh-hant') {
     const map: Record<ColumnCategory, string> = { formation: '公司設立', legal: '法律資訊', case: '訴訟案例' };
     return map[cat];
   }
   if (locale === 'en') {
     const map: Record<ColumnCategory, string> = { formation: 'Company Setup', legal: 'Legal Information', case: 'Case Study' };
+    return map[cat];
+  }
+  if (locale === 'ja') {
+    const map: Record<ColumnCategory, string> = { formation: '台湾会社設立', legal: '台湾法律情報', case: '訴訟事例分析' };
     return map[cat];
   }
   const map: Record<ColumnCategory, string> = { formation: '법인설립', legal: '법률정보', case: '소송사례' };
@@ -159,22 +194,6 @@ function toEnglishReadTime(value: string): string {
   return minutes ? `${minutes} min read` : value;
 }
 
-function buildEnglishColumnContent(post: InsightPost): string {
-  const keywords = post.keywords?.length
-    ? post.keywords.slice(0, 5).map((keyword) => `- ${keyword}`).join('\n')
-    : '- Taiwan law\n- Cross-border legal strategy\n- Practical compliance';
-  return [
-    '## Overview',
-    post.summary,
-    '',
-    '## Key Focus Areas',
-    keywords,
-    '',
-    '## Consultation',
-    'For a case-specific legal strategy, please contact our team through the consultation page.'
-  ].join('\n');
-}
-
 export function resolveSlug(slug: string): string {
   return SLUG_ALIASES[slug] || slug;
 }
@@ -183,7 +202,7 @@ export function getAliasSlugs(): string[] {
   return Object.keys(SLUG_ALIASES);
 }
 
-export function getAllColumnPosts(locale: Locale = 'ko'): ColumnPost[] {
+export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPost[] {
   const dir = getColumnsDir(locale);
   const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'));
   const posts = files.map((file) => {
@@ -203,13 +222,16 @@ export function getAllColumnPosts(locale: Locale = 'ko'): ColumnPost[] {
     const fallbackSummary = extractSummary(fixedContent);
     const faq = normalizeColumnFaq(data.faq);
 
+    // When EN files live in columns-en/, frontmatter and body are already English.
+    // Legacy fallback: if EN still resolves to KO directory (no columns-en), overlay
+    // archive titles only and keep Korean body — never invent stub Overview content.
     let title = fallbackTitle;
     let dateDisplay = fallbackDateDisplay;
     let readTime = fallbackReadTime;
     let contentText = cleanContent;
     let summary = fallbackSummary;
 
-    if (locale === 'en') {
+    if (locale === 'en' && dir === COLUMNS_DIR) {
       const insightId = REAL_SLUG_TO_INSIGHT_ID[slug];
       const translatedPost = insightId
         ? insightsArchive.en.posts.find((post) => post.id === insightId)
@@ -217,7 +239,6 @@ export function getAllColumnPosts(locale: Locale = 'ko'): ColumnPost[] {
       if (translatedPost) {
         title = translatedPost.title;
         summary = translatedPost.summary;
-        contentText = buildEnglishColumnContent(translatedPost);
       }
       dateDisplay = toEnglishDateDisplay(lastmod, fallbackDateDisplay);
       readTime = toEnglishReadTime(fallbackReadTime);
@@ -242,7 +263,7 @@ export function getAllColumnPosts(locale: Locale = 'ko'): ColumnPost[] {
   return posts.sort((a, b) => b.date.localeCompare(a.date));
 }
 
-export function getColumnPost(slug: string, locale: Locale = 'ko'): ColumnPost | undefined {
+export function getColumnPost(slug: string, locale: Locale | SiteLocale = 'ko'): ColumnPost | undefined {
   const realSlug = resolveSlug(slug);
   return getAllColumnPosts(locale).find((p) => p.slug === realSlug);
 }
@@ -251,6 +272,6 @@ export function getColumnSlugs(): string[] {
   return getAllColumnPosts('ko').map((p) => p.slug);
 }
 
-export function getFeaturedColumns(count = 6, locale: Locale = 'ko'): ColumnPost[] {
+export function getFeaturedColumns(count = 6, locale: Locale | SiteLocale = 'ko'): ColumnPost[] {
   return getAllColumnPosts(locale).slice(0, count);
 }

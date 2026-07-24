@@ -2,6 +2,7 @@ import type { Locale } from '@/lib/locales';
 
 export type PublicBookingApiErrorCode =
   | 'too_many_requests'
+  | 'rate_limit_unavailable'
   | 'invalid_json'
   | 'booking_services_failed'
   | 'booking_staff_failed'
@@ -38,6 +39,7 @@ export interface PublicBookingApiErrorPayload {
 const publicBookingApiErrorMessages: Record<Locale, Record<PublicBookingApiErrorCode, string>> = {
   ko: {
     too_many_requests: '예약 요청이 너무 많습니다. 잠시 후 다시 시도해 주세요.',
+    rate_limit_unavailable: '예약 보호 시스템을 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도해 주세요.',
     invalid_json: '예약 요청 형식을 확인해 주세요.',
     booking_services_failed: '예약 서비스 목록을 불러오지 못했습니다.',
     booking_staff_failed: '예약 담당자 목록을 불러오지 못했습니다.',
@@ -68,6 +70,7 @@ const publicBookingApiErrorMessages: Record<Locale, Record<PublicBookingApiError
   },
   'zh-hant': {
     too_many_requests: '預約請求過多，請稍後再試。',
+    rate_limit_unavailable: '預約防護系統暫時無法使用，請稍後再試。',
     invalid_json: '請確認預約請求格式。',
     booking_services_failed: '無法載入預約服務清單。',
     booking_staff_failed: '無法載入預約員工清單。',
@@ -98,6 +101,7 @@ const publicBookingApiErrorMessages: Record<Locale, Record<PublicBookingApiError
   },
   en: {
     too_many_requests: 'Too many booking requests. Try again shortly.',
+    rate_limit_unavailable: 'Booking protection is temporarily unavailable. Try again shortly.',
     invalid_json: 'Check the booking request format.',
     booking_services_failed: 'Unable to load booking services.',
     booking_staff_failed: 'Unable to load booking staff.',

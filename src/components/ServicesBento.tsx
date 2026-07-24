@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import { getServiceSlugs } from '@/data/service-details';
 import SectionLabel from '@/components/SectionLabel';
@@ -17,7 +17,7 @@ export default function ServicesBento({
   variant = 'alt',
   tone = 'light'
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   id?: string;
   variant?: 'default' | 'alt';
   tone?: 'light' | 'dark';

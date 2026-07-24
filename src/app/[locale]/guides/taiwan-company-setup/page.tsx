@@ -75,14 +75,14 @@ export default function TaiwanCompanySetupGuidePage({ params }: { params: { loca
                   </li>
                 ))}
               </ul>
-              {/* [변호사 검수 필요] 자본금 50만/17만 TWD·설립 3개월·비자 1개월 수치 출처: 칼럼 001/013 */}
+              {/* Source refs: columns 001/013 — capital thresholds & timeline */}
               <p className={styles.intro} style={{ marginTop: '1rem' }}>{disclaimerNote}</p>
             </section>
 
             <section className={styles.section}>
               <h2 className={styles.heading}>{c.procedureHeading}</h2>
               <p className={styles.intro}>{c.procedureIntro}</p>
-              {/* [변호사 검수 필요] 절차·기간 출처: 칼럼 001(10단계), 013(설립 3개월·비자 1개월), 005(계좌 전환) */}
+              {/* Source refs: columns 001 (10 steps), 013 (timeline), 005 (account conversion) */}
               <ol className={styles.steps}>
                 {c.steps.map((step, index) => (
                   <li className={styles.step} key={index}>
@@ -96,7 +96,7 @@ export default function TaiwanCompanySetupGuidePage({ params }: { params: { loca
             <section className={styles.section}>
               <h2 className={styles.heading}>{c.comparisonHeading}</h2>
               <p className={styles.intro}>{c.comparisonIntro}</p>
-              {/* [변호사 검수 필요] 세율(영업세 5%/법인세 20%/배당 21%/미처분 5%/R&D 30%) 출처: 칼럼 001, 004 */}
+              {/* Source refs: columns 001, 004 — tax rate comparison */}
               <div className={styles.tableWrap}>
                 <table className={styles.table}>
                   <thead>
@@ -123,7 +123,7 @@ export default function TaiwanCompanySetupGuidePage({ params }: { params: { loca
             <section className={styles.section}>
               <h2 className={styles.heading}>{c.costHeading}</h2>
               <p className={styles.intro}>{c.costIntro}</p>
-              {/* [변호사 검수 필요] 비용·기간·이중과세 약정(2023.12.2 발효, 배당 상한 10%) 출처: 칼럼 001, 004, 013 */}
+              {/* Source refs: columns 001, 004, 013 — cost/timeline/DTA notes */}
               <div className={styles.tableWrap}>
                 <table className={styles.table}>
                   <thead>

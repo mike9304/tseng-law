@@ -1,15 +1,18 @@
 'use client';
 
 import Link from 'next/link';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
-export default function Breadcrumbs({ locale, current }: { locale: Locale; current: string }) {
-  const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home';
-  const navLabel = locale === 'ko' ? '현재 위치' : locale === 'zh-hant' ? '目前位置' : 'Current location';
+export default function Breadcrumbs({ locale, current }: { locale: SiteLocale; current: string }) {
+  const homeLabel =
+    locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
+  const navLabel =
+    locale === 'ko' ? '현재 위치' : locale === 'zh-hant' ? '目前位置' : locale === 'ja' ? '現在位置' : 'Current location';
+  const homeHref = locale === 'ja' ? '/ja/columns' : `/${locale}`;
 
   return (
     <nav className="breadcrumb" aria-label={navLabel}>
-      <Link href={`/${locale}`} className="breadcrumb-link">
+      <Link href={homeHref} className="breadcrumb-link">
         {homeLabel}
       </Link>
       <span aria-hidden>/</span>

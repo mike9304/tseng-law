@@ -5,7 +5,7 @@ export type OfficeLocationPreset = {
   id: string;
   title: string;
   address: string;
-  phone: string;
+  phone?: string;
   fax?: string;
   mapsUrl: string;
 };
@@ -42,8 +42,6 @@ export const OFFICE_LOCATION_PRESETS: Record<Locale, OfficeLocationPreset[]> = {
       id: 'taipei',
       title: '타이베이',
       address: '台北市大同區承德路一段35號7樓之2',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
       mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
     },
   ],
@@ -67,8 +65,6 @@ export const OFFICE_LOCATION_PRESETS: Record<Locale, OfficeLocationPreset[]> = {
       id: 'taipei',
       title: '台北',
       address: '台北市大同區承德路一段35號7樓之2',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
       mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
     },
   ],
@@ -92,8 +88,6 @@ export const OFFICE_LOCATION_PRESETS: Record<Locale, OfficeLocationPreset[]> = {
       id: 'taipei',
       title: 'Taipei',
       address: '7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
       mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
     },
   ],

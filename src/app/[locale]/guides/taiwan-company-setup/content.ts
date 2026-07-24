@@ -141,10 +141,6 @@ export const guideContent: Record<Locale, GuideContent> = {
         q: '대만 법인설립 절차는 어떻게 되나요?',
         a: '투심회 승인, 사명 예심·공증, 설립·세적 등기, 정식 계좌 개설 순으로 진행됩니다.',
       },
-      {
-        q: '대만 법인설립 기간은 얼마나 걸리나요?',
-        a: '[변호사 검수 필요] 기존 본문에 따르면 설립에 약 3개월, 이후 취업허가증과 거류증 취득에 약 1개월이 소요되는 것이 일반적입니다.',
-      },
     ],
     relatedHeading: '관련 칼럼',
     relatedColumns: relatedColumnsKo,

@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
 const COLUMNS_PAGE_SIZE = 12;
 
@@ -12,6 +12,7 @@ const loadMoreLabels = {
   ko: { button: '더 보기', remaining: '개 더 있음' },
   'zh-hant': { button: '載入更多', remaining: ' 篇待載入' },
   en: { button: 'Load more', remaining: ' more available' },
+  ja: { button: 'もっと見る', remaining: ' 件あります' },
 } as const;
 
 const searchCopy = {
@@ -35,6 +36,13 @@ const searchCopy = {
     submit: 'Search',
     clear: 'Clear search',
     resultCount: (n: number) => `${n} result${n === 1 ? '' : 's'}`,
+  },
+  ja: {
+    label: 'コラム検索',
+    placeholder: 'タイトル・要約・タグで検索',
+    submit: '検索',
+    clear: '検索をクリア',
+    resultCount: (n: number) => `${n}件`,
   },
 } as const;
 
@@ -66,7 +74,8 @@ export interface ColumnsGridFilters {
 const categoryLabels = {
   ko: { all: '전체', formation: '법인설립', legal: '법률정보', case: '소송사례' },
   'zh-hant': { all: '全部', formation: '公司設立', legal: '法律資訊', case: '訴訟案例' },
-  en: { all: 'All', formation: 'Company Setup', legal: 'Legal Info', case: 'Case Studies' }
+  en: { all: 'All', formation: 'Company Setup', legal: 'Legal Info', case: 'Case Studies' },
+  ja: { all: 'すべて', formation: '台湾会社設立', legal: '台湾法律情報', case: '訴訟事例分析' },
 } as const;
 
 function normalizeFilterValue(value: string | string[] | null | undefined): string {
@@ -91,12 +100,19 @@ export default function ColumnsGrid({
   posts,
   initialFilters = {},
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   posts: ColumnListItem[];
   initialFilters?: ColumnsGridFilters;
 }) {
   const labels = categoryLabels[locale];
-  const byline = locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾俊瑋律師審閱' : 'Reviewed by Wei Tseng';
+  const byline =
+    locale === 'ko'
+      ? '증준외 변호사 검토'
+      : locale === 'zh-hant'
+        ? '曾俊瑋律師審閱'
+        : locale === 'ja'
+          ? '曾俊瑋弁護士監修'
+          : 'Reviewed by Wei Tseng';
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();

@@ -246,18 +246,23 @@ export function createOfficesDecomposedNodes(
         className: 'card-copy',
         as: 'p',
       }),
-      createHomeButtonNode({
-        id: `${cardId}-phone`,
-        parentId: cardId,
-        rect: { x: useZhHantCompositeGeometry ? 25 : 0, y: useZhHantCompositeGeometry ? 98 : 164, width: 220, height: 24 },
-        zIndex: 3,
-        label: `${telLabel}: ${office.phone}`,
-        href: telHrefFromPhone(office.phone),
-        style: 'link',
-        className: 'link-underline phone-number',
-        as: 'a',
-      }),
     );
+
+    if (office.phone) {
+      nodes.push(
+        createHomeButtonNode({
+          id: `${cardId}-phone`,
+          parentId: cardId,
+          rect: { x: useZhHantCompositeGeometry ? 25 : 0, y: useZhHantCompositeGeometry ? 98 : 164, width: 220, height: 24 },
+          zIndex: 3,
+          label: `${telLabel}: ${office.phone}`,
+          href: telHrefFromPhone(office.phone),
+          style: 'link',
+          className: 'link-underline phone-number',
+          as: 'a',
+        }),
+      );
+    }
 
     if (office.fax) {
       nodes.push(

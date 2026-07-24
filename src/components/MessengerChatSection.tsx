@@ -1,9 +1,7 @@
 'use client';
 
 import type { Locale } from '@/lib/locales';
-
-const KAKAO_CHANNEL_URL = 'https://pf.kakao.com/_hojeong/chat';
-const LINE_URL = 'https://lin.ee/hojeong';
+import { contactPageContent } from '@/data/contact-page-content';
 
 interface MessengerConfig {
   sectionTitle: string;
@@ -27,22 +25,23 @@ interface MessengerConfig {
 }
 
 function getConfig(locale: Locale): MessengerConfig {
+  const channels = contactPageContent[locale].messenger;
   if (locale === 'ko') {
     return {
       sectionTitle: '메신저 상담',
       sectionDescription: '카카오톡 또는 LINE으로 편리하게 법률 상담을 시작하세요.',
       primary: {
-        platform: 'KakaoTalk',
+        platform: channels.secondary.platform,
         label: '카카오톡 상담 시작',
         description: '카카오톡 채널을 통해 빠르게 상담을 받으세요.',
-        href: KAKAO_CHANNEL_URL,
+        href: channels.secondary.href,
         icon: 'kakao'
       },
       secondary: {
-        platform: 'LINE',
+        platform: channels.primary.platform,
         label: 'LINE 상담 시작',
         description: '대만에서 LINE으로 바로 문의하세요.',
-        href: LINE_URL,
+        href: channels.primary.href,
         icon: 'line'
       },
       features: [
@@ -60,17 +59,17 @@ function getConfig(locale: Locale): MessengerConfig {
       sectionTitle: 'Messenger Consultation',
       sectionDescription: 'Start your legal consultation quickly through KakaoTalk or LINE.',
       primary: {
-        platform: 'KakaoTalk',
+        platform: channels.secondary.platform,
         label: 'Start KakaoTalk Chat',
         description: 'Get a quick response through our KakaoTalk channel.',
-        href: KAKAO_CHANNEL_URL,
+        href: channels.secondary.href,
         icon: 'kakao'
       },
       secondary: {
-        platform: 'LINE',
+        platform: channels.primary.platform,
         label: 'Start LINE Chat',
         description: 'Contact us directly on LINE from Taiwan or overseas.',
-        href: LINE_URL,
+        href: channels.primary.href,
         icon: 'line'
       },
       features: [
@@ -87,17 +86,17 @@ function getConfig(locale: Locale): MessengerConfig {
     sectionTitle: '即時通訊諮詢',
     sectionDescription: '透過 LINE 或 KakaoTalk 輕鬆開始法律諮詢。',
     primary: {
-      platform: 'LINE',
+      platform: channels.primary.platform,
       label: '開始 LINE 諮詢',
       description: '透過 LINE 官方帳號快速獲得法律諮詢。',
-      href: LINE_URL,
+      href: channels.primary.href,
       icon: 'line'
     },
     secondary: {
-      platform: 'KakaoTalk',
+      platform: channels.secondary.platform,
       label: '開始 KakaoTalk 諮詢',
       description: '韓國客戶可透過 KakaoTalk 聯繫我們。',
-      href: KAKAO_CHANNEL_URL,
+      href: channels.secondary.href,
       icon: 'kakao'
     },
     features: [

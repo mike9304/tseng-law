@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
 type HeroMediaSlide = {
   image: string;
@@ -14,11 +14,11 @@ const defaultSlides: HeroMediaSlide[] = [
 ];
 
 // zh-hant은 대만 정체성이 분명한 타이베이 야경 단일 컷을 쓴다(사용자 승인 2026-07-22).
-const slidesByLocale: Partial<Record<Locale, HeroMediaSlide[]>> = {
+const slidesByLocale: Partial<Record<SiteLocale, HeroMediaSlide[]>> = {
   'zh-hant': [{ image: '/images/hero-bg-taipei-night.webp' }],
 };
 
-export default function HeroMediaBackground({ locale }: { locale?: Locale } = {}) {
+export default function HeroMediaBackground({ locale }: { locale?: SiteLocale } = {}) {
   const slides = (locale && slidesByLocale[locale]) || defaultSlides;
   const [index, setIndex] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);

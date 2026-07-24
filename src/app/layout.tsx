@@ -15,6 +15,7 @@ function resolveDocumentLanguage(pathname: string | null): DocumentLanguage {
   const locale = pathname?.split('/').filter(Boolean)[0]?.toLowerCase();
   if (locale === 'zh-hant') return 'zh-Hant';
   if (locale === 'en') return 'en';
+  if (locale === 'ja') return 'ja';
   return 'ko';
 }
 

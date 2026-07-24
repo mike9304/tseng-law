@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import type { Locale } from '@/lib/locales';
-import { defaultLocale, locales } from '@/lib/locales';
+import type { Locale, SiteLocale } from '@/lib/locales';
+import { defaultLocale, locales, siteLocales } from '@/lib/locales';
 
 type ImageInput =
   | string
@@ -12,7 +12,7 @@ type ImageInput =
     };
 
 type SeoMetadataInput = {
-  locale: Locale;
+  locale: Locale | SiteLocale;
   title: string;
   description: string;
   path?: string;
@@ -20,7 +20,7 @@ type SeoMetadataInput = {
   images?: ImageInput | ImageInput[];
   noindex?: boolean;
   type?: 'website' | 'article';
-  alternateLocales?: readonly Locale[];
+  alternateLocales?: readonly (Locale | SiteLocale)[];
 };
 
 type BreadcrumbItem = {
@@ -79,18 +79,20 @@ const DEFAULT_SITE_URL = 'https://tseng-law.com';
 const DEFAULT_SOCIAL_IMAGE = '/images/header-skyline-ratio.webp';
 const LOGO_IMAGE = '/images/brand/hovering-seal-red-512.png';
 
-const organizationName: Record<Locale, string> = {
+const organizationName: Record<SiteLocale, string> = {
   ko: '법무법인 호정',
   'zh-hant': '昊鼎國際法律事務所',
   en: 'Hovering International Law Firm',
+  ja: '昊鼎国際法律事務所',
 };
 
-const organizationAlternateNames = ['법무법인 호정', '昊鼎國際法律事務所', 'Hovering International Law Firm', 'Tseng Law'];
+const organizationAlternateNames = ['법무법인 호정', '昊鼎國際法律事務所', 'Hovering International Law Firm', 'Tseng Law', '昊鼎国際法律事務所'];
 
-const openGraphLocale: Record<Locale, string> = {
+const openGraphLocale: Record<SiteLocale, string> = {
   ko: 'ko_KR',
   'zh-hant': 'zh_TW',
   en: 'en_US',
+  ja: 'ja_JP',
 };
 
 const availableLanguage = ['Korean', 'Traditional Chinese', 'English', 'Japanese'];
@@ -131,11 +133,12 @@ export function getSearchEngineVerification(): Metadata['verification'] | undefi
   };
 }
 
-export function getLocaleLanguageTag(locale: Locale): string {
-  return locale === 'zh-hant' ? 'zh-Hant' : locale;
+export function getLocaleLanguageTag(locale: Locale | SiteLocale): string {
+  if (locale === 'zh-hant') return 'zh-Hant';
+  return locale;
 }
 
-export function getLocalizedPath(locale: Locale, path = ''): string {
+export function getLocalizedPath(locale: Locale | SiteLocale, path = ''): string {
   if (!path || path === '/') {
     return `/${locale}`;
   }
@@ -165,7 +168,10 @@ function normalizeImages(images?: ImageInput | ImageInput[]) {
   });
 }
 
-export function getLanguageAlternates(path = '', alternateLocales: readonly Locale[] = locales): Record<string, string> {
+export function getLanguageAlternates(
+  path = '',
+  alternateLocales: readonly (Locale | SiteLocale)[] = locales,
+): Record<string, string> {
   const entries = alternateLocales.map((locale) => [getLocaleLanguageTag(locale), buildAbsoluteUrl(getLocalizedPath(locale, path))]);
   return {
     ...Object.fromEntries(entries),
@@ -496,7 +502,7 @@ export function buildCollectionPageJsonLd({
   };
 }
 
-export function getOrganizationName(locale: Locale): string {
+export function getOrganizationName(locale: Locale | SiteLocale): string {
   return organizationName[locale];
 }
 

@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeSiteLocale, type SiteLocale, toBuilderLocale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
-import { getColumnPost } from '@/lib/columns';
+import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import ColumnContent from '@/components/ColumnContent';
 import JsonLd from '@/components/JsonLd';
@@ -19,7 +19,7 @@ import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMeta
 
 export const dynamic = 'force-dynamic';
 
-const copy: Record<Locale, {
+const copy: Record<SiteLocale, {
   backLabel: string;
   attorneyHeading: string;
   guideTitle: string;
@@ -55,15 +55,25 @@ const copy: Record<Locale, {
     consultationButton: 'Contact Us',
     faqHeading: 'Frequently Asked Questions',
   },
+  ja: {
+    backLabel: '← コラム一覧へ',
+    attorneyHeading: '本稿の監修弁護士',
+    guideTitle: '関連トピック',
+    consultationTitle: '相談予約',
+    consultationText: '台湾法務についてご不明点があれば、お気軽にお問い合わせください。',
+    consultationButton: 'お問い合わせ',
+    faqHeading: 'よくある質問',
+  },
 };
 
-export async function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Promise<Metadata> {
-  const locale = normalizeLocale(params.locale);
+export async function generateMetadata({ params }: { params: { locale: SiteLocale; slug: string } }): Promise<Metadata> {
+  const locale = normalizeSiteLocale(params.locale);
 
-  // Try file-based first (fast, sync), then fall back to blob-aware reader
+  // Try file-based first (fast, sync), then fall back to blob-aware reader.
+  // Japanese is file-backed only (no builder locale contract for ja).
   let post = getColumnPost(params.slug, locale);
-  if (!post) {
-    const allPosts = await getAllColumnPostsIncludingBlob(locale);
+  if (!post && locale !== 'ja') {
+    const allPosts = await getAllColumnPostsIncludingBlob(toBuilderLocale(locale));
     post = allPosts.find((p) => p.slug === params.slug);
   }
 
@@ -76,19 +86,33 @@ export async function generateMetadata({ params }: { params: { locale: Locale; s
     title: post.title,
     description: post.summary,
     path: `/columns/${post.slug}`,
-    keywords: [post.title, post.categoryLabel, locale === 'ko' ? '대만 법률' : locale === 'zh-hant' ? '台灣法律' : 'Taiwan law'],
+    keywords: [
+      post.title,
+      post.categoryLabel,
+      locale === 'ko'
+        ? '대만 법률'
+        : locale === 'zh-hant'
+          ? '台灣法律'
+          : locale === 'ja'
+            ? '台湾法律'
+            : 'Taiwan law',
+    ],
     images: post.featuredImage,
     type: 'article',
-    noindex: locale === 'en',
-    alternateLocales: ['ko', 'zh-hant'],
+    noindex: false,
+    alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
   });
 }
 
-export default async function ColumnDetailPage({ params }: { params: { locale: Locale; slug: string } }) {
-  const locale = normalizeLocale(params.locale);
+export default async function ColumnDetailPage({ params }: { params: { locale: SiteLocale; slug: string } }) {
+  const locale = normalizeSiteLocale(params.locale);
 
   // Get all posts including Blob — single source of truth for content + prev/next
-  const allPosts = await getAllColumnPostsIncludingBlob(locale);
+  // Japanese: file-backed columns-ja only (no builder/Blob ja locale).
+  const allPosts =
+    locale === 'ja'
+      ? getAllColumnPosts('ja')
+      : await getAllColumnPostsIncludingBlob(toBuilderLocale(locale));
   const post = allPosts.find((p) => p.slug === params.slug);
   if (!post) return notFound();
 
@@ -97,38 +121,48 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
   const nextPost = currentIndex >= 0 && currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 
   const t = copy[locale];
-  const authorName = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng';
-  const authorProfilePath = getAttorneyProfilePath(locale);
+  const authorName =
+    locale === 'ko'
+      ? '증준외 변호사'
+      : locale === 'zh-hant'
+        ? '曾俊瑋律師'
+        : locale === 'ja'
+          ? '曾俊瑋弁護士'
+          : 'Attorney Wei Tseng';
+  const authorProfilePath = getAttorneyProfilePath(toBuilderLocale(locale));
+  // JA launch only guarantees /ja/columns*; cross-links use EN shells (not unsupported /ja/*).
+  const linkLocale = locale === 'ja' ? 'en' : locale;
   const guideLinks =
     post.category === 'formation'
       ? [
-          { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
-          { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
+          { href: `/${linkLocale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : locale === 'ja' ? '台湾会社設立' : 'Taiwan Company Setup' },
+          { href: `/${linkLocale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : locale === 'ja' ? '台湾弁護士' : 'Taiwan Lawyer' },
         ]
       : post.category === 'case'
         ? [
-            { href: `/${locale}/taiwan-litigation-lawyer`, label: locale === 'ko' ? '대만 소송' : locale === 'zh-hant' ? '台灣訴訟' : 'Taiwan Litigation' },
-            { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
+            { href: `/${linkLocale}/taiwan-litigation-lawyer`, label: locale === 'ko' ? '대만 소송' : locale === 'zh-hant' ? '台灣訴訟' : locale === 'ja' ? '台湾訴訟' : 'Taiwan Litigation' },
+            { href: `/${linkLocale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : locale === 'ja' ? '台湾弁護士' : 'Taiwan Lawyer' },
           ]
         : [
-            { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
-            { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
+            { href: `/${linkLocale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : locale === 'ja' ? '台湾弁護士' : 'Taiwan Lawyer' },
+            { href: `/${linkLocale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : locale === 'ja' ? '台湾会社設立' : 'Taiwan Company Setup' },
           ];
 
-  const prevLabel = locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : '← Previous';
-  const nextLabel = locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : 'Next →';
+  const prevLabel = locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : locale === 'ja' ? '← 前のコラム' : '← Previous';
+  const nextLabel = locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : locale === 'ja' ? '次のコラム →' : 'Next →';
 
   // FAQ (FAQPage schema + plain-text "자주 묻는 질문" section). Only the two
   // indexed, hand-authored locales (ko / zh-hant) carry an `faq` array; the
   // en route overlays ko frontmatter onto translated copy, so we skip it there
   // to avoid rendering Korean answers under an English heading.
   const faqItems = post.faq ?? [];
-  const showFaq = faqItems.length > 0 && (locale === 'ko' || locale === 'zh-hant');
-  const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, locale) : null;
+  // File-backed EN columns now carry translated FAQ; render for all locales with FAQ data.
+  const showFaq = faqItems.length > 0;
+  const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, toBuilderLocale(locale)) : null;
 
   const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
     'columns.item-template',
-    locale
+    toBuilderLocale(locale)
   );
   const showHero = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.item.hero');
   const showBody = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.item.body');
@@ -147,7 +181,7 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
       {showSeo ? (
         <>
           <JsonLd
-            data={buildBreadcrumbJsonLd(locale, [
+            data={buildBreadcrumbJsonLd(toBuilderLocale(locale), [
               { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
               { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : 'Columns', path: `/${locale}/columns` },
               { name: post.title, path: `/${locale}/columns/${post.slug}` },
@@ -155,7 +189,7 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
           />
           <JsonLd
             data={buildArticleJsonLd({
-              locale,
+              locale: toBuilderLocale(locale),
               title: post.title,
               description: post.summary,
               path: `/${locale}/columns/${post.slug}`,
@@ -226,7 +260,7 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
               <div className="blog-sidebar-card">
                 <h3 className="blog-sidebar-title">{t.consultationTitle}</h3>
                 <p className="blog-sidebar-text">{t.consultationText}</p>
-                <Link href={`/${locale}/contact`} className="button blog-sidebar-btn">
+                <Link href={`/${linkLocale}/contact`} className="button blog-sidebar-btn">
                   {t.consultationButton}
                 </Link>
               </div>

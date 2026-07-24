@@ -10,7 +10,7 @@ type OfficeInfo = {
   id: string;
   title: string;
   address: string;
-  phone: string;
+  phone?: string;
   phoneLabel?: string;
   fax?: string;
   embedUrl?: string;
@@ -74,8 +74,6 @@ const taiwanOfficeData: Record<Locale, OfficeInfo[]> = {
       id: 'taipei',
       title: '타이베이',
       address: '台北市大同區承德路一段35號7樓之2',
-      phone: '04-2326-1862',
-      phoneLabel: '대표전화(타이중 본소)',
       embedUrl: TAIPEI_EMBED_URL,
       mapsUrl: TAIPEI_MAPS_URL
     },
@@ -102,8 +100,6 @@ const taiwanOfficeData: Record<Locale, OfficeInfo[]> = {
       id: 'taipei',
       title: '台北',
       address: '台北市大同區承德路一段35號7樓之2',
-      phone: '04-2326-1862',
-      phoneLabel: '代表電話（台中本所）',
       embedUrl: TAIPEI_EMBED_URL,
       mapsUrl: TAIPEI_MAPS_URL
     },
@@ -130,8 +126,6 @@ const taiwanOfficeData: Record<Locale, OfficeInfo[]> = {
       id: 'taipei',
       title: 'Taipei',
       address: '7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City',
-      phone: '04-2326-1862',
-      phoneLabel: 'Main line (Taichung headquarters)',
       embedUrl: TAIPEI_EMBED_URL,
       mapsUrl: TAIPEI_MAPS_URL
     },
@@ -275,10 +269,12 @@ export default function OfficeMapTabs({
             <div className="section-label">{officeLabel}</div>
             <h3 className="card-title">{current.title}</h3>
             <p className="card-copy">{current.address}</p>
-            <p className="card-copy">
-              {current.phoneLabel ?? telLabel}:{' '}
-              <a className="link-underline phone-number" href={`tel:${current.phone.replace(/-/g, '')}`}>{current.phone}</a>
-            </p>
+            {current.phone ? (
+              <p className="card-copy">
+                {current.phoneLabel ?? telLabel}:{' '}
+                <a className="link-underline phone-number" href={`tel:${current.phone.replace(/-/g, '')}`}>{current.phone}</a>
+              </p>
+            ) : null}
             {current.fax && (
               <p className="card-copy">
                 {faxLabel}: {current.fax}
@@ -349,12 +345,14 @@ export default function OfficeMapTabs({
             </div>
             <article className="card office-card">
               <p className="card-copy">{koreaOffice.address}</p>
-              <p className="card-copy">
-                {telLabel}:{' '}
-                <a className="link-underline phone-number" href={`tel:${koreaOffice.phone.replace(/-/g, '')}`}>
-                  {koreaOffice.phone}
-                </a>
-              </p>
+              {koreaOffice.phone ? (
+                <p className="card-copy">
+                  {telLabel}:{' '}
+                  <a className="link-underline phone-number" href={`tel:${koreaOffice.phone.replace(/-/g, '')}`}>
+                    {koreaOffice.phone}
+                  </a>
+                </p>
+              ) : null}
               <a
                 className="button office-map-link"
                 href={koreaOffice.mapsUrl}

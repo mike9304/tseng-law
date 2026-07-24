@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import { getPublishedBaseFooterColumns } from '@/components/footer-link-policy';
 
@@ -18,13 +18,21 @@ export default function Footer({
   locale,
   extraColumns = [],
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   extraColumns?: readonly FooterLinkColumn[];
 }) {
   const footerContent = siteContent[locale].footer;
   const publishedBaseColumns = getPublishedBaseFooterColumns(footerContent.columns);
-  const brandName = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
-  const officeLabel = locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : 'Offices';
+  const brandName =
+    locale === 'ko'
+      ? '법무법인 호정'
+      : locale === 'zh-hant'
+        ? '昊鼎國際法律事務所'
+        : locale === 'ja'
+          ? '昊鼎国際法律事務所'
+          : 'Hovering International Law Firm';
+  const officeLabel =
+    locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : locale === 'ja' ? '事務所' : 'Offices';
   const offices =
     locale === 'ko'
       ? [
@@ -37,6 +45,12 @@ export default function Footer({
           { label: '台北', href: '/zh-hant/contact#offices' },
           { label: '台中', href: '/zh-hant/contact#offices' },
           { label: '高雄', href: '/zh-hant/contact#offices' }
+        ]
+        : locale === 'ja'
+          ? [
+          { label: '台北', href: '/ja/contact#offices' },
+          { label: '台中', href: '/ja/contact#offices' },
+          { label: '高雄', href: '/ja/contact#offices' }
         ]
         : [
           { label: 'Taipei', href: '/en/contact#offices' },
@@ -58,6 +72,13 @@ export default function Footer({
           { label: '無障礙聲明', href: '/zh-hant/accessibility' },
           { label: '網站地圖', href: '/sitemap.xml' }
         ]
+        : locale === 'ja'
+          ? [
+          { label: 'プライバシーポリシー', href: '/ja/privacy' },
+          { label: '免責事項', href: '/ja/disclaimer' },
+          { label: 'アクセシビリティ', href: '/ja/accessibility' },
+          { label: 'サイトマップ', href: '/sitemap.xml' }
+        ]
         : [
           { label: 'Privacy Policy', href: '/en/privacy' },
           { label: 'Disclaimer', href: '/en/disclaimer' },
@@ -69,6 +90,8 @@ export default function Footer({
       ? { blog: '블로그', youtube: '유튜브', website: '공식 사이트' }
       : locale === 'zh-hant'
         ? { blog: '部落格', youtube: 'YouTube', website: '官方網站' }
+        : locale === 'ja'
+          ? { blog: 'ブログ', youtube: 'YouTube', website: '公式サイト' }
         : { blog: 'Blog', youtube: 'YouTube', website: 'Website' };
 
   return (

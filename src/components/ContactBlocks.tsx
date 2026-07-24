@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Locale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
+import { contactPageContent } from '@/data/contact-page-content';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import Reveal from '@/components/Reveal';
@@ -13,6 +14,7 @@ export default function ContactBlocks({
   showMainHeader?: boolean;
 }) {
   const { contact } = siteContent[locale];
+  const channels = contactPageContent[locale];
   // `.reveal-stagger` children stay at opacity 0 until a `.reveal.is-visible`
   // ancestor exists, so the section must reveal itself — callers (legacy
   // contact/about bodies) don't wrap it the way home-legacy does.
@@ -34,6 +36,24 @@ export default function ContactBlocks({
         ) : null}
         <div className="section-label" data-builder-surface-key="inquiries-label">
           {contact.inquiriesLabel}
+        </div>
+        <div className="grid-bento contact-grid reveal-stagger" style={{ marginBottom: '1.5rem' }}>
+          <div className="card">
+            <h3 className="card-title">{channels.direct.email.label}</h3>
+            <p className="card-copy">
+              <a className="link-underline" href={channels.direct.email.href}>
+                {channels.direct.email.value}
+              </a>
+            </p>
+          </div>
+          <div className="card">
+            <h3 className="card-title">{channels.direct.phone.label}</h3>
+            <p className="card-copy">
+              <a className="link-underline phone-number" href={channels.direct.phone.href}>
+                {channels.direct.phone.value}
+              </a>
+            </p>
+          </div>
         </div>
         <div className="grid-bento contact-grid reveal-stagger">
           {contact.inquiries.map((block) => (

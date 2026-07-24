@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { mapPublicRateLimitDenial } from '@/lib/builder/security/public-rate-limit-response';
 import { addBookingDuration, isSlotAvailable } from '@/lib/builder/bookings/availability';
 import { bookingCreateSchema, type Booking } from '@/lib/builder/bookings/types';
 import { getService, getStaff, makeBookingId, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
@@ -108,8 +109,9 @@ export async function POST(request: NextRequest) {
     const ip = getClientIp(request);
     const rate = await checkRateLimit(`booking:${ip}`, 8, 60_000);
     if (!rate.allowed) {
-      return errorResponse(locale, 'too_many_requests', 429, {}, {
-        headers: { 'Retry-After': String(Math.ceil(rate.retryAfterMs / 1000)) },
+      const decision = mapPublicRateLimitDenial(rate);
+      return errorResponse(locale, decision.errorCode, decision.status, {}, {
+        headers: decision.headers,
       });
     }
 

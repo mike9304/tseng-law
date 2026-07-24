@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
+import { toBuilderLocale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { teamContent } from '@/data/team-members';
@@ -37,13 +38,22 @@ const copyByLocale = {
     summary:
       'With 10+ years of practical experience, media appearances, and continuous legal content publishing, we focus on real case-driven support.',
     cta: 'View Lawyer Profile'
-  }
+  },
+  ja: {
+    label: 'ABOUT',
+    title: '曾俊瑋弁護士 — 韓国のお客様のための台湾法務パートナー',
+    description:
+      '曾俊瑋弁護士は韓国語・日本語・中国語でのコミュニケーションを強みに、投資・会社設立・訴訟まで一貫した戦略を提供します。',
+    summary:
+      '10年以上の実務経験、メディア出演、WEI Lawyerチャンネル運営を通じて、実例に基づく法務支援を続けています。',
+    cta: '弁護士プロフィールを見る',
+  },
 } as const;
 
-export default function HomeAttorneySplit({ locale }: { locale: Locale }) {
+export default function HomeAttorneySplit({ locale }: { locale: SiteLocale }) {
   const copy = copyByLocale[locale];
-  const profilePath = getAttorneyProfilePath(locale);
-  const lead = teamContent[locale].members[0];
+  const profilePath = getAttorneyProfilePath(toBuilderLocale(locale));
+  const lead = teamContent[toBuilderLocale(locale)].members[0];
 
   return (
     <section className="section section--gray split-section split--img-left" id="about" data-tone="light">

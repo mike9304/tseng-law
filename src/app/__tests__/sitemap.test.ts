@@ -101,9 +101,10 @@ describe('sitemap column lastModified', () => {
       afterFiltering: afterFilteringUrls.size,
       removed: beforeFilteringUrls.size - afterFilteringUrls.size,
     }).toEqual({
-      // 88 base entries + 30 builder fixtures - 6 duplicate URLs.
-      beforeFiltering: 112,
-      afterFiltering: 103,
+      // Base includes EN file-backed columns + JA /columns archive + 17 JA details (+18).
+      // Builder fixtures still drop 9 EN-only noindex routes.
+      beforeFiltering: 147,
+      afterFiltering: 138,
       removed: 9,
     });
 

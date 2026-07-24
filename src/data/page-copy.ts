@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
 type PageSectionCopy = {
   label: string;
@@ -19,7 +19,7 @@ type PageCopy = {
   reviews: PageSectionCopy;
 };
 
-export const pageCopy: Record<Locale, PageCopy> = {
+export const pageCopy: Record<SiteLocale, PageCopy> = {
   ko: {
     about: {
       label: 'ABOUT',
@@ -175,6 +175,58 @@ export const pageCopy: Record<Locale, PageCopy> = {
       label: 'REVIEWS',
       title: 'Client Reviews',
       description: 'Honest feedback from our valued clients.'
+    }
+  },
+  ja: {
+    about: {
+      label: 'ABOUT',
+      title: '昊鼎について',
+      description: '事務所の概要と韓国・台湾チームをご紹介します。'
+    },
+    services: {
+      label: 'SERVICES',
+      title: '取扱業務',
+      description: '台湾投資、紛争対応、顧問業務を体系的に提供します。'
+    },
+    lawyers: {
+      label: 'OUR TEAM',
+      title: '韓国・台湾業務チーム',
+      description: '弁護士・事務長・会計士の経歴と専門分野をご確認ください。'
+    },
+    insights: {
+      label: 'INSIGHTS',
+      title: 'コラム',
+      description: '台湾法務の実務コラムをカテゴリ別にご覧いただけます。'
+    },
+    videos: {
+      label: 'VIDEOS',
+      title: '曾俊瑋弁護士メディア',
+      description: '公式プロフィール、YouTube、ブログ等をまとめて確認できます。'
+    },
+    faq: {
+      label: 'FAQ',
+      title: 'よくある質問',
+      description: '相談の流れに関するFAQです。'
+    },
+    contact: {
+      label: 'CONTACT',
+      title: 'お問い合わせ',
+      description: '問い合わせ種別、連絡先、事務所所在地をまとめてご案内します。'
+    },
+    search: {
+      label: 'SEARCH',
+      title: '検索結果',
+      description: '必要な情報を素早く見つけるための検索結果です。'
+    },
+    pricing: {
+      label: 'PRICING',
+      title: '費用案内',
+      description: '主要サービスの費用の目安です。'
+    },
+    reviews: {
+      label: 'REVIEWS',
+      title: 'お客様の声',
+      description: 'ご利用いただいたお客様からのご感想です。'
     }
   }
 };

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { siteContent } from '@/data/site-content';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { buildLocalePath } from '@/lib/path-utils';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 
@@ -33,7 +33,7 @@ export default function MobileNavDrawer({
 }: {
   open: boolean;
   onClose: () => void;
-  locale: Locale;
+  locale: SiteLocale;
   onSearch: () => void;
   memberNav?: MemberNavState;
   memberLabels?: MemberLabels;

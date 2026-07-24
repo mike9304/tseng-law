@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { mapPublicRateLimitDenial } from '@/lib/builder/security/public-rate-limit-response';
 import { getService, listStaff } from '@/lib/builder/bookings/storage';
 import {
   getPublicBookingApiErrorPayload,
@@ -40,8 +41,9 @@ export async function GET(request: NextRequest) {
   // page load.
   const rate = await checkRateLimit(`booking-staff:${clientIp(request)}`, 60, 60_000);
   if (!rate.allowed) {
-    return errorResponse(locale, 'too_many_requests', 429, {
-      headers: { 'Retry-After': String(Math.ceil(rate.retryAfterMs / 1000)) },
+    const decision = mapPublicRateLimitDenial(rate);
+    return errorResponse(locale, decision.errorCode, decision.status, {
+      headers: decision.headers,
     });
   }
 

@@ -79,15 +79,28 @@ export default function SandboxInspectorOfficeQuickEdit({
                   updateNodeContent(officeQuickEdit.titleNode.id, { text: preset.title });
                 }
                 if (officeQuickEdit.phoneNode) {
-                  updateNodeContent(officeQuickEdit.phoneNode.id, {
-                    label: `${phonePrefix}: ${preset.phone}`,
-                    href: telHrefFromPhone(preset.phone),
-                  });
+                  if (preset.phone) {
+                    updateNodeContent(officeQuickEdit.phoneNode.id, {
+                      label: `${phonePrefix}: ${preset.phone}`,
+                      href: telHrefFromPhone(preset.phone),
+                    });
+                  } else {
+                    updateNodeContent(officeQuickEdit.phoneNode.id, {
+                      label: '',
+                      href: '',
+                    });
+                  }
                 }
-                if (officeQuickEdit.faxNode && preset.fax) {
-                  updateNodeContent(officeQuickEdit.faxNode.id, {
-                    text: `${faxPrefix}: ${preset.fax}`,
-                  });
+                if (officeQuickEdit.faxNode) {
+                  if (preset.fax) {
+                    updateNodeContent(officeQuickEdit.faxNode.id, {
+                      text: `${faxPrefix}: ${preset.fax}`,
+                    });
+                  } else {
+                    updateNodeContent(officeQuickEdit.faxNode.id, {
+                      text: '',
+                    });
+                  }
                 }
               }}
             >

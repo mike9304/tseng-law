@@ -5,6 +5,7 @@ import ContactBlocks from '@/components/ContactBlocks';
 import AttorneyProfileSection from '@/components/AttorneyProfileSection';
 import FirmIntroductionSection from '@/components/FirmIntroductionSection';
 import ConsultationGuideSection from '@/components/ConsultationGuideSection';
+import MessengerChatSection from '@/components/MessengerChatSection';
 import PricingCards from '@/components/PricingCards';
 import ReviewBoard from '@/components/ReviewBoard';
 import ColumnsGrid, { type ColumnsGridFilters } from '@/components/ColumnsGrid';
@@ -81,6 +82,7 @@ export function ContactLegacyPageBody({ locale }: { locale: Locale }) {
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       <ConsultationGuideSection locale={locale} />
+      <MessengerChatSection locale={locale} />
       <ContactBlocks locale={locale} showMainHeader={false} />
       <OfficeMapTabs locale={locale} />
     </>

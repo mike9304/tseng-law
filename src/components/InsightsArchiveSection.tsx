@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import SmartLink from '@/components/SmartLink';
@@ -62,18 +62,35 @@ const copyByLocale = {
     nextLabel: 'Next',
     viewAll: 'View all columns'
   },
+  ja: {
+    label: 'INSIGHTS',
+    title: 'コラムアーカイブ',
+    description: '実務に役立つ台湾法務コラムを厳選して掲載しています。',
+    readMore: '続きを読む',
+    dateFallback: '日付確認中',
+    prevLabel: '前へ',
+    nextLabel: '次へ',
+    viewAll: 'すべてのコラムを見る',
+  },
 } as const;
 
 export default function InsightsArchiveSection({
   locale,
   posts,
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   posts: ArchivePost[];
 }) {
   const copy = copyByLocale[locale];
-  const authorLabel = locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾俊瑋律師審閱' : 'Reviewed by Wei Tseng';
-  const authorHref = getAttorneyProfilePath(locale);
+  const authorLabel =
+    locale === 'ko'
+      ? '증준외 변호사 검토'
+      : locale === 'zh-hant'
+        ? '曾俊瑋律師審閱'
+        : locale === 'ja'
+          ? '曾俊瑋弁護士監修'
+          : 'Reviewed by Wei Tseng';
+  const authorHref = getAttorneyProfilePath(locale === 'ja' ? 'en' : locale);
   const [featured, ...rest] = posts;
   const listItems = rest;
   const pageSize = 3;

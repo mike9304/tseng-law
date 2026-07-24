@@ -862,8 +862,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         {
           title: '타이베이 사무소',
           details: [
-            '台北市大同區承德路一段35號7樓之2',
-            '대표전화(타이중 본소): 04-2326-1862'
+            '台北市大同區承德路一段35號7樓之2'
           ]
         },
         {
@@ -1589,8 +1588,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         {
           title: '台北所',
           details: [
-            '台北市大同區承德路一段35號7樓之2',
-            '代表電話（台中本所）: 04-2326-1862'
+            '台北市大同區承德路一段35號7樓之2'
           ]
         },
         {
@@ -2332,7 +2330,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       locations: [
         {
           title: 'Taipei Office',
-          details: ['7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City', 'Main line (Taichung headquarters): 04-2326-1862']
+          details: ['7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City']
         },
         {
           title: 'Taichung Office',
@@ -2405,7 +2403,751 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
   };
 }
 
-export const siteContent: Record<Locale, SiteContent> = {
+const englishSiteContent = buildEnglishSiteContent(baseSiteContent.ko);
+
+function buildJapaneseSiteContent(base: SiteContent): SiteContent {
+  return {
+    ...base,
+    meta: {
+      title: '台湾弁護士・台湾訴訟・台湾会社設立',
+      description:
+        '台湾での会社設立、投資法務、民刑事訴訟について、韓国語・中国語・日本語で案内する昊鼎国際法律事務所の公式サイトです。'
+    },
+    nav: {
+      ...base.nav,
+      primary: [
+        { label: '取扱業務', href: '/ja/services' },
+        { label: '弁護士紹介', href: '/ja/lawyers' },
+        { label: '費用案内', href: '/ja/pricing' },
+        { label: 'コラム', href: '/ja/columns' },
+        { label: 'メディアセンター', href: '/ja/videos' },
+        { label: 'アクセス', href: '/ja/contact#offices' }
+      ],
+      servicesMenu: {
+        ...base.nav.servicesMenu,
+        label: '取扱業務',
+        categories: [
+          { label: '台湾投資・会社設立', href: '/ja/services#investment' },
+          { label: 'ビザ申請', href: '/ja/services#investment' },
+          { label: '商標・特許', href: '/ja/services#ip' },
+          { label: '法的リスクレビュー', href: '/ja/services#investment' },
+          { label: '税務相談', href: '/ja/services#investment' },
+          { label: '不動産・建設', href: '/ja/services#real-estate' },
+          { label: '金融・保険', href: '/ja/services#finance' },
+          { label: '労使・刑事・民事・家事', href: '/ja/services#labor' }
+        ],
+        featured: [
+          {
+            title: '台湾投資と訴訟の一気通貫サポート',
+            description: '会社設立から紛争解決まで、国際案件に実務的な支援を提供します。',
+            href: '/ja/services'
+          },
+          {
+            title: '多言語コミュニケーション',
+            description: '韓国語・日本語・英語で分かりやすい法律コミュニケーションを行います。',
+            href: '/ja/about'
+          }
+        ],
+        topics: ['台湾投資', '会社設立', 'ビザ', '知的財産']
+      },
+      insightsMenu: {
+        ...base.nav.insightsMenu,
+        label: 'コラム',
+        categories: [
+          { label: 'コラム', href: '/ja/columns' },
+          { label: 'YouTubeチャンネル', href: '/ja/videos' },
+          { label: 'FAQ', href: '/ja/faq' },
+          { label: 'サービス案内', href: '/ja/services' },
+          { label: 'お問い合わせ', href: '/ja/contact' }
+        ],
+        featured: [
+          {
+            title: 'WEI Lawyer YouTubeチャンネル',
+            description: '台湾法務の実務トピックを動画で解説します。',
+            href: '/ja/videos'
+          },
+          {
+            title: 'ブログ＆コラム',
+            description: '法律解説と事例中心の記事をご覧いただけます。',
+            href: '/ja/columns'
+          }
+        ],
+        topics: ['コラム', 'WEI Lawyer', '台湾法', '相談の流れ']
+      },
+      cta: { label: '相談予約', href: '/ja/contact' },
+      searchLabel: '検索',
+      languageLabel: '言語'
+    },
+    hero: {
+      ...base.hero,
+      label: 'TAIWAN LEGAL',
+      title: '台湾法を、分かりやすく。',
+      subtitle:
+        '多言語対応の法律チームが、台湾投資・紛争対応・クロスボーダー案件を実務的にサポートします。',
+      typingPhrases: [
+        '台湾進出を、確かな一歩から',
+        '台湾訴訟の実務経験',
+        '国際クライアント向け多言語法務',
+        '台湾法務のパートナー'
+      ],
+      searchPlaceholder: 'どのようにお手伝いできますか？',
+      searchButton: '検索',
+      keywordsLabel: 'おすすめキーワード',
+      keywords: ['台湾投資', '会社設立', 'ビザ', '商標・特許', '不動産訴訟', '労使紛争'],
+      quickLinksLabel: 'クイックリンク',
+      quickLinks: [
+        { label: '取扱業務', href: '/ja/services' },
+        { label: '弁護士', href: '/ja/lawyers' },
+        { label: 'コラム', href: '/ja/columns' },
+        { label: '動画', href: '/ja/videos' },
+        { label: 'FAQ', href: '/ja/faq' }
+      ],
+      secondaryLinks: [
+        { label: '取扱業務を見る', href: '/ja/services' },
+        { label: 'お問い合わせ', href: '/ja/contact' }
+      ]
+    },
+    heroHighlights: {
+      ...base.heroHighlights,
+      label: '注目コンテンツ',
+      items: [
+        {
+          title: '台湾投資・会社設立',
+          summary: '設立からビザ・税務計画まで。',
+          meta: 'ガイド',
+          href: '/ja/services#investment',
+          image: '/images/feature-1.svg'
+        },
+        {
+          title: '不動産・建設紛争',
+          summary: '売買・賃貸・工事紛争への実務的対応。',
+          meta: 'ガイド',
+          href: '/ja/services#real-estate',
+          image: '/images/feature-2.svg'
+        },
+        {
+          title: '知的財産',
+          summary: '商標・特許・著作権の保護。',
+          meta: 'ガイド',
+          href: '/ja/services#ip',
+          image: '/images/feature-3.svg'
+        },
+        {
+          title: '労使・刑事・民事・家事',
+          summary: '紛争・訴訟の包括的サポート。',
+          meta: 'ガイド',
+          href: '/ja/services#labor',
+          image: '/images/feature-2.svg'
+        }
+      ]
+    },
+    achievements: {
+      ...base.achievements,
+      label: 'RESULTS',
+      title: '代表的な成果',
+      items: [
+        {
+          title: 'ジム傷害事件',
+          amount: 'TWD 1.57M',
+          summary: 'ジムでの傷害事件で損害賠償を勝訴。',
+          image: '/images/feature-1.svg',
+          tag: '民事',
+          href: '/ja/columns'
+        },
+        {
+          title: '医療紛争',
+          amount: 'TWD 3.0M',
+          summary: '医療紛争で賠償判決を獲得。',
+          image: '/images/feature-2.svg',
+          tag: '医療',
+          href: '/ja/columns'
+        },
+        {
+          title: '投資損失の回収',
+          amount: '数百万 TWD',
+          summary: '金融・投資紛争での回収を支援。',
+          image: '/images/feature-3.svg',
+          tag: '金融',
+          href: '/ja/columns'
+        },
+        {
+          title: '医療過誤',
+          amount: 'TWD 2.9M',
+          summary: '医療過誤の損害賠償請求を担当。',
+          image: '/images/feature-2.svg',
+          tag: '医療',
+          href: '/ja/columns'
+        },
+        {
+          title: '離婚の財産分与',
+          amount: 'TWD 6.0M',
+          summary: '高額な家事財産分与請求を代理。',
+          image: '/images/feature-1.svg',
+          tag: '家事',
+          href: '/ja/columns'
+        },
+        {
+          title: '化粧品取引紛争',
+          amount: 'TWD 0.3M',
+          summary: '化粧品関連の商事紛争を解決。',
+          image: '/images/feature-3.svg',
+          tag: '商事',
+          href: '/ja/columns'
+        }
+      ]
+    },
+    stats: {
+      ...base.stats,
+      label: 'ABOUT',
+      title: '台湾法の複雑さを、明確に整理する',
+      description:
+        '「昊鼎」という名称は、広い視野と安定した基盤を表します。投資・会社設立から訴訟まで、ワンストップで支援します。',
+      highlightWords: ['投資', '会社設立', '訴訟', 'ワンストップ'],
+      items: [
+        { target: 10, suffix: '+', label: '年の実務経験' },
+        { target: 500, suffix: '+', label: '取扱案件' },
+        { target: 5, label: 'オフィス拠点' },
+        { target: 4, label: '対応言語' }
+      ]
+    },
+    majorNews: {
+      ...base.majorNews,
+      label: 'MAJOR NEWS',
+      title: '主要なお知らせ',
+      items: [
+        {
+          title: '台湾投資・会社設立ガイド',
+          summary: '設立、ビザ申請、商標・特許出願、税務相談まで支援します。',
+          date: '常時',
+          tag: 'ガイド',
+          href: '/ja/services#investment'
+        },
+        {
+          title: '不動産・建設・金融紛争',
+          summary: '不動産、建設、金融・保険の紛争・訴訟対応。',
+          date: '常時',
+          tag: 'ガイド',
+          href: '/ja/services#real-estate'
+        },
+        {
+          title: '知財・労使・刑事・民事・家事',
+          summary: '主要分野の訴訟・顧問を包括的に対応。',
+          date: '常時',
+          tag: 'ガイド',
+          href: '/ja/services#ip'
+        }
+      ]
+    },
+    firmUpdates: {
+      ...base.firmUpdates,
+      label: 'UPDATES',
+      title: '事務所アップデート',
+      tabs: [
+        {
+          id: 'news',
+          label: 'お知らせ',
+          items: [
+            {
+              title: '台湾投資相談ガイド',
+              meta: 'お知らせ',
+              tag: 'お知らせ',
+              href: '/ja/services#investment'
+            },
+            {
+              title: '法律相談の流れ',
+              meta: 'お知らせ',
+              tag: 'お知らせ',
+              href: '/ja/faq'
+            }
+          ]
+        },
+        {
+          id: 'media',
+          label: 'メディア',
+          items: [
+            {
+              title: 'Naverブログ：台湾弁護士 曾俊瑋',
+              meta: 'チャンネル',
+              tag: 'メディア',
+              href: 'https://blog.naver.com/wei_lawyer/223461663913'
+            },
+            {
+              title: 'WEI Lawyer YouTubeチャンネル',
+              meta: 'チャンネル',
+              tag: 'メディア',
+              href: 'https://www.youtube.com/@weilawyer'
+            }
+          ]
+        },
+        {
+          id: 'seminar',
+          label: 'セミナー',
+          items: [
+            {
+              title: 'セミナー資料準備中',
+              meta: '準備中',
+              tag: 'セミナー',
+              href: '/ja/contact'
+            }
+          ]
+        }
+      ]
+    },
+    featured: {
+      ...base.featured,
+      label: 'FEATURED',
+      title: '主要取扱分野',
+      items: [
+        {
+          title: '台湾投資・会社設立',
+          summary: '会社設立・ビザから税務・コンプライアンスまで一貫支援。',
+          meta: 'プラクティス',
+          tag: '投資・顧問',
+          href: '/ja/services#investment',
+          image: '/images/feature-1.svg'
+        },
+        {
+          title: '不動産・建設・金融訴訟',
+          summary: '不動産、建設、金融案件の紛争解決。',
+          meta: '訴訟',
+          tag: '紛争',
+          href: '/ja/services#real-estate',
+          image: '/images/feature-2.svg'
+        },
+        {
+          title: '知財・労使・刑事・民事・家事',
+          summary: '争訟・顧問を幅広くカバー。',
+          meta: '訴訟',
+          tag: '専門分野',
+          href: '/ja/services#ip',
+          image: '/images/feature-3.svg'
+        }
+      ]
+    },
+    services: {
+      ...base.services,
+      label: 'SERVICES',
+      title: '主要サービス',
+      description: '台湾における投資・訴訟・顧問を体系的に支援します。',
+      items: [
+        {
+          title: '投資・会社設立',
+          description: '組織設計から許認可、銀行口座、各種許可、開業まで一気通貫で支援します。',
+          href: '/ja/services#investment',
+          details: [
+            '子会社・支店・有限会社など組織形態の比較',
+            '投資審議委員会（投審会）の承認・申請支援',
+            '資本送金、準備口座、営業口座への転換',
+            '事業所の用途・立地の事前確認',
+            '化粧品PIFや物流許認可など業種別許可',
+            '解散・清算による適法な資本回収'
+          ],
+          relatedColumns: [
+            { title: '台湾会社設立の基本', slug: 'taiwan-company-establishment-basics' },
+            { title: '子会社と支店の比較', slug: 'taiwan-company-subsidiary-vs-branch' },
+            { title: '応用ガイド1：ビザとARC', slug: 'taiwan-company-establishment-advanced-1' },
+            { title: '応用ガイド2：資本と口座', slug: 'taiwan-company-establishment-advanced-2' },
+            { title: '応用ガイド3：事業所の所在地', slug: 'taiwan-company-setup-pitch-location' },
+            { title: '化粧品市場参入ガイド', slug: 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide' },
+            { title: '物流事業の設立', slug: 'taiwan-logistics-business-setup' },
+            { title: '資本回収の方法', slug: 'withdraw-capital-taiwan-company' }
+          ]
+        },
+        {
+          title: '民事訴訟・損害賠償',
+          description: '契約紛争、不法行為、消費者紛争に実務的な訴訟戦略で対応します。',
+          href: '/ja/services#civil',
+          details: [
+            '人身・物的損害の損害賠償請求',
+            '契約違反・商事紛争の代理',
+            '消費者救済と事業者への訴訟',
+            '交通事故後の過失分析と賠償請求',
+            '外国人当事者向け多言語訴訟支援'
+          ],
+          relatedColumns: [
+            { title: 'ジム傷害事件（TWD 1.57M）', slug: 'taiwan-gym-injury-lawsuit' },
+            { title: '交通事故への対応', slug: 'taiwan-traffic-accident-procedure' },
+            { title: '追越し事故の責任', slug: 'taiwan-overtaking-accident-liability' }
+          ]
+        },
+        {
+          title: '家事訴訟',
+          description: '離婚、財産分与、親権、相続などクロスボーダー家事案件に対応します。',
+          href: '/ja/services#family',
+          details: [
+            '協議離婚（証人・戸籍手続きを含む）',
+            '離婚調停・裁判手続きの代理',
+            '親権、監護、面会交流の調整',
+            '配偶者・子の台湾相続分',
+            '婚姻財産の残余分配請求'
+          ],
+          relatedColumns: [
+            { title: '台湾離婚訴訟 Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
+            { title: '相続・監護の分析', slug: 'taiwan-inheritance-custody-analysis' }
+          ]
+        },
+        {
+          title: '労働・雇用',
+          description: '解雇、退職金、労働契約、労務コンプライアンスを台湾法に沿って支援します。',
+          href: '/ja/services#labor',
+          details: [
+            '経済的解雇における退職金の算定',
+            '自己都合退職後も退職金が認められる例外',
+            '最低服務期間条項のレビュー',
+            '外国企業向け台湾労働法アドバイス'
+          ],
+          relatedColumns: [
+            { title: '台湾の退職金制度', slug: 'taiwan-labor-severance-law' },
+            { title: '自己都合退職の例外', slug: 'taiwan-voluntary-resignation-severance' },
+            { title: '最低服務期間の問題', slug: 'taiwan-mandatory-employment-period' }
+          ]
+        },
+        {
+          title: '刑事訴訟',
+          description: '捜査段階の支援、弁護、被害者代理、規制リスク確認を行います。',
+          href: '/ja/services#criminal',
+          details: [
+            '刑事捜査段階の助言・代理',
+            '被害者代理と刑事告訴手続き',
+            '規制・刑事リスクの事前評価',
+            '外国人被告人向け日本語通訳支援'
+          ]
+        },
+        {
+          title: '知財・金融紛争',
+          description: '商標・特許・著作権戦略に加え、金融・投資紛争にも対応します。',
+          href: '/ja/services#ip',
+          details: [
+            '商標クリアランス調査と台湾登録支援',
+            '特許・著作権侵害紛争',
+            '金融商品・投資契約に関する訴訟',
+            'ブランド・デザイン保護戦略'
+          ]
+        }
+      ]
+    },
+    homeAttorney: {
+      label: 'ABOUT',
+      title: '曾俊瑋弁護士——国際クライアントの台湾法パートナー',
+      summary:
+        '10年以上の実務経験、メディア出演、継続的な法律コンテンツ発信を通じて、実案中心の支援に注力しています。',
+      ctaLabel: '弁護士プロフィールを見る'
+    },
+    homeResults: {
+      label: 'RESULTS',
+      title: '韓国人留学生ジム傷害事件、\n一審でTWD 1.57M勝訴',
+      description:
+        '台湾のジムでトレーナー指導下のトレーニング中に重傷を負った韓国人大学生の事件で、損害賠償を追及し、一審でTWD 1.57Mの判決を得ました。',
+      summary: '事実立証、損害算定、交渉、訴訟戦略を一体で組み立てた代表的成果です。',
+      ctaLabel: 'その他の実績を見る'
+    },
+    updates: {
+      ...base.updates,
+      label: 'PROFILE',
+      title: '曾俊瑋弁護士プロフィール',
+      tabs: [
+        {
+          id: 'education',
+          label: '学歴',
+          items: [
+            {
+              title: '国立台湾大学 金融学修士',
+              meta: '修士',
+              tag: '学歴',
+              href: '/ja/about'
+            },
+            {
+              title: '国立政治大学 法学・金融学士',
+              meta: '学士',
+              tag: '学歴',
+              href: '/ja/about'
+            },
+            {
+              title: '神戸大学・早稲田大学交換留学',
+              meta: '交換留学',
+              tag: '学歴',
+              href: '/ja/about'
+            }
+          ]
+        },
+        {
+          id: 'experience',
+          label: '経歴',
+          items: [
+            {
+              title: '趨勢法律事務所',
+              meta: '経歴',
+              tag: '経歴',
+              href: '/ja/about'
+            },
+            {
+              title: '昊鼎国際法律事務所',
+              meta: '経歴',
+              tag: '経歴',
+              href: '/ja/about'
+            },
+            {
+              title: '法律扶助基金会 台中分会',
+              meta: '経歴',
+              tag: '経歴',
+              href: '/ja/about'
+            }
+          ]
+        },
+        {
+          id: 'practice',
+          label: '取扱分野',
+          items: [
+            {
+              title: '台湾投資・クロスボーダー案件',
+              meta: '国際',
+              tag: '取扱',
+              href: '/ja/services#investment'
+            },
+            {
+              title: '金融消費者・保険請求',
+              meta: '金融',
+              tag: '取扱',
+              href: '/ja/services#finance'
+            },
+            {
+              title: '不動産訴訟（売買・賃貸・再開発・建設）',
+              meta: '不動産',
+              tag: '取扱',
+              href: '/ja/services#real-estate'
+            },
+            {
+              title: '知財訴訟（特許・商標・著作権）',
+              meta: '知財',
+              tag: '取扱',
+              href: '/ja/services#ip'
+            },
+            {
+              title: '刑事・民事・家事・労働の一般紛争',
+              meta: '一般',
+              tag: '取扱',
+              href: '/ja/services#labor'
+            }
+          ]
+        }
+      ]
+    },
+    caseGuides: {
+      ...base.caseGuides,
+      label: 'CASE GUIDES',
+      title: '実務ガイド',
+      description: '実務チェックリストと手続きの案内。',
+      items: [
+        {
+          title: '台湾投資・会社設立チェックリスト',
+          summary: '設立前の準備ポイントと手続きの節目。',
+          tag: 'ガイド',
+          href: '/ja/services#investment'
+        },
+        {
+          title: 'ビザ申請準備ガイド',
+          summary: 'ビザ種別ごとの必要書類と手続きの流れ。',
+          tag: 'ガイド',
+          href: '/ja/services#investment'
+        },
+        {
+          title: '商標・特許出願の基本',
+          summary: '知的財産権保護の基本手続き。',
+          tag: 'ガイド',
+          href: '/ja/services#ip'
+        }
+      ]
+    },
+    newsletters: {
+      ...base.newsletters,
+      label: 'NEWSLETTER',
+      title: '法律ブリーフィング',
+      items: [
+        {
+          title: '台湾投資 法律ブリーフィング（準備中）',
+          summary: '台湾へのクロスボーダー投資計画に関する法改正とストラクチャリングの要点。',
+          date: '準備中',
+          href: '/ja/columns'
+        },
+        {
+          title: '不動産・建設 法律ブリーフィング（準備中）',
+          summary: '台湾不動産実務から見た紛争・コンプライアンスの論点。',
+          date: '準備中',
+          href: '/ja/columns'
+        }
+      ]
+    },
+    videos: {
+      ...base.videos,
+      label: 'CHANNELS',
+      title: '曾俊瑋弁護士の公開チャンネル',
+      description: 'YouTube、ブログ、個人サイト、事務所公式プロフィールを一ページで確認できます。',
+      featured: {
+        title: 'WEI Lawyer YouTubeチャンネル',
+        duration: 'YouTube',
+        href: 'https://www.youtube.com/@weilawyer',
+        image: '/images/video-feature.svg'
+      },
+      items: [
+        {
+          title: 'Naverブログ：台湾弁護士 曾俊瑋',
+          duration: 'Blog',
+          href: 'https://blog.naver.com/wei_lawyer/223461663913',
+          image: '/images/video-1.svg'
+        },
+        {
+          title: '個人サイト：台湾弁護士 曾俊瑋',
+          duration: 'Website',
+          href: 'https://www.wei-wei-lawyer.com/',
+          image: '/images/video-2.svg'
+        },
+        {
+          title: '昊鼎国際法律事務所',
+          duration: 'Website',
+          href: 'https://www.hoveringlaw.com.tw/en/wei.html',
+          image: '/images/video-3.svg'
+        },
+        {
+          title: 'お問い合わせ',
+          duration: 'Contact',
+          href: '/ja/contact',
+          image: '/images/video-4.svg'
+        }
+      ],
+      cta: { label: 'チャンネルを開く', href: '/ja/videos' }
+    },
+    warning: {
+      ...base.warning,
+      label: 'NOTICE',
+      title: 'なりすまし・フィッシング注意',
+      message:
+        '当事務所や弁護士を装った不審なメッセージを受け取った場合は、リンクや添付ファイルを開かず、公式チャネルでご確認ください。',
+      cta: { label: '連絡先を確認', href: '/ja/contact' }
+    },
+    quickContact: {
+      ...base.quickContact,
+      buttonLabel: 'クイック相談を開く',
+      panelTitle: 'クイック相談',
+      actions: [
+        { label: 'AI相談', value: 'AIによる初期案内', href: '#ai-consultation' },
+        { label: 'メール', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' },
+        { label: '電話（韓国）', value: '+82-10-2992-9304', href: 'tel:+821029929304' }
+      ],
+      cta: { label: 'お問い合わせページ', href: '/ja/contact' }
+    },
+    contact: {
+      ...base.contact,
+      label: 'CONTACT',
+      title: 'お問い合わせ',
+      description: 'ご相談内容に応じた適切な窓口からご連絡ください。',
+      inquiriesLabel: 'お問い合わせ種別',
+      inquiries: [
+        {
+          title: 'ビジネス・投資',
+          details: ['電話: +82-10-2992-9304', 'メール: wei@hoveringlaw.com.tw']
+        },
+        {
+          title: 'メディア取材',
+          details: [
+            'メール: wei@hoveringlaw.com.tw',
+            'KakaoTalk: チャネルチャット',
+            '件名に【メディア取材】とご記入ください'
+          ]
+        },
+        {
+          title: '採用に関するお問い合わせ',
+          details: [
+            'メール: wei@hoveringlaw.com.tw',
+            '電話: +82-10-2992-9304',
+            '件名に【採用】とご記入ください'
+          ]
+        },
+        {
+          title: '一般のお問い合わせ',
+          details: ['メール: wei@hoveringlaw.com.tw']
+        }
+      ],
+      locationsLabel: 'オフィス所在地',
+      locations: [
+        {
+          title: '台北オフィス',
+          details: ['台北市大同区承徳路一段35号7F-2']
+        },
+        {
+          title: '台中オフィス',
+          details: ['台中市北区館前路19号', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
+        },
+        {
+          title: '高雄オフィス',
+          details: ['高雄市左営区安吉街233号', 'Tel: 07-557-9797']
+        }
+      ],
+      cta: { label: 'お問い合わせページ', href: '/ja/contact' }
+    },
+    homeContactCta: {
+      title: '台湾の法律問題を、今すぐご相談ください。',
+      description: 'ビジネス、訴訟、会社設立のご相談を案件種別に迅速に振り分けます。'
+    },
+    footer: {
+      ...base.footer,
+      note: '韓国語・日本語・英語で、台湾のクロスボーダー顧問と紛争対応を支援します。',
+      columns: [
+        {
+          title: '事務所',
+          links: [
+            { label: '事務所紹介', href: '/ja/about' },
+            { label: '弁護士', href: '/ja/lawyers' },
+            { label: '相談', href: '/ja/contact' }
+          ]
+        },
+        {
+          title: '取扱業務',
+          links: [
+            { label: '投資・会社設立', href: '/ja/services#investment' },
+            { label: '不動産・建設', href: '/ja/services#real-estate' },
+            { label: '商標・知財', href: '/ja/services#ip' }
+          ]
+        },
+        {
+          title: 'リソース',
+          links: [
+            { label: 'コラム', href: '/ja/columns' },
+            { label: '動画', href: '/ja/videos' },
+            { label: 'よくある質問', href: '/ja/faq' }
+          ]
+        },
+        {
+          title: '人気トピック',
+          links: [
+            { label: '台湾弁護士', href: '/ja/taiwan-lawyer' },
+            { label: '台湾会社設立', href: '/ja/taiwan-company-setup-lawyer' },
+            { label: '台湾訴訟', href: '/ja/taiwan-litigation-lawyer' },
+            { label: '台湾会社設立ガイド', href: '/ja/guides/taiwan-company-setup' },
+            { label: '韓国語対応の台湾弁護士', href: '/ja/korean-lawyer-in-taiwan' }
+          ]
+        }
+      ],
+      legal: '© 2026 昊鼎国際法律事務所. All rights reserved.'
+    },
+    search: {
+      ...base.search,
+      title: '検索',
+      placeholder: 'どのようにお手伝いできますか？',
+      tabs: [
+        { id: 'services', label: '取扱業務' },
+        { id: 'insights', label: 'コラム' },
+        { id: 'videos', label: '動画' },
+        { id: 'faq', label: 'FAQ' }
+      ],
+      suggestions: ['台湾投資', '会社設立', 'ビザ', '不動産訴訟', '労使紛争']
+    }
+  };
+}
+
+const japaneseSiteContent = buildJapaneseSiteContent(baseSiteContent.ko);
+
+export const siteContent: Record<import('@/lib/locales').SiteLocale, SiteContent> = {
   ...baseSiteContent,
-  en: buildEnglishSiteContent(baseSiteContent.ko)
+  en: englishSiteContent,
+  ja: japaneseSiteContent,
 };

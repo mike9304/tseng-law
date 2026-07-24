@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import type { FAQItem } from '@/data/faq-content';
 import SectionLabel from '@/components/SectionLabel';
 import { homeFaqTextSurfaceIds } from '@/lib/builder/registry';
@@ -20,7 +20,7 @@ export default function FAQAccordion({
   sectionClassName,
   tone = 'light'
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   items: FAQItem[];
   id?: string;
   sectionClassName?: string;

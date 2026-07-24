@@ -912,13 +912,25 @@ const CanvasNode = memo(function CanvasNode({
         updateNodeContentInStore(officeTitleNode.id, { text: preset.title });
       }
       if (officePhoneNode) {
-        updateNodeContentInStore(officePhoneNode.id, {
-          label: `${officePhonePrefix}: ${preset.phone}`,
-          href: telHrefFromPhone(preset.phone),
-        });
+        if (preset.phone) {
+          updateNodeContentInStore(officePhoneNode.id, {
+            label: `${officePhonePrefix}: ${preset.phone}`,
+            href: telHrefFromPhone(preset.phone),
+          });
+        } else {
+          // Clear stale Taichung (or other) numbers when applying a phone-less preset (e.g. Taipei).
+          updateNodeContentInStore(officePhoneNode.id, {
+            label: '',
+            href: '',
+          });
+        }
       }
-      if (officeFaxNode && preset.fax) {
-        updateNodeContentInStore(officeFaxNode.id, { text: `${officeFaxPrefix}: ${preset.fax}` });
+      if (officeFaxNode) {
+        if (preset.fax) {
+          updateNodeContentInStore(officeFaxNode.id, { text: `${officeFaxPrefix}: ${preset.fax}` });
+        } else {
+          updateNodeContentInStore(officeFaxNode.id, { text: '' });
+        }
       }
     },
     [

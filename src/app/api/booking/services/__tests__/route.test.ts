@@ -76,6 +76,25 @@ describe('/api/booking/services', () => {
     expect(listServicesMock).not.toHaveBeenCalled();
   });
 
+  it('returns 503 when rate-limit backend is unavailable', async () => {
+    checkRateLimitMock.mockResolvedValueOnce({
+      allowed: false,
+      retryAfterMs: 0,
+      reason: 'backend_unavailable',
+    } as never);
+
+    const response = await GET(request('locale=en'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(response.headers.get('Retry-After')).toBeNull();
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Booking protection is temporarily unavailable. Try again shortly.',
+      errorCode: 'rate_limit_unavailable',
+    });
+  });
+
   it('returns localized list failures without leaking exception details', async () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     listServicesMock.mockRejectedValueOnce(new Error('booking services secret leaked'));

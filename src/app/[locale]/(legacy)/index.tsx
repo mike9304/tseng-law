@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
+import { toBuilderLocale } from '@/lib/locales';
 import { AboutLegacyPage, getAboutLegacyMetadata } from './about-legacy';
 import { ContactLegacyPage, getContactLegacyMetadata } from './contact-legacy';
 import { DisclaimerLegacyPage, getDisclaimerLegacyMetadata } from './disclaimer-legacy';
@@ -11,55 +12,61 @@ import { PrivacyLegacyPage, getPrivacyLegacyMetadata } from './privacy-legacy';
 import { ReviewsLegacyPage, getReviewsLegacyMetadata } from './reviews-legacy';
 import { ServicesLegacyPage, getServicesLegacyMetadata } from './services-legacy';
 
-export function getLegacyPageMetadata(slugPath: string, locale: Locale): Metadata | null {
+/** Map SiteLocale → builder Locale for legacy pages that still expect Locale. */
+function asLegacyLocale(locale: SiteLocale) {
+  return toBuilderLocale(locale);
+}
+
+export function getLegacyPageMetadata(slugPath: string, locale: SiteLocale): Metadata | null {
+  // Home/FAQ accept SiteLocale for Japanese body selection
   switch (slugPath) {
     case '':
       return getHomeLegacyMetadata(locale);
     case 'about':
-      return getAboutLegacyMetadata(locale);
+      return getAboutLegacyMetadata(asLegacyLocale(locale));
     case 'services':
-      return getServicesLegacyMetadata(locale);
+      return getServicesLegacyMetadata(asLegacyLocale(locale));
     case 'contact':
-      return getContactLegacyMetadata(locale);
+      return getContactLegacyMetadata(asLegacyLocale(locale));
     case 'lawyers':
-      return getLawyersLegacyMetadata(locale);
+      return getLawyersLegacyMetadata(asLegacyLocale(locale));
     case 'faq':
-      return getFaqLegacyMetadata(locale);
+      return getFaqLegacyMetadata(locale as never);
     case 'pricing':
-      return getPricingLegacyMetadata(locale);
+      return getPricingLegacyMetadata(asLegacyLocale(locale));
     case 'reviews':
-      return getReviewsLegacyMetadata(locale);
+      return getReviewsLegacyMetadata(asLegacyLocale(locale));
     case 'privacy':
-      return getPrivacyLegacyMetadata(locale);
+      return getPrivacyLegacyMetadata(asLegacyLocale(locale));
     case 'disclaimer':
-      return getDisclaimerLegacyMetadata(locale);
+      return getDisclaimerLegacyMetadata(asLegacyLocale(locale));
     default:
       return null;
   }
 }
 
-export async function renderLegacyPage(slugPath: string, locale: Locale) {
+export async function renderLegacyPage(slugPath: string, locale: SiteLocale) {
   switch (slugPath) {
     case '':
       return <HomeLegacyPage locale={locale} />;
     case 'about':
-      return <AboutLegacyPage locale={locale} />;
+      return <AboutLegacyPage locale={asLegacyLocale(locale)} />;
     case 'services':
-      return <ServicesLegacyPage locale={locale} />;
+      return <ServicesLegacyPage locale={asLegacyLocale(locale)} />;
     case 'contact':
-      return <ContactLegacyPage locale={locale} />;
+      return <ContactLegacyPage locale={asLegacyLocale(locale)} />;
     case 'lawyers':
-      return <LawyersLegacyPage locale={locale} />;
+      return <LawyersLegacyPage locale={asLegacyLocale(locale)} />;
     case 'faq':
-      return <FaqLegacyPage locale={locale} />;
+      return <FaqLegacyPage locale={locale as never} />;
     case 'pricing':
-      return <PricingLegacyPage locale={locale} />;
+      return <PricingLegacyPage locale={asLegacyLocale(locale)} />;
     case 'reviews':
-      return <ReviewsLegacyPage locale={locale} />;
+      return <ReviewsLegacyPage locale={asLegacyLocale(locale)} />;
     case 'privacy':
-      return <PrivacyLegacyPage locale={locale} />;
+      return <PrivacyLegacyPage locale={asLegacyLocale(locale)} />;
     case 'disclaimer':
-      return <DisclaimerLegacyPage locale={locale} />;
+      return <DisclaimerLegacyPage locale={asLegacyLocale(locale)} />;
     default:
       return null;
   }

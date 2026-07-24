@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import SectionLabel from '@/components/SectionLabel';
 import ScrollHighlightText from '@/components/ScrollHighlightText';
@@ -12,13 +12,19 @@ function easeOutCubic(progress: number) {
   return 1 - Math.pow(1 - progress, 3);
 }
 
-export default function HomeStatsSection({ locale }: { locale: Locale }) {
+export default function HomeStatsSection({ locale }: { locale: SiteLocale }) {
   const stats = siteContent[locale].stats;
-  const [counts, setCounts] = useState(() => stats.items.map(() => 0));
-  const [done, setDone] = useState(() => stats.items.map(() => false));
+  // SSR + first paint show real targets so bots / no-JS never see 0/0/0/0.
+  const [counts, setCounts] = useState(() => stats.items.map((item) => item.target));
+  const [done, setDone] = useState(() => stats.items.map(() => true));
   const [started, setStarted] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const rootRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
 
   useEffect(() => {
     const media = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -29,6 +35,13 @@ export default function HomeStatsSection({ locale }: { locale: Locale }) {
   }, []);
 
   useEffect(() => {
+    setCounts(stats.items.map((item) => item.target));
+    setDone(stats.items.map(() => true));
+    setStarted(false);
+  }, [stats.items]);
+
+  useEffect(() => {
+    if (!hydrated) return;
     const root = rootRef.current;
     if (!root) return;
     const observer = new IntersectionObserver(
@@ -43,15 +56,19 @@ export default function HomeStatsSection({ locale }: { locale: Locale }) {
     );
     observer.observe(root);
     return () => observer.disconnect();
-  }, []);
+  }, [hydrated, locale]);
 
   useEffect(() => {
-    if (!started) return;
+    if (!started || !hydrated) return;
     if (reducedMotion) {
       setCounts(stats.items.map((item) => item.target));
       setDone(stats.items.map(() => true));
       return;
     }
+
+    // Start animation only after hydration + intersection (no SSR/client mismatch).
+    setCounts(stats.items.map(() => 0));
+    setDone(stats.items.map(() => false));
 
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
     const duration = isMobile ? 1500 : 2000;
@@ -75,16 +92,20 @@ export default function HomeStatsSection({ locale }: { locale: Locale }) {
       rafIds[index] = requestAnimationFrame(tick);
     };
 
-    stats.items.forEach((item, index) => {
-      const timeout = window.setTimeout(() => animate(index, item.target), index * 200);
-      timeouts.push(timeout);
-    });
+    // small delay so 0-state paint is intentional after intersect
+    const kickoff = window.setTimeout(() => {
+      stats.items.forEach((item, index) => {
+        const timeout = window.setTimeout(() => animate(index, item.target), index * 200);
+        timeouts.push(timeout);
+      });
+    }, 16);
 
     return () => {
+      window.clearTimeout(kickoff);
       timeouts.forEach((id) => window.clearTimeout(id));
       rafIds.forEach((id) => window.cancelAnimationFrame(id));
     };
-  }, [reducedMotion, started, stats.items]);
+  }, [reducedMotion, started, hydrated, stats.items]);
 
   return (
     <section className="section section--light stats-section" id="stats" data-tone="light" ref={rootRef}>

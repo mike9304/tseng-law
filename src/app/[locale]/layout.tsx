@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { isLocale, type Locale, locales } from '@/lib/locales';
+import { isSiteLocale, type SiteLocale, siteLocales, toBuilderLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import JsonLd from '@/components/JsonLd';
 import Header from '@/components/Header';
@@ -13,8 +13,8 @@ import { buildLegalServiceJsonLd, buildWebsiteJsonLd } from '@/lib/seo';
 
 export const dynamicParams = false;
 
-function resolveLocaleOrNotFound(locale: string): Locale {
-  if (!isLocale(locale)) {
+function resolveLocaleOrNotFound(locale: string): SiteLocale {
+  if (!isSiteLocale(locale)) {
     notFound();
   }
 
@@ -22,7 +22,7 @@ function resolveLocaleOrNotFound(locale: string): Locale {
 }
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return siteLocales.map((locale) => ({ locale }));
 }
 
 export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
@@ -42,26 +42,32 @@ export default function LocaleLayout({
   params: { locale: string };
 }) {
   const locale = resolveLocaleOrNotFound(params.locale);
+  // Hide non-JA product widgets on Japanese public surface (plan: columns+core pages first).
+  const hideJaProductChrome = locale === 'ja';
   return (
     <div className="site" data-locale={locale} data-theme="parity">
-      <JsonLd data={buildWebsiteJsonLd(locale)} />
-      <JsonLd data={buildLegalServiceJsonLd(locale)} />
+      <JsonLd data={buildWebsiteJsonLd(toBuilderLocale(locale))} />
+      <JsonLd data={buildLegalServiceJsonLd(toBuilderLocale(locale))} />
       <div data-legacy-chrome>
         <Header locale={locale} />
       </div>
       <main id="main">{children}</main>
       <div data-legacy-chrome>
-        <Footer locale={locale} />
+        <Footer locale={locale as never} />
       </div>
+      {!hideJaProductChrome ? (
+        <div data-legacy-chrome>
+          <QuickContactWidget locale={toBuilderLocale(locale)} />
+        </div>
+      ) : null}
       <div data-legacy-chrome>
-        <QuickContactWidget locale={locale} />
+        <ScrollTopButton locale={locale as never} />
       </div>
-      <div data-legacy-chrome>
-        <ScrollTopButton locale={locale} />
-      </div>
-      <div data-legacy-chrome>
-        <YearEndEventPopup locale={locale} />
-      </div>
+      {!hideJaProductChrome ? (
+        <div data-legacy-chrome>
+          <YearEndEventPopup locale={toBuilderLocale(locale)} />
+        </div>
+      ) : null}
     </div>
   );
 }

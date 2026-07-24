@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
-export default function ScrollTopButton({ locale }: { locale: Locale }) {
+export default function ScrollTopButton({ locale }: { locale: SiteLocale }) {
   const [visible, setVisible] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const label = locale === 'ko' ? '상단으로 이동' : locale === 'zh-hant' ? '回到頂部' : 'Back to top';

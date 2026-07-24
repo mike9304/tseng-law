@@ -10,18 +10,21 @@ import { teamContent } from '@/data/team-members';
 const root = process.cwd();
 
 describe('WO-1 trust, localization, and performance content contracts', () => {
-  it('1-1 labels Taipei as the Taichung main line and preserves Kaohsiung 07 numbers', () => {
+  it('1-1 removes incorrect Taipei 04 numbers and preserves Taichung 04 / Kaohsiung 07', () => {
     const officeTabs = readFileSync(path.join(root, 'src/components/OfficeMapTabs.tsx'), 'utf8');
-    expect(officeTabs).toContain("phoneLabel: '대표전화(타이중 본소)'");
-    expect(officeTabs).toContain("phoneLabel: '代表電話（台中本所）'");
-    expect(officeTabs).toContain("phoneLabel: 'Main line (Taichung headquarters)'");
+    expect(officeTabs).not.toContain("phoneLabel: '대표전화(타이중 본소)'");
+    expect(officeTabs).not.toContain("phoneLabel: '代表電話（台中本所）'");
+    expect(officeTabs).not.toContain("phoneLabel: 'Main line (Taichung headquarters)'");
 
     for (const locale of ['ko', 'zh-hant', 'en'] as const) {
       const locations = siteContent[locale].contact.locations;
       const kaohsiung = locations.find((location) => /가오슝|高雄|Kaohsiung/.test(location.title));
       const taipei = locations.find((location) => /타이베이|台北|Taipei/.test(location.title));
+      const taichung = locations.find((location) => /타이중|台中|Taichung/.test(location.title));
       expect(kaohsiung?.details.join(' ')).toContain('07-557-9797');
-      expect(taipei?.details.join(' ')).toMatch(/타이중 본소|台中本所|Taichung headquarters/);
+      expect(taipei?.details.join(' ')).not.toContain('04-2326-1862');
+      expect(taipei?.details.join(' ')).not.toContain('04-2326-1863');
+      expect(taichung?.details.join(' ')).toContain('04-2326-1862');
     }
   });
 

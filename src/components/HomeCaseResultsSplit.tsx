@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
 import {
   homeResultsButtonSurfaceIds,
@@ -40,10 +40,19 @@ const copyByLocale = {
     summary:
       'This is a representative result built on integrated fact proof, damage calculation, negotiation, and litigation strategy.',
     cta: 'View More Case Results'
-  }
+  },
+  ja: {
+    label: 'RESULTS',
+    title: '韓国人学生のジム負傷事件、\n第一審で157万TWD勝訴',
+    description:
+      '台湾のジムでトレーナー指導中に重傷を負った韓国人大学生の損害賠償請求で、第一審において157万TWDの判決を得ました。',
+    summary:
+      '事実証明・損害算定・交渉・訴訟戦略を統合して結果を導いた代表事例です。',
+    cta: '事例をもっと見る',
+  },
 } as const;
 
-export default function HomeCaseResultsSplit({ locale }: { locale: Locale }) {
+export default function HomeCaseResultsSplit({ locale }: { locale: SiteLocale }) {
   const copy = copyByLocale[locale];
 
   return (

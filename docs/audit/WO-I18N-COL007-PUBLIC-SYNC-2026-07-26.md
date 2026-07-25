@@ -20,12 +20,16 @@ Manager: Codex `/root`
 - `src/data/site-content.ts`
 - `src/data/insights-archive.ts`
 - `src/data/service-details.ts`
+- `src/lib/search.ts` (`divorce-qna` 검색 href의 canonical slug 변환만)
 - `src/data/__tests__/site-content-ja-services.test.ts`
 - 신규 `src/data/__tests__/column-007-public-reference-sync.test.ts`
 
 그 밖의 파일, 네 언어 article, `src/data/blog-posts.ts`, 변호사 프로필,
 공통 loader·SEO·sitemap 구현, `next.config.mjs`, 임베딩 파일을 변경하지
-않는다. stage, commit, push, deploy, publish, server 실행은 Codex만 한다.
+않는다. `src/lib/search.ts`는 archive alias href를 보존하면서 공개 검색
+결과의 `divorce-qna` slug만 `taiwan-divorce-lawsuit-qna`로 canonicalize하는
+최소 변경만 허용한다. stage, commit, push, deploy, publish, server 실행은
+Codex만 한다.
 
 ## 정확한 네 언어 제목
 
@@ -118,6 +122,14 @@ optional `readTime?: string`을 추가하고 `divorce-qna`에 다음 값을 정�
 
 최종 EN record는 기존 `id`, alias `href`, category, image를 보존하면서
 위 title/summary/readTime/keywords를 가져야 한다.
+
+## 검색 href canonicalization
+
+archive record의 alias insights href는 그대로 보존한다. 다만
+`getSearchIndex`가 `id: 'divorce-qna'` record를 공개 검색 항목으로 변환할
+때에는 KO, ZH-Hant, EN 모두
+`/{locale}/columns/taiwan-divorce-lawsuit-qna`를 사용한다. 다른 archive
+record의 href 변환 동작은 변경하지 않는다.
 
 ## family service detail의 정확한 6개 KO key points
 

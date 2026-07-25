@@ -572,7 +572,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           relatedColumns: [
             { title: '대만 헬스장 부상 손해배상: 1심 사례·청구기한·증거·배상항목', slug: 'taiwan-gym-injury-lawsuit' },
             { title: '교통사고 발생시 대응', slug: 'taiwan-traffic-accident-procedure' },
-            { title: '추월 사고 책임 분석', slug: 'taiwan-overtaking-accident-liability' },
+            { title: '대만 추월 사고의 책임은 어떻게 판단하나요?', slug: 'taiwan-overtaking-accident-liability' },
           ]
         },
         {
@@ -1301,7 +1301,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           relatedColumns: [
             { title: '台灣健身房受傷求償：一審案例、期限、證據與賠償項目', slug: 'taiwan-gym-injury-lawsuit' },
             { title: '交通事故處理程序', slug: 'taiwan-traffic-accident-procedure' },
-            { title: '超車事故責任分析', slug: 'taiwan-overtaking-accident-liability' },
+            { title: '台灣超車事故的責任如何判斷？', slug: 'taiwan-overtaking-accident-liability' },
           ]
         },
         {
@@ -2051,7 +2051,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           relatedColumns: [
             { title: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages', slug: 'taiwan-gym-injury-lawsuit' },
             { title: 'Traffic Accident Response', slug: 'taiwan-traffic-accident-procedure' },
-            { title: 'Overtaking Accident Liability', slug: 'taiwan-overtaking-accident-liability' }
+            { title: 'Who Is Liable in an Overtaking Accident?', slug: 'taiwan-overtaking-accident-liability' }
           ]
         },
         {
@@ -2798,7 +2798,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           relatedColumns: [
             { title: '台湾のジム事故損害賠償：一審事例・期限・証拠・賠償項目', slug: 'taiwan-gym-injury-lawsuit' },
             { title: '台湾で交通事故が起きたとき', slug: 'taiwan-traffic-accident-procedure' },
-            { title: '追越し事故の責任', slug: 'taiwan-overtaking-accident-liability' }
+            { title: '台湾の追い越し事故、責任はどう判断されるか', slug: 'taiwan-overtaking-accident-liability' }
           ]
         },
         {

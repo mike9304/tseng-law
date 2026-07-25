@@ -133,12 +133,19 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'overtaking-accident',
-        title: '추월하다 사고 나면 누구 책임?',
-        summary: '대만 추월 규칙과 사고 발생 시 과실·책임 판단 기준을 정리했습니다.',
+        title: '대만 추월 사고의 책임은 어떻게 판단하나요?',
+        summary:
+          '대만 도로교통안전규칙 제101조의 추월 금지 조건과 같은 차로에서의 추월 절차, 익명 사고 사례를 통한 과실 판단 요소를 결과 보장 없이 정리합니다.',
         href: '/ko/insights/overtaking-accident',
         category: 'legal',
+        readTime: '4분 분량',
         image: '/images/012-taiwan-overtaking-accident-liability/featured-01.jpg',
-        keywords: ['교통사고', '추월', '과실책임']
+        keywords: [
+          '대만 추월 사고',
+          '도로교통안전규칙 제101조',
+          '교통사고 과실',
+          '사고 감정',
+        ],
       },
       {
         id: 'severance-exception',
@@ -313,12 +320,19 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'overtaking-accident',
-        title: '超車事故責任如何判斷',
-        summary: '整理台灣超車規則與事故責任判斷實務。',
+        title: '台灣超車事故的責任如何判斷？',
+        summary:
+          '整理台灣《道路交通安全規則》第101條的禁止超車條件、同車道程序及匿名事故案例的責任判斷因素，不保證個案結果。',
         href: '/zh-hant/insights/overtaking-accident',
         category: 'legal',
+        readTime: '3分鐘閱讀',
         image: '/images/012-taiwan-overtaking-accident-liability/featured-01.jpg',
-        keywords: ['交通事故', '超車', '過失責任']
+        keywords: [
+          '台灣超車事故',
+          '道路交通安全規則第101條',
+          '交通事故過失',
+          '事故鑑定',
+        ],
       },
       {
         id: 'severance-exception',
@@ -439,8 +453,15 @@ const englishPostCopy: Record<string, { title: string; summary: string; keywords
   },
   'overtaking-accident': {
     title: 'Who Is Liable in an Overtaking Accident?',
-    summary: 'Practical standards for overtaking rules and fault allocation in Taiwan traffic accidents.',
-    keywords: ['traffic accident', 'overtaking', 'fault allocation']
+    summary:
+      "A guide to Article 101's overtaking prohibitions and same-lane procedure, plus the fact-specific factors used to assess fault in an anonymized Taiwan collision, without guaranteeing an outcome.",
+    readTime: '4 min read',
+    keywords: [
+      'Taiwan overtaking accident',
+      'Road Traffic Safety Regulations Article 101',
+      'traffic accident fault',
+      'accident appraisal',
+    ],
   },
   'severance-exception': {
     title: 'Exceptions Where Voluntary Resignation May Still Qualify for Severance',

@@ -81,16 +81,21 @@ export function getSearchIndex(locale: Locale): SearchItem[] {
     });
   });
 
+  // Archive keeps insights aliases; search emits canonical column slugs for known aliases.
+  const insightArchiveCanonicalSlugs: Record<string, string> = {
+    'divorce-qna': 'taiwan-divorce-lawsuit-qna',
+    'overtaking-accident': 'taiwan-overtaking-accident-liability',
+  };
+
   archive.posts.forEach((post) => {
+    const canonicalSlug = insightArchiveCanonicalSlugs[post.id];
     items.push({
       id: `insight-post-${post.id}`,
       title: post.title,
       description: post.summary,
-      // Archive keeps alias `/insights/divorce-qna`; search emits canonical column slug.
-      href:
-        post.id === 'divorce-qna'
-          ? `/${locale}/columns/taiwan-divorce-lawsuit-qna`
-          : post.href.replace(insightPrefix, canonicalInsightPrefix),
+      href: canonicalSlug
+        ? `/${locale}/columns/${canonicalSlug}`
+        : post.href.replace(insightPrefix, canonicalInsightPrefix),
       category: 'insights',
       tags: [...post.keywords, archive.categories[post.category]]
     });

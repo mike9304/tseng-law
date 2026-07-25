@@ -9,6 +9,7 @@ const EXPECTED_RECORDS_PER_LOCALE = 17;
 const EXPECTED_VECTOR_DIMENSION = 1536;
 const GYM_INJURY_SLUG = 'taiwan-gym-injury-lawsuit';
 const DIVORCE_QNA_SLUG = 'taiwan-divorce-lawsuit-qna';
+const OVERTAKING_ACCIDENT_SLUG = 'taiwan-overtaking-accident-liability';
 
 interface StoredColumnEmbedding {
   slug: string;
@@ -85,6 +86,33 @@ const divorceQnaExpectations: Record<
     snippetAnchors: [
       'This guide explains Taiwan divorce routes',
       'household registration, court procedure, and judicial-divorce grounds',
+    ],
+  },
+};
+
+const overtakingAccidentExpectations: Record<
+  Locale,
+  { title: string; snippetAnchors: readonly string[] }
+> = {
+  ko: {
+    title: '대만 추월 사고의 책임은 어떻게 판단하나요?',
+    snippetAnchors: [
+      '앞차가 느리게 달리면 추월이 흔한 선택',
+      '상당한 위험이 따르는 운전 행위',
+    ],
+  },
+  'zh-hant': {
+    title: '台灣超車事故的責任如何判斷？',
+    snippetAnchors: [
+      '前方車輛行駛緩慢時，超車常被視為平常的選擇',
+      '這項操作本身伴隨相當風險',
+    ],
+  },
+  en: {
+    title: 'Who Is Liable in an Overtaking Accident?',
+    snippetAnchors: [
+      'Overtaking can appear routine when a vehicle ahead is moving slowly',
+      'it creates substantial risk',
     ],
   },
 };
@@ -227,6 +255,54 @@ describe('generated column embeddings content synchronization', () => {
       'A practical Q&A guide to mediation and litigation in Taiwan divorce matters.',
     ]) {
       expect(divorceQnaText).not.toContain(staleText);
+    }
+  });
+
+  it('keeps column 012 titles, snippets, and vectors synchronized to the accepted rewrites', () => {
+    for (const locale of SUPPORTED_LOCALES) {
+      const record = embeddingsFile.embeddings.find(
+        (entry) =>
+          entry.locale === locale && entry.slug === OVERTAKING_ACCIDENT_SLUG,
+      );
+      const expected = overtakingAccidentExpectations[locale];
+
+      expect(record).toBeDefined();
+      expect(record?.title).toBe(expected.title);
+      for (const anchor of expected.snippetAnchors) {
+        expect(record?.snippet).toContain(anchor);
+      }
+      expect(
+        record?.vector,
+        `${locale}:${OVERTAKING_ACCIDENT_SLUG}`,
+      ).toHaveLength(EXPECTED_VECTOR_DIMENSION);
+      expect(
+        record?.vector.every(
+          (value) => typeof value === 'number' && Number.isFinite(value),
+        ),
+        `${locale}:${OVERTAKING_ACCIDENT_SLUG}`,
+      ).toBe(true);
+    }
+  });
+
+  it('rejects stale column 012 titles and snippets', () => {
+    const overtakingAccidentText = embeddingsFile.embeddings
+      .filter(({ slug }) => slug === OVERTAKING_ACCIDENT_SLUG)
+      .map(({ title, snippet }) => `${title}\n${snippet}`)
+      .join('\n');
+
+    for (const staleText of [
+      '추월 하다 사고나면 누구 책임???',
+      '추월하다 사고 나면 누구 책임?',
+      '추월 사고 책임 분석',
+      '超車發生事故，究竟是誰的責任？',
+      '超車事故責任如何判斷',
+      '超車事故責任分析',
+      'Overtaking Accident Liability',
+      '대만 추월 규칙과 사고 발생 시 과실·책임 판단 기준을 정리했습니다.',
+      '整理台灣超車規則與事故責任判斷實務。',
+      'Practical standards for overtaking rules and fault allocation in Taiwan traffic accidents.',
+    ]) {
+      expect(overtakingAccidentText).not.toContain(staleText);
     }
   });
 });

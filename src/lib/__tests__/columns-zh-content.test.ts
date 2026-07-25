@@ -45,14 +45,15 @@ describe('Traditional Chinese full column corpus', () => {
     }
   });
 
-  it('uses the correct Traditional Chinese registrant term in column 011 FAQ', () => {
+  it('uses the current Traditional Chinese responsible-party term in column 011 FAQ', () => {
     const post = getAllColumnPosts('zh-hant').find(
       ({ slug }) =>
         slug === 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
     );
 
     expect(post).toBeDefined();
-    expect(post?.faq?.[1]?.a).toContain('產品登錄者');
+    expect(post?.faq?.[1]?.a).toContain('化粧品製造或輸入業者');
+    expect(post?.faq?.[1]?.a).not.toContain('產品登錄者');
     expect(post?.faq?.[1]?.a).not.toContain('產品登록者');
   });
 

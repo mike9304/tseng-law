@@ -11,6 +11,7 @@ const columnPath = path.join(
 const raw = fs.readFileSync(columnPath, 'utf8');
 const parsed = matter(raw);
 const post = getColumnPost('withdraw-capital-taiwan-company', 'en');
+const aliasPost = getColumnPost('withdraw-capital', 'en');
 
 const title =
   'Closing a Taiwan Company: What Happens to Capital and Company Assets?';
@@ -172,7 +173,10 @@ describe('English investment column 002 — closing a Taiwan company', () => {
       'distribution of residual assets after liabilities have been handled',
       article9Paragraph,
       article90Paragraph,
-      'Any other civil, criminal, director-duty, accounting, or tax consequence depends on the payment’s purpose, authority, documentation, accounting treatment, and particular facts.',
+      'A properly supported payment of rent, wages, a supplier invoice, or taxes—or repayment of a genuine loan—does not become unlawful merely because it is made from company funds.',
+      'labeling a transfer an “expense” or “loan repayment” does not determine its legal character',
+      'Any other civil, criminal, accounting, or tax consequence—and any issue involving a director’s duties—depends on the payment’s purpose, authority, documentation, accounting treatment, and particular facts.',
+      'A transfer to a shareholder or related person should not automatically be treated as a breach of trust.',
     ]) {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
@@ -189,10 +193,12 @@ describe('English investment column 002 — closing a Taiwan company', () => {
       'The articles of incorporation may impose a higher quorum or voting requirement, which controls.',
       'Review contracts, employees, permits, company assets, debts, taxes, litigation, bank accounts, foreign-investment approvals, and remittance records.',
       'Under Article 4 of the Company Registration Regulations (公司登記辦法), the company generally must apply for dissolution change registration within 15 days after dissolution.',
+      'The filing should be prepared based on the company’s actual registration record and the applicable ground for dissolution.',
       'current-period final income tax return within 45 days after the competent authority approves the dissolution',
       'uses the approval document’s issuance date and begins counting from the following day',
       'Select or confirm the liquidator',
       'make the required court filing',
+      'The liquidator should take control of the company’s seals, books and records, supporting evidence, accounts, and relevant systems and should prepare the inventory of property and balance sheet.',
       'inventory of property and balance sheet',
       'concluding pending business, collecting claims, realizing property when necessary, discharging debts and taxes',
       'creditor procedures',
@@ -215,13 +221,15 @@ describe('English investment column 002 — closing a Taiwan company', () => {
 
     for (const phrase of [
       'Balance-sheet insolvency compares the value of assets with total liabilities.',
-      'Inability to pay debts as they mature concerns payment performance',
+      'Inability to pay debts as they mature concerns whether the company has sufficient funds available when its obligations become due.',
       'Liquidity asks whether assets can be converted into usable funds',
+      'A temporary cash shortage, however, does not by itself determine the legal conclusion in a particular case.',
       'Book value is not necessarily realizable value.',
+      'real estate or equipment may be pledged as collateral or subject to attachment, co-ownership, or contractual restrictions',
       'Security interests and priority claims',
       'Employee claims, tax liabilities, litigation, arbitration, guarantees, and contingent obligations',
       'review current books, bank records, claims, liabilities, security interests, taxes, creditor treatment, and reliable asset valuations before any shareholder distribution',
-      'the stale shortcut that bankruptcy requires both property available for liquidation and multiple creditors',
+      'Article 89 should be applied to the company’s actual financial circumstances, not reduced to a supposed rule that bankruptcy requires both property available for liquidation and multiple creditors.',
     ]) {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
@@ -232,8 +240,9 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     for (const phrase of [
       'If the company will continue operating but wishes to return part of its capital, a lawful capital reduction may be considered.',
       'A capital reduction is not an informal shareholder withdrawal, and it is not always available.',
-      'company-form-specific resolution, creditor-protection measures, capital verification and accounting, foreign-investment filings, tax and withholding analysis, remittance review, and change registration',
+      'The company should complete the steps required for its company form: adopt the proper resolution, implement creditor-protection measures, verify and account for the capital change, make any foreign-investment filings, analyze tax and withholding, review remittance requirements, and apply for change registration.',
       'Lawful business expenses require a genuine company purpose',
+      'A shareholder who pays a genuine company obligation may have a reimbursement claim, but both the expense and the reimbursement should be documented rather than inferred from common ownership.',
       'Dividends must be supported by distributable earnings and the required corporate action.',
       'Cash in a bank account alone does not establish distributable earnings.',
       'Repayment of a genuine shareholder loan or other company debt requires an actual debtor-creditor relationship.',
@@ -253,13 +262,13 @@ describe('English investment column 002 — closing a Taiwan company', () => {
       'Business suspension preserves the company’s legal existence.',
       'it is not a substitute for dissolution and liquidation',
       'registered address, responsible person, articles of incorporation, or capital may still require change registration',
-      'Vehicles and real property may create taxes and carrying costs',
+      'Vehicles and real property may continue to incur taxes and carrying costs even when the company has no revenue.',
       'contracts may continue unless amended or terminated',
       'Employee status and labor obligations',
       'Industry licenses',
       'Bank accounts',
       'reliable record retention',
-      'maintain an address and responsible contact',
+      'The company should maintain a current address and responsible contact at which agencies, courts, creditors, contracting parties, and other stakeholders can deliver notices.',
       'whether it will resume business, seek another lawful suspension period where available, or move to permanent closure',
     ]) {
       expect(raw).toContain(phrase);
@@ -311,10 +320,17 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     const visibleWords = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWords / 200);
 
-    expect(visibleWords).toBe(3_081);
+    expect(visibleWords).toBe(3_116);
     expect(visibleWords).toBeGreaterThanOrEqual(1_800);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
+  });
+
+  it('resolves the withdraw-capital alias to the complete canonical post', () => {
+    expect(aliasPost?.slug).toBe('withdraw-capital-taiwan-company');
+    expect(aliasPost?.title).toBe(post?.title);
+    expect(aliasPost?.content).toBe(post?.content);
+    expect(aliasPost?.faq).toEqual(post?.faq);
   });
 
   it('removes stale claims, unsafe promises, locale leakage, and hidden characters', () => {

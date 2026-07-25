@@ -73,9 +73,9 @@ const expectedJapaneseFaq = [
 ] as const;
 
 const untouchedLocaleHashes = {
-  ko: 'b10567faebe5727969341665b81e93e13a2ce01c24dd00b9ba8b945df326da21',
-  'zh-hant': '41a5576f5d317f2a3681cc4f64d814c96b84d49e9ca79845b8b23319465885e8',
-  en: '0d1313e8ddface53debed954cde236226e4e4e874aaa9cf6b28cd391bf0d6564',
+  ko: '2dc44723fac9451b002a0e04564453951cd508581fb375806277ecd6f8016c93',
+  'zh-hant': '01fe893af3d34bc3e2edcd1ac94ec903df2c29a715f8e11825dfcba47175dd4f',
+  en: '0107771e2445146b36c8cf59bf7e9fe93abac4e909e3ccb24fb014314e010cc5',
 } as const;
 
 const forbiddenRegressions = [

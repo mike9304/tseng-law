@@ -167,34 +167,34 @@ export const serviceAreas: ServiceArea[] = [
       en: 'Specialized support for dismissal, severance, and employment contract disputes under Taiwan labor law'
     },
     intro: {
-      ko: '대만의 퇴직금 제도는 한국과 근본적으로 다릅니다. 한국은 1년 이상 근무하면 자동으로 퇴직금이 발생하지만, 대만은 회사가 해고할 때(경제해고)만 퇴직금이 지급됩니다. 법무법인 호정은 한국 기업과 한국인 근로자 양측의 입장에서 대만 노동법 분쟁을 자문합니다.',
-      'zh-hant': '台灣資遣費制度與韓國根本不同。韓國工作滿一年自動享有資遣費，台灣僅在公司資遣時才須支付。昊鼎以實務經驗協助韓國企業與勞工應對台灣勞動法規。',
-      en: 'Taiwan severance rules differ significantly from Korea. We advise both Korean employers and employees on dismissal, severance, and employment contract disputes with practical litigation and compliance strategy.'
+      ko: '대만의 퇴직금(資遣費) 제도는 한국과 적용 사유와 산정 방식이 다릅니다. 계약 종료의 법적 근거, 신제와 구제(舊制)가 적용되는 근속기간, 예고와 기간 제한을 구분해 검토해야 하며, 법무법인 호정은 한국 기업과 한국인 근로자 양측에 해고·퇴직금·근로계약 분쟁 자문을 제공합니다.',
+      'zh-hant': '台灣資遣費制度與韓國在適用事由及計算方式上不同，應依契約終止的法定依據、新舊制年資、預告與期間限制分別檢視。昊鼎協助韓國企業及韓籍勞工處理解僱、資遣費與勞動契約爭議。',
+      en: 'Taiwan’s severance rules differ from Korea’s in both qualifying grounds and calculation methods. The legal basis for ending the contract, service under the new and old systems, notice requirements, and statutory time limits must be reviewed separately. We advise Korean employers and employees on dismissal, severance, and employment-contract disputes in Taiwan.'
     },
     keyPoints: {
       ko: [
-        '해고는 경제해고(퇴직금 + 사전통보), 징계해고(퇴직금 없음), 자발적 퇴사(원칙적으로 퇴직금 없음) 3가지 유형입니다.',
-        '퇴직금 산정: 근속연수 × 0.5개월분 평균임금 (최대 6개월 상한). 예) 5년 근무, 월급 5만 TWD → 12.5만 TWD.',
-        '자발적 퇴사라도 노동기준법 제14조 사유(임금 미지급, 폭행·모욕, 노동법 위반 등)가 있으면 퇴직금을 청구할 수 있으며, 사유 인지 후 30일 이내에 행사해야 합니다.',
-        '의무재직 약정(최저복무기간)은 대만에서 거의 항상 무효이며, 유효하려면 전문 직업훈련 제공 + 합리적 보상 + 합리성·필요성을 모두 충족해야 합니다.',
-        '회사 압박 면담 시 반드시 녹음하고, 출퇴근 기록·성과 평가·이메일 등 증거를 보존해야 합니다.',
-        '2024년 대만 최저임금: 시급 183 TWD, 월급 27,470 TWD.',
+        '대만의 근로계약 종료는 경제해고·징계해고·자발적 퇴사라는 세 유형만으로 일률적으로 판단할 수 없습니다. 사용자가 예고하고 종료할 수 있는 노동기준법 제11조 사유, 예고 없이 종료할 수 있는 제12조 사유, 근로자가 예고 없이 종료할 수 있는 제14조 사유와 기간제 계약 만료 등을 구분하여 계약 형태·종료 원인·절차에 따른 예고, 퇴직금(資遣費), 증명서류를 개별적으로 확인해야 합니다.',
+        '퇴직금은 신제·구제가 적용되는 근속기간에 따라 산정 방식이 다릅니다. 신제 적용기간은 법정 사유로 계약이 종료되면 원칙적으로 근속 1년당 평균임금 0.5개월분, 1년 미만은 비례 계산하고 평균임금 6개월분을 상한으로 하며, 구제 적용기간은 원칙적으로 근속 1년당 평균임금 1개월분을 기초로 합니다. 신·구제 근속기간이 섞인 경우에는 각 기간을 나누어 계산해야 합니다.',
+        '노동기준법 제14조는 임금 미지급, 사용자 측의 폭행·중대한 모욕, 건강을 해칠 우려가 있는 업무에 필요한 개선을 하지 않은 경우, 사용자의 근로계약·노동법령 위반으로 근로자의 권익이 침해될 우려가 있는 경우 등 근로자가 예고 없이 계약을 종료할 수 있는 사유를 정합니다. 30일의 기간 제한은 제1항 제1호와 제6호에만 적용됩니다. 두 경우 모두 해당 사정을 안 날부터 30일 이내에 행사해야 하고, 제6호의 손해 결과가 발생한 경우에는 그 결과를 안 날부터 30일 이내에도 행사할 수 있으므로, 해당 호와 기산점을 따로 확인해야 합니다.',
+        '최소 근무기간 약정은 노동기준법 제15조의1에 따라 사용자가 전문기술 훈련을 실시하고 비용을 부담했거나, 근로자가 약정을 지키도록 합리적 보상을 제공한 경우 중 하나에 해당해야 합니다. 그다음 훈련 기간·비용, 대체인력 가능성, 보상 금액·범위와 그 밖의 사정을 종합하여 합리적 범위를 별도로 심사하며, 이 요건을 위반한 약정은 무효입니다. 근로자에게 책임을 돌릴 수 없는 사유로 기간 만료 전에 계약이 종료되면 약정 위반 책임이나 훈련비 반환 책임을 부담하지 않습니다.',
+        '증거는 근로계약서, 취업규칙, 급여명세·송금기록, 출퇴근·연장근로 기록, 평가자료, 배치·감봉·계약 종료 통지, 이메일과 메신저 원본을 날짜와 출처를 확인할 수 있도록 원본 형식으로 적법하게 보존하고 시간순으로 정리합니다. 녹음은 언제나 적법하거나 증거로 채택되는 것이 아니므로, 녹음자가 대화 당사자인지, 취득 방법, 사생활·통신비밀, 사내규정과 사용 목적을 개별적으로 검토하고 무단 계정 접근·기기 설치·자료 변조나 영업비밀·개인정보의 과도한 반출을 피해야 합니다.',
+        '퇴사 예고기간은 최소 근무기간 약정의 효력이나 비용 반환책임과 별개의 쟁점입니다. 기간의 정함이 없는 계약은 노동기준법 제15조가 제16조 제1항을 준용하므로 근속 3개월 이상 1년 미만은 10일, 1년 이상 3년 미만은 20일, 3년 이상은 30일 전에 예고합니다. 근속 3개월 미만, 그 밖의 기간제 계약 또는 예고 없는 종료 사유는 계약 형태와 적용 조문을 따로 검토해야 합니다.',
       ],
       'zh-hant': [
-        '解僱分為經濟性資遣（須付資遣費+預告）、懲戒解僱（無資遣費）、自願離職（原則無資遣費）三類。',
-        '資遣費計算：年資×0.5個月平均工資（上限6個月）。',
-        '即使自願離職，若符合勞基法第14條事由（欠薪、暴力侮辱、違反勞動法等），仍可請求資遣費，須於知悉後30日內行使。',
-        '最低服務年限約定幾乎一律無效，除非同時滿足專業訓練、合理對價及合理必要性。',
-        '遭公司施壓面談時務必錄音，並保存出勤紀錄、績效評估、郵件等證據。',
-        '2024年台灣最低工資：時薪183TWD，月薪27,470TWD。',
+        '台灣勞動契約的終止不能只概括為經濟性資遣、懲戒解僱與自願離職三類。應區分雇主依《勞動基準法》第11條預告終止、第12條不經預告終止、勞工依第14條不經預告終止，以及定期契約期滿等情形，並依契約類型、終止原因與程序，個別確認預告、資遣費及必要證明文件。',
+        '資遣費的計算須依新制、舊制所適用的年資分別處理。新制年資因法定事由終止契約時，原則上每滿一年發給二分之一個月平均工資，未滿一年按比例計算，最高以六個月平均工資為限；舊制年資原則上以每滿一年發給一個月平均工資為基礎。新舊制年資並存時，應拆分各段年資計算。',
+        '《勞動基準法》第14條列有工資未付、雇主一方施暴或重大侮辱、對有危害健康之虞的工作未為必要改善、雇主違反勞動契約或勞工法令而有損害勞工權益之虞等勞工得不經預告終止契約的事由。30日期間限制僅適用於第1項第1款及第6款。兩款均應自知悉該情形之日起30日內行使；第6款如損害結果已發生，另得自知悉該結果之日起30日內行使，因此須分別確認適用款次與起算點。',
+        '最低服務年限約定須依《勞動基準法》第15條之1，符合雇主為勞工進行專業技術培訓並負擔費用，或為使勞工遵守約定而提供合理補償兩項法定基礎之一。其後仍須另依培訓期間及成本、人力替補可能性、補償額度及範圍等因素審查合理範圍；違反要件的約定無效。契約因不可歸責於勞工之事由於期間屆滿前終止時，勞工不負違反約定或返還培訓費用之責任。',
+        '證據應將勞動契約、工作規則、薪資明細與匯款紀錄、出勤與加班紀錄、考核資料、調職、減薪或契約終止通知、電子郵件及通訊原始資料，以可辨識日期與來源的合法原始格式保存並按時序整理。錄音並非在任何情況都合法，也不必然獲採為證據；應個別確認錄音者是否參與談話、取得方式、隱私與通訊秘密、內部規範及使用目的，避免未經授權存取帳號、裝設設備、變造資料或過度攜出營業秘密及個人資料。',
+        '離職預告期間與最低服務年限約定的效力、費用返還責任是不同問題。不定期契約依《勞動基準法》第15條準用第16條第1項，年資滿3個月未滿1年者應於10日前、滿1年未滿3年者於20日前、滿3年以上者於30日前預告。年資未滿3個月、其他定期契約或依法得不經預告終止的情形，須另依契約類型與適用法條審查。',
       ],
       en: [
-        'Dismissal scenarios are generally grouped into economic redundancy, disciplinary dismissal, and voluntary resignation, each with different severance implications.',
-        'Severance is typically calculated based on years of service and average wage, with statutory caps.',
-        'Even with voluntary resignation, severance may still be claimable when Labor Standards Act exceptions apply (e.g., non-payment of wages, abuse, major legal violations).',
-        'Minimum service-period clauses are often unenforceable unless strict legal conditions are satisfied.',
-        'In pressured termination situations, preserve evidence such as attendance records, evaluations, and email communications.',
-        'Minimum wage and related labor thresholds should be reviewed against current regulations.'
+        'Ending an employment contract in Taiwan cannot be reduced to three universal categories of economic dismissal, disciplinary dismissal, and voluntary resignation. Distinguish an employer termination with notice under Article 11 of the Labor Standards Act, a termination without notice under Article 12, a worker termination without notice under Article 14, and expiry of a fixed-term contract; the contract type, legal ground, and procedure determine notice, severance, and required documentation.',
+        'Severance must be calculated separately for service covered by Taiwan’s new and old systems. For service under the new system, a contract ending on a statutory qualifying ground generally produces one-half month of average wage per year, prorated for partial years and capped at six months of average wage. Old-system service generally starts from one month of average wage per year, subject to its own partial-period rules. Mixed service requires each period to be identified and calculated under the applicable system.',
+        'Article 14 permits a worker to terminate without notice on grounds including unpaid wages, violence or serious insult by the employer side, failure to make necessary improvements to work that may harm health, or an employer breach of the contract or labor law that may prejudice the worker’s rights. The 30-day limit applies only to paragraph 1, subparagraphs 1 and 6. In both cases, the period runs from knowledge of the relevant circumstances; for subparagraph 6, if a harmful result occurs, the worker may also terminate within 30 days after learning of that result. The applicable subparagraph and trigger date must therefore be identified.',
+        'Under Article 15-1, a minimum-service-period clause needs one of two alternative statutory bases: employer-funded professional skills training or reasonable compensation for the worker’s commitment. A separate reasonable-scope review then considers training duration and cost, availability of replacement personnel, the amount and scope of compensation, and other circumstances; a clause that fails either stage is void. If employment ends early for a reason not attributable to the worker, the worker is not liable for breach of the clause or reimbursement of training expenses.',
+        'Preserve employment contracts, work rules, pay statements and remittance records, attendance and overtime records, evaluations, transfer, pay-cut or termination notices, email, and chat data lawfully in their original form with verifiable dates and sources, then arrange them chronologically. Recording is not invariably lawful or admissible; participation in the conversation, acquisition method, privacy and communications secrecy, internal policies, and intended use require individual review. Avoid unauthorized account access or device placement, alteration of data, and excessive removal of trade secrets or personal data.',
+        'Resignation notice is distinct from the validity of a minimum-service-period clause and from repayment liability. For an indefinite-term contract, Article 15 applies the notice periods in Article 16(1): 10 days’ notice for service of at least three months but less than one year, 20 days’ notice for service of at least one year but less than three years, and 30 days’ notice for service of at least three years. Service under three months, other fixed-term contracts, and statutory no-notice grounds require separate review of the contract type and governing provision.'
       ]
     },
     columnSlugs: [

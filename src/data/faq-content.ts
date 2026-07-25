@@ -30,14 +30,14 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     },
     // ── 노동법 ──
     {
-      question: '대만에서 직원을 해고할 때 퇴직금(자산비)을 꼭 지급해야 하나요?',
+      question: '대만에서 근로계약이 종료되면 퇴직금(資遣費)을 항상 지급해야 하나요?',
       answer:
-        '대만 노동기준법에 따라 해고 시 자산비(資遣費) 지급이 원칙입니다. 다만 자발적 퇴사의 경우에도 고용주 귀책 사유(급여 미지급, 계약 위반 등)가 있으면 퇴직금을 청구할 수 있는 예외가 있으므로 사전에 법적 검토가 필요합니다.'
+        '항상 그런 것은 아닙니다. 사용자가 대만 노동기준법 제11조, 제13조 단서 또는 제20조 등에 따라 근로계약을 종료하거나, 근로자가 제14조의 법정 사유에 따라 계약을 종료하는 경우에는 원칙적으로 퇴직금(資遣費)을 지급해야 합니다. 반면 제12조에 따른 징계해고에는 원칙적으로 퇴직금이 발생하지 않고, 통상적인 자진 퇴사도 곧바로 지급 대상이 되지는 않습니다. 종료 사유, 예고, 지급기한과 신제·구제 적용을 개별적으로 확인해야 합니다.'
     },
     {
-      question: '의무재직 약정(최저근무기간)은 유효한가요?',
+      question: '대만 근로계약의 최소 근무기간 약정은 자동으로 무효인가요?',
       answer:
-        '대만 법원은 의무재직 약정의 유효성을 판단할 때 ①교육훈련 비용의 합리성, ②약정 기간의 적정성, ③위약금의 비례성 등을 종합적으로 검토합니다. 무조건 유효한 것이 아니므로 약정서 작성 시 법적 요건을 충족하도록 설계해야 합니다.'
+        '아닙니다. 대만 근로기준법 제15조의1에 따르면 사용자가 전문기술 훈련을 실시하고 비용을 부담했거나, 근로자가 최소 근무기간을 지키도록 합리적 보상을 제공한 경우에는 최소 근무기간 약정의 법정 요건을 충족할 수 있습니다. 두 요건을 모두 갖추어야 하는 것은 아니지만, 어느 한 요건이 있더라도 훈련 기간과 비용, 대체인력 가능성, 보상의 금액과 범위 등 전체 사정에 비추어 약정이 합리적 범위를 넘지 않아야 합니다.'
     },
     // ── 민사·교통사고 ──
     {
@@ -103,14 +103,14 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     },
     // ── 勞動法 ──
     {
-      question: '在台灣資遣員工一定要付資遣費嗎？',
+      question: '在台灣終止勞動契約時，一定要給付資遣費嗎？',
       answer:
-        '依勞動基準法，資遣時原則上需支付資遣費。但即使是自願離職，若雇主有可歸責事由（如欠薪、違約等），勞工仍可請求資遣費，因此需事先進行法律檢視。'
+        '不一定。雇主依《勞動基準法》第11條、第13條但書或第20條等規定終止契約，或勞工依第14條法定事由終止契約時，原則上應給付資遣費。依第12條懲戒解僱時原則上無須給付，通常的自願離職也不會當然產生資遣費。仍應就終止事由、預告、給付期限及新舊制年資分別確認。'
     },
     {
-      question: '最低服務年限約定是否有效？',
+      question: '台灣勞動契約中的最低服務年限約定，是否一律無效？',
       answer:
-        '台灣法院會綜合考量①教育訓練費用的合理性、②約定期間的適當性、③違約金的比例性來判斷效力。並非當然有效，約定書應在符合法律要件下設計。'
+        '不是。依《勞動基準法》第15條之1，雇主為勞工進行專業技術培訓並負擔其費用，或為使勞工遵守最低服務年限約定而提供合理補償時，約定才可能具備法定基礎。兩者不必同時具備；即使符合其中一項，仍須綜合培訓期間及成本、人力替補可能性、補償額度及範圍等因素，確認約定未逾合理範圍。'
     },
     // ── 民事·交通事故 ──
     {
@@ -176,14 +176,14 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     },
     // ── Labor Law ──
     {
-      question: 'Is severance pay mandatory when terminating an employee in Taiwan?',
+      question: 'Is severance always required when an employment contract ends in Taiwan?',
       answer:
-        'Under the Labor Standards Act, severance pay is generally required upon termination. Even in cases of voluntary resignation, if the employer is at fault (unpaid wages, contract violations, etc.), the employee may still claim severance, so prior legal review is advisable.'
+        'Not always. Severance is generally required when an employer terminates under Article 11, the proviso to Article 13, Article 20, or another qualifying provision, and when a worker terminates on a statutory ground under Article 14. It is generally not required for a disciplinary termination under Article 12, and an ordinary voluntary resignation does not automatically trigger severance. The legal ground, notice, payment deadline, and service under the new and old systems must be reviewed separately.'
     },
     {
-      question: 'Are minimum service period agreements enforceable?',
+      question: 'Is a minimum-service-period clause in Taiwan automatically void?',
       answer:
-        'Taiwan courts evaluate enforceability based on (1) the reasonableness of training costs, (2) the appropriateness of the commitment period, and (3) the proportionality of penalties. These agreements are not automatically valid and should be carefully designed to meet legal requirements.'
+        'No. Under Article 15-1 of Taiwan\'s Labor Standards Act, a clause may satisfy the statutory threshold if the employer either provides professional skills training at its own expense or provides reasonable compensation for the worker\'s commitment to the minimum service period. The two grounds are alternatives, not cumulative requirements. Even if one exists, the period and burden must remain within a reasonable scope under the four statutory factors.'
     },
     // ── Civil / Traffic Accidents ──
     {

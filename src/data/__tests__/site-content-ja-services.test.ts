@@ -183,7 +183,7 @@ describe('Japanese services-list copy', () => {
       '労働者側からの契約終了時に退職金（資遣費）を請求できる例外',
     );
     expect(titlesBySlug.get('taiwan-mandatory-employment-period')).toBe(
-      '台湾の最低勤務期間条項',
+      '台湾の最低勤務期間条項：有効性・研修費用・返還義務',
     );
   });
 

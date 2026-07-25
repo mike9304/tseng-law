@@ -593,18 +593,18 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '노동법·고용분쟁',
-          description: '대만 노동기준법에 따른 해고·퇴직금·근로계약 분쟁을 다룹니다. 한국과 다른 대만 퇴직금 산정 방식(근속연수 × 0.5개월분, 최대 6개월), 자발적 퇴사에서도 퇴직금을 청구할 수 있는 예외 사유, 의무재직 약정의 유효성 판단 등을 실무 경험을 바탕으로 자문합니다.',
+          description: '대만의 해고, 퇴직금(資遣費), 근로계약 분쟁을 다룹니다. 계약 종료의 법적 근거와 예고·퇴직금·기한을 구분하고, 신제·구제 근속기간별 산정, 근로자 측 계약 종료의 법정 사유, 최소 근무기간 약정의 법정 요건과 합리성, 비용 반환 및 책임 귀속을 구체적인 계약과 증거에 따라 검토합니다.',
           href: '/ko/services#labor',
           details: [
-            '경제성 해고 시 퇴직금 산정 (0.5개월×근속연수)',
-            '자발적 퇴사 시 퇴직금 예외: 임금 미지급·폭행·보험 미가입 등',
-            '의무재직 약정(최저복무기간) 유효성 검토',
+            '퇴직금 신제·구제 적용기간별 산정 및 법정 상한 검토',
+            '근로자 측 계약 종료 시 제14조 법정 사유·기간 제한 및 퇴직금 검토',
+            '최소 근무기간 약정: 선택적 법정 요건·합리적 범위·비용 반환 및 책임 귀속 검토',
             '한국 기업의 대만 직원 채용 관련 노동법 자문',
           ],
           relatedColumns: [
             { title: '대만 퇴직금 제도 한국과 비교', slug: 'taiwan-labor-severance-law' },
             { title: '자발적 퇴사 퇴직금 예외', slug: 'taiwan-voluntary-resignation-severance' },
-            { title: '의무재직 약정 문제', slug: 'taiwan-mandatory-employment-period' },
+            { title: '대만 최소 근무기간 약정: 효력·교육비·위약금 판단 기준', slug: 'taiwan-mandatory-employment-period' },
           ]
         },
         {
@@ -1322,18 +1322,18 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '勞動法·僱傭爭議',
-          description: '處理台灣勞基法下的解僱、資遣費與勞動契約爭議。台灣資遣費計算方式與韓國不同（年資×0.5個月，上限6個月），並協助判斷自願離職仍可請求資遣費之例外事由、最低服務年限條款效力等。',
+          description: '處理台灣法下的解僱、資遣費與勞動契約爭議。依個案區分契約終止的法定依據、預告、資遣費與期限，並按新舊制年資計算，檢視勞工終止契約的法定事由、最低服務年限約定的法定基礎與合理性，以及費用返還和終止責任歸屬。',
           href: '/zh-hant/services#labor',
           details: [
-            '經濟性解僱之資遣費計算（0.5個月×年資）',
-            '自願離職資遣費例外：欠薪、暴力、未投保等',
-            '最低服務年限條款效力審查',
+            '依新舊制年資分段計算資遣費並檢視法定上限',
+            '勞工依第14條終止契約：法定事由、期間限制與資遣費',
+            '最低服務年限約定：擇一法定基礎、合理範圍、費用返還及責任歸屬審查',
             '韓國企業在台僱用相關勞動法諮詢',
           ],
           relatedColumns: [
             { title: '台灣資遣費制度比較', slug: 'taiwan-labor-severance-law' },
             { title: '自願離職資遣費例外', slug: 'taiwan-voluntary-resignation-severance' },
-            { title: '最低服務年限爭議', slug: 'taiwan-mandatory-employment-period' },
+            { title: '台灣最低服務年限約定：效力、培訓費用與違約金判斷', slug: 'taiwan-mandatory-employment-period' },
           ]
         },
         {
@@ -2072,18 +2072,18 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: 'Labor & Employment',
-          description: 'Dismissal, severance, labor contracts, and workforce compliance in Taiwan.',
+          description: 'Advice on dismissal, severance, and employment-contract disputes in Taiwan. We separate the legal ground for termination from notice, severance, and time limits; calculate new- and old-system service separately; and assess worker-initiated termination, the statutory basis and reasonableness of minimum-service-period clauses, repayment, and attribution from the governing contract and evidence.',
           href: '/en/services#labor',
           details: [
-            'Severance calculations for economic dismissal',
-            'Exceptions allowing severance after voluntary resignation',
-            'Review of minimum service-period clauses',
+            'Severance calculations under Taiwan’s new and old systems',
+            'Worker-initiated termination under Article 14: statutory grounds, time limits, and severance',
+            'Minimum-service-period clauses: alternative statutory bases, reasonable scope, repayment, and attribution',
             'Taiwan employment-law advice for Korean businesses'
           ],
           relatedColumns: [
             { title: 'Taiwan Severance Law', slug: 'taiwan-labor-severance-law' },
             { title: 'Voluntary Resignation Exceptions', slug: 'taiwan-voluntary-resignation-severance' },
-            { title: 'Mandatory Employment Term Issues', slug: 'taiwan-mandatory-employment-period' }
+            { title: 'Taiwan Minimum Service Period Clauses: Validity, Training Costs, and Repayment', slug: 'taiwan-mandatory-employment-period' }
           ]
         },
         {
@@ -2830,7 +2830,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           relatedColumns: [
             { title: '台湾の退職金（資遣費）制度', slug: 'taiwan-labor-severance-law' },
             { title: '労働者側からの契約終了時に退職金（資遣費）を請求できる例外', slug: 'taiwan-voluntary-resignation-severance' },
-            { title: '台湾の最低勤務期間条項', slug: 'taiwan-mandatory-employment-period' }
+            { title: '台湾の最低勤務期間条項：有効性・研修費用・返還義務', slug: 'taiwan-mandatory-employment-period' }
           ]
         },
         {

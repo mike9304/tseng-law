@@ -169,12 +169,12 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'mandatory-employment',
-        title: '대만 의무재직 약정 문제',
-        summary: '최소 근무기간 약정의 유효요건과 위반 시 법적 효과를 설명합니다.',
-        href: '/ko/insights/mandatory-employment',
+        title: '대만 최소 근무기간 약정: 효력·교육비·위약금 판단 기준',
+        summary: '두 가지 선택적 법정 요건과 별도의 합리성 심사를 설명하고, 훈련비와 선급성 급부의 반환을 구분하며, 계약 종료 사유의 책임 귀속이 제15조의1 제4항상 훈련비 반환 책임에 미치는 영향을 살펴봅니다.',
+        href: '/ko/insights/taiwan-mandatory-employment-period',
         category: 'legal',
         image: '/images/014-taiwan-mandatory-employment-period/featured-01.jpg',
-        keywords: ['의무재직', '근로계약', '노동분쟁']
+        keywords: ['최소 근무기간', '교육비 반환', '선급성 급부', '책임 귀속']
       },
       {
         id: 'labor-severance',
@@ -341,12 +341,12 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'mandatory-employment',
-        title: '台灣最低服務年限條款爭議',
-        summary: '解析最低服務年限約定的有效條件與違反效果。',
-        href: '/zh-hant/insights/mandatory-employment',
+        title: '台灣最低服務年限約定：效力、培訓費用與違約金判斷',
+        summary: '說明兩項擇一的法定基礎及另行的合理範圍審查，區分培訓費用與預付性給付的返還，並說明契約終止的可歸責性對第15條之1第4項培訓費用返還責任的影響。',
+        href: '/zh-hant/insights/taiwan-mandatory-employment-period',
         category: 'legal',
         image: '/images/014-taiwan-mandatory-employment-period/featured-01.jpg',
-        keywords: ['最低服務年限', '勞動契約']
+        keywords: ['最低服務年限', '培訓費用', '預付性給付', '責任歸屬']
       },
       {
         id: 'labor-severance',
@@ -442,9 +442,9 @@ const englishPostCopy: Record<string, { title: string; summary: string; keywords
     keywords: ['massage industry', 'regulation', 'legal history']
   },
   'mandatory-employment': {
-    title: 'Disputes Over Mandatory Employment Period Clauses in Taiwan',
-    summary: 'Validity requirements and legal consequences of minimum service-period clauses.',
-    keywords: ['minimum service period', 'employment contract', 'labor dispute']
+    title: 'Taiwan Minimum Service Period Clauses: Validity, Training Costs, and Repayment',
+    summary: 'Explains the two alternative statutory bases and the separate reasonable-scope review, distinguishes reimbursement of training expenses from repayment of prepaid benefits, and explains how attribution for the end of employment affects training-expense liability under Article 15-1(4).',
+    keywords: ['minimum service period', 'training-cost repayment', 'prepaid benefit', 'attribution']
   },
   'labor-severance': {
     title: 'Taiwan Labor Law: Is Severance Really Hard to Receive?',

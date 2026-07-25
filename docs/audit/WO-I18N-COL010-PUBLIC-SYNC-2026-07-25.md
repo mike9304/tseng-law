@@ -99,6 +99,15 @@ Use these exact intros:
 - EN:
   `We handle civil disputes including breach of contract, tort, and consumer claims. In a Korean student gym injury case, we obtained a TWD 1.57 million first-instance damages award and provide multilingual support throughout Taiwan litigation.`
 
+The shorter `siteContent` civil-service descriptions are separate public
+surfaces. Preserve the existing EN and JA descriptions, which are already
+safe, and replace the KO and ZH-Hant descriptions exactly:
+
+- KO:
+  `계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 대만달러 손해배상 판결을 이끌어낸 실적이 있으며, 외국인 의뢰인의 대만 소송 절차를 한국어로 밀착 지원합니다.`
+- ZH-Hant:
+  `處理契約糾紛、損害賠償、消費者權益等民事案件。曾代理韓國留學生健身房受傷案，於一審獲判新台幣 157 萬元賠償。以中韓雙語全程支援外國當事人之台灣訴訟程序。`
+
 Use these exact six key points per locale:
 
 ```ts
@@ -150,7 +159,9 @@ The focused test must assert:
 7. stale titles are absent from the synchronized runtime files;
 8. exact three-locale civil intros and six-point legal arrays are present, and
    `대만 최대 헬스장`, `台灣最大健身房`, `major Taiwan gym`, unconditional
-   court-fee waiver, and settlement-finality claims are absent;
+   court-fee waiver, and settlement-finality claims are absent; the shorter KO
+   and ZH-Hant `siteContent` descriptions explicitly identify the rounded
+   award as first-instance;
 9. `src/lib/search.ts` and `src/content/column-embeddings.json` are not edited
    by this lane.
 

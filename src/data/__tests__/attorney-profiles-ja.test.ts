@@ -93,7 +93,7 @@ describe('Japanese attorney profile', () => {
       { label: '台湾会社設立サービス', href: '/ja/services#investment' },
       { label: '民事訴訟・損害賠償サービス', href: '/ja/services#civil' },
       {
-        label: '台湾のジム事故損害賠償コラム',
+        label: '台湾のジム事故損害賠償：一審事例・期限・証拠・賠償項目',
         href: '/ja/columns/taiwan-gym-injury-lawsuit',
       },
       { label: 'お問い合わせ・ご相談', href: '/ja/contact' },

@@ -180,7 +180,6 @@ function legacyPostToColumnDocument(post: ColumnPost & { locale: Locale }): Colu
       },
       featuredImage: post.featuredImage,
       featured: false,
-      publishedAt: lastmod,
       seo: {
         title: post.title,
         description: post.summary,

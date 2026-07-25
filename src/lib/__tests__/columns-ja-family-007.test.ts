@@ -1,0 +1,862 @@
+import crypto from 'node:crypto';
+import fs from 'node:fs';
+import path from 'node:path';
+import matter from 'gray-matter';
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { describe, expect, it } from 'vitest';
+import ColumnContent from '@/components/ColumnContent';
+import { getColumnPost } from '@/lib/columns';
+
+const columnPath = path.join(
+  process.cwd(),
+  'src/content/columns-ja/007-taiwan-divorce-lawsuit-qna.md',
+);
+const raw = fs.readFileSync(columnPath, 'utf8');
+const parsed = matter(raw);
+const canonicalSlug = 'taiwan-divorce-lawsuit-qna';
+const post = getColumnPost(canonicalSlug, 'ja');
+const aliasPost = getColumnPost('divorce-qna', 'ja');
+
+const title = '台湾の離婚手続Q&A：調停・訴訟・財産分与・子ども';
+const sourceUrl =
+  'https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna';
+const featuredImage =
+  '../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg';
+const bodyImage = `![台湾の離婚手続と家事法律相談を表すイラスト](${featuredImage})`;
+
+const faq1Answer =
+  '台湾民法第1050条によれば、協議離婚は書面により行い、双方に離婚の真意があることを直接見聞きして確認した2名以上の証人の署名を得るとともに、戸政機関への登記を行うことがすべて必要です。私的な合意書に署名しただけでは完了せず、登記は効力発生の要件です。';
+const faq2Answer =
+  '必ずしもそうではありません。家事事件法第13条により、裁判所が当事者または法定代理人に本人出頭を命じ、正当な理由なく従わない場合には、民事訴訟法第303条が準用されます。初回の過料は3万台湾元以下であり、再度の適法な通知の後に正当な理由なく出頭しない場合は、反復して制裁が科されることがありますが、拘引はできません。これは、双方が必ず同じ部屋で調停しなければならないという意味ではありません。手続の進め方は、法令と個別事情に基づき裁判所が判断します。';
+const faq3Answer =
+  '民法第1052条第2項ただし書は、2026年7月25日時点の現行条文にも残っています。憲法法廷112年憲判字第4号は、同制限を全面削除したわけではありません。同判決は、原則として合憲としつつ、重大事由の発生・継続期間を考慮せず、唯一の有責配偶者から離婚の機会を完全に奪い、著しく過酷となる範囲について違憲と判断しました。立法府による条文削除はなされていないため、裁判所は当該判旨を踏まえて個別に判断します。';
+const faq4Answer =
+  '決まりません。登記名義、実質的所有、借名登記、婚前資金、贈与、貸付、返還等の個別請求と、民法第1030条の1に基づく夫婦残余財産差額分配は、分けて検討する必要があります。婚前の貯蓄による頭金やローン返済だけでは登記名義が移転するわけではなく、一方の名義で登記されていることだけで、契約上・実質上の権利や夫婦財産上の請求がすべて決まるわけでもありません。';
+const faq5Answer =
+  '同じではありません。民法第1030条の1の夫婦残余財産差額分配請求権、第1056条の損害賠償、第1057条の離婚後の扶養、子の養育費、未婚の同居に伴う別個の請求、第三者に対する不法行為等は、それぞれ根拠と要件が異なります。第1030条の1の請求権には、残余財産の差額を知った時から2年、法定財産制関係が消滅した時から5年という行使期間が定められていますが、これを他の権利に一律に当てはめてはなりません。各請求の起算、要件および期間制限は、個別に確認する必要があります。';
+const faq6Answer =
+  '民法第1055条および第1055条の1によれば、未成年の子に対する権利義務の行使・負担、面会交流その他の事項は、子の最善の利益を基準に判断されます。継続性・安全、養育実績、各親の能力と意思、他方の親との関係維持への協力、適切な範囲での子の意向、専門家や関係機関の資料などが考慮され得ます。婚姻破綻の責任を理由とする制裁や、一律の自動ルールで決まるものではありません。';
+
+const faq = [
+  {
+    q: '台湾の協議離婚が効力を生じるには、何が必要ですか？',
+    a: faq1Answer,
+  },
+  {
+    q: '裁判所の調停では、必ず双方が同じ場に出頭しなければなりませんか？',
+    a: faq2Answer,
+  },
+  {
+    q: '婚姻破綻について有責な配偶者は、裁判離婚を請求できますか？',
+    a: faq3Answer,
+  },
+  {
+    q: '住宅の購入資金を負担したことや登記名義だけで、所有権や夫婦残余財産差額分配は決まりますか？',
+    a: faq4Answer,
+  },
+  {
+    q: '夫婦残余財産差額分配、離婚に伴う損害賠償、離婚後の扶養は同じ請求であり、いずれも5年で時効になりますか？',
+    a: faq5Answer,
+  },
+  {
+    q: '台湾の裁判所は、未成年の子に関する事項をどのように判断しますか？',
+    a: faq6Answer,
+  },
+];
+
+const headings = [
+  '1. 3つの離婚手続と、まず確認すべき渉外上の論点',
+  '2. 協議離婚と戸籍登記',
+  '3. 裁判所の調停・訴訟、出頭および不服申立て',
+  '4. 裁判離婚の事由と有責配偶者に関するただし書',
+  '5. 外国での婚姻・離婚と台湾における戸籍手続',
+  '6. 不動産の名義、婚前資金および夫婦残余財産差額分配請求権',
+  '7. 損害賠償、離婚後の扶養、未婚の同居および第三者',
+  '8. 未成年の子に対する権利義務の行使・負担と最善の利益',
+  '9. 子の養育費、面会交流、執行および暫定的保護',
+  '10. 子を伴う国境を越えた転居',
+  '11. 証拠と実務上の準備',
+  '12. 公式資料',
+  '13. 関連するご案内',
+];
+
+const officialLinks = [
+  '[台湾全国法規資料庫：民法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)',
+  '[台湾法務部法規検索システム：民法（英語版）](https://mojlaw.moj.gov.tw/ENG/LawContentE.aspx?LSID=FL001351)',
+  '[台湾全国法規資料庫：家事事件法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010048)',
+  '[台湾全国法規資料庫：民事訴訟法第303条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=303&pcode=B0010001)',
+  '[台湾全国法規資料庫：家事非訟事件の暫定処分に関する規則（原題：家事非訟事件暫時処分辦法）](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010056)',
+  '[台湾全国法規資料庫：戸籍法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)',
+  '[内政部戸政司：離婚登記申請案内](https://www.ris.gov.tw/documents/html/2/3/1/384.html)',
+  '[台湾全国法規資料庫：渉外民事法律適用法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)',
+  '[台湾憲法法廷：112年憲判字第4号](https://cons.judicial.gov.tw/docdata.aspx?fid=52&id=310013)',
+  '[台湾憲法法廷：112年憲判字第4号（英語版）](https://cons.judicial.gov.tw/en/docdata.aspx?fid=5534&id=352234)',
+];
+const officialUrls = officialLinks.map(
+  (link) => link.match(/\((https?:\/\/[^)]+)\)$/)?.[1] ?? '',
+);
+const internalLinks = [
+  '[台湾の家事事件サービス](/ja/services/family)',
+  '[台湾訴訟弁護士ガイド](/ja/taiwan-litigation-lawyer)',
+  '[お問い合わせ](/ja/contact)',
+];
+
+const disclaimer =
+  '本稿は、台湾の離婚手続、夫婦財産制、離婚後の請求および未成年の子に関する家事法について、一般的な教育情報を提供するものです。個別の離婚事件または家事事件に関する法的助言ではありません。管轄、準拠法、外国裁判の承認、事実と証拠、既存の合意や裁判所の判断、および現行の公式規則により結果は異なり得ます。期限を計算し、又は手続を開始する前に、正しい起算事由に基づく期限と最新の公式資料を個別事情に即して確認してください。';
+const author = '**曾雋崴弁護士（Wei Tseng）**';
+const exactEnding = `- ${internalLinks[2]}
+
+${disclaimer}
+
+${author}`;
+
+const frozenVisibleJapaneseCount = 11_434;
+const frozenVisibleKanaCount = 5_016;
+const frozenCalculatedMinutes = 23;
+const frozenSourceSha256 =
+  '5c29b88195a1fcf69702d719a3f38b45a1fae2854b7823ce8efd805f5ad2a640';
+
+function countOccurrences(value: string, needle: string) {
+  return value.split(needle).length - 1;
+}
+
+function firstParagraphAfter(content: string, heading: string) {
+  return content.split(`${heading}\n\n`)[1]?.split('\n\n')[0];
+}
+
+function sectionBody(content: string, heading: string) {
+  const sectionStart = content.indexOf(`## ${heading}`);
+  const nextSection = content.indexOf('\n## ', sectionStart + 1);
+  return content.slice(
+    sectionStart,
+    nextSection === -1 ? content.length : nextSection,
+  );
+}
+
+function extractPublicText(content: string) {
+  return content
+    .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/^>\s?/gm, '')
+    .replace(/^[-*+]\s+/gm, '')
+    .replace(/^\d+\.\s+/gm, '')
+    .replace(/^---$/gm, '')
+    .replace(/[「」『』“”‘’*_`]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
+  it('publishes the exact complete frontmatter and loaded article identity', () => {
+    expect(parsed.data).toEqual({
+      title,
+      url: sourceUrl,
+      lastmod: '2026-07-25',
+      date_display: '2025年9月13日',
+      read_time: '約23分',
+      categories: ['台湾法律情報'],
+      featured_image: featuredImage,
+      faq,
+    });
+    expect(parsed.data.faq).toHaveLength(6);
+    expect(post).toMatchObject({
+      slug: canonicalSlug,
+      title,
+      date: '2026-07-25',
+      dateDisplay: '2025年9月13日',
+      readTime: '約23分',
+      category: 'legal',
+      categoryLabel: '台湾法律情報',
+      featuredImage:
+        '/images/blog/007-taiwan-divorce-lawsuit-qna/featured-01.jpg',
+      faq,
+    });
+    expect(parsed.data.url).toBe(sourceUrl);
+    expect(raw).toContain(sourceUrl);
+    expect(post?.title).toBe(title);
+    expect(post?.faq).toEqual(faq);
+    expect(post?.content).toContain(`## ${headings[0]}`);
+    expect(post?.content).toContain(disclaimer);
+  });
+
+  it('uses the sole exact H1 followed immediately by the sole contracted image', () => {
+    expect(
+      Array.from(parsed.content.matchAll(/^# (.+)$/gm), (match) => match[1]),
+    ).toEqual([title]);
+    expect(parsed.content).toMatch(
+      new RegExp(
+        `^\\n# ${title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n\\n${bodyImage.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n\\n`,
+      ),
+    );
+    expect(
+      Array.from(
+        parsed.content.matchAll(/!\[[^\]]*\]\([^)]+\)/g),
+        (match) => match[0],
+      ),
+    ).toEqual([bodyImage]);
+    expect(countOccurrences(raw, featuredImage)).toBe(2);
+    expect(post?.content).not.toMatch(/!\[[^\]]*\]\([^)]+\)/);
+    expect(raw).not.toContain('img-01.jpg');
+  });
+
+  it('uses exactly the thirteen contracted H2 sections in order', () => {
+    expect(
+      Array.from(parsed.content.matchAll(/^## (.+)$/gm), (match) => match[1]),
+    ).toEqual(headings);
+  });
+
+  it('repeats each exact FAQ answer twice and starts its assigned section with it', () => {
+    const assignments = [
+      [`## ${headings[1]}`, faq1Answer],
+      [`## ${headings[2]}`, faq2Answer],
+      [`## ${headings[3]}`, faq3Answer],
+      [`## ${headings[5]}`, faq4Answer],
+      [`## ${headings[6]}`, faq5Answer],
+      [`## ${headings[7]}`, faq6Answer],
+    ];
+
+    for (const [heading, answer] of assignments) {
+      expect(firstParagraphAfter(parsed.content, heading)).toBe(answer);
+      expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
+      expect(countOccurrences(raw, answer)).toBe(2);
+    }
+  });
+
+  it('locks one exact substantive proposition in its assigned section for all twenty-five legacy topics', () => {
+    const legacyCoverage = [
+      {
+        number: 1,
+        heading: headings[0],
+        phrase:
+          '**協議離婚**は、民法第1050条の書面、証人および戸政機関への登記という要件をすべて満たして初めて効力を生じる身分行為です。私的な合意書に署名しただけでは完了しません。',
+      },
+      {
+        number: 2,
+        heading: headings[4],
+        phrase:
+          '外国の現地法に従って離婚しただけでは、台湾の戸籍登記が完了し、又は台湾での承認・効力が自動的に証明されるわけではありません。',
+      },
+      {
+        number: 3,
+        heading: headings[5],
+        phrase:
+          '婚前の貯蓄による頭金やローン返済は、資金の出所に関する重要な証拠となり得ます。しかし、それだけで登記名義が移転し、又は後のすべての請求が決まるわけではありません。',
+      },
+      { number: 4, heading: headings[2], phrase: faq2Answer },
+      {
+        number: 5,
+        heading: headings[6],
+        phrase:
+          '行政機関が公表する平均消費支出は、参考資料となり得ても、第1057条の額を自動的に決める拘束的な固定算式ではありません。',
+      },
+      {
+        number: 6,
+        heading: headings[5],
+        phrase:
+          '振込記録、購入契約、ローン資料、領収書、通信記録、税務・登記資料などは実務上重要ですが、どの理論についても一通の書類だけで結論が決まるとは限りません。',
+      },
+      { number: 7, heading: headings[6], phrase: faq5Answer },
+      {
+        number: 8,
+        heading: headings[7],
+        phrase:
+          'もっとも、「まず離婚し、子の問題は後で処理すればよい」という普遍的な近道として勧めるものではありません。',
+      },
+      {
+        number: 9,
+        heading: headings[1],
+        phrase:
+          '内政部戸政司の最新の離婚登記申請案内および担当窓口で、実際に必要な書類を確認してください。',
+      },
+      {
+        number: 10,
+        heading: headings[2],
+        phrase:
+          '所要期間は、争点、送達、証拠、暫定的な申立て、裁判所の負担などにより異なります。固定の処理日数を法律上の保証として述べることはできません。',
+      },
+      {
+        number: 11,
+        heading: headings[3],
+        phrase:
+          '民法第1052条第1項は、裁判離婚の具体的事由として次の10を定めます。',
+      },
+      { number: 12, heading: headings[3], phrase: faq3Answer },
+      {
+        number: 13,
+        heading: headings[2],
+        phrase:
+          '家事事件法の対象となる事件では、原則として裁判所の調停が先行します。ただし、法令と個別の事件の性質・手続上の地位により例外や異なる進行があり得るため、すべての家事事件に変更不能な単一路線だけがあるとはいえません。',
+      },
+      {
+        number: 14,
+        heading: headings[6],
+        phrase:
+          '**民法第1057条**は、無過失の配偶者が裁判離婚により生活困難となる場合の離婚後の扶養を規律します。',
+      },
+      {
+        number: 15,
+        heading: headings[6],
+        phrase:
+          '未婚の同居だけでは、離婚に伴う権利、第1056条の損害賠償、第1057条の離婚後扶養は生じません。',
+      },
+      {
+        number: 16,
+        heading: headings[7],
+        phrase:
+          '離婚合意書があるからといって、法定の要件を満たす後の裁判所の審理が当然に封じられるわけではありません。',
+      },
+      {
+        number: 17,
+        heading: headings[8],
+        phrase:
+          '「予見不能な事情変更」だけを唯一の要件とするわけではありません。',
+      },
+      {
+        number: 18,
+        heading: headings[8],
+        phrase:
+          '面会妨害があったという一事だけで、即時引渡し、実力行使、権利義務の自動変更、又は相手方の処罰が保証されるわけではありません。',
+      },
+      {
+        number: 19,
+        heading: headings[2],
+        phrase:
+          'あらゆる家事裁判に共通する単一の不服申立て期限があるわけではないため、実際に発せられた文書に基づき、正しい経路と期間を確認する必要があります。',
+      },
+      {
+        number: 20,
+        heading: headings[5],
+        phrase:
+          '不貞その他の婚姻破綻の責任が、所有権を自動的に奪い、又は差額分配の法定計算を機械的に書き換えるわけではありません。',
+      },
+      {
+        number: 21,
+        heading: headings[3],
+        phrase:
+          '有責配偶者が絶対に請求できない、又は常に請求できる、という固定結論を述べてはなりません。',
+      },
+      {
+        number: 22,
+        heading: headings[6],
+        phrase:
+          '深刻な干渉や侮辱があったという一事だけでは、第三者に対する第1057条義務や離婚損害賠償が自動的に成立するわけではありません。',
+      },
+      {
+        number: 23,
+        heading: headings[3],
+        phrase:
+          '警察への行方不明届は重要な証拠となり得ますが、普遍的な法定前提ではありません。',
+      },
+      {
+        number: 24,
+        heading: headings[3],
+        phrase:
+          '数か月の別居それ自体は、当然の離婚事由にはなりません。',
+      },
+      {
+        number: 25,
+        heading: headings[9],
+        phrase:
+          '特定国で生活することに合意しただけでは、その国の物価水準だけで養育費が決まるわけではありません。',
+      },
+    ];
+
+    expect(legacyCoverage.map(({ number }) => number)).toEqual(
+      Array.from({ length: 25 }, (_, index) => index + 1),
+    );
+    for (const { heading, phrase } of legacyCoverage) {
+      expect(sectionBody(parsed.content, heading)).toContain(phrase);
+      expect(post?.content).toContain(phrase);
+    }
+  });
+
+  it('locks the three paths and five separate cross-border questions', () => {
+    const section = sectionBody(parsed.content, headings[0]);
+    const requiredPhrases = [
+      '**協議離婚**は、民法第1050条の書面、証人および戸政機関への登記という要件をすべて満たして初めて効力を生じる身分行為です。',
+      '**裁判所の調停または和解による離婚**は、調停または和解が成立した時点で婚姻関係が終了し',
+      '**裁判離婚**は、民法第1052条に定める事由に基づき、裁判所の判決により離婚を認める経路です。',
+      '台湾の裁判所または行政機関が、求められている手続について裁判管轄または行政権限を有するか。',
+      '離婚、夫婦財産および子に関する事項について、どの法域の準拠法が適用されるか。',
+      '外国の身分行為または裁判が、台湾において承認され、又は効力を有するか。',
+      '台湾の戸籍手続として、どのような登記と認証書類等が必要か。',
+      '他国・地域において、さらにどのような登記、承認または執行の手続が必要か。',
+      '国籍のみ、婚姻登記地のみ、あるいは一国の現地法のみをもって、上記5点のすべてが解決するわけではありません。',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+  });
+
+  it('locks Article 1050 elements and the qualified court-result registration rule', () => {
+    const section = sectionBody(parsed.content, headings[1]);
+    const requiredPhrases = [
+      faq1Answer,
+      '民法第1050条は、次の要件を別個に要求します。',
+      '**書面。** 協議離婚は書面により行わなければなりません。',
+      '双方に離婚の真意があることを直接見聞きして確認した2名以上の証人が署名する必要があります。',
+      '真意を確認していない者が後から形式的に署名するだけでは足りません。',
+      '戸政機関への登記は効力発生の要件です。',
+      '登記がなければ、私的な書面だけでは台湾の協議離婚は完成しません。',
+      '**台湾の離婚判決の確定日、または裁判所の調停・和解の成立日から30日**',
+      '判決書や調停調書を受領した日が、確定または成立に先立つだけの場合には、その受領日を一律の起算日としてはなりません。',
+      '期限後の申請も受理されます。',
+      '申請が遅れたこと自体が、すでに効力を生じた裁判所の離婚を失効させるわけではありません。',
+      '書面による催告後も申請がない場合、要件を満たせば、戸政機関は戸籍法第48条の2により直接登記します。',
+      'オンライン申請は申請経路の一つにすぎません。',
+      'オンライン手続の期間を、離婚一般の効力要件と混同してはなりません。',
+      'オンラインの申請窓口の期間を徒過しても、確定判決または裁判所の調停・和解により成立した離婚が当然に無効になるわけではありません。',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+  });
+
+  it('locks Family Act Article 13 and the type-specific effects and review routes', () => {
+    const section = sectionBody(parsed.content, headings[2]);
+    const requiredPhrases = [
+      faq2Answer,
+      '家事事件法の対象となる事件では、原則として裁判所の調停が先行します。',
+      'すべての家事事件に変更不能な単一路線だけがあるとはいえません。',
+      '家事事件法第13条は、裁判所が当事者または法定代理人に本人出頭を命じた場合に限り問題となります。',
+      '初回の過料は3万台湾元以下',
+      '拘引はできません',
+      '遠隔参加、分離手続、代理人、安全上の配慮などは、法令と個別事情に基づき裁判所が判断するものであり、自動的な権利でも自動的な禁止でもありません。',
+      '調停調書、和解調書、裁定、判決は、不服申立ての観点からは同一ではありません。',
+      'あらゆる家事裁判に共通する単一の不服申立て期限があるわけではないため、実際に発せられた文書に基づき、正しい経路と期間を確認する必要があります。',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+  });
+
+  it('locks Article 1052 paragraph 1 grounds, paragraph 2, and the constitutional qualification', () => {
+    const section = sectionBody(parsed.content, headings[3]);
+    const grounds = [
+      '1. **重婚。**',
+      '2. **配偶者以外の者との合意による性交。**',
+      '3. **配偶者の一方による他方への同居に耐え難い虐待。**',
+      '4. **配偶者の一方が他方の直系親族を虐待し、または配偶者一方の直系親族が他方を虐待して、共同生活に耐え難いこと。**',
+      '5. **配偶者の一方が悪意で他方を遺棄し、その状態が継続していること。**',
+      '6. **配偶者の一方が他方の殺害を企てたこと。**',
+      '7. **治癒不能の重い疾病。**',
+      '8. **重大で治癒不能の精神疾患。**',
+      '9. **生死不明が3年を超えること。**',
+      '10. **故意の犯罪により6か月を超える有期懲役の確定判決を受けたこと。**',
+    ];
+    const requiredPhrases = [
+      faq3Answer,
+      '行為者と被害者を曖昧にしてはなりません。',
+      '配偶者の一方が他方の直系親族を虐待する場合と、配偶者一方の直系親族が他方を虐待する場合の双方が含まれ',
+      'これは法文の古い疾病表現であり、人格または道徳上の評価ではありません。',
+      '第2項は上記10事由とは別です。',
+      'このただし書は、2026年7月25日時点の現行条文に残っています。',
+      '憲法法廷112年憲判字第4号は、ただし書を全面削除したわけではなく',
+      '有責配偶者に対して離婚を自動的に許可し、又は一律に禁止する結論を定めたわけでもありません。',
+      '重大事由の発生・継続期間を考慮せず、唯一の有責配偶者から離婚の機会を完全に奪い、著しく過酷となる範囲について違憲と判断しました。',
+      '第1項の各事由をすべて書き換えているわけではありません。',
+      '警察への行方不明届は重要な証拠となり得ますが、普遍的な法定前提ではありません。',
+      '先行する同居義務履行請求も、すべての事件に必須の法定前提ではありません。',
+      '数か月の別居それ自体は、当然の離婚事由にはなりません。',
+    ];
+
+    let previousIndex = -1;
+    for (const ground of grounds) {
+      const index = section.indexOf(ground);
+      expect(index).toBeGreaterThan(previousIndex);
+      previousIndex = index;
+    }
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+  });
+
+  it('locks foreign-record connecting factors, authentication, translation, and regional verification', () => {
+    const section = sectionBody(parsed.content, headings[4]);
+    const requiredPhrases = [
+      '外国での婚姻または離婚は、台湾における単一の手続に要約できません。',
+      '「外国で結婚し、外国で離婚すれば現地法だけで足りる」と断定することはできません。',
+      'また、外国での婚姻をまず台湾に追加登記するか、台湾で訴訟するかという二択だけが唯一の道でもありません。',
+      '原本のほか、台湾の在外機関その他の権限ある経路による認証または確認、および行政実務または裁判実務が求める形式での中国語訳が必要となることが少なくありません。',
+      '中国大陸、香港およびマカオの文書については、通常の外国文書の認証とは異なる確認制度が適用されます。',
+      '外国の離婚または裁判が台湾で承認され、又は効力を有するかという問題と、台湾の戸政機関が特定の身分記録を登載できるかという問題は同一ではありません。',
+      '裁判所での訴訟・調停・和解と、戸政機関での行政登記は、目的も要件も異なります。',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+  });
+
+  it('locks Article 1017 and Article 1030-1 classification, exclusions, adjustment, and claim-specific periods', () => {
+    const section = sectionBody(parsed.content, headings[5]);
+    const requiredPhrases = [
+      faq4Answer,
+      '住宅その他の特定財産については、少なくとも次の3点を分けます。',
+      '民法第1017条は、婚前財産と婚後財産の区分および推定に関する枠組みを与えます。',
+      'これらは財産制の分析に有用ですが、所有権の帰属、借名登記や贈与の成否、夫婦残余財産差額分配の最終結論を、単独で自動決定するものではありません。',
+      '各配偶者の婚姻中に取得した財産について、法定の除外と関係債務を踏まえた純残余額を算定し、その差額を原則として均等に分配します。',
+      '相続その他無償で取得した財産および慰撫金は、法令の定めるところにより除外されます。',
+      '婚姻中に取得したすべての財産を一律に折半する制度ではなく',
+      '差額の均等分配が著しく不公平となる場合、裁判所は法定の事情を考慮して分配を調整し、又は免除することができます。',
+      '不貞その他の婚姻破綻の責任が、所有権を自動的に奪い、又は差額分配の法定計算を機械的に書き換えるわけではありません。',
+      '外国人配偶者であるという理由だけで、異なる法定算式が適用されるわけでもありません。',
+      '残余財産の差額を知った時から2年、法定財産制関係が消滅した時から5年の行使期間により制限されます。',
+      'この2年・5年の規律を、損害賠償、離婚後の扶養、子の養育費、所有権その他の請求に一律適用してはなりません。',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+  });
+
+  it('separates Articles 1056 and 1057, child support, property, cohabitation, and third-party claims', () => {
+    const section = sectionBody(parsed.content, headings[6]);
+    const requiredPhrases = [
+      faq5Answer,
+      '**民法第1056条**は、裁判離婚に伴う損害賠償を規律します。',
+      '**民法第1057条**は、無過失の配偶者が裁判離婚により生活困難となる場合の離婚後の扶養を規律します。',
+      '**民法第1116条の2**は、離婚後も父母が未成年の子に対して扶養義務を負い続けることを明らかにします。',
+      '子の養育費は、第1057条の離婚後扶養とは別の義務です。',
+      '行政機関が公表する平均消費支出は、参考資料となり得ても、第1057条の額を自動的に決める拘束的な固定算式ではありません。',
+      '未婚の同居だけでは、離婚に伴う権利、第1056条の損害賠償、第1057条の離婚後扶養は生じません。',
+      '姻族その他の第三者は、当然に第1057条の義務や離婚損害賠償責任を負いません。',
+      'すべての請求を「離婚から5年」という単一の期間で一括処理してはなりません。',
+      '残余財産の差額を知った時から2年、法定財産制関係が消滅した時から5年',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+  });
+
+  it('locks Articles 1055 and 1055-1, the full Taiwan concept, review, and unresolved issues', () => {
+    const section = sectionBody(parsed.content, headings[7]);
+    const requiredPhrases = [
+      faq6Answer,
+      '台湾法が中心に置くのは、**未成年の子に対する権利義務の行使または負担**であり',
+      '日常語としての「親権」は、この完全な概念を説明した後の便宜的な略称としてのみ用いるべきであり',
+      '離婚合意書があるからといって、法定の要件を満たす後の裁判所の審理が当然に封じられるわけではありません。',
+      '民法第1055条および第1055条の1は、法定の考慮事情と実際の証拠に基づく最善の利益判断を求めます。',
+      '継続性、安全',
+      '養育実績',
+      '各親の生活状況・能力・意思',
+      '他方の親との関係維持への協力',
+      '適切な範囲での子の意向',
+      '婚姻破綻の責任は、子に関する権利義務を賞罰として与え、又は奪う基準ではありません。',
+      '国籍、性別、収入、不貞、同居親という単一要素だけで、結果が自動的に決まるわけでもありません。',
+      'もっとも、「まず離婚し、子の問題は後で処理すればよい」という普遍的な近道として勧めるものではありません。',
+      '選択した離婚経路の要件が満たされる場合であっても、離婚手続の完了後に子に関する事項の一部が未解決のまま残ることがあります。',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+  });
+
+  it('locks Article 1116-2 support and Family Act Article 194 contact and enforcement qualifications', () => {
+    const section = sectionBody(parsed.content, headings[8]);
+    const requiredPhrases = [
+      '民法第1116条の2によれば、父母の未成年の子に対する扶養義務は、離婚後も継続します。',
+      '子の養育費は親子間の義務であり、民法第1057条に基づく元配偶者に対する離婚後の扶養とは別です。',
+      '「予見不能な事情変更」だけを唯一の要件とするわけではありません。',
+      '子の現在の必要、両親の資力と事情、既存の合意または裁判、および子の最善の利益',
+      '家事事件法第194条に基づく直接強制または間接強制も、子の最善の利益に従って方法を選びます。',
+      '面会妨害があったという一事だけで、即時引渡し、実力行使、権利義務の自動変更、又は相手方の処罰が保証されるわけではありません。',
+      '養育費の不払いを理由に面会を私的に拒絶したり、面会妨害を理由に養育費の支払を一方的に停止したりするなどの自力救済は、勧められません。',
+      '緊急の安全問題がある場合には、事件類型と要件に応じて、適切な暫定的保護、保全、保護命令等の利用可能性を個別に確認します。',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+  });
+
+  it('locks the seven relocation questions, non-treaty shortcut, and no unauthorized removal', () => {
+    const section = sectionBody(parsed.content, headings[9]);
+    const requiredPhrases = [
+      '子を伴う国境を越えた転居は、一国の物価水準、単一の国籍、又は条約の名称だけで決まる問題ではありません。',
+      '**居所および旅行を決める権限。**',
+      '**他方の親の同意または裁判所の判断。**',
+      '**子の最善の利益と継続的な面会交流。**',
+      '**旅券、出入国、移民および各法域での手続。**',
+      '**承認および執行。**',
+      '**実際の移動・面会費用と双方の資力。**',
+      '**緊急保護。**',
+      '特定国で生活することに合意しただけでは、その国の物価水準だけで養育費が決まるわけではありません。',
+      '1980年のハーグ条約（国際的な子の奪取の民事上の側面に関する条約）が、台湾に当然適用されると述べることはできません。',
+      '国境を越えた移動や返還の問題を、条約の名称や一国の費用表だけに還元してはなりません。',
+      '合意または裁判に反する無断の連れ去り、旅券の隠匿、居所の秘匿、接触の遮断などの自力救済は勧められません。',
+      '国籍や旅券の所持だけで、転居権限が自動的に決まるわけではありません。',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+  });
+
+  it('uses the exact ordered nine-category evidence checklist and privacy prohibitions', () => {
+    const section = sectionBody(parsed.content, headings[10]);
+    const checklistStarts = [
+      '1. **婚姻・戸籍・身分資料。**',
+      '2. **裁判・送達資料。**',
+      '3. **外国文書の認証・翻訳。**',
+      '4. **財産・債務資料。**',
+      '5. **離婚事由の時系列。**',
+      '6. **子の状況。**',
+      '7. **養育費・面会交流資料。**',
+      '8. **正しい起算事由に基づく各期限。**',
+      '9. **プライバシーに配慮した資料管理。**',
+    ];
+
+    let previousIndex = -1;
+    for (const item of checklistStarts) {
+      const index = section.indexOf(item);
+      expect(index).toBeGreaterThan(previousIndex);
+      previousIndex = index;
+    }
+    expect(section).toContain(
+      '証拠は、真正性、完全性、取得経緯および関連性を重視して準備します。都合のよい断片だけに依存してはなりません。',
+    );
+    expect(section).toContain(
+      '必要な証拠は、請求、抗弁、管轄、準拠法、承認、期限ごとに異なります。',
+    );
+    expect(section).toContain(
+      '個人情報および子に関する資料は、必要な範囲で安全に保管・共有してください。',
+    );
+    expect(section).toContain(
+      '中国大陸、香港、マカオの文書は、通常の外国文書とは異なる確認制度に従って扱います。',
+    );
+    expect(section).toContain(
+      '違法な手段で証拠を作り出してはなりません。',
+    );
+    expect(section).toContain(
+      '都合のよい非公式な日付を起算日にしてはなりません。',
+    );
+    expect(section).toContain(
+      '違法な監視、アカウントや端末への侵入、追跡、違法録音、子の私生活の公開、報復、財産隠し、合意または裁判に反する子の連れ去りは勧められません。',
+    );
+  });
+
+  it('uses exactly the ten official and three Japanese internal body links once and in order', () => {
+    const markdownLinks = Array.from(
+      parsed.content.matchAll(/(?<!!)\[[^\]]+\]\(([^)]+)\)/g),
+      (match) => match[0],
+    );
+    const externalTargets = Array.from(
+      parsed.content.matchAll(/(?<!!)\[[^\]]+\]\((https?:\/\/[^)]+)\)/g),
+      (match) => match[1],
+    );
+
+    expect(markdownLinks).toEqual([...officialLinks, ...internalLinks]);
+    expect(externalTargets).toEqual(officialUrls);
+    for (const url of officialUrls) {
+      expect(countOccurrences(parsed.content, url)).toBe(1);
+    }
+    for (const link of [...officialLinks, ...internalLinks]) {
+      expect(countOccurrences(raw, link)).toBe(1);
+    }
+    expect(parsed.content).not.toMatch(/\]\(\/(?:ko|zh-hant|en)(?:\/|\))/);
+  });
+
+  it('ends with the exact disclaimer and author and nothing else', () => {
+    expect(raw.trimEnd().endsWith(exactEnding)).toBe(true);
+    expect(raw.trimEnd()).toMatch(
+      /個別事情に即して確認してください。\n\n\*\*曾雋崴弁護士（Wei Tseng）\*\*$/,
+    );
+    expect(countOccurrences(raw, disclaimer)).toBe(1);
+    expect(countOccurrences(raw, author)).toBe(1);
+  });
+
+  it('freezes the exact visible Japanese character counts, calculated read time, and source digest', () => {
+    const publicText = extractPublicText(parsed.content);
+    const visibleJapaneseCount =
+      publicText.match(
+        /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/gu,
+      )?.length ?? 0;
+    const visibleKanaCount =
+      publicText.match(
+        /[\p{Script=Hiragana}\p{Script=Katakana}]/gu,
+      )?.length ?? 0;
+    const calculatedMinutes = Math.ceil(visibleJapaneseCount / 500);
+    const sourceSha256 = crypto
+      .createHash('sha256')
+      .update(raw)
+      .digest('hex');
+
+    expect(visibleJapaneseCount).toBe(frozenVisibleJapaneseCount);
+    expect(visibleKanaCount).toBe(frozenVisibleKanaCount);
+    expect(calculatedMinutes).toBe(frozenCalculatedMinutes);
+    expect(parsed.data.read_time).toBe(`約${calculatedMinutes}分`);
+    expect(post?.readTime).toBe(`約${calculatedMinutes}分`);
+    expect(sourceSha256).toBe(frozenSourceSha256);
+  });
+
+  it('resolves the canonical and legacy alias to the identical complete Japanese article', () => {
+    expect(post).toBeDefined();
+    expect(aliasPost).toBeDefined();
+    expect(aliasPost?.slug).toBe(canonicalSlug);
+    expect(aliasPost?.title).toBe(title);
+    expect(aliasPost?.content).toBe(post?.content);
+    expect(aliasPost?.faq).toEqual(faq);
+    expect(aliasPost?.date).toBe(post?.date);
+    expect(aliasPost?.dateDisplay).toBe(post?.dateDisplay);
+    expect(aliasPost?.readTime).toBe(post?.readTime);
+    expect(aliasPost?.category).toBe(post?.category);
+    expect(aliasPost?.categoryLabel).toBe(post?.categoryLabel);
+    expect(aliasPost?.featuredImage).toBe(post?.featuredImage);
+    expect(post?.content).toContain(`## ${headings[0]}`);
+    expect(post?.content).toContain(`## ${headings[12]}`);
+    expect(post?.content).toContain(disclaimer);
+    expect(post?.content).toContain(author);
+    expect(post?.content).not.toContain(`# ${title}`);
+    expect(post?.content).not.toContain(bodyImage);
+    expect(post?.category).toBe('legal');
+    expect(post?.featuredImage).toBe(
+      '/images/blog/007-taiwan-divorce-lawsuit-qna/featured-01.jpg',
+    );
+  });
+
+  it('rejects exact legacy wording, semantic overclaims, promotional copy, and wrong identity', () => {
+    const serialized = JSON.stringify({
+      raw,
+      parsedContent: parsed.content,
+      postTitle: post?.title,
+      postContent: post?.content,
+      postFaq: post?.faq,
+    });
+    const forbiddenLiterals = [
+      '判決書または調停調書を受け取った日から**30日**以内に登記を完了しなければなりません',
+      '現地法に従って処理すれば足ります',
+      '台湾で婚姻を追加登記してから離婚する方法',
+      '扶養費と財産分割の請求権はいずれも離婚日から**5年**以内に請求しなければなりません',
+      '過ちのある側は離婚訴訟を提起できません',
+      'こんにちは、台湾弁護士の曾雋崴です',
+      'コメントやご連絡ください',
+      'お気軽にコメント',
+      '曾俊瑋',
+      'img-01.jpg',
+      'WIP: JA007',
+      'reply promptly',
+      '私訊',
+      '댓글',
+      '대만 이혼',
+    ];
+
+    for (const forbidden of forbiddenLiterals) {
+      expect(serialized).not.toContain(forbidden);
+    }
+    expect(raw).not.toContain(
+      '受領した日をすべての30日期間の起算日とする',
+    );
+    expect(raw).not.toContain(
+      '30日をオンライン申請だけの期間とし',
+    );
+    expect(raw).not.toContain(
+      '期限徒過で離婚が失効',
+    );
+    expect(raw).not.toContain(
+      '婚姻中財産を一律折半',
+    );
+    expect(raw).not.toContain(
+      '平均消費支出が離婚後扶養を決める',
+    );
+    expect(raw).not.toContain(
+      'ハーグ条約が台湾に当然適用される。',
+    );
+    expect(raw).toContain(
+      '1980年のハーグ条約（国際的な子の奪取の民事上の側面に関する条約）が、台湾に当然適用されると述べることはできません。',
+    );
+    expect(raw).toContain(
+      '面会妨害があったという一事だけで、即時引渡し、実力行使、権利義務の自動変更、又は相手方の処罰が保証されるわけではありません。',
+    );
+  });
+
+  it('contains no invisible characters, cross-locale routes, WIP markers, or Hangul leakage', () => {
+    expect(raw).not.toContain('\uFEFF');
+    expect(raw).not.toContain('\u00A0');
+    expect(raw).not.toContain('\u200B');
+    expect(raw).not.toContain('WIP');
+    expect(parsed.content).not.toMatch(/\]\(\/(?:ko|zh-hant|en)(?:\/|\))/);
+    expect(parsed.content).not.toMatch(/[\uac00-\ud7af]/);
+    expect(parsed.content).toContain('曾雋崴');
+    expect(parsed.content).not.toContain('曾俊瑋');
+    expect(parsed.content).not.toMatch(
+      /(?:reply promptly|お気軽にコメント|대만 이혼|台灣離婚程序)/,
+    );
+
+    // Reject residual English prose (5+ space-separated words). Allow short tokens
+    // such as Q&A and the contracted author English name Wei Tseng.
+    const publicTextWithoutAuthorEnglish = extractPublicText(parsed.content)
+      .split('Wei Tseng')
+      .join(' ');
+    expect(publicTextWithoutAuthorEnglish).not.toMatch(
+      /\b[A-Za-z]+(?:\s+[A-Za-z]+){4,}\b/,
+    );
+  });
+
+  it('retains title, FAQ, source URL, and complete body through loader and parse', () => {
+    expect(post?.title).toBe(title);
+    expect(post?.faq).toEqual(faq);
+    expect(raw).toContain(sourceUrl);
+    expect(post?.content).toContain(`## ${headings[0]}`);
+    expect(post?.content).toContain(`## ${headings[12]}`);
+    expect(post?.content).toContain(faq1Answer);
+    expect(post?.content).toContain(faq6Answer);
+    expect(post?.content).toContain(disclaimer);
+    expect(post?.content).toContain(author);
+    for (const link of officialLinks) {
+      expect(post?.content).toContain(link);
+    }
+    for (const link of internalLinks) {
+      expect(post?.content).toContain(link);
+    }
+  });
+
+  it('retains representative visible output through ColumnContent server render', () => {
+    const html = renderToStaticMarkup(
+      createElement(ColumnContent, { content: post?.content ?? '' }),
+    );
+    const normalizedHtml = html.split('&amp;').join('&');
+    const faqAnswers = [
+      faq1Answer,
+      faq2Answer,
+      faq3Answer,
+      faq4Answer,
+      faq5Answer,
+      faq6Answer,
+    ];
+
+    expect(normalizedHtml).toContain(headings[0]);
+    expect(normalizedHtml).toContain(headings[12]);
+    expect(normalizedHtml).toContain(
+      '台湾の離婚判決の確定日、または裁判所の調停・和解の成立日から30日',
+    );
+    expect(normalizedHtml).toContain('曾雋崴');
+
+    for (const answer of faqAnswers) {
+      expect(normalizedHtml).toContain(answer);
+    }
+
+    for (const link of officialLinks) {
+      const match = link.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      expect(match).not.toBeNull();
+      const [, label, url] = match!;
+      expect(normalizedHtml).toContain(label);
+      expect(normalizedHtml).toContain(url);
+    }
+
+    for (const link of internalLinks) {
+      const match = link.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      expect(match).not.toBeNull();
+      const [, label, url] = match!;
+      expect(normalizedHtml).toContain(label);
+      expect(normalizedHtml).toContain(url);
+    }
+  });
+});

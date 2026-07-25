@@ -8,6 +8,7 @@ const SUPPORTED_LOCALES = ['ko', 'zh-hant', 'en'] as const satisfies readonly Lo
 const EXPECTED_RECORDS_PER_LOCALE = 17;
 const EXPECTED_VECTOR_DIMENSION = 1536;
 const GYM_INJURY_SLUG = 'taiwan-gym-injury-lawsuit';
+const DIVORCE_QNA_SLUG = 'taiwan-divorce-lawsuit-qna';
 
 interface StoredColumnEmbedding {
   slug: string;
@@ -57,6 +58,33 @@ const gymInjuryExpectations: Record<
     snippetAnchors: [
       'Attorney Wei Tseng, a Taiwan lawyer',
       'gym-injury damages case involving a Korean univ',
+    ],
+  },
+};
+
+const divorceQnaExpectations: Record<
+  Locale,
+  { title: string; snippetAnchors: readonly string[] }
+> = {
+  ko: {
+    title: '대만 이혼 절차 Q&A: 조정·소송·재산분할·자녀',
+    snippetAnchors: [
+      '대만 이혼사건에서는 혼인관계를 끝내는 방식뿐 아니라',
+      '부부재산, 손해배상, 이혼 후 배우자 부양',
+    ],
+  },
+  'zh-hant': {
+    title: '台灣離婚程序 Q&A：調解、訴訟、財產分配與子女',
+    snippetAnchors: [
+      '處理台灣離婚事件時，除了結束婚姻關係本身',
+      '夫妻財產、損害賠償、離婚後贍養費',
+    ],
+  },
+  en: {
+    title: 'Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children',
+    snippetAnchors: [
+      'This guide explains Taiwan divorce routes',
+      'household registration, court procedure, and judicial-divorce grounds',
     ],
   },
 };
@@ -152,6 +180,53 @@ describe('generated column embeddings content synchronization', () => {
       'A Korean student injury case that won TWD 1.57M at first instance before settlement on appeal.',
     ]) {
       expect(gymInjuryText).not.toContain(staleText);
+    }
+  });
+
+  it('keeps column 007 titles and snippets synchronized to the accepted rewrites', () => {
+    for (const locale of SUPPORTED_LOCALES) {
+      const record = embeddingsFile.embeddings.find(
+        (entry) =>
+          entry.locale === locale && entry.slug === DIVORCE_QNA_SLUG,
+      );
+      const expected = divorceQnaExpectations[locale];
+
+      expect(record).toBeDefined();
+      expect(record?.title).toBe(expected.title);
+      for (const anchor of expected.snippetAnchors) {
+        expect(record?.snippet).toContain(anchor);
+      }
+      expect(record?.vector, `${locale}:${DIVORCE_QNA_SLUG}`).toHaveLength(
+        EXPECTED_VECTOR_DIMENSION,
+      );
+      expect(
+        record?.vector.every(
+          (value) => typeof value === 'number' && Number.isFinite(value),
+        ),
+        `${locale}:${DIVORCE_QNA_SLUG}`,
+      ).toBe(true);
+    }
+  });
+
+  it('rejects stale column 007 titles and summaries', () => {
+    const divorceQnaText = embeddingsFile.embeddings
+      .filter(({ slug }) => slug === DIVORCE_QNA_SLUG)
+      .map(({ title, snippet }) => `${title}\n${snippet}`)
+      .join('\n');
+
+    for (const staleText of [
+      '이혼 조정·소송 Q&A',
+      '離婚調解訴訟 Q&A',
+      'Taiwan Divorce Litigation Q&A',
+      '台湾の離婚調停・訴訟Q&A',
+      '대만 이혼 조정, 소송 Q&A',
+      '국제결혼 증가 상황에서 대만 이혼 조정·소송 절차를 Q&A로 설명합니다.',
+      '台灣離婚調解與訴訟 Q&A',
+      '以實務問答整理離婚調解與訴訟流程。',
+      'Taiwan Divorce Mediation & Litigation Q&A',
+      'A practical Q&A guide to mediation and litigation in Taiwan divorce matters.',
+    ]) {
+      expect(divorceQnaText).not.toContain(staleText);
     }
   });
 });

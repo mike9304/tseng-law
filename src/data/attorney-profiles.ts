@@ -79,7 +79,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: '대만 회사설립 변호사 안내', href: '/ko/taiwan-company-setup-lawyer' },
         { label: '대만 회사설립 서비스', href: '/ko/services/investment' },
         { label: '민사소송·손해배상 서비스', href: '/ko/services/civil' },
-        { label: '헬스장 부상 소송 칼럼', href: '/ko/columns/taiwan-gym-injury-lawsuit' },
+        { label: '대만 헬스장 부상 손해배상 칼럼', href: '/ko/columns/taiwan-gym-injury-lawsuit' },
         { label: '상담 문의', href: '/ko/contact' },
       ],
       externalProfiles: [
@@ -150,7 +150,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: '台灣公司設立律師指南', href: '/zh-hant/taiwan-company-setup-lawyer' },
         { label: '台灣公司設立服務', href: '/zh-hant/services/investment' },
         { label: '民事訴訟服務', href: '/zh-hant/services/civil' },
-        { label: '健身房受傷案件專欄', href: '/zh-hant/columns/taiwan-gym-injury-lawsuit' },
+        { label: '台灣健身房受傷求償專欄', href: '/zh-hant/columns/taiwan-gym-injury-lawsuit' },
         { label: '聯絡諮詢', href: '/zh-hant/contact' },
       ],
       externalProfiles: [
@@ -221,7 +221,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: 'Taiwan Company Setup Lawyer Guide', href: '/en/taiwan-company-setup-lawyer' },
         { label: 'Taiwan Company Setup Service', href: '/en/services/investment' },
         { label: 'Civil Litigation Service', href: '/en/services/civil' },
-        { label: 'Gym Injury Case Column', href: '/en/columns/taiwan-gym-injury-lawsuit' },
+        { label: 'Taiwan Gym Injury Claims Column', href: '/en/columns/taiwan-gym-injury-lawsuit' },
         { label: 'Book Consultation', href: '/en/contact' },
       ],
       externalProfiles: [
@@ -292,7 +292,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: '台湾会社設立ガイド', href: '/ja/columns/taiwan-company-establishment-basics' },
         { label: '台湾会社設立サービス', href: '/ja/services#investment' },
         { label: '民事訴訟・損害賠償サービス', href: '/ja/services#civil' },
-        { label: 'ジム負傷訴訟コラム', href: '/ja/columns/taiwan-gym-injury-lawsuit' },
+        { label: '台湾のジム事故損害賠償コラム', href: '/ja/columns/taiwan-gym-injury-lawsuit' },
         { label: 'お問い合わせ・ご相談', href: '/ja/contact' },
       ],
       externalProfiles: [

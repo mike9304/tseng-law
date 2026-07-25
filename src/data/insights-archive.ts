@@ -37,14 +37,14 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
     posts: [
       {
         id: 'gym-injury-lawsuit',
-        title: '대만 헬스장 부상 소송',
-        summary: '한국 대학생 부상 사건에서 1심 157만 TWD 판결 후 2심 화해로 종결된 사례입니다.',
+        title: '대만 헬스장 부상 손해배상: 1심 사례·청구기한·증거·배상항목',
+        summary: '대만 헬스장 부상 1심 사례를 바탕으로 형사 고소·민사 청구기한, 증거보전, 배상항목과 보험 확인 사항을 정리합니다.',
         href: '/ko/insights/gym-injury-lawsuit',
         category: 'case',
         date: '2025.09.13',
         readTime: '3분',
         image: '/images/010-taiwan-gym-injury-lawsuit/featured-01.jpg',
-        keywords: ['헬스장', '손해배상', '157만 TWD', '소송사례']
+        keywords: ['헬스장 부상', '손해배상', '청구기한', '증거보전', '배상항목']
       },
       {
         id: 'cosmetics-market-entry',
@@ -209,14 +209,14 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
     posts: [
       {
         id: 'gym-injury-lawsuit',
-        title: '台灣健身房受傷訴訟',
-        summary: '韓國大學生受傷案於一審獲判 157 萬 TWD，二審以和解方式結案。',
+        title: '台灣健身房受傷求償：一審案例、期限、證據與賠償項目',
+        summary: '以台灣健身房受傷的一審案例為基礎，整理刑事告訴與民事求償期限、證據保存、賠償項目及保險確認事項。',
         href: '/zh-hant/insights/gym-injury-lawsuit',
         category: 'case',
         date: '2025.09.13',
         readTime: '3分',
         image: '/images/010-taiwan-gym-injury-lawsuit/featured-01.jpg',
-        keywords: ['健身房', '損害賠償', '157萬 TWD']
+        keywords: ['健身房受傷', '損害賠償', '求償期限', '證據保存', '賠償項目']
       },
       {
         id: 'cosmetics-market-entry',
@@ -372,9 +372,9 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
 
 const englishPostCopy: Record<string, { title: string; summary: string; keywords?: string[] }> = {
   'gym-injury-lawsuit': {
-    title: 'Taiwan Gym Injury Lawsuit',
-    summary: 'A Korean student injury case that won TWD 1.57M at first instance before settlement on appeal.',
-    keywords: ['gym', 'damages', 'TWD 1.57M', 'case study']
+    title: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages',
+    summary: 'Using a first-instance Taiwan gym injury case, this guide explains criminal-complaint and civil-claim deadlines, evidence preservation, damages, and insurance checks.',
+    keywords: ['gym injury', 'damages', 'claim deadlines', 'evidence preservation', 'insurance']
   },
   'cosmetics-market-entry': {
     title: 'Taiwan Cosmetics Market Entry: From Incorporation to PIF Registration',

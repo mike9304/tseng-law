@@ -570,7 +570,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             '외국인 의뢰인 대상 한국어 소송 지원',
           ],
           relatedColumns: [
-            { title: '헬스장 부상 소송 (157만 TWD)', slug: 'taiwan-gym-injury-lawsuit' },
+            { title: '대만 헬스장 부상 손해배상: 1심 사례·청구기한·증거·배상항목', slug: 'taiwan-gym-injury-lawsuit' },
             { title: '교통사고 발생시 대응', slug: 'taiwan-traffic-accident-procedure' },
             { title: '추월 사고 책임 분석', slug: 'taiwan-overtaking-accident-liability' },
           ]
@@ -1299,7 +1299,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             '外國當事人韓語訴訟支援',
           ],
           relatedColumns: [
-            { title: '健身房受傷訴訟（157萬 TWD）', slug: 'taiwan-gym-injury-lawsuit' },
+            { title: '台灣健身房受傷求償：一審案例、期限、證據與賠償項目', slug: 'taiwan-gym-injury-lawsuit' },
             { title: '交通事故處理程序', slug: 'taiwan-traffic-accident-procedure' },
             { title: '超車事故責任分析', slug: 'taiwan-overtaking-accident-liability' },
           ]
@@ -2049,7 +2049,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Korean-language litigation support for foreign clients'
           ],
           relatedColumns: [
-            { title: 'Gym Injury Case (TWD 1.57M)', slug: 'taiwan-gym-injury-lawsuit' },
+            { title: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages', slug: 'taiwan-gym-injury-lawsuit' },
             { title: 'Traffic Accident Response', slug: 'taiwan-traffic-accident-procedure' },
             { title: 'Overtaking Accident Liability', slug: 'taiwan-overtaking-accident-liability' }
           ]
@@ -2796,7 +2796,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
             '外国人依頼者向けの日本語による訴訟対応支援'
           ],
           relatedColumns: [
-            { title: '台湾ジム傷害訴訟（157万新台湾ドル）', slug: 'taiwan-gym-injury-lawsuit' },
+            { title: '台湾のジム事故損害賠償：一審事例・期限・証拠・賠償項目', slug: 'taiwan-gym-injury-lawsuit' },
             { title: '台湾で交通事故が起きたとき', slug: 'taiwan-traffic-accident-procedure' },
             { title: '追越し事故の責任', slug: 'taiwan-overtaking-accident-liability' }
           ]

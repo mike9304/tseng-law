@@ -151,12 +151,20 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'divorce-qna',
-        title: '대만 이혼 조정, 소송 Q&A',
-        summary: '국제결혼 증가 상황에서 대만 이혼 조정·소송 절차를 Q&A로 설명합니다.',
+        title: '대만 이혼 절차 Q&A: 조정·소송·재산분할·자녀',
+        summary:
+          '대만의 협의·조정·재판이혼 절차, 국제결혼·외국 이혼의 호적·승인 문제, 부부재산, 이혼 후 청구와 미성년 자녀 문제를 결과 보장 없이 정리합니다.',
         href: '/ko/insights/divorce-qna',
         category: 'legal',
+        readTime: '18분 분량',
         image: '/images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg',
-        keywords: ['이혼', '조정', '가사소송']
+        keywords: [
+          '대만 이혼 절차',
+          '국제이혼',
+          '부부재산',
+          '이혼 후 청구',
+          '미성년 자녀',
+        ],
       },
       {
         id: 'massage-law',
@@ -323,12 +331,20 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'divorce-qna',
-        title: '台灣離婚調解與訴訟 Q&A',
-        summary: '以實務問答整理離婚調解與訴訟流程。',
+        title: '台灣離婚程序 Q&A：調解、訴訟、財產分配與子女',
+        summary:
+          '整理台灣協議、調解與裁判離婚程序、跨國婚姻與外國離婚的戶籍及承認問題、夫妻財產、離婚後請求與未成年子女事項，不保證個案結果。',
         href: '/zh-hant/insights/divorce-qna',
         category: 'legal',
+        readTime: '20分鐘閱讀',
         image: '/images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg',
-        keywords: ['離婚', '家事', '調解']
+        keywords: [
+          '台灣離婚程序',
+          '跨國離婚',
+          '夫妻財產',
+          '離婚後請求',
+          '未成年子女',
+        ],
       },
       {
         id: 'massage-law',
@@ -370,7 +386,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
   }
 };
 
-const englishPostCopy: Record<string, { title: string; summary: string; keywords?: string[] }> = {
+const englishPostCopy: Record<string, { title: string; summary: string; keywords?: string[]; readTime?: string }> = {
   'gym-injury-lawsuit': {
     title: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages',
     summary: 'Using a first-instance Taiwan gym injury case, this guide explains deadlines for criminal complaints and civil claims, evidence preservation, damages, and insurance checks.',
@@ -432,9 +448,17 @@ const englishPostCopy: Record<string, { title: string; summary: string; keywords
     keywords: ['severance', 'labor law', 'voluntary resignation']
   },
   'divorce-qna': {
-    title: 'Taiwan Divorce Mediation & Litigation Q&A',
-    summary: 'A practical Q&A guide to mediation and litigation in Taiwan divorce matters.',
-    keywords: ['divorce', 'mediation', 'family litigation']
+    title: 'Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children',
+    summary:
+      'A guide to Taiwan divorce by agreement, court mediation or judgment, cross-border marriage and divorce records, matrimonial property, post-divorce claims, and minor-child issues, without promising an outcome.',
+    readTime: '25 min read',
+    keywords: [
+      'Taiwan divorce procedure',
+      'cross-border divorce',
+      'matrimonial property',
+      'post-divorce claims',
+      'minor children',
+    ],
   },
   'massage-law': {
     title: 'History and Regulation of Taiwan’s Massage Industry',
@@ -482,7 +506,7 @@ function buildEnglishInsights(base: InsightsArchive): InsightsArchive {
         summary: translated?.summary ?? post.summary,
         keywords: translated?.keywords ?? post.keywords,
         href: post.href.replace(/^\/ko\/insights\//, '/en/insights/'),
-        readTime: toEnglishReadTime(post.readTime)
+        readTime: translated?.readTime ?? toEnglishReadTime(post.readTime)
       };
     })
   };

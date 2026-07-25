@@ -174,7 +174,7 @@ describe('Japanese services-list copy', () => {
       '台湾で物流業を経営する方法',
     );
     expect(titlesBySlug.get('taiwan-divorce-lawsuit-qna')).toBe(
-      '台湾の離婚調停・訴訟Q&A',
+      '台湾の離婚手続Q&A：調停・訴訟・財産分与・子ども',
     );
     expect(titlesBySlug.get('taiwan-inheritance-custody-analysis')).toBe(
       '台湾の相続と親権：遺された家族のための法律ガイド',

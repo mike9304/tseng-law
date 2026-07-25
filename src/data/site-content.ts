@@ -587,7 +587,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             '잔여재산 분배 청구 (혼인 기간별 차이)',
           ],
           relatedColumns: [
-            { title: '이혼 조정·소송 Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
+            { title: '대만 이혼 절차 Q&A: 조정·소송·재산분할·자녀', slug: 'taiwan-divorce-lawsuit-qna' },
             { title: '대만 상속과 친권: 남은 가족을 위한 법률 안내', slug: 'taiwan-inheritance-custody-analysis' },
           ]
         },
@@ -1316,7 +1316,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             '剩餘財產分配請求權（婚姻存續期間差異）',
           ],
           relatedColumns: [
-            { title: '離婚調解訴訟 Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
+            { title: '台灣離婚程序 Q&A：調解、訴訟、財產分配與子女', slug: 'taiwan-divorce-lawsuit-qna' },
             { title: '台灣繼承與親權：遺屬法律指南', slug: 'taiwan-inheritance-custody-analysis' },
           ]
         },
@@ -2066,7 +2066,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Claims for distribution of remaining marital property'
           ],
           relatedColumns: [
-            { title: 'Taiwan Divorce Litigation Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
+            { title: 'Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children', slug: 'taiwan-divorce-lawsuit-qna' },
             { title: 'Taiwan Inheritance and Parental Rights: A Guide for Surviving Families', slug: 'taiwan-inheritance-custody-analysis' }
           ]
         },
@@ -2813,7 +2813,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
             '残余財産差額分配請求'
           ],
           relatedColumns: [
-            { title: '台湾の離婚調停・訴訟Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
+            { title: '台湾の離婚手続Q&A：調停・訴訟・財産分与・子ども', slug: 'taiwan-divorce-lawsuit-qna' },
             { title: '台湾の相続と親権：遺された家族のための法律ガイド', slug: 'taiwan-inheritance-custody-analysis' }
           ]
         },

@@ -1,7 +1,7 @@
 ---
 title: "Who Is Liable in an Overtaking Accident?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
-lastmod: "2025-09-13"
+lastmod: "2026-07-26"
 date_display: "September 13, 2025"
 read_time: "4 min read"
 categories:
@@ -11,7 +11,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 # Who Is Liable in an Overtaking Accident?
 
-![Featured image](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
+![Illustration of liability analysis and safe passing procedure after an overtaking accident in Taiwan](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
 Overtaking can appear routine when a vehicle ahead is moving slowly, but it creates substantial risk. Before starting the maneuver, a driver must consider the location, traffic in both directions, the vehicles ahead, and whether there is enough space to pass and return safely.
 
@@ -27,7 +27,7 @@ When seeking to pass a vehicle in the same lane, the driver behind must first so
 
 The driver behind may pass only after the vehicle ahead has slowed and moved aside, or has indicated by hand signal or right turn signal that it is yielding.
 
-The passing driver must then signal left, pass on the left while keeping at least 0.5 meters from the vehicle being passed, establish a safe distance, signal right, and return safely to the original lane.
+The passing driver must then signal left, pass on the left while keeping at least 0.5 meters from the vehicle being passed, establish a safe distance, signal right, and return safely to the original path of travel.
 
 This same-lane signaling and yielding sequence is not permission to overtake in a prohibited location or condition. Drivers must assess all of Article 101's requirements before beginning the maneuver.
 
@@ -35,7 +35,7 @@ This same-lane signaling and yielding sequence is not permission to overtake in 
 
 In an anonymized matter handled by this firm, a motorcyclist, referred to here as A, was riding with passenger B on a mountain road. Two passenger cars were traveling ahead. The first car, Vehicle 1, was moving slowly, so Vehicle 2 and the motorcycle behind it were also traveling slowly.
 
-![](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
+![Diagram of a motorcycle and two cars during a mountain-road overtaking collision](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
 A attempted to pass both cars, entered the oncoming lane, and accelerated. Vehicle 2 also prepared to overtake Vehicle 1: it moved into the oncoming lane less than a second after activating its turn signal. The motorcycle could not stop in time and collided with Vehicle 2.
 
@@ -61,3 +61,5 @@ For supplementary reading, see [Illustrated guide to overtaking rules and steps]
 > - [Taiwan Litigation Lawyer Guide](/en/taiwan-litigation-lawyer)
 > - [Korean-Speaking Taiwan Lawyer](/en/korean-lawyer-in-taiwan)
 > - [Taiwan Traffic Accident Procedure](/en/columns/taiwan-traffic-accident-procedure)
+
+This article provides general legal information about Taiwan overtaking rules and how fault may be assessed after an overtaking collision. It is not legal advice for any specific matter and does not guarantee any liability outcome. Actual fault may vary with the location, vehicle movements, speed, signals, evidence, appraisals, and the current regulations. Specific matters should be reviewed against the relevant materials.

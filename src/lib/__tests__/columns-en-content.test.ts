@@ -96,11 +96,11 @@ describe('English full column corpus', () => {
     expect(raw.match(/^title:\s*"([^"]+)"$/m)?.[1]).toBe(exactTitle);
     expect(raw.match(/^#\s.+$/gm)).toEqual([`# ${exactTitle}`]);
     expect(post!.title).toBe(exactTitle);
-    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2025-09-13');
+    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2026-07-26');
     expect(raw.match(/^date_display:\s*"([^"]+)"$/m)?.[1]).toBe(
       'September 13, 2025',
     );
-    expect(post!.date).toBe('2025-09-13');
+    expect(post!.date).toBe('2026-07-26');
     expect(post!.dateDisplay).toBe('September 13, 2025');
 
     const loadedPublicContent = `${post!.title}\n${post!.content}`;
@@ -108,7 +108,7 @@ describe('English full column corpus', () => {
     expect(loadedPublicContent).not.toMatch(CJK_SCRIPTS);
 
     const renderedWordCount = countRenderedEnglishWords(post!.content);
-    expect(renderedWordCount).toBe(693);
+    expect(renderedWordCount).toBe(757);
     expect(Math.ceil(renderedWordCount / 200)).toBe(4);
     expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('4 min read');
     expect(post!.readTime).toBe('4 min read');
@@ -121,6 +121,12 @@ describe('English full column corpus', () => {
     const featuredImage =
       '../images/012-taiwan-overtaking-accident-liability/featured-01.jpg';
     const incidentImage = '../images/012-taiwan-overtaking-accident-liability/img-01.jpg';
+    const featuredImageBlock =
+      '![Illustration of liability analysis and safe passing procedure after an overtaking accident in Taiwan](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)';
+    const incidentImageBlock =
+      '![Diagram of a motorcycle and two cars during a mountain-road overtaking collision](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)';
+    const disclaimer =
+      'This article provides general legal information about Taiwan overtaking rules and how fault may be assessed after an overtaking collision. It is not legal advice for any specific matter and does not guarantee any liability outcome. Actual fault may vary with the location, vehicle movements, speed, signals, evidence, appraisals, and the current regulations. Specific matters should be reviewed against the relevant materials.';
     const internalLinks = [
       '/en/taiwan-litigation-lawyer',
       '/en/korean-lawyer-in-taiwan',
@@ -132,6 +138,10 @@ describe('English full column corpus', () => {
     expect(countOccurrences(raw, supplementaryUrl)).toBe(1);
     expect(countOccurrences(raw, featuredImage)).toBe(2);
     expect(countOccurrences(raw, incidentImage)).toBe(1);
+    expect(countOccurrences(raw, featuredImageBlock)).toBe(1);
+    expect(countOccurrences(raw, incidentImageBlock)).toBe(1);
+    expect(countOccurrences(raw, disclaimer)).toBe(1);
+    expect(loadedPublicContent).toContain(disclaimer);
     for (const link of internalLinks) {
       expect(countOccurrences(raw, link)).toBe(1);
       expect(loadedPublicContent).toContain(`(${link})`);
@@ -150,7 +160,7 @@ describe('English full column corpus', () => {
       'When seeking to pass a vehicle in the same lane, the driver behind must first sound two short horn signals or flash the headlights once.',
       'The driver must not repeatedly sound the horn or flash the headlights to force the vehicle ahead to yield.',
       'The driver behind may pass only after the vehicle ahead has slowed and moved aside, or has indicated by hand signal or right turn signal that it is yielding.',
-      'The passing driver must then signal left, pass on the left while keeping at least 0.5 meters from the vehicle being passed, establish a safe distance, signal right, and return safely to the original lane.',
+      'The passing driver must then signal left, pass on the left while keeping at least 0.5 meters from the vehicle being passed, establish a safe distance, signal right, and return safely to the original path of travel.',
     ];
     for (const rule of article101Rules) {
       expect(raw).toContain(rule);

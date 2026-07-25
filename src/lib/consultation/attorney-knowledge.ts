@@ -212,7 +212,7 @@ export async function readAttorneyKnowledgeEntries(): Promise<ConsultationAttorn
     const record = safeParse<AttorneyKnowledgeRecord>(line);
     if (!record || typeof record.id !== 'string') continue;
     const previous = byId.get(record.id);
-    if (!previous || record.updatedAt > previous.updatedAt) {
+    if (!previous || record.updatedAt >= previous.updatedAt) {
       byId.set(record.id, record);
     }
   }

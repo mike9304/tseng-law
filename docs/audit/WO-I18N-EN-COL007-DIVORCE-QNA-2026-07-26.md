@@ -1,6 +1,6 @@
 # WO-I18N-EN-COL007 — Taiwan Divorce Q&A
 
-Date: 2026-07-26 KST  
+Date: 2026-07-26 KST
 Manager: Codex `/root`
 
 ## Purpose and governing contract

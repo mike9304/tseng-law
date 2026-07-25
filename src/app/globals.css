@@ -8498,6 +8498,10 @@ a.floating-ai-chat-contact-item:hover strong {
     overflow-wrap: anywhere;
   }
 
+  .column-markdown .link-underline {
+    overflow-wrap: anywhere;
+  }
+
   .blog-body {
     padding: 1.5rem 1.2rem;
   }

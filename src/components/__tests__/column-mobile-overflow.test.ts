@@ -92,4 +92,19 @@ describe('public column mobile overflow contract', () => {
     );
     expect(ruleBodies(css, 'nav.container > *')).toHaveLength(0);
   });
+
+  test('allows long rendered Markdown link labels to wrap within mobile articles', () => {
+    const mediaBlocks = extractBlocks(css, '@media (max-width: 900px)');
+    const targetBlocks = mediaBlocks.filter(({ block }) => block.includes('.blog-container'));
+    const mobileCss = targetBlocks[0]?.block ?? '';
+
+    expect(ruleBody(mobileCss, '.column-markdown .link-underline')).toContain(
+      'overflow-wrap: anywhere',
+    );
+
+    const cssOutsideTarget = targetBlocks[0]
+      ? `${css.slice(0, targetBlocks[0].start)}${css.slice(targetBlocks[0].end)}`
+      : css;
+    expect(ruleBodies(cssOutsideTarget, '.column-markdown .link-underline')).toHaveLength(0);
+  });
 });

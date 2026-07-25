@@ -189,9 +189,27 @@ describe('English full column corpus', () => {
     const post = getColumnPost('taiwan-gym-injury-lawsuit', 'en');
     expect(post).toBeTruthy();
 
+    const exactTitle =
+      'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages';
+    expect(raw.match(/^title:\s*"([^"]+)"$/m)?.[1]).toBe(exactTitle);
+    expect(raw.match(/^#\s.+$/gm)).toEqual([`# ${exactTitle}`]);
+    expect(post!.title).toBe(exactTitle);
+    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2026-07-25');
+    expect(raw.match(/^date_display:\s*"([^"]+)"$/m)?.[1]).toBe(
+      'September 13, 2025',
+    );
+    expect(post!.date).toBe('2026-07-25');
+    expect(post!.dateDisplay).toBe('September 13, 2025');
+
     const loadedPublicContent = `${post!.title}\n${post!.content}`;
     expect(raw).not.toMatch(CJK_SCRIPTS);
     expect(loadedPublicContent).not.toMatch(CJK_SCRIPTS);
+
+    const renderedWordCount = countRenderedEnglishWords(post!.content);
+    expect(renderedWordCount).toBe(1214);
+    expect(Math.ceil(renderedWordCount / 200)).toBe(7);
+    expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('7 min read');
+    expect(post!.readTime).toBe('7 min read');
 
     const mediaRecords = [
       {
@@ -271,7 +289,7 @@ describe('English full column corpus', () => {
       expect(countOccurrences(raw, `img-${String(imageNumber).padStart(2, '0')}.jpg`)).toBe(1);
     }
 
-    const preservedLinks = [
+    const mediaLinks = [
       'https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html',
       'https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com',
       'https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html',
@@ -280,25 +298,43 @@ describe('English full column corpus', () => {
       'https://blog.udn.com/blackjack/179081715',
       'https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/',
       'https://www.instagram.com/p/Crp4vJag7v3/',
+    ];
+    const internalLinks = [
       '/en/taiwan-litigation-lawyer',
       '/en/korean-lawyer-in-taiwan',
       '/en/taiwan-lawyer',
     ];
-    for (const link of preservedLinks) {
+    for (const link of [...mediaLinks, ...internalLinks]) {
       expect(countOccurrences(raw, link)).toBe(1);
     }
+    expect(
+      raw.match(/\]\((\/en\/[^)]+)\)/g)?.map((link) => link.slice(2, -1)),
+    ).toEqual(internalLinks);
     expect(raw).not.toContain('[![');
     expect(loadedPublicContent).not.toMatch(/\[https?:\/\/[^\]]+\]\(https?:\/\/[^)]+\)/i);
 
+    const sourceUrl =
+      'https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit';
+    const judgmentUrl =
+      'https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1';
+    expect(countOccurrences(raw, sourceUrl)).toBe(1);
+    expect(countOccurrences(raw, judgmentUrl)).toBe(1);
+    expect(countOccurrences(raw, 'TWD 1,579,589')).toBe(1);
     expect(raw).toContain(
-      'The first-instance court awarded TWD 1,570,000 in damages. The parties later reached a settlement on appeal.',
+      `[TWD 1,579,589](${judgmentUrl}) in damages`,
     );
     expect(raw).toContain(
-      'It is a case in which **a Korean university student sought damages from a fitness chain operated by a publicly listed company in Taiwan**.',
+      'In its January 24, 2022 first-instance judgment (109 Consumer No. 7), the Taichung District Court ordered the defendant to pay',
     );
+    expect(raw).toContain(
+      'Media reports later stated that the parties reached a settlement on appeal.',
+    );
+    expect(raw).not.toContain('The parties later reached a settlement on appeal.');
+    expect(raw).not.toContain('TWD 1,570,000');
     expect(raw).not.toMatch(/\bsettlement (?:amount|of|for)\b[^\n]*\bTWD\b/i);
 
     const officialLawLinks = [
+      'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001',
       'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001',
       'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001',
       'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001',
@@ -307,13 +343,35 @@ describe('English full column corpus', () => {
     for (const link of officialLawLinks) {
       expect(countOccurrences(raw, link)).toBe(1);
     }
+    expect(raw).toContain(
+      'a business operator providing services must ensure that the services meet the safety reasonably expected under the professional or technical standards current at the time',
+    );
+    expect(raw).toContain(
+      'This rule does not mean that every gym injury establishes liability.',
+    );
+    expect(raw).toContain(
+      'The applicable duty, breach, causation, damage, defenses, and evidence depend on the facts.',
+    );
+    expect(raw).toContain(
+      'Possible contract, tort, and consumer-protection grounds depend on the facts.',
+    );
     expect(raw).toContain("within six months after learning the offender's identity");
     expect(raw).toContain(
       'within two years after the claimant learns of both the injury and the person liable',
     );
     expect(raw).toContain('A ten-year longstop runs from the wrongful act.');
 
-    expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('6 min read');
+    const faqHeadings = [
+      '1. What legal routes may be available after a gym injury in Taiwan?',
+      '2. What time limits may apply?',
+      '3. How can evidence be preserved after an accident?',
+      '4. What categories of damages can you claim against a gym?',
+      '5. If a gym has liability insurance, why might compensation still be disputed?',
+    ];
+    expect(
+      raw.match(/^\*\*(\d\.[^*]+)\*\*$/gm)?.map((heading) => heading.slice(2, -2)),
+    ).toEqual(faqHeadings);
+
     expect(raw).not.toContain('Civil Code Article 198');
     expect(raw).not.toMatch(/\b(?:win|won|victory|guarantee)\b/i);
 
@@ -328,6 +386,10 @@ describe('English full column corpus', () => {
       'Taiwan gyms are usually insured',
       'insurers are often unwilling',
       'Be sure to pursue litigation',
+      'Today I would like to talk about a case that became a major issue',
+      'Taiwan’s largest gym',
+      'the only listed fitness brand company',
+      'major topic of discussion in Taiwan’s fitness industry',
     ];
     for (const claim of forbiddenClaims) {
       expect(raw).not.toContain(claim);

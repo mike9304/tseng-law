@@ -1,23 +1,21 @@
 ---
-title: "Taiwan Gym Injury Lawsuit"
+title: "Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
-lastmod: "2025-09-13"
+lastmod: "2026-07-25"
 date_display: "September 13, 2025"
-read_time: "6 min read"
+read_time: "7 min read"
 categories:
   - "Case Study Analysis"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 
-# Taiwan Gym Injury Lawsuit
+# Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages
 
 ![Featured image](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
 Hello. I am Attorney Wei Tseng, a Taiwan lawyer.
 
-Today I would like to talk about a case that became a major issue in Taiwan.
-
-It is a case in which **a Korean university student sought damages from a fitness chain operated by a publicly listed company in Taiwan**.
+This article explains a gym-injury damages case involving a Korean university student and a fitness chain operated by a publicly listed company in Taiwan.
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
@@ -27,7 +25,9 @@ Reported incidents have raised questions about supervision, equipment use, emerg
 
 In this matter, a Korean university student was injured while training under an instructor's supervision at a fitness chain operated by a publicly listed company in Taiwan.
 
-I represented the student in a damages claim. The first-instance court awarded TWD 1,570,000 in damages. The parties later reached a settlement on appeal.
+I represented the student in the damages claim. In its January 24, 2022 first-instance judgment (109 Consumer No. 7), the Taichung District Court ordered the defendant to pay [TWD 1,579,589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) in damages.
+
+Media reports later stated that the parties reached a settlement on appeal. The official first-instance judgment does not state a settlement amount or determine the appellate disposition.
 
 The case received substantial media coverage and online discussion in Taiwan.
 
@@ -88,9 +88,13 @@ The following is general information, not legal advice for a particular case.
 
 **1. What legal routes may be available after a gym injury in Taiwan?**
 
+Under [Consumer Protection Act Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001), a business operator providing services must ensure that the services meet the safety reasonably expected under the professional or technical standards current at the time.
+
+This rule does not mean that every gym injury establishes liability. The applicable duty, breach, causation, damage, defenses, and evidence depend on the facts.
+
 (1) A criminal complaint for negligent injury, if the legal elements are met
 
-(2) A civil claim for damages
+(2) A civil claim for damages. Possible contract, tort, and consumer-protection grounds depend on the facts.
 
 ​
 

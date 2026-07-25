@@ -1,6 +1,6 @@
 import { withSentryConfig } from '@sentry/nextjs';
 
-const locales = ['ko', 'zh-hant', 'en'];
+const locales = ['ko', 'zh-hant', 'en', 'ja'];
 const distDir = process.env.NEXT_DIST_DIR ?? (process.env.NEXT_DEV ? '.next-dev' : '.next-build');
 
 const legacyColumnAliases = {

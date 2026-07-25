@@ -588,7 +588,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           ],
           relatedColumns: [
             { title: '이혼 조정·소송 Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
-            { title: '유산·친권 이슈 분석', slug: 'taiwan-inheritance-custody-analysis' },
+            { title: '대만 상속과 친권: 남은 가족을 위한 법률 안내', slug: 'taiwan-inheritance-custody-analysis' },
           ]
         },
         {
@@ -1317,7 +1317,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           ],
           relatedColumns: [
             { title: '離婚調解訴訟 Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
-            { title: '遺產與親權分析', slug: 'taiwan-inheritance-custody-analysis' },
+            { title: '台灣繼承與親權：遺屬法律指南', slug: 'taiwan-inheritance-custody-analysis' },
           ]
         },
         {
@@ -2067,7 +2067,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           ],
           relatedColumns: [
             { title: 'Taiwan Divorce Litigation Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
-            { title: 'Inheritance & Custody Analysis', slug: 'taiwan-inheritance-custody-analysis' }
+            { title: 'Taiwan Inheritance and Parental Rights: A Guide for Surviving Families', slug: 'taiwan-inheritance-custody-analysis' }
           ]
         },
         {
@@ -2814,7 +2814,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           ],
           relatedColumns: [
             { title: '台湾の離婚調停・訴訟Q&A', slug: 'taiwan-divorce-lawsuit-qna' },
-            { title: '具俊曄氏と徐熙媛氏の遺産・親権問題の分析', slug: 'taiwan-inheritance-custody-analysis' }
+            { title: '台湾の相続と親権：遺された家族のための法律ガイド', slug: 'taiwan-inheritance-custody-analysis' }
           ]
         },
         {

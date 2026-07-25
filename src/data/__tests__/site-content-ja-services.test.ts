@@ -177,7 +177,7 @@ describe('Japanese services-list copy', () => {
       '台湾の離婚調停・訴訟Q&A',
     );
     expect(titlesBySlug.get('taiwan-inheritance-custody-analysis')).toBe(
-      '具俊曄氏と徐熙媛氏の遺産・親権問題の分析',
+      '台湾の相続と親権：遺された家族のための法律ガイド',
     );
     expect(titlesBySlug.get('taiwan-voluntary-resignation-severance')).toBe(
       '労働者側からの契約終了時に退職金（資遣費）を請求できる例外',

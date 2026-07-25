@@ -124,12 +124,12 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'inheritance-custody',
-        title: '구준엽 씨와 서희원씨 간 유산·친권 이슈 분석',
-        summary: '대만법상 상속·친권 이슈를 국제결혼 사례 관점에서 해석한 분석 글입니다.',
-        href: '/ko/insights/inheritance-custody',
+        title: '대만 상속과 친권: 남은 가족을 위한 법률 안내',
+        summary: '대만의 상속순위, 배우자 재산청구, 친권상 권리·의무와 미성년자 재산보호를 익명 사례 없이 설명합니다.',
+        href: '/ko/insights/taiwan-inheritance-custody-analysis',
         category: 'legal',
-        image: '/images/016-taiwan-inheritance-custody-analysis/featured-01.jpg',
-        keywords: ['상속', '친권', '국제결혼']
+        image: '/images/016-taiwan-inheritance-custody-analysis/featured-generic.webp',
+        keywords: ['상속', '친권', '미성년자 재산']
       },
       {
         id: 'overtaking-accident',
@@ -296,12 +296,12 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'inheritance-custody',
-        title: '遺產與親權議題案例分析',
-        summary: '以跨國婚姻視角解讀台灣法下的繼承與親權問題。',
-        href: '/zh-hant/insights/inheritance-custody',
+        title: '台灣繼承與親權：遺屬法律指南',
+        summary: '說明台灣法下的繼承順位、配偶剩餘財產請求、親權權利義務及未成年人財產保護。',
+        href: '/zh-hant/insights/taiwan-inheritance-custody-analysis',
         category: 'legal',
-        image: '/images/016-taiwan-inheritance-custody-analysis/featured-01.jpg',
-        keywords: ['繼承', '親權', '跨國婚姻']
+        image: '/images/016-taiwan-inheritance-custody-analysis/featured-generic.webp',
+        keywords: ['繼承', '親權', '未成年人財產']
       },
       {
         id: 'overtaking-accident',
@@ -417,9 +417,9 @@ const englishPostCopy: Record<string, { title: string; summary: string; keywords
     keywords: ['company setup', 'incorporation process', 'required documents']
   },
   'inheritance-custody': {
-    title: 'Inheritance and Custody Issue Analysis',
-    summary: 'A cross-border family law analysis of inheritance shares and custody under Taiwan law.',
-    keywords: ['inheritance', 'child custody', 'cross-border marriage']
+    title: 'Taiwan Inheritance and Parental Rights: A Guide for Surviving Families',
+    summary: 'A guide to Taiwan succession, spousal residual-property claims, parental rights and duties, and protection of a minor’s property.',
+    keywords: ['inheritance', 'parental rights', 'minor property']
   },
   'overtaking-accident': {
     title: 'Who Is Liable in an Overtaking Accident?',

@@ -191,16 +191,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '9c24ce6104750155a703168f0c0e01de16a3a79d51dc8c2a4993346fbd674682';
+  '02820c85e52d1b382943e3c7dbbab6d318fa8c80f8a0bb5859724411534a4493';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '6b0b000cd98dd3c0caab8b0da0f475b2257af08143cae2d5ab15a937612e4f06';
+  '87cfbf173826362dcbaa2dc65283d63cf59cd5e07d194a38b7e3d8dcd93c188a';
 const frozenSection1OnwardSha256 =
-  '3e1c1efcc8112739c5ee313a11b5b9a3baf615007f18e47da35195e36e0e7f59';
-const frozenVisibleWordCount = 5_622;
+  '4d3dbb934636ad78ed5e4deb40124c5bbef7e933b6cded8e9b457d91072c9eaf';
+const frozenVisibleWordCount = 5_636;
 const frozenSourceSha256 =
-  'dbf5a7eb59b2211956465b63303d1e32ed3e74a3c692edc8a0709e801ec873fc';
+  'e545aabe9b14341658f29c24a7e282f1b908253c662fece3af11e8e304c95c61';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1294,6 +1294,27 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(item).not.toContain('Do not create evidence by unlawful means.');
   });
 
+  it('publishes the exact each child’s situation evidence item', () => {
+    const section = sectionBody(parsed.content, headings[10]);
+    const expectedItem =
+      '6. **Each child’s situation.** Compile information on each child’s age, health, education, residence, caregiving history and current care arrangements, views appropriate to the child’s stage of development, relationship with each parent, and safety and stability, all from the perspective of the child’s best interests.';
+    const itemStart = section.indexOf('6. **Each child’s situation.**');
+    const nextItemStart = section.indexOf(
+      '\n7. **Support, contact, and relocation plans.**',
+      itemStart,
+    );
+
+    expect(itemStart).toBeGreaterThan(-1);
+    expect(nextItemStart).toBeGreaterThan(itemStart);
+    const item = section.slice(itemStart, nextItemStart);
+    expect(item).toBe(expectedItem);
+    expect(countOccurrences(section, expectedItem)).toBe(1);
+    expect(item).not.toContain('views where appropriate');
+    expect(item).not.toContain(
+      'Handle identifiers and school or medical details with privacy in mind.',
+    );
+  });
+
   it('publishes the exact limited-disclosure privacy plan as evidence item nine', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
@@ -1358,6 +1379,12 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     );
     expect(section).toContain(
       'Distinguish speculation from directly verified facts.',
+    );
+    expect(section).toContain(
+      'caregiving history and current care arrangements',
+    );
+    expect(section).toContain(
+      'all from the perspective of the child’s best interests.',
     );
     expect(section).toContain(
       'only with people and institutions that need the information and only to the extent necessary',

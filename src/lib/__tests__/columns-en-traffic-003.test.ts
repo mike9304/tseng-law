@@ -33,9 +33,15 @@ const q11Marker =
   'Q11. What should you watch for when claiming loss from inability to work?';
 const q16Marker =
   'Q16. After an accident, can you leave everything to the insurance company?';
-const immutableQ16ToQ20TailBytes = 4_157;
+const immutableQ16ToQ20TailBytes = 4_193;
 const immutableQ16ToQ20TailSha256 =
-  '7afa297d660ac7931f81f1090598245d6726191a9b5062aa395064b3e1f34039';
+  '1a2c2ef7856925fc9849ec8d17bc0f006add14055e2174da6f847be1e5178df4';
+const closingNarrativeMarker =
+  'Having handled many traffic accidents, I want to emphasize an important point.';
+const approvedClosingRemorseSentence =
+  'In such cases, the victim perceives neither remorse nor sincerity on the part of the at-fault party.';
+const staleClosingRemorseSentence =
+  'In such cases, the victim does not feel reflection or sincerity.';
 
 const q1Heading = '## Q1. Can I leave the scene after an accident?';
 const q2Heading = '## Q2. What evidence should I preserve first?';
@@ -313,6 +319,15 @@ const q6ToQ10Sources =
     ? ''
     : q6ToQ10.slice(q6ToQ10.indexOf(q6ToQ10SourceHeading));
 const q16ByteIndex = rawBytes.indexOf(Buffer.from(q16Marker, 'utf8'));
+const q16ToQ20Tail =
+  q16ByteIndex === -1
+    ? ''
+    : rawBytes.subarray(q16ByteIndex).toString('utf8');
+const closingNarrativeStart = q16ToQ20Tail.indexOf(closingNarrativeMarker);
+const closingNarrative =
+  closingNarrativeStart === -1
+    ? ''
+    : q16ToQ20Tail.slice(closingNarrativeStart);
 const q11ToQ15 =
   q16ByteIndex <= q11ByteIndex
     ? ''
@@ -392,6 +407,14 @@ describe('English traffic column 003 — metadata and introduction localization 
         .update(immutableQ16ToQ20Tail)
         .digest('hex'),
     ).toBe(immutableQ16ToQ20TailSha256);
+  });
+
+  it('uses the approved remorse wording in the closing narrative', () => {
+    expect(closingNarrative).not.toBe('');
+    expect(countOccurrences(closingNarrative, approvedClosingRemorseSentence)).toBe(
+      1,
+    );
+    expect(closingNarrative).not.toContain(staleClosingRemorseSentence);
   });
 
   it('ends the localized prefix with exactly the required blank-line boundary', () => {

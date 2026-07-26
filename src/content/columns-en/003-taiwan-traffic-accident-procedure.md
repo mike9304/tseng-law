@@ -345,7 +345,7 @@ Because of the victim’s injury or death, the victim or their family suffers ph
 
 ​
 
-At-fault parties often do not bother to call and check on the victim or visit them in the hospital; many assume the insurance company will handle everything and do not show up. In such cases, the victim does not feel reflection or sincerity.
+At-fault parties often do not bother to call and check on the victim or visit them in the hospital; many assume the insurance company will handle everything and do not show up. In such cases, the victim perceives neither remorse nor sincerity on the part of the at-fault party.
 
 ​
 

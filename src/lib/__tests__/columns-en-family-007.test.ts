@@ -191,16 +191,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  'd027e9377d6f60b13c5bce29a5b76074906c9ec3d215e6b8aa17d2d51b099929';
+  '234468fdc2360e64aaca1385a5db2e3c50f85e5162793145d6681434786d9b77';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  'b5da4108481baacdba8f5c9b7979e773d48fa3a3aabd95d350dec5770d9bb0c3';
+  '1af945c89050878623bd058361d9c69cf90df29bdabe80073fe69b4e2f85493a';
 const frozenSection1OnwardSha256 =
-  'a63542d3d166d2faf977f62be5fd88ea183ab041497a285579260f5141a0e51c';
-const frozenVisibleWordCount = 5_644;
+  'fdb20fafe27fb73c589384e87f20a770ae6c468d50083db79ecd50bf50b1bacc';
+const frozenVisibleWordCount = 5_662;
 const frozenSourceSha256 =
-  '782d3da70d6d405f3608e8be0e27e5412f226338d09c26b49d2674b949e26210';
+  '51112a5fa5c92b0c2330be4e6ca4c12655eca1017cb24fb61327df9fdfc4e45f';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1339,6 +1339,29 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(item).not.toContain('travel or movement schedules');
   });
 
+  it('publishes the exact triggering-event deadlines evidence item', () => {
+    const section = sectionBody(parsed.content, headings[10]);
+    const expectedItem =
+      '8. **Deadlines calculated from correct triggering events.** Link every date for applications, registrations, appeals from judgments, appeals from rulings, the exercise of claims, and enforcement to its precise triggering event. Do not conflate the dates on which a judgment is rendered, served, or becomes final; a mediated agreement or settlement is reached; the holder of a right becomes aware of it; or the matrimonial property regime terminates.';
+    const itemStart = section.indexOf(
+      '8. **Deadlines calculated from correct triggering events.**',
+    );
+    const nextItemStart = section.indexOf(
+      '\n9. **Privacy plan and limited disclosure.**',
+      itemStart,
+    );
+
+    expect(itemStart).toBeGreaterThan(-1);
+    expect(nextItemStart).toBeGreaterThan(itemStart);
+    const item = section.slice(itemStart, nextItemStart);
+    expect(item).toBe(expectedItem);
+    expect(countOccurrences(section, expectedItem)).toBe(1);
+    expect(item).not.toContain('knowledge of a residual-property difference');
+    expect(item).not.toContain('not from a convenient or informal date.');
+    expect(item).not.toContain('mediation or settlement is concluded');
+    expect(item).not.toContain('the relevant person learns of the right');
+  });
+
   it('publishes the exact limited-disclosure privacy plan as evidence item nine', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
@@ -1420,7 +1443,10 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'only with people and institutions that need the information and only to the extent necessary',
     );
     expect(section).toContain(
-      'not from a convenient or informal date.',
+      'Link every date for applications, registrations, appeals from judgments, appeals from rulings, the exercise of claims, and enforcement to its precise triggering event.',
+    );
+    expect(section).toContain(
+      'Do not conflate the dates on which a judgment is rendered, served, or becomes final; a mediated agreement or settlement is reached; the holder of a right becomes aware of it; or the matrimonial property regime terminates.',
     );
     expect(section).toContain(
       'Do not engage in unlawful surveillance, unauthorized account or device access, tracking, unlawful recording, retaliation, asset concealment, or removal of a child contrary to an agreement or court order.',

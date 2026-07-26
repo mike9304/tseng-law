@@ -152,6 +152,12 @@ const completeParentalRightsSubsectionHeading =
   '### Complete parental rights and duties, not “custody” as an umbrella';
 const childScopeParagraph =
   'Under Taiwan law, the precise concept is the **exercise and assumption of rights and duties regarding a minor child**. It may include the child’s residence, day-to-day care, educational and medical decisions, management of the child’s property, and legal representation. Terms such as “parental rights” or “custody” may be used as shorthand for convenience, but no single term fully translates the entire set of rights and duties under Taiwan law.';
+const bestInterestsSubsectionHeading =
+  '### Best interests and statutory factors';
+const unresolvedIssuesSubsectionHeading =
+  '### Divorce while other issues remain open';
+const bestInterestsFactorsParagraph =
+  'Under Civil Code Article 1055-1, the court considers the child’s age, sex, and health; the number of children; the child’s views and needs for personality development; each parent’s age, occupation, conduct, health, financial means, and living circumstances; each parent’s willingness and attitude toward the child’s protection and upbringing; the emotional relationship between each parent and the child; and any circumstances in which one parent has interfered with the relationship between the other parent and the child. The court may hear the child’s views in the manner prescribed by law and may take into account investigations and opinions from competent authorities or child-welfare professionals. A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many; neither is a sole criterion for the decision or a basis for rewarding or punishing a parent.';
 const filingDocumentsParagraph =
   'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.';
 const filingDocumentsPrefixMarker =
@@ -177,16 +183,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '1463464e8b577fc5c17436c607fd438313b134a0338e2cd589c618ff930b993e';
+  'c26b834a486f15a5c038bbf5a50467002f7d95423207d732070305557bdb65fe';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  'e495d450a8579a6cafeab2d568ba8f70904341f458c3351139124d179f3a1d15';
+  '072affc2a4803736c1b823f6890390a6ee10438df79c5091f43db740348ed600';
 const frozenSection1OnwardSha256 =
-  'c991a2da872972ac53962f162674ce4ddd20b7a0a4e7e2c4824f20b1e9dfe908';
-const frozenVisibleWordCount = 5_337;
+  'bae5703ea9f6f58e976fa18314298fb2f6d33ebf876e171e46b8ed1e37902727';
+const frozenVisibleWordCount = 5_371;
 const frozenSourceSha256 =
-  'aea471ada8a0246e09f53582a7f811c2ba1820102cbaf0231bafc7ac32c3964d';
+  '6b92455a2f5b9b6e6a80e88f625d4dbe2ad0cfe8d1a5b0b5221926d210464632';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -954,6 +960,22 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     );
   });
 
+  it('publishes the exact best-interests-and-statutory-factors paragraph', () => {
+    const subsectionMarker = `${bestInterestsSubsectionHeading}\n\n`;
+    const subsectionStart = parsed.content.indexOf(subsectionMarker);
+    const paragraphStart = subsectionStart + subsectionMarker.length;
+    const nextSubsectionStart = parsed.content.indexOf(
+      `\n\n${unresolvedIssuesSubsectionHeading}`,
+      paragraphStart,
+    );
+
+    expect(subsectionStart).toBeGreaterThan(-1);
+    expect(nextSubsectionStart).toBeGreaterThan(paragraphStart);
+    expect(parsed.content.slice(paragraphStart, nextSubsectionStart)).toBe(
+      bestInterestsFactorsParagraph,
+    );
+  });
+
   it('locks Articles 1055 and 1055-1, the full Taiwan concept, review, and unresolved issues', () => {
     const section = sectionBody(parsed.content, headings[7]);
     const requiredPhrases = [
@@ -961,13 +983,14 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       childScopeParagraph,
       'management of the child’s property, and legal representation',
       'A signed divorce agreement does not freeze the child’s situation against later court review',
-      'Articles 1055 and 1055-1 require a best-interests analysis based on the statutory factors and the actual evidence.',
-      'continuity and safety',
-      'care history',
-      'each parent’s life circumstances, capacity, and willingness',
-      'whether a parent facilitates the child’s relationship with the other parent',
-      'the child’s views where appropriate',
-      'Marital fault is not a prize or punishment that awards or removes parental responsibility.',
+      bestInterestsFactorsParagraph,
+      'the child’s age, sex, and health; the number of children; the child’s views and needs for personality development',
+      'each parent’s age, occupation, conduct, health, financial means, and living circumstances',
+      'each parent’s willingness and attitude toward the child’s protection and upbringing',
+      'any circumstances in which one parent has interfered with the relationship between the other parent and the child',
+      'The court may hear the child’s views in the manner prescribed by law',
+      'investigations and opinions from competent authorities or child-welfare professionals',
+      'A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many',
       'That is not a recommendation to “divorce first and resolve the child later” as a universal shortcut.',
     ];
 

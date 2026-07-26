@@ -217,9 +217,7 @@ Parents may agree on the arrangement. The court may decide or change it when agr
 
 ### Best interests and statutory factors
 
-Articles 1055 and 1055-1 require a best-interests analysis based on the statutory factors and the actual evidence. Relevant considerations include continuity and safety, the child’s age, health, education, and development needs, care history, each parent’s life circumstances, capacity, and willingness, the emotional relationship between parent and child, whether a parent facilitates the child’s relationship with the other parent, the child’s views where appropriate, and reports or information from competent authorities or child-welfare professionals as the law provides.
-
-Marital fault is not a prize or punishment that awards or removes parental responsibility. Higher income alone does not decide the result. Fault-based mechanical rules have no place in this analysis.
+Under Civil Code Article 1055-1, the court considers the child’s age, sex, and health; the number of children; the child’s views and needs for personality development; each parent’s age, occupation, conduct, health, financial means, and living circumstances; each parent’s willingness and attitude toward the child’s protection and upbringing; the emotional relationship between each parent and the child; and any circumstances in which one parent has interfered with the relationship between the other parent and the child. The court may hear the child’s views in the manner prescribed by law and may take into account investigations and opinions from competent authorities or child-welfare professionals. A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many; neither is a sole criterion for the decision or a basis for rewarding or punishing a parent.
 
 ### Divorce while other issues remain open
 

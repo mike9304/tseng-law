@@ -82,7 +82,7 @@ describe('Japanese investment column 011 — synchronized PIF update and retenti
     expect(first).toMatch(/新たな試験結果/u);
     expect(first).toMatch(/既存(?:の)?評価[^。]*影響/u);
     expect(first).toMatch(
-      /(?:初回|最初)(?:の)?作成後[^。]*(?:継続的な)?変更管理(?:手続|手順|プロセス)[^。]*必要/u,
+      /(?:初回|最初)(?:の)?作成後[^。]*継続的な変更管理(?:手続|手順|プロセス)?[^。]*必要/u,
     );
   });
 
@@ -102,7 +102,7 @@ describe('Japanese investment column 011 — synchronized PIF update and retenti
     );
     expect(second).toMatch(/化粧品製造・輸入業者[^。]*表示住所/u);
     expect(second).toMatch(
-      /(?:保存|保管)期間[^。]*第7条[^。]*(?:保存|保管)場所[^。]*第8条[^。]*(?:区別|分け)/u,
+      /(?:保存|保管)期間[^。]*第7条[^。]*。\s*[^。]*?(?:保存|保管)場所[^。]*第8条/u,
     );
     expect(second).not.toMatch(/第7条に基づく[^。]*(?:表示)?住所/u);
   });

@@ -23,10 +23,14 @@ const incidentImage =
 const immutablePrefixBytes = 1_075;
 const immutablePrefixSha256 =
   '8d75e7d46d3e958d227128ddbdf4a3544a53488204ca7d0d06d73f49e8e0b955';
-const q6Marker = 'Q6. How is accident responsibility determined?';
-const immutableQ6TailBytes = 13_750;
-const immutableQ6TailSha256 =
-  '85efec3e985ff4d7610dfb59d05fdf458ee065a01abb8376f592ef3555410ac5';
+const immutableQ1ToQ5PrefixBytes = 8_316;
+const immutableQ1ToQ5PrefixSha256 =
+  '274271d5547c07a50e343368319568a6fe866b5b3d05954865d954ce8eaea481';
+const q11Marker =
+  'Q11. What should you watch for when claiming loss from inability to work?';
+const immutableQ11TailBytes = 9_193;
+const immutableQ11TailSha256 =
+  'b38aac06db7e6a17dff81b705a4870d0eccaf4b84d828d28aa2ff644a801f370';
 
 const q1Heading = '## Q1. Can I leave the scene after an accident?';
 const q2Heading = '## Q2. What evidence should I preserve first?';
@@ -42,6 +46,64 @@ const contractedHeadings = [
   q3Heading,
   q4Heading,
   q5Heading,
+] as const;
+
+const q6Heading = '## Q6. How is responsibility for the accident determined?';
+const q7Heading = '## Q7. What losses can I claim after an accident?';
+const q8Heading =
+  '## Q8. How should I submit medical-expense records while treatment continues?';
+const q9Heading =
+  '## Q9. How can I prove professional-care and family-care expenses?';
+const q10Heading = '## Q10. How can I prove travel expenses for treatment?';
+const q6ToQ10SourceHeading = '### Q6–Q10 Official Sources';
+const q6ToQ10ContractedHeadings = [
+  q6Heading,
+  q7Heading,
+  q8Heading,
+  q9Heading,
+  q10Heading,
+] as const;
+
+const q6ToQ10OfficialSourceUrls = [
+  'https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3',
+  'https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print',
+  'https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=194&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=196&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001',
+  'https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html',
+  'https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf',
+  'https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf',
+] as const;
+
+const prohibitedQ6ToQ10Copy = [
+  'the liability analysis process is as follows',
+  'Academic appraisal result',
+  'Feng Chia University',
+  'fault ratios are calculated precisely',
+  'almost no room to overturn',
+  'judges generally respect',
+  'you will need to pay additional court costs',
+  'the judge will recognize nursing care expenses',
+  'judges still recognize claims',
+  'taxi receipts are even better',
+] as const;
+
+const legacyNineLineNumberedLabels = [
+  '1. Medical expenses',
+  '2. Nursing care expenses',
+  '3. Additional living expenses necessitated by the injury',
+  '4. Loss of working capacity (temporary inability to work)',
+  '5. Loss of labor capacity',
+  '6. Funeral expenses',
+  '7. Support expenses',
+  '8. Solatium (mental consolation money)',
+  '9. Property loss',
 ] as const;
 
 const officialSourceUrls = [
@@ -101,10 +163,36 @@ function sectionBetween(startHeading: string, endHeading: string) {
     : q1ToQ5.slice(start, end);
 }
 
+function q6ToQ10SectionBetween(startHeading: string, endHeading: string) {
+  const start = q6ToQ10.indexOf(startHeading);
+  const end = q6ToQ10.indexOf(endHeading);
+  return start === -1 || end === -1 || end <= start
+    ? ''
+    : q6ToQ10.slice(start, end);
+}
+
+function containsOrderedLinePrefixes(
+  value: string,
+  prefixes: readonly string[],
+) {
+  let offset = 0;
+  for (const prefix of prefixes) {
+    const match = new RegExp(
+      `^${prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}.*$`,
+      'm',
+    ).exec(value.slice(offset));
+    if (!match || match.index === undefined) {
+      return false;
+    }
+    offset += match.index + match[0].length;
+  }
+  return true;
+}
+
 const rawPrefixBytes = rawBytes.subarray(0, immutablePrefixBytes);
 const rawPrefix = rawPrefixBytes.toString('utf8');
 const bodyPrefix = matter(rawPrefix).content;
-const q6ByteIndex = rawBytes.indexOf(Buffer.from(q6Marker, 'utf8'));
+const q6ByteIndex = immutableQ1ToQ5PrefixBytes;
 const q1ToQ5 =
   q6ByteIndex <= immutablePrefixBytes
     ? ''
@@ -118,6 +206,20 @@ const sources =
   q1ToQ5.indexOf(sourceHeading) === -1
     ? ''
     : q1ToQ5.slice(q1ToQ5.indexOf(sourceHeading));
+const q11ByteIndex = rawBytes.indexOf(Buffer.from(q11Marker, 'utf8'));
+const q6ToQ10 =
+  q11ByteIndex <= q6ByteIndex
+    ? ''
+    : rawBytes.subarray(q6ByteIndex, q11ByteIndex).toString('utf8');
+const q6 = q6ToQ10SectionBetween(q6Heading, q7Heading);
+const q7 = q6ToQ10SectionBetween(q7Heading, q8Heading);
+const q8 = q6ToQ10SectionBetween(q8Heading, q9Heading);
+const q9 = q6ToQ10SectionBetween(q9Heading, q10Heading);
+const q10 = q6ToQ10SectionBetween(q10Heading, q6ToQ10SourceHeading);
+const q6ToQ10Sources =
+  q6ToQ10.indexOf(q6ToQ10SourceHeading) === -1
+    ? ''
+    : q6ToQ10.slice(q6ToQ10.indexOf(q6ToQ10SourceHeading));
 const imageNodes = Array.from(
   bodyPrefix.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g),
   (match) => ({ alt: match[1], src: match[2] }),
@@ -137,19 +239,32 @@ const introduction =
       );
 
 describe('English traffic column 003 — metadata and introduction localization boundary', () => {
-  it('preserves the immutable introduction prefix and Q6 tail byte-for-byte', () => {
+  it('preserves the immutable introduction and completed Q1–Q5 prefixes byte-for-byte', () => {
     expect(rawPrefixBytes.byteLength).toBe(immutablePrefixBytes);
     expect(
       crypto.createHash('sha256').update(rawPrefixBytes).digest('hex'),
     ).toBe(immutablePrefixSha256);
-    expect(q6ByteIndex).toBeGreaterThan(immutablePrefixBytes);
 
-    const immutableQ6Tail = rawBytes.subarray(q6ByteIndex);
-    expect(immutableQ6Tail.toString('utf8').startsWith(q6Marker)).toBe(true);
-    expect(immutableQ6Tail.byteLength).toBe(immutableQ6TailBytes);
+    const immutableQ1ToQ5Prefix = rawBytes.subarray(
+      0,
+      immutableQ1ToQ5PrefixBytes,
+    );
+    expect(immutableQ1ToQ5Prefix.byteLength).toBe(immutableQ1ToQ5PrefixBytes);
     expect(
-      crypto.createHash('sha256').update(immutableQ6Tail).digest('hex'),
-    ).toBe(immutableQ6TailSha256);
+      crypto.createHash('sha256').update(immutableQ1ToQ5Prefix).digest('hex'),
+    ).toBe(immutableQ1ToQ5PrefixSha256);
+    expect(q6ByteIndex).toBeGreaterThan(immutablePrefixBytes);
+  });
+
+  it('preserves the immutable Q11 tail byte-for-byte', () => {
+    expect(q11ByteIndex).toBeGreaterThan(q6ByteIndex);
+
+    const immutableQ11Tail = rawBytes.subarray(q11ByteIndex);
+    expect(immutableQ11Tail.toString('utf8').startsWith(q11Marker)).toBe(true);
+    expect(immutableQ11Tail.byteLength).toBe(immutableQ11TailBytes);
+    expect(
+      crypto.createHash('sha256').update(immutableQ11Tail).digest('hex'),
+    ).toBe(immutableQ11TailSha256);
   });
 
   it('ends the localized prefix with exactly the required blank-line boundary', () => {
@@ -412,5 +527,180 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
       /[\p{Script=Hiragana}\p{Script=Katakana}]/u,
     );
     expect(q1ToQ5).not.toMatch(/^[\t ]*\u200b+[\t ]*$/m);
+  });
+});
+
+describe('English traffic column 003 — Q6–Q10 translation contract', () => {
+  it('starts the exact five H2s at byte 8316 and places the source H3 after Q10 before Q11', () => {
+    expect(rawBytes.subarray(q6ByteIndex).toString('utf8')).toMatch(
+      /^## Q6\. How is responsibility for the accident determined\?\n/,
+    );
+    expect(
+      Array.from(
+        q6ToQ10.matchAll(/^## Q(?:6|7|8|9|10)\. .+$/gm),
+        (match) => match[0],
+      ),
+    ).toEqual(q6ToQ10ContractedHeadings);
+    expect(q6ToQ10.indexOf(q6ToQ10SourceHeading)).toBeGreaterThan(
+      q6ToQ10.indexOf(q10Heading),
+    );
+    expect(countOccurrences(q6ToQ10, q6ToQ10SourceHeading)).toBe(1);
+    expect(q6ToQ10).not.toContain(q11Marker);
+  });
+
+  it('keeps the preliminary analysis non-binding and states the complete appraisal and review procedure in Q6', () => {
+    expect(q6).toMatch(
+      /Road Traffic Accident Preliminary Analysis Determination Form.{0,160}(?:preliminary police analysis|police.{0,30}preliminary analysis).{0,120}(?:not|neither).{0,30}(?:court judgment|judgment)/is,
+    );
+    expect(q6).toMatch(
+      /(?:does not|neither|nor).{0,60}(?:bind|binding).{0,30}court.{0,100}(?:does not|neither|nor).{0,60}(?:fix|determine|set).{0,30}(?:fault )?(?:percentage|ratio)/is,
+    );
+    expect(q6).toMatch(
+      /(?:not|never).{0,30}(?:automatic|mandatory).{0,30}(?:ladder|sequence|progression|series)/is,
+    );
+    expect(q6).toMatch(
+      /eligible party.{0,80}(?:apply|application).{0,80}(?:handling|competent|responsible) authority.{0,80}refer.{0,100}judicial authority.{0,80}commission/is,
+    );
+    expect(q6).toMatch(
+      /(?:party application|application by (?:a|the) party|party.{0,30}apply).{0,100}(?:within|no later than).{0,30}six months.{0,60}(?:after|from).{0,30}(?:accident|date of the accident)/is,
+    );
+    expect(q6).toMatch(
+      /(?:investigation|trial).{0,80}(?:pending|underway).{0,120}(?:judicial|court|prosecutorial).{0,30}commission.{0,120}(?:rather than|instead of).{0,80}(?:new )?direct application/is,
+    );
+    expect(q6).toMatch(
+      /(?:dissatisfied|disagree).{0,60}(?:seek|request|apply for).{0,30}review.{0,100}(?:only one|one review|limited to one|once only)/is,
+    );
+    expect(q6).toMatch(
+      /(?:appraisal|review) opinions?.{0,80}(?:evidence|reference material).{0,120}court.{0,80}independent(?:ly)? evaluat/is,
+    );
+    expect(q6).toMatch(
+      /statements?.{0,80}video.{0,80}scene (?:records?|materials?|evidence).{0,100}(?:record as a whole|whole record|entire record)/is,
+    );
+  });
+
+  it('makes every Q7 damages category conditional under Articles 184 and 216', () => {
+    expect(q7).toMatch(
+      /Article 184.{0,160}unlawful infringement.{0,100}causation.{0,100}(?:proof|prove).{0,40}damage/is,
+    );
+    expect(q7).toMatch(
+      /(?:accident|collision).{0,80}(?:alone|by itself).{0,80}(?:does not|cannot).{0,50}automatically.{0,80}(?:every|all).{0,30}(?:listed )?(?:loss|damage)/is,
+    );
+    expect(q7).toMatch(
+      /Article 216.{0,120}actual loss.{0,80}(?:lost profit|profit that would ordinarily have been expected)/is,
+    );
+    expect(q7).toMatch(
+      /(?:injury|personal injury).{0,120}Article 193.{0,120}(?:necessary )?medical.{0,70}care.{0,80}(?:treatment[- ]travel|travel.{0,30}treatment).{0,100}assistive device.{0,100}(?:increased need|increased-need)/is,
+    );
+    expect(q7).toMatch(
+      /(?:temporary income loss|lost income).{0,100}loss of earning capacity.{0,100}Article 195.{0,80}non-pecuniary damage/is,
+    );
+    expect(q7).toMatch(
+      /(?:death|fatal).{0,100}Article 192.{0,140}(?:pre-death|before death).{0,50}medical.{0,100}funeral expenses.{0,100}(?:loss of support|support).{0,100}(?:legally entitled|legal entitlement)/is,
+    );
+    expect(q7).toMatch(
+      /Article 194.{0,100}non-pecuniary damage.{0,100}(?:qualifying|eligible|specified).{0,30}relatives/is,
+    );
+    expect(q7).toMatch(
+      /(?:property|property damage).{0,100}Article 196.{0,100}(?:proven|proof of).{0,40}actual property damage.{0,120}repair.{0,100}diminution in value/is,
+    );
+  });
+
+  it('distinguishes Q8 evidence supplementation from changing a claim and narrows the Article 504 fee caveat', () => {
+    expect(q8).toMatch(
+      /(?:preserve|keep).{0,80}receipts.{0,80}diagnosis certificates?.{0,80}medical records/is,
+    );
+    expect(q8).toMatch(
+      /medical necessity.{0,80}causation.{0,50}(?:accident|collision)/is,
+    );
+    expect(q8).toMatch(
+      /continuing treatment.{0,140}supplement.{0,50}evidence.{0,100}procedural schedule.{0,100}existing claim/is,
+    );
+    expect(q8).toMatch(
+      /(?:late material|late evidence|submitted late|expanded claim).{0,120}(?:not guaranteed|no guarantee|may not be accepted)/is,
+    );
+    expect(q8).toMatch(
+      /supplementing.{0,50}(?:medical )?evidence.{0,100}(?:distinguish|different|separate).{0,100}(?:changing|increasing|expanding).{0,80}(?:amount|scope).{0,30}(?:claim|claimed)/is,
+    );
+    expect(q8).toMatch(
+      /(?:adding|submitting).{0,60}medical receipts?.{0,100}attached civil action.{0,120}(?:does not|will not).{0,40}(?:by itself|automatically).{0,80}(?:court fee|filing fee)/is,
+    );
+    expect(q8).toMatch(
+      /Article 504.{0,140}transfer.{0,100}(?:change|addition|increase|expansion).{0,100}(?:beyond|exceed).{0,80}pre-transfer claim.{0,120}(?:court-fee|court fee|filing-fee|filing fee).{0,80}excess/is,
+    );
+    expect(q8).toMatch(
+      /(?:confirm|check|consider).{0,80}transfer stage.{0,80}filing time.{0,80}claim scope.{0,80}(?:case by case|individual case)/is,
+    );
+  });
+
+  it('requires complete Q9 care proof and treats unpaid family care as non-automatic', () => {
+    expect(q9).toMatch(
+      /(?:diagnosis certificate|medical opinion).{0,100}(?:useful|relevant).{0,40}evidence.{0,100}(?:not|neither).{0,50}(?:conclusive|decisive|sufficient).{0,30}(?:by itself|alone)/is,
+    );
+    expect(q9).toMatch(
+      /(?:accident )?causation.{0,80}need for care.{0,80}actual(?:ly)? (?:provided|provision).{0,80}duration.{0,80}reasonable amount/is,
+    );
+    expect(q9).toMatch(
+      /unpaid care.{0,100}(?:relative|family member).{0,100}(?:may|can).{0,60}(?:valued|recognized|assessed).{0,50}(?:damage|loss).{0,120}(?:not|does not).{0,50}automatically/is,
+    );
+    expect(q9).toMatch(
+      /(?:nature|type).{0,40}(?:of (?:the )?care)?.{0,80}duration.{0,80}(?:customary|reasonable|market).{0,30}cost/is,
+    );
+  });
+
+  it('connects Q10 travel proof to treatment and rejects automatic taxi-receipt sufficiency', () => {
+    expect(q10).toMatch(
+      /travel records?.{0,100}treatment.{0,100}accident-related injury/is,
+    );
+    expect(q10).toMatch(
+      /route.{0,80}(?:visit dates?|dates? of visits?).{0,80}(?:number of visits|visit count).{0,80}(?:transport method|mode of transport).{0,80}fare.{0,80}necessity.{0,80}reasonableness/is,
+    );
+    expect(q10).toMatch(
+      /receipts?.{0,80}fare records?.{0,80}route records?.{0,80}treatment records?.{0,80}(?:evidence|proof)/is,
+    );
+    expect(q10).toMatch(
+      /taxi receipt.{0,80}(?:neither|not).{0,50}(?:only|sole).{0,30}(?:proof|evidence).{0,100}(?:nor|not).{0,50}automatically sufficient/is,
+    );
+  });
+
+  it('uses all 14 Q6–Q10 official URLs exactly once and in order only as descriptive Markdown-link destinations', () => {
+    const markdownLinks = Array.from(
+      q6ToQ10Sources.matchAll(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g),
+      (match) => ({ label: match[1], url: match[2], full: match[0] }),
+    );
+    expect(markdownLinks.map(({ url }) => url)).toEqual(
+      q6ToQ10OfficialSourceUrls,
+    );
+
+    for (const { label, url } of markdownLinks) {
+      expect(label).toMatch(/[A-Za-z]/);
+      expect(label.trim()).not.toBe('');
+      expect(label).not.toContain('http');
+      expect(label).not.toMatch(
+        /[\p{Script=Hangul}\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u,
+      );
+      expect(countOccurrences(q6ToQ10, url)).toBe(1);
+    }
+
+    const withoutMarkdownLinks = markdownLinks.reduce(
+      (value, { full }) => value.replace(full, ''),
+      q6ToQ10,
+    );
+    for (const url of q6ToQ10OfficialSourceUrls) {
+      expect(withoutMarkdownLinks).not.toContain(url);
+      expect(q6ToQ10).not.toContain(`<${url}>`);
+    }
+  });
+
+  it('removes only the contracted stale sequence, foreign scripts, and spacer lines within Q6–Q10', () => {
+    for (const phrase of prohibitedQ6ToQ10Copy) {
+      expect(q6ToQ10.toLowerCase()).not.toContain(phrase.toLowerCase());
+    }
+    expect(
+      containsOrderedLinePrefixes(q6ToQ10, legacyNineLineNumberedLabels),
+    ).toBe(false);
+    expect(q6ToQ10).not.toMatch(/\p{Script=Hangul}/u);
+    expect(q6ToQ10).not.toMatch(/\p{Script=Han}/u);
+    expect(q6ToQ10).not.toMatch(/[\p{Script=Hiragana}\p{Script=Katakana}]/u);
+    expect(q6ToQ10).not.toMatch(/^[\t ]*\u200b+[\t ]*$/m);
   });
 });

@@ -641,7 +641,7 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
       {
         label: 'excess beyond pre-transfer claim',
         pattern:
-          /移送前.{0,18}(?:請求|範圍).{0,24}(?:變更|追加|增加|擴張).{0,18}(?:超過|超出).{0,12}(?:部分|範圍)/s,
+          /移送前.{0,18}(?:請求|範圍).{0,24}(?:變更|追加|增加|擴張).{0,18}(?:超過|超出).{0,12}(?:部分|範圍)|(?:變更|追加|增加|擴張).{0,18}請求.{0,18}(?:超過|超出).{0,18}移送前.{0,18}(?:請求|範圍).{0,18}(?:超過|超出).{0,8}部分/s,
       },
       {
         label: 'fee issue only for excess',

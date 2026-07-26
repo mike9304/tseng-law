@@ -40,12 +40,25 @@ const q6ToQ10Headings = [
 ] as const;
 const q6ToQ10SourceHeading = 'Q6–Q10 官方依據';
 const q11Marker = 'Q11. 請求不能工作損失時應注意什麼？';
+const q11ToQ15Headings = [
+  'Q11. 治療與恢復期間的收入損失應如何證明？',
+  'Q12. 勞動能力減損應如何證明？',
+  'Q13. 非財產上損害慰撫金如何判斷？',
+  'Q14. 工作期間發生事故時，雇主是否也可能負民事責任？',
+  'Q15. 應確認哪些汽車保險給付與保障？',
+] as const;
+const q11ToQ15SourceHeading = 'Q11–Q15 官方依據';
+const q16Marker =
+  'Q16. 事故發生後，可以把所有事情都交給保險公司處理嗎？';
 const immutablePrefixBytes = 7_238;
 const immutablePrefixSha256 =
   '4309d3927ff0f3b0fb335d11e24a2b56bd28d3076a1ecd8ad6903a708395abeb';
-const immutableQ11TailBytes = 6_836;
-const immutableQ11TailSha256 =
-  'faf49393d623aab7a19a0d0f3340c425561ef3395ef33254232d7390d6acccb0';
+const immutableQ1ToQ10PrefixBytes = 12_401;
+const immutableQ1ToQ10PrefixSha256 =
+  '9cec9996afe23177eba0f0aedd9420178bebb77c0bd74ee80a969747985b5448';
+const immutableQ16TailBytes = 3_143;
+const immutableQ16TailSha256 =
+  'c189113fb7068cecc13432944afd541e4ebc40f9857eb6bbfd71dcf7daf418a9';
 
 const sourceTargets = [
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012',
@@ -84,6 +97,22 @@ const q6ToQ10SourceTargets = [
   'https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf',
 ] as const;
 
+const q11ToQ15SourceTargets = [
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001',
+  'https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf',
+  'https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf',
+  'https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001',
+  'https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL006889',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL047990',
+] as const;
+
 const prohibitedQ6ToQ10Copy = [
   '責任分析程序如下',
   '→',
@@ -97,6 +126,30 @@ const prohibitedQ6ToQ10Copy = [
   '即使由親屬看護',
   '法官仍會認定',
   '如果有計程車收據更好',
+] as const;
+
+const prohibitedQ11ToQ15Copy = [
+  '診斷證明書載明休養期間',
+  '即可請求損失的薪資',
+  '法官不會認定此項請求',
+  '佔比最大的項目',
+  '身為律師，我都會建議當事人一定要申請勞動能力減損鑑定',
+  '至退休年齡為止',
+  '65歲',
+  '月薪為100萬元',
+  '1,693,928元',
+  '鑑定費用不高',
+  '2萬元以內',
+  '數十萬元是一般的金額',
+  '不要期待數百萬元',
+  '公司須負僱用人責任',
+  '公司通常比肇事者擁有更多資產',
+  '一併告公司會比較好',
+  '只能對肇事者本人提出',
+  '這是法律規定每個人都必須投保的保險',
+  '失蹤或死亡',
+  '死亡定額給付最高200萬元',
+  '負責理賠超出的部分',
 ] as const;
 
 const prohibitedStaleCopy = [
@@ -171,6 +224,18 @@ function q6ToQ10SectionForQuestion(questionNumber: number) {
   );
 }
 
+function q11ToQ15SectionForQuestion(questionNumber: number) {
+  const heading = `## ${q11ToQ15Headings[questionNumber - 11]}`;
+  const start = q11ToQ15Section.indexOf(heading);
+  if (start === -1) return '';
+
+  const next = q11ToQ15Section.indexOf('\n## ', start + heading.length);
+  return q11ToQ15Section.slice(
+    start,
+    next === -1 ? q11ToQ15Section.length : next,
+  );
+}
+
 const q6MarkerBytes = Buffer.from(q6Marker, 'utf8');
 const q6ByteIndex = rawBytes.indexOf(q6MarkerBytes);
 const q6HeadingByteIndex = rawBytes.indexOf(
@@ -179,8 +244,22 @@ const q6HeadingByteIndex = rawBytes.indexOf(
 const q6CharacterIndex = parsed.content.indexOf(q6Marker);
 const q6HeadingCharacterIndex = parsed.content.indexOf(`## ${q6Marker}`);
 const q11MarkerBytes = Buffer.from(q11Marker, 'utf8');
-const q11ByteIndex = rawBytes.indexOf(q11MarkerBytes);
-const q11CharacterIndex = parsed.content.indexOf(q11Marker);
+const legacyQ11ByteIndex = rawBytes.indexOf(q11MarkerBytes);
+const legacyQ11CharacterIndex = parsed.content.indexOf(q11Marker);
+const q11HeadingBytes = Buffer.from(`## ${q11ToQ15Headings[0]}`, 'utf8');
+const q11HeadingByteIndex = rawBytes.indexOf(q11HeadingBytes);
+const q11HeadingCharacterIndex = parsed.content.indexOf(
+  `## ${q11ToQ15Headings[0]}`,
+);
+const q11ByteIndex =
+  q11HeadingByteIndex === -1 ? legacyQ11ByteIndex : q11HeadingByteIndex;
+const q11CharacterIndex =
+  q11HeadingCharacterIndex === -1
+    ? legacyQ11CharacterIndex
+    : q11HeadingCharacterIndex;
+const q16MarkerBytes = Buffer.from(q16Marker, 'utf8');
+const q16ByteIndex = rawBytes.indexOf(q16MarkerBytes);
+const q16CharacterIndex = parsed.content.indexOf(q16Marker);
 const localizedPrefix =
   q6CharacterIndex === -1
     ? parsed.content
@@ -203,22 +282,50 @@ const q6ToQ10SourceBlock =
   q6ToQ10SourceBlockStart === -1
     ? ''
     : q6ToQ10Section.slice(q6ToQ10SourceBlockStart);
+const q11ToQ15Start =
+  q11HeadingCharacterIndex === -1
+    ? legacyQ11CharacterIndex
+    : q11HeadingCharacterIndex;
+const q11ToQ15Section =
+  q11ToQ15Start === -1 || q16CharacterIndex === -1
+    ? ''
+    : parsed.content.slice(q11ToQ15Start, q16CharacterIndex);
+const q11ToQ15SourceBlockStart = q11ToQ15Section.indexOf(
+  `### ${q11ToQ15SourceHeading}`,
+);
+const q11ToQ15SourceBlock =
+  q11ToQ15SourceBlockStart === -1
+    ? ''
+    : q11ToQ15Section.slice(q11ToQ15SourceBlockStart);
 
 describe('Traditional Chinese traffic column 003 — Q1–Q5 localization boundary', () => {
-  it('preserves the immutable Q1–Q5 prefix and Q11–Q20 tail byte-for-byte', () => {
+  it('preserves the immutable Q1–Q10 prefix and Q16–Q20 tail byte-for-byte', () => {
     const immutablePrefix = rawBytes.subarray(0, immutablePrefixBytes);
-    const immutableQ11Tail = rawBytes.subarray(q11ByteIndex);
+    const immutableQ1ToQ10Prefix = rawBytes.subarray(
+      0,
+      immutableQ1ToQ10PrefixBytes,
+    );
+    const immutableQ16Tail = rawBytes.subarray(q16ByteIndex);
 
     expect(immutablePrefix.byteLength).toBe(immutablePrefixBytes);
     expect(
       crypto.createHash('sha256').update(immutablePrefix).digest('hex'),
     ).toBe(immutablePrefixSha256);
-    expect(q11ByteIndex).toBeGreaterThan(immutablePrefixBytes);
-    expect(immutableQ11Tail.toString('utf8').startsWith(q11Marker)).toBe(true);
-    expect(immutableQ11Tail.byteLength).toBe(immutableQ11TailBytes);
+    expect(immutableQ1ToQ10Prefix.byteLength).toBe(
+      immutableQ1ToQ10PrefixBytes,
+    );
     expect(
-      crypto.createHash('sha256').update(immutableQ11Tail).digest('hex'),
-    ).toBe(immutableQ11TailSha256);
+      crypto
+        .createHash('sha256')
+        .update(immutableQ1ToQ10Prefix)
+        .digest('hex'),
+    ).toBe(immutableQ1ToQ10PrefixSha256);
+    expect(q11ByteIndex).toBe(immutableQ1ToQ10PrefixBytes);
+    expect(immutableQ16Tail.toString('utf8').startsWith(q16Marker)).toBe(true);
+    expect(immutableQ16Tail.byteLength).toBe(immutableQ16TailBytes);
+    expect(
+      crypto.createHash('sha256').update(immutableQ16Tail).digest('hex'),
+    ).toBe(immutableQ16TailSha256);
   });
 
   it('uses the exact frontmatter, sole H1, and two contracted images', () => {
@@ -775,5 +882,376 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
       /[这为个过发应实与后还会当从对请诉证赔伤条时场车报务处]/,
     );
     expect(q6ToQ10Section).not.toMatch(/^[\t ]*\u200b+[\t ]*$/m);
+  });
+});
+
+describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boundary', () => {
+  it('starts the new Q11 H2 at byte 12401 and isolates exactly Q11–Q15 before the immutable Q16 marker', () => {
+    expect(q11HeadingByteIndex).toBe(immutableQ1ToQ10PrefixBytes);
+    expect(q16CharacterIndex).toBeGreaterThan(q11HeadingCharacterIndex);
+    expect(
+      Array.from(
+        q11ToQ15Section.matchAll(/^## (Q\d+\..+)$/gm),
+        (match) => match[1],
+      ),
+    ).toEqual([...q11ToQ15Headings]);
+    expect(q11ToQ15Section).toContain(`### ${q11ToQ15SourceHeading}`);
+    expect(q11ToQ15SourceBlockStart).toBeGreaterThan(
+      q11ToQ15Section.indexOf(`## ${q11ToQ15Headings[4]}`),
+    );
+    expect(q11ToQ15Section).not.toContain(`## ${q16Marker}`);
+  });
+
+  it('locks Q11 temporary income loss, proof categories, and the separate Q12 issue', () => {
+    expectConcepts(q11ToQ15SectionForQuestion(11), [
+      {
+        label: 'accident-related injury',
+        pattern:
+          /(?:事故.{0,16}(?:受傷|傷害).{0,24}(?:所致|造成|因果關係))|(?:(?:受傷|傷害).{0,16}(?:事故|因果關係))/s,
+      },
+      {
+        label: 'whole or partial inability to work',
+        pattern:
+          /(?:全部|完全).{0,8}(?:或|、).{0,8}部分.{0,12}(?:不能|無法).{0,8}工作|(?:不能|無法).{0,8}(?:全部|完全).{0,8}(?:或|、).{0,8}部分.{0,8}工作/s,
+      },
+      {
+        label: 'supported treatment or recovery period',
+        pattern:
+          /(?:治療|療養).{0,8}(?:或|、).{0,8}(?:恢復|休養)期間.{0,30}(?:資料|紀錄|證據|證明|佐證|支持)|(?:資料|紀錄|證據|證明|佐證|支持).{0,30}(?:治療|療養).{0,8}(?:或|、).{0,8}(?:恢復|休養)期間/s,
+      },
+      {
+        label: 'actual income reduction',
+        pattern: /實際.{0,10}(?:收入|所得|薪資).{0,8}(?:減少|損失)/s,
+      },
+      {
+        label: 'diagnosis or rest advice is important but not conclusive',
+        pattern:
+          /(?:診斷證明|休養建議|醫囑).{0,30}(?:重要|有力|可作為).{0,12}證據.{0,30}(?:不是|並非|不當然).{0,12}(?:充分|決定性|唯一|當然成立)/s,
+      },
+      {
+        label: 'treatment records',
+        pattern: /(?:治療|就醫|病歷|醫療).{0,8}(?:紀錄|資料)/,
+      },
+      {
+        label: 'attendance or leave records',
+        pattern: /(?:出勤|考勤).{0,8}(?:或|、).{0,8}(?:請假|休假).{0,8}(?:紀錄|資料)/s,
+      },
+      {
+        label: 'payroll and tax material',
+        pattern:
+          /(?:薪資單|工資單|薪資資料|工資資料|薪資紀錄|工資紀錄).{0,20}(?:報稅|稅務|所得稅|扣繳).{0,8}(?:資料|紀錄|憑單)|(?:報稅|稅務|所得稅|扣繳).{0,8}(?:資料|紀錄|憑單).{0,20}(?:薪資單|工資單|薪資資料|工資資料|薪資紀錄|工資紀錄)/s,
+      },
+      {
+        label: 'employer confirmation',
+        pattern: /雇主.{0,8}(?:證明|確認|說明)/,
+      },
+      {
+        label: 'self-employed business records',
+        pattern:
+          /(?:自營業者|自營工作者|自行執業者).{0,24}(?:帳冊|帳簿|發票|營業紀錄|業務紀錄|營業資料|業務資料|營業憑證)/s,
+      },
+      {
+        label: 'continued work or unchanged pay is relevant',
+        pattern:
+          /(?:(?:繼續|持續).{0,8}工作|(?:薪資|收入|所得).{0,8}(?:未變|沒有變|未減少|相同)).{0,24}(?:相關|考量|判斷)/s,
+      },
+      {
+        label: 'temporary loss does not itself decide lasting capacity',
+        pattern:
+          /(?:繼續|持續).{0,8}工作|(?:薪資|收入|所得).{0,8}(?:未變|沒有變|未減少|相同)/,
+      },
+      {
+        label: 'separate lasting earning-capacity issue',
+        pattern:
+          /(?:不當然|不會自動|不能單憑|不足以).{0,24}(?:決定|排除|否定).{0,24}(?:勞動能力|工作能力).{0,8}(?:減損|喪失)|(?:勞動能力|工作能力).{0,8}(?:減損|喪失).{0,24}(?:另行|分別|不同).{0,8}(?:判斷|認定|問題)/s,
+      },
+    ]);
+  });
+
+  it('locks Q12 lasting earning-capacity proof, adjustments, discounting, and secured periodic payments', () => {
+    expectConcepts(q11ToQ15SectionForQuestion(12), [
+      {
+        label: 'distinct from temporary actual income loss',
+        pattern:
+          /(?:暫時|治療期間|恢復期間).{0,18}(?:實際)?(?:收入|所得|薪資).{0,8}(?:減少|損失).{0,30}(?:不同|有別|區分)|(?:不同|有別|區分).{0,30}(?:暫時|治療期間|恢復期間).{0,18}(?:實際)?(?:收入|所得|薪資).{0,8}(?:減少|損失)/s,
+      },
+      {
+        label: 'Civil Code Articles 193 and 216',
+        pattern: /民法第\s*193\s*條.{0,80}第\s*216\s*條/s,
+      },
+      { label: 'accident causation', pattern: /事故.{0,16}因果關係|因果關係.{0,16}事故/s },
+      {
+        label: 'lasting functional impairment',
+        pattern:
+          /(?:持續|永久|長期).{0,12}(?:功能|身體機能|勞動能力|工作能力).{0,12}(?:障礙|減損|受限)/s,
+      },
+      {
+        label: 'occupation and ability',
+        pattern:
+          /(?:職業|工作內容).{0,16}(?:能力|工作能力|勞動能力)|(?:能力|工作能力|勞動能力).{0,16}(?:職業|工作內容)/s,
+      },
+      {
+        label: 'ordinarily expected income',
+        pattern:
+          /(?:通常|一般|正常情形).{0,8}(?:可得|預期|預計).{0,8}(?:收入|所得|利益)/s,
+      },
+      {
+        label: 'supported working life',
+        pattern:
+          /(?:有證據|依證據|證據支持|可支持|合理).{0,20}(?:工作年限|勞動年限|可工作期間|工作期間)|(?:工作年限|勞動年限|可工作期間|工作期間).{0,20}(?:證據|佐證|合理)/s,
+      },
+      {
+        label: 'unchanged current pay does not eliminate the claim',
+        pattern:
+          /(?:目前|現有|現時)?(?:薪資|收入|所得).{0,8}(?:未變|未減少|相同).{0,24}(?:不當然|不會自動|不足以).{0,18}(?:排除|否定|消滅).{0,12}(?:請求|損害|減損)/s,
+      },
+      {
+        label: 'impairment percentage is not mechanically decisive',
+        pattern:
+          /(?:減損|失能|障礙).{0,8}比例.{0,24}(?:不會|不能|不應|並非).{0,12}(?:機械|直接|單獨).{0,12}(?:決定|計算|認定)/s,
+      },
+      {
+        label: 'current pay is not mechanically decisive',
+        pattern:
+          /(?:目前|現有|現時)?(?:薪資|收入|所得).{0,24}(?:不會|不能|不應|並非).{0,12}(?:機械|直接|單獨).{0,12}(?:決定|計算|認定)/s,
+      },
+      {
+        label: 'medical appraisal is useful when genuinely disputed but not mandatory',
+        pattern:
+          /(?:持續|永久|長期).{0,12}(?:障礙|減損|受限).{0,18}(?:確有|實際|真正|具體).{0,8}爭議.{0,30}(?:醫療|醫學|專業).{0,8}鑑定.{0,24}(?:有助|有用|可協助).{0,30}(?:不是|並非|不必|無須).{0,16}(?:每案|所有案件|一律|必須)/s,
+      },
+      {
+        label: 'Article 217 comparative fault and adjustments',
+        pattern:
+          /民法第\s*217\s*條.{0,24}(?:與有過失|過失相抵).{0,24}(?:其他|其餘).{0,12}(?:調整|扣減|因素)/s,
+      },
+      {
+        label: 'lump-sum intermediate-interest discount',
+        pattern:
+          /(?:一次|一次性).{0,8}(?:給付|支付|賠償).{0,24}(?:中間利息|利息).{0,12}(?:扣除|折現|折算)/s,
+      },
+      {
+        label: 'Hoffman calculator is only an aid',
+        pattern:
+          /(?:司法院)?.{0,8}霍夫曼.{0,12}(?:計算機|計算工具).{0,24}(?:僅|只是).{0,8}(?:輔助|工具|參考).{0,30}(?:不是|並非|不代表).{0,18}(?:強制|必須|保證|結果)/s,
+      },
+      {
+        label: 'Article 193 secured periodic payments on application',
+        pattern:
+          /民法第\s*193\s*條.{0,40}(?:當事人|一方).{0,8}(?:聲請|申請).{0,40}法院.{0,12}(?:命|得命).{0,36}(?:(?:定期金|定期給付).{0,24}(?:擔保|提供擔保)|(?:擔保|提供擔保).{0,24}(?:定期金|定期給付))/s,
+      },
+    ]);
+  });
+
+  it('locks Q13 Article 195 and individualized non-pecuniary-damage factors', () => {
+    expectConcepts(q11ToQ15SectionForQuestion(13), [
+      { label: 'Civil Code Article 195', pattern: /民法第\s*195\s*條/ },
+      {
+        label: 'unlawful infringement of body or health',
+        pattern: /不法侵害.{0,12}(?:身體|健康).{0,8}(?:或|、).{0,8}(?:健康|身體)/s,
+      },
+      {
+        label: 'appropriate non-pecuniary amount',
+        pattern:
+          /(?:非財產上損害|慰撫金).{0,24}(?:相當|適當|合理).{0,8}(?:金額|數額|賠償)/s,
+      },
+      {
+        label: 'injury and treatment',
+        pattern: /傷勢.{0,12}(?:治療|療程)|(?:治療|療程).{0,12}傷勢/s,
+      },
+      {
+        label: 'lasting effects',
+        pattern: /後遺症|持續影響|長期影響/,
+      },
+      {
+        label: 'pain and life impact',
+        pattern:
+          /(?:疼痛|痛苦).{0,16}(?:生活|日常生活).{0,8}(?:影響|不便)|(?:生活|日常生活).{0,8}(?:影響|不便).{0,16}(?:疼痛|痛苦)/s,
+      },
+      {
+        label: 'age and status',
+        pattern: /年齡.{0,12}(?:身分|地位)|(?:身分|地位).{0,12}年齡/s,
+      },
+      {
+        label: 'social and economic circumstances',
+        pattern: /社會.{0,8}(?:及|與|、).{0,8}經濟.{0,8}(?:情況|狀況|條件)/s,
+      },
+      {
+        label: 'parties evidence',
+        pattern: /雙方.{0,8}(?:提出|提供).{0,8}證據|當事人.{0,12}證據/s,
+      },
+      {
+        label: 'individualized assessment',
+        pattern: /個案.{0,8}(?:判斷|審酌|認定)|依個別.{0,8}(?:情形|因素)/,
+      },
+    ]);
+  });
+
+  it('locks Q14 possible employer civil liability and separate individual criminal responsibility', () => {
+    expectConcepts(q11ToQ15SectionForQuestion(14), [
+      { label: 'Civil Code Article 188', pattern: /民法第\s*188\s*條/ },
+      {
+        label: 'employee unlawfully injures while performing duties',
+        pattern:
+          /受僱人.{0,18}(?:執行職務|職務執行).{0,24}(?:不法|違法).{0,8}侵害.{0,12}(?:他人|第三人)/s,
+      },
+      {
+        label: 'work hours alone do not establish duty connection',
+        pattern:
+          /(?:上班|工作).{0,8}時間.{0,24}(?:不當然|不會自動|不足以).{0,24}(?:職務關聯|執行職務|職務上關係)/s,
+      },
+      {
+        label: 'possible joint civil liability',
+        pattern:
+          /(?:雇主|僱用人).{0,20}(?:可能|得).{0,8}(?:連帶|共同).{0,8}(?:負|承擔).{0,8}民事責任/s,
+      },
+      {
+        label: 'selection and supervision defense',
+        pattern:
+          /(?:選任|選擇).{0,8}(?:及|與|、).{0,8}(?:監督|監管).{0,24}(?:相當注意|合理注意|已盡注意)/s,
+      },
+      {
+        label: 'unavoidable-loss defense',
+        pattern:
+          /(?:即使|縱使|即便).{0,16}(?:相當注意|合理注意|已盡注意).{0,20}(?:仍|也).{0,8}(?:不能避免|無法避免)/s,
+      },
+      {
+        label: 'paragraph 2 victim relief',
+        pattern:
+          /第\s*188\s*條第\s*2\s*項.{0,30}(?:未獲|不能獲得|無法獲得).{0,8}(?:賠償|補償).{0,24}(?:法院|損害).{0,18}(?:斟酌|命|適當)/s,
+      },
+      {
+        label: 'employer recourse after payment',
+        pattern:
+          /(?:雇主|僱用人).{0,18}(?:賠償|給付|支付).{0,18}(?:後|之後).{0,18}(?:向受僱人|對受僱人).{0,12}(?:求償|追償)/s,
+      },
+      {
+        label: 'civil and criminal distinction',
+        pattern:
+          /(?:民事|民事責任).{0,16}(?:刑事|刑事責任).{0,12}(?:不同|區分|分別)|(?:刑事|刑事責任).{0,16}(?:民事|民事責任).{0,12}(?:不同|區分|分別)/s,
+      },
+      { label: 'Criminal Code Article 284', pattern: /刑法第\s*284\s*條/ },
+      {
+        label: 'individual duty breach and causation',
+        pattern:
+          /(?:各|每一).{0,8}(?:自然人|行為人|個人).{0,18}(?:違反|違背).{0,8}(?:注意義務|義務).{0,18}因果關係/s,
+      },
+    ]);
+  });
+
+  it('locks Q15 compulsory-cover scope, current limits, and contract-specific voluntary cover', () => {
+    const section = q11ToQ15SectionForQuestion(15);
+
+    expectConcepts(section, [
+      {
+        label: 'Article 6 owner and specified user or manager duty',
+        pattern:
+          /強制汽車責任保險法第\s*6\s*條.{0,40}(?:所有人|車主).{0,30}(?:使用人|管理人)/s,
+      },
+      {
+        label: 'no-fault benefit structure',
+        pattern:
+          /(?:無過失|不論過失|不以過失).{0,24}(?:給付|請求|補償)/s,
+      },
+      {
+        label: 'passenger and outside third-person scope',
+        pattern:
+          /乘客.{0,24}(?:車外|車輛外).{0,12}(?:第三人|之人)|(?:車外|車輛外).{0,12}(?:第三人|之人).{0,24}乘客/s,
+      },
+      {
+        label: 'single-vehicle driver generally outside own compulsory cover',
+        pattern:
+          /單一車輛.{0,16}(?:事故|車禍).{0,24}駕駛人.{0,24}(?:原則|通常).{0,16}(?:不在|不屬|不受).{0,12}(?:強制險|強制汽車責任保險).{0,12}(?:保障|給付|範圍)/s,
+      },
+      {
+        label: 'multi-vehicle driver may claim against another vehicle insurer',
+        pattern:
+          /多車.{0,16}(?:事故|車禍).{0,24}駕駛人.{0,24}(?:得|可以|可能).{0,12}(?:向|對).{0,12}(?:其他|另一).{0,8}車輛.{0,16}(?:強制險|保險人|保險公司).{0,12}(?:請求|申請)/s,
+      },
+      {
+        label: 'amendment and effective accident dates',
+        pattern:
+          /2026-05-29.{0,30}(?:修正|發布).{0,30}2026-07-01.{0,24}(?:事故|發生)/s,
+      },
+      {
+        label: 'earlier accidents may use earlier standard',
+        pattern:
+          /2026-07-01.{0,24}(?:以前|前).{0,16}(?:事故|發生).{0,24}(?:先前|舊|原).{0,8}(?:標準|規定)/s,
+      },
+      {
+        label: 'necessary and reasonable medical expense',
+        pattern:
+          /(?:必要|必需).{0,8}(?:且|並|、).{0,8}合理.{0,12}(?:傷害)?醫療費用/s,
+      },
+      {
+        label: '15 statutory disability grades',
+        pattern:
+          /(?:失能|殘廢).{0,12}(?:15\s*(?:個|級|等級)|十五\s*(?:個|級|等級))|(?:15|十五)\s*(?:個|級|等級).{0,12}(?:失能|殘廢)/s,
+      },
+      {
+        label: 'third-party liability voluntary product',
+        pattern:
+          /第三人責任險.{0,24}(?:任意|自願|契約).{0,8}(?:保險|商品)/s,
+      },
+      {
+        label: 'driver injury voluntary product',
+        pattern:
+          /駕駛人傷害險.{0,24}(?:任意|自願|契約).{0,8}(?:保險|商品)/s,
+      },
+      {
+        label: 'own-damage voluntary product',
+        pattern:
+          /車體損失險.{0,24}(?:任意|自願|契約).{0,8}(?:保險|商品)/s,
+      },
+      {
+        label: 'policy-specific conditions',
+        pattern:
+          /被保險人.{0,12}(?:保額|限額).{0,12}自負額.{0,12}除外.{0,12}過失.{0,16}(?:條款|條件)/s,
+      },
+    ]);
+
+    expect(section).toContain('新臺幣 TWD 200,000');
+    expect(section).toContain('TWD 80,000–3,000,000');
+    expect(section).toContain('TWD 3,000,000');
+    expect(section).toContain('TWD 3,200,000');
+  });
+
+  it('uses all 13 Q11–Q15 official URLs exactly once and in order with Traditional Chinese labels', () => {
+    const markdownLinks = Array.from(
+      q11ToQ15SourceBlock.matchAll(
+        /\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+      ),
+      (match) => ({ label: match[1], url: match[2] }),
+    );
+
+    expect(markdownLinks.map(({ url }) => url)).toEqual(
+      q11ToQ15SourceTargets,
+    );
+    for (const { label } of markdownLinks) {
+      expect(label).toMatch(/\p{Script=Han}/u);
+      expect(label).not.toMatch(/\p{Script=Hangul}/u);
+      expect(label).not.toMatch(
+        /[\p{Script=Hiragana}\p{Script=Katakana}]/u,
+      );
+    }
+    for (const target of q11ToQ15SourceTargets) {
+      expect(countOccurrences(q11ToQ15Section, target)).toBe(1);
+    }
+    expect(q11ToQ15SourceBlock).not.toMatch(/(?<!\]\()https?:\/\//);
+  });
+
+  it('rejects stale Q11–Q15 copy, foreign scripts, simplified variants, and invisible spacer-only lines', () => {
+    for (const phrase of prohibitedQ11ToQ15Copy) {
+      expect(q11ToQ15Section).not.toContain(phrase);
+    }
+
+    expect(q11ToQ15Section).not.toMatch(/\p{Script=Hangul}/u);
+    expect(q11ToQ15Section).not.toMatch(
+      /[\p{Script=Hiragana}\p{Script=Katakana}]/u,
+    );
+    expect(q11ToQ15Section).not.toMatch(
+      /[这为个过发应实与后还会当从对请诉证赔伤条时场车报务处]/,
+    );
+    expect(q11ToQ15Section).not.toMatch(/^[\t ]*\u200b+[\t ]*$/m);
   });
 });

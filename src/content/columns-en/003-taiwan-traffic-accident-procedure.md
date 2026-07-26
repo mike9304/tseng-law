@@ -31,7 +31,7 @@ Criminal Code Article 185-4 addresses a driver's departure after a traffic accid
 
 Personal safety and warning measures come first. For injury or rescue, call 119; for a crime or urgent public-safety situation, call 110 or 112. Also make the appropriate police report for the traffic accident.
 
-Once safety is secured, take wide and close-up photographs of the vehicle positions and damage, road markings, signals, and weather conditions. Preserve witness contact details, request preservation of CCTV and dashcam footage, and collect the parties’ identifying details, vehicle and insurance information, and medical records. A personal recording does not replace the required police handling in an accident involving injury or death.
+Once safety is secured, take wide and close-up photographs of the vehicle positions and damage, road markings, signals, and weather conditions. Preserve witness contact details, request preservation of CCTV and dashcam footage, and collect the parties’ identifying details, vehicle and insurance information, and medical records. Personal recordings are useful, but they do not replace the police handling required in accidents involving injury or death.
 
 The police may provide a traffic-accident party registration and contact form at the scene. The scene diagram and scene photographs may be requested from day 7 after the accident; the preliminary analysis form may be requested from day 30. Confirm availability and application requirements with the competent police agency.
 

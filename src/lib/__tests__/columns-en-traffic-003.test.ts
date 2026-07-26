@@ -23,12 +23,12 @@ const incidentImage =
 const immutablePrefixBytes = 1_075;
 const immutablePrefixSha256 =
   '8d75e7d46d3e958d227128ddbdf4a3544a53488204ca7d0d06d73f49e8e0b955';
-const immutableQ1ToQ5PrefixBytes = 8_385;
+const immutableQ1ToQ5PrefixBytes = 8_401;
 const immutableQ1ToQ5PrefixSha256 =
-  '4c33ac680eb8f2bcd3e3e5de430b9e29351f24522e4521fecd63673ce26268ba';
-const immutableQ1ToQ10PrefixBytes = 14_461;
+  '0a90b01893062d07035f76017950ffd56300dbe3d29b0c780363a3c46488bbc7';
+const immutableQ1ToQ10PrefixBytes = 14_477;
 const immutableQ1ToQ10PrefixSha256 =
-  '0a191df9985547d23b01b01580979d700d70e7639beb3ff6e3c29130af6ac79e';
+  '23968a28027d5a759ef4dccff5e2707fdb2d275237f26c08f105494808bfea7a';
 const q11Marker =
   'Q11. What should you watch for when claiming loss from inability to work?';
 const q16Marker =
@@ -39,6 +39,10 @@ const immutableQ16ToQ20TailSha256 =
 
 const q1Heading = '## Q1. Can I leave the scene after an accident?';
 const q2Heading = '## Q2. What evidence should I preserve first?';
+const approvedQ2RecordingSentence =
+  'Personal recordings are useful, but they do not replace the police handling required in accidents involving injury or death.';
+const staleQ2RecordingSentence =
+  'A personal recording does not replace the required police handling in an accident involving injury or death.';
 const q3Heading =
   '## Q3. If I was injured, what claims and deadlines should I check?';
 const q4Heading =
@@ -515,7 +519,12 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
       /witness.{0,30}(?:contacts?|details?).{0,80}(?:CCTV|dashcam).{0,60}(?:party|driver|parties[’'] identifying details).{0,30}(?:vehicle|insurance).{0,80}medical records/is,
     );
     expect(q2).toMatch(
-      /personal recording.{0,80}(?:does not|cannot).{0,30}(?:replace|substitute).{0,40}police.{0,50}(?:injury|death)/is,
+      /personal recording.{0,80}(?:does not|do not|cannot).{0,30}(?:replace|substitute).{0,40}police.{0,50}(?:injury|death)/is,
+    );
+    expect(countOccurrences(q2, approvedQ2RecordingSentence)).toBe(1);
+    expect(q2).not.toContain(staleQ2RecordingSentence);
+    expect(q2).toMatch(
+      /personal recordings?.{0,60}useful.{0,80}(?:does not|do not|cannot).{0,30}(?:replace|substitute).{0,40}police.{0,50}(?:injury|death)/is,
     );
     expect(q2).toMatch(
       /(?:registration|contact) form.{0,40}(?:at the scene|on-site).{0,80}(?:scene diagram|diagram).{0,30}(?:photos?|photographs?).{0,40}(?:day 7|seven days).{0,80}preliminary analysis.{0,40}(?:day 30|thirty days)/is,

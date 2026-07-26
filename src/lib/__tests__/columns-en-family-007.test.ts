@@ -191,16 +191,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '1f2c98e73eb1ea88c47e66f0593d36629b847d63fa217618ed21f1d0c8ce9f43';
+  'b3ad0f88a48fb522b7719893dd03c768b99512c187f70a48b898786a99df9110';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '4f6899c870bf943a3e843e99844efb4a1790468f58c9a2e771b94f2bed763f7a';
+  '66f8b3c9f7ef456cfca5daae82d082741867ff3c3916e5cac57662f65d88e14f';
 const frozenSection1OnwardSha256 =
-  'a5316b808236cf4407faf13a2269f101fee31fe375c4edea58f41fb7f48e977c';
-const frozenVisibleWordCount = 5_590;
+  'fdabd58efab2bc398631c185e3c1ba0397a2e31a4436fc2cb2f7b3c76988ed7d';
+const frozenVisibleWordCount = 5_609;
 const frozenSourceSha256 =
-  '8b6e6a76d5a5971c059f11d54e62c1e25d26108aaf4341dd826bef7e23738402';
+  '50574e8e74156ff52d7ae2dcf155420e940057414a5b69918216526980461471';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -248,7 +248,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: 'September 13, 2025',
-      read_time: '28 min read',
+      read_time: '29 min read',
       categories: ['Taiwan Legal Information'],
       featured_image: featuredImage,
       faq,
@@ -259,7 +259,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       title,
       date: '2026-07-25',
       dateDisplay: 'September 13, 2025',
-      readTime: '28 min read',
+      readTime: '29 min read',
       category: 'legal',
       categoryLabel: 'Legal Information',
       featuredImage:
@@ -1183,6 +1183,30 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     );
   });
 
+  it('publishes the exact identity, status, and address evidence item', () => {
+    const section = sectionBody(parsed.content, headings[10]);
+    const expectedItem =
+      '1. **Identity, status, and addresses.** Organize proof of marriage, Taiwan household-registration records, and each party’s nationality, domicile, habitual residence, and current address. Note any discrepancy between the information shown in the documents and where each party actually lives now or the address at which each party can be served.';
+    const itemStart = section.indexOf(
+      '1. **Identity, status, and addresses.**',
+    );
+    const nextItemStart = section.indexOf(
+      '\n2. **Divorce instruments and court papers.**',
+      itemStart,
+    );
+
+    expect(itemStart).toBeGreaterThan(-1);
+    expect(nextItemStart).toBeGreaterThan(itemStart);
+    expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
+    expect(countOccurrences(section, expectedItem)).toBe(1);
+    expect(section).not.toContain(
+      'and current addresses for each spouse and child',
+    );
+    expect(section).not.toContain(
+      'These materials frame jurisdiction, service, and registration questions.',
+    );
+  });
+
   it('publishes the exact limited-disclosure privacy plan as evidence item nine', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
@@ -1280,7 +1304,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       .digest('hex');
 
     expect(visibleWordCount).toBe(frozenVisibleWordCount);
-    expect(calculatedMinutes).toBe(28);
+    expect(calculatedMinutes).toBe(29);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(sourceSha256).toBe(frozenSourceSha256);

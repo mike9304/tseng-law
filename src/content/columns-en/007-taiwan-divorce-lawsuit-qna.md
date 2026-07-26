@@ -3,7 +3,7 @@ title: "Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"
-read_time: "28 min read"
+read_time: "29 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
@@ -261,7 +261,7 @@ Do not state or imply that the 1980 Hague Child Abduction Convention automatical
 
 Organize the materials not as a collection intended to pressure the other party, but as records that accurately explain jurisdiction, procedure, the facts, and the child’s needs. Preparing the following nine categories so that both the chronology of the case and the source of each original document are clear can reduce the risk of confusing different claims and deadlines.
 
-1. **Identity, status, and addresses.** Marriage and household-registration records; nationality documents; domicile or habitual-residence evidence; and current addresses for each spouse and child. These materials frame jurisdiction, service, and registration questions.
+1. **Identity, status, and addresses.** Organize proof of marriage, Taiwan household-registration records, and each party’s nationality, domicile, habitual residence, and current address. Note any discrepancy between the information shown in the documents and where each party actually lives now or the address at which each party can be served.
 2. **Divorce instruments and court papers.** Any written mutual-consent divorce agreement and witness circumstances; petitions; mediation records; settlements; judgments; rulings; service proofs; and finality certificates. Keep originals or certified copies and note how and when each instrument was served or became final.
 3. **Foreign marriage or divorce records.** Foreign certificates or judgments; authentication or verification status; Chinese translations; and any recognition or registration step already taken or still pending in Taiwan or abroad. Documents from mainland China, Hong Kong, and Macao follow distinct verification tracks and should be filed under the correct regime.
 4. **Matrimonial property and debts.** Any matrimonial-property agreement; complete asset and liability lists; title documents; acquisition-source evidence; transfer, loan, tax, and valuation records; and materials showing gifts, nominee arrangements, reimbursements, or other theories. Distinguish ownership claims from residual-property calculation inputs.

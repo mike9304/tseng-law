@@ -249,7 +249,7 @@ Cross-border relocation with a minor child is not decided by Korean living costs
 
 1. **Authority over residence and travel.** Who has authority, under agreement or court order, to decide the child’s residence, international travel, and related daily-care arrangements?
 2. **Consent or court order.** Does the other parent consent, or is a court determination required before relocation or retention abroad?
-3. **Best interests and continuing contact.** How would relocation affect continuity, safety, schooling, health care, and ongoing contact or visitation with the other parent?
+3. **Best interests and continuing contact.** How would relocation affect continuity, safety, schooling, health care, and ongoing contact or visitation with the other parent? A workable plan should address the frequency of contact, stays during school holidays, travel costs, and handover locations.
 4. **Passports, entry, exit, immigration, and registration.** What passport, visa, entry, exit, immigration, household-registration, or school-registration steps apply in each place?
 5. **Recognition and enforcement.** Is an existing Taiwan or foreign order recognized and enforceable in each relevant jurisdiction, and what procedure is required to seek recognition or enforcement there?
 6. **Actual expenses and both parents’ resources.** Child support, if adjusted or newly determined after relocation, turns on the child’s actual needs and both parents’ resources and circumstances. Agreement that a child will live in Korea does not by itself fix support at Korean cost-of-living levels.

@@ -191,16 +191,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  'da70c1e6a7fa8384fb7641e3f85e6b37226215b6235b619a4854bd84114656ac';
+  'caf430c1efb7f3866752ef131ce2b0db9e7c07e42bee871d4306e15e569bed9f';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  'a9cc11075b4ce4b2ff0c46c21fd40c215639b03300e5675e474e610d52080d5a';
+  'd3f51d41957b10c870ce092577ba16d658cdb6f71c26cad84e4bf95cebbf09a0';
 const frozenSection1OnwardSha256 =
-  '8a161457eca8eac9e77b47bda044a7fb968ff1e99cddd9e429d4c1d7c5e482ab';
-const frozenVisibleWordCount = 5_528;
+  '3f00c6c53dea193bb2e88bb01e20e2de73cce718798d7155b63693e1d9ad3e05';
+const frozenVisibleWordCount = 5_546;
 const frozenSourceSha256 =
-  '3f4c2ab2b11a80ff8cc95a2cd7c4c80b77ff62885994933cf07fdb76a6f897de';
+  '997192f8400aba12e1f834a6e17c872423c4350af68f8d91f0da08ae6cde564c';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1146,6 +1146,24 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(nextItemStart).toBeGreaterThan(itemStart);
     expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
     expect(section).not.toContain('habitual residence');
+  });
+
+  it('publishes the exact best-interests and continuing-contact relocation item', () => {
+    const section = sectionBody(parsed.content, headings[9]);
+    const expectedItem =
+      '3. **Best interests and continuing contact.** How would relocation affect continuity, safety, schooling, health care, and ongoing contact or visitation with the other parent? A workable plan should address the frequency of contact, stays during school holidays, travel costs, and handover locations.';
+    const itemStart = section.indexOf(
+      '3. **Best interests and continuing contact.**',
+    );
+    const nextItemStart = section.indexOf(
+      '\n4. **Passports, entry, exit, immigration, and registration.**',
+      itemStart,
+    );
+
+    expect(itemStart).toBeGreaterThan(-1);
+    expect(nextItemStart).toBeGreaterThan(itemStart);
+    expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
+    expect(countOccurrences(section, expectedItem)).toBe(1);
   });
 
   it('uses the exact ordered nine-category evidence checklist and privacy prohibitions', () => {

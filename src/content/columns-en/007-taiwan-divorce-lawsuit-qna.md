@@ -88,7 +88,7 @@ Family matters governed by the Family Act ordinarily proceed through court media
 
 **Court mediation or settlement,** once established, terminates the marriage in the manner prescribed by law and has the same effect as a final and binding judgment. **Litigation** may continue under the applicable procedure if mediation is unsuccessful; for a divorce by judgment, what matters is that the judgment becomes final and binding.
 
-Expected duration depends on the issues joined, service, evidence, interim applications, and court workload. No fixed timetable should be treated as a legal promise.
+The time required to resolve a case varies depending on service of process, the number of mediation sessions, the facts and evidence in dispute, any appraisals or investigations, child-related issues, international service, and how many levels of court proceedings are involved, so no fixed completion date can be given.
 
 ### Personal appearance
 

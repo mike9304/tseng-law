@@ -141,21 +141,23 @@ const courtMediationOutcomeParagraphMarker =
   '**Court mediation or settlement,**';
 const courtMediationOutcomeParagraph =
   '**Court mediation or settlement,** once established, terminates the marriage in the manner prescribed by law and has the same effect as a final and binding judgment. **Litigation** may continue under the applicable procedure if mediation is unsuccessful; for a divorce by judgment, what matters is that the judgment becomes final and binding.';
+const expectedDurationParagraph =
+  'The time required to resolve a case varies depending on service of process, the number of mediation sessions, the facts and evidence in dispute, any appraisals or investigations, child-related issues, international service, and how many levels of court proceedings are involved, so no fixed completion date can be given.';
 const frozenBeforeFilingDocumentsSha256 =
   '07e7dcdcbd12687fd57000836158cac2cf8c9ed2e20a50f5c47b46f18b325d74';
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '11d6a1104b72c41dba2d49603bec143f75fa33e7b5fd14496eff1081cf36b4c9';
+  '95f890cd69e70e774859a62b1dcb88862d6e5ec7d9955435e70c85207a0ff23a';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '8da1e5106649d305bd65795acaf2e17107673964de900c66f748c53bc8660219';
 const frozenSection5OnwardSha256 =
   '62b854f3c28768bd9d2954970b4b2c4bdee1df78100330f314065bea845a0fe8';
 const frozenSection1OnwardSha256 =
-  '6b78c840bd8dae24a3a50e807556f745abc5cd0f9fdf201e2a1798fce6afe954';
-const frozenVisibleWordCount = 5_045;
+  '87e76616fc22e666aaf76b7bc19cce303cc4c8a4b7f6ff68bc5f215453ea1d53';
+const frozenVisibleWordCount = 5_070;
 const frozenSourceSha256 =
-  'ddb60a501361e464c2b5dd6878481cd60293c287f641af5adfd4ae5205e28424';
+  '25886b24aa521f4afb389e9af045ef9587bed678f92b9714831e9f2351f4568b';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -343,8 +345,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       {
         number: 10,
         heading: headings[2],
-        phrase:
-          'Expected duration depends on the issues joined, service, evidence, interim applications, and court workload. No fixed timetable should be treated as a legal promise.',
+        phrase: expectedDurationParagraph,
       },
       {
         number: 11,
@@ -571,7 +572,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       courtMediationOutcomeParagraphMarker,
     );
     const durationStart = parsed.content.indexOf(
-      '\n\nExpected duration',
+      `\n\n${expectedDurationParagraph}`,
       courtOutcomeStart,
     );
     const paragraph = parsed.content.slice(courtOutcomeStart, durationStart);
@@ -579,6 +580,26 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(courtOutcomeStart).toBeGreaterThan(-1);
     expect(durationStart).toBeGreaterThan(courtOutcomeStart);
     expect(paragraph).toBe(courtMediationOutcomeParagraph);
+  });
+
+  it('restores every case-duration factor before the personal-appearance guidance', () => {
+    const mediationEffectStart = parsed.content.indexOf(
+      courtMediationOutcomeParagraph,
+    );
+    const durationStart =
+      mediationEffectStart + courtMediationOutcomeParagraph.length + 2;
+    const personalAppearanceStart = parsed.content.indexOf(
+      '\n\n### Personal appearance',
+      durationStart,
+    );
+    const paragraph = parsed.content.slice(
+      durationStart,
+      personalAppearanceStart,
+    );
+
+    expect(mediationEffectStart).toBeGreaterThan(-1);
+    expect(personalAppearanceStart).toBeGreaterThan(durationStart);
+    expect(paragraph).toBe(expectedDurationParagraph);
   });
 
   it('locks Family Act Article 13 and the type-specific effects and review routes', () => {

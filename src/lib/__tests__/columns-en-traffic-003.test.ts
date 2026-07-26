@@ -93,6 +93,10 @@ const staleQ14JointClaimParagraph =
   'Possible joint civil liability is subject to statutory defenses. The employer may show reasonable selection and supervision of the employee or that unavoidable loss would have occurred even with such care.';
 const q15Heading =
   '## Q15. What motor-insurance benefits and coverage should I check?';
+const approvedQ15PolicyReviewParagraph =
+  'Third-party liability, driver injury, and own-damage insurance are optional insurance products. Actual coverage depends on the insured person, coverage limits, deductibles, exclusions, fault, and other terms and conditions, so each insurance policy and its terms must be reviewed separately.';
+const staleQ15PolicyReviewParagraph =
+  'Third-party liability, driver injury, and own-damage insurance are contractual voluntary products. Actual coverage depends on the insured person, limit, deductible, exclusions, fault, and other policy conditions.';
 const q11ToQ15SourceHeading = '### Q11–Q15 Official Sources';
 const q11ToQ15ContractedHeadings = [
   q11Heading,
@@ -989,10 +993,15 @@ describe('English traffic column 003 — Q11–Q15 translation contract', () => 
     expect(q15).toContain('TWD 3,000,000');
     expect(q15).toContain('TWD 3,200,000');
     expect(q15).toMatch(
-      /third-party liability.{0,80}driver injury.{0,80}(?:own-damage|own damage).{0,30}insurance.{0,120}(?:contractual|voluntary)/is,
+      /third-party liability.{0,80}driver injury.{0,80}(?:own-damage|own damage).{0,30}insurance.{0,120}optional insurance products/is,
+    );
+    expect(countOccurrences(q15, approvedQ15PolicyReviewParagraph)).toBe(1);
+    expect(q15).not.toContain(staleQ15PolicyReviewParagraph);
+    expect(q15).toMatch(
+      /(?:actual )?cover(?:age)?.{0,80}insured person.{0,50}coverage limits?.{0,50}deductibles?.{0,50}exclusions?.{0,50}fault.{0,50}(?:other )?terms and conditions/is,
     );
     expect(q15).toMatch(
-      /(?:actual )?cover(?:age)?.{0,80}insured person.{0,50}limit.{0,50}deductible.{0,50}exclusions?.{0,50}fault.{0,50}(?:other )?policy conditions/is,
+      /each insurance policy.{0,50}its terms.{0,50}reviewed separately/is,
     );
   });
 

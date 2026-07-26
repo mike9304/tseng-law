@@ -183,7 +183,7 @@ The benefit standard amended on 2026-05-29 applies to accidents occurring on or 
 
 An earlier accident may use the earlier standard.
 
-Third-party liability, driver injury, and own-damage insurance are contractual voluntary products. Actual coverage depends on the insured person, limit, deductible, exclusions, fault, and other policy conditions.
+Third-party liability, driver injury, and own-damage insurance are optional insurance products. Actual coverage depends on the insured person, coverage limits, deductibles, exclusions, fault, and other terms and conditions, so each insurance policy and its terms must be reviewed separately.
 
 ### Q11–Q15 Official Sources
 

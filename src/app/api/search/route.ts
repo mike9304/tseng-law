@@ -11,13 +11,18 @@ import { runSearchQuery } from '@/lib/builder/search/query-engine';
 import {
   appendQueryLog,
   loadSearchIndex,
+  saveSearchIndex,
 } from '@/lib/builder/search/index-storage';
 import { buildSearchIndex } from '@/lib/builder/search/index-builder';
 import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
-import { SEARCH_DOC_KINDS, type SearchDocKind } from '@/lib/builder/search/types';
+import { SEARCH_DOC_KINDS, type SearchDocKind, type SearchIndex } from '@/lib/builder/search/types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+const SEARCH_INDEX_FRESHNESS_MS = 5 * 60 * 1000;
+
+let searchIndexRefreshPromise: Promise<SearchIndex> | null = null;
 
 function errorResponse(
   locale: Locale,
@@ -47,6 +52,32 @@ function userAgentDigest(request: NextRequest): string {
   return crypto.createHash('sha256').update(ua).digest('hex').slice(0, 16);
 }
 
+function isFreshSearchIndex(builtAt: unknown): boolean {
+  if (typeof builtAt !== 'string') return false;
+  const builtAtMs = Date.parse(builtAt);
+  const ageMs = Date.now() - builtAtMs;
+  return Number.isFinite(builtAtMs) && ageMs >= 0 && ageMs <= SEARCH_INDEX_FRESHNESS_MS;
+}
+
+async function rebuildSearchIndex(): Promise<SearchIndex> {
+  const index = buildSearchIndex(await collectAllSearchDocs('default'));
+  try {
+    await saveSearchIndex(index);
+  } catch (error) {
+    console.error('[public/search] index save failed:', error);
+  }
+  return index;
+}
+
+function refreshSearchIndex(): Promise<SearchIndex> {
+  if (!searchIndexRefreshPromise) {
+    searchIndexRefreshPromise = rebuildSearchIndex().finally(() => {
+      searchIndexRefreshPromise = null;
+    });
+  }
+  return searchIndexRefreshPromise;
+}
+
 export async function GET(request: NextRequest) {
   const query = (request.nextUrl.searchParams.get('q') ?? '').trim();
   const localeParam = request.nextUrl.searchParams.get('locale') ?? 'ko';
@@ -71,7 +102,11 @@ export async function GET(request: NextRequest) {
   let index: NonNullable<typeof storedIndex>;
   try {
     storedIndex = await loadSearchIndex();
-    index = storedIndex ?? buildSearchIndex(await collectAllSearchDocs('default'));
+    if (storedIndex && isFreshSearchIndex(storedIndex.builtAt)) {
+      index = storedIndex;
+    } else {
+      index = await refreshSearchIndex();
+    }
   } catch (error) {
     console.error('[public/search] index load failed:', error);
     return errorResponse(locale, 'search_index_failed', 500);

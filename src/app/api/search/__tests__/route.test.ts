@@ -5,6 +5,7 @@ import { buildSearchIndex } from '@/lib/builder/search/index-builder';
 import {
   appendQueryLog,
   loadSearchIndex,
+  saveSearchIndex,
 } from '@/lib/builder/search/index-storage';
 import { runSearchQuery } from '@/lib/builder/search/query-engine';
 import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
@@ -18,6 +19,7 @@ vi.mock('@/lib/builder/security/rate-limit', () => ({
 vi.mock('@/lib/builder/search/index-storage', () => ({
   appendQueryLog: vi.fn(async () => undefined),
   loadSearchIndex: vi.fn(),
+  saveSearchIndex: vi.fn(async () => undefined),
 }));
 
 vi.mock('@/lib/builder/search/index-builder', () => ({
@@ -62,6 +64,7 @@ const buildSearchIndexMock = vi.mocked(buildSearchIndex);
 const collectAllSearchDocsMock = vi.mocked(collectAllSearchDocs);
 const loadSearchIndexMock = vi.mocked(loadSearchIndex);
 const runSearchQueryMock = vi.mocked(runSearchQuery);
+const saveSearchIndexMock = vi.mocked(saveSearchIndex);
 
 function request(query = ''): NextRequest {
   return new NextRequest(`https://law.example.test/api/search${query ? `?${query}` : ''}`, {
@@ -74,7 +77,7 @@ function request(query = ''): NextRequest {
 
 describe('/api/search', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     checkRateLimitMock.mockResolvedValue({ allowed: true } as never);
     appendQueryLogMock.mockResolvedValue(undefined as never);
     buildSearchIndexMock.mockReturnValue(storedIndex);
@@ -87,6 +90,7 @@ describe('/api/search', () => {
         highlights: ['Portfolio body'],
       },
     ]);
+    saveSearchIndexMock.mockResolvedValue(undefined as never);
   });
 
   it('returns empty hits for blank queries without loading the index', async () => {
@@ -154,6 +158,278 @@ describe('/api/search', () => {
     expect(collectAllSearchDocsMock).toHaveBeenCalledWith('default');
     expect(buildSearchIndexMock).toHaveBeenCalledWith([doc]);
     expect(payload.indexMissing).toBe(true);
+  });
+
+  it('rebuilds and persists an index older than the five-minute freshness window before serving results', async () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-06-03T00:06:00.000Z'));
+
+    try {
+      const currentDoc: SearchDoc = {
+        ...doc,
+        id: 'portfolio:ko:current-column',
+        title: 'Current Column',
+        url: '/ko/columns/current-column',
+        summary: 'Current replacement summary',
+        body: 'Current replacement body',
+      };
+      const staleIndex: SearchIndex = {
+        ...storedIndex,
+        builtAt: '2026-06-03T00:00:00.000Z',
+      };
+      const rebuiltIndex: SearchIndex = {
+        builtAt: '2026-06-03T00:06:00.000Z',
+        byLocale: {
+          ko: [currentDoc],
+          'zh-hant': [],
+          en: [],
+        },
+        invertedByLocale: {
+          ko: { current: ['0:2'] },
+          'zh-hant': {},
+          en: {},
+        },
+      };
+
+      loadSearchIndexMock.mockResolvedValueOnce(staleIndex);
+      collectAllSearchDocsMock.mockResolvedValueOnce([currentDoc] as never);
+      buildSearchIndexMock.mockReturnValueOnce(rebuiltIndex);
+      runSearchQueryMock.mockReturnValueOnce([
+        {
+          doc: currentDoc,
+          score: 2,
+          highlights: ['Current replacement body'],
+        },
+      ]);
+
+      const response = await GET(request('locale=ko&q=current'));
+      const payload = await response.json();
+
+      expect(response.status).toBe(200);
+      expect(collectAllSearchDocsMock).toHaveBeenCalledWith('default');
+      expect(buildSearchIndexMock).toHaveBeenCalledWith([currentDoc]);
+      expect(saveSearchIndexMock).toHaveBeenCalledWith(rebuiltIndex);
+      expect(runSearchQueryMock).toHaveBeenCalledWith(expect.objectContaining({
+        index: rebuiltIndex,
+        query: 'current',
+        locale: 'ko',
+      }));
+      expect(payload.hits).toEqual([
+        expect.objectContaining({
+          id: 'portfolio:ko:current-column',
+          title: 'Current Column',
+        }),
+      ]);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('treats a future-dated stored index as stale and serves rebuilt current hits', async () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-06-03T00:00:00.000Z'));
+
+    try {
+      const currentDoc: SearchDoc = {
+        ...doc,
+        id: 'portfolio:ko:current-future-replacement',
+        title: 'Current Future Replacement',
+        url: '/ko/columns/current-future-replacement',
+        summary: 'Current future replacement summary',
+        body: 'Current future replacement body',
+      };
+      const futureIndex: SearchIndex = {
+        ...storedIndex,
+        builtAt: '2026-06-03T00:01:00.000Z',
+      };
+      const rebuiltIndex: SearchIndex = {
+        builtAt: '2026-06-03T00:00:00.000Z',
+        byLocale: { ko: [currentDoc], 'zh-hant': [], en: [] },
+        invertedByLocale: { ko: { current: ['0:3'] }, 'zh-hant': {}, en: {} },
+      };
+
+      loadSearchIndexMock.mockResolvedValueOnce(futureIndex);
+      collectAllSearchDocsMock.mockResolvedValueOnce([currentDoc] as never);
+      buildSearchIndexMock.mockReturnValueOnce(rebuiltIndex);
+      runSearchQueryMock.mockReturnValueOnce([
+        { doc: currentDoc, score: 3, highlights: ['Current future replacement body'] },
+      ]);
+
+      const response = await GET(request('locale=ko&q=current'));
+      const payload = await response.json();
+
+      expect(response.status).toBe(200);
+      expect(collectAllSearchDocsMock).toHaveBeenCalledWith('default');
+      expect(buildSearchIndexMock).toHaveBeenCalledWith([currentDoc]);
+      expect(saveSearchIndexMock).toHaveBeenCalledWith(rebuiltIndex);
+      expect(runSearchQueryMock).toHaveBeenCalledWith(expect.objectContaining({
+        index: rebuiltIndex,
+        query: 'current',
+        locale: 'ko',
+      }));
+      expect(payload.hits).toEqual([
+        expect.objectContaining({
+          id: 'portfolio:ko:current-future-replacement',
+          title: 'Current Future Replacement',
+        }),
+      ]);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('serves rebuilt current hits when persisting a refreshed index fails', async () => {
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-06-03T00:06:00.000Z'));
+
+    try {
+      const currentDoc: SearchDoc = {
+        ...doc,
+        id: 'portfolio:ko:current-unsaved-replacement',
+        title: 'Current Unsaved Replacement',
+        url: '/ko/columns/current-unsaved-replacement',
+        summary: 'Current unsaved replacement summary',
+        body: 'Current unsaved replacement body',
+      };
+      const staleIndex: SearchIndex = {
+        ...storedIndex,
+        builtAt: '2026-06-03T00:00:00.000Z',
+      };
+      const rebuiltIndex: SearchIndex = {
+        builtAt: '2026-06-03T00:06:00.000Z',
+        byLocale: { ko: [currentDoc], 'zh-hant': [], en: [] },
+        invertedByLocale: { ko: { current: ['0:4'] }, 'zh-hant': {}, en: {} },
+      };
+
+      loadSearchIndexMock.mockResolvedValueOnce(staleIndex);
+      collectAllSearchDocsMock.mockResolvedValueOnce([currentDoc] as never);
+      buildSearchIndexMock.mockReturnValueOnce(rebuiltIndex);
+      saveSearchIndexMock.mockRejectedValueOnce(new Error('index persistence is unavailable'));
+      runSearchQueryMock.mockReturnValueOnce([
+        { doc: currentDoc, score: 4, highlights: ['Current unsaved replacement body'] },
+      ]);
+
+      const response = await GET(request('locale=ko&q=current'));
+      const payload = await response.json();
+
+      expect(response.status).toBe(200);
+      expect(saveSearchIndexMock).toHaveBeenCalledWith(rebuiltIndex);
+      expect(runSearchQueryMock).toHaveBeenCalledWith(expect.objectContaining({ index: rebuiltIndex }));
+      expect(payload).toMatchObject({
+        ok: true,
+        hits: [
+          {
+            id: 'portfolio:ko:current-unsaved-replacement',
+            title: 'Current Unsaved Replacement',
+          },
+        ],
+      });
+      expect(payload).not.toHaveProperty('errorCode');
+    } finally {
+      consoleError.mockRestore();
+      vi.useRealTimers();
+    }
+  });
+
+  it('uses a fresh stored index without collecting, rebuilding, or persisting', async () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-06-03T00:05:00.000Z'));
+
+    try {
+      const freshIndex: SearchIndex = {
+        ...storedIndex,
+        builtAt: '2026-06-03T00:04:00.000Z',
+      };
+      loadSearchIndexMock.mockResolvedValueOnce(freshIndex);
+
+      const response = await GET(request('locale=ko&q=portfolio'));
+      const payload = await response.json();
+
+      expect(response.status).toBe(200);
+      expect(runSearchQueryMock).toHaveBeenCalledWith(expect.objectContaining({ index: freshIndex }));
+      expect(collectAllSearchDocsMock).not.toHaveBeenCalled();
+      expect(buildSearchIndexMock).not.toHaveBeenCalled();
+      expect(saveSearchIndexMock).not.toHaveBeenCalled();
+      expect(payload.hits).toEqual([
+        expect.objectContaining({ id: 'portfolio:ko:pf-1', title: 'Portfolio One' }),
+      ]);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('coalesces concurrent stale-index refreshes and serves both requests rebuilt current hits', async () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-06-03T00:06:00.000Z'));
+
+    try {
+      const currentDoc: SearchDoc = {
+        ...doc,
+        id: 'portfolio:ko:current-concurrent-replacement',
+        title: 'Current Concurrent Replacement',
+        url: '/ko/columns/current-concurrent-replacement',
+        summary: 'Current concurrent replacement summary',
+        body: 'Current concurrent replacement body',
+      };
+      const staleIndex: SearchIndex = {
+        ...storedIndex,
+        builtAt: '2026-06-03T00:00:00.000Z',
+      };
+      const rebuiltIndex: SearchIndex = {
+        builtAt: '2026-06-03T00:06:00.000Z',
+        byLocale: { ko: [currentDoc], 'zh-hant': [], en: [] },
+        invertedByLocale: { ko: { current: ['0:5'] }, 'zh-hant': {}, en: {} },
+      };
+      let releaseCollection: (docs: SearchDoc[]) => void = () => undefined;
+      let notifyFirstCollectionStarted: () => void = () => undefined;
+      const collectionGate = new Promise<SearchDoc[]>((resolve) => {
+        releaseCollection = resolve;
+      });
+      const firstCollectionStarted = new Promise<void>((resolve) => {
+        notifyFirstCollectionStarted = resolve;
+      });
+
+      loadSearchIndexMock.mockResolvedValue(staleIndex);
+      collectAllSearchDocsMock.mockImplementation(async () => {
+        notifyFirstCollectionStarted();
+        return collectionGate;
+      });
+      buildSearchIndexMock.mockReturnValue(rebuiltIndex);
+      runSearchQueryMock.mockReturnValue([
+        { doc: currentDoc, score: 5, highlights: ['Current concurrent replacement body'] },
+      ]);
+
+      const firstRequest = GET(request('locale=ko&q=current'));
+      await firstCollectionStarted;
+
+      const secondRequest = GET(request('locale=ko&q=current'));
+      await Promise.resolve();
+      await Promise.resolve();
+      releaseCollection([currentDoc]);
+      const [firstResponse, secondResponse] = await Promise.all([firstRequest, secondRequest]);
+      const [firstPayload, secondPayload] = await Promise.all([
+        firstResponse.json(),
+        secondResponse.json(),
+      ]);
+
+      expect(firstResponse.status).toBe(200);
+      expect(secondResponse.status).toBe(200);
+      expect(collectAllSearchDocsMock).toHaveBeenCalledTimes(1);
+      expect(buildSearchIndexMock).toHaveBeenCalledTimes(1);
+      expect(saveSearchIndexMock).toHaveBeenCalledTimes(1);
+      expect(runSearchQueryMock).toHaveBeenCalledTimes(2);
+      expect(runSearchQueryMock).toHaveBeenNthCalledWith(1, expect.objectContaining({ index: rebuiltIndex }));
+      expect(runSearchQueryMock).toHaveBeenNthCalledWith(2, expect.objectContaining({ index: rebuiltIndex }));
+      expect(firstPayload.hits).toEqual([
+        expect.objectContaining({ id: 'portfolio:ko:current-concurrent-replacement' }),
+      ]);
+      expect(secondPayload.hits).toEqual([
+        expect.objectContaining({ id: 'portfolio:ko:current-concurrent-replacement' }),
+      ]);
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
   it('returns localized rate-limit errors for genuine throttle', async () => {

@@ -130,6 +130,10 @@ const missingSpouseTailParagraph =
   'A police missing-person report may be important evidence, but the statute does not make it a universal mandatory precondition. A prior action demanding cohabitation is not a universal statutory precondition either. Several months away from home, without more, is not itself a divorce ground. The court examines continuity, intent, proof of life-or-death uncertainty, and whether a serious cause is established under the applicable paragraph.';
 const sexualIntercourseConsequencesParagraph =
   'Whether consensual sexual intercourse with a person other than one’s spouse constitutes a ground under Article 1052, paragraph 1 must be assessed in light of the precise facts, the statutory requirements, and any applicable time limits. The existence of that conduct does not, by itself, dictate the outcomes of a petition for judicial divorce, damages under Article 1056, residual-property distribution, post-divorce spousal support under Article 1057, the exercise and assumption of rights and duties regarding a minor child, or child support. Each issue is determined under its own requirements and applicable standards, including the child’s best interests where relevant.';
+const foreignEffectSubsectionHeading =
+  '### Recognition, effect, and registration';
+const foreignRecognitionParagraph =
+  'A statement that a divorce was completed under foreign law—or a foreign divorce certificate alone—does not complete every required Taiwan procedure. Conversely, not every foreign divorce requires the same recognition proceeding or the same documents. Taiwan’s required recognition or legal-effect determination and household registration may vary with whether the instrument is a court judgment or administrative certificate, its country of issue and form, and the parties’ current household-registration status.';
 const filingDocumentsParagraph =
   'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.';
 const filingDocumentsPrefixMarker =
@@ -155,16 +159,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '144af97b1e1a9fa389382d2d2bf2b40db5d1f5b073dc6b9738fe6a6d260b7293';
+  '3926c4c2ad6dd755d32fef77e3a4a7b756ae0b78eb7857092c8bbe3ba12c98bb';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '62b854f3c28768bd9d2954970b4b2c4bdee1df78100330f314065bea845a0fe8';
+  '2987c988e5159ad79631cbcf9318241853d80c986f764c4e4dac2334834b4cb8';
 const frozenSection1OnwardSha256 =
-  '02e31fe47f7c26bec3e986154f5ae83ab6bbd26a05099dad8b27c19ff06a038e';
-const frozenVisibleWordCount = 5_198;
+  '3defb3e564dd8abf683a9597b3eb334d3f7cd1efd795db2b2736f322c95573e2';
+const frozenVisibleWordCount = 5_190;
 const frozenSourceSha256 =
-  'd3b8d067b723eede1844934bd379d471e7b524699e841e3dfbd040b6e886603e';
+  '2032f41874cdc52fd6d4f357d486580fb47bdb131797e873c8785a9fab5d55c7';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -766,12 +770,30 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'Completing a divorce under foreign local law does not, by itself, complete Taiwan household registration or prove Taiwan recognition.',
       'authentication by a Taiwan overseas mission or another authorized channel, together with a Chinese translation authenticated or notarized',
       'Documents from mainland China, Hong Kong, and Macao follow verification regimes that differ from ordinary foreign authentication.',
-      'Whether a foreign divorce or judgment is recognized or effective in Taiwan is not the same question as whether a Taiwan household-registration office can enter a particular status record.',
+      foreignRecognitionParagraph,
     ];
 
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+  });
+
+  it('publishes the exact foreign-divorce effect paragraph at the Section 5 tail without adding public policy', () => {
+    const subsectionMarker = `${foreignEffectSubsectionHeading}\n\n`;
+    const subsectionStart = parsed.content.indexOf(subsectionMarker);
+    const paragraphStart = subsectionStart + subsectionMarker.length;
+    const section6Start = parsed.content.indexOf(
+      `\n\n## ${headings[5]}`,
+      paragraphStart,
+    );
+    const section = sectionBody(parsed.content, headings[4]);
+
+    expect(subsectionStart).toBeGreaterThan(-1);
+    expect(section6Start).toBeGreaterThan(paragraphStart);
+    expect(parsed.content.slice(paragraphStart, section6Start)).toBe(
+      foreignRecognitionParagraph,
+    );
+    expect(section).not.toContain('public policy');
   });
 
   it('locks Article 1017 and Article 1030-1 classification, exclusions, adjustment, and claim-specific periods', () => {

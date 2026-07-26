@@ -157,7 +157,7 @@ Documents from mainland China, Hong Kong, and Macao follow verification regimes 
 
 ### Recognition, effect, and registration
 
-Whether a foreign divorce or judgment is recognized or effective in Taiwan is not the same question as whether a Taiwan household-registration office can enter a particular status record. Recognition or effect may turn on jurisdiction, service, public policy, and the requested legal consequence. Household registration then follows the instrument and the registration rules applicable to that instrument. Additional registration or recognition abroad, if needed for local effect there, remains a further separate inquiry under the other jurisdiction’s law.
+A statement that a divorce was completed under foreign law—or a foreign divorce certificate alone—does not complete every required Taiwan procedure. Conversely, not every foreign divorce requires the same recognition proceeding or the same documents. Taiwan’s required recognition or legal-effect determination and household registration may vary with whether the instrument is a court judgment or administrative certificate, its country of issue and form, and the parties’ current household-registration status.
 
 ## 6. House Title, Premarital Funds, and Residual-Property Distribution
 

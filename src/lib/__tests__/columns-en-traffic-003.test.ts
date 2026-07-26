@@ -290,7 +290,7 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
       /(?:wide|overview).{0,20}(?:and|\/).{0,20}(?:close|detail).{0,30}(?:photographs?|photos?).{0,100}(?:vehicle positions?|damage).{0,100}(?:road markings?|signals?).{0,80}weather/is,
     );
     expect(q2).toMatch(
-      /witness.{0,30}(?:contacts?|details?).{0,80}(?:CCTV|dashcam).{0,60}(?:party|driver).{0,30}(?:vehicle|insurance).{0,80}medical records/is,
+      /witness.{0,30}(?:contacts?|details?).{0,80}(?:CCTV|dashcam).{0,60}(?:party|driver|parties[’'] identifying details).{0,30}(?:vehicle|insurance).{0,80}medical records/is,
     );
     expect(q2).toMatch(
       /personal recording.{0,80}(?:does not|cannot).{0,30}(?:replace|substitute).{0,40}police.{0,50}(?:injury|death)/is,
@@ -305,7 +305,7 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
 
   it('distinguishes the criminal complaint, civil limitation, attached-action timing, and cost caveats in Q3', () => {
     expect(q3).toMatch(
-      /Articles? 284.{0,20}(?:and|,).{0,20}287.{0,100}(?:negligent injury|serious injury).{0,100}complaint-based/is,
+      /(?:(?:Articles? 284.{0,20}(?:and|,).{0,20}287.{0,100}(?:negligent injury|serious injury))|(?:Article 284.{0,30}defines.{0,80}(?:negligent injury|serious injury).{0,50}Article 287.{0,30}makes.{0,30}(?:those )?offenses?)).{0,100}complaint-based/is,
     );
     expect(q3).toMatch(
       /Article 237.{0,100}(?:ordinary|general).{0,30}(?:complaint period|period.{0,20}complaint).{0,30}six months.{0,80}(?:learn|know).{0,30}(?:offender.{0,20}identity|identity.{0,20}offender)/is,
@@ -339,7 +339,7 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
       /fault on both sides.{0,80}(?:does not|doesn't).{0,40}automatically.{0,40}(?:establish|constitute).{0,30}negligent injury/is,
     );
     expect(q4).toMatch(
-      /Article 217.{0,100}(?:reduce|reduction).{0,30}(?:or|and).{0,20}(?:exempt|exemption).{0,80}injured (?:person|party).{0,30}fault.{0,70}(?:caus|increas).{0,30}damage/is,
+      /Article 217.{0,100}(?:(?:reduce|reduction).{0,30}(?:or|and).{0,20}(?:exempt|exemption)|reduce.{0,50}or relieve the liable party of liability).{0,80}injured (?:person|party).{0,30}fault.{0,70}(?:caus|increas).{0,30}damage/is,
     );
     expect(q4).toMatch(
       /TWD 1,000,000.{0,30}one million New Taiwan dollars.{0,80}50%.{0,50}injured-party fault.{0,100}(?:may|could).{0,30}reduc.{0,30}TWD 500,000.{0,60}before other adjustments/is,

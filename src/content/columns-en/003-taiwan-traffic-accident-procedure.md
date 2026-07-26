@@ -17,173 +17,69 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 After a traffic accident in Taiwan, first secure safety, make the appropriate report or notification, and preserve evidence. Then examine claim deadlines, fault, and the scope of settlement. This guide sets out a general sequence based on Taiwan law and official guidance; responsibility and procedure depend on the facts of each accident.
 
-Q1. In what situations after an accident can you leave the scene without being treated as a hit-and-run?
+## Q1. Can I leave the scene after an accident?
 
-​
+In an accident involving injury or death, the driver must immediately provide aid, notify the police, and preserve the vehicles and scene evidence. Informal consent from the other party or a recording alone does not replace the required measures.
 
-Immediately after an accident occurs, you should get out of the vehicle, call an ambulance, and report to the police.
+In an injury accident, if all parties agree, record the vehicle positions and scene marks; only then may the vehicles be moved to avoid obstruction of traffic. The duty to provide aid and the reporting requirement still apply.
 
-​
+Where there is property damage only and the vehicles can be moved, record their positions and the scene marks with photographs or video, then move them promptly to a safe place. Leaving without taking the required measures can result in administrative sanctions.
 
-You should remain at the scene until the ambulance and police arrive.
+Criminal Code Article 185-4 addresses a driver's departure after a traffic accident that caused injury or death. Whether it applies depends on the facts of the accident and the measures taken.
 
-​
+## Q2. What evidence should I preserve first?
 
-​
+Personal safety and warning measures come first. For injury or rescue, call 119; for a crime or urgent public-safety situation, call 110 or 112. Also make the appropriate police report for the traffic accident.
 
-​
+Once safety is secured, take wide and close-up photographs of the vehicle positions and damage, road markings, signals, and weather conditions. Preserve witness contact details, request preservation of CCTV and dashcam footage, and collect the parties’ identifying details, vehicle and insurance information, and medical records. A personal recording does not replace the required police handling in an accident involving injury or death.
 
-Even if the other party has died, you must wait until the ambulance and police arrive and responsibility becomes clear.
+The police may provide a traffic-accident party registration and contact form at the scene. The scene diagram and scene photographs may be requested from day 7 after the accident; the preliminary analysis form may be requested from day 30. Confirm availability and application requirements with the competent police agency.
 
-​
+## Q3. If I was injured, what claims and deadlines should I check?
 
-​
+Criminal Code Article 284 defines negligent injury and negligent serious injury, and Article 287 makes those offenses complaint-based. Under Criminal Procedure Code Article 237, the ordinary complaint period is six months from the day the complainant learns the offender's identity.
 
-​
+Under Civil Code Article 197, a civil damages claim is generally subject to a period of two years from knowledge of the damage and the person liable, and ten years from the tort. Whether particular facts interrupt or otherwise affect a limitation period must be assessed separately.
 
-You must also give your real name to the other party and the police, and must not conceal it.
+Under Criminal Procedure Code Articles 487 and 488, a crime victim may file an attached civil action while the criminal case is pending, no later than the close of second-instance oral argument. This route usually provides a filing-fee advantage, but it does not guarantee a cost-free result. Under Article 503, if the criminal case is dismissed and the matter is transferred to a civil court at the plaintiff's request, costs may be payable. Article 504 also governs aspects of transfer and procedure.
 
-​
+The appropriate route depends on interruption of the limitation period, the defendants, evidence, insurance, and venue. There is no universally best route for every case.
 
-​
+## Q4. If both sides were at fault, how are criminal and civil liability assessed?
 
-​
+Criminal liability requires proof of each person's breach of a duty of care and a causal link between that breach and the other person's injury. Fault on both sides does not automatically establish negligent injury.
 
-If you decide not to report to the police, you may leave the scene only if the other party agrees.
+In a civil case, Civil Code Article 217 permits the court to reduce the amount of damages or relieve the liable party of liability when the injured person’s fault contributed to causing or increasing the damage. For example, if recognized damages are TWD 1,000,000 (one million New Taiwan dollars) and a 50% share of injured-party fault is assessed, the amount may be reduced to TWD 500,000 before other adjustments.
 
-​
+An appraisal or preliminary-analysis document may be important evidence, but it does not mechanically bind the court. The court evaluates the whole record.
 
-For example, if the other party says the injury is minor and that they are fine, if both sides have already agreed on a settlement amount, or if you have arranged a later date to settle, you should record that content or exchange it via LINE or text message so that it remains as evidence.
+## Q5. What should a settlement agreement include?
 
-​
+A settlement agreement should identify the accident date and place and the parties; state the payment amount and timing; address insurance; and specify the included claims and any reserved claims. It should also address future treatment, later-discovered injury, document delivery, and the relationship between payment and complaint withdrawal.
 
-That is because the other party may later claim that they did not agree.
+Under Civil Code Articles 736 and 737, settlement involves mutual concession, and the extinguishment of rights is limited to the rights waived by the wording of the agreement. The agreement does not necessarily make every future claim disappear.
 
-​
+For a complaint-based offense, Criminal Procedure Code Article 238 permits withdrawal before the close of first-instance oral argument. A withdrawn complaint cannot be refiled. Private settlement does not automatically terminate prosecution for a non-complaint offense, and settlement does not invariably require complaint withdrawal.
 
-​
+### Q1–Q5 Official Sources
 
-​
-
-Q2. After a traffic accident occurs, what should you do to protect yourself?
-
-​
-
-Immediately take out your phone and take photos and videos.
-
-​
-
-You should photograph tire marks, the condition of vehicle damage, the weather at the time, road conditions, and similar facts.
-
-​
-
-Also check whether there are witnesses and whether there is CCTV nearby.
-
-​
-
-Of course you should report to the police immediately, and even if the police photograph the scene when they arrive, the safest approach is to preserve evidence yourself in case the police miss something.
-
-​
-
-​
-
-​
-
-Q3. If you were injured in the accident, what claims can you bring against the other party?
-
-​
-
-Criminally, you may file a complaint for negligent injury; the complaint period is 6 months.
-
-​
-
-You may also file a civil damages lawsuit; the period is 2 years.
-
-​
-
-​
-
-​
-
-However, filing a civil lawsuit requires payment of court costs, so attorneys often recommend first filing a criminal complaint and, once the other party is prosecuted by the prosecutor’s office, filing an “incidental civil action attached to the criminal case”「刑事附帶民事訴訟」so that court costs need not be paid. Still, you must watch the 2-year claim prescription period.
-
-​
-
-​
-
-​
-
-Q4. Even if I am also at fault, can I still sue the other party if they are at fault too?
-
-​
-
-Yes.
-
-​
-
-This should be explained separately for criminal and civil aspects.
-
-​
-
-On the criminal side, if either party has negligence, the offense of negligent injury can be established.
-
-​
-
-​
-
-​
-
-On the civil side, if both parties are at fault, the civil lawsuit becomes a question of “fault ratio.”
-
-​
-
-For example, if you suffered TWD 1,000,000 in damages from the accident, but your and the other party’s responsibility ratio is 5:5, the other party only needs to compensate you TWD 500,000.
-
-​
-
-​
-
-​
-
-Q5. After an accident, how do parties generally settle with each other?
-
-​
-
-After an accident, if both sides agree on a settlement amount, of course they can settle.
-
-​
-
-When settling, a settlement agreement is usually prepared stating how much one party will pay the other, and both parties promise not to pursue further civil or criminal liability.
-
-​
-
-If one party has already filed a criminal injury complaint, the agreement provides that the complaint must be withdrawn.
-
-​
-
-Usually, when preparing the settlement agreement, a criminal complaint withdrawal form is also signed at the same time.
-
-​
-
-​
-
-​
-
-But once you settle, you can no longer make any claim regarding that accident.
-
-​
-
-Even if later some part of your body hurts more, sequelae develop, or you discover losses you failed to calculate, you can no longer claim against the other party.
-
-​
-
-Therefore, settlement must be handled carefully.
-
-​
-
-​
-
-​
+- [Road Traffic Management and Penalty Act Article 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Criminal Code of the Republic of China Article 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [Criminal Code of the Republic of China Article 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Criminal Code of the Republic of China Article 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [Code of Criminal Procedure Article 237](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
+- [Code of Criminal Procedure Article 238](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
+- [Code of Criminal Procedure Article 487](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
+- [Code of Criminal Procedure Article 488](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=488&pcode=C0010001)
+- [Code of Criminal Procedure Article 503](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=503&pcode=C0010001)
+- [Code of Criminal Procedure Article 504](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
+- [Civil Code Article 197](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001)
+- [Civil Code Article 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
+- [Civil Code Article 736](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=736&pcode=B0000001)
+- [Civil Code Article 737](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=737&pcode=B0000001)
+- [Ministry of Transportation and Communications traffic safety guidance](https://168.motc.gov.tw/theme/car/post/2002211806152)
+- [National Police Agency traffic-accident evidence and document guidance](https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889)
+- [National Police Agency traffic-accident FAQ](https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)
 
 Q6. How is accident responsibility determined?
 

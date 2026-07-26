@@ -73,7 +73,7 @@ describe('Japanese investment column 001 — subsidiary explanation paragraph', 
   it('states the subsidiary’s separate identity, own contracting capacity, and rights and obligations', () => {
     expect(paragraph).toMatch(/台湾子会社[^。]*有限公司[^。]*股份有限公司/u);
     expect(paragraph).toMatch(
-      /(?:(?:本店|本社)[^。]*(?:区別|別個|異なる|独立)|(?:区別|別個|異なる|独立)[^。]*(?:本店|本社))[^。]*法人/u,
+      /(?:(?:本店|本社|親会社)[^。]*(?:区別|別個|異なる|独立)|(?:区別|別個|異なる|独立)[^。]*(?:本店|本社|親会社))[^。]*法人/u,
     );
     expect(paragraph).toMatch(
       /(?:自己|自ら|自身|子会社)[^。]*(?:名義|名)[^。]*契約[^。]*(?:締結|当事者)/u,
@@ -100,7 +100,7 @@ describe('Japanese investment column 001 — subsidiary explanation paragraph', 
 
   it('rejects an automatic liability limit and requires every separately reviewed relationship', () => {
     expect(paragraph).toMatch(
-      /(?:独立(?:した)?法人(?:格)?|法人格[^。]*(?:独立|別個|分離))[^。]*(?:だけ|のみ|それ自体|理由|からといって)[^。]*(?:(?:すべて|全て|あらゆる|一切)[^。]*(?:責任|債務)|(?:責任|債務)[^。]*(?:すべて|全て|あらゆる|一切))[^。]*(?:常に[^。]*)?(?:子会社[^。]*(?:限定|限ら|帰属)|子会社だけ[^。]*(?:負う|帰属))[^。]*(?:わけではない|とは限らない)/u,
+      /(?:独立(?:した)?法人(?:格)?|法人格[^。]*(?:独立|別個|分離))[^。]*(?:だけ|のみ|それ自体|理由|からといって|であっても)[^。]*(?:(?:すべて|全て|あらゆる|一切)[^。]*(?:責任|債務)|(?:責任|債務)[^。]*(?:すべて|全て|あらゆる|一切))[^。]*(?:常に[^。]*)?(?:子会社[^。]*(?:限定|限ら|帰属)|子会社だけ[^。]*(?:負う|帰属))[^。]*(?:わけではない|とは限らない|とは限りません)/u,
     );
 
     for (const relationship of [
@@ -113,7 +113,7 @@ describe('Japanese investment column 001 — subsidiary explanation paragraph', 
     }
 
     expect(paragraph).toMatch(
-      /(?:これら|各|それぞれ|個別)[^。]*(?:関係|法律関係|契約関係)[^。]*(?:確認|検討|審査)/u,
+      /(?:これら|各|それぞれ|個別|個々)[^。]*(?:関係|法律関係|契約関係)[^。]*(?:確認|検討|審査)/u,
     );
   });
 

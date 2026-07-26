@@ -2050,7 +2050,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           ],
           relatedColumns: [
             { title: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages', slug: 'taiwan-gym-injury-lawsuit' },
-            { title: 'Traffic Accident Response', slug: 'taiwan-traffic-accident-procedure' },
+            { title: 'Taiwan Traffic Accident Q&A: Scene Safety, Fault, Settlement, and Compensation', slug: 'taiwan-traffic-accident-procedure' },
             { title: 'Who Is Liable in an Overtaking Accident?', slug: 'taiwan-overtaking-accident-liability' }
           ]
         },

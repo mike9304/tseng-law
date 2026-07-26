@@ -191,7 +191,7 @@ No. Residual-property distribution under Civil Code Article 1030-1, divorce dama
 
 ### Article 1056, Article 1057, and child support
 
-**Article 1056** concerns damages arising from judicial divorce and the fault and other requirements the statute sets for that claim, including non-pecuniary damages where the statutory elements are met.
+**Article 1056** provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met. The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.
 
 **Article 1057** concerns post-divorce support for a spouse without fault who falls into financial hardship because of judicial divorce. It is a claim between qualifying former spouses. It is not residual-property distribution, not child support, and not a fixed penalty attached to every finding of fault.
 

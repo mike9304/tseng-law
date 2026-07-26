@@ -144,6 +144,10 @@ const article10301ExclusionsParagraph =
   'Inherited property and other property acquired gratuitously, as well as solatium (consolation damages), are excluded from the statutory calculation. Relevant debts and the statutory rules governing dispositions made before termination of the matrimonial property regime must also be considered. Residual-property distribution is not a crude half-and-half split of every asset acquired during marriage, and it is not the same concept as common property under a different marital regime.';
 const article10301AdjustmentParagraph =
   'Where equal division of the residual difference would be manifestly unfair, the court may adjust or waive distribution after considering the statutory circumstances. Neither extramarital sexual relations nor responsibility for the breakdown of the marriage automatically bars or reduces a claim for distribution of the residual-property difference. However, specific facts falling within the statutory adjustment factors—such as the concealment or disposition of property, contributions through household labor and childcare, and the overall circumstances of the spouses’ shared life and acquisition of property—may be separately pleaded and proved. Nor should it be assumed that the calculation under Article 1030-1 changes merely because the spouses have different nationalities.';
+const article1056SubsectionHeading =
+  '### Article 1056, Article 1057, and child support';
+const article1056Paragraph =
+  '**Article 1056** provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met. The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.';
 const filingDocumentsParagraph =
   'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.';
 const filingDocumentsPrefixMarker =
@@ -169,16 +173,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '884a0098273584fb136a890a13c497c616810d683a68e3b47bc5d37b7b4d5306';
+  '9f0bfe38e4eb682faf2115fb5f9df08774f2679777b1316592714d472631e673';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '7fe3bbd7a759c3c4f20f75cf3f988b3f828a9b470fa7b4b62593d96270daaffe';
+  '8d7ca175d9acdc77d5618095e68d317af8d296105e44daab2448744dbafb2878';
 const frozenSection1OnwardSha256 =
-  '19eab8020f150277dab334191de8a873e22ec2d1f31fb38459fda7abf604b621';
-const frozenVisibleWordCount = 5_284;
+  'b177ec7c072a42ee5222a7d94ccdd287eb9ec35e56db48e443e9119beabca0f8';
+const frozenVisibleWordCount = 5_335;
 const frozenSourceSha256 =
-  '3646b9d0cf456c98fb4ae291deaf9494633663da5b565cece64a17070a393009';
+  'cb1021e3f3b3880b5f60dbed834940bcdf01aeb4e5f2dfd13be35b7ed96798e5';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -897,7 +901,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     const section = sectionBody(parsed.content, headings[6]);
     const requiredPhrases = [
       faq5Answer,
-      '**Article 1056** concerns damages arising from judicial divorce',
+      article1056Paragraph,
       '**Article 1057** concerns post-divorce support for a spouse without fault who falls into financial hardship because of judicial divorce.',
       '**Article 1116-2** continues parents’ duty to support a minor child after divorce.',
       'Child support is distinct from Article 1057 spousal support.',
@@ -912,6 +916,22 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+  });
+
+  it('publishes the exact Article 1056 pecuniary-and-non-pecuniary damages paragraph', () => {
+    const subsectionMarker = `${article1056SubsectionHeading}\n\n`;
+    const subsectionStart = parsed.content.indexOf(subsectionMarker);
+    const paragraphStart = subsectionStart + subsectionMarker.length;
+    const article1057Start = parsed.content.indexOf(
+      '\n\n**Article 1057**',
+      paragraphStart,
+    );
+
+    expect(subsectionStart).toBeGreaterThan(-1);
+    expect(article1057Start).toBeGreaterThan(paragraphStart);
+    expect(parsed.content.slice(paragraphStart, article1057Start)).toBe(
+      article1056Paragraph,
+    );
   });
 
   it('locks Articles 1055 and 1055-1, the full Taiwan concept, review, and unresolved issues', () => {

@@ -89,6 +89,10 @@ const q13Heading =
   '## Q13. 非財産的損害に対する慰謝料は、どのように判断されますか？';
 const q14Heading =
   '## Q14. 業務中の事故では、使用者にも民事責任を問えますか？';
+const approvedQ14JointClaimParagraph =
+  '被害者は、使用者と被用者の双方を相手に損害賠償を請求する方法を検討できます。もっとも、使用者は、被用者の選任および監督について相当な注意を尽くしたこと、またはその注意を尽くしても損害を避けられなかったことを抗弁できます。使用者が賠償した後は、被用者に求償できます。';
+const staleQ14JointClaimParagraph =
+  '使用者との共同民事責任の可能性があります。もっとも、使用者は、被用者の選任および監督について相当な注意を尽くしたこと、またはその注意を尽くしても損害を避けられなかったことを抗弁できます。使用者が賠償した後は、被用者に求償できます。';
 const q15Heading =
   '## Q15. どのような自動車保険の給付・補償を確認すべきですか？';
 const q11ToQ15SourceHeading = '### Q11–Q15 公式資料';
@@ -929,6 +933,11 @@ describe('Japanese traffic column 003 — Q11–Q15 translation contract', () =>
   });
 
   it('states the complete Article 188 employer-liability framework and separates Article 284 criminal liability in Q14', () => {
+    expect(q14.split(approvedQ14JointClaimParagraph)).toHaveLength(2);
+    expect(q14).not.toContain(staleQ14JointClaimParagraph);
+    expect(q14).toMatch(
+      /被害者.{0,40}使用者.{0,20}被用者.{0,40}(?:双方).{0,50}損害賠償.{0,50}請求/su,
+    );
     expect(q14).toMatch(
       /民法.{0,8}(?:第)?188条.{0,80}被用者.{0,50}(?:職務|業務).{0,20}(?:執行|遂行).{0,50}(?:違法|不法).{0,20}(?:損害|侵害)/su,
     );
@@ -936,7 +945,7 @@ describe('Japanese traffic column 003 — Q11–Q15 translation contract', () =>
       /勤務時間中.{0,80}(?:だけ|のみ).{0,50}(?:当然|自動的).{0,35}(?:職務関連性|業務関連性).{0,30}(?:認められない|認められるわけでは(?:ない|ありません)|成立しない|証明されない)/su,
     );
     expect(q14).toMatch(
-      /(?:共同|連帯).{0,15}民事責任.{0,100}(?:選任|選択).{0,25}監督.{0,90}(?:相当な注意|必要な注意).{0,100}(?:不可避|避けられな)/su,
+      /使用者.{0,100}(?:選任|選択).{0,25}監督.{0,90}(?:相当な注意|必要な注意).{0,100}(?:不可避|避けられな)/su,
     );
     expect(q14).toMatch(
       /第2項.{0,100}(?:賠償|補償).{0,30}(?:受けられない|得られない).{0,30}被害者.{0,80}(?:救済|補償)/su,

@@ -54,12 +54,16 @@ const approvedQ3TransferCostSentence =
   '例如，刑事案件遭駁回後，如依原告聲請移送民事法院，依刑事訴訟法第 503 條可能須負擔訴訟費用；另亦應一併確認第 504 條關於移送及程序的規定。';
 const staleQ3TransferCostWording =
   '例如刑事案件經不受理、無罪或其他相當情形終結，並經原告聲請移送民事法院時，依第 503 條可能須負擔訴訟費用；另應留意第 504 條的移送程序與費用規定。';
-const immutablePrefixBytes = 7_226;
+const approvedQ4EvidenceSentence =
+  '鑑定意見與初步分析研判表都可能是重要證據，但並非當然拘束法院；法院仍會綜合陳述、影像、車輛狀態等整體證據加以判斷。';
+const staleQ4GenericEvidenceWording =
+  '鑑定意見與初步分析研判表都可能是重要證據，但並非當然拘束法院；法院仍會綜合全案證據判斷。';
+const immutablePrefixBytes = 7_265;
 const immutablePrefixSha256 =
-  '446e1a8a7b1d3bc2aa89c9edeafd18026364e539db5b11f3d67932245cba0d11';
-const immutableQ1ToQ10PrefixBytes = 12_389;
+  '147285d0fd1cba6707171a537e7a20cbf11bc17c642796bf413fae1113a1bce5';
+const immutableQ1ToQ10PrefixBytes = 12_428;
 const immutableQ1ToQ10PrefixSha256 =
-  '554593aa45360767b7b9fe5c3ca6053aede206360339ca14fd8e781ab29e92b0';
+  '1d5024f4c84d0ac04c5ea41ea82891fd8b8752af837035a0f49833e769982a08';
 const immutableQ16TailBytes = 3_143;
 const immutableQ16TailSha256 =
   'c189113fb7068cecc13432944afd541e4ebc40f9857eb6bbfd71dcf7daf418a9';
@@ -470,6 +474,10 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
 
   it('locks Q4 individualized criminal negligence, civil comparative fault, and exact TWD figures', () => {
     const section = sectionForQuestion(4);
+
+    expect(countOccurrences(section, approvedQ4EvidenceSentence)).toBe(1);
+    expect(section).not.toContain(staleQ4GenericEvidenceWording);
+
     expectConcepts(section, [
       { label: 'each person duty-of-care breach', pattern: /各自.{0,18}注意義務.{0,12}違反/s },
       { label: 'causation of the other party injury', pattern: /(?:對方|他方).{0,12}(?:受傷|傷害).{0,18}因果關係|因果關係.{0,18}(?:對方|他方).{0,12}(?:受傷|傷害)/s },
@@ -482,6 +490,10 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       { label: 'appraisal evidence', pattern: /(?:鑑定|鑑定意見).{0,40}(?:重要|有力).{0,8}證據|(?:重要|有力).{0,8}證據.{0,40}(?:鑑定|鑑定意見)/s },
       { label: 'preliminary-analysis evidence', pattern: /(?:初步分析研判表|初判表).{0,40}(?:重要|有力).{0,8}證據|(?:重要|有力).{0,8}證據.{0,40}(?:初步分析研判表|初判表)/s },
       { label: 'evidence does not mechanically bind court', pattern: /(?:不能|不會|並不|並非).{0,18}(?:機械地|機械性|當然).{0,12}(?:拘束|約束).{0,8}法院/s },
+      { label: 'party statements', pattern: /陳述/ },
+      { label: 'video footage', pattern: /影像/ },
+      { label: 'vehicle condition', pattern: /車輛狀態/ },
+      { label: 'whole body of evidence', pattern: /整體證據/ },
     ]);
     expect(section).toContain('新臺幣 1,000,000 元');
     expect(section).toContain('新臺幣 500,000 元');
@@ -559,7 +571,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
 });
 
 describe('Traditional Chinese traffic column 003 — Q6–Q10 localization boundary', () => {
-  it('starts the new Q6 H2 at byte 7238 and isolates exactly Q6–Q10 before the immutable Q11 marker', () => {
+  it('starts the new Q6 H2 at byte 7265 and isolates exactly Q6–Q10 before the immutable Q11 marker', () => {
     expect(q6HeadingByteIndex).toBe(immutablePrefixBytes);
     expect(q6ByteIndex).toBe(immutablePrefixBytes + 3);
     expect(q11CharacterIndex).toBeGreaterThan(q6HeadingCharacterIndex);
@@ -896,7 +908,7 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
 });
 
 describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boundary', () => {
-  it('starts the new Q11 H2 at byte 12401 and isolates exactly Q11–Q15 before the immutable Q16 marker', () => {
+  it('starts the new Q11 H2 at byte 12428 and isolates exactly Q11–Q15 before the immutable Q16 marker', () => {
     expect(q11HeadingByteIndex).toBe(immutableQ1ToQ10PrefixBytes);
     expect(q16CharacterIndex).toBeGreaterThan(q11HeadingCharacterIndex);
     expect(

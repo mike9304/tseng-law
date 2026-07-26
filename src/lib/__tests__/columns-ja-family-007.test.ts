@@ -31,14 +31,14 @@ const introParagraphs = [
 const legacyGenericIntro =
   '本稿は、台湾における離婚の経路、戸籍登記、裁判所手続、裁判離婚の事由について、中立的な法律情報として整理するものです。一般的な教育情報であり、個別事案への法的助言ではありません。裁判管轄、準拠法、外国の身分行為や裁判の承認、事実と証拠、既存の合意や裁判所の判断、および現行の公式規則により、結論は異なり得ます。';
 const frozenH2BodySha256 =
-  '567fb608bb66cd948e0716edf69d8c03237204eb8bf47dad1259a17326edf9c3';
+  'fba8120697b537b58157aae51e444eec1c6537ecac6cc78e5757c11ea492b028';
 const responsibleSpousePhrase =
   '婚姻破綻について専ら責任を負う配偶者';
 const staleResponsibleSpousePhrase = '唯一の有責配偶者';
 const frozenNormalizedSection4Sha256 =
   'fffa3cab282466c74aeb2707a1029e66ca641d0e99a3456ed734936a5fefba3a';
 const frozenSection5OnwardSha256 =
-  '79429f8626152b60164fedabc51ab6850ccc0a76e56009b00204c05aba4b3ae4';
+  '4475541152576fdfac857151080ec709a3537897f3ca96d809296375ade031a1';
 
 const faq1Answer =
   '台湾民法第1050条によれば、協議離婚は書面により行い、双方に離婚の真意があることを直接見聞きして確認した2名以上の証人の署名を得るとともに、戸政機関への登記を行うことがすべて必要です。私的な合意書に署名しただけでは完了せず、登記は効力発生の要件です。';
@@ -117,8 +117,10 @@ const internalLinks = [
   '[お問い合わせ](/ja/contact)',
 ];
 
-const disclaimer =
+const staleDisclaimer =
   '本稿は、台湾の離婚手続、夫婦財産制、離婚後の請求および未成年の子に関する家事法について、一般的な教育情報を提供するものです。個別の離婚事件または家事事件に関する法的助言ではありません。管轄、準拠法、外国裁判の承認、事実と証拠、既存の合意や裁判所の判断、および現行の公式規則により結果は異なり得ます。期限を計算し、又は手続を開始する前に、正しい起算事由に基づく期限と最新の公式資料を個別事情に即して確認してください。';
+const disclaimer =
+  '本稿は、台湾における離婚、国際家事、夫婦財産および未成年の子に関する制度を一般的に解説することを目的とした教育資料であり、個別の事案に対する法的助言ではありません。管轄、準拠法、外国裁判の承認、婚姻・戸籍上の状態、夫婦財産制、子に関する既存の合意または裁判、事実関係および証拠、ならびに最新の公式規則により、手続および結果が異なる場合があります。登記、不服申立て、請求および執行の各期限については、行動を起こす前に、それぞれの権利および手続の正確な起算点を基準として個別にご確認ください。';
 const author = '**曾雋崴弁護士（Wei Tseng）**';
 const exactEnding = `- ${internalLinks[2]}
 
@@ -126,11 +128,11 @@ ${disclaimer}
 
 ${author}`;
 
-const frozenVisibleJapaneseCount = 11_607;
-const frozenVisibleKanaCount = 5_112;
+const frozenVisibleJapaneseCount = 11_639;
+const frozenVisibleKanaCount = 5_136;
 const frozenCalculatedMinutes = 24;
 const frozenSourceSha256 =
-  '3462e2325f7f21b3d69ba6719d40ff082e157eea6813e5e8b4059bf6c2d1bce6';
+  '417cc5323569c4c975e5da4786a0f2414a7c369751782179c9f0192ecd2d2274';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -734,9 +736,10 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
   it('ends with the exact disclaimer and author and nothing else', () => {
     expect(raw.trimEnd().endsWith(exactEnding)).toBe(true);
     expect(raw.trimEnd()).toMatch(
-      /個別事情に即して確認してください。\n\n\*\*曾雋崴弁護士（Wei Tseng）\*\*$/,
+      /それぞれの権利および手続の正確な起算点を基準として個別にご確認ください。\n\n\*\*曾雋崴弁護士（Wei Tseng）\*\*$/,
     );
     expect(countOccurrences(raw, disclaimer)).toBe(1);
+    expect(raw).not.toContain(staleDisclaimer);
     expect(countOccurrences(raw, author)).toBe(1);
   });
 

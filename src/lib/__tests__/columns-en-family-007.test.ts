@@ -148,6 +148,10 @@ const article1056SubsectionHeading =
   '### Article 1056, Article 1057, and child support';
 const article1056Paragraph =
   '**Article 1056** provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met. The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.';
+const completeParentalRightsSubsectionHeading =
+  '### Complete parental rights and duties, not “custody” as an umbrella';
+const childScopeParagraph =
+  'Under Taiwan law, the precise concept is the **exercise and assumption of rights and duties regarding a minor child**. It may include the child’s residence, day-to-day care, educational and medical decisions, management of the child’s property, and legal representation. Terms such as “parental rights” or “custody” may be used as shorthand for convenience, but no single term fully translates the entire set of rights and duties under Taiwan law.';
 const filingDocumentsParagraph =
   'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.';
 const filingDocumentsPrefixMarker =
@@ -173,16 +177,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '9f0bfe38e4eb682faf2115fb5f9df08774f2679777b1316592714d472631e673';
+  '1463464e8b577fc5c17436c607fd438313b134a0338e2cd589c618ff930b993e';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '8d7ca175d9acdc77d5618095e68d317af8d296105e44daab2448744dbafb2878';
+  'e495d450a8579a6cafeab2d568ba8f70904341f458c3351139124d179f3a1d15';
 const frozenSection1OnwardSha256 =
-  'b177ec7c072a42ee5222a7d94ccdd287eb9ec35e56db48e443e9119beabca0f8';
-const frozenVisibleWordCount = 5_335;
+  'c991a2da872972ac53962f162674ce4ddd20b7a0a4e7e2c4824f20b1e9dfe908';
+const frozenVisibleWordCount = 5_337;
 const frozenSourceSha256 =
-  'cb1021e3f3b3880b5f60dbed834940bcdf01aeb4e5f2dfd13be35b7ed96798e5';
+  'aea471ada8a0246e09f53582a7f811c2ba1820102cbaf0231bafc7ac32c3964d';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -934,12 +938,28 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     );
   });
 
+  it('publishes the exact complete parental-rights-and-duties scope paragraph', () => {
+    const subsectionMarker = `${completeParentalRightsSubsectionHeading}\n\n`;
+    const subsectionStart = parsed.content.indexOf(subsectionMarker);
+    const paragraphStart = subsectionStart + subsectionMarker.length;
+    const agreementStart = parsed.content.indexOf(
+      '\n\nParents may agree on the arrangement.',
+      paragraphStart,
+    );
+
+    expect(subsectionStart).toBeGreaterThan(-1);
+    expect(agreementStart).toBeGreaterThan(paragraphStart);
+    expect(parsed.content.slice(paragraphStart, agreementStart)).toBe(
+      childScopeParagraph,
+    );
+  });
+
   it('locks Articles 1055 and 1055-1, the full Taiwan concept, review, and unresolved issues', () => {
     const section = sectionBody(parsed.content, headings[7]);
     const requiredPhrases = [
       faq6Answer,
-      'Taiwan law frames the issue as the **exercise and assumption of rights and duties regarding a minor child**',
-      'The everyday word “custody” may be used only as a shorthand after that complete concept is understood.',
+      childScopeParagraph,
+      'management of the child’s property, and legal representation',
       'A signed divorce agreement does not freeze the child’s situation against later court review',
       'Articles 1055 and 1055-1 require a best-interests analysis based on the statutory factors and the actual evidence.',
       'continuity and safety',

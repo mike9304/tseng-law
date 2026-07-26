@@ -211,7 +211,7 @@ Under Civil Code Articles 1055 and 1055-1, arrangements for the exercise and ass
 
 ### Complete parental rights and duties, not “custody” as an umbrella
 
-Taiwan law frames the issue as the **exercise and assumption of rights and duties regarding a minor child**, together with contact or visitation and related arrangements. The everyday word “custody” may be used only as a shorthand after that complete concept is understood. It is not a full substitute for every Taiwan-law right and duty, and it does not by itself describe decision-making, care, contact, support, or registration consequences.
+Under Taiwan law, the precise concept is the **exercise and assumption of rights and duties regarding a minor child**. It may include the child’s residence, day-to-day care, educational and medical decisions, management of the child’s property, and legal representation. Terms such as “parental rights” or “custody” may be used as shorthand for convenience, but no single term fully translates the entire set of rights and duties under Taiwan law.
 
 Parents may agree on the arrangement. The court may decide or change it when agreement is missing, fails, or is adverse to the child. A signed divorce agreement does not freeze the child’s situation against later court review when the statutory conditions for decision or change are met. An agreed change is not always a mere household-registration formality; substance and the child’s best interests still matter.
 

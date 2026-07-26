@@ -35,8 +35,11 @@ const faq1Answer =
   'Under Civil Code Article 1050, a Taiwan mutual-consent divorce is effective only when three requirements are met together: the divorce is in writing; at least two witnesses who personally perceived and confirmed both spouses’ genuine mutual intent to divorce sign the instrument; and the divorce is registered with the household-registration authority. A signed private agreement alone does not complete the divorce, because registration is constitutive for this path. Where foreign elements are involved, parties must also examine applicable law, authentication and translation of documents, and any registration or recognition steps required in another jurisdiction. Always check the current official household-registration guide and the competent office for filing details.';
 const faq2Answer =
   'No. When a court orders a party or legal representative to appear in person and that person fails to appear without just cause, Family Act Article 13 applies Civil Procedure Code Article 303 mutatis mutandis. The first fine for unjustified nonappearance may be up to NTD 30,000, and repeated sanctions may follow after further lawful notice and another unjustified failure to appear. Compulsory appearance by arrest is not available. These rules do not mean both spouses must always sit together in the same room. Whether remote participation, separate or safety arrangements, or representation is permitted depends on the court’s decision under law and the circumstances of the case.';
-const faq3Answer =
-  'Civil Code Article 1052 paragraph 2 allows a petition where another serious cause makes continuation of the marriage difficult, but its proviso provides that if that cause is attributable to one spouse, only the other spouse may petition. That proviso remains in the current statutory text. Constitutional Court Judgment 112-Hsien-Pan-4 did not repeal it. The Court held the restriction is generally constitutional, yet unconstitutional to the extent that, without considering whether a serious cause arose or continued for a considerable period, it completely deprives the solely responsible spouse of any opportunity to divorce and is manifestly harsh. Outcome turns on the court’s application of that reasoning to the facts, not on an absolute bar or an automatic right to divorce.';
+const responsibleSpouseParagraph =
+  'The proviso to current Civil Code Article 1052, paragraph 2 provides that, where a serious cause for the breakdown of the marriage is attributable solely to one spouse, only the other spouse may, in principle, petition for divorce. However, Taiwan Constitutional Court Judgment 112-Hsien-Pan-4 held the proviso unconstitutional to the extent that it completely deprives the responsible spouse of any opportunity to divorce, without considering whether a considerable period has elapsed since the serious cause arose or whether it has continued for a considerable period, and thereby produces a manifestly harsh result in an individual case. Because the proviso remains in the statutory text, a petition by the responsible spouse should not be treated as automatically available or automatically barred; the outcome depends on how the court applies the judgment’s reasoning to the specific facts.';
+const responsibleSpouseJudgmentSentence =
+  'The Court held the proviso unconstitutional to the extent that it completely deprives the solely responsible spouse of any opportunity to divorce, without considering whether a considerable period has elapsed since the serious cause arose or whether it has continued for a considerable period, and thereby produces a manifestly harsh result in an individual case.';
+const faq3Answer = responsibleSpouseParagraph;
 const faq4Answer =
   'No single factor is conclusive. Registered title, beneficial-ownership or nominee-registration theories, source-of-funds evidence such as premarital savings used for a down payment or loan installments, gifts, loans, reimbursement or other claims, and the separate residual-property calculation under Civil Code Article 1030-1 raise different legal questions. Title in one spouse’s name does not by itself defeat every ownership, contractual, or reimbursement claim, and premarital funding does not by itself transfer title or fix the residual-property result. Parties must examine the real agreement, acquisition timing and cause, fund flows, debts, gratuitous acquisitions, and supporting records. Ownership issues and the Article 1030-1 equal-difference calculation after exclusions and possible court adjustment remain distinct inquiries.';
 const faq5Answer =
@@ -148,16 +151,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '95f890cd69e70e774859a62b1dcb88862d6e5ec7d9955435e70c85207a0ff23a';
+  '74e8ee6621d370eb1ea6714ddcb866c7033935f25bc5d98a6abdcadb1a1c4e4a';
 const frozenSection4OutsideArticle1052IntroSha256 =
-  '8da1e5106649d305bd65795acaf2e17107673964de900c66f748c53bc8660219';
+  '3ac539fc976732842a19da61a7bedcf26ceefff016d91051bd7d2b73ddd4e0e7';
 const frozenSection5OnwardSha256 =
   '62b854f3c28768bd9d2954970b4b2c4bdee1df78100330f314065bea845a0fe8';
 const frozenSection1OnwardSha256 =
-  '87e76616fc22e666aaf76b7bc19cce303cc4c8a4b7f6ff68bc5f215453ea1d53';
-const frozenVisibleWordCount = 5_070;
+  '092b62076fb65e10d0ebd75dba7b8520f50f82f469acfd53a30e22af0c7b2f36';
+const frozenVisibleWordCount = 5_097;
 const frozenSourceSha256 =
-  '25886b24aa521f4afb389e9af045ef9587bed678f92b9714831e9f2351f4568b';
+  '897046717d10c428d7e25a65b10fcae4df48c4845613ea892c9235f52ee291df';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -658,6 +661,55 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+  });
+
+  it('publishes the exact constitutional qualification as the first Section 4 paragraph', () => {
+    const section = sectionBody(parsed.content, headings[3]);
+    const paragraphEnd = section.indexOf(
+      `\n\n${article1052Paragraph1Heading}`,
+    );
+    const paragraph = section.slice(
+      `## ${headings[3]}\n\n`.length,
+      paragraphEnd,
+    );
+
+    expect(paragraphEnd).toBeGreaterThan(-1);
+    expect(paragraph).toBe(responsibleSpouseParagraph);
+    expect(parsed.data.faq[2]?.a).toBe(responsibleSpouseParagraph);
+    expect(post?.faq?.[2]?.a).toBe(responsibleSpouseParagraph);
+    expect(countOccurrences(parsed.content, responsibleSpouseParagraph)).toBe(
+      1,
+    );
+    expect(countOccurrences(raw, responsibleSpouseParagraph)).toBe(2);
+    expect(
+      countOccurrences(post?.content ?? '', responsibleSpouseParagraph),
+    ).toBe(1);
+    expect(
+      countOccurrences(
+        JSON.stringify({ faq: post?.faq, content: post?.content }),
+        responsibleSpouseParagraph,
+      ),
+    ).toBe(2);
+    expect(paragraph).not.toContain('generally constitutional');
+  });
+
+  it('uses the exact constitutional holding in the Paragraph 2 subsection', () => {
+    const section = sectionBody(parsed.content, headings[3]);
+    const subsectionStart = section.indexOf(
+      '### Paragraph 2 and the responsible-spouse proviso',
+    );
+    const subsectionEnd = section.indexOf(
+      '\n\n### Missing or absent spouses: no universal shortcut',
+      subsectionStart,
+    );
+    const subsection = section.slice(subsectionStart, subsectionEnd);
+
+    expect(subsectionStart).toBeGreaterThan(-1);
+    expect(subsectionEnd).toBeGreaterThan(subsectionStart);
+    expect(
+      countOccurrences(subsection, responsibleSpouseJudgmentSentence),
+    ).toBe(1);
+    expect(raw).not.toContain('generally constitutional');
   });
 
   it('presents the Article 1052 paragraph 1 rule to readers without exposing a translation instruction or changing later text', () => {

@@ -70,6 +70,10 @@ const approvedQ11ContinuedWorkBasisParagraph =
   '繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題，亦非單獨判斷勞動能力減損的依據；勞動能力減損應於 Q12 另行判斷。';
 const staleQ11ContinuedWorkBasisParagraph =
   '繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題；勞動能力減損應於 Q12 另行判斷。';
+const approvedQ14JointClaimParagraph =
+  '雇主可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。可考慮同時向僱用人及受僱人請求損害賠償。僱用人賠償後，得向受僱人求償。';
+const staleQ14JointClaimParagraph =
+  '雇主可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。僱用人賠償後，得向受僱人求償。';
 const immutablePrefixBytes = 7_283;
 const immutablePrefixSha256 =
   'f0ef7b883904a73e3f202b79cbc57110a9d8558349b69ce41a18039bee70ab2b';
@@ -1149,7 +1153,12 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
   });
 
   it('locks Q14 possible employer civil liability and separate individual criminal responsibility', () => {
-    expectConcepts(q11ToQ15SectionForQuestion(14), [
+    const section = q11ToQ15SectionForQuestion(14);
+
+    expect(countOccurrences(section, approvedQ14JointClaimParagraph)).toBe(1);
+    expect(section).not.toContain(staleQ14JointClaimParagraph);
+
+    expectConcepts(section, [
       { label: 'Civil Code Article 188', pattern: /民法第\s*188\s*條/ },
       {
         label: 'employee unlawfully injures while performing duties',
@@ -1175,6 +1184,10 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
         label: 'unavoidable-loss defense',
         pattern:
           /(?:即使|縱使|即便).{0,16}(?:相當注意|合理注意|已盡注意).{0,20}(?:仍|也).{0,8}(?:不能避免|無法避免)/s,
+      },
+      {
+        label: 'victim can consider a joint claim against employer and employee',
+        pattern: /可考慮同時向僱用人及受僱人請求損害賠償/,
       },
       {
         label: 'paragraph 2 victim relief',

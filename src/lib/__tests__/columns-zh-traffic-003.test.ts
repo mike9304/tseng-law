@@ -50,6 +50,10 @@ const q11ToQ15Headings = [
 const q11ToQ15SourceHeading = 'Q11–Q15 官方依據';
 const q16Marker =
   'Q16. 事故發生後，可以把所有事情都交給保險公司處理嗎？';
+const approvedClosingContactSentence =
+  '許多肇事者並不在意致電慰問或探望被害人，認為保險公司會處理，自己往往不出面。';
+const staleClosingContactSentence =
+  '許多肇事者不關心致電慰問或探望被害人，認為保險公司會處理一切而不出面。';
 const approvedQ2PrivatePhotoSentence =
   '自行拍照雖然有用，但不能取代死傷事故依法所需的警察處理。';
 const staleQ2PrivatePhotoSentence =
@@ -85,9 +89,9 @@ const immutablePrefixSha256 =
 const immutableQ1ToQ10PrefixBytes = 12_446;
 const immutableQ1ToQ10PrefixSha256 =
   '4c2bfa6bd10dc6ad3f84f34af46d4c975325a793a41c623134b1ca6e6437dab7';
-const immutableQ16TailBytes = 3_167;
+const immutableQ16TailBytes = 3_176;
 const immutableQ16TailSha256 =
-  '2551092da265fd0b67c8e145d233c586930ab7de00fadc30792bf28d49ad79b9';
+  'c6297f26ab0b4ab35531fe62ffacdc212403d508458a7492447a4ebc1635d227';
 
 const sourceTargets = [
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012',
@@ -363,6 +367,11 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
     expect(q20Tail).toContain(q20Marker);
     expect(countOccurrences(q20Tail, approvedQ20EngagementWarningSentence)).toBe(1);
     expect(q20Tail).not.toContain(staleQ20EngagementWarningSentence);
+  });
+
+  it('locks the closing-contact wording within the Q16-to-end tail', () => {
+    expect(countOccurrences(q16ToQ20Tail, approvedClosingContactSentence)).toBe(1);
+    expect(q16ToQ20Tail).not.toContain(staleClosingContactSentence);
   });
 
   it('uses the exact frontmatter, sole H1, and two contracted images', () => {

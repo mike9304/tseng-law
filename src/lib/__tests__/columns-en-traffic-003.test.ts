@@ -565,7 +565,7 @@ describe('English traffic column 003 — Q6–Q10 translation contract', () => {
       /(?:party application|application by (?:a|the) party|party.{0,30}apply).{0,100}(?:within|no later than).{0,30}six months.{0,60}(?:after|from).{0,30}(?:accident|date of the accident)/is,
     );
     expect(q6).toMatch(
-      /(?:investigation|trial).{0,80}(?:pending|underway).{0,120}(?:judicial|court|prosecutorial).{0,30}commission.{0,120}(?:rather than|instead of).{0,80}(?:new )?direct application/is,
+      /(?:investigation|trial).{0,80}(?:pending|underway).{0,120}(?:(?:judicial|court|prosecutorial).{0,30}commission|commission.{0,30}(?:by )?(?:the )?(?:judicial|court|prosecutorial) authority).{0,120}(?:rather than|instead of).{0,80}(?:new )?direct application/is,
     );
     expect(q6).toMatch(
       /(?:dissatisfied|disagree).{0,60}(?:seek|request|apply for).{0,30}review.{0,100}(?:only one|one review|limited to one|once only)/is,
@@ -589,7 +589,7 @@ describe('English traffic column 003 — Q6–Q10 translation contract', () => {
       /Article 216.{0,120}actual loss.{0,80}(?:lost profit|profit that would ordinarily have been expected)/is,
     );
     expect(q7).toMatch(
-      /(?:injury|personal injury).{0,120}Article 193.{0,120}(?:necessary )?medical.{0,70}care.{0,80}(?:treatment[- ]travel|travel.{0,30}treatment).{0,100}assistive device.{0,100}(?:increased need|increased-need)/is,
+      /(?:injury|personal injury).{0,120}Article 193.{0,120}(?:necessary )?medical.{0,70}care.{0,80}(?:treatment[- ]travel|travel.{0,30}treatment).{0,100}assistive device.{0,100}(?:increased need|increased-need|increased living needs)/is,
     );
     expect(q7).toMatch(
       /(?:temporary income loss|lost income).{0,100}loss of earning capacity.{0,100}Article 195.{0,80}non-pecuniary damage/is,

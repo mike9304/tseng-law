@@ -81,197 +81,58 @@ For a complaint-based offense, Criminal Procedure Code Article 238 permits withd
 - [National Police Agency traffic-accident evidence and document guidance](https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889)
 - [National Police Agency traffic-accident FAQ](https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)
 
-Q6. How is accident responsibility determined?
+## Q6. How is responsibility for the accident determined?
 
-​
+The Road Traffic Accident Preliminary Analysis Determination Form is a preliminary police analysis based on evidence gathered at the scene. It is not a court judgment: it neither binds the court nor fixes a fault percentage. Because the evidence needed and the scope of the dispute vary from one accident to another, the preliminary analysis, statutory appraisal, and review do not form an automatic or mandatory sequence.
 
-After an accident, the liability analysis process is as follows.
+Under the applicable rules, an eligible party may apply for a vehicle-accident appraisal, a handling authority may refer the matter, or a judicial authority may commission an appraisal. A party application is ordinarily made within six months after the accident. If an investigation or trial is already pending, the appraisal is generally commissioned by the judicial authority rather than pursued through a new direct application.
 
-​
+A party dissatisfied with an appraisal opinion may seek review, but only one review is available. Appraisal and review opinions serve as evidence or reference material. The court independently evaluates statements, video, scene records, and the record as a whole.
 
-Road Traffic Accident Preliminary Analysis Determination Form (道路交通事故初步分析研判表) → Appraisal Opinion of the Vehicle Operation Accident Appraisal Committee (車輛行車事故鑑定委員會鑑定意見書) → Opinion of the Vehicle Operation Accident Appraisal Review Council (車輛行車事故鑑定覆議會會議意見書) → Academic appraisal result (學術中心鑑定結果)
+## Q7. What losses can I claim after an accident?
 
-​
+A claim under Civil Code Article 184 requires an unlawful infringement of a right, causation connected to the accident, and proof of damage. The accident alone does not automatically establish every listed loss. Civil Code Article 216 provides the standard for determining the scope of actual loss and lost profit.
 
-​
+- **Injury**: Under Civil Code Article 193, recoverable loss may include necessary medical expenses; expenses for care, travel for treatment, assistive devices, and other increased living needs; proven temporary income loss; and loss of earning capacity. Civil Code Article 195 also permits a claim for non-pecuniary damage.
+- **Death**: Under Civil Code Article 192, recoverable loss may include applicable pre-death medical and increased-need expenses, funeral expenses, and loss of support for a person legally entitled to support. Civil Code Article 194 also permits non-pecuniary damage for qualifying relatives.
+- **Property**: Under Civil Code Article 196, a claimant may seek proven actual property damage, including supported repair expenses or diminution in value.
 
-​
+## Q8. How should I submit medical-expense records while treatment continues?
 
-After an accident, police attend the scene, take statements, take photographs, collect evidence, and draw a scene diagram.
+Preserve receipts, diagnosis certificates, and medical records, and organize evidence of each treatment’s medical necessity and causation in relation to the accident. Material from continuing treatment may supplement the evidence in line with the procedural schedule and the existing claim, but late material or an expanded claim is not guaranteed to be accepted.
 
-​
+Supplementing medical evidence must be distinguished from changing or increasing the amount or scope of the claim. Adding medical receipts after filing an attached civil action in a criminal case does not by itself automatically create a court fee.
 
-They then prepare a “Road Traffic Accident Preliminary Analysis Determination Form.” This is simply called the “chupan form” (初判表).
+Under Code of Criminal Procedure Article 504, however, after the matter is transferred to the civil division, a change, addition, or expansion beyond the pre-transfer claim can create a court-fee issue for the excess. Confirm the transfer stage, filing time, and claim scope case by case.
 
-​
+## Q9. How can I prove professional-care and family-care expenses?
 
-The chupan form records both parties’ information and briefly notes the accident cause and violations.
+A diagnosis certificate or medical opinion is useful evidence of the need for care, but it is not conclusive by itself. The evidence should address accident causation, the need for care, its actual provision and duration, and a reasonable amount.
 
-​
+Unpaid care actually provided by a relative may be valued as damage in an appropriate case. It is not automatically allowed merely because a relative provided the care; the nature and duration of the care and its customary cost are also considered.
 
-However, the chupan form does not state whose responsibility is the primary cause, whose is secondary, or the fault ratio.
+## Q10. How can I prove travel expenses for treatment?
 
-​
+Organize travel expenses by connecting the travel records to treatment for the accident-related injury. Relevant details include the route, visit dates, number of visits, transport method, fare, and the necessity and reasonableness of that method.
 
-The chupan form is only a preliminary analysis determination; it allows only a rough understanding of responsibility and is provided as reference material for liability determination.
+Receipts, fare records, route records, and treatment records are possible evidence. A taxi receipt is neither the only proof nor automatically sufficient.
 
-​
+### Q6–Q10 Official Sources
 
-​
-
-​
-
-If you believe there is a problem with the chupan form, you may apply for appraisal by the “Vehicle Operation Accident Appraisal Committee.”
-
-​
-
-During the appraisal process, accident parties have an opportunity to state their views, and if they have opinions, they may state them at the hearing.
-
-​
-
-The appraisal opinion states primary and secondary causes according to the degree of fault of each side.
-
-​
-
-If both sides’ degree of fault is the same, both are recorded as causes of the accident.
-
-​
-
-Judges refer to the appraisal opinion and determine each side’s fault ratio as 5:5, 7:3, or similar.
-
-​
-
-​
-
-​
-
-If you receive the Vehicle Operation Accident Appraisal Committee’s appraisal opinion and disagree, you may apply in writing with reasons for appraisal review.
-
-​
-
-If you still disagree after receiving the appraisal review opinion, you may ultimately proceed with an academic appraisal.
-
-​
-
-​
-
-​
-
-In practice, many parties apply for academic appraisal at Feng Chia University’s Vehicle Operation Accident Appraisal Research Center.
-
-​
-
-Feng Chia University conducts appraisals in great detail, and fault ratios are calculated precisely.
-
-​
-
-Once the academic appraisal result is out, there is practically almost no room to overturn it, and judges generally respect the judgment of the final appraisal institution.
-
-​
-
-​
-
-​
-
-Q7. After an accident, what items can you claim from the other party?
-
-​
-
-1. Medical expenses
-
-​
-
-2. Nursing care expenses
-
-​
-
-3. Additional living expenses necessitated by the injury (e.g., hospital commute costs, crutches, wheelchair costs, medical certificate issuance fees, etc.)
-
-​
-
-4. Loss of working capacity (temporary inability to work)
-
-​
-
-5. Loss of labor capacity
-
-​
-
-6. Funeral expenses
-
-​
-
-7. Support expenses (support for dependents who cannot maintain their livelihood)
-
-​
-
-8. Solatium (mental consolation money)
-
-​
-
-9. Property loss (e.g., vehicle repair costs, diminution in value of the accident vehicle, etc.)
-
-​
-
-​
-
-​
-
-Q8. What should you watch for when claiming medical expenses?
-
-​
-
-Keep all medical receipts carefully.
-
-​
-
-If the injury is severe and a civil lawsuit is ongoing while you continue treatment and surgery, you may submit additional medical receipts during the lawsuit.
-
-​
-
-However, if you submit additional medical receipts after filing an incidental civil action attached to a criminal case, you will need to pay additional court costs.
-
-​
-
-​
-
-​
-
-Q9. What should you watch for when claiming nursing care expenses?
-
-​
-
-Judges generally recognize the need for nursing care based on medical certificates issued by hospitals.
-
-​
-
-If the medical certificate specifies a nursing period, the judge will recognize nursing care expenses.
-
-​
-
-Even if a family member provides care and there is no actual cash expenditure, judges still recognize claims for nursing care expenses.
-
-​
-
-​
-
-​
-
-Q10. What should you watch for when claiming hospital commute costs?
-
-​
-
-To claim commute costs, calculate how many times you visited the hospital and inform the judge of your home location and the hospital location.
-
-​
-
-You should explain how much one taxi ride costs, and taxi receipts are even better if available.
-
-​
-
-​
-
-​
+- [Vehicle Accident Appraisal and Review Rules Article 3](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
+- [Vehicle Accident Appraisal and Review Rules Articles 11–15](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print)
+- [Directorate General of Highways vehicle-accident appraisal review application form](https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf)
+- [Civil Code Article 184](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001)
+- [Civil Code Article 192](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001)
+- [Civil Code Article 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
+- [Civil Code Article 194](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=194&pcode=B0000001)
+- [Civil Code Article 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
+- [Civil Code Article 196](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=196&pcode=B0000001)
+- [Civil Code Article 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
+- [Code of Criminal Procedure Article 504](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
+- [Judicial Yuan guidance on expanding claims after transfer](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
+- [Chiayi District Court judgment on family-care expenses](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
+- [Tainan District Court judgment on treatment-travel expenses](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
 Q11. What should you watch for when claiming loss from inability to work?
 

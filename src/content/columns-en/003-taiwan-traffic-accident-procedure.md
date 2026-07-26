@@ -140,7 +140,7 @@ Temporary lost income requires evidence that an accident-related injury left the
 
 Useful evidence may include treatment records, attendance or leave records, payroll and tax material, and employer confirmation. A self-employed claimant may instead rely on sales records, transaction records, tax filings, and other material suited to the business.
 
-Continuing to work or receiving unchanged pay is relevant to temporary lost income during recovery. It does not by itself decide the separate issue of lasting loss of earning capacity, which is addressed in Q12.
+Continuing to work or receiving unchanged pay is relevant to temporary lost income during recovery. That fact alone neither automatically determines damages for loss of earning capacity nor serves as a stand-alone basis for assessing them; Q12 addresses that issue separately.
 
 ## Q12. How should I prove loss of earning capacity?
 

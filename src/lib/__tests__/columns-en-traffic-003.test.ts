@@ -80,6 +80,10 @@ const q6ToQ10ContractedHeadings = [
 const q11Heading =
   '## Q11. How should I prove temporary lost income during treatment and recovery?';
 const q12Heading = '## Q12. How should I prove loss of earning capacity?';
+const approvedQ11EarningCapacitySentence =
+  'That fact alone neither automatically determines damages for loss of earning capacity nor serves as a stand-alone basis for assessing them; Q12 addresses that issue separately.';
+const staleQ11EarningCapacitySentence =
+  'It does not by itself decide the separate issue of lasting loss of earning capacity, which is addressed in Q12.';
 const q13Heading = '## Q13. How are non-pecuniary damages assessed?';
 const q14Heading =
   '## Q14. Can an employer also face civil liability for an accident during work?';
@@ -873,9 +877,15 @@ describe('English traffic column 003 — Q11–Q15 translation contract', () => 
     expect(q11).toMatch(
       /(?:continuing to work|continued working).{0,100}(?:unchanged pay|pay remained unchanged|receiving the same pay).{0,120}(?:relevant|matter).{0,120}temporary lost income/is,
     );
+    expect(countOccurrences(q11, approvedQ11EarningCapacitySentence)).toBe(1);
+    expect(raw).not.toContain(staleQ11EarningCapacitySentence);
     expect(q11).toMatch(
-      /(?:does not|do not).{0,40}(?:by itself|alone|automatically).{0,60}(?:decide|determine|eliminate).{0,80}(?:lasting )?(?:loss of earning capacity|earning-capacity)/is,
+      /fact alone.{0,40}neither.{0,40}automatically determines damages.{0,80}loss of earning capacity/is,
     );
+    expect(q11).toMatch(
+      /loss of earning capacity.{0,100}stand-alone basis.{0,80}assessing/is,
+    );
+    expect(q11).toMatch(/Q12 addresses that issue separately/i);
   });
 
   it('treats lasting earning-capacity loss as individualized rather than mechanically fixed in Q12', () => {

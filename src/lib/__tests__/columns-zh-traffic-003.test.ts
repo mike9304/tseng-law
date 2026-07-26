@@ -89,9 +89,23 @@ const immutablePrefixSha256 =
 const immutableQ1ToQ10PrefixBytes = 12_446;
 const immutableQ1ToQ10PrefixSha256 =
   '4c2bfa6bd10dc6ad3f84f34af46d4c975325a793a41c623134b1ca6e6437dab7';
-const immutableQ16TailBytes = 3_176;
+const immutableQ16TailBytes = 3_395;
 const immutableQ16TailSha256 =
-  'c6297f26ab0b4ab35531fe62ffacdc212403d508458a7492447a4ebc1635d227';
+  '3c2143dc5fc9a3eedf18e643c1ebfd1d6ce9e1b99c82d5cae2ac7099a211a5d0';
+const relatedReadingFooter = `> 延伸閱讀：
+> - [台灣訴訟律師指南](/zh-hant/taiwan-litigation-lawyer)
+> - [可用韓語溝通的台灣律師](/zh-hant/korean-lawyer-in-taiwan)
+> - [如何尋找台灣律師](/zh-hant/taiwan-lawyer)`;
+const relatedReadingTargets = [
+  '/zh-hant/taiwan-litigation-lawyer',
+  '/zh-hant/korean-lawyer-in-taiwan',
+  '/zh-hant/taiwan-lawyer',
+] as const;
+const relatedReadingKoreanTargets = [
+  '/ko/taiwan-litigation-lawyer',
+  '/ko/korean-lawyer-in-taiwan',
+  '/ko/taiwan-lawyer',
+] as const;
 
 const sourceTargets = [
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012',
@@ -372,6 +386,20 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
   it('locks the closing-contact wording within the Q16-to-end tail', () => {
     expect(countOccurrences(q16ToQ20Tail, approvedClosingContactSentence)).toBe(1);
     expect(q16ToQ20Tail).not.toContain(staleClosingContactSentence);
+  });
+
+  it('ends with one Traditional Chinese related-reading footer', () => {
+    const closingFooter = raw.slice(raw.lastIndexOf('> 延伸閱讀：'));
+
+    expect(countOccurrences(raw, relatedReadingFooter)).toBe(1);
+    expect(raw.endsWith(`\n---\n\n${relatedReadingFooter}\n`)).toBe(true);
+    expect(closingFooter).toBe(`${relatedReadingFooter}\n`);
+    for (const target of relatedReadingTargets) {
+      expect(closingFooter).toContain(target);
+    }
+    for (const target of relatedReadingKoreanTargets) {
+      expect(closingFooter).not.toContain(target);
+    }
   });
 
   it('uses the exact frontmatter, sole H1, and two contracted images', () => {

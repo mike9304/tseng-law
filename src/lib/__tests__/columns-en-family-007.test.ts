@@ -191,16 +191,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '45cf5d3349c8743ab8297119de69f60b122ee29278895b1f15f7d290722c4c7a';
+  '0afaaaf6abef8dfef854f115cd0df1c0732abc9790ce92129806cdbace66eee6';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  'a5fe637ea7f1928be4b97c0dbb1f5b47ef98a046f30d8e0f16e61de2485babaa';
+  '8139b018358b082a74b1b7cd16971b7ef1ff26de4c8a5fe19b5b5062792ee670';
 const frozenSection1OnwardSha256 =
-  '4c902bde4202abfcd8646d63eac334cfae8bb4e905d401de7bf8016a9edf8f8e';
-const frozenVisibleWordCount = 5_609;
+  '406683d77d1348a45315ee6cf946debebba5a1dcf3b28535b70cbe67a8feacc5';
+const frozenVisibleWordCount = 5_607;
 const frozenSourceSha256 =
-  '0a1d7933c357e223a570f5d742921d5e87fdee0db3c688c2ad5044f981013929';
+  '2fbc7d81cad6fc6f0e93e17e040b46846e6618ab2af63c1132175117754db1f4';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1228,6 +1228,27 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     );
   });
 
+  it('publishes the exact foreign marriage or divorce records evidence item', () => {
+    const section = sectionBody(parsed.content, headings[10]);
+    const expectedItem =
+      '3. **Foreign marriage or divorce records.** For foreign marriage and divorce records and foreign judgments or certificates, check authentication by a Taiwan overseas mission or other competent authority; the Chinese translation and whether it has been certified or notarized; and their recognition, legal effect, and registration status in Taiwan.';
+    const itemStart = section.indexOf(
+      '3. **Foreign marriage or divorce records.**',
+    );
+    const nextItemStart = section.indexOf(
+      '\n4. **Matrimonial property and debts.**',
+      itemStart,
+    );
+
+    expect(itemStart).toBeGreaterThan(-1);
+    expect(nextItemStart).toBeGreaterThan(itemStart);
+    expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
+    expect(countOccurrences(section, expectedItem)).toBe(1);
+    expect(section).not.toContain(
+      'Documents from mainland China, Hong Kong, and Macao follow distinct verification tracks',
+    );
+  });
+
   it('publishes the exact limited-disclosure privacy plan as evidence item nine', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
@@ -1272,7 +1293,13 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'Collect and organize by procedure',
     );
     expect(section).toContain(
-      'Documents from mainland China, Hong Kong, and Macao follow distinct verification tracks',
+      'Taiwan overseas mission or other competent authority',
+    );
+    expect(section).toContain(
+      'certified or notarized',
+    );
+    expect(section).toContain(
+      'recognition, legal effect, and registration status in Taiwan',
     );
     expect(section).toContain('acquisition-source evidence');
     expect(section).toContain(

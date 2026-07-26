@@ -26,11 +26,16 @@ const immutablePrefixSha256 =
 const immutableQ1ToQ5PrefixBytes = 8_316;
 const immutableQ1ToQ5PrefixSha256 =
   '274271d5547c07a50e343368319568a6fe866b5b3d05954865d954ce8eaea481';
+const immutableQ1ToQ10PrefixBytes = 14_392;
+const immutableQ1ToQ10PrefixSha256 =
+  'd1fbaca292532f899e16acdf099123b3676e7dc5346c113188762df0e123f197';
 const q11Marker =
   'Q11. What should you watch for when claiming loss from inability to work?';
-const immutableQ11TailBytes = 9_193;
-const immutableQ11TailSha256 =
-  'b38aac06db7e6a17dff81b705a4870d0eccaf4b84d828d28aa2ff644a801f370';
+const q16Marker =
+  'Q16. After an accident, can you leave everything to the insurance company?';
+const immutableQ16ToQ20TailBytes = 4_157;
+const immutableQ16ToQ20TailSha256 =
+  '7afa297d660ac7931f81f1090598245d6726191a9b5062aa395064b3e1f34039';
 
 const q1Heading = '## Q1. Can I leave the scene after an accident?';
 const q2Heading = '## Q2. What evidence should I preserve first?';
@@ -62,6 +67,65 @@ const q6ToQ10ContractedHeadings = [
   q8Heading,
   q9Heading,
   q10Heading,
+] as const;
+
+const q11Heading =
+  '## Q11. How should I prove temporary lost income during treatment and recovery?';
+const q12Heading = '## Q12. How should I prove loss of earning capacity?';
+const q13Heading = '## Q13. How are non-pecuniary damages assessed?';
+const q14Heading =
+  '## Q14. Can an employer also face civil liability for an accident during work?';
+const q15Heading =
+  '## Q15. What motor-insurance benefits and coverage should I check?';
+const q11ToQ15SourceHeading = '### Q11–Q15 Official Sources';
+const q11ToQ15ContractedHeadings = [
+  q11Heading,
+  q12Heading,
+  q13Heading,
+  q14Heading,
+  q15Heading,
+] as const;
+
+const q11ToQ15OfficialSourceUrls = [
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001',
+  'https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf',
+  'https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf',
+  'https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001',
+  'https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL006889',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL047990',
+] as const;
+
+const prohibitedQ11ToQ15Copy = [
+  'the judge will not recognize the claim',
+  'accounts for the largest share',
+  'I advise parties',
+  'without fail',
+  '10% of all wages',
+  'until the plaintiff reaches retirement age',
+  'turns 65',
+  'must be used',
+  'TWD 1,693,928',
+  'appraisal fees are not high',
+  'TWD 10,000–20,000',
+  'usually less than what plaintiffs imagine',
+  'Hundreds of thousands of TWD is a typical range',
+  'not to expect millions of TWD',
+  'The company bears employer liability',
+  'companies usually have more assets',
+  'sue the company together',
+  'can only be brought against the individual',
+  'everyone is legally required to purchase',
+  'disappearance or death',
+  'TWD 2,000,000',
+  'covers the remaining portion',
+  'does not cover injuries to the driver of your own vehicle',
 ] as const;
 
 const q6ToQ10OfficialSourceUrls = [
@@ -171,6 +235,14 @@ function q6ToQ10SectionBetween(startHeading: string, endHeading: string) {
     : q6ToQ10.slice(start, end);
 }
 
+function q11ToQ15SectionBetween(startHeading: string, endHeading: string) {
+  const start = q11ToQ15.indexOf(startHeading);
+  const end = q11ToQ15.indexOf(endHeading);
+  return start === -1 || end === -1 || end <= start
+    ? ''
+    : q11ToQ15.slice(start, end);
+}
+
 function containsOrderedLinePrefixes(
   value: string,
   prefixes: readonly string[],
@@ -206,7 +278,7 @@ const sources =
   q1ToQ5.indexOf(sourceHeading) === -1
     ? ''
     : q1ToQ5.slice(q1ToQ5.indexOf(sourceHeading));
-const q11ByteIndex = rawBytes.indexOf(Buffer.from(q11Marker, 'utf8'));
+const q11ByteIndex = immutableQ1ToQ10PrefixBytes;
 const q6ToQ10 =
   q11ByteIndex <= q6ByteIndex
     ? ''
@@ -220,6 +292,20 @@ const q6ToQ10Sources =
   q6ToQ10.indexOf(q6ToQ10SourceHeading) === -1
     ? ''
     : q6ToQ10.slice(q6ToQ10.indexOf(q6ToQ10SourceHeading));
+const q16ByteIndex = rawBytes.indexOf(Buffer.from(q16Marker, 'utf8'));
+const q11ToQ15 =
+  q16ByteIndex <= q11ByteIndex
+    ? ''
+    : rawBytes.subarray(q11ByteIndex, q16ByteIndex).toString('utf8');
+const q11 = q11ToQ15SectionBetween(q11Heading, q12Heading);
+const q12 = q11ToQ15SectionBetween(q12Heading, q13Heading);
+const q13 = q11ToQ15SectionBetween(q13Heading, q14Heading);
+const q14 = q11ToQ15SectionBetween(q14Heading, q15Heading);
+const q15 = q11ToQ15SectionBetween(q15Heading, q11ToQ15SourceHeading);
+const q11ToQ15Sources =
+  q11ToQ15.indexOf(q11ToQ15SourceHeading) === -1
+    ? ''
+    : q11ToQ15.slice(q11ToQ15.indexOf(q11ToQ15SourceHeading));
 const imageNodes = Array.from(
   bodyPrefix.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g),
   (match) => ({ alt: match[1], src: match[2] }),
@@ -256,15 +342,36 @@ describe('English traffic column 003 — metadata and introduction localization 
     expect(q6ByteIndex).toBeGreaterThan(immutablePrefixBytes);
   });
 
-  it('preserves the immutable Q11 tail byte-for-byte', () => {
-    expect(q11ByteIndex).toBeGreaterThan(q6ByteIndex);
-
-    const immutableQ11Tail = rawBytes.subarray(q11ByteIndex);
-    expect(immutableQ11Tail.toString('utf8').startsWith(q11Marker)).toBe(true);
-    expect(immutableQ11Tail.byteLength).toBe(immutableQ11TailBytes);
+  it('preserves the immutable Q1–Q10 prefix byte-for-byte', () => {
+    const immutableQ1ToQ10Prefix = rawBytes.subarray(
+      0,
+      immutableQ1ToQ10PrefixBytes,
+    );
+    expect(immutableQ1ToQ10Prefix.byteLength).toBe(
+      immutableQ1ToQ10PrefixBytes,
+    );
     expect(
-      crypto.createHash('sha256').update(immutableQ11Tail).digest('hex'),
-    ).toBe(immutableQ11TailSha256);
+      crypto.createHash('sha256').update(immutableQ1ToQ10Prefix).digest('hex'),
+    ).toBe(immutableQ1ToQ10PrefixSha256);
+    expect(q11ByteIndex).toBeGreaterThan(q6ByteIndex);
+  });
+
+  it('preserves the immutable Q16–Q20 tail byte-for-byte', () => {
+    expect(q16ByteIndex).toBeGreaterThan(q11ByteIndex);
+
+    const immutableQ16ToQ20Tail = rawBytes.subarray(q16ByteIndex);
+    expect(immutableQ16ToQ20Tail.toString('utf8').startsWith(q16Marker)).toBe(
+      true,
+    );
+    expect(immutableQ16ToQ20Tail.byteLength).toBe(
+      immutableQ16ToQ20TailBytes,
+    );
+    expect(
+      crypto
+        .createHash('sha256')
+        .update(immutableQ16ToQ20Tail)
+        .digest('hex'),
+    ).toBe(immutableQ16ToQ20TailSha256);
   });
 
   it('ends the localized prefix with exactly the required blank-line boundary', () => {
@@ -702,5 +809,193 @@ describe('English traffic column 003 — Q6–Q10 translation contract', () => {
     expect(q6ToQ10).not.toMatch(/\p{Script=Han}/u);
     expect(q6ToQ10).not.toMatch(/[\p{Script=Hiragana}\p{Script=Katakana}]/u);
     expect(q6ToQ10).not.toMatch(/^[\t ]*\u200b+[\t ]*$/m);
+  });
+});
+
+describe('English traffic column 003 — Q11–Q15 translation contract', () => {
+  it('starts the exact five H2s at byte 14392 and places the source H3 after Q15 before Q16', () => {
+    expect(rawBytes.subarray(q11ByteIndex).toString('utf8')).toMatch(
+      /^## Q11\. How should I prove temporary lost income during treatment and recovery\?\n/,
+    );
+    expect(
+      Array.from(
+        q11ToQ15.matchAll(/^## Q1[1-5]\. .+$/gm),
+        (match) => match[0],
+      ),
+    ).toEqual(q11ToQ15ContractedHeadings);
+    expect(q11ToQ15.indexOf(q11ToQ15SourceHeading)).toBeGreaterThan(
+      q11ToQ15.indexOf(q15Heading),
+    );
+    expect(countOccurrences(q11ToQ15, q11ToQ15SourceHeading)).toBe(1);
+    expect(q11ToQ15).not.toContain(q16Marker);
+  });
+
+  it('requires accident-caused inability and actual income reduction while preserving Q12 as a separate issue', () => {
+    expect(q11).toMatch(
+      /accident-related injury.{0,120}(?:wholly|completely).{0,20}(?:or|and).{0,20}(?:partly|partially).{0,50}(?:impossible|unable).{0,30}work/is,
+    );
+    expect(q11).toMatch(
+      /(?:supported|documented).{0,30}(?:treatment|recovery) period.{0,120}actual income reduction/is,
+    );
+    expect(q11).toMatch(
+      /(?:diagnosis certificate|medical certificate).{0,80}(?:rest recommendation|recommended rest).{0,100}(?:relevant|useful).{0,100}(?:not|neither).{0,40}(?:conclusive|decisive|sufficient).{0,20}(?:by itself|alone)/is,
+    );
+    expect(q11).toMatch(/treatment records?/i);
+    expect(q11).toMatch(/(?:attendance|leave) records?/i);
+    expect(q11).toMatch(/payroll.{0,30}tax/is);
+    expect(q11).toMatch(/employer confirmation/i);
+    expect(q11).toMatch(/self-employed/i);
+    expect(q11).toMatch(
+      /(?:continuing to work|continued working).{0,100}(?:unchanged pay|pay remained unchanged|receiving the same pay).{0,120}(?:relevant|matter).{0,120}temporary lost income/is,
+    );
+    expect(q11).toMatch(
+      /(?:does not|do not).{0,40}(?:by itself|alone|automatically).{0,60}(?:decide|determine|eliminate).{0,80}(?:lasting )?(?:loss of earning capacity|earning-capacity)/is,
+    );
+  });
+
+  it('treats lasting earning-capacity loss as individualized rather than mechanically fixed in Q12', () => {
+    expect(q12).toMatch(
+      /(?:distinct|different|separate).{0,60}(?:temporary lost income|actual income reduction).{0,80}(?:treatment|recovery)/is,
+    );
+    expect(q12).toMatch(/Articles? 193.{0,30}(?:and|,).{0,20}216/is);
+    expect(q12).toMatch(
+      /accident causation.{0,80}lasting functional impairment.{0,100}occupation.{0,60}(?:abilities|skills).{0,100}(?:ordinarily expected income|income ordinarily expected).{0,100}(?:supported|evidenced).{0,30}working[- ]life/is,
+    );
+    expect(q12).toMatch(
+      /unchanged current pay.{0,80}(?:does not|cannot).{0,30}automatically.{0,50}(?:eliminate|defeat|exclude).{0,30}(?:the )?claim/is,
+    );
+    expect(q12).toMatch(
+      /(?:impairment percentage|percentage of impairment).{0,80}(?:current )?salary.{0,100}(?:does not|do not|neither).{0,60}(?:mechanically|automatically).{0,40}(?:fix|determine|set).{0,30}damages/is,
+    );
+    expect(q12).toMatch(
+      /medical appraisal.{0,100}(?:useful|helpful).{0,60}(?:lasting impairment|impairment).{0,40}(?:genuinely )?disputed.{0,120}(?:not|neither).{0,40}(?:mandatory|required).{0,30}(?:every|all) (?:case|cases)/is,
+    );
+    expect(q12).toMatch(
+      /Article 217.{0,100}comparative negligence.{0,80}(?:other )?adjustments?/is,
+    );
+    expect(q12).toMatch(
+      /lump sum.{0,100}(?:intermediate-interest|intermediate interest).{0,30}discount/is,
+    );
+    expect(q12).toMatch(
+      /Hoffman.{0,80}(?:calculator|calculation tool).{0,80}(?:aid|tool).{0,120}(?:not|neither).{0,50}(?:mandatory|guarantee)/is,
+    );
+    expect(q12).toMatch(
+      /Article 193.{0,120}(?:party|party's) application.{0,120}court.{0,60}(?:order|award).{0,40}secured periodic payments/is,
+    );
+  });
+
+  it('bases Q13 non-pecuniary damages on Article 195 and individualized evidence', () => {
+    expect(q13).toMatch(
+      /Article 195.{0,120}(?:appropriate|reasonable) amount.{0,120}(?:unlawful infringement|unlawfully infringed).{0,80}(?:body|bodily integrity).{0,20}(?:or|and).{0,20}health/is,
+    );
+    expect(q13).toMatch(
+      /injury.{0,40}treatment.{0,80}lasting effects.{0,80}pain.{0,80}(?:impact|effect).{0,40}(?:daily )?life/is,
+    );
+    expect(q13).toMatch(
+      /age.{0,40}(?:status|circumstances).{0,80}social.{0,30}(?:and|\/).{0,20}economic circumstances.{0,100}(?:parties'|parties’|each party's|each party’s) evidence/is,
+    );
+  });
+
+  it('states the complete Article 188 employer-liability framework and separates Article 284 criminal liability in Q14', () => {
+    expect(q14).toMatch(
+      /Article 188.{0,100}employee.{0,60}unlawfully injures?.{0,80}(?:performing|performance of).{0,30}(?:duties|work duties)/is,
+    );
+    expect(q14).toMatch(
+      /work hours.{0,80}(?:alone|by itself).{0,50}(?:does not|cannot).{0,40}automatically.{0,50}(?:establish|prove).{0,50}(?:connection|link).{0,30}(?:duties|work)/is,
+    );
+    expect(q14).toMatch(
+      /possible joint civil liability.{0,140}(?:reasonable selection|selected.{0,30}reasonably).{0,40}(?:and|\/).{0,30}supervision.{0,140}(?:unavoidable|could not have been avoided).{0,30}(?:loss|damage)/is,
+    );
+    expect(q14).toMatch(
+      /paragraph 2.{0,100}(?:uncompensated|without compensation).{0,30}victim.{0,120}(?:relief|compensation)/is,
+    );
+    expect(q14).toMatch(
+      /(?:employer|principal).{0,80}(?:recourse|reimbursement).{0,80}(?:employee|worker).{0,80}(?:after|once).{0,30}payment/is,
+    );
+    expect(q14).toMatch(
+      /(?:civil|civil-party).{0,30}(?:liability|selection|claim).{0,100}(?:distinct|different|separate).{0,80}criminal liability/is,
+    );
+    expect(q14).toMatch(
+      /Article 284.{0,100}(?:each|individual).{0,30}natural person.{0,100}(?:own|personal).{0,40}breach of duty.{0,80}causation/is,
+    );
+  });
+
+  it('states the current compulsory benefits and treats all three other Q15 products as policy-dependent', () => {
+    expect(q15).toMatch(
+      /Article 6.{0,100}owner.{0,60}covered vehicle.{0,100}(?:specified|certain).{0,40}(?:user|users).{0,20}(?:or|and).{0,20}(?:manager|managers)/is,
+    );
+    expect(q15).toMatch(
+      /(?:no-fault|regardless of fault).{0,100}(?:injured|injury).{0,40}(?:or|and).{0,30}(?:killed|death).{0,120}(?:passenger|passengers).{0,80}(?:outside|external).{0,30}(?:third person|third-party|third party)/is,
+    );
+    expect(q15).toMatch(
+      /single-vehicle accident.{0,100}driver.{0,100}(?:outside|not covered by).{0,60}(?:that|the driver's own|the driver’s own) vehicle.{0,30}compulsory (?:cover|insurance)/is,
+    );
+    expect(q15).toMatch(
+      /multi-vehicle accident.{0,100}driver.{0,100}(?:claim|benefits).{0,80}(?:another|other) involved vehicle.{0,40}compulsory insurer/is,
+    );
+    expect(q15).toMatch(
+      /amended.{0,20}2026-05-29.{0,100}(?:accidents?|occurring).{0,40}(?:on or after )?2026-07-01/is,
+    );
+    expect(q15).toMatch(
+      /(?:earlier|before).{0,30}(?:accident|accident date).{0,80}(?:earlier|previous) standard/is,
+    );
+    expect(q15).toContain('TWD 200,000');
+    expect(q15).toContain('TWD 80,000–3,000,000');
+    expect(q15).toMatch(/15 statutory grades/i);
+    expect(q15).toContain('TWD 3,000,000');
+    expect(q15).toContain('TWD 3,200,000');
+    expect(q15).toMatch(
+      /third-party liability.{0,80}driver injury.{0,80}(?:own-damage|own damage).{0,30}insurance.{0,120}(?:contractual|voluntary)/is,
+    );
+    expect(q15).toMatch(
+      /(?:actual )?cover(?:age)?.{0,80}insured person.{0,50}limit.{0,50}deductible.{0,50}exclusions?.{0,50}fault.{0,50}(?:other )?policy conditions/is,
+    );
+  });
+
+  it('uses all 13 Q11–Q15 official URLs exactly once and in order only as descriptive Markdown-link destinations', () => {
+    const markdownLinks = Array.from(
+      q11ToQ15Sources.matchAll(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g),
+      (match) => ({ label: match[1], url: match[2], full: match[0] }),
+    );
+    expect(markdownLinks.map(({ url }) => url)).toEqual(
+      q11ToQ15OfficialSourceUrls,
+    );
+
+    for (const { label, url } of markdownLinks) {
+      expect(label).toMatch(/[A-Za-z]/);
+      expect(label.trim()).not.toBe('');
+      expect(label).not.toContain('http');
+      expect(label).not.toMatch(
+        /[\p{Script=Hangul}\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u,
+      );
+      expect(countOccurrences(q11ToQ15, url)).toBe(1);
+    }
+
+    const withoutMarkdownLinks = markdownLinks.reduce(
+      (value, { full }) => value.replace(full, ''),
+      q11ToQ15,
+    );
+    for (const url of q11ToQ15OfficialSourceUrls) {
+      expect(withoutMarkdownLinks).not.toContain(url);
+      expect(q11ToQ15).not.toContain(`<${url}>`);
+    }
+  });
+
+  it('removes only contracted stale, foreign-script, first-person, guarantee, and spacer copy within Q11–Q15', () => {
+    for (const phrase of prohibitedQ11ToQ15Copy) {
+      expect(q11ToQ15.toLowerCase()).not.toContain(phrase.toLowerCase());
+    }
+    expect(q11ToQ15).not.toMatch(/\p{Script=Hangul}/u);
+    expect(q11ToQ15).not.toMatch(/\p{Script=Han}/u);
+    expect(q11ToQ15).not.toMatch(
+      /[\p{Script=Hiragana}\p{Script=Katakana}]/u,
+    );
+    expect(q11ToQ15).not.toMatch(/^[\t ]*\u200b+[\t ]*$/m);
+    expect(q11ToQ15).not.toMatch(
+      /\b(?:I|me|my|mine|myself)\b.{0,80}\b(?:advise|recommend|suggest)\b/is,
+    );
+    expect(q11ToQ15).not.toMatch(
+      /\b(?:always|definitely|automatically recognized)\b/i,
+    );
   });
 });

@@ -1,0 +1,101 @@
+import { createHash } from 'node:crypto';
+import fs from 'node:fs';
+import path from 'node:path';
+import { describe, expect, it } from 'vitest';
+
+const columnPath = path.join(
+  process.cwd(),
+  'src/content/columns-ja/001-taiwan-company-establishment-basics.md',
+);
+const sourceBytes = fs.readFileSync(columnPath);
+
+const immutablePrefixLength = 8_247;
+const immutablePrefixSha256 =
+  'd65aa68096453a3e90cef085e963d682260308accf2244cfba6139f12b2171c0';
+const immutableTailMarker = Buffer.from(
+  '\n\n上記は理解のための概要であり、',
+  'utf8',
+);
+const immutableTailLength = 7_161;
+const immutableTailSha256 =
+  '641714d4a59529671f1982ca22448230bf8e3a250d1de06810ea33eab477fd5d';
+
+const tailOffset = sourceBytes.indexOf(immutableTailMarker);
+const prefix = sourceBytes.subarray(0, immutablePrefixLength);
+const tail =
+  tailOffset === -1 ? Buffer.alloc(0) : sourceBytes.subarray(tailOffset);
+const insertionBytes =
+  tailOffset === -1
+    ? Buffer.alloc(0)
+    : sourceBytes.subarray(immutablePrefixLength, tailOffset);
+const insertion = insertionBytes.toString('utf8');
+const sentence = insertion.startsWith('\n\n') ? insertion.slice(2) : '';
+
+const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
+
+describe('Japanese investment column 001 — preliminary-review caution', () => {
+  it('preserves the independently locked list prefix and following prose tail byte-for-byte', () => {
+    expect(tailOffset).toBeGreaterThanOrEqual(immutablePrefixLength);
+    expect(prefix).toHaveLength(immutablePrefixLength);
+    expect(sha256(prefix)).toBe(immutablePrefixSha256);
+    expect(tail).toHaveLength(immutableTailLength);
+    expect(sha256(tail)).toBe(immutableTailSha256);
+    expect(
+      prefix
+        .toString('utf8')
+        .endsWith(
+          '10. 輸出入、業種別許認可、就業許可・居留等の追加手続（該当する場合）',
+        ),
+    ).toBe(true);
+    expect(tail.toString('utf8')).toMatch(/^\n\n上記は理解のための概要であり、/u);
+    expect(Buffer.concat([prefix, insertionBytes, tail])).toEqual(sourceBytes);
+  });
+
+  it('inserts exactly two line feeds and one non-empty Japanese prose sentence', () => {
+    expect(insertion).toMatch(/^\n\n[^\r\n。！？!?]+。$/u);
+    expect(sentence.trim()).toBe(sentence);
+  });
+
+  it('keeps preliminary-review passage as the premise for both required cautions', () => {
+    expect(sentence).toMatch(/予備審査[^。]*(?:通過|合格|適合)/u);
+    expect(sentence).toMatch(
+      /業種[^。]*(?=[^。]*(?:別途|別の))(?=[^。]*(?:必要|求められる))[^。]*(?:許可|許認可)[^。]*(?:すでに|既に)[^。]*(?:取得|得て)[^。]*(?:意味するものではない|意味しない|示すものではない|示さない)/u,
+    );
+    expect(sentence).toMatch(
+      /(?:予定地|予定する場所|予定している場所|予定された場所)[^。]*(?:直ちに|すぐに|即時に)[^。]*(?:営業|事業)[^。]*(?:開始|行う|営む|できる)[^。]*(?:意味するものではない|意味しない|示すものではない|示さない)/u,
+    );
+  });
+
+  it('rejects prohibited structure, additions, Hangul, and malformed copy in the insertion only', () => {
+    expect(sentence).not.toMatch(/^(?:#{1,6}\s|>\s|[-*+]\s|\d+\.\s)/u);
+    expect(sentence).not.toMatch(/!?\[[^\r\n]*\]\([^)\r\n]*\)|<[^>\r\n]+>/u);
+    expect(sentence).not.toMatch(/[*_~`]{1,3}|\[\^[^\]\r\n]+\]/u);
+
+    for (const forbidden of [
+      '投資審査',
+      '銀行',
+      '税',
+      '就業',
+      '居留',
+      'こんにちは',
+      '台湾弁護士',
+      '曾雋崴',
+      'Wei Tseng',
+      '動画',
+      '私',
+      '私たち',
+      '当事務所',
+      '弊所',
+      'お気軽に',
+      'お問い合わせ',
+      'ご相談',
+    ]) {
+      expect(sentence).not.toContain(forbidden);
+    }
+
+    expect(insertion).not.toMatch(/[\uac00-\ud7af]/u);
+    expect(insertion).not.toMatch(/[\u200b\ufeff\u00a0]/u);
+    expect(insertion).not.toContain('\r');
+    expect(insertion).not.toMatch(/[ \t]+$/mu);
+  });
+});

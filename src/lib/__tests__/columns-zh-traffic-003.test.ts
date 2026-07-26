@@ -50,12 +50,16 @@ const q11ToQ15Headings = [
 const q11ToQ15SourceHeading = 'Q11–Q15 官方依據';
 const q16Marker =
   'Q16. 事故發生後，可以把所有事情都交給保險公司處理嗎？';
-const immutablePrefixBytes = 7_238;
+const approvedQ3TransferCostSentence =
+  '例如，刑事案件遭駁回後，如依原告聲請移送民事法院，依刑事訴訟法第 503 條可能須負擔訴訟費用；另亦應一併確認第 504 條關於移送及程序的規定。';
+const staleQ3TransferCostWording =
+  '例如刑事案件經不受理、無罪或其他相當情形終結，並經原告聲請移送民事法院時，依第 503 條可能須負擔訴訟費用；另應留意第 504 條的移送程序與費用規定。';
+const immutablePrefixBytes = 7_226;
 const immutablePrefixSha256 =
-  '4309d3927ff0f3b0fb335d11e24a2b56bd28d3076a1ecd8ad6903a708395abeb';
-const immutableQ1ToQ10PrefixBytes = 12_401;
+  '446e1a8a7b1d3bc2aa89c9edeafd18026364e539db5b11f3d67932245cba0d11';
+const immutableQ1ToQ10PrefixBytes = 12_389;
 const immutableQ1ToQ10PrefixSha256 =
-  '9cec9996afe23177eba0f0aedd9420178bebb77c0bd74ee80a969747985b5448';
+  '554593aa45360767b7b9fe5c3ca6053aede206360339ca14fd8e781ab29e92b0';
 const immutableQ16TailBytes = 3_143;
 const immutableQ16TailSha256 =
   'c189113fb7068cecc13432944afd541e4ebc40f9857eb6bbfd71dcf7daf418a9';
@@ -436,7 +440,13 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
   });
 
   it('locks Q3 criminal/civil periods and criminal-attached civil-action cost caveats', () => {
-    expectConcepts(sectionForQuestion(3), [
+    const q3 = sectionForQuestion(3);
+
+    expect(countOccurrences(q3, approvedQ3TransferCostSentence)).toBe(1);
+    expect(q3).not.toContain(staleQ3TransferCostWording);
+    expect(q3).not.toContain('不受理、無罪或其他相當情形');
+
+    expectConcepts(q3, [
       { label: 'Criminal Code Article 284', pattern: /刑法第\s*284\s*條/ },
       { label: 'negligent injury and serious injury', pattern: /過失.{0,8}傷害.{0,18}(?:重傷|致重傷)/s },
       { label: 'Criminal Code Article 287 complaint basis', pattern: /刑法第\s*287\s*條.{0,40}(?:告訴乃論|須告訴)/s },

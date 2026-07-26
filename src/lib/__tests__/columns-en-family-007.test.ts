@@ -158,6 +158,8 @@ const unresolvedIssuesSubsectionHeading =
   '### Divorce while other issues remain open';
 const unresolvedIssuesParagraph =
   'If the requirements of the chosen route to divorce are satisfied, the marriage itself may be dissolved first even though some property or child-related issues remain unresolved. This should not, however, be treated as a shortcut that can be recommended in every case. The preservation and settlement of unresolved property; the child’s residence, care, medical treatment, and education; the agreements or court orders needed for child support and contact; and whether interim orders are needed to ensure safety and continuity of daily life while the dispute remains pending must all be considered together.';
+const childSupportFactorsParagraph =
+  'Under Civil Code Article 1116-2, parents’ duty to support a minor child continues after divorce. Child support is a parent–child obligation. It is distinct from Article 1057 post-divorce support for a qualifying former spouse. Do not treat the two claims as interchangeable, and do not use the Article 1030-1 residual-property limitation period as a universal deadline for child support. The specific allocation of support should be determined from evidence of the child’s living expenses, education costs, medical expenses, and any special needs, together with each parent’s income, assets, ability to provide support, and actual share of caregiving.';
 const bestInterestsFactorsParagraph =
   'Under Civil Code Article 1055-1, the court considers the child’s age, sex, and health; the number of children; the child’s views and needs for personality development; each parent’s age, occupation, conduct, health, financial means, and living circumstances; each parent’s willingness and attitude toward the child’s protection and upbringing; the emotional relationship between each parent and the child; and any circumstances in which one parent has interfered with the relationship between the other parent and the child. The court may hear the child’s views in the manner prescribed by law and may take into account investigations and opinions from competent authorities or child-welfare professionals. A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many; neither is a sole criterion for the decision or a basis for rewarding or punishing a parent.';
 const filingDocumentsParagraph =
@@ -185,16 +187,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '98a5f324edbd2729c7667af472ce48cbad5375e4642d4ac9933043f8143dab1a';
+  '2ad021c765f1a8e8dc32aff7ae245eb18123dced338e48279aa503484d0b786a';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  'dd024b606d2db881dcd6d492ea50c31a7b090d4a747b0009a1ef46df273b36de';
+  '6c57343d2a7dc0e352318555441687cbbff780afbbb0c6631cc9a28b1805c8cd';
 const frozenSection1OnwardSha256 =
-  'f373f2e3fecfda8e398f282f1462e5f9becc03c9e22503796d819e1c3688ecd5';
-const frozenVisibleWordCount = 5_389;
+  'e9a6dadb3981b19b0a021c1b9c9dc9ccf2a4bc6a724391567f3ce49024eb1690';
+const frozenVisibleWordCount = 5_429;
 const frozenSourceSha256 =
-  '430c74a1f36d48e08ededac6b12b242b8e80a528aa2af085bb0de3483858c263';
+  '68a23eaf3f8f476404748c83ec89baf9ad07e07609edbff068fca0ae7c6cf65a';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -242,7 +244,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: 'September 13, 2025',
-      read_time: '27 min read',
+      read_time: '28 min read',
       categories: ['Taiwan Legal Information'],
       featured_image: featuredImage,
       faq,
@@ -253,7 +255,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       title,
       date: '2026-07-25',
       dateDisplay: 'September 13, 2025',
-      readTime: '27 min read',
+      readTime: '28 min read',
       category: 'legal',
       categoryLabel: 'Legal Information',
       featuredImage:
@@ -1016,6 +1018,25 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     }
   });
 
+  it('publishes the exact child-support allocation factors before modification guidance', () => {
+    const sectionMarker = `## ${headings[8]}\n\n`;
+    const sectionStart = parsed.content.indexOf(sectionMarker);
+    const paragraphStart = sectionStart + sectionMarker.length;
+    const modificationStart = parsed.content.indexOf(
+      '\n\n### Modification of child support',
+      paragraphStart,
+    );
+
+    expect(sectionStart).toBeGreaterThan(-1);
+    expect(modificationStart).toBeGreaterThan(paragraphStart);
+    expect(parsed.content.slice(paragraphStart, modificationStart)).toBe(
+      childSupportFactorsParagraph,
+    );
+    expect(
+      countOccurrences(parsed.content, childSupportFactorsParagraph),
+    ).toBe(1);
+  });
+
   it('locks Article 1116-2 support and Family Act Article 194 contact and enforcement qualifications', () => {
     const section = sectionBody(parsed.content, headings[8]);
     const requiredPhrases = [
@@ -1135,7 +1156,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       .digest('hex');
 
     expect(visibleWordCount).toBe(frozenVisibleWordCount);
-    expect(calculatedMinutes).toBe(27);
+    expect(calculatedMinutes).toBe(28);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(sourceSha256).toBe(frozenSourceSha256);

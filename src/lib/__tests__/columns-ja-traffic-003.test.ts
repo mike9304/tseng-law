@@ -29,9 +29,13 @@ const approvedQ20LawyerWarningSentence =
   '事件を誇張し、示談せずに民事・刑事の両面で最後まで争おうと主張して、事件の受任だけを目的とする弁護士には注意が必要です。';
 const staleQ20LawyerWarningSentence =
   '事件を誇張し、示談せず民刑事で最後まで戦おうと主張して事件受任だけを得ようとする弁護士には注意が必要です。';
-const immutableQ16ToQ20TailBytes = 4_532;
+const approvedClosingContactSentence =
+  '加害者の多くは、被害者に電話で安否を尋ねたり病院へ見舞いに行ったりすることもなく、保険会社が対応してくれるだろうと考え、自ら姿を見せないことが多いです。';
+const staleClosingContactSentence =
+  '加害者は被害者に電話で安否を尋ねたり見舞いに行ったりを気にせず、多くの加害者は保険会社が処理してくれると考え自分は現れない場合が多くあります。';
+const immutableQ16ToQ20TailBytes = 4_547;
 const immutableQ16ToQ20TailSha256 =
-  '66d73518bff77faa0960d4c1add7aa0e382dc951e28de26a3de66d2c3bfccb10';
+  '449c275ee9fe0ff9dceef68e7d1122a59b995e19e4dd7ec27c76f73ca1756533';
 const localizedPrefixBytes = rawBytes.subarray(0, immutablePrefixBytes);
 const localizedPrefix = localizedPrefixBytes.toString('utf8');
 const parsedPrefix = matter(localizedPrefix);
@@ -339,6 +343,8 @@ const q20Tail =
   q20ByteIndex <= q16ByteIndex
     ? ''
     : rawBytes.subarray(q20ByteIndex).toString('utf8');
+const q16ToEnd =
+  q16ByteIndex === -1 ? '' : rawBytes.subarray(q16ByteIndex).toString('utf8');
 const q11ToQ15 =
   q16ByteIndex <= q11ByteIndex
     ? ''
@@ -1056,5 +1062,12 @@ describe('Japanese traffic column 003 — Q20 lawyer-warning translation repair'
     expect(q20ByteIndex).toBeGreaterThan(q16ByteIndex);
     expect(countOccurrences(q20Tail, approvedQ20LawyerWarningSentence)).toBe(1);
     expect(q20Tail).not.toContain(staleQ20LawyerWarningSentence);
+  });
+});
+
+describe('Japanese traffic column 003 — Q16-to-end closing narrative repair', () => {
+  it('keeps the approved contact sentence once and removes the stale wording', () => {
+    expect(countOccurrences(q16ToEnd, approvedClosingContactSentence)).toBe(1);
+    expect(q16ToEnd).not.toContain(staleClosingContactSentence);
   });
 });

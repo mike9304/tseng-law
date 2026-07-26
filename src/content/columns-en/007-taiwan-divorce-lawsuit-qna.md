@@ -3,7 +3,7 @@ title: "Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"
-read_time: "26 min read"
+read_time: "27 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
@@ -175,7 +175,7 @@ A down payment or loan installment paid from premarital savings is relevant sour
 
 ### Article 1017 classifications and presumptions
 
-Civil Code Article 1017 addresses premarital and postmarital property classification and statutory presumptions. Those classifications and presumptions help frame the property regime analysis. They are not a shortcut that alone awards title, defeats a nominee or gift theory, or completes the residual-property calculation. Transfer records, purchase contracts, loan files, receipts, messages, tax materials, and registration histories remain important, but no single document is conclusive for every theory.
+Civil Code Article 1017 distinguishes premarital property from property acquired during marriage and provides that property whose time of acquisition is difficult to prove is presumed to have been acquired during marriage. This is a starting point for classification and proof in calculating the matrimonial property regime; it is not a shortcut for determining ownership irrespective of registration or defeating the other spouse’s separate claims. Transfer records, sale and purchase agreements, loan agreements and repayment records, receipts, messages between the parties, tax records, registration records, and the basis and timing of acquisition must be considered together to reveal the parties’ actual legal relationship.
 
 ### Article 1030-1 residual-property distribution
 

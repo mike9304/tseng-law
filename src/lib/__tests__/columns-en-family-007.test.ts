@@ -134,6 +134,12 @@ const foreignEffectSubsectionHeading =
   '### Recognition, effect, and registration';
 const foreignRecognitionParagraph =
   'A statement that a divorce was completed under foreign law—or a foreign divorce certificate alone—does not complete every required Taiwan procedure. Conversely, not every foreign divorce requires the same recognition proceeding or the same documents. Taiwan’s required recognition or legal-effect determination and household registration may vary with whether the instrument is a court judgment or administrative certificate, its country of issue and form, and the parties’ current household-registration status.';
+const article1017SubsectionHeading =
+  '### Article 1017 classifications and presumptions';
+const article10301SubsectionHeading =
+  '### Article 1030-1 residual-property distribution';
+const article1017Paragraph =
+  'Civil Code Article 1017 distinguishes premarital property from property acquired during marriage and provides that property whose time of acquisition is difficult to prove is presumed to have been acquired during marriage. This is a starting point for classification and proof in calculating the matrimonial property regime; it is not a shortcut for determining ownership irrespective of registration or defeating the other spouse’s separate claims. Transfer records, sale and purchase agreements, loan agreements and repayment records, receipts, messages between the parties, tax records, registration records, and the basis and timing of acquisition must be considered together to reveal the parties’ actual legal relationship.';
 const filingDocumentsParagraph =
   'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.';
 const filingDocumentsPrefixMarker =
@@ -159,16 +165,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '3926c4c2ad6dd755d32fef77e3a4a7b756ae0b78eb7857092c8bbe3ba12c98bb';
+  '6abf0350f5d1e279b913ee3148abea7582bc2c19d9aea50cfed1ebb004e4e618';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '2987c988e5159ad79631cbcf9318241853d80c986f764c4e4dac2334834b4cb8';
+  '3eed0db8f04fa1880f4bc5a1b899fe120c686cce64020f4825e880d10b727ee6';
 const frozenSection1OnwardSha256 =
-  '3defb3e564dd8abf683a9597b3eb334d3f7cd1efd795db2b2736f322c95573e2';
-const frozenVisibleWordCount = 5_190;
+  '986b722fba6ec8c26d41eabecd5b1c5e3b86b43d06ee89929c1c2f31720b2d13';
+const frozenVisibleWordCount = 5_227;
 const frozenSourceSha256 =
-  '2032f41874cdc52fd6d4f357d486580fb47bdb131797e873c8785a9fab5d55c7';
+  '2c5c01eb046a3f8a09adfce9cb46661d320e829898ec55013a5184f41473b011';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -216,7 +222,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: 'September 13, 2025',
-      read_time: '26 min read',
+      read_time: '27 min read',
       categories: ['Taiwan Legal Information'],
       featured_image: featuredImage,
       faq,
@@ -227,7 +233,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       title,
       date: '2026-07-25',
       dateDisplay: 'September 13, 2025',
-      readTime: '26 min read',
+      readTime: '27 min read',
       category: 'legal',
       categoryLabel: 'Legal Information',
       featuredImage:
@@ -338,8 +344,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       {
         number: 6,
         heading: headings[5],
-        phrase:
-          'Transfer records, purchase contracts, loan files, receipts, messages, tax materials, and registration histories remain important, but no single document is conclusive for every theory.',
+        phrase: article1017Paragraph,
       },
       { number: 7, heading: headings[6], phrase: faq5Answer },
       {
@@ -801,8 +806,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     const requiredPhrases = [
       faq4Answer,
       'Separate at least three inquiries for a house or other asset:',
-      'Civil Code Article 1017 addresses premarital and postmarital property classification and statutory presumptions.',
-      'They are not a shortcut that alone awards title, defeats a nominee or gift theory, or completes the residual-property calculation.',
+      article1017Paragraph,
       'net residual property composed of qualifying property acquired during marriage, after the statutory exclusions and relevant debts',
       'The difference is generally divided equally.',
       'Inherited property and other property acquired gratuitously, as well as solatium (consolation damages), are excluded as the statute provides.',
@@ -815,6 +819,25 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+  });
+
+  it('publishes the exact Article 1017 classification-and-presumption paragraph', () => {
+    const subsectionMarker = `${article1017SubsectionHeading}\n\n`;
+    const subsectionStart = parsed.content.indexOf(subsectionMarker);
+    const paragraphStart = subsectionStart + subsectionMarker.length;
+    const nextSubsectionStart = parsed.content.indexOf(
+      `\n\n${article10301SubsectionHeading}`,
+      paragraphStart,
+    );
+
+    expect(subsectionStart).toBeGreaterThan(-1);
+    expect(nextSubsectionStart).toBeGreaterThan(paragraphStart);
+    expect(parsed.content.slice(paragraphStart, nextSubsectionStart)).toBe(
+      article1017Paragraph,
+    );
+    expect(article1017Paragraph).toContain(
+      'property whose time of acquisition is difficult to prove is presumed to have been acquired during marriage',
+    );
   });
 
   it('separates Articles 1056 and 1057, child support, property, cohabitation, and third-party claims', () => {
@@ -979,7 +1002,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       .digest('hex');
 
     expect(visibleWordCount).toBe(frozenVisibleWordCount);
-    expect(calculatedMinutes).toBe(26);
+    expect(calculatedMinutes).toBe(27);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(sourceSha256).toBe(frozenSourceSha256);

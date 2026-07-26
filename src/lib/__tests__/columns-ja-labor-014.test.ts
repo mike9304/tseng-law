@@ -93,7 +93,7 @@ title: "${title}"
 url: "${sourceUrl}"
 lastmod: "2026-07-25"
 date_display: "2025年9月13日"
-read_time: "約17分"
+read_time: "約18分"
 categories:
   - "台湾法律情報"
 featured_image: "${featuredImage}"
@@ -155,7 +155,7 @@ describe('Japanese labor column 014 — minimum-service-period clauses', () => {
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: '2025年9月13日',
-      read_time: '約17分',
+      read_time: '約18分',
       categories: ['台湾法律情報'],
       featured_image: featuredImage,
       faq,
@@ -623,11 +623,11 @@ describe('Japanese labor column 014 — minimum-service-period clauses', () => {
       )?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleJapaneseCount / 500);
 
-    expect(visibleJapaneseCount).toBe(8_465);
+    expect(visibleJapaneseCount).toBe(8_594);
     expect(visibleJapaneseCount).toBeGreaterThanOrEqual(4_500);
-    expect(visibleKanaCount).toBe(3_588);
+    expect(visibleKanaCount).toBe(3_656);
     expect(visibleKanaCount).toBeGreaterThanOrEqual(1_800);
-    expect(calculatedMinutes).toBe(17);
+    expect(calculatedMinutes).toBe(18);
     expect(parsed.data.read_time).toBe(`約${calculatedMinutes}分`);
     expect(post?.readTime).toBe(`約${calculatedMinutes}分`);
   });
@@ -639,7 +639,7 @@ describe('Japanese labor column 014 — minimum-service-period clauses', () => {
       title,
       date: '2026-07-25',
       dateDisplay: '2025年9月13日',
-      readTime: '約17分',
+      readTime: '約18分',
       category: 'legal',
       categoryLabel: '台湾法律情報',
       featuredImage:

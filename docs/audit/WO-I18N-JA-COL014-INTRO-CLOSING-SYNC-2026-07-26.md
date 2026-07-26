@@ -38,11 +38,16 @@ The implementation phase may modify only:
 1. `src/lib/__tests__/columns-ja-labor-014-intro-closing-sync.test.ts` (new)
 2. `src/content/columns-ja/014-taiwan-mandatory-employment-period.md`
    - only the one-paragraph insertion described below
+   - the derived frontmatter value `read_time: "約17分"` to
+     `read_time: "約18分"` because the final exact visible-Japanese count is
+     `8594` and `Math.ceil(8594 / 500) === 18`
 
-Do not edit frontmatter, existing Japanese prose or list items, either
-immutable boundary, existing tests, other locales, shared code, images,
-archive/search data, or embeddings. Do not stage, add, commit, push, deploy,
-publish, or operate shared servers.
+Do not edit any other frontmatter, existing Japanese prose or list items,
+either immutable boundary, other locales, shared code, images, archive/search
+data, or embeddings. Existing tests may change only to synchronize the exact
+visible-Japanese count, exact kana count, derived 18-minute read time, and the
+new prefix hash. Do not stage, add, commit, push, deploy, publish, or operate
+shared servers.
 
 ## Exact byte boundary and structure
 
@@ -50,10 +55,12 @@ Preserve the current Japanese bytes `0..5281` exactly.
 
 - immutable prefix: `5281` UTF-8 bytes
 - SHA-256:
-  `2fd069c0f3de2825c61b58227264811eedfbe9eacf6ebdd3a92d5c78bca87ed9`
+  `c43378567565127ee1794c6afb2291f90dc010c857e299212557f46154961afc`
 
-This prefix ends after the existing four-question numbered list and its
-current blank-line boundary. Insert the translation immediately after it.
+This final prefix includes only the authorized `read_time` synchronization
+above and otherwise preserves the original bytes. It ends after the existing
+four-question numbered list and its current blank-line boundary. Insert the
+translation immediately after it.
 
 Preserve the exact marker below and every byte from it through EOF:
 
@@ -109,7 +116,8 @@ independently declared constants. It must make no network calls and use no
 snapshot, production-copy import, loader-derived expectation, or fixture
 derived from the edited result.
 
-1. Lock bytes `0..5281` to the prefix length and SHA-256 above.
+1. Lock bytes `0..5281` to the final prefix length and SHA-256 above, and
+   assert the exact derived frontmatter value `read_time: "約18分"`.
 2. Locate the exact immutable H2 and lock H2-to-EOF to the tail length and
    SHA-256 above.
 3. Treat only the bytes between prefix offset `5281` and that H2 as mutable.

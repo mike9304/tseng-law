@@ -3,7 +3,7 @@ title: "台湾の最低勤務期間条項：有効性・研修費用・返還義
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
 date_display: "2025年9月13日"
-read_time: "約17分"
+read_time: "約18分"
 categories:
   - "台湾法律情報"
 featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jpg"
@@ -32,6 +32,8 @@ faq:
 2. 勤務期間と労働者の負担が合理的な範囲内にあるか
 3. 契約終了の理由が労働者に帰責できるか
 4. 退職の予告と返還のルールをどのように適用するか
+
+四つの事項が同じ契約書に記載されていても、適用される条文と必要な証拠はそれぞれ異なります。したがって、最低勤務期間条項が有効か、退職の意思表示がいつ効力を生じるか、前払給付または研修費用の返還義務があるか、別の損害が実際に発生したかを、それぞれ分けて検討する必要があります。
 
 ## 1. 最低勤務期間条項はいつ有効となり得るか
 

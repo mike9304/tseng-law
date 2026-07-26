@@ -11,7 +11,7 @@ const sourceBytes = fs.readFileSync(columnPath);
 
 const immutablePrefixLength = 5_281;
 const immutablePrefixSha256 =
-  '2fd069c0f3de2825c61b58227264811eedfbe9eacf6ebdd3a92d5c78bca87ed9';
+  'c43378567565127ee1794c6afb2291f90dc010c857e299212557f46154961afc';
 const immutableTailMarker = Buffer.from(
   '## 1. 最低勤務期間条項はいつ有効となり得るか',
   'utf8',
@@ -40,6 +40,8 @@ describe('Japanese labor column 014 — synchronized introduction closing', () =
 
     expect(prefix).toHaveLength(immutablePrefixLength);
     expect(sha256(prefix)).toBe(immutablePrefixSha256);
+    expect(prefix.toString('utf8')).toContain('read_time: "約18分"');
+    expect(prefix.toString('utf8')).not.toContain('read_time: "約17分"');
     expect(tail).toHaveLength(immutableTailLength);
     expect(sha256(tail)).toBe(immutableTailSha256);
   });

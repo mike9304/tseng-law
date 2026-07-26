@@ -33,9 +33,19 @@ const approvedClosingContactSentence =
   '加害者の多くは、被害者に電話で安否を尋ねたり病院へ見舞いに行ったりすることもなく、保険会社が対応してくれるだろうと考え、自ら姿を見せないことが多いです。';
 const staleClosingContactSentence =
   '加害者は被害者に電話で安否を尋ねたり見舞いに行ったりを気にせず、多くの加害者は保険会社が処理してくれると考え自分は現れない場合が多くあります。';
+const expectedFooterLocaleTargets = [
+  '/ja/taiwan-litigation-lawyer',
+  '/ja/korean-lawyer-in-taiwan',
+  '/ja/taiwan-lawyer',
+] as const;
+const staleFooterLocaleTargets = [
+  '/ko/taiwan-litigation-lawyer',
+  '/ko/korean-lawyer-in-taiwan',
+  '/ko/taiwan-lawyer',
+] as const;
 const immutableQ16ToQ20TailBytes = 4_547;
 const immutableQ16ToQ20TailSha256 =
-  '449c275ee9fe0ff9dceef68e7d1122a59b995e19e4dd7ec27c76f73ca1756533';
+  '2c5a00a316b137ad76282353adf3189564a50aaa8fa3c38c1ac5d40dda4407c3';
 const localizedPrefixBytes = rawBytes.subarray(0, immutablePrefixBytes);
 const localizedPrefix = localizedPrefixBytes.toString('utf8');
 const parsedPrefix = matter(localizedPrefix);
@@ -1069,5 +1079,18 @@ describe('Japanese traffic column 003 — Q16-to-end closing narrative repair', 
   it('keeps the approved contact sentence once and removes the stale wording', () => {
     expect(countOccurrences(q16ToEnd, approvedClosingContactSentence)).toBe(1);
     expect(q16ToEnd).not.toContain(staleClosingContactSentence);
+  });
+
+  it('uses only the three Japanese-locale targets in the related-links footer', () => {
+    const footer = q16ToEnd.slice(q16ToEnd.lastIndexOf('> 関連リンク:'));
+    const footerLocaleTargets = Array.from(
+      footer.matchAll(/\]\((\/(?:ja|ko)\/[^)]+)\)/g),
+      (match) => match[1],
+    );
+
+    expect(footerLocaleTargets).toEqual(expectedFooterLocaleTargets);
+    for (const staleTarget of staleFooterLocaleTargets) {
+      expect(footer).not.toContain(staleTarget);
+    }
   });
 });

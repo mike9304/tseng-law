@@ -368,6 +368,6 @@ WEI 台湾弁護士でした。
 ---
 
 > 関連リンク:
-> - [台湾訴訟弁護士のご案内](/ko/taiwan-litigation-lawyer)
-> - [韓国語対応の台湾弁護士](/ko/korean-lawyer-in-taiwan)
-> - [台湾弁護士検索ガイド](/ko/taiwan-lawyer)
+> - [台湾訴訟弁護士のご案内](/ja/taiwan-litigation-lawyer)
+> - [韓国語対応の台湾弁護士](/ja/korean-lawyer-in-taiwan)
+> - [台湾弁護士検索ガイド](/ja/taiwan-lawyer)

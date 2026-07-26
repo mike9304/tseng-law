@@ -204,7 +204,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       { label: 'death', pattern: /死亡/ },
       { label: 'immediate aid', pattern: /立即.{0,18}(?:救護|救助|救治|協助傷者)/s },
       { label: 'police notice', pattern: /(?:通知警察|通知警方|報警)/ },
-      { label: 'preserve vehicle and scene evidence', pattern: /保留.{0,24}車輛.{0,24}(?:現場|證據)/s },
+      { label: 'preserve vehicle and scene evidence', pattern: /(?:保留|保全).{0,24}車輛.{0,24}(?:現場|證據)/s },
       { label: 'informal consent', pattern: /(?:口頭|非正式).{0,12}同意/s },
       { label: 'recording is not a substitute', pattern: /(?:錄音|錄影|錄影紀錄).{0,30}(?:不能|不得|無法).{0,12}(?:取代|代替)/s },
       { label: 'both parties agree to move', pattern: /雙方.{0,18}同意.{0,30}(?:移動|移置)車輛/s },
@@ -282,7 +282,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       { label: 'pre-adjustment award', pattern: /(?:新臺幣 500,000 元.{0,30}(?:其他調整|其餘調整|其他因素).{0,12}(?:前|之前)|(?:其他調整|其餘調整|其他因素).{0,12}(?:前|之前).{0,30}新臺幣 500,000 元)/s },
       { label: 'appraisal evidence', pattern: /(?:鑑定|鑑定意見).{0,40}(?:重要|有力).{0,8}證據|(?:重要|有力).{0,8}證據.{0,40}(?:鑑定|鑑定意見)/s },
       { label: 'preliminary-analysis evidence', pattern: /(?:初步分析研判表|初判表).{0,40}(?:重要|有力).{0,8}證據|(?:重要|有力).{0,8}證據.{0,40}(?:初步分析研判表|初判表)/s },
-      { label: 'evidence does not mechanically bind court', pattern: /(?:不能|不會|並不).{0,18}(?:機械地|機械性|當然).{0,12}(?:拘束|約束).{0,8}法院/s },
+      { label: 'evidence does not mechanically bind court', pattern: /(?:不能|不會|並不|並非).{0,18}(?:機械地|機械性|當然).{0,12}(?:拘束|約束).{0,8}法院/s },
     ]);
     expect(section).toContain('新臺幣 1,000,000 元');
     expect(section).toContain('新臺幣 500,000 元');

@@ -66,6 +66,10 @@ const approvedQ7WorkInabilityClause =
   '以及經證明因實際無法工作所生的收入損失與勞動能力減損；';
 const staleQ7TemporaryWorkInabilityClause =
   '以及經證明因暫時不能工作所生的收入損失與勞動能力減損；';
+const approvedQ11ContinuedWorkBasisParagraph =
+  '繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題，亦非單獨判斷勞動能力減損的依據；勞動能力減損應於 Q12 另行判斷。';
+const staleQ11ContinuedWorkBasisParagraph =
+  '繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題；勞動能力減損應於 Q12 另行判斷。';
 const immutablePrefixBytes = 7_283;
 const immutablePrefixSha256 =
   'f0ef7b883904a73e3f202b79cbc57110a9d8558349b69ce41a18039bee70ab2b';
@@ -942,7 +946,12 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
   });
 
   it('locks Q11 temporary income loss, proof categories, and the separate Q12 issue', () => {
-    expectConcepts(q11ToQ15SectionForQuestion(11), [
+    const section = q11ToQ15SectionForQuestion(11);
+
+    expect(countOccurrences(section, approvedQ11ContinuedWorkBasisParagraph)).toBe(1);
+    expect(section).not.toContain(staleQ11ContinuedWorkBasisParagraph);
+
+    expectConcepts(section, [
       {
         label: 'accident-related injury',
         pattern:
@@ -1003,6 +1012,19 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
         label: 'separate lasting earning-capacity issue',
         pattern:
           /(?:不當然|不會自動|不能單憑|不足以).{0,24}(?:決定|排除|否定).{0,24}(?:勞動能力|工作能力).{0,8}(?:減損|喪失)|(?:勞動能力|工作能力).{0,8}(?:減損|喪失).{0,24}(?:另行|分別|不同).{0,8}(?:判斷|認定|問題)/s,
+      },
+      {
+        label: 'continued work or unchanged pay does not automatically decide capacity loss',
+        pattern:
+          /(?:繼續工作|薪資未減少).{0,80}不當然決定勞動能力減損問題/s,
+      },
+      {
+        label: 'continued work or unchanged pay is not a stand-alone capacity-loss basis',
+        pattern: /亦非單獨判斷勞動能力減損的依據/,
+      },
+      {
+        label: 'Q12 separately determines capacity loss',
+        pattern: /勞動能力減損應於\s*Q12\s*另行判斷/,
       },
     ]);
   });

@@ -9,9 +9,9 @@ const columnPath = path.join(
 );
 const sourceBytes = fs.readFileSync(columnPath);
 
-const immutablePrefixLength = 6_238;
+const immutablePrefixLength = 6_493;
 const immutablePrefixSha256 =
-  '3112d55cc2c08dfddf29c5b429b1b23a70bbc1c2b35ed78216f2bb1d7c04d241';
+  'd0304afd1fc83b10ad427a57f50e44702a2f729b7456b66324719173706004f7';
 const immutableTailMarker = Buffer.from('\n\n**3. 代表者事務所：**', 'utf8');
 const immutableTailLength = 8_711;
 const immutableTailSha256 =

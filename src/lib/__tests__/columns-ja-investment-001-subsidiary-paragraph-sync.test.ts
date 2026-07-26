@@ -9,9 +9,9 @@ const columnPath = path.join(
 );
 const sourceBytes = fs.readFileSync(columnPath);
 
-const immutablePrefixLength = 4_551;
+const immutablePrefixLength = 4_806;
 const immutablePrefixSha256 =
-  'c93292788f5e6fed1bfe8063c3df5c0f786a2c0e5b202c3946c1b495aacf422c';
+  '29aab01f14edd1acc1f6b4250f98010890a199cc13e503b912d77c0e3b0ae903';
 const oldTargetLength = 288;
 const oldTargetSha256 =
   '2945ff5a83f93c296673a11c0f5427240d9b2d35e0cfdde3b9e93401ba872464';
@@ -52,7 +52,7 @@ describe('Japanese investment column 001 — subsidiary explanation paragraph', 
 
     if (targetBytes.length === oldTargetLength) {
       expect(sha256(targetBytes)).toBe(oldTargetSha256);
-      expect(tailOffset).toBe(4_839);
+      expect(tailOffset).toBe(5_094);
       expect(isLegacyTarget).toBe(true);
     } else {
       expect(sha256(targetBytes)).not.toBe(oldTargetSha256);

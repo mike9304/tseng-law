@@ -36,7 +36,9 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       },
       {
         q: '就業許可証と居留証を取得するには最低資本金が必要ですか？',
-        a: employerQualificationAnswer,
+        a:
+          '会社設立自体について一律の法定最低資本金があるわけではありません。ただし、業種別の最低資本額、事業計画の合理性、銀行審査および就業許可上の雇用主要件は別途確認が必要です。' +
+          employerQualificationAnswer,
       },
     ]);
 

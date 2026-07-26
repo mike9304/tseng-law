@@ -9,9 +9,9 @@ const columnPath = path.join(
 );
 const sourceBytes = fs.readFileSync(columnPath);
 
-const immutablePrefixLength = 2_870;
+const immutablePrefixLength = 3_125;
 const immutablePrefixSha256 =
-  '7b9ba687afe25b5077611c11cba9396394b2ebb3431268bd70e7923ba1707497';
+  'e5b66e2e8b0ea8eaf88dd4a15a9b2f0f505247649ef3db0f58bf3e41c8ffb42d';
 const immutableTailMarker = Buffer.from(
   '> まず事業拠点の組織形態を決める必要があります。',
   'utf8',

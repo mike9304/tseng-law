@@ -31,9 +31,21 @@ const qHeadings = [
 ] as const;
 const sourceHeading = 'Q1–Q5 官方依據';
 const q6Marker = 'Q6. 事故責任如何認定？';
-const immutableTailBytes = 10_016;
-const immutableTailSha256 =
-  '47a9620c4ccb91315ea815cf7bf47c694bc435409dc58a2f7b46fdda0ec781cf';
+const q6ToQ10Headings = [
+  q6Marker,
+  'Q7. 事故後可以向對方請求哪些損害？',
+  'Q8. 治療持續進行時，應如何提出醫療費用資料？',
+  'Q9. 專業看護與親屬照護費用應如何證明？',
+  'Q10. 治療所需交通費應如何證明？',
+] as const;
+const q6ToQ10SourceHeading = 'Q6–Q10 官方依據';
+const q11Marker = 'Q11. 請求不能工作損失時應注意什麼？';
+const immutablePrefixBytes = 7_238;
+const immutablePrefixSha256 =
+  '4309d3927ff0f3b0fb335d11e24a2b56bd28d3076a1ecd8ad6903a708395abeb';
+const immutableQ11TailBytes = 6_836;
+const immutableQ11TailSha256 =
+  'faf49393d623aab7a19a0d0f3340c425561ef3395ef33254232d7390d6acccb0';
 
 const sourceTargets = [
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012',
@@ -53,6 +65,38 @@ const sourceTargets = [
   'https://168.motc.gov.tw/theme/car/post/2002211806152',
   'https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889',
   'https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129',
+] as const;
+
+const q6ToQ10SourceTargets = [
+  'https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3',
+  'https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print',
+  'https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=194&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=196&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001',
+  'https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html',
+  'https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf',
+  'https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf',
+] as const;
+
+const prohibitedQ6ToQ10Copy = [
+  '責任分析程序如下',
+  '→',
+  '學術中心鑑定結果',
+  '逢甲大學',
+  '會精確計算出過失比例',
+  '幾乎沒有翻案的空間',
+  '法官通常會尊重最終鑑定機構',
+  '追加提出醫療收據，則需要額外繳納裁判費',
+  '法官會認定看護費用',
+  '即使由親屬看護',
+  '法官仍會認定',
+  '如果有計程車收據更好',
 ] as const;
 
 const prohibitedStaleCopy = [
@@ -115,9 +159,28 @@ function sectionForQuestion(questionNumber: number) {
   );
 }
 
+function q6ToQ10SectionForQuestion(questionNumber: number) {
+  const heading = `## ${q6ToQ10Headings[questionNumber - 6]}`;
+  const start = q6ToQ10Section.indexOf(heading);
+  if (start === -1) return '';
+
+  const next = q6ToQ10Section.indexOf('\n## ', start + heading.length);
+  return q6ToQ10Section.slice(
+    start,
+    next === -1 ? q6ToQ10Section.length : next,
+  );
+}
+
 const q6MarkerBytes = Buffer.from(q6Marker, 'utf8');
 const q6ByteIndex = rawBytes.indexOf(q6MarkerBytes);
+const q6HeadingByteIndex = rawBytes.indexOf(
+  Buffer.from(`## ${q6Marker}`, 'utf8'),
+);
 const q6CharacterIndex = parsed.content.indexOf(q6Marker);
+const q6HeadingCharacterIndex = parsed.content.indexOf(`## ${q6Marker}`);
+const q11MarkerBytes = Buffer.from(q11Marker, 'utf8');
+const q11ByteIndex = rawBytes.indexOf(q11MarkerBytes);
+const q11CharacterIndex = parsed.content.indexOf(q11Marker);
 const localizedPrefix =
   q6CharacterIndex === -1
     ? parsed.content
@@ -125,17 +188,37 @@ const localizedPrefix =
 const sourceBlockStart = localizedPrefix.indexOf(`### ${sourceHeading}`);
 const sourceBlock =
   sourceBlockStart === -1 ? '' : localizedPrefix.slice(sourceBlockStart);
+const q6ToQ10Start =
+  q6HeadingCharacterIndex === -1
+    ? q6CharacterIndex
+    : q6HeadingCharacterIndex;
+const q6ToQ10Section =
+  q6ToQ10Start === -1 || q11CharacterIndex === -1
+    ? ''
+    : parsed.content.slice(q6ToQ10Start, q11CharacterIndex);
+const q6ToQ10SourceBlockStart = q6ToQ10Section.indexOf(
+  `### ${q6ToQ10SourceHeading}`,
+);
+const q6ToQ10SourceBlock =
+  q6ToQ10SourceBlockStart === -1
+    ? ''
+    : q6ToQ10Section.slice(q6ToQ10SourceBlockStart);
 
 describe('Traditional Chinese traffic column 003 — Q1–Q5 localization boundary', () => {
-  it('preserves the immutable Q6–Q20 tail byte-for-byte', () => {
-    expect(q6ByteIndex).toBeGreaterThan(0);
+  it('preserves the immutable Q1–Q5 prefix and Q11–Q20 tail byte-for-byte', () => {
+    const immutablePrefix = rawBytes.subarray(0, immutablePrefixBytes);
+    const immutableQ11Tail = rawBytes.subarray(q11ByteIndex);
 
-    const immutableTail = rawBytes.subarray(q6ByteIndex);
-    expect(immutableTail.toString('utf8').startsWith(q6Marker)).toBe(true);
-    expect(immutableTail.byteLength).toBe(immutableTailBytes);
+    expect(immutablePrefix.byteLength).toBe(immutablePrefixBytes);
     expect(
-      crypto.createHash('sha256').update(immutableTail).digest('hex'),
-    ).toBe(immutableTailSha256);
+      crypto.createHash('sha256').update(immutablePrefix).digest('hex'),
+    ).toBe(immutablePrefixSha256);
+    expect(q11ByteIndex).toBeGreaterThan(immutablePrefixBytes);
+    expect(immutableQ11Tail.toString('utf8').startsWith(q11Marker)).toBe(true);
+    expect(immutableQ11Tail.byteLength).toBe(immutableQ11TailBytes);
+    expect(
+      crypto.createHash('sha256').update(immutableQ11Tail).digest('hex'),
+    ).toBe(immutableQ11TailSha256);
   });
 
   it('uses the exact frontmatter, sole H1, and two contracted images', () => {
@@ -165,7 +248,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
     expect(countOccurrences(raw, incidentImage)).toBe(1);
   });
 
-  it('isolates exactly Q1–Q5, places the source H3 after Q5, and does not create a Q6 H2', () => {
+  it('isolates exactly Q1–Q5 and places the source H3 after Q5', () => {
     expect(q6CharacterIndex).toBeGreaterThan(0);
     expect(
       Array.from(
@@ -177,7 +260,6 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
     expect(sourceBlockStart).toBeGreaterThan(
       localizedPrefix.indexOf(`## ${qHeadings[4]}`),
     );
-    expect(parsed.content).not.toContain(`## ${q6Marker}`);
   });
 
   it('introduces the safety, reporting, evidence, deadline, fault, and settlement sequence with a factual caveat', () => {
@@ -356,5 +438,342 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       /(?<!不)(?:一定|必然|必定|保證|一律).{0,20}(?:勝訴|獲賠|認定|成立|構成|免除|無須繳費|不用繳費)/s,
     );
     expect(localizedPrefix).not.toMatch(/(?:韓元|원)/);
+  });
+});
+
+describe('Traditional Chinese traffic column 003 — Q6–Q10 localization boundary', () => {
+  it('starts the new Q6 H2 at byte 7238 and isolates exactly Q6–Q10 before the immutable Q11 marker', () => {
+    expect(q6HeadingByteIndex).toBe(immutablePrefixBytes);
+    expect(q6ByteIndex).toBe(immutablePrefixBytes + 3);
+    expect(q11CharacterIndex).toBeGreaterThan(q6HeadingCharacterIndex);
+    expect(
+      Array.from(
+        q6ToQ10Section.matchAll(/^## (Q\d+\..+)$/gm),
+        (match) => match[1],
+      ),
+    ).toEqual([...q6ToQ10Headings]);
+    expect(q6ToQ10Section).toContain(`### ${q6ToQ10SourceHeading}`);
+    expect(q6ToQ10SourceBlockStart).toBeGreaterThan(
+      q6ToQ10Section.indexOf(`## ${q6ToQ10Headings[4]}`),
+    );
+    expect(q6ToQ10Section).not.toContain(`## ${q11Marker}`);
+  });
+
+  it('locks Q6 preliminary analysis, appraisal, commissioning, one review, and independent evaluation', () => {
+    expectConcepts(q6ToQ10SectionForQuestion(6), [
+      {
+        label: 'preliminary police analysis',
+        pattern:
+          /(?:道路交通事故初步分析研判表|初判表).{0,40}(?:警方|警察).{0,20}(?:初步|初步分析)|(?:警方|警察).{0,20}(?:初步|初步分析).{0,40}(?:道路交通事故初步分析研判表|初判表)/s,
+      },
+      {
+        label: 'not a court judgment',
+        pattern:
+          /(?:道路交通事故初步分析研判表|初判表).{0,40}(?:不是|並非|不等於).{0,12}(?:法院|法庭).{0,8}(?:判決|裁判)/s,
+      },
+      {
+        label: 'does not bind court',
+        pattern:
+          /(?:道路交通事故初步分析研判表|初判表).{0,60}(?:不會|不能|不當然|並不|並非).{0,18}(?:拘束|約束).{0,8}法院/s,
+      },
+      {
+        label: 'does not fix fault percentage',
+        pattern:
+          /(?:道路交通事故初步分析研判表|初判表).{0,60}(?:不會|不能|不當然|並不|並非).{0,18}(?:確定|決定|固定).{0,12}過失比例/s,
+      },
+      {
+        label: 'no automatic or mandatory ladder',
+        pattern:
+          /(?:並非|不是|不屬於).{0,32}(?:自動|強制|必經|必須依序).{0,16}(?:程序|階段|順序|流程)|(?:自動|強制|必經|必須依序).{0,16}(?:程序|階段|順序|流程).{0,32}(?:並非|不是|不屬於)/s,
+      },
+      {
+        label: 'eligible party application',
+        pattern:
+          /(?:符合資格|有申請資格|得申請).{0,18}(?:當事人|一方).{0,30}(?:申請|聲請).{0,12}(?:車輛行車事故)?鑑定|(?:當事人|一方).{0,18}(?:符合資格|有申請資格).{0,30}(?:申請|聲請).{0,12}(?:車輛行車事故)?鑑定/s,
+      },
+      {
+        label: 'handling-authority transfer',
+        pattern: /(?:處理|承辦).{0,10}機關.{0,20}(?:移送|轉送).{0,16}鑑定/s,
+      },
+      {
+        label: 'judicial commissioning',
+        pattern: /(?:司法機關|法院|檢察機關).{0,24}(?:囑託|委託).{0,12}鑑定/s,
+      },
+      {
+        label: 'six-month party-application period',
+        pattern: /(?:事故發生|事故).{0,24}6\s*個?月.{0,30}(?:申請|聲請)/s,
+      },
+      {
+        label: 'pending investigation or trial',
+        pattern: /(?:偵查|調查).{0,12}(?:或|、).{0,8}(?:審判|審理).{0,24}(?:繫屬|進行中)/s,
+      },
+      {
+        label: 'commission instead of a new direct application',
+        pattern:
+          /(?:司法機關|法院|檢察機關).{0,24}(?:囑託|委託).{0,40}(?:不是|而非|不再|不得).{0,24}(?:直接|自行).{0,8}(?:申請|聲請)|(?:不是|而非|不再|不得).{0,24}(?:直接|自行).{0,8}(?:申請|聲請).{0,40}(?:司法機關|法院|檢察機關).{0,24}(?:囑託|委託)/s,
+      },
+      {
+        label: 'review limited to one time',
+        pattern: /(?:覆議|複議|審查).{0,20}(?:一次|1\s*次).{0,12}(?:為限|僅限|只能)/s,
+      },
+      {
+        label: 'opinions are evidence or reference',
+        pattern:
+          /(?:鑑定|覆議).{0,12}意見.{0,24}(?:證據|參考資料|參考依據)/s,
+      },
+      {
+        label: 'independent whole-record evaluation',
+        pattern:
+          /法院.{0,20}獨立.{0,12}(?:判斷|評價|審酌).{0,40}(?:陳述|說明).{0,20}(?:影像|影片|錄影).{0,20}(?:現場紀錄|現場資料).{0,24}(?:全部|全案|整體).{0,8}(?:卷證|資料|紀錄)/s,
+      },
+    ]);
+  });
+
+  it('locks Q7 conditional injury, death, and property damage categories under Articles 184 and 192–196/216', () => {
+    const section = q6ToQ10SectionForQuestion(7);
+    expectConcepts(section, [
+      { label: 'Civil Code Article 184', pattern: /民法第\s*184\s*條/ },
+      { label: 'unlawful infringement', pattern: /不法侵害|違法侵害/ },
+      { label: 'causation', pattern: /因果關係/ },
+      { label: 'proof of damage', pattern: /損害.{0,12}(?:證明|舉證)|(?:證明|舉證).{0,12}損害/s },
+      {
+        label: 'accident does not automatically establish every item',
+        pattern:
+          /事故.{0,30}(?:不當然|不會自動|並非自動).{0,24}(?:全部|所有|每一).{0,12}(?:損害|項目|請求)/s,
+      },
+      { label: 'Civil Code Article 216', pattern: /民法第\s*216\s*條/ },
+      {
+        label: 'actual loss and lost profit',
+        pattern: /(?:所受損害|實際損失).{0,18}(?:所失利益|可得利益)/s,
+      },
+      { label: 'Civil Code Article 193', pattern: /民法第\s*193\s*條/ },
+      {
+        label: 'injury expenses',
+        pattern:
+          /(?:醫療|治療).{0,16}(?:看護|照護).{0,16}交通.{0,20}(?:輔具|輔助器具)/s,
+      },
+      {
+        label: 'temporary lost income',
+        pattern: /(?:暫時|治療期間).{0,18}(?:不能工作|工作能力).{0,18}(?:收入|薪資|所得).{0,12}(?:損失|減少)/s,
+      },
+      {
+        label: 'loss of earning capacity',
+        pattern: /勞動能力.{0,8}(?:減損|喪失)|工作能力.{0,8}(?:減損|喪失)/,
+      },
+      { label: 'Civil Code Article 195', pattern: /民法第\s*195\s*條/ },
+      {
+        label: 'injury non-pecuniary damage',
+        pattern: /(?:非財產上損害|精神慰撫金)/,
+      },
+      { label: 'Civil Code Article 192', pattern: /民法第\s*192\s*條/ },
+      {
+        label: 'death expenses and support',
+        pattern:
+          /(?:死亡前|生前).{0,20}(?:醫療|治療).{0,24}殯葬.{0,24}(?:扶養|扶養利益)/s,
+      },
+      { label: 'Civil Code Article 194', pattern: /民法第\s*194\s*條/ },
+      {
+        label: 'qualifying relatives non-pecuniary damage',
+        pattern:
+          /(?:特定|法定|符合資格).{0,12}親屬.{0,24}(?:非財產上損害|精神慰撫金)/s,
+      },
+      { label: 'Civil Code Article 196', pattern: /民法第\s*196\s*條/ },
+      {
+        label: 'proven property damage',
+        pattern:
+          /(?:財物|財產).{0,12}(?:實際|具體).{0,8}損害.{0,20}(?:證明|舉證)|(?:證明|舉證).{0,20}(?:財物|財產).{0,12}(?:實際|具體).{0,8}損害/s,
+      },
+      {
+        label: 'repair or diminution in value',
+        pattern: /修理費|修復費|維修費/,
+      },
+      {
+        label: 'diminution in value',
+        pattern: /價值減損|交易價值.{0,8}(?:減少|貶損)/,
+      },
+    ]);
+  });
+
+  it('locks Q8 medical evidence supplementation, claim changes, and the narrow Article 504 fee caveat', () => {
+    expectConcepts(q6ToQ10SectionForQuestion(8), [
+      {
+        label: 'receipts, diagnosis certificates, and medical records',
+        pattern: /收據.{0,18}診斷證明.{0,18}(?:病歷|醫療紀錄|診療紀錄)/s,
+      },
+      {
+        label: 'medical necessity and accident causation',
+        pattern:
+          /醫療.{0,8}必要性.{0,20}(?:事故|傷勢).{0,12}因果關係|(?:事故|傷勢).{0,12}因果關係.{0,20}醫療.{0,8}必要性/s,
+      },
+      {
+        label: 'continuing-treatment evidence may supplement',
+        pattern:
+          /(?:持續|後續).{0,8}治療.{0,24}(?:資料|紀錄|收據).{0,24}(?:補充|補提出).{0,12}證據/s,
+      },
+      {
+        label: 'procedural schedule and existing claim',
+        pattern:
+          /程序.{0,8}(?:期程|進度|時程).{0,24}(?:原有|既有).{0,8}(?:請求|主張)/s,
+      },
+      {
+        label: 'late evidence or expanded claim not guaranteed accepted',
+        pattern:
+          /(?:逾期|遲延|晚提出).{0,18}(?:資料|證據).{0,24}(?:擴張|增加|變更).{0,12}(?:請求|範圍).{0,30}(?:不保證|未必|不一定).{0,12}(?:准許|接受|採納)/s,
+      },
+      {
+        label: 'evidence supplementation differs from claim changes',
+        pattern:
+          /補充.{0,12}(?:醫療)?證據.{0,30}(?:不等於|不同於|有別於|應區分).{0,20}(?:變更|增加|擴張).{0,16}(?:金額|範圍|請求)/s,
+      },
+      {
+        label: 'receipt addition does not itself create a fee',
+        pattern:
+          /追加.{0,12}(?:醫療)?收據.{0,30}(?:不當然|不會自動|並非僅因).{0,24}(?:裁判費|法院費用)/s,
+      },
+      {
+        label: 'Criminal Procedure Article 504',
+        pattern: /刑事訴訟法第\s*504\s*條/,
+      },
+      {
+        label: 'transfer to civil division',
+        pattern: /移送.{0,16}民事庭|移送.{0,16}民事法院/,
+      },
+      {
+        label: 'excess beyond pre-transfer claim',
+        pattern:
+          /移送前.{0,18}(?:請求|範圍).{0,24}(?:變更|追加|增加|擴張).{0,18}(?:超過|超出).{0,12}(?:部分|範圍)/s,
+      },
+      {
+        label: 'fee issue only for excess',
+        pattern:
+          /(?:超過|超出|超額).{0,8}部分.{0,24}(?:裁判費|法院費用).{0,12}(?:問題|負擔|繳納)/s,
+      },
+      {
+        label: 'case-specific stage, timing, and scope',
+        pattern:
+          /移送.{0,8}階段.{0,16}(?:提出|聲明|申請).{0,8}(?:時間|時點).{0,16}(?:請求|聲明).{0,8}範圍.{0,24}(?:個案|具體).{0,8}(?:確認|判斷)/s,
+      },
+    ]);
+  });
+
+  it('locks Q9 care need, actual provision, duration, reasonable value, and non-automatic family care', () => {
+    expectConcepts(q6ToQ10SectionForQuestion(9), [
+      {
+        label: 'diagnosis or medical opinion is useful but not conclusive',
+        pattern:
+          /(?:診斷證明|醫療意見|醫師意見).{0,24}(?:有用|重要|可作為).{0,12}證據.{0,30}(?:不是|並非|不當然).{0,12}(?:決定性|唯一|充分)/s,
+      },
+      {
+        label: 'accident causation',
+        pattern: /事故.{0,12}因果關係|因果關係.{0,12}事故/s,
+      },
+      { label: 'care need', pattern: /看護.{0,8}必要性|照護.{0,8}必要性/ },
+      {
+        label: 'actual provision',
+        pattern: /實際.{0,8}(?:提供|進行).{0,8}(?:看護|照護)/s,
+      },
+      { label: 'duration', pattern: /(?:看護|照護).{0,8}(?:期間|時數|時間)/ },
+      {
+        label: 'reasonable amount',
+        pattern: /(?:合理|相當).{0,8}(?:金額|費用|數額)/,
+      },
+      {
+        label: 'unpaid relative care may be valued',
+        pattern:
+          /親屬.{0,20}(?:無償|未實際支付|沒有金錢支出).{0,30}(?:得|可以|可能).{0,12}(?:評價|認列|計算).{0,12}(?:損害|費用)/s,
+      },
+      {
+        label: 'relative care is not automatic',
+        pattern:
+          /親屬.{0,16}(?:看護|照護).{0,30}(?:不當然|不會自動|並非自動).{0,16}(?:認定|准許|賠償)/s,
+      },
+      {
+        label: 'nature, duration, and customary cost',
+        pattern:
+          /(?:看護|照護).{0,8}性質.{0,16}(?:期間|時間).{0,16}(?:通常|一般|市場|慣常).{0,8}(?:費用|價格|成本)/s,
+      },
+    ]);
+  });
+
+  it('locks Q10 treatment-linked travel proof and the non-exclusive, non-sufficient taxi-receipt caveat', () => {
+    expectConcepts(q6ToQ10SectionForQuestion(10), [
+      {
+        label: 'travel linked to treatment and accident injury',
+        pattern:
+          /交通.{0,12}(?:紀錄|費用).{0,24}治療.{0,24}事故.{0,12}(?:傷勢|受傷|傷害)|事故.{0,12}(?:傷勢|受傷|傷害).{0,24}治療.{0,24}交通.{0,12}(?:紀錄|費用)/s,
+      },
+      {
+        label: 'route and visit count/date',
+        pattern:
+          /路線.{0,16}(?:就醫|回診|治療).{0,8}次數.{0,12}(?:日期|時間)/s,
+      },
+      {
+        label: 'transport method and fare',
+        pattern: /交通工具|運輸方式|搭乘方式/,
+      },
+      { label: 'fare', pattern: /車資|費用|票價/ },
+      {
+        label: 'necessity and reasonableness',
+        pattern: /必要性.{0,18}合理性|合理性.{0,18}必要性/s,
+      },
+      {
+        label: 'possible evidence',
+        pattern:
+          /收據.{0,14}(?:車資|票價|費用).{0,8}紀錄.{0,14}路線.{0,8}紀錄.{0,14}(?:治療|就醫).{0,8}紀錄/s,
+      },
+      {
+        label: 'taxi receipt is not the only proof',
+        pattern:
+          /計程車收據.{0,24}(?:不是|並非|不屬於).{0,12}(?:唯一|僅有).{0,8}(?:證據|證明)/s,
+      },
+      {
+        label: 'taxi receipt is not automatically sufficient',
+        pattern:
+          /計程車收據.{0,24}(?:不當然|不會自動|並非自動).{0,12}(?:足夠|充分|成立)/s,
+      },
+    ]);
+  });
+
+  it('uses all 14 Q6–Q10 official URLs exactly once and in order with Traditional Chinese labels', () => {
+    const markdownLinks = Array.from(
+      q6ToQ10SourceBlock.matchAll(
+        /\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+      ),
+      (match) => ({ label: match[1], url: match[2] }),
+    );
+
+    expect(markdownLinks.map(({ url }) => url)).toEqual(
+      q6ToQ10SourceTargets,
+    );
+    for (const { label } of markdownLinks) {
+      expect(label).toMatch(/\p{Script=Han}/u);
+      expect(label).not.toMatch(/\p{Script=Hangul}/u);
+      expect(label).not.toMatch(
+        /[\p{Script=Hiragana}\p{Script=Katakana}]/u,
+      );
+    }
+    for (const target of q6ToQ10SourceTargets) {
+      expect(countOccurrences(q6ToQ10Section, target)).toBe(1);
+    }
+    expect(q6ToQ10SourceBlock).not.toMatch(/(?<!\]\()https?:\/\//);
+  });
+
+  it('rejects stale Q6–Q10 copy, bare damage-label lists, foreign scripts, simplified variants, and invisible spacers', () => {
+    for (const phrase of prohibitedQ6ToQ10Copy) {
+      expect(q6ToQ10Section).not.toContain(phrase);
+    }
+
+    const bareDamageLabels = q6ToQ10Section.match(
+      /^\s*[1-9][.、]\s*(?:醫療費用|看護費用|生活上增加的必要費用|不能工作的損失|勞動能力減損|喪葬費用|扶養費|精神慰撫金|財產損失)\s*$/gm,
+    );
+    expect(bareDamageLabels ?? []).toHaveLength(0);
+    expect(q6ToQ10Section).not.toMatch(/\p{Script=Hangul}/u);
+    expect(q6ToQ10Section).not.toMatch(
+      /[\p{Script=Hiragana}\p{Script=Katakana}]/u,
+    );
+    expect(q6ToQ10Section).not.toMatch(
+      /[这为个过发应实与后还会当从对请诉证赔伤条时场车报务处]/,
+    );
+    expect(q6ToQ10Section).not.toMatch(/^[\t ]*\u200b+[\t ]*$/m);
   });
 });

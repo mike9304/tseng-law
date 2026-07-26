@@ -162,6 +162,8 @@ const childSupportFactorsParagraph =
   'Under Civil Code Article 1116-2, parents’ duty to support a minor child continues after divorce. Child support is a parent–child obligation. It is distinct from Article 1057 post-divorce support for a qualifying former spouse. Do not treat the two claims as interchangeable, and do not use the Article 1030-1 residual-property limitation period as a universal deadline for child support. The specific allocation of support should be determined from evidence of the child’s living expenses, education costs, medical expenses, and any special needs, together with each parent’s income, assets, ability to provide support, and actual share of caregiving.';
 const childSupportEnforcementParagraph =
   'For child-support enforcement, the wording of the existing enforceable instrument, the payment due dates, the unpaid amount, and the payment history are important. For contact or visitation enforcement, it is important whether the method and conditions of contact are sufficiently specific. Child-support payments and compliance with contact or visitation arrangements must not be withheld or traded against each other in retaliation. To protect the child’s day-to-day welfare, each obligation and procedure should be handled independently.';
+const contactEnforcementFactorsParagraph =
+  'There is no automatic right to immediate physical handover, use of force, a change of parental rights and duties, or punishment of the other parent merely because contact was blocked. The sequence and method of enforcement should be determined in light of the child’s age and views, current care and protection arrangements, the emotional impact of enforcement, and the child’s safety. Interim protection may be necessary where flight risk, retention, or safety is genuinely in issue, but the form of that protection is a court decision based on the instrument and the evidence.';
 const bestInterestsFactorsParagraph =
   'Under Civil Code Article 1055-1, the court considers the child’s age, sex, and health; the number of children; the child’s views and needs for personality development; each parent’s age, occupation, conduct, health, financial means, and living circumstances; each parent’s willingness and attitude toward the child’s protection and upbringing; the emotional relationship between each parent and the child; and any circumstances in which one parent has interfered with the relationship between the other parent and the child. The court may hear the child’s views in the manner prescribed by law and may take into account investigations and opinions from competent authorities or child-welfare professionals. A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many; neither is a sole criterion for the decision or a basis for rewarding or punishing a parent.';
 const filingDocumentsParagraph =
@@ -189,16 +191,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '0ab5df8b0f87217565326cd3d813b3aa3c1792772e5ff17125aea8bb8f833105';
+  '231da7656032ec96c50f342d9443761a6cdb7f897d8fbf14770cdfba3e0cef85';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '26ddf6088c4c2a7a7260b8378e69a5d3aa6794fbb71afd958fd394fd0fafbc75';
+  '009230f2ffc5e1676e0e6805f47be0e7d1e1c65927bd19f5dbb8e6bbefeb9bf9';
 const frozenSection1OnwardSha256 =
-  '7f7ebbd1c6dafe54d9793f89c64eba6a126471962e1c56560665269c4eda6599';
-const frozenVisibleWordCount = 5_505;
+  'c791c041380706647cfa640d2d7cfb23a2f265d7e51a5289b5193677f1001621';
+const frozenVisibleWordCount = 5_529;
 const frozenSourceSha256 =
-  '6548d2abffc28fc0afd0e4c23672961df325afba467686bb710dfbe39fdeb388';
+  '15260fa1bf85153a0ad498396b87ad97be22c0e141b613c0461f245a7c47ff06';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1037,6 +1039,37 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(
       countOccurrences(parsed.content, childSupportFactorsParagraph),
     ).toBe(1);
+  });
+
+  it('publishes the exact child-focused contact-enforcement factors between the adjacent enforcement paragraphs', () => {
+    const precedingParagraph =
+      'If contact or visitation is obstructed, the available response depends on the existing agreement or court order and on the facts. A party may seek a court determination of contact, a change of the arrangement, enforcement of an existing instrument, or an appropriate interim measure. Family Act Article 194 requires enforcement methods to be selected under the child’s best interests. Those methods may involve direct or indirect compulsion as the law and the facts allow.';
+    const precedingMarker = `${precedingParagraph}\n\n`;
+    const followingMarker = `\n\n${childSupportEnforcementParagraph}`;
+    const precedingStart = parsed.content.indexOf(precedingMarker);
+    const paragraphStart = precedingStart + precedingMarker.length;
+    const followingStart = parsed.content.indexOf(
+      followingMarker,
+      paragraphStart,
+    );
+
+    expect(precedingStart).toBeGreaterThan(-1);
+    expect(followingStart).toBeGreaterThan(paragraphStart);
+    expect(parsed.content.slice(paragraphStart, followingStart)).toBe(
+      contactEnforcementFactorsParagraph,
+    );
+    expect(
+      countOccurrences(parsed.content, contactEnforcementFactorsParagraph),
+    ).toBe(1);
+    expect(
+      parsed.content.slice(precedingStart, precedingStart + precedingParagraph.length),
+    ).toBe(precedingParagraph);
+    expect(
+      parsed.content.slice(
+        followingStart + 2,
+        followingStart + 2 + childSupportEnforcementParagraph.length,
+      ),
+    ).toBe(childSupportEnforcementParagraph);
   });
 
   it('publishes the exact independent child-support and contact enforcement paragraph', () => {

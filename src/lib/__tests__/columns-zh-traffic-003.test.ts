@@ -50,6 +50,10 @@ const q11ToQ15Headings = [
 const q11ToQ15SourceHeading = 'Q11–Q15 官方依據';
 const q16Marker =
   'Q16. 事故發生後，可以把所有事情都交給保險公司處理嗎？';
+const approvedQ2PrivatePhotoSentence =
+  '自行拍照雖然有用，但不能取代死傷事故依法所需的警察處理。';
+const staleQ2PrivatePhotoSentence =
+  '自行拍照不能取代死傷事故依法所需的警察處理。';
 const approvedQ3TransferCostSentence =
   '例如，刑事案件遭駁回後，如依原告聲請移送民事法院，依刑事訴訟法第 503 條可能須負擔訴訟費用；另亦應一併確認第 504 條關於移送及程序的規定。';
 const staleQ3TransferCostWording =
@@ -58,12 +62,12 @@ const approvedQ4EvidenceSentence =
   '鑑定意見與初步分析研判表都可能是重要證據，但並非當然拘束法院；法院仍會綜合陳述、影像、車輛狀態等整體證據加以判斷。';
 const staleQ4GenericEvidenceWording =
   '鑑定意見與初步分析研判表都可能是重要證據，但並非當然拘束法院；法院仍會綜合全案證據判斷。';
-const immutablePrefixBytes = 7_265;
+const immutablePrefixBytes = 7_283;
 const immutablePrefixSha256 =
-  '147285d0fd1cba6707171a537e7a20cbf11bc17c642796bf413fae1113a1bce5';
-const immutableQ1ToQ10PrefixBytes = 12_428;
+  'f0ef7b883904a73e3f202b79cbc57110a9d8558349b69ce41a18039bee70ab2b';
+const immutableQ1ToQ10PrefixBytes = 12_446;
 const immutableQ1ToQ10PrefixSha256 =
-  '1d5024f4c84d0ac04c5ea41ea82891fd8b8752af837035a0f49833e769982a08';
+  '856a6815a8ef10e5f339ea00cdd9caa23d404db7805ca33459ff1a2334df9f41';
 const immutableQ16TailBytes = 3_143;
 const immutableQ16TailSha256 =
   'c189113fb7068cecc13432944afd541e4ebc40f9857eb6bbfd71dcf7daf418a9';
@@ -418,7 +422,12 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
   });
 
   it('locks Q2 safety-first preservation and the scene/7-day/30-day police timetable', () => {
-    expectConcepts(sectionForQuestion(2), [
+    const q2 = sectionForQuestion(2);
+
+    expect(countOccurrences(q2, approvedQ2PrivatePhotoSentence)).toBe(1);
+    expect(q2).not.toContain(staleQ2PrivatePhotoSentence);
+
+    expectConcepts(q2, [
       { label: 'personal safety first', pattern: /(?:先|優先).{0,18}(?:人身|自身|個人|現場)安全/s },
       { label: 'warning measures', pattern: /警示.{0,8}(?:措施|標誌|設備)|設置.{0,8}警告標誌/ },
       { label: '119 rescue', pattern: /119.{0,18}(?:受傷|救護|救援)|(?:受傷|救護|救援).{0,18}119/s },
@@ -434,7 +443,9 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       { label: 'dashcam preservation', pattern: /行車紀錄器.{0,24}(?:保存|保全|留存)/s },
       { label: 'party, vehicle, and insurance data', pattern: /當事人.{0,24}車輛.{0,24}保險.{0,12}(?:資料|資訊)/s },
       { label: 'medical records', pattern: /(?:病歷|診療紀錄|就醫紀錄|醫療紀錄)/ },
+      { label: 'private photos are useful', pattern: /自行拍照.{0,12}(?:雖然|雖).{0,12}有用/s },
       { label: 'private photos do not replace police handling', pattern: /(?:自行|私人|個人).{0,12}(?:拍照|照片|影像).{0,30}(?:不能|不得|無法).{0,12}(?:取代|代替).{0,18}(?:警察|警方)/s },
+      { label: 'injury-or-death accidents require police handling', pattern: /死傷事故.{0,18}依法.{0,18}(?:警察|警方).{0,12}(?:處理|處置)/s },
       { label: 'registration/contact form at scene', pattern: /(?:(?:當事人登記聯單|當事人登記聯絡資料|登記聯絡表).{0,24}(?:現場|當場)|(?:現場|當場).{0,24}(?:當事人登記聯單|當事人登記聯絡資料|登記聯絡表))/s },
       { label: 'scene diagram and photos after seven days', pattern: /(?:(?:現場圖|事故現場圖).{0,18}(?:現場照片|事故照片|照片).{0,30}7\s*日|7\s*日.{0,30}(?:現場圖|事故現場圖).{0,18}(?:現場照片|事故照片|照片))/s },
       { label: 'preliminary analysis after thirty days', pattern: /(?:(?:初步分析研判表|初判表).{0,30}30\s*日|30\s*日.{0,30}(?:初步分析研判表|初判表))/s },

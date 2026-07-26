@@ -191,16 +191,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  'caf430c1efb7f3866752ef131ce2b0db9e7c07e42bee871d4306e15e569bed9f';
+  '4d7339c859c2509e73a3091201a3f064c7c65b2f7bd977159eac2431ac3d4d44';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  'd3f51d41957b10c870ce092577ba16d658cdb6f71c26cad84e4bf95cebbf09a0';
+  '4a1da5085148a6e1895461aa79873a6bddcb22233748109841382ec4a6026f08';
 const frozenSection1OnwardSha256 =
-  '3f00c6c53dea193bb2e88bb01e20e2de73cce718798d7155b63693e1d9ad3e05';
-const frozenVisibleWordCount = 5_546;
+  '0604e85cd9a9aed34b95b88833a8dbd72e83f72e5e3b6cc19fdf4e2e88406d41';
+const frozenVisibleWordCount = 5_559;
 const frozenSourceSha256 =
-  '997192f8400aba12e1f834a6e17c872423c4350af68f8d91f0da08ae6cde564c';
+  '6a7d4e198512400456291c6b40422deb4ab2a643e3fb5ae169b07cbe59d07170';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1166,6 +1166,23 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(countOccurrences(section, expectedItem)).toBe(1);
   });
 
+  it('publishes the exact limited-disclosure privacy plan as evidence item nine', () => {
+    const section = sectionBody(parsed.content, headings[10]);
+    const expectedItem =
+      '9. **Privacy plan and limited disclosure.** Share identification numbers, addresses, and medical, educational, or financial information concerning a spouse or child only with people and institutions that need the information and only to the extent necessary. Establish a privacy plan covering file-access permissions, methods of transmission, and disposal of copies.';
+    const itemStart = section.indexOf(
+      '9. **Privacy plan and limited disclosure.**',
+    );
+    const prohibitionsStart = section.indexOf('\n\nDo not engage', itemStart);
+
+    expect(itemStart).toBeGreaterThan(-1);
+    expect(prohibitionsStart).toBeGreaterThan(itemStart);
+    expect(section.slice(itemStart, prohibitionsStart)).toBe(expectedItem);
+    expect(countOccurrences(section, expectedItem)).toBe(1);
+    expect(section).not.toContain('preserve fragile evidence promptly');
+    expect(section).not.toContain('notarial or other formal preservation');
+  });
+
   it('uses the exact ordered nine-category evidence checklist and privacy prohibitions', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const checklistStarts = [
@@ -1177,7 +1194,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       '6. **Each child’s situation.**',
       '7. **Support, contact, and relocation plans.**',
       '8. **Deadlines calculated from correct triggering events.**',
-      '9. **Privacy-safe handling and urgent preservation.**',
+      '9. **Privacy plan and limited disclosure.**',
     ];
 
     let previousIndex = -1;
@@ -1197,7 +1214,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'Do not create evidence by unlawful means.',
     );
     expect(section).toContain(
-      'limit unnecessary disclosure of a child’s private information',
+      'only with people and institutions that need the information and only to the extent necessary',
     );
     expect(section).toContain(
       'not from a convenient or informal date.',

@@ -156,6 +156,8 @@ const bestInterestsSubsectionHeading =
   '### Best interests and statutory factors';
 const unresolvedIssuesSubsectionHeading =
   '### Divorce while other issues remain open';
+const unresolvedIssuesParagraph =
+  'If the requirements of the chosen route to divorce are satisfied, the marriage itself may be dissolved first even though some property or child-related issues remain unresolved. This should not, however, be treated as a shortcut that can be recommended in every case. The preservation and settlement of unresolved property; the child’s residence, care, medical treatment, and education; the agreements or court orders needed for child support and contact; and whether interim orders are needed to ensure safety and continuity of daily life while the dispute remains pending must all be considered together.';
 const bestInterestsFactorsParagraph =
   'Under Civil Code Article 1055-1, the court considers the child’s age, sex, and health; the number of children; the child’s views and needs for personality development; each parent’s age, occupation, conduct, health, financial means, and living circumstances; each parent’s willingness and attitude toward the child’s protection and upbringing; the emotional relationship between each parent and the child; and any circumstances in which one parent has interfered with the relationship between the other parent and the child. The court may hear the child’s views in the manner prescribed by law and may take into account investigations and opinions from competent authorities or child-welfare professionals. A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many; neither is a sole criterion for the decision or a basis for rewarding or punishing a parent.';
 const filingDocumentsParagraph =
@@ -183,16 +185,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  'c26b834a486f15a5c038bbf5a50467002f7d95423207d732070305557bdb65fe';
+  '98a5f324edbd2729c7667af472ce48cbad5375e4642d4ac9933043f8143dab1a';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '072affc2a4803736c1b823f6890390a6ee10438df79c5091f43db740348ed600';
+  'dd024b606d2db881dcd6d492ea50c31a7b090d4a747b0009a1ef46df273b36de';
 const frozenSection1OnwardSha256 =
-  'bae5703ea9f6f58e976fa18314298fb2f6d33ebf876e171e46b8ed1e37902727';
-const frozenVisibleWordCount = 5_371;
+  'f373f2e3fecfda8e398f282f1462e5f9becc03c9e22503796d819e1c3688ecd5';
+const frozenVisibleWordCount = 5_389;
 const frozenSourceSha256 =
-  '6b92455a2f5b9b6e6a80e88f625d4dbe2ad0cfe8d1a5b0b5221926d210464632';
+  '430c74a1f36d48e08ededac6b12b242b8e80a528aa2af085bb0de3483858c263';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -368,8 +370,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       {
         number: 8,
         heading: headings[7],
-        phrase:
-          'That is not a recommendation to “divorce first and resolve the child later” as a universal shortcut.',
+        phrase: unresolvedIssuesParagraph,
       },
       {
         number: 9,
@@ -976,6 +977,22 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     );
   });
 
+  it('publishes the exact unresolved-property-and-child-issues paragraph', () => {
+    const subsectionMarker = `${unresolvedIssuesSubsectionHeading}\n\n`;
+    const subsectionStart = parsed.content.indexOf(subsectionMarker);
+    const paragraphStart = subsectionStart + subsectionMarker.length;
+    const section9Start = parsed.content.indexOf(
+      `\n\n## ${headings[8]}`,
+      paragraphStart,
+    );
+
+    expect(subsectionStart).toBeGreaterThan(-1);
+    expect(section9Start).toBeGreaterThan(paragraphStart);
+    expect(parsed.content.slice(paragraphStart, section9Start)).toBe(
+      unresolvedIssuesParagraph,
+    );
+  });
+
   it('locks Articles 1055 and 1055-1, the full Taiwan concept, review, and unresolved issues', () => {
     const section = sectionBody(parsed.content, headings[7]);
     const requiredPhrases = [
@@ -991,7 +1008,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'The court may hear the child’s views in the manner prescribed by law',
       'investigations and opinions from competent authorities or child-welfare professionals',
       'A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many',
-      'That is not a recommendation to “divorce first and resolve the child later” as a universal shortcut.',
+      'whether interim orders are needed to ensure safety and continuity of daily life while the dispute remains pending',
     ];
 
     for (const phrase of requiredPhrases) {

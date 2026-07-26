@@ -221,7 +221,7 @@ Under Civil Code Article 1055-1, the court considers the child’s age, sex, and
 
 ### Divorce while other issues remain open
 
-Spouses may complete a divorce while some child-related or property issues remain disputed only if the chosen divorce path’s own requirements are already satisfied. That is not a recommendation to “divorce first and resolve the child later” as a universal shortcut. Identify which child and property issues remain legally open, which still need an agreement or court order, and what interim protection may be necessary for safety, residence, contact, or support while those issues continue.
+If the requirements of the chosen route to divorce are satisfied, the marriage itself may be dissolved first even though some property or child-related issues remain unresolved. This should not, however, be treated as a shortcut that can be recommended in every case. The preservation and settlement of unresolved property; the child’s residence, care, medical treatment, and education; the agreements or court orders needed for child support and contact; and whether interim orders are needed to ensure safety and continuity of daily life while the dispute remains pending must all be considered together.
 
 ## 9. Child Support, Contact, Enforcement, and Interim Protection
 

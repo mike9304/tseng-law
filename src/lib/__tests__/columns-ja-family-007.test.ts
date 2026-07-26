@@ -31,14 +31,21 @@ const introParagraphs = [
 const legacyGenericIntro =
   '本稿は、台湾における離婚の経路、戸籍登記、裁判所手続、裁判離婚の事由について、中立的な法律情報として整理するものです。一般的な教育情報であり、個別事案への法的助言ではありません。裁判管轄、準拠法、外国の身分行為や裁判の承認、事実と証拠、既存の合意や裁判所の判断、および現行の公式規則により、結論は異なり得ます。';
 const frozenH2BodySha256 =
-  '8f382f8b3c66b6229fdf73c8a061ecfd7540c228d4485e246d8b6db67aff3059';
+  '567fb608bb66cd948e0716edf69d8c03237204eb8bf47dad1259a17326edf9c3';
+const responsibleSpousePhrase =
+  '婚姻破綻について専ら責任を負う配偶者';
+const staleResponsibleSpousePhrase = '唯一の有責配偶者';
+const frozenNormalizedSection4Sha256 =
+  'fffa3cab282466c74aeb2707a1029e66ca641d0e99a3456ed734936a5fefba3a';
+const frozenSection5OnwardSha256 =
+  '79429f8626152b60164fedabc51ab6850ccc0a76e56009b00204c05aba4b3ae4';
 
 const faq1Answer =
   '台湾民法第1050条によれば、協議離婚は書面により行い、双方に離婚の真意があることを直接見聞きして確認した2名以上の証人の署名を得るとともに、戸政機関への登記を行うことがすべて必要です。私的な合意書に署名しただけでは完了せず、登記は効力発生の要件です。';
 const faq2Answer =
   '必ずしもそうではありません。家事事件法第13条により、裁判所が当事者または法定代理人に本人出頭を命じ、正当な理由なく従わない場合には、民事訴訟法第303条が準用されます。初回の過料は3万台湾元以下であり、再度の適法な通知の後に正当な理由なく出頭しない場合は、反復して制裁が科されることがありますが、拘引はできません。これは、双方が必ず同じ部屋で調停しなければならないという意味ではありません。手続の進め方は、法令と個別事情に基づき裁判所が判断します。';
 const faq3Answer =
-  '民法第1052条第2項ただし書は、2026年7月25日時点の現行条文にも残っています。憲法法廷112年憲判字第4号は、同制限を全面削除したわけではありません。同判決は、原則として合憲としつつ、重大事由の発生・継続期間を考慮せず、唯一の有責配偶者から離婚の機会を完全に奪い、著しく過酷となる範囲について違憲と判断しました。立法府による条文削除はなされていないため、裁判所は当該判旨を踏まえて個別に判断します。';
+  '民法第1052条第2項ただし書は、2026年7月25日時点の現行条文にも残っています。憲法法廷112年憲判字第4号は、同制限を全面削除したわけではありません。同判決は、原則として合憲としつつ、重大事由の発生・継続期間を考慮せず、婚姻破綻について専ら責任を負う配偶者から離婚の機会を完全に奪い、著しく過酷となる範囲について違憲と判断しました。立法府による条文削除はなされていないため、裁判所は当該判旨を踏まえて個別に判断します。';
 const faq4Answer =
   '決まりません。登記名義、実質的所有、借名登記、婚前資金、贈与、貸付、返還等の個別請求と、民法第1030条の1に基づく夫婦残余財産差額分配は、分けて検討する必要があります。婚前の貯蓄による頭金やローン返済だけでは登記名義が移転するわけではなく、一方の名義で登記されていることだけで、契約上・実質上の権利や夫婦財産上の請求がすべて決まるわけでもありません。';
 const faq5Answer =
@@ -119,11 +126,11 @@ ${disclaimer}
 
 ${author}`;
 
-const frozenVisibleJapaneseCount = 11_587;
-const frozenVisibleKanaCount = 5_100;
+const frozenVisibleJapaneseCount = 11_607;
+const frozenVisibleKanaCount = 5_112;
 const frozenCalculatedMinutes = 24;
 const frozenSourceSha256 =
-  '9a63d0025aedeba4eca5c71a5711fcefad4b247d92f228e2eef783e1224ddd7a';
+  '3462e2325f7f21b3d69ba6719d40ff082e157eea6813e5e8b4059bf6c2d1bce6';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -247,6 +254,41 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
       expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
       expect(countOccurrences(raw, answer)).toBe(2);
     }
+  });
+
+  it('uses the exact responsible-spouse phrase in FAQ 3 and both assigned Section 4 contexts while freezing all other downstream text', () => {
+    const section4 = sectionBody(parsed.content, headings[3]);
+    const section5Start = parsed.content.indexOf(`## ${headings[4]}`);
+    const section5Onward = parsed.content.slice(section5Start);
+    const normalizedSection4 = section4
+      .split(responsibleSpousePhrase)
+      .join('<RESPONSIBLE_SPOUSE>')
+      .split(staleResponsibleSpousePhrase)
+      .join('<RESPONSIBLE_SPOUSE>');
+    const detailedParagraph =
+      section4
+        .split('\n\n')
+        .find((paragraph) =>
+          paragraph.startsWith(
+            'このただし書は、2026年7月25日時点の現行条文に残っています。',
+          ),
+        ) ?? '';
+
+    expect(parsed.data.faq[2]?.a).toBe(faq3Answer);
+    expect(firstParagraphAfter(parsed.content, `## ${headings[3]}`)).toBe(
+      faq3Answer,
+    );
+    expect(detailedParagraph).toContain(
+      `重大事由の発生・継続期間を考慮せず、${responsibleSpousePhrase}から離婚の機会を完全に奪い、著しく過酷となる範囲について違憲と判断しました。`,
+    );
+    expect(countOccurrences(raw, responsibleSpousePhrase)).toBe(3);
+    expect(countOccurrences(raw, staleResponsibleSpousePhrase)).toBe(0);
+    expect(
+      crypto.createHash('sha256').update(normalizedSection4).digest('hex'),
+    ).toBe(frozenNormalizedSection4Sha256);
+    expect(
+      crypto.createHash('sha256').update(section5Onward).digest('hex'),
+    ).toBe(frozenSection5OnwardSha256);
   });
 
   it('locks one exact substantive proposition in its assigned section for all twenty-five legacy topics', () => {
@@ -483,7 +525,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
       'このただし書は、2026年7月25日時点の現行条文に残っています。',
       '憲法法廷112年憲判字第4号は、ただし書を全面削除したわけではなく',
       '有責配偶者に対して離婚を自動的に許可し、又は一律に禁止する結論を定めたわけでもありません。',
-      '重大事由の発生・継続期間を考慮せず、唯一の有責配偶者から離婚の機会を完全に奪い、著しく過酷となる範囲について違憲と判断しました。',
+      '重大事由の発生・継続期間を考慮せず、婚姻破綻について専ら責任を負う配偶者から離婚の機会を完全に奪い、著しく過酷となる範囲について違憲と判断しました。',
       '第1項の各事由をすべて書き換えているわけではありません。',
       '警察への行方不明届は重要な証拠となり得ますが、普遍的な法定前提ではありません。',
       '先行する同居義務履行請求も、すべての事件に必須の法定前提ではありません。',

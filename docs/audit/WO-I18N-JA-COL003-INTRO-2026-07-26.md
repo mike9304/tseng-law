@@ -29,6 +29,12 @@ begins at byte `943`.
   - only byte zero through immediately before the exact current Q1 marker
 - `src/lib/__tests__/columns-ja-traffic-003.test.ts`
   - new focused boundary and introduction contract
+- `src/lib/__tests__/columns-ja-content.test.ts`
+  - if the completed prefix no longer contains an attorney byline, remove
+    only `003-taiwan-traffic-accident-procedure.md` from
+    `jaIdentityFiles`;
+  - preserve the corpus-wide rejection of the incorrect name `曾俊瑋` and
+    every other file-specific official-name assertion.
 
 Do not edit Q1 onward, Korean, Traditional Chinese, English, archive/search
 data, embeddings, loaders, aliases, or unrelated tests.

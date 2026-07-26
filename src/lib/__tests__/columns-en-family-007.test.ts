@@ -191,16 +191,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '4d7339c859c2509e73a3091201a3f064c7c65b2f7bd977159eac2431ac3d4d44';
+  '1f2c98e73eb1ea88c47e66f0593d36629b847d63fa217618ed21f1d0c8ce9f43';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '4a1da5085148a6e1895461aa79873a6bddcb22233748109841382ec4a6026f08';
+  '4f6899c870bf943a3e843e99844efb4a1790468f58c9a2e771b94f2bed763f7a';
 const frozenSection1OnwardSha256 =
-  '0604e85cd9a9aed34b95b88833a8dbd72e83f72e5e3b6cc19fdf4e2e88406d41';
-const frozenVisibleWordCount = 5_559;
+  'a5316b808236cf4407faf13a2269f101fee31fe375c4edea58f41fb7f48e977c';
+const frozenVisibleWordCount = 5_590;
 const frozenSourceSha256 =
-  '6a7d4e198512400456291c6b40422deb4ab2a643e3fb5ae169b07cbe59d07170';
+  '8b6e6a76d5a5971c059f11d54e62c1e25d26108aaf4341dd826bef7e23738402';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1164,6 +1164,23 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(nextItemStart).toBeGreaterThan(itemStart);
     expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
     expect(countOccurrences(section, expectedItem)).toBe(1);
+  });
+
+  it('publishes the exact non-adversarial evidence-organization introduction', () => {
+    const section = sectionBody(parsed.content, headings[10]);
+    const expectedIntro =
+      'Organize the materials not as a collection intended to pressure the other party, but as records that accurately explain jurisdiction, procedure, the facts, and the child’s needs. Preparing the following nine categories so that both the chronology of the case and the source of each original document are clear can reduce the risk of confusing different claims and deadlines.';
+    const introStart = `## ${headings[10]}\n\n`.length;
+    const firstItemStart = section.indexOf(
+      '\n\n1. **Identity, status, and addresses.**',
+    );
+
+    expect(firstItemStart).toBeGreaterThan(-1);
+    expect(section.slice(introStart, firstItemStart)).toBe(expectedIntro);
+    expect(countOccurrences(section, expectedIntro)).toBe(1);
+    expect(section).not.toContain(
+      'Prepare a non-adversarial file early. The goal is accuracy, preservation of originals, and privacy-safe handling—not advantage-seeking through unlawful methods. Organize materials in at least the following nine groups.',
+    );
   });
 
   it('publishes the exact limited-disclosure privacy plan as evidence item nine', () => {

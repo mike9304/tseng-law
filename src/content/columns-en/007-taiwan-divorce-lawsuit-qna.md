@@ -259,7 +259,7 @@ Do not state or imply that the 1980 Hague Child Abduction Convention automatical
 
 ## 11. Evidence and Practical Preparation
 
-Prepare a non-adversarial file early. The goal is accuracy, preservation of originals, and privacy-safe handling—not advantage-seeking through unlawful methods. Organize materials in at least the following nine groups.
+Organize the materials not as a collection intended to pressure the other party, but as records that accurately explain jurisdiction, procedure, the facts, and the child’s needs. Preparing the following nine categories so that both the chronology of the case and the source of each original document are clear can reduce the risk of confusing different claims and deadlines.
 
 1. **Identity, status, and addresses.** Marriage and household-registration records; nationality documents; domicile or habitual-residence evidence; and current addresses for each spouse and child. These materials frame jurisdiction, service, and registration questions.
 2. **Divorce instruments and court papers.** Any written mutual-consent divorce agreement and witness circumstances; petitions; mediation records; settlements; judgments; rulings; service proofs; and finality certificates. Keep originals or certified copies and note how and when each instrument was served or became final.

@@ -17,14 +17,16 @@ const immutablePrefixSha256 =
 const immutableQ1ToQ5PrefixBytes = 9_308;
 const immutableQ1ToQ5PrefixSha256 =
   '46c9e6a90b38f2244144c1773a8130e3bbe0d1ae9572cc9f6b0bf5cd04589888';
+const immutableQ1ToQ10PrefixBytes = 15_708;
+const immutableQ1ToQ10PrefixSha256 =
+  'd093db3695586b80f5e8a0e14add27597fee4dc8222f8e9955c8cd4c43ff84c2';
 const q6ByteIndex = immutableQ1ToQ5PrefixBytes;
-const q11Marker = 'Q11. 就労不能損失請求時の注意事項は何ですか？';
-const q11ByteIndex = rawBytes.indexOf(Buffer.from(q11Marker, 'utf8'));
-const immutableQ11ToQ20Tail =
-  q11ByteIndex === -1 ? Buffer.alloc(0) : rawBytes.subarray(q11ByteIndex);
-const immutableQ11ToQ20TailBytes = 9_502;
-const immutableQ11ToQ20TailSha256 =
-  'd88b2e5a716c9ce2098a79eb1dc7bccff59b37a4db47736df9c60f418a0d49b8';
+const q11ByteIndex = immutableQ1ToQ10PrefixBytes;
+const q16Marker =
+  'Q16. 事故発生後、保険会社にすべてを任せられますか？';
+const immutableQ16ToQ20TailBytes = 4_511;
+const immutableQ16ToQ20TailSha256 =
+  'ffb2588ec61e6a544ba1f1fd1d9f60d39460bac89367e6dacdf88aa0ba8dc0ad';
 const localizedPrefixBytes = rawBytes.subarray(0, immutablePrefixBytes);
 const localizedPrefix = localizedPrefixBytes.toString('utf8');
 const parsedPrefix = matter(localizedPrefix);
@@ -73,6 +75,67 @@ const q6ToQ10ContractedHeadings = [
   q8Heading,
   q9Heading,
   q10Heading,
+] as const;
+
+const q11Heading =
+  '## Q11. 治療・回復期間中の逸失収入は、どのように立証しますか？';
+const q12Heading =
+  '## Q12. 労働能力低下による損害は、どのように立証しますか？';
+const q13Heading =
+  '## Q13. 非財産的損害に対する慰謝料は、どのように判断されますか？';
+const q14Heading =
+  '## Q14. 業務中の事故では、使用者にも民事責任を問えますか？';
+const q15Heading =
+  '## Q15. どのような自動車保険の給付・補償を確認すべきですか？';
+const q11ToQ15SourceHeading = '### Q11–Q15 公式資料';
+const q11ToQ15ContractedHeadings = [
+  q11Heading,
+  q12Heading,
+  q13Heading,
+  q14Heading,
+  q15Heading,
+] as const;
+
+const q11ToQ15OfficialSourceUrls = [
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001',
+  'https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf',
+  'https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf',
+  'https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001',
+  'https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL006889',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL047990',
+] as const;
+
+const prohibitedQ11ToQ15Copy = [
+  '裁判官は請求を認めません',
+  '最も大きな比重を占めます',
+  '私は弁護士として',
+  '必ず請求するよう勧めています',
+  'すべての給与の10%',
+  '退職年齢に至るまで',
+  '65歳になるまで',
+  '用いる必要があります',
+  '1,693,928',
+  '鑑定費用が高くない',
+  '1〜2万元',
+  '通常原告が想像するより少ない',
+  '数十万元が一般的な金額',
+  '数百万円の慰謝料を期待しない方がよい',
+  '会社は雇用責任を負うことになります',
+  '会社は通常加害者より多くの資産',
+  '会社も併せて訴えるのがよい',
+  '加害者本人に対してのみ可能',
+  'すべての人が加入しなければならない',
+  '失踪または死亡',
+  '200万元',
+  '残りの部分を補償します',
+  '自車運転者の負傷は保障しません',
 ] as const;
 
 const q6ToQ10OfficialSourceUrls = [
@@ -202,6 +265,14 @@ function q6ToQ10SectionBetween(startHeading: string, endHeading: string) {
     : q6ToQ10.slice(start, end);
 }
 
+function q11ToQ15SectionBetween(startHeading: string, endHeading: string) {
+  const start = q11ToQ15.indexOf(startHeading);
+  const end = q11ToQ15.indexOf(endHeading);
+  return start === -1 || end === -1 || end <= start
+    ? ''
+    : q11ToQ15.slice(start, end);
+}
+
 function containsOrderedLinePrefixes(
   value: string,
   prefixes: readonly string[],
@@ -246,9 +317,26 @@ const q6ToQ10SourceBlock =
   q6ToQ10SourceBlockStart === -1
     ? ''
     : q6ToQ10.slice(q6ToQ10SourceBlockStart);
+const q16ByteIndex = rawBytes.indexOf(Buffer.from(q16Marker, 'utf8'));
+const q11ToQ15 =
+  q16ByteIndex <= q11ByteIndex
+    ? ''
+    : rawBytes.subarray(q11ByteIndex, q16ByteIndex).toString('utf8');
+const q11 = q11ToQ15SectionBetween(q11Heading, q12Heading);
+const q12 = q11ToQ15SectionBetween(q12Heading, q13Heading);
+const q13 = q11ToQ15SectionBetween(q13Heading, q14Heading);
+const q14 = q11ToQ15SectionBetween(q14Heading, q15Heading);
+const q15 = q11ToQ15SectionBetween(q15Heading, q11ToQ15SourceHeading);
+const q11ToQ15SourceBlockStart = q11ToQ15.indexOf(
+  q11ToQ15SourceHeading,
+);
+const q11ToQ15SourceBlock =
+  q11ToQ15SourceBlockStart === -1
+    ? ''
+    : q11ToQ15.slice(q11ToQ15SourceBlockStart);
 
 describe('Japanese traffic column 003 — metadata and introduction localization boundary', () => {
-  it('preserves the completed introduction and Q1–Q5 prefixes plus the exact Q11-to-Q20 tail byte-for-byte', () => {
+  it('preserves the completed introduction and Q1–Q10 prefixes plus the exact Q16-to-Q20 tail byte-for-byte', () => {
     expect(localizedPrefixBytes.byteLength).toBe(immutablePrefixBytes);
     expect(
       crypto.createHash('sha256').update(localizedPrefixBytes).digest('hex'),
@@ -269,16 +357,35 @@ describe('Japanese traffic column 003 — metadata and introduction localization
         .digest('hex'),
     ).toBe(immutableQ1ToQ5PrefixSha256);
 
-    expect(q11ByteIndex).toBeGreaterThan(q6ByteIndex);
-    expect(immutableQ11ToQ20Tail.toString('utf8').startsWith(q11Marker)).toBe(
-      true,
+    const immutableQ1ToQ10Prefix = rawBytes.subarray(
+      0,
+      immutableQ1ToQ10PrefixBytes,
     );
-    expect(immutableQ11ToQ20Tail.byteLength).toBe(
-      immutableQ11ToQ20TailBytes,
+    expect(q11ByteIndex).toBeGreaterThan(q6ByteIndex);
+    expect(immutableQ1ToQ10Prefix.byteLength).toBe(
+      immutableQ1ToQ10PrefixBytes,
     );
     expect(
-      crypto.createHash('sha256').update(immutableQ11ToQ20Tail).digest('hex'),
-    ).toBe(immutableQ11ToQ20TailSha256);
+      crypto
+        .createHash('sha256')
+        .update(immutableQ1ToQ10Prefix)
+        .digest('hex'),
+    ).toBe(immutableQ1ToQ10PrefixSha256);
+
+    expect(q16ByteIndex).toBeGreaterThan(q11ByteIndex);
+    const immutableQ16ToQ20Tail = rawBytes.subarray(q16ByteIndex);
+    expect(immutableQ16ToQ20Tail.toString('utf8').startsWith(q16Marker)).toBe(
+      true,
+    );
+    expect(immutableQ16ToQ20Tail.byteLength).toBe(
+      immutableQ16ToQ20TailBytes,
+    );
+    expect(
+      crypto
+        .createHash('sha256')
+        .update(immutableQ16ToQ20Tail)
+        .digest('hex'),
+    ).toBe(immutableQ16ToQ20TailSha256);
   });
 
   it('ends the localized prefix at the exact blank-line boundary before Q1', () => {
@@ -566,7 +673,7 @@ describe('Japanese traffic column 003 — Q6–Q10 translation contract', () => 
       q6ToQ10.indexOf(q10Heading),
     );
     expect(countOccurrences(q6ToQ10, q6ToQ10SourceHeading)).toBe(1);
-    expect(q6ToQ10).not.toContain(q11Marker);
+    expect(q6ToQ10).not.toContain('Q11.');
   });
 
   it('keeps the preliminary analysis non-binding and states the complete appraisal and review procedure in Q6', () => {
@@ -722,5 +829,192 @@ describe('Japanese traffic column 003 — Q6–Q10 translation contract', () => 
     );
     expect(q6ToQ10).not.toMatch(/\p{Script=Hangul}/u);
     expect(q6ToQ10).not.toMatch(/^[\t ]*\u200b+[\t ]*$/mu);
+  });
+});
+
+describe('Japanese traffic column 003 — Q11–Q15 translation contract', () => {
+  it('starts the exact five H2s at byte 15708 and places the source H3 after Q15 before Q16', () => {
+    expect(rawBytes.subarray(q11ByteIndex).toString('utf8')).toMatch(
+      /^## Q11\. 治療・回復期間中の逸失収入は、どのように立証しますか？\n/u,
+    );
+    expect(
+      Array.from(
+        q11ToQ15.matchAll(/^## Q1[1-5]\. .+$/gm),
+        (match) => match[0],
+      ),
+    ).toEqual([...q11ToQ15ContractedHeadings]);
+    expect(q11ToQ15SourceBlockStart).toBeGreaterThan(
+      q11ToQ15.indexOf(q15Heading),
+    );
+    expect(countOccurrences(q11ToQ15, q11ToQ15SourceHeading)).toBe(1);
+    expect(q11ToQ15).not.toContain(q16Marker);
+  });
+
+  it('requires accident-caused inability and actual income reduction while preserving Q12 as a separate issue', () => {
+    expect(q11).toMatch(
+      /事故.{0,25}(?:負傷|傷害).{0,100}(?:全部|完全).{0,20}(?:または|若しくは|・).{0,20}(?:一部|部分).{0,50}(?:就労|働くこと).{0,30}(?:不能|できな)/su,
+    );
+    expect(q11).toMatch(
+      /(?:資料|証拠).{0,20}(?:裏付け|立証).{0,30}治療.{0,10}回復期間.{0,100}(?:現実|実際).{0,20}(?:収入|所得).{0,15}(?:減少|低下)/su,
+    );
+    expect(q11).toMatch(
+      /(?:診断書|休養の勧告).{0,100}(?:関連|有用|重要).{0,50}(?:それだけ|単独).{0,40}(?:決まら|十分では|結論にはなら)/su,
+    );
+    expect(q11).toMatch(/(?:診療|治療|医療).{0,10}記録/u);
+    expect(q11).toMatch(/(?:出勤|勤怠).{0,10}(?:休暇|休業).{0,10}記録/u);
+    expect(q11).toMatch(/(?:給与|賃金).{0,12}(?:税務|納税).{0,10}資料/su);
+    expect(q11).toMatch(/使用者.{0,12}(?:確認書|証明)/u);
+    expect(q11).toMatch(/自営業/u);
+    expect(q11).toMatch(
+      /(?:就労を継続|働き続け).{0,80}(?:給与|賃金).{0,20}(?:変わらず|同額).{0,100}(?:一時的|回復期間中).{0,30}(?:逸失収入|収入減少).{0,30}(?:判断|検討).{0,25}(?:関係|考慮)/su,
+    );
+    expect(q11).toMatch(
+      /(?:それだけ|直ちに|当然に).{0,70}(?:持続的|恒久的).{0,30}労働能力.{0,15}(?:低下|減少).{0,30}(?:決まら|否定され|排除され)/su,
+    );
+  });
+
+  it('treats lasting earning-capacity loss as individualized rather than mechanically fixed in Q12', () => {
+    expect(q12).toMatch(
+      /(?:Q11|一時的|回復期間中).{0,80}(?:現実|実際).{0,20}(?:収入|所得).{0,15}(?:減少|低下).{0,70}(?:区別|別個|異なる)/su,
+    );
+    expect(q12).toMatch(
+      /民法.{0,8}(?:第)?193条.{0,25}(?:第)?216条/su,
+    );
+    expect(q12).toMatch(
+      /(?:事故との)?因果関係.{0,50}(?:持続的|永続的).{0,20}(?:機能障害|障害).{0,60}(?:職業|職種).{0,30}(?:能力|技能).{0,70}(?:通常|通常期待).{0,20}(?:収入|所得).{0,80}(?:就労可能期間|稼働期間)/su,
+    );
+    expect(q12).toMatch(
+      /(?:現在の)?給与.{0,30}(?:変わらない|同じ|維持).{0,70}(?:当然|自動的|直ちに).{0,30}(?:排除|否定).{0,20}(?:されない|するものではない)/su,
+    );
+    expect(q12).toMatch(
+      /(?:障害率|機能障害率).{0,60}(?:現在の)?給与.{0,70}(?:機械的|自動的).{0,35}(?:決まら|算定され)/su,
+    );
+    expect(q12).toMatch(
+      /医学的鑑定.{0,80}(?:有用|役立つ).{0,80}(?:争い|争われ).{0,80}(?:すべて|全て).{0,25}(?:必須|必要).{0,20}(?:ではない|とは限らない)/su,
+    );
+    expect(q12).toMatch(
+      /民法.{0,8}(?:第)?217条.{0,70}(?:過失相殺|過失).{0,50}(?:調整|考慮)/su,
+    );
+    expect(q12).toMatch(
+      /一時金.{0,80}中間利息.{0,25}(?:控除|差引).{0,40}(?:考慮|可能)/su,
+    );
+    expect(q12).toMatch(
+      /ホフマン.{0,40}(?:計算機|計算).{0,50}(?:補助|参考).{0,100}(?:必須|義務).{0,30}(?:ではない|でもなく).{0,60}(?:保証|確約).{0,20}(?:しない|ではない)/su,
+    );
+    expect(q12).toMatch(
+      /民法.{0,8}(?:第)?193条.{0,100}(?:当事者|申立て).{0,50}裁判所.{0,60}担保.{0,50}定期金/su,
+    );
+  });
+
+  it('bases Q13 non-pecuniary damages on Article 195 and individualized evidence', () => {
+    expect(q13).toMatch(
+      /民法.{0,8}(?:第)?195条.{0,100}(?:身体|健康).{0,50}(?:違法|不法).{0,20}(?:侵害|侵された).{0,80}(?:相当|適切).{0,20}(?:慰謝料|金額)/su,
+    );
+    expect(q13).toMatch(
+      /(?:負傷|傷害).{0,30}治療.{0,50}(?:持続的|後遺).{0,25}(?:影響|症状).{0,50}(?:苦痛|痛み).{0,50}(?:生活|日常生活).{0,20}(?:影響|支障)/su,
+    );
+    expect(q13).toMatch(
+      /年齢.{0,30}(?:身分|地位).{0,60}社会的.{0,15}経済的.{0,20}(?:事情|状況).{0,70}(?:当事者|双方).{0,20}証拠/su,
+    );
+  });
+
+  it('states the complete Article 188 employer-liability framework and separates Article 284 criminal liability in Q14', () => {
+    expect(q14).toMatch(
+      /民法.{0,8}(?:第)?188条.{0,80}被用者.{0,50}(?:職務|業務).{0,20}(?:執行|遂行).{0,50}(?:違法|不法).{0,20}(?:損害|侵害)/su,
+    );
+    expect(q14).toMatch(
+      /勤務時間中.{0,80}(?:だけ|のみ).{0,50}(?:当然|自動的).{0,35}(?:職務関連性|業務関連性).{0,30}(?:認められない|成立しない|証明されない)/su,
+    );
+    expect(q14).toMatch(
+      /(?:共同|連帯).{0,15}民事責任.{0,100}(?:選任|選択).{0,25}監督.{0,90}(?:相当な注意|必要な注意).{0,100}(?:不可避|避けられな)/su,
+    );
+    expect(q14).toMatch(
+      /第2項.{0,100}(?:賠償|補償).{0,30}(?:受けられない|得られない).{0,30}被害者.{0,80}(?:救済|補償)/su,
+    );
+    expect(q14).toMatch(
+      /使用者.{0,60}(?:支払|賠償).{0,50}(?:被用者|従業員).{0,40}(?:求償|償還)/su,
+    );
+    expect(q14).toMatch(
+      /(?:民事上|民事).{0,20}(?:請求相手|被告|責任).{0,70}(?:刑事責任|刑事上).{0,30}(?:区別|別個)/su,
+    );
+    expect(q14).toMatch(
+      /刑法.{0,8}(?:第)?284条.{0,80}(?:各|それぞれ).{0,20}自然人.{0,80}(?:自身|本人).{0,25}注意義務違反.{0,50}因果関係/su,
+    );
+  });
+
+  it('states the current compulsory benefits and treats all three other Q15 products as policy-dependent', () => {
+    expect(q15).toMatch(
+      /強制汽車責任保險法.{0,20}(?:第)?6条.{0,100}(?:車両|自動車).{0,25}所有者.{0,80}(?:使用者|利用者).{0,20}(?:または|若しくは|・).{0,20}管理者/su,
+    );
+    expect(q15).toMatch(
+      /(?:無過失|過失の有無を問わず).{0,100}(?:負傷|傷害).{0,25}(?:死亡|死者).{0,100}同乗者.{0,80}(?:車外|車両外).{0,20}(?:第三者|第三者である者)/su,
+    );
+    expect(q15).toMatch(
+      /単独車両事故.{0,100}運転者.{0,80}(?:当該|その|自分の).{0,25}車両.{0,30}強制保険.{0,35}(?:対象外|補償されない)/su,
+    );
+    expect(q15).toMatch(
+      /複数車両事故.{0,100}運転者.{0,100}(?:他|別).{0,20}(?:関係|事故関係|関与).{0,20}車両.{0,50}(?:強制保険者|保険会社).{0,40}(?:請求|給付)/su,
+    );
+    expect(q15).toMatch(
+      /2026-05-29.{0,80}(?:改正|改定).{0,100}2026-07-01.{0,50}(?:以後|以降|後).{0,25}(?:発生|起きた).{0,15}事故/su,
+    );
+    expect(q15).toMatch(
+      /(?:それ以前|より前|以前).{0,30}(?:事故|発生).{0,70}(?:旧|従前).{0,15}基準/su,
+    );
+    expect(q15).toContain('TWD 200,000');
+    expect(q15).toContain('TWD 80,000–3,000,000');
+    expect(q15).toMatch(/法定.{0,12}15等級/u);
+    expect(q15).toContain('TWD 3,000,000');
+    expect(q15).toContain('TWD 3,200,000');
+    expect(q15).toMatch(
+      /対人賠償責任保険.{0,60}運転者傷害保険.{0,60}車両損害保険.{0,100}(?:任意|契約)/su,
+    );
+    expect(q15).toMatch(
+      /(?:実際の)?(?:補償|給付).{0,70}被保険者.{0,40}(?:限度額|保険金額).{0,40}免責金額.{0,40}免責事由.{0,40}過失.{0,50}(?:約款|契約条件)/su,
+    );
+  });
+
+  it('uses all 13 Q11–Q15 official URLs exactly once and in order only as descriptive Japanese Markdown-link destinations', () => {
+    const markdownLinks = Array.from(
+      q11ToQ15SourceBlock.matchAll(
+        /\[([^\]\r\n]+)\]\((https?:\/\/[^)\s]+)\)/g,
+      ),
+      (match) => ({ label: match[1], url: match[2], full: match[0] }),
+    );
+    expect(markdownLinks.map(({ url }) => url)).toEqual([
+      ...q11ToQ15OfficialSourceUrls,
+    ]);
+
+    for (const { label, url } of markdownLinks) {
+      expect(label).toMatch(
+        /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u,
+      );
+      expect(label.trim()).not.toBe('');
+      expect(label).not.toContain('http');
+      expect(countOccurrences(q11ToQ15, url), url).toBe(1);
+    }
+
+    const withoutMarkdownLinks = markdownLinks.reduce(
+      (value, { full }) => value.replace(full, ''),
+      q11ToQ15,
+    );
+    for (const url of q11ToQ15OfficialSourceUrls) {
+      expect(withoutMarkdownLinks).not.toContain(url);
+      expect(q11ToQ15).not.toContain(`<${url}>`);
+    }
+  });
+
+  it('removes only the contracted stale, first-person recommendation, guarantee, Hangul, and spacer copy within Q11–Q15', () => {
+    for (const phrase of prohibitedQ11ToQ15Copy) {
+      expect(q11ToQ15).not.toContain(phrase);
+    }
+    expect(q11ToQ15).not.toMatch(/\p{Script=Hangul}/u);
+    expect(q11ToQ15).not.toMatch(/^[\t ]*\u200b+[\t ]*$/mu);
+    expect(q11ToQ15).not.toMatch(
+      /(?:私|当事務所).{0,40}(?:勧め|推奨|助言)/su,
+    );
+    expect(q11ToQ15).not.toMatch(
+      /(?:必ず|絶対に|自動的に認められ).{0,40}(?:請求|回収|賠償|補償)/su,
+    );
   });
 });

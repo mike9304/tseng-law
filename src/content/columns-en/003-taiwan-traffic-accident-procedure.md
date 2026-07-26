@@ -99,7 +99,7 @@ A claim under Civil Code Article 184 requires an unlawful infringement of a righ
 
 ## Q8. How should I submit medical-expense records while treatment continues?
 
-Preserve receipts, diagnosis certificates, and medical records, and organize evidence of each treatment’s medical necessity and causation in relation to the accident. Material from continuing treatment may supplement the evidence in line with the procedural schedule and the existing claim, but late material or an expanded claim is not guaranteed to be accepted.
+Preserve receipts, diagnosis certificates, and medical records, and organize evidence of each treatment’s medical necessity and causation in relation to the accident. Materials from ongoing treatment may be submitted to supplement the evidence in accordance with the court’s procedural schedule and the claim as filed, but there is no guarantee that all late-filed materials will be accepted or that an expanded claim will be permitted.
 
 Supplementing medical evidence must be distinguished from changing or increasing the amount or scope of the claim. Adding medical receipts after filing an attached civil action in a criminal case does not by itself automatically create a court fee.
 

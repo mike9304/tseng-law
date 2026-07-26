@@ -26,9 +26,9 @@ const immutablePrefixSha256 =
 const immutableQ1ToQ5PrefixBytes = 8_401;
 const immutableQ1ToQ5PrefixSha256 =
   '0a90b01893062d07035f76017950ffd56300dbe3d29b0c780363a3c46488bbc7';
-const immutableQ1ToQ10PrefixBytes = 14_477;
+const immutableQ1ToQ10PrefixBytes = 14_552;
 const immutableQ1ToQ10PrefixSha256 =
-  '23968a28027d5a759ef4dccff5e2707fdb2d275237f26c08f105494808bfea7a';
+  '32a958120c193085db4c996da0dc5f0c0d0df4395e57a27f69d48f8e8b962c93';
 const q11Marker =
   'Q11. What should you watch for when claiming loss from inability to work?';
 const q16Marker =
@@ -61,6 +61,10 @@ const q6Heading = '## Q6. How is responsibility for the accident determined?';
 const q7Heading = '## Q7. What losses can I claim after an accident?';
 const q8Heading =
   '## Q8. How should I submit medical-expense records while treatment continues?';
+const approvedQ8LateMaterialsSentence =
+  'Materials from ongoing treatment may be submitted to supplement the evidence in accordance with the court’s procedural schedule and the claim as filed, but there is no guarantee that all late-filed materials will be accepted or that an expanded claim will be permitted.';
+const staleQ8LateMaterialsSentence =
+  'Material from continuing treatment may supplement the evidence in line with the procedural schedule and the existing claim, but late material or an expanded claim is not guaranteed to be accepted.';
 const q9Heading =
   '## Q9. How can I prove professional-care and family-care expenses?';
 const q10Heading = '## Q10. How can I prove travel expenses for treatment?';
@@ -736,10 +740,15 @@ describe('English traffic column 003 — Q6–Q10 translation contract', () => {
       /medical necessity.{0,80}causation.{0,50}(?:accident|collision)/is,
     );
     expect(q8).toMatch(
-      /continuing treatment.{0,140}supplement.{0,50}evidence.{0,100}procedural schedule.{0,100}existing claim/is,
+      /ongoing treatment.{0,140}submitted to supplement.{0,50}evidence.{0,100}court’s procedural schedule.{0,100}claim as filed/is,
+    );
+    expect(countOccurrences(q8, approvedQ8LateMaterialsSentence)).toBe(1);
+    expect(q8).not.toContain(staleQ8LateMaterialsSentence);
+    expect(q8).toMatch(
+      /no guarantee.{0,80}all late-filed materials.{0,80}accepted/is,
     );
     expect(q8).toMatch(
-      /(?:late material|late evidence|submitted late|expanded claim).{0,120}(?:not guaranteed|no guarantee|may not be accepted)/is,
+      /no guarantee.{0,180}expanded claim.{0,80}permitted/is,
     );
     expect(q8).toMatch(
       /supplementing.{0,50}(?:medical )?evidence.{0,100}(?:distinguish|different|separate).{0,100}(?:changing|increasing|expanding).{0,80}(?:amount|scope).{0,30}(?:claim|claimed)/is,

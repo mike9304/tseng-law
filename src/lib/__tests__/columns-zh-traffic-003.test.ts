@@ -62,12 +62,16 @@ const approvedQ4EvidenceSentence =
   '鑑定意見與初步分析研判表都可能是重要證據，但並非當然拘束法院；法院仍會綜合陳述、影像、車輛狀態等整體證據加以判斷。';
 const staleQ4GenericEvidenceWording =
   '鑑定意見與初步分析研判表都可能是重要證據，但並非當然拘束法院；法院仍會綜合全案證據判斷。';
+const approvedQ7WorkInabilityClause =
+  '以及經證明因實際無法工作所生的收入損失與勞動能力減損；';
+const staleQ7TemporaryWorkInabilityClause =
+  '以及經證明因暫時不能工作所生的收入損失與勞動能力減損；';
 const immutablePrefixBytes = 7_283;
 const immutablePrefixSha256 =
   'f0ef7b883904a73e3f202b79cbc57110a9d8558349b69ce41a18039bee70ab2b';
 const immutableQ1ToQ10PrefixBytes = 12_446;
 const immutableQ1ToQ10PrefixSha256 =
-  '856a6815a8ef10e5f339ea00cdd9caa23d404db7805ca33459ff1a2334df9f41';
+  '4c2bfa6bd10dc6ad3f84f34af46d4c975325a793a41c623134b1ca6e6437dab7';
 const immutableQ16TailBytes = 3_143;
 const immutableQ16TailSha256 =
   'c189113fb7068cecc13432944afd541e4ebc40f9857eb6bbfd71dcf7daf418a9';
@@ -693,8 +697,8 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
           /(?:醫療|治療).{0,16}(?:看護|照護).{0,16}交通.{0,20}(?:輔具|輔助器具)/s,
       },
       {
-        label: 'temporary lost income',
-        pattern: /(?:暫時|治療期間).{0,18}(?:不能工作|工作能力).{0,18}(?:收入|薪資|所得).{0,12}(?:損失|減少)/s,
+        label: 'actual inability to work causing income loss',
+        pattern: /實際無法工作.{0,18}(?:收入|薪資|所得).{0,12}(?:損失|減少)/s,
       },
       {
         label: 'loss of earning capacity',
@@ -732,6 +736,8 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
         pattern: /價值減損|交易價值.{0,8}(?:減少|貶損)/,
       },
     ]);
+    expect(countOccurrences(section, approvedQ7WorkInabilityClause)).toBe(1);
+    expect(section).not.toContain(staleQ7TemporaryWorkInabilityClause);
   });
 
   it('locks Q8 medical evidence supplementation, claim changes, and the narrow Article 504 fee caveat', () => {

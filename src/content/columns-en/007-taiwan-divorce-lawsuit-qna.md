@@ -237,6 +237,8 @@ If contact or visitation is obstructed, the available response depends on the ex
 
 There is no automatic right to immediate physical handover, use of force, a change of parental rights and duties, or punishment of the other parent merely because contact was blocked. Safety, stability, and the child’s welfare remain controlling. Interim protection may be necessary where flight risk, retention, or safety is genuinely in issue, but the form of that protection is a court decision based on the instrument and the evidence.
 
+For child-support enforcement, the wording of the existing enforceable instrument, the payment due dates, the unpaid amount, and the payment history are important. For contact or visitation enforcement, it is important whether the method and conditions of contact are sufficiently specific. Child-support payments and compliance with contact or visitation arrangements must not be withheld or traded against each other in retaliation. To protect the child’s day-to-day welfare, each obligation and procedure should be handled independently.
+
 ### Evidence for support and contact disputes
 
 Preserve, at a minimum, the current order or agreement, attempted-contact records, school and medical schedules, expense and payment history, travel or passport materials where relevant, and facts affecting the child’s safety and stability. Use only lawfully obtained materials. Unlawful surveillance, account or device intrusion, tracking, or unlawful recording undermines both privacy and evidentiary reliability and must not be used as a collection strategy.

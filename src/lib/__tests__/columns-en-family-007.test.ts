@@ -160,6 +160,8 @@ const unresolvedIssuesParagraph =
   'If the requirements of the chosen route to divorce are satisfied, the marriage itself may be dissolved first even though some property or child-related issues remain unresolved. This should not, however, be treated as a shortcut that can be recommended in every case. The preservation and settlement of unresolved property; the child’s residence, care, medical treatment, and education; the agreements or court orders needed for child support and contact; and whether interim orders are needed to ensure safety and continuity of daily life while the dispute remains pending must all be considered together.';
 const childSupportFactorsParagraph =
   'Under Civil Code Article 1116-2, parents’ duty to support a minor child continues after divorce. Child support is a parent–child obligation. It is distinct from Article 1057 post-divorce support for a qualifying former spouse. Do not treat the two claims as interchangeable, and do not use the Article 1030-1 residual-property limitation period as a universal deadline for child support. The specific allocation of support should be determined from evidence of the child’s living expenses, education costs, medical expenses, and any special needs, together with each parent’s income, assets, ability to provide support, and actual share of caregiving.';
+const childSupportEnforcementParagraph =
+  'For child-support enforcement, the wording of the existing enforceable instrument, the payment due dates, the unpaid amount, and the payment history are important. For contact or visitation enforcement, it is important whether the method and conditions of contact are sufficiently specific. Child-support payments and compliance with contact or visitation arrangements must not be withheld or traded against each other in retaliation. To protect the child’s day-to-day welfare, each obligation and procedure should be handled independently.';
 const bestInterestsFactorsParagraph =
   'Under Civil Code Article 1055-1, the court considers the child’s age, sex, and health; the number of children; the child’s views and needs for personality development; each parent’s age, occupation, conduct, health, financial means, and living circumstances; each parent’s willingness and attitude toward the child’s protection and upbringing; the emotional relationship between each parent and the child; and any circumstances in which one parent has interfered with the relationship between the other parent and the child. The court may hear the child’s views in the manner prescribed by law and may take into account investigations and opinions from competent authorities or child-welfare professionals. A parent’s higher income or responsibility for the breakdown of the marriage may be only one fact among many; neither is a sole criterion for the decision or a basis for rewarding or punishing a parent.';
 const filingDocumentsParagraph =
@@ -187,16 +189,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '2ad021c765f1a8e8dc32aff7ae245eb18123dced338e48279aa503484d0b786a';
+  '0ab5df8b0f87217565326cd3d813b3aa3c1792772e5ff17125aea8bb8f833105';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '6c57343d2a7dc0e352318555441687cbbff780afbbb0c6631cc9a28b1805c8cd';
+  '26ddf6088c4c2a7a7260b8378e69a5d3aa6794fbb71afd958fd394fd0fafbc75';
 const frozenSection1OnwardSha256 =
-  'e9a6dadb3981b19b0a021c1b9c9dc9ccf2a4bc6a724391567f3ce49024eb1690';
-const frozenVisibleWordCount = 5_429;
+  '7f7ebbd1c6dafe54d9793f89c64eba6a126471962e1c56560665269c4eda6599';
+const frozenVisibleWordCount = 5_505;
 const frozenSourceSha256 =
-  '68a23eaf3f8f476404748c83ec89baf9ad07e07609edbff068fca0ae7c6cf65a';
+  '6548d2abffc28fc0afd0e4c23672961df325afba467686bb710dfbe39fdeb388';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1034,6 +1036,27 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     );
     expect(
       countOccurrences(parsed.content, childSupportFactorsParagraph),
+    ).toBe(1);
+  });
+
+  it('publishes the exact independent child-support and contact enforcement paragraph', () => {
+    const precedingMarker =
+      'Interim protection may be necessary where flight risk, retention, or safety is genuinely in issue, but the form of that protection is a court decision based on the instrument and the evidence.\n\n';
+    const followingMarker = '\n\n### Evidence for support and contact disputes';
+    const precedingStart = parsed.content.indexOf(precedingMarker);
+    const paragraphStart = precedingStart + precedingMarker.length;
+    const followingStart = parsed.content.indexOf(
+      followingMarker,
+      paragraphStart,
+    );
+
+    expect(precedingStart).toBeGreaterThan(-1);
+    expect(followingStart).toBeGreaterThan(paragraphStart);
+    expect(parsed.content.slice(paragraphStart, followingStart)).toBe(
+      childSupportEnforcementParagraph,
+    );
+    expect(
+      countOccurrences(parsed.content, childSupportEnforcementParagraph),
     ).toBe(1);
   });
 

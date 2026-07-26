@@ -84,8 +84,8 @@ const divorceQnaExpectations: Record<
   en: {
     title: 'Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children',
     snippetAnchors: [
-      'This guide explains Taiwan divorce routes',
-      'household registration, court procedure, and judicial-divorce grounds',
+      'In a Taiwan divorce matter',
+      'distinguish among the methods of ending the marriage',
     ],
   },
 };

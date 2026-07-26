@@ -142,6 +142,8 @@ const article1017Paragraph =
   'Civil Code Article 1017 distinguishes premarital property from property acquired during marriage and provides that property whose time of acquisition is difficult to prove is presumed to have been acquired during marriage. This is a starting point for classification and proof in calculating the matrimonial property regime; it is not a shortcut for determining ownership irrespective of registration or defeating the other spouse’s separate claims. Transfer records, sale and purchase agreements, loan agreements and repayment records, receipts, messages between the parties, tax records, registration records, and the basis and timing of acquisition must be considered together to reveal the parties’ actual legal relationship.';
 const article10301ExclusionsParagraph =
   'Inherited property and other property acquired gratuitously, as well as solatium (consolation damages), are excluded from the statutory calculation. Relevant debts and the statutory rules governing dispositions made before termination of the matrimonial property regime must also be considered. Residual-property distribution is not a crude half-and-half split of every asset acquired during marriage, and it is not the same concept as common property under a different marital regime.';
+const article10301AdjustmentParagraph =
+  'Where equal division of the residual difference would be manifestly unfair, the court may adjust or waive distribution after considering the statutory circumstances. Neither extramarital sexual relations nor responsibility for the breakdown of the marriage automatically bars or reduces a claim for distribution of the residual-property difference. However, specific facts falling within the statutory adjustment factors—such as the concealment or disposition of property, contributions through household labor and childcare, and the overall circumstances of the spouses’ shared life and acquisition of property—may be separately pleaded and proved. Nor should it be assumed that the calculation under Article 1030-1 changes merely because the spouses have different nationalities.';
 const filingDocumentsParagraph =
   'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.';
 const filingDocumentsPrefixMarker =
@@ -167,16 +169,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '13f6ec03f965d745efedec8770ca63362d6fbc662b786da0b90fdbb605a8a392';
+  '884a0098273584fb136a890a13c497c616810d683a68e3b47bc5d37b7b4d5306';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '84c46fd768c417b9c22cc5c5f076d2053cae2c157d6a85cd20707c2f678cd157';
+  '7fe3bbd7a759c3c4f20f75cf3f988b3f828a9b470fa7b4b62593d96270daaffe';
 const frozenSection1OnwardSha256 =
-  '762c31450278fbf5230c1ca91bbdf23b1cb2c1bba7145c7db0cf4c167f5daedf';
-const frozenVisibleWordCount = 5_235;
+  '19eab8020f150277dab334191de8a873e22ec2d1f31fb38459fda7abf604b621';
+const frozenVisibleWordCount = 5_284;
 const frozenSourceSha256 =
-  '074d3db8b16bb36fe0fc27bde179cc77f9ac4487370152163cb1b67b98d489c3';
+  '3646b9d0cf456c98fb4ae291deaf9494633663da5b565cece64a17070a393009';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -415,8 +417,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       {
         number: 20,
         heading: headings[5],
-        phrase:
-          'Adultery or other marital fault does not automatically strip title, defeat every ownership claim, or rewrite the statutory residual-property calculation.',
+        phrase: article10301AdjustmentParagraph,
       },
       {
         number: 21,
@@ -814,8 +815,8 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       article10301ExclusionsParagraph,
       'Residual-property distribution is not a crude half-and-half split of every asset acquired during marriage',
       'Where equal division of the residual difference would be manifestly unfair, the court may adjust or waive distribution',
-      'Adultery or other marital fault does not automatically strip title',
-      'A foreign spouse is not subject to a different statutory residual-property formula merely because of nationality.',
+      article10301AdjustmentParagraph,
+      'Nor should it be assumed that the calculation under Article 1030-1 changes merely because the spouses have different nationalities.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -866,6 +867,30 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(
       parsed.content.slice(targetParagraphStart, adjustmentParagraphStart),
     ).toBe(article10301ExclusionsParagraph);
+  });
+
+  it('publishes the exact Article 1030-1 adjustment-factors paragraph', () => {
+    const subsectionStart = parsed.content.indexOf(
+      article10301SubsectionHeading,
+    );
+    const paragraphStart =
+      parsed.content.indexOf(
+        '\n\nWhere equal division',
+        subsectionStart + article10301SubsectionHeading.length,
+      ) + 2;
+    const section7Start = parsed.content.indexOf(
+      `\n\n## ${headings[6]}`,
+      paragraphStart,
+    );
+
+    expect(subsectionStart).toBeGreaterThan(-1);
+    expect(paragraphStart).toBeGreaterThan(
+      subsectionStart + article10301SubsectionHeading.length,
+    );
+    expect(section7Start).toBeGreaterThan(paragraphStart);
+    expect(parsed.content.slice(paragraphStart, section7Start)).toBe(
+      article10301AdjustmentParagraph,
+    );
   });
 
   it('separates Articles 1056 and 1057, child support, property, cohabitation, and third-party claims', () => {

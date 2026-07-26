@@ -1,0 +1,360 @@
+import crypto from 'node:crypto';
+import fs from 'node:fs';
+import path from 'node:path';
+import matter from 'gray-matter';
+import { describe, expect, it } from 'vitest';
+
+const columnPath = path.join(
+  process.cwd(),
+  'src/content/columns-zh/003-taiwan-traffic-accident-procedure.md',
+);
+const rawBytes = fs.readFileSync(columnPath);
+const raw = rawBytes.toString('utf8');
+const parsed = matter(raw);
+
+const title = '台灣交通事故應對 Q&A：現場處置、過失、和解與損害賠償';
+const sourceUrl =
+  'https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure';
+const featuredImage =
+  '../images/003-taiwan-traffic-accident-procedure/featured-01.jpg';
+const incidentImage =
+  '../images/003-taiwan-traffic-accident-procedure/img-01.jpg';
+const featuredAlt = '說明台灣交通事故後現場安全處置與證據保全的圖片';
+const incidentAlt = '記錄交通事故現場車輛位置與道路痕跡的示意圖';
+
+const qHeadings = [
+  'Q1. 事故後可以離開現場嗎？',
+  'Q2. 應先保留哪些證據？',
+  'Q3. 受傷時應確認哪些請求與期限？',
+  'Q4. 雙方都有過失時，刑事與民事責任如何判斷？',
+  'Q5. 和解書應記載哪些事項？',
+] as const;
+const sourceHeading = 'Q1–Q5 官方依據';
+const q6Marker = 'Q6. 事故責任如何認定？';
+const immutableTailBytes = 10_016;
+const immutableTailSha256 =
+  '47a9620c4ccb91315ea815cf7bf47c694bc435409dc58a2f7b46fdda0ec781cf';
+
+const sourceTargets = [
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=488&pcode=C0010001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=503&pcode=C0010001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=736&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=737&pcode=B0000001',
+  'https://168.motc.gov.tw/theme/car/post/2002211806152',
+  'https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889',
+  'https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129',
+] as const;
+
+const prohibitedStaleCopy = [
+  '大家好',
+  '我是台灣律師',
+  '豐富的交通事故案件處理經驗',
+  '有效率地',
+  '釐清責任歸屬後才能離開',
+  '如果雙方決定不報警',
+  '只有在對方同意',
+  '告訴期限為6個月',
+  '時效為2年',
+  '如此便不需繳納裁判費',
+  '只要任何一方有過失',
+  '就構成過失傷害罪',
+  '承諾不再追究民刑事責任',
+  '必須約定撤回告訴',
+  '不能再就該事故提出任何請求',
+  '無法再向對方請求',
+] as const;
+
+const prohibitedOutcomeGuarantees = [
+  '保證勝訴',
+  '保證獲賠',
+  '一定會獲賠',
+  '必然獲賠',
+  '法院一定會認定',
+  '法院必然會認定',
+  '一定構成過失傷害罪',
+  '必然構成過失傷害罪',
+  '一律構成過失傷害罪',
+  '不需負擔任何費用',
+  '一定不需繳納任何費用',
+] as const;
+
+type ConceptRule = {
+  label: string;
+  pattern: RegExp;
+};
+
+function countOccurrences(value: string, needle: string) {
+  return value.split(needle).length - 1;
+}
+
+function expectConcepts(section: string, rules: readonly ConceptRule[]) {
+  for (const { label, pattern } of rules) {
+    expect(section, `missing contracted concept: ${label}`).toMatch(pattern);
+  }
+}
+
+function sectionForQuestion(questionNumber: number) {
+  const heading = `## ${qHeadings[questionNumber - 1]}`;
+  const start = localizedPrefix.indexOf(heading);
+  if (start === -1) return '';
+
+  const next = localizedPrefix.indexOf('\n## ', start + heading.length);
+  return localizedPrefix.slice(
+    start,
+    next === -1 ? localizedPrefix.length : next,
+  );
+}
+
+const q6MarkerBytes = Buffer.from(q6Marker, 'utf8');
+const q6ByteIndex = rawBytes.indexOf(q6MarkerBytes);
+const q6CharacterIndex = parsed.content.indexOf(q6Marker);
+const localizedPrefix =
+  q6CharacterIndex === -1
+    ? parsed.content
+    : parsed.content.slice(0, q6CharacterIndex);
+const sourceBlockStart = localizedPrefix.indexOf(`### ${sourceHeading}`);
+const sourceBlock =
+  sourceBlockStart === -1 ? '' : localizedPrefix.slice(sourceBlockStart);
+
+describe('Traditional Chinese traffic column 003 — Q1–Q5 localization boundary', () => {
+  it('preserves the immutable Q6–Q20 tail byte-for-byte', () => {
+    expect(q6ByteIndex).toBeGreaterThan(0);
+
+    const immutableTail = rawBytes.subarray(q6ByteIndex);
+    expect(immutableTail.toString('utf8').startsWith(q6Marker)).toBe(true);
+    expect(immutableTail.byteLength).toBe(immutableTailBytes);
+    expect(
+      crypto.createHash('sha256').update(immutableTail).digest('hex'),
+    ).toBe(immutableTailSha256);
+  });
+
+  it('uses the exact frontmatter, sole H1, and two contracted images', () => {
+    expect(parsed.data).toEqual({
+      title,
+      url: sourceUrl,
+      lastmod: '2026-07-26',
+      date_display: '2025年9月13日',
+      read_time: '閱讀時間約 8 分鐘',
+      categories: ['台灣法律資訊'],
+      featured_image: featuredImage,
+    });
+    expect(
+      Array.from(parsed.content.matchAll(/^# (.+)$/gm), (match) => match[1]),
+    ).toEqual([title]);
+    expect(
+      Array.from(
+        parsed.content.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g),
+        (match) => ({ alt: match[1], src: match[2] }),
+      ),
+    ).toEqual([
+      { alt: featuredAlt, src: featuredImage },
+      { alt: incidentAlt, src: incidentImage },
+    ]);
+    expect(countOccurrences(raw, sourceUrl)).toBe(1);
+    expect(countOccurrences(raw, featuredImage)).toBe(2);
+    expect(countOccurrences(raw, incidentImage)).toBe(1);
+  });
+
+  it('isolates exactly Q1–Q5, places the source H3 after Q5, and does not create a Q6 H2', () => {
+    expect(q6CharacterIndex).toBeGreaterThan(0);
+    expect(
+      Array.from(
+        localizedPrefix.matchAll(/^## (Q\d+\..+)$/gm),
+        (match) => match[1],
+      ),
+    ).toEqual([...qHeadings]);
+    expect(localizedPrefix).toContain(`### ${sourceHeading}`);
+    expect(sourceBlockStart).toBeGreaterThan(
+      localizedPrefix.indexOf(`## ${qHeadings[4]}`),
+    );
+    expect(parsed.content).not.toContain(`## ${q6Marker}`);
+  });
+
+  it('introduces the safety, reporting, evidence, deadline, fault, and settlement sequence with a factual caveat', () => {
+    const incidentMarkdown = `![${incidentAlt}](${incidentImage})`;
+    const imageEnd = localizedPrefix.indexOf(incidentMarkdown);
+    const q1Start = localizedPrefix.indexOf(`## ${qHeadings[0]}`);
+    const introduction =
+      imageEnd === -1 || q1Start === -1
+        ? ''
+        : localizedPrefix.slice(imageEnd + incidentMarkdown.length, q1Start);
+    const sequence = ['安全', '報警', '證據', '期限', '過失', '和解'];
+    const positions = sequence.map((term) => introduction.indexOf(term));
+
+    for (const position of positions) {
+      expect(position).toBeGreaterThanOrEqual(0);
+    }
+    expect(positions).toEqual([...positions].sort((a, b) => a - b));
+    expect(introduction).toMatch(/(?:結果|判斷|責任).{0,24}(?:事實|情形).{0,12}(?:而異|不同)/s);
+  });
+
+  it('locks Q1 injury-or-death duties, vehicle movement rules, and Article 185-4 limits', () => {
+    expectConcepts(sectionForQuestion(1), [
+      { label: 'injury', pattern: /受傷|傷害/ },
+      { label: 'death', pattern: /死亡/ },
+      { label: 'immediate aid', pattern: /立即.{0,18}(?:救護|救助|救治|協助傷者)/s },
+      { label: 'police notice', pattern: /(?:通知警察|通知警方|報警)/ },
+      { label: 'preserve vehicle and scene evidence', pattern: /保留.{0,24}車輛.{0,24}(?:現場|證據)/s },
+      { label: 'informal consent', pattern: /(?:口頭|非正式).{0,12}同意/s },
+      { label: 'recording is not a substitute', pattern: /(?:錄音|錄影|錄影紀錄).{0,30}(?:不能|不得|無法).{0,12}(?:取代|代替)/s },
+      { label: 'both parties agree to move', pattern: /雙方.{0,18}同意.{0,30}(?:移動|移置)車輛/s },
+      { label: 'mark position and traces first', pattern: /(?:標記|標示|標繪).{0,18}(?:位置|車輛位置).{0,24}(?:痕跡|現場)/s },
+      { label: 'avoid obstructing traffic', pattern: /(?:避免|免於).{0,10}(?:妨礙|阻礙)交通/s },
+      { label: 'moving is distinct from leaving', pattern: /(?:移動|移置)車輛.{0,32}(?:不等於|不同於|並非).{0,12}離開現場/s },
+      { label: 'property-only damage', pattern: /僅.{0,12}(?:財物|財產).{0,8}(?:損害|損失)/s },
+      { label: 'movable vehicle', pattern: /車輛.{0,12}(?:可以|能夠|尚可)移動/s },
+      { label: 'record then move to safety', pattern: /(?:標記|標示|拍照|錄影|記錄).{0,40}(?:移至|移往|移動到).{0,12}安全/s },
+      { label: 'administrative consequences', pattern: /行政.{0,8}(?:處罰|裁罰|處分|責任|制裁)/s },
+      { label: 'Criminal Code Article 185-4', pattern: /刑法第\s*185\s*條之\s*4/ },
+      { label: 'Article 185-4 fact-specific analysis', pattern: /第\s*185\s*條之\s*4.{0,100}(?:個案|具體事實|實際情形).{0,20}(?:判斷|分析)/s },
+    ]);
+  });
+
+  it('locks Q2 safety-first preservation and the scene/7-day/30-day police timetable', () => {
+    expectConcepts(sectionForQuestion(2), [
+      { label: 'personal safety first', pattern: /(?:先|優先).{0,18}(?:人身|自身|個人|現場)安全/s },
+      { label: 'warning measures', pattern: /警示.{0,8}(?:措施|標誌|設備)|設置.{0,8}警告標誌/ },
+      { label: '119 rescue', pattern: /119.{0,18}(?:受傷|救護|救援)|(?:受傷|救護|救援).{0,18}119/s },
+      { label: '110 police', pattern: /110.{0,18}(?:警察|警方|報警|犯罪)|(?:警察|警方|報警|犯罪).{0,18}110/s },
+      { label: '112 emergency police', pattern: /112.{0,18}(?:緊急|警察|警方|報警|犯罪)|(?:緊急|警察|警方|報警|犯罪).{0,18}112/s },
+      { label: 'traffic-accident police report', pattern: /交通事故.{0,20}(?:報警|報案|警察機關)/s },
+      { label: 'wide and close photographs', pattern: /(?:全景|廣角|遠景|大範圍).{0,18}(?:近照|特寫|近距離)/s },
+      { label: 'vehicle position and damage', pattern: /車輛.{0,10}位置.{0,24}(?:損壞|受損|毀損)/s },
+      { label: 'road markings', pattern: /道路.{0,6}(?:標線|標誌)/s },
+      { label: 'signals and weather', pattern: /號誌.{0,18}天候|天候.{0,18}號誌/s },
+      { label: 'witness contacts', pattern: /目擊者.{0,16}(?:聯絡|聯繫).{0,6}(?:方式|資料|資訊)/s },
+      { label: 'CCTV preservation', pattern: /(?:監視器|CCTV).{0,24}(?:保存|保全|留存)/s },
+      { label: 'dashcam preservation', pattern: /行車紀錄器.{0,24}(?:保存|保全|留存)/s },
+      { label: 'party, vehicle, and insurance data', pattern: /當事人.{0,24}車輛.{0,24}保險.{0,12}(?:資料|資訊)/s },
+      { label: 'medical records', pattern: /(?:病歷|診療紀錄|就醫紀錄|醫療紀錄)/ },
+      { label: 'private photos do not replace police handling', pattern: /(?:自行|私人|個人).{0,12}(?:拍照|照片|影像).{0,30}(?:不能|不得|無法).{0,12}(?:取代|代替).{0,18}(?:警察|警方)/s },
+      { label: 'registration/contact form at scene', pattern: /(?:(?:當事人登記聯單|當事人登記聯絡資料|登記聯絡表).{0,24}(?:現場|當場)|(?:現場|當場).{0,24}(?:當事人登記聯單|當事人登記聯絡資料|登記聯絡表))/s },
+      { label: 'scene diagram and photos after seven days', pattern: /(?:(?:現場圖|事故現場圖).{0,18}(?:現場照片|事故照片|照片).{0,30}7\s*日|7\s*日.{0,30}(?:現場圖|事故現場圖).{0,18}(?:現場照片|事故照片|照片))/s },
+      { label: 'preliminary analysis after thirty days', pattern: /(?:(?:初步分析研判表|初判表).{0,30}30\s*日|30\s*日.{0,30}(?:初步分析研判表|初判表))/s },
+      { label: 'confirm current agency requirements', pattern: /確認.{0,80}(?:申請|提供).{0,24}(?:條件|要求|方式|規定)|(?:申請|提供).{0,24}(?:條件|要求|方式|規定).{0,80}確認/s },
+      { label: 'competent police agency', pattern: /(?:主管|管轄|承辦).{0,10}(?:警察機關|警察單位|警方)/s },
+    ]);
+  });
+
+  it('locks Q3 criminal/civil periods and criminal-attached civil-action cost caveats', () => {
+    expectConcepts(sectionForQuestion(3), [
+      { label: 'Criminal Code Article 284', pattern: /刑法第\s*284\s*條/ },
+      { label: 'negligent injury and serious injury', pattern: /過失.{0,8}傷害.{0,18}(?:重傷|致重傷)/s },
+      { label: 'Criminal Code Article 287 complaint basis', pattern: /刑法第\s*287\s*條.{0,40}(?:告訴乃論|須告訴)/s },
+      { label: 'Criminal Procedure Article 237', pattern: /刑事訴訟法第\s*237\s*條/ },
+      { label: 'six months after identity is known', pattern: /知悉.{0,18}(?:犯人|行為人|加害人|對方).{0,24}6\s*個?月/s },
+      { label: 'Civil Code Article 197', pattern: /民法第\s*197\s*條/ },
+      { label: 'two years after damage and liable person are known', pattern: /知悉.{0,20}損害.{0,24}(?:賠償義務人|應負責任之人|責任人).{0,24}2\s*年/s },
+      { label: 'ten years after the tort', pattern: /侵權行為.{0,24}10\s*年/s },
+      { label: 'Criminal Procedure Articles 487 and 488', pattern: /刑事訴訟法第\s*487\s*條.{0,80}第\s*488\s*條/s },
+      { label: 'pending criminal matter', pattern: /刑事.{0,16}(?:案件|程序).{0,18}(?:繫屬|進行|審理)/s },
+      { label: 'through second-instance oral argument', pattern: /第二審.{0,18}言詞辯論.{0,8}終結/s },
+      { label: 'ordinarily no separate advance court fee', pattern: /通常.{0,30}(?:不必|無須|免).{0,12}(?:預先|另行).{0,12}(?:繳納|支付).{0,8}裁判費/s },
+      { label: 'not every outcome is cost-free', pattern: /(?:並非|不代表|不等於).{0,30}(?:所有|任何|全程).{0,18}(?:費用|成本).{0,12}(?:免除|不用|為零|不存在)/s },
+      { label: 'Articles 503 and 504', pattern: /第\s*503\s*條.{0,80}第\s*504\s*條/s },
+      { label: 'transfer and costs', pattern: /移送.{0,40}(?:費用|裁判費|訴訟費用)/s },
+      { label: 'limitation interruption', pattern: /時效.{0,8}(?:中斷|中止|不完成)/s },
+      { label: 'defendants, evidence, insurance, jurisdiction', pattern: /被告.{0,20}證據.{0,20}保險.{0,20}管轄/s },
+      { label: 'no universally best route', pattern: /(?:沒有|並無|不存在).{0,70}(?:一律|永遠|所有案件).{0,70}(?:最佳|最好)|(?:沒有|並無|不存在).{0,70}(?:最佳|最好).{0,70}(?:一律|永遠|所有案件)/s },
+    ]);
+  });
+
+  it('locks Q4 individualized criminal negligence, civil comparative fault, and exact TWD figures', () => {
+    const section = sectionForQuestion(4);
+    expectConcepts(section, [
+      { label: 'each person duty-of-care breach', pattern: /各自.{0,18}注意義務.{0,12}違反/s },
+      { label: 'causation of the other party injury', pattern: /(?:對方|他方).{0,12}(?:受傷|傷害).{0,18}因果關係|因果關係.{0,18}(?:對方|他方).{0,12}(?:受傷|傷害)/s },
+      { label: 'mutual fault is not automatically criminal', pattern: /雙方.{0,10}過失.{0,30}(?:不當然|不必然|並非自動).{0,18}(?:過失傷害|刑事責任)/s },
+      { label: 'Civil Code Article 217', pattern: /民法第\s*217\s*條/ },
+      { label: 'court may reduce or exempt damages', pattern: /法院.{0,18}(?:減輕|減少).{0,12}(?:或|、).{0,8}免除.{0,12}賠償/s },
+      { label: 'accepted damage', pattern: /認定.{0,12}損害.{0,12}新臺幣 1,000,000 元/s },
+      { label: 'fifty-percent claimant fault', pattern: /(?:請求權人|被害人|受害人).{0,12}過失.{0,8}50%/s },
+      { label: 'pre-adjustment award', pattern: /(?:新臺幣 500,000 元.{0,30}(?:其他調整|其餘調整|其他因素).{0,12}(?:前|之前)|(?:其他調整|其餘調整|其他因素).{0,12}(?:前|之前).{0,30}新臺幣 500,000 元)/s },
+      { label: 'appraisal evidence', pattern: /(?:鑑定|鑑定意見).{0,40}(?:重要|有力).{0,8}證據|(?:重要|有力).{0,8}證據.{0,40}(?:鑑定|鑑定意見)/s },
+      { label: 'preliminary-analysis evidence', pattern: /(?:初步分析研判表|初判表).{0,40}(?:重要|有力).{0,8}證據|(?:重要|有力).{0,8}證據.{0,40}(?:初步分析研判表|初判表)/s },
+      { label: 'evidence does not mechanically bind court', pattern: /(?:不能|不會|並不).{0,18}(?:機械地|機械性|當然).{0,12}(?:拘束|約束).{0,8}法院/s },
+    ]);
+    expect(section).toContain('新臺幣 1,000,000 元');
+    expect(section).toContain('新臺幣 500,000 元');
+  });
+
+  it('locks Q5 settlement scope, Articles 736–737, and complaint-withdrawal limits', () => {
+    expectConcepts(sectionForQuestion(5), [
+      { label: 'accident time and place', pattern: /事故.{0,8}(?:時間|日期).{0,12}地點/s },
+      { label: 'parties', pattern: /當事人/ },
+      { label: 'payment amount and timing', pattern: /(?:付款|支付|給付).{0,12}金額.{0,12}(?:時間|期限|日期|方式)/s },
+      { label: 'insurance handling', pattern: /保險.{0,12}(?:處理|理賠|給付)/s },
+      { label: 'included and reserved claims', pattern: /包含.{0,12}(?:請求|項目).{0,24}(?:保留|不包含).{0,12}(?:請求|項目)/s },
+      { label: 'future treatment and later-discovered injury', pattern: /後續.{0,8}治療.{0,24}(?:日後|後來).{0,12}(?:發現|出現).{0,8}(?:傷勢|傷害|症狀)/s },
+      { label: 'document delivery', pattern: /文件.{0,8}(?:交付|提供|移交)|(?:交付|提供|移交).{0,8}文件/s },
+      { label: 'payment and complaint withdrawal relationship', pattern: /(?:付款|支付|給付).{0,30}(?:撤回告訴|告訴撤回)|(?:撤回告訴|告訴撤回).{0,30}(?:付款|支付|給付)/s },
+      { label: 'Civil Code Articles 736 and 737', pattern: /民法第\s*736\s*條.{0,80}第\s*737\s*條/s },
+      { label: 'mutual-concession contract', pattern: /互相讓步|相互讓步/ },
+      { label: 'extinguished rights depend on relinquished scope', pattern: /(?:權利|請求).{0,12}(?:消滅|拋棄|放棄).{0,40}(?:約定|讓步|拋棄|放棄).{0,12}範圍|(?:消滅|拋棄|放棄).{0,18}(?:權利|請求).{0,40}(?:約定|讓步|拋棄|放棄).{0,12}範圍/s },
+      { label: 'future claims do not all automatically disappear', pattern: /(?:未來|日後).{0,18}(?:請求|權利).{0,30}(?:不當然|不一定|並非自動).{0,12}(?:消滅|喪失|失效)/s },
+      { label: 'Criminal Procedure Article 238', pattern: /刑事訴訟法第\s*238\s*條/ },
+      { label: 'withdrawal before first-instance oral argument ends', pattern: /第一審.{0,18}言詞辯論.{0,8}終結.{0,18}(?:前|以前).{0,18}(?:撤回告訴|撤回)/s },
+      { label: 'no refiling after withdrawal', pattern: /撤回.{0,30}(?:不得|不能).{0,12}(?:再行告訴|再次提出告訴|再提出告訴|重新告訴)/s },
+      { label: 'private settlement does not end non-complaint prosecution', pattern: /非告訴乃論.{0,40}(?:私人|私下)?和解.{0,40}(?:不當然|不會自動|並不會自動).{0,18}(?:公訴|追訴|刑事程序)/s },
+      { label: 'settlement does not always compel withdrawal', pattern: /和解.{0,30}(?:不代表|並非|不當然).{0,18}(?:必須|一定要).{0,8}撤回告訴/s },
+    ]);
+  });
+
+  it('uses all 17 official URLs exactly once, in order, with Traditional Chinese link labels and no raw URL', () => {
+    const markdownLinks = Array.from(
+      sourceBlock.matchAll(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g),
+      (match) => ({ label: match[1], url: match[2] }),
+    );
+
+    expect(markdownLinks.map(({ url }) => url)).toEqual(sourceTargets);
+    for (const { label } of markdownLinks) {
+      expect(label).toMatch(/\p{Script=Han}/u);
+      expect(label).not.toMatch(/\p{Script=Hangul}/u);
+      expect(label).not.toMatch(
+        /[\p{Script=Hiragana}\p{Script=Katakana}]/u,
+      );
+    }
+    for (const target of sourceTargets) {
+      expect(countOccurrences(localizedPrefix, target)).toBe(1);
+    }
+    expect(sourceBlock).not.toMatch(/(?<!\]\()https?:\/\//);
+  });
+
+  it('rejects stale copy, foreign scripts, simplified-only variants, invisible spacers, and outcome guarantees only in Q1–Q5', () => {
+    for (const phrase of prohibitedStaleCopy) {
+      expect(localizedPrefix).not.toContain(phrase);
+    }
+    for (const phrase of prohibitedOutcomeGuarantees) {
+      expect(localizedPrefix).not.toContain(phrase);
+    }
+
+    expect(localizedPrefix).not.toMatch(/\p{Script=Hangul}/u);
+    expect(localizedPrefix).not.toMatch(
+      /[\p{Script=Hiragana}\p{Script=Katakana}]/u,
+    );
+    expect(localizedPrefix).not.toMatch(
+      /[这为个过发应实与后还会当从对请诉证赔伤条时场车报务处]/,
+    );
+    expect(localizedPrefix).not.toMatch(/^[\t ]*\u200b+[\t ]*$/m);
+    expect(localizedPrefix).not.toMatch(/^(?:大家好|各位好|您好)[，。！!]?/m);
+    expect(localizedPrefix).not.toMatch(/(?:歡迎|請).{0,12}(?:留言|評論)/s);
+    expect(localizedPrefix).not.toMatch(
+      /(?:我|本人|本律師).{0,30}(?:處理|承辦|經驗).{0,30}(?:案件|事故)/s,
+    );
+    expect(localizedPrefix).not.toMatch(/(?:律師|作者).{0,8}(?:敬上|謹上)/);
+    expect(localizedPrefix).not.toMatch(
+      /(?<!不)(?:一定|必然|必定|保證|一律).{0,20}(?:勝訴|獲賠|認定|成立|構成|免除|無須繳費|不用繳費)/s,
+    );
+    expect(localizedPrefix).not.toMatch(/(?:韓元|원)/);
+  });
+});

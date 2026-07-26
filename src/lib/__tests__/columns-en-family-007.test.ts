@@ -140,6 +140,8 @@ const article10301SubsectionHeading =
   '### Article 1030-1 residual-property distribution';
 const article1017Paragraph =
   'Civil Code Article 1017 distinguishes premarital property from property acquired during marriage and provides that property whose time of acquisition is difficult to prove is presumed to have been acquired during marriage. This is a starting point for classification and proof in calculating the matrimonial property regime; it is not a shortcut for determining ownership irrespective of registration or defeating the other spouse’s separate claims. Transfer records, sale and purchase agreements, loan agreements and repayment records, receipts, messages between the parties, tax records, registration records, and the basis and timing of acquisition must be considered together to reveal the parties’ actual legal relationship.';
+const article10301ExclusionsParagraph =
+  'Inherited property and other property acquired gratuitously, as well as solatium (consolation damages), are excluded from the statutory calculation. Relevant debts and the statutory rules governing dispositions made before termination of the matrimonial property regime must also be considered. Residual-property distribution is not a crude half-and-half split of every asset acquired during marriage, and it is not the same concept as common property under a different marital regime.';
 const filingDocumentsParagraph =
   'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.';
 const filingDocumentsPrefixMarker =
@@ -165,16 +167,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '6abf0350f5d1e279b913ee3148abea7582bc2c19d9aea50cfed1ebb004e4e618';
+  '13f6ec03f965d745efedec8770ca63362d6fbc662b786da0b90fdbb605a8a392';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '3eed0db8f04fa1880f4bc5a1b899fe120c686cce64020f4825e880d10b727ee6';
+  '84c46fd768c417b9c22cc5c5f076d2053cae2c157d6a85cd20707c2f678cd157';
 const frozenSection1OnwardSha256 =
-  '986b722fba6ec8c26d41eabecd5b1c5e3b86b43d06ee89929c1c2f31720b2d13';
-const frozenVisibleWordCount = 5_227;
+  '762c31450278fbf5230c1ca91bbdf23b1cb2c1bba7145c7db0cf4c167f5daedf';
+const frozenVisibleWordCount = 5_235;
 const frozenSourceSha256 =
-  '2c5c01eb046a3f8a09adfce9cb46661d320e829898ec55013a5184f41473b011';
+  '074d3db8b16bb36fe0fc27bde179cc77f9ac4487370152163cb1b67b98d489c3';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -809,8 +811,8 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       article1017Paragraph,
       'net residual property composed of qualifying property acquired during marriage, after the statutory exclusions and relevant debts',
       'The difference is generally divided equally.',
-      'Inherited property and other property acquired gratuitously, as well as solatium (consolation damages), are excluded as the statute provides.',
-      'residual-property distribution is not a crude half-and-half split of every asset acquired during marriage',
+      article10301ExclusionsParagraph,
+      'Residual-property distribution is not a crude half-and-half split of every asset acquired during marriage',
       'Where equal division of the residual difference would be manifestly unfair, the court may adjust or waive distribution',
       'Adultery or other marital fault does not automatically strip title',
       'A foreign spouse is not subject to a different statutory residual-property formula merely because of nationality.',
@@ -838,6 +840,32 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(article1017Paragraph).toContain(
       'property whose time of acquisition is difficult to prove is presumed to have been acquired during marriage',
     );
+  });
+
+  it('publishes the exact Article 1030-1 exclusions-and-pre-termination-dispositions paragraph', () => {
+    const calculationParagraphMarker =
+      `${article10301SubsectionHeading}\n\nUnder Article 1030-1,`;
+    const calculationParagraphStart = parsed.content.indexOf(
+      calculationParagraphMarker,
+    );
+    const targetParagraphStart =
+      parsed.content.indexOf(
+        '\n\n',
+        calculationParagraphStart + calculationParagraphMarker.length,
+      ) + 2;
+    const adjustmentParagraphStart = parsed.content.indexOf(
+      '\n\nWhere equal division',
+      targetParagraphStart,
+    );
+
+    expect(calculationParagraphStart).toBeGreaterThan(-1);
+    expect(targetParagraphStart).toBeGreaterThan(
+      calculationParagraphStart + calculationParagraphMarker.length,
+    );
+    expect(adjustmentParagraphStart).toBeGreaterThan(targetParagraphStart);
+    expect(
+      parsed.content.slice(targetParagraphStart, adjustmentParagraphStart),
+    ).toBe(article10301ExclusionsParagraph);
   });
 
   it('separates Articles 1056 and 1057, child support, property, cohabitation, and third-party claims', () => {

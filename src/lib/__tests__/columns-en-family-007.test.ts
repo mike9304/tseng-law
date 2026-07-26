@@ -126,6 +126,10 @@ const staleArticle1052TranslationInstruction =
   'Civil Code Article 1052 paragraph 1 lists ten specific grounds for judicial divorce. Translate them accurately; do not expand or shrink a statutory term into a broader colloquial ground.';
 const article1052Paragraph1ReaderSentence =
   'Civil Code Article 1052 paragraph 1 sets out ten grounds on which a spouse may petition for judicial divorce when any of the following applies to the other spouse:';
+const missingSpouseTailParagraph =
+  'A police missing-person report may be important evidence, but the statute does not make it a universal mandatory precondition. A prior action demanding cohabitation is not a universal statutory precondition either. Several months away from home, without more, is not itself a divorce ground. The court examines continuity, intent, proof of life-or-death uncertainty, and whether a serious cause is established under the applicable paragraph.';
+const sexualIntercourseConsequencesParagraph =
+  'Whether consensual sexual intercourse with a person other than one’s spouse constitutes a ground under Article 1052, paragraph 1 must be assessed in light of the precise facts, the statutory requirements, and any applicable time limits. The existence of that conduct does not, by itself, dictate the outcomes of a petition for judicial divorce, damages under Article 1056, residual-property distribution, post-divorce spousal support under Article 1057, the exercise and assumption of rights and duties regarding a minor child, or child support. Each issue is determined under its own requirements and applicable standards, including the child’s best interests where relevant.';
 const filingDocumentsParagraph =
   'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.';
 const filingDocumentsPrefixMarker =
@@ -151,16 +155,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '74e8ee6621d370eb1ea6714ddcb866c7033935f25bc5d98a6abdcadb1a1c4e4a';
+  '144af97b1e1a9fa389382d2d2bf2b40db5d1f5b073dc6b9738fe6a6d260b7293';
 const frozenSection4OutsideArticle1052IntroSha256 =
-  '3ac539fc976732842a19da61a7bedcf26ceefff016d91051bd7d2b73ddd4e0e7';
+  '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
   '62b854f3c28768bd9d2954970b4b2c4bdee1df78100330f314065bea845a0fe8';
 const frozenSection1OnwardSha256 =
-  '092b62076fb65e10d0ebd75dba7b8520f50f82f469acfd53a30e22af0c7b2f36';
-const frozenVisibleWordCount = 5_097;
+  '02e31fe47f7c26bec3e986154f5ae83ab6bbd26a05099dad8b27c19ff06a038e';
+const frozenVisibleWordCount = 5_198;
 const frozenSourceSha256 =
-  '897046717d10c428d7e25a65b10fcae4df48c4845613ea892c9235f52ee291df';
+  'd3b8d067b723eede1844934bd379d471e7b524699e841e3dfbd040b6e886603e';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -710,6 +714,15 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       countOccurrences(subsection, responsibleSpouseJudgmentSentence),
     ).toBe(1);
     expect(raw).not.toContain('generally constitutional');
+  });
+
+  it('restores the sexual-intercourse consequences paragraph at the exact Section 4 tail boundary', () => {
+    const exactBoundary = `${missingSpouseTailParagraph}\n\n${sexualIntercourseConsequencesParagraph}\n\n## ${headings[4]}`;
+
+    expect(parsed.content).toContain(exactBoundary);
+    expect(
+      countOccurrences(parsed.content, sexualIntercourseConsequencesParagraph),
+    ).toBe(1);
   });
 
   it('presents the Article 1052 paragraph 1 rule to readers without exposing a translation instruction or changing later text', () => {

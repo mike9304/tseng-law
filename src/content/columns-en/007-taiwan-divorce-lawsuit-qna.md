@@ -137,6 +137,8 @@ For a missing or absent spouse, distinguish three analyses:
 
 A police missing-person report may be important evidence, but the statute does not make it a universal mandatory precondition. A prior action demanding cohabitation is not a universal statutory precondition either. Several months away from home, without more, is not itself a divorce ground. The court examines continuity, intent, proof of life-or-death uncertainty, and whether a serious cause is established under the applicable paragraph.
 
+Whether consensual sexual intercourse with a person other than one’s spouse constitutes a ground under Article 1052, paragraph 1 must be assessed in light of the precise facts, the statutory requirements, and any applicable time limits. The existence of that conduct does not, by itself, dictate the outcomes of a petition for judicial divorce, damages under Article 1056, residual-property distribution, post-divorce spousal support under Article 1057, the exercise and assumption of rights and duties regarding a minor child, or child support. Each issue is determined under its own requirements and applicable standards, including the child’s best interests where relevant.
+
 ## 5. Foreign Marriage, Foreign Divorce, and Taiwan Records
 
 A foreign marriage or foreign divorce does not collapse into one universal Taiwan route. Identify, as separate questions, whether the marriage or divorce was completed abroad, whether Taiwan recognition or legal effect is sought, what Taiwan household registration is required, and what additional procedure remains necessary in another jurisdiction.

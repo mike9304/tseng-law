@@ -74,15 +74,20 @@ const approvedQ14JointClaimParagraph =
   '雇主可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。可考慮同時向僱用人及受僱人請求損害賠償。僱用人賠償後，得向受僱人求償。';
 const staleQ14JointClaimParagraph =
   '雇主可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。僱用人賠償後，得向受僱人求償。';
+const q20Marker = 'Q20. 如何找交通事故律師？';
+const approvedQ20EngagementWarningSentence =
+  '要注意那些誇大案情、主張不要和解而要透過民事、刑事程序打到底，只是為了爭取委任而這樣主張的律師。';
+const staleQ20EngagementWarningSentence =
+  '要注意那些誇大案情、主張不要和解而要透過民事刑事打到底、只為了接案而接案的律師。';
 const immutablePrefixBytes = 7_283;
 const immutablePrefixSha256 =
   'f0ef7b883904a73e3f202b79cbc57110a9d8558349b69ce41a18039bee70ab2b';
 const immutableQ1ToQ10PrefixBytes = 12_446;
 const immutableQ1ToQ10PrefixSha256 =
   '4c2bfa6bd10dc6ad3f84f34af46d4c975325a793a41c623134b1ca6e6437dab7';
-const immutableQ16TailBytes = 3_143;
+const immutableQ16TailBytes = 3_167;
 const immutableQ16TailSha256 =
-  'c189113fb7068cecc13432944afd541e4ebc40f9857eb6bbfd71dcf7daf418a9';
+  '2551092da265fd0b67c8e145d233c586930ab7de00fadc30792bf28d49ad79b9';
 
 const sourceTargets = [
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012',
@@ -321,6 +326,8 @@ const q11ToQ15SourceBlock =
   q11ToQ15SourceBlockStart === -1
     ? ''
     : q11ToQ15Section.slice(q11ToQ15SourceBlockStart);
+const q16ToQ20Tail = rawBytes.subarray(q16ByteIndex).toString('utf8');
+const q20Tail = q16ToQ20Tail.slice(q16ToQ20Tail.indexOf(q20Marker));
 
 describe('Traditional Chinese traffic column 003 — Q1–Q5 localization boundary', () => {
   it('preserves the immutable Q1–Q10 prefix and Q16–Q20 tail byte-for-byte', () => {
@@ -350,6 +357,12 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
     expect(
       crypto.createHash('sha256').update(immutableQ16Tail).digest('hex'),
     ).toBe(immutableQ16TailSha256);
+  });
+
+  it('locks the Q20 engagement-warning wording within the Q16–Q20 tail', () => {
+    expect(q20Tail).toContain(q20Marker);
+    expect(countOccurrences(q20Tail, approvedQ20EngagementWarningSentence)).toBe(1);
+    expect(q20Tail).not.toContain(staleQ20EngagementWarningSentence);
   });
 
   it('uses the exact frontmatter, sole H1, and two contracted images', () => {

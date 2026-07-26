@@ -913,7 +913,7 @@ describe('English traffic column 003 — Q11–Q15 translation contract', () => 
       /(?:employer|principal).{0,80}(?:recourse|reimbursement).{0,80}(?:employee|worker).{0,80}(?:after|once).{0,30}payment/is,
     );
     expect(q14).toMatch(
-      /(?:civil|civil-party).{0,30}(?:liability|selection|claim).{0,100}(?:distinct|different|separate).{0,80}criminal liability/is,
+      /(?:(?:civil|civil-party).{0,30}(?:liability|selection|claim)|choice of civil defendants?).{0,100}(?:distinct|different|separate).{0,80}criminal liability/is,
     );
     expect(q14).toMatch(
       /Article 284.{0,100}(?:each|individual).{0,30}natural person.{0,100}(?:own|personal).{0,40}breach of duty.{0,80}causation/is,
@@ -925,7 +925,7 @@ describe('English traffic column 003 — Q11–Q15 translation contract', () => 
       /Article 6.{0,100}owner.{0,60}covered vehicle.{0,100}(?:specified|certain).{0,40}(?:user|users).{0,20}(?:or|and).{0,20}(?:manager|managers)/is,
     );
     expect(q15).toMatch(
-      /(?:no-fault|regardless of fault).{0,100}(?:injured|injury).{0,40}(?:or|and).{0,30}(?:killed|death).{0,120}(?:passenger|passengers).{0,80}(?:outside|external).{0,30}(?:third person|third-party|third party)/is,
+      /(?:no-fault|regardless of fault).{0,100}(?:injured|injury).{0,40}(?:or|and).{0,30}(?:killed|death).{0,120}(?:passenger|passengers).{0,80}(?:(?:outside|external).{0,30}(?:third person|third-party|third party)|(?:third persons?|third-party|third parties).{0,30}(?:outside|external).{0,20}(?:the )?vehicle)/is,
     );
     expect(q15).toMatch(
       /single-vehicle accident.{0,100}driver.{0,100}(?:outside|not covered by).{0,60}(?:that|the driver's own|the driver’s own) vehicle.{0,30}compulsory (?:cover|insurance)/is,

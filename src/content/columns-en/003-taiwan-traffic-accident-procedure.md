@@ -134,217 +134,72 @@ Receipts, fare records, route records, and treatment records are possible eviden
 - [Chiayi District Court judgment on family-care expenses](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [Tainan District Court judgment on treatment-travel expenses](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
-Q11. What should you watch for when claiming loss from inability to work?
+## Q11. How should I prove temporary lost income during treatment and recovery?
 
-​
+Temporary lost income requires evidence that an accident-related injury left the claimant wholly or partly unable to work during a supported treatment or recovery period and caused an actual income reduction. A diagnosis certificate or rest recommendation is relevant, but it is not conclusive by itself.
 
-If the medical certificate specifies a rest period and you did not go to work during that period, you may claim lost wages.
+Useful evidence may include treatment records, attendance or leave records, payroll and tax material, and employer confirmation. A self-employed claimant may instead rely on sales records, transaction records, tax filings, and other material suited to the business.
 
-​
+Continuing to work or receiving unchanged pay is relevant to temporary lost income during recovery. It does not by itself decide the separate issue of lasting loss of earning capacity, which is addressed in Q12.
 
-But if you continued working and your wages were not reduced because of the accident, the judge will not recognize the claim.
+## Q12. How should I prove loss of earning capacity?
 
-​
+Loss of earning capacity is distinct from the actual income reduction during treatment or recovery discussed in Q11. Under Civil Code Articles 193 and 216, the assessment considers accident causation, lasting functional impairment, the claimant's occupation and abilities, ordinarily expected income, supported working-life assumptions, and the available proof.
 
-​
+Unchanged current pay does not automatically eliminate the claim. An impairment percentage and current salary likewise do not mechanically fix damages.
 
-​
+A medical appraisal may be useful when lasting impairment is genuinely disputed, but it is not mandatory in every case. Civil Code Article 217 addresses comparative negligence, and other adjustments may also affect the assessment.
 
-Q12. What should you watch for when claiming loss of labor capacity?
+If damages are calculated as a lump sum, an intermediate-interest discount may be considered. The Judicial Yuan Hoffman calculator is an aid only, not a mandatory legal method or a guarantee of any result. Under Civil Code Article 193, on a party's application, a court may order secured periodic payments.
 
-​
+## Q13. How are non-pecuniary damages assessed?
 
-Loss of labor capacity accounts for the largest share of traffic accident compensation amounts.
+Under Civil Code Article 195, an appropriate amount may be awarded for a qualifying unlawful infringement of body or health.
 
-​
+The assessment is individualized. Relevant factors include the injury and treatment, lasting effects, pain and impact on life, age and status, the parties' social and economic circumstances, and the parties' evidence. No fixed range determines the result.
 
-As an attorney, I advise parties to request a labor capacity loss appraisal without fail.
+## Q14. Can an employer also face civil liability for an accident during work?
 
-​
+Civil Code Article 188 addresses an employee who unlawfully injures another while performing duties. The fact that an accident occurred during work hours, by itself, does not automatically establish the required connection to duties; the relationship between the actual work and the accident must be examined.
 
-Loss of labor capacity arises when sequelae develop from injuries after an accident; through hospital appraisal, a labor capacity loss percentage can be determined.
+Possible joint civil liability is subject to statutory defenses. The employer may show reasonable selection and supervision of the employee or that unavoidable loss would have occurred even with such care.
 
-​
+Paragraph 2 addresses an otherwise uncompensated victim and may provide relief if the employer proves that defense and the victim cannot recover under paragraph 1. After considering the employer's and victim's economic circumstances, the court may order all or part of the compensation. The employer has recourse against the employee after payment.
 
-For example, if the plaintiff suffered a herniated spinal disc from the accident, hospital appraisal may determine that the plaintiff’s labor capacity loss ratio due to the herniated disc is 10%.
+The choice of civil defendants is distinct from criminal liability. Under Criminal Code Article 284, liability turns on each natural person's own breach of duty and causation.
 
-​
+## Q15. What motor-insurance benefits and coverage should I check?
 
-Then the defendant must compensate 10% of all wages until the plaintiff reaches retirement age.
+Under Compulsory Automobile Liability Insurance Act Article 6, the duty to insure ordinarily belongs to the owner of a covered vehicle and, in specified cases, its user or manager. The Act provides basic no-fault statutory benefits when a person is injured or killed in a motor-vehicle accident, subject to its definitions of passengers and third parties outside the vehicle.
 
-​
+In a single-vehicle accident, the driver is generally outside that vehicle's compulsory cover. In a multi-vehicle accident, a driver may claim benefits from another involved vehicle's compulsory insurer.
 
-For example, if the plaintiff’s monthly wage is TWD 1,000,000, then 10% of TWD 1,000,000 is TWD 100,000.
+The benefit standard amended on 2026-05-29 applies to accidents occurring on or after 2026-07-01. Current limits are:
 
-​
+- necessary and reasonable injury medical expenses: TWD 200,000;
+- disability benefit across 15 statutory grades: TWD 80,000–3,000,000;
+- death benefit: TWD 3,000,000; and
+- combined death, disability, and medical maximum per victim per accident: TWD 3,200,000.
 
-The defendant must pay TWD 100,000 per month until the plaintiff turns 65.
+An earlier accident may use the earlier standard.
 
-​
+Third-party liability, driver injury, and own-damage insurance are contractual voluntary products. Actual coverage depends on the insured person, limit, deductible, exclusions, fault, and other policy conditions.
 
-If the plaintiff is 45 years old, 20 years remain until retirement at 65.
+### Q11–Q15 Official Sources
 
-​
-
-Rather than paying monthly, if payment is made in a lump sum at present, interest must be considered.
-
-​
-
-So the “Hoffmann formula lump-sum payment calculation”「霍夫曼式一次給付計算」must be used.
-
-​
-
-Using this example, the labor capacity loss amount the defendant must pay in a lump sum at present is TWD 1,693,928.
-
-​
-
-​
-
-​
-
-Using the Hoffmann lump-sum payment calculator on the Judicial Yuan website is very convenient.
-
-​
-
-[Hoffmann lump-sum payment calculator]「霍夫曼式一次給付計算」(<https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm>)
-
-​
-
-​
-
-​
-
-Loss of labor capacity is calculated according to the labor capacity loss ratio regardless of any actual wage reduction.
-
-​
-
-Considering that labor capacity loss appraisal fees are not high—usually within about TWD 20,000 per specialty—it is advisable to spend TWD 10,000–20,000 on appraisal so that you can confirm after litigation that your body will not continue to hurt or develop sequelae.
-
-​
-
-If the appraisal result confirms there are no sequelae, you can have peace of mind.
-
-​
-
-​
-
-​
-
-Q13. What should you watch for when claiming solatium (mental consolation money)?
-
-​
-
-Courts determine solatium by considering the severity of injury, the impact and inconvenience on physical health and mental life, both parties’ education levels, economic circumstances, and similar factors.
-
-​
-
-I understand that traffic accident parties suffer from injuries large and small.
-
-​
-
-After injury, they endure physical pain and the pain of surgical treatment, and spend a great deal of time repeatedly going to the hospital.
-
-​
-
-If there are sequelae, the mental burden can be very heavy.
-
-​
-
-​
-
-​
-
-However, when courts determine mental consolation money, they base it on amounts in case precedents, and the amount is usually less than what plaintiffs imagine.
-
-​
-
-Hundreds of thousands of TWD is a typical range, and it is best not to expect millions of TWD in solatium.
-
-​
-
-​
-
-​
-
-Q14. If the at-fault driver hit me during work hours, can I sue the driver’s company?
-
-​
-
-Yes. The company bears employer liability.
-
-​
-
-Because companies usually have more assets than the individual at-fault driver, it is advisable to sue the company together when filing a civil lawsuit.
-
-​
-
-However, a criminal negligent injury complaint can only be brought against the individual at-fault driver.
-
-​
-
-​
-
-​
-
-Q15. After an accident, what items can insurance companies cover?
-
-​
-
-● Compulsory Automobile Liability Insurance 汽機車強制責任險
-
-​
-
-This is insurance that everyone is legally required to purchase.
-
-​
-
-It covers other people’s injuries—including passengers in your own vehicle, drivers and passengers of other vehicles, pedestrians, and so on. It does not cover injuries to the driver of your own vehicle.
-
-​
-
-It covers medical expenses for injury up to a maximum of TWD 200,000, and a fixed payment up to a maximum of TWD 2,000,000 for disappearance or death.
-
-​
-
-​
-
-​
-
-● Third-Party Liability Insurance 第三人責任險
-
-​
-
-If the amount you must pay the other party exceeds the Compulsory Automobile Liability Insurance amount, third-party liability insurance covers the remaining portion.
-
-​
-
-​
-
-​
-
-● Driver Injury Insurance 駕駛人傷害險
-
-​
-
-While Compulsory Automobile Liability Insurance covers others, driver injury insurance is insurance under which the driver can claim compensation when the driver is injured.
-
-​
-
-​
-
-​
-
-● Vehicle Body Damage Insurance 車體損失險
-
-​
-
-This insurance covers the driver’s vehicle repair costs.
-
-​
-
-​
-
-​
+- [Civil Code Article 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
+- [Civil Code Article 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
+- [Civil Code Article 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
+- [Taiwan High Court judgment, 109 Shang-Yi-Zi No. 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Taiwan High Court judgment, 109 Shang-Yi-Zi No. 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Judicial Yuan Hoffman present-value calculator](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
+- [Civil Code Article 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
+- [Taoyuan District Court judgment, 112 Li-Jian-Zi No. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Civil Code Article 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
+- [Criminal Code Article 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Compulsory Automobile Liability Insurance Act](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
+- [Compulsory Automobile Liability Insurance benefit standards](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
+- [Financial Supervisory Commission standard personal automobile insurance contract](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
 Q16. After an accident, can you leave everything to the insurance company?
 

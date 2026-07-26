@@ -24,6 +24,12 @@ const sourceUrl =
 const featuredImage =
   '../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg';
 const bodyImage = `![Illustration of Taiwan divorce procedure and family-law consultation topics](${featuredImage})`;
+const introParagraph1 =
+  'In a Taiwan divorce matter, it is necessary to distinguish among the methods of ending the marriage and the related issues of updating household-registration records, the divorce’s effect abroad, matrimonial property, damages, post-divorce spousal support, decisions concerning minor children, and child support. Even where the same facts may serve as evidence for multiple claims, each right has different elements and effects, matters to be proved, and time limits.';
+const introParagraph2 =
+  'This is particularly important for families connected to more than one country or region, such as Korea and Taiwan, because the appropriate procedure cannot be determined solely by one spouse’s nationality or a marriage-registration record. The parties should first confirm their current center of life, the status of any existing proceedings and registrations, where relevant documents were executed, where the children reside, and where assets are located, thereby reducing unnecessary duplicative proceedings and gaps in enforcement.';
+const staleGenericIntro =
+  'This guide explains Taiwan divorce routes, household registration, court procedure, and judicial-divorce grounds in neutral legal terms. It is general information only. Jurisdiction, applicable law, recognition, facts, evidence, existing orders, and current official rules can change the analysis for any individual matter.';
 
 const faq1Answer =
   'Under Civil Code Article 1050, a Taiwan mutual-consent divorce is effective only when three requirements are met together: the divorce is in writing; at least two witnesses who personally perceived and confirmed both spouses’ genuine mutual intent to divorce sign the instrument; and the divorce is registered with the household-registration authority. A signed private agreement alone does not complete the divorce, because registration is constitutive for this path. Where foreign elements are involved, parties must also examine applicable law, authentication and translation of documents, and any registration or recognition steps required in another jurisdiction. Always check the current official household-registration guide and the competent office for filing details.';
@@ -121,9 +127,11 @@ const frozenSection4OutsideArticle1052IntroSha256 =
   '8da1e5106649d305bd65795acaf2e17107673964de900c66f748c53bc8660219';
 const frozenSection5OnwardSha256 =
   '62b854f3c28768bd9d2954970b4b2c4bdee1df78100330f314065bea845a0fe8';
-const frozenVisibleWordCount = 4_808;
+const frozenSection1OnwardSha256 =
+  '9617cf72ad747a326674256205c90f80af0736399019e312360b2060a27fd408';
+const frozenVisibleWordCount = 4_912;
 const frozenSourceSha256 =
-  'e45c7a7d4662ba73d00b0f69ff0b6cac2229ee411ab807c0806297b92f92a26e';
+  '821b6716da7d1c62dd8a04cf0bcd4d739504dd8f6f7667cbfb62b246b92640a2';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -215,6 +223,29 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(countOccurrences(raw, featuredImage)).toBe(2);
     expect(post?.content).not.toMatch(/!\[[^\]]*\]\([^)]+\)/);
     expect(raw).not.toContain('img-01.jpg');
+  });
+
+  it('translates the complete two-paragraph Korean introduction and freezes section 1 onward', () => {
+    const introStart =
+      parsed.content.indexOf(`${bodyImage}\n\n`) + `${bodyImage}\n\n`.length;
+    const firstSectionMarker = `## ${headings[0]}`;
+    const firstSectionStart = parsed.content.indexOf(
+      firstSectionMarker,
+      introStart,
+    );
+    const intro = parsed.content.slice(0, firstSectionStart).slice(introStart);
+    const section1Onward = parsed.content.slice(firstSectionStart);
+
+    expect(introStart).toBeGreaterThan(`${bodyImage}\n\n`.length - 1);
+    expect(firstSectionStart).toBeGreaterThan(introStart);
+    expect(intro.trim().split('\n\n')).toEqual([
+      introParagraph1,
+      introParagraph2,
+    ]);
+    expect(countOccurrences(raw, introParagraph1)).toBe(1);
+    expect(countOccurrences(raw, introParagraph2)).toBe(1);
+    expect(raw).not.toContain(staleGenericIntro);
+    expect(sha256(section1Onward)).toBe(frozenSection1OnwardSha256);
   });
 
   it('uses exactly the thirteen contracted H2 sections in order', () => {

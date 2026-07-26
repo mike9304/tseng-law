@@ -26,7 +26,9 @@ faq:
 
 ![Illustration of Taiwan divorce procedure and family-law consultation topics](../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg)
 
-This guide explains Taiwan divorce routes, household registration, court procedure, and judicial-divorce grounds in neutral legal terms. It is general information only. Jurisdiction, applicable law, recognition, facts, evidence, existing orders, and current official rules can change the analysis for any individual matter.
+In a Taiwan divorce matter, it is necessary to distinguish among the methods of ending the marriage and the related issues of updating household-registration records, the divorce’s effect abroad, matrimonial property, damages, post-divorce spousal support, decisions concerning minor children, and child support. Even where the same facts may serve as evidence for multiple claims, each right has different elements and effects, matters to be proved, and time limits.
+
+This is particularly important for families connected to more than one country or region, such as Korea and Taiwan, because the appropriate procedure cannot be determined solely by one spouse’s nationality or a marriage-registration record. The parties should first confirm their current center of life, the status of any existing proceedings and registrations, where relevant documents were executed, where the children reside, and where assets are located, thereby reducing unnecessary duplicative proceedings and gaps in enforcement.
 
 ## 1. Three Divorce Paths and First Cross-Border Checks
 

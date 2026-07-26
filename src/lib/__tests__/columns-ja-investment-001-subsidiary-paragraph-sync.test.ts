@@ -19,9 +19,9 @@ const immutableTailMarker = Buffer.from(
   '\n\n**台湾・韓国所得税協定は2023年12月27日に発効し、',
   'utf8',
 );
-const immutableTailLength = 9_909;
+const immutableTailLength = 10_169;
 const immutableTailSha256 =
-  '7e64872f12b70431cd9c27f294b0491be7c17a2bf5c6a3f5ceacf77d5d3ae671';
+  'bf3687335e7be044a74a5da021e8080ae4ec5a635a8cb1307e90364d3a3d1723';
 
 const tailOffset = sourceBytes.indexOf(immutableTailMarker);
 const targetBytes =

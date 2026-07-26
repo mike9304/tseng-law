@@ -13,9 +13,9 @@ const immutablePrefixLength = 6_493;
 const immutablePrefixSha256 =
   'd0304afd1fc83b10ad427a57f50e44702a2f729b7456b66324719173706004f7';
 const immutableTailMarker = Buffer.from('\n\n**3. 代表者事務所：**', 'utf8');
-const immutableTailLength = 8_711;
+const immutableTailLength = 8_971;
 const immutableTailSha256 =
-  '955a891444ba81096203fe0dbbe815e42416200ddbfd2aa365b11c09440d9072';
+  '0561013c3ed1b5591a7b08949238ccb6ad1102e0a55e94b5308846a6420b8201';
 
 const tailOffset = sourceBytes.indexOf(immutableTailMarker, immutablePrefixLength);
 const insertionBytes =

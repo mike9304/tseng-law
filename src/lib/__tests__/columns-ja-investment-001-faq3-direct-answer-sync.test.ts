@@ -17,9 +17,9 @@ const immutableTailMarker = Buffer.from(
   '外国投資事業の外国籍主管に関する就業許可では、',
   'utf8',
 );
-const immutableTailLength = 13_669;
+const immutableTailLength = 13_929;
 const immutableTailSha256 =
-  '7d96596aebe30170142c1dd51bc914e5ffe021269e30c58b08a9e77adbecb08b';
+  '649008eaf491f7a0c3ecbd9d31b0c058138fbf7de29dbc6c923a52b66d5367c7';
 const requiredJapaneseTarget =
   '会社設立自体について一律の法定最低資本金があるわけではありません。ただし、業種別の最低資本額、事業計画の合理性、銀行審査および就業許可上の雇用主要件は別途確認が必要です。';
 const bodyFaqHeading = '**5. 最低資本金の制限はありますか？**';

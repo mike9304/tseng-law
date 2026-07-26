@@ -16,9 +16,9 @@ const immutableTailMarker = Buffer.from(
   '> まず事業拠点の組織形態を決める必要があります。',
   'utf8',
 );
-const immutableTailLength = 11_002;
+const immutableTailLength = 11_262;
 const immutableTailSha256 =
-  '90af3c78e70d78a7688f25d6577443aed22822f5c54e116ec1d9c1f7f0624cfc';
+  'a0dc82afe5b427748562cb330c1401efa22613a442df3f34929cf22719b10be4';
 
 const tailOffset = sourceBytes.indexOf(immutableTailMarker);
 const introBytes =

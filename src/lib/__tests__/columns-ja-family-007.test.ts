@@ -24,6 +24,14 @@ const sourceUrl =
 const featuredImage =
   '../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg';
 const bodyImage = `![台湾の離婚手続と家事法律相談を表すイラスト](${featuredImage})`;
+const introParagraphs = [
+  '台湾の離婚事件では、婚姻関係を終了させる方法だけでなく、戸籍の整理、外国における効力、夫婦財産、損害賠償、離婚後の配偶者扶養、未成年の子に関する判断および養育費を、それぞれ区別して検討する必要があります。同じ事実が複数の請求の資料となり得る場合でも、各権利の要件と効果、立証事項および期間は同じではありません。',
+  '特に、韓国と台湾のように二つ以上の国または地域に関係する家族については、いずれか一方の国籍または婚姻届出地だけを見て手続を決めることは困難です。現在の生活の本拠地、既存の裁判手続および登録の状況、文書の作成地、子の居住地ならびに財産の所在地を先に確認することで、不必要な手続の重複や執行の空白を減らすことができます。',
+];
+const legacyGenericIntro =
+  '本稿は、台湾における離婚の経路、戸籍登記、裁判所手続、裁判離婚の事由について、中立的な法律情報として整理するものです。一般的な教育情報であり、個別事案への法的助言ではありません。裁判管轄、準拠法、外国の身分行為や裁判の承認、事実と証拠、既存の合意や裁判所の判断、および現行の公式規則により、結論は異なり得ます。';
+const frozenH2BodySha256 =
+  '8f382f8b3c66b6229fdf73c8a061ecfd7540c228d4485e246d8b6db67aff3059';
 
 const faq1Answer =
   '台湾民法第1050条によれば、協議離婚は書面により行い、双方に離婚の真意があることを直接見聞きして確認した2名以上の証人の署名を得るとともに、戸政機関への登記を行うことがすべて必要です。私的な合意書に署名しただけでは完了せず、登記は効力発生の要件です。';
@@ -111,11 +119,11 @@ ${disclaimer}
 
 ${author}`;
 
-const frozenVisibleJapaneseCount = 11_434;
-const frozenVisibleKanaCount = 5_016;
-const frozenCalculatedMinutes = 23;
+const frozenVisibleJapaneseCount = 11_587;
+const frozenVisibleKanaCount = 5_100;
+const frozenCalculatedMinutes = 24;
 const frozenSourceSha256 =
-  '5c29b88195a1fcf69702d719a3f38b45a1fae2854b7823ce8efd805f5ad2a640';
+  '9a63d0025aedeba4eca5c71a5711fcefad4b247d92f228e2eef783e1224ddd7a';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -155,7 +163,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: '2025年9月13日',
-      read_time: '約23分',
+      read_time: '約24分',
       categories: ['台湾法律情報'],
       featured_image: featuredImage,
       faq,
@@ -166,7 +174,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
       title,
       date: '2026-07-25',
       dateDisplay: '2025年9月13日',
-      readTime: '約23分',
+      readTime: '約24分',
       category: 'legal',
       categoryLabel: '台湾法律情報',
       featuredImage:
@@ -199,6 +207,23 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(countOccurrences(raw, featuredImage)).toBe(2);
     expect(post?.content).not.toMatch(/!\[[^\]]*\]\([^)]+\)/);
     expect(raw).not.toContain('img-01.jpg');
+  });
+
+  it('replaces the generic disclaimer intro with the exact two-paragraph Korean-source meaning while freezing every H2 section', () => {
+    const firstHeading = `## ${headings[0]}`;
+    const afterImage = parsed.content.split(`${bodyImage}\n\n`)[1];
+
+    expect(afterImage).toBeDefined();
+    const [intro, ...h2Parts] = afterImage!.split(`\n\n${firstHeading}`);
+    const h2Body = `${firstHeading}${h2Parts.join(`\n\n${firstHeading}`)}`;
+
+    expect(intro.split('\n\n')).toEqual(introParagraphs);
+    expect(intro).toBe(introParagraphs.join('\n\n'));
+    expect(parsed.content).not.toContain(legacyGenericIntro);
+    expect(post?.content).toContain(introParagraphs.join('\n\n'));
+    expect(
+      crypto.createHash('sha256').update(h2Body).digest('hex'),
+    ).toBe(frozenH2BodySha256);
   });
 
   it('uses exactly the thirteen contracted H2 sections in order', () => {

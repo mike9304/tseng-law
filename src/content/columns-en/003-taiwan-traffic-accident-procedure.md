@@ -162,7 +162,7 @@ The assessment is individualized. Relevant factors include the injury and treatm
 
 Civil Code Article 188 addresses an employee who unlawfully injures another while performing duties. The fact that an accident occurred during work hours, by itself, does not automatically establish the required connection to duties; the relationship between the actual work and the accident must be examined.
 
-Possible joint civil liability is subject to statutory defenses. The employer may show reasonable selection and supervision of the employee or that unavoidable loss would have occurred even with such care.
+Possible joint civil liability is subject to statutory defenses. A joint claim for damages against the employer and employee may be considered. The employer may show reasonable selection and supervision of the employee or that unavoidable loss would have occurred even with such care.
 
 Paragraph 2 addresses an otherwise uncompensated victim and may provide relief if the employer proves that defense and the victim cannot recover under paragraph 1. After considering the employer's and victim's economic circumstances, the court may order all or part of the compensation. The employer has recourse against the employee after payment.
 

@@ -87,6 +87,10 @@ const staleQ11EarningCapacitySentence =
 const q13Heading = '## Q13. How are non-pecuniary damages assessed?';
 const q14Heading =
   '## Q14. Can an employer also face civil liability for an accident during work?';
+const approvedQ14JointClaimParagraph =
+  'Possible joint civil liability is subject to statutory defenses. A joint claim for damages against the employer and employee may be considered. The employer may show reasonable selection and supervision of the employee or that unavoidable loss would have occurred even with such care.';
+const staleQ14JointClaimParagraph =
+  'Possible joint civil liability is subject to statutory defenses. The employer may show reasonable selection and supervision of the employee or that unavoidable loss would have occurred even with such care.';
 const q15Heading =
   '## Q15. What motor-insurance benefits and coverage should I check?';
 const q11ToQ15SourceHeading = '### Q11–Q15 Official Sources';
@@ -937,6 +941,11 @@ describe('English traffic column 003 — Q11–Q15 translation contract', () => 
     );
     expect(q14).toMatch(
       /work hours.{0,80}(?:alone|by itself).{0,50}(?:does not|cannot).{0,40}automatically.{0,50}(?:establish|prove).{0,50}(?:connection|link).{0,30}(?:duties|work)/is,
+    );
+    expect(countOccurrences(q14, approvedQ14JointClaimParagraph)).toBe(1);
+    expect(q14).not.toContain(staleQ14JointClaimParagraph);
+    expect(q14).toMatch(
+      /joint claim for damages.{0,80}employer.{0,40}(?:and|&)\s+employee.{0,80}may be considered/is,
     );
     expect(q14).toMatch(
       /possible joint civil liability.{0,140}(?:reasonable selection|selected.{0,30}reasonably).{0,40}(?:and|\/).{0,30}supervision.{0,140}(?:unavoidable|could not have been avoided).{0,30}(?:loss|damage)/is,

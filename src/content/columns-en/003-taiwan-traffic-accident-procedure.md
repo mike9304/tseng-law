@@ -51,7 +51,7 @@ Criminal liability requires proof of each person's breach of a duty of care and 
 
 In a civil case, Civil Code Article 217 permits the court to reduce the amount of damages or relieve the liable party of liability when the injured person’s fault contributed to causing or increasing the damage. For example, if recognized damages are TWD 1,000,000 (one million New Taiwan dollars) and a 50% share of injured-party fault is assessed, the amount may be reduced to TWD 500,000 before other adjustments.
 
-An appraisal or preliminary-analysis document may be important evidence, but it does not mechanically bind the court. The court evaluates the whole record.
+An appraisal or preliminary-analysis document may be important evidence, but it does not mechanically bind the court. The court considers the full body of evidence, including statements, video footage, and vehicle condition.
 
 ## Q5. What should a settlement agreement include?
 

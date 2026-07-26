@@ -23,12 +23,12 @@ const incidentImage =
 const immutablePrefixBytes = 1_075;
 const immutablePrefixSha256 =
   '8d75e7d46d3e958d227128ddbdf4a3544a53488204ca7d0d06d73f49e8e0b955';
-const immutableQ1ToQ5PrefixBytes = 8_316;
+const immutableQ1ToQ5PrefixBytes = 8_385;
 const immutableQ1ToQ5PrefixSha256 =
-  '274271d5547c07a50e343368319568a6fe866b5b3d05954865d954ce8eaea481';
-const immutableQ1ToQ10PrefixBytes = 14_392;
+  '4c33ac680eb8f2bcd3e3e5de430b9e29351f24522e4521fecd63673ce26268ba';
+const immutableQ1ToQ10PrefixBytes = 14_461;
 const immutableQ1ToQ10PrefixSha256 =
-  'd1fbaca292532f899e16acdf099123b3676e7dc5346c113188762df0e123f197';
+  '0a191df9985547d23b01b01580979d700d70e7639beb3ff6e3c29130af6ac79e';
 const q11Marker =
   'Q11. What should you watch for when claiming loss from inability to work?';
 const q16Marker =
@@ -554,6 +554,13 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
   });
 
   it('keeps criminal negligence individual and the civil comparative-fault example conditional in Q4', () => {
+    expect(
+      countOccurrences(
+        q4,
+        'The court considers the full body of evidence, including statements, video footage, and vehicle condition.',
+      ),
+    ).toBe(1);
+    expect(q4).not.toContain('The court evaluates the whole record.');
     expect(q4).toMatch(
       /criminal liability.{0,100}(?:each|individual).{0,20}(?:person|party).{0,60}(?:breach|violation).{0,30}duty of care.{0,80}caus.{0,40}(?:other person|other party).{0,30}injury/is,
     );
@@ -567,7 +574,7 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
       /TWD 1,000,000.{0,30}one million New Taiwan dollars.{0,80}50%.{0,50}injured-party fault.{0,100}(?:may|could).{0,30}reduc.{0,30}TWD 500,000.{0,60}before other adjustments/is,
     );
     expect(q4).toMatch(
-      /(?:appraisal|preliminary analysis).{0,100}(?:important|relevant).{0,100}(?:does not|cannot).{0,40}(?:mechanically|automatically).{0,30}bind.{0,30}court.{0,80}(?:whole|entire).{0,20}record/is,
+      /(?:appraisal|preliminary analysis).{0,100}(?:important|relevant).{0,100}(?:does not|cannot).{0,40}(?:mechanically|automatically).{0,30}bind.{0,30}court.{0,80}full body of evidence.{0,80}statements?.{0,80}video.{0,80}vehicle condition/is,
     );
   });
 

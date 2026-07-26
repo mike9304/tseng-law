@@ -81,6 +81,10 @@ const q11Heading =
   '## Q11. 治療・回復期間中の逸失収入は、どのように立証しますか？';
 const q12Heading =
   '## Q12. 労働能力低下による損害は、どのように立証しますか？';
+const approvedQ11EarningCapacityParagraph =
+  '就労を継続したこと、または給与が変わらず支給されたことは、回復期間中の逸失収入の判断に関係しますが、その事実だけで労働能力低下による損害が自動的に決まるわけではありません。また、その事実だけを根拠として労働能力低下による損害を判断することもできません。労働能力低下による損害はQ12で別途検討します。';
+const staleQ11EarningCapacityParagraph =
+  '就労を継続したこと、または給与が変わらず支給されたことは、回復期間中の逸失収入の判断に関係しますが、それだけで労働能力低下による損害の問題が決まるわけではなく、この損害はQ12で別途検討します。';
 const q13Heading =
   '## Q13. 非財産的損害に対する慰謝料は、どのように判断されますか？';
 const q14Heading =
@@ -868,9 +872,15 @@ describe('Japanese traffic column 003 — Q11–Q15 translation contract', () =>
     expect(q11).toMatch(
       /(?:就労を継続|働き続け).{0,80}(?:(?:給与|賃金).{0,20}(?:変わらず|同額)|(?:変動なく|変わらず|同額).{0,20}(?:支給された)?(?:給与|賃金)).{0,100}(?:一時的|回復期間中).{0,30}(?:逸失収入|収入減少).{0,30}(?:判断|検討).{0,25}(?:関係|考慮)/su,
     );
+    expect(countOccurrences(q11, approvedQ11EarningCapacityParagraph)).toBe(1);
+    expect(q11).not.toContain(staleQ11EarningCapacityParagraph);
     expect(q11).toMatch(
-      /(?:それだけ|直ちに|当然に).{0,70}(?:(?:持続的|恒久的).{0,30}労働能力.{0,15}(?:低下|減少).{0,30}(?:決まら|否定され|排除され)|労働能力低下による損害.{0,15}問題.{0,15}決まるわけではなく)/su,
+      /その事実だけ.{0,40}労働能力低下による損害.{0,30}自動的に決まるわけではありません/u,
     );
+    expect(q11).toMatch(
+      /その事実だけを根拠として.{0,50}労働能力低下による損害を判断することもできません/u,
+    );
+    expect(q11).toMatch(/労働能力低下による損害はQ12で別途検討します/u);
   });
 
   it('treats lasting earning-capacity loss as individualized rather than mechanically fixed in Q12', () => {

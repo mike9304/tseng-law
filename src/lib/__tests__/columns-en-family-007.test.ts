@@ -129,10 +129,12 @@ const filingDocumentsPrefixMarker =
   '3. **Household registration.** Registration with the household-registration authority is constitutive for this path. Without registration, the private writing does not complete a Taiwan mutual-consent divorce.';
 const courtResultsSubsectionHeading =
   '### Court results and Household Registration Act Articles 48 and 48-2';
+const courtResultsFirstParagraph =
+  'When a Taiwan divorce judgment becomes final or court mediation or settlement ends the marriage, either party may, in principle, apply for divorce registration with the household-registration authority. Registration of the court result is governed by the Household Registration Act rather than Article 1050’s constitutive sequence for mutual-consent divorce.';
 const frozenBeforeFilingDocumentsSha256 =
   '07e7dcdcbd12687fd57000836158cac2cf8c9ed2e20a50f5c47b46f18b325d74';
 const frozenCourtResultsSubsectionSha256 =
-  'eb4c8f52d473c77ddd02da16c6d5147d42b7f50b15caef90b2c7a715bd34a4fa';
+  '57a46fe6c1e4aaa72b0690a97575ef79779125ecf483a7ecc4912bc1003a7559';
 const frozenSection3OnwardSha256 =
   '4a5a9a946af97bc0d5836ec787f5a69405b865a942b41d2eb6207d1f432c1d84';
 const frozenSection4OutsideArticle1052IntroSha256 =
@@ -140,10 +142,10 @@ const frozenSection4OutsideArticle1052IntroSha256 =
 const frozenSection5OnwardSha256 =
   '62b854f3c28768bd9d2954970b4b2c4bdee1df78100330f314065bea845a0fe8';
 const frozenSection1OnwardSha256 =
-  'fef67796deca232142adb2c24dd47d41c7067378c3b52b35aa04d21f823c90ed';
-const frozenVisibleWordCount = 4_974;
+  '54139ed595523142e0aca225eb50f9a0b3fa2eb24074cf55e8e34ed49480f970';
+const frozenVisibleWordCount = 4_994;
 const frozenSourceSha256 =
-  '115c2c307d474d88a58d028e7ed80cf6715c7e59a96949a321a106a811ef34be';
+  '612af0b0fbba84c149ea309234a0f808d299805d94f3f6324b709edb5be55293';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -504,6 +506,12 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(sha256(parsed.content.slice(section3Start))).toBe(
       frozenSection3OnwardSha256,
     );
+  });
+
+  it('restores either party’s right to register a final Taiwan court divorce result', () => {
+    expect(
+      firstParagraphAfter(parsed.content, courtResultsSubsectionHeading),
+    ).toBe(courtResultsFirstParagraph);
   });
 
   it('locks Family Act Article 13 and the type-specific effects and review routes', () => {

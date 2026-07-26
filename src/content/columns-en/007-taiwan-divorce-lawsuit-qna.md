@@ -70,7 +70,7 @@ Who may apply, whether filing through an agent is permitted, and which proof of 
 
 ### Court results and Household Registration Act Articles 48 and 48-2
 
-Where divorce is established by a Taiwan court judgment, mediation, or settlement, household registration of that court result follows the Household Registration Act, not Article 1050’s mutual-consent constitutive sequence.
+When a Taiwan divorce judgment becomes final or court mediation or settlement ends the marriage, either party may, in principle, apply for divorce registration with the household-registration authority. Registration of the court result is governed by the Household Registration Act rather than Article 1050’s constitutive sequence for mutual-consent divorce.
 
 Under Household Registration Act Article 48, the general application period for registration is **thirty days from finality of the Taiwan divorce judgment or from establishment of the court mediation or settlement**. The period does not run from mere receipt of a judgment or mediation record if finality or establishment has not yet occurred.
 

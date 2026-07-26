@@ -1,7 +1,7 @@
 ---
-title: "台湾で交通事故が起きたとき"
+title: "台湾交通事故対応Q&A：現場対応・過失・示談・損害賠償"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2025-09-13"
+lastmod: "2026-07-26"
 date_display: "2025年9月13日"
 read_time: "約8分"
 categories:
@@ -9,33 +9,13 @@ categories:
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 
-# 台湾で交通事故が起きたとき
+# 台湾交通事故対応Q&A：現場対応・過失・示談・損害賠償
 
-![代表画像](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
+![台湾の交通事故直後における現場の安全確保と証拠保全を説明する画像](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 
-![](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
+![交通事故現場の車両位置と道路上の痕跡を記録する例を示す画像](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-こんにちは。台湾弁護士の曾雋崴（Wei Tseng）です。
-
-​
-
-​
-
-​
-
-本日は、台湾で交通事故が起きた場合についてお話しします。
-
-​
-
-私は多くの交通事故事件を扱った経験があり、
-
-​
-
-皆さまと知見を共有したいと思い、この文章を書きました。
-
-​
-
-**Q&A形式**で、皆さまが**効率的に**理解できるよう説明します。
+台湾で交通事故が起きたら、まず安全を確保し、適切な通報・届出と証拠の保全を行います。その後、請求期限・過失・示談の範囲を順に確認する必要があります。以下は、台湾法令および公的機関の案内に基づく一般的な対応の流れであり、具体的な責任と手続は事故の状況によって異なり得ます。
 
 Q1. 事故発生後、どのような状況なら現場を離れてもひき逃げとみなされないのでしょうか？
 

@@ -11,7 +11,6 @@ const koDir = path.join(root, 'src/content/columns');
 const jaDir = path.join(root, 'src/content/columns-ja');
 const jaIdentityFiles = [
   '001-taiwan-company-establishment-basics.md',
-  '003-taiwan-traffic-accident-procedure.md',
   '004-taiwan-company-subsidiary-vs-branch.md',
   '007-taiwan-divorce-lawsuit-qna.md',
   '008-taiwan-labor-severance-law.md',

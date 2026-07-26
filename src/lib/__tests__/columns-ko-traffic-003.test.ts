@@ -25,13 +25,14 @@ const incidentAlt =
   '교통사고 현장의 차량 위치와 도로 흔적을 기록하는 예시 이미지';
 
 const q6Marker = 'Q6. 사고 책임은 어떻게 인정되나요?';
-const q11Marker = 'Q11. 근로 불능 손실 청구 시 주의사항은 무엇인가요?';
-const immutablePrefixBytes = 8_652;
+const q11Marker = 'Q11. 치료·회복 기간의 일실수입은 어떻게 입증하나요?';
+const q16Marker = 'Q16. 사고 발생 후 보험사에게 모든 것을 맡길 수 있나요?';
+const immutablePrefixBytes = 14_761;
 const immutablePrefixSha256 =
-  '07c63338af189be3c0e2025c84066d4b8f9f06e10affbe7e7be506ef6f56b4f2';
-const immutableTailBytes = 9_593;
+  'e6e8739f6b29cbec19966b3080aa667d6b84cf2c13b970d7595a5bee08ed35ca';
+const immutableTailBytes = 4_480;
 const immutableTailSha256 =
-  '7b41d4ba3199e2044971fdfdfd3b70839f8b9d98ebea940e1ceefb190cbd97ba';
+  'b4ed102801368beb117b2f25b6ab6ead8de52d224165b0367e4dd200a426840a';
 
 const sourceTargets = [
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012',
@@ -84,6 +85,48 @@ const q6ToQ10StaleCopy = [
   '의료 영수증을 추가로 제출하면 재판 비용을 추가로 지불해야 합니다',
 ] as const;
 
+const q11ToQ15SourceTargets = [
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001',
+  'https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf',
+  'https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf',
+  'https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001',
+  'https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL006889',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200',
+  'https://law.fsc.gov.tw/LawContent.aspx?id=FL047990',
+] as const;
+
+const q11ToQ15StaleCopy = [
+  '판사는 청구를 인정하지 않습니다',
+  '반드시 청구',
+  '가장 큰 비중',
+  '은퇴할 나이까지의 모든 급여',
+  '65세',
+  '실제 급여 감소와 상관없이',
+  '100만 원',
+  '10만 원',
+  '1,693,928원',
+  '2만 원',
+  '1, 2만 원',
+  '수십만 원이 일반적인 금액',
+  '몇 백만 원',
+  '회사는 고용 책임을 지게 됩니다',
+  '회사를 함께 고소',
+  '자산을 가지고 있기 때문에',
+  '가해자 본인에게만 가능합니다',
+  '모든 사람이 가입해야',
+  '실종 또는 사망',
+  '20만 원',
+  '200만 원',
+  '나머지 부분을 보상합니다',
+  '자신의 차량 운전자의 부상은 보장하지 않습니다',
+] as const;
+
 const staleCopy = [
   '대만에서 교통사고 발생시',
   '증준외 대만변호사입니다',
@@ -109,18 +152,26 @@ function countOccurrences(value: string, needle: string) {
 
 const q6MarkerBytes = Buffer.from(q6Marker, 'utf8');
 const q6ByteIndex = rawBytes.indexOf(q6MarkerBytes);
-const q6HeadingMarkerBytes = Buffer.from(`## ${q6Marker}`, 'utf8');
-const q6HeadingByteIndex = rawBytes.indexOf(q6HeadingMarkerBytes);
 const q6CharacterIndex = parsed.content.indexOf(q6Marker);
 const q6HeadingCharacterIndex = parsed.content.indexOf(`## ${q6Marker}`);
 const q11MarkerBytes = Buffer.from(q11Marker, 'utf8');
 const q11ByteIndex = rawBytes.indexOf(q11MarkerBytes);
+const q11HeadingMarkerBytes = Buffer.from(`## ${q11Marker}`, 'utf8');
+const q11HeadingByteIndex = rawBytes.indexOf(q11HeadingMarkerBytes);
+const q16MarkerBytes = Buffer.from(q16Marker, 'utf8');
+const q16ByteIndex = rawBytes.indexOf(q16MarkerBytes);
 const q11CharacterIndex = parsed.content.indexOf(q11Marker);
+const q11HeadingCharacterIndex = parsed.content.indexOf(`## ${q11Marker}`);
+const q16CharacterIndex = parsed.content.indexOf(q16Marker);
 const microSection = parsed.content.slice(0, q6CharacterIndex);
 const q6ToQ10Section = parsed.content.slice(q6CharacterIndex, q11CharacterIndex);
 const q6ToQ10WithHeadings = parsed.content.slice(
   q6HeadingCharacterIndex,
   q11CharacterIndex,
+);
+const q11ToQ15Section = parsed.content.slice(
+  q11HeadingCharacterIndex,
+  q16CharacterIndex,
 );
 
 function questionSection(questionNumber: number) {
@@ -134,6 +185,18 @@ function questionSection(questionNumber: number) {
   return sectionSource.slice(
     start,
     next === -1 ? sectionSource.length : next,
+  );
+}
+
+function q11ToQ15QuestionSection(questionNumber: number) {
+  const heading = `## Q${questionNumber}.`;
+  const start = q11ToQ15Section.indexOf(heading);
+  if (start === -1) return '';
+
+  const next = q11ToQ15Section.indexOf('\n## ', start + heading.length);
+  return q11ToQ15Section.slice(
+    start,
+    next === -1 ? q11ToQ15Section.length : next,
   );
 }
 
@@ -346,21 +409,22 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
     expect(microSection).not.toMatch(/안녕하세요|변호사입니다/);
   });
 
-  it('preserves the immutable Q1–Q5 prefix and Q11–Q20 tail byte-for-byte', () => {
+  it('preserves the immutable Q1–Q10 prefix and Q16–Q20 tail byte-for-byte', () => {
     const immutablePrefix = rawBytes.subarray(0, immutablePrefixBytes);
-    const immutableTail = rawBytes.subarray(q11ByteIndex);
+    const immutableTail = rawBytes.subarray(q16ByteIndex);
 
-    expect(q6HeadingByteIndex).toBe(immutablePrefixBytes);
+    expect(q11HeadingByteIndex).toBe(immutablePrefixBytes);
+    expect(q11ByteIndex).toBe(immutablePrefixBytes + 3);
     expect(immutablePrefix.byteLength).toBe(immutablePrefixBytes);
     expect(crypto.createHash('sha256').update(immutablePrefix).digest('hex')).toBe(
       immutablePrefixSha256,
     );
-    expect(q11ByteIndex).toBeGreaterThan(immutablePrefixBytes);
+    expect(q16ByteIndex).toBeGreaterThan(q11ByteIndex);
     expect(immutableTail.byteLength).toBe(immutableTailBytes);
     expect(crypto.createHash('sha256').update(immutableTail).digest('hex')).toBe(
       immutableTailSha256,
     );
-    expect(immutableTail.toString('utf8').startsWith(q11Marker)).toBe(true);
+    expect(immutableTail.toString('utf8').startsWith(q16Marker)).toBe(true);
   });
 
   it('isolates Q6–Q10 with one H2 for each question before the immutable Q11 boundary', () => {
@@ -536,5 +600,198 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
     expect(q6ToQ10Section).not.toContain('→');
     expect(q6ToQ10Section).not.toMatch(/(?:항상|무조건)\s*(?:인정|청구|배상)/);
     expect(q6ToQ10Section).not.toMatch(/반드시\s+인정됩니다/);
+  });
+});
+
+describe('Korean traffic column 003 — Q11–Q15 rewrite boundary', () => {
+  it('isolates exactly one H2 for Q11–Q15 and places their source block after Q15', () => {
+    expect(q11HeadingCharacterIndex).toBeGreaterThan(0);
+    expect(q16CharacterIndex).toBeGreaterThan(q11HeadingCharacterIndex);
+    expect(
+      Array.from(
+        q11ToQ15Section.matchAll(/^## (Q\d+)\./gm),
+        (match) => match[1],
+      ),
+    ).toEqual(['Q11', 'Q12', 'Q13', 'Q14', 'Q15']);
+    expect(q11ToQ15Section).not.toMatch(/^## Q16\./m);
+    expect(q11ToQ15Section).toContain('### Q11–Q15 공식 근거');
+    expect(q11ToQ15Section.indexOf('### Q11–Q15 공식 근거')).toBeGreaterThan(
+      q11ToQ15Section.indexOf('## Q15.'),
+    );
+  });
+
+  it('locks Q11 temporary lost-income causation, actual reduction, proof, and Q12 distinction', () => {
+    const section = q11ToQ15QuestionSection(11);
+    const requiredPhrases = [
+      '사고 관련 부상',
+      '전부 또는 일부',
+      '근로가 불가능',
+      '실제 소득 감소',
+      '회복 기간',
+      '진단서',
+      '휴식 권고',
+      '단독으로',
+      '진료기록',
+      '출근 또는 휴가 기록',
+      '급여 및 세금 자료',
+      '고용주 확인',
+      '자영업',
+      '계속 근무',
+      '변동 없이 지급된 급여',
+      '노동능력 감소 손해',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+    expect(section).toMatch(/(?:계속 근무|변동 없이 지급된 급여).*(?:자동|단독).*(?:결정|판단).*(?:아니|않)/);
+  });
+
+  it('locks Q12 permanent earning-capacity rules, evidence caveats, and adjustment mechanisms', () => {
+    const section = q11ToQ15QuestionSection(12);
+    const requiredPhrases = [
+      '노동능력 감소 손해',
+      '민법 제193조',
+      '민법 제216조',
+      '사고와의 인과관계',
+      '지속적인 기능장애',
+      '직업과 능력',
+      '통상 기대할 수 있는 소득',
+      '근로 가능 기간',
+      '입증',
+      '현재 급여',
+      '자동으로 배제',
+      '장해율',
+      '기계적으로',
+      '의학 감정',
+      '필수',
+      '민법 제217조',
+      '중간이자 공제',
+      '호프만',
+      '계산 보조',
+      '법적으로 의무적인 방법',
+      '정기금',
+      '담보',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+    expect(section).not.toMatch(/(?:고정|정해진)\s*(?:은퇴|퇴직)\s*나이/);
+  });
+
+  it('locks Q13 Article 195 and individualized non-pecuniary-damage review', () => {
+    const section = q11ToQ15QuestionSection(13);
+    const requiredPhrases = [
+      '비재산적 손해에 대한 위자료',
+      '민법 제195조',
+      '신체 또는 건강',
+      '부상과 치료',
+      '지속적인 영향',
+      '고통과 생활상 영향',
+      '나이와 신분',
+      '사회·경제적 사정',
+      '당사자의 증거',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+    expect(section).not.toMatch(/(?:통상|일반적).*(?:범위|금액)/);
+    expect(section).not.toMatch(/(?:예상|기대).*(?:보다|보다도).*(?:적|낮)/);
+  });
+
+  it('locks Q14 employer civil-liability conditions, defenses, recourse, and criminal distinction', () => {
+    const section = q11ToQ15QuestionSection(14);
+    const requiredPhrases = [
+      '민법 제188조',
+      '직무를 수행하는 중',
+      '근무 시간만으로',
+      '자동으로',
+      '상당한 주의',
+      '선임과 감독',
+      '피해자',
+      '제1항에 따른 손해배상을 받지 못하는 경우',
+      '제2항',
+      '구상',
+      '형사책임',
+      '형법 제284조',
+      '각 자연인의',
+      '주의의무 위반',
+      '인과관계',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+    expect(section).toMatch(/(?:공동으로 손해배상을 청구|피고로 함께 청구)/);
+    expect(section).not.toContain('회사를 함께 고소');
+  });
+
+  it('locks Q15 statutory compulsory coverage, 2026 limits, and contractual voluntary products', () => {
+    const section = q11ToQ15QuestionSection(15);
+    const requiredPhrases = [
+      '강제자동차책임보험법 제6조',
+      '차량 소유자',
+      '차량의 사용인 또는 관리자',
+      '무과실',
+      '부상하거나 사망한 사람',
+      '승객 또는 차량 외 제3자',
+      '단일 차량 사고',
+      '일반적으로',
+      '여러 차량이 관련된 사고',
+      '다른 관련 차량',
+      '2026-07-01',
+      '신대만달러 TWD 200,000',
+      'TWD 80,000–3,000,000',
+      'TWD 3,000,000',
+      'TWD 3,200,000',
+      '2026-05-29',
+      '그 이전 사고',
+      '이전 기준',
+      '대인배상책임보험',
+      '운전자 상해보험',
+      '자차손해보험',
+      '계약상',
+      '피보험자',
+      '한도',
+      '자기부담금',
+      '면책',
+      '과실',
+    ];
+
+    for (const phrase of requiredPhrases) {
+      expect(section).toContain(phrase);
+    }
+  });
+
+  it('uses every authoritative Q11–Q15 source once, in order, with Korean labels and no raw URLs', () => {
+    const sourceHeading = '### Q11–Q15 공식 근거';
+    const sourceBlock = q11ToQ15Section.slice(
+      q11ToQ15Section.indexOf(sourceHeading),
+    );
+    const markdownLinks = Array.from(
+      sourceBlock.matchAll(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g),
+      (match) => ({ label: match[1], url: match[2] }),
+    );
+
+    expect(markdownLinks.map(({ url }) => url)).toEqual(q11ToQ15SourceTargets);
+    for (const { label } of markdownLinks) {
+      expect(label).toMatch(/[\uac00-\ud7af]/);
+    }
+    for (const target of q11ToQ15SourceTargets) {
+      expect(countOccurrences(q11ToQ15Section, target)).toBe(1);
+    }
+    expect(sourceBlock).not.toMatch(/(?<!\]\()https?:\/\//);
+  });
+
+  it('rejects stale claims, invisible spacer-only lines, result guarantees, and bare Korean-won amounts', () => {
+    for (const phrase of q11ToQ15StaleCopy) {
+      expect(q11ToQ15Section).not.toContain(phrase);
+    }
+    expect(q11ToQ15Section).not.toMatch(/호프만 방식[\s\S]{0,40}사용해야/);
+    expect(q11ToQ15Section).not.toMatch(/^\s*\u200b\s*$/m);
+    expect(q11ToQ15Section).not.toMatch(/\d[\d,\s]*(?:만\s*)?원/);
+    expect(q11ToQ15Section).not.toMatch(/(?:항상|무조건|반드시)\s*(?:인정|지급|보상|청구)/);
   });
 });

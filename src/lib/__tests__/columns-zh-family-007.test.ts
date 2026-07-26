@@ -36,6 +36,8 @@ const faq5Answer =
   '並非同一權利。民法第1030條之1之剩餘財產差額分配請求權、第1056條裁判離婚之損害賠償、第1057條對無過失配偶之贍養費，以及未成年子女之扶養費，其發生要件、計算與期間均不相同。剩餘財產差額分配請求權雖有自知有差額時起二年、法定財產制消滅時起五年之期間，但不得逕將該期間套用於其他請求。';
 const faq6Answer =
   '依民法第1055條及第1055條之1，法院應以未成年子女之最佳利益為準，就未成年子女權利義務之行使或負擔、會面交往等子女相關事項為判斷。應綜合子女之年齡、健康、意願與發展需要、父母之生活與照護能力及態度、親子情感關係、是否妨礙他方與子女之關係等法定因素及具體資料，不得僅以父母所得或婚姻破綻責任單一決定結論。';
+const section8AgreementParagraph =
+  '依民法第1055條，父母得協議離婚後由何方行使或負擔前述權利義務；未為協議或協議不成時，法院得予酌定。協議不利於子女時，法院得予改定，或為必要之決定。既有決定作成後，如衡酌其後情事及子女利益而有變更之必要，仍可能需要法院審查。已簽署之離婚協議書並不排除其後以子女最佳利益為準之審查；協議之變更亦不能僅視為提出戶籍書表的問題。';
 const faq = [
   {
     q: '台灣兩願離婚只要簽署協議書就立刻生效嗎？',
@@ -105,13 +107,22 @@ const exactEnding = `- ${internalLinks[2]}
 ${disclaimer}
 
 ${author}`;
-const frozenVisibleHanCount = 7_618;
+const frozenVisibleHanCount = 7_590;
 const frozenSourceSha256 =
-  '2c25cbefb1d142c251e8d8ab2e9f3d8bb4e5ab2031686deb29c66a1777af10c7';
+  'df75064fa6b8bbc4a71bcb01b3d307f1353d21c6a110bcdffba35ee06c50c9dc';
 const frozenSection4TailSha256 =
   '8ee0167ad37fab5ebd5ddcb6544a551c6caf65d7a34547f0f717075631d85fe9';
 const frozenSection5OnwardSha256 =
-  'c42b10349dc383aa60d566d60b1bc288b65dd304b460f37956f27bbbf74fae74';
+  '9a6f66b4911d312159b58a78a4eb12ca826f33753b7124391151d807f1c9d3e9';
+const frozenSection8AgreementPrefixLength = 16_859;
+const frozenSection8AgreementPrefixSha256 =
+  '7a023591f9193b38c40f3da51d43fd6b365ae9aa48e6e1fe3f0a08c1ba383d1a';
+const frozenSection8AgreementTailLength = 1_043;
+const frozenSection8AgreementTailSha256 =
+  'eac23054c07aed295e4d21a8a81852629a16d2100a24a0200ad4af9446e42668';
+const frozenSection9OnwardLength = 7_954;
+const frozenSection9OnwardSha256 =
+  '79b6ab26499a38401a6c9e7bc9221f0c9259e87ff39507c27656ccd0b2d71e17';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -151,7 +162,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: '2025年9月13日',
-      read_time: '20分鐘閱讀',
+      read_time: '19分鐘閱讀',
       categories: ['台灣法律資訊'],
       featured_image: featuredImage,
       faq,
@@ -162,7 +173,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       title,
       date: '2026-07-25',
       dateDisplay: '2025年9月13日',
-      readTime: '20分鐘閱讀',
+      readTime: '19分鐘閱讀',
       category: 'legal',
       categoryLabel: '法律資訊',
       featuredImage:
@@ -319,7 +330,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
         number: 16,
         heading: headings[7],
         phrase:
-          '既有安排作成後，如協議不利於子女，或行使、負擔權利義務之一方未盡保護教養義務或對未成年子女有不利情事時，法院得為子女利益改定；情事變更並非唯一法定門檻。',
+          '既有決定作成後，如衡酌其後情事及子女利益而有變更之必要，仍可能需要法院審查。',
       },
       {
         number: 17,
@@ -531,9 +542,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     const requiredPhrases = [
       '台灣法上之完整概念為「未成年子女權利義務之行使或負擔」',
       '為敘述方便，或可簡稱「監護權」或「親權」，但不得將該簡稱誤認為已完整涵蓋台灣法上全部權利與義務。',
-      '依民法第1055條，父母得協議離婚後由何方行使或負擔前述權利義務。',
-      '協議不成或未協議時，法院得為酌定；協議不利於子女時，法院並得改定或為必要之決定。',
-      '經簽名之離婚協議書，並不當然阻斷其後之最佳利益審查；協議變更亦不能僅以戶籍書表提件視之。',
+      section8AgreementParagraph,
       '依民法第1055條之1，法院應綜合子女之年齡、性別、人數與健康，子女之意願與人格發展需要',
       '法院得依法聽取子女意見，並得參考主管機關或兒童福利專業人員之調查與意見。',
       '應一併檢視：未決財產如何保全與結算；子女居所、照護、醫療與教育需要何種協議或法院決定；扶養費與會面交往如何安排；以及爭執期間是否需要暫時處分以維護安全與生活連續性。',
@@ -542,6 +551,54 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+  });
+
+  it('uses only the Korean-faithful Section 8 agreement paragraph and freezes its surrounding content', () => {
+    const section8Start = parsed.content.indexOf(`## ${headings[7]}`);
+    const section9Start = parsed.content.indexOf(`## ${headings[8]}`);
+    const paragraphStart = parsed.content.indexOf(
+      '依民法第1055條，父母得協議離婚後由何方行使或負擔前述權利義務',
+      section8Start,
+    );
+    const paragraphEnd = parsed.content.indexOf('\n\n', paragraphStart);
+    const actualParagraph = parsed.content.slice(paragraphStart, paragraphEnd);
+    const immutablePrefix = parsed.content.slice(0, paragraphStart);
+    const immutableSection8Tail = parsed.content.slice(
+      paragraphEnd,
+      section9Start,
+    );
+    const immutableSection9Onward = parsed.content.slice(section9Start);
+
+    expect(section8Start).toBeGreaterThanOrEqual(0);
+    expect(section9Start).toBeGreaterThan(section8Start);
+    expect(paragraphStart).toBeGreaterThan(section8Start);
+    expect(paragraphEnd).toBeGreaterThan(paragraphStart);
+    expect(actualParagraph).toBe(section8AgreementParagraph);
+    expect(countOccurrences(parsed.content, section8AgreementParagraph)).toBe(
+      1,
+    );
+    expect(actualParagraph).not.toContain('情事變更並非唯一法定門檻');
+    expect(actualParagraph).not.toContain('未盡保護教養義務');
+    expect(actualParagraph).not.toContain('對未成年子女有不利情事');
+
+    expect(Buffer.byteLength(immutablePrefix, 'utf8')).toBe(
+      frozenSection8AgreementPrefixLength,
+    );
+    expect(
+      crypto.createHash('sha256').update(immutablePrefix).digest('hex'),
+    ).toBe(frozenSection8AgreementPrefixSha256);
+    expect(Buffer.byteLength(immutableSection8Tail, 'utf8')).toBe(
+      frozenSection8AgreementTailLength,
+    );
+    expect(
+      crypto.createHash('sha256').update(immutableSection8Tail).digest('hex'),
+    ).toBe(frozenSection8AgreementTailSha256);
+    expect(Buffer.byteLength(immutableSection9Onward, 'utf8')).toBe(
+      frozenSection9OnwardLength,
+    );
+    expect(
+      crypto.createHash('sha256').update(immutableSection9Onward).digest('hex'),
+    ).toBe(frozenSection9OnwardSha256);
   });
 
   it('locks Article 1116-2 support and Family Act Article 194 contact and enforcement qualifications', () => {
@@ -649,7 +706,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       .digest('hex');
 
     expect(visibleHanCount).toBe(frozenVisibleHanCount);
-    expect(calculatedMinutes).toBe(20);
+    expect(calculatedMinutes).toBe(19);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(sourceSha256).toBe(frozenSourceSha256);

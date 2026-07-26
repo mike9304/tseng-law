@@ -66,7 +66,7 @@ Article 1050 separates three requirements:
 2. **Witnesses.** At least two witnesses must sign after personally perceiving and confirming both spouses’ genuine mutual intent to divorce. Signatures are not a purely formal later add-on by persons who never confirmed that intent.
 3. **Household registration.** Registration with the household-registration authority is constitutive for this path. Without registration, the private writing does not complete a Taiwan mutual-consent divorce.
 
-Required applicants, identity documents, photographs, foreign-document authentication, Chinese translations, and permitted representation change over time. Use the current Ministry of the Interior household-registration divorce guide and confirm details with the competent office before filing. Do not treat any fixed private checklist as a permanent substitute for the official guide.
+Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.
 
 ### Court results and Household Registration Act Articles 48 and 48-2
 

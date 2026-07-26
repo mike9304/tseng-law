@@ -123,15 +123,27 @@ const staleArticle1052TranslationInstruction =
   'Civil Code Article 1052 paragraph 1 lists ten specific grounds for judicial divorce. Translate them accurately; do not expand or shrink a statutory term into a broader colloquial ground.';
 const article1052Paragraph1ReaderSentence =
   'Civil Code Article 1052 paragraph 1 sets out ten grounds on which a spouse may petition for judicial divorce when any of the following applies to the other spouse:';
+const filingDocumentsParagraph =
+  'Who may apply, whether filing through an agent is permitted, and which proof of identity, household-registration records, written divorce instrument, and other documents must be prepared should be determined by reference to the Ministry of the Interior’s household-registration guidance for divorce registration in force at the time of filing and confirmed with the competent household-registration office. Depending on the type of document and where it was prepared, a document prepared outside Taiwan may require authentication by a Taiwan overseas mission or another competent authority. If the official guidance so requires, an authenticated or notarized Chinese translation must also be submitted. No single fixed checklist applies unchanged to every cross-border case.';
+const filingDocumentsPrefixMarker =
+  '3. **Household registration.** Registration with the household-registration authority is constitutive for this path. Without registration, the private writing does not complete a Taiwan mutual-consent divorce.';
+const courtResultsSubsectionHeading =
+  '### Court results and Household Registration Act Articles 48 and 48-2';
+const frozenBeforeFilingDocumentsSha256 =
+  '07e7dcdcbd12687fd57000836158cac2cf8c9ed2e20a50f5c47b46f18b325d74';
+const frozenCourtResultsSubsectionSha256 =
+  'eb4c8f52d473c77ddd02da16c6d5147d42b7f50b15caef90b2c7a715bd34a4fa';
+const frozenSection3OnwardSha256 =
+  '4a5a9a946af97bc0d5836ec787f5a69405b865a942b41d2eb6207d1f432c1d84';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '8da1e5106649d305bd65795acaf2e17107673964de900c66f748c53bc8660219';
 const frozenSection5OnwardSha256 =
   '62b854f3c28768bd9d2954970b4b2c4bdee1df78100330f314065bea845a0fe8';
 const frozenSection1OnwardSha256 =
-  '9617cf72ad747a326674256205c90f80af0736399019e312360b2060a27fd408';
-const frozenVisibleWordCount = 4_912;
+  'fef67796deca232142adb2c24dd47d41c7067378c3b52b35aa04d21f823c90ed';
+const frozenVisibleWordCount = 4_974;
 const frozenSourceSha256 =
-  '821b6716da7d1c62dd8a04cf0bcd4d739504dd8f6f7667cbfb62b246b92640a2';
+  '115c2c307d474d88a58d028e7ed80cf6715c7e59a96949a321a106a811ef34be';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -314,8 +326,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       {
         number: 9,
         heading: headings[1],
-        phrase:
-          'Use the current Ministry of the Interior household-registration divorce guide and confirm details with the competent office before filing.',
+        phrase: filingDocumentsParagraph,
       },
       {
         number: 10,
@@ -460,6 +471,39 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+  });
+
+  it('translates the filing-document paragraph exactly without adding photographs and freezes both boundaries', () => {
+    const prefixMarkerStart = parsed.content.indexOf(filingDocumentsPrefixMarker);
+    const paragraphStart =
+      prefixMarkerStart + filingDocumentsPrefixMarker.length + 2;
+    const courtResultsStart = parsed.content.indexOf(
+      courtResultsSubsectionHeading,
+      paragraphStart,
+    );
+    const section3Start = parsed.content.indexOf(`## ${headings[2]}`);
+    const paragraph = parsed.content.slice(
+      paragraphStart,
+      courtResultsStart - 2,
+    );
+
+    expect(prefixMarkerStart).toBeGreaterThan(-1);
+    expect(courtResultsStart).toBeGreaterThan(paragraphStart);
+    expect(section3Start).toBeGreaterThan(courtResultsStart);
+    expect(paragraph).toBe(filingDocumentsParagraph);
+    expect(countOccurrences(parsed.content, filingDocumentsParagraph)).toBe(1);
+    expect(sectionBody(parsed.content, headings[1])).not.toMatch(
+      /\bphotographs?\b/i,
+    );
+    expect(sha256(parsed.content.slice(0, paragraphStart))).toBe(
+      frozenBeforeFilingDocumentsSha256,
+    );
+    expect(
+      sha256(parsed.content.slice(courtResultsStart, section3Start)),
+    ).toBe(frozenCourtResultsSubsectionSha256);
+    expect(sha256(parsed.content.slice(section3Start))).toBe(
+      frozenSection3OnwardSha256,
+    );
   });
 
   it('locks Family Act Article 13 and the type-specific effects and review routes', () => {

@@ -133,21 +133,27 @@ const courtResultsFirstParagraph =
   'When a Taiwan divorce judgment becomes final or court mediation or settlement ends the marriage, either party may, in principle, apply for divorce registration with the household-registration authority. Registration of the court result is governed by the Household Registration Act rather than Article 1050’s constitutive sequence for mutual-consent divorce.';
 const courtResultsOnlineParagraph =
   'Online filing is available only within the statutory application period. The thirty-day period is the general deadline for registering the court result, not a deadline exclusive to online filing.';
+const mediationSubsectionHeading =
+  '### Mediation and litigation as related but distinct stages';
+const mediationIntroParagraph =
+  'Family matters governed by the Family Act ordinarily proceed through court mediation before adjudication. Even a matter filed directly for adjudication may be deemed an application for mediation under the Act. Because there are exceptions involving the method of service or the nature of the matter, as well as rules governing transitions between procedures, however, not every case can be described as following a single immutable sequence. Mediation may address not only the parties’ intention to divorce but also related issues involving property, children, and the manner of payment, but the court may not confirm, without modification, an agreement that is detrimental to a minor child.';
+const courtMediationOutcomeParagraphMarker =
+  '**Court mediation or settlement,**';
 const frozenBeforeFilingDocumentsSha256 =
   '07e7dcdcbd12687fd57000836158cac2cf8c9ed2e20a50f5c47b46f18b325d74';
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '4a5a9a946af97bc0d5836ec787f5a69405b865a942b41d2eb6207d1f432c1d84';
+  'dbdf0d011b1306d089e94f79667c24c9e49c4a36326aff00dfe76508322e68bf';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '8da1e5106649d305bd65795acaf2e17107673964de900c66f748c53bc8660219';
 const frozenSection5OnwardSha256 =
   '62b854f3c28768bd9d2954970b4b2c4bdee1df78100330f314065bea845a0fe8';
 const frozenSection1OnwardSha256 =
-  '21ad7d2ec4580a94c5b58a188aae654fcbfc14d2abd170262fce0c4940bbb97a';
-const frozenVisibleWordCount = 4_983;
+  '5c974075502f2c8c9b325dd359a1996570f46e2c1033ef3065d7d8d7bd74ddad';
+const frozenVisibleWordCount = 5_051;
 const frozenSourceSha256 =
-  '15d8435a16fe4358520ebe9f981e35bd978c4fbc2614534d6eb5a6c24873fac7';
+  '3fbd8489d2015a22a9f90956c5f8d2f7326db8f0d22616b8d83a7d2f69a2718f';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -195,7 +201,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: 'September 13, 2025',
-      read_time: '25 min read',
+      read_time: '26 min read',
       categories: ['Taiwan Legal Information'],
       featured_image: featuredImage,
       faq,
@@ -206,7 +212,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       title,
       date: '2026-07-25',
       dateDisplay: 'September 13, 2025',
-      readTime: '25 min read',
+      readTime: '26 min read',
       category: 'legal',
       categoryLabel: 'Legal Information',
       featuredImage:
@@ -347,8 +353,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       {
         number: 13,
         heading: headings[2],
-        phrase:
-          'Family matters covered by the Family Act ordinarily pass through court mediation before adjudication, subject to the Act and the posture of the case.',
+        phrase: mediationIntroParagraph,
       },
       {
         number: 14,
@@ -537,12 +542,33 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(onlineParagraph).toBe(courtResultsOnlineParagraph);
   });
 
+  it('restores the complete mediation-stage introduction before the court-outcome paragraph', () => {
+    const section3IntroStart = parsed.content.indexOf(faq2Answer);
+    const mediationHeadingStart = parsed.content.indexOf(
+      mediationSubsectionHeading,
+      section3IntroStart + faq2Answer.length,
+    );
+    const paragraphStart =
+      mediationHeadingStart + mediationSubsectionHeading.length + 2;
+    const courtOutcomeStart = parsed.content.indexOf(
+      `\n\n${courtMediationOutcomeParagraphMarker}`,
+      paragraphStart,
+    );
+    const paragraph = parsed.content.slice(paragraphStart, courtOutcomeStart);
+
+    expect(section3IntroStart).toBeGreaterThan(-1);
+    expect(mediationHeadingStart).toBe(
+      section3IntroStart + faq2Answer.length + 2,
+    );
+    expect(courtOutcomeStart).toBeGreaterThan(paragraphStart);
+    expect(paragraph).toBe(mediationIntroParagraph);
+  });
+
   it('locks Family Act Article 13 and the type-specific effects and review routes', () => {
     const section = sectionBody(parsed.content, headings[2]);
     const requiredPhrases = [
       faq2Answer,
-      'Family matters covered by the Family Act ordinarily pass through court mediation before adjudication',
-      'That ordinary sequence is not a claim that every matter follows one immutable process.',
+      mediationIntroParagraph,
       'Family Act Article 13 applies when the court orders a party or legal representative to appear in person.',
       'a first fine of up to NTD 30,000',
       'no arrest for compulsory appearance under this rule',
@@ -828,7 +854,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       .digest('hex');
 
     expect(visibleWordCount).toBe(frozenVisibleWordCount);
-    expect(calculatedMinutes).toBe(25);
+    expect(calculatedMinutes).toBe(26);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(sourceSha256).toBe(frozenSourceSha256);

@@ -3,7 +3,7 @@ title: "Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"
-read_time: "25 min read"
+read_time: "26 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
@@ -84,7 +84,7 @@ No. When a court orders a party or legal representative to appear in person and 
 
 ### Mediation and litigation as related but distinct stages
 
-Family matters covered by the Family Act ordinarily pass through court mediation before adjudication, subject to the Act and the posture of the case. That ordinary sequence is not a claim that every matter follows one immutable process.
+Family matters governed by the Family Act ordinarily proceed through court mediation before adjudication. Even a matter filed directly for adjudication may be deemed an application for mediation under the Act. Because there are exceptions involving the method of service or the nature of the matter, as well as rules governing transitions between procedures, however, not every case can be described as following a single immutable sequence. Mediation may address not only the parties’ intention to divorce but also related issues involving property, children, and the manner of payment, but the court may not confirm, without modification, an agreement that is detrimental to a minor child.
 
 **Court mediation or settlement,** once established, produces a binding result that can end the marriage without a contested judgment on the merits of a judicial-divorce ground. **Litigation** continues when mediation fails or is unavailable as the Act provides, and ends in a judgment that becomes effective according to service, finality, and the procedural rules applicable to that decision.
 

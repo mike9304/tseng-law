@@ -104,7 +104,7 @@ Civil Code Article 1052 paragraph 2 allows a petition where another serious caus
 
 ### Article 1052 paragraph 1: ten grounds
 
-Civil Code Article 1052 paragraph 1 lists ten specific grounds for judicial divorce. Translate them accurately; do not expand or shrink a statutory term into a broader colloquial ground.
+Civil Code Article 1052 paragraph 1 sets out ten grounds on which a spouse may petition for judicial divorce when any of the following applies to the other spouse:
 
 1. **Bigamy.**
 2. **Consensual sexual intercourse with a person other than the spouse.**

@@ -111,12 +111,26 @@ ${disclaimer}
 
 ${author}`;
 
+const article1052Paragraph1Heading =
+  '### Article 1052 paragraph 1: ten grounds';
+const staleArticle1052TranslationInstruction =
+  'Civil Code Article 1052 paragraph 1 lists ten specific grounds for judicial divorce. Translate them accurately; do not expand or shrink a statutory term into a broader colloquial ground.';
+const article1052Paragraph1ReaderSentence =
+  'Civil Code Article 1052 paragraph 1 sets out ten grounds on which a spouse may petition for judicial divorce when any of the following applies to the other spouse:';
+const frozenSection4OutsideArticle1052IntroSha256 =
+  '8da1e5106649d305bd65795acaf2e17107673964de900c66f748c53bc8660219';
+const frozenSection5OnwardSha256 =
+  '62b854f3c28768bd9d2954970b4b2c4bdee1df78100330f314065bea845a0fe8';
 const frozenVisibleWordCount = 4_808;
 const frozenSourceSha256 =
-  '1794e0ac8bf497e275dff93679a37773d34aeb4e7ccf5f22f3558757936122d5';
+  'e45c7a7d4662ba73d00b0f69ff0b6cac2229ee411ab807c0806297b92f92a26e';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
+}
+
+function sha256(value: string) {
+  return crypto.createHash('sha256').update(value).digest('hex');
 }
 
 function firstParagraphAfter(content: string, heading: string) {
@@ -281,8 +295,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       {
         number: 11,
         heading: headings[3],
-        phrase:
-          'Civil Code Article 1052 paragraph 1 lists ten specific grounds for judicial divorce.',
+        phrase: article1052Paragraph1ReaderSentence,
       },
       { number: 12, heading: headings[3], phrase: faq3Answer },
       {
@@ -475,6 +488,39 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+  });
+
+  it('presents the Article 1052 paragraph 1 rule to readers without exposing a translation instruction or changing later text', () => {
+    const section = sectionBody(parsed.content, headings[3]);
+    const introMarker = `${article1052Paragraph1Heading}\n\n`;
+    const introStart = section.indexOf(introMarker) + introMarker.length;
+    const listStart = section.indexOf('\n\n1. **Bigamy.**', introStart);
+    const section5Start = parsed.content.indexOf(`## ${headings[4]}`);
+    const section4OutsideIntro =
+      section.slice(0, introStart) +
+      '<ARTICLE_1052_PARAGRAPH_1_READER_SENTENCE>' +
+      section.slice(listStart);
+
+    expect(introStart).toBeGreaterThan(introMarker.length - 1);
+    expect(listStart).toBeGreaterThan(introStart);
+    expect(firstParagraphAfter(parsed.content, article1052Paragraph1Heading)).toBe(
+      article1052Paragraph1ReaderSentence,
+    );
+    expect(
+      firstParagraphAfter(post?.content ?? '', article1052Paragraph1Heading),
+    ).toBe(article1052Paragraph1ReaderSentence);
+    expect(section).toContain(
+      `${article1052Paragraph1Heading}\n\n${article1052Paragraph1ReaderSentence}\n\n1. **Bigamy.**`,
+    );
+    expect(countOccurrences(raw, article1052Paragraph1ReaderSentence)).toBe(1);
+    expect(raw).not.toContain(staleArticle1052TranslationInstruction);
+    expect(sha256(section4OutsideIntro)).toBe(
+      frozenSection4OutsideArticle1052IntroSha256,
+    );
+    expect(section5Start).toBeGreaterThan(-1);
+    expect(sha256(parsed.content.slice(section5Start))).toBe(
+      frozenSection5OnwardSha256,
+    );
   });
 
   it('locks foreign-record connecting factors, authentication, translation, and regional verification', () => {
@@ -723,6 +769,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'both the support claim and the property-division claim must be asserted within **5 years**',
       'within **5 years** from the date of divorce',
       'the “party at fault” (the party responsible for the breakdown of the marriage) or',
+      staleArticle1052TranslationInstruction,
       'the adulterous party cannot file a divorce lawsuit',
       'the constitutional judgment itself repealed the proviso',
       'first file a missing-person report with the police',

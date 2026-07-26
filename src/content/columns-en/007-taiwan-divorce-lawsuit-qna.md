@@ -86,7 +86,7 @@ No. When a court orders a party or legal representative to appear in person and 
 
 Family matters governed by the Family Act ordinarily proceed through court mediation before adjudication. Even a matter filed directly for adjudication may be deemed an application for mediation under the Act. Because there are exceptions involving the method of service or the nature of the matter, as well as rules governing transitions between procedures, however, not every case can be described as following a single immutable sequence. Mediation may address not only the parties’ intention to divorce but also related issues involving property, children, and the manner of payment, but the court may not confirm, without modification, an agreement that is detrimental to a minor child.
 
-**Court mediation or settlement,** once established, produces a binding result that can end the marriage without a contested judgment on the merits of a judicial-divorce ground. **Litigation** continues when mediation fails or is unavailable as the Act provides, and ends in a judgment that becomes effective according to service, finality, and the procedural rules applicable to that decision.
+**Court mediation or settlement,** once established, terminates the marriage in the manner prescribed by law and has the same effect as a final and binding judgment. **Litigation** may continue under the applicable procedure if mediation is unsuccessful; for a divorce by judgment, what matters is that the judgment becomes final and binding.
 
 Expected duration depends on the issues joined, service, evidence, interim applications, and court workload. No fixed timetable should be treated as a legal promise.
 

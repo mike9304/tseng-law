@@ -139,21 +139,23 @@ const mediationIntroParagraph =
   'Family matters governed by the Family Act ordinarily proceed through court mediation before adjudication. Even a matter filed directly for adjudication may be deemed an application for mediation under the Act. Because there are exceptions involving the method of service or the nature of the matter, as well as rules governing transitions between procedures, however, not every case can be described as following a single immutable sequence. Mediation may address not only the parties’ intention to divorce but also related issues involving property, children, and the manner of payment, but the court may not confirm, without modification, an agreement that is detrimental to a minor child.';
 const courtMediationOutcomeParagraphMarker =
   '**Court mediation or settlement,**';
+const courtMediationOutcomeParagraph =
+  '**Court mediation or settlement,** once established, terminates the marriage in the manner prescribed by law and has the same effect as a final and binding judgment. **Litigation** may continue under the applicable procedure if mediation is unsuccessful; for a divorce by judgment, what matters is that the judgment becomes final and binding.';
 const frozenBeforeFilingDocumentsSha256 =
   '07e7dcdcbd12687fd57000836158cac2cf8c9ed2e20a50f5c47b46f18b325d74';
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  'dbdf0d011b1306d089e94f79667c24c9e49c4a36326aff00dfe76508322e68bf';
+  '11d6a1104b72c41dba2d49603bec143f75fa33e7b5fd14496eff1081cf36b4c9';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '8da1e5106649d305bd65795acaf2e17107673964de900c66f748c53bc8660219';
 const frozenSection5OnwardSha256 =
   '62b854f3c28768bd9d2954970b4b2c4bdee1df78100330f314065bea845a0fe8';
 const frozenSection1OnwardSha256 =
-  '5c974075502f2c8c9b325dd359a1996570f46e2c1033ef3065d7d8d7bd74ddad';
-const frozenVisibleWordCount = 5_051;
+  '6b78c840bd8dae24a3a50e807556f745abc5cd0f9fdf201e2a1798fce6afe954';
+const frozenVisibleWordCount = 5_045;
 const frozenSourceSha256 =
-  '3fbd8489d2015a22a9f90956c5f8d2f7326db8f0d22616b8d83a7d2f69a2718f';
+  'ddb60a501361e464c2b5dd6878481cd60293c287f641af5adfd4ae5205e28424';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -562,6 +564,21 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     );
     expect(courtOutcomeStart).toBeGreaterThan(paragraphStart);
     expect(paragraph).toBe(mediationIntroParagraph);
+  });
+
+  it('restores the three legal effects of established mediation or settlement before the duration guidance', () => {
+    const courtOutcomeStart = parsed.content.indexOf(
+      courtMediationOutcomeParagraphMarker,
+    );
+    const durationStart = parsed.content.indexOf(
+      '\n\nExpected duration',
+      courtOutcomeStart,
+    );
+    const paragraph = parsed.content.slice(courtOutcomeStart, durationStart);
+
+    expect(courtOutcomeStart).toBeGreaterThan(-1);
+    expect(durationStart).toBeGreaterThan(courtOutcomeStart);
+    expect(paragraph).toBe(courtMediationOutcomeParagraph);
   });
 
   it('locks Family Act Article 13 and the type-specific effects and review routes', () => {

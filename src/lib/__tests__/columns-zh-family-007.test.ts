@@ -25,8 +25,11 @@ const faq1Answer =
   '依民法第1050條，兩願離婚須以書面為之，並有二人以上證人於親見或親聞雙方確有離婚真意後簽名，且向戶政機關辦理離婚登記，始生效力。僅簽署協議書並不使離婚完成；如有涉外因素，尚須另行確認準據法、文書認證與翻譯，以及在其他國家或地區之申報等事宜。';
 const faq2Answer =
   '並非必然如此。法院處理家事事件時，得命當事人或法定代理人本人到場，或依事件之性質以適當方法命其陳述或訊問；無正當理由而不從到場命令者，依家事事件法第13條準用民事訴訟法第303條，得處新臺幣三萬元以下罰鍰，但不得拘提。惟是否必須於同一空間共同調解，以及分離、安全、代理或其他程序上措施是否可行，仍應依法院及個案情形確認。';
+const nonKoreanFaq3Addition = '該但書限制原則上合憲；但';
+const faq3ConstitutionalHolding =
+  '惟憲法法庭112年憲判字第4號認為，未考量該重大事由是否已發生或持續相當期間，即完全剝奪唯一有責配偶之離婚機會，致個案顯然過苛者，於此範圍內違憲。';
 const faq3Answer =
-  '現行民法第1052條第2項規定，有前項以外之重大事由，難以維持婚姻者，夫妻之一方得請求離婚；其但書規定，該事由應由夫妻之一方負責者，僅他方得請求離婚。惟憲法法庭112年憲判字第4號認為，該但書限制原則上合憲；但未考量該重大事由是否已發生或持續相當期間，即完全剝奪唯一有責配偶之離婚機會，致個案顯然苛刻之範圍違憲。條文本身仍在，故不得一概謂有責配偶絕對可以或絕對不可以請求，而應視法院如何適用該判決意旨及具體事實。';
+  `現行民法第1052條第2項規定，有前項以外之重大事由，難以維持婚姻者，夫妻之一方得請求離婚；其但書規定，該事由應由夫妻之一方負責者，僅他方得請求離婚。${faq3ConstitutionalHolding}條文本身仍在，故不得一概謂有責配偶絕對可以或絕對不可以請求，而應視法院如何適用該判決意旨及具體事實。`;
 const faq4Answer =
   '並非如此。房屋登記名義與購屋資金來源雖屬重要證據，但所有權、贈與、借名登記、借貸、不當得利等個別請求，與民法第1030條之1之剩餘財產差額分配，係不同問題。應分別檢視實際合意、取得原因與時點、資金流向、債務、是否無償取得及相關證據；僅以婚前資金支付部分價款，或以一方名義登記，尚不能決定全部結論。';
 const faq5Answer =
@@ -102,9 +105,13 @@ const exactEnding = `- ${internalLinks[2]}
 ${disclaimer}
 
 ${author}`;
-const frozenVisibleHanCount = 7_626;
+const frozenVisibleHanCount = 7_618;
 const frozenSourceSha256 =
-  '5d072acbac3b69438c1eec95c787bd67b242ff37eea0b9b66e067014a36f2590';
+  '2c25cbefb1d142c251e8d8ab2e9f3d8bb4e5ab2031686deb29c66a1777af10c7';
+const frozenSection4TailSha256 =
+  '8ee0167ad37fab5ebd5ddcb6544a551c6caf65d7a34547f0f717075631d85fe9';
+const frozenSection5OnwardSha256 =
+  'c42b10349dc383aa60d566d60b1bc288b65dd304b460f37956f27bbbf74fae74';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -211,6 +218,24 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       expect(firstParagraphAfter(post?.content ?? '', heading)).toBe(answer);
       expect(countOccurrences(raw, answer)).toBe(2);
     }
+  });
+
+  it('keeps only the Korean-source constitutional holding in both FAQ3 copies and freezes everything after the section 4 lead', () => {
+    const section4 = sectionBody(parsed.content, headings[3]);
+    const section4Blocks = section4.split('\n\n');
+    const section4Tail = section4Blocks.slice(2).join('\n\n');
+    const section5Start = parsed.content.indexOf(`## ${headings[4]}`);
+    const section5Onward = parsed.content.slice(section5Start);
+
+    expect(countOccurrences(raw, nonKoreanFaq3Addition)).toBe(0);
+    expect(countOccurrences(raw, faq3ConstitutionalHolding)).toBe(2);
+    expect(section4Blocks[1]).toBe(faq3Answer);
+    expect(
+      crypto.createHash('sha256').update(section4Tail).digest('hex'),
+    ).toBe(frozenSection4TailSha256);
+    expect(
+      crypto.createHash('sha256').update(section5Onward).digest('hex'),
+    ).toBe(frozenSection5OnwardSha256);
   });
 
   it('locks one exact substantive proposition in its assigned section for all twenty-five legacy topics', () => {
@@ -432,7 +457,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       '生死不明已逾三年之第1項事由、惡意遺棄在繼續狀態中之第1項事由，以及其他重大事由致難以維持婚姻之第2項事由，彼此不同。',
       '亦無「必須先請求履行同居義務，始得主張惡意遺棄或其他重大事由」之普遍要件。',
       '即便該事實存在，亦不能一併決定裁判離婚、第1056條損害賠償、剩餘財產差額分配、第1057條離婚後贍養費，或未成年子女權利義務之行使負擔與扶養費之結論。',
-      '該但書限制原則上合憲',
+      faq3ConstitutionalHolding,
     ];
 
     let previousIndex = -1;

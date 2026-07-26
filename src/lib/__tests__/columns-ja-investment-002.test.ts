@@ -88,7 +88,7 @@ describe('Japanese investment column 002 — company exit and capital return', (
       'このほかに民事上、刑事上または税務上の問題が生じるかどうかは、資金移動の目的、権限、証憑、会計処理、会社と株主との関係等の具体的な事実により異なります。',
     );
     expect(post?.content).toContain(
-      '会社の資産は会社に帰属し、株主個人の財産ではないという点です。',
+      '会社財産は会社に帰属し、株主の個人財産ではありません。',
     );
   });
 

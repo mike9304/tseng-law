@@ -191,16 +191,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '231da7656032ec96c50f342d9443761a6cdb7f897d8fbf14770cdfba3e0cef85';
+  'da70c1e6a7fa8384fb7641e3f85e6b37226215b6235b619a4854bd84114656ac';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '009230f2ffc5e1676e0e6805f47be0e7d1e1c65927bd19f5dbb8e6bbefeb9bf9';
+  'a9cc11075b4ce4b2ff0c46c21fd40c215639b03300e5675e474e610d52080d5a';
 const frozenSection1OnwardSha256 =
-  'c791c041380706647cfa640d2d7cfb23a2f265d7e51a5289b5193677f1001621';
-const frozenVisibleWordCount = 5_529;
+  '8a161457eca8eac9e77b47bda044a7fb968ff1e99cddd9e429d4c1d7c5e482ab';
+const frozenVisibleWordCount = 5_528;
 const frozenSourceSha256 =
-  '15260fa1bf85153a0ad498396b87ad97be22c0e141b613c0461f245a7c47ff06';
+  '3f4c2ab2b11a80ff8cc95a2cd7c4c80b77ff62885994933cf07fdb76a6f897de';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1130,6 +1130,22 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     for (const phrase of requiredPhrases) {
       expect(section).toContain(phrase);
     }
+  });
+
+  it('publishes the exact authority-over-residence relocation item without habitual-residence wording', () => {
+    const section = sectionBody(parsed.content, headings[9]);
+    const expectedItem =
+      '1. **Authority over residence and travel.** Who has authority, under agreement or court order, to decide the child’s residence, international travel, and related daily-care arrangements?';
+    const itemStart = section.indexOf('1. **Authority over residence and travel.**');
+    const nextItemStart = section.indexOf(
+      '\n2. **Consent or court order.**',
+      itemStart,
+    );
+
+    expect(itemStart).toBeGreaterThan(-1);
+    expect(nextItemStart).toBeGreaterThan(itemStart);
+    expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
+    expect(section).not.toContain('habitual residence');
   });
 
   it('uses the exact ordered nine-category evidence checklist and privacy prohibitions', () => {

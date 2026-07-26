@@ -247,7 +247,7 @@ Preserve, at a minimum, the current order or agreement, attempted-contact record
 
 Cross-border relocation with a minor child is not decided by Korean living costs, a single nationality, or a treaty label alone. Separate the following questions and answer each on the facts and the law of every relevant jurisdiction.
 
-1. **Authority over residence and travel.** Who has authority, under agreement or court order, to decide the child’s habitual residence, international travel, and related daily-care arrangements?
+1. **Authority over residence and travel.** Who has authority, under agreement or court order, to decide the child’s residence, international travel, and related daily-care arrangements?
 2. **Consent or court order.** Does the other parent consent, or is a court determination required before relocation or retention abroad?
 3. **Best interests and continuing contact.** How would relocation affect continuity, safety, schooling, health care, and ongoing contact or visitation with the other parent?
 4. **Passports, entry, exit, immigration, and registration.** What passport, visa, entry, exit, immigration, household-registration, or school-registration steps apply in each place?

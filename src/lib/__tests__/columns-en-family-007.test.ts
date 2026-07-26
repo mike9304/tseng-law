@@ -191,16 +191,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  'b3ad0f88a48fb522b7719893dd03c768b99512c187f70a48b898786a99df9110';
+  '45cf5d3349c8743ab8297119de69f60b122ee29278895b1f15f7d290722c4c7a';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '66f8b3c9f7ef456cfca5daae82d082741867ff3c3916e5cac57662f65d88e14f';
+  'a5fe637ea7f1928be4b97c0dbb1f5b47ef98a046f30d8e0f16e61de2485babaa';
 const frozenSection1OnwardSha256 =
-  'fdabd58efab2bc398631c185e3c1ba0397a2e31a4436fc2cb2f7b3c76988ed7d';
+  '4c902bde4202abfcd8646d63eac334cfae8bb4e905d401de7bf8016a9edf8f8e';
 const frozenVisibleWordCount = 5_609;
 const frozenSourceSha256 =
-  '50574e8e74156ff52d7ae2dcf155420e940057414a5b69918216526980461471';
+  '0a1d7933c357e223a570f5d742921d5e87fdee0db3c688c2ad5044f981013929';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1207,6 +1207,27 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     );
   });
 
+  it('publishes the exact divorce instruments and court papers evidence item', () => {
+    const section = sectionBody(parsed.content, headings[10]);
+    const expectedItem =
+      '2. **Divorce instruments and court papers.** Collect and organize by procedure any written mutual-consent divorce agreement; documentation of how the witnesses confirmed the spouses’ genuine intent to divorce; court papers; records of service; mediation and settlement records; judgments; and documents proving finality.';
+    const itemStart = section.indexOf(
+      '2. **Divorce instruments and court papers.**',
+    );
+    const nextItemStart = section.indexOf(
+      '\n3. **Foreign marriage or divorce records.**',
+      itemStart,
+    );
+
+    expect(itemStart).toBeGreaterThan(-1);
+    expect(nextItemStart).toBeGreaterThan(itemStart);
+    expect(section.slice(itemStart, nextItemStart)).toBe(expectedItem);
+    expect(countOccurrences(section, expectedItem)).toBe(1);
+    expect(section).not.toContain(
+      'Keep originals or certified copies and note how and when each instrument was served or became final.',
+    );
+  });
+
   it('publishes the exact limited-disclosure privacy plan as evidence item nine', () => {
     const section = sectionBody(parsed.content, headings[10]);
     const expectedItem =
@@ -1245,7 +1266,10 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       previousIndex = index;
     }
     expect(section).toContain(
-      'Keep originals or certified copies and note how and when each instrument was served or became final.',
+      'documentation of how the witnesses confirmed the spouses’ genuine intent to divorce',
+    );
+    expect(section).toContain(
+      'Collect and organize by procedure',
     );
     expect(section).toContain(
       'Documents from mainland China, Hong Kong, and Macao follow distinct verification tracks',

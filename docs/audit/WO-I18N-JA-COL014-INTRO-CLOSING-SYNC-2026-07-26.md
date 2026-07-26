@@ -116,10 +116,11 @@ derived from the edited result.
 4. Assert that the mutable slice is exactly `P1\n\n`, with exactly one
    non-empty Japanese prose paragraph and no Markdown block element.
 5. Assert all required semantic points independently with bounded Japanese
-   literals or explicit alternatives: different applicable provisions,
-   different required evidence, clause validity, effective timing of the
-   resignation notice, return responsibility for advance-type benefits or
-   training costs, and actual occurrence of separate damage.
+   literals or explicit alternatives: all four issues appearing in the same
+   contract, different applicable provisions, different required evidence,
+   the need to assess each issue separately, clause validity, effective
+   timing of the resignation notice, return responsibility for advance-type
+   benefits or training costs, and actual occurrence of separate damage.
 6. Reject additions prohibited above, Hangul, U+200B, U+FEFF, U+00A0, CRLF
    or carriage return, trailing whitespace, and invisible-only content
    within the mutable slice.

@@ -100,6 +100,8 @@ const internalLinks = [
   '[聯絡諮詢](/zh-hant/contact)',
 ];
 const disclaimer =
+  '本文係供教育用途，旨在一般性說明台灣的離婚、涉外家事、夫妻財產及未成年子女制度，並非針對個別案件的法律意見。管轄、準據法、外國裁判之承認、婚姻與戶籍狀態、財產制、關於子女之既有協議或裁判、事實關係與證據，以及最新官方規定，均可能使程序與結果有所不同。登記、救濟、請求及執行期限，均應於採取行動前，以各項權利與程序的確切起算事由為準，逐一確認。';
+const staleDisclaimer =
   '本文僅供一般法律資訊參考，不構成個案法律意見。管轄、準據法、外國裁判或身分行為之承認、具體事實、證據、既有協議或裁判及最新官方規定，均可能影響結論；採取行動前，應依正確起算事由個別計算申請、救濟、時效與執行期間。';
 const author = '**曾雋崴律師（Wei Tseng）**';
 const exactEnding = `- ${internalLinks[2]}
@@ -107,22 +109,22 @@ const exactEnding = `- ${internalLinks[2]}
 ${disclaimer}
 
 ${author}`;
-const frozenVisibleHanCount = 7_590;
+const frozenVisibleHanCount = 7_648;
 const frozenSourceSha256 =
-  'df75064fa6b8bbc4a71bcb01b3d307f1353d21c6a110bcdffba35ee06c50c9dc';
+  '41b0c449c4600c3768a44251b2059df8fbb5cec1be7056f0aba585af82c3d51d';
 const frozenSection4TailSha256 =
   '8ee0167ad37fab5ebd5ddcb6544a551c6caf65d7a34547f0f717075631d85fe9';
 const frozenSection5OnwardSha256 =
-  '9a6f66b4911d312159b58a78a4eb12ca826f33753b7124391151d807f1c9d3e9';
+  '08a4ce24c163cb15933f74ef9158ef5775dee5cefcebd6cc8835c99f0a9ca39c';
 const frozenSection8AgreementPrefixLength = 16_859;
 const frozenSection8AgreementPrefixSha256 =
   '7a023591f9193b38c40f3da51d43fd6b365ae9aa48e6e1fe3f0a08c1ba383d1a';
 const frozenSection8AgreementTailLength = 1_043;
 const frozenSection8AgreementTailSha256 =
   'eac23054c07aed295e4d21a8a81852629a16d2100a24a0200ad4af9446e42668';
-const frozenSection9OnwardLength = 7_954;
+const frozenSection9OnwardLength = 8_149;
 const frozenSection9OnwardSha256 =
-  '79b6ab26499a38401a6c9e7bc9221f0c9259e87ff39507c27656ccd0b2d71e17';
+  '9eecfa71bd9f2504ddeeb92dd584a60880c5ce822b4b360b9c41144abd21a326';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -162,7 +164,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: '2025年9月13日',
-      read_time: '19分鐘閱讀',
+      read_time: '20分鐘閱讀',
       categories: ['台灣法律資訊'],
       featured_image: featuredImage,
       faq,
@@ -173,7 +175,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       title,
       date: '2026-07-25',
       dateDisplay: '2025年9月13日',
-      readTime: '19分鐘閱讀',
+      readTime: '20分鐘閱讀',
       category: 'legal',
       categoryLabel: '法律資訊',
       featuredImage:
@@ -689,9 +691,10 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
   it('ends with the exact disclaimer and author and nothing else', () => {
     expect(raw.trimEnd().endsWith(exactEnding)).toBe(true);
     expect(raw.trimEnd()).toMatch(
-      /執行期間。\n\n\*\*曾雋崴律師（Wei Tseng）\*\*$/,
+      /逐一確認。\n\n\*\*曾雋崴律師（Wei Tseng）\*\*$/,
     );
     expect(countOccurrences(raw, disclaimer)).toBe(1);
+    expect(countOccurrences(raw, staleDisclaimer)).toBe(0);
     expect(countOccurrences(raw, author)).toBe(1);
   });
 
@@ -706,7 +709,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       .digest('hex');
 
     expect(visibleHanCount).toBe(frozenVisibleHanCount);
-    expect(calculatedMinutes).toBe(19);
+    expect(calculatedMinutes).toBe(20);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(sourceSha256).toBe(frozenSourceSha256);

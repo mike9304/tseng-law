@@ -3,7 +3,7 @@ title: "台灣離婚程序 Q&A：調解、訴訟、財產分配與子女"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
 lastmod: "2026-07-25"
 date_display: "2025年9月13日"
-read_time: "19分鐘閱讀"
+read_time: "20分鐘閱讀"
 categories:
   - "台灣法律資訊"
 featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
@@ -192,6 +192,6 @@ faq:
 - [台灣訴訟律師指南](/zh-hant/taiwan-litigation-lawyer)
 - [聯絡諮詢](/zh-hant/contact)
 
-本文僅供一般法律資訊參考，不構成個案法律意見。管轄、準據法、外國裁判或身分行為之承認、具體事實、證據、既有協議或裁判及最新官方規定，均可能影響結論；採取行動前，應依正確起算事由個別計算申請、救濟、時效與執行期間。
+本文係供教育用途，旨在一般性說明台灣的離婚、涉外家事、夫妻財產及未成年子女制度，並非針對個別案件的法律意見。管轄、準據法、外國裁判之承認、婚姻與戶籍狀態、財產制、關於子女之既有協議或裁判、事實關係與證據，以及最新官方規定，均可能使程序與結果有所不同。登記、救濟、請求及執行期限，均應於採取行動前，以各項權利與程序的確切起算事由為準，逐一確認。
 
 **曾雋崴律師（Wei Tseng）**

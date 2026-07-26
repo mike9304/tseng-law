@@ -186,21 +186,23 @@ const courtMediationOutcomeParagraph =
   '**Court mediation or settlement,** once established, terminates the marriage in the manner prescribed by law and has the same effect as a final and binding judgment. **Litigation** may continue under the applicable procedure if mediation is unsuccessful; for a divorce by judgment, what matters is that the judgment becomes final and binding.';
 const expectedDurationParagraph =
   'The time required to resolve a case varies depending on service of process, the number of mediation sessions, the facts and evidence in dispute, any appraisals or investigations, child-related issues, international service, and how many levels of court proceedings are involved, so no fixed completion date can be given.';
+const evidenceProhibitionsParagraph =
+  'Do not use unlawful surveillance, unauthorized access to accounts, intrusion into a mobile phone or computer, location tracking, recordings made in violation of law, or disclosure of a child’s private information as methods of gathering evidence. Retaliation against the other party, concealment or sham transfer of assets, and moving a child contrary to an agreement or court order may also create additional risks for the case and the child. If it is unclear whether material may lawfully be obtained or how it should be preserved, check the applicable law and court procedures before collecting it.';
 const frozenBeforeFilingDocumentsSha256 =
   '07e7dcdcbd12687fd57000836158cac2cf8c9ed2e20a50f5c47b46f18b325d74';
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '234468fdc2360e64aaca1385a5db2e3c50f85e5162793145d6681434786d9b77';
+  '8bc004de5b86ab0db4fa7ced7b27b4d413e65b0eaa8bbd12842b64302be8a261';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '1af945c89050878623bd058361d9c69cf90df29bdabe80073fe69b4e2f85493a';
+  'cbce15d15ff9b0e2fd88b8c6f5fa5c96a690e9e453f96b0c516181986f253e90';
 const frozenSection1OnwardSha256 =
-  'fdb20fafe27fb73c589384e87f20a770ae6c468d50083db79ecd50bf50b1bacc';
-const frozenVisibleWordCount = 5_662;
+  '4edc305099fb11091e671d57a7b20f880881404eb4115680a8cfbdd32015590f';
+const frozenVisibleWordCount = 5_719;
 const frozenSourceSha256 =
-  '51112a5fa5c92b0c2330be4e6ca4c12655eca1017cb24fb61327df9fdfc4e45f';
+  '6687cdfbde58599fbdc9c66a5a2a88bb7d0130d0dd88682bd3ea79ed97f26d40';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1369,7 +1371,10 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     const itemStart = section.indexOf(
       '9. **Privacy plan and limited disclosure.**',
     );
-    const prohibitionsStart = section.indexOf('\n\nDo not engage', itemStart);
+    const prohibitionsStart = section.indexOf(
+      `\n\n${evidenceProhibitionsParagraph}`,
+      itemStart,
+    );
 
     expect(itemStart).toBeGreaterThan(-1);
     expect(prohibitionsStart).toBeGreaterThan(itemStart);
@@ -1377,6 +1382,21 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(countOccurrences(section, expectedItem)).toBe(1);
     expect(section).not.toContain('preserve fragile evidence promptly');
     expect(section).not.toContain('notarial or other formal preservation');
+  });
+
+  it('publishes the exact evidence-gathering prohibitions paragraph', () => {
+    const section = sectionBody(parsed.content, headings[10]);
+    const paragraphStart = section.indexOf(evidenceProhibitionsParagraph);
+
+    expect(paragraphStart).toBeGreaterThan(-1);
+    expect(section.slice(paragraphStart).trim()).toBe(
+      evidenceProhibitionsParagraph,
+    );
+    expect(countOccurrences(section, evidenceProhibitionsParagraph)).toBe(1);
+    expect(section).not.toContain('Do not engage in unlawful surveillance');
+    expect(section).not.toContain(
+      'Those acts may create separate liability and undermine legitimate claims.',
+    );
   });
 
   it('uses the exact ordered nine-category evidence checklist and privacy prohibitions', () => {
@@ -1448,9 +1468,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(section).toContain(
       'Do not conflate the dates on which a judgment is rendered, served, or becomes final; a mediated agreement or settlement is reached; the holder of a right becomes aware of it; or the matrimonial property regime terminates.',
     );
-    expect(section).toContain(
-      'Do not engage in unlawful surveillance, unauthorized account or device access, tracking, unlawful recording, retaliation, asset concealment, or removal of a child contrary to an agreement or court order.',
-    );
+    expect(section).toContain(evidenceProhibitionsParagraph);
   });
 
   it('uses exactly the ten official and three English internal body links once and in order', () => {

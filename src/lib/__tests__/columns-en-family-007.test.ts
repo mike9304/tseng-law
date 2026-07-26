@@ -131,10 +131,12 @@ const courtResultsSubsectionHeading =
   '### Court results and Household Registration Act Articles 48 and 48-2';
 const courtResultsFirstParagraph =
   'When a Taiwan divorce judgment becomes final or court mediation or settlement ends the marriage, either party may, in principle, apply for divorce registration with the household-registration authority. Registration of the court result is governed by the Household Registration Act rather than Article 1050’s constitutive sequence for mutual-consent divorce.';
+const courtResultsOnlineParagraph =
+  'Online filing is available only within the statutory application period. The thirty-day period is the general deadline for registering the court result, not a deadline exclusive to online filing.';
 const frozenBeforeFilingDocumentsSha256 =
   '07e7dcdcbd12687fd57000836158cac2cf8c9ed2e20a50f5c47b46f18b325d74';
 const frozenCourtResultsSubsectionSha256 =
-  '57a46fe6c1e4aaa72b0690a97575ef79779125ecf483a7ecc4912bc1003a7559';
+  'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
   '4a5a9a946af97bc0d5836ec787f5a69405b865a942b41d2eb6207d1f432c1d84';
 const frozenSection4OutsideArticle1052IntroSha256 =
@@ -142,10 +144,10 @@ const frozenSection4OutsideArticle1052IntroSha256 =
 const frozenSection5OnwardSha256 =
   '62b854f3c28768bd9d2954970b4b2c4bdee1df78100330f314065bea845a0fe8';
 const frozenSection1OnwardSha256 =
-  '54139ed595523142e0aca225eb50f9a0b3fa2eb24074cf55e8e34ed49480f970';
-const frozenVisibleWordCount = 4_994;
+  '21ad7d2ec4580a94c5b58a188aae654fcbfc14d2abd170262fce0c4940bbb97a';
+const frozenVisibleWordCount = 4_983;
 const frozenSourceSha256 =
-  '612af0b0fbba84c149ea309234a0f808d299805d94f3f6324b709edb5be55293';
+  '15d8435a16fe4358520ebe9f981e35bd978c4fbc2614534d6eb5a6c24873fac7';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -465,9 +467,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'Lateness does not undo an already effective court divorce.',
       'the household-registration office registers the result directly under Article 48-2.',
       'If no party applies after written demand, and the statutory conditions are met, the household-registration office registers the result directly under Article 48-2.',
-      'Online filing is only a channel.',
-      'Any online-channel period is not the general validity rule for the divorce itself',
-      'missing an online window does not reverse an effective divorce established by final judgment or by court mediation or settlement.',
+      courtResultsOnlineParagraph,
     ];
 
     for (const phrase of requiredPhrases) {
@@ -512,6 +512,29 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(
       firstParagraphAfter(parsed.content, courtResultsSubsectionHeading),
     ).toBe(courtResultsFirstParagraph);
+  });
+
+  it('preserves the statutory online window without turning thirty days into an online-only deadline', () => {
+    const courtResultsStart = parsed.content.indexOf(
+      courtResultsSubsectionHeading,
+    );
+    const section3Start = parsed.content.indexOf(`## ${headings[2]}`);
+    const courtResultsSubsection = parsed.content.slice(
+      courtResultsStart,
+      section3Start,
+    );
+    const onlineParagraph =
+      courtResultsSubsection.trimEnd().split('\n\n').at(-1) ?? '';
+
+    expect(courtResultsStart).toBeGreaterThan(-1);
+    expect(section3Start).toBeGreaterThan(courtResultsStart);
+    expect(
+      firstParagraphAfter(parsed.content, courtResultsSubsectionHeading),
+    ).toBe(courtResultsFirstParagraph);
+    expect(sha256(courtResultsSubsection)).toBe(
+      frozenCourtResultsSubsectionSha256,
+    );
+    expect(onlineParagraph).toBe(courtResultsOnlineParagraph);
   });
 
   it('locks Family Act Article 13 and the type-specific effects and review routes', () => {

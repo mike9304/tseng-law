@@ -76,7 +76,7 @@ Under Household Registration Act Article 48, the general application period for 
 
 A late application must still be accepted. Lateness does not undo an already effective court divorce. If no party applies after written demand, and the statutory conditions are met, the household-registration office registers the result directly under Article 48-2.
 
-Online filing is only a channel. Any online-channel period is not the general validity rule for the divorce itself, and missing an online window does not reverse an effective divorce established by final judgment or by court mediation or settlement.
+Online filing is available only within the statutory application period. The thirty-day period is the general deadline for registering the court result, not a deadline exclusive to online filing.
 
 ## 3. Court Mediation, Litigation, Appearance, and Review
 

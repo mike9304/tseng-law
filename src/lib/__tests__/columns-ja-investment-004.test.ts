@@ -129,7 +129,7 @@ const incentiveParagraph =
 const treatyParagraph =
   '台湾・韓国所得税協定は2023年12月27日に発効し、2024年1月1日から適用されています。配当、利子および使用料の上限税率は10％です。事業利得は、相手方の地域に協定上の恒久的施設（PE）がある場合等を除き、原則として居住地側で課税されます。PEには、管理場所・支店・事務所等の固定的施設、6か月を超える工事、いずれかの12か月間に合計183日を超える役務提供、契約締結権限を反復して行使する代理人等が含まれ得ます。台湾支店は通常、台湾の固定的施設に当たるため、支店の台湾事業利得が当然に免税になるわけではありません。';
 const section7Heading = '## 7. どちらを選ぶか';
-const authorSignoff = '以上、台湾弁護士の曾雋崴でした。';
+const officialSourcesHeading = '## 公式資料';
 const section7OverviewParagraph =
   '子会社と支店のいずれか一方が、すべての台湾進出において優れているわけではありません。独立した台湾法人と現地の株主構成が必要な事業であれば子会社が適している場合があり、外国会社が台湾での営業を直接行いながら本店の統制を維持しようとする事業であれば支店形態が適している場合があります。ただし、設立が可能であるという判断と、営業・税務・撤退まで考慮したときに効率的な組織形態であるかという判断は、区別しなければなりません。';
 const section7ComparisonPromptParagraph =
@@ -172,11 +172,33 @@ const section7ProseParagraphs = [
 
 const extractSection7 = (text: string): string => {
   const start = text.indexOf(section7Heading);
-  const end = text.indexOf(authorSignoff);
+  const end = text.indexOf(officialSourcesHeading);
   expect(start).toBeGreaterThanOrEqual(0);
   expect(end).toBeGreaterThan(start);
   return text.slice(start, end);
 };
+
+const relatedGuidesHeading = '## 関連案内';
+const officialSourceLinks = [
+  '- [台湾法務部法令情報 — 会社法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)',
+  '- [台湾法務部法令情報 — 営業税法第10条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)',
+  '- [台湾法務部法令情報 — 所得税法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)',
+  '- [台湾財政部 — 国外株主への配当の源泉徴収案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)',
+  '- [台湾財政部 — 外国会社の支店利益に関する解釈](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)',
+  '- [台湾財政部 — 未分配利益の申告除外案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/undistributed-surplus-earnings/om7pAeL)',
+  '- [台湾財政部 — 台湾・韓国所得税協定案内](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=127fffb302f24987b0bbf1eff78ff9c9)',
+  '- [台湾法務部法令情報 — 産業創新条例第10条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10-1&pcode=J0040051)',
+  '- [台湾証券取引所 — 上場基準](https://www.twse.com.tw/zh/listed/method/standars.html)',
+  '- [Invest Taiwan — 外国会社支店の投資・登記手続](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01)',
+];
+const relatedGuideLinks = [
+  '- [台湾投資・会社設立サービス](/ja/services#investment)',
+  '- [台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)',
+  '- [お問い合わせ](/ja/contact)',
+];
+const disclaimerParagraph =
+  '本稿は、台湾子会社と外国会社の支店の一般的な違いを説明するための教育目的の資料であり、個別の事案に対する法律・税務上の助言ではありません。適用される法令および税務処理は、投資家と本店の所在地、事業内容、取引と資金の流れ、協定適用要件ならびに所管官庁の最新の実務によって異なり得るため、設立・投資・契約・配当または送金を実行する前に、最新の公式資料および個別の事情をご確認ください。';
+const authorLine = '**曾雋崴弁護士（Wei Tseng）**';
 
 describe('Japanese investment column 004 — subsidiary versus branch', () => {
   it('publishes the contracted frontmatter and exactly three FAQs', () => {
@@ -325,10 +347,10 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
     }
   });
 
-  it('bounds section 7 to nine prose paragraphs and eight bullets ending at the author sign-off', () => {
+  it('bounds section 7 to nine prose paragraphs and eight bullets ending at the official-sources heading', () => {
     for (const body of [raw, post?.content ?? '']) {
       expect(body).toContain(section7Heading);
-      expect(body).toContain(authorSignoff);
+      expect(body).toContain(officialSourcesHeading);
 
       const section = extractSection7(body);
       const blocks = section
@@ -361,6 +383,46 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
       for (const article of ['第378条', '第379条', '第380条']) {
         expect(section).toContain(article);
       }
+    }
+  });
+
+  it('locks the tail structure of official sources, related guides, disclaimer, and author line', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      const officialStart = body.indexOf(officialSourcesHeading);
+      const relatedStart = body.indexOf(relatedGuidesHeading);
+      expect(officialStart).toBeGreaterThanOrEqual(0);
+      expect(relatedStart).toBeGreaterThan(officialStart);
+
+      const officialSection = body.slice(officialStart, relatedStart);
+      const officialLines = officialSection
+        .split('\n')
+        .map((line) => line.trim())
+        .filter((line) => line.startsWith('- ['));
+      expect(officialLines).toHaveLength(10);
+      expect(officialLines).toEqual(officialSourceLinks);
+
+      const tail = body.slice(relatedStart);
+      const relatedLines = tail
+        .split('\n')
+        .map((line) => line.trim())
+        .filter((line) => line.startsWith('- ['));
+      expect(relatedLines).toHaveLength(3);
+      expect(relatedLines).toEqual(relatedGuideLinks);
+
+      const ruleIndex = tail.indexOf('\n---');
+      expect(ruleIndex).toBeGreaterThanOrEqual(0);
+      const afterRule = tail.slice(ruleIndex);
+      expect(afterRule).toContain(disclaimerParagraph);
+      expect(afterRule).toContain(authorLine);
+      expect(afterRule.indexOf(disclaimerParagraph)).toBeLessThan(
+        afterRule.indexOf(authorLine),
+      );
+
+      for (const link of officialSourceLinks) {
+        const url = link.slice(link.indexOf('(') + 1, link.lastIndexOf(')'));
+        expect(body).toContain(url);
+      }
+      expect(body).not.toContain('/ko/');
     }
   });
 

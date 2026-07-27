@@ -140,11 +140,27 @@ faq:
 
 最終的な選択は、台湾と本店所在地の専門家が同一の事実関係を共有した状態で検討するのが安全です。事業計画、組織図、投資家、締結予定の契約、資金の流れ、人員配置および撤退シナリオを提供すれば、法律・税務・会計・外国為替の論点を互いに関連づけて確認することができます。設立後は、実際の運営が選択した組織形態と乖離していないかを定期的に点検しなければなりません。
 
-以上、台湾弁護士の曾雋崴でした。
+## 公式資料
+
+- [台湾法務部法令情報 — 会社法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
+- [台湾法務部法令情報 — 営業税法第10条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [台湾法務部法令情報 — 所得税法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
+- [台湾財政部 — 国外株主への配当の源泉徴収案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
+- [台湾財政部 — 外国会社の支店利益に関する解釈](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)
+- [台湾財政部 — 未分配利益の申告除外案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/undistributed-surplus-earnings/om7pAeL)
+- [台湾財政部 — 台湾・韓国所得税協定案内](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=127fffb302f24987b0bbf1eff78ff9c9)
+- [台湾法務部法令情報 — 産業創新条例第10条の1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10-1&pcode=J0040051)
+- [台湾証券取引所 — 上場基準](https://www.twse.com.tw/zh/listed/method/standars.html)
+- [Invest Taiwan — 外国会社支店の投資・登記手続](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01)
+
+## 関連案内
+
+- [台湾投資・会社設立サービス](/ja/services#investment)
+- [台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)
+- [お問い合わせ](/ja/contact)
 
 ---
 
-> 関連リンク:
-> - [台湾投資・会社設立サービス](/ja/services#investment)
-> - [台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)
-> - [お問い合わせ](/ja/contact)
+本稿は、台湾子会社と外国会社の支店の一般的な違いを説明するための教育目的の資料であり、個別の事案に対する法律・税務上の助言ではありません。適用される法令および税務処理は、投資家と本店の所在地、事業内容、取引と資金の流れ、協定適用要件ならびに所管官庁の最新の実務によって異なり得るため、設立・投資・契約・配当または送金を実行する前に、最新の公式資料および個別の事情をご確認ください。
+
+**曾雋崴弁護士（Wei Tseng）**

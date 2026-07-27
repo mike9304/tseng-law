@@ -58,6 +58,13 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     expect(raw).not.toContain('申請大法官釋憲');
   });
 
+  it('uses the historical 1980 statute name 殘障福利法', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain('台灣在1980年制定並施行《殘障福利法》時');
+    expect(raw).not.toContain('1980年制定並施行身心障礙者權益保護法');
+  });
+
   it('describes barriers and limited occupational options in one natural sentence', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

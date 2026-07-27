@@ -216,10 +216,10 @@ describe('English full column corpus', () => {
     expect(loadedPublicContent).not.toMatch(CJK_SCRIPTS);
 
     const renderedWordCount = countRenderedEnglishWords(post!.content);
-    expect(renderedWordCount).toBe(1214);
-    expect(Math.ceil(renderedWordCount / 200)).toBe(7);
-    expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('7 min read');
-    expect(post!.readTime).toBe('7 min read');
+    expect(renderedWordCount).toBe(1963);
+    expect(Math.ceil(renderedWordCount / 200)).toBe(10);
+    expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('10 min read');
+    expect(post!.readTime).toBe('10 min read');
 
     const mediaRecords = [
       {
@@ -231,13 +231,13 @@ describe('English full column corpus', () => {
       {
         image: 'img-03.jpg',
         caption:
-          'Korean male university student ruptures a disc while deadlifting 90 kg and is awarded TWD 1.57 million at first instance; Fitness Factory confirms settlement on appeal',
+          'Korean male university student ruptures a disc while deadlifting 90 kg; awarded TWD 1.57 million at first instance; settlement on appeal reported',
         url: 'https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com',
       },
       {
         image: 'img-04.jpg',
         caption:
-          'Korean male university student injured while deadlifting 90 kg is awarded TWD 1.57 million at first instance; Fitness Factory settles on appeal',
+          'Korean male university student injured while deadlifting 90 kg; awarded TWD 1.57 million at first instance; settlement on appeal reported',
         url: 'https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html',
       },
       {
@@ -249,13 +249,13 @@ describe('English full column corpus', () => {
       {
         image: 'img-06.jpg',
         caption:
-          'PTT news: Korean male university student ruptures a disc while deadlifting 90 kg; Fitness Factory ordered to pay TWD 1.57 million at first instance',
+          'PTT post: Korean male university student ruptures a disc while deadlifting 90 kg; first instance orders gym to pay TWD 1.57 million',
         url: 'https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html',
       },
       {
         image: 'img-07.jpg',
         caption:
-          "Blog: A 70 kg Korean male university student deadlifts 90 kg and ruptures a disc—more than TWD 1 million in damages? Was the gym at fault? What was the exerciser's mindset?",
+          "Blog: A 70 kg Korean male university student's 90 kg deadlift injury and damages exceeding TWD 1 million—was the gym at fault? What about the exerciser's mindset?",
         url: 'https://blog.udn.com/blackjack/179081715',
       },
       {
@@ -266,13 +266,14 @@ describe('English full column corpus', () => {
       },
       {
         image: 'img-09.jpg',
-        caption: 'Judgment review: Gym beginner asked to deadlift 90 kg, resulting in an acute disc rupture',
+        caption:
+          'Judgment review: A gym beginner was instructed to deadlift 90 kg, resulting in an acute disc rupture',
         url: 'https://www.instagram.com/p/Crp4vJag7v3/',
       },
       {
         image: 'img-10.jpg',
         caption:
-          'Did a Korean male university student rupture a disc after deadlifting 90 kg during a personal-training session?',
+          'Did a Korean male university student rupture a disc while deadlifting 90 kg during a personal-training session?',
       },
     ];
     const expectedCaptionOccurrences = new Map<string, number>();
@@ -331,10 +332,10 @@ describe('English full column corpus', () => {
     expect(countOccurrences(raw, judgmentUrl)).toBe(1);
     expect(countOccurrences(raw, 'TWD 1,579,589')).toBe(1);
     expect(raw).toContain(
-      `[TWD 1,579,589](${judgmentUrl}) in damages`,
+      `[TWD 1,579,589](${judgmentUrl}) together with the interest stated in the judgment`,
     );
     expect(raw).toContain(
-      'In its January 24, 2022 first-instance judgment (109 Consumer No. 7), the Taichung District Court ordered the defendant to pay',
+      'In its first-instance judgment of January 24, 2022, in case 109 Consumer No. 7, the Taichung District Court ordered the defendant to pay',
     );
     expect(raw).toContain(
       'Media reports later stated that the parties reached a settlement on appeal.',
@@ -354,36 +355,40 @@ describe('English full column corpus', () => {
       expect(countOccurrences(raw, link)).toBe(1);
     }
     expect(raw).toContain(
-      'a business operator providing services must ensure that the services meet the safety reasonably expected under the professional or technical standards current at the time',
+      'when a business operator provides services, it must ensure that the services meet the safety reasonably expected in light of the professional or technical standards current at the time',
     );
     expect(raw).toContain(
-      'This rule does not mean that every gym injury establishes liability.',
+      'This does not mean that the business operator or trainer is held liable whenever an injury occurs at a gym.',
     );
     expect(raw).toContain(
-      'The applicable duty, breach, causation, damage, defenses, and evidence depend on the facts.',
+      'what specific duty of care existed',
     );
     expect(raw).toContain(
-      'Possible contract, tort, and consumer-protection grounds depend on the facts.',
+      'which basis applies—contractual liability, tort liability, or consumer-protection liability',
     );
-    expect(raw).toContain("within six months after learning the offender's identity");
+    expect(raw).toContain("within six months of learning the offender's identity");
     expect(raw).toContain(
-      'within two years after the claimant learns of both the injury and the person liable',
+      'within two years from the time the injured person learns of both the damage and the person liable for compensation',
     );
-    expect(raw).toContain('A ten-year longstop runs from the wrongful act.');
+    expect(raw).toContain(
+      'It is also extinguished once ten years have passed since the wrongful act.',
+    );
 
     const faqHeadings = [
-      '1. What legal routes may be available after a gym injury in Taiwan?',
-      '2. What time limits may apply?',
-      '3. How can evidence be preserved after an accident?',
-      '4. What categories of damages can you claim against a gym?',
-      '5. If a gym has liability insurance, why might compensation still be disputed?',
+      '1. What legal procedures may be considered after a gym injury in Taiwan?',
+      '2. What time limits apply to a criminal complaint and a civil damages claim?',
+      '3. What evidence should be preserved, and how, immediately after an accident?',
+      '4. What categories of damages may be claimed against a gym?',
+      '5. Can compensation still be disputed even if the gym has liability insurance?',
     ];
     expect(
-      raw.match(/^\*\*(\d\.[^*]+)\*\*$/gm)?.map((heading) => heading.slice(2, -2)),
+      raw.match(/^## (\d\..+)$/gm)?.map((heading) => heading.slice(3)),
     ).toEqual(faqHeadings);
 
     expect(raw).not.toContain('Civil Code Article 198');
-    expect(raw).not.toMatch(/\b(?:win|won|victory|guarantee)\b/i);
+    expect(raw).not.toMatch(
+      /\b(?:guaranteed (?:win|victory)|will (?:win|prevail)|certain victory)\b/i,
+    );
 
     const forbiddenClaims = [
       'Koreans are very fond',

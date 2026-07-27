@@ -3,7 +3,7 @@ title: "Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"
-read_time: "7 min read"
+read_time: "10 min read"
 categories:
   - "Case Study Analysis"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
@@ -13,152 +13,103 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 ![Featured image](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
-Hello. I am Attorney Wei Tseng, a Taiwan lawyer.
-
-This article explains a gym-injury damages case involving a Korean university student and a fitness chain operated by a publicly listed company in Taiwan.
+Drawing on a case in which a Korean university student was injured at a gym in Taiwan while being instructed by a trainer, this article explains the legal procedures that may be considered after a gym injury, the applicable time limits, methods of preserving evidence, and the categories of damages that may be claimed.
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Many people use gyms regularly, and exercise-related injuries can occur in Taiwan as elsewhere.
+The accident occurred during a deadlift session led by a trainer at a gym in Taichung. After such an injury, it is not enough to look only at the fact that the accident happened inside a gym. One must also consider the user's exercise experience and health condition, the type of exercise and the weight involved, the explanations and instruction given by the trainer, the movement performed and the response at the time, the causal relationship between the exercise and the injury, and the materials supporting the claimed losses.
 
-Reported incidents have raised questions about supervision, equipment use, emergency response, and trainer-led instruction. Whether a gym operator is legally responsible depends on the facts, the applicable duties, causation, and the evidence.
+I served as litigation counsel for the plaintiff, the Korean student, in this case. In its first-instance judgment of January 24, 2022, in case 109 Consumer No. 7, the Taichung District Court ordered the defendant to pay [TWD 1,579,589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) together with the interest stated in the judgment.
 
-In this matter, a Korean university student was injured while training under an instructor's supervision at a fitness chain operated by a publicly listed company in Taiwan.
+Media reports later stated that the parties reached a settlement on appeal. The official first-instance judgment alone does not disclose the outcome of the appeal or any settlement amount, so those reports should not be presented as the confirmed final outcome of the first-instance ruling.
 
-I represented the student in the damages claim. In its January 24, 2022 first-instance judgment (109 Consumer No. 7), the Taichung District Court ordered the defendant to pay [TWD 1,579,589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) in damages.
-
-Media reports later stated that the parties reached a settlement on appeal. The official first-instance judgment does not state a settlement amount or determine the appellate disposition.
-
-The case received substantial media coverage and online discussion in Taiwan.
-
-**News reports, discussions by netizens on Taiwan’s leading forum PTT, and online columns include the following:**
+The English renderings of the headlines of media reports, online posts, and legal commentary about this case appear below. These headlines are provided to introduce the coverage or posts at each link; this article does not independently establish the facts they describe.
 
 ![Male university student suffers a ruptured disc after deadlifting 90 kg and seeks damages from gym](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
 [Male university student suffers a ruptured disc after deadlifting 90 kg and seeks damages from gym](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
 
-![Korean male university student ruptures a disc while deadlifting 90 kg and is awarded TWD 1.57 million at first instance; Fitness Factory confirms settlement on appeal](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
+![Korean male university student ruptures a disc while deadlifting 90 kg; awarded TWD 1.57 million at first instance; settlement on appeal reported](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
 
-[Korean male university student ruptures a disc while deadlifting 90 kg and is awarded TWD 1.57 million at first instance; Fitness Factory confirms settlement on appeal](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
+[Korean male university student ruptures a disc while deadlifting 90 kg; awarded TWD 1.57 million at first instance; settlement on appeal reported](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
 
-![Korean male university student injured while deadlifting 90 kg is awarded TWD 1.57 million at first instance; Fitness Factory settles on appeal](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
+![Korean male university student injured while deadlifting 90 kg; awarded TWD 1.57 million at first instance; settlement on appeal reported](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
 
-[Korean male university student injured while deadlifting 90 kg is awarded TWD 1.57 million at first instance; Fitness Factory settles on appeal](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
+[Korean male university student injured while deadlifting 90 kg; awarded TWD 1.57 million at first instance; settlement on appeal reported](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
 
 ![Male university student suffers a ruptured disc after deadlifting 90 kg and seeks damages from gym](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
 
 [Male university student suffers a ruptured disc after deadlifting 90 kg and seeks damages from gym](https://news.ebc.net.tw/news/living/362075)
 
-![PTT news: Korean male university student ruptures a disc while deadlifting 90 kg; Fitness Factory ordered to pay TWD 1.57 million at first instance](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![PTT post: Korean male university student ruptures a disc while deadlifting 90 kg; first instance orders gym to pay TWD 1.57 million](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[PTT news: Korean male university student ruptures a disc while deadlifting 90 kg; Fitness Factory ordered to pay TWD 1.57 million at first instance](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[PTT post: Korean male university student ruptures a disc while deadlifting 90 kg; first instance orders gym to pay TWD 1.57 million](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Blog: A 70 kg Korean male university student deadlifts 90 kg and ruptures a disc—more than TWD 1 million in damages? Was the gym at fault? What was the exerciser's mindset?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Blog: A 70 kg Korean male university student's 90 kg deadlift injury and damages exceeding TWD 1 million—was the gym at fault? What about the exerciser's mindset?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Blog: A 70 kg Korean male university student deadlifts 90 kg and ruptures a disc—more than TWD 1 million in damages? Was the gym at fault? What was the exerciser's mindset?](https://blog.udn.com/blackjack/179081715)
+[Blog: A 70 kg Korean male university student's 90 kg deadlift injury and damages exceeding TWD 1 million—was the gym at fault? What about the exerciser's mindset?](https://blog.udn.com/blackjack/179081715)
 
 ![Legal commentary: Male university student ruptures a disc while deadlifting; well-known gym ordered to pay TWD 1.57 million at first instance](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
 [Legal commentary: Male university student ruptures a disc while deadlifting; well-known gym ordered to pay TWD 1.57 million at first instance](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
-![Judgment review: Gym beginner asked to deadlift 90 kg, resulting in an acute disc rupture](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
+![Judgment review: A gym beginner was instructed to deadlift 90 kg, resulting in an acute disc rupture](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
-[Judgment review: Gym beginner asked to deadlift 90 kg, resulting in an acute disc rupture](https://www.instagram.com/p/Crp4vJag7v3/)
+[Judgment review: A gym beginner was instructed to deadlift 90 kg, resulting in an acute disc rupture](https://www.instagram.com/p/Crp4vJag7v3/)
 
-![Did a Korean male university student rupture a disc after deadlifting 90 kg during a personal-training session?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
+![Did a Korean male university student rupture a disc while deadlifting 90 kg during a personal-training session?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Did a Korean male university student rupture a disc after deadlifting 90 kg during a personal-training session?**
+**Did a Korean male university student rupture a disc while deadlifting 90 kg during a personal-training session?**
 
-Because multiple Taiwanese outlets reported the matter, it attracted public attention.
+This case is practically significant because it shows that the mere occurrence of a gym injury does not immediately determine liability. The content of the safety duty borne by the service provider, the specific instructional acts and any breach of the duty of care, the causal relationship between the conduct and the injury, and the scope of the loss are all assessed on the materials of each case. The requirements and time limits of criminal and civil procedures also differ, so records should be organized separately from the outset.
 
-Public discussion focused on two features:
+The following is general information about gym-injury disputes in Taiwan, not legal advice for a particular case. Actual rights and available responses may vary depending on the contractual relationship, the circumstances of the accident, the cause and severity of the injury, the parties' conduct, the insurance policy terms, the evidence secured, and the applicable law.
 
-1. **The case raised practical questions about consumer remedies and the evidence needed to pursue a gym-injury claim.**
-2. **The defendant was a publicly listed company operating a large fitness chain, while the injured customer was a Korean university student.**
+## 1. What legal procedures may be considered after a gym injury in Taiwan?
 
-**​**
+Under [Article 7 of the Taiwan Consumer Protection Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001), when a business operator provides services, it must ensure that the services meet the safety reasonably expected in light of the professional or technical standards current at the time they are provided.
 
-Because of this case, many people injured at gyms have sent me questions.
+This does not mean that the business operator or trainer is held liable whenever an injury occurs at a gym. In each case, one must assess what specific duty of care existed, whether that duty was breached, whether there is a causal relationship between the breach and the injury, whether actual loss occurred, what defenses the other party may raise, and what evidence supports each claim and defense.
 
-Here I will answer several frequently asked questions.
+If the statutory elements of negligent injury are met, a criminal complaint may be considered. A civil claim for damages may also be considered, but which basis applies—contractual liability, tort liability, or consumer-protection liability—and the scope of liability depend on the specific facts. The fact that several procedures may be considered for a single accident does not mean that all of them must be pursued, nor does it guarantee success in any of them.
 
-The following is general information, not legal advice for a particular case.
+## 2. What time limits apply to a criminal complaint and a civil damages claim?
 
-​
+Under [Article 287 of the Taiwan Criminal Code](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001), negligent injury under Article 284 is an offense that may be prosecuted only upon complaint. Under [Article 237 of the Taiwan Code of Criminal Procedure](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001), a person entitled to file a complaint must in principle do so within six months of learning the offender's identity.
 
-**1. What legal routes may be available after a gym injury in Taiwan?**
+Under [Article 197 of the Taiwan Civil Code](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001), a tort claim for damages is, in principle, extinguished if it is not exercised within two years from the time the injured person learns of both the damage and the person liable for compensation. It is also extinguished once ten years have passed since the wrongful act.
 
-Under [Consumer Protection Act Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001), a business operator providing services must ensure that the services meet the safety reasonably expected under the professional or technical standards current at the time.
+That said, whether another cause of action such as contractual liability is at issue, or whether other rules on the starting point, running, or suspension of the period apply, may vary with the facts. Rather than fixing a deadline based only on the date of the accident or the date of diagnosis, it is safer to confirm the possible bases of claim and the relevant reference dates individually at an early stage.
 
-This rule does not mean that every gym injury establishes liability. The applicable duty, breach, causation, damage, defenses, and evidence depend on the facts.
+## 3. What evidence should be preserved, and how, immediately after an accident?
 
-(1) A criminal complaint for negligent injury, if the legal elements are met
+To establish liability, causation, and loss, it is advisable to gather not only CCTV footage from the time of the accident but also medical records and certificates, receipts for medical, transportation, and caregiving expenses, messages exchanged with the gym and the trainer, witness statements, class booking and attendance records, and exercise plans and training logs. It also helps to photograph the injured area and the condition of the accident site as far as possible and to keep a chronological record of events before and after the accident and of all communications, so that materials can be cross-checked later.
 
-(2) A civil claim for damages. Possible contract, tort, and consumer-protection grounds depend on the facts.
+Footage may be overwritten after its retention period or become unavailable for other reasons. One option is therefore to ask the gym, through a formal notice sent by content-certified mail or a written request from counsel, to preserve the footage, specifying the relevant time period, location, and camera position. Such a written request is a practical measure that records what was requested and when. It does not, by itself, impose a new legal duty on the other party to preserve the footage or prevent deletion, and the court does not automatically draw an adverse inference merely because footage no longer exists.
 
-​
+If the circumstances of the accident may satisfy the elements of a criminal offense, reporting the matter promptly allows the investigating authorities to determine whether they have lawful grounds to obtain or preserve the footage. Reporting does not guarantee that the police or prosecutors will secure the CCTV, so materials that the parties can preserve themselves—such as medical records and communication logs—should also be collected.
 
-**2. What time limits may apply?**
+## 4. What categories of damages may be claimed against a gym?
 
-(1) Under Criminal Code Article 287, negligent injury under Article 284 is an offense prosecutable only upon complaint. Under Code of Criminal Procedure Article 237, a person entitled to complain must file within six months after learning the offender's identity. ([Criminal Code Article 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001); [Code of Criminal Procedure Article 237](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001))
+The categories of damages that may be considered are as follows. Whether each item is actually recognized, and in what amount, depends on the necessity of each expense, its causal relationship to the accident, the supporting documentation, the allocation of responsibility, and the court's assessment.
 
-(2) Under Civil Code Article 197, a tort damages claim generally must be exercised within two years after the claimant learns of both the injury and the person liable. A ten-year longstop runs from the wrongful act. ([Civil Code Article 197](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001))
+1. **Medical expenses**: Amounts actually spent on consultations, examinations, treatment, medication, and rehabilitation are proven with receipts and medical records.
+2. **Caregiving or nursing costs**: Whether care was necessary in light of the severity of the injury and the course of treatment, and whether the period and cost were reasonable, are assessed using medical and expenditure records.
+3. **Transportation expenses**: Costs necessary for traveling to and from medical institutions for treatment are proven with travel records, receipts, and the like.
+4. **Loss of earning capacity**: If lasting impairment and a continuing reduction in earning capacity are established, the loss may be assessed by considering medical and occupational evidence, the degree of impairment, occupation and income, and the remaining working life. An impairment rating alone does not fix the amount of compensation, nor is the loss automatically calculated through to retirement age.
+5. **Lost earnings during recovery**: The period during which the claimant actually could not work because of treatment or recuperation, and the income lost as a result, must be proven with payroll records, tax records, employment records, and the like.
+6. **Non-pecuniary damages**: The amount for mental suffering is determined by the court based on case-specific factors such as the severity of the injury, the duration of treatment, any lasting effects, and the parties' particular circumstances.
+7. **Punitive damages**: In litigation governed by the Consumer Protection Act, there is a provision allowing a claim of up to five times the actual damages where the loss was caused by the business operator's intentional conduct, up to three times for gross negligence, and up to the amount of the actual damages for negligence. Whether [Article 51 of the Taiwan Consumer Protection Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) applies to a given case, and whether punitive damages are actually awarded and in what amount, depend on the court's assessment of the specific requirements and evidence.
 
-Other possible claims, and rules affecting limitation or complaint periods, depend on the facts. Seek case-specific advice promptly.
+## 5. Can compensation still be disputed even if the gym has liability insurance?
 
-​
+Yes. The existence of insurance may be relevant when considering a possible source of recovery, but it does not by itself establish the legal liability of the gym or trainer, nor does it fix the amount payable. Disputes may arise between the insurer and the parties over the policy's coverage limits and exclusions, the causal relationship between the accident and the injury, and the necessity and amount of each item of loss.
 
-**3. How can evidence be preserved after an accident?**
+In particular, loss of earning capacity, reduced income during recovery, and non-pecuniary damages may require medical, income, or occupational evidence, or expert opinion. Neither the amount offered by the insurer nor the amount demanded by the injured person automatically becomes the amount recognized by the court, and an impairment assessment does not automatically determine the compensation. In practice, the insurance policy and its terms, the accident notice, the insurer's responses, the course of treatment, and the loss documentation should all be reviewed together.
 
-A claimant generally needs evidence supporting liability, causation, and loss.
+If you have been injured at a gym, it is important to obtain the necessary medical treatment first, preserve available materials before they disappear, and seek individual advice early about the time limits and procedures that may apply to your case. Negotiation, a consumer complaint or mediation, a criminal complaint, and a civil damages claim are all options that may be chosen depending on the case; they are not procedures that must all be pursued in every case.
 
-Relevant material may include CCTV footage, medical records, receipts, communications, witness accounts, and training records.
-
-A gym may decline an informal request for CCTV. To reduce the risk that relevant footage is overwritten or otherwise becomes unavailable, consider taking the following practical steps promptly.
-
-**​**
-
-**(1) Send a formal written preservation request—by a content-certified letter or through counsel—identifying the relevant footage and asking the gym to preserve it.**
-
-The request documents when and what you asked the gym to preserve. Any evidentiary consequence of lost or deleted footage is for the court to assess based on the circumstances.
-
-​
-
-**(2) If the facts may involve a criminal offense, report the matter promptly. The investigating authorities can then determine whether they have legal grounds to obtain or preserve the footage.​**
-
-**​**
-
-**4. What categories of damages can you claim against a gym?**
-
-(1) Medical expenses – Keep all medical receipts carefully.
-
-(2) Nursing/care expenses – The judge will refer to medical certificates to determine whether nursing care is needed.
-
-(3) Transportation expenses – Costs of travel to and from the hospital.
-
-(4) Loss of earning capacity – If lasting impairment is established, the court may consider medical and other expert evidence, the degree of impairment, the claimant's occupation and earnings, and the expected remaining working life. An impairment rating does not automatically establish the amount recoverable.
-
-(5) Lost earnings during recovery – Documented income lost during a period when the claimant could not work.
-
-(6) Non-pecuniary damages – The court assesses the amount based on the severity of the injury, the parties' circumstances, and other case-specific factors.
-
-(7) Punitive damages – In litigation brought under the Consumer Protection Act, Article 51 allows a consumer to claim punitive damages of up to five times actual damages for injury caused by a business operator's intentional misconduct, up to three times for gross negligence, and up to the amount of actual damages for negligence. Whether the Act applies, and whether any punitive damages are awarded, depends on the facts and the court's assessment. ([Consumer Protection Act Article 51](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001))
-
-​
-
-**5. If a gym has liability insurance, why might compensation still be disputed?**
-
-Coverage limits, exclusions, causation, and the value of claimed losses may be disputed. Items such as loss of earning capacity and non-pecuniary damages often require medical, financial, or expert evidence. The insurer's and gym's positions depend on the policy and the facts; insurance does not determine liability or the amount of compensation by itself.
-
-​
-
-That concludes this summary of frequently asked questions and answers.
-
-If you are injured at a gym in Taiwan, seek appropriate medical care, preserve relevant evidence, and obtain timely advice about the specific facts.
-
-Depending on the circumstances, options may include negotiation, a consumer complaint or mediation, a criminal complaint, or a civil claim.
-
-Similar issues can arise after falls on business premises, food-related illness, or injury while receiving professional services. The available rights and remedies depend on the facts and the applicable law.
+Falls on business premises, harm to health caused by food, and injuries suffered while receiving professional services can likewise raise issues of safety duties, causation, loss, and evidence. However, the conclusion of a gym case cannot be applied as-is to other accidents, so the contract, the conduct, and the relevant law of each matter must be examined separately.
 
 ---
 

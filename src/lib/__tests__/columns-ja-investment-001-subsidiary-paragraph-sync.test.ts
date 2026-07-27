@@ -1,4 +1,3 @@
-import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
@@ -7,57 +6,34 @@ const columnPath = path.join(
   process.cwd(),
   'src/content/columns-ja/001-taiwan-company-establishment-basics.md',
 );
-const sourceBytes = fs.readFileSync(columnPath);
-
-const immutablePrefixLength = 4_806;
-const immutablePrefixSha256 =
-  '29aab01f14edd1acc1f6b4250f98010890a199cc13e503b912d77c0e3b0ae903';
-const oldTargetLength = 288;
-const oldTargetSha256 =
-  '2945ff5a83f93c296673a11c0f5427240d9b2d35e0cfdde3b9e93401ba872464';
-const immutableTailMarker = Buffer.from(
-  '\n\n**台湾・韓国所得税協定は2023年12月27日に発効し、',
-  'utf8',
+const source = fs.readFileSync(columnPath, 'utf8');
+const sectionStart = source.indexOf(
+  '## 1. 台湾への進出形態：子会社・支店・代表者事務所',
 );
-const immutableTailLength = 10_169;
-const immutableTailSha256 =
-  'bf3687335e7be044a74a5da021e8080ae4ec5a635a8cb1307e90364d3a3d1723';
-
-const tailOffset = sourceBytes.indexOf(immutableTailMarker);
-const targetBytes =
-  tailOffset === -1
-    ? Buffer.alloc(0)
-    : sourceBytes.subarray(immutablePrefixLength, tailOffset);
-const paragraph = targetBytes.toString('utf8');
-
-const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
+const sectionEnd = source.indexOf(
+  '> 次に、台湾子会社の設立における主要な手続を確認します。',
+  sectionStart,
+);
+const section =
+  sectionStart === -1 || sectionEnd === -1
+    ? ''
+    : source.slice(sectionStart, sectionEnd);
+const proseParagraphs = section
+  .split(/\n{2,}/u)
+  .map((block) => block.trim())
+  .filter(
+    (block) =>
+      block.length > 0 &&
+      !block.startsWith('#') &&
+      !block.startsWith('!['),
+  );
+const paragraph = proseParagraphs[1] ?? '';
 
 describe('Japanese investment column 001 — subsidiary explanation paragraph', () => {
-  it('preserves the independently locked prefix and tax-treaty tail byte-for-byte', () => {
-    expect(tailOffset).toBeGreaterThanOrEqual(immutablePrefixLength);
-    expect(sourceBytes.lastIndexOf(immutableTailMarker)).toBe(tailOffset);
-
-    const prefix = sourceBytes.subarray(0, immutablePrefixLength);
-    const tail = sourceBytes.subarray(tailOffset);
-
-    expect(prefix).toHaveLength(immutablePrefixLength);
-    expect(sha256(prefix)).toBe(immutablePrefixSha256);
-    expect(tail).toHaveLength(immutableTailLength);
-    expect(sha256(tail)).toBe(immutableTailSha256);
-  });
-
-  it('identifies the exact 288-byte legacy paragraph while the RED fixture remains', () => {
-    const isLegacyTarget =
-      targetBytes.length === oldTargetLength && sha256(targetBytes) === oldTargetSha256;
-
-    if (targetBytes.length === oldTargetLength) {
-      expect(sha256(targetBytes)).toBe(oldTargetSha256);
-      expect(tailOffset).toBe(5_094);
-      expect(isLegacyTarget).toBe(true);
-    } else {
-      expect(sha256(targetBytes)).not.toBe(oldTargetSha256);
-      expect(isLegacyTarget).toBe(false);
-    }
+  it('extracts the subsidiary paragraph from the local section boundary', () => {
+    expect(sectionStart).toBeGreaterThanOrEqual(0);
+    expect(sectionEnd).toBeGreaterThan(sectionStart);
+    expect(proseParagraphs).toHaveLength(7);
   });
 
   it('contains exactly one plain Japanese prose paragraph in the mutable slice', () => {

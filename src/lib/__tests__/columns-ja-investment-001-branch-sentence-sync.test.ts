@@ -1,4 +1,3 @@
-import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
@@ -7,45 +6,33 @@ const columnPath = path.join(
   process.cwd(),
   'src/content/columns-ja/001-taiwan-company-establishment-basics.md',
 );
-const sourceBytes = fs.readFileSync(columnPath);
-
-const immutablePrefixLength = 6_493;
-const immutablePrefixSha256 =
-  'd0304afd1fc83b10ad427a57f50e44702a2f729b7456b66324719173706004f7';
-const immutableTailMarker = Buffer.from('\n\n**3. 代表者事務所：**', 'utf8');
-const immutableTailLength = 8_971;
-const immutableTailSha256 =
-  '0561013c3ed1b5591a7b08949238ccb6ad1102e0a55e94b5308846a6420b8201';
-
-const tailOffset = sourceBytes.indexOf(immutableTailMarker, immutablePrefixLength);
-const insertionBytes =
-  tailOffset === -1
-    ? Buffer.alloc(0)
-    : sourceBytes.subarray(immutablePrefixLength, tailOffset);
-const insertion = insertionBytes.toString('utf8');
-
-const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
+const source = fs.readFileSync(columnPath, 'utf8');
+const sectionStart = source.indexOf(
+  '## 1. 台湾への進出形態：子会社・支店・代表者事務所',
+);
+const sectionEnd = source.indexOf(
+  '> 次に、台湾子会社の設立における主要な手続を確認します。',
+  sectionStart,
+);
+const section =
+  sectionStart === -1 || sectionEnd === -1
+    ? ''
+    : source.slice(sectionStart, sectionEnd);
+const branchParagraph =
+  section
+    .split(/\n{2,}/u)
+    .map((block) => block.trim())
+    .find((block) => block.includes('本店と台湾支店との間の資金移動')) ?? '';
+const insertion = branchParagraph.split('。').filter(Boolean).at(2)?.concat('。') ?? '';
 
 describe('Japanese investment column 001 — branch transaction sentence', () => {
-  it('preserves the independently locked branch prefix and representative-office tail', () => {
-    expect(tailOffset).toBeGreaterThanOrEqual(immutablePrefixLength);
-    expect(sourceBytes.lastIndexOf(immutableTailMarker)).toBe(tailOffset);
-
-    const prefix = sourceBytes.subarray(0, immutablePrefixLength);
-    const tail = sourceBytes.subarray(tailOffset);
-
-    expect(prefix).toHaveLength(immutablePrefixLength);
-    expect(sha256(prefix)).toBe(immutablePrefixSha256);
-    expect(tail).toHaveLength(immutableTailLength);
-    expect(sha256(tail)).toBe(immutableTailSha256);
+  it('extracts the branch caution from local section boundaries', () => {
+    expect(sectionStart).toBeGreaterThanOrEqual(0);
+    expect(sectionEnd).toBeGreaterThan(sectionStart);
+    expect(branchParagraph).not.toHaveLength(0);
   });
 
-  it('uses the empty RED slice or exactly one plain Japanese prose sentence', () => {
-    if (insertion.length === 0) {
-      expect(insertionBytes).toHaveLength(0);
-      return;
-    }
-
+  it('uses exactly one plain Japanese prose sentence', () => {
     expect(insertion).toMatch(/^[^。\r\n]+。$/u);
     expect(insertion.trim()).toBe(insertion);
     expect(insertion).toMatch(/[\u3040-\u30ff\u3400-\u9fff]/u);

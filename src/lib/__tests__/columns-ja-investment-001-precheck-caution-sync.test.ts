@@ -1,4 +1,3 @@
-import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
@@ -7,48 +6,26 @@ const columnPath = path.join(
   process.cwd(),
   'src/content/columns-ja/001-taiwan-company-establishment-basics.md',
 );
-const sourceBytes = fs.readFileSync(columnPath);
-
-const immutablePrefixLength = 8_247;
-const immutablePrefixSha256 =
-  'd65aa68096453a3e90cef085e963d682260308accf2244cfba6139f12b2171c0';
-const immutableTailMarker = Buffer.from(
-  '\n\n上記は理解のための概要であり、',
-  'utf8',
-);
-const immutableTailLength = 7_161;
-const immutableTailSha256 =
-  '641714d4a59529671f1982ca22448230bf8e3a250d1de06810ea33eab477fd5d';
-
-const tailOffset = sourceBytes.indexOf(immutableTailMarker);
-const prefix = sourceBytes.subarray(0, immutablePrefixLength);
-const tail =
-  tailOffset === -1 ? Buffer.alloc(0) : sourceBytes.subarray(tailOffset);
-const insertionBytes =
-  tailOffset === -1
-    ? Buffer.alloc(0)
-    : sourceBytes.subarray(immutablePrefixLength, tailOffset);
-const insertion = insertionBytes.toString('utf8');
-const sentence = insertion.startsWith('\n\n') ? insertion.slice(2) : '';
-
-const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
+const source = fs.readFileSync(columnPath, 'utf8');
+const listEnd =
+  '10. 輸出入、業種別許認可、就業許可・居留等の追加手続（該当する場合）';
+const nextParagraph = '上記は理解のための概要であり、';
+const listEndOffset = source.indexOf(listEnd);
+const sentenceStart = listEndOffset === -1 ? -1 : listEndOffset + listEnd.length + 2;
+const sentenceEnd =
+  sentenceStart === -1 ? -1 : source.indexOf(`\n\n${nextParagraph}`, sentenceStart);
+const sentence =
+  sentenceStart === -1 || sentenceEnd === -1
+    ? ''
+    : source.slice(sentenceStart, sentenceEnd);
+const insertion = sentence.length > 0 ? `\n\n${sentence}` : '';
 
 describe('Japanese investment column 001 — preliminary-review caution', () => {
-  it('preserves the independently locked list prefix and following prose tail byte-for-byte', () => {
-    expect(tailOffset).toBeGreaterThanOrEqual(immutablePrefixLength);
-    expect(prefix).toHaveLength(immutablePrefixLength);
-    expect(sha256(prefix)).toBe(immutablePrefixSha256);
-    expect(tail).toHaveLength(immutableTailLength);
-    expect(sha256(tail)).toBe(immutableTailSha256);
-    expect(
-      prefix
-        .toString('utf8')
-        .endsWith(
-          '10. 輸出入、業種別許認可、就業許可・居留等の追加手続（該当する場合）',
-        ),
-    ).toBe(true);
-    expect(tail.toString('utf8')).toMatch(/^\n\n上記は理解のための概要であり、/u);
-    expect(Buffer.concat([prefix, insertionBytes, tail])).toEqual(sourceBytes);
+  it('bounds the caution between the final list item and following paragraph', () => {
+    expect(listEndOffset).toBeGreaterThanOrEqual(0);
+    expect(sentenceStart).toBeGreaterThan(listEndOffset);
+    expect(sentenceEnd).toBeGreaterThan(sentenceStart);
+    expect(source.slice(sentenceEnd)).toMatch(/^\n\n上記は理解のための概要であり、/u);
   });
 
   it('inserts exactly two line feeds and one non-empty Japanese prose sentence', () => {

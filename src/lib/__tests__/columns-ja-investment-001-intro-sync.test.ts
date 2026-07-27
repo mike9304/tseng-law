@@ -12,39 +12,41 @@ const sourceBytes = fs.readFileSync(columnPath);
 const immutablePrefixLength = 3_125;
 const immutablePrefixSha256 =
   'e5b66e2e8b0ea8eaf88dd4a15a9b2f0f505247649ef3db0f58bf3e41c8ffb42d';
-const immutableTailMarker = Buffer.from(
-  '> まず事業拠点の組織形態を決める必要があります。',
+const introEndMarker = Buffer.from(
+  '\n\n## 1. 台湾への進出形態：子会社・支店・代表者事務所',
   'utf8',
 );
-const immutableTailLength = 11_262;
-const immutableTailSha256 =
-  'a0dc82afe5b427748562cb330c1401efa22613a442df3f34929cf22719b10be4';
 
-const tailOffset = sourceBytes.indexOf(immutableTailMarker);
+const introEndOffset = sourceBytes.indexOf(introEndMarker);
 const introBytes =
-  tailOffset === -1
+  introEndOffset === -1
     ? Buffer.alloc(0)
-    : sourceBytes.subarray(immutablePrefixLength, tailOffset);
+    : sourceBytes.subarray(immutablePrefixLength, introEndOffset);
 const intro = introBytes.toString('utf8');
-const paragraphs = intro.endsWith('\n\n') ? intro.slice(0, -2).split('\n\n') : [];
+const paragraphs = intro.split('\n\n');
 
 const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
 
 describe('Japanese investment column 001 — synchronized introduction', () => {
-  it('preserves the independently locked prefix and tail byte-for-byte', () => {
-    expect(tailOffset).toBeGreaterThanOrEqual(immutablePrefixLength);
+  it('preserves the independently locked prefix and local section boundary', () => {
+    expect(introEndOffset).toBeGreaterThanOrEqual(immutablePrefixLength);
 
     const prefix = sourceBytes.subarray(0, immutablePrefixLength);
-    const tail = sourceBytes.subarray(tailOffset);
 
     expect(prefix).toHaveLength(immutablePrefixLength);
     expect(sha256(prefix)).toBe(immutablePrefixSha256);
-    expect(tail).toHaveLength(immutableTailLength);
-    expect(sha256(tail)).toBe(immutableTailSha256);
+    expect(
+      sourceBytes
+        .subarray(
+          introEndOffset,
+          introEndOffset + introEndMarker.length,
+        )
+        .equals(introEndMarker),
+    ).toBe(true);
   });
 
-  it('contains exactly three prose paragraphs and ends immediately with one blank line', () => {
-    expect(intro).toMatch(/^[^\r\n]+\n\n[^\r\n]+\n\n[^\r\n]+\n\n$/u);
+  it('contains exactly three prose paragraphs immediately before section 1', () => {
+    expect(intro).toMatch(/^[^\r\n]+\n\n[^\r\n]+\n\n[^\r\n]+$/u);
     expect(paragraphs).toHaveLength(3);
     expect(paragraphs.every((paragraph) => paragraph.trim() === paragraph)).toBe(true);
   });

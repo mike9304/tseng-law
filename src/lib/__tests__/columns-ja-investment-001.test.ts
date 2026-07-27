@@ -18,6 +18,26 @@ const entityFaqAnswer =
 const residenceFaqAnswer =
   '会社設立だけで就業許可または居留資格を取得できるわけではありません。台湾で会社を管理・運営する外国人は、職務、出資関係、雇用主の事業実績等について就業許可の要件を満たし、許可取得後にその在留目的に応じた居留証を別途申請する必要があります。';
 const employerQualificationAnswer = japaneseServiceDetails.investment.keyPoints[2];
+const section1Heading =
+  '## 1. 台湾への進出形態：子会社・支店・代表者事務所';
+const section2LegacyMarker =
+  '> 次に、台湾子会社の設立における主要な手続を確認します。';
+const section1Paragraphs = [
+  entityFaqAnswer,
+  '台湾子会社（有限公司・股份有限公司）は、親会社とは別個の法人格を有し、自己の名義で契約を締結して、権利義務の主体となります。有限公司と股份有限公司のいずれを選択するかは、出資持分または株式の構成、機関設計、意思決定の仕組みおよび資金調達計画を踏まえて検討する必要があります。ただし、子会社が独立した法人であっても、すべての責任が常に子会社のみに限定されるとは限りません。保証、担保、親会社との契約、取締役の責任など、個々の法律関係も併せて確認する必要があります。',
+  '外国会社の台湾支店は独立した法人格を持たず、外国会社の一部として台湾で営業します。支店自体に株主を置く形態ではなく、本店がその債務・責任を負います。本店と台湾支店との間の資金移動、利益送金、会計処理および税務上の取扱いは、子会社からの配当と同じ仕組みであると考えるべきではありません。',
+  '代表者事務所は、市場調査、連絡、交渉の支援や外国会社のための法律行為など、許容される範囲内で活動する拠点です。台湾で販売や役務提供などの営業活動を行うことはできません。実際の業務が受注、代金の受領、反復的なサービス提供へと拡大するのであれば、代表者事務所という名称だけを見るのではなく、子会社または支店が必要かどうかを改めて検討する必要があります。',
+  '組織形態を比較するときには、責任の範囲だけでなく、資本構成、利益の分配と送金、税務、業種別の許認可、雇用関係および政府調達への参加要件を併せて確認する必要があります。特定の入札や許認可で台湾法人、資本金、実績または登録の要件が求められる場合には、組織の名称だけで参加の可否を断定せず、該当する法令と公告を確認する必要があります。',
+  '台湾・韓国所得税協定は2023年12月27日に発効し、2024年1月1日から適用されています。協定の適用要件を満たす場合、配当・利子・使用料に関する源泉地国の上限税率はそれぞれ10％です。事業利得は、相手方の地域に協定上の恒久的施設（PE）がある場合等を除き、原則として居住地側で課税されますが、事業の実際の遂行形態をまず確認する必要があります。',
+  '協定上の恒久的施設には、管理場所・支店・事務所等の固定的施設、6か月を超える工事、いずれかの12か月間に合計183日を超える役務提供、契約締結権限を反復して行使する代理人が含まれ得ます。この4つの類型はそれぞれ適用条件が異なり、固定された場所や代理人の活動があれば、役務提供の日数とは別個に検討が必要です。したがって、183日という数字だけで恒久的施設の成立や事業利得の課税の可否を判断すべきではありません。',
+];
+const extractSection1 = (body: string): string => {
+  const start = body.indexOf(section1Heading);
+  const end = body.indexOf(section2LegacyMarker, start);
+  expect(start).toBeGreaterThanOrEqual(0);
+  expect(end).toBeGreaterThan(start);
+  return body.slice(start, end);
+};
 
 describe('Japanese investment column 001 — company-setup basics', () => {
   it('publishes the contracted frontmatter and exactly three safe FAQs', () => {
@@ -60,16 +80,16 @@ describe('Japanese investment column 001 — company-setup basics', () => {
     const requiredPhrases = [
       '台湾子会社（有限公司・股份有限公司）は、親会社とは別個の法人格を有し、自己の名義で契約を締結して、権利義務の主体となります。有限公司と股份有限公司のいずれを選択するかは、出資持分または株式の構成、機関設計、意思決定の仕組みおよび資金調達計画を踏まえて検討する必要があります。ただし、子会社が独立した法人であっても、すべての責任が常に子会社のみに限定されるとは限りません。保証、担保、親会社との契約、取締役の責任など、個々の法律関係も併せて確認する必要があります。',
       '外国会社の台湾支店は独立した法人格を持たず、外国会社の一部として台湾で営業します。支店自体に株主を置く形態ではなく、本店がその債務・責任を負います。',
-      '代表者事務所は台湾で営利活動を行う拠点ではなく、外国会社のための法律行為や連絡業務に限られます。販売、役務提供その他の営業活動を行う場合は、子会社または支店等の適切な形態を検討する必要があります。',
+      section1Paragraphs[3],
       '台湾・韓国所得税協定は2023年12月27日に発効し、2024年1月1日から適用されています。',
-      '配当、利子および使用料の上限税率は10％です。',
+      '配当・利子・使用料に関する源泉地国の上限税率はそれぞれ10％です。',
       '協定上の恒久的施設（PE）',
       '管理場所・支店・事務所等の固定的施設',
       '6か月を超える工事',
       'いずれかの12か月間に合計183日を超える役務提供',
       '契約締結権限を反復して行使する代理人',
-      '役務提供の日数だけで判断せず',
-      '責任範囲、利益送金、会計・税務、許認可および政府調達への参加資格は、名称だけで判断せず、実際の事業内容、適用法令および入札関係書類を確認したうえで、各組織形態を比較してください。',
+      '183日という数字だけで恒久的施設の成立や事業利得の課税の可否を判断すべきではありません。',
+      section1Paragraphs[4],
       '台湾子会社の設立では、一般に次のような主要手続を行います。手続の内容、順序および所要期間は、組織形態、投資額、業種、審査内容、銀行対応および書類補正の有無により異なります。',
       '委任状その他の外国文書の公証・認証（必要に応じて台湾の在外機関による認証）',
       '経済部投資審議司への投資申請（該当する場合）',
@@ -96,6 +116,46 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
     }
+  });
+
+  it('bounds section 1 to seven source-ordered paragraphs and its image', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      const section = extractSection1(body);
+      const blocks = section
+        .split(/\n{2,}/u)
+        .map((block) => block.trim())
+        .filter(Boolean);
+      const prose = blocks.filter(
+        (block) => !block.startsWith('#') && !block.startsWith('!['),
+      );
+
+      expect(blocks[0]).toBe(section1Heading);
+      expect(prose).toEqual(section1Paragraphs);
+      expect(prose).toHaveLength(7);
+      for (const marker of [
+        '台湾子会社（有限公司・股份有限公司）',
+        '外国会社の台湾支店',
+        '代表者事務所',
+        '資本構成',
+        '雇用関係',
+        '政府調達への参加要件',
+        '管理場所・支店・事務所等の固定的施設',
+        '6か月を超える工事',
+        '合計183日を超える役務提供',
+        '契約締結権限を反復して行使する代理人',
+        '183日という数字だけで',
+      ]) {
+        expect(section).toContain(marker);
+      }
+    }
+
+    const rawSection = extractSection1(raw);
+    const imageLine =
+      '![](../images/001-taiwan-company-establishment-basics/img-02.jpg)';
+    expect(rawSection.split(imageLine)).toHaveLength(2);
+    expect(rawSection.indexOf(section1Paragraphs[6])).toBeLessThan(
+      rawSection.indexOf(imageLine),
+    );
   });
 
   it('removes stale statistics, universal promises, old agencies, and Korean links', () => {

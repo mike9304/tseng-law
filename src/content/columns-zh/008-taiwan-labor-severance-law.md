@@ -1,9 +1,9 @@
 ---
 title: "台灣勞動法：在台灣領資遣費真的很難嗎？？"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2025-09-18"
+lastmod: "2026-07-27"
 date_display: "2025年9月13日"
-read_time: "3分鐘閱讀"
+read_time: "4分鐘閱讀"
 categories:
   - "台灣法律資訊"
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
@@ -219,3 +219,10 @@ B帶著委屈和難過的心情
 公司理應支付。
 
 大家在台灣也要保護好自己的權益。
+
+---
+
+> 相關文章:
+> - [台灣訴訟律師指南](/zh-hant/taiwan-litigation-lawyer)
+> - [可用韓語溝通的台灣律師](/zh-hant/korean-lawyer-in-taiwan)
+> - [服務項目 — 勞動法](/zh-hant/services/labor)

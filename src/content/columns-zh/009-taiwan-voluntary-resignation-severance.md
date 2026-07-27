@@ -1,7 +1,7 @@
 ---
 title: "員工自願離職也能領資遣費的例外情形"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
-lastmod: "2025-09-13"
+lastmod: "2026-07-27"
 date_display: "2025年9月13日"
 read_time: "2分鐘閱讀"
 categories:
@@ -92,3 +92,10 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 「**時間**」非常重要。
 
 大多數情況下，事先做好準備的一方才能保障自己的權利。
+
+---
+
+> 相關文章:
+> - [台灣訴訟律師指南](/zh-hant/taiwan-litigation-lawyer)
+> - [可用韓語溝通的台灣律師](/zh-hant/korean-lawyer-in-taiwan)
+> - [服務項目 — 勞動法](/zh-hant/services/labor)

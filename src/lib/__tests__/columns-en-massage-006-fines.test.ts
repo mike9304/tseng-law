@@ -81,6 +81,15 @@ describe('English massage column 006 — fine amounts', () => {
     expect(raw).not.toContain('created a law intended to protect');
   });
 
+  it('states the gradually emerging occupational-rights concern naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'concerns gradually emerged that protecting only the rights of people with visual impairments excessively restricted the occupational rights of people without visual impairments.',
+    );
+    expect(raw).not.toContain('opinions gradually arose that');
+  });
+
   it('connects massage-related misconduct to lasting trauma naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

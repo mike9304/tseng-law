@@ -63,7 +63,7 @@ Therefore, to protect people with visual impairments, who were in a socially vul
 
 But with the passage of time and the expansion of the consumer market,
 
-opinions gradually arose that protecting only the rights of the visually impaired excessively restricted the occupational rights of non-visually impaired persons.
+concerns gradually emerged that protecting only the rights of people with visual impairments excessively restricted the occupational rights of people without visual impairments.
 
 In the debate over the occupational rights of visually impaired and non-visually impaired persons, many opposing views emerged.
 

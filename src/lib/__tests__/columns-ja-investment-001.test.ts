@@ -12,6 +12,8 @@ const columnPath = path.join(
 const raw = fs.readFileSync(columnPath, 'utf8');
 const parsed = matter(raw);
 const post = getColumnPost('taiwan-company-establishment-basics', 'ja');
+const articleTitle =
+  '台湾での会社設立の基礎：子会社・支店・代表者事務所、手続と就業許可';
 
 const entityFaqAnswer =
   '台湾子会社（有限公司・股份有限公司）は台湾法上の独立した法人です。外国会社の台湾支店は独立した法人格を持たず、外国会社の一部として台湾で営業します。代表者事務所は営利活動を行う拠点ではなく、外国会社のための法律行為や連絡業務に限られます。責任、税務、許認可および政府調達への参加資格は、組織形態と個別案件に応じて確認する必要があります。';
@@ -148,17 +150,17 @@ const extractSection5 = (body: string): string => {
 
 describe('Japanese investment column 001 — company-setup basics', () => {
   it('publishes the contracted frontmatter and exactly three safe FAQs', () => {
-    expect(parsed.data.title).toBe('台湾での会社設立：基礎編');
-    expect(parsed.data.lastmod).toBe('2026-07-24');
+    expect(parsed.data.title).toBe(articleTitle);
+    expect(parsed.data.lastmod).toBe('2026-07-25');
     expect(parsed.data.date_display).toBe('2025年9月13日');
-    expect(parsed.data.read_time).toBe('約8分');
+    expect(parsed.data.read_time).toBe('約13分');
     expect(parsed.data.faq).toEqual([
       {
-        q: '台湾で会社を設立するとき、子会社・支店・事務所の違いは？',
+        q: '台湾で会社を設立する際、子会社・支店・代表者事務所はどのように異なりますか？',
         a: entityFaqAnswer,
       },
       {
-        q: '会社を設立すれば台湾のビザを取得できますか？',
+        q: '会社を設立すれば、台湾の就業許可や居留資格を取得できますか？',
         a: residenceFaqAnswer,
       },
       {
@@ -169,10 +171,11 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       },
     ]);
 
-    expect(post?.title).toBe('台湾での会社設立：基礎編');
-    expect(post?.date).toBe('2026-07-24');
+    expect(parsed.content).toContain(`# ${articleTitle}`);
+    expect(post?.title).toBe(articleTitle);
+    expect(post?.date).toBe('2026-07-25');
     expect(post?.dateDisplay).toBe('2025年9月13日');
-    expect(post?.readTime).toBe('約8分');
+    expect(post?.readTime).toBe('約13分');
     expect(post?.faq).toEqual(parsed.data.faq);
 
     expect(raw).not.toContain(

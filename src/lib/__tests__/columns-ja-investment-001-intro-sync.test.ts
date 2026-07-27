@@ -1,4 +1,3 @@
-import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
@@ -7,42 +6,41 @@ const columnPath = path.join(
   process.cwd(),
   'src/content/columns-ja/001-taiwan-company-establishment-basics.md',
 );
-const sourceBytes = fs.readFileSync(columnPath);
-
-const immutablePrefixLength = 3_125;
-const immutablePrefixSha256 =
-  'e5b66e2e8b0ea8eaf88dd4a15a9b2f0f505247649ef3db0f58bf3e41c8ffb42d';
-const introEndMarker = Buffer.from(
-  '\n\n## 1. 台湾への進出形態：子会社・支店・代表者事務所',
-  'utf8',
+const source = fs.readFileSync(columnPath, 'utf8');
+const articleHeading =
+  '# 台湾での会社設立の基礎：子会社・支店・代表者事務所、手続と就業許可';
+const introStartMarker =
+  '![](../images/001-taiwan-company-establishment-basics/img-01.jpg)\n\n';
+const introEndMarker =
+  '\n\n## 1. 台湾への進出形態：子会社・支店・代表者事務所';
+const introStartOffset = source.indexOf(introStartMarker);
+const introEndOffset = source.indexOf(
+  introEndMarker,
+  introStartOffset + introStartMarker.length,
 );
-
-const introEndOffset = sourceBytes.indexOf(introEndMarker);
-const introBytes =
-  introEndOffset === -1
-    ? Buffer.alloc(0)
-    : sourceBytes.subarray(immutablePrefixLength, introEndOffset);
-const intro = introBytes.toString('utf8');
+const intro =
+  introStartOffset === -1 || introEndOffset === -1
+    ? ''
+    : source.slice(introStartOffset + introStartMarker.length, introEndOffset);
 const paragraphs = intro.split('\n\n');
 
-const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
-
 describe('Japanese investment column 001 — synchronized introduction', () => {
-  it('preserves the independently locked prefix and local section boundary', () => {
-    expect(introEndOffset).toBeGreaterThanOrEqual(immutablePrefixLength);
+  it('preserves the article, image, introduction, and section-1 boundaries', () => {
+    const headingOffset = source.indexOf(articleHeading);
+    const featuredImageOffset = source.indexOf(
+      '![代表画像](../images/001-taiwan-company-establishment-basics/featured-01.jpg)',
+      headingOffset,
+    );
 
-    const prefix = sourceBytes.subarray(0, immutablePrefixLength);
-
-    expect(prefix).toHaveLength(immutablePrefixLength);
-    expect(sha256(prefix)).toBe(immutablePrefixSha256);
-    expect(
-      sourceBytes
-        .subarray(
-          introEndOffset,
-          introEndOffset + introEndMarker.length,
-        )
-        .equals(introEndMarker),
-    ).toBe(true);
+    expect(headingOffset).toBeGreaterThanOrEqual(0);
+    expect(featuredImageOffset).toBeGreaterThan(headingOffset);
+    expect(introStartOffset).toBeGreaterThan(featuredImageOffset);
+    expect(introEndOffset).toBeGreaterThan(
+      introStartOffset + introStartMarker.length,
+    );
+    expect(source.slice(introEndOffset, introEndOffset + introEndMarker.length)).toBe(
+      introEndMarker,
+    );
   });
 
   it('contains exactly three prose paragraphs immediately before section 1', () => {

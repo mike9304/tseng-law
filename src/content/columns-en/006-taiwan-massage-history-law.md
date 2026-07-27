@@ -75,21 +75,21 @@ In the end, the Grand Justices declared the statutory provision allowing only pe
 
 
 
-Similarly, in Korea, where many persons with visual impairments earn a living through massage,
+Similarly, in Korea, where many people with visual impairments earn a living through massage,
 
-ordinarily only visually impaired persons who have obtained a license may engage in the massage business.
+ordinarily only people with visual impairments who have obtained a license may work in the massage business.
 
-Of course, the Korean government at one time also issued massage licenses to non-visually impaired persons,
+At one point, the Korean government also issued massage licenses to people without visual impairments,
 
-and many visually impaired persons, worried about losing their livelihood, staged intense protests.
+and many people with visual impairments, worried about losing their livelihoods, staged fierce protests.
 
-At present, Korea still allows only qualified visually impaired persons to engage in the massage business,
+Today, Korea still allows only licensed people with visual impairments to work in the massage business,
 
-and if someone without the qualification charges others for massage services,
+and anyone who charges others for massage services without a license
 
-they may face imprisonment for up to three years under Korea’s Medical Service Act.
+may face imprisonment for up to three years under Korea’s Medical Service Act.
 
-If a non-visually impaired person operates a massage business, they may face imprisonment for up to five years.
+A person without a visual impairment who operates a massage business may face imprisonment for up to five years.
 
 
 

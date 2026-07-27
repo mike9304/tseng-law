@@ -134,6 +134,33 @@ describe('English massage column 006 — fine amounts', () => {
     );
   });
 
+  it('describes the Korean massage rules and penalties in natural people-first English', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+    const koreaRules = raw.slice(
+      raw.indexOf('Similarly, in Korea'),
+      raw.indexOf('This shows that'),
+    );
+
+    expect(koreaRules).toContain(
+      'ordinarily only people with visual impairments who have obtained a license may work in the massage business.',
+    );
+    expect(koreaRules).toContain(
+      'and many people with visual impairments, worried about losing their livelihoods, staged fierce protests.',
+    );
+    expect(koreaRules).toContain(
+      'Today, Korea still allows only licensed people with visual impairments to work in the massage business,',
+    );
+    expect(koreaRules).toContain(
+      'may face imprisonment for up to three years under Korea’s Medical Service Act.',
+    );
+    expect(koreaRules).toContain(
+      'A person without a visual impairment who operates a massage business may face imprisonment for up to five years.',
+    );
+    expect(koreaRules).not.toMatch(
+      /visually impaired persons|non-visually impaired person|qualified visually impaired persons/,
+    );
+  });
+
   it('connects massage-related misconduct to lasting trauma naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

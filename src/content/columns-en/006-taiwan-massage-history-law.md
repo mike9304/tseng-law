@@ -67,7 +67,7 @@ concerns gradually emerged that protecting only the rights of people with visual
 
 In the course of the debate over the occupational rights of people with and without visual impairments, many opposing views emerged.
 
-For example, some felt that a provision expressly allowing only the visually impaired to engage in the massage business might constitute discrimination against non-visually impaired persons,
+For example, some felt that a provision expressly allowing only people with visual impairments to engage in the massage business might constitute discrimination against people without visual impairments,
 
 and questions were raised as to whether the provision truly contributed to protecting the employment and livelihood of persons with visual impairments.
 

@@ -101,6 +101,17 @@ describe('English massage column 006 — fine amounts', () => {
     );
   });
 
+  it('states the discrimination concern with people-first wording', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'For example, some felt that a provision expressly allowing only people with visual impairments to engage in the massage business might constitute discrimination against people without visual impairments,',
+    );
+    expect(raw).not.toContain(
+      'only the visually impaired to engage in the massage business might constitute discrimination against non-visually impaired persons',
+    );
+  });
+
   it('connects massage-related misconduct to lasting trauma naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

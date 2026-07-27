@@ -36,6 +36,15 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     expect(raw).not.toContain('多くの台湾の人々');
   });
 
+  it('describes streets lined with massage shops without a literal compound', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '台湾には、さまざまなマッサージ店が軒を連ねる通りが多くあります。',
+    );
+    expect(raw).not.toContain('マッサージ通り');
+  });
+
   it('introduces the constitutional-interpretation petition naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

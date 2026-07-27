@@ -25,4 +25,13 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     );
     expect(raw).not.toContain('特級サービス');
   });
+
+  it('introduces the constitutional-interpretation petition naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'そして、今日これほど多くのマッサージ店がある背景には、ある一件の憲法解釈の申立てが関係しているのかもしれません。',
+    );
+    expect(raw).not.toContain('一度の憲法解釈の申立て');
+  });
 });

@@ -43,7 +43,7 @@ There are many kinds of massage: massage by visually impaired practitioners, foo
 
 Basically, anyone can choose a massage that suits their preferences and helps relieve stress.
 
-And the reason so many massage shops exist today may well be thanks to a single petition for constitutional interpretation.
+The large number of massage shops in Taiwan today may be linked to a single petition for constitutional interpretation.
 
 When Taiwan enacted and implemented its disability welfare law in 1980,
 

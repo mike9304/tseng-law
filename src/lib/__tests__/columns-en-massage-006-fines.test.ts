@@ -17,6 +17,15 @@ describe('English massage column 006 — fine amounts', () => {
     expect(raw).not.toContain('Getting a haircut once let you');
   });
 
+  it('links the present-day number of massage shops to the petition without overstating causation', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'The large number of massage shops in Taiwan today may be linked to a single petition for constitutional interpretation.',
+    );
+    expect(raw).not.toContain('may well be thanks to');
+  });
+
   it('maps each fine to Mr. Lin and the two employees unambiguously', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

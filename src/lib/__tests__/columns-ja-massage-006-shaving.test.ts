@@ -127,6 +127,21 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     expect(raw).not.toContain('非視覚障害者の職業の権利');
   });
 
+  it('uses standard statutory-penalty phrasing for the Korea sentences', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '韓国の「医療法」により3年以下の懲役に処されることがあります。',
+    );
+    expect(raw).toContain(
+      '非視覚障害者がマッサージ業を経営する場合は、5年以下の懲役に処されることがあります。',
+    );
+    expect(raw).not.toContain('最高で3年以下');
+    expect(raw).not.toContain('最高で5年以下');
+    expect(raw).toContain('3年以下');
+    expect(raw).toContain('5年以下');
+  });
+
   it('states the cross-country rights-balance conclusion naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

@@ -11,7 +11,7 @@ const sectionStart = source.indexOf(
   '## 1. 台湾への進出形態：子会社・支店・代表者事務所',
 );
 const sectionEnd = source.indexOf(
-  '> 次に、台湾子会社の設立における主要な手続を確認します。',
+  '## 2. 台湾子会社設立の主要な手続',
   sectionStart,
 );
 const section =

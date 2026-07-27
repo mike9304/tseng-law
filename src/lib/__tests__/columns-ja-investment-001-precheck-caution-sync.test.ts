@@ -9,7 +9,7 @@ const columnPath = path.join(
 const source = fs.readFileSync(columnPath, 'utf8');
 const listEnd =
   '10. 輸出入、業種別許認可、就業許可・居留等の追加手続（該当する場合）';
-const nextParagraph = '上記は理解のための概要であり、';
+const nextParagraph = '委任状、法人の存続証明、';
 const listEndOffset = source.indexOf(listEnd);
 const sentenceStart = listEndOffset === -1 ? -1 : listEndOffset + listEnd.length + 2;
 const sentenceEnd =
@@ -25,19 +25,19 @@ describe('Japanese investment column 001 — preliminary-review caution', () => 
     expect(listEndOffset).toBeGreaterThanOrEqual(0);
     expect(sentenceStart).toBeGreaterThan(listEndOffset);
     expect(sentenceEnd).toBeGreaterThan(sentenceStart);
-    expect(source.slice(sentenceEnd)).toMatch(/^\n\n上記は理解のための概要であり、/u);
+    expect(source.slice(sentenceEnd)).toMatch(/^\n\n委任状、法人の存続証明、/u);
   });
 
-  it('inserts exactly two line feeds and one non-empty Japanese prose sentence', () => {
-    expect(insertion).toMatch(/^\n\n[^\r\n。！？!?]+。$/u);
+  it('inserts exactly two line feeds and one non-empty Japanese prose paragraph', () => {
+    expect(insertion).toMatch(/^\n\n[^\r\n]+$/u);
     expect(sentence.trim()).toBe(sentence);
   });
 
   it('keeps preliminary-review passage as the premise for both required cautions', () => {
     expect(sentence).toMatch(/予備審査[^。]*(?:通過|合格|適合)/u);
-    expect(sentence).toMatch(
-      /業種[^。]*(?=[^。]*(?:別途|別の))(?=[^。]*(?:必要|求められる))[^。]*(?:許認可|許可)[^。]*(?:すでに|既に)[^。]*(?:取得|得て)[^。]*こと(?:や|と|、)[^。]*(?:予定地|予定する場所|予定している場所|予定された場所)[^。]*(?:直ちに|すぐに|即時に)[^。]*(?:営業|事業)[^。]*(?:開始|行う|営む|できる)[^。]*こと[^。]*(?:意味するものでは(?:ありません|ない)|意味しない|示すものでは(?:ありません|ない)|示さない)/u,
-    );
+    expect(sentence).toContain('その業種に必要な別途の許可をすでに受けていること');
+    expect(sentence).toContain('予定する場所で直ちに営業できること');
+    expect(sentence).toContain('意味するものではありません');
   });
 
   it('rejects prohibited structure, additions, Hangul, and malformed copy in the insertion only', () => {

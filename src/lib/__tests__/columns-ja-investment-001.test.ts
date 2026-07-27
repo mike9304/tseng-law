@@ -20,8 +20,9 @@ const residenceFaqAnswer =
 const employerQualificationAnswer = japaneseServiceDetails.investment.keyPoints[2];
 const section1Heading =
   '## 1. 台湾への進出形態：子会社・支店・代表者事務所';
-const section2LegacyMarker =
-  '> 次に、台湾子会社の設立における主要な手続を確認します。';
+const section2Heading = '## 2. 台湾子会社設立の主要な手続';
+const section3LegacyMarker =
+  '> 外国人が台湾で会社を設立するときによくある質問';
 const section1Paragraphs = [
   entityFaqAnswer,
   '台湾子会社（有限公司・股份有限公司）は、親会社とは別個の法人格を有し、自己の名義で契約を締結して、権利義務の主体となります。有限公司と股份有限公司のいずれを選択するかは、出資持分または株式の構成、機関設計、意思決定の仕組みおよび資金調達計画を踏まえて検討する必要があります。ただし、子会社が独立した法人であっても、すべての責任が常に子会社のみに限定されるとは限りません。保証、担保、親会社との契約、取締役の責任など、個々の法律関係も併せて確認する必要があります。',
@@ -33,7 +34,33 @@ const section1Paragraphs = [
 ];
 const extractSection1 = (body: string): string => {
   const start = body.indexOf(section1Heading);
-  const end = body.indexOf(section2LegacyMarker, start);
+  const end = body.indexOf(section2Heading, start);
+  expect(start).toBeGreaterThanOrEqual(0);
+  expect(end).toBeGreaterThan(start);
+  return body.slice(start, end);
+};
+const section2ProseParagraphs = [
+  '台湾子会社の設立は、一般に会社の中国語名称と営業項目の予備審査から始まり、外国人投資の審査、口座開設と送金、投資額の審査確定、会社設立登記および税籍登記へと続きます。下記のリストは全体の流れを理解するための概要であり、すべての場合に同じように適用される固定的な順序や期間を意味するものではありません。',
+  '会社の中国語名称と営業項目の予備審査は、使用する名称と予定する事業を登記前に確認する段階です。予備審査を通過したという事実は、その業種に必要な別途の許可をすでに受けていることや、予定する場所で直ちに営業できることを意味するものではありません。外国人投資の申請が必要な場合には、投資者、投資額、出資対象および事業計画を審査資料と一致させる必要があります。',
+  '委任状、法人の存続証明、代表権を確認する書類など、外国で作成された文書は、発行地と書類の性質に応じて、公証・認証または台湾の在外機関による認証が必要となる場合があります。翻訳文、署名権者および法人名の表記が申請書と一致しているかも確認する必要があります。投資者の国籍や個人・法人の別によって準備書類が異なる場合があるため、書類を取得する前に有効期間と認証の経路を整理しておく方が効率的です。',
+  '準備口座の開設と投資資金の送金の段階では、銀行が顧客確認手続の一環として実質的所有者と資金の出所を確認する場合があります。送金者、送金目的、投資承認の内容と入金口座が互いに食い違う場合、追加の説明や補正が必要となることがあります。送金後は、実際の投資額に対する審査確定（投資額審定）を経たうえで会社設立登記と税籍登記を進め、銀行の手続に従って準備口座を正式口座に切替えます。',
+  '手続の順序・必要性・期間は、組織形態、投資額、業種、審査内容、銀行手続の進行状況および補正の有無によって異なります。輸出入登録、工場・製品・専門業種に関する許可、外国人の就業許可および居留の申請のように、会社設立後に進める手続もあります。契約締結日や営業開始日を定める際には、会社登記だけでなく、これらの後続手続の完了時期まで考慮する必要があります。',
+];
+const section2Steps = [
+  '1. 会社の中国語名称および営業項目の予備審査',
+  '2. 委任状その他の外国文書の公証・認証（必要に応じて台湾の在外機関による認証）',
+  '3. 経済部投資審議司への投資申請（該当する場合）',
+  '4. 会社設立用の準備口座開設',
+  '5. 国外からの投資資金送金',
+  '6. 投資額審定',
+  '7. 会社設立登記',
+  '8. 税籍登記',
+  '9. 準備口座から正式口座への切替え',
+  '10. 輸出入、業種別許認可、就業許可・居留等の追加手続（該当する場合）',
+];
+const extractSection2 = (body: string): string => {
+  const start = body.indexOf(section2Heading);
+  const end = body.indexOf(section3LegacyMarker, start);
   expect(start).toBeGreaterThanOrEqual(0);
   expect(end).toBeGreaterThan(start);
   return body.slice(start, end);
@@ -90,15 +117,13 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       '契約締結権限を反復して行使する代理人',
       '183日という数字だけで恒久的施設の成立や事業利得の課税の可否を判断すべきではありません。',
       section1Paragraphs[4],
-      '台湾子会社の設立では、一般に次のような主要手続を行います。手続の内容、順序および所要期間は、組織形態、投資額、業種、審査内容、銀行対応および書類補正の有無により異なります。',
+      ...section2ProseParagraphs,
       '委任状その他の外国文書の公証・認証（必要に応じて台湾の在外機関による認証）',
       '経済部投資審議司への投資申請（該当する場合）',
       '国外からの投資資金送金',
       '投資額審定',
       '会社設立登記',
       '輸出入、業種別許認可、就業許可・居留等の追加手続（該当する場合）',
-      'すべての案件に共通する固定的な順序ではありません。',
-      '委任状、投資申請書、会社登記書類等は、投資者の国籍、法人・個人の別、組織形態および事業内容に応じて準備します。台湾の弁護士や会計士等の専門家と必要書類や役割分担を事前に確認しておくと、手続を進めやすくなります。',
       '外国人は在学中でも投資・会社設立を申請できますが、現在の在留資格で就労または会社経営が認められるとは限りません。投資手続、就業許可および居留資格はそれぞれ確認が必要です。',
       '多くの業種で外国投資が可能ですが、禁止・制限業種、専門資格、営業場所および業種別許認可の確認が必要です。',
       residenceFaqAnswer,
@@ -154,6 +179,50 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       '![](../images/001-taiwan-company-establishment-basics/img-02.jpg)';
     expect(rawSection.split(imageLine)).toHaveLength(2);
     expect(rawSection.indexOf(section1Paragraphs[6])).toBeLessThan(
+      rawSection.indexOf(imageLine),
+    );
+  });
+
+  it('bounds section 2 to five prose paragraphs, ten steps, and its image', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      const section = extractSection2(body);
+      const blocks = section
+        .split(/\n{2,}/u)
+        .map((block) => block.trim())
+        .filter(Boolean);
+      const prose = blocks.filter(
+        (block) =>
+          !block.startsWith('#') &&
+          !block.startsWith('![') &&
+          !/^\d+\.\s/u.test(block),
+      );
+      const steps = blocks.filter((block) => /^\d+\.\s/u.test(block));
+
+      expect(blocks[0]).toBe(section2Heading);
+      expect(prose).toEqual(section2ProseParagraphs);
+      expect(prose).toHaveLength(5);
+      expect(steps).toEqual(section2Steps);
+      expect(steps).toHaveLength(10);
+
+      for (const marker of [
+        '投資者、投資額、出資対象および事業計画',
+        '法人の存続証明',
+        '署名権者',
+        '有効期間と認証の経路',
+        '実質的所有者と資金の出所',
+        '投資額審定',
+        '工場・製品・専門業種に関する許可',
+        '契約締結日や営業開始日',
+      ]) {
+        expect(section).toContain(marker);
+      }
+    }
+
+    const rawSection = extractSection2(raw);
+    const imageLine =
+      '![](../images/001-taiwan-company-establishment-basics/img-03.jpg)';
+    expect(rawSection.split(imageLine)).toHaveLength(2);
+    expect(rawSection.indexOf(section2ProseParagraphs[4])).toBeLessThan(
       rawSection.indexOf(imageLine),
     );
   });

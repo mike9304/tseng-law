@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { describe, expect, it } from 'vitest';
+
+const articlePath = path.join(
+  process.cwd(),
+  'src/content/columns-zh/006-taiwan-massage-history-law.md',
+);
+
+describe('Traditional Chinese massage column 006 — localized wording', () => {
+  it('describes the bundled barbershop services in natural Taiwan usage', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '只要剪一次頭髮，就能享受到這麼多優質服務，CP值真的很高。',
+    );
+    expect(raw).not.toContain('性價比非常高');
+  });
+
+  it('uses natural Taiwan Traditional Chinese for the petition reference', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '而今日之所以有這麼多按摩店，或許與一件大法官釋憲聲請有關。',
+    );
+    expect(raw).not.toContain('一次大法官釋憲的申請');
+  });
+});

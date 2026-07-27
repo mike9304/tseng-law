@@ -99,4 +99,17 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     );
     expect(raw).not.toContain('非視覚障害者の職業の権利');
   });
+
+  it('states the cross-country rights-balance conclusion naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'これにより、各国がさまざまな集団の権益を保護するために、それぞれ異なるアプローチを取っていることがわかります。',
+    );
+    expect(raw).toContain(
+      '立法者は利益の衝突を解決するため、より均衡のとれた解決策を見つけようと努力しています。',
+    );
+    expect(raw).not.toContain('互いに異なるアプローチ');
+    expect(raw).not.toContain('相対的に均衡のとれた解決策');
+  });
 });

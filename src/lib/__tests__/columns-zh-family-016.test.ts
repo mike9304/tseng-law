@@ -290,6 +290,10 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
     for (const link of [...officialLinks, ...internalLinks]) {
       expect(raw.split(link)).toHaveLength(2);
     }
+    const sourceUseCaution =
+      '使用上述官方資料時，請先至全國法規資料庫等官方立法頁面確認法規的修正日期與施行日期；所列英文版《民法》條文僅供輔助參考，引用時應與官方中文原文逐條核對。司法院家事聲請狀範本及財政部稅務入口網頁僅屬一般準備指引，實際管轄機關、申請程序及應備文件，仍應以各受理機關最新公告的說明為準。';
+    expect(raw).toContain(sourceUseCaution);
+    expect(post?.content).toContain(sourceUseCaution);
   });
 
   it('ends with the exact disclaimer and author and nothing else', () => {
@@ -312,12 +316,12 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
       .digest('hex');
 
     expect(visibleHanCount).toBeGreaterThanOrEqual(4_500);
-    expect(visibleHanCount).toBe(6_265);
+    expect(visibleHanCount).toBe(6_395);
     expect(calculatedMinutes).toBe(16);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(sourceSha256).toBe(
-      'aad5da85a1f0cfab637a61ab40e8b8ca57de3f57b238f833d307161e83acf1b9',
+      '2f9f651b80fa69669147473a8397f28060292dabb2576322b1d7884c7da564ba',
     );
   });
 

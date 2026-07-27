@@ -3,7 +3,7 @@ title: "Taiwan Inheritance and Parental Rights: A Guide for Surviving Families"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"
-read_time: "17 min read"
+read_time: "18 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp"
@@ -39,6 +39,8 @@ An inheritance share is an undivided legal proportion, not an automatic assignme
 ## 2. Wills and Identifying the Estate
 
 A valid will may alter the distribution that would otherwise follow intestate succession. Its legal form, the decedent’s testamentary capacity, revocation or amendment, the meaning of its operative provisions, and the authority of any executor should all be examined. The will may create a legacy, direct a method of partition, or establish another arrangement, but it remains subject to reserved portions and other mandatory rules. A conclusion about validity or effect should be based on the original instrument and the circumstances of execution, not merely on a copy or a summary.
+
+A will that disposes of only part of the estate may leave the remainder that the will does not address to be distributed under the intestate-succession rules. Whether that occurs depends on the will’s operative provisions and the applicable law, so a partial disposition does not invariably produce the same result in every case.
 
 Before calculating any inheritance share, identify the estate. The inquiry should cover real property, accounts, investments, business interests, receivables, valuable personal property, intellectual-property interests, and claims held by the decedent. It should also identify debts, guarantees, taxes, funeral and administration expenses, security interests, and pending proceedings. Legal title and beneficial ownership may differ; co-ownership proportions, nominee arrangements, liens, mortgages, and third-party claims require separate attention.
 
@@ -100,6 +102,8 @@ Parents are ordinarily the legal representatives of their minor child under Arti
 
 If a guardian rather than a parent manages the property, additional guardianship rules may govern preparation of an inventory, reporting, accounts, restrictions on disposition, and court supervision. Significant transactions can also engage registration, tax, company, trust, or financial-institution requirements. A protective plan should identify who may sign, whether prior court authority is needed, what valuation evidence is appropriate, and how proceeds will remain traceable for the child.
 
+A trust or insurance arrangement is not automatically safe merely because it exists. Its review may include the trustee and beneficiary, payment conditions, fees, supervision, amendment and termination terms, reserved-portion and tax issues, and the child’s present and future needs, depending on the arrangement at hand. The convenience of the person managing the property must not take priority over the child’s interests.
+
 ## 8. Cross-Border Family Issues
 
 A cross-border family requires a conflicts-of-law analysis before Taiwan rules are applied. Relevant connecting factors can include each person’s nationality, domicile, habitual residence, place of death, and family status; the location and legal character of each asset; a foreign marriage or divorce; an existing parental-rights order; and the place where a child or interested party lives. Different issues in the same matter may be governed by different laws.
@@ -108,7 +112,7 @@ The Act Governing the Choice of Law in Civil Matters Involving Foreign Elements 
 
 A foreign judgment or order may require recognition and enforcement before it can be relied upon in Taiwan. Foreign wills, probate grants, death certificates, marriage or divorce records, birth or adoption records, and powers of attorney may require certified copies, authentication, verification, notarization, or translation. Names, dates, and family relationships should be reconciled across passports and civil-status records before filings are made.
 
-Tax and registration obligations can arise in more than one jurisdiction. The review may include estate, inheritance, gift, or income tax; financial-account reporting; household-registration changes; land, vehicle, or securities transfers; and corporate-register updates. Coordination is important because a document sufficient for one institution may not satisfy another, and a foreign deadline may run independently of a Taiwan procedure.
+Tax and registration obligations can arise in more than one jurisdiction. The review may include estate, inheritance, gift, or income tax; any available rules for adjusting, relieving, or crediting overlapping tax burdens; financial-account reporting; household-registration changes; land, vehicle, or securities transfers; and corporate-register updates. Coordination is important because a document sufficient for one institution may not satisfy another, and a foreign deadline may run independently of a Taiwan procedure.
 
 ## 9. Practical Planning Checklist
 
@@ -126,6 +130,8 @@ Tax and registration obligations can arise in more than one jurisdiction. The re
 - [Taiwan Laws & Regulations Database — Act Governing the Choice of Law in Civil Matters Involving Foreign Elements](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
 - [Judicial Yuan — Family Petition Form for Appointment of a Guardian for a Minor](https://www.judicial.gov.tw/tw/cp-1369-4219-da7e1-1.html)
 - [Ministry of Finance Taiwan Tax Portal — Inheritance Procedures and Required Documents](https://www.etax.nat.gov.tw/etwmain/tax-info/house-land-transfer-taxtation-calculation-area/inheritance/file-process)
+
+When using these sources, verify amendment and effective dates on the official legislation pages. Treat the linked English Civil Code text as an auxiliary reference and check it against the official original. Treat the Judicial Yuan form and the Taiwan Tax Portal page as general preparation guidance, and confirm jurisdiction and filing requirements against the receiving agency's latest instructions.
 
 ## 11. Related Services
 

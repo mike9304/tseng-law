@@ -138,6 +138,8 @@ faq:
 - [司法院：家事聲請狀—聲請選定未成年人之監護人](https://www.judicial.gov.tw/tw/cp-1369-4219-da7e1-1.html)
 - [財政部稅務入口網：繼承案件申辦流程（含應備文件）](https://www.etax.nat.gov.tw/etwmain/tax-info/house-land-transfer-taxtation-calculation-area/inheritance/file-process)
 
+使用上述官方資料時，請先至全國法規資料庫等官方立法頁面確認法規的修正日期與施行日期；所列英文版《民法》條文僅供輔助參考，引用時應與官方中文原文逐條核對。司法院家事聲請狀範本及財政部稅務入口網頁僅屬一般準備指引，實際管轄機關、申請程序及應備文件，仍應以各受理機關最新公告的說明為準。
+
 ## 11. 相關服務
 
 - [台灣家事訴訟服務](/zh-hant/services/family)

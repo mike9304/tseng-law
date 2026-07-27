@@ -86,7 +86,7 @@ title: "Taiwan Inheritance and Parental Rights: A Guide for Surviving Families"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"
-read_time: "17 min read"
+read_time: "18 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp"
@@ -134,7 +134,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: 'September 13, 2025',
-      read_time: '17 min read',
+      read_time: '18 min read',
       categories: ['Taiwan Legal Information'],
       featured_image: featuredImage,
       faq,
@@ -148,7 +148,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       title,
       date: '2026-07-25',
       dateDisplay: 'September 13, 2025',
-      readTime: '17 min read',
+      readTime: '18 min read',
       category: 'legal',
       categoryLabel: 'Legal Information',
       featuredImage:
@@ -222,6 +222,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
   it('locks wills, reserved portions, estate identification, and governing-law issues', () => {
     const requiredPhrases = [
       'A valid will may alter the distribution that would otherwise follow intestate succession.',
+      'A will that disposes of only part of the estate may leave the remainder that the will does not address to be distributed under the intestate-succession rules.',
       'the authority of any executor',
       'The will may create a legacy, direct a method of partition, or establish another arrangement, but it remains subject to reserved portions and other mandatory rules.',
       'Legal title and beneficial ownership may differ; co-ownership proportions, nominee arrangements, liens, mortgages, and third-party claims require separate attention.',
@@ -303,6 +304,8 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       'When a parent’s interest conflicts with the child’s interest, however, the parent cannot provide neutral representation for that transaction or proceeding.',
       'The court may appoint a special representative on its own initiative or on an authorized application.',
       'additional guardianship rules may govern preparation of an inventory, reporting, accounts, restrictions on disposition, and court supervision',
+      'A trust or insurance arrangement is not automatically safe merely because it exists.',
+      'The convenience of the person managing the property must not take priority over the child’s interests.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -319,7 +322,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       'International jurisdiction must be analyzed separately from governing law.',
       'A foreign judgment or order may require recognition and enforcement before it can be relied upon in Taiwan.',
       'Foreign wills, probate grants, death certificates, marriage or divorce records, birth or adoption records, and powers of attorney may require certified copies, authentication, verification, notarization, or translation.',
-      'estate, inheritance, gift, or income tax; financial-account reporting; household-registration changes; land, vehicle, or securities transfers; and corporate-register updates',
+      'estate, inheritance, gift, or income tax; any available rules for adjusting, relieving, or crediting overlapping tax burdens',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -380,6 +383,10 @@ describe('English family column 016 — anonymized inheritance and parental-righ
     for (const link of [...officialLinks, ...internalLinks]) {
       expect(raw.split(link)).toHaveLength(2);
     }
+    const sourceUseCaution =
+      "When using these sources, verify amendment and effective dates on the official legislation pages. Treat the linked English Civil Code text as an auxiliary reference and check it against the official original. Treat the Judicial Yuan form and the Taiwan Tax Portal page as general preparation guidance, and confirm jurisdiction and filing requirements against the receiving agency's latest instructions.";
+    expect(raw).toContain(sourceUseCaution);
+    expect(post?.content).toContain(sourceUseCaution);
   });
 
   it('ends with the exact disclaimer and author and nothing else', () => {
@@ -398,12 +405,12 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       .digest('hex');
 
     expect(visibleWordCount).toBeGreaterThanOrEqual(2_000);
-    expect(visibleWordCount).toBe(3_330);
-    expect(calculatedMinutes).toBe(17);
+    expect(visibleWordCount).toBe(3_519);
+    expect(calculatedMinutes).toBe(18);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(sourceSha256).toBe(
-      '5a45e3bcbfe84e2aa81ae68712957498eaa24ea5fee640e986251210d30e51f2',
+      '6d7f243be0e1cc87ccc35d4c402b90cf9d5d9f84f47125edff9f69b6504cfcce',
     );
   });
 

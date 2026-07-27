@@ -90,6 +90,17 @@ describe('English massage column 006 — fine amounts', () => {
     expect(raw).not.toContain('opinions gradually arose that');
   });
 
+  it('describes the occupational-rights debate with people-first wording', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'In the course of the debate over the occupational rights of people with and without visual impairments, many opposing views emerged.',
+    );
+    expect(raw).not.toContain(
+      'visually impaired and non-visually impaired persons',
+    );
+  });
+
   it('connects massage-related misconduct to lasting trauma naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

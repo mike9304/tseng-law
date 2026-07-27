@@ -65,7 +65,7 @@ But with the passage of time and the expansion of the consumer market,
 
 concerns gradually emerged that protecting only the rights of people with visual impairments excessively restricted the occupational rights of people without visual impairments.
 
-In the debate over the occupational rights of visually impaired and non-visually impaired persons, many opposing views emerged.
+In the course of the debate over the occupational rights of people with and without visual impairments, many opposing views emerged.
 
 For example, some felt that a provision expressly allowing only the visually impaired to engage in the massage business might constitute discrimination against non-visually impaired persons,
 

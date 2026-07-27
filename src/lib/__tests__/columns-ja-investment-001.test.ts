@@ -24,8 +24,38 @@ const section2Heading = '## 2. 台湾子会社設立の主要な手続';
 const section3Heading = '## 3. 業種と営業場所の事前確認';
 const section4Heading = '## 4. 就業許可・居留資格・資本金';
 const section5Heading = '## 5. 税金と台湾・韓国所得税協定';
-const legacyClosingMarker =
-  '以上が、台湾での会社設立に関する基本的な内容です。';
+const officialSourcesHeading = '## 公式資料';
+const relatedGuidanceParagraph =
+  '関連する業務範囲は[台湾投資・会社設立サービス](/ja/services#investment)で、担当弁護士の経歴と対応言語は[曾雋崴弁護士のプロフィール](/ja/lawyers/wei-tseng)でご確認いただけます。具体的な事案に関するお問い合わせは[ご相談・お問い合わせ](/ja/contact)をご利用ください。';
+const disclaimerParagraph =
+  '本稿は、台湾での会社設立および関連制度を一般的に説明するための教育目的の資料であり、個別の事案に対する法律・税務上の助言ではありません。投資構造、業種、申請者の国籍・在留資格および所管官庁の最新の実務によって必要な手続や結果が異なり得るため、投資・契約・雇用を実行する前に、最新の公式資料と個別の事情をご確認ください。';
+const authorLine = '**曾雋崴弁護士（Wei Tseng）**';
+const officialSourceUrls = [
+  'https://law.moea.gov.tw/EngLawContent.aspx?id=10484&lan=E',
+  'https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885',
+  'https://gcis.nat.gov.tw/mainNew/English/index.jsp',
+  'https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D',
+  'https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10',
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080',
+  'https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM',
+  'https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR',
+  'https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o',
+  'https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news',
+  'https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice',
+];
+const officialSourceLinks = [
+  `[台湾経済部 外国人投資関連法規（英語版）](${officialSourceUrls[0]})`,
+  `[台湾経済部 投資業務案内](${officialSourceUrls[1]})`,
+  `[台湾経済部商業発展署 会社・商業登記案内](${officialSourceUrls[2]})`,
+  `[外国人投資事業の経営責任者に関する就業許可業務手引き](${officialSourceUrls[3]})`,
+  `[台湾財政部 台湾・韓国所得税協定案内](${officialSourceUrls[4]})`,
+  `[非居住者への配当源泉徴収率に関する規定](${officialSourceUrls[5]})`,
+  `[台湾営業税の申告周期案内](${officialSourceUrls[6]})`,
+  `[台湾営利事業所得税の税率案内](${officialSourceUrls[7]})`,
+  `[外国人への配当所得の課税案内](${officialSourceUrls[8]})`,
+  `[台湾内政部移民署 永久居留案内](${officialSourceUrls[9]})`,
+  `[台北市営業場所事前照会案内](${officialSourceUrls[10]})`,
+];
 const section1Paragraphs = [
   entityFaqAnswer,
   '台湾子会社（有限公司・股份有限公司）は、親会社とは別個の法人格を有し、自己の名義で契約を締結して、権利義務の主体となります。有限公司と股份有限公司のいずれを選択するかは、出資持分または株式の構成、機関設計、意思決定の仕組みおよび資金調達計画を踏まえて検討する必要があります。ただし、子会社が独立した法人であっても、すべての責任が常に子会社のみに限定されるとは限りません。保証、担保、親会社との契約、取締役の責任など、個々の法律関係も併せて確認する必要があります。',
@@ -110,7 +140,7 @@ const section5Paragraphs = [
 ];
 const extractSection5 = (body: string): string => {
   const start = body.indexOf(section5Heading);
-  const end = body.indexOf(legacyClosingMarker, start);
+  const end = body.indexOf(officialSourcesHeading, start);
   expect(start).toBeGreaterThanOrEqual(0);
   expect(end).toBeGreaterThan(start);
   return body.slice(start, end);
@@ -180,7 +210,9 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       residenceFaqAnswer,
       '会社設立自体について一律の法定最低資本金があるわけではありません。ただし、業種別の最低資本額、事業計画の合理性、銀行審査および就業許可上の雇用主要件は別途確認が必要です。',
       employerQualificationAnswer,
-      '曾雋崴弁護士は韓国語での相談に対応しています。ご相談をご希望の場合は、公式お問い合わせ窓口からご連絡ください。内容を確認のうえ、順次ご案内します。',
+      relatedGuidanceParagraph,
+      disclaimerParagraph,
+      authorLine,
     ];
 
     for (const phrase of requiredPhrases) {
@@ -381,6 +413,31 @@ describe('Japanese investment column 001 — company-setup basics', () => {
     }
   });
 
+  it('uses all eleven official links once and exactly three localized internal links', () => {
+    const officialSourceSection = parsed.content
+      .split(`${officialSourcesHeading}\n\n`)[1]
+      ?.split(`\n\n${relatedGuidanceParagraph}`)[0];
+
+    expect(officialSourceSection?.trim().split('\n')).toEqual(
+      officialSourceLinks.map((link) => `- ${link}`),
+    );
+    for (const source of officialSourceUrls) {
+      expect(raw.split(source)).toHaveLength(2);
+    }
+
+    const internalLinks = Array.from(
+      parsed.content.matchAll(/\[[^\]]+\]\((\/[^)]+)\)/g),
+      (match) => match[0],
+    );
+    expect(internalLinks).toEqual([
+      '[台湾投資・会社設立サービス](/ja/services#investment)',
+      '[曾雋崴弁護士のプロフィール](/ja/lawyers/wei-tseng)',
+      '[ご相談・お問い合わせ](/ja/contact)',
+    ]);
+    expect(parsed.content).toContain(disclaimerParagraph);
+    expect(parsed.content.trimEnd().endsWith(authorLine)).toBe(true);
+  });
+
   it('removes stale statistics, universal promises, old agencies, and Korean links', () => {
     const forbiddenLiterals = [
       'KOTRAのデータによると',
@@ -406,6 +463,9 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       '配偶者と未成年の子は家族として台湾に居住できます',
       '5年連続で就業許可証と居留証を取得し、毎年台湾で183日以上居住すれば',
       '迅速にお答え',
+      '以上が、台湾での会社設立に関する基本的な内容です。',
+      '以上、台湾弁護士の曾雋崴でした。',
+      '> 関連リンク:',
       '/ko/',
     ];
 
@@ -433,9 +493,13 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       expect(raw).toContain(imagePath);
     }
 
-    expect(raw).toContain('[台湾投資・会社設立サービス](/ja/services#investment)');
-    expect(raw).toContain('[台湾弁護士・曾雋崴のプロフィール](/ja/lawyers/wei-tseng)');
-    expect(raw).toContain('[台湾進出・会社設立のご相談](/ja/services#investment)');
+    expect(raw).toContain(
+      '[台湾投資・会社設立サービス](/ja/services#investment)',
+    );
+    expect(raw).toContain(
+      '[曾雋崴弁護士のプロフィール](/ja/lawyers/wei-tseng)',
+    );
+    expect(raw).toContain('[ご相談・お問い合わせ](/ja/contact)');
     expect(raw.length).toBeGreaterThan(5_000);
     expect(post?.content.length).toBeGreaterThan(3_500);
   });

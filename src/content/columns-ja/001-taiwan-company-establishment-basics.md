@@ -124,17 +124,22 @@ faq:
 
 協定上の制限税率は、協定が存在するという事実だけで自動的に適用されるものではありません。納税者が協定上の居住者に該当するか、受益所有者に該当するか、所得の法的性質は何か、また、提出すべき居住者証明書や申請書類は何かを確認する必要があります。取引構造と契約書、請求書、実際の業務および代金の流れが互いに一致するよう管理し、申告期限と証憑の保管も別途点検しなければなりません。
 
-以上が、台湾での会社設立に関する基本的な内容です。
+## 公式資料
 
-韓国企業だけでなく、個人の創業者が台湾で事業を始める場合にも、台湾法、言語、税務、所在地および銀行実務に関する検討が必要になります。手続を始める前に、予定する事業、出資者、資金計画、活動場所および台湾で業務を担当する方の在留状況を整理しておくと、必要な申請を把握しやすくなります。
+- [台湾経済部 外国人投資関連法規（英語版）](https://law.moea.gov.tw/EngLawContent.aspx?id=10484&lan=E)
+- [台湾経済部 投資業務案内](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885)
+- [台湾経済部商業発展署 会社・商業登記案内](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
+- [外国人投資事業の経営責任者に関する就業許可業務手引き](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
+- [台湾財政部 台湾・韓国所得税協定案内](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
+- [非居住者への配当源泉徴収率に関する規定](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [台湾営業税の申告周期案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
+- [台湾営利事業所得税の税率案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
+- [外国人への配当所得の課税案内](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)
+- [台湾内政部移民署 永久居留案内](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
+- [台北市営業場所事前照会案内](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-曾雋崴弁護士は韓国語での相談に対応しています。ご相談をご希望の場合は、公式お問い合わせ窓口からご連絡ください。内容を確認のうえ、順次ご案内します。
+関連する業務範囲は[台湾投資・会社設立サービス](/ja/services#investment)で、担当弁護士の経歴と対応言語は[曾雋崴弁護士のプロフィール](/ja/lawyers/wei-tseng)でご確認いただけます。具体的な事案に関するお問い合わせは[ご相談・お問い合わせ](/ja/contact)をご利用ください。
 
-以上、台湾弁護士の曾雋崴でした。
+本稿は、台湾での会社設立および関連制度を一般的に説明するための教育目的の資料であり、個別の事案に対する法律・税務上の助言ではありません。投資構造、業種、申請者の国籍・在留資格および所管官庁の最新の実務によって必要な手続や結果が異なり得るため、投資・契約・雇用を実行する前に、最新の公式資料と個別の事情をご確認ください。
 
----
-
-> 関連リンク:
-> - [台湾投資・会社設立サービス](/ja/services#investment)
-> - [台湾弁護士・曾雋崴のプロフィール](/ja/lawyers/wei-tseng)
-> - [台湾進出・会社設立のご相談](/ja/services#investment)
+**曾雋崴弁護士（Wei Tseng）**

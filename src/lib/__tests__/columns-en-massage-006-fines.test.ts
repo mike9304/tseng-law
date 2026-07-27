@@ -123,6 +123,17 @@ describe('English massage column 006 — fine amounts', () => {
     );
   });
 
+  it('states the constitutional ruling with people-first wording', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'In the end, the Grand Justices declared the statutory provision allowing only people with visual impairments to engage in the massage business unconstitutional.',
+    );
+    expect(raw).not.toContain(
+      'allowing only the visually impaired to engage in the massage business unconstitutional',
+    );
+  });
+
   it('connects massage-related misconduct to lasting trauma naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

@@ -71,7 +71,7 @@ For example, some felt that a provision expressly allowing only people with visu
 
 and questions were raised as to whether the provision truly helped protect the jobs and livelihoods of people with visual impairments.
 
-In the end, the Grand Justices declared the statutory provision allowing only the visually impaired to engage in the massage business unconstitutional.
+In the end, the Grand Justices declared the statutory provision allowing only people with visual impairments to engage in the massage business unconstitutional.
 
 
 

@@ -52,4 +52,14 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     );
     expect(raw).not.toContain('多くの面で障害があり');
   });
+
+  it('preserves protection, employment opportunities, and the right to livelihood', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'したがって当時の立法者は、社会的に弱い立場に置かれていた視覚障害者を保護し、その就業機会と生存権を保障するための法律を制定したのです。',
+    );
+    expect(raw).not.toContain('弱者である視覚障害者');
+    expect(raw).not.toContain('視覚障害者に仕事と生存権');
+  });
 });

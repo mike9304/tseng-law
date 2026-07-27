@@ -26,6 +26,16 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     expect(raw).not.toContain('特級サービス');
   });
 
+  it('describes the barbershops as a shared cultural memory naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'こうした台湾式の理髪店は、多くの台湾人の心に、独特の文化的な記憶として残っています。',
+    );
+    expect(raw).not.toContain('この台湾式理髪店');
+    expect(raw).not.toContain('多くの台湾の人々');
+  });
+
   it('introduces the constitutional-interpretation petition naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

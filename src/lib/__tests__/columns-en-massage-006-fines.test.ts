@@ -39,6 +39,19 @@ describe('English massage column 006 — fine amounts', () => {
     expect(raw).not.toContain('The shampoo style');
   });
 
+  it('lists the barbershop services with parallel not-only/but-also complements', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'They provided not only haircuts but also shaving, facial care, and various other services.',
+    );
+    expect(raw).not.toContain('They not only provided haircuts');
+    expect(raw).toContain('haircuts');
+    expect(raw).toContain('shaving');
+    expect(raw).toContain('facial care');
+    expect(raw).toContain('various other services');
+  });
+
   it('describes the bundled barbershop services naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

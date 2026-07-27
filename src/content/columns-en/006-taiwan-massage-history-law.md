@@ -19,7 +19,7 @@ Do you remember Taiwan’s old-fashioned barbershops?
 
 Back then, those barbershops had a very distinctive way of shampooing customers’ hair.
 
-They not only provided haircuts, but also shaving, facial care, and various other services.
+They provided not only haircuts but also shaving, facial care, and various other services.
 
 The real highlight was being able to stay seated while your hair was shampooed and your scalp, shoulders, and neck were massaged.
 

@@ -18,6 +18,18 @@ describe('English massage column 006 — fine amounts', () => {
     expect(raw).not.toContain('the days of Taiwan’s traditional barbershops');
   });
 
+  it('describes the seated shampoo-and-massage highlight naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'The real highlight was being able to stay seated while your hair was shampooed and your scalp, shoulders, and neck were massaged.',
+    );
+    expect(raw).not.toContain('sit and receive a shampoo');
+    expect(raw).not.toContain('And the key part was');
+    expect(raw).not.toContain('enjoying a shampoo');
+    expect(raw).not.toContain('never had to leave your chair');
+  });
+
   it('describes the bundled barbershop services naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

@@ -21,7 +21,7 @@ The shampoo style at those barbershops was very distinctive.
 
 They not only provided haircuts, but also shaving, facial care, and various other services.
 
-And the key part was that you could sit and receive a shampoo while also getting a scalp, shoulder, and neck massage.
+The real highlight was being able to stay seated while your hair was shampooed and your scalp, shoulders, and neck were massaged.
 
 A single haircut came with all these premium services, making it excellent value for money.
 

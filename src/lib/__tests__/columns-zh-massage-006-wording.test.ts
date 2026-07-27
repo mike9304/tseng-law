@@ -23,7 +23,11 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     expect(raw).toContain(
       '而今日之所以有這麼多按摩店，或許與一件大法官釋憲聲請有關。',
     );
+    expect(raw).toContain(
+      '林先生認為這項處罰非常不合理，因此向大法官聲請釋憲。',
+    );
     expect(raw).not.toContain('一次大法官釋憲的申請');
+    expect(raw).not.toContain('申請大法官釋憲');
   });
 
   it('describes barriers and limited occupational options in one natural sentence', () => {

@@ -57,7 +57,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 依當時法律，林先生和兩名員工分別被處以新台幣4萬元、1萬元、2萬元的罰鍰。
 
-林先生認為這項處罰非常不合理，因此申請大法官釋憲。
+林先生認為這項處罰非常不合理，因此向大法官聲請釋憲。
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 

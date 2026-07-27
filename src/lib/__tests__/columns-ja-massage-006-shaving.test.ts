@@ -152,6 +152,20 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     expect(raw).toContain('5年以下');
   });
 
+  it('advises speaking up about discomfort or something feeling wrong during a massage', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '台湾でマッサージを受けているときに、不快感や違和感を覚えたら、',
+    );
+    expect(raw).not.toContain('マッサージの過程に');
+    expect(raw).toContain('不快感');
+    expect(raw).toContain('違和感');
+    expect(raw).toContain(
+      'すぐに伝えたり中止を求めたりして、自分を守るべきです。',
+    );
+  });
+
   it('states the cross-country rights-balance conclusion naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

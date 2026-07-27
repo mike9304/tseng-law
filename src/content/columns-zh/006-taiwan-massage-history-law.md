@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-您是否經歷過台灣早期傳統理髮廳的時代？
+您還記得台灣早期的傳統理髮廳嗎？
 
 當時理髮廳的洗髮方式非常獨特。
 

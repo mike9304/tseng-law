@@ -19,6 +19,13 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     expect(raw).not.toContain('街道匯集了');
   });
 
+  it('asks about old traditional barbershops with natural nostalgic phrasing', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain('您還記得台灣早期的傳統理髮廳嗎？');
+    expect(raw).not.toContain('經歷過台灣早期傳統理髮廳的時代');
+  });
+
   it('describes the bundled barbershop services in natural Taiwan usage', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

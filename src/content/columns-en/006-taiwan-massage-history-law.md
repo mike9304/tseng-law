@@ -101,7 +101,7 @@ and legislators strive to find relatively balanced solutions that reconcile comp
 
 
 
-Today, many people choose massage to relieve stress, but incidents of sexual harassment and sexual assault continue to occur during massages.
+Today, many people choose massage to relieve stress, but incidents of sexual harassment and unwanted sexual touching continue to occur during massages.
 
 What begins as a simple attempt to unwind can instead leave a person with lifelong trauma.
 

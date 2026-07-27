@@ -233,12 +233,16 @@ describe('English massage column 006 — fine amounts', () => {
     expect(normalized).not.toContain('conflicts of interest');
   });
 
-  it('connects massage-related misconduct to lasting trauma naturally', () => {
+  it('connects non-escalating massage-related misconduct to lasting trauma naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 
     expect(raw).toContain(
-      'Today, many people choose massage to relieve stress, but incidents of sexual harassment and sexual assault continue to occur during massages.',
+      'Today, many people choose massage to relieve stress, but incidents of sexual harassment and unwanted sexual touching continue to occur during massages.',
     );
+    expect(raw).not.toContain('sexual assault');
+    expect(raw).toContain('sexual harassment');
+    expect(raw).toContain('unwanted sexual touching');
+    expect(raw).toContain('continue to occur during massages');
     expect(raw).toContain(
       'What begins as a simple attempt to unwind can instead leave a person with lifelong trauma.',
     );

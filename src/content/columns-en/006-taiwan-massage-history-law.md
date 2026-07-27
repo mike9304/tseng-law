@@ -45,9 +45,9 @@ The large number of massage shops in Taiwan today may be linked to a single peti
 
 When Taiwan enacted and implemented its disability welfare law in 1980,
 
-in fact only persons with visual impairments were allowed to engage in the massage business.
+only people with visual impairments were in fact allowed to work in the massage industry.
 
-It was illegal for non-visually impaired persons to work in this occupation.
+It was illegal for people without visual impairments to work in this occupation.
 
 This law remained in force until 2003, when police found that Mr. Lin, who ran a barbershop, had hired two employees without visual impairments to provide shampooing and massage services.
 

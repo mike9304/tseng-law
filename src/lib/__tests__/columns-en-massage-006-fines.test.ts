@@ -44,6 +44,23 @@ describe('English massage column 006 — fine amounts', () => {
     expect(raw).not.toContain('may well be thanks to');
   });
 
+  it('introduces the former occupational restriction in natural people-first English', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'only people with visual impairments were in fact allowed to work in the massage industry.',
+    );
+    expect(raw).toContain(
+      'It was illegal for people without visual impairments to work in this occupation.',
+    );
+    expect(raw).not.toContain(
+      'in fact only persons with visual impairments were allowed to engage in the massage business',
+    );
+    expect(raw).not.toContain(
+      'illegal for non-visually impaired persons to work in this occupation',
+    );
+  });
+
   it('describes the police discovery of the two employees naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

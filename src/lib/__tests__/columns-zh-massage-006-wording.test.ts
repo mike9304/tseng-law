@@ -26,6 +26,16 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     expect(raw).not.toContain('經歷過台灣早期傳統理髮廳的時代');
   });
 
+  it('highlights seated hair washing with scalp, shoulder, and neck massage naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '其中一大特色是，客人可以坐著洗頭，同時享受頭皮及肩頸按摩。',
+    );
+    expect(raw).not.toContain('而且最重要的是');
+    expect(raw).not.toContain('更難得的是');
+  });
+
   it('describes the bundled barbershop services in natural Taiwan usage', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

@@ -38,4 +38,13 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     );
     expect(raw).not.toContain('視障者在成長、活動、學習、教育');
   });
+
+  it('describes the occupational-rights dispute without redundant phrasing', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '在這場關於視障者與非視障者職業權利的爭議中，出現了許多反對意見。',
+    );
+    expect(raw).not.toContain('職業權利的爭議過程中');
+  });
 });

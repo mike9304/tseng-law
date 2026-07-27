@@ -18,6 +18,16 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     expect(raw).not.toContain('昔ながらの伝統的な理髪店');
   });
 
+  it('describes the shampoo-and-massage feature in natural Japanese', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'さらに、座ったままシャンプーをしてもらいながら、頭皮や肩、首のマッサージも受けられるのが大きな特徴でした。',
+    );
+    expect(raw).not.toContain('重要なのは');
+    expect(raw).not.toContain('シャンプーを受けながら');
+  });
+
   it('translates shaving as beard shaving rather than head shaving', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

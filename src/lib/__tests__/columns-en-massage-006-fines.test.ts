@@ -26,6 +26,15 @@ describe('English massage column 006 — fine amounts', () => {
     expect(raw).not.toContain('may well be thanks to');
   });
 
+  it('describes the police discovery of the two employees naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'This law remained in force until 2003, when police found that Mr. Lin, who ran a barbershop, had hired two employees without visual impairments to provide shampooing and massage services.',
+    );
+    expect(raw).not.toContain('was found by the police after hiring');
+  });
+
   it('maps each fine to Mr. Lin and the two employees unambiguously', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

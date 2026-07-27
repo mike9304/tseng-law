@@ -51,9 +51,7 @@ in fact only persons with visual impairments were allowed to engage in the massa
 
 It was illegal for non-visually impaired persons to work in this occupation.
 
-This law continued until 2003, when Mr. Lin, who operated a barbershop,
-
-was found by the police after hiring two non-visually impaired employees to provide shampoo and massage services.
+This law remained in force until 2003, when police found that Mr. Lin, who ran a barbershop, had hired two employees without visual impairments to provide shampooing and massage services.
 
 Under the law at the time, Mr. Lin was fined NT$40,000, while the two employees were fined NT$10,000 and NT$20,000, respectively.
 

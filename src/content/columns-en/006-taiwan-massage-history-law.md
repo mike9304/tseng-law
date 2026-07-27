@@ -55,17 +55,13 @@ This law continued until 2003, when Mr. Lin, who operated a barbershop,
 
 was found by the police after hiring two non-visually impaired employees to provide shampoo and massage services.
 
-Under the law at the time, Mr. Lin and the two employees were each fined NT$40,000, NT$10,000, and NT$20,000, respectively.
+Under the law at the time, Mr. Lin was fined NT$40,000, while the two employees were fined NT$10,000 and NT$20,000, respectively.
 
 Mr. Lin considered this punishment highly unfair and petitioned for constitutional interpretation.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-In Taiwan,
-
-persons with visual impairments face many barriers in growth, daily activities, learning, education, and other areas,
-
-and the occupations they can engage in are very limited.
+In Taiwan, people with visual impairments face barriers in many aspects of life, including personal development, daily activities, learning, and education, and can pursue only a very limited range of occupations.
 
 Therefore, the legislators at the time, seeking to protect the visually impaired as a vulnerable group,
 

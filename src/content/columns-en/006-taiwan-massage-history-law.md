@@ -35,9 +35,7 @@ These Taiwanese-style barbershops remain a distinctive part of the cultural memo
 
 Anyway, speaking of massage—
 
-Taiwan also has many massage streets.
-
-A wide variety of massage shops line them.
+Taiwan also has many streets lined with a wide variety of massage shops.
 
 There are many kinds of massage: massage by visually impaired practitioners, foot massage, oil massage, Thai massage, and more.
 

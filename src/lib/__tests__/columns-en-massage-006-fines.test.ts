@@ -26,6 +26,15 @@ describe('English massage column 006 — fine amounts', () => {
     expect(raw).not.toContain('this Taiwanese-style barbershop');
   });
 
+  it('describes streets lined with massage shops without a literal compound', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'Taiwan also has many streets lined with a wide variety of massage shops.',
+    );
+    expect(raw).not.toContain('massage streets');
+  });
+
   it('links the present-day number of massage shops to the petition without overstating causation', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

@@ -145,7 +145,7 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
       visibleText.match(/[\u3400-\u4DBF\u4E00-\u9FFF]/g)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(2_653);
+    expect(visibleHanCount).toBe(2_657);
     expect(calculatedMinutes).toBe(7);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

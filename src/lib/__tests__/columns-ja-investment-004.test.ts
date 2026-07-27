@@ -128,6 +128,55 @@ const incentiveParagraph =
   '税制優遇は、子会社か支店かという名称だけで一律に決まるものではありません。現行の産業創新条例第10条の1には、一定の新品のスマート機械、5G、サイバーセキュリティ、AI製品・サービス、省エネ・脱炭素関連設備または技術への投資に関する投資税額控除があり、控除額には当年度の営利事業所得税額の30％という上限があります。対象者、投資内容、金額、申請期限、控除方法および他の優遇との関係を個別に確認してください。';
 const treatyParagraph =
   '台湾・韓国所得税協定は2023年12月27日に発効し、2024年1月1日から適用されています。配当、利子および使用料の上限税率は10％です。事業利得は、相手方の地域に協定上の恒久的施設（PE）がある場合等を除き、原則として居住地側で課税されます。PEには、管理場所・支店・事務所等の固定的施設、6か月を超える工事、いずれかの12か月間に合計183日を超える役務提供、契約締結権限を反復して行使する代理人等が含まれ得ます。台湾支店は通常、台湾の固定的施設に当たるため、支店の台湾事業利得が当然に免税になるわけではありません。';
+const section7Heading = '## 7. どちらを選ぶか';
+const authorSignoff = '以上、台湾弁護士の曾雋崴でした。';
+const section7OverviewParagraph =
+  '子会社と支店のいずれか一方が、すべての台湾進出において優れているわけではありません。独立した台湾法人と現地の株主構成が必要な事業であれば子会社が適している場合があり、外国会社が台湾での営業を直接行いながら本店の統制を維持しようとする事業であれば支店形態が適している場合があります。ただし、設立が可能であるという判断と、営業・税務・撤退まで考慮したときに効率的な組織形態であるかという判断は、区別しなければなりません。';
+const section7ComparisonPromptParagraph =
+  '選択の前に、次の事項を文書に整理して比較することをお勧めします。';
+const section7BulletItems = [
+  '出資者が誰であり、議決権と重要事項の決定権をどのように配分するか',
+  '外国本店または親会社が、契約上・法律上どの範囲の責任を負担するか',
+  '顧客契約、雇用、知的財産、事業場および許認可をどの主体に帰属させるか',
+  '売上と費用をどこで認識し、利益留保、配当または本店送金をどのように行うか',
+  '投資認可、銀行口座、資金の持込み、外国為替および国外送金の資料をどのように準備するか',
+  '会計帳簿、監査、移転価格文書および韓国側の申告・外国税額控除をどのように管理するか',
+  '増資、現地パートナー、役員・従業員向けの株式報酬、上場、合併・再編および持分譲渡を計画しているか',
+  '事業停止時の契約終了、労働関係、税務申告、資産処分および撤退手続を誰が遂行するか',
+];
+const section7ScenarioParagraph =
+  '台湾進出の初期には、予想売上高が少なく人員と契約件数が多くなくても、将来の計画を併せて反映しなければなりません。短期間の市場検証の後に撤退する可能性、長期投資と現地パートナーの受入れの可能性、規制事業への拡張、本店の保証提供の有無を、シナリオ別に比較することができます。各シナリオで必要な資金、税引後の現金、責任リスク、文書および申告費用を表にまとめれば、名称による先入観を減らすことができます。';
+const section7ConversionParagraph =
+  '運営中に組織形態を変更する可能性も検討しなければなりません。支店の事業を新しい子会社へ移転したり、子会社の資産を他のグループ会社に譲渡したりする過程には、契約相手方の同意、労働関係、許認可、資産譲渡、税務および外国為替手続が伴うことがあります。最初に選択した形態を、後で簡単に名称だけ変えられるという前提を置いてはなりません。転換の可能性を考慮するのであれば、主要契約の譲渡条項や知的財産の使用権をあらかじめ設計しておくことが望まれます。';
+const section7BranchClosureParagraph =
+  '撤退手続もそれぞれ異なります。外国会社の台湾支店が営業を中止しようとする場合、会社法第378条に基づき支店登記の抹消を申請しなければなりません。ただし、抹消申請前に発生した債務、税務上、労働上、契約上および規制上の義務が、申請だけで消滅するわけではありません。取引先との精算、労働関係の終了、未収金の回収、資産処分、税務申告および銀行口座の整理を、順序に従って進めなければなりません。';
+const section7CreditorRightsParagraph =
+  '会社法第379条によれば、支店登記の抹消は、債権者の権利と外国会社の義務に影響を及ぼしません。債権者は抹消前の営業から発生した権利を引き続き行使することができ、外国会社はその義務を負担します。したがって、登記簿から支店がなくなったという事実だけで、過去の責任が終結したと判断してはなりません。紛争の可能性がある契約や保証、税務調査が行われ得る期間、記録保存義務も確認しなければなりません。';
+const section7LiquidationParagraph =
+  '外国会社の台湾支店がすべて抹消される場合、会社法第380条に基づき、台湾における営業と支店から発生した権利・義務を清算しなければなりません。清算後も弁済できなかった債務は、外国会社が引き続き負担します。外国本店と支店が同一の法的主体であるという原則は、進出時だけでなく撤退時にも作用します。清算担当者の選任、債権者への通知、申告および残余資金の処理も、最新の手続に合わせなければなりません。';
+const section7SubsidiaryDissolutionParagraph =
+  '台湾子会社は独立した法人であるため、外国会社支店の登記抹消ではなく、会社法上の解散・清算手続を踏みます。株主の決議、清算人、債権・債務の整理、税務申告および残余財産の分配など、子会社に適用される手続に従わなければなりません。親会社が台湾から撤退することを決定しても、子会社の法人格と債権者との関係を無視して資金を直ちに回収することはできません。両形態の終了手続と必要となる業務を同一のものとして扱ってはなりません。';
+const section7FinalChoiceParagraph =
+  '最終的な選択は、台湾と本店所在地の専門家が同一の事実関係を共有した状態で検討するのが安全です。事業計画、組織図、投資家、締結予定の契約、資金の流れ、人員配置および撤退シナリオを提供すれば、法律・税務・会計・外国為替の論点を互いに関連づけて確認することができます。設立後は、実際の運営が選択した組織形態と乖離していないかを定期的に点検しなければなりません。';
+const section7ProseParagraphs = [
+  section7OverviewParagraph,
+  section7ComparisonPromptParagraph,
+  section7ScenarioParagraph,
+  section7ConversionParagraph,
+  section7BranchClosureParagraph,
+  section7CreditorRightsParagraph,
+  section7LiquidationParagraph,
+  section7SubsidiaryDissolutionParagraph,
+  section7FinalChoiceParagraph,
+];
+
+const extractSection7 = (text: string): string => {
+  const start = text.indexOf(section7Heading);
+  const end = text.indexOf(authorSignoff);
+  expect(start).toBeGreaterThanOrEqual(0);
+  expect(end).toBeGreaterThan(start);
+  return text.slice(start, end);
+};
 
 describe('Japanese investment column 004 — subsidiary versus branch', () => {
   it('publishes the contracted frontmatter and exactly three FAQs', () => {
@@ -173,6 +222,7 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
       transferPricingParagraph,
       ...section3ProseParagraphs,
       ...section4ProseParagraphs,
+      ...section7ProseParagraphs,
       incentiveParagraph,
       treatyParagraph,
     ];
@@ -271,6 +321,45 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
 
       for (const paragraph of section4ProseParagraphs) {
         expect(section).toContain(paragraph);
+      }
+    }
+  });
+
+  it('bounds section 7 to nine prose paragraphs and eight bullets ending at the author sign-off', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      expect(body).toContain(section7Heading);
+      expect(body).toContain(authorSignoff);
+
+      const section = extractSection7(body);
+      const blocks = section
+        .split(/\n{2,}/)
+        .map((block) => block.trim())
+        .filter(Boolean);
+
+      expect(blocks[0]).toBe(section7Heading);
+      const contentBlocks = blocks.slice(1);
+      const proseBlocks = contentBlocks.filter(
+        (block) => !block.startsWith('-'),
+      );
+      const bulletBlocks = contentBlocks.filter((block) =>
+        block.startsWith('-'),
+      );
+
+      expect(proseBlocks).toHaveLength(9);
+      expect(proseBlocks).toEqual(section7ProseParagraphs);
+      expect(bulletBlocks).toHaveLength(1);
+
+      const bulletLines = bulletBlocks[0]
+        .split('\n')
+        .map((line) => line.trim())
+        .filter(Boolean);
+      expect(bulletLines).toHaveLength(8);
+      expect(bulletLines).toEqual(
+        section7BulletItems.map((item) => `- ${item}`),
+      );
+
+      for (const article of ['第378条', '第379条', '第380条']) {
+        expect(section).toContain(article);
       }
     }
   });

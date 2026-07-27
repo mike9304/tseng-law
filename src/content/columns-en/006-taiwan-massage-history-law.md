@@ -23,7 +23,7 @@ They not only provided haircuts, but also shaving, facial care, and various othe
 
 And the key part was that you could sit and receive a shampoo while also getting a scalp, shoulder, and neck massage.
 
-Getting a haircut once let you enjoy this premium package of services, so the value for money was excellent.
+A single haircut came with all these premium services, making it excellent value for money.
 
 It was very similar to today’s Vietnamese-style shampoo service.
 
@@ -107,13 +107,9 @@ and legislators try to find relatively balanced solutions to resolve conflicts o
 
 
 
-Today, many people choose massage to relieve stress,
+Today, many people choose massage to relieve stress, but incidents of sexual harassment and sexual assault continue to occur during massages.
 
-but incidents of sexual harassment or sexual assault keep occurring in the process.
-
-What began as simply wanting a massage to reduce stress
-
-can, if sexual harassment occurs, leave lifelong trauma.
+What begins as a simple attempt to unwind can instead leave a person with lifelong trauma.
 
 If you feel any discomfort or anything strange during a massage in Taiwan,
 

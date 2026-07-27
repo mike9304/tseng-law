@@ -8,6 +8,15 @@ const articlePath = path.join(
 );
 
 describe('English massage column 006 — fine amounts', () => {
+  it('describes the bundled barbershop services naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'A single haircut came with all these premium services, making it excellent value for money.',
+    );
+    expect(raw).not.toContain('Getting a haircut once let you');
+  });
+
   it('maps each fine to Mr. Lin and the two employees unambiguously', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 
@@ -24,5 +33,17 @@ describe('English massage column 006 — fine amounts', () => {
       'In Taiwan, people with visual impairments face barriers in many aspects of life, including personal development, daily activities, learning, and education, and can pursue only a very limited range of occupations.',
     );
     expect(raw).not.toContain('barriers in growth');
+  });
+
+  it('connects massage-related misconduct to lasting trauma naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'Today, many people choose massage to relieve stress, but incidents of sexual harassment and sexual assault continue to occur during massages.',
+    );
+    expect(raw).toContain(
+      'What begins as a simple attempt to unwind can instead leave a person with lifelong trauma.',
+    );
+    expect(raw).not.toContain('What began as simply wanting a massage');
   });
 });

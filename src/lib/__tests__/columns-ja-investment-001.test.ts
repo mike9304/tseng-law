@@ -23,8 +23,9 @@ const section1Heading =
 const section2Heading = '## 2. 台湾子会社設立の主要な手続';
 const section3Heading = '## 3. 業種と営業場所の事前確認';
 const section4Heading = '## 4. 就業許可・居留資格・資本金';
-const section5LegacyMarker =
-  '> 外国人が台湾で会社を設立するときによくある質問';
+const section5Heading = '## 5. 税金と台湾・韓国所得税協定';
+const legacyClosingMarker =
+  '以上が、台湾での会社設立に関する基本的な内容です。';
 const section1Paragraphs = [
   entityFaqAnswer,
   '台湾子会社（有限公司・股份有限公司）は、親会社とは別個の法人格を有し、自己の名義で契約を締結して、権利義務の主体となります。有限公司と股份有限公司のいずれを選択するかは、出資持分または株式の構成、機関設計、意思決定の仕組みおよび資金調達計画を踏まえて検討する必要があります。ただし、子会社が独立した法人であっても、すべての責任が常に子会社のみに限定されるとは限りません。保証、担保、親会社との契約、取締役の責任など、個々の法律関係も併せて確認する必要があります。',
@@ -96,7 +97,20 @@ const section4Paragraphs = [
 ];
 const extractSection4 = (body: string): string => {
   const start = body.indexOf(section4Heading);
-  const end = body.indexOf(section5LegacyMarker, start);
+  const end = body.indexOf(section5Heading, start);
+  expect(start).toBeGreaterThanOrEqual(0);
+  expect(end).toBeGreaterThan(start);
+  return body.slice(start, end);
+};
+const section5Paragraphs = [
+  '台湾の営業税は、一般税率が5％で、通常は2か月ごとに申告します。営利事業所得税の一般税率は20％ですが、実際の課税は課税所得と適用規定により異なります。非居住者に支払う配当の台湾国内法上の源泉徴収率は21％です。台湾・韓国所得税協定の適用要件と手続を満たす配当については、上限税率10％が適用されます。具体的な申告・源泉徴収は、居住者区分、受益所有者、所得の種類および協定適用書類を確認して処理する必要があります。',
+  '営業税と営利事業所得税は、課税対象と申告方法が異なるため、売上に適用される税金と課税所得に適用される税金を区別する必要があります。国外の株主や関係会社に配当、利子、使用料または役務対価を支払う際には、支払の性質と受取人の地位、国内法上の源泉徴収規定および所得税協定の適用可能性を事前に検討する必要があります。',
+  '台湾・韓国所得税協定は2023年12月27日に発効し、2024年1月1日から適用されており、要件を満たす利子と使用料についても源泉地国の上限税率10％が適用されます。事業利得の課税権を検討する際には、前述した恒久的施設の四つの類型をすべて確認する必要があります。役務提供日数だけでなく、固定的施設、工事期間、代理人の契約締結権限および実際の活動も併せて確認しなければなりません。',
+  '協定上の制限税率は、協定が存在するという事実だけで自動的に適用されるものではありません。納税者が協定上の居住者に該当するか、受益所有者に該当するか、所得の法的性質は何か、また、提出すべき居住者証明書や申請書類は何かを確認する必要があります。取引構造と契約書、請求書、実際の業務および代金の流れが互いに一致するよう管理し、申告期限と証憑の保管も別途点検しなければなりません。',
+];
+const extractSection5 = (body: string): string => {
+  const start = body.indexOf(section5Heading);
+  const end = body.indexOf(legacyClosingMarker, start);
   expect(start).toBeGreaterThanOrEqual(0);
   expect(end).toBeGreaterThan(start);
   return body.slice(start, end);
@@ -131,11 +145,11 @@ describe('Japanese investment column 001 — company-setup basics', () => {
     expect(post?.readTime).toBe('約8分');
     expect(post?.faq).toEqual(parsed.data.faq);
 
-    const bodyFaq = raw
-      .split('> 外国人が台湾で会社を設立するときによくある質問')[1]
-      ?.split('以上が、台湾での会社設立に関する基本的な内容です。')[0];
-    expect(Array.from(bodyFaq?.matchAll(/\*\*(\d+)\./g) ?? [], (match) => match[1])).toEqual(
-      ['8'],
+    expect(raw).not.toContain(
+      '> 外国人が台湾で会社を設立するときによくある質問',
+    );
+    expect(raw).not.toContain(
+      '**8. 台湾の主な会社関係税率はどうなっていますか？**',
     );
   });
 
@@ -162,10 +176,10 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       '輸出入、業種別許認可、就業許可・居留等の追加手続（該当する場合）',
       ...section4Paragraphs,
       ...section3Paragraphs,
+      ...section5Paragraphs,
       residenceFaqAnswer,
       '会社設立自体について一律の法定最低資本金があるわけではありません。ただし、業種別の最低資本額、事業計画の合理性、銀行審査および就業許可上の雇用主要件は別途確認が必要です。',
       employerQualificationAnswer,
-      '台湾の営業税は、一般税率が5％で、通常は2か月ごとに申告します。営利事業所得税の一般税率は20％ですが、実際の課税は課税所得と適用規定により異なります。非居住者に支払う配当の台湾国内法上の源泉徴収率は21％です。台湾・韓国所得税協定の適用要件と手続を満たす配当については、上限税率10％が適用されます。具体的な申告・源泉徴収は、居住者区分、受益者、所得の種類および協定適用書類を確認して処理する必要があります。',
       '曾雋崴弁護士は韓国語での相談に対応しています。ご相談をご希望の場合は、公式お問い合わせ窓口からご連絡ください。内容を確認のうえ、順次ご案内します。',
     ];
 
@@ -333,6 +347,38 @@ describe('Japanese investment column 001 — company-setup basics', () => {
     expect(rawSection.indexOf(section4Paragraphs[7])).toBeLessThan(
       rawSection.indexOf(imageLine),
     );
+  });
+
+  it('bounds section 5 to four source-ordered tax and treaty paragraphs', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      const section = extractSection5(body);
+      const blocks = section
+        .split(/\n{2,}/u)
+        .map((block) => block.trim())
+        .filter(Boolean);
+      const prose = blocks.filter((block) => !block.startsWith('#'));
+
+      expect(blocks[0]).toBe(section5Heading);
+      expect(prose).toEqual(section5Paragraphs);
+      expect(prose).toHaveLength(4);
+
+      for (const marker of [
+        '一般税率が5％',
+        '一般税率は20％',
+        '源泉徴収率は21％',
+        '上限税率10％',
+        '配当、利子、使用料または役務対価',
+        '2023年12月27日',
+        '2024年1月1日',
+        '恒久的施設の四つの類型',
+        '代理人の契約締結権限',
+        '受益所有者',
+        '居住者証明書',
+        '申告期限と証憑の保管',
+      ]) {
+        expect(section).toContain(marker);
+      }
+    }
   });
 
   it('removes stale statistics, universal promises, old agencies, and Korean links', () => {

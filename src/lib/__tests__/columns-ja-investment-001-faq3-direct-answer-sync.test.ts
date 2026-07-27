@@ -12,8 +12,7 @@ const requiredJapaneseTarget =
 const section4Heading = '## 4. 就業許可・居留資格・資本金';
 const section4CapitalHeading =
   '### 会社の資本金と外国籍経営責任者の就業許可';
-const section4EndMarker =
-  '> 外国人が台湾で会社を設立するときによくある質問';
+const section4EndMarker = '## 5. 税金と台湾・韓国所得税協定';
 
 const firstTargetOffset = source.indexOf(requiredJapaneseTarget);
 const insertion =

@@ -63,9 +63,7 @@ Mr. Lin considered this punishment highly unfair and petitioned for constitution
 
 In Taiwan, people with visual impairments face barriers in many aspects of life, including personal development, daily activities, learning, and education, and can pursue only a very limited range of occupations.
 
-Therefore, the legislators at the time, seeking to protect the visually impaired as a vulnerable group,
-
-created a law intended to protect employment opportunities and the right to livelihood for persons with visual impairments.
+Therefore, to protect people with visual impairments, who were in a socially vulnerable position, the legislators at the time enacted a law safeguarding their employment opportunities and right to a livelihood.
 
 But with the passage of time and the expansion of the consumer market,
 

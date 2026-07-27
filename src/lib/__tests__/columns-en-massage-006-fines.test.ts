@@ -35,6 +35,16 @@ describe('English massage column 006 — fine amounts', () => {
     expect(raw).not.toContain('barriers in growth');
   });
 
+  it('preserves protection, employment opportunities, and the right to a livelihood', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'Therefore, to protect people with visual impairments, who were in a socially vulnerable position, the legislators at the time enacted a law safeguarding their employment opportunities and right to a livelihood.',
+    );
+    expect(raw).not.toContain('the visually impaired as a vulnerable group');
+    expect(raw).not.toContain('created a law intended to protect');
+  });
+
   it('connects massage-related misconduct to lasting trauma naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

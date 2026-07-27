@@ -56,6 +56,13 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     expect(raw).not.toContain('多くの台湾の人々');
   });
 
+  it('uses a natural conversational aside for the age joke', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain('（年齢がバレてしまったでしょうか？）');
+    expect(raw).not.toContain('つい年齢を明かしてしまったでしょうか');
+  });
+
   it('describes streets lined with massage shops without a literal compound', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

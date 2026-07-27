@@ -29,7 +29,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 こうした台湾式の理髪店は、多くの台湾人の心に、独特の文化的な記憶として残っています。
 
-（つい年齢を明かしてしまったでしょうか？）
+（年齢がバレてしまったでしょうか？）
 
 
 

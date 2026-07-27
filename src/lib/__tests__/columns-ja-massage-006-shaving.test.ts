@@ -81,4 +81,13 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     expect(raw).not.toContain('弱者である視覚障害者');
     expect(raw).not.toContain('視覚障害者に仕事と生存権');
   });
+
+  it('describes the occupational-rights debate without calqued phrasing', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'こうした視覚障害者と非視覚障害者の職業上の権利をめぐる論争のなかで、多くの反対意見が出ました。',
+    );
+    expect(raw).not.toContain('議論の過程では');
+  });
 });

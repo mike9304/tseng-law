@@ -30,6 +30,15 @@ describe('English massage column 006 — fine amounts', () => {
     expect(raw).not.toContain('never had to leave your chair');
   });
 
+  it('describes the distinctive shampooing method without the collocation "shampoo style"', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'Back then, those barbershops had a very distinctive way of shampooing customers’ hair.',
+    );
+    expect(raw).not.toContain('The shampoo style');
+  });
+
   it('describes the bundled barbershop services naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

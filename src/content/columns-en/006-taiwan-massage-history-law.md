@@ -17,7 +17,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 Do you remember Taiwan’s old-fashioned barbershops?
 
-The shampoo style at those barbershops was very distinctive.
+Back then, those barbershops had a very distinctive way of shampooing customers’ hair.
 
 They not only provided haircuts, but also shaving, facial care, and various other services.
 

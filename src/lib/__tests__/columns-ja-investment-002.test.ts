@@ -26,6 +26,10 @@ const insolvencyParagraph =
   '解散後の清算は、会社の資産が負債を上回る場合だけに限られるものではありません。会社法第89条によれば、会社財産が債務を弁済するのに不足するとき、清算人は直ちに破産宣告を申し立てなければなりません。債務超過、支払不能、担保、租税債務および債権者数を確認し、通常清算を続けられるかを個別に判断します。';
 const suspensionChangeParagraph =
   '休業中も、所在地、責任者、定款、資本額等に変更があれば、必要な変更登記を行います。車両や建物等を保有している場合は、地方税その他の負担も別途確認してください。恒久的に事業を終了する場合、休業は解散・清算の代わりにはなりません。';
+const factSpecificParagraph =
+  'そのほかの民事上・刑事上・税務上の責任は、資金移動の目的、権限、証憑、会計処理および当事者の関係などの具体的な事実によって異なります。特定の取引があったという理由だけで背任罪などが当然に成立すると断定することはできず、逆に内部承認があったという理由だけですべての責任が除外されると考えることもできません。決議書、契約書、税額の計算・申告資料、銀行取引明細および帳簿が互いに一致しているかを、取引ごとに確認しなければなりません。';
+const staleCondensedFactParagraph =
+  'このほかに民事上、刑事上または税務上の問題が生じるかどうかは、資金移動の目的、権限、証憑、会計処理、会社と株主との関係等の具体的な事実により異なります。';
 
 describe('Japanese investment column 002 — company exit and capital return', () => {
   it('publishes the contracted frontmatter and exactly three exact FAQs', () => {
@@ -79,17 +83,20 @@ describe('Japanese investment column 002 — company exit and capital return', (
   });
 
   it('states the narrow Article 9 rule, Article 90 safeguard, and fact-specific consequences', () => {
-    for (const paragraph of [article9Paragraph, article90Paragraph]) {
+    for (const paragraph of [
+      article9Paragraph,
+      article90Paragraph,
+      factSpecificParagraph,
+    ]) {
       expect(raw).toContain(paragraph);
       expect(post?.content).toContain(paragraph);
     }
 
     expect(post?.content).toContain(
-      'このほかに民事上、刑事上または税務上の問題が生じるかどうかは、資金移動の目的、権限、証憑、会計処理、会社と株主との関係等の具体的な事実により異なります。',
-    );
-    expect(post?.content).toContain(
       '会社財産は会社に帰属し、株主の個人財産ではありません。',
     );
+    expect(raw).not.toContain(staleCondensedFactParagraph);
+    expect(post?.content).not.toContain(staleCondensedFactParagraph);
   });
 
   it('covers vote thresholds, registration, tax filings, and the qualified exit process', () => {

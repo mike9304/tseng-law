@@ -160,8 +160,54 @@ describe('Japanese investment column 002 — company exit and capital return', (
   });
 
   it('covers insolvency, lawful capital reduction, and suspension without overpromising', () => {
-    const requiredPhrases = [
+    const sectionStart = '## 債務超過や支払不能の場合';
+    const sectionEnd = '## 会社を存続させる場合の減資';
+    const extractInsolvencySection = (source: string): string => {
+      const start = source.indexOf(sectionStart);
+      const end = source.indexOf(sectionEnd, start);
+      expect(start).toBeGreaterThanOrEqual(0);
+      expect(end).toBeGreaterThan(start);
+      return source.slice(start, end);
+    };
+
+    const rawSection = extractInsolvencySection(raw);
+    const contentSection = extractInsolvencySection(post?.content ?? '');
+
+    // The full translation keeps exactly six paragraphs in this section.
+    const countParagraphs = (section: string): number =>
+      section
+        .split(/\n\s*\n/)
+        .filter((block) => block.trim() !== '' && !block.startsWith('## ')).length;
+    expect(countParagraphs(rawSection)).toBe(6);
+    expect(countParagraphs(contentSection)).toBe(6);
+
+    const sectionPhrases = [
+      // 会社法第89条と直ちに破産宣告の申立て
       insolvencyParagraph,
+      // 決算日以後の債務・保証債務・訴訟上の請求・従業員関係の金額・税務調査の可能性・実際の処分価値
+      '最近の財務諸表だけでなく、決算日以後に発生した債務、保証債務、訴訟上の請求、従業員関係の金額、税務調査の可能性、資産の実際の処分価値を反映しなければなりません。',
+      // 債務超過と支払不能の異なる定義
+      '債務超過は一般に資産と負債を比較する財務状態の問題であり、支払不能は弁済期に到来した債務を支払えるかどうかに関する問題です。',
+      // 即時の現金化可能性・担保・一時的な現金不足の区別
+      'すぐに現金化できない場合や担保が設定されている場合には、弁済能力は異なる評価を受けることがあります。',
+      '一時的な現金不足だけですべての場合に同じ手続が適用されると断定することもできません。',
+      // 特定の債権者・株主への先払いの危険、担保権・租税債権・賃金の優先関係、支払の根拠と時期の記録
+      '特定の債権者や株主にのみ先に支払うと、他の債権者の利益と手続上の公平を害するおそれがあります。',
+      '担保権、租税債権、賃金など債権の種類と優先関係は、適用される各法令に従って確認し、すでに行われた支払についても根拠と時期を記録しなければなりません。',
+      // 旧版の案内の単純な算式の排除、実際の資料・回収可能性・売却費用・現実的な価値
+      '旧版の案内に見られる単純な算式や複数の要件だけで破産申立ての可否を決めてはいけません。',
+      '会社が保有する債権の回収可能性と資産の売却費用も、名目金額ではなく現実的な価値で検討しなければなりません。',
+      // 新規の貸付け・増資・債務免除・債権者との合意の会計・税務上の効果と他の債権者の権利
+      '新規の貸付け、増資、債務免除または債権者との合意は、それぞれ異なる会計・税務上の結果をもたらすことがあります。',
+      'これらの措置がすでに生じた支払不能の問題を解消するかどうか、他の債権者の権利を侵害しないかどうか、およびその後に通常清算を続けられるかどうかを併せて判断しなければなりません。',
+    ];
+
+    for (const phrase of sectionPhrases) {
+      expect(rawSection).toContain(phrase);
+      expect(contentSection).toContain(phrase);
+    }
+
+    const requiredPhrases = [
       '会社を終了せずに出資の一部を株主へ返す方法として、減資を検討できる場合があります。',
       '会社形態に応じた決議、債権者保護、資本額の検証と会計処理、外国投資、税務、送金および変更登記の各手続を確認する必要があります。',
       suspensionFaqAnswer,

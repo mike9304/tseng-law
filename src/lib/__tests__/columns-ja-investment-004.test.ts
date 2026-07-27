@@ -59,12 +59,49 @@ const extractSection1 = (text: string): string => {
   expect(end).toBeGreaterThan(start);
   return text.slice(start, end);
 };
-const treatyEligibilityParagraph =
-  'この違いだけを見て、子会社の税負担が常に大きいと結論づけることはできません。課税所得、繰越欠損金、費用の帰属、留保する利益、資金調達方法、利子その他の支払、利益送金の時期、租税協定の適用資格および親会社所在地の税制を総合して比較する必要があります。協定税率を利用する場合には、居住者証明書や受益者の確認など、適用要件と手続も確認します。';
-const lossQualification =
-  '台湾支店の損益は外国本店との関係で処理されますが、韓国側で損失をどのように扱えるかは、韓国税法、会計基準、外国税額控除その他の制度により異なります。台湾支店を選べば韓国親会社の税負担が必ず減るとはいえません。';
+const businessTaxParagraph =
+  '営業税（營業稅）は、台湾で財貨または役務を供給する取引に適用される間接税です。一般税率は5％で、通常は2か月を1課税期間として申告します。ただし、ゼロ税率、免税、特別税率または仕入税額控除の適否は、取引の性質によって異なり得ます。子会社と支店のいずれも台湾で課税事業を行うのであれば営業税上の義務を検討しなければなりませんが、5％という数字だけで各事業者の実際の納付税額が同じであるとはいえません。';
+const businessIncomeTaxParagraph =
+  '営利事業所得税（營利事業所得稅）は、営利事業者の課税所得を基準として計算します。課税所得が法定基準額を超える場合、一般税率は20％です。売上高にそのまま20％を掛ける税金ではなく、収益の認識、損金算入、減価償却、欠損金控除、税額控除および移転価格の調整により、課税標準と実際の税額が異なります。同じ売上に同じ税率が適用されても、契約構造と費用帰属が異なれば、子会社と支店の申告結果は同じにならないことがあります。';
+const dividendWithholdingParagraph =
+  '台湾子会社が税引後利益を国外の親会社に配当する場合、子会社と株主は別個の法的主体です。台湾国内法によれば、国外株主に支払う配当の源泉徴収率は21％です。ただし、親会社が韓国の居住者であり、台湾・韓国所得税協定の適用対象となり、かつ配当の受益所有者に該当するなどの適用要件を満たす場合には、協定上の上限税率10％の適用を検討することができます。協定税率は、受取人が韓国にいるという事実だけで自動的に適用されるわけではありません。居住者証明書、受益所有者の判定、支払・申告時期および必要な申請や還付手続について、最新の実務に沿って確認する必要があります。';
+const branchRemittanceParagraph =
+  '外国会社の台湾支店で発生した利益は、別個の会社が得て株主に分配する利益ではなく、外国本店に帰属する利益の一部です。したがって、台湾で営利事業所得税を申告・納付した後、税引後の支店利益を本店に送金する行為は配当とは区別され、支店の段階では原則として追加の配当源泉徴収はありません。もっとも、支店と本店の間のすべての支払が常に同じ扱いを受けるわけではありません。利息、使用料、サービスの対価、資産の代金または第三者に対する支払が混在している場合には、各支払の実質と源泉徴収義務を個別に判断しなければなりません。';
+const undistributedEarningsParagraph =
+  '未分配利益の追加税額についても、法的構造を区別して考える必要があります。台湾子会社が利益を留保すれば、所得税法第66条の9に基づく未分配利益に対する5％の追加税額が問題となり得ます。他方、台湾財政部の案内によれば、本店が台湾国外にある営利事業者は、当該未分配利益の申告対象から除外されます。これは、支店の台湾での営業活動が課税されないという意味でもなく、本店への送金に関連するすべての証憑を整備・保存する義務がなくなるという意味でもありません。';
+const profitUsageParagraph =
+  '形態を比較するときは、税率表よりも、利益が生じ、どのように使われるかという過程を見る必要があります。子会社は自社の帳簿で課税所得、費用、欠損金、利益の留保と配当可能額を計算します。今後台湾で再投資する資金が必要か、いつ配当するか、株主貸付や使用料があるかによって、結果は異なり得ます。支店は台湾での営業に帰属する収益と費用を区分し、本店の共通費用の配賦根拠を整えなければなりません。本店と支店間の内部取引の会計上の表示と税務上の帰属も検討する必要があります。';
 const transferPricingParagraph =
-  '移転価格や本支店間の費用配賦には、根拠資料が必要です。契約、請求、会計処理および資金移動の実態を一致させ、台湾と本店所在地の双方で申告上の扱いを確認してください。';
+  '子会社と親会社の間の取引および支店と本店の間の費用配分には、移転価格の原則が適用されることがあります。契約書、請求書、計算根拠、従業員等が実際に行う業務、資産の使用と資金の移動が互いに一致しなければなりません。単に本店が支払ったという理由だけですべての費用を台湾支店の損金として扱ったり、グループ内部契約に金額が記載されているという理由だけで子会社の費用が当然に認められると考えたりすることはできません。取引の性質と独立企業間価格を裏付ける資料を保存しなければなりません。';
+const koreaSideTaxParagraph =
+  '韓国側では、外国税額控除、国外子会社からの配当、支店の所得と損失、連結または個別の会計処理、外国為替申告をあわせて確認する必要があります。台湾支店の初期損失が本店との関係でどのように処理されるかは、韓国の税法および会計基準によって異なり得ます。したがって、支店を選択すれば韓国親会社の税負担が減ると、あらかじめ結論づけることはできません。台湾における税額と韓国における最終的な負担、現金の回収時点、証憑の整備費用を一つの計算表で比較することが望まれます。';
+const section2ProseParagraphs = [
+  taxAnswer,
+  businessTaxParagraph,
+  businessIncomeTaxParagraph,
+  dividendWithholdingParagraph,
+  branchRemittanceParagraph,
+  undistributedEarningsParagraph,
+  profitUsageParagraph,
+  transferPricingParagraph,
+  koreaSideTaxParagraph,
+];
+const section2TableHeader = '| 税務項目 | 台湾子会社 | 外国会社の台湾支店 |';
+const section2TableRows = [
+  '| 営業税 | 一般税率5％。通常は2か月ごとに申告 | 一般税率5％。通常は2か月ごとに申告 |',
+  '| 営利事業所得税 | 課税所得が基準額を超える場合、一般税率20％ | 台湾支店に帰属する課税所得に一般税率20％ |',
+  '| 国外への利益移転 | 国外親会社への配当は国内法上21％の源泉徴収。協定要件を満たす場合、台湾・韓国間の配当の上限税率は10％ | 税引後の支店利益の本店送金は配当ではなく、原則として別途の配当源泉徴収なし |',
+  '| 未分配利益への追加課税 | 利益を留保する場合は所得税法上5％の追加税額を検討 | 本店が台湾国外にある営利事業者は申告対象外 |',
+  '| 主要な計算上の論点 | 費用・欠損金・利益留保・配当時期・受益所有者 | 台湾帰属所得・本店と支店の費用配分・移転価格・送金資料 |',
+];
+
+const extractSection2 = (text: string): string => {
+  const start = text.indexOf(section2Heading);
+  const end = text.indexOf(section3Heading);
+  expect(start).toBeGreaterThanOrEqual(0);
+  expect(end).toBeGreaterThan(start);
+  return text.slice(start, end);
+};
 const branchObligationParagraph =
   '支店は外国会社とは別の法人ではないため、台湾支店の債務は外国会社の債務となります。支店責任者が外国会社名義で適法に締結した賃貸借、売買、役務、雇用、借入などの契約から発生した義務は、原則として外国本店が負担します。台湾での営業に損失が生じた場合や、支店の資産だけでは債務を弁済できない場合であっても、法的な主体である外国会社の責任が支店に割り当てた資金だけに限定されるわけではありません。';
 const subsidiaryObligationParagraph =
@@ -296,11 +333,8 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
     expect(raw).toContain(legalFormAnswer);
 
     const requiredParagraphs = [
-      taxAnswer,
       legalIdentityParagraph,
-      treatyEligibilityParagraph,
-      lossQualification,
-      transferPricingParagraph,
+      ...section2ProseParagraphs,
       ...section3ProseParagraphs,
       ...section4ProseParagraphs,
       ...section7ProseParagraphs,
@@ -363,6 +397,68 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
       expect(section).toContain(comparisonTableHeader);
       for (const row of comparisonTableRows) {
         expect(section).toContain(row);
+      }
+    }
+  });
+
+  it('bounds section 2 to nine prose paragraphs and five exact tax-comparison rows', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      const section = extractSection2(body);
+      const blocks = section
+        .split(/\n{2,}/)
+        .map((block) => block.trim())
+        .filter(Boolean);
+
+      expect(blocks[0]).toBe(section2Heading);
+      const contentBlocks = blocks.slice(1);
+      const proseBlocks = contentBlocks.filter((block) => !block.startsWith('|'));
+      const tableBlocks = contentBlocks.filter((block) => block.startsWith('|'));
+
+      expect(proseBlocks).toHaveLength(9);
+      expect(proseBlocks).toEqual(section2ProseParagraphs);
+      expect(tableBlocks).toHaveLength(1);
+
+      const tableLines = tableBlocks[0]
+        .split('\n')
+        .map((line) => line.trim())
+        .filter(Boolean);
+      expect(tableLines[0]).toBe(section2TableHeader);
+      expect(tableLines[1]).toMatch(/^\|[\s|-]+\|$/u);
+      const bodyRows = tableLines.slice(2);
+      expect(bodyRows).toHaveLength(5);
+      expect(bodyRows).toEqual(section2TableRows);
+
+      for (const paragraph of section2ProseParagraphs) {
+        expect(section).toContain(paragraph);
+      }
+      for (const taxMarker of [
+        '営業税5％',
+        '営利事業所得税20％',
+        '源泉徴収率は21％',
+        '上限10％',
+        '2か月を1課税期間として申告',
+        '所得税法第66条の9',
+        '居住者証明書',
+        '受益所有者',
+      ]) {
+        expect(section).toContain(taxMarker);
+      }
+      for (const paymentType of [
+        '利息',
+        '使用料',
+        'サービスの対価',
+        '資産の代金',
+      ]) {
+        expect(section).toContain(paymentType);
+      }
+      for (const documentationMarker of [
+        '移転価格の原則',
+        '独立企業間価格を裏付ける資料',
+        '外国税額控除',
+        '連結または個別の会計処理',
+        '外国為替申告',
+      ]) {
+        expect(section).toContain(documentationMarker);
       }
     }
   });

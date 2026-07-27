@@ -27,7 +27,7 @@ A single haircut came with all these premium services, making it excellent value
 
 It was very similar to today’s Vietnamese-style shampoo service.
 
-And this Taiwanese-style barbershop remains a unique cultural memory for many people in Taiwan.
+These Taiwanese-style barbershops remain a distinctive part of the cultural memory of many Taiwanese people.
 
 (Did I just give away my age?)
 

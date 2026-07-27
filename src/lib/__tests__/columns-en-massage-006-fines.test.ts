@@ -17,6 +17,15 @@ describe('English massage column 006 — fine amounts', () => {
     expect(raw).not.toContain('Getting a haircut once let you');
   });
 
+  it('describes the barbershops as part of Taiwan cultural memory naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'These Taiwanese-style barbershops remain a distinctive part of the cultural memory of many Taiwanese people.',
+    );
+    expect(raw).not.toContain('this Taiwanese-style barbershop');
+  });
+
   it('links the present-day number of massage shops to the petition without overstating causation', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

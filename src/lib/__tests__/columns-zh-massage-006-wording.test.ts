@@ -25,4 +25,13 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     );
     expect(raw).not.toContain('一次大法官釋憲的申請');
   });
+
+  it('describes barriers and limited occupational options in one natural sentence', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '在台灣，視障者在成長過程、日常生活、學習與教育等方面都面臨許多障礙，能從事的職業也十分有限。',
+    );
+    expect(raw).not.toContain('視障者在成長、活動、學習、教育');
+  });
 });

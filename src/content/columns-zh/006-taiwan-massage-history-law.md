@@ -61,11 +61,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-在台灣
-
-視障者在成長、活動、學習、教育等各方面都面臨許多障礙
-
-能從事的職業非常有限。
+在台灣，視障者在成長過程、日常生活、學習與教育等方面都面臨許多障礙，能從事的職業也十分有限。
 
 因此當時的立法者為了保護弱勢的視障者
 

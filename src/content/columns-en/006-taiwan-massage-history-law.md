@@ -111,4 +111,4 @@ you should immediately say so or request that it stop, in order to protect yours
 
 If you feel you have been sexually harassed,
 
-you should go to a police station with a trusted friend or a Taiwan lawyer and file a report.
+you should go to a police station with a trusted friend or a lawyer in Taiwan and file a report.

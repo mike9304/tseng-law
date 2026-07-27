@@ -244,4 +244,14 @@ describe('English massage column 006 — fine amounts', () => {
     );
     expect(raw).not.toContain('What began as simply wanting a massage');
   });
+
+  it('advises filing a police report with a trusted friend or a lawyer in Taiwan, without a nationality-like calque', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'you should go to a police station with a trusted friend or a lawyer in Taiwan and file a report.',
+    );
+    expect(raw).not.toContain('a Taiwan lawyer');
+    expect(raw).toContain('If you feel you have been sexually harassed,');
+  });
 });

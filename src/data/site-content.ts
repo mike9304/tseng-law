@@ -1300,7 +1300,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           ],
           relatedColumns: [
             { title: '台灣健身房受傷求償：一審案例、期限、證據與賠償項目', slug: 'taiwan-gym-injury-lawsuit' },
-            { title: '交通事故處理程序', slug: 'taiwan-traffic-accident-procedure' },
+            { title: '台灣交通事故應對 Q&A：現場處置、過失、和解與損害賠償', slug: 'taiwan-traffic-accident-procedure' },
             { title: '台灣超車事故的責任如何判斷？', slug: 'taiwan-overtaking-accident-liability' },
           ]
         },

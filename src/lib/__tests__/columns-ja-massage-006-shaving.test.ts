@@ -63,6 +63,16 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     expect(raw).not.toContain('つい年齢を明かしてしまったでしょうか');
   });
 
+  it('describes sexual harassment and indecent conduct without overcharging the offense', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '施術中のセクシャルハラスメントやわいせつ行為は後を絶ちません。',
+    );
+    expect(raw).not.toContain('セクシャルハラスメントや性的暴行');
+    expect(raw).not.toContain('わいせつ行為の事件');
+  });
+
   it('describes streets lined with massage shops without a literal compound', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

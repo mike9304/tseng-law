@@ -34,4 +34,22 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     );
     expect(raw).not.toContain('一度の憲法解釈の申立て');
   });
+
+  it('uses Japanese currency units and preserves each fine amount', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '当時の法律に基づき、林氏には4万新台湾ドル、2名の従業員にはそれぞれ1万新台湾ドルと2万新台湾ドルの罰金が科されました。',
+    );
+    expect(raw).not.toContain('万元');
+  });
+
+  it('describes barriers faced by visually impaired people naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '台湾では、視覚障害者は成長過程や日常生活、学習、教育など、さまざまな場面で多くの障壁に直面しており、従事できる職業も非常に限られています。',
+    );
+    expect(raw).not.toContain('多くの面で障害があり');
+  });
 });

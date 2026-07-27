@@ -112,6 +112,17 @@ describe('English massage column 006 — fine amounts', () => {
     );
   });
 
+  it('states the employment-and-livelihood question naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'and questions were raised as to whether the provision truly helped protect the jobs and livelihoods of people with visual impairments.',
+    );
+    expect(raw).not.toContain(
+      'contributed to protecting the employment and livelihood of persons with visual impairments',
+    );
+  });
+
   it('connects massage-related misconduct to lasting trauma naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

@@ -69,7 +69,7 @@ In the course of the debate over the occupational rights of people with and with
 
 For example, some felt that a provision expressly allowing only people with visual impairments to engage in the massage business might constitute discrimination against people without visual impairments,
 
-and questions were raised as to whether the provision truly contributed to protecting the employment and livelihood of persons with visual impairments.
+and questions were raised as to whether the provision truly helped protect the jobs and livelihoods of people with visual impairments.
 
 In the end, the Grand Justices declared the statutory provision allowing only the visually impaired to engage in the massage business unconstitutional.
 

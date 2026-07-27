@@ -16,4 +16,13 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     );
     expect(raw).not.toContain('剃髪');
   });
+
+  it('describes the bundled service in natural Japanese', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '一度散髪するだけで、ここまで充実したサービスを受けられたのですから、コストパフォーマンスは抜群でした。',
+    );
+    expect(raw).not.toContain('特級サービス');
+  });
 });

@@ -21,7 +21,8 @@ const employerQualificationAnswer = japaneseServiceDetails.investment.keyPoints[
 const section1Heading =
   '## 1. 台湾への進出形態：子会社・支店・代表者事務所';
 const section2Heading = '## 2. 台湾子会社設立の主要な手続';
-const section3LegacyMarker =
+const section3Heading = '## 3. 業種と営業場所の事前確認';
+const section4LegacyMarker =
   '> 外国人が台湾で会社を設立するときによくある質問';
 const section1Paragraphs = [
   entityFaqAnswer,
@@ -60,7 +61,20 @@ const section2Steps = [
 ];
 const extractSection2 = (body: string): string => {
   const start = body.indexOf(section2Heading);
-  const end = body.indexOf(section3LegacyMarker, start);
+  const end = body.indexOf(section3Heading, start);
+  expect(start).toBeGreaterThanOrEqual(0);
+  expect(end).toBeGreaterThan(start);
+  return body.slice(start, end);
+};
+const section3Paragraphs = [
+  '多くの業種で外国投資は可能ですが、禁止・制限業種、専門資格、営業場所の制限および業種別の許認可は別途確認する必要があります。医療機器、酒類、旅行、建設、専門サービスのように、監督官庁の許可・登録または資格が問題となり得る分野では、実際に提供する商品・サービスや取引の構造を基準に、適用される規定を検討する必要があります。',
+  '会社登記に営業項目を記載できるという事実だけで、その営業を直ちに開始できるわけではありません。会社名と営業項目の予備審査、会社設立登記、税籍登記、業種別の許認可は、それぞれ目的が異なります。オンライン販売とオフライン店舗、輸入と国内流通、直接サービスと仲介サービスのように運営方式が異なれば、必要な登録や責任も異なり得ます。',
+  '会社の所在地は、単なる郵便物の受取先ではなく、登記、税務および実際の営業の基礎となります。賃貸借契約を締結する前に、予定する住所と営業項目について、土地使用分区、建築管理、賃貸借条件および税籍登記上の適合性を確認する必要があります。建物の用途や管理規約が実際の事業に合わない場合、または必要な賃貸人の同意を得られない場合には、登記後であっても場所の変更や追加手続が必要となることがあります。',
+  '台北市では、適用対象となる会社・商業登記について、営業場所事前照会（營業場所預先查詢）制度を運用しています。ただし、この照会結果だけで他の許認可や専門法令上の要件まで満たされるわけではありません。他の地域に所在地を置く場合には、当該地方政府および所管官庁の手続を確認し、長期の賃貸借契約を締結したり施設に投資したりする前に、場所の適合性を書面で確認しておくとよいでしょう。',
+];
+const extractSection3 = (body: string): string => {
+  const start = body.indexOf(section3Heading);
+  const end = body.indexOf(section4LegacyMarker, start);
   expect(start).toBeGreaterThanOrEqual(0);
   expect(end).toBeGreaterThan(start);
   return body.slice(start, end);
@@ -99,7 +113,7 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       .split('> 外国人が台湾で会社を設立するときによくある質問')[1]
       ?.split('以上が、台湾での会社設立に関する基本的な内容です。')[0];
     expect(Array.from(bodyFaq?.matchAll(/\*\*(\d+)\./g) ?? [], (match) => match[1])).toEqual(
-      ['1', '2', '3', '4', '5', '6', '7', '8'],
+      ['1', '3', '4', '5', '6', '8'],
     );
   });
 
@@ -125,14 +139,13 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       '会社設立登記',
       '輸出入、業種別許認可、就業許可・居留等の追加手続（該当する場合）',
       '外国人は在学中でも投資・会社設立を申請できますが、現在の在留資格で就労または会社経営が認められるとは限りません。投資手続、就業許可および居留資格はそれぞれ確認が必要です。',
-      '多くの業種で外国投資が可能ですが、禁止・制限業種、専門資格、営業場所および業種別許認可の確認が必要です。',
+      ...section3Paragraphs,
       residenceFaqAnswer,
       '就業許可等に基づく居留証を取得した場合、配偶者および未成年の子は、要件を満たせば依親居留を申請できます。家族の居留は自動的に付与されるものではなく、個別の申請と審査が必要です。',
       '会社設立自体について一律の法定最低資本金があるわけではありません。ただし、業種別の最低資本額、事業計画の合理性、銀行審査および就業許可上の雇用主要件は別途確認が必要です。',
       employerQualificationAnswer,
       'ここでいう基準は、外国籍主管の就業許可に関する雇用主側の要件であり、会社設立そのものについて一律に適用される最低資本金ではありません。また、当該基準を満たすだけで許可が当然に付与されるものではなく、申請者の職務や提出書類等も審査されます。',
       '一般の外国人は、原則として台湾で合法的に5年連続して居留し、各年183日以上滞在するなどの要件を満たす場合に永久居留を申請できます。外国専門人材には平均年間滞在日数等の別の計算基準があり、素行、資産・技能その他の法定要件も審査されます。就業許可または居留証を5年間保有しただけで自動的に永久居留となるわけではありません。',
-      '会社設立には所在地が必要です。所在地と営業項目について、土地使用分区、建築管理、賃貸借条件および税籍登記上の適合性を事前に確認してください。台北市では、対象となる会社・商業登記について「営業場所事前照会」制度が運用されています。',
       '台湾の営業税は、一般税率が5％で、通常は2か月ごとに申告します。営利事業所得税の一般税率は20％ですが、実際の課税は課税所得と適用規定により異なります。非居住者に支払う配当の台湾国内法上の源泉徴収率は21％です。台湾・韓国所得税協定の適用要件と手続を満たす配当については、上限税率10％が適用されます。具体的な申告・源泉徴収は、居住者区分、受益者、所得の種類および協定適用書類を確認して処理する必要があります。',
       '曾雋崴弁護士は韓国語での相談に対応しています。ご相談をご希望の場合は、公式お問い合わせ窓口からご連絡ください。内容を確認のうえ、順次ご案内します。',
     ];
@@ -225,6 +238,37 @@ describe('Japanese investment column 001 — company-setup basics', () => {
     expect(rawSection.indexOf(section2ProseParagraphs[4])).toBeLessThan(
       rawSection.indexOf(imageLine),
     );
+  });
+
+  it('bounds section 3 to four source-ordered industry and location paragraphs', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      const section = extractSection3(body);
+      const blocks = section
+        .split(/\n{2,}/u)
+        .map((block) => block.trim())
+        .filter(Boolean);
+      const prose = blocks.filter(
+        (block) => !block.startsWith('#') && !block.startsWith('!['),
+      );
+
+      expect(blocks[0]).toBe(section3Heading);
+      expect(prose).toEqual(section3Paragraphs);
+      expect(prose).toHaveLength(4);
+
+      for (const marker of [
+        '禁止・制限業種',
+        '監督官庁の許可・登録または資格',
+        'オンライン販売とオフライン店舗',
+        '輸入と国内流通',
+        '直接サービスと仲介サービス',
+        '土地使用分区',
+        '賃貸人の同意',
+        '営業場所事前照会（營業場所預先查詢）',
+        '場所の適合性を書面で確認',
+      ]) {
+        expect(section).toContain(marker);
+      }
+    }
   });
 
   it('removes stale statistics, universal promises, old agencies, and Korean links', () => {

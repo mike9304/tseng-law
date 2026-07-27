@@ -107,7 +107,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 如今許多人選擇按摩來舒解壓力，
 
-但在過程中，性騷擾或性侵事件卻層出不窮。
+但在按摩過程中，性騷擾或猥褻事件卻層出不窮。
 
 原本只是單純想透過按摩舒壓
 

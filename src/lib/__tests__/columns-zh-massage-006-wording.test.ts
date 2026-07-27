@@ -97,6 +97,19 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     expect(raw).not.toContain('在時代潮流中不斷變化');
   });
 
+  it('renders 성추행 as non-escalating indecent conduct, not sexual assault', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '但在按摩過程中，性騷擾或猥褻事件卻層出不窮。',
+    );
+    expect(raw).not.toContain('但在過程中，性騷擾或性侵事件卻層出不窮。');
+    expect(raw).not.toContain('性侵');
+    expect(raw).toContain('性騷擾');
+    expect(raw).toContain('猥褻');
+    expect(raw).toContain('層出不窮');
+  });
+
   it('states prison terms without the redundant 最高 qualifier', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

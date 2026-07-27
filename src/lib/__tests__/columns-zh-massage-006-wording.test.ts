@@ -47,4 +47,18 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     );
     expect(raw).not.toContain('職業權利的爭議過程中');
   });
+
+  it('states the cross-country rights-balance conclusion naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '由此可見，各國為了保護不同群體的權益，採取了不同的做法。',
+    );
+    expect(raw).toContain('各群體的權益保護隨時代變遷不斷改變。');
+    expect(raw).toContain(
+      '而立法者為了解決利益衝突，努力尋找相對均衡的解決方案。',
+    );
+    expect(raw).not.toContain('不同的處理方式');
+    expect(raw).not.toContain('在時代潮流中不斷變化');
+  });
 });

@@ -8,6 +8,16 @@ const articlePath = path.join(
 );
 
 describe('Japanese massage column 006 — traditional barbershop service', () => {
+  it('opens with a natural nostalgic question about old-fashioned barbershops', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '皆さまは、台湾の昔ながらの理髪店を覚えていらっしゃいますか？',
+    );
+    expect(raw).not.toContain('理髪店の時代を経験した');
+    expect(raw).not.toContain('昔ながらの伝統的な理髪店');
+  });
+
   it('translates shaving as beard shaving rather than head shaving', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-皆さまは、台湾の初期の伝統的理髪店の時代を経験したことがありますか？
+皆さまは、台湾の昔ながらの理髪店を覚えていらっしゃいますか？
 
 当時の理髪店のシャンプーの仕方は、とても独特でした。
 

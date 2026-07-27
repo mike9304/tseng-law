@@ -12,14 +12,11 @@ const sourceBytes = fs.readFileSync(columnPath);
 const immutablePrefixLength = 2_274;
 const immutablePrefixSha256 =
   'ca0ceb7801a6df1447cd6a1d819fcaca7df7d181f4eebd5c87647f10549db283';
-const immutableTailMarker = Buffer.from('## 1. 法人格と出資関係', 'utf8');
-const immutableTailLength = 10_174;
-const immutableTailSha256 =
-  'a6a59ae4a040317215fdd6c62d733d16acdcf6fe825dd4414ddcc01acd283a83';
+const section1Marker = Buffer.from('## 1. 法人格と出資構造', 'utf8');
 const imageLine =
   '![](../images/004-taiwan-company-subsidiary-vs-branch/img-01.jpg)';
 
-const tailOffset = sourceBytes.indexOf(immutableTailMarker);
+const tailOffset = sourceBytes.indexOf(section1Marker);
 const introBytes =
   tailOffset === -1
     ? Buffer.alloc(0)
@@ -33,16 +30,28 @@ const paragraphs = structureMatch?.slice(1) ?? [];
 const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
 
 describe('Japanese investment column 004 — synchronized introduction', () => {
-  it('preserves the independently locked prefix and tail byte-for-byte', () => {
+  it('preserves the independently locked prefix byte-for-byte', () => {
     expect(tailOffset).toBeGreaterThanOrEqual(immutablePrefixLength);
 
     const prefix = sourceBytes.subarray(0, immutablePrefixLength);
-    const tail = sourceBytes.subarray(tailOffset);
 
     expect(prefix).toHaveLength(immutablePrefixLength);
     expect(sha256(prefix)).toBe(immutablePrefixSha256);
-    expect(tail).toHaveLength(immutableTailLength);
-    expect(sha256(tail)).toBe(immutableTailSha256);
+  });
+
+  it('bounds the introduction immediately before the single section 1 marker', () => {
+    expect(tailOffset).toBeGreaterThanOrEqual(immutablePrefixLength);
+    expect(
+      sourceBytes
+        .subarray(tailOffset, tailOffset + section1Marker.length)
+        .equals(section1Marker),
+    ).toBe(true);
+    expect(sourceBytes.subarray(tailOffset - 2, tailOffset).toString('utf8')).toBe(
+      '\n\n',
+    );
+    expect(
+      sourceBytes.indexOf(section1Marker, tailOffset + section1Marker.length),
+    ).toBe(-1);
   });
 
   it('contains exactly three prose paragraphs around the unchanged image line', () => {

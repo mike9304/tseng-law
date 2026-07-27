@@ -19,7 +19,46 @@ const taxAnswer =
 const listingAnswer =
   '支店は独立した発行会社ではないため、台湾で上場主体にはなれません。子会社の上場には、会社法および証券取引所の所定要件を満たす必要があります。税制優遇は組織形態だけで一律に決まるものではありません。産業創新条例第10条の1の投資税額控除等について、対象投資、申請期限、控除方法、重複適用および税額上限を個別に確認する必要があります。';
 const legalIdentityParagraph =
-  '台湾子会社は、台湾法に基づいて設立される独立した台湾会社です。外国の親会社とは別の法人として、自ら契約を締結し、権利を取得し、義務を負います。会社形態と適用法令に従って株主構成や機関設計を定めるため、外国の親会社以外の出資者を株主に加える計画にも対応できます。';
+  '台湾会社法第1条は、同法に基づいて組織・登記・設立され、営利を目的とする法人を会社と定めています。これに基づき設立された台湾子会社は、外国の親会社とは別の台湾法人です。子会社は自己の名義で事務所を賃借し、取引契約や労働契約を締結し、財産を取得し、訴訟の当事者となることができます。契約から生じる債権・債務も原則として子会社に帰属します。親会社が経営方針を定めたり役員を選任したりしても、両社の法人格が直ちに一つになるわけではありません。';
+const branchShareholderParagraph =
+  '支店は外国会社の一部であり、支店自体に株主は存在しません。第三者と台湾事業へ共同出資したい場合は、台湾子会社を設立して株主構成を定める方法等を検討する必要があります。責任、議決権、資金調達、許認可および税務は、出資関係と事業計画に応じて確認する必要があります。';
+const limitedLiabilityParagraph =
+  '子会社に適用される責任の範囲は、実際に選択した会社形態と行為に基づいて判断します。たとえば有限公司の株主は、会社法第99条第1項に基づき、原則として出資額を限度に会社に対する責任を負います。しかし第99条第2項は、株主が法人格を濫用して会社が特定の債務を弁済することが困難になり、その濫用が重大である場合に、必要な範囲で責任を負う場合があるという例外を定めています。別途、株主や親会社が保証を提供したり、直接不法行為に関与したりした場合には、その保証や行為に基づく責任も検討する必要があります。したがって、有限責任の原則は重要な出発点ですが、どのような状況でも責任が出資額で終わるという保証ではありません。';
+const branchRegistrationParagraph =
+  '外国会社が自己の名義で台湾で営業しようとする場合は、支店に関する会社法の規定に従わなければなりません。会社法第371条によれば、外国会社は支店登記をせずに外国会社名義で台湾で営業することはできません。第372条に基づき、外国会社は台湾支店の営業に充てる資金を割り当て、台湾責任者を指定しなければなりません。この資金は台湾営業のための本店資金であり、支店の株式や持分ではありません。責任者の指定も、支店を独立した会社に変える手続ではなく、台湾で外国会社の業務を行い責任関係を明確にする仕組みです。';
+const jointVentureTermsParagraph =
+  '第三者と台湾事業を共にする計画であれば、出資比率だけを定めるのでは不十分です。議決権、取締役の選任、重要事項の同意権、追加出資、資金不足時の措置、知的財産の使用、利益分配、競業制限、持分譲渡、デッドロックおよび事業終了を併せて定める必要があります。台湾子会社に共同出資する方式は、これらの関係を会社の株主構成の中で設計できるという利点があります。ただし、特定プロジェクトの契約上の共同事業、別の特別目的構造等、他の適法な方法もあり得るため、子会社だけがすべての共同事業の唯一の解決策だと断定することはできません。';
+const headquartersControlParagraph =
+  '支店方式では、支店運営に関する最終的な法的主体は外国会社です。本店は、台湾責任者が締結できる契約の範囲、銀行取引権限、人事権、報告体系、予算承認および内部統制を具体的に定める必要があります。反対に子会社を選択した場合は、定款と機関構成、株主間の権限配分、子会社と親会社間のサービス・貸付・ライセンス契約を区別して文書化しなければなりません。名称よりも、実際の権限と取引の流れが法的構造に合っているかが重要です。';
+const regulatedBusinessParagraph =
+  '許認可も法人格だけで結論を出すことはできません。業種別の規定が申請主体、最低資本、専門人材、事業場、外国人投資審査または責任者の資格を別途定めることがあるためです。子会社や支店の登記が可能であるという事実と、特定の規制事業を営むことができるという事実は同一ではありません。予定する事業活動を細分化し、各活動の契約当事者と許可名義を先に確認する必要があります。';
+const section1Heading = '## 1. 法人格と出資構造';
+const section2Heading = '## 2. 税務と利益送金';
+const comparisonTableHeader = '| 比較項目 | 台湾子会社 | 外国会社の台湾支店 |';
+const comparisonTableRows = [
+  '| 法的地位 | 台湾法に基づき設立された独立法人 | 外国本店の一部であり、別個の法人格を有しない |',
+  '| 出資・株主構成 | 会社形態に応じて株主と出資関係を定める | 独自の株式・持分・株主構成がない |',
+  '| 第三者との共同投資 | 定款、株主構成、株主間契約等で設計可能 | 支店自体への持分出資は不可能であり、別の適法な共同事業構造を検討 |',
+  '| 責任主体 | 契約と債務は原則として子会社に帰属 | 支店の契約と債務は外国会社に帰属 |',
+  '| 主要な意思決定と運営統制 | 株主総会、取締役等、選択した会社形態の機関と内部規定による | 外国本店の意思決定体系と台湾責任者の権限による |',
+];
+const section1ProseParagraphs = [
+  branchShareholderParagraph,
+  legalIdentityParagraph,
+  limitedLiabilityParagraph,
+  branchRegistrationParagraph,
+  jointVentureTermsParagraph,
+  headquartersControlParagraph,
+  regulatedBusinessParagraph,
+];
+
+const extractSection1 = (text: string): string => {
+  const start = text.indexOf(section1Heading);
+  const end = text.indexOf(section2Heading);
+  expect(start).toBeGreaterThanOrEqual(0);
+  expect(end).toBeGreaterThan(start);
+  return text.slice(start, end);
+};
 const treatyEligibilityParagraph =
   'この違いだけを見て、子会社の税負担が常に大きいと結論づけることはできません。課税所得、繰越欠損金、費用の帰属、留保する利益、資金調達方法、利子その他の支払、利益送金の時期、租税協定の適用資格および親会社所在地の税制を総合して比較する必要があります。協定税率を利用する場合には、居住者証明書や受益者の確認など、適用要件と手続も確認します。';
 const lossQualification =
@@ -71,8 +110,11 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
   });
 
   it('locks the exact legal, tax, liability, listing, incentive, and treaty text', () => {
+    // The condensed FAQ answer is locked via the frontmatter contract; the body
+    // carries the full section 1 prose instead of the FAQ wording verbatim.
+    expect(raw).toContain(legalFormAnswer);
+
     const requiredParagraphs = [
-      legalFormAnswer,
       taxAnswer,
       legalIdentityParagraph,
       treatyEligibilityParagraph,
@@ -99,6 +141,48 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
     ]) {
       expect(treatyParagraph).toContain(peCategory);
       expect(post?.content).toContain(peCategory);
+    }
+  });
+
+  it('bounds section 1 to exactly seven prose paragraphs and five comparison rows', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      const section = extractSection1(body);
+      const blocks = section
+        .split(/\n{2,}/)
+        .map((block) => block.trim())
+        .filter(Boolean);
+
+      expect(blocks[0]).toBe(section1Heading);
+      const contentBlocks = blocks.slice(1);
+      const proseBlocks = contentBlocks.filter((block) => !block.startsWith('|'));
+      const tableBlocks = contentBlocks.filter((block) => block.startsWith('|'));
+
+      expect(proseBlocks).toHaveLength(7);
+      expect(proseBlocks).toEqual(section1ProseParagraphs);
+      expect(tableBlocks).toHaveLength(1);
+
+      const tableLines = tableBlocks[0]
+        .split('\n')
+        .map((line) => line.trim())
+        .filter(Boolean);
+      expect(tableLines[0]).toBe(comparisonTableHeader);
+      expect(tableLines[1]).toMatch(/^\|[\s|-]+\|$/u);
+      const bodyRows = tableLines.slice(2);
+      expect(bodyRows).toHaveLength(5);
+      expect(bodyRows).toEqual(comparisonTableRows);
+    }
+  });
+
+  it('locks the exact section 1 prose and comparison table in raw and published content', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      const section = extractSection1(body);
+      for (const paragraph of section1ProseParagraphs) {
+        expect(section).toContain(paragraph);
+      }
+      expect(section).toContain(comparisonTableHeader);
+      for (const row of comparisonTableRows) {
+        expect(section).toContain(row);
+      }
     }
   });
 

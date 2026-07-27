@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Have you ever experienced the era of Taiwan’s early traditional barbershops?
+Do you remember Taiwan’s old-fashioned barbershops?
 
 The shampoo style at those barbershops was very distinctive.
 

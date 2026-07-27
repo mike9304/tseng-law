@@ -8,6 +8,16 @@ const articlePath = path.join(
 );
 
 describe('English massage column 006 — fine amounts', () => {
+  it('opens with a natural nostalgic question about old-fashioned barbershops', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      'Do you remember Taiwan’s old-fashioned barbershops?',
+    );
+    expect(raw).not.toContain('experienced the era');
+    expect(raw).not.toContain('the days of Taiwan’s traditional barbershops');
+  });
+
   it('describes the bundled barbershop services naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

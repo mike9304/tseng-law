@@ -9,9 +9,9 @@ const columnPath = path.join(
 );
 const sourceBytes = fs.readFileSync(columnPath);
 
-const immutablePrefixLength = 2_274;
+const immutablePrefixLength = 2_275;
 const immutablePrefixSha256 =
-  'ca0ceb7801a6df1447cd6a1d819fcaca7df7d181f4eebd5c87647f10549db283';
+  '5d44faa695e2db17ed32418a3af09155eeb6b5fcfba1307cc173b655c63bd556';
 const section1Marker = Buffer.from('## 1. 法人格と出資構造', 'utf8');
 const imageLine =
   '![](../images/004-taiwan-company-subsidiary-vs-branch/img-01.jpg)';

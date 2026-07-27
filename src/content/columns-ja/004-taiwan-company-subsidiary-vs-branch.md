@@ -1,9 +1,9 @@
 ---
 title: "台湾進出：子会社と支店の違い"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch"
-lastmod: "2026-07-24"
+lastmod: "2026-07-25"
 date_display: "2025年9月13日"
-read_time: "約7分"
+read_time: "約18分"
 categories:
   - "台湾会社設立"
 featured_image: "../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg"

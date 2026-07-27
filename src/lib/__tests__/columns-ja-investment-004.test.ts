@@ -302,9 +302,9 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-24');
+    expect(parsed.data.lastmod).toBe('2026-07-25');
     expect(parsed.data.date_display).toBe('2025年9月13日');
-    expect(parsed.data.read_time).toBe('約7分');
+    expect(parsed.data.read_time).toBe('約18分');
     expect(parsed.data.faq).toEqual([
       {
         q: '台湾支店に台湾人や台湾法人を株主として参加させることはできますか？',
@@ -321,9 +321,9 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
     ]);
 
     expect(post?.title).toBe('台湾進出：子会社と支店の違い');
-    expect(post?.date).toBe('2026-07-24');
+    expect(post?.date).toBe('2026-07-25');
     expect(post?.dateDisplay).toBe('2025年9月13日');
-    expect(post?.readTime).toBe('約7分');
+    expect(post?.readTime).toBe('約18分');
     expect(post?.faq).toEqual(parsed.data.faq);
   });
 

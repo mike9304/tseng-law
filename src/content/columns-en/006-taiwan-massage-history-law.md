@@ -97,7 +97,7 @@ This shows that different countries take different approaches to protecting the 
 
 The protection of each group’s rights and interests continually changes with the times,
 
-and legislators try to find relatively balanced solutions to resolve conflicts of interest.
+and legislators strive to find relatively balanced solutions that reconcile competing interests.
 
 
 

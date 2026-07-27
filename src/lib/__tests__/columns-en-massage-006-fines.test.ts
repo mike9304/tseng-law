@@ -209,6 +209,17 @@ describe('English massage column 006 — fine amounts', () => {
     );
   });
 
+  it('frames the legislative task as reconciling competing interests, not the legal term "conflict of interest"', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+    const normalized = raw.replace(/\s+/g, ' ');
+
+    expect(normalized).toContain(
+      'The protection of each group’s rights and interests continually changes with the times, and legislators strive to find relatively balanced solutions that reconcile competing interests.',
+    );
+    expect(normalized).toContain('competing interests');
+    expect(normalized).not.toContain('conflicts of interest');
+  });
+
   it('connects massage-related misconduct to lasting trauma naturally', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

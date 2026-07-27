@@ -124,8 +124,34 @@ const extractSection4 = (text: string): string => {
   expect(end).toBeGreaterThan(start);
   return text.slice(start, end);
 };
-const incentiveParagraph =
-  '税制優遇は、子会社か支店かという名称だけで一律に決まるものではありません。現行の産業創新条例第10条の1には、一定の新品のスマート機械、5G、サイバーセキュリティ、AI製品・サービス、省エネ・脱炭素関連設備または技術への投資に関する投資税額控除があり、控除額には当年度の営利事業所得税額の30％という上限があります。対象者、投資内容、金額、申請期限、控除方法および他の優遇との関係を個別に確認してください。';
+const incentiveEligibilityOverviewParagraph =
+  '税制優遇は、台湾の子会社か支店かという組織の名称だけで一律に決まるものではありません。納税義務者の資格、実際の投資内容、金額、資産の状態と使用目的、投資時期、申請期限、承認手続、控除方法および他の優遇との重複制限をすべて確認しなければなりません。税額控除は課税所得の計算とも区別する必要があり、支出額の全額を納付税額から直接差し引く制度であると理解してはいけません。';
+const incentivePeriodAmountParagraph =
+  '現行の「産業創新条例」第10条の1は、2025年1月1日から2029年12月31日までの一定の投資を対象としています。同一課税年度に100万台湾ドル以上20億台湾ドル以下を投資する会社または有限合夥が、法定要件と承認手続のもとで適用を検討することができます。投資家は対象資産を自己使用目的で取得しなければならず、新品であることと実際の使用状況も確認しなければなりません。';
+const incentiveFieldsEvidenceParagraph =
+  '対象分野は、新品のスマート機械、5Gシステム、サイバーセキュリティ製品またはサービス、人工知能製品またはサービス、省エネ・炭素削減関連のハードウェア、ソフトウェア、技術または技術サービスです。分野の名称に該当するように見えるという理由だけで自動的に承認されるものではありません。契約書、税務証憑、支払証憑、資産明細、技術内容、使用計画および申請書類が法定の範囲と手続に適合するかを個別に点検しなければなりません。';
+const incentiveMethodsCapParagraph =
+  '法定の選択方式に従い、当該年度の投資額の最大5％をその課税年度の営利事業所得税額から控除するか、投資額の最大3％を3年間にわたり毎年控除する方法を検討することができます。第10条の1に基づく年間控除額は、当該年度の営利事業所得税額の30％が上限です。同一年度に他の投資税額控除と併せて適用する場合には、総控除限度額と重複制限も別途確認しなければなりません。「30％」は研究開発費の30％が自動的に還付されるという意味ではありません。';
+const incentiveArticleDistinctionParagraph =
+  '研究開発活動に関する別の制度は、「産業創新条例」第10条等の他の規定の対象となり得ます。第10条の研究開発関連の控除と第10条の1の特定の設備・技術への投資に対する控除を混同すると、対象支出、申請時期および限度額を誤って判断するおそれがあります。事業者は投資前に、どの条文を適用しようとするのか、申請先と日程はどうなっているのか、他の補助金や控除と併用できるかを区別して検討しなければなりません。';
+const incentiveEntityTimingParagraph =
+  '支店が申請できるか、または子会社が要件を満たすかは、関連法令が定める申請主体と実際の投資関係を基準に判断しなければなりません。単に子会社であるという理由だけで優遇が保証されるわけではなく、支店であるという理由だけですべての税制支援から排除されると断定することもできません。投資契約を締結し資産を取得した後に組織形態を整えようとすると、申請期限や証憑要件を逃すおそれがあるため、投資計画の段階で確認しておくのが安全です。';
+const section5ProseParagraphs = [
+  incentiveEligibilityOverviewParagraph,
+  incentivePeriodAmountParagraph,
+  incentiveFieldsEvidenceParagraph,
+  incentiveMethodsCapParagraph,
+  incentiveArticleDistinctionParagraph,
+  incentiveEntityTimingParagraph,
+];
+
+const extractSection5 = (text: string): string => {
+  const start = text.indexOf(section5Heading);
+  const end = text.indexOf(section6Heading);
+  expect(start).toBeGreaterThanOrEqual(0);
+  expect(end).toBeGreaterThan(start);
+  return text.slice(start, end);
+};
 const section6Heading = '## 6. 台湾・韓国所得税協定と恒久的施設';
 const treatySignatureParagraph =
   '台湾・韓国所得税協定は2021年11月17日に署名され、2023年12月27日に発効し、2024年1月1日から適用されています。協定は双方の地域の居住者の二重課税を調整しますが、すべての台湾源泉所得を自動的に免税とする規定ではありません。所得の種類、受益所有者、居住者の地位、恒久的施設との実質的な関連性および国内手続をそれぞれ確認する必要があります。';
@@ -278,7 +304,7 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
       ...section3ProseParagraphs,
       ...section4ProseParagraphs,
       ...section7ProseParagraphs,
-      incentiveParagraph,
+      ...section5ProseParagraphs,
       ...section6ProseParagraphs,
     ];
 
@@ -377,6 +403,77 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
 
       for (const paragraph of section4ProseParagraphs) {
         expect(section).toContain(paragraph);
+      }
+    }
+  });
+
+  it('bounds section 5 to exactly six prose paragraphs covering the incentive window, methods, cap, and eligibility', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      const section = extractSection5(body);
+      const blocks = section
+        .split(/\n{2,}/)
+        .map((block) => block.trim())
+        .filter(Boolean);
+
+      expect(blocks[0]).toBe(section5Heading);
+      const proseBlocks = blocks.slice(1);
+
+      expect(proseBlocks).toHaveLength(6);
+      expect(proseBlocks).toEqual(section5ProseParagraphs);
+
+      for (const paragraph of section5ProseParagraphs) {
+        expect(section).toContain(paragraph);
+      }
+
+      expect(section).toContain('2025年1月1日から2029年12月31日まで');
+      expect(section).toContain('100万台湾ドル以上20億台湾ドル以下');
+
+      for (const requirement of ['自己使用目的', '新品であること', '実際の使用状況']) {
+        expect(section).toContain(requirement);
+      }
+
+      for (const field of [
+        'スマート機械',
+        '5Gシステム',
+        'サイバーセキュリティ製品またはサービス',
+        '人工知能製品またはサービス',
+        '省エネ・炭素削減関連',
+      ]) {
+        expect(section).toContain(field);
+      }
+
+      for (const evidence of [
+        '契約書、税務証憑、支払証憑、資産明細、技術内容、使用計画および申請書類',
+      ]) {
+        expect(section).toContain(evidence);
+      }
+
+      for (const method of [
+        '最大5％をその課税年度の営利事業所得税額から控除',
+        '最大3％を3年間にわたり毎年控除',
+      ]) {
+        expect(section).toContain(method);
+      }
+
+      for (const cap of [
+        '営利事業所得税額の30％が上限',
+        '自動的に還付されるという意味ではありません',
+      ]) {
+        expect(section).toContain(cap);
+      }
+
+      for (const distinction of [
+        '「産業創新条例」第10条等の他の規定の対象となり得ます',
+        '第10条の研究開発関連の控除と第10条の1の特定の設備・技術への投資に対する控除を混同すると',
+      ]) {
+        expect(section).toContain(distinction);
+      }
+
+      for (const eligibility of [
+        '支店が申請できるか、または子会社が要件を満たすかは',
+        '投資計画の段階で確認しておくのが安全です',
+      ]) {
+        expect(section).toContain(eligibility);
       }
     }
   });

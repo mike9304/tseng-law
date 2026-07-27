@@ -65,10 +65,36 @@ const lossQualification =
   '台湾支店の損益は外国本店との関係で処理されますが、韓国側で損失をどのように扱えるかは、韓国税法、会計基準、外国税額控除その他の制度により異なります。台湾支店を選べば韓国親会社の税負担が必ず減るとはいえません。';
 const transferPricingParagraph =
   '移転価格や本支店間の費用配賦には、根拠資料が必要です。契約、請求、会計処理および資金移動の実態を一致させ、台湾と本店所在地の双方で申告上の扱いを確認してください。';
-const liabilityParagraph =
-  '支店は外国本店と同じ法人であるため、支店の債務は外国会社の債務となります。子会社は独立した法人であり、株主は原則として出資額を限度に責任を負います。ただし、親会社の保証、取締役の義務、不法行為、労働、税務、規制およびグループ会社間の契約等によって別の責任が生じる場合があるため、子会社を設立すればすべてのリスクが遮断されるとは限りません。';
-const riskQualificationParagraph =
-  'たとえば、金融機関や取引先が親会社保証を求める場合、子会社を選んでも親会社が契約上の責任を負うことがあります。役員の法令違反、製品事故、労働問題、租税申告、許認可違反なども、単に法人を分けるだけでリスクが解消されるわけではありません。事業リスクに応じた契約、保険、内部統制およびコンプライアンス体制が必要です。';
+const branchObligationParagraph =
+  '支店は外国会社とは別の法人ではないため、台湾支店の債務は外国会社の債務となります。支店責任者が外国会社名義で適法に締結した賃貸借、売買、役務、雇用、借入などの契約から発生した義務は、原則として外国本店が負担します。台湾での営業に損失が生じた場合や、支店の資産だけでは債務を弁済できない場合であっても、法的な主体である外国会社の責任が支店に割り当てた資金だけに限定されるわけではありません。';
+const subsidiaryObligationParagraph =
+  '台湾子会社は独立した法人であるため、子会社が締結した契約と負担した債務は原則として子会社に帰属します。有限公司の株主は会社法第99条の原則に基づき出資額を限度として責任を負い、股份有限公司の株主は適用される会社形態の規定に基づき引き受けた株式の範囲で責任を負うのが基本です。この違いは、高リスク事業、長期契約、多数の従業員や消費者を相手とする事業において、重要な検討要素となり得ます。';
+const parentGuaranteeParagraph =
+  'もっとも、子会社を設立したからといって、親会社のすべてのリスクが遮断されるわけではありません。銀行や賃貸人が親会社の保証を求める場合、親会社は保証契約に基づき責任を負うことがあります。親会社が子会社の契約を直接引き受けたり、共同当事者として署名したりした場合も同様です。会社財産と株主財産を区別しなかったり、債権者を害する目的で法人格を濫用したりすれば、会社法上の例外が問題となり得ます。責任の境界は、登記上の形式だけでなく、実際の意思決定や資金運営にも影響を受けます。';
+const directorDutyParagraph =
+  '取締役、管理者および台湾責任者の義務も別途確認する必要があります。故意または過失による不法行為、法令違反、虚偽申告、安全管理違反のように行為者自身の責任が成立する事案は、会社形態だけでは解決しません。労働関係、源泉徴収と税務申告、個人情報、消費者保護、環境・製品規制、業種別の許認可義務は、それぞれの法律が定める責任主体と制裁に従います。グループ会社が業務を分けて遂行する場合には、誰がどの義務を実際に担ったのかを、文書と運営が一致するようにしなければなりません。';
+const contractRiskParagraph =
+  '契約段階では、責任制限、損害賠償、保証、担保、準拠法および紛争解決条項を事業リスクに合わせて設計する必要があります。保険で転嫁できるリスクと、内部統制で予防すべきリスクも区別する必要があります。印鑑と電子署名の権限、支出承認、顧客確認、税額計算と申告、規制報告、事故発生時の報告体制を明確にしておけば、組織形態が提供する法的な区分を実際の運営でも維持しやすくなります。';
+const riskConclusionParagraph =
+  '結局、責任の比較は「子会社は安全で支店は危険である」という一文では終わらせられません。支店は外国会社が直接責任を負担する構造であることが明確であり、子会社は独立した法人格と株主の有限責任の原則が出発点となります。その上に、保証、不法行為、法人格の濫用、規制上の責任およびグループ会社間の契約を重ね合わせて、実際のリスク額と統制手段を判断しなければなりません。';
+const section3Heading = '## 3. 債務と法的責任';
+const section4Heading = '## 4. 資金調達と台湾での上場';
+const section3ProseParagraphs = [
+  branchObligationParagraph,
+  subsidiaryObligationParagraph,
+  parentGuaranteeParagraph,
+  directorDutyParagraph,
+  contractRiskParagraph,
+  riskConclusionParagraph,
+];
+
+const extractSection3 = (text: string): string => {
+  const start = text.indexOf(section3Heading);
+  const end = text.indexOf(section4Heading);
+  expect(start).toBeGreaterThanOrEqual(0);
+  expect(end).toBeGreaterThan(start);
+  return text.slice(start, end);
+};
 const financingParagraph =
   '支店には独自の株式や持分がないため、第三者に株式や持分を発行して出資を受けることはできません。台湾で将来の増資、現地パートナーの参加、従業員向け株式報酬、事業再編または持分譲渡による退出を想定する場合、独立法人である子会社のほうが計画を設計しやすいことがあります。';
 const listingParagraph =
@@ -120,8 +146,7 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
       treatyEligibilityParagraph,
       lossQualification,
       transferPricingParagraph,
-      liabilityParagraph,
-      riskQualificationParagraph,
+      ...section3ProseParagraphs,
       financingParagraph,
       listingParagraph,
       incentiveParagraph,
@@ -182,6 +207,26 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
       expect(section).toContain(comparisonTableHeader);
       for (const row of comparisonTableRows) {
         expect(section).toContain(row);
+      }
+    }
+  });
+
+  it('bounds section 3 to exactly six prose paragraphs in raw and published content', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      const section = extractSection3(body);
+      const blocks = section
+        .split(/\n{2,}/)
+        .map((block) => block.trim())
+        .filter(Boolean);
+
+      expect(blocks[0]).toBe(section3Heading);
+      const proseBlocks = blocks.slice(1);
+
+      expect(proseBlocks).toHaveLength(6);
+      expect(proseBlocks).toEqual(section3ProseParagraphs);
+
+      for (const paragraph of section3ProseParagraphs) {
+        expect(section).toContain(paragraph);
       }
     }
   });

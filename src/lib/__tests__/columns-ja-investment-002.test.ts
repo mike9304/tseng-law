@@ -24,8 +24,6 @@ const article90Paragraph =
   '清算人が会社の債務を弁済する前に会社財産を株主へ分配した場合、会社法第90条により、1年以下の有期刑、拘留または6万新台湾ドル以下の罰金が科され得ます。';
 const insolvencyParagraph =
   '解散後の清算は、会社の資産が負債を上回る場合だけに限られるものではありません。会社法第89条によれば、会社財産が債務を弁済するのに不足するとき、清算人は直ちに破産宣告を申し立てなければなりません。債務超過、支払不能、担保、租税債務および債権者数を確認し、通常清算を続けられるかを個別に判断します。';
-const suspensionChangeParagraph =
-  '休業中も、所在地、責任者、定款、資本額等に変更があれば、必要な変更登記を行います。車両や建物等を保有している場合は、地方税その他の負担も別途確認してください。恒久的に事業を終了する場合、休業は解散・清算の代わりにはなりません。';
 const factSpecificParagraph =
   'そのほかの民事上・刑事上・税務上の責任は、資金移動の目的、権限、証憑、会計処理および当事者の関係などの具体的な事実によって異なります。特定の取引があったという理由だけで背任罪などが当然に成立すると断定することはできず、逆に内部承認があったという理由だけですべての責任が除外されると考えることもできません。決議書、契約書、税額の計算・申告資料、銀行取引明細および帳簿が互いに一致しているかを、取引ごとに確認しなければなりません。';
 const staleCondensedFactParagraph =
@@ -37,9 +35,9 @@ describe('Japanese investment column 002 — company exit and capital return', (
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-24');
+    expect(parsed.data.lastmod).toBe('2026-07-25');
     expect(parsed.data.date_display).toBe('2025年9月13日');
-    expect(parsed.data.read_time).toBe('約5分');
+    expect(parsed.data.read_time).toBe('約14分');
     expect(parsed.data.faq).toEqual([
       {
         q: '台湾会社の資金を株主へ戻すには、必ず解散・清算が必要ですか？',
@@ -57,9 +55,9 @@ describe('Japanese investment column 002 — company exit and capital return', (
 
     expect(post?.slug).toBe('withdraw-capital-taiwan-company');
     expect(post?.title).toBe(parsed.data.title);
-    expect(post?.date).toBe('2026-07-24');
+    expect(post?.date).toBe('2026-07-25');
     expect(post?.dateDisplay).toBe('2025年9月13日');
-    expect(post?.readTime).toBe('約5分');
+    expect(post?.readTime).toBe('約14分');
     expect(post?.faq).toEqual(parsed.data.faq);
   });
 
@@ -264,15 +262,93 @@ describe('Japanese investment column 002 — company exit and capital return', (
       expect(contentReductionSection).toContain(phrase);
     }
 
-    const requiredPhrases = [
-      suspensionFaqAnswer,
-      suspensionChangeParagraph,
+    const suspensionSectionStart = '## すぐに終了しない場合の休業';
+    const suspensionSectionEnd = '## 公式資料';
+    const extractSuspensionSection = (source: string): string => {
+      const start = source.indexOf(suspensionSectionStart);
+      const end = source.indexOf(suspensionSectionEnd, start);
+      expect(start).toBeGreaterThanOrEqual(0);
+      expect(end).toBeGreaterThan(start);
+      return source.slice(start, end);
+    };
+
+    const rawSuspensionSection = extractSuspensionSection(raw);
+    const contentSuspensionSection = extractSuspensionSection(post?.content ?? '');
+
+    // The expanded full translation keeps exactly eight paragraphs in this section.
+    expect(countParagraphs(rawSuspensionSection)).toBe(8);
+    expect(countParagraphs(contentSuspensionSection)).toBe(8);
+
+    const suspensionPhrases = [
+      // 休業登記15日、1回の休業期間は最長1年、休業年度の所得税決算申告
+      '1か月以上休業する会社は、休業前または休業開始日から15日以内に休業登記を申請しなければならず、1回の休業期間は1年を超えることはできません。',
+      'ただし、休業した年度も年度の所得税決算申告義務があるため、税務申告が一律に免除されるわけではありません。',
+      // 法人格の維持、権利・義務の一括整理ではない、開始日・終了予定日、会社登記と営業税
+      '休業は、会社が一定期間営業を停止しつつ法人格を維持する選択です。',
+      '会社が消滅したり、既存の権利・義務が一括して整理されたりする効果はありません。',
+      '休業開始日と終了予定日を定め、会社登記と営業税関連の届出がそれぞれ必要かどうか、現在の状態を確認しなければなりません。',
+      // 休業中の登記事項の変更登記、通知を受け取れる住所と責任者、登記情報と実際の状態の一致
+      '休業中も、所在地、責任者、定款、資本額などの登記事項に変更があれば、必要な変更登記を行わなければなりません。',
+      '郵便や機関からの通知を受け取れる住所と責任者を維持し、株主・役員の変動や資本の変更があれば該当する手続に従います。',
+      '事業を行っていないという理由で、登記情報を実際の状態と異なるまま放置してはいけません。',
+      // 保有資産の地方税・管理費・保険料・減価償却、株主による個人的な使用・保管の文書上の区分
+      '車両や建物などの保有資産があれば、地方税や管理費、保険料のような別個の負担が継続することがあります。',
+      '保管、減価償却、賃貸借および処分に伴う会計・税務上の問題も残ります。',
+      '資産を株主が個人的に使用または保管する場合には、会社と個人の権利関係と費用負担を文書で区分しなければなりません。',
+      // 契約・従業員・許認可・銀行口座・電子データ・帳簿と証憑の法定期間保存
+      '契約、従業員、許認可、銀行口座および帳簿保存に関する継続的な義務も確認しなければなりません。',
+      '休業前に取引契約を終了するか維持するかを決定し、労働関係を適法に処理し、業種別の許認可の維持条件と更新期限を確認します。',
+      '銀行口座と税務の電子データを管理する担当者を定め、会計帳簿と証憑を法定期間保存する体制を整えます。',
+      // 売上がないことと申告義務がないことは別、所轄税務機関の登録状態と申告項目
+      '税務申告は、休業登記一つですべて免除されると考えることはできません。',
+      '会社に実際に売上がないという事実と、特定の税目の申告義務がないという結論は同じではないため、所轄税務機関の登録状態と申告項目をそれぞれ確認します。',
+      // 再開・復業登記・恒久的終了、休業は解散・清算の代替手段ではない
+      '休業期間が終わる前には、事業を再開するか、改めて休業の要件を検討するか、恒久的な終了へ移行するかを決定しなければなりません。',
+      '再開する場合は復業登記と税務・許認可の状態を確認し、終了する場合はその時点の資産・負債の資料を基準に解散と清算を準備します。',
+      '会社を恒久的に終了しようとする場合、休業は解散・清算の代替手段ではありません。',
+      // 長期休業の資料紛失・住所変更の未届出の危険と定期的な点検
+      '休業状態が長引くほど、担当者の交代、資料の紛失、住所変更の未届出その他の義務不履行により、後の終了手続がより複雑になることがあります。',
+      '定期的に登記簿、税務上の登録状態、銀行口座、契約、資産、債権・債務および申告履歴を点検し、再開の可能性がなくなったのであれば、会社の実際の状況に合った終了手続を検討しなければなりません。',
     ];
 
-    for (const phrase of requiredPhrases) {
-      expect(raw).toContain(phrase);
-      expect(post?.content).toContain(phrase);
+    for (const phrase of suspensionPhrases) {
+      expect(rawSuspensionSection).toContain(phrase);
+      expect(contentSuspensionSection).toContain(phrase);
     }
+  });
+
+  it('lists the four official sources, three related guides, the disclaimer, and the author', () => {
+    const officialSources = [
+      '1. [台湾会社法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)',
+      '2. [台湾経済部の会社登記規則](https://law.moea.gov.tw/LawContent.aspx?id=FL011312)',
+      '3. [台湾財政部の決算・清算・休業に関する税務案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/liquidation-procedure/x6mOPan)',
+      '4. [台湾経済部の休業申請期限に関する案内](https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=659&method=faqDetlDetl)',
+    ];
+    const relatedGuides = [
+      '1. [台湾投資・会社設立サービス](/ja/services#investment)',
+      '2. [台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)',
+      '3. [お問い合わせ](/ja/contact)',
+    ];
+
+    for (const entry of [...officialSources, ...relatedGuides]) {
+      expect(raw).toContain(entry);
+      expect(post?.content).toContain(entry);
+    }
+    expect(raw).toContain('## 公式資料');
+    expect(raw).toContain('## 関連案内');
+
+    const disclaimer =
+      '本稿は、台湾会社の終了と会社財産の処理に関する一般的な法律情報および教育資料であり、特定の事案に対する法律意見ではありません。';
+    expect(raw).toContain(disclaimer);
+    expect(post?.content).toContain(disclaimer);
+    expect(raw).toContain('**曾俊瑋弁護士（Wei Tseng）**');
+    expect(post?.content).toContain('**曾俊瑋弁護士（Wei Tseng）**');
+
+    // The old closing summary and blockquote link list must stay removed.
+    expect(raw).not.toContain('## まとめ');
+    expect(post?.content).not.toContain('## まとめ');
+    expect(raw).not.toContain('> 関連リンク:');
+    expect(post?.content).not.toContain('> 関連リンク:');
   });
 
   it('uses only the contracted Japanese links and removes every stale claim', () => {

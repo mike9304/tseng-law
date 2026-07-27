@@ -8,6 +8,17 @@ const articlePath = path.join(
 );
 
 describe('Traditional Chinese massage column 006 — localized wording', () => {
+  it('describes streets lined with massage shops without a literal compound', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain('總之，說到按摩，');
+    expect(raw).toContain(
+      '台灣也有不少街道兩旁林立著各式各樣的按摩店。',
+    );
+    expect(raw).not.toContain('按摩街');
+    expect(raw).not.toContain('街道匯集了');
+  });
+
   it('describes the bundled barbershop services in natural Taiwan usage', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 

@@ -9,8 +9,11 @@ const columnPath = path.join(
 const source = fs.readFileSync(columnPath, 'utf8');
 const requiredJapaneseTarget =
   '会社設立自体について一律の法定最低資本金があるわけではありません。ただし、業種別の最低資本額、事業計画の合理性、銀行審査および就業許可上の雇用主要件は別途確認が必要です。';
-const bodyFaqHeading = '**5. 最低資本金の制限はありますか？**';
-const nextBodyFaqHeading = '**6. 居留を続ければ永久居留を申請できますか？**';
+const section4Heading = '## 4. 就業許可・居留資格・資本金';
+const section4CapitalHeading =
+  '### 会社の資本金と外国籍経営責任者の就業許可';
+const section4EndMarker =
+  '> 外国人が台湾で会社を設立するときによくある質問';
 
 const firstTargetOffset = source.indexOf(requiredJapaneseTarget);
 const insertion =
@@ -24,15 +27,17 @@ const countOccurrences = (haystack: string, needle: string) =>
   haystack.split(needle).length - 1;
 
 describe('Japanese investment column 001 — FAQ 3 direct minimum-capital answer', () => {
-  it('preserves the reviewed body repetition within local FAQ boundaries', () => {
-    const bodyStart = source.indexOf(bodyFaqHeading);
-    const bodyEnd = source.indexOf(nextBodyFaqHeading, bodyStart);
-    const bodyFaqFive =
+  it('preserves the reviewed body repetition within section 4 capital boundaries', () => {
+    const sectionStart = source.indexOf(section4Heading);
+    const bodyStart = source.indexOf(section4CapitalHeading, sectionStart);
+    const bodyEnd = source.indexOf(section4EndMarker, bodyStart);
+    const capitalSection =
       bodyStart === -1 || bodyEnd === -1 ? '' : source.slice(bodyStart, bodyEnd);
 
+    expect(sectionStart).toBeGreaterThanOrEqual(0);
     expect(bodyStart).toBeGreaterThanOrEqual(0);
     expect(bodyEnd).toBeGreaterThan(bodyStart);
-    expect(countOccurrences(bodyFaqFive, requiredJapaneseTarget)).toBe(1);
+    expect(countOccurrences(capitalSection, requiredJapaneseTarget)).toBe(1);
   });
 
   it('inserts the fixed target and repeats it exactly in FAQ 3 and the body', () => {

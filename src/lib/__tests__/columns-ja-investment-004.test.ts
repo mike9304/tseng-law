@@ -126,9 +126,42 @@ const extractSection4 = (text: string): string => {
 };
 const incentiveParagraph =
   '税制優遇は、子会社か支店かという名称だけで一律に決まるものではありません。現行の産業創新条例第10条の1には、一定の新品のスマート機械、5G、サイバーセキュリティ、AI製品・サービス、省エネ・脱炭素関連設備または技術への投資に関する投資税額控除があり、控除額には当年度の営利事業所得税額の30％という上限があります。対象者、投資内容、金額、申請期限、控除方法および他の優遇との関係を個別に確認してください。';
-const treatyParagraph =
-  '台湾・韓国所得税協定は2023年12月27日に発効し、2024年1月1日から適用されています。配当、利子および使用料の上限税率は10％です。事業利得は、相手方の地域に協定上の恒久的施設（PE）がある場合等を除き、原則として居住地側で課税されます。PEには、管理場所・支店・事務所等の固定的施設、6か月を超える工事、いずれかの12か月間に合計183日を超える役務提供、契約締結権限を反復して行使する代理人等が含まれ得ます。台湾支店は通常、台湾の固定的施設に当たるため、支店の台湾事業利得が当然に免税になるわけではありません。';
+const section6Heading = '## 6. 台湾・韓国所得税協定と恒久的施設';
+const treatySignatureParagraph =
+  '台湾・韓国所得税協定は2021年11月17日に署名され、2023年12月27日に発効し、2024年1月1日から適用されています。協定は双方の地域の居住者の二重課税を調整しますが、すべての台湾源泉所得を自動的に免税とする規定ではありません。所得の種類、受益所有者、居住者の地位、恒久的施設との実質的な関連性および国内手続をそれぞれ確認する必要があります。';
+const treatyRateCapParagraph =
+  '協定上の配当、利子および使用料の上限税率はそれぞれ10％です。この税率の適用を受けるには、支払を受ける者が協定上の相手方地域の居住者であり、かつ当該所得の受益所有者であることなど、協定上の条件を満たさなければなりません。台湾で求められる居住者証明書および申請・申告または還付手続も整えなければなりません。取引の間に導管会社が存在する場合や、所得が台湾の恒久的施設と実質的に関連している場合には、別途検討が必要となることがあります。';
+const businessProfitsPeParagraph =
+  '事業利得は、一方の地域の企業が相手方地域に協定上の恒久的施設（PE）を有しない場合、原則として相手方地域で免税されます。逆に恒久的施設が存在する場合には、その恒久的施設に帰属する利益は相手方地域で課税され得ます。したがって、事業利得条項を検討する際には、まず台湾で行われる活動が恒久的施設を構成するかを確認し、次にどの収益と費用がその恒久的施設に帰属するかを計算しなければなりません。';
+const fixedPlacePeParagraph =
+  '恒久的施設には、事業を行う一定の場所が含まれ得ます。管理場所、支店、事務所等の固定的施設を通じて事業を行う場合には、場所の使用期間、企業の処分権およびそこで行う業務を検討します。台湾で正式に支店登記を行った外国会社の営業拠点は、通常、台湾の固定的施設型の恒久的施設に該当するため、支店の台湾事業利得が当然に免税されるとはいえません。';
+const peCategoryThresholdsParagraph =
+  '固定的施設のほかにも、協定は複数の類型の恒久的施設を定めています。建設現場、建設・組立・据付工事または関連する監督活動が6か月を超える場合には、工事恒久的施設が問題となり得ます。企業が従業員やその他の人員を通じて、いずれかの12か月間に合計183日を超えて役務を提供する場合には、役務恒久的施設が成立し得ます。企業のために契約締結権限を反復して行使する代理人の活動も、代理人恒久的施設に該当し得ます。';
+const peCriteriaIndependenceParagraph =
+  '各基準はそれぞれ異なる活動類型を対象としています。役務提供日数が183日以下であるという理由だけで、管理場所や事務所のような固定的施設が存在しないと結論づけることはできず、工事期間が6か月以下であるという事実だけで代理人恒久的施設の可能性がなくなるわけでもありません。場所、期間、人員、契約の交渉・締結権限、在庫や設備、顧客等の取引相手方から見た営業形態をすべて確認しなければなりません。';
+const subsidiaryPeDistinctionParagraph =
+  '子会社と恒久的施設も同じ概念ではありません。台湾子会社は別個の法人であるため、外国の親会社の子会社であるという事実だけで、直ちに親会社にとっての台湾の恒久的施設となるわけではありません。ただし、子会社が親会社のために契約締結権限を反復して行使する場合や、親会社が子会社の場所で自己の事業を行う場合など、具体的な事実関係があれば別途検討が必要です。法人登記と協定上の課税上の結び付きは、それぞれの要件により判断します。';
+const treatyDocumentationParagraph =
+  '協定の適用を準備する際には、契約書や請求書だけでなく、実際の業務遂行に関する資料を確保しなければなりません。台湾に滞在した人員の日数、場所の使用、意思決定、契約の交渉・署名、費用負担、サービスの成果物および資金の流れを記録しておけば、恒久的施設の判断と利益帰属に役立ちます。協定上の減免を主張しながら、国内の申告手続や移転価格文書を漏らすことがないよう、両地域の申告日程をあわせて管理しなければなりません。';
+const section6ProseParagraphs = [
+  treatySignatureParagraph,
+  treatyRateCapParagraph,
+  businessProfitsPeParagraph,
+  fixedPlacePeParagraph,
+  peCategoryThresholdsParagraph,
+  peCriteriaIndependenceParagraph,
+  subsidiaryPeDistinctionParagraph,
+  treatyDocumentationParagraph,
+];
 const section7Heading = '## 7. どちらを選ぶか';
+
+const extractSection6 = (text: string): string => {
+  const start = text.indexOf(section6Heading);
+  const end = text.indexOf(section7Heading);
+  expect(start).toBeGreaterThanOrEqual(0);
+  expect(end).toBeGreaterThan(start);
+  return text.slice(start, end);
+};
 const officialSourcesHeading = '## 公式資料';
 const section7OverviewParagraph =
   '子会社と支店のいずれか一方が、すべての台湾進出において優れているわけではありません。独立した台湾法人と現地の株主構成が必要な事業であれば子会社が適している場合があり、外国会社が台湾での営業を直接行いながら本店の統制を維持しようとする事業であれば支店形態が適している場合があります。ただし、設立が可能であるという判断と、営業・税務・撤退まで考慮したときに効率的な組織形態であるかという判断は、区別しなければなりません。';
@@ -246,7 +279,7 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
       ...section4ProseParagraphs,
       ...section7ProseParagraphs,
       incentiveParagraph,
-      treatyParagraph,
+      ...section6ProseParagraphs,
     ];
 
     for (const paragraph of requiredParagraphs) {
@@ -254,13 +287,14 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
       expect(post?.content).toContain(paragraph);
     }
 
+    const section6Text = extractSection6(post?.content ?? '');
     for (const peCategory of [
-      '管理場所・支店・事務所等の固定的施設',
-      '6か月を超える工事',
-      'いずれかの12か月間に合計183日を超える役務提供',
-      '契約締結権限を反復して行使する代理人',
+      '管理場所、支店、事務所等の固定的施設',
+      '建設・組立・据付工事または関連する監督活動が6か月を超える場合には、工事恒久的施設',
+      'いずれかの12か月間に合計183日を超えて役務を提供する場合には、役務恒久的施設',
+      '契約締結権限を反復して行使する代理人の活動も、代理人恒久的施設',
     ]) {
-      expect(treatyParagraph).toContain(peCategory);
+      expect(section6Text).toContain(peCategory);
       expect(post?.content).toContain(peCategory);
     }
   });
@@ -343,6 +377,65 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
 
       for (const paragraph of section4ProseParagraphs) {
         expect(section).toContain(paragraph);
+      }
+    }
+  });
+
+  it('bounds section 6 to exactly eight prose paragraphs covering the treaty dates, thresholds, and PE categories', () => {
+    for (const body of [raw, post?.content ?? '']) {
+      const section = extractSection6(body);
+      const blocks = section
+        .split(/\n{2,}/)
+        .map((block) => block.trim())
+        .filter(Boolean);
+
+      expect(blocks[0]).toBe(section6Heading);
+      const proseBlocks = blocks.slice(1);
+
+      expect(proseBlocks).toHaveLength(8);
+      expect(proseBlocks).toEqual(section6ProseParagraphs);
+
+      for (const paragraph of section6ProseParagraphs) {
+        expect(section).toContain(paragraph);
+      }
+
+      for (const date of [
+        '2021年11月17日に署名',
+        '2023年12月27日に発効',
+        '2024年1月1日から適用',
+      ]) {
+        expect(section).toContain(date);
+      }
+
+      for (const threshold of [
+        '上限税率はそれぞれ10％',
+        '6か月を超える場合には、工事恒久的施設',
+        '合計183日を超えて役務を提供',
+      ]) {
+        expect(section).toContain(threshold);
+      }
+
+      for (const peType of [
+        '固定的施設',
+        '工事恒久的施設',
+        '役務恒久的施設',
+        '代理人恒久的施設',
+      ]) {
+        expect(section).toContain(peType);
+      }
+
+      for (const distinction of [
+        '子会社と恒久的施設も同じ概念ではありません',
+        '直ちに親会社にとっての台湾の恒久的施設となるわけではありません',
+      ]) {
+        expect(section).toContain(distinction);
+      }
+
+      for (const evidence of [
+        '実際の業務遂行に関する資料を確保',
+        '移転価格文書',
+      ]) {
+        expect(section).toContain(evidence);
       }
     }
   });

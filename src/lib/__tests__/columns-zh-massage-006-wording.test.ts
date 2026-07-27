@@ -96,4 +96,15 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     expect(raw).not.toContain('不同的處理方式');
     expect(raw).not.toContain('在時代潮流中不斷變化');
   });
+
+  it('states prison terms without the redundant 最高 qualifier', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain('依韓國《醫療法》可處3年以下有期徒刑。');
+    expect(raw).toContain('非視障者經營按摩業者，可處5年以下有期徒刑。');
+    expect(raw).not.toContain('最高3年以下');
+    expect(raw).not.toContain('最高5年以下');
+    expect(raw).toContain('3年以下');
+    expect(raw).toContain('5年以下');
+  });
 });

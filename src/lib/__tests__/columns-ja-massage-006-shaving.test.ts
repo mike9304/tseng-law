@@ -90,4 +90,13 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     );
     expect(raw).not.toContain('議論の過程では');
   });
+
+  it('states the gradually emerging occupational-rights concern naturally', () => {
+    const raw = fs.readFileSync(articlePath, 'utf8');
+
+    expect(raw).toContain(
+      '次第に、視覚障害者の権利だけを保護する一方で、非視覚障害者の職業上の権利を過度に制限しているという意見が提起されるようになりました。',
+    );
+    expect(raw).not.toContain('非視覚障害者の職業の権利');
+  });
 });

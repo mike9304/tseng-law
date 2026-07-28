@@ -1778,6 +1778,19 @@ html[lang='zh-Hant'] .hero-media {
   left: 0 !important;
 }
 
+/* WO#13: 위 규칙이 컨테이너만 풀블리드하고 내부 이미지 노드(home-hero-media-image*)는 1280 스테이지
+   좌표에 남아 우측 160px에 .hero-media fallback 배경(다른 배율)이 노출되는 시임 발생.
+   이미지 노드 래퍼/프레임/img까지 컨테이너 전폭을 채우게 해 object-fit: cover로 시임 제거.
+   해당 node-id는 zh-hant 데스크톱 트리에만 존재(ko/ja published 문서에는 노드 없음, 모바일은
+   composite hero-search 렌더) — 타 로케일·모바일 무영향. */
+.site .builder-pub-node[data-node-id^='home-hero-media-image'],
+.site .builder-pub-node[data-node-id^='home-hero-media-image'] .builder-image-media-frame,
+.site .builder-pub-node[data-node-id^='home-hero-media-image'] img {
+  width: 100% !important;
+  min-width: 100% !important;
+  left: 0 !important;
+}
+
 .hero-brain-layer {
   position: absolute;
   inset: 0;

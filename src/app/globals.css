@@ -692,7 +692,16 @@ h1, h2, h3 {
   margin-bottom: var(--space-4);
 }
 
+/* Page headers render .breadcrumb and .section-label as adjacent inline-flex
+   siblings; at 0px separation the label's decorative rule sat flush against
+   the breadcrumb text like a strikethrough (measured live). Guarantee a
+   minimum gap without changing the shared layout. */
+.page-header .breadcrumb {
+  margin-inline-end: 1.5rem;
+}
+
 .breadcrumb-link {
+  color: var(--wine-dark);
   transition: color 180ms ease;
 }
 
@@ -4305,6 +4314,24 @@ html[lang='zh-Hant'] .hero-media {
   background: rgba(233, 242, 234, 0.12);
 }
 
+/* Ghost buttons on dark bands (e.g. home CONTACT) were dark-on-dark
+   (measured contrast 2.2). Mirror the secondary override above so the ghost
+   variant stays readable on .section--dark; light-background usage
+   (/ko/contact etc.) keeps the original .button.ghost styling. */
+.section--dark .button.ghost {
+  border-color: rgba(233, 242, 234, 0.45);
+  color: #fff;
+  background: rgba(233, 242, 234, 0.06);
+}
+
+.section--dark .button.ghost:hover,
+.section--dark .button.ghost:focus-visible {
+  border-color: #fff;
+  background: rgba(233, 242, 234, 0.12);
+  color: #fff;
+  box-shadow: none;
+}
+
 .footer {
   background:
     radial-gradient(circle at top right, rgba(137, 167, 125, 0.12), transparent 28%),
@@ -6126,13 +6153,15 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   padding: 3rem 0 2rem;
 }
 
+/* Follow the page-wide left-aligned convention (other contact sections start
+   at the container edge); this section was the only centered one. */
 .messenger-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
 }
 
 .messenger-header .section-title::after {
-  margin-inline: auto;
+  margin-inline: 0;
 }
 
 .messenger-grid {
@@ -6140,7 +6169,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .messenger-card {
@@ -8617,6 +8646,12 @@ a.floating-ai-chat-contact-item:hover strong {
   font-size: 0.74rem;
   color: rgba(255, 255, 255, 0.92);
   font-family: var(--font-mono);
+  /* White text on a transparent chip was invisible over bright cover images
+     (measured contrast 1.17). Give it the same dark translucent fill family
+     as the image overlay so the date stays readable on any cover. */
+  background: rgba(10, 18, 31, 0.55);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
 }
 .columns-card-byline,
 .columns-readtime-inline {
@@ -23307,5 +23342,60 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
 :lang(ja) .insights-list-copy,
 :lang(zh-Hant) .insights-list-item,
 :lang(zh-Hant) .insights-list-copy {
+  min-width: 0;
+}
+
+/* Same unbreakable-token root cause on the ja/zh-Hant intent landing pages:
+   .intent-article-list li titles overflow their grid track on desktop
+   (measured live: scrollWidth 1480~1582 at a 1440px viewport). The mobile
+   block above only applies below 768px, so mirror the intent selectors here
+   at every viewport, still scoped to :lang(ja)/:lang(zh-Hant). */
+:lang(ja) .intent-article-list,
+:lang(ja) .intent-article-list *,
+:lang(ja) .intent-panel,
+:lang(ja) .intent-panel *,
+:lang(ja) .intent-subgrid,
+:lang(ja) .intent-subgrid *,
+:lang(ja) .intent-main,
+:lang(ja) .intent-main *,
+:lang(zh-Hant) .intent-article-list,
+:lang(zh-Hant) .intent-article-list *,
+:lang(zh-Hant) .intent-panel,
+:lang(zh-Hant) .intent-panel *,
+:lang(zh-Hant) .intent-subgrid,
+:lang(zh-Hant) .intent-subgrid *,
+:lang(zh-Hant) .intent-main,
+:lang(zh-Hant) .intent-main * {
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+:lang(ja) .intent-panel,
+:lang(ja) .intent-subgrid,
+:lang(ja) .intent-subgrid > *,
+:lang(ja) .intent-main,
+:lang(ja) .intent-main > *,
+:lang(ja) ul.intent-article-list,
+:lang(ja) ul.intent-article-list > li,
+:lang(zh-Hant) .intent-panel,
+:lang(zh-Hant) .intent-subgrid,
+:lang(zh-Hant) .intent-subgrid > *,
+:lang(zh-Hant) .intent-main,
+:lang(zh-Hant) .intent-main > *,
+:lang(zh-Hant) ul.intent-article-list,
+:lang(zh-Hant) ul.intent-article-list > li {
+  min-width: 0;
+}
+
+/* ja/zh-Hant footer brand/note spill on desktop (measured live: 359px text
+   in a 343px cell on /ja/*). Same keep-all root cause; the mobile block only
+   covers <768px via the generic p override, so restore CJK breaking here at
+   every viewport. */
+:lang(ja) .footer-main-brand,
+:lang(ja) .footer-main-note,
+:lang(zh-Hant) .footer-main-brand,
+:lang(zh-Hant) .footer-main-note {
+  word-break: normal;
+  overflow-wrap: anywhere;
   min-width: 0;
 }

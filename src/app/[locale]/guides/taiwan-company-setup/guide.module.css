@@ -260,6 +260,10 @@
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0 0 0.6rem;
+  /* Global h2 color (--text-heading, #162e24) matched the .cta navy
+     background exactly (measured contrast 1.00); pin the title to the same
+     light color the CTA body text uses. */
+  color: #fff;
 }
 
 .ctaText {

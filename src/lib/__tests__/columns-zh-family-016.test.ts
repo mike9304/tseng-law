@@ -102,7 +102,7 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: '2025年9月13日',
-      read_time: '16分鐘閱讀',
+      read_time: '18分鐘閱讀',
       categories: ['台灣法律資訊'],
       featured_image: featuredImage,
       faq,
@@ -115,7 +115,7 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
       title,
       date: '2026-07-25',
       dateDisplay: '2025年9月13日',
-      readTime: '16分鐘閱讀',
+      readTime: '18分鐘閱讀',
       category: 'legal',
       categoryLabel: '法律資訊',
       featuredImage:
@@ -175,7 +175,7 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
       '實質所有關係、共同持有比例、質權或抵押權',
       '保險金須檢查受益人指定與契約條款',
       '退休或撫卹給付須查其法源與領取順序',
-      '信託財產則須釐清信託財產的權利歸屬、受益權內容及委託人死亡後的處理安排',
+      '信託財產則須釐清其權利歸屬、受益權內容及委託人死亡後的處理安排',
       '權利基礎及計算標的均不相同',
       '因繼承或其他無償取得的財產、慰撫金等法定不列入項目',
       '平均分配顯失公平時，法院得依婚姻共同生活及協力情形等因素調整或免除分配額',
@@ -316,12 +316,12 @@ describe('Traditional Chinese family column 016 — inheritance and parental-rig
       .digest('hex');
 
     expect(visibleHanCount).toBeGreaterThanOrEqual(4_500);
-    expect(visibleHanCount).toBe(6_395);
-    expect(calculatedMinutes).toBe(16);
+    expect(visibleHanCount).toBe(6_944);
+    expect(calculatedMinutes).toBe(18);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(sourceSha256).toBe(
-      '2f9f651b80fa69669147473a8397f28060292dabb2576322b1d7884c7da564ba',
+      '5f63bf7755b33ad07bccf1c8c0731f428384d4efe63fab9d245b990b467bb35d',
     );
   });
 

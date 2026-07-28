@@ -362,7 +362,7 @@ describe('Traditional Chinese labor column 014 — minimum-service-period clause
   it('locks both evidence checklists and their required ordered coverage', () => {
     const section = sectionBody(parsed.content, headings[8]);
     const employerItems = [
-      '1. 保存勞工簽署的勞動契約、最低服務年限條款、修正文件及各版本的交付紀錄',
+      '1. 先確認法定要件：雇主是否已為勞工提供專業技術培訓並負擔其費用，或已就遵守最低服務年限的承諾提供合理補償。',
       '2. 整理培訓課綱、教材、日期、時數、出席、評量及完成資料，並以發票、收據、付款與會計紀錄確認實際金額及負擔人',
       '3. 按課程區分例行教育、一般在職或到職訓練、法令要求辦理的訓練，以及符合要件的專業技術培訓',
       '4. 說明簽約金、留任獎金或其他預付性給付的目的，保存告知文件、支付日期、金額、歸屬條件及按未履行期間計算的返還公式',
@@ -441,12 +441,12 @@ describe('Traditional Chinese labor column 014 — minimum-service-period clause
       .digest('hex');
 
     expect(visibleHanCount).toBeGreaterThanOrEqual(3_200);
-    expect(visibleHanCount).toBe(6_223);
+    expect(visibleHanCount).toBe(6_374);
     expect(calculatedMinutes).toBe(16);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(sourceSha256).toBe(
-      'd713eef7cebff8fe3e1d692cbc04317f59346ed1aa3d905ed886aeef75f96428',
+      '71458ca78e9a375683d5b41bcc5209c943f1b071f0a4b14a8faea596b1485e70',
     );
   });
 

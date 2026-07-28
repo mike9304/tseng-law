@@ -13,33 +13,19 @@ const parsed = matter(raw);
 const post = getColumnPost('taiwan-company-setup-pitch-location', 'en');
 
 const title =
-  "Taiwan Company Formation: Choosing a Business Location and Taipei's Prior Inquiry";
-const headings = [
-  '1. In Taipei, do only certain industries need a business-location prior inquiry?',
-  '2. What building documents are required for a business-location prior inquiry?',
-  '3. Can a leased address, borrowed registration address, or virtual office be used as a company address?',
-  '4. If the prior-inquiry result is compliant, can the business operate there immediately?',
-  '5. How long does the prior inquiry take, and how long is the result valid?',
-  'Official Sources',
-  'Related Services',
+  'Taiwan Company Formation — Advanced Guide 3: Finding a Business Location';
+const imagePaths = [
+  '../images/015-taiwan-company-setup-pitch-location/featured-01.jpg',
+  '../images/015-taiwan-company-setup-pitch-location/img-01.jpg',
+  '../images/015-taiwan-company-setup-pitch-location/img-02.jpg',
 ];
-const officialUrls = [
+const linkTargets = [
   'https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice',
-  'https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL080687',
-  'https://www.gov.taipei/News_Content.aspx?n=EEC70A4186D4C828&s=E70ACC80BEEC5910&sms=87415A8B9CE81B16',
-  'https://laws.gov.taipei/Law/SOPSearch/DownloadFile?sop_no=P04020118.pdf',
-  'https://gcis.nat.gov.tw/F/t70044_p',
-  'https://www.fda.gov.tw/tc/newsContent.aspx?id=11672',
+  'https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687',
+  '/en/guides/taiwan-company-setup',
+  '/en/korean-lawyer-in-taiwan',
+  '/en/taiwan-company-setup-lawyer',
 ];
-const internalTargets = [
-  '/en/services#investment',
-  '/en/columns/taiwan-company-establishment-advanced-1',
-  '/en/contact',
-];
-
-function firstParagraphAfter(content: string, heading: string) {
-  return content.split(`## ${heading}\n\n`)[1]?.split('\n\n')[0];
-}
 
 function countVisibleEnglishWords(content: string) {
   const visibleText = content
@@ -59,86 +45,72 @@ function countVisibleEnglishWords(content: string) {
   );
 }
 
+function expectPhrasesInOrder(content: string, phrases: string[]) {
+  const positions = phrases.map((phrase) => content.indexOf(phrase));
+  expect(positions.every((position) => position >= 0)).toBe(true);
+  expect(positions).toEqual([...positions].sort((a, b) => a - b));
+}
+
 describe('English investment column 015 — Taipei business-location inquiry', () => {
-  it('publishes the corrected metadata and exactly five FAQs', () => {
-    expect(parsed.data).toMatchObject({
+  it('publishes the corrected canonical metadata without invented FAQ entries', () => {
+    expect(parsed.data).toEqual({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location',
       lastmod: '2026-07-27',
       date_display: 'September 13, 2025',
-      read_time: '11 min read',
+      read_time: '3 min read',
       categories: ['Taiwan Company Formation'],
       featured_image:
         '../images/015-taiwan-company-setup-pitch-location/featured-01.jpg',
     });
-    expect(parsed.data.faq).toHaveLength(5);
+    expect(parsed.data.faq).toBeUndefined();
     expect(post).toMatchObject({
       slug: 'taiwan-company-setup-pitch-location',
       title,
       date: '2026-07-27',
       dateDisplay: 'September 13, 2025',
-      readTime: '11 min read',
+      readTime: '3 min read',
       categoryLabel: 'Company Setup',
-      faq: parsed.data.faq,
     });
   });
 
-  it('uses one H1 and the seven contracted H2 sections in order', () => {
+  it('keeps the Korean source structure: one H1, no invented H2 sections', () => {
     expect(
       Array.from(parsed.content.matchAll(/^# (.+)$/gm), (match) => match[1]),
     ).toEqual([title]);
     expect(
       Array.from(parsed.content.matchAll(/^## (.+)$/gm), (match) => match[1]),
-    ).toEqual(headings);
+    ).toEqual([]);
+    expect(parsed.content.match(/^---$/gm)).toHaveLength(1);
   });
 
-  it('repeats every exact FAQ answer as its matching section first paragraph', () => {
-    for (const [index, faq] of parsed.data.faq.entries()) {
-      expect(faq.q).toBe(headings[index].replace(/^\d+\. /, ''));
-      expect(firstParagraphAfter(parsed.content, headings[index])).toBe(faq.a);
-      expect(firstParagraphAfter(post?.content ?? '', headings[index])).toBe(
-        faq.a,
-      );
-      expect(raw.split(faq.a)).toHaveLength(3);
-    }
+  it('preserves the source paragraph sequence from location screening to the Q&A', () => {
+    expectPhrasesInOrder(parsed.content, [
+      'Requirements vary among local governments in Taiwan',
+      'the first issue is finding a business address',
+      'In addition to considering market conditions',
+      'another important consideration is',
+      'whether the address is in an area where a restaurant business may operate',
+      'Taipei City Department of Commerce',
+      'check free of charge',
+      'Type II Building Registration Transcript',
+      'Anyone may request',
+      'If it is difficult to visit a land office',
+      'you may ask an acquaintance in Taiwan',
+      'the city government may not accept the registration',
+      'Please therefore take care',
+      'Must every type of business use',
+    ]);
   });
 
-  it('states the comprehensive 2023 review and exact five-step sequence', () => {
+  it('accurately states the free inquiry and required building transcript', () => {
     const required = [
-      'from January 1, 2023',
-      'establish a company or business (including a branch or branch establishment), change its registered location, or add business items',
-      'comprehensively reviews the business location and business items before accepting a company or business registration',
-      'attach that result to the relevant registration application',
-    ];
-    for (const phrase of required) {
-      expect(raw).toContain(phrase);
-      expect(post?.content).toContain(phrase);
-    }
-
-    const sequence = [
-      '1. Identify the exact address, floor, and scope to be used and the planned business items.',
-      '2. Obtain the current building registration materials and other required documents.',
-      '3. Apply for the business-location prior inquiry and undergo review of the combination of location and business items.',
-      '4. Attach a compliant inquiry result to the registration application to establish a company or business, change its registered location, or add business items.',
-      '5. Separately complete industry-specific permits, fire and health preparations, interior work, and any other requirements for starting operations.',
-    ];
-    const positions = sequence.map((step) => raw.indexOf(step));
-    expect(positions.every((position) => position >= 0)).toBe(true);
-    expect(positions).toEqual([...positions].sort((a, b) => a - b));
-  });
-
-  it('covers supplementation, incompatible results, item limit, and fallback', () => {
-    const required = [
-      'sends a guidance letter asking the applicant to supplement the result',
-      'the registration process continues after supplementation',
-      'finds some business items noncompliant',
-      'changing the business location or removing a noncompliant item',
-      'may include up to five business items',
-      'select their principal business items for review',
-      'case-linked proactive inquiry (隨案主動查詢)',
-      'including restaurants and other food-service items',
-      'Taipei City Department of Commerce initiates an inquiry in connection with the registration case',
-      'does not revive the former view that only listed industries require a prior inquiry',
+      'you can use the Taipei City Department of Commerce',
+      '"Business Location Prior Inquiry" system',
+      'You can check free of charge',
+      'you must upload a "Type II Building Registration Transcript" (建物登記第二類謄本)',
+      'contains detailed information about the building',
+      'Anyone may request a Type II Building Registration Transcript for any address',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -146,17 +118,40 @@ describe('English investment column 015 — Taipei business-location inquiry', (
     }
   });
 
-  it('requires current building records, official channels, and use ratios', () => {
+  it('retains every source-listed way to obtain help without adding a requirement', () => {
     const required = [
-      'building registration transcript (including a Type II transcript) issued within the last three months, or the building ownership certificate',
-      'Taipei City land-office counters and convenience workstations',
-      "government's electronic transcript system",
-      'There is no across-the-board requirement to use a particular acquaintance or lawyer',
-      'primarily residential with ancillary office use',
-      'residential use exceeding three-fifths of the whole',
-      'office use below two-fifths',
-      'land-use zoning certification',
-      'Document supplementation will be required',
+      'a land office (地政事務所)',
+      'an acquaintance in Taiwan',
+      'the landlord',
+      'a real estate agent',
+      'a lawyer for help',
+    ];
+    for (const phrase of required) {
+      expect(raw).toContain(phrase);
+      expect(post?.content).toContain(phrase);
+    }
+    expect(raw).not.toContain('requirement to use a particular');
+  });
+
+  it('preserves the restored conditional registration warning', () => {
+    expect(raw).toContain(
+      'If the inquiry result shows that restaurant use is not permitted, the city government may not accept the registration when you later apply to register the company.',
+    );
+    expect(post?.content).toContain(
+      'the city government may not accept the registration when you later apply to register the company',
+    );
+    expect(raw).not.toContain('will refuse registration');
+    expect(raw).not.toContain('automatically refuse registration');
+  });
+
+  it('distinguishes the general recommendation from the mandatory category', () => {
+    const required = [
+      'We recommend that every type of business',
+      'companies commonly register multiple business items',
+      'around ten items at once',
+      'it is not necessary to conduct an inquiry for every business item',
+      'an inquiry is **mandatory** only for a business item classified as a "business item subject to proactive inquiry"',
+      'the inquiry result must be submitted to the Taipei City Government together with the company registration application',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -164,16 +159,13 @@ describe('English investment column 015 — Taipei business-location inquiry', (
     }
   });
 
-  it('separates address-use authority, actual use, and site suitability', () => {
+  it('retains the fine warning, closing advice, and required byline', () => {
     const required = [
-      "owner's consent to use the property together with proof of ownership",
-      "authority to use the address as the company's location",
-      'does not confirm that the site complies with land-use zoning, building, fire, or health rules for every business item',
-      'borrowed registration address',
-      'virtual office',
-      'inappropriate to decide that an arrangement can never be used solely',
-      'business is actually conducted at a place separate from the registered address',
-      'does not satisfy the requirements of a separate actual place of business',
+      'the competent authority may later impose a fine',
+      'please feel free to contact a Taiwan attorney',
+      'Administrative agency rules may change frequently',
+      'confirm the latest regulations before registering a company',
+      '**Wei Tseng (曾雋崴), Taiwan Attorney**',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -181,89 +173,52 @@ describe('English investment column 015 — Taipei business-location inquiry', (
     }
   });
 
-  it('limits inquiry scope and keeps separate operating requirements', () => {
-    const required = [
-      "does not approve the lessor's authority or lease terms, or satisfy fire-safety, health, environmental, signage, food-business registration, industry-specific permitting",
-      'It does not validate the lease or approve',
-      'fire-safety equipment, smoke exhaust and drainage, waste, noise, signage installation',
-      'food sanitation management, food-business registration, requirements for personnel and equipment',
-      'result already obtained may not be usable as is',
-      'each have a different purpose and review scope',
-    ];
-    for (const phrase of required) {
-      expect(raw).toContain(phrase);
-      expect(post?.content).toContain(phrase);
-    }
-  });
-
-  it('states non-guaranteed timing targets and six-month validity', () => {
-    const required = [
-      'five calendar days for ordinary cases and eleven calendar days for cases requiring consultation with external agencies',
-      'These targets do not guarantee a completion date',
-      'administrative processing targets in calendar days, not business days',
-      'requests for additional documents, responses from other agencies, case volume',
-      'valid for six months from the review completion date',
-      'The six-month validity period runs from the review completion date',
-      'do not rely on the old result',
-    ];
-    for (const phrase of required) {
-      expect(raw).toContain(phrase);
-      expect(post?.content).toContain(phrase);
-    }
-  });
-
-  it('uses only the contracted images, sources, and English links', () => {
-    const imagePaths = Array.from(
+  it('uses exactly the source images and localized source links', () => {
+    const actualImagePaths = Array.from(
       raw.matchAll(/(?:featured_image: "|!\[[^\]]*\]\()([^"\n)]+\.jpg)/g),
       (match) => match[1],
     );
-    expect([...new Set(imagePaths)]).toEqual([
-      '../images/015-taiwan-company-setup-pitch-location/featured-01.jpg',
-      '../images/015-taiwan-company-setup-pitch-location/img-01.jpg',
-    ]);
+    expect([...new Set(actualImagePaths)]).toEqual(imagePaths);
 
-    const externalTargets = Array.from(
-      parsed.content.matchAll(/(?<!!)\[[^\]]+\]\((https?:\/\/[^)]+)\)/g),
+    const actualLinkTargets = Array.from(
+      parsed.content.matchAll(/(?:<|\]\()((?:https?:\/\/|\/en\/)[^)>]+)(?:>|\))/g),
       (match) => match[1],
     );
-    const internalLinks = Array.from(
-      parsed.content.matchAll(/(?<!!)\[[^\]]+\]\((\/[^)]+)\)/g),
-      (match) => match[1],
-    );
-    expect([...new Set(externalTargets)].sort()).toEqual(
-      [...officialUrls].sort(),
-    );
-    expect([...new Set(internalLinks)]).toEqual(internalTargets);
-    for (const target of [...officialUrls, ...internalTargets]) {
-      expect(parsed.content.split(target)).toHaveLength(3);
+    expect(actualLinkTargets).toEqual(linkTargets);
+    for (const target of linkTargets) {
+      expect(parsed.content.split(target)).toHaveLength(2);
     }
   });
 
-  it('removes stale claims and all unapproved locale leakage', () => {
+  it('removes invented legal claims and all unapproved locale leakage', () => {
     const forbidden = [
-      'only business items that fall under',
-      'must be inquired into in advance',
-      'the city government may refuse registration',
+      'from January 1, 2023',
+      'five calendar days',
+      'eleven calendar days',
+      'valid for six months',
+      'up to five business items',
+      'branch establishment',
+      'borrowed registration address',
+      'virtual office',
+      'fire-safety equipment',
+      'food-business registration',
+      'Official Sources',
+      'Related Services',
       'Later',
-      'img-02.jpg',
-      'www.laws.taipei.gov.tw',
       '曾俊瑋',
       '/ko/',
       '/ja/',
       '/zh-hant/',
-      'does not immediately reach a uniform conclusion',
-      'comprehensively permits the validity of the lease',
-      'organizes the current',
-      'document supplements',
-      'valid compliant result',
     ];
     for (const phrase of forbidden) {
       expect(raw).not.toContain(phrase);
     }
 
     const withoutAllowedHan = raw
-      .replace(/營業場所預先查詢/g, '')
-      .replace(/隨案主動查詢/g, '')
+      .replace(/建物登記第二類謄本/g, '')
+      .replace(/地政事務所/g, '')
+      .replace(/臺北市營業場所協助查詢服務作業須知/g, '')
+      .replace(/主動查詢之營業項目/g, '')
       .replace(/曾雋崴/g, '');
     expect(withoutAllowedHan).not.toMatch(
       /[\p{Script=Han}\p{Script=Hangul}\p{Script=Hiragana}\p{Script=Katakana}]/u,
@@ -276,8 +231,8 @@ describe('English investment column 015 — Taipei business-location inquiry', (
     const visibleWordCount = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWordCount / 200);
 
-    expect(visibleWordCount).toBe(2_115);
-    expect(calculatedMinutes).toBe(11);
+    expect(visibleWordCount).toBe(434);
+    expect(calculatedMinutes).toBe(3);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(getColumnPost('company-location', 'en')?.slug).toBe(

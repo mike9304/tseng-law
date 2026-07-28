@@ -8,6 +8,10 @@ const columnPath = path.join(
   process.cwd(),
   'src/content/columns-en/013-taiwan-company-establishment-advanced-1.md',
 );
+const embeddingPath = path.join(
+  process.cwd(),
+  'src/content/column-embeddings.json',
+);
 const raw = fs.readFileSync(columnPath, 'utf8');
 const parsed = matter(raw);
 const post = getColumnPost(
@@ -15,62 +19,40 @@ const post = getColumnPost(
   'en',
 );
 
-const title =
-  'Taiwan Company Formation: Practical Q&A on Addresses, Bank Accounts, and Investment Review';
-const faq = [
-  {
-    q: 'How should I prepare if the registered address has not yet been finalized?',
-    a: "A foreign investment application and company registration require different location information and documents. At the application stage, confirm the current forms and review guidance. By the time of company registration, prepare the lease agreement, building records, the owner's consent, and any other required documents. Also confirm in advance whether the planned business activities may be conducted at the proposed site under land-use zoning, building-management, and industry-specific rules.",
-  },
-  {
-    q: 'Can I ask a bank about opening a company account without a Taiwan residence certificate?',
-    a: 'Identity-verification and account-opening requirements differ from bank to bank. Before applying, ask the selected bank whether it will accept a passport, documents relating to a Taiwan unified ID number, or other substitutes when you do not have a residence certificate, and confirm every document it requires. The procedures may also differ between a company preparatory account and a formal company account.',
-  },
-  {
-    q: 'Can I apply if my education and work experience are in a different field from the proposed business?',
-    a: 'State your education and work history truthfully, and explain specifically how they relate to your proposed duties, business plan, available capital and resources, relevant expertise, and ability to carry out the business. A different field of education or experience does not by itself determine the outcome, but you must not state false or exaggerated experience. Whether additional documents or explanations are needed depends on the individual case.',
-  },
-  {
-    q: 'What should I consider when signing a lease before company formation and a work-permit application?',
-    a: "There is no single standard timeline covering company formation, banking, a work permit, and residence. The lease start date, fit-out period, rent-free arrangements, guarantees, any additional security deposit, and notarization are negotiable terms that depend on the premises, the parties' agreement, and the individual circumstances. Confirm the required permits and the legal suitability of the business location, and decide before signing how delay-related costs and other burdens will be allocated.",
-  },
-  {
-    q: 'Can an ordinary office be used as the business premises for a restaurant or similar business?',
-    a: "Whether the premises may be used depends on the business items, land-use zoning, the building's approved use, the lease terms, and industry-specific permits. An ordinary office classification alone does not establish that a restaurant or similar business may operate there. Taipei City operates a business-location prior inquiry (營業場所預先查詢) for covered company or business registration cases, so confirm before signing whether the proposed location and business items comply with the applicable rules. A bank's identity verification and account review are separate procedures.",
-  },
-];
-const headings = [
-  ...faq.map(({ q }, index) => `${index + 1}. ${q}`),
-  'Before You Proceed',
-  'Official Sources',
-  'Related Services',
-];
-const officialUrls = [
-  'https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=J0040002',
-  'https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=55',
-  'https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01',
-  'https://gcis.nat.gov.tw/mainNew/English/subclassEnAction.do?method=getFile&pk=11',
-  'https://ezworktaiwan.wda.gov.tw/en/News_Content.aspx?n=35C4C6202979ECD0&s=8E117BF2FD606799&sms=2D58889BB41F75D7',
+const title = 'Taiwan Company Formation — Advanced Guide 1';
+const questions = [
+  '1. I want to form a company, but I have not yet found a registered office address. Can I still proceed?',
+  '2. Can I open a company bank account without a Taiwan residence certificate?',
+  "3. I heard that I must provide my education and work history for the investment-plan review. I am worried that my background may not match the company's proposed line of business.",
+  '4. What should I consider when leasing a registered office address, such as a restaurant storefront?',
+  '5. Can I lease ordinary commercial office space when forming a company?',
 ];
 const internalTargets = [
-  '/en/columns/taiwan-company-establishment-basics',
-  '/en/services#investment',
-  '/en/columns/taiwan-company-establishment-basics',
-  '/en/contact',
+  '/en/guides/taiwan-company-setup',
+  '/en/korean-lawyer-in-taiwan',
+  '/en/taiwan-company-setup-lawyer',
 ];
 
-function firstParagraphAfter(content: string, heading: string) {
-  return content.split(`## ${heading}\n\n`)[1]?.split('\n\n')[0];
-}
+function numberedSections(content: string) {
+  const matches = Array.from(
+    content.matchAll(/^\*\*(\d+\..+)\*\*$/gm),
+  );
 
-function section(content: string, start: string, end: string) {
-  return content.split(`## ${start}\n\n`)[1]?.split(`\n\n## ${end}`)[0] ?? '';
+  return matches.map((match, index) =>
+    content
+      .slice(
+        match.index,
+        matches[index + 1]?.index ??
+          content.indexOf('\n\n---', match.index),
+      )
+      .trim(),
+  );
 }
 
 function paragraphCount(content: string) {
   return content
     .split(/\n\n+/)
-    .filter((block) => block.trim() && !block.trim().startsWith('- ')).length;
+    .filter((block) => block.trim()).length;
 }
 
 function countVisibleEnglishWords(content: string) {
@@ -91,104 +73,48 @@ function countVisibleEnglishWords(content: string) {
   );
 }
 
-describe('English investment column 013 — company-setup practice Q&A', () => {
-  it('publishes the corrected metadata and exactly five exact FAQs', () => {
+describe('English investment column 013 — source-faithful company Q&A', () => {
+  it('preserves fixed metadata and removes the source-absent FAQ expansion', () => {
     expect(parsed.data).toMatchObject({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1',
       lastmod: '2026-07-27',
       date_display: 'September 13, 2025',
-      read_time: '10 min read',
+      read_time: '4 min read',
       categories: ['Taiwan Company Formation'],
       featured_image:
         '../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg',
-      faq,
     });
-    expect(parsed.data.faq).toHaveLength(5);
+    expect(parsed.data.faq).toBeUndefined();
     expect(post).toMatchObject({
       slug: 'taiwan-company-establishment-advanced-1',
       title,
       date: '2026-07-27',
       dateDisplay: 'September 13, 2025',
-      readTime: '10 min read',
+      readTime: '4 min read',
       categoryLabel: 'Company Setup',
-      faq,
     });
   });
 
-  it('uses one H1 and the eight contracted H2 sections in order', () => {
+  it('uses one H1, no source-absent H2s, and all five questions in order', () => {
     expect(
       Array.from(parsed.content.matchAll(/^# (.+)$/gm), (match) => match[1]),
     ).toEqual([title]);
+    expect(parsed.content).not.toMatch(/^## /m);
     expect(
-      Array.from(parsed.content.matchAll(/^## (.+)$/gm), (match) => match[1]),
-    ).toEqual(headings);
-  });
-
-  it('repeats every exact FAQ answer as its matching section first paragraph', () => {
-    for (const [index, item] of faq.entries()) {
-      expect(firstParagraphAfter(parsed.content, headings[index])).toBe(item.a);
-      expect(firstParagraphAfter(post?.content ?? '', headings[index])).toBe(
-        item.a,
-      );
-      expect(raw.split(item.a)).toHaveLength(3);
-    }
-  });
-
-  it('preserves the complete corrected section shape', () => {
-    const expectedParagraphs = [5, 4, 4, 5, 4];
-    for (let index = 0; index < 5; index += 1) {
-      expect(
-        paragraphCount(
-          section(parsed.content, headings[index], headings[index + 1]),
-        ),
-      ).toBe(expectedParagraphs[index]);
-    }
-    expect(
-      parsed.content.match(
-        /^- (?:The contract start date|Whether rent|Guarantors|Whether the contract|Whether the location|The allocation|Conditions for signage)/gm,
+      Array.from(
+        parsed.content.matchAll(/^\*\*(\d+\..+)\*\*$/gm),
+        (match) => match[1],
       ),
-    ).toHaveLength(7);
+    ).toEqual(questions);
   });
 
-  it('states the current agency and qualified Article 9 sequence', () => {
-    const article9Paragraph =
-      'Article 9 of the Statute for Investment by Foreign Nationals requires the approved investment amount to be remitted in full within the prescribed period, the remittance to be reported to the competent authority for review, and the total investment amount to be submitted for verification after the investment is implemented. Check the individual approval and current guidance for the applicable deadline, remittance method, reporting documents, and materials required for verification.';
+  it('faithfully translates the four-paragraph introduction', () => {
     const required = [
-      'Department of Investment Review, MOEA (經濟部投資審議司)',
-      'investment plan, information about the applicant, the source and use of funds, the proposed business activities, the method of investment, and the submitted documents',
-      'Not every case requires the same materials',
-      'foreign investment application and company registration deal with location information at different stages',
-      article9Paragraph,
-    ];
-    for (const phrase of required) {
-      expect(raw).toContain(phrase);
-      expect(post?.content).toContain(phrase);
-    }
-
-    const sequence = [
-      'remitted in full',
-      'reported to the competent authority for review',
-      'submitted for verification',
-      'after the investment is implemented',
-    ];
-    const positions = sequence.map((step) => article9Paragraph.indexOf(step));
-    expect(positions.every((position) => position >= 0)).toBe(true);
-    expect(positions).toEqual([...positions].sort((a, b) => a - b));
-  });
-
-  it('qualifies bank documents, truthful experience, and work-permit review', () => {
-    const required = [
-      'documents relating to a Taiwan unified ID number',
-      'No single checklist applies to every bank',
-      'This does not mean every bank accepts these materials',
-      'company preparatory account used before registration',
-      'formal company account used after registration',
-      'State your education and work history truthfully',
-      'must not state false or exaggerated experience',
-      'ability to carry out the proposed business',
-      'foreign investment application and the work permit',
-      "does not satisfy the work-permit requirements for the position, the applicant's qualifications, the employer, or the supporting documents",
+      'successfully established companies in Taiwan and obtained work visas and residence certificates',
+      'questions that many people ask during the company formation process',
+      'please also see this more detailed advanced guide',
+      'I hope the Q&A below will help anyone considering forming a company in Taiwan',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -196,16 +122,27 @@ describe('English investment column 013 — company-setup practice Q&A', () => {
     }
   });
 
-  it('limits the WDA target and keeps lease terms case-specific', () => {
+  it('preserves the complete five-section paragraph shape', () => {
+    const sections = numberedSections(parsed.content);
+    expect(sections).toHaveLength(5);
+    expect(sections.map(paragraphCount)).toEqual([16, 6, 6, 10, 9]);
+    expect(paragraphCount(parsed.content)).toBe(57);
+  });
+
+  it('keeps every source claim about the address and investment review', () => {
     const required = [
-      'complete professional work-permit application',
-      'seven working days when filed online and twelve working days when filed on paper',
-      'apply only to the work-permit application, not to company formation, banking, or a residence application',
-      'exclude time needed for additional documents or corrections and procedures at other agencies',
-      'There is no single standard timeline',
-      'fit-out period, rent-free arrangements, guarantees, any additional security deposit, and notarization',
-      'negotiable terms that depend on the premises',
-      'conditions precedent and termination rights',
+      "Taiwan's Investment Commission for review",
+      'capital will actually be used for investment',
+      'foreign parties are not bringing funds into Taiwan under another pretext',
+      "does not need to state the company's exact address",
+      'naming the area is sufficient (for example, Taipei City)',
+      'review the lease and inspect the company\'s address in person',
+      'opened accounts and then disappeared',
+      'opening a bank account was the most difficult part of the process',
+      'many money-laundering cases',
+      'prepare the investment plan while looking for a registered office address',
+      'within one year after investment approval',
+      'open a preparatory company account, and remit the capital',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -213,14 +150,15 @@ describe('English investment column 013 — company-setup practice Q&A', () => {
     }
   });
 
-  it('separates location-law checks, Taipei inquiry, and bank review', () => {
+  it('keeps the residence-certificate and immigration-office guidance', () => {
     const required = [
-      "land-use zoning, the building's approved use, the lessor's authority and the lease terms, company or business registration, and industry-specific permits",
-      "Taipei City's business-location prior inquiry",
-      'a system with the same name and procedures applies throughout Taiwan',
-      'identity verification, account-opening document review, and transaction-purpose confirmation performed by a bank',
-      'land-use, building, company or business registration, and industry-permit reviews performed by administrative agencies',
-      "confirming the location's suitability does not mean a bank account will automatically be opened",
+      'Can I open a company bank account without a Taiwan residence certificate?',
+      'Banks generally require two forms of identification',
+      'National Immigration Agency',
+      'Basic Information Form of Uniform ID Number',
+      '統一證號基本資料表',
+      'issued on the same day',
+      'arrive early and take a number',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -228,7 +166,56 @@ describe('English investment column 013 — company-setup practice Q&A', () => {
     }
   });
 
-  it('uses only the contracted images, official sources, and English links', () => {
+  it('keeps the education and work-history guidance without embellishment', () => {
+    const required = [
+      'review committee under the Ministry of Economic Affairs',
+      'review is not overly strict',
+      'a range of work experience, including part-time jobs',
+      'enough detail to persuade the reviewers',
+      'discuss this point fully with a Taiwan attorney',
+    ];
+    for (const phrase of required) {
+      expect(raw).toContain(phrase);
+      expect(post?.content).toContain(phrase);
+    }
+  });
+
+  it('keeps all source numbers and lease recommendations', () => {
+    const required = [
+      'about **three months**',
+      'about **one additional month**',
+      'set the lease start date as late as possible',
+      '**fit-out period**',
+      'This is a rent-free period',
+      "usually two months' rent",
+      'reluctant to lease to foreign nationals',
+      'looking for business premises early',
+      'notarizing the lease or paying an additional security deposit',
+    ];
+    for (const phrase of required) {
+      expect(raw).toContain(phrase);
+      expect(post?.content).toContain(phrase);
+    }
+  });
+
+  it('keeps the restaurant and commercial-office distinction', () => {
+    const required = [
+      "It depends on the company's business items",
+      'registered business item is food and beverage service',
+      'opening a bank account will be very difficult',
+      'city government will also require the registered address',
+      'area where a restaurant may operate',
+      'company registration may not be possible',
+      'such as advertising or wholesale',
+      'Please confirm this before signing the lease',
+    ];
+    for (const phrase of required) {
+      expect(raw).toContain(phrase);
+      expect(post?.content).toContain(phrase);
+    }
+  });
+
+  it('uses only the contracted images and links and excludes invented material', () => {
     const imagePaths = Array.from(
       raw.matchAll(/(?:featured_image: "|!\[[^\]]*\]\()([^"\n)]+\.jpg)/g),
       (match) => match[1],
@@ -246,36 +233,23 @@ describe('English investment column 013 — company-setup practice Q&A', () => {
       parsed.content.matchAll(/(?<!!)\[[^\]]+\]\((\/[^)]+)\)/g),
       (match) => match[1],
     );
-    expect(externalTargets).toEqual(officialUrls);
+    expect(externalTargets).toEqual([
+      'https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8',
+    ]);
     expect(internalLinks).toEqual(internalTargets);
-  });
 
-  it('removes stale claims, translation residue, and wrong-locale content', () => {
     const forbidden = [
-      'Investment Commission',
-      'Investment Review Commission',
-      'overseas parties',
-      'within one year after investment approval',
-      'takes about 3 months',
-      'takes about 1 month',
-      'absconding',
-      'a great many money-laundering cases',
-      'not extremely strict',
-      'persuade the reviewers',
-      'reluctant to lease to foreigners',
-      'usually 2 months',
-      'conduct an on-site inspection',
-      'issued on the same day',
-      'very crowded',
-      'leave a comment',
-      'route of the funds',
-      'execution structure',
-      'consultation based on',
-      'character of the funds',
-      'employer-side requirements',
-      'schedule that allows for corrections',
-      'acceptance of funds',
-      'uniformly',
+      'Department of Investment Review',
+      'Article 9 of the Statute for Investment by Foreign Nationals',
+      'land-use zoning',
+      'building-management',
+      'Workforce Development Agency',
+      'seven working days',
+      'conditions precedent',
+      'Before You Proceed',
+      'Official Sources',
+      'Related Services',
+      'Not every case requires the same materials',
       '曾俊瑋',
       '/ko/',
       '/ja/',
@@ -289,17 +263,31 @@ describe('English investment column 013 — company-setup practice Q&A', () => {
       /[\p{Script=Hangul}\p{Script=Hiragana}\p{Script=Katakana}]/u,
     );
     expect(raw).not.toMatch(/[\uFEFF\u00A0\u200B]/u);
-    expect(raw).not.toMatch(/\p{Extended_Pictographic}/u);
   });
 
-  it('keeps read time aligned and resolves the canonical alias', () => {
+  it('aligns the title embedding, read time, and canonical alias', () => {
     const visibleWordCount = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWordCount / 200);
+    const embeddingData = JSON.parse(
+      fs.readFileSync(embeddingPath, 'utf8'),
+    ) as {
+      embeddings: Array<{
+        slug: string;
+        locale: string;
+        title: string;
+      }>;
+    };
+    const embedding = embeddingData.embeddings.find(
+      (item) =>
+        item.slug === 'taiwan-company-establishment-advanced-1' &&
+        item.locale === 'en',
+    );
 
-    expect(visibleWordCount).toBe(1_992);
-    expect(calculatedMinutes).toBe(10);
+    expect(visibleWordCount).toBe(761);
+    expect(calculatedMinutes).toBe(4);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
+    expect(embedding?.title).toBe(title);
     expect(getColumnPost('company-advanced-1', 'en')?.slug).toBe(
       'taiwan-company-establishment-advanced-1',
     );

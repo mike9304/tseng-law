@@ -1,119 +1,127 @@
 ---
-title: "Taiwan Company Formation: Practical Q&A on Addresses, Bank Accounts, and Investment Review"
+title: "Taiwan Company Formation — Advanced Guide 1"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
 lastmod: "2026-07-27"
 date_display: "September 13, 2025"
-read_time: "10 min read"
+read_time: "4 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg"
-faq:
-  - q: "How should I prepare if the registered address has not yet been finalized?"
-    a: "A foreign investment application and company registration require different location information and documents. At the application stage, confirm the current forms and review guidance. By the time of company registration, prepare the lease agreement, building records, the owner's consent, and any other required documents. Also confirm in advance whether the planned business activities may be conducted at the proposed site under land-use zoning, building-management, and industry-specific rules."
-  - q: "Can I ask a bank about opening a company account without a Taiwan residence certificate?"
-    a: "Identity-verification and account-opening requirements differ from bank to bank. Before applying, ask the selected bank whether it will accept a passport, documents relating to a Taiwan unified ID number, or other substitutes when you do not have a residence certificate, and confirm every document it requires. The procedures may also differ between a company preparatory account and a formal company account."
-  - q: "Can I apply if my education and work experience are in a different field from the proposed business?"
-    a: "State your education and work history truthfully, and explain specifically how they relate to your proposed duties, business plan, available capital and resources, relevant expertise, and ability to carry out the business. A different field of education or experience does not by itself determine the outcome, but you must not state false or exaggerated experience. Whether additional documents or explanations are needed depends on the individual case."
-  - q: "What should I consider when signing a lease before company formation and a work-permit application?"
-    a: "There is no single standard timeline covering company formation, banking, a work permit, and residence. The lease start date, fit-out period, rent-free arrangements, guarantees, any additional security deposit, and notarization are negotiable terms that depend on the premises, the parties' agreement, and the individual circumstances. Confirm the required permits and the legal suitability of the business location, and decide before signing how delay-related costs and other burdens will be allocated."
-  - q: "Can an ordinary office be used as the business premises for a restaurant or similar business?"
-    a: "Whether the premises may be used depends on the business items, land-use zoning, the building's approved use, the lease terms, and industry-specific permits. An ordinary office classification alone does not establish that a restaurant or similar business may operate there. Taipei City operates a business-location prior inquiry (營業場所預先查詢) for covered company or business registration cases, so confirm before signing whether the proposed location and business items comply with the applicable rules. A bank's identity verification and account review are separate procedures."
 ---
 
-# Taiwan Company Formation: Practical Q&A on Addresses, Bank Accounts, and Investment Review
+# Taiwan Company Formation — Advanced Guide 1
 
 ![Featured image](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Forming a company in Taiwan involves separate preparation for the foreign investment application, company registration, banking, business-location checks, a work permit, and residence. This article addresses five practical questions: preparing before the address is selected, consulting a bank without a residence certificate, explaining your education and work history, timing the lease, and confirming the legal suitability of the business location.
+Recently, many people have successfully established companies in Taiwan and obtained work visas and residence certificates.
 
-For the overall system and the flow of procedures, please first see [Taiwan Company Formation — Basics](/en/columns/taiwan-company-establishment-basics).
+I have compiled answers to questions that many people ask during the company formation process.
+
+If you have already read [**Company Formation Basics**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8), please also see this more detailed advanced guide.
+
+I hope the Q&A below will help anyone considering forming a company in Taiwan. 😊
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-Hello. I am Wei Tseng (曾雋崴), Taiwan Attorney. The following is general information. The required documents, scope of review, and order of procedures vary with the applicant, the nature of the business, the flow of funds, the type of company, the location, the financial institution, and the rules in effect when the application is filed.
+**1. I want to form a company, but I have not yet found a registered office address. Can I still proceed?**
 
-## 1. How should I prepare if the registered address has not yet been finalized?
+When a foreign national forms a company in Taiwan, an investment plan must be submitted to Taiwan's Investment Commission for review.
 
-A foreign investment application and company registration require different location information and documents. At the application stage, confirm the current forms and review guidance. By the time of company registration, prepare the lease agreement, building records, the owner's consent, and any other required documents. Also confirm in advance whether the planned business activities may be conducted at the proposed site under land-use zoning, building-management, and industry-specific rules.
+The Investment Commission must verify that the capital will actually be used for investment
 
-The agency currently responsible for foreign investment applications is the Department of Investment Review, MOEA (經濟部投資審議司). The application and review cover the investment plan, information about the applicant, the source and use of funds, the proposed business activities, the method of investment, and the submitted documents. Not every case requires the same materials. The requirements may vary depending on whether the applicant is an individual or a corporation, the investment amount, the industry, the flow of funds, whether the proposed activity is restricted, and other circumstances. Confirm the latest official forms, attachment checklist, and guidance on requests for additional information.
+and that foreign parties are not bringing funds into Taiwan under another pretext.
 
-The foreign investment application and company registration deal with location information at different stages and require different documents. Check the current forms to determine how much location information the investment application must provide. In parallel, investigate the right to use the premises for company registration, including the lease agreement, building records, and the owner's consent, and confirm whether the location is suitable for tax registration and the planned business items. Do not assume that naming a city is always sufficient or that no address documentation is ever required at the application stage.
+The investment plan does not need to state the company's exact address; naming the area is sufficient (for example, Taipei City).
 
-Article 9 of the Statute for Investment by Foreign Nationals requires the approved investment amount to be remitted in full within the prescribed period, the remittance to be reported to the competent authority for review, and the total investment amount to be submitted for verification after the investment is implemented. Check the individual approval and current guidance for the applicable deadline, remittance method, reporting documents, and materials required for verification.
+Later, however, when you open a preparatory company account, many banks will review the lease and inspect the company's address in person.
 
-When securing an address, do not judge solely by whether mail can be received there. For the planned business items, confirm land-use zoning, building management, the building's use, the lessor's authority, the lease terms, company or business registration, and industry-specific permits, and prepare the application and contract accordingly.
+A Taiwanese bank employee told me directly that
 
-## 2. Can I ask a bank about opening a company account without a Taiwan residence certificate?
+banks have recently tightened their account-opening reviews because many foreign nationals have opened accounts and then disappeared.
 
-Identity-verification and account-opening requirements differ from bank to bank. Before applying, ask the selected bank whether it will accept a passport, documents relating to a Taiwan unified ID number, or other substitutes when you do not have a residence certificate, and confirm every document it requires. The procedures may also differ between a company preparatory account and a formal company account.
+In the earlier article on the basics, a reader said that opening a bank account was the most difficult part of the process. I agree.
 
-For a company account, the bank reviews identity, documents concerning the corporation or company under formation, representative authority, the nature of the business, the source and nature of the funds, and other matters. The required documents and verification methods vary by bank, branch, type of company, the applicant's residency status, the representative, the planned transactions, and the individual case. No single checklist applies to every bank.
+Because Taiwan has many money-laundering cases, opening a bank account is becoming increasingly difficult.
 
-An applicant who does not hold a residence certificate should ask the selected bank in advance whether it will consider a passport, documents relating to a Taiwan unified ID number, foreign-issued identification, or other substitutes. This does not mean every bank accepts these materials. The bank may require additional documents, translations, authentication, an in-person visit, or other conditions.
+**Advice:**
 
-The company preparatory account used before registration to receive capital contributions and the formal company account used after registration may differ in account name, required documents, verification of representative authority, handling of funds, and conversion procedures. Treat the foreign investment approval, capital remittance, verification of the investment amount, company registration, and the bank's internal procedures as separate steps. Obtain current written guidance from the bank you plan to use before preparing the account application.
+Because the investment-plan review also takes time,
 
-## 3. Can I apply if my education and work experience are in a different field from the proposed business?
+prepare the investment plan while looking for a registered office address.
 
-State your education and work history truthfully, and explain specifically how they relate to your proposed duties, business plan, available capital and resources, relevant expertise, and ability to carry out the business. A different field of education or experience does not by itself determine the outcome, but you must not state false or exaggerated experience. Whether additional documents or explanations are needed depends on the individual case.
+The Investment Commission requires the capital to be remitted within one year after investment approval,
 
-The education and work history in an investment application should not be merely a list of titles and degrees. The application materials as a whole should explain coherently what duties the applicant will perform in Taiwan, how the business plan will be carried out, and how the necessary funds, expertise, personnel, business relationships, outside professionals, and other resources will be secured.
+so you will have enough time to find an address, sign a lease,
 
-Even when the applicant's field of study or prior work does not perfectly match the new business field, that fact alone does not determine the outcome. Present the facts that show an ability to carry out the proposed business: management experience, technical and language skills, business relationships developed through prior work, the expertise of co-managers or employees, outsourcing arrangements, and plans for obtaining permits. Do not overstate weakly related experience or claim duties that the applicant did not actually perform.
+open a preparatory company account, and remit the capital.
 
-The foreign investment application and the work permit a foreign national needs to work in Taiwan after company formation are separate procedures. Explaining a business plan in the investment application does not satisfy the work-permit requirements for the position, the applicant's qualifications, the employer, or the supporting documents. For the proposed role, confirm the requirements and any additional documents for each procedure separately.
+**2. Can I open a company bank account without a Taiwan residence certificate?**
 
-## 4. What should I consider when signing a lease before company formation and a work-permit application?
+Yes.
 
-There is no single standard timeline covering company formation, banking, a work permit, and residence. The lease start date, fit-out period, rent-free arrangements, guarantees, any additional security deposit, and notarization are negotiable terms that depend on the premises, the parties' agreement, and the individual circumstances. Confirm the required permits and the legal suitability of the business location, and decide before signing how delay-related costs and other burdens will be allocated.
+Banks generally require two forms of identification.
 
-The overall timeline depends on the foreign investment application, the bank's intake and review, the capital remittance, verification of the investment amount, company registration, tax registration, industry-specific permits, the work permit, residence procedures, document authentication and translation, and any requests for additional information. A processing target published by one agency cannot be treated as the total period from company formation through residence.
+If you do not have a residence certificate, you can apply to Taiwan's National Immigration Agency for a '**Basic Information Form of Uniform ID Number** (統一證號基本資料表)'.
 
-For a complete professional work-permit application, the Workforce Development Agency, Ministry of Labor (WDA) publishes processing targets of seven working days when filed online and twelve working days when filed on paper. These targets apply only to the work-permit application, not to company formation, banking, or a residence application. They also exclude time needed for additional documents or corrections and procedures at other agencies, so do not set the lease schedule by these figures alone.
+It can be issued on the same day,
 
-In the lease, confirm at least the following points in line with the property and the business plan.
+but immigration offices are very crowded, so please arrive early and take a number.
 
-- The contract start date, the handover date, and the date fit-out work may begin
-- Whether rent is waived or reduced during the fit-out period
-- Guarantors, the security deposit, any additional deposit, and the conditions for its return
-- Whether the contract will be notarized and who bears the notarization costs
-- Whether the location may be used for company registration, tax registration, and business permits
-- The allocation of termination, rent, and restoration costs if permits cannot be obtained or procedures are delayed
-- Conditions for signage, fire safety, sanitation, exhaust, noise, construction work, and use of common areas
+**3. I heard that I must provide my education and work history for the investment-plan review. I am worried that my background may not match the company's proposed line of business.**
 
-These terms are not fixed across the board; they are negotiated according to the property's condition, its use, the parties' agreement, the guarantees, and individual circumstances. Before committing to long-term rent obligations or substantial fit-out costs, confirm that the permits needed at the planned site can be obtained, and consider contractual measures such as conditions precedent and termination rights.
+The review committee under the Ministry of Economic Affairs does examine the investor's background,
 
-## 5. Can an ordinary office be used as the business premises for a restaurant or similar business?
+but the review is not overly strict.
 
-Whether the premises may be used depends on the business items, land-use zoning, the building's approved use, the lease terms, and industry-specific permits. An ordinary office classification alone does not establish that a restaurant or similar business may operate there. Taipei City operates a business-location prior inquiry (營業場所預先查詢) for covered company or business registration cases, so confirm before signing whether the proposed location and business items comply with the applicable rules. A bank's identity verification and account review are separate procedures.
+You may include a range of work experience, including part-time jobs,
 
-When choosing business premises, check each legal and contractual issue separately: land-use zoning, the building's approved use, the lessor's authority and the lease terms, company or business registration, and industry-specific permits. First determine whether the planned business is allowed under the land-use zoning and approved building use. Check the building-use permit, any illegal additions or alterations, and fire, health, environmental, exhaust, signage, and other rules. Next, confirm that the lessor has authority to lease the premises and that the lease and building rules permit company registration, construction work, and the planned business. Then confirm the company or business registration requirements and the industry-specific permits applicable to food service, medical care, education, travel, and other industries.
+and explain it in enough detail to persuade the reviewers.
 
-Taipei City's business-location prior inquiry is one example of a system for checking, before signing a lease, whether the location and business items are suitable for covered company or business registrations. It does not mean that a system with the same name and procedures applies throughout Taiwan. Ask the local government with jurisdiction over the location and the competent authority for the industry what inquiry process is available and what documents are required.
+Please discuss this point fully with a Taiwan attorney.
 
-The identity verification, account-opening document review, and transaction-purpose confirmation performed by a bank are procedures separate from the land-use, building, company or business registration, and industry-permit reviews performed by administrative agencies. Being able to consult a bank about opening an account does not guarantee that the planned business can lawfully operate at that location. Conversely, confirming the location's suitability does not mean a bank account will automatically be opened.
+**4. What should I consider when leasing a registered office address, such as a restaurant storefront?**
 
-## Before You Proceed
+Company formation takes about **three months**, and obtaining a work permit and residence certificate takes about **one additional month**,
 
-The five questions share one point: foreign investment, company registration, banking, the business location, a work permit, and residence must not be treated as a single procedure. Confirm the official forms and guidance in effect when you apply, organize the required documents, contract terms, flow of funds, and location-compliance checks, and allow time for possible requests for additional information.
+so set the lease start date as late as possible.
 
-This article provides general educational information. For a specific matter, make decisions only after confirming the current laws, the terms of the individual approval, the competent authorities' guidance, the financial institution's requirements, and the relevant contracts.
+In Taiwan, storefront leases often give the tenant a "**fit-out period**."
 
-## Official Sources
+This is a rent-free period, so try to negotiate one.
 
-- [Statute for Investment by Foreign Nationals (English)](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=J0040002)
-- [Invest Taiwan: Foreign Investment Application Guidance](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=55)
-- [Invest Taiwan: Investment Process](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01)
-- [MOEA: Company Registration Guidance (English)](https://gcis.nat.gov.tw/mainNew/English/subclassEnAction.do?method=getFile&pk=11)
-- [WDA: Processing Target for Professional Work Permits (English)](https://ezworktaiwan.wda.gov.tw/en/News_Content.aspx?n=35C4C6202979ECD0&s=8E117BF2FD606799&sms=2D58889BB41F75D7)
+Foreign nationals may find it difficult to lease storefronts. Security deposits in Taiwan are relatively low—usually two months' rent—so landlords have limited protection
 
-## Related Services
+and may be reluctant to lease to foreign nationals.
 
-- [Taiwan Investment and Company Formation Services](/en/services#investment)
-- [Taiwan Company Formation — Basics](/en/columns/taiwan-company-establishment-basics)
-- [Contact Us](/en/contact)
+I therefore recommend looking for business premises early.
+
+If negotiations with the landlord do not go smoothly,
+
+you may propose notarizing the lease or paying an additional security deposit if necessary.
+
+**5. Can I lease ordinary commercial office space when forming a company?**
+
+It depends on the company's business items.
+
+For example, if your registered business item is food and beverage service but you plan to lease ordinary commercial office space, opening a bank account will be very difficult.
+
+As explained above, banks review the lease and inspect the company's address in person.
+
+At the final company-registration stage, the city government will also require the registered address to be in an area where a restaurant may operate.
+
+If the premises are ordinary commercial office space, company registration may not be possible.
+
+By contrast, if the business items are activities that may be conducted from commercial office space, such as advertising or wholesale,
+
+the company may be established there. Please confirm this before signing the lease.
+
+*If you need assistance or a consultation concerning Taiwan law, please leave a comment or contact us at any time.*
 
 ---
+
+> See also:
+> - [Taiwan Company Setup Comprehensive Guide — Procedures, Costs, and Entity Types](/en/guides/taiwan-company-setup)
+> - [Korean-Speaking Taiwan Lawyer](/en/korean-lawyer-in-taiwan)
+> - [Taiwan Company Formation Lawyer Guide](/en/taiwan-company-setup-lawyer)
 
 **Wei Tseng (曾雋崴), Taiwan Attorney**

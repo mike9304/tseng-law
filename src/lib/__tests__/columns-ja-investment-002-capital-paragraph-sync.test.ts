@@ -10,8 +10,9 @@ const columnPath = path.join(
 const raw = fs.readFileSync(columnPath, 'utf8');
 const body = matter(raw).content;
 
-const sectionStartMarker = '## 払込金の返還と会社財産の分配';
-const sectionEndMarker = '## 会社を恒久的に終了する手続';
+const sectionStartMarker =
+  '## 1. 会社財産と株主の出資金は区別しなければなりません';
+const sectionEndMarker = '## 2. 会社を恒久的に終了する手続';
 
 const startIndex = body.indexOf(sectionStartMarker);
 const endIndex =

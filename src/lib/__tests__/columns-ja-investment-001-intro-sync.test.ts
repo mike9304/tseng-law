@@ -53,10 +53,12 @@ describe('Japanese investment column 001 — synchronized introduction', () => {
     const first = paragraphs[0] ?? '';
 
     expect(first).toMatch(/事業(?:内容|モデル)[^。]*(?:進出|参入)[^。]*(?:方法|形態)[^。]*異/u);
-    expect(first).toMatch(/(?:使用|利用|締結|用い)[^。]*契約/u);
-    expect(first).toMatch(/(?:売上|収益)[^。]*(?:法人|会社|事業体|組織)/u);
-    expect(first).toMatch(/台湾[^。]*(?:業務|仕事|就労)[^。]*(?:人|者|担当)/u);
-    expect(first).toMatch(/(?:法的な?枠組み|法的な?体制|法的構成|必要な法的手続)/u);
+    expect(first).toMatch(/誰[^。]*どのような契約[^。]*締結/u);
+    expect(first).toMatch(
+      /(?:どの|いずれの)[^。]*(?:法人|会社|事業体|組織)[^。]*(?:売上|収益)[^。]*(?:得|上げ)/u,
+    );
+    expect(first).toMatch(/(?:現地|台湾)[^。]*(?:誰|人|者|担当)[^。]*(?:業務|仕事|就労)/u);
+    expect(first).toMatch(/(?:法律関係|法的な?枠組み|法的な?体制|法的構成|必要な法的手続)/u);
   });
 
   it('separates connected procedures and states the registration caveats', () => {
@@ -76,13 +78,15 @@ describe('Japanese investment column 001 — synchronized introduction', () => {
 
     expect(second).toMatch(/(?:相互に|互いに|関連|つなが)[^。]*(?:別個|別々|異なる|区別)/u);
     expect(second).toMatch(
-      /(?:会社|法人)(?:設立)?登記[^。]*(?:だけ|のみ)[^。]*(?:投資審査|投資審議|投資許可)/u,
+      /(?:会社|法人)(?:設立)?登記[^。]*(?:終えたからといって|だけ|のみ)[^。]*(?:投資額の審査|投資審査|投資審議|投資許可)/u,
     );
     expect(second).toMatch(/(?:業種別|事業別)[^。]*(?:許認可|許可)/u);
     expect(second).toMatch(
       /(?:株主|経営者|管理者)[^。]*(?:直ちに|すぐに|直後から)[^。]*(?:就労|働|業務)/u,
     );
-    expect(second).toMatch(/(?:完了|認められ|許され|可能になる)(?:する)?(?:わけではない|ものではない|とは限らない)/u);
+    expect(second).toMatch(
+      /(?:完了|認められ|許され|可能になる)(?:する)?(?:わけではな(?:い|く)|ものではない|とは限らない)/u,
+    );
   });
 
   it('integrates the early review and gives the complete article roadmap', () => {

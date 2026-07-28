@@ -9,9 +9,9 @@ const columnPath = path.join(
 );
 const sourceBytes = fs.readFileSync(columnPath);
 
-const immutablePrefixLength = 2_298;
+const immutablePrefixLength = 2_481;
 const immutablePrefixSha256 =
-  '8f55067572e413c50c77750f9c029cd1e98980151392e8f741a16dccab834bd4';
+  '4cfc3b564644cf402eedbbc3e760719d1ab55182662cd1c704e18840201ba541';
 const immutableTailMarker = Buffer.from(
   '![](../images/002-withdraw-capital-taiwan-company/img-01.png)',
   'utf8',

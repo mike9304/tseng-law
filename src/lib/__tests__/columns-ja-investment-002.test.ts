@@ -13,7 +13,7 @@ const parsed = matter(raw);
 const post = getColumnPost('withdraw-capital-taiwan-company', 'ja');
 
 const exitFaqAnswer =
-  '会社を恒久的に終了する場合は、原則として解散登記と清算を行い、債務・税務を処理した後の残余財産を株主へ分配します。会社を存続させたまま出資を返還する場合は、会社形態に応じた減資その他の適法な手続を検討します。通常の事業経費、配当、借入金の返済等は、それぞれの法的・税務上の根拠と手続を確認する必要があります。';
+  '会社を恒久的に終了する場合は、原則として解散登記と清算を行い、債務・税務を処理した後の残余財産を株主へ分配します。会社を存続させたまま出資を返還する場合は、会社形態に応じた減資その他の適法な手続を検討します。通常の事業経費、配当、会社が実際に負っている借入金の返済は、それぞれ別個の法的・税務上の根拠と手続を確認する必要があります。';
 const resolutionFaqAnswer =
   '有限公司の解散には株主の議決権の3分の2以上の同意が必要です。股份有限公司では、原則として発行済株式総数の3分の2以上を代表する株主が出席し、出席株主の議決権の過半数で決議します。公開発行会社で前記の出席数に達しない場合は、発行済株式総数の過半数を代表する株主が出席し、出席株主の議決権の3分の2以上で決議できます。定款により、より高い要件が定められている場合があります。解散登記は解散後15日以内に申請します。';
 const suspensionFaqAnswer =
@@ -31,7 +31,9 @@ const staleCondensedFactParagraph =
 
 describe('Japanese investment column 002 — company exit and capital return', () => {
   it('publishes the contracted frontmatter and exactly three exact FAQs', () => {
-    expect(parsed.data.title).toBe('台湾会社を終了するとき、出資金はどう扱われますか？');
+    expect(parsed.data.title).toBe(
+      '台湾会社を終了する際、資本金と会社財産はどのように処理すべきでしょうか？',
+    );
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company',
     );
@@ -98,8 +100,8 @@ describe('Japanese investment column 002 — company exit and capital return', (
   });
 
   it('covers vote thresholds, registration, tax filings, and the qualified exit process', () => {
-    const sectionStart = '## 会社を恒久的に終了する手続';
-    const sectionEnd = '## 債務超過や支払不能の場合';
+    const sectionStart = '## 2. 会社を恒久的に終了する手続';
+    const sectionEnd = '## 3. 債務超過または支払不能の場合';
     const extractExitProcessSection = (source: string): string => {
       const start = source.indexOf(sectionStart);
       const end = source.indexOf(sectionEnd, start);
@@ -158,8 +160,8 @@ describe('Japanese investment column 002 — company exit and capital return', (
   });
 
   it('covers insolvency, lawful capital reduction, and suspension without overpromising', () => {
-    const sectionStart = '## 債務超過や支払不能の場合';
-    const sectionEnd = '## 会社を存続させる場合の減資';
+    const sectionStart = '## 3. 債務超過または支払不能の場合';
+    const sectionEnd = '## 4. 会社を存続させる場合の減資';
     const extractInsolvencySection = (source: string): string => {
       const start = source.indexOf(sectionStart);
       const end = source.indexOf(sectionEnd, start);
@@ -205,8 +207,8 @@ describe('Japanese investment column 002 — company exit and capital return', (
       expect(contentSection).toContain(phrase);
     }
 
-    const reductionSectionStart = '## 会社を存続させる場合の減資';
-    const reductionSectionEnd = '## すぐに終了しない場合の休業';
+    const reductionSectionStart = '## 4. 会社を存続させる場合の減資';
+    const reductionSectionEnd = '## 5. すぐに終了しない場合の休業';
     const extractReductionSection = (source: string): string => {
       const start = source.indexOf(reductionSectionStart);
       const end = source.indexOf(reductionSectionEnd, start);
@@ -262,7 +264,7 @@ describe('Japanese investment column 002 — company exit and capital return', (
       expect(contentReductionSection).toContain(phrase);
     }
 
-    const suspensionSectionStart = '## すぐに終了しない場合の休業';
+    const suspensionSectionStart = '## 5. すぐに終了しない場合の休業';
     const suspensionSectionEnd = '## 公式資料';
     const extractSuspensionSection = (source: string): string => {
       const start = source.indexOf(suspensionSectionStart);

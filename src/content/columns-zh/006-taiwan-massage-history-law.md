@@ -111,7 +111,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 原本只是單純想透過按摩舒壓
 
-卻因遭受性騷擾而留下一輩子的心理創傷。
+卻因遭受性騷擾而留下一輩子心理創傷的案例時有所聞。
 
 在台灣，如果在按摩過程中感到任何不適或異常
 

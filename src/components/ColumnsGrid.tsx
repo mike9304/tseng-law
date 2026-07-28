@@ -295,7 +295,21 @@ export default function ColumnsGrid({
         </div>
         {filtered.length === 0 && (
           <p className="columns-empty">
-            {locale === 'ko' ? '해당 카테고리의 글이 없습니다.' : locale === 'zh-hant' ? '此分類尚無文章。' : locale === 'ja' ? 'このカテゴリーにはまだ記事がありません。' : 'No posts in this category yet.'}
+            {appliedQuery
+              ? locale === 'ko'
+                ? '검색 결과가 없습니다.'
+                : locale === 'zh-hant'
+                  ? '沒有符合的搜尋結果。'
+                  : locale === 'ja'
+                    ? '検索結果がありません。'
+                    : 'No results match your search.'
+              : locale === 'ko'
+                ? '해당 카테고리의 글이 없습니다.'
+                : locale === 'zh-hant'
+                  ? '此分類尚無文章。'
+                  : locale === 'ja'
+                    ? 'このカテゴリーにはまだ記事がありません。'
+                    : 'No posts in this category yet.'}
           </p>
         )}
         {remainingCount > 0 ? (

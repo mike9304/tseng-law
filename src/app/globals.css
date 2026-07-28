@@ -4609,6 +4609,14 @@ html[lang='zh-Hant'] .hero-media {
   margin-left: 0.8rem;
 }
 
+/* 44×44 tap targets without changing the visual size: grow the hit area
+   with padding and cancel the layout shift with matching negative margins
+   (43×16 links → 45×44 clickable). */
+.footer-locale-switch .locale-flag-switcher-link {
+  padding: 14px 2px;
+  margin: -14px -2px;
+}
+
 .footer-locale-switch a[aria-current='page'] {
   color: #2a2012;
   font-weight: 700;
@@ -5645,13 +5653,19 @@ html[lang='zh-Hant'] .hero-media {
 }
 
 .locale-flag-switcher--mobile {
+  /* Keep the four flag chips on a single row as one unit: with wrap enabled
+     the row broke mid-group (search chip straddling two rows, EN orphaned on
+     the next line). Now the whole switcher wraps below the search chip when
+     space runs out, and the flags share the row evenly. */
   display: inline-flex;
-  flex: 1 1 220px;
-  flex-wrap: wrap;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
   gap: 0.45rem;
 }
 
 .locale-flag-switcher--mobile .locale-flag-switcher-link {
+  flex: 1 1 0;
+  min-width: 0;
   min-height: 44px;
 }
 
@@ -6371,19 +6385,24 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 }
 
 /* On narrow phones the Korean-oriented `keep-all` prevents Traditional
-   Chinese (which has no spaces) from breaking between Han characters, so a
-   long zh-hant FAQ question forces its grid item wider than the viewport
-   (~21px horizontal scroll on the zh-hant home at 390px). Below 480px let the
-   question wrap normally and allow the grid item to shrink. Scoped to phones
-   so desktop/tablet parity is untouched; Korean already fits, so adding break
-   opportunities does not reflow it. */
+   Chinese and Japanese (which have no spaces) from breaking between
+   characters, so a long zh-hant/ja FAQ question forces its grid item wider
+   than the viewport (~21px horizontal scroll on the zh-hant home at 390px).
+   Below 480px let the question wrap normally and allow the grid item to
+   shrink — but only for :lang(zh-Hant)/:lang(ja): applying `anywhere` to
+   Korean breaks words mid-어절 ("어/떤", "종/료되면"), so ko keeps the
+   `keep-all` rule above. Scoped to phones so desktop/tablet parity is
+   untouched. */
 @media (max-width: 480px) {
-  .faq-question button > span:first-child,
-  .faq-question[role='button'] > span:first-child {
+  :lang(zh-Hant) .faq-question button > span:first-child,
+  :lang(zh-Hant) .faq-question[role='button'] > span:first-child,
+  :lang(ja) .faq-question button > span:first-child,
+  :lang(ja) .faq-question[role='button'] > span:first-child {
     word-break: normal;
     overflow-wrap: anywhere;
   }
-  .faq-item {
+  :lang(zh-Hant) .faq-item,
+  :lang(ja) .faq-item {
     min-width: 0;
   }
 }
@@ -6613,8 +6632,8 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 }
 
 .year-end-popup-close {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   border: 1px solid var(--border-light);
   border-radius: 999px;
   background: #fff;
@@ -8363,6 +8382,7 @@ a.floating-ai-chat-contact-item:hover strong {
   font-weight: 500;
   letter-spacing: 0.03em;
   text-decoration: none;
+  margin-right: 0.75rem;
   margin-bottom: 1.2rem;
   transition: opacity 0.2s;
 }
@@ -23234,8 +23254,8 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
  * wrap anywhere. Desktop (>480px) and ko/en rendering are untouched: every
  * original keep-all declaration stays in place and these scoped overrides
  * only win inside the media query via higher specificity + later position.
- * The pre-existing FAQ-only block near line 6338 is kept as-is (harmless
- * duplicate of the .faq-question rules below).
+ * The pre-existing FAQ-only block near line 6380 is now :lang-scoped the
+ * same way (harmless duplicate of the .faq-question rules below).
  * ------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   /* Root-level: reset inherited breaking for everything that does not carry

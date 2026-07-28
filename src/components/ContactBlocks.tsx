@@ -1,10 +1,49 @@
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import { contactPageContent } from '@/data/contact-page-content';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import Reveal from '@/components/Reveal';
+
+const INQUIRY_EMAIL_RE = /[\w.+-]+@[\w-]+(?:\.[\w-]+)+/;
+const INQUIRY_PHONE_RE = /\+\d[\d-]{5,}\d/;
+
+// Inquiry-type card details arrive as plain strings ("전화: …", "이메일: …"
+// and their zh-hant/en/ja equivalents). Linkify the phone/email value so the
+// cards are actionable like the direct-contact cards above, locale-agnostic.
+function renderInquiryDetail(detail: string): ReactNode {
+  const emailMatch = detail.match(INQUIRY_EMAIL_RE);
+  if (emailMatch) {
+    const email = emailMatch[0];
+    const at = detail.indexOf(email);
+    return (
+      <>
+        {detail.slice(0, at)}
+        <a className="link-underline" href={`mailto:${email}`}>
+          {email}
+        </a>
+        {detail.slice(at + email.length)}
+      </>
+    );
+  }
+  const phoneMatch = detail.match(INQUIRY_PHONE_RE);
+  if (phoneMatch) {
+    const phone = phoneMatch[0];
+    const at = detail.indexOf(phone);
+    return (
+      <>
+        {detail.slice(0, at)}
+        <a className="link-underline phone-number" href={`tel:${phone.replace(/[^\d+]/g, '')}`}>
+          {phone}
+        </a>
+        {detail.slice(at + phone.length)}
+      </>
+    );
+  }
+  return detail;
+}
 
 export default function ContactBlocks({
   locale,
@@ -61,7 +100,7 @@ export default function ContactBlocks({
               <h3 className="card-title">{block.title}</h3>
               <ul className="contact-list">
                 {block.details.map((detail) => (
-                  <li key={detail}>{detail}</li>
+                  <li key={detail}>{renderInquiryDetail(detail)}</li>
                 ))}
               </ul>
             </div>

@@ -23264,3 +23264,35 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
     min-width: 0;
   }
 }
+
+/* ---------------------------------------------------------------------------
+ * ja / zh-Hant desktop word-break fix — insights archive & columns cards
+ * Same root cause as the mobile fix above: `word-break: keep-all` turns
+ * spaceless Japanese / Traditional Chinese titles into one unbreakable token,
+ * so long titles overflow their card on desktop viewports (measured live:
+ * 1024px -> 142px overflow on .insights-list-title). This block applies at
+ * every viewport, scoped to :lang(ja)/:lang(zh-Hant) so ko/en rendering is
+ * untouched. Original keep-all declarations stay in place.
+ * ------------------------------------------------------------------------- */
+:lang(ja) .insights-list-title,
+:lang(ja) .insights-list-summary,
+:lang(ja) .insights-featured-title,
+:lang(ja) .insights-featured-summary,
+:lang(zh-Hant) .insights-list-title,
+:lang(zh-Hant) .insights-list-summary,
+:lang(zh-Hant) .insights-featured-title,
+:lang(zh-Hant) .insights-featured-summary,
+:lang(ja) .columns-card-title,
+:lang(ja) .columns-card-summary,
+:lang(zh-Hant) .columns-card-title,
+:lang(zh-Hant) .columns-card-summary {
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+:lang(ja) .insights-list-item,
+:lang(ja) .insights-list-copy,
+:lang(zh-Hant) .insights-list-item,
+:lang(zh-Hant) .insights-list-copy {
+  min-width: 0;
+}

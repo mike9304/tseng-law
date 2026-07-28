@@ -3,7 +3,7 @@ title: "台灣交通事故應對 Q&A：現場處置、過失、和解與損害�
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-07-26"
 date_display: "2025年9月13日"
-read_time: "閱讀時間約 8 分鐘"
+read_time: "13分鐘閱讀"
 categories:
   - "台灣法律資訊"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
@@ -25,7 +25,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 若僅有財物損害且車輛尚可移動，應先標示位置、拍照或錄影記錄現場，再儘速移至安全地點。未採取必要措施便逕行離開，可能受到行政處罰。
 
-刑法第 185 條之 4 規範駕駛人於事故致人受傷或死亡後離開現場的刑事責任；是否成立，仍須依具體事實作個案判斷。
+刑法第185條之4規範駕駛人於事故致人受傷或死亡後離開現場的刑事責任；是否成立，仍須依具體事實作個案判斷。
 
 ## Q2. 應先保留哪些證據？
 
@@ -37,11 +37,11 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ## Q3. 受傷時應確認哪些請求與期限？
 
-刑法第 284 條規定過失傷害與過失致重傷；依刑法第 287 條，此等罪屬告訴乃論。依刑事訴訟法第 237 條，原則上應自知悉犯人身分之時起 6 個月內提出告訴。
+刑法第284條規定過失傷害與過失致重傷；依刑法第287條，此等罪屬告訴乃論。依刑事訴訟法第237條，原則上應自知悉犯人身分之時起 6 個月內提出告訴。
 
-民事損害賠償依民法第 197 條，自請求權人知悉損害及賠償義務人時起 2 年間不行使而消滅；自侵權行為發生時起逾 10 年者，亦同。至於何種事實會影響時效，仍應另行檢視。
+民事損害賠償依民法第197條，自請求權人知悉損害及賠償義務人時起 2 年間不行使而消滅；自侵權行為發生時起逾 10 年者，亦同。至於何種事實會影響時效，仍應另行檢視。
 
-刑事案件仍在審理或刑事程序繫屬中時，因犯罪而受損害之人得依刑事訴訟法第 487 條提起附帶民事訴訟；依第 488 條，可在第二審言詞辯論終結前提出。此途徑通常無須另行預先繳納裁判費，但並非所有費用都獲免除。例如，刑事案件遭駁回後，如依原告聲請移送民事法院，依刑事訴訟法第 503 條可能須負擔訴訟費用；另亦應一併確認第 504 條關於移送及程序的規定。
+刑事案件仍在審理或刑事程序繫屬中時，因犯罪而受損害之人得依刑事訴訟法第487條提起附帶民事訴訟；依第488條，可在第二審言詞辯論終結前提出。此途徑通常無須另行預先繳納裁判費，但並非所有費用都獲免除。例如，刑事案件遭駁回後，如依原告聲請移送民事法院，依刑事訴訟法第503條可能須負擔訴訟費用；另亦應一併確認第504條關於移送及程序的規定。
 
 時效中斷、被告範圍、證據、保險與管轄等因素，都可能影響程序選擇，因此沒有一條對所有案件一律最佳的途徑。
 
@@ -49,7 +49,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 刑事責任必須分別判斷各自的注意義務有無違反，以及該違反與對方受傷之間是否有因果關係。雙方都有過失，並非自動成立過失傷害罪或刑事責任。
 
-民事方面，依民法第 217 條，被害人的過失若促成損害的發生或擴大，法院得減輕或免除賠償責任。例如，法院認定損害為新臺幣 1,000,000 元，而被害人過失為 50% 時，其他調整前的賠償額可能減為新臺幣 500,000 元。
+民事方面，依民法第217條，被害人的過失若促成損害的發生或擴大，法院得減輕或免除賠償責任。例如，法院認定損害為新臺幣 1,000,000 元，而被害人過失為 50% 時，其他調整前的賠償額可能減為新臺幣 500,000 元。
 
 鑑定意見與初步分析研判表都可能是重要證據，但並非當然拘束法院；法院仍會綜合陳述、影像、車輛狀態等整體證據加以判斷。
 
@@ -57,26 +57,26 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 和解書宜載明事故時間與地點、當事人、給付金額與期限、保險理賠的處理方式，以及包含的請求項目與明確保留的請求項目。後續治療、日後發現的傷勢、診斷證明書等文件的交付，以及給付與撤回告訴的關係，也應清楚約定。
 
-依民法第 736 條，和解是當事人互相讓步，以終止爭執或防止爭執發生的契約；依第 737 條，權利消滅與否取決於當事人在約定中拋棄的範圍。因此，日後的請求並非自動消滅，仍須按照和解書的具體文字判斷。
+依民法第736條，和解是當事人互相讓步，以終止爭執或防止爭執發生的契約；依第737條，權利消滅與否取決於當事人在約定中拋棄的範圍。因此，日後的請求並非自動消滅，仍須按照和解書的具體文字判斷。
 
-若屬告訴乃論之罪，依刑事訴訟法第 238 條，告訴人可以在第一審言詞辯論終結前撤回告訴；撤回後不得再行告訴。對非告訴乃論之罪，私人和解不當然終結追訴；和解也不代表在每一案件中都必須撤回告訴。
+若屬告訴乃論之罪，依刑事訴訟法第238條，告訴人可以在第一審言詞辯論終結前撤回告訴；撤回後不得再行告訴。對非告訴乃論之罪，私人和解不當然終結追訴；和解也不代表在每一案件中都必須撤回告訴。
 
 ### Q1–Q5 官方依據
 
-- [道路交通管理處罰條例第 62 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
-- [中華民國刑法第 185 條之 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
-- [中華民國刑法第 284 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [中華民國刑法第 287 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
-- [刑事訴訟法第 237 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
-- [刑事訴訟法第 238 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
-- [刑事訴訟法第 487 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
-- [刑事訴訟法第 488 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=488&pcode=C0010001)
-- [刑事訴訟法第 503 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=503&pcode=C0010001)
-- [刑事訴訟法第 504 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
-- [民法第 197 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001)
-- [民法第 217 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [民法第 736 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=736&pcode=B0000001)
-- [民法第 737 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=737&pcode=B0000001)
+- [道路交通管理處罰條例第62條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [中華民國刑法第185條之4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [中華民國刑法第284條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [中華民國刑法第287條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [刑事訴訟法第237條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
+- [刑事訴訟法第238條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
+- [刑事訴訟法第487條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
+- [刑事訴訟法第488條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=488&pcode=C0010001)
+- [刑事訴訟法第503條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=503&pcode=C0010001)
+- [刑事訴訟法第504條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
+- [民法第197條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001)
+- [民法第217條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
+- [民法第736條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=736&pcode=B0000001)
+- [民法第737條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=737&pcode=B0000001)
 - [交通部交通安全指引](https://168.motc.gov.tw/theme/car/post/2002211806152)
 - [內政部警政署交通事故證據與文書說明](https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889)
 - [內政部警政署交通事故常見問答](https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)
@@ -91,11 +91,11 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ## Q7. 事故後可以向對方請求哪些損害？
 
-依民法第 184 條請求時，須具備不法侵害權利、事故與損害間的因果關係，並就損害舉證。僅有事故發生的事實，並不當然使所有損害項目均獲承認。民法第 216 條則以實際所受損害與所失利益，作為損害賠償範圍的基準。
+依民法第184條請求時，須具備不法侵害權利、事故與損害間的因果關係，並就損害舉證。僅有事故發生的事實，並不當然使所有損害項目均獲承認。民法第216條則以實際所受損害與所失利益，作為損害賠償範圍的基準。
 
-- **受傷**：依民法第 193 條，得審酌必要醫療費用、看護、就醫交通、輔助器具等增加生活需要的費用，以及經證明因實際無法工作所生的收入損失與勞動能力減損；依民法第 195 條，亦得審酌非財產上損害。
-- **死亡**：依民法第 192 條，於有適用時得審酌死亡前醫療費用及增加生活需要的費用、殯葬費用，以及被害人依法負有扶養義務之第三人所受的扶養利益損失；依民法第 194 條，符合資格的親屬亦得審酌非財產上損害。
-- **財產**：依民法第 196 條，得請求財產的實際損害，但須提出證明，包括有依據的修復費用或價值減損。
+- **受傷**：依民法第193條，得審酌必要醫療費用、看護、就醫交通、輔助器具等增加生活需要的費用，以及經證明因實際無法工作所生的收入損失與勞動能力減損；依民法第195條，亦得審酌非財產上損害。
+- **死亡**：依民法第192條，於有適用時得審酌死亡前醫療費用及增加生活需要的費用、殯葬費用，以及被害人依法負有扶養義務之第三人所受的扶養利益損失；依民法第194條，符合資格的親屬亦得審酌非財產上損害。
+- **財產**：依民法第196條，得請求財產的實際損害，但須提出證明，包括有依據的修復費用或價值減損。
 
 ## Q8. 治療持續進行時，應如何提出醫療費用資料？
 
@@ -103,7 +103,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 補充醫療證據不同於變更或增加請求金額。提起刑事附帶民事訴訟後，僅追加醫療收據並不當然產生裁判費。
 
-依刑事訴訟法第 504 條，案件移送民事庭後，若變更、追加或擴張後的請求超出移送前的請求範圍，超出部分可能發生裁判費問題。移送階段、提出時點與請求範圍，均應依個案確認。
+依刑事訴訟法第504條，案件移送民事庭後，若變更、追加或擴張後的請求超出移送前的請求範圍，超出部分可能發生裁判費問題。移送階段、提出時點與請求範圍，均應依個案確認。
 
 ## Q9. 專業看護與親屬照護費用應如何證明？
 
@@ -119,17 +119,17 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ### Q6–Q10 官方依據
 
-- [車輛行車事故鑑定及覆議作業辦法第 3 條](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
-- [車輛行車事故鑑定及覆議作業辦法第 11 條至第 15 條](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print)
+- [車輛行車事故鑑定及覆議作業辦法第3條](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
+- [車輛行車事故鑑定及覆議作業辦法第11條至第15條](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print)
 - [交通部公路局車輛行車事故鑑定覆議申請書](https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf)
-- [民法第 184 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001)
-- [民法第 192 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001)
-- [民法第 193 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
-- [民法第 194 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=194&pcode=B0000001)
-- [民法第 195 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [民法第 196 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=196&pcode=B0000001)
-- [民法第 216 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
-- [刑事訴訟法第 504 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
+- [民法第184條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001)
+- [民法第192條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001)
+- [民法第193條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
+- [民法第194條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=194&pcode=B0000001)
+- [民法第195條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
+- [民法第196條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=196&pcode=B0000001)
+- [民法第216條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
+- [刑事訴訟法第504條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
 - [司法院移送後請求擴張說明](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
 - [嘉義地方法院親屬看護費用判決](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [臺南地方法院就醫交通費判決](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
@@ -138,39 +138,39 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 請求治療與恢復期間的收入損失時，須證明事故與傷害間具有因果關係，且該傷害使被害人於有證據支持的治療或恢復期間全部或部分不能工作，並因而發生實際收入減少。診斷證明書或休養建議可作為重要證據，但單獨並非充分或決定性依據。
 
-宜一併整理治療紀錄、出勤或請假紀錄、薪資資料與報稅資料，以及雇主證明。自營業者可提出符合其業務型態的營業資料、交易紀錄、報稅資料等。
+宜一併整理治療紀錄、出勤或請假紀錄、薪資資料與報稅資料，以及僱用人證明。自營業者可提出符合其業務型態的營業資料、交易紀錄、報稅資料等。
 
 繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題，亦非單獨判斷勞動能力減損的依據；勞動能力減損應於 Q12 另行判斷。
 
 ## Q12. 勞動能力減損應如何證明？
 
-勞動能力減損與 Q11 恢復期間實際收入減少有所區分。依民法第 193 條與民法第 216 條，應一併審酌事故與損害的因果關係、持續功能障礙、被害人的職業與能力、通常可得預期收入、有證據支持的可工作期間，以及相關舉證。
+勞動能力減損與 Q11 恢復期間實際收入減少有所區分。依民法第193條與民法第216條，應一併審酌事故與損害的因果關係、持續功能障礙、被害人的職業與能力、通常可得預期收入、有證據支持的可工作期間，以及相關舉證。
 
 目前薪資未變，不當然排除勞動能力減損請求；減損比例或目前薪資都不會機械決定損害額。
 
-若持續功能障礙確有爭議，醫療鑑定可能有助於釐清，但並非每案必須。民法第 217 條的與有過失及其他調整因素亦應審酌。
+若持續功能障礙確有爭議，醫療鑑定可能有助於釐清，但並非每案必須。民法第217條的與有過失及其他調整因素亦應審酌。
 
-若以一次給付方式計算，得考量中間利息扣除。司法院霍夫曼計算機僅為輔助工具，並非強制方法，也不保證結果。依民法第 193 條，經當事人聲請，法院亦得命加害人提供擔保後為定期金給付。
+若以一次給付方式計算，得考量中間利息扣除。司法院霍夫曼計算機僅為輔助工具，並非強制方法，也不保證結果。依民法第193條，經當事人聲請，法院亦得命加害人提供擔保後為定期金給付。
 
 ## Q13. 非財產上損害慰撫金如何判斷？
 
-依民法第 195 條，於不法侵害身體或健康的情形，得請求非財產上損害之相當金額（慰撫金）。
+依民法第195條，於不法侵害身體或健康的情形，得請求非財產上損害之相當金額（慰撫金）。
 
 法院通常綜合傷勢與治療經過、後遺症或持續影響、疼痛與生活影響、年齡與身分、社會及經濟情況，以及當事人提出的證據，依個案審酌。因此難以僅憑固定範圍預先斷定結果。
 
-## Q14. 工作期間發生事故時，雇主是否也可能負民事責任？
+## Q14. 工作期間發生事故時，僱用人是否也可能負民事責任？
 
-民法第 188 條規範受僱人執行職務不法侵害他人的情形。僅因事故發生於上班時間，不當然成立職務關聯，仍應確認業務內容與事故的實際連結。
+民法第188條規範受僱人執行職務不法侵害他人的情形。僅因事故發生於上班時間，不當然成立職務關聯，仍應確認業務內容與事故的實際連結。
 
-雇主可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。可考慮同時向僱用人及受僱人請求損害賠償。僱用人賠償後，得向受僱人求償。
+僱用人可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。可考慮同時向僱用人及受僱人請求損害賠償。僱用人賠償後，得向受僱人求償。
 
-依民法第 188 條第 2 項，若僱用人證明前述免責事由，致被害人未獲第 1 項賠償，法院得斟酌僱用人與被害人的經濟狀況，命為全部或一部賠償。
+依民法第188條第2項，若僱用人證明前述免責事由，致被害人未獲第1項賠償，法院得斟酌僱用人與被害人的經濟狀況，命為全部或一部賠償。
 
-民事責任與刑事責任應予區分。刑法第 284 條係依各自然人有無違反注意義務及其因果關係判斷，並不當然隨民事請求對象而變動。
+民事責任與刑事責任應予區分。刑法第284條係依各自然人有無違反注意義務及其因果關係判斷，並不當然隨民事請求對象而變動。
 
 ## Q15. 應確認哪些汽車保險給付與保障？
 
-強制汽車責任保險法第 6 條所定投保義務，原則上由汽車所有人負擔；於法定情形，亦及於該車使用人或管理人。此制就汽車交通事故所致傷害或死亡，採無過失給付制度，但仍應確認法定乘客或車外第三人之保障範圍。
+強制汽車責任保險法第6條所定投保義務，原則上由汽車所有人負擔；於法定情形，亦及於該車使用人或管理人。此制就汽車交通事故所致傷害或死亡，採無過失給付制度，但仍應確認法定乘客或車外第三人之保障範圍。
 
 單一車輛事故中，該車駕駛人原則上不在該車強制汽車責任保險給付範圍。多車事故中，駕駛人亦有可能向其他相關車輛的強制險保險人請求給付。
 
@@ -180,16 +180,16 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ### Q11–Q15 官方依據
 
-- [民法第 193 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
-- [民法第 216 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
-- [民法第 217 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
+- [民法第193條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
+- [民法第216條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
+- [民法第217條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
 - [臺灣高等法院 109 年度上易字第 644 號判決](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
 - [臺灣高等法院 109 年度上易字第 477 號判決](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [司法院霍夫曼現值計算機](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
-- [民法第 195 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
+- [民法第195條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
 - [桃園地方法院 112 年度壢簡字第 236 號判決](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
-- [民法第 188 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
-- [中華民國刑法第 284 條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [民法第188條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
+- [中華民國刑法第284條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [強制汽車責任保險法](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [強制汽車責任保險給付標準](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [金融監督管理委員會個人用汽車保險定型化契約](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)

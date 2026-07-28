@@ -256,7 +256,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
       '台韓所得稅協定於2021年11月17日簽署，2023年12月27日生效，自2024年1月1日起適用。',
       '協定上股利、利息與權利金的上限稅率各為10%。',
       '一方地區的企業未在他方地區設有協定上常設機構（PE）時，原則上在他方地區免稅。',
-      '管理處所、分支機構、辦事處等固定設施',
+      '管理處所、分公司、辦事處等固定設施',
       '超過六個月時，可能發生工程常設機構問題',
       '在任何十二個月期間合計超過183日提供勞務時，可能成立勞務常設機構',
       '反覆行使締結契約權限的代理人活動，也可能構成代理人常設機構',
@@ -320,7 +320,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
     expect(visibleHanCount).toBeGreaterThanOrEqual(5_000);
-    expect(visibleHanCount).toBe(7_913);
+    expect(visibleHanCount).toBe(7_912);
     expect(calculatedMinutes).toBe(20);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

@@ -184,7 +184,7 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
       ],
     ]);
     expect(processSection).toContain(
-      '並非所有案件均採相同順序，也不是固定不變的通用流程',
+      '並非所有案件均適用相同的固定順序或期間',
     );
     expect(processSection).toContain(
       '組織形式、投資額、行業、審查內容、銀行程序及補件',
@@ -241,7 +241,7 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
   it('keeps the approved native-Taiwanese legal phrasing from final review', () => {
     const approvedPhrases = [
       '各類型均有其構成要件，其中固定場所、工程及代理人等類型的認定，可能與服務日數無關。',
-      '開立公司籌備處帳戶及匯入投資款時，銀行會依認識客戶、實質受益人辨識及資金來源審查等程序，要求提供相關資料。若匯款人、匯款目的、投資核准內容與入帳帳戶彼此不符，可能需要補充說明。投資款匯入後，尚須辦理投資額審定，再依個案進度完成公司設立登記與稅籍登記，最後依銀行要求將籌備處帳戶轉為正式帳戶。',
+      '開立公司籌備處帳戶及匯入投資款時，銀行可能會依認識客戶、實質受益人辨識及資金來源審查等程序，要求提供相關資料。若匯款人、匯款目的、投資核准內容與入帳帳戶彼此不符，可能需要補充說明或補件。投資款匯入後，尚須辦理投資額審定，再完成公司設立登記與稅籍登記，最後依銀行要求將籌備處帳戶轉為正式帳戶。',
       '醫療器材、酒類、旅行業、營建或專業服務等可能涉及主管機關許可、登記或資格的領域，應以實際提供的商品與服務及交易結構為基準，檢討適用規定。',
       '簽訂租約前，應依預定地址及實際營業內容，確認土地使用分區、建築管理、租賃條件及稅籍登記等事項是否符合需求與相關規定。若建物用途或管理規約不符合實際業務，或未能取得必要的出租人同意，登記後仍可能須變更場所或補辦其他程序。',
       '臺北市設有適用於公司或商業登記案件的「營業場所預先查詢」機制，申請人可在提出登記前，就預定場所與營業項目辦理查詢。但查詢結果並不表示其他許可或專門法規上的要件已一併符合。在其他地區設址時，應確認當地地方政府與管轄機關的程序，並在簽訂長期租約或投資設備前，先以書面確認場所的適格性。',
@@ -250,7 +250,7 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
       '外國專業人才可能適用不同的居留期間計算方式，部分居留期間也可能不計入申請永久居留所需的年限。',
       '營業稅與營利事業所得稅的課稅對象與申報方式不同，應區分對銷售額課徵的稅與對課稅所得課徵的稅。向境外股東或關係企業支付股利、利息、權利金或服務費時，應事先檢討給付的性質、收款人的地位、國內法上的扣繳規定，以及所得稅協定適用的可能性。',
       '協定上的限制稅率，不會僅因協定存在即自動適用。應確認納稅義務人是否為協定上的居住者、是否為受益所有人、所得的法律性質，以及應提出的居住者證明與申請文件。',
-      '若收款人在台灣設有固定場所、進行長期工程、提供超過協定期間門檻的服務，或透過經常行使締結契約權限的代理人從事活動，還須依前述四種常設機構類型，分析是否構成常設機構及相關營業利潤的歸屬，不能僅憑人員停留天數下結論。',
+      '檢討營業利潤的課稅權時，應檢視前述四種常設機構類型，分析是否構成常設機構及相關營業利潤的歸屬。除服務日數外，亦應一併確認固定場所、工程期間、代理人締結契約權限及實際活動。',
     ];
 
     for (const phrase of approvedPhrases) {
@@ -343,7 +343,7 @@ describe('Traditional Chinese investment column 001 — company-establishment ba
     const visibleHanCount = publicText.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(4_358);
+    expect(visibleHanCount).toBe(4_321);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
   });

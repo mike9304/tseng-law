@@ -44,7 +44,7 @@ const q11ToQ15Headings = [
   'Q11. 治療與恢復期間的收入損失應如何證明？',
   'Q12. 勞動能力減損應如何證明？',
   'Q13. 非財產上損害慰撫金如何判斷？',
-  'Q14. 工作期間發生事故時，雇主是否也可能負民事責任？',
+  'Q14. 工作期間發生事故時，僱用人是否也可能負民事責任？',
   'Q15. 應確認哪些汽車保險給付與保障？',
 ] as const;
 const q11ToQ15SourceHeading = 'Q11–Q15 官方依據';
@@ -59,7 +59,7 @@ const approvedQ2PrivatePhotoSentence =
 const staleQ2PrivatePhotoSentence =
   '自行拍照不能取代死傷事故依法所需的警察處理。';
 const approvedQ3TransferCostSentence =
-  '例如，刑事案件遭駁回後，如依原告聲請移送民事法院，依刑事訴訟法第 503 條可能須負擔訴訟費用；另亦應一併確認第 504 條關於移送及程序的規定。';
+  '例如，刑事案件遭駁回後，如依原告聲請移送民事法院，依刑事訴訟法第503條可能須負擔訴訟費用；另亦應一併確認第504條關於移送及程序的規定。';
 const staleQ3TransferCostWording =
   '例如刑事案件經不受理、無罪或其他相當情形終結，並經原告聲請移送民事法院時，依第 503 條可能須負擔訴訟費用；另應留意第 504 條的移送程序與費用規定。';
 const approvedQ4EvidenceSentence =
@@ -75,7 +75,7 @@ const approvedQ11ContinuedWorkBasisParagraph =
 const staleQ11ContinuedWorkBasisParagraph =
   '繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題；勞動能力減損應於 Q12 另行判斷。';
 const approvedQ14JointClaimParagraph =
-  '雇主可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。可考慮同時向僱用人及受僱人請求損害賠償。僱用人賠償後，得向受僱人求償。';
+  '僱用人可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。可考慮同時向僱用人及受僱人請求損害賠償。僱用人賠償後，得向受僱人求償。';
 const staleQ14JointClaimParagraph =
   '雇主可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。僱用人賠償後，得向受僱人求償。';
 const q20Marker = 'Q20. 如何找交通事故律師？';
@@ -83,12 +83,12 @@ const approvedQ20EngagementWarningSentence =
   '要注意那些誇大案情、主張不要和解而要透過民事、刑事程序打到底，只是為了爭取委任而這樣主張的律師。';
 const staleQ20EngagementWarningSentence =
   '要注意那些誇大案情、主張不要和解而要透過民事刑事打到底、只為了接案而接案的律師。';
-const immutablePrefixBytes = 7_394;
+const immutablePrefixBytes = 7_327;
 const immutablePrefixSha256 =
-  'fb05d0c4fe7c43a9aefe111b35751d83a908cd3143c0df7cb92acc969122783f';
-const immutableQ1ToQ10PrefixBytes = 12_548;
+  '197f63e765b499260bf6fff7f4335903765068f37bbe754bc25b40d23410b129';
+const immutableQ1ToQ10PrefixBytes = 12_443;
 const immutableQ1ToQ10PrefixSha256 =
-  '4475ba1ab6e4e1e7e2edfa241213e79ea042061513ea5e87a1b7256cd5a90ea5';
+  'd192ef7c7264954fc3fc2e7595f01608f196fe4d4dcde39c0761885d18c44c9b';
 const immutableQ16TailBytes = 3_395;
 const immutableQ16TailSha256 =
   'f78ed12fa5cefb68d72a951b46fcceff97f11032ab7bae67100e386307db12ad';
@@ -408,7 +408,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       url: sourceUrl,
       lastmod: '2026-07-26',
       date_display: '2025年9月13日',
-      read_time: '閱讀時間約 8 分鐘',
+      read_time: '13分鐘閱讀',
       categories: ['台灣法律資訊'],
       featured_image: featuredImage,
     });
@@ -1045,7 +1045,7 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
       },
       {
         label: 'employer confirmation',
-        pattern: /雇主.{0,8}(?:證明|確認|說明)/,
+        pattern: /僱用人.{0,8}(?:證明|確認|說明)/,
       },
       {
         label: 'self-employed business records',

@@ -23,11 +23,11 @@ const resolutionFaqAnswer =
 const suspensionFaqAnswer =
   '公司停業一個月以上者，應於停業前或停業日起十五日內申請停業登記，每次停業期間最長不得超過一年。但停業年度仍須辦理年度所得稅結算申報，並非所有稅務申報一律免除。仍應依稅目、持有資產、員工及其他具體情形，分別確認相關義務。';
 const article9Paragraph =
-  '臺灣《公司法》第九條規定，公司應收之股款，若股東未實際繳納而以申請文件表明收足，或股東雖已繳納但在登記後將股款發還股東或任由股東收回，公司負責人可能面臨五年以下有期徒刑、拘役，或科或併科新臺幣五十萬元以上二百五十萬元以下罰金。這項規定並非處罰所有正常、合法的公司資金運用。';
+  '台灣《公司法》第9條規定，公司應收之股款，若股東未實際繳納而以申請文件表明收足，或股東雖已繳納但在登記後將股款發還股東或任由股東收回，公司負責人可能面臨五年以下有期徒刑、拘役，或科或併科新臺幣50萬元以上250萬元以下罰金。這項規定並非處罰所有正常、合法的公司資金運用。';
 const article90Paragraph =
-  '清算人在公司債務尚未清償前分派公司財產者，依《公司法》第九十條，可能面臨一年以下有期徒刑、拘役，或科或併科新臺幣六萬元以下罰金。';
+  '清算人在公司債務尚未清償前分派公司財產於股東者，依《公司法》第90條，可能面臨一年以下有期徒刑、拘役，或科或併科新臺幣6萬元以下罰金。';
 const insolvencyParagraph =
-  '解散後的清算並非只有在公司資產大於負債時才能進行。依《公司法》第八十九條，公司財產不足以清償債務時，清算人應即聲請宣告破產。應依資產負債、支付能力、擔保、租稅債務及債權人情形，個別判斷能否繼續通常清算。';
+  '解散後的清算並非只有在公司資產大於負債時才能進行。依《公司法》第89條，公司財產不足以清償債務時，清算人應即聲請宣告破產。應依資不抵債、無力清償、擔保、租稅債務及債權人人數，個別判斷能否繼續通常清算。';
 const disclaimer =
   '本文僅提供台灣公司結束及公司財產處理的一般法律資訊與教育資料，不構成特定案件的法律意見。適當的解散、清算、減資、停業程序及稅務申報，可能因公司種類、章程、財務狀況、債權人、外國投資及個別交易而異；在實際決議或移轉資金前，仍應就具體案件另行確認。';
 const author = '**曾雋崴律師（Wei Tseng）**';
@@ -167,9 +167,9 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       '公司章程、股東名簿、最新登記事項、會計帳簿、財務報表及稅務申報資料',
       '將持續中的契約、員工、租賃、許可、資產、債務',
       '外國投資',
-      '《公司法》第一百一十三條',
-      '《公司法》第三百一十六條',
-      '《公司登記辦法》第四條',
+      '《公司法》第113條',
+      '《公司法》第316條',
+      '《公司登記辦法》第4條',
       '應於解散後十五日內，依公司種類及解散原因準備相應的解散變更登記',
       '主管機關核准解散之日起四十五日內辦理當期決算申報',
       '核准日的意義及起算方法',
@@ -319,7 +319,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
 
   it('uses every official source and contracted internal link exactly once in order', () => {
     const officialLinks = [
-      '[臺灣公司法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)',
+      '[台灣公司法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)',
       '[經濟部公司登記辦法](https://law.moea.gov.tw/LawContent.aspx?id=FL011312)',
       '[財政部決算、清算及停業稅務說明](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/liquidation-procedure/x6mOPan)',
       '[經濟部停業申請期限說明](https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=659&method=faqDetlDetl)',
@@ -356,7 +356,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
     const calculatedMinutes = Math.ceil(hanCount / 400);
 
     expect(hanCount).toBeGreaterThanOrEqual(4_000);
-    expect(hanCount).toBe(5_961);
+    expect(hanCount).toBe(5_940);
     expect(calculatedMinutes).toBe(15);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
@@ -398,7 +398,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       expect(raw).not.toContain(forbidden);
     }
     expect(raw).not.toMatch(
-      /公司資金[^。\n]*(?:一律|均|全部)[^。\n]*第九條/,
+      /公司資金[^。\n]*(?:一律|均|全部)[^。\n]*第9條/,
     );
     expect(raw).not.toMatch(
       /僅(?:在|限)[^。\n]*資產[^。\n]*大於[^。\n]*負債[^。\n]*才能清算/,

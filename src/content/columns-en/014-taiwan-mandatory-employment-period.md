@@ -183,4 +183,4 @@ Do not mechanically assign one of these periods to service under three months, a
 
 This article is provided for general legal information and educational purposes only. It explains Taiwan minimum service period clauses, the repayment of training costs and prepaid benefits, and resignation notice requirements; it is not legal advice for any particular employment matter. Enforceability and liability may vary with the contract type and wording, the training actually provided and its documented cost, the purpose and disclosure of any compensation, the period already served, the reason employment ended, and the available evidence. Before resigning, making a wage deduction, signing a repayment agreement, or responding to a dispute, check the latest official sources and obtain advice based on the specific facts.
 
-**Wei Tseng (曾雋崴), Attorney-at-Law**
+**Wei Tseng (曾雋崴), Taiwan Attorney**

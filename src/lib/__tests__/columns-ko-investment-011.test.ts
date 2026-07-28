@@ -287,7 +287,7 @@ describe('Korean investment column 011 — cosmetics registration, PIF, and adve
     const eojeolCount = publicText.split(/\s+/).filter(Boolean).length;
     const calculatedMinutes = Math.ceil(eojeolCount / 180);
 
-    expect(eojeolCount).toBe(1_465);
+    expect(eojeolCount).toBe(1_464);
     expect(calculatedMinutes).toBe(9);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);

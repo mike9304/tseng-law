@@ -115,7 +115,7 @@ const disclaimer =
   'This article is educational material intended to provide a general overview of Taiwan’s legal regimes governing divorce, cross-border family matters, matrimonial property, and minor children; it is not legal advice for any specific matter. Procedures and outcomes may vary depending on jurisdiction, applicable law, recognition of foreign judgments, marital and household-registration status, the matrimonial-property regime, any existing agreement or court decision concerning minor children, the facts and evidence, and the latest official rules. Before taking action, separately confirm every deadline for registration, challenge or appeal, filing a claim, or enforcement by reference to the precise triggering event for the particular right or procedure.';
 const staleDisclaimer =
   'This article is general legal information only and is not legal advice. Jurisdiction, applicable law, recognition of foreign divorces or judgments, the specific facts and evidence, existing agreements or court orders, and current official rules may all change the analysis and result. Before taking action, calculate any application, review, limitation, or enforcement period from the correct triggering event for the specific right or procedure involved.';
-const author = '**Wei Tseng (曾雋崴), Attorney-at-Law**';
+const author = '**Wei Tseng (曾雋崴), Taiwan Attorney**';
 const exactEnding = `- ${internalLinks[2]}
 
 ${disclaimer}
@@ -195,16 +195,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
 const frozenSection3OnwardSha256 =
-  '08234ec1d2c167f9d4a53a2f43246c56d3babd23df1c9c25ae4bec18833579bc';
+  '1af8a87f89d706e24d645ee14112d3d9bf2a42d9c69664f4958605b30817d2a8';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
 const frozenSection5OnwardSha256 =
-  '4101b9356e09abeddbd39e256a85e3b0bebf0796f5ec9581120959a0cbd76ed4';
+  'a020c7c692797e8e13fe1a0596ade49c007e4a60839e39545739faa3d027009f';
 const frozenSection1OnwardSha256 =
-  'fb6e17172959449c6a9e8b65c0cb4c7001ef6a1ac9dbc348e9e891b63ad7c6ac';
-const frozenVisibleWordCount = 5_758;
+  'a89e30908f9adc1c554a196159fb8724e2938c6cf9d96d0c6aaacc03a2669a34';
+const frozenVisibleWordCount = 5_759;
 const frozenSourceSha256 =
-  'b4705d98465b19ba6c031bd2bbc7bb15271e06f9d9ad7558f1aa13ba8ecd0c65';
+  'bc3b216462d3cfc5827a4b91e768f17f75e6a09bd2ff28080740f9ba14ab58fc';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -1497,7 +1497,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('ends with the exact disclaimer and author and nothing else', () => {
     expect(raw.trimEnd().endsWith(exactEnding)).toBe(true);
     expect(raw.trimEnd()).toMatch(
-      /\n\n\*\*Wei Tseng \(曾雋崴\), Attorney-at-Law\*\*$/,
+      /\n\n\*\*Wei Tseng \(曾雋崴\), Taiwan Attorney\*\*$/,
     );
     expect(countOccurrences(raw, disclaimer)).toBe(1);
     expect(countOccurrences(raw, author)).toBe(1);

@@ -296,4 +296,4 @@ The following official primary sources were checked on 2026-07-25. Later amendme
 
 This article is educational material intended to provide a general overview of Taiwan’s legal regimes governing divorce, cross-border family matters, matrimonial property, and minor children; it is not legal advice for any specific matter. Procedures and outcomes may vary depending on jurisdiction, applicable law, recognition of foreign judgments, marital and household-registration status, the matrimonial-property regime, any existing agreement or court decision concerning minor children, the facts and evidence, and the latest official rules. Before taking action, separately confirm every deadline for registration, challenge or appeal, filing a claim, or enforcement by reference to the precise triggering event for the particular right or procedure.
 
-**Wei Tseng (曾雋崴), Attorney-at-Law**
+**Wei Tseng (曾雋崴), Taiwan Attorney**

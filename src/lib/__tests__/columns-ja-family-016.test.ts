@@ -87,7 +87,7 @@ const exactEnding = `---
 
 本稿は、台湾の相続法、夫婦財産制、親権上の権利義務および未成年後見制度について、一般的な教育情報を提供するものです。個別の相続事件または家事事件に関する法的助言ではありません。適用法、手続および結果は、相続人の範囲、遺言の有無・内容、財産と債務、夫婦財産制、既存の裁判所の判断ならびに渉外要素により異なり得ます。相続放棄や税務申告の期限を計算し、または財産を処分する前に、最新の公式資料と個別事情を確認してください。
 
-**台湾弁護士・曾雋崴（Wei Tseng）**`;
+**曾雋崴弁護士（Wei Tseng）**`;
 const expectedFrontmatter = `---
 title: "台湾の相続と親権：遺された家族のための法律ガイド"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
@@ -391,9 +391,7 @@ describe('Japanese family column 016 — anonymized inheritance and parental-rig
 
   it('ends with the exact disclaimer and sole correct signature', () => {
     expect(parsed.content.trimEnd().endsWith(exactEnding)).toBe(true);
-    expect(raw.trimEnd().endsWith('**台湾弁護士・曾雋崴（Wei Tseng）**')).toBe(
-      true,
-    );
+    expect(raw.trimEnd().endsWith('**曾雋崴弁護士（Wei Tseng）**')).toBe(true);
     expect(raw.match(/曾雋崴/g)).toHaveLength(1);
     expect(raw).not.toContain('曾俊瑋');
   });
@@ -416,14 +414,14 @@ describe('Japanese family column 016 — anonymized inheritance and parental-rig
       0;
     const calculatedMinutes = Math.ceil(visibleJapaneseCount / 500);
 
-    expect(visibleJapaneseCount).toBe(8136);
+    expect(visibleJapaneseCount).toBe(8134);
     expect(visibleJapaneseCount).toBeGreaterThanOrEqual(4500);
     expect(visibleKanaCount).toBe(3461);
     expect(visibleKanaCount).toBeGreaterThanOrEqual(1500);
     expect(parsed.data.read_time).toBe(`約${calculatedMinutes}分`);
     expect(post?.readTime).toBe(`約${calculatedMinutes}分`);
     expect(crypto.createHash('sha256').update(raw).digest('hex')).toBe(
-      '45b9cad89e6ca0e0908bc978a05e8580b238bec2341f85867033feb0e3c96b16',
+      '7bbd9f955324685454dd2c2f37911ad20a08c589c3b9763cd1b17df3669e9842',
     );
   });
 

@@ -14,7 +14,7 @@ describe('guides/taiwan-company-setup content', () => {
     for (const locale of locales) {
       const c = guideContent[locale];
       expect(c.steps).toHaveLength(5);
-      expect(c.faq).toHaveLength(locale === 'ko' ? 7 : 5);
+      expect(c.faq).toHaveLength(locale === 'ko' ? 6 : 5);
       expect(c.relatedColumns).toHaveLength(4);
       expect(c.relatedResources).toHaveLength(4);
       // Each step must have a name + text to survive HowTo filtering
@@ -56,7 +56,7 @@ describe('guides/taiwan-company-setup content', () => {
       expect(howTo).toMatchObject({ '@type': 'HowTo' });
       expect((howTo!.step as unknown[]).length).toBe(5);
       expect(faq).not.toBeNull();
-      expect((faq!.mainEntity as unknown[]).length).toBe(locale === 'ko' ? 7 : 5);
+      expect((faq!.mainEntity as unknown[]).length).toBe(locale === 'ko' ? 6 : 5);
     }
   });
 
@@ -73,8 +73,14 @@ describe('guides/taiwan-company-setup content', () => {
 
     const faq = buildFaqJsonLd(ko.faq, 'ko');
     const questions = (faq!.mainEntity as Array<{ name: string }>).map((entity) => entity.name);
-    expect(questions).toContain('대만 법인설립 절차는 어떻게 되나요?');
-    expect(questions).toContain('대만 법인설립 기간은 얼마나 걸리나요?');
+    expect(questions).toEqual([
+      '대만 법인설립 시 최소 자본금이 있나요?',
+      '회사를 설립하면 대만 비자를 받을 수 있나요?',
+      '자회사와 지사의 세금 차이는?',
+      '은행 계좌 개설이 어렵다고 들었는데 사실인가요?',
+      '법인설립에 보통 얼마나 걸리나요?',
+      '대만 법인설립 절차는 어떻게 되나요?',
+    ]);
   });
 
   it('the related column slugs match the four expected source columns', () => {

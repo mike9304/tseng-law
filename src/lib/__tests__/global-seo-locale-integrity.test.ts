@@ -1,5 +1,21 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { generateMetadata } from '@/app/[locale]/layout';
+
+// next/font/google returns font instances only under Next's build-time loader;
+// mock it (same shape as reveal-lifecycle.test.ts) so layout import works in vitest.
+vi.mock('next/font/google', () => {
+  const font = (options: { variable: string }) => ({
+    className: 'font-test',
+    style: { fontFamily: 'font-test' },
+    variable: options.variable,
+  });
+  return {
+    Noto_Sans_KR: font,
+    Noto_Sans_TC: font,
+    Noto_Serif_KR: font,
+    Noto_Serif_TC: font,
+  };
+});
 import { siteContent } from '@/data/site-content';
 import type { SiteLocale } from '@/lib/locales';
 import { buildLegalServiceJsonLd, buildWebsiteJsonLd } from '@/lib/seo';

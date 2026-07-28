@@ -33,11 +33,11 @@ const q11Marker =
   'Q11. What should you watch for when claiming loss from inability to work?';
 const q16Marker =
   'Q16. After an accident, can you leave everything to the insurance company?';
-const immutableQ16ToQ20TailBytes = 4_193;
+const immutableQ16ToQ20TailBytes = 4_003;
 const immutableQ16ToQ20TailSha256 =
-  '1a2c2ef7856925fc9849ec8d17bc0f006add14055e2174da6f847be1e5178df4';
+  '0aab3103ff486fc20104b5bea13d55d5a9a93c4e3bfc6891d09432ba7317a5e1';
 const closingNarrativeMarker =
-  'Having handled many traffic accidents, I want to emphasize an important point.';
+  'Having handled many traffic-accident cases, I want to emphasize one important point.';
 const approvedClosingRemorseSentence =
   'In such cases, the victim perceives neither remorse nor sincerity on the part of the at-fault party.';
 const staleClosingRemorseSentence =
@@ -94,7 +94,7 @@ const q13Heading = '## Q13. How are non-pecuniary damages assessed?';
 const q14Heading =
   '## Q14. Can an employer also face civil liability for an accident during work?';
 const approvedQ14JointClaimParagraph =
-  'Possible joint civil liability is subject to statutory defenses. A joint claim for damages against the employer and employee may be considered. The employer may show reasonable selection and supervision of the employee or that unavoidable loss would have occurred even with such care.';
+  'The employer may defend the claim by showing that it exercised due care in selecting and supervising the employee, or that the damage could not have been avoided even with such care. A joint claim for damages against the employer and employee may be considered. The employer may seek recourse from the employee after payment.';
 const staleQ14JointClaimParagraph =
   'Possible joint civil liability is subject to statutory defenses. The employer may show reasonable selection and supervision of the employee or that unavoidable loss would have occurred even with such care.';
 const q15Heading =
@@ -975,10 +975,10 @@ describe('English traffic column 003 — Q11–Q15 translation contract', () => 
       /joint claim for damages.{0,80}employer.{0,40}(?:and|&)\s+employee.{0,80}may be considered/is,
     );
     expect(q14).toMatch(
-      /possible joint civil liability.{0,140}(?:reasonable selection|selected.{0,30}reasonably).{0,40}(?:and|\/).{0,30}supervision.{0,140}(?:unavoidable|could not have been avoided).{0,30}(?:loss|damage)/is,
+      /employer may defend.{0,100}due care.{0,60}selecting.{0,30}(?:and|\/).{0,30}supervising.{0,140}(?:damage|loss).{0,60}could not have been avoided/is,
     );
     expect(q14).toMatch(
-      /paragraph 2.{0,100}(?:uncompensated|without compensation).{0,30}victim.{0,120}(?:relief|compensation)/is,
+      /victim.{0,60}cannot recover damages.{0,50}paragraph 1.{0,100}paragraph 2.{0,140}economic circumstances.{0,100}(?:full|partial) compensation/is,
     );
     expect(q14).toMatch(
       /(?:employer|principal).{0,80}(?:recourse|reimbursement).{0,80}(?:employee|worker).{0,80}(?:after|once).{0,30}payment/is,
@@ -1008,7 +1008,7 @@ describe('English traffic column 003 — Q11–Q15 translation contract', () => 
       /amended.{0,20}2026-05-29.{0,100}(?:accidents?|occurring).{0,40}(?:on or after )?2026-07-01/is,
     );
     expect(q15).toMatch(
-      /(?:earlier|before).{0,30}(?:accident|accident date).{0,80}(?:earlier|previous) standard/is,
+      /(?:earlier|previous) standard.{0,80}accidents?.{0,60}before.{0,40}(?:that date|2026-07-01)/is,
     );
     expect(q15).toContain('TWD 200,000');
     expect(q15).toContain('TWD 80,000–3,000,000');

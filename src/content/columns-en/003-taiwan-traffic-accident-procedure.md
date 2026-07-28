@@ -162,9 +162,9 @@ The assessment is individualized. Relevant factors include the injury and treatm
 
 Civil Code Article 188 addresses an employee who unlawfully injures another while performing duties. The fact that an accident occurred during work hours, by itself, does not automatically establish the required connection to duties; the relationship between the actual work and the accident must be examined.
 
-Possible joint civil liability is subject to statutory defenses. A joint claim for damages against the employer and employee may be considered. The employer may show reasonable selection and supervision of the employee or that unavoidable loss would have occurred even with such care.
+The employer may defend the claim by showing that it exercised due care in selecting and supervising the employee, or that the damage could not have been avoided even with such care. A joint claim for damages against the employer and employee may be considered. The employer may seek recourse from the employee after payment.
 
-Paragraph 2 addresses an otherwise uncompensated victim and may provide relief if the employer proves that defense and the victim cannot recover under paragraph 1. After considering the employer's and victim's economic circumstances, the court may order all or part of the compensation. The employer has recourse against the employee after payment.
+If the employer proves the preceding defense and the victim cannot recover damages under paragraph 1, Civil Code Article 188, paragraph 2 permits the court to consider the employer's and victim's economic circumstances and order full or partial compensation.
 
 The choice of civil defendants is distinct from criminal liability. Under Criminal Code Article 284, liability turns on each natural person's own breach of duty and causation.
 
@@ -174,14 +174,7 @@ Under Compulsory Automobile Liability Insurance Act Article 6, the duty to insur
 
 In a single-vehicle accident, the driver is generally outside that vehicle's compulsory cover. In a multi-vehicle accident, a driver may claim benefits from another involved vehicle's compulsory insurer.
 
-The benefit standard amended on 2026-05-29 applies to accidents occurring on or after 2026-07-01. Current limits are:
-
-- necessary and reasonable injury medical expenses: TWD 200,000;
-- disability benefit across 15 statutory grades: TWD 80,000–3,000,000;
-- death benefit: TWD 3,000,000; and
-- combined death, disability, and medical maximum per victim per accident: TWD 3,200,000.
-
-An earlier accident may use the earlier standard.
+The benefit standard amended on 2026-05-29 applies to accidents occurring on or after 2026-07-01. The limit for necessary and reasonable medical expenses for injury is TWD 200,000; disability benefits are TWD 80,000–3,000,000 across 15 statutory grades; the death benefit is TWD 3,000,000; and the combined maximum for death, disability, and medical expenses is TWD 3,200,000 per victim per accident. The earlier standard may apply to accidents that occurred before that date.
 
 Third-party liability, driver injury, and own-damage insurance are optional insurance products. Actual coverage depends on the insured person, coverage limits, deductibles, exclusions, fault, and other terms and conditions, so each insurance policy and its terms must be reviewed separately.
 
@@ -203,173 +196,69 @@ Third-party liability, driver injury, and own-damage insurance are optional insu
 
 Q16. After an accident, can you leave everything to the insurance company?
 
-​
+In my experience, insurers often fail to give enough attention to the emotional needs of the people involved in an accident.
 
-In my experience, insurance companies often do not adequately handle the emotional aspects for accident parties.
+They may neglect important ways of addressing the other party’s feelings, including an apology and expressions of concern.
 
-​
+Paying an additional TWD 500,000 or TWD 1,000,000 in one case may have little effect on an insurer’s overall profit, but for the person involved in the accident, that amount may affect whether the case leaves them with a criminal record.
 
-They may neglect important parts of dealing with the other party’s feelings, such as apology and consolation.
+Conflicts of interest may also arise between the insurer and the person involved, and because insurers handle many cases, they may struggle to devote enough time to each individual matter.
 
-​
+Therefore, I do not recommend entrusting all litigation to the insurance company.
 
-For the insurer, spending an extra TWD 500,000 or TWD 1,000,000 on an individual case may not greatly affect overall insurer profits, but for the accident party it can affect whether there is a criminal record.
+If you do entrust the matter to the insurer, you should continuously track its handling and carefully review documents from both sides.
 
-​
+Q17. What criminal liability does an at-fault party face for negligent injury in a traffic accident?
 
-Conflicts of interest between the insurer and the party can also arise, and because insurers must handle many cases, it is difficult for them to devote sufficient time to each individual matter.
+Courts currently generally impose about 3 months’ imprisonment for negligent injury.
 
-​
+If the sentence is converted to a fine, the conversion rate is TWD 1,000 per day; for a 3-month sentence, the fine is 3 × 30 × TWD 1,000 = TWD 90,000.
 
-​
-
-​
-
-Therefore, I do not recommend leaving all litigation to the insurance company.
-
-​
-
-If you leave it to the insurer, you should continuously track the handling process and carefully review documents from both sides.
-
-​
-
-​
-
-​
-
-Q17. What is the criminal liability of a traffic accident at-fault party for negligent injury?
-
-​
-
-In cases of negligent injury, courts currently generally impose about 3 months’ imprisonment.
-
-​
-
-If converted to a fine, it is calculated at TWD 1,000 per day; for a 3-month sentence, 3 × 30 × 1,000 = TWD 90,000 must be paid.
-
-​
-
-​
-
-​
-
-Negligent serious injury usually results in about 4 months’ imprisonment, and negligent death usually about 6 months’ imprisonment.
-
-​
-
-​
-
-​
+Negligent serious injury generally results in about 4 months’ imprisonment, while negligent death generally results in about 6 months’ imprisonment.
 
 Q18. If you settle with the other party, can you withdraw the criminal complaint?
 
-​
+Negligent injury and negligent serious injury are offenses prosecutable only upon complaint (告訴乃論之罪), so the complainant may withdraw the complaint.
 
-Negligent injury and negligent serious injury are offenses that may be withdrawn—“offenses prosecutable only upon complaint” (告訴乃論之罪).
+In a negligent-death case, withdrawing the complaint is not available. However, if you settle with the other party’s family, the court may reduce the sentence.
 
-​
-
-Negligent death cannot have the complaint withdrawn; however, if you settle with the other party’s family, the court may lighten the sentence.
-
-​
-
-You may receive a suspended sentence and avoid going to prison.
-
-​
-
-​
-
-​
+You may receive a suspended sentence and avoid imprisonment.
 
 Q19. If you leave the scene after an accident, does criminal hit-and-run always apply?
 
-​
-
 Not necessarily.
 
-​
+Criminal hit-and-run liability requires that someone have been injured or killed.
 
-A prerequisite for hit-and-run is that someone was injured or killed.
-
-​
-
-If only vehicle damage occurred, it is not treated as hit-and-run.
-
-​
-
-​
-
-​
+If the accident caused only vehicle damage, criminal hit-and-run does not apply.
 
 Q20. How do you find a traffic accident attorney?
 
-​
+Because traffic-accident cases are common, a general litigation attorney with a few years of practical experience can handle them.
 
-Because traffic accidents are very common cases, a general litigation attorney with just a few years of practical experience can handle traffic accident cases.
+What matters is the attorney’s care and honesty.
 
-​
+The attorney should carefully review every head of damages and help you pursue the maximum compensation available.
 
-What matters then is the attorney’s carefulness and honesty.
+The attorney should also explain your position clearly and outline the risks of not settling.
 
-​
-
-It is important that the attorney carefully reviews every claim item in the case and helps you obtain maximum compensation.
-
-​
-
-The attorney should also clearly explain the party’s situation and clearly communicate the risks expected if you do not settle.
-
-​
-
-Be careful of attorneys who inflate the case and urge you not to settle but to fight civil and criminal proceedings all the way, just to take the engagement.
-
-​
-
-​
-
-​
+Be wary of attorneys who exaggerate a case and urge you to reject settlement and fight both civil and criminal proceedings through to the end merely to secure the engagement.
 
 This concludes the Q&A on traffic accidents. I hope it is helpful to you.
 
-​
-
-​
-
-​
-
-Having handled many traffic accidents, I want to emphasize an important point.
-
-​
+Having handled many traffic-accident cases, I want to emphasize one important point.
 
 Because of the victim’s injury or death, the victim or their family suffers physical and mental pain.
 
-​
+At-fault parties often fail to call and check on the victim or visit them in the hospital. Many assume that the insurance company will handle everything and do not appear in person. In such cases, the victim perceives neither remorse nor sincerity on the part of the at-fault party.
 
-At-fault parties often do not bother to call and check on the victim or visit them in the hospital; many assume the insurance company will handle everything and do not show up. In such cases, the victim perceives neither remorse nor sincerity on the part of the at-fault party.
+As a result, victims often feel deeply hurt and angry, refuse to compromise on settlement amounts, apply for provisional attachment, and pursue seizure of the other party’s assets to the end.
 
-​
-
-​
-
-​
-
-As a result, victims often feel deeply hurt and angry, refuse to concede on negotiation amounts, apply for provisional attachment, and pursue seizure of the other party’s assets to the end.
-
-​
-
-Therefore, this point must never be overlooked, and it is best to consult an attorney according to the situation.
-
-​
-
-​
-
-​
+This point must never be overlooked, and it is best to consult an attorney based on the circumstances.
 
 If you have additional questions, please leave them in the comments.
 
-​
-
-This has been Wei Tseng, Taiwan attorney.
+Wei Tseng (曾雋崴), Taiwan Attorney
 
 ---
 

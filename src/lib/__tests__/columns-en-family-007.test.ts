@@ -32,24 +32,24 @@ const staleGenericIntro =
   'This guide explains Taiwan divorce routes, household registration, court procedure, and judicial-divorce grounds in neutral legal terms. It is general information only. Jurisdiction, applicable law, recognition, facts, evidence, existing orders, and current official rules can change the analysis for any individual matter.';
 
 const faq1Answer =
-  'Under Civil Code Article 1050, a Taiwan mutual-consent divorce is effective only when three requirements are met together: the divorce is in writing; at least two witnesses who personally perceived and confirmed both spouses’ genuine mutual intent to divorce sign the instrument; and the divorce is registered with the household-registration authority. A signed private agreement alone does not complete the divorce, because registration is constitutive for this path. Where foreign elements are involved, parties must also examine applicable law, authentication and translation of documents, and any registration or recognition steps required in another jurisdiction. Always check the current official household-registration guide and the competent office for filing details.';
+  'Under Civil Code Article 1050, the parties must agree to divorce in writing, at least two witnesses must sign after confirming both parties’ genuine intent to divorce, and the divorce must be registered with the household-registration authority. A signed agreement alone does not complete the divorce. Where foreign elements are involved, the parties must separately check the applicable law, document authentication and translation requirements, and any registration required in another country or region.';
 const faq2Answer =
-  'No. When a court orders a party or legal representative to appear in person and that person fails to appear without just cause, Family Act Article 13 applies Civil Procedure Code Article 303 mutatis mutandis. The first fine for unjustified nonappearance may be up to NTD 30,000, and repeated sanctions may follow after further lawful notice and another unjustified failure to appear. Compulsory appearance by arrest is not available. These rules do not mean both spouses must always sit together in the same room. Whether remote participation, separate or safety arrangements, or representation is permitted depends on the court’s decision under law and the circumstances of the case.';
+  'No. Depending on the nature of the family matter, a Taiwan court may order a party or legal representative to appear in person. A failure to comply without just cause may result in an initial fine of up to NTD 30,000 under Family Act Article 13 and Civil Procedure Code Article 303, which applies mutatis mutandis. Whether the spouses must mediate together in the same room, or whether separate sessions, safety measures, representation, or other procedural arrangements are available, depends on the court and the circumstances of the case.';
 const responsibleSpouseParagraph =
   'The proviso to current Civil Code Article 1052, paragraph 2 provides that, where a serious cause for the breakdown of the marriage is attributable solely to one spouse, only the other spouse may, in principle, petition for divorce. However, Taiwan Constitutional Court Judgment 112-Hsien-Pan-4 held the proviso unconstitutional to the extent that it completely deprives the responsible spouse of any opportunity to divorce, without considering whether a considerable period has elapsed since the serious cause arose or whether it has continued for a considerable period, and thereby produces a manifestly harsh result in an individual case. Because the proviso remains in the statutory text, a petition by the responsible spouse should not be treated as automatically available or automatically barred; the outcome depends on how the court applies the judgment’s reasoning to the specific facts.';
 const responsibleSpouseJudgmentSentence =
   'The Court held the proviso unconstitutional to the extent that it completely deprives the solely responsible spouse of any opportunity to divorce, without considering whether a considerable period has elapsed since the serious cause arose or whether it has continued for a considerable period, and thereby produces a manifestly harsh result in an individual case.';
 const faq3Answer = responsibleSpouseParagraph;
 const faq4Answer =
-  'No single factor is conclusive. Registered title, beneficial-ownership or nominee-registration theories, source-of-funds evidence such as premarital savings used for a down payment or loan installments, gifts, loans, reimbursement or other claims, and the separate residual-property calculation under Civil Code Article 1030-1 raise different legal questions. Title in one spouse’s name does not by itself defeat every ownership, contractual, or reimbursement claim, and premarital funding does not by itself transfer title or fix the residual-property result. Parties must examine the real agreement, acquisition timing and cause, fund flows, debts, gratuitous acquisitions, and supporting records. Ownership issues and the Article 1030-1 equal-difference calculation after exclusions and possible court adjustment remain distinct inquiries.';
+  'No. Registered title to a house and the source of the purchase funds are important evidence, but specific claims concerning ownership, gifts, nominee registration, loans, or unjust enrichment are distinct from distribution of the residual-property difference under Civil Code Article 1030-1. The parties must separately examine their actual agreement, the cause and timing of acquisition, fund flows, debts, whether property was acquired gratuitously, and the supporting evidence. Neither paying part of the cost with premarital funds nor registering the house in one party’s name determines every issue.';
 const faq5Answer =
-  'No. Residual-property distribution under Civil Code Article 1030-1, divorce damages under Article 1056, post-divorce support under Article 1057, ongoing child support, claims arising from unmarried cohabitation that are not divorce rights, and tort or other claims against a third party are separate bases with different elements, proof, and limitation analysis. Only the Article 1030-1 residual-property claim is extinguished if not exercised within two years from knowledge of the residual-property difference and, in any event, within five years from termination of the statutory regime. That two-year and five-year rule must not be treated as a universal period for damages, post-divorce support, child support, ownership, or third-party claims. Each right’s accrual, knowledge, and limitation rule must be checked on its own terms.';
+  'No. A claim for distribution of the residual-property difference under Civil Code Article 1030-1, damages for judicial divorce under Article 1056, hardship support for a spouse without fault under Article 1057, and child support for a minor child have different elements, calculations, and time limits. The Article 1030-1 claim is subject to a two-year period from knowledge of the residual-property difference and a five-year period from termination of the statutory matrimonial-property regime, but those periods must not be carried over to the other claims.';
 const faq6Answer =
-  'Under Civil Code Articles 1055 and 1055-1, arrangements for the exercise and assumption of rights and duties regarding a minor child, and related contact or visitation, are governed by the child’s best interests. Parents may agree, but the court may decide or change an arrangement when agreement is absent, fails, or is adverse to the child. The court considers all relevant circumstances, including continuity and safety, care history, each parent’s capacity and willingness, whether a parent facilitates the child’s relationship with the other parent, the child’s views where appropriate, and reports or information from competent authorities or child-welfare professionals as the law allows. Marital fault is not a basis for punishment, and no automatic income-based or fault-based rule decides the result.';
+  'Under Civil Code Articles 1055 and 1055-1, a Taiwan court decides the exercise and assumption of rights and duties regarding a minor child, contact or visitation, and other child-related matters according to the child’s best interests. The court considers the statutory factors and the specific evidence, including the child’s age, health, views, and developmental needs; each parent’s living circumstances, caregiving capacity, and attitude; the child’s emotional relationship with each parent; and whether either parent has interfered with the child’s relationship with the other. Neither a parent’s income nor responsibility for the breakdown of the marriage determines the outcome by itself.';
 
 const faq = [
   {
-    q: 'What makes a Taiwan mutual-consent divorce effective?',
+    q: 'Does signing a divorce agreement make a mutual-consent divorce in Taiwan immediately effective?',
     a: faq1Answer,
   },
   {
@@ -129,7 +129,7 @@ const staleArticle1052TranslationInstruction =
 const article1052Paragraph1ReaderSentence =
   'Civil Code Article 1052 paragraph 1 sets out ten grounds on which a spouse may petition for judicial divorce when any of the following applies to the other spouse:';
 const missingSpouseTailParagraph =
-  'A police missing-person report may be important evidence, but the statute does not make it a universal mandatory precondition. A prior action demanding cohabitation is not a universal statutory precondition either. Several months away from home, without more, is not itself a divorce ground. The court examines continuity, intent, proof of life-or-death uncertainty, and whether a serious cause is established under the applicable paragraph.';
+  'A police missing-person report may be evidence of the spouse’s whereabouts and the passage of time, but it is not a mandatory prerequisite for every divorce claim. Nor is there a universal requirement to bring an action demanding cohabitation before alleging malicious desertion or another serious cause. Several months away from home, without more, does not establish any particular ground. The court must examine the reason for the departure, whether there was a justified reason to live separately, contact and support between the spouses, continuity, and the other specific facts.';
 const sexualIntercourseConsequencesParagraph =
   'Whether consensual sexual intercourse with a person other than one’s spouse constitutes a ground under Article 1052, paragraph 1 must be assessed in light of the precise facts, the statutory requirements, and any applicable time limits. The existence of that conduct does not, by itself, dictate the outcomes of a petition for judicial divorce, damages under Article 1056, residual-property distribution, post-divorce spousal support under Article 1057, the exercise and assumption of rights and duties regarding a minor child, or child support. Each issue is determined under its own requirements and applicable standards, including the child’s best interests where relevant.';
 const foreignEffectSubsectionHeading =
@@ -145,7 +145,7 @@ const article1017Paragraph =
 const article10301ExclusionsParagraph =
   'Inherited property and other property acquired gratuitously, as well as solatium (consolation damages), are excluded from the statutory calculation. Relevant debts and the statutory rules governing dispositions made before termination of the matrimonial property regime must also be considered. Residual-property distribution is not a crude half-and-half split of every asset acquired during marriage, and it is not the same concept as common property under a different marital regime.';
 const article10301AdjustmentParagraph =
-  'Where equal division of the residual difference would be manifestly unfair, the court may adjust or waive distribution after considering the statutory circumstances. Neither extramarital sexual relations nor responsibility for the breakdown of the marriage automatically bars or reduces a claim for distribution of the residual-property difference. However, specific facts falling within the statutory adjustment factors—such as the concealment or disposition of property, contributions through household labor and childcare, and the overall circumstances of the spouses’ shared life and acquisition of property—may be separately pleaded and proved. Nor should it be assumed that the calculation under Article 1030-1 changes merely because the spouses have different nationalities.';
+  'Where equal division of the residual difference would be manifestly unfair, the court may adjust or waive distribution after considering the statutory circumstances. Neither extramarital sexual relations nor responsibility for the breakdown of the marriage automatically bars or reduces a claim for distribution of the residual-property difference. However, specific facts falling within the statutory adjustment factors—such as the concealment or disposition of property, contributions through household labor and childcare, and the overall circumstances of the spouses’ shared life and acquisition of property—may be separately pleaded and proved. Nor should it be assumed that the calculation under Article 1030-1 changes merely because the spouses have different nationalities.\n\nThe claim is extinguished if it is not exercised within two years from the date on which the claimant learned that there was a residual-property difference and, in any event, within five years from termination of the statutory matrimonial-property regime. These two periods apply only to the Article 1030-1 claim; they must not be used as the periods for ownership, loan, damages, post-divorce spousal support, or child-support claims. The actual triggering date and the date on which the statutory regime terminated must be determined from the evidence in each case.';
 const article1056SubsectionHeading =
   '### Article 1056, Article 1057, and child support';
 const article1056Paragraph =
@@ -191,20 +191,20 @@ const expectedDurationParagraph =
 const evidenceProhibitionsParagraph =
   'Do not use unlawful surveillance, unauthorized access to accounts, intrusion into a mobile phone or computer, location tracking, recordings made in violation of law, or disclosure of a child’s private information as methods of gathering evidence. Retaliation against the other party, concealment or sham transfer of assets, and moving a child contrary to an agreement or court order may also create additional risks for the case and the child. If it is unclear whether material may lawfully be obtained or how it should be preserved, check the applicable law and court procedures before collecting it.';
 const frozenBeforeFilingDocumentsSha256 =
-  '07e7dcdcbd12687fd57000836158cac2cf8c9ed2e20a50f5c47b46f18b325d74';
+  'daa434cb7b8064df773030b7406d4e8d6046478c9ca377760f5bb734c4c6077e';
 const frozenCourtResultsSubsectionSha256 =
-  'f71e4e842814428d9238d6747631dc644ea561f861c84f363a715a17a5ef3ce5';
+  '180f59abec39bf4cf6aefe84b3c9733c7dffa49e8d505c65db22aa75dd1ceebf';
 const frozenSection3OnwardSha256 =
-  '1af8a87f89d706e24d645ee14112d3d9bf2a42d9c69664f4958605b30817d2a8';
+  'c25737685e62acf2eec8b3a05d4f0f61d3d031b4fb4c6d698510d0728a8c0a3c';
 const frozenSection4OutsideArticle1052IntroSha256 =
-  '2ee68328f7e10ad0bbb1cde3593fe519967bf1672dba3d044b72bba2d2310813';
+  '6d21299c224a5ff4d86880622d8d47f69f3f7ccebfa2a78861d08032ee49d8ef';
 const frozenSection5OnwardSha256 =
-  'a020c7c692797e8e13fe1a0596ade49c007e4a60839e39545739faa3d027009f';
+  '16a3ead372d16c96127261c90a6f2f1367f3e2fa69468dfedf7c27204d8d5b9d';
 const frozenSection1OnwardSha256 =
-  'a89e30908f9adc1c554a196159fb8724e2938c6cf9d96d0c6aaacc03a2669a34';
-const frozenVisibleWordCount = 5_759;
+  '54f87a6aef1dc43c9ce7e54256a97fefcd0ac53bad3e22cdfdc33ae2e025479f';
+const frozenVisibleWordCount = 5_818;
 const frozenSourceSha256 =
-  'bc3b216462d3cfc5827a4b91e768f17f75e6a09bd2ff28080740f9ba14ab58fc';
+  'fb6838230608c4948497bad2d66e3255988c84c04093d0e57cdaa560dab68ae8';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -252,7 +252,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: 'September 13, 2025',
-      read_time: '29 min read',
+      read_time: '30 min read',
       categories: ['Taiwan Legal Information'],
       featured_image: featuredImage,
       faq,
@@ -263,7 +263,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       title,
       date: '2026-07-25',
       dateDisplay: 'September 13, 2025',
-      readTime: '29 min read',
+      readTime: '30 min read',
       category: 'legal',
       categoryLabel: 'Legal Information',
       featuredImage:
@@ -407,7 +407,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 14,
         heading: headings[6],
         phrase:
-          '**Article 1057** concerns post-divorce support for a spouse without fault who falls into financial hardship because of judicial divorce.',
+          '**Article 1057** concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce.',
       },
       {
         number: 15,
@@ -419,7 +419,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 16,
         heading: headings[7],
         phrase:
-          'A signed divorce agreement does not freeze the child’s situation against later court review when the statutory conditions for decision or change are met.',
+          'A signed divorce agreement does not bar later review under the best-interests standard',
       },
       {
         number: 17,
@@ -454,19 +454,19 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
         number: 22,
         heading: headings[6],
         phrase:
-          'Serious interference or insults do not automatically create Article 1057 liability or divorce damages against a third party.',
+          'Serious interference or insults by a third party do not automatically give rise to damages.',
       },
       {
         number: 23,
         heading: headings[3],
         phrase:
-          'A police missing-person report may be important evidence, but the statute does not make it a universal mandatory precondition.',
+          'A police missing-person report may be evidence of the spouse’s whereabouts and the passage of time, but it is not a mandatory prerequisite for every divorce claim.',
       },
       {
         number: 24,
         heading: headings[3],
         phrase:
-          'Several months away from home, without more, is not itself a divorce ground.',
+          'Several months away from home, without more, does not establish any particular ground.',
       },
       {
         number: 25,
@@ -496,7 +496,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'whether a foreign divorce, judgment, or status act is recognized or effective in Taiwan;',
       'what Taiwan household-registration step and authenticated documents are required; and',
       'what additional registration, recognition, or enforcement step is required in another relevant jurisdiction.',
-      'Nationality alone, place of marriage registration alone, or application of one country’s local law alone does not resolve all five questions.',
+      'No single factor—such as a party’s nationality, foreign status, or place of marriage—answers all five questions.',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -510,11 +510,11 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       faq1Answer,
       'Article 1050 separates three requirements:',
       '**Writing.** The mutual-consent divorce must be in writing.',
-      'Signatures are not a purely formal later add-on by persons who never confirmed that intent.',
+      'A witness does not satisfy the requirement by merely adding a name to a document without confirming that intent.',
       'Registration with the household-registration authority is constitutive for this path.',
       'Without registration, the private writing does not complete a Taiwan mutual-consent divorce.',
       '**thirty days from finality of the Taiwan divorce judgment or from establishment of the court mediation or settlement**',
-      'The period does not run from mere receipt of a judgment or mediation record if finality or establishment has not yet occurred.',
+      'The date on which a judgment or record is served or received is not the common triggering date in every case.',
       'A late application must still be accepted.',
       'Lateness does not undo an already effective court divorce.',
       'the household-registration office registers the result directly under Article 48-2.',
@@ -680,17 +680,17 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     ];
     const requiredPhrases = [
       faq3Answer,
-      'It is a medical and legal criterion, not a moral label or a judgment of character.',
+      'Civil Code Article 1052 paragraph 1 sets out ten grounds on which a spouse may petition for judicial divorce',
       'Paragraph 2 is separate from the ten grounds.',
-      'That proviso remains in the current statutory text as of 2026-07-25.',
-      'Constitutional Court Judgment 112-Hsien-Pan-4 did not delete it',
-      'Which considerations apply depends on the ground:',
-      'the paragraph 2 proviso and Judgment 112-Hsien-Pan-4 concern petitions based on another serious cause under paragraph 2, not a freestanding rewrite of every paragraph 1 ground.',
-      'A police missing-person report may be important evidence, but the statute does not make it a universal mandatory precondition.',
-      'A prior action demanding cohabitation is not a universal statutory precondition either.',
-      'Several months away from home, without more, is not itself a divorce ground.',
+      'the wording of the proviso itself remained in the statute as of 2026-07-25.',
+      'Although the legislative period specified by Constitutional Court Judgment 112-Hsien-Pan-4 has elapsed',
+      'Courts must apply the judgment’s constitutional reasoning to the facts of each case.',
+      'Do not state that an at-fault spouse can never petition, can always petition',
+      'A police missing-person report may be evidence of the spouse’s whereabouts and the passage of time, but it is not a mandatory prerequisite for every divorce claim.',
+      'Nor is there a universal requirement to bring an action demanding cohabitation before alleging malicious desertion or another serious cause.',
+      'Several months away from home, without more, does not establish any particular ground.',
       'either a spouse abuses the other spouse’s lineal relative, or a lineal relative of one spouse abuses the other spouse',
-      'The two-year legislative period has elapsed without replacement of the current text, so courts apply the judgment’s reasoning in such paragraph 2 cases.',
+      'The court must examine the reason for the departure, whether there was a justified reason to live separately, contact and support between the spouses',
     ];
 
     let previousIndex = -1;
@@ -801,7 +801,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'A foreign marriage or foreign divorce does not collapse into one universal Taiwan route.',
       'There is no fixed rule that parties must first re-register a foreign marriage in Taiwan or must always sue only in Taiwan.',
       'Completing a divorce under foreign local law does not, by itself, complete Taiwan household registration or prove Taiwan recognition.',
-      'authentication by a Taiwan overseas mission or another authorized channel, together with a Chinese translation authenticated or notarized',
+      'a foreign marriage or divorce record may require authentication by a Taiwan overseas mission or another competent authority.',
       'Documents from mainland China, Hong Kong, and Macao follow verification regimes that differ from ordinary foreign authentication.',
       foreignRecognitionParagraph,
     ];
@@ -923,15 +923,15 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     const requiredPhrases = [
       faq5Answer,
       article1056Paragraph,
-      '**Article 1057** concerns post-divorce support for a spouse without fault who falls into financial hardship because of judicial divorce.',
+      '**Article 1057** concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce.',
       '**Article 1116-2** continues parents’ duty to support a minor child after divorce.',
       'Child support is distinct from Article 1057 spousal support.',
       'Government average consumption statistics are not a binding formula that automatically sets Article 1057 support.',
       'An unmarried couple does not obtain divorce rights, Article 1056 divorce damages, or Article 1057 post-divorce support merely because they lived together.',
-      'Claims against an in-law or another third party require a separate legal foundation',
-      'That two-year and five-year rule must not be treated as a universal period for damages, post-divorce support, child support, ownership, or third-party claims.',
-      'within two years from knowledge of the residual-property difference',
-      'within five years from termination of the statutory regime',
+      'An in-law or another relative of a spouse is not an obligor for post-divorce spousal support under Article 1057.',
+      'those periods must not be carried over to the other claims.',
+      'a two-year period from knowledge of the residual-property difference',
+      'a five-year period from termination of the statutory matrimonial-property regime',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -960,7 +960,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     const subsectionStart = parsed.content.indexOf(subsectionMarker);
     const paragraphStart = subsectionStart + subsectionMarker.length;
     const agreementStart = parsed.content.indexOf(
-      '\n\nParents may agree on the arrangement.',
+      '\n\nUnder Civil Code Article 1055, parents may agree',
       paragraphStart,
     );
 
@@ -1009,7 +1009,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       faq6Answer,
       childScopeParagraph,
       'management of the child’s property, and legal representation',
-      'A signed divorce agreement does not freeze the child’s situation against later court review',
+      'A signed divorce agreement does not bar later review under the best-interests standard',
       bestInterestsFactorsParagraph,
       'the child’s age, sex, and health; the number of children; the child’s views and needs for personality development',
       'each parent’s age, occupation, conduct, health, financial means, and living circumstances',
@@ -1107,7 +1107,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       'Family Act Article 194 requires enforcement methods to be selected under the child’s best interests.',
       'Those methods may involve direct or indirect compulsion as the law and the facts allow.',
       'There is no automatic right to immediate physical handover, use of force, a change of parental rights and duties, or punishment of the other parent merely because contact was blocked.',
-      'Preserve, at a minimum, the current order or agreement, attempted-contact records, school and medical schedules, expense and payment history',
+      'Preserve the current agreement or court decision, records of communications and attempted contact, the dates and places of attempted meetings, school and medical schedules',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -1128,7 +1128,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       '**Urgent protection.**',
       'Agreement that a child will live in Korea does not by itself fix support at Korean cost-of-living levels.',
       'Do not state or imply that the 1980 Hague Child Abduction Convention automatically governs Taiwan.',
-      'Cross-border removal and return questions require advice and analysis in every relevant jurisdiction',
+      'Cross-border removal, retention, and return questions require advice and analysis in every relevant jurisdiction',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -1513,7 +1513,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       .digest('hex');
 
     expect(visibleWordCount).toBe(frozenVisibleWordCount);
-    expect(calculatedMinutes).toBe(29);
+    expect(calculatedMinutes).toBe(30);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(sourceSha256).toBe(frozenSourceSha256);

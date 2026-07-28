@@ -215,6 +215,7 @@ describe('Japanese reviews integration', () => {
       ko: `${SITE_URL}/ko/reviews`,
       'zh-Hant': `${SITE_URL}/zh-hant/reviews`,
       en: `${SITE_URL}/en/reviews`,
+      ja: `${SITE_URL}/ja/reviews`,
       'x-default': `${SITE_URL}/ko/reviews`,
     });
     expect(html).toContain(formTitle);

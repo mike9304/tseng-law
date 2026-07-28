@@ -81,7 +81,7 @@ describe('canonical attorney SEO identity', () => {
         url: 'https://tseng-law.com/ja/lawyers/wei-tseng',
       },
       address: {
-        streetAddress: '台北市大同區承德路一段35號7樓之2',
+        streetAddress: '台北市大同区承徳路一段35号7F-2',
       },
     });
     expect(serialized).not.toContain('/en');

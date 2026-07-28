@@ -98,10 +98,11 @@ const openGraphLocale: Record<SiteLocale, string> = {
 };
 
 const organizationLanguageTags = ['ko', 'zh-Hant', 'en', 'ja'];
-const organizationAddress: Record<Locale, string> = {
+const organizationAddress: Record<SiteLocale, string> = {
   ko: '타이베이시 다퉁구 청더로 1단 35호 7층의2',
   'zh-hant': '台北市大同區承德路一段35號7樓之2',
   en: '7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist.',
+  ja: '台北市大同区承徳路一段35号7F-2',
 };
 
 export function getSiteUrl(): string {
@@ -348,7 +349,7 @@ export function buildLegalServiceJsonLd(
     logo: buildAbsoluteUrl(LOGO_IMAGE),
     address: {
       '@type': 'PostalAddress',
-      streetAddress: locale === 'ja' ? organizationAddress['zh-hant'] : organizationAddress[locale],
+      streetAddress: organizationAddress[locale],
       addressLocality: 'Taipei City',
       addressCountry: 'TW',
     },

@@ -180,7 +180,13 @@ describe('Japanese contact route integration', () => {
 
       expect(metadata?.title).toBe(title);
       expect(metadata?.alternates?.canonical).toBe(`${SITE_URL}/${locale}/contact`);
-      expect(metadata?.alternates?.languages).not.toHaveProperty('ja');
+      expect(metadata?.alternates?.languages).toEqual({
+        ko: `${SITE_URL}/ko/contact`,
+        'zh-Hant': `${SITE_URL}/zh-hant/contact`,
+        en: `${SITE_URL}/en/contact`,
+        ja: `${SITE_URL}/ja/contact`,
+        'x-default': `${SITE_URL}/ko/contact`,
+      });
       expect(dispatchedPage.type).toBe(ContactLegacyPage);
       expect(dispatchedPage.props.locale).toBe(locale);
       expect(html).toContain(guideTitle);

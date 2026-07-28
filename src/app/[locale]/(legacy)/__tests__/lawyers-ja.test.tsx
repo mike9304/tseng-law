@@ -111,7 +111,13 @@ describe('Japanese lawyers-list integration', () => {
         'attorney-profiles.list-template',
         locale,
       );
-      expect(getLawyersLegacyMetadata(locale).alternates?.languages).not.toHaveProperty('ja');
+      expect(getLawyersLegacyMetadata(locale).alternates?.languages).toEqual({
+        ko: `${SITE_URL}/ko/lawyers`,
+        'zh-Hant': `${SITE_URL}/zh-hant/lawyers`,
+        en: `${SITE_URL}/en/lawyers`,
+        ja: `${SITE_URL}/ja/lawyers`,
+        'x-default': `${SITE_URL}/ko/lawyers`,
+      });
     },
   );
 });

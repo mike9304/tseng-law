@@ -2,6 +2,7 @@ import { mkdtemp, rm } from 'fs/promises';
 import os from 'os';
 import path from 'path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { faqContent } from '@/data/faq-content';
 import {
   createFaqItem,
   deleteFaqItem,
@@ -72,6 +73,27 @@ describe('native FAQ engine', () => {
 
     await deleteFaqItem(created.faqId);
     expect(await loadFaqItem(created.faqId)).toBeNull();
+  });
+
+  it('seeds Japanese published FAQ records from the existing Japanese copy without rewriting it', async () => {
+    const jaItems = await listFaqItems({ locale: 'ja', status: 'published' });
+
+    expect(jaItems).toHaveLength(faqContent.ja.length);
+    expect(jaItems.map((item) => item.question)).toEqual(faqContent.ja.map((item) => item.question));
+    expect(jaItems.map((item) => item.answer)).toEqual(faqContent.ja.map((item) => item.answer));
+    expect(jaItems.every((item) => item.locale === 'ja' && item.schemaEnabled)).toBe(true);
+
+    const company = await listFaqItems({ locale: 'ja', status: 'published', categoryId: 'company-setup' });
+    const consultation = await listFaqItems({ locale: 'ja', status: 'published', categoryId: 'consultation' });
+    expect(company).toHaveLength(4);
+    expect(consultation).toHaveLength(2);
+    expect(company[0]?.tags).toContain('会社設立');
+
+    // ja seeds must not leak into the builder locales.
+    for (const builderLocale of ['ko', 'zh-hant', 'en'] as const) {
+      const leaked = await listFaqItems({ locale: builderLocale, status: 'published' });
+      expect(leaked.every((item) => item.locale === builderLocale)).toBe(true);
+    }
   });
 
   it('emits FAQ search documents from published records only', async () => {

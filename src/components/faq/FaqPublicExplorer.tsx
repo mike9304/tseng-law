@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState, type MouseEvent as ReactMouseEvent } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import type { BuilderFaqCategory, BuilderFaqItem } from '@/lib/builder/faq/faq-shared';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import {
   buildHref,
   categoryLabel,
@@ -14,7 +14,7 @@ import {
 import styles from './FaqPublicExplorer.module.css';
 
 interface FaqPublicExplorerProps {
-  locale: Locale;
+  locale: SiteLocale;
   categories: BuilderFaqCategory[];
   items: BuilderFaqItem[];
   initialCategory?: string;
@@ -36,7 +36,8 @@ export default function FaqPublicExplorer({
   const [openId, setOpenId] = useState<string | null>(items[0]?.faqId ?? null);
   const [currentHash, setCurrentHash] = useState<string | null>(null);
   const text = faqPublicExplorerCopy[locale];
-  const categoryRailLabel = locale === 'ko' ? 'FAQ 분류' : locale === 'zh-hant' ? 'FAQ 分類' : 'FAQ categories';
+  const categoryRailLabel =
+    locale === 'ko' ? 'FAQ 분류' : locale === 'zh-hant' ? 'FAQ 分類' : locale === 'ja' ? 'FAQ 分類' : 'FAQ categories';
 
   useEffect(() => {
     if (typeof window === 'undefined') return;

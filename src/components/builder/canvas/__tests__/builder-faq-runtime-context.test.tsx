@@ -23,6 +23,7 @@ const FAQ_CATEGORY: BuilderFaqCategory = {
     ko: '법인설립',
     'zh-hant': '公司設立',
     en: 'Company Setup',
+    ja: '会社設立',
   },
   sortOrder: 10,
   createdAt: '2026-05-20T00:00:00.000Z',

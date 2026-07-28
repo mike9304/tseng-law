@@ -561,7 +561,14 @@ export default function Header({ locale }: { locale: SiteLocale }) {
           </nav>
 
           <div className="header-actions">
-            {locale !== 'ja' ? (
+            {locale === 'ja' ? (
+              <Link className="header-search-btn" href={`/${locale}/search`} aria-label={searchLabel}>
+                <svg className="header-search-icon" viewBox="0 0 24 24" aria-hidden>
+                  <circle cx="11" cy="11" r="7.2" />
+                  <line x1="16.5" y1="16.5" x2="21" y2="21" />
+                </svg>
+              </Link>
+            ) : (
               <button
                 className="header-search-btn"
                 type="button"
@@ -573,7 +580,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
                   <line x1="16.5" y1="16.5" x2="21" y2="21" />
                 </svg>
               </button>
-            ) : null}
+            )}
             <Link className="button nav-cta" href={content.nav.cta.href}>
               {content.nav.cta.label}
             </Link>

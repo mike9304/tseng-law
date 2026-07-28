@@ -143,7 +143,9 @@ export default function MobileNavDrawer({
       ? { login: '로그인', account: '내 계정', premium: '프리미엄', logout: '로그아웃' }
       : locale === 'zh-hant'
         ? { login: '登入', account: '我的帳戶', premium: '進階內容', logout: '登出' }
-        : { login: 'Log in', account: 'My account', premium: 'Premium', logout: 'Log out' });
+        : locale === 'ja'
+          ? { login: 'ログイン', account: 'アカウント', premium: 'プレミアム', logout: 'ログアウト' }
+          : { login: 'Log in', account: 'My account', premium: 'Premium', logout: 'Log out' });
   const memberState = memberNav ?? { status: 'signed-out' };
   const loginHref = memberLoginHref ?? `/${locale}/login?next=${encodeURIComponent(current || `/${locale}/account`)}`;
   const canSeePremium = memberState.member?.role === 'premium' || memberState.member?.role === 'admin';
@@ -172,11 +174,20 @@ export default function MobileNavDrawer({
           </button>
         </div>
         <div className="drawer-utilities">
-          {locale !== 'ja' ? (
+          {locale === 'ja' ? (
+            <Link
+              className="chip"
+              href={`/${locale}/search`}
+              onClick={onClose}
+              aria-label={content.nav.searchLabel}
+            >
+              {content.nav.searchLabel}
+            </Link>
+          ) : (
             <button className="chip" type="button" onClick={onSearch} aria-label={content.nav.searchLabel}>
               {content.nav.searchLabel}
             </button>
-          ) : null}
+          )}
           <LocaleFlagSwitcher
             locale={locale}
             className="locale-flag-switcher--mobile"
@@ -192,36 +203,34 @@ export default function MobileNavDrawer({
           ))}
         </nav>
         <div className="drawer-footer">
-          {locale !== 'ja' ? (
-            <div className="utility-member-nav drawer-member-nav" data-member-nav-state={memberState.status}>
-              {memberState.status === 'signed-in' ? (
-                <>
-                  <Link href={`/${locale}/account`} data-member-role-link="account" onClick={onClose}>
-                    {labels.account}
-                  </Link>
-                  {canSeePremium ? (
-                    <Link href={`/${locale}/account/premium`} data-member-role-link="premium" onClick={onClose}>
-                      {labels.premium}
-                    </Link>
-                  ) : null}
-                  <button
-                    type="button"
-                    data-member-role-link="logout"
-                    onClick={() => {
-                      void onMemberLogout?.();
-                      onClose();
-                    }}
-                  >
-                    {labels.logout}
-                  </button>
-                </>
-              ) : (
-                <Link href={loginHref} data-member-role-link="login" onClick={onClose}>
-                  {labels.login}
+          <div className="utility-member-nav drawer-member-nav" data-member-nav-state={memberState.status}>
+            {memberState.status === 'signed-in' ? (
+              <>
+                <Link href={`/${locale}/account`} data-member-role-link="account" onClick={onClose}>
+                  {labels.account}
                 </Link>
-              )}
-            </div>
-          ) : null}
+                {canSeePremium ? (
+                  <Link href={`/${locale}/account/premium`} data-member-role-link="premium" onClick={onClose}>
+                    {labels.premium}
+                  </Link>
+                ) : null}
+                <button
+                  type="button"
+                  data-member-role-link="logout"
+                  onClick={() => {
+                    void onMemberLogout?.();
+                    onClose();
+                  }}
+                >
+                  {labels.logout}
+                </button>
+              </>
+            ) : (
+              <Link href={loginHref} data-member-role-link="login" onClick={onClose}>
+                {labels.login}
+              </Link>
+            )}
+          </div>
           <Link href={content.nav.cta.href} className="button" onClick={onClose}>
             {content.nav.cta.label}
           </Link>

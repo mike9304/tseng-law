@@ -54,7 +54,18 @@ describe('Japanese mobile navigation drawer', () => {
     expect(html).toContain('🇺🇸');
   });
 
-  it('hides Japanese search and every member control even for a signed-in admin', () => {
+  it('renders the Japanese search chip link and member login link for signed-out visitors', () => {
+    const html = renderDrawer('ja');
+
+    expect(html).toContain(`aria-label="${siteContent.ja.nav.searchLabel}"`);
+    expect(html).toMatch(/class="chip"[^>]*href="\/ja\/search"/);
+    expect(html).toContain('class="utility-member-nav drawer-member-nav"');
+    expect(html).toContain('data-member-role-link="login"');
+    expect(html).toContain('ログイン');
+    expect(html).toMatch(/data-member-role-link="login"[^>]*href="\/ja\/login/);
+  });
+
+  it('renders Japanese account controls for a signed-in admin', () => {
     const html = renderDrawer('ja', {
       status: 'signed-in',
       member: {
@@ -68,11 +79,10 @@ describe('Japanese mobile navigation drawer', () => {
       },
     });
 
-    expect(html).not.toContain(`aria-label="${siteContent.ja.nav.searchLabel}"`);
-    expect(html).not.toContain('class="utility-member-nav drawer-member-nav"');
-    expect(html).not.toContain('data-member-role-link=');
-    expect(html).not.toContain('/ja/login');
-    expect(html).not.toContain('/ja/account');
+    expect(html).toContain('data-member-role-link="account"');
+    expect(html).toContain('href="/ja/account"');
+    expect(html).toContain('data-member-role-link="premium"');
+    expect(html).toContain('data-member-role-link="logout"');
   });
 
   it.each([

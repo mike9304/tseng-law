@@ -1,5 +1,5 @@
 import type { BuilderFaqCategory, BuilderFaqItem } from '@/lib/builder/faq/faq-shared';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
 type FaqPublicExplorerText = {
   readonly all: string;
@@ -9,7 +9,7 @@ type FaqPublicExplorerText = {
   readonly empty: string;
 };
 
-export const faqPublicExplorerCopy: Record<Locale, FaqPublicExplorerText> = {
+export const faqPublicExplorerCopy: Record<SiteLocale, FaqPublicExplorerText> = {
   ko: {
     all: '전체',
     search: 'FAQ 검색',
@@ -31,9 +31,16 @@ export const faqPublicExplorerCopy: Record<Locale, FaqPublicExplorerText> = {
     count: (count) => `${count} questions`,
     empty: 'No questions match these filters.',
   },
+  ja: {
+    all: 'すべて',
+    search: 'FAQ を検索',
+    clear: 'クリア',
+    count: (count) => `${count}件の質問`,
+    empty: '条件に一致する質問がありません。',
+  },
 };
 
-export function categoryLabel(categories: readonly BuilderFaqCategory[], categoryId: string, locale: Locale): string {
+export function categoryLabel(categories: readonly BuilderFaqCategory[], categoryId: string, locale: SiteLocale): string {
   return categories.find((category) => category.categoryId === categoryId)?.label[locale] ?? categoryId;
 }
 
@@ -50,7 +57,7 @@ export function buildHref(pathname: string, searchParams: URLSearchParams, hash:
 export function filterFaqItems(
   items: readonly BuilderFaqItem[],
   categories: readonly BuilderFaqCategory[],
-  locale: Locale,
+  locale: SiteLocale,
   categoryId: string,
   query: string,
 ): BuilderFaqItem[] {

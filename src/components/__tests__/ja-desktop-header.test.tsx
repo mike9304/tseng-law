@@ -39,11 +39,13 @@ describe('Japanese desktop header', () => {
     expect(html).toContain('🇺🇸');
   });
 
-  it('omits Japanese desktop member and search UI and guards the member request', () => {
+  it('renders a Japanese header search link to /ja/search but still omits member UI and the search overlay', () => {
     const html = renderHeader('ja');
 
     expect(html).not.toContain('class="utility-member-nav"');
-    expect(html).not.toContain('class="header-search-btn"');
+    expect(html).toContain('class="header-search-btn"');
+    expect(html).toMatch(/class="header-search-btn"[^>]*href="\/ja\/search"/);
+    expect(html).toContain('aria-label="検索を開く"');
     expect(headerSource).toContain("if (locale === 'ja') {");
     expect(headerSource).toContain("setMemberNav({ status: 'signed-out' });");
     expect(headerSource).toContain('}, [locale, pathname]);');

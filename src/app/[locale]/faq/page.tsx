@@ -2,9 +2,7 @@ import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import PageHeader from '@/components/PageHeader';
 import JsonLd from '@/components/JsonLd';
-import FAQAccordion from '@/components/FAQAccordion';
 import FaqPublicExplorer from '@/components/faq/FaqPublicExplorer';
-import { faqContent } from '@/data/faq-content';
 import { pageCopy } from '@/data/page-copy';
 import {
   buildPublishedSitePageMetadata,
@@ -78,13 +76,26 @@ export default async function FaqPage({
   const locale = normalizeSiteLocale(params.locale);
   if (locale === 'ja') {
     const copy = pageCopy.ja.faq;
-    const items = faqContent.ja;
+    const categories = listFaqCategories();
+    const items = await listFaqItems({
+      locale: 'ja',
+      status: 'published',
+      categoryId: firstSearchParamValue(searchParams?.category),
+      q: firstSearchParamValue(searchParams?.q),
+    });
+    const schemaItems = faqItemsToSchemaItems(items);
 
     return (
       <>
         <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
-        <FAQAccordion locale={locale} items={items} />
-        <JsonLd data={generateFAQSchema(items)} />
+        <FaqPublicExplorer
+          locale={locale}
+          categories={categories}
+          items={items}
+          initialCategory={firstSearchParamValue(searchParams?.category)}
+          initialQuery={firstSearchParamValue(searchParams?.q)}
+        />
+        {schemaItems.length > 0 ? <JsonLd data={generateFAQSchema(schemaItems)} /> : null}
       </>
     );
   }

@@ -9,7 +9,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { get, list, put } from '@vercel/blob';
 import { faqContent } from '@/data/faq-content';
-import { locales, normalizeLocale, type Locale } from '@/lib/locales';
+import { isLocale, normalizeLocale, siteLocales, type Locale, type SiteLocale } from '@/lib/locales';
 import type { SearchDoc } from '@/lib/builder/search/types';
 import {
   DEFAULT_FAQ_CATEGORIES,
@@ -169,7 +169,9 @@ function normalizeTags(value: unknown): string[] {
 
 export function normalizeFaqItem(input: Partial<BuilderFaqItem>): BuilderFaqItem {
   const at = nowIso();
-  const locale = normalizeLocale(input.locale);
+  // Builder-authored records stay on builder locales; the public ja surface
+  // seeds read-only records that must keep their 'ja' locale.
+  const locale: SiteLocale = input.locale === 'ja' ? 'ja' : normalizeLocale(input.locale);
   const question = safeTrim(input.question, 500);
   const faqId = safeTrim(input.faqId, 120) || makeFaqId();
   const categoryId = DEFAULT_FAQ_CATEGORIES.some((category) => category.categoryId === input.categoryId)
@@ -196,7 +198,7 @@ export function normalizeFaqItem(input: Partial<BuilderFaqItem>): BuilderFaqItem
 
 export function seedFaqItems(): BuilderFaqItem[] {
   const out: BuilderFaqItem[] = [];
-  for (const locale of locales) {
+  for (const locale of siteLocales) {
     faqContent[locale].forEach((item, index) => {
       const categoryId = SEED_CATEGORY_BY_INDEX[index] ?? 'consultation';
       out.push(normalizeFaqItem({
@@ -301,7 +303,7 @@ export function validateFaqItem(item: Partial<BuilderFaqItem>): string[] {
   const errors: string[] = [];
   if (!item.question?.trim()) errors.push('질문을 입력하세요.');
   if (!item.answer?.trim()) errors.push('답변을 입력하세요.');
-  if (!item.locale || !locales.includes(item.locale)) errors.push('지원하지 않는 언어입니다.');
+  if (!item.locale || !isLocale(item.locale)) errors.push('지원하지 않는 언어입니다.');
   if (!item.categoryId || !DEFAULT_FAQ_CATEGORIES.some((category) => category.categoryId === item.categoryId)) {
     errors.push('카테고리를 선택하세요.');
   }

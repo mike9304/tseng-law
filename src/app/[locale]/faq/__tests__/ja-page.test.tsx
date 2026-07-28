@@ -1,5 +1,4 @@
 import React from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 const mocks = vi.hoisted(() => ({
@@ -53,7 +52,6 @@ vi.mock('@/lib/builder/members/members-engine', () => ({
   checkAccess: mocks.checkAccess,
 }));
 
-import FAQAccordion from '@/components/FAQAccordion';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import { faqContent } from '@/data/faq-content';
@@ -105,7 +103,7 @@ describe('WO-I18N-P01 Japanese FAQ page', () => {
     expect(mocks.buildPublishedSitePageMetadata).not.toHaveBeenCalled();
   });
 
-  it('renders the complete Japanese FAQ surface and schema without published, member, or FAQ-engine calls', async () => {
+  it('renders the Japanese FAQ through the public explorer with the FAQ engine and schema', async () => {
     const japaneseSchema = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -118,6 +116,22 @@ describe('WO-I18N-P01 Japanese FAQ page', () => {
         },
       })),
     };
+    const jaItems = faqContent.ja.map((item, index) => ({
+      faqId: `seed-ja-${index + 1}`,
+      slug: `ja-${index + 1}`,
+      locale: 'ja' as const,
+      question: item.question,
+      answer: item.answer,
+      categoryId: 'consultation',
+      tags: [],
+      status: 'published' as const,
+      sortOrder: (index + 1) * 10,
+      schemaEnabled: true,
+      createdAt: '2026-05-20T00:00:00.000Z',
+      updatedAt: '2026-05-20T00:00:00.000Z',
+    }));
+    mocks.listFaqItems.mockResolvedValue(jaItems);
+    mocks.faqItemsToSchemaItems.mockReturnValue(faqContent.ja);
     mocks.generateFAQSchema.mockReturnValue(japaneseSchema);
 
     const element = await FaqPage({ params: { locale: 'ja' } });
@@ -129,39 +143,45 @@ describe('WO-I18N-P01 Japanese FAQ page', () => {
 
     const children = React.Children.toArray(element.props.children);
     const header = children.find((child) => React.isValidElement(child) && child.type === PageHeader);
-    const accordion = children.find((child) => React.isValidElement(child) && child.type === FAQAccordion);
+    const explorer = children.find((child) => React.isValidElement(child) && child.type === mocks.FaqPublicExplorer);
     const jsonLd = children.find((child) => React.isValidElement(child) && child.type === JsonLd);
 
     expect(React.isValidElement<React.ComponentProps<typeof PageHeader>>(header)).toBe(true);
-    expect(React.isValidElement<React.ComponentProps<typeof FAQAccordion>>(accordion)).toBe(true);
+    expect(React.isValidElement(explorer)).toBe(true);
     expect(React.isValidElement<React.ComponentProps<typeof JsonLd>>(jsonLd)).toBe(true);
     if (
       !React.isValidElement<React.ComponentProps<typeof PageHeader>>(header)
-      || !React.isValidElement<React.ComponentProps<typeof FAQAccordion>>(accordion)
+      || !React.isValidElement<{
+        locale: string;
+        categories: unknown;
+        items: unknown;
+        initialCategory?: string;
+        initialQuery?: string;
+      }>(explorer)
       || !React.isValidElement<React.ComponentProps<typeof JsonLd>>(jsonLd)
     ) {
-      throw new Error('Expected Japanese PageHeader, FAQAccordion, and JsonLd elements');
+      throw new Error('Expected Japanese PageHeader, FaqPublicExplorer, and JsonLd elements');
     }
 
-    expect(mocks.generateFAQSchema).toHaveBeenCalledOnce();
-    expect(mocks.generateFAQSchema).toHaveBeenCalledWith(faqContent.ja);
-    expect(jsonLd.props.data).toBe(japaneseSchema);
     expect(header.props).toMatchObject({
       locale: 'ja',
       ...pageCopy.ja.faq,
     });
-    expect(accordion.props.locale).toBe('ja');
-    expect(accordion.props.items).toEqual(faqContent.ja);
-    expect(accordion.props.items.map((item) => item.question)).toEqual(
-      faqContent.ja.map((item) => item.question),
-    );
+    expect(explorer.props.locale).toBe('ja');
+    expect(explorer.props.items).toEqual(jaItems);
+    expect(explorer.props.items).toHaveLength(faqContent.ja.length);
 
-    const accordionHtml = renderToStaticMarkup(accordion);
-    expect(accordionHtml).toContain('>FAQ<');
-    expect(accordionHtml).toContain('>よくある質問<');
-    for (const item of faqContent.ja) {
-      expect(accordionHtml).toContain(item.question);
-    }
+    expect(mocks.listFaqCategories).toHaveBeenCalledOnce();
+    expect(mocks.listFaqItems).toHaveBeenCalledWith({
+      locale: 'ja',
+      status: 'published',
+      categoryId: undefined,
+      q: undefined,
+    });
+    expect(mocks.faqItemsToSchemaItems).toHaveBeenCalledWith(jaItems);
+    expect(mocks.generateFAQSchema).toHaveBeenCalledOnce();
+    expect(mocks.generateFAQSchema).toHaveBeenCalledWith(faqContent.ja);
+    expect(jsonLd.props.data).toBe(japaneseSchema);
 
     const schema = jsonLd.props.data as {
       '@type': string;
@@ -181,9 +201,6 @@ describe('WO-I18N-P01 Japanese FAQ page', () => {
     expect(mocks.getCurrentSiteMember).not.toHaveBeenCalled();
     expect(mocks.checkAccess).not.toHaveBeenCalled();
     expect(mocks.emitPublicPageRenderHook).not.toHaveBeenCalled();
-    expect(mocks.listFaqCategories).not.toHaveBeenCalled();
-    expect(mocks.listFaqItems).not.toHaveBeenCalled();
-    expect(mocks.faqItemsToSchemaItems).not.toHaveBeenCalled();
   });
 
   it('keeps the established Korean builder metadata and FAQ engine calls', async () => {

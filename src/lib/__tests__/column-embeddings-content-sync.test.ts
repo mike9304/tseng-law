@@ -109,7 +109,8 @@ const overtakingAccidentExpectations: Record<
     ],
   },
   en: {
-    title: 'Who Is Liable in an Overtaking Accident?',
+    title:
+      'How Is Liability Assessed After an Overtaking Accident in Taiwan?',
     snippetAnchors: [
       'Overtaking can appear routine when a vehicle ahead is moving slowly',
       'it creates substantial risk',

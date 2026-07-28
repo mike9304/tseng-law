@@ -92,7 +92,8 @@ describe('English full column corpus', () => {
     const post = getColumnPost('taiwan-overtaking-accident-liability', 'en');
     expect(post).toBeTruthy();
 
-    const exactTitle = 'Who Is Liable in an Overtaking Accident?';
+    const exactTitle =
+      'How Is Liability Assessed After an Overtaking Accident in Taiwan?';
     expect(raw.match(/^title:\s*"([^"]+)"$/m)?.[1]).toBe(exactTitle);
     expect(raw.match(/^#\s.+$/gm)).toEqual([`# ${exactTitle}`]);
     expect(post!.title).toBe(exactTitle);
@@ -108,7 +109,7 @@ describe('English full column corpus', () => {
     expect(loadedPublicContent).not.toMatch(CJK_SCRIPTS);
 
     const renderedWordCount = countRenderedEnglishWords(post!.content);
-    expect(renderedWordCount).toBe(757);
+    expect(renderedWordCount).toBe(781);
     expect(Math.ceil(renderedWordCount / 200)).toBe(4);
     expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('4 min read');
     expect(post!.readTime).toBe('4 min read');
@@ -126,7 +127,7 @@ describe('English full column corpus', () => {
     const incidentImageBlock =
       '![Diagram of a motorcycle and two cars during a mountain-road overtaking collision](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)';
     const disclaimer =
-      'This article provides general legal information about Taiwan overtaking rules and how fault may be assessed after an overtaking collision. It is not legal advice for any specific matter and does not guarantee any liability outcome. Actual fault may vary with the location, vehicle movements, speed, signals, evidence, appraisals, and the current regulations. Specific matters should be reviewed against the relevant materials.';
+      'This article provides general legal information about Taiwan overtaking rules and how fault may be assessed after an overtaking collision. It is not legal advice for any specific matter and does not guarantee any liability outcome. Actual liability may vary with the location, vehicle movements, speed, signals, evidence, expert assessments, and the current regulations. Specific matters should be reviewed against the relevant materials.';
     const internalLinks = [
       '/en/taiwan-litigation-lawyer',
       '/en/korean-lawyer-in-taiwan',
@@ -160,20 +161,20 @@ describe('English full column corpus', () => {
       'When seeking to pass a vehicle in the same lane, the driver behind must first sound two short horn signals or flash the headlights once.',
       'The driver must not repeatedly sound the horn or flash the headlights to force the vehicle ahead to yield.',
       'The driver behind may pass only after the vehicle ahead has slowed and moved aside, or has indicated by hand signal or right turn signal that it is yielding.',
-      'The passing driver must then signal left, pass on the left while keeping at least 0.5 meters from the vehicle being passed, establish a safe distance, signal right, and return safely to the original path of travel.',
+      'The passing driver must then signal left, pass on the left while keeping at least 0.5 meters from the vehicle being passed, establish a safe distance, signal right, and return safely to the original lane.',
     ];
     for (const rule of article101Rules) {
       expect(raw).toContain(rule);
       expect(loadedPublicContent).toContain(rule);
     }
 
-    expect(raw).toContain('In an anonymized matter handled by this firm');
+    expect(raw).toContain('In an anonymized case handled by this firm');
     expect(raw).toContain(
-      'According to those assessments, A was found primarily responsible for the collision.',
+      'According to those assessments, A was assessed as bearing primary responsibility for the collision.',
     );
     expect(raw).toContain('That conclusion was limited to the facts of this case.');
     expect(raw).toContain(
-      'The assessments considered several circumstances together: A attempted to pass two vehicles traveling in a line ahead, entered the oncoming lane, was traveling at a speed that left too little time to brake, and had not given the prescribed horn or headlight signal.',
+      "The assessments considered together A's attempt to pass two vehicles traveling in a line ahead, entry into the oncoming lane, speed that left too little time to brake, and failure to give the prescribed horn or headlight signal, as well as Vehicle 2's lane-change maneuver, the road and lane configuration, and the other available evidence.",
     );
     expect(raw).toContain(
       'This case-specific result does not mean that one omitted signal will always determine liability.',

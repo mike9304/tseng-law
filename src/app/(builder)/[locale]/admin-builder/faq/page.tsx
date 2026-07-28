@@ -4,7 +4,7 @@ import {
   listFaqCategories,
   listFaqItems,
 } from '@/lib/builder/faq/faq-engine';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -21,6 +21,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
           ? '管理 FAQ 問題、分類、公開狀態與 schema 設定。'
           : 'Manage FAQ questions, categories, publication state, and schema settings.',
     path: '/admin-builder/faq',
+    alternateLocales: locales,
     noindex: true,
   });
 }

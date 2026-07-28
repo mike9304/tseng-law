@@ -7,7 +7,7 @@ import {
 } from '@/lib/builder/cms';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { readBuilderSiteOverview } from '@/lib/builder/site';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -39,6 +39,7 @@ export function generateMetadata({
     title: copy.title,
     description: copy.description,
     path: `/builder/collections/${params.collectionId}`,
+    alternateLocales: locales,
     noindex: true,
   });
 }

@@ -5,7 +5,7 @@ import {
   categoryLabel,
   findProjectBySlug,
 } from '@/lib/builder/portfolio/portfolio-engine';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import styles from '../PortfolioPublic.module.css';
 
@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: { params: { locale: Locale; s
     images: project.coverImageUrl,
     type: 'article',
     noindex: locale === 'en',
+    alternateLocales: locales,
   });
 }
 

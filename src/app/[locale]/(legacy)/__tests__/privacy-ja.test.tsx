@@ -118,9 +118,11 @@ describe('Japanese privacy integration', () => {
       ko: `${SITE_URL}/ko/privacy`,
       'zh-Hant': `${SITE_URL}/zh-hant/privacy`,
       en: `${SITE_URL}/en/privacy`,
+      ja: `${SITE_URL}/ja/privacy`,
       'x-default': `${SITE_URL}/ko/privacy`,
     });
-    expect(metadata.alternates?.languages).not.toHaveProperty('ja');
+    // WO#3: /ja/privacy is a live Japanese page, so ja must be advertised.
+    expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/privacy`);
   });
 
   it('keeps Japanese privacy dispatch direct after disclaimer localization', async () => {

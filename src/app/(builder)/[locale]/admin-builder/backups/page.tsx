@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { listBackups } from '@/lib/builder/backups/backup-engine';
 import BackupsAdmin from '@/components/builder/backups/BackupsAdmin';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -34,6 +34,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
     title: COPY[locale].title,
     description: COPY[locale].description,
     path: '/admin-builder/backups',
+    alternateLocales: locales,
     noindex: true,
   });
 }

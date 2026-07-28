@@ -101,12 +101,14 @@ describe('sitemap column lastModified', () => {
       afterFiltering: afterFilteringUrls.size,
       removed: beforeFilteringUrls.size - afterFilteringUrls.size,
     }).toEqual({
-      // Base includes EN file-backed columns + JA /about, /services, /pricing,
-      // /contact, /lawyers, /lawyers/wei-tseng, /columns archive,
-      // 17 JA column details, and all six JA service details (+30).
-      // Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 156,
-      afterFiltering: 147,
+      // Base includes EN file-backed columns + JA home, /about, /services,
+      // /pricing, /contact, /lawyers, /lawyers/wei-tseng, /faq, /videos,
+      // /privacy, /disclaimer, /accessibility, three JA intent pages,
+      // /korean-lawyer-in-taiwan, /guides/taiwan-company-setup,
+      // /columns archive, 17 JA column details, and all six JA service
+      // details (+41). Builder fixtures still drop 9 EN-only noindex routes.
+      beforeFiltering: 167,
+      afterFiltering: 158,
       removed: 9,
     });
 
@@ -277,5 +279,55 @@ describe('sitemap column lastModified', () => {
       ja: `https://tseng-law.com/ja${path}`,
       'x-default': `https://tseng-law.com/ko${path}`,
     });
+  });
+
+  it.each([
+    '',
+    '/faq',
+    '/videos',
+    '/privacy',
+    '/disclaimer',
+    '/accessibility',
+    '/taiwan-lawyer',
+    '/taiwan-company-setup-lawyer',
+    '/taiwan-litigation-lawyer',
+    '/korean-lawyer-in-taiwan',
+    '/guides/taiwan-company-setup',
+  ])('publishes Japanese %s exactly once', async (path) => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const japaneseEntries = entries.filter(
+      (entry) => entry.url === `https://tseng-law.com/ja${path}`,
+    );
+
+    expect(japaneseEntries).toHaveLength(1);
+    expect(japaneseEntries[0]?.alternates?.languages).toHaveProperty('ja');
+    expect(japaneseEntries[0]?.alternates?.languages).toHaveProperty('x-default');
+  });
+
+  it('strips the en alternate from the Japanese faq entry (English-noindex path)', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const japaneseFaq = entries.find(
+      (entry) => entry.url === 'https://tseng-law.com/ja/faq',
+    );
+
+    expect(japaneseFaq).toBeDefined();
+    expect(japaneseFaq?.alternates?.languages).toEqual({
+      ko: 'https://tseng-law.com/ko/faq',
+      'zh-Hant': 'https://tseng-law.com/zh-hant/faq',
+      ja: 'https://tseng-law.com/ja/faq',
+      'x-default': 'https://tseng-law.com/ko/faq',
+    });
+  });
+
+  it('keeps Japanese store/portfolio/events routes out of the sitemap', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const urls = entries.map((entry) => entry.url);
+
+    expect(urls.some((url) => url.includes('/ja/store'))).toBe(false);
+    expect(urls.some((url) => url.includes('/ja/portfolio'))).toBe(false);
+    expect(urls.some((url) => url.includes('/ja/events'))).toBe(false);
   });
 });

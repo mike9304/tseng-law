@@ -3,7 +3,7 @@ import { listConversations } from '@/lib/builder/live-chat/storage';
 import { toSafeChatConversation } from '@/lib/builder/live-chat/types';
 import InboxAdmin from '@/components/builder/live-chat/InboxAdmin';
 import { getLiveChatInboxCopy } from '@/components/builder/live-chat/inbox-copy';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -16,6 +16,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     title: copy.metadataTitle,
     description: copy.metadataDescription,
     path: '/admin-builder/inbox',
+    alternateLocales: locales,
     noindex: true,
   });
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import MembersAdminClient from '@/components/builder/members/MembersAdminClient';
 import { listMembers, publicMember } from '@/lib/builder/members/members-engine';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -18,6 +18,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
           ? '管理會員與會員角色的畫面。'
           : 'Manage members and member roles.',
     path: '/admin-builder/members',
+    alternateLocales: locales,
     noindex: true,
   });
 }

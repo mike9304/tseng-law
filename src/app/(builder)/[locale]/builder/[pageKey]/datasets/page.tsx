@@ -12,7 +12,7 @@ import {
 import { readBuilderPageDatasetOverviews } from "@/lib/builder/datasets";
 import { listCmsCollectionBindableTargets } from "@/lib/builder/cms-collection-datasets";
 import { readSiteDocument } from "@/lib/builder/site/persistence";
-import { normalizeLocale, type Locale } from "@/lib/locales";
+import { locales, normalizeLocale, type Locale } from "@/lib/locales";
 import { buildSeoMetadata } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
@@ -65,6 +65,7 @@ export function generateMetadata({
     title: copy.title,
     description: copy.description,
     path: `/builder/${pageKey}/datasets`,
+    alternateLocales: locales,
     noindex: true,
   });
 }

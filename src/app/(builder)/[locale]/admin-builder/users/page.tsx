@@ -8,7 +8,7 @@ import {
 import { resolveUserRole } from '@/lib/builder/security/resolve-permission';
 import { BUILDER_PERMISSIONS } from '@/lib/builder/security/permissions';
 import { rolePermissionMatrix } from '@/lib/builder/security/role-permissions';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import { getUsersAdminCopy } from '@/components/builder/users/users-copy';
 
@@ -22,6 +22,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     title: copy.title,
     description: copy.description,
     path: '/admin-builder/users',
+    alternateLocales: locales,
     noindex: true,
   });
 }

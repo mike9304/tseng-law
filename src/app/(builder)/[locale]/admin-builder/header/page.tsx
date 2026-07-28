@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import {
   ensureGlobalHeaderFooterIds,
   readHeaderCanvas,
@@ -33,6 +33,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
     title: COPY[locale].title,
     description: COPY[locale].description,
     path: '/admin-builder/header',
+    alternateLocales: locales,
     noindex: true,
   });
 }

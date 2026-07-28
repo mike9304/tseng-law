@@ -6,7 +6,7 @@ import {
   listProducts,
   sortProducts,
 } from '@/lib/builder/commerce/products-engine';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import PublicStorefront from '@/components/builder/commerce/PublicStorefront';
 
@@ -38,6 +38,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     description: copy[locale].description,
     path: '/store',
     noindex: locale === 'en',
+    alternateLocales: locales,
   });
 }
 

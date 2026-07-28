@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import { getSubscription, listDeliveriesForWebhook } from '@/lib/builder/webhooks/storage';
 import WebhookDeliveriesView from '@/components/builder/webhooks/WebhookDeliveriesView';
@@ -29,6 +29,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
     title: COPY[locale].title,
     description: COPY[locale].description,
     path: '/admin-builder/webhooks',
+    alternateLocales: locales,
     noindex: true,
   });
 }

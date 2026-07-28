@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import OpsAdmin from '@/components/builder/ops/OpsAdmin';
 
@@ -35,6 +35,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
     title: COPY[locale].title,
     description: COPY[locale].description,
     path: '/admin-builder/ops',
+    alternateLocales: locales,
     noindex: true,
   });
 }

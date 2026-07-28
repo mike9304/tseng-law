@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { Locale, SiteLocale } from '@/lib/locales';
-import { defaultLocale, locales } from '@/lib/locales';
+import { defaultLocale, siteLocales } from '@/lib/locales';
+import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 
 type ImageInput =
   | string
@@ -171,9 +172,14 @@ function normalizeImages(images?: ImageInput | ImageInput[]) {
 
 export function getLanguageAlternates(
   path = '',
-  alternateLocales: readonly (Locale | SiteLocale)[] = locales,
+  alternateLocales: readonly (Locale | SiteLocale)[] = siteLocales,
 ): Record<string, string> {
-  const entries = alternateLocales.map((locale) => [getLocaleLanguageTag(locale), buildAbsoluteUrl(getLocalizedPath(locale, path))]);
+  // English-noindex routes (e.g. /faq) must never emit an `en` alternate,
+  // no matter which alternateLocales the caller passed. x-default stays.
+  const effectiveLocales = isEnglishNoindexPath(path)
+    ? alternateLocales.filter((locale) => getLocaleLanguageTag(locale).toLowerCase() !== 'en')
+    : alternateLocales;
+  const entries = effectiveLocales.map((locale) => [getLocaleLanguageTag(locale), buildAbsoluteUrl(getLocalizedPath(locale, path))]);
   return {
     ...Object.fromEntries(entries),
     'x-default': buildAbsoluteUrl(getLocalizedPath(defaultLocale, path)),
@@ -189,7 +195,7 @@ export function buildSeoMetadata({
   images,
   noindex = false,
   type = 'website',
-  alternateLocales = locales,
+  alternateLocales = siteLocales,
 }: SeoMetadataInput): Metadata {
   const canonicalPath = getLocalizedPath(locale, path);
   const canonicalUrl = buildAbsoluteUrl(canonicalPath);
@@ -566,7 +572,7 @@ type HowToJsonLdInput = {
   description?: string;
   steps: HowToStepInput[];
   totalTime?: string;
-  locale?: Locale;
+  locale?: Locale | SiteLocale;
 };
 
 /**

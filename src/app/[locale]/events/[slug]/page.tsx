@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import EventRsvpElement from '@/lib/builder/components/eventRsvp/Element';
 import type { BuilderEventRsvpCanvasNode } from '@/lib/builder/canvas/types';
 import { findEventBySlug } from '@/lib/builder/events/events-engine';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import styles from '../EventsPublic.module.css';
 
@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: { params: { locale: Locale; s
     images: event.imageUrl,
     type: 'article',
     noindex: locale === 'en',
+    alternateLocales: locales,
   });
 }
 

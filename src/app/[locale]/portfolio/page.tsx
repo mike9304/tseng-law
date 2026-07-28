@@ -9,7 +9,7 @@ import {
   listProjects,
   sortProjects,
 } from '@/lib/builder/portfolio/portfolio-engine';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import styles from './PortfolioPublic.module.css';
 
@@ -50,6 +50,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     description: copy[locale].description,
     path: '/portfolio',
     noindex: locale === 'en',
+    alternateLocales: locales,
   });
 }
 

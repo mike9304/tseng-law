@@ -6,7 +6,7 @@ import { getAdminNavCopy } from '@/lib/builder/admin-nav/nav-copy';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { readAttorneyProfileSourceRecords } from '@/lib/builder/lawyers/source';
 import { readBuilderSiteOverview } from '@/lib/builder/site';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -154,6 +154,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     title: copy[locale].title,
     description: copy[locale].description,
     path: '/admin-builder/lawyers',
+    alternateLocales: locales,
     noindex: true,
   });
 }

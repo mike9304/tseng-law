@@ -33,7 +33,7 @@ import {
   type BuilderPageState,
   type BuilderStaticDocumentState,
 } from '@/lib/builder/types';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -55,6 +55,7 @@ export function generateMetadata({ params }: { params: { locale: Locale; pageKey
     title: previewCopy ? previewCopy.title : `${config.title} Builder`,
     description: previewCopy ? previewCopy.description : config.description,
     path: `/builder/${pageKey}`,
+    alternateLocales: locales,
     noindex: true,
   });
 }

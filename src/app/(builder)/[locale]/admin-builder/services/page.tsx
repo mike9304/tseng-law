@@ -7,7 +7,7 @@ import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { readServiceAreaSourceRecords } from '@/lib/builder/services/source';
 import { readBuilderSiteOverview } from '@/lib/builder/site';
 import { getAllColumnPosts } from '@/lib/columns';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -167,6 +167,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     title: copy[locale].title,
     description: copy[locale].description,
     path: '/admin-builder/services',
+    alternateLocales: locales,
     noindex: true,
   });
 }

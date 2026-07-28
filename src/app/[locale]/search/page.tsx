@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import PageHeader from '@/components/PageHeader';
 import SmartLink from '@/components/SmartLink';
 import { pageCopy } from '@/data/page-copy';
@@ -22,6 +22,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     description: copy.description,
     path: '/search',
     noindex: true,
+    alternateLocales: locales,
   });
 }
 

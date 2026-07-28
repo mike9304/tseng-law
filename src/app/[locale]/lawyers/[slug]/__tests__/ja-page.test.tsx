@@ -194,7 +194,8 @@ describe('Japanese lawyer-profile integration', () => {
       const metadata = await generateMetadata({
         params: { locale, slug: 'wei-tseng' },
       });
-      expect(metadata.alternates?.languages).not.toHaveProperty('ja');
+      // WO#3: /ja/lawyers/wei-tseng is a live Japanese page, so ja must be advertised.
+      expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/lawyers/wei-tseng`);
     },
   );
 });

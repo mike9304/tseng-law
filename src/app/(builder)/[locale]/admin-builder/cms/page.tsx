@@ -7,7 +7,7 @@ import { listEditableBuilderCmsCollections } from '@/lib/builder/cms-editable';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { getAdminNavCopy } from '@/lib/builder/admin-nav/nav-copy';
 import { readBuilderSiteOverview } from '@/lib/builder/site';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -131,6 +131,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     title: copy[locale].title,
     description: copy[locale].description,
     path: '/admin-builder/cms',
+    alternateLocales: locales,
     noindex: true,
   });
 }

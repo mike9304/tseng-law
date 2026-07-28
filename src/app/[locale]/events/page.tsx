@@ -8,7 +8,7 @@ import {
   listEvents,
   sortEvents,
 } from '@/lib/builder/events/events-engine';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import styles from './EventsPublic.module.css';
 
@@ -43,6 +43,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     description: copy[locale].description,
     path: '/events',
     noindex: locale === 'en',
+    alternateLocales: locales,
   });
 }
 

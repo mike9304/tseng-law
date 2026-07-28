@@ -75,7 +75,7 @@ describe('WO-I18N-P01 Japanese FAQ page', () => {
     mocks.resolvePublishedSitePage.mockResolvedValue(null);
   });
 
-  it('builds Japanese metadata with the Japanese canonical, locale, and all public alternates', async () => {
+  it('builds Japanese metadata with the Japanese canonical, locale, and all indexable public alternates', async () => {
     const metadata = await generateMetadata({ params: { locale: 'ja' } });
 
     expect(metadata.title).toBe(pageCopy.ja.faq.title);
@@ -89,15 +89,17 @@ describe('WO-I18N-P01 Japanese FAQ page', () => {
     });
 
     const languages = metadata.alternates?.languages as Record<string, string>;
+    // WO#3: /en/faq is robots-noindex, so en must not be advertised in
+    // faq hreflang alternates (previously sent a contradictory signal).
+    expect(languages).not.toHaveProperty('en');
     expect(Object.fromEntries(
-      ['ko', 'zh-Hant', 'en', 'ja'].map((language) => [
+      ['ko', 'zh-Hant', 'ja'].map((language) => [
         language,
         new URL(String(languages[language])).pathname,
       ]),
     )).toEqual({
       ko: '/ko/faq',
       'zh-Hant': '/zh-hant/faq',
-      en: '/en/faq',
       ja: '/ja/faq',
     });
     expect(mocks.buildPublishedSitePageMetadata).not.toHaveBeenCalled();

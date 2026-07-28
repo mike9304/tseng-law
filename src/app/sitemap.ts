@@ -6,6 +6,7 @@ import { readServiceAreaSourceRecords } from '@/lib/builder/services/source';
 import { getAllColumnPosts, getAliasSlugs, resolveSlug } from '@/lib/columns';
 import { locales, siteLocales } from '@/lib/locales';
 import { buildAbsoluteUrl, getLanguageAlternates, getLocalizedPath } from '@/lib/seo';
+import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 import { collectAllBuilderSitemapEntries } from '@/lib/builder/seo/sitemap-builder';
 
 export const dynamic = 'force-dynamic';
@@ -54,7 +55,12 @@ function getLocalizedSitemapRoute(url: string): LocalizedSitemapRoute | null {
   };
 }
 
-/** Routes whose page metadata is noindex only for the English locale. */
+/**
+ * File-backed English column check. Kept here (not in seo-visibility.ts)
+ * because it reads the filesystem via src/lib/columns.ts, and
+ * seo-visibility.ts must stay importable from the client bundle through
+ * src/lib/seo.ts. Injected into isEnglishNoindexPath below.
+ */
 function isFileBackedEnglishColumnPath(path: string): boolean {
   const match = path.match(/^\/columns\/([^/]+)$/);
   if (!match) return false;
@@ -66,21 +72,11 @@ function isFileBackedEnglishColumnPath(path: string): boolean {
   return false;
 }
 
-function isEnglishNoindexPath(path: string): boolean {
-  // Full EN file-backed columns (columns-en) are indexable.
-  // Builder/Blob EN column drafts without a file translation stay excluded.
-  if (/^\/columns\/[^/]+$/.test(path) && !isFileBackedEnglishColumnPath(path)) {
-    return true;
-  }
-  return path === '/faq'
-    || path === '/portfolio'
-    || /^\/portfolio\/[^/]+$/.test(path)
-    || path === '/events'
-    || /^\/events\/[^/]+$/.test(path)
-    || path === '/store'
-    || /^\/store\/(?:categories|products)\/[^/]+$/.test(path);
-}
-
+/**
+ * Drop locale-specific noindex routes (/reviews everywhere, English-only
+ * noindex paths for en) and strip the `en` alternate from their siblings.
+ * Shared path classification lives in src/lib/seo-visibility.ts.
+ */
 function applyLocaleIndexabilityRules(
   entries: MetadataRoute.Sitemap,
 ): MetadataRoute.Sitemap {
@@ -90,7 +86,7 @@ function applyLocaleIndexabilityRules(
       return [];
     }
 
-    if (!route || !isEnglishNoindexPath(route.path)) {
+    if (!route || !isEnglishNoindexPath(route.path, isFileBackedEnglishColumnPath)) {
       return [entry];
     }
 
@@ -177,6 +173,74 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Japanese public static and file-backed surfaces.
+  pages.push(
+    createEntry('ja', '', {
+      priority: 1,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  // /faq is English-noindex: getLanguageAlternates strips the `en`
+  // alternate from the final output automatically.
+  pages.push(
+    createEntry('ja', '/faq', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/videos', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/privacy', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/disclaimer', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/accessibility', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/taiwan-lawyer', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/taiwan-company-setup-lawyer', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/taiwan-litigation-lawyer', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/korean-lawyer-in-taiwan', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/guides/taiwan-company-setup', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
   pages.push(
     createEntry('ja', '/about', {
       priority: 0.8,

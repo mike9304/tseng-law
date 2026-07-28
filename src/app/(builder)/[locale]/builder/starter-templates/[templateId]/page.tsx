@@ -6,7 +6,7 @@ import {
   decodeBuilderStarterTemplateParam,
   readBuilderStarterTemplateDetail,
 } from '@/lib/builder/starter-templates';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -38,6 +38,7 @@ export function generateMetadata({
     title: copy.title,
     description: copy.description,
     path: `/builder/starter-templates/${params.templateId}`,
+    alternateLocales: locales,
     noindex: true,
   });
 }

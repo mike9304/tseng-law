@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import BuilderWorkspaceDashboard from '@/components/builder/BuilderWorkspaceDashboard';
 import { readBuilderSiteOverview } from '@/lib/builder/site';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -30,6 +30,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     title: copy.title,
     description: copy.description,
     path: '/builder',
+    alternateLocales: locales,
     noindex: true,
   });
 }

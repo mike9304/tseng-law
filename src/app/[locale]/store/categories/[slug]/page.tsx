@@ -6,7 +6,7 @@ import {
   listProductCategories,
   sortProducts,
 } from '@/lib/builder/commerce/products-engine';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import PublicStorefront from '@/components/builder/commerce/PublicStorefront';
 
@@ -26,6 +26,7 @@ export async function generateMetadata({
       description: 'Store collection',
       path: `/store/categories/${params.slug}`,
       noindex: true,
+      alternateLocales: locales,
     });
   }
 
@@ -35,6 +36,7 @@ export async function generateMetadata({
     description: category.seo.description ?? category.description,
     path: `/store/categories/${category.slug}`,
     noindex: locale === 'en',
+    alternateLocales: locales,
   });
 }
 

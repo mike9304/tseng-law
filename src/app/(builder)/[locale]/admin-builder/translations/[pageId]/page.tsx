@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import { readPageCanvas, readSiteDocument } from '@/lib/builder/site/persistence';
 import { DEFAULT_TRANSLATION_SOURCE_LOCALE } from '@/lib/builder/translations/sync';
@@ -28,6 +28,7 @@ export function generateMetadata({
     title: copy.editorTitle,
     description: copy.editorDescription,
     path: '/admin-builder/translations',
+    alternateLocales: locales,
     noindex: true,
   });
 }

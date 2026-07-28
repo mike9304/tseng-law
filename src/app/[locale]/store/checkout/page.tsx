@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import PublicCheckout from '@/components/builder/commerce/PublicCheckout';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -28,6 +28,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     description: copy[locale].description,
     path: '/store/checkout',
     noindex: true,
+    alternateLocales: locales,
   });
 }
 

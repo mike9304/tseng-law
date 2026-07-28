@@ -115,6 +115,7 @@ describe('Japanese About integration', () => {
     expect(metadata.title).toBe(title);
     expect(metadata.description).toBe(description);
     expect(metadata.alternates?.canonical).toBe(`${SITE_URL}/${locale}/about`);
-    expect(metadata.alternates?.languages).not.toHaveProperty('ja');
+    // WO#3: /ja/about is a live Japanese page, so ja must be advertised.
+    expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/about`);
   });
 });

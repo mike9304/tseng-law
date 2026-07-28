@@ -9,7 +9,7 @@ import {
   readBuilderSiteOverview,
 } from '@/lib/builder/site';
 import { getAllColumnPosts } from '@/lib/columns';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -53,6 +53,7 @@ export async function generateMetadata({ params }: BuilderPageSceneRouteProps): 
       title: copy.rootTitle,
       description: copy.rootDescription,
       path: '/builder',
+      alternateLocales: locales,
       noindex: true,
     });
   }
@@ -64,6 +65,7 @@ export async function generateMetadata({ params }: BuilderPageSceneRouteProps): 
     title: copy.pageTitle(config.title),
     description: copy.pageDescription(config.title),
     path: `/builder/${resolvedParams.pageKey}/scene`,
+    alternateLocales: locales,
     noindex: true,
   });
 }

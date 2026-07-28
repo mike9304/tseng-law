@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import { listSubscriptions } from '@/lib/builder/webhooks/storage';
 import WebhooksAdmin from '@/components/builder/webhooks/WebhooksAdmin';
@@ -34,6 +34,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
     title: COPY[locale].title,
     description: COPY[locale].description,
     path: '/admin-builder/webhooks',
+    alternateLocales: locales,
     noindex: true,
   });
 }

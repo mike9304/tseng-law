@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ColumnListView from '@/components/builder/columns/ColumnListView';
 import { listColumns } from '@/lib/builder/columns/storage';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import { getColumnsCopy } from './columns-copy';
 
@@ -20,6 +20,7 @@ export function generateMetadata({
     title: copy.title,
     description: copy.description,
     path: '/admin-builder/columns',
+    alternateLocales: locales,
     noindex: true,
   });
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import {
   DEFAULT_TRANSLATION_SOURCE_LOCALE,
@@ -24,6 +24,7 @@ export function generateMetadata({
     title: copy.managerTitle,
     description: copy.managerDescription,
     path: '/admin-builder/translations',
+    alternateLocales: locales,
     noindex: true,
   });
 }

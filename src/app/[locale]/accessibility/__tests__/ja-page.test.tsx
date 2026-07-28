@@ -140,9 +140,11 @@ describe('Japanese accessibility integration', () => {
         ko: `${SITE_URL}/ko/accessibility`,
         'zh-Hant': `${SITE_URL}/zh-hant/accessibility`,
         en: `${SITE_URL}/en/accessibility`,
+        ja: `${SITE_URL}/ja/accessibility`,
         'x-default': `${SITE_URL}/ko/accessibility`,
       });
-      expect(metadata.alternates?.languages).not.toHaveProperty('ja');
+      // WO#3: /ja/accessibility is a live Japanese page, so ja must be advertised.
+      expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/accessibility`);
       expect(html).toContain(title);
       expect(html).toContain(sectionTitle);
       expect(html).toContain(paragraph);

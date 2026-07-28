@@ -6,7 +6,7 @@ import {
   readBuilderDynamicRouteDetail,
 } from '@/lib/builder/dynamic-routes';
 import { readBuilderSiteOverview } from '@/lib/builder/site';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -38,6 +38,7 @@ export function generateMetadata({
     title: copy.title,
     description: copy.description,
     path: `/builder/dynamic-routes/${params.routeId}`,
+    alternateLocales: locales,
     noindex: true,
   });
 }

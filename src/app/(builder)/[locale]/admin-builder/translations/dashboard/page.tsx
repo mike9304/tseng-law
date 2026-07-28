@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import { buildTranslationDashboard } from '@/lib/builder/translations/dashboard-model';
 import { DEFAULT_TRANSLATION_SOURCE_LOCALE } from '@/lib/builder/translations/sync';
@@ -21,6 +21,7 @@ export function generateMetadata({
     title: copy.dashboardTitle,
     description: copy.dashboardDescription,
     path: '/admin-builder/translations/dashboard',
+    alternateLocales: locales,
     noindex: true,
   });
 }

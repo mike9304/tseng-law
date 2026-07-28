@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import EventsAdminClient from '@/components/builder/events/EventsAdminClient';
 import { listEvents } from '@/lib/builder/events/events-engine';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 import { getEventsCopy } from '@/components/builder/events/events-copy';
 
@@ -15,6 +15,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     title: copy.title,
     description: copy.description,
     path: '/admin-builder/events',
+    alternateLocales: locales,
     noindex: true,
   });
 }

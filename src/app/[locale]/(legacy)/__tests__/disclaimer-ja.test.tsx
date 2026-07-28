@@ -117,9 +117,11 @@ describe('Japanese disclaimer integration', () => {
       ko: `${SITE_URL}/ko/disclaimer`,
       'zh-Hant': `${SITE_URL}/zh-hant/disclaimer`,
       en: `${SITE_URL}/en/disclaimer`,
+      ja: `${SITE_URL}/ja/disclaimer`,
       'x-default': `${SITE_URL}/ko/disclaimer`,
     });
-    expect(metadata.alternates?.languages).not.toHaveProperty('ja');
+    // WO#3: /ja/disclaimer is a live Japanese page, so ja must be advertised.
+    expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/disclaimer`);
   });
 
   it('preserves direct Japanese privacy dispatch and page behavior', async () => {

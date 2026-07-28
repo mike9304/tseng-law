@@ -17,7 +17,7 @@ import {
   type CommerceProduct,
   type CommerceProductVariant,
 } from '@/lib/builder/commerce/products-shared';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildAbsoluteUrl, buildBreadcrumbJsonLd, buildSeoMetadata, getLocalizedPath } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -125,6 +125,7 @@ export async function generateMetadata({
       description: 'Store product',
       path: `/store/products/${slug}`,
       noindex: true,
+      alternateLocales: locales,
     });
   }
 
@@ -135,6 +136,7 @@ export async function generateMetadata({
     path: productPath(product),
     images: productImage(product),
     noindex: locale === 'en',
+    alternateLocales: locales,
   });
 }
 

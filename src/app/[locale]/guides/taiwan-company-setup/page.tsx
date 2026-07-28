@@ -32,8 +32,7 @@ export default function TaiwanCompanySetupGuidePage({ params }: { params: { loca
     description: c.description,
     steps: c.steps,
     totalTime: 'P4M',
-    // buildHowToJsonLd only accepts builder Locale; omit inLanguage for ja rather than tagging it as another locale.
-    locale: locale === 'ja' ? undefined : locale,
+    locale,
   });
   const faqJsonLd = buildFaqJsonLd(c.faq, locale);
 

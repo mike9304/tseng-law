@@ -1787,6 +1787,7 @@ section.home-results-panel--editorial {
    이미지 노드 래퍼/프레임/img까지 컨테이너 전폭을 채우게 해 object-fit: cover로 시임 제거.
    해당 node-id는 zh-hant 데스크톱 트리에만 존재(ko/ja published 문서에는 노드 없음, 모바일은
    composite hero-search 렌더) — 타 로케일·모바일 무영향. */
+.site .builder-pub-node[data-node-id='home-hero-overlay'],
 .site .builder-pub-node[data-node-id^='home-hero-media-image'],
 .site .builder-pub-node[data-node-id^='home-hero-media-image'] .builder-image-media-frame,
 .site .builder-pub-node[data-node-id^='home-hero-media-image'] img {

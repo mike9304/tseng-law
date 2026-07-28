@@ -109,22 +109,22 @@ const exactEnding = `- ${internalLinks[2]}
 ${disclaimer}
 
 ${author}`;
-const frozenVisibleHanCount = 7_648;
+const frozenVisibleHanCount = 7_650;
 const frozenSourceSha256 =
-  '41b0c449c4600c3768a44251b2059df8fbb5cec1be7056f0aba585af82c3d51d';
+  'c39b7b14b1820ed23b6c83db1f1310444c42279ef864bb5583937b9283089ecb';
 const frozenSection4TailSha256 =
   '8ee0167ad37fab5ebd5ddcb6544a551c6caf65d7a34547f0f717075631d85fe9';
 const frozenSection5OnwardSha256 =
-  '08a4ce24c163cb15933f74ef9158ef5775dee5cefcebd6cc8835c99f0a9ca39c';
+  '48dc509169466545d6dbdd15578300fb6a8a9da4bc23b11be3f8e3813ae69438';
 const frozenSection8AgreementPrefixLength = 16_859;
 const frozenSection8AgreementPrefixSha256 =
-  '7a023591f9193b38c40f3da51d43fd6b365ae9aa48e6e1fe3f0a08c1ba383d1a';
+  '3187cf3de22d05f2b8ef019bd40b8dc12e88530d59c3d9fc2af725a36d373e1c';
 const frozenSection8AgreementTailLength = 1_043;
 const frozenSection8AgreementTailSha256 =
   'eac23054c07aed295e4d21a8a81852629a16d2100a24a0200ad4af9446e42668';
-const frozenSection9OnwardLength = 8_149;
+const frozenSection9OnwardLength = 8_155;
 const frozenSection9OnwardSha256 =
-  '9eecfa71bd9f2504ddeeb92dd584a60880c5ce822b4b360b9c41144abd21a326';
+  '3b222055cbc02bca07af83d14cfbb702dfb789a625e981cb1676853a47b5c745';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -488,7 +488,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     const section = sectionBody(parsed.content, headings[4]);
     const requiredPhrases = [
       '不能僅以「先在台灣補登婚姻」或「在台灣提起離婚訴訟」二途概括。',
-      '宜分別確認當事人各國籍、住所與經常居所、婚姻或離婚作成之地點與方式、現行台灣戶籍與外國家族關係紀錄，以及既有外國判決、調解筆錄或離婚證明之有無。',
+      '宜分別確認當事人各國籍、住所與經常居所、婚姻或離婚作成之地點與方式、現行台灣戶籍與外國家庭關係紀錄，以及既有外國判決、調解筆錄或離婚證明之有無。',
       '他方是否曾受合法送達並有防禦機會等程序公正事項',
       '應具體特定在台灣所欲達成者究為婚姻關係消滅、戶籍變更、財產判斷或執行中之何種效果。',
       '亦非所有外國離婚均須同一承認訴訟或同一套文件。',
@@ -529,7 +529,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       '未成年子女之扶養，係父母與子女間之權利義務，與第1057條前配偶間之贍養不同。',
       '第1030條之1剩餘財產差額分配則屬夫妻財產制之結算，不能代替損害賠償或贍養。',
       '若另有對配偶以外第三人之侵權行為請求、特定財產返還、借貸或契約上請求，應分別特定其法律依據、當事人、損害與期間。',
-      '不得對全部權利一律套用自離婚日起算之單一五年期間；各請求之發生、認識、事實、程序狀態與時效規則，均應分開確認。',
+      '不得對全部權利一律套用自離婚日起算之單一五年期間；各請求之發生、知悉、事實、程序狀態與時效規則，均應分開確認。',
       '惟若有實際共有財產、借貸、契約、借名登記、信託、不當得利或侵權行為，仍得作為與婚姻有無無關之財產或債權關係分析。',
       '對第三人之請求，須另具侵權行為或財產法上之法律依據，並就違法行為、故意或過失、損害與因果關係等要件及證據分別檢視。',
     ];
@@ -610,7 +610,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       '此與民法第1057條前配偶間之離婚後贍養費，屬不同權利。',
       '應一併審查子女之現在需要、雙方父母之現在資力與生活情況、既有文書之內容與形式、給付經過，以及子女之最佳利益。',
       '依家事事件法第194條執行時，方法仍應依子女最佳利益選擇，個案上可能涉及直接強制或間接強制。',
-      '會面交往受阻一事，並不保證立即交付子女、使用實力、改定權利義務之行使負擔，或處罰他方。',
+      '會面交往受阻一事，並不保證立即交付子女、使用強制力、改定權利義務之行使負擔，或處罰他方。',
       '宜整理現行協議或裁判、聯繫紀錄、實際嘗試會面之時間與地點、就學與醫療行程，以及影響安全與穩定之事實。',
       '既有執行名義之文義、給付期日、未給付金額與給付明細',
     ];
@@ -812,7 +812,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     expect(raw).not.toContain('律師保證勝訴');
     expect(raw).not.toContain('本所確保所有權利');
     expect(raw).toContain(
-      '會面交往受阻一事，並不保證立即交付子女、使用實力、改定權利義務之行使負擔，或處罰他方。',
+      '會面交往受阻一事，並不保證立即交付子女、使用強制力、改定權利義務之行使負擔，或處罰他方。',
     );
   });
 

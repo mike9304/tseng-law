@@ -166,6 +166,7 @@ describe('English litigation column 010 — gym injury damages', () => {
     }
 
     expect(parsed.content).not.toMatch(/[\uac00-\ud7af]/u);
+    expect(parsed.content).not.toContain('曾俊瑋');
     expect(parsed.content).not.toMatch(/[\u200b\ufeff\u00a0]/u);
   });
 

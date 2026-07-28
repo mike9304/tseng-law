@@ -17,11 +17,11 @@ Drawing on a case in which a Korean university student was injured at a gym in T
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-The accident occurred during a deadlift session led by a trainer at a gym in Taichung. After such an injury, it is not enough to look only at the fact that the accident happened inside a gym. One must also consider the user's exercise experience and health condition, the type of exercise and the weight involved, the explanations and instruction given by the trainer, the movement performed and the response at the time, the causal relationship between the exercise and the injury, and the materials supporting the claimed losses.
+The accident occurred during a deadlift session led by a trainer at a gym in Taichung. After such an injury, it is not enough to look only at the fact that the accident happened inside a gym. One must also consider the user's exercise experience and health condition, the type of exercise and the weight involved, the explanations and instruction given by the trainer, the movements and responses at the time, the causal relationship between the exercise and the injury, and the materials supporting the claimed losses.
 
 I served as litigation counsel for the plaintiff, the Korean student, in this case. In its first-instance judgment of January 24, 2022, in case 109 Consumer No. 7, the Taichung District Court ordered the defendant to pay [TWD 1,579,589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) together with the interest stated in the judgment.
 
-Media reports later stated that the parties reached a settlement on appeal. The official first-instance judgment alone does not disclose the outcome of the appeal or any settlement amount, so those reports should not be presented as the confirmed final outcome of the first-instance ruling.
+Media reports later stated that the parties reached a settlement on appeal. The official first-instance judgment alone does not disclose the outcome of the appeal or any settlement amount, so the reported settlement should not be treated as the confirmed final disposition of the first-instance judgment.
 
 The English renderings of the headlines of media reports, online posts, and legal commentary about this case appear below. These headlines are provided to introduce the coverage or posts at each link; this article does not independently establish the facts they describe.
 
@@ -61,15 +61,15 @@ The English renderings of the headlines of media reports, online posts, and lega
 
 **Did a Korean male university student rupture a disc while deadlifting 90 kg during a personal-training session?**
 
-This case is practically significant because it shows that the mere occurrence of a gym injury does not immediately determine liability. The content of the safety duty borne by the service provider, the specific instructional acts and any breach of the duty of care, the causal relationship between the conduct and the injury, and the scope of the loss are all assessed on the materials of each case. The requirements and time limits of criminal and civil procedures also differ, so records should be organized separately from the outset.
+This case is practically significant because it shows that the mere occurrence of a gym injury does not immediately determine liability. The scope of the service provider's duty to ensure safety, the specific instruction given and any breach of the duty of care, the causal relationship between the conduct and the injury, and the extent of the loss are all assessed based on the evidence in each case. The requirements and time limits of criminal and civil procedures also differ, so records should be organized separately from the outset.
 
 The following is general information about gym-injury disputes in Taiwan, not legal advice for a particular case. Actual rights and available responses may vary depending on the contractual relationship, the circumstances of the accident, the cause and severity of the injury, the parties' conduct, the insurance policy terms, the evidence secured, and the applicable law.
 
 ## 1. What legal procedures may be considered after a gym injury in Taiwan?
 
-Under [Article 7 of the Taiwan Consumer Protection Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001), when a business operator provides services, it must ensure that the services meet the safety reasonably expected in light of the professional or technical standards current at the time they are provided.
+Under [Article 7 of the Taiwan Consumer Protection Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001), when a business operator provides services, it must ensure that the services have the level of safety reasonably expected under the professional or technical standards current at the time they are provided.
 
-This does not mean that the business operator or trainer is held liable whenever an injury occurs at a gym. In each case, one must assess what specific duty of care existed, whether that duty was breached, whether there is a causal relationship between the breach and the injury, whether actual loss occurred, what defenses the other party may raise, and what evidence supports each claim and defense.
+This does not mean that the business operator or trainer will be held liable whenever an injury occurs at a gym. In each case, one must assess what specific duty of care existed, whether that duty was breached, whether there is a causal relationship between the breach and the injury, whether actual loss occurred, what defenses the opposing party may raise, and what evidence supports each claim and defense.
 
 If the statutory elements of negligent injury are met, a criminal complaint may be considered. A civil claim for damages may also be considered, but which basis applies—contractual liability, tort liability, or consumer-protection liability—and the scope of liability depend on the specific facts. The fact that several procedures may be considered for a single accident does not mean that all of them must be pursued, nor does it guarantee success in any of them.
 
@@ -79,19 +79,19 @@ Under [Article 287 of the Taiwan Criminal Code](https://law.moj.gov.tw/LawClass/
 
 Under [Article 197 of the Taiwan Civil Code](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001), a tort claim for damages is, in principle, extinguished if it is not exercised within two years from the time the injured person learns of both the damage and the person liable for compensation. It is also extinguished once ten years have passed since the wrongful act.
 
-That said, whether another cause of action such as contractual liability is at issue, or whether other rules on the starting point, running, or suspension of the period apply, may vary with the facts. Rather than fixing a deadline based only on the date of the accident or the date of diagnosis, it is safer to confirm the possible bases of claim and the relevant reference dates individually at an early stage.
+That said, the facts may support another cause of action, such as contractual liability, or trigger other rules governing when a period begins to run, continues to run, or is interrupted. Rather than fixing a deadline based only on the date of the accident or the date of diagnosis, it is safer to identify each possible basis of claim and its relevant starting date at an early stage.
 
 ## 3. What evidence should be preserved, and how, immediately after an accident?
 
-To establish liability, causation, and loss, it is advisable to gather not only CCTV footage from the time of the accident but also medical records and certificates, receipts for medical, transportation, and caregiving expenses, messages exchanged with the gym and the trainer, witness statements, class booking and attendance records, and exercise plans and training logs. It also helps to photograph the injured area and the condition of the accident site as far as possible and to keep a chronological record of events before and after the accident and of all communications, so that materials can be cross-checked later.
+To establish liability, causation, and loss, it is advisable to gather not only CCTV footage from the time of the accident but also medical records and medical certificates, receipts for medical, transportation, and caregiving expenses, messages exchanged with the gym and the trainer, witness statements, class booking and attendance records, and exercise plans and training logs. It also helps to photograph the injured body part and, to the extent possible, the condition of the accident site, and to keep a chronological record of events before and after the accident and of all communications, so that the materials can be cross-checked later.
 
-Footage may be overwritten after its retention period or become unavailable for other reasons. One option is therefore to ask the gym, through a formal notice sent by content-certified mail or a written request from counsel, to preserve the footage, specifying the relevant time period, location, and camera position. Such a written request is a practical measure that records what was requested and when. It does not, by itself, impose a new legal duty on the other party to preserve the footage or prevent deletion, and the court does not automatically draw an adverse inference merely because footage no longer exists.
+Footage may be overwritten after its retention period or become unavailable for other reasons. One option is therefore to send the gym a formal written notice, or a written request from counsel, asking it to preserve the footage and specifying the relevant time period, location, and camera position. Such a written request is a practical measure that records what was requested and when. It does not, by itself, impose a new legal duty on the other party to preserve the footage or prevent deletion, and the court does not automatically draw an adverse inference merely because footage no longer exists.
 
 If the circumstances of the accident may satisfy the elements of a criminal offense, reporting the matter promptly allows the investigating authorities to determine whether they have lawful grounds to obtain or preserve the footage. Reporting does not guarantee that the police or prosecutors will secure the CCTV, so materials that the parties can preserve themselves—such as medical records and communication logs—should also be collected.
 
 ## 4. What categories of damages may be claimed against a gym?
 
-The categories of damages that may be considered are as follows. Whether each item is actually recognized, and in what amount, depends on the necessity of each expense, its causal relationship to the accident, the supporting documentation, the allocation of responsibility, and the court's assessment.
+The categories of damages that may be considered are as follows. Whether each item is actually recognized, and in what amount, depends on the necessity of each expense, its causal relationship to the accident, the supporting documentation, the apportionment of liability, and the court's assessment.
 
 1. **Medical expenses**: Amounts actually spent on consultations, examinations, treatment, medication, and rehabilitation are proven with receipts and medical records.
 2. **Caregiving or nursing costs**: Whether care was necessary in light of the severity of the injury and the course of treatment, and whether the period and cost were reasonable, are assessed using medical and expenditure records.
@@ -103,13 +103,13 @@ The categories of damages that may be considered are as follows. Whether each it
 
 ## 5. Can compensation still be disputed even if the gym has liability insurance?
 
-Yes. The existence of insurance may be relevant when considering a possible source of recovery, but it does not by itself establish the legal liability of the gym or trainer, nor does it fix the amount payable. Disputes may arise between the insurer and the parties over the policy's coverage limits and exclusions, the causal relationship between the accident and the injury, and the necessity and amount of each item of loss.
+Yes. The existence of insurance may be relevant as a potential source of funds for compensation, but it does not by itself establish the legal liability of the gym or trainer, nor does it fix the amount payable. Disputes may arise between the insurer and the parties over the policy's coverage limits and exclusions, the causal relationship between the accident and the injury, and the necessity and amount of each item of loss.
 
 In particular, loss of earning capacity, reduced income during recovery, and non-pecuniary damages may require medical, income, or occupational evidence, or expert opinion. Neither the amount offered by the insurer nor the amount demanded by the injured person automatically becomes the amount recognized by the court, and an impairment assessment does not automatically determine the compensation. In practice, the insurance policy and its terms, the accident notice, the insurer's responses, the course of treatment, and the loss documentation should all be reviewed together.
 
 If you have been injured at a gym, it is important to obtain the necessary medical treatment first, preserve available materials before they disappear, and seek individual advice early about the time limits and procedures that may apply to your case. Negotiation, a consumer complaint or mediation, a criminal complaint, and a civil damages claim are all options that may be chosen depending on the case; they are not procedures that must all be pursued in every case.
 
-Falls on business premises, harm to health caused by food, and injuries suffered while receiving professional services can likewise raise issues of safety duties, causation, loss, and evidence. However, the conclusion of a gym case cannot be applied as-is to other accidents, so the contract, the conduct, and the relevant law of each matter must be examined separately.
+Falls on business premises, harm to health caused by food, and injuries suffered while receiving professional services can likewise raise issues of safety duties, causation, loss, and evidence. However, the outcome of a gym case cannot be applied wholesale to other accidents, so the contract, the conduct, and the relevant law of each matter must be examined separately.
 
 ---
 

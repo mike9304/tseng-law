@@ -355,10 +355,10 @@ describe('English full column corpus', () => {
       expect(countOccurrences(raw, link)).toBe(1);
     }
     expect(raw).toContain(
-      'when a business operator provides services, it must ensure that the services meet the safety reasonably expected in light of the professional or technical standards current at the time',
+      'when a business operator provides services, it must ensure that the services have the level of safety reasonably expected under the professional or technical standards current at the time',
     );
     expect(raw).toContain(
-      'This does not mean that the business operator or trainer is held liable whenever an injury occurs at a gym.',
+      'This does not mean that the business operator or trainer will be held liable whenever an injury occurs at a gym.',
     );
     expect(raw).toContain(
       'what specific duty of care existed',

@@ -3,7 +3,7 @@ title: "Exceptions Where Employees Can Still Receive Severance After Voluntary R
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2025-09-13"
 date_display: "September 13, 2025"
-read_time: "2 min read"
+read_time: "3 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
@@ -13,87 +13,87 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Featured image](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-As previously discussed, it is not easy for employees in Taiwan to receive severance pay.
+As noted previously, it is generally difficult for employees in Taiwan to receive severance pay.
 
 ​
 
-In particular, when an employee resigns voluntarily,
+In particular, when employees resign voluntarily,
 
-they generally cannot receive severance pay,
+they are generally not entitled to severance pay,
 
-which differs from Korea.
+unlike in Korea.
 
 ​
 
-However, there are **exceptions**.
+There are, however, **exceptions**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-In the following special circumstances, even if the worker resigns of their own accord, the employer must still pay severance pay (Labor Standards Act Articles 14 and 18):
+In the following exceptional circumstances, an employer must pay severance even if an employee resigns voluntarily (Articles 14 and 18 of the Labor Standards Act):
 
-1. Where the employer makes a false representation when entering into the labor contract, causing the worker to be misled and creating a risk of harm
+1. Where, when entering into the labor contract, the employer makes a false representation that misleads the employee and creates a risk that the employee will suffer harm
 
-(for example, where the employer promises to assign the worker to an overseas branch that does not actually exist)
+(for example, where the employer tells the employee that they will be sent to an overseas branch that does not exist when they join the company)
 
-2. Where the employer, a family member of the employer, or an agent of the employer commits violence against the worker or engages in serious insulting conduct
+2. Where the employer, a member of the employer’s family, or the employer’s agent assaults or seriously insults the employee
 
-3. Where the work specified in the contract poses a risk of harm to the worker’s health, the worker has requested improvement from the employer, and there has been no effective result
+3. Where the work specified in the contract may harm the employee’s health and the employer fails to remedy the situation after the employee asks the employer to do so
 
-4. Where the employer, the employer’s agent, or another worker has contracted a notifiable infectious disease, creating a risk of transmission to co-workers and a material danger to the worker’s health
+4. Where the employer, the employer’s agent, or another employee has a notifiable communicable disease that may be transmitted to employees working alongside that person and poses a serious risk to the employee’s health
 
-5. Where the employer fails to pay wages in accordance with the labor contract, or fails to provide sufficient work to a worker paid on a piece-rate basis
+5. Where the employer fails to pay the wages required under the labor contract or fails to provide sufficient work to an employee paid on a piece-rate basis
 
-6. Where the employer violates the labor contract or labor laws in a manner that creates a risk of infringement of the worker’s rights and interests
-
-​
-
-The most common examples are cases where the employer
-
-fails to pay wages on time,
-
-fails to pay overtime pay,
-
-or fails to enroll the employee in labor insurance or national health insurance.
-
-In such cases, even if the worker generally terminates the labor contract, the employer must still pay severance pay.
+6. Where the employer breaches the labor contract or violates labor law, creating a risk that the employee’s rights and interests will be harmed
 
 ​
 
-However, the Labor Standards Act provides that
+The most common examples are employers who
 
-if a worker wishes to terminate the labor contract under items 1 or 6 above (for example, seeking to terminate the labor contract due to non-enrollment in insurance),
+fail to pay wages on time,
 
-the worker must terminate the labor contract within **30 days** from the day they become aware of the situation,
+fail to pay overtime,
 
-or within **30 days** from the day they become aware of the resulting harm.
+or fail to enroll employees in labor insurance or national health insurance.
 
-Workers must therefore carefully track the timing.
+In such cases, even when the employee terminates the labor contract, the employer must still pay severance.
+
+​
+
+The Labor Standards Act provides, however, that
+
+if an employee wishes to terminate the labor contract on either ground 1 or 6 above (for example, because the employer failed to enroll the employee in insurance),
+
+the employee must terminate the labor contract within **30 days** after becoming aware of the circumstances,
+
+or within **30 days** after becoming aware of the resulting harm.
+
+Employees must therefore pay close attention to these deadlines.
 
 ​
 
 In other words,
 
-Taiwanese law grants both sides rights—
+Taiwan law gives either party the right—
 
-whether the company is at fault
+depending on whether the employer is at fault
 
 or the employee is at fault—
 
-to either withhold severance pay or to demand it.
+to withhold severance or to claim it.
 
-Sometimes when both labor and management are at fault,
+Sometimes, when both the employer and the employee are at fault,
 
 and a dispute arises,
 
-whichever party first terminates the contract with sufficient grounds
+the party that first terminates the contract on sufficient grounds
 
-may either avoid paying severance or claim severance.
+may either avoid paying severance or claim it.
 
 Therefore, in Taiwan labor disputes,
 
-**“timing”** is extremely important.
+**“timing”** is crucial.
 
-In most cases, the side that prepares in advance is the one whose rights are protected.
+In most cases, the party that prepares in advance is better positioned to protect its rights.
 
 ---
 

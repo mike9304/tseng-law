@@ -28,7 +28,7 @@ const incidentImage =
 const featuredAlt =
   '台湾での追い越し事故の責任判断と安全な追い越し手順を説明する画像';
 const incidentAlt =
-  '山道でオートバイと前方2台の自動車が関与した追い越し衝突の模式図';
+  '山道でオートバイと前方を走る二台の車両の追い越し経路を示す事故図';
 const officialLabel = '台湾の「道路交通安全規則」第101条';
 const supplementaryLabel = '追い越し法規と手順の図解';
 const headings = [
@@ -51,13 +51,13 @@ const internalLinks = [
   },
 ] as const;
 const disclaimer =
-  '本稿は、台湾の追い越し規則および追い越し事故後の責任判断に関する一般的な法律情報であり、個別事案に対する法律意見や結果の保証ではありません。実際の過失・責任は、事故地点、車両の動き、速度、合図、証拠、鑑定結果および現行法規により異なり得るため、具体的な事案は関連資料に照らして個別に検討する必要があります。';
+  '本稿は、台湾の追い越し規則および事故責任の判断に関する一般的な法律情報であり、特定の事案に対する法律上の助言や結果の保証ではありません。実際の責任は、事故地点、車両の動き、速度、合図、証拠、鑑定および最新の法令によって異なり得るため、具体的な事案については、関連資料に基づき個別に検討する必要があります。';
 
-const EXPECTED_VISIBLE_JAPANESE = 1_857;
-const EXPECTED_VISIBLE_KANA = 928;
+const EXPECTED_VISIBLE_JAPANESE = 1_863;
+const EXPECTED_VISIBLE_KANA = 948;
 const EXPECTED_READ_MINUTES = 4;
 const EXPECTED_SOURCE_SHA256 =
-  '825e700f1a5c33ac4676c62fbfc416259f391b353216ed59000d9421433642ca';
+  '570b43101fa5d00caf3ba01b7cd67e2aad0aed66c856afdf3fe0b97a6fe9f3e0';
 
 const article101Groups = [
   '曲線、急勾配、狭橋、トンネル、交差点を示す標識が設けられた区間、ならびに鉄道の踏切や道路工事区間では、追い越しは禁止されます。',
@@ -65,8 +65,8 @@ const article101Groups = [
   '同一車道の前車を追い越そうとする後続車は、まず警音器を短く二回鳴らすか、前照灯を一回点滅させなければなりません。',
   '前車に進路を譲るよう強いるために、警音器や前照灯を繰り返し用いることは許されません。',
   '追い越しを始めてよいのは、前車が減速して路側へ寄るか、手信号または右方向指示器で進路を譲る意思を示した後に限られます。',
-  '追い越し側は左方向指示器を出し、前車の左側を少なくとも〇・五メートルの間隔を保って通過し、安全な車間を確保したうえで右方向指示器を出し、元の進路へ戻ります。',
-  '同一車道で後続車が合図をし、前車が進路を譲るという手順は、第101条が別に定める禁止条件を覆して追い越しを許す根拠にはなりません。',
+  '追い越す車両は左方向指示器を出し、前車との間に少なくとも0.5メートルの間隔を保ちながらその左側を通過し、安全な距離を確保した後に右方向指示器を出して、元の車線へ安全に戻らなければなりません。',
+  'こうした同一車道における合図と進路譲りの手順は、追い越しが禁止される場所や状況でも追い越しが許されるという意味ではありません。',
 ] as const;
 
 const requiredCaseFacts = [
@@ -76,13 +76,13 @@ const requiredCaseFacts = [
   '方向指示器を出してから一秒未満で対向車線に入りました。',
   'オートバイには十分な制動の余裕がなく、2号車と衝突しました。',
   'Bは頭部に重傷を負い、現場で死亡しました。Aは意識を失い、病院へ搬送されました。',
-  'AとBの家族は当初、2号車の急な対向車線への進入が衝突の主因だと考えていました。',
+  'AとBの家族は当初、2号車の急な車線変更が衝突の主因だと考えていました。',
   '事案は訴訟に至り、事故鑑定が複数回行われました。',
-  'それらの鑑定では、本件の主たる事故原因はAにあると判断されました。',
-  'この鑑定結果は当該事案に限られ',
-  '連続して走行する前方二台を一度に追い越そうとしたこと、対向車線に進入したこと、選択した速度では制動の余裕が不足していたこと、所定の合図を行わなかったこと、2号車の動き、道路・車線の配置、その他の証拠です。',
-  '所定の合図を一度欠いただけで、常に過失が定まるわけではありません。',
-  '第101条に従ったこと自体が事故回避を保証するわけでも、後の鑑定や訴訟の結論をあらかじめ決めるわけでもありません。',
+  '鑑定の結果、この衝突の主たる責任はAにあると判断されました。',
+  'この結論は、本件の事実関係に限ったものです。',
+  'Aが連続して走行していた前方の二台を追い越そうとしたこと、対向車線へ進入したこと、制動の余裕を確保することが難しい速度で走行したこと、規定された警音器・前照灯による合図を行わなかったこと、2号車の車線変更動作、道路・車線の構造、その他の証拠資料が総合的に考慮されました。',
+  '規定された合図を一度怠れば常に責任が定まるという意味ではありません。',
+  '追い越し事故の過失は、事故地点、車線構成、速度、車両の動き、合図、時間的間隔、視界、その他の証拠によって異なります。',
 ] as const;
 
 function countOccurrences(value: string, needle: string) {
@@ -191,12 +191,12 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
       expect(post?.content).toContain(fact);
     }
 
-    expect(raw).toContain('この鑑定結果は当該事案に限られ');
+    expect(raw).toContain('この結論は、本件の事実関係に限ったものです。');
     expect(raw).toContain(
-      '所定の合図を一度欠いただけで、常に過失が定まるわけではありません。',
+      '規定された合図を一度怠れば常に責任が定まるという意味ではありません。',
     );
     expect(raw).toContain(
-      '第101条に従ったこと自体が事故回避を保証するわけでも、後の鑑定や訴訟の結論をあらかじめ決めるわけでもありません。',
+      '第101条の遵守は重要ですが、それだけで事故を避けられるとは限らず、後の鑑定や訴訟結果を保証するものでもありません。',
     );
     expect(raw).not.toContain('前の車の同意');
     expect(raw).not.toContain('前車の同意');
@@ -231,7 +231,7 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
     expect(countOccurrences(raw, supplementaryUrl)).toBe(1);
     expect(raw).toContain(`[${supplementaryLabel}](${supplementaryUrl})`);
     expect(raw).toContain('二次資料');
-    expect(raw).toContain('現行の公式規定を優先');
+    expect(raw).toContain('現行の公式規定もあわせてご確認ください');
     expect(post?.content).toContain(`(${supplementaryUrl})`);
 
     const markdownInternalTargets = Array.from(
@@ -330,7 +330,7 @@ ${disclaimer}`;
     expect(raw).not.toContain('過大な事故責任を避けることができます');
     // Non-guarantee phrasing is required; promissory "guarantee of outcome" is not.
     expect(raw).toContain('結果の保証ではありません');
-    expect(raw).toContain('事故回避を保証するわけでも');
+    expect(raw).toContain('それだけで事故を避けられるとは限らず');
     expect(raw).toContain('訴訟結果を保証するものでもありません');
     expect(raw).not.toMatch(/結果を保証します/);
     expect(raw).not.toMatch(/責任を回避できます/);

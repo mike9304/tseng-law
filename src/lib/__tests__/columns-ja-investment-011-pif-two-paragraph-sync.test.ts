@@ -9,16 +9,16 @@ const columnPath = path.join(
 );
 const sourceBytes = fs.readFileSync(columnPath);
 
-const immutablePrefixLength = 9_766;
+const immutablePrefixLength = 11_876;
 const immutablePrefixSha256 =
-  '885ca0716ebd87e80055a8e6464aaa900b67d09800b4318e0137451ad74c6d59';
+  '3a2a9a1ef97d7873d69e8365cedde47527b6618da563cd68b10714df29bee56c';
 const immutableTailMarker = Buffer.from(
-  '保存場所、アクセス権限、バックアップ、版管理および契約終了後の資料引継ぎまで決めておくと、担当者や販売代理店が変わった場合の欠落を防ぎやすくなります。',
+  '\n\n### 検査、是正、行政上の措置',
   'utf8',
 );
-const immutableTailLength = 7_137;
+const immutableTailLength = 7_667;
 const immutableTailSha256 =
-  '6a1788dfb3f7fa1054216572b0584850c07348681244281a4cebc15c04aafd77';
+  '5fbfce232b3509a0dc283cb49b5b24f0227f66929f1b2a855923b6661f20f0fd';
 
 const tailOffset = sourceBytes.indexOf(immutableTailMarker);
 const synchronizedBytes =
@@ -26,7 +26,9 @@ const synchronizedBytes =
     ? Buffer.alloc(0)
     : sourceBytes.subarray(immutablePrefixLength, tailOffset);
 const synchronizedCopy = synchronizedBytes.toString('utf8');
-const structureMatch = synchronizedCopy.match(/^([^\r\n]+)\n\n([^\r\n]+)\n\n$/u);
+const structureMatch = synchronizedCopy.match(
+  /^([^\r\n]+)\n\n([^\r\n]+)\n\n([^\r\n]+)$/u,
+);
 const paragraphs = structureMatch?.slice(1) ?? [];
 
 const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
@@ -45,9 +47,9 @@ describe('Japanese investment column 011 — synchronized PIF update and retenti
     expect(sha256(tail)).toBe(immutableTailSha256);
   });
 
-  it('contains exactly two non-empty Japanese prose paragraphs and no Markdown', () => {
+  it('contains exactly three non-empty Japanese prose paragraphs and no Markdown', () => {
     expect(structureMatch).not.toBeNull();
-    expect(paragraphs).toHaveLength(2);
+    expect(paragraphs).toHaveLength(3);
 
     for (const paragraph of paragraphs) {
       expect(paragraph.trim()).toBe(paragraph);
@@ -108,12 +110,12 @@ describe('Japanese investment column 011 — synchronized PIF update and retenti
   });
 
   it('retains complete and promptly retrievable original or electronic records', () => {
-    const second = paragraphs[1] ?? '';
+    const third = paragraphs[2] ?? '';
 
-    expect(second).toMatch(/原製造業者[^。]*原本/u);
-    expect(second).toMatch(/安全[^。]*(?:電子[^。]*クラウド|クラウド[^。]*電子)/u);
-    expect(second).toMatch(/完全な資料/u);
-    expect(second).toMatch(
+    expect(third).toMatch(/(?:元の|原)製造業者[^。]*原本/u);
+    expect(third).toMatch(/安全[^。]*(?:電子[^。]*クラウド|クラウド[^。]*電子)/u);
+    expect(third).toMatch(/完全な資料/u);
+    expect(third).toMatch(
       /主管機関[^。]*(?:要求|求め)[^。]*速やか[^。]*(?:検索|取り出し)[^。]*提示/u,
     );
   });

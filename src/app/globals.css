@@ -1773,11 +1773,6 @@ section.home-results-panel--editorial {
   background-size: cover;
 }
 
-/* zh-hant 히어로는 타이베이 야경 단일 컷 (HeroMediaBackground 로케일 분기와 동일 소스, 사용자 승인 2026-07-22) */
-html[lang='zh-Hant'] .hero-media {
-  background-image: url('/images/hero-bg-taipei-night.webp');
-}
-
 /* zh-hant 홈 빌더 문서의 hero-media 노드가 루트(1440)보다 좁은 1280으로 박혀 우측 밴드 발생 — 풀블리드 강제.
    해당 node-id는 zh-hant 문서에만 존재(ko/en 무영향). 라이브 주입 실험 검증(1280→1440). */
 .site .builder-pub-node[data-node-id='home-hero-root'],

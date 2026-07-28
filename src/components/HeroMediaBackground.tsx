@@ -13,10 +13,8 @@ const defaultSlides: HeroMediaSlide[] = [
   { image: '/images/hero-bg-03.webp' }
 ];
 
-// zh-hant은 대만 정체성이 분명한 타이베이 야경 단일 컷을 쓴다(사용자 승인 2026-07-22).
-const slidesByLocale: Partial<Record<SiteLocale, HeroMediaSlide[]>> = {
-  'zh-hant': [{ image: '/images/hero-bg-taipei-night.webp' }],
-};
+// 전 로케일 공통: ko 사이트 기준 로테이터 (2026-07-28 사용자 지시 — zh-hant 야경 단일컷 예외 폐지)
+const slidesByLocale: Partial<Record<SiteLocale, HeroMediaSlide[]>> = {};
 
 export default function HeroMediaBackground({ locale }: { locale?: SiteLocale } = {}) {
   const slides = (locale && slidesByLocale[locale]) || defaultSlides;

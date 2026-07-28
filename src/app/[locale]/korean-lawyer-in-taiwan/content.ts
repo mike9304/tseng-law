@@ -299,7 +299,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     officeHeading: 'アクセス',
     office: {
       lines: [
-        '台北市大同区承德路一段35号7階之2 (7F.-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City)',
+        '台北市大同区承徳路一段35号7F-2 (7F.-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City)',
         'メール: wei@hoveringlaw.com.tw',
         '電話: +82-10-2992-9304（韓国）/ 台湾相談のお問い合わせ',
       ],

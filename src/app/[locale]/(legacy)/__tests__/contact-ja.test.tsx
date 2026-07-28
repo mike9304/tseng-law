@@ -108,7 +108,7 @@ describe('Japanese contact route integration', () => {
       'ビジネス・投資',
       '事務所所在地',
       '台北事務所',
-      '台北市大同區承德路一段35號7樓之2',
+      '台北市大同区承徳路一段35号7F-2',
     ]) {
       expect(html).toContain(expected);
     }

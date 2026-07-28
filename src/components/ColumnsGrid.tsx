@@ -287,7 +287,7 @@ export default function ColumnsGrid({
                 <h3 className="columns-card-title">{post.title}</h3>
                 <p className="columns-card-summary">{post.summary}</p>
                 <span className="columns-card-linkhint">
-                  {locale === 'ko' ? '칼럼 보기 →' : locale === 'zh-hant' ? '查看專欄 →' : 'Open column →'}
+                  {locale === 'ko' ? '칼럼 보기 →' : locale === 'zh-hant' ? '查看專欄 →' : locale === 'ja' ? 'コラムを読む →' : 'Open column →'}
                 </span>
               </div>
             </Link>
@@ -295,7 +295,7 @@ export default function ColumnsGrid({
         </div>
         {filtered.length === 0 && (
           <p className="columns-empty">
-            {locale === 'ko' ? '해당 카테고리의 글이 없습니다.' : locale === 'zh-hant' ? '此分類尚無文章。' : 'No posts in this category yet.'}
+            {locale === 'ko' ? '해당 카테고리의 글이 없습니다.' : locale === 'zh-hant' ? '此分類尚無文章。' : locale === 'ja' ? 'このカテゴリーにはまだ記事がありません。' : 'No posts in this category yet.'}
           </p>
         )}
         {remainingCount > 0 ? (

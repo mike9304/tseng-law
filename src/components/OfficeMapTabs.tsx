@@ -111,6 +111,14 @@ const japaneseTaiwanOfficeTitles: Record<TaiwanOfficeId, string> = {
   kaohsiung: '高雄事務所',
 };
 
+// ja 주소는 site-content.ts 연락처 관례(일본식 한자·층수 표기)를 따른다.
+// 타이중은 로케일별 층수 미해결 이슈가 있어 zh-hant 소스 사실관계를 유지한 채 표기만 변환.
+const japaneseTaiwanOfficeAddresses: Record<TaiwanOfficeId, string> = {
+  taipei: '台北市大同区承徳路一段35号7F-2',
+  taichung: '台中市北区館前路19号樓之1',
+  kaohsiung: '高雄市左営区安吉街233号',
+};
+
 const taiwanOfficeData: Record<SiteLocale, OfficeInfo[]> = {
   ko: [
     {
@@ -168,6 +176,7 @@ const taiwanOfficeData: Record<SiteLocale, OfficeInfo[]> = {
   ja: zhHantTaiwanOffices.map((office) => ({
     ...office,
     title: japaneseTaiwanOfficeTitles[office.id],
+    address: japaneseTaiwanOfficeAddresses[office.id],
   })),
 };
 
@@ -201,6 +210,7 @@ const koreaOfficeData: Record<SiteLocale, OfficeInfo> = {
   ja: {
     ...zhHantKoreaOffice,
     title: '韓国事務所',
+    address: '韓国京畿道楊州市玉井東路177 Suhyeon Plaza 4階',
     mapLinkLabel: 'NAVERマップで見る',
   },
 };

@@ -48,6 +48,33 @@ const relatedColumnsJa = [
   { slug: 'taiwan-company-subsidiary-vs-branch', title: '台湾会社設立 子会社 VS 支店' },
 ];
 
+// en·zh 제목은 해당 칼럼 원문(src/content/columns-en|columns-zh) front matter title 그대로 사용
+const relatedColumnsEn = [
+  {
+    slug: 'taiwan-company-establishment-basics',
+    title: 'Setting Up a Company in Taiwan: Subsidiaries, Branches, Representative Offices, Procedures, and Work Permits',
+  },
+  {
+    slug: 'taiwan-company-establishment-advanced-1',
+    title: 'Taiwan Company Formation: Practical Q&A on Addresses, Bank Accounts, and Investment Review',
+  },
+  {
+    slug: 'taiwan-company-establishment-advanced-2',
+    title: 'Taiwan Company Formation: Capital Remittance, Banking, and Foreign Hiring',
+  },
+  {
+    slug: 'taiwan-company-subsidiary-vs-branch',
+    title: 'Entering the Taiwan Market: Key Differences Between a Subsidiary and a Branch',
+  },
+];
+
+const relatedColumnsZh = [
+  { slug: 'taiwan-company-establishment-basics', title: '台灣公司設立基礎：子公司、分公司、代表人辦事處、設立程序與工作許可' },
+  { slug: 'taiwan-company-establishment-advanced-1', title: '台灣公司設立：地址、銀行帳戶與審查實務Q&A' },
+  { slug: 'taiwan-company-establishment-advanced-2', title: '台灣公司設立：資本金匯款、銀行帳戶與外國人聘僱實務Q&A' },
+  { slug: 'taiwan-company-subsidiary-vs-branch', title: '進入台灣市場：子公司與分公司的差異' },
+];
+
 export const guideContent: Record<SiteLocale, GuideContent> = {
   ko: {
     title: '대만 법인설립(회사설립) 종합 가이드',
@@ -258,7 +285,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       },
     ],
     relatedHeading: '相關專欄',
-    relatedColumns: relatedColumnsKo,
+    relatedColumns: relatedColumnsZh,
     relatedResourcesHeading: '相關指南',
     relatedResources: [
       { href: 'korean-lawyer-in-taiwan', label: '可使用韓語溝通的台灣律師' },
@@ -366,7 +393,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       },
     ],
     relatedHeading: 'Related Columns',
-    relatedColumns: relatedColumnsKo,
+    relatedColumns: relatedColumnsEn,
     relatedResourcesHeading: 'Related Guides',
     relatedResources: [
       { href: 'korean-lawyer-in-taiwan', label: 'Korean-speaking Taiwan lawyer' },

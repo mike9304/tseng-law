@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeSiteLocale, siteLocales, type SiteLocale } from '@/lib/locales';
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildLegalServiceJsonLd, buildSeoMetadata } from '@/lib/seo';
 import { LANDING_SLUG, landingContent } from './content';
 import styles from './landing.module.css';
 
 const SLUG_PATH = LANDING_SLUG;
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
-  const locale = normalizeLocale(params.locale);
+export function generateMetadata({ params }: { params: { locale: SiteLocale } }): Metadata {
+  const locale = normalizeSiteLocale(params.locale);
   const c = landingContent[locale];
 
   return buildSeoMetadata({
@@ -18,11 +18,12 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     description: c.description,
     path: `/${SLUG_PATH}`,
     keywords: c.keywords,
+    alternateLocales: siteLocales,
   });
 }
 
-export default function KoreanLawyerInTaiwanPage({ params }: { params: { locale: Locale } }) {
-  const locale = normalizeLocale(params.locale);
+export default function KoreanLawyerInTaiwanPage({ params }: { params: { locale: SiteLocale } }) {
+  const locale = normalizeSiteLocale(params.locale);
   const c = landingContent[locale];
   const path = `/${locale}/${SLUG_PATH}`;
 
@@ -30,11 +31,11 @@ export default function KoreanLawyerInTaiwanPage({ params }: { params: { locale:
   const legalServiceJsonLd = buildLegalServiceJsonLd(locale, {
     description: c.description,
     path: SLUG_PATH,
-    serviceType: locale === 'ko' ? '대만 변호사·회사설립·소송·투자 자문' : locale === 'zh-hant' ? '台灣律師·公司設立·訴訟·投資顧問' : 'Taiwan lawyer, company setup, litigation, investment advisory',
+    serviceType: locale === 'ko' ? '대만 변호사·회사설립·소송·투자 자문' : locale === 'zh-hant' ? '台灣律師·公司設立·訴訟·投資顧問' : locale === 'ja' ? '台湾弁護士・会社設立・訴訟・投資顧問' : 'Taiwan lawyer, company setup, litigation, investment advisory',
   });
 
-  const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home';
-  const lawyersLabel = locale === 'ko' ? '변호사' : locale === 'zh-hant' ? '律師' : 'Lawyers';
+  const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
+  const lawyersLabel = locale === 'ko' ? '변호사' : locale === 'zh-hant' ? '律師' : locale === 'ja' ? '弁護士' : 'Lawyers';
 
   return (
     <>

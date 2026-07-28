@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
 export const LANDING_SLUG = 'korean-lawyer-in-taiwan';
 
@@ -27,7 +27,7 @@ export type LandingContent = {
   ctaButton: string;
 };
 
-export const landingContent: Record<Locale, LandingContent> = {
+export const landingContent: Record<SiteLocale, LandingContent> = {
   ko: {
     metaTitle: '한국어 가능한 대만 변호사 | 법무법인 호정 (타이베이)',
     description:
@@ -261,5 +261,83 @@ export const landingContent: Record<Locale, LandingContent> = {
     ctaText:
       'Whether it is company setup, investment, litigation, or a family dispute, feel free to reach out in Korean. Share your materials and we will arrange a consultation flow.',
     ctaButton: 'Book Consultation',
+  },
+  ja: {
+    metaTitle: '韓国語対応の台湾弁護士 | 昊鼎国際法律事務所（台北）',
+    description:
+      '昊鼎国際法律事務所（Hovering International Law Firm）は台北所在の台湾法律事務所で、台湾弁護士の曾雋崴が韓国語・中国語・日本語でご相談を承ります。台湾会社設立・民事刑事訴訟・投資顧問を取り扱います。',
+    keywords: [
+      '韓国語対応の台湾弁護士',
+      '台湾弁護士',
+      '台北弁護士',
+      '台湾会社設立弁護士',
+      '台湾訴訟弁護士',
+      '曾雋崴弁護士',
+    ],
+    heroLabel: 'KOREAN-SPEAKING TAIWAN LAWYER',
+    title: '韓国語対応の台湾弁護士 — 昊鼎国際法律事務所',
+    lead: [
+      '昊鼎国際法律事務所（Hovering International Law Firm）は台北に所在する台湾法律事務所で、台湾弁護士の曾雋崴が韓国語・中国語・日本語でご相談を承ります。',
+      '台湾会社設立、民事・刑事訴訟、投資顧問を取り扱い、韓国企業と個人の台湾法律問題を韓国語でのコミュニケーションでご案内します。',
+      '初回相談で事実関係の整理、管轄・手続きの設計、文書レビュー、訴訟対応まで一つの流れで検討します。',
+    ],
+    servicesHeading: '取扱業務',
+    services: [
+      '台湾会社設立・法人設立（子会社・支店・連絡事務所）',
+      '台湾投資・投審会承認・ビザ（就労許可証・居留証）',
+      '民事・刑事訴訟および損害賠償・交通事故',
+      '契約レビュー・債権回収・不動産紛争',
+      '商標・知的財産権、労使・家事・相続',
+    ],
+    languagesHeading: '言語別のご相談案内',
+    languages: [
+      '韓国語：韓国のクライアントの台湾法律問題を韓国語で説明し、ご相談を承ります。',
+      '中国語（繁体字）：台湾現地の書類・訴訟・契約を繁体字中国語で直接処理します。',
+      '日本語：日本語でのコミュニケーションをご希望のクライアントの台湾法律顧問も可能です。',
+      '英語：国際取引・外国企業の台湾進出顧問を英語でサポートします。',
+    ],
+    officeHeading: 'アクセス',
+    office: {
+      lines: [
+        '台北市大同区承德路一段35号7階之2 (7F.-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City)',
+        'メール: wei@hoveringlaw.com.tw',
+        '電話: +82-10-2992-9304（韓国）/ 台湾相談のお問い合わせ',
+      ],
+    },
+    faqHeading: 'よくある質問',
+    faq: [
+      {
+        q: '韓国語で相談できますか？',
+        a: 'はい。昊鼎国際法律事務所の曾雋崴台湾弁護士が韓国語でご相談を承ります。台湾会社設立、訴訟、投資顧問のすべてを韓国語でのコミュニケーションで進められます。',
+      },
+      {
+        q: '韓国企業の台湾会社設立もサポートしていただけますか？',
+        a: 'はい。子会社・支店・連絡事務所の設立、投審会の投資承認、ビザ（就労許可証・居留証）、税務登記まで設立の全過程を韓国語でご案内します。',
+      },
+      {
+        q: '台湾で韓国人が訴訟をするときに弁護士は必要ですか？',
+        a: '台湾の裁判所の訴訟で外国人は現地の法律手続きと言語の両方で困難に直面することがあります。曾雋崴台湾弁護士が民事・刑事訴訟で韓国語でコミュニケーションを取りながら対応をご案内します。',
+      },
+      {
+        q: '相談はどのように申し込めばよいですか？',
+        a: 'メール（wei@hoveringlaw.com.tw）または電話（+82-10-2992-9304）でお問い合わせいただければ、案件内容を整理して相談の流れをご案内します。',
+      },
+      {
+        q: '中国語・日本語での相談も可能ですか？',
+        a: 'はい。曾雋崴台湾弁護士は韓国語のほか、中国語（繁体字）・日本語でもご相談が可能で、多言語の契約書・書類レビューもサポートします。',
+      },
+    ],
+    relatedHeading: '関連案内',
+    relatedResources: [
+      { href: 'guides/taiwan-company-setup', label: '台湾会社設立総合ガイド' },
+      { href: 'taiwan-company-setup-lawyer', label: '台湾法人設立・会社設立弁護士のご案内' },
+      { href: 'taiwan-lawyer', label: '台湾弁護士検索ガイド' },
+      { href: 'taiwan-litigation-lawyer', label: '台湾訴訟弁護士のご案内' },
+      { href: 'services', label: '台湾法律サービス一覧' },
+    ],
+    ctaTitle: '台湾の法律問題、韓国語でご相談ください',
+    ctaText:
+      '会社設立、投資、訴訟、家事紛争など台湾の法律問題がございましたら、韓国語でお気軽にお問い合わせください。資料をお送りいただければ、相談の流れをご案内します。',
+    ctaButton: '相談のお問い合わせ',
   },
 };

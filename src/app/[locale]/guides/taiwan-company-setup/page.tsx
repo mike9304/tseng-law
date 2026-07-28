@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeSiteLocale, siteLocales, type SiteLocale } from '@/lib/locales';
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildHowToJsonLd, buildSeoMetadata } from '@/lib/seo';
 import { GUIDE_SLUG, guideContent } from './content';
 import styles from './guide.module.css';
 
 const SLUG_PATH = GUIDE_SLUG;
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
-  const locale = normalizeLocale(params.locale);
+export function generateMetadata({ params }: { params: { locale: SiteLocale } }): Metadata {
+  const locale = normalizeSiteLocale(params.locale);
   const c = guideContent[locale];
 
   return buildSeoMetadata({
@@ -18,11 +18,12 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     description: c.description,
     path: `/${SLUG_PATH}`,
     keywords: c.keywords,
+    alternateLocales: siteLocales,
   });
 }
 
-export default function TaiwanCompanySetupGuidePage({ params }: { params: { locale: Locale } }) {
-  const locale = normalizeLocale(params.locale);
+export default function TaiwanCompanySetupGuidePage({ params }: { params: { locale: SiteLocale } }) {
+  const locale = normalizeSiteLocale(params.locale);
   const c = guideContent[locale];
   const path = `/${locale}/${SLUG_PATH}`;
 
@@ -31,19 +32,22 @@ export default function TaiwanCompanySetupGuidePage({ params }: { params: { loca
     description: c.description,
     steps: c.steps,
     totalTime: 'P4M',
-    locale,
+    // buildHowToJsonLd only accepts builder Locale; omit inLanguage for ja rather than tagging it as another locale.
+    locale: locale === 'ja' ? undefined : locale,
   });
   const faqJsonLd = buildFaqJsonLd(c.faq, locale);
 
-  const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home';
-  const servicesLabel = locale === 'ko' ? '업무분야' : locale === 'zh-hant' ? '服務' : 'Services';
-  const summaryHeading = locale === 'ko' ? '핵심 요약' : locale === 'zh-hant' ? '核心摘要' : 'Key Summary';
+  const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
+  const servicesLabel = locale === 'ko' ? '업무분야' : locale === 'zh-hant' ? '服務' : locale === 'ja' ? '取扱業務' : 'Services';
+  const summaryHeading = locale === 'ko' ? '핵심 요약' : locale === 'zh-hant' ? '核心摘要' : locale === 'ja' ? '要点まとめ' : 'Key Summary';
   const disclaimerNote =
     locale === 'ko'
       ? '※ 본 페이지의 수치·요건은 당사 공개 칼럼에서 발췌한 일반 정보이며 사안별로 달라질 수 있습니다.'
       : locale === 'zh-hant'
         ? '※ 本頁數值與要件為本所公開專欄之一般資訊，個案可能不同。'
-        : 'Figures and requirements on this page are general information drawn from our public columns and may vary by case.';
+        : locale === 'ja'
+          ? '※ 本ページの数値・要件は当事務所の公開コラムから抜粋した一般情報であり、案件によって異なる場合があります。'
+          : 'Figures and requirements on this page are general information drawn from our public columns and may vary by case.';
 
   return (
     <>

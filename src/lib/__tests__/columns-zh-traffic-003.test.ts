@@ -75,9 +75,9 @@ const approvedQ11ContinuedWorkBasisParagraph =
 const staleQ11ContinuedWorkBasisParagraph =
   '繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題；勞動能力減損應於 Q12 另行判斷。';
 const approvedQ14JointClaimParagraph =
-  '僱用人可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。可考慮同時向僱用人及受僱人請求損害賠償。僱用人賠償後，得向受僱人求償。';
+  '僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。可考慮同時向僱用人及受僱人請求損害賠償。僱用人賠償後，得向受僱人求償。';
 const staleQ14JointClaimParagraph =
-  '雇主可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。僱用人賠償後，得向受僱人求償。';
+  '僱用人可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。可考慮同時向僱用人及受僱人請求損害賠償。僱用人賠償後，得向受僱人求償。';
 const q20Marker = 'Q20. 如何找交通事故律師？';
 const approvedQ20EngagementWarningSentence =
   '要注意那些誇大案情、主張不要和解而要透過民事、刑事程序打到底，只是為了爭取委任而這樣主張的律師。';
@@ -1202,7 +1202,7 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
     ]);
   });
 
-  it('locks Q14 possible employer civil liability and separate individual criminal responsibility', () => {
+  it('locks Q14 selection-supervision defense and separate individual criminal responsibility', () => {
     const section = q11ToQ15SectionForQuestion(14);
 
     expect(countOccurrences(section, approvedQ14JointClaimParagraph)).toBe(1);
@@ -1221,9 +1221,9 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
           /(?:上班|工作).{0,8}時間.{0,24}(?:不當然|不會自動|不足以).{0,24}(?:職務關聯|執行職務|職務上關係)/s,
       },
       {
-        label: 'possible joint civil liability',
+        label: 'canonical selection-supervision defense opening',
         pattern:
-          /(?:雇主|僱用人).{0,20}(?:可能|得).{0,8}(?:連帶|共同).{0,8}(?:負|承擔).{0,8}民事責任/s,
+          /僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。/,
       },
       {
         label: 'selection and supervision defense',

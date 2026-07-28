@@ -116,16 +116,20 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
     ).toHaveLength(4);
   });
 
-  it('qualifies Korea-side reporting, remittance order, and bank channels', () => {
+  it('locks the canonical Korea-side reporting, remittance order, and bank channels', () => {
     const required = [
-      '可能需要辦理海外直接投資申報等程序',
-      '原則上須在匯款前完成適用的申報、確認或其他程序',
+      '韓國銀行要求投資人本人親自前往銀行，並從本人帳戶匯款',
+      '網路銀行或由韓國親友代為匯款均不可行',
+      '必須辦理「海外直接投資申報」',
+      '申報必須於匯出台灣法人資本金時獲受理',
+      '未申報可能因違反外匯管理法規而受制裁',
+      '匯出資本金前，請向往來銀行確認申報受理機關、指定外匯銀行、申報時點、匯款名義、應備文件及匯款方式',
       '海外直接投資交易須透過指定外匯銀行辦理',
-      '由代理人申請而獲准的情形',
-      '部分程序在線上辦理的情形',
-      '不應假設申報會在匯出資本金的同時當然受理',
-      '事先確認申報與匯款的順序',
-      '可能須採取補正措施，或受到行政上或其他處置',
+      '海外直接投資申報為必須，並須在匯出台灣法人資本金時獲受理',
+      '韓國銀行一般要求投資人本人親自到行，以本人帳戶辦理匯款',
+      '海外直接投資申報必須在匯出資本金時獲受理',
+      '由於可能須先經文件審查、補正或指定銀行確認，應事先確認申報與匯款的順序，並與台灣方面的投資核准及繳款期限調整時程',
+      '請勿一概預測具體措施，而應在匯款前確認最新制度與個別交易內容',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -133,13 +137,18 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
     }
   });
 
-  it('qualifies Taiwan-dollar payments and source-of-funds evidence', () => {
+  it('locks Taiwan-dollar evidence and the Korean-bank remittance exemption', () => {
     const required = [
+      '需確認核准的投資內容、資金取得經過、匯款或存入方式及往來銀行的要求',
+      '使用在台灣取得的新臺幣時，須提交資金來源證明文件',
+      '薪資所得扣繳憑單影本',
+      '股息和紅利扣繳憑單影本',
+      '從韓國銀行帳戶匯款時，無須附上資金來源相關文件',
       '存入須與核准的投資額、出資方式、投資人與匯款人及最新的投資程序指引相符',
       '若核准內容係以外幣自國外匯入為前提',
       '薪資明細、扣繳相關資料、股利決議與支付紀錄、契約書、請款單、納稅資料或帳戶明細',
-      '自國外匯款時，仍可能需要提出資金來源資料',
-      '不會僅因匯款來源是韓國的銀行就免除證明',
+      '若從韓國銀行帳戶匯款，無須附上資金來源相關文件',
+      '請將銀行要求的資料、投資核准文件及實際資金移動紀錄相互對應保存',
       '須申報投資款已匯入，再辦理投資額審定',
       '最終能完成申報與審定程序的方式設計資金流程',
     ];
@@ -165,14 +174,16 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
     }
   });
 
-  it('states the managerial work-permit category and exact employer thresholds', () => {
+  it('locks the first-employee rule and second-employee managerial thresholds', () => {
     const required = [
-      '也不能因此將第一位外國人視為不受限制',
+      '就「一般僑外投資事業主管工作」而言，第一位員工不受限制',
+      '自第二位員工起有限制',
       '並不會僅因具有外國國籍，就產生不受限制的聘僱名額',
       '台灣法所稱的公司或分公司「經理人」',
       '合計持有超過股份總數或資本總額三分之一',
-      '第一位外國人所放寬的，僅為專門性或技術性工作的學歷、經歷及平均薪資標準',
-      '職位與出資關係、雇主資格、申請及工作許可仍為必要',
+      '第一位外國人不受學歷、經歷、平均薪資及雇主資本額、營業額標準限制',
+      '自第二位外國人起，其相關學歷與經歷、平均薪資，以及雇主的資本額與營業額，均依專門性或技術性工作的標準辦理',
+      '自第二位外國人起，雇主方面須符合現行資格標準之一',
       '實收資本額或在台營運資金達新臺幣50萬元以上',
       '營業額達新臺幣300萬元以上',
       '進出口實績達美金50萬元以上',
@@ -211,12 +222,19 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
 
   it('removes stale claims, locale leakage, and wrong identity', () => {
     const forbidden = [
-      '無法透過網路銀行或委託韓國親友代為匯款',
-      '若從韓國銀行帳戶匯款，則無須附上資金來源相關文件',
+      '可能需要辦理海外直接投資申報等程序',
+      '本人親自到行、代理申請或線上程序是否可行，無法就所有銀行一概而論',
+      '由代理人申請而獲准的情形',
+      '部分程序在線上辦理的情形',
+      '不應假設申報會在匯出資本金的同時當然受理',
+      '自國外匯款時，仍可能需要提出資金來源資料',
+      '即使是自國外匯款，仍可能需要提出資金來源資料',
+      '不會僅因匯款來源是韓國的銀行就免除證明',
+      '也不能因此將第一位外國人視為不受限制',
+      '第一位外國人所放寬的，僅為專門性或技術性工作的學歷、經歷及平均薪資標準',
+      '職位與出資關係、雇主資格、申請及工作許可仍為必要',
       '一般至少需要手機號碼',
       '使用期間須滿6個月以上',
-      '第一位員工無限制',
-      '第二位員工起有限制',
       '曾俊瑋',
       '/ko/',
       '/ja/',
@@ -254,7 +272,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(3_757);
+    expect(visibleHanCount).toBe(3_628);
     expect(calculatedMinutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

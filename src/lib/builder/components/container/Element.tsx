@@ -52,7 +52,12 @@ export default function ContainerElement({
   const copy = getContainerGalleryCopy(locale);
   const layoutMode = content.layoutMode ?? 'absolute';
   const { className, as, htmlId, dataTone, aiSectionTemplateKind } = content;
-  const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
+  // Nested <main> is invalid HTML: the public layout already provides the
+  // single <main id="main"> landmark, so published pages demote container
+  // nodes authored with as:'main' to <div>. Node data keeps as:'main'
+  // (editor canvas render and responsive/autofit data checks rely on it).
+  const resolvedTag = mode === 'published' && as === 'main' ? 'div' : (as ?? 'div');
+  const Tag = resolvedTag as keyof JSX.IntrinsicElements;
   const link = sanitizeLinkValue(content.link);
   const interactive = mode === 'published';
   const hasChildren = Children.count(children) > 0;

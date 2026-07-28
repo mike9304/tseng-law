@@ -66,6 +66,26 @@ describe('published standard page CSS guards', () => {
     expect(publishedPage).toContain('padding-block-start: 0 !important;');
   });
 
+  it('emits exactly one <main> landmark: layout owns id="main", published render demotes the rest (WO#5)', () => {
+    const publishedPage = read('src/lib/builder/site/public-page.tsx');
+    const containerElement = read('src/lib/builder/components/container/Element.tsx');
+    const layout = read('src/app/[locale]/layout.tsx');
+
+    // The single canonical landmark stays in the locale layout.
+    expect(layout).toContain('<main id="main">');
+
+    // The published renderer wrapper must not be a nested <main>.
+    expect(publishedPage).not.toMatch(/<main\s+className="builder-pub-main"/);
+    expect(publishedPage).toContain('<div\n        className="builder-pub-main"');
+
+    // Node-level as:"main" containers are demoted to <div> at render time
+    // (published mode only — editor canvas keeps the authored tag).
+    expect(containerElement).toContain("mode === 'published' && as === 'main' ? 'div'");
+
+    // No tag-qualified main selectors remain against published builder nodes.
+    expect(publishedPage).not.toMatch(/builder-pub-node\[data-node-id='[a-z-]+'\] > main/);
+  });
+
   it('scopes zh-hant home desktop parity swap to services + case-results only', () => {
     const publishedPage = read('src/lib/builder/site/public-page.tsx');
 

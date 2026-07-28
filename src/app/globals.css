@@ -3959,7 +3959,7 @@ html[lang='zh-Hant'] .hero-media {
   min-height: 0 !important;
   max-height: none !important;
 }
-.site .builder-pub-node[data-node-id='about-page-root'] > main {
+.site .builder-pub-node[data-node-id='about-page-root'] > div {
   height: auto !important;
   min-height: 0 !important;
   max-height: none !important;
@@ -3977,7 +3977,7 @@ html[lang='zh-Hant'] .hero-media {
   height: auto !important;
   min-height: 0 !important;
 }
-.site [data-node-id='contact-page-root'] > main {
+.site [data-node-id='contact-page-root'] > div {
   height: auto !important;
   min-height: 0 !important;
 }

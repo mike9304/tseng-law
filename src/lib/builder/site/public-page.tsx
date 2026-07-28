@@ -1792,7 +1792,7 @@ export async function PublishedSitePageView({
             height: auto !important;
             min-height: 0 !important;
           }
-          .builder-pub-main .builder-pub-node[data-node-id='columns-page-root'] > main,
+          .builder-pub-main .builder-pub-node[data-node-id='columns-page-root'] > div,
           .builder-pub-main .builder-pub-node[data-node-id='columns-page-root-composite'] > div {
             height: auto !important;
             min-height: 0 !important;
@@ -1913,7 +1913,7 @@ export async function PublishedSitePageView({
           mobileHamburger={headerFooterConfig.mobileHamburger}
         />
       ) : null}
-      <main
+      <div
         className="builder-pub-main"
         data-builder-chrome={useBuilderChrome ? 'true' : 'false'}
         style={{
@@ -1939,7 +1939,7 @@ export async function PublishedSitePageView({
         }}
       >
         {renderedTopLevelNodes.map((node) => renderPublishedNode(node, true))}
-      </main>
+      </div>
       {dynamicListConfig && dynamicListSlice && dynamicListRuntime.pagination ? (
         <DynamicListVisitorControls
           basePath={dynamicListRuntime.pagePath}

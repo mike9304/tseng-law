@@ -124,7 +124,7 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(css).toMatch(/\.site h2,\s*\n\.site h3\s*\{[^}]*font-family:\s*var\(--font-sans/);
     // About composite-flow repair (not dead page-about-contact-root selector)
     expect(css).toContain("data-node-id='about-page-root-composite'");
-    expect(css).toContain("data-node-id='about-page-root'] > main");
+    expect(css).toContain("data-node-id='about-page-root'] > div");
     expect(css).not.toContain("data-node-id='page-about-contact-root'");
   });
 

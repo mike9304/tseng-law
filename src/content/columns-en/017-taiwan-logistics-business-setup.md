@@ -13,7 +13,7 @@ faq:
   - q: "What capital, vehicle, and procedural requirements apply to a new general motor freight carrier business?"
     a: "As a general rule, a new motor freight carrier business must have at least NT$25 million in capital and at least 20 new freight trucks. A business limited to household-goods moving is subject to the separate thresholds of NT$10 million and at least eight new freight trucks. A carrier operating in Kinmen or Lienchiang (Matsu) is subject to the separate thresholds of NT$10 million and at least five new freight trucks, together with geographic operating restrictions. A narrowly defined individual small-truck carrier route has separate requirements, including one personally owned small truck no more than two years old, the appropriate occupational driver’s license, and household registration within the competent authority’s jurisdiction. Foreign-investment review, Ministry of Transportation and Communications approval, establishment-preparation approval (籌設許可), company or business registration, vehicle and facility preparation, the operating license, and trade-association membership must be analyzed as distinct requirements."
   - q: "Does acquiring a licensed company automatically transfer its motor freight carrier license to the buyer?"
-    a: "No. In a share acquisition, the buyer does not acquire or receive a transfer of the license; the target company remains the same legal entity and continues to hold its license. In a business or asset acquisition, the target’s license does not automatically pass to the buyer. Counsel should verify the license’s validity and authorized scope, vehicles and commercial license plates, parking facilities, trade-association membership, violations and unpaid liabilities, insurance, liens, and change-of-control clauses, and should identify the required foreign-investment approvals and highway authority approvals or change filings."
+    a: "No. In a share acquisition, the buyer does not acquire or receive a transfer of the license; the target company remains the same legal entity and continues to hold its license. In a business or asset acquisition, the target’s license does not automatically pass to the buyer. Verify the operating license’s validity and authorized scope, vehicles and commercial license plates, parking facilities, trade-association membership, violations and arrears, insurance, security interests, and change-of-control clauses; obtain the required foreign-investment approval; and complete any necessary approval or change procedures before the competent highway authority."
   - q: "If our company outsources the actual transportation to a licensed Taiwanese carrier, do we avoid both carrier licensing and work-permit requirements?"
     a: "There is no categorical answer. The analysis depends on whether the outsourcing company is acting as the shipper or a transportation intermediary, or instead contracts as the carrier and receives the freight charge directly. Verify the contractor’s operating license and commercial vehicles, and align the contract with actual operations so the arrangement does not become license lending or unlicensed carriage. Shareholder or investor status also does not by itself authorize work in Taiwan. A foreign national who will work or manage operations in Taiwan should determine the applicable work-permit requirements and immigration status before beginning those activities."
 ---
@@ -42,7 +42,7 @@ At a minimum, the proposed operating model should identify:
 - how warehousing, packing, information systems, freight forwarding, and other ancillary services are separated from the physical transportation; and
 - if transportation is subcontracted, what functions the licensed carrier actually performs.
 
-Under Article 3 of the Highway Act, the central highway authority is the Ministry of Transportation and Communications (MOTC). The Directorate General of Highways and its relevant offices provide current application instructions and administrative guidance. If it is unclear whether a proposed model constitutes a motor freight carrier business, the company should present its intended contracts and actual operating arrangements to the competent authority before selecting its registered business activities.
+Under Article 3 of the Highway Act, the central highway authority is the Ministry of Transportation and Communications (MOTC). The Directorate General of Highways and its subordinate offices handle applications and provide administrative guidance, so their current instructions should be confirmed. If it is unclear whether a proposed model constitutes a motor freight carrier business, the company should present its intended contracts and actual operating arrangements to the competent authority before selecting its registered business activities.
 
 ## 2. Forming a New Motor Freight Carrier Business
 
@@ -60,13 +60,13 @@ This limitation is specifically directed to surrendering commercial vehicle plat
 
 ### Foreign Investment and Sector Approval
 
-Under Article 35 of the Highway Act, a foreign individual or foreign legal entity must first obtain approval from the MOTC, the central highway authority, before applying to invest in and operate a motor freight carrier. Planning should therefore address the separate MOTC sector approval rather than treating a general foreign-investment approval as sufficient.
+Under Article 35 of the Highway Act, a foreign individual or foreign legal entity must obtain prior approval from the MOTC, the central highway authority, to invest in and operate a motor freight carrier in Taiwan. Planning should therefore address the separate MOTC sector approval rather than treating a general foreign-investment approval as sufficient.
 
 The current agency responsible for general foreign-investment review is the Department of Investment Review, Ministry of Economic Affairs (MOEA). Not every foreign investment follows the same filing route or procedure. Investments in listed or over-the-counter securities, branches of foreign companies, matters handled by science-park or industrial-park authorities, and investments from the Mainland Area may be governed by different offices or legal regimes. An investor in a motor freight carrier must determine the applicable investment route and separately obtain the sector approval required by Article 35.
 
 ### Typical Formation Sequence
 
-The order and appropriate filing office should be confirmed for each transaction. A typical preparation sequence is:
+The order and appropriate filing office should be confirmed for each matter. A typical preparation sequence is:
 
 1. Define the proposed operations by reference to the contracts, compensation structure, allocation of transportation responsibility, and vehicle operations, and select the appropriate investment structure, such as incorporating a company or registering a branch.
 2. Obtain the applicable foreign-investment approval and the MOTC sector approval required by Article 35 of the Highway Act.
@@ -76,11 +76,11 @@ The order and appropriate filing office should be confirmed for each transaction
 
 The business premises and parking facilities must satisfy the standards applicable to the particular operation, and the applicant must provide evidence of ownership or a right to use them. It is not accurate to state categorically that every operator must lease its own dedicated parking lot. The applicant should compare its articles of incorporation, shareholder register, parking-facility approvals, proof of ownership or use of the premises and parking facilities, maintenance agreement, vehicle purchase documents, and vehicle list against the Directorate General of Highways’ current checklist at the time of filing.
 
-After establishment-preparation approval is granted, the preparation generally must be completed within six months. An additional extension of up to six months may be available in special circumstances. After the operating license is issued, the operator generally must begin operations within one month and submit a copy of a valid membership certificate issued by the relevant trade association to the competent highway authority. The time required to cure application deficiencies and secure land, facilities, vehicles, insurance, and other operational necessities will vary by matter; the entire process therefore cannot be reduced to a single guaranteed timetable. Any administrative review target published under foreign-investment rules is not the total time required to establish a motor freight carrier.
+After establishment-preparation approval is granted, the preparation generally must be completed within six months. An additional extension of up to six months may be available in special circumstances. After the operating license is issued, the operator generally must begin operations within one month and report the commencement to the competent highway authority with a copy of a valid membership certificate issued by the relevant trade association. The time required to cure application deficiencies and secure land, facilities, vehicles, insurance, and other operational necessities will vary by matter; the entire process therefore cannot be reduced to a single guaranteed timetable. Any administrative review target published under foreign-investment rules is not the total time required to establish a motor freight carrier.
 
 ## 3. Acquiring an Existing Carrier
 
-No. In a share acquisition, the buyer does not acquire or receive a transfer of the license; the target company remains the same legal entity and continues to hold its license. In a business or asset acquisition, the target’s license does not automatically pass to the buyer. Counsel should verify the license’s validity and authorized scope, vehicles and commercial license plates, parking facilities, trade-association membership, violations and unpaid liabilities, insurance, liens, and change-of-control clauses, and should identify the required foreign-investment approvals and highway authority approvals or change filings.
+No. In a share acquisition, the buyer does not acquire or receive a transfer of the license; the target company remains the same legal entity and continues to hold its license. In a business or asset acquisition, the target’s license does not automatically pass to the buyer. Verify the operating license’s validity and authorized scope, vehicles and commercial license plates, parking facilities, trade-association membership, violations and arrears, insurance, security interests, and change-of-control clauses; obtain the required foreign-investment approval; and complete any necessary approval or change procedures before the competent highway authority.
 
 ### Share Acquisitions Compared with Business or Asset Acquisitions
 
@@ -92,17 +92,17 @@ Article 23 of the Motor Transportation Enterprise Regulations (汽車運輸業�
 
 ### Due Diligence and Closing
 
-At a minimum, due diligence should review documentary evidence and primary records concerning the following matters and, where appropriate, verify them against the competent authority’s records:
+At a minimum, due diligence should substantively verify the following matters by comparing documentary evidence and primary records with the competent authority’s records:
 
 - the operating license’s validity, authorized business type, territory and conditions, and any unprocessed changes;
 - ownership and use of vehicles, commercial license plates, vehicle age, inspections, accidents, and violations;
 - approvals for the business premises and parking facilities, ownership or use rights, and maintenance arrangements;
-- trade-association membership, administrative sanctions, and unpaid taxes, fees, fines, or other liabilities;
+- trade-association membership, administrative sanctions, and any unpaid taxes, fees, or administrative fines;
 - employment relationships, working conditions, work permits, and social insurance for drivers and other personnel;
 - vehicle, cargo, and liability insurance, as well as liens, leases, and financing; and
 - material contracts with shippers, service providers, systems vendors, and warehouses, including change-of-control clauses.
 
-The acquisition agreement should address representations and warranties, conditions precedent, consequences if an approval is not obtained, price adjustments, indemnification, closing deliverables, working capital, and transfer of vehicles and contracts. The closing conditions should align the sequence of any foreign-investment approval, MOTC sector approval, highway-authority change approval, and corporate action.
+The acquisition agreement should address representations and warranties, conditions precedent, consequences if an approval is not obtained, price adjustments, indemnification, closing deliverables, working capital, and transfer of vehicles and contracts. The closing conditions should align the sequence of any foreign-investment approval, MOTC sector approval, highway-authority change approval, and corporate procedures.
 
 ## 4. Outsourcing Transportation and Foreign-National Work Authorization
 

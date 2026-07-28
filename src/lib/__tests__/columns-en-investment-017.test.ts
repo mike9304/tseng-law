@@ -53,7 +53,7 @@ const faq = [
   },
   {
     q: 'Does acquiring a licensed company automatically transfer its motor freight carrier license to the buyer?',
-    a: 'No. In a share acquisition, the buyer does not acquire or receive a transfer of the license; the target company remains the same legal entity and continues to hold its license. In a business or asset acquisition, the target’s license does not automatically pass to the buyer. Counsel should verify the license’s validity and authorized scope, vehicles and commercial license plates, parking facilities, trade-association membership, violations and unpaid liabilities, insurance, liens, and change-of-control clauses, and should identify the required foreign-investment approvals and highway authority approvals or change filings.',
+    a: 'No. In a share acquisition, the buyer does not acquire or receive a transfer of the license; the target company remains the same legal entity and continues to hold its license. In a business or asset acquisition, the target’s license does not automatically pass to the buyer. Verify the operating license’s validity and authorized scope, vehicles and commercial license plates, parking facilities, trade-association membership, violations and arrears, insurance, security interests, and change-of-control clauses; obtain the required foreign-investment approval; and complete any necessary approval or change procedures before the competent highway authority.',
   },
   {
     q: 'If our company outsources the actual transportation to a licensed Taiwanese carrier, do we avoid both carrier licensing and work-permit requirements?',
@@ -127,7 +127,7 @@ describe('English investment column 017 — logistics and motor freight', () => 
       'how warehousing, packing, information systems, freight forwarding, and other ancillary services are separated from the physical transportation',
       'Under Article 3 of the Highway Act, the central highway authority is the Ministry of Transportation and Communications (MOTC).',
       'Providing services commonly described as “logistics”',
-      'The Directorate General of Highways and its relevant offices provide current application instructions and administrative guidance.',
+      'The Directorate General of Highways and its subordinate offices handle applications and provide administrative guidance, so their current instructions should be confirmed.',
       'the competent authority before selecting its registered business activities',
     ];
 
@@ -158,7 +158,7 @@ describe('English investment column 017 — logistics and motor freight', () => 
 
   it('separates Article 35 sector approval, investment routes, and formation steps', () => {
     const requiredPhrases = [
-      'Under Article 35 of the Highway Act, a foreign individual or foreign legal entity must first obtain approval from the MOTC, the central highway authority, before applying to invest in and operate a motor freight carrier.',
+      'Under Article 35 of the Highway Act, a foreign individual or foreign legal entity must obtain prior approval from the MOTC, the central highway authority, to invest in and operate a motor freight carrier in Taiwan.',
       'Department of Investment Review, Ministry of Economic Affairs (MOEA)',
       'Investments in listed or over-the-counter securities',
       'branches of foreign companies',
@@ -196,7 +196,7 @@ describe('English investment column 017 — logistics and motor freight', () => 
       'generally must be completed within six months',
       'An additional extension of up to six months may be available in special circumstances.',
       'generally must begin operations within one month',
-      'submit a copy of a valid membership certificate issued by the relevant trade association to the competent highway authority',
+      'report the commencement to the competent highway authority with a copy of a valid membership certificate issued by the relevant trade association',
       'cure application deficiencies and secure land, facilities, vehicles, insurance, and other operational necessities',
       'the entire process therefore cannot be reduced to a single guaranteed timetable',
       'is not the total time required to establish a motor freight carrier',
@@ -217,7 +217,7 @@ describe('English investment column 017 — logistics and motor freight', () => 
       'Article 23 of the Motor Transportation Enterprise Regulations (汽車運輸業管理規則)',
       'a transfer of the business and for changes to the organization, name, address, responsible person, capital or assets, and parking facilities',
       'authorized business type, territory and conditions',
-      'administrative sanctions, and unpaid taxes, fees, fines, or other liabilities',
+      'administrative sanctions, and any unpaid taxes, fees, or administrative fines',
       'liens, leases, and financing',
       'material contracts with shippers, service providers, systems vendors, and warehouses, including change-of-control clauses',
       'representations and warranties, conditions precedent',
@@ -323,7 +323,7 @@ describe('English investment column 017 — logistics and motor freight', () => 
     const visibleWords = countVisibleEnglishWords(parsed.content);
     const minutes = Math.ceil(visibleWords / 200);
 
-    expect(visibleWords).toBe(2340);
+    expect(visibleWords).toBe(2349);
     expect(visibleWords).toBeGreaterThan(2000);
     expect(minutes).toBe(12);
     expect(parsed.data.read_time).toBe(`${minutes} min read`);

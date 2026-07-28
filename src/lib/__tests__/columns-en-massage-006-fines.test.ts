@@ -74,7 +74,10 @@ describe('English massage column 006 — fine amounts', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 
     expect(raw).toContain(
-      'Taiwan also has many streets lined with a wide variety of massage shops.',
+      'Taiwan also has many streets known for their massage shops.',
+    );
+    expect(raw).toContain(
+      'A wide variety of massage businesses line these streets.',
     );
     expect(raw).not.toContain('massage streets');
   });

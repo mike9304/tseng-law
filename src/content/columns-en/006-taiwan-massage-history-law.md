@@ -35,15 +35,17 @@ These Taiwanese-style barbershops remain a distinctive part of the cultural memo
 
 Anyway, speaking of massage—
 
-Taiwan also has many streets lined with a wide variety of massage shops.
+Taiwan also has many streets known for their massage shops.
 
-There are many kinds of massage: massage by visually impaired practitioners, foot massage, oil massage, Thai massage, and more.
+A wide variety of massage businesses line these streets.
+
+Offerings include massage by visually impaired practitioners, foot massage, oil massage, Thai massage, and more.
 
 Basically, anyone can choose a massage that suits their preferences and helps relieve stress.
 
 The large number of massage shops in Taiwan today may be linked to a single petition for constitutional interpretation.
 
-When Taiwan enacted and implemented its disability welfare law in 1980,
+When Taiwan enacted and put its disability welfare law into effect in 1980,
 
 only people with visual impairments were in fact allowed to work in the massage industry.
 
@@ -105,9 +107,9 @@ Today, many people choose massage to relieve stress, but incidents of sexual har
 
 What begins as a simple attempt to unwind can instead leave a person with lifelong trauma.
 
-If you feel any discomfort or anything strange during a massage in Taiwan,
+If anything makes you uncomfortable or seems unusual during a massage in Taiwan,
 
-you should immediately say so or request that it stop, in order to protect yourself.
+you should speak up immediately or ask the practitioner to stop in order to protect yourself.
 
 If you feel you have been sexually harassed,
 

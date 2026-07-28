@@ -12,6 +12,7 @@ import { buildSitePagePath } from '@/lib/builder/site/paths';
 import { resolveLocaleSeo } from '@/lib/builder/translations/seo-projection';
 import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
 import { isInternalSandboxPage } from '@/lib/builder/site/internal-pages';
+import { getAllColumnPosts } from '@/lib/columns';
 import type { SearchDoc } from './types';
 
 /**
@@ -100,6 +101,25 @@ async function collectBlogDocsForLocale(locale: Locale): Promise<SearchDoc[]> {
   }));
 }
 
+/**
+ * Japanese columns live in `src/content/columns-ja` (file-backed, no builder
+ * locale). Mirrors collectBlogDocsForLocale so /ja/search can surface them
+ * with /ja/columns links.
+ */
+function collectJaColumnDocs(): SearchDoc[] {
+  return getAllColumnPosts('ja').map((post): SearchDoc => ({
+    id: `blog:ja:${post.slug}`,
+    kind: 'blog',
+    locale: 'ja',
+    title: post.title,
+    url: `/ja/columns/${post.slug}`,
+    summary: post.summary,
+    body: [post.summary, post.content, post.categoryLabel].filter(Boolean).join('\n'),
+    publishedAt: post.date || undefined,
+    tags: post.tags,
+  }));
+}
+
 export async function collectAllSearchDocs(siteId = 'default'): Promise<SearchDoc[]> {
   const out: SearchDoc[] = [];
   for (const locale of locales) {
@@ -114,6 +134,13 @@ export async function collectAllSearchDocs(siteId = 'default'): Promise<SearchDo
     } catch (err) {
       console.warn('[search/source-collector] failed for locale', locale, err);
     }
+  }
+  // Japanese is file-backed only (no builder locale contract for ja) — collect
+  // the columns-ja markdown directory instead of the builder sources above.
+  try {
+    out.push(...collectJaColumnDocs());
+  } catch (err) {
+    console.warn('[search/source-collector] failed for locale ja', err);
   }
   return out;
 }

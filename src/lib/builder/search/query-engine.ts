@@ -1,11 +1,11 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import type { SearchDoc, SearchHit, SearchIndex } from './types';
 import { tokenize } from './tokenize';
 
 interface QueryArgs {
   index: SearchIndex;
   query: string;
-  locale: Locale;
+  locale: SiteLocale;
   limit?: number;
   kinds?: Array<SearchDoc['kind']>;
 }

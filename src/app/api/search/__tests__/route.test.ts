@@ -50,11 +50,13 @@ const storedIndex: SearchIndex = {
     ko: [doc],
     'zh-hant': [],
     en: [],
+    ja: [],
   },
   invertedByLocale: {
     ko: { portfolio: ['0:1'] },
     'zh-hant': {},
     en: {},
+    ja: {},
   },
 };
 
@@ -183,11 +185,13 @@ describe('/api/search', () => {
           ko: [currentDoc],
           'zh-hant': [],
           en: [],
+          ja: [],
         },
         invertedByLocale: {
           ko: { current: ['0:2'] },
           'zh-hant': {},
           en: {},
+          ja: {},
         },
       };
 
@@ -244,8 +248,8 @@ describe('/api/search', () => {
       };
       const rebuiltIndex: SearchIndex = {
         builtAt: '2026-06-03T00:00:00.000Z',
-        byLocale: { ko: [currentDoc], 'zh-hant': [], en: [] },
-        invertedByLocale: { ko: { current: ['0:3'] }, 'zh-hant': {}, en: {} },
+        byLocale: { ko: [currentDoc], 'zh-hant': [], en: [], ja: [] },
+        invertedByLocale: { ko: { current: ['0:3'] }, 'zh-hant': {}, en: {}, ja: {} },
       };
 
       loadSearchIndexMock.mockResolvedValueOnce(futureIndex);
@@ -298,8 +302,8 @@ describe('/api/search', () => {
       };
       const rebuiltIndex: SearchIndex = {
         builtAt: '2026-06-03T00:06:00.000Z',
-        byLocale: { ko: [currentDoc], 'zh-hant': [], en: [] },
-        invertedByLocale: { ko: { current: ['0:4'] }, 'zh-hant': {}, en: {} },
+        byLocale: { ko: [currentDoc], 'zh-hant': [], en: [], ja: [] },
+        invertedByLocale: { ko: { current: ['0:4'] }, 'zh-hant': {}, en: {}, ja: {} },
       };
 
       loadSearchIndexMock.mockResolvedValueOnce(staleIndex);
@@ -378,8 +382,8 @@ describe('/api/search', () => {
       };
       const rebuiltIndex: SearchIndex = {
         builtAt: '2026-06-03T00:06:00.000Z',
-        byLocale: { ko: [currentDoc], 'zh-hant': [], en: [] },
-        invertedByLocale: { ko: { current: ['0:5'] }, 'zh-hant': {}, en: {} },
+        byLocale: { ko: [currentDoc], 'zh-hant': [], en: [], ja: [] },
+        invertedByLocale: { ko: { current: ['0:5'] }, 'zh-hant': {}, en: {}, ja: {} },
       };
       let releaseCollection: (docs: SearchDoc[]) => void = () => undefined;
       let notifyFirstCollectionStarted: () => void = () => undefined;

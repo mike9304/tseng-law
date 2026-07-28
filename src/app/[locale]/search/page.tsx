@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { normalizeLocale, locales, type Locale } from '@/lib/locales';
+import { normalizeSiteLocale, siteLocales, type SiteLocale } from '@/lib/locales';
 import PageHeader from '@/components/PageHeader';
 import SmartLink from '@/components/SmartLink';
 import { pageCopy } from '@/data/page-copy';
@@ -12,8 +12,8 @@ import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
 import { runSearchQuery } from '@/lib/builder/search/query-engine';
 import type { SearchDocKind } from '@/lib/builder/search/types';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
-  const locale = normalizeLocale(params.locale);
+export function generateMetadata({ params }: { params: { locale: SiteLocale } }): Metadata {
+  const locale = normalizeSiteLocale(params.locale);
   const copy = pageCopy[locale].search;
 
   return buildSeoMetadata({
@@ -22,7 +22,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     description: copy.description,
     path: '/search',
     noindex: true,
-    alternateLocales: locales,
+    alternateLocales: siteLocales,
   });
 }
 
@@ -39,15 +39,15 @@ const SEARCH_TAB_KIND: Record<string, SearchDocKind | 'all'> = {
   portfolio: 'portfolio',
 };
 
-function searchKindLabel(kind: SearchDocKind | 'all', locale: Locale): string {
-  if (kind === 'all') return locale === 'ko' ? '전체' : locale === 'zh-hant' ? '全部' : 'All';
-  if (kind === 'page') return locale === 'ko' ? '페이지' : locale === 'zh-hant' ? '頁面' : 'Pages';
-  if (kind === 'blog') return locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '洞見' : 'Columns';
-  if (kind === 'faq') return locale === 'ko' ? '자주 묻는 질문' : locale === 'zh-hant' ? '常見問題' : 'FAQ';
-  return locale === 'ko' ? '포트폴리오' : locale === 'zh-hant' ? '作品集' : 'Portfolio';
+function searchKindLabel(kind: SearchDocKind | 'all', locale: SiteLocale): string {
+  if (kind === 'all') return locale === 'ko' ? '전체' : locale === 'zh-hant' ? '全部' : locale === 'ja' ? 'すべて' : 'All';
+  if (kind === 'page') return locale === 'ko' ? '페이지' : locale === 'zh-hant' ? '頁面' : locale === 'ja' ? 'ページ' : 'Pages';
+  if (kind === 'blog') return locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '洞見' : locale === 'ja' ? 'コラム' : 'Columns';
+  if (kind === 'faq') return locale === 'ko' ? '자주 묻는 질문' : locale === 'zh-hant' ? '常見問題' : locale === 'ja' ? 'よくある質問' : 'FAQ';
+  return locale === 'ko' ? '포트폴리오' : locale === 'zh-hant' ? '作品集' : locale === 'ja' ? 'ポートフォリオ' : 'Portfolio';
 }
 
-function resultKindLabel(kind: SearchDocKind, locale: Locale): string {
+function resultKindLabel(kind: SearchDocKind, locale: SiteLocale): string {
   return searchKindLabel(kind, locale);
 }
 
@@ -59,17 +59,23 @@ export default async function SearchPage({
   params,
   searchParams
 }: {
-  params: { locale: Locale };
+  params: { locale: SiteLocale };
   searchParams: { q?: string; tab?: string; kinds?: string };
 }) {
-  const locale = normalizeLocale(params.locale);
+  const locale = normalizeSiteLocale(params.locale);
   const copy = pageCopy[locale].search;
   const content = siteContent[locale];
   const query = (searchParams.q ?? '').trim();
   const requestedTab = searchParams.kinds?.split(',')[0]?.trim() || searchParams.tab || 'all';
   const activeKind = SEARCH_TAB_KIND[requestedTab] ?? 'all';
-  const suggestedLabel = locale === 'ko' ? '추천' : locale === 'zh-hant' ? '建議' : 'Suggested';
-  const emptyLabel = locale === 'ko' ? '검색 결과가 없습니다.' : locale === 'zh-hant' ? '沒有搜尋結果。' : 'No search results found.';
+  const suggestedLabel = locale === 'ko' ? '추천' : locale === 'zh-hant' ? '建議' : locale === 'ja' ? 'おすすめ' : 'Suggested';
+  const emptyLabel = locale === 'ko'
+    ? '검색 결과가 없습니다.'
+    : locale === 'zh-hant'
+      ? '沒有搜尋結果。'
+      : locale === 'ja'
+        ? '検索結果が見つかりませんでした。'
+        : 'No search results found.';
   const index = await loadNativeSearchIndex();
   const hits = query
     ? runSearchQuery({
@@ -82,7 +88,13 @@ export default async function SearchPage({
     : [];
 
   const results = hits.slice(0, 12);
-  const totalLabel = locale === 'ko' ? `총 ${hits.length}건` : locale === 'zh-hant' ? `共 ${hits.length} 筆` : `Total ${hits.length}`;
+  const totalLabel = locale === 'ko'
+    ? `총 ${hits.length}건`
+    : locale === 'zh-hant'
+      ? `共 ${hits.length} 筆`
+      : locale === 'ja'
+        ? `全 ${hits.length} 件`
+        : `Total ${hits.length}`;
   const tabs: Array<{ id: SearchDocKind | 'all'; label: string }> = [
     { id: 'all', label: searchKindLabel('all', locale) },
     { id: 'page', label: searchKindLabel('page', locale) },

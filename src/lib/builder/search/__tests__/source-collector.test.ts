@@ -57,6 +57,24 @@ vi.mock('@/lib/builder/portfolio/portfolio-engine', () => ({
   )),
 }));
 
+vi.mock('@/lib/columns', () => ({
+  getAllColumnPosts: vi.fn((locale: string) => (
+    locale === 'ja'
+      ? [
+          {
+            slug: 'taiwan-company-establishment-basics',
+            title: '台湾会社設立の基本',
+            date: '2026-05-20',
+            categoryLabel: '台湾会社設立',
+            content: '台湾での会社設立の手順を解説します。',
+            summary: '会社設立の流れをまとめました。',
+            tags: [],
+          },
+        ]
+      : []
+  )),
+}));
+
 describe('search source collector', () => {
   it('includes published blog posts as blog search docs', async () => {
     const docs = await collectAllSearchDocs('default');
@@ -89,6 +107,25 @@ describe('search source collector', () => {
       tags: ['f49'],
     });
     expect(portfolioDoc?.body).toContain('대만 회사 설립 포트폴리오 본문');
+  });
+
+  it('includes file-backed ja columns as blog docs with /ja/ urls', async () => {
+    const docs = await collectAllSearchDocs('default');
+    const jaDoc = docs.find((doc) => doc.id === 'blog:ja:taiwan-company-establishment-basics');
+
+    expect(jaDoc).toMatchObject({
+      kind: 'blog',
+      locale: 'ja',
+      title: '台湾会社設立の基本',
+      url: '/ja/columns/taiwan-company-establishment-basics',
+      summary: '会社設立の流れをまとめました。',
+      publishedAt: '2026-05-20',
+    });
+    expect(jaDoc?.body).toContain('台湾での会社設立の手順を解説します。');
+    // No ja doc leaks into builder locales.
+    expect(docs.filter((doc) => doc.locale === 'ja').map((doc) => doc.id)).toEqual([
+      'blog:ja:taiwan-company-establishment-basics',
+    ]);
   });
 
   it('uses locale-specific page SEO descriptions in page search docs', async () => {

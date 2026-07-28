@@ -1,5 +1,5 @@
-import type { Locale } from '@/lib/locales';
-import { locales } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
+import { siteLocales } from '@/lib/locales';
 import type { SearchDoc, SearchIndex } from './types';
 import { tokenize } from './tokenize';
 
@@ -10,19 +10,20 @@ import { tokenize } from './tokenize';
  * serialized JSON stays compact and easy to inspect.
  */
 export function buildSearchIndex(docs: SearchDoc[]): SearchIndex {
-  const byLocale: Record<Locale, SearchDoc[]> = { ko: [], 'zh-hant': [], en: [] };
+  const byLocale: Record<SiteLocale, SearchDoc[]> = { ko: [], 'zh-hant': [], en: [], ja: [] };
   for (const doc of docs) {
-    if (!locales.includes(doc.locale)) continue;
+    if (!siteLocales.includes(doc.locale)) continue;
     byLocale[doc.locale].push(doc);
   }
 
-  const invertedByLocale: Record<Locale, Record<string, string[]>> = {
+  const invertedByLocale: Record<SiteLocale, Record<string, string[]>> = {
     ko: {},
     'zh-hant': {},
     en: {},
+    ja: {},
   };
 
-  for (const locale of locales) {
+  for (const locale of siteLocales) {
     const localeDocs = byLocale[locale];
     const inverted = invertedByLocale[locale];
     localeDocs.forEach((doc, idx) => {

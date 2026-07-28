@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { Locale, SiteLocale } from '@/lib/locales';
 
 export const SEARCH_DOC_KINDS = ['page', 'blog', 'faq', 'portfolio'] as const;
 
@@ -8,7 +8,7 @@ export interface SearchDoc {
   /** Stable id across rebuilds (e.g. `${kind}:${slug}`). */
   id: string;
   kind: SearchDocKind;
-  locale: Locale;
+  locale: SiteLocale;
   title: string;
   url: string;
   /** Optional short summary shown in the result card. */
@@ -22,12 +22,12 @@ export interface SearchDoc {
 export interface SearchIndex {
   builtAt: string;
   /** Map of locale → docs. The query engine filters by locale up-front. */
-  byLocale: Record<Locale, SearchDoc[]>;
+  byLocale: Record<SiteLocale, SearchDoc[]>;
   /**
    * Inverted index: locale → term → list of `${docIdx}:${tf}` entries.
    * docIdx is the position within byLocale[locale].
    */
-  invertedByLocale: Record<Locale, Record<string, string[]>>;
+  invertedByLocale: Record<SiteLocale, Record<string, string[]>>;
 }
 
 export interface SearchHit {

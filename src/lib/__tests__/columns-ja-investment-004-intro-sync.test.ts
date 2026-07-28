@@ -9,9 +9,9 @@ const columnPath = path.join(
 );
 const sourceBytes = fs.readFileSync(columnPath);
 
-const immutablePrefixLength = 2_275;
+const immutablePrefixLength = 2_356;
 const immutablePrefixSha256 =
-  '5d44faa695e2db17ed32418a3af09155eeb6b5fcfba1307cc173b655c63bd556';
+  'e94afe87b304061816a7484506c1815b4e8233eda8b1054329c19a7a2a9c4e6f';
 const section1Marker = Buffer.from('## 1. 法人格と出資構造', 'utf8');
 const imageLine =
   '![](../images/004-taiwan-company-subsidiary-vs-branch/img-01.jpg)';
@@ -103,9 +103,7 @@ describe('Japanese investment column 004 — synchronized introduction', () => {
       /台湾子会社[^。]*台湾法[^。]*(?:設立|成立)[^。]*(?:独立した法人|独立法人|独立した法的主体)/u,
     );
     expect(second).toMatch(/外国[^。]*(?:親会社|本社)[^。]*(?:株主|出資者)/u);
-    expect(second).toMatch(
-      /(?:親会社|本社)[^。]*(?:別|異なる|独立)[^。]*(?:権利義務の主体|権利を有し[^。]*義務を負う|権利と義務の主体)/u,
-    );
+    expect(second).toMatch(/親会社[^。]*区別される権利・義務の主体/u);
     expect(second).toMatch(
       /(?:外国会社の)?台湾支店[^。]*(?:外国本店|外国会社|本社)[^。]*(?:一部|構成部分)/u,
     );

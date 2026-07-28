@@ -9,16 +9,16 @@ const columnPath = path.join(
 );
 const sourceBytes = fs.readFileSync(columnPath);
 
-const immutablePrefixLength = 5_281;
+const immutablePrefixLength = 4_385;
 const immutablePrefixSha256 =
-  'c43378567565127ee1794c6afb2291f90dc010c857e299212557f46154961afc';
+  '4848e21b99d6d5399e451bc229580291d069d6525a7a0665121e3c6026d352c8';
 const immutableTailMarker = Buffer.from(
-  '## 1. 最低勤務期間条項はいつ有効となり得るか',
+  '## 1. 最低勤務期間条項はいつ有効となるか',
   'utf8',
 );
-const immutableTailLength = 26_574;
+const immutableTailLength = 25_919;
 const immutableTailSha256 =
-  'd66816f840cbcdc3b88f3316e9d09c6afcc9533d4b9b94e7dd58967d78ef5403';
+  '3c93a87a2897d86fdf241d08f392814adee03be6c55ebd2b02276e105b75e2f2';
 
 const tailOffset = sourceBytes.indexOf(immutableTailMarker);
 const closingBytes =
@@ -40,8 +40,8 @@ describe('Japanese labor column 014 — synchronized introduction closing', () =
 
     expect(prefix).toHaveLength(immutablePrefixLength);
     expect(sha256(prefix)).toBe(immutablePrefixSha256);
-    expect(prefix.toString('utf8')).toContain('read_time: "約18分"');
-    expect(prefix.toString('utf8')).not.toContain('read_time: "約17分"');
+    expect(prefix.toString('utf8')).toContain('read_time: "約17分"');
+    expect(prefix.toString('utf8')).not.toContain('read_time: "約18分"');
     expect(tail).toHaveLength(immutableTailLength);
     expect(sha256(tail)).toBe(immutableTailSha256);
   });

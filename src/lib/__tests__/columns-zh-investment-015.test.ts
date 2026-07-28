@@ -258,7 +258,7 @@ describe('Traditional Chinese investment column 015 — Taipei business-location
       parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(3_274);
+    expect(visibleHanCount).toBe(3_314);
     expect(calculatedMinutes).toBe(9);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

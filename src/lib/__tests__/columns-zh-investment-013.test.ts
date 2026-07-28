@@ -19,7 +19,7 @@ const title = '台灣公司設立：地址、銀行帳戶與審查實務Q&A';
 const faq = [
   {
     q: '登記地址尚未確定時，應如何準備？',
-    a: '外國投資申請與公司登記所要求的所在地資訊及文件並不相同。申請時應確認最新的申請表格與審查說明，並在公司登記前備妥租賃契約書、建物資料、所有權人同意及其他必要文件。預定地址能否從事預定營業項目，也應從土地使用分區、建築管理及行業別許可的角度事先確認。',
+    a: '外國投資申請與公司登記所要求的所在地資訊及文件並不相同。申請時應確認最新的申請表格與審查說明，並在公司登記前備妥租賃契約書、建物資料、所有權人同意及其他必要文件。能否於預定地址從事預定營業項目，也應從土地使用分區、建築管理及行業別許可的角度事先確認。',
   },
   {
     q: '沒有台灣居留證，也可以向銀行洽詢開立公司帳戶嗎？',
@@ -274,7 +274,7 @@ describe('Traditional Chinese investment column 013 — company-setup practice Q
       parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(3_062);
+    expect(visibleHanCount).toBe(3_122);
     expect(calculatedMinutes).toBe(8);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

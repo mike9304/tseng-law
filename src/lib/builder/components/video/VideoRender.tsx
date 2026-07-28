@@ -201,7 +201,6 @@ export default function VideoRender({ node, locale = 'ko' }: { node: BuilderVide
         src={embedUrl}
         style={{ width: '100%', height: '100%', border: 'none' }}
         allow="autoplay; fullscreen; picture-in-picture"
-        allowFullScreen
         title={copy.video.embedTitle}
       />
     </div>

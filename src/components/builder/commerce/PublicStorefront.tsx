@@ -61,6 +61,15 @@ export default function PublicStorefront({
   categories,
   activeCategory,
 }: PublicStorefrontProps) {
+  const categoryNameByKey = new Map<string, string>();
+  for (const category of categories) {
+    categoryNameByKey.set(category.categoryId, category.name);
+    categoryNameByKey.set(category.slug, category.name);
+  }
+  const resolveCategoryBadge = (product: CommerceProduct): string => {
+    const primaryCategoryKey = product.categoryIds[0];
+    return (primaryCategoryKey && categoryNameByKey.get(primaryCategoryKey)) || copy[locale].collectionFallback;
+  };
   return (
     <main
       className={styles.page}
@@ -114,7 +123,7 @@ export default function PublicStorefront({
                   <div className={styles.imageFallback} aria-hidden />
                 )}
                 <div className={styles.cardBody}>
-                <span className={styles.badge}>{product.categoryIds[0] ?? copy[locale].collectionFallback}</span>
+                <span className={styles.badge}>{resolveCategoryBadge(product)}</span>
                   <Link
                     href={productHref(locale, product)}
                     className={styles.productLink}

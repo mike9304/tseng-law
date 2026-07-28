@@ -68,7 +68,7 @@ import {
 } from '@/lib/builder/site/heuristic-defaults';
 import { buildPublishedSurfaceFrame } from '@/lib/builder/site/published-node-frame';
 import { getHomeSectionTemplateMetadata } from '@/lib/builder/canvas/section-templates';
-import { getSiteUrl } from '@/lib/seo';
+import { getOrganizationName, getSiteUrl } from '@/lib/seo';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
 import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
 import { filterNavigationForLocale } from '@/lib/builder/site/navigation';
@@ -490,7 +490,10 @@ export async function PublishedSitePageView({
   const pagePath = buildSitePagePath(locale, slugPath);
   const breadcrumbSchema = structuredSettings.breadcrumbList
     ? generateBreadcrumbSchema([
-        { name: site.name || 'Home', url: `${siteUrl}/${locale}` },
+        {
+          name: locale === 'ko' ? site.name || 'Home' : getOrganizationName(locale),
+          url: `${siteUrl}/${locale}`,
+        },
         {
           name: resolved.pageMeta.title?.[locale] || slugPath || site.name || 'Page',
           url: `${siteUrl}${pagePath}`,

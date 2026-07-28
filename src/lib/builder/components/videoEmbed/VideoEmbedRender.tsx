@@ -127,7 +127,6 @@ export default function VideoEmbedRender({
         title={copy.runtime.iframeTitle}
         className={styles.iframe}
         allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
-        allowFullScreen
         {...(posterImage ? { poster: posterImage } : {})}
       />
     </div>

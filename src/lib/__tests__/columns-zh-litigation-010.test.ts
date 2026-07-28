@@ -124,7 +124,7 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: '2025年9月13日',
-      read_time: '7分鐘閱讀',
+      read_time: '8分鐘閱讀',
       categories: ['訴訟案例分析'],
       featured_image: featuredImage,
     });
@@ -139,14 +139,14 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
     );
   });
 
-  it('derives the seven-minute read time from the exact visible Han count', () => {
+  it('derives the eight-minute read time from the exact visible Han count', () => {
     const visibleText = extractVisibleText(parsed.content);
     const visibleHanCount =
       visibleText.match(/[\u3400-\u4DBF\u4E00-\u9FFF]/g)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(2_657);
-    expect(calculatedMinutes).toBe(7);
+    expect(visibleHanCount).toBe(2_968);
+    expect(calculatedMinutes).toBe(8);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
   });
@@ -344,7 +344,7 @@ describe('Traditional Chinese litigation column 010 — gym injury damages', () 
       title,
       date: '2026-07-25',
       dateDisplay: '2025年9月13日',
-      readTime: '7分鐘閱讀',
+      readTime: '8分鐘閱讀',
       category: 'case',
       categoryLabel: '訴訟案例',
       featuredImage:

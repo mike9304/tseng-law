@@ -24,7 +24,7 @@ const bodyImage = `![台灣離婚程序與涉外家事法律問題示意圖](${f
 const faq1Answer =
   '依民法第1050條，兩願離婚須以書面為之，並有二人以上證人於親見或親聞雙方確有離婚真意後簽名，且向戶政機關辦理離婚登記，始生效力。僅簽署協議書並不使離婚完成；如有涉外因素，尚須另行確認準據法、文書認證與翻譯，以及在其他國家或地區之申報等事宜。';
 const faq2Answer =
-  '並非必然如此。法院處理家事事件時，得命當事人或法定代理人本人到場，或依事件之性質以適當方法命其陳述或訊問；無正當理由而不從到場命令者，依家事事件法第13條準用民事訴訟法第303條，得處新臺幣三萬元以下罰鍰，但不得拘提。惟是否必須於同一空間共同調解，以及分離、安全、代理或其他程序上措施是否可行，仍應依法院及個案情形確認。';
+  '並非必然如此。法院處理家事事件時，得命當事人或法定代理人本人到場，或依事件之性質以適當方法命其陳述或訊問；無正當理由而不從到場命令者，依家事事件法第13條準用民事訴訟法第303條，初次得處新臺幣三萬元以下罰鍰，但不得拘提。惟是否必須於同一空間共同調解，以及分離、安全、代理或其他程序上措施是否可行，仍應依法院及個案情形確認。';
 const nonKoreanFaq3Addition = '該但書限制原則上合憲；但';
 const faq3ConstitutionalHolding =
   '惟憲法法庭112年憲判字第4號認為，未考量該重大事由是否已發生或持續相當期間，即完全剝奪唯一有責配偶之離婚機會，致個案顯然過苛者，於此範圍內違憲。';
@@ -106,25 +106,27 @@ const staleDisclaimer =
 const author = '**曾雋崴律師（Wei Tseng）**';
 const exactEnding = `- ${internalLinks[2]}
 
+---
+
 ${disclaimer}
 
 ${author}`;
-const frozenVisibleHanCount = 7_650;
+const frozenVisibleHanCount = 7_633;
 const frozenSourceSha256 =
-  'c39b7b14b1820ed23b6c83db1f1310444c42279ef864bb5583937b9283089ecb';
+  '12044fea84bbe0baad4a68dc09fd2e4b1db8330e452f2f59bd0afe9069b20ebb';
 const frozenSection4TailSha256 =
-  '8ee0167ad37fab5ebd5ddcb6544a551c6caf65d7a34547f0f717075631d85fe9';
+  'a507e018ed271a5caf2483f5c8880d836f485789c693a0fbdc9c35418f2f645d';
 const frozenSection5OnwardSha256 =
-  '48dc509169466545d6dbdd15578300fb6a8a9da4bc23b11be3f8e3813ae69438';
-const frozenSection8AgreementPrefixLength = 16_859;
+  '17da582a83bf992ba7bb2fe873d88e121ddbdc4db0a1442b14c6cc3377ffdf57';
+const frozenSection8AgreementPrefixLength = 16_802;
 const frozenSection8AgreementPrefixSha256 =
-  '3187cf3de22d05f2b8ef019bd40b8dc12e88530d59c3d9fc2af725a36d373e1c';
+  'e7359292fcc310f81aea42eed0072cc8236a1756705e54981fb62cf902e0d1b5';
 const frozenSection8AgreementTailLength = 1_043;
 const frozenSection8AgreementTailSha256 =
   'eac23054c07aed295e4d21a8a81852629a16d2100a24a0200ad4af9446e42668';
-const frozenSection9OnwardLength = 8_155;
+const frozenSection9OnwardLength = 8_160;
 const frozenSection9OnwardSha256 =
-  '3b222055cbc02bca07af83d14cfbb702dfb789a625e981cb1676853a47b5c745';
+  'ab08926b19d4c055735b6f195fe6cf71f36155a783dc720acf9f1d01a1a9d9a1';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -437,7 +439,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     const section = sectionBody(parsed.content, headings[2]);
     const requiredPhrases = [
       '家事事件法第13條之制裁，僅於法院命當事人或法定代理人本人到場時始有適用。',
-      '準用民事訴訟法第303條，得處新臺幣三萬元以下罰鍰，但不得據此拘提。',
+      '準用民事訴訟法第303條，初次得處新臺幣三萬元以下罰鍰，但不得據此拘提。',
       '其後法院再度合法通知，仍無正當理由不到場者，得連續處罰。',
       '分離場所、視訊方式、僅代理人到場或安全措施是否於特定事件中獲准，亦不能預先承諾',
       '調解或和解成立時，婚姻關係依法律所定方式消滅，並發生與確定裁判相同之效力。',
@@ -459,7 +461,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       '4. 夫妻之一方對他方之直系親屬為虐待，或夫妻一方之直系親屬對他方為虐待，致不堪為共同生活。',
       '5. 夫妻之一方以惡意遺棄他方在繼續狀態中。',
       '6. 夫妻之一方意圖殺害他方。',
-      '7. 有不治之惡疾。此為法條所定疾病用語，並非對品德或性格之評價。',
+      '7. 有不治之惡疾。',
       '8. 有重大不治之精神病。',
       '9. 生死不明已逾三年。',
       '10. 因故意犯罪，經判處有期徒刑逾六個月確定。',
@@ -630,7 +632,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       '既有子女相關裁判或協議，於台灣與目的地是否各自可被承認與執行，亦應確認。',
       '若具體存在出走、拒絕送回或安全風險，則應就出境前或緊急情況，依相關管轄分別檢討得否聲請保全或暫時處分。',
       '不得預設1980年海牙兒童擄拐公約當然適用於台灣。',
-      '跨境移動、留置或返還，應依子女的經常居所與目前所在地、相關當事人與裁判狀態',
+      '跨境移動、留置或返還，應依子女之經常居所與目前所在地、相關當事人與裁判狀態',
       '亦不宜在違反既有協議或命令之情形下帶走或不送回子女',
     ];
 
@@ -761,6 +763,9 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
       'DM',
       '曾俊瑋',
       'img-01.jpg',
+      '此為法條所定疾病用語，並非對品德或性格之評價。',
+      '準用民事訴訟法第303條，得處新臺幣三萬元以下罰鍰',
+      '子女的經常居所',
       '댓글',
       'reply promptly',
       'お気軽にコメント',

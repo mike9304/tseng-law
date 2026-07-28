@@ -20,7 +20,7 @@ faq:
 
 ![代表圖片](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-您好，我是曾雋崴律師。
+您好，我是台灣律師曾雋崴。
 
 今天想和大家聊聊台灣的資遣費。
 

@@ -16,7 +16,7 @@ const targets = [
     slug: 'taiwan-labor-severance-law',
     filename: '008-taiwan-labor-severance-law.md',
     finalBodyParagraph: '大家在台灣也要保護好自己的權益。',
-    visibleHanCount: 1_564,
+    visibleHanCount: 1_566,
     readTime: '4分鐘閱讀',
   },
   {

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { pageCopy } from '@/data/page-copy';
 import { buildSeoMetadata } from '@/lib/seo';
-import { locales, siteLocales, type SiteLocale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { PricingLegacyPageBody } from './legacy-page-bodies';
 
 const pricingKeywords: Record<SiteLocale, string[]> = {
@@ -19,7 +19,6 @@ export function getPricingLegacyMetadata(locale: SiteLocale): Metadata {
     description: copy.description,
     path: '/pricing',
     keywords: pricingKeywords[locale],
-    alternateLocales: locale === 'ja' ? siteLocales : locales,
   });
 }
 

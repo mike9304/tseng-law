@@ -8,27 +8,29 @@
  * locales without a linked translation.
  */
 
-import { defaultLocale, locales, type Locale } from '@/lib/locales';
+import { defaultLocale, locales, siteLocales, type Locale, type SiteLocale } from '@/lib/locales';
 import type { BuilderPageMeta } from '@/lib/builder/site/types';
 import { buildSitePageAbsoluteUrl } from '@/lib/builder/site/paths';
 import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
+import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 
 export interface HreflangAlternate {
   /** Locale tag in the IETF form expected by Google (e.g. zh-Hant). */
   hreflang: string;
-  /** Internal locale (matches Locale union). */
-  locale: Locale;
+  /** Internal locale (matches SiteLocale union — public routes also serve ja). */
+  locale: SiteLocale;
   /** Absolute URL. */
   href: string;
 }
 
-const LOCALE_TO_HREFLANG: Record<Locale, string> = {
+const LOCALE_TO_HREFLANG: Record<SiteLocale, string> = {
   ko: 'ko',
   'zh-hant': 'zh-Hant',
   en: 'en',
+  ja: 'ja',
 };
 
-export function localeToHreflangTag(locale: Locale): string {
+export function localeToHreflangTag(locale: SiteLocale): string {
   return LOCALE_TO_HREFLANG[locale] ?? locale;
 }
 
@@ -67,10 +69,11 @@ const HREFLANG_SORT_RANK: Record<string, number> = {
   ko: 0,
   'zh-Hant': 1,
   en: 2,
-  'x-default': 3,
+  ja: 3,
+  'x-default': 4,
 };
 
-function pageUrl(siteUrl: string, locale: Locale, slug: string): string {
+function pageUrl(siteUrl: string, locale: SiteLocale, slug: string): string {
   return buildSitePageAbsoluteUrl(siteUrl, locale, slug);
 }
 
@@ -83,9 +86,11 @@ function sortAlternates(alternates: HreflangAlternate[]): HreflangAlternate[] {
 /**
  * Build the alternate-language URL set for a given builder page.
  *
- * Returns ALL locales — including an `x-default` entry pointing at the
+ * Returns every reachable public locale (ko/zh-hant/en plus ja on shared
+ * static-fallback routes) — including an `x-default` entry pointing at the
  * default locale's URL — so callers can hand the result straight to
- * `Metadata.alternates.languages` or to a sitemap entry.
+ * `Metadata.alternates.languages` or to a sitemap entry. English-noindex
+ * routes (see src/lib/seo-visibility.ts) never emit an `en` entry.
  */
 export function buildHreflangAlternates(
   page: BuilderPageMeta,
@@ -93,7 +98,7 @@ export function buildHreflangAlternates(
   allPages: BuilderPageMeta[],
 ): HreflangAlternate[] {
   const out: HreflangAlternate[] = [];
-  const seen = new Set<Locale>();
+  const seen = new Set<SiteLocale>();
 
   // Self
   out.push({
@@ -149,15 +154,32 @@ export function buildHreflangAlternates(
   }
 
   const staticSlug = page.slug ?? '';
+  // English-noindex routes (e.g. /faq) must never advertise an `en`
+  // alternate — the /en/<slug> page is noindex. Mirrors the rule in
+  // src/lib/seo.ts getLanguageAlternates (x-default stays, it points at ko).
+  const stripEnglish = isEnglishNoindexPath(`/${staticSlug}`);
   if (PUBLIC_MULTILOCALE_ROUTE_SLUGS.has(staticSlug)) {
-    for (const localeKey of locales) {
+    // Iterate the public site locales (incl. ja) — /ja/<slug> is served 200
+    // by the same static/legacy fallback as the other locales, so builder
+    // pages must advertise it for hreflang mutuality with the /ja sitemap.
+    for (const localeKey of siteLocales) {
       if (seen.has(localeKey)) continue;
+      if (stripEnglish && localeKey === 'en') continue;
       out.push({
         hreflang: localeToHreflangTag(localeKey),
         locale: localeKey,
         href: pageUrl(siteUrl, localeKey, staticSlug),
       });
       seen.add(localeKey);
+    }
+  }
+
+  // The en-noindex strip also applies to any `en` entry that arrived via
+  // linkedPageIds/home linkage — a noindex /en page is never a valid
+  // hreflang target regardless of how it was discovered.
+  if (stripEnglish) {
+    for (let i = out.length - 1; i >= 0; i -= 1) {
+      if (out[i].locale === 'en') out.splice(i, 1);
     }
   }
 

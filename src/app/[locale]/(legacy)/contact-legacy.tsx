@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { pageCopy } from '@/data/page-copy';
 import { buildSeoMetadata } from '@/lib/seo';
-import { locales, siteLocales, type SiteLocale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { ContactLegacyPageBody } from './legacy-page-bodies';
 
 const contactKeywords: Record<SiteLocale, string[]> = {
@@ -19,7 +19,6 @@ export function getContactLegacyMetadata(locale: SiteLocale): Metadata {
     description: copy.description,
     path: '/contact',
     keywords: contactKeywords[locale],
-    alternateLocales: locale === 'ja' ? siteLocales : locales,
   });
 }
 

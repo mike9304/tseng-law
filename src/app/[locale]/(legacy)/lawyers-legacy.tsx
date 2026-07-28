@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { pageCopy } from '@/data/page-copy';
 import { readBuilderDynamicTemplatePublishedBlockVisibility } from '@/lib/builder/dynamic-template-drafts';
 import { buildSeoMetadata } from '@/lib/seo';
-import { locales, siteLocales, type SiteLocale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { LawyersLegacyPageBody } from './legacy-page-bodies';
 
 const lawyerKeywords: Record<SiteLocale, string[]> = {
@@ -20,7 +20,6 @@ export function getLawyersLegacyMetadata(locale: SiteLocale): Metadata {
     description: copy.description,
     path: '/lawyers',
     keywords: lawyerKeywords[locale],
-    alternateLocales: locale === 'ja' ? siteLocales : locales,
   });
 }
 

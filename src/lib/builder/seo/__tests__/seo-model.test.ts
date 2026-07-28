@@ -225,6 +225,68 @@ describe('builder SEO model', () => {
     expect(tags).not.toContain('en');
   });
 
+  it('advertises ja (5 tags) for a standard-slug page like about', () => {
+    // /ja/about is served 200 by the static/legacy fallback and listed in the
+    // /ja sitemap, so the builder-published /ko/about must advertise it for
+    // hreflang mutuality (WO#3b).
+    const aboutKo = page({
+      pageId: 'about-ko',
+      slug: 'about',
+      locale: 'ko',
+    });
+
+    const alternates = buildHreflangAlternates(aboutKo, 'https://example.com', [aboutKo]);
+    const tags = alternates.map((a) => a.hreflang);
+
+    expect(tags).toEqual(['ko', 'zh-Hant', 'en', 'ja', 'x-default']);
+    expect(alternates.find((a) => a.hreflang === 'ja')?.href).toBe('https://example.com/ja/about');
+    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko/about');
+  });
+
+  it('advertises ja on the home page even without a builder ja home', () => {
+    const koHome = page({
+      pageId: 'home-ko',
+      slug: '',
+      isHomePage: true,
+      locale: 'ko',
+      title: { ko: '홈', en: 'Home', 'zh-hant': '首頁' },
+    });
+
+    const alternates = buildHreflangAlternates(koHome, 'https://example.com', [koHome]);
+    const tags = alternates.map((a) => a.hreflang);
+
+    expect(tags).toEqual(['ko', 'zh-Hant', 'en', 'ja', 'x-default']);
+    expect(alternates.find((a) => a.hreflang === 'ja')?.href).toBe('https://example.com/ja');
+    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko');
+  });
+
+  it('strips the en alternate on English-noindex routes (faq) but keeps ja + x-default', () => {
+    // /en/faq is noindex — advertising it as an hreflang target is an SEO
+    // defect. /ja/faq IS indexable, so it must stay. Mirrors
+    // getLanguageAlternates in src/lib/seo.ts.
+    const faqKo = page({
+      pageId: 'faq-ko',
+      slug: 'faq',
+      locale: 'ko',
+      // Even a real linked EN translation must not leak: /en/faq is noindex.
+      linkedPageIds: { en: 'faq-en' },
+    });
+    const faqEn = page({
+      pageId: 'faq-en',
+      slug: 'faq',
+      locale: 'en',
+      title: { ko: 'FAQ', en: 'FAQ', 'zh-hant': '常見問題' },
+    });
+
+    const alternates = buildHreflangAlternates(faqKo, 'https://example.com', [faqKo, faqEn]);
+    const tags = alternates.map((a) => a.hreflang);
+
+    expect(tags).toEqual(['ko', 'zh-Hant', 'ja', 'x-default']);
+    expect(tags).not.toContain('en');
+    expect(alternates.find((a) => a.hreflang === 'ja')?.href).toBe('https://example.com/ja/faq');
+    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko/faq');
+  });
+
   it('advertises static-fallback locales for a standard-slug page without translations', () => {
     // A builder page whose slug is a legacy-fallback slug (e.g. services)
     // is reachable at /<locale>/services for every supported locale via the

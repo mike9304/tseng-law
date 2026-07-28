@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { pageCopy } from '@/data/page-copy';
 import { buildSeoMetadata } from '@/lib/seo';
-import { locales, siteLocales, type SiteLocale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { ReviewsLegacyPageBody } from './legacy-page-bodies';
 
 const reviewKeywords: Record<SiteLocale, string[]> = {
@@ -25,7 +25,6 @@ export function getReviewsLegacyMetadata(locale: SiteLocale): Metadata {
     path: '/reviews',
     keywords: reviewKeywords[locale],
     noindex: true,
-    alternateLocales: locale === 'ja' ? siteLocales : locales,
   });
 }
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { pageCopy } from '@/data/page-copy';
 import { readBuilderDynamicTemplatePublishedBlockVisibility } from '@/lib/builder/dynamic-template-drafts';
 import { buildSeoMetadata } from '@/lib/seo';
-import { locales, siteLocales, type SiteLocale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { ServicesLegacyPageBody } from './legacy-page-bodies';
 
 const servicesKeywords: Record<SiteLocale, string[]> = {
@@ -20,7 +20,6 @@ export function getServicesLegacyMetadata(locale: SiteLocale): Metadata {
     description: copy.description,
     path: '/services',
     keywords: servicesKeywords[locale],
-    alternateLocales: locale === 'ja' ? siteLocales : locales,
   });
 }
 

@@ -23174,3 +23174,93 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* ---------------------------------------------------------------------------
+ * ja / zh-Hant mobile word-break fix
+ * The global `word-break: keep-all` rules above are correct for Korean but
+ * wrong for Japanese and Traditional Chinese: those scripts have no spaces,
+ * so an entire sentence becomes one unbreakable token and its min-content
+ * width blows out grid tracks past the 390px viewport (horizontal overflow,
+ * shrink-to-fit covering the mobile menu button). Below 480px, and only for
+ * :lang(ja)/:lang(zh-Hant), restore normal CJK breaking and let overflow
+ * wrap anywhere. Desktop (>480px) and ko/en rendering are untouched: every
+ * original keep-all declaration stays in place and these scoped overrides
+ * only win inside the media query via higher specificity + later position.
+ * The pre-existing FAQ-only block near line 6338 is kept as-is (harmless
+ * duplicate of the .faq-question rules below).
+ * ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  /* Root-level: reset inherited breaking for everything that does not carry
+     its own word-break declaration (beats `html` at specificity 0,1,1 > 0,0,1). */
+  html:lang(ja),
+  html:lang(zh-Hant) {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Per-declaration overrides for every keep-all rule in this file.
+     Each selector is the original selector prefixed with :lang(), raising
+     specificity so the override wins regardless of source order. */
+  :lang(ja) p,
+  :lang(zh-Hant) p {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  :lang(ja) h1,
+  :lang(ja) h2,
+  :lang(ja) h3,
+  :lang(ja) h4,
+  :lang(ja) h5,
+  :lang(ja) h6,
+  :lang(zh-Hant) h1,
+  :lang(zh-Hant) h2,
+  :lang(zh-Hant) h3,
+  :lang(zh-Hant) h4,
+  :lang(zh-Hant) h5,
+  :lang(zh-Hant) h6 {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  :lang(ja) .split-title,
+  :lang(zh-Hant) .split-title,
+  :lang(ja) .split-text,
+  :lang(zh-Hant) .split-text {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  :lang(ja) .faq-question button > span:first-child,
+  :lang(ja) .faq-question[role='button'] > span:first-child,
+  :lang(zh-Hant) .faq-question button > span:first-child,
+  :lang(zh-Hant) .faq-question[role='button'] > span:first-child {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Let the overflow-prone grid/flex containers and their items shrink below
+     their (previously unbreakable) min-content width. */
+  :lang(ja) .firm-intro-body,
+  :lang(ja) .firm-intro-body > *,
+  :lang(ja) .firm-intro-card,
+  :lang(zh-Hant) .firm-intro-body,
+  :lang(zh-Hant) .firm-intro-body > *,
+  :lang(zh-Hant) .firm-intro-card,
+  :lang(ja) .intent-panel,
+  :lang(ja) .intent-subgrid,
+  :lang(ja) .intent-subgrid > *,
+  :lang(ja) .intent-main,
+  :lang(ja) .intent-main > *,
+  :lang(ja) ul.intent-article-list,
+  :lang(zh-Hant) .intent-panel,
+  :lang(zh-Hant) .intent-subgrid,
+  :lang(zh-Hant) .intent-subgrid > *,
+  :lang(zh-Hant) .intent-main,
+  :lang(zh-Hant) .intent-main > *,
+  :lang(zh-Hant) ul.intent-article-list,
+  :lang(ja) .profile-card-title,
+  :lang(zh-Hant) .profile-card-title {
+    min-width: 0;
+  }
+}

@@ -271,3 +271,15 @@
     line-height: 1.7;
   }
 }
+
+/* ja / zh-Hant mobile word-break fix: keep-all (correct for Korean) makes a
+   space-less CJK sentence one unbreakable token that overflows narrow phones.
+   Scoped to <=480px + locale so desktop and ko/en parity is untouched. */
+@media (max-width: 480px) {
+  :global(:lang(ja)) .question,
+  :global(:lang(zh-Hant)) .question {
+    word-break: normal;
+    overflow-wrap: anywhere;
+    min-width: 0;
+  }
+}

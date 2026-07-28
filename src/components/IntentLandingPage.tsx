@@ -9,8 +9,9 @@ import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import { getIntentPage, type IntentPageSlug } from '@/data/intent-pages';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { getColumnPost } from '@/lib/columns';
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 import { getServiceArea } from '@/data/service-details';
+import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildPersonJsonLd } from '@/lib/seo';
 
 function summarize(text: string, maxLength = 180) {
@@ -96,11 +97,37 @@ const labels = {
     profile: 'View Wei Tseng Profile',
     pricing: 'View Pricing',
   },
+  ja: {
+    terms: '関連検索キーワード',
+    overview: 'このページでまず確認する内容',
+    fit: 'このような場合はご相談ください',
+    points: '優先的に確認するポイント',
+    detailLabel: '手続きの流れ',
+    detailTitle: '進め方と準備資料',
+    process: '相談・手続きの進め方',
+    prepare: '事前に準備するとよい資料',
+    caution: '見落としやすいポイント',
+    servicesLabel: '関連サービス',
+    servicesTitle: '関連サービス',
+    serviceButton: 'サービスを見る',
+    columnsLabel: '関連コラム',
+    columnsTitle: '関連コラム',
+    readMore: '記事を読む →',
+    resourcesLabel: '関連ガイド',
+    resourcesTitle: 'あわせて読みたいガイド',
+    attorneyHeading: 'この検索テーマに最も近い担当台湾弁護士',
+    ctaLabel: '次のステップ',
+    ctaTitle: '案件に合った方向性をすぐ整理したい場合',
+    ctaText: '会社設立、投資、訴訟、家族間の紛争など、性質の異なる案件は初期の組み立て方が異なります。資料をお送りいただければ、曾雋崴台湾弁護士につながる相談の流れをまずご案内します。',
+    contact: '相談のお問い合わせ',
+    profile: '曾雋崴台湾弁護士のプロフィールを見る',
+    pricing: '費用案内を見る',
+  },
 } as const;
 
 const relatedResources: Record<
   IntentPageSlug,
-  Array<{ href: string; label: Record<Locale, string> }>
+  Array<{ href: string; label: Record<SiteLocale, string> }>
 > = {
   'taiwan-lawyer': [
     {
@@ -109,6 +136,7 @@ const relatedResources: Record<
         ko: '한국어 가능한 대만 변호사',
         'zh-hant': '可使用韓語溝通的台灣律師',
         en: 'Korean-speaking Taiwan lawyer',
+        ja: '韓国語対応可能な台湾弁護士',
       },
     },
     {
@@ -117,6 +145,7 @@ const relatedResources: Record<
         ko: '대만 법인설립·회사설립 변호사 안내',
         'zh-hant': '台灣公司設立律師指南',
         en: 'Taiwan company setup lawyer guide',
+        ja: '台湾会社設立弁護士ガイド',
       },
     },
     {
@@ -125,6 +154,7 @@ const relatedResources: Record<
         ko: '대만 소송 변호사 안내',
         'zh-hant': '台灣訴訟律師指南',
         en: 'Taiwan litigation lawyer guide',
+        ja: '台湾訴訟弁護士ガイド',
       },
     },
     {
@@ -133,6 +163,7 @@ const relatedResources: Record<
         ko: '대만 회사설립 종합 가이드',
         'zh-hant': '台灣公司設立完整指南',
         en: 'Complete Taiwan company setup guide',
+        ja: '台湾会社設立 総合ガイド',
       },
     },
   ],
@@ -143,6 +174,7 @@ const relatedResources: Record<
         ko: '대만 회사설립 종합 가이드',
         'zh-hant': '台灣公司設立完整指南',
         en: 'Complete Taiwan company setup guide',
+        ja: '台湾会社設立 総合ガイド',
       },
     },
     {
@@ -151,6 +183,7 @@ const relatedResources: Record<
         ko: '한국어 가능한 대만 변호사',
         'zh-hant': '可使用韓語溝通的台灣律師',
         en: 'Korean-speaking Taiwan lawyer',
+        ja: '韓国語対応可能な台湾弁護士',
       },
     },
     {
@@ -159,6 +192,7 @@ const relatedResources: Record<
         ko: '대만 변호사 검색 가이드',
         'zh-hant': '台灣律師搜尋指南',
         en: 'Taiwan lawyer search guide',
+        ja: '台湾弁護士の探し方ガイド',
       },
     },
   ],
@@ -169,6 +203,7 @@ const relatedResources: Record<
         ko: '한국어 가능한 대만 변호사',
         'zh-hant': '可使用韓語溝通的台灣律師',
         en: 'Korean-speaking Taiwan lawyer',
+        ja: '韓国語対応可能な台湾弁護士',
       },
     },
     {
@@ -177,6 +212,7 @@ const relatedResources: Record<
         ko: '대만 변호사 검색 가이드',
         'zh-hant': '台灣律師搜尋指南',
         en: 'Taiwan lawyer search guide',
+        ja: '台湾弁護士の探し方ガイド',
       },
     },
   ],
@@ -186,7 +222,7 @@ export default function IntentLandingPage({
   locale,
   slug,
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   slug: IntentPageSlug;
 }) {
   const page = getIntentPage(locale, slug);
@@ -198,7 +234,21 @@ export default function IntentLandingPage({
   }
 
   const l = labels[locale];
-  const services = page.serviceSlugs.map((item) => getServiceArea(item)).filter((item): item is NonNullable<typeof item> => item != null);
+  const services = page.serviceSlugs
+    .map((item) => {
+      const area = getServiceArea(item);
+      if (!area) {
+        return null;
+      }
+      if (locale === 'ja') {
+        const approved = getJapaneseServiceDetail(area.slug);
+        return approved
+          ? { slug: area.slug, title: approved.title, intro: approved.intro }
+          : null;
+      }
+      return { slug: area.slug, title: area.title[locale], intro: area.intro[locale] };
+    })
+    .filter((item): item is NonNullable<typeof item> => item != null);
   const columns = page.columnSlugs.map((item) => getColumnPost(item, locale)).filter((item): item is NonNullable<typeof item> => item != null);
   const collectionItems = [
     ...(profile
@@ -211,9 +261,9 @@ export default function IntentLandingPage({
         ]
       : []),
     ...services.map((service) => ({
-      name: service.title[locale],
+      name: service.title,
       path: `/${locale}/services/${service.slug}`,
-      description: summarize(service.intro[locale], 120),
+      description: summarize(service.intro, 120),
     })),
     ...columns.map((column) => ({
       name: column.title,
@@ -238,7 +288,7 @@ export default function IntentLandingPage({
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
-          { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+          { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${locale}` },
           { name: page.title, path },
         ])}
       />
@@ -364,9 +414,9 @@ export default function IntentLandingPage({
           <div className="grid-bento contact-grid">
             {services.map((service) => (
               <article key={service.slug} className="card legal-card">
-                <h3 className="card-title">{service.title[locale]}</h3>
+                <h3 className="card-title">{service.title}</h3>
                 <div className="legal-card-copy">
-                  <p>{summarize(service.intro[locale])}</p>
+                  <p>{summarize(service.intro)}</p>
                   <Link href={`/${locale}/services/${service.slug}`} className="link-underline">
                     {l.serviceButton}
                   </Link>

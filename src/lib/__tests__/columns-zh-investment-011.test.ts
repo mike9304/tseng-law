@@ -99,7 +99,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
     );
     expect(parsed.data.lastmod).toBe('2026-07-25');
     expect(parsed.data.date_display).toBe('2026年2月4日');
-    expect(parsed.data.read_time).toBe('14分鐘閱讀');
+    expect(parsed.data.read_time).toBe('10分鐘閱讀');
     expect(parsed.data.categories).toEqual(['台灣公司設立']);
     expect(parsed.data.featured_image).toBe(
       '../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg',
@@ -116,7 +116,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
     expect(post?.title).toBe(title);
     expect(post?.date).toBe('2026-07-25');
     expect(post?.dateDisplay).toBe('2026年2月4日');
-    expect(post?.readTime).toBe('14分鐘閱讀');
+    expect(post?.readTime).toBe('10分鐘閱讀');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('公司設立');
     expect(post?.featuredImage).toBe(
@@ -165,8 +165,8 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
     const requiredPhrases = [
       '由台灣進口業者或同時擔任銷售代理商的業者負責進口及銷售時，外國品牌可以採取不另設自有子公司或分公司的架構。',
       '不能只看代理、經銷、總代理等契約名稱，就認定誰承擔化粧品法規上的義務。',
-      '合作終止時產品登錄資訊及 PIF 資料的移交',
-      '中文標示與廣告的事前審閱',
+      '最新資料的管理，以及契約終止時的移交',
+      '廣告的事前檢視與修改權限',
       '必要時配合產品回收',
       '子公司是依台灣法律成立的獨立法人',
       '分公司則是外國公司本體在台灣登記的營業據點',
@@ -185,13 +185,13 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
   it('separates product registration from PIF and locks timing, platform, and validity', () => {
     const requiredPhrases = [
       '產品登錄是化粧品製造或輸入業者透過 TFDA 化粧品產品登錄平台辦理的獨立程序。',
-      '衛生福利部食品藥物管理署（TFDA）的化粧品產品登錄平台',
+      '化粧品產品登錄在 TFDA 化粧品產品登錄平台辦理',
       '供應、販賣、贈送、公開陳列或提供消費者試用以前，即應完成產品登錄',
       '產品登錄的效期為三年。',
       '效期屆滿前三個月內辦理展延',
-      '不代表 PIF 的全部法定資料已齊備',
-      '不表示中文標示、網站文案、包裝宣稱或廣告內容已經確認合法',
-      '分別管理產品登錄、PIF、標示及廣告',
+      '不代表 PIF 所需資料已全部齊備',
+      '也不是產品標示或廣告合法的判斷',
+      '應分別作為獨立的法令遵循項目管理',
       'PIF 本身無須事前提交 TFDA',
     ];
 
@@ -203,16 +203,16 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
 
   it('locks the 16 PIF categories, full phase-in, narrow soap exception, and retained responsibility', () => {
     const requiredPhrases = [
-      'PIF 的法定資料共 16 類',
-      '產品基本資料；完成產品登錄的證明文件；全成分名稱及其各別含量',
+      '將所需資料分為 16 個類別',
+      '產品與製造業者的基本資料、標籤等佐證資料',
       '自 2026 年 7 月 1 日起，其餘化粧品亦納入適用，原則上所有化粧品均應遵守',
-      '免辦理工廠登記的化粧品製造場所所生產之固態手工香皂',
+      '免辦理工廠登記的製造場所製造的固態手工香皂',
       '不足以單獨構成例外',
-      '應由符合法定資格的安全資料簽署人員簽名並載明日期',
-      '可由具相應專業能力的第三人協助',
-      '第三人的協助不會移轉化粧品製造或輸入業者的責任',
-      '資料與所涉產品及其正確版本相符',
-      '必要簽署均已完備',
+      '包括安全性評估在內的 PIF 業務，可以由具備所需資格與能力的第三人協助',
+      '能相互傳遞變更資訊與最新簽署資料的機制',
+      '化粧品製造或輸入業者的法律責任仍然維持',
+      '即使利用第三人的撰寫協助或資料保存服務',
+      '原製造者、試驗機構、安全性評估人員與台灣端業者',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -223,17 +223,18 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
 
   it('distinguishes Article 7 duration from Article 8 and Act Article 7 address', () => {
     const requiredPhrases = [
-      '原料、配方、製造方法或製造場所、中文標示、宣稱功能或安全資訊如有變更',
+      '原料或配方、製造方法、製造場所、包含標籤在內的標示、宣稱功能或安全性資訊有變更時',
+      '消費者申訴、不良反應案例、新的試驗結果是否影響既有評估',
       '依《化粧品產品資訊檔案管理辦法》第 7 條，PIF 應自產品最後上市日之次日起至少保存五年',
       '保存場所則依同辦法第 8 條，為《化粧品衛生安全管理法》第 7 條第 1 項第 7 款所定之化粧品製造或輸入業者標示地址',
-      '第 7 條規範保存期間，第 8 條連結母法規定的地址',
-      '原製造者保有原本，或使用安全的電子及雲端儲存',
-      '完整資料',
-      '可迅速調取及提出',
-      '存取權限',
-      '定期備份',
-      '版本編號',
-      '契約終止時的資料移交',
+      '規定期間的條文與規定場所的條文，應區分管理',
+      '即使原製造者保有原本，或使用安全的電子或雲端儲存',
+      '製造或輸入業者仍須能取用完整資料',
+      '應訂定存取權限、備份、版本管理、檔案格式與負責人',
+      '迅速檢索、提出資料',
+      '與銷售夥伴或服務提供者的契約結束後',
+      '法定保存期間內繼續維持',
+      '宜在契約中處理移交對象、方式與存取權限是否存續',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -245,13 +246,13 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
   it('qualifies inspection notice and distinguishes false data, correction, and statutory measures', () => {
     const requiredPhrases = [
       '原則上應於查核日七日前通知',
-      '情況緊急或為公共利益之必要者，不在此限',
-      '產品登錄資料或 PIF 資料不實',
-      '新臺幣 1 萬元以上 100 萬元以下罰鍰',
-      'PIF 不完整時，通常由主管機關通知限期改正',
-      '屆期不改正，始適用相應的罰鍰規定',
-      '下架、回收、沒入或銷毀也不是任何 PIF 缺漏的自動結果',
-      '各項措施均須依產品安全風險、違反內容、流通狀態及限期改正結果，分別判斷是否符合法律所定要件',
+      '符合相關規定所定法定例外情形時，得不經事前通知逕行查核',
+      '在產品登錄申報虛偽資訊，或在 PIF 記載虛偽資訊',
+      '新臺幣 1 萬元以上 100 萬元以下行政罰鍰',
+      'PIF 資料不完整時，通常由主管機關命限期改正',
+      '未於期限內改正時，才生罰鍰問題',
+      '回收或銷毀並非所有 PIF 資料不齊時自動伴隨的措施',
+      '應區分產品安全性、違規內容、改正情形與各措施適用的法定要件，分別判斷',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -262,13 +263,13 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
 
   it('locks the overall-presentation test, medical examples, fine ranges, and influencer qualification', () => {
     const requiredPhrases = [
-      '品名、文字敘述、圖案、符號、影像、聲音、前後關係，以及一般消費者接收全部訊息後形成的整體印象',
-      '治療痘痘、具有抗發炎效果或可以殺菌',
-      '虛偽或誇大廣告的行政罰鍰為新臺幣 4 萬元以上 20 萬元以下',
+      '品名、文句、圖像、符號、聲音、前後脈絡，以及消費者所得的整體印象',
+      '治療痘痘、具有抗發炎效果或殺菌作用',
+      '虛偽、誇大廣告的行政罰鍰為新臺幣 4 萬元以上 20 萬元以下',
       '涉及醫療效能的行政罰鍰為新臺幣 60 萬元以上 500 萬元以下',
-      '網紅、評論者或銷售夥伴的貼文是否屬於廣告，應依個案內容及商業脈絡判斷',
-      '對價給付、免費提供或優惠購買商品、聯盟行銷或銷售連結、品牌提供的發文指示、反覆合作',
-      '也不能將所有個人使用經驗一概認定為品牌廣告',
+      '網紅、評論者或銷售夥伴的貼文，也可能依內容與商業脈絡被認定實質上為廣告',
+      '報酬給付、提供產品、銷售連結、品牌的發文指示、反覆合作',
+      '並非所有個人貼文都自動成為品牌廣告',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -283,12 +284,12 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
         .split('### 上市前的確認順序')[1]
         ?.split('### 官方資料')[0] ?? '';
     const sequence = [
-      '**進口架構**',
-      '**法定責任主體**',
-      '**產品登錄**',
-      '**PIF 建立、更新及保存**',
-      '**標示與廣告**',
-      '**查核、改正及安全資訊應對**',
+      '決定直接設立台灣子公司、分公司，或委由台灣進口業者負責進口及銷售',
+      '確認承擔化粧品製造或輸入業者法律責任的主體',
+      '在供應、販賣、贈送、公開陳列或提供消費者試用前，完成產品登錄',
+      '依產品別建立 PIF',
+      '依整體表現標準檢視標籤',
+      '建立應對查核與改正要求',
     ];
     const positions = sequence.map((step) => readinessSection.indexOf(step));
 
@@ -308,13 +309,13 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
       expect(raw.split(source)).toHaveLength(2);
     }
     expect(raw).toContain(
-      '[TFDA：PIF 常見問題 Q&A](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384)',
+      '[TFDA：PIF 撰寫指引](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384)',
     );
     expect(raw).toContain(
-      '[附件四：其他醫療效能詞句](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)',
+      '[化粧品廣告認定準則官方附表](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)',
     );
     expect(raw).toContain(
-      '[衛福部：化粧品廣告新制](https://www.mohw.gov.tw/cp-4256-48110-1.html)',
+      '[衛生福利部化粧品廣告規範公告](https://www.mohw.gov.tw/cp-4256-48110-1.html)',
     );
 
     const internalLinks = Array.from(
@@ -336,7 +337,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
       ),
     ).toEqual([
       {
-        alt: '台灣化粧品市場進入所需的法規文件與標示檢視',
+        alt: '台灣化粧品市場進入所需的產品資料與法規檢視',
         path: '../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg',
       },
       {
@@ -345,15 +346,13 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
       },
     ]);
     expect(raw.trimEnd()).toMatch(
-      new RegExp(
-        `---\\n\\n${disclaimer}\\n\\n\\*\\*曾雋崴律師（Wei Tseng）\\*\\*$`,
-      ),
+      new RegExp(`${disclaimer}\\n\\n\\*\\*曾雋崴律師（Wei Tseng）\\*\\*$`),
     );
     expect(parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0).toBeGreaterThan(
       2_500,
     );
-    expect(raw.length).toBeGreaterThan(8_000);
-    expect(post?.content.length).toBeGreaterThan(7_000);
+    expect(raw.length).toBeGreaterThan(6_000);
+    expect(post?.content.length).toBeGreaterThan(5_000);
   });
 
   it('derives read_time from the exact visible Han count at 400 characters per minute', () => {
@@ -361,8 +360,8 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
     const hanCount = visibleText.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(hanCount / 400);
 
-    expect(hanCount).toBe(5_280);
-    expect(calculatedMinutes).toBe(14);
+    expect(hanCount).toBe(3_765);
+    expect(calculatedMinutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);
   });

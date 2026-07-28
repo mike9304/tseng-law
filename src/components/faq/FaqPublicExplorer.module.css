@@ -274,8 +274,8 @@
 
 /* ja / zh-Hant mobile word-break fix: keep-all (correct for Korean) makes a
    space-less CJK sentence one unbreakable token that overflows narrow phones.
-   Scoped to <=480px + locale so desktop and ko/en parity is untouched. */
-@media (max-width: 480px) {
+   Scoped to <=768px + locale so desktop and ko/en parity is untouched. */
+@media (max-width: 768px) {
   :global(:lang(ja)) .question,
   :global(:lang(zh-Hant)) .question {
     word-break: normal;

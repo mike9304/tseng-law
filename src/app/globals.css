@@ -23181,7 +23181,7 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
  * wrong for Japanese and Traditional Chinese: those scripts have no spaces,
  * so an entire sentence becomes one unbreakable token and its min-content
  * width blows out grid tracks past the 390px viewport (horizontal overflow,
- * shrink-to-fit covering the mobile menu button). Below 480px, and only for
+ * shrink-to-fit covering the mobile menu button). Below 768px, and only for
  * :lang(ja)/:lang(zh-Hant), restore normal CJK breaking and let overflow
  * wrap anywhere. Desktop (>480px) and ko/en rendering are untouched: every
  * original keep-all declaration stays in place and these scoped overrides
@@ -23189,7 +23189,7 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
  * The pre-existing FAQ-only block near line 6338 is kept as-is (harmless
  * duplicate of the .faq-question rules below).
  * ------------------------------------------------------------------------- */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   /* Root-level: reset inherited breaking for everything that does not carry
      its own word-break declaration (beats `html` at specificity 0,1,1 > 0,0,1). */
   html:lang(ja),

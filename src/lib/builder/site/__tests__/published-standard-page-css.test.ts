@@ -127,4 +127,16 @@ describe('published standard page CSS guards', () => {
     expect(zhHomeDesktopSwap).toContain("locale === 'zh-hant' && !slugPath");
     expect(zhHomeDesktopSwap).toContain('@media (min-width: 769px)');
   });
+
+  it('excludes CSS parity overlays from published content-height and keeps the hide rule', () => {
+    const publishedPage = read('src/lib/builder/site/public-page.tsx');
+    const flow = read('src/lib/builder/canvas/flow.ts');
+
+    expect(flow).toContain('export function isCssParityOverlayFlowSection');
+    expect(flow).toContain("node.anchorName.startsWith('mobile-parity-')");
+    expect(publishedPage).toContain('isCssParityOverlayFlowSection');
+    expect(publishedPage).toContain('if (isCssParityOverlayFlowSection(node)) return maxHeight;');
+    expect(publishedPage).toContain(".builder-pub-node[data-anchor^='mobile-parity-home-'] {");
+    expect(publishedPage).toContain('display: none !important;');
+  });
 });

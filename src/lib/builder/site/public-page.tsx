@@ -24,6 +24,7 @@ import {
   computeTopLevelFlowSectionMetrics,
   compareTopLevelStacking,
   isCollapsedServicesAccordionDetailNode,
+  isCssParityOverlayFlowSection,
   isTopLevelFlowSection,
 } from '@/lib/builder/canvas/flow';
 import type {
@@ -747,6 +748,7 @@ export async function PublishedSitePageView({
     : 0;
   const publishedContentHeight = visibleNodes.reduce((maxHeight, node) => {
     if (isCollapsedServicesAccordionDetailNode(node)) return maxHeight;
+    if (isCssParityOverlayFlowSection(node)) return maxHeight;
     const absoluteRect = resolveCanvasNodeAbsoluteRect(node, nodesById);
     return Math.max(maxHeight, absoluteRect.y + absoluteRect.height);
   }, Math.max(canvas.stageHeight, dynamicListPublishedContentHeight));

@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { createHomePageCanvasDocumentDecomposed } from '../seed-home';
-import { computeTopLevelFlowSectionMetrics } from '../flow';
+import {
+  computeTopLevelFlowSectionMetrics,
+  isCanonicalDecomposedHomeFlowStack,
+  isCssParityOverlayFlowSection,
+} from '../flow';
 import type { BuilderCanvasNode } from '../types';
 
 type ResponsiveRect = NonNullable<NonNullable<NonNullable<BuilderCanvasNode['responsive']>['mobile']>['rect']>;
@@ -140,5 +144,21 @@ describe('zh-hant decomposed home parity nodes', () => {
     expect(mobileMetrics.get('home-offices-root')?.minHeight).toBeLessThanOrEqual(980);
     expect(tabletMetrics.get('home-offices-root')?.minHeight).toBeLessThanOrEqual(1120);
     expect(contactMobile.y + contactMobile.height).toBeLessThanOrEqual(9800);
+  });
+
+  it('keeps the zh-hant dual-tree home on the 9-root canonical flow stack', () => {
+    const zh = createHomePageCanvasDocumentDecomposed('zh-hant');
+    const ko = createHomePageCanvasDocumentDecomposed('ko');
+    const overlayNodes = zh.nodes.filter(isCssParityOverlayFlowSection);
+    const metrics = computeTopLevelFlowSectionMetrics(zh.nodes);
+
+    expect(overlayNodes).toHaveLength(9);
+    expect(overlayNodes.every((node) => node.anchorName?.startsWith('mobile-parity-home-'))).toBe(true);
+    expect(isCanonicalDecomposedHomeFlowStack(zh.nodes)).toBe(true);
+    expect(isCanonicalDecomposedHomeFlowStack(ko.nodes)).toBe(true);
+    expect(metrics.get('home-insights-root')?.marginTop).toBe(0);
+    expect(metrics.get('home-hero')?.marginTop).toBeUndefined();
+    expect(zh.stageHeight).toBeLessThanOrEqual(7124);
+    expect(zh.stageHeight).toBeLessThan(ko.stageHeight + 200);
   });
 });

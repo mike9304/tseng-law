@@ -13,6 +13,7 @@ import {
   getFlowSiblingInsertionIndex,
   getFlowSiblingOriginalIndex,
   isCanonicalDecomposedHomeFlowStack,
+  isCssParityOverlayFlowSection,
 } from '../flow';
 import { buildChildrenMap } from '../tree';
 
@@ -454,6 +455,42 @@ describe('builder canvas flow helpers', () => {
       nodes: reordered,
       viewport: 'mobile',
     })).toBe(9927);
+  });
+
+  it('ignores mobile-parity CSS overlays when recognizing the canonical home stack', () => {
+    const withOverlays = canonicalDecomposedHomeStack();
+    withOverlays.push(node({
+      id: 'home-hero',
+      kind: 'composite',
+      anchorName: 'mobile-parity-home-hero',
+      content: { componentKey: 'hero-search' },
+      rect: { x: 0, y: 0, width: 1280, height: 774 },
+      zIndex: 40,
+    }));
+    withOverlays.push(node({
+      id: 'home-insights',
+      kind: 'composite',
+      anchorName: 'mobile-parity-home-insights',
+      content: { componentKey: 'insights-archive' },
+      rect: { x: 0, y: 774, width: 1280, height: 1277 },
+      zIndex: 41,
+    }));
+
+    const baseStack = canonicalDecomposedHomeStack();
+    expect(withOverlays.filter(isCssParityOverlayFlowSection)).toHaveLength(2);
+    expect(isCanonicalDecomposedHomeFlowStack(withOverlays)).toBe(true);
+    expect(isCanonicalDecomposedHomeFlowStack(baseStack)).toBe(true);
+    expect(computeTopLevelFlowSectionMetrics(withOverlays).get('home-insights-root')?.marginTop).toBe(0);
+    expect(computeTopLevelFlowSectionMetrics(withOverlays).has('home-hero')).toBe(false);
+    expect(computeEffectiveViewportStageHeight({
+      fallbackStageHeight: 9927,
+      nodes: withOverlays,
+      viewport: 'desktop',
+    })).toBe(computeEffectiveViewportStageHeight({
+      fallbackStageHeight: 9927,
+      nodes: baseStack,
+      viewport: 'desktop',
+    }));
   });
 
   it('uses responsive viewport rects when reordering children inside flex containers', () => {

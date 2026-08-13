@@ -130,6 +130,15 @@ export function isTopLevelFlowSection(node: BuilderCanvasNode): boolean {
   return content.as === 'section';
 }
 
+/**
+ * ZH-Hant (and standalone) CSS swap overlays. They stay in the published DOM
+ * so media queries can show them, but they are not extra flow siblings — their
+ * authored y stack starts at 0 and would otherwise break the 9-root home.
+ */
+export function isCssParityOverlayFlowSection(node: BuilderCanvasNode): boolean {
+  return typeof node.anchorName === 'string' && node.anchorName.startsWith('mobile-parity-');
+}
+
 function resolveCanonicalDecomposedHomeFlowSections(
   nodes: readonly BuilderCanvasNode[],
   viewport?: Viewport,
@@ -139,7 +148,7 @@ function resolveCanonicalDecomposedHomeFlowSections(
 
   for (let index = 0; index < nodes.length; index += 1) {
     const node = nodes[index];
-    if (!isTopLevelFlowSection(node)) continue;
+    if (!isTopLevelFlowSection(node) || isCssParityOverlayFlowSection(node)) continue;
     flowSections.push(node);
   }
 
@@ -328,7 +337,7 @@ export function computeTopLevelFlowSectionMetricsFromIndex({
   const flowTopLevelCompositeNodes: BuilderCanvasNode[] = [];
   for (let index = 0; index < nodes.length; index += 1) {
     const node = nodes[index];
-    if (node.parentId || !isTopLevelFlowSection(node)) continue;
+    if (node.parentId || !isTopLevelFlowSection(node) || isCssParityOverlayFlowSection(node)) continue;
     const rect = effectiveRect(node, viewport);
     flowTopLevelCompositeNodes.push(withRect(node, {
       ...rect,

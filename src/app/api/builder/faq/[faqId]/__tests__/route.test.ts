@@ -1,7 +1,6 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   deleteFaqItem,
   loadFaqItem,
@@ -10,11 +9,11 @@ import {
 } from '@/lib/builder/faq/faq-engine';
 import { DELETE, GET, PATCH } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-pages',
+  })),
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 
@@ -46,8 +45,8 @@ const updatedFaqItem = {
   updatedAt: '2026-06-03T00:01:00.000Z',
 };
 
-const params = { params: { faqId: 'faq-1' } };
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const params = { params: Promise.resolve({ faqId: 'faq-1' }) };
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const deleteFaqItemMock = vi.mocked(deleteFaqItem);
 const loadFaqItemMock = vi.mocked(loadFaqItem);
@@ -78,7 +77,10 @@ function deleteRequest(query = ''): NextRequest {
 describe('builder FAQ detail API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'edit-pages',
+    });
     guardMutationMock.mockResolvedValue({ username: 'admin' } as never);
     deleteFaqItemMock.mockResolvedValue(undefined as never);
     loadFaqItemMock.mockResolvedValue(faqItem as never);
@@ -87,12 +89,26 @@ describe('builder FAQ detail API', () => {
   });
 
   it('returns FAQ detail while preserving success response shape', async () => {
-    const response = await GET(getRequest('locale=en'), params);
+    const req = getRequest('locale=en');
+    const response = await GET(req, params);
     const payload = await response.json();
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, item: faqItem });
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(req, 'edit-pages');
+  });
+
+  it('short-circuits a missing edit-pages permission with 403', async () => {
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: edit-pages' }, { status: 403 }),
+    );
+    const req = getRequest('locale=ko');
+
+    const response = await GET(req, params);
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(req, 'edit-pages');
+    expect(loadFaqItemMock).not.toHaveBeenCalled();
   });
 
   it('returns localized missing FAQ errors', async () => {

@@ -1,16 +1,18 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { loadTaxRules, saveTaxRules } from '@/lib/builder/commerce/tax-engine';
 import { GET, PATCH } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/commerce/tax-engine', () => ({
@@ -28,7 +30,7 @@ const taxRule = {
   priority: 0,
 };
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const loadTaxRulesMock = vi.mocked(loadTaxRules);
 const saveTaxRulesMock = vi.mocked(saveTaxRules);
@@ -48,8 +50,14 @@ function patchRequest(query = '', body: string | unknown = { rules: [taxRule] })
 describe('builder commerce tax rules API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     loadTaxRulesMock.mockResolvedValue([taxRule] as never);
     saveTaxRulesMock.mockImplementation(async (rules) => rules as never);
   });
@@ -82,7 +90,10 @@ describe('builder commerce tax rules API', () => {
       errorCode: 'tax_rules_failed',
     });
     expect(payload.error).not.toContain('tax storage secret leaked');
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
     expect(consoleError).toHaveBeenCalledWith(
       '[builder/commerce/tax-rules] GET failed:',
       expect.any(Error),
@@ -98,7 +109,10 @@ describe('builder commerce tax rules API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, locale: 'en', rules: [taxRule] });
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
   });
 
   it('returns localized invalid-json save errors', async () => {

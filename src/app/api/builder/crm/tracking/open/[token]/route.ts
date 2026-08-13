@@ -30,10 +30,8 @@ function pixelResponse(): NextResponse {
   });
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { token: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ token: string }> }) {
+  const params = await props.params;
   const secret = resolveTrackingSecret();
   if (!secret) {
     // Misconfigured deploy. Still serve the pixel so emails don't break.

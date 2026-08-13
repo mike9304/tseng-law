@@ -70,7 +70,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
     const response = await route.POST(postRequest({ testEmail: 'me@example.test' }, 'locale=en'), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -84,7 +84,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
     const response = await route.POST(postRequest({ batchSize: 25 }, 'locale=en'), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -102,7 +102,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
     vi.mocked(getCampaign).mockResolvedValue(null);
     const route = await import('../route');
     const response = await route.POST(postRequest({}), {
-      params: { campaignId: 'cmp-missing' },
+      params: Promise.resolve({ campaignId: 'cmp-missing' }),
     });
 
     expect(response.status).toBe(404);
@@ -113,7 +113,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
     const response = await route.POST(postRequest({ testEmail: 'not-an-email' }, 'locale=zh-hant'), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -130,7 +130,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
     const response = await route.POST(postRequest('{', 'locale=en'), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -148,7 +148,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
     vi.mocked(sendTestEmail).mockResolvedValueOnce({ ok: false, error: 'provider secret leaked' });
     const route = await import('../route');
     const response = await route.POST(postRequest({ testEmail: 'me@example.test' }, 'locale=en'), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -174,7 +174,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
     });
     const route = await import('../route');
     const response = await route.POST(postRequest({ batchSize: 1 }, 'locale=zh-hant'), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -211,7 +211,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
     });
     const route = await import('../route');
     const response = await route.POST(postRequest({ batchSize: 3 }, 'locale=en'), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -237,7 +237,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/send', () => {
     );
     const route = await import('../route');
     const response = await route.POST(postRequest({}), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
 
     expect(response.status).toBe(401);

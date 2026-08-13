@@ -21,8 +21,13 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 const SEARCH_INDEX_FRESHNESS_MS = 5 * 60 * 1000;
+const MAX_SEARCH_QUERY_LENGTH = 200;
 
 let searchIndexRefreshPromise: Promise<SearchIndex> | null = null;
+
+function normalizeSearchQuery(value: string): string {
+  return Array.from(value.trim()).slice(0, MAX_SEARCH_QUERY_LENGTH).join('');
+}
 
 function errorResponse(
   locale: Locale,
@@ -79,7 +84,7 @@ function refreshSearchIndex(): Promise<SearchIndex> {
 }
 
 export async function GET(request: NextRequest) {
-  const query = (request.nextUrl.searchParams.get('q') ?? '').trim();
+  const query = normalizeSearchQuery(request.nextUrl.searchParams.get('q') ?? '');
   const localeParam = request.nextUrl.searchParams.get('locale') ?? 'ko';
   const locale = normalizeLocale(localeParam);
   const kindsParam = request.nextUrl.searchParams.get('kinds') ?? '';
@@ -127,7 +132,7 @@ export async function GET(request: NextRequest) {
 
   // Fire-and-forget query logging.
   void appendQueryLog({
-    query: query.slice(0, 200),
+    query,
     locale,
     hits: hits.length,
     hitId: hits[0]?.doc.id,

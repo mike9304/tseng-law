@@ -67,7 +67,7 @@ describe('/api/builder/bookings/cancellation-policies/[id]', () => {
   it('returns localized not-found errors for missing policies on PATCH', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ isActive: false }, 'en'), {
-      params: { id: 'pol-route-test' },
+      params: Promise.resolve({ id: 'pol-route-test' }),
     });
     const payload = await response.json();
 
@@ -83,7 +83,7 @@ describe('/api/builder/bookings/cancellation-policies/[id]', () => {
     vi.mocked(getCancellationPolicy).mockResolvedValueOnce(policy());
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ cancellationFeePercent: 101 }, 'zh-hant'), {
-      params: { id: 'pol-route-test' },
+      params: Promise.resolve({ id: 'pol-route-test' }),
     });
     const payload = await response.json();
 
@@ -99,7 +99,7 @@ describe('/api/builder/bookings/cancellation-policies/[id]', () => {
     vi.mocked(getCancellationPolicy).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ isActive: false }, 'ko'), {
-      params: { id: 'pol-route-test' },
+      params: Promise.resolve({ id: 'pol-route-test' }),
     });
     const payload = await response.json();
 
@@ -117,7 +117,7 @@ describe('/api/builder/bookings/cancellation-policies/[id]', () => {
   it('returns localized not-found errors for missing policies on DELETE', async () => {
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('ko'), {
-      params: { id: 'pol-route-test' },
+      params: Promise.resolve({ id: 'pol-route-test' }),
     });
     const payload = await response.json();
 
@@ -134,7 +134,7 @@ describe('/api/builder/bookings/cancellation-policies/[id]', () => {
     vi.mocked(getCancellationPolicy).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('en'), {
-      params: { id: 'pol-route-test' },
+      params: Promise.resolve({ id: 'pol-route-test' }),
     });
     const payload = await response.json();
 

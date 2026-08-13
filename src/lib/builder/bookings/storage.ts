@@ -1,6 +1,7 @@
+import { createHash } from 'node:crypto';
 import { promises as fs } from 'fs';
 import path from 'path';
-import { get, list, put } from '@vercel/blob';
+import { BlobPreconditionFailedError, del, get, list, put } from '@vercel/blob';
 import type {
   Booking,
   BookingCancellationPolicy,
@@ -22,8 +23,12 @@ import { normalizeBookingTimezone } from '@/lib/builder/bookings/timezone';
 
 const BOOKINGS_ROOT = process.env.BUILDER_BOOKINGS_ROOT ?? path.join(process.cwd(), 'runtime-data', 'builder-bookings');
 const BLOB_PREFIX = 'builder-bookings/';
+const PAYMENT_INTENT_CLAIMS_PREFIX = `${BLOB_PREFIX}payment-intent-claims/`;
 
 const bookingWriteQueues = new Map<string, Promise<void>>();
+const paymentIntentClaimQueues = new Map<string, Promise<void>>();
+const packageCreditWriteQueues = new Map<string, Promise<void>>();
+const PACKAGE_CREDIT_MUTATION_ATTEMPTS = 3;
 
 type Collection =
   | 'services'
@@ -38,12 +43,41 @@ type Collection =
   | 'package-credits';
 type BookingBackend = 'blob' | 'file';
 
+export interface PackageCreditMutation<T> {
+  next: BookingPackageCredit;
+  result: T;
+}
+
+interface PaymentIntentClaimRecord {
+  paymentIntentId: string;
+  bookingId: string;
+  claimedAt: string;
+}
+
+export type PaymentIntentClaimResult =
+  | { claimed: true; idempotent: boolean }
+  | { claimed: false };
+
 function getBackend(): BookingBackend {
   if (!process.env.BLOB_READ_WRITE_TOKEN) return 'file';
   if (process.env.CONSULTATION_LOG_BACKEND === 'local') return 'file';
   if (process.env.BUILDER_BOOKINGS_BACKEND === 'local') return 'file';
   if (process.env.NODE_ENV !== 'production' && process.env.BUILDER_USE_BLOB_IN_DEV !== '1') return 'file';
   return 'blob';
+}
+
+/**
+ * Public booking mutations need a shared durable store in production. Local
+ * development deliberately remains file-backed so contributors can run the
+ * booking flows without a Blob token.
+ */
+export function hasDurableBookingStorage(): boolean {
+  return process.env.NODE_ENV !== 'production' || getBackend() === 'blob';
+}
+
+/** Shared backend selector for booking durability helpers such as slot leases. */
+export function usesBlobBookingStorage(): boolean {
+  return getBackend() === 'blob';
 }
 
 function collectionPrefix(collection: Collection): string {
@@ -56,6 +90,135 @@ function blobPath(collection: Collection, id: string): string {
 
 function filePath(collection: Collection, id: string): string {
   return path.join(BOOKINGS_ROOT, collection, `${id}.json`);
+}
+
+function normalizeClaimIdentifier(value: string, label: string): string {
+  const normalized = value.trim();
+  if (!normalized || normalized.length > 200) {
+    throw new TypeError(`${label} must be between 1 and 200 characters.`);
+  }
+  return normalized;
+}
+
+function paymentIntentClaimKey(paymentIntentId: string): string {
+  return createHash('sha256').update(paymentIntentId).digest('hex');
+}
+
+function paymentIntentClaimBlobPath(paymentIntentId: string): string {
+  return `${PAYMENT_INTENT_CLAIMS_PREFIX}${paymentIntentClaimKey(paymentIntentId)}.json`;
+}
+
+function paymentIntentClaimFilePath(paymentIntentId: string): string {
+  return path.join(
+    BOOKINGS_ROOT,
+    'payment-intent-claims',
+    `${paymentIntentClaimKey(paymentIntentId)}.json`,
+  );
+}
+
+function parsePaymentIntentClaim(raw: string): PaymentIntentClaimRecord | null {
+  try {
+    const parsed = JSON.parse(raw) as Partial<PaymentIntentClaimRecord>;
+    if (
+      typeof parsed.paymentIntentId !== 'string'
+      || typeof parsed.bookingId !== 'string'
+      || typeof parsed.claimedAt !== 'string'
+    ) {
+      return null;
+    }
+    return {
+      paymentIntentId: parsed.paymentIntentId,
+      bookingId: parsed.bookingId,
+      claimedAt: parsed.claimedAt,
+    };
+  } catch {
+    return null;
+  }
+}
+
+async function readFilePaymentIntentClaim(
+  target: string,
+  attempts = 1,
+): Promise<PaymentIntentClaimRecord | null> {
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    try {
+      const claim = parsePaymentIntentClaim(await fs.readFile(target, 'utf8'));
+      if (claim || attempt === attempts - 1) return claim;
+    } catch (error) {
+      if (
+        error instanceof Error
+        && 'code' in error
+        && error.code === 'ENOENT'
+      ) {
+        return null;
+      }
+      if (attempt === attempts - 1) return null;
+    }
+    await new Promise<void>((resolve) => setTimeout(resolve, 5));
+  }
+  return null;
+}
+
+async function readBlobPaymentIntentClaim(
+  pathname: string,
+): Promise<{ claim: PaymentIntentClaimRecord; etag: string } | null> {
+  const result = await get(pathname, { access: 'private', useCache: false });
+  if (result?.statusCode !== 200 || !result.stream) return null;
+  const claim = parsePaymentIntentClaim(await new Response(result.stream).text());
+  if (!claim) return null;
+  return { claim, etag: result.blob.etag };
+}
+
+async function findPersistedBookingIdsByPaymentIntent(
+  paymentIntentId: string,
+): Promise<string[]> {
+  const bookingIds: string[] = [];
+
+  if (getBackend() === 'blob') {
+    let cursor: string | undefined;
+    do {
+      const result = await list({
+        prefix: collectionPrefix('bookings'),
+        ...(cursor ? { cursor } : {}),
+      });
+      for (const blob of result.blobs) {
+        const item = await get(blob.pathname, { access: 'private', useCache: false });
+        if (item?.statusCode !== 200 || !item.stream) continue;
+        const booking = JSON.parse(await new Response(item.stream).text()) as Booking & {
+          deleted?: boolean;
+        };
+        if (!booking.deleted && booking.paymentIntentId === paymentIntentId) {
+          bookingIds.push(booking.bookingId);
+        }
+      }
+      if (result.hasMore && !result.cursor) {
+        throw new Error('Blob booking list pagination returned no cursor.');
+      }
+      cursor = result.hasMore ? result.cursor : undefined;
+    } while (cursor);
+    return bookingIds;
+  }
+
+  const directory = path.join(BOOKINGS_ROOT, 'bookings');
+  let files: string[];
+  try {
+    files = await fs.readdir(directory);
+  } catch (error) {
+    if (error instanceof Error && 'code' in error && error.code === 'ENOENT') {
+      return [];
+    }
+    throw error;
+  }
+  for (const file of files) {
+    if (!file.endsWith('.json')) continue;
+    const booking = JSON.parse(await fs.readFile(path.join(directory, file), 'utf8')) as Booking & {
+      deleted?: boolean;
+    };
+    if (!booking.deleted && booking.paymentIntentId === paymentIntentId) {
+      bookingIds.push(booking.bookingId);
+    }
+  }
+  return bookingIds;
 }
 
 async function writeJson(collection: Collection, id: string, data: unknown): Promise<void> {
@@ -147,6 +310,53 @@ async function withBookingWriteLock<T>(bookingId: string, operation: () => Promi
     release();
     if (bookingWriteQueues.get(bookingId) === queued) {
       bookingWriteQueues.delete(bookingId);
+    }
+  }
+}
+
+async function withPaymentIntentClaimLock<T>(
+  paymentIntentId: string,
+  operation: () => Promise<T>,
+): Promise<T> {
+  const key = paymentIntentClaimKey(paymentIntentId);
+  const previous = paymentIntentClaimQueues.get(key) ?? Promise.resolve();
+  let release!: () => void;
+  const gate = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  const queued = previous.catch(() => undefined).then(() => gate);
+  paymentIntentClaimQueues.set(key, queued);
+
+  await previous.catch(() => undefined);
+  try {
+    return await operation();
+  } finally {
+    release();
+    if (paymentIntentClaimQueues.get(key) === queued) {
+      paymentIntentClaimQueues.delete(key);
+    }
+  }
+}
+
+async function withPackageCreditWriteLock<T>(
+  creditId: string,
+  operation: () => Promise<T>,
+): Promise<T> {
+  const previous = packageCreditWriteQueues.get(creditId) ?? Promise.resolve();
+  let release!: () => void;
+  const gate = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  const queued = previous.catch(() => undefined).then(() => gate);
+  packageCreditWriteQueues.set(creditId, queued);
+
+  await previous.catch(() => undefined);
+  try {
+    return await operation();
+  } finally {
+    release();
+    if (packageCreditWriteQueues.get(creditId) === queued) {
+      packageCreditWriteQueues.delete(creditId);
     }
   }
 }
@@ -644,6 +854,97 @@ export async function savePackageCredit(credit: BookingPackageCredit): Promise<v
   });
 }
 
+function normalizePackageCreditForStorage(credit: BookingPackageCredit): BookingPackageCredit {
+  return {
+    ...credit,
+    customerEmail: normalizeEmail(credit.customerEmail),
+  };
+}
+
+async function readPackageCreditForMutation(
+  creditId: string,
+): Promise<{ credit: BookingPackageCredit; etag?: string } | null> {
+  if (getBackend() === 'blob') {
+    const result = await get(blobPath('package-credits', creditId), {
+      access: 'private',
+      useCache: false,
+    });
+    if (result === null) return null;
+    if (result.statusCode !== 200 || !result.stream || !result.blob.etag) {
+      throw new Error('Package credit storage returned an invalid record.');
+    }
+    const parsed = JSON.parse(await new Response(result.stream).text()) as BookingPackageCredit;
+    if (!parsed || typeof parsed !== 'object' || parsed.creditId !== creditId) {
+      throw new Error('Package credit storage contains malformed data.');
+    }
+    return { credit: parsed, etag: result.blob.etag };
+  }
+
+  try {
+    const parsed = JSON.parse(await fs.readFile(filePath('package-credits', creditId), 'utf8')) as BookingPackageCredit;
+    if (!parsed || typeof parsed !== 'object' || parsed.creditId !== creditId) {
+      throw new Error('Package credit storage contains malformed data.');
+    }
+    return { credit: parsed };
+  } catch (error) {
+    if (error instanceof Error && 'code' in error && error.code === 'ENOENT') return null;
+    throw error;
+  }
+}
+
+/**
+ * Applies a credit mutation to the existing raw package-credit JSON record.
+ * Blob writes are ETag-conditional, preserving the established record format
+ * while retrying a pure reducer against a fresh read after contention.
+ */
+export async function mutatePackageCredit<T>(
+  creditId: string,
+  reducer: (
+    credit: BookingPackageCredit,
+  ) => PackageCreditMutation<T> | null | Promise<PackageCreditMutation<T> | null>,
+): Promise<T | null> {
+  if (getBackend() === 'file') {
+    return withPackageCreditWriteLock(creditId, async () => {
+      const current = await readPackageCreditForMutation(creditId);
+      if (!current) return null;
+      const mutation = await reducer(current.credit);
+      if (!mutation) return null;
+      await savePackageCredit(mutation.next);
+      return mutation.result;
+    });
+  }
+
+  for (let attempt = 0; attempt < PACKAGE_CREDIT_MUTATION_ATTEMPTS; attempt += 1) {
+    const current = await readPackageCreditForMutation(creditId);
+    if (!current?.etag) return null;
+    const mutation = await reducer(current.credit);
+    if (!mutation) return null;
+    try {
+      await put(
+        blobPath('package-credits', creditId),
+        JSON.stringify(normalizePackageCreditForStorage(mutation.next), null, 2),
+        {
+          access: 'private',
+          addRandomSuffix: false,
+          allowOverwrite: true,
+          contentType: 'application/json',
+          ifMatch: current.etag,
+        },
+      );
+      return mutation.result;
+    } catch (error) {
+      if (
+        !(error instanceof BlobPreconditionFailedError)
+        || attempt === PACKAGE_CREDIT_MUTATION_ATTEMPTS - 1
+      ) {
+        throw error;
+      }
+    }
+  }
+
+  return null;
+}
+
 export async function getStaffAvailability(staffId: string): Promise<StaffAvailability> {
   await ensureSeedData();
   const existing = await readJson<StaffAvailability>('availability', staffId);
@@ -670,6 +971,129 @@ export async function listAvailability(): Promise<StaffAvailability[]> {
 
 export async function getBooking(bookingId: string): Promise<Booking | null> {
   return readJson<Booking>('bookings', bookingId);
+}
+
+/**
+ * Reserves a Stripe PaymentIntent for one booking. The hashed, fixed pathname
+ * prevents identifier traversal and the backend's create-only primitive makes
+ * competing booking claims fail closed.
+ */
+export async function claimBookingPaymentIntent(
+  paymentIntentId: string,
+  bookingId: string,
+): Promise<PaymentIntentClaimResult> {
+  const normalizedPaymentIntentId = normalizeClaimIdentifier(paymentIntentId, 'paymentIntentId');
+  const normalizedBookingId = normalizeClaimIdentifier(bookingId, 'bookingId');
+  const persistedBookingIds = await findPersistedBookingIdsByPaymentIntent(
+    normalizedPaymentIntentId,
+  );
+  if (persistedBookingIds.some((persistedBookingId) => persistedBookingId !== normalizedBookingId)) {
+    return { claimed: false };
+  }
+  const isPersistedBySameBooking = persistedBookingIds.length > 0;
+  const claim: PaymentIntentClaimRecord = {
+    paymentIntentId: normalizedPaymentIntentId,
+    bookingId: normalizedBookingId,
+    claimedAt: nowIso(),
+  };
+  const serialized = JSON.stringify(claim);
+
+  if (getBackend() === 'blob') {
+    const pathname = paymentIntentClaimBlobPath(normalizedPaymentIntentId);
+    try {
+      await put(pathname, serialized, {
+        access: 'private',
+        addRandomSuffix: false,
+        allowOverwrite: false,
+        contentType: 'application/json',
+      });
+      return { claimed: true, idempotent: isPersistedBySameBooking };
+    } catch (error) {
+      const existing = await readBlobPaymentIntentClaim(pathname);
+      if (!existing) throw error;
+      if (
+        existing.claim.paymentIntentId === normalizedPaymentIntentId
+        && existing.claim.bookingId === normalizedBookingId
+      ) {
+        return { claimed: true, idempotent: true };
+      }
+      return { claimed: false };
+    }
+  }
+
+  const target = paymentIntentClaimFilePath(normalizedPaymentIntentId);
+  await fs.mkdir(path.dirname(target), { recursive: true });
+  return withPaymentIntentClaimLock(normalizedPaymentIntentId, async () => {
+    let handle: Awaited<ReturnType<typeof fs.open>> | undefined;
+    try {
+      handle = await fs.open(target, 'wx');
+      await handle.writeFile(serialized, 'utf8');
+      return { claimed: true, idempotent: isPersistedBySameBooking };
+    } catch (error) {
+      if (!(error instanceof Error && 'code' in error && error.code === 'EEXIST')) {
+        throw error;
+      }
+      // Another process can observe EEXIST just before the creator finishes its
+      // small JSON write, so retry the read briefly before failing closed.
+      const existing = await readFilePaymentIntentClaim(target, 10);
+      if (
+        existing?.paymentIntentId === normalizedPaymentIntentId
+        && existing.bookingId === normalizedBookingId
+      ) {
+        return { claimed: true, idempotent: true };
+      }
+      return { claimed: false };
+    } finally {
+      await handle?.close();
+    }
+  });
+}
+
+/**
+ * Releases a claim after a failed booking save. A booking can release only its
+ * own claim; Blob deletion is additionally guarded by the version read.
+ */
+export async function releaseBookingPaymentIntentClaim(
+  paymentIntentId: string,
+  bookingId: string,
+): Promise<boolean> {
+  const normalizedPaymentIntentId = normalizeClaimIdentifier(paymentIntentId, 'paymentIntentId');
+  const normalizedBookingId = normalizeClaimIdentifier(bookingId, 'bookingId');
+
+  if (getBackend() === 'blob') {
+    const pathname = paymentIntentClaimBlobPath(normalizedPaymentIntentId);
+    const existing = await readBlobPaymentIntentClaim(pathname);
+    if (
+      !existing
+      || existing.claim.paymentIntentId !== normalizedPaymentIntentId
+      || existing.claim.bookingId !== normalizedBookingId
+    ) {
+      return false;
+    }
+    await del(pathname, { ifMatch: existing.etag });
+    return true;
+  }
+
+  const target = paymentIntentClaimFilePath(normalizedPaymentIntentId);
+  return withPaymentIntentClaimLock(normalizedPaymentIntentId, async () => {
+    const existing = await readFilePaymentIntentClaim(target);
+    if (
+      !existing
+      || existing.paymentIntentId !== normalizedPaymentIntentId
+      || existing.bookingId !== normalizedBookingId
+    ) {
+      return false;
+    }
+    try {
+      await fs.unlink(target);
+      return true;
+    } catch (error) {
+      if (error instanceof Error && 'code' in error && error.code === 'ENOENT') {
+        return false;
+      }
+      throw error;
+    }
+  });
 }
 
 export async function saveBooking(booking: Booking): Promise<void> {

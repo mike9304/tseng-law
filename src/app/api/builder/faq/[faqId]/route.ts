@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   deleteFaqItem,
   loadFaqItem,
@@ -54,8 +53,9 @@ function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
   return normalizeLocale(queryLocale);
 }
 
-export async function GET(request: NextRequest, { params }: { params: { faqId: string } }) {
-  const auth = requireBuilderAdminAuth(request);
+export async function GET(request: NextRequest, props: { params: Promise<{ faqId: string }> }) {
+  const params = await props.params;
+  const auth = await guardBuilderReadWithPermission(request, 'edit-pages');
   if (auth instanceof NextResponse) return auth;
   const locale = resolveRequestLocale(request);
 
@@ -69,7 +69,8 @@ export async function GET(request: NextRequest, { params }: { params: { faqId: s
   }
 }
 
-export async function PATCH(request: NextRequest, { params }: { params: { faqId: string } }) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ faqId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
@@ -96,7 +97,8 @@ export async function PATCH(request: NextRequest, { params }: { params: { faqId:
   }
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { faqId: string } }) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ faqId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
   const locale = resolveRequestLocale(request);

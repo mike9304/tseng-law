@@ -1,7 +1,6 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   createCustomerSubscription,
   createSubscriptionPlan,
@@ -10,12 +9,15 @@ import {
 } from '@/lib/builder/commerce/subscriptions-store';
 import { GET, POST } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/commerce/subscriptions-store', () => ({
@@ -68,7 +70,7 @@ const subscriptionInput = {
   customer: { email: 'customer@example.com', locale: 'ko' },
 };
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const createCustomerSubscriptionMock = vi.mocked(createCustomerSubscription);
 const createSubscriptionPlanMock = vi.mocked(createSubscriptionPlan);
@@ -90,8 +92,14 @@ function postRequest(query = '', body: string | unknown = subscriptionInput): Ne
 describe('builder commerce subscriptions API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     createCustomerSubscriptionMock.mockResolvedValue({ value: subscription } as never);
     createSubscriptionPlanMock.mockResolvedValue(plan as never);
     listCustomerSubscriptionsMock.mockResolvedValue([subscription] as never);
@@ -145,7 +153,10 @@ describe('builder commerce subscriptions API', () => {
       subscriptions: [subscription],
       totals: { plans: 1, subscriptions: 1 },
     });
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
     expect(listCustomerSubscriptionsMock).toHaveBeenCalledWith({
       planId: undefined,
       status: undefined,

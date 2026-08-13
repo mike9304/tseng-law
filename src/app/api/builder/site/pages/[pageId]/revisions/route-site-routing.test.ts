@@ -109,7 +109,7 @@ describe('/api/builder/site/pages/[pageId]/revisions selected site routing', () 
 
   it('lists revisions only after confirming the page belongs to the selected editor site', async () => {
     const response = await route.GET(getRequest('?locale=ko', { referer: EDITOR_REFERRER }), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
 
     expect(response.status).toBe(200);
@@ -118,7 +118,7 @@ describe('/api/builder/site/pages/[pageId]/revisions selected site routing', () 
   });
 
   it('does not list selected-site revisions through a default-site request', async () => {
-    const response = await route.GET(getRequest(), { params: { pageId: 'page-1' } });
+    const response = await route.GET(getRequest(), { params: Promise.resolve({ pageId: 'page-1' }) });
 
     expect(response.status).toBe(404);
     expect(mockedListRevisions).not.toHaveBeenCalled();
@@ -127,7 +127,7 @@ describe('/api/builder/site/pages/[pageId]/revisions selected site routing', () 
   it('reads revision detail from the selected site namespace', async () => {
     const response = await route.GET(
       getRequest('?locale=ko&revisionId=rev-selected', { referer: EDITOR_REFERRER }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
 
     expect(response.status).toBe(200);
@@ -147,7 +147,7 @@ describe('/api/builder/site/pages/[pageId]/revisions selected site routing', () 
     ));
 
     const response = await route.GET(getRequest('?locale=ko&revisionId=rev-selected'), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
 
     expect(response.status).toBe(404);
@@ -165,7 +165,7 @@ describe('/api/builder/site/pages/[pageId]/revisions selected site routing', () 
 
   it('snapshots the selected editor site draft when legacy body siteId is default', async () => {
     const response = await route.POST(postRequest({ siteId: 'default', source: 'manual' }), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
     const payload = await response.json();
 
@@ -182,7 +182,7 @@ describe('/api/builder/site/pages/[pageId]/revisions selected site routing', () 
 
   it('records an explicit document in the selected editor site namespace', async () => {
     const response = await route.POST(postRequest({ document, source: 'manual-explicit' }), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
 
     expect(response.status).toBe(200);
@@ -205,7 +205,7 @@ describe('/api/builder/site/pages/[pageId]/revisions selected site routing', () 
         { siteId: SELECTED_SITE_ID, document },
         `?locale=ko&siteId=${encodeURIComponent(DEFAULT_BUILDER_SITE_ID)}`,
       ),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const payload = await response.json();
 

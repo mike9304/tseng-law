@@ -44,6 +44,7 @@ export default function HomeStatsSection({ locale }: { locale: SiteLocale }) {
     if (!hydrated) return;
     const root = rootRef.current;
     if (!root) return;
+    if (typeof IntersectionObserver === 'undefined') return;
     const observer = new IntersectionObserver(
       (entries) => {
         const first = entries[0];
@@ -66,7 +67,8 @@ export default function HomeStatsSection({ locale }: { locale: SiteLocale }) {
       return;
     }
 
-    // Start animation only after hydration + intersection (no SSR/client mismatch).
+    // The server and pre-intersection client always render final values. Reset only
+    // when the section is visible and an animation can immediately take over.
     setCounts(stats.items.map(() => 0));
     setDone(stats.items.map(() => false));
 

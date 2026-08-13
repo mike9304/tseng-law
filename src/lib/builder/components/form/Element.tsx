@@ -267,7 +267,12 @@ export default function FormElement({ node, mode = 'edit', locale = 'ko', childr
       const uploadLocale = typeof window !== 'undefined'
         ? window.location.pathname.split('/').filter(Boolean)[0] || 'ko'
         : 'ko';
-      const files = await uploadFormFiles(formEl, uploadLocale, copy.formRuntime.fileUploadFailedError);
+      const files = await uploadFormFiles(
+        formEl,
+        content.name,
+        uploadLocale,
+        copy.formRuntime.fileUploadFailedError,
+      );
       const res = await fetch('/api/forms/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -475,6 +480,7 @@ function focusFirstFieldError(formEl: HTMLFormElement, errors: Record<string, st
 
 async function uploadFormFiles(
   formEl: HTMLFormElement,
+  formId: string,
   locale: string,
   fallbackError: string,
 ): Promise<FormSubmissionFile[]> {
@@ -487,6 +493,7 @@ async function uploadFormFiles(
     for (const file of Array.from(input.files ?? [])) {
       if (file.size <= 0) continue;
       const body = new FormData();
+      body.set('formId', formId);
       body.set('fieldId', input.name);
       body.set('locale', locale);
       body.set('file', file);

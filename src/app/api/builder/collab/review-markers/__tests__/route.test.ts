@@ -1,14 +1,14 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   createReviewMarker,
   listReviewMarkers,
 } from '@/lib/builder/collab/review-markers';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { GET, POST } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => null),
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'editor@example.test' })),
   guardMutation: vi.fn(async () => ({ username: 'editor@example.test' })),
 }));
 
@@ -37,7 +37,7 @@ const marker = {
 };
 
 const createReviewMarkerMock = vi.mocked(createReviewMarker);
-const guardBuilderReadMock = vi.mocked(guardBuilderRead);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const listReviewMarkersMock = vi.mocked(listReviewMarkers);
 
@@ -72,7 +72,10 @@ function postRequest(
 describe('builder collab review markers API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    guardBuilderReadMock.mockReturnValue(null as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'editor@example.test',
+      permission: 'view-cms',
+    });
     guardMutationMock.mockResolvedValue({ username: 'editor@example.test' } as never);
     listReviewMarkersMock.mockResolvedValue([marker] as never);
     createReviewMarkerMock.mockResolvedValue(marker as never);
@@ -90,6 +93,26 @@ describe('builder collab review markers API', () => {
       includeResolved: true,
     });
     expect(payload).toEqual({ ok: true, markers: [marker] });
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-cms',
+    );
+  });
+
+  it('short-circuits missing view-cms permission before listing review markers', async () => {
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: view-cms' }, { status: 403 }),
+    );
+
+    const request = getRequest('siteId=site-1&pageId=page-1&locale=ko');
+    const response = await GET(request);
+
+    expect(response.status).toBe(403);
+    await expect(response.json()).resolves.toEqual({
+      error: 'Missing permission: view-cms',
+    });
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(request, 'view-cms');
+    expect(listReviewMarkersMock).not.toHaveBeenCalled();
   });
 
   it('returns review markers for the selected builder site from the editor referrer', async () => {

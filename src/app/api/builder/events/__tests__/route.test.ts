@@ -1,7 +1,6 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   createEvent,
   listEvents,
@@ -9,11 +8,11 @@ import {
 } from '@/lib/builder/events/events-engine';
 import { GET, POST } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-pages',
+  })),
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 
@@ -50,7 +49,7 @@ const eventRecord = {
   updatedAt: '2026-06-03T00:00:00.000Z',
 };
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const createEventMock = vi.mocked(createEvent);
 const listEventsMock = vi.mocked(listEvents);
@@ -88,7 +87,10 @@ function postRequest(
 describe('/api/builder/events', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'edit-pages',
+    });
     guardMutationMock.mockResolvedValue({ username: 'admin' } as never);
     listEventsMock.mockResolvedValue([eventRecord] as never);
     createEventMock.mockResolvedValue(eventRecord as never);
@@ -96,17 +98,39 @@ describe('/api/builder/events', () => {
   });
 
   it('returns events while preserving success response shape', async () => {
-    const response = await GET(getRequest('locale=ko&scope=all&status=all&time=all'));
+    const req = getRequest('locale=ko&scope=all&status=all&time=all');
+    const response = await GET(req);
     const payload = await response.json();
 
     expect(response.status).toBe(200);
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(req, 'edit-pages');
     expect(payload).toEqual({
       ok: true,
       locale: 'ko',
       total: 1,
       events: [eventRecord],
     });
+  });
+
+  it('short-circuits a missing edit-pages permission for scope=all with 403', async () => {
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: edit-pages' }, { status: 403 }),
+    );
+    const req = getRequest('locale=ko&scope=all&status=all&time=all');
+
+    const response = await GET(req);
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(req, 'edit-pages');
+    expect(listEventsMock).not.toHaveBeenCalled();
+  });
+
+  it('keeps the published public list readable without an admin permission check', async () => {
+    const response = await GET(getRequest('locale=ko&scope=public&status=published&time=all'));
+
+    expect(response.status).toBe(200);
+    expect(guardBuilderReadWithPermissionMock).not.toHaveBeenCalled();
+    expect(listEventsMock).toHaveBeenCalled();
   });
 
   it('returns localized query validation errors', async () => {

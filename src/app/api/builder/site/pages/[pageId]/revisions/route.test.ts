@@ -106,7 +106,7 @@ describe('/api/builder/site/pages/[pageId]/revisions', () => {
   it('returns localized stable-code JSON when a requested revision is missing', async () => {
     mockedReadRevisionDocument.mockResolvedValueOnce(null);
     const response = await route.GET(getRequest('?revisionId=rev-missing&locale=zh-hant'), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
     const data = await response.json();
 
@@ -125,7 +125,7 @@ describe('/api/builder/site/pages/[pageId]/revisions', () => {
 
   it('returns localized stable-code JSON when revision list loading fails', async () => {
     mockedListRevisions.mockRejectedValueOnce(new Error('raw revision list failure'));
-    const response = await route.GET(getRequest('?locale=en'), { params: { pageId: 'page-1' } });
+    const response = await route.GET(getRequest('?locale=en'), { params: Promise.resolve({ pageId: 'page-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(500);
@@ -140,7 +140,7 @@ describe('/api/builder/site/pages/[pageId]/revisions', () => {
 
   it('returns localized stable-code JSON when there is no draft to snapshot', async () => {
     mockedReadPageCanvasRecordState.mockResolvedValueOnce(null);
-    const response = await route.POST(postRequest({}, '?locale=ko'), { params: { pageId: 'page-1' } });
+    const response = await route.POST(postRequest({}, '?locale=ko'), { params: Promise.resolve({ pageId: 'page-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(404);
@@ -154,7 +154,7 @@ describe('/api/builder/site/pages/[pageId]/revisions', () => {
 
   it('returns localized stable-code JSON when revision creation fails', async () => {
     mockedRecordRevision.mockRejectedValueOnce(new Error('revision_write_failed'));
-    const response = await route.POST(postRequest({ document }, '?locale=zh-hant'), { params: { pageId: 'page-1' } });
+    const response = await route.POST(postRequest({ document }, '?locale=zh-hant'), { params: Promise.resolve({ pageId: 'page-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(500);
@@ -174,7 +174,7 @@ describe('/api/builder/site/pages/[pageId]/revisions', () => {
 
   it('rejects a malformed snapshot site id before any revision read or write', async () => {
     const response = await route.POST(postRequest({ siteId: ['workspace-site-b'], document }), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
     const data = await response.json();
 

@@ -106,7 +106,7 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish selected site routi
   });
 
   it('loads the active scheduled publish from the selected editor site', async () => {
-    await route.GET(request('GET'), { params: { pageId: 'page-1' } });
+    await route.GET(request('GET'), { params: Promise.resolve({ pageId: 'page-1' }) });
 
     expect(mockedGetActiveScheduledPublish).toHaveBeenCalledWith(SELECTED_SITE_ID, 'page-1');
   });
@@ -118,7 +118,7 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish selected site routi
       locale: 'ko',
       expectedDraftRevision: 3,
       translationSiteReview,
-    }), { params: { pageId: 'page-1' } });
+    }), { params: Promise.resolve({ pageId: 'page-1' }) });
 
     expect(mockedEvaluateTranslationReleasePolicyForPublish).toHaveBeenCalledWith(
       expect.objectContaining({ siteId: SELECTED_SITE_ID, pageId: 'page-1' }),
@@ -136,7 +136,7 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish selected site routi
   });
 
   it('cancels scheduled publishes from the selected editor site', async () => {
-    await route.DELETE(request('DELETE'), { params: { pageId: 'page-1' } });
+    await route.DELETE(request('DELETE'), { params: Promise.resolve({ pageId: 'page-1' }) });
 
     expect(mockedCancelScheduledPublishes).toHaveBeenCalledWith(
       SELECTED_SITE_ID,

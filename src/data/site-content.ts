@@ -1,3 +1,8 @@
+import {
+  getConsultationPublicEmail,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
+
 export type NavItem = {
   label: string;
   href: string;
@@ -63,6 +68,11 @@ export type VideoItem = {
   duration?: string;
   href: string;
   image: string;
+  video?: {
+    webm: string;
+    mp4: string;
+    alt: string;
+  };
 };
 
 export type SiteContent = {
@@ -214,6 +224,15 @@ export type SiteContent = {
   };
 };
 
+export const consultationEmail = getConsultationPublicEmail();
+
+export const consultationMailto = {
+  ko: getConsultationPublicMailto('ko'),
+  'zh-hant': getConsultationPublicMailto('zh-hant'),
+  en: getConsultationPublicMailto('en'),
+  ja: getConsultationPublicMailto('ja'),
+} as const;
+
 const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
   ko: {
     meta: {
@@ -278,7 +297,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         ],
         topics: ['네이버 블로그', 'WEI Lawyer', '대만 법률', '상담 절차']
       },
-      cta: { label: '상담 문의', href: '/ko/contact' },
+      cta: { label: '이메일 상담 신청', href: consultationMailto.ko },
       searchLabel: '검색',
       languageLabel: '언어'
     },
@@ -306,8 +325,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         { label: 'FAQ', href: '/ko/faq' }
       ],
       secondaryLinks: [
-        { label: '업무분야 보기', href: '/ko/services' },
-        { label: '문의하기', href: '/ko/contact' }
+        { label: '이메일 상담 신청', href: consultationMailto.ko },
+        { label: '호정칼럼 보기', href: '/ko/columns' }
       ]
     },
     heroHighlights: {
@@ -785,7 +804,12 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         title: 'WEI Lawyer 유튜브 채널',
         duration: 'YouTube',
         href: 'https://www.youtube.com/@weilawyer',
-        image: '/images/video-feature.svg'
+        image: '/images/editorial/pingtung-court-daylight.webp',
+        video: {
+          webm: '/videos/pingtung-court-daylight.webm',
+          mp4: '/videos/pingtung-court-daylight.mp4',
+          alt: '대만 법원 건축에서 영감을 받은 밝은 핑둥 도심 장면'
+        }
       },
       items: [
         {
@@ -804,7 +828,12 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '법무법인 호정',
           duration: '웹사이트',
           href: 'https://www.hoveringlaw.com.tw/kr/wei.html',
-          image: '/images/video-3.svg'
+          image: '/images/editorial/taiwan-courtroom-daylight.webp',
+          video: {
+            webm: '/videos/taiwan-courtroom-daylight.webm',
+            mp4: '/videos/taiwan-courtroom-daylight.mp4',
+            alt: '대만 법정 공간에서 영감을 받아 연출한 밝은 실내 장면'
+          }
         },
         {
           title: '연락처 안내',
@@ -826,11 +855,9 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       buttonLabel: '빠른 상담 열기',
       panelTitle: '빠른 상담',
       actions: [
-        { label: 'AI 상담', value: 'AI가 초기 안내를 도와드립니다', href: '#ai-consultation' },
-        { label: '이메일', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' },
-        { label: '전화 (한국)', value: '010-2992-9304', href: 'tel:+821029929304' },
+        { label: '이메일 상담', value: consultationEmail, href: consultationMailto.ko },
       ],
-      cta: { label: '상담 페이지', href: '/ko/contact' }
+      cta: { label: '이메일 상담 신청', href: consultationMailto.ko }
     },
     contact: {
       label: 'CONTACT',
@@ -840,13 +867,12 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       inquiries: [
         {
           title: '사업·투자 문의',
-          details: ['전화: +82-10-2992-9304', '이메일: wei@hoveringlaw.com.tw']
+          details: ['이메일: wei@hoveringlaw.com.tw']
         },
         {
           title: '미디어 문의',
           details: [
             '이메일: wei@hoveringlaw.com.tw',
-            '카카오톡: 채널 상담',
             '접수 시 제목에 [미디어 문의] 표기'
           ]
         },
@@ -854,7 +880,6 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '채용 문의',
           details: [
             '이메일: wei@hoveringlaw.com.tw',
-            '전화: +82-10-2992-9304',
             '접수 시 제목에 [채용 문의] 표기'
           ]
         },
@@ -868,13 +893,13 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         {
           title: '타이베이 사무소',
           details: [
-            '台北市大同區承德路一段35號7樓之2'
+            '103臺北市大同區承德路一段35號7樓之2'
           ]
         },
         {
           title: '타이중 사무소',
           details: [
-            '臺中市北區館前路19號樓之1',
+            '40453臺中市北區館前路19號6樓之1',
             'Tel: 04-2326-1862',
             'Fax: 04-2326-1863'
           ]
@@ -882,12 +907,21 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         {
           title: '가오슝 사무소',
           details: [
-            '高雄市左營區安吉街233號',
-            'Tel: 07-557-9797'
+            '81358高雄市左營區安吉街233號',
+            'Tel: 07-557-9797',
+            'Fax: 07-557-7171'
+          ]
+        },
+        {
+          title: '핑둥 사무소',
+          details: [
+            '90443屏東縣九如鄉九如路三段46號',
+            'Tel: 08-739-1689',
+            'Fax: 08-739-7362'
           ]
         }
       ],
-      cta: { label: '문의 페이지', href: '/ko/contact' }
+      cta: { label: '이메일 상담 신청', href: consultationMailto.ko }
     },
     homeContactCta: {
       title: '대만 법률 이슈, 지금 바로 상담하세요.',
@@ -901,7 +935,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           links: [
             { label: '사무소 소개', href: '/ko/about' },
             { label: '변호사 소개', href: '/ko/lawyers' },
-            { label: '상담 문의', href: '/ko/contact' }
+            { label: '이메일 상담 신청', href: consultationMailto.ko }
           ]
         },
         {
@@ -1008,7 +1042,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         ],
         topics: ['Naver 部落格', 'WEI Lawyer', '台灣法律', '諮詢流程']
       },
-      cta: { label: '聯絡諮詢', href: '/zh-hant/contact' },
+      cta: { label: '電子郵件諮詢', href: consultationMailto['zh-hant'] },
       searchLabel: '搜尋',
       languageLabel: '語言'
     },
@@ -1035,8 +1069,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         { label: 'FAQ', href: '/zh-hant/faq' }
       ],
       secondaryLinks: [
-        { label: '查看服務領域', href: '/zh-hant/services' },
-        { label: '聯絡我們', href: '/zh-hant/contact' }
+        { label: '電子郵件諮詢', href: consultationMailto['zh-hant'] },
+        { label: '查看專欄', href: '/zh-hant/columns' }
       ]
     },
     heroHighlights: {
@@ -1520,7 +1554,12 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         title: 'WEI Lawyer YouTube 頻道',
         duration: 'YouTube',
         href: 'https://www.youtube.com/@weilawyer',
-        image: '/images/video-feature.svg'
+        image: '/images/editorial/pingtung-court-daylight.webp',
+        video: {
+          webm: '/videos/pingtung-court-daylight.webm',
+          mp4: '/videos/pingtung-court-daylight.mp4',
+          alt: '以台灣法院建築為靈感的明亮屏東城市場景'
+        }
       },
       items: [
         {
@@ -1539,7 +1578,12 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '昊鼎國際法律事務所',
           duration: '網站',
           href: 'https://www.hoveringlaw.com.tw/zh/wei.html',
-          image: '/images/video-3.svg'
+          image: '/images/editorial/taiwan-courtroom-daylight.webp',
+          video: {
+            webm: '/videos/taiwan-courtroom-daylight.webm',
+            mp4: '/videos/taiwan-courtroom-daylight.mp4',
+            alt: '以台灣法庭空間為靈感呈現的明亮室內場景'
+          }
         },
         {
           title: '聯絡我們',
@@ -1560,11 +1604,9 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       buttonLabel: '開啟快速諮詢',
       panelTitle: '快速諮詢',
       actions: [
-        { label: 'AI 諮詢', value: 'AI 協助初步引導', href: '#ai-consultation' },
-        { label: '電子郵件', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' },
-        { label: '電話 (韓國)', value: '+82-10-2992-9304', href: 'tel:+821029929304' },
+        { label: '電子郵件諮詢', value: consultationEmail, href: consultationMailto['zh-hant'] },
       ],
-      cta: { label: '諮詢頁面', href: '/zh-hant/contact' }
+      cta: { label: '電子郵件諮詢', href: consultationMailto['zh-hant'] }
     },
     contact: {
       label: 'CONTACT',
@@ -1574,13 +1616,12 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       inquiries: [
         {
           title: '商務/投資詢問',
-          details: ['電話: +82-10-2992-9304', 'Email: wei@hoveringlaw.com.tw']
+          details: ['Email: wei@hoveringlaw.com.tw']
         },
         {
           title: '媒體詢問',
           details: [
             'Email: wei@hoveringlaw.com.tw',
-            'KakaoTalk: 頻道諮詢',
             '來信標題請註明 [媒體詢問]'
           ]
         },
@@ -1588,7 +1629,6 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '招募詢問',
           details: [
             'Email: wei@hoveringlaw.com.tw',
-            '電話: +82-10-2992-9304',
             '來信標題請註明 [招募詢問]'
           ]
         },
@@ -1602,13 +1642,13 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         {
           title: '台北所',
           details: [
-            '台北市大同區承德路一段35號7樓之2'
+            '103臺北市大同區承德路一段35號7樓之2'
           ]
         },
         {
           title: '台中所',
           details: [
-            '臺中市北區館前路19號樓之1',
+            '40453臺中市北區館前路19號6樓之1',
             'Tel: 04-2326-1862',
             'Fax: 04-2326-1863'
           ]
@@ -1616,12 +1656,21 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         {
           title: '高雄所',
           details: [
-            '高雄市左營區安吉街233號',
-            'Tel: 07-557-9797'
+            '81358高雄市左營區安吉街233號',
+            'Tel: 07-557-9797',
+            'Fax: 07-557-7171'
+          ]
+        },
+        {
+          title: '屏東所',
+          details: [
+            '90443屏東縣九如鄉九如路三段46號',
+            'Tel: 08-739-1689',
+            'Fax: 08-739-7362'
           ]
         }
       ],
-      cta: { label: '聯絡頁', href: '/zh-hant/contact' }
+      cta: { label: '電子郵件諮詢', href: consultationMailto['zh-hant'] }
     },
     homeContactCta: {
       title: '台灣法律議題，立即諮詢。',
@@ -1635,7 +1684,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           links: [
             { label: '事務所簡介', href: '/zh-hant/about' },
             { label: '律師介紹', href: '/zh-hant/lawyers' },
-            { label: '預約諮詢', href: '/zh-hant/contact' }
+            { label: '電子郵件諮詢', href: consultationMailto['zh-hant'] }
           ]
         },
         {
@@ -1749,7 +1798,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         ],
         topics: ['Columns', 'WEI Lawyer', 'Taiwan Law', 'Consultation Process']
       },
-      cta: { label: 'Book Consultation', href: '/en/contact' },
+      cta: { label: 'Email Consultation', href: consultationMailto.en },
       searchLabel: 'Search',
       languageLabel: 'Language'
     },
@@ -1778,8 +1827,8 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         { label: 'FAQ', href: '/en/faq' }
       ],
       secondaryLinks: [
-        { label: 'View Services', href: '/en/services' },
-        { label: 'Contact Us', href: '/en/contact' }
+        { label: 'Email Consultation', href: consultationMailto.en },
+        { label: 'View Columns', href: '/en/columns' }
       ]
     },
     heroHighlights: {
@@ -2051,7 +2100,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           relatedColumns: [
             { title: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages', slug: 'taiwan-gym-injury-lawsuit' },
             { title: 'Taiwan Traffic Accident Q&A: Scene Safety, Fault, Settlement, and Compensation', slug: 'taiwan-traffic-accident-procedure' },
-            { title: 'Who Is Liable in an Overtaking Accident?', slug: 'taiwan-overtaking-accident-liability' }
+            { title: 'How Is Liability Assessed After an Overtaking Accident in Taiwan?', slug: 'taiwan-overtaking-accident-liability' }
           ]
         },
         {
@@ -2268,7 +2317,12 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         title: 'WEI Lawyer YouTube Channel',
         duration: 'YouTube',
         href: 'https://www.youtube.com/@weilawyer',
-        image: '/images/video-feature.svg'
+        image: '/images/editorial/pingtung-court-daylight.webp',
+        video: {
+          webm: '/videos/pingtung-court-daylight.webm',
+          mp4: '/videos/pingtung-court-daylight.mp4',
+          alt: 'A bright Pingtung city scene inspired by Taiwan court architecture'
+        }
       },
       items: [
         {
@@ -2287,7 +2341,12 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           title: 'Hovering International Law Firm',
           duration: 'Website',
           href: 'https://www.hoveringlaw.com.tw/en/wei.html',
-          image: '/images/video-3.svg'
+          image: '/images/editorial/taiwan-courtroom-daylight.webp',
+          video: {
+            webm: '/videos/taiwan-courtroom-daylight.webm',
+            mp4: '/videos/taiwan-courtroom-daylight.mp4',
+            alt: 'A bright interior scene inspired by Taiwan courtroom architecture'
+          }
         },
         {
           title: 'Contact',
@@ -2311,11 +2370,9 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       buttonLabel: 'Open Quick Consult',
       panelTitle: 'Quick Consult',
       actions: [
-        { label: 'AI Consult', value: 'AI-assisted initial guidance', href: '#ai-consultation' },
-        { label: 'Email', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' },
-        { label: 'Phone (Korea)', value: '+82-10-2992-9304', href: 'tel:+821029929304' },
+        { label: 'Email Consultation', value: consultationEmail, href: consultationMailto.en },
       ],
-      cta: { label: 'Contact Page', href: '/en/contact' }
+      cta: { label: 'Email Consultation', href: consultationMailto.en }
     },
     contact: {
       ...base.contact,
@@ -2326,13 +2383,12 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       inquiries: [
         {
           title: 'Business & Investment',
-          details: ['Phone: +82-10-2992-9304', 'Email: wei@hoveringlaw.com.tw']
+          details: ['Email: wei@hoveringlaw.com.tw']
         },
         {
           title: 'Media Inquiry',
           details: [
             'Email: wei@hoveringlaw.com.tw',
-            'KakaoTalk: Channel Chat',
             'Please use subject line [Media Inquiry]'
           ]
         },
@@ -2340,7 +2396,6 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           title: 'Recruitment Inquiry',
           details: [
             'Email: wei@hoveringlaw.com.tw',
-            'Phone: +82-10-2992-9304',
             'Please use subject line [Recruitment Inquiry]'
           ]
         },
@@ -2353,18 +2408,22 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       locations: [
         {
           title: 'Taipei Office',
-          details: ['7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City']
+          details: ['103, 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City']
         },
         {
           title: 'Taichung Office',
-          details: ['No. 19, Guanqian Rd., North Dist., Taichung City', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
+          details: ['40453, 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
         },
         {
           title: 'Kaohsiung Office',
-          details: ['No. 233, Anji St., Zuoying Dist., Kaohsiung City', 'Tel: 07-557-9797']
+          details: ['81358, No. 233, Anji St., Zuoying Dist., Kaohsiung City', 'Tel: 07-557-9797', 'Fax: 07-557-7171']
+        },
+        {
+          title: 'Pingtung Office',
+          details: ['No. 46, Sec. 3, Jiuru Rd., Jiuru Township, Pingtung County 90443', 'Tel: 08-739-1689', 'Fax: 08-739-7362']
         }
       ],
-      cta: { label: 'Contact Page', href: '/en/contact' }
+      cta: { label: 'Email Consultation', href: consultationMailto.en }
     },
     homeContactCta: {
       title: 'Talk to us now about your Taiwan legal issue.',
@@ -2379,7 +2438,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           links: [
             { label: 'About', href: '/en/about' },
             { label: 'Lawyers', href: '/en/lawyers' },
-            { label: 'Consultation', href: '/en/contact' }
+            { label: 'Email Consultation', href: consultationMailto.en }
           ]
         },
         {
@@ -2497,7 +2556,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         ],
         topics: ['コラム', 'WEI Lawyer', '台湾法', '相談の流れ']
       },
-      cta: { label: '相談予約', href: '/ja/contact' },
+      cta: { label: 'メールで相談', href: consultationMailto.ja },
       searchLabel: '検索',
       languageLabel: '言語'
     },
@@ -2526,8 +2585,8 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         { label: 'FAQ', href: '/ja/faq' }
       ],
       secondaryLinks: [
-        { label: '取扱業務を見る', href: '/ja/services' },
-        { label: 'お問い合わせ', href: '/ja/contact' }
+        { label: 'メールで相談', href: consultationMailto.ja },
+        { label: 'コラムを見る', href: '/ja/columns' }
       ]
     },
     heroHighlights: {
@@ -3017,7 +3076,12 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         title: 'WEI Lawyer YouTubeチャンネル',
         duration: 'YouTube',
         href: 'https://www.youtube.com/@weilawyer',
-        image: '/images/video-feature.svg'
+        image: '/images/editorial/pingtung-court-daylight.webp',
+        video: {
+          webm: '/videos/pingtung-court-daylight.webm',
+          mp4: '/videos/pingtung-court-daylight.mp4',
+          alt: '台湾の裁判所建築に着想を得た、明るい屏東の都市風景'
+        }
       },
       items: [
         {
@@ -3036,7 +3100,12 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           title: '昊鼎国際法律事務所',
           duration: 'ウェブサイト',
           href: 'https://www.hoveringlaw.com.tw/en/wei.html',
-          image: '/images/video-3.svg'
+          image: '/images/editorial/taiwan-courtroom-daylight.webp',
+          video: {
+            webm: '/videos/taiwan-courtroom-daylight.webm',
+            mp4: '/videos/taiwan-courtroom-daylight.mp4',
+            alt: '台湾の法廷空間に着想を得て演出した、明るい室内風景'
+          }
         },
         {
           title: 'お問い合わせ',
@@ -3060,11 +3129,9 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       buttonLabel: 'クイック相談を開く',
       panelTitle: 'クイック相談',
       actions: [
-        { label: 'AI相談', value: 'AIによる初期案内', href: '#ai-consultation' },
-        { label: 'メール', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' },
-        { label: '電話（韓国）', value: '+82-10-2992-9304', href: 'tel:+821029929304' }
+        { label: 'メールで相談', value: consultationEmail, href: consultationMailto.ja }
       ],
-      cta: { label: 'お問い合わせページ', href: '/ja/contact' }
+      cta: { label: 'メールで相談', href: consultationMailto.ja }
     },
     contact: {
       ...base.contact,
@@ -3075,13 +3142,12 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       inquiries: [
         {
           title: 'ビジネス・投資',
-          details: ['電話：+82-10-2992-9304', 'メール：wei@hoveringlaw.com.tw']
+          details: ['メール：wei@hoveringlaw.com.tw']
         },
         {
           title: 'メディア取材',
           details: [
             'メール：wei@hoveringlaw.com.tw',
-            'KakaoTalk：チャンネルでお問い合わせ',
             '件名に【メディア取材】とご記入ください'
           ]
         },
@@ -3089,7 +3155,6 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           title: '採用に関するお問い合わせ',
           details: [
             'メール：wei@hoveringlaw.com.tw',
-            '電話：+82-10-2992-9304',
             '件名に【採用】とご記入ください'
           ]
         },
@@ -3102,18 +3167,22 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       locations: [
         {
           title: '台北事務所',
-          details: ['台北市大同区承徳路一段35号7F-2']
+          details: ['103 台北市大同区承徳路一段35号7F-2']
         },
         {
           title: '台中事務所',
-          details: ['台中市北区館前路19号', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
+          details: ['40453 台中市北区館前路19号6F-1', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
         },
         {
           title: '高雄事務所',
-          details: ['高雄市左営区安吉街233号', 'Tel: 07-557-9797']
+          details: ['81358 高雄市左営区安吉街233号', 'Tel: 07-557-9797', 'Fax: 07-557-7171']
+        },
+        {
+          title: '屏東事務所',
+          details: ['90443 屏東県九如郷九如路三段46号', 'Tel: 08-739-1689', 'Fax: 08-739-7362']
         }
       ],
-      cta: { label: 'お問い合わせページ', href: '/ja/contact' }
+      cta: { label: 'メールで相談', href: consultationMailto.ja }
     },
     homeContactCta: {
       title: '台湾の法律問題を、今すぐご相談ください。',
@@ -3128,7 +3197,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           links: [
             { label: '事務所紹介', href: '/ja/about' },
             { label: '弁護士', href: '/ja/lawyers' },
-            { label: '相談', href: '/ja/contact' }
+            { label: 'メールで相談', href: consultationMailto.ja }
           ]
         },
         {

@@ -242,8 +242,8 @@ describe('BuilderPageDatasetsPage', () => {
     });
 
     const element = await BuilderPageDatasetsPage({
-      params: { locale: 'ko', pageKey: 'home' },
-      searchParams: { targetId: 'home.services.list' },
+      params: Promise.resolve({ locale: 'ko', pageKey: 'home' }),
+      searchParams: Promise.resolve({ targetId: 'home.services.list' }),
     });
     const markup = renderToStaticMarkup(element);
 

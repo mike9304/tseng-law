@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { requireConsultationAdminAuth } from '@/lib/consultation/admin/auth';
 import { normalizeLocale } from '@/lib/locales';
 import type { ConsultationCategory } from '@/lib/consultation/types';
@@ -66,6 +67,9 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const auth = requireConsultationAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
 

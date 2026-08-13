@@ -10,6 +10,9 @@ import {
   getBuilderNotificationsApiErrorPayload,
   type BuilderNotificationsApiErrorCode,
 } from '@/lib/builder/notifications/notifications-api-copy';
+import { sanitizeNotificationLink } from '@/lib/builder/notifications/notification-link';
+import { safeEqualStrings } from '@/lib/builder/security/timing-safe';
+import { resolveUserRole } from '@/lib/builder/security/resolve-permission';
 import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
@@ -51,12 +54,17 @@ export async function GET(request: NextRequest) {
   const url = new URL(request.url);
   const locale = resolveRequestLocale(request);
   try {
+    const audienceScope = {
+      principal: auth.username,
+      role: await resolveUserRole(auth.username),
+    };
     const kindParam = url.searchParams.get('kind') as BuilderNotificationKind | null;
     const unreadOnly = url.searchParams.get('unreadOnly') === '1';
     const limit = Number(url.searchParams.get('limit') ?? 50);
     const items = await listNotifications({
       kind: kindParam && ALLOWED_KINDS.includes(kindParam) ? kindParam : undefined,
       unreadOnly,
+      audienceScope,
       limit: Number.isFinite(limit) && limit > 0 ? Math.min(limit, 200) : 50,
     });
     const unread = items.filter((n) => !n.readAt).length;
@@ -67,31 +75,20 @@ export async function GET(request: NextRequest) {
   }
 }
 
-/**
- * Internal POST is intentionally NOT auth-gated so server-side automations
- * (publish hooks, approval transitions, ecommerce events) can drop entries
- * without an admin session. To prevent open access the route requires
- * either a same-origin Referer or a matching `x-internal-source` header.
- */
 function isInternalRequest(request: NextRequest): boolean {
-  const headerSecret = process.env.BUILDER_INTERNAL_NOTIFY_SECRET;
-  if (headerSecret) {
-    const provided = request.headers.get('x-internal-source');
-    if (provided && provided === headerSecret) return true;
-  }
-  const origin = request.headers.get('origin') ?? '';
-  const referer = request.headers.get('referer') ?? '';
-  const host = request.headers.get('host') ?? '';
-  if (!host) return false;
-  if (origin && origin.includes(host)) return true;
-  if (referer && referer.includes(host)) return true;
-  return false;
+  const configuredSecret = process.env.BUILDER_INTERNAL_NOTIFY_SECRET;
+  if (!configuredSecret) return false;
+  return safeEqualStrings(request.headers.get('x-internal-source'), configuredSecret);
 }
 
 export async function POST(request: NextRequest) {
   let errorLocale = resolveRequestLocale(request);
   if (!isInternalRequest(request)) {
     return errorResponse(errorLocale, 'internal_only', 403);
+  }
+  const contentType = request.headers.get('content-type')?.split(';', 1)[0]?.trim().toLowerCase();
+  if (contentType !== 'application/json') {
+    return errorResponse(errorLocale, 'invalid_content_type', 415);
   }
   let raw: {
     kind?: unknown;
@@ -116,13 +113,22 @@ export async function POST(request: NextRequest) {
     return errorResponse(errorLocale, 'subject_required', 400);
   }
   const body = typeof raw?.body === 'string' ? raw.body : '';
-  const link = typeof raw?.link === 'string' ? raw.link : undefined;
+  const link = raw?.link === undefined ? undefined : sanitizeNotificationLink(raw.link);
+  if (raw?.link !== undefined && link === null) {
+    return errorResponse(errorLocale, 'invalid_link', 400);
+  }
   const audienceRaw = (raw?.audience ?? {}) as { email?: unknown; role?: unknown };
-  const audience: { email?: string; role?: 'owner' | 'editor' | 'reviewer' | 'viewer' } = {};
+  const audience: {
+    email?: string;
+    role?: 'owner' | 'admin' | 'designer' | 'editor' | 'client' | 'reviewer' | 'viewer';
+  } = {};
   if (typeof audienceRaw.email === 'string') audience.email = audienceRaw.email;
   if (
     audienceRaw.role === 'owner' ||
+    audienceRaw.role === 'admin' ||
+    audienceRaw.role === 'designer' ||
     audienceRaw.role === 'editor' ||
+    audienceRaw.role === 'client' ||
     audienceRaw.role === 'reviewer' ||
     audienceRaw.role === 'viewer'
   ) {
@@ -134,7 +140,7 @@ export async function POST(request: NextRequest) {
       subject,
       body,
       audience,
-      link,
+      link: link ?? undefined,
     });
     return NextResponse.json({ ok: true, notification }, { status: 201 });
   } catch (error) {
@@ -151,9 +157,14 @@ export async function PUT(request: NextRequest) {
   try {
     const raw = await request.json().catch(() => null) as { kind?: unknown; locale?: unknown } | null;
     errorLocale = resolveRequestLocale(request, raw);
+    const audienceScope = {
+      principal: auth.username,
+      role: await resolveUserRole(auth.username),
+    };
     const kind = raw?.kind as BuilderNotificationKind | undefined;
     const updated = await markAllRead({
       kind: kind && ALLOWED_KINDS.includes(kind) ? kind : undefined,
+      audienceScope,
     });
     return NextResponse.json({ ok: true, updated });
   } catch (error) {

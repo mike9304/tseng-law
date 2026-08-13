@@ -60,7 +60,8 @@ const columnKeywords: Record<SiteLocale, string[]> = {
   ja: ['台湾法律コラム', '台湾会社設立', '台湾訴訟事例', '台湾労働法', '台湾弁護士ブログ'],
 };
 
-export async function generateMetadata({ params }: { params: { locale: SiteLocale } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   // JA is file-backed only — never project a KO builder page onto /ja/columns.
   if (locale !== 'ja') {
@@ -80,13 +81,14 @@ export async function generateMetadata({ params }: { params: { locale: SiteLocal
   });
 }
 
-export default async function ColumnsPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: SiteLocale };
-  searchParams?: ColumnsSearchParams;
-}) {
+export default async function ColumnsPage(
+  props: {
+    params: Promise<{ locale: SiteLocale }>;
+    searchParams?: Promise<ColumnsSearchParams>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
 
   const publishedPage =

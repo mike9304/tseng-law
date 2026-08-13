@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { columnLocaleSchema } from '@/lib/builder/columns/types';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   createFaqItem,
   listFaqCategories,
@@ -64,7 +63,7 @@ function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = await guardBuilderReadWithPermission(request, 'edit-pages');
   if (auth instanceof NextResponse) return auth;
   const locale = resolveRequestLocale(request);
 

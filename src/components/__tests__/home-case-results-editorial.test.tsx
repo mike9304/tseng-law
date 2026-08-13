@@ -6,10 +6,30 @@ import HomeCaseResultsSplit, {
   HOME_RESULTS_EDITORIAL_IMAGE_HEIGHT,
   HOME_RESULTS_EDITORIAL_IMAGE_SRC,
   HOME_RESULTS_EDITORIAL_IMAGE_WIDTH,
+  HOME_RESULTS_EDITORIAL_MOBILE_IMAGE_SRC,
+  HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_MP4_SRC,
+  HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_WEBM_SRC,
+  HOME_RESULTS_EDITORIAL_VIDEO_MP4_SRC,
+  HOME_RESULTS_EDITORIAL_VIDEO_WEBM_SRC,
 } from '../HomeCaseResultsSplit';
 
 describe('HomeCaseResultsSplit editorial plate', () => {
-  it('keeps results copy and mounts the Miora wide asset as a left decorative plate', () => {
+  it.each([
+    ['ko', '밝고 비어 있는 현대식 대만 민사 법정'],
+    ['zh-hant', '明亮空曠的現代臺灣民事法庭'],
+    ['en', 'A bright, empty modern Taiwan civil courtroom'],
+    ['ja', '明るく無人の現代的な台湾民事法廷'],
+  ] as const)('describes the empty modern civil courtroom accurately in %s', (
+    locale,
+    imageAlt,
+  ) => {
+    const html = renderToStaticMarkup(<HomeCaseResultsSplit locale={locale} />);
+
+    expect(html).toContain(`alt="${imageAlt}"`);
+    expect(html).not.toMatch(/(?:Kaohsiung|가오슝|高雄)/);
+  });
+
+  it('keeps results copy and mounts an honestly described Taiwan civil courtroom plate', () => {
     const html = renderToStaticMarkup(<HomeCaseResultsSplit locale="ko" />);
 
     expect(html).toContain('id="results"');
@@ -17,11 +37,16 @@ describe('HomeCaseResultsSplit editorial plate', () => {
     expect(html).toContain('split--img-left');
     // next/image encodes the path inside /_next/image?url=...
     expect(html).toContain(encodeURIComponent(HOME_RESULTS_EDITORIAL_IMAGE_SRC));
-    expect(html).toMatch(/cross-strait-results\.webp/);
-    expect(html).toContain('alt=""');
+    expect(html).toContain(
+      `srcSet="${HOME_RESULTS_EDITORIAL_MOBILE_IMAGE_SRC}"`,
+    );
+    expect(html).toMatch(/taiwan-courtroom-calm-daylight-v2\.webp/);
+    expect(html).toContain('alt="밝고 비어 있는 현대식 대만 민사 법정"');
     expect(html).toContain('loading="lazy"');
     expect(html).not.toMatch(/\spriority(?:=|\s|>)/i);
     expect(html).toContain('sizes="(max-width: 900px) 100vw, 52vw"');
+    expect(html).toContain('data-video-mounted="false"');
+    expect(html).not.toContain('<video');
     expect(html).toContain('사례 분석');
     expect(html).toContain('1심 157만 TWD 판결·항소심 화해');
     expect(html).toContain('항소심에서 당사자 간 화해로 종결');
@@ -44,7 +69,7 @@ describe('HomeCaseResultsSplit editorial plate', () => {
       'public',
       'images',
       'editorial',
-      'cross-strait-results.webp',
+      'taiwan-courtroom-calm-daylight-v2.webp',
     );
     expect(existsSync(assetPath)).toBe(true);
     const bytes = statSync(assetPath).size;
@@ -52,10 +77,53 @@ describe('HomeCaseResultsSplit editorial plate', () => {
     expect(bytes).toBeGreaterThan(20_000);
     expect(bytes).toBeLessThan(400_000);
     expect(HOME_RESULTS_EDITORIAL_IMAGE_SRC).toBe(
-      '/images/editorial/cross-strait-results.webp',
+      '/images/editorial/taiwan-courtroom-calm-daylight-v2.webp',
     );
-    expect(HOME_RESULTS_EDITORIAL_IMAGE_WIDTH).toBe(2048);
-    expect(HOME_RESULTS_EDITORIAL_IMAGE_HEIGHT).toBe(880);
+    expect(HOME_RESULTS_EDITORIAL_IMAGE_WIDTH).toBe(1920);
+    expect(HOME_RESULTS_EDITORIAL_IMAGE_HEIGHT).toBe(1080);
+  });
+
+  it('ships WebM and MP4 courtroom motion assets in the expected paths', () => {
+    const assets = [
+      [HOME_RESULTS_EDITORIAL_VIDEO_WEBM_SRC, 200_000, 3_000_000],
+      [HOME_RESULTS_EDITORIAL_VIDEO_MP4_SRC, 800_000, 3_000_000],
+      [HOME_RESULTS_EDITORIAL_MOBILE_IMAGE_SRC, 20_000, 200_000],
+      [HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_WEBM_SRC, 200_000, 1_000_000],
+      [HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_MP4_SRC, 300_000, 1_000_000],
+    ] as const;
+
+    for (const [publicPath, minimumBytes, maximumBytes] of assets) {
+      const assetPath = path.join(
+        process.cwd(),
+        'public',
+        publicPath.replace(/^\//, ''),
+      );
+      expect(existsSync(assetPath)).toBe(true);
+      const bytes = statSync(assetPath).size;
+      expect(bytes).toBeGreaterThan(minimumBytes);
+      expect(bytes).toBeLessThan(maximumBytes);
+    }
+  });
+
+  it('passes localized controls and keeps the one-shot replay contract', () => {
+    const source = readFileSync(
+      path.join(process.cwd(), 'src/components/HomeCaseResultsSplit.tsx'),
+      'utf8',
+    );
+
+    expect(source).toContain('loop={false}');
+    expect(source).toContain(
+      'mobilePoster={HOME_RESULTS_EDITORIAL_MOBILE_IMAGE_SRC}',
+    );
+    expect(source).toContain(
+      'mobileWebmSrc={HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_WEBM_SRC}',
+    );
+    expect(source).toContain(
+      'mobileMp4Src={HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_MP4_SRC}',
+    );
+    expect(source).toContain(
+      'controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}',
+    );
   });
 
   it('keeps the editorial plate flush: zero section padding + media-img fill, no hover zoom', () => {
@@ -79,6 +147,9 @@ describe('HomeCaseResultsSplit editorial plate', () => {
     );
     expect(globals).toMatch(
       /\.home-results-panel--editorial\s+\.home-results-media-img\s*\{[\s\S]*?width:\s*100%\s*;/,
+    );
+    expect(globals).toMatch(
+      /\.home-results-panel--editorial\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*52fr\)\s+minmax\(0,\s*48fr\)\s*;/,
     );
 
     // No hover zoom on the editorial plate.

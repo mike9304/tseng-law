@@ -39,11 +39,12 @@ import { buildSeoMetadata } from '@/lib/seo';
 export const dynamic = 'force-dynamic';
 
 type BuilderPageProps = {
-  params: { locale: Locale; pageKey: string };
-  searchParams?: { mode?: string };
+  params: Promise<{ locale: Locale; pageKey: string }>;
+  searchParams?: Promise<{ mode?: string }>;
 };
 
-export function generateMetadata({ params }: { params: { locale: Locale; pageKey: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale; pageKey: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const pageKey = isBuilderPageKey(params.pageKey) ? params.pageKey : 'home';
   const config = getBuilderPageConfig(pageKey);
@@ -60,7 +61,9 @@ export function generateMetadata({ params }: { params: { locale: Locale; pageKey
   });
 }
 
-export default async function BuilderPageRoute({ params, searchParams }: BuilderPageProps) {
+export default async function BuilderPageRoute(props: BuilderPageProps) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
 
   if (!isBuilderPageKey(params.pageKey)) {

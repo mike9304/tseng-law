@@ -1,19 +1,18 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import {
   createMember,
   listMembers,
   publicMember,
 } from '@/lib/builder/members/members-engine';
-import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import { GET, POST } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'admin-1' })),
   guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
 }));
 
@@ -62,7 +61,7 @@ const createdMember = {
   createdAt: '2026-06-03T00:00:00.000Z',
 };
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const createMemberMock = vi.mocked(createMember);
 const listMembersMock = vi.mocked(listMembers);
@@ -83,7 +82,7 @@ function postRequest(query = '', body: string | unknown = createInput): NextRequ
 describe('builder members API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({ username: 'admin-1' });
     guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
     listMembersMock.mockResolvedValue([freeMember, premiumMember] as never);
     createMemberMock.mockResolvedValue(createdMember as never);
@@ -96,7 +95,29 @@ describe('builder members API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, total: 1, members: [premiumMember] });
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'manage-users',
+    );
+  });
+
+  it.each([
+    ['unauthenticated', 401],
+    ['authenticated without permission', 403],
+  ])('rejects %s list GET before loading member data', async (_scenario, status) => {
+    const blocked = NextResponse.json({ ok: false }, { status });
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(blocked);
+
+    const response = await GET(getRequest('locale=en'));
+
+    expect(response).toBe(blocked);
+    expect(response.status).toBe(status);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'manage-users',
+    );
+    expect(listMembersMock).not.toHaveBeenCalled();
+    expect(publicMemberMock).not.toHaveBeenCalled();
   });
 
   it('returns localized list failures without leaking exception details', async () => {
@@ -169,6 +190,10 @@ describe('builder members API', () => {
     const payload = await response.json();
 
     expect(response.status).toBe(201);
+    expect(guardMutationMock).toHaveBeenCalledWith(expect.any(NextRequest), {
+      bucket: 'mutation',
+      permission: 'manage-users',
+    });
     expect(createMemberMock).toHaveBeenCalledWith({
       email: 'new@example.com',
       name: 'New Member',
@@ -177,5 +202,24 @@ describe('builder members API', () => {
       verified: true,
     });
     expect(payload).toEqual({ ok: true, member: createdMember });
+  });
+
+  it.each([
+    ['unauthenticated', 401],
+    ['authenticated without permission', 403],
+  ])('rejects %s create POST before creating member data', async (_scenario, status) => {
+    const blocked = NextResponse.json({ ok: false }, { status });
+    guardMutationMock.mockResolvedValueOnce(blocked);
+
+    const response = await POST(postRequest('locale=ko'));
+
+    expect(response).toBe(blocked);
+    expect(response.status).toBe(status);
+    expect(guardMutationMock).toHaveBeenCalledWith(expect.any(NextRequest), {
+      bucket: 'mutation',
+      permission: 'manage-users',
+    });
+    expect(createMemberMock).not.toHaveBeenCalled();
+    expect(publicMemberMock).not.toHaveBeenCalled();
   });
 });

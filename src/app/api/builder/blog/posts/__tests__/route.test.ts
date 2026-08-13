@@ -4,11 +4,11 @@ import {
   listAllBlogPosts,
   listBlogPosts,
 } from '@/lib/builder/blog/column-adapter';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { GET } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => null),
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'editor@example.test' })),
 }));
 
 vi.mock('@/lib/builder/blog/column-adapter', () => ({
@@ -41,7 +41,7 @@ const draftPost = {
   featured: false,
 };
 
-const guardBuilderReadMock = vi.mocked(guardBuilderRead);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const listAllBlogPostsMock = vi.mocked(listAllBlogPosts);
 const listBlogPostsMock = vi.mocked(listBlogPosts);
 
@@ -52,7 +52,10 @@ function request(query = ''): NextRequest {
 describe('builder blog posts API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    guardBuilderReadMock.mockReturnValue(null as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'editor@example.test',
+      permission: 'edit-blog',
+    });
     listBlogPostsMock.mockResolvedValue([publishedPost] as never);
     listAllBlogPostsMock.mockResolvedValue([publishedPost, draftPost] as never);
   });
@@ -63,7 +66,7 @@ describe('builder blog posts API', () => {
 
     expect(response.status).toBe(200);
     expect(listBlogPostsMock).toHaveBeenCalledWith('ko');
-    expect(guardBuilderReadMock).not.toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).not.toHaveBeenCalled();
     expect(payload).toEqual({
       ok: true,
       locale: 'ko',
@@ -77,7 +80,10 @@ describe('builder blog posts API', () => {
     const payload = await response.json();
 
     expect(response.status).toBe(200);
-    expect(guardBuilderReadMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'edit-blog',
+    );
     expect(listAllBlogPostsMock).toHaveBeenCalledWith('ko');
     expect(payload).toEqual({
       ok: true,
@@ -88,8 +94,8 @@ describe('builder blog posts API', () => {
   });
 
   it('returns guard responses for unauthorized all-post requests', async () => {
-    guardBuilderReadMock.mockReturnValueOnce(
-      NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 }) as never,
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 }),
     );
 
     const response = await GET(request('locale=ko&scope=all'));
@@ -98,6 +104,26 @@ describe('builder blog posts API', () => {
     expect(response.status).toBe(401);
     expect(payload).toEqual({ ok: false, error: 'unauthorized' });
     expect(listAllBlogPostsMock).not.toHaveBeenCalled();
+  });
+
+  it('short-circuits missing edit-blog permission before reading draft posts', async () => {
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: edit-blog' }, { status: 403 }),
+    );
+
+    const requestWithDraftScope = request('locale=ko&scope=all');
+    const response = await GET(requestWithDraftScope);
+
+    expect(response.status).toBe(403);
+    await expect(response.json()).resolves.toEqual({
+      error: 'Missing permission: edit-blog',
+    });
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      requestWithDraftScope,
+      'edit-blog',
+    );
+    expect(listAllBlogPostsMock).not.toHaveBeenCalled();
+    expect(listBlogPostsMock).not.toHaveBeenCalled();
   });
 
   it('returns localized validation errors', async () => {

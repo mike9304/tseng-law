@@ -15,7 +15,7 @@ const INDEXED_LOCALES = ['ko', 'zh-hant', 'en'] as const satisfies readonly Loca
 const COLUMN_012_TITLES = {
   ko: '대만 추월 사고의 책임은 어떻게 판단하나요?',
   'zh-hant': '台灣超車事故的責任如何判斷？',
-  en: 'Who Is Liable in an Overtaking Accident?',
+  en: 'How Is Liability Assessed After an Overtaking Accident in Taiwan?',
 } as const;
 
 const COLUMN_012_BODY_PHRASES = {
@@ -134,7 +134,7 @@ describe('column 012 native search source path', () => {
       const post012 = posts.find((post) => post.slug === COLUMN_012_SLUG);
 
       expect(post012, `listBlogPosts(${locale}) missing column 012`).toBeDefined();
-      expect(post012?.publishedAt).toBeUndefined();
+      expect(post012?.publishedAt).toBe('2025-09-13T00:00:00.000Z');
       expect(post012?.title).toBe(COLUMN_012_TITLES[locale]);
     }
 

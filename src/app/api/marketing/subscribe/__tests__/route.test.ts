@@ -27,11 +27,16 @@ vi.mock('@/lib/builder/marketing/subscriber-crm-link', () => ({
   linkSubscriberToCrmContact: vi.fn(async () => ({ contactId: 'ct_linked', created: true })),
 }));
 
-function postRequest(body: unknown, query = ''): NextRequest {
-  return new NextRequest(`https://law.example.test/api/marketing/subscribe${query}`, {
+function postRequest(
+  body: unknown,
+  query = '',
+  origin = 'http://localhost:3000',
+): NextRequest {
+  return new NextRequest(`http://localhost:3000/api/marketing/subscribe${query}`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
+      origin,
       'user-agent': 'vitest-browser',
       'x-forwarded-for': '127.0.0.10',
     },
@@ -40,9 +45,13 @@ function postRequest(body: unknown, query = ''): NextRequest {
 }
 
 function postRawRequest(body: string, query = ''): NextRequest {
-  return new NextRequest(`https://law.example.test/api/marketing/subscribe${query}`, {
+  return new NextRequest(`http://localhost:3000/api/marketing/subscribe${query}`, {
     method: 'POST',
-    headers: { 'content-type': 'application/json', 'x-forwarded-for': '127.0.0.10' },
+    headers: {
+      'content-type': 'application/json',
+      origin: 'http://localhost:3000',
+      'x-forwarded-for': '127.0.0.10',
+    },
     body,
   });
 }
@@ -61,9 +70,11 @@ describe('/api/marketing/subscribe', () => {
       postRequest({
         email: 'visitor@example.test',
         preferredLocale: 'ko',
-        tags: ['newsletter'],
-        source: 'footer-form',
+        tags: ['attacker-controlled-segment'],
+        source: 'attacker-controlled-source',
+        contactId: 'ct_attacker',
         marketingConsent: true,
+        marketingConsentText: 'attacker-controlled-consent-copy',
       }),
     );
     const payload = await response.json();
@@ -76,12 +87,14 @@ describe('/api/marketing/subscribe', () => {
         email: 'visitor@example.test',
         contactId: 'ct_linked',
         status: 'pending',
-        source: 'footer-form',
+        source: 'public-form',
+        tags: ['newsletter'],
         marketingConsent: expect.objectContaining({
-          source: 'footer-form',
+          source: 'public-form',
           preferredLocale: 'ko',
           ipAddress: '127.0.0.10',
           userAgent: 'vitest-browser',
+          text: '마케팅 뉴스레터 및 법률 업데이트 수신에 동의합니다.',
         }),
         doubleOptInTokenCreatedAt: expect.any(String),
         doubleOptInTokenExpiresAt: expect.any(String),
@@ -90,7 +103,7 @@ describe('/api/marketing/subscribe', () => {
     expect(linkSubscriberToCrmContact).toHaveBeenCalledWith({
       email: 'visitor@example.test',
       preferredLocale: 'ko',
-      source: 'footer-form',
+      source: 'public-form',
       tags: ['newsletter'],
     });
     expect(sendTestEmail).toHaveBeenCalled();
@@ -103,7 +116,6 @@ describe('/api/marketing/subscribe', () => {
     vi.mocked(getSubscriberByEmail).mockResolvedValue({
       subscriberId: 'sub-existing',
       email: 'visitor@example.test',
-      contactId: 'ct-existing',
       status: 'subscribed',
       preferredLocale: 'ko',
       tags: [],
@@ -131,40 +143,123 @@ describe('/api/marketing/subscribe', () => {
     expect(sendTestEmail).not.toHaveBeenCalled();
   });
 
-  it('backfills a missing contactId when an existing subscriber is already subscribed', async () => {
+  it('does not let an idempotent request mutate an existing subscribed record', async () => {
     vi.mocked(getSubscriberByEmail).mockResolvedValue({
       subscriberId: 'sub-existing',
       email: 'visitor@example.test',
+      contactId: 'ct-existing',
       status: 'subscribed',
       preferredLocale: 'ko',
       tags: ['legacy'],
       doubleOptInToken: 'tok-existing',
       unsubscribeToken: 'unsub-existing',
       source: 'public-form',
+      marketingConsent: {
+        acceptedAt: '2026-05-13T00:00:00Z',
+        source: 'public-form',
+        preferredLocale: 'ko',
+        ipAddress: '127.0.0.1',
+        text: 'Original consent.',
+      },
       createdAt: '2026-05-13T00:00:00Z',
       updatedAt: '2026-05-13T00:00:00Z',
     });
     const route = await import('../route');
     const response = await route.POST(
-      postRequest({ email: 'visitor@example.test', tags: ['newsletter'], marketingConsent: true }),
+      postRequest({
+        email: 'visitor@example.test',
+        preferredLocale: 'en',
+        tags: ['admin'],
+        source: 'admin-import',
+        contactId: 'ct_attacker',
+        marketingConsent: true,
+        marketingConsentText: 'Forged replacement consent.',
+      }),
     );
     const payload = await response.json();
 
     expect(response.status).toBe(200);
     expect(payload.alreadySubscribed).toBe(true);
-    expect(linkSubscriberToCrmContact).toHaveBeenCalledWith({
+    expect(linkSubscriberToCrmContact).not.toHaveBeenCalled();
+    expect(saveSubscriber).not.toHaveBeenCalled();
+    expect(sendTestEmail).not.toHaveBeenCalled();
+  });
+
+  it('preserves server-owned linkage and provenance when restarting a pending opt-in', async () => {
+    vi.mocked(getSubscriberByEmail).mockResolvedValue({
+      subscriberId: 'sub-existing',
       email: 'visitor@example.test',
+      contactId: 'ct-existing',
+      status: 'pending',
       preferredLocale: 'ko',
-      source: 'public-form',
-      tags: ['legacy', 'newsletter'],
+      tags: ['server-segment'],
+      doubleOptInToken: 'tok-old',
+      unsubscribeToken: 'unsub-existing',
+      source: 'trusted-import',
+      marketingConsent: {
+        acceptedAt: '2026-05-13T00:00:00Z',
+        source: 'trusted-import',
+        preferredLocale: 'ko',
+        ipAddress: '127.0.0.1',
+        text: 'Original consent.',
+      },
+      createdAt: '2026-05-13T00:00:00Z',
+      updatedAt: '2026-05-13T00:00:00Z',
     });
+    const route = await import('../route');
+    const response = await route.POST(
+      postRequest({
+        email: 'visitor@example.test',
+        preferredLocale: 'en',
+        tags: ['admin'],
+        source: 'admin-import',
+        contactId: 'ct_attacker',
+        marketingConsent: true,
+        marketingConsentText: 'Forged replacement consent.',
+      }),
+    );
+
+    expect(response.status).toBe(200);
     expect(saveSubscriber).toHaveBeenCalledWith(
       expect.objectContaining({
         subscriberId: 'sub-existing',
-        contactId: 'ct_linked',
-        marketingConsent: expect.objectContaining({ source: 'public-form' }),
+        contactId: 'ct-existing',
+        preferredLocale: 'ko',
+        tags: ['server-segment'],
+        source: 'trusted-import',
+        marketingConsent: expect.objectContaining({
+          acceptedAt: '2026-05-13T00:00:00Z',
+          source: 'trusted-import',
+          text: 'Original consent.',
+        }),
       }),
     );
+    expect(linkSubscriberToCrmContact).not.toHaveBeenCalled();
+    expect(sendTestEmail).toHaveBeenCalledTimes(1);
+  });
+
+  it('rejects cross-origin requests before rate limit, storage, CRM, or email work', async () => {
+    const route = await import('../route');
+    const response = await route.POST(
+      postRequest(
+        {
+          email: 'visitor@example.test',
+          contactId: 'ct_attacker',
+          tags: ['admin'],
+          marketingConsent: true,
+        },
+        '',
+        'https://evil.example',
+      ),
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(403);
+    expect(payload.code).toBe('csrf_origin_mismatch');
+    expect(checkRateLimit).not.toHaveBeenCalled();
+    expect(getSubscriberByEmail).not.toHaveBeenCalled();
+    expect(saveSubscriber).not.toHaveBeenCalled();
+    expect(linkSubscriberToCrmContact).not.toHaveBeenCalled();
     expect(sendTestEmail).not.toHaveBeenCalled();
   });
 

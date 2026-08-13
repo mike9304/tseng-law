@@ -64,31 +64,6 @@
   line-height: 1.7;
 }
 
-.tabs {
-  display: flex;
-  gap: 8px;
-  padding: 8px;
-  background: #e5e7eb;
-  border-radius: 8px;
-}
-
-.tabs button {
-  min-height: 44px;
-  flex: 1;
-  border: 0;
-  border-radius: 6px;
-  background: transparent;
-  color: #374151;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.tabs .activeTab {
-  background: #ffffff;
-  color: #111827;
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.1);
-}
-
 .authForm,
 .profileForm {
   display: grid;

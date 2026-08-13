@@ -53,7 +53,7 @@ describe('/api/builder/live-chat/[conversationId]/send', () => {
     vi.mocked(getConversation).mockResolvedValue(makeConversation());
     const route = await import('../route');
     const response = await route.POST(postRequest({ body: '안녕하세요, 박변호사입니다.' }), {
-      params: { conversationId: 'cnv-1' },
+      params: Promise.resolve({ conversationId: 'cnv-1' }),
     });
     const payload = await response.json();
 
@@ -69,7 +69,7 @@ describe('/api/builder/live-chat/[conversationId]/send', () => {
     vi.mocked(getConversation).mockResolvedValue(makeConversation());
     const route = await import('../route');
     await route.POST(postRequest({ body: '您好', locale: 'zh-hant' }), {
-      params: { conversationId: 'cnv-1' },
+      params: Promise.resolve({ conversationId: 'cnv-1' }),
     });
 
     expect(appendMessage).toHaveBeenCalledWith(
@@ -81,7 +81,7 @@ describe('/api/builder/live-chat/[conversationId]/send', () => {
     vi.mocked(getConversation).mockResolvedValue(makeConversation());
     const route = await import('../route');
     await route.POST(postRequest({ body: 'hi', authorLabel: '박변호사' }), {
-      params: { conversationId: 'cnv-1' },
+      params: Promise.resolve({ conversationId: 'cnv-1' }),
     });
 
     expect(appendMessage).toHaveBeenCalledWith(
@@ -93,7 +93,7 @@ describe('/api/builder/live-chat/[conversationId]/send', () => {
     vi.mocked(getConversation).mockResolvedValue(makeConversation());
     const route = await import('../route');
     const response = await route.POST(postRequest({ body: '   ', locale: 'zh-hant' }), {
-      params: { conversationId: 'cnv-1' },
+      params: Promise.resolve({ conversationId: 'cnv-1' }),
     });
     const payload = await response.json();
 
@@ -108,7 +108,7 @@ describe('/api/builder/live-chat/[conversationId]/send', () => {
     vi.mocked(getConversation).mockResolvedValue(null);
     const route = await import('../route');
     const response = await route.POST(postRequest({ body: 'hi', locale: 'en' }), {
-      params: { conversationId: 'cnv-missing' },
+      params: Promise.resolve({ conversationId: 'cnv-missing' }),
     });
     const payload = await response.json();
 
@@ -126,7 +126,7 @@ describe('/api/builder/live-chat/[conversationId]/send', () => {
     );
     const route = await import('../route');
     const response = await route.POST(postRequest({ body: 'hi' }), {
-      params: { conversationId: 'cnv-1' },
+      params: Promise.resolve({ conversationId: 'cnv-1' }),
     });
 
     expect(response.status).toBe(401);

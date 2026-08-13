@@ -78,18 +78,25 @@ describe('footer social localization', () => {
     expect(html).toContain(
       '<p class="footer-main-brand">昊鼎国際法律事務所</p>',
     );
-    expect(html).toContain('aria-label="事務所"');
+    expect(html).toContain('aria-label="事務所所在地へのクイックリンク"');
     expect(popularTopics?.links).toEqual(expectedTopics);
 
     [
-      { href: '/ja/contact#offices', labels: ['台北', '台中', '高雄'] },
+      {
+        href: '/ja/contact#offices',
+        labels: ['台北事務所', '台中事務所', '高雄事務所', '屏東事務所'],
+      },
       { href: '/ja/privacy', labels: ['プライバシーポリシー'] },
       { href: '/ja/disclaimer', labels: ['免責事項'] },
       { href: '/ja/accessibility', labels: ['アクセシビリティ'] },
       { href: '/sitemap.xml', labels: ['サイトマップ'] },
     ].forEach(({ href, labels }) => {
       labels.forEach((label) => {
-        expect(html).toContain(`href="${href}">${label}</a>`);
+        if (href === '/ja/contact#offices') {
+          expect(html).toContain(`<span class="office-link-name">${label}</span>`);
+        } else {
+          expect(html).toContain(`href="${href}">${label}</a>`);
+        }
       });
     });
 

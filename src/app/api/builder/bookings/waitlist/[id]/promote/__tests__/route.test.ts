@@ -52,8 +52,9 @@ vi.mock('@/lib/builder/bookings/notifications', () => ({
 }));
 
 vi.mock('@/lib/builder/bookings/slot-lock', () => ({
-  acquireSlotLock: vi.fn(() => true),
-  releaseSlotLock: vi.fn(() => undefined),
+  acquireSlotLock: vi.fn(async () => ({ ownerToken: 'test-lease', keys: [], expiresAt: 9_999_999 })),
+  releaseSlotLock: vi.fn(async () => undefined),
+  renewSlotLock: vi.fn(async (lease) => lease),
 }));
 
 vi.mock('@/lib/builder/webhooks/dispatcher', () => ({
@@ -158,7 +159,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
   it('returns localized not-found errors for missing waitlist entries', async () => {
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'en'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -175,7 +176,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
     vi.mocked(getWaitlistEntry).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'ko'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -189,7 +190,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
     vi.mocked(getWaitlistEntry).mockResolvedValueOnce(waitlistEntry({ status: 'closed' }));
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'ko'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -205,7 +206,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
     vi.mocked(getWaitlistEntry).mockResolvedValueOnce(waitlistEntry());
     const route = await import('../route');
     const response = await route.POST(postRequest({ date: 'not-a-date' }, 'zh-hant'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -221,7 +222,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
     vi.mocked(getStaff).mockResolvedValueOnce(staff());
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'en'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -239,7 +240,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
     vi.mocked(getStaff).mockResolvedValueOnce(staff());
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'ko'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -258,7 +259,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
     vi.mocked(getStaff).mockResolvedValueOnce(staff());
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'zh-hant'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -275,10 +276,10 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
     vi.mocked(getService).mockResolvedValueOnce(service());
     vi.mocked(getStaff).mockResolvedValueOnce(staff());
     vi.mocked(computeAvailableSlots).mockResolvedValueOnce([availableSlot]);
-    vi.mocked(acquireSlotLock).mockReturnValueOnce(false);
+    vi.mocked(acquireSlotLock).mockResolvedValueOnce(null);
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'ko'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -299,7 +300,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
     vi.mocked(isSlotAvailable).mockResolvedValueOnce(false);
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'zh-hant'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -320,7 +321,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
     vi.mocked(computeAvailableSlots).mockResolvedValueOnce([availableSlot]);
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'en'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -371,7 +372,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
 
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'en'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -396,7 +397,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
 
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'en'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -422,7 +423,7 @@ describe('/api/builder/bookings/waitlist/[id]/promote', () => {
     vi.mocked(computeAvailableSlots).mockResolvedValueOnce([availableSlot]);
     const route = await import('../route');
     const response = await route.POST(postRequest({}, 'en'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 

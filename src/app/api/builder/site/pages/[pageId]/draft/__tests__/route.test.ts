@@ -1,6 +1,6 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { emitEditorPageSaveHook } from '@/lib/builder/apps/lifecycle-emitters';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { createDefaultCanvasNodeStyle } from '@/lib/builder/canvas/types';
@@ -16,7 +16,10 @@ import { PageCanvasCasConflictError } from '@/lib/builder/site/page-canvas-versi
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'admin' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-pages',
+  })),
   guardMutation: vi.fn(async () => ({ user: { id: 'admin-1', email: 'admin@example.test' } })),
 }));
 
@@ -201,7 +204,10 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     vi.mocked(updatePageCanvasRecord).mockReset();
-    vi.mocked(guardBuilderRead).mockReturnValue({ username: 'admin' });
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({
+      username: 'admin',
+      permission: 'edit-pages',
+    });
     vi.mocked(guardMutation).mockResolvedValue({
       username: 'admin-1',
       permission: 'edit-pages',
@@ -249,7 +255,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
         siteId: 'undefined',
         document: makeDocument('must-not-save'),
       }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
     const payload = await response.json();
 
@@ -260,6 +266,25 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
     expect(updatePageCanvasRecord).not.toHaveBeenCalled();
   });
 
+  it('requires edit-pages and short-circuits draft reads on permission denial', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: edit-pages' }, { status: 403 }),
+    );
+
+    const route = await import('../route');
+    const response = await route.GET(getRequest('page-published-only'), {
+      params: Promise.resolve({ pageId: 'page-published-only' }),
+    });
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'edit-pages',
+    );
+    expect(readSiteDocument).not.toHaveBeenCalled();
+    expect(readPageCanvasRecordState).not.toHaveBeenCalled();
+  });
+
   it('loads the published canvas when the draft record is missing', async () => {
     const publishedDocument = makeDocument('published-only-section');
     vi.mocked(readPageCanvasRecordState).mockImplementation(async (_siteId, _pageId, variant = 'draft') => (
@@ -268,7 +293,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
 
     const route = await import('../route');
     const response = await route.GET(getRequest('page-published-only'), {
-      params: { pageId: 'page-published-only' },
+      params: Promise.resolve({ pageId: 'page-published-only' }),
     });
     const payload = await response.json();
 
@@ -277,7 +302,10 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
     expect(payload.draft).toBeNull();
     expect(payload.recoveredFrom).toBe('published');
     expect(payload.document.updatedBy).toBe('published-only-section');
-    expect(guardBuilderRead).toHaveBeenCalledTimes(1);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'edit-pages',
+    );
     expect(guardMutation).not.toHaveBeenCalled();
   });
 
@@ -286,7 +314,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
 
     const route = await import('../route');
     const response = await route.GET(getRequest('page-published-only'), {
-      params: { pageId: 'page-published-only' },
+      params: Promise.resolve({ pageId: 'page-published-only' }),
     });
     const payload = await response.json();
     const roots = payload.document.nodes
@@ -326,7 +354,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
 
     const route = await import('../route');
     const response = await route.GET(getRequest('page-published-only'), {
-      params: { pageId: 'page-published-only' },
+      params: Promise.resolve({ pageId: 'page-published-only' }),
     });
     const payload = await response.json();
     const wrapper = payload.document.nodes.find(
@@ -350,7 +378,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
 
     const route = await import('../route');
     const response = await route.GET(getRequest('page-published-only'), {
-      params: { pageId: 'page-published-only' },
+      params: Promise.resolve({ pageId: 'page-published-only' }),
     });
     const payload = await response.json();
 
@@ -362,7 +390,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
   it('returns localized invalid JSON errors for draft saves', async () => {
     const route = await import('../route');
     const response = await route.PUT(putRequest('page-published-only', '{', 'zh-hant'), {
-      params: { pageId: 'page-published-only' },
+      params: Promise.resolve({ pageId: 'page-published-only' }),
     });
     const payload = await response.json();
 
@@ -382,7 +410,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
         expectedRevision: 7,
         document: { nodes: 'garbage' },
       }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
     const payload = await response.json();
 
@@ -416,7 +444,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
         expectedRevision: 7,
         document: makeDocument(overlongUpdatedBy),
       }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
     const payload = await response.json();
 
@@ -438,7 +466,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
     const route = await import('../route');
     const response = await route.PUT(
       putRequest('page-published-only', { document: makeDocument('next-draft') }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
     const payload = await response.json();
 
@@ -462,7 +490,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
         expectedRevision: 6,
         document: makeDocument('next-draft'),
       }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
     const payload = await response.json();
 
@@ -521,14 +549,14 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
         expectedRevision: 7,
         document: makeDocument('physical-contender-one'),
       }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
     const secondSave = route.PUT(
       putRequest('page-published-only', {
         expectedRevision: 7,
         document: makeDocument('physical-contender-two'),
       }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
 
     await bothProposalsReady;
@@ -604,7 +632,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
         expectedRevision: 7,
         document: makeDocument('physical-loser'),
       }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
     const payload = await response.json();
 
@@ -637,7 +665,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
       putRequest('page-published-only', {
         document: makeDocument('legacy-next'),
       }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
     const payload = await response.json();
 
@@ -657,7 +685,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
         expectedRevision: 0,
         document: makeDocument('first-draft'),
       }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
     const payload = await response.json();
 
@@ -681,7 +709,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
         expectedRevision: 7,
         document: makeDocument('next-draft'),
       }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
 
     expect(response.status).toBe(200);
@@ -701,7 +729,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
 
     const route = await import('../route');
     const response = await route.GET(getRequest('page-published-only'), {
-      params: { pageId: 'page-published-only' },
+      params: Promise.resolve({ pageId: 'page-published-only' }),
     });
     const payload = await response.json();
 
@@ -722,7 +750,7 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
         expectedRevision: 7,
         document: makeDocument('next-draft'),
       }),
-      { params: { pageId: 'page-published-only' } },
+      { params: Promise.resolve({ pageId: 'page-published-only' }) },
     );
     const payload = await response.json();
 

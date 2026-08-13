@@ -1,4 +1,9 @@
 import { getAllColumnPosts } from '@/lib/columns';
+import {
+  CONSULTATION_EMAIL,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
+import { siteLocales, type SiteLocale } from '@/lib/locales';
 import { buildAbsoluteUrl, getLocalizedPath } from '@/lib/seo';
 
 /**
@@ -15,41 +20,32 @@ import { buildAbsoluteUrl, getLocalizedPath } from '@/lib/seo';
  */
 export const dynamic = 'force-static';
 
-function pageUrl(path: string): string {
-  return buildAbsoluteUrl(getLocalizedPath('ko', path));
+function pageUrl(locale: SiteLocale, path: string): string {
+  return buildAbsoluteUrl(getLocalizedPath(locale, path));
 }
 
 function buildLlmsTxt(): string {
-  const homeUrl = pageUrl('/');
   const columns = getAllColumnPosts('ko');
 
-  const mainPages: Array<{ title: string; description: string; url: string }> = [
-    {
-      title: '법무법인 호정 (Hovering International Law Firm)',
-      description: '타이베이 소재 대만 법률사무소. 회사설립·소송·투자 자문, 노동, 화장품 인허가 등을 한국어·중국어·일본어로 지원합니다.',
-      url: homeUrl,
-    },
-    {
-      title: '서비스 안내 (Services)',
-      description: '대만 회사설립, 투자 자문, 민형사 소송, 노동, 지식재산권, 가족·상속 등 주요 업무 분야 안내.',
-      url: pageUrl('/services'),
-    },
-    {
-      title: '변호사 소개 (Attorney Wei Tseng / 曾雋崴律師)',
-      description: '한국어·중국어·일본어 구사 대만 변호사 증준외(曾雋崴) 소개 페이지.',
-      url: pageUrl('/lawyers/wei-tseng'),
-    },
-    {
-      title: '칼럼 목록 (Legal Columns)',
-      description: '대만 법률 실무 칼럼 목록 — 회사설립, 투자, 노동, 소송 사례, 화장품 인허가 등.',
-      url: pageUrl('/columns'),
-    },
-    {
-      title: '상담 예약 (Contact / Consultation)',
-      description: '대만 법률 상담 및 예약 문의 페이지.',
-      url: pageUrl('/contact'),
-    },
-  ];
+  const localeLabels: Record<SiteLocale, string> = {
+    ko: '한국어 (Korean)',
+    'zh-hant': '繁體中文 (Traditional Chinese)',
+    en: 'English',
+    ja: '日本語 (Japanese)',
+  };
+  const pageLabels: Record<SiteLocale, readonly string[]> = {
+    ko: ['법무법인 호정', '서비스 안내', '증준외(曾雋崴) 대만 변호사', '법률 칼럼', '문의 및 사무소 안내'],
+    'zh-hant': ['昊鼎國際法律事務所', '服務領域', '曾雋崴律師', '法律專欄', '聯絡與諮詢'],
+    en: ['Hovering International Law Firm', 'Services', 'Attorney Wei Tseng', 'Legal Columns', 'Contact and Offices'],
+    ja: ['昊鼎国際法律事務所', '業務分野', '曾雋崴弁護士', '法律コラム', 'お問い合わせ・事務所案内'],
+  };
+  const mainPagePaths = [
+    '',
+    '/services',
+    '/lawyers/wei-tseng',
+    '/columns',
+    '/contact',
+  ] as const;
 
   const lines: string[] = [];
 
@@ -62,10 +58,14 @@ function buildLlmsTxt(): string {
 
   lines.push('## 주요 페이지 (Main pages)');
   lines.push('');
-  for (const page of mainPages) {
-    lines.push(`- [${page.title}](${page.url}): ${page.description}`);
+  for (const locale of siteLocales) {
+    lines.push(`### ${localeLabels[locale]}`);
+    lines.push('');
+    for (const [index, path] of mainPagePaths.entries()) {
+      lines.push(`- [${pageLabels[locale][index]}](${pageUrl(locale, path)})`);
+    }
+    lines.push('');
   }
-  lines.push('');
 
   lines.push('## 칼럼 전 목록 (All legal columns)');
   lines.push('');
@@ -83,14 +83,17 @@ function buildLlmsTxt(): string {
 
   lines.push('## 언어 (Languages)');
   lines.push('');
-  lines.push('- 한국어 (Korean): ' + buildAbsoluteUrl(getLocalizedPath('ko')));
-  lines.push('- 繁體中文 (Traditional Chinese): ' + buildAbsoluteUrl(getLocalizedPath('zh-hant')));
+  for (const locale of siteLocales) {
+    lines.push(`- ${localeLabels[locale]}: ${pageUrl(locale, '')}`);
+  }
   lines.push('');
 
   lines.push('## 연락처 (Contact)');
   lines.push('');
-  lines.push('- 이메일: wei@hoveringlaw.com.tw');
-  lines.push('- 전화: +82-10-2992-9304');
+  lines.push(`- 공식 상담 이메일: ${CONSULTATION_EMAIL}`);
+  lines.push(
+    `- 상담 신청: [증준외 대만 변호사 이메일 상담](${getConsultationPublicMailto('ko')})`,
+  );
   lines.push('- 주소: 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City, Taiwan (타이베이시 다퉁구 청더로 1단 35호 7층의2)');
   lines.push('');
 

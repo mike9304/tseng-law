@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { ZodError } from 'zod';
 import type { Locale } from '@/lib/locales';
 import { normalizeLocale } from '@/lib/locales';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { readNativeBlogAdminModel } from '@/lib/builder/blog/admin-storage';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import {
   type BuilderBlogApiErrorCode,
   getBuilderBlogApiErrorPayload,
@@ -26,7 +26,7 @@ function errorResponse(
 }
 
 export async function GET(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = await guardBuilderReadWithPermission(request, 'edit-blog');
   if (auth instanceof NextResponse) return auth;
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 

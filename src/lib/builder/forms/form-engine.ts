@@ -89,11 +89,24 @@ export interface FormSchema {
   submitLabel: string;
   successMessage: string;
   errorMessage: string;
+  /**
+   * Presence enables a notification for this form. The public submit route
+   * deliberately does not use this value as the recipient; consultation mail
+   * is always routed to the canonical attorney address.
+   */
   notifyEmail?: string;
+  /** Server-stored delivery settings. Public request fields never override these. */
+  webhookUrl?: string;
+  autoReplyEnabled?: boolean;
+  autoReplyTemplate?: string;
   redirectUrl?: string;
   storeInCms?: boolean;
   cmsMapping?: FormCmsMapping;
   antiSpam?: FormAntiSpamSettings;
+  /** Server-controlled captcha requirement for public submissions. */
+  captcha?: 'none' | 'hcaptcha' | 'turnstile';
+  /** Legacy persisted key accepted by the public submission route. */
+  captchaProvider?: 'none' | 'hcaptcha' | 'turnstile';
   createdAt: string;
   updatedAt: string;
 }
@@ -103,6 +116,7 @@ export interface FormSchema {
 export interface FormSubmission {
   submissionId: string;
   formId: string;
+  formName?: string;
   data: Record<string, unknown>;
   files?: FormSubmissionFile[];
   submittedAt: string;
@@ -133,10 +147,14 @@ const SUBMISSIONS_PREFIX = 'builder-forms/submissions/';
 const FORMS_RUNTIME_ROOT = path.join(process.cwd(), 'runtime-data');
 
 export async function saveFormSchema(schema: FormSchema): Promise<void> {
+  if (!isSafeFormStorageSegment(schema.formId, 80)) {
+    throw new Error('Invalid form schema id.');
+  }
   await writeJson(`${FORMS_PREFIX}${schema.formId}.json`, JSON.stringify(schema));
 }
 
 export async function loadFormSchema(formId: string): Promise<FormSchema | null> {
+  if (!isSafeFormStorageSegment(formId, 80)) return null;
   try {
     const raw = await readJson(`${FORMS_PREFIX}${formId}.json`);
     if (raw) return JSON.parse(raw) as FormSchema;
@@ -159,7 +177,14 @@ export async function listForms(): Promise<FormSchema[]> {
 }
 
 export async function saveSubmission(submission: FormSubmission): Promise<void> {
+  if (!isSafeFormStorageSegment(submission.formId, 120)
+    || !isSafeFormStorageSegment(submission.submissionId, 160)) {
+    throw new Error('Invalid form submission storage key.');
+  }
   const dateKey = submission.submittedAt.slice(0, 10);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(dateKey)) {
+    throw new Error('Invalid form submission date.');
+  }
   await writeJson(
     `${SUBMISSIONS_PREFIX}${submission.formId}/${dateKey}/${submission.submissionId}.json`,
     JSON.stringify(submission),
@@ -167,6 +192,7 @@ export async function saveSubmission(submission: FormSubmission): Promise<void> 
 }
 
 export async function listSubmissions(formId: string, limit = 50): Promise<FormSubmission[]> {
+  if (!isSafeFormStorageSegment(formId, 120)) return [];
   try {
     const result = await listJsonPathnames(`${SUBMISSIONS_PREFIX}${formId}/`);
     const submissions: FormSubmission[] = [];
@@ -391,7 +417,19 @@ async function walkJsonFiles(
 }
 
 function resolveFormsRuntimePath(pathname: string): string {
-  return path.join(FORMS_RUNTIME_ROOT, pathname);
+  const root = path.resolve(FORMS_RUNTIME_ROOT);
+  const candidate = path.resolve(root, pathname);
+  if (candidate !== root && !candidate.startsWith(`${root}${path.sep}`)) {
+    throw new Error('Refusing to resolve form storage outside the runtime root.');
+  }
+  return candidate;
+}
+
+export function isSafeFormStorageSegment(value: string, maxLength = 120): boolean {
+  return value.length > 0
+    && value.length <= maxLength
+    && !value.includes('..')
+    && !/[/\\\u0000-\u001f\u007f]/.test(value);
 }
 
 function isNodeNotFoundError(error: unknown): boolean {
@@ -465,6 +503,29 @@ function fileMatchesAccept(file: FormSubmissionFile, accept: string): boolean {
   });
 }
 
+export function validateFormFileForField(
+  field: FormField,
+  file: Pick<FormSubmissionFile, 'name' | 'size' | 'type'>,
+): string | null {
+  if (field.type !== 'file') return '파일을 첨부할 수 없는 필드입니다.';
+  if (file.size <= 0) return '파일이 비어 있습니다.';
+  if (field.validation?.maxFileSize && file.size > field.validation.maxFileSize) {
+    return `파일은 ${Math.round(field.validation.maxFileSize / 1024 / 1024)}MB 이하로 첨부해 주세요.`;
+  }
+  if (field.validation?.accept && !fileMatchesAccept(
+    {
+      fieldId: field.id,
+      name: file.name,
+      size: file.size,
+      type: file.type,
+    },
+    field.validation.accept,
+  )) {
+    return '허용되지 않는 파일 형식입니다.';
+  }
+  return null;
+}
+
 // ─── Default contact form ─────────────────────────────────────────
 
 export function createDefaultContactForm(): FormSchema {
@@ -477,7 +538,6 @@ export function createDefaultContactForm(): FormSchema {
       { id: 'phone', type: 'phone', label: '전화번호', required: false, placeholder: '+82-10-xxxx-xxxx' },
       { id: 'category', type: 'select', label: '문의 유형', required: true, options: ['회사설립', '교통사고', '이혼/가사', '형사', '노동', '상속', '기타'] },
       { id: 'message', type: 'textarea', label: '문의 내용', required: true, placeholder: '상담하고 싶은 내용을 자유롭게 작성해 주세요.', validation: { maxLength: 5000 } },
-      { id: 'file', type: 'file', label: '관련 서류 첨부', required: false, validation: { accept: 'image/*,.pdf,.doc,.docx', maxFileSize: 10 * 1024 * 1024 } },
       { id: 'consent', type: 'checkbox', label: '개인정보 수집·이용에 동의합니다', required: true },
     ],
     submitLabel: '상담 신청',

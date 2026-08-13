@@ -3,38 +3,24 @@ import path from 'path';
 import matter from 'gray-matter';
 import type { Locale, SiteLocale } from './locales';
 import { insightsArchive } from '../data/insights-archive';
+import {
+  formatColumnPublicationDate,
+  parseColumnPublicationDate,
+  sortColumnPostsNewestFirst,
+  type ColumnCategory,
+  type ColumnFaqItem,
+  type ColumnPost,
+} from './column-post';
 
-export type ColumnCategory = 'formation' | 'legal' | 'case';
-
-export interface ColumnFaqItem {
-  q: string;
-  a: string;
-}
-
-export interface ColumnPost {
-  slug: string;
-  title: string;
-  date: string;
-  dateDisplay: string;
-  readTime: string;
-  category: ColumnCategory;
-  categoryLabel: string;
-  blogCategory?: string;
-  authorName?: string;
-  tags?: string[];
-  featuredImage: string;
-  content: string;
-  summary: string;
-  faq?: ColumnFaqItem[];
-  /** Allowlisted body typography preset id (e.g. ko-body-readable). */
-  typographyPresetId?: string;
-  typography?: {
-    presetId: string;
-    bodySize?: 'sm' | 'md' | 'lg';
-    headingWeight?: '500' | '600' | '700';
-    lineHeight?: 'tight' | 'normal' | 'relaxed';
-  };
-}
+export {
+  formatColumnPublicationDate,
+  getColumnPublicationDate,
+  parseColumnPublicationDate,
+  sortColumnPostsNewestFirst,
+  type ColumnCategory,
+  type ColumnFaqItem,
+  type ColumnPost,
+} from './column-post';
 
 /**
  * Normalize the optional `faq` frontmatter array into a clean `{ q, a }[]`.
@@ -182,13 +168,6 @@ const REAL_SLUG_TO_INSIGHT_ID = Object.fromEntries(
   Object.entries(SLUG_ALIASES).map(([insightId, realSlug]) => [realSlug, insightId])
 ) as Record<string, string>;
 
-function toEnglishDateDisplay(lastmod: string, fallback: string): string {
-  if (!lastmod) return fallback;
-  const date = new Date(lastmod);
-  if (Number.isNaN(date.getTime())) return fallback;
-  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-}
-
 function toEnglishReadTime(value: string): string {
   const minutes = value.match(/\d+/)?.[0];
   return minutes ? `${minutes} min read` : value;
@@ -204,8 +183,11 @@ export function getAliasSlugs(): string[] {
 
 export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPost[] {
   const dir = getColumnsDir(locale);
-  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'));
-  const posts = files.map((file) => {
+  const files = fs.readdirSync(dir)
+    .filter((f) => f.endsWith('.md'))
+    .sort((a, b) => a.localeCompare(b, 'en'));
+  const sourceOrder = new Map(files.map((file, index) => [slugFromFilename(file), index]));
+  const postsWithArchiveDate = files.map((file) => {
     const raw = fs.readFileSync(path.join(dir, file), 'utf-8');
     const { data, content } = matter(raw);
     const slug = slugFromFilename(file);
@@ -218,6 +200,8 @@ export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPos
     const fallbackTitle = (data.title as string) || '';
     const lastmod = (data.lastmod as string) || '';
     const fallbackDateDisplay = (data.date_display as string) || '';
+    const publicationDate = parseColumnPublicationDate(data.published as string)
+      || parseColumnPublicationDate(fallbackDateDisplay);
     const fallbackReadTime = (data.read_time as string) || '';
     const fallbackSummary = extractSummary(fixedContent);
     const faq = normalizeColumnFaq(data.faq);
@@ -231,6 +215,10 @@ export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPos
     const contentText = cleanContent;
     let summary = fallbackSummary;
 
+    if (publicationDate) {
+      dateDisplay = formatColumnPublicationDate(publicationDate, locale, fallbackDateDisplay);
+    }
+
     if (locale === 'en' && dir === COLUMNS_DIR) {
       const insightId = REAL_SLUG_TO_INSIGHT_ID[slug];
       const translatedPost = insightId
@@ -240,27 +228,33 @@ export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPos
         title = translatedPost.title;
         summary = translatedPost.summary;
       }
-      dateDisplay = toEnglishDateDisplay(lastmod, fallbackDateDisplay);
       readTime = toEnglishReadTime(fallbackReadTime);
     }
 
     return {
-      slug,
-      title,
-      date: lastmod,
-      dateDisplay,
-      readTime,
-      category: cat,
-      categoryLabel: categoryLabelFn(cat, locale),
-      blogCategory: cat === 'formation' ? 'company-formation' : 'general',
-      tags: [],
-      featuredImage,
-      content: contentText,
-      summary,
-      ...(faq.length ? { faq } : {}),
+      publicationDate,
+      post: {
+        slug,
+        title,
+        publicationDate,
+        date: lastmod,
+        dateDisplay,
+        readTime,
+        category: cat,
+        categoryLabel: categoryLabelFn(cat, locale),
+        blogCategory: cat === 'formation' ? 'company-formation' : 'general',
+        tags: [],
+        featuredImage,
+        content: contentText,
+        summary,
+        ...(faq.length ? { faq } : {}),
+      },
     };
   });
-  return posts.sort((a, b) => b.date.localeCompare(a.date));
+  return sortColumnPostsNewestFirst(
+    postsWithArchiveDate.map(({ post }) => post),
+    sourceOrder,
+  );
 }
 
 export function getColumnPost(slug: string, locale: Locale | SiteLocale = 'ko'): ColumnPost | undefined {

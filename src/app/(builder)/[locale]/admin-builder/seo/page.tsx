@@ -14,11 +14,12 @@ function getSeoDashboardMetadata(locale: Locale): Metadata {
   };
 }
 
-export default async function BuilderSeoDashboardPage({
-  params,
-}: {
-  params: { locale: string };
-}) {
+export default async function BuilderSeoDashboardPage(
+  props: {
+    params: Promise<{ locale: string }>;
+  }
+) {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const site = await readSiteDocument('default', locale);
   const canvasesByPageId = new Map<string, BuilderCanvasDocument | null>();
@@ -35,7 +36,8 @@ export default async function BuilderSeoDashboardPage({
   );
 }
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   return getSeoDashboardMetadata(locale);
 }

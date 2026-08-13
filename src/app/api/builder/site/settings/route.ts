@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError } from 'zod';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { DEFAULT_TRANSLATION_SOURCE_LOCALE } from '@/lib/builder/translations/sync';
 import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
@@ -28,7 +31,7 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'settings');
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');

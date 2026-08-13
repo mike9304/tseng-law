@@ -37,7 +37,8 @@ const CRM_PAGE_COPY = {
   summary: string;
 }>;
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = CRM_PAGE_COPY[locale];
   return {
@@ -48,8 +49,8 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
 }
 
 interface PageProps {
-  params: { locale: string };
-  searchParams?: { tab?: string };
+  params: Promise<{ locale: string }>;
+  searchParams?: Promise<{ tab?: string }>;
 }
 
 function normalizeCrmTab(tab: string | undefined): CrmTab {
@@ -57,7 +58,9 @@ function normalizeCrmTab(tab: string | undefined): CrmTab {
   return 'contacts';
 }
 
-export default async function CrmPage({ params, searchParams }: PageProps) {
+export default async function CrmPage(props: PageProps) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = CRM_PAGE_COPY[locale];
   const initialTab = normalizeCrmTab(searchParams?.tab);

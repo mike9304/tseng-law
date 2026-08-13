@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   getCommerceSubscriptionsApiErrorPayload,
   type CommerceSubscriptionsApiErrorCode,
@@ -105,7 +104,7 @@ function statusForErrorCode(errorCode: CommerceSubscriptionsApiErrorCode): numbe
 
 export async function GET(request: NextRequest) {
   const errorLocale = resolveRequestLocale(request);
-  const auth = requireBuilderAdminAuth(request);
+  const auth = await guardBuilderReadWithPermission(request, 'view-commerce');
   if (auth instanceof NextResponse) return auth;
 
   try {
@@ -142,7 +141,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   let errorLocale = resolveRequestLocale(request);
-  const guard = await guardMutation(request, { bucket: 'mutation' });
+  const guard = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (guard instanceof NextResponse) return guard;
 
   try {

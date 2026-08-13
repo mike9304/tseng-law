@@ -585,7 +585,6 @@ function CanvasContextMenuLayer({
     onRequestMoveToPage,
     onRequestSaveAsSection,
     selectedLinkTargetNode,
-    selectedNodeIdSet,
     selectedNodeIds,
     selectedNodes,
     sendSelectedNodeBackward,

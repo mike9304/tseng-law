@@ -4,11 +4,14 @@ import {
   listBillingDocumentWebhookEvents,
   summarizeBillingDocumentWebhookEvents,
 } from '@/lib/builder/billing-document-webhooks';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { GET } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ username: 'admin' })),
+vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/billing-document-webhooks', () => ({
@@ -22,7 +25,7 @@ vi.mock('@/lib/builder/billing-document-webhooks', () => ({
   })),
 }));
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const listBillingDocumentWebhookEventsMock = vi.mocked(listBillingDocumentWebhookEvents);
 const summarizeBillingDocumentWebhookEventsMock = vi.mocked(summarizeBillingDocumentWebhookEvents);
 
@@ -33,7 +36,10 @@ function requestFor(query = ''): NextRequest {
 describe('builder billing document webhooks list API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ username: 'admin' } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
     listBillingDocumentWebhookEventsMock.mockResolvedValue([]);
     summarizeBillingDocumentWebhookEventsMock.mockReturnValue({
       total: 0,

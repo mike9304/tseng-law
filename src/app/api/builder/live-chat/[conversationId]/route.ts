@@ -25,8 +25,9 @@ function errorResponse(
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { conversationId: string } },
+  props: { params: Promise<{ conversationId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { allowReadOnly: true, permission: 'manage-contacts' });
   if (auth instanceof NextResponse) return auth;
 
@@ -43,8 +44,9 @@ export async function GET(
 
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { conversationId: string } },
+  props: { params: Promise<{ conversationId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-contacts' });
   if (auth instanceof NextResponse) return auth;
 

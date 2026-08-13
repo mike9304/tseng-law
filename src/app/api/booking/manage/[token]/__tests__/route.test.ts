@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { isSlotAvailable } from '@/lib/builder/bookings/availability';
 import { verifyBookingManageToken } from '@/lib/builder/bookings/manage-token';
-import { getBooking, getService, getStaff, saveBooking } from '@/lib/builder/bookings/storage';
+import { getBooking, getService, getStaff, hasDurableBookingStorage, saveBooking } from '@/lib/builder/bookings/storage';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
 import { evaluateBookingSelfServicePolicy, type BookingSelfServicePolicy } from '@/lib/builder/bookings/refund';
 import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
@@ -27,6 +27,7 @@ vi.mock('@/lib/builder/bookings/storage', () => ({
   getBooking: vi.fn(),
   getService: vi.fn(),
   getStaff: vi.fn(),
+  hasDurableBookingStorage: vi.fn(() => true),
   saveBooking: vi.fn(async () => undefined),
   timestamped: vi.fn((booking, createdAt) => ({
     ...booking,
@@ -58,8 +59,9 @@ vi.mock('@/lib/builder/bookings/packages', () => ({
 }));
 
 vi.mock('@/lib/builder/bookings/slot-lock', () => ({
-  acquireSlotLock: vi.fn(() => true),
-  releaseSlotLock: vi.fn(),
+  acquireSlotLock: vi.fn(async () => ({ ownerToken: 'test-lease', keys: [], expiresAt: 9_999_999 })),
+  releaseSlotLock: vi.fn(async () => undefined),
+  renewSlotLock: vi.fn(async (lease) => lease),
 }));
 
 vi.mock('@/lib/builder/bookings/zoom-handoff', () => ({
@@ -137,17 +139,19 @@ function request(method: 'GET' | 'PATCH', query = '', body?: unknown): NextReque
     headers: {
       'content-type': 'application/json',
       'x-forwarded-for': '203.0.113.9',
+      origin: 'https://tseng-law.com',
     },
     ...(body === undefined ? {} : { body: typeof body === 'string' ? body : JSON.stringify(body) }),
   });
 }
 
-const context = { params: { token: 'token-1' } };
+const context = { params: Promise.resolve({ token: 'token-1' }) };
 const checkRateLimitMock = vi.mocked(checkRateLimit);
 const verifyBookingManageTokenMock = vi.mocked(verifyBookingManageToken);
 const getBookingMock = vi.mocked(getBooking);
 const getServiceMock = vi.mocked(getService);
 const getStaffMock = vi.mocked(getStaff);
+const hasDurableBookingStorageMock = vi.mocked(hasDurableBookingStorage);
 const isSlotAvailableMock = vi.mocked(isSlotAvailable);
 const evaluateBookingSelfServicePolicyMock = vi.mocked(evaluateBookingSelfServicePolicy);
 const acquireSlotLockMock = vi.mocked(acquireSlotLock);
@@ -162,9 +166,10 @@ describe('/api/booking/manage/[token]', () => {
     getBookingMock.mockResolvedValue(booking());
     getServiceMock.mockResolvedValue(service);
     getStaffMock.mockResolvedValue(staff);
+    hasDurableBookingStorageMock.mockReturnValue(true);
     isSlotAvailableMock.mockResolvedValue(true);
     evaluateBookingSelfServicePolicyMock.mockResolvedValue(policy);
-    acquireSlotLockMock.mockReturnValue(true);
+    acquireSlotLockMock.mockResolvedValue({ ownerToken: 'test-lease', keys: [], expiresAt: 9_999_999 });
   });
 
   it('returns a localized stable code for an invalid zh-hant manage token', async () => {
@@ -217,6 +222,34 @@ describe('/api/booking/manage/[token]', () => {
       error: '예약 변경 내용을 확인해 주세요.',
       errorCode: 'invalid_update',
     });
+  });
+
+  it('rejects a cross-site PATCH before resolving the booking', async () => {
+    const crossSite = new NextRequest('https://law.example.test/api/booking/manage/token-1', {
+      method: 'PATCH',
+      headers: { 'content-type': 'application/json', origin: 'https://attacker.example' },
+      body: JSON.stringify({ action: 'reschedule', startAt: '2026-06-10T03:00:00.000Z' }),
+    });
+
+    const response = await PATCH(crossSite, context);
+
+    expect(response.status).toBe(403);
+    expect(getBookingMock).not.toHaveBeenCalled();
+  });
+
+  it('fails closed before booking lookup or availability when durable storage is unavailable', async () => {
+    hasDurableBookingStorageMock.mockReturnValue(false);
+
+    const response = await PATCH(
+      request('PATCH', '', { action: 'reschedule', startAt: '2026-06-10T03:00:00.000Z' }),
+      context,
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(payload.errorCode).toBe('booking_storage_unavailable');
+    expect(getBookingMock).not.toHaveBeenCalled();
+    expect(isSlotAvailableMock).not.toHaveBeenCalled();
   });
 
   it('returns a localized stable code when the booking is already cancelled', async () => {
@@ -281,7 +314,7 @@ describe('/api/booking/manage/[token]', () => {
   });
 
   it('returns a localized stable code when the requested slot is locked', async () => {
-    acquireSlotLockMock.mockReturnValue(false);
+    acquireSlotLockMock.mockResolvedValue(null);
 
     const response = await PATCH(
       request('PATCH', '', { action: 'reschedule', startAt: '2026-06-11T01:00:00.000Z' }),

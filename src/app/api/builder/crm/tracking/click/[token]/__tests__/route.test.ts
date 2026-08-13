@@ -48,7 +48,9 @@ describe('/api/builder/crm/tracking/click/[token]', () => {
   it('returns localized stable-code JSON when tracking is not configured', async () => {
     vi.mocked(resolveTrackingSecret).mockReturnValue(null);
     const route = await import('../route');
-    const response = await route.GET(getRequest('zh-hant'), { params: { token: 'token-1' } });
+    const response = await route.GET(getRequest('zh-hant'), {
+      params: Promise.resolve({ token: 'token-1' }),
+    });
     const payload = await response.json();
 
     expect(response.status).toBe(503);
@@ -62,7 +64,9 @@ describe('/api/builder/crm/tracking/click/[token]', () => {
   it('returns localized stable-code JSON for invalid tracking tokens', async () => {
     vi.mocked(verifyTrackingToken).mockReturnValue(null);
     const route = await import('../route');
-    const response = await route.GET(getRequest('ko'), { params: { token: 'bad-token' } });
+    const response = await route.GET(getRequest('ko'), {
+      params: Promise.resolve({ token: 'bad-token' }),
+    });
     const payload = await response.json();
 
     expect(response.status).toBe(404);
@@ -75,7 +79,9 @@ describe('/api/builder/crm/tracking/click/[token]', () => {
 
   it('logs the click and redirects when the token is valid', async () => {
     const route = await import('../route');
-    const response = await route.GET(getRequest(), { params: { token: 'token-1' } });
+    const response = await route.GET(getRequest(), {
+      params: Promise.resolve({ token: 'token-1' }),
+    });
 
     expect(response.status).toBe(302);
     expect(response.headers.get('location')).toBe('https://client.example/path');

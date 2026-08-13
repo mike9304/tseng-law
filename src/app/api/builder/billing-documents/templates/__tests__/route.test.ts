@@ -4,16 +4,18 @@ import {
   createBillingDocumentTemplate,
   listBillingDocumentTemplates,
 } from '@/lib/builder/billing-documents-templates';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { GET, POST } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ username: 'admin' })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/billing-documents-templates', () => ({
@@ -26,7 +28,7 @@ vi.mock('@/lib/builder/billing-documents-templates', () => ({
   })),
 }));
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const listBillingDocumentTemplatesMock = vi.mocked(listBillingDocumentTemplates);
 const createBillingDocumentTemplateMock = vi.mocked(createBillingDocumentTemplate);
@@ -49,8 +51,14 @@ function postRequest(query = '', body: unknown = {
 describe('builder billing document templates API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ username: 'admin' } as never);
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     listBillingDocumentTemplatesMock.mockResolvedValue([]);
     createBillingDocumentTemplateMock.mockImplementation(async (input) => ({
       id: 'bdtpl_1',

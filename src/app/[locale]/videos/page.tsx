@@ -37,7 +37,8 @@ function buildPublishedPath(locale: Locale): string {
   return `/${locale}/${VIDEOS_SLUG}`;
 }
 
-export async function generateMetadata({ params }: { params: { locale: SiteLocale } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   if (locale === 'ja') {
     const copy = pageCopy.ja.videos;
@@ -118,7 +119,8 @@ function renderStaticVideosPage(locale: SiteLocale) {
   );
 }
 
-export default async function VideosPage({ params }: { params: { locale: SiteLocale } }) {
+export default async function VideosPage(props: { params: Promise<{ locale: SiteLocale }> }) {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   if (locale === 'ja') {
     return renderStaticVideosPage(locale);

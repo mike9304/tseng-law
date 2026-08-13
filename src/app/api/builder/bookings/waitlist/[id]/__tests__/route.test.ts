@@ -58,7 +58,7 @@ describe('/api/builder/bookings/waitlist/[id]', () => {
   it('returns localized not-found errors for missing waitlist entries', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ status: 'contacted' }, 'en'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -74,7 +74,7 @@ describe('/api/builder/bookings/waitlist/[id]', () => {
     vi.mocked(getWaitlistEntry).mockResolvedValueOnce(waitlistEntry());
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ status: 'promoted' }, 'zh-hant'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -89,7 +89,7 @@ describe('/api/builder/bookings/waitlist/[id]', () => {
     vi.mocked(getWaitlistEntry).mockResolvedValueOnce(waitlistEntry({ status: 'promoted' }));
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ status: 'closed' }, 'ko'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 
@@ -106,7 +106,7 @@ describe('/api/builder/bookings/waitlist/[id]', () => {
     vi.mocked(getWaitlistEntry).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ status: 'contacted' }, 'ko'), {
-      params: { id: 'wl-route-test' },
+      params: Promise.resolve({ id: 'wl-route-test' }),
     });
     const payload = await response.json();
 

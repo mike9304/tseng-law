@@ -56,10 +56,13 @@ const organizationId = 'https://tseng-law.com/#organization';
 describe.each(Object.entries(localeExpectations) as Array<
   [SiteLocale, (typeof localeExpectations)[SiteLocale]]
 >)('global SEO locale integrity: %s', (locale, expected) => {
-  it('keeps page metadata while localizing inherited organization fields', () => {
-    const metadata = generateMetadata({ params: { locale } });
+  it('keeps page metadata while localizing inherited organization fields', async () => {
+    const metadata = await generateMetadata({ params: Promise.resolve({ locale }) });
 
-    expect(metadata.title).toBe(siteContent[locale].meta.title);
+    expect(metadata.title).toEqual({
+      default: expected.organizationName,
+      template: `%s | ${expected.organizationName}`,
+    });
     expect(metadata.description).toBe(siteContent[locale].meta.description);
     expect(metadata.applicationName).toBe(expected.organizationName);
     expect(metadata.authors).toEqual([{ name: expected.organizationName }]);

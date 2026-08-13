@@ -11,11 +11,12 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function BuilderFlexDevPage({
-  params,
-}: {
-  params: { locale: string };
-}) {
+export default async function BuilderFlexDevPage(
+  props: {
+    params: Promise<{ locale: string }>;
+  }
+) {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const now = '2026-04-28T00:00:00.000Z';
   const resolved: ResolvedPublishedSitePage = {

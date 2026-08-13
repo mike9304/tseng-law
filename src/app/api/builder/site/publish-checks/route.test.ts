@@ -181,6 +181,12 @@ describe('/api/builder/site/publish-checks', () => {
     expect(response.status).toBe(200);
     expect(mockedReadPageCanvas).toHaveBeenCalledWith('workspace-site-b', 'page-1', 'draft');
     expect(mockedReadSiteDocument).toHaveBeenCalledWith('workspace-site-b', 'ko');
+    expect(mockedRunAllChecks).toHaveBeenCalledWith(
+      document,
+      expect.objectContaining({ pageId: 'page-1' }),
+      siteDocument,
+      'workspace-site-b',
+    );
     expect(mockedReadTranslationReleasePolicy).toHaveBeenCalledWith('workspace-site-b');
     expect(mockedEvaluateTranslationReleaseApprovalRequirement).toHaveBeenCalledWith(expect.objectContaining({
       siteId: 'workspace-site-b',

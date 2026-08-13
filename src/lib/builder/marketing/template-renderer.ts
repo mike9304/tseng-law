@@ -2,6 +2,10 @@ import type { Campaign } from './campaign-types';
 import type { Subscriber } from './subscriber-types';
 import type { Locale } from '@/lib/locales';
 import { asLocaleKey } from './campaign-types';
+import {
+  createMarketingClickSignature,
+  resolveMarketingTrackingSecret,
+} from './marketing-click-signature';
 
 interface RenderedEmail {
   subject: string;
@@ -37,13 +41,32 @@ function escapeHtml(value: string): string {
     .replace(/"/g, '&quot;');
 }
 
-function rewriteAnchors(html: string, baseUrl: string, trackingToken: string): string {
+function resolveTrackableDestination(href: string, baseUrl: string): string | null {
+  try {
+    const resolved = new URL(href, `${baseUrl.replace(/\/+$/, '')}/`);
+    if (resolved.protocol !== 'http:' && resolved.protocol !== 'https:') return null;
+    return resolved.toString();
+  } catch {
+    return null;
+  }
+}
+
+function rewriteAnchors(
+  html: string,
+  baseUrl: string,
+  trackingToken: string,
+  trackingSecret: string | null,
+): string {
+  if (!trackingSecret) return html;
   return html.replace(/<a\s+([^>]*?)href=("|')([^"']+)("|')/gi, (match, pre, q1, href, q2) => {
-    if (/^(mailto:|tel:|#|javascript:)/i.test(href)) return match;
+    if (/^(mailto:|tel:|#)/i.test(href)) return match;
     if (href.includes('/api/marketing/unsubscribe')) return match;
+    const destination = resolveTrackableDestination(href, baseUrl);
+    if (!destination) return match;
+    const signature = createMarketingClickSignature(trackingToken, destination, trackingSecret);
     const target = `${baseUrl.replace(/\/+$/, '')}/api/marketing/track?token=${encodeURIComponent(
       trackingToken,
-    )}&u=${encodeURIComponent(href)}`;
+    )}&u=${encodeURIComponent(destination)}&sig=${encodeURIComponent(signature)}`;
     return `<a ${pre}href=${q1}${escapeHtml(target)}${q2}`;
   });
 }
@@ -90,7 +113,12 @@ export function renderCampaignForSubscriber(ctx: RenderContext): RenderedEmail {
     ${openPixel}
   `;
 
-  html = rewriteAnchors(html, ctx.baseUrl, ctx.trackingToken);
+  html = rewriteAnchors(
+    html,
+    ctx.baseUrl,
+    ctx.trackingToken,
+    resolveMarketingTrackingSecret(),
+  );
   html = `${preheader ? `<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden">${escapeHtml(preheader)}</div>` : ''}${html}${footer}`;
 
   const plainTextWithUnsub = `${text}\n\n— ${FOOTER_BY_LOCALE[locale]}\n${UNSUB_LABEL_BY_LOCALE[locale]}: ${unsubUrl}`;

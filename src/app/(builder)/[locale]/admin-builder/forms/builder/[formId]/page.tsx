@@ -7,7 +7,8 @@ import { getFormsCopy } from '@/components/builder/forms/forms-copy';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const copy = getFormsCopy(params.locale as 'ko' | 'zh-hant' | 'en');
   return {
     title: copy.builder.title,
@@ -16,7 +17,8 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   };
 }
 
-export default async function FormBuilderPage({ params }: { params: { locale: string; formId: string } }) {
+export default async function FormBuilderPage(props: { params: Promise<{ locale: string; formId: string }> }) {
+  const params = await props.params;
   const copy = getFormsCopy(params.locale as 'ko' | 'zh-hant' | 'en');
   let schema = await loadFormSchema(params.formId);
   if (!schema && params.formId === 'default-contact') {

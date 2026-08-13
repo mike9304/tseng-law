@@ -8,7 +8,8 @@ import { normalizeLocale } from '@/lib/locales';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 
@@ -39,7 +40,8 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   return NextResponse.json({ policy: next });
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 

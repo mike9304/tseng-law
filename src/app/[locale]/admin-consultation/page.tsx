@@ -10,7 +10,8 @@ import { normalizeLocale } from '@/lib/locales';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const title = locale === 'ko' ? '상담 관리' : locale === 'zh-hant' ? '諮詢管理' : 'Consultation admin';
   return {
@@ -569,13 +570,14 @@ function SuggestedAttorneyQuestions({
   );
 }
 
-export default async function AdminConsultationPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: string };
-  searchParams?: { days?: string; knowledge?: string };
-}): Promise<React.ReactElement> {
+export default async function AdminConsultationPage(
+  props: {
+    params: Promise<{ locale: string }>;
+    searchParams?: Promise<{ days?: string; knowledge?: string }>;
+  }
+): Promise<React.ReactElement> {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   // Authentication happens in src/middleware.ts before this Server
   // Component even runs. If the request reached here, the caller has
   // already satisfied the Basic Auth challenge.

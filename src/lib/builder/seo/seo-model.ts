@@ -146,7 +146,10 @@ export function buildPageSeo(
       ogDescription,
     twitterImage: seo.twitterImage || ogImage,
     canonical: normalizeCanonicalUrl(seo.canonical || url),
-    noIndex: page.noIndex || seo.noIndex || false,
+    // Public review submissions are intentionally omitted from sitemap.xml
+    // in every locale. Keep their page metadata aligned even if an older
+    // builder document did not persist the noIndex flag.
+    noIndex: page.slug === 'reviews' || slug === 'reviews' || page.noIndex || seo.noIndex || false,
     noFollow: seo.noFollow || false,
     additionalMetaTags: seo.additionalMetaTags ?? [],
     hreflang,

@@ -1,11 +1,14 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { filterOrders } from '@/lib/builder/commerce/orders-engine';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { GET } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
+vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/commerce/orders-engine', () => ({
@@ -13,7 +16,7 @@ vi.mock('@/lib/builder/commerce/orders-engine', () => ({
 }));
 
 const order = { orderId: 'order-1', locale: 'ko', status: 'confirmed' };
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const filterOrdersMock = vi.mocked(filterOrders);
 
 function getRequest(query = ''): NextRequest {
@@ -23,8 +26,24 @@ function getRequest(query = ''): NextRequest {
 describe('builder commerce orders list API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
     filterOrdersMock.mockResolvedValue([order] as never);
+  });
+
+  it('returns 401 and short-circuits storage when commerce read auth fails', async () => {
+    const request = getRequest('locale=en');
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ ok: false, error: 'Unauthorized' }, { status: 401 }) as never,
+    );
+
+    const response = await GET(request);
+
+    expect(response.status).toBe(401);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(request, 'view-commerce');
+    expect(filterOrdersMock).not.toHaveBeenCalled();
   });
 
   it('returns localized validation errors with stable codes', async () => {
@@ -68,7 +87,10 @@ describe('builder commerce orders list API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, orders: [order], total: 1 });
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
     expect(filterOrdersMock).toHaveBeenCalledWith({
       locale: 'en',
       q: 'order',

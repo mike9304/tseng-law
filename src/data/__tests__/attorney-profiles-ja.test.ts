@@ -5,6 +5,11 @@ import {
   getAttorneyProfile,
   getAttorneyProfilePath,
 } from '@/data/attorney-profiles';
+import {
+  CONSULTATION_EMAIL,
+  getConsultationEmailTemplate,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 
 const koreanProfile = attorneyProfiles.ko['wei-tseng'];
 const japaneseProfile = attorneyProfiles.ja['wei-tseng'];
@@ -79,7 +84,7 @@ describe('Japanese attorney profile', () => {
     );
     expect(japaneseProfile.internalLinks).toContainEqual({
       label: 'お問い合わせ・ご相談',
-      href: '/ja/contact',
+      href: getConsultationPublicMailto('ja'),
     });
   });
 
@@ -96,7 +101,7 @@ describe('Japanese attorney profile', () => {
         label: '台湾のジム事故損害賠償：一審事例・期限・証拠・賠償項目',
         href: '/ja/columns/taiwan-gym-injury-lawsuit',
       },
-      { label: 'お問い合わせ・ご相談', href: '/ja/contact' },
+      { label: 'お問い合わせ・ご相談', href: getConsultationPublicMailto('ja') },
     ]);
 
     const internalLinkJson = JSON.stringify(japaneseProfile.internalLinks);
@@ -124,7 +129,7 @@ describe('Japanese attorney profile', () => {
       const profile = attorneyProfiles[locale]['wei-tseng'];
 
       expect(getAttorneyProfile(locale, 'wei-tseng')).toBe(profile);
-      expect(profile.email).toBe('wei@hoveringlaw.com.tw');
+      expect(profile.email).toBe(CONSULTATION_EMAIL);
       expect(profile.image).toBe('/images/team/wei-tseng-official.png');
       expect(profile.sameAs).toEqual([
         'https://www.hoveringlaw.com.tw/en/wei.html',
@@ -138,6 +143,26 @@ describe('Japanese attorney profile', () => {
       ]);
       expect(JSON.stringify(profile)).toContain(
         locale === 'en' ? 'TWD 1.57M' : '157',
+      );
+    },
+  );
+
+  it.each(['ko', 'zh-hant', 'en', 'ja'] as const)(
+    'routes the %s profile consultation action through the centralized localized mailto',
+    (locale) => {
+      const profile = attorneyProfiles[locale]['wei-tseng'];
+      const consultationLink = profile.internalLinks.at(-1);
+      const template = getConsultationEmailTemplate(locale);
+
+      expect(consultationLink?.href).toBe(getConsultationPublicMailto(locale));
+      expect(consultationLink?.href).toContain(
+        `mailto:${CONSULTATION_EMAIL}?subject=${encodeURIComponent(template.subject)}`,
+      );
+      expect(consultationLink?.href).toContain(
+        `&body=${encodeURIComponent(template.body)}`,
+      );
+      expect(consultationLink?.href).not.toMatch(
+        /\/contact|tel:|010-2992-9304|kakao|line\.me|lin\.ee/i,
       );
     },
   );

@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
+import { validateCsrf } from '@/lib/builder/security/csrf';
+import {
+  resolveReviewTarget,
+  verifyReviewToken,
+} from '@/lib/builder/security/review-tokens';
 import {
   CommentParentNotFoundError,
   createComment,
@@ -41,8 +47,65 @@ function resolveLocale(request: NextRequest): Locale {
   return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 }
 
+function isReviewFormRequest(request: NextRequest): boolean {
+  return request.headers.get('content-type')?.toLowerCase().startsWith(
+    'application/x-www-form-urlencoded',
+  ) ?? false;
+}
+
+function invalidReviewTokenResponse(): NextResponse {
+  return NextResponse.json(
+    { ok: false, error: 'Invalid review session.', errorCode: 'review_token_invalid' },
+    { status: 401 },
+  );
+}
+
+/**
+ * Public client-review comments are accepted only from the native review
+ * form. Its token is a POST body field (never a query/referrer value), and
+ * every routing/identity value is derived from the persisted review session.
+ */
+async function postReviewComment(request: NextRequest, locale: Locale): Promise<NextResponse> {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
+  let form: FormData;
+  try {
+    form = await request.formData();
+  } catch {
+    return badRequest(locale);
+  }
+
+  const token = form.get('reviewToken');
+  const review = typeof token === 'string' ? await verifyReviewToken(token) : null;
+  if (!review) return invalidReviewTokenResponse();
+
+  // Re-resolve the persisted page before it reaches comments-store, whose
+  // page IDs become filenames. This also fails closed after unpublish/removal.
+  const target = await resolveReviewTarget(review);
+  if (!target || target.siteId !== DEFAULT_BUILDER_SITE_ID || target.pageId !== review.branchOrPageId) {
+    return invalidReviewTokenResponse();
+  }
+
+  const text = sanitizeCommentBody(form.get('body'));
+  if (!text) return badRequest(locale);
+
+  try {
+    const comment = await createComment({
+      siteId: target.siteId,
+      pageId: target.pageId,
+      author: 'Client reviewer',
+      body: text,
+    });
+    return NextResponse.json({ ok: true, comment });
+  } catch (error) {
+    console.error('[builder/collab/comments] review POST failed:', error);
+    return errorResponse(locale, 'comment_create_failed', 500);
+  }
+}
+
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'view-cms');
   if (auth instanceof NextResponse) return auth;
   const locale = resolveLocale(request);
 
@@ -62,9 +125,11 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  const locale = resolveLocale(request);
+  if (isReviewFormRequest(request)) return postReviewComment(request, locale);
+
   const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
-  const locale = resolveLocale(request);
 
   let body: Record<string, unknown>;
   try {

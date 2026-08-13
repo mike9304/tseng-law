@@ -1,7 +1,12 @@
 import { get, list } from '@vercel/blob';
 import type { Locale } from '@/lib/locales';
 import type { ColumnPost, ColumnCategory } from '@/lib/columns';
-import { getAllColumnPosts } from '@/lib/columns';
+import {
+  formatColumnPublicationDate,
+  getAllColumnPosts,
+  parseColumnPublicationDate,
+  sortColumnPostsNewestFirst,
+} from '@/lib/columns';
 import { estimateColumnReadTimeLabel, listColumnBundles } from '@/lib/builder/columns/storage';
 import type { ColumnDocument } from '@/lib/builder/columns/types';
 import { filterPublicColumnPosts } from '@/lib/builder/columns/public-post-filter';
@@ -92,8 +97,14 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
     doc.frontmatter?.category === 'formation' || doc.frontmatter?.category === 'legal' || doc.frontmatter?.category === 'case'
       ? doc.frontmatter.category
       : 'legal';
-  const dateIso = doc.frontmatter?.lastmod || doc.updatedAt || new Date().toISOString();
-  const dateDisplay = doc.frontmatter?.dateDisplay || dateIso.slice(0, 10);
+  const dateIso = doc.frontmatter?.lastmod || doc.updatedAt || '';
+  const publicationDate = parseColumnPublicationDate(doc.frontmatter?.publishedAt)
+    || parseColumnPublicationDate(doc.frontmatter?.dateDisplay);
+  const dateDisplay = formatColumnPublicationDate(
+    publicationDate,
+    doc.locale,
+    doc.frontmatter?.dateDisplay || '',
+  );
   // Body is whatever the editor produced — prefer markdown for AI ingestion
   // since the column-knowledge stripMarkdown flow expects markdown-ish text.
   const content = doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '';
@@ -101,6 +112,7 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
   return {
     slug: doc.slug,
     title: doc.title || doc.slug,
+    publicationDate,
     date: dateIso,
     dateDisplay,
     readTime: doc.frontmatter?.readTime || estimateReadTime(content, doc.locale),
@@ -127,13 +139,20 @@ function builderDocToColumnPost(doc: ColumnDocument): ColumnPost {
       ? doc.frontmatter.category
       : 'legal';
   const content = doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '';
-  const dateIso = doc.frontmatter.publishedAt || doc.frontmatter.lastmod || doc.updatedAt;
+  const dateIso = doc.frontmatter.lastmod || doc.updatedAt;
+  const publicationDate = parseColumnPublicationDate(doc.frontmatter.publishedAt)
+    || parseColumnPublicationDate(doc.frontmatter.dateDisplay);
   const typography = normalizeTypography(doc.frontmatter.typography);
   return {
     slug: doc.slug,
     title: doc.title || doc.slug,
+    publicationDate,
     date: dateIso,
-    dateDisplay: doc.frontmatter.dateDisplay || dateIso.slice(0, 10),
+    dateDisplay: formatColumnPublicationDate(
+      publicationDate,
+      doc.locale,
+      doc.frontmatter.dateDisplay || '',
+    ),
     readTime: doc.frontmatter.readTime || estimateReadTime(content, doc.locale),
     category,
     categoryLabel: categoryLabel(category, doc.locale),
@@ -305,11 +324,19 @@ export async function getAllColumnPostsIncludingBlob(locale: Locale): Promise<Co
   // Blob fallback, then file entries whose slug isn't already covered.
   const merged: ColumnPost[] = [];
   const seen = new Set<string>();
+  const sourceOrderBySlug = new Map(filePosts.map((post, index) => [post.slug, index]));
+  let nextSourceOrder = sourceOrderBySlug.size;
+  for (const post of [...builderPosts, ...blobPosts]) {
+    if (!sourceOrderBySlug.has(post.slug)) {
+      sourceOrderBySlug.set(post.slug, nextSourceOrder);
+      nextSourceOrder += 1;
+    }
+  }
   for (const post of filterPublicColumnPosts([...builderPosts, ...blobPosts, ...filePosts])) {
     if (seen.has(post.slug)) continue;
     const faq = post.faq ?? fileFaqBySlug.get(post.slug);
     merged.push(faq ? { ...post, faq } : post);
     seen.add(post.slug);
   }
-  return merged;
+  return sortColumnPostsNewestFirst(merged, sourceOrderBySlug);
 }

@@ -1,9 +1,8 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
-import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
 vi.mock('next/font/google', () => {
   const font = (options: { variable: string }) => ({
@@ -20,7 +19,7 @@ vi.mock('next/font/google', () => {
 });
 
 vi.mock('next/headers', () => ({
-  headers: () => ({ get: () => null }),
+  headers: async () => ({ get: () => null }),
 }));
 
 import RootLayout from '@/app/layout';
@@ -262,13 +261,20 @@ describe('Reveal no-JavaScript server-rendered root layout', () => {
   // Render the real RootLayout through react-dom/server. The <noscript> fallback
   // must ship inside the initial server HTML, so this proves the rendered markup
   // rather than the layout source string alone.
-  const markup = renderToStaticMarkup(
-    createElement(RootLayout, null, 'body-marker'),
-  );
-  const noscriptMatch = markup.match(/<noscript>([\s\S]*?)<\/noscript>/);
-  const noscriptInner = noscriptMatch ? noscriptMatch[1] : '';
-  const styleMatch = noscriptInner.match(/<style[^>]*>([\s\S]*?)<\/style>/);
-  const styleBody = styleMatch ? styleMatch[1] : '';
+  let markup = '';
+  let noscriptMatch: RegExpMatchArray | null = null;
+  let noscriptInner = '';
+  let styleBody = '';
+
+  beforeAll(async () => {
+    markup = renderToStaticMarkup(
+      await RootLayout({ children: 'body-marker' }),
+    );
+    noscriptMatch = markup.match(/<noscript>([\s\S]*?)<\/noscript>/);
+    noscriptInner = noscriptMatch ? noscriptMatch[1] : '';
+    const styleMatch = noscriptInner.match(/<style[^>]*>([\s\S]*?)<\/style>/);
+    styleBody = styleMatch ? styleMatch[1] : '';
+  });
 
   it('renders exactly one <noscript> wrapping a single <style>', () => {
     expect((markup.match(/<noscript>/g) ?? []).length).toBe(1);

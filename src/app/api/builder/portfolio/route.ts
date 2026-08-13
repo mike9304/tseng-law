@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
 import { normalizeLocale, type Locale } from '@/lib/locales';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { columnLocaleSchema } from '@/lib/builder/columns/types';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   getBuilderPortfolioApiErrorPayload,
   type BuilderPortfolioApiErrorCode,
@@ -103,7 +102,7 @@ export async function GET(request: NextRequest) {
     });
 
     if (parsed.scope === 'all') {
-      const auth = requireBuilderAdminAuth(request);
+      const auth = await guardBuilderReadWithPermission(request, 'edit-pages');
       if (auth instanceof NextResponse) return auth;
     }
 

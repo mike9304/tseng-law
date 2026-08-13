@@ -7,7 +7,7 @@ import {
 import * as approvalIdRoute from '@/app/api/builder/site/translation-release-approvals/[id]/route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'admin' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'admin' })),
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 
@@ -43,7 +43,7 @@ describe('/api/builder/site/translation-release-approvals/[id] self-review guard
   it('returns conflict without notification when the requester reviews their own approval', async () => {
     const response = await approvalIdRoute.PATCH(
       request({ decision: 'approve', comment: 'Self approval.' }),
-      { params: { id: 'trapv_1' } },
+      { params: Promise.resolve({ id: 'trapv_1' }) },
     );
     const payload = await response.json();
 

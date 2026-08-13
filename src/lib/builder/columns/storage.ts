@@ -156,6 +156,9 @@ function markdownToBasicHtml(markdown: string): string {
 function legacyPostToColumnDocument(post: ColumnPost & { locale: Locale }): ColumnDocument {
   const now = new Date().toISOString();
   const lastmod = normalizeIsoDate(post.date, now);
+  const publishedAt = post.publicationDate
+    ? normalizeIsoDate(post.publicationDate, lastmod)
+    : undefined;
   return {
     version: 1,
     slug: post.slug,
@@ -180,6 +183,7 @@ function legacyPostToColumnDocument(post: ColumnPost & { locale: Locale }): Colu
       },
       featuredImage: post.featuredImage,
       featured: false,
+      publishedAt,
       seo: {
         title: post.title,
         description: post.summary,

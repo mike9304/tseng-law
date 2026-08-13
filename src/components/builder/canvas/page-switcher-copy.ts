@@ -14,7 +14,6 @@ export type PageSwitcherMemberStarterWidgetCopy = {
   profileSubtitle: string;
   bookingsSubtitle: string;
   loginLabel: string;
-  signupLabel: string;
   profileLabel: string;
   bookingsLabel: string;
   premiumLabel: string;
@@ -271,13 +270,12 @@ const COPY: Record<'ko' | 'zh-hant' | 'en', PageSwitcherCopy> = {
     memberStarterSetupTitle: '다음 설정',
     memberStarterSetupCopy: '- 멤버 로그인/계정 앱 위젯 배치\n- 페이지 권한을 회원 전용으로 연결\n- 로그인 후 이동 경로와 CTA 확인',
     memberStarterWidgetCopy: {
-      loginSubtitle: '회원 전용 계정 페이지로 이동하기 전에 로그인 또는 회원가입을 완료합니다.',
+      loginSubtitle: '회원 계정은 담당자가 확인 후 발급합니다. 기존 회원은 로그인해 주세요.',
       accountSubtitle: '회원 정보, 프로필, 예약, 프리미엄 영역을 한 화면에서 안내합니다.',
       profileTitle: '프로필 정보',
       profileSubtitle: '회원이 직접 이름과 전화번호를 저장할 수 있는 기본 프로필 폼입니다.',
       bookingsSubtitle: '회원 이메일로 연결된 상담 예약을 자동으로 불러옵니다.',
       loginLabel: '로그인',
-      signupLabel: '회원가입',
       profileLabel: '프로필',
       bookingsLabel: '예약',
       premiumLabel: '프리미엄',
@@ -463,13 +461,12 @@ const COPY: Record<'ko' | 'zh-hant' | 'en', PageSwitcherCopy> = {
     memberStarterSetupTitle: '下一步設定',
     memberStarterSetupCopy: '- 放置會員登入/帳戶應用元件\n- 將頁面連結到會員專屬權限\n- 確認登入後導向與行動按鈕',
     memberStarterWidgetCopy: {
-      loginSubtitle: '前往會員專屬帳戶頁前，請先登入或建立帳戶。',
+      loginSubtitle: '會員帳戶由事務所確認後建立。既有會員請登入。',
       accountSubtitle: '在同一個儀表板引導會員查看個人資料、預約與進階區。',
       profileTitle: '個人資料',
       profileSubtitle: '會員可自行儲存姓名與電話的基本個人資料表單。',
       bookingsSubtitle: '自動載入與會員信箱連結的諮詢預約。',
       loginLabel: '登入',
-      signupLabel: '建立帳戶',
       profileLabel: '個人資料',
       bookingsLabel: '預約',
       premiumLabel: '進階會員區',
@@ -655,13 +652,12 @@ const COPY: Record<'ko' | 'zh-hant' | 'en', PageSwitcherCopy> = {
     memberStarterSetupTitle: 'Next setup',
     memberStarterSetupCopy: '- Place the member login/account app widget\n- Connect this page to member-only permissions\n- Confirm post-login routing and calls to action',
     memberStarterWidgetCopy: {
-      loginSubtitle: 'Sign in or create an account before continuing to member-only account pages.',
+      loginSubtitle: 'Member accounts are issued by the firm after review. Existing members can sign in.',
       accountSubtitle: 'Guide members to profile details, bookings, and premium areas from one dashboard.',
       profileTitle: 'Profile details',
       profileSubtitle: 'A basic profile form members can use to save their name and phone.',
       bookingsSubtitle: 'Automatically loads consultations linked to the member email.',
       loginLabel: 'Sign in',
-      signupLabel: 'Create account',
       profileLabel: 'Profile',
       bookingsLabel: 'Bookings',
       premiumLabel: 'Premium',

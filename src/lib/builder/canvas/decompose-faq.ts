@@ -7,9 +7,9 @@ import {
   createHomeTextNode,
 } from './decompose-home-shared';
 
-const FAQ_ROOT_HEIGHT = 1460;
-const FAQ_CONTAINER_HEIGHT = 1280;
-const FAQ_LIST_HEIGHT = 1080;
+const FAQ_ROOT_HEIGHT = 1160;
+const FAQ_CONTAINER_HEIGHT = 1016;
+const FAQ_LIST_HEIGHT = 896;
 
 export const FAQ_SECTION_ROOT_HEIGHT = FAQ_ROOT_HEIGHT;
 
@@ -40,7 +40,7 @@ export function createFaqDecomposedNodes(
     createHomeContainerNode({
       id: containerId,
       parentId: rootId,
-      rect: { x: 72, y: 88, width: 1136, height: FAQ_CONTAINER_HEIGHT },
+      rect: { x: 72, y: 72, width: 1136, height: FAQ_CONTAINER_HEIGHT },
       zIndex: 0,
       label: 'home faq container',
       className: 'container',
@@ -67,7 +67,7 @@ export function createFaqDecomposedNodes(
     createHomeContainerNode({
       id: listId,
       parentId: containerId,
-      rect: { x: 0, y: 126, width: 1136, height: FAQ_LIST_HEIGHT },
+      rect: { x: 0, y: 120, width: 1136, height: FAQ_LIST_HEIGHT },
       zIndex: 2,
       label: 'home faq list',
       className: 'faq-list',
@@ -78,13 +78,13 @@ export function createFaqDecomposedNodes(
     const itemId = `home-faq-item-${index}`;
     const questionId = `${itemId}-question`;
     const answerWrapId = `${itemId}-answer-wrap`;
-    const itemY = index * 78;
+    const itemY = index * 65;
 
     nodes.push(
       createHomeContainerNode({
         id: itemId,
         parentId: listId,
-        rect: { x: 0, y: itemY, width: 1136, height: 68 },
+        rect: { x: 0, y: itemY, width: 1136, height: 58 },
         zIndex: index,
         label: `home faq item ${index + 1}`,
         className: 'faq-item',
@@ -93,7 +93,7 @@ export function createFaqDecomposedNodes(
       createHomeContainerNode({
         id: questionId,
         parentId: itemId,
-        rect: { x: 0, y: 0, width: 1136, height: 52 },
+        rect: { x: 0, y: 0, width: 1136, height: 50 },
         zIndex: 0,
         label: `home faq question ${index + 1}`,
         className: 'faq-question',
@@ -101,7 +101,7 @@ export function createFaqDecomposedNodes(
       createHomeTextNode({
         id: `${itemId}-question-text`,
         parentId: questionId,
-        rect: { x: 16, y: 16, width: 1030, height: 24 },
+        rect: { x: 16, y: 14, width: 1030, height: 24 },
         zIndex: 0,
         text: item.question,
         as: 'div',
@@ -110,7 +110,7 @@ export function createFaqDecomposedNodes(
       createHomeTextNode({
         id: `${itemId}-arrow`,
         parentId: questionId,
-        rect: { x: 1088, y: 16, width: 20, height: 20 },
+        rect: { x: 1088, y: 14, width: 20, height: 20 },
         zIndex: 1,
         text: '▸',
         className: 'faq-arrow',
@@ -119,7 +119,7 @@ export function createFaqDecomposedNodes(
       createHomeContainerNode({
         id: answerWrapId,
         parentId: itemId,
-        rect: { x: 16, y: 52, width: 1104, height: 56 },
+        rect: { x: 16, y: 50, width: 1104, height: 56 },
         zIndex: 1,
         label: `home faq answer wrap ${index + 1}`,
         className: 'faq-answer-wrap',

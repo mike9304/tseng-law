@@ -70,7 +70,7 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
 
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ name: 'Renamed' }), {
-      params: { sectionId: 'sec-1' },
+      params: Promise.resolve({ sectionId: 'sec-1' }),
     });
     const payload = await response.json();
 
@@ -85,7 +85,7 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
 
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ incrementUsage: true }), {
-      params: { sectionId: 'sec-1' },
+      params: Promise.resolve({ sectionId: 'sec-1' }),
     });
     const payload = await response.json();
 
@@ -100,7 +100,7 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
 
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ name: 'Renamed' }), {
-      params: { sectionId: 'sec-unknown' },
+      params: Promise.resolve({ sectionId: 'sec-unknown' }),
     });
     const payload = await response.json();
 
@@ -111,7 +111,7 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
   it('rejects unknown fields with strict validation (zod)', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ unknownField: 'x' }), {
-      params: { sectionId: 'sec-1' },
+      params: Promise.resolve({ sectionId: 'sec-1' }),
     });
     const payload = await response.json();
 
@@ -125,7 +125,7 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
 
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest(), {
-      params: { sectionId: 'sec-missing' },
+      params: Promise.resolve({ sectionId: 'sec-missing' }),
     });
     const payload = await response.json();
 
@@ -140,7 +140,7 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
 
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest(), {
-      params: { sectionId: 'sec-missing' },
+      params: Promise.resolve({ sectionId: 'sec-missing' }),
     });
 
     expect(response.status).toBe(401);
@@ -153,7 +153,7 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/site/section-library/sec-1?locale=ko'),
-      { params: { sectionId: 'sec-1' } },
+      { params: Promise.resolve({ sectionId: 'sec-1' }) },
     );
     const payload = await response.json();
 
@@ -169,7 +169,7 @@ describe('/api/builder/site/section-library/[sectionId]', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/site/section-library/sec-missing?locale=zh-hant'),
-      { params: { sectionId: 'sec-missing' } },
+      { params: Promise.resolve({ sectionId: 'sec-missing' }) },
     );
     const payload = await response.json();
 

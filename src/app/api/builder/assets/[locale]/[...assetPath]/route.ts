@@ -24,9 +24,9 @@ function missingAssetImageResponse(): NextResponse {
 
 export async function GET(
   _request: NextRequest,
-  context: { params: { locale: string; assetPath: string[] } }
+  context: { params: Promise<{ locale: string; assetPath: string[] }> }
 ) {
-  const reference = parseBuilderAssetRouteReference(context.params.locale, context.params.assetPath);
+  const reference = parseBuilderAssetRouteReference((await context.params).locale, (await context.params).assetPath);
   if (!reference) {
     return NextResponse.json({ ok: false, error: 'Invalid builder asset URL.' }, { status: 400 });
   }

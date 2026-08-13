@@ -36,7 +36,7 @@ function request(method: 'PATCH' | 'DELETE', query = '', body?: unknown): NextRe
   });
 }
 
-const routeContext = { params: { appId: 'site-search' } };
+const routeContext = { params: Promise.resolve({ appId: 'site-search' }) };
 
 describe('builder app installation lifecycle API', () => {
   beforeEach(() => {

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import {
   getCommerceCategoriesApiErrorPayload,
   type CommerceCategoriesApiErrorCode,
@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
     });
 
     if (parsed.scope === 'all') {
-      const auth = requireBuilderAdminAuth(request);
+      const auth = await guardBuilderReadWithPermission(request, 'view-commerce');
       if (auth instanceof NextResponse) return auth;
     }
 

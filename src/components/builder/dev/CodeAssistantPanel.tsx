@@ -137,7 +137,7 @@ export default function CodeAssistantPanel({
     if (reviewMode === 'current') return code;
     if (reviewMode === 'diff') return result.diff ?? copy.noDiffAvailable;
     return result.fixedCode ?? code;
-  }, [code, result, reviewMode]);
+  }, [code, copy.noDiffAvailable, result, reviewMode]);
   const reviewLabel = reviewMode === 'current' ? copy.current : reviewMode === 'diff' ? copy.selectedDiffLabel : copy.suggested;
   const diffHunks = result?.diffHunks ?? [];
   const canSelectHunks = diffHunks.length > 1;

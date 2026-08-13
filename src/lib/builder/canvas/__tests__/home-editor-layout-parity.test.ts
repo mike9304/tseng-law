@@ -122,8 +122,9 @@ describe('upgradeHomeEditorLayoutParity', () => {
 
     expect(repaired.updatedAt).toBe(legacy.updatedAt);
     expect(repaired.updatedBy).toBe(legacy.updatedBy);
-    expect(node(repaired, 'home-case-results-root').rect).toEqual({ x: 0, y: 4270, width: 1280, height: 800 });
-    expect(node(repaired, 'home-case-results-content').rect).toEqual({ x: 0, y: 219, width: 1280, height: 581 });
+    expect(repaired.stageHeight).toBe(7127);
+    expect(node(repaired, 'home-case-results-root').rect).toEqual({ x: 0, y: 3354, width: 1280, height: 600 });
+    expect(node(repaired, 'home-case-results-content').rect).toEqual({ x: 0, y: 0, width: 1280, height: 600 });
     expect(node(repaired, 'home-case-results-title').rect).toEqual({ x: 78, y: 39, width: 720, height: 130 });
 
     const divider = node(repaired, 'home-case-results-divider');
@@ -138,16 +139,16 @@ describe('upgradeHomeEditorLayoutParity', () => {
     });
     expect(divider.responsive?.mobile?.rect).toMatchObject({ x: 16, y: 188, width: 40, height: 4 });
 
-    expect(node(repaired, 'home-contact-root').rect).toEqual({ x: 0, y: 7943, width: 1280, height: 532 });
+    expect(node(repaired, 'home-contact-root').rect).toEqual({ x: 0, y: 6593, width: 1280, height: 532 });
     expect(node(repaired, 'home-contact-copy')).toMatchObject({
       parentId: 'home-contact-container',
       rect: { x: 0, y: 0, width: 1178, height: 180 },
     });
     expect(node(repaired, 'home-contact-title').rect).toEqual({ x: 0, y: 39, width: 1178, height: 56 });
     expect(node(repaired, 'home-contact-description').rect).toEqual({ x: 0, y: 111, width: 720, height: 58 });
-    expect(node(repaired, 'home-stats-container').rect).toEqual({ x: 51, y: 142, width: 1178, height: 479 });
-    expect(node(repaired, 'home-stats-title').rect).toEqual({ x: 0, y: 48, width: 1178, height: 56 });
-    expect(node(repaired, 'home-stats-description').rect).toEqual({ x: 0, y: 139, width: 720, height: 64 });
+    expect(node(repaired, 'home-stats-container').rect).toEqual({ x: 72, y: 64, width: 1136, height: 432 });
+    expect(node(repaired, 'home-stats-title').rect).toEqual({ x: 0, y: 40, width: 560, height: 54 });
+    expect(node(repaired, 'home-stats-description').rect).toEqual({ x: 0, y: 106, width: 760, height: 64 });
   });
 
   it('does not reset a customized near-match contact title', () => {

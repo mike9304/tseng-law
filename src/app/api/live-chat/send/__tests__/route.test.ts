@@ -33,11 +33,15 @@ function makeConversation(overrides: Partial<ChatConversation> = {}): ChatConver
   };
 }
 
-function postRequest(body: unknown, localeQuery = ''): NextRequest {
+function postRequest(body: unknown, localeQuery = '', origin: string | null = 'https://tseng-law.com'): NextRequest {
   const query = localeQuery ? `?locale=${localeQuery}` : '';
-  return new NextRequest(`https://law.example.test/api/live-chat/send${query}`, {
+  return new NextRequest(`https://tseng-law.com/api/live-chat/send${query}`, {
     method: 'POST',
-    headers: { 'content-type': 'application/json', 'x-forwarded-for': '127.0.0.8' },
+    headers: {
+      'content-type': 'application/json',
+      'x-forwarded-for': '127.0.0.8',
+      ...(origin ? { origin } : {}),
+    },
     body: JSON.stringify(body),
   });
 }
@@ -62,6 +66,21 @@ describe('/api/live-chat/send', () => {
     expect(saveConversation).toHaveBeenCalledWith(
       expect.objectContaining({ unreadByAdmin: 3 }),
     );
+  });
+
+  it('rejects cross-origin requests before rate limiting or conversation mutation', async () => {
+    const route = await import('../route');
+    const response = await route.POST(
+      postRequest({ conversationId: 'cnv-1', visitorToken: 'tok-correct', body: '추가 질문 있어요' }, '', 'https://attacker.example'),
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(403);
+    expect(payload).toEqual({ ok: false, error: 'csrf_origin_mismatch', code: 'csrf_origin_mismatch' });
+    expect(checkRateLimit).not.toHaveBeenCalled();
+    expect(getConversation).not.toHaveBeenCalled();
+    expect(appendMessage).not.toHaveBeenCalled();
+    expect(saveConversation).not.toHaveBeenCalled();
   });
 
   it('returns localized 401 when the visitor token does not match', async () => {

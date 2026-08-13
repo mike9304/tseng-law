@@ -1,11 +1,14 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import type { GeneratedSiteDraft } from '@/lib/builder/ai-generator/orchestrator';
 import type { SiteSpec } from '@/lib/builder/ai-generator/site-spec';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'admin' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-pages',
+  })),
   guardMutation: vi.fn(async () => ({ username: 'admin', permission: 'edit-pages' })),
 }));
 
@@ -145,7 +148,55 @@ describe('/api/builder/ai-generator/versions', () => {
     expect(payload.ok).toBe(true);
     expect(payload.versions).toHaveLength(1);
     expect(store.listAiIntakeVersions).toHaveBeenCalledWith('builder-alpha', { locale: 'ko' });
-    expect(guardBuilderRead).toHaveBeenCalledWith(expect.any(NextRequest));
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'edit-pages',
+    );
+  });
+
+  it('short-circuits list, detail, and diff reads when edit-pages is denied', async () => {
+    const store = await import('@/lib/builder/ai-generator/intake-versions-store');
+    const forbidden = () => NextResponse.json({ error: 'Missing permission: edit-pages' }, { status: 403 });
+    vi.mocked(guardBuilderReadWithPermission)
+      .mockResolvedValueOnce(forbidden())
+      .mockResolvedValueOnce(forbidden())
+      .mockResolvedValueOnce(forbidden());
+
+    const listRoute = await import('../route');
+    const detailRoute = await import('../[id]/route');
+    const diffRoute = await import('../[id]/diff/[otherId]/route');
+    const list = await listRoute.GET(
+      request('https://law.example.test/api/builder/ai-generator/versions?siteId=builder-alpha'),
+    );
+    const detail = await detailRoute.GET(
+      request('https://law.example.test/api/builder/ai-generator/versions/ver_1?siteId=builder-alpha'),
+      { params: Promise.resolve({ id: 'ver_1' }) },
+    );
+    const diff = await diffRoute.GET(
+      request('https://law.example.test/api/builder/ai-generator/versions/ver_1/diff/ver_2?siteId=builder-alpha'),
+      { params: Promise.resolve({ id: 'ver_1', otherId: 'ver_2' }) },
+    );
+
+    expect([list.status, detail.status, diff.status]).toEqual([403, 403, 403]);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledTimes(3);
+    expect(guardBuilderReadWithPermission).toHaveBeenNthCalledWith(
+      1,
+      expect.any(NextRequest),
+      'edit-pages',
+    );
+    expect(guardBuilderReadWithPermission).toHaveBeenNthCalledWith(
+      2,
+      expect.any(NextRequest),
+      'edit-pages',
+    );
+    expect(guardBuilderReadWithPermission).toHaveBeenNthCalledWith(
+      3,
+      expect.any(NextRequest),
+      'edit-pages',
+    );
+    expect(store.listAiIntakeVersions).not.toHaveBeenCalled();
+    expect(store.getAiIntakeVersion).not.toHaveBeenCalled();
+    expect(store.diffAiIntakeVersions).not.toHaveBeenCalled();
   });
 
   it('returns detail, diff, and restore payloads for a version', async () => {
@@ -179,15 +230,15 @@ describe('/api/builder/ai-generator/versions', () => {
     const restoreRoute = await import('../[id]/restore/route');
     const detail = await detailRoute.GET(
       request('https://law.example.test/api/builder/ai-generator/versions/ver_1?siteId=builder-alpha'),
-      { params: { id: 'ver_1' } },
+      { params: Promise.resolve({ id: 'ver_1' }) },
     );
     const diff = await diffRoute.GET(
       request('https://law.example.test/api/builder/ai-generator/versions/ver_1/diff/ver_2?siteId=builder-alpha'),
-      { params: { id: 'ver_1', otherId: 'ver_2' } },
+      { params: Promise.resolve({ id: 'ver_1', otherId: 'ver_2' }) },
     );
     const restore = await restoreRoute.POST(
       request('https://law.example.test/api/builder/ai-generator/versions/ver_1/restore?siteId=builder-alpha', 'POST'),
-      { params: { id: 'ver_1' } },
+      { params: Promise.resolve({ id: 'ver_1' }) },
     );
 
     expect(detail.status).toBe(200);
@@ -223,7 +274,7 @@ describe('/api/builder/ai-generator/versions', () => {
     const restoreRoute = await import('../[id]/restore/route');
     const response = await restoreRoute.POST(
       request('https://law.example.test/api/builder/ai-generator/versions/ver_legacy/restore?siteId=builder-alpha', 'POST'),
-      { params: { id: 'ver_legacy' } },
+      { params: Promise.resolve({ id: 'ver_legacy' }) },
     );
     const payload = await response.json();
 
@@ -262,7 +313,7 @@ describe('/api/builder/ai-generator/versions', () => {
     const restoreRoute = await import('../[id]/restore/route');
     const response = await restoreRoute.POST(
       request('https://law.example.test/api/builder/ai-generator/versions/ver_demo/restore?siteId=builder-alpha', 'POST'),
-      { params: { id: 'ver_demo' } },
+      { params: Promise.resolve({ id: 'ver_demo' }) },
     );
     const payload = await response.json();
 
@@ -319,7 +370,7 @@ describe('/api/builder/ai-generator/versions', () => {
     const restoreRoute = await import('../[id]/restore/route');
     const response = await restoreRoute.POST(
       request('https://law.example.test/api/builder/ai-generator/versions/ver_adversarial/restore?siteId=builder-alpha', 'POST'),
-      { params: { id: 'ver_adversarial' } },
+      { params: Promise.resolve({ id: 'ver_adversarial' }) },
     );
     const payload = await response.json();
 

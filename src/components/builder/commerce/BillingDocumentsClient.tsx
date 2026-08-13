@@ -728,7 +728,16 @@ export default function BillingDocumentsClient({
       failedWebhooks,
       attentionRows: attentionRows.slice(0, 5),
     };
-  }, [filtered, locale, unmatchedWebhookEvents, webhookEvents, webhookEventsByDocument]);
+  }, [
+    c.failedPayment,
+    c.failedWebhook,
+    c.stalePayLink,
+    filtered,
+    locale,
+    unmatchedWebhookEvents,
+    webhookEvents,
+    webhookEventsByDocument,
+  ]);
 
   const automationDirty = useMemo(
     () => JSON.stringify(automationDraft) !== JSON.stringify(automationSettings),

@@ -49,7 +49,7 @@ function request(method: 'GET' | 'DELETE', query = ''): NextRequest {
   });
 }
 
-const params = { params: { filename: 'asset.png' } };
+const params = { params: Promise.resolve({ filename: 'asset.png' }) };
 
 describe('builder workspace shared asset detail API', () => {
   beforeEach(() => {
@@ -76,7 +76,7 @@ describe('builder workspace shared asset detail API', () => {
 
   it('returns localized invalid filename errors', async () => {
     const response = await GET(request('GET', 'locale=zh-hant'), {
-      params: { filename: '../secret.png' },
+      params: Promise.resolve({ filename: '../secret.png' }),
     });
     const payload = await response.json();
 

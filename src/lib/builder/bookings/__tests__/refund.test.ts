@@ -160,6 +160,32 @@ describe('booking refund policy', () => {
     expect(applyRefundOutcome(booking('2026-05-12T08:00:00.000Z'), outcome, undefined).paymentStatus).toBe('partial-refund');
   });
 
+  it('uses stable, scoped Stripe idempotency keys for refund retries', async () => {
+    const idempotencyKeys: string[] = [];
+    const fetchMock = vi.fn(async (_url: string | URL | Request, init?: RequestInit) => {
+      const headers = new Headers(init?.headers);
+      const idempotencyKey = headers.get('Idempotency-Key');
+      expect(idempotencyKey).toMatch(/^booking-refund-v1:[a-f0-9]{64}$/);
+      idempotencyKeys.push(idempotencyKey ?? '');
+      return new Response(JSON.stringify({ id: `re_${idempotencyKeys.length}` }), { status: 200 });
+    });
+    vi.stubGlobal('fetch', fetchMock);
+
+    const firstBooking = booking('2026-05-14T00:00:00.000Z');
+    await computeRefundForCancel(firstBooking, currentService());
+    await computeRefundForCancel(firstBooking, currentService());
+    await computeRefundForCancel({ ...firstBooking, bookingId: 'bk-refund-distinct' }, currentService());
+
+    fixtures.service = { ...service(), cancellationPolicyId: 'fee-10' };
+    await computeRefundForCancel(firstBooking, currentService());
+
+    expect(idempotencyKeys).toHaveLength(4);
+    expect(idempotencyKeys[0]).toBe(idempotencyKeys[1]);
+    expect(idempotencyKeys[2]).not.toBe(idempotencyKeys[0]);
+    expect(idempotencyKeys[3]).not.toBe(idempotencyKeys[0]);
+    expect(idempotencyKeys.every((key) => key.length < 255)).toBe(true);
+  });
+
   it('caps full refunds at the captured deposit amount when only a deposit was paid online', async () => {
     const fetchMock = vi.fn(async (_url: string | URL | Request, init?: RequestInit) => {
       const body = new URLSearchParams(String(init?.body ?? ''));

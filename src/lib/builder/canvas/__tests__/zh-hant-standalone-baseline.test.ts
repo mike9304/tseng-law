@@ -45,12 +45,12 @@ function expectNode(nodes: Map<string, BuilderCanvasNode>, nodeId: string): Buil
 const desktopBaselines: readonly DesktopBaselineCase[] = [
   {
     slug: 'about',
-    stageHeight: 5166,
+    stageHeight: 5315,
     rects: [
       { id: 'page-about-page-header-root', rect: { y: 0, width: 1280, height: 428 } },
       { id: 'page-about-firm-intro-root', rect: { y: 428, width: 1280, height: 1027 } },
       { id: 'page-about-attorney-root', rect: { y: 1455, width: 1280, height: 2605 } },
-      { id: 'page-about-contact-root', rect: { y: 4060, width: 1280, height: 1106 } },
+      { id: 'page-about-contact-root', rect: { y: 4060, width: 1280, height: 1255 } },
     ],
   },
   {

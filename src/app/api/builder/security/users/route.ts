@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
 import { recordSecurityUserEvent } from '@/lib/builder/audit/record';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import {
   BUILDER_ROLE_NAMES,
   listUserRoles,
@@ -52,7 +55,7 @@ function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
 }
 
 export async function GET(request: NextRequest) {
-  const blocked = guardBuilderRead(request);
+  const blocked = await guardBuilderReadWithPermission(request, 'manage-roles');
   if (blocked instanceof NextResponse) return blocked;
   const locale = resolveRequestLocale(request);
   try {

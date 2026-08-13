@@ -51,10 +51,8 @@ function resolveLocale(request: NextRequest): Locale {
   return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { slug: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -71,10 +69,8 @@ export async function GET(
   }
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { slug: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -130,10 +126,8 @@ export async function PATCH(
   }
 }
 
-export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { slug: string } },
-) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

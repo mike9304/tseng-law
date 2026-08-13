@@ -5,6 +5,8 @@ import {
   deleteNotification,
   markRead,
 } from '@/lib/builder/notifications/notification-store';
+import { NotificationAudienceForbiddenError } from '@/lib/builder/notifications/notification-model';
+import { resolveUserRole } from '@/lib/builder/security/resolve-permission';
 import { DELETE, PATCH } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
@@ -14,6 +16,10 @@ vi.mock('@/lib/builder/security/guard', () => ({
 vi.mock('@/lib/builder/notifications/notification-store', () => ({
   deleteNotification: vi.fn(),
   markRead: vi.fn(),
+}));
+
+vi.mock('@/lib/builder/security/resolve-permission', () => ({
+  resolveUserRole: vi.fn(async () => 'owner'),
 }));
 
 const notification = {
@@ -29,6 +35,7 @@ const notification = {
 const guardMutationMock = vi.mocked(guardMutation);
 const deleteNotificationMock = vi.mocked(deleteNotification);
 const markReadMock = vi.mocked(markRead);
+const resolveUserRoleMock = vi.mocked(resolveUserRole);
 
 function request(method: 'PATCH' | 'DELETE', query = ''): NextRequest {
   return new NextRequest(`https://law.example.test/api/builder/notifications/ntf_1${query ? `?${query}` : ''}`, {
@@ -36,12 +43,13 @@ function request(method: 'PATCH' | 'DELETE', query = ''): NextRequest {
   });
 }
 
-const params = { params: { id: 'ntf_1' } };
+const params = { params: Promise.resolve({ id: 'ntf_1' }) };
 
 describe('builder notification detail API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardMutationMock.mockResolvedValue({ username: 'admin' } as never);
+    resolveUserRoleMock.mockResolvedValue('owner');
     markReadMock.mockResolvedValue(notification as never);
     deleteNotificationMock.mockResolvedValue(true as never);
   });
@@ -52,7 +60,30 @@ describe('builder notification detail API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, notification });
-    expect(markReadMock).toHaveBeenCalledWith('ntf_1');
+    expect(markReadMock).toHaveBeenCalledWith(
+      'ntf_1',
+      { principal: 'admin', role: 'owner' },
+    );
+  });
+
+  it('returns 403 when a different role targets an owner-only notification', async () => {
+    guardMutationMock.mockResolvedValueOnce({ username: 'editor@example.com' } as never);
+    resolveUserRoleMock.mockResolvedValueOnce('editor');
+    markReadMock.mockRejectedValueOnce(new NotificationAudienceForbiddenError());
+
+    const response = await PATCH(request('PATCH', 'locale=en'), params);
+    const payload = await response.json();
+
+    expect(response.status).toBe(403);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'You do not have permission to access this notification.',
+      errorCode: 'notification_forbidden',
+    });
+    expect(markReadMock).toHaveBeenCalledWith(
+      'ntf_1',
+      { principal: 'editor@example.com', role: 'editor' },
+    );
   });
 
   it('returns localized missing notification errors on patch', async () => {
@@ -93,7 +124,26 @@ describe('builder notification detail API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true });
-    expect(deleteNotificationMock).toHaveBeenCalledWith('ntf_1');
+    expect(deleteNotificationMock).toHaveBeenCalledWith(
+      'ntf_1',
+      { principal: 'admin', role: 'owner' },
+    );
+  });
+
+  it('returns 403 when a different role tries to delete a notification', async () => {
+    guardMutationMock.mockResolvedValueOnce({ username: 'client@example.com' } as never);
+    resolveUserRoleMock.mockResolvedValueOnce('client');
+    deleteNotificationMock.mockRejectedValueOnce(new NotificationAudienceForbiddenError());
+
+    const response = await DELETE(request('DELETE', 'locale=zh-hant'), params);
+    const payload = await response.json();
+
+    expect(response.status).toBe(403);
+    expect(payload).toEqual({
+      ok: false,
+      error: '您沒有權限存取此通知。',
+      errorCode: 'notification_forbidden',
+    });
   });
 
   it('returns localized delete failures without leaking exception details', async () => {

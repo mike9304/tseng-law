@@ -22,6 +22,7 @@ import {
   checkStaleDatasetBindings,
 } from './checks';
 import { checkTranslationPublishWarnings } from './translation-checks';
+import { checkDisabledConsultationChannels } from './consultation-channel-checks';
 
 export type { CheckCategory, CheckResult, CheckSeverity, PublishCheckSuite } from './check-types';
 
@@ -29,6 +30,7 @@ export async function runAllChecks(
   canvas: BuilderCanvasDocument,
   page?: BuilderPageMeta | null,
   site?: BuilderSiteDocument | null,
+  siteId?: string | null,
 ): Promise<PublishCheckSuite> {
   const functions = await readBuilderFunctions();
   const all: CheckResult[] = [
@@ -43,6 +45,7 @@ export async function runAllChecks(
     ...checkFormTarget(canvas),
     ...checkResponsiveOverflow(canvas),
     ...checkH1Count(canvas),
+    ...checkDisabledConsultationChannels(canvas, siteId ?? site?.siteId),
   ];
 
   const blockerCount = all.filter((r) => r.severity === 'blocker').length;

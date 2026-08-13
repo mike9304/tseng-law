@@ -1,13 +1,15 @@
 'use client';
 
-import React, { FormEvent, useEffect, useMemo, useState, type CSSProperties } from 'react';
+import React, { FormEvent, useMemo, useState, type CSSProperties } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderMemberLoginCanvasNode } from '@/lib/builder/canvas/types';
 import { normalizeLocale, type Locale } from '@/lib/locales';
-import { getMemberLoginCopy, MEMBER_LOGIN_KO_DEFAULTS } from './member-login-copy';
+import {
+  getMemberLoginCopy,
+  localizedMemberLoginSubtitle,
+  MEMBER_LOGIN_KO_DEFAULTS,
+} from './member-login-copy';
 import { localizedMemberText } from '../member-account-widgets-copy';
-
-type MemberAuthMode = 'login' | 'signup';
 
 function MemberLoginRender({
   node,
@@ -21,16 +23,10 @@ function MemberLoginRender({
   const effectiveLocale = normalizeLocale(locale || 'ko');
   const copy = useMemo(() => getMemberLoginCopy(effectiveLocale), [effectiveLocale]);
   const content = node.content;
-  const [authMode, setAuthMode] = useState<MemberAuthMode>(content.defaultMode);
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState('');
   const isPublished = mode === 'published';
-  const signupEnabled = content.showSignup;
   const nextPath = content.nextPath || `/${effectiveLocale}/account`;
-
-  useEffect(() => {
-    setAuthMode(content.showSignup ? content.defaultMode : 'login');
-  }, [content.defaultMode, content.showSignup]);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -42,10 +38,9 @@ function MemberLoginRender({
       email: String(form.get('email') ?? ''),
       password: String(form.get('password') ?? ''),
       locale: effectiveLocale,
-      ...(authMode === 'signup' ? { name: String(form.get('name') ?? '') } : {}),
     };
     try {
-      const response = await fetch(authMode === 'signup' ? '/api/members/signup' : '/api/members/login', {
+      const response = await fetch('/api/members/login', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(payload),
@@ -63,45 +58,16 @@ function MemberLoginRender({
   return (
     <section
       data-builder-member-login-widget="true"
-      data-builder-member-login-mode={authMode}
+      data-builder-member-login-mode="login"
+      data-public-signup-enabled="false"
       style={panelStyle}
     >
       <div style={introStyle}>
         <span style={eyebrowStyle}>{copy.eyebrow}</span>
         <strong style={titleStyle}>{localizedMemberText(content.title, copy.title, MEMBER_LOGIN_KO_DEFAULTS.title)}</strong>
-        <span style={subtitleStyle}>{localizedMemberText(content.subtitle, copy.subtitle, MEMBER_LOGIN_KO_DEFAULTS.subtitle)}</span>
+        <span style={subtitleStyle}>{localizedMemberLoginSubtitle(content.subtitle, copy.subtitle)}</span>
       </div>
-      {signupEnabled ? (
-        <div role="tablist" aria-label={copy.authModeAriaLabel} style={tabsStyle}>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={authMode === 'login'}
-            data-builder-member-login-tab="login"
-            onClick={() => setAuthMode('login')}
-            style={tabStyle(authMode === 'login')}
-          >
-            {localizedMemberText(content.loginLabel, copy.login, MEMBER_LOGIN_KO_DEFAULTS.loginLabel)}
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={authMode === 'signup'}
-            data-builder-member-login-tab="signup"
-            onClick={() => setAuthMode('signup')}
-            style={tabStyle(authMode === 'signup')}
-          >
-            {localizedMemberText(content.signupLabel, copy.signup, MEMBER_LOGIN_KO_DEFAULTS.signupLabel)}
-          </button>
-        </div>
-      ) : null}
       <form onSubmit={submit} style={formStyle}>
-        {authMode === 'signup' ? (
-          <label style={fieldStyle}>
-            <span>{copy.name}</span>
-            <input name="name" autoComplete="name" required disabled={!isPublished || pending} style={inputStyle} />
-          </label>
-        ) : null}
         <label style={fieldStyle}>
           <span>{copy.email}</span>
           <input name="email" type="email" autoComplete="email" required disabled={!isPublished || pending} style={inputStyle} />
@@ -111,7 +77,7 @@ function MemberLoginRender({
           <input
             name="password"
             type="password"
-            autoComplete={authMode === 'signup' ? 'new-password' : 'current-password'}
+            autoComplete="current-password"
             required
             minLength={8}
             disabled={!isPublished || pending}
@@ -126,9 +92,7 @@ function MemberLoginRender({
         >
           {pending
             ? copy.loading
-            : authMode === 'signup'
-              ? localizedMemberText(content.signupLabel, copy.signup, MEMBER_LOGIN_KO_DEFAULTS.signupLabel)
-              : localizedMemberText(content.loginLabel, copy.login, MEMBER_LOGIN_KO_DEFAULTS.loginLabel)}
+            : localizedMemberText(content.loginLabel, copy.login, MEMBER_LOGIN_KO_DEFAULTS.loginLabel)}
         </button>
         {message ? <p role="alert" style={errorStyle}>{message}</p> : null}
       </form>
@@ -147,9 +111,8 @@ function MemberLoginInspector({
   const effectiveLocale = normalizeLocale(locale);
   const copy = getMemberLoginCopy(effectiveLocale);
   const title = localizedMemberText(c.title, copy.title, MEMBER_LOGIN_KO_DEFAULTS.title);
-  const subtitle = localizedMemberText(c.subtitle, copy.subtitle, MEMBER_LOGIN_KO_DEFAULTS.subtitle);
+  const subtitle = localizedMemberLoginSubtitle(c.subtitle, copy.subtitle);
   const loginLabel = localizedMemberText(c.loginLabel, copy.login, MEMBER_LOGIN_KO_DEFAULTS.loginLabel);
-  const signupLabel = localizedMemberText(c.signupLabel, copy.signup, MEMBER_LOGIN_KO_DEFAULTS.signupLabel);
   const nextPathPlaceholder = `/${effectiveLocale}/account`;
   return (
     <>
@@ -165,24 +128,10 @@ function MemberLoginInspector({
         <span>{copy.inspectorNextPath}</span>
         <input type="text" value={c.nextPath} placeholder={nextPathPlaceholder} disabled={disabled} onChange={(event) => onUpdate({ nextPath: event.target.value })} />
       </label>
-      <label>
-        <span>{copy.inspectorShowSignup}</span>
-        <input type="checkbox" checked={c.showSignup} disabled={disabled} onChange={(event) => onUpdate({ showSignup: event.target.checked })} />
-      </label>
-      <label>
-        <span>{copy.inspectorDefaultTab}</span>
-        <select value={c.defaultMode} disabled={disabled || !c.showSignup} onChange={(event) => onUpdate({ defaultMode: event.target.value })}>
-          <option value="login">{copy.inspectorModeLogin}</option>
-          <option value="signup">{copy.inspectorModeSignup}</option>
-        </select>
-      </label>
+      <p role="note">{copy.inspectorPublicSignupNotice}</p>
       <label>
         <span>{copy.inspectorLoginLabel}</span>
         <input type="text" value={loginLabel} disabled={disabled} onChange={(event) => onUpdate({ loginLabel: event.target.value })} />
-      </label>
-      <label>
-        <span>{copy.inspectorSignupLabel}</span>
-        <input type="text" value={signupLabel} disabled={disabled} onChange={(event) => onUpdate({ signupLabel: event.target.value })} />
       </label>
     </>
   );
@@ -226,29 +175,6 @@ const subtitleStyle: CSSProperties = {
   fontSize: 14,
   lineHeight: 1.45,
 };
-
-const tabsStyle: CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
-  padding: 4,
-  gap: 4,
-  background: '#f1f5f9',
-  borderRadius: 999,
-};
-
-function tabStyle(active: boolean): CSSProperties {
-  return {
-    border: 0,
-    borderRadius: 999,
-    background: active ? '#ffffff' : 'transparent',
-    color: active ? '#0f172a' : '#64748b',
-    boxShadow: active ? '0 8px 20px rgba(15, 23, 42, 0.1)' : 'none',
-    fontSize: 13,
-    fontWeight: 800,
-    padding: '9px 10px',
-    cursor: 'pointer',
-  };
-}
 
 const formStyle: CSSProperties = {
   display: 'grid',
@@ -303,7 +229,7 @@ export default defineComponent({
     title: MEMBER_LOGIN_KO_DEFAULTS.title,
     subtitle: MEMBER_LOGIN_KO_DEFAULTS.subtitle,
     defaultMode: 'login',
-    showSignup: true,
+    showSignup: false,
     nextPath: '',
     loginLabel: MEMBER_LOGIN_KO_DEFAULTS.loginLabel,
     signupLabel: MEMBER_LOGIN_KO_DEFAULTS.signupLabel,

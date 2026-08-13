@@ -70,6 +70,12 @@ describe('robots route — main site resolver', () => {
     expect(rules.userAgent).toBe('*');
     expect(rules.allow).toBe('/');
     expect(rules.disallow).toEqual(expect.arrayContaining(['/api/', '/admin-builder', '/admin-consultation']));
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja']) {
+      expect(rules.disallow).toEqual(expect.arrayContaining([
+        `/${locale}/admin-builder`,
+        `/${locale}/admin-consultation`,
+      ]));
+    }
     expect(result.sitemap).toBe('https://tseng-law.example/sitemap.xml');
   });
 });

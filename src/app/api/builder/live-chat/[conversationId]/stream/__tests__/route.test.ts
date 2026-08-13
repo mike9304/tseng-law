@@ -44,7 +44,7 @@ describe('/api/builder/live-chat/[conversationId]/stream', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/live-chat/cnv-1/stream?locale=en'),
-      { params: { conversationId: 'cnv-1' } },
+      { params: Promise.resolve({ conversationId: 'cnv-1' }) },
     );
 
     expect(response.status).toBe(200);
@@ -63,7 +63,7 @@ describe('/api/builder/live-chat/[conversationId]/stream', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/live-chat/cnv-missing/stream?locale=zh-hant'),
-      { params: { conversationId: 'cnv-missing' } },
+      { params: Promise.resolve({ conversationId: 'cnv-missing' }) },
     );
     const payload = await response.json();
 
@@ -80,7 +80,7 @@ describe('/api/builder/live-chat/[conversationId]/stream', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/live-chat/cnv-1/stream?locale=zh-hant'),
-      { params: { conversationId: 'cnv-1' } },
+      { params: Promise.resolve({ conversationId: 'cnv-1' }) },
     );
 
     expect(response.status).toBe(401);

@@ -26,7 +26,7 @@ function request(method: 'PATCH' | 'DELETE', query = '', body?: unknown): NextRe
   });
 }
 
-const routeContext = { params: { id: 'auto_1' } };
+const routeContext = { params: Promise.resolve({ id: 'auto_1' }) };
 const automation: CrmAutomation = {
   id: 'auto_1',
   name: 'Welcome lead',

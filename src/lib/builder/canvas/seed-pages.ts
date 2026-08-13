@@ -72,7 +72,6 @@ const SITE_PAGE_SEED_VERSION = 'site-page-seed-v22';
 const COLUMNS_PAGE_ROOT_HEIGHT = 2660;
 const ZH_HANT_PRICING_PAGE_ROOT_HEIGHT = 1450;
 const seedSitePagesInFlight = new Map<string, Promise<void>>();
-const COLLAPSED_RESPONSIVE_RECT_SIZE = 1;
 const LEGACY_PAGE_COMPOSITE_PREFIX = 'legacy-page-';
 const LEGACY_REVIEW_LAYOUT_CLASSES = new Set([
   'section review-section',
@@ -960,37 +959,32 @@ function repairServicesMobileLayout(nodesById: Map<string, BuilderCanvasNode>): 
   const list = nodesById.get('home-services-list');
   if (!root || !container || !list) return;
 
-  setMobileRect(root, { height: 1285 });
-  setMobileRect(container, { x: 34, y: 49, width: 308, height: 1187 });
-  setMobileRect(nodesById.get('home-services-label'), { x: 0, y: 8, width: 132, height: 21 });
-  setMobileRect(nodesById.get('home-services-title'), { x: 0, y: 47, width: 308, height: 96 });
-  setMobileRect(nodesById.get('home-services-description'), { x: 0, y: 162, width: 308, height: 54 });
-  setMobileRect(nodesById.get('home-services-divider'), { x: 0, y: 226, width: 308, height: 12 });
-  setMobileRect(nodesById.get('home-services-divider-mark'), { x: 127, y: 0, width: 54, height: 12 });
-  setMobileRect(list, { x: 0, y: 244, width: 308, height: 942 });
+  setMobileRect(root, { height: 1645 });
+  setMobileRect(container, { x: 34, y: 48, width: 308, height: 1549 });
+  setMobileRect(nodesById.get('home-services-label'), { x: 0, y: 0, width: 132, height: 24 });
+  setMobileRect(nodesById.get('home-services-title'), { x: 0, y: 40, width: 308, height: 96 });
+  setMobileRect(nodesById.get('home-services-description'), { x: 0, y: 150, width: 308, height: 54 });
+  setMobileRect(nodesById.get('home-services-divider'), { x: 0, y: 218, width: 308, height: 24 });
+  setMobileRect(nodesById.get('home-services-divider-mark'), { x: 127, y: 6, width: 54, height: 12 });
+  setMobileRect(list, { x: 0, y: 250, width: 308, height: 1299 });
 
   for (const node of nodesById.values()) {
     const aliasMatch = /^home-services-card-(\d+)-alias-\d+$/.exec(node.id);
     if (aliasMatch) {
       const index = Number(aliasMatch[1]);
-      setMobileRect(node, { x: 0, y: Math.max(0, index * 162 - 72), width: 4, height: 4 });
+      setMobileRect(node, { x: 0, y: Math.max(0, index * 220 - 72), width: 4, height: 4 });
       continue;
     }
 
     const cardMatch = /^home-services-card-(\d+)$/.exec(node.id);
     if (cardMatch) {
       const index = Number(cardMatch[1]);
-      setMobileRect(node, { x: 0, y: index * 162, width: 308, height: 130 });
-      continue;
-    }
-
-    if (/^home-services-card-\d+-toggle$/.test(node.id)) {
-      setMobileRect(node, { x: 0, y: 0, width: 308, height: 130 });
+      setMobileRect(node, { x: 0, y: index * 220, width: 308, height: 199 });
       continue;
     }
 
     if (/^home-services-card-\d+-header$/.test(node.id)) {
-      setMobileRect(node, { x: 24, y: 20, width: 240, height: 90 });
+      setMobileRect(node, { x: 20, y: 20, width: 268, height: 52 });
       continue;
     }
 
@@ -1005,22 +999,22 @@ function repairServicesMobileLayout(nodesById: Map<string, BuilderCanvasNode>): 
     }
 
     if (/^home-services-card-\d+-title$/.test(node.id)) {
-      setMobileRect(node, { x: 58, y: 4, width: 206, height: 52 });
-      continue;
-    }
-
-    if (/^home-services-card-\d+-chevron$/.test(node.id)) {
-      setMobileRect(node, { x: 272, y: 33, width: 20, height: 29 });
+      setMobileRect(node, { x: 58, y: 4, width: 210, height: 48 });
       continue;
     }
 
     if (/^home-services-card-\d+-body$/.test(node.id)) {
-      setMobileRect(node, { x: 0, y: 97, width: 308, height: COLLAPSED_RESPONSIVE_RECT_SIZE });
+      setMobileRect(node, { x: 20, y: 84, width: 268, height: 95 });
       continue;
     }
 
     if (/^home-services-card-\d+-description$/.test(node.id)) {
-      setMobileRect(node, { x: 24, y: 0, width: 260, height: 54 });
+      setMobileRect(node, { x: 0, y: 0, width: 268, height: 58 });
+      continue;
+    }
+
+    if (/^home-services-card-\d+-more$/.test(node.id)) {
+      setMobileRect(node, { x: 0, y: 67, width: 170, height: 28 });
     }
   }
 }
@@ -1031,37 +1025,39 @@ function repairServicesTabletLayout(nodesById: Map<string, BuilderCanvasNode>): 
   const list = nodesById.get('home-services-list');
   if (!root || !container || !list) return;
 
-  setTabletRect(root, { height: 1166 });
-  setTabletRect(container, { x: 31, y: 92, width: 675, height: 980 });
-  setTabletRect(nodesById.get('home-services-label'), { x: 0, y: 8, width: 132, height: 21 });
-  setTabletRect(nodesById.get('home-services-title'), { x: 0, y: 47, width: 675, height: 60 });
-  setTabletRect(nodesById.get('home-services-description'), { x: 0, y: 126, width: 675, height: 27 });
-  setTabletRect(nodesById.get('home-services-divider'), { x: 0, y: 185, width: 675, height: 12 });
-  setTabletRect(nodesById.get('home-services-divider-mark'), { x: 310, y: 0, width: 54, height: 12 });
-  setTabletRect(list, { x: 0, y: 229, width: 675, height: 750 });
+  setTabletRect(root, { height: 1000 });
+  setTabletRect(container, { x: 31, y: 70, width: 675, height: 860 });
+  setTabletRect(nodesById.get('home-services-label'), { x: 0, y: 0, width: 160, height: 28 });
+  setTabletRect(nodesById.get('home-services-title'), { x: 0, y: 40, width: 675, height: 60 });
+  setTabletRect(nodesById.get('home-services-description'), { x: 0, y: 112, width: 675, height: 54 });
+  setTabletRect(nodesById.get('home-services-divider'), { x: 0, y: 180, width: 675, height: 24 });
+  setTabletRect(nodesById.get('home-services-divider-mark'), { x: 310, y: 6, width: 54, height: 12 });
+  setTabletRect(list, { x: 0, y: 230, width: 675, height: 630 });
 
   for (const node of nodesById.values()) {
     const aliasMatch = /^home-services-card-(\d+)-alias-\d+$/.exec(node.id);
     if (aliasMatch) {
       const index = Number(aliasMatch[1]);
-      setTabletRect(node, { x: 0, y: Math.max(0, index * 130 - 72), width: 4, height: 4 });
+      const cardX = (index % 2) * 349.5;
+      const cardY = Math.floor(index / 2) * 218;
+      setTabletRect(node, { x: cardX, y: Math.max(0, cardY - 72), width: 4, height: 4 });
       continue;
     }
 
     const cardMatch = /^home-services-card-(\d+)$/.exec(node.id);
     if (cardMatch) {
       const index = Number(cardMatch[1]);
-      setTabletRect(node, { x: 0, y: index * 130, width: 675, height: 98 });
-      continue;
-    }
-
-    if (/^home-services-card-\d+-toggle$/.test(node.id)) {
-      setTabletRect(node, { x: 0, y: 0, width: 675, height: 98 });
+      setTabletRect(node, {
+        x: (index % 2) * 349.5,
+        y: Math.floor(index / 2) * 218,
+        width: 325.5,
+        height: 194,
+      });
       continue;
     }
 
     if (/^home-services-card-\d+-header$/.test(node.id)) {
-      setTabletRect(node, { x: 24, y: 20, width: 560, height: 56 });
+      setTabletRect(node, { x: 20, y: 20, width: 285.5, height: 52 });
       continue;
     }
 
@@ -1076,22 +1072,22 @@ function repairServicesTabletLayout(nodesById: Map<string, BuilderCanvasNode>): 
     }
 
     if (/^home-services-card-\d+-title$/.test(node.id)) {
-      setTabletRect(node, { x: 58, y: 16, width: 520, height: 25 });
-      continue;
-    }
-
-    if (/^home-services-card-\d+-chevron$/.test(node.id)) {
-      setTabletRect(node, { x: 629, y: 33, width: 20, height: 29 });
+      setTabletRect(node, { x: 58, y: 4, width: 227.5, height: 48 });
       continue;
     }
 
     if (/^home-services-card-\d+-body$/.test(node.id)) {
-      setTabletRect(node, { x: 0, y: 97, width: 675, height: COLLAPSED_RESPONSIVE_RECT_SIZE });
+      setTabletRect(node, { x: 20, y: 84, width: 285.5, height: 90 });
       continue;
     }
 
     if (/^home-services-card-\d+-description$/.test(node.id)) {
-      setTabletRect(node, { x: 24, y: 0, width: 625, height: 82 });
+      setTabletRect(node, { x: 0, y: 0, width: 285.5, height: 54 });
+      continue;
+    }
+
+    if (/^home-services-card-\d+-more$/.test(node.id)) {
+      setTabletRect(node, { x: 0, y: 64, width: 170, height: 28 });
     }
   }
 }
@@ -1537,23 +1533,34 @@ function applyZhHantContactDesktopBaseline(document: BuilderCanvasDocument): Bui
   }
 
   setDesktopContainerAbsoluteLayout(nodesById, 'page-contact-locations-grid');
-  for (let index = 0; index < 3; index += 1) {
+  const locationCardIndexes = [...nodesById.keys()]
+    .map((nodeId) => /^page-contact-locations-card-(\d+)$/.exec(nodeId)?.[1])
+    .filter((index): index is string => typeof index === 'string')
+    .map(Number)
+    .sort((left, right) => left - right);
+  const locationContentWidth = locationCardIndexes.length === 4 ? 234 : 332;
+  for (const index of locationCardIndexes) {
     setDesktopRect(nodesById, `page-contact-locations-card-${index}`, { y: -20 });
     setDesktopRect(nodesById, `page-contact-locations-card-${index}-title`, {
       x: 25,
       y: 25,
-      width: 332,
+      width: locationContentWidth,
       height: 26,
     });
     setDesktopRect(nodesById, `page-contact-locations-block-${index}-list`, {
       x: 25,
       y: 51,
-      width: 332,
+      width: locationContentWidth,
       height: 87,
     });
   }
 
-  for (let index = 0; index < 3; index += 1) {
+  const officeLayoutIndexes = [...nodesById.keys()]
+    .map((nodeId) => /^home-offices-layout-(\d+)$/.exec(nodeId)?.[1])
+    .filter((index): index is string => typeof index === 'string')
+    .map(Number)
+    .sort((left, right) => left - right);
+  for (const index of officeLayoutIndexes) {
     setDesktopContainerAbsoluteLayout(nodesById, `home-offices-layout-${index}`);
     setDesktopRect(nodesById, `home-offices-layout-${index}-card`, { y: -40 });
   }

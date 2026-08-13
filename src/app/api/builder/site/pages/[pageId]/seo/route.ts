@@ -38,10 +38,8 @@ import {
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -115,10 +113,8 @@ export async function GET(
   }
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

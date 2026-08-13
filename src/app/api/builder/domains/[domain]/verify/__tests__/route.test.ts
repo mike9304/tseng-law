@@ -69,7 +69,7 @@ function request(query = ''): NextRequest {
   });
 }
 
-const params = { params: { domain: 'example.com' } };
+const params = { params: Promise.resolve({ domain: 'example.com' }) };
 
 describe('/api/builder/domains/[domain]/verify', () => {
   beforeEach(() => {

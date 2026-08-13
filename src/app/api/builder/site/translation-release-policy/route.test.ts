@@ -1,6 +1,9 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import {
   readTranslationReleasePolicy,
   writeTranslationReleasePolicy,
@@ -8,7 +11,7 @@ import {
 import * as route from '@/app/api/builder/site/translation-release-policy/route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'admin' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'admin' })),
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 
@@ -43,6 +46,7 @@ function request(method: string, body?: unknown): NextRequest {
 describe('/api/builder/site/translation-release-policy', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({ username: 'admin' });
   });
 
   it('returns the current organization translation release policy', async () => {
@@ -56,7 +60,24 @@ describe('/api/builder/site/translation-release-policy', () => {
       approvalRequiredForRoles: [],
     });
     expect(readTranslationReleasePolicy).toHaveBeenCalledWith('tseng-law-main-site');
-    expect(guardBuilderRead).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(
+      expect.any(Request),
+      'manage-translations',
+    );
+  });
+
+  it('returns 403 before reading policy data when translation permission is missing', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json(
+        { error: 'Missing permission: manage-translations' },
+        { status: 403 },
+      ),
+    );
+
+    const response = await route.GET(request('GET'));
+
+    expect(response.status).toBe(403);
+    expect(readTranslationReleasePolicy).not.toHaveBeenCalled();
   });
 
   it('saves a blocking organization translation release policy', async () => {

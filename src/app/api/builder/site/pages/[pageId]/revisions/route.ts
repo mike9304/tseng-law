@@ -61,10 +61,8 @@ function revisionIdFromResult(result: string | { readonly revisionId: string }):
   return typeof result === 'string' ? result : result.revisionId;
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -94,10 +92,8 @@ export async function GET(
   }
 }
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
+export async function POST(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

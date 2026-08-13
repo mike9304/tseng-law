@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { ColumnPost } from '@/lib/columns';
+import type { ColumnPost } from '@/lib/column-post';
 import type { BuilderCmsCollection } from '@/lib/builder/cms-types';
 import {
   resolvePublishedCmsAttorneyItems,
@@ -109,7 +109,9 @@ describe('cms runtime collection resolution', () => {
                 category: 'legal',
                 categoryLabel: 'Legal Information',
                 date: '2026-05-28',
-                dateDisplay: '2026-05-28',
+                publishedAt: '2026-05-28T00:00:00.000Z',
+                lastmod: '2030-07-30T00:00:00.000Z',
+                dateDisplay: '2030-07-30',
                 readTime: '5 min',
                 featuredImage: { url: '/api/builder/assets/hero.webp' },
               },
@@ -125,8 +127,9 @@ describe('cms runtime collection resolution', () => {
       {
         slug: 'cms-column-published',
         title: 'CMS column title',
-        date: '2026-05-28',
-        dateDisplay: '2026-05-28',
+        publicationDate: '2026-05-28',
+        date: '2030-07-30T00:00:00.000Z',
+        dateDisplay: '2026년 5월 28일',
         readTime: '5 min',
         category: 'legal',
         categoryLabel: 'Legal Information',

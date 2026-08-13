@@ -7,7 +7,8 @@ import { getFormsCopy } from '@/components/builder/forms/forms-copy';
 export const dynamic = 'force-dynamic';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const copy = getFormsCopy(params.locale);
   return {
     title: copy.dashboard.title,
@@ -16,13 +17,14 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default async function FormsAdminPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: Locale };
-  searchParams?: { formId?: string };
-}) {
+export default async function FormsAdminPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+    searchParams?: Promise<{ formId?: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   normalizeLocale(params.locale); // validate locale
   const formId = searchParams?.formId || 'default-contact';
 

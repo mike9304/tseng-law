@@ -52,7 +52,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '진출 모델 선택, PIF 등록, 광고 규제까지 화장품 판매 핵심 리스크를 정리했습니다.',
         href: '/ko/insights/cosmetics-market-entry',
         category: 'formation',
-        date: '2025.02.04',
+        date: '2026.02.04',
         readTime: '3분',
         image: '/images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg',
         keywords: ['화장품', 'PIF', 'TFDA', '법인설립']
@@ -239,7 +239,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '整理市場進入模式、PIF 文件要求與廣告法規風險。',
         href: '/zh-hant/insights/cosmetics-market-entry',
         category: 'formation',
-        date: '2025.02.04',
+        date: '2026.02.04',
         readTime: '3分',
         image: '/images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg',
         keywords: ['化妝品', 'PIF', 'TFDA', '公司設立']
@@ -452,7 +452,7 @@ const englishPostCopy: Record<string, { title: string; summary: string; keywords
     keywords: ['inheritance', 'parental rights', 'minor property']
   },
   'overtaking-accident': {
-    title: 'Who Is Liable in an Overtaking Accident?',
+    title: 'How Is Liability Assessed After an Overtaking Accident in Taiwan?',
     summary:
       "A guide to Article 101's overtaking prohibitions and same-lane procedure, plus the fact-specific factors used to assess fault in an anonymized Taiwan collision, without guaranteeing an outcome.",
     readTime: '4 min read',
@@ -538,9 +538,24 @@ export const insightsArchive: Record<Locale, InsightsArchive> = {
   en: buildEnglishInsights(baseInsightsArchive.ko)
 };
 
+function resolveInsightDateValue(post: InsightPost): number {
+  const parts = post.date?.match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/);
+  if (!parts) return Number.NEGATIVE_INFINITY;
+  return Date.UTC(Number(parts[1]), Number(parts[2]) - 1, Number(parts[3]));
+}
+
+export function sortInsightPostsNewestFirst(posts: readonly InsightPost[]): InsightPost[] {
+  return posts
+    .map((post, index) => ({ post, index, dateValue: resolveInsightDateValue(post) }))
+    .sort((a, b) => (b.dateValue - a.dateValue) || (a.index - b.index))
+    .map(({ post }) => post);
+}
+
 export function getFeaturedInsights(locale: Locale) {
   const content = insightsArchive[locale];
-  return content.homeFeaturedIds
-    .map((id) => content.posts.find((post) => post.id === id))
-    .filter((post): post is InsightPost => Boolean(post));
+  return sortInsightPostsNewestFirst(
+    content.homeFeaturedIds
+      .map((id) => content.posts.find((post) => post.id === id))
+      .filter((post): post is InsightPost => Boolean(post)),
+  );
 }

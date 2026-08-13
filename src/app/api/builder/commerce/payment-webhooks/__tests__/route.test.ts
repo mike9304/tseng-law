@@ -1,14 +1,17 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import {
   listPaymentWebhookEvents,
   summarizePaymentWebhookEvents,
 } from '@/lib/builder/commerce/payment-webhooks-engine';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { GET } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
+vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/commerce/payment-webhooks-engine', () => ({
@@ -23,7 +26,7 @@ vi.mock('@/lib/builder/commerce/payment-webhooks-engine', () => ({
   })),
 }));
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const listPaymentWebhookEventsMock = vi.mocked(listPaymentWebhookEvents);
 const summarizePaymentWebhookEventsMock = vi.mocked(summarizePaymentWebhookEvents);
 
@@ -34,7 +37,10 @@ function getRequest(query = ''): NextRequest {
 describe('builder commerce payment webhooks list API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
     listPaymentWebhookEventsMock.mockResolvedValue([]);
     summarizePaymentWebhookEventsMock.mockReturnValue({
       total: 0,

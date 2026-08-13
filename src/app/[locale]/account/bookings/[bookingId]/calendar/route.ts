@@ -8,7 +8,11 @@ import { normalizeLocale } from '@/lib/locales';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-export async function GET(_request: NextRequest, { params }: { params: { locale: string; bookingId: string } }) {
+export async function GET(
+  _request: NextRequest,
+  props: { params: Promise<{ locale: string; bookingId: string }> }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const member = await getCurrentSiteMember();
   if (!member) {

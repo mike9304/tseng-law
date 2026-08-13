@@ -11,7 +11,12 @@ vi.mock('next/navigation', () => ({
 
 import MobileNavDrawer from '@/components/MobileNavDrawer';
 import { siteContent } from '@/data/site-content';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import type { SiteLocale } from '@/lib/locales';
+
+function renderedMailto(locale: SiteLocale): string {
+  return getConsultationPublicMailto(locale).replace(/&/g, '&amp;');
+}
 
 function renderDrawer(
   locale: SiteLocale,
@@ -46,8 +51,10 @@ describe('Japanese mobile navigation drawer', () => {
       expect(html).toContain(`href="${item.href}"`);
       expect(html).toContain(item.label);
     }
-    expect(html).toContain(`href="${siteContent.ja.nav.cta.href}"`);
+    expect(html).toContain(`href="${renderedMailto('ja')}"`);
     expect(html).toContain(siteContent.ja.nav.cta.label);
+    expect(html).not.toContain('href="tel:');
+    expect(html).not.toMatch(/kakao|line\.me|lin\.ee/i);
     expect(html).toContain('🇰🇷');
     expect(html).toContain('🇯🇵');
     expect(html).toContain('🇹🇼');
@@ -120,7 +127,9 @@ describe('Japanese mobile navigation drawer', () => {
       expect(html).toContain(`aria-label="${content.nav.searchLabel}"`);
       expect(html).toContain('class="utility-member-nav drawer-member-nav"');
       expect(html).toContain('data-member-role-link="login"');
-      expect(html).toContain(`href="${content.nav.cta.href}"`);
+      expect(html).toContain(`href="${renderedMailto(locale)}"`);
+      expect(html).not.toContain('href="tel:');
+      expect(html).not.toMatch(/kakao|line\.me|lin\.ee/i);
       expect(html).toContain('🇰🇷');
       expect(html).toContain('🇯🇵');
       expect(html).toContain('🇹🇼');

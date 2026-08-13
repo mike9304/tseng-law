@@ -85,10 +85,8 @@ const updatePayload = z.object({
   antiSpam: antiSpamSchema.optional(),
 });
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { formId: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ formId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { allowReadOnly: true, permission: 'manage-forms' });
   if (auth instanceof NextResponse) return auth;
   const schema = await loadFormSchema(params.formId);
@@ -96,10 +94,8 @@ export async function GET(
   return NextResponse.json({ ok: true, schema });
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { formId: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ formId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-forms' });
   if (auth instanceof NextResponse) return auth;
 

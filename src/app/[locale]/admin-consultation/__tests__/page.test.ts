@@ -3,10 +3,10 @@ import { generateMetadata } from '../page';
 import { getConsultationCopy } from '../copy';
 
 describe('admin-consultation metadata', () => {
-  it('localizes the document title by locale', () => {
-    expect(generateMetadata({ params: { locale: 'ko' } }).title).toBe('상담 관리');
-    expect(generateMetadata({ params: { locale: 'zh-hant' } }).title).toBe('諮詢管理');
-    expect(generateMetadata({ params: { locale: 'en' } }).title).toBe('Consultation admin');
+  it('localizes the document title by locale', async () => {
+    expect((await generateMetadata({ params: Promise.resolve({ locale: 'ko' }) })).title).toBe('상담 관리');
+    expect((await generateMetadata({ params: Promise.resolve({ locale: 'zh-hant' }) })).title).toBe('諮詢管理');
+    expect((await generateMetadata({ params: Promise.resolve({ locale: 'en' }) })).title).toBe('Consultation admin');
   });
 
   it('localizes the consultation shell copy by locale', () => {

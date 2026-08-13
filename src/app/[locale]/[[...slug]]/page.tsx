@@ -42,11 +42,12 @@ function resolvePublicLocale(raw: string): SiteLocale {
   return normalizeSiteLocale(raw);
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string; slug?: string[] };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: string; slug?: string[] }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = resolvePublicLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
 
@@ -70,13 +71,14 @@ export async function generateMetadata({
   return { title: 'Page not found' };
 }
 
-export default async function MainSiteCatchAllPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: string; slug?: string[] };
-  searchParams?: Record<string, string | string[] | undefined>;
-}) {
+export default async function MainSiteCatchAllPage(
+  props: {
+    params: Promise<{ locale: string; slug?: string[] }>;
+    searchParams?: Promise<Record<string, string | string[] | undefined>>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = resolvePublicLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
 

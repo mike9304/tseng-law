@@ -88,7 +88,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/preview', () => {
           sort: [{ fieldId: 'title', direction: 'asc' }],
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -155,7 +155,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/preview', () => {
           limit: 2,
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -179,7 +179,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/preview', () => {
         headers: { 'content-type': 'application/json' },
         body: '{',
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -204,7 +204,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/preview', () => {
           limit: -1,
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -230,7 +230,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/preview', () => {
           mode: 'list',
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -258,7 +258,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/preview', () => {
           mode: 'list',
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
 
     expect(response.status).toBe(401);

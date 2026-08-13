@@ -158,6 +158,7 @@ describe('homepage stats factual claims', () => {
     const items = siteContent[locale].stats.items;
 
     expect(items.map(({ target }) => target)).toEqual([4, 3, 7, 2]);
+    expect(items[0].target).toBe(siteContent[locale].contact.locations.length);
     expect(items.every((item) => !('suffix' in item))).toBe(true);
     expect(new Set(items.map(({ label }) => label)).size).toBe(items.length);
   });

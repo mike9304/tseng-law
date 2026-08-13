@@ -19,7 +19,7 @@ describe('Japanese intent landing render parity', () => {
     expect(html).toContain('/ja/services/');
     expect(html).toContain('/ja/columns/');
     expect(html).toContain('/ja/pricing');
-    expect(html).toContain('/ja/contact');
+    expect(html).toContain('href="mailto:wei@hoveringlaw.com.tw?subject=');
     // FAQPage JSON-LD is emitted for ja as well.
     expect(html).toContain('"@type":"FAQPage"');
     // Same heading hierarchy as the other locales: first panels h2, detail panels h3.

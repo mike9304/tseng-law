@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import {
   readTranslationReleasePolicy,
   translationReleasePolicyPayloadSchema,
@@ -11,7 +14,7 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'manage-translations');
   if (auth instanceof NextResponse) return auth;
 
   const policy = await readTranslationReleasePolicy(DEFAULT_BUILDER_SITE_ID);

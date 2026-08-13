@@ -11,13 +11,14 @@ function firstQueryValue(value: string | string[] | undefined): string | undefin
   return Array.isArray(value) ? value[0] : value;
 }
 
-export default function AiGeneratorPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: string };
-  searchParams?: { siteId?: string | string[] };
-}) {
+export default async function AiGeneratorPage(
+  props: {
+    params: Promise<{ locale: string }>;
+    searchParams?: Promise<{ siteId?: string | string[] }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const siteId = normalizeBuilderSiteId(firstQueryValue(searchParams?.siteId));
   const copy = getAiGeneratorCopy(locale);
@@ -39,7 +40,8 @@ export default function AiGeneratorPage({
   );
 }
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = getAiGeneratorCopy(locale);
   return {

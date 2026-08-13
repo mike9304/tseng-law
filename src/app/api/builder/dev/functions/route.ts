@@ -4,7 +4,10 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import {
   createBuilderFunction,
   readBuilderFunctions,
@@ -30,7 +33,7 @@ function validationErrorResponse(error: ZodError): NextResponse {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'settings');
   if (auth instanceof NextResponse) return auth;
   try {
     const functions = await readBuilderFunctions();

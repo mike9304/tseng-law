@@ -10,6 +10,7 @@ import Footer from '@/components/Footer';
 import ScrollTopButton from '@/components/ScrollTopButton';
 import QuickContactWidget from '@/components/QuickContactWidget';
 import YearEndEventPopup from '@/components/YearEndEventPopup';
+import CinematicRouteShell from '@/components/CinematicRouteShell';
 import {
   getLocaleFontClassName,
   getManagedLocaleFontClassNames,
@@ -38,12 +39,16 @@ export function generateStaticParams() {
   return siteLocales.map((locale) => ({ locale }));
 }
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = resolveLocaleOrNotFound(params.locale);
   const content = siteContent[locale];
   const organizationName = getOrganizationName(locale);
   return {
-    title: content.meta.title,
+    title: {
+      default: organizationName,
+      template: `%s | ${organizationName}`,
+    },
     description: content.meta.description,
     applicationName: organizationName,
     authors: [{ name: organizationName }],
@@ -52,19 +57,24 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   };
 }
 
-export default function LocaleLayout({
-  children,
-  params
-}: {
-  children: ReactNode;
-  params: { locale: string };
-}) {
+export default async function LocaleLayout(
+  props: {
+    children: ReactNode;
+    params: Promise<{ locale: string }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
   const locale = resolveLocaleOrNotFound(params.locale);
   const language = documentLanguageByLocale[locale];
   // Hide non-JA product widgets on Japanese public surface (plan: columns+core pages first).
   const hideJaProductChrome = locale === 'ja';
   return (
-    <div className="site" data-locale={locale} data-theme="parity">
+    <>
       <DocumentLocaleSync
         language={language}
         fontClassName={getLocaleFontClassName(language)}
@@ -72,26 +82,24 @@ export default function LocaleLayout({
       />
       <JsonLd data={buildWebsiteJsonLd(locale)} />
       <JsonLd data={buildLegalServiceJsonLd(locale)} />
-      <div data-legacy-chrome>
-        <Header locale={locale} />
-      </div>
-      <main id="main">{children}</main>
-      <div data-legacy-chrome>
-        <Footer locale={locale as never} />
-      </div>
-      {!hideJaProductChrome ? (
-        <div data-legacy-chrome>
-          <QuickContactWidget locale={toBuilderLocale(locale)} />
-        </div>
-      ) : null}
-      <div data-legacy-chrome>
-        <ScrollTopButton locale={locale as never} />
-      </div>
-      {!hideJaProductChrome ? (
-        <div data-legacy-chrome>
-          <YearEndEventPopup locale={toBuilderLocale(locale)} />
-        </div>
-      ) : null}
-    </div>
+      <CinematicRouteShell
+        locale={locale}
+        header={<Header locale={locale} />}
+        footer={<Footer locale={locale as never} />}
+        quickContact={
+          !hideJaProductChrome ? (
+            <QuickContactWidget locale={toBuilderLocale(locale)} />
+          ) : null
+        }
+        scrollTop={<ScrollTopButton locale={locale as never} />}
+        eventPopup={
+          !hideJaProductChrome ? (
+            <YearEndEventPopup locale={toBuilderLocale(locale)} />
+          ) : null
+        }
+      >
+        {children}
+      </CinematicRouteShell>
+    </>
   );
 }

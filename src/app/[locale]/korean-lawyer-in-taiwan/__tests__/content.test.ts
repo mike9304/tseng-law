@@ -60,4 +60,31 @@ describe('korean-lawyer-in-taiwan content', () => {
       expect(node.url).toContain('/korean-lawyer-in-taiwan');
     }
   });
+
+  it('routes every localized consultation surface exclusively to Attorney Tseng email', () => {
+    const expectedLawyerReferences = {
+      ko: '증준외',
+      'zh-hant': '曾雋崴',
+      en: 'Attorney Tseng',
+      ja: '曾雋崴',
+    } as const;
+
+    for (const locale of locales) {
+      const c = landingContent[locale];
+      const consultationFaq = c.faq.find((item) =>
+        /상담은 어떻게|如何預約諮詢|How do I request a consultation|相談はどのよう/.test(item.q),
+      );
+      const consultationSurface = JSON.stringify({
+        office: c.office,
+        consultationFaq,
+        ctaText: c.ctaText,
+        ctaButton: c.ctaButton,
+      });
+
+      expect(consultationFaq).toBeDefined();
+      expect(consultationSurface).toContain('wei@hoveringlaw.com.tw');
+      expect(consultationSurface).toContain(expectedLawyerReferences[locale]);
+      expect(consultationSurface).not.toMatch(/(?:\+82-?)?0?10-2992-9304/);
+    }
+  });
 });

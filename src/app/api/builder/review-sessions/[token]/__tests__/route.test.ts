@@ -23,7 +23,7 @@ function getRequest(query = ''): NextRequest {
   );
 }
 
-const params = { params: { token: 'payload.signature' } };
+const params = { params: Promise.resolve({ token: 'payload.signature' }) };
 
 describe('builder review session token API', () => {
   beforeEach(() => {

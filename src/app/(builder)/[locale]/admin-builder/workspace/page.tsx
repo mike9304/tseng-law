@@ -48,13 +48,14 @@ const countBadgeStyle: React.CSSProperties = {
   borderRadius: 999,
 };
 
-export default async function WorkspacePage({
-  params,
-  searchParams,
-}: {
-  params: { locale: string };
-  searchParams?: { tab?: string };
-}) {
+export default async function WorkspacePage(
+  props: {
+    params: Promise<{ locale: string }>;
+    searchParams?: Promise<{ tab?: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = params.locale;
   const copy = getWorkspaceCopy(locale);
   const tab = parseTab(searchParams?.tab);
@@ -145,7 +146,8 @@ export default async function WorkspacePage({
   );
 }
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const copy = getWorkspaceCopy(params.locale);
   return {
     title: `${copy.pageTitle} · Hojeong Builder`,

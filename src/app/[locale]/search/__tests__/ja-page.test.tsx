@@ -58,8 +58,8 @@ const fixtureIndex: SearchIndex = buildSearchIndex(docs);
 async function renderSearch(locale: string, q: string): Promise<string> {
   return renderToStaticMarkup(
     await SearchPage({
-      params: { locale: locale as never },
-      searchParams: { q },
+      params: Promise.resolve({ locale: locale as never }),
+      searchParams: Promise.resolve({ q }),
     }),
   );
 }
@@ -69,8 +69,8 @@ describe('/ja/search localization', () => {
     mocks.loadSearchIndex.mockResolvedValue(fixtureIndex);
   });
 
-  it('generates Japanese metadata with noindex preserved', () => {
-    const metadata = generateMetadata({ params: { locale: 'ja' as never } });
+  it('generates Japanese metadata with noindex preserved', async () => {
+    const metadata = await generateMetadata({ params: Promise.resolve({ locale: 'ja' as never }) });
 
     expect(String(metadata.title)).toContain('検索結果');
     expect(String(metadata.description)).toContain('必要な情報を素早く見つける');
@@ -111,15 +111,13 @@ describe('/ja/search localization', () => {
     { locale: 'ko', q: '회사', title: '검색 결과', total: '총 1건', url: '/ko/columns/company-setup' },
     { locale: 'zh-hant', q: '公司', title: '搜尋結果', total: '共 1 筆', url: '/zh-hant/columns/company-setup' },
     { locale: 'en', q: 'company', title: 'Search Results', total: 'Total 1', url: '/en/columns/company-setup' },
-  ])('keeps the /%s/search render unchanged', ({ locale, q, title, total, url }) => {
-    return (async () => {
-      const metadata = generateMetadata({ params: { locale: locale as never } });
-      expect(String(metadata.title)).toContain(title);
+  ])('keeps the /%s/search render unchanged', async ({ locale, q, title, total, url }) => {
+    const metadata = await generateMetadata({ params: Promise.resolve({ locale: locale as never }) });
+    expect(String(metadata.title)).toContain(title);
 
-      const html = await renderSearch(locale, q);
-      expect(html).toContain(title);
-      expect(html).toContain(total);
-      expect(html).toContain(`href="${url}"`);
-    })();
+    const html = await renderSearch(locale, q);
+    expect(html).toContain(title);
+    expect(html).toContain(total);
+    expect(html).toContain(`href="${url}"`);
   });
 });

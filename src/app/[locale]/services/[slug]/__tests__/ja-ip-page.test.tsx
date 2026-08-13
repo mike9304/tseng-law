@@ -4,9 +4,11 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import { getServiceArea } from '@/data/service-details';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import ServiceDetailPage, { generateMetadata } from '../page';
 
 const SITE_URL = 'https://tseng-law.com';
+const CONSULTATION_MAILTO_HREF = getConsultationPublicMailto('ja').replace(/&/g, '&amp;');
 
 const navigationMocks = vi.hoisted(() => ({
   notFound: vi.fn((): never => {
@@ -74,7 +76,7 @@ describe('Japanese IP service-detail route', () => {
       : approved!.intro;
 
     const metadata = await generateMetadata({
-      params: { locale: 'ja', slug: 'ip' },
+      params: Promise.resolve({ locale: 'ja', slug: 'ip' }),
     });
 
     expect(metadata.title).toBe(approved!.title);
@@ -108,7 +110,7 @@ describe('Japanese IP service-detail route', () => {
     expect(base!.columnSlugs).toEqual([]);
 
     const page = await ServiceDetailPage({
-      params: { locale: 'ja', slug: 'ip' },
+      params: Promise.resolve({ locale: 'ja', slug: 'ip' }),
     });
     const html = renderToStaticMarkup(page);
 
@@ -140,7 +142,9 @@ describe('Japanese IP service-detail route', () => {
 
     expect(html).toContain(attorney!.name);
     expect(html).toContain('href="/ja/lawyers/wei-tseng"');
-    expect(html).toContain('href="/ja/contact"');
+    expect(html).toContain(`href="${CONSULTATION_MAILTO_HREF}"`);
+    expect(html).not.toContain('href="tel:');
+    expect(html).not.toMatch(/kakao|line\.me|lin\.ee/i);
     expect(html).not.toContain('class="svc-col-card"');
     expect(html).not.toContain('class="svc-related-link"');
     expect(html).not.toContain('href="/ja/columns/');
@@ -179,7 +183,7 @@ describe('Japanese IP service-detail route', () => {
 
   it('redirects normalized Japanese casing to the canonical IP path', async () => {
     await expect(ServiceDetailPage({
-      params: { locale: 'ja', slug: 'IP' },
+      params: Promise.resolve({ locale: 'ja', slug: 'IP' }),
     })).rejects.toThrow('NEXT_REDIRECT:/ja/services/ip');
 
     expect(navigationMocks.permanentRedirect).toHaveBeenCalledWith(

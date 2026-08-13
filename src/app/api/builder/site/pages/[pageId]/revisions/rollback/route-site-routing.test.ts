@@ -73,7 +73,7 @@ describe('/api/builder/site/pages/[pageId]/revisions/rollback selected site rout
 
   it('backs up and rolls back the selected editor site when legacy body siteId is default', async () => {
     const response = await route.POST(postRequest({ siteId: 'default', revisionId: 'rev-target' }), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
     const payload = await response.json();
 
@@ -113,7 +113,7 @@ describe('/api/builder/site/pages/[pageId]/revisions/rollback selected site rout
         body: JSON.stringify({ revisionId: 'rev-selected-only' }),
       },
     );
-    const response = await route.POST(request, { params: { pageId: 'page-1' } });
+    const response = await route.POST(request, { params: Promise.resolve({ pageId: 'page-1' }) });
 
     expect(response.status).toBe(404);
     expect(mockedRollbackToRevision).toHaveBeenCalledWith(
@@ -135,7 +135,7 @@ describe('/api/builder/site/pages/[pageId]/revisions/rollback selected site rout
         { siteId: SELECTED_SITE_ID, revisionId: 'rev-target' },
         `?locale=ko&siteId=${encodeURIComponent(DEFAULT_BUILDER_SITE_ID)}`,
       ),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const payload = await response.json();
 

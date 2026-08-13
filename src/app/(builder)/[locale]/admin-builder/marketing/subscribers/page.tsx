@@ -12,7 +12,8 @@ const copy = {
   en: { title: 'Email Subscribers' },
 } as const;
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return {
     title: copy[locale].title,
@@ -20,7 +21,8 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   };
 };
 
-export default async function MarketingSubscribersPage({ params }: { params: { locale: string } }) {
+export default async function MarketingSubscribersPage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const subscribers = await listSubscribers();
   return (

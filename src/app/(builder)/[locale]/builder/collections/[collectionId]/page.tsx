@@ -27,11 +27,12 @@ const collectionCopy: Record<Locale, { title: string; description: string }> = {
   },
 };
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale; collectionId: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: Locale; collectionId: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = collectionCopy[locale];
   return buildSeoMetadata({
@@ -44,11 +45,12 @@ export function generateMetadata({
   });
 }
 
-export default async function BuilderCollectionDetailPage({
-  params,
-}: {
-  params: { locale: Locale; collectionId: string };
-}) {
+export default async function BuilderCollectionDetailPage(
+  props: {
+    params: Promise<{ locale: Locale; collectionId: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   if (!isBuilderCollectionId(params.collectionId)) {
     notFound();

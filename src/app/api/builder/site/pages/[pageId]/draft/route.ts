@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   canProjectPageToLocale,
   readSiteDocument,
@@ -142,11 +142,9 @@ async function localeMismatchResponse(
   );
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
-  const auth = guardBuilderRead(request);
+export async function GET(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
+  const auth = await guardBuilderReadWithPermission(request, 'edit-pages');
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
@@ -163,7 +161,7 @@ export async function GET(
   let state: Awaited<ReturnType<typeof readPageCanvasRecordState>> = null;
   try {
     draftState = await readPageCanvasRecordState(siteId, params.pageId, 'draft');
-    state = draftState ?? await readPageCanvasRecordState(siteId, params.pageId, 'published');
+    state = draftState ?? (await readPageCanvasRecordState(siteId, params.pageId, 'published'));
   } catch {
     return errorResponse(locale, 'draft_load_failed', 500);
   }
@@ -182,10 +180,8 @@ export async function GET(
   });
 }
 
-export async function PUT(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
+export async function PUT(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { bucket: 'draft', permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

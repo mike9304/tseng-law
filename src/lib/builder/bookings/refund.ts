@@ -1,3 +1,5 @@
+import { createHash } from 'node:crypto';
+
 import type { Booking, BookingCancellationPolicy, BookingService } from './types';
 import { getCancellationPolicy, getService } from './storage';
 
@@ -161,7 +163,24 @@ export async function evaluateBookingSelfServicePolicy(
   };
 }
 
-async function attemptStripeRefund(paymentIntentId: string, amountCents?: number): Promise<RefundOutcome['refundResult']> {
+function stripeRefundIdempotencyKey(
+  bookingId: string,
+  paymentIntentId: string,
+  amountCents: number,
+  decision: RefundDecision,
+): string {
+  const digest = createHash('sha256')
+    .update(JSON.stringify([bookingId, paymentIntentId, amountCents, decision]))
+    .digest('hex');
+  return `booking-refund-v1:${digest}`;
+}
+
+async function attemptStripeRefund(
+  bookingId: string,
+  paymentIntentId: string,
+  amountCents: number,
+  decision: RefundDecision,
+): Promise<RefundOutcome['refundResult']> {
   const key = process.env.STRIPE_SECRET_KEY ?? '';
   if (!key) return { ok: false, error: 'STRIPE_SECRET_KEY unset' };
   try {
@@ -173,6 +192,7 @@ async function attemptStripeRefund(paymentIntentId: string, amountCents?: number
       headers: {
         Authorization: `Bearer ${key}`,
         'Content-Type': 'application/x-www-form-urlencoded',
+        'Idempotency-Key': stripeRefundIdempotencyKey(bookingId, paymentIntentId, amountCents, decision),
       },
       body: body.toString(),
     });
@@ -196,7 +216,12 @@ export async function computeRefundForCancel(booking: Booking, service?: Booking
     if (decision === 'partial') {
       partialAmountCents = refundAmountCents;
     }
-    refundResult = await attemptStripeRefund(booking.paymentIntentId, refundAmountCents);
+    refundResult = await attemptStripeRefund(
+      booking.bookingId,
+      booking.paymentIntentId,
+      refundAmountCents,
+      decision,
+    );
   }
 
   return {

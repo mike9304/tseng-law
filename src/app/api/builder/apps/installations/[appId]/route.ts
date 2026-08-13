@@ -35,9 +35,9 @@ const uninstallPayloadSchema = z.object({
 }).strict();
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     appId: string;
-  };
+  }>;
 }
 
 function errorResponse(
@@ -52,7 +52,8 @@ function errorResponse(
   );
 }
 
-export async function PATCH(request: NextRequest, { params }: RouteParams) {
+export async function PATCH(request: NextRequest, props: RouteParams) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
 
@@ -92,7 +93,8 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
   return NextResponse.json({ ok: true, ...result });
 }
 
-export async function DELETE(request: NextRequest, { params }: RouteParams) {
+export async function DELETE(request: NextRequest, props: RouteParams) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
 

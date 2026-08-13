@@ -73,7 +73,7 @@ function request(rawBody: string, signature: string): NextRequest {
 function adminHeaders(): HeadersInit {
   return {
     authorization: `Basic ${Buffer.from('admin:test-password').toString('base64')}`,
-    origin: 'https://law.example.test',
+    origin: 'https://tseng-law.com',
   };
 }
 
@@ -186,13 +186,13 @@ describe('billing document Stripe webhook route', () => {
     const replayDenied = await adminReplayRoute.POST(new NextRequest(
       `https://law.example.test/api/builder/billing-documents/webhooks/events/${events[0].eventId}/replay`,
       { method: 'POST' },
-    ), { params: { eventId: events[0].eventId } });
+    ), { params: Promise.resolve({ eventId: events[0].eventId }) });
     expect(replayDenied.status).toBe(401);
 
     const replay = await adminReplayRoute.POST(new NextRequest(
       `https://law.example.test/api/builder/billing-documents/webhooks/events/${events[0].eventId}/replay`,
       { method: 'POST', headers: adminHeaders() },
-    ), { params: { eventId: events[0].eventId } });
+    ), { params: Promise.resolve({ eventId: events[0].eventId }) });
     expect(replay.status).toBe(200);
     await expect(replay.json()).resolves.toMatchObject({
       ok: true,
@@ -207,7 +207,7 @@ describe('billing document Stripe webhook route', () => {
     const missingReplay = await adminReplayRoute.POST(new NextRequest(
       'https://law.example.test/api/builder/billing-documents/webhooks/events/missing/replay',
       { method: 'POST', headers: adminHeaders() },
-    ), { params: { eventId: 'missing' } });
+    ), { params: Promise.resolve({ eventId: 'missing' }) });
     expect(missingReplay.status).toBe(404);
   });
 

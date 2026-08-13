@@ -1,6 +1,6 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   listRegisteredAppHooks,
   registerAppHookRecord,
@@ -9,7 +9,7 @@ import { createSecret } from '@/lib/builder/dev/secrets-store';
 import { GET, POST } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'apps-admin@example.test' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'apps-admin@example.test' })),
   guardMutation: vi.fn(async () => ({ username: 'apps-admin@example.test' })),
 }));
 
@@ -22,7 +22,7 @@ vi.mock('@/lib/builder/dev/secrets-store', () => ({
   createSecret: vi.fn(),
 }));
 
-const guardBuilderReadMock = vi.mocked(guardBuilderRead);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const listRegisteredAppHooksMock = vi.mocked(listRegisteredAppHooks);
 const registerAppHookRecordMock = vi.mocked(registerAppHookRecord);
@@ -38,7 +38,7 @@ function request(method: 'GET' | 'POST', query = '', body?: unknown): NextReques
 describe('builder app hooks API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    guardBuilderReadMock.mockReturnValue({ username: 'apps-admin@example.test' });
+    guardBuilderReadWithPermissionMock.mockResolvedValue({ username: 'apps-admin@example.test' });
     guardMutationMock.mockResolvedValue({ username: 'apps-admin@example.test' });
     listRegisteredAppHooksMock.mockResolvedValue([
       {
@@ -69,6 +69,7 @@ describe('builder app hooks API', () => {
     const data = await response.json();
 
     expect(response.status).toBe(200);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(expect.any(NextRequest), 'settings');
     expect(data).toEqual({
       ok: true,
       hooks: [
@@ -82,6 +83,18 @@ describe('builder app hooks API', () => {
         },
       ],
     });
+  });
+
+  it('short-circuits GET when settings permission is denied', async () => {
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: settings' }, { status: 403 }),
+    );
+
+    const response = await GET(request('GET', 'locale=en'));
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(expect.any(NextRequest), 'settings');
+    expect(listRegisteredAppHooksMock).not.toHaveBeenCalled();
   });
 
   it('returns localized list failures without leaking exception details', async () => {

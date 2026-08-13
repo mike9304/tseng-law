@@ -34,7 +34,8 @@ function errorResponse(
   );
 }
 
-export async function POST(request: NextRequest, { params }: { params: { provider: string } }) {
+export async function POST(request: NextRequest, props: { params: Promise<{ provider: string }> }) {
+  const params = await props.params;
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   // builder-route-guard: allow-public — intentional public visitor endpoint

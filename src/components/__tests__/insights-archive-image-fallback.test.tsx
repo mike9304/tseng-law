@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest';
 import InsightsArchiveSection, {
   INSIGHTS_IMAGE_FALLBACK,
   resolveInsightsImageSrc,
+  sortInsightsPostsNewestFirst,
 } from '../InsightsArchiveSection';
 
 const emptyImagePost = {
@@ -18,11 +19,13 @@ const emptyImagePost = {
 };
 
 describe('InsightsArchiveSection image fallback', () => {
-  it('normalizes empty and whitespace-only image values to the tracked article placeholder', () => {
+  it('normalizes empty and placeholder image values to the tracked Taiwan-law editorial image', () => {
     expect(resolveInsightsImageSrc('')).toBe(INSIGHTS_IMAGE_FALLBACK);
     expect(resolveInsightsImageSrc('   ')).toBe(INSIGHTS_IMAGE_FALLBACK);
     expect(resolveInsightsImageSrc(null)).toBe(INSIGHTS_IMAGE_FALLBACK);
     expect(resolveInsightsImageSrc(undefined)).toBe(INSIGHTS_IMAGE_FALLBACK);
+    expect(resolveInsightsImageSrc('/images/blog/placeholder.jpg')).toBe(INSIGHTS_IMAGE_FALLBACK);
+    expect(resolveInsightsImageSrc('/images/placeholder-article-hero.jpg')).toBe(INSIGHTS_IMAGE_FALLBACK);
     expect(resolveInsightsImageSrc('/images/real-column.jpg')).toBe('/images/real-column.jpg');
   });
 
@@ -38,7 +41,54 @@ describe('InsightsArchiveSection image fallback', () => {
     );
 
     expect(html).not.toContain('src=""');
-    expect(html).toContain('placeholder-article-hero.jpg');
+    expect(html).toContain('featured-generic.webp');
+    expect(html).not.toContain('placeholder-article-hero.jpg');
+  });
+
+  it('keeps the first archive cards visible in SSR markup and exposes carousel controls', () => {
+    const posts = Array.from({ length: 5 }, (_, index) => ({
+      ...emptyImagePost,
+      slug: `column-${index + 1}`,
+      title: `Column ${index + 1}`,
+      date: `2026-07-${String(10 - index).padStart(2, '0')}`,
+      dateDisplay: `2026. 7. ${10 - index}.`,
+      featuredImage: '/images/real-column.jpg',
+    }));
+
+    const html = renderToStaticMarkup(<InsightsArchiveSection locale="ko" posts={posts} />);
+
+    expect(html).toContain('class="insights-grid"');
+    expect(html).not.toContain('reveal-stagger');
+    expect(html).toContain('aria-roledescription="carousel"');
+    expect(html).toContain('aria-controls=');
+    expect(html).toContain('Column 1');
+    expect(html).toContain('Column 4');
+  });
+
+  it('orders valid publication dates newest-first while preserving undated source order', () => {
+    const posts = [
+      { ...emptyImagePost, slug: 'undated-a', date: '', dateDisplay: '' },
+      {
+        ...emptyImagePost,
+        slug: 'older',
+        date: '2026-07-25',
+        dateDisplay: '2025년 9월 13일',
+      },
+      {
+        ...emptyImagePost,
+        slug: 'newest',
+        date: '2026-07-24',
+        dateDisplay: '2026년 2월 4일',
+      },
+      { ...emptyImagePost, slug: 'undated-b', date: '', dateDisplay: '' },
+    ];
+
+    expect(sortInsightsPostsNewestFirst(posts).map((post) => post.slug)).toEqual([
+      'newest',
+      'older',
+      'undated-a',
+      'undated-b',
+    ]);
   });
 });
 

@@ -59,7 +59,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     const route = await import('../route');
     const response = await route.GET(
       request('GET', 'locale=en'),
-      { params: { campaignId: 'cmp-1' } },
+      { params: Promise.resolve({ campaignId: 'cmp-1' }) },
     );
     const payload = await response.json();
 
@@ -72,7 +72,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-missing?locale=zh-hant'),
-      { params: { campaignId: 'cmp-missing' } },
+      { params: Promise.resolve({ campaignId: 'cmp-missing' }) },
     );
     const payload = await response.json();
 
@@ -89,7 +89,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     vi.mocked(getCampaign).mockRejectedValueOnce(new Error('campaign load secret leaked'));
     const route = await import('../route');
     const response = await route.GET(request('GET', 'locale=en'), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -108,7 +108,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
     const response = await route.PATCH(request('PATCH', 'locale=en', { name: 'Renamed' }), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -121,7 +121,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign({ status: 'sending' }));
     const route = await import('../route');
     const response = await route.PATCH(request('PATCH', 'locale=zh-hant', { name: 'Renamed' }), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -138,7 +138,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign({ status: 'sent' }));
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ name: 'Renamed' }), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
 
     expect(response.status).toBe(409);
@@ -149,7 +149,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     vi.mocked(getCampaign).mockResolvedValue(null);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ name: 'x' }), {
-      params: { campaignId: 'cmp-missing' },
+      params: Promise.resolve({ campaignId: 'cmp-missing' }),
     });
     expect(response.status).toBe(404);
   });
@@ -158,7 +158,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
     const response = await route.PATCH(request('PATCH', 'locale=en', '{'), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -175,7 +175,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     vi.mocked(getCampaign).mockResolvedValue(makeCampaign());
     const route = await import('../route');
     const response = await route.PATCH(request('PATCH', 'locale=ko', { name: '' }), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -195,7 +195,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     vi.mocked(saveCampaign).mockRejectedValueOnce(new Error('campaign update secret leaked'));
     const route = await import('../route');
     const response = await route.PATCH(request('PATCH', 'locale=en', { name: 'Renamed' }), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
     const payload = await response.json();
 
@@ -216,7 +216,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]', () => {
     );
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ name: 'x' }), {
-      params: { campaignId: 'cmp-1' },
+      params: Promise.resolve({ campaignId: 'cmp-1' }),
     });
 
     expect(response.status).toBe(401);

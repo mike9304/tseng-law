@@ -1,7 +1,7 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
-  guardBuilderRead,
+  guardBuilderReadWithPermission,
   guardMutation,
 } from '@/lib/builder/security/guard';
 import {
@@ -14,7 +14,10 @@ import {
 import { GET } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'builder-admin@example.test' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'builder-admin@example.test',
+    permission: 'settings',
+  })),
   guardMutation: vi.fn(async () => ({ username: 'builder-admin@example.test' })),
 }));
 
@@ -74,6 +77,10 @@ function hasDeleteRoute(value: unknown): value is DeleteRoute {
 describe('/api/builder/dev/logs', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({
+      username: 'builder-admin@example.test',
+      permission: 'settings',
+    });
   });
 
   it('reads logs through the async distributed log path', async () => {
@@ -81,7 +88,10 @@ describe('/api/builder/dev/logs', () => {
     const body = await response.json();
 
     expect(response.status).toBe(200);
-    expect(guardBuilderRead).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'settings',
+    );
     expect(listLogsAsync).toHaveBeenCalledWith('app', {
       sinceTs: undefined,
       limit: 5,
@@ -103,6 +113,20 @@ describe('/api/builder/dev/logs', () => {
         },
       ],
     });
+  });
+
+  it('returns the permission guard 403 before reading logs', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: settings' }, { status: 403 }),
+    );
+    const req = request();
+
+    const response = await GET(req);
+
+    expect(response.status).toBe(403);
+    await expect(response.json()).resolves.toEqual({ error: 'Missing permission: settings' });
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(req, 'settings');
+    expect(listLogsAsync).not.toHaveBeenCalled();
   });
 
   it('returns 400 for invalid sources before reading logs', async () => {

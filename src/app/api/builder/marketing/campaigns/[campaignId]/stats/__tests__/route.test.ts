@@ -93,7 +93,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/stats', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-1/stats?locale=en'),
-      { params: { campaignId: 'cmp-1' } },
+      { params: Promise.resolve({ campaignId: 'cmp-1' }) },
     );
     const payload = await response.json();
 
@@ -137,7 +137,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/stats', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-missing/stats?locale=zh-hant'),
-      { params: { campaignId: 'cmp-missing' } },
+      { params: Promise.resolve({ campaignId: 'cmp-missing' }) },
     );
     const payload = await response.json();
 
@@ -156,7 +156,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/stats', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-1/stats?locale=en'),
-      { params: { campaignId: 'cmp-1' } },
+      { params: Promise.resolve({ campaignId: 'cmp-1' }) },
     );
     const payload = await response.json();
 
@@ -184,7 +184,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/stats', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-1/stats'),
-      { params: { campaignId: 'cmp-1' } },
+      { params: Promise.resolve({ campaignId: 'cmp-1' }) },
     );
     const payload = await response.json();
 
@@ -201,7 +201,7 @@ describe('/api/builder/marketing/campaigns/[campaignId]/stats', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/marketing/campaigns/cmp-1/stats'),
-      { params: { campaignId: 'cmp-1' } },
+      { params: Promise.resolve({ campaignId: 'cmp-1' }) },
     );
 
     expect(response.status).toBe(401);

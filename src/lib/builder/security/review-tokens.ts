@@ -6,15 +6,21 @@
  * Sessions are tracked on disk so we can list, expire, or revoke them.
  *
  * Wire format: <base64url(payload)>.<hmac-sha256(payload)>
- * Payload: { id, branchOrPageId, audienceRole, exp, createdBy }
+ * Payload: { id, exp }
  *
- * Backed by NEXTAUTH_SECRET (with a few fallbacks identical to the
- * bookings manage-token helper).
+ * The signed token deliberately contains no target or reviewer identity.
+ * Those are read from the persisted session after verification, so a token
+ * cannot be repurposed to select a different page, site, or audience.
  */
 
 import { createHmac, randomUUID, timingSafeEqual } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
+import { isInternalSandboxPage } from '@/lib/builder/site/internal-pages';
+import { readPublishedPageCanvas } from '@/lib/builder/site/published-canvas';
+import { readSiteDocument } from '@/lib/builder/site/persistence';
+import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
 
 export type ReviewAudienceRole = 'client';
 
@@ -34,10 +40,7 @@ interface ReviewSessionDocument {
 
 interface ReviewTokenPayload {
   id: string;
-  branchOrPageId: string;
-  audienceRole: ReviewAudienceRole;
   exp: number;
-  createdBy: string;
 }
 
 const DEFAULT_TTL_MS = 1000 * 60 * 60 * 24 * 7;
@@ -71,10 +74,14 @@ function nowIso(): string {
 }
 
 function getSecret(): string {
-  return process.env.BUILDER_REVIEW_SECRET
-    || process.env.NEXTAUTH_SECRET
-    || process.env.CMS_SESSION_SECRET
-    || 'dev-builder-review-secret';
+  const configured = process.env.BUILDER_REVIEW_SECRET?.trim();
+  if (configured) return configured;
+
+  if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
+    return 'dev-builder-review-secret';
+  }
+
+  throw new Error('BUILDER_REVIEW_SECRET is required outside development and test.');
 }
 
 function sign(payloadPart: string): string {
@@ -87,6 +94,21 @@ function base64Url(input: string | Buffer): string {
 
 function isReviewAudienceRole(value: unknown): value is ReviewAudienceRole {
   return value === 'client';
+}
+
+function isValidReviewSession(value: unknown): value is ReviewSession {
+  if (!value || typeof value !== 'object') return false;
+  const session = value as Partial<ReviewSession>;
+  return (
+    typeof session.id === 'string'
+    && session.id.length > 0
+    && typeof session.branchOrPageId === 'string'
+    && session.branchOrPageId.trim().length > 0
+    && isReviewAudienceRole(session.audienceRole)
+    && typeof session.expiresAt === 'string'
+    && Number.isFinite(Date.parse(session.expiresAt))
+    && typeof session.createdBy === 'string'
+  );
 }
 
 function isNotFoundError(error: unknown): boolean {
@@ -104,8 +126,7 @@ async function loadDocument(): Promise<ReviewSessionDocument> {
     const sessions = Array.isArray(parsed.sessions) ? parsed.sessions : [];
     return {
       sessions: sessions
-        .map((entry) => (entry && typeof entry === 'object' ? (entry as ReviewSession) : null))
-        .filter((entry): entry is ReviewSession => Boolean(entry?.id)),
+        .filter(isValidReviewSession),
     };
   } catch (error) {
     if (isNotFoundError(error)) return { sessions: [] };
@@ -170,10 +191,7 @@ export async function createReviewSession(
   });
   const payload: ReviewTokenPayload = {
     id: session.id,
-    branchOrPageId,
-    audienceRole,
     exp: expiresAtMs,
-    createdBy,
   };
   const payloadPart = base64Url(JSON.stringify(payload));
   const token = `${payloadPart}.${sign(payloadPart)}`;
@@ -192,10 +210,26 @@ export interface VerifiedReviewToken {
   expiresAt: string;
 }
 
+export interface ResolvedReviewTarget {
+  siteId: string;
+  pageId: string;
+  publicPath: string;
+}
+
 export async function verifyReviewToken(token: string): Promise<VerifiedReviewToken | null> {
-  const [payloadPart, signature] = token.split('.');
+  const parts = token.split('.');
+  if (parts.length !== 2) return null;
+  const [payloadPart, signature] = parts;
   if (!payloadPart || !signature) return null;
-  const expected = sign(payloadPart);
+  let expected: string;
+  try {
+    // Verification is an untrusted public-request boundary. In particular,
+    // a production deployment missing its required secret must fail closed
+    // instead of surfacing a configuration exception through the review URL.
+    expected = sign(payloadPart);
+  } catch {
+    return null;
+  }
   const expectedBuffer = Buffer.from(expected);
   const signatureBuffer = Buffer.from(signature);
   if (
@@ -210,10 +244,10 @@ export async function verifyReviewToken(token: string): Promise<VerifiedReviewTo
     return null;
   }
   if (
-    !payload.id
-    || !payload.branchOrPageId
-    || !payload.exp
-    || !isReviewAudienceRole(payload.audienceRole)
+    typeof payload.id !== 'string'
+    || payload.id.length === 0
+    || typeof payload.exp !== 'number'
+    || !Number.isSafeInteger(payload.exp)
     || payload.exp < Date.now()
   ) return null;
 
@@ -221,7 +255,8 @@ export async function verifyReviewToken(token: string): Promise<VerifiedReviewTo
   const session = doc.sessions.find((entry) => entry.id === payload.id);
   if (!session) return null;
   if (session.revoked) return null;
-  if (Date.parse(session.expiresAt) < Date.now()) return null;
+  const sessionExpiresAt = Date.parse(session.expiresAt);
+  if (sessionExpiresAt < Date.now() || payload.exp !== sessionExpiresAt) return null;
 
   return {
     id: session.id,
@@ -229,6 +264,44 @@ export async function verifyReviewToken(token: string): Promise<VerifiedReviewTo
     audienceRole: session.audienceRole,
     createdBy: session.createdBy,
     expiresAt: session.expiresAt,
+  };
+}
+
+/**
+ * Resolve a review session to an existing public route without trusting an
+ * identifier supplied by the browser. Dynamic item templates and restricted
+ * pages are intentionally not exposed through client-review links.
+ */
+export async function resolveReviewTarget(
+  review: VerifiedReviewToken,
+): Promise<ResolvedReviewTarget | null> {
+  if (review.audienceRole !== 'client') return null;
+
+  const site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, 'ko');
+  const page = site.pages.find((candidate) => candidate.pageId === review.branchOrPageId);
+  if (
+    !page
+    || !page.publishedAt
+    || page.dynamicItem
+    || page.password
+    || page.memberAccess?.requireLogin
+    || isInternalSandboxPage(page)
+  ) {
+    return null;
+  }
+
+  const canvas = await readPublishedPageCanvas(page);
+  if (!canvas?.nodes?.length) return null;
+
+  const slug = page.isHomePage ? '' : resolveLocaleSlug(page, page.locale).trim();
+  const segments = slug ? slug.split('/') : [];
+  if (segments.some((segment) => !segment || segment === '.' || segment === '..')) return null;
+  const encodedSlug = segments.map((segment) => encodeURIComponent(segment)).join('/');
+
+  return {
+    siteId: DEFAULT_BUILDER_SITE_ID,
+    pageId: page.pageId,
+    publicPath: `/${page.locale}${encodedSlug ? `/${encodedSlug}` : ''}`,
   };
 }
 

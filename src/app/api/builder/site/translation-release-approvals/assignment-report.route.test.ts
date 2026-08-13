@@ -5,7 +5,7 @@ import { listUserRoles } from '@/lib/builder/security/user-role-store';
 import * as approvalRoute from '@/app/api/builder/site/translation-release-approvals/route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'admin' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'admin' })),
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 

@@ -221,7 +221,17 @@ export default function CompositeRender({
   const body = (() => {
     switch (componentKey) {
       case 'hero-search':
-        return <HeroSearch locale={locale} scrollHref={mode === 'edit' ? `/${locale}#insights` : undefined} />;
+        return (
+          <HeroSearch
+            locale={locale}
+            scrollHref={mode === 'edit' ? `/${locale}#insights` : undefined}
+            headingLevel={
+              mode === 'published' && node.anchorName === 'mobile-parity-home-hero'
+                ? 2
+                : 1
+            }
+          />
+        );
       case 'services-bento':
         return <ServicesBento locale={locale} id="practice" />;
       case 'home-contact-cta':

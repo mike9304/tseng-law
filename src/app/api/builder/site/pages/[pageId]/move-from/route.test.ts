@@ -86,7 +86,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
 
   it('returns localized stable-code JSON for malformed move payloads', async () => {
     const response = await route.POST(postRequest('{', '?locale=en'), {
-      params: { pageId: 'page-target' },
+      params: Promise.resolve({ pageId: 'page-target' }),
     });
     const data = await response.json();
 
@@ -101,7 +101,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
 
   it('returns localized stable-code JSON when source page id is missing', async () => {
     const response = await route.POST(postRequest({ nodeIds: ['node-1'] }, '?locale=ko'), {
-      params: { pageId: 'page-target' },
+      params: Promise.resolve({ pageId: 'page-target' }),
     });
     const data = await response.json();
 
@@ -116,7 +116,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
 
   it('returns localized stable-code JSON when source and target are the same page', async () => {
     const response = await route.POST(postRequest({ sourcePageId: 'page-target', nodeIds: ['node-1'] }, '?locale=zh-hant'), {
-      params: { pageId: 'page-target' },
+      params: Promise.resolve({ pageId: 'page-target' }),
     });
     const data = await response.json();
 
@@ -131,7 +131,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
 
   it('returns localized stable-code JSON when no node ids are supplied', async () => {
     const response = await route.POST(postRequest({ sourcePageId: 'page-source', nodeIds: [] }, '?locale=en'), {
-      params: { pageId: 'page-target' },
+      params: Promise.resolve({ pageId: 'page-target' }),
     });
     const data = await response.json();
 
@@ -148,7 +148,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
     mockedReadPageCanvas.mockReset();
     mockedReadPageCanvas.mockRejectedValueOnce(new Error('raw draft load failure'));
     const response = await route.POST(postRequest({ sourcePageId: 'page-source', nodeIds: ['node-1'] }, '?locale=en'), {
-      params: { pageId: 'page-target' },
+      params: Promise.resolve({ pageId: 'page-target' }),
     });
     const data = await response.json();
 
@@ -167,7 +167,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
       .mockResolvedValueOnce(null)
       .mockResolvedValueOnce(canvas());
     const response = await route.POST(postRequest({ sourcePageId: 'page-source', nodeIds: ['node-1'] }, '?locale=ko'), {
-      params: { pageId: 'page-target' },
+      params: Promise.resolve({ pageId: 'page-target' }),
     });
     const data = await response.json();
 
@@ -185,7 +185,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
       .mockResolvedValueOnce(canvas([node()]))
       .mockResolvedValueOnce(null);
     const response = await route.POST(postRequest({ sourcePageId: 'page-source', nodeIds: ['node-1'] }, '?locale=zh-hant'), {
-      params: { pageId: 'page-target' },
+      params: Promise.resolve({ pageId: 'page-target' }),
     });
     const data = await response.json();
 
@@ -203,7 +203,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
       .mockResolvedValueOnce(canvas([node()]))
       .mockResolvedValueOnce(canvas());
     const response = await route.POST(postRequest({ sourcePageId: 'page-source', nodeIds: ['missing-node'] }, '?locale=en'), {
-      params: { pageId: 'page-target' },
+      params: Promise.resolve({ pageId: 'page-target' }),
     });
     const data = await response.json();
 
@@ -219,7 +219,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
   it('returns localized stable-code JSON when writing the target draft fails', async () => {
     mockedWritePageCanvas.mockRejectedValueOnce(new Error('raw target write failure'));
     const response = await route.POST(postRequest({ sourcePageId: 'page-source', nodeIds: ['node-1'] }, '?locale=ko'), {
-      params: { pageId: 'page-target' },
+      params: Promise.resolve({ pageId: 'page-target' }),
     });
     const data = await response.json();
 
@@ -237,7 +237,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
       .mockResolvedValueOnce(undefined)
       .mockRejectedValueOnce(new Error('raw source write failure'));
     const response = await route.POST(postRequest({ sourcePageId: 'page-source', nodeIds: ['node-1'] }, '?locale=en'), {
-      params: { pageId: 'page-target' },
+      params: Promise.resolve({ pageId: 'page-target' }),
     });
     const data = await response.json();
 
@@ -253,7 +253,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
 
   it('preserves the move success shape', async () => {
     const response = await route.POST(postRequest({ sourcePageId: 'page-source', nodeIds: ['node-1'] }, '?locale=ko'), {
-      params: { pageId: 'page-target' },
+      params: Promise.resolve({ pageId: 'page-target' }),
     });
     const data = await response.json();
 
@@ -270,7 +270,7 @@ describe('/api/builder/site/pages/[pageId]/move-from', () => {
   it('moves nodes inside the selected workspace site from the editor referer', async () => {
     const response = await route.POST(
       postSelectedSiteRequest({ siteId: 'default', sourcePageId: 'page-source', nodeIds: ['node-1'] }, '?locale=ko'),
-      { params: { pageId: 'page-target' } },
+      { params: Promise.resolve({ pageId: 'page-target' }) },
     );
 
     expect(response.status).toBe(200);

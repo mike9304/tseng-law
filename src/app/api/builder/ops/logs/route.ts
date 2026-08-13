@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import {
   aggregateLogs,
   type UnifiedLogType,
@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic';
 const VALID_TYPES: ReadonlySet<UnifiedLogType> = new Set(['audit', 'dev', 'security', 'error']);
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'settings');
   if (auth instanceof NextResponse) return auth;
 
   const since = request.nextUrl.searchParams.get('since') ?? undefined;

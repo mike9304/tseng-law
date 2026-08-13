@@ -42,14 +42,18 @@ describe('/api/builder/publish/atomic', () => {
     vi.clearAllMocks();
   });
 
-  it('returns 401 when publish permission is missing', async () => {
+  it('denies an editor publish before running the atomic publisher', async () => {
     vi.mocked(guardMutation).mockResolvedValue(
-      NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 }),
+      NextResponse.json({ ok: false, error: 'Missing permission: publish' }, { status: 403 }),
     );
     const route = await import('../route');
     const response = await route.POST(atomicRequest({ pageIds: ['page-1'] }));
 
-    expect(response.status).toBe(401);
+    expect(response.status).toBe(403);
+    expect(guardMutation).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      { bucket: 'publish', permission: 'publish' },
+    );
     expect(publishAtomic).not.toHaveBeenCalled();
   });
 

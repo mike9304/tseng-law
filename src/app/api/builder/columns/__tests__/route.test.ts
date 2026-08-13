@@ -1,16 +1,15 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { listColumns, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
 import type { ColumnDocument } from '@/lib/builder/columns/types';
 import * as route from '@/app/api/builder/columns/route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ username: 'admin' })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-blog',
+  })),
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 
@@ -67,7 +66,10 @@ function column(overrides: Partial<ColumnDocument> = {}): ColumnDocument {
 describe('/api/builder/columns', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.mocked(requireBuilderAdminAuth).mockReturnValue({ username: 'admin' });
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({
+      username: 'admin',
+      permission: 'edit-blog',
+    });
     vi.mocked(guardMutation).mockResolvedValue({ username: 'admin' } as never);
     listColumnsMock.mockResolvedValue([]);
     readColumnBundleMock.mockResolvedValue({
@@ -79,6 +81,19 @@ describe('/api/builder/columns', () => {
       backend: 'file',
     });
     writeDraftColumnMock.mockImplementation(async (doc) => doc);
+  });
+
+  it('requires edit-blog and short-circuits a 403 before listing columns', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: edit-blog' }, { status: 403 }),
+    );
+    const req = getRequest('?locale=ko');
+
+    const response = await route.GET(req);
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(req, 'edit-blog');
+    expect(listColumnsMock).not.toHaveBeenCalled();
   });
 
   it('returns localized stable-code JSON when the list load fails', async () => {

@@ -4,16 +4,18 @@ import {
   loadBillingDocumentAutomationSettings,
   saveBillingDocumentAutomationSettings,
 } from '@/lib/builder/billing-document-automation';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { GET, PATCH } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ username: 'admin' })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/billing-document-automation', () => ({
@@ -21,7 +23,7 @@ vi.mock('@/lib/builder/billing-document-automation', () => ({
   saveBillingDocumentAutomationSettings: vi.fn(async (settings: unknown) => settings),
 }));
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const loadBillingDocumentAutomationSettingsMock = vi.mocked(loadBillingDocumentAutomationSettings);
 const saveBillingDocumentAutomationSettingsMock = vi.mocked(saveBillingDocumentAutomationSettings);
@@ -41,8 +43,14 @@ function patchRequest(query = '', body: BodyInit = JSON.stringify({ settings: { 
 describe('builder billing document settings API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ username: 'admin' } as never);
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     loadBillingDocumentAutomationSettingsMock.mockResolvedValue({ enabled: true } as never);
     saveBillingDocumentAutomationSettingsMock.mockImplementation(async (settings) => settings as never);
   });

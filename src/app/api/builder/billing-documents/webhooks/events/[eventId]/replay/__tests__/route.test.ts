@@ -43,7 +43,7 @@ describe('builder billing document webhook replay API', () => {
   });
 
   it('returns a localized not-found error when the webhook event is missing', async () => {
-    const response = await POST(requestFor('locale=zh-hant'), { params: { eventId: 'evt-1' } });
+    const response = await POST(requestFor('locale=zh-hant'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(404);
@@ -59,7 +59,7 @@ describe('builder billing document webhook replay API', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     replayBillingDocumentWebhookEventMock.mockRejectedValueOnce(new Error('stripe payload leaked'));
 
-    const response = await POST(requestFor('locale=ko'), { params: { eventId: 'evt-2' } });
+    const response = await POST(requestFor('locale=ko'), { params: Promise.resolve({ eventId: 'evt-2' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(500);
@@ -88,11 +88,14 @@ describe('builder billing document webhook replay API', () => {
       reason: undefined,
     });
 
-    const response = await POST(requestFor('locale=en'), { params: { eventId: 'evt-3' } });
+    const response = await POST(requestFor('locale=en'), { params: Promise.resolve({ eventId: 'evt-3' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(200);
-    expect(guardMutationMock).toHaveBeenCalledWith(expect.any(NextRequest), { bucket: 'mutation' });
+    expect(guardMutationMock).toHaveBeenCalledWith(expect.any(NextRequest), {
+      bucket: 'mutation',
+      permission: 'manage-commerce',
+    });
     expect(payload).toEqual({
       ok: true,
       changed: true,

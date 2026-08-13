@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { emitEditorPageSaveHook } from '@/lib/builder/apps/lifecycle-emitters';
 import {
   canProjectPageToLocale,
@@ -12,7 +12,10 @@ import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { GET, PUT } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'admin' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-pages',
+  })),
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 
@@ -101,7 +104,10 @@ function routedRequest(method = 'GET', body?: unknown): NextRequest {
 describe('/api/builder/site/pages/[pageId]/draft site routing', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.mocked(guardBuilderRead).mockReturnValue({ username: 'admin' });
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({
+      username: 'admin',
+      permission: 'edit-pages',
+    });
     vi.mocked(guardMutation).mockResolvedValue({ username: 'admin' });
     vi.mocked(canProjectPageToLocale).mockReturnValue(true);
     vi.mocked(readSiteDocument).mockResolvedValue(siteDocument());
@@ -115,7 +121,7 @@ describe('/api/builder/site/pages/[pageId]/draft site routing', () => {
   });
 
   it('loads drafts from the selected workspace site', async () => {
-    const response = await GET(routedRequest(), { params: { pageId: 'site-b-home' } });
+    const response = await GET(routedRequest(), { params: Promise.resolve({ pageId: 'site-b-home' }) });
 
     expect(response.status).toBe(200);
     expect(readSiteDocument).toHaveBeenCalledWith('workspace-site-b', 'ko');
@@ -125,7 +131,7 @@ describe('/api/builder/site/pages/[pageId]/draft site routing', () => {
   it('saves drafts and emits lifecycle hooks under the selected workspace site', async () => {
     const response = await PUT(
       routedRequest('PUT', { expectedRevision: 3, document: makeDocument('site-b-next') }),
-      { params: { pageId: 'site-b-home' } },
+      { params: Promise.resolve({ pageId: 'site-b-home' }) },
     );
 
     expect(response.status).toBe(200);

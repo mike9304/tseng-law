@@ -16,6 +16,7 @@ import {
   scheduleOverlayScrollRestore,
 } from '@/components/builder/published/overlayFocus';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 
 type MegaLink = {
   label: string;
@@ -125,7 +126,7 @@ function buildMegaPanels(locale: SiteLocale): MegaPanel[] {
           { label: '법인 개요', href: '/ko/about' },
           { label: '변호사 소개', href: '/ko/lawyers' },
           { label: '오시는 길', href: '/ko/contact#offices' },
-          { label: '문의하기', href: '/ko/contact' }
+          { label: '문의하기', href: getConsultationPublicMailto('ko') }
         ]
       }
     ];
@@ -162,7 +163,7 @@ function buildMegaPanels(locale: SiteLocale): MegaPanel[] {
           { label: '事務所概覽', href: '/zh-hant/about' },
           { label: '律師介紹', href: '/zh-hant/lawyers' },
           { label: '據點資訊', href: '/zh-hant/contact#offices' },
-          { label: '聯絡我們', href: '/zh-hant/contact' }
+          { label: '聯絡我們', href: getConsultationPublicMailto('zh-hant') }
         ]
       }
     ];
@@ -198,7 +199,7 @@ function buildMegaPanels(locale: SiteLocale): MegaPanel[] {
         { label: 'Firm Overview', href: '/en/about' },
         { label: 'Lawyers', href: '/en/lawyers' },
         { label: 'Office Locations', href: '/en/contact#offices' },
-        { label: 'Contact Us', href: '/en/contact' }
+        { label: 'Contact Us', href: getConsultationPublicMailto('en') }
       ]
     }
   ];
@@ -252,16 +253,16 @@ export default function Header({ locale }: { locale: SiteLocale }) {
         ]
       : locale === 'zh-hant'
         ? [
-            { label: '聯絡', href: '/zh-hant/contact' },
+            { label: '聯絡方式', href: '/zh-hant/contact' },
             { label: '據點', href: '/zh-hant/contact#offices' }
           ]
         : locale === 'ja'
           ? [
-              { label: 'お問い合わせ', href: '/ja/contact' },
+              { label: '連絡先', href: '/ja/contact' },
               { label: 'アクセス', href: '/ja/contact#offices' }
             ]
           : [
-              { label: 'Contact', href: '/en/contact' },
+              { label: 'Contact information', href: '/en/contact' },
               { label: 'Offices', href: '/en/contact#offices' }
             ];
 
@@ -488,7 +489,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
         <div className="container header-main-inner">
           <Link className="header-logo" href={`/${locale}`} aria-label={homeLabel}>
             <span className="logo-mark" aria-hidden>
-              <Image src="/images/brand/hovering-seal-official.png" alt="" width={40} height={40} priority />
+              <Image src="/images/brand/hovering-seal-official.png" alt="" width={40} height={40} />
             </span>
             <span className="logo-kr">{brandText}</span>
           </Link>

@@ -1,12 +1,12 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { readRecentAuditEvents } from '@/lib/builder/audit/store';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import type { AuditEvent } from '@/lib/builder/audit/types';
 import * as route from '@/app/api/builder/site/audit/route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'admin' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'admin' })),
 }));
 
 vi.mock('@/lib/builder/audit/store', () => ({
@@ -22,7 +22,7 @@ function request(query = ''): NextRequest {
 describe('/api/builder/site/audit', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.mocked(guardBuilderRead).mockReturnValue({ username: 'admin' });
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({ username: 'admin' });
     mockedReadRecentAuditEvents.mockResolvedValue([
       {
         type: 'asset.upload',
@@ -40,11 +40,30 @@ describe('/api/builder/site/audit', () => {
     const data = await response.json();
 
     expect(response.status).toBe(200);
+    expect(vi.mocked(guardBuilderReadWithPermission)).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'manage-users',
+    );
     expect(data).toMatchObject({
       ok: true,
       events: [{ type: 'asset.upload', assetId: 'asset-1' }],
     });
     expect(mockedReadRecentAuditEvents).toHaveBeenCalledWith(25);
+  });
+
+  it('short-circuits GET when manage-users permission is denied', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: manage-users' }, { status: 403 }),
+    );
+
+    const response = await route.GET(request('?locale=ko'));
+
+    expect(response.status).toBe(403);
+    expect(vi.mocked(guardBuilderReadWithPermission)).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'manage-users',
+    );
+    expect(mockedReadRecentAuditEvents).not.toHaveBeenCalled();
   });
 
   it('falls back to the default limit for invalid limit values', async () => {

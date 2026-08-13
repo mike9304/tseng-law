@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import {
   listBillingDocumentWebhookEvents,
   summarizeBillingDocumentWebhookEvents,
@@ -29,7 +29,7 @@ function validationError(locale: Locale, error: ZodError): NextResponse {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = await guardBuilderReadWithPermission(request, 'view-commerce');
   if (auth instanceof NextResponse) return auth;
 
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);

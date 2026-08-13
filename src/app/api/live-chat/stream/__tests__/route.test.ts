@@ -80,6 +80,8 @@ describe('/api/live-chat/stream', () => {
 
     expect(response.status).toBe(200);
     expect(response.headers.get('content-type')).toBe('text/event-stream');
+    expect(response.headers.get('cache-control')).toBe('private, no-store, no-transform');
+    expect(response.headers.get('connection')).toBe('keep-alive');
     expect(buildChatStream).toHaveBeenCalledWith(
       expect.objectContaining({
         conversationId: 'cnv-1',

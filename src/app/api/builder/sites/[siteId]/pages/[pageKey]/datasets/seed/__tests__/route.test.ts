@@ -108,7 +108,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed', () => {
           expectedRevision: 12,
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
     const writeInput = mockedWriteBuilderPageSnapshot.mock.calls[0]?.[0];
@@ -147,7 +147,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed', () => {
           targetId: 'home.services.list',
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -182,7 +182,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed', () => {
             ...requestBody,
           }),
         }),
-        { params: { siteId: 'default', pageKey: 'home' } },
+        { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
       );
       const payload = await response.json();
 
@@ -207,7 +207,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed', () => {
         headers: { 'content-type': 'application/json' },
         body: '{',
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -234,7 +234,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed', () => {
           expectedRevision: 11,
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -263,7 +263,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed', () => {
           expectedRevision: 12,
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -289,7 +289,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed', () => {
           targetId: 'home.services.list',
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
 
     expect(response.status).toBe(401);

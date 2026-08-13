@@ -6,7 +6,7 @@
     "dev": "NEXT_DEV=1 node scripts/clean-next-build.mjs && NEXT_DEV=1 next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint --max-warnings=0 --ext .js,.jsx,.ts,.tsx src",
     "typecheck": "tsc -p tsconfig.json --noEmit --incremental false",
     "test:unit": "vitest run",
     "test:builder-editor": "playwright test --config=playwright.config.ts",
@@ -27,6 +27,7 @@
     "gate:handoff-blockers": "node scripts/handoff-blockers-gate.mjs",
     "gate:handoff-blockers:json": "node scripts/handoff-blockers-gate.mjs --json --metadata --soft-open --output=.omo/evidence/handoff-blockers-latest.json",
     "test:handoff-blockers": "node --test scripts/handoff-blockers-gate.test.mjs",
+    "test:release-config": "node --test scripts/ci-playwright-qa-harness.test.mjs scripts/security-headers-config.test.mjs",
     "test:watch-gates": "node --test scripts/watch-gates.test.mjs",
     "test:editor-flow-gate": "node --test scripts/editor-flow-gate.test.mjs",
     "qa": "npm run typecheck && npm run lint && npm run test:unit && npm run security:builder-routes",
@@ -49,7 +50,7 @@
     "@vercel/blob": "^2.3.0",
     "bcryptjs": "^3.0.3",
     "gray-matter": "^4.0.3",
-    "next": "^14.2.0",
+    "next": "15.5.21",
     "nodemailer": "^9.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -69,14 +70,15 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.0",
+    "eslint-config-next": "15.5.21",
     "storybook": "^8.6.18",
     "typescript": "^5.4.0",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.6"
   },
   "overrides": {
     "next": {
-      "postcss": "8.5.18"
+      "postcss": "8.5.18",
+      "sharp": "0.35.3"
     }
   }
 }

@@ -10,13 +10,15 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = getBookingsAdminCopy(locale);
   return { title: copy.pages.calendarSync.title, robots: { index: false, follow: false } };
 }
 
-export default async function CalendarSyncPage({ params }: { params: { locale: string } }) {
+export default async function CalendarSyncPage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = getBookingsAdminCopy(locale);
   const [staff, connections] = await Promise.all([listStaff(true), listConnections()]);

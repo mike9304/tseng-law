@@ -6,7 +6,8 @@ import { buildSeoMetadata } from '@/lib/seo';
 
 const slug = 'taiwan-litigation-lawyer' as const;
 
-export function generateMetadata({ params }: { params: { locale: SiteLocale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const page = getIntentPage(locale, slug);
 
@@ -24,7 +25,8 @@ export function generateMetadata({ params }: { params: { locale: SiteLocale } })
   });
 }
 
-export default function TaiwanLitigationLawyerPage({ params }: { params: { locale: SiteLocale } }) {
+export default async function TaiwanLitigationLawyerPage(props: { params: Promise<{ locale: SiteLocale }> }) {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
 
   return <IntentLandingPage locale={locale} slug={slug} />;

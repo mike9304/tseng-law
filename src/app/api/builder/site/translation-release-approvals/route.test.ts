@@ -1,20 +1,24 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { createNotification } from '@/lib/builder/notifications/notification-store';
 import {
   approveTranslationReleaseApproval,
+  getTranslationReleaseApproval,
   getLatestTranslationReleaseApprovalForContext,
   listTranslationReleaseApprovals,
   requestTranslationReleaseApproval,
 } from '@/lib/builder/publish-gate/translation-release-approval-store';
 import { readTranslationReleasePolicy } from '@/lib/builder/publish-gate/translation-release-policy';
-import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import { resolveUserRole, userHasPermission } from '@/lib/builder/security/resolve-permission';
 import * as approvalRoute from '@/app/api/builder/site/translation-release-approvals/route';
 import * as approvalIdRoute from '@/app/api/builder/site/translation-release-approvals/[id]/route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'admin' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'admin' })),
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 
@@ -89,6 +93,7 @@ function getRequest(query = ''): NextRequest {
 describe('/api/builder/site/translation-release-approvals', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({ username: 'admin' });
     vi.mocked(guardMutation).mockResolvedValue({ username: 'admin' });
     vi.mocked(resolveUserRole).mockResolvedValue('admin');
     vi.mocked(userHasPermission).mockResolvedValue(true);
@@ -191,6 +196,41 @@ describe('/api/builder/site/translation-release-approvals', () => {
       },
     });
     expect(listTranslationReleaseApprovals).toHaveBeenCalledWith(undefined);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(
+      expect.any(Request),
+      'manage-translations',
+    );
+  });
+
+  it('returns 403 before listing approval data when translation permission is missing', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json(
+        { error: 'Missing permission: manage-translations' },
+        { status: 403 },
+      ),
+    );
+
+    const response = await approvalRoute.GET(getRequest('?status=pending'));
+
+    expect(response.status).toBe(403);
+    expect(listTranslationReleaseApprovals).not.toHaveBeenCalled();
+  });
+
+  it('returns 403 before reading approval detail when translation permission is missing', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json(
+        { error: 'Missing permission: manage-translations' },
+        { status: 403 },
+      ),
+    );
+
+    const response = await approvalIdRoute.GET(
+      getRequest(),
+      { params: Promise.resolve({ id: 'trapv_1' }) },
+    );
+
+    expect(response.status).toBe(403);
+    expect(getTranslationReleaseApproval).not.toHaveBeenCalled();
   });
 
   it('returns the authenticated actor for self-review UI decisions', async () => {
@@ -234,7 +274,7 @@ describe('/api/builder/site/translation-release-approvals', () => {
     vi.mocked(guardMutation).mockResolvedValueOnce({ username: 'owner' });
     const response = await approvalIdRoute.PATCH(
       request('PATCH', { decision: 'approve', comment: 'Looks acceptable.' }),
-      { params: { id: 'trapv_1' } },
+      { params: Promise.resolve({ id: 'trapv_1' }) },
     );
     const payload = await response.json();
 
@@ -256,7 +296,7 @@ describe('/api/builder/site/translation-release-approvals', () => {
     vi.mocked(userHasPermission).mockResolvedValueOnce(false);
     const response = await approvalIdRoute.PATCH(
       request('PATCH', { decision: 'approve' }),
-      { params: { id: 'trapv_1' } },
+      { params: Promise.resolve({ id: 'trapv_1' }) },
     );
 
     expect(response.status).toBe(403);

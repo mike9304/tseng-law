@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { staffInputSchema } from '@/lib/builder/bookings/types';
 import { listStaff, makeStaffId, saveStaff, timestamped } from '@/lib/builder/bookings/storage';
 import { getBookingStaffApiErrorPayload } from '@/lib/builder/bookings/bookings-copy';
@@ -10,7 +9,7 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = await guardBuilderReadWithPermission(request, 'view-bookings');
   if (auth instanceof NextResponse) return auth;
   const includeInactive = request.nextUrl.searchParams.get('includeInactive') === '1';
   const staff = await listStaff(includeInactive);

@@ -67,7 +67,6 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
       lines: [
         '타이베이시 다퉁구 청더로 1단 35호 7층의2 (7F.-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City)',
         '이메일: wei@hoveringlaw.com.tw',
-        '전화: +82-10-2992-9304 (한국) / 대만 상담 문의',
       ],
     },
     faqHeading: '자주 묻는 질문',
@@ -86,7 +85,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
       },
       {
         q: '상담은 어떻게 신청하나요?',
-        a: '이메일(wei@hoveringlaw.com.tw) 또는 전화(+82-10-2992-9304)로 문의해 주시면, 사건 내용을 정리해 상담 흐름을 안내해 드립니다.',
+        a: '증준외 대만 변호사에게 이메일(wei@hoveringlaw.com.tw)로 문의해 주시면, 사건 내용을 검토한 뒤 상담 흐름을 안내해 드립니다.',
       },
       {
         q: '중국어·일본어 상담도 가능한가요?',
@@ -103,8 +102,8 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     ],
     ctaTitle: '대만 법률 문제, 한국어로 상담 받으세요',
     ctaText:
-      '회사설립, 투자, 소송, 가사 분쟁 등 대만 법률 문제가 있으시면 한국어로 편하게 문의해 주세요. 자료를 보내주시면 상담 흐름을 안내해 드립니다.',
-    ctaButton: '상담 문의',
+      '회사설립, 투자, 소송, 가사 분쟁 등 대만 법률 문제가 있으시면 증준외 대만 변호사에게 이메일로 문의해 주세요. 내용을 검토한 뒤 상담 흐름을 안내해 드립니다.',
+    ctaButton: '증준외 대만 변호사에게 이메일 상담',
   },
   'zh-hant': {
     metaTitle: '會說韓文的台灣律師 | 昊鼎國際法律事務所（台北）',
@@ -145,7 +144,6 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
       lines: [
         '台北市大同區承德路一段35號7樓之2（7F.-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City）',
         'Email：wei@hoveringlaw.com.tw',
-        '電話：+82-10-2992-9304（韓國）/ 台灣諮詢請來信',
       ],
     },
     faqHeading: '常見問題',
@@ -164,7 +162,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
       },
       {
         q: '如何預約諮詢？',
-        a: '請以 Email（wei@hoveringlaw.com.tw）或電話（+82-10-2992-9304）聯繫，整理案件內容後我們會安排諮詢流程。',
+        a: '請寄信至 wei@hoveringlaw.com.tw 諮詢曾雋崴律師；我們確認案件內容後，將說明後續諮詢流程。',
       },
       {
         q: '也可以用中文或日語諮詢嗎？',
@@ -181,8 +179,8 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     ],
     ctaTitle: '台灣法律問題，用韓語諮詢',
     ctaText:
-      '不論是公司設立、投資、訴訟或家事爭議，歡迎以韓語與我們聯繫。提供資料後，我們會安排諮詢流程。',
-    ctaButton: '聯絡諮詢',
+      '不論是公司設立、投資、訴訟或家事爭議，歡迎寄信諮詢曾雋崴律師。我們確認案件概要後，將說明後續諮詢流程。',
+    ctaButton: '寄信諮詢曾雋崴律師',
   },
   en: {
     metaTitle: 'Korean-Speaking Taiwan Lawyer | Hovering International Law Firm (Taipei)',
@@ -223,7 +221,6 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
       lines: [
         '7F.-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City, Taiwan',
         'Email: wei@hoveringlaw.com.tw',
-        'Phone: +82-10-2992-9304 (Korea) / contact us for Taiwan consultations',
       ],
     },
     faqHeading: 'Frequently Asked Questions',
@@ -242,7 +239,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
       },
       {
         q: 'How do I request a consultation?',
-        a: 'Contact us by email (wei@hoveringlaw.com.tw) or phone (+82-10-2992-9304). After we review the matter, we will arrange the consultation flow.',
+        a: 'Request a consultation with Attorney Tseng by email at wei@hoveringlaw.com.tw. After reviewing the matter, we will explain the consultation process.',
       },
       {
         q: 'Can I also consult in Chinese or Japanese?',
@@ -259,8 +256,8 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     ],
     ctaTitle: 'Taiwan legal matters — consult in Korean',
     ctaText:
-      'Whether it is company setup, investment, litigation, or a family dispute, feel free to reach out in Korean. Share your materials and we will arrange a consultation flow.',
-    ctaButton: 'Book Consultation',
+      'For company setup, investment, litigation, or family disputes, email Attorney Tseng in Korean. After reviewing your inquiry, we will explain the consultation process.',
+    ctaButton: 'Email Attorney Tseng for Consultation',
   },
   ja: {
     metaTitle: '韓国語対応の台湾弁護士 | 昊鼎国際法律事務所（台北）',
@@ -301,7 +298,6 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
       lines: [
         '台北市大同区承徳路一段35号7F-2 (7F.-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City)',
         'メール: wei@hoveringlaw.com.tw',
-        '電話: +82-10-2992-9304（韓国）/ 台湾相談のお問い合わせ',
       ],
     },
     faqHeading: 'よくある質問',
@@ -320,7 +316,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
       },
       {
         q: '相談はどのように申し込めばよいですか？',
-        a: 'メール（wei@hoveringlaw.com.tw）または電話（+82-10-2992-9304）でお問い合わせいただければ、案件内容を整理して相談の流れをご案内します。',
+        a: '曾雋崴台湾弁護士宛てにメール（wei@hoveringlaw.com.tw）でお問い合わせください。案件内容を確認後、ご相談の流れをご案内します。',
       },
       {
         q: '中国語・日本語での相談も可能ですか？',
@@ -337,7 +333,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     ],
     ctaTitle: '台湾の法律問題、韓国語でご相談ください',
     ctaText:
-      '会社設立、投資、訴訟、家事紛争など台湾の法律問題がございましたら、韓国語でお気軽にお問い合わせください。資料をお送りいただければ、相談の流れをご案内します。',
-    ctaButton: '相談のお問い合わせ',
+      '会社設立、投資、訴訟、家事紛争など台湾の法律問題は、曾雋崴台湾弁護士へメールでお問い合わせください。内容を確認後、ご相談の流れをご案内します。',
+    ctaButton: '曾雋崴弁護士にメール相談',
   },
 };

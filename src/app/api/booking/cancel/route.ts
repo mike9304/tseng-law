@@ -1,12 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
-import { getBooking, getService, getStaff, saveBooking } from '@/lib/builder/bookings/storage';
+import {
+  getBooking,
+  getService,
+  getStaff,
+  hasDurableBookingStorage,
+  saveBooking,
+} from '@/lib/builder/bookings/storage';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import { applyRefundOutcome, computeRefundForCancel, evaluateBookingSelfServicePolicy } from '@/lib/builder/bookings/refund';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
 import { restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
 import { verifyBookingManageToken } from '@/lib/builder/bookings/manage-token';
+import { acquireSlotLock, releaseSlotLock, renewSlotLock } from '@/lib/builder/bookings/slot-lock';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -42,6 +50,15 @@ function clientIp(request: NextRequest): string {
 }
 
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+  if (!hasDurableBookingStorage()) {
+    return NextResponse.json(
+      { error: 'Booking storage is temporarily unavailable. Try again shortly.', errorCode: 'booking_storage_unavailable' },
+      { status: 503 },
+    );
+  }
+
   const ip = clientIp(request);
   const rate = await checkRateLimit(`booking-cancel:${ip}`, 8, 60_000);
   if (!rate.allowed) {
@@ -75,52 +92,75 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Booking already cancelled' }, { status: 409 });
   }
 
-  const service = await getService(booking.serviceId);
-  const policy = await evaluateBookingSelfServicePolicy(booking, service);
-  if (!policy.canCancel) {
-    return NextResponse.json(
-      { error: policy.cancelBlockedReason || 'Cancellation is not available for this booking.', policy },
-      { status: 409 },
-    );
+  const slotLease = await acquireSlotLock({
+    serviceId: booking.serviceId,
+    staffId: booking.staffId,
+    startAt: booking.startAt,
+    resourceIds: booking.resourceIds,
+    bookingId: booking.bookingId,
+  });
+  if (!slotLease) {
+    return NextResponse.json({ error: 'Booking is being updated. Try again shortly.' }, { status: 409 });
   }
 
-  const outcome = await computeRefundForCancel(booking, service ?? undefined);
-  const updated = await restorePackageCreditForBooking(applyRefundOutcome(booking, outcome, parsed.data.reason));
-  // Narrow the cancel race: re-read immediately before write so a parallel
-  // cancel that already flipped status to 'cancelled' wins, and we don't
-  // double-refund or clobber its updatedAt.
-  const latest = await getBooking(parsed.data.bookingId);
-  if (latest && latest.status === 'cancelled') {
-    return NextResponse.json(
-      { error: 'Booking already cancelled', booking: latest },
-      { status: 409 },
-    );
-  }
-  await saveBooking(updated);
-  const staff = await getStaff(updated.staffId);
-  let emailDelivery;
   try {
-    const delivery = await sendBookingCancellation(updated, { service, staff });
-    emailDelivery = delivery.ok
-      ? { ok: true as const }
-      : { ok: false as const, reason: delivery.reason };
-  } catch {
-    emailDelivery = { ok: false as const, reason: 'internal_error' as const };
-  }
-  emitEvent('booking.cancelled', {
-    bookingId: updated.bookingId,
-    reason: parsed.data.reason,
-    refundDecision: outcome.decision,
-    paymentStatus: updated.paymentStatus,
-  });
+    // The booking may have been cancelled while this request waited for the
+    // booking-id lease. Re-read before initiating any refund or credit change.
+    const latestBooking = await getBooking(parsed.data.bookingId);
+    if (!latestBooking) {
+      return NextResponse.json({ error: 'Booking not found' }, { status: 404 });
+    }
+    if (latestBooking.status === 'cancelled') {
+      return NextResponse.json({ error: 'Booking already cancelled', booking: latestBooking }, { status: 409 });
+    }
 
-  return NextResponse.json({
-    ok: true,
-    booking: updated,
-    refundDecision: outcome.decision,
-    refundResult: outcome.refundResult,
-    refundAmountCents: outcome.refundAmountCents,
-    hoursUntilStart: outcome.hoursUntilStart,
-    emailDelivery,
-  });
+    const service = await getService(latestBooking.serviceId);
+    const policy = await evaluateBookingSelfServicePolicy(latestBooking, service);
+    if (!policy.canCancel) {
+      return NextResponse.json(
+        { error: policy.cancelBlockedReason || 'Cancellation is not available for this booking.', policy },
+        { status: 409 },
+      );
+    }
+
+    const outcome = await computeRefundForCancel(latestBooking, service ?? undefined);
+    const updated = await restorePackageCreditForBooking(applyRefundOutcome(latestBooking, outcome, parsed.data.reason));
+    if (!await renewSlotLock(slotLease)) {
+      return NextResponse.json(
+        { error: 'Booking storage is temporarily unavailable. Try again shortly.', errorCode: 'booking_storage_unavailable' },
+        { status: 503 },
+      );
+    }
+    await saveBooking(updated);
+    const staff = await getStaff(updated.staffId);
+    let emailDelivery;
+    try {
+      const delivery = await sendBookingCancellation(updated, { service, staff });
+      emailDelivery = delivery.ok
+        ? { ok: true as const }
+        : { ok: false as const, reason: delivery.reason };
+    } catch {
+      emailDelivery = { ok: false as const, reason: 'internal_error' as const };
+    }
+    emitEvent('booking.cancelled', {
+      bookingId: updated.bookingId,
+      reason: parsed.data.reason,
+      refundDecision: outcome.decision,
+      paymentStatus: updated.paymentStatus,
+    });
+
+    return NextResponse.json({
+      ok: true,
+      booking: updated,
+      refundDecision: outcome.decision,
+      refundResult: outcome.refundResult,
+      refundAmountCents: outcome.refundAmountCents,
+      hoursUntilStart: outcome.hoursUntilStart,
+      emailDelivery,
+    });
+  } finally {
+    await releaseSlotLock(slotLease).catch(() => {
+      console.error('[booking/cancel] slot lease release failed');
+    });
+  }
 }

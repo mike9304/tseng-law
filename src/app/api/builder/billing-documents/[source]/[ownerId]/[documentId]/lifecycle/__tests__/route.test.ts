@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   parseBillingDocumentSource,
@@ -9,7 +9,10 @@ import { guardMutation } from '@/lib/builder/security/guard';
 import { POST } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/billing-documents', () => ({
@@ -36,7 +39,10 @@ function postRequest(source = 'order', query = '', body: unknown = { action: 'vo
 describe('builder billing document lifecycle API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     parseBillingDocumentSourceMock.mockImplementation((source) => (
       source === 'order' || source === 'booking' ? source as never : null
     ));
@@ -44,9 +50,28 @@ describe('builder billing document lifecycle API', () => {
     voidBuilderBillingDocumentMock.mockResolvedValue(null);
   });
 
+  it('returns 403 and short-circuits lifecycle stores when permission is denied', async () => {
+    const deniedRequest = postRequest('order', 'locale=en');
+    guardMutationMock.mockResolvedValueOnce(
+      NextResponse.json({ ok: false, error: 'Forbidden' }, { status: 403 }) as never,
+    );
+
+    const response = await POST(deniedRequest, {
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
+    });
+
+    expect(response.status).toBe(403);
+    expect(guardMutationMock).toHaveBeenCalledWith(deniedRequest, {
+      bucket: 'mutation',
+      permission: 'manage-commerce',
+    });
+    expect(voidBuilderBillingDocumentMock).not.toHaveBeenCalled();
+    expect(supersedeBuilderBillingDocumentMock).not.toHaveBeenCalled();
+  });
+
   it('returns localized source errors', async () => {
     const response = await POST(postRequest('bad', 'locale=zh-hant'), {
-      params: { source: 'bad', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'bad', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -62,7 +87,7 @@ describe('builder billing document lifecycle API', () => {
 
   it('returns localized validation errors for invalid lifecycle payloads', async () => {
     const response = await POST(postRequest('order', 'locale=ko', { action: 'archive' }), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -81,7 +106,7 @@ describe('builder billing document lifecycle API', () => {
       action: 'void',
       reason: 'duplicate',
     }), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -98,7 +123,7 @@ describe('builder billing document lifecycle API', () => {
       action: 'supersede',
       notes: 'correct total',
     }), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -115,7 +140,7 @@ describe('builder billing document lifecycle API', () => {
     voidBuilderBillingDocumentMock.mockRejectedValueOnce(new Error('lifecycle secret leaked'));
 
     const response = await POST(postRequest('order', 'locale=ko', { action: 'void' }), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -147,7 +172,7 @@ describe('builder billing document lifecycle API', () => {
       action: 'void',
       reason: 'duplicate',
     }), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const voidPayload = await voidResponse.json();
     const supersedeResponse = await POST(postRequest('booking', 'locale=en', {
@@ -155,12 +180,16 @@ describe('builder billing document lifecycle API', () => {
       notes: 'correct service',
       reason: 'reissued',
     }), {
-      params: { source: 'booking', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'booking', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const supersedePayload = await supersedeResponse.json();
 
     expect(voidResponse.status).toBe(200);
     expect(voidPayload).toEqual({ ok: true, document: voided });
+    expect(guardMutationMock).toHaveBeenCalledWith(expect.any(NextRequest), {
+      bucket: 'mutation',
+      permission: 'manage-commerce',
+    });
     expect(voidBuilderBillingDocumentMock).toHaveBeenCalledWith('order', 'owner-1', 'doc-1', {
       reason: 'duplicate',
     });

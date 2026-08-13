@@ -37,7 +37,8 @@ function logAutomationFailure(action: 'update' | 'delete'): void {
   });
 }
 
-export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-contacts' });
   if (auth instanceof NextResponse) return auth;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
@@ -85,7 +86,8 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   }
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-contacts' });
   if (auth instanceof NextResponse) return auth;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');

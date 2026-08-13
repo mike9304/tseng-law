@@ -341,7 +341,7 @@ export async function deleteMember(memberId: string): Promise<void> {
 
 export async function loginMember(email: string, password: string): Promise<MemberSession | null> {
   const member = await getMemberByEmail(email);
-  if (!member || member.blocked) return null;
+  if (!member || member.blocked || !member.verified) return null;
   if (!(await verifyPassword(password, member.passwordHash))) return null;
 
   const session: MemberSession = {
@@ -363,7 +363,7 @@ export async function validateSession(sessionId: string): Promise<SiteMember | n
   const session = await readJson<MemberSession>(sessionBlobPath(sessionId), sessionFilePath(sessionId));
   if (!session || session.revoked || new Date(session.expiresAt) < new Date()) return null;
   const member = await getMember(session.memberId);
-  if (!member || member.blocked) return null;
+  if (!member || member.blocked || !member.verified) return null;
   return member;
 }
 
@@ -389,7 +389,7 @@ export interface ContentGate {
 export function checkAccess(gate: ContentGate, member: SiteMember | null): boolean {
   if (!gate.requireLogin) return true;
   if (!member) return false;
-  if (member.blocked) return false;
+  if (member.blocked || !member.verified) return false;
   if (gate.allowedRoles.length === 0) return true; // any logged-in member
   return gate.allowedRoles.includes(member.role);
 }

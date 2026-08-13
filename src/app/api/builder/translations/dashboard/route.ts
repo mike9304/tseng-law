@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale, type Locale } from '@/lib/locales';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { buildTranslationDashboard } from '@/lib/builder/translations/dashboard-model';
 import { DEFAULT_TRANSLATION_SOURCE_LOCALE } from '@/lib/builder/translations/sync';
 import { getBuilderTranslationsApiErrorPayload } from '@/lib/builder/translations/translations-api-copy';
@@ -17,7 +17,7 @@ function resolveRequestLocale(request: NextRequest): Locale {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'manage-translations');
   if (auth instanceof NextResponse) return auth;
 
   try {

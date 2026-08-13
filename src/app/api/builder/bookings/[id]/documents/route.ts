@@ -23,7 +23,8 @@ const documentRequestSchema = z.object({
   notes: z.string().trim().max(500).optional(),
 });
 
-export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);

@@ -1,6 +1,11 @@
 import type { BuilderCmsCollection } from '@/lib/builder/cms-types';
 import type { BuilderCollectionRecordSeoPreview as BuilderCmsCollectionRecordSeoPreview } from '@/lib/builder/cms';
-import type { ColumnPost } from '@/lib/columns';
+import {
+  formatColumnPublicationDate,
+  parseColumnPublicationDate,
+  sortColumnPostsNewestFirst,
+  type ColumnPost,
+} from '@/lib/column-post';
 import type { BuilderSiteDocument } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
 import type { BuilderAttorneyProfileItem, BuilderServiceItem } from '@/lib/builder/types';
@@ -34,7 +39,7 @@ const cmsRuntimeCollectionConfigs: Record<SupportedCmsRuntimeCollectionId, CmsRu
     imageKeys: ['featuredImage', 'image'],
     secondaryLabel: (_collection, record, locale) => {
       const category = readTextValue(record, 'category');
-      const date = readTextValue(record, 'date');
+      const date = readFirstTextValue(record, ['dateDisplay', 'publishedAt', 'date']);
       const labelParts = [category, date].filter(Boolean);
       const localeLabel = locale === 'en'
         ? 'Taiwan law'
@@ -140,14 +145,26 @@ export function resolvePublishedCmsColumnPosts(
       const categoryLabel = readFirstTextValue(record.fields, ['categoryLabel'])
         ?? resolveColumnCategoryLabel(category, locale);
       const featuredImage = readImageValue(record.fields, ['featuredImage', 'image']) ?? '';
-      const date = readFirstTextValue(record.fields, ['date']) ?? '';
-      const dateDisplay = readFirstTextValue(record.fields, ['dateDisplay']) ?? date;
+      const legacyDate = readFirstTextValue(record.fields, ['date']) ?? '';
+      const date = readFirstTextValue(record.fields, ['lastmod', 'dateModified']) ?? legacyDate;
+      const storedDateDisplay = readFirstTextValue(record.fields, ['dateDisplay']) ?? '';
+      const publicationDate = parseColumnPublicationDate(
+        readFirstTextValue(record.fields, ['publishedAt']),
+      )
+        || parseColumnPublicationDate(storedDateDisplay)
+        || parseColumnPublicationDate(legacyDate);
+      const dateDisplay = formatColumnPublicationDate(
+        publicationDate,
+        locale,
+        storedDateDisplay,
+      );
       const readTime = readFirstTextValue(record.fields, ['readTime']) ?? '';
       const content = readDescriptionValue(record.fields, ['content', 'summary', 'description'], summary);
 
       return {
         slug,
         title,
+        publicationDate,
         date,
         dateDisplay,
         readTime,
@@ -159,10 +176,9 @@ export function resolvePublishedCmsColumnPosts(
         content,
         summary,
       };
-    })
-    .sort((a, b) => b.date.localeCompare(a.date));
+    });
 
-  return mapped.length > 0 ? mapped : null;
+  return mapped.length > 0 ? sortColumnPostsNewestFirst(mapped) : null;
 }
 
 export function resolvePublishedCmsServiceItems(

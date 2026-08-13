@@ -5,16 +5,18 @@ import {
   getBillingDocumentTemplate,
   updateBillingDocumentTemplate,
 } from '@/lib/builder/billing-documents-templates';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { DELETE, GET, PATCH } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ username: 'admin' })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/billing-documents-templates', () => ({
@@ -23,7 +25,7 @@ vi.mock('@/lib/builder/billing-documents-templates', () => ({
   deleteBillingDocumentTemplate: vi.fn(async () => false),
 }));
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const getBillingDocumentTemplateMock = vi.mocked(getBillingDocumentTemplate);
 const updateBillingDocumentTemplateMock = vi.mocked(updateBillingDocumentTemplate);
@@ -50,15 +52,21 @@ function deleteRequest(query = ''): NextRequest {
 describe('builder billing document template detail API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ username: 'admin' } as never);
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     getBillingDocumentTemplateMock.mockResolvedValue(null);
     updateBillingDocumentTemplateMock.mockResolvedValue(null);
     deleteBillingDocumentTemplateMock.mockResolvedValue(false);
   });
 
   it('returns localized not-found errors on GET', async () => {
-    const response = await GET(getRequest('locale=zh-hant'), { params: { id: 'bdtpl_1' } });
+    const response = await GET(getRequest('locale=zh-hant'), { params: Promise.resolve({ id: 'bdtpl_1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(404);
@@ -71,7 +79,7 @@ describe('builder billing document template detail API', () => {
   });
 
   it('returns localized invalid-patch errors', async () => {
-    const response = await PATCH(patchRequest('locale=ko', { name: '' }), { params: { id: 'bdtpl_1' } });
+    const response = await PATCH(patchRequest('locale=ko', { name: '' }), { params: Promise.resolve({ id: 'bdtpl_1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(400);
@@ -84,7 +92,7 @@ describe('builder billing document template detail API', () => {
   });
 
   it('returns localized not-found errors on PATCH when the template is missing', async () => {
-    const response = await PATCH(patchRequest('locale=en'), { params: { id: 'bdtpl_1' } });
+    const response = await PATCH(patchRequest('locale=en'), { params: Promise.resolve({ id: 'bdtpl_1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(404);
@@ -99,7 +107,7 @@ describe('builder billing document template detail API', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     deleteBillingDocumentTemplateMock.mockRejectedValueOnce(new Error('delete path leaked'));
 
-    const response = await DELETE(deleteRequest('locale=zh-hant'), { params: { id: 'bdtpl_1' } });
+    const response = await DELETE(deleteRequest('locale=zh-hant'), { params: Promise.resolve({ id: 'bdtpl_1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(500);
@@ -131,9 +139,9 @@ describe('builder billing document template detail API', () => {
     updateBillingDocumentTemplateMock.mockResolvedValueOnce(updated as never);
     deleteBillingDocumentTemplateMock.mockResolvedValueOnce(true);
 
-    const patchResponse = await PATCH(patchRequest('locale=en'), { params: { id: 'bdtpl_1' } });
+    const patchResponse = await PATCH(patchRequest('locale=en'), { params: Promise.resolve({ id: 'bdtpl_1' }) });
     const patchPayload = await patchResponse.json();
-    const deleteResponse = await DELETE(deleteRequest('locale=en'), { params: { id: 'bdtpl_1' } });
+    const deleteResponse = await DELETE(deleteRequest('locale=en'), { params: Promise.resolve({ id: 'bdtpl_1' }) });
     const deletePayload = await deleteResponse.json();
 
     expect(patchResponse.status).toBe(200);

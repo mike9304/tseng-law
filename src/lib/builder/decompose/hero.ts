@@ -39,7 +39,7 @@ export function decomposeHero(
       id: `${groupId}-background`,
       parentId: groupId,
       rect: { x: 0, y: 0, width: baseRect.width, height: baseRect.height },
-      src: '/images/hero-bg-01.webp',
+      src: '/images/hero-taiwan-modern-city-opening.webp',
       alt: resolveHeroBackgroundAlt(locale),
       fit: 'cover',
       style: {

@@ -19,17 +19,15 @@ function resolveDocumentLanguage(pathname: string | null): DocumentLanguage {
   return 'ko';
 }
 
-function getRequestPathname(): string | null {
-  return headers().get('x-tseng-pathname');
+async function getRequestPathname(): Promise<string | null> {
+  return (await headers()).get('x-tseng-pathname');
 }
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   applicationName: '법무법인 호정',
-  title: {
-    default: '법무법인 호정',
-    template: '%s | 법무법인 호정',
-  },
+  // Locale layouts provide their own localized title templates.
+  title: '법무법인 호정',
   description:
     '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어·중문·영문으로 안내하는 법무법인 호정 공식 사이트.',
   authors: [{ name: '법무법인 호정' }],
@@ -54,18 +52,28 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: ReactNode;
 }) {
-  const language = resolveDocumentLanguage(getRequestPathname());
+  const pathname = await getRequestPathname();
+  const language = resolveDocumentLanguage(pathname);
+  const isLocaleHome = /^\/(?:ko|zh-hant|en|ja)\/?$/i.test(pathname ?? '');
   // next/font variables must live on <html> so :root semantic tokens resolve.
   const fontClassName = getLocaleFontClassName(language);
 
   return (
     <html lang={language} className={fontClassName} suppressHydrationWarning>
       <head>
+        {isLocaleHome ? (
+          <link
+            rel="preload"
+            as="image"
+            href="/images/brand/hovering-seal-official-opening.webp"
+            fetchPriority="high"
+          />
+        ) : null}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<style>.reveal,.reveal-stagger > *{opacity:1;transform:none;pointer-events:auto;transition:none}</style>`,

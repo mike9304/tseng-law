@@ -134,7 +134,7 @@ export default function LiveChatWidget({
       source.close();
       if (sourceRef.current === source) sourceRef.current = null;
     };
-  }, [open, session]);
+  }, [locale, open, session]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

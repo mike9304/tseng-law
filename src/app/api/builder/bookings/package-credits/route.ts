@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { getBookingPackageCreditApiErrorPayload } from '@/lib/builder/bookings/bookings-copy';
 import { bookingPackageCreditInputSchema } from '@/lib/builder/bookings/types';
 import {
@@ -23,7 +22,7 @@ function expiryFromValidityDays(days?: number): string | undefined {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = await guardBuilderReadWithPermission(request, 'view-bookings');
   if (auth instanceof NextResponse) return auth;
   const customerEmail = request.nextUrl.searchParams.get('customerEmail') ?? undefined;
   const packageId = request.nextUrl.searchParams.get('packageId') ?? undefined;

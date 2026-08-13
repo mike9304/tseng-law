@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import type { SecuritySummary } from '@/lib/builder/ops/security-summary';
 
 const WINDOW_OPTIONS = [1, 6, 24, 72, 168] as const;
@@ -9,7 +9,7 @@ export default function SecurityPanel() {
   const [summary, setSummary] = useState<SecuritySummary | null>(null);
   const [windowHours, setWindowHours] = useState<number>(24);
 
-  async function refresh() {
+  const refresh = useCallback(async () => {
     const res = await fetch(`/api/builder/ops/security?windowHours=${windowHours}`, {
       credentials: 'same-origin',
     });
@@ -17,9 +17,9 @@ export default function SecurityPanel() {
       const payload = await res.json() as { summary: SecuritySummary };
       setSummary(payload.summary);
     }
-  }
+  }, [windowHours]);
 
-  useEffect(() => { void refresh(); }, [windowHours]);
+  useEffect(() => { void refresh(); }, [refresh]);
 
   return (
     <div data-ops-security-panel="true" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>

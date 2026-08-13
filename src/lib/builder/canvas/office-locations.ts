@@ -21,12 +21,21 @@ export type OfficeNodeGroup = {
   mapLinkNode: BuilderCanvasNode | null;
 };
 
+const PINGTUNG_MAPS_URL =
+  'https://www.google.com/maps/search/90443%E5%B1%8F%E6%9D%B1%E7%B8%A3%E4%B9%9D%E5%A6%82%E9%84%89%E4%B9%9D%E5%A6%82%E8%B7%AF%E4%B8%89%E6%AE%B546%E8%99%9F';
+
 export const OFFICE_LOCATION_PRESETS: Record<Locale, OfficeLocationPreset[]> = {
   ko: [
     {
+      id: 'taipei',
+      title: '타이베이',
+      address: '103 臺北市大同區承德路一段35號7樓之2',
+      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
+    },
+    {
       id: 'taichung',
       title: '타이중',
-      address: '臺中市北區館前路19號樓之1',
+      address: '40453 臺中市北區館前路19號6樓之1',
       phone: '04-2326-1862',
       fax: '04-2326-1863',
       mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E5%8F%B0%E4%B8%AD%E6%89%80',
@@ -34,22 +43,31 @@ export const OFFICE_LOCATION_PRESETS: Record<Locale, OfficeLocationPreset[]> = {
     {
       id: 'kaohsiung',
       title: '가오슝',
-      address: '高雄市左營區安吉街233號',
+      address: '81358 高雄市左營區安吉街233號',
       phone: '07-557-9797',
+      fax: '07-557-7171',
       mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80',
     },
     {
-      id: 'taipei',
-      title: '타이베이',
-      address: '台北市大同區承德路一段35號7樓之2',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
+      id: 'pingtung',
+      title: '핑둥',
+      address: '90443 屏東縣九如鄉九如路三段46號',
+      phone: '08-739-1689',
+      fax: '08-739-7362',
+      mapsUrl: PINGTUNG_MAPS_URL,
     },
   ],
   'zh-hant': [
     {
+      id: 'taipei',
+      title: '台北',
+      address: '103臺北市大同區承德路一段35號7樓之2',
+      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
+    },
+    {
       id: 'taichung',
       title: '台中',
-      address: '臺中市北區館前路19號樓之1',
+      address: '40453臺中市北區館前路19號6樓之1',
       phone: '04-2326-1862',
       fax: '04-2326-1863',
       mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E5%8F%B0%E4%B8%AD%E6%89%80',
@@ -57,22 +75,31 @@ export const OFFICE_LOCATION_PRESETS: Record<Locale, OfficeLocationPreset[]> = {
     {
       id: 'kaohsiung',
       title: '高雄',
-      address: '高雄市左營區安吉街233號',
+      address: '81358高雄市左營區安吉街233號',
       phone: '07-557-9797',
+      fax: '07-557-7171',
       mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80',
     },
     {
-      id: 'taipei',
-      title: '台北',
-      address: '台北市大同區承德路一段35號7樓之2',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
+      id: 'pingtung',
+      title: '屏東',
+      address: '90443屏東縣九如鄉九如路三段46號',
+      phone: '08-739-1689',
+      fax: '08-739-7362',
+      mapsUrl: PINGTUNG_MAPS_URL,
     },
   ],
   en: [
     {
+      id: 'taipei',
+      title: 'Taipei',
+      address: '103, 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City',
+      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
+    },
+    {
       id: 'taichung',
       title: 'Taichung',
-      address: 'No. 19, Guanqian Rd., North Dist., Taichung City',
+      address: '40453, 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City',
       phone: '04-2326-1862',
       fax: '04-2326-1863',
       mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E5%8F%B0%E4%B8%AD%E6%89%80',
@@ -80,18 +107,23 @@ export const OFFICE_LOCATION_PRESETS: Record<Locale, OfficeLocationPreset[]> = {
     {
       id: 'kaohsiung',
       title: 'Kaohsiung',
-      address: 'No. 233, Anji St., Zuoying Dist., Kaohsiung City',
+      address: '81358, No. 233, Anji St., Zuoying Dist., Kaohsiung City',
       phone: '07-557-9797',
+      fax: '07-557-7171',
       mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80',
     },
     {
-      id: 'taipei',
-      title: 'Taipei',
-      address: '7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
+      id: 'pingtung',
+      title: 'Pingtung',
+      address: 'No. 46, Sec. 3, Jiuru Rd., Jiuru Township, Pingtung County 90443',
+      phone: '08-739-1689',
+      fax: '08-739-7362',
+      mapsUrl: PINGTUNG_MAPS_URL,
     },
   ],
 };
+
+export const BUILDER_OFFICE_LOCATION_COUNT = OFFICE_LOCATION_PRESETS.ko.length;
 
 export function getOfficeLocationPresets(locale: string | undefined): OfficeLocationPreset[] {
   if (locale === 'en' || locale === 'zh-hant' || locale === 'ko') {

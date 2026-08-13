@@ -17,9 +17,14 @@ name: Builder Visual Regression
 on:
   pull_request:
     paths:
+      - '.github/workflows/builder-visual.yml'
       - 'src/lib/builder/templates/**'
       - 'src/lib/builder/decompose/**'
       - 'src/components/builder/published/**'
+      - 'scripts/ci-playwright-qa-harness.test.mjs'
+      - 'scripts/qa-runtime-isolation-contract.mjs'
+      - 'scripts/start-qa-server.sh'
+      - 'scripts/visual-baselines-docker.sh'
       - 'tests/builder-editor/visual-regression.playwright.ts'
       - 'tests/visual/baseline/**'
       - 'public/images/**'
@@ -33,34 +38,106 @@ jobs:
       image: mcr.microsoft.com/playwright:v1.59.1-noble
     env:
       NEXT_PUBLIC_SENTRY_DSN: ''
-      BUILDER_ALLOWED_ORIGINS: 'http://localhost:3000,https://tseng-law.com'
-      BASE_URL: 'http://localhost:3000'
+      BUILDER_ALLOWED_ORIGINS: 'http://127.0.0.1:3000,https://tseng-law.com'
+      BASE_URL: 'http://127.0.0.1:3000'
+      NEXT_DIST_DIR: '.next-build'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
+      - name: Install QA harness shell
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends zsh
+          rm -rf /var/lib/apt/lists/*
       - run: npm ci
-      - run: npm run build
-      - name: Boot built app
+      - run: node --test scripts/ci-playwright-qa-harness.test.mjs
+      - run: NEXT_DIST_DIR=.next-build npm run build
+      - name: Template visual baselines and stable re-render
         run: |
-          npm run start -- -p 3000 > /tmp/visual-next.log 2>&1 &
-          for i in $(seq 1 60); do
-            if curl -fsS -u admin:local-review-2026! http://localhost:3000/ko/admin-builder > /dev/null 2>&1; then
-              echo "app up"; break
+          set -Eeuo pipefail
+          QA_PORT=3000
+          QA_HARNESS_LOG=/tmp/builder-visual-qa-harness.log
+          QA_MANIFEST_PATH="$(
+            node scripts/qa-runtime-isolation-contract.mjs manifest-path \
+              --tmp-base "${TMPDIR:-/tmp}" \
+              --repository-root "$PWD" \
+              --base-url "$BASE_URL"
+          )"
+          QA_HARNESS_PID=''
+
+          cleanup_qa_harness() {
+            local original_status=$?
+            local harness_status=0
+            trap - EXIT INT TERM HUP
+            set +e
+            if [[ -n "$QA_HARNESS_PID" ]] && kill -0 "$QA_HARNESS_PID" 2>/dev/null; then
+              kill -TERM "$QA_HARNESS_PID" 2>/dev/null
             fi
-            sleep 2
+            if [[ -n "$QA_HARNESS_PID" ]]; then
+              # Waiting is mandatory: the harness proves canonical checksums in
+              # its own EXIT trap before this CI step may finish.
+              wait "$QA_HARNESS_PID" 2>/dev/null
+              harness_status=$?
+            fi
+            if (( original_status == 0 && harness_status != 0 && harness_status != 143 )); then
+              original_status=$harness_status
+            fi
+            if (( original_status != 0 )); then
+              tail -n 80 "$QA_HARNESS_LOG" >&2 || true
+            fi
+            exit "$original_status"
+          }
+          trap cleanup_qa_harness EXIT
+          trap 'exit 130' INT
+          trap 'exit 143' TERM
+          trap 'exit 129' HUP
+
+          PORT="$QA_PORT" NEXT_DIST_DIR="$NEXT_DIST_DIR" \
+            ./scripts/start-qa-server.sh >"$QA_HARNESS_LOG" 2>&1 &
+          QA_HARNESS_PID=$!
+
+          ready=0
+          for i in $(seq 1 90); do
+            if ! kill -0 "$QA_HARNESS_PID" 2>/dev/null; then
+              echo "QA harness exited before readiness" >&2
+              exit 1
+            fi
+            if curl -fsS "$BASE_URL/ko" >/dev/null 2>&1 \
+              && node -e '
+                const fs = require("node:fs");
+                const [manifestPath, baseUrl, repositoryRoot, ownerPid] = process.argv.slice(1);
+                try {
+                  const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+                  process.exit(
+                    manifest.schemaVersion === 3
+                    && manifest.state === "ready"
+                    && manifest.baseUrl === baseUrl
+                    && manifest.repositoryRoot === repositoryRoot
+                    && manifest.ownerPid === Number(ownerPid)
+                    ? 0 : 1
+                  );
+                } catch {
+                  process.exit(1);
+                }
+              ' "$QA_MANIFEST_PATH" "$BASE_URL" "$PWD" "$QA_HARNESS_PID"
+            then
+              ready=1
+              break
+            fi
+            sleep 1
           done
-          curl -fsS -u admin:local-review-2026! http://localhost:3000/ko/admin-builder > /dev/null
-      - name: Template visual baselines (generate if missing, in-container render)
-        run: |
+          if [[ "$ready" != "1" ]]; then
+            echo "QA harness did not publish a ready attestation manifest" >&2
+            exit 1
+          fi
+
           npx playwright test --config=playwright.config.ts \
             tests/builder-editor/visual-regression.playwright.ts \
             --project=chromium-builder -g "template visual regression" \
             --update-snapshots --workers=2
-      - name: Template visual regression (must be stable on re-render)
-        run: |
           npx playwright test --config=playwright.config.ts \
             tests/builder-editor/visual-regression.playwright.ts \
             --project=chromium-builder -g "template visual regression" \

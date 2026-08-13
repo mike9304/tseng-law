@@ -1652,6 +1652,12 @@ export async function publishPage(siteId: string, pageId: string, locale: Locale
   if (!draft) {
     return false;
   }
+  const { checkDisabledConsultationChannels } = await import(
+    '@/lib/builder/publish-gate/consultation-channel-checks'
+  );
+  if (checkDisabledConsultationChannels(draft, mutationSiteId).length > 0) {
+    return false;
+  }
   await writePageCanvas(mutationSiteId, pageId, 'published', draft);
   const site = await readSiteDocument(mutationSiteId, locale);
   const page = site.pages.find((p) => p.pageId === pageId);

@@ -4,6 +4,12 @@ import path from 'path';
 import { NextRequest } from 'next/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+const checkRateLimitMock = vi.hoisted(() => vi.fn());
+
+vi.mock('@/lib/builder/security/rate-limit', () => ({
+  checkRateLimit: checkRateLimitMock,
+}));
+
 const ORIGINAL_BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN;
 const ORIGINAL_REVIEWS_BACKEND = process.env.REVIEWS_BACKEND;
 const ORIGINAL_REVIEWS_DATA_ROOT = process.env.REVIEWS_DATA_ROOT;
@@ -17,16 +23,18 @@ function reviewsFile(): string {
 function postRequest(
   body: unknown,
   forwardedFor: string,
-  origin = 'https://tseng-law.com',
+  origin: string | null = 'https://tseng-law.com',
   url = 'https://tseng-law.com/api/reviews',
 ): NextRequest {
+  const headers = new Headers({
+    'content-type': 'application/json',
+    'x-forwarded-for': forwardedFor,
+  });
+  if (origin) headers.set('origin', origin);
+
   return new NextRequest(url, {
     method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-      'origin': origin,
-      'x-forwarded-for': forwardedFor,
-    },
+    headers,
     body: JSON.stringify(body),
   });
 }
@@ -37,6 +45,12 @@ describe('/api/reviews file backend', () => {
     process.env.REVIEWS_DATA_ROOT = tempRoot;
     process.env.REVIEWS_BACKEND = 'local';
     delete process.env.BLOB_READ_WRITE_TOKEN;
+    checkRateLimitMock.mockReset();
+    checkRateLimitMock.mockResolvedValue({
+      allowed: true,
+      remaining: 0,
+      retryAfterMs: 0,
+    });
   });
 
   afterEach(async () => {
@@ -222,6 +236,11 @@ describe('/api/reviews file backend', () => {
       status: 'pending',
       sourceLocale: 'zh-hant',
     });
+    expect(checkRateLimitMock).toHaveBeenCalledWith(
+      expect.stringMatching(/^reviews-submit:[a-f0-9]{64}$/),
+      1,
+      10 * 60 * 1000,
+    );
   });
 
   it.each([
@@ -255,7 +274,7 @@ describe('/api/reviews file backend', () => {
         content: '로컬 포트에서 제출해도 개발 환경에서는 정상 접수되어야 합니다.',
         website: '',
         sourceLocale: 'ko',
-      }, '203.0.113.78', 'http://127.0.0.1:3171'),
+      }, '203.0.113.78', 'http://127.0.0.1:3171', 'http://127.0.0.1:3171/api/reviews'),
     );
     const stored = JSON.parse(await readFile(reviewsFile(), 'utf8'));
 
@@ -291,22 +310,127 @@ describe('/api/reviews file backend', () => {
     });
   });
 
-  it('rejects unrelated origins before writing a review', async () => {
+  it('rejects unrelated origins before parsing or writing a review', async () => {
     const route = await import('../route');
-    const response = await route.POST(
-      postRequest({
+    const request = postRequest({
         nickname: '외부 고객',
         rating: 5,
         service: 'consultation',
         content: '허용되지 않은 origin에서는 파일에 저장되면 안 됩니다.',
         website: '',
         sourceLocale: 'ko',
-      }, '203.0.113.79', 'https://example.com'),
-    );
+      }, '203.0.113.79', 'https://example.com');
+    const jsonSpy = vi.spyOn(request, 'json');
+    const response = await route.POST(request);
     const payload = await response.json();
 
     expect(response.status).toBe(403);
-    expect(payload).toEqual({ error: 'origin not allowed' });
+    expect(payload).toEqual({
+      ok: false,
+      error: 'csrf_origin_mismatch',
+      code: 'csrf_origin_mismatch',
+    });
+    expect(jsonSpy).not.toHaveBeenCalled();
+    expect(checkRateLimitMock).not.toHaveBeenCalled();
+    await expect(readFile(reviewsFile(), 'utf8')).rejects.toThrow();
+  });
+
+  it('rejects a missing production Origin before parsing or writing a review', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    const route = await import('../route');
+    const request = postRequest({
+      nickname: '헤더 없는 고객',
+      rating: 5,
+      service: 'consultation',
+      content: '운영 환경에서는 Origin 없는 상태 변경 요청이 저장되면 안 됩니다.',
+      website: '',
+      sourceLocale: 'ko',
+    }, '203.0.113.84', null);
+    const jsonSpy = vi.spyOn(request, 'json');
+
+    const response = await route.POST(request);
+
+    expect(response.status).toBe(403);
+    await expect(response.json()).resolves.toEqual({
+      ok: false,
+      error: 'csrf_origin_mismatch',
+      code: 'csrf_origin_mismatch',
+    });
+    expect(jsonSpy).not.toHaveBeenCalled();
+    expect(checkRateLimitMock).not.toHaveBeenCalled();
+    await expect(readFile(reviewsFile(), 'utf8')).rejects.toThrow();
+  });
+
+  it('does not parse or write when the shared rate limiter throttles the client', async () => {
+    checkRateLimitMock.mockResolvedValueOnce({
+      allowed: false,
+      remaining: 0,
+      retryAfterMs: 61_000,
+    });
+    const route = await import('../route');
+    const request = postRequest({
+      nickname: '제한 고객',
+      rating: 5,
+      service: 'consultation',
+      content: '공유 제한기가 거부하면 후기 본문과 저장소에 접근하면 안 됩니다.',
+      website: '',
+      sourceLocale: 'ko',
+    }, '203.0.113.85');
+    const jsonSpy = vi.spyOn(request, 'json');
+
+    const response = await route.POST(request);
+
+    expect(response.status).toBe(429);
+    expect(response.headers.get('retry-after')).toBe('61');
+    await expect(response.json()).resolves.toEqual({ error: 'too many submissions' });
+    expect(jsonSpy).toHaveBeenCalledOnce();
+    await expect(readFile(reviewsFile(), 'utf8')).rejects.toThrow();
+  });
+
+  it('fails closed before parsing when the production rate-limit backend is unavailable', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    checkRateLimitMock.mockResolvedValueOnce({
+      allowed: false,
+      remaining: 0,
+      retryAfterMs: 0,
+      reason: 'backend_unavailable',
+    });
+    const route = await import('../route');
+    const request = postRequest({
+      nickname: '운영 고객',
+      rating: 5,
+      service: 'consultation',
+      content: '운영 제한 저장소 장애 시에도 후기 파일을 변경하면 안 됩니다.',
+      website: '',
+      sourceLocale: 'ko',
+    }, '203.0.113.86');
+    const jsonSpy = vi.spyOn(request, 'json');
+
+    const response = await route.POST(request);
+
+    expect(response.status).toBe(503);
+    expect(response.headers.get('retry-after')).toBeNull();
+    await expect(response.json()).resolves.toEqual({ error: 'rate limit unavailable' });
+    expect(jsonSpy).toHaveBeenCalledOnce();
+    await expect(readFile(reviewsFile(), 'utf8')).rejects.toThrow();
+  });
+
+  it('keeps honeypot rejection ahead of rate-limit and storage side effects', async () => {
+    const route = await import('../route');
+    const response = await route.POST(
+      postRequest({
+        nickname: '자동화 고객',
+        rating: 5,
+        service: 'consultation',
+        content: '숨겨진 필드가 채워진 자동 제출은 저장소에 기록되면 안 됩니다.',
+        website: 'https://spam.example',
+        sourceLocale: 'ko',
+      }, '203.0.113.87'),
+    );
+
+    expect(response.status).toBe(400);
+    await expect(response.json()).resolves.toEqual({ error: 'invalid submission' });
+    expect(checkRateLimitMock).not.toHaveBeenCalled();
     await expect(readFile(reviewsFile(), 'utf8')).rejects.toThrow();
   });
 
@@ -326,6 +450,42 @@ describe('/api/reviews file backend', () => {
 
     expect(response.status).toBe(500);
     expect(await readFile(reviewsFile(), 'utf8')).toBe('{not valid json');
+  });
+
+  it('redacts unexpected review persistence failures from the client response and logs', async () => {
+    const sensitiveMarker = 'SENSITIVE_REVIEW_email=client@example.com';
+    const failureRoot = path.join(tempRoot, sensitiveMarker);
+    await writeFile(failureRoot, 'not a directory', 'utf8');
+    process.env.REVIEWS_DATA_ROOT = failureRoot;
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const route = await import('../route');
+    const response = await route.POST(
+      postRequest({
+        nickname: '저장 실패 고객',
+        rating: 5,
+        service: 'consultation',
+        content: '저장소 예외가 발생해도 내부 오류 내용을 응답으로 노출하면 안 됩니다.',
+        website: '',
+        sourceLocale: 'ko',
+      }, '203.0.113.89'),
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'review_submission_failed',
+      code: 'review_submission_failed',
+      message: 'Unable to submit your review right now. Please try again later.',
+    });
+    expect(JSON.stringify(payload)).not.toContain(sensitiveMarker);
+    expect(consoleSpy).toHaveBeenCalledWith(
+      '[reviews] operation failed',
+      'review_submission_failed',
+      'Error',
+    );
+    expect(consoleSpy.mock.calls.flat().join(' ')).not.toContain(sensitiveMarker);
   });
 
   it('keeps ReviewBoard locale-aware without changing its visible labels', async () => {

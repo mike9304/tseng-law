@@ -12,6 +12,7 @@ import AiConsultationSection from '@/components/consultation/AiConsultationSecti
 import FAQAccordion from '@/components/FAQAccordion';
 import FloatingAiChat from '@/components/FloatingAiChat';
 import YearEndEventPopup from '@/components/YearEndEventPopup';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 
 const root = process.cwd();
 const css = readFileSync(path.join(root, 'src/app/globals.css'), 'utf8');
@@ -51,18 +52,21 @@ describe('WO-1 accessibility remediation contracts', () => {
     expect(contrastRatio(color!, background!)).toBeGreaterThanOrEqual(4.5);
   });
 
-  it('1-10 renders a modal event popup and locks focus, scroll, and restoration in its lifecycle', () => {
+  it('1-10 renders a non-blocking event dialog with keyboard dismissal and email consultation', () => {
     const html = renderToStaticMarkup(
       createElement(YearEndEventPopup, { locale: 'ko', previewOpen: true }),
     );
 
     expect(html).toContain('role="dialog"');
-    expect(html).toContain('aria-modal="true"');
+    expect(html).toContain('aria-modal="false"');
     expect(html).toContain('aria-labelledby="year-end-popup-title"');
     expect(html).toContain('>축소<');
-    expect(popupSource).toContain("document.body.style.overflow = 'hidden'");
-    expect(popupSource).toContain("if (event.key !== 'Tab') return;");
-    expect(popupSource).toContain('previouslyFocused?.focus({ preventScroll: true })');
+    expect(html).toContain(getConsultationPublicMailto('ko').replace(/&/g, '&amp;'));
+    expect(html).toContain('>7일간 보지 않기<');
+    expect(popupSource).not.toContain("document.body.style.overflow = 'hidden'");
+    expect(popupSource).not.toContain('sessionStorage');
+    expect(popupSource).toContain("if (event.key === 'Escape')");
+    expect(popupSource).toContain("document.addEventListener('keydown', onKeyDown)");
     expect(popupSource).toContain('year-end-popup-minimized');
   });
 

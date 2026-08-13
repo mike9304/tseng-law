@@ -8,17 +8,14 @@ import {
   createPageHeaderSectionNodes,
 } from './decompose-page-shared';
 
-const STANDARD_SERVICES_SECTION_ROOT_HEIGHT = 1280;
-const STANDARD_SERVICES_CONTAINER_Y = 142;
-const STANDARD_SERVICES_CONTAINER_HEIGHT = 996;
-const STANDARD_SERVICES_LIST_PUBLIC_Y = 246;
-const STANDARD_SERVICES_LIST_MARGIN_TOP = 24;
-const STANDARD_SERVICES_LIST_NODE_Y = STANDARD_SERVICES_LIST_PUBLIC_Y - STANDARD_SERVICES_LIST_MARGIN_TOP;
-const STANDARD_SERVICES_LIST_HEIGHT = 750;
-const STANDARD_SERVICES_CARD_HEIGHT = 98;
-const STANDARD_SERVICES_CARD_PITCH = 130;
-const STANDARD_SERVICES_TOGGLE_HEIGHT = 96;
-const STANDARD_SERVICES_BODY_Y = 97;
+const STANDARD_SERVICES_SECTION_ROOT_HEIGHT = 820;
+const STANDARD_SERVICES_CONTAINER_Y = 72;
+const STANDARD_SERVICES_CONTAINER_HEIGHT = 676;
+const STANDARD_SERVICES_LIST_Y = 220;
+const STANDARD_SERVICES_LIST_HEIGHT = 456;
+const STANDARD_SERVICES_CARD_HEIGHT = 216;
+const STANDARD_SERVICES_CARD_GAP = 24;
+const STANDARD_SERVICES_CARD_WIDTH = (PAGE_CONTAINER_WIDTH - (STANDARD_SERVICES_CARD_GAP * 2)) / 3;
 
 type CanvasRect = BuilderCanvasNode['rect'];
 
@@ -51,6 +48,29 @@ function setNodeRect(
   node.rect = { ...node.rect, ...rect };
 }
 
+function setNodeClassName(
+  nodesById: Map<string, BuilderCanvasNode>,
+  nodeId: string,
+  className: string,
+): void {
+  const node = nodesById.get(nodeId);
+  if (!node || !('className' in node.content)) return;
+  node.content = { ...node.content, className };
+}
+
+function staticCardRect(index: number): CanvasRect {
+  return {
+    x: (index % 3) * (STANDARD_SERVICES_CARD_WIDTH + STANDARD_SERVICES_CARD_GAP),
+    y: Math.floor(index / 3) * (STANDARD_SERVICES_CARD_HEIGHT + STANDARD_SERVICES_CARD_GAP),
+    width: STANDARD_SERVICES_CARD_WIDTH,
+    height: STANDARD_SERVICES_CARD_HEIGHT,
+  };
+}
+
+function isObsoleteAccordionNode(nodeId: string): boolean {
+  return /^home-services-card-\d+-(?:toggle|chevron|checklist|columns(?:-list|-label)?|detail-\d+|column-\d+)$/.test(nodeId);
+}
+
 export function applyStandardServicesPageLayout(nodes: BuilderCanvasNode[]): void {
   const nodesById = new Map(nodes.map((node) => [node.id, node]));
   const root = nodesById.get('home-services-root');
@@ -71,39 +91,49 @@ export function applyStandardServicesPageLayout(nodes: BuilderCanvasNode[]): voi
   setNodeRect(nodesById, 'home-services-label', { x: 0, y: 9, width: 200, height: 22 });
   setNodeRect(nodesById, 'home-services-title', { x: 0, y: 48, width: PAGE_CONTAINER_WIDTH, height: 72 });
   setNodeRect(nodesById, 'home-services-description', { x: 0, y: 139, width: 720, height: 30 });
-  setNodeRect(nodesById, 'home-services-divider', { x: 0, y: 202, width: PAGE_CONTAINER_WIDTH, height: 12 });
-  setNodeRect(nodesById, 'home-services-divider-mark', { x: 562, y: 0, width: 54, height: 12 });
+  setNodeRect(nodesById, 'home-services-divider', { x: 0, y: 178, width: PAGE_CONTAINER_WIDTH, height: 24 });
+  setNodeRect(nodesById, 'home-services-divider-mark', { x: 562, y: 6, width: 54, height: 12 });
   setNodeRect(nodesById, 'home-services-list', {
     x: 0,
-    y: STANDARD_SERVICES_LIST_NODE_Y,
+    y: STANDARD_SERVICES_LIST_Y,
     width: PAGE_CONTAINER_WIDTH,
     height: STANDARD_SERVICES_LIST_HEIGHT,
   });
+  setNodeClassName(nodesById, 'home-services-list', 'services-detail-list services-card-grid');
 
   for (let index = 0; index < 6; index += 1) {
     const cardId = `home-services-card-${index}`;
-    setNodeRect(nodesById, cardId, {
-      x: 0,
-      y: index * STANDARD_SERVICES_CARD_PITCH,
-      width: PAGE_CONTAINER_WIDTH,
-      height: STANDARD_SERVICES_CARD_HEIGHT,
+    setNodeRect(nodesById, cardId, staticCardRect(index));
+    setNodeClassName(nodesById, cardId, 'services-detail-card services-card');
+    setNodeRect(nodesById, `${cardId}-header`, {
+      x: 24,
+      y: 24,
+      width: STANDARD_SERVICES_CARD_WIDTH - 48,
+      height: 52,
     });
-    setNodeRect(nodesById, `${cardId}-toggle`, {
+    setNodeClassName(nodesById, `${cardId}-header`, 'services-detail-header services-card-header');
+    setNodeRect(nodesById, `${cardId}-title`, {
+      x: 62,
+      y: 4,
+      width: STANDARD_SERVICES_CARD_WIDTH - 110,
+      height: 48,
+    });
+    setNodeRect(nodesById, `${cardId}-body`, {
+      x: 24,
+      y: 92,
+      width: STANDARD_SERVICES_CARD_WIDTH - 48,
+      height: 104,
+    });
+    setNodeClassName(nodesById, `${cardId}-body`, 'services-detail-body services-card-body');
+    setNodeRect(nodesById, `${cardId}-description`, {
       x: 0,
       y: 0,
-      width: PAGE_CONTAINER_WIDTH,
-      height: STANDARD_SERVICES_TOGGLE_HEIGHT,
+      width: STANDARD_SERVICES_CARD_WIDTH - 48,
+      height: 58,
     });
-    setNodeRect(nodesById, `${cardId}-header`, { x: 24, y: 20, width: 1000, height: 56 });
-    setNodeRect(nodesById, `${cardId}-title`, { x: 62, y: 14, width: 880, height: 30 });
-    setNodeRect(nodesById, `${cardId}-chevron`, { x: PAGE_CONTAINER_WIDTH - 48, y: 38, width: 20, height: 20 });
-    setNodeRect(nodesById, `${cardId}-body`, {
-      x: 0,
-      y: STANDARD_SERVICES_BODY_Y,
-      width: PAGE_CONTAINER_WIDTH,
-      height: 40,
-    });
-    setNodeRect(nodesById, `${cardId}-description`, { x: 24, y: 0, width: 1020, height: 40 });
+    setNodeClassName(nodesById, `${cardId}-description`, 'services-detail-desc services-card-summary');
+    setNodeRect(nodesById, `${cardId}-more`, { x: 0, y: 70, width: 170, height: 30 });
+    setNodeClassName(nodesById, `${cardId}-more`, 'services-detail-more services-card-link');
   }
 }
 
@@ -113,16 +143,28 @@ export function upgradeStandardServicesPageDesktopParity(
 ): BuilderCanvasDocument {
   if (!isStandardServicesPageDocument(document)) return document;
 
-  const nextNodes: BuilderCanvasNode[] = document.nodes.map((node) => ({
-    ...node,
-    rect: { ...node.rect },
-  }));
+  const nextNodes: BuilderCanvasNode[] = document.nodes
+    .filter((node) => !isObsoleteAccordionNode(node.id))
+    .map((node) => ({
+      ...node,
+      rect: { ...node.rect },
+    }));
   applyStandardServicesPageLayout(nextNodes);
+  const rootY = document.nodes.find((node) => node.id === 'home-services-root')?.rect.y ?? 0;
+  const canonicalNodes = createServicesDecomposedNodes(rootY, document.locale, 0);
+  applyStandardServicesPageLayout(canonicalNodes);
+  const canonicalById = new Map(canonicalNodes.map((node) => [node.id, node]));
+  nextNodes.forEach((node) => {
+    const canonical = canonicalById.get(node.id);
+    if (canonical?.responsive) node.responsive = canonical.responsive;
+  });
 
-  const nextStageHeight = Math.max(document.stageHeight, getServicesPageRootHeight(document.locale));
+  const nextStageHeight = getServicesPageRootHeight(document.locale);
+  const originalNodesById = new Map(document.nodes.map((node) => [node.id, node]));
   const changed = nextStageHeight !== document.stageHeight
-    || nextNodes.some((node, index) => {
-      const original = document.nodes[index];
+    || nextNodes.length !== document.nodes.length
+    || nextNodes.some((node) => {
+      const original = originalNodesById.get(node.id);
       return original ? standardServicesNodeChanged(original, node) : true;
     });
 

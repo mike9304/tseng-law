@@ -57,7 +57,9 @@ describe('builder app hook delivery retry API', () => {
   });
 
   it('retries a stored hook delivery through the guarded runtime', async () => {
-    const response = await POST(request('locale=en'), { params: { deliveryId: 'appdlv-1' } });
+    const response = await POST(request('locale=en'), {
+      params: Promise.resolve({ deliveryId: 'appdlv-1' }),
+    });
     const data = await response.json();
 
     expect(response.status).toBe(200);
@@ -76,7 +78,9 @@ describe('builder app hook delivery retry API', () => {
   it('returns not found when the delivery id is unknown', async () => {
     retryStoredAppHookDeliveryMock.mockResolvedValueOnce({ status: 'not-found' });
 
-    const response = await POST(request('locale=ko'), { params: { deliveryId: 'missing-delivery' } });
+    const response = await POST(request('locale=ko'), {
+      params: Promise.resolve({ deliveryId: 'missing-delivery' }),
+    });
     const data = await response.json();
 
     expect(response.status).toBe(404);
@@ -90,7 +94,9 @@ describe('builder app hook delivery retry API', () => {
   it('returns unavailable when the stored hook can no longer be run', async () => {
     retryStoredAppHookDeliveryMock.mockResolvedValueOnce({ status: 'unavailable' });
 
-    const response = await POST(request('locale=zh-hant'), { params: { deliveryId: 'appdlv-1' } });
+    const response = await POST(request('locale=zh-hant'), {
+      params: Promise.resolve({ deliveryId: 'appdlv-1' }),
+    });
     const data = await response.json();
 
     expect(response.status).toBe(409);

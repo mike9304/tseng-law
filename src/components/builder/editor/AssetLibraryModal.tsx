@@ -183,7 +183,7 @@ export default function AssetLibraryModal({
     } finally {
       setIsLoading(false);
     }
-  }, [locale, onToast]);
+  }, [locale, onToast, text.errorLoad, text.errorNetwork]);
 
   useEffect(() => {
     if (!open) return;
@@ -527,7 +527,7 @@ export default function AssetLibraryModal({
     }
   }
 
-  function handleSelectAsset(asset: BuilderAssetListItem) {
+  const handleSelectAsset = useCallback((asset: BuilderAssetListItem) => {
     if (autoFolderOnSelect || autoTagOnSelect) {
       const currentLibrary = libraryStateRef.current ?? libraryState;
       const nextFolderMap = autoFolderOnSelect
@@ -555,7 +555,14 @@ export default function AssetLibraryModal({
     }
     onSelect(asset);
     onClose();
-  }
+  }, [
+    autoFolderOnSelect,
+    autoTagOnSelect,
+    libraryState,
+    onClose,
+    onSelect,
+    scheduleLibraryStateSave,
+  ]);
 
   useEffect(() => {
     if (!open) return undefined;

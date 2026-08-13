@@ -5,10 +5,8 @@ import { loadBackupManifest } from '@/lib/builder/backups/backup-engine';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { backupId: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ backupId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { allowReadOnly: true, permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
   const manifest = await loadBackupManifest(params.backupId);

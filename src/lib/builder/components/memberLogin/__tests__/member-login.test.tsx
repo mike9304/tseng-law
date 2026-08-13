@@ -30,10 +30,8 @@ describe('member login localization', () => {
       eyebrow: '會員',
       title: '會員登入',
       login: '登入',
-      signup: '建立帳戶',
       inspectorTitle: '標題',
-      inspectorDefaultTab: '預設分頁',
-      inspectorModeSignup: '註冊',
+      inspectorPublicSignupNotice: '公開註冊已停用。請在會員管理頁面建立會員帳戶。',
     });
   });
 
@@ -44,8 +42,13 @@ describe('member login localization', () => {
     const renderHtml = renderToStaticMarkup(<Render node={node} locale="zh-hant" mode="published" />);
     expect(renderHtml).toContain('會員');
     expect(renderHtml).toContain('會員登入');
-    expect(renderHtml).toContain('建立帳戶');
+    expect(renderHtml).toContain('會員帳戶由事務所確認後建立。既有會員請登入。');
     expect(renderHtml).toContain('Email');
+    expect(renderHtml).toContain('data-builder-member-login-mode="login"');
+    expect(renderHtml).toContain('data-public-signup-enabled="false"');
+    expect(renderHtml).not.toContain('建立帳戶');
+    expect(renderHtml).not.toContain('name="name"');
+    expect(renderHtml).not.toContain('role="tablist"');
 
     const inspectorHtml = renderToStaticMarkup(
       <Inspector node={node} locale="zh-hant" onUpdate={() => undefined} disabled={false} />,
@@ -53,10 +56,10 @@ describe('member login localization', () => {
     expect(inspectorHtml).toContain('標題');
     expect(inspectorHtml).toContain('說明');
     expect(inspectorHtml).toContain('登入後前往路徑');
-    expect(inspectorHtml).toContain('顯示註冊分頁');
-    expect(inspectorHtml).toContain('預設分頁');
+    expect(inspectorHtml).toContain('公開註冊已停用。請在會員管理頁面建立會員帳戶。');
     expect(inspectorHtml).toContain('登入按鈕標籤');
-    expect(inspectorHtml).toContain('註冊按鈕標籤');
+    expect(inspectorHtml).not.toContain('顯示註冊分頁');
+    expect(inspectorHtml).not.toContain('註冊按鈕標籤');
   });
 
   it('localizes legacy default member login content in zh-hant inspector without changing custom content', () => {
@@ -87,17 +90,18 @@ describe('member login localization', () => {
       <Render node={legacyNode} locale="zh-hant" mode="published" />,
     );
     expect(legacyRenderHtml).toContain('會員登入');
-    expect(legacyRenderHtml).toContain('登入或建立帳戶以進入會員專屬內容。');
+    expect(legacyRenderHtml).toContain('會員帳戶由事務所確認後建立。既有會員請登入。');
     expect(legacyRenderHtml).not.toContain('회원 로그인');
+    expect(legacyRenderHtml).not.toContain('建立帳戶');
 
     const legacyInspectorHtml = renderToStaticMarkup(
       <Inspector node={legacyNode} locale="zh-hant" onUpdate={() => undefined} disabled={false} />,
     );
     expect(legacyInspectorHtml).toContain('value="會員登入"');
-    expect(legacyInspectorHtml).toContain('登入或建立帳戶以進入會員專屬內容。');
+    expect(legacyInspectorHtml).toContain('會員帳戶由事務所確認後建立。既有會員請登入。');
     expect(legacyInspectorHtml).toContain('placeholder="/zh-hant/account"');
     expect(legacyInspectorHtml).toContain('value="登入"');
-    expect(legacyInspectorHtml).toContain('value="建立帳戶"');
+    expect(legacyInspectorHtml).not.toContain('value="建立帳戶"');
     expect(legacyInspectorHtml).not.toContain('value="회원 로그인"');
     expect(legacyInspectorHtml).not.toContain('placeholder="/ko/account"');
 
@@ -107,7 +111,30 @@ describe('member login localization', () => {
     expect(customInspectorHtml).toContain('value="Custom member title"');
     expect(customInspectorHtml).toContain('Custom member subtitle');
     expect(customInspectorHtml).toContain('value="Custom login"');
-    expect(customInspectorHtml).toContain('value="Custom signup"');
+    expect(customInspectorHtml).not.toContain('value="Custom signup"');
     expect(customInspectorHtml).not.toContain('value="會員登入"');
+  });
+
+  it('ignores persisted signup-enabled content and always renders login-only UI', () => {
+    const Render = memberLoginComponent.Render as React.ComponentType<{ node: BuilderMemberLoginCanvasNode; locale?: 'ko' | 'zh-hant' | 'en'; mode?: 'edit' | 'preview' | 'published' }>;
+    const signupConfiguredNode = {
+      ...node,
+      content: {
+        ...node.content,
+        defaultMode: 'signup',
+        showSignup: true,
+        signupLabel: 'Create an unsafe public account',
+      },
+    } as BuilderMemberLoginCanvasNode;
+
+    const html = renderToStaticMarkup(
+      <Render node={signupConfiguredNode} locale="en" mode="published" />,
+    );
+
+    expect(html).toContain('data-builder-member-login-mode="login"');
+    expect(html).toContain('autoComplete="current-password"');
+    expect(html).not.toContain('Create an unsafe public account');
+    expect(html).not.toContain('name="name"');
+    expect(html).not.toContain('data-builder-member-login-tab="signup"');
   });
 });

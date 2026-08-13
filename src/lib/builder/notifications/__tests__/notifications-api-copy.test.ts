@@ -11,6 +11,18 @@ describe('builder notifications API copy', () => {
       error: '請確認通知類型。',
       errorCode: 'invalid_kind',
     });
+    expect(getBuilderNotificationsApiErrorPayload('en', 'invalid_content_type')).toEqual({
+      error: 'Notification requests must use JSON.',
+      errorCode: 'invalid_content_type',
+    });
+    expect(getBuilderNotificationsApiErrorPayload('ko', 'invalid_link')).toEqual({
+      error: '알림 링크는 사이트 내부 경로만 사용할 수 있습니다.',
+      errorCode: 'invalid_link',
+    });
+    expect(getBuilderNotificationsApiErrorPayload('zh-hant', 'notification_forbidden')).toEqual({
+      error: '您沒有權限存取此通知。',
+      errorCode: 'notification_forbidden',
+    });
     expect(getBuilderNotificationsApiErrorPayload('en', 'notifications_list_failed')).toEqual({
       error: 'Unable to load notifications.',
       errorCode: 'notifications_list_failed',

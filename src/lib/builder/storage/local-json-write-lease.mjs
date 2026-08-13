@@ -1094,16 +1094,70 @@ export async function withLocalJsonWriteLeases(targetPaths, options, operation) 
 export async function readLocalJsonFile(targetOrLease, options = {}) {
   if (isLease(targetOrLease)) return targetOrLease.read();
   const target = path.resolve(targetOrLease);
+  const normalizedOptions = normalizeOptions(options);
   // A missing parent cannot contain an active sibling transaction. Avoid
   // creating directories for a genuine read-only miss.
   for (let attempt = 0; attempt < 4; attempt += 1) {
     try {
       await lstat(path.dirname(target));
-      return withLocalJsonWriteLease(target, options, (lease) => lease.read());
+      const boundary = await prepareBoundary(target, normalizedOptions, { createParent: false });
+      const startedAt = Date.now();
+      for (;;) {
+        await assertParentStable(boundary);
+        const writer = await inspectControl(boundary.lockPath, boundary);
+        if (writer) {
+          // Readers never publish their own writer lock. A live writer may
+          // temporarily detach the target while atomically installing its
+          // replacement, so wait for that namespace gap to close. A crashed
+          // same-host writer still needs the existing exclusive recovery path.
+          if (isReclaimable(writer, normalizedOptions)) {
+            return withLocalJsonWriteLease(
+              target,
+              normalizedOptions,
+              (lease) => lease.read(),
+            );
+          }
+          if (Date.now() - startedAt >= normalizedOptions.acquireTimeoutMs) {
+            throw new LocalJsonWriteUnavailableError('local JSON writer lock wait timed out');
+          }
+          await sleep(normalizedOptions.retryDelayMs);
+          continue;
+        }
+
+        let snapshot;
+        try {
+          snapshot = await stableRead(target, { missing: true });
+        } catch (error) {
+          if (
+            error instanceof LocalJsonWriteConflictError
+            && Date.now() - startedAt < normalizedOptions.acquireTimeoutMs
+          ) {
+            await sleep(normalizedOptions.retryDelayMs);
+            continue;
+          }
+          throw error;
+        }
+        if (snapshot.kind === 'present') return snapshot;
+
+        // A writer can acquire its lease after the preflight probe and detach
+        // an existing target before stableRead observes it. Recheck the lock so
+        // that transient gap is never reported as a genuine missing record.
+        await assertParentStable(boundary);
+        if (await inspectControl(boundary.lockPath, boundary)) {
+          if (Date.now() - startedAt >= normalizedOptions.acquireTimeoutMs) {
+            throw new LocalJsonWriteUnavailableError('local JSON writer lock wait timed out');
+          }
+          await sleep(normalizedOptions.retryDelayMs);
+          continue;
+        }
+        return snapshot;
+      }
     } catch (error) {
-      if (isErrno(error, 'ENOENT')) {
-        if (!options.allowedRoot) throw new LocalJsonWriteInvalidPathError('options.allowedRoot is required');
-        const allowedRoot = path.resolve(options.allowedRoot);
+      if (isErrno(error, 'ENOENT') && !error.localJsonUnsafePath) {
+        if (!normalizedOptions.allowedRoot) {
+          throw new LocalJsonWriteInvalidPathError('options.allowedRoot is required');
+        }
+        const allowedRoot = path.resolve(normalizedOptions.allowedRoot);
         const rootStat = await lstat(allowedRoot, { bigint: true });
         const rootIdentity = { dev: String(rootStat.dev), ino: String(rootStat.ino) };
         if (
@@ -1114,7 +1168,7 @@ export async function readLocalJsonFile(targetOrLease, options = {}) {
         ) {
           throw new LocalJsonWriteInvalidPathError('read target is outside a canonical root');
         }
-        await runReadPreflightHook(options, 'after-missing-parent-probe', target);
+        await runReadPreflightHook(normalizedOptions, 'after-missing-parent-probe', target);
         if (await assertMissingParentIsGenuine(
           allowedRoot,
           path.dirname(target),

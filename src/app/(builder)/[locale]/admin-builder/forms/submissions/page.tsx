@@ -10,7 +10,8 @@ import { getFormsCopy } from '@/components/builder/forms/forms-copy';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const copy = getFormsCopy(params.locale);
   return {
     title: copy.list.title,
@@ -19,13 +20,14 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default async function FormSubmissionsPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: Locale };
-  searchParams?: { formId?: string };
-}) {
+export default async function FormSubmissionsPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+    searchParams?: Promise<{ formId?: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   normalizeLocale(params.locale);
   const formIds = await listSubmissionFormIds();
   const activeFormId = searchParams?.formId || formIds[0] || 'default-contact';

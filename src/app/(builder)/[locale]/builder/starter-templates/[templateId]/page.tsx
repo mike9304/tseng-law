@@ -26,11 +26,12 @@ const starterTemplateCopy: Record<Locale, { title: string; description: string }
   },
 };
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale; templateId: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: Locale; templateId: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = starterTemplateCopy[locale];
   return buildSeoMetadata({
@@ -43,11 +44,12 @@ export function generateMetadata({
   });
 }
 
-export default async function BuilderStarterTemplateDetailPage({
-  params,
-}: {
-  params: { locale: Locale; templateId: string };
-}) {
+export default async function BuilderStarterTemplateDetailPage(
+  props: {
+    params: Promise<{ locale: Locale; templateId: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const templateId = decodeBuilderStarterTemplateParam(params.templateId);
 

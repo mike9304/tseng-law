@@ -12,16 +12,18 @@ function getLightboxAdminMetadata(locale: Locale): Metadata {
   };
 }
 
-export default async function LightboxAdminListPage({
-  params,
-}: {
-  params: { locale: Locale };
-}) {
+export default async function LightboxAdminListPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const lightboxes = await listLightboxes('default', locale);
   return <LightboxListView locale={locale} initialLightboxes={lightboxes} />;
 }
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   return getLightboxAdminMetadata(normalizeLocale(params.locale));
 }

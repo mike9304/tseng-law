@@ -37,9 +37,12 @@ describe('/llms.txt', () => {
     const body = await response.text();
 
     expect(body).toContain('## 주요 페이지');
-    expect(body).toContain('/ko/services');
-    expect(body).toContain('/ko/contact');
-    expect(body).toContain('/ko/columns');
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja']) {
+      expect(body).toContain(`/${locale}/services`);
+      expect(body).toContain(`/${locale}/lawyers/wei-tseng`);
+      expect(body).toContain(`/${locale}/columns`);
+      expect(body).toContain(`/${locale}/contact`);
+    }
   });
 
   it('includes the languages and contact sections', async () => {
@@ -48,7 +51,19 @@ describe('/llms.txt', () => {
 
     expect(body).toContain('## 언어');
     expect(body).toContain('## 연락처');
-    expect(body).toContain('wei@hoveringlaw.com.tw');
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja']) {
+      expect(body).toMatch(new RegExp(`https://[^/\\s]+/${locale}(?:\\s|\\))`));
+    }
+    expect(body).toContain('공식 상담 이메일: wei@hoveringlaw.com.tw');
+    expect(body).toContain(
+      '상담 신청: [증준외 대만 변호사 이메일 상담](mailto:wei@hoveringlaw.com.tw?subject=',
+    );
+    expect(body).toContain(
+      encodeURIComponent('[tseng-law.com 상담문의] 대만 법률 및 기업 업무 상담'),
+    );
+    expect(body).not.toContain('+82-10-2992-9304');
+    expect(body).not.toContain('- 전화:');
+    expect(body).not.toMatch(/kakao|line\.me|lin\.ee/i);
   });
 
   it('uses the canonical attorney identity', async () => {

@@ -34,7 +34,7 @@ function errorResponse(
 }
 
 export async function POST(request: NextRequest) {
-  const auth = await guardMutation(request, { bucket: 'publish' });
+  const auth = await guardMutation(request, { bucket: 'publish', permission: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeBuilderHomeLocale(request.nextUrl.searchParams.get('locale'));

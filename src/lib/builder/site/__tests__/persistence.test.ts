@@ -55,6 +55,7 @@ import {
   deletePageCanvasRecord,
   mergeLatestPagePublishMetaForWrite,
   mergeUntouchedPageSeoForWrite,
+  publishPage as publishSeedPage,
   readFooterCanvas,
   readHeaderCanvas,
   readLightboxCanvas,
@@ -76,7 +77,10 @@ import {
   createPageCanvasVersionedStore,
   pageCanvasCasKey,
 } from '@/lib/builder/site/page-canvas-versioned-store';
-import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import {
+  createDefaultCanvasNodeStyle,
+  type BuilderCanvasDocument,
+} from '@/lib/builder/canvas/types';
 import type { BuilderInstalledApp, BuilderUninstalledAppArchive } from '@/lib/builder/apps/types';
 import type { BuilderNavItem, BuilderPageMeta, BuilderSiteDocument, SiteRedirect } from '@/lib/builder/site/types';
 import { SiteInvariantError } from '@/lib/builder/site/site-invariants';
@@ -1456,6 +1460,30 @@ describe('writeSiteDocument invariant boundary', () => {
     });
   });
 
+  it('serves many concurrent public site reads from one complete snapshot', async () => {
+    const siteId = 'concurrent-public-site-reads';
+    const document = persistedSite(siteId);
+    document.name = 'Concurrent public read sentinel';
+    const dir = path.join(tempRoot, siteId);
+    await mkdir(dir, { recursive: true });
+    await writeFile(path.join(dir, 'site.json'), JSON.stringify(document), 'utf8');
+
+    const snapshots = await Promise.all(
+      Array.from({ length: 128 }, () => readSiteDocument(siteId, 'ko')),
+    );
+
+    expect(snapshots).toHaveLength(128);
+    for (const snapshot of snapshots) {
+      expect(snapshot).toMatchObject({
+        siteId,
+        name: 'Concurrent public read sentinel',
+      });
+      expect(snapshot.pages.map((page) => page.pageId))
+        .toEqual(document.pages.map((page) => page.pageId));
+    }
+    await expect(readdir(dir)).resolves.toEqual(['site.json']);
+  });
+
   it('propagates malformed JSON and local I/O errors instead of treating them as absence', async () => {
     const malformedDir = path.join(tempRoot, 'malformed-local');
     await mkdir(malformedDir, { recursive: true });
@@ -1959,5 +1987,77 @@ describe('strict mutation site identity boundary', () => {
     });
     await expect(readFile(path.join(tempRoot, customSiteId, 'site.json'), 'utf8'))
       .resolves.toContain(`\"siteId\":\"${customSiteId}\"`);
+  });
+
+  it('blocks the seed publish helper before a canonical published write', async () => {
+    const canonicalSite = validSite(DEFAULT_BUILDER_SITE_ID);
+    const disabledChannelCanvas = {
+      ...canvas,
+      nodes: [
+        {
+          id: 'disabled-channel-cta',
+          kind: 'button' as const,
+          rect: { x: 0, y: 0, width: 320, height: 52 },
+          style: createDefaultCanvasNodeStyle(),
+          zIndex: 1,
+          rotation: 0,
+          locked: false,
+          visible: true,
+          content: {
+            label: 'LINE 상담',
+            href: 'https://line.me/R/ti/p/example',
+            style: 'primary' as const,
+          },
+        },
+      ],
+    } satisfies BuilderCanvasDocument;
+    await writeSiteDocument(canonicalSite);
+    await writePageCanvas(DEFAULT_BUILDER_SITE_ID, 'home-ko', 'draft', disabledChannelCanvas);
+
+    await expect(publishSeedPage(
+      DEFAULT_BUILDER_SITE_ID,
+      'home-ko',
+      'ko',
+    )).resolves.toBe(false);
+    await expect(readPageCanvas(
+      DEFAULT_BUILDER_SITE_ID,
+      'home-ko',
+      'published',
+    )).resolves.toBeNull();
+    await expect(readSiteDocument(DEFAULT_BUILDER_SITE_ID, 'ko')).resolves.toMatchObject({
+      pages: [expect.not.objectContaining({ publishedAt: expect.any(String) })],
+    });
+  });
+
+  it('keeps the seed publish helper available to an isolated customer site', async () => {
+    const customSiteId = 'customer-channel-site';
+    const customSite = validSite(customSiteId);
+    const customCanvas = {
+      ...canvas,
+      nodes: [
+        {
+          id: 'customer-line-cta',
+          kind: 'button' as const,
+          rect: { x: 0, y: 0, width: 320, height: 52 },
+          style: createDefaultCanvasNodeStyle(),
+          zIndex: 1,
+          rotation: 0,
+          locked: false,
+          visible: true,
+          content: {
+            label: 'LINE consultation',
+            href: 'https://line.me/R/ti/p/example',
+            style: 'primary' as const,
+          },
+        },
+      ],
+    } satisfies BuilderCanvasDocument;
+    await writeSiteDocument(customSite);
+    await writePageCanvas(customSiteId, 'home-ko', 'draft', customCanvas);
+
+    await expect(publishSeedPage(customSiteId, 'home-ko', 'ko')).resolves.toBe(true);
+    await expect(readPageCanvas(customSiteId, 'home-ko', 'published')).resolves.toMatchObject({
+      nodes: [expect.objectContaining({ id: 'customer-line-cta' })],
+    });
   });
 });

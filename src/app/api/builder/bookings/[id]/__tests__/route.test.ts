@@ -40,8 +40,8 @@ vi.mock('@/lib/builder/bookings/notifications', () => ({
 }));
 
 vi.mock('@/lib/builder/bookings/slot-lock', () => ({
-  acquireSlotLock: vi.fn(() => true),
-  releaseSlotLock: vi.fn(() => undefined),
+  acquireSlotLock: vi.fn(async () => ({ ownerToken: 'test-lease', keys: [], expiresAt: 9_999_999 })),
+  releaseSlotLock: vi.fn(async () => undefined),
 }));
 
 vi.mock('@/lib/builder/bookings/packages', () => ({
@@ -127,7 +127,7 @@ describe('/api/builder/bookings/[id]', () => {
   it('returns localized not-found errors for missing bookings', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ status: 'cancelled' }, 'en'), {
-      params: { id: 'bk-route-test' },
+      params: Promise.resolve({ id: 'bk-route-test' }),
     });
     const payload = await response.json();
 
@@ -143,7 +143,7 @@ describe('/api/builder/bookings/[id]', () => {
     vi.mocked(getBooking).mockResolvedValueOnce(booking());
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ status: 'invalid-status' }, 'zh-hant'), {
-      params: { id: 'bk-route-test' },
+      params: Promise.resolve({ id: 'bk-route-test' }),
     });
     const payload = await response.json();
 
@@ -158,7 +158,7 @@ describe('/api/builder/bookings/[id]', () => {
     vi.mocked(getBooking).mockResolvedValueOnce(booking());
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ status: 'confirmed' }, 'ko'), {
-      params: { id: 'bk-route-test' },
+      params: Promise.resolve({ id: 'bk-route-test' }),
     });
     const payload = await response.json();
 
@@ -174,10 +174,10 @@ describe('/api/builder/bookings/[id]', () => {
     vi.mocked(getBooking).mockResolvedValueOnce(booking());
     vi.mocked(getService).mockResolvedValueOnce(service());
     vi.mocked(getStaff).mockResolvedValueOnce(staff());
-    vi.mocked(acquireSlotLock).mockReturnValueOnce(false);
+    vi.mocked(acquireSlotLock).mockResolvedValueOnce(null);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ startAt: '2099-01-05T02:00:00.000Z' }, 'ko'), {
-      params: { id: 'bk-route-test' },
+      params: Promise.resolve({ id: 'bk-route-test' }),
     });
     const payload = await response.json();
 
@@ -196,7 +196,7 @@ describe('/api/builder/bookings/[id]', () => {
     vi.mocked(isSlotAvailable).mockResolvedValueOnce(false);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ startAt: '2099-01-05T02:00:00.000Z' }, 'zh-hant'), {
-      params: { id: 'bk-route-test' },
+      params: Promise.resolve({ id: 'bk-route-test' }),
     });
     const payload = await response.json();
 
@@ -216,7 +216,7 @@ describe('/api/builder/bookings/[id]', () => {
     vi.mocked(getStaff).mockResolvedValueOnce(staff());
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ status: 'cancelled', cancellationReason: 'Client request' }, 'en'), {
-      params: { id: 'bk-route-test' },
+      params: Promise.resolve({ id: 'bk-route-test' }),
     });
     const payload = await response.json();
 
@@ -250,7 +250,7 @@ describe('/api/builder/bookings/[id]', () => {
 
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ status: 'cancelled' }, 'en'), {
-      params: { id: 'bk-route-test' },
+      params: Promise.resolve({ id: 'bk-route-test' }),
     });
     const payload = await response.json();
 
@@ -268,7 +268,7 @@ describe('/api/builder/bookings/[id]', () => {
 
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ status: 'cancelled' }, 'en'), {
-      params: { id: 'bk-route-test' },
+      params: Promise.resolve({ id: 'bk-route-test' }),
     });
     const payload = await response.json();
 

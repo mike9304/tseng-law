@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { z } from 'zod';
 import { normalizeLocale } from '@/lib/locales';
 import { saveConsultationLead } from '@/lib/consultation/db';
 import {
@@ -9,9 +10,52 @@ import { getConsultationPublicEmail } from '@/lib/consultation/public-contact';
 import { checkSubmitRateLimit } from '@/lib/consultation/rate-limit';
 import { hasAlreadySubmitted, markSubmitted } from '@/lib/consultation/idempotency';
 import { sendConsultationEmail } from '@/lib/email/send-consultation-email';
-import type { ConsultationSubmitRequestBody } from '@/lib/consultation/types';
+import { validateCsrf } from '@/lib/builder/security/csrf';
+import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 
 export const runtime = 'nodejs';
+
+const RATE_LIMIT_WINDOW_MS = 5 * 60_000;
+const consultationCategorySchema = z.enum([
+  'company_setup',
+  'traffic_accident',
+  'criminal_investigation',
+  'labor',
+  'divorce_family',
+  'inheritance',
+  'logistics',
+  'cosmetics',
+  'general',
+  'unknown',
+]);
+const boundedOptionalText = (max: number) => z.string().trim().max(max).optional();
+const collectedFieldsSchema = z.object({
+  name: boundedOptionalText(120),
+  email: z.string().trim().email().max(254),
+  phoneOrMessenger: boundedOptionalText(120),
+  category: consultationCategorySchema.optional(),
+  urgency: boundedOptionalText(40),
+  summary: boundedOptionalText(10_000),
+  preferredContact: boundedOptionalText(80),
+  companyOrOrganization: boundedOptionalText(200),
+  countryOrResidence: boundedOptionalText(120),
+  preferredTime: boundedOptionalText(200),
+  hasDocuments: boundedOptionalText(2_000),
+  consent: z.boolean().optional(),
+}).strict();
+const consultationSubmitSchema = z.object({
+  locale: z.enum(['ko', 'zh-hant', 'en']).optional(),
+  sessionId: z.string().trim().min(1).max(120),
+  collectedFields: collectedFieldsSchema,
+  transcript: z.array(z.object({
+    role: z.enum(['user', 'assistant']),
+    text: z.string().max(4_000),
+    timestamp: z.string().max(80).optional(),
+  }).strict()).max(30).default([]),
+  classification: consultationCategorySchema.optional(),
+  riskLevel: z.enum(['L1', 'L2', 'L3', 'L4']).optional(),
+  referencedColumns: z.array(z.string().trim().min(1).max(500)).max(20).default([]),
+}).strict();
 
 function badRequest(message: string) {
   return NextResponse.json({ success: false, error: message }, { status: 400 });
@@ -20,35 +64,57 @@ function badRequest(message: string) {
 function buildSubmitFallbackMessage(locale: ReturnType<typeof normalizeLocale>): string {
   const email = getConsultationPublicEmail();
   if (locale === 'ko') {
-    return `지금은 자동 접수가 완료되지 않았습니다. KakaoTalk, 전화 또는 ${email}로 직접 문의해 주세요.`;
+    return `지금은 자동 접수가 완료되지 않았습니다. 이메일 ${email}로 직접 문의해 주세요.`;
   }
 
   if (locale === 'zh-hant') {
-    return `目前自動送件未完成，請改用 KakaoTalk、電話，或直接寄信至 ${email}。`;
+    return `目前自動送件未完成，請直接寄信至 ${email}。`;
   }
 
-  return `Automatic intake is unavailable right now. Please use KakaoTalk, phone, or email ${email} directly.`;
+  return `Automatic intake is unavailable right now. Please email ${email} directly.`;
 }
 
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const userAgent = request.headers.get('user-agent');
   const ipHeader = request.headers.get('x-forwarded-for');
+  const ipAddress = ipHeader?.split(',')[0]?.trim()
+    || request.headers.get('x-real-ip')
+    || 'unknown';
 
-  let body: ConsultationSubmitRequestBody;
-
+  let raw: unknown;
   try {
-    body = (await request.json()) as ConsultationSubmitRequestBody;
+    raw = await request.json();
   } catch {
     return badRequest('Invalid JSON body.');
   }
 
-  const locale = normalizeLocale(body.locale);
-  const sessionId = body.sessionId?.trim() || '';
-  const fields = body.collectedFields ?? {};
-  const transcript = body.transcript ?? [];
+  const parsed = consultationSubmitSchema.safeParse(raw);
+  if (!parsed.success) {
+    return badRequest('Consultation submission is invalid or too long.');
+  }
 
-  if (!sessionId || sessionId.length > 120) {
-    return badRequest('A valid sessionId is required.');
+  const body = parsed.data;
+  const locale = normalizeLocale(body.locale);
+  const sessionId = body.sessionId;
+  const fields = body.collectedFields;
+  const transcript = body.transcript;
+
+  const [ipRateCheck, sessionRateCheck] = await Promise.all([
+    checkRateLimit(`consultation-submit:ip:${ipAddress}`, 10, RATE_LIMIT_WINDOW_MS),
+    checkRateLimit(`consultation-submit:session:${sessionId}`, 3, RATE_LIMIT_WINDOW_MS),
+  ]);
+  if (!ipRateCheck.allowed || !sessionRateCheck.allowed) {
+    const retryAfterMs = Math.max(ipRateCheck.retryAfterMs, sessionRateCheck.retryAfterMs);
+    return NextResponse.json(
+      { success: false, error: 'Submission limit reached. Please wait before resubmitting.' },
+      {
+        status: 429,
+        headers: { 'Retry-After': String(Math.max(1, Math.ceil(retryAfterMs / 1000))) },
+      },
+    );
   }
 
   // Record every submission attempt at the earliest point we have a valid sessionId.
@@ -121,16 +187,6 @@ export async function POST(request: NextRequest) {
   if (!fields.summary?.trim()) {
     return badRequest('Summary is required.');
   }
-  if (!fields.email?.trim() && !fields.phoneOrMessenger?.trim()) {
-    return badRequest('At least one contact method is required.');
-  }
-  if (fields.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) {
-    return badRequest('Email format is invalid.');
-  }
-  if (transcript.length > 30) {
-    return badRequest('Transcript is too long.');
-  }
-
   // All validation passed; mark the funnel stage before expensive I/O (email send).
   logConsultationFunnelEvent({
     funnelStage: 'submit_validated',

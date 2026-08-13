@@ -1,10 +1,18 @@
 // Verified contact-channel SSOT for public contact UI + AI consultation fallback.
 
 import type { SiteLocale } from '@/lib/locales';
+import {
+  getConsultationPublicEmail,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 
-const KAKAO_CHANNEL_URL = 'https://pf.kakao.com/_hojeong/chat';
-const PRIMARY_PHONE = '+82-10-2992-9304';
-const PRIMARY_EMAIL = 'wei@hoveringlaw.com.tw';
+const PRIMARY_EMAIL = getConsultationPublicEmail();
+const CONSULTATION_MAILTO = {
+  ko: getConsultationPublicMailto('ko'),
+  'zh-hant': getConsultationPublicMailto('zh-hant'),
+  en: getConsultationPublicMailto('en'),
+  ja: getConsultationPublicMailto('ja'),
+} as const;
 
 type MessengerChannel = {
   href: string;
@@ -20,92 +28,76 @@ type DirectChannel = {
 
 type LocaleContent = {
   messenger: {
-    primary: MessengerChannel;
+    primary: MessengerChannel | null;
   };
   direct: {
     email: DirectChannel;
-    phone: DirectChannel;
-  };
-  offices: {
-    offices: Array<{ phone: string }>;
   };
 };
 
 export const contactPageContent: Record<SiteLocale, LocaleContent> = {
   ko: {
     messenger: {
-      primary: { href: KAKAO_CHANNEL_URL, platform: 'KakaoTalk', label: '카카오톡 채널 상담' },
+      primary: {
+        href: CONSULTATION_MAILTO.ko,
+        platform: 'Email',
+        label: '이메일 상담 신청',
+      },
     },
     direct: {
       email: {
         label: '이메일',
         value: PRIMARY_EMAIL,
-        href: `mailto:${PRIMARY_EMAIL}`,
-      },
-      phone: {
-        label: '전화',
-        value: PRIMARY_PHONE,
-        href: `tel:${PRIMARY_PHONE.replace(/[^\d+]/g, '')}`,
+        href: CONSULTATION_MAILTO.ko,
       },
     },
-    offices: { offices: [{ phone: PRIMARY_PHONE }] },
   },
   'zh-hant': {
     messenger: {
-      primary: { href: KAKAO_CHANNEL_URL, platform: 'KakaoTalk', label: 'KakaoTalk 頻道諮詢' },
+      primary: {
+        href: CONSULTATION_MAILTO['zh-hant'],
+        platform: 'Email',
+        label: '電子郵件諮詢',
+      },
     },
     direct: {
       email: {
         label: '電子郵件',
         value: PRIMARY_EMAIL,
-        href: `mailto:${PRIMARY_EMAIL}`,
-      },
-      phone: {
-        label: '電話',
-        value: PRIMARY_PHONE,
-        href: `tel:${PRIMARY_PHONE.replace(/[^\d+]/g, '')}`,
+        href: CONSULTATION_MAILTO['zh-hant'],
       },
     },
-    offices: { offices: [{ phone: PRIMARY_PHONE }] },
   },
   en: {
     messenger: {
-      primary: { href: KAKAO_CHANNEL_URL, platform: 'KakaoTalk', label: 'KakaoTalk channel' },
+      primary: {
+        href: CONSULTATION_MAILTO.en,
+        platform: 'Email',
+        label: 'Email consultation',
+      },
     },
     direct: {
       email: {
         label: 'Email',
         value: PRIMARY_EMAIL,
-        href: `mailto:${PRIMARY_EMAIL}`,
-      },
-      phone: {
-        label: 'Phone',
-        value: PRIMARY_PHONE,
-        href: `tel:${PRIMARY_PHONE.replace(/[^\d+]/g, '')}`,
+        href: CONSULTATION_MAILTO.en,
       },
     },
-    offices: { offices: [{ phone: PRIMARY_PHONE }] },
   },
   ja: {
     messenger: {
       primary: {
-        href: KAKAO_CHANNEL_URL,
-        platform: 'KakaoTalk',
-        label: 'KakaoTalkチャンネルでお問い合わせ',
+        href: CONSULTATION_MAILTO.ja,
+        platform: 'Email',
+        label: 'メールでお問い合わせ',
       },
     },
     direct: {
       email: {
         label: 'メール',
         value: PRIMARY_EMAIL,
-        href: `mailto:${PRIMARY_EMAIL}`,
-      },
-      phone: {
-        label: '電話',
-        value: PRIMARY_PHONE,
-        href: `tel:${PRIMARY_PHONE.replace(/[^\d+]/g, '')}`,
+        href: CONSULTATION_MAILTO.ja,
       },
     },
-    offices: { offices: [{ phone: PRIMARY_PHONE }] },
   },
 };

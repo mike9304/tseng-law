@@ -4,16 +4,25 @@ import { z } from 'zod';
 import {
   loadFormSchema,
   saveSubmission,
+  validateFormFileForField,
   validateSubmission,
+  isSafeFormStorageSegment,
   type FormField,
   type FormSchema,
   type FormSubmission,
   type FormSubmissionFile,
 } from '@/lib/builder/forms/form-engine';
-import { saveFormUpload } from '@/lib/builder/forms/uploads';
+import {
+  normalizeFormUploadAddress,
+  readFormUpload,
+  saveFormUpload,
+  scanFormUpload,
+  verifyFormUploadSignature,
+} from '@/lib/builder/forms/uploads';
 import { recordFailedWebhook } from '@/lib/builder/forms/webhook-retry';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { reasonUrlUnsafe } from '@/lib/builder/webhooks/url-guard';
 import { isLinkSafe } from '@/lib/builder/links';
 import {
@@ -24,6 +33,7 @@ import {
 } from '@/lib/builder/cms-editable';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import type { BuilderCmsFieldDefinition } from '@/lib/builder/cms-types';
+import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -31,16 +41,25 @@ export const dynamic = 'force-dynamic';
 // ─── Rate limit (distributed via Upstash, falls back to in-memory) ──
 const RATE_LIMIT_MAX = 5;
 const RATE_LIMIT_WINDOW_MS = 60_000;
+const MAX_SUBMITTED_FIELD_COUNT = 64;
+const MAX_SUBMITTED_FIELD_CHARACTERS = 160_000;
+const DEFAULT_AUTO_REPLY_TEMPLATE = '문의가 접수되었습니다. 곧 연락드리겠습니다.';
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // ─── Body schema ─────────────────────────────────────────────────────
 
 const submitBodySchema = z.object({
-  formId: z.string().trim().min(1).max(120).optional(),
-  formName: z.string().trim().min(1).max(80),
-  submitTo: z.enum(['email', 'webhook', 'storage']).default('storage'),
+  formId: z
+    .string()
+    .trim()
+    .min(1)
+    .max(80)
+    .refine((value) => isSafeFormStorageSegment(value, 80), 'Invalid form id'),
+  formName: z.string().trim().min(1).max(80).optional(),
+  submitTo: z.enum(['email', 'webhook', 'storage']).optional(),
   targetEmail: z.string().email().max(200).optional(),
   webhookUrl: z.string().url().max(2000).optional(),
-  fields: z.record(z.string().max(80), z.string().max(150000)).default({}),
+  fields: z.record(z.string().max(120), z.string().max(150000)).default({}),
   files: z
     .array(
       z.object({
@@ -85,6 +104,29 @@ function makeSubmissionId(): string {
   return `fs-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 }
 
+function isSafeEmail(value: unknown): value is string {
+  return typeof value === 'string'
+    && value.length <= 254
+    && !/[\r\n]/.test(value)
+    && EMAIL_PATTERN.test(value);
+}
+
+function schemaWebhookUrl(schema: FormSchema): string | null {
+  const configured = schema.webhookUrl;
+  return typeof configured === 'string' && configured.length <= 2000 && !reasonUrlUnsafe(configured)
+    ? configured
+    : null;
+}
+
+function schemaAutoReplyTemplate(schema: FormSchema): string | null {
+  if (schema.autoReplyEnabled !== true) return null;
+  const configured = schema.autoReplyTemplate;
+  if (typeof configured !== 'string' || configured.length > 2000) {
+    return DEFAULT_AUTO_REPLY_TEMPLATE;
+  }
+  return configured.trim() || DEFAULT_AUTO_REPLY_TEMPLATE;
+}
+
 async function forwardToWebhook(url: string, payload: unknown): Promise<void> {
   // SSRF guard. This endpoint is anonymous + public; without the guard an
   // attacker can target loopback / RFC1918 / cloud metadata via webhookUrl.
@@ -114,7 +156,11 @@ async function forwardToWebhook(url: string, payload: unknown): Promise<void> {
   }
 }
 
-async function attemptEmail(targetEmail: string, formName: string, fields: Record<string, string>): Promise<void> {
+async function attemptEmail(
+  formName: string,
+  fields: Record<string, string>,
+  replyTo: string | null,
+): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     // Email transport not configured — silently skip; storage already happened.
@@ -125,9 +171,10 @@ async function attemptEmail(targetEmail: string, formName: string, fields: Recor
     .join('\n');
   const body = {
     from: process.env.FORMS_EMAIL_FROM || 'forms@hoveringlaw.com.tw',
-    to: targetEmail,
+    to: CONSULTATION_EMAIL,
     subject: `[Form] ${formName}`,
     html: `<h2>Form: ${escapeHtml(formName)}</h2>${lines}`,
+    ...(replyTo ? { reply_to: replyTo } : {}),
   };
   try {
     const controller = new AbortController();
@@ -173,18 +220,86 @@ async function sendEmail(to: string, subject: string, html: string): Promise<voi
   }
 }
 
-function findReplyEmail(fields: Record<string, string>): string | null {
-  for (const [key, value] of Object.entries(fields)) {
-    if (!/email/i.test(key)) continue;
-    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return value;
+function findDeclaredReplyEmail(schema: FormSchema, fields: Record<string, string>): string | null {
+  for (const field of schema.fields) {
+    if (field.type !== 'email') continue;
+    const value = fields[field.id];
+    if (isSafeEmail(value)) return value;
   }
   return null;
 }
 
-async function verifyCaptcha(provider: 'none' | 'hcaptcha' | 'turnstile' | undefined, token: string | null | undefined): Promise<boolean> {
+function storedSchemaConfigurationError(schema: FormSchema, requestedFormId: string): string | null {
+  if (
+    schema.formId !== requestedFormId
+    || !isSafeFormStorageSegment(schema.formId, 80)
+    || typeof schema.name !== 'string'
+    || schema.name.trim().length === 0
+    || schema.name.length > 200
+    || /[\r\n\u0000-\u001f\u007f]/.test(schema.name)
+    || !Array.isArray(schema.fields)
+    || schema.fields.length > 80
+  ) {
+    return 'Stored form schema is invalid.';
+  }
+
+  const ids = new Set<string>();
+  for (const field of schema.fields) {
+    if (
+      !field
+      || typeof field.id !== 'string'
+      || field.id.length === 0
+      || field.id.length > 120
+      || /[\u0000-\u001f\u007f]/.test(field.id)
+      || ids.has(field.id)
+    ) {
+      return 'Stored form schema is invalid.';
+    }
+    ids.add(field.id);
+  }
+
+  if (schema.webhookUrl !== undefined && !schemaWebhookUrl(schema)) {
+    return 'Stored form webhook configuration is invalid.';
+  }
+  return null;
+}
+
+function submittedFieldsError(
+  schema: FormSchema,
+  fields: Record<string, string>,
+): { fieldId: string; message: string } | null {
+  const entries = Object.entries(fields);
+  if (entries.length > MAX_SUBMITTED_FIELD_COUNT) {
+    return { fieldId: 'fields', message: '제출할 수 있는 필드 수를 초과했습니다.' };
+  }
+
+  let totalCharacters = 0;
+  const declaredFieldIds = new Set(schema.fields.map((field) => field.id));
+  const honeypotFieldName = schema.antiSpam?.honeypotFieldName?.trim();
+  for (const [fieldId, value] of entries) {
+    if (!declaredFieldIds.has(fieldId) && fieldId !== honeypotFieldName) {
+      return { fieldId, message: '이 폼에 정의되지 않은 필드입니다.' };
+    }
+    totalCharacters += value.length;
+    if (totalCharacters > MAX_SUBMITTED_FIELD_CHARACTERS) {
+      return { fieldId: 'fields', message: '제출 내용이 너무 깁니다.' };
+    }
+  }
+  return null;
+}
+
+type CaptchaProvider = 'none' | 'hcaptcha' | 'turnstile';
+
+function storedCaptchaProvider(schema: FormSchema): CaptchaProvider | null {
+  const raw = schema.captcha ?? schema.captchaProvider;
+  if (raw === undefined) return 'none';
+  return raw === 'none' || raw === 'hcaptcha' || raw === 'turnstile' ? raw : null;
+}
+
+async function verifyCaptcha(provider: CaptchaProvider, token: string | null | undefined): Promise<boolean> {
   if (!provider || provider === 'none') return true;
   const secret = provider === 'hcaptcha' ? process.env.HCAPTCHA_SECRET : process.env.TURNSTILE_SECRET;
-  if (!secret) return true;
+  if (!secret?.trim()) return false;
   if (!token) return false;
   const endpoint =
     provider === 'hcaptcha'
@@ -217,24 +332,145 @@ function escapeHtml(input: string): string {
 
 async function materializeDataUrlFields(
   fields: Record<string, string>,
+  schema: FormSchema,
   locale: string | undefined,
 ): Promise<{ fields: Record<string, string>; files: FormSubmissionFile[] }> {
   const nextFields = { ...fields };
   const files: FormSubmissionFile[] = [];
 
   for (const [fieldId, value] of Object.entries(fields)) {
+    if (!/^\s*data:[^,\s]+(?:;[^,\s]+)*,/i.test(value)) continue;
     const parsed = parseImageDataUrl(value);
-    if (!parsed) continue;
+    if (!parsed) {
+      throw new SubmittedFileError(fieldId, '허용되지 않는 data URL입니다.');
+    }
+    const field = schema?.fields.find((candidate) => candidate.id === fieldId);
+    const runtimeType = field ? String(field.type) : '';
+    if (!field || (runtimeType !== 'file' && runtimeType !== 'signature')) {
+      throw new SubmittedFileError(fieldId, '이 필드에는 이미지 data URL을 제출할 수 없습니다.');
+    }
+
     const extension = parsed.contentType === 'image/jpeg' ? 'jpg' : 'png';
     const file = new File([bufferToArrayBuffer(parsed.content)], `${fieldId}-signature.${extension}`, {
       type: parsed.contentType,
     });
+    const fieldError = validateFormFileForField(
+      runtimeType === 'signature' ? { ...field, type: 'file' } : field,
+      file,
+    );
+    if (fieldError) throw new SubmittedFileError(fieldId, fieldError);
+
     const uploaded = await saveFormUpload({ fieldId, file, locale });
     nextFields[fieldId] = uploaded.url ?? uploaded.name;
     files.push(uploaded);
   }
 
   return { fields: nextFields, files };
+}
+
+async function canonicalizeSubmittedFiles(
+  schema: FormSchema,
+  files: FormSubmissionFile[],
+): Promise<FormSubmissionFile[]> {
+  if (files.length === 0) return [];
+
+  const canonical: FormSubmissionFile[] = [];
+  for (const submitted of files) {
+    const field = schema.fields.find((candidate) => candidate.id === submitted.fieldId);
+    if (!field || field.type !== 'file') {
+      throw new SubmittedFileError(submitted.fieldId, '파일을 첨부할 수 없는 필드입니다.');
+    }
+
+    const parsed = parseSignedUploadUrl(submitted.url);
+    if (!parsed) {
+      throw new SubmittedFileError(submitted.fieldId, '유효한 업로드 URL이 아닙니다.');
+    }
+    const upload = await readFormUpload(parsed.address);
+    if (!upload) {
+      throw new SubmittedFileError(submitted.fieldId, '업로드 파일을 찾을 수 없습니다.');
+    }
+
+    const extensionIndex = parsed.address.filename.lastIndexOf('.');
+    const extension = extensionIndex >= 0
+      ? parsed.address.filename.slice(extensionIndex).toLowerCase()
+      : '';
+    const scan = scanFormUpload({
+      content: upload.content,
+      contentType: upload.contentType,
+      extension,
+      filename: parsed.address.filename,
+    });
+    if (!scan.ok) throw new SubmittedFileError(submitted.fieldId, scan.error);
+
+    const verified: FormSubmissionFile = {
+      fieldId: field.id,
+      url: parsed.url,
+      name: parsed.address.filename,
+      size: upload.content.byteLength,
+      type: upload.contentType,
+      scan: scan.result,
+    };
+    const fieldError = validateFormFileForField(field, verified);
+    if (fieldError) throw new SubmittedFileError(field.id, fieldError);
+    canonical.push(verified);
+  }
+  return canonical;
+}
+
+function parseSignedUploadUrl(value: string | undefined): {
+  address: { locale: string; filename: string };
+  url: string;
+} | null {
+  if (!value || !value.startsWith('/')) return null;
+
+  let parsed: URL;
+  try {
+    parsed = new URL(value, 'https://builder.invalid');
+  } catch {
+    return null;
+  }
+  if (parsed.origin !== 'https://builder.invalid' || parsed.hash) return null;
+
+  const match = /^\/api\/forms\/uploads\/([^/]+)\/([^/]+)$/.exec(parsed.pathname);
+  if (!match) return null;
+  let locale: string;
+  let filename: string;
+  try {
+    locale = decodeURIComponent(match[1]!);
+    filename = decodeURIComponent(match[2]!);
+  } catch {
+    return null;
+  }
+  const address = normalizeFormUploadAddress(locale, filename);
+  if (!address) return null;
+
+  const expires = parsed.searchParams.get('expires');
+  const signature = parsed.searchParams.get('signature');
+  if (parsed.searchParams.size !== 2 || !verifyFormUploadSignature({
+    ...address,
+    expires,
+    signature,
+  })) {
+    return null;
+  }
+  const query = new URLSearchParams({
+    expires: expires!,
+    signature: signature!,
+  });
+  return {
+    address,
+    url: `/api/forms/uploads/${encodeURIComponent(address.locale)}/${encodeURIComponent(address.filename)}?${query.toString()}`,
+  };
+}
+
+class SubmittedFileError extends Error {
+  constructor(
+    public readonly fieldId: string,
+    message: string,
+  ) {
+    super(message);
+    this.name = 'SubmittedFileError';
+  }
 }
 
 function bufferToArrayBuffer(buffer: Buffer): ArrayBuffer {
@@ -268,7 +504,7 @@ class FormCmsWriteError extends Error {
 }
 
 async function writeSubmissionToCms(
-  schema: FormSchema | null,
+  schema: FormSchema,
   fields: Record<string, string>,
   files: FormSubmissionFile[],
   locale: string | undefined,
@@ -424,7 +660,7 @@ function cmsWriteErrorResponse(error: unknown): NextResponse | null {
 }
 
 function antiSpamResponse(
-  schema: FormSchema | null,
+  schema: FormSchema,
   body: z.infer<typeof submitBodySchema>,
   fields: Record<string, string>,
 ): NextResponse | null {
@@ -453,12 +689,12 @@ function antiSpamResponse(
 }
 
 async function duplicateSubmissionResponse(
-  schema: FormSchema | null,
+  schema: FormSchema,
   fields: Record<string, string>,
 ): Promise<NextResponse | null> {
   const duplicateWindowMs = schema?.antiSpam?.duplicateWindowMs;
   const duplicateFields = schema?.antiSpam?.duplicateFields?.filter(Boolean) ?? [];
-  if (!schema || !duplicateWindowMs || duplicateWindowMs <= 0 || duplicateFields.length === 0) {
+  if (!duplicateWindowMs || duplicateWindowMs <= 0 || duplicateFields.length === 0) {
     return null;
   }
 
@@ -487,6 +723,9 @@ async function duplicateSubmissionResponse(
 // ─── POST handler ────────────────────────────────────────────────────
 
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const ip = getClientIp(request);
   const rate = await checkRateLimit(`forms-submit:${ip}`, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS);
   if (!rate.allowed) {
@@ -518,6 +757,21 @@ export async function POST(request: NextRequest) {
   }
 
   const body = parsed.data;
+  const schema = await loadFormSchema(body.formId);
+  if (!schema) {
+    return NextResponse.json({ error: 'Form not found.' }, { status: 404 });
+  }
+  const schemaConfigurationError = storedSchemaConfigurationError(schema, body.formId);
+  if (schemaConfigurationError) {
+    return NextResponse.json({ error: schemaConfigurationError }, { status: 500 });
+  }
+  const fieldsError = submittedFieldsError(schema, body.fields);
+  if (fieldsError) {
+    return NextResponse.json(
+      { error: '입력값을 확인해 주세요.', validationErrors: [fieldsError] },
+      { status: 400 },
+    );
+  }
 
   // Time-trap: reject if submitted within 3s of load (likely bot).
   if (typeof body.loadedAt === 'number' && typeof body.submittedAt === 'number') {
@@ -527,28 +781,43 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  const captchaOk = await verifyCaptcha(body.captchaProvider, body.captchaToken);
+  const captchaProvider = storedCaptchaProvider(schema);
+  if (!captchaProvider) {
+    return NextResponse.json({ error: 'Captcha configuration is invalid.' }, { status: 500 });
+  }
+  const captchaOk = await verifyCaptcha(captchaProvider, body.captchaToken);
   if (!captchaOk) {
     return NextResponse.json({ error: 'Captcha verification failed.' }, { status: 400 });
   }
 
-  const materialized = await materializeDataUrlFields(body.fields, body.locale);
-  const fields = materialized.fields;
-  const files = [...body.files, ...materialized.files];
-
-  const schema = body.formId
-    ? await loadFormSchema(body.formId)
-    : await loadFormSchema(body.formName);
-  const spamResponse = antiSpamResponse(schema, body, fields);
-  if (spamResponse) return spamResponse;
-  if (schema) {
-    const validationErrors = validateSubmission(schema, fields, { files });
-    if (validationErrors.length > 0) {
+  let fields: Record<string, string>;
+  let files: FormSubmissionFile[];
+  try {
+    const submittedFiles = await canonicalizeSubmittedFiles(schema, body.files);
+    const materialized = await materializeDataUrlFields(body.fields, schema, body.locale);
+    fields = materialized.fields;
+    files = [...submittedFiles, ...materialized.files];
+  } catch (error) {
+    if (error instanceof SubmittedFileError) {
       return NextResponse.json(
-        { error: '입력값을 확인해 주세요.', validationErrors },
+        {
+          error: '파일 제출을 확인해 주세요.',
+          validationErrors: [{ fieldId: error.fieldId, message: error.message }],
+        },
         { status: 400 },
       );
     }
+    throw error;
+  }
+
+  const spamResponse = antiSpamResponse(schema, body, fields);
+  if (spamResponse) return spamResponse;
+  const validationErrors = validateSubmission(schema, fields, { files });
+  if (validationErrors.length > 0) {
+    return NextResponse.json(
+      { error: '입력값을 확인해 주세요.', validationErrors },
+      { status: 400 },
+    );
   }
   const duplicateResponse = await duplicateSubmissionResponse(schema, fields);
   if (duplicateResponse) return duplicateResponse;
@@ -556,7 +825,8 @@ export async function POST(request: NextRequest) {
   const submissionId = makeSubmissionId();
   const submission: FormSubmission = {
     submissionId,
-    formId: body.formId ?? body.formName,
+    formId: schema.formId,
+    formName: schema.name,
     data: { ...fields, _pageSlug: body.pageSlug, _locale: body.locale },
     files: files.length > 0 ? files : undefined,
     submittedAt: new Date().toISOString(),
@@ -587,32 +857,35 @@ export async function POST(request: NextRequest) {
   emitEvent('form.submitted', {
     submissionId: submission.submissionId,
     formId: submission.formId,
+    formName: schema.name,
     submittedAt: submission.submittedAt,
     fields: submission.data,
     files: submission.files,
     cmsRecordId: cmsRecordId ?? undefined,
   });
 
-  // Routing
-  if (body.submitTo === 'email' && body.targetEmail) {
-    await attemptEmail(body.targetEmail, body.formName, fields);
+  // Delivery is derived exclusively from the stored schema. Public routing
+  // flags are accepted for backwards compatibility but never trusted.
+  const replyEmail = findDeclaredReplyEmail(schema, fields);
+  if (typeof schema.notifyEmail === 'string' && schema.notifyEmail.trim()) {
+    await attemptEmail(schema.name, fields, replyEmail);
   }
-  if (body.submitTo === 'webhook' && body.webhookUrl) {
-    await forwardToWebhook(body.webhookUrl, {
-      formName: body.formName,
+  const webhookUrl = schemaWebhookUrl(schema);
+  if (webhookUrl) {
+    await forwardToWebhook(webhookUrl, {
+      formName: schema.name,
       fields,
       files,
       submittedAt: submission.submittedAt,
     });
   }
-  if (body.autoReplyEnabled) {
-    const replyEmail = findReplyEmail(fields);
+  const autoReplyTemplate = schemaAutoReplyTemplate(schema);
+  if (autoReplyTemplate) {
     if (replyEmail) {
-      const template = body.autoReplyTemplate?.trim() || '문의가 접수되었습니다. 곧 연락드리겠습니다.';
       await sendEmail(
         replyEmail,
-        `[${body.formName}] 접수 확인`,
-        `<p>${escapeHtml(template).replace(/\n/g, '<br />')}</p>`,
+        `[${schema.name}] 접수 확인`,
+        `<p>${escapeHtml(autoReplyTemplate).replace(/\n/g, '<br />')}</p>`,
       );
     }
   }

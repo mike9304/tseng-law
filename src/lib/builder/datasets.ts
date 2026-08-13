@@ -1,4 +1,4 @@
-import type { ColumnPost } from '@/lib/columns';
+import type { ColumnPost } from '@/lib/column-post';
 import {
   attorneyProfiles,
   getAttorneyProfileSlugs,

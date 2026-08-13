@@ -167,7 +167,7 @@ const expectedFaqQuestions = {
     '台灣法院以何種標準判斷未成年子女相關事項？',
   ],
   en: [
-    'What makes a Taiwan mutual-consent divorce effective?',
+    'Does signing a divorce agreement make a mutual-consent divorce in Taiwan immediately effective?',
     'Must both spouses always appear together in court mediation?',
     'Can the spouse responsible for marital breakdown petition for judicial divorce?',
     'Does paying for a house or holding title decide ownership and residual-property distribution?',
@@ -175,11 +175,11 @@ const expectedFaqQuestions = {
     'How does a Taiwan court decide issues concerning a minor child?',
   ],
   ja: [
-    '台湾の協議離婚が効力を生じるには、何が必要ですか？',
+    '台湾の協議離婚は、合意書に署名すれば直ちに効力が生じますか？',
     '裁判所の調停では、必ず双方が同じ場に出頭しなければなりませんか？',
     '婚姻破綻について有責な配偶者は、裁判離婚を請求できますか？',
     '住宅の購入資金を負担したことや登記名義だけで、所有権や夫婦残余財産差額分配は決まりますか？',
-    '夫婦残余財産差額分配、離婚に伴う損害賠償、離婚後の扶養は同じ請求であり、いずれも5年で時効になりますか？',
+    '夫婦残余財産差額分配、離婚に伴う損害賠償、配偶者扶養および養育費は同じ請求ですか？',
     '台湾の裁判所は、未成年の子に関する事項をどのように判断しますか？',
   ],
 } as const;
@@ -369,7 +369,7 @@ describe('column 007 public reference synchronization', () => {
   it('emits exact generateMetadata title, canonical, and four-language alternates for all locales', async () => {
     for (const locale of siteLocales) {
       const metadata = await generateMetadata({
-        params: { locale, slug },
+        params: Promise.resolve({ locale, slug }),
       });
 
       expect(metadata.title, locale).toBe(expectedTitles[locale]);
@@ -381,7 +381,7 @@ describe('column 007 public reference synchronization', () => {
 
     for (const locale of siteLocales) {
       const aliasMetadata = await generateMetadata({
-        params: { locale, slug: aliasSlug },
+        params: Promise.resolve({ locale, slug: aliasSlug }),
       });
 
       expect(aliasMetadata.title, locale).toBe(expectedTitles[locale]);

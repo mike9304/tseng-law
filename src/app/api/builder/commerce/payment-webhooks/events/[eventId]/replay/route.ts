@@ -21,11 +21,9 @@ function errorResponse(
   );
 }
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { eventId: string } },
-) {
-  const auth = await guardMutation(request, { permission: 'settings' });
+export async function POST(request: NextRequest, props: { params: Promise<{ eventId: string }> }) {
+  const params = await props.params;
+  const auth = await guardMutation(request, { permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);

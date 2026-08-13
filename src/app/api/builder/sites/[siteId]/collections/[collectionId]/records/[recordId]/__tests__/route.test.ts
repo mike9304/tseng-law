@@ -124,7 +124,7 @@ describe('/api/builder/sites/[siteId]/collections/[collectionId]/records/[record
           fields: { title: 'Original article', slug: 'updated-article' },
         }),
       }),
-      { params: { siteId: 'default', collectionId: 'articles', recordId: created!.recordId } },
+      { params: Promise.resolve({ siteId: 'default', collectionId: 'articles', recordId: created!.recordId }) },
     );
     const data = await response.json() as {
       ok?: boolean;
@@ -181,7 +181,7 @@ describe('/api/builder/sites/[siteId]/collections/[collectionId]/records/[record
       new NextRequest(`https://law.example.test/api/builder/sites/default/collections/articles/records/${created?.recordId}?locale=ko`, {
         method: 'DELETE',
       }),
-      { params: { siteId: 'default', collectionId: 'articles', recordId: created!.recordId } },
+      { params: Promise.resolve({ siteId: 'default', collectionId: 'articles', recordId: created!.recordId }) },
     );
 
     expect(deleteResponse.status).toBe(200);
@@ -199,7 +199,7 @@ describe('/api/builder/sites/[siteId]/collections/[collectionId]/records/[record
       new NextRequest(`https://law.example.test/api/builder/sites/default/collections/articles/records/${created!.recordId}?locale=ko`, {
         method: 'DELETE',
       }),
-      { params: { siteId: 'default', collectionId: 'articles', recordId: created!.recordId } },
+      { params: Promise.resolve({ siteId: 'default', collectionId: 'articles', recordId: created!.recordId }) },
     );
 
     expect(missingResponse.status).toBe(404);

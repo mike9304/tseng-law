@@ -6,13 +6,15 @@ import {
   listRecoveryCarts,
   loadNotificationSettings,
 } from '@/lib/builder/commerce/notifications-engine';
+import { requireBuilderPagePermission } from '@/lib/builder/security/page-permission';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import NotificationManagerClient from '@/components/builder/commerce/NotificationManagerClient';
 import { getNotificationsCopy } from '@/components/builder/commerce/notifications-copy';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = getNotificationsCopy(locale);
   return {
@@ -21,8 +23,10 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default async function CommerceNotificationsPage({ params }: { params: { locale: Locale } }) {
+export default async function CommerceNotificationsPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
+  await requireBuilderPagePermission('view-commerce');
   const site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, locale);
   const [settings, events, recoveries] = await Promise.all([
     loadNotificationSettings(),

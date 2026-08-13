@@ -132,36 +132,42 @@ describe('createServicesDecomposedNodes', () => {
     }
   });
 
-  it('keeps the collapsed services section height tight while preserving editable hidden detail nodes', () => {
+  it('keeps the static six-card services grid compact without accordion-only nodes', () => {
     const nodes = createServicesDecomposedNodes(0, 'ko', 0);
     const root = nodes.find((node) => node.id === 'home-services-root');
     const container = nodes.find((node) => node.id === 'home-services-container');
     const list = nodes.find((node) => node.id === 'home-services-list');
     const lastCard = nodes.find((node) => node.id === 'home-services-card-5');
+    const lastIcon = nodes.find((node) => node.id === 'home-services-card-5-icon');
+    const lastIconSvg = nodes.find((node) => node.id === 'home-services-card-5-icon-svg');
     const lastMore = nodes.find((node) => node.id === 'home-services-card-5-more');
+    const firstToggle = nodes.find((node) => node.id === 'home-services-card-0-toggle');
     const lastChecklist = nodes.find((node) => node.id === 'home-services-card-5-checklist');
 
     expect(root?.rect.height).toBe(SERVICES_SECTION_ROOT_HEIGHT);
-    expect(container?.rect.y).toBe(88);
-    expect(container?.rect.height).toBe(1158);
-    expect(list?.rect.y).toBe(236);
-    expect(list?.rect.height).toBe(912);
-    expect(root?.rect.height).toBe(1246);
-    expect(lastCard?.rect.y).toBe(650);
-    expect(lastCard?.rect.height).toBe(98);
-    expect(lastMore, 'editable service detail button still exists for accordion expansion').toBeDefined();
-    expect(lastChecklist, 'editable service checklist remains available for accordion expansion').toBeDefined();
-    expect(lastMore?.rect.y).toBeLessThanOrEqual(100);
-    expect(container?.rect.height).toBe((list?.rect.y ?? 0) + (list?.rect.height ?? 0) + 10);
-    expect(root?.rect.height).toBe((container?.rect.y ?? 0) + (container?.rect.height ?? 0));
+    expect(container?.rect.y).toBe(72);
+    expect(container?.rect.height).toBe(676);
+    expect(list?.rect.y).toBe(220);
+    expect(list?.rect.height).toBe(456);
+    expect(root?.rect.height).toBe(820);
+    expect(lastCard?.rect).toMatchObject({ x: 772, y: 240, width: 362, height: 216 });
+    expect(lastMore).toBeDefined();
+    expect(firstToggle).toBeUndefined();
+    expect(lastChecklist).toBeUndefined();
+    expect(lastMore?.rect.y).toBe(70);
+    expect(lastIcon?.responsive?.mobile?.rect).toMatchObject({ x: 0, y: 0, width: 46, height: 46 });
+    expect(lastIconSvg?.responsive?.mobile?.rect).toMatchObject({ x: 11, y: 11, width: 24, height: 24 });
+    expect(lastIcon?.responsive?.tablet?.rect).toMatchObject({ x: 0, y: 0, width: 46, height: 46 });
+    expect(lastIconSvg?.responsive?.tablet?.rect).toMatchObject({ x: 11, y: 11, width: 24, height: 24 });
+    expect(container?.rect.height).toBe((list?.rect.y ?? 0) + (list?.rect.height ?? 0));
+    expect(root?.rect.height).toBe((container?.rect.y ?? 0) + (container?.rect.height ?? 0) + 72);
     expect(resolveNodeBottom(nodes, 'home-services-card-5-more')).toBeLessThanOrEqual(root?.rect.height ?? 0);
-    expect(resolveNodeBottom(nodes, 'home-services-card-5-checklist')).toBeLessThanOrEqual(root?.rect.height ?? 0);
 
     const metrics = computeTopLevelFlowSectionMetrics(nodes);
     expect(metrics.get('home-services-root')?.minHeight).toBe(SERVICES_SECTION_ROOT_HEIGHT);
   });
 
-  it('keeps the standard services page seeded to the live desktop height target', () => {
+  it('keeps the standard services page on the same compact static card grid', () => {
     const doc = STANDARD_PAGE_DECOMPOSERS.services('ko');
     const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
     const header = nodesById.get('page-services-page-header-root');
@@ -175,28 +181,30 @@ describe('createServicesDecomposedNodes', () => {
 
     expect(header?.rect.height).toBe(428);
     expect(root?.rect.y).toBe(428);
-    expect(root?.rect.height).toBe(1280);
+    expect(root?.rect.height).toBe(820);
     expect(root?.kind === 'container' ? root.content.className : '').toBe('section section--gray alt');
     expect(container?.rect.x).toBe(51);
-    expect(container?.rect.y).toBe(142);
+    expect(container?.rect.y).toBe(72);
     expect(container?.rect.width).toBe(1178);
-    expect(divider?.rect.y).toBe(202);
+    expect(container?.rect.height).toBe(676);
+    expect(divider?.rect.y).toBe(178);
     expect(divider?.rect.width).toBe(1178);
     expect(dividerMark?.rect.x).toBe(562);
     expect(dividerMark?.rect.width).toBe(54);
-    expect(divider?.responsive?.mobile?.rect).toMatchObject({ x: 0, y: 226, width: 308, height: 12 });
-    expect(dividerMark?.responsive?.mobile?.rect).toMatchObject({ x: 127, y: 0, width: 54, height: 12 });
-    expect(divider?.responsive?.tablet?.rect).toMatchObject({ x: 0, y: 185, width: 675, height: 12 });
-    expect(dividerMark?.responsive?.tablet?.rect).toMatchObject({ x: 310, y: 0, width: 54, height: 12 });
-    expect(list?.rect.y).toBe(222);
+    expect(divider?.responsive?.mobile?.rect).toMatchObject({ x: 0, y: 218, width: 308, height: 24 });
+    expect(dividerMark?.responsive?.mobile?.rect).toMatchObject({ x: 127, y: 6, width: 54, height: 12 });
+    expect(divider?.responsive?.tablet?.rect).toMatchObject({ x: 0, y: 180, width: 675, height: 24 });
+    expect(dividerMark?.responsive?.tablet?.rect).toMatchObject({ x: 310, y: 6, width: 54, height: 12 });
+    expect(list?.rect.y).toBe(220);
     expect(list?.rect.width).toBe(1178);
-    expect(list?.rect.height).toBe(750);
-    expect(lastCard?.rect.y).toBe(650);
-    expect(lastCard?.rect.height).toBe(98);
-    expect(lastMore?.rect.y).toBe(100);
+    expect(list?.rect.height).toBe(456);
+    expect(lastCard?.rect).toMatchObject({ y: 240, height: 216 });
+    expect(lastCard?.rect.x).toBeCloseTo(801.33, 1);
+    expect(lastMore?.rect.y).toBe(70);
+    expect(nodesById.get('home-services-card-0-toggle')).toBeUndefined();
+    expect(nodesById.get('home-services-card-5-checklist')).toBeUndefined();
     expect(resolveNodeBottom(doc.nodes, 'home-services-card-5-more')).toBeLessThanOrEqual(doc.stageHeight);
-    expect(resolveNodeBottom(doc.nodes, 'home-services-card-5-checklist')).toBeLessThanOrEqual(doc.stageHeight);
-    expect(doc.stageHeight).toBe(1708);
+    expect(doc.stageHeight).toBe(1248);
   });
 
   it('does not reset user-edited standard services geometry when geometry reset is blocked', () => {
@@ -238,7 +246,7 @@ describe('createServicesDecomposedNodes', () => {
 
     expect(upgraded).not.toBe(staleSeedDoc);
     expect(card?.rect.y).toBe(0);
-    expect(upgraded.stageHeight).toBe(1708);
+    expect(upgraded.stageHeight).toBe(1248);
     expect(originalCard?.rect.y).toBe(12);
   });
 });

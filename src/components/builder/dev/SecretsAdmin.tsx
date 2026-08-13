@@ -115,7 +115,7 @@ export default function SecretsAdmin({ locale }: SecretsAdminProps) {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [copy.loadFailureLabel, copy.unknownErrorLabel]);
 
   useEffect(() => {
     void fetchSecrets();
@@ -148,7 +148,7 @@ export default function SecretsAdmin({ locale }: SecretsAdminProps) {
     } finally {
       setBusyId(null);
     }
-  }, [fetchSecrets]);
+  }, [copy, fetchSecrets]);
 
   const handleRevoke = useCallback(async (secret: SecretMetadata) => {
     if (!window.confirm(copy.revokeConfirm(secret.key))) return;
@@ -168,7 +168,7 @@ export default function SecretsAdmin({ locale }: SecretsAdminProps) {
     } finally {
       setBusyId(null);
     }
-  }, [fetchSecrets]);
+  }, [copy, fetchSecrets]);
 
   return (
     <div data-builder-secrets-admin="true" style={PANEL_STYLE}>
@@ -297,7 +297,16 @@ function SecretCreateForm({ copy, onCreated, onError }: CreateFormProps) {
     } finally {
       setSubmitting(false);
     }
-  }, [allowedList, key, onCreated, onError, scope, value]);
+  }, [
+    allowedList,
+    copy.createValidationLabel,
+    copy.rowSaveFailure,
+    key,
+    onCreated,
+    onError,
+    scope,
+    value,
+  ]);
 
   return (
     <form onSubmit={handleSubmit} style={CARD_STYLE} data-builder-secrets-create-form="true">

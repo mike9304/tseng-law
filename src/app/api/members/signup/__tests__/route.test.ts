@@ -3,135 +3,114 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   createMember,
   loginMember,
-  MEMBER_SESSION_COOKIE,
   publicMember,
 } from '@/lib/builder/members/members-engine';
+import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { POST } from '../route';
 
 vi.mock('@/lib/builder/members/members-engine', () => ({
   createMember: vi.fn(),
   loginMember: vi.fn(),
-  MEMBER_SESSION_COOKIE: 'builder_member_session',
-  publicMember: vi.fn((member: unknown) => member),
+  publicMember: vi.fn(),
 }));
 
-const member = {
-  memberId: 'member-1',
-  email: 'member@example.com',
-  name: 'Member One',
-  role: 'free',
-  verified: false,
-  blocked: false,
-  createdAt: '2026-06-03T00:00:00.000Z',
-};
+vi.mock('@/lib/builder/security/rate-limit', () => ({
+  checkRateLimit: vi.fn(),
+}));
 
 const createMemberMock = vi.mocked(createMember);
 const loginMemberMock = vi.mocked(loginMember);
 const publicMemberMock = vi.mocked(publicMember);
+const checkRateLimitMock = vi.mocked(checkRateLimit);
 
-function request(query = '', body: string | unknown = {
-  email: 'member@example.com',
-  name: 'Member One',
-  password: 'password123',
-  locale: 'ko',
-}): NextRequest {
-  return new NextRequest(`https://law.example.test/api/members/signup${query ? `?${query}` : ''}`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: typeof body === 'string' ? body : JSON.stringify(body),
-  });
+function request({
+  body = JSON.stringify({
+    email: 'unverified-claim@example.com',
+    name: 'Unverified Claim',
+    password: 'password123',
+  }),
+  headers = {},
+  locale = 'ko',
+}: {
+  body?: string;
+  headers?: Record<string, string>;
+  locale?: string;
+} = {}): NextRequest {
+  return new NextRequest(
+    `https://tseng-law.com/api/members/signup?locale=${encodeURIComponent(locale)}`,
+    {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        origin: 'https://tseng-law.com',
+        ...headers,
+      },
+      body,
+    },
+  );
 }
 
 describe('members signup API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    createMemberMock.mockResolvedValue(member as never);
-    loginMemberMock.mockResolvedValue({
-      sessionId: 'session-1',
-      memberId: 'member-1',
-      expiresAt: '2026-06-10T00:00:00.000Z',
-      createdAt: '2026-06-03T00:00:00.000Z',
-    } as never);
-    publicMemberMock.mockImplementation((nextMember) => nextMember as never);
   });
 
-  it('returns localized validation errors using the body locale', async () => {
-    const response = await POST(request('', {
-      email: 'bad',
-      name: '',
-      password: 'short',
-      locale: 'zh-hant',
-    }));
-    const payload = await response.json();
+  it.each([
+    ['ko', '공개 회원가입은 지원하지 않습니다. 회원 계정은 담당자가 확인 후 발급합니다.'],
+    ['zh-hant', '目前不提供公開註冊。會員帳戶將由事務所確認後建立。'],
+    ['en', 'Public signup is unavailable. Member accounts are issued by the firm after review.'],
+    ['ja', '一般公開の会員登録は受け付けていません。会員アカウントは事務所での確認後に発行されます。'],
+  ])('fails closed with a stable localized 403 for %s', async (locale, error) => {
+    const response = await POST(request({ locale }));
 
-    expect(response.status).toBe(400);
-    expect(payload).toMatchObject({
+    expect(response.status).toBe(403);
+    await expect(response.json()).resolves.toEqual({
       ok: false,
-      error: '請確認會員請求。',
-      errorCode: 'validation_error',
+      error,
+      errorCode: 'public_signup_disabled',
     });
-    expect(payload.issues).toBeDefined();
-    expect(createMemberMock).not.toHaveBeenCalled();
+    expect(response.headers.get('cache-control')).toBe('private, no-store, max-age=0');
+    expect(response.headers.get('x-robots-tag')).toBe('noindex, noarchive');
   });
 
-  it('returns localized invalid JSON errors using the query locale', async () => {
-    const response = await POST(request('locale=en', '{'));
-    const payload = await response.json();
-
-    expect(response.status).toBe(400);
-    expect(payload).toEqual({
-      ok: false,
-      error: 'Check the member request format.',
-      errorCode: 'invalid_json',
-    });
-  });
-
-  it('returns localized duplicate-email errors without leaking engine messages', async () => {
-    createMemberMock.mockRejectedValueOnce(new Error('이미 가입된 이메일입니다.'));
-
-    const response = await POST(request('', {
-      email: 'member@example.com',
-      name: 'Member One',
-      password: 'password123',
+  it('does not parse or process attacker-controlled signup input', async () => {
+    const invalidJson = await POST(request({ body: '{' }));
+    const crossOrigin = await POST(request({
+      headers: { origin: 'https://attacker.example' },
       locale: 'en',
     }));
-    const payload = await response.json();
 
-    expect(response.status).toBe(409);
-    expect(payload).toEqual({
+    expect(invalidJson.status).toBe(403);
+    expect(crossOrigin.status).toBe(403);
+    await expect(invalidJson.json()).resolves.toMatchObject({
       ok: false,
-      error: 'That email is already registered.',
-      errorCode: 'duplicate_email',
+      errorCode: 'public_signup_disabled',
     });
-    expect(JSON.stringify(payload)).not.toContain('이미 가입된 이메일입니다.');
-  });
-
-  it('returns localized session-create failures', async () => {
-    loginMemberMock.mockResolvedValueOnce(null);
-
-    const response = await POST(request('locale=zh-hant'));
-    const payload = await response.json();
-
-    expect(response.status).toBe(500);
-    expect(payload).toEqual({
+    await expect(crossOrigin.json()).resolves.toMatchObject({
       ok: false,
-      error: '無法建立會員工作階段。',
-      errorCode: 'session_create_failed',
+      errorCode: 'public_signup_disabled',
     });
   });
 
-  it('creates members while preserving success response shape and session cookie', async () => {
+  it('never creates a member, logs in, exposes a member, rate limits, or sets a session cookie', async () => {
     const response = await POST(request());
-    const payload = await response.json();
 
-    expect(response.status).toBe(201);
-    expect(payload).toEqual({ ok: true, member });
-    expect(response.headers.get('set-cookie')).toContain(`${MEMBER_SESSION_COOKIE}=session-1`);
-    expect(createMemberMock).toHaveBeenCalledWith({
-      email: 'member@example.com',
-      name: 'Member One',
-      password: 'password123',
-      role: 'free',
+    expect(response.status).toBe(403);
+    expect(response.headers.get('set-cookie')).toBeNull();
+    expect(createMemberMock).not.toHaveBeenCalled();
+    expect(loginMemberMock).not.toHaveBeenCalled();
+    expect(publicMemberMock).not.toHaveBeenCalled();
+    expect(checkRateLimitMock).not.toHaveBeenCalled();
+  });
+
+  it('uses the safe Korean fallback for unsupported locale values', async () => {
+    const response = await POST(request({ locale: 'fr' }));
+
+    expect(response.status).toBe(403);
+    await expect(response.json()).resolves.toEqual({
+      ok: false,
+      error: '공개 회원가입은 지원하지 않습니다. 회원 계정은 담당자가 확인 후 발급합니다.',
+      errorCode: 'public_signup_disabled',
     });
   });
 });

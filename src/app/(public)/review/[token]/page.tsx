@@ -1,20 +1,21 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { cookies } from 'next/headers';
-import { verifyReviewToken } from '@/lib/builder/security/review-tokens';
+import {
+  resolveReviewTarget,
+  verifyReviewToken,
+} from '@/lib/builder/security/review-tokens';
 
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'Client review',
   robots: { index: false, follow: false },
+  referrer: 'no-referrer',
 };
 
 interface ReviewPageProps {
-  params: { token: string };
+  params: Promise<{ token: string }>;
 }
-
-const REVIEW_COOKIE = 'tseng-review-session';
 
 const containerStyle: React.CSSProperties = {
   maxWidth: 980,
@@ -49,34 +50,14 @@ const sectionStyle: React.CSSProperties = {
   padding: 18,
 };
 
-async function setReviewCookie(token: string): Promise<void> {
-  // next/headers cookies() is a server-side mutation here. Wrap defensively
-  // because preview environments sometimes block mutating cookies in RSC.
-  try {
-    const jar = cookies();
-    jar.set({
-      name: REVIEW_COOKIE,
-      value: token,
-      httpOnly: true,
-      sameSite: 'lax',
-      secure: process.env.NODE_ENV === 'production',
-      path: '/',
-      maxAge: 60 * 60 * 24 * 7,
-    });
-  } catch {
-    /* RSC may be read-only depending on render mode */
-  }
-}
-
 export default async function ReviewPage({ params }: ReviewPageProps) {
-  const token = decodeURIComponent(params.token);
+  const { token: encodedToken } = await params;
+  const token = decodeURIComponent(encodedToken);
   const verified = await verifyReviewToken(token);
   if (!verified) {
     notFound();
   }
-  await setReviewCookie(token);
-
-  const previewPath = `/preview/${encodeURIComponent(verified.branchOrPageId)}?reviewToken=${encodeURIComponent(token)}`;
+  const target = await resolveReviewTarget(verified);
 
   return (
     <div style={containerStyle}>
@@ -84,37 +65,41 @@ export default async function ReviewPage({ params }: ReviewPageProps) {
         Read-only client review. Comments are visible to the workspace owner.
         Session expires {new Date(verified.expiresAt).toLocaleString()}.
       </div>
-      <h1 style={{ marginTop: 0 }}>Review: {verified.branchOrPageId}</h1>
+      <h1 style={{ marginTop: 0 }}>Client review</h1>
 
-      <iframe
-        title="client-review-preview"
-        src={previewPath}
-        style={previewFrameStyle}
-        sandbox="allow-same-origin allow-scripts allow-forms"
-      />
+      {target ? (
+        <>
+          <iframe
+            title="client-review-preview"
+            src={target.publicPath}
+            style={previewFrameStyle}
+            sandbox="allow-same-origin allow-scripts allow-forms"
+            referrerPolicy="no-referrer"
+          />
 
-      <section style={sectionStyle}>
-        <h2 style={{ marginTop: 0, fontSize: 15 }}>Leave a comment</h2>
-        <ReviewCommentForm
-          branchOrPageId={verified.branchOrPageId}
-          token={token}
-        />
-      </section>
+          <section style={sectionStyle}>
+            <h2 style={{ marginTop: 0, fontSize: 15 }}>Leave a comment</h2>
+            <ReviewCommentForm token={token} />
+          </section>
+        </>
+      ) : (
+        <section style={sectionStyle}>
+          <p style={{ margin: 0 }}>
+            This review target is unavailable. Ask the workspace owner for a new review link.
+          </p>
+        </section>
+      )}
     </div>
   );
 }
 
 /**
- * Client-side comment form. Uses the existing builder comments API
- * (POST /api/builder/collab/comments) with the review token in the
- * `x-review-token` header — the API route should consult that header
- * via verifyReviewToken to accept anonymous client comments.
+ * Native form POST keeps the review credential out of the query string and
+ * referrer. The endpoint ignores every client-supplied target or identity.
  */
 function ReviewCommentForm({
-  branchOrPageId,
   token,
 }: {
-  branchOrPageId: string;
   token: string;
 }) {
   return (
@@ -123,21 +108,9 @@ function ReviewCommentForm({
       action="/api/builder/collab/comments"
       style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
     >
-      <input type="hidden" name="pageId" value={branchOrPageId} />
       <input type="hidden" name="reviewToken" value={token} />
-      <input
-        name="author"
-        placeholder="Your name"
-        required
-        style={{
-          padding: '8px 10px',
-          borderRadius: 6,
-          border: '1px solid #cbd5f5',
-          fontSize: 13,
-        }}
-      />
       <textarea
-        name="text"
+        name="body"
         placeholder="Leave your feedback..."
         required
         rows={4}

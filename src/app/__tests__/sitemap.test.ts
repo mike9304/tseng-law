@@ -330,4 +330,29 @@ describe('sitemap column lastModified', () => {
     expect(urls.some((url) => url.includes('/ja/portfolio'))).toBe(false);
     expect(urls.some((url) => url.includes('/ja/events'))).toBe(false);
   });
+
+  it('adds a reciprocal ja hreflang to every sibling of a published Japanese route', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const urls = new Set(entries.map((entry) => entry.url));
+    const japaneseEntries = entries.filter((entry) => entry.url.includes('/ja'));
+
+    expect(japaneseEntries.length).toBeGreaterThan(0);
+
+    for (const japaneseEntry of japaneseEntries) {
+      const japaneseUrl = new URL(japaneseEntry.url);
+      const path = japaneseUrl.pathname.replace(/^\/ja(?=\/|$)/, '');
+
+      for (const locale of ['ko', 'zh-hant', 'en'] as const) {
+        const siblingUrl = `${japaneseUrl.origin}/${locale}${path}`;
+        if (!urls.has(siblingUrl)) continue;
+
+        const sibling = entries.find((entry) => entry.url === siblingUrl);
+        expect(
+          sibling?.alternates?.languages?.ja,
+          `${siblingUrl} should point back to ${japaneseEntry.url}`,
+        ).toBe(japaneseEntry.url);
+      }
+    }
+  });
 });

@@ -1,12 +1,17 @@
 import type { MetadataRoute } from 'next';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
-import { defaultLocale, locales } from '@/lib/locales';
+import { defaultLocale, locales, siteLocales } from '@/lib/locales';
 import { getSiteUrl } from '@/lib/seo';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
 import { parseCustomRobotsTxt } from '@/lib/builder/seo/robots';
 
 export const dynamic = 'force-dynamic';
+
+const LOCALIZED_ADMIN_PATHS = siteLocales.flatMap((locale) => [
+  `/${locale}/admin-builder`,
+  `/${locale}/admin-consultation`,
+]);
 
 /**
  * Production: index everything except API + admin paths, point at
@@ -72,7 +77,13 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
   if (customRobots) return parseCustomRobotsTxt(customRobots, sitemap);
 
   const noIndexPaths = await collectNoIndexPaths();
-  const disallow = ['/api/', '/admin-builder', '/admin-consultation', ...noIndexPaths];
+  const disallow = [
+    '/api/',
+    '/admin-builder',
+    '/admin-consultation',
+    ...LOCALIZED_ADMIN_PATHS,
+    ...noIndexPaths,
+  ];
 
   return {
     rules: {

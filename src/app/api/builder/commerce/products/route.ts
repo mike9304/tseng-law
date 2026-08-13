@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   getCommerceProductsApiErrorPayload,
   type CommerceProductsApiErrorCode,
@@ -155,7 +154,7 @@ export async function GET(request: NextRequest) {
     });
 
     if (parsed.scope === 'all') {
-      const auth = requireBuilderAdminAuth(request);
+      const auth = await guardBuilderReadWithPermission(request, 'view-commerce');
       if (auth instanceof NextResponse) return auth;
     }
 
@@ -177,7 +176,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   try {
@@ -196,7 +195,7 @@ export async function POST(request: NextRequest) {
 
 export async function PATCH(request: NextRequest) {
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   try {

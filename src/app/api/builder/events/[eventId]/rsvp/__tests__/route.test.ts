@@ -48,7 +48,7 @@ describe('/api/builder/events/[eventId]/rsvp', () => {
   });
 
   it('registers attendees while preserving success response shape', async () => {
-    const response = await POST(request('locale=ko'), { params: { eventId: 'evt-1' } });
+    const response = await POST(request('locale=ko'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(201);
@@ -64,7 +64,7 @@ describe('/api/builder/events/[eventId]/rsvp', () => {
   });
 
   it('returns localized invalid JSON errors', async () => {
-    const response = await POST(request('locale=zh-hant', '{'), { params: { eventId: 'evt-1' } });
+    const response = await POST(request('locale=zh-hant', '{'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(400);
@@ -80,7 +80,7 @@ describe('/api/builder/events/[eventId]/rsvp', () => {
       name: '',
       email: 'not-email',
       ticketQuantity: 1,
-    }), { params: { eventId: 'evt-1' } });
+    }), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(400);
@@ -96,7 +96,7 @@ describe('/api/builder/events/[eventId]/rsvp', () => {
   it('returns localized engine validation errors without leaking raw validation strings', async () => {
     validateAttendeeMock.mockReturnValueOnce(['이름을 입력하세요.']);
 
-    const response = await POST(request('locale=en'), { params: { eventId: 'evt-1' } });
+    const response = await POST(request('locale=en'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(400);
@@ -112,7 +112,7 @@ describe('/api/builder/events/[eventId]/rsvp', () => {
   it('maps missing event errors to localized not-found payloads', async () => {
     registerAttendeeMock.mockRejectedValueOnce(new Error('이벤트를 찾을 수 없습니다.'));
 
-    const response = await POST(request('locale=zh-hant'), { params: { eventId: 'evt-1' } });
+    const response = await POST(request('locale=zh-hant'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(404);
@@ -126,7 +126,7 @@ describe('/api/builder/events/[eventId]/rsvp', () => {
   it('maps full-capacity errors without leaking raw exception text', async () => {
     registerAttendeeMock.mockRejectedValueOnce(new Error('등록이 마감되었습니다.'));
 
-    const response = await POST(request('locale=en'), { params: { eventId: 'evt-1' } });
+    const response = await POST(request('locale=en'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(400);

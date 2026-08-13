@@ -69,6 +69,7 @@ import {
   readPublishTransaction,
 } from '@/lib/builder/publish-gate/atomic-publish';
 import { publishAtomic } from '@/lib/builder/publish-gate/atomic-publish-orchestrator';
+import { PublishError } from '@/lib/builder/site/publish';
 
 let txRoot: string;
 
@@ -170,6 +171,38 @@ describe('publishAtomic happy path', () => {
 });
 
 describe('publishAtomic failure path', () => {
+  it('rolls back when the canonical publish gate reports a disabled channel blocker', async () => {
+    pagePublishHandler.mockImplementationOnce(async () => {
+      throw new PublishError('publish_blocked', 422, {
+        blockers: [{ id: 'disabled-consultation-channel-cta' }],
+      });
+    });
+
+    const outcome = await publishAtomic({
+      pageIds: ['page-1'],
+      cmsCollectionIds: ['col-a'],
+      siteId: 'test-site',
+      locale: 'ko',
+    });
+
+    expect(outcome).toMatchObject({
+      ok: false,
+      status: 'rolled-back',
+      results: [{
+        kind: 'page',
+        id: 'page-1',
+        status: 'failed',
+        error: expect.stringContaining('publish_blocked'),
+      }, {
+        kind: 'cms',
+        id: 'col-a',
+        status: 'skipped',
+      }],
+    });
+    expect(siteStore.current?.cmsCollections?.[0]?.records[0]?.status).toBe('draft');
+    expect(await readPublishTransaction(outcome.transactionId)).toBeNull();
+  });
+
   it('rolls back when the first page publish fails', async () => {
     pagePublishHandler.mockImplementationOnce(async () => {
       throw new Error('boom');

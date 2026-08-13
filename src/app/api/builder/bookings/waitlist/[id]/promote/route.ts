@@ -11,7 +11,7 @@ import {
   timestamped,
 } from '@/lib/builder/bookings/storage';
 import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
-import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
+import { acquireSlotLock, releaseSlotLock, renewSlotLock } from '@/lib/builder/bookings/slot-lock';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { runBookingBillingAutomation } from '@/lib/builder/billing-document-automation';
@@ -61,7 +61,8 @@ async function deliverBookingConfirmation(
   }
 }
 
-export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
@@ -107,7 +108,8 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
   const resourceIds = service.requiredResourceIds ?? [];
   const endAt = addBookingDuration(slot.startAt, service.durationMinutes);
   const slotKey = { serviceId: service.serviceId, staffId, startAt: slot.startAt, resourceIds };
-  if (!acquireSlotLock(slotKey)) {
+  const slotLease = await acquireSlotLock(slotKey);
+  if (!slotLease) {
     return NextResponse.json(getBookingWaitlistApiErrorPayload(locale, 'slot_lock_conflict'), { status: 409 });
   }
 
@@ -119,6 +121,9 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
     const bookingId = makeBookingId();
     const price = bookingServicePriceSnapshot(service, { staffId, resourceIds: service.requiredResourceIds });
+    if (!await renewSlotLock(slotLease)) {
+      return NextResponse.json(getBookingWaitlistApiErrorPayload(locale, 'slot_lock_conflict'), { status: 503 });
+    }
     const packageRedemption = service.paymentMode === 'paid'
       ? await redeemPackageCreditForBooking({
           bookingId,
@@ -126,7 +131,6 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
           serviceId: service.serviceId,
         })
       : null;
-
     const zoom = await maybeCreateBookingZoomLink({
       service,
       staffId,
@@ -199,6 +203,8 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
     return NextResponse.json({ booking, waitlist, emailDelivery }, { status: 201 });
   } finally {
-    releaseSlotLock(slotKey);
+    await releaseSlotLock(slotLease).catch(() => {
+      console.error('[builder/bookings/waitlist/promote] slot lease release failed');
+    });
   }
 }

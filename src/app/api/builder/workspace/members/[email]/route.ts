@@ -62,10 +62,8 @@ function isOwnerRoleRequiredError(error: unknown): boolean {
     || summary.includes('Cannot remove the only owner.');
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { email: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ email: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-users' });
   if (auth instanceof NextResponse) return auth;
   let errorLocale = resolveRequestLocale(request);
@@ -91,10 +89,8 @@ export async function PATCH(
   }
 }
 
-export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { email: string } },
-) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ email: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-users' });
   if (auth instanceof NextResponse) return auth;
   const locale = resolveRequestLocale(request);

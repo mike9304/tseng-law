@@ -10,10 +10,8 @@ import { createNotification } from '@/lib/builder/notifications/notification-sto
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { allowReadOnly: true });
   if (auth instanceof NextResponse) return auth;
   const approval = await getApproval(params.id);
@@ -21,10 +19,8 @@ export async function GET(
   return NextResponse.json({ ok: true, approval });
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { id: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
   const raw = await request.json().catch(() => null) as {

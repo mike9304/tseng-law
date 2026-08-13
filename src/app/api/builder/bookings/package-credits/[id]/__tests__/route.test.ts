@@ -63,7 +63,7 @@ describe('/api/builder/bookings/package-credits/[id]', () => {
   it('returns localized not-found errors for missing credits on PATCH', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ remainingCredits: 1 }, 'en'), {
-      params: { id: 'pc-route-test' },
+      params: Promise.resolve({ id: 'pc-route-test' }),
     });
     const payload = await response.json();
 
@@ -79,7 +79,7 @@ describe('/api/builder/bookings/package-credits/[id]', () => {
     vi.mocked(getPackageCredit).mockResolvedValueOnce(credit());
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ totalCredits: 0, expiresAt: 'not-a-date' }, 'zh-hant'), {
-      params: { id: 'pc-route-test' },
+      params: Promise.resolve({ id: 'pc-route-test' }),
     });
     const payload = await response.json();
 
@@ -95,7 +95,7 @@ describe('/api/builder/bookings/package-credits/[id]', () => {
     vi.mocked(getPackageCredit).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ totalCredits: 2, remainingCredits: 5 }, 'ko'), {
-      params: { id: 'pc-route-test' },
+      params: Promise.resolve({ id: 'pc-route-test' }),
     });
     const payload = await response.json();
 
@@ -118,7 +118,7 @@ describe('/api/builder/bookings/package-credits/[id]', () => {
   it('returns localized not-found errors for missing credits on DELETE', async () => {
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('ko'), {
-      params: { id: 'pc-route-test' },
+      params: Promise.resolve({ id: 'pc-route-test' }),
     });
     const payload = await response.json();
 
@@ -135,7 +135,7 @@ describe('/api/builder/bookings/package-credits/[id]', () => {
     vi.mocked(getPackageCredit).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('en'), {
-      params: { id: 'pc-route-test' },
+      params: Promise.resolve({ id: 'pc-route-test' }),
     });
     const payload = await response.json();
 

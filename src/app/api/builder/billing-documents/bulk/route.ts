@@ -81,7 +81,7 @@ function localeFromBody(raw: unknown): Locale | undefined {
 }
 
 export async function POST(request: NextRequest) {
-  const auth = await guardMutation(request, { bucket: 'publish' });
+  const auth = await guardMutation(request, { bucket: 'publish', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   let errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);

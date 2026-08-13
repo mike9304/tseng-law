@@ -31,7 +31,7 @@ describe('WO-I18N-P02 Japanese videos components', () => {
     expect(html).toContain('メディア取材・法律相談のお問い合わせ');
     expect(html).toContain('>17<');
     expect(html).toContain('href="/ja/lawyers/wei-tseng"');
-    expect(html).toContain('href="/ja/contact"');
+    expect(html).toContain('href="mailto:wei@hoveringlaw.com.tw?subject=');
 
     for (const item of profile.externalProfiles) {
       expect(html).toContain(item.label);
@@ -55,6 +55,12 @@ describe('WO-I18N-P02 Japanese videos components', () => {
     expect(html).toContain(videos.featured.title);
     expect(html).toContain(`href="${videos.featured.href}"`);
     expect(html).toContain(videos.cta.label);
+    expect(html).toContain(encodeURIComponent('/images/editorial/pingtung-court-daylight.webp'));
+    expect(html).toContain('台湾の裁判所建築に着想を得た、明るい屏東の都市風景');
+    expect(html).toContain(encodeURIComponent('/images/editorial/taiwan-courtroom-daylight.webp'));
+    expect(html).toContain('台湾の法廷空間に着想を得て演出した、明るい室内風景');
+    expect(html).toContain('data-video-mounted="false"');
+    expect(html).not.toContain('<video');
 
     for (const item of videos.items) {
       expect(html).toContain(item.title);
@@ -77,7 +83,7 @@ describe('WO-I18N-P02 Japanese videos components', () => {
     expect(videoHtml).toContain(siteContent[locale].videos.title);
     expect(videoHtml).toContain(siteContent[locale].videos.featured.title);
     expect(mediaHtml).toContain(`href="/${locale}/lawyers/wei-tseng"`);
-    expect(mediaHtml).toContain(`href="/${locale}/contact"`);
+    expect(mediaHtml).toContain('href="mailto:wei@hoveringlaw.com.tw?subject=');
   });
 
   it('keeps the canonical public name across home, media, and video copy without changing KO or EN titles', () => {

@@ -3,10 +3,12 @@ import MembersAdminClient from '@/components/builder/members/MembersAdminClient'
 import { listMembers, publicMember } from '@/lib/builder/members/members-engine';
 import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
+import { requireBuilderPagePermission } from '@/lib/builder/security/page-permission';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return buildSeoMetadata({
     locale,
@@ -23,8 +25,10 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   });
 }
 
-export default async function BuilderMembersAdminPage({ params }: { params: { locale: Locale } }) {
+export default async function BuilderMembersAdminPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
+  await requireBuilderPagePermission('manage-users');
   const members = (await listMembers()).map(publicMember);
 
   return <MembersAdminClient locale={locale} initialMembers={members} />;

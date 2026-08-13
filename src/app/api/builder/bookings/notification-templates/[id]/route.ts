@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   deleteNotificationTemplate,
   getNotificationTemplate,
@@ -35,8 +34,9 @@ function localeFromRequest(request: NextRequest): Locale {
   return normalizeLocale(request.nextUrl.searchParams.get('locale') || undefined);
 }
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
-  const auth = requireBuilderAdminAuth(request);
+export async function GET(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
+  const auth = await guardBuilderReadWithPermission(request, 'view-bookings');
   if (auth instanceof NextResponse) return auth;
 
   const locale = localeFromRequest(request);
@@ -47,7 +47,8 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
   return NextResponse.json({ template });
 }
 
-export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 
@@ -64,7 +65,8 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   return NextResponse.json({ template: result.template });
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 

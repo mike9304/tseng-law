@@ -9,11 +9,12 @@ import { getTranslationCopy } from '@/components/builder/translations/translatio
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: Locale }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = getTranslationCopy(locale);
   return buildSeoMetadata({
@@ -26,13 +27,14 @@ export function generateMetadata({
   });
 }
 
-export default async function BuilderTranslationDashboardPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: Locale };
-  searchParams?: { sourceLocale?: string; status?: string };
-}) {
+export default async function BuilderTranslationDashboardPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+    searchParams?: Promise<{ sourceLocale?: string; status?: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const routeLocale = normalizeLocale(params.locale);
   const copy = getTranslationCopy(routeLocale);
   const sourceLocale = normalizeLocale(

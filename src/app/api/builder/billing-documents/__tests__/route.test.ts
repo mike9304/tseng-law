@@ -1,11 +1,14 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { listBillingDocuments, parseBillingDocumentSource } from '@/lib/builder/billing-documents';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { GET } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ username: 'admin' })),
+vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/billing-documents', () => ({
@@ -13,7 +16,7 @@ vi.mock('@/lib/builder/billing-documents', () => ({
   parseBillingDocumentSource: vi.fn((source: string) => source),
 }));
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const listBillingDocumentsMock = vi.mocked(listBillingDocuments);
 const parseBillingDocumentSourceMock = vi.mocked(parseBillingDocumentSource);
 
@@ -24,9 +27,25 @@ function requestFor(query = ''): NextRequest {
 describe('builder billing documents list API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ username: 'admin' } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
     listBillingDocumentsMock.mockResolvedValue([]);
     parseBillingDocumentSourceMock.mockImplementation((source) => source as never);
+  });
+
+  it('returns 401 and short-circuits billing storage when commerce read auth fails', async () => {
+    const request = requestFor('locale=en');
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ ok: false, error: 'Unauthorized' }, { status: 401 }) as never,
+    );
+
+    const response = await GET(request);
+
+    expect(response.status).toBe(401);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(request, 'view-commerce');
+    expect(listBillingDocumentsMock).not.toHaveBeenCalled();
   });
 
   it('returns a localized validation error for invalid list filters', async () => {
@@ -77,6 +96,10 @@ describe('builder billing documents list API', () => {
     const payload = await response.json();
 
     expect(response.status).toBe(200);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
     expect(parseBillingDocumentSourceMock).toHaveBeenCalledWith('booking');
     expect(listBillingDocumentsMock).toHaveBeenCalledWith({
       locale: 'en',

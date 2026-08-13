@@ -9,18 +9,15 @@ import {
   getPublicMarketingApiErrorPayload,
   type PublicMarketingApiErrorCode,
 } from '@/lib/builder/marketing/marketing-api-copy';
+import {
+  resolveMarketingTrackingSecret,
+  verifyMarketingClickSignature,
+} from '@/lib/builder/marketing/marketing-click-signature';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-// This endpoint is an intentional open redirect: campaign click tracking
-// needs to bounce recipients to arbitrary third-party URLs that the campaign
-// template author chose. We accept the phishing-by-association tradeoff for
-// now because the right hardening is HMAC-signing the `u` parameter at send
-// time and verifying the signature here (multi-file change + token migration
-// for in-flight campaigns). Until then, the protocol-only filter is the
-// minimum bar and `?u=` URLs should be treated as user-controllable.
 function isSafeRedirect(target: string): boolean {
   try {
     const url = new URL(target);
@@ -57,26 +54,33 @@ export async function GET(request: NextRequest) {
   }
   const token = request.nextUrl.searchParams.get('token') ?? '';
   const target = request.nextUrl.searchParams.get('u') ?? '';
-  if (!target || !isSafeRedirect(target)) {
+  const signature = request.nextUrl.searchParams.get('sig') ?? '';
+  const secret = resolveMarketingTrackingSecret();
+  if (
+    !token
+    || !target
+    || !signature
+    || !isSafeRedirect(target)
+    || !secret
+    || !verifyMarketingClickSignature(token, target, signature, secret)
+  ) {
     return errorResponse(locale, 'invalid_redirect', 400);
   }
-  if (token) {
-    const recipient = await getRecipientByToken(token);
-    if (recipient && !recipient.clickedAt) {
-      const clickedAt = new Date().toISOString();
-      const nextRecipient = {
-        ...recipient,
-        clickedAt,
-        status: 'clicked' as const,
-      };
-      await saveRecipient(nextRecipient);
-      await dispatchMarketingAnalyticsEvent({
-        kind: 'campaign-clicked',
-        occurredAt: clickedAt,
-        recipient: nextRecipient,
-        payload: { targetUrl: target },
-      });
-    }
+  const recipient = await getRecipientByToken(token);
+  if (recipient && !recipient.clickedAt) {
+    const clickedAt = new Date().toISOString();
+    const nextRecipient = {
+      ...recipient,
+      clickedAt,
+      status: 'clicked' as const,
+    };
+    await saveRecipient(nextRecipient);
+    await dispatchMarketingAnalyticsEvent({
+      kind: 'campaign-clicked',
+      occurredAt: clickedAt,
+      recipient: nextRecipient,
+      payload: { targetUrl: target },
+    });
   }
   return NextResponse.redirect(target, { status: 302 });
 }

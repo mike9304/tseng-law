@@ -995,15 +995,14 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await closeModalOverlayIfPresent(page);
     const snapTarget = page.locator('[data-node-id="home-hero-subtitle"]:visible').first();
     await expect(snapTarget).toBeVisible();
-    // Click-to-select can land on a nested child — reset with Escape and retry
-    // until the subtitle node itself carries the 8 resize handles.
+    // The subtitle is nested under the hero-copy container. A real modified
+    // click uses Playwright's normal actionability/hit-test checks while taking
+    // the editor's additive-selection path, so it selects the exact nested
+    // node instead of beginning a move on an already-selected ancestor.
     await expect(async () => {
       await page.keyboard.press('Escape');
-      await snapTarget.click({ position: { x: 18, y: 18 }, force: true });
-      const selectedItself = await snapTarget.evaluate(
-        (element) => String(element.className).includes('nodeSelected'),
-      );
-      expect(selectedItself).toBe(true);
+      await snapTarget.click({ position: { x: 18, y: 18 }, modifiers: ['Shift'] });
+      await expect(snapTarget).toHaveClass(/nodeSelected/);
     }).toPass({ timeout: 30_000 });
     const snapNode = await expectSelectedNodeHandles(page, snapTarget);
     const snapDeltaX = await page.evaluate(() => {
@@ -1127,6 +1126,9 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await page.keyboard.press(`${shortcutModifier}+Z`);
     await expectUndoChip(page);
 
+    const secondaryTools = page.getByLabel('보조 편집 도구 열기');
+    await secondaryTools.click();
+    await expect(page.getByTitle('현재 페이지 SEO')).toBeVisible();
     await page.getByTitle('현재 페이지 SEO').click();
     await expect(page.getByText(/Google preview|Google 미리보기/)).toBeVisible();
     await page.getByRole('button', { name: /Social share|소셜 공유/ }).click();
@@ -1177,8 +1179,8 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-address"]').first()).toContainText('承德路');
     await expect(mapQuickEdit.getByLabel('Map quick address')).toHaveValue(/承德路/);
     await expect(mapQuickEdit.getByLabel('Map quick location title')).toHaveValue('타이베이');
-    await expect(mapQuickEdit.getByLabel('Map quick office phone')).toHaveValue('04-2326-1862');
-    await expect(mapQuickEdit.getByLabel('Map quick office fax')).toHaveValue('04-2326-1863');
+    await expect(mapQuickEdit.getByLabel('Map quick office phone')).toHaveValue('');
+    await expect(mapQuickEdit.getByLabel('Map quick office fax')).toHaveValue('');
     const temporaryOfficeTitle = `타이베이 테스트 ${Date.now().toString(36)}`;
     const temporaryOfficePhone = '02-0000-0000';
     const temporaryOfficeFax = '02-1111-1111';

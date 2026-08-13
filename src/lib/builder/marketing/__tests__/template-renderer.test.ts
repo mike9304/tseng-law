@@ -1,7 +1,19 @@
-import { describe, expect, it } from 'vitest';
+import { afterAll, beforeEach, describe, expect, it } from 'vitest';
 import { renderCampaignForSubscriber } from '@/lib/builder/marketing/template-renderer';
+import { verifyMarketingClickSignature } from '@/lib/builder/marketing/marketing-click-signature';
 import type { Campaign } from '@/lib/builder/marketing/campaign-types';
 import type { Subscriber } from '@/lib/builder/marketing/subscriber-types';
+
+const SECRET_ENV_KEYS = [
+  'MARKETING_TRACKING_SECRET',
+  'CRM_TRACKING_SECRET',
+  'CRM_WEBHOOK_SECRET',
+  'NEXTAUTH_SECRET',
+  'BUILDER_WEBHOOK_SECRET',
+] as const;
+const ORIGINAL_SECRET_ENV = Object.fromEntries(
+  SECRET_ENV_KEYS.map((key) => [key, process.env[key]]),
+) as Record<(typeof SECRET_ENV_KEYS)[number], string | undefined>;
 
 function makeCampaign(overrides: Partial<Campaign> = {}): Campaign {
   return {
@@ -41,6 +53,18 @@ function makeSubscriber(overrides: Partial<Subscriber> = {}): Subscriber {
 }
 
 describe('renderCampaignForSubscriber', () => {
+  beforeEach(() => {
+    for (const key of SECRET_ENV_KEYS) delete process.env[key];
+  });
+
+  afterAll(() => {
+    for (const key of SECRET_ENV_KEYS) {
+      const original = ORIGINAL_SECRET_ENV[key];
+      if (original === undefined) delete process.env[key];
+      else process.env[key] = original;
+    }
+  });
+
   it('substitutes {{email}} variable and picks locale-specific subject', () => {
     const rendered = renderCampaignForSubscriber({
       campaign: makeCampaign(),
@@ -52,7 +76,8 @@ describe('renderCampaignForSubscriber', () => {
     expect(rendered.html).toContain('user@example.com');
   });
 
-  it('rewrites external anchors to go through the tracking redirect', () => {
+  it('rewrites external anchors with a signed tracking redirect', () => {
+    process.env.MARKETING_TRACKING_SECRET = 'test-marketing-secret';
     const rendered = renderCampaignForSubscriber({
       campaign: makeCampaign(),
       subscriber: makeSubscriber(),
@@ -61,6 +86,53 @@ describe('renderCampaignForSubscriber', () => {
     });
     expect(rendered.html).toContain('/api/marketing/track?token=trk');
     expect(rendered.html).toContain('u=https%3A%2F%2Fexample.com%2Fpost');
+    expect(rendered.html).toMatch(/(?:&|&amp;)sig=[A-Za-z0-9_-]{43}/);
+  });
+
+  it('normalizes a relative href to an absolute destination before signing', () => {
+    const secret = 'test-marketing-secret';
+    process.env.MARKETING_TRACKING_SECRET = secret;
+    const campaign = makeCampaign({
+      bodyHtml: {
+        ko: '<a href="/ko/services?topic=tax#fees">서비스</a>',
+        'zh-hant': '<a href="/zh-hant/services">服務</a>',
+        en: '<a href="/en/services">Services</a>',
+      },
+    });
+    const rendered = renderCampaignForSubscriber({
+      campaign,
+      subscriber: makeSubscriber(),
+      trackingToken: 'trk',
+      baseUrl: 'https://tseng-law.com',
+    });
+    const trackingHref = rendered.html.match(/href="([^"]*\/api\/marketing\/track[^"]+)"/)?.[1];
+
+    expect(trackingHref).toBeDefined();
+    const trackingUrl = new URL(trackingHref!.replace(/&amp;/g, '&'));
+    const destination = trackingUrl.searchParams.get('u');
+    const signature = trackingUrl.searchParams.get('sig');
+    expect(destination).toBe('https://tseng-law.com/ko/services?topic=tax#fees');
+    expect(signature).not.toBeNull();
+    expect(verifyMarketingClickSignature('trk', destination!, signature!, secret)).toBe(true);
+  });
+
+  it('leaves the exact relative href direct when no tracking secret is configured', () => {
+    const campaign = makeCampaign({
+      bodyHtml: {
+        ko: '<a href="/ko/services?topic=tax#fees">서비스</a>',
+        'zh-hant': '<a href="/zh-hant/services">服務</a>',
+        en: '<a href="/en/services">Services</a>',
+      },
+    });
+    const rendered = renderCampaignForSubscriber({
+      campaign,
+      subscriber: makeSubscriber(),
+      trackingToken: 'trk',
+      baseUrl: 'https://tseng-law.com',
+    });
+
+    expect(rendered.html).toContain('href="/ko/services?topic=tax#fees"');
+    expect(rendered.html).not.toContain('/api/marketing/track?');
   });
 
   it('appends an unsubscribe link and tracking pixel to every email', () => {
@@ -75,10 +147,11 @@ describe('renderCampaignForSubscriber', () => {
     expect(rendered.text).toContain('구독 해지');
   });
 
-  it('leaves mailto: and tel: links untouched', () => {
+  it('leaves mailto:, tel:, fragments, and other non-http schemes untouched', () => {
+    process.env.MARKETING_TRACKING_SECRET = 'test-marketing-secret';
     const campaign = makeCampaign({
       bodyHtml: {
-        ko: '<a href="mailto:hi@example.com">hi</a> <a href="tel:+8210">phone</a>',
+        ko: '<a href="mailto:hi@example.com">hi</a> <a href="tel:+8210">phone</a> <a href="#fees">fees</a> <a href="ftp://files.example.com/doc">file</a>',
         'zh-hant': '<a href="mailto:hi@example.com">hi</a>',
         en: '<a href="mailto:hi@example.com">hi</a>',
       },
@@ -91,7 +164,9 @@ describe('renderCampaignForSubscriber', () => {
     });
     expect(rendered.html).toContain('mailto:hi@example.com');
     expect(rendered.html).toContain('tel:+8210');
-    expect(rendered.html).not.toMatch(/track\?token=trk[^"]+mailto/);
+    expect(rendered.html).toContain('href="#fees"');
+    expect(rendered.html).toContain('href="ftp://files.example.com/doc"');
+    expect(rendered.html).not.toContain('/api/marketing/track?');
   });
 
   it('uses subscriber preferredLocale for footer copy', () => {

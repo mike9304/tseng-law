@@ -22,8 +22,6 @@ const CONTACT_PAGE_DESKTOP_HEIGHT =
 const CONTACT_INQUIRIES_CARD_X = [0, 299, 597, 895] as const;
 const CONTACT_INQUIRIES_CARD_WIDTH = 282;
 const CONTACT_INQUIRIES_CARD_CONTENT_WIDTH = CONTACT_INQUIRIES_CARD_WIDTH - 48;
-const CONTACT_OFFICE_TAB_X = [0, 69, 139] as const;
-const CONTACT_OFFICE_TAB_WIDTH = [55, 55, 70] as const;
 
 function setNodeRect(
   nodesById: Map<string, BuilderCanvasNode>,
@@ -33,6 +31,18 @@ function setNodeRect(
   const node = nodesById.get(nodeId);
   if (!node) return;
   node.rect = { ...node.rect, ...rect };
+}
+
+function indexedNodeIndexes(
+  nodesById: ReadonlyMap<string, BuilderCanvasNode>,
+  pattern: RegExp,
+): number[] {
+  const indexes: number[] = [];
+  for (const nodeId of nodesById.keys()) {
+    const match = pattern.exec(nodeId);
+    if (match?.[1]) indexes.push(Number(match[1]));
+  }
+  return [...new Set(indexes)].sort((left, right) => left - right);
 }
 
 function applyContactPageDesktopParity(nodes: BuilderCanvasNode[], originY: number): void {
@@ -101,11 +111,23 @@ function applyContactPageDesktopParity(nodes: BuilderCanvasNode[], originY: numb
   });
   setNodeRect(nodesById, 'page-contact-locations-label', { y: 304, height: 22 });
   setNodeRect(nodesById, 'page-contact-locations-grid', { y: 343, height: 163 });
-  [0, 1, 2].forEach((index) => {
+  const locationIndexes = indexedNodeIndexes(
+    nodesById,
+    /^page-contact-locations-card-(\d+)$/,
+  );
+  const locationCardWidth = locationIndexes.length === 4 ? 282 : 382;
+  const locationCardGap = locationIndexes.length === 4 ? 17 : 16;
+  locationIndexes.forEach((index) => {
     setNodeRect(nodesById, `page-contact-locations-card-${index}`, {
-      x: index * 398,
-      width: 382,
+      x: index * (locationCardWidth + locationCardGap),
+      width: locationCardWidth,
       height: 163,
+    });
+    setNodeRect(nodesById, `page-contact-locations-card-${index}-title`, {
+      width: locationCardWidth - 48,
+    });
+    setNodeRect(nodesById, `page-contact-locations-block-${index}-list`, {
+      width: locationCardWidth - 48,
     });
   });
   setNodeRect(nodesById, 'page-contact-contact-cta', { y: 538, width: 115, height: 47 });
@@ -124,10 +146,11 @@ function applyContactPageDesktopParity(nodes: BuilderCanvasNode[], originY: numb
   setNodeRect(nodesById, 'home-offices-label', { y: 9, height: 22 });
   setNodeRect(nodesById, 'home-offices-title', { y: 48, width: 1178, height: 72 });
   setNodeRect(nodesById, 'home-offices-tabs', { y: 139, width: 1178, height: 47 });
-  [0, 1, 2].forEach((index) => {
+  const officeIndexes = indexedNodeIndexes(nodesById, /^home-offices-tab-(\d+)$/);
+  officeIndexes.forEach((index) => {
     setNodeRect(nodesById, `home-offices-tab-${index}`, {
-      x: CONTACT_OFFICE_TAB_X[index],
-      width: CONTACT_OFFICE_TAB_WIDTH[index],
+      x: index * 118,
+      width: 104,
       height: 47,
     });
     setNodeRect(nodesById, `home-offices-layout-${index}`, {

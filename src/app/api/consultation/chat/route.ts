@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { normalizeLocale } from '@/lib/locales';
 import {
   generateConsultationChatResponse,
@@ -16,6 +17,21 @@ import type {
 export const runtime = 'nodejs';
 /** Allow the streaming handler to hold the connection open for up to 5 minutes. */
 export const maxDuration = 300;
+
+const CHAT_STREAM_FAILURE_CODE = 'chat_stream_failed';
+const CHAT_STREAM_FAILURE_MESSAGE = 'Unable to continue this chat right now. Please try again or contact the firm directly.';
+
+function errorKind(error: unknown): string {
+  if (error && typeof error === 'object' && 'constructor' in error) {
+    const constructor = error.constructor;
+    if (typeof constructor === 'function' && constructor.name) return constructor.name;
+  }
+  return 'unknown_error';
+}
+
+function logSafeChatFailure(operationCode: string, error: unknown): void {
+  console.error('[consultation] operation failed', operationCode, errorKind(error));
+}
 
 function badRequest(message: string) {
   return NextResponse.json({ success: false, error: message }, { status: 400 });
@@ -52,7 +68,7 @@ function logConsultationSafetySignals(input: {
       riskLevel: input.riskLevel,
       userAgent: input.userAgent,
       ipAddress: input.ipAddress,
-    }).catch((err) => console.error('[consultation] pii bypass log failed:', err));
+    }).catch((error) => logSafeChatFailure('chat_pii_bypass_log_failed', error));
   }
 
   if (signals.lowConfidenceBypass) {
@@ -64,7 +80,7 @@ function logConsultationSafetySignals(input: {
       riskLevel: input.riskLevel,
       userAgent: input.userAgent,
       ipAddress: input.ipAddress,
-    }).catch((err) => console.error('[consultation] low-confidence log failed:', err));
+    }).catch((error) => logSafeChatFailure('chat_low_confidence_log_failed', error));
   }
 
   if (signals.groundednessFlagged) {
@@ -77,7 +93,7 @@ function logConsultationSafetySignals(input: {
       metadata: { verdict: signals.groundednessFlagged },
       userAgent: input.userAgent,
       ipAddress: input.ipAddress,
-    }).catch((err) => console.error('[consultation] groundedness log failed:', err));
+    }).catch((error) => logSafeChatFailure('chat_groundedness_log_failed', error));
   }
 
   if (signals.stalenessFlagged && signals.stalenessFlagged.length > 0) {
@@ -90,11 +106,14 @@ function logConsultationSafetySignals(input: {
       metadata: { agedSlugs: signals.stalenessFlagged.join(',') },
       userAgent: input.userAgent,
       ipAddress: input.ipAddress,
-    }).catch((err) => console.error('[consultation] staleness log failed:', err));
+    }).catch((error) => logSafeChatFailure('chat_staleness_log_failed', error));
   }
 }
 
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const userAgent = request.headers.get('user-agent');
   const ipHeader = request.headers.get('x-forwarded-for');
 
@@ -111,7 +130,7 @@ export async function POST(request: NextRequest) {
       metadata: { retryAfterMs: rateCheck.retryAfterMs },
       userAgent,
       ipAddress: ipHeader,
-    }).catch((err) => console.error('[consultation] chat_rate_limited log failed:', err));
+    }).catch((error) => logSafeChatFailure('chat_rate_limited_log_failed', error));
 
     return NextResponse.json(
       { success: false, error: 'Too many requests. Please wait a moment.' },
@@ -155,8 +174,8 @@ export async function POST(request: NextRequest) {
       userAgent,
       ipAddress: ipHeader,
     });
-  } catch (err) {
-    console.error('[consultation] chat_received log failed:', err);
+  } catch (error) {
+    logSafeChatFailure('chat_received_log_failed', error);
   }
 
   // Streaming branch — return an SSE response. The generator does
@@ -185,8 +204,8 @@ export async function POST(request: NextRequest) {
                   riskLevel: chunk.data.riskLevel,
                   userAgent,
                   ipAddress: ipHeader,
-                }).catch((err) =>
-                  console.error('[consultation] injection log failed:', err),
+                }).catch((error) =>
+                  logSafeChatFailure('chat_injection_log_failed', error),
                 );
               }
             } else if (chunk.type === 'warning') {
@@ -199,12 +218,12 @@ export async function POST(request: NextRequest) {
             controller.enqueue(encoder.encode(encodeSseChunk(chunk)));
           }
         } catch (error) {
-          console.error('[consultation] stream handler crashed:', error);
+          logSafeChatFailure(CHAT_STREAM_FAILURE_CODE, error);
           controller.enqueue(
             encoder.encode(
               encodeSseChunk({
                 type: 'error',
-                error: error instanceof Error ? error.message : 'unknown_stream_failure',
+                error: CHAT_STREAM_FAILURE_MESSAGE,
               }),
             ),
           );
@@ -213,12 +232,13 @@ export async function POST(request: NextRequest) {
             sessionId,
             locale,
             metadata: {
-              failureReason: error instanceof Error ? error.message : 'unknown_stream_failure',
+              failureReason: CHAT_STREAM_FAILURE_CODE,
+              errorKind: errorKind(error),
               streaming: true,
             },
             userAgent,
             ipAddress: ipHeader,
-          }).catch((err) => console.error('[consultation] chat_failed log failed:', err));
+          }).catch((logError) => logSafeChatFailure('chat_failed_log_failed', logError));
         } finally {
           // Best-effort post-hoc funnel log for the answered stream.
           // If the stream crashed before metadata was captured, skip
@@ -245,7 +265,7 @@ export async function POST(request: NextRequest) {
               // because the OpenAI streaming API does not return a usage
               // chunk by default. Wall time alone still feeds p50/p95/p99.
               latencyMs: Date.now() - streamStartedAt,
-            }).catch((err) => console.error('[consultation] streaming chat log failed:', err));
+            }).catch((error) => logSafeChatFailure('streaming_chat_log_failed', error));
             logConsultationSafetySignals({
               sessionId,
               locale,
@@ -265,7 +285,7 @@ export async function POST(request: NextRequest) {
       status: 200,
       headers: {
         'Content-Type': 'text/event-stream; charset=utf-8',
-        'Cache-Control': 'no-cache, no-transform',
+        'Cache-Control': 'private, no-store, no-transform',
         Connection: 'keep-alive',
         // Some proxies buffer responses without this header.
         'X-Accel-Buffering': 'no',
@@ -285,7 +305,7 @@ export async function POST(request: NextRequest) {
         riskLevel: response.riskLevel,
         userAgent,
         ipAddress: ipHeader,
-      }).catch((err) => console.error('[consultation] injection log failed:', err));
+      }).catch((error) => logSafeChatFailure('chat_injection_log_failed', error));
     }
 
     try {
@@ -311,7 +331,7 @@ export async function POST(request: NextRequest) {
         completionTokens: response.perfMetrics?.completionTokens,
       });
     } catch (error) {
-      console.error('[consultation] chat log failed:', error);
+      logSafeChatFailure('chat_event_log_failed', error);
     }
 
     logConsultationSafetySignals({
@@ -331,13 +351,14 @@ export async function POST(request: NextRequest) {
       sessionId,
       locale,
       metadata: {
-        failureReason: error instanceof Error ? error.message : 'unknown_chat_failure',
+        failureReason: 'chat_response_failed',
+        errorKind: errorKind(error),
       },
       userAgent,
       ipAddress: ipHeader,
-    }).catch((err) => console.error('[consultation] chat_failed log failed:', err));
+    }).catch((logError) => logSafeChatFailure('chat_failed_log_failed', logError));
 
-    console.error('[consultation] chat handler failed:', error);
+    logSafeChatFailure('chat_response_failed', error);
     return NextResponse.json(
       { success: false, error: 'AI response could not be generated. Please try again or contact the firm directly.' },
       { status: 503 },

@@ -1,6 +1,9 @@
 import type { SiteLocale } from '@/lib/locales';
-import Link from 'next/link';
 import PricingIcon, { type PricingIconName } from '@/components/PricingIcon';
+import {
+  getConsultationCtaLabel,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 
 type PricingItem = {
   icon: PricingIconName;
@@ -17,7 +20,6 @@ type PricingContent = {
   items: PricingItem[];
   disclaimer: string;
   ctaLabel: string;
-  ctaHref: string;
 };
 
 const pricingData: Record<SiteLocale, PricingContent> = {
@@ -78,8 +80,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ],
     disclaimer:
       '상기 비용은 기본 기준이며, 사건의 특성·복합성·긴급도에 따라 변동될 수 있습니다. 정확한 비용은 초기 상담 후 서면 견적으로 안내드립니다.',
-    ctaLabel: '상담 예약하기',
-    ctaHref: '/ko/contact'
+    ctaLabel: '상담 예약하기'
   },
   'zh-hant': {
     currency: 'NTD (新台幣)',
@@ -138,8 +139,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ],
     disclaimer:
       '以上費用為基本標準，依案件特性、複雜度及急迫程度可能有所調整。確切費用於初次諮詢後以書面報價方式提供。',
-    ctaLabel: '預約諮詢',
-    ctaHref: '/zh-hant/contact'
+    ctaLabel: '預約諮詢'
   },
   en: {
     currency: 'NTD (New Taiwan Dollar)',
@@ -198,8 +198,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ],
     disclaimer:
       'Fees above are baseline standards and may vary based on case characteristics, complexity, and urgency. Exact fees will be provided in writing after the initial consultation.',
-    ctaLabel: 'Book a Consultation',
-    ctaHref: '/en/contact'
+    ctaLabel: 'Book a Consultation'
   },
   ja: {
     currency: 'NTD（ニュー台湾ドル）',
@@ -260,8 +259,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ],
     disclaimer:
       '上記の費用は基本的な目安であり、案件の性質、複雑性、緊急性により変動する場合があります。正確な費用は、初回相談後に書面によるお見積りでご案内します。',
-    ctaLabel: '法律相談を申し込む',
-    ctaHref: '/ja/contact'
+    ctaLabel: '法律相談を申し込む'
   }
 };
 
@@ -299,9 +297,13 @@ export default function PricingCards({ locale }: { locale: SiteLocale }) {
         </div>
 
         <div className="pricing-cta">
-          <Link href={data.ctaHref} className="button">
+          <a
+            href={getConsultationPublicMailto(locale)}
+            className="button"
+            aria-label={`${data.ctaLabel} — ${getConsultationCtaLabel(locale)}`}
+          >
             {data.ctaLabel}
-          </Link>
+          </a>
         </div>
       </div>
     </section>

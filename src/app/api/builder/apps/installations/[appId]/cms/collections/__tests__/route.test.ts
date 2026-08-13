@@ -32,7 +32,7 @@ vi.mock('@/lib/builder/apps/scopes', () => {
 const guardMutationMock = vi.mocked(guardMutation);
 const authorizeBuilderAppScopeMock = vi.mocked(authorizeBuilderAppScope);
 const listEditableBuilderCmsCollectionsMock = vi.mocked(listEditableBuilderCmsCollections);
-const routeContext = { params: { appId: 'site-search' } };
+const routeContext = { params: Promise.resolve({ appId: 'site-search' }) };
 
 function request(query = ''): NextRequest {
   return new NextRequest(`https://law.example.test/api/builder/apps/installations/site-search/cms/collections${query ? `?${query}` : ''}`);

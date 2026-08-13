@@ -19,7 +19,10 @@ import {
 import {
   readTranslationReleasePolicy,
 } from '@/lib/builder/publish-gate/translation-release-policy';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import { resolveUserRole } from '@/lib/builder/security/resolve-permission';
 import { listUserRoles } from '@/lib/builder/security/user-role-store';
 import { locales } from '@/lib/locales';
@@ -53,7 +56,7 @@ function isTranslationReleaseApprovalStatus(
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'manage-translations');
   if (auth instanceof NextResponse) return auth;
 
   const pageId = request.nextUrl.searchParams.get('pageId') ?? undefined;

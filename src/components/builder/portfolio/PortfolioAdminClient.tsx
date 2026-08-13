@@ -392,7 +392,12 @@ export default function PortfolioAdminClient({
             <div className={styles.cards}>
               {filtered.map((project) => (
                 <article key={project.projectId} className={styles.card} data-portfolio-admin-project={project.projectId}>
-                  {project.coverImageUrl ? <img src={project.coverImageUrl} alt="" /> : <div className={styles.imageFallback} />}
+                  {project.coverImageUrl ? (
+                    <>
+                      {/* eslint-disable-next-line @next/next/no-img-element -- Portfolio cover URLs are editor-entered and can be arbitrary remote/blob/data previews. */}
+                      <img src={project.coverImageUrl} alt="" />
+                    </>
+                  ) : <div className={styles.imageFallback} />}
                   <div>
                     <span>{categories.find((item) => item.id === project.category)?.name[locale] ?? project.category} · {statusText(locale, project.status)}</span>
                     <strong>{project.title}</strong>

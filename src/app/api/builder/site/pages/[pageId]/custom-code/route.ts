@@ -45,10 +45,8 @@ function validationErrorResponse(locale: ReturnType<typeof normalizeLocale>, err
   return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');

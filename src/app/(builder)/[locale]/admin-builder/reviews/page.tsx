@@ -6,7 +6,8 @@ import { buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return buildSeoMetadata({
     locale,
@@ -18,11 +19,12 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   });
 }
 
-export default async function BuilderReviewsAdminPage({
-  params,
-}: {
-  params: { locale: Locale };
-}) {
+export default async function BuilderReviewsAdminPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const reviews = await readReviews();
 

@@ -10,7 +10,8 @@ import styles from '../EventsPublic.module.css';
 
 export const dynamic = 'force-dynamic';
 
-export async function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale; slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const event = await findEventBySlug(locale, params.slug);
   if (!event || event.status !== 'published') return {};
@@ -26,7 +27,8 @@ export async function generateMetadata({ params }: { params: { locale: Locale; s
   });
 }
 
-export default async function EventDetailPage({ params }: { params: { locale: Locale; slug: string } }) {
+export default async function EventDetailPage(props: { params: Promise<{ locale: Locale; slug: string }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const event = await findEventBySlug(locale, params.slug);
   if (!event || event.status !== 'published') return notFound();

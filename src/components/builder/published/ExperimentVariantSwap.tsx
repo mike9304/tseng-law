@@ -10,7 +10,8 @@ import { useEffect } from 'react';
  * Multiple variants of the same experimentId can coexist in the DOM. On
  * mount this component:
  *   1. Collects unique experimentIds from the DOM.
- *   2. Calls /api/experiments/assign for each (sticky via tw_exp_sid cookie).
+ *   2. Resolves each variant with a side-effect-free GET, then records the
+ *      exposure through a same-origin POST.
  *   3. Hides every variant whose `data-builder-experiment-variant` doesn't
  *      match the resolved variantId.
  *
@@ -20,9 +21,9 @@ import { useEffect } from 'react';
  */
 function currentLocale(): string {
   const segment = window.location.pathname.split('/').filter(Boolean)[0];
-  if (segment === 'ko' || segment === 'zh-hant' || segment === 'en') return segment;
+  if (segment === 'ko' || segment === 'ja' || segment === 'zh-hant' || segment === 'en') return segment;
   const htmlLang = document.documentElement.lang;
-  if (htmlLang === 'ko' || htmlLang === 'zh-hant' || htmlLang === 'en') return htmlLang;
+  if (htmlLang === 'ko' || htmlLang === 'ja' || htmlLang === 'zh-hant' || htmlLang === 'en') return htmlLang;
   return 'ko';
 }
 
@@ -35,6 +36,7 @@ export default function ExperimentVariantSwap() {
     const locale = currentLocale();
     const experimentIds = Array.from(new Set(nodes.map((n) => n.dataset.builderExperimentId ?? '').filter(Boolean)));
     const variantByExperiment: Record<string, string> = {};
+    const assignmentTokenByExperiment: Record<string, string> = {};
 
     let cancelled = false;
     (async () => {
@@ -44,9 +46,26 @@ export default function ExperimentVariantSwap() {
             credentials: 'include',
           });
           if (!res.ok) continue;
-          const payload = (await res.json()) as { variantId?: string | null };
-          if (!cancelled && payload.variantId) {
+          const payload = (await res.json()) as {
+            assignmentToken?: string;
+            firstExposure?: boolean;
+            variantId?: string | null;
+          };
+          if (!cancelled && payload.variantId && payload.assignmentToken) {
             variantByExperiment[experimentId] = payload.variantId;
+            if (payload.firstExposure) {
+              await fetch(`/api/experiments/assign?locale=${encodeURIComponent(locale)}`, {
+                method: 'POST',
+                credentials: 'include',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  assignmentToken: payload.assignmentToken,
+                  locale,
+                }),
+              }).catch(() => undefined);
+            }
+            if (cancelled) return;
+            assignmentTokenByExperiment[experimentId] = payload.assignmentToken;
           }
         } catch {
           /* ignore */
@@ -78,11 +97,18 @@ export default function ExperimentVariantSwap() {
       const wrapper = (target as HTMLElement).closest<HTMLElement>('[data-builder-experiment-id]');
       const experimentId = wrapper?.dataset.builderExperimentId ?? '';
       const variantId = variantByExperiment[experimentId] ?? wrapper?.dataset.builderExperimentVariant ?? '';
-      if (!goal || !experimentId || !variantId) return;
+      const assignmentToken = assignmentTokenByExperiment[experimentId];
+      if (!goal || !experimentId || !variantId || !assignmentToken) return;
       void fetch(`/api/experiments/event?locale=${encodeURIComponent(locale)}`, {
         method: 'POST',
+        credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ experimentId, variantId, goal }),
+        body: JSON.stringify({
+          experimentId,
+          variantId,
+          goal,
+          assignmentToken,
+        }),
         keepalive: true,
       }).catch(() => undefined);
     }

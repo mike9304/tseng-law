@@ -1112,7 +1112,12 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
                   </div>
                   <div className={styles.variantActions}>
                     <label><input type="checkbox" checked={variant.allowBackorder} onChange={(event) => updateVariant(index, { allowBackorder: event.target.checked })} data-commerce-product-variant-backorder />{copy.backorder}</label>
-                    {variant.mediaUrl ? <img src={variant.mediaUrl} alt="" data-commerce-product-variant-image /> : null}
+                    {variant.mediaUrl ? (
+                      <>
+                        {/* eslint-disable-next-line @next/next/no-img-element -- This live editor preview must render arbitrary user-entered remote/blob/data URLs without optimizer allowlisting. */}
+                        <img src={variant.mediaUrl} alt="" data-commerce-product-variant-image />
+                      </>
+                    ) : null}
                     <button type="button" onClick={() => removeVariant(index)} data-commerce-product-variant-remove>{copy.removeVariant}</button>
                   </div>
                 </article>
@@ -1159,7 +1164,12 @@ export default function ProductManagerClient({ locale, siteTitle, initialProduct
                       data-commerce-product-select={product.productId}
                     />
                   </label>
-                  {product.media[0]?.url ? <img src={product.media[0].url} alt="" /> : <div className={styles.thumbFallback} />}
+                  {product.media[0]?.url ? (
+                    <>
+                      {/* eslint-disable-next-line @next/next/no-img-element -- Product media is builder-managed and can reference arbitrary remote/blob/data preview URLs. */}
+                      <img src={product.media[0].url} alt="" />
+                    </>
+                  ) : <div className={styles.thumbFallback} />}
                   <div className={styles.identity}>
                     <strong>{product.title}</strong>
                     <span>/{product.slug}</span>

@@ -1,5 +1,9 @@
 import { siteContent } from '@/data/site-content';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import {
+  getConsultationPublicEmail,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 import type { Locale } from '@/lib/locales';
 import {
   createButtonNode,
@@ -10,6 +14,12 @@ import {
   resolveHeadingFontFamily,
   type CanvasRect,
 } from './shared';
+
+const emailConsultationLabels = {
+  ko: '이메일 상담',
+  'zh-hant': '電子郵件諮詢',
+  en: 'Email consultation',
+} as const;
 
 function resolveDecorAlt(locale: Locale): string {
   if (locale === 'zh-hant') return '聯絡區塊裝飾圖案';
@@ -25,7 +35,8 @@ export function decomposeContactCta(
   const content = siteContent[locale];
   const contact = content.contact;
   const cta = content.homeContactCta;
-  const representativeTel = content.quickContact.actions.find((action) => action.href.startsWith('tel:'));
+  const consultationEmail = getConsultationPublicEmail();
+  const consultationMailto = getConsultationPublicMailto(locale);
   const headingFont = resolveHeadingFontFamily(locale);
   const bodyFont = resolveBodyFontFamily(locale);
 
@@ -93,7 +104,7 @@ export function decomposeContactCta(
       parentId: groupId,
       rect: { x: 80, y: 370, width: 220, height: 48 },
       label: contact.cta.label,
-      href: `/${locale}/contact`,
+      href: consultationMailto,
       variant: 'primary',
       style: {
         backgroundColor: '#16382d',
@@ -107,24 +118,22 @@ export function decomposeContactCta(
     }),
   ];
 
-  if (representativeTel) {
-    nodes.push(
-      createButtonNode({
-        id: `${groupId}-phone-button`,
-        parentId: groupId,
-        rect: { x: 316, y: 370, width: 220, height: 48 },
-        label: representativeTel.value,
-        href: representativeTel.href,
-        variant: 'secondary',
-        style: {
-          backgroundColor: 'rgba(233, 242, 234, 0.06)',
-          borderColor: 'rgba(233, 242, 234, 0.28)',
-          borderWidth: 1,
-          borderRadius: 12,
-        },
-      }),
-    );
-  }
+  nodes.push(
+    createButtonNode({
+      id: `${groupId}-email-button`,
+      parentId: groupId,
+      rect: { x: 316, y: 370, width: 330, height: 48 },
+      label: `${emailConsultationLabels[locale]}: ${consultationEmail}`,
+      href: consultationMailto,
+      variant: 'secondary',
+      style: {
+        backgroundColor: 'rgba(233, 242, 234, 0.06)',
+        borderColor: 'rgba(233, 242, 234, 0.28)',
+        borderWidth: 1,
+        borderRadius: 12,
+      },
+    }),
+  );
 
   return nodes;
 }

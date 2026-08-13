@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { normalizeLocale } from '@/lib/locales';
 import {
   logConsultationFunnelEvent,
@@ -87,6 +88,9 @@ function sanitizeMetadata(raw: unknown): Record<string, unknown> | undefined {
 }
 
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const userAgent = request.headers.get('user-agent');
   const ipHeader = request.headers.get('x-forwarded-for');
 

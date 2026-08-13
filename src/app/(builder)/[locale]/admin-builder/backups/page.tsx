@@ -3,6 +3,7 @@ import { listBackups } from '@/lib/builder/backups/backup-engine';
 import BackupsAdmin from '@/components/builder/backups/BackupsAdmin';
 import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
+import { requireBuilderPagePermission } from '@/lib/builder/security/page-permission';
 
 export const dynamic = 'force-dynamic';
 
@@ -27,7 +28,8 @@ const COPY: Record<Locale, { title: string; description: string; heading: string
   },
 };
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return buildSeoMetadata({
     locale,
@@ -39,9 +41,11 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   });
 }
 
-export default async function BackupsPage({ params }: { params: { locale: string } }) {
+export default async function BackupsPage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const text = COPY[locale];
+  await requireBuilderPagePermission('settings');
   const backups = await listBackups();
   return (
     <main>

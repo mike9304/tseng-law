@@ -44,9 +44,10 @@ function validationError(locale: Locale, error: ZodError): NextResponse {
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { source: string; ownerId: string; documentId: string } },
+  props: { params: Promise<{ source: string; ownerId: string; documentId: string }> }
 ) {
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const params = await props.params;
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
@@ -70,9 +71,10 @@ export async function POST(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { source: string; ownerId: string; documentId: string } },
+  props: { params: Promise<{ source: string; ownerId: string; documentId: string }> }
 ) {
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const params = await props.params;
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);

@@ -5,7 +5,8 @@ import { getSdkCopy } from '@/components/builder/dev/sdk-copy';
 
 export const dynamic = 'force-static';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const copy = getSdkCopy(params.locale);
   return {
     title: copy.title,
@@ -14,6 +15,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default function BuilderSdkDocsPage({ params }: { params: { locale: Locale } }) {
+export default async function BuilderSdkDocsPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   return <SdkDocsPageContent locale={params.locale} />;
 }

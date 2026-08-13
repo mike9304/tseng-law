@@ -45,6 +45,7 @@ runtime-data/
 # Working artifacts (agent sessions) — not product
 scratchpad/
 runtime-data-prod-mirror/
+runtime-data-prod-mirror-*/
 BRAIN-HANDOFF-OPUS.md
 SEED-ALIGNMENT-TARGETS.md
 DEPLOY-RUNBOOK.md

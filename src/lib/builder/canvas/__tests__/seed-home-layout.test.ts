@@ -73,26 +73,26 @@ function createColumnPost(overrides: Partial<ColumnPost> & Pick<ColumnPost, 'slu
 
 const EXPECTED_ZH_HANT_DECOMPOSED_SECTION_RECTS = [
   { id: 'home-hero-root', y: 0, height: 774 },
-  { id: 'home-insights-root', y: 774, height: 1247 },
-  { id: 'home-services-root', y: 2021, height: 1279 },
-  { id: 'home-attorney-root', y: 3300, height: 926 },
-  { id: 'home-case-results-root', y: 4226, height: 843 },
-  { id: 'home-stats-root', y: 5069, height: 622 },
-  { id: 'home-faq-root', y: 5691, height: 1333 },
-  { id: 'home-offices-root', y: 7024, height: 919 },
-  { id: 'home-contact-root', y: 7943, height: 543 },
+  { id: 'home-insights-root', y: 774, height: 820 },
+  { id: 'home-services-root', y: 1594, height: 820 },
+  { id: 'home-attorney-root', y: 2414, height: 926 },
+  { id: 'home-case-results-root', y: 3340, height: 600 },
+  { id: 'home-stats-root', y: 3940, height: 560 },
+  { id: 'home-faq-root', y: 4500, height: 1160 },
+  { id: 'home-offices-root', y: 5660, height: 919 },
+  { id: 'home-contact-root', y: 6579, height: 543 },
 ] as const;
 
 const EXPECTED_KO_DECOMPOSED_SECTION_RECTS = [
   { id: 'home-hero-root', y: 0, height: 788 },
-  { id: 'home-insights-root', y: 788, height: 1277 },
-  { id: 'home-services-root', y: 2065, height: 1279 },
-  { id: 'home-attorney-root', y: 3344, height: 926 },
-  { id: 'home-case-results-root', y: 4270, height: 800 },
-  { id: 'home-stats-root', y: 5070, height: 621 },
-  { id: 'home-faq-root', y: 5691, height: 1333 },
-  { id: 'home-offices-root', y: 7024, height: 919 },
-  { id: 'home-contact-root', y: 7943, height: 532 },
+  { id: 'home-insights-root', y: 788, height: 820 },
+  { id: 'home-services-root', y: 1608, height: 820 },
+  { id: 'home-attorney-root', y: 2428, height: 926 },
+  { id: 'home-case-results-root', y: 3354, height: 600 },
+  { id: 'home-stats-root', y: 3954, height: 560 },
+  { id: 'home-faq-root', y: 4514, height: 1160 },
+  { id: 'home-offices-root', y: 5674, height: 919 },
+  { id: 'home-contact-root', y: 6593, height: 532 },
 ] as const;
 
 describe('home seed canvas layout', () => {
@@ -149,14 +149,14 @@ describe('home seed canvas layout', () => {
 
     expect(controls).toBeDefined();
     expect(textNodeText(pageIndicator)).toBe(`1 / ${expectedPageCount}`);
-    expect(listWrap?.rect.x).toBe(623);
-    expect(listWrap?.rect.width).toBe(536);
-    expect(list?.rect.x).toBe(20);
-    expect(list?.rect.y).toBe(72);
-    expect(list?.rect.width).toBe(496);
-    expect(list?.rect.height).toBe(620);
-    expect(listWrap?.rect.height).toBe(720);
-    expect(firstListTitle?.rect.width).toBe(352);
+    expect(listWrap?.rect.x).toBe(576);
+    expect(listWrap?.rect.width).toBe(560);
+    expect(list?.rect.x).toBe(16);
+    expect(list?.rect.y).toBe(54);
+    expect(list?.rect.width).toBe(528);
+    expect(list?.rect.height).toBe(360);
+    expect(listWrap?.rect.height).toBe(424);
+    expect(firstListTitle?.rect.width).toBe(408);
     expect(textNodeText(featuredTitle)).toBe(publicHomePosts[0]?.title);
     expect(textNodeText(firstListTitle)).toBe(publicHomePosts[1]?.title);
   });
@@ -221,16 +221,16 @@ describe('home seed canvas layout', () => {
     const arrow = nodesById.get('home-hero-scroll-arrow');
 
     expect(inner?.rect).toMatchObject({ x: 51, y: 184, width: 1178, height: 483 });
-    expect(copy?.rect).toMatchObject({ x: 0, y: 0, width: 780, height: 363 });
+    expect(copy?.rect).toMatchObject({ x: 0, y: 0, width: 780, height: 450 });
     expect(label?.rect).toMatchObject({ x: 0, y: 1, width: 240, height: 32 });
     expect(title?.rect).toMatchObject({ x: 0, y: 56, width: 780, height: 167 });
     expect(subtitle?.rect).toMatchObject({ x: 0, y: 247, width: 580, height: 116 });
-    expect(links?.rect).toMatchObject({ x: 0, y: 338, width: 260, height: 32 });
+    expect(links?.rect).toMatchObject({ x: 0, y: 390, width: 460, height: 48 });
     expect(search?.rect).toMatchObject({ x: 0, y: HERO_SEARCH_WRAPPER_Y, width: 1280, height: 62 });
     expect(arrow?.rect).toMatchObject({ x: 1216, y: 746, width: 48, height: 48 });
   });
 
-  it('preserves the public home hero media fallback images', () => {
+  it('seeds the accepted public home hero poster without the obsolete city image', () => {
     const doc = createHomePageCanvasDocument('ko');
     const imageNodes = doc.nodes
       .filter((node): node is BuilderImageCanvasNode => node.parentId === 'home-hero-media' && isImageNode(node))
@@ -241,10 +241,9 @@ describe('home seed canvas layout', () => {
       }));
 
     expect(imageNodes).toEqual([
-      { id: 'home-hero-media-image', src: '/images/hero-bg-01.webp', opacity: 100 },
-      { id: 'home-hero-media-image-2', src: '/images/hero-bg-02.webp', opacity: 0 },
-      { id: 'home-hero-media-image-3', src: '/images/hero-bg-03.webp', opacity: 0 },
+      { id: 'home-hero-media-image', src: '/images/editorial/taichung-courthouse-civic-daylight-v2.webp', opacity: 100 },
     ]);
+    expect(JSON.stringify(imageNodes)).not.toContain('/images/hero-taiwan-modern-city-opening.webp');
   });
 
   it('keeps non-overlay home section descendants inside their section bounds', () => {
@@ -278,7 +277,7 @@ describe('home seed canvas layout', () => {
   it('matches zh-hant decomposed home section geometry to the localized composite flow', () => {
     const doc = createHomePageCanvasDocument('zh-hant');
 
-    expect(doc.stageHeight).toBe(8488);
+    expect(doc.stageHeight).toBe(7124);
     expect(
       doc.nodes
         .filter((node) => !node.parentId && /^home-.+-root$/.test(node.id))
@@ -295,7 +294,7 @@ describe('home seed canvas layout', () => {
     const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
 
     expect(nodesById.get('home-hero-inner')?.rect).toMatchObject({ x: 51, y: 175, width: 1178, height: 483 });
-    expect(nodesById.get('home-hero-links')?.rect).toMatchObject({ x: 0, y: 286, width: 260, height: 32 });
+    expect(nodesById.get('home-hero-links')?.rect).toMatchObject({ x: 0, y: 286, width: 460, height: 48 });
     expect(nodesById.get('home-hero-search-wrapper')?.rect).toMatchObject({ x: 51, y: 743, width: 1151, height: 62 });
 
     const overlay = nodesById.get('home-hero-overlay');
@@ -304,14 +303,14 @@ describe('home seed canvas layout', () => {
     expect(overlay?.rect).toMatchObject({ x: 0, y: 0, width: 1280, height: 774 });
     expect(String(overlay?.style.backgroundColor)).toContain('linear-gradient(118deg');
     expect(doc.nodes.findIndex((node) => node.id === 'home-hero-overlay')).toBeGreaterThan(
-      doc.nodes.findIndex((node) => node.id === 'home-hero-media-image-3'),
+      doc.nodes.findIndex((node) => node.id === 'home-hero-media-image'),
     );
     expect(doc.nodes.findIndex((node) => node.id === 'home-hero-overlay')).toBeLessThan(
       doc.nodes.findIndex((node) => node.id === 'home-hero-inner'),
     );
 
-    expect(nodesById.get('home-faq-container')?.rect).toMatchObject({ x: 72, y: 110, width: 1136, height: 1206 });
-    expect(nodesById.get('home-faq-list')?.rect).toMatchObject({ x: 0, y: 149, width: 1136, height: 1074 });
+    expect(nodesById.get('home-faq-container')?.rect).toMatchObject({ x: 51, y: 72, width: 1178, height: 1016 });
+    expect(nodesById.get('home-faq-list')?.rect).toMatchObject({ x: 0, y: 120, width: 1178, height: 896 });
     expect(nodesById.get('home-offices-container')?.rect).toMatchObject({ x: 51, y: 149, width: 1178, height: 628 });
     expect(nodesById.get('home-offices-tabs')?.rect).toMatchObject({ x: 0, y: 132, width: 1178, height: 47 });
     expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 198, width: 1178, height: 422 });
@@ -323,14 +322,16 @@ describe('home seed canvas layout', () => {
     const title = absoluteRect(nodesById, 'home-case-results-title');
     const desc = absoluteRect(nodesById, 'home-case-results-desc');
 
-    expect(nodesById.get('home-case-results-label')?.rect).toMatchObject({ x: 78 });
-    expect(nodesById.get('home-case-results-title')?.rect).toMatchObject({ x: 78, y: 172, width: 720, height: 172 });
-    expect(nodesById.get('home-case-results-divider')?.rect).toMatchObject({ x: 78, y: 344 });
-    expect(nodesById.get('home-case-results-desc')?.rect).toMatchObject({ x: 78, y: 356, width: 720, height: 80 });
-    expect(nodesById.get('home-case-results-summary')?.rect).toMatchObject({ x: 78, y: 446 });
-    expect(nodesById.get('home-case-results-cta')?.rect).toMatchObject({ x: 78, y: 516 });
+    expect(nodesById.get('home-case-results-media')?.rect).toMatchObject({ x: 0, width: 640, height: 600 });
+    expect(nodesById.get('home-case-results-content')?.rect).toMatchObject({ x: 640, width: 640, height: 600 });
+    expect(nodesById.get('home-case-results-label')?.rect).toMatchObject({ x: 56, y: 72 });
+    expect(nodesById.get('home-case-results-title')?.rect).toMatchObject({ x: 56, y: 116, width: 528, height: 128 });
+    expect(nodesById.get('home-case-results-divider')?.rect).toMatchObject({ x: 56, y: 252 });
+    expect(nodesById.get('home-case-results-desc')?.rect).toMatchObject({ x: 56, y: 294, width: 528, height: 108 });
+    expect(nodesById.get('home-case-results-summary')?.rect).toMatchObject({ x: 56, y: 414 });
+    expect(nodesById.get('home-case-results-cta')?.rect).toMatchObject({ x: 56, y: 506 });
     expect(rectsOverlap(title, desc)).toBe(false);
-    expect(desc.y - (title.y + title.height)).toBeGreaterThanOrEqual(12);
+    expect(desc.y - (title.y + title.height)).toBeGreaterThanOrEqual(50);
   });
 
   it('matches zh-hant attorney decomposition to the composite split portrait geometry', () => {
@@ -357,17 +358,17 @@ describe('home seed canvas layout', () => {
       },
     });
 
-    expect(absoluteRect(nodesById, 'home-attorney-image-wrap')).toMatchObject({ x: 0, y: 3442, width: 576, height: 644 });
-    expect(absoluteRect(nodesById, 'home-attorney-image')).toMatchObject({ x: 0, y: 3442, width: 576, height: 644 });
-    expect(absoluteRect(nodesById, 'home-attorney-badge')).toMatchObject({ x: 0, y: 4009, width: 533, height: 77 });
-    expect(absoluteRect(nodesById, 'home-attorney-label')).toMatchObject({ x: 653, y: 3580, width: 550, height: 21 });
-    expect(absoluteRect(nodesById, 'home-attorney-title')).toMatchObject({ x: 653, y: 3618, width: 550, height: 86 });
-    expect(absoluteRect(nodesById, 'home-attorney-divider')).toMatchObject({ x: 653, y: 3710, width: 40, height: 32 });
-    expect(absoluteRect(nodesById, 'home-attorney-intro-1')).toMatchObject({ x: 653, y: 3747, width: 540, height: 27 });
-    expect(absoluteRect(nodesById, 'home-attorney-intro-2')).toMatchObject({ x: 653, y: 3790, width: 540, height: 27 });
-    expect(absoluteRect(nodesById, 'home-attorney-summary')).toMatchObject({ x: 653, y: 3833, width: 540, height: 27 });
-    expect(absoluteRect(nodesById, 'home-attorney-contact-line')).toMatchObject({ x: 653, y: 3876, width: 540, height: 27 });
-    expect(absoluteRect(nodesById, 'home-attorney-cta')).toMatchObject({ x: 653, y: 3919, width: 550, height: 29 });
+    expect(absoluteRect(nodesById, 'home-attorney-image-wrap')).toMatchObject({ x: 0, y: 2556, width: 576, height: 644 });
+    expect(absoluteRect(nodesById, 'home-attorney-image')).toMatchObject({ x: 0, y: 2556, width: 576, height: 644 });
+    expect(absoluteRect(nodesById, 'home-attorney-badge')).toMatchObject({ x: 0, y: 3123, width: 533, height: 77 });
+    expect(absoluteRect(nodesById, 'home-attorney-label')).toMatchObject({ x: 653, y: 2694, width: 550, height: 21 });
+    expect(absoluteRect(nodesById, 'home-attorney-title')).toMatchObject({ x: 653, y: 2732, width: 550, height: 86 });
+    expect(absoluteRect(nodesById, 'home-attorney-divider')).toMatchObject({ x: 653, y: 2824, width: 40, height: 32 });
+    expect(absoluteRect(nodesById, 'home-attorney-intro-1')).toMatchObject({ x: 653, y: 2861, width: 540, height: 27 });
+    expect(absoluteRect(nodesById, 'home-attorney-intro-2')).toMatchObject({ x: 653, y: 2904, width: 540, height: 27 });
+    expect(absoluteRect(nodesById, 'home-attorney-summary')).toMatchObject({ x: 653, y: 2947, width: 540, height: 27 });
+    expect(absoluteRect(nodesById, 'home-attorney-contact-line')).toMatchObject({ x: 653, y: 2990, width: 540, height: 27 });
+    expect(absoluteRect(nodesById, 'home-attorney-cta')).toMatchObject({ x: 653, y: 3033, width: 550, height: 29 });
 
     expect(textNodeText(nodesById.get('home-attorney-label'))).toBe('ABOUT');
     expect(textNodeText(nodesById.get('home-attorney-title'))).toBe('曾雋崴律師，專注服務韓國客戶的台灣法律夥伴');
@@ -391,7 +392,7 @@ describe('home seed canvas layout', () => {
   it('matches ko decomposed home section geometry to the measured composite flow', () => {
     const doc = createHomePageCanvasDocument('ko');
 
-    expect(doc.stageHeight).toBe(8477);
+    expect(doc.stageHeight).toBe(7127);
     expect(
       doc.nodes
         .filter((node) => !node.parentId && /^home-.+-root$/.test(node.id))
@@ -410,27 +411,27 @@ describe('home seed canvas layout', () => {
     const anchorRects = [
       ['home-hero-title', 217],
       ['home-hero-subtitle', 408],
-      ['home-hero-links', 499],
+      ['home-hero-links', 551],
       ['home-hero-search-input', 743],
-      ['home-insights-title', 917],
-      ['home-insights-featured-title', 1577],
-      ['home-services-title', 2256],
-      ['home-services-card-0', 2389],
-      ['home-attorney-label', 3610],
-      ['home-attorney-title', 3649],
-      ['home-attorney-cta', 3976],
-      ['home-case-results-title', 4528],
-      ['home-case-results-cta', 4822],
-      ['home-stats-title', 5261],
-      ['home-faq-title', 5880],
-      ['home-faq-item-0', 5973],
-      ['home-offices-tabs', 7305],
-      ['home-contact-title', 8133],
-      ['home-contact-primary', 8287],
+      ['home-insights-title', 911],
+      ['home-insights-featured-title', 1425],
+      ['home-services-title', 1720],
+      ['home-services-card-0', 1900],
+      ['home-attorney-label', 2694],
+      ['home-attorney-title', 2733],
+      ['home-attorney-cta', 3060],
+      ['home-case-results-title', 3470],
+      ['home-case-results-cta', 3860],
+      ['home-stats-title', 4058],
+      ['home-faq-title', 4626],
+      ['home-faq-item-0', 4706],
+      ['home-offices-tabs', 5955],
+      ['home-contact-title', 6783],
+      ['home-contact-primary', 6937],
     ] as const;
 
     expect(nodesById.get('home-hero-overlay')).toBeDefined();
-    expect(textNodeText(nodesById.get('home-faq-label'))).toBe('자주 묻는 질문');
+    expect(textNodeText(nodesById.get('home-faq-label'))).toBe('FAQ');
     expect(anchorRects.map(([id, y]) => {
       const node = requireNode(nodesById, id);
       return [id, resolveCanvasNodeAbsoluteRectForViewport(node, nodesById, 'desktop').y, y];
@@ -443,9 +444,9 @@ describe('home seed canvas layout', () => {
 
     expect(nodesById.has('home-hero-overlay')).toBe(false);
     expect(nodesById.get('home-hero-inner')?.rect).toMatchObject({ x: 51, y: 184, width: 1178, height: 483 });
-    expect(nodesById.get('home-hero-links')?.rect).toMatchObject({ x: 0, y: 338, width: 260, height: 32 });
+    expect(nodesById.get('home-hero-links')?.rect).toMatchObject({ x: 0, y: 390, width: 460, height: 48 });
     expect(nodesById.get('home-hero-search-wrapper')?.rect).toMatchObject({ x: 0, y: HERO_SEARCH_WRAPPER_Y, width: 1280, height: 62 });
-    expect(nodesById.get('home-faq-container')?.rect).toMatchObject({ x: 72, y: 88, width: 1136, height: 1280 });
+    expect(nodesById.get('home-faq-container')?.rect).toMatchObject({ x: 72, y: 72, width: 1136, height: 1016 });
     expect(nodesById.get('home-offices-container')?.rect).toMatchObject({ x: 72, y: 88, width: 1136, height: 600 });
     expect(nodesById.get('home-offices-tabs')?.rect).toMatchObject({ x: 0, y: 116, width: 560, height: 36 });
     expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 184, width: 1136, height: 420 });
@@ -472,32 +473,32 @@ describe('home seed canvas layout', () => {
     const enNodesById = new Map(enDoc.nodes.map((node) => [node.id, node]));
 
     expect(attorneyIds.map((id) => [id, absoluteRect(koNodesById, id)])).toEqual([
-      ['home-attorney-image-wrap', { x: 0, y: 3485, width: 576, height: 644 }],
-      ['home-attorney-image', { x: 0, y: 3485, width: 576, height: 644 }],
-      ['home-attorney-badge', { x: 22, y: 4031, width: 533, height: 77 }],
-      ['home-attorney-content', { x: 576, y: 3485, width: 704, height: 644 }],
-      ['home-attorney-label', { x: 576, y: 3610, width: 180, height: 28 }],
-      ['home-attorney-title', { x: 576, y: 3649, width: 560, height: 86 }],
-      ['home-attorney-divider', { x: 576, y: 3759, width: 80, height: 4 }],
-      ['home-attorney-intro-1', { x: 576, y: 3787, width: 560, height: 58 }],
-      ['home-attorney-intro-2', { x: 576, y: 3857, width: 560, height: 58 }],
-      ['home-attorney-summary', { x: 576, y: 3927, width: 560, height: 82 }],
-      ['home-attorney-contact-line', { x: 576, y: 3995, width: 560, height: 40 }],
-      ['home-attorney-cta', { x: 576, y: 3976, width: 220, height: 28 }],
+      ['home-attorney-image-wrap', { x: 0, y: 2569, width: 576, height: 644 }],
+      ['home-attorney-image', { x: 0, y: 2569, width: 576, height: 644 }],
+      ['home-attorney-badge', { x: 22, y: 3115, width: 533, height: 77 }],
+      ['home-attorney-content', { x: 576, y: 2569, width: 704, height: 644 }],
+      ['home-attorney-label', { x: 576, y: 2694, width: 180, height: 28 }],
+      ['home-attorney-title', { x: 576, y: 2733, width: 560, height: 86 }],
+      ['home-attorney-divider', { x: 576, y: 2843, width: 80, height: 4 }],
+      ['home-attorney-intro-1', { x: 576, y: 2871, width: 560, height: 58 }],
+      ['home-attorney-intro-2', { x: 576, y: 2941, width: 560, height: 58 }],
+      ['home-attorney-summary', { x: 576, y: 3011, width: 560, height: 82 }],
+      ['home-attorney-contact-line', { x: 576, y: 3079, width: 560, height: 40 }],
+      ['home-attorney-cta', { x: 576, y: 3060, width: 220, height: 28 }],
     ]);
     expect(attorneyIds.map((id) => [id, absoluteRect(enNodesById, id)])).toEqual([
-      ['home-attorney-image-wrap', { x: 0, y: 3326, width: 576, height: 720 }],
-      ['home-attorney-image', { x: 0, y: 3326, width: 576, height: 720 }],
-      ['home-attorney-badge', { x: 24, y: 3886, width: 528, height: 108 }],
-      ['home-attorney-content', { x: 576, y: 3326, width: 704, height: 720 }],
-      ['home-attorney-label', { x: 576, y: 3418, width: 180, height: 28 }],
-      ['home-attorney-title', { x: 576, y: 3462, width: 560, height: 96 }],
-      ['home-attorney-divider', { x: 576, y: 3572, width: 80, height: 4 }],
-      ['home-attorney-intro-1', { x: 576, y: 3600, width: 560, height: 58 }],
-      ['home-attorney-intro-2', { x: 576, y: 3670, width: 560, height: 58 }],
-      ['home-attorney-summary', { x: 576, y: 3740, width: 560, height: 82 }],
-      ['home-attorney-contact-line', { x: 576, y: 3836, width: 560, height: 40 }],
-      ['home-attorney-cta', { x: 576, y: 3900, width: 220, height: 28 }],
+      ['home-attorney-image-wrap', { x: 0, y: 2460, width: 576, height: 720 }],
+      ['home-attorney-image', { x: 0, y: 2460, width: 576, height: 720 }],
+      ['home-attorney-badge', { x: 24, y: 3020, width: 528, height: 108 }],
+      ['home-attorney-content', { x: 576, y: 2460, width: 704, height: 720 }],
+      ['home-attorney-label', { x: 576, y: 2552, width: 180, height: 28 }],
+      ['home-attorney-title', { x: 576, y: 2596, width: 560, height: 96 }],
+      ['home-attorney-divider', { x: 576, y: 2706, width: 80, height: 4 }],
+      ['home-attorney-intro-1', { x: 576, y: 2734, width: 560, height: 58 }],
+      ['home-attorney-intro-2', { x: 576, y: 2804, width: 560, height: 58 }],
+      ['home-attorney-summary', { x: 576, y: 2874, width: 560, height: 82 }],
+      ['home-attorney-contact-line', { x: 576, y: 2970, width: 560, height: 40 }],
+      ['home-attorney-cta', { x: 576, y: 3034, width: 220, height: 28 }],
     ]);
   });
 
@@ -538,15 +539,15 @@ describe('home seed canvas layout', () => {
     const mobileMetrics = computeTopLevelFlowSectionMetrics(doc.nodes, 'mobile');
     const tabletMetrics = computeTopLevelFlowSectionMetrics(doc.nodes, 'tablet');
 
-    expect(root?.responsive?.mobile?.rect?.height).toBe(1285);
-    expect(container?.responsive?.mobile?.rect?.height).toBe(1187);
-    expect(list?.responsive?.mobile?.rect?.height).toBe(942);
-    expect(mobileMetrics.get('home-services-root')?.minHeight).toBe(1285);
+    expect(root?.responsive?.mobile?.rect?.height).toBe(1645);
+    expect(container?.responsive?.mobile?.rect?.height).toBe(1549);
+    expect(list?.responsive?.mobile?.rect?.height).toBe(1299);
+    expect(mobileMetrics.get('home-services-root')?.minHeight).toBe(1645);
 
-    expect(root?.responsive?.tablet?.rect?.height).toBe(1166);
-    expect(container?.responsive?.tablet?.rect?.height).toBe(980);
-    expect(list?.responsive?.tablet?.rect?.height).toBe(750);
-    expect(tabletMetrics.get('home-services-root')?.minHeight).toBe(1166);
+    expect(root?.responsive?.tablet?.rect?.height).toBe(1000);
+    expect(container?.responsive?.tablet?.rect?.height).toBe(860);
+    expect(list?.responsive?.tablet?.rect?.height).toBe(630);
+    expect(tabletMetrics.get('home-services-root')?.minHeight).toBe(1000);
   });
 
   it('keeps the home FAQ list sized around all collapsed items', () => {

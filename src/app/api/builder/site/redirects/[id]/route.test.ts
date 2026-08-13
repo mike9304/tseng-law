@@ -52,7 +52,7 @@ describe('/api/builder/site/redirects/[id]', () => {
   });
 
   it('returns localized stable-code JSON for malformed redirect patches', async () => {
-    const response = await route.PATCH(patchRequest('{', '?locale=ko'), { params: { id: 'redir-1' } });
+    const response = await route.PATCH(patchRequest('{', '?locale=ko'), { params: Promise.resolve({ id: 'redir-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(400);
@@ -67,7 +67,7 @@ describe('/api/builder/site/redirects/[id]', () => {
   it('returns localized stable-code JSON when a redirect patch target is missing', async () => {
     mockedUpdateRedirect.mockResolvedValueOnce({ notFound: true });
     const response = await route.PATCH(patchRequest({ to: '/ko/new' }, '?locale=zh-hant'), {
-      params: { id: 'redir-missing' },
+      params: Promise.resolve({ id: 'redir-missing' }),
     });
     const data = await response.json();
 
@@ -88,7 +88,7 @@ describe('/api/builder/site/redirects/[id]', () => {
     });
 
     const response = await route.PATCH(patchRequest({ to: '/ko/new' }, '?locale=en'), {
-      params: { id: 'redir-1' },
+      params: Promise.resolve({ id: 'redir-1' }),
     });
     const data = await response.json();
 
@@ -117,7 +117,7 @@ describe('/api/builder/site/redirects/[id]', () => {
     });
 
     const response = await route.PATCH(patchRequest({ from: '/ko/old/columns/*' }, '?locale=en'), {
-      params: { id: 'redir-1' },
+      params: Promise.resolve({ id: 'redir-1' }),
     });
     const data = await response.json();
 
@@ -139,7 +139,7 @@ describe('/api/builder/site/redirects/[id]', () => {
   it('returns localized stable-code JSON when redirect patch persistence fails', async () => {
     mockedUpdateRedirect.mockRejectedValueOnce(new Error('raw redirect patch failure'));
     const response = await route.PATCH(patchRequest({ to: '/ko/new' }, '?locale=ko'), {
-      params: { id: 'redir-1' },
+      params: Promise.resolve({ id: 'redir-1' }),
     });
     const data = await response.json();
 
@@ -154,7 +154,7 @@ describe('/api/builder/site/redirects/[id]', () => {
 
   it('returns localized stable-code JSON when a redirect delete target is missing', async () => {
     mockedDeleteRedirect.mockResolvedValueOnce(false);
-    const response = await route.DELETE(deleteRequest('?locale=en'), { params: { id: 'redir-missing' } });
+    const response = await route.DELETE(deleteRequest('?locale=en'), { params: Promise.resolve({ id: 'redir-missing' }) });
     const data = await response.json();
 
     expect(response.status).toBe(404);
@@ -167,7 +167,7 @@ describe('/api/builder/site/redirects/[id]', () => {
 
   it('returns localized stable-code JSON when redirect deletion fails', async () => {
     mockedDeleteRedirect.mockRejectedValueOnce(new Error('raw redirect delete failure'));
-    const response = await route.DELETE(deleteRequest('?locale=zh-hant'), { params: { id: 'redir-1' } });
+    const response = await route.DELETE(deleteRequest('?locale=zh-hant'), { params: Promise.resolve({ id: 'redir-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(500);

@@ -40,10 +40,8 @@ function resolveRequestLocale(request: NextRequest): Locale {
   return normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { filename: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ filename: string }> }) {
+  const params = await props.params;
   const blocked = await guardBuilderReadWithPermission(request, 'edit-pages');
   if (blocked instanceof NextResponse) return blocked;
   const locale = resolveRequestLocale(request);
@@ -67,10 +65,8 @@ export async function GET(
   }
 }
 
-export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { filename: string } },
-) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ filename: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { bucket: 'asset', permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
   const locale = resolveRequestLocale(request);

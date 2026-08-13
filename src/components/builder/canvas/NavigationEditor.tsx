@@ -283,7 +283,7 @@ export default function NavigationEditor({
     setEditHref(child.href);
     saveNav(next);
     window.setTimeout(() => labelInputRef.current?.focus(), 0);
-  }, [editorLocale, items, saveNav]);
+  }, [copy.titles.newSubmenu, editorLocale, items, saveNav]);
 
   const handleDelete = (id: string) => {
     const next = removeNavigationItem(items, id);

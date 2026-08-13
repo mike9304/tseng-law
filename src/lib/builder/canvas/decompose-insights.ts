@@ -44,19 +44,21 @@ const copyByLocale = {
   },
 } as const;
 
-const INSIGHTS_ROOT_HEIGHT = 1260;
-const INSIGHTS_LIST_ITEM_HEIGHT = 176;
-const INSIGHTS_LIST_ITEM_PITCH = 196;
-const INSIGHTS_LIST_MIN_HEIGHT = 620;
-const INSIGHTS_LIST_NO_CONTROLS_MIN_HEIGHT = 601;
+const INSIGHTS_ROOT_HEIGHT = 820;
+const INSIGHTS_LIST_ITEM_HEIGHT = 112;
+const INSIGHTS_LIST_ITEM_PITCH = 124;
+const INSIGHTS_LIST_MIN_HEIGHT = 360;
+const INSIGHTS_LIST_NO_CONTROLS_MIN_HEIGHT = 360;
 const INSIGHTS_PAGE_SIZE = 3;
-const INSIGHTS_LIST_WRAP_X = 623;
-const INSIGHTS_LIST_WRAP_WIDTH = 536;
-const INSIGHTS_LIST_INSET_X = 20;
-const INSIGHTS_LIST_WIDTH = 496;
-const INSIGHTS_LIST_COPY_X = 144;
-const INSIGHTS_LIST_COPY_WIDTH = 352;
+const INSIGHTS_LIST_WRAP_X = 576;
+const INSIGHTS_LIST_WRAP_WIDTH = 560;
+const INSIGHTS_LIST_INSET_X = 16;
+const INSIGHTS_LIST_WIDTH = 528;
+const INSIGHTS_LIST_COPY_X = 120;
+const INSIGHTS_LIST_COPY_WIDTH = 408;
 const INSIGHTS_LIST_READTIME_WIDTH = 78;
+const INSIGHTS_IMAGE_FALLBACK =
+  '/images/blog/016-taiwan-inheritance-custody-analysis/featured-generic.webp';
 
 type HomeInsightPost = {
   slug: string;
@@ -70,23 +72,115 @@ type HomeInsightPost = {
 
 export const INSIGHTS_SECTION_ROOT_HEIGHT = INSIGHTS_ROOT_HEIGHT;
 
+function resolveInsightsImageSrc(src?: string | null): string {
+  const normalized = src?.trim() ?? '';
+  if (!normalized || /(?:^|\/)placeholder(?:[-./]|$)/i.test(normalized)) {
+    return INSIGHTS_IMAGE_FALLBACK;
+  }
+  return normalized;
+}
+
+const ENGLISH_MONTHS = new Map([
+  ['january', 1],
+  ['february', 2],
+  ['march', 3],
+  ['april', 4],
+  ['may', 5],
+  ['june', 6],
+  ['july', 7],
+  ['august', 8],
+  ['september', 9],
+  ['october', 10],
+  ['november', 11],
+  ['december', 12],
+]);
+
+function toValidatedUtcDate(year: number, month: number, day: number): number | undefined {
+  const timestamp = Date.UTC(year, month - 1, day);
+  const parsed = new Date(timestamp);
+  if (
+    parsed.getUTCFullYear() !== year
+    || parsed.getUTCMonth() !== month - 1
+    || parsed.getUTCDate() !== day
+  ) {
+    return undefined;
+  }
+  return timestamp;
+}
+
+function parseInsightsDate(value: string): number | undefined {
+  const normalized = value.trim();
+  if (!normalized) return undefined;
+
+  const numericMatch = normalized.match(
+    /^(\d{4})\s*[-./]\s*(\d{1,2})\s*[-./]\s*(\d{1,2})(?:[T\s].*)?$/,
+  );
+  if (numericMatch) {
+    return toValidatedUtcDate(
+      Number(numericMatch[1]),
+      Number(numericMatch[2]),
+      Number(numericMatch[3]),
+    );
+  }
+
+  const cjkMatch = normalized.match(
+    /^(\d{4})\s*[년年]\s*(\d{1,2})\s*[월月]\s*(\d{1,2})\s*[일日]$/,
+  );
+  if (cjkMatch) {
+    return toValidatedUtcDate(
+      Number(cjkMatch[1]),
+      Number(cjkMatch[2]),
+      Number(cjkMatch[3]),
+    );
+  }
+
+  const englishMatch = normalized.match(
+    /^([a-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?\s*,?\s*(\d{4})$/i,
+  );
+  if (!englishMatch) return undefined;
+  const month = ENGLISH_MONTHS.get(englishMatch[1].toLowerCase());
+  if (!month) return undefined;
+  return toValidatedUtcDate(
+    Number(englishMatch[3]),
+    month,
+    Number(englishMatch[2]),
+  );
+}
+
 function resolveInsightsPosts(
   locale: Locale,
   sourcePosts: readonly ColumnPost[] = getAllColumnPosts(locale),
 ): HomeInsightPost[] {
   const copy = copyByLocale[locale];
-  return sourcePosts.map((post) => {
-    const labels = resolveHomeInsightsCardLabels(post, copy.dateFallback);
-    return {
-      slug: post.slug,
-      title: post.title,
-      dateDisplay: labels.date,
-      readTime: labels.readTime,
-      categoryLabel: post.categoryLabel,
-      featuredImage: post.featuredImage,
-      summary: post.summary,
-    };
-  });
+  return sourcePosts
+    .map((post, sourceIndex) => {
+      const labels = resolveHomeInsightsCardLabels(post, copy.dateFallback);
+      return {
+        sourceIndex,
+        publicationTimestamp:
+          parseInsightsDate(post.dateDisplay) ?? parseInsightsDate(post.date),
+        post: {
+          slug: post.slug,
+          title: post.title,
+          dateDisplay: labels.date,
+          readTime: labels.readTime,
+          categoryLabel: post.categoryLabel,
+          featuredImage: resolveInsightsImageSrc(post.featuredImage),
+          summary: post.summary,
+        },
+      };
+    })
+    .sort((a, b) => {
+      if (a.publicationTimestamp === undefined) {
+        return b.publicationTimestamp === undefined
+          ? a.sourceIndex - b.sourceIndex
+          : 1;
+      }
+      if (b.publicationTimestamp === undefined) return -1;
+      return b.publicationTimestamp - a.publicationTimestamp
+        || a.sourceIndex - b.sourceIndex;
+    })
+    .map(({ post }) => post);
 }
 
 export function createInsightsDecomposedNodes(
@@ -110,10 +204,10 @@ export function createInsightsDecomposedNodes(
       ? ((listItems.length - 1) * INSIGHTS_LIST_ITEM_PITCH) + INSIGHTS_LIST_ITEM_HEIGHT
       : listMinHeight,
   );
-  const listTop = hasPaginationControls ? 72 : 16;
-  const listWrapBottomPadding = hasPaginationControls ? 28 : 4;
+  const listTop = hasPaginationControls ? 54 : 10;
+  const listWrapBottomPadding = 10;
   const listWrapHeight = listTop + listHeight + listWrapBottomPadding;
-  const gridHeight = Math.max(740, listWrapHeight);
+  const gridHeight = Math.max(430, listWrapHeight);
   const authorLabel =
     locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾雋崴律師審閱' : 'Reviewed by Wei Tseng';
   const authorHref = getAttorneyProfilePath(locale);
@@ -140,7 +234,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: containerId,
       parentId: rootId,
-      rect: { x: 72, y: 88, width: 1136, height: INSIGHTS_ROOT_HEIGHT - 160 },
+      rect: { x: 72, y: 48, width: 1136, height: INSIGHTS_ROOT_HEIGHT - 96 },
       zIndex: 0,
       label: 'home insights container',
       className: 'container',
@@ -158,7 +252,7 @@ export function createInsightsDecomposedNodes(
     createHomeTextNode({
       id: 'home-insights-title',
       parentId: containerId,
-      rect: { x: 0, y: 40, width: 520, height: 54 },
+      rect: { x: 0, y: 34, width: 520, height: 48 },
       zIndex: 1,
       text: copy.title,
       className: 'section-title',
@@ -167,7 +261,7 @@ export function createInsightsDecomposedNodes(
     createHomeTextNode({
       id: 'home-insights-description',
       parentId: containerId,
-      rect: { x: 0, y: 104, width: 720, height: 58 },
+      rect: { x: 0, y: 88, width: 720, height: 44 },
       zIndex: 2,
       text: copy.description,
       className: 'section-lede',
@@ -176,7 +270,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: dividerId,
       parentId: containerId,
-      rect: { x: 0, y: 182, width: 1136, height: 24 },
+      rect: { x: 0, y: 142, width: 1136, height: 20 },
       zIndex: 3,
       label: 'home insights divider',
       className: 'ornament-divider',
@@ -184,7 +278,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: 'home-insights-divider-mark',
       parentId: dividerId,
-      rect: { x: 541, y: 6, width: 54, height: 12 },
+      rect: { x: 541, y: 4, width: 54, height: 12 },
       zIndex: 0,
       label: 'home insights divider mark',
       className: 'ornament',
@@ -192,15 +286,15 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: gridId,
       parentId: containerId,
-      rect: { x: 0, y: 238, width: 1136, height: gridHeight },
+      rect: { x: 0, y: 180, width: 1136, height: gridHeight },
       zIndex: 4,
       label: 'home insights grid',
-      className: 'insights-grid reveal-stagger',
+      className: 'insights-grid',
     }),
     createHomeContainerNode({
       id: featuredId,
       parentId: gridId,
-      rect: { x: 0, y: 0, width: 620, height: 720 },
+      rect: { x: 0, y: 0, width: 552, height: 430 },
       zIndex: 0,
       label: 'home insights featured',
       className: 'insights-featured',
@@ -209,7 +303,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: 'home-insights-featured-media',
       parentId: featuredId,
-      rect: { x: 0, y: 0, width: 620, height: 360 },
+      rect: { x: 0, y: 0, width: 552, height: 230 },
       zIndex: 0,
       label: 'home insights featured media',
       className: 'insights-featured-media',
@@ -217,7 +311,7 @@ export function createInsightsDecomposedNodes(
     createHomeImageNode({
       id: 'home-insights-featured-image',
       parentId: 'home-insights-featured-media',
-      rect: { x: 0, y: 0, width: 620, height: 360 },
+      rect: { x: 0, y: 0, width: 552, height: 230 },
       zIndex: 0,
       src: featured.featuredImage,
       alt: featured.title,
@@ -236,7 +330,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: 'home-insights-featured-body',
       parentId: featuredId,
-      rect: { x: 0, y: 360, width: 620, height: 360 },
+      rect: { x: 0, y: 230, width: 552, height: 200 },
       zIndex: 1,
       label: 'home insights featured body',
       className: 'insights-featured-body',
@@ -244,7 +338,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: 'home-insights-featured-meta',
       parentId: 'home-insights-featured-body',
-      rect: { x: 0, y: 0, width: 560, height: 18 },
+      rect: { x: 0, y: 0, width: 512, height: 18 },
       zIndex: 0,
       label: 'home insights featured meta',
       className: 'insights-meta-row',
@@ -261,7 +355,7 @@ export function createInsightsDecomposedNodes(
     createHomeTextNode({
       id: 'home-insights-featured-readtime',
       parentId: 'home-insights-featured-meta',
-      rect: { x: 472, y: 0, width: 88, height: 18 },
+      rect: { x: 424, y: 0, width: 88, height: 18 },
       zIndex: 1,
       text: featured.readTime,
       className: 'insights-readtime',
@@ -270,7 +364,7 @@ export function createInsightsDecomposedNodes(
     createHomeButtonNode({
       id: 'home-insights-featured-byline',
       parentId: 'home-insights-featured-body',
-      rect: { x: 0, y: 34, width: 200, height: 20 },
+      rect: { x: 0, y: 24, width: 200, height: 20 },
       zIndex: 1,
       label: authorLabel,
       href: authorHref,
@@ -281,7 +375,7 @@ export function createInsightsDecomposedNodes(
     createHomeTextNode({
       id: 'home-insights-featured-title',
       parentId: 'home-insights-featured-body',
-      rect: { x: 0, y: 72, width: 560, height: 82 },
+      rect: { x: 0, y: 50, width: 512, height: 54 },
       zIndex: 2,
       text: featured.title,
       className: 'insights-featured-title',
@@ -290,7 +384,7 @@ export function createInsightsDecomposedNodes(
     createHomeTextNode({
       id: 'home-insights-featured-summary',
       parentId: 'home-insights-featured-body',
-      rect: { x: 0, y: 166, width: 560, height: 108 },
+      rect: { x: 0, y: 110, width: 512, height: 46 },
       zIndex: 3,
       text: featured.summary,
       className: 'insights-featured-summary',
@@ -299,7 +393,7 @@ export function createInsightsDecomposedNodes(
     createHomeButtonNode({
       id: 'home-insights-featured-link',
       parentId: 'home-insights-featured-body',
-      rect: { x: 0, y: 292, width: 180, height: 24 },
+      rect: { x: 0, y: 168, width: 180, height: 24 },
       zIndex: 4,
       label: `${copy.readMore} →`,
       href: `/${locale}/columns/${featured.slug}`,
@@ -330,7 +424,7 @@ export function createInsightsDecomposedNodes(
       createHomeContainerNode({
         id: 'home-insights-controls',
         parentId: listWrapId,
-        rect: { x: INSIGHTS_LIST_INSET_X, y: 16, width: INSIGHTS_LIST_WIDTH, height: 32 },
+        rect: { x: INSIGHTS_LIST_INSET_X, y: 10, width: INSIGHTS_LIST_WIDTH, height: 32 },
         zIndex: 0,
         label: 'home insights controls',
         className: 'insights-controls',
@@ -349,7 +443,7 @@ export function createInsightsDecomposedNodes(
       createHomeTextNode({
         id: 'home-insights-page-indicator',
         parentId: 'home-insights-controls',
-        rect: { x: 156, y: 6, width: 184, height: 20 },
+        rect: { x: 166, y: 6, width: 196, height: 20 },
         zIndex: 1,
         text: `1 / ${pageCount}`,
         className: 'insights-page-indicator',
@@ -358,7 +452,7 @@ export function createInsightsDecomposedNodes(
       createHomeButtonNode({
         id: 'home-insights-next',
         parentId: 'home-insights-controls',
-        rect: { x: 400, y: 0, width: 96, height: 32 },
+        rect: { x: 432, y: 0, width: 96, height: 32 },
         zIndex: 2,
         label: `${copy.nextLabel} ›`,
         href: '#insights',
@@ -380,7 +474,7 @@ export function createInsightsDecomposedNodes(
       createHomeContainerNode({
         id: itemId,
         parentId: listId,
-        rect: { x: 0, y: itemY, width: INSIGHTS_LIST_WIDTH, height: 176 },
+        rect: { x: 0, y: itemY, width: INSIGHTS_LIST_WIDTH, height: INSIGHTS_LIST_ITEM_HEIGHT },
         zIndex: index,
         label: `home insights list item ${index + 1}`,
         className: 'insights-list-item',
@@ -389,7 +483,7 @@ export function createInsightsDecomposedNodes(
       createHomeContainerNode({
         id: thumbId,
         parentId: itemId,
-        rect: { x: 0, y: 0, width: 128, height: 96 },
+        rect: { x: 0, y: 0, width: 104, height: 78 },
         zIndex: 0,
         label: `home insights thumb ${index + 1}`,
         className: 'insights-list-thumb',
@@ -397,7 +491,7 @@ export function createInsightsDecomposedNodes(
       createHomeImageNode({
         id: `${itemId}-image`,
         parentId: thumbId,
-        rect: { x: 0, y: 0, width: 128, height: 96 },
+        rect: { x: 0, y: 0, width: 104, height: 78 },
         zIndex: 0,
         src: post.featuredImage,
         alt: post.title,
@@ -405,7 +499,7 @@ export function createInsightsDecomposedNodes(
       createHomeTextNode({
         id: `${itemId}-badge`,
         parentId: thumbId,
-        rect: { x: 12, y: 64, width: 104, height: 20 },
+        rect: { x: 8, y: 52, width: 88, height: 18 },
         zIndex: 1,
         text: post.categoryLabel,
         className: 'insights-category-badge insights-category-badge--compact',
@@ -415,7 +509,7 @@ export function createInsightsDecomposedNodes(
       createHomeContainerNode({
         id: copyId,
         parentId: itemId,
-        rect: { x: INSIGHTS_LIST_COPY_X, y: 0, width: INSIGHTS_LIST_COPY_WIDTH, height: 150 },
+        rect: { x: INSIGHTS_LIST_COPY_X, y: 0, width: INSIGHTS_LIST_COPY_WIDTH, height: 108 },
         zIndex: 1,
         label: `home insights copy ${index + 1}`,
         className: 'insights-list-copy',
@@ -449,7 +543,7 @@ export function createInsightsDecomposedNodes(
       createHomeButtonNode({
         id: `${itemId}-byline`,
         parentId: copyId,
-        rect: { x: 0, y: 24, width: 190, height: 18 },
+        rect: { x: 0, y: 20, width: 190, height: 18 },
         zIndex: 1,
         label: authorLabel,
         href: authorHref,
@@ -460,7 +554,7 @@ export function createInsightsDecomposedNodes(
       createHomeTextNode({
         id: `${itemId}-title`,
         parentId: copyId,
-        rect: { x: 0, y: 50, width: INSIGHTS_LIST_COPY_WIDTH, height: 46 },
+        rect: { x: 0, y: 42, width: INSIGHTS_LIST_COPY_WIDTH, height: 38 },
         zIndex: 2,
         text: post.title,
         className: 'insights-list-title',
@@ -469,7 +563,7 @@ export function createInsightsDecomposedNodes(
       createHomeTextNode({
         id: `${itemId}-summary`,
         parentId: copyId,
-        rect: { x: 0, y: 104, width: INSIGHTS_LIST_COPY_WIDTH, height: 48 },
+        rect: { x: 0, y: 84, width: INSIGHTS_LIST_COPY_WIDTH, height: 24 },
         zIndex: 3,
         text: post.summary,
         className: 'insights-list-summary',
@@ -482,7 +576,7 @@ export function createInsightsDecomposedNodes(
     createHomeButtonNode({
       id: 'home-insights-view-all',
       parentId: containerId,
-      rect: { x: 458, y: 238 + gridHeight + 30, width: 220, height: 38 },
+      rect: { x: 458, y: 180 + gridHeight + 28, width: 220, height: 38 },
       zIndex: 5,
       label: `${copy.viewAll} →`,
       href: `/${locale}/columns`,

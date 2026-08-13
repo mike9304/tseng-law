@@ -12,7 +12,7 @@ import {
   getBuilderAppsApiErrorPayload,
   type BuilderAppsApiErrorCode,
 } from '@/lib/builder/apps/apps-api-copy';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
@@ -54,7 +54,7 @@ function queryPayload(request: NextRequest): Record<string, string | undefined> 
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'settings');
   if (auth instanceof NextResponse) return auth;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
   try {

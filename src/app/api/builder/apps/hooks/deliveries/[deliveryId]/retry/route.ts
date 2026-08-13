@@ -25,10 +25,8 @@ function unreachableRetryResult(value: never): never {
   throw new Error(`Unsupported app hook retry result: ${String(value)}`);
 }
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { deliveryId: string } },
-) {
+export async function POST(request: NextRequest, props: { params: Promise<{ deliveryId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');

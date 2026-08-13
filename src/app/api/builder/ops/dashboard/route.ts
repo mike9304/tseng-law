@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { buildOpsDashboardExportFile } from '@/lib/builder/ops/dashboard-export';
 import { collectOpsDashboardView } from '@/lib/builder/ops/dashboard';
 import { type UnifiedLogType } from '@/lib/builder/ops/logs-aggregator';
@@ -20,7 +20,7 @@ function parseUnifiedLogType(value: string): UnifiedLogType | undefined {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'settings');
   if (auth instanceof NextResponse) return auth;
 
   const rawType = request.nextUrl.searchParams.get('type') ?? '';

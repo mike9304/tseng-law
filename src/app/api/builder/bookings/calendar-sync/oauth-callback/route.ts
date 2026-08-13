@@ -8,7 +8,7 @@ import {
   saveConnection,
 } from '@/lib/builder/bookings/calendar-sync/storage';
 import type { CalendarConnection } from '@/lib/builder/bookings/calendar-sync/types';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import {
   getBookingCalendarSyncConnectApiErrorPayload,
   type BookingCalendarSyncConnectApiErrorCode,
@@ -33,10 +33,10 @@ function errorResponse(
  * OAuth callback for Google + Outlook calendar sync.
  *
  * SECURITY (CSRF + identity binding):
- *   1. Admin auth required — caller must hold the same basic-auth session
- *      that initiated the OAuth flow. Without this, anyone who obtains a
- *      valid OAuth code could attach their refresh token to an arbitrary
- *      staffId by replaying the callback URL.
+ *   1. Booking-management permission required — caller must be an
+ *      authenticated operator allowed to mutate booking integrations.
+ *      Without this, a read-only operator who obtains a valid OAuth code
+ *      could attach a refresh token to a staff record.
  *   2. State HMAC verification — see `oauth-state.ts`. Format is
  *        `<provider>:<staffId>:<expiresAtMs>:<hexHmac>`
  *      signed with OAUTH_STATE_SECRET. Constant-time compare. Expired
@@ -48,10 +48,10 @@ function errorResponse(
  */
 
 export async function GET(request: NextRequest) {
-  // 1. Admin auth — the callback URL must only ever be hit by an
-  // authenticated admin operator. Blocks unauthenticated attackers from
-  // replaying the callback with their own OAuth code + a forged staffId.
-  const auth = requireBuilderAdminAuth(request);
+  // 1. Booking-management permission — the callback URL mutates the
+  // stored calendar connection, so read-only booking access is not enough.
+  // This still preserves the provider's conventional GET callback.
+  const auth = await guardBuilderReadWithPermission(request, 'manage-bookings');
   if (auth instanceof NextResponse) return auth;
 
   const code = request.nextUrl.searchParams.get('code') ?? '';

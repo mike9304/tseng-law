@@ -1,7 +1,7 @@
 import { mkdtemp, rm } from 'fs/promises';
 import os from 'os';
 import path from 'path';
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   ensureConsultationCitation,
   generateConsultationChatResponse,
@@ -16,6 +16,19 @@ const ORIGINAL_ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 const ORIGINAL_LOG_DIR = process.env.CONSULTATION_LOG_DIR;
 const ORIGINAL_BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN;
 const ORIGINAL_LOG_BACKEND = process.env.CONSULTATION_LOG_BACKEND;
+const ORIGINAL_AI_PROVIDER = process.env.AI_PROVIDER;
+
+const PUBLIC_EMAIL = 'wei@hoveringlaw.com.tw';
+const LEGACY_HANDOFF_PATTERNS = [
+  /이메일\s*(?:또는|이나|혹은)\s*전화/,
+  /전화(?:번호)?(?:나|이나| 또는| 혹은|로 (?:연락|문의)|를 남겨|해 주세요)/,
+  /메신저(?:나|이나|로|를)/,
+  /(?:email\s+or\s+phone|phone\s+or\s+email)/i,
+  /\bcall\s+(?:the firm|Hojeong|Attorney Tseng)/i,
+  /(?:by|via)\s+(?:phone|messenger)/i,
+  /(?:電話或|Email 或電話|致電|即時通訊)/,
+  /KakaoTalk|\bLINE\b/,
+] as const;
 
 let tempLogDir: string;
 
@@ -35,6 +48,15 @@ function restoreEnv(): void {
   else delete process.env.BLOB_READ_WRITE_TOKEN;
   if (ORIGINAL_LOG_BACKEND) process.env.CONSULTATION_LOG_BACKEND = ORIGINAL_LOG_BACKEND;
   else delete process.env.CONSULTATION_LOG_BACKEND;
+  if (ORIGINAL_AI_PROVIDER) process.env.AI_PROVIDER = ORIGINAL_AI_PROVIDER;
+  else delete process.env.AI_PROVIDER;
+}
+
+function expectEmailOnlyHandoff(text: string): void {
+  expect(text).toContain(PUBLIC_EMAIL);
+  for (const pattern of LEGACY_HANDOFF_PATTERNS) {
+    expect(text).not.toMatch(pattern);
+  }
 }
 
 async function readStreamMetadata(
@@ -120,6 +142,7 @@ describe('consultation engine deterministic safety paths', () => {
 
   afterEach(async () => {
     restoreEnv();
+    vi.unstubAllGlobals();
     await rm(tempLogDir, { recursive: true, force: true });
   });
 
@@ -134,8 +157,10 @@ describe('consultation engine deterministic safety paths', () => {
     expect(response.classification).toBe('general');
     expect(response.riskLevel).toBe('L1');
     expect(response.shouldEscalate).toBe(true);
+    expect(response.suggestedHandoffChannel).toBe('email');
     expect(response.safetySignals?.lowConfidenceBypass).toBe(true);
     expect(response.assistantMessage).toContain('공개 칼럼의 범위를 벗어나');
+    expectEmailOnlyHandoff(response.assistantMessage);
   });
 
   it('streaming metadata matches non-streaming safety metadata for off-topic questions', async () => {
@@ -169,7 +194,38 @@ describe('consultation engine deterministic safety paths', () => {
     expect(response.safetySignals?.piiBypass).toBe(true);
     expect(response.assistantMessage).toContain('민감정보가 감지');
     expect(response.assistantMessage).not.toContain('[Column:');
+    expect(response.suggestedHandoffChannel).toBe('email');
+    expect(response.nextRequiredField).not.toBe('phone_or_messenger');
+    expect(response.assistantMessage).toContain('일반 이메일로 보내지 마세요');
+    expectEmailOnlyHandoff(response.assistantMessage);
   });
+
+  it.each([
+    ['ko', '주민등록번호 900101-1234567 입니다.'],
+    ['zh-hant', '身分證字號 900101-1234567'],
+    ['en', 'My resident ID number is 900101-1234567.'],
+  ] as const)(
+    '%s sensitive-information guidance uses email only for initial handoff and requires a secure method for documents',
+    async (locale, message) => {
+      const response = await generateConsultationChatResponse(locale, {
+        locale,
+        sessionId: `test-pii-email-only-${locale}`,
+        message,
+        collectedFields: {},
+      });
+
+      expect(response.suggestedHandoffChannel).toBe('email');
+      expect(response.nextRequiredField).not.toBe('phone_or_messenger');
+      expectEmailOnlyHandoff(response.assistantMessage);
+      if (locale === 'ko') {
+        expect(response.assistantMessage).toContain('안전한 방식으로 제출');
+      } else if (locale === 'zh-hant') {
+        expect(response.assistantMessage).toContain('安全方式提交');
+      } else {
+        expect(response.assistantMessage).toContain('secure submission method');
+      }
+    },
+  );
 
   it('prompt injection uses the bypass path without classifying as L4 emergency', async () => {
     const response = await generateConsultationChatResponse('ko', {
@@ -257,6 +313,9 @@ describe('consultation engine deterministic safety paths', () => {
     expect(response.referencedKnowledge[0]?.question).toBe(entry.question);
     expect(response.assistantMessage).toContain('초기 상담료와 예약 가능 시간');
     expect(response.assistantMessage).toContain(`[AttorneyQA: ${entry.id}]`);
+    expect(response.suggestedHandoffChannel).toBe('none');
+    expect(response.assistantMessage).not.toContain('이메일 또는 전화');
+    expectEmailOnlyHandoff(response.assistantMessage);
   });
 
   it('English immediate traffic accidents with injury are L4', async () => {
@@ -270,6 +329,140 @@ describe('consultation engine deterministic safety paths', () => {
     expect(response.classification).toBe('traffic_accident');
     expect(response.riskLevel).toBe('L4');
     expect(response.shouldEscalate).toBe(true);
+    expect(response.suggestedHandoffChannel).toBe('email');
+    expectEmailOnlyHandoff(response.assistantMessage);
+  });
+
+  it.each([
+    {
+      label: 'L1 company intake',
+      message: '대만에서 회사 설립 상담을 받고 싶습니다.',
+      fields: {
+        category: 'company_setup' as const,
+        summary: '대만 자회사 설립 절차를 검토하고 싶습니다.',
+        name: '테스트 회사',
+        email: 'client@example.test',
+        urgency: 'low',
+        preferredContact: 'email',
+        consent: true,
+      },
+      expectedRisk: 'L1',
+    },
+    {
+      label: 'L3 labor intake',
+      message: '대만 회사에서 오늘 해고 통보를 받았습니다.',
+      fields: {
+        category: 'labor' as const,
+        summary: '오늘 서면 해고 통보를 받았습니다.',
+        name: '테스트 사용자',
+        email: 'client@example.test',
+        urgency: 'high',
+        consent: true,
+      },
+      expectedRisk: 'L3',
+    },
+    {
+      label: 'L4 criminal intake',
+      message: '대만 경찰이 방금 체포해서 유치장에 있습니다.',
+      fields: {
+        category: 'criminal_investigation' as const,
+        summary: '경찰 조사 전 변호사 검토가 필요합니다.',
+        name: '테스트 사용자',
+        email: 'client@example.test',
+        consent: true,
+      },
+      expectedRisk: 'L4',
+    },
+  ])(
+    '$label completes without a phone or messenger field and hands off by email',
+    async ({ label, message, fields, expectedRisk }) => {
+      const response = await generateConsultationChatResponse('ko', {
+        locale: 'ko',
+        sessionId: `test-email-escalation-${label}`,
+        message,
+        collectedFields: fields,
+      });
+
+      expect(response.riskLevel).toBe(expectedRisk);
+      expect(response.shouldEscalate).toBe(true);
+      expect(response.nextRequiredField).toBe('none');
+      expect(response.completionReady).toBe(true);
+      expect(response.suggestedHandoffChannel).toBe('email');
+      expectEmailOnlyHandoff(response.assistantMessage);
+    },
+  );
+
+  it('asks for email even when a legacy phoneOrMessenger value is already present', async () => {
+    const response = await generateConsultationChatResponse('ko', {
+      locale: 'ko',
+      sessionId: 'test-legacy-contact-does-not-satisfy-handoff',
+      message: '대만 경찰이 방금 체포해서 유치장에 있습니다.',
+      collectedFields: {
+        category: 'criminal_investigation',
+        summary: '경찰 조사 전 변호사 검토가 필요합니다.',
+        name: '테스트 사용자',
+        phoneOrMessenger: 'legacy-contact-value',
+        consent: true,
+      },
+    });
+
+    expect(response.riskLevel).toBe('L4');
+    expect(response.nextRequiredField).toBe('email');
+    expect(response.suggestedHandoffChannel).toBe('email');
+    expectEmailOnlyHandoff(response.assistantMessage);
+  });
+
+  it('constructs the provider emergency prompt with Attorney Tseng email as its sole handoff', async () => {
+    process.env.OPENAI_API_KEY = 'test-openai-key';
+    delete process.env.ANTHROPIC_API_KEY;
+    process.env.AI_PROVIDER = 'openai';
+
+    let capturedRequestBody = '';
+    const fetchMock = vi.fn(async (_input: RequestInfo | URL, init?: RequestInit) => {
+      capturedRequestBody = String(init?.body);
+      return new Response(
+        JSON.stringify({
+          choices: [
+            {
+              message: {
+                content:
+                  '현재 받은 문서를 보존하고 서명하지 마세요. 즉시 wei@hoveringlaw.com.tw 로 증준외 대만 변호사에게 이메일을 보내 주세요.',
+              },
+            },
+          ],
+        }),
+        {
+          status: 200,
+          headers: { 'Content-Type': 'application/json' },
+        },
+      );
+    });
+    vi.stubGlobal('fetch', fetchMock);
+
+    const response = await generateConsultationChatResponse('ko', {
+      locale: 'ko',
+      sessionId: 'test-provider-emergency-email-only',
+      message: '대만 경찰이 방금 체포해서 유치장에 있습니다.',
+      collectedFields: {
+        category: 'criminal_investigation',
+        summary: '조사 전 변호사 검토가 필요합니다.',
+        name: '테스트 사용자',
+        email: 'client@example.test',
+        consent: true,
+      },
+    });
+
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    const capturedBody = JSON.parse(capturedRequestBody) as {
+      messages?: Array<{ role?: string; content?: string }>;
+    };
+    const generatedPrompt = capturedBody.messages
+      ?.map(({ content }) => content ?? '')
+      .join('\n') ?? '';
+    expectEmailOnlyHandoff(generatedPrompt);
+    expect(generatedPrompt).toContain('email Attorney Tseng');
+    expect(response.suggestedHandoffChannel).toBe('email');
+    expectEmailOnlyHandoff(response.assistantMessage);
   });
 
   it('fallback non-streaming answers with references receive a valid citation', async () => {

@@ -35,7 +35,8 @@ const copy: Record<Locale, { title: string; description: string; eyebrow: string
   },
 };
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return buildSeoMetadata({
     locale,
@@ -51,7 +52,8 @@ function categoryLabel(category: string, locale: Locale): string {
   return DEFAULT_EVENT_CATEGORIES.find((item) => item.id === category)?.name[locale] ?? category;
 }
 
-export default async function EventsPage({ params }: { params: { locale: Locale } }) {
+export default async function EventsPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const events = sortEvents(
     filterEventsByTime(

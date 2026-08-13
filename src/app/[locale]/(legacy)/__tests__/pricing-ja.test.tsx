@@ -79,7 +79,7 @@ describe('Japanese pricing integration', () => {
     expect(html).toContain(
       '上記の費用は基本的な目安であり、案件の性質、複雑性、緊急性により変動する場合があります。正確な費用は、初回相談後に書面によるお見積りでご案内します。',
     );
-    expect(html).toContain('href="/ja/contact"');
+    expect(html).toContain('href="mailto:wei@hoveringlaw.com.tw?subject=');
     expect(html).toContain('法律相談を申し込む');
 
     for (const fallback of [
@@ -103,12 +103,12 @@ describe('Japanese pricing integration', () => {
   });
 
   it.each([
-    ['ko', 'NTD (대만달러)', '일반 법률상담', '견적 문의', '상담 예약하기', '/ko/contact'],
-    ['zh-hant', 'NTD (新台幣)', '一般法律諮詢', '報價諮詢', '預約諮詢', '/zh-hant/contact'],
-    ['en', 'NTD (New Taiwan Dollar)', 'General Legal Consultation', 'Request a Quote', 'Book a Consultation', '/en/contact'],
+    ['ko', 'NTD (대만달러)', '일반 법률상담', '견적 문의', '상담 예약하기'],
+    ['zh-hant', 'NTD (新台幣)', '一般法律諮詢', '報價諮詢', '預約諮詢'],
+    ['en', 'NTD (New Taiwan Dollar)', 'General Legal Consultation', 'Request a Quote', 'Book a Consultation'],
   ] as const)(
     'preserves representative %s pricing and CTA',
-    (locale, currency, consultationTitle, litigationPrice, ctaLabel, ctaHref) => {
+    (locale, currency, consultationTitle, litigationPrice, ctaLabel) => {
       const html = renderToStaticMarkup(<PricingCards locale={locale} />);
 
       expect(html).toContain(currency);
@@ -117,7 +117,7 @@ describe('Japanese pricing integration', () => {
       expect(html).toContain('NT$ 3,000');
       expect(html.match(/NT\$ 50,000/g)).toHaveLength(2);
       expect(html).toContain(ctaLabel);
-      expect(html).toContain(`href="${ctaHref}"`);
+      expect(html).toContain('href="mailto:wei@hoveringlaw.com.tw?subject=');
     },
   );
 });

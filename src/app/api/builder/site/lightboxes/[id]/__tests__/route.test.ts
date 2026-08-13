@@ -64,7 +64,7 @@ describe('/api/builder/site/lightboxes/[id]', () => {
   it('updates a lightbox on valid PATCH', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ name: 'Renamed' }), {
-      params: { id: 'lb-1' },
+      params: Promise.resolve({ id: 'lb-1' }),
     });
     const payload = await response.json();
 
@@ -76,7 +76,7 @@ describe('/api/builder/site/lightboxes/[id]', () => {
   it('returns localized stable-code JSON for invalid PATCH payloads', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ slug: 'Bad Slug' }, 'zh-hant'), {
-      params: { id: 'lb-1' },
+      params: Promise.resolve({ id: 'lb-1' }),
     });
     const payload = await response.json();
 
@@ -93,7 +93,7 @@ describe('/api/builder/site/lightboxes/[id]', () => {
     vi.mocked(updateLightbox).mockResolvedValue(null);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ name: 'Missing' }, 'en'), {
-      params: { id: 'missing' },
+      params: Promise.resolve({ id: 'missing' }),
     });
     const payload = await response.json();
 
@@ -109,7 +109,7 @@ describe('/api/builder/site/lightboxes/[id]', () => {
     vi.mocked(deleteLightbox).mockResolvedValue(false);
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('zh-hant'), {
-      params: { id: 'missing' },
+      params: Promise.resolve({ id: 'missing' }),
     });
     const payload = await response.json();
 
@@ -121,7 +121,7 @@ describe('/api/builder/site/lightboxes/[id]', () => {
     const route = await import('../route');
     const response = await route.PATCH(
       patchRequest({ name: 'Workspace Lightbox' }, 'ko', SELECTED_SITE_REFERER),
-      { params: { id: 'lb-1' } },
+      { params: Promise.resolve({ id: 'lb-1' }) },
     );
 
     expect(response.status).toBe(200);
@@ -136,7 +136,7 @@ describe('/api/builder/site/lightboxes/[id]', () => {
   it('routes lightbox DELETE to the selected workspace site from the editor referer', async () => {
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('ko', SELECTED_SITE_REFERER), {
-      params: { id: 'lb-1' },
+      params: Promise.resolve({ id: 'lb-1' }),
     });
 
     expect(response.status).toBe(200);

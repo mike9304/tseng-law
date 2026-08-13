@@ -25,14 +25,14 @@ const LEGACY_ROOT_RECTS: Record<string, Rect> = {
 
 const LIVE_ROOT_RECTS: Record<string, Rect> = {
   'home-hero-root': { x: 0, y: 0, width: 1280, height: 788 },
-  'home-insights-root': { x: 0, y: 788, width: 1280, height: 1277 },
-  'home-services-root': { x: 0, y: 2065, width: 1280, height: 1279 },
-  'home-attorney-root': { x: 0, y: 3344, width: 1280, height: 926 },
-  'home-case-results-root': { x: 0, y: 4270, width: 1280, height: 800 },
-  'home-stats-root': { x: 0, y: 5070, width: 1280, height: 621 },
-  'home-faq-root': { x: 0, y: 5691, width: 1280, height: 1333 },
-  'home-offices-root': { x: 0, y: 7024, width: 1280, height: 919 },
-  'home-contact-root': { x: 0, y: 7943, width: 1280, height: 532 },
+  'home-insights-root': { x: 0, y: 788, width: 1280, height: 820 },
+  'home-services-root': { x: 0, y: 1608, width: 1280, height: 820 },
+  'home-attorney-root': { x: 0, y: 2428, width: 1280, height: 926 },
+  'home-case-results-root': { x: 0, y: 3354, width: 1280, height: 600 },
+  'home-stats-root': { x: 0, y: 3954, width: 1280, height: 560 },
+  'home-faq-root': { x: 0, y: 4514, width: 1280, height: 1160 },
+  'home-offices-root': { x: 0, y: 5674, width: 1280, height: 919 },
+  'home-contact-root': { x: 0, y: 6593, width: 1280, height: 532 },
 };
 
 function sameRect(rect: Rect | undefined, expected: Rect): boolean {
@@ -117,7 +117,7 @@ function repairLegacyCaseNode(node: BuilderCanvasNode): BuilderCanvasNode {
   if (node.id === 'home-case-results-content'
     && node.parentId === 'home-case-results-root'
     && sameRect(node.rect, { x: 0, y: 0, width: 1280, height: 600 })) {
-    return { ...node, rect: { x: 0, y: 219, width: 1280, height: 581 } } as BuilderCanvasNode;
+    return { ...node, rect: { x: 0, y: 0, width: 1280, height: 600 } } as BuilderCanvasNode;
   }
 
   const desktopRects: Partial<Record<string, { expected: Rect; next: Rect }>> = {
@@ -229,22 +229,22 @@ function repairLegacyStatsNode(node: BuilderCanvasNode): BuilderCanvasNode {
   if (node.id === 'home-stats-container'
     && node.parentId === 'home-stats-root'
     && sameRect(node.rect, { x: 72, y: 80, width: 1136, height: 480 })) {
-    return { ...node, rect: { x: 51, y: 142, width: 1178, height: 479 } } as BuilderCanvasNode;
+    return { ...node, rect: { x: 72, y: 64, width: 1136, height: 432 } } as BuilderCanvasNode;
   }
   if (node.id === 'home-stats-title'
     && node.parentId === 'home-stats-container'
     && sameRect(node.rect, { x: 0, y: 40, width: 560, height: 54 })) {
-    return { ...node, rect: { x: 0, y: 48, width: 1178, height: 56 } } as BuilderCanvasNode;
+    return node;
   }
   if (node.id === 'home-stats-description'
     && node.parentId === 'home-stats-container'
     && sameRect(node.rect, { x: 0, y: 106, width: 760, height: 64 })) {
-    return { ...node, rect: { x: 0, y: 139, width: 720, height: 64 } } as BuilderCanvasNode;
+    return node;
   }
   if (node.id === 'home-stats-grid'
     && node.parentId === 'home-stats-container'
     && sameRect(node.rect, { x: 0, y: 214, width: 1136, height: 200 })) {
-    return { ...node, rect: { x: 0, y: 200, width: 1178, height: 200 } } as BuilderCanvasNode;
+    return { ...node, rect: { x: 0, y: 200, width: 1136, height: 164 } } as BuilderCanvasNode;
   }
   return node;
 }
@@ -273,6 +273,10 @@ export function upgradeHomeEditorLayoutParity(
     return document;
   }
 
+  const nodesById = new Map(document.nodes.map((node) => [node.id, node]));
+  const isExactLegacyRootStack = Object.entries(LEGACY_ROOT_RECTS).every(([id, rect]) => (
+    sameRect(nodesById.get(id)?.rect, rect)
+  ));
   let changed = false;
   const nodes = document.nodes.map((node) => {
     let next = node;
@@ -289,11 +293,15 @@ export function upgradeHomeEditorLayoutParity(
   });
 
   if (!changed) return document;
-  if (options.stampMetadata === false) return { ...document, nodes };
-  return {
+  const layoutDocument = {
     ...document,
+    ...(isExactLegacyRootStack ? { stageHeight: 7127 } : {}),
+    nodes,
+  };
+  if (options.stampMetadata === false) return layoutDocument;
+  return {
+    ...layoutDocument,
     updatedAt: new Date().toISOString(),
     updatedBy: `${document.updatedBy || 'builder'}+home-editor-parity`,
-    nodes,
   };
 }

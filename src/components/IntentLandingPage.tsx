@@ -13,6 +13,10 @@ import type { SiteLocale } from '@/lib/locales';
 import { getServiceArea } from '@/data/service-details';
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildPersonJsonLd } from '@/lib/seo';
+import {
+  getConsultationCtaLabel,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 
 function summarize(text: string, maxLength = 180) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
@@ -483,9 +487,13 @@ export default function IntentLandingPage({
             <h2 className="section-title">{l.ctaTitle}</h2>
             <p className="section-lede">{l.ctaText}</p>
             <div className="intent-cta-actions">
-              <Link href={`/${locale}/contact`} className="button">
+              <a
+                href={getConsultationPublicMailto(locale)}
+                className="button"
+                aria-label={`${l.contact} — ${getConsultationCtaLabel(locale)}`}
+              >
                 {l.contact}
-              </Link>
+              </a>
               <Link href={`/${locale}/pricing`} className="button button--outline">
                 {l.pricing}
               </Link>

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   heartbeat,
   listActive,
@@ -57,7 +57,7 @@ function projectEntry(entry: PresenceEntry): {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'view-cms');
   if (auth instanceof NextResponse) return auth;
   const locale = resolveLocale(request);
 

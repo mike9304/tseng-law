@@ -110,7 +110,6 @@ const MEASURED_SECTION_HEIGHTS_BY_LOCALE = PUBLISHED_HOME_COMPOSITE_HEIGHTS_BY_L
 // also need room for their absolute-positioned editor children.
 const KO_DECOMPOSED_SECTION_HEIGHTS = {
   ...MEASURED_SECTION_HEIGHTS_BY_LOCALE.ko,
-  services: 1279,
   offices: 919,
 } satisfies CompositeSectionHeights;
 const ZH_HANT_DECOMPOSED_SECTION_HEIGHTS = MEASURED_SECTION_HEIGHTS_BY_LOCALE['zh-hant'];
@@ -160,16 +159,6 @@ function replaceNode(
   const index = nodes.findIndex((candidate) => candidate.id === id);
   if (index >= 0) nodes[index] = nextNode;
   nodesById.set(id, nextNode);
-}
-
-function shiftDirectChildrenY(
-  nodes: BuilderCanvasNode[],
-  parentId: string,
-  deltaY: number,
-): void {
-  nodes.filter((node) => node.parentId === parentId).forEach((node) => {
-    node.rect = { ...node.rect, y: node.rect.y + deltaY };
-  });
 }
 
 function setNodeZIndex(
@@ -234,14 +223,6 @@ const ZH_HANT_HOME_MOBILE_OVERRIDES: Record<string, HomeResponsiveOverride> = {
   'home-insights-next': { rect: { x: 220, y: 0, width: 54, height: 34 } },
   'home-insights-list': { rect: { x: 17, y: 96, width: 309, height: 1477 } },
   'home-insights-view-all': { rect: { x: 81, y: 2140, width: 145, height: 47 } },
-  'home-services-root': { rect: { x: 0, y: 3132, width: 375, height: 1258 } },
-  'home-services-container': { rect: { x: 16, y: 49, width: 343, height: 1160 } },
-  'home-services-label': { rect: { x: 0, y: 8, width: 132, height: 21 } },
-  'home-services-title': { rect: { x: 0, y: 47, width: 343, height: 96 } },
-  'home-services-description': { rect: { x: 0, y: 162, width: 343, height: 54 } },
-  'home-services-divider': { rect: { x: 0, y: 226, width: 343, height: 12 } },
-  'home-services-divider-mark': { rect: { x: 127, y: 0, width: 54, height: 12 } },
-  'home-services-list': { rect: { x: 0, y: 244, width: 343, height: 915 } },
   'home-attorney-root': { rect: { x: 0, y: 4390, width: 375, height: 1038 } },
   'home-attorney-image-wrap': { rect: { x: 16, y: 48, width: 343, height: 477 } },
   'home-attorney-image': { rect: { x: 0, y: 0, width: 343, height: 258 } },
@@ -318,14 +299,6 @@ const ZH_HANT_HOME_TABLET_OVERRIDES: Record<string, HomeResponsiveOverride> = {
   'home-insights-next': { rect: { x: 587, y: 0, width: 54, height: 34 } },
   'home-insights-list': { rect: { x: 17, y: 65, width: 641, height: 435 } },
   'home-insights-view-all': { rect: { x: 264, y: 1449, width: 145, height: 47 } },
-  'home-services-root': { rect: { x: 16, y: 2384, width: 736, height: 1166 } },
-  'home-services-container': { rect: { x: 31, y: 92, width: 675, height: 980 } },
-  'home-services-label': { rect: { x: 0, y: 8, width: 132, height: 21 } },
-  'home-services-title': { rect: { x: 0, y: 47, width: 675, height: 60 } },
-  'home-services-description': { rect: { x: 0, y: 126, width: 675, height: 27 } },
-  'home-services-divider': { rect: { x: 0, y: 185, width: 675, height: 12 } },
-  'home-services-divider-mark': { rect: { x: 310, y: 0, width: 54, height: 12 } },
-  'home-services-list': { rect: { x: 0, y: 229, width: 675, height: 750 } },
   'home-attorney-root': { rect: { x: 16, y: 3562, width: 736, height: 1155 } },
   'home-attorney-image-wrap': { rect: { x: 158, y: 92, width: 420, height: 560 } },
   'home-attorney-image': { rect: { x: 0, y: 0, width: 420, height: 560 } },
@@ -393,65 +366,6 @@ function mergeResponsiveOverride(
     ...previousResponsive,
     [viewport]: mergedOverride,
   };
-}
-
-function serviceResponsiveOverride(
-  nodeId: string,
-  viewport: HomeResponsiveViewport,
-): HomeResponsiveOverride | null {
-  const isTablet = viewport === 'tablet';
-  const aliasMatch = /^home-services-card-(\d+)-alias-\d+$/.exec(nodeId);
-  if (aliasMatch) {
-    const index = Number(aliasMatch[1]);
-    const step = isTablet ? 130 : 162;
-    return { rect: { x: 0, y: Math.max(0, (index * step) - 72), width: 4, height: 4 } };
-  }
-
-  const cardMatch = /^home-services-card-(\d+)$/.exec(nodeId);
-  if (cardMatch) {
-    const index = Number(cardMatch[1]);
-    return isTablet
-      ? { rect: { x: 0, y: index * 130, width: 675, height: 98 } }
-      : { rect: { x: 0, y: index * 162, width: 308, height: 130 } };
-  }
-
-  if (/^home-services-card-\d+-toggle$/.test(nodeId)) {
-    return isTablet
-      ? { rect: { x: 0, y: 0, width: 675, height: 98 } }
-      : { rect: { x: 0, y: 0, width: 308, height: 130 } };
-  }
-  if (/^home-services-card-\d+-header$/.test(nodeId)) {
-    return isTablet
-      ? { rect: { x: 24, y: 20, width: 560, height: 56 } }
-      : { rect: { x: 24, y: 20, width: 240, height: 90 } };
-  }
-  if (/^home-services-card-\d+-icon$/.test(nodeId)) return { rect: { x: 0, y: 0, width: 46, height: 46 } };
-  if (/^home-services-card-\d+-icon-svg$/.test(nodeId)) return { rect: { x: 11, y: 11, width: 24, height: 24 } };
-  if (/^home-services-card-\d+-title$/.test(nodeId)) {
-    return isTablet
-      ? { rect: { x: 58, y: 16, width: 520, height: 25 } }
-      : { rect: { x: 58, y: 4, width: 206, height: 52 } };
-  }
-  if (/^home-services-card-\d+-chevron$/.test(nodeId)) {
-    return isTablet
-      ? { rect: { x: 629, y: 33, width: 20, height: 29 } }
-      : { rect: { x: 272, y: 33, width: 20, height: 29 } };
-  }
-  if (/^home-services-card-\d+-body$/.test(nodeId)) {
-    return isTablet
-      ? { rect: { x: 0, y: 97, width: 675, height: COLLAPSED_RESPONSIVE_RECT_SIZE } }
-      : { rect: { x: 0, y: 97, width: 308, height: COLLAPSED_RESPONSIVE_RECT_SIZE } };
-  }
-  if (/^home-services-card-\d+-description$/.test(nodeId)) {
-    return isTablet
-      ? { rect: { x: 24, y: 0, width: 625, height: 82 } }
-      : { rect: { x: 24, y: 0, width: 260, height: 54 } };
-  }
-  if (/^home-services-card-\d+-(?:checklist|columns|columns-list|more|detail-\d+|column-\d+|columns-label)$/.test(nodeId)) {
-    return { rect: { x: 24, y: 0, width: COLLAPSED_RESPONSIVE_RECT_SIZE, height: COLLAPSED_RESPONSIVE_RECT_SIZE } };
-  }
-
-  return null;
 }
 
 function faqResponsiveOverride(
@@ -612,7 +526,6 @@ function getZhHantHomeResponsiveOverride(
     : ZH_HANT_HOME_MOBILE_OVERRIDES[nodeId];
   return explicit
     ?? insightsResponsiveOverride(nodeId, viewport)
-    ?? serviceResponsiveOverride(nodeId, viewport)
     ?? statsResponsiveOverride(nodeId, viewport)
     ?? faqResponsiveOverride(nodeId, viewport)
     ?? getOfficesResponsiveOverride(nodeId, viewport);
@@ -724,12 +637,17 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
       }
       break;
     case 'services':
-      if (input.locale === 'ko') {
-        setNodeRect(nodesById, 'home-services-container', { x: 51, y: 151, width: 1178, height: input.height - 151 });
-        setNodeRect(nodesById, 'home-services-list', { y: 173, width: 1178, height: 882 });
-      } else {
-        setNodeRect(nodesById, 'home-services-container', { height: input.height - 88 });
-      }
+      setNodeRect(nodesById, 'home-services-container', {
+        x: 51,
+        y: 72,
+        width: 1178,
+        height: input.height - 144,
+      });
+      setNodeRect(nodesById, 'home-services-list', {
+        y: 220,
+        width: 1178,
+        height: 456,
+      });
       break;
     case 'attorney':
       if (input.locale === 'ko') {
@@ -786,47 +704,56 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
       }
       break;
     case 'caseResults':
-      if (input.locale === 'ko') {
-        setNodeRect(nodesById, 'home-case-results-content', { y: 219, height: input.height - 219 });
-        setNodeRect(nodesById, 'home-case-results-label', { x: 78 });
-        setNodeRect(nodesById, 'home-case-results-title', { x: 78, y: 39, height: 130 });
-        setNodeRect(nodesById, 'home-case-results-divider', { x: 78, y: 172, width: 40, height: 32 });
-        setNodeRect(nodesById, 'home-case-results-desc', { x: 78, y: 210 });
-        setNodeRect(nodesById, 'home-case-results-summary', { x: 78, y: 280 });
-        setNodeRect(nodesById, 'home-case-results-cta', { x: 78, y: 333 });
-      } else {
-        setNodeRect(nodesById, 'home-case-results-content', { height: input.height });
-        shiftDirectChildrenY(input.nodes, 'home-case-results-content', 122);
-        setNodeRect(nodesById, 'home-case-results-label', { x: 78 });
-        setNodeRect(nodesById, 'home-case-results-title', { x: 78, height: 172 });
-        setNodeRect(nodesById, 'home-case-results-divider', { x: 78, y: 344 });
-        setNodeRect(nodesById, 'home-case-results-desc', { x: 78, y: 356 });
-        setNodeRect(nodesById, 'home-case-results-summary', { x: 78, y: 446 });
-        setNodeRect(nodesById, 'home-case-results-cta', { x: 78, y: 516 });
-      }
+      setNodeRect(nodesById, 'home-case-results-media', {
+        x: 0,
+        y: 0,
+        width: 640,
+        height: input.height,
+      });
+      setNodeRect(nodesById, 'home-case-results-media-image', {
+        x: 0,
+        y: 0,
+        width: 640,
+        height: input.height,
+      });
+      setNodeRect(nodesById, 'home-case-results-content', {
+        x: 640,
+        y: 0,
+        width: 640,
+        height: input.height,
+      });
       break;
     case 'faq':
       if (input.locale === 'ko') {
-        setNodeRect(nodesById, 'home-faq-container', { x: 51, y: 150, width: 1178, height: input.height - 150 });
-        setTextNodeText(nodesById, 'home-faq-label', '자주 묻는 질문');
-        setNodeRect(nodesById, 'home-faq-label', { width: 151 });
-        setNodeRect(nodesById, 'home-faq-title', { width: 1178, y: 39 });
-        setNodeRect(nodesById, 'home-faq-list', { y: 132, width: 1178, height: 990 });
+        setTextNodeText(nodesById, 'home-faq-label', 'FAQ');
+        setNodeRect(nodesById, 'home-faq-label', { width: 120 });
+      }
+      setNodeRect(nodesById, 'home-faq-container', {
+        x: 51,
+        y: 72,
+        width: 1178,
+        height: 1016,
+      });
+      setNodeRect(nodesById, 'home-faq-title', { width: 1178, y: 40 });
+      setNodeRect(nodesById, 'home-faq-list', {
+        y: 120,
+        width: 1178,
+        height: 896,
+      });
+      if (input.locale === 'ko') {
         input.nodes.forEach((node) => {
           const match = /^home-faq-item-(\d+)$/.exec(node.id);
           if (!match || node.parentId !== 'home-faq-list') return;
           const itemIndexText = match[1];
           if (!itemIndexText) return;
           const itemIndex = Number(itemIndexText);
-          setNodeRect(nodesById, node.id, { y: itemIndex * 71, width: 1176, height: 58 });
-          setNodeRect(nodesById, `${node.id}-question`, { width: 1176, height: 58 });
-          setNodeRect(nodesById, `${node.id}-question-text`, { y: 17, width: 1070 });
-          setNodeRect(nodesById, `${node.id}-arrow`, { y: 19, x: 1138 });
-          setNodeRect(nodesById, `${node.id}-answer-wrap`, { y: 58 });
+          setNodeRect(nodesById, node.id, { y: itemIndex * 66, width: 1176, height: 58 });
+          setNodeRect(nodesById, `${node.id}-question`, { width: 1176, height: 50 });
+          setNodeRect(nodesById, `${node.id}-question-text`, { y: 14, width: 1070 });
+          setNodeRect(nodesById, `${node.id}-arrow`, { y: 14, x: 1138 });
+          setNodeRect(nodesById, `${node.id}-answer-wrap`, { y: 50, height: 54 });
+          setNodeRect(nodesById, `${node.id}-answer`, { height: 54 });
         });
-      } else {
-        setNodeRect(nodesById, 'home-faq-container', { y: 110, height: 1206 });
-        setNodeRect(nodesById, 'home-faq-list', { y: 149, height: 1074 });
       }
       break;
     case 'offices':
@@ -840,7 +767,12 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
           : { y: 149, height: 743 },
       );
       setNodeRect(nodesById, 'home-offices-tabs', input.locale === 'zh-hant' ? { y: 132, width: 1178, height: 47 } : { y: 132 });
-      [0, 1, 2].forEach((index) => {
+      const officeIndexes = input.nodes
+        .map((node) => /^home-offices-tab-(\d+)$/.exec(node.id)?.[1])
+        .filter((index): index is string => typeof index === 'string')
+        .map(Number)
+        .sort((left, right) => left - right);
+      officeIndexes.forEach((index) => {
         const layoutId = `home-offices-layout-${index}`;
         if (input.locale === 'zh-hant') {
           setNodeRect(nodesById, layoutId, { y: 198, width: 1178, height: 422 });
@@ -866,12 +798,28 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
       });
       break;
     case 'stats':
-      if (input.locale === 'ko') {
-        setNodeRect(nodesById, 'home-stats-container', { x: 51, y: 142, width: 1178, height: input.height - 142 });
-        setNodeRect(nodesById, 'home-stats-title', { y: 49, width: 1178, height: 56 });
-        setNodeRect(nodesById, 'home-stats-description', { y: 139, width: 720 });
-        setNodeRect(nodesById, 'home-stats-grid', { y: 200, width: 1178 });
-      }
+      setNodeRect(nodesById, 'home-stats-container', {
+        x: 51,
+        y: 64,
+        width: 1178,
+        height: 432,
+      });
+      setNodeRect(nodesById, 'home-stats-label', { y: 0 });
+      setNodeRect(nodesById, 'home-stats-title', {
+        y: 40,
+        width: 1178,
+        height: 54,
+      });
+      setNodeRect(nodesById, 'home-stats-description', {
+        y: 106,
+        width: 720,
+        height: 64,
+      });
+      setNodeRect(nodesById, 'home-stats-grid', {
+        y: 200,
+        width: 1178,
+        height: 164,
+      });
       break;
     case 'contact':
       if (input.locale === 'ko') {
@@ -979,7 +927,7 @@ function buildHomeDocument(locale: Locale, sections: HomeSectionSpec[]): Builder
     updatedBy: SEED_VERSION,
     stageWidth: STAGE_WIDTH,
     stageHeight: isCompositeStack
-      ? Math.max(y + 2, PUBLISHED_HOME_COMPOSITE_STAGE_HEIGHT_BY_LOCALE[locale])
+      ? Math.max(y, PUBLISHED_HOME_COMPOSITE_STAGE_HEIGHT_BY_LOCALE[locale])
       : y + 2,
     nodes,
   };

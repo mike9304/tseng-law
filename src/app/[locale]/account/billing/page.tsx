@@ -7,7 +7,8 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const title = locale === 'ko' ? '청구서 포털' : locale === 'zh-hant' ? '帳單入口' : 'Billing portal';
   return {
@@ -16,11 +17,12 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default async function LocalizedCustomerBillingPortalPage({
-  params,
-}: {
-  params: { locale: Locale };
-}): Promise<JSX.Element> {
+export default async function LocalizedCustomerBillingPortalPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+  }
+): Promise<JSX.Element> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const member = await getCurrentSiteMember();
   if (!member) {

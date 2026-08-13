@@ -53,7 +53,7 @@ describe('/api/builder/webhooks/[id]/deliveries', () => {
   });
 
   it('returns deliveries while preserving success response shape', async () => {
-    const response = await GET(request('locale=ko'), { params: { id: 'wh_test' } });
+    const response = await GET(request('locale=ko'), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(200);
@@ -71,7 +71,7 @@ describe('/api/builder/webhooks/[id]/deliveries', () => {
   it('returns localized not-found errors', async () => {
     getSubscriptionMock.mockResolvedValueOnce(null as never);
 
-    const response = await GET(request('locale=zh-hant'), { params: { id: 'missing' } });
+    const response = await GET(request('locale=zh-hant'), { params: Promise.resolve({ id: 'missing' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(404);
@@ -86,7 +86,7 @@ describe('/api/builder/webhooks/[id]/deliveries', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     listDeliveriesForWebhookMock.mockRejectedValueOnce(new Error('delivery list secret leaked'));
 
-    const response = await GET(request('locale=en'), { params: { id: 'wh_test' } });
+    const response = await GET(request('locale=en'), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(500);

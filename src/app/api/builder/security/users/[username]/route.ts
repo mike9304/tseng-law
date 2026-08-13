@@ -56,10 +56,8 @@ function decodeUsername(raw: string): string {
   }
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { username: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ username: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, {
     bucket: 'mutation',
     permission: 'manage-roles',
@@ -97,10 +95,8 @@ export async function PATCH(
   }
 }
 
-export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { username: string } },
-) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ username: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, {
     bucket: 'mutation',
     permission: 'manage-roles',

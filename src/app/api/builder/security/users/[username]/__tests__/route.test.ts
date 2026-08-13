@@ -34,7 +34,7 @@ const updatedUserRecord = {
   addedBy: 'owner',
 };
 
-const params = { params: { username: 'designer%40example.com' } };
+const params = { params: Promise.resolve({ username: 'designer%40example.com' }) };
 
 const guardMutationMock = vi.mocked(guardMutation);
 const removeUserRoleMock = vi.mocked(removeUserRole);

@@ -14,7 +14,7 @@ vi.mock('@/lib/builder/apps/installed', () => ({
 
 const guardMutationMock = vi.mocked(guardMutation);
 const updateBuilderAppSettingsMock = vi.mocked(updateBuilderAppSettings);
-const routeContext = { params: { appId: 'site-search' } };
+const routeContext = { params: Promise.resolve({ appId: 'site-search' }) };
 
 function request(query = '', body?: unknown): NextRequest {
   return new NextRequest(`https://law.example.test/api/builder/apps/installations/site-search/settings${query ? `?${query}` : ''}`, {

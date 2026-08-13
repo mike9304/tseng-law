@@ -12,11 +12,12 @@ function getExperimentsMetadata(locale: Locale): Metadata {
   };
 }
 
-export default async function ExperimentsPage({
-  params,
-}: {
-  params: { locale: Locale };
-}) {
+export default async function ExperimentsPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const experiments = await listExperiments();
   return (
@@ -38,6 +39,7 @@ export default async function ExperimentsPage({
   );
 }
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   return getExperimentsMetadata(normalizeLocale(params.locale));
 }

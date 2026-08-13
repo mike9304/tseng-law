@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default async function TemplatesPage({ params }: { params: { locale: string } }) {
+export default async function TemplatesPage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const templates = await listTemplates();
   return (

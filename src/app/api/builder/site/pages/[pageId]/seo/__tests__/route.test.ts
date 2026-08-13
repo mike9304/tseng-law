@@ -76,7 +76,7 @@ describe('/api/builder/site/pages/[pageId]/seo', () => {
   it('returns locale-specific seo overrides on GET', async () => {
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/site/pages/page-1/seo?locale=en'),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -103,7 +103,7 @@ describe('/api/builder/site/pages/[pageId]/seo', () => {
           },
         }),
       }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -128,7 +128,7 @@ describe('/api/builder/site/pages/[pageId]/seo', () => {
 
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/site/pages/page-1/seo?locale=en'),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -140,7 +140,7 @@ describe('/api/builder/site/pages/[pageId]/seo', () => {
   it('returns localized missing page errors on GET', async () => {
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/site/pages/missing-page/seo?locale=ko'),
-      { params: { pageId: 'missing-page' } },
+      { params: Promise.resolve({ pageId: 'missing-page' }) },
     );
     const data = await response.json();
 
@@ -157,7 +157,7 @@ describe('/api/builder/site/pages/[pageId]/seo', () => {
         headers: { 'content-type': 'application/json' },
         body: '{',
       }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -174,7 +174,7 @@ describe('/api/builder/site/pages/[pageId]/seo', () => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ seo: { title: 'x'.repeat(301) } }),
       }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -193,7 +193,7 @@ describe('/api/builder/site/pages/[pageId]/seo', () => {
 
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/site/pages/page-1/seo?locale=en'),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -213,7 +213,7 @@ describe('/api/builder/site/pages/[pageId]/seo', () => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ seo: { title: '새 제목' } }),
       }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 

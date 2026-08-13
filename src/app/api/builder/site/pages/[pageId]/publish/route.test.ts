@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   recordPublishBlocked,
@@ -120,11 +120,29 @@ describe('/api/builder/site/pages/[pageId]/publish', () => {
     vi.mocked(evaluateTranslationReleasePolicyForPublish).mockResolvedValue(allowedReleaseDecision);
   });
 
+  it('denies a designer publish before publishing the page', async () => {
+    vi.mocked(guardMutation).mockResolvedValue(
+      NextResponse.json({ error: 'Missing permission: publish' }, { status: 403 }) as never,
+    );
+    const route = await import('./route');
+    const response = await route.POST(
+      postRequest(),
+      { params: Promise.resolve({ pageId: 'page-1' }) },
+    );
+
+    expect(response.status).toBe(403);
+    expect(guardMutation).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      { bucket: 'publish', permission: 'publish' },
+    );
+    expect(publishPage).not.toHaveBeenCalled();
+  });
+
   it('rejects a malformed publish site id before policy or publish access', async () => {
     const route = await import('./route');
     const response = await route.POST(
       postRequest('ko', { siteId: '../../x' }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const payload = await response.json();
 
@@ -150,7 +168,7 @@ describe('/api/builder/site/pages/[pageId]/publish', () => {
 
     const route = await import('./route');
     const response = await route.POST(postRequest('zh-hant', { expectedDraftRevision: 4 }), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
     const payload = await response.json();
 
@@ -178,7 +196,7 @@ describe('/api/builder/site/pages/[pageId]/publish', () => {
     const response = await route.POST(postRequest('en', {
       expectedDraftRevision: 12,
       translationSiteReview,
-    }), { params: { pageId: 'page-1' } });
+    }), { params: Promise.resolve({ pageId: 'page-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(409);
@@ -205,7 +223,7 @@ describe('/api/builder/site/pages/[pageId]/publish', () => {
     );
 
     const route = await import('./route');
-    const response = await route.POST(postRequest('ko'), { params: { pageId: 'page-1' } });
+    const response = await route.POST(postRequest('ko'), { params: Promise.resolve({ pageId: 'page-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(500);
@@ -243,7 +261,7 @@ describe('/api/builder/site/pages/[pageId]/publish', () => {
 
     const route = await import('./route');
     const response = await route.POST(postRequest('en', { expectedDraftRevision: 9 }), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
     const payload = await response.json();
 
@@ -283,7 +301,7 @@ describe('/api/builder/site/pages/[pageId]/publish', () => {
       expectedDraftRevision: 10,
       translationSiteReview,
     }), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
 
     expect(response.status).toBe(200);
@@ -312,7 +330,7 @@ describe('/api/builder/site/pages/[pageId]/publish', () => {
       { expectedDraftRevision: 11, siteId: 'default' },
       { referer: 'https://law.example.test/ko/admin-builder?siteId=workspace-site-b' },
     ), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
 
     expect(response.status).toBe(200);

@@ -166,6 +166,66 @@ test('atomic write/read/remove preserves complete bytes and leaves no control ar
   assert.deepEqual(await artifacts(target), []);
 });
 
+test('many concurrent read-only callers do not contend on the writer lease', async (t) => {
+  const { root, target } = await fixture(t);
+  const expected = JSON.stringify({
+    revision: 7,
+    payload: 'stable-read-sentinel'.repeat(2_048),
+  });
+  await writeFile(target, expected);
+
+  const snapshots = await Promise.all(
+    Array.from({ length: 128 }, () => readLocalJsonFile(target, {
+      allowedRoot: root,
+      acquireTimeoutMs: 0,
+    })),
+  );
+
+  assert.equal(snapshots.length, 128);
+  for (const snapshot of snapshots) {
+    assert.equal(snapshot.kind, 'present');
+    assert.equal(snapshot.bytes.toString(), expected);
+    assert.deepEqual(JSON.parse(snapshot.bytes.toString()), JSON.parse(expected));
+  }
+  assert.deepEqual(await artifacts(target), []);
+});
+
+test('readers observe only complete JSON while an atomic writer rotates snapshots', async (t) => {
+  const { root, target } = await fixture(t);
+  const document = (revision) => JSON.stringify({
+    revision,
+    payload: String(revision).padStart(2, '0').repeat(8_192),
+  });
+  await writeFile(target, document(0));
+
+  const writer = (async () => {
+    for (let revision = 1; revision <= 8; revision += 1) {
+      await atomicWriteLocalJson(target, document(revision), { allowedRoot: root });
+    }
+  })();
+  const readers = Promise.all(
+    Array.from({ length: 24 }, async () => {
+      const observed = [];
+      for (let index = 0; index < 16; index += 1) {
+        const snapshot = await readLocalJsonFile(target, { allowedRoot: root });
+        assert.equal(snapshot.kind, 'present');
+        const parsed = JSON.parse(snapshot.bytes.toString());
+        assert.equal(
+          parsed.payload,
+          String(parsed.revision).padStart(2, '0').repeat(8_192),
+        );
+        observed.push(parsed.revision);
+      }
+      return observed;
+    }),
+  );
+
+  const [, observations] = await Promise.all([writer, readers]);
+  assert.equal(observations.flat().length, 384);
+  assert.deepEqual(await artifacts(target), []);
+  assert.deepEqual(JSON.parse(await readFile(target, 'utf8')), JSON.parse(document(8)));
+});
+
 test('a parent created after the missing-parent probe is read instead of reported missing', async (t) => {
   const { root } = await fixture(t);
   const parent = path.join(root, 'late');

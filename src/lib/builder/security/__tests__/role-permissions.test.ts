@@ -11,6 +11,8 @@ describe('role-permissions matrix', () => {
     for (const perm of BUILDER_PERMISSIONS) {
       expect(hasRoleAccess('owner', perm)).toBe(true);
     }
+    expect(hasRoleAccess('owner', 'view-commerce')).toBe(true);
+    expect(hasRoleAccess('owner', 'manage-commerce')).toBe(true);
   });
 
   it('admin has everything except manage-roles and delete-site', () => {
@@ -20,7 +22,17 @@ describe('role-permissions matrix', () => {
     expect(hasRoleAccess('admin', 'settings')).toBe(true);
     expect(hasRoleAccess('admin', 'manage-roles')).toBe(false);
     expect(hasRoleAccess('admin', 'delete-site')).toBe(false);
+    expect(hasRoleAccess('admin', 'view-commerce')).toBe(true);
+    expect(hasRoleAccess('admin', 'manage-commerce')).toBe(true);
   });
+
+  it.each(['designer', 'editor', 'client'] as const)(
+    'does not grant %s either commerce permission',
+    (role) => {
+      expect(hasRoleAccess(role, 'view-commerce')).toBe(false);
+      expect(hasRoleAccess(role, 'manage-commerce')).toBe(false);
+    },
+  );
 
   it('designer can edit pages, view CMS/bookings, and manage translations', () => {
     expect(hasRoleAccess('designer', 'edit-pages')).toBe(true);

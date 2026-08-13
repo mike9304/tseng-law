@@ -11,7 +11,8 @@ export type BookingManageApiErrorCode =
   | 'reschedule_unavailable'
   | 'slot_lock_conflict'
   | 'slot_unavailable'
-  | 'staff_unavailable';
+  | 'staff_unavailable'
+  | 'booking_storage_unavailable';
 
 export interface BookingManageApiErrorPayload {
   error: string;
@@ -31,6 +32,7 @@ const bookingManageApiErrorMessages: Record<Locale, Record<BookingManageApiError
     slot_lock_conflict: '선택한 시간이 다른 요청에서 예약 중입니다.',
     slot_unavailable: '선택한 시간은 더 이상 예약할 수 없습니다.',
     staff_unavailable: '선택한 담당자를 예약할 수 없습니다.',
+    booking_storage_unavailable: '예약 저장 시스템을 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도해 주세요.',
   },
   'zh-hant': {
     too_many_requests: '預約管理請求過多，請稍後再試。',
@@ -44,6 +46,7 @@ const bookingManageApiErrorMessages: Record<Locale, Record<BookingManageApiError
     slot_lock_conflict: '所選時段正由其他請求預約中。',
     slot_unavailable: '所選時段已無法預約。',
     staff_unavailable: '所選員工目前無法預約。',
+    booking_storage_unavailable: '預約儲存系統暫時無法使用，請稍後再試。',
   },
   en: {
     too_many_requests: 'Too many booking management requests. Try again shortly.',
@@ -57,6 +60,7 @@ const bookingManageApiErrorMessages: Record<Locale, Record<BookingManageApiError
     slot_lock_conflict: 'The selected slot is being booked by another request.',
     slot_unavailable: 'The selected slot is no longer available.',
     staff_unavailable: 'The selected staff member is not available.',
+    booking_storage_unavailable: 'Booking storage is temporarily unavailable. Try again shortly.',
   },
 };
 

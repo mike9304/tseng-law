@@ -9,6 +9,7 @@ import InsightsArchiveSection from '@/components/InsightsArchiveSection';
 import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import HomeContactCta from '@/components/HomeContactCta';
+import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
 import Reveal from '@/components/Reveal';
 import type { FAQItem } from '@/data/faq-content';
 import { faqContent } from '@/data/faq-content';
@@ -21,7 +22,7 @@ type HomeInsightArchivePosts = Parameters<typeof InsightsArchiveSection>[0]['pos
 
 const homeSeoCopy: Record<SiteLocale, { title: string; description: string; keywords: string[] }> = {
   ko: {
-    title: '대만 변호사·대만 소송·대만 회사설립',
+    title: '대만 변호사·회사설립·소송',
     description:
       '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어와 일본어로 안내하는 법무법인 호정 공식 사이트입니다.',
     keywords: ['대만 변호사', '대만 소송', '대만 회사설립', '대만 법인설립', '대만 투자 법률'],
@@ -75,6 +76,7 @@ export function LegacyHomePageBody({
       <Reveal>
         <ServicesBento locale={locale} id="practice" variant="default" />
       </Reveal>
+      <TaiwanHeritageInterlude locale={locale} />
       <Reveal>
         <HomeAttorneySplit locale={locale} />
       </Reveal>

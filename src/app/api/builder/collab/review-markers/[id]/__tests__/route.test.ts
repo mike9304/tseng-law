@@ -44,7 +44,7 @@ const guardMutationMock = vi.mocked(guardMutation);
 const resolveReviewMarkerMock = vi.mocked(resolveReviewMarker);
 const unresolveReviewMarkerMock = vi.mocked(unresolveReviewMarker);
 const updateReviewMarkerMock = vi.mocked(updateReviewMarker);
-const params = { params: { id: 'rmk-1' } };
+const params = { params: Promise.resolve({ id: 'rmk-1' }) };
 
 function request(method: string, query = '', body: unknown = { action: 'update', text: 'Approved', kind: 'approval' }): NextRequest {
   return new NextRequest(`https://law.example.test/api/builder/collab/review-markers/rmk-1${query ? `?${query}` : ''}`, {

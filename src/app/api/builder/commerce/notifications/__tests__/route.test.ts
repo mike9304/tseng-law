@@ -1,8 +1,7 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { recordCommerceSettingsUpdated } from '@/lib/builder/audit/record';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   listNotificationEvents,
   listRecoveryCarts,
@@ -11,12 +10,15 @@ import {
 } from '@/lib/builder/commerce/notifications-engine';
 import { GET, PATCH } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/audit/record', () => ({
@@ -30,7 +32,7 @@ vi.mock('@/lib/builder/commerce/notifications-engine', () => ({
   saveNotificationSettings: vi.fn(async (settings: unknown) => settings),
 }));
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const listNotificationEventsMock = vi.mocked(listNotificationEvents);
 const listRecoveryCartsMock = vi.mocked(listRecoveryCarts);
@@ -53,8 +55,14 @@ function patchRequest(query = '', body: string | unknown = { settings: { enabled
 describe('builder commerce notifications API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     listNotificationEventsMock.mockResolvedValue([]);
     listRecoveryCartsMock.mockResolvedValue([]);
     loadNotificationSettingsMock.mockResolvedValue({ enabled: true } as never);

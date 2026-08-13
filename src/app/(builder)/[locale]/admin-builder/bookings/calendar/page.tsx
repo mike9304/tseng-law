@@ -9,11 +9,13 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 export const dynamic = 'force-dynamic';
 
 type PageProps = {
-  params: { locale: string };
-  searchParams?: { month?: string; view?: string; staffId?: string };
+  params: Promise<{ locale: string }>;
+  searchParams?: Promise<{ month?: string; view?: string; staffId?: string }>;
 };
 
-export default async function BookingCalendarPage({ params, searchParams }: PageProps) {
+export default async function BookingCalendarPage(props: PageProps) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = getBookingsAdminCopy(locale);
   const initialMonth = normalizeBookingCalendarMonth(searchParams?.month);

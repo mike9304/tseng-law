@@ -1,12 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { getMemberPortalEmails } from '@/lib/builder/members/members-engine';
 import { addBookingDuration, isSlotAvailable } from '@/lib/builder/bookings/availability';
 import { evaluateBookingSelfServicePolicy } from '@/lib/builder/bookings/refund';
-import { getService, getStaff, listBookings, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
-import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
+import {
+  getService,
+  getStaff,
+  hasDurableBookingStorage,
+  listBookings,
+  saveBooking,
+  timestamped,
+} from '@/lib/builder/bookings/storage';
+import { acquireSlotLock, releaseSlotLock, renewSlotLock } from '@/lib/builder/bookings/slot-lock';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 
 export const runtime = 'nodejs';
@@ -25,10 +33,20 @@ function clientIp(request: NextRequest): string {
   );
 }
 
-export async function POST(request: NextRequest, { params }: { params: { locale: string; bookingId: string } }) {
+export async function POST(
+  request: NextRequest,
+  props: { params: Promise<{ locale: string; bookingId: string }> }
+) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
+  const params = await props.params;
   const member = await getCurrentSiteMember();
   if (!member) {
     return NextResponse.json({ error: 'Not signed in' }, { status: 401 });
+  }
+  if (!hasDurableBookingStorage()) {
+    return NextResponse.json({ error: 'Booking storage is temporarily unavailable. Try again shortly.' }, { status: 503 });
   }
 
   const rate = await checkRateLimit(`member-booking-reschedule:${member.memberId}:${clientIp(request)}`, 8, 60_000);
@@ -79,8 +97,10 @@ export async function POST(request: NextRequest, { params }: { params: { locale:
     staffId: nextStaffId,
     startAt: parsed.data.startAt,
     resourceIds,
+    bookingId: booking.bookingId,
   };
-  if (!acquireSlotLock(slotKey)) {
+  const slotLease = await acquireSlotLock(slotKey);
+  if (!slotLease) {
     return NextResponse.json({ error: 'Selected slot is being booked by another request.' }, { status: 409 });
   }
 
@@ -100,6 +120,9 @@ export async function POST(request: NextRequest, { params }: { params: { locale:
       endAt,
       resourceIds,
     }, booking.createdAt);
+    if (!await renewSlotLock(slotLease)) {
+      return NextResponse.json({ error: 'Booking storage is temporarily unavailable. Try again shortly.' }, { status: 503 });
+    }
     await saveBooking(updated);
     emitEvent('booking.rescheduled', {
       bookingId: updated.bookingId,
@@ -109,6 +132,8 @@ export async function POST(request: NextRequest, { params }: { params: { locale:
     });
     return NextResponse.json({ ok: true, booking: updated });
   } finally {
-    releaseSlotLock(slotKey);
+    await releaseSlotLock(slotLease).catch(() => {
+      console.error('[member-booking/reschedule] slot lease release failed');
+    });
   }
 }

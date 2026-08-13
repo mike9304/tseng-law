@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { readRecentAuditEvents } from '@/lib/builder/audit/store';
 import type { AuditEvent } from '@/lib/builder/audit/types';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getBuilderSiteApiErrorPayload } from '@/lib/builder/site/site-api-copy';
 
@@ -16,7 +16,7 @@ function errorResponse(locale: Locale): NextResponse {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'manage-users');
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');

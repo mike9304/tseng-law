@@ -56,7 +56,7 @@ describe('/api/builder/live-chat/[conversationId]', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/live-chat/cnv-1'),
-      { params: { conversationId: 'cnv-1' } },
+      { params: Promise.resolve({ conversationId: 'cnv-1' }) },
     );
     const payload = await response.json();
 
@@ -73,7 +73,7 @@ describe('/api/builder/live-chat/[conversationId]', () => {
     const route = await import('../route');
     await route.GET(
       new NextRequest('https://law.example.test/api/builder/live-chat/cnv-1'),
-      { params: { conversationId: 'cnv-1' } },
+      { params: Promise.resolve({ conversationId: 'cnv-1' }) },
     );
 
     expect(saveConversation).not.toHaveBeenCalled();
@@ -84,7 +84,7 @@ describe('/api/builder/live-chat/[conversationId]', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/live-chat/cnv-missing?locale=zh-hant'),
-      { params: { conversationId: 'cnv-missing' } },
+      { params: Promise.resolve({ conversationId: 'cnv-missing' }) },
     );
     const payload = await response.json();
 
@@ -98,7 +98,7 @@ describe('/api/builder/live-chat/[conversationId]', () => {
     vi.mocked(getConversation).mockResolvedValue(makeConversation({ status: 'open' }));
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ status: 'closed' }), {
-      params: { conversationId: 'cnv-1' },
+      params: Promise.resolve({ conversationId: 'cnv-1' }),
     });
     const payload = await response.json();
 
@@ -112,7 +112,7 @@ describe('/api/builder/live-chat/[conversationId]', () => {
   it('preserves existing status when PATCH body omits status', async () => {
     vi.mocked(getConversation).mockResolvedValue(makeConversation({ status: 'open' }));
     const route = await import('../route');
-    await route.PATCH(patchRequest({}), { params: { conversationId: 'cnv-1' } });
+    await route.PATCH(patchRequest({}), { params: Promise.resolve({ conversationId: 'cnv-1' }) });
 
     expect(saveConversation).toHaveBeenCalledWith(
       expect.objectContaining({ status: 'open' }),
@@ -123,7 +123,7 @@ describe('/api/builder/live-chat/[conversationId]', () => {
     vi.mocked(getConversation).mockResolvedValue(null);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ locale: 'en', status: 'closed' }), {
-      params: { conversationId: 'cnv-missing' },
+      params: Promise.resolve({ conversationId: 'cnv-missing' }),
     });
     const payload = await response.json();
 
@@ -142,7 +142,7 @@ describe('/api/builder/live-chat/[conversationId]', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/live-chat/cnv-1'),
-      { params: { conversationId: 'cnv-1' } },
+      { params: Promise.resolve({ conversationId: 'cnv-1' }) },
     );
 
     expect(response.status).toBe(401);

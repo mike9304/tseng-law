@@ -13,7 +13,8 @@ const copy = {
   en: { title: 'Edit Template' },
 } as const;
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return {
     title: copy[locale].title,
@@ -21,11 +22,12 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   };
 };
 
-export default async function TemplateEditPage({
-  params,
-}: {
-  params: { locale: string; templateId: string };
-}) {
+export default async function TemplateEditPage(
+  props: {
+    params: Promise<{ locale: string; templateId: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const template = await getTemplate(params.templateId);
   if (!template) notFound();

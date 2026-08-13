@@ -111,7 +111,7 @@ export async function runPublishChecks(
       page = null;
     }
   }
-  const suite = await runAllChecks(doc, page, site);
+  const suite = await runAllChecks(doc, page, site, siteId);
   return {
     passed: !suite.hasBlocker,
     errors: suite.results.filter((r) => r.severity === 'blocker').map((r) => r.message),

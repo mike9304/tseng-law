@@ -66,13 +66,18 @@ describe('published standard page CSS guards', () => {
     expect(publishedPage).toContain('padding-block-start: 0 !important;');
   });
 
-  it('emits exactly one <main> landmark: layout owns id="main", published render demotes the rest (WO#5)', () => {
+  it('emits exactly one <main> landmark: route shell owns id="main", published render demotes the rest (WO#5)', () => {
     const publishedPage = read('src/lib/builder/site/public-page.tsx');
     const containerElement = read('src/lib/builder/components/container/Element.tsx');
     const layout = read('src/app/[locale]/layout.tsx');
+    const routeShell = read('src/components/CinematicRouteShell.tsx');
 
-    // The single canonical landmark stays in the locale layout.
-    expect(layout).toContain('<main id="main">');
+    // The locale layout delegates its single canonical landmark to the
+    // pathname-aware route shell.
+    expect(layout).toContain('<CinematicRouteShell');
+    expect(layout).not.toMatch(/<main\b/);
+    expect(routeShell.match(/<main\b/g)).toHaveLength(1);
+    expect(routeShell).toContain('<main id="main">');
 
     // The published renderer wrapper must not be a nested <main>.
     expect(publishedPage).not.toMatch(/<main\s+className="builder-pub-main"/);

@@ -2,12 +2,14 @@ import type { Metadata } from 'next';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
 import { listPaymentWebhookEvents } from '@/lib/builder/commerce/payment-webhooks-engine';
+import { requireBuilderPagePermission } from '@/lib/builder/security/page-permission';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import PaymentWebhookManagerClient from '@/components/builder/commerce/PaymentWebhookManagerClient';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const title = locale === 'ko' ? '결제 웹훅' : locale === 'zh-hant' ? '付款 Webhook' : 'Payment webhooks';
   return {
@@ -20,8 +22,10 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default async function CommercePaymentWebhooksPage({ params }: { params: { locale: Locale } }) {
+export default async function CommercePaymentWebhooksPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
+  await requireBuilderPagePermission('view-commerce');
   const site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, locale);
   const events = await listPaymentWebhookEvents();
 

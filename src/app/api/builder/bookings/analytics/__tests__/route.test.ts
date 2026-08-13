@@ -1,12 +1,12 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { listBookings, listServices, listStaff } from '@/lib/builder/bookings/storage';
 import { buildBookingAnalyticsBundle } from '@/lib/builder/bookings/analytics';
 import type { Booking, BookingService } from '@/lib/builder/bookings/types';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ username: 'admin' })),
+vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'admin' })),
 }));
 
 vi.mock('@/lib/builder/bookings/storage', () => ({
@@ -63,7 +63,22 @@ function booking(overrides: Pick<Booking, 'bookingId' | 'serviceId'> & Partial<B
 describe('/api/builder/bookings/analytics', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.mocked(requireBuilderAdminAuth).mockReturnValue({ username: 'admin' });
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({ username: 'admin' });
+  });
+
+  it('requires view-bookings and short-circuits storage when permission is denied', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: view-bookings' }, { status: 403 }),
+    );
+    const route = await import('../route');
+    const request = new NextRequest('https://law.example.test/api/builder/bookings/analytics');
+    const response = await route.GET(request);
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(request, 'view-bookings');
+    expect(listBookings).not.toHaveBeenCalled();
+    expect(listServices).not.toHaveBeenCalled();
+    expect(listStaff).not.toHaveBeenCalled();
   });
 
   it('returns a default-locale payload when the locale query is unsupported', async () => {
@@ -74,6 +89,10 @@ describe('/api/builder/bookings/analytics', () => {
     const payload = await response.json();
 
     expect(response.status).toBe(400);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-bookings',
+    );
     expect(payload).toEqual({
       error: '지원하지 않는 언어입니다.',
       errorCode: 'unknown_locale',

@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import * as homeRoute from '@/app/api/builder/home/route';
 import * as publishChecksRoute from '@/app/api/builder/home/publish-checks/route';
@@ -14,7 +14,11 @@ import {
   rollbackBuilderHomeDraftToPublishedRevision,
   writeBuilderHomeSnapshot,
 } from '@/lib/builder/persistence';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderRead,
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import {
   BuilderPublishValidationError,
   validateBuilderHomeSnapshotForPublish,
@@ -33,6 +37,10 @@ vi.mock('next/cache', () => ({
 
 vi.mock('@/lib/builder/security/guard', () => ({
   guardBuilderRead: vi.fn(() => ({ username: 'admin' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-pages',
+  })),
   guardMutation: vi.fn(async () => ({ user: { id: 'admin-1', email: 'admin@example.test' } })),
 }));
 
@@ -100,6 +108,7 @@ vi.mock('@/lib/builder/persistence', () => {
 });
 
 const mockedGuardBuilderRead = vi.mocked(guardBuilderRead);
+const mockedGuardBuilderReadWithPermission = vi.mocked(guardBuilderReadWithPermission);
 const mockedGuardMutation = vi.mocked(guardMutation);
 const mockedReadBuilderHomeSnapshot = vi.mocked(readBuilderHomeSnapshot);
 const mockedWriteBuilderHomeSnapshot = vi.mocked(writeBuilderHomeSnapshot);
@@ -179,6 +188,10 @@ describe('/api/builder/home stable error contracts', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     mockedGuardBuilderRead.mockReturnValue({ username: 'admin' } as never);
+    mockedGuardBuilderReadWithPermission.mockResolvedValue({
+      username: 'admin',
+      permission: 'edit-pages',
+    } as never);
     mockedGuardMutation.mockResolvedValue({
       user: { id: 'admin-1', email: 'admin@example.test' },
     } as never);
@@ -222,6 +235,37 @@ describe('/api/builder/home stable error contracts', () => {
       errorCode: 'home_snapshot_kind_invalid',
     });
     expect(mockedReadBuilderHomeSnapshot).not.toHaveBeenCalled();
+  });
+
+  it('requires edit-pages and short-circuits home snapshot and revision reads on denial', async () => {
+    const forbidden = () => NextResponse.json(
+      { error: 'Missing permission: edit-pages' },
+      { status: 403 },
+    );
+    mockedGuardBuilderReadWithPermission
+      .mockResolvedValueOnce(forbidden())
+      .mockResolvedValueOnce(forbidden());
+
+    const homeResponse = await homeRoute.GET(request('/api/builder/home?kind=draft&locale=ko'));
+    const revisionsResponse = await revisionsRoute.GET(
+      request('/api/builder/home/revisions?kind=published&locale=ko'),
+    );
+
+    expect([homeResponse.status, revisionsResponse.status]).toEqual([403, 403]);
+    expect(mockedGuardBuilderReadWithPermission).toHaveBeenCalledTimes(2);
+    expect(mockedGuardBuilderReadWithPermission).toHaveBeenNthCalledWith(
+      1,
+      expect.any(NextRequest),
+      'edit-pages',
+    );
+    expect(mockedGuardBuilderReadWithPermission).toHaveBeenNthCalledWith(
+      2,
+      expect.any(NextRequest),
+      'edit-pages',
+    );
+    expect(mockedReadBuilderHomeSnapshot).not.toHaveBeenCalled();
+    expect(mockedListBuilderHomeSnapshotHistory).not.toHaveBeenCalled();
+    expect(mockedReadBuilderHomeSnapshotHistoryDetail).not.toHaveBeenCalled();
   });
 
   it('does not expose raw home snapshot read failures', async () => {
@@ -312,6 +356,21 @@ describe('/api/builder/home stable error contracts', () => {
       errorCode: 'home_publish_failed',
     });
     expect(JSON.stringify(payload)).not.toContain('asset read failed internally');
+  });
+
+  it('denies an editor home publish before publishing the snapshot', async () => {
+    mockedGuardMutation.mockResolvedValue(
+      NextResponse.json({ error: 'Missing permission: publish' }, { status: 403 }) as never,
+    );
+
+    const response = await publishRoute.POST(request('/api/builder/home/publish?locale=ko', {}));
+
+    expect(response.status).toBe(403);
+    expect(mockedGuardMutation).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      { bucket: 'publish', permission: 'publish' },
+    );
+    expect(mockedPublishBuilderHomeSnapshot).not.toHaveBeenCalled();
   });
 
   it('returns stable-code JSON when home publish has no draft', async () => {

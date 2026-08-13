@@ -186,7 +186,7 @@ export default function SectionDotNav({
     };
   }, [getScrollRoot, pathname]);
 
-  /* ---- Drag-to-scroll for the Taipei 101 tower ---- */
+  /* ---- Drag-to-scroll for the section navigator ---- */
   const onPointerDown = useCallback((e: PointerEvent<HTMLElement>) => {
     const root = getScrollRoot();
     e.preventDefault();

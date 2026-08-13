@@ -1,11 +1,14 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { readNativeBlogAdminModel } from '@/lib/builder/blog/admin-storage';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { GET } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
+vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-blog',
+  })),
 }));
 
 vi.mock('@/lib/builder/blog/admin-storage', () => ({
@@ -26,7 +29,7 @@ const model = {
 };
 
 const readNativeBlogAdminModelMock = vi.mocked(readNativeBlogAdminModel);
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 
 function request(query = ''): NextRequest {
   return new NextRequest(`https://law.example.test/api/builder/blog/admin${query ? `?${query}` : ''}`);
@@ -35,17 +38,35 @@ function request(query = ''): NextRequest {
 describe('builder blog admin API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'edit-blog',
+    });
     readNativeBlogAdminModelMock.mockResolvedValue(model as never);
   });
 
   it('returns the admin model while preserving success response shape', async () => {
-    const response = await GET(request('locale=ko'));
+    const req = request('locale=ko');
+    const response = await GET(req);
     const payload = await response.json();
 
     expect(response.status).toBe(200);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(req, 'edit-blog');
     expect(readNativeBlogAdminModelMock).toHaveBeenCalledWith('ko');
     expect(payload).toEqual({ ok: true, model });
+  });
+
+  it('short-circuits a missing edit-blog permission with 403', async () => {
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: edit-blog' }, { status: 403 }),
+    );
+
+    const req = request('locale=ko');
+    const response = await GET(req);
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(req, 'edit-blog');
+    expect(readNativeBlogAdminModelMock).not.toHaveBeenCalled();
   });
 
   it('returns localized validation errors', async () => {

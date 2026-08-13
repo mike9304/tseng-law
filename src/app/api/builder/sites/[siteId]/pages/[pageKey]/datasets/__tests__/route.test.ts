@@ -100,7 +100,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets', () => {
   it('returns current dataset overviews on GET', async () => {
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/sites/default/pages/home/datasets?locale=ko'),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -159,7 +159,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets', () => {
 
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/sites/default/pages/home/datasets?locale=ko'),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -190,7 +190,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets', () => {
           expectedRevision: 12,
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
     const writeInput = mockedWriteBuilderPageSnapshot.mock.calls[0]?.[0];
@@ -232,7 +232,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets', () => {
           mode: 'list',
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -262,7 +262,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets', () => {
           expectedRevision: '12',
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -292,7 +292,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets', () => {
           limit: 3,
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -312,7 +312,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets', () => {
         headers: { 'content-type': 'application/json' },
         body: '{',
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -329,7 +329,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets', () => {
 
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/sites/default/pages/home/datasets?locale=en'),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -359,7 +359,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets', () => {
           expectedRevision: 11,
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
     const payload = await response.json();
 
@@ -389,7 +389,7 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey]/datasets', () => {
           collectionId: 'service-areas',
         }),
       }),
-      { params: { siteId: 'default', pageKey: 'home' } },
+      { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) },
     );
 
     expect(response.status).toBe(401);

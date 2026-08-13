@@ -58,6 +58,48 @@ describe('guardMutation', () => {
     expect(userHasPermissionMock).toHaveBeenCalledWith('designer', 'edit-pages');
   });
 
+  it.each(['reviewer', 'viewer'])(
+    'fails closed for authenticated %s users when the permission is omitted',
+    async (username) => {
+      requireBuilderAdminAuthMock.mockReturnValueOnce({ username });
+      userHasPermissionMock.mockResolvedValueOnce(false);
+
+      const result = await guardMutation(request());
+
+      expect(result).toBeInstanceOf(NextResponse);
+      if (!(result instanceof NextResponse)) throw new Error('Expected forbidden response.');
+      expect(result.status).toBe(403);
+      expect(await result.json()).toEqual({ error: 'Missing permission: edit-pages' });
+      expect(userHasPermissionMock).toHaveBeenCalledWith(username, 'edit-pages');
+      expect(checkDraftSaveRateLimitMock).not.toHaveBeenCalled();
+      expect(checkMutationRateLimitMock).not.toHaveBeenCalled();
+    },
+  );
+
+  it.each(['owner', 'editor'])(
+    'allows authenticated %s users with the default edit-pages permission',
+    async (username) => {
+      requireBuilderAdminAuthMock.mockReturnValueOnce({ username });
+
+      const result = await guardMutation(request());
+
+      expect(result).toEqual({ username, permission: 'edit-pages' });
+      expect(userHasPermissionMock).toHaveBeenCalledWith(username, 'edit-pages');
+      expect(checkMutationRateLimitMock).toHaveBeenCalledWith('unknown');
+    },
+  );
+
+  it('keeps allowReadOnly callers subject to their explicit granular permission', async () => {
+    const result = await guardMutation(request(), {
+      allowReadOnly: true,
+      permission: 'view-contacts',
+    });
+
+    expect(result).toEqual({ username: 'designer', permission: 'view-contacts' });
+    expect(userHasPermissionMock).toHaveBeenCalledWith('designer', 'view-contacts');
+    expect(checkMutationRateLimitMock).toHaveBeenCalledWith('unknown');
+  });
+
   it('uses the draft save bucket when requested', async () => {
     const result = await guardMutation(request(), { bucket: 'draft', permission: 'edit-pages' });
 

@@ -91,7 +91,7 @@ describe('/api/builder/lawyers/[slug]', () => {
           imageFocalPoint: { x: 0.18, y: 0.66 },
         }),
       }),
-      { params: { slug: 'wei-tseng' } },
+      { params: Promise.resolve({ slug: 'wei-tseng' }) },
     );
     const data = await response.json() as {
       ok?: boolean;
@@ -151,7 +151,7 @@ describe('/api/builder/lawyers/[slug]', () => {
           slug: 'wei tseng profile',
         }),
       }),
-      { params: { slug: 'wei-tseng' } },
+      { params: Promise.resolve({ slug: 'wei-tseng' }) },
     );
     expect(seededResponse.status).toBe(200);
 
@@ -159,7 +159,7 @@ describe('/api/builder/lawyers/[slug]', () => {
       new NextRequest('https://law.example.test/api/builder/lawyers/wei-tseng-profile?locale=ko', {
         method: 'DELETE',
       }),
-      { params: { slug: 'wei-tseng-profile' } },
+      { params: Promise.resolve({ slug: 'wei-tseng-profile' }) },
     );
     const resetData = await resetResponse.json() as {
       ok?: boolean;

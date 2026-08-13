@@ -1,13 +1,55 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import Link from 'next/link';
+import { createPortal } from 'react-dom';
 import { usePathname } from 'next/navigation';
+import {
+  getConsultationCtaLabel,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 import type { Locale } from '@/lib/locales';
 
 const HIDE_UNTIL_KEY = 'hojeong-year-end-event-hide-until';
-const SESSION_DISMISSED_KEY = 'hojeong-year-end-event-dismissed-session';
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+const SEVEN_DAYS_MS = 7 * ONE_DAY_MS;
+
+type SuppressionStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
+
+export function readPopupSuppressionUntil(
+  storage: SuppressionStorage,
+  now = Date.now(),
+): number {
+  try {
+    const rawValue = storage.getItem(HIDE_UNTIL_KEY);
+    if (rawValue === null) return 0;
+
+    const hideUntil = Number(rawValue);
+    if (Number.isFinite(hideUntil) && hideUntil > now) return hideUntil;
+
+    storage.removeItem(HIDE_UNTIL_KEY);
+    return 0;
+  } catch {
+    return 0;
+  }
+}
+
+export function storePopupSuppression(
+  storage: SuppressionStorage,
+  durationMs: number,
+  now = Date.now(),
+): number {
+  if (!Number.isFinite(durationMs) || durationMs <= 0) return 0;
+
+  const hideUntil = now + durationMs;
+  if (!Number.isFinite(hideUntil)) return 0;
+
+  try {
+    storage.setItem(HIDE_UNTIL_KEY, String(hideUntil));
+    return hideUntil;
+  } catch {
+    return 0;
+  }
+}
 
 type PopupCopy = {
   readonly badge: string;
@@ -16,7 +58,7 @@ type PopupCopy = {
   readonly points: readonly string[];
   readonly cta: string;
   readonly close: string;
-  readonly closeForDay: string;
+  readonly closeForSevenDays: string;
   readonly minimize: string;
   readonly reopen: string;
 };
@@ -36,7 +78,7 @@ const copyByLocale: Record<Locale, PopupCopy> = {
     points: ['대상: 신규/기존 모든 고객', '진행: Google Meet 30분 무료 상담', '참여: 상담 후 구글지도 리뷰 1건 작성'],
     cta: '이벤트 문의하기',
     close: '닫기',
-    closeForDay: '오늘 하루 보지 않기',
+    closeForSevenDays: '7일간 보지 않기',
     minimize: '축소',
     reopen: '이벤트 다시 열기'
   },
@@ -48,7 +90,7 @@ const copyByLocale: Record<Locale, PopupCopy> = {
     points: ['對象：新客戶與既有客戶', '方式：Google Meet 30 分鐘免費諮詢', '參與：諮詢後在 Google Maps 留下 1 則評論'],
     cta: '活動洽詢',
     close: '關閉',
-    closeForDay: '今天不再顯示',
+    closeForSevenDays: '7 天內不再顯示',
     minimize: '縮小',
     reopen: '重新開啟活動'
   },
@@ -60,7 +102,7 @@ const copyByLocale: Record<Locale, PopupCopy> = {
     points: ['Eligible: all new and existing clients', 'Format: 30-minute free Google Meet consultation', 'How to join: leave one Google Maps review after consultation'],
     cta: 'Contact about this event',
     close: 'Close',
-    closeForDay: "Don't show today",
+    closeForSevenDays: "Don't show for 7 days",
     minimize: 'Minimize',
     reopen: 'Reopen event'
   }
@@ -77,23 +119,23 @@ export default function YearEndEventPopup({
   const isEligiblePage = normalizedPath === `/${locale}`;
   const [open, setOpen] = useState(false);
   const [minimized, setMinimized] = useState(false);
-  const popupRef = useRef<HTMLDivElement>(null);
+  const [heroPortalTarget, setHeroPortalTarget] = useState<HTMLElement | null>(null);
   const minimizedButtonRef = useRef<HTMLButtonElement>(null);
   const copy = useMemo(() => copyByLocale[locale], [locale]);
   const popupVisible = previewOpen || (!isUtilityPage && isEligiblePage && open);
-  const dismissForSession = useCallback(() => {
+  const dismissForDuration = useCallback((durationMs: number) => {
     if (previewOpen) {
       onPreviewClose?.();
       return;
     }
-    try {
-      sessionStorage.setItem(SESSION_DISMISSED_KEY, 'true');
-    } catch (error) {
-      if (!(error instanceof Error)) throw error;
-    }
+    storePopupSuppression(window.localStorage, durationMs);
     setMinimized(false);
     setOpen(false);
   }, [onPreviewClose, previewOpen]);
+  const dismissForOneDay = useCallback(
+    () => dismissForDuration(ONE_DAY_MS),
+    [dismissForDuration],
+  );
 
   useEffect(() => {
     if (previewOpen) {
@@ -105,73 +147,35 @@ export default function YearEndEventPopup({
       return;
     }
     if (typeof window === 'undefined') return;
-    try {
-      if (sessionStorage.getItem(SESSION_DISMISSED_KEY) === 'true') return;
-      const hideUntil = Number(localStorage.getItem(HIDE_UNTIL_KEY) ?? '0');
-      if (hideUntil > Date.now()) return;
-      sessionStorage.setItem(SESSION_DISMISSED_KEY, 'true');
-    } catch (error) {
-      if (!(error instanceof Error)) throw error;
-    }
+    if (readPopupSuppressionUntil(window.localStorage) > 0) return;
     setOpen(true);
+  }, [isEligiblePage, isUtilityPage, previewOpen]);
+
+  useEffect(() => {
+    if (previewOpen || isUtilityPage || !isEligiblePage) {
+      setHeroPortalTarget(null);
+      return;
+    }
+
+    setHeroPortalTarget(document.getElementById('hero'));
   }, [isEligiblePage, isUtilityPage, previewOpen]);
 
   useEffect(() => {
     if (!popupVisible || minimized) return;
 
-    const popup = popupRef.current;
-    if (!popup) return;
-    const previouslyFocused = document.activeElement instanceof HTMLElement
-      ? document.activeElement
-      : null;
-    const previousOverflow = document.body.style.overflow;
-    const previousPaddingRight = document.body.style.paddingRight;
-    const scrollbarWidth = Math.max(0, window.innerWidth - document.documentElement.clientWidth);
-    document.body.style.overflow = 'hidden';
-    if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`;
-
-    const focusableElements = () => Array.from(
-      popup.querySelectorAll<HTMLElement>(
-        'button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
-      ),
-    ).filter((element) => element.getClientRects().length > 0);
-
-    const frame = window.requestAnimationFrame(() => {
-      focusableElements()[0]?.focus({ preventScroll: true });
-    });
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         event.preventDefault();
         event.stopPropagation();
-        dismissForSession();
-        return;
-      }
-      if (event.key !== 'Tab') return;
-      const focusable = focusableElements();
-      if (focusable.length === 0) {
-        event.preventDefault();
-        return;
-      }
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus({ preventScroll: true });
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus({ preventScroll: true });
+        dismissForOneDay();
       }
     };
-    document.addEventListener('keydown', onKeyDown, true);
+    document.addEventListener('keydown', onKeyDown);
 
     return () => {
-      window.cancelAnimationFrame(frame);
-      document.removeEventListener('keydown', onKeyDown, true);
-      document.body.style.overflow = previousOverflow;
-      document.body.style.paddingRight = previousPaddingRight;
-      previouslyFocused?.focus({ preventScroll: true });
+      document.removeEventListener('keydown', onKeyDown);
     };
-  }, [dismissForSession, minimized, popupVisible]);
+  }, [dismissForOneDay, minimized, popupVisible]);
 
   useEffect(() => {
     if (!popupVisible || !minimized) return;
@@ -181,23 +185,12 @@ export default function YearEndEventPopup({
     return () => window.cancelAnimationFrame(frame);
   }, [minimized, popupVisible]);
 
-  const hideForDay = () => {
-    if (previewOpen) {
-      onPreviewClose?.();
-      return;
-    }
-    try {
-      localStorage.setItem(HIDE_UNTIL_KEY, String(Date.now() + ONE_DAY_MS));
-    } catch (error) {
-      if (!(error instanceof Error)) throw error;
-    }
-    dismissForSession();
-  };
+  const hideForSevenDays = () => dismissForDuration(SEVEN_DAYS_MS);
 
   if (!popupVisible) return null;
 
   if (minimized) {
-    return (
+    const minimizedPopup = (
       <div className="year-end-popup-minimized">
         <button
           ref={minimizedButtonRef}
@@ -209,21 +202,24 @@ export default function YearEndEventPopup({
           <span>{copy.badge}</span>
           <strong>{copy.title}</strong>
         </button>
-        <button type="button" className="year-end-popup-pill-close" onClick={dismissForSession} aria-label={copy.close}>
+        <button type="button" className="year-end-popup-pill-close" onClick={dismissForOneDay} aria-label={copy.close}>
           ×
         </button>
       </div>
     );
+
+    if (previewOpen) return minimizedPopup;
+    return heroPortalTarget ? createPortal(minimizedPopup, heroPortalTarget) : null;
   }
 
-  return (
+  const fullPopup = (
     <div
       className="year-end-popup-backdrop"
       role="dialog"
-      aria-modal="true"
+      aria-modal="false"
       aria-labelledby="year-end-popup-title"
     >
-      <div ref={popupRef} className="year-end-popup">
+      <div className="year-end-popup">
         <div className="year-end-popup-top">
           <span className="year-end-popup-badge">{copy.badge}</span>
           <div className="year-end-popup-top-actions">
@@ -233,7 +229,7 @@ export default function YearEndEventPopup({
             <button
               type="button"
               className="year-end-popup-close"
-              onClick={dismissForSession}
+              onClick={dismissForOneDay}
               aria-label={copy.close}
             >
               ×
@@ -252,15 +248,23 @@ export default function YearEndEventPopup({
             </li>
           ))}
         </ul>
-        <Link href={`/${locale}/contact`} className="button year-end-popup-cta" onClick={dismissForSession}>
+        <a
+          href={getConsultationPublicMailto(locale)}
+          className="button year-end-popup-cta"
+          onClick={dismissForOneDay}
+          aria-label={`${copy.cta} — ${getConsultationCtaLabel(locale)}`}
+        >
           {copy.cta}
-        </Link>
+        </a>
         <div className="year-end-popup-actions">
-          <button type="button" className="year-end-popup-link" onClick={hideForDay}>
-            {copy.closeForDay}
+          <button type="button" className="year-end-popup-link" onClick={hideForSevenDays}>
+            {copy.closeForSevenDays}
           </button>
         </div>
       </div>
     </div>
   );
+
+  if (previewOpen) return fullPopup;
+  return heroPortalTarget ? createPortal(fullPopup, heroPortalTarget) : null;
 }

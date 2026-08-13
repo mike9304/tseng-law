@@ -67,10 +67,8 @@ function sectionWithSafeThumbnail(section: SavedSection): SavedSection {
   };
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { sectionId: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ sectionId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -82,10 +80,8 @@ export async function GET(
   return NextResponse.json({ ok: true, section: sectionWithSafeThumbnail(section) });
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { sectionId: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ sectionId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -118,10 +114,8 @@ export async function PATCH(
   }
 }
 
-export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { sectionId: string } },
-) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ sectionId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

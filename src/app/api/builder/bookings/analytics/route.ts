@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { listBookings, listServices, listStaff } from '@/lib/builder/bookings/storage';
 import { buildBookingAnalyticsBundle } from '@/lib/builder/bookings/analytics';
 import { buildBookingPaymentAttribution } from '@/lib/builder/bookings/analytics-attribution';
@@ -36,7 +36,7 @@ function errorResponse(
  *   - locale?: 'ko' | 'zh-hant' | 'en' (label locale, defaults to 'ko')
  */
 export async function GET(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = await guardBuilderReadWithPermission(request, 'view-bookings');
   if (auth instanceof NextResponse) return auth;
 
   const params = request.nextUrl.searchParams;

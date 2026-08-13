@@ -29,14 +29,17 @@ describe('WO-I18N-JA-C02B Japanese office maps', () => {
     expect(html).toContain('>韓国事務所の所在地<');
     expect(html).toContain('title="台北事務所の地図"');
     expect(html).toContain('>5.0・クチコミ17件<');
-    expect(html).toContain('aria-label="Googleでの評価は5.0、クチコミは17件です"');
+    expect(html).not.toContain('aria-label="Googleでの評価は5.0、クチコミは17件です"');
+    expect(html).toMatch(
+      /class="office-rating-link"[^>]*>[\s\S]*?<span class="office-rating-text">5\.0・クチコミ17件<\/span>/,
+    );
     expect(componentSource).toContain("locale === 'ja' ? 'FAX' : 'Fax'");
   });
 
   it('renders all Japanese office titles, keeps Taipei selected, and preserves canonical office values', () => {
     const html = render('ja');
 
-    expect((html.match(/role="tab"/g) ?? [])).toHaveLength(3);
+    expect((html.match(/role="tab"/g) ?? [])).toHaveLength(4);
     expect(html).toMatch(
       /role="tab"[^>]*aria-selected="true"[^>]*>台北事務所<\/button>/,
     );
@@ -46,7 +49,10 @@ describe('WO-I18N-JA-C02B Japanese office maps', () => {
     expect(html).toMatch(
       /role="tab"[^>]*aria-selected="false"[^>]*>高雄事務所<\/button>/,
     );
-    expect(html).toContain('台北市大同区承徳路一段35号7F-2');
+    expect(html).toMatch(
+      /role="tab"[^>]*aria-selected="false"[^>]*>屏東事務所<\/button>/,
+    );
+    expect(html).toContain('103 台北市大同区承徳路一段35号7F-2');
     expect(html).not.toContain('台北市大同區承德路一段35號7樓之2');
     expect(html).toContain(
       'src="https://maps.google.com/maps?q=25.0510767,121.5173077&amp;z=16&amp;output=embed"',
@@ -69,9 +75,10 @@ describe('WO-I18N-JA-C02B Japanese office maps', () => {
 
   it('defines Japanese-orthography addresses for every Japanese office, without Traditional Chinese remnants', () => {
     for (const expected of [
-      "taipei: '台北市大同区承徳路一段35号7F-2'",
-      "taichung: '台中市北区館前路19号樓之1'",
-      "kaohsiung: '高雄市左営区安吉街233号'",
+      "taipei: '103 台北市大同区承徳路一段35号7F-2'",
+      "taichung: '40453 台中市北区館前路19号6F-1'",
+      "kaohsiung: '81358 高雄市左営区安吉街233号'",
+      "pingtung: '90443 屏東県九如郷九如路三段46号'",
     ]) {
       expect(componentSource).toContain(expected);
     }

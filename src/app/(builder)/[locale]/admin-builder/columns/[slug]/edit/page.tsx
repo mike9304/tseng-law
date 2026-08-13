@@ -7,11 +7,12 @@ import { getColumnEditCopy } from '@/components/builder/columns/column-edit-copy
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: string; slug: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: string; slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = getColumnEditCopy(locale);
   return {
@@ -20,11 +21,12 @@ export function generateMetadata({
   };
 }
 
-export default async function ColumnEditPage({
-  params,
-}: {
-  params: { locale: string; slug: string };
-}) {
+export default async function ColumnEditPage(
+  props: {
+    params: Promise<{ locale: string; slug: string }>;
+  }
+) {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = getColumnEditCopy(locale);
   const slug = params.slug;

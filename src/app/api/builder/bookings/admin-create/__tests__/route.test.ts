@@ -10,7 +10,8 @@ import {
   timestamped,
 } from '@/lib/builder/bookings/storage';
 import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
-import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
+import { acquireSlotLock, releaseSlotLock, renewSlotLock } from '@/lib/builder/bookings/slot-lock';
+import { redeemPackageCreditForBooking } from '@/lib/builder/bookings/packages';
 import { bookingServicePriceSnapshot } from '@/lib/builder/bookings/pricing';
 import type { BookingService, Staff } from '@/lib/builder/bookings/types';
 
@@ -47,8 +48,9 @@ vi.mock('@/lib/builder/billing-document-automation', () => ({
 }));
 
 vi.mock('@/lib/builder/bookings/slot-lock', () => ({
-  acquireSlotLock: vi.fn(() => true),
-  releaseSlotLock: vi.fn(() => undefined),
+  acquireSlotLock: vi.fn(async () => ({ ownerToken: 'test-lease', keys: [], expiresAt: 9_999_999 })),
+  releaseSlotLock: vi.fn(async () => undefined),
+  renewSlotLock: vi.fn(async (lease) => lease),
 }));
 
 vi.mock('@/lib/builder/bookings/packages', () => ({
@@ -165,7 +167,7 @@ describe('/api/builder/bookings/admin-create', () => {
   it('returns localized slot lock conflict errors', async () => {
     vi.mocked(getService).mockResolvedValueOnce(service());
     vi.mocked(getStaff).mockResolvedValueOnce(staff());
-    vi.mocked(acquireSlotLock).mockReturnValueOnce(false);
+    vi.mocked(acquireSlotLock).mockResolvedValueOnce(null);
     const route = await import('../route');
     const response = await route.POST(postRequest(validBookingPayload(), 'ko'));
     const payload = await response.json();
@@ -289,5 +291,22 @@ describe('/api/builder/bookings/admin-create', () => {
     expect(vi.mocked(bookingServicePriceSnapshot)).toHaveBeenCalledWith(resourceService, { staffId: 'staff-route-test', resourceIds: ['room-a'] });
     expect(payload.booking.paymentAmount).toBe(9000);
     expect(payload.booking.resourceIds).toEqual(['room-a']);
+  });
+
+  it('does not redeem a paid package credit when the pre-Zoom lease renewal fails', async () => {
+    vi.mocked(getService).mockResolvedValueOnce(service({
+      paymentMode: 'paid',
+      priceAmount: 5000,
+      priceCurrency: 'TWD',
+    }));
+    vi.mocked(getStaff).mockResolvedValueOnce(staff());
+    vi.mocked(renewSlotLock).mockResolvedValueOnce(null);
+
+    const route = await import('../route');
+    const response = await route.POST(postRequest(validBookingPayload(), 'en'));
+
+    expect(response.status).toBe(503);
+    expect(redeemPackageCreditForBooking).not.toHaveBeenCalled();
+    expect(saveBooking).not.toHaveBeenCalled();
   });
 });

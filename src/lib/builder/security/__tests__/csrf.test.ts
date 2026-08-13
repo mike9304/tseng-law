@@ -15,7 +15,7 @@ function request(url: string, init?: ConstructorParameters<typeof NextRequest>[1
 
 describe('builder CSRF origin guard', () => {
   beforeEach(() => {
-    process.env.BUILDER_ALLOWED_ORIGINS = 'https://tseng-law.com,http://localhost:3000';
+    delete process.env.BUILDER_ALLOWED_ORIGINS;
     delete process.env.VERCEL_URL;
   });
 
@@ -26,10 +26,14 @@ describe('builder CSRF origin guard', () => {
     else delete process.env.VERCEL_URL;
   });
 
-  it('allows same-site Origin headers', () => {
-    const result = validateCsrf(request('https://tseng-law.com/api/builder/site/pages', {
+  it.each([
+    'https://tseng-law.com',
+    'https://www.tseng-law.com',
+    'https://sejong-law.vercel.app',
+  ])('allows the server-owned official origin %s', (origin) => {
+    const result = validateCsrf(request(`${origin}/api/builder/site/pages`, {
       method: 'POST',
-      headers: { origin: 'https://tseng-law.com' },
+      headers: { origin },
     }));
     expect(result).toBeNull();
   });
@@ -63,21 +67,79 @@ describe('builder CSRF origin guard', () => {
     expect(result?.status).toBe(403);
   });
 
+  it.each(['host', 'x-forwarded-host'])(
+    'does not allow a forged %s header to expand the allowlist',
+    async (headerName) => {
+      const result = validateCsrf(request('https://tseng-law.com/api/builder/site/pages', {
+        method: 'POST',
+        headers: {
+          origin: 'https://evil.example',
+          [headerName]: 'evil.example',
+        },
+      }));
+
+      expect(result).toBeInstanceOf(NextResponse);
+      expect(result?.status).toBe(403);
+    },
+  );
+
+  it.each(['host', 'x-forwarded-host'])(
+    'does not allow a forged localhost %s header to bypass a missing Origin',
+    async (headerName) => {
+      const result = validateCsrf(request('https://tseng-law.com/api/builder/site/pages', {
+        method: 'POST',
+        headers: { [headerName]: 'localhost:3000' },
+      }));
+
+      expect(result).toBeInstanceOf(NextResponse);
+      expect(result?.status).toBe(403);
+    },
+  );
+
+  it('allows an explicitly configured preview or custom origin', () => {
+    process.env.BUILDER_ALLOWED_ORIGINS = 'https://preview.example.com, https://builder.example.org/path';
+
+    expect(validateCsrf(request('https://tseng-law.com/api/builder/site/pages', {
+      method: 'PUT',
+      headers: { origin: 'https://preview.example.com' },
+    }))).toBeNull();
+    expect(validateCsrf(request('https://tseng-law.com/api/builder/site/pages', {
+      method: 'PUT',
+      headers: { origin: 'https://builder.example.org' },
+    }))).toBeNull();
+  });
+
+  it('allows the deployment origin configured by VERCEL_URL', () => {
+    process.env.VERCEL_URL = 'preview-tseng-law.vercel.app';
+
+    const result = validateCsrf(request('https://tseng-law.com/api/builder/site/pages', {
+      method: 'PATCH',
+      headers: { origin: 'https://preview-tseng-law.vercel.app' },
+    }));
+
+    expect(result).toBeNull();
+  });
+
   it('allows local review requests without browser Origin headers', () => {
     const result = validateCsrf(request('http://localhost:3000/api/builder/site/pages', {
       method: 'POST',
-      headers: { host: 'localhost:3000' },
+      headers: { host: 'forged.example' },
     }));
     expect(result).toBeNull();
   });
 
-  it('includes VERCEL_URL and the current host in the allowlist', () => {
-    process.env.VERCEL_URL = 'preview-tseng-law.vercel.app';
-    const result = resolveAllowedCsrfOrigins(request('https://branch.vercel.app/api/builder/site/pages', {
+  it('allows localhost origins on a localhost request across development ports', () => {
+    const result = validateCsrf(request('http://127.0.0.1:4173/api/builder/site/pages', {
       method: 'POST',
-      headers: { host: 'branch.vercel.app' },
+      headers: { origin: 'http://localhost:5173' },
     }));
+    expect(result).toBeNull();
+  });
+
+  it('includes VERCEL_URL but not a request-derived host in the allowlist', () => {
+    process.env.VERCEL_URL = 'preview-tseng-law.vercel.app';
+    const result = resolveAllowedCsrfOrigins();
     expect(result.has('https://preview-tseng-law.vercel.app')).toBe(true);
-    expect(result.has('https://branch.vercel.app')).toBe(true);
+    expect(result.has('https://branch.vercel.app')).toBe(false);
   });
 });

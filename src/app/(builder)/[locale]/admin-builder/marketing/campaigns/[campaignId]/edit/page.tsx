@@ -13,7 +13,8 @@ const copy = {
   en: { title: 'Edit Campaign' },
 } as const;
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return {
     title: copy[locale].title,
@@ -21,11 +22,12 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   };
 };
 
-export default async function CampaignEditPage({
-  params,
-}: {
-  params: { locale: string; campaignId: string };
-}) {
+export default async function CampaignEditPage(
+  props: {
+    params: Promise<{ locale: string; campaignId: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const campaign = await getCampaign(params.campaignId);
   if (!campaign) {

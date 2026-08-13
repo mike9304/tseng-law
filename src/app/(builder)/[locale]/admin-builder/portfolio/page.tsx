@@ -11,7 +11,8 @@ import PortfolioAdminClient from '@/components/builder/portfolio/PortfolioAdminC
 
 export const dynamic = 'force-dynamic';
 
-export default async function PortfolioAdminPage({ params }: { params: { locale: Locale } }) {
+export default async function PortfolioAdminPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, locale);
   const projects = sortProjects(filterProjectsByLocale(await listProjects(), locale), 'order-asc');

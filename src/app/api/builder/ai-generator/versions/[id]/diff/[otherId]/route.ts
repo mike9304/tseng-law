@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import {
   diffAiIntakeVersions,
   getAiIntakeVersion,
@@ -11,9 +11,10 @@ export const dynamic = 'force-dynamic';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string; otherId: string } },
+  props: { params: Promise<{ id: string; otherId: string }> }
 ) {
-  const auth = guardBuilderRead(request);
+  const params = await props.params;
+  const auth = await guardBuilderReadWithPermission(request, 'edit-pages');
   if (auth instanceof NextResponse) return auth;
 
   const siteId = normalizeAiIntakeSiteId(request.nextUrl.searchParams.get('siteId') ?? undefined);

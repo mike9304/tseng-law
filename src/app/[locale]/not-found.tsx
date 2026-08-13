@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import Link from 'next/link';
 import type { Locale } from '@/lib/locales';
+import {
+  CONSULTATION_EMAIL,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 
 const copyByLocale = {
   ko: {
@@ -27,22 +31,22 @@ const copyByLocale = {
   },
 } as const;
 
-function requestLocale(): Locale {
-  const pathname = headers().get('x-tseng-pathname') ?? '';
+async function requestLocale(): Promise<Locale> {
+  const pathname = (await headers()).get('x-tseng-pathname') ?? '';
   const locale = pathname.split('/').filter(Boolean)[0];
   return locale === 'zh-hant' || locale === 'en' ? locale : 'ko';
 }
 
-export function generateMetadata(): Metadata {
-  const copy = copyByLocale[requestLocale()];
+export async function generateMetadata(): Promise<Metadata> {
+  const copy = copyByLocale[await requestLocale()];
   return {
     title: { absolute: `${copy.title} | ${copy.brand}` },
     robots: { index: false, follow: false },
   };
 }
 
-export default function LocalizedNotFound() {
-  const locale = requestLocale();
+export default async function LocalizedNotFound() {
+  const locale = await requestLocale();
   const copy = copyByLocale[locale];
 
   return (
@@ -53,7 +57,13 @@ export default function LocalizedNotFound() {
         <p>{copy.description}</p>
         <div className="not-found-actions">
           <Link className="button" href={`/${locale}`}>{copy.home}</Link>
-          <Link className="button button--outline" href={`/${locale}/contact`}>{copy.contact}</Link>
+          <a
+            className="button button--outline"
+            href={getConsultationPublicMailto(locale)}
+            aria-label={`${copy.contact}: ${CONSULTATION_EMAIL}`}
+          >
+            {copy.contact}
+          </a>
         </div>
       </div>
     </section>

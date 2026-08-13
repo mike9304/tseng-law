@@ -63,7 +63,7 @@ const expectedJapaneseFaq = [
   {
     question: '相談はどのような方式で行われますか？',
     answer:
-      '台北事務所での対面相談またはビデオ通話による相談に対応しており、韓国語・中国語・日本語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずお問い合わせページから案件の概要と主な資料を送り、日程、相談方法、担当言語および費用をご確認ください。連絡はKakaoTalk、メールまたは電話から行えます。',
+      '台北事務所での対面相談またはビデオ通話による相談に対応しており、韓国語・中国語・日本語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずお問い合わせページから案件の概要と主な資料を送り、日程、相談方法、担当言語および費用をご確認ください。連絡はメールから行えます。',
   },
   {
     question: '物流・化粧品などの規制業種でも台湾で会社を設立できますか？',
@@ -151,6 +151,8 @@ describe('Japanese public FAQ factual consistency', () => {
     expect(answers[10]).toContain('法定要件と個別の処分');
     expect(answers[11]).toContain('ビデオ通話');
     expect(answers[11]).toContain('現在の料金案内では1時間単位');
+    expect(answers[11]).toContain('連絡はメールから行えます');
+    expect(answers[11]).not.toMatch(/KakaoTalk|LINE|電話から/);
     expect(answers[12]).toContain('倉庫・梱包・取次ぎなど');
     expect(answers[12]).toContain('「自動車貨物運送業」（汽車貨運業）');
     expect(answers[12]).toContain('道路運送を所管する機関（公路主管機関）');

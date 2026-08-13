@@ -9,7 +9,8 @@ import LegalPageSections from '@/components/LegalPageSections';
 import JsonLd from '@/components/JsonLd';
 import { buildBreadcrumbJsonLd, buildSeoMetadata } from '@/lib/seo';
 
-export function generateMetadata({ params }: { params: { locale: SiteLocale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const content = legalPageContent[locale].accessibility;
 
@@ -33,7 +34,8 @@ export function generateMetadata({ params }: { params: { locale: SiteLocale } })
   });
 }
 
-export default function AccessibilityPage({ params }: { params: { locale: SiteLocale } }) {
+export default async function AccessibilityPage(props: { params: Promise<{ locale: SiteLocale }> }) {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const content = legalPageContent[locale].accessibility;
 

@@ -21,11 +21,12 @@ interface QueryStat {
   lastAt: string;
 }
 
-export default async function SearchAdminPage({
-  params,
-}: {
-  params: { locale: string };
-}) {
+export default async function SearchAdminPage(
+  props: {
+    params: Promise<{ locale: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const index = await loadSearchIndex();
   const logs = await listQueryLogs();
@@ -84,6 +85,7 @@ export default async function SearchAdminPage({
   );
 }
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   return getSearchAdminMetadata(normalizeLocale(params.locale));
 }

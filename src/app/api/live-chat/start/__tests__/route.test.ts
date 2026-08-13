@@ -23,11 +23,15 @@ vi.mock('@/lib/builder/webhooks/dispatcher', () => ({
   emitEvent: vi.fn(),
 }));
 
-function makeRequest(body: unknown, localeQuery = ''): NextRequest {
+function makeRequest(body: unknown, localeQuery = '', origin: string | null = 'https://tseng-law.com'): NextRequest {
   const query = localeQuery ? `?locale=${localeQuery}` : '';
-  return new NextRequest(`https://law.example.test/api/live-chat/start${query}`, {
+  return new NextRequest(`https://tseng-law.com/api/live-chat/start${query}`, {
     method: 'POST',
-    headers: { 'content-type': 'application/json', 'x-forwarded-for': '127.0.0.7' },
+    headers: {
+      'content-type': 'application/json',
+      'x-forwarded-for': '127.0.0.7',
+      ...(origin ? { origin } : {}),
+    },
     body: JSON.stringify(body),
   });
 }
@@ -64,6 +68,19 @@ describe('/api/live-chat/start', () => {
     );
   });
 
+  it('rejects cross-origin requests before rate limiting, persistence, or events', async () => {
+    const route = await import('../route');
+    const response = await route.POST(makeRequest({ message: '상담 가능한가요?' }, '', 'https://attacker.example'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(403);
+    expect(payload).toEqual({ ok: false, error: 'csrf_origin_mismatch', code: 'csrf_origin_mismatch' });
+    expect(checkRateLimit).not.toHaveBeenCalled();
+    expect(saveConversation).not.toHaveBeenCalled();
+    expect(appendMessage).not.toHaveBeenCalled();
+    expect(emitEvent).not.toHaveBeenCalled();
+  });
+
   it('returns localized 429 when the start rate limit is exceeded', async () => {
     vi.mocked(checkRateLimit).mockResolvedValueOnce({ allowed: false, remaining: 0, retryAfterMs: 5000 });
     const route = await import('../route');
@@ -91,9 +108,13 @@ describe('/api/live-chat/start', () => {
 
   it('rejects a body that is not valid JSON with 400', async () => {
     const route = await import('../route');
-    const request = new NextRequest('https://law.example.test/api/live-chat/start?locale=en', {
+    const request = new NextRequest('https://tseng-law.com/api/live-chat/start?locale=en', {
       method: 'POST',
-      headers: { 'content-type': 'application/json', 'x-forwarded-for': '127.0.0.7' },
+      headers: {
+        'content-type': 'application/json',
+        'x-forwarded-for': '127.0.0.7',
+        origin: 'https://tseng-law.com',
+      },
       body: 'not-json',
     });
 

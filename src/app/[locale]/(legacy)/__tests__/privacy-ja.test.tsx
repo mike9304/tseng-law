@@ -63,6 +63,8 @@ describe('Japanese privacy integration', () => {
     const html = renderToStaticMarkup(<PrivacyLegacyPageBody locale="ja" />);
     const content = legalPageContent.ja.privacy;
 
+    expect(content.sections).toHaveLength(8);
+    expect(content.effectiveDate).toBe('2026-07-30');
     expect(html).toContain(content.title);
     expect(html).toContain(`${content.effectiveDateLabel}: ${content.effectiveDate}`);
     for (const section of content.sections) {
@@ -79,14 +81,22 @@ describe('Japanese privacy integration', () => {
     expect(html).toContain('href="/ja"');
     expect(html).not.toContain('href="/ja/columns"');
     expect(html).toContain(`${SITE_URL}/ja`);
-    expect(html).toContain('昊鼎国際法律事務所');
     expect(html).toContain('wei@hoveringlaw.com.tw');
+    expect(html).toContain('標準で90日間の保管基準');
+    expect(html).toContain('Vercel');
+    expect(html).toContain('OpenAI');
+    expect(html).toContain('SMTP');
+    expect(html).toContain('実際のSMTP事業者名は運営者による確認が必要です');
+    expect(html).toContain('旅券番号、身分証番号、銀行口座情報');
+    expect(html).toContain('事故対応責任者、通知基準および連絡網は運営者による確認が必要です');
 
     for (const fallback of [
       'Privacy Policy',
       'Information we collect',
+      'Retention and deletion',
       '개인정보 처리방침',
       '수집하는 정보',
+      '보관기간과 파기',
     ]) {
       expect(html).not.toContain(fallback);
     }

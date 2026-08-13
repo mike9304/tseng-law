@@ -76,7 +76,7 @@ describe('/api/builder/site/pages/[pageId]/revisions/rollback', () => {
   });
 
   it('returns localized stable-code JSON when revisionId is missing', async () => {
-    const response = await route.POST(postRequest({}, '?locale=ko'), { params: { pageId: 'page-1' } });
+    const response = await route.POST(postRequest({}, '?locale=ko'), { params: Promise.resolve({ pageId: 'page-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(400);
@@ -91,7 +91,7 @@ describe('/api/builder/site/pages/[pageId]/revisions/rollback', () => {
   it('returns localized stable-code JSON when rollback target is missing', async () => {
     mockedRollbackToRevision.mockResolvedValueOnce(false);
     const response = await route.POST(postRequest({ revisionId: 'rev-missing' }, '?locale=zh-hant'), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
     const data = await response.json();
 
@@ -111,7 +111,7 @@ describe('/api/builder/site/pages/[pageId]/revisions/rollback', () => {
   it('returns localized stable-code JSON when rollback persistence fails', async () => {
     mockedRollbackToRevision.mockRejectedValueOnce(new Error('raw rollback write failure'));
     const response = await route.POST(postRequest({ revisionId: 'rev-1' }, '?locale=en'), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
     const data = await response.json();
 
@@ -131,7 +131,7 @@ describe('/api/builder/site/pages/[pageId]/revisions/rollback', () => {
 
   it('returns the restored document from the same site revision namespace', async () => {
     const response = await route.POST(postRequest({ revisionId: 'rev-1' }, '?locale=ko'), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
 
     expect(response.status).toBe(200);
@@ -146,7 +146,7 @@ describe('/api/builder/site/pages/[pageId]/revisions/rollback', () => {
     const response = await route.POST(postRequest({
       siteId: ['workspace-site-b'],
       revisionId: 'rev-1',
-    }), { params: { pageId: 'page-1' } });
+    }), { params: Promise.resolve({ pageId: 'page-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(400);

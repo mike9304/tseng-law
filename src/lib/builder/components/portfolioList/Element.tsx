@@ -122,7 +122,11 @@ export default function PortfolioListElement({ node, mode = 'edit', locale }: Po
             const href = isBuilder ? '#' : `/${effectiveLocale}/portfolio/${project.slug}`;
             return (
               <a key={project.projectId} className={styles.card} href={href} data-builder-portfolio-card={project.projectId}>
-                {project.coverImageUrl ? <img src={project.coverImageUrl} alt="" /> : <div className={styles.fallback} aria-hidden />}
+                {project.coverImageUrl ? (
+                  // Builder-bound media can be a runtime remote, data, or blob URL that Next Image cannot preconfigure.
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={project.coverImageUrl} alt="" loading="lazy" decoding="async" />
+                ) : <div className={styles.fallback} aria-hidden />}
                 <span className={styles.body}>
                   <span className={styles.badge}>{categoryLabel(project.category, effectiveLocale)}</span>
                   <strong className={styles.title}>{project.title}</strong>

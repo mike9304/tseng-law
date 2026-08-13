@@ -40,9 +40,10 @@ function errorResponse(
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { siteId: string; pageKey: string } }
+  props: { params: Promise<{ siteId: string; pageKey: string }> }
 ) {
-  const auth = await guardMutation(request, { bucket: 'publish' });
+  const params = await props.params;
+  const auth = await guardMutation(request, { bucket: 'publish', permission: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);

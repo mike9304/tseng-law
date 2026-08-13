@@ -7,14 +7,14 @@ import ConsultationGuideSection from '@/components/ConsultationGuideSection';
 import MessengerChatSection from '@/components/MessengerChatSection';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import { pageCopy } from '@/data/page-copy';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import { ContactLegacyPage, getContactLegacyMetadata } from '../contact-legacy';
 import { getLegacyPageMetadata, renderLegacyPage } from '../index';
 import { ContactLegacyPageBody } from '../legacy-page-bodies';
 
 const SITE_URL = 'https://tseng-law.com';
-const KAKAO_URL = 'https://pf.kakao.com/_hojeong/chat';
-const EMAIL_HREF = 'mailto:wei@hoveringlaw.com.tw';
-const PHONE_HREF = 'tel:+821029929304';
+const CONSULTATION_MAILTO_HREF = getConsultationPublicMailto('ja').replace(/&/g, '&amp;');
+const OFFICE_PHONE_HREF = 'tel:+821029929304';
 const TAIPEI_MAP_URL = 'https://maps.app.goo.gl/mULpyAnQGz3M1GoQ6';
 const NAVER_MAP_URL =
   'https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%EC%A3%BC%EC%8B%9C%20%EC%98%A5%EC%A0%95%EB%8F%99%EB%A1%9C%20177%20%EC%88%98%ED%98%84%ED%94%84%EB%9D%BC%EC%9E%90%204%EC%B8%B5';
@@ -98,12 +98,12 @@ describe('Japanese contact route integration', () => {
       'お問い合わせ種別、連絡先、事務所所在地をまとめてご案内します。',
       'ご相談前の確認事項',
       'ご利用いただける連絡手段',
-      'KakaoTalk、メール、電話でお問い合わせいただけます。',
+      'メールでお問い合わせいただけます。',
       'ご用意いただきたい資料',
       'ご相談の流れ',
-      'メッセンジャーでのお問い合わせ',
-      'KakaoTalkチャンネルからお問い合わせいただけます。',
-      'KakaoTalkチャンネルでお問い合わせ',
+      'メールでのご相談',
+      'ご相談は公式メールアドレス宛にお送りください。確認後ご案内します。',
+      'メールでのご相談',
       'お問い合わせ種別',
       'ビジネス・投資',
       '事務所所在地',
@@ -115,10 +115,10 @@ describe('Japanese contact route integration', () => {
 
     for (const fallback of [
       'Before You Contact Us',
-      'Messenger Consultation',
+      'Email Consultation',
       'Office Locations',
       '諮詢前可先確認的事項',
-      '即時通訊諮詢',
+      '電子郵件諮詢',
       '事務所據點',
     ]) {
       expect(html).not.toContain(fallback);
@@ -126,14 +126,16 @@ describe('Japanese contact route integration', () => {
     expect(html).not.toContain('LINE');
     expect(html).not.toContain('lin.ee');
     expect(html).not.toContain('line.me');
+    expect(html).not.toContain('メールと電話でお問い合わせいただけます。');
   });
 
   it('renders only verified contact hrefs and keeps external map links protected', () => {
     const html = renderToStaticMarkup(<ContactLegacyPageBody locale="ja" />);
 
-    expect((html.match(new RegExp(`href="${KAKAO_URL}"`, 'g')) ?? [])).toHaveLength(1);
-    expect(html).toContain(`href="${EMAIL_HREF}"`);
-    expect(html).toContain(`href="${PHONE_HREF}"`);
+    expect(html).not.toContain('pf.kakao.com');
+    expect(html).not.toMatch(/line\.me|lin\.ee/i);
+    expect(html).toContain(`href="${CONSULTATION_MAILTO_HREF}"`);
+    expect(html).toContain(`href="${OFFICE_PHONE_HREF}"`);
     expect(
       html.match(
         new RegExp(
@@ -155,7 +157,7 @@ describe('Japanese contact route integration', () => {
   it('renders three office tabs with Taipei selected and exact Japanese media alternatives', () => {
     const html = renderToStaticMarkup(<ContactLegacyPageBody locale="ja" />);
 
-    expect(html.match(/role="tab"/g) ?? []).toHaveLength(3);
+    expect(html.match(/role="tab"/g) ?? []).toHaveLength(4);
     expect(html).toMatch(
       /role="tab"[^>]*aria-selected="true"[^>]*>台北事務所<\/button>/,
     );

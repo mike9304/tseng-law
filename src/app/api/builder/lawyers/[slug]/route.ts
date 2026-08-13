@@ -41,10 +41,8 @@ const profilePatchSchema = z.object({
   }).strict().optional(),
 }).strict();
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { slug: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -57,10 +55,8 @@ export async function GET(
   return NextResponse.json({ ok: true, source: 'attorney-profile-source-overrides', record });
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { slug: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -120,10 +116,8 @@ export async function PATCH(
   }
 }
 
-export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { slug: string } },
-) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

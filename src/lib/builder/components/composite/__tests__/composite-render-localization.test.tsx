@@ -4,6 +4,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { createDefaultCanvasNodeStyle, type BuilderCompositeCanvasNode } from '@/lib/builder/canvas/types';
 import type { BuilderFaqItem } from '@/lib/builder/faq/faq-shared';
 import type { ColumnPost } from '@/lib/columns';
+import HeroSearch from '@/components/HeroSearch';
 import CompositeRender, { compositeFallbackCopy } from '../Render';
 
 vi.mock('next/navigation', () => ({
@@ -136,6 +137,58 @@ describe('composite render localization', () => {
     const html = renderToStaticMarkup(<CompositeRender node={node} mode="published" />);
 
     expect(html).toContain('href="#insights"');
+  });
+
+  it('keeps exactly one h1 when the legacy hero and mobile parity overlay coexist', () => {
+    const parityNode = {
+      id: 'home-hero',
+      kind: 'composite',
+      anchorName: 'mobile-parity-home-hero',
+      rect: { x: 0, y: 0, width: 1280, height: 774 },
+      style: createDefaultCanvasNodeStyle(),
+      zIndex: 0,
+      rotation: 0,
+      locked: false,
+      visible: true,
+      content: {
+        componentKey: 'hero-search',
+        config: { locale: 'zh-hant' },
+      },
+    } satisfies BuilderCompositeCanvasNode;
+
+    const html = renderToStaticMarkup(
+      <>
+        <HeroSearch locale="zh-hant" />
+        <CompositeRender node={parityNode} mode="published" />
+      </>,
+    );
+
+    expect(html.match(/<h1\b/g)).toHaveLength(1);
+    expect(html.match(/<h2\b/g)).toHaveLength(1);
+    expect(html).toContain('<h2 class="hero-title" data-builder-surface-key="headline">');
+    expect(html).not.toContain('aria-level="1"');
+  });
+
+  it('keeps the canonical composite-only published hero as h1', () => {
+    const node = {
+      id: 'home-hero',
+      kind: 'composite',
+      rect: { x: 0, y: 0, width: 1280, height: 633 },
+      style: createDefaultCanvasNodeStyle(),
+      zIndex: 0,
+      rotation: 0,
+      locked: false,
+      visible: true,
+      content: {
+        componentKey: 'hero-search',
+        config: { locale: 'zh-hant' },
+      },
+    } satisfies BuilderCompositeCanvasNode;
+
+    const html = renderToStaticMarkup(<CompositeRender node={node} mode="published" />);
+
+    expect(html.match(/<h1\b/g)).toHaveLength(1);
+    expect(html).not.toMatch(/<h2\b/);
   });
 
   it('localizes missing composite diagnostics in zh-hant', () => {

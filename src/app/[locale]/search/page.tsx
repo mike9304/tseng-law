@@ -12,7 +12,8 @@ import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
 import { runSearchQuery } from '@/lib/builder/search/query-engine';
 import type { SearchDocKind } from '@/lib/builder/search/types';
 
-export function generateMetadata({ params }: { params: { locale: SiteLocale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const copy = pageCopy[locale].search;
 
@@ -39,6 +40,21 @@ const SEARCH_TAB_KIND: Record<string, SearchDocKind | 'all'> = {
   portfolio: 'portfolio',
 };
 
+const MAX_SEARCH_QUERY_LENGTH = 200;
+
+function normalizeSearchQuery(value: string): string {
+  let query = '';
+  let length = 0;
+
+  for (const character of value.trim()) {
+    if (length >= MAX_SEARCH_QUERY_LENGTH) break;
+    query += character;
+    length += 1;
+  }
+
+  return query;
+}
+
 function searchKindLabel(kind: SearchDocKind | 'all', locale: SiteLocale): string {
   if (kind === 'all') return locale === 'ko' ? '전체' : locale === 'zh-hant' ? '全部' : locale === 'ja' ? 'すべて' : 'All';
   if (kind === 'page') return locale === 'ko' ? '페이지' : locale === 'zh-hant' ? '頁面' : locale === 'ja' ? 'ページ' : 'Pages';
@@ -55,17 +71,18 @@ async function loadNativeSearchIndex() {
   return (await loadSearchIndex()) ?? buildSearchIndex(await collectAllSearchDocs('default'));
 }
 
-export default async function SearchPage({
-  params,
-  searchParams
-}: {
-  params: { locale: SiteLocale };
-  searchParams: { q?: string; tab?: string; kinds?: string };
-}) {
+export default async function SearchPage(
+  props: {
+    params: Promise<{ locale: SiteLocale }>;
+    searchParams: Promise<{ q?: string; tab?: string; kinds?: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const copy = pageCopy[locale].search;
   const content = siteContent[locale];
-  const query = (searchParams.q ?? '').trim();
+  const query = normalizeSearchQuery(searchParams.q ?? '');
   const requestedTab = searchParams.kinds?.split(',')[0]?.trim() || searchParams.tab || 'all';
   const activeKind = SEARCH_TAB_KIND[requestedTab] ?? 'all';
   const suggestedLabel = locale === 'ko' ? '추천' : locale === 'zh-hant' ? '建議' : locale === 'ja' ? 'おすすめ' : 'Suggested';
@@ -112,6 +129,8 @@ export default async function SearchPage({
             type="search"
             name="q"
             defaultValue={query}
+            maxLength={MAX_SEARCH_QUERY_LENGTH}
+            aria-label={content.search.title}
             placeholder={content.search.placeholder}
           />
           <input type="hidden" name="tab" value={activeKind} />

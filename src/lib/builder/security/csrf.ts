@@ -45,14 +45,14 @@ function originFromReferer(value: string | null): string | null {
   return value ? normalizeOrigin(value) : null;
 }
 
-function requestOrigin(request: NextRequest): string | null {
-  const host = request.headers.get('x-forwarded-host') || request.headers.get('host');
-  if (!host) return normalizeOrigin(request.nextUrl.origin);
-  const proto = request.headers.get('x-forwarded-proto') || request.nextUrl.protocol.replace(':', '') || 'https';
-  return normalizeOrigin(`${proto}://${host}`);
+function requestUrlOrigin(request: NextRequest): string | null {
+  // Host and X-Forwarded-Host are client-controlled inputs and must never
+  // expand the CSRF allowlist. The request URL is used only for the local
+  // development exception below.
+  return normalizeOrigin(request.nextUrl.origin);
 }
 
-export function resolveAllowedCsrfOrigins(request?: NextRequest): Set<string> {
+export function resolveAllowedCsrfOrigins(): Set<string> {
   const origins = new Set<string>();
   const configured = process.env.BUILDER_ALLOWED_ORIGINS
     ?.split(',')
@@ -68,9 +68,6 @@ export function resolveAllowedCsrfOrigins(request?: NextRequest): Set<string> {
     const vercelOrigin = normalizeOrigin(vercelUrl.startsWith('http') ? vercelUrl : `https://${vercelUrl}`);
     if (vercelOrigin) origins.add(vercelOrigin);
   }
-
-  const currentOrigin = request ? requestOrigin(request) : null;
-  if (currentOrigin) origins.add(currentOrigin);
 
   return origins;
 }
@@ -93,15 +90,15 @@ export function validateCsrf(request: NextRequest): NextResponse | null {
   const checkValue = normalizeOrigin(origin ?? '') || refererOrigin;
 
   if (!checkValue) {
-    const currentOrigin = requestOrigin(request);
+    const currentOrigin = requestUrlOrigin(request);
     return currentOrigin && isLocalhostOrigin(currentOrigin) ? null : csrfFailure();
   }
 
-  if (resolveAllowedCsrfOrigins(request).has(checkValue)) {
+  if (resolveAllowedCsrfOrigins().has(checkValue)) {
     return null;
   }
 
-  if (isLocalhostOrigin(checkValue) && isLocalhostOrigin(requestOrigin(request) ?? '')) {
+  if (isLocalhostOrigin(checkValue) && isLocalhostOrigin(requestUrlOrigin(request) ?? '')) {
     return null;
   }
 

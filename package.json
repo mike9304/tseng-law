@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --max-warnings=0 --ext .js,.jsx,.ts,.tsx src",
-    "typecheck": "tsc -p tsconfig.json --noEmit --incremental false",
+    "typecheck": "NEXT_DIST_DIR=.next-build next typegen && tsc -p tsconfig.json --noEmit --incremental false",
     "test:unit": "vitest run",
     "test:builder-editor": "playwright test --config=playwright.config.ts",
     "test:builder-visual": "playwright test --config=playwright.config.ts tests/builder-editor/visual-regression.playwright.ts --project=chromium-builder",

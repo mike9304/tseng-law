@@ -329,17 +329,20 @@ describe('page and schema guards', () => {
 
       const zhPath = path.join(root, siteId, 'pages', `${zhPage.pageId}.published.json`);
       const before = await readFile(zhPath, 'utf8');
+      const childEnv = {
+        ...process.env,
+        BUILDER_SITE_ROOT: root,
+        BUILDER_SITE_BACKEND: 'local',
+        CONSULTATION_LOG_BACKEND: 'local',
+      };
+      delete childEnv.NO_COLOR;
+      delete childEnv.FORCE_COLOR;
       const { stdout, stderr } = await execFileAsync(
         process.execPath,
         [path.resolve('scripts/patch-zh-hero-2026-07-21.mjs')],
         {
           cwd: path.resolve('.'),
-          env: {
-            ...process.env,
-            BUILDER_SITE_ROOT: root,
-            BUILDER_SITE_BACKEND: 'local',
-            CONSULTATION_LOG_BACKEND: 'local',
-          },
+          env: childEnv,
         },
       );
 

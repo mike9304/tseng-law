@@ -49,6 +49,28 @@ test('next config uses Vercel-compatible output without changing isolated local 
   );
 });
 
+test('typecheck generates Next 15 route types for the local default distDir before tsc', () => {
+  const packageJson = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
+  assert.match(
+    packageJson.scripts.typecheck,
+    /^NEXT_DIST_DIR=\.next-build next typegen && tsc -p tsconfig\.json --noEmit --incremental false$/u,
+  );
+
+  const nextEnv = readFileSync(new URL('../next-env.d.ts', import.meta.url), 'utf8');
+  assert.match(
+    nextEnv,
+    /\/\/\/ <reference path="\.\/\.next-build\/types\/routes\.d\.ts" \/>/u,
+  );
+
+  const tsconfig = JSON.parse(readFileSync(new URL('../tsconfig.json', import.meta.url), 'utf8'));
+  assert.ok(tsconfig.include.includes('.next-build/types/**/*.ts'));
+  assert.equal(
+    tsconfig.include.some((entry) => String(entry).includes('stab-build')),
+    false,
+    'isolated verification distDirs must not leak into committed tsconfig include',
+  );
+});
+
 test('next config scopes hardened production and private-route headers', async () => {
   const productionConfig = await loadConfig('production', 'production');
   const developmentConfig = await loadConfig('development', 'development');

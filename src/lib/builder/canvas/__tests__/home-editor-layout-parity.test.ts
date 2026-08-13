@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { createHomePageCanvasDocumentDecomposed } from '../seed-home';
 import { upgradeHomeEditorLayoutParity } from '../home-editor-layout-parity';
+import {
+  buildChildrenMap,
+  getCanvasNodeDescendantIds,
+  resolveCanvasNodeAbsoluteRectForViewport,
+} from '../tree';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '../types';
 
 const legacyRoots: Record<string, BuilderCanvasNode['rect']> = {
@@ -122,7 +127,7 @@ describe('upgradeHomeEditorLayoutParity', () => {
 
     expect(repaired.updatedAt).toBe(legacy.updatedAt);
     expect(repaired.updatedBy).toBe(legacy.updatedBy);
-    expect(repaired.stageHeight).toBe(7127);
+    expect(repaired.stageHeight).toBe(7124);
     expect(node(repaired, 'home-case-results-root').rect).toEqual({ x: 0, y: 3354, width: 1280, height: 600 });
     expect(node(repaired, 'home-case-results-content').rect).toEqual({ x: 0, y: 0, width: 1280, height: 600 });
     expect(node(repaired, 'home-case-results-title').rect).toEqual({ x: 78, y: 39, width: 720, height: 130 });
@@ -139,7 +144,8 @@ describe('upgradeHomeEditorLayoutParity', () => {
     });
     expect(divider.responsive?.mobile?.rect).toMatchObject({ x: 16, y: 188, width: 40, height: 4 });
 
-    expect(node(repaired, 'home-contact-root').rect).toEqual({ x: 0, y: 6593, width: 1280, height: 532 });
+    expect(node(repaired, 'home-contact-root').rect).toEqual({ x: 0, y: 6593, width: 1280, height: 531 });
+    expect(node(repaired, 'home-contact-container').rect).toEqual({ x: 51, y: 151, width: 1178, height: 380 });
     expect(node(repaired, 'home-contact-copy')).toMatchObject({
       parentId: 'home-contact-container',
       rect: { x: 0, y: 0, width: 1178, height: 180 },
@@ -149,6 +155,44 @@ describe('upgradeHomeEditorLayoutParity', () => {
     expect(node(repaired, 'home-stats-container').rect).toEqual({ x: 72, y: 64, width: 1136, height: 432 });
     expect(node(repaired, 'home-stats-title').rect).toEqual({ x: 0, y: 40, width: 560, height: 54 });
     expect(node(repaired, 'home-stats-description').rect).toEqual({ x: 0, y: 106, width: 760, height: 64 });
+  });
+
+  it('keeps repaired legacy contact children inside the live root without exceeding 7124', () => {
+    const legacy = legacyDocument();
+    const repaired = upgradeHomeEditorLayoutParity(legacy, 'ko', { stampMetadata: false });
+    const fresh = createHomePageCanvasDocumentDecomposed('ko');
+    const nodesById = new Map(repaired.nodes.map((entry) => [entry.id, entry]));
+    const childrenMap = buildChildrenMap(repaired.nodes);
+    const contactRoot = node(repaired, 'home-contact-root');
+    const contactRootRect = resolveCanvasNodeAbsoluteRectForViewport(contactRoot, nodesById, 'desktop');
+
+    expect(node(repaired, 'home-contact-container').rect).toEqual(
+      node(fresh, 'home-contact-container').rect,
+    );
+
+    const overflowingContactChildren = getCanvasNodeDescendantIds(contactRoot.id, childrenMap)
+      .map((descendantId) => {
+        const descendant = nodesById.get(descendantId);
+        if (!descendant || descendant.visible === false) return null;
+        const rect = resolveCanvasNodeAbsoluteRectForViewport(descendant, nodesById, 'desktop');
+        return {
+          id: descendant.id,
+          bottom: rect.y + rect.height,
+          rootBottom: contactRootRect.y + contactRootRect.height,
+        };
+      })
+      .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry))
+      .filter((entry) => entry.bottom > entry.rootBottom);
+
+    const publishedHeight = repaired.nodes.reduce((maxHeight, entry) => {
+      if (entry.anchorName?.startsWith('mobile-parity-')) return maxHeight;
+      const rect = resolveCanvasNodeAbsoluteRectForViewport(entry, nodesById, 'desktop');
+      return Math.max(maxHeight, rect.y + rect.height);
+    }, repaired.stageHeight);
+
+    expect(overflowingContactChildren).toEqual([]);
+    expect(repaired.stageHeight).toBeLessThanOrEqual(7124);
+    expect(publishedHeight).toBeLessThanOrEqual(7124);
   });
 
   it('does not reset a customized near-match contact title', () => {

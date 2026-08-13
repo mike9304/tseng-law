@@ -99,6 +99,52 @@ describe('/api/builder/site/pages/decompose', () => {
     expect(mockedWrite).not.toHaveBeenCalled();
   });
 
+  it('rejects an explicit public-only locale instead of rewriting Korean', async () => {
+    const response = await route.POST(
+      postRequest(JSON.stringify({ slug: '', locale: 'ja' }), '?locale=ja'),
+    );
+    const data = await response.json();
+    expect(response.status).toBe(400);
+    expect(data.errorCode).toBe('seed_body_invalid');
+    expect(mockedRead).not.toHaveBeenCalled();
+    expect(mockedWrite).not.toHaveBeenCalled();
+  });
+
+  it('returns seed_body_invalid when zh-hant home is requested before that locale is seeded', async () => {
+    mockedRead.mockResolvedValueOnce({
+      pages: [{ pageId: 'p-home-ko', slug: '', locale: 'ko', isHomePage: true }],
+    } as unknown as Awaited<ReturnType<typeof readSiteDocument>>);
+    const response = await route.POST(
+      postRequest(JSON.stringify({ slug: '', locale: 'zh-hant' }), '?locale=zh-hant'),
+    );
+    const data = await response.json();
+    expect(response.status).toBe(400);
+    expect(data.errorCode).toBe('seed_body_invalid');
+    expect(mockedWrite).not.toHaveBeenCalled();
+  });
+
+  it('decomposes zh-hant and en homes against their own seeded pages', async () => {
+    mockedRead
+      .mockResolvedValueOnce({
+        pages: [{ pageId: 'p-home-zh', slug: '', locale: 'zh-hant', isHomePage: true }],
+      } as unknown as Awaited<ReturnType<typeof readSiteDocument>>)
+      .mockResolvedValueOnce({
+        pages: [{ pageId: 'p-home-en', slug: '', locale: 'en', isHomePage: true }],
+      } as unknown as Awaited<ReturnType<typeof readSiteDocument>>);
+
+    const zh = await route.POST(
+      postRequest(JSON.stringify({ slug: '', locale: 'zh-hant' }), '?locale=zh-hant'),
+    );
+    const en = await route.POST(
+      postRequest(JSON.stringify({ slug: '', locale: 'en' }), '?locale=en'),
+    );
+
+    expect(await zh.json()).toMatchObject({ ok: true, locale: 'zh-hant', pageId: 'p-home-zh' });
+    expect(await en.json()).toMatchObject({ ok: true, locale: 'en', pageId: 'p-home-en' });
+    expect(mockedWrite.mock.calls[0]?.[1]).toBe('p-home-zh');
+    expect(mockedWrite.mock.calls[1]?.[1]).toBe('p-home-en');
+  });
+
   it('decomposes the home page (empty slug) for editing', async () => {
     mockedRead.mockResolvedValueOnce(
       { pages: [{ pageId: 'p-home', slug: '', locale: 'ko', isHomePage: true }] } as unknown as Awaited<ReturnType<typeof readSiteDocument>>,

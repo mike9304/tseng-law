@@ -1424,6 +1424,20 @@ describe('writeSiteDocument invariant boundary', () => {
     await expect(readFile(canonicalPath, 'utf8')).resolves.toBe(validBytes);
   });
 
+  it('can create a second-locale home without invariant failures', async () => {
+    const siteId = 'invariant-second-locale-home';
+    await writeSiteDocument(persistedSite(siteId));
+
+    const created = await createPage(siteId, 'zh-hant', '', '首頁');
+    const site = await readSiteDocument(siteId, 'zh-hant');
+
+    expect(created).toMatchObject({ locale: 'zh-hant', slug: '', isHomePage: true });
+    expect(site.pages.filter((page) => page.isHomePage).map((page) => page.locale).sort()).toEqual([
+      'ko',
+      'zh-hant',
+    ]);
+  });
+
   it('rejects unsafe and duplicate page ids at the final write boundary', async () => {
     const siteId = 'invariant-page-ids';
     const initial = persistedSite(siteId);

@@ -1210,6 +1210,10 @@ export async function createPage(
     lifecycle: createDefaultPageLifecycleMeta('canvas-scene-vnext'),
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
+    // Empty slug is the authored home route. Writing it without isHomePage
+    // trips AUTHORED_HOME_MISSING + NON_HOME_ROUTE_EMPTY when a second
+    // locale is added to an already-seeded site.
+    ...(slug === '' ? { isHomePage: true } : {}),
   };
   site.pages.push(meta);
   site.updatedAt = new Date().toISOString();

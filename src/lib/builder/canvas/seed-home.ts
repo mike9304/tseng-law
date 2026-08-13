@@ -111,6 +111,11 @@ const MEASURED_SECTION_HEIGHTS_BY_LOCALE = PUBLISHED_HOME_COMPOSITE_HEIGHTS_BY_L
 const KO_DECOMPOSED_SECTION_HEIGHTS = {
   ...MEASURED_SECTION_HEIGHTS_BY_LOCALE.ko,
   offices: 919,
+  // Measured composite contact is 532, but the KO children end at y=151 + 380.
+  // The extra pixel became published main min-height (max(stageHeight, deepest
+  // node)) and, with the old +2 stage slack, pushed KO to 7127 against the
+  // 7124 KO/ZH release cap.
+  contact: 531,
 } satisfies CompositeSectionHeights;
 const ZH_HANT_DECOMPOSED_SECTION_HEIGHTS = MEASURED_SECTION_HEIGHTS_BY_LOCALE['zh-hant'];
 const ZH_HANT_HERO_OVERLAY_BACKGROUND = 'radial-gradient(circle at 14% 28%, rgba(159, 135, 82, 0.18), transparent 36%), linear-gradient(180deg, transparent 55%, rgba(6, 16, 11, 0.55) 100%), linear-gradient(118deg, rgba(6, 16, 11, 0.82), rgba(6, 16, 11, 0.58) 42%, rgba(6, 16, 11, 0.22) 78%, rgba(6, 16, 11, 0.12))';
@@ -926,9 +931,12 @@ function buildHomeDocument(locale: Locale, sections: HomeSectionSpec[]): Builder
     updatedAt,
     updatedBy: SEED_VERSION,
     stageWidth: STAGE_WIDTH,
+    // Decomposed stage height is the stacked section bottoms. Extra slack here
+    // becomes public main min-height because publishedContentHeight starts at
+    // stageHeight. The previous `y + 2` made KO report 7127 against the 7124 cap.
     stageHeight: isCompositeStack
       ? Math.max(y, PUBLISHED_HOME_COMPOSITE_STAGE_HEIGHT_BY_LOCALE[locale])
-      : y + 2,
+      : y,
     nodes,
   };
 }

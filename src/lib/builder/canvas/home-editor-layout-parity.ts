@@ -32,7 +32,7 @@ const LIVE_ROOT_RECTS: Record<string, Rect> = {
   'home-stats-root': { x: 0, y: 3954, width: 1280, height: 560 },
   'home-faq-root': { x: 0, y: 4514, width: 1280, height: 1160 },
   'home-offices-root': { x: 0, y: 5674, width: 1280, height: 919 },
-  'home-contact-root': { x: 0, y: 6593, width: 1280, height: 532 },
+  'home-contact-root': { x: 0, y: 6593, width: 1280, height: 531 },
 };
 
 function sameRect(rect: Rect | undefined, expected: Rect): boolean {
@@ -192,7 +192,11 @@ function repairLegacyContactNode(node: BuilderCanvasNode): BuilderCanvasNode {
   if (node.id === 'home-contact-container'
     && node.parentId === 'home-contact-root'
     && sameRect(node.rect, { x: 72, y: 120, width: 1136, height: 380 })) {
-    return { ...node, rect: { x: 51, y: 151, width: 1178, height: 381 } } as BuilderCanvasNode;
+    const contactRootHeight = LIVE_ROOT_RECTS['home-contact-root'].height;
+    return {
+      ...node,
+      rect: { x: 51, y: 151, width: 1178, height: contactRootHeight - 151 },
+    } as BuilderCanvasNode;
   }
   if (node.id === 'home-contact-copy') {
     const knownDetached = node.parentId === 'home-contact-root'
@@ -295,7 +299,7 @@ export function upgradeHomeEditorLayoutParity(
   if (!changed) return document;
   const layoutDocument = {
     ...document,
-    ...(isExactLegacyRootStack ? { stageHeight: 7127 } : {}),
+    ...(isExactLegacyRootStack ? { stageHeight: 7124 } : {}),
     nodes,
   };
   if (options.stampMetadata === false) return layoutDocument;

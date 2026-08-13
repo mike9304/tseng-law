@@ -723,16 +723,36 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(publicChrome.getByRole('button', { name: '칼럼 관리' })).toHaveCount(0);
     await page.keyboard.press('Escape');
     await page.mouse.move(12, 120);
-    await expect(async () => {
-      await page.locator('[data-node-id="home-services-card-0-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
-      await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible({ timeout: 1_500 });
-    }).toPass({ timeout: 20_000 });
-    await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeHidden();
-    await expect(async () => {
-      await page.locator('[data-node-id="home-services-card-1-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
-      await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible({ timeout: 1_500 });
-    }).toPass({ timeout: 20_000 });
-    await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeHidden();
+    // Canonical home services are a compact 6-card grid (createServicesDecomposedNodes).
+    // Accordion-only detail/toggle nodes are intentionally absent; exercise real
+    // visibility, content, and selection instead of the obsolete expand contract.
+    await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]')).toHaveCount(0);
+    await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]')).toHaveCount(0);
+    await expect(page.locator('[data-node-id="home-services-card-0-toggle"]')).toHaveCount(0);
+    await expect(page.locator('[data-node-id="home-services-card-0-checklist"]')).toHaveCount(0);
+    for (let index = 0; index < 6; index += 1) {
+      const card = page.locator(`[data-node-id="home-services-card-${index}"]`).first();
+      const more = page.locator(`[data-node-id="home-services-card-${index}-more"]`).first();
+      await card.scrollIntoViewIfNeeded();
+      await expect(card).toBeVisible();
+      await expect(page.locator(`[data-node-id="home-services-card-${index}-title"]`).first()).toBeVisible();
+      await expect(page.locator(`[data-node-id="home-services-card-${index}-description"]`).first()).toBeVisible();
+      // The more control is authored on every card; the editor stage can clip
+      // its bottom edge, so assert presence/content rather than painted pixels.
+      await expect(more).toHaveCount(1);
+      await expect(more).toContainText(/자세히 보기|查看詳情|View details/);
+    }
+    await expect(page.locator('[data-node-id="home-services-card-0-title"]').first()).toContainText('투자·법인설립');
+    await expect(page.locator('[data-node-id="home-services-card-1-title"]').first()).toContainText('민사소송·손해배상');
+    const firstServiceTitle = page.locator('[data-node-id="home-services-card-0-title"]').first();
+    await firstServiceTitle.scrollIntoViewIfNeeded();
+    await firstServiceTitle.click({ position: { x: 12, y: 12 } });
+    await expect(firstServiceTitle).toHaveClass(/nodeSelected/);
+    const secondServiceTitle = page.locator('[data-node-id="home-services-card-1-title"]').first();
+    await secondServiceTitle.scrollIntoViewIfNeeded();
+    await secondServiceTitle.click({ position: { x: 12, y: 12 } });
+    await expect(secondServiceTitle).toHaveClass(/nodeSelected/);
+    await expect(firstServiceTitle).not.toHaveClass(/nodeSelected/);
     await expect(async () => {
       await page.locator('[data-node-id="home-faq-item-0-question-text"]').first().click({ position: { x: 12, y: 12 }, force: true });
       await expect(page.locator('[data-node-id="home-faq-item-0-answer"]').first()).toBeVisible({ timeout: 1_500 });
@@ -1162,7 +1182,16 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(officeTab1).toHaveAttribute('data-selected', 'true');
     await expect(officeLayout1).toBeVisible();
     await expect(officeLayout0).toBeHidden();
-    await expect(page.locator('[data-node-id="home-offices-layout-1-card-title"]').first()).toContainText('가오슝');
+    await expect(page.locator('[data-node-id="home-offices-layout-1-card-title"]').first()).toContainText('타이중');
+    const officeMap1 = page.locator('[data-node-id="home-offices-layout-1-map"]').first();
+    await officeMap1.scrollIntoViewIfNeeded();
+    await officeMap1.click({ position: { x: 24, y: 24 } });
+    const taichungQuickEdit = officeMap1.locator('[data-builder-map-quick-edit="true"]').first();
+    await expect(taichungQuickEdit.getByLabel('Map quick office phone')).toBeVisible();
+    await expect(taichungQuickEdit.getByLabel('Map quick office fax')).toBeVisible();
+    await expect(taichungQuickEdit.getByLabel('Map quick office phone')).toHaveValue(/04-2326-1862/);
+    await expect(taichungQuickEdit.getByLabel('Map quick office fax')).toHaveValue(/04-2326-1863/);
+    await page.keyboard.press('Escape');
     await officeTab0.click({ position: { x: 16, y: 16 }, force: true });
     await expect(officeLayout0).toBeVisible();
     await expect(officeLayout1).toBeHidden();
@@ -1172,7 +1201,11 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(mapQuickEdit).toContainText('사무소 위치 편집');
     await expect(mapQuickEdit.getByLabel('Map quick location title')).toBeVisible();
     await expect(mapQuickEdit.getByLabel('Map quick office phone')).toBeVisible();
-    await expect(mapQuickEdit.getByLabel('Map quick office fax')).toBeVisible();
+    // Taipei is intentionally phone/fax-empty, so decompose omits those nodes
+    // and the fax control is not mounted. Phone stays as a disabled empty field.
+    await expect(mapQuickEdit.getByLabel('Map quick office fax')).toHaveCount(0);
+    await expect(page.locator('[data-node-id="home-offices-layout-0-card-phone"]')).toHaveCount(0);
+    await expect(page.locator('[data-node-id="home-offices-layout-0-card-fax"]')).toHaveCount(0);
     await expect(mapQuickEdit.getByLabel('Map quick Google Maps URL')).toBeVisible();
     await mapQuickEdit.getByRole('button', { name: '타이베이' }).click();
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText('타이베이');
@@ -1180,17 +1213,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(mapQuickEdit.getByLabel('Map quick address')).toHaveValue(/承德路/);
     await expect(mapQuickEdit.getByLabel('Map quick location title')).toHaveValue('타이베이');
     await expect(mapQuickEdit.getByLabel('Map quick office phone')).toHaveValue('');
-    await expect(mapQuickEdit.getByLabel('Map quick office fax')).toHaveValue('');
     const temporaryOfficeTitle = `타이베이 테스트 ${Date.now().toString(36)}`;
-    const temporaryOfficePhone = '02-0000-0000';
-    const temporaryOfficeFax = '02-1111-1111';
     const temporaryOfficeUrl = 'https://www.google.com/maps/search/test-office';
     await mapQuickEdit.getByLabel('Map quick location title').fill(temporaryOfficeTitle);
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText(temporaryOfficeTitle);
-    await mapQuickEdit.getByLabel('Map quick office phone').fill(temporaryOfficePhone);
-    await expect(page.locator('[data-node-id="home-offices-layout-0-card-phone"]').first()).toContainText(temporaryOfficePhone);
-    await mapQuickEdit.getByLabel('Map quick office fax').fill(temporaryOfficeFax);
-    await expect(page.locator('[data-node-id="home-offices-layout-0-card-fax"]').first()).toContainText(temporaryOfficeFax);
     await mapQuickEdit.getByLabel('Map quick Google Maps URL').fill(temporaryOfficeUrl);
     await expect(mapQuickEdit.getByLabel('Map quick Google Maps URL')).toHaveValue(temporaryOfficeUrl);
     await mapQuickEdit.getByRole('slider', { name: 'Map quick zoom' }).fill('17');
@@ -1200,7 +1226,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     }).toBe('17');
     await mapQuickEdit.getByRole('button', { name: '타이중' }).click();
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText('타이중');
-    await expect(page.locator('[data-node-id="home-offices-layout-0-card-phone"]').first()).toContainText('04-2326-1862');
+    await expect(page.locator('[data-node-id="home-offices-layout-0-card-address"]').first()).toContainText('館前路');
     await page.getByRole('button', { name: /content|콘텐츠/i }).click();
     await expect(page.getByText(/Office sync|사무소 동기화/)).toBeVisible();
     await expect(page.getByText('사무소 프리셋')).toBeVisible();

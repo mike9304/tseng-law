@@ -92,7 +92,7 @@ const EXPECTED_KO_DECOMPOSED_SECTION_RECTS = [
   { id: 'home-stats-root', y: 3954, height: 560 },
   { id: 'home-faq-root', y: 4514, height: 1160 },
   { id: 'home-offices-root', y: 5674, height: 919 },
-  { id: 'home-contact-root', y: 6593, height: 532 },
+  { id: 'home-contact-root', y: 6593, height: 531 },
 ] as const;
 
 describe('home seed canvas layout', () => {
@@ -277,7 +277,7 @@ describe('home seed canvas layout', () => {
   it('matches zh-hant decomposed home section geometry to the localized composite flow', () => {
     const doc = createHomePageCanvasDocument('zh-hant');
 
-    expect(doc.stageHeight).toBe(7124);
+    expect(doc.stageHeight).toBe(7122);
     expect(
       doc.nodes
         .filter((node) => !node.parentId && /^home-.+-root$/.test(node.id))
@@ -392,7 +392,7 @@ describe('home seed canvas layout', () => {
   it('matches ko decomposed home section geometry to the measured composite flow', () => {
     const doc = createHomePageCanvasDocument('ko');
 
-    expect(doc.stageHeight).toBe(7127);
+    expect(doc.stageHeight).toBe(7124);
     expect(
       doc.nodes
         .filter((node) => !node.parentId && /^home-.+-root$/.test(node.id))
@@ -402,6 +402,24 @@ describe('home seed canvas layout', () => {
           height: node.rect.height,
         })),
     ).toEqual(EXPECTED_KO_DECOMPOSED_SECTION_RECTS);
+  });
+
+  it('keeps serialized KO/ZH decomposed homes inside the 7124 published-height cap', () => {
+    for (const locale of ['ko', 'zh-hant'] as const) {
+      const doc = JSON.parse(JSON.stringify(createHomePageCanvasDocument(locale))) as ReturnType<
+        typeof createHomePageCanvasDocument
+      >;
+      const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
+      const deepest = doc.nodes.reduce((maxHeight, node) => {
+        if (node.anchorName?.startsWith('mobile-parity-')) return maxHeight;
+        const rect = resolveCanvasNodeAbsoluteRectForViewport(node, nodesById, 'desktop');
+        return Math.max(maxHeight, rect.y + rect.height);
+      }, doc.stageHeight);
+
+      expect(doc.stageHeight).toBeLessThanOrEqual(7124);
+      expect(deepest).toBeLessThanOrEqual(7124);
+      expect(nodesById.get('home-insights-root')?.rect.height).toBe(820);
+    }
   });
 
   it('matches ko decomposed child anchors to the measured composite render', () => {

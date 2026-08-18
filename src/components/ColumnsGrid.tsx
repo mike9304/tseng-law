@@ -6,15 +6,6 @@ import Link from 'next/link';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import type { SiteLocale } from '@/lib/locales';
 
-const COLUMNS_PAGE_SIZE = 12;
-
-const loadMoreLabels = {
-  ko: { button: '더 보기', remaining: '개 더 있음' },
-  'zh-hant': { button: '載入更多', remaining: ' 篇待載入' },
-  en: { button: 'Load more', remaining: ' more available' },
-  ja: { button: 'もっと見る', remaining: ' 件あります' },
-} as const;
-
 const searchCopy = {
   ko: {
     label: '칼럼 검색',
@@ -121,25 +112,18 @@ export default function ColumnsGrid({
   const requestedQuery = normalizeFilterValue(searchParams ? searchParams.get('q') : initialFilters.q);
   const requestedYear = normalizeFilterValue(searchParams ? searchParams.get('year') : initialFilters.year);
   const requestedMonth = normalizeFilterValue(searchParams ? searchParams.get('month') : initialFilters.month);
-  const requestedPageRaw = searchParams?.get('page') ?? '';
-  const requestedPage = Math.max(1, Number.parseInt(requestedPageRaw, 10) || 1);
   const initialActive = requestedCategory === 'formation' || requestedCategory === 'legal' || requestedCategory === 'case'
     ? requestedCategory
     : 'all';
   const [active, setActive] = useState<ColumnCategory | 'all'>(initialActive);
   const [searchInput, setSearchInput] = useState(requestedQuery);
   const [appliedQuery, setAppliedQuery] = useState(requestedQuery);
-  const [page, setPage] = useState(requestedPage);
   const searchLabels = searchCopy[locale];
 
   useEffect(() => {
     setSearchInput(requestedQuery);
     setAppliedQuery(requestedQuery);
   }, [requestedQuery]);
-
-  useEffect(() => {
-    setPage(requestedPage);
-  }, [requestedPage]);
 
   useEffect(() => {
     if (requestedCategory === 'formation' || requestedCategory === 'legal' || requestedCategory === 'case') {
@@ -162,7 +146,6 @@ export default function ColumnsGrid({
   const updateSearchParam = (nextQuery: string) => {
     const trimmed = nextQuery.trim();
     setAppliedQuery(trimmed);
-    setPage(1);
     updateUrlSearchParams((next) => {
       if (trimmed) {
         next.set('q', trimmed);
@@ -189,11 +172,6 @@ export default function ColumnsGrid({
       }),
     [active, appliedQuery, posts, requestedAuthor, requestedCategory, requestedMonth, requestedYear],
   );
-
-  const visibleCount = page * COLUMNS_PAGE_SIZE;
-  const visiblePosts = filtered.slice(0, visibleCount);
-  const remainingCount = Math.max(0, filtered.length - visibleCount);
-  const loadMoreCopy = loadMoreLabels[locale];
 
   const cats: { id: ColumnCategory | 'all'; label: string }[] = [
     { id: 'all', label: labels.all },
@@ -256,7 +234,6 @@ export default function ColumnsGrid({
               key={cat.id}
               onClick={() => {
                 setActive(cat.id);
-                setPage(1);
                 updateUrlSearchParams((next) => {
                   next.delete('page');
                 });
@@ -268,8 +245,8 @@ export default function ColumnsGrid({
             </button>
           ))}
         </div>
-        <div className="columns-grid" data-columns-visible-count={visiblePosts.length}>
-          {visiblePosts.map((post) => (
+        <div className="columns-grid" data-columns-visible-count={filtered.length}>
+          {filtered.map((post) => (
             <Link key={post.slug} href={`/${locale}/columns/${post.slug}`} className="columns-card">
               <div className="columns-card-img">
                 <Image src={post.featuredImage} alt={post.title} width={600} height={340} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
@@ -312,28 +289,6 @@ export default function ColumnsGrid({
                     : 'No posts in this category yet.'}
           </p>
         )}
-        {remainingCount > 0 ? (
-          <div className="columns-pagination" data-columns-remaining={remainingCount}>
-            <button
-              type="button"
-              className="columns-load-more"
-              onClick={() => {
-                const nextPage = page + 1;
-                setPage(nextPage);
-                updateUrlSearchParams((next) => {
-                  next.set('page', String(nextPage));
-                }, 'push');
-              }}
-              data-columns-load-more="true"
-            >
-              {loadMoreCopy.button}
-              <span className="columns-load-more-meta">
-                ({remainingCount}
-                {loadMoreCopy.remaining})
-              </span>
-            </button>
-          </div>
-        ) : null}
       </div>
     </section>
   );

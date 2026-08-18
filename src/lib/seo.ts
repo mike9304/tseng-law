@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import type { Locale, SiteLocale } from '@/lib/locales';
 import { defaultLocale, siteLocales } from '@/lib/locales';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
@@ -47,6 +48,12 @@ type ArticleJsonLdInput = {
 type PersonProfileJsonLdInput = {
   locale: SiteLocale;
   path: string;
+  /**
+   * Optional explicit `@id` for the Person node. Pass `ATTORNEY_PERSON_ID` to
+   * pin every locale to the one canonical entity; omit to keep the per-page
+   * `${pageUrl}#person` identifier.
+   */
+  id?: string;
   name: string;
   alternateName?: string[];
   description: string;
@@ -77,9 +84,22 @@ type FaqJsonLdItem = {
 };
 
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
-const DEFAULT_SOCIAL_IMAGE = '/images/header-skyline-ratio.webp';
+/**
+ * A dedicated 1200×630 social crop of the current cinematic opening. Keep
+ * this separate from the runtime hero poster: social crawlers need a stable,
+ * wide image and do not execute the opening-video enhancement.
+ */
+export const DEFAULT_SOCIAL_IMAGE_PATH =
+  '/images/editorial/taiwan-central-mountains-cloud-flight-v2-social.webp';
 const LOGO_IMAGE = '/images/brand/hovering-seal-red-512.png';
 const ORGANIZATION_ID = 'https://tseng-law.com/#organization';
+
+/**
+ * Locale-independent canonical identifier for the primary attorney (曾雋崴).
+ * The same `@id` is emitted on every language edition of the lawyers page so
+ * ko/zh-hant/ja are read as one Person entity instead of three.
+ */
+export const ATTORNEY_PERSON_ID = 'https://tseng-law.com/#person-tseng-chun-wei';
 
 const organizationName: Record<SiteLocale, string> = {
   ko: '법무법인 호정',
@@ -87,6 +107,9 @@ const organizationName: Record<SiteLocale, string> = {
   en: 'Hovering International Law Firm',
   ja: '昊鼎国際法律事務所',
 };
+
+const pageTitleBrands = Object.values(organizationName).sort((a, b) => b.length - a.length);
+const pageTitleSeparatorPattern = /(?:\s*(?:\||｜|—|–|-)\s*)$/u;
 
 const organizationAlternateNames = ['법무법인 호정', '昊鼎國際法律事務所', 'Hovering International Law Firm', 'Tseng Law', '昊鼎国際法律事務所'];
 
@@ -158,7 +181,7 @@ export function buildAbsoluteUrl(path = ''): string {
 }
 
 function normalizeImages(images?: ImageInput | ImageInput[]) {
-  const list = images == null ? [DEFAULT_SOCIAL_IMAGE] : Array.isArray(images) ? images : [images];
+  const list = images == null ? [DEFAULT_SOCIAL_IMAGE_PATH] : Array.isArray(images) ? images : [images];
 
   return list.map((item) => {
     if (typeof item === 'string') {
@@ -201,10 +224,13 @@ export function buildSeoMetadata({
   const canonicalPath = getLocalizedPath(locale, path);
   const canonicalUrl = buildAbsoluteUrl(canonicalPath);
   const socialImages = normalizeImages(images);
+  const pageTitle = stripOrganizationNameSuffix(title);
 
   return {
     metadataBase: new URL(getSiteUrl()),
-    title,
+    // The locale layout owns the localized `%s | Brand` template. Keeping the
+    // page portion here prevents Next from applying a second brand suffix.
+    title: pageTitle || { absolute: getOrganizationName(locale) },
     description,
     keywords,
     other: {
@@ -317,8 +343,7 @@ export function buildLegalServiceJsonLd(
     description: options?.description,
     url: buildAbsoluteUrl(getLocalizedPath(locale, options?.path)),
     serviceType: options?.serviceType,
-    telephone: '+82-10-2992-9304',
-    email: 'wei@hoveringlaw.com.tw',
+    email: CONSULTATION_EMAIL,
     areaServed: ['Taiwan', 'South Korea'],
     knowsLanguage: organizationLanguageTags,
     sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913', 'https://www.threads.com/@lawyer.wei'],
@@ -326,8 +351,7 @@ export function buildLegalServiceJsonLd(
       {
         '@type': 'ContactPoint',
         contactType: 'customer service',
-        telephone: '+82-10-2992-9304',
-        email: 'wei@hoveringlaw.com.tw',
+        email: CONSULTATION_EMAIL,
         availableLanguage: organizationLanguageTags,
         url: buildAbsoluteUrl(getLocalizedPath(locale, '/contact')),
       },
@@ -345,7 +369,7 @@ export function buildLegalServiceJsonLd(
               : 'Attorney Wei Tseng',
       url: buildAbsoluteUrl(getLocalizedPath(locale, '/lawyers/wei-tseng')),
     },
-    image: buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE),
+    image: buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE_PATH),
     logo: buildAbsoluteUrl(LOGO_IMAGE),
     address: {
       '@type': 'PostalAddress',
@@ -361,7 +385,7 @@ export function buildArticleJsonLd({
   title,
   description,
   path,
-  image = DEFAULT_SOCIAL_IMAGE,
+  image = DEFAULT_SOCIAL_IMAGE_PATH,
   datePublished,
   dateModified,
   authorName,
@@ -404,6 +428,7 @@ export function buildArticleJsonLd({
 export function buildPersonJsonLd({
   locale,
   path,
+  id,
   name,
   alternateName,
   description,
@@ -419,7 +444,7 @@ export function buildPersonJsonLd({
 
   const personEntity = {
     '@type': 'Person',
-    '@id': `${pageUrl}#person`,
+    '@id': id ?? `${pageUrl}#person`,
     name,
     alternateName,
     description,
@@ -432,6 +457,7 @@ export function buildPersonJsonLd({
     knowsAbout,
     worksFor: {
       '@type': 'Organization',
+      '@id': ORGANIZATION_ID,
       name: organizationName[locale],
       url: buildAbsoluteUrl(getLocalizedPath(locale)),
     },
@@ -450,6 +476,7 @@ export function buildPersonJsonLd({
 export function buildProfilePageJsonLd({
   locale,
   path,
+  id,
   name,
   alternateName,
   description,
@@ -471,7 +498,7 @@ export function buildProfilePageJsonLd({
     inLanguage: getLocaleLanguageTag(locale),
     mainEntity: {
       '@type': 'Person',
-      '@id': `${pageUrl}#person`,
+      '@id': id ?? `${pageUrl}#person`,
       name,
       alternateName,
       description,
@@ -484,6 +511,7 @@ export function buildProfilePageJsonLd({
       knowsAbout,
       worksFor: {
         '@type': 'Organization',
+        '@id': ORGANIZATION_ID,
         name: organizationName[locale],
         url: buildAbsoluteUrl(getLocalizedPath(locale)),
       },
@@ -524,6 +552,44 @@ export function buildCollectionPageJsonLd({
 
 export function getOrganizationName(locale: Locale | SiteLocale): string {
   return organizationName[locale];
+}
+
+/**
+ * Removes a known localized firm name only when it appears as the terminal
+ * title suffix. This accepts both the canonical pipe separator and legacy
+ * dash separators so migrated Builder SEO titles cannot render a double brand.
+ */
+export function stripOrganizationNameSuffix(title: string): string {
+  let pageTitle = title.trim();
+  let changed = true;
+
+  while (pageTitle && changed) {
+    changed = false;
+    for (const brand of pageTitleBrands) {
+      if (pageTitle === brand) {
+        return '';
+      }
+      if (!pageTitle.endsWith(brand)) continue;
+
+      const prefix = pageTitle.slice(0, -brand.length);
+      if (!pageTitleSeparatorPattern.test(prefix)) continue;
+
+      pageTitle = prefix.replace(pageTitleSeparatorPattern, '').trim();
+      changed = true;
+      break;
+    }
+  }
+
+  return pageTitle;
+}
+
+export function buildLocalizedPageTitle(
+  title: string,
+  locale: Locale | SiteLocale,
+): string {
+  const brand = getOrganizationName(locale);
+  const pageTitle = stripOrganizationNameSuffix(title);
+  return pageTitle ? `${pageTitle} | ${brand}` : brand;
 }
 
 /**

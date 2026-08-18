@@ -1,5 +1,9 @@
 import type { SiteLocale } from '@/lib/locales';
 import type { FAQItem } from '@/data/faq-content';
+import {
+  CONSULTATION_EMAIL,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 
 export const primaryAttorneySlug = 'wei-tseng' as const;
 export type AttorneyProfileSlug = typeof primaryAttorneySlug;
@@ -54,7 +58,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       title: '증준외 대만변호사 프로필',
       description:
         '한국 고객의 대만 회사설립, 투자, 소송, 비자, 상표·특허, 법률자문을 지원하는 증준외 대만변호사의 경력과 대표 사례를 정리한 프로필 페이지입니다.',
-      email: 'wei@hoveringlaw.com.tw',
+      email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
         '증준외 변호사는 한국·일본 고객의 대만 투자, 회사설립, 소송, 지식재산, 비자 및 리스크 검토 업무를 수행합니다.',
@@ -80,7 +84,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: '대만 회사설립 서비스', href: '/ko/services/investment' },
         { label: '민사소송·손해배상 서비스', href: '/ko/services/civil' },
         { label: '대만 헬스장 부상 손해배상: 1심 사례·청구기한·증거·배상항목', href: '/ko/columns/taiwan-gym-injury-lawsuit' },
-        { label: '상담 문의', href: '/ko/contact' },
+        { label: '상담 문의', href: getConsultationPublicMailto('ko') },
       ],
       externalProfiles: [
         { label: '법무법인 호정 프로필', href: 'https://www.hoveringlaw.com.tw/kr/wei.html' },
@@ -125,7 +129,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       title: '曾雋崴台灣律師簡介',
       description:
         '整理曾雋崴台灣律師的學經歷、主要服務領域與代表案件，聚焦韓國客戶在台公司設立、投資、訴訟、簽證與智慧財產等法律需求。',
-      email: 'wei@hoveringlaw.com.tw',
+      email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
         '曾雋崴律師長期協助韓國、日本客戶處理在台投資、公司設立、訴訟、智慧財產、簽證與法律風險評估。',
@@ -151,7 +155,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: '台灣公司設立服務', href: '/zh-hant/services/investment' },
         { label: '民事訴訟服務', href: '/zh-hant/services/civil' },
         { label: '台灣健身房受傷求償：一審案例、期限、證據與賠償項目', href: '/zh-hant/columns/taiwan-gym-injury-lawsuit' },
-        { label: '聯絡諮詢', href: '/zh-hant/contact' },
+        { label: '聯絡諮詢', href: getConsultationPublicMailto('zh-hant') },
       ],
       externalProfiles: [
         { label: '昊鼎官方律師頁面', href: 'https://www.hoveringlaw.com.tw/zh/wei.html' },
@@ -196,7 +200,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       title: 'Wei Tseng Taiwan Attorney Profile',
       description:
         'A dedicated profile for Wei Tseng, a Taiwan attorney focusing on company setup, investment, litigation, visa, and IP support for Korean and international clients.',
-      email: 'wei@hoveringlaw.com.tw',
+      email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
         'Attorney Wei Tseng advises Korean and Japanese clients on Taiwan company setup, investment, litigation, intellectual property, visas, and legal risk review.',
@@ -222,7 +226,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: 'Taiwan Company Setup Service', href: '/en/services/investment' },
         { label: 'Civil Litigation Service', href: '/en/services/civil' },
         { label: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages', href: '/en/columns/taiwan-gym-injury-lawsuit' },
-        { label: 'Book Consultation', href: '/en/contact' },
+        { label: 'Book Consultation', href: getConsultationPublicMailto('en') },
       ],
       externalProfiles: [
         { label: 'Hovering official profile', href: 'https://www.hoveringlaw.com.tw/en/wei.html' },
@@ -267,7 +271,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       title: '曾雋崴台湾弁護士プロフィール',
       description:
         '韓国のクライアントによる台湾での会社設立、投資、訴訟、ビザ、商標・特許、法律顧問業務を支援する曾雋崴台湾弁護士の経歴と代表事例をまとめたプロフィールです。',
-      email: 'wei@hoveringlaw.com.tw',
+      email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
         '曾雋崴弁護士は、韓国・日本のクライアントによる台湾での投資、会社設立、訴訟、知的財産、ビザおよび法的リスクの検討を支援しています。',
@@ -293,7 +297,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: '台湾会社設立サービス', href: '/ja/services#investment' },
         { label: '民事訴訟・損害賠償サービス', href: '/ja/services#civil' },
         { label: '台湾のジム事故損害賠償：一審事例・期限・証拠・賠償項目', href: '/ja/columns/taiwan-gym-injury-lawsuit' },
-        { label: 'お問い合わせ・ご相談', href: '/ja/contact' },
+        { label: 'お問い合わせ・ご相談', href: getConsultationPublicMailto('ja') },
       ],
       externalProfiles: [
         { label: '昊鼎公式弁護士プロフィール', href: 'https://www.hoveringlaw.com.tw/zh/wei.html' },

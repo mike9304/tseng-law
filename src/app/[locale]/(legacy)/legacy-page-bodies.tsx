@@ -20,9 +20,11 @@ import { faqContent } from '@/data/faq-content';
 import { legalPageContent } from '@/data/legal-pages';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import {
+  ATTORNEY_PERSON_ID,
   buildBreadcrumbJsonLd,
   buildCollectionPageJsonLd,
   buildPersonJsonLd,
+  getOrganizationName,
 } from '@/lib/seo';
 import type { Locale, SiteLocale } from '@/lib/locales';
 import type { ColumnPost } from '@/lib/columns';
@@ -91,6 +93,87 @@ export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
   );
 }
 
+const attorneyFactLabels = {
+  ko: {
+    heading: '증준외 변호사 기본 정보',
+    qualification: '자격 · 소속',
+    practice: '주요 취급 분야',
+    languages: '상담 언어',
+  },
+  'zh-hant': {
+    heading: '曾雋崴律師 基本資料',
+    qualification: '資格與所屬',
+    practice: '主要服務領域',
+    languages: '諮詢語言',
+  },
+  en: {
+    heading: 'Attorney Wei Tseng — Key Facts',
+    qualification: 'Qualification and Firm',
+    practice: 'Core Practice Areas',
+    languages: 'Consultation Languages',
+  },
+  ja: {
+    heading: '曾雋崴弁護士 基本情報',
+    qualification: '資格・所属',
+    practice: '主な取扱分野',
+    languages: '相談言語',
+  },
+} as const;
+
+function buildAttorneyQualificationSentence(locale: SiteLocale, name: string, firm: string): string {
+  switch (locale) {
+    case 'ko':
+      return `${name}는 대만 변호사 자격을 보유한 ${firm}의 대표 변호사입니다.`;
+    case 'zh-hant':
+      return `${name}為具備台灣律師資格的${firm}代表律師。`;
+    case 'ja':
+      return `${name}は、台湾弁護士の資格を有する${firm}の代表弁護士です。`;
+    default:
+      return `${name} is a qualified Taiwan attorney and the managing attorney of ${firm}.`;
+  }
+}
+
+/**
+ * Plain, verifiable sentences about the primary attorney rendered into the
+ * initial HTML of the lawyers page (ko/zh-hant/ja/en). Every value is read from
+ * the existing attorney profile record — no claims are introduced here.
+ *
+ * This block is intentionally rendered outside the canvas-modelled attorney
+ * card so the Visual CMS geometry contracts for the attorney section stay
+ * untouched.
+ */
+function AttorneyFactSummary({ locale }: { locale: SiteLocale }) {
+  const profile = getAttorneyProfile(locale, primaryAttorneySlug);
+
+  if (!profile) {
+    return null;
+  }
+
+  const labels = attorneyFactLabels[locale];
+  const firm = getOrganizationName(locale);
+  const separator = locale === 'ko' || locale === 'en' ? ', ' : '、';
+
+  return (
+    <section className="section section--light attorney-facts-section" id="attorney-facts">
+      <div className="container">
+        <h2 className="section-title">{labels.heading}</h2>
+        <div className="attorney-card-section">
+          <div className="attorney-card-label">{labels.qualification}</div>
+          <p>{buildAttorneyQualificationSentence(locale, profile.name, firm)}</p>
+        </div>
+        <div className="attorney-card-section">
+          <div className="attorney-card-label">{labels.practice}</div>
+          <p>{profile.practiceAreas.join(separator)}</p>
+        </div>
+        <div className="attorney-card-section">
+          <div className="attorney-card-label">{labels.languages}</div>
+          <p>{profile.languages.join(separator)}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function LawyersLegacyPageBody({
   locale,
   visibleBlockIds,
@@ -132,6 +215,8 @@ export function LawyersLegacyPageBody({
                 data={buildPersonJsonLd({
                   locale,
                   path: `/${locale}/lawyers/${profile.slug}`,
+                  // One canonical Person node across ko/zh-hant/ja lawyers pages.
+                  id: ATTORNEY_PERSON_ID,
                   name: profile.name,
                   alternateName: profile.alternateNames,
                   description: profile.description,
@@ -167,6 +252,7 @@ export function LawyersLegacyPageBody({
         <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       ) : null}
       {showRepeater ? <AttorneyProfileSection locale={locale} showIntro={false} /> : null}
+      {showRepeater ? <AttorneyFactSummary locale={locale} /> : null}
     </>
   );
 }

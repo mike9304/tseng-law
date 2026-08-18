@@ -1,10 +1,13 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { recordSecurityUserEvent } from '@/lib/builder/audit/record';
 import { BUILDER_PERMISSIONS } from '@/lib/builder/security/permissions';
 import { rolePermissionMatrix } from '@/lib/builder/security/role-permissions';
 import { userHasPermission } from '@/lib/builder/security/resolve-permission';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import {
   listUserRoles,
   upsertUserRole,
@@ -12,7 +15,10 @@ import {
 import { GET, POST } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'owner' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'owner',
+    permission: 'manage-roles',
+  })),
   guardMutation: vi.fn(async () => ({ username: 'owner', permission: 'manage-roles' })),
 }));
 
@@ -45,7 +51,7 @@ const createInput = {
   locale: 'ko',
 };
 
-const guardBuilderReadMock = vi.mocked(guardBuilderRead);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const listUserRolesMock = vi.mocked(listUserRoles);
 const upsertUserRoleMock = vi.mocked(upsertUserRole);
@@ -67,7 +73,10 @@ function postRequest(query = '', body: string | unknown = createInput): NextRequ
 describe('builder security users API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    guardBuilderReadMock.mockReturnValue({ username: 'owner' } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'owner',
+      permission: 'manage-roles',
+    });
     guardMutationMock.mockResolvedValue({ username: 'owner', permission: 'manage-roles' } as never);
     listUserRolesMock.mockResolvedValue([userRecord] as never);
     upsertUserRoleMock.mockResolvedValue(userRecord as never);
@@ -87,7 +96,25 @@ describe('builder security users API', () => {
       permissions: BUILDER_PERMISSIONS,
       matrix: rolePermissionMatrix(BUILDER_PERMISSIONS),
     });
-    expect(guardBuilderReadMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'manage-roles',
+    );
+  });
+
+  it.each([
+    ['unauthenticated', 401],
+    ['authenticated without permission', 403],
+  ])('returns %s denial without reading user-role data', async (_label, status) => {
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ error: status === 401 ? 'Unauthorized' : 'missing_permission' }, { status }),
+    );
+
+    const response = await GET(getRequest('locale=en'));
+
+    expect(response.status).toBe(status);
+    expect(listUserRolesMock).not.toHaveBeenCalled();
+    expect(upsertUserRoleMock).not.toHaveBeenCalled();
   });
 
   it('returns localized list failures without leaking exception details', async () => {

@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import { getConsultationPublicEmail, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
-import { contactPageContent } from '@/data/contact-page-content';
 import { getFollowUpSuggestions, getQuickReplies } from '@/components/floating-ai-quick-replies';
 
 interface FloatingChatReference {
@@ -331,7 +330,6 @@ const COPY: Record<
     closeLabel: string;
     contactsTitle: string;
     emailLabel: string;
-    phoneLabel: string;
     officesLabel: string;
     requireBoth: string;
     typingHint: string;
@@ -360,7 +358,7 @@ const COPY: Record<
     showForm: '상담 접수하기',
     formTitle: '상담 접수',
     nameLabel: '이름',
-    contactLabel: '이메일 또는 연락처',
+    contactLabel: '회신 이메일',
     summaryLabel: '사건 요약 (선택)',
     consentLabel: '개인정보 처리 및 변호사 검토에 동의합니다',
     submit: '접수하기',
@@ -370,8 +368,7 @@ const COPY: Record<
     error: '일시적 오류가 발생했습니다. 직접 이메일로 문의해 주세요.',
     closeLabel: '닫기',
     contactsTitle: '직접 연락',
-    emailLabel: '이메일',
-    phoneLabel: '한국 전화',
+    emailLabel: '변호사 이메일 상담',
     officesLabel: '사무소',
     requireBoth: '이름과 연락처를 입력해 주세요',
     typingHint: 'Enter로 전송',
@@ -399,7 +396,7 @@ const COPY: Record<
     showForm: '正式預約諮詢',
     formTitle: '諮詢預約',
     nameLabel: '姓名',
-    contactLabel: '電子郵件或聯絡方式',
+    contactLabel: '回覆電子郵件',
     summaryLabel: '案件摘要 (選填)',
     consentLabel: '同意個資處理與律師檢閱',
     submit: '送出',
@@ -408,8 +405,7 @@ const COPY: Record<
     error: '發生暫時性錯誤，請直接寄信聯繫。',
     closeLabel: '關閉',
     contactsTitle: '直接聯繫',
-    emailLabel: '電子郵件',
-    phoneLabel: '韓國電話',
+    emailLabel: '律師電子郵件諮詢',
     officesLabel: '據點',
     requireBoth: '請輸入姓名與聯絡方式',
     typingHint: 'Enter 送出',
@@ -437,7 +433,7 @@ const COPY: Record<
     showForm: 'Request consultation',
     formTitle: 'Consultation Request',
     nameLabel: 'Name',
-    contactLabel: 'Email or contact',
+    contactLabel: 'Reply email',
     summaryLabel: 'Brief summary (optional)',
     consentLabel: 'I consent to data processing and attorney review',
     submit: 'Submit',
@@ -448,8 +444,7 @@ const COPY: Record<
       'A temporary error occurred. Please email the firm directly.',
     closeLabel: 'Close',
     contactsTitle: 'Direct contact',
-    emailLabel: 'Email',
-    phoneLabel: 'Korea phone',
+    emailLabel: 'Attorney email consultation',
     officesLabel: 'Offices',
     requireBoth: 'Please enter both name and contact',
     typingHint: 'Press Enter to send',
@@ -475,9 +470,9 @@ function createInitialMessages(copy: { greeting: string }): ChatMessage[] {
 }
 
 const OFFICES_TEXT: Record<Locale, string> = {
-  ko: '타이베이 · 타이중 · 가오슝',
-  'zh-hant': '台北 · 台中 · 高雄',
-  en: 'Taipei · Taichung · Kaohsiung',
+  ko: '타이베이 · 타이중 · 가오슝 · 핑둥',
+  'zh-hant': '台北 · 台中 · 高雄 · 屏東',
+  en: 'Taipei · Taichung · Kaohsiung · Pingtung',
 };
 
 export default function FloatingAiChat({
@@ -491,9 +486,7 @@ export default function FloatingAiChat({
 }) {
   const copy = COPY[locale];
   const publicEmail = getConsultationPublicEmail();
-  const publicMailto = getConsultationPublicMailto();
-  const primaryOffice = contactPageContent[locale].offices.offices[0];
-  const phoneHref = `tel:${primaryOffice.phone.replace(/[^0-9+]/g, '')}`;
+  const publicMailto = getConsultationPublicMailto(locale);
   // Always start with the server-rendered initial greeting so SSR and
   // the first client render agree. The localStorage restore runs in a
   // useEffect below (hydrationRestored flag), avoiding hydration
@@ -860,6 +853,16 @@ export default function FloatingAiChat({
       setFormError(copy.requireBoth);
       return;
     }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formContact.trim())) {
+      setFormError(
+        locale === 'ko'
+          ? '올바른 이메일 주소를 입력해 주세요.'
+          : locale === 'zh-hant'
+            ? '請輸入有效的電子郵件地址。'
+            : 'Please enter a valid email address.',
+      );
+      return;
+    }
     if (!formConsent) {
       setFormError(copy.consentLabel);
       return;
@@ -868,14 +871,13 @@ export default function FloatingAiChat({
     setSubmitting(true);
     setFormError(null);
 
-    const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formContact.trim());
     const lastAssistantWithMetadata = [...messages]
       .reverse()
       .find((m) => m.role === 'assistant' && (m.classification || m.riskLevel || m.referencedColumns));
     const collectedFields = {
       name: formName.trim(),
-      email: isEmail ? formContact.trim() : '',
-      phoneOrMessenger: !isEmail ? formContact.trim() : '',
+      email: formContact.trim(),
+      phoneOrMessenger: '',
       summary:
         formSummary.trim() ||
         messages
@@ -1009,21 +1011,6 @@ export default function FloatingAiChat({
           <div>
             <span>{copy.emailLabel}</span>
             <strong>{publicEmail}</strong>
-          </div>
-        </a>
-        <a href={phoneHref} className="floating-ai-chat-contact-item">
-          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden>
-            <path
-              d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <div>
-            <span>{copy.phoneLabel}</span>
-            <strong>{primaryOffice.phone}</strong>
           </div>
         </a>
         <div className="floating-ai-chat-contact-item floating-ai-chat-contact-offices">
@@ -1290,7 +1277,7 @@ export default function FloatingAiChat({
               required
             />
             <input
-              type="text"
+              type="email"
               aria-label={copy.contactLabel}
               aria-describedby={formError ? 'floating-ai-chat-intake-error' : undefined}
               placeholder={copy.contactLabel}

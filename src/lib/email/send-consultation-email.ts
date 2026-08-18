@@ -18,6 +18,7 @@ const SMTP_PORT = Number(process.env.SMTP_PORT || '587');
 const SMTP_USER = process.env.SMTP_USER || '';
 const SMTP_PASS = process.env.SMTP_PASS || '';
 const NOTIFY_EMAIL = process.env.CONSULTATION_NOTIFY_EMAIL || process.env.NOTIFY_EMAIL || 'wei@hoveringlaw.com.tw';
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export interface ConsultationEmailPayload {
   locale: Locale;
@@ -47,15 +48,24 @@ function buildTranscriptPreview(transcript: ConsultationTranscriptMessage[]): st
   return transcript.slice(-6).map((entry) => `${entry.role === 'user' ? 'USER' : 'AI'}: ${entry.text}`);
 }
 
+function isSafeEmailHeader(value: string | undefined): value is string {
+  if (!value || value.length > 254 || /[\r\n]/.test(value)) return false;
+  return EMAIL_PATTERN.test(value);
+}
+
+function officialReplyEmail(): string {
+  return NOTIFY_EMAIL.split(',').map((email) => email.trim()).find(isSafeEmailHeader)
+    || 'wei@hoveringlaw.com.tw';
+}
+
 function createTransporter() {
   if (!SMTP_HOST?.trim() || !SMTP_PORT || !SMTP_USER?.trim() || !SMTP_PASS?.trim()) {
     throw new Error(
       'SMTP is not fully configured. Check SMTP_HOST, SMTP_PORT, SMTP_USER, and SMTP_PASS.',
     );
   }
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const emails = NOTIFY_EMAIL?.split(',').map((e) => e.trim()).filter(Boolean) ?? [];
-  if (!emails.length || emails.some((e) => !emailPattern.test(e))) {
+  if (!emails.length || emails.some((e) => !isSafeEmailHeader(e))) {
     throw new Error('CONSULTATION_NOTIFY_EMAIL / NOTIFY_EMAIL is missing or invalid.');
   }
 
@@ -115,7 +125,7 @@ export async function sendConsultationEmail(payload: ConsultationEmailPayload): 
   await sendMailWithRetry(transporter, {
     from: `"호정 AI Intake" <${SMTP_USER}>`,
     to: NOTIFY_EMAIL,
-    replyTo: NOTIFY_EMAIL,
+    replyTo: isSafeEmailHeader(collected.email) ? collected.email : officialReplyEmail(),
     subject: `[호정 AI상담] ${categoryLabel} / ${riskLabel} / ${intakeId}`,
     html: `
       <div style="font-family:Arial,sans-serif;max-width:760px;margin:0 auto;padding:24px;color:#1f2937;">

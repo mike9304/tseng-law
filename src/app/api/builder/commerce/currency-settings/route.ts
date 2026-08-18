@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { recordCommerceSettingsUpdated } from '@/lib/builder/audit/record';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   getCommerceCurrencySettingsApiErrorPayload,
   type CommerceCurrencySettingsApiErrorCode,
@@ -25,7 +24,7 @@ export async function GET(request: NextRequest) {
   try {
     const scope = request.nextUrl.searchParams.get('scope') === 'all' ? 'all' : 'public';
     if (scope === 'all') {
-      const auth = requireBuilderAdminAuth(request);
+      const auth = await guardBuilderReadWithPermission(request, 'view-commerce');
       if (auth instanceof NextResponse) return auth;
     }
     const settings = await loadCurrencySettings();
@@ -38,7 +37,7 @@ export async function GET(request: NextRequest) {
 
 export async function PATCH(request: NextRequest) {
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   try {

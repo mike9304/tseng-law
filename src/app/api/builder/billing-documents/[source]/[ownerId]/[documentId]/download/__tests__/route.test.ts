@@ -1,6 +1,5 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import {
   billingDocumentFileName,
   getBillingDocument,
@@ -9,10 +8,14 @@ import {
   renderBillingDocumentPdf,
   trackBillingDocumentAccess,
 } from '@/lib/builder/billing-documents';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { GET } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
+vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/billing-document-automation', () => ({
@@ -31,7 +34,7 @@ vi.mock('@/lib/builder/billing-documents', () => ({
   trackBillingDocumentAccess: vi.fn(async () => undefined),
 }));
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const billingDocumentFileNameMock = vi.mocked(billingDocumentFileName);
 const getBillingDocumentMock = vi.mocked(getBillingDocument);
 const parseBillingDocumentSourceMock = vi.mocked(parseBillingDocumentSource);
@@ -46,7 +49,10 @@ function getRequest(source = 'order', query = ''): NextRequest {
 describe('builder billing document download API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
     billingDocumentFileNameMock.mockImplementation((_document, format) => `document.${format}`);
     getBillingDocumentMock.mockResolvedValue(null);
     parseBillingDocumentSourceMock.mockImplementation((source) => (
@@ -59,7 +65,7 @@ describe('builder billing document download API', () => {
 
   it('returns localized source errors', async () => {
     const response = await GET(getRequest('bad', 'locale=zh-hant'), {
-      params: { source: 'bad', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'bad', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -74,7 +80,7 @@ describe('builder billing document download API', () => {
 
   it('returns localized not-found errors', async () => {
     const response = await GET(getRequest('order', 'locale=ko'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -92,7 +98,7 @@ describe('builder billing document download API', () => {
     getBillingDocumentMock.mockResolvedValueOnce(document as never);
 
     const response = await GET(getRequest('order', 'locale=en&format=html'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const body = await response.text();
 
@@ -109,7 +115,7 @@ describe('builder billing document download API', () => {
     getBillingDocumentMock.mockResolvedValueOnce(document as never);
 
     const response = await GET(getRequest('booking', 'locale=en'), {
-      params: { source: 'booking', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'booking', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const body = new Uint8Array(await response.arrayBuffer());
 

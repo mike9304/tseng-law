@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import type { Locale } from '@/lib/locales';
 import type {
@@ -118,7 +119,14 @@ export default function PublicStorefront({
                 data-commerce-product-slug={product.slug}
               >
                 {product.media[0]?.url ? (
-                  <img src={product.media[0].url} alt={product.media[0].alt} />
+                  <Image
+                    src={product.media[0].url}
+                    alt={product.media[0].alt}
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 560px) calc(100vw - 24px), (max-width: 820px) calc(50vw - 24px), 352px"
+                    unoptimized
+                  />
                 ) : (
                   <div className={styles.imageFallback} aria-hidden />
                 )}

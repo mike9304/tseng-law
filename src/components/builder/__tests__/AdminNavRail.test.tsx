@@ -80,6 +80,33 @@ describe('nav-config helpers', () => {
     expect(flat.every((item) => !item.requirePermission || item.requirePermission === 'edit-pages')).toBe(true);
   });
 
+  it('requires view-commerce for Commerce and filters it when denied', () => {
+    const commerce = flattenAdminNavTree(ADMIN_NAV_TREE).find((item) => item.href === '/commerce');
+    expect(commerce?.requirePermission).toBe('view-commerce');
+
+    const deniedTree = filterAdminNavTree(
+      ADMIN_NAV_TREE,
+      (permission) => permission !== 'view-commerce',
+    );
+    expect(flattenAdminNavTree(deniedTree).some((item) => item.href === '/commerce')).toBe(false);
+  });
+
+  it('renders only permitted destinations while retaining populated section structure', () => {
+    const tree = filterAdminNavTree(ADMIN_NAV_TREE, (permission) => permission === 'edit-pages');
+    const html = renderToStaticMarkup(React.createElement(AdminNavRail, { tree }));
+
+    expect(tree.sections.map((section) => section.heading)).toEqual([
+      '편집',
+      '비즈니스',
+      '워크스페이스',
+    ]);
+    expect(html).toContain('data-builder-admin-rail-section="편집"');
+    expect(html).toContain('data-builder-admin-rail-section="비즈니스"');
+    expect(html).toContain('data-builder-admin-rail-link="/events"');
+    expect(html).not.toContain('data-builder-admin-rail-link="/commerce"');
+    expect(html).not.toContain('data-builder-admin-rail-link="/backups"');
+  });
+
   it('flattenAdminNavTree preserves section headings for quick switchers', () => {
     const quickLinks = flattenAdminNavTree(ADMIN_NAV_TREE);
     expect(quickLinks.some((item) => item.sectionHeading === '개발' && item.label === 'SDK')).toBe(true);

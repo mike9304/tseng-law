@@ -30,6 +30,10 @@ import {
   isBuilderDynamicTemplateBlockVisible,
   readBuilderDynamicTemplatePublishedBlockVisibility,
 } from '@/lib/builder/dynamic-template-drafts';
+import {
+  CONSULTATION_EMAIL,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 import { buildBreadcrumbJsonLd, buildProfilePageJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -117,11 +121,12 @@ export async function generateStaticParams() {
   ];
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: SiteLocale; slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: SiteLocale; slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const profile = await getProfile(locale, params.slug);
 
@@ -141,11 +146,12 @@ export async function generateMetadata({
   });
 }
 
-export default async function LawyerProfilePage({
-  params,
-}: {
-  params: { locale: SiteLocale; slug: string };
-}) {
+export default async function LawyerProfilePage(
+  props: {
+    params: Promise<{ locale: SiteLocale; slug: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const profile = await getProfile(locale, params.slug);
   const labels = sectionLabels[locale];
@@ -281,9 +287,13 @@ export default async function LawyerProfilePage({
                       </span>
                     ))}
                   </div>
-                  <Link href={`/${locale}/contact`} className="button profile-hero-cta">
+                  <a
+                    href={getConsultationPublicMailto(locale)}
+                    className="button profile-hero-cta"
+                    aria-label={`${labels.contact}: ${profile.name} — ${CONSULTATION_EMAIL}`}
+                  >
                     {labels.contact}
-                  </Link>
+                  </a>
                 </div>
               </div>
 

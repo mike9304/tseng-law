@@ -13,12 +13,13 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     appId: string;
-  };
+  }>;
 }
 
-export async function GET(request: NextRequest, { params }: RouteParams) {
+export async function GET(request: NextRequest, props: RouteParams) {
+  const params = await props.params;
   const auth = await guardMutation(request, { allowReadOnly: true, permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

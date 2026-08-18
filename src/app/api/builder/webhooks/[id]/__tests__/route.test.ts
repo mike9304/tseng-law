@@ -54,7 +54,7 @@ describe('/api/builder/webhooks/[id]', () => {
   it('returns localized not-found errors for patch', async () => {
     getSubscriptionMock.mockResolvedValueOnce(null as never);
 
-    const response = await PATCH(patchRequest('locale=zh-hant'), { params: { id: 'missing' } });
+    const response = await PATCH(patchRequest('locale=zh-hant'), { params: Promise.resolve({ id: 'missing' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(404);
@@ -66,7 +66,7 @@ describe('/api/builder/webhooks/[id]', () => {
   });
 
   it('returns localized invalid JSON errors for patch', async () => {
-    const response = await PATCH(patchRequest('locale=en', '{'), { params: { id: 'wh_test' } });
+    const response = await PATCH(patchRequest('locale=en', '{'), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(400);
@@ -78,7 +78,7 @@ describe('/api/builder/webhooks/[id]', () => {
   });
 
   it('returns localized validation errors for patch', async () => {
-    const response = await PATCH(patchRequest('locale=zh-hant', { url: 'not-a-url' }), { params: { id: 'wh_test' } });
+    const response = await PATCH(patchRequest('locale=zh-hant', { url: 'not-a-url' }), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(400);
@@ -92,7 +92,7 @@ describe('/api/builder/webhooks/[id]', () => {
   });
 
   it('updates webhooks while preserving success response shape and masking secrets', async () => {
-    const response = await PATCH(patchRequest('locale=ko'), { params: { id: 'wh_test' } });
+    const response = await PATCH(patchRequest('locale=ko'), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(200);
@@ -114,7 +114,7 @@ describe('/api/builder/webhooks/[id]', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     saveSubscriptionMock.mockRejectedValueOnce(new Error('webhook update secret leaked'));
 
-    const response = await PATCH(patchRequest('locale=en'), { params: { id: 'wh_test' } });
+    const response = await PATCH(patchRequest('locale=en'), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(500);
@@ -129,7 +129,7 @@ describe('/api/builder/webhooks/[id]', () => {
   });
 
   it('deactivates webhooks while preserving success response shape', async () => {
-    const response = await DELETE(request('locale=ko'), { params: { id: 'wh_test' } });
+    const response = await DELETE(request('locale=ko'), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(200);
@@ -147,7 +147,7 @@ describe('/api/builder/webhooks/[id]', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     saveSubscriptionMock.mockRejectedValueOnce(new Error('webhook delete secret leaked'));
 
-    const response = await DELETE(request('locale=ko'), { params: { id: 'wh_test' } });
+    const response = await DELETE(request('locale=ko'), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(500);

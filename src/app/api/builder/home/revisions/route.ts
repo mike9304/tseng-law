@@ -7,7 +7,7 @@ import {
   normalizeBuilderHomeLocale,
   readBuilderHomeSnapshotHistoryDetail,
 } from '@/lib/builder/persistence';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
@@ -27,7 +27,7 @@ function errorResponse(
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'edit-pages');
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeBuilderHomeLocale(request.nextUrl.searchParams.get('locale'));

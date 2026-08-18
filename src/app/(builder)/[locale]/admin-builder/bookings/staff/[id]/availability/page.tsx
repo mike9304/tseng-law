@@ -7,17 +7,19 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = getBookingsAdminCopy(locale);
   return { title: copy.pages.staffAvailability.title, robots: { index: false, follow: false } };
 }
 
-export default async function BookingAvailabilityPage({
-  params,
-}: {
-  params: { locale: string; id: string };
-}) {
+export default async function BookingAvailabilityPage(
+  props: {
+    params: Promise<{ locale: string; id: string }>;
+  }
+) {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = getBookingsAdminCopy(locale);
   const [staff, availability] = await Promise.all([

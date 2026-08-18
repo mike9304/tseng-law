@@ -6,13 +6,15 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: string } }): import('next').Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<import('next').Metadata> {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = getBookingsAdminCopy(locale);
   return { title: copy.pages.packages.title, robots: { index: false, follow: false } };
 }
 
-export default async function BookingPackagesPage({ params }: { params: { locale: string } }) {
+export default async function BookingPackagesPage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = getBookingsAdminCopy(locale);
   const [packages, credits, services] = await Promise.all([

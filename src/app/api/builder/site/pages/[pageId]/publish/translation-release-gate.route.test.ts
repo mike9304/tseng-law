@@ -80,7 +80,7 @@ describe('/api/builder/site/pages/[pageId]/publish translation release gate', ()
     });
 
     const response = await route.POST(postRequest({ translationSiteReview }), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
     const payload = await response.json();
 
@@ -116,7 +116,7 @@ describe('/api/builder/site/pages/[pageId]/publish translation release gate', ()
     });
 
     const response = await route.POST(postRequest({ translationSiteReview }), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
     const payload = await response.json();
 

@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { legalPageContent } from '@/data/legal-pages';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { repairLegalPageMobileLayout } from '@/lib/builder/canvas/legal-responsive';
 import { STANDARD_PAGE_DECOMPOSERS } from '@/lib/builder/canvas/seed-pages';
@@ -59,7 +60,7 @@ describe('legal page mobile repair', () => {
         expect(JSON.stringify(broken)).toBe(beforeJson);
         expect(desktopFingerprint(repaired)).toBe(beforeDesktop);
         expect(repaired.map(withoutMobileOverride)).toEqual(broken.map(withoutMobileOverride));
-        expect(cards).toHaveLength(slug === 'privacy' ? 4 : 3);
+        expect(cards).toHaveLength(legalPageContent[locale][slug].sections.length);
         expect(mobileRect(byId.get(`${prefix}-legal-root`))).toMatchObject({ x: 0, y: 350, width: 375 });
         expect(mobileRect(byId.get(`${prefix}-legal-container`))).toMatchObject({ x: 0, width: 375 });
         expect(mobileRect(byId.get(`${prefix}-legal-grid`))).toMatchObject({ x: 16, width: 343 });
@@ -97,7 +98,8 @@ describe('legal page mobile repair', () => {
         const gridRect = mobileRect(byId.get(`${prefix}-legal-grid`));
         const containerRect = mobileRect(byId.get(`${prefix}-legal-container`));
         const rootRect = mobileRect(byId.get(`${prefix}-legal-root`));
-        expect(gridRect.height).toBeGreaterThanOrEqual(previousBottom);
+        expect(gridRect.height).toBe(previousBottom);
+        expect(containerRect.height).toBe(gridRect.height);
         expect(containerRect.y + containerRect.height).toBeLessThanOrEqual(rootRect.height);
       });
     }

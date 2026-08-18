@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z, ZodError } from 'zod';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   getCommerceOrdersApiErrorPayload,
   type CommerceOrdersApiErrorCode,
@@ -37,8 +36,9 @@ function validationError(locale: Locale, error: ZodError): NextResponse {
   return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
 }
 
-export async function GET(request: NextRequest, { params }: { params: { orderId: string } }) {
-  const auth = requireBuilderAdminAuth(request);
+export async function GET(request: NextRequest, props: { params: Promise<{ orderId: string }> }) {
+  const params = await props.params;
+  const auth = await guardBuilderReadWithPermission(request, 'view-commerce');
   if (auth instanceof NextResponse) return auth;
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
@@ -52,9 +52,10 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
   }
 }
 
-export async function PATCH(request: NextRequest, { params }: { params: { orderId: string } }) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ orderId: string }> }) {
+  const params = await props.params;
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   try {
@@ -87,8 +88,9 @@ export async function PATCH(request: NextRequest, { params }: { params: { orderI
   }
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { orderId: string } }) {
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+export async function DELETE(request: NextRequest, props: { params: Promise<{ orderId: string }> }) {
+  const params = await props.params;
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   const deleted = await softDeleteOrder(params.orderId);

@@ -1,13 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { addBookingDuration, isSlotAvailable } from '@/lib/builder/bookings/availability';
 import {
   getBookingManageApiErrorPayload,
   type BookingManageApiErrorCode,
 } from '@/lib/builder/bookings/booking-manage-copy';
 import { verifyBookingManageToken } from '@/lib/builder/bookings/manage-token';
-import { getBooking, getService, getStaff, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
+import {
+  getBooking,
+  getService,
+  getStaff,
+  hasDurableBookingStorage,
+  saveBooking,
+  timestamped,
+} from '@/lib/builder/bookings/storage';
 import { textForLocale } from '@/lib/builder/bookings/types';
 import type { Locale } from '@/lib/locales';
 import { normalizeLocale } from '@/lib/locales';
@@ -19,7 +27,7 @@ import {
   type BookingSelfServicePolicy,
 } from '@/lib/builder/bookings/refund';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
-import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
+import { acquireSlotLock, releaseSlotLock, renewSlotLock } from '@/lib/builder/bookings/slot-lock';
 import { restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
 import { maybeCreateBookingZoomLink } from '@/lib/builder/bookings/zoom-handoff';
 
@@ -111,7 +119,8 @@ async function bookingPayload(result: Awaited<ReturnType<typeof resolveBooking>>
   };
 }
 
-export async function GET(request: NextRequest, { params }: { params: { token: string } }) {
+export async function GET(request: NextRequest, props: { params: Promise<{ token: string }> }) {
+  const params = await props.params;
   const fallbackLocale = localeFromRequest(request);
   const rate = await checkRateLimit(`booking-manage-get:${clientIp(request)}`, 30, 60_000);
   if (!rate.allowed) return manageErrorResponse(fallbackLocale, 'too_many_requests', 429);
@@ -121,10 +130,16 @@ export async function GET(request: NextRequest, { params }: { params: { token: s
   return NextResponse.json(await bookingPayload(result));
 }
 
-export async function PATCH(request: NextRequest, { params }: { params: { token: string } }) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ token: string }> }) {
+  const params = await props.params;
   const fallbackLocale = localeFromRequest(request);
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
   const rate = await checkRateLimit(`booking-manage-patch:${clientIp(request)}`, 8, 60_000);
   if (!rate.allowed) return manageErrorResponse(fallbackLocale, 'too_many_requests', 429);
+  if (!hasDurableBookingStorage()) {
+    return manageErrorResponse(fallbackLocale, 'booking_storage_unavailable', 503);
+  }
 
   const result = await resolveBooking(params.token, fallbackLocale);
   if ('error' in result && result.error) return result.error;
@@ -146,48 +161,76 @@ export async function PATCH(request: NextRequest, { params }: { params: { token:
   }
 
   if (parsed.data.action === 'cancel') {
-    const policy = localizePolicyReasons(
-      await evaluateBookingSelfServicePolicy(result.booking, result.service),
-      locale,
-    );
-    if (!policy.canCancel) {
-      return NextResponse.json({
-        ...getBookingManageApiErrorPayload(locale, 'cancel_unavailable'),
-        policy,
-      }, { status: 409 });
+    const cancellationLease = await acquireSlotLock({
+      serviceId: result.booking.serviceId,
+      staffId: result.booking.staffId,
+      startAt: result.booking.startAt,
+      resourceIds: result.booking.resourceIds,
+      bookingId: result.booking.bookingId,
+    });
+    if (!cancellationLease) {
+      return manageErrorResponse(locale, 'slot_lock_conflict', 409);
     }
-    // Apply the cancellation policy + Stripe refund so customer-link
-    // cancellations don't bypass the refund math that /api/booking/cancel
-    // enforces for admin/web flows.
-    const outcome = await computeRefundForCancel(result.booking, result.service);
-    const cancelled = await restorePackageCreditForBooking(applyRefundOutcome(result.booking, outcome, parsed.data.reason));
-    const updated = timestamped(cancelled, result.booking.createdAt);
-    await saveBooking(updated);
-    let emailDelivery;
     try {
-      const delivery = await sendBookingCancellation(updated, { service: result.service, staff: result.staff });
-      emailDelivery = delivery.ok
-        ? { ok: true as const }
-        : { ok: false as const, reason: delivery.reason };
-    } catch {
-      emailDelivery = { ok: false as const, reason: 'internal_error' as const };
+      // A reschedule or a second cancellation can finish while this request is
+      // waiting on the booking-id lease; only the re-read is authoritative.
+      const latestBooking = await getBooking(result.booking.bookingId);
+      if (!latestBooking) return manageErrorResponse(locale, 'booking_not_manageable', 404);
+      if (latestBooking.status === 'cancelled') {
+        return manageErrorResponse(locale, 'booking_already_cancelled', 409);
+      }
+      const latestService = await getService(latestBooking.serviceId);
+      const latestStaff = await getStaff(latestBooking.staffId);
+      const policy = localizePolicyReasons(
+        await evaluateBookingSelfServicePolicy(latestBooking, latestService),
+        locale,
+      );
+      if (!policy.canCancel) {
+        return NextResponse.json({
+          ...getBookingManageApiErrorPayload(locale, 'cancel_unavailable'),
+          policy,
+        }, { status: 409 });
+      }
+      // Apply the cancellation policy + Stripe refund so customer-link
+      // cancellations don't bypass the refund math that /api/booking/cancel
+      // enforces for admin/web flows.
+      const outcome = await computeRefundForCancel(latestBooking, latestService ?? undefined);
+      const cancelled = await restorePackageCreditForBooking(applyRefundOutcome(latestBooking, outcome, parsed.data.reason));
+      const updated = timestamped(cancelled, latestBooking.createdAt);
+      if (!await renewSlotLock(cancellationLease)) {
+        return manageErrorResponse(locale, 'booking_storage_unavailable', 503);
+      }
+      await saveBooking(updated);
+      let emailDelivery;
+      try {
+        const delivery = await sendBookingCancellation(updated, { service: latestService, staff: latestStaff });
+        emailDelivery = delivery.ok
+          ? { ok: true as const }
+          : { ok: false as const, reason: delivery.reason };
+      } catch {
+        emailDelivery = { ok: false as const, reason: 'internal_error' as const };
+      }
+      emitEvent('booking.cancelled', {
+        bookingId: updated.bookingId,
+        reason: parsed.data.reason,
+        source: 'customer-link',
+        refundDecision: outcome.decision,
+        paymentStatus: updated.paymentStatus,
+      });
+      return NextResponse.json({
+        ok: true,
+        booking: updated,
+        refundDecision: outcome.decision,
+        refundResult: outcome.refundResult,
+        refundAmountCents: outcome.refundAmountCents,
+        hoursUntilStart: outcome.hoursUntilStart,
+        emailDelivery,
+      });
+    } finally {
+      await releaseSlotLock(cancellationLease).catch(() => {
+        console.error('[booking/manage] cancellation slot lease release failed');
+      });
     }
-    emitEvent('booking.cancelled', {
-      bookingId: updated.bookingId,
-      reason: parsed.data.reason,
-      source: 'customer-link',
-      refundDecision: outcome.decision,
-      paymentStatus: updated.paymentStatus,
-    });
-    return NextResponse.json({
-      ok: true,
-      booking: updated,
-      refundDecision: outcome.decision,
-      refundResult: outcome.refundResult,
-      refundAmountCents: outcome.refundAmountCents,
-      hoursUntilStart: outcome.hoursUntilStart,
-      emailDelivery,
-    });
   }
 
   const nextStaffId = parsed.data.staffId || result.booking.staffId;
@@ -208,8 +251,10 @@ export async function PATCH(request: NextRequest, { params }: { params: { token:
     staffId: nextStaffId,
     startAt: parsed.data.startAt,
     resourceIds,
+    bookingId: result.booking.bookingId,
   };
-  if (!acquireSlotLock(slotKey)) {
+  const slotLease = await acquireSlotLock(slotKey);
+  if (!slotLease) {
     return manageErrorResponse(locale, 'slot_lock_conflict', 409);
   }
 
@@ -223,6 +268,9 @@ export async function PATCH(request: NextRequest, { params }: { params: { token:
     const nextStaff = await getStaff(nextStaffId);
     if (!nextStaff || !nextStaff.isActive) return manageErrorResponse(locale, 'staff_unavailable', 404);
 
+    if (!await renewSlotLock(slotLease)) {
+      return manageErrorResponse(locale, 'booking_storage_unavailable', 503);
+    }
     const zoom = await maybeCreateBookingZoomLink({
       service: result.service,
       staffId: nextStaff.staffId,
@@ -239,6 +287,9 @@ export async function PATCH(request: NextRequest, { params }: { params: { token:
       resourceIds,
       ...(zoom?.meetingLink ? { meetingLink: zoom.meetingLink } : result.booking.meetingLink ? { meetingLink: result.booking.meetingLink } : {}),
     }, result.booking.createdAt);
+    if (!await renewSlotLock(slotLease)) {
+      return manageErrorResponse(locale, 'booking_storage_unavailable', 503);
+    }
     await saveBooking(updated);
     emitEvent('booking.rescheduled', {
       bookingId: updated.bookingId,
@@ -248,6 +299,8 @@ export async function PATCH(request: NextRequest, { params }: { params: { token:
     });
     return NextResponse.json({ ok: true, booking: updated });
   } finally {
-    releaseSlotLock(slotKey);
+    await releaseSlotLock(slotLease).catch(() => {
+      console.error('[booking/manage] slot lease release failed');
+    });
   }
 }

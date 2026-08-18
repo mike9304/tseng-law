@@ -16,11 +16,12 @@ import { getTranslationCopy } from '@/components/builder/translations/translatio
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: Locale }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = getTranslationCopy(locale);
   return buildSeoMetadata({
@@ -38,13 +39,14 @@ interface SearchParams {
   target?: string;
 }
 
-export default async function TranslationEditorPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: Locale; pageId: string };
-  searchParams?: SearchParams;
-}) {
+export default async function TranslationEditorPage(
+  props: {
+    params: Promise<{ locale: Locale; pageId: string }>;
+    searchParams?: Promise<SearchParams>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const routeLocale = normalizeLocale(params.locale);
   const copy = getTranslationCopy(routeLocale);
   const sourceLocale = normalizeLocale(

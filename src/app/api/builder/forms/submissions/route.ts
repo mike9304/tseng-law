@@ -5,13 +5,15 @@ import {
   saveSubmission,
   type FormSubmission,
 } from '@/lib/builder/forms/form-engine';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = await guardBuilderReadWithPermission(request, 'manage-forms');
   if (auth instanceof NextResponse) return auth;
 
   const { searchParams } = request.nextUrl;

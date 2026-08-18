@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { requireConsultationAdminAuth } from '@/lib/consultation/admin/auth';
 import {
   appendConsultationLogLine,
@@ -22,6 +23,9 @@ export const runtime = 'nodejs';
  * operator dashboard can track deletion requests.
  */
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const auth = requireConsultationAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
 

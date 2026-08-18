@@ -26,7 +26,7 @@ function request(method: 'GET' | 'PATCH' | 'DELETE', query = '', body?: unknown)
   });
 }
 
-const routeContext = { params: { id: 'ct_1' } };
+const routeContext = { params: Promise.resolve({ id: 'ct_1' }) };
 const contact = {
   id: 'ct_1',
   email: 'lead@example.test',

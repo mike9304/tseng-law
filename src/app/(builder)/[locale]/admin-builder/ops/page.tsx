@@ -28,7 +28,8 @@ const COPY: Record<Locale, { title: string; description: string; heading: string
   },
 };
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return buildSeoMetadata({
     locale,
@@ -44,13 +45,14 @@ function firstSearchParam(value: SearchParamValue): string | undefined {
   return Array.isArray(value) ? value[0] : value;
 }
 
-export default function OpsPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: string };
-  searchParams?: Record<string, SearchParamValue>;
-}) {
+export default async function OpsPage(
+  props: {
+    params: Promise<{ locale: string }>;
+    searchParams?: Promise<Record<string, SearchParamValue>>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const text = COPY[locale];
   const query = firstSearchParam(searchParams?.q) ?? firstSearchParam(searchParams?.query);

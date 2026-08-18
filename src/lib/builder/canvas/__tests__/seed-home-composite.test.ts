@@ -23,36 +23,36 @@ const EXPECTED_COMPOSITE_KEYS = [
 const LOCALES: Locale[] = ['ko', 'zh-hant', 'en'];
 const EXPECTED_DEFAULT_SECTION_RECTS = [
   { id: 'home-hero', y: 0, height: 788 },
-  { id: 'home-insights', y: 788, height: 1277 },
-  { id: 'home-services', y: 2065, height: 1278 },
-  { id: 'home-attorney', y: 3343, height: 926 },
-  { id: 'home-case-results', y: 4269, height: 800 },
-  { id: 'home-stats', y: 5069, height: 621 },
-  { id: 'home-faq', y: 5690, height: 1333 },
-  { id: 'home-offices', y: 7023, height: 919 },
-  { id: 'home-contact', y: 7942, height: 516 },
+  { id: 'home-insights', y: 788, height: 820 },
+  { id: 'home-services', y: 1608, height: 820 },
+  { id: 'home-attorney', y: 2428, height: 926 },
+  { id: 'home-case-results', y: 3354, height: 600 },
+  { id: 'home-stats', y: 3954, height: 560 },
+  { id: 'home-faq', y: 4514, height: 1160 },
+  { id: 'home-offices', y: 5674, height: 919 },
+  { id: 'home-contact', y: 6593, height: 516 },
 ] as const;
 const EXPECTED_KO_SECTION_RECTS = [
   { id: 'home-hero', y: 0, height: 788 },
-  { id: 'home-insights', y: 788, height: 1277 },
-  { id: 'home-services', y: 2065, height: 1278 },
-  { id: 'home-attorney', y: 3343, height: 926 },
-  { id: 'home-case-results', y: 4269, height: 800 },
-  { id: 'home-stats', y: 5069, height: 621 },
-  { id: 'home-faq', y: 5690, height: 1333 },
-  { id: 'home-offices', y: 7023, height: 909 },
-  { id: 'home-contact', y: 7932, height: 532 },
+  { id: 'home-insights', y: 788, height: 820 },
+  { id: 'home-services', y: 1608, height: 820 },
+  { id: 'home-attorney', y: 2428, height: 926 },
+  { id: 'home-case-results', y: 3354, height: 600 },
+  { id: 'home-stats', y: 3954, height: 560 },
+  { id: 'home-faq', y: 4514, height: 1160 },
+  { id: 'home-offices', y: 5674, height: 909 },
+  { id: 'home-contact', y: 6583, height: 532 },
 ] as const;
 const EXPECTED_ZH_HANT_SECTION_RECTS = [
   { id: 'home-hero', y: 0, height: 774 },
-  { id: 'home-insights', y: 774, height: 1247 },
-  { id: 'home-services', y: 2021, height: 1279 },
-  { id: 'home-attorney', y: 3300, height: 926 },
-  { id: 'home-case-results', y: 4226, height: 843 },
-  { id: 'home-stats', y: 5069, height: 622 },
-  { id: 'home-faq', y: 5691, height: 1333 },
-  { id: 'home-offices', y: 7024, height: 919 },
-  { id: 'home-contact', y: 7943, height: 543 },
+  { id: 'home-insights', y: 774, height: 820 },
+  { id: 'home-services', y: 1594, height: 820 },
+  { id: 'home-attorney', y: 2414, height: 926 },
+  { id: 'home-case-results', y: 3340, height: 600 },
+  { id: 'home-stats', y: 3940, height: 560 },
+  { id: 'home-faq', y: 4500, height: 1160 },
+  { id: 'home-offices', y: 5660, height: 919 },
+  { id: 'home-contact', y: 6579, height: 543 },
 ] as const;
 
 function countResponsiveNodes(doc: BuilderCanvasDocument): number {
@@ -102,7 +102,7 @@ describe('live-reflecting composite home seed', () => {
   it('keeps en on the existing composite seed geometry', () => {
     const doc = createHomePageCanvasDocument('en');
 
-    expect(doc.stageHeight).toBe(8460);
+    expect(doc.stageHeight).toBe(7109);
     expect(doc.nodes.map((node) => ({
       id: node.id,
       y: node.rect.y,
@@ -113,7 +113,7 @@ describe('live-reflecting composite home seed', () => {
   it('uses ko composite section heights measured from the localized home flow', () => {
     const doc = createHomePageCanvasDocument('ko');
 
-    expect(doc.stageHeight).toBe(8504);
+    expect(doc.stageHeight).toBe(7115);
     expect(doc.nodes.map((node) => ({
       id: node.id,
       y: node.rect.y,
@@ -124,7 +124,7 @@ describe('live-reflecting composite home seed', () => {
   it('uses zh-hant composite section heights measured from the localized home flow', () => {
     const doc = createHomePageCanvasDocument('zh-hant');
 
-    expect(doc.stageHeight).toBe(8488);
+    expect(doc.stageHeight).toBe(7122);
     expect(doc.nodes.map((node) => ({
       id: node.id,
       y: node.rect.y,

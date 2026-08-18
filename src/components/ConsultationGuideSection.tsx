@@ -12,7 +12,7 @@ const guideCopy = {
       {
         title: '가능한 상담 채널',
         items: [
-          '카카오톡, 이메일, 전화로 문의를 접수할 수 있습니다.',
+          '이메일로 문의를 접수할 수 있습니다.',
           '타이베이 대면 상담과 Zoom 또는 Google Meet 화상 상담이 가능합니다.',
           '한국어, 중국어, 영어 기준으로 기본 상담 흐름을 안내합니다.',
         ],
@@ -43,7 +43,7 @@ const guideCopy = {
       {
         title: '可使用的聯絡方式',
         items: [
-          '可透過 KakaoTalk、電子郵件與電話提出詢問。',
+          '可透過電子郵件提出詢問。',
           '提供台北面談，以及 Zoom 或 Google Meet 視訊諮詢。',
           '以韓文、中文、英文為主進行基本諮詢安排。',
         ],
@@ -74,7 +74,7 @@ const guideCopy = {
       {
         title: 'Available channels',
         items: [
-          'You can reach us through KakaoTalk, email, or phone.',
+          'You can reach us through email.',
           'We offer in-person meetings in Taipei and video consultations via Zoom or Google Meet.',
           'Initial consultation coordination is handled in Korean, Chinese, and English.',
         ],
@@ -106,7 +106,7 @@ const guideCopy = {
       {
         title: 'ご利用いただける連絡手段',
         items: [
-          'KakaoTalk、メール、電話でお問い合わせいただけます。',
+          'メールでお問い合わせいただけます。',
           'ご希望の相談形式がある場合は、ご連絡時にお知らせください。',
           'ご希望の使用言語がある場合は、ご連絡時にお知らせください。',
         ],

@@ -48,11 +48,9 @@ function errorResponse(
  *   5. Best-effort revalidatePath for the column's public page so ISR
  *      picks up the new content on next request.
  */
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { slug: string } },
-) {
-  const auth = await guardMutation(request, { bucket: 'publish' });
+export async function POST(request: NextRequest, props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
+  const auth = await guardMutation(request, { bucket: 'publish', permission: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
   const slug = params.slug;
@@ -74,9 +72,15 @@ export async function POST(
       return errorResponse(locale, 'draft_not_found', 404);
     }
 
+    const existingPublished = await readColumnVariant(locale, slug, 'published');
+    const publishedAt = draft.frontmatter.publishedAt
+      || existingPublished?.frontmatter.publishedAt
+      || existingPublished?.updatedAt
+      || new Date().toISOString();
     const slugRedirectFrom = draft.frontmatter.slugRedirectFrom;
     const publishedFrontmatter = { ...draft.frontmatter };
     delete publishedFrontmatter.slugRedirectFrom;
+    publishedFrontmatter.publishedAt = publishedAt;
     const published = await writePublishedColumn({
       ...draft,
       draft: false,
@@ -159,7 +163,7 @@ export async function POST(
       slug: published.slug,
       locale: published.locale,
       revision: published.revision,
-      publishedAt: published.updatedAt,
+      publishedAt: published.frontmatter.publishedAt ?? published.updatedAt,
       slugRedirect,
     });
   } catch (error) {

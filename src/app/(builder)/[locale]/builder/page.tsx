@@ -21,7 +21,8 @@ const builderDashboardSeoCopy: Record<Locale, { title: string; description: stri
   },
 };
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = builderDashboardSeoCopy[locale];
 
@@ -35,11 +36,12 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   });
 }
 
-export default async function BuilderWorkspacePage({
-  params,
-}: {
-  params: { locale: Locale };
-}) {
+export default async function BuilderWorkspacePage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const overview = await readBuilderSiteOverview(locale);
 

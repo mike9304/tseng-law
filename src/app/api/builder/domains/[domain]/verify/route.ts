@@ -39,10 +39,8 @@ function errorResponse(
  * with Vercel. Idempotent: calling repeatedly while DNS is still propagating
  * returns the current status without flipping rows back.
  */
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { domain: string } },
-) {
+export async function POST(request: NextRequest, props: { params: Promise<{ domain: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
   const locale = requestLocale(request);

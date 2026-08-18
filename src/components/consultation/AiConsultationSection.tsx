@@ -55,8 +55,12 @@ import {
   getConsultationFieldPrompt,
   getConsultationRiskLabel,
 } from '@/lib/consultation/copy';
-import { getConsultationPublicEmail, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
-import { contactPageContent } from '@/data/contact-page-content';
+import {
+  getConsultationCtaLabel,
+  getConsultationPublicEmail,
+  getConsultationPublicMailto,
+  getSensitiveInformationWarning,
+} from '@/lib/consultation/public-contact';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 
@@ -144,12 +148,31 @@ function getConfidenceLabel(locale: Locale, confidence: 'high' | 'medium' | 'low
   return 'Low source confidence';
 }
 
+function getMinimalFormLabels(locale: Locale): { nameOrCompany: string; optionalPhone: string } {
+  if (locale === 'ko') {
+    return {
+      nameOrCompany: '이름 또는 회사명',
+      optionalPhone: '전화번호 (선택)',
+    };
+  }
+  if (locale === 'zh-hant') {
+    return {
+      nameOrCompany: '姓名或公司名稱',
+      optionalPhone: '聯絡電話（選填）',
+    };
+  }
+  return {
+    nameOrCompany: 'Name or company',
+    optionalPhone: 'Phone (optional)',
+  };
+}
+
 export default function AiConsultationSection({ locale }: { locale: Locale }) {
   const copy = getConsultationCopy(locale);
-  const messenger = contactPageContent[locale].messenger;
-  const primaryOffice = contactPageContent[locale].offices.offices[0];
   const publicEmail = getConsultationPublicEmail();
-  const publicMailto = getConsultationPublicMailto();
+  const publicMailto = getConsultationPublicMailto(locale);
+  const consultationCtaLabel = getConsultationCtaLabel(locale);
+  const minimalFormLabels = getMinimalFormLabels(locale);
 
   const [sessionId] = useState<string>(() => createSessionId());
   const [messages, setMessages] = useState<ChatUiMessage[]>(() => [createMessage('assistant', copy.assistantInitialMessage)]);
@@ -222,13 +245,15 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
 
   const emailValue = (lead.email || '').trim();
   const emailValid = !emailValue || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+  const categoryValue = lead.category ?? 'unknown';
 
   const canSubmit =
     !submitPending &&
     Boolean(lead.name?.trim()) &&
     Boolean(lead.summary?.trim()) &&
-    Boolean(emailValue || (lead.phoneOrMessenger || '').trim()) &&
+    Boolean(emailValue) &&
     emailValid &&
+    Boolean(categoryValue !== 'unknown') &&
     lead.consent === true;
 
   function updateLead<Key extends keyof ConsultationCollectedFields>(key: Key, value: ConsultationCollectedFields[Key]) {
@@ -247,9 +272,7 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
         nextLead.summary = userText.trim();
       }
 
-      if ((!current.preferredContact || current.preferredContact === 'email') && response.suggestedHandoffChannel !== 'none') {
-        nextLead.preferredContact = response.suggestedHandoffChannel;
-      }
+      nextLead.preferredContact = 'email';
 
       return nextLead;
     });
@@ -355,7 +378,6 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
     }
   }
 
-  const categoryValue = lead.category ?? 'unknown';
   const escalationPrompt = lastResponse ? getConsultationFieldPrompt(locale, lastResponse.nextRequiredField) : '';
   const userRoleLabel = locale === 'ko' ? '질문' : locale === 'zh-hant' ? '提問' : 'You';
 
@@ -519,7 +541,11 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                 <div className="consultation-ai-escalation">
                   <strong>{copy.humanReviewRecommended}</strong>
                   <p>{escalationPrompt || copy.submitDescription}</p>
-                  <a href={publicMailto} className="consultation-ai-inline-email">
+                  <a
+                    href={publicMailto}
+                    className="consultation-ai-inline-email"
+                    aria-label={consultationCtaLabel}
+                  >
                     {publicEmail}
                   </a>
                 </div>
@@ -531,13 +557,15 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                 <h3>{copy.channelsTitle}</h3>
                 <p>{copy.channelsDescription}</p>
                 <div className="consultation-ai-channel-list">
-                  <a href={messenger.primary.href} target="_blank" rel="noopener noreferrer">
-                    <span>{messenger.primary.platform}</span>
-                    <strong>{messenger.primary.label}</strong>
-                  </a>
-                  <a href={`tel:${primaryOffice.phone.replace(/[^0-9+]/g, '')}`}>
-                    <span>{locale === 'ko' ? '대표 전화' : locale === 'zh-hant' ? '代表電話' : 'Phone'}</span>
-                    <strong>{primaryOffice.phone}</strong>
+                  <a href={publicMailto} aria-label={consultationCtaLabel}>
+                    <span>
+                      {locale === 'ko'
+                        ? '이메일 상담'
+                        : locale === 'zh-hant'
+                          ? '電子郵件諮詢'
+                          : 'Email consultation'}
+                    </span>
+                    <strong>{publicEmail}</strong>
                   </a>
                 </div>
               </div>
@@ -545,7 +573,11 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
               <div className="consultation-ai-side-card consultation-ai-side-card--attorney">
                 <h3>{copy.attorneyReviewTitle}</h3>
                 <p>{copy.attorneyReviewDescription}</p>
-                <a href={publicMailto} className="consultation-ai-email-link">
+                <a
+                  href={publicMailto}
+                  className="consultation-ai-email-link"
+                  aria-label={consultationCtaLabel}
+                >
                   <span>{copy.attorneyEmailLabel}</span>
                   <strong>{publicEmail}</strong>
                 </a>
@@ -554,10 +586,13 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
               <div className="consultation-ai-side-card consultation-ai-side-card--form">
                 <h3>{copy.submitTitle}</h3>
                 <p>{copy.submitDescription}</p>
+                <p className="consultation-ai-risk-note" role="note">
+                  {getSensitiveInformationWarning(locale)}
+                </p>
 
                 <form className="consultation-ai-form" onSubmit={handleSubmit}>
                   <label>
-                    <span>{copy.formLabels.name} <span aria-hidden="true">*</span></span>
+                    <span>{minimalFormLabels.nameOrCompany} <span aria-hidden="true">*</span></span>
                     <input
                       value={lead.name || ''}
                       onChange={(event) => updateLead('name', event.target.value)}
@@ -567,7 +602,7 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                   </label>
 
                   <label>
-                    <span>{copy.formLabels.email}</span>
+                    <span>{copy.formLabels.email} <span aria-hidden="true">*</span></span>
                     <input
                       type="email"
                       value={lead.email || ''}
@@ -576,6 +611,7 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                       aria-invalid={emailValue ? !emailValid : undefined}
                       aria-describedby={emailValue && !emailValid ? 'consultation-email-error' : undefined}
                       style={emailValue && !emailValid ? { borderColor: '#ef4444' } : undefined}
+                      required
                     />
                     {emailValue && !emailValid && (
                       <span id="consultation-email-error" role="alert" style={{ color: '#ef4444', fontSize: '12px' }}>
@@ -585,90 +621,31 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                   </label>
 
                   <label>
-                    <span>{copy.formLabels.phoneOrMessenger}</span>
-                    <input
-                      value={lead.phoneOrMessenger || ''}
-                      onChange={(event) => updateLead('phoneOrMessenger', event.target.value)}
-                      placeholder={copy.placeholders.phoneOrMessenger}
-                    />
+                    <span>{copy.formLabels.category} <span aria-hidden="true">*</span></span>
+                    <select
+                      value={categoryValue}
+                      onChange={(event) => updateLead('category', event.target.value as ConsultationCategory)}
+                      required
+                    >
+                      {(
+                        Object.entries(copy.categoryLabels) as Array<[ConsultationCategory, string]>
+                      ).map(([value, label]) => (
+                        <option key={value} value={value} disabled={value === 'unknown'}>
+                          {label}
+                        </option>
+                      ))}
+                    </select>
                   </label>
 
-                  <div className="consultation-ai-form-grid">
-                    <label>
-                      <span>{copy.formLabels.category}</span>
-                      <select
-                        value={categoryValue}
-                        onChange={(event) => updateLead('category', event.target.value as ConsultationCategory)}
-                      >
-                        {(
-                          Object.entries(copy.categoryLabels) as Array<[ConsultationCategory, string]>
-                        ).map(([value, label]) => (
-                          <option key={value} value={value}>
-                            {label}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-
-                    <label>
-                      <span>{copy.formLabels.urgency}</span>
-                      <select
-                        value={lead.urgency || 'medium'}
-                        onChange={(event) => updateLead('urgency', event.target.value)}
-                      >
-                        {copy.urgencyOptions.map((option) => (
-                          <option key={option.value} value={option.value}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                  </div>
-
-                  <div className="consultation-ai-form-grid">
-                    <label>
-                      <span>{copy.formLabels.companyOrOrganization}</span>
-                      <input
-                        value={lead.companyOrOrganization || ''}
-                        onChange={(event) => updateLead('companyOrOrganization', event.target.value)}
-                        placeholder={copy.placeholders.companyOrOrganization}
-                      />
-                    </label>
-
-                    <label>
-                      <span>{copy.formLabels.countryOrResidence}</span>
-                      <input
-                        value={lead.countryOrResidence || ''}
-                        onChange={(event) => updateLead('countryOrResidence', event.target.value)}
-                        placeholder={copy.placeholders.countryOrResidence}
-                      />
-                    </label>
-                  </div>
-
-                  <div className="consultation-ai-form-grid">
-                    <label>
-                      <span>{copy.formLabels.preferredContact}</span>
-                      <select
-                        value={lead.preferredContact || 'email'}
-                        onChange={(event) => updateLead('preferredContact', event.target.value)}
-                      >
-                        {copy.preferredContactOptions.map((option) => (
-                          <option key={option.value} value={option.value}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-
-                    <label>
-                      <span>{copy.formLabels.preferredTime}</span>
-                      <input
-                        value={lead.preferredTime || ''}
-                        onChange={(event) => updateLead('preferredTime', event.target.value)}
-                        placeholder={copy.placeholders.preferredTime}
-                      />
-                    </label>
-                  </div>
+                  <label>
+                    <span>{minimalFormLabels.optionalPhone}</span>
+                    <input
+                      type="tel"
+                      value={lead.phoneOrMessenger || ''}
+                      onChange={(event) => updateLead('phoneOrMessenger', event.target.value)}
+                      autoComplete="tel"
+                    />
+                  </label>
 
                   <label>
                     <span>{copy.formLabels.summary} <span aria-hidden="true">*</span></span>
@@ -678,15 +655,6 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                       onChange={(event) => updateLead('summary', event.target.value)}
                       placeholder={copy.placeholders.summary}
                       required
-                    />
-                  </label>
-
-                  <label>
-                    <span>{copy.formLabels.hasDocuments}</span>
-                    <input
-                      value={lead.hasDocuments || ''}
-                      onChange={(event) => updateLead('hasDocuments', event.target.value)}
-                      placeholder={copy.placeholders.hasDocuments}
                     />
                   </label>
 

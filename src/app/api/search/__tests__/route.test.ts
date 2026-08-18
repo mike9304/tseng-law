@@ -110,6 +110,22 @@ describe('/api/search', () => {
     expect(runSearchQueryMock).not.toHaveBeenCalled();
   });
 
+  it('caps Unicode queries at 200 code points before search and logging', async () => {
+    const query = '😀'.repeat(201);
+
+    const response = await GET(request(`locale=en&q=${encodeURIComponent(query)}`));
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(Array.from(payload.query)).toHaveLength(200);
+    expect(runSearchQueryMock).toHaveBeenCalledWith(
+      expect.objectContaining({ query: '😀'.repeat(200) }),
+    );
+    expect(appendQueryLogMock).toHaveBeenCalledWith(
+      expect.objectContaining({ query: '😀'.repeat(200) }),
+    );
+  });
+
   it('returns search hits while preserving success response shape', async () => {
     const response = await GET(request('locale=ko&q=portfolio&kinds=portfolio,bad&limit=5'));
     const payload = await response.json();

@@ -1,11 +1,12 @@
-import { NextRequest } from 'next/server';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { NextRequest, NextResponse } from 'next/server';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
 import {
   createNotification,
   listNotifications,
   markAllRead,
 } from '@/lib/builder/notifications/notification-store';
+import { resolveUserRole } from '@/lib/builder/security/resolve-permission';
 import { GET, POST, PUT } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
@@ -17,6 +18,10 @@ vi.mock('@/lib/builder/notifications/notification-store', () => ({
   createNotification: vi.fn(),
   listNotifications: vi.fn(),
   markAllRead: vi.fn(),
+}));
+
+vi.mock('@/lib/builder/security/resolve-permission', () => ({
+  resolveUserRole: vi.fn(async () => 'owner'),
 }));
 
 const notification = {
@@ -33,6 +38,7 @@ const guardMutationMock = vi.mocked(guardMutation);
 const createNotificationMock = vi.mocked(createNotification);
 const listNotificationsMock = vi.mocked(listNotifications);
 const markAllReadMock = vi.mocked(markAllRead);
+const resolveUserRoleMock = vi.mocked(resolveUserRole);
 
 function getRequest(query = ''): NextRequest {
   return new NextRequest(`https://law.example.test/api/builder/notifications${query ? `?${query}` : ''}`);
@@ -43,24 +49,24 @@ function internalPostRequest(query = '', body: string | unknown = {
   subject: 'New order',
   body: 'Order #1001',
   locale: 'ko',
-}): NextRequest {
+}, headers: Record<string, string> = {}): NextRequest {
   return new NextRequest(`https://law.example.test/api/builder/notifications${query ? `?${query}` : ''}`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      host: 'law.example.test',
-      origin: 'https://law.example.test',
+      'x-internal-source': 'test-notification-secret',
+      ...headers,
     },
     body: typeof body === 'string' ? body : JSON.stringify(body),
   });
 }
 
-function publicPostRequest(query = ''): NextRequest {
+function publicPostRequest(query = '', headers: Record<string, string> = {}): NextRequest {
   return new NextRequest(`https://law.example.test/api/builder/notifications${query ? `?${query}` : ''}`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      host: 'law.example.test',
+      ...headers,
     },
     body: JSON.stringify({ kind: 'order', subject: 'New order' }),
   });
@@ -76,12 +82,18 @@ function putRequest(query = '', body: string | unknown = { kind: 'order', locale
 
 describe('builder notifications API', () => {
   beforeEach(() => {
+    vi.stubEnv('BUILDER_INTERNAL_NOTIFY_SECRET', 'test-notification-secret');
     vi.clearAllMocks();
     guardBuilderReadMock.mockReturnValue({ username: 'admin' });
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardMutationMock.mockResolvedValue({ username: 'admin' } as never);
+    resolveUserRoleMock.mockResolvedValue('owner');
     listNotificationsMock.mockResolvedValue([notification] as never);
     createNotificationMock.mockResolvedValue(notification as never);
     markAllReadMock.mockResolvedValue(3 as never);
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
   });
 
   it('returns notifications while preserving success response shape', async () => {
@@ -92,7 +104,36 @@ describe('builder notifications API', () => {
     expect(payload).toEqual({ ok: true, notifications: [notification], total: 1, unread: 1 });
     expect(guardBuilderReadMock).toHaveBeenCalledWith(expect.any(NextRequest));
     expect(guardMutationMock).not.toHaveBeenCalled();
-    expect(listNotificationsMock).toHaveBeenCalledWith({ kind: 'order', unreadOnly: true, limit: 20 });
+    expect(listNotificationsMock).toHaveBeenCalledWith({
+      kind: 'order',
+      unreadOnly: true,
+      audienceScope: { principal: 'admin', role: 'owner' },
+      limit: 20,
+    });
+  });
+
+  it('returns 401 before resolving an audience for unauthenticated requests', async () => {
+    guardBuilderReadMock.mockReturnValueOnce(
+      NextResponse.json({ error: 'Unauthorized' }, { status: 401 }),
+    );
+
+    const response = await GET(getRequest('locale=en'));
+
+    expect(response.status).toBe(401);
+    expect(resolveUserRoleMock).not.toHaveBeenCalled();
+    expect(listNotificationsMock).not.toHaveBeenCalled();
+  });
+
+  it('scopes lists to the authenticated principal and exact current role', async () => {
+    guardBuilderReadMock.mockReturnValueOnce({ username: 'editor@example.com' });
+    resolveUserRoleMock.mockResolvedValueOnce('editor');
+
+    const response = await GET(getRequest('locale=en'));
+
+    expect(response.status).toBe(200);
+    expect(listNotificationsMock).toHaveBeenCalledWith(expect.objectContaining({
+      audienceScope: { principal: 'editor@example.com', role: 'editor' },
+    }));
   });
 
   it('returns localized list failures without leaking exception details', async () => {
@@ -122,6 +163,62 @@ describe('builder notifications API', () => {
       ok: false,
       error: '只允許內部通知請求。',
       errorCode: 'internal_only',
+    });
+    expect(createNotificationMock).not.toHaveBeenCalled();
+  });
+
+  it('fails closed when the internal notification secret is not configured', async () => {
+    vi.stubEnv('BUILDER_INTERNAL_NOTIFY_SECRET', '');
+
+    const response = await POST(internalPostRequest());
+
+    expect(response.status).toBe(403);
+    expect(createNotificationMock).not.toHaveBeenCalled();
+  });
+
+  it('rejects missing or wrong internal-source secrets even for same-origin requests', async () => {
+    const sameOriginHeaders = {
+      host: 'law.example.test',
+      origin: 'https://law.example.test',
+      referer: 'https://law.example.test/ko/admin-builder',
+    };
+
+    const missingSecret = await POST(publicPostRequest('', sameOriginHeaders));
+    const wrongSecret = await POST(publicPostRequest('', {
+      ...sameOriginHeaders,
+      'x-internal-source': 'wrong-secret',
+    }));
+
+    expect(missingSecret.status).toBe(403);
+    expect(wrongSecret.status).toBe(403);
+    expect(createNotificationMock).not.toHaveBeenCalled();
+  });
+
+  it('rejects an attacker Origin containing the legitimate host as a substring', async () => {
+    const response = await POST(publicPostRequest('', {
+      host: 'law.example.test',
+      origin: 'https://law.example.test.evil.example',
+      referer: 'https://law.example.test.evil.example/forged',
+    }));
+
+    expect(response.status).toBe(403);
+    expect(createNotificationMock).not.toHaveBeenCalled();
+  });
+
+  it('requires an application/json content type', async () => {
+    const response = await POST(internalPostRequest('locale=en', {
+      kind: 'order',
+      subject: 'New order',
+    }, {
+      'content-type': 'text/plain',
+    }));
+    const payload = await response.json();
+
+    expect(response.status).toBe(415);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Notification requests must use JSON.',
+      errorCode: 'invalid_content_type',
     });
     expect(createNotificationMock).not.toHaveBeenCalled();
   });
@@ -162,6 +259,31 @@ describe('builder notifications API', () => {
     });
   });
 
+  it.each([
+    'javascript:alert(1)',
+    'data:text/html,<script>alert(1)</script>',
+    '//evil.example/path',
+    '/%2F%2Fevil.example/path',
+    '/%252F%252Fevil.example/path',
+    '/%255cevil.example/path',
+    'https://evil.example/path',
+  ])('rejects unsafe notification link %s', async (link) => {
+    const response = await POST(internalPostRequest('locale=ko', {
+      kind: 'order',
+      subject: 'New order',
+      link,
+    }));
+    const payload = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(payload).toEqual({
+      ok: false,
+      error: '알림 링크는 사이트 내부 경로만 사용할 수 있습니다.',
+      errorCode: 'invalid_link',
+    });
+    expect(createNotificationMock).not.toHaveBeenCalled();
+  });
+
   it('returns localized create failures without leaking exception details', async () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     createNotificationMock.mockRejectedValueOnce(new Error('notification create secret leaked'));
@@ -181,7 +303,13 @@ describe('builder notifications API', () => {
   });
 
   it('creates notifications while preserving success response shape', async () => {
-    const response = await POST(internalPostRequest('locale=ko'));
+    const response = await POST(internalPostRequest('locale=ko', {
+      kind: 'order',
+      subject: 'New order',
+      body: 'Order #1001',
+      locale: 'ko',
+      link: '/ko/admin-builder/translations?sourceLocale=ko&category=pages#review',
+    }));
     const payload = await response.json();
 
     expect(response.status).toBe(201);
@@ -190,7 +318,7 @@ describe('builder notifications API', () => {
       subject: 'New order',
       body: 'Order #1001',
       audience: {},
-      link: undefined,
+      link: '/ko/admin-builder/translations?sourceLocale=ko&category=pages#review',
     });
     expect(payload).toEqual({ ok: true, notification });
   });
@@ -201,7 +329,35 @@ describe('builder notifications API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, updated: 3 });
-    expect(markAllReadMock).toHaveBeenCalledWith({ kind: 'order' });
+    expect(markAllReadMock).toHaveBeenCalledWith({
+      kind: 'order',
+      audienceScope: { principal: 'admin', role: 'owner' },
+    });
+  });
+
+  it('scopes bulk mark-read to the authenticated principal audience', async () => {
+    guardMutationMock.mockResolvedValueOnce({ username: 'editor@example.com' } as never);
+    resolveUserRoleMock.mockResolvedValueOnce('editor');
+
+    const response = await PUT(putRequest('locale=en'));
+
+    expect(response.status).toBe(200);
+    expect(markAllReadMock).toHaveBeenCalledWith({
+      kind: 'order',
+      audienceScope: { principal: 'editor@example.com', role: 'editor' },
+    });
+  });
+
+  it('preserves a 403 mutation guard response before accessing the inbox', async () => {
+    guardMutationMock.mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: edit-pages' }, { status: 403 }) as never,
+    );
+
+    const response = await PUT(putRequest('locale=en'));
+
+    expect(response.status).toBe(403);
+    expect(resolveUserRoleMock).not.toHaveBeenCalled();
+    expect(markAllReadMock).not.toHaveBeenCalled();
   });
 
   it('returns localized mark-all-read failures without leaking exception details', async () => {

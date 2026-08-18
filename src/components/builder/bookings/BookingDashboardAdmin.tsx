@@ -503,6 +503,7 @@ export default function BookingDashboardAdmin({
     note: string;
   }>({ amount: '', method: 'bank_transfer', reference: '', note: '' });
   const [error, setError] = useState<string | null>(null);
+  const dashboardUrlStateRef = useRef({ actionFilter, query });
 
   const serviceById = useMemo(() => new Map(services.map((service) => [service.serviceId, service])), [services]);
   const staffById = useMemo(() => new Map(staff.map((member) => [member.staffId, member])), [staff]);
@@ -551,11 +552,17 @@ export default function BookingDashboardAdmin({
   ), [bookings]);
 
   useEffect(() => {
+    dashboardUrlStateRef.current = { actionFilter, query };
+  }, [actionFilter, query]);
+
+  useEffect(() => {
     skipNextUrlPushRef.current = true;
-    const nextActionFilter = normalizeBookingDashboardActionFilter(searchParams.get('action'));
-    const nextQuery = normalizeBookingDashboardQuery(searchParams.get('q'));
-    if (nextActionFilter !== actionFilter) setActionFilter(nextActionFilter);
-    if (nextQuery !== query) setQuery(nextQuery);
+    const params = new URLSearchParams(searchKey);
+    const nextActionFilter = normalizeBookingDashboardActionFilter(params.get('action'));
+    const nextQuery = normalizeBookingDashboardQuery(params.get('q'));
+    const current = dashboardUrlStateRef.current;
+    if (nextActionFilter !== current.actionFilter) setActionFilter(nextActionFilter);
+    if (nextQuery !== current.query) setQuery(nextQuery);
   }, [searchKey]);
 
   useEffect(() => {

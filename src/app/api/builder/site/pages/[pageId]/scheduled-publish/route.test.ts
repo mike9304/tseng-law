@@ -99,7 +99,7 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish', () => {
 
   it('returns localized stable-code JSON when loading a scheduled publish fails', async () => {
     mockedGetActiveScheduledPublish.mockRejectedValueOnce(new Error('raw scheduled load failure'));
-    const response = await route.GET(request('GET', undefined, '?locale=zh-hant'), { params: { pageId: 'page-1' } });
+    const response = await route.GET(request('GET', undefined, '?locale=zh-hant'), { params: Promise.resolve({ pageId: 'page-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(500);
@@ -113,7 +113,7 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish', () => {
 
   it('returns localized stable-code JSON for invalid scheduled publish timestamps', async () => {
     const response = await route.POST(request('POST', { scheduledAt: 'tomorrow', locale: 'en' }), {
-      params: { pageId: 'page-1' },
+      params: Promise.resolve({ pageId: 'page-1' }),
     });
     const data = await response.json();
 
@@ -130,7 +130,7 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish', () => {
     const response = await route.POST(request('POST', {
       scheduledAt: '2000-01-01T00:00:00.000Z',
       locale: 'ko',
-    }), { params: { pageId: 'page-1' } });
+    }), { params: Promise.resolve({ pageId: 'page-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(400);
@@ -155,7 +155,7 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish', () => {
       scheduledAt: '2099-01-01T00:00:00.000Z',
       locale: 'zh-hant',
       translationSiteReview,
-    }), { params: { pageId: 'page-1' } });
+    }), { params: Promise.resolve({ pageId: 'page-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(500);
@@ -174,7 +174,7 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish', () => {
 
   it('returns localized stable-code JSON when cancelling scheduled publishes fails', async () => {
     mockedCancelScheduledPublishes.mockRejectedValueOnce(new Error('raw scheduled cancel failure'));
-    const response = await route.DELETE(request('DELETE', undefined, '?locale=en'), { params: { pageId: 'page-1' } });
+    const response = await route.DELETE(request('DELETE', undefined, '?locale=en'), { params: Promise.resolve({ pageId: 'page-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(500);
@@ -192,7 +192,7 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish', () => {
       locale: 'ko',
       expectedDraftRevision: 12.9,
       translationSiteReview,
-    }), { params: { pageId: 'page-1' } });
+    }), { params: Promise.resolve({ pageId: 'page-1' }) });
 
     expect(response.status).toBe(200);
     expect(mockedSchedulePagePublish).toHaveBeenCalledWith(expect.objectContaining({
@@ -233,7 +233,7 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish', () => {
       scheduledAt: '2099-01-01T00:00:00.000Z',
       locale: 'ko',
       translationSiteReview,
-    }), { params: { pageId: 'page-1' } });
+    }), { params: Promise.resolve({ pageId: 'page-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(409);
@@ -268,7 +268,7 @@ describe('/api/builder/site/pages/[pageId]/scheduled-publish', () => {
       scheduledAt: '2099-01-01T00:00:00.000Z',
       locale: 'ko',
       translationSiteReview,
-    }), { params: { pageId: 'page-1' } });
+    }), { params: Promise.resolve({ pageId: 'page-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(409);

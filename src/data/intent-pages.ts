@@ -81,7 +81,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '한국에서 바로 상담을 시작할 수 있나요?',
           answer:
-            '가능합니다. 이메일, 카카오톡, 화상 상담으로 사실관계를 먼저 정리한 뒤, 필요한 경우 대만 현지 절차와 서류 준비 순서를 안내합니다.',
+            '가능합니다. 이메일과 화상 상담으로 사실관계를 먼저 정리한 뒤, 필요한 경우 대만 현지 절차와 서류 준비 순서를 안내합니다.',
         },
         {
           question: '대만변호사 상담 전에는 어떤 자료를 준비하면 좋나요?',
@@ -276,7 +276,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '人在韓國，也能先開始諮詢嗎？',
           answer:
-            '可以。可先透過 Email、KakaoTalk 或視訊諮詢整理事實，再依案件需要安排台灣在地程序與文件準備。',
+            '可以。可先透過 Email 或視訊諮詢整理事實，再依案件需要安排台灣在地程序與文件準備。',
         },
         {
           question: '諮詢前應該先整理哪些資料？',
@@ -666,7 +666,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '韓国からすぐに相談を始められますか？',
           answer:
-            '可能です。メール、KakaoTalk、オンライン相談で事実関係を先に整理した上で、必要に応じて台湾現地の手続きと書類準備の順序をご案内します。',
+            '可能です。メールとオンライン相談で事実関係を先に整理した上で、必要に応じて台湾現地の手続きと書類準備の順序をご案内します。',
         },
         {
           question: '台湾弁護士への相談前にはどのような資料を準備すればよいですか？',

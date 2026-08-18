@@ -73,7 +73,7 @@ describe('videos route builder parity', () => {
     const metadata = { title: 'Published videos metadata' };
     mocks.buildPublishedSitePageMetadata.mockResolvedValue(metadata);
 
-    const result = await generateMetadata({ params: { locale: 'ko' } });
+    const result = await generateMetadata({ params: Promise.resolve({ locale: 'ko' }) });
 
     expect(result).toBe(metadata);
     expect(mocks.buildPublishedSitePageMetadata).toHaveBeenCalledWith('ko', 'videos');
@@ -86,7 +86,7 @@ describe('videos route builder parity', () => {
     };
     mocks.resolvePublishedSitePage.mockResolvedValue(publishedPage);
 
-    const element = await VideosPage({ params: { locale: 'ko' } });
+    const element = await VideosPage({ params: Promise.resolve({ locale: 'ko' }) });
 
     expect(React.isValidElement<{ readonly resolved: unknown }>(element)).toBe(true);
     if (!React.isValidElement<{ readonly resolved: unknown }>(element)) {
@@ -107,7 +107,7 @@ describe('videos route builder parity', () => {
   });
 
   it('passes the static public column count to the legacy videos body when no builder page is published', async () => {
-    const element = await VideosPage({ params: { locale: 'ko' } });
+    const element = await VideosPage({ params: Promise.resolve({ locale: 'ko' }) });
 
     expect(React.isValidElement<{ readonly children?: React.ReactNode }>(element)).toBe(true);
     if (!React.isValidElement<{ readonly children?: React.ReactNode }>(element)) {
@@ -131,7 +131,7 @@ describe('videos route builder parity', () => {
   });
 
   it('builds Japanese metadata with Japanese keywords and all four public alternates', async () => {
-    const metadata = await generateMetadata({ params: { locale: 'ja' } });
+    const metadata = await generateMetadata({ params: Promise.resolve({ locale: 'ja' }) });
 
     expect(metadata.title).toBe(pageCopy.ja.videos.title);
     expect(metadata.description).toBe(pageCopy.ja.videos.description);
@@ -164,7 +164,7 @@ describe('videos route builder parity', () => {
   });
 
   it('renders the complete Japanese static page and JSON-LD without builder or member calls', async () => {
-    const element = await VideosPage({ params: { locale: 'ja' } });
+    const element = await VideosPage({ params: Promise.resolve({ locale: 'ja' }) });
 
     expect(React.isValidElement<{ readonly children?: React.ReactNode }>(element)).toBe(true);
     if (!React.isValidElement<{ readonly children?: React.ReactNode }>(element)) {

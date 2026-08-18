@@ -22,7 +22,7 @@ export function resolveHomeInsightsCardLabels(
   dateFallback: string,
 ): HomeInsightsCardLabels {
   return {
-    date: isoDateLabel(post.date) || isoDateLabel(post.dateDisplay) || post.dateDisplay || post.date || dateFallback,
+    date: isoDateLabel(post.dateDisplay) || post.dateDisplay || isoDateLabel(post.date) || post.date || dateFallback,
     readTime: estimatedReadTimeLabel(post.content) || post.readTime || '',
   };
 }

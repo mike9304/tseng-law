@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { normalizeLocale } from '@/lib/locales';
 import { checkChatRateLimit } from '@/lib/consultation/rate-limit';
 import {
@@ -55,6 +56,9 @@ function badRequest(message: string) {
 }
 
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const userAgent = request.headers.get('user-agent');
   const ipHeader = request.headers.get('x-forwarded-for');
 

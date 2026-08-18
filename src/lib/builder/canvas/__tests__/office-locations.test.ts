@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import type { BuilderCanvasNode } from '../types';
 import { createDefaultCanvasNodeStyle } from '../types';
 import {
+  BUILDER_OFFICE_LOCATION_COUNT,
   getOfficeLocationPresets,
   googleMapsSearchUrl,
   labelPrefix,
@@ -14,6 +15,7 @@ import {
   resolveOfficeNodeGroup,
   telHrefFromPhone,
 } from '../office-locations';
+import { getOfficesResponsiveOverride } from '../decompose-offices';
 
 function node(
   id: string,
@@ -36,10 +38,52 @@ function node(
 
 describe('office location helpers', () => {
   it('returns localized presets with Korean fallback', () => {
-    expect(getOfficeLocationPresets('ko')[0]?.title).toBe('타이중');
-    expect(getOfficeLocationPresets('zh-hant')[0]?.title).toBe('台中');
-    expect(getOfficeLocationPresets('en')[0]?.title).toBe('Taichung');
-    expect(getOfficeLocationPresets('fr')[0]?.title).toBe('타이중');
+    expect(getOfficeLocationPresets('ko')[0]?.title).toBe('타이베이');
+    expect(getOfficeLocationPresets('zh-hant')[0]?.title).toBe('台北');
+    expect(getOfficeLocationPresets('en')[0]?.title).toBe('Taipei');
+    expect(getOfficeLocationPresets('fr')[0]?.title).toBe('타이베이');
+
+    expect(BUILDER_OFFICE_LOCATION_COUNT).toBe(4);
+    for (const locale of ['ko', 'zh-hant', 'en'] as const) {
+      const offices = getOfficeLocationPresets(locale);
+      expect(offices).toHaveLength(4);
+      expect(offices.map(({ id }) => id)).toEqual([
+        'taipei',
+        'taichung',
+        'kaohsiung',
+        'pingtung',
+      ]);
+      expect(offices[3]).toMatchObject({
+        id: 'pingtung',
+        phone: '08-739-1689',
+        fax: '08-739-7362',
+      });
+      expect(offices[3]?.address).toContain('90443');
+    }
+    expect(getOfficeLocationPresets('fr').map(({ id }) => id)).toEqual([
+      'taipei',
+      'taichung',
+      'kaohsiung',
+      'pingtung',
+    ]);
+  });
+
+  it('fits all four office tabs inside the mobile tab row', () => {
+    const tabRects = Array.from({ length: BUILDER_OFFICE_LOCATION_COUNT }, (_, index) => {
+      const rect = getOfficesResponsiveOverride(`home-offices-tab-${index}`, 'mobile')?.rect;
+      if (
+        typeof rect?.x !== 'number'
+        || typeof rect.width !== 'number'
+        || typeof rect.height !== 'number'
+      ) {
+        throw new Error(`Expected responsive office tab ${index} geometry.`);
+      }
+      return rect;
+    });
+
+    expect(tabRects[0]).toMatchObject({ x: 0, height: 32 });
+    const lastTabRect = tabRects[tabRects.length - 1]!;
+    expect((lastTabRect.x ?? 0) + (lastTabRect.width ?? 0)).toBeLessThanOrEqual(343);
   });
 
   it('normalizes map and phone links', () => {

@@ -5,7 +5,8 @@ import { getSecretsAdminCopy } from '@/components/builder/dev/secrets-copy';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = getSecretsAdminCopy(locale);
   return {
@@ -15,7 +16,8 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default function BuilderSecretsAdminPage({ params }: { params: { locale: Locale } }) {
+export default async function BuilderSecretsAdminPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = getSecretsAdminCopy(locale);
   return (

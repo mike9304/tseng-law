@@ -1,7 +1,6 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   deleteEvent,
   loadEvent,
@@ -10,11 +9,11 @@ import {
 } from '@/lib/builder/events/events-engine';
 import { DELETE, GET, PATCH } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-pages',
+  })),
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 
@@ -46,7 +45,7 @@ const eventRecord = {
   updatedAt: '2026-06-03T00:00:00.000Z',
 };
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const deleteEventMock = vi.mocked(deleteEvent);
 const loadEventMock = vi.mocked(loadEvent);
@@ -68,7 +67,10 @@ function patchRequest(query = '', body: string | unknown = { status: 'draft' }):
 describe('/api/builder/events/[eventId]', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'edit-pages',
+    });
     guardMutationMock.mockResolvedValue({ username: 'admin' } as never);
     deleteEventMock.mockResolvedValue(undefined as never);
     loadEventMock.mockResolvedValue(eventRecord as never);
@@ -77,21 +79,45 @@ describe('/api/builder/events/[eventId]', () => {
   });
 
   it('returns an event while preserving success response shape', async () => {
-    const response = await GET(request('scope=all&locale=ko'), { params: { eventId: 'evt-1' } });
+    const req = request('scope=all&locale=ko');
+    const response = await GET(req, { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(200);
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(req, 'edit-pages');
     expect(payload).toEqual({
       ok: true,
       event: eventRecord,
     });
   });
 
+  it('short-circuits a missing edit-pages permission for scope=all with 403', async () => {
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: edit-pages' }, { status: 403 }),
+    );
+    const req = request('scope=all&locale=ko');
+
+    const response = await GET(req, { params: Promise.resolve({ eventId: 'evt-1' }) });
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(req, 'edit-pages');
+    expect(loadEventMock).not.toHaveBeenCalled();
+  });
+
+  it('keeps a published event publicly readable without an admin permission check', async () => {
+    const response = await GET(request('scope=public&locale=ko'), {
+      params: Promise.resolve({ eventId: 'evt-1' }),
+    });
+
+    expect(response.status).toBe(200);
+    expect(guardBuilderReadWithPermissionMock).not.toHaveBeenCalled();
+    expect(loadEventMock).toHaveBeenCalled();
+  });
+
   it('returns localized not-found errors', async () => {
     loadEventMock.mockResolvedValueOnce(null as never);
 
-    const response = await GET(request('locale=zh-hant'), { params: { eventId: 'missing' } });
+    const response = await GET(request('locale=zh-hant'), { params: Promise.resolve({ eventId: 'missing' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(404);
@@ -106,7 +132,7 @@ describe('/api/builder/events/[eventId]', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     loadEventMock.mockRejectedValueOnce(new Error('event load secret leaked'));
 
-    const response = await GET(request('locale=en'), { params: { eventId: 'evt-1' } });
+    const response = await GET(request('locale=en'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(500);
@@ -121,7 +147,7 @@ describe('/api/builder/events/[eventId]', () => {
   });
 
   it('returns localized invalid JSON errors for patches', async () => {
-    const response = await PATCH(patchRequest('locale=en', '{'), { params: { eventId: 'evt-1' } });
+    const response = await PATCH(patchRequest('locale=en', '{'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(400);
@@ -135,7 +161,7 @@ describe('/api/builder/events/[eventId]', () => {
   it('returns localized update validation errors without leaking raw validation strings', async () => {
     validateEventMock.mockReturnValueOnce(['제목을 입력하세요.']);
 
-    const response = await PATCH(patchRequest('locale=en'), { params: { eventId: 'evt-1' } });
+    const response = await PATCH(patchRequest('locale=en'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(400);
@@ -148,7 +174,7 @@ describe('/api/builder/events/[eventId]', () => {
   });
 
   it('updates an event while preserving success response shape', async () => {
-    const response = await PATCH(patchRequest('locale=ko'), { params: { eventId: 'evt-1' } });
+    const response = await PATCH(patchRequest('locale=ko'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(200);
@@ -163,7 +189,7 @@ describe('/api/builder/events/[eventId]', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     saveEventMock.mockRejectedValueOnce(new Error('event save secret leaked'));
 
-    const response = await PATCH(patchRequest('locale=zh-hant'), { params: { eventId: 'evt-1' } });
+    const response = await PATCH(patchRequest('locale=zh-hant'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(500);
@@ -181,7 +207,7 @@ describe('/api/builder/events/[eventId]', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     deleteEventMock.mockRejectedValueOnce(new Error('event delete secret leaked'));
 
-    const response = await DELETE(request('locale=en'), { params: { eventId: 'evt-1' } });
+    const response = await DELETE(request('locale=en'), { params: Promise.resolve({ eventId: 'evt-1' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(500);

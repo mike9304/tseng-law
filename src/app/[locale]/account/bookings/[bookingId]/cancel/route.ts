@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { getMemberPortalEmails } from '@/lib/builder/members/members-engine';
@@ -24,7 +25,14 @@ function clientIp(request: NextRequest): string {
   );
 }
 
-export async function POST(request: NextRequest, { params }: { params: { locale: string; bookingId: string } }) {
+export async function POST(
+  request: NextRequest,
+  props: { params: Promise<{ locale: string; bookingId: string }> }
+) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
+  const params = await props.params;
   const member = await getCurrentSiteMember();
   if (!member) {
     return NextResponse.json({ error: 'Not signed in' }, { status: 401 });

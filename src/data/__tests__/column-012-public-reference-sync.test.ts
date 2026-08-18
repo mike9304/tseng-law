@@ -46,7 +46,7 @@ vi.mock('@/lib/builder/seo/sitemap-builder', () => ({
 const expectedTitles = {
   ko: '대만 추월 사고의 책임은 어떻게 판단하나요?',
   'zh-hant': '台灣超車事故的責任如何判斷？',
-  en: 'Who Is Liable in an Overtaking Accident?',
+  en: 'How Is Liability Assessed After an Overtaking Accident in Taiwan?',
   ja: '台湾の追い越し事故、責任はどう判断されるか',
 } as const;
 
@@ -223,10 +223,10 @@ const expectedHomeFeaturedIds = [
   'company-advanced-2',
 ];
 const expectedOtherPostsSha256 = {
-  ko: '8b7026cc91aafe732dbc3746619abef94f56319c940d4f084aa312640e48d112',
+  ko: 'fc42b51d1ecbf394dd7e7ee86334374b011be378f0c583f821f6a33b0fb12f85',
   'zh-hant':
-    '0bf53f9c8b0d584ccf459e5188310f61a5e05191a50afba6a7b2fe417e241e67',
-  en: '84ba6b5d10cb66e9e5006a9638baafb90cea3b35c51503ed6ef38385a58a38ed',
+    'cbd3cf753735844ce84c66fb403885d8e7af6a7279ac1bc06a294ea6248cf9ea',
+  en: 'c71c5448518e86fab5b7518678202fc402175f8496450c082996f5652c4204f7',
 } as const;
 
 function getRelatedColumn(locale: (typeof siteLocales)[number]) {
@@ -375,7 +375,7 @@ describe('column 012 public reference synchronization', () => {
   it('emits exact generateMetadata title, canonical, and four-language alternates for all locales', async () => {
     for (const locale of siteLocales) {
       const metadata = await generateMetadata({
-        params: { locale, slug },
+        params: Promise.resolve({ locale, slug }),
       });
 
       expect(metadata.title, locale).toBe(expectedTitles[locale]);
@@ -387,7 +387,7 @@ describe('column 012 public reference synchronization', () => {
 
     for (const locale of siteLocales) {
       const aliasMetadata = await generateMetadata({
-        params: { locale, slug: aliasSlug },
+        params: Promise.resolve({ locale, slug: aliasSlug }),
       });
 
       expect(aliasMetadata.title, locale).toBe(expectedTitles[locale]);

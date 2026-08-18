@@ -44,10 +44,8 @@ function moveErrorResponse(
  * with offset on target), writes both drafts. If write fails the
  * source remains unchanged (best-effort).
  */
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
+export async function POST(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { KeyboardEvent as ReactKeyboardEvent } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
@@ -636,6 +636,7 @@ export default function ContentManagerClient({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const searchParamsString = searchParams.toString();
   const queryCollectionId = searchParams.get('collectionId')?.trim() ?? '';
   const queryRecordId = searchParams.get('recordId')?.trim() ?? '';
   const cmsQueryOpenKeyRef = useRef<string | null>(null);
@@ -972,40 +973,6 @@ export default function ContentManagerClient({
     };
   }, [locale]);
 
-  useEffect(() => {
-    if (!queryCollectionId || busy) return;
-    const sourceCollection = sourceCollections.find((collection) => collection.id === queryCollectionId);
-    if (sourceCollection) {
-      setSelectedCollectionId('');
-      setDetail(null);
-      setEditingRecordId(null);
-      setFocusedRecordFieldKey(null);
-      cmsQueryOpenKeyRef.current = null;
-      return;
-    }
-    if (selectedCollectionId !== queryCollectionId) {
-      setSelectedCollectionId(queryCollectionId);
-    }
-    if (!detail || detail.collectionId !== queryCollectionId) {
-      void loadDetail(queryCollectionId, { preserveEditingState: Boolean(queryRecordId) });
-      return;
-    }
-  }, [busy, detail, queryCollectionId, queryRecordId, selectedCollectionId, sourceCollections]);
-
-  useLayoutEffect(() => {
-    if (!detail || !queryCollectionId || !queryRecordId) {
-      cmsQueryOpenKeyRef.current = null;
-      return;
-    }
-    if (detail.collectionId !== queryCollectionId) return;
-    const syncKey = `${queryCollectionId}:${queryRecordId}`;
-    if (cmsQueryOpenKeyRef.current === syncKey) return;
-    const record = detail.records.find((candidate) => candidate.recordId === queryRecordId);
-    if (!record || editingRecordId === record.recordId) return;
-    cmsQueryOpenKeyRef.current = syncKey;
-    beginEditRecord(record);
-  }, [detail, editingRecordId, queryCollectionId, queryRecordId]);
-
   function setRecordSelection(recordIds: string[], anchorRecordId: string | null = recordIds[0] ?? null) {
     selectionAnchorRecordIdRef.current = anchorRecordId;
     setSelectedRecordIds(recordIds);
@@ -1025,8 +992,12 @@ export default function ContentManagerClient({
     if (nextSelectedId) setSelectedCollectionId(nextSelectedId);
   }
 
-  function updateCmsQueryState(next: { collectionId?: string | null; recordId?: string | null; replace?: boolean }) {
-    const params = new URLSearchParams(searchParams.toString());
+  const updateCmsQueryState = useCallback((next: {
+    collectionId?: string | null;
+    recordId?: string | null;
+    replace?: boolean;
+  }) => {
+    const params = new URLSearchParams(searchParamsString);
     if (next.collectionId !== undefined) {
       if (next.collectionId) params.set('collectionId', next.collectionId);
       else params.delete('collectionId');
@@ -1036,11 +1007,11 @@ export default function ContentManagerClient({
       else params.delete('recordId');
     }
     const nextQuery = params.toString();
-    if (nextQuery === searchParams.toString()) return;
+    if (nextQuery === searchParamsString) return;
     const url = nextQuery ? `${pathname}?${nextQuery}` : pathname;
     const navigate = next.replace ? router.replace : router.push;
     navigate(url, { scroll: false });
-  }
+  }, [pathname, router, searchParamsString]);
 
   function copyBuilderRoute(route: string) {
     void navigator.clipboard?.writeText(route).catch(() => undefined);
@@ -1217,10 +1188,10 @@ export default function ContentManagerClient({
     }
   }
 
-  async function loadDetail(
-    collectionId = selectedCollectionId,
+  const loadDetail = useCallback(async (
+    collectionId: string,
     options?: { preserveEditingState?: boolean },
-  ) {
+  ) => {
     if (!collectionId) {
       setDetail(null);
       return;
@@ -1247,7 +1218,7 @@ export default function ContentManagerClient({
     } finally {
       setBusy(false);
     }
-  }
+  }, [locale, siteId]);
 
   async function createCollection(formData: FormData) {
     setBusy(true);
@@ -2203,7 +2174,7 @@ export default function ContentManagerClient({
     }
   }
 
-  function beginEditRecord(record: BuilderCmsRecord, focusFieldKey?: string) {
+  const beginEditRecord = useCallback((record: BuilderCmsRecord, focusFieldKey?: string) => {
     if (!detail) return;
     setEditingRecordId(record.recordId);
     setRecordForm(createRecordFormFromRecord(detail.fields, record));
@@ -2212,7 +2183,48 @@ export default function ContentManagerClient({
       collectionId: detail.collectionId,
       recordId: record.recordId,
     });
-  }
+  }, [detail, updateCmsQueryState]);
+
+  useEffect(() => {
+    if (!queryCollectionId || busy) return;
+    const sourceCollection = sourceCollections.find((collection) => collection.id === queryCollectionId);
+    if (sourceCollection) {
+      setSelectedCollectionId('');
+      setDetail(null);
+      setEditingRecordId(null);
+      setFocusedRecordFieldKey(null);
+      cmsQueryOpenKeyRef.current = null;
+      return;
+    }
+    if (selectedCollectionId !== queryCollectionId) {
+      setSelectedCollectionId(queryCollectionId);
+    }
+    if (!detail || detail.collectionId !== queryCollectionId) {
+      void loadDetail(queryCollectionId, { preserveEditingState: Boolean(queryRecordId) });
+    }
+  }, [
+    busy,
+    detail,
+    loadDetail,
+    queryCollectionId,
+    queryRecordId,
+    selectedCollectionId,
+    sourceCollections,
+  ]);
+
+  useLayoutEffect(() => {
+    if (!detail || !queryCollectionId || !queryRecordId) {
+      cmsQueryOpenKeyRef.current = null;
+      return;
+    }
+    if (detail.collectionId !== queryCollectionId) return;
+    const syncKey = `${queryCollectionId}:${queryRecordId}`;
+    if (cmsQueryOpenKeyRef.current === syncKey) return;
+    const record = detail.records.find((candidate) => candidate.recordId === queryRecordId);
+    if (!record || editingRecordId === record.recordId) return;
+    cmsQueryOpenKeyRef.current = syncKey;
+    beginEditRecord(record);
+  }, [beginEditRecord, detail, editingRecordId, queryCollectionId, queryRecordId]);
 
   return (
     <>

@@ -64,6 +64,13 @@ describe('standard contact page decomposer', () => {
     expect(nodes.get('home-offices-layout-0')?.rect).toMatchObject({ y: 206, width: 1178, height: 422 });
     expect(nodes.get('home-offices-layout-0-map')?.rect).toMatchObject({ x: 0, width: 687, height: 422 });
     expect(nodes.get('home-offices-layout-0-card')?.rect).toMatchObject({ x: 704, width: 474, height: 422 });
+    expect(nodes.get('home-offices-tab-3')?.rect).toMatchObject({ x: 354, width: 104, height: 47 });
+    expect(nodes.get('home-offices-layout-3')?.rect).toMatchObject({ y: 206, width: 1178, height: 422 });
+    expect(nodes.get('home-offices-layout-3-card-title')?.content).toMatchObject({ text: '핑둥' });
+    expect(nodes.get('home-offices-layout-3-card-phone')?.content).toMatchObject({
+      label: '전화: 08-739-1689',
+      href: 'tel:087391689',
+    });
   });
 
   it('keeps the zh-hant standalone desktop geometry aligned with the contract baseline', () => {
@@ -93,8 +100,9 @@ describe('standard contact page decomposer', () => {
     expect(nodes.get('page-contact-inquiries-card-0-title')?.rect).toMatchObject({ x: 25, y: 25, width: 232, height: 26 });
     expect(nodes.get('page-contact-inquiries-block-0-list')?.rect).toMatchObject({ x: 25, y: 51, width: 232, height: 87 });
     expect(nodes.get('page-contact-locations-grid')?.rect).toMatchObject({ y: 343, width: 1178, height: 163 });
-    expect(nodes.get('page-contact-locations-card-0')?.rect).toMatchObject({ x: 0, y: -20, width: 382, height: 163 });
-    expect(nodes.get('page-contact-locations-card-0-title')?.rect).toMatchObject({ x: 25, y: 25, width: 332, height: 26 });
+    expect(nodes.get('page-contact-locations-card-0')?.rect).toMatchObject({ x: 0, y: -20, width: 282, height: 163 });
+    expect(nodes.get('page-contact-locations-card-0-title')?.rect).toMatchObject({ x: 25, y: 25, width: 234, height: 26 });
+    expect(nodes.get('page-contact-locations-card-3')?.rect).toMatchObject({ x: 897, y: -20, width: 282, height: 163 });
     expect(nodes.get('page-contact-contact-cta')?.rect).toMatchObject({ y: 538, width: 115, height: 47 });
 
     expect(nodes.get('home-offices-container')?.rect).toMatchObject({ x: 51, y: 141, width: 1178, height: 628 });
@@ -102,6 +110,8 @@ describe('standard contact page decomposer', () => {
     expect(nodes.get('home-offices-layout-0')?.rect).toMatchObject({ y: 206, width: 1178, height: 422 });
     expect(nodes.get('home-offices-layout-0-map')?.rect).toMatchObject({ x: 0, width: 687, height: 422 });
     expect(nodes.get('home-offices-layout-0-card')?.rect).toMatchObject({ x: 704, y: -40, width: 474, height: 422 });
+    expect(nodes.get('home-offices-tab-3')?.rect).toMatchObject({ x: 354, width: 104, height: 47 });
+    expect(nodes.get('home-offices-layout-3-card-title')?.content).toMatchObject({ text: '屏東' });
   });
 
   it('keeps zh-hant contact office tab layouts in one responsive slot', () => {
@@ -110,21 +120,24 @@ describe('standard contact page decomposer', () => {
     const layout0 = expectNode(nodes, 'home-offices-layout-0');
     const layout1 = expectNode(nodes, 'home-offices-layout-1');
     const layout2 = expectNode(nodes, 'home-offices-layout-2');
+    const layout3 = expectNode(nodes, 'home-offices-layout-3');
     const officeRoot = expectNode(nodes, 'home-offices-root');
 
     const mobileY = [
       layout0.responsive?.mobile?.rect?.y,
       layout1.responsive?.mobile?.rect?.y,
       layout2.responsive?.mobile?.rect?.y,
+      layout3.responsive?.mobile?.rect?.y,
     ];
     const tabletY = [
       layout0.responsive?.tablet?.rect?.y,
       layout1.responsive?.tablet?.rect?.y,
       layout2.responsive?.tablet?.rect?.y,
+      layout3.responsive?.tablet?.rect?.y,
     ];
 
-    expect(mobileY).toEqual([170, 170, 170]);
-    expect(tabletY).toEqual([192, 192, 192]);
+    expect(mobileY).toEqual([170, 170, 170, 170]);
+    expect(tabletY).toEqual([192, 192, 192, 192]);
     expect(officeRoot.responsive?.mobile?.rect).toMatchObject({ width: 375, height: 908 });
     expect(officeRoot.responsive?.tablet?.rect).toMatchObject({ width: 736, height: 1064 });
   });

@@ -1,17 +1,19 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { recordCommerceSettingsUpdated } from '@/lib/builder/audit/record';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { loadCurrencySettings, saveCurrencySettings } from '@/lib/builder/commerce/currency-engine';
 import { GET, PATCH } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/audit/record', () => ({
@@ -23,7 +25,7 @@ vi.mock('@/lib/builder/commerce/currency-engine', () => ({
   saveCurrencySettings: vi.fn(async (settings: unknown) => settings),
 }));
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const loadCurrencySettingsMock = vi.mocked(loadCurrencySettings);
 const saveCurrencySettingsMock = vi.mocked(saveCurrencySettings);
@@ -44,8 +46,14 @@ function patchRequest(query = '', body: unknown = { settings: { baseCurrency: 'T
 describe('builder commerce currency settings API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     loadCurrencySettingsMock.mockResolvedValue({ baseCurrency: 'TWD' } as never);
     saveCurrencySettingsMock.mockImplementation(async (settings) => settings as never);
   });
@@ -64,7 +72,10 @@ describe('builder commerce currency settings API', () => {
       errorCode: 'currency_settings_failed',
     });
     expect(payload.error).not.toContain('currency storage secret leaked');
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
     expect(consoleError).toHaveBeenCalledWith(
       '[builder/commerce/currency-settings] GET failed:',
       expect.any(Error),
@@ -81,7 +92,10 @@ describe('builder commerce currency settings API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, settings });
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
   });
 
   it('returns localized save failures without leaking exception details', async () => {

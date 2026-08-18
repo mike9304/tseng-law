@@ -95,7 +95,7 @@ describe('/api/builder/bookings/[id]/manual-payments', () => {
   it('returns localized validation errors for invalid manual payment payloads', async () => {
     const route = await import('../route');
     const response = await route.POST(postRequest({ amountCents: 0 }, 'zh-hant'), {
-      params: { id: 'bk-manual-payment-test' },
+      params: Promise.resolve({ id: 'bk-manual-payment-test' }),
     });
     const payload = await response.json();
 
@@ -110,7 +110,7 @@ describe('/api/builder/bookings/[id]/manual-payments', () => {
   it('returns localized errors for invalid JSON bodies', async () => {
     const route = await import('../route');
     const response = await route.POST(rawPostRequest('{', 'en'), {
-      params: { id: 'bk-manual-payment-test' },
+      params: Promise.resolve({ id: 'bk-manual-payment-test' }),
     });
     const payload = await response.json();
 
@@ -126,7 +126,7 @@ describe('/api/builder/bookings/[id]/manual-payments', () => {
   it('returns localized booking-not-found errors from the payment engine', async () => {
     const route = await import('../route');
     const response = await route.POST(postRequest({ amountCents: 5000 }, 'en'), {
-      params: { id: 'bk-manual-payment-test' },
+      params: Promise.resolve({ id: 'bk-manual-payment-test' }),
     });
     const payload = await response.json();
 
@@ -146,7 +146,7 @@ describe('/api/builder/bookings/[id]/manual-payments', () => {
     });
     const route = await import('../route');
     const response = await route.POST(postRequest({ amountCents: 15000 }, 'zh-hant'), {
-      params: { id: 'bk-manual-payment-test' },
+      params: Promise.resolve({ id: 'bk-manual-payment-test' }),
     });
     const payload = await response.json();
 
@@ -166,7 +166,7 @@ describe('/api/builder/bookings/[id]/manual-payments', () => {
     });
     const route = await import('../route');
     const response = await route.POST(postRequest({ amountCents: 5000 }, 'ko'), {
-      params: { id: 'bk-manual-payment-test' },
+      params: Promise.resolve({ id: 'bk-manual-payment-test' }),
     });
     const payload = await response.json();
 
@@ -199,7 +199,7 @@ describe('/api/builder/bookings/[id]/manual-payments', () => {
       reference: 'Counter payment',
       note: 'Paid at office',
     }, 'ko'), {
-      params: { id: 'bk-manual-payment-test' },
+      params: Promise.resolve({ id: 'bk-manual-payment-test' }),
     });
     const payload = await response.json();
 

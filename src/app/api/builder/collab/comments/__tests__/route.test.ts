@@ -1,16 +1,30 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   CommentParentNotFoundError,
   createComment,
   listComments,
 } from '@/lib/builder/collab/comments-store';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
+import { validateCsrf } from '@/lib/builder/security/csrf';
+import {
+  resolveReviewTarget,
+  verifyReviewToken,
+} from '@/lib/builder/security/review-tokens';
 import { GET, POST } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => null),
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'editor@example.test' })),
   guardMutation: vi.fn(async () => ({ username: 'editor@example.test' })),
+}));
+
+vi.mock('@/lib/builder/security/csrf', () => ({
+  validateCsrf: vi.fn(() => null),
+}));
+
+vi.mock('@/lib/builder/security/review-tokens', () => ({
+  resolveReviewTarget: vi.fn(),
+  verifyReviewToken: vi.fn(),
 }));
 
 vi.mock('@/lib/builder/collab/comments-store', () => ({
@@ -42,9 +56,12 @@ const comment = {
 };
 
 const createCommentMock = vi.mocked(createComment);
-const guardBuilderReadMock = vi.mocked(guardBuilderRead);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const listCommentsMock = vi.mocked(listComments);
+const resolveReviewTargetMock = vi.mocked(resolveReviewTarget);
+const validateCsrfMock = vi.mocked(validateCsrf);
+const verifyReviewTokenMock = vi.mocked(verifyReviewToken);
 
 function getRequest(query = ''): NextRequest {
   return new NextRequest(`https://law.example.test/api/builder/collab/comments${query ? `?${query}` : ''}`);
@@ -77,13 +94,45 @@ function postSelectedSiteRequest(
   });
 }
 
+function reviewPostRequest(fields: Record<string, string> = {}): NextRequest {
+  const body = new URLSearchParams({
+    reviewToken: 'review-token',
+    body: 'Client feedback',
+    ...fields,
+  });
+  return new NextRequest('https://law.example.test/api/builder/collab/comments', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/x-www-form-urlencoded',
+      origin: 'https://law.example.test',
+    },
+    body: body.toString(),
+  });
+}
+
 describe('builder collab comments API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    guardBuilderReadMock.mockReturnValue(null as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'editor@example.test',
+      permission: 'view-cms',
+    });
     guardMutationMock.mockResolvedValue({ username: 'editor@example.test' } as never);
     listCommentsMock.mockResolvedValue([comment] as never);
     createCommentMock.mockResolvedValue(comment as never);
+    validateCsrfMock.mockReturnValue(null);
+    verifyReviewTokenMock.mockResolvedValue({
+      id: 'rev-1',
+      branchOrPageId: 'published-page-1',
+      audienceRole: 'client',
+      createdBy: 'admin@example.test',
+      expiresAt: '2026-07-31T00:00:00.000Z',
+    });
+    resolveReviewTargetMock.mockResolvedValue({
+      siteId: 'tseng-law-main-site',
+      pageId: 'published-page-1',
+      publicPath: '/ko/review-target',
+    });
   });
 
   it('returns comments while preserving success response shape', async () => {
@@ -96,6 +145,26 @@ describe('builder collab comments API', () => {
       assignee: undefined,
     });
     expect(payload).toEqual({ ok: true, comments: [comment] });
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-cms',
+    );
+  });
+
+  it('short-circuits missing view-cms permission before listing comments', async () => {
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: view-cms' }, { status: 403 }),
+    );
+
+    const request = getRequest('siteId=site-1&pageId=page-1&locale=ko');
+    const response = await GET(request);
+
+    expect(response.status).toBe(403);
+    await expect(response.json()).resolves.toEqual({
+      error: 'Missing permission: view-cms',
+    });
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(request, 'view-cms');
+    expect(listCommentsMock).not.toHaveBeenCalled();
   });
 
   it('lists comments for the selected builder site from the editor referrer', async () => {
@@ -131,6 +200,66 @@ describe('builder collab comments API', () => {
       parentId: undefined,
       assignee: undefined,
     });
+  });
+
+  it('creates a review comment only on its persisted published target', async () => {
+    const response = await POST(reviewPostRequest({
+      siteId: 'attacker-site',
+      pageId: 'attacker-page',
+      author: 'Administrator',
+      nodeId: 'attacker-node',
+      parentId: 'attacker-parent',
+      assignee: 'attacker-assignee',
+    }));
+
+    expect(response.status).toBe(200);
+    expect(verifyReviewTokenMock).toHaveBeenCalledWith('review-token');
+    expect(resolveReviewTargetMock).toHaveBeenCalledWith(expect.objectContaining({
+      branchOrPageId: 'published-page-1',
+      audienceRole: 'client',
+    }));
+    expect(guardMutationMock).not.toHaveBeenCalled();
+    expect(createCommentMock).toHaveBeenCalledWith({
+      siteId: 'tseng-law-main-site',
+      pageId: 'published-page-1',
+      author: 'Client reviewer',
+      body: 'Client feedback',
+    });
+  });
+
+  it('returns a controlled 401 when public review-token verification fails', async () => {
+    verifyReviewTokenMock.mockResolvedValueOnce(null);
+
+    const response = await POST(reviewPostRequest());
+
+    expect(response.status).toBe(401);
+    await expect(response.json()).resolves.toEqual({
+      ok: false,
+      error: 'Invalid review session.',
+      errorCode: 'review_token_invalid',
+    });
+    expect(createCommentMock).not.toHaveBeenCalled();
+  });
+
+  it('fails closed when the persisted target is no longer public', async () => {
+    resolveReviewTargetMock.mockResolvedValueOnce(null);
+
+    const response = await POST(reviewPostRequest());
+
+    expect(response.status).toBe(401);
+    expect(createCommentMock).not.toHaveBeenCalled();
+  });
+
+  it('enforces CSRF before parsing a public review form', async () => {
+    validateCsrfMock.mockReturnValueOnce(
+      NextResponse.json({ ok: false, error: 'csrf_origin_mismatch' }, { status: 403 }),
+    );
+
+    const response = await POST(reviewPostRequest());
+
+    expect(response.status).toBe(403);
+    expect(verifyReviewTokenMock).not.toHaveBeenCalled();
+    expect(createCommentMock).not.toHaveBeenCalled();
   });
 
   it('returns localized validation errors', async () => {

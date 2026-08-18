@@ -4,6 +4,10 @@ import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { findApplicablePackageCredit } from '@/lib/builder/bookings/packages';
 import { bookingServicePriceSnapshot } from '@/lib/builder/bookings/pricing';
 import { getService } from '@/lib/builder/bookings/storage';
+import {
+  MEMBER_SESSION_COOKIE,
+  validateSession,
+} from '@/lib/builder/members/members-engine';
 import type { BookingPackage, BookingPackageCredit, BookingService } from '@/lib/builder/bookings/types';
 import { POST } from '../route';
 
@@ -21,6 +25,11 @@ vi.mock('@/lib/builder/bookings/packages', () => ({
 
 vi.mock('@/lib/builder/bookings/pricing', () => ({
   bookingServicePriceSnapshot: vi.fn(),
+}));
+
+vi.mock('@/lib/builder/members/members-engine', () => ({
+  MEMBER_SESSION_COOKIE: 'builder_member_session',
+  validateSession: vi.fn(),
 }));
 
 const service: BookingService = {
@@ -65,16 +74,19 @@ const checkRateLimitMock = vi.mocked(checkRateLimit);
 const findApplicablePackageCreditMock = vi.mocked(findApplicablePackageCredit);
 const bookingServicePriceSnapshotMock = vi.mocked(bookingServicePriceSnapshot);
 const getServiceMock = vi.mocked(getService);
+const validateSessionMock = vi.mocked(validateSession);
 
 function request(query = '', body: string | unknown = {
   serviceId: 'svc-1',
   customer: { email: 'client@example.com', name: 'Client One' },
-}): NextRequest {
-  return new NextRequest(`https://law.example.test/api/booking/payment-intent${query ? `?${query}` : ''}`, {
+}, sessionId?: string, origin: string | null = 'https://tseng-law.com'): NextRequest {
+  return new NextRequest(`https://tseng-law.com/api/booking/payment-intent${query ? `?${query}` : ''}`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
       'x-forwarded-for': '203.0.113.4',
+      ...(origin ? { origin } : {}),
+      ...(sessionId ? { cookie: `${MEMBER_SESSION_COOKIE}=${sessionId}` } : {}),
     },
     body: typeof body === 'string' ? body : JSON.stringify(body),
   });
@@ -101,11 +113,27 @@ describe('/api/booking/payment-intent', () => {
       payLater: false,
     });
     getServiceMock.mockResolvedValue(service as never);
+    validateSessionMock.mockResolvedValue(null);
   });
 
   afterEach(() => {
     vi.unstubAllEnvs();
     vi.unstubAllGlobals();
+  });
+
+  it('rejects a production-mode request without Origin before rate limiting or service lookup', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    const fetchMock = vi.fn();
+    vi.stubGlobal('fetch', fetchMock);
+
+    const response = await POST(request('locale=ko', undefined, undefined, null));
+    const payload = await response.json();
+
+    expect(response.status).toBe(403);
+    expect(payload).toEqual({ ok: false, error: 'csrf_origin_mismatch', code: 'csrf_origin_mismatch' });
+    expect(checkRateLimitMock).not.toHaveBeenCalled();
+    expect(getServiceMock).not.toHaveBeenCalled();
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 
   it('returns dev stubs while preserving success response shape', async () => {
@@ -175,11 +203,25 @@ describe('/api/booking/payment-intent', () => {
       credit: packageCredit,
       package: bookingPackage,
     } as never);
+    validateSessionMock.mockResolvedValueOnce({
+      memberId: 'member-1',
+      email: ' Client@Example.com ',
+      verified: true,
+      blocked: false,
+    } as never);
 
-    const response = await POST(request('locale=zh-hant'));
+    const response = await POST(request('locale=zh-hant', {
+      serviceId: 'svc-1',
+      customer: { email: 'client@example.com', name: 'Client One' },
+    }, 'session-1'));
     const payload = await response.json();
 
     expect(response.status).toBe(200);
+    expect(validateSessionMock).toHaveBeenCalledWith('session-1');
+    expect(findApplicablePackageCreditMock).toHaveBeenCalledWith({
+      customerEmail: 'client@example.com',
+      serviceId: 'svc-1',
+    });
     expect(payload).toEqual({
       ok: true,
       coveredByPackage: true,
@@ -188,6 +230,76 @@ describe('/api/booking/payment-intent', () => {
       packageName: bookingPackage.name,
       remainingCredits: 3,
     });
+  });
+
+  it.each([
+    {
+      label: 'anonymous requests',
+      sessionId: undefined,
+      member: null,
+    },
+    {
+      label: 'invalid sessions',
+      sessionId: 'invalid-session',
+      member: null,
+    },
+    {
+      label: 'unverified members',
+      sessionId: 'unverified-session',
+      member: {
+        memberId: 'member-unverified',
+        email: 'client@example.com',
+        verified: false,
+        blocked: false,
+      },
+    },
+    {
+      label: 'blocked members',
+      sessionId: 'blocked-session',
+      member: {
+        memberId: 'member-blocked',
+        email: 'client@example.com',
+        verified: true,
+        blocked: true,
+      },
+    },
+    {
+      label: 'members whose email does not match the customer',
+      sessionId: 'other-member-session',
+      member: {
+        memberId: 'member-other',
+        email: 'other@example.com',
+        verified: true,
+        blocked: false,
+      },
+    },
+  ])('does not disclose package credits to $label', async ({ sessionId, member }) => {
+    validateSessionMock.mockResolvedValueOnce(member as never);
+    findApplicablePackageCreditMock.mockResolvedValueOnce({
+      credit: packageCredit,
+      package: bookingPackage,
+    } as never);
+
+    const response = await POST(request('locale=en', {
+      serviceId: 'svc-1',
+      customer: { email: 'client@example.com', name: 'Client One' },
+    }, sessionId));
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload).toMatchObject({
+      ok: true,
+      stub: true,
+      paymentIntentId: 'pi_stub_dev',
+    });
+    expect(payload).not.toHaveProperty('coveredByPackage');
+    expect(payload).not.toHaveProperty('packageCreditId');
+    expect(findApplicablePackageCreditMock).not.toHaveBeenCalled();
+    if (sessionId) {
+      expect(validateSessionMock).toHaveBeenCalledWith(sessionId);
+    } else {
+      expect(validateSessionMock).not.toHaveBeenCalled();
+    }
   });
 
   it('returns Stripe client secrets while preserving success response shape', async () => {

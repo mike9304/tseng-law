@@ -1,12 +1,15 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
 import { createDefaultSiteDocument, type BuilderSiteDocument } from '@/lib/builder/site/types';
 import * as route from '@/app/api/builder/site/pages/[pageId]/linked/route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'admin' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-pages',
+  })),
 }));
 
 vi.mock('@/lib/builder/site/persistence', () => ({
@@ -24,7 +27,10 @@ describe('/api/builder/site/pages/[pageId]/linked', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.mocked(guardBuilderRead).mockReturnValue({ username: 'admin' });
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({
+      username: 'admin',
+      permission: 'edit-pages',
+    });
     site = createDefaultSiteDocument('ko', 'default');
     site.pages.push({
       pageId: 'page-about',
@@ -48,7 +54,7 @@ describe('/api/builder/site/pages/[pageId]/linked', () => {
 
   it('returns linked locale pages without changing the success shape', async () => {
     const response = await route.GET(getRequest('page-about', '?locale=ko'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
     const data = await response.json();
 
@@ -62,9 +68,26 @@ describe('/api/builder/site/pages/[pageId]/linked', () => {
     });
   });
 
+  it('requires edit-pages and does not load site data on permission denial', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: edit-pages' }, { status: 403 }),
+    );
+
+    const response = await route.GET(getRequest('page-about', '?locale=ko'), {
+      params: Promise.resolve({ pageId: 'page-about' }),
+    });
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'edit-pages',
+    );
+    expect(mockedReadSiteDocument).not.toHaveBeenCalled();
+  });
+
   it('loads linked locale pages from the selected workspace site', async () => {
     const response = await route.GET(getRequest('page-about', '?locale=ko&siteId=workspace-site-b'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
 
     expect(response.status).toBe(200);
@@ -73,7 +96,7 @@ describe('/api/builder/site/pages/[pageId]/linked', () => {
 
   it('returns localized stable-code JSON when the page is missing', async () => {
     const response = await route.GET(getRequest('missing-page', '?locale=zh-hant'), {
-      params: { pageId: 'missing-page' },
+      params: Promise.resolve({ pageId: 'missing-page' }),
     });
     const data = await response.json();
 
@@ -88,7 +111,7 @@ describe('/api/builder/site/pages/[pageId]/linked', () => {
   it('returns localized stable-code JSON when linked pages loading fails', async () => {
     mockedReadSiteDocument.mockRejectedValueOnce(new Error('raw linked pages failure'));
     const response = await route.GET(getRequest('page-about', '?locale=en'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
     const data = await response.json();
 

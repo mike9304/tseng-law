@@ -2,6 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getAttorneyProfile, getAttorneyProfilePath, primaryAttorneySlug } from '@/data/attorney-profiles';
 import type { SiteLocale } from '@/lib/locales';
+import {
+  getConsultationCtaLabel,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 
 const cardLabels = {
   ko: {
@@ -108,9 +112,13 @@ export default function AttorneyAuthorityCard({
         <Link href={profileHref} className="button button--outline">
           {labels.profile}
         </Link>
-        <Link href={`/${locale}/contact`} className="button">
+        <a
+          href={getConsultationPublicMailto(locale)}
+          className="button"
+          aria-label={`${labels.contact} — ${getConsultationCtaLabel(locale)}`}
+        >
           {labels.contact}
-        </Link>
+        </a>
       </div>
     </section>
   );

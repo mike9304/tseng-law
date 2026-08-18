@@ -1,11 +1,12 @@
 import { redirect } from 'next/navigation';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 
-export default function LegacyContactBuilderPreviewRedirect({
-  params,
-}: {
-  params: { locale: Locale };
-}) {
+export default async function LegacyContactBuilderPreviewRedirect(
+  props: {
+    params: Promise<{ locale: Locale }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   redirect(`/${locale}/builder/contact?mode=preview`);
 }

@@ -39,7 +39,7 @@ function request(
   });
 }
 
-const params = { params: { email: 'member%40example.com' } };
+const params = { params: Promise.resolve({ email: 'member%40example.com' }) };
 
 describe('builder workspace member detail API', () => {
   beforeEach(() => {

@@ -45,6 +45,7 @@ describe('native members engine', () => {
       email: 'free@example.com',
       name: 'Free Member',
       password: 'password123',
+      verified: true,
     });
     const premium = await createMember({
       email: 'premium@example.com',
@@ -84,6 +85,31 @@ describe('native members engine', () => {
     expect(await loginMember('premium@example.com', 'password123')).toBeNull();
 
     await revokeSession(session!.sessionId);
+    expect(await validateSession(session!.sessionId)).toBeNull();
+  });
+
+  it('denies unverified login and invalidates an existing session after verification is removed', async () => {
+    const unverified = await createMember({
+      email: 'claimed-victim@example.com',
+      name: 'Unverified Claim',
+      password: 'password123',
+    });
+
+    expect(unverified.verified).toBe(false);
+    expect(await loginMember(unverified.email, 'password123')).toBeNull();
+    expect(checkAccess({
+      pageId: 'account',
+      requireLogin: true,
+      allowedRoles: [],
+    }, unverified)).toBe(false);
+
+    const verified = await updateMemberAdmin(unverified.memberId, { verified: true });
+    expect(verified?.verified).toBe(true);
+    const session = await loginMember(unverified.email, 'password123');
+    expect(session?.sessionId).toBeTruthy();
+    expect((await validateSession(session!.sessionId))?.memberId).toBe(unverified.memberId);
+
+    await updateMemberAdmin(unverified.memberId, { verified: false });
     expect(await validateSession(session!.sessionId)).toBeNull();
   });
 });

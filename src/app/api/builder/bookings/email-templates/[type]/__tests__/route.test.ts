@@ -44,7 +44,7 @@ describe('/api/builder/bookings/email-templates/[type]', () => {
   it('returns localized errors for unknown template types', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest('unknown', { subject: 'Subject', body: 'Body' }, 'zh-hant'), {
-      params: { type: 'unknown' },
+      params: Promise.resolve({ type: 'unknown' }),
     });
     const payload = await response.json();
 
@@ -59,7 +59,7 @@ describe('/api/builder/bookings/email-templates/[type]', () => {
   it('returns localized errors for invalid template payloads', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest('customer-confirmation', { subject: '', body: '' }, 'en'), {
-      params: { type: 'customer-confirmation' },
+      params: Promise.resolve({ type: 'customer-confirmation' }),
     });
     const payload = await response.json();
 
@@ -78,7 +78,7 @@ describe('/api/builder/bookings/email-templates/[type]', () => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(null),
       }),
-      { params: { type: 'customer-reminder' } },
+      { params: Promise.resolve({ type: 'customer-reminder' }) },
     );
     const payload = await response.json();
 
@@ -96,7 +96,7 @@ describe('/api/builder/bookings/email-templates/[type]', () => {
         body: 'Hello {{customerName}}',
         isActive: true,
       }),
-      { params: { type: 'customer-confirmation' } },
+      { params: Promise.resolve({ type: 'customer-confirmation' }) },
     );
     const payload = await response.json();
 

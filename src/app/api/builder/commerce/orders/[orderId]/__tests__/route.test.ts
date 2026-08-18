@@ -1,18 +1,20 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { loadOrder, softDeleteOrder, updateOrderState } from '@/lib/builder/commerce/orders-engine';
 import { queueOrderUpdatedNotification } from '@/lib/builder/commerce/notifications-engine';
 import { runOrderBillingAutomation } from '@/lib/builder/billing-document-automation';
 import { DELETE, GET, PATCH } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/commerce/orders-engine', () => ({
@@ -37,7 +39,7 @@ const order = {
   fulfillment: { status: 'unfulfilled' },
 };
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const loadOrderMock = vi.mocked(loadOrder);
 const softDeleteOrderMock = vi.mocked(softDeleteOrder);
@@ -53,18 +55,40 @@ function request(query = '', method = 'GET', body?: string | unknown): NextReque
   });
 }
 
-const params = { params: { orderId: 'order-1' } };
+const params = { params: Promise.resolve({ orderId: 'order-1' }) };
 
 describe('builder commerce order detail API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     loadOrderMock.mockResolvedValue(order as never);
     softDeleteOrderMock.mockResolvedValue(true);
     updateOrderStateMock.mockResolvedValue(order as never);
     queueOrderUpdatedNotificationMock.mockResolvedValue({ ok: true } as never);
     runOrderBillingAutomationMock.mockResolvedValue(null);
+  });
+
+  it('returns 403 and short-circuits order loading when commerce read permission is denied', async () => {
+    const deniedRequest = request('locale=en');
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ ok: false, error: 'Forbidden' }, { status: 403 }) as never,
+    );
+
+    const response = await GET(deniedRequest, params);
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      deniedRequest,
+      'view-commerce',
+    );
+    expect(loadOrderMock).not.toHaveBeenCalled();
   });
 
   it('returns localized missing-order errors', async () => {
@@ -108,7 +132,10 @@ describe('builder commerce order detail API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, order });
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
   });
 
   it('returns localized invalid-json update errors', async () => {
@@ -201,8 +228,14 @@ describe('builder commerce order detail API', () => {
 describe('production authorized_stub payment status guard', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     loadOrderMock.mockResolvedValue(order as never);
     softDeleteOrderMock.mockResolvedValue(true);
     updateOrderStateMock.mockResolvedValue(order as never);

@@ -61,7 +61,8 @@ function classifyRsvpError(error: unknown): { code: BuilderEventsApiErrorCode; s
   return { code: 'event_rsvp_failed', status: 400 };
 }
 
-export async function POST(request: NextRequest, { params }: { params: { eventId: string } }) {
+export async function POST(request: NextRequest, props: { params: Promise<{ eventId: string }> }) {
+  const params = await props.params;
   // builder-route-guard: allow-public — intentional public visitor endpoint
   const rate = await checkRateLimit(`events-rsvp:${clientIp(request)}`, 10, 60_000);
   if (!rate.allowed) {

@@ -250,6 +250,7 @@ export default function RepeaterMultiRecordPreview({
                   aria-label={record.primaryLabel}
                   data-card-image="true"
                 >
+                  {/* eslint-disable-next-line @next/next/no-img-element -- CMS record previews accept arbitrary remote/blob/data URLs that the Next image optimizer cannot safely proxy. */}
                   <img
                     src={record.seo.image}
                     alt=""

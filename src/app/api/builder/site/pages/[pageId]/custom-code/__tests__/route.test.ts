@@ -47,7 +47,7 @@ describe('/api/builder/site/pages/[pageId]/custom-code', () => {
   it('saves page custom code without changing the success shape', async () => {
     const response = await route.PATCH(
       patchRequest({ head: '<meta name="page" content="home">' }, '?locale=ko'),
-      { params: { pageId } },
+      { params: Promise.resolve({ pageId }) },
     );
     const data = await response.json();
 
@@ -61,7 +61,7 @@ describe('/api/builder/site/pages/[pageId]/custom-code', () => {
   });
 
   it('returns localized stable-code JSON for malformed saves', async () => {
-    const response = await route.PATCH(patchRequest('{', '?locale=zh-hant'), { params: { pageId } });
+    const response = await route.PATCH(patchRequest('{', '?locale=zh-hant'), { params: Promise.resolve({ pageId }) });
     const data = await response.json();
 
     expect(response.status).toBe(400);
@@ -76,7 +76,7 @@ describe('/api/builder/site/pages/[pageId]/custom-code', () => {
   it('returns localized stable-code JSON for oversized page code', async () => {
     const response = await route.PATCH(
       patchRequest({ bodyEnd: 'x'.repeat(CUSTOM_CODE_MAX_LENGTH + 1) }, '?locale=ko'),
-      { params: { pageId } },
+      { params: Promise.resolve({ pageId }) },
     );
     const data = await response.json();
 
@@ -96,7 +96,7 @@ describe('/api/builder/site/pages/[pageId]/custom-code', () => {
   it('returns localized stable-code JSON when the target page is missing', async () => {
     const response = await route.PATCH(
       patchRequest({ head: '<meta name="missing" content="x">' }, '?locale=en'),
-      { params: { pageId: 'missing-page' } },
+      { params: Promise.resolve({ pageId: 'missing-page' }) },
     );
     const data = await response.json();
 
@@ -113,7 +113,7 @@ describe('/api/builder/site/pages/[pageId]/custom-code', () => {
     mockedWriteSiteDocument.mockRejectedValueOnce(new Error('raw page custom code write failure'));
     const response = await route.PATCH(
       patchRequest({ bodyStart: '<script>ok()</script>' }, '?locale=zh-hant'),
-      { params: { pageId } },
+      { params: Promise.resolve({ pageId }) },
     );
     const data = await response.json();
 

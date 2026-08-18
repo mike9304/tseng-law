@@ -102,7 +102,7 @@ const LOCAL_ENV = {
   CRM_TRACKING_SECRET: 'local-qa-crm-tracking-secret',
   CRM_WEBHOOK_SECRET: 'local-qa-crm-webhook-secret',
   OAUTH_STATE_SECRET: 'local-qa-oauth-state-secret',
-  BOOKINGS_MANAGE_SECRET: 'local-qa-bookings-manage-secret',
+  BOOKING_MANAGE_TOKEN_SECRET: 'local-qa-booking-manage-token-secret-2026',
   COMMERCE_PAYMENT_WEBHOOK_SECRET: 'local-commerce-webhook-secret',
   BILLING_DOCUMENT_SHARE_SECRET: 'local-billing-share-secret',
   CRON_SECRET: 'local-cron-secret',

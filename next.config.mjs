@@ -1,7 +1,10 @@
 import { withSentryConfig } from '@sentry/nextjs';
 
 const locales = ['ko', 'zh-hant', 'en', 'ja'];
-const distDir = process.env.NEXT_DIST_DIR ?? (process.env.NEXT_DEV ? '.next-dev' : '.next-build');
+const distDir =
+  process.env.NEXT_DIST_DIR ??
+  (process.env.VERCEL ? '.next' : process.env.NEXT_DEV ? '.next-dev' : '.next-build');
+const isProduction = process.env.NODE_ENV === 'production';
 
 const legacyColumnAliases = {
   'gym-injury-lawsuit': 'taiwan-gym-injury-lawsuit',
@@ -23,15 +26,30 @@ const legacyColumnAliases = {
   'traffic-accident-procedure': 'taiwan-traffic-accident-procedure',
 };
 
+const sensitiveRouteSources = [
+  ...locales.flatMap((locale) => [
+    `/${locale}/account/:path*`,
+    `/${locale}/admin-builder/:path*`,
+    `/${locale}/admin-consultation/:path*`,
+    `/${locale}/bookings/manage/:path*`,
+    `/${locale}/login/:path*`,
+  ]),
+  '/review/:path*',
+  '/api/booking/manage/:path*',
+  '/api/builder/:path*',
+  '/api/consultation/data/:path*',
+  '/api/consultation/build-embeddings',
+  '/api/consultation/eval',
+  '/api/consultation/knowledge',
+  '/api/live-chat/:path*',
+  '/api/members/:path*',
+  '/api/billing-documents/:path*',
+];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir,
   reactStrictMode: true,
-  experimental: {
-    // Runs src/instrumentation.ts at server startup: strips the blob token on
-    // non-production Vercel deploys so previews cannot touch production data.
-    instrumentationHook: true,
-  },
   webpack(config, { dev }) {
     if (dev) {
       config.watchOptions = {
@@ -58,7 +76,17 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://plausible.io https://*.vercel-insights.com",
+              // Next.js inline bootstrap and the current builder runtime still
+              // require `unsafe-inline`. Recommendation: migrate to per-request
+              // nonces/hashes, verify every App Router surface, then remove it.
+              [
+                "script-src 'self' 'unsafe-inline'",
+                !isProduction ? "'unsafe-eval'" : '',
+                'https://www.googletagmanager.com',
+                'https://plausible.io',
+                'https://*.vercel-insights.com',
+                'https://js.stripe.com',
+              ].filter(Boolean).join(' '),
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
               // Allow user-pasted image URLs (logo, hero image, etc.) over
@@ -66,11 +94,11 @@ const nextConfig = {
               // `data:` / `blob:` cover inline previews and `https:` is the
               // single broad allow for arbitrary public images.
               "img-src 'self' data: blob: https:",
-              "connect-src 'self' https://api.openai.com https://*.vercel-storage.com https://*.public.blob.vercel-storage.com https://www.google-analytics.com",
+              "connect-src 'self' https://api.openai.com https://api.stripe.com https://*.vercel-storage.com https://*.public.blob.vercel-storage.com https://www.google-analytics.com",
               // Lottie widget embeds LottieFiles iframes for animation
               // playback (lottie.host / lottiefiles.com); no script-src or
               // connect-src changes needed.
-              "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://www.google.com https://maps.google.com https://lottie.host https://lottiefiles.com",
+              "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://www.google.com https://maps.google.com https://lottie.host https://lottiefiles.com https://js.stripe.com https://hooks.stripe.com",
               "media-src 'self' blob:",
               "object-src 'none'",
               "base-uri 'self'",
@@ -83,9 +111,29 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          // Keep same-origin documents isolated without severing the opener
+          // relationship required by a current or future OAuth popup flow.
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
+          // Builder previews and first-party media are same-origin/same-site.
+          // Third-party maps, videos, and Lottie content load in their own
+          // frames, so they do not need cross-origin access to our responses.
+          { key: 'Cross-Origin-Resource-Policy', value: 'same-site' },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()',
+          },
+          ...(isProduction
+            ? [{ key: 'Strict-Transport-Security', value: 'max-age=31536000' }]
+            : []),
         ],
       },
+      ...sensitiveRouteSources.map((source) => ({
+        source,
+        headers: [
+          { key: 'Cache-Control', value: 'private, no-store, max-age=0' },
+          { key: 'X-Robots-Tag', value: 'noindex, noarchive' },
+        ],
+      })),
     ];
   },
   async redirects() {

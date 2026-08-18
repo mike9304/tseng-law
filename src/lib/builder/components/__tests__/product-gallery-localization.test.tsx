@@ -57,6 +57,10 @@ describe('product gallery localization', () => {
     expect(html).toContain('台灣創業準備指南');
     expect(html).toContain('可預訂');
     expect(html).toContain('快速檢視');
+    expect(html).toContain('src="/images/001-taiwan-company-establishment-basics/featured-01.jpg"');
+    expect(html).toContain('alt="台灣創業準備指南封面"');
+    expect(html).toContain('loading="lazy"');
+    expect(html).toContain('decoding="async"');
     expect(html).toContain('上一頁');
     expect(html).toContain('下一頁');
     expect(html).not.toContain('Product categories');

@@ -18,14 +18,24 @@ import {
   getPublicMarketingApiErrorPayload,
   type PublicMarketingApiErrorCode,
 } from '@/lib/builder/marketing/marketing-api-copy';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const publicPayloadSchema = subscribeRequestSchema.extend({
-  company: z.string().max(120).optional(), // honeypot
-});
+const publicPayloadSchema = subscribeRequestSchema
+  .pick({
+    email: true,
+    preferredLocale: true,
+    marketingConsent: true,
+  })
+  .extend({
+    company: z.string().max(120).optional(), // honeypot
+  });
+
+const PUBLIC_SUBSCRIBER_SOURCE = 'public-form';
+const PUBLIC_SUBSCRIBER_TAGS = ['newsletter'] as const;
 
 function clientIp(request: NextRequest): string {
   return (
@@ -55,6 +65,9 @@ function errorResponse(
 }
 
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const ip = clientIp(request);
   const rate = await checkRateLimit(`marketing-subscribe:${ip}`, 6, 60_000);
   if (!rate.allowed) {
@@ -83,62 +96,42 @@ export async function POST(request: NextRequest) {
   const userAgent = request.headers.get('user-agent') ?? undefined;
   const marketingConsent = buildMarketingConsentRecord({
     acceptedAt: now,
-    source: parsed.data.source,
+    source: PUBLIC_SUBSCRIBER_SOURCE,
     preferredLocale: parsed.data.preferredLocale,
     ipAddress: ip,
     ...(userAgent ? { userAgent } : {}),
-    ...(parsed.data.marketingConsentText ? { text: parsed.data.marketingConsentText } : {}),
   });
   const existing = await getSubscriberByEmail(parsed.data.email);
   if (existing && existing.status === 'subscribed') {
-    const mergedTags = Array.from(new Set([...existing.tags, ...parsed.data.tags]));
-    const tagsChanged = mergedTags.length !== existing.tags.length;
-    const needsContactLink = !existing.contactId;
-    const needsConsentRecord = !existing.marketingConsent;
-    if (needsContactLink || tagsChanged || needsConsentRecord) {
-      let nextContactId = existing.contactId;
-      if (needsContactLink) {
-        const linked = await linkSubscriberToCrmContact({
-          email: parsed.data.email,
-          preferredLocale: parsed.data.preferredLocale,
-          source: existing.source,
-          tags: mergedTags,
-        });
-        nextContactId = parsed.data.contactId ?? linked.contactId;
-      }
-      await saveSubscriber({
-        ...existing,
-        ...(nextContactId ? { contactId: nextContactId } : {}),
-        tags: mergedTags,
-        ...(needsConsentRecord ? { marketingConsent } : {}),
-        updatedAt: now,
-      });
-    }
     return NextResponse.json({ ok: true, alreadySubscribed: true });
   }
 
   const doubleOptInToken = makeToken();
   const doubleOptInWindow = createDoubleOptInWindow(nowDate);
-  const tags = Array.from(new Set([...(existing?.tags ?? []), ...parsed.data.tags]));
-  const linked = await linkSubscriberToCrmContact({
-    email: parsed.data.email,
-    preferredLocale: parsed.data.preferredLocale,
-    source: parsed.data.source,
-    tags,
-  });
+  const tags = existing?.tags ?? [...PUBLIC_SUBSCRIBER_TAGS];
+  const source = existing?.source ?? PUBLIC_SUBSCRIBER_SOURCE;
+  const preferredLocale = existing?.preferredLocale ?? parsed.data.preferredLocale;
+  const contactId = existing?.contactId ?? (
+    await linkSubscriberToCrmContact({
+      email: parsed.data.email,
+      preferredLocale,
+      source,
+      tags,
+    })
+  ).contactId;
   const subscriber = {
     subscriberId: existing?.subscriberId ?? makeSubscriberId(),
     email: parsed.data.email,
-    contactId: parsed.data.contactId ?? linked.contactId,
+    contactId,
     status: 'pending' as const,
     tags,
-    preferredLocale: parsed.data.preferredLocale,
-    marketingConsent,
+    preferredLocale,
+    marketingConsent: existing?.marketingConsent ?? marketingConsent,
     doubleOptInToken,
     doubleOptInTokenCreatedAt: doubleOptInWindow.createdAt,
     doubleOptInTokenExpiresAt: doubleOptInWindow.expiresAt,
     unsubscribeToken: existing?.unsubscribeToken ?? makeToken(),
-    source: parsed.data.source,
+    source,
     createdAt: existing?.createdAt ?? now,
     updatedAt: now,
   };
@@ -148,7 +141,7 @@ export async function POST(request: NextRequest) {
   const baseUrl = (process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || '').replace(/\/+$/, '');
   const verifyParams = new URLSearchParams({
     token: doubleOptInToken,
-    locale: parsed.data.preferredLocale,
+    locale: preferredLocale,
   });
   const verifyUrl = `${baseUrl}/api/marketing/verify?${verifyParams.toString()}`;
   void sendTestEmail({

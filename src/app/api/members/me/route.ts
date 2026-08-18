@@ -10,6 +10,7 @@ import {
   getMembersApiErrorPayload,
   type MembersApiErrorCode,
 } from '@/lib/builder/members/members-api-copy';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
@@ -72,11 +73,15 @@ export async function GET(request: NextRequest) {
 }
 
 export async function PATCH(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   let errorLocale = resolveRequestLocale(request);
-  const member = await currentMember(request);
-  if (!member) return errorResponse(errorLocale, 'not_authenticated', 401);
 
   try {
+    const member = await currentMember(request);
+    if (!member) return errorResponse(errorLocale, 'not_authenticated', 401);
+
     const body = await request.json();
     errorLocale = resolveRequestLocale(request, body);
     const patch = profileSchema.parse(body);

@@ -95,7 +95,9 @@ export default function QuickContactWidget({
   }, [chatOpen]);
 
   // Avoid flashing the toggle button before hydration determines state.
-  if (!AI_CHAT_ENABLED || !hydrated) {
+  // The editor preview must keep the chrome selectable even when the optional
+  // public AI chat feature is disabled for the deployed site.
+  if ((!AI_CHAT_ENABLED && !previewCollapsed) || !hydrated) {
     return null;
   }
 

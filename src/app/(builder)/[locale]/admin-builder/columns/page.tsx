@@ -7,11 +7,12 @@ import { getColumnsCopy } from './columns-copy';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: Locale }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = getColumnsCopy(locale);
 
@@ -25,13 +26,14 @@ export function generateMetadata({
   });
 }
 
-export default async function BuilderColumnsAdminPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: Locale };
-  searchParams?: { contentLocale?: string };
-}) {
+export default async function BuilderColumnsAdminPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+    searchParams?: Promise<{ contentLocale?: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const contentLocale = normalizeLocale(searchParams?.contentLocale ?? locale);
   const initialColumns = await listColumns(contentLocale);

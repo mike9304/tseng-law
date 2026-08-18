@@ -49,11 +49,9 @@ function getPublishErrorMessage(locale: Locale, code: string): string {
   return publishErrorMessages[locale][code] ?? getBuilderSiteApiErrorPayload(locale, 'page_publish_failed').error;
 }
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
-  const auth = await guardMutation(request, { bucket: 'publish' });
+export async function POST(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
+  const auth = await guardMutation(request, { bucket: 'publish', permission: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');

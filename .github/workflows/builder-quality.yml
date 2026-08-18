@@ -3,6 +3,17 @@ name: Builder Quality
 on:
   pull_request:
     paths:
+      - '.github/workflows/builder-quality.yml'
+      - '.github/workflows/builder-visual.yml'
+      - '.env.example'
+      - 'next.config.mjs'
+      - 'vercel.json'
+      - 'tsconfig.json'
+      - 'vitest.config.ts'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'scripts/ci-playwright-qa-harness.test.mjs'
+      - 'scripts/security-headers-config.test.mjs'
       - 'src/**'
       - 'tests/**'
       - 'scripts/**'
@@ -16,6 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_SENTRY_DSN: ''
+      # LHCI owns a separate localhost:3002 server. The Playwright QA harness
+      # replaces this with its exact attested 127.0.0.1 origin.
       BUILDER_ALLOWED_ORIGINS: 'http://localhost:3000,https://tseng-law.com'
     steps:
       - uses: actions/checkout@v4
@@ -30,17 +43,90 @@ jobs:
       - run: npm run test:unit
       - run: npm run validate:dev-platform:unit
       - run: npm run security:builder-routes
-      - run: npm run build
+      - run: npm run test:release-config
+      - run: NEXT_DIST_DIR=.next-build npm run build
       - name: Builder editor smoke across browsers
+        env:
+          BASE_URL: 'http://127.0.0.1:3000'
+          NEXT_DIST_DIR: '.next-build'
         run: |
-          npm run start -- -p 3000 > /tmp/builder-quality-next.log 2>&1 &
-          for i in {1..60}; do
-            if curl -fsS -u admin:local-review-2026! http://localhost:3000/ko/admin-builder > /dev/null; then
+          set -Eeuo pipefail
+          QA_PORT=3000
+          QA_HARNESS_LOG=/tmp/builder-quality-qa-harness.log
+          QA_MANIFEST_PATH="$(
+            node scripts/qa-runtime-isolation-contract.mjs manifest-path \
+              --tmp-base "${TMPDIR:-/tmp}" \
+              --repository-root "$PWD" \
+              --base-url "$BASE_URL"
+          )"
+          QA_HARNESS_PID=''
+
+          cleanup_qa_harness() {
+            local original_status=$?
+            local harness_status=0
+            trap - EXIT INT TERM HUP
+            set +e
+            if [[ -n "$QA_HARNESS_PID" ]] && kill -0 "$QA_HARNESS_PID" 2>/dev/null; then
+              kill -TERM "$QA_HARNESS_PID" 2>/dev/null
+            fi
+            if [[ -n "$QA_HARNESS_PID" ]]; then
+              # Waiting is mandatory: the harness proves canonical checksums in
+              # its own EXIT trap before this CI step may finish.
+              wait "$QA_HARNESS_PID" 2>/dev/null
+              harness_status=$?
+            fi
+            if (( original_status == 0 && harness_status != 0 && harness_status != 143 )); then
+              original_status=$harness_status
+            fi
+            if (( original_status != 0 )); then
+              tail -n 80 "$QA_HARNESS_LOG" >&2 || true
+            fi
+            exit "$original_status"
+          }
+          trap cleanup_qa_harness EXIT
+          trap 'exit 130' INT
+          trap 'exit 143' TERM
+          trap 'exit 129' HUP
+
+          PORT="$QA_PORT" NEXT_DIST_DIR="$NEXT_DIST_DIR" \
+            ./scripts/start-qa-server.sh >"$QA_HARNESS_LOG" 2>&1 &
+          QA_HARNESS_PID=$!
+
+          ready=0
+          for i in {1..90}; do
+            if ! kill -0 "$QA_HARNESS_PID" 2>/dev/null; then
+              echo "QA harness exited before readiness" >&2
+              exit 1
+            fi
+            if curl -fsS "$BASE_URL/ko" >/dev/null 2>&1 \
+              && node -e '
+                const fs = require("node:fs");
+                const [manifestPath, baseUrl, repositoryRoot, ownerPid] = process.argv.slice(1);
+                try {
+                  const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+                  process.exit(
+                    manifest.schemaVersion === 3
+                    && manifest.state === "ready"
+                    && manifest.baseUrl === baseUrl
+                    && manifest.repositoryRoot === repositoryRoot
+                    && manifest.ownerPid === Number(ownerPid)
+                    ? 0 : 1
+                  );
+                } catch {
+                  process.exit(1);
+                }
+              ' "$QA_MANIFEST_PATH" "$BASE_URL" "$PWD" "$QA_HARNESS_PID"
+            then
+              ready=1
               break
             fi
-            sleep 2
+            sleep 1
           done
-          curl -fsS -u admin:local-review-2026! http://localhost:3000/ko/admin-builder > /dev/null
-          BASE_URL=http://localhost:3000 npm run validate:dev-platform:browser
-          BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --project=chromium-builder --project=webkit-builder --project=firefox-builder --workers=1
+          if [[ "$ready" != "1" ]]; then
+            echo "QA harness did not publish a ready attestation manifest" >&2
+            exit 1
+          fi
+
+          npm run validate:dev-platform:browser
+          npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --project=chromium-builder --project=webkit-builder --project=firefox-builder --workers=1
       - run: npm run lhci

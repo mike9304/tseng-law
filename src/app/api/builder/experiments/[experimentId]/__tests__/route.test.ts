@@ -44,7 +44,7 @@ function request(query = '', body?: string | unknown): NextRequest {
   return new NextRequest(`https://law.example.test/api/builder/experiments/exp-1${query ? `?${query}` : ''}`, init);
 }
 
-const params = { params: { experimentId: 'exp-1' } };
+const params = { params: Promise.resolve({ experimentId: 'exp-1' }) };
 
 describe('/api/builder/experiments/[experimentId]', () => {
   beforeEach(() => {

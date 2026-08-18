@@ -3364,6 +3364,7 @@ export default function AiGeneratorWizard({ locale, siteId }: Props) {
                         data-ai-generator-asset-option={asset.filename}
                         data-ai-generator-asset-selected={selected ? 'true' : 'false'}
                       >
+                        {/* eslint-disable-next-line @next/next/no-img-element -- Builder assets can use arbitrary remote/blob/data preview URLs that must bypass the Next image optimizer. */}
                         <img src={asset.url} alt="" data-ai-generator-asset-thumbnail />
                         <span>
                           <strong data-ai-generator-asset-name>{asset.filename}</strong>

@@ -1,6 +1,7 @@
 import { type BuilderCanvasNode, type BuilderImageCanvasNode, createDefaultCanvasNodeStyle } from './types';
 import { locales, type Locale } from '@/lib/locales';
 import { pageCopy } from '@/data/page-copy';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import {
   PAGE_CONTAINER_WIDTH,
   PAGE_CONTAINER_X,
@@ -36,7 +37,6 @@ type PricingContent = {
   items: PricingItem[];
   disclaimer: string;
   ctaLabel: string;
-  ctaHref: string;
 };
 
 const pricingData: Record<Locale, PricingContent> = {
@@ -76,7 +76,6 @@ const pricingData: Record<Locale, PricingContent> = {
     ],
     disclaimer: '상기 비용은 기본 기준이며, 사건의 특성·복합성·긴급도에 따라 변동될 수 있습니다. 정확한 비용은 초기 상담 후 서면 견적으로 안내드립니다.',
     ctaLabel: '상담 예약하기',
-    ctaHref: '/ko/contact',
   },
   'zh-hant': {
     currency: 'NTD (新台幣)',
@@ -114,7 +113,6 @@ const pricingData: Record<Locale, PricingContent> = {
     ],
     disclaimer: '以上費用為基本標準，依案件特性、複雜度及急迫程度可能有所調整。確切費用於初次諮詢後以書面報價方式提供。',
     ctaLabel: '預約諮詢',
-    ctaHref: '/zh-hant/contact',
   },
   en: {
     currency: 'NTD (New Taiwan Dollar)',
@@ -152,7 +150,6 @@ const pricingData: Record<Locale, PricingContent> = {
     ],
     disclaimer: 'Fees above are baseline standards and may vary based on case characteristics, complexity, and urgency. Exact fees will be provided in writing after the initial consultation.',
     ctaLabel: 'Book a Consultation',
-    ctaHref: '/en/contact',
   },
 };
 
@@ -501,7 +498,7 @@ function createPricingSectionNodes(
       rect: { x: 0, y: 0, width: 220, height: 44 },
       zIndex: 0,
       label: data.ctaLabel,
-      href: data.ctaHref,
+      href: getConsultationPublicMailto(locale),
       style: 'primary',
       className: 'button',
       as: 'a',

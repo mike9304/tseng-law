@@ -72,7 +72,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
 
   it('returns localized stable-code JSON for malformed update payloads', async () => {
     const response = await route.PATCH(patchRequest('{', '?locale=zh-hant'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
     const data = await response.json();
 
@@ -88,7 +88,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
   it('rejects an array site id on PATCH before reading or writing the default site', async () => {
     const response = await route.PATCH(
       patchRequest({ siteId: ['workspace-site-b'], title: 'Blocked' }, '?locale=ko'),
-      { params: { pageId: 'page-about' } },
+      { params: Promise.resolve({ pageId: 'page-about' }) },
     );
     const data = await response.json();
 
@@ -100,7 +100,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
 
   it('returns localized stable-code JSON when updating a missing page', async () => {
     const response = await route.PATCH(patchRequest({ title: 'Missing' }, '?locale=ko'), {
-      params: { pageId: 'missing-page' },
+      params: Promise.resolve({ pageId: 'missing-page' }),
     });
     const data = await response.json();
 
@@ -115,7 +115,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
 
   it('returns localized stable-code JSON for invalid localized slugs', async () => {
     const response = await route.PATCH(patchRequest({ slugByLocale: { en: 'Bad Slug!' } }, '?locale=ko'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
     const data = await response.json();
 
@@ -131,7 +131,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
   it('returns localized stable-code JSON for duplicate localized slugs', async () => {
     site.pages.push(pageMeta({ pageId: 'page-other', locale: 'en', slug: 'about' }));
     const response = await route.PATCH(patchRequest({ slugByLocale: { en: 'about' } }, '?locale=en'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
     const data = await response.json();
 
@@ -147,7 +147,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
   it('returns localized stable-code JSON when saving an update fails', async () => {
     mockedWriteSiteDocument.mockRejectedValueOnce(new Error('raw update failure'));
     const response = await route.PATCH(patchRequest({ title: 'Updated' }, '?locale=en'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
     const data = await response.json();
 
@@ -172,7 +172,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
     }]));
 
     const response = await route.PATCH(patchRequest({ slugByLocale: { en: 'team' } }, '?locale=en'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
     const data = await response.json();
 
@@ -198,7 +198,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
 
   it('preserves the page update success shape', async () => {
     const response = await route.PATCH(patchRequest({ title: '새 제목' }, '?locale=ko'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
     const data = await response.json();
 
@@ -215,7 +215,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
     site.siteId = 'workspace-site-b';
     const response = await route.PATCH(
       patchRequest({ siteId: 'workspace-site-b', title: '사이트 B 제목' }, '?locale=ko'),
-      { params: { pageId: 'page-about' } },
+      { params: Promise.resolve({ pageId: 'page-about' }) },
     );
 
     expect(response.status).toBe(200);
@@ -228,7 +228,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
   it('returns localized stable-code JSON when deleting the home page is blocked', async () => {
     site.pages[1] = { ...site.pages[1], isHomePage: true };
     const response = await route.DELETE(deleteRequest('?locale=zh-hant'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
     const data = await response.json();
 
@@ -243,7 +243,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
 
   it('returns localized stable-code JSON when deleting a missing page', async () => {
     const response = await route.DELETE(deleteRequest('?locale=ko'), {
-      params: { pageId: 'missing-page' },
+      params: Promise.resolve({ pageId: 'missing-page' }),
     });
     const data = await response.json();
 
@@ -259,7 +259,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
   it('rejects encoded traversal on DELETE before reading or deleting the default site', async () => {
     const response = await route.DELETE(
       deleteRequest('?locale=ko&siteId=..%2F..%2Fx'),
-      { params: { pageId: 'page-about' } },
+      { params: Promise.resolve({ pageId: 'page-about' }) },
     );
     const data = await response.json();
 
@@ -272,7 +272,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
   it('returns localized stable-code JSON when deleting a page fails', async () => {
     mockedDeletePage.mockRejectedValueOnce(new Error('raw delete failure'));
     const response = await route.DELETE(deleteRequest('?locale=en'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
     const data = await response.json();
 
@@ -294,7 +294,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
     }]));
 
     const response = await route.DELETE(deleteRequest('?locale=ko'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
     const data = await response.json();
 
@@ -315,7 +315,7 @@ describe('/api/builder/site/pages/[pageId]', () => {
   it('deletes pages from the selected workspace site', async () => {
     site.siteId = 'workspace-site-b';
     const response = await route.DELETE(deleteRequest('?locale=ko&siteId=workspace-site-b'), {
-      params: { pageId: 'page-about' },
+      params: Promise.resolve({ pageId: 'page-about' }),
     });
 
     expect(response.status).toBe(200);

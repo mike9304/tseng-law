@@ -9,7 +9,7 @@ export interface LiveRouteSeoDefault {
 
 const HOME_SEO_COPY = {
   ko: {
-    title: '대만 변호사·대만 소송·대만 회사설립',
+    title: '대만 변호사·회사설립·소송',
     description:
       '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어와 일본어로 안내하는 법무법인 호정 공식 사이트입니다.',
   },

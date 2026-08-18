@@ -19,7 +19,7 @@ import AdminNavRail from './AdminNavRail';
 import AdminBreadcrumb from './AdminBreadcrumb';
 import NotificationInbox from './notifications/NotificationInbox';
 import { normalizeLocale } from '@/lib/locales';
-import { ADMIN_NAV_TREE } from '@/lib/builder/admin-nav/nav-config';
+import { ADMIN_NAV_TREE, type AdminNavTree } from '@/lib/builder/admin-nav/nav-config';
 import { getAdminNavCopy } from '@/lib/builder/admin-nav/nav-copy';
 import {
   adminNavHistoryEntryForPath,
@@ -33,11 +33,12 @@ import {
 
 interface AdminShellProps {
   children: ReactNode;
+  navTree?: AdminNavTree;
 }
 
 const ROOT_REGEX = /^\/(ko|en|zh-hant)\/admin-builder\/?$/;
 
-export default function AdminShell({ children }: AdminShellProps) {
+export default function AdminShell({ children, navTree = ADMIN_NAV_TREE }: AdminShellProps) {
   const router = useRouter();
   const pathname = usePathname() ?? '';
   const searchParams = useSearchParams();
@@ -59,8 +60,8 @@ export default function AdminShell({ children }: AdminShellProps) {
   }, []);
 
   useEffect(() => {
-    const stored = normalizeAdminNavHistoryEntries(ADMIN_NAV_TREE, locale, readRecentAdminNav());
-    const currentEntry = adminNavHistoryEntryForPath(ADMIN_NAV_TREE, locale, currentLocation);
+    const stored = normalizeAdminNavHistoryEntries(navTree, locale, readRecentAdminNav());
+    const currentEntry = adminNavHistoryEntryForPath(navTree, locale, currentLocation);
     if (!currentEntry) {
       writeRecentAdminNav(stored);
       setRecentNav(stored);
@@ -69,7 +70,7 @@ export default function AdminShell({ children }: AdminShellProps) {
     const next = pushRecentAdminNav(stored, currentEntry);
     writeRecentAdminNav(next);
     setRecentNav(next);
-  }, [locale, currentLocation]);
+  }, [navTree, locale, currentLocation]);
 
   const visibleRecentNav = useMemo(
     () => buildRecentAdminNavTrail(recentNav, currentLocation),
@@ -104,7 +105,7 @@ export default function AdminShell({ children }: AdminShellProps) {
         scrollPaddingTop: mobileChromeOffset,
       }}
     >
-      <AdminNavRail />
+      <AdminNavRail tree={navTree} />
       <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
         <div
           style={{

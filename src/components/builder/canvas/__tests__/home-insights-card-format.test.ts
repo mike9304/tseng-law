@@ -25,7 +25,7 @@ describe('resolveHomeInsightsCardLabels', () => {
       date: '2025-09-18T09:00:00.000Z',
       readTime: '3分鐘閱讀',
       content: '法'.repeat(2_180),
-      expectedDate: '2025-09-18',
+      expectedDate: '2025年9月13日',
       expectedReadTime: '11 min',
     },
     {
@@ -34,7 +34,7 @@ describe('resolveHomeInsightsCardLabels', () => {
       date: '2025-09-18T09:00:00.000Z',
       readTime: '3 min read',
       content: 'law '.repeat(545),
-      expectedDate: '2025-09-18',
+      expectedDate: 'September 18, 2025',
       expectedReadTime: '11 min',
     },
   ] satisfies ReadonlyArray<{
@@ -57,6 +57,18 @@ describe('resolveHomeInsightsCardLabels', () => {
       expect(labels.readTime).toBe(expectedReadTime);
     },
   );
+
+  it('prefers the publication label when lastmod is newer', () => {
+    expect(resolveHomeInsightsCardLabels(
+      {
+        content: '',
+        dateDisplay: '2026년 2월 4일',
+        date: '2026-07-25',
+        readTime: '9분 분량',
+      },
+      fallbackByLocale.ko,
+    )).toEqual({ date: '2026년 2월 4일', readTime: '9분 분량' });
+  });
 
   it('falls back to the composite raw date before the locale fallback label', () => {
     expect(resolveHomeInsightsCardLabels(

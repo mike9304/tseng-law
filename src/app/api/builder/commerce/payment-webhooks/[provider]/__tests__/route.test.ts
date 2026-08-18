@@ -56,7 +56,7 @@ describe('commerce payment webhook route', () => {
       provider: 'missing-provider',
       query: 'locale=zh-hant',
     }), {
-      params: { provider: 'missing-provider' },
+      params: Promise.resolve({ provider: 'missing-provider' }),
     });
     await expect(unknownProvider.json()).resolves.toEqual({
       ok: false,
@@ -69,7 +69,7 @@ describe('commerce payment webhook route', () => {
     process.env.COMMERCE_PAYMENT_WEBHOOK_SECRET = '';
 
     const unconfigured = await route.POST(request('{}', '', { query: 'locale=en' }), {
-      params: { provider: 'sandbox-card' },
+      params: Promise.resolve({ provider: 'sandbox-card' }),
     });
 
     expect(unknownProvider.status).toBe(404);
@@ -95,7 +95,7 @@ describe('commerce payment webhook route', () => {
       raw,
       signWebhookPayload('configured-production-secret', raw),
       { query: 'locale=ko' },
-    ), { params: { provider: 'sandbox-card' } });
+    ), { params: Promise.resolve({ provider: 'sandbox-card' }) });
 
     expect(response.status).toBe(503);
     await expect(response.json()).resolves.toEqual({
@@ -126,7 +126,7 @@ describe('commerce payment webhook route', () => {
       },
     });
     const response = await route.POST(request(raw, signWebhookPayload('test-commerce-secret', raw)), {
-      params: { provider: 'sandbox-card' },
+      params: Promise.resolve({ provider: 'sandbox-card' }),
     });
     expect(response.status).toBe(200);
     await expect(response.json()).resolves.toMatchObject({
@@ -157,7 +157,7 @@ describe('commerce payment webhook route', () => {
       data: { object: { id: 'pi_invalid', amount: 1234, currency: 'twd' } },
     });
     const invalid = await route.POST(request(raw, 't=1,v1=bad', { query: 'locale=en' }), {
-      params: { provider: 'sandbox-card' },
+      params: Promise.resolve({ provider: 'sandbox-card' }),
     });
     expect(invalid.status).toBe(400);
     await expect(invalid.json()).resolves.toEqual({
@@ -172,7 +172,7 @@ describe('commerce payment webhook route', () => {
         signWebhookPayload('test-commerce-secret', raw, Math.floor(Date.now() / 1000) - 1000),
         { query: 'locale=zh-hant' },
       ),
-      { params: { provider: 'sandbox-card' } },
+      { params: Promise.resolve({ provider: 'sandbox-card' }) },
     );
     expect(stale.status).toBe(400);
     await expect(stale.json()).resolves.toEqual({
@@ -190,7 +190,7 @@ describe('commerce payment webhook route', () => {
       signWebhookPayload('test-commerce-secret', invalidJson),
       { query: 'locale=zh-hant' },
     ), {
-      params: { provider: 'sandbox-card' },
+      params: Promise.resolve({ provider: 'sandbox-card' }),
     });
 
     expect(invalidJsonResponse.status).toBe(400);
@@ -210,7 +210,7 @@ describe('commerce payment webhook route', () => {
       signWebhookPayload('test-commerce-secret', unsupported),
       { query: 'locale=en' },
     ), {
-      params: { provider: 'sandbox-card' },
+      params: Promise.resolve({ provider: 'sandbox-card' }),
     });
 
     expect(unsupportedResponse.status).toBe(400);

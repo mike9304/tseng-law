@@ -351,10 +351,10 @@ function createMissingMemberPageDocument(
           title: heading,
           subtitle: memberWidgetSubtitle,
           defaultMode: 'login' as const,
-          showSignup: true,
+          showSignup: false,
           nextPath: `/${locale}/account`,
           loginLabel: widgetCopy.loginLabel,
-          signupLabel: widgetCopy.signupLabel,
+          signupLabel: '',
         },
       }] : []),
       ...(isAccountPage ? [{
@@ -747,6 +747,7 @@ export default function PageSwitcher({
   const slugPromptRef = useRef<HTMLDivElement | null>(null);
   const slugPromptRestoreFocusRef = useRef<HTMLElement | null>(null);
   const slugPromptClosingRef = useRef(false);
+  const pageOrderRequestInFlightRef = useRef(false);
   const columnsPage = pages.find((page) => page.slug === 'columns') ?? null;
   const visiblePages = useMemo(() => filterVisiblePageSwitcherPages(pages), [pages]);
   const displayPages = useMemo(() => sortPagesForDisplay(visiblePages), [visiblePages]);
@@ -1334,8 +1335,9 @@ export default function PageSwitcher({
     );
   };
 
-  const persistPageOrder = async (nextDisplayPages: PageMeta[], affectedPageId: string) => {
-    if (orderingPageId) return;
+  const persistPageOrder = useCallback(async (nextDisplayPages: PageMeta[], affectedPageId: string) => {
+    if (pageOrderRequestInFlightRef.current) return;
+    pageOrderRequestInFlightRef.current = true;
     setOrderingPageId(affectedPageId);
     setOpenMenuPageId(null);
     setErrorMessage(null);
@@ -1369,11 +1371,19 @@ export default function PageSwitcher({
     } catch {
       setErrorMessage(copy.savePageOrderError);
     } finally {
+      pageOrderRequestInFlightRef.current = false;
       setOrderingPageId(null);
       setDraggingPageId(null);
       setDragTargetPageId(null);
     }
-  };
+  }, [
+    copy.pageOrderSaved,
+    copy.savePageOrderError,
+    fetchPages,
+    locale,
+    onPagesChange,
+    siteId,
+  ]);
 
   const handleMovePage = async (page: PageMeta, direction: -1 | 1) => {
     const nextDisplayPages = reorderDisplayPages(displayPages, page.pageId, direction);

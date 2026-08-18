@@ -133,6 +133,25 @@ describe('canonical attorney SEO identity', () => {
     });
   });
 
+  it('publishes the official email and localized consultation URL without a general telephone', () => {
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+      const payload = buildLegalServiceJsonLd(locale);
+
+      expect(payload).toMatchObject({
+        email: 'wei@hoveringlaw.com.tw',
+        contactPoint: [
+          {
+            email: 'wei@hoveringlaw.com.tw',
+            url: `https://tseng-law.com/${locale}/contact`,
+          },
+        ],
+      });
+      expect(payload).not.toHaveProperty('telephone');
+      expect(payload.contactPoint[0]).not.toHaveProperty('telephone');
+      expect(JSON.stringify(payload)).not.toContain('+82-10-2992-9304');
+    }
+  });
+
   it('does not retain the incorrect Chinese name in identity source files', () => {
     for (const sourceFile of identitySourceFiles) {
       const source = readFileSync(path.join(process.cwd(), sourceFile), 'utf8');

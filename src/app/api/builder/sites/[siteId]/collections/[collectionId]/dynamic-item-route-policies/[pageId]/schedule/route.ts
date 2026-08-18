@@ -19,8 +19,9 @@ const schedulePayloadSchema = z.object({
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { siteId: string; collectionId: string; pageId: string } },
+  props: { params: Promise<{ siteId: string; collectionId: string; pageId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
   if (!isDefaultBuilderSiteId(params.siteId)) {

@@ -7,7 +7,10 @@ import {
   rejectTranslationReleaseApproval,
 } from '@/lib/builder/publish-gate/translation-release-approval-store';
 import { summarizeTranslationReleaseApproval } from '@/lib/builder/publish-gate/translation-release-approval-model';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import { userHasPermission } from '@/lib/builder/security/resolve-permission';
 
 export const runtime = 'nodejs';
@@ -18,11 +21,9 @@ const decisionSchema = z.object({
   comment: z.string().trim().max(500).optional(),
 }).strict();
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } },
-) {
-  const auth = guardBuilderRead(request);
+export async function GET(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
+  const auth = await guardBuilderReadWithPermission(request, 'manage-translations');
   if (auth instanceof NextResponse) return auth;
 
   const approval = await getTranslationReleaseApproval(params.id);
@@ -30,10 +31,8 @@ export async function GET(
   return NextResponse.json({ ok: true, approval: summarizeTranslationReleaseApproval(approval) });
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { id: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, {
     bucket: 'mutation',
     permission: 'settings',

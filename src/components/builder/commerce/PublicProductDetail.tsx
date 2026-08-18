@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
@@ -372,7 +373,15 @@ export default function PublicProductDetail({
           <div className={styles.gallery} data-commerce-product-gallery>
             <div className={styles.mainMedia} data-commerce-product-media-main={activeMedia?.mediaId ?? 'fallback'}>
               {activeMedia?.url ? (
-                <img src={activeMedia.url} alt={activeMedia.alt || product.title} />
+                <Image
+                  src={activeMedia.url}
+                  alt={activeMedia.alt || product.title}
+                  width={1200}
+                  height={900}
+                  sizes="(max-width: 900px) calc(100vw - 32px), 672px"
+                  unoptimized
+                  priority
+                />
               ) : (
                 <div className={styles.mediaFallback}>{t.mediaFallback}</div>
               )}
@@ -389,7 +398,14 @@ export default function PublicProductDetail({
                     data-commerce-product-media-selected={activeMedia?.mediaId === item.mediaId ? 'true' : 'false'}
                     onClick={() => setSelectedMediaId(item.mediaId)}
                   >
-                    <img src={item.url} alt={item.alt || product.title} />
+                    <Image
+                      src={item.url}
+                      alt={item.alt || product.title}
+                      width={320}
+                      height={320}
+                      sizes="(max-width: 560px) calc((100vw - 44px) / 3), (max-width: 900px) calc((100vw - 62px) / 4), 160px"
+                      unoptimized
+                    />
                   </button>
                 ))}
               </div>
@@ -517,7 +533,14 @@ export default function PublicProductDetail({
                     data-commerce-product-slug={item.slug}
                   >
                     {relatedMedia?.url ? (
-                      <img src={relatedMedia.url} alt={relatedMedia.alt || item.title} />
+                      <Image
+                        src={relatedMedia.url}
+                        alt={relatedMedia.alt || item.title}
+                        width={600}
+                        height={450}
+                        sizes="(max-width: 560px) calc(50vw - 19px), (max-width: 900px) calc(50vw - 31px), 270px"
+                        unoptimized
+                      />
                     ) : (
                       <span className={styles.relatedFallback} aria-hidden />
                     )}
@@ -570,7 +593,16 @@ export default function PublicProductDetail({
                     data-commerce-cart-item={item.itemId}
                     data-commerce-cart-item-sku={item.sku}
                   >
-                    {item.imageUrl ? <img src={item.imageUrl} alt={item.imageAlt || item.title} /> : <span aria-hidden />}
+                    {item.imageUrl ? (
+                      <Image
+                        src={item.imageUrl}
+                        alt={item.imageAlt || item.title}
+                        width={152}
+                        height={152}
+                        sizes="76px"
+                        unoptimized
+                      />
+                    ) : <span aria-hidden />}
                     <div className={styles.cartItemBody}>
                       <Link href={`/${locale}/store/products/${encodeURIComponent(item.productSlug)}`}>
                         {item.title}

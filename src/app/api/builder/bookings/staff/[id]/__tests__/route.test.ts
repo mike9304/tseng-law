@@ -60,7 +60,7 @@ describe('/api/builder/bookings/staff/[id]', () => {
   it('returns localized not-found errors for missing staff on PATCH', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ email: 'next@example.com' }, 'en'), {
-      params: { id: 'staff-route-test' },
+      params: Promise.resolve({ id: 'staff-route-test' }),
     });
     const payload = await response.json();
 
@@ -76,7 +76,7 @@ describe('/api/builder/bookings/staff/[id]', () => {
     vi.mocked(getStaff).mockResolvedValueOnce(staff());
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ email: 'not-email' }, 'zh-hant'), {
-      params: { id: 'staff-route-test' },
+      params: Promise.resolve({ id: 'staff-route-test' }),
     });
     const payload = await response.json();
 
@@ -92,7 +92,7 @@ describe('/api/builder/bookings/staff/[id]', () => {
     vi.mocked(getStaff).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ email: 'updated@example.com' }, 'ko'), {
-      params: { id: 'staff-route-test' },
+      params: Promise.resolve({ id: 'staff-route-test' }),
     });
     const payload = await response.json();
 
@@ -110,7 +110,7 @@ describe('/api/builder/bookings/staff/[id]', () => {
   it('returns localized not-found errors for missing staff on DELETE', async () => {
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('ko'), {
-      params: { id: 'staff-route-test' },
+      params: Promise.resolve({ id: 'staff-route-test' }),
     });
     const payload = await response.json();
 
@@ -127,7 +127,7 @@ describe('/api/builder/bookings/staff/[id]', () => {
     vi.mocked(getStaff).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('en'), {
-      params: { id: 'staff-route-test' },
+      params: Promise.resolve({ id: 'staff-route-test' }),
     });
     const payload = await response.json();
 

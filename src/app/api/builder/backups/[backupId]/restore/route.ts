@@ -11,10 +11,8 @@ const payloadSchema = z.object({
   dryRun: z.boolean().optional(),
 });
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { backupId: string } },
-) {
+export async function POST(request: NextRequest, props: { params: Promise<{ backupId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
 

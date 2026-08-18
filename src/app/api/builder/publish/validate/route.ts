@@ -8,7 +8,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { runAllChecks } from '@/lib/builder/publish-gate/gate-runner';
 import { readPageCanvas, readSiteDocument } from '@/lib/builder/site/persistence';
 import { normalizeLocale } from '@/lib/locales';
@@ -25,7 +25,7 @@ const querySchema = z.object({
 });
 
 export async function GET(request: NextRequest) {
-  const blocked = guardBuilderRead(request);
+  const blocked = await guardBuilderReadWithPermission(request, 'edit-pages');
   if (blocked instanceof NextResponse) return blocked;
 
   const params = querySchema.safeParse(Object.fromEntries(request.nextUrl.searchParams));
@@ -63,7 +63,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const suite = await runAllChecks(canvas, pageMeta, site);
+    const suite = await runAllChecks(canvas, pageMeta, site, siteId);
     return NextResponse.json({
       ok: true,
       pageId: pageMeta.pageId,

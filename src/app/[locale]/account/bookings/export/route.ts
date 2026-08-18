@@ -14,7 +14,8 @@ import { normalizeLocale } from '@/lib/locales';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-export async function GET(request: NextRequest, { params }: { params: { locale: string } }) {
+export async function GET(request: NextRequest, props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const member = await getCurrentSiteMember();
   if (!member) {

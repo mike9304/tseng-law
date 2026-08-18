@@ -5,7 +5,11 @@ import { getBookingMutationApiErrorPayload } from '@/lib/builder/bookings/bookin
 import { bookingUpdateSchema } from '@/lib/builder/bookings/types';
 import { getBooking, getService, getStaff, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
-import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
+import {
+  acquireSlotLock,
+  releaseSlotLock,
+  type SlotLockLease,
+} from '@/lib/builder/bookings/slot-lock';
 import { restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
 import { maybeCreateBookingZoomLink } from '@/lib/builder/bookings/zoom-handoff';
 import { normalizeLocale } from '@/lib/locales';
@@ -13,7 +17,8 @@ import { normalizeLocale } from '@/lib/locales';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 
@@ -45,31 +50,33 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   const timingChanged = nextStaffId !== existing.staffId || nextStartAt !== existing.startAt;
   const resourceIds = service.requiredResourceIds ?? [];
   const nextEndAt = timingChanged ? addBookingDuration(nextStartAt, service.durationMinutes) : existing.endAt;
-  let acquiredSlotKey: { serviceId: string; staffId: string; startAt: string; resourceIds: string[] } | null = null;
+  let acquiredSlotLease: SlotLockLease | null = null;
   if (timingChanged && parsed.data.status !== 'cancelled') {
     const slotKey = {
       serviceId: existing.serviceId,
       staffId: nextStaffId,
       startAt: nextStartAt,
       resourceIds,
+      bookingId: existing.bookingId,
     };
-    if (!acquireSlotLock(slotKey)) {
+    const slotLease = await acquireSlotLock(slotKey);
+    if (!slotLease) {
       return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'slot_lock_conflict'), { status: 409 });
     }
-    acquiredSlotKey = slotKey;
+    acquiredSlotLease = slotLease;
     try {
       const available = await isSlotAvailable({
         ...slotKey,
         excludeBookingId: existing.bookingId,
       });
       if (!available) {
-        releaseSlotLock(slotKey);
-        acquiredSlotKey = null;
+        await releaseSlotLock(slotLease).catch(() => undefined);
+        acquiredSlotLease = null;
         return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'slot_unavailable'), { status: 409 });
       }
     } catch (error) {
-      releaseSlotLock(slotKey);
-      acquiredSlotKey = null;
+      await releaseSlotLock(slotLease).catch(() => undefined);
+      acquiredSlotLease = null;
       throw error;
     }
   }
@@ -106,7 +113,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   try {
     await saveBooking(next);
   } finally {
-    if (acquiredSlotKey) releaseSlotLock(acquiredSlotKey);
+    if (acquiredSlotLease) await releaseSlotLock(acquiredSlotLease).catch(() => undefined);
   }
   let emailDelivery;
   if (existing.status !== 'cancelled' && next.status === 'cancelled') {

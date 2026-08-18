@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
-import { guardMutation } from '@/lib/builder/security/guard';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import {
   deleteMember,
   getMember,
@@ -52,8 +54,9 @@ function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
   return normalizeLocale(queryLocale);
 }
 
-export async function GET(request: NextRequest, { params }: { params: { memberId: string } }) {
-  const auth = requireBuilderAdminAuth(request);
+export async function GET(request: NextRequest, props: { params: Promise<{ memberId: string }> }) {
+  const params = await props.params;
+  const auth = await guardBuilderReadWithPermission(request, 'manage-users');
   if (auth instanceof NextResponse) return auth;
   const locale = resolveRequestLocale(request);
   try {
@@ -66,8 +69,12 @@ export async function GET(request: NextRequest, { params }: { params: { memberId
   }
 }
 
-export async function PATCH(request: NextRequest, { params }: { params: { memberId: string } }) {
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+export async function PATCH(request: NextRequest, props: { params: Promise<{ memberId: string }> }) {
+  const params = await props.params;
+  const auth = await guardMutation(request, {
+    bucket: 'mutation',
+    permission: 'manage-users',
+  });
   if (auth instanceof NextResponse) return auth;
 
   let errorLocale = resolveRequestLocale(request);
@@ -94,8 +101,12 @@ export async function PATCH(request: NextRequest, { params }: { params: { member
   }
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { memberId: string } }) {
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+export async function DELETE(request: NextRequest, props: { params: Promise<{ memberId: string }> }) {
+  const params = await props.params;
+  const auth = await guardMutation(request, {
+    bucket: 'mutation',
+    permission: 'manage-users',
+  });
   if (auth instanceof NextResponse) return auth;
   const locale = resolveRequestLocale(request);
   try {

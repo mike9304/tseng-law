@@ -111,6 +111,38 @@ function applyLocaleIndexabilityRules(
   });
 }
 
+/**
+ * Hreflang must be reciprocal. Builder entries can know about the Japanese
+ * fallback page while an older static sibling was created without a `ja`
+ * alternate. Advertise Japanese only when that exact URL is present in the
+ * final sitemap, so unsupported/custom Japanese routes are never invented.
+ */
+function addReciprocalJapaneseAlternates(
+  entries: MetadataRoute.Sitemap,
+): MetadataRoute.Sitemap {
+  const publishedUrls = new Set(entries.map((entry) => entry.url));
+
+  return entries.map((entry) => {
+    const route = getLocalizedSitemapRoute(entry.url);
+    if (!route || route.locale === 'ja') return entry;
+
+    const japaneseUrl = buildAbsoluteUrl(getLocalizedPath('ja', route.path));
+    if (!publishedUrls.has(japaneseUrl)) return entry;
+    if (entry.alternates?.languages?.ja === japaneseUrl) return entry;
+
+    return {
+      ...entry,
+      alternates: {
+        ...entry.alternates,
+        languages: {
+          ...entry.alternates?.languages,
+          ja: japaneseUrl,
+        },
+      },
+    };
+  });
+}
+
 function createEntry(
   locale: (typeof siteLocales)[number],
   path: string,
@@ -366,5 +398,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (takeNew) byUrl.set(entry.url, entry);
   }
 
-  return applyLocaleIndexabilityRules([...byUrl.values()]);
+  return applyLocaleIndexabilityRules(
+    addReciprocalJapaneseAlternates([...byUrl.values()]),
+  );
 }

@@ -32,10 +32,8 @@ function errorResponse(
   );
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { token: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ token: string }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const secret = resolveTrackingSecret();
   if (!secret) {

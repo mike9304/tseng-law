@@ -6,7 +6,7 @@ import { bookingCreateSchema, type Booking } from '@/lib/builder/bookings/types'
 import { getService, getStaff, makeBookingId, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
 import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
 import { runBookingBillingAutomation } from '@/lib/builder/billing-document-automation';
-import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
+import { acquireSlotLock, releaseSlotLock, renewSlotLock } from '@/lib/builder/bookings/slot-lock';
 import { redeemPackageCreditForBooking, restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
 import { bookingServicePriceSnapshot } from '@/lib/builder/bookings/pricing';
 import { maybeCreateBookingZoomLink } from '@/lib/builder/bookings/zoom-handoff';
@@ -93,7 +93,8 @@ export async function POST(request: NextRequest) {
     startAt: parsed.data.startAt,
     resourceIds,
   };
-  if (!acquireSlotLock(slotKey)) {
+  const slotLease = await acquireSlotLock(slotKey);
+  if (!slotLease) {
     return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'slot_lock_conflict'), { status: 409 });
   }
 
@@ -105,6 +106,9 @@ export async function POST(request: NextRequest) {
     }
 
     const bookingId = makeBookingId();
+    if (!await renewSlotLock(slotLease)) {
+      return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'booking_create_failed'), { status: 503 });
+    }
     const packageRedemption = service.paymentMode === 'paid' && !parsed.data.paymentIntentId && parsed.data.status !== 'cancelled'
       ? await redeemPackageCreditForBooking({
           bookingId,
@@ -112,7 +116,6 @@ export async function POST(request: NextRequest) {
           serviceId: service.serviceId,
         })
       : null;
-
     const zoom = await maybeCreateBookingZoomLink({
       service,
       staffId: staff.staffId,
@@ -165,7 +168,9 @@ export async function POST(request: NextRequest) {
       throw error;
     }
   } finally {
-    releaseSlotLock(slotKey);
+    await releaseSlotLock(slotLease).catch(() => {
+      console.error('[builder/bookings/admin-create] slot lease release failed');
+    });
   }
   if (!booking) {
     return NextResponse.json(getBookingMutationApiErrorPayload(locale, 'booking_create_failed'), { status: 500 });

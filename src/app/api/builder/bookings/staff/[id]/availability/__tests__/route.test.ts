@@ -1,18 +1,14 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   getStaffAvailability,
   saveStaffAvailability,
 } from '@/lib/builder/bookings/storage';
 import type { DayOfWeek, StaffAvailability } from '@/lib/builder/bookings/types';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ username: 'admin' })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'admin' })),
   guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
 }));
 
@@ -61,7 +57,7 @@ function patchRequest(body: unknown, locale = 'ko'): NextRequest {
 describe('/api/builder/bookings/staff/[id]/availability', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.mocked(requireBuilderAdminAuth).mockReturnValue({ username: 'admin' });
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({ username: 'admin' });
     vi.mocked(guardMutation).mockResolvedValue({ user: { id: 'admin-1' } } as never);
   });
 
@@ -70,11 +66,15 @@ describe('/api/builder/bookings/staff/[id]/availability', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/bookings/staff/staff-route-test/availability'),
-      { params: { id: 'staff-route-test' } },
+      { params: Promise.resolve({ id: 'staff-route-test' }) },
     );
     const payload = await response.json();
 
     expect(response.status).toBe(200);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-bookings',
+    );
     expect(payload.availability).toEqual(expect.objectContaining({
       staffId: 'staff-route-test',
       timezone: 'Asia/Seoul',
@@ -95,7 +95,7 @@ describe('/api/builder/bookings/staff/[id]/availability', () => {
       }],
       timezone: 'Mars/Base',
     }, 'zh-hant'), {
-      params: { id: 'staff-route-test' },
+      params: Promise.resolve({ id: 'staff-route-test' }),
     });
     const payload = await response.json();
 
@@ -116,7 +116,7 @@ describe('/api/builder/bookings/staff/[id]/availability', () => {
         tuesday: [{ start: '10:00', end: '15:00' }],
       },
     }), 'en'), {
-      params: { id: 'staff-route-test' },
+      params: Promise.resolve({ id: 'staff-route-test' }),
     });
     const payload = await response.json();
 

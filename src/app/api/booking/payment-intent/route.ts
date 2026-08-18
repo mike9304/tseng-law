@@ -1,10 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { mapPublicRateLimitDenial } from '@/lib/builder/security/public-rate-limit-response';
 import { getService } from '@/lib/builder/bookings/storage';
 import { findApplicablePackageCredit } from '@/lib/builder/bookings/packages';
 import { bookingServicePriceSnapshot } from '@/lib/builder/bookings/pricing';
+import {
+  MEMBER_SESSION_COOKIE,
+  validateSession,
+} from '@/lib/builder/members/members-engine';
 import {
   getPublicBookingApiErrorPayload,
   type PublicBookingApiErrorCode,
@@ -60,7 +65,14 @@ function clientIp(request: NextRequest): string {
   );
 }
 
+function normalizeEmail(email: string): string {
+  return email.trim().toLowerCase();
+}
+
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || undefined);
   const ip = clientIp(request);
   const rate = await checkRateLimit(`booking-payment-intent:${ip}`, 8, 60_000);
@@ -92,10 +104,20 @@ export async function POST(request: NextRequest) {
       return errorResponse(locale, 'booking_payment_free_service', 400);
     }
 
-    const packageCredit = await findApplicablePackageCredit({
-      customerEmail: parsed.data.customer.email,
-      serviceId: service.serviceId,
-    });
+    const sessionId = request.cookies.get(MEMBER_SESSION_COOKIE)?.value;
+    const member = sessionId ? await validateSession(sessionId) : null;
+    const mayUsePackageCredit = Boolean(
+      member
+      && member.verified
+      && !member.blocked
+      && normalizeEmail(member.email) === normalizeEmail(parsed.data.customer.email),
+    );
+    const packageCredit = mayUsePackageCredit
+      ? await findApplicablePackageCredit({
+          customerEmail: parsed.data.customer.email,
+          serviceId: service.serviceId,
+        })
+      : null;
     if (packageCredit) {
       return NextResponse.json({
         ok: true,

@@ -47,12 +47,10 @@ function validationError(locale: Locale, error: ZodError): NextResponse {
   return errorResponse(locale, 'validation_error', 400, { issues: error.flatten() });
 }
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { orderId: string } },
-) {
+export async function POST(request: NextRequest, props: { params: Promise<{ orderId: string }> }) {
+  const params = await props.params;
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   try {

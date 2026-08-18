@@ -27,10 +27,8 @@ function errorResponse(
   );
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { templateId: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ templateId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { allowReadOnly: true, permission: 'manage-campaigns' });
   if (auth instanceof NextResponse) return auth;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');
@@ -58,10 +56,8 @@ export async function GET(
   }
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { templateId: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ templateId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-campaigns' });
   if (auth instanceof NextResponse) return auth;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? 'ko');

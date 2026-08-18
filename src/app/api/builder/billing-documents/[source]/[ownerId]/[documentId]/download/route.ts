@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import {
   billingManualPaymentInstructionsForTarget,
   loadBillingDocumentAutomationSettings,
@@ -41,9 +41,10 @@ function errorResponse(
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { source: string; ownerId: string; documentId: string } },
+  props: { params: Promise<{ source: string; ownerId: string; documentId: string }> }
 ) {
-  const auth = requireBuilderAdminAuth(request);
+  const params = await props.params;
+  const auth = await guardBuilderReadWithPermission(request, 'view-commerce');
   if (auth instanceof NextResponse) return auth;
 
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);

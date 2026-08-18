@@ -52,7 +52,7 @@ describe('builder billing document payment link API', () => {
 
   it('returns localized source errors', async () => {
     const response = await POST(postRequest('bad', 'locale=zh-hant'), {
-      params: { source: 'bad', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'bad', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -67,7 +67,7 @@ describe('builder billing document payment link API', () => {
 
   it('returns localized validation errors for invalid link payloads', async () => {
     const response = await POST(postRequest('order', 'locale=ko', { expiresAt: 'bad-date' }), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -82,7 +82,7 @@ describe('builder billing document payment link API', () => {
 
   it('returns localized unavailable errors when a payment link cannot be created', async () => {
     const response = await POST(postRequest('order', 'locale=en'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -99,7 +99,7 @@ describe('builder billing document payment link API', () => {
     createBillingDocumentPaymentLinkMock.mockRejectedValueOnce(new Error('processor secret leaked'));
 
     const response = await POST(postRequest('order', 'locale=zh-hant'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -119,7 +119,7 @@ describe('builder billing document payment link API', () => {
 
   it('returns localized not-found errors when revoking missing payment links', async () => {
     const response = await DELETE(deleteRequest('order', 'locale=zh-hant'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -136,7 +136,7 @@ describe('builder billing document payment link API', () => {
     revokeBillingDocumentPaymentLinkMock.mockRejectedValueOnce(new Error('secret token leaked'));
 
     const response = await DELETE(deleteRequest('order', 'locale=ko'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -161,11 +161,11 @@ describe('builder billing document payment link API', () => {
     revokeBillingDocumentPaymentLinkMock.mockResolvedValueOnce(revoked as never);
 
     const postResponse = await POST(postRequest('order', 'locale=en'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const postPayload = await postResponse.json();
     const deleteResponse = await DELETE(deleteRequest('order', 'locale=en'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const deletePayload = await deleteResponse.json();
 

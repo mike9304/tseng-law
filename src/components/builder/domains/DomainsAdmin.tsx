@@ -152,7 +152,7 @@ export default function DomainsAdmin({ locale, initialDomains }: Props) {
       }
     }, 30_000);
     return () => clearInterval(interval);
-  }, [autoPollEnabled, domains]);
+  }, [autoPollEnabled, domains, locale]);
 
   async function refresh() {
     const res = await fetch(`/api/builder/domains?locale=${encodeURIComponent(locale)}`, { credentials: 'same-origin' });

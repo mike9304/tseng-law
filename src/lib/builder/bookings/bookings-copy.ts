@@ -29,6 +29,7 @@ export type PublicBookingApiErrorCode =
   | 'booking_create_slot_locked'
   | 'booking_create_slot_unavailable'
   | 'booking_create_package_unavailable'
+  | 'booking_storage_unavailable'
   | 'booking_create_failed';
 
 export interface PublicBookingApiErrorPayload {
@@ -66,6 +67,7 @@ const publicBookingApiErrorMessages: Record<Locale, Record<PublicBookingApiError
     booking_create_slot_locked: '선택한 시간이 다른 요청에서 처리 중입니다.',
     booking_create_slot_unavailable: '선택한 시간은 더 이상 예약할 수 없습니다.',
     booking_create_package_unavailable: '사용 가능한 패키지 크레딧이 없습니다.',
+    booking_storage_unavailable: '예약 저장 시스템을 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도해 주세요.',
     booking_create_failed: '예약을 생성하지 못했습니다.',
   },
   'zh-hant': {
@@ -97,6 +99,7 @@ const publicBookingApiErrorMessages: Record<Locale, Record<PublicBookingApiError
     booking_create_slot_locked: '所選時段正在由其他請求處理。',
     booking_create_slot_unavailable: '所選時段已無法預約。',
     booking_create_package_unavailable: '沒有可用的方案點數。',
+    booking_storage_unavailable: '預約儲存系統暫時無法使用，請稍後再試。',
     booking_create_failed: '無法建立預約。',
   },
   en: {
@@ -128,6 +131,7 @@ const publicBookingApiErrorMessages: Record<Locale, Record<PublicBookingApiError
     booking_create_slot_locked: 'The selected time is being processed by another request.',
     booking_create_slot_unavailable: 'The selected time is no longer available.',
     booking_create_package_unavailable: 'No package credit is available.',
+    booking_storage_unavailable: 'Booking storage is temporarily unavailable. Try again shortly.',
     booking_create_failed: 'Unable to create the booking.',
   },
 };

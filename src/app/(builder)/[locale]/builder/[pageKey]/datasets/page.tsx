@@ -52,11 +52,12 @@ const datasetCopy: Record<
   },
 };
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale; pageKey: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: Locale; pageKey: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const pageKey = isBuilderPageKey(params.pageKey) ? params.pageKey : "home";
   const copy = datasetCopy[locale];
@@ -70,13 +71,14 @@ export function generateMetadata({
   });
 }
 
-export default async function BuilderPageDatasetsPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: Locale; pageKey: string };
-  searchParams?: { targetId?: string };
-}) {
+export default async function BuilderPageDatasetsPage(
+  props: {
+    params: Promise<{ locale: Locale; pageKey: string }>;
+    searchParams?: Promise<{ targetId?: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = datasetCopy[locale];
   if (!isBuilderPageKey(params.pageKey)) {

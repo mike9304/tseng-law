@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { runOrderBillingAutomation } from '@/lib/builder/billing-document-automation';
 import {
@@ -12,7 +12,10 @@ import { guardMutation } from '@/lib/builder/security/guard';
 import { POST } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/billing-documents', () => ({
@@ -79,7 +82,10 @@ function postRequest(
 describe('builder billing document manual payments API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     parseBillingDocumentSourceMock.mockImplementation((source) => (
       source === 'order' || source === 'booking' ? source as never : null
     ));
@@ -98,9 +104,30 @@ describe('builder billing document manual payments API', () => {
     queueBillingPaymentReceivedNotificationMock.mockResolvedValue(undefined as never);
   });
 
+  it('returns 401 and short-circuits manual-payment stores when auth fails', async () => {
+    const deniedRequest = postRequest('order', 'locale=en');
+    guardMutationMock.mockResolvedValueOnce(
+      NextResponse.json({ ok: false, error: 'Unauthorized' }, { status: 401 }) as never,
+    );
+
+    const response = await POST(deniedRequest, {
+      params: Promise.resolve({ source: 'order', ownerId: 'order-1', documentId: 'doc-1' }),
+    });
+
+    expect(response.status).toBe(401);
+    expect(guardMutationMock).toHaveBeenCalledWith(deniedRequest, {
+      bucket: 'mutation',
+      permission: 'manage-commerce',
+    });
+    expect(getBillingDocumentMock).not.toHaveBeenCalled();
+    expect(recordOrderManualPaymentMock).not.toHaveBeenCalled();
+    expect(recordBookingManualPaymentMock).not.toHaveBeenCalled();
+    expect(runOrderBillingAutomationMock).not.toHaveBeenCalled();
+  });
+
   it('returns localized errors for unsupported document sources', async () => {
     const response = await POST(postRequest('bad', 'locale=zh-hant'), {
-      params: { source: 'bad', ownerId: 'order-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'bad', ownerId: 'order-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -115,7 +142,7 @@ describe('builder billing document manual payments API', () => {
 
   it('returns localized validation errors for invalid manual payment payloads', async () => {
     const response = await POST(postRequest('order', 'locale=ko', JSON.stringify({ amountCents: 0 })), {
-      params: { source: 'order', ownerId: 'order-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'order-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -131,7 +158,7 @@ describe('builder billing document manual payments API', () => {
 
   it('returns localized balance errors before recording a payment', async () => {
     const response = await POST(postRequest('order', 'locale=zh-hant', JSON.stringify({ amountCents: 9000 })), {
-      params: { source: 'order', ownerId: 'order-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'order-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -152,7 +179,7 @@ describe('builder billing document manual payments API', () => {
     } as never);
 
     const response = await POST(postRequest('order', 'locale=en'), {
-      params: { source: 'order', ownerId: 'order-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'order-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -166,7 +193,7 @@ describe('builder billing document manual payments API', () => {
 
   it('returns localized invalid JSON errors', async () => {
     const response = await POST(postRequest('order', 'locale=ko', '{"amountCents":'), {
-      params: { source: 'order', ownerId: 'order-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'order-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -202,11 +229,15 @@ describe('builder billing document manual payments API', () => {
     } as never);
 
     const response = await POST(postRequest('order', 'locale=en', JSON.stringify({ amountCents: 5000 })), {
-      params: { source: 'order', ownerId: 'order-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'order-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
     expect(response.status).toBe(200);
+    expect(guardMutationMock).toHaveBeenCalledWith(expect.any(NextRequest), {
+      bucket: 'mutation',
+      permission: 'manage-commerce',
+    });
     expect(recordOrderManualPaymentMock).toHaveBeenCalledWith('order-1', {
       amountCents: 5000,
       method: 'other',

@@ -158,9 +158,9 @@ describe('readPublishedPageCanvas', () => {
     const offices = normalized?.nodes.find((node) => node.id === 'home-offices');
     const contact = normalized?.nodes.find((node) => node.id === 'home-contact');
 
-    expect(normalized?.stageHeight).toBe(8504);
-    expect(offices?.rect).toMatchObject({ y: 7023, height: 909 });
-    expect(contact?.rect).toMatchObject({ y: 7932, height: 532 });
+    expect(normalized?.stageHeight).toBe(7115);
+    expect(offices?.rect).toMatchObject({ y: 5674, height: 909 });
+    expect(contact?.rect).toMatchObject({ y: 6583, height: 532 });
   });
 
   it('does not rewrite a user-adjusted composite that only resembles an old seed', async () => {

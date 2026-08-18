@@ -195,10 +195,8 @@ function appendRedirectIfValid(
   return { created: true };
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -322,10 +320,8 @@ export async function PATCH(
   }
 }
 
-export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

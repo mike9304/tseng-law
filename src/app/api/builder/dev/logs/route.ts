@@ -7,7 +7,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import {
-  guardBuilderRead,
+  guardBuilderReadWithPermission,
   guardMutation,
 } from '@/lib/builder/security/guard';
 import {
@@ -171,7 +171,7 @@ async function exportLogs(request: NextRequest): Promise<NextResponse> {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'settings');
   if (auth instanceof NextResponse) return auth;
   if (request.nextUrl.searchParams.has('format')) {
     return exportLogs(request);

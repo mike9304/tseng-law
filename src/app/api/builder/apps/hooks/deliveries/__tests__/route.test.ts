@@ -1,18 +1,18 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { listStoredAppHookDeliveries } from '@/lib/builder/apps/hook-deliveries';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { GET } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'apps-admin@example.test' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'apps-admin@example.test' })),
 }));
 
 vi.mock('@/lib/builder/apps/hook-deliveries', () => ({
   listStoredAppHookDeliveries: vi.fn(),
 }));
 
-const guardBuilderReadMock = vi.mocked(guardBuilderRead);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const listStoredAppHookDeliveriesMock = vi.mocked(listStoredAppHookDeliveries);
 
 function request(query = ''): NextRequest {
@@ -22,7 +22,7 @@ function request(query = ''): NextRequest {
 describe('builder app hook deliveries API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    guardBuilderReadMock.mockReturnValue({ username: 'apps-admin@example.test' });
+    guardBuilderReadWithPermissionMock.mockResolvedValue({ username: 'apps-admin@example.test' });
     listStoredAppHookDeliveriesMock.mockResolvedValue([
       {
         deliveryId: 'appdlv-1',
@@ -48,6 +48,7 @@ describe('builder app hook deliveries API', () => {
     const data = await response.json();
 
     expect(response.status).toBe(200);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(expect.any(NextRequest), 'settings');
     expect(listStoredAppHookDeliveriesMock).toHaveBeenCalledWith({
       hookId: 'site-search-publish-1',
       status: 'failed',
@@ -66,6 +67,18 @@ describe('builder app hook deliveries API', () => {
       ],
       total: 1,
     });
+  });
+
+  it('short-circuits GET when settings permission is denied', async () => {
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: settings' }, { status: 403 }),
+    );
+
+    const response = await GET(request('locale=en'));
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(expect.any(NextRequest), 'settings');
+    expect(listStoredAppHookDeliveriesMock).not.toHaveBeenCalled();
   });
 
   it('returns localized list failures without leaking exception details', async () => {

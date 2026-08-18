@@ -8,7 +8,7 @@ import {
   writeBuilderHomeSnapshot,
 } from '@/lib/builder/persistence';
 import type { BuilderHomeDocumentState, BuilderPageDocument } from '@/lib/builder/types';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   getBuilderSiteApiErrorPayload,
   type BuilderSiteApiErrorCode,
@@ -73,7 +73,7 @@ function assertRequestLocaleMatches(
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardBuilderRead(request);
+  const auth = await guardBuilderReadWithPermission(request, 'edit-pages');
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeBuilderHomeLocale(request.nextUrl.searchParams.get('locale'));

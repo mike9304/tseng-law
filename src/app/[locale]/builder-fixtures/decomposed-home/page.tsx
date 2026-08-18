@@ -22,11 +22,12 @@ function createDecomposedHomeFixtureDocument(locale: Locale, updatedAt: string):
   };
 }
 
-export default function BuilderDecomposedHomeFixturePage({
-  params,
-}: {
-  params: { locale: string };
-}) {
+export default async function BuilderDecomposedHomeFixturePage(
+  props: {
+    params: Promise<{ locale: string }>;
+  }
+) {
+  const params = await props.params;
   if (process.env.NODE_ENV === 'production') {
     notFound();
   }

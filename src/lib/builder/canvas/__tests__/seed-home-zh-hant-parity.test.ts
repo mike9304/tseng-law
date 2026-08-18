@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { createHomePageCanvasDocumentDecomposed } from '../seed-home';
-import { computeTopLevelFlowSectionMetrics } from '../flow';
+import {
+  computeTopLevelFlowSectionMetrics,
+  isCanonicalDecomposedHomeFlowStack,
+  isCssParityOverlayFlowSection,
+} from '../flow';
 import type { BuilderCanvasNode } from '../types';
 
 type ResponsiveRect = NonNullable<NonNullable<NonNullable<BuilderCanvasNode['responsive']>['mobile']>['rect']>;
@@ -42,8 +46,8 @@ describe('zh-hant decomposed home parity nodes', () => {
     expect(textNodeText(nodesById.get('home-stats-title'))).toBe('從官方資料看跨境服務基礎');
     expect(nodesById.get('home-stats-container')?.rect).toMatchObject({ x: 51, width: 1178 });
     expect(nodesById.get('home-stats-title')?.rect).toMatchObject({ width: 1178, height: 54 });
-    expect(nodesById.get('home-stats-description')?.rect).toMatchObject({ y: 201, width: 720, height: 72 });
-    expect(nodesById.get('home-stats-grid')?.rect).toMatchObject({ y: 238, width: 1178, height: 126 });
+    expect(nodesById.get('home-stats-description')?.rect).toMatchObject({ y: 106, width: 720, height: 64 });
+    expect(nodesById.get('home-stats-grid')?.rect).toMatchObject({ y: 200, width: 1178, height: 164 });
 
     expect([0, 1, 2, 3].map((index) => ({
       number: textNodeText(nodesById.get(`home-stats-number-${index}`)),
@@ -58,54 +62,62 @@ describe('zh-hant decomposed home parity nodes', () => {
       { number: '2', label: '最高級別語言資格', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
     ]);
 
-    expect([0, 1, 2].map((index) => nodeContentLabel(nodesById.get(`home-offices-tab-${index}`)))).toEqual([
+    expect([0, 1, 2, 3].map((index) => nodeContentLabel(nodesById.get(`home-offices-tab-${index}`)))).toEqual([
+      '台北',
       '台中',
       '高雄',
-      '台北',
+      '屏東',
     ]);
 
-    const taichungLayout = nodesById.get('home-offices-layout-0');
+    const taichungLayout = nodesById.get('home-offices-layout-1');
     expect(nodesById.get('home-offices-container')?.rect).toMatchObject({ x: 51, width: 1178 });
     expect(taichungLayout?.rect).toMatchObject({ x: 0, y: 198, width: 1178, height: 422 });
-    expect(nodesById.get('home-offices-layout-0-map')?.kind).toBe('container');
-    expect(nodesById.get('home-offices-layout-0-map')?.rect).toMatchObject({ width: 687, height: 422 });
-    expect(nodesById.get('home-offices-layout-0-map')?.content).toMatchObject({
+    expect(nodesById.get('home-offices-layout-1-map')?.kind).toBe('container');
+    expect(nodesById.get('home-offices-layout-1-map')?.rect).toMatchObject({ width: 687, height: 422 });
+    expect(nodesById.get('home-offices-layout-1-map')?.content).toMatchObject({
       className: 'office-map-wrap',
     });
-    expect(nodesById.get('home-offices-layout-0-map-embed')?.kind).toBe('video-embed');
-    expect(nodesById.get('home-offices-layout-0-map-embed')?.content).toMatchObject({
+    expect(nodesById.get('home-offices-layout-1-map-embed')?.kind).toBe('video-embed');
+    expect(nodesById.get('home-offices-layout-1-map-embed')?.content).toMatchObject({
       provider: 'url',
     });
-    expect(JSON.stringify(nodesById.get('home-offices-layout-0-map-embed')?.content)).toContain('maps/embed?pb=');
-    expect(nodesById.get('home-offices-layout-0-map-fallback')?.content).toMatchObject({
+    expect(JSON.stringify(nodesById.get('home-offices-layout-1-map-embed')?.content)).toContain('maps/embed?pb=');
+    expect(nodesById.get('home-offices-layout-1-map-fallback')?.content).toMatchObject({
       className: 'office-map-fallback',
     });
-    expect(nodesById.get('home-offices-layout-0-map-panel')?.parentId).toBe('home-offices-layout-0-map-fallback');
-    expect(textNodeText(nodesById.get('home-offices-layout-0-map-kicker'))).toBe('地圖預覽');
-    expect(textNodeText(nodesById.get('home-offices-layout-0-map-title'))).toBe('台中');
-    expect(textNodeText(nodesById.get('home-offices-layout-0-map-address'))).toBe('臺中市北區館前路19號樓之1');
-    expect(nodesById.get('home-offices-layout-0-map-link')?.content).toMatchObject({
+    expect(nodesById.get('home-offices-layout-1-map-panel')?.parentId).toBe('home-offices-layout-1-map-fallback');
+    expect(textNodeText(nodesById.get('home-offices-layout-1-map-kicker'))).toBe('地圖預覽');
+    expect(textNodeText(nodesById.get('home-offices-layout-1-map-title'))).toBe('台中');
+    expect(textNodeText(nodesById.get('home-offices-layout-1-map-address'))).toBe('40453臺中市北區館前路19號6樓之1');
+    expect(nodesById.get('home-offices-layout-1-map-link')?.content).toMatchObject({
       label: '開啟地圖',
     });
     expect(JSON.stringify(taichungLayout)).not.toContain('無法載入地圖');
 
-    expect(textNodeText(nodesById.get('home-offices-layout-0-card-label'))).toBe('據點');
-    expect(textNodeText(nodesById.get('home-offices-layout-0-card-title'))).toBe('台中');
-    expect(textNodeText(nodesById.get('home-offices-layout-0-card-address'))).toBe('臺中市北區館前路19號樓之1');
-    expect(nodesById.get('home-offices-layout-0-card-phone')?.content).toMatchObject({
+    expect(textNodeText(nodesById.get('home-offices-layout-1-card-label'))).toBe('據點');
+    expect(textNodeText(nodesById.get('home-offices-layout-1-card-title'))).toBe('台中');
+    expect(textNodeText(nodesById.get('home-offices-layout-1-card-address'))).toBe('40453臺中市北區館前路19號6樓之1');
+    expect(nodesById.get('home-offices-layout-1-card-phone')?.content).toMatchObject({
       label: '電話: 04-2326-1862',
       href: 'tel:0423261862',
     });
-    expect(textNodeText(nodesById.get('home-offices-layout-0-card-fax'))).toBe('傳真: 04-2326-1863');
-    expect(nodesById.get('home-offices-layout-0-card-map-link')?.content).toMatchObject({
+    expect(textNodeText(nodesById.get('home-offices-layout-1-card-fax'))).toBe('傳真: 04-2326-1863');
+    expect(nodesById.get('home-offices-layout-1-card-map-link')?.content).toMatchObject({
       label: '在 Google 地圖查看 (照片·評論)',
     });
+    expect(textNodeText(nodesById.get('home-offices-layout-3-card-title'))).toBe('屏東');
+    expect(textNodeText(nodesById.get('home-offices-layout-3-card-address'))).toBe('90443屏東縣九如鄉九如路三段46號');
+    expect(nodesById.get('home-offices-layout-3-card-phone')?.content).toMatchObject({
+      label: '電話: 08-739-1689',
+      href: 'tel:087391689',
+    });
+    expect(textNodeText(nodesById.get('home-offices-layout-3-card-fax'))).toBe('傳真: 08-739-7362');
   });
 
   it('keeps inactive office tab layouts in one mobile/tablet slot instead of stacking them into page height', () => {
     const doc = createHomePageCanvasDocumentDecomposed('zh-hant');
     const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
-    const layoutRects = [0, 1, 2].map((index) => ({
+    const layoutRects = [0, 1, 2, 3].map((index) => ({
       mobile: mobileRect(requireNode(nodesById, `home-offices-layout-${index}`)),
       tablet: tabletRect(requireNode(nodesById, `home-offices-layout-${index}`)),
     }));
@@ -121,8 +133,10 @@ describe('zh-hant decomposed home parity nodes', () => {
       layoutRects[0].mobile.y,
       layoutRects[0].mobile.y,
       layoutRects[0].mobile.y,
+      layoutRects[0].mobile.y,
     ]);
     expect(layoutRects.map(({ tablet }) => tablet.y)).toEqual([
+      layoutRects[0].tablet.y,
       layoutRects[0].tablet.y,
       layoutRects[0].tablet.y,
       layoutRects[0].tablet.y,
@@ -130,5 +144,21 @@ describe('zh-hant decomposed home parity nodes', () => {
     expect(mobileMetrics.get('home-offices-root')?.minHeight).toBeLessThanOrEqual(980);
     expect(tabletMetrics.get('home-offices-root')?.minHeight).toBeLessThanOrEqual(1120);
     expect(contactMobile.y + contactMobile.height).toBeLessThanOrEqual(9800);
+  });
+
+  it('keeps the zh-hant dual-tree home on the 9-root canonical flow stack', () => {
+    const zh = createHomePageCanvasDocumentDecomposed('zh-hant');
+    const ko = createHomePageCanvasDocumentDecomposed('ko');
+    const overlayNodes = zh.nodes.filter(isCssParityOverlayFlowSection);
+    const metrics = computeTopLevelFlowSectionMetrics(zh.nodes);
+
+    expect(overlayNodes).toHaveLength(9);
+    expect(overlayNodes.every((node) => node.anchorName?.startsWith('mobile-parity-home-'))).toBe(true);
+    expect(isCanonicalDecomposedHomeFlowStack(zh.nodes)).toBe(true);
+    expect(isCanonicalDecomposedHomeFlowStack(ko.nodes)).toBe(true);
+    expect(metrics.get('home-insights-root')?.marginTop).toBe(0);
+    expect(metrics.get('home-hero')?.marginTop).toBeUndefined();
+    expect(zh.stageHeight).toBeLessThanOrEqual(7124);
+    expect(zh.stageHeight).toBeLessThan(ko.stageHeight + 200);
   });
 });

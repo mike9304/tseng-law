@@ -7,7 +7,7 @@ import {
   writeBuilderAssetLibraryState,
 } from '@/lib/builder/assets';
 import { recordAssetDelete, recordAssetUpload } from '@/lib/builder/audit/record';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   validateUploadFile,
   validateImageBytes,
@@ -22,7 +22,7 @@ function uploadValidationStatus(code?: string): 400 | 413 | 415 {
 }
 
 export async function GET(request: NextRequest) {
-  const blocked = guardBuilderRead(request);
+  const blocked = await guardBuilderReadWithPermission(request, 'edit-pages');
   if (blocked instanceof NextResponse) return blocked;
 
   try {

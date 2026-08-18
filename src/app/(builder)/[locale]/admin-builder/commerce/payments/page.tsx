@@ -4,6 +4,7 @@ import { listPaymentWebhookEvents } from '@/lib/builder/commerce/payment-webhook
 import { readSiteDocument } from '@/lib/builder/site/persistence';
 import { listOrders } from '@/lib/builder/commerce/orders-engine';
 import { listBookings, listServices } from '@/lib/builder/bookings/storage';
+import { requireBuilderPagePermission } from '@/lib/builder/security/page-permission';
 import PaymentAnalyticsExportClient from '@/components/builder/commerce/PaymentAnalyticsExportClient';
 import {
   buildPaymentAnalyticsAlerts,
@@ -543,8 +544,10 @@ function feeRows(locale: Locale, summary: PaymentAnalyticsProviderFeeSummary): A
   ];
 }
 
-export default async function CommercePaymentsAnalyticsPage({ params }: { params: { locale: Locale } }) {
+export default async function CommercePaymentsAnalyticsPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
+  await requireBuilderPagePermission('view-commerce');
   const copy = COPY[locale];
   const site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, locale);
   const [orders, bookings, services] = await Promise.all([

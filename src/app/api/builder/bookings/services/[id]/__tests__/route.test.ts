@@ -73,7 +73,7 @@ describe('/api/builder/bookings/services/[id]', () => {
   it('returns localized not-found errors for missing services on PATCH', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ name: { ko: '수정' } }, 'en'), {
-      params: { id: 'svc-route-test' },
+      params: Promise.resolve({ id: 'svc-route-test' }),
     });
     const payload = await response.json();
 
@@ -89,7 +89,7 @@ describe('/api/builder/bookings/services/[id]', () => {
     vi.mocked(getService).mockResolvedValueOnce(service());
     const route = await import('../route');
     const response = await route.PATCH(patchRequest(null, 'zh-hant'), {
-      params: { id: 'svc-route-test' },
+      params: Promise.resolve({ id: 'svc-route-test' }),
     });
     const payload = await response.json();
 
@@ -107,7 +107,7 @@ describe('/api/builder/bookings/services/[id]', () => {
     vi.mocked(getService).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ durationMinutes: 45 }, 'ko'), {
-      params: { id: 'svc-route-test' },
+      params: Promise.resolve({ id: 'svc-route-test' }),
     });
     const payload = await response.json();
 
@@ -132,7 +132,7 @@ describe('/api/builder/bookings/services/[id]', () => {
     vi.mocked(getService).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ paymentMode: 'free' }, 'ko'), {
-      params: { id: 'svc-route-test' },
+      params: Promise.resolve({ id: 'svc-route-test' }),
     });
     const payload = await response.json();
 
@@ -156,7 +156,7 @@ describe('/api/builder/bookings/services/[id]', () => {
     vi.mocked(getService).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ collectPaymentLater: true }, 'ko'), {
-      params: { id: 'svc-route-test' },
+      params: Promise.resolve({ id: 'svc-route-test' }),
     });
     const payload = await response.json();
 
@@ -173,7 +173,7 @@ describe('/api/builder/bookings/services/[id]', () => {
   it('returns localized not-found errors for missing services on DELETE', async () => {
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('ko'), {
-      params: { id: 'svc-route-test' },
+      params: Promise.resolve({ id: 'svc-route-test' }),
     });
     const payload = await response.json();
 
@@ -190,7 +190,7 @@ describe('/api/builder/bookings/services/[id]', () => {
     vi.mocked(getService).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('en'), {
-      params: { id: 'svc-route-test' },
+      params: Promise.resolve({ id: 'svc-route-test' }),
     });
     const payload = await response.json();
 

@@ -37,6 +37,8 @@ const FOCUSABLE_SELECTOR = [
   '[tabindex]:not([tabindex="-1"])',
 ].join(',');
 
+const useIsomorphicLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
+
 function currentFontStyle(fontFamily: string): FontPickerStyleVars {
   return {
     '--font-picker-current-family': fontFamilyCSS(fontFamily),
@@ -149,7 +151,7 @@ export default function FontPickerAdvanced({
     return () => window.removeEventListener('click', handleWindowClick, true);
   }, [open]);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (!open) return undefined;
     closingRef.current = false;
     const panel = panelRef.current;

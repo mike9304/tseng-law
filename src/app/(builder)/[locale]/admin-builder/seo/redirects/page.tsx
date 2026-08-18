@@ -6,7 +6,8 @@ import { getRedirectManagerCopy } from '@/components/builder/seo/redirect-manage
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = getRedirectManagerCopy(locale);
   return {
@@ -15,11 +16,12 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default async function RedirectsAdminPage({
-  params,
-}: {
-  params: { locale: Locale };
-}) {
+export default async function RedirectsAdminPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const redirects = await listRedirects('default', locale);
   return <RedirectsListView locale={locale} initialRedirects={redirects} />;

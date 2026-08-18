@@ -20,7 +20,8 @@ import { SendDocumentEmailButton } from '@/components/members/SendDocumentEmailB
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const title = locale === 'ko' ? '예약 상세' : locale === 'zh-hant' ? '預約詳情' : 'Booking details';
   return {
@@ -264,7 +265,8 @@ function packageCreditStatusLabel(locale: Locale, status: string): string {
   return status;
 }
 
-export default async function MemberBookingDetailPage({ params }: { params: { locale: string; bookingId: string } }) {
+export default async function MemberBookingDetailPage(props: { params: Promise<{ locale: string; bookingId: string }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const member = await getCurrentSiteMember();
   if (!member) redirect(`/${locale}/login?next=${encodeURIComponent(`/${locale}/account/bookings/${params.bookingId}`)}`);

@@ -87,7 +87,7 @@ function MemberProfileFormRender({
     return () => {
       canceled = true;
     };
-  }, [isPublished]);
+  }, [effectiveLocale, isPublished]);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();

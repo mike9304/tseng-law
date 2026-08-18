@@ -2,6 +2,7 @@ import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { saveBooking } from '@/lib/builder/bookings/storage';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
+import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import type { Booking } from '@/lib/builder/bookings/types';
 import { POST } from '../route';
 
@@ -59,19 +60,65 @@ vi.mock('@/lib/builder/bookings/packages', () => ({
 
 vi.mock('@/lib/builder/webhooks/dispatcher', () => ({ emitEvent: vi.fn() }));
 
-function request(): NextRequest {
-  return new NextRequest('https://law.example.test/ko/account/bookings/bk-member-1/cancel', {
+function request(
+  origin: string | null = 'https://tseng-law.com',
+  url = 'https://tseng-law.com/ko/account/bookings/bk-member-1/cancel',
+): NextRequest {
+  const headers: Record<string, string> = {
+    'content-type': 'application/json',
+    'x-forwarded-for': '203.0.113.5',
+  };
+  if (origin !== null) headers.origin = origin;
+
+  return new NextRequest(url, {
     method: 'POST',
-    headers: { 'content-type': 'application/json', 'x-forwarded-for': '203.0.113.5' },
+    headers,
     body: JSON.stringify({ reason: 'Changed plans' }),
   });
 }
 
-const context = { params: { locale: 'ko', bookingId: 'bk-member-1' } };
+const context = {
+  params: Promise.resolve({ locale: 'ko', bookingId: 'bk-member-1' }),
+};
 
 describe('/[locale]/account/bookings/[bookingId]/cancel', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+  });
+
+  it('rejects missing and cross-origin requests before session or cancellation side effects', async () => {
+    const missing = await POST(request(null), context);
+    const crossOrigin = await POST(request('https://attacker.example'), context);
+
+    expect(missing.status).toBe(403);
+    expect(crossOrigin.status).toBe(403);
+    await expect(crossOrigin.json()).resolves.toMatchObject({
+      error: 'csrf_origin_mismatch',
+      code: 'csrf_origin_mismatch',
+    });
+    expect(getCurrentSiteMember).not.toHaveBeenCalled();
+    expect(saveBooking).not.toHaveBeenCalled();
+    expect(sendBookingCancellation).not.toHaveBeenCalled();
+  });
+
+  it('preserves authentication status after a valid same-origin CSRF check', async () => {
+    vi.mocked(getCurrentSiteMember).mockResolvedValueOnce(null);
+
+    const response = await POST(request(), context);
+
+    expect(response.status).toBe(401);
+    expect(saveBooking).not.toHaveBeenCalled();
+    expect(sendBookingCancellation).not.toHaveBeenCalled();
+  });
+
+  it('preserves origin-less localhost development requests', async () => {
+    const response = await POST(
+      request(null, 'http://localhost:3000/ko/account/bookings/bk-member-1/cancel'),
+      context,
+    );
+
+    expect(response.status).toBe(200);
+    expect(saveBooking).toHaveBeenCalledOnce();
   });
 
   it('keeps the persisted cancellation successful when the email provider is unconfigured', async () => {

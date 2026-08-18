@@ -30,11 +30,12 @@ const dynamicTemplateCopy: Record<Locale, { title: string; description: string }
   },
 };
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale; templateId: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: Locale; templateId: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = dynamicTemplateCopy[locale];
   return buildSeoMetadata({
@@ -47,13 +48,14 @@ export function generateMetadata({
   });
 }
 
-export default async function BuilderDynamicTemplateDetailPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: Locale; templateId: string };
-  searchParams?: { previewRecordId?: string | string[] };
-}) {
+export default async function BuilderDynamicTemplateDetailPage(
+  props: {
+    params: Promise<{ locale: Locale; templateId: string }>;
+    searchParams?: Promise<{ previewRecordId?: string | string[] }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const templateId = decodeBuilderDynamicTemplateParam(params.templateId);
   const previewRecordId = parseSearchParam(searchParams?.previewRecordId);

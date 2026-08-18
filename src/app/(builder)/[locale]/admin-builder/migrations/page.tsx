@@ -6,7 +6,8 @@ import MigrationsAdmin from '@/components/builder/migrations/MigrationsAdmin';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return {
     title: locale === 'ko' ? '스키마 마이그레이션' : locale === 'zh-hant' ? '結構遷移' : 'Schema migrations',
@@ -19,7 +20,8 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default async function MigrationsPage({ params }: { params: { locale: Locale } }) {
+export default async function MigrationsPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const journal = await loadMigrationJournal();
   const appliedIds = new Set(journal.applied.map((r) => r.id));

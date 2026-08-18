@@ -44,8 +44,9 @@ function localeFromPayload(payload: unknown): Locale {
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { conversationId: string } },
+  props: { params: Promise<{ conversationId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-contacts' });
   if (auth instanceof NextResponse) return auth;
 

@@ -1,0 +1,41 @@
+# Local agent/tool state and machine-specific paths
+.claude/
+.codex/
+.codegraph
+.omo/
+.pytest_cache/
+.artifacts/
+AGENT-STATE.json
+
+# Generated and local QA artifacts
+.next*/
+node_modules/
+.vercel/
+tsconfig.tsbuildinfo
+test-results/
+playwright-report/
+qa-reports/
+.lighthouseci/
+scratchpad/
+tmp/
+/data/
+/runtime-data*/
+
+# Test, CI, and developer-only inputs
+tests/
+docs/
+.storybook/
+.github/
+**/__tests__/
+**/*.test.*
+**/*.spec.*
+**/*.playwright.*
+.eslintrc.json
+lighthouserc.json
+playwright.config.ts
+vitest.config.ts
+
+# Root-only handoff/planning documentation.
+# Do not ignore nested Markdown: src/content/columns/**/*.md is runtime content.
+/*.md
+.env.example

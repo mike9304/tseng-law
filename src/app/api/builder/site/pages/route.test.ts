@@ -1,7 +1,7 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { revalidatePath } from 'next/cache';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   createPage,
   listPages,
@@ -23,7 +23,10 @@ vi.mock('next/cache', () => ({
 }));
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => ({ username: 'admin' })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-pages',
+  })),
   guardMutation: vi.fn(async () => ({ user: { id: 'admin-1', email: 'a@b' } })),
 }));
 
@@ -86,7 +89,10 @@ describe('/api/builder/site/pages', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.mocked(guardBuilderRead).mockReturnValue({ username: 'admin' });
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({
+      username: 'admin',
+      permission: 'edit-pages',
+    });
     vi.mocked(guardMutation).mockResolvedValue({
       user: { id: 'admin-1', email: 'a@b' },
     } as unknown as Awaited<ReturnType<typeof guardMutation>>);
@@ -116,6 +122,22 @@ describe('/api/builder/site/pages', () => {
       errorCode: 'pages_list_failed',
     });
     expect(data.error).not.toContain('raw list failure');
+  });
+
+  it('requires edit-pages and does not list pages when permission is denied', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: edit-pages' }, { status: 403 }),
+    );
+
+    const response = await route.GET(getRequest('?locale=ko&siteId=workspace-site-b'));
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'edit-pages',
+    );
+    expect(mockedListPages).not.toHaveBeenCalled();
+    expect(mockedReadPageCanvasRecordState).not.toHaveBeenCalled();
   });
 
   it('returns localized stable-code JSON for malformed create payloads', async () => {

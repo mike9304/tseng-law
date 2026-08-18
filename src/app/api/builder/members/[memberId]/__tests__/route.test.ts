@@ -1,20 +1,19 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import {
   deleteMember,
   getMember,
   publicMember,
   updateMemberAdmin,
 } from '@/lib/builder/members/members-engine';
-import { guardMutation } from '@/lib/builder/security/guard';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import { DELETE, GET, PATCH } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'admin-1' })),
   guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
 }));
 
@@ -36,7 +35,7 @@ const member = {
   createdAt: '2026-06-03T00:00:00.000Z',
 };
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const deleteMemberMock = vi.mocked(deleteMember);
 const getMemberMock = vi.mocked(getMember);
@@ -62,12 +61,12 @@ function request(
   });
 }
 
-const params = { params: { memberId: 'member-1' } };
+const params = { params: Promise.resolve({ memberId: 'member-1' }) };
 
 describe('builder member detail API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({ username: 'admin-1' });
     guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
     getMemberMock.mockResolvedValue(member as never);
     updateMemberAdminMock.mockResolvedValue({ ...member, name: 'Member Updated', role: 'premium' } as never);
@@ -81,7 +80,29 @@ describe('builder member detail API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, member });
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'manage-users',
+    );
+  });
+
+  it.each([
+    ['unauthenticated', 401],
+    ['authenticated without permission', 403],
+  ])('rejects %s detail GET before loading member data', async (_scenario, status) => {
+    const blocked = NextResponse.json({ ok: false }, { status });
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(blocked);
+
+    const response = await GET(request('GET', 'locale=en'), params);
+
+    expect(response).toBe(blocked);
+    expect(response.status).toBe(status);
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'manage-users',
+    );
+    expect(getMemberMock).not.toHaveBeenCalled();
+    expect(publicMemberMock).not.toHaveBeenCalled();
   });
 
   it('returns localized missing-member errors', async () => {
@@ -142,11 +163,30 @@ describe('builder member detail API', () => {
     });
   });
 
+  it('returns 403 when an authenticated caller lacks manage-users permission on PATCH', async () => {
+    guardMutationMock.mockResolvedValueOnce(
+      NextResponse.json({ ok: false, error: 'Forbidden' }, { status: 403 }),
+    );
+
+    const response = await PATCH(request('PATCH', 'locale=ko'), params);
+
+    expect(response.status).toBe(403);
+    expect(guardMutationMock).toHaveBeenCalledWith(expect.any(NextRequest), {
+      bucket: 'mutation',
+      permission: 'manage-users',
+    });
+    expect(updateMemberAdminMock).not.toHaveBeenCalled();
+  });
+
   it('updates members while preserving success response shape', async () => {
     const response = await PATCH(request('PATCH', 'locale=ko'), params);
     const payload = await response.json();
 
     expect(response.status).toBe(200);
+    expect(guardMutationMock).toHaveBeenCalledWith(expect.any(NextRequest), {
+      bucket: 'mutation',
+      permission: 'manage-users',
+    });
     expect(updateMemberAdminMock).toHaveBeenCalledWith('member-1', {
       name: 'Member Updated',
       phone: '+886-2-1111-2222',
@@ -175,11 +215,30 @@ describe('builder member detail API', () => {
     consoleError.mockRestore();
   });
 
+  it('returns 403 when an authenticated caller lacks manage-users permission on DELETE', async () => {
+    guardMutationMock.mockResolvedValueOnce(
+      NextResponse.json({ ok: false, error: 'Forbidden' }, { status: 403 }),
+    );
+
+    const response = await DELETE(request('DELETE', 'locale=ko'), params);
+
+    expect(response.status).toBe(403);
+    expect(guardMutationMock).toHaveBeenCalledWith(expect.any(NextRequest), {
+      bucket: 'mutation',
+      permission: 'manage-users',
+    });
+    expect(deleteMemberMock).not.toHaveBeenCalled();
+  });
+
   it('deletes members while preserving success response shape', async () => {
     const response = await DELETE(request('DELETE', 'locale=ko'), params);
     const payload = await response.json();
 
     expect(response.status).toBe(200);
+    expect(guardMutationMock).toHaveBeenCalledWith(expect.any(NextRequest), {
+      bucket: 'mutation',
+      permission: 'manage-users',
+    });
     expect(deleteMemberMock).toHaveBeenCalledWith('member-1');
     expect(payload).toEqual({ ok: true });
   });

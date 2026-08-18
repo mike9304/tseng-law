@@ -11,15 +11,19 @@ import {
   homeHeroTextSurfaceIds,
 } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
+import {
+  getConsultationCtaLabel,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 
-const quickMenus = {
+export const heroQuickMenus = {
   ko: [
     { label: '업무분야', href: '/ko/services' },
     { label: '칼럼', href: '/ko/columns' },
     { label: '변호사', href: '/ko/lawyers' },
     { label: '자주 묻는 질문', href: '/ko/faq' },
     { label: '영상/채널', href: '/ko/videos' },
-    { label: '연락처', href: '/ko/contact' },
+    { label: '연락처 정보', href: '/ko/contact' },
   ],
   'zh-hant': [
     { label: '服務領域', href: '/zh-hant/services' },
@@ -27,7 +31,7 @@ const quickMenus = {
     { label: '律師', href: '/zh-hant/lawyers' },
     { label: '常見問題', href: '/zh-hant/faq' },
     { label: '影音/頻道', href: '/zh-hant/videos' },
-    { label: '聯絡', href: '/zh-hant/contact' },
+    { label: '聯絡資訊', href: '/zh-hant/contact' },
   ],
   en: [
     { label: 'Services', href: '/en/services' },
@@ -35,7 +39,7 @@ const quickMenus = {
     { label: 'Lawyers', href: '/en/lawyers' },
     { label: 'FAQ', href: '/en/faq' },
     { label: 'Videos / Channel', href: '/en/videos' },
-    { label: 'Contact', href: '/en/contact' }
+    { label: 'Contact information', href: '/en/contact' }
   ],
   ja: [
     { label: '取扱業務', href: '/ja/services' },
@@ -43,7 +47,7 @@ const quickMenus = {
     { label: '弁護士', href: '/ja/lawyers' },
     { label: 'よくある質問', href: '/ja/faq' },
     { label: '動画/チャンネル', href: '/ja/videos' },
-    { label: 'お問い合わせ', href: '/ja/contact' },
+    { label: '連絡先', href: '/ja/contact' },
   ],
 } as const;
 
@@ -54,6 +58,13 @@ const columnCtaLabels: Record<SiteLocale, string> = {
   ja: 'コラムを見る',
 };
 
+const emailConsultationCtaLabels: Record<SiteLocale, string> = {
+  ko: '이메일 상담 신청',
+  'zh-hant': '申請電子郵件諮詢',
+  en: 'Request an Email Consultation',
+  ja: 'メール相談を申し込む',
+};
+
 const scrollArrowLabels: Record<SiteLocale, string> = {
   ko: '아래로 스크롤',
   'zh-hant': '向下滾動',
@@ -61,8 +72,17 @@ const scrollArrowLabels: Record<SiteLocale, string> = {
   ja: '下へスクロール',
 };
 
-export default function HeroSearch({ locale, scrollHref = '#insights' }: { locale: SiteLocale; scrollHref?: string }) {
+export default function HeroSearch({
+  locale,
+  scrollHref = '#insights',
+  headingLevel = 1,
+}: {
+  locale: SiteLocale;
+  scrollHref?: string;
+  headingLevel?: 1 | 2;
+}) {
   const hero = siteContent[locale].hero;
+  const HeroHeading = headingLevel === 2 ? 'h2' : 'h1';
   const [focused, setFocused] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -88,7 +108,7 @@ export default function HeroSearch({ locale, scrollHref = '#insights' }: { local
     return () => document.removeEventListener('keydown', handler);
   }, [focused]);
 
-  const menus = quickMenus[locale];
+  const menus = heroQuickMenus[locale];
 
   return (
     <section className="hero" id="hero" data-tone="dark">
@@ -98,16 +118,26 @@ export default function HeroSearch({ locale, scrollHref = '#insights' }: { local
           <SectionLabel data-builder-surface-key={homeHeroTextSurfaceIds[0]}>
             <SurfaceText surfaceKey={homeHeroTextSurfaceIds[0]}>{hero.label}</SurfaceText>
           </SectionLabel>
-          <h1 className="hero-title" data-builder-surface-key={homeHeroTextSurfaceIds[1]}>
+          <HeroHeading
+            className="hero-title"
+            data-builder-surface-key={homeHeroTextSurfaceIds[1]}
+          >
             <SurfaceText surfaceKey={homeHeroTextSurfaceIds[1]}>{hero.title}</SurfaceText>
-          </h1>
+          </HeroHeading>
           <p className="hero-subtitle" data-builder-surface-key={homeHeroTextSurfaceIds[2]}>
             <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}>{hero.subtitle}</SurfaceText>
           </p>
-          <div className="hero-links-minimal">
+          <div className="hero-links-minimal hero-cta-actions">
+            <a
+              href={getConsultationPublicMailto(locale)}
+              className="button hero-cta-primary"
+              aria-label={`${emailConsultationCtaLabels[locale]} — ${getConsultationCtaLabel(locale)}`}
+            >
+              {emailConsultationCtaLabels[locale]}
+            </a>
             <Link
               href={`/${locale}/columns`}
-              className="link-underline"
+              className="button hero-cta-secondary"
               data-builder-surface-key={homeHeroButtonSurfaceIds[0]}
             >
               <SurfaceText surfaceKey={homeHeroButtonSurfaceIds[0]}>

@@ -59,8 +59,9 @@ function parseWritableBody(body: unknown): {
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { siteId: string; pageKey: string } }
+  props: { params: Promise<{ siteId: string; pageKey: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { bucket: 'draft', permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

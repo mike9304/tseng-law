@@ -7,19 +7,21 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = getBookingsAdminCopy(locale);
   return { title: copy.pages.services.title, robots: { index: false, follow: false } };
 }
 
-export default async function BookingServicesPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: string };
-  searchParams?: { edit?: string | string[] };
-}) {
+export default async function BookingServicesPage(
+  props: {
+    params: Promise<{ locale: string }>;
+    searchParams?: Promise<{ edit?: string | string[] }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = getBookingsAdminCopy(locale);
   const initialEditServiceId = typeof searchParams?.edit === 'string' ? searchParams.edit : undefined;

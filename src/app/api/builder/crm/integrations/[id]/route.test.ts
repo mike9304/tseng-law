@@ -35,7 +35,9 @@ describe('/api/builder/crm/integrations/[id]', () => {
     mockedMutate.mockResolvedValue({
       id: 'itg-1', kind: 'slack-webhook', enabled: false, createdAt: 'x',
     } as never);
-    const res = await route.PATCH(req('PATCH', JSON.stringify({ enabled: false })), { params: { id: 'itg-1' } });
+    const res = await route.PATCH(req('PATCH', JSON.stringify({ enabled: false })), {
+      params: Promise.resolve({ id: 'itg-1' }),
+    });
     const data = await res.json();
     expect(res.status).toBe(200);
     expect(data).toMatchObject({ ok: true, integration: { id: 'itg-1', enabled: false } });
@@ -43,27 +45,35 @@ describe('/api/builder/crm/integrations/[id]', () => {
 
   it('PATCH returns 404 when the integration is missing', async () => {
     mockedMutate.mockResolvedValue(null as never);
-    const res = await route.PATCH(req('PATCH', JSON.stringify({ enabled: true })), { params: { id: 'nope' } });
+    const res = await route.PATCH(req('PATCH', JSON.stringify({ enabled: true })), {
+      params: Promise.resolve({ id: 'nope' }),
+    });
     expect(res.status).toBe(404);
     expect((await res.json()).ok).toBe(false);
   });
 
   it('PATCH returns 400 on an invalid body (enabled not boolean)', async () => {
-    const res = await route.PATCH(req('PATCH', JSON.stringify({ enabled: 'yes' })), { params: { id: 'itg-1' } });
+    const res = await route.PATCH(req('PATCH', JSON.stringify({ enabled: 'yes' })), {
+      params: Promise.resolve({ id: 'itg-1' }),
+    });
     expect(res.status).toBe(400);
     expect(mockedMutate).not.toHaveBeenCalled();
   });
 
   it('DELETE removes the integration and returns ok', async () => {
     mockedMutate.mockResolvedValue(true as never);
-    const res = await route.DELETE(req('DELETE'), { params: { id: 'itg-1' } });
+    const res = await route.DELETE(req('DELETE'), {
+      params: Promise.resolve({ id: 'itg-1' }),
+    });
     expect(res.status).toBe(200);
     expect((await res.json()).ok).toBe(true);
   });
 
   it('DELETE returns 404 when nothing was removed', async () => {
     mockedMutate.mockResolvedValue(false as never);
-    const res = await route.DELETE(req('DELETE'), { params: { id: 'nope' } });
+    const res = await route.DELETE(req('DELETE'), {
+      params: Promise.resolve({ id: 'nope' }),
+    });
     expect(res.status).toBe(404);
   });
 });

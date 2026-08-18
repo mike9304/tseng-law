@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { recordOrderManualPayment } from '@/lib/builder/commerce/orders-engine';
@@ -11,7 +11,10 @@ import { getCurrentBillingInvoice } from '@/lib/builder/billing-documents';
 import { POST } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/commerce/orders-engine', () => ({
@@ -63,17 +66,38 @@ function postRequest(query = '', body: string | unknown = {
   });
 }
 
-const params = { params: { orderId: 'order-1' } };
+const params = { params: Promise.resolve({ orderId: 'order-1' }) };
 
 describe('builder commerce order manual payments API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     recordOrderManualPaymentMock.mockResolvedValue({ order, manualPayment } as never);
     queueBillingPaymentReceivedNotificationMock.mockResolvedValue({ ok: true } as never);
     queueOrderUpdatedNotificationMock.mockResolvedValue({ ok: true } as never);
     runOrderBillingAutomationMock.mockResolvedValue(null);
     getCurrentBillingInvoiceMock.mockResolvedValue(null);
+  });
+
+  it('returns 403 and short-circuits manual-payment stores when permission is denied', async () => {
+    const deniedRequest = postRequest('locale=en');
+    guardMutationMock.mockResolvedValueOnce(
+      NextResponse.json({ ok: false, error: 'Forbidden' }, { status: 403 }) as never,
+    );
+
+    const response = await POST(deniedRequest, params);
+
+    expect(response.status).toBe(403);
+    expect(guardMutationMock).toHaveBeenCalledWith(deniedRequest, {
+      bucket: 'mutation',
+      permission: 'manage-commerce',
+    });
+    expect(recordOrderManualPaymentMock).not.toHaveBeenCalled();
+    expect(runOrderBillingAutomationMock).not.toHaveBeenCalled();
+    expect(getCurrentBillingInvoiceMock).not.toHaveBeenCalled();
   });
 
   it('returns localized validation errors with stable codes', async () => {
@@ -166,6 +190,10 @@ describe('builder commerce order manual payments API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, order, manualPayment });
+    expect(guardMutationMock).toHaveBeenCalledWith(expect.any(NextRequest), {
+      bucket: 'mutation',
+      permission: 'manage-commerce',
+    });
     expect(recordOrderManualPaymentMock).toHaveBeenCalledWith('order-1', {
       amountCents: 12000,
       method: 'bank_transfer',

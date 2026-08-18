@@ -42,7 +42,7 @@ describe('/api/builder/site/lightboxes/[id]/draft', () => {
   it('returns localized stable-code JSON when the draft is missing', async () => {
     const route = await import('../route');
     const response = await route.GET(request('GET', undefined, 'zh-hant'), {
-      params: { id: 'lb-1' },
+      params: Promise.resolve({ id: 'lb-1' }),
     });
     const payload = await response.json();
 
@@ -57,7 +57,7 @@ describe('/api/builder/site/lightboxes/[id]/draft', () => {
   it('returns localized stable-code JSON for malformed draft PUT bodies', async () => {
     const route = await import('../route');
     const response = await route.PUT(request('PUT', '{', 'en'), {
-      params: { id: 'lb-1' },
+      params: Promise.resolve({ id: 'lb-1' }),
     });
     const payload = await response.json();
 
@@ -74,7 +74,7 @@ describe('/api/builder/site/lightboxes/[id]/draft', () => {
     vi.mocked(readLightboxCanvas).mockResolvedValue(createDefaultCanvasDocument('ko'));
     const route = await import('../route');
     const response = await route.GET(request('GET', undefined, 'ko', SELECTED_SITE_REFERER), {
-      params: { id: 'lb-1' },
+      params: Promise.resolve({ id: 'lb-1' }),
     });
 
     expect(response.status).toBe(200);
@@ -91,7 +91,7 @@ describe('/api/builder/site/lightboxes/[id]/draft', () => {
         'ko',
         SELECTED_SITE_REFERER,
       ),
-      { params: { id: 'lb-1' } },
+      { params: Promise.resolve({ id: 'lb-1' }) },
     );
 
     expect(response.status).toBe(200);

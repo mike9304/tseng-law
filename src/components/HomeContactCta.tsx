@@ -1,16 +1,29 @@
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
-import SmartLink from '@/components/SmartLink';
 import {
   homeContactButtonSurfaceIds,
   homeContactTextSurfaceIds,
 } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
+import {
+  getConsultationCtaLabel,
+  getConsultationPublicEmail,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
+
+const emailConsultationLabels: Record<SiteLocale, string> = {
+  ko: '이메일 상담',
+  'zh-hant': '電子郵件諮詢',
+  en: 'Email consultation',
+  ja: 'メール相談',
+};
 
 export default function HomeContactCta({ locale }: { locale: SiteLocale }) {
   const content = siteContent[locale];
   const contact = content.contact;
-  const representativeTel = content.quickContact.actions.find((action) => action.href.startsWith('tel:'));
+  const consultationEmail = getConsultationPublicEmail();
+  const consultationEmailHref = getConsultationPublicMailto(locale);
+  const consultationAriaLabel = getConsultationCtaLabel(locale);
   const { title, description } = content.homeContactCta;
 
   return (
@@ -28,22 +41,24 @@ export default function HomeContactCta({ locale }: { locale: SiteLocale }) {
           </p>
         </div>
         <div className="home-contact-actions" data-builder-node-key="actions">
-          <SmartLink
+          <a
             className="button ghost"
-            href={`/${locale}/contact`}
+            href={consultationEmailHref}
+            aria-label={`${contact.cta.label} — ${consultationAriaLabel}`}
             data-builder-surface-key={homeContactButtonSurfaceIds[0]}
           >
             <SurfaceText surfaceKey={homeContactButtonSurfaceIds[0]}>{contact.cta.label}</SurfaceText>
-          </SmartLink>
-          {representativeTel ? (
-            <a
-              className="button secondary"
-              href={representativeTel.href}
-              data-builder-surface-key={homeContactButtonSurfaceIds[1]}
-            >
-              <SurfaceText surfaceKey={homeContactButtonSurfaceIds[1]}>{representativeTel.value}</SurfaceText>
-            </a>
-          ) : null}
+          </a>
+          <a
+            className="button secondary"
+            href={consultationEmailHref}
+            aria-label={`${emailConsultationLabels[locale]}: ${consultationEmail} — ${consultationAriaLabel}`}
+            data-builder-surface-key={homeContactButtonSurfaceIds[1]}
+          >
+            <SurfaceText surfaceKey={homeContactButtonSurfaceIds[1]}>
+              {emailConsultationLabels[locale]}: {consultationEmail}
+            </SurfaceText>
+          </a>
         </div>
       </div>
     </section>

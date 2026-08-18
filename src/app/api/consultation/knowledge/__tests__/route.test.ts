@@ -40,6 +40,22 @@ describe('/api/consultation/knowledge', () => {
     vi.mocked(archiveAttorneyKnowledgeEntry).mockResolvedValue(undefined);
   });
 
+  it.each([
+    ['missing Origin and Referer', { origin: '' }],
+    ['a cross-origin Origin', { origin: 'https://attacker.example' }],
+  ])('rejects %s before authentication or storage', async (_label, options) => {
+    const route = await import('../route');
+    const response = await route.POST(makeFormRequest({
+      url: 'https://tseng-law.com/api/consultation/knowledge',
+      ...options,
+    }));
+
+    expect(response.status).toBe(403);
+    expect(requireConsultationAdminAuth).not.toHaveBeenCalled();
+    expect(saveAttorneyKnowledgeEntry).not.toHaveBeenCalled();
+    expect(archiveAttorneyKnowledgeEntry).not.toHaveBeenCalled();
+  });
+
   it('falls back to the admin page when a form post has an external referer', async () => {
     const route = await import('../route');
     const response = await route.POST(makeFormRequest({
@@ -48,7 +64,7 @@ describe('/api/consultation/knowledge', () => {
 
     expect(response.status).toBe(303);
     expect(response.headers.get('location')).toBe(
-      'https://law.example.test/ko/admin-consultation?knowledge=saved',
+      'https://tseng-law.com/ko/admin-consultation?knowledge=saved',
     );
     expect(saveAttorneyKnowledgeEntry).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -62,17 +78,21 @@ describe('/api/consultation/knowledge', () => {
   it('preserves same-origin admin filters when redirecting after a form post', async () => {
     const route = await import('../route');
     const response = await route.POST(makeFormRequest({
-      referer: 'https://law.example.test/ko/admin-consultation?category=labor',
+      referer: 'https://tseng-law.com/ko/admin-consultation?category=labor',
     }));
 
     expect(response.status).toBe(303);
     expect(response.headers.get('location')).toBe(
-      'https://law.example.test/ko/admin-consultation?category=labor&knowledge=saved',
+      'https://tseng-law.com/ko/admin-consultation?category=labor&knowledge=saved',
     );
   });
 });
 
-function makeFormRequest(options: { referer?: string } = {}): NextRequest {
+function makeFormRequest(options: {
+  url?: string;
+  origin?: string;
+  referer?: string;
+} = {}): NextRequest {
   const form = new FormData();
   form.set('locale', 'ko');
   form.set('category', 'general');
@@ -80,10 +100,14 @@ function makeFormRequest(options: { referer?: string } = {}): NextRequest {
   form.set('answer', 'Answer');
 
   const headers = new Headers();
+  headers.set('origin', options.origin ?? 'https://tseng-law.com');
   if (options.referer) {
     headers.set('referer', options.referer);
   }
-  return new NextRequest('https://law.example.test/api/consultation/knowledge', {
+  if (options.origin === '') {
+    headers.delete('origin');
+  }
+  return new NextRequest(options.url ?? 'https://tseng-law.com/api/consultation/knowledge', {
     method: 'POST',
     headers,
     body: form,

@@ -5,7 +5,7 @@ import { guardMutation } from '@/lib/builder/security/guard';
 import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
 import { matchesStandardPageSlugForLocale } from '@/lib/builder/site/standard-pages';
 import { readSiteDocument, writePageCanvas } from '@/lib/builder/site/persistence';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { isLocale, normalizeLocale, type Locale } from '@/lib/locales';
 import {
   builderJsonResponse,
   builderSiteErrorResponse,
@@ -37,7 +37,8 @@ export async function POST(request: NextRequest) {
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
-  const requestLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') || undefined);
+  const rawQueryLocale = request.nextUrl.searchParams.get('locale');
+  const requestLocale = normalizeLocale(rawQueryLocale || undefined);
 
   let body: DecomposeBody | null;
   try {
@@ -50,9 +51,13 @@ export async function POST(request: NextRequest) {
     return errorResponse(requestLocale, 'seed_body_invalid', 400);
   }
 
-  const locale = normalizeLocale(
-    typeof body.locale === 'string' ? body.locale : requestLocale,
-  );
+  const rawLocale = typeof body.locale === 'string' ? body.locale : rawQueryLocale;
+  if (rawLocale && !isLocale(rawLocale)) {
+    // Public /ja is not a builder authoring locale. Falling back to KO would
+    // overwrite the Korean home when a caller passes locale=ja.
+    return errorResponse(requestLocale, 'seed_body_invalid', 400);
+  }
+  const locale = normalizeLocale(rawLocale || undefined);
   const siteResolution = resolveBuilderSiteIdForMutationFromRequest(request, body.siteId);
   if (!siteResolution.ok) return siteResolution.response;
   const siteId = siteResolution.siteId;

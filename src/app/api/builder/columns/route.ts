@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError } from 'zod';
 import { normalizeLocale, type Locale } from '@/lib/locales';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import {
   getBuilderColumnsApiErrorPayload,
   type BuilderColumnsApiErrorCode,
@@ -9,7 +8,7 @@ import {
 import { recordColumnEvent } from '@/lib/builder/audit/record';
 import { listColumns, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
 import { sanitizeColumnBodyHtml } from '@/lib/builder/columns/sanitize-body-html';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   createColumnInputSchema,
   columnLocaleSchema,
@@ -45,7 +44,7 @@ function validationErrorResponse(locale: Locale, error: ZodError): NextResponse 
 }
 
 export async function GET(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = await guardBuilderReadWithPermission(request, 'edit-blog');
   if (auth instanceof NextResponse) return auth;
 
   const errorLocale = requestLocale(request);

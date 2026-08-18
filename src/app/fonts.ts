@@ -10,7 +10,7 @@ import {
  * Locale-gated: each page receives only the active sans + serif pair.
  * EN intentionally shares the KR pair for visual cohesion.
  *
- * Weight matrix (grep-justified from public CSS usage):
+ * Variable Noto files cover the public CSS weight matrix:
  * - sans 400/500/600/700 (body, UI, H2/H3, buttons; no public 300)
  * - serif 500/600/700 (closed display allowlist; no light faces)
  */
@@ -18,30 +18,28 @@ import {
 const sansKorean = Noto_Sans_KR({
   display: 'swap',
   preload: false,
-  weight: ['400', '500', '600', '700'],
+  weight: 'variable',
   variable: '--font-noto-sans-kr-loaded',
 });
 
 const serifKorean = Noto_Serif_KR({
   display: 'swap',
   preload: false,
-  weight: ['500', '600', '700'],
+  weight: 'variable',
   variable: '--font-noto-serif-kr-loaded',
 });
 
 const sansTraditionalChinese = Noto_Sans_TC({
   display: 'swap',
   preload: false,
-  // Noto Sans TC static faces in next/font: 400/500/700 historically;
-  // 600 included when available for medium-emphasis UI parity with KR.
-  weight: ['400', '500', '600', '700'],
+  weight: 'variable',
   variable: '--font-noto-sans-tc-loaded',
 });
 
 const serifTraditionalChinese = Noto_Serif_TC({
   display: 'swap',
   preload: false,
-  weight: ['500', '600', '700'],
+  weight: 'variable',
   variable: '--font-noto-serif-tc-loaded',
 });
 

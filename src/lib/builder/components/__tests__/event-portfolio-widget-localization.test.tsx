@@ -185,6 +185,9 @@ describe('event and portfolio widget localization', () => {
     expect(editHtml).toContain('韓國企業台灣公司設立支援');
     expect(editHtml).toContain('投資架構、公司登記與稅務登錄一次整理的公司設立案例。');
     expect(editHtml).toContain('台灣勞資爭議顧問');
+    expect(editHtml).toContain('src="/images/001-taiwan-company-establishment-basics/featured-01.jpg"');
+    expect(editHtml).toContain('loading="lazy"');
+    expect(editHtml).toContain('decoding="async"');
     expect(editHtml).not.toContain('한국 기업 대만 법인 설립 지원');
     expect(editHtml).not.toContain('대만 노동 분쟁 자문');
 

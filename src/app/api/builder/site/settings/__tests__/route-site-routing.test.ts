@@ -1,11 +1,15 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import type { BuilderSiteDocument } from '@/lib/builder/site/types';
 import * as route from '@/app/api/builder/site/settings/route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => null),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin-1',
+    permission: 'settings',
+  })),
   guardMutation: vi.fn(async () => ({ user: { id: 'admin-1', email: 'a@b' } })),
 }));
 
@@ -81,10 +85,12 @@ describe('/api/builder/site/settings selected site routing', () => {
   });
 
   it('routes settings GET to the selected workspace site from the editor referer', async () => {
-    const response = await route.GET(getRequest());
+    const request = getRequest();
+    const response = await route.GET(request);
     const data = await response.json();
 
     expect(response.status).toBe(200);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(request, 'settings');
     expect(data.settings.firmName).toBe('workspace-settings Law');
     expect(mockedReadSiteDocument).toHaveBeenCalledWith(SELECTED_SITE_ID, 'ko');
   });

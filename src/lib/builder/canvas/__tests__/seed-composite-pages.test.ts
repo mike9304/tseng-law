@@ -182,7 +182,7 @@ describe('legacy composite page seeds reflect the live site', () => {
     expect(new Set(starRects.map((rect) => rect.y))).toEqual(new Set([0]));
   });
 
-  it('keeps the decomposed services accordion collapsed on mobile and tablet', () => {
+  it('keeps the decomposed services static grid readable on mobile and tablet', () => {
     const editable = STANDARD_PAGE_DECOMPOSERS.services('ko');
     const nodesById = new Map(editable.nodes.map((node) => [node.id, node]));
     const root = nodesById.get('home-services-root');
@@ -192,30 +192,30 @@ describe('legacy composite page seeds reflect the live site', () => {
     const lastBody = nodesById.get('home-services-card-5-body');
     const lastMore = nodesById.get('home-services-card-5-more');
 
-    expect(getMobileRectValue(root, 'height')).toBe(1285);
+    expect(getMobileRectValue(root, 'height')).toBe(1645);
     expect(getMobileRectValue(root, 'width')).toBe(375);
     expect(getMobileRectValue(root, 'y')).toBeLessThan(700);
-    expect(getMobileRectValue(container, 'height')).toBe(1187);
-    expect(getMobileRectValue(list, 'height')).toBe(942);
-    expect(getMobileRectValue(lastCard, 'y')).toBe(810);
-    expect(getMobileRectValue(lastCard, 'height')).toBe(130);
-    expect(getMobileRectValue(lastBody, 'y')).toBe(97);
-    expect(getMobileRectValue(lastBody, 'height')).toBe(1);
+    expect(getMobileRectValue(container, 'height')).toBe(1549);
+    expect(getMobileRectValue(list, 'height')).toBe(1299);
+    expect(getMobileRectValue(lastCard, 'y')).toBe(1100);
+    expect(getMobileRectValue(lastCard, 'height')).toBe(199);
+    expect(getMobileRectValue(lastBody, 'y')).toBe(84);
+    expect(getMobileRectValue(lastBody, 'height')).toBe(95);
     expect(getMobileRectValue(lastMore, 'height')).toBeGreaterThan(1);
 
-    expect(getTabletRectValue(root, 'height')).toBe(1166);
+    expect(getTabletRectValue(root, 'height')).toBe(1000);
     expect(getTabletRectValue(root, 'width')).toBe(768);
-    expect(getTabletRectValue(container, 'height')).toBe(980);
-    expect(getTabletRectValue(list, 'height')).toBe(750);
-    expect(getTabletRectValue(lastCard, 'y')).toBe(650);
-    expect(getTabletRectValue(lastCard, 'height')).toBe(98);
-    expect(getTabletRectValue(lastBody, 'height')).toBe(1);
+    expect(getTabletRectValue(container, 'height')).toBe(860);
+    expect(getTabletRectValue(list, 'height')).toBe(630);
+    expect(getTabletRectValue(lastCard, 'y')).toBe(436);
+    expect(getTabletRectValue(lastCard, 'height')).toBe(194);
+    expect(getTabletRectValue(lastBody, 'height')).toBe(90);
     expect(getTabletRectValue(lastMore, 'height')).toBeGreaterThan(1);
 
     const mobileMetrics = computeTopLevelFlowSectionMetrics(editable.nodes, 'mobile');
     const tabletMetrics = computeTopLevelFlowSectionMetrics(editable.nodes, 'tablet');
-    expect(mobileMetrics.get('home-services-root')?.minHeight).toBe(1285);
-    expect(tabletMetrics.get('home-services-root')?.minHeight).toBe(1166);
+    expect(mobileMetrics.get('home-services-root')?.minHeight).toBe(1645);
+    expect(tabletMetrics.get('home-services-root')?.minHeight).toBe(1000);
   });
 
   it('keeps STANDARD_PAGE_DECOMPOSERS in sync with the shared DECOMPOSABLE_PAGE_SLUGS', () => {

@@ -35,7 +35,7 @@ const deleteCommentMock = vi.mocked(deleteComment);
 const guardMutationMock = vi.mocked(guardMutation);
 const reopenCommentMock = vi.mocked(reopenComment);
 const resolveCommentMock = vi.mocked(resolveComment);
-const params = { params: { id: 'cmt-1' } };
+const params = { params: Promise.resolve({ id: 'cmt-1' }) };
 
 function request(method: string, query = '', body: unknown = { action: 'resolve' }): NextRequest {
   return new NextRequest(`https://law.example.test/api/builder/collab/comments/cmt-1${query ? `?${query}` : ''}`, {

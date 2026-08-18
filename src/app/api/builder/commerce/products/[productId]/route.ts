@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   getCommerceProductsApiErrorPayload,
   type CommerceProductsApiErrorCode,
@@ -132,11 +131,12 @@ function commerceError(locale: Locale, fallbackCode: CommerceProductsApiErrorCod
   return errorResponse(locale, fallbackCode, 500);
 }
 
-export async function GET(request: NextRequest, { params }: { params: { productId: string } }) {
+export async function GET(request: NextRequest, props: { params: Promise<{ productId: string }> }) {
+  const params = await props.params;
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
   const scope = request.nextUrl.searchParams.get('scope') ?? 'public';
   if (scope === 'all') {
-    const auth = requireBuilderAdminAuth(request);
+    const auth = await guardBuilderReadWithPermission(request, 'view-commerce');
     if (auth instanceof NextResponse) return auth;
   }
 
@@ -152,9 +152,10 @@ export async function GET(request: NextRequest, { params }: { params: { productI
   }
 }
 
-export async function PATCH(request: NextRequest, { params }: { params: { productId: string } }) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ productId: string }> }) {
+  const params = await props.params;
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   try {
@@ -179,9 +180,10 @@ export async function PATCH(request: NextRequest, { params }: { params: { produc
   }
 }
 
-export async function POST(request: NextRequest, { params }: { params: { productId: string } }) {
+export async function POST(request: NextRequest, props: { params: Promise<{ productId: string }> }) {
+  const params = await props.params;
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   try {
@@ -199,9 +201,10 @@ export async function POST(request: NextRequest, { params }: { params: { product
   }
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { productId: string } }) {
+export async function DELETE(request: NextRequest, props: { params: Promise<{ productId: string }> }) {
+  const params = await props.params;
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
   try {
     await deleteProduct(params.productId);

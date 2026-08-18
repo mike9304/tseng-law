@@ -8,10 +8,8 @@ import {
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { guardMutation } from '@/lib/builder/security/guard';
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { siteId: string } }
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ siteId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -34,10 +32,8 @@ export async function GET(
   }
 }
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { siteId: string } }
-) {
+export async function POST(request: NextRequest, props: { params: Promise<{ siteId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

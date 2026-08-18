@@ -1,6 +1,7 @@
 import type { BuilderCanvasNode } from './types';
 import { createDefaultCanvasNodeStyle } from './types';
 import type { Locale } from '@/lib/locales';
+import { createHomeContainerNode, createHomeImageNode } from './decompose-home-shared';
 
 const copyByLocale = {
   ko: {
@@ -11,6 +12,7 @@ const copyByLocale = {
     summary:
       '사건 결과는 구체적인 사실관계와 증거에 따라 달라질 수 있으며, 이 사례는 과거 한 사건의 진행 경과를 소개합니다.',
     cta: '소송사례 분석 보기',
+    imageAlt: '차분한 저채도 법원 건물 외관',
   },
   'zh-hant': {
     label: '案例解析',
@@ -20,6 +22,7 @@ const copyByLocale = {
     summary:
       '案件結果會因具體事實與證據而異；本案例僅說明一件過往案件的處理經過。',
     cta: '查看訴訟案例',
+    imageAlt: '低彩度專業風格的法院建築外觀',
   },
   en: {
     label: 'CASE STUDY',
@@ -29,6 +32,7 @@ const copyByLocale = {
     summary:
       'Outcomes depend on the specific facts and evidence; this case study describes the course of one past matter.',
     cta: 'View Case Studies',
+    imageAlt: 'Courthouse exterior in a calm, low-saturation style',
   },
 } as const;
 
@@ -36,10 +40,12 @@ const STAGE_WIDTH = 1280;
 const STAGE_HEIGHT = 600;
 
 /**
- * Decompose home-case-results composite into ~7 editable builder nodes.
+ * Decompose home-case-results into an editable courthouse photograph + copy split.
  *
  * Tree:
  *   container#home-case-results-root  (as="section", className="section section--dark ...")
+ *     container#home-case-results-media
+ *       image#home-case-results-media-image
  *     container#home-case-results-content (className="split-content home-results-content")
  *       text#label     (className="section-label home-results-label")
  *       text#title     (as="h2", className="split-title home-results-title")
@@ -57,6 +63,7 @@ export function createCaseResultsDecomposedNodes(
 ): BuilderCanvasNode[] {
   const copy = copyByLocale[locale];
   const rootId = 'home-case-results-root';
+  const mediaId = 'home-case-results-media';
   const contentId = 'home-case-results-content';
   const nodes: BuilderCanvasNode[] = [];
 
@@ -78,19 +85,39 @@ export function createCaseResultsDecomposedNodes(
       borderRadius: 0,
       padding: 0,
       layoutMode: 'absolute',
-      className: 'section section--dark split-section split--text-only home-results-panel',
+      className: 'section section--dark split-section split--img-left home-results-panel home-results-panel--editorial',
       as: 'section',
       htmlId: 'results',
       dataTone: 'dark',
     },
   });
 
+  nodes.push(
+    createHomeContainerNode({
+      id: mediaId,
+      parentId: rootId,
+      rect: { x: 0, y: 0, width: 640, height: STAGE_HEIGHT },
+      zIndex: 0,
+      label: 'case-results courthouse media',
+      className: 'split-image home-results-media',
+    }),
+    createHomeImageNode({
+      id: 'home-case-results-media-image',
+      parentId: mediaId,
+      rect: { x: 0, y: 0, width: 640, height: STAGE_HEIGHT },
+      zIndex: 0,
+      src: '/images/editorial/taipei-courthouse-cinematic.webp',
+      alt: copy.imageAlt,
+      fit: 'cover',
+    }),
+  );
+
   nodes.push({
     id: contentId,
     kind: 'container',
-    rect: { x: 0, y: 0, width: STAGE_WIDTH, height: STAGE_HEIGHT },
+    rect: { x: 640, y: 0, width: 640, height: STAGE_HEIGHT },
     style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
-    zIndex: 0,
+    zIndex: 1,
     rotation: 0,
     locked: false,
     visible: true,
@@ -126,7 +153,7 @@ export function createCaseResultsDecomposedNodes(
   nodes.push({
     id: 'home-case-results-label',
     kind: 'text',
-    rect: { x: 0, y: 0, width: 400, height: 40 },
+    rect: { x: 56, y: 72, width: 528, height: 40 },
     style: createDefaultCanvasNodeStyle(),
     zIndex: 1,
     rotation: 0,
@@ -144,7 +171,7 @@ export function createCaseResultsDecomposedNodes(
   nodes.push({
     id: 'home-case-results-title',
     kind: 'text',
-    rect: { x: 0, y: 50, width: 720, height: 120 },
+    rect: { x: 56, y: 116, width: 528, height: 128 },
     style: createDefaultCanvasNodeStyle(),
     zIndex: 2,
     rotation: 0,
@@ -162,7 +189,7 @@ export function createCaseResultsDecomposedNodes(
   nodes.push({
     id: 'home-case-results-divider',
     kind: 'divider',
-    rect: { x: 78, y: 172, width: 40, height: 32 },
+    rect: { x: 56, y: 252, width: 40, height: 32 },
     style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
     zIndex: 3,
     rotation: 0,
@@ -180,7 +207,7 @@ export function createCaseResultsDecomposedNodes(
   nodes.push({
     id: 'home-case-results-desc',
     kind: 'text',
-    rect: { x: 0, y: 200, width: 720, height: 80 },
+    rect: { x: 56, y: 294, width: 528, height: 108 },
     style: createDefaultCanvasNodeStyle(),
     zIndex: 4,
     rotation: 0,
@@ -198,7 +225,7 @@ export function createCaseResultsDecomposedNodes(
   nodes.push({
     id: 'home-case-results-summary',
     kind: 'text',
-    rect: { x: 0, y: 290, width: 720, height: 60 },
+    rect: { x: 56, y: 414, width: 528, height: 72 },
     style: createDefaultCanvasNodeStyle(),
     zIndex: 5,
     rotation: 0,
@@ -216,7 +243,7 @@ export function createCaseResultsDecomposedNodes(
   nodes.push({
     id: 'home-case-results-cta',
     kind: 'button',
-    rect: { x: 0, y: 360, width: 200, height: 36 },
+    rect: { x: 56, y: 506, width: 220, height: 36 },
     style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
     zIndex: 6,
     rotation: 0,

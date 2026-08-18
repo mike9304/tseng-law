@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { loadShippingRules, saveShippingRules } from '@/lib/builder/commerce/shipping-engine';
 import {
   getCommerceShippingRulesApiErrorPayload,
@@ -61,7 +60,7 @@ export async function GET(request: NextRequest) {
     const currency = currencySchema.parse(sp.get('currency') ?? 'TWD');
     const scope = sp.get('scope') === 'all' ? 'all' : 'public';
     if (scope === 'all') {
-      const auth = requireBuilderAdminAuth(request);
+      const auth = await guardBuilderReadWithPermission(request, 'view-commerce');
       if (auth instanceof NextResponse) return auth;
     }
 
@@ -81,7 +80,7 @@ export async function GET(request: NextRequest) {
 
 export async function PATCH(request: NextRequest) {
   const errorLocale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   try {

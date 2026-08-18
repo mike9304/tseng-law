@@ -7,6 +7,9 @@ import {
   type Review,
 } from '@/lib/reviews/storage';
 import { isSiteLocale } from '@/lib/locales';
+import { validateCsrf } from '@/lib/builder/security/csrf';
+import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { mapPublicRateLimitDenial } from '@/lib/builder/security/public-rate-limit-response';
 
 const SERVICE_ALLOWLIST = new Set([
   '',
@@ -20,8 +23,18 @@ const SERVICE_ALLOWLIST = new Set([
   'retainer',
   'other',
 ]);
-const submissionAttempts = new Map<string, number>();
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const RATE_LIMIT_MAX = 1;
+const REVIEW_SUBMISSION_FAILURE_CODE = 'review_submission_failed';
+const REVIEW_SUBMISSION_FAILURE_MESSAGE = 'Unable to submit your review right now. Please try again later.';
+
+function errorKind(error: unknown): string {
+  if (error && typeof error === 'object' && 'constructor' in error) {
+    const constructor = error.constructor;
+    if (typeof constructor === 'function' && constructor.name) return constructor.name;
+  }
+  return 'unknown_error';
+}
 
 function getClientKey(req: NextRequest) {
   const forwardedFor = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
@@ -30,37 +43,6 @@ function getClientKey(req: NextRequest) {
 
 function hasBlockedPattern(value: string) {
   return /https?:\/\//i.test(value) || /www\./i.test(value) || /<[^>]+>/.test(value);
-}
-
-function isLocalDevelopmentOrigin(origin: URL): boolean {
-  if (process.env.NODE_ENV === 'production') return false;
-  return origin.hostname === 'localhost' || origin.hostname === '127.0.0.1' || origin.hostname === '[::1]';
-}
-
-function isLoopbackHostname(hostname: string): boolean {
-  return hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '[::1]';
-}
-
-function isSameOriginOrLoopbackAlias(origin: URL, requestUrl: URL): boolean {
-  if (origin.host === requestUrl.host) return true;
-  return isLoopbackHostname(origin.hostname)
-    && isLoopbackHostname(requestUrl.hostname)
-    && origin.port === requestUrl.port;
-}
-
-function isAllowedOrigin(req: NextRequest) {
-  const origin = req.headers.get('origin');
-  if (!origin) return true;
-
-  try {
-    const parsed = new URL(origin);
-    return isSameOriginOrLoopbackAlias(parsed, req.nextUrl)
-      || parsed.host === 'tseng-law.com'
-      || parsed.host === 'www.tseng-law.com'
-      || isLocalDevelopmentOrigin(parsed);
-  } catch {
-    return false;
-  }
 }
 
 function valueFor(body: unknown, key: string): unknown {
@@ -76,10 +58,6 @@ function stringValueFor(body: unknown, key: string): string | undefined {
 function numberValueFor(body: unknown, key: string): number | undefined {
   const value = valueFor(body, key);
   return typeof value === 'number' ? value : undefined;
-}
-
-function errorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : String(error);
 }
 
 export function GET(): Promise<NextResponse>;
@@ -108,6 +86,9 @@ export async function GET(
 }
 
 export async function POST(req: NextRequest) {
+  const csrfFailure = validateCsrf(req);
+  if (csrfFailure) return csrfFailure;
+
   try {
     const body = await req.json();
     const nickname = stringValueFor(body, 'nickname');
@@ -121,13 +102,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: 'invalid source locale' },
         { status: 400 },
-      );
-    }
-
-    if (!isAllowedOrigin(req)) {
-      return NextResponse.json(
-        { error: 'origin not allowed' },
-        { status: 403 }
       );
     }
 
@@ -195,15 +169,25 @@ export async function POST(req: NextRequest) {
     }
 
     const clientKey = getClientKey(req);
-    const now = Date.now();
-    const lastAttempt = submissionAttempts.get(clientKey);
-    if (lastAttempt && now - lastAttempt < RATE_LIMIT_WINDOW_MS) {
+    const rate = await checkRateLimit(
+      `reviews-submit:${clientKey}`,
+      RATE_LIMIT_MAX,
+      RATE_LIMIT_WINDOW_MS,
+    );
+    if (!rate.allowed) {
+      const decision = mapPublicRateLimitDenial(rate);
       return NextResponse.json(
-        { error: 'too many submissions' },
-        { status: 429 }
+        {
+          error: decision.kind === 'backend_unavailable'
+            ? 'rate limit unavailable'
+            : 'too many submissions',
+        },
+        {
+          status: decision.status,
+          headers: decision.headers,
+        },
       );
     }
-    submissionAttempts.set(clientKey, now);
 
     const review: Review = {
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
@@ -224,10 +208,15 @@ export async function POST(req: NextRequest) {
       { ok: true, status: 'pending' },
       { status: 202 }
     );
-  } catch (err) {
-    console.error('[Reviews] POST error:', err);
+  } catch (error) {
+    console.error('[reviews] operation failed', REVIEW_SUBMISSION_FAILURE_CODE, errorKind(error));
     return NextResponse.json(
-      { error: errorMessage(err) },
+      {
+        ok: false,
+        error: REVIEW_SUBMISSION_FAILURE_CODE,
+        code: REVIEW_SUBMISSION_FAILURE_CODE,
+        message: REVIEW_SUBMISSION_FAILURE_MESSAGE,
+      },
       { status: 500 }
     );
   }

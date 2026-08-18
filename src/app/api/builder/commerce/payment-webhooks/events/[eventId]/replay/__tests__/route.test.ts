@@ -40,7 +40,7 @@ describe('builder commerce payment webhook replay API', () => {
 
   it('returns localized not-found errors', async () => {
     const response = await POST(postRequest('missing', 'locale=zh-hant'), {
-      params: { eventId: 'missing' },
+      params: Promise.resolve({ eventId: 'missing' }),
     });
     const payload = await response.json();
 
@@ -58,7 +58,7 @@ describe('builder commerce payment webhook replay API', () => {
     replayPaymentWebhookEventMock.mockRejectedValueOnce(new Error('replay secret leaked'));
 
     const response = await POST(postRequest('pwh_1', 'locale=ko'), {
-      params: { eventId: 'pwh_1' },
+      params: Promise.resolve({ eventId: 'pwh_1' }),
     });
     const payload = await response.json();
 
@@ -101,7 +101,7 @@ describe('builder commerce payment webhook replay API', () => {
     } as never);
 
     const response = await POST(postRequest('pwh_1', 'locale=en'), {
-      params: { eventId: 'pwh_1' },
+      params: Promise.resolve({ eventId: 'pwh_1' }),
     });
     const payload = await response.json();
 

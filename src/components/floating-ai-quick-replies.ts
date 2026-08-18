@@ -94,17 +94,17 @@ const KO_REPLIES: QuickReply[] = [
     question: '상담 비용과 일정이 어떻게 되나요?',
     answer:
       '호정국제법률사무소의 상담 안내입니다.\n\n' +
-      '📞 전화 상담 가능\n' +
-      '📧 이메일 문의 가능\n\n' +
+      '📧 증준외 대만 변호사 이메일 상담: wei@hoveringlaw.com.tw\n\n' +
       '🏢 대만 사무소:\n' +
       '- 타이베이: 承德路 35號 7樓之2\n' +
       '- 타이중: 04-2326-1862\n' +
-      '- 가오슝: 07-557-9797\n\n' +
+      '- 가오슝: 07-557-9797\n' +
+      '- 핑둥: 08-739-1689\n\n' +
       '💼 상담 방식:\n' +
-      '- 대면 상담 (3개 사무소)\n' +
+      '- 대면 상담 (대만 4개 사무소)\n' +
       '- Google Meet / Zoom 화상 상담\n' +
       '- 한국어로 진행 가능\n\n' +
-      '구체 비용은 사건 유형과 복잡도에 따라 다르므로 초기 상담 후 견적을 안내드립니다. 정식 상담 예약은 상담 접수하기 버튼으로 진행해 주세요.',
+      '구체 비용은 사건 유형과 복잡도에 따라 다르므로 초기 상담 후 견적을 안내드립니다. 정식 상담은 증준외 대만 변호사 이메일 상담 버튼 또는 wei@hoveringlaw.com.tw로 신청해 주세요.',
   },
 ];
 
@@ -269,7 +269,7 @@ const FOLLOW_UP_MAP_KO: Record<FollowUpKey, FollowUpSuggestion[]> = {
   general: [
     { label: '상담 가능 분야', message: '호정국제는 어떤 법률 분야를 주로 다루고 있나요?' },
     { label: '상담 비용', message: '직접 변호사 상담 시 비용은 대략 어떻게 책정되나요?' },
-    { label: '연락 방식', message: '이메일 외에 카카오톡이나 전화로도 연락할 수 있나요?' },
+    { label: '이메일 상담', message: '변호사에게 이메일 상담을 신청하려면 어떤 내용을 적어야 하나요?' },
   ],
   unknown: [
     { label: '질문 예시', message: '어떤 유형의 질문에 AI가 먼저 답해 줄 수 있나요?' },
@@ -321,7 +321,7 @@ const FOLLOW_UP_MAP_ZH: Record<FollowUpKey, FollowUpSuggestion[]> = {
   general: [
     { label: '服務領域', message: '昊鼎國際法律事務所主要處理哪些法律領域？' },
     { label: '諮詢費用', message: '直接預約律師諮詢的費用大致如何計算？' },
-    { label: '聯絡方式', message: '除了 Email 之外，還可以透過 KakaoTalk 或電話聯絡嗎？' },
+    { label: 'Email 諮詢', message: '寄信申請律師諮詢時，應該提供哪些資料？' },
   ],
   unknown: [
     { label: '可提問的問題', message: 'AI 可以先回答哪些類型的問題？' },
@@ -373,7 +373,7 @@ const FOLLOW_UP_MAP_EN: Record<FollowUpKey, FollowUpSuggestion[]> = {
   general: [
     { label: 'Practice areas', message: 'What legal areas does Hovering International mainly handle?' },
     { label: 'Consultation fees', message: 'How are direct lawyer consultation fees typically calculated?' },
-    { label: 'Contact channels', message: 'Besides email, can I reach the firm via KakaoTalk or phone?' },
+    { label: 'Email consultation', message: 'What information should I include when requesting a consultation by email?' },
   ],
   unknown: [
     { label: 'Example questions', message: 'What kinds of questions can the AI answer first?' },

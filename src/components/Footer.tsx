@@ -4,6 +4,13 @@ import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import { getPublishedBaseFooterColumns } from '@/components/footer-link-policy';
 import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
+import FooterEmailCopyButton from '@/components/FooterEmailCopyButton';
+import {
+  CONSULTATION_EMAIL,
+  getConsultationCtaLabel,
+  getConsultationPublicMailto,
+  getOfficialConsultationEmailLabel,
+} from '@/lib/consultation/public-contact';
 
 export type FooterLink = {
   readonly label: string;
@@ -34,30 +41,21 @@ export default function Footer({
           : 'Hovering International Law Firm';
   const officeLabel =
     locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : locale === 'ja' ? '事務所' : 'Offices';
-  const offices =
+  const officeQuickLinksLabel =
     locale === 'ko'
-      ? [
-          { label: '타이베이', href: '/ko/contact#offices' },
-          { label: '타이중', href: '/ko/contact#offices' },
-          { label: '가오슝', href: '/ko/contact#offices' }
-        ]
+      ? '사무소 위치 바로가기'
       : locale === 'zh-hant'
-        ? [
-          { label: '台北', href: '/zh-hant/contact#offices' },
-          { label: '台中', href: '/zh-hant/contact#offices' },
-          { label: '高雄', href: '/zh-hant/contact#offices' }
-        ]
+        ? '事務所據點快速連結'
         : locale === 'ja'
-          ? [
-          { label: '台北', href: '/ja/contact#offices' },
-          { label: '台中', href: '/ja/contact#offices' },
-          { label: '高雄', href: '/ja/contact#offices' }
-        ]
-        : [
-          { label: 'Taipei', href: '/en/contact#offices' },
-          { label: 'Taichung', href: '/en/contact#offices' },
-          { label: 'Kaohsiung', href: '/en/contact#offices' }
-        ];
+          ? '事務所所在地へのクイックリンク'
+          : 'Quick links to office locations';
+  const offices = siteContent[locale].contact.locations.map((office) => ({
+    label: office.title,
+    address: office.details[0],
+    href: `/${locale}/contact#offices`,
+  }));
+  const consultationMailto = getConsultationPublicMailto(locale);
+  const consultationCtaLabel = getConsultationCtaLabel(locale);
   const legalLinks =
     locale === 'ko'
       ? [
@@ -113,11 +111,12 @@ export default function Footer({
       <footer className="site-footer">
         <div className="footer-offices">
           <div className="container">
-            <nav className="office-links" aria-label={officeLabel}>
+            <nav className="office-links" aria-label={officeQuickLinksLabel}>
               <span className="office-label">{officeLabel}</span>
               {offices.map((office) => (
                 <Link key={office.label} href={office.href} className="office-link">
-                  {office.label}
+                  <span className="office-link-name">{office.label}</span>
+                  <span className="office-link-address">{office.address}</span>
                 </Link>
               ))}
             </nav>
@@ -128,6 +127,21 @@ export default function Footer({
             <div className="footer-main-intro">
               <p className="footer-main-brand">{brandName}</p>
               <p className="footer-main-note">{footerContent.note}</p>
+              <div className="footer-consultation-email">
+                <p className="footer-consultation-email-label">
+                  {getOfficialConsultationEmailLabel(locale)}
+                </p>
+                <div className="footer-consultation-email-actions">
+                  <a
+                    className="footer-consultation-email-link"
+                    href={consultationMailto}
+                    aria-label={`${consultationCtaLabel}: ${CONSULTATION_EMAIL}`}
+                  >
+                    {CONSULTATION_EMAIL}
+                  </a>
+                  <FooterEmailCopyButton locale={locale} />
+                </div>
+              </div>
             </div>
             {[...publishedBaseColumns, ...extraColumns].map((column) => (
               <nav key={column.title} className="footer-link-column" aria-label={column.title}>

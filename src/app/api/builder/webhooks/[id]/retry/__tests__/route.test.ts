@@ -72,7 +72,7 @@ describe('/api/builder/webhooks/[id]/retry', () => {
   });
 
   it('retries deliveries while preserving success response shape', async () => {
-    const response = await POST(request('locale=ko'), { params: { id: 'wh_test' } });
+    const response = await POST(request('locale=ko'), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(200);
@@ -86,7 +86,7 @@ describe('/api/builder/webhooks/[id]/retry', () => {
   it('returns localized missing webhook errors', async () => {
     getSubscriptionMock.mockResolvedValueOnce(null as never);
 
-    const response = await POST(request('locale=zh-hant'), { params: { id: 'missing' } });
+    const response = await POST(request('locale=zh-hant'), { params: Promise.resolve({ id: 'missing' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(404);
@@ -98,7 +98,7 @@ describe('/api/builder/webhooks/[id]/retry', () => {
   });
 
   it('returns localized invalid JSON errors', async () => {
-    const response = await POST(request('locale=en', '{'), { params: { id: 'wh_test' } });
+    const response = await POST(request('locale=en', '{'), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(400);
@@ -110,7 +110,7 @@ describe('/api/builder/webhooks/[id]/retry', () => {
   });
 
   it('returns localized validation errors', async () => {
-    const response = await POST(request('locale=zh-hant', { deliveryId: '' }), { params: { id: 'wh_test' } });
+    const response = await POST(request('locale=zh-hant', { deliveryId: '' }), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(400);
@@ -126,7 +126,7 @@ describe('/api/builder/webhooks/[id]/retry', () => {
   it('returns localized missing delivery errors', async () => {
     getDeliveryMock.mockResolvedValueOnce(null as never);
 
-    const response = await POST(request('locale=en'), { params: { id: 'wh_test' } });
+    const response = await POST(request('locale=en'), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(404);
@@ -141,7 +141,7 @@ describe('/api/builder/webhooks/[id]/retry', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     retryDeliveryMock.mockRejectedValueOnce(new Error('retry secret leaked'));
 
-    const response = await POST(request('locale=ko'), { params: { id: 'wh_test' } });
+    const response = await POST(request('locale=ko'), { params: Promise.resolve({ id: 'wh_test' }) });
     const payload = await response.json();
 
     expect(response.status).toBe(500);

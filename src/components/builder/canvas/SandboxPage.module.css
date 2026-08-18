@@ -2152,10 +2152,12 @@
 }
 
 .publicChromePreview :global(.quick-contact) {
+  display: block !important;
   bottom: 68px;
 }
 
 .publicChromePreview :global(.scroll-top) {
+  display: block !important;
   bottom: 0;
 }
 
@@ -6067,6 +6069,7 @@
   display: block !important;
 }
 
+.stage :global([data-node-id^='home-offices-tab-'][data-office-active='true'] .tab-button),
 .stage :global([data-node-id='home-offices-tab-1'][data-selected='true'] .tab-button),
 .stage :global([data-node-id='home-offices-tab-2'][data-selected='true'] .tab-button),
 .stage :global([data-node-id='home-offices-tab-1'][data-office-active='true'] .tab-button),
@@ -6078,6 +6081,7 @@
   border-color: var(--primary);
 }
 
+.stage :global([data-node-id^='home-offices-tab-'][data-office-active='false'] .tab-button),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-1'][data-selected='true']) [data-node-id='home-offices-tab-0'] .tab-button),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-2'][data-selected='true']) [data-node-id='home-offices-tab-0'] .tab-button),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-1'][data-office-active='true']) [data-node-id='home-offices-tab-0'] .tab-button),

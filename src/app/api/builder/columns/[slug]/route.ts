@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { ZodError } from 'zod';
 import { normalizeLocale, type Locale } from '@/lib/locales';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { recordColumnEvent } from '@/lib/builder/audit/record';
 import {
   getBuilderColumnsApiErrorPayload,
@@ -12,16 +11,16 @@ import { mergeFrontmatter } from '@/lib/builder/columns/merge-frontmatter';
 import { sanitizeColumnBodyHtml } from '@/lib/builder/columns/sanitize-body-html';
 import { deleteDraftColumn, deletePublishedColumn, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
 import { columnLocaleSchema, columnSlugSchema, patchColumnInputSchema, type ColumnDocument } from '@/lib/builder/columns/types';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { invalidateBlobColumnsCache } from '@/lib/consultation/columns-blob-reader';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 interface ColumnRouteContext {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 function requestLocale(request: NextRequest, input?: unknown): Locale {
@@ -50,14 +49,14 @@ function validationErrorResponse(locale: Locale, error: ZodError): NextResponse 
 }
 
 export async function GET(request: NextRequest, context: ColumnRouteContext) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = await guardBuilderReadWithPermission(request, 'edit-blog');
   if (auth instanceof NextResponse) return auth;
 
   const errorLocale = requestLocale(request);
 
   try {
     const locale = columnLocaleSchema.parse(request.nextUrl.searchParams.get('locale') ?? 'ko');
-    const slug = columnSlugSchema.parse(context.params.slug);
+    const slug = columnSlugSchema.parse((await context.params).slug);
     const bundle = await readColumnBundle(locale, slug);
     if (!bundle.preferred) {
       return errorResponse(locale, 'column_not_found', 404);
@@ -97,7 +96,7 @@ export async function PATCH(request: NextRequest, context: ColumnRouteContext) {
 
   try {
     const locale = columnLocaleSchema.parse(request.nextUrl.searchParams.get('locale') ?? 'ko');
-    const slug = columnSlugSchema.parse(context.params.slug);
+    const slug = columnSlugSchema.parse((await context.params).slug);
     const patch = patchColumnInputSchema.parse(body);
     const bundle = await readColumnBundle(locale, slug);
     const base = bundle.draft ?? bundle.published;
@@ -182,7 +181,7 @@ export async function DELETE(request: NextRequest, context: ColumnRouteContext) 
 
   try {
     const locale = columnLocaleSchema.parse(request.nextUrl.searchParams.get('locale') ?? 'ko');
-    const slug = columnSlugSchema.parse(context.params.slug);
+    const slug = columnSlugSchema.parse((await context.params).slug);
     const includePublished = request.nextUrl.searchParams.get('includePublished') === '1';
     const bundle = await readColumnBundle(locale, slug);
     if (!bundle.draft && (!includePublished || !bundle.published)) {

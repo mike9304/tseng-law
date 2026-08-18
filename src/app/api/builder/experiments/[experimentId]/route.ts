@@ -32,10 +32,8 @@ function errorResponse(
   );
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { experimentId: string } },
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ experimentId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { allowReadOnly: true, permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
   const locale = requestLocale(request);
@@ -50,10 +48,8 @@ export async function GET(
   }
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { experimentId: string } },
-) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ experimentId: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
   const fallbackLocale = requestLocale(request);

@@ -108,23 +108,27 @@ describe('/api/builder/sites/[siteId]/dynamic-templates/[templateId]/publish', (
     vi.mocked(publishDynamicTemplateBlockDraft).mockResolvedValue(publishedOutcome);
   });
 
-  it('returns 401 when publish permission is missing', async () => {
+  it('denies a designer publish before running the template publisher', async () => {
     vi.mocked(guardMutation).mockResolvedValue(
-      NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 }),
+      NextResponse.json({ ok: false, error: 'Missing permission: publish' }, { status: 403 }),
     );
     const route = await import('../route');
     const response = await route.POST(publishRequest({}), {
-      params: { siteId: 'default', templateId: 'service-areas.item-template' },
+      params: Promise.resolve({ siteId: 'default', templateId: 'service-areas.item-template' }),
     });
 
-    expect(response.status).toBe(401);
+    expect(response.status).toBe(403);
+    expect(guardMutation).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      { bucket: 'publish', permission: 'publish' },
+    );
     expect(publishDynamicTemplateBlockDraft).not.toHaveBeenCalled();
   });
 
   it('publishes through the dynamic template block coordinator', async () => {
     const route = await import('../route');
     const response = await route.POST(publishRequest({ updatedBy: 'route-user' }), {
-      params: { siteId: 'default', templateId: 'service-areas.item-template' },
+      params: Promise.resolve({ siteId: 'default', templateId: 'service-areas.item-template' }),
     });
     const payload = await response.json();
 
@@ -146,7 +150,7 @@ describe('/api/builder/sites/[siteId]/dynamic-templates/[templateId]/publish', (
 
     const route = await import('../route');
     const response = await route.POST(publishRequest({}), {
-      params: { siteId: 'default', templateId: 'service-areas.item-template' },
+      params: Promise.resolve({ siteId: 'default', templateId: 'service-areas.item-template' }),
     });
     const payload = await response.json();
 
@@ -160,7 +164,7 @@ describe('/api/builder/sites/[siteId]/dynamic-templates/[templateId]/publish', (
   it('rejects invalid updatedBy values before calling the coordinator', async () => {
     const route = await import('../route');
     const response = await route.POST(publishRequest({ updatedBy: '' }), {
-      params: { siteId: 'default', templateId: 'service-areas.item-template' },
+      params: Promise.resolve({ siteId: 'default', templateId: 'service-areas.item-template' }),
     });
     const payload = await response.json();
 

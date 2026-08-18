@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   DEFAULT_PORTFOLIO_CATEGORIES,
@@ -42,7 +43,8 @@ const copy: Record<Locale, { title: string; description: string; eyebrow: string
   },
 };
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return buildSeoMetadata({
     locale,
@@ -54,13 +56,14 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   });
 }
 
-export default async function PortfolioPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: Locale };
-  searchParams?: { category?: string };
-}) {
+export default async function PortfolioPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+    searchParams?: Promise<{ category?: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const activeCategory = searchParams?.category?.trim() || '';
   const projects = sortProjects(
@@ -111,7 +114,14 @@ export default async function PortfolioPage({
                 data-public-portfolio-card={project.projectId}
               >
                 {project.coverImageUrl ? (
-                  <img src={project.coverImageUrl} alt="" />
+                  <Image
+                    src={project.coverImageUrl}
+                    alt=""
+                    width={800}
+                    height={500}
+                    sizes="(max-width: 900px) calc(100vw - 40px), 360px"
+                    unoptimized={!project.coverImageUrl.startsWith('/') || project.coverImageUrl.startsWith('//')}
+                  />
                 ) : (
                   <div className={styles.imageFallback} aria-hidden />
                 )}

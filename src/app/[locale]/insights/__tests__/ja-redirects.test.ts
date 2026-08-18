@@ -27,17 +27,17 @@ describe('insights locale redirects', () => {
     ['zh-hant', '/zh-hant/columns'],
     ['en', '/en/columns'],
     ['ja', '/ja/columns'],
-  ] as const)('permanently redirects the %s list alias', (locale, destination) => {
-    expect(() => InsightsPage({ params: { locale } })).toThrow(
+  ] as const)('permanently redirects the %s list alias', async (locale, destination) => {
+    await expect(InsightsPage({ params: Promise.resolve({ locale }) })).rejects.toThrow(
       `permanent-redirect:${destination}`,
     );
     expect(navigationMocks.permanentRedirect).toHaveBeenCalledWith(destination);
   });
 
-  it('permanently redirects a Japanese canonical detail path', () => {
+  it('permanently redirects a Japanese canonical detail path', async () => {
     const slug = 'taiwan-gym-injury-lawsuit';
 
-    expect(() => InsightDetailRedirect({ params: { locale: 'ja', slug } })).toThrow(
+    await expect(InsightDetailRedirect({ params: Promise.resolve({ locale: 'ja', slug }) })).rejects.toThrow(
       `permanent-redirect:/ja/columns/${slug}`,
     );
     expect(navigationMocks.permanentRedirect).toHaveBeenCalledWith(
@@ -45,10 +45,10 @@ describe('insights locale redirects', () => {
     );
   });
 
-  it('preserves alias-to-canonical slug resolution for Japanese details', () => {
-    expect(() =>
-      InsightDetailRedirect({ params: { locale: 'ja', slug: 'gym-injury-lawsuit' } }),
-    ).toThrow('permanent-redirect:/ja/columns/taiwan-gym-injury-lawsuit');
+  it('preserves alias-to-canonical slug resolution for Japanese details', async () => {
+    await expect(
+      InsightDetailRedirect({ params: Promise.resolve({ locale: 'ja', slug: 'gym-injury-lawsuit' }) }),
+    ).rejects.toThrow('permanent-redirect:/ja/columns/taiwan-gym-injury-lawsuit');
     expect(navigationMocks.permanentRedirect).toHaveBeenCalledWith(
       '/ja/columns/taiwan-gym-injury-lawsuit',
     );
@@ -68,10 +68,10 @@ describe('insights locale redirects', () => {
     );
   });
 
-  it('returns not found for a slug absent from the Japanese corpus', () => {
-    expect(() =>
-      InsightDetailRedirect({ params: { locale: 'ja', slug: 'missing-ja-post' } }),
-    ).toThrow('not-found');
+  it('returns not found for a slug absent from the Japanese corpus', async () => {
+    await expect(
+      InsightDetailRedirect({ params: Promise.resolve({ locale: 'ja', slug: 'missing-ja-post' }) }),
+    ).rejects.toThrow('not-found');
     expect(navigationMocks.notFound).toHaveBeenCalledOnce();
     expect(navigationMocks.permanentRedirect).not.toHaveBeenCalled();
   });

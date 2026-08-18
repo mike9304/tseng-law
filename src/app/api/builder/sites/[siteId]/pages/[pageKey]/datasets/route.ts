@@ -67,8 +67,9 @@ function currentRevisionPayload(snapshot: Pick<BuilderSnapshotConflictError['con
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { siteId: string; pageKey: string } }
+  props: { params: Promise<{ siteId: string; pageKey: string }> }
 ) {
+  const params = await props.params;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
 
   if (!isDefaultBuilderSiteId(params.siteId)) {
@@ -103,8 +104,9 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { siteId: string; pageKey: string } }
+  props: { params: Promise<{ siteId: string; pageKey: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

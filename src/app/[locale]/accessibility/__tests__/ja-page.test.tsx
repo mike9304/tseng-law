@@ -7,9 +7,9 @@ import AccessibilityPage, { generateMetadata } from '../page';
 const SITE_URL = 'https://tseng-law.com';
 
 describe('Japanese accessibility integration', () => {
-  it('publishes exact Japanese metadata with four-language alternates', () => {
+  it('publishes exact Japanese metadata with four-language alternates', async () => {
     const content = legalPageContent.ja.accessibility;
-    const metadata = generateMetadata({ params: { locale: 'ja' } });
+    const metadata = await generateMetadata({ params: Promise.resolve({ locale: 'ja' }) });
 
     expect(metadata.title).toBe(content.title);
     expect(metadata.description).toBe(content.description);
@@ -35,9 +35,9 @@ describe('Japanese accessibility integration', () => {
     });
   });
 
-  it('renders the complete reviewed Japanese content and visible breadcrumb', () => {
+  it('renders the complete reviewed Japanese content and visible breadcrumb', async () => {
     const html = renderToStaticMarkup(
-      <AccessibilityPage params={{ locale: 'ja' }} />,
+      await AccessibilityPage({ params: Promise.resolve({ locale: 'ja' }) }),
     );
     const content = legalPageContent.ja.accessibility;
 
@@ -68,9 +68,9 @@ describe('Japanese accessibility integration', () => {
     }
   });
 
-  it('publishes the exact Japanese breadcrumb JSON-LD', () => {
+  it('publishes the exact Japanese breadcrumb JSON-LD', async () => {
     const html = renderToStaticMarkup(
-      <AccessibilityPage params={{ locale: 'ja' }} />,
+      await AccessibilityPage({ params: Promise.resolve({ locale: 'ja' }) }),
     );
     const script = html.match(
       /<script type="application\/ld\+json">([^<]+)<\/script>/,
@@ -122,10 +122,10 @@ describe('Japanese accessibility integration', () => {
     ],
   ] as const)(
     'preserves representative %s metadata and body',
-    (locale, title, keywords, sectionTitle, paragraph) => {
-      const metadata = generateMetadata({ params: { locale } });
+    async (locale, title, keywords, sectionTitle, paragraph) => {
+      const metadata = await generateMetadata({ params: Promise.resolve({ locale }) });
       const html = renderToStaticMarkup(
-        <AccessibilityPage params={{ locale }} />,
+        await AccessibilityPage({ params: Promise.resolve({ locale }) }),
       );
 
       expect(metadata.title).toBe(title);

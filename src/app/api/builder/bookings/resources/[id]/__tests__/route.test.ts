@@ -74,7 +74,7 @@ describe('/api/builder/bookings/resources/[id]', () => {
   it('returns localized not-found errors for missing resources on PATCH', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ location: 'Seoul' }, 'en'), {
-      params: { id: 'res-route-test' },
+      params: Promise.resolve({ id: 'res-route-test' }),
     });
     const payload = await response.json();
 
@@ -90,7 +90,7 @@ describe('/api/builder/bookings/resources/[id]', () => {
     vi.mocked(getResource).mockResolvedValueOnce(resource());
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ capacity: 0 }, 'zh-hant'), {
-      params: { id: 'res-route-test' },
+      params: Promise.resolve({ id: 'res-route-test' }),
     });
     const payload = await response.json();
 
@@ -106,7 +106,7 @@ describe('/api/builder/bookings/resources/[id]', () => {
     vi.mocked(getResource).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ location: 'Seoul' }, 'ko'), {
-      params: { id: 'res-route-test' },
+      params: Promise.resolve({ id: 'res-route-test' }),
     });
     const payload = await response.json();
 
@@ -124,7 +124,7 @@ describe('/api/builder/bookings/resources/[id]', () => {
   it('returns localized not-found errors for missing resources on DELETE', async () => {
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('ko'), {
-      params: { id: 'res-route-test' },
+      params: Promise.resolve({ id: 'res-route-test' }),
     });
     const payload = await response.json();
 
@@ -141,7 +141,7 @@ describe('/api/builder/bookings/resources/[id]', () => {
     vi.mocked(getResource).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('en'), {
-      params: { id: 'res-route-test' },
+      params: Promise.resolve({ id: 'res-route-test' }),
     });
     const payload = await response.json();
 

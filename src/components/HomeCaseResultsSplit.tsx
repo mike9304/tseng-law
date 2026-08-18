@@ -1,5 +1,7 @@
-import Image from 'next/image';
 import type { SiteLocale } from '@/lib/locales';
+import DecorativeAutoplayVideo, {
+  DECORATIVE_VIDEO_CONTROL_LABELS,
+} from '@/components/DecorativeAutoplayVideo';
 import SmartLink from '@/components/SmartLink';
 import {
   homeResultsButtonSurfaceIds,
@@ -7,12 +9,22 @@ import {
 } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
 
-/** Wide Miora editorial plate — used only by home `#results`. */
+/** Calm Taiwan civil courtroom editorial plate — used only by home `#results`. */
 export const HOME_RESULTS_EDITORIAL_IMAGE_SRC =
-  '/images/editorial/cross-strait-results.webp';
+  '/images/editorial/taiwan-courtroom-calm-daylight-v2.webp';
 
-export const HOME_RESULTS_EDITORIAL_IMAGE_WIDTH = 2048;
-export const HOME_RESULTS_EDITORIAL_IMAGE_HEIGHT = 880;
+export const HOME_RESULTS_EDITORIAL_IMAGE_WIDTH = 1920;
+export const HOME_RESULTS_EDITORIAL_IMAGE_HEIGHT = 1080;
+export const HOME_RESULTS_EDITORIAL_VIDEO_WEBM_SRC =
+  '/videos/taiwan-courtroom-calm-daylight-v2.webm';
+export const HOME_RESULTS_EDITORIAL_VIDEO_MP4_SRC =
+  '/videos/taiwan-courtroom-calm-daylight-v2.mp4';
+export const HOME_RESULTS_EDITORIAL_MOBILE_IMAGE_SRC =
+  '/images/editorial/taiwan-courtroom-calm-daylight-v2-mobile.webp';
+export const HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_WEBM_SRC =
+  '/videos/taiwan-courtroom-calm-daylight-v2-mobile.webm';
+export const HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_MP4_SRC =
+  '/videos/taiwan-courtroom-calm-daylight-v2-mobile.mp4';
 
 const copyByLocale = {
   ko: {
@@ -23,6 +35,7 @@ const copyByLocale = {
     summary:
       '사건 결과는 구체적인 사실관계와 증거에 따라 달라질 수 있으며, 이 사례는 과거 한 사건의 진행 경과를 소개합니다.',
     cta: '소송사례 분석 보기',
+    imageAlt: '밝고 비어 있는 현대식 대만 민사 법정',
   },
   'zh-hant': {
     label: '案例解析',
@@ -32,6 +45,7 @@ const copyByLocale = {
     summary:
       '案件結果會因具體事實與證據而異；本案例僅說明一件過往案件的處理經過。',
     cta: '查看訴訟案例',
+    imageAlt: '明亮空曠的現代臺灣民事法庭',
   },
   en: {
     label: 'CASE STUDY',
@@ -41,6 +55,7 @@ const copyByLocale = {
     summary:
       'Outcomes depend on the specific facts and evidence; this case study describes the course of one past matter.',
     cta: 'View Case Studies',
+    imageAlt: 'A bright, empty modern Taiwan civil courtroom',
   },
   ja: {
     label: '事例紹介',
@@ -50,6 +65,7 @@ const copyByLocale = {
     summary:
       '結果は具体的な事実関係や証拠により異なります。本事例は、過去の一案件の経過を紹介するものです。',
     cta: '取扱事例を見る',
+    imageAlt: '明るく無人の現代的な台湾民事法廷',
   },
 } as const;
 
@@ -65,15 +81,24 @@ export default function HomeCaseResultsSplit({ locale }: { locale: SiteLocale })
       <div
         className="split-image home-results-media"
         data-builder-node-key="media"
-        aria-hidden="true"
       >
-        <Image
-          src={HOME_RESULTS_EDITORIAL_IMAGE_SRC}
-          alt=""
+        <span className="home-results-media-fallback" aria-hidden />
+        <DecorativeAutoplayVideo
+          className="home-results-media-player"
+          imageClassName="home-results-media-img"
+          videoClassName="home-results-media-video"
+          webmSrc={HOME_RESULTS_EDITORIAL_VIDEO_WEBM_SRC}
+          mp4Src={HOME_RESULTS_EDITORIAL_VIDEO_MP4_SRC}
+          poster={HOME_RESULTS_EDITORIAL_IMAGE_SRC}
+          mobileWebmSrc={HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_WEBM_SRC}
+          mobileMp4Src={HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_MP4_SRC}
+          mobilePoster={HOME_RESULTS_EDITORIAL_MOBILE_IMAGE_SRC}
+          alt={copy.imageAlt}
           width={HOME_RESULTS_EDITORIAL_IMAGE_WIDTH}
           height={HOME_RESULTS_EDITORIAL_IMAGE_HEIGHT}
           sizes="(max-width: 900px) 100vw, 52vw"
-          className="home-results-media-img"
+          loop={false}
+          controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
         />
       </div>
       <div className="split-content home-results-content" data-builder-node-key="copy">

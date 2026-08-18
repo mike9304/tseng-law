@@ -45,6 +45,47 @@ function site(pages: BuilderPageMeta[]): BuilderSiteDocument {
 }
 
 describe('builder SEO model', () => {
+  it.each(['ko', 'zh-hant', 'en'] as const)(
+    'forces the public reviews page to noindex in %s',
+    (locale) => {
+      const seo = buildPageSeo(
+        page({
+          slug: 'reviews',
+          locale,
+          noIndex: false,
+          seo: { noIndex: false },
+        }),
+        'https://example.com',
+        locale,
+        [],
+      );
+
+      expect(seo.canonical).toBe(`https://example.com/${locale}/reviews`);
+      expect(seo.noIndex).toBe(true);
+    },
+  );
+
+  it('keeps a localized reviews slug noindex based on the underlying page', () => {
+    const seo = buildPageSeo(
+      page({
+        slug: 'reviews',
+        slugByLocale: { en: 'client-reviews' },
+        seo: {
+          noIndex: false,
+          localizedOverrides: {
+            en: { noIndex: false },
+          },
+        } as never,
+      }),
+      'https://example.com',
+      'en',
+      [],
+    );
+
+    expect(seo.canonical).toBe('https://example.com/en/client-reviews');
+    expect(seo.noIndex).toBe(true);
+  });
+
   it('builds canonical and social fallbacks from the public non-/p URL', () => {
     const seo = buildPageSeo(
       page({

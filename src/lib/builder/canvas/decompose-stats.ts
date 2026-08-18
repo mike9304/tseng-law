@@ -7,7 +7,7 @@ import {
   createHomeTextNode,
 } from './decompose-home-shared';
 
-const STATS_ROOT_HEIGHT = 640;
+const STATS_ROOT_HEIGHT = 560;
 
 export const STATS_SECTION_ROOT_HEIGHT = STATS_ROOT_HEIGHT;
 
@@ -38,9 +38,9 @@ export function createStatsDecomposedNodes(
       parentId: rootId,
       rect: {
         x: useLocalizedZhHantLayout ? 51 : 72,
-        y: 80,
+        y: 64,
         width: useLocalizedZhHantLayout ? 1178 : 1136,
-        height: 480,
+        height: 432,
       },
       zIndex: 0,
       label: 'home stats container',
@@ -84,9 +84,9 @@ export function createStatsDecomposedNodes(
       parentId: containerId,
       rect: {
         x: 0,
-        y: useLocalizedZhHantLayout ? 238 : 214,
+        y: useLocalizedZhHantLayout ? 228 : 200,
         width: useLocalizedZhHantLayout ? 1178 : 1136,
-        height: useLocalizedZhHantLayout ? 126 : 200,
+        height: useLocalizedZhHantLayout ? 126 : 164,
       },
       zIndex: 3,
       label: 'home stats grid',

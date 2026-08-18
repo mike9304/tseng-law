@@ -8,7 +8,8 @@ import styles from '@/components/members/MembersArea.module.css';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const title = locale === 'ko' ? '프리미엄 회원 영역' : locale === 'zh-hant' ? '進階會員區' : 'Premium member area';
   return {
@@ -17,7 +18,8 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default async function MemberPremiumPage({ params }: { params: { locale: Locale } }) {
+export default async function MemberPremiumPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const member = await getCurrentSiteMember();
   if (!member) redirect(`/${locale}/login?next=${encodeURIComponent(`/${locale}/account/premium`)}`);

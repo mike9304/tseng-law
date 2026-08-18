@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { safeEqualStrings } from '@/lib/builder/security/timing-safe';
 import {
   appendMessage,
@@ -51,6 +52,9 @@ function errorResponse(
 }
 
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const ip = clientIp(request);
   const rate = await checkRateLimit(`livechat-send:${ip}`, 60, 60_000);
   if (!rate.allowed) return errorResponse(request, 'too_many_requests', 429);

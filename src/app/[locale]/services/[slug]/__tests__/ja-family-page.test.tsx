@@ -5,9 +5,11 @@ import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profile
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import { getServiceArea } from '@/data/service-details';
 import { getColumnPost } from '@/lib/columns';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import ServiceDetailPage, { generateMetadata } from '../page';
 
 const SITE_URL = 'https://tseng-law.com';
+const CONSULTATION_MAILTO_HREF = getConsultationPublicMailto('ja').replace(/&/g, '&amp;');
 const FAMILY_COLUMN_SLUGS = [
   'taiwan-divorce-lawsuit-qna',
   'taiwan-inheritance-custody-analysis',
@@ -79,7 +81,7 @@ describe('Japanese family service-detail route', () => {
       : approved!.intro;
 
     const metadata = await generateMetadata({
-      params: { locale: 'ja', slug: 'family' },
+      params: Promise.resolve({ locale: 'ja', slug: 'family' }),
     });
 
     expect(metadata.title).toBe(approved!.title);
@@ -113,7 +115,7 @@ describe('Japanese family service-detail route', () => {
     expect(base!.columnSlugs).toEqual(FAMILY_COLUMN_SLUGS);
 
     const page = await ServiceDetailPage({
-      params: { locale: 'ja', slug: 'family' },
+      params: Promise.resolve({ locale: 'ja', slug: 'family' }),
     });
     const html = renderToStaticMarkup(page);
 
@@ -146,7 +148,9 @@ describe('Japanese family service-detail route', () => {
 
     expect(html).toContain(attorney!.name);
     expect(html).toContain('href="/ja/lawyers/wei-tseng"');
-    expect(html).toContain('href="/ja/contact"');
+    expect(html).toContain(`href="${CONSULTATION_MAILTO_HREF}"`);
+    expect(html).not.toContain('href="tel:');
+    expect(html).not.toMatch(/kakao|line\.me|lin\.ee/i);
     for (const slug of FAMILY_COLUMN_SLUGS) {
       expect(getColumnPost(slug, 'ja'), slug).toBeDefined();
       expect(html).toContain(`href="/ja/columns/${slug}"`);
@@ -179,7 +183,7 @@ describe('Japanese family service-detail route', () => {
 
   it('redirects normalized Japanese casing to the canonical family path', async () => {
     await expect(ServiceDetailPage({
-      params: { locale: 'ja', slug: 'FAMILY' },
+      params: Promise.resolve({ locale: 'ja', slug: 'FAMILY' }),
     })).rejects.toThrow('NEXT_REDIRECT:/ja/services/family');
 
     expect(navigationMocks.permanentRedirect).toHaveBeenCalledWith(

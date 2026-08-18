@@ -74,7 +74,7 @@ describe('WO-I18N-P01 Japanese FAQ page', () => {
   });
 
   it('builds Japanese metadata with the Japanese canonical, locale, and all indexable public alternates', async () => {
-    const metadata = await generateMetadata({ params: { locale: 'ja' } });
+    const metadata = await generateMetadata({ params: Promise.resolve({ locale: 'ja' }) });
 
     expect(metadata.title).toBe(pageCopy.ja.faq.title);
     expect(metadata.description).toBe(pageCopy.ja.faq.description);
@@ -134,7 +134,7 @@ describe('WO-I18N-P01 Japanese FAQ page', () => {
     mocks.faqItemsToSchemaItems.mockReturnValue(faqContent.ja);
     mocks.generateFAQSchema.mockReturnValue(japaneseSchema);
 
-    const element = await FaqPage({ params: { locale: 'ja' } });
+    const element = await FaqPage({ params: Promise.resolve({ locale: 'ja' }) });
 
     expect(React.isValidElement<{ children?: React.ReactNode }>(element)).toBe(true);
     if (!React.isValidElement<{ children?: React.ReactNode }>(element)) {
@@ -204,8 +204,8 @@ describe('WO-I18N-P01 Japanese FAQ page', () => {
   });
 
   it('keeps the established Korean builder metadata and FAQ engine calls', async () => {
-    await generateMetadata({ params: { locale: 'ko' } });
-    await FaqPage({ params: { locale: 'ko' } });
+    await generateMetadata({ params: Promise.resolve({ locale: 'ko' }) });
+    await FaqPage({ params: Promise.resolve({ locale: 'ko' }) });
 
     expect(mocks.buildPublishedSitePageMetadata).toHaveBeenCalledWith('ko', 'faq');
     expect(mocks.resolvePublishedSitePage).toHaveBeenCalledWith('ko', 'faq');

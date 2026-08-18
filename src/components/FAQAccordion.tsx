@@ -10,8 +10,8 @@ import { SurfaceText } from '@/lib/builder/surface-context';
 const parentheticalParticlePattern = /\)([은는이가을를과와])/g;
 
 const faqHeadings: Record<SiteLocale, { label: string; title: string }> = {
-  ko: { label: '자주 묻는 질문', title: '자주 묻는 질문' },
-  'zh-hant': { label: '常見問題', title: '常見問題' },
+  ko: { label: 'FAQ', title: '자주 묻는 질문' },
+  'zh-hant': { label: 'FAQ', title: '常見問題' },
   en: { label: 'FAQ', title: 'Frequently Asked Questions' },
   ja: { label: 'FAQ', title: 'よくある質問' },
 };

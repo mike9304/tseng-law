@@ -16,8 +16,9 @@ import { guardMutation } from '@/lib/builder/security/guard';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { siteId: string; collectionId: string } }
+  props: { params: Promise<{ siteId: string; collectionId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -65,8 +66,9 @@ export async function GET(
 
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { siteId: string; collectionId: string } }
+  props: { params: Promise<{ siteId: string; collectionId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -111,8 +113,9 @@ export async function PATCH(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { siteId: string; collectionId: string } }
+  props: { params: Promise<{ siteId: string; collectionId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

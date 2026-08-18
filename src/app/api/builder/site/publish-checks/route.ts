@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
   const page = site?.pages.find((p) => p.pageId === pageId) ?? null;
 
   try {
-    const suite = await runAllChecks(canvas, page, site);
+    const suite = await runAllChecks(canvas, page, site, siteId);
     const translationReleasePolicy = await readTranslationReleasePolicy(siteId);
     const translationSiteWarnings = site
       ? buildTranslationSiteWarningSummary(site, pageId)

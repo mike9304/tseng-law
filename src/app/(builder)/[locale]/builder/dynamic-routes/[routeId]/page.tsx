@@ -26,11 +26,12 @@ const dynamicRouteCopy: Record<Locale, { title: string; description: string }> =
   },
 };
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale; routeId: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: Locale; routeId: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = dynamicRouteCopy[locale];
   return buildSeoMetadata({
@@ -43,13 +44,14 @@ export function generateMetadata({
   });
 }
 
-export default async function BuilderDynamicRouteDetailPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: Locale; routeId: string };
-  searchParams?: { previewRecordId?: string };
-}) {
+export default async function BuilderDynamicRouteDetailPage(
+  props: {
+    params: Promise<{ locale: Locale; routeId: string }>;
+    searchParams?: Promise<{ previewRecordId?: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const routeId = decodeBuilderDynamicRouteParam(params.routeId);
 

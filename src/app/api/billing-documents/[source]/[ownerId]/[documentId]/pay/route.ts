@@ -211,7 +211,11 @@ function unavailableStatusForError(error: Awaited<ReturnType<typeof loadValidRow
   return { page: 'invalid', status: 403 };
 }
 
-export async function GET(request: NextRequest, { params }: { params: { source: string; ownerId: string; documentId: string } }) {
+export async function GET(
+  request: NextRequest,
+  props: { params: Promise<{ source: string; ownerId: string; documentId: string }> }
+) {
+  const params = await props.params;
   const token = request.nextUrl.searchParams.get('token');
   const paymentReturn = request.nextUrl.searchParams.get('payment');
   const loaded = await loadValidRow(params, token);
@@ -228,7 +232,11 @@ export async function GET(request: NextRequest, { params }: { params: { source: 
   return htmlResponse(paymentPage(loaded.row, { notice, manualInstructions }));
 }
 
-export async function POST(request: NextRequest, { params }: { params: { source: string; ownerId: string; documentId: string } }) {
+export async function POST(
+  request: NextRequest,
+  props: { params: Promise<{ source: string; ownerId: string; documentId: string }> }
+) {
+  const params = await props.params;
   const rate = await checkRateLimit(`billing-document-pay:${clientIp(request)}`, 12, 60_000);
   if (!rate.allowed) return htmlResponse(unavailablePaymentPage('rate_limited'), 429);
 

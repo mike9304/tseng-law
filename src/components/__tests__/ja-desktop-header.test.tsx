@@ -31,7 +31,7 @@ describe('Japanese desktop header', () => {
     expect(html).toMatch(/class="header-logo"[^>]*href="\/ja"/);
     expect(html).toContain('昊鼎国際法律事務所');
     expect(html).toContain('aria-label="補助メニュー"');
-    expect(html).toContain('href="/ja/contact">お問い合わせ</a>');
+    expect(html).toContain('href="/ja/contact">連絡先</a>');
     expect(html).toContain('href="/ja/contact#offices">アクセス</a>');
     expect(html).toContain('🇰🇷');
     expect(html).toContain('🇯🇵');

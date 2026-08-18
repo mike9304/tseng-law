@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState, type DragEvent } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type DragEvent } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import type { Booking, BookingService, CalendarEntry, Staff } from '@/lib/builder/bookings/types';
 import { textForLocale } from '@/lib/builder/bookings/types';
@@ -228,18 +228,40 @@ export default function BookingCalendarAdmin({
   const [rescheduleSaving, setRescheduleSaving] = useState(false);
   const [rescheduleError, setRescheduleError] = useState('');
   const draggingBookingIdRef = useRef<string | null>(null);
+  const calendarUrlStateRef = useRef({ month, staffFilter, viewMode });
   const range = useMemo(() => monthRange(month), [month]);
   const weekRange = useMemo(() => weekCells(month), [month]);
   const availabilityByStaffId = useMemo(() => new Map(availability.map((item) => [item.staffId, item])), [availability]);
   const copy = useMemo(() => calendarCopy(locale), [locale]);
+  const selectedBookingId = selectedEntry?.booking?.bookingId;
   const weekdayLabels = locale === 'ko'
     ? ['일', '월', '화', '수', '목', '금', '토']
     : locale === 'zh-hant'
       ? ['日', '一', '二', '三', '四', '五', '六']
       : weekdays;
 
+  const refreshCalendar = useCallback(async (nextMonth: string, nextStaffId: string) => {
+    setLoading(true);
+    try {
+      const nextRange = monthRange(nextMonth);
+      const params = new URLSearchParams({
+        from: nextRange.from,
+        to: nextRange.to,
+        locale,
+      });
+      if (nextStaffId) params.set('staffId', nextStaffId);
+      const res = await fetch(`/api/builder/bookings/calendar?${params.toString()}`, { credentials: 'same-origin' });
+      if (res.ok) {
+        const data = (await res.json()) as { entries: CalendarEntry[] };
+        setEntries(data.entries);
+      }
+    } finally {
+      setLoading(false);
+    }
+  }, [locale]);
+
   useEffect(() => {
-    if (!selectedEntry?.booking) {
+    if (!selectedBookingId) {
       setRescheduleStartAt('');
       setRescheduleStaffId('');
       setRescheduleSaving(false);
@@ -250,23 +272,29 @@ export default function BookingCalendarAdmin({
     setRescheduleStaffId(selectedEntry.staffId);
     setRescheduleSaving(false);
     setRescheduleError('');
-  }, [selectedEntry?.booking?.bookingId, selectedEntry?.staffId, selectedEntry?.startAt]);
+  }, [selectedBookingId, selectedEntry?.staffId, selectedEntry?.startAt]);
+
+  useEffect(() => {
+    calendarUrlStateRef.current = { month, staffFilter, viewMode };
+  }, [month, staffFilter, viewMode]);
 
   useEffect(() => {
     skipNextUrlPushRef.current = true;
-    const nextMonth = normalizeBookingCalendarMonth(searchParams.get('month'));
-    const nextViewMode = normalizeBookingCalendarViewMode(searchParams.get('view'));
-    const nextStaffFilter = searchParams.get('staffId') ?? '';
-    const monthChanged = nextMonth !== month;
-    const viewChanged = nextViewMode !== viewMode;
-    const staffChanged = nextStaffFilter !== staffFilter;
+    const params = new URLSearchParams(searchKey);
+    const nextMonth = normalizeBookingCalendarMonth(params.get('month'));
+    const nextViewMode = normalizeBookingCalendarViewMode(params.get('view'));
+    const nextStaffFilter = params.get('staffId') ?? '';
+    const current = calendarUrlStateRef.current;
+    const monthChanged = nextMonth !== current.month;
+    const viewChanged = nextViewMode !== current.viewMode;
+    const staffChanged = nextStaffFilter !== current.staffFilter;
     if (monthChanged) setMonth(nextMonth);
     if (viewChanged) setViewMode(nextViewMode);
     if (staffChanged) setStaffFilter(nextStaffFilter);
     if (monthChanged || staffChanged) {
-      void refresh(nextMonth, nextStaffFilter);
+      void refreshCalendar(nextMonth, nextStaffFilter);
     }
-  }, [searchKey]);
+  }, [refreshCalendar, searchKey]);
 
   const filteredEntries = entries.filter((entry) => !staffFilter || entry.staffId === staffFilter);
   const entriesByDate = useMemo(() => {
@@ -290,25 +318,9 @@ export default function BookingCalendarAdmin({
   const selectedOfficeTime = selectedEntry ? formatDateTimeInTimezone(selectedEntry.startAt, locale, selectedAvailability?.timezone) : '';
   const selectedOfficeEndTime = selectedEntry ? formatDateTimeInTimezone(selectedEntry.endAt, locale, selectedAvailability?.timezone) : '';
 
-  const refresh = async (nextMonth = month, nextStaffId = staffFilter) => {
-    setLoading(true);
-    try {
-      const nextRange = monthRange(nextMonth);
-      const params = new URLSearchParams({
-        from: nextRange.from,
-        to: nextRange.to,
-        locale,
-      });
-      if (nextStaffId) params.set('staffId', nextStaffId);
-      const res = await fetch(`/api/builder/bookings/calendar?${params.toString()}`, { credentials: 'same-origin' });
-      if (res.ok) {
-        const data = (await res.json()) as { entries: CalendarEntry[] };
-        setEntries(data.entries);
-      }
-    } finally {
-      setLoading(false);
-    }
-  };
+  const refresh = (nextMonth = month, nextStaffId = staffFilter) => (
+    refreshCalendar(nextMonth, nextStaffId)
+  );
 
   useEffect(() => {
     if (skipNextUrlPushRef.current) {

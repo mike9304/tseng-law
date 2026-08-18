@@ -40,12 +40,11 @@ describe('page switcher copy', () => {
     });
     expect(copy.memberStarterSetupTitle).toBe('다음 설정');
     expect(copy.memberStarterSetupCopy).toContain('멤버 로그인/계정 앱 위젯 배치');
-    expect(copy.memberStarterWidgetCopy.loginSubtitle).toContain('로그인 또는 회원가입');
+    expect(copy.memberStarterWidgetCopy.loginSubtitle).toBe('회원 계정은 담당자가 확인 후 발급합니다. 기존 회원은 로그인해 주세요.');
     expect(copy.memberStarterWidgetCopy.accountSubtitle).toContain('프리미엄 영역');
     expect(copy.memberStarterWidgetCopy.profileTitle).toBe('프로필 정보');
     expect(copy.memberStarterWidgetCopy.bookingsSubtitle).toContain('상담 예약');
     expect(copy.memberStarterWidgetCopy.loginLabel).toBe('로그인');
-    expect(copy.memberStarterWidgetCopy.signupLabel).toBe('회원가입');
     expect(copy.memberStarterWidgetCopy.saveProfileLabel).toBe('프로필 저장');
     expect(copy.memberStarterWidgetCopy.emptyUpcomingBookingsLabel).toBe('예정된 예약이 없습니다.');
     expect(copy.columnsQuickCountLabel(3)).toBe('게시글 3개');
@@ -96,8 +95,8 @@ describe('page switcher copy', () => {
     expect(copy.memberStarterSetupTitle).toBe('下一步設定');
     expect(copy.memberStarterSetupCopy).toContain('會員登入/帳戶應用元件');
     expect(copy.memberStarterWidgetCopy.profileTitle).toBe('個人資料');
+    expect(copy.memberStarterWidgetCopy.loginSubtitle).toBe('會員帳戶由事務所確認後建立。既有會員請登入。');
     expect(copy.memberStarterWidgetCopy.bookingsSubtitle).toContain('諮詢預約');
-    expect(copy.memberStarterWidgetCopy.signupLabel).toBe('建立帳戶');
     expect(copy.memberStarterWidgetCopy.emptyPastBookingsLabel).toBe('目前沒有過去預約。');
     expect(copy.missingPageDescription).not.toMatch(/[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]/);
     expect(copy.columnsQuickCountLabel(2)).toBe('2 篇文章');
@@ -175,8 +174,8 @@ describe('page switcher copy', () => {
     expect(copy.memberStarterSetupTitle).toBe('Next setup');
     expect(copy.memberStarterSetupCopy).toContain('Place the member login/account app widget');
     expect(copy.memberStarterWidgetCopy.profileTitle).toBe('Profile details');
+    expect(copy.memberStarterWidgetCopy.loginSubtitle).toBe('Member accounts are issued by the firm after review. Existing members can sign in.');
     expect(copy.memberStarterWidgetCopy.bookingsSubtitle).toContain('member email');
-    expect(copy.memberStarterWidgetCopy.signupLabel).toBe('Create account');
     expect(copy.memberStarterWidgetCopy.emptyUpcomingBookingsLabel).toBe('No upcoming bookings.');
     expect(copy.missingPageDescription).not.toMatch(cjk);
     expect(copy.columnsQuickCountLabel(4)).toBe('4 posts');

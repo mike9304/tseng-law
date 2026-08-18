@@ -7,6 +7,13 @@ import { siteContent } from '@/data/site-content';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { teamContent, type TeamMember } from '@/data/team-members';
 import {
+  CONSULTATION_EMAIL,
+  getConsultationCtaLabel,
+  getConsultationPublicMailto,
+  getOfficialConsultationEmailLabel,
+  getSensitiveInformationWarning,
+} from '@/lib/consultation/public-contact';
+import {
   HOME_STAGE_WIDTH,
   createHomeButtonNode,
   createHomeContainerNode,
@@ -95,7 +102,7 @@ const consultationGuideCopy = {
       {
         title: '가능한 상담 채널',
         items: [
-          '카카오톡, 이메일, 전화로 문의를 접수할 수 있습니다.',
+          '이메일과 전화로 문의를 접수할 수 있습니다.',
           '타이베이 대면 상담과 Zoom 또는 Google Meet 화상 상담이 가능합니다.',
           '한국어, 중국어, 영어 기준으로 기본 상담 흐름을 안내합니다.',
         ],
@@ -126,7 +133,7 @@ const consultationGuideCopy = {
       {
         title: '可使用的聯絡方式',
         items: [
-          '可透過 KakaoTalk、電子郵件與電話提出詢問。',
+          '可透過電子郵件與電話提出詢問。',
           '提供台北面談，以及 Zoom 或 Google Meet 視訊諮詢。',
           '以韓文、中文、英文為主進行基本諮詢安排。',
         ],
@@ -157,7 +164,7 @@ const consultationGuideCopy = {
       {
         title: 'Available channels',
         items: [
-          'You can reach us through KakaoTalk, email, or phone.',
+          'You can reach us through email or phone.',
           'We offer in-person meetings in Taipei and video consultations via Zoom or Google Meet.',
           'Initial consultation coordination is handled in Korean, Chinese, and English.',
         ],
@@ -980,7 +987,7 @@ function buildMemberCardNodes({
       rect: { x: actionX, y: 0, width: 150, height: actionButtonHeight },
       zIndex: 1,
       label: copy.consult,
-      href: `/${locale}/contact`,
+      href: getConsultationPublicMailto(locale),
       style: 'outline',
       className: 'button button--outline attorney-card-cta',
       as: 'a',
@@ -1430,6 +1437,8 @@ export function createContactBlocksSectionNodes(
   heightCompensation = 0,
 ): DecomposedSectionBuild {
   const { contact } = siteContent[locale];
+  const consultationMailto = getConsultationPublicMailto(locale);
+  const consultationCtaLabel = getConsultationCtaLabel(locale);
   const rootId = `${prefix}-contact-root`;
   const containerId = `${prefix}-contact-container`;
   const nodes: BuilderCanvasNode[] = [
@@ -1505,12 +1514,56 @@ export function createContactBlocksSectionNodes(
   );
   cursor += 44;
 
+  nodes.push(
+    createHomeButtonNode({
+      id: `${prefix}-official-consultation-email`,
+      parentId: containerId,
+      rect: { x: 0, y: cursor, width: 520, height: 52 },
+      zIndex: 11,
+      label: `${getOfficialConsultationEmailLabel(locale)}: ${CONSULTATION_EMAIL}`,
+      href: consultationMailto,
+      style: 'primary',
+      className: 'button',
+      as: 'a',
+      ariaLabel: consultationCtaLabel,
+    }),
+  );
+  cursor += 72;
+
+  const sensitiveInformationWarning = getSensitiveInformationWarning(locale);
+  const warningHeight = estimateTextHeight(sensitiveInformationWarning, 920, 16, 1.7);
+  nodes.push(
+    createHomeTextNode({
+      id: `${prefix}-sensitive-information-warning`,
+      parentId: containerId,
+      rect: { x: 0, y: cursor, width: 920, height: warningHeight },
+      zIndex: 12,
+      text: sensitiveInformationWarning,
+      className: 'section-lede',
+      as: 'p',
+      fontSize: 16,
+    }),
+  );
+  cursor += warningHeight + 28;
+
+  const consultationInquiries = contact.inquiries
+    .filter((block) => !/(?:kakao|카카오|\bline\b|라인|ライン)/i.test(block.title))
+    .map((block) => ({
+      ...block,
+      details: block.details
+        .filter((detail) => !/(?:kakao|카카오|\bline\b|라인|ライン)/i.test(detail))
+        .map((detail) => (
+          /\+\d[\d-]{5,}\d/.test(detail)
+            ? `${getOfficialConsultationEmailLabel(locale)}: ${CONSULTATION_EMAIL}`
+            : detail
+        )),
+    }));
   const inquiriesGrid = createInfoGridBlocks({
     prefix: `${prefix}-inquiries`,
     parentId: containerId,
     y: cursor,
-    blocks: contact.inquiries,
-    zBase: 11,
+    blocks: consultationInquiries,
+    zBase: 13,
   });
   nodes.push(...inquiriesGrid.nodes);
   cursor += inquiriesGrid.height + 44;
@@ -1543,16 +1596,17 @@ export function createContactBlocksSectionNodes(
     createHomeButtonNode({
       id: `${prefix}-contact-cta`,
       parentId: containerId,
-      rect: { x: 0, y: cursor, width: 180, height: 44 },
+      rect: { x: 0, y: cursor, width: 380, height: 48 },
       zIndex: 30,
-      label: contact.cta.label,
-      href: contact.cta.href,
-      style: 'secondary',
-      className: 'button secondary',
+      label: consultationCtaLabel,
+      href: consultationMailto,
+      style: 'primary',
+      className: 'button',
       as: 'a',
+      ariaLabel: consultationCtaLabel,
     }),
   );
-  cursor += 44;
+  cursor += 48;
 
   const containerHeight = cursor + heightCompensation;
   const rootHeight = SECTION_TOP + containerHeight + SECTION_BOTTOM;

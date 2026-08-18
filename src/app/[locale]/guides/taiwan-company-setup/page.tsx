@@ -2,13 +2,18 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import { normalizeSiteLocale, siteLocales, type SiteLocale } from '@/lib/locales';
+import {
+  CONSULTATION_EMAIL,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildHowToJsonLd, buildSeoMetadata } from '@/lib/seo';
 import { GUIDE_SLUG, guideContent } from './content';
 import styles from './guide.module.css';
 
 const SLUG_PATH = GUIDE_SLUG;
 
-export function generateMetadata({ params }: { params: { locale: SiteLocale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const c = guideContent[locale];
 
@@ -22,7 +27,8 @@ export function generateMetadata({ params }: { params: { locale: SiteLocale } })
   });
 }
 
-export default function TaiwanCompanySetupGuidePage({ params }: { params: { locale: SiteLocale } }) {
+export default async function TaiwanCompanySetupGuidePage(props: { params: Promise<{ locale: SiteLocale }> }) {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const c = guideContent[locale];
   const path = `/${locale}/${SLUG_PATH}`;
@@ -191,9 +197,13 @@ export default function TaiwanCompanySetupGuidePage({ params }: { params: { loca
             <div className={styles.cta}>
               <h2 className={styles.ctaTitle}>{c.ctaTitle}</h2>
               <p className={styles.ctaText}>{c.ctaText}</p>
-              <Link href={`/${locale}/contact`} className={styles.ctaButton}>
+              <a
+                href={getConsultationPublicMailto(locale)}
+                className={styles.ctaButton}
+                aria-label={`${c.ctaTitle}: ${CONSULTATION_EMAIL}`}
+              >
                 {c.ctaButton}
-              </Link>
+              </a>
             </div>
           </article>
         </div>

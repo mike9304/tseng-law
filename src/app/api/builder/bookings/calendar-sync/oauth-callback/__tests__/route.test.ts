@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { encryptToken } from '@/lib/builder/bookings/calendar-sync/encryption';
 import { exchangeGoogleCode } from '@/lib/builder/bookings/calendar-sync/google';
@@ -8,10 +8,10 @@ import {
   makeConnectionId,
   saveConnection,
 } from '@/lib/builder/bookings/calendar-sync/storage';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ username: 'admin' })),
+vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'admin' })),
 }));
 
 vi.mock('@/lib/builder/bookings/calendar-sync/encryption', () => ({
@@ -54,7 +54,7 @@ describe('/api/builder/bookings/calendar-sync/oauth-callback', () => {
     vi.clearAllMocks();
     vi.useFakeTimers();
     vi.setSystemTime(new Date('2026-05-04T10:00:00.000Z'));
-    vi.mocked(requireBuilderAdminAuth).mockReturnValue({ username: 'admin' });
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({ username: 'admin' });
     vi.mocked(encryptToken).mockReturnValue('encrypted-refresh-token');
     vi.mocked(exchangeGoogleCode).mockResolvedValue({
       ok: true,
@@ -75,6 +75,24 @@ describe('/api/builder/bookings/calendar-sync/oauth-callback', () => {
 
   afterEach(() => {
     vi.useRealTimers();
+  });
+
+  it('requires manage-bookings before validating state or exchanging provider tokens', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: manage-bookings' }, { status: 403 }),
+    );
+    const route = await import('../route');
+    const request = callbackRequest('code=oauth-code&state=signed-state&locale=en');
+    const response = await route.GET(request);
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(request, 'manage-bookings');
+    expect(verifyOauthState).not.toHaveBeenCalled();
+    expect(exchangeGoogleCode).not.toHaveBeenCalled();
+    expect(exchangeOutlookCode).not.toHaveBeenCalled();
+    expect(encryptToken).not.toHaveBeenCalled();
+    expect(makeConnectionId).not.toHaveBeenCalled();
+    expect(saveConnection).not.toHaveBeenCalled();
   });
 
   it('returns localized provider-denied callback errors without exposing provider details', async () => {

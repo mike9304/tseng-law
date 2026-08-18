@@ -20,8 +20,9 @@ const routePolicyPayloadSchema = z.object({
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { siteId: string; collectionId: string; pageId: string } },
+  props: { params: Promise<{ siteId: string; collectionId: string; pageId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -81,8 +82,9 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { siteId: string; collectionId: string; pageId: string } },
+  props: { params: Promise<{ siteId: string; collectionId: string; pageId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

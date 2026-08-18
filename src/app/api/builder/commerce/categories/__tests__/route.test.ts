@@ -1,16 +1,19 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import {
   filterProductsByLocale,
   filterProductsByStatus,
   listProductCategories,
   listProducts,
 } from '@/lib/builder/commerce/products-engine';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { GET } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
+vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/commerce/products-engine', () => ({
@@ -28,7 +31,7 @@ const category = {
   productCount: 1,
 };
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const filterProductsByLocaleMock = vi.mocked(filterProductsByLocale);
 const filterProductsByStatusMock = vi.mocked(filterProductsByStatus);
 const listProductCategoriesMock = vi.mocked(listProductCategories);
@@ -41,7 +44,10 @@ function getRequest(query = ''): NextRequest {
 describe('builder commerce categories API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
     filterProductsByLocaleMock.mockImplementation((products) => products as never);
     filterProductsByStatusMock.mockImplementation((products) => products as never);
     listProductsMock.mockResolvedValue([product] as never);
@@ -95,7 +101,7 @@ describe('builder commerce categories API', () => {
       includeHidden: false,
       products: [product],
     });
-    expect(requireBuilderAdminAuthMock).not.toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).not.toHaveBeenCalled();
   });
 
   it('authorizes all-scope categories and preserves all-scope shape', async () => {
@@ -104,7 +110,10 @@ describe('builder commerce categories API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, locale: 'zh-hant', total: 1, categories: [category] });
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
     expect(filterProductsByStatusMock).not.toHaveBeenCalled();
     expect(listProductCategoriesMock).toHaveBeenCalledWith('zh-hant', {
       includeHidden: true,

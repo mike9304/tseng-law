@@ -6,10 +6,9 @@ import type {
 } from '@/lib/builder/bookings/types';
 import {
   getPackage,
-  getPackageCredit,
   listPackageCredits,
   listPackages,
-  savePackageCredit,
+  mutatePackageCredit,
   timestamped,
 } from '@/lib/builder/bookings/storage';
 
@@ -19,21 +18,6 @@ export function normalizePackageEmail(email: string): string {
 
 function nowIso(): string {
   return new Date().toISOString();
-}
-
-const creditLocks = new Map<string, number>();
-const CREDIT_LOCK_MS = 15_000;
-
-function acquireCreditLock(creditId: string): boolean {
-  const now = Date.now();
-  const held = creditLocks.get(creditId);
-  if (held && held > now) return false;
-  creditLocks.set(creditId, now + CREDIT_LOCK_MS);
-  return true;
-}
-
-function releaseCreditLock(creditId: string): void {
-  creditLocks.delete(creditId);
 }
 
 export function packageCoversService(pkg: BookingPackage, serviceId: string): boolean {
@@ -82,67 +66,71 @@ export async function redeemPackageCreditForBooking({
   serviceId: string;
   at?: string;
 }): Promise<{ credit: BookingPackageCredit; package: BookingPackage } | null> {
-  const match = await findApplicablePackageCredit({ customerEmail, serviceId, at });
-  if (!match) return null;
-  if (!acquireCreditLock(match.credit.creditId)) return null;
+  // A competing instance can exhaust the first listed credit between the
+  // lookup and CAS. Re-scan a bounded number of times so another eligible
+  // credit is still usable, while every individual decrement remains atomic.
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    const match = await findApplicablePackageCredit({ customerEmail, serviceId, at });
+    if (!match) return null;
 
-  try {
-    const freshCredit = await getPackageCredit(match.credit.creditId);
-    const freshPackage = await getPackage(match.package.packageId);
-    if (!freshCredit || !freshPackage || !freshPackage.isActive) return null;
-    if (!isPackageCreditUsable(freshCredit, at) || !packageCoversService(freshPackage, serviceId)) return null;
+    const redeemed = await mutatePackageCredit(match.credit.creditId, async (freshCredit) => {
+      // The reducer is deliberately side-effect free: Blob CAS may invoke it
+      // against a newer credit after another function instance wins the race.
+      const freshPackage = await getPackage(match.package.packageId);
+      if (!freshPackage || !freshPackage.isActive || !packageCoversService(freshPackage, serviceId)) {
+        return null;
+      }
+      if (!isPackageCreditUsable(freshCredit, at)) return null;
+      const existingRedemption = freshCredit.redemptions?.find((redemption) => redemption.bookingId === bookingId);
+      if (existingRedemption && !existingRedemption.restoredAt) {
+        return { next: freshCredit, result: { credit: freshCredit, package: freshPackage } };
+      }
 
-    const existingRedemption = freshCredit.redemptions?.find((redemption) => redemption.bookingId === bookingId);
-    if (existingRedemption && !existingRedemption.restoredAt) {
-      return { credit: freshCredit, package: freshPackage };
-    }
-
-    const remainingCredits = Math.max(0, freshCredit.remainingCredits - 1);
-    const next = timestamped({
-      ...freshCredit,
-      remainingCredits,
-      status: remainingCredits > 0 ? 'active' as const : 'used' as const,
-      redemptions: [
-        ...(freshCredit.redemptions ?? []),
-        { bookingId, serviceId, credits: 1, usedAt: at },
-      ],
-    }, freshCredit.createdAt);
-    await savePackageCredit(next);
-    return { credit: next, package: freshPackage };
-  } finally {
-    releaseCreditLock(match.credit.creditId);
+      const remainingCredits = Math.max(0, freshCredit.remainingCredits - 1);
+      const next = timestamped({
+        ...freshCredit,
+        remainingCredits,
+        status: remainingCredits > 0 ? 'active' as const : 'used' as const,
+        redemptions: [
+          ...(freshCredit.redemptions ?? []),
+          { bookingId, serviceId, credits: 1, usedAt: at },
+        ],
+      }, freshCredit.createdAt);
+      return { next, result: { credit: next, package: freshPackage } };
+    });
+    if (redeemed) return redeemed;
   }
+  return null;
 }
 
 export async function restorePackageCreditForBooking(booking: Booking): Promise<Booking> {
   if (!booking.packageCreditId || !booking.packageCreditsUsed || booking.packageCreditRestoredAt) return booking;
-
-  const credit = await getPackageCredit(booking.packageCreditId);
-  if (!credit) return booking;
+  const creditsUsed = booking.packageCreditsUsed;
 
   const restoredAt = nowIso();
-  let restored = false;
-  const redemptions = (credit.redemptions ?? []).map((redemption) => {
-    if (redemption.bookingId !== booking.bookingId || redemption.restoredAt) return redemption;
-    restored = true;
-    return { ...redemption, restoredAt };
+  const restored = await mutatePackageCredit(booking.packageCreditId, (credit) => {
+    let didRestore = false;
+    const redemptions = (credit.redemptions ?? []).map((redemption) => {
+      if (redemption.bookingId !== booking.bookingId || redemption.restoredAt) return redemption;
+      didRestore = true;
+      return { ...redemption, restoredAt };
+    });
+    if (!didRestore) return null;
+
+    const remainingCredits = Math.min(credit.totalCredits, credit.remainingCredits + creditsUsed);
+    const nextStatus: BookingPackageCreditStatus = credit.status === 'revoked' || credit.status === 'expired'
+      ? credit.status
+      : 'active';
+    const next = timestamped({
+      ...credit,
+      remainingCredits,
+      status: nextStatus,
+      redemptions,
+    }, credit.createdAt);
+    return { next, result: true };
   });
-  if (!restored) return booking;
 
-  const remainingCredits = Math.min(credit.totalCredits, credit.remainingCredits + booking.packageCreditsUsed);
-  const nextStatus: BookingPackageCreditStatus = credit.status === 'revoked' || credit.status === 'expired'
-    ? credit.status
-    : 'active';
-  const next = timestamped({
-    ...credit,
-    remainingCredits,
-    status: nextStatus,
-    redemptions,
-  }, credit.createdAt);
-  await savePackageCredit(next);
-
-  return {
-    ...booking,
-    packageCreditRestoredAt: restoredAt,
-  };
+  return restored
+    ? { ...booking, packageCreditRestoredAt: restoredAt }
+    : booking;
 }

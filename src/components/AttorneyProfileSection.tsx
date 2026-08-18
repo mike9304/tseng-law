@@ -3,6 +3,10 @@ import Link from 'next/link';
 import type { SiteLocale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { teamContent, type TeamMember } from '@/data/team-members';
+import {
+  getConsultationCtaLabel,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 
 const labels = {
   ko: {
@@ -109,9 +113,13 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Site
               {l.fullProfile}
             </Link>
           ) : null}
-          <Link href={`/${locale}/contact`} className="button button--outline attorney-card-cta">
+          <a
+            href={getConsultationPublicMailto(locale)}
+            className="button button--outline attorney-card-cta"
+            aria-label={`${l.consult} — ${getConsultationCtaLabel(locale)}`}
+          >
             {l.consult}
-          </Link>
+          </a>
         </div>
       </div>
     </article>

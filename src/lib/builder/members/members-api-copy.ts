@@ -9,6 +9,7 @@ export type MembersApiErrorCode =
   | 'duplicate_email'
   | 'member_login_failed'
   | 'member_signup_failed'
+  | 'public_signup_disabled'
   | 'not_authenticated'
   | 'email_change_requires_verification'
   | 'profile_update_failed'
@@ -29,6 +30,7 @@ const membersApiErrorMessages: Record<Locale, Record<MembersApiErrorCode, string
     duplicate_email: '이미 가입된 이메일입니다.',
     member_login_failed: '로그인하지 못했습니다.',
     member_signup_failed: '회원가입을 완료하지 못했습니다.',
+    public_signup_disabled: '공개 회원가입은 지원하지 않습니다. 회원 계정은 담당자가 확인 후 발급합니다.',
     not_authenticated: '로그인이 필요합니다.',
     email_change_requires_verification: '이메일 변경에는 인증 절차가 필요합니다.',
     profile_update_failed: '회원 프로필을 저장하지 못했습니다.',
@@ -43,6 +45,7 @@ const membersApiErrorMessages: Record<Locale, Record<MembersApiErrorCode, string
     duplicate_email: '此電子郵件已註冊。',
     member_login_failed: '無法登入。',
     member_signup_failed: '無法完成會員註冊。',
+    public_signup_disabled: '目前不提供公開註冊。會員帳戶將由事務所確認後建立。',
     not_authenticated: '需要登入。',
     email_change_requires_verification: '變更電子郵件需要先完成驗證。',
     profile_update_failed: '無法儲存會員個人資料。',
@@ -57,6 +60,7 @@ const membersApiErrorMessages: Record<Locale, Record<MembersApiErrorCode, string
     duplicate_email: 'That email is already registered.',
     member_login_failed: 'Unable to sign in.',
     member_signup_failed: 'Unable to create the member account.',
+    public_signup_disabled: 'Public signup is unavailable. Member accounts are issued by the firm after review.',
     not_authenticated: 'Sign in is required.',
     email_change_requires_verification: 'Email changes require verification.',
     profile_update_failed: 'Unable to save member profile.',

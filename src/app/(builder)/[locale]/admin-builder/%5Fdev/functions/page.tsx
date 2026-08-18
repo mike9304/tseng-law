@@ -5,7 +5,8 @@ import { getSdkCopy } from '@/components/builder/dev/sdk-copy';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const copy = getSdkCopy(params.locale as 'ko' | 'zh-hant' | 'en');
   return {
     title: copy.title,
@@ -14,7 +15,8 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   };
 }
 
-export default function BuilderFunctionsAdminPage({ params }: { params: { locale: string } }) {
+export default async function BuilderFunctionsAdminPage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const shellCopy = getFunctionsCopy(params.locale as 'ko' | 'zh-hant' | 'en');
   return (
     <main style={{ minHeight: '100vh', background: '#f8fafc' }}>

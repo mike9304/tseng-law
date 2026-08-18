@@ -39,12 +39,17 @@ function request(
     locale: 'ko',
   },
   cookie = `${MEMBER_SESSION_COOKIE}=session-1`,
+  headers: Record<string, string> = {},
 ): NextRequest {
-  return new NextRequest(`https://law.example.test/api/members/me${query ? `?${query}` : ''}`, {
+  return new NextRequest(`https://tseng-law.com/api/members/me${query ? `?${query}` : ''}`, {
     method,
     headers: {
-      ...(method === 'PATCH' ? { 'content-type': 'application/json' } : {}),
+      ...(method === 'PATCH' ? {
+        'content-type': 'application/json',
+        origin: 'https://tseng-law.com',
+      } : {}),
       ...(cookie ? { cookie } : {}),
+      ...headers,
     },
     body: method === 'PATCH' ? typeof body === 'string' ? body : JSON.stringify(body) : undefined,
   });
@@ -80,6 +85,35 @@ describe('members me API', () => {
       error: '需要登入。',
       errorCode: 'not_authenticated',
     });
+  });
+
+  it('returns a generic profile failure when session storage errors', async () => {
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    validateSessionMock.mockRejectedValueOnce(new Error('database topology leaked'));
+
+    const response = await PATCH(request('PATCH', 'locale=en'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Unable to save member profile.',
+      errorCode: 'profile_update_failed',
+    });
+    expect(JSON.stringify(payload)).not.toContain('database topology leaked');
+    consoleError.mockRestore();
+  });
+
+  it('rejects missing and cross-origin profile mutations before session access', async () => {
+    const missing = await PATCH(request('PATCH', '', undefined, undefined, { origin: '' }));
+    const crossOrigin = await PATCH(request('PATCH', '', undefined, undefined, {
+      origin: 'https://attacker.example',
+    }));
+
+    expect(missing.status).toBe(403);
+    expect(crossOrigin.status).toBe(403);
+    expect(validateSessionMock).not.toHaveBeenCalled();
+    expect(updateMemberProfileMock).not.toHaveBeenCalled();
   });
 
   it('returns the current member while preserving success response shape', async () => {

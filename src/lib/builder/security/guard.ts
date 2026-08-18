@@ -62,10 +62,9 @@ export async function guardMutation(
   if (csrf) return csrf;
 
   // 3. Permission gate
-  if (options.permission) {
-    if (!(await userHasPermission(auth.username, options.permission))) {
-      return missingPermissionResponse(options.permission);
-    }
+  const permission = options.permission ?? 'edit-pages';
+  if (!(await userHasPermission(auth.username, permission))) {
+    return missingPermissionResponse(permission);
   }
 
   // 4. Rate limit
@@ -82,7 +81,7 @@ export async function guardMutation(
     );
   }
 
-  return { username: auth.username, permission: options.permission };
+  return { username: auth.username, permission };
 }
 
 export function guardBuilderRead(request: NextRequest): GuardResult | NextResponse {

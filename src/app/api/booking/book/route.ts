@@ -1,9 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { mapPublicRateLimitDenial } from '@/lib/builder/security/public-rate-limit-response';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { addBookingDuration, isSlotAvailable } from '@/lib/builder/bookings/availability';
 import { bookingCreateSchema, type Booking } from '@/lib/builder/bookings/types';
-import { getService, getStaff, makeBookingId, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
+import {
+  claimBookingPaymentIntent,
+  getService,
+  getStaff,
+  hasDurableBookingStorage,
+  makeBookingId,
+  releaseBookingPaymentIntentClaim,
+  saveBooking,
+  timestamped,
+} from '@/lib/builder/bookings/storage';
 import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import {
@@ -11,7 +21,7 @@ import {
   isPaymentIntentBookable,
   paymentIntentPriceMismatch,
 } from '@/lib/builder/bookings/stripe-verify';
-import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
+import { acquireSlotLock, releaseSlotLock, renewSlotLock } from '@/lib/builder/bookings/slot-lock';
 import { runBookingBillingAutomation } from '@/lib/builder/billing-document-automation';
 import {
   findApplicablePackageCredit,
@@ -24,6 +34,10 @@ import {
   getPublicBookingApiErrorPayload,
   type PublicBookingApiErrorCode,
 } from '@/lib/builder/bookings/bookings-copy';
+import {
+  MEMBER_SESSION_COOKIE,
+  validateSession,
+} from '@/lib/builder/members/members-engine';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
@@ -102,7 +116,17 @@ function localeFromRawPayload(raw: unknown, fallback: Locale): Locale {
   return normalizeLocale(customerLocale || fallback);
 }
 
+function normalizeEmail(email: string): string {
+  return email.trim().toLowerCase();
+}
+
 export async function POST(request: NextRequest) {
+  // A booking can persist customer data, reserve a slot, and redeem a member
+  // package credit. Reject cross-site requests before any of those effects (or
+  // even rate-limit storage) are touched.
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   let locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || undefined);
 
   try {
@@ -134,6 +158,9 @@ export async function POST(request: NextRequest) {
         details: parsed.error.issues.slice(0, 3),
       });
     }
+    if (!hasDurableBookingStorage()) {
+      return errorResponse(locale, 'booking_storage_unavailable', 503);
+    }
 
     const service = await getService(parsed.data.serviceId);
     const staff = await getStaff(parsed.data.staffId);
@@ -154,7 +181,18 @@ export async function POST(request: NextRequest) {
       }
       return opts;
     })());
-    const packageCreditAvailable = service.paymentMode === 'paid' && !parsed.data.paymentIntentId
+    const mayApplyPackageCredit = service.paymentMode === 'paid' && !parsed.data.paymentIntentId;
+    const memberSessionId = mayApplyPackageCredit
+      ? request.cookies.get(MEMBER_SESSION_COOKIE)?.value
+      : undefined;
+    const member = memberSessionId ? await validateSession(memberSessionId) : null;
+    const mayUsePackageCredit = Boolean(
+      member
+      && member.verified
+      && !member.blocked
+      && normalizeEmail(member.email) === normalizeEmail(parsed.data.customer.email),
+    );
+    const packageCreditAvailable = mayApplyPackageCredit && mayUsePackageCredit
       ? await findApplicablePackageCredit({
           customerEmail: parsed.data.customer.email,
           serviceId: service.serviceId,
@@ -213,11 +251,14 @@ export async function POST(request: NextRequest) {
       startAt: parsed.data.startAt,
       resourceIds,
     };
-    if (!acquireSlotLock(slotKey)) {
+    const slotLease = await acquireSlotLock(slotKey);
+    if (!slotLease) {
       return errorResponse(locale, 'booking_create_slot_locked', 409);
     }
 
     let booking: Booking | null = null;
+    let claimedPaymentIntent: { paymentIntentId: string; bookingId: string } | null = null;
+    let bookingPersisted = false;
     try {
       const available = await isSlotAvailable(slotKey);
       if (!available) {
@@ -225,6 +266,28 @@ export async function POST(request: NextRequest) {
       }
 
       const bookingId = makeBookingId();
+      if (parsed.data.paymentIntentId) {
+        const claim = await claimBookingPaymentIntent(parsed.data.paymentIntentId, bookingId);
+        if (!claim.claimed) {
+          return errorResponse(locale, 'booking_create_payment_unverified', 409);
+        }
+        if (!claim.idempotent) {
+          claimedPaymentIntent = {
+            paymentIntentId: parsed.data.paymentIntentId,
+            bookingId,
+          };
+        }
+      }
+      if (!await renewSlotLock(slotLease)) {
+        return errorResponse(locale, 'booking_storage_unavailable', 503);
+      }
+      const zoom = await maybeCreateBookingZoomLink({
+        service,
+        staffId: staff.staffId,
+        startTimeISO: parsed.data.startAt,
+        customerName: parsed.data.customer.name,
+        customerEmail: parsed.data.customer.email,
+      });
       const packageRedemption = packageCreditAvailable
         ? await redeemPackageCreditForBooking({
             bookingId,
@@ -235,14 +298,6 @@ export async function POST(request: NextRequest) {
       if (packageCreditAvailable && !packageRedemption) {
         return errorResponse(locale, 'booking_create_package_unavailable', 409);
       }
-
-      const zoom = await maybeCreateBookingZoomLink({
-        service,
-        staffId: staff.staffId,
-        startTimeISO: parsed.data.startAt,
-        customerName: parsed.data.customer.name,
-        customerEmail: parsed.data.customer.email,
-      });
 
       booking = timestamped({
         bookingId,
@@ -282,10 +337,17 @@ export async function POST(request: NextRequest) {
           : {}),
         ...(price.payLater && !packageRedemption
           ? { paymentStatus: 'unpaid' as const }
-          : {}),
+        : {}),
       });
+      if (!await renewSlotLock(slotLease)) {
+        if (packageRedemption) {
+          await restorePackageCreditForBooking(booking).catch(() => undefined);
+        }
+        return errorResponse(locale, 'booking_storage_unavailable', 503);
+      }
       try {
         await saveBooking(booking);
+        bookingPersisted = true;
       } catch (error) {
         if (packageRedemption) {
           await restorePackageCreditForBooking(booking).catch((restoreError) => {
@@ -295,7 +357,20 @@ export async function POST(request: NextRequest) {
         throw error;
       }
     } finally {
-      releaseSlotLock(slotKey);
+      if (claimedPaymentIntent && !bookingPersisted) {
+        await releaseBookingPaymentIntentClaim(
+          claimedPaymentIntent.paymentIntentId,
+          claimedPaymentIntent.bookingId,
+        ).catch(() => {
+          console.error('[booking/book] payment intent claim release after save failure failed');
+        });
+      }
+      await releaseSlotLock(slotLease).catch(() => {
+        // A persisted booking remains successful even if a best-effort lease
+        // cleanup cannot reach Blob; ownership-safe release cannot delete a
+        // replacement lease and the TTL is the remaining recovery path.
+        console.error('[booking/book] slot lease release failed');
+      });
     }
     if (!booking) {
       return errorResponse(locale, 'booking_create_failed', 500);

@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { readColumnVariant, writePublishedColumn } from '@/lib/builder/columns/storage';
@@ -70,10 +70,28 @@ describe('/api/builder/columns/[slug]/publish', () => {
     writePublishedColumnMock.mockImplementation(async (doc) => ({ ...doc, draft: false }));
   });
 
+  it('denies an editor publish before writing a published column', async () => {
+    vi.mocked(guardMutation).mockResolvedValue(
+      NextResponse.json({ error: 'Missing permission: publish' }, { status: 403 }) as never,
+    );
+
+    const response = await route.POST(
+      request('/api/builder/columns/sample-column/publish?locale=ko&skipEmbeddings=1'),
+      { params: Promise.resolve({ slug: 'sample-column' }) },
+    );
+
+    expect(response.status).toBe(403);
+    expect(guardMutation).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      { bucket: 'publish', permission: 'publish' },
+    );
+    expect(writePublishedColumnMock).not.toHaveBeenCalled();
+  });
+
   it('returns localized stable-code JSON when the draft is missing', async () => {
     const response = await route.POST(
       request('/api/builder/columns/missing/publish?locale=zh-hant&skipEmbeddings=1'),
-      { params: { slug: 'missing' } },
+      { params: Promise.resolve({ slug: 'missing' }) },
     );
     const data = await response.json();
 
@@ -87,12 +105,14 @@ describe('/api/builder/columns/[slug]/publish', () => {
   });
 
   it('returns localized stable-code JSON when publish storage fails', async () => {
-    readColumnVariantMock.mockResolvedValueOnce(column({ locale: 'en' }));
+    readColumnVariantMock
+      .mockResolvedValueOnce(column({ locale: 'en' }))
+      .mockResolvedValueOnce(null);
     writePublishedColumnMock.mockRejectedValueOnce(new Error('raw blob write failure'));
 
     const response = await route.POST(
       request('/api/builder/columns/sample-column/publish?locale=en&skipEmbeddings=1'),
-      { params: { slug: 'sample-column' } },
+      { params: Promise.resolve({ slug: 'sample-column' }) },
     );
     const data = await response.json();
 
@@ -104,5 +124,67 @@ describe('/api/builder/columns/[slug]/publish', () => {
       errorCode: 'column_publish_failed',
     });
     expect(JSON.stringify(data)).not.toContain('raw blob write failure');
+  });
+
+  it('sets an original publication timestamp instead of reusing lastmod', async () => {
+    readColumnVariantMock
+      .mockResolvedValueOnce(column({
+        frontmatter: {
+          lastmod: '2026-07-30T00:00:00.000Z',
+          attorneyReviewStatus: 'reviewed',
+          freshness: 'fresh',
+        },
+      }))
+      .mockResolvedValueOnce(null);
+
+    const response = await route.POST(
+      request('/api/builder/columns/sample-column/publish?locale=ko&skipEmbeddings=1'),
+      { params: Promise.resolve({ slug: 'sample-column' }) },
+    );
+
+    expect(response.status).toBe(200);
+    expect(writePublishedColumnMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        frontmatter: expect.objectContaining({
+          lastmod: '2026-07-30T00:00:00.000Z',
+          publishedAt: expect.stringMatching(/^\d{4}-\d{2}-\d{2}T/),
+        }),
+      }),
+    );
+  });
+
+  it('preserves the first publication timestamp when republishing', async () => {
+    const originalPublishedAt = '2025-09-13T04:00:00.000Z';
+    readColumnVariantMock
+      .mockResolvedValueOnce(column({
+        frontmatter: {
+          lastmod: '2026-07-30T00:00:00.000Z',
+          attorneyReviewStatus: 'reviewed',
+          freshness: 'fresh',
+        },
+      }))
+      .mockResolvedValueOnce(column({
+        draft: false,
+        updatedAt: '2026-07-01T00:00:00.000Z',
+        frontmatter: {
+          lastmod: '2026-07-01T00:00:00.000Z',
+          publishedAt: originalPublishedAt,
+          attorneyReviewStatus: 'reviewed',
+          freshness: 'fresh',
+        },
+      }));
+
+    await route.POST(
+      request('/api/builder/columns/sample-column/publish?locale=ko&skipEmbeddings=1'),
+      { params: Promise.resolve({ slug: 'sample-column' }) },
+    );
+
+    expect(writePublishedColumnMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        frontmatter: expect.objectContaining({
+          publishedAt: originalPublishedAt,
+        }),
+      }),
+    );
   });
 });

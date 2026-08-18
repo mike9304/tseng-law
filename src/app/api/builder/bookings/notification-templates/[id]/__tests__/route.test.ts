@@ -1,18 +1,14 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   deleteNotificationTemplate,
   getNotificationTemplate,
   updateNotificationTemplate,
 } from '@/lib/builder/bookings/notification-template-store';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ username: 'admin' })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'admin' })),
   guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
 }));
 
@@ -43,7 +39,7 @@ function deleteRequest(locale = 'ko'): NextRequest {
 describe('/api/builder/bookings/notification-templates/[id]', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.mocked(requireBuilderAdminAuth).mockReturnValue({ username: 'admin' });
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({ username: 'admin' });
     vi.mocked(guardMutation).mockResolvedValue({ user: { id: 'admin-1' } } as never);
   });
 
@@ -51,11 +47,15 @@ describe('/api/builder/bookings/notification-templates/[id]', () => {
     const route = await import('../route');
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/bookings/notification-templates/booking-confirmed__en?locale=zh-hant'),
-      { params: { id: 'booking-confirmed__en' } },
+      { params: Promise.resolve({ id: 'booking-confirmed__en' }) },
     );
     const payload = await response.json();
 
     expect(response.status).toBe(404);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-bookings',
+    );
     expect(payload).toEqual({
       error: '找不到通知範本。',
       errorCode: 'template_not_found',
@@ -66,7 +66,7 @@ describe('/api/builder/bookings/notification-templates/[id]', () => {
   it('returns localized invalid-patch errors', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ subject: '' }), {
-      params: { id: 'booking-confirmed__en' },
+      params: Promise.resolve({ id: 'booking-confirmed__en' }),
     });
     const payload = await response.json();
 
@@ -80,7 +80,7 @@ describe('/api/builder/bookings/notification-templates/[id]', () => {
   it('returns localized not-found errors on PATCH when the store update fails', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ subject: 'Updated' }, 'zh-hant'), {
-      params: { id: 'booking-confirmed__en' },
+      params: Promise.resolve({ id: 'booking-confirmed__en' }),
     });
     const payload = await response.json();
 
@@ -94,7 +94,7 @@ describe('/api/builder/bookings/notification-templates/[id]', () => {
   it('returns localized not-found errors on DELETE when the store delete fails', async () => {
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('ko'), {
-      params: { id: 'booking-confirmed__en' },
+      params: Promise.resolve({ id: 'booking-confirmed__en' }),
     });
     const payload = await response.json();
 

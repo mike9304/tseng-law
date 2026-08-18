@@ -56,7 +56,7 @@ export const ADMIN_NAV_TREE: AdminNavTree = {
     {
       heading: '비즈니스',
       items: [
-        { label: '커머스', href: '/commerce', icon: '🛍', requirePermission: 'edit-pages' },
+        { label: '커머스', href: '/commerce', icon: '🛍', requirePermission: 'view-commerce' },
         { label: '예약', href: '/bookings', icon: '📅', requirePermission: 'manage-bookings' },
         { label: 'CRM', href: '/crm', icon: '👥', requirePermission: 'manage-contacts' },
         { label: '마케팅', href: '/marketing', icon: '📣', requirePermission: 'manage-campaigns' },

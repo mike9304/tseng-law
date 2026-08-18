@@ -12,11 +12,12 @@ import PublicStorefront from '@/components/builder/commerce/PublicStorefront';
 
 export const dynamic = 'force-dynamic';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale; slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: Locale; slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const category = await findProductCategoryBySlug(locale, params.slug);
   if (!category) {
@@ -40,11 +41,12 @@ export async function generateMetadata({
   });
 }
 
-export default async function StoreCategoryPage({
-  params,
-}: {
-  params: { locale: Locale; slug: string };
-}) {
+export default async function StoreCategoryPage(
+  props: {
+    params: Promise<{ locale: Locale; slug: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const category = await findProductCategoryBySlug(locale, params.slug);
   if (!category) return notFound();

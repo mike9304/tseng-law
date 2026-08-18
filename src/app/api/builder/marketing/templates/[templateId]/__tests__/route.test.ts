@@ -45,7 +45,9 @@ describe('builder marketing template detail API', () => {
   });
 
   it('loads templates while preserving GET success response shape', async () => {
-    const response = await GET(request('GET', 'locale=en'), { params: { templateId: 'tpl_1' } });
+    const response = await GET(request('GET', 'locale=en'), {
+      params: Promise.resolve({ templateId: 'tpl_1' }),
+    });
     const data = await response.json();
 
     expect(response.status).toBe(200);
@@ -53,7 +55,9 @@ describe('builder marketing template detail API', () => {
   });
 
   it('renders templates while preserving render success response shape', async () => {
-    const response = await GET(request('GET', 'locale=en&render=html'), { params: { templateId: 'tpl_1' } });
+    const response = await GET(request('GET', 'locale=en&render=html'), {
+      params: Promise.resolve({ templateId: 'tpl_1' }),
+    });
     const data = await response.json();
 
     expect(response.status).toBe(200);
@@ -66,7 +70,9 @@ describe('builder marketing template detail API', () => {
   it('returns localized not-found errors', async () => {
     getTemplateMock.mockResolvedValueOnce(null as never);
 
-    const response = await GET(request('GET', 'locale=zh-hant'), { params: { templateId: 'missing' } });
+    const response = await GET(request('GET', 'locale=zh-hant'), {
+      params: Promise.resolve({ templateId: 'missing' }),
+    });
     const data = await response.json();
 
     expect(response.status).toBe(404);
@@ -81,7 +87,9 @@ describe('builder marketing template detail API', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     getTemplateMock.mockRejectedValueOnce(new Error('template load secret leaked'));
 
-    const response = await GET(request('GET', 'locale=en'), { params: { templateId: 'tpl_1' } });
+    const response = await GET(request('GET', 'locale=en'), {
+      params: Promise.resolve({ templateId: 'tpl_1' }),
+    });
     const data = await response.json();
 
     expect(response.status).toBe(500);
@@ -97,7 +105,7 @@ describe('builder marketing template detail API', () => {
 
   it('returns localized invalid update errors while preserving details', async () => {
     const response = await PATCH(request('PATCH', 'locale=ko', { blocks: [{ blockId: 'x', kind: 'button', href: 'javascript:alert(1)', label: 'Bad' }] }), {
-      params: { templateId: 'tpl_1' },
+      params: Promise.resolve({ templateId: 'tpl_1' }),
     });
     const data = await response.json();
 
@@ -112,7 +120,9 @@ describe('builder marketing template detail API', () => {
   });
 
   it('returns localized invalid JSON errors', async () => {
-    const response = await PATCH(request('PATCH', 'locale=en', '{'), { params: { templateId: 'tpl_1' } });
+    const response = await PATCH(request('PATCH', 'locale=en', '{'), {
+      params: Promise.resolve({ templateId: 'tpl_1' }),
+    });
     const data = await response.json();
 
     expect(response.status).toBe(400);
@@ -125,7 +135,9 @@ describe('builder marketing template detail API', () => {
   });
 
   it('updates templates while preserving PATCH success response shape', async () => {
-    const response = await PATCH(request('PATCH', 'locale=en', { name: 'Updated' }), { params: { templateId: 'tpl_1' } });
+    const response = await PATCH(request('PATCH', 'locale=en', { name: 'Updated' }), {
+      params: Promise.resolve({ templateId: 'tpl_1' }),
+    });
     const data = await response.json();
 
     expect(response.status).toBe(200);
@@ -137,7 +149,9 @@ describe('builder marketing template detail API', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     saveTemplateMock.mockRejectedValueOnce(new Error('template update secret leaked'));
 
-    const response = await PATCH(request('PATCH', 'locale=en', { name: 'Updated' }), { params: { templateId: 'tpl_1' } });
+    const response = await PATCH(request('PATCH', 'locale=en', { name: 'Updated' }), {
+      params: Promise.resolve({ templateId: 'tpl_1' }),
+    });
     const data = await response.json();
 
     expect(response.status).toBe(500);

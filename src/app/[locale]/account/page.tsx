@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
@@ -7,7 +8,8 @@ import styles from '@/components/members/MembersArea.module.css';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const title = locale === 'ko' ? '회원 계정' : locale === 'zh-hant' ? '會員帳戶' : 'Member account';
   return {
@@ -16,7 +18,8 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default async function MemberAccountPage({ params }: { params: { locale: Locale } }) {
+export default async function MemberAccountPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const member = await getCurrentSiteMember();
   if (!member) redirect(`/${locale}/login?next=${encodeURIComponent(`/${locale}/account`)}`);
@@ -54,10 +57,15 @@ export default async function MemberAccountPage({ params }: { params: { locale: 
             <strong>{locale === 'ko' ? '프로필' : locale === 'zh-hant' ? '個人資料' : 'Profile'}</strong>
             <div className={styles.accountProfileSummary} data-member-account-profile-summary="true">
               {member.profilePhoto ? (
-                <img
+                <Image
                   className={styles.accountProfilePhoto}
                   src={member.profilePhoto}
                   alt={member.name}
+                  width={64}
+                  height={64}
+                  sizes="64px"
+                  loading="eager"
+                  unoptimized={!member.profilePhoto.startsWith('/') || member.profilePhoto.startsWith('//')}
                   data-member-account-profile-photo="true"
                 />
               ) : (

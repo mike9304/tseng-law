@@ -52,7 +52,7 @@ describe('builder billing document share link API', () => {
 
   it('returns localized source errors', async () => {
     const response = await DELETE(deleteRequest('bad', 'locale=zh-hant'), {
-      params: { source: 'bad', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'bad', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -67,7 +67,7 @@ describe('builder billing document share link API', () => {
 
   it('returns localized validation errors for invalid share-link payloads', async () => {
     const response = await POST(postRequest('order', 'locale=zh-hant', { expiresAt: 'bad-date' }), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -82,7 +82,7 @@ describe('builder billing document share link API', () => {
 
   it('returns localized not-found errors when a share link cannot be created', async () => {
     const response = await POST(postRequest('order', 'locale=ko'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -99,7 +99,7 @@ describe('builder billing document share link API', () => {
     createBillingDocumentShareLinkMock.mockRejectedValueOnce(new Error('share secret leaked'));
 
     const response = await POST(postRequest('order', 'locale=en'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -122,7 +122,7 @@ describe('builder billing document share link API', () => {
     revokeBillingDocumentShareLinkMock.mockRejectedValueOnce(new Error('revoke secret leaked'));
 
     const response = await DELETE(deleteRequest('order', 'locale=ko'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const payload = await response.json();
 
@@ -147,11 +147,11 @@ describe('builder billing document share link API', () => {
     revokeBillingDocumentShareLinkMock.mockResolvedValueOnce(revoked as never);
 
     const postResponse = await POST(postRequest('order', 'locale=en'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const postPayload = await postResponse.json();
     const deleteResponse = await DELETE(deleteRequest('order', 'locale=en'), {
-      params: { source: 'order', ownerId: 'owner-1', documentId: 'doc-1' },
+      params: Promise.resolve({ source: 'order', ownerId: 'owner-1', documentId: 'doc-1' }),
     });
     const deletePayload = await deleteResponse.json();
 

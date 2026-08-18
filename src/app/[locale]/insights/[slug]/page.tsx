@@ -9,11 +9,12 @@ export function generateStaticParams() {
   return ['ko', 'zh-hant', 'en', 'ja'].flatMap((locale) => allSlugs.map((slug) => ({ locale, slug })));
 }
 
-export default function InsightDetailRedirect({
-  params,
-}: {
-  params: { locale: SiteLocale; slug: string };
-}) {
+export default async function InsightDetailRedirect(
+  props: {
+    params: Promise<{ locale: SiteLocale; slug: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const post = getColumnPost(params.slug, locale);
   if (!post) return notFound();

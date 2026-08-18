@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import * as overviewRoute from '@/app/api/builder/sites/[siteId]/pages/[pageKey]/route';
 import * as draftRoute from '@/app/api/builder/sites/[siteId]/pages/[pageKey]/draft/route';
@@ -161,7 +161,7 @@ function putRequest(path: string, body: unknown): NextRequest {
   });
 }
 
-const params = { params: { siteId: 'default', pageKey: 'home' } };
+const params = { params: Promise.resolve({ siteId: 'default', pageKey: 'home' }) };
 
 describe('/api/builder/sites/[siteId]/pages/[pageKey] lifecycle error contracts', () => {
   beforeEach(() => {
@@ -315,6 +315,24 @@ describe('/api/builder/sites/[siteId]/pages/[pageKey] lifecycle error contracts'
       errorCode: 'publish_checks_failed',
     });
     expect(JSON.stringify(payload)).not.toContain('publish check secret leaked');
+  });
+
+  it('denies an editor page publish before publishing the snapshot', async () => {
+    mockedGuardMutation.mockResolvedValue(
+      NextResponse.json({ error: 'Missing permission: publish' }, { status: 403 }) as never,
+    );
+
+    const response = await publishRoute.POST(
+      request('/api/builder/sites/default/pages/home/publish?locale=ko', {}),
+      params,
+    );
+
+    expect(response.status).toBe(403);
+    expect(mockedGuardMutation).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      { bucket: 'publish', permission: 'publish' },
+    );
+    expect(mockedPublishBuilderPageSnapshot).not.toHaveBeenCalled();
   });
 
   it('returns stable-code JSON when page publish has no draft', async () => {

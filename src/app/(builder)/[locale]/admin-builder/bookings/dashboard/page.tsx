@@ -4,23 +4,28 @@ import BookingDashboardAdmin from '@/components/builder/bookings/BookingDashboar
 import { getBookingsAdminCopy } from '@/lib/builder/bookings/bookings-copy';
 import { normalizeBookingDashboardActionFilter, normalizeBookingDashboardQuery } from '@/lib/builder/bookings/dashboard-url';
 import { listAvailability, listBookings, listServices, listStaff, listWaitlistEntries } from '@/lib/builder/bookings/storage';
+import { requireBuilderPagePermission } from '@/lib/builder/security/page-permission';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const copy = getBookingsAdminCopy(locale);
   return { title: copy.pages.dashboard.title, robots: { index: false, follow: false } };
 }
 
 type PageProps = {
-  params: { locale: string };
-  searchParams?: { action?: string; q?: string };
+  params: Promise<{ locale: string }>;
+  searchParams?: Promise<{ action?: string; q?: string }>;
 };
 
-export default async function BookingDashboardPage({ params, searchParams }: PageProps) {
+export default async function BookingDashboardPage(props: PageProps) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
+  await requireBuilderPagePermission('manage-bookings');
   const copy = getBookingsAdminCopy(locale);
   const initialActionFilter = normalizeBookingDashboardActionFilter(searchParams?.action);
   const initialQuery = normalizeBookingDashboardQuery(searchParams?.q);

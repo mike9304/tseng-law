@@ -18,8 +18,22 @@ import { maybeCreateBookingZoomLink } from '@/lib/builder/bookings/zoom-handoff'
 import { runBookingBillingAutomation } from '@/lib/builder/billing-document-automation';
 import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
-import { getService, getStaff, makeBookingId, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
+import {
+  claimBookingPaymentIntent,
+  getService,
+  getStaff,
+  hasDurableBookingStorage,
+  makeBookingId,
+  releaseBookingPaymentIntentClaim,
+  saveBooking,
+  timestamped,
+} from '@/lib/builder/bookings/storage';
 import type { Booking, BookingPackage, BookingPackageCredit, BookingService, Staff } from '@/lib/builder/bookings/types';
+import {
+  MEMBER_SESSION_COOKIE,
+  validateSession,
+  type SiteMember,
+} from '@/lib/builder/members/members-engine';
 import { POST } from '../route';
 
 vi.mock('@/lib/builder/security/rate-limit', () => ({
@@ -32,15 +46,23 @@ vi.mock('@/lib/builder/bookings/availability', () => ({
 }));
 
 vi.mock('@/lib/builder/bookings/storage', () => ({
+  claimBookingPaymentIntent: vi.fn(async () => ({ claimed: true, idempotent: false })),
   getService: vi.fn(),
   getStaff: vi.fn(),
+  hasDurableBookingStorage: vi.fn(() => true),
   makeBookingId: vi.fn(() => 'bk-1'),
+  releaseBookingPaymentIntentClaim: vi.fn(async () => true),
   saveBooking: vi.fn(async () => undefined),
   timestamped: vi.fn((booking) => ({
     ...booking,
     createdAt: '2026-06-03T00:00:00.000Z',
     updatedAt: '2026-06-03T00:00:00.000Z',
   })),
+}));
+
+vi.mock('@/lib/builder/members/members-engine', () => ({
+  MEMBER_SESSION_COOKIE: 'builder_member_session',
+  validateSession: vi.fn(async () => null),
 }));
 
 vi.mock('@/lib/builder/bookings/notifications', () => ({
@@ -61,8 +83,9 @@ vi.mock('@/lib/builder/bookings/stripe-verify', () => ({
 }));
 
 vi.mock('@/lib/builder/bookings/slot-lock', () => ({
-  acquireSlotLock: vi.fn(() => true),
-  releaseSlotLock: vi.fn(),
+  acquireSlotLock: vi.fn(async () => ({ ownerToken: 'test-lease', keys: [], expiresAt: 9_999_999 })),
+  releaseSlotLock: vi.fn(async () => undefined),
+  renewSlotLock: vi.fn(async (lease) => lease),
 }));
 
 vi.mock('@/lib/builder/billing-document-automation', () => ({
@@ -144,12 +167,26 @@ const bookingPackage: BookingPackage = {
   updatedAt: '2026-06-03T00:00:00.000Z',
 };
 
+const member: SiteMember = {
+  memberId: 'member-1',
+  email: 'client@example.com',
+  name: 'Client One',
+  role: 'free',
+  passwordHash: 'not-used',
+  createdAt: '2026-06-03T00:00:00.000Z',
+  verified: true,
+  blocked: false,
+};
+
 const checkRateLimitMock = vi.mocked(checkRateLimit);
 const addBookingDurationMock = vi.mocked(addBookingDuration);
 const isSlotAvailableMock = vi.mocked(isSlotAvailable);
 const getServiceMock = vi.mocked(getService);
 const getStaffMock = vi.mocked(getStaff);
+const hasDurableBookingStorageMock = vi.mocked(hasDurableBookingStorage);
 const makeBookingIdMock = vi.mocked(makeBookingId);
+const claimBookingPaymentIntentMock = vi.mocked(claimBookingPaymentIntent);
+const releaseBookingPaymentIntentClaimMock = vi.mocked(releaseBookingPaymentIntentClaim);
 const saveBookingMock = vi.mocked(saveBooking);
 const timestampedMock = vi.mocked(timestamped);
 const sendBookingConfirmationMock = vi.mocked(sendBookingConfirmation);
@@ -165,6 +202,7 @@ const redeemPackageCreditForBookingMock = vi.mocked(redeemPackageCreditForBookin
 const restorePackageCreditForBookingMock = vi.mocked(restorePackageCreditForBooking);
 const bookingServicePriceSnapshotMock = vi.mocked(bookingServicePriceSnapshot);
 const maybeCreateBookingZoomLinkMock = vi.mocked(maybeCreateBookingZoomLink);
+const validateSessionMock = vi.mocked(validateSession);
 
 function bookingBody(overrides: Record<string, unknown> = {}): Record<string, unknown> {
   return {
@@ -200,12 +238,19 @@ function localizedBookingBody(
   });
 }
 
-function request(query = '', body: string | unknown = bookingBody()): NextRequest {
+function request(
+  query = '',
+  body: string | unknown = bookingBody(),
+  sessionId?: string,
+  origin: string | null = 'https://tseng-law.com',
+): NextRequest {
   return new NextRequest(`https://law.example.test/api/booking/book${query ? `?${query}` : ''}`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
       'x-forwarded-for': '203.0.113.8',
+      ...(sessionId ? { cookie: `${MEMBER_SESSION_COOKIE}=${sessionId}` } : {}),
+      ...(origin ? { origin } : {}),
     },
     body: typeof body === 'string' ? body : JSON.stringify(body),
   });
@@ -221,7 +266,10 @@ describe('/api/booking/book', () => {
     isSlotAvailableMock.mockResolvedValue(true);
     getServiceMock.mockResolvedValue(freeService as never);
     getStaffMock.mockResolvedValue(staff as never);
+    hasDurableBookingStorageMock.mockReturnValue(true);
     makeBookingIdMock.mockReturnValue('bk-1');
+    claimBookingPaymentIntentMock.mockResolvedValue({ claimed: true, idempotent: false });
+    releaseBookingPaymentIntentClaimMock.mockResolvedValue(true);
     saveBookingMock.mockResolvedValue(undefined as never);
     timestampedMock.mockImplementation((booking) => ({
       ...booking,
@@ -235,7 +283,7 @@ describe('/api/booking/book', () => {
     fetchPaymentIntentStatusMock.mockResolvedValue(null);
     isPaymentIntentBookableMock.mockReturnValue(true);
     paymentIntentPriceMismatchMock.mockReturnValue(null);
-    acquireSlotLockMock.mockReturnValue(true);
+    acquireSlotLockMock.mockResolvedValue({ ownerToken: 'test-lease', keys: [], expiresAt: 9_999_999 });
     runBookingBillingAutomationMock.mockResolvedValue(null as never);
     findApplicablePackageCreditMock.mockResolvedValue(null);
     redeemPackageCreditForBookingMock.mockResolvedValue(null);
@@ -250,6 +298,7 @@ describe('/api/booking/book', () => {
       payLater: false,
     });
     maybeCreateBookingZoomLinkMock.mockResolvedValue(null);
+    validateSessionMock.mockResolvedValue(null);
   });
 
   afterEach(() => {
@@ -257,7 +306,7 @@ describe('/api/booking/book', () => {
     vi.restoreAllMocks();
   });
 
-  it('preserves successful booking response shape and side effects', async () => {
+  it('accepts a same-origin public booking and preserves its response shape and side effects', async () => {
     const response = await POST(request('locale=ko'));
     const payload = await response.json();
 
@@ -283,6 +332,34 @@ describe('/api/booking/book', () => {
       bookingId: 'bk-1',
       serviceId: 'svc-1',
     }));
+  });
+
+  it.each([
+    ['a cross-origin request', 'https://evil.example'],
+    ['an invalid Origin value', 'javascript:alert(1)'],
+    ['a request without Origin or Referer', null],
+  ])('rejects %s before booking or package-credit side effects', async (_label, origin) => {
+    const response = await POST(request(
+      'locale=ko',
+      bookingBody(),
+      'member-session',
+      origin,
+    ));
+
+    expect(response.status).toBe(403);
+    await expect(response.json()).resolves.toEqual({
+      ok: false,
+      error: 'csrf_origin_mismatch',
+      code: 'csrf_origin_mismatch',
+    });
+    expect(checkRateLimitMock).not.toHaveBeenCalled();
+    expect(validateSessionMock).not.toHaveBeenCalled();
+    expect(getServiceMock).not.toHaveBeenCalled();
+    expect(findApplicablePackageCreditMock).not.toHaveBeenCalled();
+    expect(redeemPackageCreditForBookingMock).not.toHaveBeenCalled();
+    expect(acquireSlotLockMock).not.toHaveBeenCalled();
+    expect(saveBookingMock).not.toHaveBeenCalled();
+    expect(sendBookingConfirmationMock).not.toHaveBeenCalled();
   });
 
   it('keeps a persisted booking successful and reports sanitized provider delivery failures', async () => {
@@ -486,6 +563,7 @@ describe('/api/booking/book', () => {
       credit: packageCredit,
       package: bookingPackage,
     });
+    validateSessionMock.mockResolvedValueOnce(member);
     bookingServicePriceSnapshotMock.mockReturnValueOnce({
       paymentRequired: true,
       totalAmount: 120000,
@@ -497,9 +575,15 @@ describe('/api/booking/book', () => {
       payLater: false,
     });
 
-    const response = await POST(request('locale=en', localizedBookingBody('en')));
+    const response = await POST(request('locale=en', localizedBookingBody('en'), 'session-1'));
 
     expect(response.status).toBe(201);
+    expect(validateSessionMock).toHaveBeenCalledWith('session-1');
+    expect(findApplicablePackageCreditMock).toHaveBeenCalledWith({
+      customerEmail: 'client@example.com',
+      serviceId: 'svc-1',
+    });
+    expect(redeemPackageCreditForBookingMock).toHaveBeenCalledTimes(1);
     expect(fetchPaymentIntentStatusMock).not.toHaveBeenCalled();
     const savedBooking = saveBookingMock.mock.calls[0]?.[0] as Booking | undefined;
     expect(savedBooking).toMatchObject({
@@ -508,6 +592,76 @@ describe('/api/booking/book', () => {
       packageCreditsUsed: 1,
       paymentStatus: 'paid',
     });
+  });
+
+  it.each([
+    {
+      label: 'anonymous requests',
+      sessionId: undefined,
+      memberResult: null,
+    },
+    {
+      label: 'invalid member sessions',
+      sessionId: 'invalid-session',
+      memberResult: null,
+    },
+    {
+      label: 'unverified members',
+      sessionId: 'session-1',
+      memberResult: { ...member, verified: false },
+    },
+    {
+      label: 'blocked members',
+      sessionId: 'session-1',
+      memberResult: { ...member, blocked: true },
+    },
+    {
+      label: 'members with a different email',
+      sessionId: 'session-1',
+      memberResult: { ...member, email: 'other@example.com' },
+    },
+  ])('does not disclose or consume package credits for $label', async ({
+    sessionId,
+    memberResult,
+  }) => {
+    getServiceMock.mockResolvedValueOnce(paidService as never);
+    validateSessionMock.mockResolvedValueOnce(memberResult as SiteMember | null);
+    findApplicablePackageCreditMock.mockResolvedValueOnce({
+      credit: packageCredit,
+      package: bookingPackage,
+    });
+    bookingServicePriceSnapshotMock.mockReturnValueOnce({
+      paymentRequired: true,
+      totalAmount: 120000,
+      currency: 'KRW',
+      amountDueNow: 50000,
+      depositAmount: 50000,
+      balanceDueAfterOnlinePayment: 70000,
+      isDeposit: true,
+      payLater: false,
+    });
+
+    const response = await POST(request(
+      'locale=en',
+      localizedBookingBody('en'),
+      sessionId,
+    ));
+    const payload = await response.json();
+
+    expect(response.status).toBe(402);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Payment is required before booking this service.',
+      errorCode: 'booking_create_payment_required',
+    });
+    expect(findApplicablePackageCreditMock).not.toHaveBeenCalled();
+    expect(redeemPackageCreditForBookingMock).not.toHaveBeenCalled();
+    expect(saveBookingMock).not.toHaveBeenCalled();
+    if (sessionId) {
+      expect(validateSessionMock).toHaveBeenCalledWith(sessionId);
+    } else {
+      expect(validateSessionMock).not.toHaveBeenCalled();
+    }
   });
 
   it('rejects a payment intent submitted for a pay-later service', async () => {
@@ -654,7 +808,122 @@ describe('/api/booking/book', () => {
     const response = await POST(request('locale=en', localizedBookingBody('en', { paymentIntentId: 'pi_test' })));
 
     expect(response.status).toBe(201);
+    expect(claimBookingPaymentIntentMock).toHaveBeenCalledWith('pi_test', 'bk-1');
+    expect(releaseBookingPaymentIntentClaimMock).not.toHaveBeenCalled();
     expect(saveBookingMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('rejects a payment intent already claimed by another booking without persisting or releasing it', async () => {
+    getServiceMock.mockResolvedValueOnce(paidService as never);
+    bookingServicePriceSnapshotMock.mockReturnValueOnce({
+      paymentRequired: true,
+      totalAmount: 120000,
+      currency: 'KRW',
+      amountDueNow: 50000,
+      depositAmount: 50000,
+      balanceDueAfterOnlinePayment: 70000,
+      isDeposit: true,
+      payLater: false,
+    });
+    fetchPaymentIntentStatusMock.mockResolvedValueOnce({
+      id: 'pi_replayed',
+      status: 'succeeded',
+      amount: 50000,
+      currency: 'krw',
+      metadata: { serviceId: 'svc-1', staffId: 'staff-1' },
+    });
+    claimBookingPaymentIntentMock.mockResolvedValueOnce({ claimed: false });
+
+    const response = await POST(request(
+      'locale=en',
+      localizedBookingBody('en', { paymentIntentId: 'pi_replayed' }),
+    ));
+    const payload = await response.json();
+
+    expect(response.status).toBe(409);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Unable to verify the payment details.',
+      errorCode: 'booking_create_payment_unverified',
+    });
+    expect(claimBookingPaymentIntentMock).toHaveBeenCalledWith('pi_replayed', 'bk-1');
+    expect(saveBookingMock).not.toHaveBeenCalled();
+    expect(releaseBookingPaymentIntentClaimMock).not.toHaveBeenCalled();
+    expect(releaseSlotLockMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('releases a newly acquired payment intent claim when booking persistence fails', async () => {
+    const warn = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    getServiceMock.mockResolvedValueOnce(paidService as never);
+    bookingServicePriceSnapshotMock.mockReturnValueOnce({
+      paymentRequired: true,
+      totalAmount: 120000,
+      currency: 'KRW',
+      amountDueNow: 50000,
+      depositAmount: 50000,
+      balanceDueAfterOnlinePayment: 70000,
+      isDeposit: true,
+      payLater: false,
+    });
+    fetchPaymentIntentStatusMock.mockResolvedValueOnce({
+      id: 'pi_rollback',
+      status: 'succeeded',
+      amount: 50000,
+      currency: 'krw',
+      metadata: { serviceId: 'svc-1', staffId: 'staff-1' },
+    });
+    claimBookingPaymentIntentMock.mockResolvedValueOnce({ claimed: true, idempotent: false });
+    saveBookingMock.mockRejectedValueOnce(new Error('storage failed'));
+
+    const response = await POST(request(
+      'locale=en',
+      localizedBookingBody('en', { paymentIntentId: 'pi_rollback' }),
+    ));
+    const payload = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(payload).toEqual({
+      ok: false,
+      error: 'Unable to create the booking.',
+      errorCode: 'booking_create_failed',
+    });
+    expect(releaseBookingPaymentIntentClaimMock).toHaveBeenCalledWith('pi_rollback', 'bk-1');
+    expect(releaseBookingPaymentIntentClaimMock).toHaveBeenCalledTimes(1);
+    expect(releaseSlotLockMock).toHaveBeenCalledTimes(1);
+    warn.mockRestore();
+  });
+
+  it('does not release a pre-existing idempotent claim after a save failure', async () => {
+    const warn = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    getServiceMock.mockResolvedValueOnce(paidService as never);
+    bookingServicePriceSnapshotMock.mockReturnValueOnce({
+      paymentRequired: true,
+      totalAmount: 120000,
+      currency: 'KRW',
+      amountDueNow: 50000,
+      depositAmount: 50000,
+      balanceDueAfterOnlinePayment: 70000,
+      isDeposit: true,
+      payLater: false,
+    });
+    fetchPaymentIntentStatusMock.mockResolvedValueOnce({
+      id: 'pi_existing',
+      status: 'succeeded',
+      amount: 50000,
+      currency: 'krw',
+      metadata: { serviceId: 'svc-1', staffId: 'staff-1' },
+    });
+    claimBookingPaymentIntentMock.mockResolvedValueOnce({ claimed: true, idempotent: true });
+    saveBookingMock.mockRejectedValueOnce(new Error('storage failed'));
+
+    const response = await POST(request(
+      'locale=en',
+      localizedBookingBody('en', { paymentIntentId: 'pi_existing' }),
+    ));
+
+    expect(response.status).toBe(500);
+    expect(releaseBookingPaymentIntentClaimMock).not.toHaveBeenCalled();
+    warn.mockRestore();
   });
 
   it('passes required resource ids into the price snapshot and records the resolved total', async () => {
@@ -778,6 +1047,19 @@ describe('/api/booking/book', () => {
     expect(acquireSlotLockMock).not.toHaveBeenCalled();
   });
 
+  it('fails closed before availability or persistence when production booking storage is unavailable', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    hasDurableBookingStorageMock.mockReturnValue(false);
+
+    const response = await POST(request('locale=en', localizedBookingBody('en')));
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(payload.errorCode).toBe('booking_storage_unavailable');
+    expect(isSlotAvailableMock).not.toHaveBeenCalled();
+    expect(saveBookingMock).not.toHaveBeenCalled();
+  });
+
   it('fails closed before verification or saving when production Stripe is unconfigured', async () => {
     vi.stubEnv('NODE_ENV', 'production');
     vi.stubEnv('STRIPE_SECRET_KEY', '');
@@ -809,7 +1091,7 @@ describe('/api/booking/book', () => {
   });
 
   it('returns localized slot lock conflicts', async () => {
-    acquireSlotLockMock.mockReturnValueOnce(false);
+    acquireSlotLockMock.mockResolvedValueOnce(null);
 
     const response = await POST(request('locale=en', localizedBookingBody('en')));
     const payload = await response.json();
@@ -845,6 +1127,7 @@ describe('/api/booking/book', () => {
       package: bookingPackage,
     });
     redeemPackageCreditForBookingMock.mockResolvedValueOnce(null);
+    validateSessionMock.mockResolvedValueOnce(member);
     bookingServicePriceSnapshotMock.mockReturnValueOnce({
       paymentRequired: true,
       totalAmount: 120000,
@@ -856,7 +1139,11 @@ describe('/api/booking/book', () => {
       payLater: false,
     });
 
-    const response = await POST(request('locale=zh-hant', localizedBookingBody('zh-hant')));
+    const response = await POST(request(
+      'locale=zh-hant',
+      localizedBookingBody('zh-hant'),
+      'session-1',
+    ));
     const payload = await response.json();
 
     expect(response.status).toBe(409);
@@ -879,6 +1166,7 @@ describe('/api/booking/book', () => {
       credit: packageCredit,
       package: bookingPackage,
     });
+    validateSessionMock.mockResolvedValueOnce(member);
     saveBookingMock.mockRejectedValueOnce(new Error('booking storage secret leaked'));
     bookingServicePriceSnapshotMock.mockReturnValueOnce({
       paymentRequired: true,
@@ -891,7 +1179,7 @@ describe('/api/booking/book', () => {
       payLater: false,
     });
 
-    const response = await POST(request('locale=en', localizedBookingBody('en')));
+    const response = await POST(request('locale=en', localizedBookingBody('en'), 'session-1'));
     const payload = await response.json();
 
     expect(response.status).toBe(500);

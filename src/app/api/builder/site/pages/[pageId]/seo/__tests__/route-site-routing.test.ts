@@ -90,7 +90,7 @@ describe('/api/builder/site/pages/[pageId]/seo selected site routing', () => {
   });
 
   it('routes page SEO GET to the selected workspace site from the editor referer', async () => {
-    const response = await route.GET(getRequest(), { params: { pageId: 'page-1' } });
+    const response = await route.GET(getRequest(), { params: Promise.resolve({ pageId: 'page-1' }) });
     const data = await response.json();
 
     expect(response.status).toBe(200);
@@ -101,7 +101,7 @@ describe('/api/builder/site/pages/[pageId]/seo selected site routing', () => {
   it('routes page SEO PATCH writes to the selected workspace site from the editor referer', async () => {
     const response = await route.PATCH(
       patchRequest({ seo: { title: 'Workspace SEO title' } }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 

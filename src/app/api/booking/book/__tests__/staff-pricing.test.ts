@@ -20,6 +20,7 @@ vi.mock('@/lib/builder/bookings/availability', () => ({
 vi.mock('@/lib/builder/bookings/storage', () => ({
   getService: vi.fn(),
   getStaff: vi.fn(),
+  hasDurableBookingStorage: vi.fn(() => true),
   makeBookingId: vi.fn(() => 'bk-staff-price'),
   saveBooking: vi.fn(async () => undefined),
   timestamped: vi.fn((booking) => ({
@@ -38,8 +39,9 @@ vi.mock('@/lib/builder/bookings/stripe-verify', async () => {
 });
 
 vi.mock('@/lib/builder/bookings/slot-lock', () => ({
-  acquireSlotLock: vi.fn(() => true),
-  releaseSlotLock: vi.fn(),
+  acquireSlotLock: vi.fn(async () => ({ ownerToken: 'test-lease', keys: [], expiresAt: 9_999_999 })),
+  releaseSlotLock: vi.fn(async () => undefined),
+  renewSlotLock: vi.fn(async (lease) => lease),
 }));
 
 vi.mock('@/lib/builder/billing-document-automation', () => ({
@@ -99,6 +101,7 @@ function request(): NextRequest {
     headers: {
       'content-type': 'application/json',
       'x-forwarded-for': '203.0.113.44',
+      origin: 'https://tseng-law.com',
     },
     body: JSON.stringify({
       serviceId: service.serviceId,
@@ -121,7 +124,7 @@ describe('/api/booking/book staff-specific pricing', () => {
     vi.mocked(getService).mockResolvedValue(service);
     vi.mocked(getStaff).mockResolvedValue(premiumStaff);
     vi.mocked(isSlotAvailable).mockResolvedValue(true);
-    vi.mocked(acquireSlotLock).mockReturnValue(true);
+    vi.mocked(acquireSlotLock).mockResolvedValue({ ownerToken: 'test-lease', keys: [], expiresAt: 9_999_999 });
     vi.mocked(fetchPaymentIntentStatus).mockResolvedValue({
       id: 'pi_base_price',
       status: 'succeeded',

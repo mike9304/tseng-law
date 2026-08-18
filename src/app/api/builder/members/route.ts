@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
-import { guardMutation } from '@/lib/builder/security/guard';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import {
+  guardBuilderReadWithPermission,
+  guardMutation,
+} from '@/lib/builder/security/guard';
 import {
   createMember,
   listMembers,
@@ -62,7 +64,7 @@ function createErrorCode(error: unknown): BuilderMembersApiErrorCode {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = await guardBuilderReadWithPermission(request, 'manage-users');
   if (auth instanceof NextResponse) return auth;
 
   const locale = resolveRequestLocale(request);
@@ -80,7 +82,10 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, {
+    bucket: 'mutation',
+    permission: 'manage-users',
+  });
   if (auth instanceof NextResponse) return auth;
 
   let errorLocale = resolveRequestLocale(request);

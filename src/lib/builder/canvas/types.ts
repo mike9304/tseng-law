@@ -1804,12 +1804,12 @@ const memberLoginCanvasNodeSchema = baseCanvasNodeSchema.extend({
   kind: z.literal('member-login'),
   content: z.object({
     title: z.string().max(120).default('회원 로그인'),
-    subtitle: z.string().max(240).default('로그인하거나 계정을 만들어 회원 전용 콘텐츠로 이동합니다.'),
+    subtitle: z.string().max(240).default('회원 계정은 담당자가 확인 후 발급합니다. 기존 회원은 로그인해 주세요.'),
     defaultMode: z.enum(['login', 'signup']).default('login'),
-    showSignup: z.boolean().default(true),
+    showSignup: z.boolean().default(false),
     nextPath: z.string().max(500).default(''),
     loginLabel: z.string().max(60).default('로그인'),
-    signupLabel: z.string().max(60).default('회원가입'),
+    signupLabel: z.string().max(60).default(''),
   }),
 });
 

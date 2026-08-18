@@ -3,6 +3,14 @@ import { describe, expect, it } from 'vitest';
 import { contactPageContent } from '@/data/contact-page-content';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+
+const consultationMailto = {
+  ko: getConsultationPublicMailto('ko'),
+  'zh-hant': getConsultationPublicMailto('zh-hant'),
+  en: getConsultationPublicMailto('en'),
+  ja: getConsultationPublicMailto('ja'),
+} as const;
 
 describe('Japanese contact page data', () => {
   it('uses the reviewed Japanese page hero copy', () => {
@@ -13,7 +21,7 @@ describe('Japanese contact page data', () => {
     });
   });
 
-  it('uses the reviewed Japanese contact block copy without changing addresses', () => {
+  it('uses the reviewed Japanese email-first contact copy and official four-office addresses', () => {
     expect(siteContent.ja.contact).toEqual({
       label: 'CONTACT',
       title: 'お問い合わせ',
@@ -22,13 +30,12 @@ describe('Japanese contact page data', () => {
       inquiries: [
         {
           title: 'ビジネス・投資',
-          details: ['電話：+82-10-2992-9304', 'メール：wei@hoveringlaw.com.tw'],
+          details: ['メール：wei@hoveringlaw.com.tw'],
         },
         {
           title: 'メディア取材',
           details: [
             'メール：wei@hoveringlaw.com.tw',
-            'KakaoTalk：チャンネルでお問い合わせ',
             '件名に【メディア取材】とご記入ください',
           ],
         },
@@ -36,7 +43,6 @@ describe('Japanese contact page data', () => {
           title: '採用に関するお問い合わせ',
           details: [
             'メール：wei@hoveringlaw.com.tw',
-            '電話：+82-10-2992-9304',
             '件名に【採用】とご記入ください',
           ],
         },
@@ -49,57 +55,79 @@ describe('Japanese contact page data', () => {
       locations: [
         {
           title: '台北事務所',
-          details: ['台北市大同区承徳路一段35号7F-2'],
+          details: ['103 台北市大同区承徳路一段35号7F-2'],
         },
         {
           title: '台中事務所',
-          details: ['台中市北区館前路19号', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863'],
+          details: ['40453 台中市北区館前路19号6F-1', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863'],
         },
         {
           title: '高雄事務所',
-          details: ['高雄市左営区安吉街233号', 'Tel: 07-557-9797'],
+          details: ['81358 高雄市左営区安吉街233号', 'Tel: 07-557-9797', 'Fax: 07-557-7171'],
+        },
+        {
+          title: '屏東事務所',
+          details: ['90443 屏東県九如郷九如路三段46号', 'Tel: 08-739-1689', 'Fax: 08-739-7362'],
         },
       ],
-      cta: { label: 'お問い合わせページ', href: '/ja/contact' },
+      cta: {
+        label: 'メールで相談',
+        href: consultationMailto.ja,
+      },
     });
   });
 
-  it('uses the reviewed Japanese direct and KakaoTalk channel labels', () => {
+  it('uses email as the sole Japanese public consultation channel', () => {
     expect(contactPageContent.ja).toEqual({
       messenger: {
         primary: {
-          href: 'https://pf.kakao.com/_hojeong/chat',
-          platform: 'KakaoTalk',
-          label: 'KakaoTalkチャンネルでお問い合わせ',
+          href: consultationMailto.ja,
+          platform: 'Email',
+          label: 'メールでお問い合わせ',
         },
       },
       direct: {
         email: {
           label: 'メール',
           value: 'wei@hoveringlaw.com.tw',
-          href: 'mailto:wei@hoveringlaw.com.tw',
-        },
-        phone: {
-          label: '電話',
-          value: '+82-10-2992-9304',
-          href: 'tel:+821029929304',
+          href: consultationMailto.ja,
         },
       },
-      offices: { offices: [{ phone: '+82-10-2992-9304' }] },
     });
   });
 
-  it('contains no LINE channel claim in Japanese contact data', () => {
+  it('contains no KakaoTalk or LINE channel claim in Japanese contact data', () => {
     const japaneseContactData = JSON.stringify({
       pageCopy: pageCopy.ja.contact,
       siteContent: siteContent.ja.contact,
       channelContent: contactPageContent.ja,
     });
 
-    expect(japaneseContactData).not.toMatch(/LINE|lin\.ee|line\.me/i);
+    expect(japaneseContactData).not.toMatch(/KakaoTalk|pf\.kakao|LINE|lin\.ee|line\.me/i);
   });
 
-  it('keeps all Korean contact data unchanged', () => {
+  it.each(['ko', 'zh-hant', 'en', 'ja'] as const)(
+    'keeps email as the sole public consultation CTA for %s',
+    (locale) => {
+      const publicContactData = JSON.stringify({
+        inquiries: siteContent[locale].contact.inquiries,
+        cta: siteContent[locale].contact.cta,
+        messenger: contactPageContent[locale].messenger,
+        email: contactPageContent[locale].direct.email,
+      });
+      expect(contactPageContent[locale].messenger.primary).toEqual(
+        expect.objectContaining({ href: expect.stringMatching(/^mailto:wei@hoveringlaw\.com\.tw\?subject=/) }),
+      );
+      expect(contactPageContent[locale].direct.email.href).toMatch(
+        /^mailto:wei@hoveringlaw\.com\.tw\?subject=/,
+      );
+      expect(publicContactData).not.toMatch(
+        /tel:|010-2992-9304|KakaoTalk|pf\.kakao|lin\.ee|line\.me|LINE (?:channel|consultation)|LINE(?:チャンネル|相談|諮詢)/i,
+      );
+    },
+  );
+
+  it('uses the reviewed Korean email-first contact data', () => {
     expect({
       pageCopy: pageCopy.ko.contact,
       siteContent: siteContent.ko.contact,
@@ -118,13 +146,12 @@ describe('Japanese contact page data', () => {
         inquiries: [
           {
             title: '사업·투자 문의',
-            details: ['전화: +82-10-2992-9304', '이메일: wei@hoveringlaw.com.tw'],
+            details: ['이메일: wei@hoveringlaw.com.tw'],
           },
           {
             title: '미디어 문의',
             details: [
               '이메일: wei@hoveringlaw.com.tw',
-              '카카오톡: 채널 상담',
               '접수 시 제목에 [미디어 문의] 표기',
             ],
           },
@@ -132,7 +159,6 @@ describe('Japanese contact page data', () => {
             title: '채용 문의',
             details: [
               '이메일: wei@hoveringlaw.com.tw',
-              '전화: +82-10-2992-9304',
               '접수 시 제목에 [채용 문의] 표기',
             ],
           },
@@ -145,49 +171,50 @@ describe('Japanese contact page data', () => {
         locations: [
           {
             title: '타이베이 사무소',
-            details: ['台北市大同區承德路一段35號7樓之2'],
+            details: ['103臺北市大同區承德路一段35號7樓之2'],
           },
           {
             title: '타이중 사무소',
             details: [
-              '臺中市北區館前路19號樓之1',
+              '40453臺中市北區館前路19號6樓之1',
               'Tel: 04-2326-1862',
               'Fax: 04-2326-1863',
             ],
           },
           {
             title: '가오슝 사무소',
-            details: ['高雄市左營區安吉街233號', 'Tel: 07-557-9797'],
+            details: ['81358高雄市左營區安吉街233號', 'Tel: 07-557-9797', 'Fax: 07-557-7171'],
+          },
+          {
+            title: '핑둥 사무소',
+            details: ['90443屏東縣九如鄉九如路三段46號', 'Tel: 08-739-1689', 'Fax: 08-739-7362'],
           },
         ],
-        cta: { label: '문의 페이지', href: '/ko/contact' },
+        cta: {
+          label: '이메일 상담 신청',
+          href: consultationMailto.ko,
+        },
       },
       channelContent: {
         messenger: {
           primary: {
-            href: 'https://pf.kakao.com/_hojeong/chat',
-            platform: 'KakaoTalk',
-            label: '카카오톡 채널 상담',
+            href: consultationMailto.ko,
+            platform: 'Email',
+            label: '이메일 상담 신청',
           },
         },
         direct: {
           email: {
             label: '이메일',
             value: 'wei@hoveringlaw.com.tw',
-            href: 'mailto:wei@hoveringlaw.com.tw',
-          },
-          phone: {
-            label: '전화',
-            value: '+82-10-2992-9304',
-            href: 'tel:+821029929304',
+            href: consultationMailto.ko,
           },
         },
-        offices: { offices: [{ phone: '+82-10-2992-9304' }] },
       },
     });
   });
 
-  it('keeps all Traditional Chinese contact data unchanged', () => {
+  it('uses the reviewed Traditional Chinese email-first contact data', () => {
     expect({
       pageCopy: pageCopy['zh-hant'].contact,
       siteContent: siteContent['zh-hant'].contact,
@@ -206,13 +233,12 @@ describe('Japanese contact page data', () => {
         inquiries: [
           {
             title: '商務/投資詢問',
-            details: ['電話: +82-10-2992-9304', 'Email: wei@hoveringlaw.com.tw'],
+            details: ['Email: wei@hoveringlaw.com.tw'],
           },
           {
             title: '媒體詢問',
             details: [
               'Email: wei@hoveringlaw.com.tw',
-              'KakaoTalk: 頻道諮詢',
               '來信標題請註明 [媒體詢問]',
             ],
           },
@@ -220,7 +246,6 @@ describe('Japanese contact page data', () => {
             title: '招募詢問',
             details: [
               'Email: wei@hoveringlaw.com.tw',
-              '電話: +82-10-2992-9304',
               '來信標題請註明 [招募詢問]',
             ],
           },
@@ -233,49 +258,50 @@ describe('Japanese contact page data', () => {
         locations: [
           {
             title: '台北所',
-            details: ['台北市大同區承德路一段35號7樓之2'],
+            details: ['103臺北市大同區承德路一段35號7樓之2'],
           },
           {
             title: '台中所',
             details: [
-              '臺中市北區館前路19號樓之1',
+              '40453臺中市北區館前路19號6樓之1',
               'Tel: 04-2326-1862',
               'Fax: 04-2326-1863',
             ],
           },
           {
             title: '高雄所',
-            details: ['高雄市左營區安吉街233號', 'Tel: 07-557-9797'],
+            details: ['81358高雄市左營區安吉街233號', 'Tel: 07-557-9797', 'Fax: 07-557-7171'],
+          },
+          {
+            title: '屏東所',
+            details: ['90443屏東縣九如鄉九如路三段46號', 'Tel: 08-739-1689', 'Fax: 08-739-7362'],
           },
         ],
-        cta: { label: '聯絡頁', href: '/zh-hant/contact' },
+        cta: {
+          label: '電子郵件諮詢',
+          href: consultationMailto['zh-hant'],
+        },
       },
       channelContent: {
         messenger: {
           primary: {
-            href: 'https://pf.kakao.com/_hojeong/chat',
-            platform: 'KakaoTalk',
-            label: 'KakaoTalk 頻道諮詢',
+            href: consultationMailto['zh-hant'],
+            platform: 'Email',
+            label: '電子郵件諮詢',
           },
         },
         direct: {
           email: {
             label: '電子郵件',
             value: 'wei@hoveringlaw.com.tw',
-            href: 'mailto:wei@hoveringlaw.com.tw',
-          },
-          phone: {
-            label: '電話',
-            value: '+82-10-2992-9304',
-            href: 'tel:+821029929304',
+            href: consultationMailto['zh-hant'],
           },
         },
-        offices: { offices: [{ phone: '+82-10-2992-9304' }] },
       },
     });
   });
 
-  it('keeps all English contact data unchanged', () => {
+  it('uses the reviewed English email-first contact data', () => {
     expect({
       pageCopy: pageCopy.en.contact,
       siteContent: siteContent.en.contact,
@@ -294,13 +320,12 @@ describe('Japanese contact page data', () => {
         inquiries: [
           {
             title: 'Business & Investment',
-            details: ['Phone: +82-10-2992-9304', 'Email: wei@hoveringlaw.com.tw'],
+            details: ['Email: wei@hoveringlaw.com.tw'],
           },
           {
             title: 'Media Inquiry',
             details: [
               'Email: wei@hoveringlaw.com.tw',
-              'KakaoTalk: Channel Chat',
               'Please use subject line [Media Inquiry]',
             ],
           },
@@ -308,7 +333,6 @@ describe('Japanese contact page data', () => {
             title: 'Recruitment Inquiry',
             details: [
               'Email: wei@hoveringlaw.com.tw',
-              'Phone: +82-10-2992-9304',
               'Please use subject line [Recruitment Inquiry]',
             ],
           },
@@ -321,44 +345,53 @@ describe('Japanese contact page data', () => {
         locations: [
           {
             title: 'Taipei Office',
-            details: ['7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City'],
+            details: ['103, 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City'],
           },
           {
             title: 'Taichung Office',
             details: [
-              'No. 19, Guanqian Rd., North Dist., Taichung City',
+              '40453, 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City',
               'Tel: 04-2326-1862',
               'Fax: 04-2326-1863',
             ],
           },
           {
             title: 'Kaohsiung Office',
-            details: ['No. 233, Anji St., Zuoying Dist., Kaohsiung City', 'Tel: 07-557-9797'],
+            details: [
+              '81358, No. 233, Anji St., Zuoying Dist., Kaohsiung City',
+              'Tel: 07-557-9797',
+              'Fax: 07-557-7171',
+            ],
+          },
+          {
+            title: 'Pingtung Office',
+            details: [
+              'No. 46, Sec. 3, Jiuru Rd., Jiuru Township, Pingtung County 90443',
+              'Tel: 08-739-1689',
+              'Fax: 08-739-7362',
+            ],
           },
         ],
-        cta: { label: 'Contact Page', href: '/en/contact' },
+        cta: {
+          label: 'Email Consultation',
+          href: consultationMailto.en,
+        },
       },
       channelContent: {
         messenger: {
           primary: {
-            href: 'https://pf.kakao.com/_hojeong/chat',
-            platform: 'KakaoTalk',
-            label: 'KakaoTalk channel',
+            href: consultationMailto.en,
+            platform: 'Email',
+            label: 'Email consultation',
           },
         },
         direct: {
           email: {
             label: 'Email',
             value: 'wei@hoveringlaw.com.tw',
-            href: 'mailto:wei@hoveringlaw.com.tw',
-          },
-          phone: {
-            label: 'Phone',
-            value: '+82-10-2992-9304',
-            href: 'tel:+821029929304',
+            href: consultationMailto.en,
           },
         },
-        offices: { offices: [{ phone: '+82-10-2992-9304' }] },
       },
     });
   });

@@ -6,6 +6,6 @@ import {
 } from './members-engine';
 
 export async function getCurrentSiteMember(): Promise<SiteMember | null> {
-  const sessionId = cookies().get(MEMBER_SESSION_COOKIE)?.value;
+  const sessionId = (await cookies()).get(MEMBER_SESSION_COOKIE)?.value;
   return sessionId ? validateSession(sessionId) : null;
 }

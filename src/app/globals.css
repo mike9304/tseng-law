@@ -1731,6 +1731,7 @@ section.home-results-panel--editorial {
   position: absolute;
   inset: 0;
   z-index: 1;
+  pointer-events: none;
   background:
     linear-gradient(102deg, rgba(10, 29, 19, 0.72) 0%, rgba(10, 29, 19, 0.34) 38%, rgba(10, 29, 19, 0.08) 72%);
 }
@@ -1768,7 +1769,7 @@ section.home-results-panel--editorial {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url('/images/hero-bg-01.webp');
+  background: linear-gradient(135deg, #071224 0%, #123b63 100%);
   background-position: center;
   background-size: cover;
 }
@@ -1860,12 +1861,102 @@ section.home-results-panel--editorial {
   height: 100%;
 }
 
+.decorative-autoplay-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.decorative-autoplay-video__poster,
+.decorative-autoplay-video__video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 180ms ease;
+}
+
+.decorative-autoplay-video__poster {
+  z-index: 0;
+  opacity: 1;
+}
+
+.decorative-autoplay-video__video {
+  z-index: 1;
+  opacity: 0;
+}
+
+.decorative-autoplay-video[data-video-ready='true'] .decorative-autoplay-video__poster {
+  opacity: 0;
+}
+
+.decorative-autoplay-video[data-video-ready='true'] .decorative-autoplay-video__video {
+  opacity: 1;
+}
+
+.decorative-autoplay-video__control {
+  position: absolute;
+  z-index: 5;
+  top: max(0.875rem, env(safe-area-inset-top));
+  right: max(0.875rem, env(safe-area-inset-right));
+  min-width: 44px;
+  min-height: 44px;
+  max-width: calc(100% - 1.75rem);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid rgba(244, 240, 231, 0.56);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(7, 19, 27, 0.72);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-align: left;
+  pointer-events: auto;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.decorative-autoplay-video__control:hover {
+  color: #f5dfad;
+  border-color: rgba(245, 223, 173, 0.9);
+  background: rgba(7, 19, 27, 0.88);
+}
+
+.decorative-autoplay-video__control:focus-visible {
+  outline: 3px solid #f5dfad;
+  outline-offset: 3px;
+}
+
+.decorative-autoplay-video__control-icon {
+  min-width: 1em;
+  color: #d8c08b;
+  font-size: 0.82rem;
+  line-height: 1;
+  text-align: center;
+}
+
 .hero-media-video {
   object-fit: cover;
   filter: brightness(0.78) saturate(1.04) contrast(1.02);
 }
 
 .hero-media-fallback {
+  position: relative;
   background-position: center;
   background-size: cover;
   filter: brightness(0.78) saturate(1.04) contrast(1.02);
@@ -3141,6 +3232,28 @@ section.home-results-panel--editorial {
   box-shadow: 0 14px 34px rgba(16, 38, 61, 0.08);
 }
 
+.video-feature-media {
+  position: relative;
+  aspect-ratio: 12 / 7;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
+  background: #dce3e4;
+  box-shadow: 0 14px 34px rgba(16, 38, 61, 0.08);
+}
+
+.video-feature-media .video-feature-image,
+.video-feature-media .video-feature-video {
+  width: 100%;
+  height: 100% !important;
+  border: 0;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1.06) saturate(0.94) contrast(1.01);
+  box-shadow: none;
+}
+
 .feature-meta,
 .video-feature-meta {
   margin-top: 0.9rem;
@@ -3804,12 +3917,14 @@ section.home-results-panel--editorial {
 }
 
 .video-item:hover::after,
-.video-item:focus-visible::after {
+.video-item:focus-visible::after,
+.video-item:focus-within::after {
   transform: scaleX(1);
 }
 
 .video-item:hover,
-.video-item:focus-visible {
+.video-item:focus-visible,
+.video-item:focus-within {
   transform: translateY(-1px);
   border-color: var(--border-purple);
   box-shadow: var(--shadow-md);
@@ -3821,6 +3936,58 @@ section.home-results-panel--editorial {
   display: block;
   background: linear-gradient(180deg, rgba(245, 241, 234, 0.92), rgba(255, 255, 255, 0.98));
   box-shadow: 0 12px 24px rgba(16, 38, 61, 0.08);
+}
+
+.video-item-media {
+  position: relative;
+  width: 98px;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #dce3e4;
+}
+
+.video-item-media .video-thumb,
+.video-item-media .video-item-video {
+  width: 100%;
+  height: 100% !important;
+  border: 0;
+  border-radius: 0;
+  object-fit: cover;
+  filter: brightness(1.06) saturate(0.92) contrast(1.01);
+  box-shadow: none;
+}
+
+.video-item-media .decorative-autoplay-video__control {
+  top: 4px;
+  right: 4px;
+  width: 44px;
+  max-width: 44px;
+  padding: 0;
+}
+
+.video-item-media .decorative-autoplay-video__control > span:last-child {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.video-item-content-link {
+  display: grid;
+  gap: 0.25rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.video-item-content-link:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
 }
 
 .video-item-title {
@@ -4493,6 +4660,82 @@ section.home-results-panel--editorial {
   letter-spacing: -0.015em;
 }
 
+.footer-consultation-email {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.2rem;
+}
+
+.footer-consultation-email-label {
+  margin: 0;
+  color: #382b1d;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.footer-consultation-email-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.footer-consultation-email-link {
+  color: #123b63;
+  font-size: 0.92rem;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-color: rgba(18, 59, 99, 0.4);
+  text-underline-offset: 0.22em;
+}
+
+.footer-consultation-email-link:hover,
+.footer-consultation-email-link:focus-visible {
+  color: #0b2c4b;
+  text-decoration-color: currentColor;
+}
+
+.footer-consultation-email-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgba(18, 59, 99, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.32);
+  color: #123b63;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.footer-consultation-email-copy:hover,
+.footer-consultation-email-copy:focus-visible {
+  border-color: rgba(18, 59, 99, 0.62);
+  background: rgba(255, 255, 255, 0.58);
+  color: #0b2c4b;
+}
+
+.footer-consultation-email-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .footer-link-column {
   display: grid;
   gap: 0.8rem;
@@ -4525,13 +4768,15 @@ section.home-results-panel--editorial {
 }
 
 .office-links {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  width: 100%;
   gap: 0;
-  flex-wrap: nowrap;
 }
 
 .office-label {
+  align-self: center;
   font-weight: 600;
   font-size: 0.84rem;
   letter-spacing: -0.01em;
@@ -4541,6 +4786,9 @@ section.home-results-panel--editorial {
 }
 
 .office-link {
+  display: grid;
+  align-content: center;
+  gap: 0.22rem;
   font-size: 0.92rem;
   color: rgba(76, 62, 44, 0.8);
   text-decoration: none;
@@ -4548,6 +4796,19 @@ section.home-results-panel--editorial {
   white-space: nowrap;
   position: relative;
   transition: color 180ms ease;
+}
+
+.office-link-name {
+  color: #3f3324;
+  font-weight: 650;
+}
+
+.office-link-address {
+  color: #665642;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .office-link:hover,
@@ -4627,7 +4888,7 @@ section.home-results-panel--editorial {
 .social-label {
   font-size: 0.84rem;
   letter-spacing: -0.005em;
-  color: rgba(92, 76, 56, 0.76);
+  color: #594a38;
 }
 
 [data-locale='ko'] .footer-link-title,
@@ -4683,7 +4944,7 @@ section.home-results-panel--editorial {
 
 .footer-copyright-row {
   font-size: 0.75rem;
-  color: rgba(76, 62, 44, 0.56);
+  color: #62533f;
   margin: 1rem 0 0;
   padding-top: 1rem;
   border-top: 1px solid rgba(88, 72, 52, 0.16);
@@ -8152,8 +8413,13 @@ a.floating-ai-chat-contact-item:hover strong {
 
   .office-links {
     min-width: 0;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.25rem 0;
+  }
+
+  .office-label {
+    grid-column: 1 / -1;
+    margin: 0 0 0.35rem;
   }
 
   .office-link + .office-link::before {
@@ -8208,6 +8474,10 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 @media (max-width: 640px) {
+  .office-links {
+    grid-template-columns: 1fr;
+  }
+
   .header-main .logo-mark {
     /* The brand mark is a square seal; keep the box square (matching the 34px
        height above) so it renders full-size and flush to the wordmark rather
@@ -23414,4 +23684,920 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
   word-break: normal;
   overflow-wrap: anywhere;
   min-width: 0;
+}
+
+/* ==========================================================================
+   HOME REMEDIATION — Taipei media, compact editorial flow, non-blocking event
+   Scope these overrides to the public home components so legacy/admin builder
+   surfaces keep their existing layout. Kept last to win over the editorial
+   refinement pass above.
+   ========================================================================== */
+
+/* Keep a lightweight resilient fallback when image playback is unavailable.
+   The overlay remains darkest at the copy edge. */
+.hero-media {
+  background:
+    linear-gradient(135deg, rgba(18, 59, 99, 0.46), rgba(52, 72, 87, 0.16)),
+    #81939d;
+  background-position: center 48%;
+}
+
+.hero::before {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 18, 35, 0.72) 0%,
+      rgba(7, 25, 46, 0.54) 34%,
+      rgba(8, 28, 50, 0.2) 62%,
+      rgba(8, 28, 50, 0.04) 100%
+    );
+}
+
+.hero::after {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 15, 29, 0.02) 46%,
+      rgba(4, 15, 29, 0.24) 100%
+    );
+}
+
+.hero-media-fallback {
+  filter: none;
+}
+
+.hero-media-video,
+.hero-media-image,
+[data-node-id^='home-hero-media-image'] img {
+  filter: brightness(0.99) saturate(0.9) contrast(1.02);
+}
+
+.hero-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1.25rem;
+}
+
+.hero-cta-actions .button {
+  min-height: 48px;
+  padding: 0.72rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hero-cta-primary {
+  color: #fff;
+  background: #123b63;
+  border: 1px solid #123b63;
+  box-shadow: 0 10px 24px rgba(4, 18, 34, 0.24);
+}
+
+.hero-cta-primary:hover,
+.hero-cta-primary:focus-visible {
+  color: #fff;
+  background: #0d2f50;
+  border-color: #dce8f2;
+  box-shadow: 0 12px 28px rgba(4, 18, 34, 0.3);
+}
+
+.hero-cta-secondary {
+  color: #fff;
+  background: rgba(7, 25, 46, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  box-shadow: none;
+}
+
+.hero-cta-secondary:hover,
+.hero-cta-secondary:focus-visible {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+}
+
+.hero-cta-primary:focus-visible,
+.hero-cta-secondary:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.92);
+  outline-offset: 3px;
+}
+
+/* The archive should occupy its content height, without the large empty stage
+   bands inherited from old positioned builder snapshots. */
+#insights {
+  min-height: 0;
+  height: auto;
+  padding-block: clamp(3.75rem, 6vw, 5.25rem);
+}
+
+#insights .section-lede {
+  margin-bottom: 1.5rem;
+}
+
+#insights .ornament-divider {
+  margin-block: 1.25rem 2rem;
+}
+
+#insights .insights-grid {
+  gap: 24px;
+}
+
+#insights .insights-featured,
+#insights .insights-list-wrap {
+  min-height: 0;
+}
+
+#insights .insights-featured-media {
+  aspect-ratio: 16 / 9;
+}
+
+#insights .insights-featured-body {
+  padding: 1.15rem 1.2rem 1.3rem;
+}
+
+#insights .insights-list-item {
+  padding-block: 0.85rem;
+}
+
+#insights .insights-list-summary {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Six services: 3 / 2 / 1, compact content-first cards. */
+#practice {
+  min-height: 0;
+  height: auto;
+  padding-block: clamp(3.75rem, 6vw, 5.25rem);
+}
+
+#practice .section-lede {
+  margin-bottom: 1.5rem;
+}
+
+#practice .ornament-divider {
+  margin-block: 1.25rem 2rem;
+}
+
+#practice .services-detail-list.services-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 24px;
+  margin-top: 0;
+}
+
+#practice .services-card-grid-item,
+#practice .services-card {
+  min-width: 0;
+  height: 100%;
+}
+
+#practice .services-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.35rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(18, 59, 99, 0.14);
+  border-radius: 8px;
+  overflow: visible;
+  transition:
+    transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    background 200ms ease;
+}
+
+#practice .services-card:hover,
+#practice .services-card:focus-within {
+  transform: translateY(-4px);
+  background: #fff;
+  border-color: rgba(18, 59, 99, 0.3);
+  box-shadow: 0 14px 30px rgba(7, 25, 46, 0.1);
+}
+
+#practice .services-card-header {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  align-items: center;
+  gap: 0.85rem;
+}
+
+#practice .services-detail-title {
+  font-size: clamp(1.02rem, 0.35vw + 0.95rem, 1.18rem);
+  line-height: 1.4;
+}
+
+#practice .services-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+}
+
+#practice .services-card-summary {
+  display: -webkit-box;
+  min-height: calc(1.65em * 2);
+  margin: 1rem 0 1.15rem;
+  overflow: hidden;
+  color: var(--text-body);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+#practice .services-card-link {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #123b63;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+#practice .services-card-link:hover,
+#practice .services-card-link:focus-visible {
+  color: #0d2f50;
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Ensure the new courthouse plate fills the intended 52/48 split and the
+   fallback never resembles a missing/transparent asset. */
+.home-results-panel--editorial {
+  min-height: clamp(560px, 55vw, 700px);
+  grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
+}
+
+.home-results-panel--editorial .home-results-media {
+  position: relative;
+  min-height: 100%;
+  background:
+    linear-gradient(135deg, rgba(18, 59, 99, 0.26), rgba(7, 18, 36, 0.08)),
+    #d7dde2;
+}
+
+.home-results-media-fallback {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(18, 59, 99, 0.3), rgba(7, 18, 36, 0.08)),
+    #d7dde2;
+}
+
+.home-results-panel--editorial .home-results-media-img {
+  position: absolute;
+  z-index: 1;
+  object-position: center;
+  filter: brightness(1.07) saturate(0.92) contrast(1.01);
+}
+
+.home-results-panel--editorial .home-results-media-video {
+  object-position: center;
+  filter: brightness(1.07) saturate(0.92) contrast(1.01);
+}
+
+.home-results-panel--editorial .home-results-content {
+  padding: clamp(2.5rem, 4.5vw, 4.5rem);
+}
+
+/* Counters remain readable even when reveal JavaScript is delayed/disabled. */
+.stats-section {
+  min-height: 0;
+  height: auto;
+  padding-block: clamp(3.75rem, 6vw, 5.25rem);
+}
+
+.stats-section .section-lede {
+  margin-bottom: 1.5rem;
+}
+
+.stats-section .stats-grid {
+  margin-top: 1.75rem;
+  gap: 16px;
+}
+
+.stats-section .stat-card {
+  min-height: 0;
+  padding: 1rem;
+}
+
+.builder-pub-node .stats-section .stats-grid.reveal-stagger > *,
+.builder-pub-node .stats-section .stats-grid.reveal-stagger[data-builder-reveal-state='pending'] > * {
+  /* Builder runtime marks reveal children pending with !important before the
+     page is scrolled. Counters must never disappear in a static/full-page
+     render, so this one scoped exception wins while number animation remains
+     controlled by IntersectionObserver. */
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto;
+}
+
+.stats-section .stat-number,
+.stats-section .stat-label,
+.stats-section .stat-progress {
+  visibility: visible;
+}
+
+/* FAQ label is an eyebrow ("FAQ"), title is the sole localized heading. */
+#faq {
+  min-height: 0;
+  height: auto;
+  padding-block: clamp(3.75rem, 6vw, 5.25rem);
+}
+
+#faq > .container > .section-label {
+  margin-bottom: 0.75rem;
+}
+
+#faq > .container > .section-title {
+  margin-bottom: 1.75rem;
+}
+
+/* Year-end popup: the normal home-page instance is portaled directly into
+   #hero, so every placement below is hero-contained and scrolls away with it. */
+.year-end-popup-backdrop {
+  position: absolute;
+  inset: 0;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  pointer-events: none;
+  animation: none;
+}
+
+.year-end-popup {
+  position: absolute;
+  right: clamp(0.75rem, 1.5vw, 1.25rem);
+  bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+  width: min(294px, calc(100vw - 1.5rem));
+  max-height: min(calc(100% - 2.5rem), 600px);
+  padding: 0.95rem;
+  pointer-events: auto;
+  overscroll-behavior: contain;
+  box-shadow: 0 12px 34px rgba(9, 20, 34, 0.2);
+}
+
+.year-end-popup-close {
+  width: 36px;
+  height: 36px;
+}
+
+.year-end-popup-minimize {
+  min-height: 36px;
+}
+
+.year-end-popup-title {
+  font-size: 1.05rem;
+}
+
+.year-end-popup-body {
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.year-end-popup-points {
+  margin-block: 0.75rem;
+  gap: 0.4rem;
+}
+
+.year-end-popup-points li {
+  grid-template-columns: 20px minmax(0, 1fr);
+  padding: 0.45rem 0.5rem;
+  font-size: 0.78rem;
+}
+
+.year-end-popup-check {
+  width: 20px;
+  height: 20px;
+}
+
+.year-end-popup-cta {
+  min-height: 42px;
+}
+
+.year-end-popup-minimized {
+  position: absolute;
+  pointer-events: auto;
+}
+
+@media (max-width: 1024px) {
+  #practice .services-detail-list.services-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .home-results-panel--editorial {
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .home-results-panel--editorial .home-results-media {
+    height: clamp(220px, 42vw, 300px);
+    min-height: 0;
+  }
+
+  .home-results-panel--editorial .home-results-content {
+    padding: clamp(2rem, 6vw, 3rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-cta-actions {
+    width: min(100%, 420px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .hero-cta-actions .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #insights,
+  #practice,
+  #faq,
+  .stats-section {
+    padding-block: clamp(3rem, 10vw, 4rem);
+  }
+
+  #insights .insights-grid {
+    gap: 20px;
+  }
+
+  /* Reserve the full banner strip inside the hero. The search remains above
+     the same strip, so neither control can escape over the following section. */
+  #hero:has(> .year-end-popup-backdrop),
+  #hero:has(> .year-end-popup-minimized) {
+    padding-bottom:
+      calc(3.5rem + 64px + env(safe-area-inset-bottom));
+  }
+
+  #hero:has(> .year-end-popup-backdrop) .hero-search-wrapper,
+  #hero:has(> .year-end-popup-minimized) .hero-search-wrapper {
+    bottom: calc(1.5rem + 64px + env(safe-area-inset-bottom));
+  }
+
+  .year-end-popup-backdrop {
+    position: absolute;
+    inset: auto 0 0;
+    height: calc(64px + env(safe-area-inset-bottom));
+    padding: 0;
+  }
+
+  .year-end-popup {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: min(88px, calc(64px + env(safe-area-inset-bottom)));
+    max-width: none;
+    min-height: 64px;
+    max-height: 88px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas: 'title cta top';
+    align-items: center;
+    gap: 0.55rem;
+    padding:
+      0.55rem
+      max(0.75rem, env(safe-area-inset-right))
+      calc(0.55rem + env(safe-area-inset-bottom))
+      max(0.75rem, env(safe-area-inset-left));
+    overflow: hidden;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+    animation: popupSlideIn 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .year-end-popup::before {
+    height: 3px;
+  }
+
+  .year-end-popup-top {
+    grid-area: top;
+    display: block;
+  }
+
+  .year-end-popup-badge,
+  .year-end-popup-minimize,
+  .year-end-popup-body,
+  .year-end-popup-points,
+  .year-end-popup-actions {
+    display: none;
+  }
+
+  .year-end-popup-top-actions {
+    gap: 0;
+  }
+
+  .year-end-popup-close {
+    width: 40px;
+    height: 40px;
+  }
+
+  .year-end-popup-title {
+    grid-area: title;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    color: var(--text-heading);
+    font-size: clamp(0.82rem, 3.2vw, 0.95rem);
+    line-height: 1.3;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: none;
+    -webkit-text-fill-color: currentColor;
+  }
+
+  .year-end-popup-cta {
+    grid-area: cta;
+    width: auto;
+    min-height: 40px;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    animation: none;
+  }
+
+  .year-end-popup-minimized {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    width: 100%;
+    height: min(88px, calc(64px + env(safe-area-inset-bottom)));
+    min-height: 64px;
+    padding-bottom: env(safe-area-inset-bottom);
+    box-sizing: border-box;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  #practice .services-detail-list.services-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #practice .services-card {
+    padding: 1.15rem;
+  }
+
+  .stats-section .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .year-end-popup {
+    gap: 0.4rem;
+  }
+
+  .year-end-popup-cta {
+    max-width: 112px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .decorative-autoplay-video__poster,
+  .decorative-autoplay-video__video,
+  .decorative-autoplay-video__control {
+    transition: none;
+  }
+
+  #practice .services-card:hover,
+  #practice .services-card:focus-within {
+    transform: none;
+  }
+
+  .year-end-popup,
+  .year-end-popup::before,
+  .year-end-popup-badge,
+  .year-end-popup-cta {
+    animation: none;
+  }
+}
+
+/* Homepage cinematic opening. Media paths are centralized in
+   CinematicOpening.tsx so commissioned film encodes remain swappable. */
+.cinematic-opening {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding:
+    max(2rem, env(safe-area-inset-top))
+    max(1.25rem, env(safe-area-inset-right))
+    max(5.5rem, calc(4rem + env(safe-area-inset-bottom)))
+    max(1.25rem, env(safe-area-inset-left));
+  color: #1d2b2f;
+  background: #e8e3d8;
+}
+
+.cinematic-opening__media,
+.cinematic-opening__veil {
+  position: absolute;
+  inset: 0;
+}
+
+.cinematic-opening__media {
+  z-index: auto;
+  /* The commissioned poster and both video encodes share a 5–6 source-pixel
+     edge-ringing strip at the top. The section itself measures exactly at
+     viewport y=0, so crop that encoded edge inside the existing overflow
+     boundary instead of shifting the fullscreen opening or altering shared
+     decorative-video geometry. Four CSS pixels cover the source strip at
+     both desktop (1080p) and mobile (1280p portrait) scales. */
+  inset-block: -4px;
+  height: auto;
+}
+
+.cinematic-opening__poster,
+.cinematic-opening__video {
+  object-fit: cover;
+  object-position: center;
+}
+
+.cinematic-opening__veil {
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at 50% 42%,
+      rgba(7, 25, 40, 0.24) 0%,
+      rgba(7, 25, 40, 0.12) 42%,
+      rgba(7, 25, 40, 0) 72%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 253, 247, 0.02) 0%,
+      rgba(255, 253, 247, 0) 62%,
+      rgba(29, 43, 47, 0.2) 100%
+    );
+}
+
+.cinematic-opening__brand {
+  position: relative;
+  z-index: 3;
+  width: min(90vw, 780px);
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  transform: translateY(-2vh);
+}
+
+.cinematic-opening__seal {
+  width: clamp(88px, 11vw, 140px);
+  height: auto;
+  margin-bottom: clamp(1.5rem, 3.5vw, 2.5rem);
+  filter: drop-shadow(0 14px 28px rgba(29, 43, 47, 0.2));
+}
+
+.cinematic-opening__primary,
+.cinematic-opening__secondary {
+  margin: 0;
+  text-wrap: balance;
+}
+
+.cinematic-opening__primary {
+  color: #f8fbfc;
+  /* Keep the opening independent from deferred CJK webfonts so its logo and
+     title paint immediately; the full editorial font system activates with
+     the homepage after the one-gesture handoff. */
+  font-family: 'AppleMyungjo', 'Batang', Georgia, serif;
+  font-size: clamp(1.75rem, 4.2vw, 4.25rem);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.045em;
+  text-shadow:
+    0 1px 2px rgba(7, 19, 27, 0.82),
+    0 8px 28px rgba(7, 19, 27, 0.58);
+}
+
+html[lang='zh-Hant'] .cinematic-opening__primary,
+html[lang='zh-hant'] .cinematic-opening__primary {
+  font-family: 'Songti TC', 'PMingLiU', Georgia, serif;
+}
+
+html[lang='ja'] .cinematic-opening__primary {
+  font-family: 'Yu Mincho', 'Hiragino Mincho ProN', Georgia, serif;
+}
+
+html[lang='en'] .cinematic-opening__primary {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.cinematic-opening__secondary {
+  margin-top: 1rem;
+  color: #f1d8a6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(0.68rem, 1.15vw, 0.9rem);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.22em;
+  text-shadow:
+    0 1px 2px rgba(7, 19, 27, 0.9),
+    0 4px 16px rgba(7, 19, 27, 0.62);
+}
+
+.cinematic-opening__scroll {
+  position: absolute;
+  z-index: 4;
+  right: max(1.25rem, env(safe-area-inset-right));
+  bottom: max(1.25rem, calc(0.75rem + env(safe-area-inset-bottom)));
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(232, 227, 216, 0.68);
+  color: #f4f0e7;
+  background: rgba(29, 43, 47, 0.72);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.cinematic-opening__scroll:hover {
+  color: #f5e8ca;
+  border-color: rgba(245, 232, 202, 0.92);
+  background: rgba(29, 43, 47, 0.88);
+}
+
+.cinematic-opening__scroll:focus-visible {
+  outline: 3px solid #87aa9d;
+  outline-offset: 4px;
+}
+
+.cinematic-opening__scroll-mark {
+  color: #e4c98d;
+  font-size: 1rem;
+}
+
+.site main #cinematic-home-content {
+  width: 100%;
+  height: 0;
+  scroll-margin-top: 0;
+}
+
+.site[data-cinematic-home='true'][data-cinematic-intro-visible='false']
+  .cinematic-opening {
+  display: none;
+}
+
+.site[data-cinematic-home='true'][data-cinematic-intro-visible='true']
+  :is(
+    [data-cinematic-chrome],
+    [data-builder-global-section='header'],
+    .builder-site-header,
+    .builder-mobile-bottom-bar,
+    .builder-mobile-bottom-bar-spacer
+  ) {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Keep the complete homepage in the server HTML for SEO, but do not spend
+   first-paint work on the offscreen page while the fullscreen opening owns
+   the viewport. The dataset flips synchronously during the one-gesture
+   handoff, so the real page becomes renderable before its hero is measured. */
+.site[data-cinematic-home='true'][data-cinematic-intro-visible='true']
+  > :is(main, [data-legacy-chrome]) {
+  content-visibility: hidden;
+}
+
+.site[data-cinematic-home='true']
+  :is(
+    [data-cinematic-chrome],
+    [data-builder-global-section='header'],
+    .builder-site-header,
+    .builder-mobile-bottom-bar,
+    .builder-mobile-bottom-bar-spacer
+  ) {
+  transition:
+    opacity 220ms ease,
+    visibility 220ms ease;
+}
+
+html[data-cinematic-intro-visible='true']
+  :is(.year-end-popup-backdrop, .year-end-popup-minimized) {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .cinematic-opening__brand {
+    transform: translateY(-5vh);
+  }
+
+  .cinematic-opening__primary {
+    letter-spacing: 0.025em;
+  }
+
+  .cinematic-opening__secondary {
+    max-width: calc(100vw - 2.5rem);
+    font-size: clamp(0.6rem, 2.6vw, 0.68rem);
+    letter-spacing: clamp(0.06em, 0.25vw, 0.1em);
+    white-space: nowrap;
+  }
+
+  .cinematic-opening__scroll {
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site[data-cinematic-home='true']
+    :is(
+      [data-cinematic-chrome],
+      [data-builder-global-section='header'],
+      .builder-site-header,
+      .builder-mobile-bottom-bar,
+      .builder-mobile-bottom-bar-spacer
+    ),
+  .cinematic-opening__scroll {
+    transition: none;
+  }
+}
+
+/* Taiwan heritage-modern chapter: a single poster-first, below-fold film
+   between the practice overview and attorney profile. */
+.taiwan-heritage-interlude {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(28rem, 52vw, 42rem);
+  overflow: hidden;
+  background: #d7ddd5;
+}
+
+.taiwan-heritage-interlude__media.decorative-autoplay-video {
+  position: absolute;
+  inset: 0;
+  z-index: auto;
+}
+
+.taiwan-heritage-interlude__poster,
+.taiwan-heritage-interlude__video {
+  object-position: center 52%;
+}
+
+@media (max-width: 768px) {
+  .builder-pub-main > .taiwan-heritage-interlude {
+    width: calc(100% + 32px) !important;
+    max-width: none !important;
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .taiwan-heritage-interlude {
+    min-height: clamp(28rem, 120vw, 36rem);
+  }
+
+  .taiwan-heritage-interlude__poster,
+  .taiwan-heritage-interlude__video {
+    object-position: 57% center;
+  }
+
 }

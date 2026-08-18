@@ -35,7 +35,7 @@ function postRequest(query = '', body: string | unknown = { amountCents: 12000, 
   });
 }
 
-const params = { params: { orderId: 'order-1' } };
+const params = { params: Promise.resolve({ orderId: 'order-1' }) };
 
 describe('builder commerce order refunds API', () => {
   beforeEach(() => {

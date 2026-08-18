@@ -3,6 +3,10 @@ import Link from 'next/link';
 import type { SiteLocale } from '@/lib/locales';
 import { serviceAreas } from '@/data/service-details';
 import { getAttorneyProfile, getAttorneyProfilePath, primaryAttorneySlug } from '@/data/attorney-profiles';
+import {
+  getConsultationCtaLabel,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 
 const mediaHubLabels = {
   ko: {
@@ -121,9 +125,13 @@ export default function AttorneyMediaHubView({
                 <Link href={profileHref} className="button button--outline">
                   {labels.profile}
                 </Link>
-                <Link href={`/${locale}/contact`} className="button">
+                <a
+                  href={getConsultationPublicMailto(locale)}
+                  className="button"
+                  aria-label={`${labels.contact} — ${getConsultationCtaLabel(locale)}`}
+                >
                   {labels.contact}
-                </Link>
+                </a>
               </div>
             </div>
           </div>

@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { validateSubmission, type FormSchema } from '@/lib/builder/forms/form-engine';
+import {
+  createDefaultContactForm,
+  validateSubmission,
+  type FormSchema,
+} from '@/lib/builder/forms/form-engine';
 
 function makeSchema(fields: FormSchema['fields']): FormSchema {
   return {
@@ -104,5 +108,19 @@ describe('validateSubmission field coverage', () => {
     expect(validateSubmission(schema, { phone: 'abc' })).toEqual(
       expect.arrayContaining([expect.objectContaining({ fieldId: 'phone' })]),
     );
+  });
+
+  it('does not invite document uploads in the default consultation form', () => {
+    const schema = createDefaultContactForm();
+
+    expect(schema.fields.some((field) => field.type === 'file')).toBe(false);
+    expect(schema.fields.map((field) => field.id)).toEqual([
+      'name',
+      'email',
+      'phone',
+      'category',
+      'message',
+      'consent',
+    ]);
   });
 });

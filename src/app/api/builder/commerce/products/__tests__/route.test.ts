@@ -1,7 +1,6 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   createProduct,
   filterProductsByCategory,
@@ -16,12 +15,15 @@ import {
 } from '@/lib/builder/commerce/products-engine';
 import { GET, PATCH, POST } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/commerce/products-engine', () => ({
@@ -82,7 +84,7 @@ const productInput = {
   seo: {},
 };
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const createProductMock = vi.mocked(createProduct);
 const filterProductsByCategoryMock = vi.mocked(filterProductsByCategory);
@@ -110,8 +112,14 @@ function request(method: 'POST' | 'PATCH', query = '', body: string | unknown = 
 describe('builder commerce products API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     createProductMock.mockResolvedValue(product as never);
     filterProductsByCategoryMock.mockImplementation((products) => products as never);
     filterProductsByLocaleMock.mockImplementation((products) => products as never);
@@ -165,7 +173,10 @@ describe('builder commerce products API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, locale: 'en', total: 1, products: [product] });
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
     expect(filterProductsByLocaleMock).toHaveBeenCalledWith([product], 'en');
     expect(filterProductsByStatusMock).toHaveBeenCalledWith([product], 'all');
     expect(filterProductsByCategoryMock).toHaveBeenCalledWith([product], undefined);

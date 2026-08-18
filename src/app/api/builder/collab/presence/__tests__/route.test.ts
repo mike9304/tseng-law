@@ -1,14 +1,14 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   heartbeat,
   listActive,
 } from '@/lib/builder/collab/presence-store';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { GET, POST } from '../route';
 
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardBuilderRead: vi.fn(() => null),
+  guardBuilderReadWithPermission: vi.fn(async () => ({ username: 'editor@example.test' })),
   guardMutation: vi.fn(async () => ({ username: 'editor@example.test' })),
 }));
 
@@ -25,7 +25,7 @@ const entry = {
   nodeId: 'node-1',
 };
 
-const guardBuilderReadMock = vi.mocked(guardBuilderRead);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const heartbeatMock = vi.mocked(heartbeat);
 const listActiveMock = vi.mocked(listActive);
@@ -59,7 +59,10 @@ function postSelectedSiteRequest(
 describe('builder collab presence API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    guardBuilderReadMock.mockReturnValue(null as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'editor@example.test',
+      permission: 'view-cms',
+    });
     guardMutationMock.mockResolvedValue({ username: 'editor@example.test' } as never);
     heartbeatMock.mockReturnValue(entry as never);
     listActiveMock.mockReturnValue([entry] as never);
@@ -75,6 +78,26 @@ describe('builder collab presence API', () => {
       ok: true,
       active: [{ ...entry, lastSeenAt: '2026-06-03T00:00:00.000Z' }],
     });
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-cms',
+    );
+  });
+
+  it('short-circuits missing view-cms permission before listing presence', async () => {
+    guardBuilderReadWithPermissionMock.mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: view-cms' }, { status: 403 }),
+    );
+
+    const request = getRequest('siteId=site-1&pageId=page-1&locale=ko');
+    const response = await GET(request);
+
+    expect(response.status).toBe(403);
+    await expect(response.json()).resolves.toEqual({
+      error: 'Missing permission: view-cms',
+    });
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(request, 'view-cms');
+    expect(listActiveMock).not.toHaveBeenCalled();
   });
 
   it('records presence for the selected builder site when clients send the legacy default site', async () => {

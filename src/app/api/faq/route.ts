@@ -9,6 +9,17 @@ import {
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
+const FAQ_LIST_FAILURE_CODE = 'faq_list_failed';
+const FAQ_LIST_FAILURE_MESSAGE = 'Unable to load frequently asked questions right now. Please try again later.';
+
+function errorKind(error: unknown): string {
+  if (error && typeof error === 'object' && 'constructor' in error) {
+    const constructor = error.constructor;
+    if (typeof constructor === 'function' && constructor.name) return constructor.name;
+  }
+  return 'unknown_error';
+}
+
 const querySchema = z.object({
   locale: columnLocaleSchema.default('ko'),
   category: z.string().trim().max(120).default('all'),
@@ -50,9 +61,14 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     if (error instanceof ZodError) return validationError(error);
-    console.error('[faq] GET failed:', error);
+    console.error('[faq] operation failed', FAQ_LIST_FAILURE_CODE, errorKind(error));
     return NextResponse.json(
-      { ok: false, error: error instanceof Error ? error.message : 'unknown_error' },
+      {
+        ok: false,
+        error: FAQ_LIST_FAILURE_CODE,
+        code: FAQ_LIST_FAILURE_CODE,
+        message: FAQ_LIST_FAILURE_MESSAGE,
+      },
       { status: 500 },
     );
   }

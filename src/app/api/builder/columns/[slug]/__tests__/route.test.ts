@@ -1,7 +1,6 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import {
   deleteDraftColumn,
   deletePublishedColumn,
@@ -15,11 +14,11 @@ vi.mock('next/cache', () => ({
   revalidatePath: vi.fn(),
 }));
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ username: 'admin' })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'edit-blog',
+  })),
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 
@@ -84,7 +83,10 @@ function bundle(overrides: Partial<ColumnDocumentBundle> = {}): ColumnDocumentBu
 describe('/api/builder/columns/[slug]', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.mocked(requireBuilderAdminAuth).mockReturnValue({ username: 'admin' });
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValue({
+      username: 'admin',
+      permission: 'edit-blog',
+    });
     vi.mocked(guardMutation).mockResolvedValue({ username: 'admin' } as never);
     vi.mocked(deleteDraftColumn).mockResolvedValue(undefined);
     vi.mocked(deletePublishedColumn).mockResolvedValue(undefined);
@@ -92,10 +94,25 @@ describe('/api/builder/columns/[slug]', () => {
     writeDraftColumnMock.mockImplementation(async (doc) => doc);
   });
 
+  it('requires edit-blog and short-circuits a 403 before loading a column', async () => {
+    vi.mocked(guardBuilderReadWithPermission).mockResolvedValueOnce(
+      NextResponse.json({ error: 'Missing permission: edit-blog' }, { status: 403 }),
+    );
+    const req = request('/api/builder/columns/sample-column?locale=ko');
+
+    const response = await route.GET(req, {
+      params: Promise.resolve({ slug: 'sample-column' }),
+    });
+
+    expect(response.status).toBe(403);
+    expect(guardBuilderReadWithPermission).toHaveBeenCalledWith(req, 'edit-blog');
+    expect(readColumnBundleMock).not.toHaveBeenCalled();
+  });
+
   it('returns localized stable-code JSON for missing columns', async () => {
     const response = await route.GET(
       request('/api/builder/columns/missing?locale=zh-hant'),
-      { params: { slug: 'missing' } },
+      { params: Promise.resolve({ slug: 'missing' }) },
     );
     const data = await response.json();
 
@@ -114,7 +131,7 @@ describe('/api/builder/columns/[slug]', () => {
         headers: { 'content-type': 'application/json' },
         body: '{',
       }),
-      { params: { slug: 'sample-column' } },
+      { params: Promise.resolve({ slug: 'sample-column' }) },
     );
     const data = await response.json();
 
@@ -141,7 +158,7 @@ describe('/api/builder/columns/[slug]', () => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ title: 'updated' }),
       }),
-      { params: { slug: 'sample-column' } },
+      { params: Promise.resolve({ slug: 'sample-column' }) },
     );
 
     expect(response.status).toBe(200);
@@ -163,7 +180,7 @@ describe('/api/builder/columns/[slug]', () => {
       request('/api/builder/columns/sample-column?locale=ko', {
         method: 'DELETE',
       }),
-      { params: { slug: 'sample-column' } },
+      { params: Promise.resolve({ slug: 'sample-column' }) },
     );
 
     expect(response.status).toBe(200);
@@ -194,7 +211,7 @@ describe('/api/builder/columns/[slug]', () => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ slug: 'existing-column' }),
       }),
-      { params: { slug: 'sample-column' } },
+      { params: Promise.resolve({ slug: 'sample-column' }) },
     );
     const data = await response.json();
 
@@ -225,7 +242,7 @@ describe('/api/builder/columns/[slug]', () => {
       request('/api/builder/columns/legacy-column?locale=zh-hant&includePublished=1', {
         method: 'DELETE',
       }),
-      { params: { slug: 'legacy-column' } },
+      { params: Promise.resolve({ slug: 'legacy-column' }) },
     );
     const data = await response.json();
 
@@ -265,7 +282,7 @@ describe('/api/builder/columns/[slug]', () => {
           frontmatter: { typography: { presetId: 'ko-body-readable', bodySize: 'lg' } },
         }),
       }),
-      { params: { slug: 'sample-column' } },
+      { params: Promise.resolve({ slug: 'sample-column' }) },
     );
     expect(typoRes.status).toBe(200);
     const savedAfterTypo = writeDraftColumnMock.mock.calls.at(-1)?.[0] as ColumnDocument;
@@ -291,7 +308,7 @@ describe('/api/builder/columns/[slug]', () => {
           bodyMarkdown: 'next',
         }),
       }),
-      { params: { slug: 'sample-column' } },
+      { params: Promise.resolve({ slug: 'sample-column' }) },
     );
     expect(bodyRes.status).toBe(200);
     const savedAfterBody = writeDraftColumnMock.mock.calls.at(-1)?.[0] as ColumnDocument;
@@ -323,7 +340,7 @@ describe('/api/builder/columns/[slug]', () => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ frontmatter: { typography: null } }),
       }),
-      { params: { slug: 'sample-column' } },
+      { params: Promise.resolve({ slug: 'sample-column' }) },
     );
     expect(response.status).toBe(200);
     const saved = writeDraftColumnMock.mock.calls.at(-1)?.[0] as ColumnDocument;

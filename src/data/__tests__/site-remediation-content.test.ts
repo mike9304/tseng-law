@@ -4,10 +4,88 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { faqContent } from '@/data/faq-content';
 import { insightsArchive } from '@/data/insights-archive';
-import { siteContent } from '@/data/site-content';
+import { consultationEmail, consultationMailto, siteContent } from '@/data/site-content';
 import { teamContent } from '@/data/team-members';
 
 const root = process.cwd();
+const expectedPingtungAddress = {
+  ko: '90443屏東縣九如鄉九如路三段46號',
+  'zh-hant': '90443屏東縣九如鄉九如路三段46號',
+  en: 'No. 46, Sec. 3, Jiuru Rd., Jiuru Township, Pingtung County 90443',
+  ja: '90443 屏東県九如郷九如路三段46号',
+} as const;
+
+describe('consultation email and four-office content contracts', () => {
+  const expectedHero = {
+    ko: [
+      { label: '이메일 상담 신청', href: consultationMailto.ko },
+      { label: '호정칼럼 보기', href: '/ko/columns' },
+    ],
+    'zh-hant': [
+      { label: '電子郵件諮詢', href: consultationMailto['zh-hant'] },
+      { label: '查看專欄', href: '/zh-hant/columns' },
+    ],
+    en: [
+      { label: 'Email Consultation', href: consultationMailto.en },
+      { label: 'View Columns', href: '/en/columns' },
+    ],
+    ja: [
+      { label: 'メールで相談', href: consultationMailto.ja },
+      { label: 'コラムを見る', href: '/ja/columns' },
+    ],
+  } as const;
+
+  it.each(['ko', 'zh-hant', 'en', 'ja'] as const)(
+    'uses email as the public consultation channel for %s',
+    (locale) => {
+      const content = siteContent[locale];
+      const consultationHref = consultationMailto[locale];
+
+      expect(content.hero.secondaryLinks).toEqual(expectedHero[locale]);
+      expect(content.nav.cta.href).toBe(consultationHref);
+      expect(content.quickContact.cta.href).toBe(consultationHref);
+      expect(content.contact.cta.href).toBe(consultationHref);
+      expect(content.quickContact.actions).toContainEqual(
+        expect.objectContaining({ value: consultationEmail, href: consultationHref }),
+      );
+      expect(content.quickContact.actions.every((action) => action.href === consultationHref)).toBe(
+        true,
+      );
+      expect(content.footer.columns.flatMap((column) => column.links)).toContainEqual(
+        expect.objectContaining({ href: consultationHref }),
+      );
+
+      const consultationSurface = JSON.stringify({
+        navCta: content.nav.cta,
+        hero: content.hero.secondaryLinks,
+        quickContact: content.quickContact,
+        inquiries: content.contact.inquiries,
+        contactCta: content.contact.cta,
+      });
+      expect(consultationSurface).not.toMatch(/010-2992-9304|tel:\+821029929304/);
+    },
+  );
+
+  it.each(['ko', 'zh-hant', 'en', 'ja'] as const)(
+    'lists Pingtung as the fourth Taiwan office for %s',
+    (locale) => {
+      const locations = siteContent[locale].contact.locations;
+
+      expect(locations).toHaveLength(4);
+      expect(locations.at(-1)?.title).toMatch(/핑둥|屏東|Pingtung/);
+      expect(locations.at(-1)?.details[0]).toBe(expectedPingtungAddress[locale]);
+    },
+  );
+
+  it('uses the exact ordered Japanese office addresses', () => {
+    expect(siteContent.ja.contact.locations.map((location) => location.details[0])).toEqual([
+      '103 台北市大同区承徳路一段35号7F-2',
+      '40453 台中市北区館前路19号6F-1',
+      '81358 高雄市左営区安吉街233号',
+      '90443 屏東県九如郷九如路三段46号',
+    ]);
+  });
+});
 
 describe('WO-1 trust, localization, and performance content contracts', () => {
   it('1-1 removes incorrect Taipei 04 numbers and preserves Taichung 04 / Kaohsiung 07', () => {
@@ -65,7 +143,7 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     const globalError = readFileSync(path.join(root, 'src/app/global-error.tsx'), 'utf8');
 
     expect(layout).toContain('<html lang={language}');
-    expect(layout).toContain("headers().get('x-tseng-pathname')");
+    expect(layout).toContain("(await headers()).get('x-tseng-pathname')");
     expect(publicLocaleLayout).not.toContain('LocaleSetter');
     expect(publicLocaleLayout).toContain('<DocumentLocaleSync');
     expect(publicLocaleLayout).toContain('language={language}');
@@ -177,7 +255,7 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
     expect(css).toContain('height: auto !important;');
   });
 
-  it('1b-4 and 1b-5 put Taipei first, split out a standalone Korea office, and enrich the Taipei panel', () => {
+  it('1b-4 and 1b-5 keep all four Taiwan offices in official order and split out a standalone Korea office', () => {
     const officeTabs = readFileSync(path.join(root, 'src/components/OfficeMapTabs.tsx'), 'utf8');
     expect(officeTabs).toContain("const TAIPEI_EMBED_URL = 'https://maps.google.com/maps?q=25.0510767,121.5173077&z=16&output=embed'");
     expect(officeTabs).toContain("const TAIPEI_MAPS_URL = 'https://maps.app.goo.gl/mULpyAnQGz3M1GoQ6'");
@@ -199,10 +277,12 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
 
     for (const locale of ['ko', 'zh-hant', 'en'] as const) {
       const locations = siteContent[locale].contact.locations;
-      expect(locations).toHaveLength(3);
+      expect(locations).toHaveLength(4);
       expect(locations[0].title).toMatch(/타이베이|台北|Taipei/);
       expect(locations[1].title).toMatch(/타이중|台中|Taichung/);
       expect(locations[2].title).toMatch(/가오슝|高雄|Kaohsiung/);
+      expect(locations[3].title).toMatch(/핑둥|屏東|Pingtung/);
+      expect(locations[3].details[0]).toBe(expectedPingtungAddress[locale]);
     }
   });
 
@@ -257,7 +337,7 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
     const widget = readFileSync(path.join(root, 'src/components/QuickContactWidget.tsx'), 'utf8');
     const css = readFileSync(path.join(root, 'src/app/globals.css'), 'utf8');
     expect(widget).toContain("process.env.NEXT_PUBLIC_ENABLE_AI_CHAT === 'true'");
-    expect(widget).toContain('if (!AI_CHAT_ENABLED || !hydrated)');
+    expect(widget).toContain('if ((!AI_CHAT_ENABLED && !previewCollapsed) || !hydrated)');
     expect(css).toContain('width: min(500px, 100vw);');
     expect(css).toContain('max-width: calc(100vw - 1.5rem);');
   });

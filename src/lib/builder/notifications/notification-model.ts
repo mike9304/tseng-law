@@ -7,6 +7,8 @@
  * preserves origin for UI filtering.
  */
 
+import type { BuilderRoleName } from '@/lib/builder/security/user-role-store';
+
 export type BuilderNotificationKind =
   | 'comment'
   | 'approval'
@@ -17,7 +19,17 @@ export type BuilderNotificationKind =
 
 export interface BuilderNotificationAudience {
   email?: string;
-  role?: 'owner' | 'editor' | 'reviewer' | 'viewer';
+  /**
+   * Current builder roles are stored verbatim. The legacy collaboration
+   * roles remain readable for existing inbox documents, but are never
+   * implicitly promoted to a current role.
+   */
+  role?: BuilderRoleName | 'reviewer' | 'viewer';
+}
+
+export interface BuilderNotificationAudienceScope {
+  principal: string;
+  role: BuilderRoleName;
 }
 
 export interface BuilderNotification {
@@ -40,4 +52,11 @@ export interface BuilderNotificationInboxFile {
 
 export function emptyInbox(): BuilderNotificationInboxFile {
   return { version: 1, updatedAt: new Date(0).toISOString(), notifications: [] };
+}
+
+export class NotificationAudienceForbiddenError extends Error {
+  constructor() {
+    super('notification_audience_forbidden');
+    this.name = 'NotificationAudienceForbiddenError';
+  }
 }

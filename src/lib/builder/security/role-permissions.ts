@@ -34,6 +34,8 @@ const NON_OWNER_PERMISSIONS: Record<
     'view-contacts',
     'manage-bookings',
     'view-bookings',
+    'view-commerce',
+    'manage-commerce',
     'manage-users',
     'manage-search',
     'manage-translations',

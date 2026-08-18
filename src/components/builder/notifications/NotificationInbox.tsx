@@ -10,6 +10,7 @@
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { sanitizeNotificationLink } from '@/lib/builder/notifications/notification-link';
 import type { BuilderNotification } from '@/lib/builder/notifications/notification-model';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 
@@ -186,8 +187,9 @@ export default function NotificationInbox({
           // ignore — UI will refresh next poll
         }
       }
-      if (notification.link) {
-        window.location.href = notification.link;
+      const safeLink = sanitizeNotificationLink(notification.link);
+      if (safeLink) {
+        window.location.href = safeLink;
       }
     },
     [effectiveLocale, endpoint],

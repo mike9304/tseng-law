@@ -6,12 +6,14 @@ import { getServiceArea } from '@/data/service-details';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { getColumnPost } from '@/lib/columns';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import ServiceDetailPage, {
   generateMetadata,
   generateStaticParams,
 } from '../page';
 
 const SITE_URL = 'https://tseng-law.com';
+const CONSULTATION_MAILTO_HREF = getConsultationPublicMailto('ja').replace(/&/g, '&amp;');
 const unsupportedJapaneseSlugs = [
   'unknown-service',
   '__proto__',
@@ -101,7 +103,7 @@ describe('Japanese investment service-detail route', () => {
       : approved!.intro;
 
     const metadata = await generateMetadata({
-      params: { locale: 'ja', slug: 'investment' },
+      params: Promise.resolve({ locale: 'ja', slug: 'investment' }),
     });
 
     expect(metadata.title).toBe(approved!.title);
@@ -172,7 +174,7 @@ describe('Japanese investment service-detail route', () => {
     expect(attorney).toBeDefined();
 
     const page = await ServiceDetailPage({
-      params: { locale: 'ja', slug: 'investment' },
+      params: Promise.resolve({ locale: 'ja', slug: 'investment' }),
     });
     const html = renderToStaticMarkup(page);
 
@@ -203,7 +205,9 @@ describe('Japanese investment service-detail route', () => {
 
     expect(html).toContain(attorney!.name);
     expect(html).toContain('href="/ja/lawyers/wei-tseng"');
-    expect(html).toContain('href="/ja/contact"');
+    expect(html).toContain(`href="${CONSULTATION_MAILTO_HREF}"`);
+    expect(html).not.toContain('href="tel:');
+    expect(html).not.toMatch(/kakao|line\.me|lin\.ee/i);
     for (const slug of base!.columnSlugs) {
       const column = getColumnPost(slug, 'ja');
       expect(column, slug).toBeDefined();
@@ -241,10 +245,10 @@ describe('Japanese investment service-detail route', () => {
     'keeps Japanese %s unavailable without a builder source read',
     async (slug) => {
       await expect(generateMetadata({
-        params: { locale: 'ja', slug },
+        params: Promise.resolve({ locale: 'ja', slug }),
       })).resolves.toEqual({});
       await expect(ServiceDetailPage({
-        params: { locale: 'ja', slug },
+        params: Promise.resolve({ locale: 'ja', slug }),
       })).rejects.toThrow('NEXT_NOT_FOUND');
 
       expect(navigationMocks.notFound).toHaveBeenCalledTimes(1);
@@ -255,7 +259,7 @@ describe('Japanese investment service-detail route', () => {
 
   it('redirects normalized Japanese casing to the canonical investment path', async () => {
     await expect(ServiceDetailPage({
-      params: { locale: 'ja', slug: 'INVESTMENT' },
+      params: Promise.resolve({ locale: 'ja', slug: 'INVESTMENT' }),
     })).rejects.toThrow('NEXT_REDIRECT:/ja/services/investment');
 
     expect(navigationMocks.permanentRedirect).toHaveBeenCalledWith(
@@ -268,7 +272,7 @@ describe('Japanese investment service-detail route', () => {
     'preserves %s builder source and template visibility behavior',
     async (locale) => {
       const page = await ServiceDetailPage({
-        params: { locale, slug: 'investment' },
+        params: Promise.resolve({ locale, slug: 'investment' }),
       });
       const html = renderToStaticMarkup(page);
 

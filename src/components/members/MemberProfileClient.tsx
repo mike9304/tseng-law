@@ -1,6 +1,7 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
+import Image from 'next/image';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 import type { Locale } from '@/lib/locales';
 import styles from './MembersArea.module.css';
@@ -74,10 +75,15 @@ export default function MemberProfileClient({ member, locale }: MemberProfileCli
       <div className={styles.memberProfileSummary} data-member-profile-summary="true">
         <div className={styles.memberProfilePhotoWrap}>
           {current.profilePhoto ? (
-            <img
+            <Image
               className={styles.memberProfilePhoto}
               src={current.profilePhoto}
               alt={current.name}
+              width={72}
+              height={72}
+              sizes="72px"
+              loading="eager"
+              unoptimized={!current.profilePhoto.startsWith('/') || current.profilePhoto.startsWith('//')}
               data-member-profile-photo-preview="true"
             />
           ) : (

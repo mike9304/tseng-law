@@ -36,6 +36,7 @@ import {
 } from '@/lib/builder/canvas/seed-home';
 import {
   HERO_MEDIA_IMAGE_NODE_IDS,
+  HERO_MEDIA_IMAGE_SOURCES,
   HERO_SECTION_ROOT_HEIGHT,
 } from '@/lib/builder/canvas/decompose-hero';
 import { upgradeHomeHeroSearchForm } from '@/lib/builder/canvas/home-hero-search-migration';
@@ -997,15 +998,40 @@ function upgradeHomeHeroMediaImages(document: BuilderCanvasDocument, locale: Loc
   if (!document.nodes.some((node) => node.id === 'home-hero-root')) return document;
   if (!document.nodes.some((node) => node.id === 'home-hero-media')) return document;
 
-  const existingIds = new Set(document.nodes.map((node) => node.id));
+  const legacySeedSources = new Set([
+    '/images/hero-bg-01.webp',
+    '/images/hero-taipei-101-blue-hour.webp',
+    '/images/hero-taiwan-modern-city-opening.webp',
+  ]);
+  let changed = false;
+  const upgradedNodes = document.nodes.map((node) => {
+    if (
+      node.kind !== 'image'
+      || node.id !== 'home-hero-media-image'
+      || node.dataBinding !== undefined
+      || !legacySeedSources.has(node.content.src)
+    ) {
+      return node;
+    }
+    changed = true;
+    return {
+      ...node,
+      content: {
+        ...node.content,
+        src: HERO_MEDIA_IMAGE_SOURCES[0],
+      },
+    };
+  });
+
+  const existingIds = new Set(upgradedNodes.map((node) => node.id));
   const seeded = createHomePageCanvasDocument(locale);
   const seededImages = seeded.nodes.filter((node) => HERO_MEDIA_IMAGE_NODE_IDS.includes(node.id));
   const missingImages = seededImages.filter((node) => !existingIds.has(node.id));
-  if (missingImages.length === 0) return document;
+  if (missingImages.length === 0 && !changed) return document;
 
   const nextNodes: BuilderCanvasNode[] = [];
   let inserted = false;
-  for (const node of document.nodes) {
+  for (const node of upgradedNodes) {
     nextNodes.push(node);
     if (!inserted && node.id === 'home-hero-media-image') {
       nextNodes.push(...missingImages);
@@ -1387,13 +1413,14 @@ function upgradeHomeFaqSection(document: BuilderCanvasDocument, locale: Locale):
  * The SandboxPage component IS the freeform canvas editor — it's
  * not a "sandbox" anymore, it's the main builder.
  */
-export default async function BuilderMainPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: string };
-  searchParams?: { pageId?: string; reseed?: string; siteId?: string };
-}) {
+export default async function BuilderMainPage(
+  props: {
+    params: Promise<{ locale: string }>;
+    searchParams?: Promise<{ pageId?: string; reseed?: string; siteId?: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const siteId = resolveBuilderSiteIdFromValue(searchParams?.siteId);
   const force = searchParams?.reseed === '1';

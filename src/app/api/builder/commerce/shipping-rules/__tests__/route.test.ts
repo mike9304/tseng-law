@@ -1,16 +1,18 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { loadShippingRules, saveShippingRules } from '@/lib/builder/commerce/shipping-engine';
 import { GET, PATCH } from '../route';
 
-vi.mock('@/lib/builder/columns/auth', () => ({
-  requireBuilderAdminAuth: vi.fn(() => ({ user: { id: 'admin-1' } })),
-}));
-
 vi.mock('@/lib/builder/security/guard', () => ({
-  guardMutation: vi.fn(async () => ({ user: { id: 'admin-1' } })),
+  guardBuilderReadWithPermission: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'view-commerce',
+  })),
+  guardMutation: vi.fn(async () => ({
+    username: 'admin',
+    permission: 'manage-commerce',
+  })),
 }));
 
 vi.mock('@/lib/builder/commerce/shipping-engine', () => ({
@@ -31,7 +33,7 @@ const shippingRule = {
   estimatedDays: '3-5',
 };
 
-const requireBuilderAdminAuthMock = vi.mocked(requireBuilderAdminAuth);
+const guardBuilderReadWithPermissionMock = vi.mocked(guardBuilderReadWithPermission);
 const guardMutationMock = vi.mocked(guardMutation);
 const loadShippingRulesMock = vi.mocked(loadShippingRules);
 const saveShippingRulesMock = vi.mocked(saveShippingRules);
@@ -51,8 +53,14 @@ function patchRequest(query = '', body: string | unknown = { rules: [shippingRul
 describe('builder commerce shipping rules API', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    requireBuilderAdminAuthMock.mockReturnValue({ user: { id: 'admin-1' } } as never);
-    guardMutationMock.mockResolvedValue({ user: { id: 'admin-1' } } as never);
+    guardBuilderReadWithPermissionMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'view-commerce',
+    } as never);
+    guardMutationMock.mockResolvedValue({
+      username: 'admin',
+      permission: 'manage-commerce',
+    } as never);
     loadShippingRulesMock.mockResolvedValue([shippingRule] as never);
     saveShippingRulesMock.mockImplementation(async (rules) => rules as never);
   });
@@ -85,7 +93,10 @@ describe('builder commerce shipping rules API', () => {
       errorCode: 'shipping_rules_failed',
     });
     expect(payload.error).not.toContain('shipping storage secret leaked');
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
     expect(consoleError).toHaveBeenCalledWith(
       '[builder/commerce/shipping-rules] GET failed:',
       expect.any(Error),
@@ -101,7 +112,10 @@ describe('builder commerce shipping rules API', () => {
 
     expect(response.status).toBe(200);
     expect(payload).toEqual({ ok: true, locale: 'en', currency: 'TWD', rules: [shippingRule] });
-    expect(requireBuilderAdminAuthMock).toHaveBeenCalled();
+    expect(guardBuilderReadWithPermissionMock).toHaveBeenCalledWith(
+      expect.any(NextRequest),
+      'view-commerce',
+    );
   });
 
   it('returns localized invalid-json save errors', async () => {

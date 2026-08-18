@@ -16,11 +16,12 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default async function LightboxEditPage({
-  params,
-}: {
-  params: { locale: string; id: string };
-}) {
+export default async function LightboxEditPage(
+  props: {
+    params: Promise<{ locale: string; id: string }>;
+  }
+) {
+  const params = await props.params;
   const locale: Locale = normalizeLocale(params.locale);
   const all = await listLightboxes('default', locale);
   const lightbox = all.find((lb) => lb.id === params.id);

@@ -76,6 +76,15 @@ function manifest(entries: readonly ProductionStubEntry[]) {
   return parseProductionStubManifest({ version: 1, entries });
 }
 
+function childCliEnv(): NodeJS.ProcessEnv {
+  const env = { ...process.env };
+  // Contradictory color flags make Node 24 print a process warning on stderr.
+  // CLI stdout/stderr assertions must measure the tool, not the harness.
+  delete env.NO_COLOR;
+  delete env.FORCE_COLOR;
+  return env;
+}
+
 function runScannerCli(
   root: string,
   registry: ReturnType<typeof manifest>,
@@ -90,7 +99,7 @@ function runScannerCli(
     '--manifest', manifestPath,
     '--output-dir', outputDir,
     '--dry-run',
-  ], { cwd: process.cwd(), encoding: 'utf8' });
+  ], { cwd: process.cwd(), encoding: 'utf8', env: childCliEnv() });
   if (result.error) throw result.error;
   const markdownStart = result.stdout.indexOf('\n# Production stub registry\n');
   if (markdownStart < 0) throw new Error(`registry CLI returned an unreadable report: ${result.stderr}`);
@@ -112,7 +121,7 @@ function runScannerCheckCli(
     '--repository-root', root,
     '--manifest', manifestPath,
     '--check',
-  ], { cwd: process.cwd(), encoding: 'utf8' });
+  ], { cwd: process.cwd(), encoding: 'utf8', env: childCliEnv() });
   if (result.error) throw result.error;
   return { status: result.status, stdout: result.stdout, stderr: result.stderr };
 }
@@ -1588,7 +1597,7 @@ describe('production stub registry', () => {
       '--repository-root', process.cwd(),
       '--manifest', manifestPath,
       '--dry-run',
-    ], { cwd: process.cwd(), encoding: 'utf8' });
+    ], { cwd: process.cwd(), encoding: 'utf8', env: childCliEnv() });
     if (result.error) throw result.error;
     const markdownStart = result.stdout.indexOf('\n# Production stub registry\n');
     if (markdownStart < 0) throw new Error(`registry CLI returned an unreadable report: ${result.stderr}`);

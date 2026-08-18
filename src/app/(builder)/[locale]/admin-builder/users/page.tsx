@@ -14,7 +14,8 @@ import { getUsersAdminCopy } from '@/components/builder/users/users-copy';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const copy = getUsersAdminCopy(locale);
   return buildSeoMetadata({
@@ -36,11 +37,12 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
  * client UI hides the destructive controls when the resolved role is
  * not 'owner' (passed via initial server prop).
  */
-export default async function BuilderUsersAdminPage({
-  params,
-}: {
-  params: { locale: Locale };
-}) {
+export default async function BuilderUsersAdminPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
 
   const users = await listUserRoles();

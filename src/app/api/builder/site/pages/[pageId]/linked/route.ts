@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { locales, normalizeLocale, type Locale } from '@/lib/locales';
-import { guardBuilderRead } from '@/lib/builder/security/guard';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
 import { resolveBuilderSiteIdFromRequest } from '@/lib/builder/site/admin-routing';
 import {
@@ -29,11 +29,9 @@ function errorResponse(
   );
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { pageId: string } },
-) {
-  const auth = guardBuilderRead(request);
+export async function GET(request: NextRequest, props: { params: Promise<{ pageId: string }> }) {
+  const params = await props.params;
+  const auth = await guardBuilderReadWithPermission(request, 'edit-pages');
   if (auth instanceof NextResponse) return auth;
 
   try {

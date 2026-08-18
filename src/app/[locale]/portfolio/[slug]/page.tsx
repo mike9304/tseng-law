@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
@@ -11,7 +12,8 @@ import styles from '../PortfolioPublic.module.css';
 
 export const dynamic = 'force-dynamic';
 
-export async function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale; slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const project = await findProjectBySlug(locale, params.slug);
   if (!project || project.status !== 'published') return {};
@@ -27,7 +29,8 @@ export async function generateMetadata({ params }: { params: { locale: Locale; s
   });
 }
 
-export default async function PortfolioDetailPage({ params }: { params: { locale: Locale; slug: string } }) {
+export default async function PortfolioDetailPage(props: { params: Promise<{ locale: Locale; slug: string }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const project = await findProjectBySlug(locale, params.slug);
   if (!project || project.status !== 'published') return notFound();
@@ -60,7 +63,14 @@ export default async function PortfolioDetailPage({ params }: { params: { locale
             <div className={styles.gallery} aria-label={galleryLabel}>
               {project.gallery.map((image) => (
                 <figure key={image.imageId} data-public-portfolio-gallery-image={image.imageId}>
-                  <img src={image.url} alt={image.alt} />
+                  <Image
+                    src={image.url}
+                    alt={image.alt}
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 640px) calc(100vw - 76px), (max-width: 900px) calc(50vw - 56px), 336px"
+                    unoptimized={!image.url.startsWith('/') || image.url.startsWith('//')}
+                  />
                   {image.caption ? <figcaption>{image.caption}</figcaption> : null}
                 </figure>
               ))}

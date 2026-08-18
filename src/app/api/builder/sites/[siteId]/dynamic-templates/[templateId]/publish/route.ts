@@ -17,9 +17,10 @@ const publishBodySchema = z.object({
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { siteId: string; templateId: string } }
+  props: { params: Promise<{ siteId: string; templateId: string }> }
 ) {
-  const auth = await guardMutation(request, { bucket: 'publish' });
+  const params = await props.params;
+  const auth = await guardMutation(request, { bucket: 'publish', permission: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
   if (!isDefaultBuilderSiteId(params.siteId)) {

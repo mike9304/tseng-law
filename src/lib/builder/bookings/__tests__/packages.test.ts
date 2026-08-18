@@ -10,6 +10,7 @@ import {
 const fixtures = vi.hoisted(() => ({
   packages: [] as BookingPackage[],
   credits: [] as BookingPackageCredit[],
+  creditMutationTail: Promise.resolve(),
 }));
 
 vi.mock('@/lib/builder/bookings/storage', () => ({
@@ -22,11 +23,21 @@ vi.mock('@/lib/builder/bookings/storage', () => ({
       .filter((credit) => !options.customerEmail || credit.customerEmail === options.customerEmail)
       .filter((credit) => !options.status || credit.status === options.status),
   ),
-  getPackageCredit: vi.fn(async (creditId: string) =>
-    fixtures.credits.find((credit) => credit.creditId === creditId) ?? null,
-  ),
-  savePackageCredit: vi.fn(async (credit: BookingPackageCredit) => {
-    fixtures.credits = fixtures.credits.map((item) => item.creditId === credit.creditId ? credit : item);
+  mutatePackageCredit: vi.fn(async (creditId: string, reducer) => {
+    const previous = fixtures.creditMutationTail;
+    let release!: () => void;
+    fixtures.creditMutationTail = new Promise<void>((resolve) => { release = resolve; });
+    await previous;
+    try {
+      const current = fixtures.credits.find((item) => item.creditId === creditId);
+      if (!current) return null;
+      const mutation = await reducer(current);
+      if (!mutation) return null;
+      fixtures.credits = fixtures.credits.map((item) => item.creditId === creditId ? mutation.next : item);
+      return mutation.result;
+    } finally {
+      release();
+    }
   }),
   timestamped: vi.fn((value, createdAt) => ({
     ...value,
@@ -89,6 +100,7 @@ describe('booking package credits', () => {
   beforeEach(() => {
     fixtures.packages = [pkg()];
     fixtures.credits = [credit()];
+    fixtures.creditMutationTail = Promise.resolve();
   });
 
   it('finds active customer credits for eligible services', async () => {
@@ -156,6 +168,27 @@ describe('booking package credits', () => {
 
     expect(restored.packageCreditRestoredAt).toBeTruthy();
     expect(restoredAgain.packageCreditRestoredAt).toBe(restored.packageCreditRestoredAt);
+    expect(fixtures.credits[0]).toMatchObject({ remainingCredits: 1, status: 'active' });
+    expect(fixtures.credits[0].redemptions?.[0].restoredAt).toBeTruthy();
+  });
+
+  it('returns a package credit only once under concurrent restoration', async () => {
+    fixtures.credits = [credit({
+      remainingCredits: 0,
+      status: 'used',
+      redemptions: [{ bookingId: 'bk-test', serviceId: 'svc-paid', credits: 1, usedAt: '2026-01-10T00:00:00.000Z' }],
+    })];
+    const cancelled = booking({
+      packageId: 'pkg-test',
+      packageCreditId: 'pc-test',
+      packageCreditsUsed: 1,
+    });
+
+    await Promise.all([
+      restorePackageCreditForBooking(cancelled),
+      restorePackageCreditForBooking(cancelled),
+    ]);
+
     expect(fixtures.credits[0]).toMatchObject({ remainingCredits: 1, status: 'active' });
     expect(fixtures.credits[0].redemptions?.[0].restoredAt).toBeTruthy();
   });

@@ -4,7 +4,8 @@ import BookingManageClient from '@/components/builder/bookings/BookingManageClie
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const title = locale === 'ko'
     ? '예약 관리'
@@ -17,11 +18,12 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   };
 }
 
-export default function BookingManagePage({
-  params,
-}: {
-  params: { locale: string; token: string };
-}) {
+export default async function BookingManagePage(
+  props: {
+    params: Promise<{ locale: string; token: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return <BookingManageClient token={params.token} locale={locale} />;
 }

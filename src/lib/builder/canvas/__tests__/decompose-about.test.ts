@@ -82,11 +82,11 @@ describe('standard about page decomposer', () => {
     const doc = STANDARD_PAGE_DECOMPOSERS.about('zh-hant');
     const nodes = nodesById(doc);
 
-    expect(doc.stageHeight).toBe(5166);
+    expect(doc.stageHeight).toBe(5315);
     expect(expectNode(nodes, 'page-about-page-header-root').rect).toMatchObject({ y: 0, width: 1280, height: 428 });
     expect(expectNode(nodes, 'page-about-firm-intro-root').rect).toMatchObject({ y: 428, width: 1280, height: 1027 });
     expect(expectNode(nodes, 'page-about-attorney-root').rect).toMatchObject({ y: 1455, width: 1280, height: 2605 });
-    expect(expectNode(nodes, 'page-about-contact-root').rect).toMatchObject({ y: 4060, width: 1280, height: 1106 });
+    expect(expectNode(nodes, 'page-about-contact-root').rect).toMatchObject({ y: 4060, width: 1280, height: 1255 });
 
     const contentBottom = expectNode(nodes, 'page-about-contact-root').rect.y
       + expectNode(nodes, 'page-about-contact-root').rect.height;

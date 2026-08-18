@@ -80,7 +80,7 @@ describe('/api/builder/services/[slug]', () => {
           subtitle: { en: 'Updated civil services' },
         }),
       }),
-      { params: { slug: 'civil' } },
+      { params: Promise.resolve({ slug: 'civil' }) },
     );
     const data = await response.json() as {
       ok?: boolean;
@@ -120,7 +120,7 @@ describe('/api/builder/services/[slug]', () => {
   it('returns localized not-found errors', async () => {
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/services/unknown?locale=zh-hant'),
-      { params: { slug: 'unknown' } },
+      { params: Promise.resolve({ slug: 'unknown' }) },
     );
     const data = await response.json();
 
@@ -139,7 +139,7 @@ describe('/api/builder/services/[slug]', () => {
         headers: { 'content-type': 'application/json' },
         body: '{',
       }),
-      { params: { slug: 'civil' } },
+      { params: Promise.resolve({ slug: 'civil' }) },
     );
     const data = await response.json();
 
@@ -159,7 +159,7 @@ describe('/api/builder/services/[slug]', () => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ slug: '' }),
       }),
-      { params: { slug: 'civil' } },
+      { params: Promise.resolve({ slug: 'civil' }) },
     );
     const data = await response.json();
 
@@ -179,7 +179,7 @@ describe('/api/builder/services/[slug]', () => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ slug: 'investment' }),
       }),
-      { params: { slug: 'civil' } },
+      { params: Promise.resolve({ slug: 'civil' }) },
     );
     const data = await response.json();
 
@@ -201,7 +201,7 @@ describe('/api/builder/services/[slug]', () => {
           slug: 'civil litigation',
         }),
       }),
-      { params: { slug: 'civil' } },
+      { params: Promise.resolve({ slug: 'civil' }) },
     );
     expect(seededResponse.status).toBe(200);
 
@@ -209,7 +209,7 @@ describe('/api/builder/services/[slug]', () => {
       new NextRequest('https://law.example.test/api/builder/services/civil-litigation?locale=ko', {
         method: 'DELETE',
       }),
-      { params: { slug: 'civil-litigation' } },
+      { params: Promise.resolve({ slug: 'civil-litigation' }) },
     );
     const resetData = await resetResponse.json() as {
       ok?: boolean;
@@ -254,7 +254,7 @@ describe('/api/builder/services/[slug]', () => {
       new NextRequest('https://law.example.test/api/builder/services/civil?locale=en', {
         method: 'DELETE',
       }),
-      { params: { slug: 'civil' } },
+      { params: Promise.resolve({ slug: 'civil' }) },
     );
     const data = await response.json();
 

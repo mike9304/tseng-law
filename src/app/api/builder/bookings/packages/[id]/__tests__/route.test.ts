@@ -62,7 +62,7 @@ describe('/api/builder/bookings/packages/[id]', () => {
   it('returns localized not-found errors for missing packages on PATCH', async () => {
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ credits: 4 }, 'en'), {
-      params: { id: 'pkg-route-test' },
+      params: Promise.resolve({ id: 'pkg-route-test' }),
     });
     const payload = await response.json();
 
@@ -78,7 +78,7 @@ describe('/api/builder/bookings/packages/[id]', () => {
     vi.mocked(getPackage).mockResolvedValueOnce(bookingPackage());
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ credits: 0 }, 'zh-hant'), {
-      params: { id: 'pkg-route-test' },
+      params: Promise.resolve({ id: 'pkg-route-test' }),
     });
     const payload = await response.json();
 
@@ -94,7 +94,7 @@ describe('/api/builder/bookings/packages/[id]', () => {
     vi.mocked(getPackage).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.PATCH(patchRequest({ credits: 4 }, 'ko'), {
-      params: { id: 'pkg-route-test' },
+      params: Promise.resolve({ id: 'pkg-route-test' }),
     });
     const payload = await response.json();
 
@@ -112,7 +112,7 @@ describe('/api/builder/bookings/packages/[id]', () => {
   it('returns localized not-found errors for missing packages on DELETE', async () => {
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('ko'), {
-      params: { id: 'pkg-route-test' },
+      params: Promise.resolve({ id: 'pkg-route-test' }),
     });
     const payload = await response.json();
 
@@ -129,7 +129,7 @@ describe('/api/builder/bookings/packages/[id]', () => {
     vi.mocked(getPackage).mockResolvedValueOnce(existing);
     const route = await import('../route');
     const response = await route.DELETE(deleteRequest('en'), {
-      params: { id: 'pkg-route-test' },
+      params: Promise.resolve({ id: 'pkg-route-test' }),
     });
     const payload = await response.json();
 

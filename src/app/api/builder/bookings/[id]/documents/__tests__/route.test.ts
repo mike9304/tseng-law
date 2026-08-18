@@ -150,7 +150,7 @@ describe('/api/builder/bookings/[id]/documents', () => {
   it('returns localized validation errors for invalid document payloads', async () => {
     const route = await import('../route');
     const response = await route.POST(postRequest({ type: 'statement' }, 'zh-hant'), {
-      params: { id: 'bk-document-route-test' },
+      params: Promise.resolve({ id: 'bk-document-route-test' }),
     });
     const payload = await response.json();
 
@@ -167,7 +167,7 @@ describe('/api/builder/bookings/[id]/documents', () => {
     );
     const route = await import('../route');
     const response = await route.POST(postRequest({ type: 'receipt' }, 'ko'), {
-      params: { id: 'bk-document-route-test' },
+      params: Promise.resolve({ id: 'bk-document-route-test' }),
     });
     const payload = await response.json();
 
@@ -184,7 +184,7 @@ describe('/api/builder/bookings/[id]/documents', () => {
     );
     const route = await import('../route');
     const response = await route.POST(postRequest({ type: 'invoice' }, 'en'), {
-      params: { id: 'bk-document-route-test' },
+      params: Promise.resolve({ id: 'bk-document-route-test' }),
     });
     const payload = await response.json();
 
@@ -207,7 +207,7 @@ describe('/api/builder/bookings/[id]/documents', () => {
     });
     const route = await import('../route');
     const response = await route.POST(postRequest({ type: 'invoice', notes: 'Office copy' }, 'ko'), {
-      params: { id: 'bk-document-route-test' },
+      params: Promise.resolve({ id: 'bk-document-route-test' }),
     });
     const payload = await response.json();
 
@@ -245,7 +245,7 @@ describe('/api/builder/bookings/[id]/documents', () => {
     });
     const route = await import('../route');
     const response = await route.POST(postRequest({ type: 'receipt', email: true }, 'en'), {
-      params: { id: 'bk-document-route-test' },
+      params: Promise.resolve({ id: 'bk-document-route-test' }),
     });
     const payload = await response.json();
 
@@ -281,7 +281,7 @@ describe('/api/builder/bookings/[id]/documents', () => {
 
       const route = await import('../route');
       const response = await route.POST(postRequest({ type: 'invoice', email: true }, 'en'), {
-        params: { id: 'bk-document-route-test' },
+        params: Promise.resolve({ id: 'bk-document-route-test' }),
       });
 
       expect(response.status).toBe(expectedStatus);
@@ -312,7 +312,7 @@ describe('/api/builder/bookings/[id]/documents', () => {
 
     const route = await import('../route');
     const response = await route.POST(postRequest({ type: 'invoice', email: true }, 'en'), {
-      params: { id: 'bk-document-route-test' },
+      params: Promise.resolve({ id: 'bk-document-route-test' }),
     });
 
     expect(response.status).toBe(500);

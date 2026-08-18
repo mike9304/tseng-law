@@ -52,8 +52,8 @@ describe('builder column storage backend', () => {
           bodyHtml: '<p>로컬 런타임 본문</p>',
           linkedSlugs: {},
           frontmatter: {
-            lastmod: '2030-01-01T00:00:00.000Z',
-            dateDisplay: '2030년 1월 1일',
+            lastmod: '2040-06-01T00:00:00.000Z',
+            dateDisplay: '2040년 6월 1일',
             readTime: '7분 분량',
             attorneyReviewStatus: 'reviewed',
             freshness: 'fresh',
@@ -66,7 +66,7 @@ describe('builder column storage backend', () => {
           },
           draft: false,
           revision: 1,
-          updatedAt: '2030-01-01T00:00:00.000Z',
+          updatedAt: '2040-06-01T00:00:00.000Z',
           updatedBy: 'columns-backend-test',
         }),
         'utf8',
@@ -87,6 +87,8 @@ describe('builder column storage backend', () => {
         category: 'case',
         categoryLabel: '소송사례',
         featuredImage: '/images/placeholder-article-hero.jpg',
+        publicationDate: '2030-01-01',
+        date: '2040-06-01T00:00:00.000Z',
         dateDisplay: '2030년 1월 1일',
         readTime: '7분 분량',
       });
@@ -109,21 +111,70 @@ describe('builder column storage backend', () => {
       const posts = await getAllColumnPostsIncludingBlob('ko');
       const post = posts.find((item) => item.slug === 'taiwan-logistics-business-setup');
 
+      expect(posts[0]?.slug).toBe(
+        'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
+      );
       expect(post?.dateDisplay).toBe('2025년 9월 13일');
+      expect(post?.publicationDate).toBe('2025-09-13');
       expect(post?.readTime).toBe('9분 분량');
     } finally {
       await rm(root, { recursive: true, force: true });
     }
   });
 
+  it.each(['ko', 'zh-hant', 'en'] as const)(
+    'sorts the public %s runtime archive by publication date with stable source ties',
+    async (locale) => {
+      const root = await mkdtemp(path.join(tmpdir(), 'tseng-columns-'));
+
+      try {
+        vi.stubEnv('CONSULTATION_COLUMNS_DIR', root);
+        vi.stubEnv('BUILDER_COLUMNS_BACKEND', 'local');
+        vi.stubEnv('BLOB_READ_WRITE_TOKEN', '');
+        vi.stubEnv('BUILDER_USE_BLOB_IN_DEV', '');
+        vi.stubEnv('CONSULTATION_LOG_BACKEND', '');
+        vi.stubEnv('NODE_ENV', 'development');
+
+        const posts = await getAllColumnPostsIncludingBlob(locale);
+
+        expect(posts).toHaveLength(17);
+        expect(posts[0]?.slug).toBe(
+          'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
+        );
+        expect(posts[0]?.publicationDate).toBe('2026-02-04');
+        expect(posts[1]?.slug).toBe('taiwan-company-establishment-basics');
+        expect(posts.at(-1)?.slug).toBe('taiwan-logistics-business-setup');
+        expect(posts.slice(1).every((post) => post.publicationDate === '2025-09-13')).toBe(true);
+      } finally {
+        await rm(root, { recursive: true, force: true });
+      }
+    },
+  );
+
   it.each([
-    { locale: 'ko' as const, body: '단어 '.repeat(181), expected: '2분 분량' },
-    { locale: 'zh-hant' as const, body: '字'.repeat(401), expected: '2分鐘閱讀' },
-    { locale: 'en' as const, body: 'word '.repeat(201), expected: '2 min read' },
+    {
+      locale: 'ko' as const,
+      body: '단어 '.repeat(181),
+      expected: '2분 분량',
+      expectedDate: '2030년 2월 3일',
+    },
+    {
+      locale: 'zh-hant' as const,
+      body: '字'.repeat(401),
+      expected: '2分鐘閱讀',
+      expectedDate: '2030年2月3日',
+    },
+    {
+      locale: 'en' as const,
+      body: 'word '.repeat(201),
+      expected: '2 min read',
+      expectedDate: 'February 3, 2030',
+    },
   ])('uses a localized fallback for a $locale runtime document without metadata', async ({
     locale,
     body,
     expected,
+    expectedDate,
   }) => {
     const root = await mkdtemp(path.join(tmpdir(), 'tseng-columns-'));
 
@@ -167,7 +218,8 @@ describe('builder column storage backend', () => {
       const posts = await getAllColumnPostsIncludingBlob(locale);
       const post = posts.find((item) => item.slug === slug);
 
-      expect(post?.dateDisplay).toBe('2030-02-03');
+      expect(post?.dateDisplay).toBe(expectedDate);
+      expect(post?.publicationDate).toBe('2030-02-03');
       expect(post?.readTime).toBe(expected);
       expect(post?.readTime).not.toMatch(/^\d+ min$/);
     } finally {

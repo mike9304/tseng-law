@@ -51,7 +51,7 @@ function resolveRequestLocale(request: NextRequest, payload?: unknown): Locale {
 
 export async function POST(request: NextRequest) {
   let errorLocale = resolveRequestLocale(request);
-  const auth = await guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation', permission: 'manage-commerce' });
   if (auth instanceof NextResponse) return auth;
 
   try {

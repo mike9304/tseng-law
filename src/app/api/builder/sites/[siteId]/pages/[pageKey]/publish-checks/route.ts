@@ -71,8 +71,9 @@ function buildTransientSnapshot(
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { siteId: string; pageKey: string } }
+  props: { params: Promise<{ siteId: string; pageKey: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { bucket: 'publish' });
   if (auth instanceof NextResponse) return auth;
 

@@ -11,8 +11,9 @@ export const runtime = 'nodejs';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { siteId: string; routeId: string } }
+  props: { params: Promise<{ siteId: string; routeId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

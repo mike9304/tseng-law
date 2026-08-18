@@ -50,8 +50,9 @@ function currentRevisionPayload(snapshot: BuilderSnapshotConflictError['conflict
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { siteId: string; pageKey: string } }
+  props: { params: Promise<{ siteId: string; pageKey: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

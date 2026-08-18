@@ -55,6 +55,8 @@ const FOCUSABLE_SELECTOR = [
   '[tabindex]:not([tabindex="-1"])',
 ].join(',');
 
+const useIsomorphicLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
+
 function normalizeCustomValue(value: string): string {
   const trimmed = value.trim();
   const hex = normalizeHexColor(trimmed);
@@ -193,7 +195,7 @@ export default function ColorPickerAdvanced({
     return () => window.removeEventListener('click', handleWindowClick, true);
   }, [open]);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (!open) return undefined;
     closingRef.current = false;
     const panel = panelRef.current;

@@ -13,8 +13,9 @@ import { CMS_ACTOR_HEADER, resolveBuilderCmsRouteActor } from '@/lib/builder/cms
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { siteId: string; collectionId: string } },
+  props: { params: Promise<{ siteId: string; collectionId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
@@ -64,8 +65,9 @@ export async function GET(
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { siteId: string; collectionId: string } },
+  props: { params: Promise<{ siteId: string; collectionId: string }> }
 ) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 

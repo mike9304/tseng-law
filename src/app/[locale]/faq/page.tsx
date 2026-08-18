@@ -40,7 +40,8 @@ function buildPublishedPath(locale: Locale): string {
   return `/${locale}/${FAQ_SLUG}`;
 }
 
-export async function generateMetadata({ params }: { params: { locale: SiteLocale } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   if (locale === 'ja') {
     const copy = pageCopy.ja.faq;
@@ -66,13 +67,14 @@ export async function generateMetadata({ params }: { params: { locale: SiteLocal
   });
 }
 
-export default async function FaqPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: SiteLocale };
-  searchParams?: FaqSearchParams;
-}) {
+export default async function FaqPage(
+  props: {
+    params: Promise<{ locale: SiteLocale }>;
+    searchParams?: Promise<FaqSearchParams>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   if (locale === 'ja') {
     const copy = pageCopy.ja.faq;

@@ -15,7 +15,7 @@ import {
   useState,
 } from 'react';
 import Link from 'next/link';
-import type { ColumnPost } from '@/lib/columns';
+import type { ColumnPost } from '@/lib/column-post';
 import type { FAQItem } from '@/data/faq-content';
 import { siteContent } from '@/data/site-content';
 import type { Locale } from '@/lib/locales';

@@ -109,11 +109,12 @@ function relatedProductsFor(product: CommerceProduct, products: CommerceProduct[
     .slice(0, 4);
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale; slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: Locale; slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const slug = decodeSlug(params.slug);
   const product = await findProductBySlug(locale, slug);
@@ -140,11 +141,12 @@ export async function generateMetadata({
   });
 }
 
-export default async function StoreProductPage({
-  params,
-}: {
-  params: { locale: Locale; slug: string };
-}) {
+export default async function StoreProductPage(
+  props: {
+    params: Promise<{ locale: Locale; slug: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const slug = decodeSlug(params.slug);
   const product = await findProductBySlug(locale, slug);

@@ -82,7 +82,7 @@ describe('/api/builder/site/pages/[pageId]/seo-assistant', () => {
   it('returns locale-specific focus keyword on GET', async () => {
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/site/pages/page-1/seo-assistant?locale=en'),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -97,7 +97,7 @@ describe('/api/builder/site/pages/[pageId]/seo-assistant', () => {
           referer: 'https://law.example.test/ko/admin-builder?siteId=workspace-page-seo',
         },
       }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
 
     expect(response.status).toBe(200);
@@ -112,7 +112,7 @@ describe('/api/builder/site/pages/[pageId]/seo-assistant', () => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ focusKeyword: 'cross-border law' }),
       }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -135,7 +135,7 @@ describe('/api/builder/site/pages/[pageId]/seo-assistant', () => {
         },
         body: JSON.stringify({ focusKeyword: 'workspace keyword' }),
       }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -149,7 +149,7 @@ describe('/api/builder/site/pages/[pageId]/seo-assistant', () => {
   it('returns zh-hant missing page errors on GET without Hangul', async () => {
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/site/pages/missing-page/seo-assistant?locale=zh-hant'),
-      { params: { pageId: 'missing-page' } },
+      { params: Promise.resolve({ pageId: 'missing-page' }) },
     );
     const data = await response.json();
 
@@ -167,7 +167,7 @@ describe('/api/builder/site/pages/[pageId]/seo-assistant', () => {
         headers: { 'content-type': 'application/json' },
         body: '{',
       }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -184,7 +184,7 @@ describe('/api/builder/site/pages/[pageId]/seo-assistant', () => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ focusKeyword: 'x'.repeat(81) }),
       }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -203,7 +203,7 @@ describe('/api/builder/site/pages/[pageId]/seo-assistant', () => {
 
     const response = await route.GET(
       new NextRequest('https://law.example.test/api/builder/site/pages/page-1/seo-assistant?locale=ko'),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 
@@ -222,7 +222,7 @@ describe('/api/builder/site/pages/[pageId]/seo-assistant', () => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ focusKeyword: 'cross-border law' }),
       }),
-      { params: { pageId: 'page-1' } },
+      { params: Promise.resolve({ pageId: 'page-1' }) },
     );
     const data = await response.json();
 

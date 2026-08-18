@@ -13,6 +13,10 @@ import {
   isBuilderDynamicTemplateBlockVisible,
   readBuilderDynamicTemplatePublishedBlockVisibility,
 } from '@/lib/builder/dynamic-template-drafts';
+import {
+  CONSULTATION_EMAIL,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 import { resolveTypography } from '@/lib/builder/columns/typography';
 import type { ColumnTypography } from '@/lib/builder/columns/types';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
@@ -66,7 +70,8 @@ const copy: Record<SiteLocale, {
   },
 };
 
-export async function generateMetadata({ params }: { params: { locale: SiteLocale; slug: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale; slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
 
   // Try file-based first (fast, sync), then fall back to blob-aware reader.
@@ -104,7 +109,8 @@ export async function generateMetadata({ params }: { params: { locale: SiteLocal
   });
 }
 
-export default async function ColumnDetailPage({ params }: { params: { locale: SiteLocale; slug: string } }) {
+export default async function ColumnDetailPage(props: { params: Promise<{ locale: SiteLocale; slug: string }> }) {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
 
   // Get all posts including Blob — single source of truth for content + prev/next
@@ -207,7 +213,7 @@ export default async function ColumnDetailPage({ params }: { params: { locale: S
               description: post.summary,
               path: `/${locale}/columns/${post.slug}`,
               image: post.featuredImage,
-              datePublished: post.date,
+              datePublished: post.publicationDate || post.date,
               dateModified: post.date,
               authorName,
               authorUrl: authorProfilePath,
@@ -254,7 +260,7 @@ export default async function ColumnDetailPage({ params }: { params: { locale: S
               data-column-typography={typography.presetId}
               style={typography.cssVars as CSSProperties}
             >
-              <ColumnContent content={post.content} />
+              <ColumnContent content={post.content} locale={locale} />
               {showBody && showFaq ? (
                 <section className="column-faq" aria-label={t.faqHeading}>
                   <h2 className="blog-heading column-faq-heading">{t.faqHeading}</h2>
@@ -273,9 +279,13 @@ export default async function ColumnDetailPage({ params }: { params: { locale: S
               <div className="blog-sidebar-card">
                 <h3 className="blog-sidebar-title">{t.consultationTitle}</h3>
                 <p className="blog-sidebar-text">{t.consultationText}</p>
-                <Link href={`/${locale}/contact`} className="button blog-sidebar-btn">
+                <a
+                  href={getConsultationPublicMailto(locale)}
+                  className="button blog-sidebar-btn"
+                  aria-label={`${t.consultationTitle}: ${CONSULTATION_EMAIL}`}
+                >
                   {t.consultationButton}
-                </Link>
+                </a>
               </div>
               <div className="blog-sidebar-card blog-sidebar-card--attorney">
                 <AttorneyAuthorityCard locale={locale} heading={t.attorneyHeading} />

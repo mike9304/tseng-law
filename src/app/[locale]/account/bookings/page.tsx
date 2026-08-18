@@ -23,7 +23,8 @@ import styles from '@/components/members/MembersArea.module.css';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const title = locale === 'ko' ? '내 예약' : locale === 'zh-hant' ? '我的預約' : 'My bookings';
   return {
@@ -278,13 +279,14 @@ type BookingFilterSummaryItem = {
   value: string;
 };
 
-export default async function MemberBookingsPage({
-  params,
-  searchParams,
-}: {
-  params: { locale: Locale };
-  searchParams?: BookingFilterParams;
-}) {
+export default async function MemberBookingsPage(
+  props: {
+    params: Promise<{ locale: Locale }>;
+    searchParams?: Promise<BookingFilterParams>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const member = await getCurrentSiteMember();
   if (!member) redirect(`/${locale}/login?next=${encodeURIComponent(`/${locale}/account/bookings`)}`);

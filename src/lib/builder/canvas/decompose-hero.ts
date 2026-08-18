@@ -1,6 +1,7 @@
 import type { BuilderCanvasNode } from './types';
 import type { Locale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
+import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
 import {
   HOME_STAGE_WIDTH,
   createHomeButtonNode,
@@ -19,9 +20,7 @@ export const HERO_SEARCH_WRAPPER_Y = 618;
 
 export const HERO_SECTION_ROOT_HEIGHT = HERO_ROOT_HEIGHT;
 export const HERO_MEDIA_IMAGE_SOURCES = [
-  '/images/hero-bg-01.webp',
-  '/images/hero-bg-02.webp',
-  '/images/hero-bg-03.webp',
+  '/images/editorial/taichung-courthouse-civic-daylight-v2.webp',
 ] as const;
 export const HERO_MEDIA_IMAGE_NODE_IDS = HERO_MEDIA_IMAGE_SOURCES.map((_, index) => (
   index === 0 ? 'home-hero-media-image' : `home-hero-media-image-${index + 1}`
@@ -34,7 +33,7 @@ const quickMenus = {
     { label: '변호사', href: '/ko/lawyers' },
     { label: '자주 묻는 질문', href: '/ko/faq' },
     { label: '영상/채널', href: '/ko/videos' },
-    { label: '연락처', href: '/ko/contact' },
+    { label: '연락처 정보', href: '/ko/contact' },
   ],
   'zh-hant': [
     { label: '服務領域', href: '/zh-hant/services' },
@@ -42,7 +41,7 @@ const quickMenus = {
     { label: '律師', href: '/zh-hant/lawyers' },
     { label: '常見問題', href: '/zh-hant/faq' },
     { label: '影音/頻道', href: '/zh-hant/videos' },
-    { label: '聯絡', href: '/zh-hant/contact' },
+    { label: '聯絡資訊', href: '/zh-hant/contact' },
   ],
   en: [
     { label: 'Services', href: '/en/services' },
@@ -50,8 +49,14 @@ const quickMenus = {
     { label: 'Lawyers', href: '/en/lawyers' },
     { label: 'FAQ', href: '/en/faq' },
     { label: 'Videos / Channel', href: '/en/videos' },
-    { label: 'Contact', href: '/en/contact' },
+    { label: 'Contact information', href: '/en/contact' },
   ],
+} as const;
+
+const emailConsultationCtaLabels = {
+  ko: '이메일 상담 신청',
+  'zh-hant': '申請電子郵件諮詢',
+  en: 'Request an Email Consultation',
 } as const;
 
 export function createHeroDecomposedNodes(
@@ -110,7 +115,7 @@ export function createHeroDecomposedNodes(
     createHomeContainerNode({
       id: copyId,
       parentId: innerId,
-      rect: { x: 0, y: 0, width: 780, height: 363 },
+      rect: { x: 0, y: 0, width: 780, height: 450 },
       zIndex: 0,
       label: 'hero copy',
       className: 'hero-copy',
@@ -149,20 +154,39 @@ export function createHeroDecomposedNodes(
     createHomeContainerNode({
       id: linksId,
       parentId: copyId,
-      rect: { x: 0, y: 338, width: 260, height: 32 },
+      rect: { x: 0, y: 390, width: 460, height: 48 },
       zIndex: 3,
       label: 'hero links',
-      className: 'hero-links-minimal',
+      className: 'hero-links-minimal hero-cta-actions',
+      layoutMode: 'flex',
+      flexConfig: {
+        direction: 'row',
+        wrap: false,
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        gap: 12,
+      },
+    }),
+    createHomeButtonNode({
+      id: 'home-hero-email-consultation-link',
+      parentId: linksId,
+      rect: { x: 0, y: 0, width: 220, height: 48 },
+      zIndex: 0,
+      label: emailConsultationCtaLabels[locale],
+      href: getConsultationPublicMailto(locale),
+      style: 'primary',
+      className: 'button hero-cta-primary',
+      as: 'a',
     }),
     createHomeButtonNode({
       id: 'home-hero-columns-link',
       parentId: linksId,
-      rect: { x: 0, y: 0, width: 180, height: 28 },
-      zIndex: 0,
+      rect: { x: 232, y: 0, width: 180, height: 48 },
+      zIndex: 1,
       label: locale === 'ko' ? '호정칼럼 보기' : locale === 'zh-hant' ? '查看專欄內容' : 'View Columns',
       href: `/${locale}/columns`,
-      style: 'link',
-      className: 'link-underline',
+      style: 'secondary',
+      className: 'button hero-cta-secondary',
       as: 'a',
     }),
     createHomeContainerNode({

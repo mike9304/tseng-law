@@ -83,13 +83,13 @@ for second in {1..90}; do
     exit 1
   fi
 
-  status=$(curl \
+  http_status=$(curl \
     --silent \
     --output /dev/null \
     --write-out '%{http_code}' \
     --max-time 1 \
     "$QA_BASE_URL/ko" 2>/dev/null || true)
-  if [[ "$status" == "200" ]] && node -e '
+  if [[ "$http_status" == "200" ]] && node -e '
     const fs = require("node:fs");
     const [manifestPath, baseUrl, repositoryRoot, ownerPidInput] = process.argv.slice(1);
     const expectedOwnerPid = Number(ownerPidInput);

@@ -66,13 +66,18 @@ describe('published standard page CSS guards', () => {
     expect(publishedPage).toContain('padding-block-start: 0 !important;');
   });
 
-  it('emits exactly one <main> landmark: layout owns id="main", published render demotes the rest (WO#5)', () => {
+  it('emits exactly one <main> landmark: route shell owns id="main", published render demotes the rest (WO#5)', () => {
     const publishedPage = read('src/lib/builder/site/public-page.tsx');
     const containerElement = read('src/lib/builder/components/container/Element.tsx');
     const layout = read('src/app/[locale]/layout.tsx');
+    const routeShell = read('src/components/CinematicRouteShell.tsx');
 
-    // The single canonical landmark stays in the locale layout.
-    expect(layout).toContain('<main id="main">');
+    // The locale layout delegates its single canonical landmark to the
+    // pathname-aware route shell.
+    expect(layout).toContain('<CinematicRouteShell');
+    expect(layout).not.toMatch(/<main\b/);
+    expect(routeShell.match(/<main\b/g)).toHaveLength(1);
+    expect(routeShell).toContain('<main id="main">');
 
     // The published renderer wrapper must not be a nested <main>.
     expect(publishedPage).not.toMatch(/<main\s+className="builder-pub-main"/);
@@ -121,5 +126,17 @@ describe('published standard page CSS guards', () => {
     // Scope lock: 843px contract lives in the locale/home desktop swap only.
     expect(zhHomeDesktopSwap).toContain("locale === 'zh-hant' && !slugPath");
     expect(zhHomeDesktopSwap).toContain('@media (min-width: 769px)');
+  });
+
+  it('excludes CSS parity overlays from published content-height and keeps the hide rule', () => {
+    const publishedPage = read('src/lib/builder/site/public-page.tsx');
+    const flow = read('src/lib/builder/canvas/flow.ts');
+
+    expect(flow).toContain('export function isCssParityOverlayFlowSection');
+    expect(flow).toContain("node.anchorName.startsWith('mobile-parity-')");
+    expect(publishedPage).toContain('isCssParityOverlayFlowSection');
+    expect(publishedPage).toContain('if (isCssParityOverlayFlowSection(node)) return maxHeight;');
+    expect(publishedPage).toContain(".builder-pub-node[data-anchor^='mobile-parity-home-'] {");
+    expect(publishedPage).toContain('display: none !important;');
   });
 });

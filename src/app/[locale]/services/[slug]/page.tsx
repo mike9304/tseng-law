@@ -24,6 +24,10 @@ import {
   isBuilderDynamicTemplateBlockVisible,
   readBuilderDynamicTemplatePublishedBlockVisibility,
 } from '@/lib/builder/dynamic-template-drafts';
+import {
+  CONSULTATION_EMAIL,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -186,7 +190,8 @@ function summarize(text: string, maxLength = 160) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
 }
 
-export async function generateMetadata({ params }: { params: { locale: SiteLocale; slug: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale; slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const area = await getServiceRecord(locale, params.slug);
   const attorney = getAttorneyProfile(locale, primaryAttorneySlug);
@@ -226,7 +231,8 @@ export async function generateMetadata({ params }: { params: { locale: SiteLocal
   });
 }
 
-export default async function ServiceDetailPage({ params }: { params: { locale: SiteLocale; slug: string } }) {
+export default async function ServiceDetailPage(props: { params: Promise<{ locale: SiteLocale; slug: string }> }) {
+  const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const area = await getServiceRecord(locale, params.slug);
   if (!area) return notFound();
@@ -380,9 +386,13 @@ export default async function ServiceDetailPage({ params }: { params: { locale: 
               <div className="svc-sidebar-card">
                 <h3 className="svc-sidebar-title">{t.contactLabel}</h3>
                 <p className="svc-sidebar-text">{t.contactDesc}</p>
-                <Link href={`/${locale}/contact`} className="button svc-sidebar-btn">
+                <a
+                  href={getConsultationPublicMailto(locale)}
+                  className="button svc-sidebar-btn"
+                  aria-label={`${t.contactLabel}: ${CONSULTATION_EMAIL}`}
+                >
                   {t.contactBtn}
-                </Link>
+                </a>
               </div>
             </aside>
           </div>

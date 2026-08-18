@@ -11,7 +11,11 @@ import {
   createOfficeMapPreviewNodes,
   getOfficeMapPreviewCopy,
 } from './decompose-office-map-preview';
-import { getOfficeLocationPresets, telHrefFromPhone } from './office-locations';
+import {
+  BUILDER_OFFICE_LOCATION_COUNT,
+  getOfficeLocationPresets,
+  telHrefFromPhone,
+} from './office-locations';
 
 const OFFICES_ROOT_HEIGHT = 760;
 
@@ -33,9 +37,22 @@ export function getOfficesResponsiveOverride(
   const tabMatch = /^home-offices-tab-(\d+)$/.exec(nodeId);
   if (tabMatch) {
     const index = Number(tabMatch[1]);
+    const mobileTabGap = 8;
+    const mobileTabAreaWidth = 343;
+    const mobileTabWidth = Math.floor(
+      (mobileTabAreaWidth - (mobileTabGap * (BUILDER_OFFICE_LOCATION_COUNT - 1)))
+      / BUILDER_OFFICE_LOCATION_COUNT,
+    );
     return isTablet
       ? { rect: { x: index * 118, y: 0, width: 104, height: 32 } }
-      : { rect: { x: index * 104, y: 0, width: 96, height: 32 } };
+      : {
+          rect: {
+            x: index * (mobileTabWidth + mobileTabGap),
+            y: 0,
+            width: mobileTabWidth,
+            height: 32,
+          },
+        };
   }
   if (/^home-offices-layout-\d+$/.test(nodeId)) {
     return isTablet

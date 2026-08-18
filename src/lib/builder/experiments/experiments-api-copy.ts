@@ -13,6 +13,7 @@ export type ExperimentsApiErrorCode =
   | 'experiment_event_failed'
   | 'experiment_not_found'
   | 'experiment_id_required'
+  | 'invalid_assignment_token'
   | 'duplicate_variant_ids'
   | 'unknown_variant';
 
@@ -35,6 +36,7 @@ const experimentsApiErrorMessages: Record<Locale, Record<ExperimentsApiErrorCode
     experiment_event_failed: '실험 전환 이벤트를 저장하지 못했습니다.',
     experiment_not_found: '실험을 찾을 수 없습니다.',
     experiment_id_required: '실험 ID가 필요합니다.',
+    invalid_assignment_token: '실험 배정 정보를 확인할 수 없습니다.',
     duplicate_variant_ids: '변형 ID는 중복될 수 없습니다.',
     unknown_variant: '알 수 없는 실험 변형입니다.',
   },
@@ -51,6 +53,7 @@ const experimentsApiErrorMessages: Record<Locale, Record<ExperimentsApiErrorCode
     experiment_event_failed: '無法儲存實驗轉換事件。',
     experiment_not_found: '找不到實驗。',
     experiment_id_required: '需要實驗 ID。',
+    invalid_assignment_token: '無法驗證實驗分配資訊。',
     duplicate_variant_ids: '變體 ID 不可重複。',
     unknown_variant: '未知的實驗變體。',
   },
@@ -67,6 +70,7 @@ const experimentsApiErrorMessages: Record<Locale, Record<ExperimentsApiErrorCode
     experiment_event_failed: 'Unable to save the experiment conversion event.',
     experiment_not_found: 'Experiment not found.',
     experiment_id_required: 'experimentId is required.',
+    invalid_assignment_token: 'Unable to verify the experiment assignment.',
     duplicate_variant_ids: 'Variant ids must be unique.',
     unknown_variant: 'Unknown experiment variant.',
   },

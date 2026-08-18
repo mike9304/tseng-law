@@ -15,13 +15,16 @@ import { buildChildrenMap, resolveCanvasNodeAbsoluteRect } from '@/lib/builder/c
 import type {
   BuilderCanvasNode,
   BuilderCanvasDocument,
+  BuilderImageCanvasNode,
 } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
 import { buildPublishedResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
+import { projectLegacyZhHantHomeOffices } from '@/lib/builder/site/legacy-zh-hant-home-offices';
 import {
   computeTopLevelFlowSectionMetrics,
   compareTopLevelStacking,
   isCollapsedServicesAccordionDetailNode,
+  isCssParityOverlayFlowSection,
   isTopLevelFlowSection,
 } from '@/lib/builder/canvas/flow';
 import type {
@@ -68,7 +71,12 @@ import {
 } from '@/lib/builder/site/heuristic-defaults';
 import { buildPublishedSurfaceFrame } from '@/lib/builder/site/published-node-frame';
 import { getHomeSectionTemplateMetadata } from '@/lib/builder/canvas/section-templates';
-import { getOrganizationName, getSiteUrl } from '@/lib/seo';
+import {
+  DEFAULT_SOCIAL_IMAGE_PATH,
+  getOrganizationName,
+  getSiteUrl,
+  stripOrganizationNameSuffix,
+} from '@/lib/seo';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
 import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
 import { filterNavigationForLocale } from '@/lib/builder/site/navigation';
@@ -96,6 +104,14 @@ import SiteSearchEnhancer from '@/components/builder/published/SiteSearchEnhance
 import AppRuntimeLoader from '@/components/builder/published/AppRuntimeLoader';
 import ExperimentVariantSwap from '@/components/builder/published/ExperimentVariantSwap';
 import LiveChatWidget from '@/components/builder/published/LiveChatWidget';
+import {
+  DECORATIVE_VIDEO_CONTROL_LABELS,
+  DecorativeAutoplayVideo,
+  type DecorativeAutoplayVideoProps,
+} from '@/components/DecorativeAutoplayVideo';
+import TaiwanHeritageInterlude, {
+  resolveHeritageInterludeInsertionNodeId,
+} from '@/components/TaiwanHeritageInterlude';
 import {
   buildPublishedAnimationStyle,
   getPublishedAnimationAttributes,
@@ -133,6 +149,172 @@ import {
 interface ResolvedLightbox {
   meta: BuilderLightbox;
   canvas: BuilderCanvasDocument;
+}
+
+export type PublishedDecorativeVideoNode = BuilderCanvasNode;
+
+type PublishedDecorativeVideoConfig = Pick<
+  DecorativeAutoplayVideoProps,
+  | 'webmSrc'
+  | 'mp4Src'
+  | 'poster'
+  | 'mobileWebmSrc'
+  | 'mobileMp4Src'
+  | 'mobilePoster'
+  | 'alt'
+  | 'imageClassName'
+  | 'videoClassName'
+  | 'sizes'
+  | 'priority'
+  | 'loop'
+  | 'controlLabels'
+>;
+
+/**
+ * The video is an enhancement for an untouched seed image, not a
+ * replacement renderer for authored image widgets. ImageElement owns crop,
+ * focal point, filters, interactions, hover swaps, hotspots and clipping, so
+ * any non-neutral value must keep using that renderer.
+ */
+function hasBehaviorNeutralDecorativeImageContract(
+  node: BuilderImageCanvasNode,
+): boolean {
+  const { content } = node;
+
+  return (
+    content.fit === 'cover'
+    && (content.cropAspect === undefined || content.cropAspect === '')
+    && content.focalPoint === undefined
+    && content.filters === undefined
+    && (content.clickAction === undefined || content.clickAction === 'none')
+    && content.link == null
+    && content.hoverSrc === undefined
+    && (content.hotspots === undefined || content.hotspots.length === 0)
+    && content.compare === undefined
+    && content.svg === undefined
+    && content.gif === undefined
+    && node.style.borderRadius === 0
+    && node.hoverStyle === undefined
+    && (node.animation?.hover === undefined || node.animation.hover.preset === 'none')
+    && node.dataBinding === undefined
+  );
+}
+
+export function resolvePublishedDecorativeVideo(
+  node: PublishedDecorativeVideoNode,
+  locale: Locale = 'ko',
+): PublishedDecorativeVideoConfig | null {
+  if (node.kind !== 'image') return null;
+  if (!hasBehaviorNeutralDecorativeImageContract(node)) return null;
+  const { content } = node;
+
+  if (
+    node.id === 'home-hero-media-image'
+    && content.src === PUBLISHED_HOME_HERO_POSTER
+  ) {
+    return {
+      poster: PUBLISHED_HOME_HERO_POSTER,
+      webmSrc: '/videos/taichung-courthouse-civic-daylight-v2.webm',
+      mp4Src: '/videos/taichung-courthouse-civic-daylight-v2.mp4',
+      mobilePoster: '/images/editorial/taichung-courthouse-civic-daylight-v2-mobile.webp',
+      mobileWebmSrc: '/videos/taichung-courthouse-civic-daylight-v2-mobile.webm',
+      mobileMp4Src: '/videos/taichung-courthouse-civic-daylight-v2-mobile.mp4',
+      alt: content.alt ?? '',
+      sizes: '100vw',
+      priority: false,
+      controlLabels: DECORATIVE_VIDEO_CONTROL_LABELS[locale],
+    };
+  }
+
+  if (
+    node.id === 'home-case-results-media-image'
+    && content.src === PUBLISHED_HOME_CASE_RESULTS_POSTER
+  ) {
+    return {
+      poster: PUBLISHED_HOME_CASE_RESULTS_POSTER,
+      webmSrc: '/videos/taiwan-courtroom-calm-daylight-v2.webm',
+      mp4Src: '/videos/taiwan-courtroom-calm-daylight-v2.mp4',
+      mobilePoster: '/images/editorial/taiwan-courtroom-calm-daylight-v2-mobile.webp',
+      mobileWebmSrc: '/videos/taiwan-courtroom-calm-daylight-v2-mobile.webm',
+      mobileMp4Src: '/videos/taiwan-courtroom-calm-daylight-v2-mobile.mp4',
+      alt: content.alt ?? '',
+      sizes: '(max-width: 900px) 100vw, 52vw',
+      priority: false,
+      imageClassName: 'home-results-media-img',
+      videoClassName: 'home-results-media-video',
+      loop: false,
+      controlLabels: DECORATIVE_VIDEO_CONTROL_LABELS[locale],
+    };
+  }
+
+  return null;
+}
+
+export const PUBLISHED_HOME_HERO_POSTER =
+  '/images/editorial/taichung-courthouse-civic-daylight-v2.webp';
+export const PUBLISHED_HOME_CASE_RESULTS_POSTER =
+  '/images/editorial/taiwan-courtroom-calm-daylight-v2.webp';
+
+const LEGACY_HOME_HERO_POSTERS = new Set([
+  '/images/hero-bg-01.webp',
+  '/images/hero-taipei-101-blue-hour.webp',
+  '/images/hero-taiwan-modern-city-opening.webp',
+]);
+
+const LEGACY_HOME_CASE_RESULTS_POSTERS = new Set([
+  '/images/editorial/taipei-courthouse-cinematic.webp',
+]);
+
+/**
+ * Existing published home documents can retain an older seed poster long
+ * after the code seed changes. Replace only that exact seed node/source pair;
+ * customer-selected images and dataset-owned media remain untouched.
+ */
+export function projectPublishedHomeHeroPoster(
+  node: BuilderCanvasNode,
+): BuilderCanvasNode {
+  if (
+    node.kind !== 'image'
+    || node.id !== 'home-hero-media-image'
+    || node.dataBinding !== undefined
+    || !LEGACY_HOME_HERO_POSTERS.has(node.content.src)
+  ) {
+    return node;
+  }
+
+  return {
+    ...node,
+    content: {
+      ...node.content,
+      src: PUBLISHED_HOME_HERO_POSTER,
+    },
+  };
+}
+
+/**
+ * Migrate only the persisted case-results seed image. The node identity and
+ * source check intentionally leave customer-selected and dataset-owned media
+ * alone while allowing saved default canvases to receive the v2 video pair.
+ */
+export function projectPublishedHomeCaseResultsPoster(
+  node: BuilderCanvasNode,
+): BuilderCanvasNode {
+  if (
+    node.kind !== 'image'
+    || node.id !== 'home-case-results-media-image'
+    || node.dataBinding !== undefined
+    || !LEGACY_HOME_CASE_RESULTS_POSTERS.has(node.content.src)
+  ) {
+    return node;
+  }
+
+  return {
+    ...node,
+    content: {
+      ...node.content,
+      src: PUBLISHED_HOME_CASE_RESULTS_POSTER,
+    },
+  };
 }
 
 export interface ResolvedPublishedSitePage {
@@ -335,8 +517,8 @@ export async function buildPublishedSitePageMetadata(
   // otherwise social crawlers (LINE/KakaoTalk/Facebook/X, which don't run JS)
   // render link previews with no image. The declared twitter:card is
   // summary_large_image, so a wide hero asset is the right fallback.
-  const DEFAULT_SOCIAL_IMAGE = resolveAbsoluteSeoUrl(siteUrl, '/images/header-skyline-ratio.webp');
-  const ogImage = (seoData.ogImage ? (resolveBuilderBrandAssetUrl(seoData.ogImage) ?? seoData.ogImage) : siteOgImage) || DEFAULT_SOCIAL_IMAGE;
+  const defaultSocialImage = resolveAbsoluteSeoUrl(siteUrl, DEFAULT_SOCIAL_IMAGE_PATH);
+  const ogImage = (seoData.ogImage ? (resolveBuilderBrandAssetUrl(seoData.ogImage) ?? seoData.ogImage) : siteOgImage) || defaultSocialImage;
   const twitterImage = seoData.twitterImage
     ? (resolveBuilderBrandAssetUrl(seoData.twitterImage) ?? seoData.twitterImage)
     : ogImage;
@@ -351,9 +533,10 @@ export async function buildPublishedSitePageMetadata(
     const content = tag.content.trim();
     if (name && content) otherMeta[name] = content;
   }
-
   return {
-    title: seoData.title,
+    // The locale layout applies the localized title template. Builder titles
+    // may already contain a legacy suffix, so pass only the page keywords.
+    title: stripOrganizationNameSuffix(seoData.title) || { absolute: getOrganizationName(locale) },
     description: seoData.description,
     openGraph: {
       type: 'website',
@@ -404,6 +587,7 @@ export async function PublishedSitePageView({
   searchParams?: Record<string, string | string[] | undefined>;
 }) {
   const { site, canvas, locale, slugPath } = resolved;
+  const isHomePage = slugPath === '' || resolved.pageMeta.isHomePage === true;
   const datasetDocument = resolved.datasetDocument ?? {
     pageKey: 'home' as const,
     datasets: createDefaultBuilderPageDatasets('home'),
@@ -466,10 +650,11 @@ export async function PublishedSitePageView({
   // (no automatic dark derivation), so they only need to be declared once on
   // :root and cascade into both themes.
   const customColorCssVars = buildCustomColorCssVars(settings?.brand?.customColors);
-  const visibleNodes = canvas.nodes.filter((node) => node.visible !== false);
-  const responsiveStylesheet = buildPublishedResponsiveStylesheet(canvas.nodes);
+  const publishedNodes = projectLegacyZhHantHomeOffices(canvas.nodes, locale, isHomePage);
+  const visibleNodes = publishedNodes.filter((node) => node.visible !== false);
+  const responsiveStylesheet = buildPublishedResponsiveStylesheet(publishedNodes);
   const childrenMap = buildChildrenMap(visibleNodes);
-  const nodesById = new Map(canvas.nodes.map((node) => [node.id, node]));
+  const nodesById = new Map(publishedNodes.map((node) => [node.id, node]));
   const siteUrl = getSiteUrl();
   const mergedSeo = mergeSeoWithDefaults({
     page: resolved.pageMeta,
@@ -547,6 +732,11 @@ export async function PublishedSitePageView({
   // (CanvasStageNodes) via flow.compareTopLevelStacking so the two cannot
   // drift apart.
   const renderedTopLevelNodes = [...topLevelNodes].sort(compareTopLevelStacking);
+  const heritageInterludeInsertionNodeId =
+    resolveHeritageInterludeInsertionNodeId(
+      isHomePage,
+      renderedTopLevelNodes.map((node) => node.id),
+    );
   const dynamicListPublishedContentHeight = dynamicListConfig && dynamicListSlice
     ? resolveDynamicListPublishedContentHeight({
         childrenMap,
@@ -558,6 +748,7 @@ export async function PublishedSitePageView({
     : 0;
   const publishedContentHeight = visibleNodes.reduce((maxHeight, node) => {
     if (isCollapsedServicesAccordionDetailNode(node)) return maxHeight;
+    if (isCssParityOverlayFlowSection(node)) return maxHeight;
     const absoluteRect = resolveCanvasNodeAbsoluteRect(node, nodesById);
     return Math.max(maxHeight, absoluteRect.y + absoluteRect.height);
   }, Math.max(canvas.stageHeight, dynamicListPublishedContentHeight));
@@ -588,8 +779,13 @@ export async function PublishedSitePageView({
     bindingContext: BuilderDatasetFieldBindingContext = datasetBindingContext,
   ): JSX.Element {
     const localeProjectedNode = projectImageNodeForLocale(node, locale);
-    const renderedNode = applyBuilderDatasetBindingToNode(localeProjectedNode, bindingContext);
+    const renderedNode = projectPublishedHomeCaseResultsPoster(
+      projectPublishedHomeHeroPoster(
+        applyBuilderDatasetBindingToNode(localeProjectedNode, bindingContext),
+      ),
+    );
     const component = getComponent(renderedNode.kind);
+    const decorativeVideo = resolvePublishedDecorativeVideo(renderedNode, locale);
     const childNodes = (childrenMap[renderedNode.id] ?? [])
       .map((childId) => nodesById.get(childId))
       .filter((child): child is BuilderCanvasNode => Boolean(child && child.visible !== false));
@@ -927,6 +1123,11 @@ export async function PublishedSitePageView({
             </div>
             {renderedChildren}
           </>
+        ) : decorativeVideo ? (
+          <>
+            <DecorativeAutoplayVideo {...decorativeVideo} />
+            {renderedChildren}
+          </>
         ) : component ? (
           isContainerLikeKind(renderedNode.kind) ? (
             <component.Render
@@ -985,7 +1186,10 @@ export async function PublishedSitePageView({
           .filter((node) => node.kind === 'image' && node.visible !== false)
           .sort((a, b) => a.zIndex - b.zIndex)[0];
         const renderedHeroImage = heroImage
-          ? applyBuilderDatasetBindingToNode(heroImage, datasetBindingContext)
+          ? projectPublishedHomeHeroPoster(applyBuilderDatasetBindingToNode(
+              projectImageNodeForLocale(heroImage, locale),
+              datasetBindingContext,
+            ))
           : null;
         const src = renderedHeroImage ? (renderedHeroImage.content as { src?: string }).src : null;
         return src && !src.includes('placeholder') ? (
@@ -1941,7 +2145,19 @@ export async function PublishedSitePageView({
               : undefined,
         }}
       >
-        {renderedTopLevelNodes.map((node) => renderPublishedNode(node, true))}
+        {renderedTopLevelNodes.flatMap((node) => {
+          const renderedNode = renderPublishedNode(node, true);
+          if (node.id !== heritageInterludeInsertionNodeId) {
+            return [renderedNode];
+          }
+          return [
+            <TaiwanHeritageInterlude
+              key={`heritage-interlude-before-${node.id}`}
+              locale={locale}
+            />,
+            renderedNode,
+          ];
+        })}
       </div>
       {dynamicListConfig && dynamicListSlice && dynamicListRuntime.pagination ? (
         <DynamicListVisitorControls

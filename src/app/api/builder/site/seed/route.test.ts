@@ -70,6 +70,14 @@ describe('/api/builder/site/seed', () => {
     expect(mockedSeedSitePages).not.toHaveBeenCalled();
   });
 
+  it('rejects an explicit public-only locale instead of seeding Korean', async () => {
+    const response = await route.POST(postRequest(JSON.stringify({ locale: 'ja' }), '?locale=ja'));
+    const data = await response.json();
+    expect(response.status).toBe(400);
+    expect(data.errorCode).toBe('seed_body_invalid');
+    expect(mockedSeedSitePages).not.toHaveBeenCalled();
+  });
+
   it('returns localized stable-code JSON when seeding fails', async () => {
     mockedSeedSitePages.mockRejectedValueOnce(new Error('raw seed failure'));
     const response = await route.POST(postRequest(JSON.stringify({ locale: 'en' })));

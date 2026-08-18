@@ -56,8 +56,9 @@ function unavailableDocumentResponse(document: BuilderBillingDocumentRow): NextR
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { source: string; ownerId: string; documentId: string } },
+  props: { params: Promise<{ source: string; ownerId: string; documentId: string }> }
 ) {
+  const params = await props.params;
   const source = parseBillingDocumentSource(params.source);
   if (!source) {
     return NextResponse.json({ ok: false, error: 'invalid_document_source' }, { status: 400 });

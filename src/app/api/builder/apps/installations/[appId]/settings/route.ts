@@ -9,9 +9,9 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     appId: string;
-  };
+  }>;
 }
 
 function errorResponse(locale: Locale, errorCode: Parameters<typeof getBuilderAppsApiErrorPayload>[1], status: number): NextResponse {
@@ -21,7 +21,8 @@ function errorResponse(locale: Locale, errorCode: Parameters<typeof getBuilderAp
   );
 }
 
-export async function PUT(request: NextRequest, { params }: RouteParams) {
+export async function PUT(request: NextRequest, props: RouteParams) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'settings' });
   if (auth instanceof NextResponse) return auth;
 

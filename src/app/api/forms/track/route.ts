@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { appendFunnelEvent } from '@/lib/builder/forms/funnel/storage';
 
 export const runtime = 'nodejs';
@@ -21,6 +22,9 @@ function clientIp(request: NextRequest): string {
 }
 
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const ip = clientIp(request);
   const rate = await checkRateLimit(`forms-track:${ip}`, 120, 60_000);
   if (!rate.allowed) return NextResponse.json({ error: 'Too many requests' }, { status: 429 });

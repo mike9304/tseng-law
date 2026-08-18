@@ -3,6 +3,10 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { attorneyProfiles } from '@/data/attorney-profiles';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
+import {
+  CONSULTATION_EMAIL,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 import LawyerProfilePage, {
   generateMetadata,
   generateStaticParams,
@@ -72,7 +76,7 @@ describe('Japanese lawyer-profile integration', () => {
   it('publishes native Japanese metadata with four-language alternates', async () => {
     const profile = attorneyProfiles.ja['wei-tseng'];
     const metadata = await generateMetadata({
-      params: { locale: 'ja', slug: 'wei-tseng' },
+      params: Promise.resolve({ locale: 'ja', slug: 'wei-tseng' }),
     });
 
     expect(metadata.title).toBe(profile.title);
@@ -100,7 +104,7 @@ describe('Japanese lawyer-profile integration', () => {
   it('renders approved Japanese data, labels, and structured data without builder reads', async () => {
     const profile = attorneyProfiles.ja['wei-tseng'];
     const page = await LawyerProfilePage({
-      params: { locale: 'ja', slug: 'wei-tseng' },
+      params: Promise.resolve({ locale: 'ja', slug: 'wei-tseng' }),
     });
     const html = renderToStaticMarkup(page);
 
@@ -124,9 +128,13 @@ describe('Japanese lawyer-profile integration', () => {
     expect(html).toContain(profile.description);
     expect(html).toContain(profile.image);
     expect(html).toContain(profile.email);
+    expect(html).toContain(
+      `href="${getConsultationPublicMailto('ja').replace(/&/g, '&amp;')}"`,
+    );
+    expect(html).toContain(CONSULTATION_EMAIL);
     expect(profile.internalLinks).toHaveLength(6);
     for (const internalLink of profile.internalLinks) {
-      expect(html).toContain(`href="${internalLink.href}"`);
+      expect(html).toContain(`href="${internalLink.href.replace(/&/g, '&amp;')}"`);
       expect(html).toContain(internalLink.label);
     }
     for (const unsafeHref of [
@@ -176,7 +184,7 @@ describe('Japanese lawyer-profile integration', () => {
     'preserves %s builder source and visibility behavior',
     async (locale) => {
       const page = await LawyerProfilePage({
-        params: { locale, slug: 'wei-tseng' },
+        params: Promise.resolve({ locale, slug: 'wei-tseng' }),
       });
       const html = renderToStaticMarkup(page);
 
@@ -192,7 +200,7 @@ describe('Japanese lawyer-profile integration', () => {
       expect(html).toContain(attorneyProfiles[locale]['wei-tseng'].name);
 
       const metadata = await generateMetadata({
-        params: { locale, slug: 'wei-tseng' },
+        params: Promise.resolve({ locale, slug: 'wei-tseng' }),
       });
       // WO#3: /ja/lawyers/wei-tseng is a live Japanese page, so ja must be advertised.
       expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/lawyers/wei-tseng`);

@@ -310,7 +310,11 @@ export default function ProductGalleryElement({ node, mode = 'edit', locale }: P
                 data-builder-product-gallery-sku={product.sku}
                 data-builder-product-gallery-availability={availability}
               >
-                {media?.url ? <img src={media.url} alt={media.alt} /> : <div className={styles.fallback} aria-hidden />}
+                {media?.url ? (
+                  // Builder-bound media can be a runtime remote, data, or blob URL that Next Image cannot preconfigure.
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={media.url} alt={media.alt} loading="lazy" decoding="async" />
+                ) : <div className={styles.fallback} aria-hidden />}
                 <div className={styles.body}>
                   <span className={styles.badge}>{categoryLabel(product, categoryItems, copy.collectionFallback)}</span>
                   <a

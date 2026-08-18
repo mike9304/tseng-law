@@ -10,6 +10,7 @@ import {
   timestamped,
 } from '@/lib/builder/bookings/storage';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { validateCsrf } from '@/lib/builder/security/csrf';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 
 export const runtime = 'nodejs';
@@ -22,6 +23,9 @@ function clientIp(request: NextRequest): string {
 }
 
 export async function POST(request: NextRequest) {
+  const csrfFailure = validateCsrf(request);
+  if (csrfFailure) return csrfFailure;
+
   const rate = await checkRateLimit(`booking-waitlist:${clientIp(request)}`, 8, 60_000);
   if (!rate.allowed) {
     return NextResponse.json({ error: 'Too many waitlist attempts. Please try again shortly.' }, { status: 429 });
@@ -61,7 +65,7 @@ export async function POST(request: NextRequest) {
   const existing = (await listWaitlistEntries({ status: 'active', serviceId: service.serviceId, staffId: staff.staffId }))
     .find((entry) => entry.requestedDate === parsed.data.requestedDate && entry.customer.email.toLowerCase() === email);
   if (existing) {
-    return NextResponse.json({ waitlist: existing, duplicate: true }, { status: 200 });
+    return NextResponse.json({ ok: true, duplicate: true }, { status: 200 });
   }
 
   const waitlist = timestamped({

@@ -7,6 +7,12 @@ import {
 } from '@/lib/builder/security/permissions';
 
 describe('builder permissions', () => {
+  it('includes the commerce read and mutation permissions', () => {
+    expect(BUILDER_PERMISSIONS).toEqual(
+      expect.arrayContaining(['view-commerce', 'manage-commerce']),
+    );
+  });
+
   it('owner has every granular permission', () => {
     for (const perm of BUILDER_PERMISSIONS) {
       expect(hasBuilderPermission('owner', perm)).toBe(true);
@@ -21,6 +27,14 @@ describe('builder permissions', () => {
     expect(hasBuilderPermission('editor', 'settings')).toBe(false);
     expect(hasBuilderPermission('editor', 'delete-pages')).toBe(false);
   });
+
+  it.each(['editor', 'reviewer', 'viewer'] as const)(
+    'does not grant legacy %s roles either commerce permission',
+    (role) => {
+      expect(hasBuilderPermission(role, 'view-commerce')).toBe(false);
+      expect(hasBuilderPermission(role, 'manage-commerce')).toBe(false);
+    },
+  );
 
   it('reviewer cannot edit but can view comment-level data', () => {
     expect(hasBuilderPermission('reviewer', 'edit-pages')).toBe(false);

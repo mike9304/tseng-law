@@ -67,7 +67,7 @@ describe('/api/builder/sites/[siteId]/collections/[collectionId]/records', () =>
     const route = await import('../route');
     const response = await route.POST(
       postRequest('articles', { fields: { title: 'Article' } }),
-      { params: { siteId: 'default', collectionId: 'articles' } },
+      { params: Promise.resolve({ siteId: 'default', collectionId: 'articles' }) },
     );
 
     expect(response.status).toBe(201);
@@ -96,7 +96,7 @@ describe('/api/builder/sites/[siteId]/collections/[collectionId]/records', () =>
     const route = await import('../route');
     const response = await route.POST(
       postRequest('articles', { fields: {} }),
-      { params: { siteId: 'default', collectionId: 'articles' } },
+      { params: Promise.resolve({ siteId: 'default', collectionId: 'articles' }) },
     );
 
     expect(response.status).toBe(400);
@@ -109,7 +109,7 @@ describe('/api/builder/sites/[siteId]/collections/[collectionId]/records', () =>
     const route = await import('../route');
     const response = await route.POST(
       postRequest('missing', { fields: { title: 'x' } }),
-      { params: { siteId: 'default', collectionId: 'missing' } },
+      { params: Promise.resolve({ siteId: 'default', collectionId: 'missing' }) },
     );
 
     expect(response.status).toBe(404);

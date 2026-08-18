@@ -29,7 +29,8 @@ function errorResponse(
   );
 }
 
-export async function PATCH(request: NextRequest, { params }: { params: { type: string } }) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ type: string }> }) {
+  const params = await props.params;
   const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);

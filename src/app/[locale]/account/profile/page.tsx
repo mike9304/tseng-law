@@ -8,7 +8,8 @@ import styles from '@/components/members/MembersArea.module.css';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const title = locale === 'ko' ? '회원 프로필' : locale === 'zh-hant' ? '會員個人資料' : 'Member profile';
   return {
@@ -17,7 +18,8 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default async function MemberProfilePage({ params }: { params: { locale: Locale } }) {
+export default async function MemberProfilePage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const member = await getCurrentSiteMember();
   if (!member) redirect(`/${locale}/login?next=${encodeURIComponent(`/${locale}/account/profile`)}`);

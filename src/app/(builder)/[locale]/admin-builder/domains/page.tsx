@@ -3,10 +3,12 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 import { listDomains } from '@/lib/builder/domains/storage';
 import { getVercelClient } from '@/lib/builder/domains/vercel-api';
 import DomainsAdmin from '@/components/builder/domains/DomainsAdmin';
+import { requireBuilderPagePermission } from '@/lib/builder/security/page-permission';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
   return {
     title: locale === 'ko' ? '사용자 지정 도메인' : locale === 'zh-hant' ? '自訂網域' : 'Custom Domains',
@@ -19,8 +21,10 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   };
 }
 
-export default async function DomainsPage({ params }: { params: { locale: Locale } }) {
+export default async function DomainsPage(props: { params: Promise<{ locale: Locale }> }) {
+  const params = await props.params;
   const locale = normalizeLocale(params.locale);
+  await requireBuilderPagePermission('settings');
   const domains = await listDomains();
   const client = getVercelClient();
   return (

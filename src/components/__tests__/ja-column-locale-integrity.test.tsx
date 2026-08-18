@@ -51,7 +51,7 @@ describe('Japanese column locale integrity', () => {
     expect(html).toContain('昊鼎公式弁護士プロフィール');
     expect(html).toContain('個人プロフィールサイト');
     expect(html).toContain('href="/ja/lawyers/wei-tseng"');
-    expect(html).toContain('href="/ja/contact"');
+    expect(html).toContain('href="mailto:wei@hoveringlaw.com.tw?subject=');
 
     for (const practiceArea of japaneseProfile.practiceAreas.slice(0, 4)) {
       expect(html).toContain(practiceArea);
@@ -149,7 +149,7 @@ describe('Japanese column locale integrity', () => {
     expect(detailSource).toContain('const authorProfilePath = getAttorneyProfilePath(locale);');
     expect(detailSource).toContain('buildBreadcrumbJsonLd(locale,');
     expect(detailSource).toContain('const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, locale) : null;');
-    expect(detailSource).toContain('href={`/${locale}/contact`}');
+    expect(detailSource).toContain('href={getConsultationPublicMailto(locale)}');
     expect(detailSource).toContain("locale === 'ja' ? 'ホーム' : 'Home'");
     expect(detailSource).not.toContain('const linkLocale');
     expect(detailSource).not.toContain('getAttorneyProfilePath(toBuilderLocale(locale))');

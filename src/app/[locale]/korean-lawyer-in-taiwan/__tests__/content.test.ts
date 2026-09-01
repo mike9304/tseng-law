@@ -1,17 +1,25 @@
 import { describe, expect, it } from 'vitest';
 import { buildFaqJsonLd, buildLegalServiceJsonLd } from '@/lib/seo';
-import { locales } from '@/lib/locales';
+import { siteLocales } from '@/lib/locales';
 import { landingContent } from '../content';
 
 describe('korean-lawyer-in-taiwan content', () => {
+  it('keeps organization brands out of all localized meta titles', () => {
+    for (const locale of siteLocales) {
+      expect(landingContent[locale].metaTitle).not.toMatch(
+        /법무법인 호정|Hovering International Law Firm|昊鼎/u,
+      );
+    }
+  });
+
   it('provides content for every supported locale', () => {
-    for (const locale of locales) {
+    for (const locale of siteLocales) {
       expect(landingContent[locale]).toBeDefined();
     }
   });
 
   it('has a declarative lead, non-empty services/languages, and 5 FAQ items per locale', () => {
-    for (const locale of locales) {
+    for (const locale of siteLocales) {
       const c = landingContent[locale];
       expect(c.lead.length).toBeGreaterThanOrEqual(3);
       expect(c.services.length).toBeGreaterThan(0);
@@ -34,13 +42,13 @@ describe('korean-lawyer-in-taiwan content', () => {
       'services',
     ];
 
-    for (const locale of locales) {
+    for (const locale of siteLocales) {
       expect(landingContent[locale].relatedResources.map((item) => item.href)).toEqual(expected);
     }
   });
 
   it('builds a non-null FAQPage JSON-LD with 5 entities per locale', () => {
-    for (const locale of locales) {
+    for (const locale of siteLocales) {
       const c = landingContent[locale];
       const faq = buildFaqJsonLd(c.faq, locale);
       expect(faq).not.toBeNull();
@@ -50,7 +58,7 @@ describe('korean-lawyer-in-taiwan content', () => {
   });
 
   it('builds a LegalService JSON-LD node per locale', () => {
-    for (const locale of locales) {
+    for (const locale of siteLocales) {
       const c = landingContent[locale];
       const node = buildLegalServiceJsonLd(locale, {
         description: c.description,
@@ -69,7 +77,7 @@ describe('korean-lawyer-in-taiwan content', () => {
       ja: '曾雋崴',
     } as const;
 
-    for (const locale of locales) {
+    for (const locale of siteLocales) {
       const c = landingContent[locale];
       const consultationFaq = c.faq.find((item) =>
         /상담은 어떻게|如何預約諮詢|How do I request a consultation|相談はどのよう/.test(item.q),

@@ -76,7 +76,7 @@ describe('sitemap column lastModified', () => {
             ko: `https://tseng-law.com/ko${path}`,
             'zh-Hant': `https://tseng-law.com/zh-hant${path}`,
             en: `https://tseng-law.com/en${path}`,
-            'x-default': `https://tseng-law.com/ko${path}`,
+            'x-default': `https://tseng-law.com/en${path}`,
           },
         },
       })),
@@ -184,7 +184,7 @@ describe('sitemap column lastModified', () => {
       'zh-Hant': 'https://tseng-law.com/zh-hant/about',
       en: 'https://tseng-law.com/en/about',
       ja: 'https://tseng-law.com/ja/about',
-      'x-default': 'https://tseng-law.com/ko/about',
+      'x-default': 'https://tseng-law.com/en/about',
     });
   });
 
@@ -201,7 +201,7 @@ describe('sitemap column lastModified', () => {
       'zh-Hant': 'https://tseng-law.com/zh-hant/services',
       en: 'https://tseng-law.com/en/services',
       ja: 'https://tseng-law.com/ja/services',
-      'x-default': 'https://tseng-law.com/ko/services',
+      'x-default': 'https://tseng-law.com/en/services',
     });
   });
 
@@ -221,7 +221,7 @@ describe('sitemap column lastModified', () => {
         'zh-Hant': `https://tseng-law.com/zh-hant/services/${slug}`,
         en: `https://tseng-law.com/en/services/${slug}`,
         ja: `https://tseng-law.com/ja/services/${slug}`,
-        'x-default': `https://tseng-law.com/ko/services/${slug}`,
+        'x-default': `https://tseng-law.com/en/services/${slug}`,
       });
     }
   });
@@ -239,7 +239,7 @@ describe('sitemap column lastModified', () => {
       'zh-Hant': 'https://tseng-law.com/zh-hant/pricing',
       en: 'https://tseng-law.com/en/pricing',
       ja: 'https://tseng-law.com/ja/pricing',
-      'x-default': 'https://tseng-law.com/ko/pricing',
+      'x-default': 'https://tseng-law.com/en/pricing',
     });
   });
 
@@ -257,7 +257,7 @@ describe('sitemap column lastModified', () => {
       'zh-Hant': 'https://tseng-law.com/zh-hant/contact',
       en: 'https://tseng-law.com/en/contact',
       ja: 'https://tseng-law.com/ja/contact',
-      'x-default': 'https://tseng-law.com/ko/contact',
+      'x-default': 'https://tseng-law.com/en/contact',
     });
   });
 
@@ -277,7 +277,7 @@ describe('sitemap column lastModified', () => {
       'zh-Hant': `https://tseng-law.com/zh-hant${path}`,
       en: `https://tseng-law.com/en${path}`,
       ja: `https://tseng-law.com/ja${path}`,
-      'x-default': `https://tseng-law.com/ko${path}`,
+      'x-default': `https://tseng-law.com/en${path}`,
     });
   });
 

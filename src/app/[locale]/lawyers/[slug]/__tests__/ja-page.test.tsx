@@ -96,7 +96,7 @@ describe('Japanese lawyer-profile integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/lawyers/wei-tseng`,
       en: `${SITE_URL}/en/lawyers/wei-tseng`,
       ja: `${SITE_URL}/ja/lawyers/wei-tseng`,
-      'x-default': `${SITE_URL}/ko/lawyers/wei-tseng`,
+      'x-default': `${SITE_URL}/en/lawyers/wei-tseng`,
     });
     expect(sourceMocks.readBySlug).not.toHaveBeenCalled();
   });

@@ -100,7 +100,7 @@ describe('Japanese labor service-detail route', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/services/labor`,
       en: `${SITE_URL}/en/services/labor`,
       ja: `${SITE_URL}/ja/services/labor`,
-      'x-default': `${SITE_URL}/ko/services/labor`,
+      'x-default': `${SITE_URL}/en/services/labor`,
     });
     expect(sourceMocks.readBySlug).not.toHaveBeenCalled();
   });

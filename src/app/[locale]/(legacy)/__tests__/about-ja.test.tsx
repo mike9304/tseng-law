@@ -31,7 +31,7 @@ describe('Japanese About integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/about`,
       en: `${SITE_URL}/en/about`,
       ja: `${SITE_URL}/ja/about`,
-      'x-default': `${SITE_URL}/ko/about`,
+      'x-default': `${SITE_URL}/en/about`,
     });
     expect(metadata.keywords).toEqual([
       '昊鼎国際法律事務所',

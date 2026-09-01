@@ -99,7 +99,7 @@ describe('Japanese family service-detail route', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/services/family`,
       en: `${SITE_URL}/en/services/family`,
       ja: `${SITE_URL}/ja/services/family`,
-      'x-default': `${SITE_URL}/ko/services/family`,
+      'x-default': `${SITE_URL}/en/services/family`,
     });
     expect(sourceMocks.readBySlug).not.toHaveBeenCalled();
   });

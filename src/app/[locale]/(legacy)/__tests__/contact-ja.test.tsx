@@ -40,7 +40,7 @@ describe('Japanese contact route integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/contact`,
       en: `${SITE_URL}/en/contact`,
       ja: `${SITE_URL}/ja/contact`,
-      'x-default': `${SITE_URL}/ko/contact`,
+      'x-default': `${SITE_URL}/en/contact`,
     });
     expect(metadata.keywords).toEqual([
       '台湾法律相談',
@@ -187,7 +187,7 @@ describe('Japanese contact route integration', () => {
         'zh-Hant': `${SITE_URL}/zh-hant/contact`,
         en: `${SITE_URL}/en/contact`,
         ja: `${SITE_URL}/ja/contact`,
-        'x-default': `${SITE_URL}/ko/contact`,
+        'x-default': `${SITE_URL}/en/contact`,
       });
       expect(dispatchedPage.type).toBe(ContactLegacyPage);
       expect(dispatchedPage.props.locale).toBe(locale);

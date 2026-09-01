@@ -32,7 +32,7 @@ describe('Japanese pricing integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/pricing`,
       en: `${SITE_URL}/en/pricing`,
       ja: `${SITE_URL}/ja/pricing`,
-      'x-default': `${SITE_URL}/ko/pricing`,
+      'x-default': `${SITE_URL}/en/pricing`,
     });
     expect(metadata.keywords).toEqual([
       '台湾弁護士費用',

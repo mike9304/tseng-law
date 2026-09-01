@@ -46,7 +46,7 @@ describe('Japanese services-list integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/services`,
       en: `${SITE_URL}/en/services`,
       ja: `${SITE_URL}/ja/services`,
-      'x-default': `${SITE_URL}/ko/services`,
+      'x-default': `${SITE_URL}/en/services`,
     });
     expect(metadata.keywords).toEqual([
       '台湾会社設立',

@@ -94,7 +94,7 @@ describe('Japanese criminal service-detail route', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/services/criminal`,
       en: `${SITE_URL}/en/services/criminal`,
       ja: `${SITE_URL}/ja/services/criminal`,
-      'x-default': `${SITE_URL}/ko/services/criminal`,
+      'x-default': `${SITE_URL}/en/services/criminal`,
     });
     expect(sourceMocks.readBySlug).not.toHaveBeenCalled();
   });

@@ -219,7 +219,7 @@ describe('builder SEO model', () => {
         'https://example.com/en',
       ]),
     );
-    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko');
+    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/en');
   });
 
   it('advertises static-fallback locales for the home page even without a builder en home', () => {
@@ -248,7 +248,7 @@ describe('builder SEO model', () => {
 
     expect(tags).toEqual(expect.arrayContaining(['ko', 'zh-Hant', 'en', 'x-default']));
     expect(alternates.find((a) => a.hreflang === 'en')?.href).toBe('https://example.com/en');
-    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko');
+    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/en');
   });
 
   it('keeps a ko-only page ko-only (self + x-default, no other locales)', () => {
@@ -264,6 +264,31 @@ describe('builder SEO model', () => {
     expect(tags).toEqual(['ko', 'x-default']);
     expect(tags).not.toContain('zh-Hant');
     expect(tags).not.toContain('en');
+    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko/ko-only-page');
+  });
+
+  it('prefers the en entry for x-default and retains the prior fallback when en is absent', () => {
+    const koPage = page({
+      pageId: 'contract-ko',
+      slug: 'contract',
+      locale: 'ko',
+      linkedPageIds: { en: 'contract-en' },
+    });
+    const enPage = page({
+      pageId: 'contract-en',
+      slug: 'contract',
+      locale: 'en',
+    });
+
+    const withEnglish = buildHreflangAlternates(koPage, 'https://example.com', [koPage, enPage]);
+    expect(withEnglish.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/en/contract');
+
+    const withoutEnglish = buildHreflangAlternates(
+      page({ pageId: 'contract-ko-only', slug: 'contract', locale: 'ko' }),
+      'https://example.com',
+      [],
+    );
+    expect(withoutEnglish.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko/contract');
   });
 
   it('advertises ja (5 tags) for a standard-slug page like about', () => {
@@ -281,7 +306,7 @@ describe('builder SEO model', () => {
 
     expect(tags).toEqual(['ko', 'zh-Hant', 'en', 'ja', 'x-default']);
     expect(alternates.find((a) => a.hreflang === 'ja')?.href).toBe('https://example.com/ja/about');
-    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko/about');
+    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/en/about');
   });
 
   it('advertises ja on the home page even without a builder ja home', () => {
@@ -298,7 +323,7 @@ describe('builder SEO model', () => {
 
     expect(tags).toEqual(['ko', 'zh-Hant', 'en', 'ja', 'x-default']);
     expect(alternates.find((a) => a.hreflang === 'ja')?.href).toBe('https://example.com/ja');
-    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko');
+    expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/en');
   });
 
   it('strips the en alternate on English-noindex routes (faq) but keeps ja + x-default', () => {

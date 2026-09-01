@@ -132,7 +132,7 @@ const expectedCanonicalAlternates = {
   'zh-Hant': `${siteUrl}/zh-hant/columns/${slug}`,
   en: `${siteUrl}/en/columns/${slug}`,
   ja: `${siteUrl}/ja/columns/${slug}`,
-  'x-default': `${siteUrl}/ko/columns/${slug}`,
+  'x-default': `${siteUrl}/en/columns/${slug}`,
 } as const;
 
 const expectedCivilColumnSlugs = [

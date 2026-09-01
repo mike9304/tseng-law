@@ -17,7 +17,7 @@ describe('hreflang locale coverage (WO#3)', () => {
       'zh-Hant': 'https://tseng-law.com/zh-hant/about',
       en: 'https://tseng-law.com/en/about',
       ja: 'https://tseng-law.com/ja/about',
-      'x-default': 'https://tseng-law.com/ko/about',
+      'x-default': 'https://tseng-law.com/en/about',
     });
   });
 
@@ -29,6 +29,7 @@ describe('hreflang locale coverage (WO#3)', () => {
       ko: 'https://tseng-law.com/ko/faq',
       'zh-Hant': 'https://tseng-law.com/zh-hant/faq',
       ja: 'https://tseng-law.com/ja/faq',
+      // x-default must not target the noindexed /en page — it falls back to ko.
       'x-default': 'https://tseng-law.com/ko/faq',
     });
 
@@ -36,7 +37,7 @@ describe('hreflang locale coverage (WO#3)', () => {
     const explicit = getLanguageAlternates('/faq', ['ko', 'zh-hant', 'en', 'ja']);
     expect(explicit).not.toHaveProperty('en');
     expect(explicit).toHaveProperty('ja');
-    expect(explicit).toHaveProperty('x-default');
+    expect(explicit['x-default']).toBe('https://tseng-law.com/ko/faq');
 
     // Final page metadata output is en-free as well.
     const metadata = buildSeoMetadata({

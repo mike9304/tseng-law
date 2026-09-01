@@ -45,7 +45,7 @@ describe('Japanese lawyers-list integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/lawyers`,
       en: `${SITE_URL}/en/lawyers`,
       ja: `${SITE_URL}/ja/lawyers`,
-      'x-default': `${SITE_URL}/ko/lawyers`,
+      'x-default': `${SITE_URL}/en/lawyers`,
     });
     expect(metadata.keywords).toEqual([
       '曾雋崴弁護士',
@@ -116,7 +116,7 @@ describe('Japanese lawyers-list integration', () => {
         'zh-Hant': `${SITE_URL}/zh-hant/lawyers`,
         en: `${SITE_URL}/en/lawyers`,
         ja: `${SITE_URL}/ja/lawyers`,
-        'x-default': `${SITE_URL}/ko/lawyers`,
+        'x-default': `${SITE_URL}/en/lawyers`,
       });
     },
   );

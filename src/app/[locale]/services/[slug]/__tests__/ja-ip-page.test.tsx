@@ -94,7 +94,7 @@ describe('Japanese IP service-detail route', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/services/ip`,
       en: `${SITE_URL}/en/services/ip`,
       ja: `${SITE_URL}/ja/services/ip`,
-      'x-default': `${SITE_URL}/ko/services/ip`,
+      'x-default': `${SITE_URL}/en/services/ip`,
     });
     expect(sourceMocks.readBySlug).not.toHaveBeenCalled();
   });

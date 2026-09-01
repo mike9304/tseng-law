@@ -13,6 +13,7 @@ import type { BuilderPageMeta } from '@/lib/builder/site/types';
 import { buildSitePageAbsoluteUrl } from '@/lib/builder/site/paths';
 import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
+import { HREFLANG_X_DEFAULT_LOCALE } from '@/lib/seo';
 
 export interface HreflangAlternate {
   /** Locale tag in the IETF form expected by Google (e.g. zh-Hant). */
@@ -156,7 +157,7 @@ export function buildHreflangAlternates(
   const staticSlug = page.slug ?? '';
   // English-noindex routes (e.g. /faq) must never advertise an `en`
   // alternate — the /en/<slug> page is noindex. Mirrors the rule in
-  // src/lib/seo.ts getLanguageAlternates (x-default stays, it points at ko).
+  // src/lib/seo.ts getLanguageAlternates (x-default prefers en when available).
   const stripEnglish = isEnglishNoindexPath(`/${staticSlug}`);
   if (PUBLIC_MULTILOCALE_ROUTE_SLUGS.has(staticSlug)) {
     // Iterate the public site locales (incl. ja) — /ja/<slug> is served 200
@@ -183,9 +184,10 @@ export function buildHreflangAlternates(
     }
   }
 
-  // x-default — prefer the default-locale link when available, otherwise
-  // fall back to the page itself.
-  const defaultEntry = out.find((entry) => entry.locale === defaultLocale);
+  // x-default — prefer the shared hreflang contract locale when available,
+  // then retain the existing default-locale and current-page fallback chain.
+  const defaultEntry = out.find((entry) => entry.locale === HREFLANG_X_DEFAULT_LOCALE)
+    ?? out.find((entry) => entry.locale === defaultLocale);
   out.push({
     hreflang: 'x-default',
     locale: defaultEntry?.locale ?? page.locale,

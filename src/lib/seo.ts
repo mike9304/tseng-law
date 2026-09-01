@@ -101,6 +101,9 @@ const ORGANIZATION_ID = 'https://tseng-law.com/#organization';
  */
 export const ATTORNEY_PERSON_ID = 'https://tseng-law.com/#person-tseng-chun-wei';
 
+/** Hreflang fallback for users whose language does not match a localized page. */
+export const HREFLANG_X_DEFAULT_LOCALE: SiteLocale = 'en';
+
 const organizationName: Record<SiteLocale, string> = {
   ko: '법무법인 호정',
   'zh-hant': '昊鼎國際法律事務所',
@@ -199,14 +202,16 @@ export function getLanguageAlternates(
   alternateLocales: readonly (Locale | SiteLocale)[] = siteLocales,
 ): Record<string, string> {
   // English-noindex routes (e.g. /faq) must never emit an `en` alternate,
-  // no matter which alternateLocales the caller passed. x-default stays.
-  const effectiveLocales = isEnglishNoindexPath(path)
+  // no matter which alternateLocales the caller passed — including via
+  // x-default, which falls back to the default locale on those routes.
+  const englishNoindex = isEnglishNoindexPath(path);
+  const effectiveLocales = englishNoindex
     ? alternateLocales.filter((locale) => getLocaleLanguageTag(locale).toLowerCase() !== 'en')
     : alternateLocales;
   const entries = effectiveLocales.map((locale) => [getLocaleLanguageTag(locale), buildAbsoluteUrl(getLocalizedPath(locale, path))]);
   return {
     ...Object.fromEntries(entries),
-    'x-default': buildAbsoluteUrl(getLocalizedPath(defaultLocale, path)),
+    'x-default': buildAbsoluteUrl(getLocalizedPath(englishNoindex ? defaultLocale : HREFLANG_X_DEFAULT_LOCALE, path)),
   };
 }
 

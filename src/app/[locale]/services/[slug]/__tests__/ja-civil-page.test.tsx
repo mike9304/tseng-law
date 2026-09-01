@@ -101,7 +101,7 @@ describe('Japanese civil service-detail route', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/services/civil`,
       en: `${SITE_URL}/en/services/civil`,
       ja: `${SITE_URL}/ja/services/civil`,
-      'x-default': `${SITE_URL}/ko/services/civil`,
+      'x-default': `${SITE_URL}/en/services/civil`,
     });
     expect(sourceMocks.readBySlug).not.toHaveBeenCalled();
   });

@@ -123,7 +123,7 @@ describe('Japanese investment service-detail route', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/services/investment`,
       en: `${SITE_URL}/en/services/investment`,
       ja: `${SITE_URL}/ja/services/investment`,
-      'x-default': `${SITE_URL}/ko/services/investment`,
+      'x-default': `${SITE_URL}/en/services/investment`,
     });
     expect(metadata.keywords).toEqual(expect.arrayContaining([
       approved!.title,

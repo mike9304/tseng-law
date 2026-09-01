@@ -277,7 +277,7 @@ describe('live route SEO defaults', () => {
       'https://tseng-law.com/en/videos',
     );
     expect(alternates.find((entry) => entry.hreflang === 'x-default')?.href).toBe(
-      'https://tseng-law.com/ko/videos',
+      'https://tseng-law.com/en/videos',
     );
   });
 });

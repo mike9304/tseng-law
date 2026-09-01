@@ -29,7 +29,7 @@ export type LandingContent = {
 
 export const landingContent: Record<SiteLocale, LandingContent> = {
   ko: {
-    metaTitle: '한국어 가능한 대만 변호사 | 법무법인 호정 (타이베이)',
+    metaTitle: '한국어 가능한 대만 변호사 (타이베이)',
     description:
       '법무법인 호정(Hovering International Law Firm)은 타이베이 소재 대만 로펌으로, 대만 변호사 증준외가 한국어·중국어·일본어로 상담합니다. 대만 회사설립·민형사 소송·투자 자문을 다룹니다.',
     keywords: [
@@ -106,7 +106,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     ctaButton: '증준외 대만 변호사에게 이메일 상담',
   },
   'zh-hant': {
-    metaTitle: '會說韓文的台灣律師 | 昊鼎國際法律事務所（台北）',
+    metaTitle: '會說韓文的台灣律師（台北）',
     description:
       '昊鼎國際法律事務所（Hovering International Law Firm）為台北的台灣律師事務所，曾雋崴律師可以韓語、中文、日語提供諮詢，承辦台灣公司設立、民刑事案件與投資顧問。',
     keywords: [
@@ -183,7 +183,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     ctaButton: '寄信諮詢曾雋崴律師',
   },
   en: {
-    metaTitle: 'Korean-Speaking Taiwan Lawyer | Hovering International Law Firm (Taipei)',
+    metaTitle: 'Korean-Speaking Taiwan Lawyer in Taipei',
     description:
       'Hovering International Law Firm is a Taiwan law firm based in Taipei. Attorney Wei Tseng consults in Korean, Chinese, and Japanese, covering Taiwan company setup, civil and criminal litigation, and investment advisory.',
     keywords: [
@@ -260,7 +260,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     ctaButton: 'Email Attorney Tseng for Consultation',
   },
   ja: {
-    metaTitle: '韓国語対応の台湾弁護士 | 昊鼎国際法律事務所（台北）',
+    metaTitle: '韓国語対応の台湾弁護士（台北）',
     description:
       '昊鼎国際法律事務所（Hovering International Law Firm）は台北所在の台湾法律事務所で、台湾弁護士の曾雋崴が韓国語・中国語・日本語でご相談を承ります。台湾会社設立・民事刑事訴訟・投資顧問を取り扱います。',
     keywords: [

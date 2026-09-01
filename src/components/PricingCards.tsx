@@ -33,7 +33,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         unit: '/ 1시간',
         details: [
           '대면 또는 화상 상담',
-          '한국어·중국어·일본어 상담 가능',
+          '한국어·영어·중국어·일본어 상담 가능',
           '법률 이슈 분석 및 방향 제시',
           '사전 예약 필수'
         ]
@@ -92,7 +92,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         unit: '/ 1小時',
         details: [
           '面談或視訊諮詢',
-          '韓語·中文·日語諮詢皆可',
+          '韓語·英語·中文·日語諮詢皆可',
           '法律問題分析與方向建議',
           '須事先預約'
         ]
@@ -151,7 +151,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         unit: '/ 1 hour',
         details: [
           'In-person or video consultation',
-          'Available in Korean, Chinese & Japanese',
+          'Available in English, Korean, Chinese & Japanese',
           'Legal issue analysis & guidance',
           'Appointment required'
         ]
@@ -210,7 +210,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         unit: '/ 1時間',
         details: [
           '対面またはオンライン（ビデオ通話）での相談',
-          '韓国語・中国語・日本語での相談に対応',
+          '韓国語・英語・中国語・日本語での相談に対応',
           '法的問題の分析と対応方針の提案',
           '事前予約制'
         ]

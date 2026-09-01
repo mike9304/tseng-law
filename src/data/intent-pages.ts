@@ -424,13 +424,14 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       label: 'SEARCH GUIDE',
       title: 'Taiwan Lawyer Guide',
       description: 'A practical landing page for clients looking for a Taiwan lawyer, covering consultation scope, process, and related services.',
-      keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners'],
-      searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients'],
+      keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners', 'English speaking lawyer in Taipei'],
+      searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients', 'English speaking lawyer Taipei'],
       heroPoints: [
         'This page connects Korean and international clients to Taiwan legal support for company setup, investment, and disputes.',
         'Initial fact review, document analysis, procedure planning, and dispute handling can be assessed in one flow.',
         'You can review Attorney Wei Tseng’s profile, columns, and public channels from the same entry point.',
         'The firm is based in Taipei and works with international clients on Taiwan company setup, disputes, employment, and regulatory matters.',
+        'Consultations are available in English, in person or by video.',
       ],
       idealFor: [
         'Clients who want Taiwan legal issues explained in Korean or multilingual terms',

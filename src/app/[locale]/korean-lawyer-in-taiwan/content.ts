@@ -185,7 +185,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
   en: {
     metaTitle: 'Korean-Speaking Taiwan Lawyer in Taipei',
     description:
-      'Hovering International Law Firm is a Taiwan law firm based in Taipei. Attorney Wei Tseng consults in Korean, Chinese, and Japanese, covering Taiwan company setup, civil and criminal litigation, and investment advisory.',
+      'Hovering International Law Firm is a Taiwan law firm based in Taipei. Attorney Wei Tseng consults in Korean, English, Chinese, and Japanese, covering Taiwan company setup, civil and criminal litigation, and investment advisory.',
     keywords: [
       'Korean-speaking Taiwan lawyer',
       'Taiwan lawyer',
@@ -197,7 +197,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     heroLabel: 'KOREAN-SPEAKING TAIWAN LAWYER',
     title: 'Korean-Speaking Taiwan Lawyer — Hovering International Law Firm',
     lead: [
-      'Hovering International Law Firm is a Taiwan law firm based in Taipei. Attorney Wei Tseng consults in Korean, Chinese, and Japanese.',
+      'Hovering International Law Firm is a Taiwan law firm based in Taipei. Attorney Wei Tseng consults in Korean, English, Chinese, and Japanese.',
       'The firm handles Taiwan company setup, civil and criminal litigation, and investment advisory, guiding Korean companies and individuals through Taiwan legal matters in Korean.',
       'From fact-finding and jurisdiction design in the first consultation to document review and litigation response, the firm works through the matter end to end.',
     ],

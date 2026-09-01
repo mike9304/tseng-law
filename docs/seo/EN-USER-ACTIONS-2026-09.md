@@ -20,9 +20,8 @@
 - 1순위 AmCham Taiwan / ECCT 가입+회원 디렉토리 등재(회비 확인) → 2순위 전문가 코멘트 플랫폼(Source of Sources·Qwoted 무료 가입) → 3순위 대만 영어 매체 기고.
 - 발송 전 변호사 검수 + 廣告 표기·연락처·3년 보존 규정 확인. 대가형 리퍼럴 플랫폼(Avvo류)은 §7 검토 전 금지.
 
-## D. 결정 대기 (ASK-20260901-en-sea-claude.md)
-- 영어 상담 가능 여부 → 예: pricing 언어 표기에 English 추가 + "English-speaking lawyer in Taipei" 문구 웨이브 / 아니오: 국제 고객 표현 유지.
-- 작업 완료 후 push/배포 1회 확인(diff 검수 포함).
+## D. 결정 이력
+- 영어 상담: **승인(9/1 손빗 정정 중계)** → WO-EN-3 반영 완료(pricing 4로케일 English 추가 + 랜딩 English-speaking 문구). 배포: 미승인 유지(로컬 보관).
 
 ## E. 12주 후 (2026-11 말) 판정
 - EN-SEA-MEASUREMENT §4 반증 조건으로 채점 — 무변화면 권위 병목 재심, EN 증설 중단이 규칙.
@@ -30,14 +29,14 @@
 ## F. GBP 영어 문안 (붙여넣기용 — B단계 실행 시)
 
 **비즈니스 설명(영어, 750자 이내 규정 준수·승소율/보장 문구 없음):**
-> Hovering International Law Firm (昊鼎國際法律事務所) is a Taipei-based law firm advising international and Korean clients on Taiwan company formation and investment, civil and commercial litigation, labor and employment, family and inheritance matters, and cosmetics regulatory compliance (PIF). Consultations are available in person or by video. Led by Attorney Wei Tseng (曾雋崴), licensed in Taiwan.
+> Hovering International Law Firm (昊鼎國際法律事務所) is a Taipei-based law firm advising international and Korean clients on Taiwan company formation and investment, civil and commercial litigation, labor and employment, family and inheritance matters, and cosmetics regulatory compliance (PIF). Consultations are available in English, Korean, Mandarin, and Japanese, in person or by video. Led by Attorney Wei Tseng (曾雋崴), licensed in Taiwan.
 
 **Services 목록(사전정의 항목 우선 선택, 없으면 커스텀):** Company registration · Investment advisory · Civil litigation · Criminal defense · Labor & employment law · Family law · Inheritance · Cosmetics licensing (TFDA/PIF) · Trademark & IP
 
 **영어권 의뢰인 리뷰 요청 문구(무대가 — 인센티브 금지):**
 > Thank you for working with us. If you found our service helpful, a short Google review would mean a lot — it helps other international clients find legal support in Taiwan.
 
-※ 영어 상담 가능 여부 답신 전에는 설명문에 상담 언어 문구를 넣지 않는다(위 문안은 언어 무주장).
+※ 영어 상담 승인됨(9/1) — 위 문안의 언어 문구 사용 가능.
 
 ## G. 배포 직후 (승인 후 Fable 또는 사용자 — 1회)
 - `node scripts/indexnow-submit.mjs` 로 변경 EN URL(랜딩 2종·korean-lawyer-in-taiwan 4로케일·사이트맵)만 제출(Bing·네이버 채널, 전량 소급 금지 — 8/18 진단 준수).

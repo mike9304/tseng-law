@@ -64,3 +64,5 @@ Base: origin/main@22d43420 · Worktree: `~/Projects/tseng-law-seo-en-20260901` �
 ## 최종 지시 (2026-09-01 17:2x 손빗 중계 — 절대 준수)
 사용자 결정: **훅 그대로 두기 · 배포 금지 · /goal clear 안 함 · 재질문 금지.** 이 세션은 의도된 대기 상태다.
 후속 세션/바운스 규약: 브리지 감시만 유지, 새 사용자 지시("배포 승인" 등) 전까지 어떤 재질문·배포·훅 조작도 하지 않는다. 재개 절차는 사이클 9 참조.
+
+- [사이클 10 · 2026-09-01 20:5x] 손빗 정정 중계(3중 확인: 피어 메시지+브리지 파일+cross-session): **② 영어 상담 사용자 승인 — 스킵 철회.** WO-EN-3 재생성·발주·검수 통과: PricingCards 4로케일 상담 언어에 영어 추가(:36/:95/:154/:213), intent-pages en taiwan-lawyer에 'English speaking lawyer in Taipei' 키워드·서치텀·heroPoint, korean-lawyer-in-taiwan en 2곳 "Korean, English, Chinese, and Japanese". 범위 테스트 46 그린, diff 9줄. ① 배포는 계속 금지(로컬 커밋만). 런북 §D/§F 승인 반영.

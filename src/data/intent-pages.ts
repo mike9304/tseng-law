@@ -424,18 +424,21 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       label: 'SEARCH GUIDE',
       title: 'Taiwan Lawyer Guide',
       description: 'A practical landing page for clients looking for a Taiwan lawyer, covering consultation scope, process, and related services.',
-      keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer'],
+      keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners'],
       searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients'],
       heroPoints: [
         'This page connects Korean and international clients to Taiwan legal support for company setup, investment, and disputes.',
         'Initial fact review, document analysis, procedure planning, and dispute handling can be assessed in one flow.',
         'You can review Attorney Wei Tseng’s profile, columns, and public channels from the same entry point.',
+        'The firm is based in Taipei and works with international clients on Taiwan company setup, disputes, employment, and regulatory matters.',
       ],
       idealFor: [
         'Clients who want Taiwan legal issues explained in Korean or multilingual terms',
         'Businesses that need a Taiwan lawyer for incorporation or investment matters',
         'Individuals dealing with civil, criminal, traffic, divorce, or inheritance disputes in Taiwan',
         'Anyone who wants to understand consultation steps and materials before reaching out',
+        'Foreign residents and business owners in Taiwan who need a local law firm in Taipei',
+        'Overseas companies entering Taiwan or facing a dispute with a Taiwanese counterparty',
       ],
       reviewPoints: [
         'Jurisdiction, timing, and evidence strategy vary by case type.',
@@ -477,6 +480,14 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
           question: 'What materials are useful before consultation?',
           answer:
             'Contracts, notices, counterpart details, timelines, and key evidence such as photos, videos, or medical records are the most useful starting materials.',
+        },
+        {
+          question: 'How much does a consultation cost?',
+          answer: 'A general legal consultation is NT$3,000 per hour, in person or by video. For case work, we provide a quote after reviewing your documents — the Service Fees page lists the current structure, including Taiwan company setup from NT$50,000 for standard cases.',
+        },
+        {
+          question: 'Do I need to visit Taipei for the first consultation?',
+          answer: 'No. Consultations are available in person or by video, so an initial review can usually be completed from overseas once your documents and timeline are organized.',
         },
       ],
     },
@@ -551,8 +562,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       label: 'SEARCH GUIDE',
       title: 'Taiwan Litigation Lawyer Guide',
       description: 'A practical guide for clients looking for a Taiwan litigation lawyer for civil claims, damages, criminal matters, and family disputes.',
-      keywords: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan criminal lawyer', 'Wei Tseng attorney'],
-      searchTerms: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer'],
+      keywords: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan criminal lawyer', 'Wei Tseng attorney', 'sue a company in Taiwan', 'Taiwan debt recovery lawyer', 'Taiwan commercial dispute lawyer'],
+      searchTerms: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan debt recovery', 'sue a Taiwanese company'],
       heroPoints: [
         'The page covers civil litigation, damages claims, traffic accidents, criminal procedure, and family disputes.',
         'Foreign-national matters often require combined review of evidence, translation, service, and immigration-related issues.',
@@ -563,6 +574,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'People who need criminal-complaint strategy or police-investigation support',
         'Cross-border divorce, custody, or inheritance matters involving Korea and Taiwan',
         'Cases where pre-litigation settlement and evidence strategy need to be reviewed early',
+        'Overseas companies with unpaid invoices or contract breaches by a Taiwanese counterparty',
+        'International clients who need a Taiwan court or settlement strategy managed remotely',
       ],
       reviewPoints: [
         'Early fact development and evidence preservation can materially affect the outcome.',
@@ -609,6 +622,22 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
           question: 'Can you also assess whether settlement makes sense before filing?',
           answer:
             'Yes, but that assessment should be made after reviewing damages, liability structure, and the current evidence record.',
+        },
+        {
+          question: 'Can a foreign company take action against a Taiwanese company without visiting Taiwan?',
+          answer: 'In many civil matters the early phase — document review, demand letters, and settlement contact — can be handled remotely with a power of attorney. Whether court appearance is needed depends on the procedure and its stage; we map this out during the initial consultation.',
+        },
+        {
+          question: 'How do you handle unpaid invoices or contract breaches by a Taiwanese counterparty?',
+          answer: 'We start from the contract, invoices, and correspondence to assess liability and the recoverable amount, then compare a negotiated settlement, civil action, and enforcement options before recommending a path.',
+        },
+        {
+          question: 'What does a litigation consultation cost?',
+          answer: 'An initial consultation is NT$3,000 per hour, in person or by video. Case fees are quoted separately after the facts and documents are reviewed — see the Service Fees page for the current structure.',
+        },
+        {
+          question: 'Can you tell me whether my dispute is worth pursuing before I commit?',
+          answer: 'Yes. The first step is an assessment of liability, evidence, and likely recovery against cost and timeline — and we will tell you plainly when a claim is not worth pursuing.',
         },
       ],
     },

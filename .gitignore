@@ -57,3 +57,7 @@ AGENT-STATE.json
 # scratch / audit evidence (regenerable, huge)
 tmp/
 .omo/
+
+# visit-metrics local data (traffic data stays out of the public repo)
+/metrics-local/
+.data/

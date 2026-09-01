@@ -38,3 +38,7 @@
 > Thank you for working with us. If you found our service helpful, a short Google review would mean a lot — it helps other international clients find legal support in Taiwan.
 
 ※ 영어 상담 가능 여부 답신 전에는 설명문에 상담 언어 문구를 넣지 않는다(위 문안은 언어 무주장).
+
+## G. 배포 직후 (승인 후 Fable 또는 사용자 — 1회)
+- `node scripts/indexnow-submit.mjs` 로 변경 EN URL(랜딩 2종·korean-lawyer-in-taiwan 4로케일·사이트맵)만 제출(Bing·네이버 채널, 전량 소급 금지 — 8/18 진단 준수).
+- 라이브 스팟체크: `curl -s https://tseng-law.com/sitemap.xml | grep x-default | head -3` → en 확인, `/en/faq`는 ko 확인.

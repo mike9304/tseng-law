@@ -69,7 +69,7 @@ describe('footer social localization', () => {
         label: '台湾会社設立ガイド',
         href: '/ja/columns/taiwan-company-establishment-basics',
       },
-      { label: '韓国語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' },
+      { label: '日本語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' },
     ];
     const popularTopics = siteContent.ja.footer.columns.find(
       (column) => column.title === '人気トピック',

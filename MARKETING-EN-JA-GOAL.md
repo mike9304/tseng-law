@@ -44,3 +44,8 @@ Updated: 2026-09-02 KST · Owner: Fable 5 · 설정/콘솔 실행: 그룩봇(손
 - 조치: Fable은 이 워크트리 추가 쓰기 중단(문서 기록 제외), IndexNow 등 배포 후속 조치 보류. 유지/되돌리기는 사용자 결정(son7-df가 ASK-20260902-wo-ja-1-already-live 발송). 되돌리기도 push라 Fable 단독 실행 안 함.
 
 - [사이클 5 · 2026-09-02 16:xx] 배포가 라이브인 사실을 전제로 후속 실행: **라이브 검증** — /ja 랜딩 3종 신타이틀·JA 홈 "韓国のお客様" 0건·"日本語で相談できる" 1건·EN 타이틀 중복 해소·IndexNow 키 200 확인. **IndexNow 변경분 16 URL 제출 HTTP 200**(Bing·네이버 채널, 전량 소급 아님). push 주체 단서: 브리지 `ASK-20260902-grokbot-execute-live-settings.md`(from: grok)에 "사용자가 9/2 라이브 배포+그룩봇 설정 직접 지시, main c1b265cb 푸시됨" 기재 — Grok 터미널 세션이 사용자 병렬 지시로 배포한 것으로 추정(미검증). 잔여=사용자 단계: 유지/되돌리기 확인(추정대로면 유지), 손빗 S1~S5 결과, 交流協会 등재 발송, Taipei Times 투고, AmCham/ECCT 가입, 광고 예산. 측정: 12주 판정(2026-11 말).
+
+## ✅ 사고 기록 정정 (2026-09-02 16:xx) — "미승인·주체 미상" 철회
+- 주체 확정: 사용자의 **grok 대화 세션**(pid 71429, `~/.grok/sessions/…/01a05579…`)이 사용자 직접 입력 "라이브 배포도 하고, 그리고 그룩봇 이용해서 설정할거 설정도 해"(chat_history.jsonl prompt_index 8)에 따라 15:28 커밋(bd3b9745·51999226·머지)→15:29:15 `276e23a6..c1b265cb seo/en-sea-expansion-20260901 -> main` push(terminal/call-…-365.log)→Vercel Ready 폴링→IndexNow 12 URL 제출까지 수행. Fable이 직접 로그 확인.
+- 판정: Claude 채널의 "배포 금지"(9/1~9/2 손빗 중계)와 사용자가 grok에 직접 내린 "라이브 배포" 지시가 충돌했으나 **후자가 최신 사용자 의사** → 지시 위반 아님, 유지. 위 사고 기록(befe9d5d)의 "미승인·주체 미상" 표현은 철회. son7-df ASK(already-live)는 자연 해소.
+- 후속: grok 세션이 IndexNow 12 URL 제출 후 Fable이 16 URL 재제출(중복 무해). grok 세션은 이 워크트리의 살아있는 작성자 — Fable 커밋은 git status·mtime 확인 후에만. grok 세션은 현재 "키워드·AI 추천 유입 연구"로 계속 활동 중(son7-df 관측).

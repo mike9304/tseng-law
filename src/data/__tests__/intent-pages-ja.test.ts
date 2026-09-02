@@ -32,7 +32,10 @@ describe('Japanese intent landing pages', () => {
 
     expect(ja?.serviceSlugs).toEqual(ko?.serviceSlugs);
     expect(ja?.columnSlugs).toEqual(ko?.columnSlugs);
-    expect(ja?.faq).toHaveLength(ko?.faq.length ?? -1);
+    // WO-JA-1 added one Japanese-only FAQ (debt recovery) to the litigation page.
+    const jaOnlyFaqCount = slug === 'taiwan-litigation-lawyer' ? 1 : 0;
+    expect(ko).toBeDefined();
+    expect(ja?.faq).toHaveLength(ko!.faq.length + jaOnlyFaqCount);
   });
 
   it.each(intentPageSlugs)('emits a self-referencing /ja canonical for %s', (slug) => {

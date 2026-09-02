@@ -35,3 +35,16 @@
 ## 4. 오늘 이후 변경 이력
 
 - (기록 시작 — 이 goal의 커밋들이 여기 append)
+
+## 5. 분모 고정 — 손빗 GSC 실측 (2026-09-02, sc-domain:tseng-law.com, 2026-08-03~08-30, Web)
+
+| 세그먼트 | 클릭 | 노출 | CTR | 평균순위 | 비고 |
+|---|---|---|---|---|---|
+| 사이트 전체 | 16 | 761 | 2.1% | 11.2 | 국가 TW 10/363 · KR 5/269 · SG 1/16 · US 0/42 · CN 0/24 · HK 0/18 · JP 0/4 · GB 0/4 · MY 0/1 · PH 0/1 |
+| `/en/` | 1 | 26 | 3.8% | 9.4 | guides/taiwan-company-setup 1/15 · about 0/5 · korean-lawyer-in-taiwan 0/5 · lawyers 0/1 |
+| `/ja/` | **0** | **0** | — | — | 쿼리·국가 없음 |
+
+색인(URL 검사): **EN 랜딩 3종 전부 미색인**(taiwan-lawyer·litigation Discovered-not-indexed, company-setup Crawled-not-indexed 마지막 크롤 2026-03-10) / korean-lawyer-in-taiwan·guides 색인됨. **JA 전부 미색인**: /ja·/ja/guides Discovered-not-indexed(홈: "참조 페이지 없음"), /ja/taiwan-lawyer·/ja/pricing **URL unknown to Google**. 생성형 AI = Include. Bing WMT 미로그인(핸드오프).
+국가별 상위 쿼리: SG 台湾公司设立 0/8(58위)·台湾注册公司 0/7(66위) — 싱가포르 수요는 **간체 중국어**로 들어옴(EN 아님, 관찰 기록). US 대만 회사설립 0/2(3위).
+
+**판정(2026-09-02)**: JA 트랙의 1차 게이트는 노출이 아니라 **발견·색인**. 원인 하나 확정·수정 — 언어 전환 링크가 /ja 전용 라우트에서 `/ja/columns`로 떨어져 JA 랜딩·pricing에 크롤 가능 유입 링크가 0(public-route-policy.ts, 커밋 db542668). 후속 = GSC 색인 요청 10 URL(손빗 S1b)·사이트맵 재제출·내부링크. 12주 반증의 분모는 위 표.

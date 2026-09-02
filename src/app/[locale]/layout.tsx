@@ -11,6 +11,7 @@ import ScrollTopButton from '@/components/ScrollTopButton';
 import QuickContactWidget from '@/components/QuickContactWidget';
 import YearEndEventPopup from '@/components/YearEndEventPopup';
 import CinematicRouteShell from '@/components/CinematicRouteShell';
+import VisitTracker from '@/components/metrics/VisitTracker';
 import {
   getLocaleFontClassName,
   getManagedLocaleFontClassNames,
@@ -100,6 +101,7 @@ export default async function LocaleLayout(
       >
         {children}
       </CinematicRouteShell>
+      <VisitTracker locale={locale} />
     </>
   );
 }

@@ -61,14 +61,13 @@ describe('footer social localization', () => {
 
   it('preserves the Japanese footer contract', () => {
     const html = renderFooter('ja');
+    // Mirrors the EN "Popular Topics" contract so every dedicated JA landing has
+    // a crawlable inbound link from every page (GSC: "URL unknown", 2026-09-02).
     const expectedTopics = [
-      { label: '台湾弁護士', href: '/ja/lawyers' },
-      { label: '台湾会社設立', href: '/ja/services#investment' },
-      { label: '台湾訴訟', href: '/ja/services#civil' },
-      {
-        label: '台湾会社設立ガイド',
-        href: '/ja/columns/taiwan-company-establishment-basics',
-      },
+      { label: '台湾弁護士（日本語相談）', href: '/ja/taiwan-lawyer' },
+      { label: '台湾会社設立の弁護士', href: '/ja/taiwan-company-setup-lawyer' },
+      { label: '台湾訴訟の弁護士', href: '/ja/taiwan-litigation-lawyer' },
+      { label: '台湾会社設立ガイド', href: '/ja/guides/taiwan-company-setup' },
       { label: '日本語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' },
     ];
     const popularTopics = siteContent.ja.footer.columns.find(
@@ -114,13 +113,9 @@ describe('footer social localization', () => {
       expect(html).toContain(`href="${href}">${label}</a>`);
     });
 
-    [
-      '/ja/taiwan-lawyer',
-      '/ja/taiwan-company-setup-lawyer',
-      '/ja/taiwan-litigation-lawyer',
-      '/ja/guides/taiwan-company-setup',
-      '/ja/korean-lawyer-in-taiwan',
-    ].forEach((href) => {
+    // Base footer columns render at most BASE_FOOTER_LINK_LIMIT links, so the
+    // entries after the three JA landings stay in content but are not rendered.
+    ['/ja/guides/taiwan-company-setup', '/ja/lawyers/wei-tseng'].forEach((href) => {
       expect(html).not.toContain(`href="${href}"`);
     });
 

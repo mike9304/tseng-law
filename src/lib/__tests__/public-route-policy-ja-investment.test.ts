@@ -13,6 +13,12 @@ describe('Japanese service-detail language switch policy', () => {
     ['/services/ip', '/ja/services/ip'],
     ['/columns/taiwan-company-establishment-basics', '/ja/columns/taiwan-company-establishment-basics'],
     ['/lawyers/wei-tseng', '/ja/lawyers/wei-tseng'],
+    // Dedicated JA-served routes must keep the same page (crawlable inbound link).
+    ['/taiwan-lawyer', '/ja/taiwan-lawyer'],
+    ['/taiwan-company-setup-lawyer', '/ja/taiwan-company-setup-lawyer'],
+    ['/taiwan-litigation-lawyer', '/ja/taiwan-litigation-lawyer'],
+    ['/korean-lawyer-in-taiwan', '/ja/korean-lawyer-in-taiwan'],
+    ['/guides/taiwan-company-setup', '/ja/guides/taiwan-company-setup'],
     ['/store/products/taiwan-business-guide', '/ja/columns'],
   ])('maps %s to %s', (sourcePath, targetPath) => {
     expect(jaLanguageSwitchTarget(sourcePath)).toBe(targetPath);

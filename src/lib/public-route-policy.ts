@@ -30,6 +30,20 @@ export const JA_UNSUPPORTED_PREFIXES = [
   'builder-fixtures',
 ] as const;
 
+/**
+ * Dedicated route directories (not catch-all) that already serve a Japanese
+ * body at `/ja/<path>`. The language switch must land on the same page here —
+ * falling back to `/ja/columns` leaves these JA pages with no crawlable
+ * inbound link (GSC: "URL unknown to Google", 2026-09-02).
+ */
+export const JA_DEDICATED_ROUTE_PATHS = new Set([
+  'taiwan-lawyer',
+  'taiwan-company-setup-lawyer',
+  'taiwan-litigation-lawyer',
+  'korean-lawyer-in-taiwan',
+  'guides/taiwan-company-setup',
+]);
+
 export const JA_SAFE_FALLBACK = '/ja/columns';
 
 export function isJaFullStaticPath(slugPath: string): boolean {
@@ -62,6 +76,9 @@ export function jaLanguageSwitchTarget(pathWithoutLocale: string): string {
   }
   if (clean === 'lawyers/wei-tseng') {
     return '/ja/lawyers/wei-tseng';
+  }
+  if (JA_DEDICATED_ROUTE_PATHS.has(clean)) {
+    return `/ja/${clean}`;
   }
   if (isJaFullStaticPath(clean.split('/')[0] === clean ? clean : clean.split('/')[0] || '') && !clean.includes('/')) {
     return clean === '' ? '/ja' : `/ja/${clean}`;

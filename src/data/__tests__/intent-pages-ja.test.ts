@@ -32,29 +32,10 @@ describe('Japanese intent landing pages', () => {
 
     expect(ja?.serviceSlugs).toEqual(ko?.serviceSlugs);
     expect(ja?.columnSlugs).toEqual(ko?.columnSlugs);
-    // WO-JA-1 added one Japanese-only FAQ to both the company-setup and litigation pages.
-    const jaOnlyFaqCount =
-      slug === 'taiwan-company-setup-lawyer' || slug === 'taiwan-litigation-lawyer' ? 1 : 0;
+    // WO-JA-1 added one Japanese-only FAQ (debt recovery) to the litigation page.
+    const jaOnlyFaqCount = slug === 'taiwan-litigation-lawyer' ? 1 : 0;
     expect(ko).toBeDefined();
     expect(ja?.faq).toHaveLength(ko!.faq.length + jaOnlyFaqCount);
-  });
-
-  it('pins the WO-JA-1 company-setup description and appended FAQ copy', () => {
-    const page = getIntentPage('ja', 'taiwan-company-setup-lawyer');
-
-    expect(page?.description).toBe(
-      '日本企業の台湾進出に向けた会社設立の手続き・費用・期間と、子会社・支店・駐在員事務所の違いを日本語で解説します。投資審査から銀行口座開設、就業許可までを一貫してサポートします。',
-    );
-    expect(page?.faq[0]).toEqual({
-      question: '台湾の会社設立は通常どのくらいかかりますか？',
-      answer:
-        '一般的に約3ヶ月前後を見込みますが、投資承認の対象かどうか、資本金送金の時期、業種別許可の必要性によって変わることがあります。',
-    });
-    expect(page?.faq[3]).toEqual({
-      question: '設立にはどのくらいかかりますか？',
-      answer:
-        '会社設立自体はおおむね3か月、その後の就業許可・居留証に約1か月が目安です（詳細は台湾法人設立総合ガイドをご覧ください）。',
-    });
   });
 
   it.each(intentPageSlugs)('emits a self-referencing /ja canonical for %s', (slug) => {

@@ -21,7 +21,7 @@ const HOME_SEO_COPY = {
   en: {
     title: 'Taiwan Lawyer, Litigation & Company Setup',
     description:
-      'Hovering International Law Firm advises on Taiwan company formation, litigation, and investment matters for Korean and international clients.',
+      'English-speaking Taiwan lawyer for expats and foreigners in Taiwan: company setup, litigation, and investment counsel in Taipei.',
   },
 } as const satisfies Record<Locale, LiveRouteSeoDefault>;
 

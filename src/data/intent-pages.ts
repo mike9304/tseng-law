@@ -423,7 +423,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       slug: 'taiwan-lawyer',
       label: 'SEARCH GUIDE',
       title: 'Taiwan Lawyer Guide',
-      description: 'A practical landing page for clients looking for a Taiwan lawyer, covering consultation scope, process, and related services.',
+      description:
+        'English-speaking Taiwan lawyer for expats and foreigners in Taiwan: consultation scope, process, and related services for company setup, investment, and disputes.',
       keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners', 'English speaking lawyer in Taipei'],
       searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients', 'English speaking lawyer Taipei'],
       heroPoints: [

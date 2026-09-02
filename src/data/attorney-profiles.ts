@@ -203,11 +203,11 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
-        'Attorney Wei Tseng advises Korean and Japanese clients on Taiwan company setup, investment, litigation, intellectual property, visas, and legal risk review.',
-        'She works across Korean, Chinese, and Japanese communication to connect initial consultation, filings, execution, and dispute response into one strategy.',
+        'Attorney Wei Tseng advises English-speaking, Korean, and Japanese clients on Taiwan company setup, investment, litigation, intellectual property, visas, and legal risk review.',
+        'She consults in English, Korean, Chinese, and Japanese to connect initial consultation, filings, execution, and dispute response into one strategy.',
         'Representative work includes a TWD 1.57M first-instance damages ruling in a Korean student gym injury case, alongside continuous legal publishing through WEI Lawyer and external media appearances.',
       ],
-      languages: ['Korean', 'Chinese', 'Japanese'],
+      languages: ['English', 'Korean', 'Chinese', 'Japanese'],
       practiceAreas: ['Taiwan company setup', 'Taiwan investment counsel', 'Civil litigation and damages', 'Trademark and patent filings', 'Visa and residency', 'Family and labor disputes'],
       education: [
         'M.S., Institute of Finance, National Taiwan University',
@@ -238,7 +238,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       keywords: ['Wei Tseng attorney', 'Wei Tseng Taiwan attorney', 'Taiwan lawyer for Korean clients', 'Taiwan attorney profile', 'Taiwan company setup lawyer', 'Taiwan litigation attorney'],
       searchTerms: ['Wei Tseng Taiwan attorney', 'Attorney Wei Tseng', 'Taiwan lawyer for Korean clients', 'Wei Tseng company setup lawyer'],
       proofPoints: [
-        'Wei Tseng works across Korean, Chinese, and Japanese communication for cross-border client matters.',
+        'Wei Tseng consults in English, Korean, Chinese, and Japanese for cross-border client matters.',
         'Her practice covers Taiwan company setup, investment, litigation, visas, and trademark or patent filings.',
         'A public representative case includes a TWD 1.57M first-instance damages ruling in a Korean student gym injury dispute.',
         'Her identity is corroborated across the Hovering profile, personal site, YouTube channel, and Naver Blog.',
@@ -250,9 +250,9 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
             'She focuses on Taiwan company setup, investment legal advisory, civil litigation and damages, trademarks and patents, visas and residency, and cross-border family or labor disputes for Korean and international clients.',
         },
         {
-          question: 'Can Korean-speaking clients consult directly with Attorney Wei Tseng?',
+          question: 'Can English-speaking or Korean-speaking clients consult directly with Attorney Wei Tseng?',
           answer:
-            'Yes. Korean-speaking clients can start by sharing the core facts and documents, and the consultation can proceed with Korean, Chinese, or Japanese communication support depending on the matter.',
+            'Yes. English-speaking and Korean-speaking clients can start by sharing the core facts and documents, and the consultation can proceed in English, Korean, Chinese, or Japanese depending on the matter.',
         },
         {
           question: 'How should a client start a consultation with Attorney Wei Tseng?',

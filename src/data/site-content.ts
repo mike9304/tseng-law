@@ -1735,7 +1735,8 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     ...base,
     meta: {
       title: 'Hovering International Law Firm',
-      description: 'Practical Taiwan legal support in English, Korean, and Japanese.'
+      description:
+        'English-speaking Taiwan lawyer for expats and foreigners in Taiwan: company setup, litigation, and investment counsel in Taipei.',
     },
     nav: {
       ...base.nav,
@@ -2493,7 +2494,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
     meta: {
       title: '台湾弁護士・台湾訴訟・台湾会社設立',
       description:
-        '台湾での会社設立、投資法務、民刑事訴訟について、韓国語・中国語・日本語で案内する昊鼎国際法律事務所の公式サイトです。'
+        '台湾での会社設立、投資法務、民事・労働・家事紛争について、日本語で直接ご相談いただける台北の法律事務所・昊鼎国際法律事務所の公式サイトです。'
     },
     nav: {
       ...base.nav,
@@ -2526,7 +2527,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           },
           {
             title: '多言語コミュニケーション',
-            description: '韓国語・日本語・英語で分かりやすい法律コミュニケーションを行います。',
+            description: '日本語・英語・韓国語・中国語で分かりやすい法律コミュニケーションを行います。',
             href: '/ja/about'
           }
         ],
@@ -2822,7 +2823,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       items: [
         {
           title: '投資・会社設立',
-          description: '韓国企業の台湾進出に際し、台湾子会社・台湾支店・代表者事務所等の組織形態の選定から、必要に応じた経済部投資審議司への投資申請、投資資金の送金・投資額審定、銀行口座の開設、営業場所の適法性確認まで一貫して支援します。化粧品の製品登録・PIF作成保存、自動車貨物運送業等の業種別許認可、解散・清算等による残余財産・投資資金回収の法的手続についてもご案内します。',
+          description: '日本企業をはじめ外国企業の台湾進出に際し、台湾子会社・台湾支店・代表者事務所等の組織形態の選定から、必要に応じた経済部投資審議司への投資申請、投資資金の送金・投資額審定、銀行口座の開設、営業場所の適法性確認まで一貫して支援します。化粧品の製品登録・PIF作成保存、自動車貨物運送業等の業種別許認可、解散・清算等による残余財産・投資資金回収の法的手続についてもご案内します。',
           href: '/ja/services#investment',
           details: [
             '台湾子会社（有限公司・股份有限公司）、台湾支店、代表者事務所の比較',
@@ -3190,7 +3191,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
     },
     footer: {
       ...base.footer,
-      note: '韓国語・日本語・英語で、台湾のクロスボーダー顧問と紛争対応を支援します。',
+      note: '日本語・英語・韓国語・中国語で、台湾のクロスボーダー顧問と紛争対応を支援します。',
       columns: [
         {
           title: '事務所',
@@ -3226,7 +3227,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
               label: '台湾会社設立ガイド',
               href: '/ja/columns/taiwan-company-establishment-basics'
             },
-            { label: '韓国語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' }
+            { label: '日本語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' }
           ]
         }
       ],

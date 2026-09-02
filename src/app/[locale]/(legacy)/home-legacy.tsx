@@ -36,8 +36,8 @@ const homeSeoCopy: Record<SiteLocale, { title: string; description: string; keyw
   en: {
     title: 'Taiwan Lawyer, Litigation & Company Setup',
     description:
-      'Hovering International Law Firm advises on Taiwan company formation, litigation, and investment matters for Korean and international clients.',
-    keywords: ['Taiwan lawyer', 'Taiwan litigation', 'Taiwan company setup', 'Taiwan investment law', 'Korean clients in Taiwan'],
+      'English-speaking Taiwan lawyer for expats and foreigners in Taiwan: company setup, litigation, and investment counsel in Taipei.',
+    keywords: ['English-speaking lawyer Taiwan', 'expat lawyer Taiwan', 'foreigners in Taiwan lawyer', 'Taiwan lawyer', 'Taiwan litigation', 'Taiwan company setup'],
   },
   ja: {
     title: '台湾弁護士・台湾訴訟・台湾会社設立',

@@ -425,17 +425,17 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       title: 'Taiwan Lawyer Guide',
       description:
         'English-speaking Taiwan lawyer for expats and foreigners in Taiwan: consultation scope, process, and related services for company setup, investment, and disputes.',
-      keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners', 'English speaking lawyer in Taipei'],
-      searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients', 'English speaking lawyer Taipei'],
+      keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for English-speaking clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners', 'English speaking lawyer in Taipei'],
+      searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for English-speaking clients', 'English speaking lawyer Taipei'],
       heroPoints: [
-        'This page connects Korean and international clients to Taiwan legal support for company setup, investment, and disputes.',
+        'This page connects English-speaking foreign residents and overseas companies to Taiwan legal support for company setup, investment, and disputes.',
         'Initial fact review, document analysis, procedure planning, and dispute handling can be assessed in one flow.',
         'You can review Attorney Wei Tseng’s profile, columns, and public channels from the same entry point.',
         'The firm is based in Taipei and works with international clients on Taiwan company setup, disputes, employment, and regulatory matters.',
         'Consultations are available in English, in person or by video.',
       ],
       idealFor: [
-        'Clients who want Taiwan legal issues explained in Korean or multilingual terms',
+        'Clients who want Taiwan legal issues explained in English or with multilingual support',
         'Businesses that need a Taiwan lawyer for incorporation or investment matters',
         'Individuals dealing with civil, criminal, traffic, divorce, or inheritance disputes in Taiwan',
         'Anyone who wants to understand consultation steps and materials before reaching out',
@@ -444,7 +444,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       reviewPoints: [
         'Jurisdiction, timing, and evidence strategy vary by case type.',
-        'For Korean companies, Taiwan procedure often needs to be aligned with head-office structure.',
+        'For overseas companies, Taiwan procedure often needs to be aligned with head-office structure.',
         'Foreign-national matters frequently require attention to service, powers of attorney, and immigration issues.',
         'Legal analysis and practical enforceability should be reviewed together.',
       ],
@@ -460,7 +460,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'Photos, videos, medical records, registry documents, or other core evidence',
       ],
       cautionPoints: [
-        'A process that feels standard in Korea may work differently in Taiwan.',
+        'A process that feels standard in your home country may work differently in Taiwan.',
         'Clients often focus on translation but miss format or power-of-attorney requirements.',
         'If early contact records are not organized, later proof becomes harder.',
         'Visa or immigration status can sometimes affect litigation or meeting logistics.',
@@ -471,7 +471,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: 'What should I check first when looking for a Taiwan lawyer?',
           answer:
-            'Start with the case type and the lawyer’s language and procedural fit. For Korean clients, Korean communication, Taiwan local procedure experience, and document-handling capability all matter.',
+            'Start with the case type and the lawyer’s language and procedural fit. For English-speaking clients, English communication, experience with Taiwan’s local procedures, and document-handling capability all matter.',
         },
         {
           question: 'Can consultation begin while I am still outside Taiwan?',
@@ -502,11 +502,11 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       searchTerms: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer'],
       heroPoints: [
         'Entity choice, investment approval, capital remittance, registration, and permits should be reviewed as one process.',
-        'The guide explains subsidiary, branch, and representative-office choices from the perspective of Korean clients entering Taiwan.',
+        'The guide explains subsidiary, branch, and representative-office choices from the perspective of foreign residents and overseas companies entering Taiwan.',
         'Post-incorporation issues such as visas, trademarks, contracts, and labor risk can be planned from the start.',
       ],
       idealFor: [
-        'Businesses deciding which Taiwan entity structure fits the Korean parent',
+        'Businesses deciding which Taiwan entity structure fits the overseas parent',
         'Teams comparing branch versus subsidiary setup',
         'Companies entering regulated sectors such as cosmetics or logistics',
         'Clients who want setup, visas, trademarks, and employment issues reviewed together',
@@ -523,7 +523,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'Map the sequence after registration as well, including banking, tax, visas, trademarks, and employment documents.',
       ],
       prepareChecklist: [
-        'Korean parent-company registry documents, shareholder structure, and director details',
+        'Overseas parent-company registry documents, shareholder structure, and director details',
         'Planned business scope, operating model, and candidate Taiwan address',
         'Expected capital amount, remittance plan, and hiring plan in Taiwan',
         'Any permit, product, or sector-specific regulatory information already identified',
@@ -574,7 +574,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       idealFor: [
         'Clients dealing with accidents, damages, or contract disputes in Taiwan',
         'People who need criminal-complaint strategy or police-investigation support',
-        'Cross-border divorce, custody, or inheritance matters involving Korea and Taiwan',
+        'Cross-border divorce, custody, or inheritance matters involving your home country and Taiwan',
         'Cases where pre-litigation settlement and evidence strategy need to be reviewed early',
         'Overseas companies with unpaid invoices or contract breaches by a Taiwanese counterparty',
         'International clients who need a Taiwan court or settlement strategy managed remotely',
@@ -611,7 +611,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       faq: [
         {
-          question: 'Can a Taiwan litigation matter start while I am still in Korea?',
+          question: 'Can a Taiwan litigation matter start while I am still overseas?',
           answer:
             'Yes. Early review can begin remotely once the core documents, timeline, and authorization structure are organized.',
         },

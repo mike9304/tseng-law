@@ -30,7 +30,12 @@ _setSafeLocalFsHookForTests(async (currentStage, absolutePath) => {
     await link(absolutePath, path.join(root, 'target.txt'));
   }
   await writeFile(marker, 'ready', 'utf8');
-  await new Promise<never>(() => undefined);
+  // An unresolved Promise alone does not keep the Node event loop alive;
+  // this interval is intentionally not unref'd so the paused fixture lives
+  // until the parent SIGKILL. There is no cleanup after SIGKILL.
+  await new Promise<never>(() => {
+    setInterval(() => undefined, 1000);
+  });
 });
 
 if (action === 'remove') {

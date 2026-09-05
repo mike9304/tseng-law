@@ -5,8 +5,10 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 
 import ContactBlocks from '@/components/ContactBlocks';
+import ContactEmailActions from '@/components/ContactEmailActions';
 import HeroSearch from '@/components/HeroSearch';
 import HomeContactCta from '@/components/HomeContactCta';
+import { ContactLegacyPageBody } from '@/app/[locale]/(legacy)/legacy-page-bodies';
 import { createContactDecomposedNodes } from '@/lib/builder/canvas/decompose-contact';
 import { createHeroDecomposedNodes } from '@/lib/builder/canvas/decompose-hero';
 import { decomposeContactCta } from '@/lib/builder/decompose/contact-cta';
@@ -132,6 +134,53 @@ describe('consultation email CTAs', () => {
       expect(linkContent(contactCtaNodes, `contact-cta-${locale}-contact-button`)?.href).toBe(href);
       expect(linkContent(contactCtaNodes, `contact-cta-${locale}-email-button`)?.href).toBe(href);
     }
+  });
+
+  it('renders compact contact email actions with the public mailto for every locale', () => {
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+      const html = renderToStaticMarkup(createElement(ContactEmailActions, { locale }));
+      const href = getConsultationPublicMailto(locale).replace(/&/g, '&amp;');
+
+      expect(html).toContain(`href="${href}"`);
+      expect(html).toContain(EMAIL);
+      expect(html).toContain('role="status"');
+      expect(html).toContain('aria-live="polite"');
+    }
+
+    const koreanActions = renderToStaticMarkup(createElement(ContactEmailActions, { locale: 'ko' }));
+    expect(koreanActions).toContain('공식 상담 이메일');
+    expect(koreanActions).toContain('증준외 대만 변호사에게 이메일 상담');
+    expect(koreanActions).toContain('이메일 주소 복사');
+    expect(koreanActions).toContain(
+      '초기 문의에는 사건 개요와 연락처만 보내 주세요. 민감정보는 제외해 주세요.',
+    );
+  });
+
+  it('keeps the about official email card and the contact-page warning below compact first-viewport actions', () => {
+    const aboutHtml = renderToStaticMarkup(createElement(ContactBlocks, { locale: 'ko' }));
+    const hiddenCardHtml = renderToStaticMarkup(
+      createElement(ContactBlocks, { locale: 'ko', showEmailActions: false }),
+    );
+    const contactHtml = renderToStaticMarkup(createElement(ContactLegacyPageBody, { locale: 'ko' }));
+    const href = getConsultationPublicMailto('ko').replace(/&/g, '&amp;');
+
+    expect(aboutHtml).toContain('공식 상담 이메일');
+    expect(aboutHtml).toContain('이메일 주소 복사');
+    expect(aboutHtml).toContain('초기 문의에는 사건 또는 업무의 개요와 연락처만');
+    expect(hiddenCardHtml).not.toContain('공식 상담 이메일');
+    expect(hiddenCardHtml).toContain('초기 문의에는 사건 또는 업무의 개요와 연락처만');
+
+    expect(contactHtml).toContain(`href="${href}"`);
+    expect(contactHtml).toContain(
+      '초기 문의에는 사건 개요와 연락처만 보내 주세요. 민감정보는 제외해 주세요.',
+    );
+    expect(contactHtml).toContain('초기 문의에는 사건 또는 업무의 개요와 연락처만');
+    expect(contactHtml.indexOf('공식 상담 이메일')).toBeLessThan(
+      contactHtml.indexOf('상담 전 확인 사항'),
+    );
+    expect(contactHtml.indexOf('초기 문의에는 사건 개요와 연락처만')).toBeLessThan(
+      contactHtml.indexOf('상담 전 확인 사항'),
+    );
   });
 
   it('contains no stale short consultation subject in the owned source paths', () => {

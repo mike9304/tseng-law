@@ -150,4 +150,71 @@ describe('published responsive stylesheet', () => {
     expect(rootRules.some((line) => line.includes('height: 6408px !important'))).toBe(true);
   });
 
+  it('does not pin absolute height on the exact legacy contact scaffold at tablet or mobile', () => {
+    const css = buildResponsiveStylesheet([
+      node({
+        id: 'contact-page-root',
+        kind: 'container',
+        parentId: undefined,
+        content: { as: 'main', layoutMode: 'absolute' },
+        rect: { x: 0, y: 0, width: 1280, height: 3057 },
+        responsive: {
+          tablet: { rect: { x: 0, y: 0, width: 768, height: 3610 } },
+          mobile: { rect: { x: 0, y: 0, width: 390, height: 4000 } },
+        },
+      }),
+      node({
+        id: 'contact-page-root-composite',
+        kind: 'composite',
+        parentId: 'contact-page-root',
+        content: { componentKey: 'legacy-page-contact', config: { locale: 'ko' } },
+        rect: { x: 0, y: 0, width: 1280, height: 3057 },
+        responsive: {
+          tablet: { rect: { x: 0, y: 0, width: 768, height: 3610 } },
+          mobile: { rect: { x: 0, y: 0, width: 390, height: 4000 } },
+        },
+      }),
+    ]);
+
+    const scaffoldRules = css.split('\n').filter((line) => (
+      line.includes('[data-node-id="contact-page-root"]')
+      || line.includes('[data-node-id="contact-page-root-composite"]')
+    ));
+    expect(scaffoldRules.length).toBeGreaterThan(0);
+    for (const line of scaffoldRules) {
+      expect(line).toContain('position: relative !important');
+      expect(line).not.toContain('position: absolute');
+      expect(line).not.toContain('left:');
+      expect(line.includes('top:') && !line.includes('margin-top')).toBe(false);
+      const withoutMinHeight = line.replace(/min-height:[^;]+/g, '');
+      expect(withoutMinHeight).toContain('height: auto !important');
+      expect(withoutMinHeight).not.toMatch(/height:\s*\d+px/);
+    }
+    expect(css).toContain('width: 390px !important');
+    expect(css).toContain('width: 768px !important');
+    expect(css).toContain('min-height: 4000px !important');
+    expect(css).toContain('min-height: 3610px !important');
+  });
+
+  it('leaves custom non-scaffold nodes on absolute pinned height', () => {
+    const css = buildResponsiveStylesheet([
+      node({
+        id: 'custom-banner',
+        kind: 'text',
+        responsive: {
+          tablet: { rect: { x: 12, y: 24, width: 400, height: 90 } },
+          mobile: { rect: { x: 8, y: 16, width: 360, height: 70 }, fontSize: 14 },
+        },
+      }),
+    ]);
+
+    expect(css).toContain('position: absolute !important');
+    expect(css).toContain('left: 12px !important');
+    expect(css).toContain('top: 24px !important');
+    expect(css).toContain('height: 90px !important');
+    expect(css).toContain('height: 70px !important');
+    expect(css).toContain('font-size: 14px !important');
+    expect(css).not.toContain('height: auto !important');
+  });
+
 });

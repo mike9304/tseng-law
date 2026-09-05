@@ -2,6 +2,7 @@
 
 import PageHeader from '@/components/PageHeader';
 import ContactBlocks from '@/components/ContactBlocks';
+import ContactEmailActions from '@/components/ContactEmailActions';
 import AttorneyProfileSection from '@/components/AttorneyProfileSection';
 import FirmIntroductionSection from '@/components/FirmIntroductionSection';
 import ConsultationGuideSection from '@/components/ConsultationGuideSection';
@@ -84,10 +85,12 @@ export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
   const copy = pageCopy[locale].contact;
   return (
     <>
-      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
+        <ContactEmailActions locale={locale} />
+      </PageHeader>
       <ConsultationGuideSection locale={locale} />
       <MessengerChatSection locale={locale} />
-      <ContactBlocks locale={locale} showMainHeader={false} />
+      <ContactBlocks locale={locale} showMainHeader={false} showEmailActions={false} />
       <OfficeMapTabs locale={locale} />
     </>
   );

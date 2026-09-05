@@ -14,7 +14,7 @@ const guideCopy = {
         items: [
           '이메일로 문의를 접수할 수 있습니다.',
           '타이베이 대면 상담과 Zoom 또는 Google Meet 화상 상담이 가능합니다.',
-          '한국어, 중국어, 영어 기준으로 기본 상담 흐름을 안내합니다.',
+          '한국어, 중국어, 영어, 일본어 기준으로 기본 상담 흐름을 안내합니다.',
         ],
       },
       {
@@ -45,7 +45,7 @@ const guideCopy = {
         items: [
           '可透過電子郵件提出詢問。',
           '提供台北面談，以及 Zoom 或 Google Meet 視訊諮詢。',
-          '以韓文、中文、英文為主進行基本諮詢安排。',
+          '以韓文、中文、英文、日文為主進行基本諮詢安排。',
         ],
       },
       {
@@ -76,7 +76,7 @@ const guideCopy = {
         items: [
           'You can reach us through email.',
           'We offer in-person meetings in Taipei and video consultations via Zoom or Google Meet.',
-          'Initial consultation coordination is handled in Korean, Chinese, and English.',
+          'Initial consultation coordination is handled in Korean, Chinese, English, and Japanese.',
         ],
       },
       {

@@ -3,6 +3,7 @@ import type { Locale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { resolveHomeInsightsCardLabels } from '@/lib/builder/home-insights-card-format';
 import { getAllColumnPosts, type ColumnPost } from '@/lib/columns';
+import { ARCHIVE_INTRO_COPY } from '@/lib/insights/archive-copy';
 import {
   HOME_STAGE_WIDTH,
   createHomeButtonNode,
@@ -15,7 +16,7 @@ const copyByLocale = {
   ko: {
     label: 'INSIGHTS',
     title: '칼럼 아카이브',
-    description: '실제 수집된 칼럼 본문과 이미지를 기반으로 주요 글을 바로 확인할 수 있습니다.',
+    description: ARCHIVE_INTRO_COPY.ko,
     readMore: '자세히 보기',
     dateFallback: '게시일 확인중',
     prevLabel: '이전',
@@ -25,7 +26,7 @@ const copyByLocale = {
   'zh-hant': {
     label: 'INSIGHTS',
     title: '專欄精選',
-    description: '以下內容直接對應已整理的專欄原文與圖片素材。',
+    description: ARCHIVE_INTRO_COPY['zh-hant'],
     readMore: '閱讀全文',
     dateFallback: '日期待確認',
     prevLabel: '上一頁',
@@ -35,7 +36,7 @@ const copyByLocale = {
   en: {
     label: 'INSIGHTS',
     title: 'Column Archive',
-    description: 'Browse key posts prepared from curated legal columns and source images.',
+    description: ARCHIVE_INTRO_COPY.en,
     readMore: 'Read more',
     dateFallback: 'Date pending',
     prevLabel: 'Previous',

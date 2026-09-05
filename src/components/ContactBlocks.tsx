@@ -8,11 +8,13 @@ import {
   CONSULTATION_EMAIL,
   getConsultationCtaLabel,
   getConsultationPublicMailto,
+  getCopyEmailFailureMessage,
   getCopyEmailLabel,
   getEmailCopiedMessage,
   getOfficialConsultationEmailLabel,
   getSensitiveInformationWarning,
 } from '@/lib/consultation/public-contact';
+import { copyEmailAddress } from '@/lib/consultation/copy-email';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import Reveal from '@/components/Reveal';
@@ -64,29 +66,14 @@ function renderInquiryDetail(
   return detail;
 }
 
-function copyEmailAddress(email: string): boolean | Promise<void> {
-  if (navigator.clipboard?.writeText) {
-    return navigator.clipboard.writeText(email);
-  }
-
-  const textarea = document.createElement('textarea');
-  textarea.value = email;
-  textarea.setAttribute('readonly', '');
-  textarea.style.position = 'fixed';
-  textarea.style.opacity = '0';
-  document.body.appendChild(textarea);
-  textarea.select();
-  const copied = document.execCommand('copy');
-  textarea.remove();
-  return copied;
-}
-
 export default function ContactBlocks({
   locale,
-  showMainHeader = true
+  showMainHeader = true,
+  showEmailActions = true,
 }: {
   locale: SiteLocale;
   showMainHeader?: boolean;
+  showEmailActions?: boolean;
 }) {
   const { contact } = siteContent[locale];
   const consultationMailto = getConsultationPublicMailto(locale);
@@ -96,9 +83,11 @@ export default function ContactBlocks({
   async function handleCopyEmail() {
     try {
       const copied = await copyEmailAddress(CONSULTATION_EMAIL);
-      setCopyNotice(copied === false ? '' : getEmailCopiedMessage(locale));
+      setCopyNotice(
+        copied ? getEmailCopiedMessage(locale) : getCopyEmailFailureMessage(locale),
+      );
     } catch {
-      setCopyNotice('');
+      setCopyNotice(getCopyEmailFailureMessage(locale));
     }
   }
 
@@ -124,35 +113,35 @@ export default function ContactBlocks({
         <div className="section-label" data-builder-surface-key="inquiries-label">
           {contact.inquiriesLabel}
         </div>
-        <div className="grid-bento contact-grid reveal-stagger" style={{ marginBottom: '1.5rem' }}>
-          <div className="card">
-            <h3 className="card-title">{getOfficialConsultationEmailLabel(locale)}</h3>
-            <p className="card-copy">
-              <a
-                className="link-underline"
-                href={consultationMailto}
-                aria-label={consultationCtaLabel}
+        {showEmailActions ? (
+          <div className="grid-bento contact-grid reveal-stagger" style={{ marginBottom: '1.5rem' }}>
+            <div className="card">
+              <h3 className="card-title">{getOfficialConsultationEmailLabel(locale)}</h3>
+              <p className="card-copy">
+                <a
+                  className="link-underline"
+                  href={consultationMailto}
+                  aria-label={consultationCtaLabel}
+                >
+                  {CONSULTATION_EMAIL}
+                </a>
+              </p>
+              <button
+                type="button"
+                className="button secondary"
+                onClick={() => {
+                  void handleCopyEmail();
+                }}
+                aria-label={getCopyEmailLabel(locale)}
               >
-                {CONSULTATION_EMAIL}
-              </a>
-            </p>
-            <button
-              type="button"
-              className="button secondary"
-              onClick={() => {
-                void handleCopyEmail();
-              }}
-              aria-label={getCopyEmailLabel(locale)}
-            >
-              {getCopyEmailLabel(locale)}
-            </button>
-            {copyNotice ? (
-              <p role="status" aria-live="polite">
+                {getCopyEmailLabel(locale)}
+              </button>
+              <p role="status" aria-live="polite" aria-atomic="true">
                 {copyNotice}
               </p>
-            ) : null}
+            </div>
           </div>
-        </div>
+        ) : null}
         <p className="section-lede" role="note">
           {getSensitiveInformationWarning(locale)}
         </p>

@@ -3,6 +3,7 @@ import type { Locale } from '@/lib/locales';
 import PageHeader from '@/components/PageHeader';
 import ConsultationGuideSection from '@/components/ConsultationGuideSection';
 import ContactBlocks from '@/components/ContactBlocks';
+import ContactEmailActions from '@/components/ContactEmailActions';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import BuilderSectionFrame from '@/components/builder/BuilderSectionFrame';
 
@@ -52,12 +53,21 @@ function renderContactSectionSurface({
           label={header.label}
           title={header.title}
           description={header.description}
-        />
+        >
+          <ContactEmailActions locale={locale} />
+        </PageHeader>
       );
     case 'contact.consultation-guide':
       return <ConsultationGuideSection key={section.id} locale={locale} />;
     case 'contact.contact-blocks':
-      return <ContactBlocks key={section.id} locale={locale} showMainHeader={false} />;
+      return (
+        <ContactBlocks
+          key={section.id}
+          locale={locale}
+          showMainHeader={false}
+          showEmailActions={false}
+        />
+      );
     case 'contact.offices':
       return (
         <OfficeMapTabs

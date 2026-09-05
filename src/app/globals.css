@@ -6106,12 +6106,75 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   margin: 0.5rem 0 1rem;
 }
 
+/* Search results only: caption token on small text is 3.11:1 on white. */
+.search-results-section .search-results-total,
+.search-results-section .list-meta {
+  color: var(--text-secondary);
+}
+
 .search-results-suggested {
   margin-top: 2rem;
 }
 
 .contact-grid {
   margin-bottom: 2rem;
+}
+
+.contact-email-actions {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.85rem 0 0;
+  max-width: 36rem;
+}
+
+.contact-email-actions__label {
+  margin: 0;
+  color: var(--text-body);
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+}
+
+.contact-email-actions__address {
+  margin: 0;
+  color: var(--text-heading);
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  user-select: all;
+  -webkit-user-select: all;
+}
+
+.contact-email-actions__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.7rem;
+}
+
+.contact-email-actions .button {
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 0.55rem 0.95rem;
+  white-space: normal;
+  text-align: center;
+}
+
+.contact-email-actions__note {
+  margin: 0;
+  flex: 1 1 12.5rem;
+  color: var(--text-body);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.contact-email-actions__status {
+  margin: 0;
+  min-height: 1.2em;
+  color: var(--text-body);
+  font-size: 0.82rem;
 }
 
 .contact-label-spaced {
@@ -6190,6 +6253,11 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   line-height: 1.68;
 }
 
+.contact-list a[href^='mailto:'] {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
 .office-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -6204,6 +6272,10 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   min-width: 44px;
   min-height: 44px;
   padding: 0.55rem 0.25rem;
+}
+
+#offices .office-tabs .tab-button {
+  overflow-wrap: anywhere;
 }
 
 .office-tabs .tab-button::after {
@@ -24428,6 +24500,55 @@ html[lang='en'] .cinematic-opening__primary {
     0 4px 16px rgba(7, 19, 27, 0.62);
 }
 
+.cinematic-opening__info {
+  margin-top: 1rem;
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  width: min(100%, 22.5rem);
+  padding: 0.7rem 0.85rem 0.8rem;
+  border: 1px solid rgba(232, 227, 216, 0.4);
+  background: rgba(7, 19, 27, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.cinematic-opening__service {
+  margin: 0;
+  color: #f8fbfc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(0.72rem, 1.5vw, 0.88rem);
+  font-weight: 500;
+  line-height: 1.4;
+  text-wrap: pretty;
+  text-shadow: 0 1px 2px rgba(7, 19, 27, 0.9);
+}
+
+.cinematic-opening__contact {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.9rem;
+  color: #f5e8ca;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.cinematic-opening__contact:hover {
+  color: #fff8e8;
+}
+
+.cinematic-opening__contact:focus-visible {
+  outline: 3px solid #87aa9d;
+  outline-offset: 4px;
+}
+
 .cinematic-opening__scroll {
   position: absolute;
   z-index: 4;
@@ -24539,10 +24660,27 @@ html[data-cinematic-intro-visible='true']
     white-space: nowrap;
   }
 
+  .cinematic-opening__info {
+    width: min(calc(100vw - 2.5rem), 20rem);
+    margin-top: 0.7rem;
+    padding: 0.55rem 0.7rem 0.65rem;
+  }
+
+  .cinematic-opening__service {
+    font-size: 0.72rem;
+  }
+
   .cinematic-opening__scroll {
     right: 50%;
     transform: translateX(50%);
     white-space: nowrap;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .cinematic-opening__info {
+    width: min(100%, 21rem);
+    margin-top: 0.85rem;
   }
 }
 

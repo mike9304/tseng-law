@@ -22,7 +22,7 @@ const CONSULTATION_EMAIL_TEMPLATES: Record<SiteLocale, ConsultationEmailTemplate
       '연락 가능한 전화번호:',
       '문의 분야:',
       '사건 또는 업무 개요:',
-      '희망 상담 언어: 한국어 / 中文 / English',
+      '희망 상담 언어: 한국어 / 中文 / English / 日本語',
       '',
       '※ 초기 문의에는 주민등록번호, 여권번호, 계좌번호, 신분증 원본 등 민감정보를 포함하지 않겠습니다. 필요한 자료는 담당 변호사의 안내 후 안전한 방식으로 제출하겠습니다.',
       '',
@@ -41,7 +41,7 @@ const CONSULTATION_EMAIL_TEMPLATES: Record<SiteLocale, ConsultationEmailTemplate
       '聯絡電話：',
       '諮詢類型：',
       '案件或業務概要：',
-      '希望使用的語言：中文 / 한국어 / English',
+      '希望使用的語言：中文 / 한국어 / English / 日本語',
       '',
       '※ 初次聯絡時不提供身分證字號、護照號碼、銀行帳戶資料或證件正本等敏感資訊。相關文件將於律師另行指示後，以安全方式提供。',
       '',
@@ -60,7 +60,7 @@ const CONSULTATION_EMAIL_TEMPLATES: Record<SiteLocale, ConsultationEmailTemplate
       'Phone:',
       'Type of inquiry:',
       'Brief description:',
-      'Preferred language: English / Korean / Chinese',
+      'Preferred language: English / Korean / Chinese / Japanese',
       '',
       'Please note that I will not include passport numbers, identification numbers, bank account information, or original identity documents in this initial email. Sensitive materials will be provided through a secure method after receiving instructions.',
       '',
@@ -127,6 +127,19 @@ export function getEmailCopiedMessage(locale: SiteLocale): string {
   if (locale === 'zh-hant') return '電子郵件地址已複製。';
   if (locale === 'ja') return 'メールアドレスをコピーしました。';
   return 'Email address copied.';
+}
+
+export function getCopyEmailFailureMessage(locale: SiteLocale): string {
+  if (locale === 'ko') {
+    return '복사에 실패했습니다. 표시된 이메일을 선택한 뒤 직접 복사해 주세요.';
+  }
+  if (locale === 'zh-hant') {
+    return '複製失敗。請選取顯示的電子郵件地址後手動複製。';
+  }
+  if (locale === 'ja') {
+    return 'コピーに失敗しました。表示されたメールアドレスを選択して、手動でコピーしてください。';
+  }
+  return 'Copy failed. Select the displayed email address and copy it manually.';
 }
 
 export function getSensitiveInformationWarning(locale: SiteLocale): string {

@@ -41,6 +41,27 @@ describe('public consultation contact single source of truth', () => {
       subject: '[tseng-law.com Consultation] Taiwan Legal and Corporate Services',
       body: expect.stringContaining('Dear Attorney Tseng,'),
     });
+    expect(getConsultationEmailTemplate('ja')).toEqual({
+      subject: '【tseng-law.com ご相談】台湾法務・企業業務に関するご相談',
+      body: expect.stringContaining('曾雋崴弁護士様'),
+    });
+
+    expect(getConsultationEmailTemplate('ko').body).toContain(
+      '희망 상담 언어: 한국어 / 中文 / English / 日本語',
+    );
+    expect(getConsultationEmailTemplate('zh-hant').body).toContain(
+      '希望使用的語言：中文 / 한국어 / English / 日本語',
+    );
+    expect(getConsultationEmailTemplate('en').body).toContain(
+      'Preferred language: English / Korean / Chinese / Japanese',
+    );
+    expect(getConsultationEmailTemplate('ja').body).toContain(
+      'ご希望の言語：日本語 / 中文 / 한국어 / English',
+    );
+    expect(getConsultationEmailTemplate('ko').body).toContain('민감정보');
+    expect(getConsultationEmailTemplate('zh-hant').body).toContain('敏感資訊');
+    expect(getConsultationEmailTemplate('en').body).toContain('Sensitive materials');
+    expect(getConsultationEmailTemplate('ja').body).toContain('機微情報');
   });
 
   it('provides localized CTA, copy confirmation, and sensitive-data warning text', () => {

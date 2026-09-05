@@ -37,6 +37,7 @@ type PricingContent = {
   items: PricingItem[];
   disclaimer: string;
   ctaLabel: string;
+  ctaNote: string;
 };
 
 const pricingData: Record<Locale, PricingContent> = {
@@ -75,7 +76,8 @@ const pricingData: Record<Locale, PricingContent> = {
       },
     ],
     disclaimer: '상기 비용은 기본 기준이며, 사건의 특성·복합성·긴급도에 따라 변동될 수 있습니다. 정확한 비용은 초기 상담 후 서면 견적으로 안내드립니다.',
-    ctaLabel: '상담 예약하기',
+    ctaLabel: '이메일로 상담 일정 문의',
+    ctaNote: '상담 일정은 이메일로 협의한 뒤 확정됩니다.',
   },
   'zh-hant': {
     currency: 'NTD (新台幣)',
@@ -112,7 +114,8 @@ const pricingData: Record<Locale, PricingContent> = {
       },
     ],
     disclaimer: '以上費用為基本標準，依案件特性、複雜度及急迫程度可能有所調整。確切費用於初次諮詢後以書面報價方式提供。',
-    ctaLabel: '預約諮詢',
+    ctaLabel: '以電子郵件洽詢諮詢時間',
+    ctaNote: '諮詢時間將於電子郵件協調後確認。',
   },
   en: {
     currency: 'NTD (New Taiwan Dollar)',
@@ -149,7 +152,8 @@ const pricingData: Record<Locale, PricingContent> = {
       },
     ],
     disclaimer: 'Fees above are baseline standards and may vary based on case characteristics, complexity, and urgency. Exact fees will be provided in writing after the initial consultation.',
-    ctaLabel: 'Book a Consultation',
+    ctaLabel: 'Email to arrange a consultation',
+    ctaNote: 'Your consultation time is confirmed after arranging it by email.',
   },
 };
 
@@ -484,28 +488,155 @@ function createPricingSectionNodes(
       as: 'p',
       fontSize: DISCLAIMER_FONT,
     }),
-    createHomeContainerNode({
-      id: 'page-pricing-cta-wrap',
-      parentId: containerId,
-      rect: { x: 0, y: disclaimerY + disclaimerHeight + 32, width: 220, height: 44 },
-      zIndex: 3,
-      label: 'pricing cta',
-      className: 'pricing-cta',
-    }),
-    createHomeButtonNode({
-      id: 'page-pricing-cta',
-      parentId: 'page-pricing-cta-wrap',
-      rect: { x: 0, y: 0, width: 220, height: 44 },
-      zIndex: 0,
-      label: data.ctaLabel,
-      href: getConsultationPublicMailto(locale),
-      style: 'primary',
-      className: 'button',
-      as: 'a',
-    }),
   );
 
-  const containerHeight = disclaimerY + disclaimerHeight + 32 + 44;
+  // .button is 0.9rem / 1.4rem horizontal padding on a 16px root.
+  const CTA_BUTTON_FONT_SIZE = 14.4;
+  const CTA_BUTTON_PAD_X = 46;
+  const CTA_BUTTON_MIN_WIDTH = 220;
+  const CTA_BUTTON_HEIGHT = 44;
+  const CTA_NOTE_GAP = 10;
+  const CTA_NOTE_FONT_SIZE = 17.28;
+  const CTA_NOTE_LINE_HEIGHT = 1.82;
+  const CTA_NOTE_COLOR = '#355145';
+  const CTA_MOBILE_WRAP_WIDTH = 340;
+  const ctaY = disclaimerY + disclaimerHeight + 32;
+  const ctaButtonWidth = Math.min(
+    PAGE_CONTAINER_WIDTH,
+    Math.max(
+      CTA_BUTTON_MIN_WIDTH,
+      estimateTextWidth(data.ctaLabel, CTA_BUTTON_FONT_SIZE) + CTA_BUTTON_PAD_X,
+    ),
+  );
+  const ctaButtonX = Math.round((PAGE_CONTAINER_WIDTH - ctaButtonWidth) / 2);
+  const noteY = CTA_BUTTON_HEIGHT + CTA_NOTE_GAP;
+  const ctaNoteHeight = estimateTextHeight(
+    data.ctaNote,
+    PAGE_CONTAINER_WIDTH,
+    CTA_NOTE_FONT_SIZE,
+    CTA_NOTE_LINE_HEIGHT,
+  );
+  const tabletWrapWidth = PAGE_CONTAINER_WIDTH - 48;
+  const tabletButtonWidth = Math.min(CTA_MOBILE_WRAP_WIDTH, ctaButtonWidth);
+  const tabletButtonX = Math.round((tabletWrapWidth - tabletButtonWidth) / 2);
+  const tabletNoteHeight = estimateTextHeight(
+    data.ctaNote,
+    tabletWrapWidth,
+    CTA_NOTE_FONT_SIZE,
+    CTA_NOTE_LINE_HEIGHT,
+  );
+  const mobileButtonWidth = Math.min(CTA_MOBILE_WRAP_WIDTH, ctaButtonWidth);
+  const mobileButtonX = Math.round((CTA_MOBILE_WRAP_WIDTH - mobileButtonWidth) / 2);
+  const mobileNoteHeight = estimateTextHeight(
+    data.ctaNote,
+    CTA_MOBILE_WRAP_WIDTH,
+    CTA_NOTE_FONT_SIZE,
+    CTA_NOTE_LINE_HEIGHT,
+  );
+  const ctaWrapHeight = noteY + ctaNoteHeight;
+  const tabletWrapHeight = noteY + tabletNoteHeight;
+  const mobileWrapHeight = noteY + mobileNoteHeight;
+  const ctaNoteNode = createHomeTextNode({
+    id: 'page-pricing-cta-note',
+    parentId: 'page-pricing-cta-wrap',
+    rect: {
+      x: 0,
+      y: noteY,
+      width: PAGE_CONTAINER_WIDTH,
+      height: ctaNoteHeight,
+    },
+    zIndex: 1,
+    text: data.ctaNote,
+    as: 'p',
+    fontSize: CTA_NOTE_FONT_SIZE,
+    color: CTA_NOTE_COLOR,
+    lineHeight: CTA_NOTE_LINE_HEIGHT,
+  });
+  if (ctaNoteNode.kind === 'text') {
+    ctaNoteNode.content = { ...ctaNoteNode.content, align: 'center' };
+  }
+  const ctaButtonNode = createHomeButtonNode({
+    id: 'page-pricing-cta',
+    parentId: 'page-pricing-cta-wrap',
+    rect: { x: ctaButtonX, y: 0, width: ctaButtonWidth, height: CTA_BUTTON_HEIGHT },
+    zIndex: 0,
+    label: data.ctaLabel,
+    href: getConsultationPublicMailto(locale),
+    style: 'primary',
+    className: 'button',
+    as: 'a',
+  });
+
+  nodes.push(
+    {
+      ...createHomeContainerNode({
+        id: 'page-pricing-cta-wrap',
+        parentId: containerId,
+        rect: { x: 0, y: ctaY, width: PAGE_CONTAINER_WIDTH, height: ctaWrapHeight },
+        zIndex: 3,
+        label: 'pricing cta',
+        className: 'pricing-cta',
+      }),
+      responsive: {
+        tablet: {
+          rect: {
+            width: tabletWrapWidth,
+            height: tabletWrapHeight,
+          },
+        },
+        mobile: {
+          rect: {
+            width: CTA_MOBILE_WRAP_WIDTH,
+            height: mobileWrapHeight,
+          },
+        },
+      },
+    },
+    {
+      ...ctaButtonNode,
+      responsive: {
+        tablet: {
+          rect: {
+            x: tabletButtonX,
+            y: 0,
+            width: tabletButtonWidth,
+            height: CTA_BUTTON_HEIGHT,
+          },
+        },
+        mobile: {
+          rect: {
+            x: mobileButtonX,
+            y: 0,
+            width: mobileButtonWidth,
+            height: CTA_BUTTON_HEIGHT,
+          },
+        },
+      },
+    },
+    {
+      ...ctaNoteNode,
+      responsive: {
+        tablet: {
+          rect: {
+            x: 0,
+            y: noteY,
+            width: tabletWrapWidth,
+            height: tabletNoteHeight,
+          },
+        },
+        mobile: {
+          rect: {
+            x: 0,
+            y: noteY,
+            width: CTA_MOBILE_WRAP_WIDTH,
+            height: mobileNoteHeight,
+          },
+        },
+      },
+    },
+  );
+
+  const containerHeight = ctaY + ctaWrapHeight;
   const rootHeight = SECTION_TOP + containerHeight + (locale === 'zh-hant' ? 96 : SECTION_BOTTOM);
   nodes[0] = {
     ...nodes[0],

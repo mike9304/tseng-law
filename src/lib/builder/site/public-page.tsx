@@ -18,8 +18,13 @@ import type {
   BuilderImageCanvasNode,
 } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
+import {
+  legacyContactScaffoldRole,
+  matchLegacyContactScaffold,
+} from '@/lib/builder/canvas/legacy-contact-scaffold';
 import { buildPublishedResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
 import { projectLegacyZhHantHomeOffices } from '@/lib/builder/site/legacy-zh-hant-home-offices';
+import { projectPublishedHomeInsightsArchiveIntro } from '@/lib/insights/archive-copy';
 import {
   computeTopLevelFlowSectionMetrics,
   compareTopLevelStacking,
@@ -653,6 +658,8 @@ export async function PublishedSitePageView({
   const publishedNodes = projectLegacyZhHantHomeOffices(canvas.nodes, locale, isHomePage);
   const visibleNodes = publishedNodes.filter((node) => node.visible !== false);
   const responsiveStylesheet = buildPublishedResponsiveStylesheet(publishedNodes);
+  const legacyContactScaffold =
+    slugPath === 'contact' ? matchLegacyContactScaffold(canvas.nodes) : null;
   const childrenMap = buildChildrenMap(visibleNodes);
   const nodesById = new Map(publishedNodes.map((node) => [node.id, node]));
   const siteUrl = getSiteUrl();
@@ -779,10 +786,13 @@ export async function PublishedSitePageView({
     bindingContext: BuilderDatasetFieldBindingContext = datasetBindingContext,
   ): JSX.Element {
     const localeProjectedNode = projectImageNodeForLocale(node, locale);
-    const renderedNode = projectPublishedHomeCaseResultsPoster(
-      projectPublishedHomeHeroPoster(
-        applyBuilderDatasetBindingToNode(localeProjectedNode, bindingContext),
+    const renderedNode = projectPublishedHomeInsightsArchiveIntro(
+      projectPublishedHomeCaseResultsPoster(
+        projectPublishedHomeHeroPoster(
+          applyBuilderDatasetBindingToNode(localeProjectedNode, bindingContext),
+        ),
       ),
+      slugPath,
     );
     const component = getComponent(renderedNode.kind);
     const decorativeVideo = resolvePublishedDecorativeVideo(renderedNode, locale);
@@ -792,6 +802,8 @@ export async function PublishedSitePageView({
     const flowAsSection = isTopLevel && isTopLevelFlowSection(renderedNode);
     const parentUsesFlowLayout = parentLayoutMode === 'flex' || parentLayoutMode === 'grid';
     const useFlowWrapper = flowAsSection || parentUsesFlowLayout;
+    const scaffoldRole = legacyContactScaffoldRole(legacyContactScaffold, renderedNode.id);
+    const useLegacyContactScaffold = scaffoldRole != null;
     const childParentLayoutMode: ParentLayoutMode | undefined =
       isContainerLikeKind(renderedNode.kind)
         ? ((renderedNode.content as { layoutMode?: ParentLayoutMode }).layoutMode ?? 'absolute')
@@ -1022,6 +1034,7 @@ export async function PublishedSitePageView({
         data-node-id={renderedNode.id}
         data-parent-node-id={renderedNode.parentId}
         data-builder-flow-section={flowAsSection ? 'true' : undefined}
+        data-builder-legacy-contact-scaffold={scaffoldRole}
         data-builder-sticky={useSticky ? 'true' : undefined}
         data-builder-section-template={sectionTemplate?.id}
         data-section-variant={sectionTemplate?.variant}
@@ -1040,25 +1053,29 @@ export async function PublishedSitePageView({
         role={lightboxTarget ? 'button' : undefined}
         tabIndex={lightboxTarget ? 0 : undefined}
         style={{
-          position: useSticky ? 'sticky' : useFlowWrapper ? 'relative' : 'absolute',
-          left: useSticky || useFlowWrapper ? undefined : renderedNode.rect.x,
+          position: useLegacyContactScaffold
+            ? 'relative'
+            : useSticky ? 'sticky' : useFlowWrapper ? 'relative' : 'absolute',
+          left: useLegacyContactScaffold || useSticky || useFlowWrapper ? undefined : renderedNode.rect.x,
           top: useSticky
             ? (stickyConfig?.from !== 'bottom' ? (stickyConfig?.offset ?? 0) : undefined)
-            : useFlowWrapper ? undefined : renderedNode.rect.y,
+            : useLegacyContactScaffold || useFlowWrapper ? undefined : renderedNode.rect.y,
           bottom: useSticky && stickyConfig?.from === 'bottom' ? (stickyConfig?.offset ?? 0) : undefined,
           width: flowAsSection ? '100%' : renderedNode.rect.width,
-          height: flowAsSection
+          height: useLegacyContactScaffold || flowAsSection
             ? 'auto'
             : isTextShapedKind(renderedNode.kind)
               ? 'auto'
               : renderedNode.rect.height,
           // Use the designer's rect.height as a floor for flow composites and
           // text-shaped widgets; content can grow without clipping.
-          minHeight: flowAsSection
-            ? (flowSectionMetric?.minHeight ?? renderedNode.rect.height)
-            : isTextShapedKind(renderedNode.kind)
-              ? renderedNode.rect.height
-              : undefined,
+          minHeight: useLegacyContactScaffold
+            ? renderedNode.rect.height
+            : flowAsSection
+              ? (flowSectionMetric?.minHeight ?? renderedNode.rect.height)
+              : isTextShapedKind(renderedNode.kind)
+                ? renderedNode.rect.height
+                : undefined,
           // Always emit marginTop (even 0) for flow composites so the CSS
           // fallback at globals.css:19245 never silently injects a clamp gap
           // when the designer intended adjacent sections.

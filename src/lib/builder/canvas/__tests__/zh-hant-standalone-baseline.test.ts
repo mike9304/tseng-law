@@ -114,7 +114,7 @@ const desktopBaselines: readonly DesktopBaselineCase[] = [
     rects: [
       { id: 'page-pricing-page-header-root', rect: { y: 0, width: 1280, height: 428 } },
       { id: 'page-pricing-section-root', rect: { y: 428, width: 1280, height: 875 } },
-      { id: 'page-pricing-section-container', rect: { x: 51, y: 141, width: 1178, height: 594 } },
+      { id: 'page-pricing-section-container', rect: { x: 51, y: 141, width: 1178, height: 636 } },
       { id: 'page-pricing-currency', rect: { x: 0, y: 0, width: 1178, height: 23 } },
       { id: 'page-pricing-grid', rect: { y: 67, width: 1178, height: 457 } },
       { id: 'page-pricing-card-0', rect: { x: 0, y: 0, width: 276, height: 457 } },
@@ -123,8 +123,9 @@ const desktopBaselines: readonly DesktopBaselineCase[] = [
       { id: 'page-pricing-card-0-price', rect: { x: 0, y: 163, width: 276, height: 72 } },
       { id: 'page-pricing-card-0-details', rect: { x: 25, y: 260, width: 226, height: 96 } },
       { id: 'page-pricing-disclaimer-wrap', rect: { x: 0, y: 524, width: 1178, height: 22 } },
-      { id: 'page-pricing-cta-wrap', rect: { x: 0, y: 547, width: 1178, height: 47 } },
-      { id: 'page-pricing-cta', rect: { x: 540, y: 0, width: 97, height: 47 } },
+      { id: 'page-pricing-cta-wrap', rect: { x: 0, y: 547, width: 1178, height: 89 } },
+      { id: 'page-pricing-cta', rect: { x: 479, y: 0, width: 220, height: 47 } },
+      { id: 'page-pricing-cta-note', rect: { x: 0, y: 57, width: 1178, height: 32 } },
     ],
   },
 ];

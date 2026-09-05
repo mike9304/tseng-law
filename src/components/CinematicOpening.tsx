@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   useCallback,
   useEffect,
@@ -324,6 +325,8 @@ export const CINEMATIC_OPENING_COPY: Record<
     secondary: string;
     scroll: string;
     mediaAlt: string;
+    service: string;
+    contact: string;
   }
 > = {
   ko: {
@@ -331,24 +334,32 @@ export const CINEMATIC_OPENING_COPY: Record<
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '본문으로 스크롤',
     mediaAlt: '밝은 자연광 아래 대만 중앙산맥과 운해 위를 비행하는 항공 전경',
+    service: '대만 법률 상담 · 한국어·일본어 소통',
+    contact: '상담 연락처',
   },
   'zh-hant': {
     primary: '昊鼎國際法律事務所',
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '向下捲動',
     mediaAlt: '明亮自然光下飛越臺灣中央山脈與雲海的空中景觀',
+    service: '台灣法律諮詢 · 韓語、日語溝通',
+    contact: '諮詢聯絡方式',
   },
   en: {
     primary: 'HOVERING INTERNATIONAL LAW FIRM',
     secondary: 'ATTORNEYS AT LAW IN TAIWAN',
     scroll: 'Scroll to continue',
     mediaAlt: 'Bright aerial flight over Taiwan’s Central Mountain Range and sea of clouds',
+    service: 'Taiwan legal advice · Korean and Japanese communication',
+    contact: 'Contact the firm',
   },
   ja: {
     primary: '昊鼎国際法律事務所',
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '下にスクロール',
     mediaAlt: '明るい自然光の中、台湾中央山脈と雲海の上空を飛ぶ空撮風景',
+    service: '台湾の法律相談 · 韓国語・日本語でのコミュニケーション',
+    contact: '相談窓口',
   },
 };
 
@@ -527,6 +538,12 @@ export default function CinematicOpening({
           />
           <p className="cinematic-opening__primary">{copy.primary}</p>
           <p className="cinematic-opening__secondary">{copy.secondary}</p>
+          <div className="cinematic-opening__info">
+            <p className="cinematic-opening__service">{copy.service}</p>
+            <Link className="cinematic-opening__contact" href={`/${locale}/contact`}>
+              {copy.contact}
+            </Link>
+          </div>
         </div>
         <a
           className="cinematic-opening__scroll"

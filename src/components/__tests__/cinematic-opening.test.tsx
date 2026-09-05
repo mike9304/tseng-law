@@ -37,24 +37,32 @@ const expectedOpeningCopy = {
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '본문으로 스크롤',
     mediaAlt: '밝은 자연광 아래 대만 중앙산맥과 운해 위를 비행하는 항공 전경',
+    service: '대만 법률 상담 · 한국어·일본어 소통',
+    contact: '상담 연락처',
   },
   'zh-hant': {
     primary: '昊鼎國際法律事務所',
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '向下捲動',
     mediaAlt: '明亮自然光下飛越臺灣中央山脈與雲海的空中景觀',
+    service: '台灣法律諮詢 · 韓語、日語溝通',
+    contact: '諮詢聯絡方式',
   },
   en: {
     primary: 'HOVERING INTERNATIONAL LAW FIRM',
     secondary: 'ATTORNEYS AT LAW IN TAIWAN',
     scroll: 'Scroll to continue',
     mediaAlt: 'Bright aerial flight over Taiwan’s Central Mountain Range and sea of clouds',
+    service: 'Taiwan legal advice · Korean and Japanese communication',
+    contact: 'Contact the firm',
   },
   ja: {
     primary: '昊鼎国際法律事務所',
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '下にスクロール',
     mediaAlt: '明るい自然光の中、台湾中央山脈と雲海の上空を飛ぶ空撮風景',
+    service: '台湾の法律相談 · 韓国語・日本語でのコミュニケーション',
+    contact: '相談窓口',
   },
 } as const;
 
@@ -234,10 +242,14 @@ describe('cinematic opening content and semantics', () => {
     expect(html).toContain(copy.primary);
     expect(html).toContain(copy.secondary);
     expect(html).toContain(copy.scroll);
+    expect(html).toContain(copy.service);
+    expect(html).toContain(copy.contact);
+    expect(html).toContain(`href="/${locale}/contact"`);
     expect(html).toContain(`alt="${copy.mediaAlt}"`);
     expect(html).not.toContain('<h1');
     expect(html).toContain('<section');
     expect(html).toContain(`aria-label="${copy.primary}"`);
+    expect(html).toContain('class="cinematic-opening__contact"');
   });
 
   it('uses a real anchor with an exact scroll handoff', () => {
@@ -246,6 +258,14 @@ describe('cinematic opening content and semantics', () => {
     expect(html).toContain(
       '<a class="cinematic-opening__scroll" href="#cinematic-home-content">',
     );
+  });
+
+  it('exposes a real locale contact link under the brand without intercepting it', () => {
+    const html = renderToStaticMarkup(<CinematicOpening locale="ko" />);
+    expect(html).toContain('class="cinematic-opening__contact"');
+    expect(html).toContain('href="/ko/contact"');
+    expect(html).toContain('상담 연락처');
+    expect(html).not.toContain('cinematic-opening__contact" tabindex="-1"');
   });
 
   it('keeps the opening server render poster-only so the seal can win LCP', () => {
@@ -591,6 +611,28 @@ describe('cinematic opening single-action handoff', () => {
     host.dispatch('keydown', end);
 
     expect(end.preventDefault).not.toHaveBeenCalled();
+    expect(transitionToContent).not.toHaveBeenCalled();
+    cleanup();
+  });
+
+  it('does not capture opening input while a form control is focused', () => {
+    const host = new FakeInputHost();
+    const transitionToContent = vi.fn(() => true);
+    const cleanup = bindCinematicOpeningInputHandlers({
+      host,
+      isCaptureActive: () => true,
+      isTransitionLocked: () => false,
+      transitionToContent,
+      isFormControl: () => true,
+    });
+    const space = keyboardEvent(' ');
+    const wheel = wheelEvent(CINEMATIC_OPENING_WHEEL_THRESHOLD);
+
+    host.dispatch('keydown', space);
+    host.dispatch('wheel', wheel);
+
+    expect(space.preventDefault).not.toHaveBeenCalled();
+    expect(wheel.preventDefault).not.toHaveBeenCalled();
     expect(transitionToContent).not.toHaveBeenCalled();
     cleanup();
   });

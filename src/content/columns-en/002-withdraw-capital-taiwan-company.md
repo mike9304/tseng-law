@@ -139,7 +139,7 @@ The longer suspension continues, the more complicated a later closing may become
 
 ## Related Services
 
-1. [Taiwan Investment and Company Formation Services](/en/services#investment)
+1. [Taiwan Investment and Company Formation Services](/en/services/investment)
 2. [Taiwan Company Formation Basics](/en/columns/taiwan-company-establishment-basics)
 3. [Contact Our Office](/en/contact)
 

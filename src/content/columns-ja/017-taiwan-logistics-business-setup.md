@@ -140,7 +140,7 @@ faq:
 
 ## 関連案内
 
-- [台湾投資・会社設立サービス](/ja/services#investment)
+- [台湾投資・会社設立サービス](/ja/services/investment)
 - [曾雋崴弁護士のプロフィール](/ja/lawyers/wei-tseng)
 - [お問い合わせ](/ja/contact)
 

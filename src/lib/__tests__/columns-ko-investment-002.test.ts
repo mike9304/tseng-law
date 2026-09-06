@@ -231,7 +231,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
       '[대만 경제부 휴업 신청 기한 안내](https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=659&method=faqDetlDetl)',
     ];
     const internalLinks = [
-      '[대만 투자·회사설립 서비스](/ko/services#investment)',
+      '[대만 투자·회사설립 서비스](/ko/services/investment)',
       '[대만 회사설립 기초](/ko/columns/taiwan-company-establishment-basics)',
       '[문의하기](/ko/contact)',
     ];

@@ -31,7 +31,7 @@ const officialUrls = [
   'https://www.fda.gov.tw/tc/newsContent.aspx?id=11672',
 ];
 const internalTargets = [
-  '/zh-hant/services#investment',
+  '/zh-hant/services/investment',
   '/zh-hant/columns/taiwan-company-establishment-advanced-1',
   '/zh-hant/contact',
 ];

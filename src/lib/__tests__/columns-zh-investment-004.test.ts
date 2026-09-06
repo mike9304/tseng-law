@@ -60,7 +60,7 @@ const officialLinks = [
   '[投資台灣入口網—外國公司分公司投資及登記程序](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01)',
 ];
 const internalLinks = [
-  '[台灣投資及公司設立服務](/zh-hant/services#investment)',
+  '[台灣投資及公司設立服務](/zh-hant/services/investment)',
   '[台灣公司設立基礎](/zh-hant/columns/taiwan-company-establishment-basics)',
   '[聯絡我們](/zh-hant/contact)',
 ];

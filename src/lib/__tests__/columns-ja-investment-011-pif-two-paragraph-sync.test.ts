@@ -18,7 +18,7 @@ const immutableTailMarker = Buffer.from(
 );
 const immutableTailLength = 7_667;
 const immutableTailSha256 =
-  '5fbfce232b3509a0dc283cb49b5b24f0227f66929f1b2a855923b6661f20f0fd';
+  'e50d40fa4aa7345d229e737176db818a4752d91e9efa0b958f0648f585ce3e41';
 
 const tailOffset = sourceBytes.indexOf(immutableTailMarker);
 const synchronizedBytes =

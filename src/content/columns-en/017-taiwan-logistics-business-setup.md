@@ -140,7 +140,7 @@ Unauthorized work may lead to administrative fines and an order to leave Taiwan.
 
 ## Related Guidance
 
-- [Taiwan investment and company-formation services](/en/services#investment)
+- [Taiwan investment and company-formation services](/en/services/investment)
 - [Wei Tseng’s attorney profile](/en/lawyers/wei-tseng)
 - [Contact us](/en/contact)
 

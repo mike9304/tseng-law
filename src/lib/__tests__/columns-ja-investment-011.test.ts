@@ -214,7 +214,7 @@ describe('Japanese investment column 011 — cosmetics registration, PIF, and ad
     );
     expect(internalLinks).toEqual([
       '[台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)',
-      '[台湾投資・会社設立サービス](/ja/services#investment)',
+      '[台湾投資・会社設立サービス](/ja/services/investment)',
       '[曾雋崴弁護士の紹介](/ja/lawyers/wei-tseng)',
     ]);
   });

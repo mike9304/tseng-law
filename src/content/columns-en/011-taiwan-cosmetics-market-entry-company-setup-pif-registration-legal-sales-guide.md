@@ -111,7 +111,7 @@ Reviewing the preparations for sale in Taiwan in the following order can reduce 
 5. Review labels, sales pages, advertising, and collaboration posts based on their overall presentation.
 6. Maintain procedures for responding to inspections and corrective requests, complaints and safety information, and any necessary follow-up measures.
 
-For the basic differences between a company and a branch, see [Taiwan Company Formation Basics](/en/columns/taiwan-company-establishment-basics); for the scope of related assistance, see [Taiwan Investment and Company Formation Services](/en/services#investment); and for information about counsel, see [Wei Tseng’s Profile](/en/lawyers/wei-tseng).
+For the basic differences between a company and a branch, see [Taiwan Company Formation Basics](/en/columns/taiwan-company-establishment-basics); for the scope of related assistance, see [Taiwan Investment and Company Formation Services](/en/services/investment); and for information about counsel, see [Wei Tseng’s Profile](/en/lawyers/wei-tseng).
 
 ### Official Sources
 

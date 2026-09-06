@@ -277,7 +277,7 @@ describe('English investment column 017 — logistics and motor freight', () => 
       '../images/017-taiwan-logistics-business-setup/img-01.jpg',
     ];
     const internalLinks = [
-      '/en/services#investment',
+      '/en/services/investment',
       '/en/lawyers/wei-tseng',
       '/en/contact',
     ];
@@ -298,7 +298,7 @@ describe('English investment column 017 — logistics and motor freight', () => 
     const bodyLinks =
       parsed.content.match(/\]\((\/(?:en|ko|ja|zh-hant)\/[^)]+)\)/g) ?? [];
     expect(bodyLinks).toEqual([
-      '](/en/services#investment)',
+      '](/en/services/investment)',
       '](/en/lawyers/wei-tseng)',
       '](/en/contact)',
     ]);

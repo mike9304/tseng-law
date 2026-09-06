@@ -112,6 +112,6 @@ faq:
 
 ## 相關服務
 
-- [台灣投資及公司設立服務](/zh-hant/services#investment)
+- [台灣投資及公司設立服務](/zh-hant/services/investment)
 - [台灣公司設立基礎](/zh-hant/columns/taiwan-company-establishment-basics)
 - [聯絡我們](/zh-hant/contact)

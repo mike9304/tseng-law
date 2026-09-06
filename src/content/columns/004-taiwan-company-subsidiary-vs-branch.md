@@ -184,7 +184,7 @@ faq:
 
 ## 관련 안내
 
-- [대만 투자·회사설립 서비스](/ko/services#investment)
+- [대만 투자·회사설립 서비스](/ko/services/investment)
 - [대만 회사 설립 기초](/ko/columns/taiwan-company-establishment-basics)
 - [상담 문의](/ko/contact)
 

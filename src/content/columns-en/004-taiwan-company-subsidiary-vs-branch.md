@@ -184,7 +184,7 @@ The safest approach is for professionals in Taiwan and the jurisdiction of the h
 
 ## Related Services
 
-- [Taiwan Investment and Company Formation Services](/en/services#investment)
+- [Taiwan Investment and Company Formation Services](/en/services/investment)
 - [Taiwan Company Formation Basics](/en/columns/taiwan-company-establishment-basics)
 - [Contact Our Office](/en/contact)
 

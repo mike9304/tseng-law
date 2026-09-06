@@ -53,7 +53,7 @@ const officialUrls = [
 ];
 const internalTargets = [
   '/zh-hant/columns/taiwan-company-establishment-basics',
-  '/zh-hant/services#investment',
+  '/zh-hant/services/investment',
   '/zh-hant/columns/taiwan-company-establishment-basics',
   '/zh-hant/contact',
 ];

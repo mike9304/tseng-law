@@ -98,7 +98,7 @@ const officialLinks = [
 
 const internalLinks = [
   '[Taiwan Company Formation Basics](/en/columns/taiwan-company-establishment-basics)',
-  '[Taiwan Investment and Company Formation Services](/en/services#investment)',
+  '[Taiwan Investment and Company Formation Services](/en/services/investment)',
   '[Wei Tseng’s Profile](/en/lawyers/wei-tseng)',
 ];
 

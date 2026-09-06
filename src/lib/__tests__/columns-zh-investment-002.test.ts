@@ -325,7 +325,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       '[經濟部停業申請期限說明](https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=659&method=faqDetlDetl)',
     ];
     const internalLinks = [
-      '[台灣投資及公司設立服務](/zh-hant/services#investment)',
+      '[台灣投資及公司設立服務](/zh-hant/services/investment)',
       '[台灣公司設立基礎](/zh-hant/columns/taiwan-company-establishment-basics)',
       '[聯絡我們](/zh-hant/contact)',
     ];

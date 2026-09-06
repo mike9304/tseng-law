@@ -139,7 +139,7 @@ faq:
 
 ## 관련 안내
 
-1. [대만 투자·회사설립 서비스](/ko/services#investment)
+1. [대만 투자·회사설립 서비스](/ko/services/investment)
 2. [대만 회사설립 기초](/ko/columns/taiwan-company-establishment-basics)
 3. [문의하기](/ko/contact)
 

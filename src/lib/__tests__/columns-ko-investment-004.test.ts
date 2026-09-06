@@ -56,7 +56,7 @@ const officialLinks = [
   '[Invest Taiwan — 외국회사 지점 투자·등기 절차](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01)',
 ];
 const internalLinks = [
-  '[대만 투자·회사설립 서비스](/ko/services#investment)',
+  '[대만 투자·회사설립 서비스](/ko/services/investment)',
   '[대만 회사 설립 기초](/ko/columns/taiwan-company-establishment-basics)',
   '[상담 문의](/ko/contact)',
 ];

@@ -327,7 +327,7 @@ describe('Japanese investment column 002 — company exit and capital return', (
       '4. [台湾経済部の休業申請期限に関する案内](https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=659&method=faqDetlDetl)',
     ];
     const relatedGuides = [
-      '1. [台湾投資・会社設立サービス](/ja/services#investment)',
+      '1. [台湾投資・会社設立サービス](/ja/services/investment)',
       '2. [台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)',
       '3. [お問い合わせ](/ja/contact)',
     ];
@@ -355,7 +355,7 @@ describe('Japanese investment column 002 — company exit and capital return', (
 
   it('uses only the contracted Japanese links and removes every stale claim', () => {
     const expectedLinks = [
-      '[台湾投資・会社設立サービス](/ja/services#investment)',
+      '[台湾投資・会社設立サービス](/ja/services/investment)',
       '[台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)',
       '[お問い合わせ](/ja/contact)',
     ];

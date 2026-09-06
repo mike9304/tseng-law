@@ -82,6 +82,6 @@ B. 2人目以降の従業員には制限あり：1名を超えて雇用する場
 ---
 
 > 関連情報:
-> - [台湾投資・会社設立サービス](/ja/services#investment)
+> - [台湾投資・会社設立サービス](/ja/services/investment)
 > - [台湾会社設立の応用編1](/ja/columns/taiwan-company-establishment-advanced-1)
 > - [お問い合わせ](/ja/contact)

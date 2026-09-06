@@ -324,7 +324,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
     );
     expect(internalLinks).toEqual([
       '[台灣公司設立基礎](/zh-hant/columns/taiwan-company-establishment-basics)',
-      '[台灣投資及公司設立服務](/zh-hant/services#investment)',
+      '[台灣投資及公司設立服務](/zh-hant/services/investment)',
       '[曾雋崴律師簡介](/zh-hant/lawyers/wei-tseng)',
     ]);
   });

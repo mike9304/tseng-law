@@ -184,7 +184,7 @@ faq:
 
 ## 関連案内
 
-- [台湾投資・会社設立サービス](/ja/services#investment)
+- [台湾投資・会社設立サービス](/ja/services/investment)
 - [台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)
 - [お問い合わせ](/ja/contact)
 

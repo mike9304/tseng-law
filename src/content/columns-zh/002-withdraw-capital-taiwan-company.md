@@ -139,7 +139,7 @@ faq:
 
 ## 相關資訊
 
-1. [台灣投資及公司設立服務](/zh-hant/services#investment)
+1. [台灣投資及公司設立服務](/zh-hant/services/investment)
 2. [台灣公司設立基礎](/zh-hant/columns/taiwan-company-establishment-basics)
 3. [聯絡我們](/zh-hant/contact)
 

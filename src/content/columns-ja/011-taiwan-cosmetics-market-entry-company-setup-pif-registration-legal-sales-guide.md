@@ -111,7 +111,7 @@ PIF制度は、製品群ごとに段階的に適用されてきました。2026�
 5. ラベル、販売ページ、広告、協業投稿を、表現全体を基準に確認します。
 6. 検査と是正要求、苦情・安全性情報、必要な事後措置に対応する手続を運用します。
 
-会社と支店の基本的な仕組みについては[台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)、関連する支援範囲については[台湾投資・会社設立サービス](/ja/services#investment)、担当弁護士については[曾雋崴弁護士の紹介](/ja/lawyers/wei-tseng)をご参照ください。
+会社と支店の基本的な仕組みについては[台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)、関連する支援範囲については[台湾投資・会社設立サービス](/ja/services/investment)、担当弁護士については[曾雋崴弁護士の紹介](/ja/lawyers/wei-tseng)をご参照ください。
 
 ### 公式資料
 

@@ -137,6 +137,14 @@ describe('English and Japanese general-page copy residue', () => {
     );
   });
 
+  it('does not address the general EN labor service page to Korean employers only', () => {
+    const laborIntro = getServiceArea('labor')?.intro.en ?? '';
+
+    expect(laborIntro).toContain('We advise employers and employees');
+    expect(laborIntro).not.toMatch(/differ from Korea/i);
+    expect(laborIntro).not.toMatch(/Korean employers/i);
+  });
+
   it('does not present Korean-bank remittance as the general EN investment rule', () => {
     const remittance = getServiceArea('investment')?.keyPoints.en.find((point) =>
       point.startsWith('Capital-remittance requirements'),

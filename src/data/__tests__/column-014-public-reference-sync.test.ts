@@ -50,7 +50,7 @@ const expectedServiceIntros = {
   ko: '대만의 퇴직금(資遣費) 제도는 한국과 적용 사유와 산정 방식이 다릅니다. 계약 종료의 법적 근거, 신제와 구제(舊制)가 적용되는 근속기간, 예고와 기간 제한을 구분해 검토해야 하며, 법무법인 호정은 한국 기업과 한국인 근로자 양측에 해고·퇴직금·근로계약 분쟁 자문을 제공합니다.',
   'zh-hant':
     '台灣資遣費制度與韓國在適用事由及計算方式上不同，應依契約終止的法定依據、新舊制年資、預告與期間限制分別檢視。昊鼎協助韓國企業及韓籍勞工處理解僱、資遣費與勞動契約爭議。',
-  en: 'Taiwan’s severance rules differ from Korea’s in both qualifying grounds and calculation methods. The legal basis for ending the contract, service under the new and old systems, notice requirements, and statutory time limits must be reviewed separately. We advise Korean employers and employees on dismissal, severance, and employment-contract disputes in Taiwan.',
+  en: 'Taiwan’s severance rules require separate review of the legal basis for ending the contract, service under the new and old systems, notice requirements, and statutory time limits. We advise employers and employees on dismissal, severance, and employment-contract disputes in Taiwan.',
 } as const;
 
 const expectedSiteDetails = {

@@ -43,6 +43,11 @@ export default function CinematicRouteShell({
       data-theme="parity"
       data-cinematic-home={showCinematicOpening ? 'true' : undefined}
       data-cinematic-intro-visible={showCinematicOpening ? 'true' : undefined}
+      // WI-11: the opening's inline pre-hydration script flips this attribute
+      // to "false" for returning visitors before React hydrates; the value is
+      // owned by the DOM (CinematicOpening writes it via dataset), so a
+      // server/client difference here is expected, never patched.
+      suppressHydrationWarning
     >
       <div data-legacy-chrome data-cinematic-chrome="header">
         {header}
@@ -79,7 +84,7 @@ export default function CinematicRouteShell({
           <div
             id="cinematic-home-content"
             className="cinematic-opening__target"
-            aria-hidden="true"
+            tabIndex={-1}
           />
         ) : null}
         {children}

@@ -1,0 +1,66 @@
+/* WI-11: visible, keyboard-focusable "skip" control for the cinematic opening.
+   Colors resolve from :root tokens only (plan rule 4: no new literal colors).
+   Layout mirrors the neighbouring scroll control (bottom-right on desktop,
+   bottom-center on phones) so the two "proceed" actions read as one group:
+   desktop = bottom-center, phone = stacked above the centered scroll control. */
+
+.skip {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: max(1.25rem, calc(0.75rem + env(safe-area-inset-bottom)));
+  transform: translateX(-50%);
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.15rem;
+  border: 1px solid var(--gold-light);
+  color: var(--white);
+  background: var(--purple-dark);
+  background: color-mix(in srgb, var(--purple-dark) 78%, transparent);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.75rem; /* 12px floor (WI-5) */
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.skip:hover {
+  border-color: var(--gold);
+  background: var(--purple);
+}
+
+.skip:focus-visible {
+  outline: 3px solid var(--gold-light);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  /* globals.css moves .cinematic-opening__scroll to bottom-center here. */
+  .skip {
+    bottom: calc(
+      max(1.25rem, calc(0.75rem + env(safe-area-inset-bottom))) + 44px + 0.75rem
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip {
+    transition: none;
+  }
+}
+
+/* The content sentinel receives focus after the handoff (tabindex="-1"); it
+   is a zero-height box, so never draw a focus ring across the page. */
+:global(#cinematic-home-content):focus {
+  outline: none;
+}

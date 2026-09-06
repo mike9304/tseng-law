@@ -1,7 +1,15 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
+import {
+  act,
+  isValidElement,
+  type ReactElement,
+  type ReactNode,
+} from 'react';
+import { createRoot, type Root } from 'react-dom/client';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 
 const navigationState = vi.hoisted(() => ({
   pathname: '/ko' as string | null,
@@ -15,14 +23,21 @@ import {
   accumulateOpeningWheelDelta,
   bindCinematicOpeningInputHandlers,
   CINEMATIC_OPENING_COPY,
+  CINEMATIC_OPENING_FORCE_QUERY_PARAM,
   CINEMATIC_OPENING_MEDIA,
+  CINEMATIC_OPENING_PRE_HYDRATION_SCRIPT,
   CINEMATIC_OPENING_SEAL_SIZES,
+  CINEMATIC_OPENING_SEEN_STORAGE_KEY,
   CINEMATIC_OPENING_TOUCH_THRESHOLD,
   CINEMATIC_OPENING_WHEEL_THRESHOLD,
   hasPositiveIntersection,
+  hasSeenCinematicOpening,
   isOpeningForwardKey,
   isOpeningNearViewportTop,
+  markCinematicOpeningSeen,
   resolveCinematicHomeScrollTop,
+  resolveCinematicOpeningStartState,
+  shouldForceCinematicOpening,
 } from '../CinematicOpening';
 import CinematicOpening from '../CinematicOpening';
 import CinematicRouteShell, {
@@ -36,6 +51,7 @@ const expectedOpeningCopy = {
     primary: '법무법인 호정',
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '본문으로 스크롤',
+    skip: '건너뛰기',
     mediaAlt: '밝은 자연광 아래 대만 중앙산맥과 운해 위를 비행하는 항공 전경',
     service: '대만 법률 상담 · 한국어·일본어·영어 소통',
     contact: '상담 연락처',
@@ -44,6 +60,7 @@ const expectedOpeningCopy = {
     primary: '昊鼎國際法律事務所',
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '向下捲動',
+    skip: '略過',
     mediaAlt: '明亮自然光下飛越臺灣中央山脈與雲海的空中景觀',
     service: '台灣法律諮詢 · 韓語、日語、英語溝通',
     contact: '諮詢聯絡方式',
@@ -52,6 +69,7 @@ const expectedOpeningCopy = {
     primary: 'HOVERING INTERNATIONAL LAW FIRM',
     secondary: 'ATTORNEYS AT LAW IN TAIWAN',
     scroll: 'Scroll to continue',
+    skip: 'Skip intro',
     mediaAlt: 'Bright aerial flight over Taiwan’s Central Mountain Range and sea of clouds',
     service: 'Taiwan legal support · English, Japanese & Korean',
     contact: 'Contact the firm',
@@ -60,6 +78,7 @@ const expectedOpeningCopy = {
     primary: '昊鼎国際法律事務所',
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '下にスクロール',
+    skip: 'スキップ',
     mediaAlt: '明るい自然光の中、台湾中央山脈と雲海の上空を飛ぶ空撮風景',
     service: '台湾の法律相談 · 日本語・英語・韓国語で対応',
     contact: '相談窓口',
@@ -672,5 +691,374 @@ describe('cinematic opening single-action handoff', () => {
     expect(wheel.preventDefault).not.toHaveBeenCalled();
     expect(transitionToContent).not.toHaveBeenCalled();
     cleanup();
+  });
+});
+
+class FakeSessionStorage {
+  readonly store = new Map<string, string>();
+
+  getItem(key: string) {
+    return this.store.get(key) ?? null;
+  }
+
+  setItem(key: string, value: string) {
+    this.store.set(key, String(value));
+  }
+}
+
+const throwingStorage = {
+  getItem: () => {
+    throw new Error('SecurityError');
+  },
+  setItem: () => {
+    throw new Error('QuotaExceededError');
+  },
+};
+
+type ProbeProps = { children?: ReactNode; [key: string]: unknown };
+
+function findElement(
+  tree: ReactNode,
+  predicate: (element: ReactElement<ProbeProps>) => boolean,
+): ReactElement<ProbeProps> | undefined {
+  if (Array.isArray(tree)) {
+    for (const child of tree) {
+      const found = findElement(child, predicate);
+      if (found) return found;
+    }
+    return undefined;
+  }
+  if (!isValidElement<ProbeProps>(tree)) return undefined;
+  if (predicate(tree)) return tree;
+  return findElement(tree.props.children, predicate);
+}
+
+const roots: Root[] = [];
+
+// Same host-less probe as columns-filter-recovery: React state/effect
+// scheduling is real, refs stay null (no host nodes), and window/document are
+// the minimal stubs the opening touches.
+async function mountOpening({
+  search = '',
+  storage = new FakeSessionStorage(),
+  locale = 'ko' as (typeof locales)[number],
+} = {}) {
+  const url = new URL(`http://localhost/${locale}${search}`);
+  const target = { focus: vi.fn(), closest: () => null, parentElement: null };
+  const documentElement = {
+    dataset: {} as Record<string, string | undefined>,
+    namespaceURI: 'http://www.w3.org/1999/xhtml',
+  };
+  const document = {
+    activeElement: null,
+    body: null,
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    documentElement,
+    nodeType: 9,
+    getElementById: (id: string) => (id === 'cinematic-home-content' ? target : null),
+  };
+  const container = {
+    addEventListener: vi.fn(), removeEventListener: vi.fn(), appendChild: vi.fn(), removeChild: vi.fn(),
+    namespaceURI: 'http://www.w3.org/1999/xhtml', nodeName: 'DIV', nodeType: 1,
+    ownerDocument: document, tagName: 'DIV', textContent: '',
+  };
+  const window = {
+    location: url,
+    sessionStorage: storage,
+    history: { state: null, replaceState: vi.fn() },
+    requestAnimationFrame: vi.fn(() => 1),
+    cancelAnimationFrame: vi.fn(),
+    setTimeout: vi.fn(() => 1),
+    clearTimeout: vi.fn(),
+    scrollTo: vi.fn(),
+    scrollY: 0,
+    innerHeight: 900,
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+  };
+  vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT', true);
+  vi.stubGlobal('window', window);
+  vi.stubGlobal('document', document);
+  vi.stubGlobal('HTMLIFrameElement', function HTMLIFrameElement() {});
+  vi.stubGlobal('HTMLElement', function HTMLElement() {});
+  Object.assign(window, { HTMLIFrameElement: globalThis.HTMLIFrameElement });
+
+  let tree: ReactNode;
+  function Probe() {
+    tree = CinematicOpening({
+      locale,
+      deferredContent: <div data-deferred="true">DEFERRED</div>,
+    });
+    return null;
+  }
+  const root = createRoot(container as unknown as Element);
+  roots.push(root);
+  await act(async () => root.render(<Probe />));
+
+  return {
+    storage,
+    target,
+    documentElement,
+    window,
+    section: () => findElement(tree, (element) => element.type === 'section'),
+    skip: () => findElement(tree, (element) => element.props['data-skip'] === 'true'),
+    deferred: () => findElement(tree, (element) => element.props['data-deferred'] === 'true'),
+  };
+}
+
+function runPreHydrationScript({
+  search,
+  storage,
+  site,
+}: {
+  search: string;
+  storage: Pick<Storage, 'getItem'>;
+  site: { setAttribute: ReturnType<typeof vi.fn> } | null;
+}) {
+  const documentElement = { setAttribute: vi.fn() };
+  const script = { parentElement: { closest: vi.fn(() => site) } };
+  vm.runInNewContext(CINEMATIC_OPENING_PRE_HYDRATION_SCRIPT, {
+    URLSearchParams,
+    location: { search },
+    sessionStorage: storage,
+    document: { currentScript: script, documentElement },
+  });
+  return { documentElement, closest: script.parentElement.closest };
+}
+
+afterEach(async () => {
+  for (const root of roots.splice(0)) await act(async () => root.unmount());
+  vi.unstubAllGlobals();
+});
+
+describe('WI-11 cinematic opening once per session', () => {
+  it('plays on the first visit and reads the completed state once the marker exists', () => {
+    const storage = new FakeSessionStorage();
+    expect(CINEMATIC_OPENING_SEEN_STORAGE_KEY).toBe('hojeong.cinematic.seen');
+    expect(resolveCinematicOpeningStartState({ search: '', storage })).toBe('opening');
+    expect(hasSeenCinematicOpening(storage)).toBe(false);
+
+    markCinematicOpeningSeen(storage);
+
+    expect(storage.getItem(CINEMATIC_OPENING_SEEN_STORAGE_KEY)).toBe('1');
+    expect(hasSeenCinematicOpening(storage)).toBe(true);
+    expect(resolveCinematicOpeningStartState({ search: '', storage })).toBe('completed');
+    expect(resolveCinematicOpeningStartState({ search: '?utm=x', storage })).toBe('completed');
+  });
+
+  it('forces the opening with ?intro=1 and only with that value', () => {
+    const storage = new FakeSessionStorage();
+    markCinematicOpeningSeen(storage);
+
+    expect(CINEMATIC_OPENING_FORCE_QUERY_PARAM).toBe('intro');
+    expect(shouldForceCinematicOpening('?intro=1')).toBe(true);
+    expect(shouldForceCinematicOpening('?utm=x&intro=1')).toBe(true);
+    expect(shouldForceCinematicOpening('?intro=0')).toBe(false);
+    expect(shouldForceCinematicOpening('')).toBe(false);
+    expect(resolveCinematicOpeningStartState({ search: '?intro=1', storage })).toBe('opening');
+    expect(resolveCinematicOpeningStartState({ search: '?intro=0', storage })).toBe('completed');
+  });
+
+  it('treats unavailable or throwing storage as a first visit and never throws', () => {
+    expect(resolveCinematicOpeningStartState({ search: '', storage: null })).toBe('opening');
+    expect(resolveCinematicOpeningStartState({ search: '', storage: throwingStorage })).toBe('opening');
+    expect(() => markCinematicOpeningSeen(throwingStorage)).not.toThrow();
+    expect(() => markCinematicOpeningSeen(null)).not.toThrow();
+  });
+
+  it('server-renders the pre-hydration gate before the opening markup', () => {
+    const html = renderToStaticMarkup(<CinematicOpening locale="ko" />);
+    const scriptIndex = html.indexOf('<script>');
+    const sectionIndex = html.indexOf('<section');
+
+    expect(scriptIndex).toBeGreaterThanOrEqual(0);
+    expect(scriptIndex).toBeLessThan(sectionIndex);
+    expect(html).toContain(CINEMATIC_OPENING_PRE_HYDRATION_SCRIPT);
+    expect(CINEMATIC_OPENING_PRE_HYDRATION_SCRIPT).toContain(CINEMATIC_OPENING_SEEN_STORAGE_KEY);
+    expect(CINEMATIC_OPENING_PRE_HYDRATION_SCRIPT).not.toContain('</script');
+  });
+
+  it('pre-hydration gate flips the site and html flags only for a returning visitor', () => {
+    const seen = new FakeSessionStorage();
+    markCinematicOpeningSeen(seen);
+    const site = { setAttribute: vi.fn() };
+
+    const returning = runPreHydrationScript({ search: '', storage: seen, site });
+    expect(returning.closest).toHaveBeenCalledWith('[data-cinematic-home]');
+    expect(site.setAttribute).toHaveBeenCalledWith('data-cinematic-intro-visible', 'false');
+    expect(returning.documentElement.setAttribute).toHaveBeenCalledWith(
+      'data-cinematic-intro-visible',
+      'false',
+    );
+
+    const firstVisitSite = { setAttribute: vi.fn() };
+    const firstVisit = runPreHydrationScript({
+      search: '',
+      storage: new FakeSessionStorage(),
+      site: firstVisitSite,
+    });
+    expect(firstVisitSite.setAttribute).not.toHaveBeenCalled();
+    expect(firstVisit.documentElement.setAttribute).not.toHaveBeenCalled();
+
+    const forcedSite = { setAttribute: vi.fn() };
+    const forced = runPreHydrationScript({ search: '?intro=1', storage: seen, site: forcedSite });
+    expect(forcedSite.setAttribute).not.toHaveBeenCalled();
+    expect(forced.documentElement.setAttribute).not.toHaveBeenCalled();
+
+    expect(() => runPreHydrationScript({ search: '', storage: throwingStorage, site })).not.toThrow();
+    expect(() => runPreHydrationScript({ search: '', storage: seen, site: null })).not.toThrow();
+  });
+
+  it('mounts the opening on a first visit and completes it from the skip button', async () => {
+    const opening = await mountOpening();
+
+    expect(opening.section()).toBeDefined();
+    expect(opening.deferred()).toBeUndefined();
+    const skip = opening.skip();
+    expect(skip?.type).toBe('button');
+    expect(skip?.props.type).toBe('button');
+    expect(skip?.props.children).toBe('건너뛰기');
+    expect(opening.storage.getItem(CINEMATIC_OPENING_SEEN_STORAGE_KEY)).toBeNull();
+
+    await act(async () => {
+      (skip?.props.onClick as () => void)();
+    });
+
+    expect(opening.storage.getItem(CINEMATIC_OPENING_SEEN_STORAGE_KEY)).toBe('1');
+    expect(opening.documentElement.dataset.cinematicIntroVisible).toBe('false');
+    expect(opening.deferred()).toBeDefined();
+    expect(opening.window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'auto' });
+    expect(opening.window.history.replaceState).toHaveBeenCalledWith(null, '', '/ko');
+  });
+
+  it('renders the completed state immediately on a second mount in the same session', async () => {
+    const storage = new FakeSessionStorage();
+    markCinematicOpeningSeen(storage);
+
+    const opening = await mountOpening({ storage });
+
+    expect(opening.section()).toBeUndefined();
+    expect(opening.skip()).toBeUndefined();
+    expect(opening.deferred()).toBeDefined();
+    expect(opening.documentElement.dataset.cinematicIntroVisible).toBe('false');
+    expect(opening.window.addEventListener).not.toHaveBeenCalled();
+  });
+
+  it('replays the opening for ?intro=1 even when the session marker exists', async () => {
+    const storage = new FakeSessionStorage();
+    markCinematicOpeningSeen(storage);
+
+    const opening = await mountOpening({ storage, search: '?intro=1' });
+
+    expect(opening.section()).toBeDefined();
+    expect(opening.skip()).toBeDefined();
+    expect(opening.deferred()).toBeUndefined();
+  });
+
+  it('decides the start state before paint and moves focus to the skip control on mount', () => {
+    const source = readFileSync(
+      path.join(process.cwd(), 'src/components/CinematicOpening.tsx'),
+      'utf8',
+    );
+
+    expect(source).toContain(
+      "typeof window === 'undefined' ? useEffect : useLayoutEffect",
+    );
+    expect(source).toContain('useBrowserLayoutEffect(() => {');
+    expect(source).toContain('skipButtonRef.current?.focus({ preventScroll: true })');
+    expect(source).toContain('target.focus({ preventScroll: true })');
+    expect(source).toContain('markCinematicOpeningSeen(readSessionStorage())');
+  });
+});
+
+describe('WI-11 cinematic opening skip control and accessibility tree', () => {
+  it.each(locales)('renders a localized, focusable %s skip button with a 44px target', (locale) => {
+    const html = renderToStaticMarkup(<CinematicOpening locale={locale} />);
+    const button = html.match(/<button[^>]*data-skip="true"[^>]*>([^<]*)<\/button>/);
+    const moduleCss = readFileSync(
+      path.join(process.cwd(), 'src/components/CinematicOpening.module.css'),
+      'utf8',
+    );
+
+    expect(button).not.toBeNull();
+    expect(button?.[0]).toContain('type="button"');
+    expect(button?.[0]).toContain('cinematic-opening__skip');
+    expect(button?.[0]).not.toContain('tabindex="-1"');
+    expect(button?.[0]).not.toContain('aria-hidden');
+    expect(button?.[1]).toBe(expectedOpeningCopy[locale].skip);
+    expect(moduleCss).toContain('min-width: 44px;');
+    expect(moduleCss).toContain('min-height: 44px;');
+    expect(moduleCss).toContain('var(--gold');
+    expect(moduleCss).toContain('var(--white)');
+    expect(moduleCss).not.toMatch(/#[0-9a-f]{3,8}\b/i);
+    expect(moduleCss).toContain('.skip:focus-visible');
+  });
+
+  it('keeps the skip button inside the keyboard handoff instead of treating it as a form control', () => {
+    const source = readFileSync(
+      path.join(process.cwd(), 'src/components/CinematicOpening.tsx'),
+      'utf8',
+    );
+    expect(source).toContain('button:not([data-skip="true"])');
+
+    class FakeElement {
+      constructor(readonly skip: boolean) {}
+      closest(selector: string) {
+        if (!selector.includes('button')) return null;
+        if (this.skip && selector.includes('button:not([data-skip="true"])')) return null;
+        return this;
+      }
+    }
+    vi.stubGlobal('Element', FakeElement);
+    const host = new FakeInputHost();
+    const transitionToContent = vi.fn(() => true);
+    const cleanup = bindCinematicOpeningInputHandlers({
+      host,
+      isCaptureActive: () => true,
+      isTransitionLocked: () => false,
+      transitionToContent,
+    });
+
+    const onSkip = { ...keyboardEvent('ArrowDown'), target: new FakeElement(true) };
+    host.dispatch('keydown', onSkip);
+    expect(transitionToContent).toHaveBeenCalledOnce();
+    expect(onSkip.preventDefault).toHaveBeenCalledOnce();
+
+    const onOtherButton = { ...keyboardEvent('ArrowDown'), target: new FakeElement(false) };
+    host.dispatch('keydown', onOtherButton);
+    expect(transitionToContent).toHaveBeenCalledOnce();
+    expect(onOtherButton.preventDefault).not.toHaveBeenCalled();
+    cleanup();
+  });
+
+  it('never removes the header, skip-link host or main from the accessibility tree', () => {
+    const html = renderRouteShell('/ko');
+    const openingSource = readFileSync(
+      path.join(process.cwd(), 'src/components/CinematicOpening.tsx'),
+      'utf8',
+    );
+    const shellSource = readFileSync(
+      path.join(process.cwd(), 'src/components/CinematicRouteShell.tsx'),
+      'utf8',
+    );
+    const headerHost = html.match(/<div[^>]*data-cinematic-chrome="header"[^>]*>/)?.[0];
+    const main = html.match(/<main[^>]*>/)?.[0];
+    const section = html.match(/<section[^>]*>/)?.[0];
+    const sentinel = html.match(/<div[^>]*id="cinematic-home-content"[^>]*>/)?.[0];
+
+    expect(headerHost).toBeDefined();
+    expect(headerHost).not.toContain('aria-hidden');
+    expect(headerHost).not.toMatch(/\binert\b/);
+    expect(main).toBe('<main id="main">');
+    expect(section).not.toContain('aria-hidden');
+    expect(section).not.toMatch(/\binert\b/);
+    expect(section).toContain('aria-label=');
+    expect(sentinel).toContain('tabindex="-1"');
+    expect(sentinel).not.toContain('aria-hidden');
+    expect(openingSource).not.toMatch(/\binert\b/);
+    expect(openingSource).not.toContain("setAttribute('aria-hidden'");
+    expect(openingSource).not.toMatch(/\.ariaHidden\s*=/);
+    expect(shellSource).toContain('suppressHydrationWarning');
   });
 });

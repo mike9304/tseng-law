@@ -334,7 +334,7 @@ export const CINEMATIC_OPENING_COPY: Record<
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '본문으로 스크롤',
     mediaAlt: '밝은 자연광 아래 대만 중앙산맥과 운해 위를 비행하는 항공 전경',
-    service: '대만 법률 상담 · 한국어·일본어 소통',
+    service: '대만 법률 상담 · 한국어·일본어·영어 소통',
     contact: '상담 연락처',
   },
   'zh-hant': {
@@ -342,7 +342,7 @@ export const CINEMATIC_OPENING_COPY: Record<
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '向下捲動',
     mediaAlt: '明亮自然光下飛越臺灣中央山脈與雲海的空中景觀',
-    service: '台灣法律諮詢 · 韓語、日語溝通',
+    service: '台灣法律諮詢 · 韓語、日語、英語溝通',
     contact: '諮詢聯絡方式',
   },
   en: {

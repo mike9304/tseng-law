@@ -90,7 +90,12 @@ describe('Japanese services-list integration', () => {
 
     expect(html).toContain(pageCopy.ja.services.title);
     expect(html).toContain(pageCopy.ja.services.description);
-    expect(html).toContain(siteContent.ja.services.description);
+    expect(html).not.toContain(siteContent.ja.services.description);
+    expect(html).toContain(`aria-label="${siteContent.ja.services.title}"`);
+    expect(html.match(/<h1/g) ?? []).toHaveLength(1);
+    expect(html.match(/<h2 class="services-detail-title"/g) ?? []).toHaveLength(6);
+    expect(html).not.toContain('<h3');
+    expect(html.match(/section-lede/g) ?? []).toHaveLength(1);
     expect(html.match(/class="services-detail-card services-card"/g) ?? []).toHaveLength(6);
 
     const japaneseServiceCopy = siteContent.ja.services.items

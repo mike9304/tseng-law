@@ -44,15 +44,15 @@ function publishedHomeHeadingHtml(
   );
 }
 
-describe('published home heading uniqueness', () => {
-  it('keeps a single h1 on the zh-hant decomposed dual-tree home', () => {
+describe('published home responsive headings', () => {
+  it('gives both mutually exclusive zh-hant hero variants an h1', () => {
     const html = publishedHomeHeadingHtml('zh-hant', 'decomposed');
 
-    expect(html.match(/<h1\b/g)).toHaveLength(1);
+    expect(html.match(/<h1\b/g)).toHaveLength(2);
     expect(html).toContain('<h1 class="hero-title"');
-    expect(html).toContain('<h2 class="hero-title" data-builder-surface-key="headline">');
+    expect(html).toContain('<h1 class="hero-title" data-builder-surface-key="headline">');
     expect(html).toContain('台灣法律，清楚說明。');
-    expect(html.match(/<h1\b/g)?.length).toBe(1);
+    expect(html).not.toContain('<h2 class="hero-title"');
   });
 
   it.each(['ko', 'en'] as const)('keeps a single h1 on the %s decomposed home', (locale) => {
@@ -67,7 +67,7 @@ describe('published home heading uniqueness', () => {
     expect(html).not.toMatch(/<h2 class="hero-title"/);
   });
 
-  it('keeps a single h1 through the published public-page renderer for zh-hant', async () => {
+  it('keeps an h1 in each CSS-swapped hero through the public renderer', async () => {
     const now = '2026-08-13T00:00:00.000Z';
     const locale: Locale = 'zh-hant';
     const resolved: ResolvedPublishedSitePage = {
@@ -114,11 +114,15 @@ describe('published home heading uniqueness', () => {
     const insightsRoot = html.match(/data-node-id="home-insights-root"[^>]*style="([^"]*)"/)?.[1] ?? '';
     const insightsMinHeight = Number(insightsRoot.match(/min-height:\s*(\d+)px/)?.[1] ?? 0);
 
-    expect(html.match(/<h1\b/g)).toHaveLength(1);
+    expect(html.match(/<h1\b/g)).toHaveLength(2);
     expect(html).toContain('data-node-id="home-hero-title"');
     expect(html).toContain('data-anchor="mobile-parity-home-hero"');
-    expect(html).toContain('<h2 class="hero-title" data-builder-surface-key="headline">');
-    expect(html).not.toMatch(/data-anchor="mobile-parity-home-hero"[\s\S]*?<h1\b/);
+    expect(html).toContain('<h1 class="hero-title" data-builder-surface-key="headline">');
+    expect(html).toMatch(/data-anchor="mobile-parity-home-hero"[\s\S]*?<h1\b/);
+    // The raw document contains both variants. CSS hides the granular root on
+    // mobile and hides this overlay on desktop; browser QA checks exposed H1s.
+    expect(html).toContain(".builder-pub-node[data-anchor^='mobile-parity-home-']");
+    expect(html).toContain(".builder-pub-main > .builder-pub-node[data-node-id='home-hero-root']");
     expect(mainMinHeight).toBeGreaterThan(7000);
     expect(mainMinHeight).toBeLessThanOrEqual(7124);
     expect(insightsMinHeight).toBe(820);

@@ -1,5 +1,6 @@
 import type { Locale } from '@/lib/locales';
 import { normalizeLocale } from '@/lib/locales';
+import type { AiIntakeOutcomeStage } from '@/lib/consultation/admin/read-logs';
 
 export type ConsultationCopy = {
   pageTitle: string;
@@ -24,6 +25,33 @@ export type ConsultationCopy = {
     rate: string;
   };
   conversionSteps: string[];
+  aiIntakeTitle: string;
+  aiIntakeDescription: string;
+  aiIntakeProviderTitle: string;
+  aiIntakeLocaleTitle: string;
+  aiIntakeCategoryTitle: string;
+  aiIntakeRecentTitle: string;
+  aiIntakeTotalLabel: string;
+  aiIntakeEmpty: string;
+  aiIntakeRecentEmpty: string;
+  aiIntakeHeaders: {
+    dimension: string;
+    freshSent: string;
+    duplicates: string;
+    rejected: string;
+    deliveryUnknown: string;
+    total: string;
+    sentShare: string;
+    duplicateShare: string;
+    problemShare: string;
+  };
+  aiIntakeRecentHeaders: {
+    time: string;
+    provider: string;
+    locale: string;
+    outcome: string;
+  };
+  aiIntakeOutcomeLabels: Record<AiIntakeOutcomeStage, string>;
   performanceTitle: string;
   performanceDescription: string;
   performanceRowLabels: {
@@ -164,6 +192,38 @@ const COPY: Record<Locale, ConsultationCopy> = {
       '제출 수신 → 이메일 발송',
       '전체 퍼널 (채팅 → 이메일 발송)',
     ],
+    aiIntakeTitle: 'AI 제공자 이메일 접수 제출 결과',
+    aiIntakeDescription: '제출 결과만 집계하며 미리보기→제출 전환율이 아닙니다. 신규 발송은 사용자가 정확한 내용을 승인한 새 이메일이고, 중복은 신규 발송 수에서 제외됩니다. 상담 내용은 표시하지 않습니다. 카테고리는 승인된 미리보기가 일치한 뒤에만 보존되며, 기존 또는 신뢰할 수 없는 값은 unknown_category로 나타납니다.',
+    aiIntakeProviderTitle: '제공자별 결과',
+    aiIntakeLocaleTitle: '언어별 결과',
+    aiIntakeCategoryTitle: '사안 유형별 결과',
+    aiIntakeRecentTitle: '최근 제출 결과',
+    aiIntakeTotalLabel: '전체',
+    aiIntakeEmpty: '기간 내 AI 이메일 접수 제출 결과가 없습니다.',
+    aiIntakeRecentEmpty: '최근 AI 이메일 접수 제출 결과가 없습니다.',
+    aiIntakeHeaders: {
+      dimension: '구분',
+      freshSent: '신규 발송',
+      duplicates: '중복',
+      rejected: '거부',
+      deliveryUnknown: '전달 상태 불명',
+      total: '전체',
+      sentShare: '신규 발송 비율',
+      duplicateShare: '중복 비율',
+      problemShare: '비중복 문제 비율',
+    },
+    aiIntakeRecentHeaders: {
+      time: '시간(타이베이)',
+      provider: '제공자',
+      locale: '언어',
+      outcome: '결과',
+    },
+    aiIntakeOutcomeLabels: {
+      ai_intake_submit_sent: '신규 발송',
+      ai_intake_submit_duplicate: '중복',
+      ai_intake_submit_rejected: '거부',
+      ai_intake_submit_failed_unknown: '전달 상태 불명',
+    },
     performanceTitle: '성능 및 비용',
     performanceDescription: '최근 {days}일 LLM 호출 {samples}건 기준. gpt-4o-mini 가격 (입력 $0.15 / 출력 $0.60 per 1M tokens).',
     performanceRowLabels: {
@@ -296,6 +356,38 @@ const COPY: Record<Locale, ConsultationCopy> = {
       '收到提交 → email 已送出',
       '完整漏斗（聊天 → email 已送出）',
     ],
+    aiIntakeTitle: 'AI 提供者諮詢郵件提交結果',
+    aiIntakeDescription: '僅統計提交結果，並非預覽到提交的轉換率。新寄送是使用者核准確切內容後寄出的新郵件；重複結果不計入新寄送。此處不顯示任何諮詢內容。僅在核准的預覽內容相符後才保留案件類型；既有或不可信的值會顯示為 unknown_category。',
+    aiIntakeProviderTitle: '依提供者',
+    aiIntakeLocaleTitle: '依語言',
+    aiIntakeCategoryTitle: '依案件類型',
+    aiIntakeRecentTitle: '最近提交結果',
+    aiIntakeTotalLabel: '全部',
+    aiIntakeEmpty: '期間內沒有 AI 諮詢郵件提交結果。',
+    aiIntakeRecentEmpty: '沒有最近的 AI 諮詢郵件提交結果。',
+    aiIntakeHeaders: {
+      dimension: '維度',
+      freshSent: '新寄送',
+      duplicates: '重複',
+      rejected: '拒絕',
+      deliveryUnknown: '寄送狀態不明',
+      total: '總計',
+      sentShare: '新寄送比例',
+      duplicateShare: '重複比例',
+      problemShare: '非重複問題比例',
+    },
+    aiIntakeRecentHeaders: {
+      time: '時間（台北）',
+      provider: '提供者',
+      locale: '語言',
+      outcome: '結果',
+    },
+    aiIntakeOutcomeLabels: {
+      ai_intake_submit_sent: '新寄送',
+      ai_intake_submit_duplicate: '重複',
+      ai_intake_submit_rejected: '拒絕',
+      ai_intake_submit_failed_unknown: '寄送狀態不明',
+    },
     performanceTitle: '效能與成本',
     performanceDescription: '依最近 {days} 天 {samples} 次 LLM 呼叫。gpt-4o-mini 價格（輸入 $0.15 / 輸出 $0.60 per 1M tokens）。',
     performanceRowLabels: {
@@ -428,6 +520,38 @@ const COPY: Record<Locale, ConsultationCopy> = {
       'Submit received → email sent',
       'Full funnel (chat → email sent)',
     ],
+    aiIntakeTitle: 'AI provider email-intake submit outcomes',
+    aiIntakeDescription: 'Submit outcomes only, not preview-to-submit conversion. Sent means a fresh email sent after the user approved the exact content; duplicates are excluded from the fresh sent count. No consultation contents are shown. Category is retained only after the approved preview matches; legacy or untrusted values appear as unknown_category.',
+    aiIntakeProviderTitle: 'By provider',
+    aiIntakeLocaleTitle: 'By locale',
+    aiIntakeCategoryTitle: 'By matter category',
+    aiIntakeRecentTitle: 'Recent submit outcomes',
+    aiIntakeTotalLabel: 'Total',
+    aiIntakeEmpty: 'No AI email-intake submit outcomes in this window.',
+    aiIntakeRecentEmpty: 'No recent AI email-intake submit outcomes.',
+    aiIntakeHeaders: {
+      dimension: 'Dimension',
+      freshSent: 'Fresh sent',
+      duplicates: 'Duplicates',
+      rejected: 'Rejected',
+      deliveryUnknown: 'Delivery unknown',
+      total: 'Total',
+      sentShare: 'Sent share',
+      duplicateShare: 'Duplicate share',
+      problemShare: 'Problem share',
+    },
+    aiIntakeRecentHeaders: {
+      time: 'Time (Taipei)',
+      provider: 'Provider',
+      locale: 'Locale',
+      outcome: 'Outcome',
+    },
+    aiIntakeOutcomeLabels: {
+      ai_intake_submit_sent: 'Fresh sent',
+      ai_intake_submit_duplicate: 'Duplicate',
+      ai_intake_submit_rejected: 'Rejected',
+      ai_intake_submit_failed_unknown: 'Delivery unknown',
+    },
     performanceTitle: 'Performance & cost',
     performanceDescription: 'Based on {samples} LLM calls across the last {days} days. gpt-4o-mini pricing (input $0.15 / output $0.60 per 1M tokens).',
     performanceRowLabels: {

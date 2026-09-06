@@ -3,6 +3,10 @@ import type {
   ConsultationRiskLevel,
 } from '@/lib/consultation/types';
 import type { ConsultationFunnelStage } from '@/lib/consultation/log-store';
+import { getConfiguredAiIntakeClientIds } from '@/lib/ai-intake/auth';
+import { AI_INTAKE_CLIENT_ID_PATTERN } from '@/lib/ai-intake/constants';
+import { AI_INTAKE_CATEGORIES, type AiIntakeCategory } from '@/lib/ai-intake/schemas';
+import { siteLocales, type SiteLocale } from '@/lib/locales';
 import {
   type LogKind,
   readConsultationLogLines,
@@ -54,6 +58,7 @@ export interface EventLogRecord {
   success?: boolean;
   failureReason?: string;
   metadataRedacted?: string;
+  aiIntakeCategory?: string;
   // Wave 9 — SLO metrics persisted on chat events.
   latencyMs?: number;
   openAiCalls?: number;
@@ -70,6 +75,43 @@ export interface FeedbackLogRecord {
   classification?: ConsultationCategory;
   riskLevel?: ConsultationRiskLevel;
   commentRedacted?: string;
+}
+
+export const AI_INTAKE_OUTCOME_STAGES = [
+  'ai_intake_submit_sent',
+  'ai_intake_submit_duplicate',
+  'ai_intake_submit_failed_unknown',
+  'ai_intake_submit_rejected',
+] as const;
+
+export type AiIntakeOutcomeStage = (typeof AI_INTAKE_OUTCOME_STAGES)[number];
+export type AiIntakeProviderDimension = string | 'unknown_provider';
+export type AiIntakeLocaleDimension = SiteLocale | 'unknown_locale';
+export type AiIntakeCategoryDimension = AiIntakeCategory | 'unknown_category';
+
+export interface AiIntakeOutcomeStats {
+  sent: number;
+  duplicate: number;
+  rejected: number;
+  failedUnknown: number;
+  totalOutcomes: number;
+  nonReplayOutcomes: number;
+  sentShareOfOutcomes: number | null;
+  duplicateShareOfOutcomes: number | null;
+  problemShareOfNonReplay: number | null;
+}
+
+export interface AiIntakeMetrics {
+  total: AiIntakeOutcomeStats;
+  byProvider: Array<AiIntakeOutcomeStats & { provider: AiIntakeProviderDimension }>;
+  byLocale: Array<AiIntakeOutcomeStats & { locale: AiIntakeLocaleDimension }>;
+  byCategory: Array<AiIntakeOutcomeStats & { category: AiIntakeCategoryDimension }>;
+  recentOutcomes: Array<{
+    timestamp: string;
+    provider: AiIntakeProviderDimension;
+    locale: AiIntakeLocaleDimension;
+    stage: AiIntakeOutcomeStage;
+  }>;
 }
 
 export interface AdminDashboardMetrics {
@@ -131,6 +173,7 @@ export interface AdminDashboardMetrics {
     rateLimitedChat: number;
     rateLimitedSubmit: number;
   };
+  aiIntake: AiIntakeMetrics;
   /** Wave 9 — performance & cost rollup. Computed only over chat events
    *  that actually invoked the LLM (i.e. excluding bypass paths). */
   performance: {
@@ -190,6 +233,165 @@ export interface AdminDashboardMetrics {
       reason: string;
       keywords: string[];
     }>;
+  };
+}
+
+type MutableAiIntakeCounts = Pick<
+  AiIntakeOutcomeStats,
+  'sent' | 'duplicate' | 'rejected' | 'failedUnknown'
+>;
+
+const AI_INTAKE_OUTCOME_STAGE_SET: ReadonlySet<string> = new Set(AI_INTAKE_OUTCOME_STAGES);
+const AI_INTAKE_LOCALE_SET: ReadonlySet<string> = new Set(siteLocales);
+const AI_INTAKE_CATEGORY_SET: ReadonlySet<string> = new Set(AI_INTAKE_CATEGORIES);
+
+function canonicalAiIntakeCategory(value: unknown): AiIntakeCategoryDimension {
+  return typeof value === 'string' && AI_INTAKE_CATEGORY_SET.has(value)
+    ? value as AiIntakeCategory
+    : 'unknown_category';
+}
+
+function emptyAiIntakeCounts(): MutableAiIntakeCounts {
+  return { sent: 0, duplicate: 0, rejected: 0, failedUnknown: 0 };
+}
+
+function oneDecimalPercent(numerator: number, denominator: number): number | null {
+  return denominator === 0 ? null : Math.round((numerator / denominator) * 1_000) / 10;
+}
+
+function finalizeAiIntakeCounts(counts: MutableAiIntakeCounts): AiIntakeOutcomeStats {
+  const totalOutcomes = counts.sent + counts.duplicate + counts.rejected + counts.failedUnknown;
+  const nonReplayOutcomes = counts.sent + counts.rejected + counts.failedUnknown;
+  return {
+    ...counts,
+    totalOutcomes,
+    nonReplayOutcomes,
+    sentShareOfOutcomes: oneDecimalPercent(counts.sent, totalOutcomes),
+    duplicateShareOfOutcomes: oneDecimalPercent(counts.duplicate, totalOutcomes),
+    problemShareOfNonReplay: oneDecimalPercent(
+      counts.rejected + counts.failedUnknown,
+      nonReplayOutcomes,
+    ),
+  };
+}
+
+function incrementAiIntakeStage(
+  counts: MutableAiIntakeCounts,
+  stage: AiIntakeOutcomeStage,
+): void {
+  if (stage === 'ai_intake_submit_sent') counts.sent += 1;
+  else if (stage === 'ai_intake_submit_duplicate') counts.duplicate += 1;
+  else if (stage === 'ai_intake_submit_rejected') counts.rejected += 1;
+  else counts.failedUnknown += 1;
+}
+
+function canonicalAiIntakeTimestamp(value: unknown): { timestamp: string; time: number } | null {
+  if (typeof value !== 'string') return null;
+  const time = Date.parse(value);
+  if (!Number.isFinite(time)) return null;
+  try {
+    return { timestamp: new Date(time).toISOString(), time };
+  } catch {
+    return null;
+  }
+}
+
+function compareAiIntakeLabel(left: string, right: string): number {
+  return left < right ? -1 : left > right ? 1 : 0;
+}
+
+function compareAiIntakeRows(
+  left: AiIntakeOutcomeStats & { label: string },
+  right: AiIntakeOutcomeStats & { label: string },
+): number {
+  return right.sent - left.sent
+    || (right.rejected + right.failedUnknown) - (left.rejected + left.failedUnknown)
+    || compareAiIntakeLabel(left.label, right.label);
+}
+
+/**
+ * Build a bounded, allowlisted view of AI email-intake submit outcomes.
+ * No raw log record, intake identifier, or redacted metadata is retained.
+ */
+export function aggregateAiIntakeMetrics(
+  events: readonly EventLogRecord[],
+  configuredClientIds: readonly string[],
+): AiIntakeMetrics {
+  const providerAllowlist = new Set(
+    configuredClientIds.filter((clientId) => (
+      typeof clientId === 'string' && AI_INTAKE_CLIENT_ID_PATTERN.test(clientId)
+    )),
+  );
+  const totalCounts = emptyAiIntakeCounts();
+  const providerCounts = new Map<AiIntakeProviderDimension, MutableAiIntakeCounts>();
+  const localeCounts = new Map<AiIntakeLocaleDimension, MutableAiIntakeCounts>();
+  const categoryCounts = new Map<AiIntakeCategoryDimension, MutableAiIntakeCounts>();
+  const outcomes: Array<AiIntakeMetrics['recentOutcomes'][number] & { time: number; order: number }> = [];
+
+  for (const [order, event] of events.entries()) {
+    if (!event || typeof event !== 'object' || event.eventType !== 'funnel') continue;
+    if (typeof event.funnelStage !== 'string' || !AI_INTAKE_OUTCOME_STAGE_SET.has(event.funnelStage)) continue;
+    const parsedTimestamp = canonicalAiIntakeTimestamp(event.timestamp);
+    if (!parsedTimestamp) continue;
+
+    const stage = event.funnelStage as AiIntakeOutcomeStage;
+    const provider = typeof event.sessionId === 'string' && providerAllowlist.has(event.sessionId)
+      ? event.sessionId
+      : 'unknown_provider';
+    const locale = typeof event.locale === 'string' && AI_INTAKE_LOCALE_SET.has(event.locale)
+      ? event.locale as SiteLocale
+      : 'unknown_locale';
+    const category = canonicalAiIntakeCategory(event.aiIntakeCategory);
+    const providerBucket = providerCounts.get(provider) ?? emptyAiIntakeCounts();
+    const localeBucket = localeCounts.get(locale) ?? emptyAiIntakeCounts();
+    const categoryBucket = categoryCounts.get(category) ?? emptyAiIntakeCounts();
+
+    incrementAiIntakeStage(totalCounts, stage);
+    incrementAiIntakeStage(providerBucket, stage);
+    incrementAiIntakeStage(localeBucket, stage);
+    incrementAiIntakeStage(categoryBucket, stage);
+    providerCounts.set(provider, providerBucket);
+    localeCounts.set(locale, localeBucket);
+    categoryCounts.set(category, categoryBucket);
+    outcomes.push({
+      timestamp: parsedTimestamp.timestamp,
+      provider,
+      locale,
+      stage,
+      time: parsedTimestamp.time,
+      order,
+    });
+  }
+
+  const byProvider = Array.from(providerCounts.entries())
+    .map(([provider, counts]) => ({ provider, ...finalizeAiIntakeCounts(counts) }))
+    .sort((left, right) => compareAiIntakeRows(
+      { ...left, label: left.provider },
+      { ...right, label: right.provider },
+    ));
+  const byLocale = Array.from(localeCounts.entries())
+    .map(([locale, counts]) => ({ locale, ...finalizeAiIntakeCounts(counts) }))
+    .sort((left, right) => compareAiIntakeRows(
+      { ...left, label: left.locale },
+      { ...right, label: right.locale },
+    ));
+  const byCategory = Array.from(categoryCounts.entries())
+    .map(([category, counts]) => ({ category, ...finalizeAiIntakeCounts(counts) }))
+    .sort((left, right) => compareAiIntakeRows(
+      { ...left, label: left.category },
+      { ...right, label: right.category },
+    ));
+  const recentOutcomes = outcomes
+    .sort((left, right) => right.time - left.time || left.order - right.order)
+    .slice(0, 20)
+    .map(({ timestamp, provider, locale, stage }) => ({ timestamp, provider, locale, stage }));
+
+  return {
+    total: finalizeAiIntakeCounts(totalCounts),
+    byProvider,
+    byLocale,
+    byCategory,
+    recentOutcomes,
   };
 }
 
@@ -401,6 +603,7 @@ export async function readDashboardMetrics(
     rateLimitedChat: funnel.chat_rate_limited,
     rateLimitedSubmit: funnel.submit_rate_limited,
   };
+  const aiIntake = aggregateAiIntakeMetrics(events, getConfiguredAiIntakeClientIds());
 
   // Wave 9 — performance & cost rollup. Only includes chat events that
   // recorded a latencyMs (skips bypass paths and pre-Wave-9 events).
@@ -506,6 +709,7 @@ export async function readDashboardMetrics(
     byLocale,
     feedback: feedbackSummary,
     safety,
+    aiIntake,
     performance,
     recentNegativeFeedback,
     recentSubmissions,

@@ -41,7 +41,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          '기업·개인 사건을 폭넓게 수행하며, 한국어·일본어 상담이 가능합니다.',
+          '기업·개인 사건을 폭넓게 수행합니다. 당사무소에서는 한국어·일본어·영어로 상담하실 수 있습니다.',
           '한국 유학생 헬스장 손해배상 사건에서 157만 대만달러 배상 판결을 이끈 사례가 있습니다.',
         ],
         education: [
@@ -114,7 +114,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
     title: '昊鼎 韓國·台灣 業務團隊',
     description: '昊鼎國際法律事務所律師、事務長及會計師簡介。',
     story: [
-      '昊鼎提供韓文、日文溝通的在台法律服務，涵蓋公司設立、訴訟與合規顧問。',
+      '昊鼎提供韓文、日文及英文溝通的在台法律服務，涵蓋公司設立、訴訟與合規顧問。',
       '團隊整合法律、會計與行政實務，可在同一流程處理跨領域問題。',
     ],
     members: [
@@ -127,7 +127,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          '專精企業與個人案件，提供韓文與日文法律溝通。',
+          '專精企業與個人案件。事務所可提供韓文、中文、日文、英文法律溝通。',
           '曾代理韓國留學生健身傷害求償案，獲判新台幣 157 萬元。',
         ],
         education: [
@@ -299,7 +299,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          '企業・個人の幅広い案件を担当し、韓国語・日本語でのご相談に対応しています。',
+          '企業・個人の幅広い案件を担当しています。当事務所では日本語・英語・韓国語でご相談いただけます。',
           '韓国人留学生のジムでの負傷に関する損害賠償請求事件を代理し、一審で157万TWDの損害賠償を認める判決を得た実績があります。',
         ],
         education: [

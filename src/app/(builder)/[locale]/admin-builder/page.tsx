@@ -11,6 +11,7 @@ import {
   canPersistHomeDraftRenderMigration,
   decideHomeDraftReseed,
   SEED_DRAFT_UPDATED_BY,
+  USER_DRAFT_UPDATED_BY,
 } from '@/lib/builder/canvas/home-draft-reseed';
 import { readCanvasSandboxDraft } from '@/lib/builder/canvas/persistence';
 import { normalizeLocale, type Locale } from '@/lib/locales';
@@ -46,6 +47,7 @@ import { SERVICES_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-ser
 import { upgradeStandardServicesPageDesktopParity } from '@/lib/builder/canvas/decompose-page-services';
 import { repairHomeCanvasLocale } from '@/lib/builder/canvas/home-locale-repair';
 import { upgradeHomeEditorLayoutParity } from '@/lib/builder/canvas/home-editor-layout-parity';
+import { normalizeLegacyZhHantHome, normalizeLegacyZhHantHomeRead } from '@/lib/builder/canvas/home-zh-hant-parity';
 import { buildFaqCompositePageCanvas, seedSitePages } from '@/lib/builder/canvas/seed-pages';
 import { upgradePublicHeaderNavigation } from '@/lib/builder/site/public-header-navigation';
 import { needsStandardPageSeedForLocale } from '@/lib/builder/site/standard-pages';
@@ -129,13 +131,17 @@ function prepareEditorCanvasDocument(
   document: BuilderCanvasDocument,
   locale: Locale,
   isInitialHomePage: boolean,
+  recordUpdatedBy?: string,
 ): BuilderCanvasDocument {
   if (isInitialHomePage && isHomeCanvasDocument(document)) {
-    return upgradeHomeEditorLayoutParity(
+    if (locale === 'zh-hant' && recordUpdatedBy === USER_DRAFT_UPDATED_BY) {
+      return normalizeLegacyZhHantHome(document, locale, true);
+    }
+    return normalizeLegacyZhHantHome(upgradeHomeEditorLayoutParity(
       repairHomeCanvasLocale({ ...document, locale }, locale),
       locale,
       { stampMetadata: false },
-    );
+    ), locale, true);
   }
   return normalizeCanvasDocument(document, locale);
 }
@@ -1443,6 +1449,7 @@ export default async function BuilderMainPage(
     ? visiblePages.find((page) => page.pageId === searchParams.pageId)
     : null;
   const initialPage = requestedPage ?? homePage;
+  const isInitialHomePage = initialPage?.isHomePage === true || initialPage?.slug === '';
   const canPersistInitialPageDraft = Boolean(initialPage && initialPage.locale === locale);
 
   let initialDocument;
@@ -1459,7 +1466,6 @@ export default async function BuilderMainPage(
     initialDraftRecordUpdatedBy = pageCanvasRecord?.updatedBy;
     initialDraftMeta = draftMetaFromRecord(pageCanvasRecord);
     let pageCanvas = pageCanvasRecord?.document ?? null;
-    const isInitialHomePage = initialPage.pageId === homePage?.pageId || Boolean(initialPage.isHomePage);
     if (needsFaqLiveCompositeDraftRepair(initialPage, pageCanvas, initialDraftRecordUpdatedBy)) {
       const seeded = buildFaqCompositePageCanvas(locale);
       pageCanvas = seeded;
@@ -1486,7 +1492,7 @@ export default async function BuilderMainPage(
     const needsReseed = reseedDecision.reseed;
 
     if (pageCanvas && !needsReseed) {
-      initialDocument = prepareEditorCanvasDocument(pageCanvas, locale, isInitialHomePage);
+      initialDocument = prepareEditorCanvasDocument(pageCanvas, locale, isInitialHomePage, initialDraftRecordUpdatedBy);
     } else if (needsReseed) {
       const seeded = createHomePageCanvasDocumentComposite(locale);
       initialDocument = seeded;
@@ -1543,8 +1549,12 @@ export default async function BuilderMainPage(
   const standardServicesUpgradedInitialDocument = upgradeStandardServicesPageDesktopParity(initialDocument, {
     allowGeometryReset: canPersistRenderMigration,
   });
-  const upgradedInitialDocument =
-    isHomeCanvasDocument(standardServicesUpgradedInitialDocument)
+  // An authored ZH tree must match its published read projection. The older
+  // seed migrations below force geometry/content and stamp metadata even when
+  // they are not persisted, so do not run them on an author's saved ZH home.
+  const preserveAuthoredZhHome = locale === 'zh-hant' && initialDraftRecordUpdatedBy === USER_DRAFT_UPDATED_BY;
+  const legacyUpgradedInitialDocument =
+    isInitialHomePage && isHomeCanvasDocument(standardServicesUpgradedInitialDocument) && !preserveAuthoredZhHome
       ? upgradeHomeEditorLayoutParity(
           upgradeHomeDecomposedMobileParity(
             upgradeHomeDecomposedTabletParity(
@@ -1581,6 +1591,9 @@ export default async function BuilderMainPage(
           { stampMetadata: false },
         )
       : standardServicesUpgradedInitialDocument;
+  const upgradedInitialDocument = normalizeLegacyZhHantHome(
+    legacyUpgradedInitialDocument, locale, initialPage?.isHomePage === true || initialPage?.slug === '',
+  );
   if (
     upgradedInitialDocument !== initialDocument &&
     initialPage &&
@@ -1603,6 +1616,11 @@ export default async function BuilderMainPage(
   } else {
     initialDocument = upgradedInitialDocument;
   }
+
+  // Compatibility display data must not enter the persisted migration branch above.
+  initialDocument = await normalizeLegacyZhHantHomeRead(
+    initialDocument, locale, initialPage?.isHomePage === true || initialPage?.slug === '',
+  );
 
   const datasetDocument = initialPage?.dynamicList
     ? buildBuilderDynamicListDatasetDocument(initialPage.dynamicList)

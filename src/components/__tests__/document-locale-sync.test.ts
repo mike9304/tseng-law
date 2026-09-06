@@ -3,7 +3,8 @@ import { getSynchronizedDocumentLocaleState } from '@/components/DocumentLocaleS
 
 const krPair = 'font-sans-kr font-serif-kr';
 const tcPair = 'font-sans-tc font-serif-tc';
-const managedFontClassNames = [...krPair.split(' '), ...tcPair.split(' ')];
+const jpPair = 'font-sans-jp font-serif-jp';
+const managedFontClassNames = [...krPair.split(' '), ...tcPair.split(' '), ...jpPair.split(' ')];
 
 describe('DocumentLocaleSync', () => {
   it('replaces the Korean pair with the Traditional Chinese pair and language', () => {
@@ -22,7 +23,6 @@ describe('DocumentLocaleSync', () => {
 
   it.each([
     ['ko', 'ko'],
-    ['ja', 'ja'],
     ['en', 'en'],
   ] as const)('uses lang="%s" and the shared KR pair without duplicate classes', (_, language) => {
     const state = getSynchronizedDocumentLocaleState(
@@ -34,5 +34,17 @@ describe('DocumentLocaleSync', () => {
 
     expect(state.language).toBe(language);
     expect(state.className.split(' ')).toEqual(['unrelated', 'font-sans-kr', 'font-serif-kr']);
+  });
+
+  it('replaces other locale pairs with Japanese and removes Japanese when leaving that locale', () => {
+    const japanese = getSynchronizedDocumentLocaleState(
+      `theme-light ${krPair} ${tcPair}`, 'ja', jpPair, managedFontClassNames,
+    );
+    expect(japanese).toEqual({ language: 'ja', className: `theme-light ${jpPair}` });
+
+    const korean = getSynchronizedDocumentLocaleState(
+      japanese.className, 'ko', krPair, managedFontClassNames,
+    );
+    expect(korean).toEqual({ language: 'ko', className: `theme-light ${krPair}` });
   });
 });

@@ -302,12 +302,14 @@ function DocumentSection({
 }
 
 export function BillingPortalView({
+  as: Root = 'main',
   locale,
   memberEmail,
   documents,
   signedOut,
   signInHref,
 }: {
+  as?: 'main' | 'section';
   locale: Locale;
   memberEmail?: string;
   documents: CustomerBillingDocumentDto[];
@@ -317,20 +319,20 @@ export function BillingPortalView({
   const copy = BILLING_COPY[locale];
   if (signedOut) {
     return (
-      <main style={containerStyle} data-billing-portal-state="signed-out">
+      <Root style={containerStyle} data-billing-portal-state="signed-out">
         <h1 style={{ marginTop: 0 }}>{copy.title}</h1>
         <p>{copy.signedOut}</p>
         <Link href={signInHref ?? `/${locale}/login?next=${encodeURIComponent('/account/billing')}`} style={linkButton}>
           {copy.signInCta}
         </Link>
-      </main>
+      </Root>
     );
   }
 
   const { unpaidInvoices, paidReceipts, archived } = partitionCustomerBillingDocuments(documents);
 
   return (
-    <main style={containerStyle} data-billing-portal-state="signed-in">
+    <Root style={containerStyle} data-billing-portal-state="signed-in">
       <header>
         <h1 style={{ marginTop: 0 }}>{copy.title}</h1>
         <p style={mutedStyle}>{copy.memberEmailLabel}: {memberEmail ?? ''}</p>
@@ -349,6 +351,6 @@ export function BillingPortalView({
       <footer style={{ marginTop: 28 }}>
         <p style={mutedStyle}>{copy.contactUs}</p>
       </footer>
-    </main>
+    </Root>
   );
 }

@@ -225,11 +225,9 @@ export default function CompositeRender({
           <HeroSearch
             locale={locale}
             scrollHref={mode === 'edit' ? `/${locale}#insights` : undefined}
-            headingLevel={
-              mode === 'published' && node.anchorName === 'mobile-parity-home-hero'
-                ? 2
-                : 1
-            }
+            // The granular desktop hero is display:none while this mobile
+            // variant is visible. Each responsive variant needs its own H1.
+            headingLevel={1}
           />
         );
       case 'services-bento':

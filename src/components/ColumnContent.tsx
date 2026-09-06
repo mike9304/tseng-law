@@ -91,6 +91,17 @@ export function resolveColumnMarkdownLinkHref(
   return getConsultationPublicMailto(locale);
 }
 
+const COLUMN_TABLE_SCROLL_HINTS: Record<SiteLocale, string> = {
+  ko: '표가 화면보다 넓으면 좌우로 스크롤해 보세요.',
+  'zh-hant': '若表格超出畫面，請左右捲動檢視。',
+  en: 'If the table extends beyond the screen, scroll horizontally to see the rest.',
+  ja: '表が画面より広い場合は、左右にスクロールしてご覧ください。',
+};
+
+function getColumnTableScrollHint(locale?: SiteLocale): string {
+  return COLUMN_TABLE_SCROLL_HINTS[locale ?? 'ko'];
+}
+
 export default function ColumnContent({
   content,
   locale,
@@ -101,7 +112,7 @@ export default function ColumnContent({
   return (
     <div className="column-markdown" data-column-content="markdown">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm, remarkUnderline]}
+        remarkPlugins={[[remarkGfm, { singleTilde: false }], remarkUnderline]}
         components={{
           img: ({ src, alt }) => {
             if (!src) return null;
@@ -114,10 +125,27 @@ export default function ColumnContent({
           },
           h2: ({ children }) => <h2 className="blog-heading">{children}</h2>,
           h3: ({ children }) => <h3 className="blog-heading" style={{ fontSize: '1.25rem' }}>{children}</h3>,
-          p: ({ children }) => <p className="blog-paragraph">{children}</p>,
-          table: ({ children }) => (
-            <div className="column-table-wrap"><table>{children}</table></div>
-          ),
+          p: ({ children }) => {
+            // Imported spacer-only paragraphs must not add blank reading lines.
+            if (typeof children === 'string' && /^[\s\u200B]*$/.test(children)) return null;
+            return <p className="blog-paragraph">{children}</p>;
+          },
+          table: ({ children }) => {
+            const hint = getColumnTableScrollHint(locale);
+            return (
+              <div
+                className="column-table-wrap"
+                role="region"
+                aria-label={hint}
+                tabIndex={0}
+              >
+                <p className="column-table-scroll-hint" aria-hidden="true">
+                  {hint}
+                </p>
+                <table>{children}</table>
+              </div>
+            );
+          },
           strong: ({ children }) => <strong style={{ fontWeight: 600 }}>{children}</strong>,
           u: ({ children }) => <u className="column-underline">{children}</u>,
           a: ({ href, children }) => {

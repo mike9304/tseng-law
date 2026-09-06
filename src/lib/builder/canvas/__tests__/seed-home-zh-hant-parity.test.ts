@@ -57,7 +57,7 @@ describe('zh-hant decomposed home parity nodes', () => {
       progressBarText: textNodeText(nodesById.get(`home-stats-progress-bar-${index}`)),
     }))).toEqual([
       { number: '4', label: '台灣辦公據點', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
-      { number: '3', label: '業務溝通語言', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
+      { number: '4', label: '業務溝通語言', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
       { number: '7', label: '主要執業領域', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
       { number: '2', label: '最高級別語言資格', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
     ]);

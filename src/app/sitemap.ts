@@ -26,6 +26,7 @@ const STATIC_PATHS = [
   '/taiwan-litigation-lawyer',
   '/guides/taiwan-company-setup',
   '/korean-lawyer-in-taiwan',
+  '/ai-intake',
   '/privacy',
   '/disclaimer',
   '/accessibility',
@@ -263,6 +264,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
   pages.push(
     createEntry('ja', '/korean-lawyer-in-taiwan', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/ai-intake', {
       priority: 0.8,
       alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
     }),

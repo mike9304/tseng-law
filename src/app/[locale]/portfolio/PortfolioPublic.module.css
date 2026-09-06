@@ -185,6 +185,16 @@
   gap: 12px;
 }
 
+.sideCard > div:not(.tags) {
+  display: grid;
+  gap: 4px;
+}
+
+.sideCard > div:not(.tags) > strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .sideCard span {
   color: #64748b;
   font-size: 0.85rem;

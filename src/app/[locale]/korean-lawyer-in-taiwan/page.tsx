@@ -6,6 +6,7 @@ import {
   CONSULTATION_EMAIL,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildLegalServiceJsonLd, buildSeoMetadata } from '@/lib/seo';
 import { LANDING_SLUG, landingContent } from './content';
 import styles from './landing.module.css';
@@ -31,6 +32,7 @@ export default async function KoreanLawyerInTaiwanPage(props: { params: Promise<
   const params = await props.params;
   const locale = normalizeSiteLocale(params.locale);
   const c = landingContent[locale];
+  const ai = getAiIntakeDiscovery(locale);
   const path = `/${locale}/${SLUG_PATH}`;
 
   const faqJsonLd = buildFaqJsonLd(c.faq, locale);
@@ -134,13 +136,26 @@ export default async function KoreanLawyerInTaiwanPage(props: { params: Promise<
             <div className={styles.cta}>
               <h2 className={styles.ctaTitle}>{c.ctaTitle}</h2>
               <p className={styles.ctaText}>{c.ctaText}</p>
-              <a
-                href={getConsultationPublicMailto(locale)}
-                className={styles.ctaButton}
-                aria-label={`${c.ctaTitle}: ${CONSULTATION_EMAIL}`}
-              >
-                {c.ctaButton}
-              </a>
+              {ai.enabled ? <p className={styles.ctaGloss}>{ai.supportingCopy}</p> : null}
+              <div className={styles.ctaActions}>
+                <a
+                  href={getConsultationPublicMailto(locale)}
+                  className={styles.ctaButton}
+                  aria-label={`${c.ctaTitle}: ${CONSULTATION_EMAIL}`}
+                >
+                  {c.ctaButton}
+                </a>
+                {ai.enabled ? (
+                  <Link
+                    href={ai.href}
+                    className={styles.ctaSecondaryButton}
+                    data-cta="intent-ai-intake-entry"
+                    data-cta-dest="ai-intake"
+                  >
+                    {ai.label}
+                  </Link>
+                ) : null}
+              </div>
             </div>
           </article>
         </div>

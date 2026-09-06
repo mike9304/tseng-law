@@ -1099,6 +1099,7 @@ export default function SandboxPage({
         ) : null}
 
         <SandboxEditorWorkspace
+          isHomePage={sitePagesState.some((page) => page.pageId === activePageId && (page.isHomePage === true || page.slug === ''))}
           locale={activeCanvasLocale}
           siteId={siteId}
           activeDrawer={activeDrawer}

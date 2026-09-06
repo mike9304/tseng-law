@@ -34,6 +34,7 @@ export type SandboxEditorWorkspaceProps = {
   siteTheme: BuilderTheme;
   headerNavItems: BuilderNavItem[];
   currentSlug: string;
+  isHomePage?: boolean;
   activeNavItemId: string | null;
   missingPageHref?: string | null;
   viewportWidth: number | null;

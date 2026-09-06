@@ -343,7 +343,9 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
                         href={`/${locale}/columns/${col.slug}`}
                         className="svc-col-card"
                       >
-                        <div className="svc-col-card-media">
+                        <div className={col.slug === 'taiwan-gym-injury-lawsuit'
+                          ? 'svc-col-card-media svc-col-card-media--preserve-text'
+                          : 'svc-col-card-media'}>
                           <Image src={col.featuredImage} alt={col.title} width={640} height={360} />
                           <div className="svc-col-card-overlay" />
                           <span className="svc-col-badge">{col.categoryLabel}</span>

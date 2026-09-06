@@ -2,6 +2,7 @@ import type { SiteLocale } from '@/lib/locales';
 import type { LegalPageContent } from '@/data/legal-pages';
 import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/Reveal';
+import styles from './LegalPageSections.module.css';
 
 export default function LegalPageSections({
   locale,
@@ -10,6 +11,8 @@ export default function LegalPageSections({
   locale: SiteLocale;
   content: LegalPageContent;
 }) {
+  const isPrivacy = content.label === 'PRIVACY';
+
   return (
     <>
       <PageHeader locale={locale} label={content.label} title={content.title} description={content.description}>
@@ -22,7 +25,7 @@ export default function LegalPageSections({
       <Reveal>
       <section className="section section--light legal-page-section">
         <div className="container">
-          <div className="grid-bento contact-grid reveal-stagger">
+          <div className={`grid-bento contact-grid reveal-stagger${isPrivacy ? ` ${styles.privacyGrid}` : ''}`} data-legal-layout={isPrivacy ? 'privacy' : undefined}>
             {content.sections.map((section) => (
               <article key={section.title} className="card legal-card">
                 <h2 className="card-title">{section.title}</h2>

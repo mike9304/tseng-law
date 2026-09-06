@@ -1,0 +1,181 @@
+{
+  "ok": true,
+  "requirementsVersion": "ai-intake-requirements-v3",
+  "locale": "en",
+  "categories": [
+    {
+      "value": "company_setup",
+      "label": "Company Setup / Investment",
+      "description": "Initial inquiry about Taiwan company formation, investment, or a branch/subsidiary"
+    },
+    {
+      "value": "traffic_accident",
+      "label": "Traffic Accident / Damages",
+      "description": "Initial inquiry about a traffic accident, damages, or insurance"
+    },
+    {
+      "value": "criminal_investigation",
+      "label": "Police / Prosecutor / Detention",
+      "description": "Initial inquiry about an investigation, prosecution, arrest, or detention"
+    },
+    {
+      "value": "labor",
+      "label": "Labor / Severance / Termination",
+      "description": "Initial inquiry about employment contracts, severance, or termination"
+    },
+    {
+      "value": "divorce_family",
+      "label": "Divorce / Custody / Family",
+      "description": "Initial inquiry about divorce, parental rights, or family matters"
+    },
+    {
+      "value": "inheritance",
+      "label": "Inheritance / Wills",
+      "description": "Initial inquiry about inheritance or wills"
+    },
+    {
+      "value": "logistics",
+      "label": "Logistics / Transport",
+      "description": "Initial inquiry about logistics or transport regulation"
+    },
+    {
+      "value": "cosmetics",
+      "label": "Cosmetics / Market Entry",
+      "description": "Initial inquiry about cosmetics import, registration, or labeling"
+    },
+    {
+      "value": "general",
+      "label": "General Inquiry",
+      "description": "Initial Taiwan legal or business inquiry that does not fit the other categories"
+    }
+  ],
+  "fields": {
+    "required": [
+      {
+        "name": "name",
+        "required": true,
+        "description": "Name",
+        "maxLength": 120
+      },
+      {
+        "name": "email",
+        "required": true,
+        "description": "Email",
+        "maxLength": 254
+      },
+      {
+        "name": "summary",
+        "required": true,
+        "description": "Matter or business summary",
+        "maxLength": 4000
+      },
+      {
+        "name": "locale",
+        "required": true,
+        "description": "Language"
+      },
+      {
+        "name": "idempotencyKey",
+        "required": true,
+        "description": "Idempotency key"
+      }
+    ],
+    "optional": [
+      {
+        "name": "category",
+        "required": false,
+        "description": "Matter category"
+      },
+      {
+        "name": "phoneOrMessenger",
+        "required": false,
+        "description": "Phone or messenger",
+        "maxLength": 120
+      },
+      {
+        "name": "urgency",
+        "required": false,
+        "description": "Urgency or deadline",
+        "maxLength": 80
+      },
+      {
+        "name": "preferredContact",
+        "required": false,
+        "description": "Preferred contact method",
+        "maxLength": 80
+      },
+      {
+        "name": "companyOrOrganization",
+        "required": false,
+        "description": "Company or organization",
+        "maxLength": 200
+      },
+      {
+        "name": "countryOrResidence",
+        "required": false,
+        "description": "Country or residence",
+        "maxLength": 120
+      },
+      {
+        "name": "preferredTime",
+        "required": false,
+        "description": "Preferred contact time",
+        "maxLength": 200
+      },
+      {
+        "name": "documentsAvailable",
+        "required": false,
+        "description": "Types of documents on hand",
+        "maxLength": 1000
+      },
+      {
+        "name": "confirmationToken",
+        "required": false,
+        "description": "Confirmation token (submit only)"
+      },
+      {
+        "name": "privacyConsent",
+        "required": false,
+        "description": "Privacy consent (submit only; must be true)"
+      },
+      {
+        "name": "userApprovedExactPreview",
+        "required": false,
+        "description": "Exact preview approval (submit only; must be true; auditable attestation, not cryptographic proof)"
+      }
+    ]
+  },
+  "questions": [
+    "What is your name, and if relevant your company or organization?",
+    "What email should the firm use to reply? Phone or messenger is optional.",
+    "Which matter category fits best: company setup, traffic accident, criminal investigation, labor, divorce/family, inheritance, logistics, cosmetics, or general?",
+    "Please give a short account of the key facts and timeline. Full evidence is not needed for initial intake.",
+    "Is there a deadline or urgency? No response time is guaranteed.",
+    "Optionally, put names only of opposing or related parties in the summary field for later conflict screening. Never send identity numbers; this intake does not request them.",
+    "What is your country or place of residence?",
+    "What language, contact method, and time window do you prefer?",
+    "What types of documents do you have (for example contract, photos, judgment)? Do not send contents, attachments, or file URLs.",
+    "Do not provide national ID numbers, passport numbers, bank details, or payment-card credentials.",
+    "Briefly state the current employment status (employed, notice of termination, or departed)."
+  ],
+  "sensitiveData": {
+    "prohibitedKinds": [
+      "kr_resident_registration",
+      "tw_national_id",
+      "payment_card",
+      "iban",
+      "bank_account",
+      "passport",
+      "identity_number"
+    ],
+    "warning": "For an initial inquiry, please provide only a brief matter or business overview and your contact details. Do not send passport or identification numbers, bank account details, or original identity documents by email or through the general inquiry form. Provide sensitive materials only through a secure method after receiving instructions from the attorney."
+  },
+  "notices": {
+    "privacy": "This intake processes name, contact details, and a short matter summary so the firm can review a consultation request. See the public privacy policy. Do not include identity numbers, financial credentials, or passport details in this initial intake.",
+    "aiLimit": "AI does not give legal advice and can be wrong. This flow only drafts a consultation email and sends it to the firm inbox after the user confirms the exact content.",
+    "noRepresentation": "This intake does not create an attorney-client relationship and does not promise confidentiality, a response time, or a legal outcome. A lawyer must review the matter.",
+    "emergency": "If there is immediate danger, an arrest, or a medical emergency, contact local emergency services or authorities instead of this email. This notice does not list jurisdiction-specific numbers."
+  },
+  "confirmationInstruction": "The subject and body below are exactly what the server will send to the firm consultation inbox. Show this exact subject and body to the user. Only after the user explicitly approves sending that exact content, call POST /api/ai/intake/submit with the same fields, the same idempotencyKey, the confirmationToken, userApprovedExactPreview=true, and separate privacyConsent=true.",
+  "privacyUrl": "https://tseng-law.com/en/privacy"
+}

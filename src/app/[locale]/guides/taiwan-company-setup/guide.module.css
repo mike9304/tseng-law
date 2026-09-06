@@ -157,6 +157,20 @@
 
 .tableWrap {
   overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.tableWrap:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 4px;
+}
+
+.tableHint {
+  display: none;
+  margin: 0 0 0.65rem;
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 .table {
@@ -238,8 +252,9 @@
 .relatedLink {
   color: var(--navy);
   font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
 }
 
 .relatedLink:hover {
@@ -296,5 +311,22 @@
 
   .table {
     font-size: 0.85rem;
+  }
+
+  .tableHint {
+    display: block;
+  }
+
+  .cta {
+    padding: 1.5rem 1rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem 0.8rem;
+    border-radius: 4px;
+    line-height: 1.5;
+    text-wrap: balance;
   }
 }

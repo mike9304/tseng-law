@@ -1,7 +1,9 @@
 import {
   Noto_Sans_KR,
+  Noto_Sans_JP,
   Noto_Sans_TC,
   Noto_Serif_KR,
+  Noto_Serif_JP,
   Noto_Serif_TC,
 } from 'next/font/google';
 
@@ -43,6 +45,20 @@ const serifTraditionalChinese = Noto_Serif_TC({
   variable: '--font-noto-serif-tc-loaded',
 });
 
+const sansJapanese = Noto_Sans_JP({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-jp-loaded',
+});
+
+const serifJapanese = Noto_Serif_JP({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-serif-jp-loaded',
+});
+
 export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en' | 'ja';
 
 const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
@@ -50,6 +66,7 @@ const traditionalChineseFontClassName = [
   sansTraditionalChinese.variable,
   serifTraditionalChinese.variable,
 ].join(' ');
+const japaneseFontClassName = [sansJapanese.variable, serifJapanese.variable].join(' ');
 
 /**
  * CSS-variable class names for the active locale pair.
@@ -60,14 +77,17 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
   if (language === 'zh-Hant') {
     return traditionalChineseFontClassName;
   }
-  // ko + en + ja → KR pair (CJK coverage sufficient for JA launch; dedicated JP faces later)
+  if (language === 'ja') {
+    return japaneseFontClassName;
+  }
+  // Korean and English retain their existing shared pair.
   return koreanFontClassName;
 }
 
 export function getManagedLocaleFontClassNames(): string[] {
   return Array.from(
     new Set(
-      [koreanFontClassName, traditionalChineseFontClassName].flatMap((className) =>
+      [koreanFontClassName, traditionalChineseFontClassName, japaneseFontClassName].flatMap((className) =>
         className.split(/\s+/).filter(Boolean),
       ),
     ),

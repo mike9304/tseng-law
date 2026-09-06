@@ -61,7 +61,7 @@ const SEEDED_PRODUCTS: CommerceProduct[] = [
     title: '대만 창업 준비 가이드',
     description: '대만 법인 설립 전 확인해야 할 회사 형태, 세무, 노무 체크리스트입니다.',
     body: '전자문서 형태의 창업 준비 가이드 예시 상품입니다. 실제 결제/배송은 F60 이후 checkout milestone에서 연결합니다.',
-    status: 'active',
+    status: 'draft',
     sku: 'TW-STARTUP-GUIDE-KO',
     priceCents: 390000,
     currency: 'TWD',

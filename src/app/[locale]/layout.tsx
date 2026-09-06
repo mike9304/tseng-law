@@ -75,6 +75,7 @@ export default async function LocaleLayout(
   const hideJaProductChrome = locale === 'ja';
   return (
     <>
+      <link rel="describedby" href={`/${locale}/llms.txt`} />
       <DocumentLocaleSync
         language={language}
         fontClassName={getLocaleFontClassName(language)}

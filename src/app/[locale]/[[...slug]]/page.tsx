@@ -12,6 +12,7 @@ import { checkAccess } from '@/lib/builder/members/members-engine';
 import { getLegacyPageMetadata, renderLegacyPage } from '../(legacy)';
 import { OPEN_GRAPH_LOCALE } from '@/lib/builder/seo/seo-model';
 import { isJaFullStaticPath, isJaUnsupportedPath, JA_SAFE_FALLBACK } from '@/lib/public-route-policy';
+import { buildLocalizedNotFoundMetadata } from '@/lib/not-found-copy';
 
 export const dynamic = 'force-dynamic';
 
@@ -54,11 +55,11 @@ export async function generateMetadata(
   // Japanese public surface: never project KO/EN builder pages onto /ja/*
   if (locale === 'ja') {
     if (isJaUnsupportedPath(slugPath)) {
-      return { title: 'Page not found' };
+      return buildLocalizedNotFoundMetadata(locale);
     }
     const legacyMetadata = getLegacyPageMetadata(slugPath, locale);
     if (legacyMetadata) return legacyMetadata;
-    return { title: 'Page not found' };
+    return buildLocalizedNotFoundMetadata(locale);
   }
 
   const builderLocale = toBuilderLocale(locale);
@@ -68,7 +69,7 @@ export async function generateMetadata(
   const legacyMetadata = getLegacyPageMetadata(slugPath, locale);
   if (legacyMetadata) return legacyMetadata;
 
-  return { title: 'Page not found' };
+  return buildLocalizedNotFoundMetadata(locale);
 }
 
 export default async function MainSiteCatchAllPage(

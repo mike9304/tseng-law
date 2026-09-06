@@ -1,11 +1,15 @@
 import type { Metadata } from 'next';
 import { normalizeLocale } from '@/lib/locales';
 import BookingManageClient from '@/components/builder/bookings/BookingManageClient';
+import PublicUnavailableState, { publicUnavailableMetadata } from '@/components/PublicUnavailableState';
 
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
+  if (params.locale === 'ja') {
+    return publicUnavailableMetadata('ja', 'booking');
+  }
   const locale = normalizeLocale(params.locale);
   const title = locale === 'ko'
     ? '예약 관리'
@@ -24,6 +28,9 @@ export default async function BookingManagePage(
   }
 ) {
   const params = await props.params;
+  if (params.locale === 'ja') {
+    return <PublicUnavailableState locale="ja" kind="booking" />;
+  }
   const locale = normalizeLocale(params.locale);
   return <BookingManageClient token={params.token} locale={locale} />;
 }

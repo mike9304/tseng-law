@@ -54,7 +54,7 @@ describe('Japanese legal-page content', () => {
     expect(japanese.accessibility.effectiveDate).toBe('2026-03-10');
 
     expect(japanese.privacy.sections[0]?.paragraphs[0]).toBe(
-      '相談フォームでは、氏名または会社名、返信用メールアドレス、ご相談分野、概要および個人情報処理への同意を取得します。電話番号は任意です。AI相談を利用した場合、会話内容、セッション識別子、分類結果およびフィードバックを処理することがあります。',
+      '相談フォームをご利用の場合は、氏名または会社名、返信用メールアドレス、ご相談分野、概要および個人情報処理への同意を取得します。電話番号は任意です。AI相談が提供されている場合、ご利用に伴い会話内容、セッション識別子、分類結果およびフィードバックを処理することがあります。',
     );
     expect(japanese.privacy.sections[0]?.paragraphs[1]).toBe(
       'セキュリティおよびサービス運営のため、IPアドレス、ユーザーエージェント、リクエスト時刻などの基本的な技術記録が生成されることがあります。',
@@ -77,7 +77,7 @@ describe('Japanese legal-page content', () => {
       'ご本人の情報の開示、訂正、削除または同意の撤回をご希望の場合は、公式相談メール wei@hoveringlaw.com.tw までご連絡ください。法令上の保管義務または進行中の法律業務により対応範囲が制限される場合は、その理由をご案内します。',
     );
     expect(japanese.privacy.sections[6]?.paragraphs[0]).toBe(
-      '初回のお問い合わせでは、案件または業務の概要と連絡先のみをお送りください。旅券番号、身分証番号、銀行口座情報、身分証明書の原本または証拠資料一式は、メールや一般のお問い合わせフォームで送信せず、担当弁護士からの案内後に安全な方法でご提出ください。',
+      '初回メールには、案件や事業の簡潔な概要、台湾との関係、関係する期限、ご希望の言語、連絡先をご記載ください。旅券番号、身分証番号、銀行口座情報、医療記録、身分証明書の原本、証拠資料一式は、弁護士からの案内を受けるまで送らないでください。機微な資料は、弁護士の案内に従い、安全な方法でご提出ください。',
     );
     expect(japanese.privacy.sections[7]?.paragraphs[0]).toContain(
       '事故対応責任者、通知基準および連絡網は運営者による確認が必要です。',
@@ -93,7 +93,7 @@ describe('Japanese legal-page content', () => {
     );
   });
 
-  it('matches every other locale section, paragraph, and item count without omissions', () => {
+  it('preserves locale structure with the additional EN/JA email and visit-record paragraphs', () => {
     for (const locale of comparisonLocales) {
       const comparison = legalPageContent[locale];
       for (const key of pageKeys) {
@@ -103,7 +103,8 @@ describe('Japanese legal-page content', () => {
         for (const [index, section] of japanese[key].sections.entries()) {
           const sourceSection = comparison[key].sections[index];
 
-          expect(section.paragraphs).toHaveLength(sourceSection.paragraphs.length);
+          const addedPrivacyParagraph = key === 'privacy' && locale !== 'en' && (index === 0 || index === 4) ? 1 : 0;
+          expect(section.paragraphs).toHaveLength(sourceSection.paragraphs.length + addedPrivacyParagraph);
           expect(section.items ?? []).toHaveLength(sourceSection.items?.length ?? 0);
         }
       }

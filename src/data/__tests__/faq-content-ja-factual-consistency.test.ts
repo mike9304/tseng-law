@@ -73,8 +73,8 @@ const expectedJapaneseFaq = [
 ] as const;
 
 const untouchedLocaleHashes = {
-  ko: '2dc44723fac9451b002a0e04564453951cd508581fb375806277ecd6f8016c93',
-  'zh-hant': '01fe893af3d34bc3e2edcd1ac94ec903df2c29a715f8e11825dfcba47175dd4f',
+  ko: 'e43a7f593bdc888c22045586cfd3806cc7ca3a1cf56c104a436e31faa983c46c',
+  'zh-hant': 'b72576e63fab132da418b0528b798a840244ce5b161d249cd032a4ffc11a7baa',
 } as const;
 
 const reviewedEnglishFaqBaselineHash =

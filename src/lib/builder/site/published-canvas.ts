@@ -1,19 +1,20 @@
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { normalizeCanvasDocument, type BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { normalizeLegacyPublishedHomeComposite } from '@/lib/builder/canvas/home-composite-parity';
+import { normalizeLegacyZhHantHomeRead } from '@/lib/builder/canvas/home-zh-hant-parity';
 import type { BuilderPageMeta } from '@/lib/builder/site/types';
 import { readPageCanvas } from '@/lib/builder/site/persistence';
 import { readRevisionDocument } from '@/lib/builder/site/publish';
 
-function normalizePublishedCanvas(
+async function normalizePublishedCanvas(
   document: BuilderCanvasDocument | null,
   pageMeta: BuilderPageMeta,
-): BuilderCanvasDocument | null {
+): Promise<BuilderCanvasDocument | null> {
   if (!document) return null;
   const normalized = normalizeCanvasDocument(document, pageMeta.locale);
   const isHomePage = pageMeta.isHomePage === true || pageMeta.slug === '';
   return isHomePage
-    ? normalizeLegacyPublishedHomeComposite(normalized, pageMeta.locale)
+    ? normalizeLegacyZhHantHomeRead(normalizeLegacyPublishedHomeComposite(normalized, pageMeta.locale), pageMeta.locale, true)
     : normalized;
 }
 

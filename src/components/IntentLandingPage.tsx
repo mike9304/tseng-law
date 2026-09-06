@@ -14,12 +14,14 @@ import { getColumnPost } from '@/lib/columns';
 import type { SiteLocale } from '@/lib/locales';
 import { getServiceArea } from '@/data/service-details';
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
+import styles from './IntentLandingPage.module.css';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildPersonJsonLd } from '@/lib/seo';
 import {
   getConsultationCtaLabel,
   getConsultationPublicMailto,
   getSensitiveInformationWarning,
 } from '@/lib/consultation/public-contact';
+import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
 
 function summarize(text: string, maxLength = 180) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
@@ -314,6 +316,7 @@ export default function IntentLandingPage({
   }
 
   const l = labels[locale];
+  const ai = getAiIntakeDiscovery(locale);
   const services = page.serviceSlugs
     .map((item) => {
       const area = getServiceArea(item);
@@ -515,7 +518,7 @@ export default function IntentLandingPage({
           <OrnamentDivider />
           <div className="grid-bento contact-grid">
             {services.map((service) => (
-              <article key={service.slug} className="card legal-card">
+              <article key={service.slug} className={`card legal-card ${styles.serviceCard}`}>
                 <h3 className="card-title">{service.title}</h3>
                 <div className="legal-card-copy">
                   <p>{summarize(service.intro)}</p>
@@ -535,7 +538,7 @@ export default function IntentLandingPage({
             <SectionLabel>{l.columnsLabel}</SectionLabel>
             <h2 className="section-title">{l.columnsTitle}</h2>
             <OrnamentDivider />
-            <div className="svc-columns-grid">
+            <div className={`svc-columns-grid ${styles.columnsGrid}`}>
               {columns.map((column) => (
                 <Link key={column.slug} href={`/${locale}/columns/${column.slug}`} className="svc-col-card">
                   <div className="svc-col-card-media">
@@ -562,7 +565,7 @@ export default function IntentLandingPage({
           <SectionLabel>{l.resourcesLabel}</SectionLabel>
           <h2 className="section-title">{l.resourcesTitle}</h2>
           <OrnamentDivider />
-          <article className="intent-panel">
+          <article className={`intent-panel ${styles.resources}`}>
             <ul className="intent-article-list">
               {relatedResourcesFor(locale, slug).map((item) => (
                 <li key={item.href}>
@@ -580,11 +583,12 @@ export default function IntentLandingPage({
 
       <section className="section section--light">
         <div className="container">
-          <div className="intent-cta-card">
+          <div className={`intent-cta-card ${styles.ctaCard}`}>
             <SectionLabel>{l.ctaLabel}</SectionLabel>
             <h2 className="section-title">{l.ctaTitle}</h2>
             <p className="section-lede">{l.ctaText}</p>
-            <div className="intent-cta-actions">
+            {ai.enabled ? <p className="section-lede">{ai.supportingCopy}</p> : null}
+            <div className={`intent-cta-actions ${styles.ctaActions}`}>
               <a
                 href={getConsultationPublicMailto(locale)}
                 className="button"
@@ -592,6 +596,16 @@ export default function IntentLandingPage({
               >
                 {l.contact}
               </a>
+              {ai.enabled ? (
+                <Link
+                  href={ai.href}
+                  className="button button--outline"
+                  data-cta="intent-ai-intake-entry"
+                  data-cta-dest="ai-intake"
+                >
+                  {ai.label}
+                </Link>
+              ) : null}
               <Link href={`/${locale}/pricing`} className="button button--outline">
                 {l.pricing}
               </Link>

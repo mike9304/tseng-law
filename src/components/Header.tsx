@@ -40,6 +40,59 @@ type MemberNavState = {
   member?: PublicSiteMember;
 };
 
+// The public header can wrap when text is enlarged. Share its real height with
+// the existing main, hero and anchor offsets; CMS headers keep their own layout.
+export function installPublicHeaderOffset(header: HTMLElement): () => void {
+  const site = header.closest<HTMLElement>('.site[data-locale]');
+  if (!site) return () => {};
+
+  const style = header.ownerDocument.documentElement.style;
+  const property = '--header-offset-desktop';
+  const previousValue = style.getPropertyValue(property);
+  const previousPriority = style.getPropertyPriority(property);
+  let writtenValue = '';
+  let frame: number | null = null;
+  let disposed = false;
+
+  const release = () => {
+    if (writtenValue && style.getPropertyValue(property) === writtenValue) {
+      if (previousValue) style.setProperty(property, previousValue, previousPriority);
+      else style.removeProperty(property);
+    }
+    writtenValue = '';
+    site.removeAttribute('data-public-header-measured');
+  };
+  const measure = () => {
+    frame = null;
+    if (disposed) return;
+    const height = header.getBoundingClientRect().height;
+    if (!Number.isFinite(height) || height <= 0) {
+      release();
+      return;
+    }
+    const value = `${Math.ceil(height)}px`;
+    if (value === writtenValue) return;
+    style.setProperty(property, value);
+    writtenValue = value;
+    site.setAttribute('data-public-header-measured', 'true');
+  };
+  const scheduleMeasure = () => {
+    if (!disposed && frame === null) frame = window.requestAnimationFrame(measure);
+  };
+  const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(scheduleMeasure);
+  observer?.observe(header);
+  window.addEventListener('resize', scheduleMeasure);
+  measure();
+
+  return () => {
+    disposed = true;
+    observer?.disconnect();
+    window.removeEventListener('resize', scheduleMeasure);
+    if (frame !== null) window.cancelAnimationFrame(frame);
+    release();
+  };
+}
+
 function buildMainNavItems(locale: SiteLocale): MainNavItem[] {
   if (locale === 'ja') {
     return [
@@ -225,11 +278,16 @@ export default function Header({ locale }: { locale: SiteLocale }) {
     width: 0,
     visible: false
   });
+  const headerRef = useRef<HTMLElement | null>(null);
   const mainNavRef = useRef<HTMLElement | null>(null);
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
   const closeTimeoutRef = useRef<number | null>(null);
   const mobileToggleRef = useRef<HTMLButtonElement | null>(null);
   const restoreMobileToggleOnCloseRef = useRef(false);
+  useEffect(() => {
+    if (!headerRef.current) return;
+    return installPublicHeaderOffset(headerRef.current);
+  }, []);
   const menuLabel = locale === 'ko' ? '메뉴' : locale === 'zh-hant' ? '選單' : locale === 'ja' ? 'メニュー' : 'Menu';
   const openMenuLabel = locale === 'ko' ? '메뉴 열기' : locale === 'zh-hant' ? '開啟選單' : locale === 'ja' ? 'メニューを開く' : 'Open menu';
   const closeMenuLabel = locale === 'ko' ? '메뉴 닫기' : locale === 'zh-hant' ? '關閉選單' : locale === 'ja' ? 'メニューを閉じる' : 'Close menu';
@@ -434,7 +492,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
   }, [closeMegaMenuNow, openMenu]);
 
   return (
-    <header className={`header scrolled${openMenu ? ' mega-open' : ''}`}>
+    <header ref={headerRef} data-public-site-header className={`header scrolled${openMenu ? ' mega-open' : ''}`}>
       <a className="skip-link" href="#main">
         {skipLabel}
       </a>

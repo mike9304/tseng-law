@@ -1,7 +1,8 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { SiteLocale } from '@/lib/locales';
+import styles from './ReviewBoard.module.css';
 
 export type Review = {
   id: string;
@@ -35,6 +36,8 @@ export const reviewLabels: Record<SiteLocale, {
   totalReviews: string;
   avgRating: string;
   loading: string;
+  loadError: string;
+  retry: string;
   disclosure: string | null;
 }> = {
   ko: {
@@ -71,6 +74,8 @@ export const reviewLabels: Record<SiteLocale, {
     totalReviews: '건의 후기',
     avgRating: '평균 별점',
     loading: '불러오는 중...',
+    loadError: '후기를 불러오지 못했습니다. 다시 시도해 주세요.',
+    retry: '다시 불러오기',
     disclosure: null,
   },
   'zh-hant': {
@@ -107,6 +112,8 @@ export const reviewLabels: Record<SiteLocale, {
     totalReviews: '則評價',
     avgRating: '平均評分',
     loading: '載入中...',
+    loadError: '無法載入評價，請再試一次。',
+    retry: '重新載入',
     disclosure: null,
   },
   en: {
@@ -143,6 +150,8 @@ export const reviewLabels: Record<SiteLocale, {
     totalReviews: 'reviews',
     avgRating: 'Average Rating',
     loading: 'Loading...',
+    loadError: 'Reviews could not be loaded. Please try again.',
+    retry: 'Try again',
     disclosure: null,
   },
   ja: {
@@ -179,11 +188,13 @@ export const reviewLabels: Record<SiteLocale, {
     totalReviews: '件',
     avgRating: '平均評価',
     loading: '読み込み中…',
+    loadError: 'ご感想を読み込めませんでした。もう一度お試しください。',
+    retry: '再読み込み',
     disclosure: '掲載内容は投稿者個人の感想です。内容確認は行いますが、投稿者の本人確認または当事務所との利用関係を保証するものではなく、同様の結果を保証するものでもありません。',
   },
 };
 
-function StarRating({
+export function StarRating({
   value,
   onChange,
   readonly = false,
@@ -199,18 +210,38 @@ function StarRating({
   const [hover, setHover] = useState(0);
   const sizeClass = size === 'sm' ? 'star-sm' : '';
 
+  const starLabel = (star: number) => locale === 'ko'
+    ? `${star}점`
+    : locale === 'zh-hant'
+      ? `${star} 星`
+      : locale === 'ja'
+        ? `${star}つ星`
+        : `${star} ${star === 1 ? 'star' : 'stars'}`;
+
+  if (readonly) {
+    return (
+      <span className={`star-rating ${sizeClass} star-readonly`} role="img" aria-label={starLabel(value)}>
+        {[1, 2, 3, 4, 5].map((star) => (
+          <span key={star} className={styles.readonlyStar} data-filled={star <= value} aria-hidden="true">★</span>
+        ))}
+      </span>
+    );
+  }
+
   return (
-    <span className={`star-rating ${sizeClass} ${readonly ? 'star-readonly' : ''}`}>
+    <span className={`star-rating ${sizeClass}`} role="group" aria-label={reviewLabels[locale].rating}>
       {[1, 2, 3, 4, 5].map((star) => (
         <button
           key={star}
           type="button"
-          className={`star-btn ${star <= (hover || value) ? 'star-filled' : ''}`}
+          className={`star-btn ${styles.starButton}`}
+          data-filled={star <= (hover || value)}
+          aria-pressed={star === value}
           onClick={() => !readonly && onChange?.(star)}
           onMouseEnter={() => !readonly && setHover(star)}
           onMouseLeave={() => !readonly && setHover(0)}
           disabled={readonly}
-          aria-label={locale === 'ja' ? `${star}つ星` : `${star} star`}
+          aria-label={starLabel(star)}
         >
           ★
         </button>
@@ -277,10 +308,20 @@ export function ReviewCard({ review, locale }: { review: Review; locale: SiteLoc
   );
 }
 
+export async function loadPublicReviews(locale: SiteLocale): Promise<Review[]> {
+  const response = await fetch(`/api/reviews?locale=${locale}`);
+  if (!response.ok) throw new Error('review_list_unavailable');
+  const data: unknown = await response.json();
+  if (!Array.isArray(data)) throw new Error('review_list_invalid');
+  return data as Review[];
+}
+
 export default function ReviewBoard({ locale }: { locale: SiteLocale }) {
   const t = reviewLabels[locale];
   const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
+  const listRequest = useRef(0);
   const [nickname, setNickname] = useState('');
   const [rating, setRating] = useState(0);
   const [service, setService] = useState('');
@@ -290,21 +331,23 @@ export default function ReviewBoard({ locale }: { locale: SiteLocale }) {
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   const fetchReviews = useCallback(async () => {
+    const request = ++listRequest.current;
+    setLoading(true);
+    setLoadError(false);
+    setReviews([]);
     try {
-      const res = await fetch(`/api/reviews?locale=${locale}`);
-      if (res.ok) {
-        const data = await res.json();
-        setReviews(data);
-      }
+      const data = await loadPublicReviews(locale);
+      if (request === listRequest.current) setReviews(data);
     } catch {
-      // silent
+      if (request === listRequest.current) setLoadError(true);
     } finally {
-      setLoading(false);
+      if (request === listRequest.current) setLoading(false);
     }
   }, [locale]);
 
   useEffect(() => {
-    fetchReviews();
+    void fetchReviews();
+    return () => { listRequest.current += 1; };
   }, [fetchReviews]);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -358,7 +401,7 @@ export default function ReviewBoard({ locale }: { locale: SiteLocale }) {
         {/* ── Review Form ── */}
         <div className="review-form-wrap">
           <h2 className="review-form-title">{t.formTitle}</h2>
-          <p className="review-empty">{t.moderationNote}</p>
+          <p className={styles.moderationNote}>{t.moderationNote}</p>
           <form className="review-form" onSubmit={handleSubmit}>
             <div
               aria-hidden="true"
@@ -455,10 +498,15 @@ export default function ReviewBoard({ locale }: { locale: SiteLocale }) {
 
         {/* ── Review List ── */}
         <h2 className="review-list-title">{t.reviewsTitle}</h2>
-        {t.disclosure && <p className="review-empty">{t.disclosure}</p>}
+        {t.disclosure && <p className={styles.disclosure}>{t.disclosure}</p>}
 
         {loading ? (
-          <p className="review-empty">{t.loading}</p>
+          <p className="review-empty" role="status">{t.loading}</p>
+        ) : loadError ? (
+          <div className={styles.loadError} role="alert">
+            <p>{t.loadError}</p>
+            <button type="button" className="button" onClick={() => void fetchReviews()}>{t.retry}</button>
+          </div>
         ) : reviews.length === 0 ? (
           <p className="review-empty">{t.noReviews}</p>
         ) : (

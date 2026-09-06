@@ -24,6 +24,8 @@ import {
 } from '@/lib/builder/canvas/legacy-contact-scaffold';
 import { buildPublishedResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
 import { projectLegacyZhHantHomeOffices } from '@/lib/builder/site/legacy-zh-hant-home-offices';
+import { getLegacyZhHantFluidContainerStyle, hasLegacyJulyZhHantHomeDualTree, normalizeLegacyZhHantHomeRead } from '@/lib/builder/canvas/home-zh-hant-parity';
+import { hasLegacyColumnsScaffold } from '@/lib/builder/canvas/legacy-columns-scaffold';
 import { projectPublishedHomeInsightsArchiveIntro } from '@/lib/insights/archive-copy';
 import {
   computeTopLevelFlowSectionMetrics,
@@ -655,7 +657,9 @@ export async function PublishedSitePageView({
   // (no automatic dark derivation), so they only need to be declared once on
   // :root and cascade into both themes.
   const customColorCssVars = buildCustomColorCssVars(settings?.brand?.customColors);
-  const publishedNodes = projectLegacyZhHantHomeOffices(canvas.nodes, locale, isHomePage);
+  const normalizedHomeCanvas = await normalizeLegacyZhHantHomeRead(canvas, locale, isHomePage);
+  const legacyZhTabletParity = await hasLegacyJulyZhHantHomeDualTree(normalizedHomeCanvas, locale, isHomePage);
+  const publishedNodes = projectLegacyZhHantHomeOffices(normalizedHomeCanvas.nodes, locale, isHomePage);
   const visibleNodes = publishedNodes.filter((node) => node.visible !== false);
   const responsiveStylesheet = buildPublishedResponsiveStylesheet(publishedNodes);
   const legacyContactScaffold =
@@ -795,6 +799,7 @@ export async function PublishedSitePageView({
       slugPath,
     );
     const component = getComponent(renderedNode.kind);
+    const legacyZhFluidStyle = isHomePage ? getLegacyZhHantFluidContainerStyle(renderedNode, locale) : undefined;
     const decorativeVideo = resolvePublishedDecorativeVideo(renderedNode, locale);
     const childNodes = (childrenMap[renderedNode.id] ?? [])
       .map((childId) => nodesById.get(childId))
@@ -1032,6 +1037,7 @@ export async function PublishedSitePageView({
         id={renderedNode.anchorName ? renderedNode.anchorName : undefined}
         className="builder-pub-node"
         data-node-id={renderedNode.id}
+        data-builder-zh-fluid-container={legacyZhFluidStyle ? 'true' : undefined}
         data-parent-node-id={renderedNode.parentId}
         data-builder-flow-section={flowAsSection ? 'true' : undefined}
         data-builder-legacy-contact-scaffold={scaffoldRole}
@@ -1112,6 +1118,8 @@ export async function PublishedSitePageView({
           ['--builder-hover-box-shadow' as string]: hoverBoxShadow,
           ['--builder-hover-transform' as string]: hoverTransform,
           ...animationStyle,
+          ['--builder-zh-fluid-left' as string]: legacyZhFluidStyle?.left,
+          ['--builder-zh-fluid-width' as string]: legacyZhFluidStyle?.width,
         }}
       >
         {appRuntime && !canRenderAppWidget ? (
@@ -1237,6 +1245,12 @@ export async function PublishedSitePageView({
         }
         .builder-pub-node[data-anchor^='mobile-parity-home-'] {
           display: none !important;
+        }
+        @media (min-width: 1280px) {
+          .builder-pub-node[data-builder-zh-fluid-container='true'] {
+            left: var(--builder-zh-fluid-left) !important;
+            width: var(--builder-zh-fluid-width) !important;
+          }
         }
         .builder-pub-node[data-builder-hover='true']:hover {
           background: var(--builder-hover-background) !important;
@@ -2137,8 +2151,33 @@ export async function PublishedSitePageView({
           mobileHamburger={headerFooterConfig.mobileHamburger}
         />
       ) : null}
+      {legacyZhTabletParity ? <style data-builder-zh-tablet-parity="true" dangerouslySetInnerHTML={{ __html: `
+        @media (min-width: 769px) and (max-width: 1023px) {
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] {
+            zoom: 1 !important; width: 100% !important; max-width: 100% !important; min-height: 0 !important;
+          }
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-anchor^='mobile-parity-home-'] {
+            display: block !important; width: 100% !important; max-width: 100% !important;
+            height: auto !important; min-height: 0 !important; margin: 0 !important;
+          }
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] .hero-scroll-arrow {
+            pointer-events: auto;
+          }
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-hero-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-insights-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-services-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-attorney-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-case-results-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-stats-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-faq-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-offices-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-contact-root'] { display: none !important; }
+        }
+      ` }} /> : null}
       <div
         className="builder-pub-main"
+        data-builder-zh-tablet-parity={legacyZhTabletParity ? 'true' : undefined}
+        data-builder-legacy-columns-flow={hasLegacyColumnsScaffold(canvas, locale, slugPath) ? 'true' : undefined}
         data-builder-chrome={useBuilderChrome ? 'true' : 'false'}
         style={{
           // Canvas stage width is 1280 (see canvas/responsive.ts).

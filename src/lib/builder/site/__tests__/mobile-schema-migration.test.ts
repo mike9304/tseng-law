@@ -472,9 +472,18 @@ describe('M07 mobile schema migration script', () => {
     });
 
     const backupDir = path.join(siteDir, 'backups');
-    await waitForCondition(migration.child, async () => (
-      readdir(backupDir).then((entries) => entries.some((name) => name.startsWith('before-M07-')), () => false)
-    ));
+    await waitForCondition(migration.child, async () => {
+      const backupName = await readdir(backupDir).then(
+        (entries) => entries.find((name) => name.startsWith('before-M07-')),
+        () => undefined,
+      );
+      if (!backupName) return false;
+      // Creation precedes the helper's write; attack only the complete backup.
+      return readFile(path.join(backupDir, backupName), 'utf8').then(
+        (raw) => raw === before,
+        () => false,
+      );
+    });
     const backupName = (await readdir(backupDir))[0];
     const backupPath = path.join(backupDir, backupName);
     if (mutationKind === 'replacement inode') {

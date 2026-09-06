@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import {
   readDashboardMetrics,
   type AdminDashboardMetrics,
+  type AiIntakeOutcomeStats,
 } from '@/lib/consultation/admin/read-logs';
 import { getConsultationCopy, type ConsultationCopy } from './copy';
 import type { Locale } from '@/lib/locales';
@@ -55,7 +56,10 @@ function formatTimestamp(iso: string): string {
   }
 }
 
-function Percent({ value }: { value: number }): React.ReactElement {
+function Percent({ value }: { value: number | null }): React.ReactElement {
+  if (value === null) {
+    return <span className="admin-console-pct-cell">—</span>;
+  }
   const clamped = Math.max(0, Math.min(100, value));
   return (
     <span className="admin-console-pct-cell">
@@ -64,6 +68,90 @@ function Percent({ value }: { value: number }): React.ReactElement {
         <span style={{ width: `${clamped}%` }} />
       </span>
     </span>
+  );
+}
+
+function AiIntakeMetricsTable({
+  rows,
+  total,
+  copy,
+}: {
+  rows: Array<{ label: string; stats: AiIntakeOutcomeStats }>;
+  total: AiIntakeOutcomeStats;
+  copy: ConsultationCopy;
+}): React.ReactElement {
+  if (rows.length === 0) {
+    return <p className="admin-console-empty-note">{copy.aiIntakeEmpty}</p>;
+  }
+  const visibleRows = [
+    { label: copy.aiIntakeTotalLabel, stats: total },
+    ...rows,
+  ];
+  return (
+    <table className="admin-console-table admin-console-table--wide">
+      <thead>
+        <tr>
+          <th>{copy.aiIntakeHeaders.dimension}</th>
+          <th>{copy.aiIntakeHeaders.freshSent}</th>
+          <th>{copy.aiIntakeHeaders.duplicates}</th>
+          <th>{copy.aiIntakeHeaders.rejected}</th>
+          <th>{copy.aiIntakeHeaders.deliveryUnknown}</th>
+          <th>{copy.aiIntakeHeaders.total}</th>
+          <th>{copy.aiIntakeHeaders.sentShare}</th>
+          <th>{copy.aiIntakeHeaders.duplicateShare}</th>
+          <th>{copy.aiIntakeHeaders.problemShare}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {visibleRows.map(({ label, stats }, index) => (
+          <tr key={`${label}-${index}`}>
+            <td>{index === 0 ? <strong>{label}</strong> : label}</td>
+            <td className="admin-console-num">{stats.sent}</td>
+            <td className="admin-console-num">{stats.duplicate}</td>
+            <td className="admin-console-num">{stats.rejected}</td>
+            <td className="admin-console-num">{stats.failedUnknown}</td>
+            <td className="admin-console-num">{stats.totalOutcomes}</td>
+            <td><Percent value={stats.sentShareOfOutcomes} /></td>
+            <td><Percent value={stats.duplicateShareOfOutcomes} /></td>
+            <td><Percent value={stats.problemShareOfNonReplay} /></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+function AiIntakeRecentOutcomes({
+  metrics,
+  copy,
+}: {
+  metrics: AdminDashboardMetrics['aiIntake'];
+  copy: ConsultationCopy;
+}): React.ReactElement {
+  if (metrics.recentOutcomes.length === 0) {
+    return <p className="admin-console-empty-note">{copy.aiIntakeRecentEmpty}</p>;
+  }
+  return (
+    <table className="admin-console-table admin-console-table--wide">
+      <thead>
+        <tr>
+          <th>{copy.aiIntakeRecentHeaders.time}</th>
+          <th>{copy.aiIntakeRecentHeaders.provider}</th>
+          <th>{copy.aiIntakeRecentHeaders.locale}</th>
+          <th>{copy.aiIntakeRecentHeaders.outcome}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {metrics.recentOutcomes.map((outcome, index) => (
+          <tr key={`${outcome.timestamp}-${outcome.provider}-${outcome.locale}-${outcome.stage}-${index}`}>
+            <td className="admin-console-time">{formatTimestamp(outcome.timestamp)}</td>
+            <td>{outcome.provider}</td>
+            <td>{outcome.locale}</td>
+            <td>{copy.aiIntakeOutcomeLabels[outcome.stage]}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
 
@@ -640,6 +728,23 @@ export default async function AdminConsultationPage(
         rateLimitedChat: 0,
         rateLimitedSubmit: 0,
       },
+      aiIntake: {
+        total: {
+          sent: 0,
+          duplicate: 0,
+          rejected: 0,
+          failedUnknown: 0,
+          totalOutcomes: 0,
+          nonReplayOutcomes: 0,
+          sentShareOfOutcomes: null,
+          duplicateShareOfOutcomes: null,
+          problemShareOfNonReplay: null,
+        },
+        byProvider: [],
+        byLocale: [],
+        byCategory: [],
+        recentOutcomes: [],
+      },
       performance: {
         sampleCount: 0,
         latencyP50Ms: 0,
@@ -711,6 +816,38 @@ export default async function AdminConsultationPage(
             <FunnelTable metrics={metrics} copy={copy} />
             <ConversionTable metrics={metrics} copy={copy} />
           </div>
+        </Section>
+
+        <Section title={copy.aiIntakeTitle} description={copy.aiIntakeDescription}>
+          <h3 className="admin-console-subtitle">{copy.aiIntakeProviderTitle}</h3>
+          <AiIntakeMetricsTable
+            rows={metrics.aiIntake.byProvider.map((row) => ({
+              label: row.provider,
+              stats: row,
+            }))}
+            total={metrics.aiIntake.total}
+            copy={copy}
+          />
+          <h3 className="admin-console-subtitle">{copy.aiIntakeLocaleTitle}</h3>
+          <AiIntakeMetricsTable
+            rows={metrics.aiIntake.byLocale.map((row) => ({
+              label: row.locale,
+              stats: row,
+            }))}
+            total={metrics.aiIntake.total}
+            copy={copy}
+          />
+          <h3 className="admin-console-subtitle">{copy.aiIntakeCategoryTitle}</h3>
+          <AiIntakeMetricsTable
+            rows={metrics.aiIntake.byCategory.map((row) => ({
+              label: row.category,
+              stats: row,
+            }))}
+            total={metrics.aiIntake.total}
+            copy={copy}
+          />
+          <h3 className="admin-console-subtitle">{copy.aiIntakeRecentTitle}</h3>
+          <AiIntakeRecentOutcomes metrics={metrics.aiIntake} copy={copy} />
         </Section>
 
         <Section

@@ -135,7 +135,7 @@ describe('live route SEO defaults', () => {
 
     expect(seo.title).toBe('대만 변호사·회사설립·소송');
     expect(seo.description).toBe(
-      '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어와 일본어로 안내하는 법무법인 호정 공식 사이트입니다.',
+      '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어·일본어·영어로 안내하는 법무법인 호정 공식 사이트입니다.',
     );
     expect(seo.ogTitle).toBe(seo.title);
     expect(seo.ogDescription).toBe(seo.description);

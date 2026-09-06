@@ -19,6 +19,7 @@ describe('Japanese service-detail language switch policy', () => {
     ['/taiwan-litigation-lawyer', '/ja/taiwan-litigation-lawyer'],
     ['/korean-lawyer-in-taiwan', '/ja/korean-lawyer-in-taiwan'],
     ['/guides/taiwan-company-setup', '/ja/guides/taiwan-company-setup'],
+    ['/ai-intake', '/ja/ai-intake'],
     ['/store/products/taiwan-business-guide', '/ja/columns'],
   ])('maps %s to %s', (sourcePath, targetPath) => {
     expect(jaLanguageSwitchTarget(sourcePath)).toBe(targetPath);

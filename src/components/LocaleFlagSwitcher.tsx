@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import type { SiteLocale } from '@/lib/locales';
+import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import { buildLocalePath, stripLocaleFromPath } from '@/lib/path-utils';
-import { jaLanguageSwitchTarget } from '@/lib/public-route-policy';
+import { jaLanguageSwitchTarget, restrictedPublicFamilyListPath } from '@/lib/public-route-policy';
 
 export const LOCALE_FLAG_OPTIONS = [
   {
@@ -45,9 +45,25 @@ const switcherLabels: Record<SiteLocale, string> = {
   en: 'Language selector',
 };
 
+function siteLocaleFromPathname(pathname: string): SiteLocale | null {
+  const first = pathname.replace(/^\//, '').split('/')[0] ?? '';
+  return isSiteLocale(first) ? first : null;
+}
+
 export function localeFlagHref(pathname: string, targetLocale: SiteLocale): string {
+  const currentLocale = siteLocaleFromPathname(pathname);
+  if (currentLocale === targetLocale) {
+    return pathname || `/${targetLocale}`;
+  }
+
+  const pathWithoutLocale = stripLocaleFromPath(pathname);
+  const familyList = restrictedPublicFamilyListPath(pathWithoutLocale);
+  if (familyList) {
+    return `/${targetLocale}${familyList}`;
+  }
+
   if (targetLocale === 'ja') {
-    return jaLanguageSwitchTarget(stripLocaleFromPath(pathname));
+    return jaLanguageSwitchTarget(pathWithoutLocale);
   }
   return buildLocalePath(pathname, targetLocale);
 }

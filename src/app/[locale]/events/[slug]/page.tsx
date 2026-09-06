@@ -6,12 +6,16 @@ import type { BuilderEventRsvpCanvasNode } from '@/lib/builder/canvas/types';
 import { findEventBySlug } from '@/lib/builder/events/events-engine';
 import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
+import PublicUnavailableState, { publicUnavailableMetadata } from '@/components/PublicUnavailableState';
 import styles from '../EventsPublic.module.css';
 
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(props: { params: Promise<{ locale: Locale; slug: string }> }): Promise<Metadata> {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return publicUnavailableMetadata('ja', 'events');
+  }
   const locale = normalizeLocale(params.locale);
   const event = await findEventBySlug(locale, params.slug);
   if (!event || event.status !== 'published') return {};
@@ -29,6 +33,9 @@ export async function generateMetadata(props: { params: Promise<{ locale: Locale
 
 export default async function EventDetailPage(props: { params: Promise<{ locale: Locale; slug: string }> }) {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return <PublicUnavailableState locale="ja" kind="events" />;
+  }
   const locale = normalizeLocale(params.locale);
   const event = await findEventBySlug(locale, params.slug);
   if (!event || event.status !== 'published') return notFound();
@@ -71,7 +78,7 @@ export default async function EventDetailPage(props: { params: Promise<{ locale:
   };
 
   return (
-    <main className={styles.page} data-public-event-detail="true">
+    <section className={styles.page} data-public-event-detail="true">
       <section className={styles.hero}>
         <div className={styles.inner}>
           <Link className={styles.back} href={`/${locale}/events`}>
@@ -95,6 +102,6 @@ export default async function EventDetailPage(props: { params: Promise<{ locale:
           <EventRsvpElement node={rsvpNode} mode="published" locale={locale} />
         </aside>
       </section>
-    </main>
+    </section>
   );
 }

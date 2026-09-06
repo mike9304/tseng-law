@@ -95,9 +95,18 @@ export default async function SearchPage(
       : locale === 'ja'
         ? '検索結果が見つかりませんでした。'
         : 'No search results found.';
-  const nativeIndex = await loadNativeSearchIndex();
-  const index = augmentStaticDocs(nativeIndex, locale, getPublicIntentSearchDocs(locale));
-  const hits = query
+  const initialLabel = locale === 'ko'
+    ? '검색어를 입력하거나 아래 추천 주제를 선택해 주세요.'
+    : locale === 'zh-hant'
+      ? '請輸入關鍵字，或選擇下方的建議主題。'
+      : locale === 'ja'
+        ? 'キーワードを入力するか、下のおすすめのテーマを選んでください。'
+        : 'Enter a keyword or choose a suggested topic below.';
+  const nativeIndex = query ? await loadNativeSearchIndex() : null;
+  const index = nativeIndex
+    ? augmentStaticDocs(nativeIndex, locale, getPublicIntentSearchDocs(locale))
+    : null;
+  const hits = query && index
     ? runSearchQuery({
         index,
         query,
@@ -155,9 +164,11 @@ export default async function SearchPage(
               </Link>
             ))}
           </div>
-          <div className="search-results-total">{totalLabel}</div>
+          {query && <div className="search-results-total">{totalLabel}</div>}
           <div className="list-rows">
-            {results.length ? (
+            {!query ? (
+              <p className="search-empty" data-search-initial="true">{initialLabel}</p>
+            ) : results.length ? (
               results.map((hit) => (
                 <div key={hit.doc.id} className="list-row">
                   <div className="list-meta">{resultKindLabel(hit.doc.kind, locale)}</div>

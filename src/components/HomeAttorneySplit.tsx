@@ -53,15 +53,23 @@ export default function HomeAttorneySplit({ locale }: { locale: SiteLocale }) {
   const copy = copyByLocale[locale];
   const profilePath = getAttorneyProfilePath(locale);
   const lead = teamContent[locale].members[0];
+  const useLargeOfficialPortrait =
+    lead.id === 'tseng-junwei' && lead.photo === '/images/team/wei-tseng-official.png';
+  // Original image linked by the attorney's official personal profile.
+  const portrait = useLargeOfficialPortrait ? '/images/team/tseng-junwei.png' : lead.photo;
 
   return (
     <section className="section section--gray split-section split--img-left" id="about" data-tone="light">
-      <div className="split-image split-image--portrait" data-builder-node-key="media">
+      <div
+        className="split-image split-image--portrait"
+        data-builder-node-key="media"
+        data-home-stock-portrait={useLargeOfficialPortrait ? 'true' : undefined}
+      >
         <Image
-          src={lead.photo}
+          src={portrait}
           alt={`${lead.name} ${lead.role}`}
-          width={1200}
-          height={900}
+          width={useLargeOfficialPortrait ? 773 : 1200}
+          height={useLargeOfficialPortrait ? 865 : 900}
           loading="lazy"
           sizes="(max-width: 900px) 100vw, 50vw"
           className="person-photo"

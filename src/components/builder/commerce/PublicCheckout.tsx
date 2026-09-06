@@ -80,12 +80,12 @@ type CheckoutCopy = {
 const copy: Record<Locale, CheckoutCopy> = {
   ko: {
     title: '체크아웃',
-    description: '장바구니를 확인하고 배송지, 세금, 결제 어댑터를 한 번에 검증합니다.',
+    description: '장바구니와 배송지, 세금, 결제 방식을 확인하세요.',
     back: '스토어로 돌아가기',
     empty: '체크아웃할 장바구니가 없습니다.',
     customer: '고객 정보',
     shipping: '배송 정보',
-    payment: '결제 어댑터',
+    payment: '결제 방식',
     summary: '주문 요약',
     name: '이름',
     email: '이메일',
@@ -125,12 +125,12 @@ const copy: Record<Locale, CheckoutCopy> = {
   },
   'zh-hant': {
     title: '結帳',
-    description: '檢查購物車，並驗證配送、稅額與付款介面。',
+    description: '確認購物車、配送、稅額與付款方式。',
     back: '返回商店',
     empty: '沒有可結帳的購物車。',
     customer: '顧客資訊',
     shipping: '配送資訊',
-    payment: '付款介面',
+    payment: '付款方式',
     summary: '訂單摘要',
     name: '姓名',
     email: '電子郵件',
@@ -170,12 +170,12 @@ const copy: Record<Locale, CheckoutCopy> = {
   },
   en: {
     title: 'Checkout',
-    description: 'Review the cart and validate address, shipping, tax, and payment adapter details.',
+    description: 'Review your cart, address, shipping, tax, and payment method.',
     back: 'Back to store',
     empty: 'There is no cart to check out.',
     customer: 'Customer',
     shipping: 'Shipping',
-    payment: 'Payment adapter',
+    payment: 'Payment method',
     summary: 'Order summary',
     name: 'Name',
     email: 'Email',
@@ -399,7 +399,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
 
   if (confirmation) {
     return (
-      <main className={styles.page} data-commerce-checkout data-commerce-checkout-confirmed="true">
+      <section className={styles.page} data-commerce-checkout data-commerce-checkout-confirmed="true">
         <section
           className={styles.confirmation}
           data-commerce-checkout-confirmation
@@ -423,12 +423,12 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
           <p className={styles.clearNotice}>{t.clear}</p>
           <Link href={`/${locale}/store`} className={styles.primaryLink}>{t.back}</Link>
         </section>
-      </main>
+      </section>
     );
   }
 
   return (
-    <main
+    <section
       className={styles.page}
       data-commerce-checkout
       data-commerce-checkout-hydrated={hydrated ? 'true' : 'false'}
@@ -647,6 +647,6 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
           </form>
         )}
       </div>
-    </main>
+    </section>
   );
 }

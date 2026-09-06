@@ -11,8 +11,10 @@ vi.mock('next/font/google', () => {
   });
   return {
     Noto_Sans_KR: font,
+    Noto_Sans_JP: font,
     Noto_Sans_TC: font,
     Noto_Serif_KR: font,
+    Noto_Serif_JP: font,
     Noto_Serif_TC: font,
   };
 });

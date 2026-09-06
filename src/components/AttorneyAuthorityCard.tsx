@@ -70,7 +70,7 @@ export default function AttorneyAuthorityCard({
             src={profile.image}
             alt={`${profile.name} ${profile.role}`}
             fill
-            sizes="112px"
+            sizes="192px"
             className="person-photo"
             style={{ objectFit: 'cover' }}
           />

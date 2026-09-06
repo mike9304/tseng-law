@@ -37,7 +37,7 @@ const expectedOpeningCopy = {
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '본문으로 스크롤',
     mediaAlt: '밝은 자연광 아래 대만 중앙산맥과 운해 위를 비행하는 항공 전경',
-    service: '대만 법률 상담 · 한국어·일본어 소통',
+    service: '대만 법률 상담 · 한국어·일본어·영어 소통',
     contact: '상담 연락처',
   },
   'zh-hant': {
@@ -45,7 +45,7 @@ const expectedOpeningCopy = {
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '向下捲動',
     mediaAlt: '明亮自然光下飛越臺灣中央山脈與雲海的空中景觀',
-    service: '台灣法律諮詢 · 韓語、日語溝通',
+    service: '台灣法律諮詢 · 韓語、日語、英語溝通',
     contact: '諮詢聯絡方式',
   },
   en: {
@@ -437,9 +437,38 @@ describe('cinematic opening content and semantics', () => {
       'utf8',
     );
 
-    expect(globals).toContain('rgba(7, 25, 40, 0.24) 0%');
-    expect(globals).toContain('color: #f8fbfc;');
-    expect(globals).toContain('color: #f1d8a6;');
+    const veilRule = globals.match(
+      /(?:^|\})\s*\.cinematic-opening__veil\s*\{([^}]*)\}/,
+    )?.[1];
+    const primaryRule = globals.match(
+      /(?:^|\})\s*\.cinematic-opening__primary\s*\{([^}]*)\}/,
+    )?.[1];
+    const secondaryRule = globals.match(
+      /(?:^|\})\s*\.cinematic-opening__secondary\s*\{([^}]*)\}/,
+    )?.[1];
+    expect(veilRule).toContain('rgba(7, 25, 40, 0.24) 0%');
+    expect(primaryRule).toContain('color: #f8fbfc;');
+    expect(primaryRule).toContain('text-shadow:');
+
+    // Small subtitle text must remain readable over the brightest poster
+    // pixels. Measure the declared translucent backplate over a white image
+    // instead of requiring the previous standalone gold color anywhere in CSS.
+    const foreground = secondaryRule?.match(/(?:^|;)\s*color:\s*#([\da-f]{6})\s*;/i)?.[1];
+    const background = secondaryRule?.match(
+      /background:\s*rgba\(\s*([\d.]+),\s*([\d.]+),\s*([\d.]+),\s*([\d.]+)\s*\)/,
+    );
+    expect(foreground).toBeDefined();
+    expect(background).not.toBeNull();
+    if (!foreground || !background) throw new Error('Opening subtitle needs explicit text and backplate colors');
+    const luminance = (channels: number[]) => channels.reduce((sum, channel, index) => {
+      const normalized = channel / 255;
+      const linear = normalized <= 0.04045 ? normalized / 12.92 : ((normalized + 0.055) / 1.055) ** 2.4;
+      return sum + linear * [0.2126, 0.7152, 0.0722][index];
+    }, 0);
+    const alpha = Number(background[4]);
+    const textLuminance = luminance([0, 2, 4].map(offset => parseInt(foreground.slice(offset, offset + 2), 16)));
+    const backdropLuminance = luminance(background.slice(1, 4).map(channel => Number(channel) * alpha + 255 * (1 - alpha)));
+    expect((textLuminance + 0.05) / (backdropLuminance + 0.05)).toBeGreaterThanOrEqual(4.5);
     const openingMediaRule = globals.match(
       /\.cinematic-opening__poster,\s*\.cinematic-opening__video\s*\{([^}]*)\}/,
     )?.[1];

@@ -7,6 +7,7 @@ import type {
   BuilderCanvasNode,
 } from '@/lib/builder/canvas/types';
 import { isStandalonePublishParityAnchor } from '@/lib/builder/canvas/decomposable-slugs';
+import { getLegacyZhHantFluidContainerStyle } from '@/lib/builder/canvas/home-zh-hant-parity';
 import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
 import {
   applyBuilderDatasetPreviewBindingToNode,
@@ -70,6 +71,7 @@ import {
   useBuilderDatasetPreviewTargets,
   useBuilderFaqCategories,
   useBuilderFaqItems,
+  useBuilderPageIsHome,
 } from './BuilderDatasetPreviewContext';
 import { CanvasNodeSelectionOverlay } from './CanvasNodeSelectionOverlay';
 import { SelectedRepeaterTemplateChildControls } from './SelectedRepeaterTemplateChildControls';
@@ -378,6 +380,7 @@ const CanvasNode = memo(function CanvasNode({
   const columnPosts = useBuilderColumnPosts();
   const faqCategories = useBuilderFaqCategories();
   const faqItems = useBuilderFaqItems();
+  const isHomePage = useBuilderPageIsHome();
   const nodeRef = useRef<HTMLDivElement>(null);
   const inlineEditOriginalContentRef = useRef<{
     nodeId: string;
@@ -1347,7 +1350,12 @@ const CanvasNode = memo(function CanvasNode({
     <div
       ref={nodeRef}
       className={`${styles.node} ${selected ? styles.nodeSelected : ''} ${node.locked ? styles.nodeLocked : ''}`}
-      style={nodeStyle}
+      style={{
+        ...nodeStyle,
+        ...(viewport === 'desktop' && isHomePage && !interaction
+          ? getLegacyZhHantFluidContainerStyle(node, locale)
+          : undefined),
+      }}
       data-node-id={node.id}
       data-selected={selected ? 'true' : undefined}
       data-builder-sticky={useSticky ? 'true' : undefined}

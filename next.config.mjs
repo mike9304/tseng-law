@@ -134,6 +134,16 @@ const nextConfig = {
           { key: 'X-Robots-Tag', value: 'noindex, noarchive' },
         ],
       })),
+      // Next retains configured headers over route Response headers, so these
+      // two routes need their existing no-referrer contract applied last.
+      {
+        source: '/api/ai/mcp',
+        headers: [{ key: 'Referrer-Policy', value: 'no-referrer' }],
+      },
+      {
+        source: '/api/ai/openapi.json',
+        headers: [{ key: 'Referrer-Policy', value: 'no-referrer' }],
+      },
     ];
   },
   async redirects() {

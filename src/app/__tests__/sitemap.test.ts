@@ -104,11 +104,11 @@ describe('sitemap column lastModified', () => {
       // Base includes EN file-backed columns + JA home, /about, /services,
       // /pricing, /contact, /lawyers, /lawyers/wei-tseng, /faq, /videos,
       // /privacy, /disclaimer, /accessibility, three JA intent pages,
-      // /korean-lawyer-in-taiwan, /guides/taiwan-company-setup,
+      // /korean-lawyer-in-taiwan, /ai-intake, /guides/taiwan-company-setup,
       // /columns archive, 17 JA column details, and all six JA service
       // details (+41). Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 167,
-      afterFiltering: 158,
+      beforeFiltering: 171,
+      afterFiltering: 162,
       removed: 9,
     });
 
@@ -186,6 +186,26 @@ describe('sitemap column lastModified', () => {
       ja: 'https://tseng-law.com/ja/about',
       'x-default': 'https://tseng-law.com/en/about',
     });
+  });
+
+  it('publishes AI-intake in all four locales exactly once with four-language alternates', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const expectedLanguages = {
+      ko: 'https://tseng-law.com/ko/ai-intake',
+      'zh-Hant': 'https://tseng-law.com/zh-hant/ai-intake',
+      en: 'https://tseng-law.com/en/ai-intake',
+      ja: 'https://tseng-law.com/ja/ai-intake',
+      'x-default': 'https://tseng-law.com/en/ai-intake',
+    };
+
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+      const localeEntries = entries.filter(
+        (entry) => entry.url === `https://tseng-law.com/${locale}/ai-intake`,
+      );
+      expect(localeEntries).toHaveLength(1);
+      expect(localeEntries[0]?.alternates?.languages).toEqual(expectedLanguages);
+    }
   });
 
   it('publishes Japanese services exactly once with four-language alternates', async () => {
@@ -292,6 +312,7 @@ describe('sitemap column lastModified', () => {
     '/taiwan-company-setup-lawyer',
     '/taiwan-litigation-lawyer',
     '/korean-lawyer-in-taiwan',
+    '/ai-intake',
     '/guides/taiwan-company-setup',
   ])('publishes Japanese %s exactly once', async (path) => {
     const { default: sitemap } = await import('../sitemap');

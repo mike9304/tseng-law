@@ -279,8 +279,9 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
         {
           title: 'Information we collect',
           paragraphs: [
-            'The consultation form collects a name or company name, reply email, inquiry type, matter summary, and consent to process the submission. A phone number is optional. If you use the AI consultation feature, conversation text, a session identifier, classification results, and feedback may also be processed.',
+            'If you use a consultation form, it collects a name or company name, reply email, inquiry type, matter summary, and consent to process the submission. A phone number is optional. Where AI consultation is available, using it may also involve processing conversation text, a session identifier, classification results, and feedback.',
             'Basic technical records such as IP address, user-agent string, and request time may be generated for security and service operations.',
+            'You can contact the firm at wei@hoveringlaw.com.tw. Selecting an email link may open your email application. The click alone does not send your draft, submit a consultation request, or give consent to process the inquiry. When your email reaches us, we receive your sending address and the information and attachments you include.',
           ],
         },
         {
@@ -311,20 +312,21 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
         {
           title: 'Cookies and browser storage',
           paragraphs: [
-            'The site may use cookies or browser localStorage to remember popup visibility and AI-response feedback state. Whether analytics is enabled in production, the exact cookies used, and their retention periods require review of the live deployment settings.',
+            'The site may use cookies or browser localStorage to remember popup visibility and AI-response feedback state. Whether other analytics tools are enabled in production, the cookies they use, and their retention periods require review of the live deployment settings.',
+            'The website uses visit records to understand how its pages and contact links are used. These records may include a browser-session identifier, pages viewed, referral source, language, time spent on a page, scroll depth, and selection of an email inquiry link. Browser session storage may hold the identifier used to associate these records. Selecting an email link is recorded separately from receiving an inquiry; the email draft and attachments are not included in that selection record. IP addresses are not stored in these visitor-analytics events, although they may be used separately for security and request limits.',
           ],
         },
         {
           title: 'Your choices and contact',
           paragraphs: [
             'To request access, correction, deletion, or withdrawal of consent, email the official consultation address at wei@hoveringlaw.com.tw. If a legal retention duty or an active legal matter limits the request, the reason for the limitation should be explained.',
-            'The privacy contact person’s name, title, and any dedicated contact details require operator confirmation. The privacy contact channel confirmed in code is wei@hoveringlaw.com.tw.',
+            'The privacy contact person’s name, title, and any dedicated contact details require operator confirmation. For privacy questions or requests concerning your personal information, contact wei@hoveringlaw.com.tw.',
           ],
         },
         {
           title: 'Sensitive matter materials, minors, and marketing',
           paragraphs: [
-            'For an initial inquiry, provide only a brief matter or business overview and your contact details. Do not send passport or identification numbers, bank account information, original identity documents, or a full evidence file by email or through the general inquiry form. Provide sensitive materials only through a secure method after receiving instructions from the attorney.',
+            'For your first email, provide a brief description of the matter or business, its connection to Taiwan, any relevant deadline, your preferred language, and contact details. Please wait for the attorney’s instructions before sending passport or identification numbers, bank account details, medical records, original identity documents, or a complete evidence file. Submit sensitive materials only by a secure method in accordance with the attorney’s instructions.',
             'Minors should contact the firm with a guardian and should not send sensitive information. Consultation information should not be used for marketing without separate consent; the live marketing-consent and withdrawal procedure requires operator confirmation.',
           ],
         },
@@ -405,8 +407,9 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
         {
           title: '収集する情報',
           paragraphs: [
-            '相談フォームでは、氏名または会社名、返信用メールアドレス、ご相談分野、概要および個人情報処理への同意を取得します。電話番号は任意です。AI相談を利用した場合、会話内容、セッション識別子、分類結果およびフィードバックを処理することがあります。',
+            '相談フォームをご利用の場合は、氏名または会社名、返信用メールアドレス、ご相談分野、概要および個人情報処理への同意を取得します。電話番号は任意です。AI相談が提供されている場合、ご利用に伴い会話内容、セッション識別子、分類結果およびフィードバックを処理することがあります。',
             'セキュリティおよびサービス運営のため、IPアドレス、ユーザーエージェント、リクエスト時刻などの基本的な技術記録が生成されることがあります。',
+            '当事務所へのお問い合わせは、wei@hoveringlaw.com.tw までお送りいただけます。メールリンクを選択すると、ご利用のメールアプリが開く場合があります。リンクの選択だけでは、下書きの送信、相談の申し込み、相談内容の個人情報処理への同意は行われません。メールが当事務所に届くと、送信元のメールアドレスと、本文や添付ファイルに含まれる情報を受け取ります。',
           ],
         },
         {
@@ -437,20 +440,21 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
         {
           title: 'Cookieおよびブラウザストレージ',
           paragraphs: [
-            'ポップアップの表示状態およびAI回答へのフィードバック状態を記憶するため、CookieまたはブラウザのlocalStorageを使用することがあります。分析ツールが本番環境で有効か、使用するCookieおよび保管期間については、配備設定の確認が必要です。',
+            'ポップアップの表示状態およびAI回答へのフィードバック状態を記憶するため、CookieまたはブラウザのlocalStorageを使用することがあります。その他の分析ツールが本番環境で有効か、それらが使用するCookieおよび保管期間については、配備設定の確認が必要です。',
+            '当ウェブサイトでは、ページや連絡用リンクの利用状況を把握するため、訪問記録を利用しています。記録には、ブラウザのセッション識別子、閲覧ページ、参照元、言語、ページ滞在時間、スクロール位置、相談用メールリンクの選択が含まれる場合があります。記録を関連付ける識別子をブラウザのセッションストレージに保存する場合があります。メールリンクの選択と、お問い合わせの受信は別の記録です。リンクの選択記録に、メールの下書きや添付ファイルは含まれません。これらの訪問分析イベントにはIPアドレスを保存しませんが、セキュリティやリクエスト数の制限のため、別途利用する場合があります。',
           ],
         },
         {
           title: 'ご本人の権利およびお問い合わせ',
           paragraphs: [
             'ご本人の情報の開示、訂正、削除または同意の撤回をご希望の場合は、公式相談メール wei@hoveringlaw.com.tw までご連絡ください。法令上の保管義務または進行中の法律業務により対応範囲が制限される場合は、その理由をご案内します。',
-            '個人情報保護担当者の氏名、役職および専用連絡先は運営者による確認が必要です。コードから確認できるプライバシーに関する連絡先は wei@hoveringlaw.com.tw です。',
+            '個人情報保護担当者の氏名、役職および専用連絡先は運営者による確認が必要です。個人情報の取扱いに関するご質問や、ご本人の情報に関する請求は、wei@hoveringlaw.com.tw までご連絡ください。',
           ],
         },
         {
           title: '機微な案件資料、未成年者およびマーケティング',
           paragraphs: [
-            '初回のお問い合わせでは、案件または業務の概要と連絡先のみをお送りください。旅券番号、身分証番号、銀行口座情報、身分証明書の原本または証拠資料一式は、メールや一般のお問い合わせフォームで送信せず、担当弁護士からの案内後に安全な方法でご提出ください。',
+            '初回メールには、案件や事業の簡潔な概要、台湾との関係、関係する期限、ご希望の言語、連絡先をご記載ください。旅券番号、身分証番号、銀行口座情報、医療記録、身分証明書の原本、証拠資料一式は、弁護士からの案内を受けるまで送らないでください。機微な資料は、弁護士の案内に従い、安全な方法でご提出ください。',
             '未成年者は保護者とともに連絡し、機微情報を送らないことを推奨します。相談情報は、別途同意を得ることなくマーケティングに利用しないことを原則とし、実際の同意・撤回手続は運営者による確認が必要です。',
           ],
         },

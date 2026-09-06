@@ -8,12 +8,16 @@ import {
 } from '@/lib/builder/portfolio/portfolio-engine';
 import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
+import PublicUnavailableState, { publicUnavailableMetadata } from '@/components/PublicUnavailableState';
 import styles from '../PortfolioPublic.module.css';
 
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(props: { params: Promise<{ locale: Locale; slug: string }> }): Promise<Metadata> {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return publicUnavailableMetadata('ja', 'portfolio');
+  }
   const locale = normalizeLocale(params.locale);
   const project = await findProjectBySlug(locale, params.slug);
   if (!project || project.status !== 'published') return {};
@@ -31,6 +35,9 @@ export async function generateMetadata(props: { params: Promise<{ locale: Locale
 
 export default async function PortfolioDetailPage(props: { params: Promise<{ locale: Locale; slug: string }> }) {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return <PublicUnavailableState locale="ja" kind="portfolio" />;
+  }
   const locale = normalizeLocale(params.locale);
   const project = await findProjectBySlug(locale, params.slug);
   if (!project || project.status !== 'published') return notFound();
@@ -43,7 +50,7 @@ export default async function PortfolioDetailPage(props: { params: Promise<{ loc
   const galleryLabel = locale === 'ko' ? '프로젝트 갤러리' : locale === 'zh-hant' ? '專案圖庫' : 'Project gallery';
 
   return (
-    <main className={styles.page} data-public-portfolio-detail="true">
+    <section className={styles.page} data-public-portfolio-detail="true">
       <section className={styles.hero}>
         <div className={styles.inner}>
           <Link className={styles.back} href={`/${locale}/portfolio`}>
@@ -100,6 +107,6 @@ export default async function PortfolioDetailPage(props: { params: Promise<{ loc
           ) : null}
         </aside>
       </section>
-    </main>
+    </section>
   );
 }

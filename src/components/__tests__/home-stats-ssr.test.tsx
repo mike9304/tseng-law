@@ -11,7 +11,7 @@ describe('HomeStatsSection SSR', () => {
       const numbers = Array.from(html.matchAll(/class="stat-number"[^>]*>([^<]+)</g)).map((m) =>
         m[1].replace(/,/g, '').trim(),
       );
-      const expected = locale === 'en' || locale === 'ja' ? ['4', '4', '7', '2'] : ['4', '3', '7', '2'];
+      const expected = ['4', '4', '7', '2'];
       expect(numbers).toEqual(expected);
     },
   );

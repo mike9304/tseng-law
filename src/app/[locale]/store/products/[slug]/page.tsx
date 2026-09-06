@@ -19,6 +19,7 @@ import {
 } from '@/lib/builder/commerce/products-shared';
 import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildAbsoluteUrl, buildBreadcrumbJsonLd, buildSeoMetadata, getLocalizedPath } from '@/lib/seo';
+import PublicUnavailableState, { publicUnavailableMetadata } from '@/components/PublicUnavailableState';
 
 export const dynamic = 'force-dynamic';
 
@@ -115,6 +116,9 @@ export async function generateMetadata(
   }
 ): Promise<Metadata> {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return publicUnavailableMetadata('ja', 'store');
+  }
   const locale = normalizeLocale(params.locale);
   const slug = decodeSlug(params.slug);
   const product = await findProductBySlug(locale, slug);
@@ -147,6 +151,9 @@ export default async function StoreProductPage(
   }
 ) {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return <PublicUnavailableState locale="ja" kind="store" />;
+  }
   const locale = normalizeLocale(params.locale);
   const slug = decodeSlug(params.slug);
   const product = await findProductBySlug(locale, slug);

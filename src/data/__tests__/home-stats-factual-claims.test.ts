@@ -6,19 +6,20 @@ const expectedStats = {
   ko: {
     title: '공식 프로필로 확인하는 국제 업무 기반',
     description:
-      '대만 4개 사무소와 중국어·한국어·일본어 실무 대응, 7개 주요 업무 분야, TOPIK 6급·JLPT N1 자격을 기준으로 정리했습니다.',
+      '대만 4개 사무소와 중국어·한국어·일본어·영어 실무 대응, 7개 주요 업무 분야, TOPIK 6급·JLPT N1 자격을 기준으로 정리했습니다.',
     highlightWords: [
       '대만 4개 사무소',
       '중국어',
       '한국어',
       '일본어',
+      '영어',
       '7개 주요 업무 분야',
       'TOPIK 6급',
       'JLPT N1',
     ],
     items: [
       { target: 4, label: '대만 사무소' },
-      { target: 3, label: '실무 대응 언어' },
+      { target: 4, label: '실무 대응 언어' },
       { target: 7, label: '주요 업무 분야' },
       { target: 2, label: '최상위급 어학 자격' },
     ],
@@ -26,19 +27,20 @@ const expectedStats = {
   'zh-hant': {
     title: '從官方資料看跨境服務基礎',
     description:
-      '依官方律師簡介整理：4個台灣辦公據點、中文／韓文／日文3種業務溝通語言、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
+      '依官方律師簡介整理：4個台灣辦公據點、中文／韓文／日文／英文4種業務溝通語言、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
     highlightWords: [
       '4個台灣辦公據點',
       '中文',
       '韓文',
       '日文',
+      '英文',
       '7項主要執業領域',
       'TOPIK 6級',
       'JLPT N1',
     ],
     items: [
       { target: 4, label: '台灣辦公據點' },
-      { target: 3, label: '業務溝通語言' },
+      { target: 4, label: '業務溝通語言' },
       { target: 7, label: '主要執業領域' },
       { target: 2, label: '最高級別語言資格' },
     ],
@@ -93,8 +95,8 @@ const expectedStats = {
 >;
 
 const requiredDescriptionTerms: Record<SiteLocale, readonly string[]> = {
-  ko: ['대만 4개 사무소', '중국어', '한국어', '일본어', '7개 주요 업무 분야', 'TOPIK 6급', 'JLPT N1'],
-  'zh-hant': ['4個台灣辦公據點', '中文', '韓文', '日文', '7項主要執業領域', 'TOPIK 6級', 'JLPT N1'],
+  ko: ['대만 4개 사무소', '중국어', '한국어', '일본어', '영어', '7개 주요 업무 분야', 'TOPIK 6급', 'JLPT N1'],
+  'zh-hant': ['4個台灣辦公據點', '中文', '韓文', '日文', '英文', '7項主要執業領域', 'TOPIK 6級', 'JLPT N1'],
   en: [
     'four Taiwan offices',
     'four languages',
@@ -159,7 +161,7 @@ describe('homepage stats factual claims', () => {
   it.each(siteLocales)('uses four distinct unsuffixed factual counters for %s', (locale) => {
     const items = siteContent[locale].stats.items;
 
-    const expectedTargets = locale === 'en' || locale === 'ja' ? [4, 4, 7, 2] : [4, 3, 7, 2];
+    const expectedTargets = [4, 4, 7, 2];
     expect(items.map(({ target }) => target)).toEqual(expectedTargets);
     expect(items[0].target).toBe(siteContent[locale].contact.locations.length);
     expect(items.every((item) => !('suffix' in item))).toBe(true);
@@ -179,10 +181,6 @@ describe('homepage stats factual claims', () => {
 
     for (const claim of unsupportedClaims) {
       expect(serializedStats).not.toMatch(claim);
-    }
-    if (locale === 'ko' || locale === 'zh-hant') {
-      expect(serializedStats).not.toMatch(/four languages/i);
-      expect(serializedStats).not.toMatch(/4 Languages/i);
     }
   });
 });

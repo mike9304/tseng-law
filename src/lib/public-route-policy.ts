@@ -42,9 +42,30 @@ export const JA_DEDICATED_ROUTE_PATHS = new Set([
   'taiwan-litigation-lawyer',
   'korean-lawyer-in-taiwan',
   'guides/taiwan-company-setup',
+  'ai-intake',
 ]);
 
 export const JA_SAFE_FALLBACK = '/ja/columns';
+
+function cleanPublicPath(pathWithoutLocale: string): string {
+  return (pathWithoutLocale.replace(/^\//, '').split('?')[0] ?? '').split('#')[0].replace(/\/+$/, '') || '';
+}
+
+export function restrictedPublicFamilyListPath(
+  pathWithoutLocale: string,
+): '/portfolio' | '/events' | '/store' | null {
+  const segments = cleanPublicPath(pathWithoutLocale).split('/');
+  if (segments.length === 2 && segments[0] === 'portfolio') return '/portfolio';
+  if (segments.length === 2 && segments[0] === 'events') return '/events';
+  if (
+    segments.length === 3
+    && segments[0] === 'store'
+    && (segments[1] === 'products' || segments[1] === 'categories')
+  ) {
+    return '/store';
+  }
+  return null;
+}
 
 export function isJaFullStaticPath(slugPath: string): boolean {
   return JA_FULL_STATIC_PATHS.has(slugPath);
@@ -60,7 +81,14 @@ export function isJaUnsupportedPath(slugPath: string): boolean {
  * Columns preserve path; unsupported products fall back to JA columns.
  */
 export function jaLanguageSwitchTarget(pathWithoutLocale: string): string {
-  const clean = pathWithoutLocale.replace(/^\//, '') || '';
+  const utilityPath = pathWithoutLocale.replace(/^\//, '');
+  if (
+    /^account\/billing(?:[?#].*)?$/.test(utilityPath)
+    || /^bookings\/manage\/[^/?#]+(?:[?#].*)?$/.test(utilityPath)
+  ) {
+    return `/ja/${utilityPath}`;
+  }
+  const clean = cleanPublicPath(pathWithoutLocale);
   if (
     clean === 'services/investment'
     || clean === 'services/civil'
@@ -86,6 +114,12 @@ export function jaLanguageSwitchTarget(pathWithoutLocale: string): string {
   // service/lawyer detail etc. — Phase 1 lands on list equivalents when available
   if (clean.startsWith('services')) return '/ja/services';
   if (clean.startsWith('lawyers')) return '/ja/lawyers';
+  if (clean === 'login') {
+    return '/ja/login';
+  }
+  if (clean === 'store' || clean === 'portfolio' || clean === 'events' || clean === 'store/checkout') {
+    return `/ja/${clean}`;
+  }
   if (isJaUnsupportedPath(clean)) return JA_SAFE_FALLBACK;
   return JA_SAFE_FALLBACK;
 }

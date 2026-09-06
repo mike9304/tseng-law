@@ -15,14 +15,15 @@ function htmlHref(href: string): string {
 }
 
 function pageHeaderHtml(html: string): string {
-  const start = html.indexOf('class="section page-header"');
-  const afterHeader = html.indexOf('class="section section--light"', start);
-  return html.slice(start, afterHeader === -1 ? undefined : afterHeader);
+  const header = html.match(/<section\b[^>]*class="(?:[^"]*\s)?page-header(?:\s[^"]*)?"[^>]*>[\s\S]*?<\/section>/)?.[0];
+  expect(header).toBeDefined();
+  return header!;
 }
 
 function bottomCtaHtml(html: string): string {
-  const start = html.indexOf('class="intent-cta-card"');
-  return html.slice(start === -1 ? 0 : start);
+  const opening = html.match(/<div\b[^>]*class="(?:[^"]*\s)?intent-cta-card(?:\s[^"]*)?"[^>]*>/);
+  expect(opening).not.toBeNull();
+  return html.slice(opening!.index);
 }
 
 describe('intent landing EN/JA contact paths', () => {

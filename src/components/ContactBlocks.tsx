@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import type { ReactNode } from 'react';
 import type { SiteLocale } from '@/lib/locales';
@@ -18,6 +19,7 @@ import { copyEmailAddress } from '@/lib/consultation/copy-email';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import Reveal from '@/components/Reveal';
+import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
 
 const INQUIRY_EMAIL_RE = /[\w.+-]+@[\w-]+(?:\.[\w-]+)+/;
 const INQUIRY_PHONE_RE = /\+\d[\d-]{5,}\d/;
@@ -79,6 +81,7 @@ export default function ContactBlocks({
   const consultationMailto = getConsultationPublicMailto(locale);
   const consultationCtaLabel = getConsultationCtaLabel(locale);
   const [copyNotice, setCopyNotice] = useState('');
+  const ai = getAiIntakeDiscovery(locale);
 
   async function handleCopyEmail() {
     try {
@@ -113,33 +116,49 @@ export default function ContactBlocks({
         <div className="section-label" data-builder-surface-key="inquiries-label">
           {contact.inquiriesLabel}
         </div>
-        {showEmailActions ? (
+        {showEmailActions || ai.enabled ? (
           <div className="grid-bento contact-grid reveal-stagger" style={{ marginBottom: '1.5rem' }}>
-            <div className="card">
-              <h3 className="card-title">{getOfficialConsultationEmailLabel(locale)}</h3>
-              <p className="card-copy">
-                <a
-                  className="link-underline"
-                  href={consultationMailto}
-                  aria-label={consultationCtaLabel}
+            {showEmailActions ? (
+              <div className="card">
+                <h3 className="card-title">{getOfficialConsultationEmailLabel(locale)}</h3>
+                <p className="card-copy">
+                  <a
+                    className="link-underline"
+                    href={consultationMailto}
+                    aria-label={consultationCtaLabel}
+                  >
+                    {CONSULTATION_EMAIL}
+                  </a>
+                </p>
+                <button
+                  type="button"
+                  className="button secondary"
+                  onClick={() => {
+                    void handleCopyEmail();
+                  }}
+                  aria-label={getCopyEmailLabel(locale)}
                 >
-                  {CONSULTATION_EMAIL}
-                </a>
-              </p>
-              <button
-                type="button"
-                className="button secondary"
-                onClick={() => {
-                  void handleCopyEmail();
-                }}
-                aria-label={getCopyEmailLabel(locale)}
-              >
-                {getCopyEmailLabel(locale)}
-              </button>
-              <p role="status" aria-live="polite" aria-atomic="true">
-                {copyNotice}
-              </p>
-            </div>
+                  {getCopyEmailLabel(locale)}
+                </button>
+                <p role="status" aria-live="polite" aria-atomic="true">
+                  {copyNotice}
+                </p>
+              </div>
+            ) : null}
+            {ai.enabled ? (
+              <div className="card">
+                <h3 className="card-title">{ai.label}</h3>
+                <p className="card-copy">{ai.supportingCopy}</p>
+                <Link
+                  className="button secondary"
+                  href={ai.href}
+                  data-cta="contact-ai-intake-entry"
+                  data-cta-dest="ai-intake"
+                >
+                  {ai.label}
+                </Link>
+              </div>
+            ) : null}
           </div>
         ) : null}
         <p className="section-lede" role="note">

@@ -6,6 +6,7 @@ import { faqContent } from '@/data/faq-content';
 import { insightsArchive } from '@/data/insights-archive';
 import { consultationEmail, consultationMailto, siteContent } from '@/data/site-content';
 import { teamContent } from '@/data/team-members';
+import { buildLocalizedNotFoundMetadata, notFoundCopyByLocale } from '@/lib/not-found-copy';
 
 const root = process.cwd();
 const expectedPingtungAddress = {
@@ -155,8 +156,21 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(publicLocaleLayout).toContain("'zh-hant': 'zh-Hant'");
     expect(builderLocaleLayout).not.toContain('LocaleSetter');
     expect(middleware).toContain("requestHeaders.set('x-tseng-pathname', pathname)");
-    expect(notFound).toContain('title: { absolute: `${copy.title} | ${copy.brand}` }');
-    expect(notFound).toContain("'zh-hant'");
+    expect(notFound).toContain('buildLocalizedNotFoundMetadata(await requestLocale())');
+    expect(notFound).toContain('const copy = notFoundCopyByLocale[locale]');
+    const missingTitles = {
+      ko: '페이지를 찾을 수 없습니다 | 법무법인 호정',
+      'zh-hant': '找不到頁面 | 昊鼎國際法律事務所',
+      en: 'Page not found | Hovering International Law Firm',
+      ja: 'ページが見つかりません | 昊鼎国際法律事務所',
+    } as const;
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+      expect(buildLocalizedNotFoundMetadata(locale)).toEqual({
+        title: { absolute: missingTitles[locale] },
+        robots: { index: false, follow: false },
+      });
+      expect(notFoundCopyByLocale[locale].title).toBe(missingTitles[locale].split(' | ')[0]);
+    }
     expect(globalError).toContain('<html lang={copy.locale}>');
     expect(globalError).toContain('<footer className="global-error-footer">');
   });

@@ -237,7 +237,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
   ko: {
     meta: {
       title: '법무법인 호정 (昊鼎國際法律事務所)',
-      description: '대만 법률을 한국어로 명확하게 안내합니다. 한국어·일본어 상담 가능.'
+      description: '대만 법률을 한국어로 명확하게 안내합니다. 한국어·일본어·영어 상담 가능.'
     },
     nav: {
       primary: [
@@ -267,8 +267,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             href: '/ko/services'
           },
           {
-            title: '한국어·일본어 커뮤니케이션',
-            description: '한국어 및 일본어로 명확한 법률 설명을 제공합니다.',
+            title: '한국어·일본어·영어 커뮤니케이션',
+            description: '한국어·일본어·영어로 명확한 법률 설명을 제공합니다.',
             href: '/ko/about'
           }
         ],
@@ -305,7 +305,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       label: 'TAIWAN LEGAL',
       title: '대만 법률을 한국어로 명확하게.',
       subtitle:
-        '한국어, 일본어 소통에 능통한 전문가들이 복잡한 대만 법률 문제를 명확하게 안내해드립니다.',
+        '한국어·일본어·영어로 소통하며 복잡한 대만 법률 문제를 명확하게 안내해드립니다.',
       typingPhrases: [
         '대만 투자, 법인설립의 시작',
         '대만 소송, 승소의 경험',
@@ -420,19 +420,20 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       label: 'ABOUT',
       title: '공식 프로필로 확인하는 국제 업무 기반',
       description:
-        '대만 4개 사무소와 중국어·한국어·일본어 실무 대응, 7개 주요 업무 분야, TOPIK 6급·JLPT N1 자격을 기준으로 정리했습니다.',
+        '대만 4개 사무소와 중국어·한국어·일본어·영어 실무 대응, 7개 주요 업무 분야, TOPIK 6급·JLPT N1 자격을 기준으로 정리했습니다.',
       highlightWords: [
         '대만 4개 사무소',
         '중국어',
         '한국어',
         '일본어',
+        '영어',
         '7개 주요 업무 분야',
         'TOPIK 6급',
         'JLPT N1'
       ],
       items: [
         { target: 4, label: '대만 사무소' },
-        { target: 3, label: '실무 대응 언어' },
+        { target: 4, label: '실무 대응 언어' },
         { target: 7, label: '주요 업무 분야' },
         { target: 2, label: '최상위급 어학 자격' }
       ]
@@ -928,7 +929,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       description: '사업·소송·법인설립 문의를 유형별로 빠르게 연결해드립니다.'
     },
     footer: {
-      note: '한국어·일본어 소통을 바탕으로 대만 전역의 자문과 분쟁 업무를 맡고 있습니다.',
+      note: '한국어·일본어·영어 소통을 바탕으로 대만 전역의 자문과 분쟁 업무를 맡고 있습니다.',
       columns: [
         {
           title: '사무소',
@@ -1013,7 +1014,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           },
           {
             title: '跨境法律溝通',
-            description: '以韓語、日語及中文提供清楚的法律說明。',
+            description: '以韓語、日語、英語及中文提供清楚的法律說明。',
             href: '/zh-hant/about'
           }
         ],
@@ -1164,19 +1165,20 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       label: 'ABOUT',
       title: '從官方資料看跨境服務基礎',
       description:
-        '依官方律師簡介整理：4個台灣辦公據點、中文／韓文／日文3種業務溝通語言、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
+        '依官方律師簡介整理：4個台灣辦公據點、中文／韓文／日文／英文4種業務溝通語言、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
       highlightWords: [
         '4個台灣辦公據點',
         '中文',
         '韓文',
         '日文',
+        '英文',
         '7項主要執業領域',
         'TOPIK 6級',
         'JLPT N1'
       ],
       items: [
         { target: 4, label: '台灣辦公據點' },
-        { target: 3, label: '業務溝通語言' },
+        { target: 4, label: '業務溝通語言' },
         { target: 7, label: '主要執業領域' },
         { target: 2, label: '最高級別語言資格' }
       ]

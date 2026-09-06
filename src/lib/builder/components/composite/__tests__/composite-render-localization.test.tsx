@@ -4,6 +4,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { createDefaultCanvasNodeStyle, type BuilderCompositeCanvasNode } from '@/lib/builder/canvas/types';
 import type { BuilderFaqItem } from '@/lib/builder/faq/faq-shared';
 import type { ColumnPost } from '@/lib/columns';
+import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
 import HeroSearch from '@/components/HeroSearch';
 import CompositeRender, { compositeFallbackCopy } from '../Render';
 
@@ -139,7 +140,10 @@ describe('composite render localization', () => {
     expect(html).toContain('href="#insights"');
   });
 
-  it('keeps exactly one h1 when the legacy hero and mobile parity overlay coexist', () => {
+  it.each([
+    { name: 'localized default', headline: '台灣法律，清楚說明。', overrides: {} as Record<string, string> },
+    { name: 'authored surface', headline: '作者自訂且必須保留的標題', overrides: { headline: '作者自訂且必須保留的標題' } },
+  ])('keeps one semantic h1 in each responsive hero with the $name headline', ({ headline, overrides }) => {
     const parityNode = {
       id: 'home-hero',
       kind: 'composite',
@@ -152,21 +156,30 @@ describe('composite render localization', () => {
       visible: true,
       content: {
         componentKey: 'hero-search',
-        config: { locale: 'zh-hant' },
+        config: { locale: 'zh-hant', overrides },
       },
     } satisfies BuilderCompositeCanvasNode;
 
-    const html = renderToStaticMarkup(
-      <>
-        <HeroSearch locale="zh-hant" />
-        <CompositeRender node={parityNode} mode="published" />
-      </>,
-    );
-
-    expect(html.match(/<h1\b/g)).toHaveLength(1);
-    expect(html.match(/<h2\b/g)).toHaveLength(1);
-    expect(html).toContain('<h2 class="hero-title" data-builder-surface-key="headline">');
-    expect(html).not.toContain('aria-level="1"');
+    // The public renderer swaps these trees with display:none at its responsive
+    // breakpoints. Raw Fragment markup cannot measure that visibility: each
+    // independently exposed variant needs an H1, including the mobile overlay.
+    // zh-hant-home-published-headings.test.tsx covers their public wrappers;
+    // browser viewport QA checks that exactly one is visible at each breakpoint.
+    const variants = [
+      <HeroSearch key="legacy" locale="zh-hant" />,
+      <CompositeRender key="parity" node={parityNode} mode="published" />,
+    ];
+    for (const variant of variants) {
+      const html = renderToStaticMarkup(
+        <BuilderSurfaceProvider nodeId={parityNode.id} mode="published" overrides={overrides} selectedSurfaceKey={null}>
+          {variant}
+        </BuilderSurfaceProvider>,
+      );
+      expect(html.match(/<h1\b/g)).toHaveLength(1);
+      expect(html).not.toMatch(/<h2\b/);
+      expect(html).toContain(`<h1 class="hero-title" data-builder-surface-key="headline">${headline}</h1>`);
+      expect(html).not.toContain('aria-level="1"');
+    }
   });
 
   it('keeps the canonical composite-only published hero as h1', () => {

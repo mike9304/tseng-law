@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
 import SectionLabel from '@/components/SectionLabel';
-import OrnamentDivider from '@/components/OrnamentDivider';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import type { SiteLocale } from '@/lib/locales';
 
@@ -18,7 +17,7 @@ export default function PageHeader({
   children?: ReactNode;
 }) {
   return (
-    <section className="section page-header">
+    <section className={`section page-header ${children ? 'page-header--with-content' : 'page-header--compact'}`}>
       <div className="container">
         <Breadcrumbs locale={locale} current={title} />
         <SectionLabel data-builder-surface-key="section-label">{label}</SectionLabel>
@@ -30,7 +29,6 @@ export default function PageHeader({
             {description}
           </p>
         ) : null}
-        <OrnamentDivider />
         {children}
       </div>
     </section>

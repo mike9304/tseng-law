@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import {
@@ -10,6 +11,7 @@ import {
   getConsultationPublicEmail,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
 
 const emailConsultationLabels: Record<SiteLocale, string> = {
   ko: '이메일 상담',
@@ -25,6 +27,7 @@ export default function HomeContactCta({ locale }: { locale: SiteLocale }) {
   const consultationEmailHref = getConsultationPublicMailto(locale);
   const consultationAriaLabel = getConsultationCtaLabel(locale);
   const { title, description } = content.homeContactCta;
+  const ai = getAiIntakeDiscovery(locale);
 
   return (
     <section className="section section--dark home-contact-cta" id="contact" data-tone="dark">
@@ -59,7 +62,18 @@ export default function HomeContactCta({ locale }: { locale: SiteLocale }) {
               {emailConsultationLabels[locale]}: {consultationEmail}
             </SurfaceText>
           </a>
+          {ai.enabled ? (
+            <Link
+              className="button secondary"
+              href={ai.href}
+              data-cta="home-ai-intake-entry"
+              data-cta-dest="ai-intake"
+            >
+              {ai.label}
+            </Link>
+          ) : null}
         </div>
+        {ai.enabled ? <p className="section-lede">{ai.supportingCopy}</p> : null}
       </div>
     </section>
   );

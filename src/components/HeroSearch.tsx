@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, type MouseEvent as ReactMouseEvent } from 'react';
 import Link from 'next/link';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
@@ -72,6 +72,33 @@ const scrollArrowLabels: Record<SiteLocale, string> = {
   ja: '下へスクロール',
 };
 
+export function handleLegacyZhHeroScroll(event: ReactMouseEvent<HTMLAnchorElement>, locale: SiteLocale): void {
+  if (locale !== 'zh-hant' || event.defaultPrevented || event.button !== 0
+    || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey
+    || event.currentTarget.getAttribute('href') !== '#insights') return;
+  const targets = Array.from(document.querySelectorAll<HTMLElement>('[id="insights"]'));
+  if (targets.length < 2) return;
+  const visible = (element: HTMLElement) => {
+    const rect = element.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return false;
+    for (let ancestor: HTMLElement | null = element; ancestor; ancestor = ancestor.parentElement) {
+      const style = window.getComputedStyle(ancestor);
+      if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') return false;
+    }
+    return true;
+  };
+  const target = targets.find(visible);
+  if (!target || target === targets[0]) return;
+  const header = Array.from(document.querySelectorAll<HTMLElement>('header.header')).find(visible);
+  const headerHeight = header ? header.getBoundingClientRect().height : 0;
+  event.preventDefault();
+  if (window.location.hash !== '#insights') window.history.pushState(null, '', '#insights');
+  window.scrollTo({
+    top: Math.max(0, window.scrollY + target.getBoundingClientRect().top - headerHeight),
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+  });
+}
+
 export default function HeroSearch({
   locale,
   scrollHref = '#insights',
@@ -122,7 +149,15 @@ export default function HeroSearch({
             className="hero-title"
             data-builder-surface-key={homeHeroTextSurfaceIds[1]}
           >
-            <SurfaceText surfaceKey={homeHeroTextSurfaceIds[1]}>{hero.title}</SurfaceText>
+            <SurfaceText surfaceKey={homeHeroTextSurfaceIds[1]}>
+              {locale === 'ja' && hero.title === '台湾法を、分かりやすく。' ? (
+                <>
+                  <span style={{ display: 'inline-block', maxWidth: '100%' }}>台湾法を、</span>
+                  <wbr />
+                  <span style={{ display: 'inline-block', maxWidth: '100%' }}>分かりやすく。</span>
+                </>
+              ) : hero.title}
+            </SurfaceText>
           </HeroHeading>
           <p className="hero-subtitle" data-builder-surface-key={homeHeroTextSurfaceIds[2]}>
             <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}>{hero.subtitle}</SurfaceText>
@@ -189,6 +224,7 @@ export default function HeroSearch({
       <a
         href={scrollHref}
         className="hero-scroll-arrow"
+        onClick={(event) => handleLegacyZhHeroScroll(event, locale)}
         aria-label={scrollArrowLabels[locale]}
       >
         <svg viewBox="0 0 28 28" aria-hidden>

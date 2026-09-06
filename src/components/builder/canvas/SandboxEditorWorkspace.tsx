@@ -53,6 +53,7 @@ export default function SandboxEditorWorkspace({
   siteTheme,
   headerNavItems,
   currentSlug,
+  isHomePage = false,
   activeNavItemId,
   missingPageHref,
   viewportWidth,
@@ -120,6 +121,7 @@ export default function SandboxEditorWorkspace({
 
   return (
     <BuilderDatasetPreviewProvider
+      isHomePage={isHomePage}
       targets={datasetPreviewTargets}
       columnPosts={columnPosts}
       faqCategories={faqCategories}

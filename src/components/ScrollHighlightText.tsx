@@ -9,6 +9,24 @@ function tokenize(text: string) {
   return Array.from(text);
 }
 
+function tokenizeHighlights(text: string, highlightWords: string[]) {
+  const keywords = [...new Set(highlightWords.filter((word) => word.length > 0))]
+    .sort((a, b) => b.length - a.length);
+  if (keywords.length === 0) {
+    return tokenize(text).map((token) => ({ text: token, keyword: false }));
+  }
+
+  const pattern = new RegExp(
+    `(${keywords.map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`,
+    'gu',
+  );
+  return text.split(pattern).flatMap((part, index) => (
+    index % 2 === 1
+      ? [{ text: part, keyword: true }]
+      : tokenize(part).map((token) => ({ text: token, keyword: false }))
+  ));
+}
+
 function isPunctuation(token: string) {
   return /^[.,!?;:()[\]{}"'、。！？；：，\-~]+$/.test(token);
 }
@@ -26,7 +44,7 @@ export default function ScrollHighlightText({
   const rootRef = useRef<HTMLParagraphElement | null>(null);
   const [visible, setVisible] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const tokens = useMemo(() => tokenize(text), [text]);
+  const tokens = useMemo(() => tokenizeHighlights(text, highlightWords), [text, highlightWords]);
 
   useEffect(() => {
     const media = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -59,12 +77,11 @@ export default function ScrollHighlightText({
   let revealIndex = 0;
   return (
     <p ref={rootRef} className={`scroll-highlight ${className ?? ''}`.trim()} {...rest}>
-      {tokens.map((token, index) => {
+      {tokens.map(({ text: token, keyword }, index) => {
         if (!token) return null;
         if (/^\s+$/.test(token)) {
           return <span key={`${token}-${index}`}>{token}</span>;
         }
-        const keyword = highlightWords.some((word) => token.includes(word));
         const punctuation = isPunctuation(token);
         const delay = punctuation ? 0 : Math.min(revealIndex++ * 24, 360);
         return (

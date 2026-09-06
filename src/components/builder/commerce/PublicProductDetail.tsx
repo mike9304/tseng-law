@@ -357,7 +357,7 @@ export default function PublicProductDetail({
   }
 
   return (
-    <main
+    <section
       className={styles.page}
       data-commerce-product-detail
       data-commerce-product-slug={product.slug}
@@ -712,6 +712,6 @@ export default function PublicProductDetail({
           </aside>
         </div>
       ) : null}
-    </main>
+    </section>
   );
 }

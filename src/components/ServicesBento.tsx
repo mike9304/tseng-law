@@ -27,15 +27,18 @@ export default function ServicesBento({
   locale,
   id,
   variant = 'alt',
-  tone = 'light'
+  tone = 'light',
+  showHeader = true
 }: {
   locale: SiteLocale;
   id?: string;
   variant?: 'default' | 'alt';
   tone?: 'light' | 'dark';
+  showHeader?: boolean;
 }) {
   const { services } = siteContent[locale];
   const sectionClass = variant === 'alt' ? 'section section--gray alt' : 'section section--light';
+  const HeadingTag: 'h2' | 'h3' = showHeader ? 'h3' : 'h2';
   const detailLabel = locale === 'ko'
     ? '자세히 보기 →'
     : locale === 'zh-hant'
@@ -52,18 +55,27 @@ export default function ServicesBento({
   });
 
   return (
-    <section className={sectionClass} id={id} data-tone={tone}>
+    <section
+      className={`${sectionClass} services-bento`}
+      id={id}
+      data-tone={tone}
+      aria-label={showHeader ? undefined : services.title}
+    >
       <div className="container">
-        <SectionLabel data-builder-surface-key={homeServicesTextSurfaceIds[0]}>
-          <SurfaceText surfaceKey={homeServicesTextSurfaceIds[0]}>{services.label}</SurfaceText>
-        </SectionLabel>
-        <h2 className="section-title" data-builder-surface-key={homeServicesTextSurfaceIds[1]}>
-          <SurfaceText surfaceKey={homeServicesTextSurfaceIds[1]}>{services.title}</SurfaceText>
-        </h2>
-        <p className="section-lede" data-builder-surface-key={homeServicesTextSurfaceIds[2]}>
-          <SurfaceText surfaceKey={homeServicesTextSurfaceIds[2]}>{services.description}</SurfaceText>
-        </p>
-        <OrnamentDivider />
+        {showHeader ? (
+          <>
+            <SectionLabel data-builder-surface-key={homeServicesTextSurfaceIds[0]}>
+              <SurfaceText surfaceKey={homeServicesTextSurfaceIds[0]}>{services.label}</SurfaceText>
+            </SectionLabel>
+            <h2 className="section-title" data-builder-surface-key={homeServicesTextSurfaceIds[1]}>
+              <SurfaceText surfaceKey={homeServicesTextSurfaceIds[1]}>{services.title}</SurfaceText>
+            </h2>
+            <p className="section-lede" data-builder-surface-key={homeServicesTextSurfaceIds[2]}>
+              <SurfaceText surfaceKey={homeServicesTextSurfaceIds[2]}>{services.description}</SurfaceText>
+            </p>
+            <OrnamentDivider />
+          </>
+        ) : null}
         <div className="services-detail-list services-card-grid">
           {services.items.map((item, index) => {
             const anchor = item.href.split('#')[1];
@@ -81,7 +93,7 @@ export default function ServicesBento({
                     <span className="service-icon" aria-hidden>
                       <ServicePracticeIcon index={index} />
                     </span>
-                    <h3 className="services-detail-title">{item.title}</h3>
+                    <HeadingTag className="services-detail-title">{item.title}</HeadingTag>
                   </div>
                   <div className="services-detail-body services-card-body">
                     <p className="services-detail-desc services-card-summary">

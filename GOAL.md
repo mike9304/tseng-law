@@ -28,7 +28,7 @@ Updated: 2026-09-06 KST · Owner: Fable 5.1 (son7-df) · 워크트리: `~/Projec
 
 - [사이클 3 · 2026-09-07 08:0x~09:4x] 배치 1(034f76bd) 배치 4(48c48565) 배치 2(65a5c94a) 빌드 블로커 수정(203fd8d9: CSS 모듈 전역 선택자) 배치 3(d8a08734) 순차 완료. QA 1차 실패 1건은 새 워크트리에 gitignore된 `data/audit` 부재(환경) → 생성 후 재실행 exit 0. 수용 프로브(scratchpad/probe/acceptance.mjs) 전 항목 통과. 전후 72페이지 캡처(사람속도 스크롤)→독립 검수 2명(데스크톱·모바일): 개선 확인, 퇴행 P1 4종 적발 — 밝은 배경 H1 섀도 헤일로, `.link-underline` 전역 밑줄이 카드 제목·통계 숫자·화살표 CTA로 누출, 모바일 스크롤톱이 푸터 Sitemap·FAQ 토글 가림, 커진 칼럼 H2에 balance로 JA/ZH 복합어 분리. P2: zh/ko 문의 안내문 버튼 옆 끼임, EN 본문 내 CJK 용어 분리(keep-all 제거 부작용). → 배치 5(R1~R7) 발주·진행 중.
 
-- [사이클 4 · 2026-09-07 09:5x] 배치 5(716315db): R1 밝은 배경 H1 섀도 제거(`.page-header .hero-title{text-shadow:none}`), R2 밑줄 콘텐츠 링크 한정, R3/R7 문의 안내문 `flex:1 1 100%`, R4 EN keep-all 복원·JA/ZH 제목 balance·본문 제목 pretty·모바일 H2 1.35rem, R5 콜아웃 전폭, R6 스크롤톱 푸터 근처 숨김+FAQ 토글 여백. 프로브 전 항목 통과. 최종 `npm run qa` exit 0, build 성공. **GOAL COMPLETE(에이전트 산출 기준)** — push/배포는 사용자 결정 대기.
+- [사이클 4 · 2026-09-07 09:5x] 배치 5(716315db): R1 밝은 배경 H1 섀도 제거(`.page-header .hero-title{text-shadow:none}`), R2 밑줄 콘텐츠 링크 한정, R3/R7 문의 안내문 `flex:1 1 100%`, R4 EN keep-all 복원·JA/ZH 제목 balance·본문 제목 pretty·모바일 H2 1.35rem, R5 콜아웃 전폭, R6 스크롤톱 푸터 근처 숨김+FAQ 토글 여백. 프로브 전 항목 통과. 최종 `npm run qa`: 1차 실행은 builder 마이그레이션 테스트(src/lib, 이 브랜치 무변경) 5초 타임아웃으로 exit 1 → 단독 재실행 39/39 통과, 전체 재실행 exit 0(1,203파일 9,462테스트). build 성공. **GOAL COMPLETE(에이전트 산출 기준)** — push/배포는 사용자 결정 대기.
 
 ## Open
 - push/배포: ASK-20260907-design-audit-fixes-push-claude 대기(push 시 main 자동 배포 주의, 성장팀 단일 릴리스 순서 옵션).

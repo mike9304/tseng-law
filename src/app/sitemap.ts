@@ -31,6 +31,20 @@ const STATIC_PATHS = [
   '/accessibility',
 ] as const;
 
+/**
+ * Content-updated date for EN/JA static, attorney, and service routes.
+ * Matches the 2026-09-06 EN/JA retarget commits. Not request time —
+ * this sitemap is force-dynamic and a rolling lastmod would be untrustworthy.
+ * KO/ZH static entries stay without this so builder lastmod wins on dedup.
+ */
+const EN_JA_PUBLIC_LASTMOD = '2026-09-06';
+
+function defaultLastModifiedForLocale(
+  locale: (typeof siteLocales)[number],
+): string | undefined {
+  return locale === 'en' || locale === 'ja' ? EN_JA_PUBLIC_LASTMOD : undefined;
+}
+
 type LocalizedSitemapRoute = {
   locale: (typeof siteLocales)[number];
   path: string;
@@ -152,9 +166,10 @@ function createEntry(
     alternateLocales?: readonly (typeof siteLocales)[number][];
   }
 ): MetadataRoute.Sitemap[number] {
+  const lastModified = options?.lastModified ?? defaultLastModifiedForLocale(locale);
   return {
     url: buildAbsoluteUrl(getLocalizedPath(locale, path)),
-    ...(options?.lastModified == null ? {} : { lastModified: options.lastModified }),
+    ...(lastModified == null ? {} : { lastModified }),
     priority: options?.priority ?? 0.8,
     alternates: {
       languages: getLanguageAlternates(path, options?.alternateLocales ?? locales),

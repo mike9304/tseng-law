@@ -331,6 +331,30 @@ describe('sitemap column lastModified', () => {
     expect(urls.some((url) => url.includes('/ja/events'))).toBe(false);
   });
 
+  it('emits lastmod on EN/JA public static, attorney, and service routes without changing KO/ZH static', async () => {
+    sourceMocks.readAttorneyProfileSourceRecords.mockImplementationOnce(async () => [
+      { slug: 'wei-tseng' },
+    ]);
+    sourceMocks.readServiceAreaSourceRecords.mockImplementationOnce(async () => [
+      { slug: 'investment' },
+    ]);
+
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const lastModifiedOf = (url: string) =>
+      entries.find((entry) => entry.url === url)?.lastModified;
+
+    expect(lastModifiedOf('https://tseng-law.com/en')).toBe('2026-09-06');
+    expect(lastModifiedOf('https://tseng-law.com/en/taiwan-lawyer')).toBe('2026-09-06');
+    expect(lastModifiedOf('https://tseng-law.com/en/lawyers/wei-tseng')).toBe('2026-09-06');
+    expect(lastModifiedOf('https://tseng-law.com/en/services/investment')).toBe('2026-09-06');
+    expect(lastModifiedOf('https://tseng-law.com/ja')).toBe('2026-09-06');
+    expect(lastModifiedOf('https://tseng-law.com/ja/lawyers/wei-tseng')).toBe('2026-09-06');
+    expect(lastModifiedOf('https://tseng-law.com/ja/services/investment')).toBe('2026-09-06');
+    expect(lastModifiedOf('https://tseng-law.com/ko')).toBeUndefined();
+    expect(lastModifiedOf('https://tseng-law.com/zh-hant')).toBeUndefined();
+  });
+
   it('adds a reciprocal ja hreflang to every sibling of a published Japanese route', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();

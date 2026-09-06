@@ -140,11 +140,11 @@ describe('Japanese lawyer-profile integration', () => {
     for (const unsafeHref of [
       '/ja/taiwan-lawyer',
       '/ja/taiwan-company-setup-lawyer',
-      '/ja/services/investment',
-      '/ja/services/civil',
     ]) {
       expect(html).not.toContain(`href="${unsafeHref}"`);
     }
+    expect(html).toContain('href="/ja/services/investment"');
+    expect(html).toContain('href="/ja/services/civil"');
     for (const sameAs of profile.sameAs) {
       expect(html).toContain(sameAs);
     }

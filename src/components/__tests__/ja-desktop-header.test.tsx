@@ -57,6 +57,23 @@ describe('Japanese desktop header', () => {
     );
   });
 
+  it('exposes crawlable Japanese service-detail links in the services mega panel', () => {
+    const html = renderHeader('ja');
+
+    expect(html).toContain('投資・会社設立');
+    for (const href of [
+      '/ja/services/investment',
+      '/ja/services/civil',
+      '/ja/services/family',
+      '/ja/services/labor',
+      '/ja/services/criminal',
+      '/ja/services/ip',
+      '/ja/services',
+    ]) {
+      expect(html).toContain(`href="${href}"`);
+    }
+  });
+
   it.each(['ko', 'zh-hant', 'en'] as const)(
     'retains desktop member and search UI for %s',
     (locale) => {

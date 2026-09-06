@@ -294,8 +294,8 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       internalLinks: [
         { label: '台湾弁護士・チーム紹介', href: '/ja/lawyers' },
         { label: '台湾会社設立ガイド', href: '/ja/columns/taiwan-company-establishment-basics' },
-        { label: '台湾会社設立サービス', href: '/ja/services#investment' },
-        { label: '民事訴訟・損害賠償サービス', href: '/ja/services#civil' },
+        { label: '台湾会社設立サービス', href: '/ja/services/investment' },
+        { label: '民事訴訟・損害賠償サービス', href: '/ja/services/civil' },
         { label: '台湾のジム事故損害賠償：一審事例・期限・証拠・賠償項目', href: '/ja/columns/taiwan-gym-injury-lawsuit' },
         { label: 'お問い合わせ・ご相談', href: getConsultationPublicMailto('ja') },
       ],

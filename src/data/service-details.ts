@@ -252,7 +252,7 @@ export const serviceAreas: ServiceArea[] = [
     intro: {
       ko: '대만에 진출하는 한국 기업의 브랜드 보호와 지적재산 관리, 금융·투자 관련 분쟁을 지원합니다.',
       'zh-hant': '協助在台韓國企業之品牌保護、智慧財產管理，以及金融投資相關爭議。',
-      en: 'We support brand protection and IP management for international and Japanese businesses entering Taiwan, as well as disputes involving financial products and investment contracts.'
+      en: 'We support brand protection and IP management for international businesses entering Taiwan, as well as disputes involving financial products and investment contracts.'
     },
     keyPoints: {
       ko: [

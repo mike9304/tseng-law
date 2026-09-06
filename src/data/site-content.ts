@@ -2128,7 +2128,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Severance calculations under Taiwan’s new and old systems',
             'Worker-initiated termination under Article 14: statutory grounds, time limits, and severance',
             'Minimum-service-period clauses: alternative statutory bases, reasonable scope, repayment, and attribution',
-            'Taiwan employment-law advice for international and Japanese businesses'
+            'Taiwan employment-law advice for international businesses'
           ],
           relatedColumns: [
             { title: 'Taiwan Severance Law', slug: 'taiwan-labor-severance-law' },

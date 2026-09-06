@@ -144,6 +144,20 @@ describe('English and Japanese general-page copy residue', () => {
     expect(intro).not.toMatch(/international and Japanese businesses/i);
   });
 
+  it('does not single out Japanese businesses on the general EN IP intro or labor card', () => {
+    expect(getServiceArea('ip')?.intro.en).toContain('international businesses entering Taiwan');
+    expect(getServiceArea('ip')?.intro.en).not.toMatch(/international and Japanese businesses/i);
+    expect(siteContent.en.services.items.find((item) => item.title === 'Labor & Employment')?.details).toContain(
+      'Taiwan employment-law advice for international businesses',
+    );
+    expect(
+      JSON.stringify({
+        ip: getServiceArea('ip')?.intro.en,
+        labor: siteContent.en.services.items.find((item) => item.title === 'Labor & Employment')?.details,
+      }),
+    ).not.toMatch(/international and Japanese businesses/i);
+  });
+
   it('does not address the general EN labor service page to Korean employers only', () => {
     const laborIntro = getServiceArea('labor')?.intro.en ?? '';
 

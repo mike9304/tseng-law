@@ -317,6 +317,17 @@ html[lang='ko'],
   word-break: keep-all;
 }
 
+/* R4 (2026-09-07): English pages carry inline CJK terms — "(營業場所預先
+   查詢)" in the EN columns — which `normal` splits mid-word. keep-all only
+   affects CJK runs (Latin still breaks at spaces); overflow-wrap: anywhere is
+   the safety net for a long CJK run in a narrow box. ja / zh-Hant keep
+   `word-break: normal; line-break: strict` (WI-1 block near the end). */
+html[lang='en'],
+.site[data-locale='en'] {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
 body {
   background:
     radial-gradient(circle at top left, rgba(112, 143, 99, 0.12), transparent 22%),
@@ -1171,19 +1182,18 @@ section.home-results-panel--editorial {
   transform: translate(-50%, -50%);
 }
 
-/* WI-6 (2026-09-07): links are distinguishable at rest — a quiet brand-tinted
-   underline that the existing ::after hover animation then strengthens. */
+/* WI-6 (2026-09-07) / R2: `.link-underline` is also the class on card
+   titles, stat/achievement links and arrow CTAs ("Read more →"), which keep
+   the original hover-only ::after bar. The rest-state underline therefore
+   lives only in the content-context rules below, never here. */
 .link-underline {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
   color: inherit;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
-  text-decoration-color: color-mix(in srgb, var(--purple) 45%, transparent);
-  transition: color 160ms ease, text-decoration-color 160ms ease;
+  text-decoration: none;
+  transition: color 160ms ease;
 }
 
 .link-underline::after {
@@ -1210,30 +1220,31 @@ section.home-results-panel--editorial {
   transform: scaleX(1);
 }
 
-/* On dark / photographic surfaces the rest underline follows the text colour. */
-.hero .link-underline,
-.section--dark .link-underline,
-.section.dark-section .link-underline,
-[data-tone='dark'] .link-underline {
-  text-decoration-color: color-mix(in srgb, currentColor 55%, transparent);
-}
-
 /* Content contexts (article body, attorney profile / media-hub channel
-   lists, video CTA, contact inquiry lists): brand-coloured, wrapping inline
-   links. The animated ::after bar is dropped there in favour of the native
-   underline so multi-line links wrap normally. */
+   lists, service-detail sidebar channel list, video CTA, contact inquiry
+   lists and the contact email card): brand-coloured, wrapping inline links
+   with a rest-state underline (R2: the only place it is applied). The
+   animated ::after bar is dropped there in favour of the native underline so
+   multi-line links wrap normally. `.video-feature` never existed in markup —
+   the featured video CTA is the direct `a.link-underline` child of the
+   `.video-grid` card. */
 .column-markdown a.link-underline,
 .profile-link-list a,
 .media-hub-card a.link-underline,
-.video-feature .link-underline,
+.authority-link-list a.link-underline,
+.svc-review-note a.link-underline,
+.video-grid > .card > a.link-underline,
 .contact-list a.link-underline,
-.column-content a.link-underline {
+.contact-grid .card-copy > a.link-underline,
+.column-content a.link-underline,
+.blog-body a.link-underline {
   display: inline;
   color: var(--purple);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
   text-decoration-color: color-mix(in srgb, var(--purple) 45%, transparent);
+  transition: color 160ms ease, text-decoration-color 160ms ease;
 }
 
 .column-markdown a.link-underline:hover,
@@ -1242,12 +1253,20 @@ section.home-results-panel--editorial {
 .profile-link-list a:focus-visible,
 .media-hub-card a.link-underline:hover,
 .media-hub-card a.link-underline:focus-visible,
-.video-feature .link-underline:hover,
-.video-feature .link-underline:focus-visible,
+.authority-link-list a.link-underline:hover,
+.authority-link-list a.link-underline:focus-visible,
+.svc-review-note a.link-underline:hover,
+.svc-review-note a.link-underline:focus-visible,
+.video-grid > .card > a.link-underline:hover,
+.video-grid > .card > a.link-underline:focus-visible,
 .contact-list a.link-underline:hover,
 .contact-list a.link-underline:focus-visible,
+.contact-grid .card-copy > a.link-underline:hover,
+.contact-grid .card-copy > a.link-underline:focus-visible,
 .column-content a.link-underline:hover,
-.column-content a.link-underline:focus-visible {
+.column-content a.link-underline:focus-visible,
+.blog-body a.link-underline:hover,
+.blog-body a.link-underline:focus-visible {
   color: var(--purple-dark);
   text-decoration-color: currentColor;
   text-decoration-thickness: 2px;
@@ -1256,8 +1275,13 @@ section.home-results-panel--editorial {
 .column-markdown a.link-underline::after,
 .profile-link-list a::after,
 .media-hub-card a.link-underline::after,
+.authority-link-list a.link-underline::after,
+.svc-review-note a.link-underline::after,
+.video-grid > .card > a.link-underline::after,
 .contact-list a.link-underline::after,
-.column-content a.link-underline::after {
+.contact-grid .card-copy > a.link-underline::after,
+.column-content a.link-underline::after,
+.blog-body a.link-underline::after {
   display: none;
 }
 
@@ -1612,7 +1636,10 @@ section.home-results-panel--editorial {
 }
 
 .services-bento > .container > .services-card-grid + p:not([class]) {
-  max-width: 72ch;
+  /* R5: span the full 1200px grid like the cards above it (72ch read as a
+     ~600px orphan under the grid). */
+  max-width: none;
+  width: 100%;
 }
 
 .services-bento > .container > .services-card-grid + p:not([class]) > a.link-underline,
@@ -6651,8 +6678,11 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 }
 
 .contact-email-actions__note {
-  margin: 0;
-  flex: 1 1 12.5rem;
+  /* R3/R7: always its own row under the two buttons — with short zh / ko
+     button labels a 12.5rem flex basis squeezed it beside them as a cramped
+     three-line column. */
+  margin: 0.25rem 0 0;
+  flex: 1 1 100%;
   color: var(--text-body);
   font-size: 0.84rem;
   line-height: 1.45;
@@ -22868,15 +22898,29 @@ body:has([data-builder-published-page='true']) {
    ──────────────────────────────────────────────── */
 
 .hero-title {
-  /* WI-9: one weight for ko/en/ja/zh-hant (was 500 here, 600 for en only),
-     plus a subtle legibility shadow so the serif holds up over bright video. */
+  /* WI-9: one weight for ko/en/ja/zh-hant (was 500 here, 600 for en only). */
   font-weight: 600;
   letter-spacing: 0;
   font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
   text-wrap: balance;
+}
+
+/* R1 (2026-09-07): the legibility shadow belongs only to titles set over dark
+   media heroes (home `section.hero[data-tone='dark']`). PageHeader reuses
+   `.hero-title` for the dark-serif H1 on light mist bands, where the blur
+   read as a muddy halo — so the shadow is scoped here and the page-header
+   title is reset explicitly (this block wins over the earlier .hero-title
+   rules by source order). */
+.hero .hero-title,
+[data-tone='dark'] .hero-title {
   text-shadow:
     0 1px 2px rgba(0, 0, 0, 0.55),
     0 10px 30px rgba(0, 0, 0, 0.32);
+}
+
+.page-header .hero-title,
+.page-header-title {
+  text-shadow: none;
 }
 
 .hero-subtitle {
@@ -24744,6 +24788,48 @@ html[lang='zh-hant'],
   :where(html[lang='ja'], .site[data-locale='ja'])
     :is(h1, h2, h3, h4, h5, h6, .hero-title, .split-title, .section-title, .card-title) {
     word-break: auto-phrase;
+  }
+}
+
+/* R4 (2026-09-07): ja / zh-Hant two-line headings and card titles break more
+   evenly with `text-wrap: balance` (h1–h6 already carry it globally; this
+   extends it to the card-title roles that are not heading elements). */
+:where(html[lang='ja'], html[lang='zh-Hant'], html[lang='zh-hant'], .site[data-locale='ja'], .site[data-locale='zh-hant'])
+  :is(h1, h2, h3, .hero-title, .page-header-title, .card-title, .split-title, .section-title,
+      .insights-featured-title, .insights-list-title, .columns-card-title, .video-feature-title,
+      .video-item-title, .profile-card-title, .svc-sidebar-title, .svc-col-title, .panel-title) {
+  text-wrap: balance;
+}
+
+/* R4 (mobile review): long-form article H2/H3 must NOT balance — at 390px it
+   left ~130px free on line 1 while splitting CJK compounds (ja 台湾子会社設/立,
+   zh 設立台灣子/公司). `pretty` only protects orphans; ja headings keep
+   `auto-phrase` from the @supports block above. */
+@supports (text-wrap: pretty) {
+  .blog-body :is(h2, h3, h4).blog-heading,
+  .column-markdown :is(h2, h3, h4),
+  .column-content :is(h2, h3, h4),
+  .svc-keypoints-title,
+  .column-faq-question {
+    text-wrap: pretty;
+  }
+}
+
+@media (max-width: 640px) {
+  /* R4: smaller mobile article headings so fewer wrap at all. */
+  .blog-body h2.blog-heading {
+    font-size: 1.35rem;
+  }
+  .blog-body h3.blog-heading {
+    font-size: 1.15rem;
+  }
+
+  /* R6: the fixed 44px `.scroll-top` (right 16px / bottom 16px) sat over the
+     right-aligned FAQ +/- toggles; keep the toggle column left of it. The
+     button also hides itself while the footer is in view (ScrollTopButton). */
+  .faq-question button,
+  .faq-question[role='button'] {
+    padding-right: 3.75rem;
   }
 }
 

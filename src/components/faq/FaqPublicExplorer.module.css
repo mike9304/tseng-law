@@ -272,6 +272,14 @@
   }
 }
 
+/* R6 (2026-09-07): keep the +/- toggle column left of the fixed 44px
+   back-to-top button (right 16px / bottom 16px) on phones. */
+@media (max-width: 640px) {
+  .question {
+    padding-right: 3.75rem;
+  }
+}
+
 /* ja / zh-Hant mobile word-break fix: keep-all (correct for Korean) makes a
    space-less CJK sentence one unbreakable token that overflows narrow phones.
    Scoped to <=768px + locale so desktop and ko/en parity is untouched. */

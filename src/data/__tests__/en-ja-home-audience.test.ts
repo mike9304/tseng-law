@@ -137,6 +137,13 @@ describe('English and Japanese general-page copy residue', () => {
     );
   });
 
+  it('does not single out Japanese businesses on the general EN investment intro', () => {
+    const intro = getServiceArea('investment')?.intro.en ?? '';
+
+    expect(intro).toContain('overseas companies and investors');
+    expect(intro).not.toMatch(/international and Japanese businesses/i);
+  });
+
   it('does not address the general EN labor service page to Korean employers only', () => {
     const laborIntro = getServiceArea('labor')?.intro.en ?? '';
 

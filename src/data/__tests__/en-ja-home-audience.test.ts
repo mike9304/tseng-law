@@ -136,6 +136,29 @@ describe('English and Japanese general-page copy residue', () => {
     );
   });
 
+  it('does not lead general English chrome with a Korea-first language list', () => {
+    expect(siteContent.en.nav.servicesMenu.featured[1]?.description).toBe(
+      'We provide clear legal communication in English, Chinese, Korean, and Japanese.',
+    );
+    expect(siteContent.en.footer.note).toBe(
+      'Taiwan legal support for cross-border advisory work and disputes in English, Chinese, Korean, and Japanese.',
+    );
+    const civil = siteContent.en.services.items.find(
+      (item) => item.title === 'Civil Litigation & Damages',
+    );
+    const criminal = siteContent.en.services.items.find(
+      (item) => item.title === 'Criminal Litigation',
+    );
+
+    expect(civil?.details).toContain('Multilingual litigation support for foreign clients');
+    expect(criminal?.details).toContain(
+      'Multilingual interpretation support for foreign defendants',
+    );
+    expect(JSON.stringify({ featured: siteContent.en.nav.servicesMenu.featured, footer: siteContent.en.footer.note, civil: civil?.details, criminal: criminal?.details })).not.toMatch(
+      /Korean, Japanese, and English|English- and Korean-language/,
+    );
+  });
+
   it('keeps the dedicated Korean landing and Korea operations role intact', () => {
     expect(JSON.stringify(landingContent.en)).toContain('Korean clients');
     expect(teamContent.en.members.find((member) => member.id === 'son-jungmin')?.intro[0]).toContain(

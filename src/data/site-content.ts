@@ -1769,7 +1769,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           },
           {
             title: 'Multilingual Communication',
-            description: 'We provide clear legal communication in Korean, Japanese, and English.',
+            description: 'We provide clear legal communication in English, Chinese, Korean, and Japanese.',
             href: '/en/about'
           }
         ],
@@ -2096,7 +2096,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Breach-of-contract and commercial dispute representation',
             'Consumer remedies and litigation against businesses',
             'Fault analysis and compensation claims after traffic accidents',
-            'English- and Korean-language litigation support for foreign clients'
+            'Multilingual litigation support for foreign clients'
           ],
           relatedColumns: [
             { title: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages', slug: 'taiwan-gym-injury-lawsuit' },
@@ -2144,7 +2144,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Counsel and representation during criminal investigations',
             'Victim representation and criminal complaint procedures',
             'Advance assessment of regulatory and criminal exposure',
-            'English- and Korean-language interpretation support for foreign defendants'
+            'Multilingual interpretation support for foreign defendants'
           ]
         },
         {
@@ -2432,7 +2432,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     },
     footer: {
       ...base.footer,
-      note: 'Taiwan legal support for cross-border advisory work and disputes in Korean, Japanese, and English.',
+      note: 'Taiwan legal support for cross-border advisory work and disputes in English, Chinese, Korean, and Japanese.',
       columns: [
         {
           title: 'Firm',

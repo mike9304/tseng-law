@@ -50,7 +50,7 @@ export const serviceAreas: ServiceArea[] = [
         'Entity options include subsidiary, branch, and representative office, with different implications for tax, liability, and operations.',
         'Typical setup includes around 10 steps over roughly 3 months: name reservation, POA notarization, investment review filing, banking, capital remittance, company registration, and tax registration.',
         'For a single shareholder work permit case, practical minimum capital is often TWD 500,000, and maintaining work authorization may require annual revenue over TWD 3M.',
-        'Capital remittance usually requires in-person processing by the investor at the Korean bank branch, together with outbound investment reporting.',
+        'Capital-remittance requirements depend on the origin country and the Taiwan banks involved; they should be checked before funds are transferred.',
         'Business address compliance should be checked in advance through local zoning and use regulations.',
         'For cosmetics sales, PIF registration is mandatory, and advertising violations can trigger fines up to TWD 5M.',
         'Logistics licensing may require TWD 25M capital and vehicle requirements; acquisition or outsourcing can be alternatives.',

@@ -8,6 +8,7 @@ import { landingContent } from '@/app/[locale]/korean-lawyer-in-taiwan/content';
 import { faqContent } from '@/data/faq-content';
 import { getAttorneyProfile } from '@/data/attorney-profiles';
 import { pageCopy } from '@/data/page-copy';
+import { getServiceArea } from '@/data/service-details';
 import { siteContent } from '@/data/site-content';
 import { teamContent } from '@/data/team-members';
 import { createAttorneyDecomposedNodes } from '@/lib/builder/canvas/decompose-attorney';
@@ -133,6 +134,18 @@ describe('English and Japanese general-page copy residue', () => {
     expect(jaDivorce?.answer).toContain('戸政機関で離婚登記');
     expect(faqContent.ja.find((item) => item.question === '相談はどのような方式で行われますか？')?.answer).toContain(
       '日本語・英語・中国語・韓国語',
+    );
+  });
+
+  it('does not present Korean-bank remittance as the general EN investment rule', () => {
+    const remittance = getServiceArea('investment')?.keyPoints.en.find((point) =>
+      point.startsWith('Capital-remittance requirements'),
+    );
+
+    expect(remittance).toContain('origin country');
+    expect(remittance).not.toMatch(/Korean bank branch/i);
+    expect(getServiceArea('investment')?.keyPoints.en.join('\n')).not.toMatch(
+      /Korean bank branch/i,
     );
   });
 

@@ -10,8 +10,8 @@ Updated: 2026-09-06 KST · Owner: Fable 5.1 (son7-df) · 워크트리: `~/Projec
 - 코딩 실행은 워크플로 서브에이전트(하청), Fable은 진단·설계·검수·커밋.
 
 ## Done criteria (검증 가능한 것만)
-- [ ] **M1 감사 정본**: 15관점 감사 → 병합 → 3중 반박검증 → 계획 산출물이 `docs/design/DESIGN-AUDIT-2026-09-06.md`(발견·증거·검증 결과)로 커밋됨. 증거 = 라이브 스크린샷 타일 경로 + facts.json 수치.
-- [ ] **M2 실행 계획**: `docs/design/DESIGN-FIX-PLAN-2026-09-06.md` — 워크아이템별 파일·변경·수용 기준(스크린샷/DOM 프로브/테스트로 확인 가능)·배치 순서. 세 팀 조정판에 레인 답신 파일 작성.
+- [x] **M1 감사 정본** ✅사이클 2(ba1b7600): 15관점 감사 → 병합 → 3중 반박검증 → 계획 산출물이 `docs/design/DESIGN-AUDIT-2026-09-06.md`(발견·증거·검증 결과)로 커밋됨. 증거 = 라이브 스크린샷 타일 경로 + facts.json 수치.
+- [x] **M2 실행 계획** ✅사이클 2(ba1b7600, 팀 답신 ~/cursor-workorders/TSENG_TEAM_REPLY_DESIGN-AUDIT-FABLE-DF_20260906.md): `docs/design/DESIGN-FIX-PLAN-2026-09-06.md` — 워크아이템별 파일·변경·수용 기준(스크린샷/DOM 프로브/테스트로 확인 가능)·배치 순서. 세 팀 조정판에 레인 답신 파일 작성.
 - [ ] **M3 P0/P1 워크아이템 구현**: 각 항목 수용 기준을 로컬 빌드+Playwright 프로브로 통과, 항목별 커밋.
 - [ ] **M4 P2 워크아이템 구현**(시간 허용 범위).
 - [ ] **M5 회귀 게이트**: `npm run qa`(typecheck+lint+test:unit+security) 그린 + `next build` 성공 + 4언어×주요 페이지 로컬 스크린샷에서 수평 오버플로 0·12px 미만 텍스트 0(수용 기준 항목)·콘솔 오류 0.
@@ -23,6 +23,8 @@ Updated: 2026-09-06 KST · Owner: Fable 5.1 (son7-df) · 워크트리: `~/Projec
 
 ## Progress
 - [사이클 1 · 2026-09-06 23:2x] 정찰: 라이브 144캡처(4언어×18페이지×2뷰포트, 인트로 해제 후 홈 재캡처)+DOM facts, 타일 646장. 빌더/코드 렌더 경계 확정. 디스크 99% 발견→npm 캐시 정리 15GB 확보, `.next-*` 161개(191GB) 삭제는 브리지 ASK로 사용자 대기. 감사 워크플로 wf_2fd0e27e-18d 기동, 기준 빌드 시작.
+
+- [사이클 2 · 2026-09-07 07:4x] 감사 워크플로 결과 복구: 발견 252→영역 병합 94+전역 92. 세션 한도로 3중 검증 중단 → Fable 직접 검증: keep-all 9곳·:root[data-locale] 10곳·#123b63 5곳·저대비 토큰·messenger-card--email 무규칙 확인; "reveal 빈 영역"·"헤더 위치"는 실제 뷰포트 캡처(`fold-en-contact-*.png`)와 사람속도 스크롤 실측(미표시 reveal 0)으로 캡처 산출 오류로 기각. 감사·계획 문서 커밋 ba1b7600. 배치 1(WI-1/5/9/14 globals.css)·배치 4(WI-11 오프닝) 워커 발주. 수용 프로브 스크립트 준비(scratchpad/probe/acceptance.mjs).
 
 ## Open
 - 디스크: `~/Projects/tseng-law/.next-*` 191GB 삭제 여부(ASK-20260906-disk-full-stale-next-builds-claude).

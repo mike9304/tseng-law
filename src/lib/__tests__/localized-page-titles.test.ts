@@ -66,4 +66,13 @@ describe('localized page titles', () => {
       '대만 변호사·회사설립·소송 | 법무법인 호정',
     );
   });
+
+  it('keeps the English homepage title at firm level instead of the Taiwan-lawyer intent phrase', () => {
+    const metadata = getHomeLegacyMetadata('en');
+    expect(metadata.title).toBe('Taipei Law Firm for Expats and Cross-Border Matters');
+    expect(String(metadata.title)).not.toMatch(/Taiwan Lawyer/i);
+    expect(buildLocalizedPageTitle(String(metadata.title), 'en')).toBe(
+      'Taipei Law Firm for Expats and Cross-Border Matters | Hovering International Law Firm',
+    );
+  });
 });

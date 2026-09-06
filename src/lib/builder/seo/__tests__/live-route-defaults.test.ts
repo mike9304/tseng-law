@@ -217,7 +217,7 @@ describe('live route SEO defaults', () => {
 
   it.each([
     ['zh-hant', '台灣律師・台灣訴訟・台灣公司設立 | 昊鼎國際法律事務所'],
-    ['en', 'Taiwan Lawyer, Litigation & Company Setup | Hovering International Law Firm'],
+    ['en', 'Taipei Law Firm for Expats and Cross-Border Matters | Hovering International Law Firm'],
   ] as const)('keeps the %s homepage title on its localized brand pattern', (locale, expected) => {
     const home = makePage({
       pageId: `home-${locale}`,

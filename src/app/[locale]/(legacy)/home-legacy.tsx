@@ -34,7 +34,7 @@ const homeSeoCopy: Record<SiteLocale, { title: string; description: string; keyw
     keywords: ['台灣律師', '台灣訴訟', '台灣公司設立', '韓國企業台灣投資', '跨境法律顧問'],
   },
   en: {
-    title: 'Taiwan Lawyer, Litigation & Company Setup',
+    title: 'Taipei Law Firm for Expats and Cross-Border Matters',
     description:
       'English-speaking Taiwan lawyer for expats and foreigners in Taiwan: company setup, litigation, and investment counsel in Taipei.',
     keywords: ['English-speaking lawyer Taiwan', 'expat lawyer Taiwan', 'foreigners in Taiwan lawyer', 'Taiwan lawyer', 'Taiwan litigation', 'Taiwan company setup'],

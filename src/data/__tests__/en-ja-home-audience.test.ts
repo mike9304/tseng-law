@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 
 import HomeAttorneySplit from '@/components/HomeAttorneySplit';
+import IntentLandingPage from '@/components/IntentLandingPage';
 import { landingContent } from '@/app/[locale]/korean-lawyer-in-taiwan/content';
 import { faqContent } from '@/data/faq-content';
 import { getAttorneyProfile } from '@/data/attorney-profiles';
@@ -80,6 +81,25 @@ describe('English and Japanese attorney profile audience targeting', () => {
       faqContent.en.find((item) => item.question === 'How are consultations conducted?'),
     ).toBeDefined();
   });
+});
+
+describe('Indexed EN/JA landings crawl to attorney profile', () => {
+  it.each(['en', 'ja'] as const)(
+    '%s intent landings expose a body link to the attorney profile before the Korean landing',
+    (locale) => {
+      const html = renderToStaticMarkup(
+        createElement(IntentLandingPage, { locale, slug: 'taiwan-lawyer' }),
+      );
+      const profileHref = `href="/${locale}/lawyers/wei-tseng"`;
+      const koreanHref = `href="/${locale}/korean-lawyer-in-taiwan"`;
+      const profileAt = html.indexOf(profileHref);
+      const koreanAt = html.indexOf(koreanHref);
+
+      expect(profileAt).toBeGreaterThan(-1);
+      expect(koreanAt).toBeGreaterThan(-1);
+      expect(profileAt).toBeLessThan(koreanAt);
+    },
+  );
 });
 
 describe('English and Japanese general-page copy residue', () => {

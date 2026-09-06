@@ -135,12 +135,12 @@ const relatedResources: Record<
 > = {
   'taiwan-lawyer': [
     {
-      href: 'korean-lawyer-in-taiwan',
+      href: 'lawyers/wei-tseng',
       label: {
-        ko: '한국어 가능한 대만 변호사',
-        'zh-hant': '可使用韓語溝通的台灣律師',
-        en: 'Korean-speaking Taiwan lawyer',
-        ja: '韓国語対応可能な台湾弁護士',
+        ko: '증준외 변호사 프로필',
+        'zh-hant': '曾雋崴律師簡介',
+        en: 'Attorney Wei Tseng profile',
+        ja: '曾雋崴弁護士のプロフィール',
       },
     },
     {
@@ -170,8 +170,26 @@ const relatedResources: Record<
         ja: '台湾会社設立 総合ガイド',
       },
     },
+    {
+      href: 'korean-lawyer-in-taiwan',
+      label: {
+        ko: '한국어 가능한 대만 변호사',
+        'zh-hant': '可使用韓語溝通的台灣律師',
+        en: 'Korean-speaking Taiwan lawyer',
+        ja: '韓国語対応可能な台湾弁護士',
+      },
+    },
   ],
   'taiwan-company-setup-lawyer': [
+    {
+      href: 'lawyers/wei-tseng',
+      label: {
+        ko: '증준외 변호사 프로필',
+        'zh-hant': '曾雋崴律師簡介',
+        en: 'Attorney Wei Tseng profile',
+        ja: '曾雋崴弁護士のプロフィール',
+      },
+    },
     {
       href: 'guides/taiwan-company-setup',
       label: {
@@ -202,12 +220,12 @@ const relatedResources: Record<
   ],
   'taiwan-litigation-lawyer': [
     {
-      href: 'korean-lawyer-in-taiwan',
+      href: 'lawyers/wei-tseng',
       label: {
-        ko: '한국어 가능한 대만 변호사',
-        'zh-hant': '可使用韓語溝通的台灣律師',
-        en: 'Korean-speaking Taiwan lawyer',
-        ja: '韓国語対応可能な台湾弁護士',
+        ko: '증준외 변호사 프로필',
+        'zh-hant': '曾雋崴律師簡介',
+        en: 'Attorney Wei Tseng profile',
+        ja: '曾雋崴弁護士のプロフィール',
       },
     },
     {
@@ -217,6 +235,15 @@ const relatedResources: Record<
         'zh-hant': '台灣律師搜尋指南',
         en: 'Taiwan lawyer search guide',
         ja: '台湾弁護士の探し方ガイド',
+      },
+    },
+    {
+      href: 'korean-lawyer-in-taiwan',
+      label: {
+        ko: '한국어 가능한 대만 변호사',
+        'zh-hant': '可使用韓語溝通的台灣律師',
+        en: 'Korean-speaking Taiwan lawyer',
+        ja: '韓国語対応可能な台湾弁護士',
       },
     },
   ],

@@ -2463,6 +2463,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           links: [
             { label: 'Taiwan Lawyer', href: '/en/taiwan-lawyer' },
             { label: 'Taiwan Company Setup', href: '/en/taiwan-company-setup-lawyer' },
+            { label: 'Attorney Wei Tseng Profile', href: '/en/lawyers/wei-tseng' },
             { label: 'Taiwan Litigation', href: '/en/taiwan-litigation-lawyer' },
             { label: 'Taiwan Company Setup Guide', href: '/en/guides/taiwan-company-setup' },
             { label: 'Korean-Speaking Taiwan Lawyer', href: '/en/korean-lawyer-in-taiwan' }
@@ -3222,9 +3223,9 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           links: [
             { label: '台湾弁護士（日本語相談）', href: '/ja/taiwan-lawyer' },
             { label: '台湾会社設立の弁護士', href: '/ja/taiwan-company-setup-lawyer' },
+            { label: '日本語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' },
             { label: '台湾訴訟の弁護士', href: '/ja/taiwan-litigation-lawyer' },
-            { label: '台湾会社設立ガイド', href: '/ja/guides/taiwan-company-setup' },
-            { label: '日本語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' }
+            { label: '台湾会社設立ガイド', href: '/ja/guides/taiwan-company-setup' }
           ]
         }
       ],

@@ -1846,6 +1846,22 @@ section.home-results-panel--editorial {
   max-width: min(640px, 62vw);
 }
 
+/* Public hero: empty overlay/copy boxes pass hits through to the video control. */
+.site .home-hero-overlay,
+.site [data-node-id='home-hero-overlay'] {
+  pointer-events: none;
+}
+
+.site .hero .hero-inner,
+.site .hero .hero-copy {
+  pointer-events: none;
+}
+
+.site .hero .hero-inner > *:not(.hero-copy),
+.site .hero .hero-copy > * {
+  pointer-events: auto;
+}
+
 .hero .section-label {
   justify-content: flex-start;
   color: rgba(233, 242, 234, 0.84);
@@ -1881,6 +1897,11 @@ section.home-results-panel--editorial {
   width: 100% !important;
   min-width: 100% !important;
   left: 0 !important;
+}
+
+/* Video host must stack above sibling seed images (inline z 2 vs 3/4) inside .hero-media. */
+.site .hero .hero-media .builder-pub-node[data-node-id='home-hero-media-image']:has(> .decorative-autoplay-video) {
+  z-index: 5 !important;
 }
 
 .hero-brain-layer {
@@ -2027,6 +2048,12 @@ section.home-results-panel--editorial {
     color 180ms ease,
     border-color 180ms ease,
     background 180ms ease;
+}
+
+/* Measured public header: keep hero video controls below it. */
+.site[data-public-header-measured] .hero-media-video-shell > .decorative-autoplay-video__control,
+.site[data-public-header-measured] [data-node-id='home-hero-media-image'] .decorative-autoplay-video > .decorative-autoplay-video__control {
+  top: calc(var(--header-offset-desktop) + max(0.875rem, env(safe-area-inset-top)));
 }
 
 .decorative-autoplay-video__control:hover {

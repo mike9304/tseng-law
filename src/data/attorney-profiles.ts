@@ -239,15 +239,15 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       searchTerms: ['Wei Tseng Taiwan attorney', 'Attorney Wei Tseng', 'Taiwan lawyer for Korean clients', 'Wei Tseng company setup lawyer'],
       proofPoints: [
         'Wei Tseng consults in English, Korean, Chinese, and Japanese for cross-border client matters.',
-        'Her practice covers Taiwan company setup, investment, litigation, visas, and trademark or patent filings.',
+        'Attorney Wei Tseng\'s practice covers Taiwan company setup, investment, litigation, visas, and trademark or patent filings.',
         'A public representative case includes a TWD 1.57M first-instance damages ruling in a Korean student gym injury dispute.',
-        'Her identity is corroborated across the Hovering profile, personal site, YouTube channel, and Naver Blog.',
+        'Attorney Wei Tseng\'s identity is corroborated across the Hovering profile, personal site, YouTube channel, and Naver Blog.',
       ],
       faq: [
         {
           question: 'What matters does Attorney Wei Tseng typically handle?',
           answer:
-            'She focuses on Taiwan company setup, investment legal advisory, civil litigation and damages, trademarks and patents, visas and residency, and cross-border family or labor disputes for Korean and international clients.',
+            'Attorney Wei Tseng focuses on Taiwan company setup, investment legal advisory, civil litigation and damages, trademarks and patents, visas and residency, and cross-border family or labor disputes for Korean and international clients.',
         },
         {
           question: 'Can English-speaking or Korean-speaking clients consult directly with Attorney Wei Tseng?',
@@ -294,8 +294,8 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       internalLinks: [
         { label: '台湾弁護士・チーム紹介', href: '/ja/lawyers' },
         { label: '台湾会社設立ガイド', href: '/ja/columns/taiwan-company-establishment-basics' },
-        { label: '台湾会社設立サービス', href: '/ja/services#investment' },
-        { label: '民事訴訟・損害賠償サービス', href: '/ja/services#civil' },
+        { label: '台湾会社設立サービス', href: '/ja/services/investment' },
+        { label: '民事訴訟・損害賠償サービス', href: '/ja/services/civil' },
         { label: '台湾のジム事故損害賠償：一審事例・期限・証拠・賠償項目', href: '/ja/columns/taiwan-gym-injury-lawsuit' },
         { label: 'お問い合わせ・ご相談', href: getConsultationPublicMailto('ja') },
       ],

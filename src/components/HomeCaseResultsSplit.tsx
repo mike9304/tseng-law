@@ -1,7 +1,6 @@
 import type { SiteLocale } from '@/lib/locales';
-import DecorativeAutoplayVideo, {
-  DECORATIVE_VIDEO_CONTROL_LABELS,
-} from '@/components/DecorativeAutoplayVideo';
+import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
+import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
 import SmartLink from '@/components/SmartLink';
 import {
   homeResultsButtonSurfaceIds,

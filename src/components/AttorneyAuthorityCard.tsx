@@ -30,7 +30,7 @@ const cardLabels = {
     practice: 'Core Practice Areas',
     channels: 'Public Profiles and Channels',
     profile: 'Full Profile',
-    contact: 'Book Consultation',
+    contact: 'Email about a consultation',
   },
   ja: {
     eyebrow: '担当弁護士',

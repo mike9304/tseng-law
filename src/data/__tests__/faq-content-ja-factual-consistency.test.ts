@@ -73,12 +73,12 @@ const expectedJapaneseFaq = [
 ] as const;
 
 const untouchedLocaleHashes = {
-  ko: 'e43a7f593bdc888c22045586cfd3806cc7ca3a1cf56c104a436e31faa983c46c',
-  'zh-hant': 'b72576e63fab132da418b0528b798a840244ce5b161d249cd032a4ffc11a7baa',
+  ko: '398347fb5e2c2246704d93f79a299389aa1e4423ffd0ce7edfe363cceee80d3c',
+  'zh-hant': 'd67670885cc5b0777b6f89db7737388d3b2df3ccc8e73492befbb68aef62aec3',
 } as const;
 
 const reviewedEnglishFaqBaselineHash =
-  '39c439fc82130aafcb59df45377e72c28c1c25bed5a7ac7447cc66327e7cad40';
+  'c01869d85d5b09340cb3d201ffc3ea04efb39b7089c85d267d607156cc42c38b';
 
 const forbiddenRegressions = [
   '①投資許可の申請 → ②会社名',

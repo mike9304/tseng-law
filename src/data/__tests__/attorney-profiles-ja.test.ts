@@ -95,8 +95,8 @@ describe('Japanese attorney profile', () => {
         label: '台湾会社設立ガイド',
         href: '/ja/columns/taiwan-company-establishment-basics',
       },
-      { label: '台湾会社設立サービス', href: '/ja/services#investment' },
-      { label: '民事訴訟・損害賠償サービス', href: '/ja/services#civil' },
+      { label: '台湾会社設立サービス', href: '/ja/services/investment' },
+      { label: '民事訴訟・損害賠償サービス', href: '/ja/services/civil' },
       {
         label: '台湾のジム事故損害賠償：一審事例・期限・証拠・賠償項目',
         href: '/ja/columns/taiwan-gym-injury-lawsuit',
@@ -107,7 +107,8 @@ describe('Japanese attorney profile', () => {
     const internalLinkJson = JSON.stringify(japaneseProfile.internalLinks);
     expect(internalLinkJson).not.toContain('/ja/taiwan-lawyer');
     expect(internalLinkJson).not.toContain('/ja/taiwan-company-setup-lawyer');
-    expect(internalLinkJson).not.toMatch(/\/ja\/services\/[^"]+/);
+    expect(internalLinkJson).toContain('/ja/services/investment');
+    expect(internalLinkJson).toContain('/ja/services/civil');
   });
 
   it('does not leak Korean sentences or Korean internal links into visible Japanese copy', () => {

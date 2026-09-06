@@ -1,4 +1,9 @@
-import { describe, expect, it } from 'vitest';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { describe, expect, it, vi } from 'vitest';
+import savedZhHome from '@/lib/builder/canvas/__tests__/fixtures/legacy-zh-home-july.json';
+import { normalizeCanvasDocument, type BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import { DEFAULT_THEME } from '@/lib/builder/site/types';
+import type { Locale } from '@/lib/locales';
 import {
   createHomeContainerNode,
   createHomeImageNode,
@@ -7,6 +12,9 @@ import type {
   BuilderImageCanvasNode,
 } from '@/lib/builder/canvas/types';
 import {
+  PublishedSitePageView,
+  projectPublishedStockZhHeroDecorativeAlt,
+  type ResolvedPublishedSitePage,
   PUBLISHED_HOME_CASE_RESULTS_POSTER,
   PUBLISHED_HOME_HERO_POSTER,
   projectPublishedHomeCaseResultsPoster,
@@ -343,5 +351,99 @@ describe('resolvePublishedDecorativeVideo', () => {
     };
 
     expect(resolvePublishedDecorativeVideo(boundNode)).toBeNull();
+  });
+});
+
+
+vi.mock('next/navigation', () => ({
+  usePathname: () => '/zh-hant',
+  useRouter: () => ({ replace: vi.fn() }),
+  useSearchParams: () => new URLSearchParams(),
+}));
+
+const stockHeroImageIds = ['home-hero-media-image', 'home-hero-media-image-2', 'home-hero-media-image-3'];
+const stockHeroAlt = '台北101夜景城市天際線';
+const stockZhHome = () => normalizeCanvasDocument(structuredClone(savedZhHome), 'zh-hant');
+const stockHeroImage = (id: string) => stockZhHome().nodes.find((node) => node.id === id) as BuilderImageCanvasNode;
+
+function stockPublishedHome(canvas: BuilderCanvasDocument, slugPath = '', locale: Locale = 'zh-hant'): ResolvedPublishedSitePage {
+  const now = '2026-09-06T00:00:00.000Z';
+  return {
+    locale, slugPath, canvas: { ...canvas, locale },
+    site: { version: 1, siteId: 'stock-hero-alt-test', name: 'Stock hero test', locale,
+      navigation: [], theme: DEFAULT_THEME, settings: { firmName: 'Stock hero test' }, pages: [], createdAt: now, updatedAt: now },
+    pageMeta: { pageId: 'stock-hero-alt-test', slug: slugPath, isHomePage: slugPath === '',
+      title: { ko: '홈', 'zh-hant': '首頁', en: 'Home' }, locale, createdAt: now, updatedAt: now, publishedAt: now, noIndex: true },
+    lightboxes: [], popups: [], cookieConsent: null, headerCanvas: null, footerCanvas: null,
+    datasetPreviewTargets: [], columnPosts: [], faqCategories: [], faqItems: [],
+  };
+}
+
+function renderedImageFragment(html: string, id: string): string {
+  const marker = `data-node-id="${id}"`;
+  const wrappers = [...html.matchAll(new RegExp(`<div\\b[^>]*${marker}[^>]*>`, 'g'))];
+  expect(wrappers).toHaveLength(1);
+  const fragment = html.slice(wrappers[0].index);
+  const nextNode = fragment.indexOf('data-node-id=', fragment.indexOf(marker) + marker.length);
+  return nextNode < 0 ? fragment : fragment.slice(0, nextNode);
+}
+
+describe('exact stock ZH decorative hero alternatives', () => {
+  it.each(stockHeroImageIds)('changes only the exact %s alternative without mutating its input', (id) => {
+    const node = stockHeroImage(id); const before = structuredClone(node);
+    const next = projectPublishedStockZhHeroDecorativeAlt(node, true);
+    expect(next).toEqual({ ...node, content: { ...node.content, alt: '' } });
+    expect(next).not.toBe(node);
+    expect(node).toEqual(before);
+    expect(projectPublishedStockZhHeroDecorativeAlt(next, true)).toBe(next);
+    expect(projectPublishedStockZhHeroDecorativeAlt(node, false)).toBe(node);
+  });
+
+  it.each(['alt', 'src', 'parent', 'id', 'binding', 'link', 'lightbox', 'crop', 'hover', 'geometry'])('keeps authored %s intact', (change) => {
+    const node = stockHeroImage('home-hero-media-image-2');
+    if (change === 'alt') node.content.alt = '作者保留的替代文字';
+    if (change === 'src') node.content.src = '/images/author-hero.webp';
+    if (change === 'parent') node.parentId = 'author-gallery';
+    if (change === 'id') node.id = 'author-image';
+    if (change === 'binding') node.dataBinding = { targetId: 'home.insights.feed', recordIndex: 0, fields: { alt: 'caption' } };
+    if (change === 'link') node.content.link = { href: '/zh-hant/services' } as never;
+    if (change === 'lightbox') node.content.clickAction = 'lightbox';
+    if (change === 'crop') node.content.cropAspect = '1:1';
+    if (change === 'hover') node.content.hoverSrc = '/images/author-hover.webp';
+    if (change === 'geometry') node.rect.width = 1000;
+    const before = structuredClone(node);
+    // Authored geometry is rejected by the outer full-document fingerprint.
+    expect(projectPublishedStockZhHeroDecorativeAlt(node, change !== 'geometry')).toBe(node);
+    expect(node).toEqual(before);
+  });
+
+  it('renders all three actual stock images as decorative through the public page, retaining the original document', async () => {
+    const doc = stockZhHome(); const before = structuredClone(doc);
+    const html = renderToStaticMarkup(await PublishedSitePageView({ resolved: stockPublishedHome(doc) }));
+    for (const id of stockHeroImageIds) {
+      const fragment = renderedImageFragment(html, id);
+      expect(fragment).toMatch(/<img\b[^>]*\balt=""/);
+      expect(fragment).not.toContain(`alt="${stockHeroAlt}"`);
+    }
+    expect(html).toContain(PUBLISHED_HOME_HERO_POSTER);
+    expect(html).toContain('/images/hero-bg-02.webp');
+    expect(html).toContain('/images/hero-bg-03.webp');
+    expect(doc).toEqual(before);
+  });
+
+  it.each(['custom-alt', 'custom-src', 'geometry', 'nonhome', 'ko', 'en'])('retains hero alternatives for %s public documents', async (change) => {
+    const doc = stockZhHome(); const first = doc.nodes.find((node) => node.id === stockHeroImageIds[0]) as BuilderImageCanvasNode;
+    if (change === 'custom-alt') first.content.alt = '作者保留的替代文字';
+    if (change === 'custom-src') first.content.src = '/images/author-hero.webp';
+    if (change === 'geometry') first.rect.width = 1000;
+    const before = structuredClone(doc);
+    const locale: Locale = change === 'ko' || change === 'en' ? change : 'zh-hant';
+    const html = renderToStaticMarkup(await PublishedSitePageView({ resolved: stockPublishedHome(doc, change === 'nonhome' ? 'copied-home' : '', locale) }));
+    for (const id of stockHeroImageIds) {
+      const expected = id === first.id ? first.content.alt : stockHeroAlt;
+      expect(renderedImageFragment(html, id)).toContain(`alt="${expected}"`);
+    }
+    if (change === 'custom-src') expect(html).toContain('/images/author-hero.webp');
+    expect(doc).toEqual(before);
   });
 });

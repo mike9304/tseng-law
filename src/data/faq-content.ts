@@ -76,7 +76,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: '물류업·화장품 등 특수 업종도 법인설립이 가능한가요?',
       answer:
-        '가능합니다. 다만 물류업은 운송업 허가, 화장품은 PIF(제품정보파일) 등록 및 FDA 신고 등 업종별 추가 인허가가 필요합니다. 업종별 규제를 사전에 파악하고 설립 절차와 병행하여 진행해야 시간과 비용을 절약할 수 있습니다.'
+        '가능합니다. 다만 물류업은 운송업 허가 등 업종별 추가 인허가가 필요합니다. 공장등록 면제 제조장소에서 생산한 고형 수제비누를 제외하고, 법령상 대상인 화장품 제조·수입업자는 대상 제품의 제품등록(產品登錄)을 별도로 완료하고, 제품정보파일(PIF)을 작성·갱신하여 제품에 표시된 주소에 보관하고 검사에 대비해야 합니다. PIF 자체는 당국에 등록하지 않습니다. 업종별 규제를 사전에 파악하고 설립 절차와 병행하여 진행해야 시간과 비용을 절약할 수 있습니다.'
     }
   ],
   'zh-hant': [
@@ -149,7 +149,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: '物流業、化妝品等特殊產業也能設立公司嗎？',
       answer:
-        '可以，但物流業需取得運輸許可，化妝品須完成 PIF（產品資訊檔案）登錄及 FDA 備查等產業別額外許可。事前掌握產業法規並與設立程序同步進行，可節省時間與成本。'
+        '可以，但物流業需取得運輸許可等產業別額外許可。除免辦理工廠登記之製造場所生產之固態手工香皂外，法定範圍內之化粧品製造或輸入業者應就適用產品另行完成產品登錄，並建立、更新產品資訊檔案（PIF），存放於標示地址以供查核；PIF本身無須向主管機關登錄。事前掌握產業法規並與設立程序同步進行，可節省時間與成本。'
     }
   ],
   en: [
@@ -222,7 +222,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: 'Can you help with company setup for specialized industries like logistics or cosmetics?',
       answer:
-        'Yes, but additional industry-specific permits are required—transport permits for logistics, PIF (Product Information File) registration and FDA notification for cosmetics, etc. Understanding industry regulations beforehand and processing them alongside incorporation saves time and cost.'
+        'Yes, but additional industry-specific permits are required—transport permits for logistics, for example. Except for solid handmade soap produced at a facility exempt from factory registration, covered manufacturers or importers must separately complete product notification (產品登錄) for applicable products and establish, update and retain a Product Information File (PIF) at the labelled address for inspection; the PIF itself is not filed with the authority. Understanding industry regulations beforehand and processing them alongside incorporation saves time and cost.'
     }
   ],
   ja: [

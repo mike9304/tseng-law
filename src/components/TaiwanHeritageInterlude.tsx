@@ -1,6 +1,5 @@
-import DecorativeAutoplayVideo, {
-  DECORATIVE_VIDEO_CONTROL_LABELS,
-} from '@/components/DecorativeAutoplayVideo';
+import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
+import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
 import type { SiteLocale } from '@/lib/locales';
 
 export const TAIWAN_HERITAGE_INTERLUDE_MEDIA = {

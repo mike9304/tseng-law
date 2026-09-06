@@ -112,10 +112,10 @@ import AppRuntimeLoader from '@/components/builder/published/AppRuntimeLoader';
 import ExperimentVariantSwap from '@/components/builder/published/ExperimentVariantSwap';
 import LiveChatWidget from '@/components/builder/published/LiveChatWidget';
 import {
-  DECORATIVE_VIDEO_CONTROL_LABELS,
   DecorativeAutoplayVideo,
   type DecorativeAutoplayVideoProps,
 } from '@/components/DecorativeAutoplayVideo';
+import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
 import TaiwanHeritageInterlude, {
   resolveHeritageInterludeInsertionNodeId,
 } from '@/components/TaiwanHeritageInterlude';
@@ -205,6 +205,31 @@ function hasBehaviorNeutralDecorativeImageContract(
     && (node.animation?.hover === undefined || node.animation.hover.preset === 'none')
     && node.dataBinding === undefined
   );
+}
+
+const LEGACY_ZH_DECORATIVE_HERO_SOURCES: Readonly<Record<string, string>> = {
+  'home-hero-media-image': '/images/hero-bg-01.webp',
+  'home-hero-media-image-2': '/images/hero-bg-02.webp',
+  'home-hero-media-image-3': '/images/hero-bg-03.webp',
+};
+
+/** Render-only semantics for the fingerprinted stock background, including inactive slides. */
+export function projectPublishedStockZhHeroDecorativeAlt(
+  node: BuilderCanvasNode,
+  exactStockHome: boolean,
+): BuilderCanvasNode {
+  if (
+    !exactStockHome
+    || node.kind !== 'image'
+    || node.parentId !== 'home-hero-media'
+    || LEGACY_ZH_DECORATIVE_HERO_SOURCES[node.id] !== node.content.src
+    || node.content.alt !== '台北101夜景城市天際線'
+    || !hasBehaviorNeutralDecorativeImageContract(node)
+  ) return node;
+
+  // Empty image alt preserves the video's accessible playback control; hiding
+  // its wrapper would hide that control too. Keep every media/layout field.
+  return { ...node, content: { ...node.content, alt: '' } };
 }
 
 export function resolvePublishedDecorativeVideo(
@@ -789,7 +814,8 @@ export async function PublishedSitePageView({
     parentLayoutMode?: ParentLayoutMode,
     bindingContext: BuilderDatasetFieldBindingContext = datasetBindingContext,
   ): JSX.Element {
-    const localeProjectedNode = projectImageNodeForLocale(node, locale);
+    const decorativeAltNode = projectPublishedStockZhHeroDecorativeAlt(node, legacyZhTabletParity);
+    const localeProjectedNode = projectImageNodeForLocale(decorativeAltNode, locale);
     const renderedNode = projectPublishedHomeInsightsArchiveIntro(
       projectPublishedHomeCaseResultsPoster(
         projectPublishedHomeHeroPoster(

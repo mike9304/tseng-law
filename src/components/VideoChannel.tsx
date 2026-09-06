@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
-import DecorativeAutoplayVideo, {
-  DECORATIVE_VIDEO_CONTROL_LABELS,
-} from '@/components/DecorativeAutoplayVideo';
+import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
+import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import SmartLink from '@/components/SmartLink';

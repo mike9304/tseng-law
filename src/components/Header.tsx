@@ -140,6 +140,19 @@ function buildMegaPanels(locale: SiteLocale): MegaPanel[] {
   if (locale === 'ja') {
     return [
       {
+        key: 'services',
+        title: '取扱業務',
+        links: [
+          { label: '投資・会社設立', href: '/ja/services/investment' },
+          { label: '民事訴訟・損害賠償', href: '/ja/services/civil' },
+          { label: '家事事件', href: '/ja/services/family' },
+          { label: '労働・雇用', href: '/ja/services/labor' },
+          { label: '刑事事件', href: '/ja/services/criminal' },
+          { label: '知財・金融紛争', href: '/ja/services/ip' },
+          { label: 'すべて見る', href: '/ja/services' },
+        ],
+      },
+      {
         key: 'insights',
         title: 'コラム',
         links: [

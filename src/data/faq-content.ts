@@ -198,9 +198,9 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     },
     // ── Family / Divorce ──
     {
-      question: 'What procedures does someone with a Korea–Taiwan connection need for divorce in Taiwan?',
+      question: 'What procedures does a cross-border divorce in Taiwan require?',
       answer:
-        'Divorce in Taiwan is either (1) by mutual consent, which must be in writing, signed by at least two witnesses, and registered with the household administration authority, or (2) judicial divorce (mediation then litigation). International divorce between Korea and Taiwan involves complex issues of applicable law, jurisdiction, property division, and custody, so consulting a lawyer familiar with both legal systems is essential.'
+        'Divorce in Taiwan is either (1) by mutual consent, which must be in writing, signed by at least two witnesses, and registered with the household administration authority, or (2) judicial divorce (mediation then litigation). International divorce involving Taiwan, including Japan–Taiwan or Korea–Taiwan cases, involves complex issues of applicable law, jurisdiction, property division, and custody, so consulting a lawyer familiar with the relevant legal systems is essential.'
     },
     {
       question: 'How is child custody determined in Taiwan?',
@@ -271,9 +271,9 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     },
     // ── 家事・離婚 ──
     {
-      question: '韓国人が台湾で離婚するには、どのような手続きが必要ですか？',
+      question: '日本や韓国など、台湾とつながる国際離婚では、どのような手続きが必要ですか？',
       answer:
-        '台湾法が適用される合意離婚は、書面で行い、2名以上の証人が署名し、戸政機関で離婚登記をする必要があります。裁判による離婚は、原則として裁判前に家事調停を経ます。韓国・台湾間の国際離婚では、台湾で手続できるか、どの法が適用されるか、両地域での届出・承認、財産分与、未成年の子の親権・扶養を個別に確認してください。'
+        '台湾法が適用される合意離婚は、書面で行い、2名以上の証人が署名し、戸政機関で離婚登記をする必要があります。裁判による離婚は、原則として裁判前に家事調停を経ます。日本・台湾間や韓国・台湾間などの国際離婚では、台湾で手続できるか、どの法が適用されるか、関係する地域での届出・承認、財産分与、未成年の子の親権・扶養を個別に確認してください。'
     },
     {
       question: '台湾で未成年の子の親権・監護はどのように決まりますか？',

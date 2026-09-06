@@ -240,7 +240,7 @@ const navigationDecorativeCopy: Record<Locale, NavigationDecorativeCopy> = {
         { year: '2018', title: 'Hojung International founded', description: 'Seoul and Taipei offices opened together' },
         { year: '2020', title: 'Taiwan attorney partnership' },
         { year: '2023', title: '200+ advisory matters per year' },
-        { year: '2025', title: 'Korea-Taiwan advisory work fully digitized' },
+        { year: '2025', title: 'Cross-border advisory work fully digitized' },
       ],
       inspector: {
         orientation: 'Orientation',

@@ -2096,7 +2096,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Breach-of-contract and commercial dispute representation',
             'Consumer remedies and litigation against businesses',
             'Fault analysis and compensation claims after traffic accidents',
-            'Korean-language litigation support for foreign clients'
+            'English- and Korean-language litigation support for foreign clients'
           ],
           relatedColumns: [
             { title: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages', slug: 'taiwan-gym-injury-lawsuit' },
@@ -2128,7 +2128,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Severance calculations under Taiwan’s new and old systems',
             'Worker-initiated termination under Article 14: statutory grounds, time limits, and severance',
             'Minimum-service-period clauses: alternative statutory bases, reasonable scope, repayment, and attribution',
-            'Taiwan employment-law advice for Korean businesses'
+            'Taiwan employment-law advice for international and Japanese businesses'
           ],
           relatedColumns: [
             { title: 'Taiwan Severance Law', slug: 'taiwan-labor-severance-law' },
@@ -2144,7 +2144,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Counsel and representation during criminal investigations',
             'Victim representation and criminal complaint procedures',
             'Advance assessment of regulatory and criminal exposure',
-            'Korean-language interpretation support for foreign defendants'
+            'English- and Korean-language interpretation support for foreign defendants'
           ]
         },
         {
@@ -2684,7 +2684,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       label: 'ABOUT',
       title: '公式プロフィールで見る国際業務の基盤',
       description:
-        '公式弁護士プロフィールに基づき、台湾4拠点、中国語・韓国語・日本語の3言語、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。',
+        '公式弁護士プロフィールに基づき、台湾4拠点、中国語・韓国語・日本語の3言語、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。英語でのご相談にも対応しています。',
       highlightWords: [
         '台湾4拠点',
         '中国語',

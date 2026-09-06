@@ -18,12 +18,12 @@ export const serviceAreas: ServiceArea[] = [
     subtitle: {
       ko: '한국 기업의 대만 진출을 위한 법인 설립 전 과정 지원',
       'zh-hant': '協助韓國企業在台落地的全流程法律服務',
-      en: 'End-to-end legal support for Korean companies expanding into Taiwan'
+      en: 'End-to-end legal support for international companies expanding into Taiwan'
     },
     intro: {
       ko: '법무법인 호정은 한국 기업의 대만 시장 진출을 위해 법인 형태 선택부터 투자심의위원회 승인, 자본금 송금, 은행 계좌 개설, 영업장소 확보, 업종별 인허가까지 전 과정을 한국어로 밀착 지원합니다.',
       'zh-hant': '昊鼎國際法律事務所協助韓國企業選擇公司型態、投審會審查、資本匯入、銀行開戶、營業場所確認及特殊行業許可，提供韓語全程對接服務。',
-      en: 'Hovering supports Korean businesses across the full market-entry process in Taiwan, including entity structuring, investment approval, capital remittance, bank setup, business premises review, and industry-specific licensing.'
+      en: 'Hovering supports international and Japanese businesses across the full market-entry process in Taiwan, including entity structuring, investment approval, capital remittance, bank setup, business premises review, and industry-specific licensing.'
     },
     keyPoints: {
       ko: [
@@ -125,7 +125,7 @@ export const serviceAreas: ServiceArea[] = [
     intro: {
       ko: '한국-대만 국제결혼 증가에 따라 이혼·친권·상속 관련 분쟁이 늘고 있습니다. 법무법인 호정은 대만 가사소송법과 국제사법을 함께 검토하여, 한국인 의뢰인에게 최적의 전략을 제공합니다.',
       'zh-hant': '因應韓台跨國婚姻增加，協助協議離婚、調解離婚、裁判離婚程序，以及法定繼承順位與剩餘財產分配請求。',
-      en: 'As Korea-Taiwan marriages increase, disputes on divorce, custody, and inheritance are growing. We combine Taiwan family procedure and private international law analysis to build practical strategies for cross-border clients.'
+      en: 'Cross-border marriages involving Taiwan have increased, and disputes on divorce, custody, and inheritance are growing. We combine Taiwan family procedure and private international law analysis to build practical strategies for international clients.'
     },
     keyPoints: {
       ko: [
@@ -252,7 +252,7 @@ export const serviceAreas: ServiceArea[] = [
     intro: {
       ko: '대만에 진출하는 한국 기업의 브랜드 보호와 지적재산 관리, 금융·투자 관련 분쟁을 지원합니다.',
       'zh-hant': '協助在台韓國企業之品牌保護、智慧財產管理，以及金融投資相關爭議。',
-      en: 'We support brand protection and IP management for Korean businesses entering Taiwan, as well as disputes involving financial products and investment contracts.'
+      en: 'We support brand protection and IP management for international and Japanese businesses entering Taiwan, as well as disputes involving financial products and investment contracts.'
     },
     keyPoints: {
       ko: [

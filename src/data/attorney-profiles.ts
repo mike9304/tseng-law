@@ -199,7 +199,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       role: 'Taiwan Attorney · Managing Attorney',
       title: 'Wei Tseng Taiwan Attorney Profile',
       description:
-        'A dedicated profile for Wei Tseng, a Taiwan attorney focusing on company setup, investment, litigation, visa, and IP support for Korean and international clients.',
+        'A dedicated profile for Wei Tseng, a Taiwan attorney focusing on company setup, investment, litigation, visa, and IP support for international, Japanese, and Korean clients.',
       email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
@@ -217,7 +217,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       experience: ['Trend Law Office', 'Hovering International Law Firm', 'Legal Aid Foundation, Taichung Branch'],
       notableMatters: [
         'Obtained a TWD 1.57M first-instance damages ruling in a Korean student gym injury case',
-        'Supports Korean businesses with Taiwan company setup, investment, visa, and operating-risk matters',
+        'Supports Japanese and Korean businesses with Taiwan company setup, investment, visa, and operating-risk matters',
         'Advises on trademark, patent, contract review, and cross-border civil, family, and labor disputes',
       ],
       internalLinks: [
@@ -247,7 +247,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         {
           question: 'What matters does Attorney Wei Tseng typically handle?',
           answer:
-            'She focuses on Taiwan company setup, investment legal advisory, civil litigation and damages, trademarks and patents, visas and residency, and cross-border family or labor disputes for Korean and international clients.',
+            'She focuses on Taiwan company setup, investment legal advisory, civil litigation and damages, trademarks and patents, visas and residency, and cross-border family or labor disputes for international, Japanese, and Korean clients.',
         },
         {
           question: 'Can English-speaking or Korean-speaking clients consult directly with Attorney Wei Tseng?',
@@ -288,7 +288,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       experience: ['趨勢法律事務所', '昊鼎国際法律事務所', '法律扶助基金会台中分会の扶助弁護士'],
       notableMatters: [
         '韓国人留学生のジム負傷事件で157万TWDの損害賠償を認める一審判決を獲得',
-        '韓国企業による台湾での会社設立、投資、ビザおよび事業運営リスクの検討を支援',
+        '日本企業および韓国企業による台湾での会社設立、投資、ビザおよび事業運営リスクの検討を支援',
         '商標・特許の出願、企業契約の審査、民事・家事・労働紛争に関する助言',
       ],
       internalLinks: [

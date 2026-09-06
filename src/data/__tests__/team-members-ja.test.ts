@@ -108,7 +108,7 @@ describe('Japanese team content', () => {
     expect(lead?.experience).toContain('法律扶助基金会台中分会の法律扶助担当弁護士');
     expect(paralegal?.experience).toContain('慕陽國際法律事務所 シニアパラリーガル');
     expect(paralegal?.intro[1]).toBe(
-      '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、韓国・台湾間のコミュニケーションを支援します。',
+      '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、国際クライアントとのコミュニケーションを支援します。',
     );
     expect(operations?.education).toEqual(['国立成功大学でコンピュータサイエンスを専攻（学士）']);
     expect(accountant?.intro[1]).toBe(

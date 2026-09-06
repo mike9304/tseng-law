@@ -46,7 +46,7 @@ const expectedStats = {
   en: {
     title: 'Cross-Border Practice at a Glance',
     description:
-      'Based on the official attorney profile: four Taiwan offices, three working languages—Chinese, Korean, and Japanese—seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1.',
+      'Based on the official attorney profile: four Taiwan offices, three working languages—Chinese, Korean, and Japanese—seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1. Consultations are also available in English.',
     highlightWords: [
       'four Taiwan offices',
       'three working languages',
@@ -67,7 +67,7 @@ const expectedStats = {
   ja: {
     title: '公式プロフィールで見る国際業務の基盤',
     description:
-      '公式弁護士プロフィールに基づき、台湾4拠点、中国語・韓国語・日本語の3言語、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。',
+      '公式弁護士プロフィールに基づき、台湾4拠点、中国語・韓国語・日本語の3言語、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。英語でのご相談にも対応しています。',
     highlightWords: [
       '台湾4拠点',
       '中国語',

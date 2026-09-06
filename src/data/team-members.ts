@@ -246,7 +246,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
         intro: [
           'A veteran paralegal with many years of experience as a senior paralegal at several law firms, covering litigation support, corporate legal affairs, and foreign investment matters.',
-          'Supports litigation, company formation, foreign investment approvals, permit applications, and Korea-Taiwan communications.'
+          'Supports litigation, company formation, foreign investment approvals, permit applications, and cross-border communications.'
         ],
         education: ['LL.B., Tunghai University'],
         experience: ['Senior Paralegal, Boyin Law Firm', 'Senior Paralegal, Muyang International Law Firm']
@@ -332,7 +332,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
         intro: [
           '複数の法律事務所で長年にわたりシニアパラリーガルを務め、訴訟支援、企業法務、外国人投資関連業務など、幅広い法律実務の経験を積んでいます。',
-          '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、韓国・台湾間のコミュニケーションを支援します。',
+          '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、国際クライアントとのコミュニケーションを支援します。',
         ],
         education: ['東海大学法律学科 学士号取得'],
         experience: ['博胤法律事務所 シニアパラリーガル', '慕陽國際法律事務所 シニアパラリーガル'],

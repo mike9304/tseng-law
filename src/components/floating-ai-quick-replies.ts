@@ -333,7 +333,7 @@ const FOLLOW_UP_MAP_EN: Record<FollowUpKey, FollowUpSuggestion[]> = {
   company_setup: [
     { label: 'Minimum capital', message: 'What is the minimum capital requirement for a foreigner to set up a company in Taiwan?' },
     { label: 'Subsidiary vs branch', message: 'What are the practical differences between setting up a subsidiary and a branch office in Taiwan?' },
-    { label: 'Work permits', message: 'After establishing a company, how do I sponsor Korean employees for work permits?' },
+    { label: 'Work permits', message: 'After establishing a company, how do I sponsor foreign employees for work permits?' },
   ],
   traffic_accident: [
     { label: 'Settlement offer', message: 'The other party offered a private settlement — how should I evaluate whether to accept?' },
@@ -353,16 +353,16 @@ const FOLLOW_UP_MAP_EN: Record<FollowUpKey, FollowUpSuggestion[]> = {
   divorce_family: [
     { label: 'Custody vs guardianship', message: 'What is the difference between parental rights and custody in Taiwan, especially with a foreign spouse?' },
     { label: 'Asset division', message: 'How and when can I claim division of marital assets, including assets held abroad?' },
-    { label: 'Cross-border divorce', message: 'In a Korea-Taiwan divorce, how are jurisdiction and governing law decided?' },
+    { label: 'Cross-border divorce', message: 'In a cross-border divorce involving Taiwan, how are jurisdiction and governing law decided?' },
   ],
   inheritance: [
-    { label: 'Forced share', message: 'Does Taiwan have a forced heirship / legitime system? How does it compare to Korea?' },
+    { label: 'Forced share', message: 'Does Taiwan have a forced heirship / legitime system? How does it compare to other jurisdictions?' },
     { label: 'Disclaiming inheritance', message: 'What is the deadline and procedure to disclaim an inheritance in Taiwan?' },
-    { label: 'Foreign heirs', message: 'As a Korean citizen, how do I inherit property or bank accounts located in Taiwan?' },
+    { label: 'Foreign heirs', message: 'As a foreign national, how do I inherit property or bank accounts located in Taiwan?' },
   ],
   logistics: [
     { label: 'Licenses', message: 'What licenses and minimum capital are required to operate a logistics or transport business in Taiwan?' },
-    { label: 'Customs clearance', message: 'How long does customs clearance take for goods imported from Korea and what costs apply?' },
+    { label: 'Customs clearance', message: 'How long does customs clearance take for goods imported into Taiwan and what costs apply?' },
     { label: 'Warehouse lease', message: 'What clauses should I watch out for when leasing a logistics warehouse in Taiwan?' },
   ],
   cosmetics: [

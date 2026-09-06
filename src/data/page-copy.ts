@@ -129,7 +129,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: 'About Hovering',
-      description: 'Learn our story and meet the Korea-Taiwan legal team.'
+      description: 'Learn our story and meet the international legal team.'
     },
     services: {
       label: 'SERVICES',
@@ -138,7 +138,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: 'Hovering Korea-Taiwan Team',
+      title: 'Hovering International Team',
       description: 'View profiles of our lawyers, operations manager, and accounting partner.'
     },
     insights: {
@@ -181,7 +181,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎について',
-      description: '事務所の概要と韓国・台湾チームをご紹介します。'
+      description: '事務所の概要と国際法務チームをご紹介します。'
     },
     services: {
       label: 'SERVICES',
@@ -190,7 +190,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '韓国・台湾業務チーム',
+      title: '昊鼎 日本・国際法務チーム',
       description: '弁護士・事務長・会計士の経歴と専門分野をご確認ください。'
     },
     insights: {

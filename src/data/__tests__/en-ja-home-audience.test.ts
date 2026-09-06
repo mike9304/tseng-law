@@ -6,7 +6,9 @@ import HomeAttorneySplit from '@/components/HomeAttorneySplit';
 import { landingContent } from '@/app/[locale]/korean-lawyer-in-taiwan/content';
 import { faqContent } from '@/data/faq-content';
 import { getAttorneyProfile } from '@/data/attorney-profiles';
+import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
+import { teamContent } from '@/data/team-members';
 import { createAttorneyDecomposedNodes } from '@/lib/builder/canvas/decompose-attorney';
 import { buildLegalServiceJsonLd } from '@/lib/seo';
 
@@ -77,6 +79,52 @@ describe('English and Japanese attorney profile audience targeting', () => {
     expect(
       faqContent.en.find((item) => item.question === 'How are consultations conducted?'),
     ).toBeDefined();
+  });
+});
+
+describe('English and Japanese general-page copy residue', () => {
+  it('retargets About and lawyers page chrome away from Korea-Taiwan framing', () => {
+    expect(pageCopy.en.about.description).toBe(
+      'Learn our story and meet the international legal team.',
+    );
+    expect(pageCopy.en.lawyers.title).toBe('Hovering International Team');
+    expect(pageCopy.ja.about.description).toBe(
+      '事務所の概要と国際法務チームをご紹介します。',
+    );
+    expect(pageCopy.ja.lawyers.title).toBe('昊鼎 日本・国際法務チーム');
+    expect(JSON.stringify({ en: pageCopy.en, ja: pageCopy.ja })).not.toMatch(
+      /Korea-Taiwan|韓国・台湾業務チーム/,
+    );
+  });
+
+  it('widens general EN/JA divorce FAQ subjects without dropping Article 1050 elements', () => {
+    const enDivorce = faqContent.en.find((item) =>
+      item.question.includes('cross-border divorce'),
+    );
+    const jaDivorce = faqContent.ja.find((item) =>
+      item.question.includes('国際離婚'),
+    );
+
+    expect(enDivorce?.question).not.toMatch(/Korean national/i);
+    expect(jaDivorce?.question).not.toBe(
+      '韓国人が台湾で離婚するには、どのような手続きが必要ですか？',
+    );
+    expect(enDivorce?.answer).toContain('in writing');
+    expect(jaDivorce?.answer).toContain('戸政機関で離婚登記');
+    expect(faqContent.ja.find((item) => item.question === '相談はどのような方式で行われますか？')?.answer).toContain(
+      '日本語・英語・中国語・韓国語',
+    );
+  });
+
+  it('keeps the dedicated Korean landing and Korea operations role intact', () => {
+    expect(JSON.stringify(landingContent.en)).toContain('Korean clients');
+    expect(teamContent.en.members.find((member) => member.id === 'son-jungmin')?.intro[0]).toContain(
+      'Korean clients',
+    );
+    expect(siteContent.en.stats.description).toContain('three working languages');
+    expect(siteContent.en.stats.description).toContain('Consultations are also available in English.');
+    expect(siteContent.ja.stats.description).toContain('3言語');
+    expect(siteContent.ja.stats.description).toContain('英語でのご相談にも対応しています。');
   });
 });
 

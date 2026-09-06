@@ -37,7 +37,7 @@ describe('Japanese About integration', () => {
       '昊鼎国際法律事務所',
       '曾雋崴弁護士',
       '台湾弁護士',
-      '韓国・台湾業務チーム',
+      '日本・国際法務チーム',
     ]);
   });
 
@@ -102,13 +102,13 @@ describe('Japanese About integration', () => {
     expect(html).toContain('お問い合わせ種別');
     expect(html).toContain('メール');
     expect(html).toContain('台北事務所');
-    expect(html).not.toContain('Learn our story and meet the Korea-Taiwan legal team.');
+    expect(html).not.toContain('Learn our story and meet the international legal team.');
   });
 
   it.each([
     ['ko', '호정 소개', '호정의 스토리와 한국 업무팀 구성원을 확인할 수 있습니다.'],
     ['zh-hant', '昊鼎介紹', '查看昊鼎團隊背景與韓國業務團隊成員。'],
-    ['en', 'About Hovering', 'Learn our story and meet the Korea-Taiwan legal team.'],
+    ['en', 'About Hovering', 'Learn our story and meet the international legal team.'],
   ] as const)('preserves representative %s About metadata', (locale, title, description) => {
     const metadata = getAboutLegacyMetadata(locale);
 

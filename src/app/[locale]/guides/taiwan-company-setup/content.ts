@@ -396,7 +396,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     relatedColumns: relatedColumnsEn,
     relatedResourcesHeading: 'Related Guides',
     relatedResources: [
-      { href: 'korean-lawyer-in-taiwan', label: 'Korean-speaking Taiwan lawyer' },
+      { href: 'lawyers/wei-tseng', label: 'Attorney Wei Tseng profile' },
       { href: 'taiwan-company-setup-lawyer', label: 'Taiwan company setup lawyer guide' },
       { href: 'taiwan-lawyer', label: 'Taiwan lawyer search guide' },
       { href: 'services/investment', label: 'Taiwan investment and company setup services' },
@@ -510,7 +510,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     relatedColumns: relatedColumnsJa,
     relatedResourcesHeading: '関連案内',
     relatedResources: [
-      { href: 'korean-lawyer-in-taiwan', label: '韓国語対応の台湾弁護士' },
+      { href: 'lawyers/wei-tseng', label: '曾雋崴弁護士のプロフィール' },
       { href: 'taiwan-company-setup-lawyer', label: '台湾法人設立・会社設立弁護士のご案内' },
       { href: 'taiwan-lawyer', label: '台湾弁護士検索ガイド' },
       { href: 'services/investment', label: '台湾投資・会社設立関連サービス' },

@@ -94,7 +94,7 @@ describe('guides/taiwan-company-setup content', () => {
     expect(ko.relatedColumns.map((c) => c.slug)).toEqual(expected);
   });
 
-  it('links every locale to the four related P0 resources', () => {
+  it('links Korean and Traditional Chinese guides to the dedicated Korean landing first', () => {
     const expected = [
       'korean-lawyer-in-taiwan',
       'taiwan-company-setup-lawyer',
@@ -102,7 +102,20 @@ describe('guides/taiwan-company-setup content', () => {
       'services/investment',
     ];
 
-    for (const locale of locales) {
+    for (const locale of ['ko', 'zh-hant'] as const) {
+      expect(guideContent[locale].relatedResources.map((item) => item.href)).toEqual(expected);
+    }
+  });
+
+  it('points English and Japanese guides at the attorney profile before other landings', () => {
+    const expected = [
+      'lawyers/wei-tseng',
+      'taiwan-company-setup-lawyer',
+      'taiwan-lawyer',
+      'services/investment',
+    ];
+
+    for (const locale of ['en', 'ja'] as const) {
       expect(guideContent[locale].relatedResources.map((item) => item.href)).toEqual(expected);
     }
   });

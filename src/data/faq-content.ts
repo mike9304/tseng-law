@@ -198,7 +198,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     },
     // ── Family / Divorce ──
     {
-      question: 'What procedures does a Korean national need for divorce in Taiwan?',
+      question: 'What procedures does someone with a Korea–Taiwan connection need for divorce in Taiwan?',
       answer:
         'Divorce in Taiwan is either (1) by mutual consent, which must be in writing, signed by at least two witnesses, and registered with the household administration authority, or (2) judicial divorce (mediation then litigation). International divorce between Korea and Taiwan involves complex issues of applicable law, jurisdiction, property division, and custody, so consulting a lawyer familiar with both legal systems is essential.'
     },
@@ -217,7 +217,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: 'How are consultations conducted?',
       answer:
-        'We offer in-person consultations (Taipei office) or video consultations (Zoom/Google Meet). Consultations are available in Korean, Chinese, and Japanese. Appointments are required and scheduled in one-hour units. Sending relevant documents in advance allows for more detailed advice.'
+        'We offer in-person consultations (Taipei office) or video consultations (Zoom/Google Meet). Consultations are available in English, Korean, Chinese, and Japanese. Appointments are required and scheduled in one-hour units. Sending relevant documents in advance allows for more detailed advice.'
     },
     {
       question: 'Can you help with company setup for specialized industries like logistics or cosmetics?',
@@ -290,7 +290,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: '相談はどのような方式で行われますか？',
       answer:
-        '台北事務所での対面相談またはビデオ通話による相談に対応しており、韓国語・中国語・日本語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずお問い合わせページから案件の概要と主な資料を送り、日程、相談方法、担当言語および費用をご確認ください。連絡はメールから行えます。'
+        '台北事務所での対面相談またはビデオ通話による相談に対応しており、日本語・英語・中国語・韓国語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずお問い合わせページから案件の概要と主な資料を送り、日程、相談方法、担当言語および費用をご確認ください。連絡はメールから行えます。'
     },
     {
       question: '物流・化粧品などの規制業種でも台湾で会社を設立できますか？',

@@ -197,10 +197,10 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   en: {
     label: 'OUR TEAM',
-    title: 'Hovering Korea-Taiwan Legal Team',
+    title: 'Hovering International Legal Team',
     description: 'Profiles of Hovering lawyers, operations manager, and accounting partner.',
     story: [
-      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for Korean and Japanese clients.',
+      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international, Japanese, and Korean clients.',
       'By combining legal, accounting, tax, and operational workflows, we provide consistent strategy from initial review through dispute handling.'
     ],
     members: [
@@ -213,7 +213,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          'Handles a wide range of corporate and individual matters with Korean and Japanese consultation support.',
+          'Handles a wide range of corporate and individual matters. Consultations in English, Japanese, Korean, and Mandarin are available for Taiwan investment, incorporation, and litigation strategy.',
           'Represented a Korean student in a gym injury case and obtained a TWD 1.57M damages ruling.'
         ],
         education: [
@@ -283,10 +283,10 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   ja: {
     label: 'チーム紹介',
-    title: '昊鼎 韓国・台湾業務チーム',
+    title: '昊鼎 日本・国際法務チーム',
     description: '昊鼎国際法律事務所の弁護士、パラリーガル、事務長、提携会計士をご紹介します。',
     story: [
-      '昊鼎国際法律事務所では、韓国・日本のクライアントによる台湾への投資や、台湾での訴訟・法律相談を支援する実務チームを編成しています。',
+      '昊鼎国際法律事務所では、日本企業・在台日本人をはじめとする国際クライアントによる台湾への投資や、台湾での訴訟・法律相談を支援する実務チームを編成しています。',
       '法律・会計・税務・行政の各実務を連携させ、案件の初期検討から紛争対応まで、一貫した方針でサポートします。',
     ],
     members: [
@@ -299,7 +299,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          '企業・個人の幅広い案件を担当し、韓国語・日本語でのご相談に対応しています。',
+          '企業・個人の幅広い案件を担当し、日本語・英語・韓国語・中国語でのご相談に対応しています。',
           '韓国人留学生のジムでの負傷に関する損害賠償請求事件を代理し、一審で157万TWDの損害賠償を認める判決を得た実績があります。',
         ],
         education: [

@@ -235,8 +235,8 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
       ],
       sameAs: commonSameAs,
-      keywords: ['Wei Tseng attorney', 'Wei Tseng Taiwan attorney', 'Taiwan lawyer for Korean clients', 'Taiwan attorney profile', 'Taiwan company setup lawyer', 'Taiwan litigation attorney'],
-      searchTerms: ['Wei Tseng Taiwan attorney', 'Attorney Wei Tseng', 'Taiwan lawyer for Korean clients', 'Wei Tseng company setup lawyer'],
+      keywords: ['Wei Tseng attorney', 'Wei Tseng Taiwan attorney', 'English speaking Taiwan lawyer', 'Taiwan attorney profile', 'Taiwan company setup lawyer', 'Taiwan litigation attorney'],
+      searchTerms: ['Wei Tseng Taiwan attorney', 'Attorney Wei Tseng', 'English speaking Taiwan lawyer', 'Wei Tseng company setup lawyer'],
       proofPoints: [
         'Wei Tseng consults in English, Korean, Chinese, and Japanese for cross-border client matters.',
         'Her practice covers Taiwan company setup, investment, litigation, visas, and trademark or patent filings.',
@@ -270,15 +270,15 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       role: '台湾弁護士・代表弁護士',
       title: '曾雋崴台湾弁護士プロフィール',
       description:
-        '韓国のクライアントによる台湾での会社設立、投資、訴訟、ビザ、商標・特許、法律顧問業務を支援する曾雋崴台湾弁護士の経歴と代表事例をまとめたプロフィールです。',
+        '日本企業・在台日本人をはじめとする国際クライアントの台湾での会社設立、投資、訴訟、ビザ、商標・特許、法律顧問業務を支援する曾雋崴台湾弁護士の経歴と代表事例をまとめたプロフィールです。',
       email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
-        '曾雋崴弁護士は、韓国・日本のクライアントによる台湾での投資、会社設立、訴訟、知的財産、ビザおよび法的リスクの検討を支援しています。',
-        '韓国語・中国語・日本語でのコミュニケーションを通じて、初回相談から各種手続の遂行、紛争対応まで一貫してサポートします。',
+        '曾雋崴弁護士は、日本企業・在台日本人をはじめとする国際クライアントによる台湾での投資、会社設立、訴訟、知的財産、ビザおよび法的リスクの検討を支援しています。',
+        '日本語・英語・中国語・韓国語でのコミュニケーションを通じて、初回相談から各種手続の遂行、紛争対応まで一貫してサポートします。',
         '韓国人留学生のジム負傷損害賠償事件で157万TWDの損害賠償を認める一審判決を獲得した代表事例があり、WEI Lawyerチャンネルや外部メディアを通じて台湾法を解説しています。',
       ],
-      languages: ['韓国語', '中国語', '日本語'],
+      languages: ['日本語', '英語', '中国語', '韓国語'],
       practiceAreas: ['台湾での会社設立', '台湾投資に関する法務顧問', '民事訴訟・損害賠償', '商標・特許', 'ビザ・在留', '家事・労働紛争'],
       education: [
         '国立台湾大学財務金融研究所 修士号取得',
@@ -306,11 +306,11 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
       ],
       sameAs: commonSameAs,
-      keywords: ['曾雋崴弁護士', '曾雋崴台湾弁護士', '台湾弁護士', '韓国語対応の台湾弁護士', '台湾会社設立弁護士', '台湾訴訟弁護士'],
-      searchTerms: ['曾雋崴台湾弁護士', '曾雋崴弁護士', '韓国語対応の台湾弁護士', '台湾会社設立弁護士 曾雋崴'],
+      keywords: ['曾雋崴弁護士', '曾雋崴台湾弁護士', '台湾弁護士', '日本語相談の台湾弁護士', '台湾会社設立弁護士', '台湾訴訟弁護士'],
+      searchTerms: ['曾雋崴台湾弁護士', '曾雋崴弁護士', '日本語相談 台湾弁護士', '台湾会社設立弁護士 曾雋崴'],
       proofPoints: [
-        '韓国語・中国語・日本語で相談できる台湾弁護士として、韓国のクライアントと直接コミュニケーションを行います。',
-        '台湾での会社設立、投資、ビザ、訴訟、商標・特許まで、韓国のクライアントに必要な手続の流れを一緒に設計します。',
+        '日本語・英語・中国語・韓国語で相談できる台湾弁護士として、日本企業・在台日本人をはじめとする国際クライアントと直接コミュニケーションを行います。',
+        '台湾での会社設立、投資、ビザ、訴訟、商標・特許まで、日本語で相談したいクライアントに必要な手続の流れを一緒に設計します。',
         '韓国人留学生のジム負傷損害賠償事件で157万TWDの損害賠償を認める一審判決を獲得した公開事例があります。',
         '昊鼎の公式プロフィール、個人サイト、YouTube、Naver Blogなどの外部チャンネルで同一人物の情報を確認できます。',
       ],
@@ -318,12 +318,12 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         {
           question: '曾雋崴弁護士は主にどのような案件を扱っていますか？',
           answer:
-            '台湾での会社設立、台湾投資に関する法務顧問、民事訴訟・損害賠償、商標・特許、ビザ・在留、家事・労働紛争など、韓国のクライアントから相談の多い台湾法の問題を中心に対応しています。',
+            '台湾での会社設立、台湾投資に関する法務顧問、民事訴訟・損害賠償、商標・特許、ビザ・在留、家事・労働紛争など、日本企業・在台日本人をはじめとする国際クライアントから相談の多い台湾法の問題を中心に対応しています。',
         },
         {
-          question: '曾雋崴弁護士に韓国語で相談できますか？',
+          question: '曾雋崴弁護士に日本語や英語で相談できますか？',
           answer:
-            'はい。韓国語、中国語、日本語で事実関係や書類、手続の流れを整理できるため、韓国のクライアントにも台湾の手続を分かりやすくご案内できます。',
+            'はい。日本語、英語、中国語、韓国語で事実関係や書類、手続の流れを整理できるため、日本語で相談したい方にも台湾の手続を分かりやすくご案内できます。',
         },
         {
           question: '曾雋崴弁護士への相談はどのように始めればよいですか？',

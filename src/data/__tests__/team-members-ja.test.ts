@@ -98,8 +98,9 @@ describe('Japanese team content', () => {
     const accountant = japanese.members.find(({ id }) => id === 'huang-shengping');
 
     expect(japanese.description).toContain('パラリーガル');
+    expect(japanese.title).toBe('昊鼎 日本・国際法務チーム');
     expect(japanese.story[0]).toBe(
-      '昊鼎国際法律事務所では、韓国・日本のクライアントによる台湾への投資や、台湾での訴訟・法律相談を支援する実務チームを編成しています。',
+      '昊鼎国際法律事務所では、日本企業・在台日本人をはじめとする国際クライアントによる台湾への投資や、台湾での訴訟・法律相談を支援する実務チームを編成しています。',
     );
     expect(lead?.intro[1]).toBe(
       '韓国人留学生のジムでの負傷に関する損害賠償請求事件を代理し、一審で157万TWDの損害賠償を認める判決を得た実績があります。',
@@ -128,7 +129,7 @@ describe('Japanese team content', () => {
       education: ['東海大學法律學系學士'],
     });
     expect(teamContent.en.story[0]).toBe(
-      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for Korean and Japanese clients.',
+      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international, Japanese, and Korean clients.',
     );
   });
 });

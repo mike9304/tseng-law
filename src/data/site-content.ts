@@ -1926,7 +1926,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       label: 'ABOUT',
       title: 'Cross-Border Practice at a Glance',
       description:
-        'Based on the official attorney profile: four Taiwan offices, three working languages—Chinese, Korean, and Japanese—seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1.',
+        'Based on the official attorney profile: four Taiwan offices, three working languages—Chinese, Korean, and Japanese—seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1. Consultations are also available in English.',
       highlightWords: [
         'four Taiwan offices',
         'three working languages',
@@ -2162,7 +2162,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     },
     homeAttorney: {
       label: 'ABOUT',
-      title: 'Attorney Wei Tseng, Taiwan Legal Partner for Korean Clients',
+      title: 'Attorney Wei Tseng, Taiwan Legal Partner for International Clients',
       summary: 'With experience in court litigation and corporate legal advisory work, Attorney Wei Tseng has provided legal commentary and advice to SBS News and continues to publish legal information through WEI Lawyer.',
       ctaLabel: 'View Lawyer Profile'
     },

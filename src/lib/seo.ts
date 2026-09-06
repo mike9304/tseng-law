@@ -349,7 +349,7 @@ export function buildLegalServiceJsonLd(
     url: buildAbsoluteUrl(getLocalizedPath(locale, options?.path)),
     serviceType: options?.serviceType,
     email: CONSULTATION_EMAIL,
-    areaServed: ['Taiwan', 'South Korea'],
+    areaServed: ['Taiwan', 'South Korea', 'Japan'],
     knowsLanguage: organizationLanguageTags,
     sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913', 'https://www.threads.com/@lawyer.wei'],
     contactPoint: [

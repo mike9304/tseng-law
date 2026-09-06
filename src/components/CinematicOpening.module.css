@@ -59,8 +59,3 @@
   }
 }
 
-/* The content sentinel receives focus after the handoff (tabindex="-1"); it
-   is a zero-height box, so never draw a focus ring across the page. */
-:global(#cinematic-home-content):focus {
-  outline: none;
-}

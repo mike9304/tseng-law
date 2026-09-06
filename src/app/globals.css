@@ -25356,6 +25356,12 @@ html[lang='en'] .cinematic-opening__primary {
   scroll-margin-top: 0;
 }
 
+/* The content sentinel receives focus after the cinematic handoff (tabindex="-1");
+   it is a zero-height box, so never draw a focus ring across the page. (WI-11) */
+.site main #cinematic-home-content:focus {
+  outline: none;
+}
+
 .site[data-cinematic-home='true'][data-cinematic-intro-visible='false']
   .cinematic-opening {
   display: none;

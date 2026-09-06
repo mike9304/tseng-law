@@ -1171,12 +1171,19 @@ section.home-results-panel--editorial {
   transform: translate(-50%, -50%);
 }
 
+/* WI-6 (2026-09-07): links are distinguishable at rest — a quiet brand-tinted
+   underline that the existing ::after hover animation then strengthens. */
 .link-underline {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
   color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, var(--purple) 45%, transparent);
+  transition: color 160ms ease, text-decoration-color 160ms ease;
 }
 
 .link-underline::after {
@@ -1195,11 +1202,83 @@ section.home-results-panel--editorial {
 .link-underline:hover,
 .link-underline:focus-visible {
   color: var(--text-link-hover);
+  text-decoration-color: currentColor;
 }
 
 .link-underline:hover::after,
 .link-underline:focus-visible::after {
   transform: scaleX(1);
+}
+
+/* On dark / photographic surfaces the rest underline follows the text colour. */
+.hero .link-underline,
+.section--dark .link-underline,
+.section.dark-section .link-underline,
+[data-tone='dark'] .link-underline {
+  text-decoration-color: color-mix(in srgb, currentColor 55%, transparent);
+}
+
+/* Content contexts (article body, attorney profile / media-hub channel
+   lists, video CTA, contact inquiry lists): brand-coloured, wrapping inline
+   links. The animated ::after bar is dropped there in favour of the native
+   underline so multi-line links wrap normally. */
+.column-markdown a.link-underline,
+.profile-link-list a,
+.media-hub-card a.link-underline,
+.video-feature .link-underline,
+.contact-list a.link-underline,
+.column-content a.link-underline {
+  display: inline;
+  color: var(--purple);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, var(--purple) 45%, transparent);
+}
+
+.column-markdown a.link-underline:hover,
+.column-markdown a.link-underline:focus-visible,
+.profile-link-list a:hover,
+.profile-link-list a:focus-visible,
+.media-hub-card a.link-underline:hover,
+.media-hub-card a.link-underline:focus-visible,
+.video-feature .link-underline:hover,
+.video-feature .link-underline:focus-visible,
+.contact-list a.link-underline:hover,
+.contact-list a.link-underline:focus-visible,
+.column-content a.link-underline:hover,
+.column-content a.link-underline:focus-visible {
+  color: var(--purple-dark);
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px;
+}
+
+.column-markdown a.link-underline::after,
+.profile-link-list a::after,
+.media-hub-card a.link-underline::after,
+.contact-list a.link-underline::after,
+.column-content a.link-underline::after {
+  display: none;
+}
+
+/* External links inside content get a small north-east arrow cue. The
+   markdown renderer opens every link in a new tab, so key on an absolute
+   http(s) href as well to keep the cue off relative internal / mailto links. */
+.column-markdown a[target='_blank'][href^='http']:not(.button)::after,
+.profile-link-list a[target='_blank'][href^='http']:not(.button)::after,
+.media-hub-card a[target='_blank'][href^='http']:not(.button)::after,
+.contact-list a[target='_blank'][href^='http']:not(.button)::after,
+.column-content a[target='_blank'][href^='http']:not(.button)::after {
+  content: ' \2197';
+  display: inline;
+  position: static;
+  width: auto;
+  height: auto;
+  background: none;
+  transform: none;
+  font-size: 0.8em;
+  text-decoration: none;
+  opacity: 0.85;
 }
 
 .button {
@@ -1509,6 +1588,45 @@ section.home-results-panel--editorial {
 :lang(zh-Hant) .pricing-card :where(h3, p, li) {
   word-break: normal;
   overflow-wrap: anywhere;
+}
+
+/* WI-10 (2026-09-07): CorporateAdvisoryLink renders a bare
+   <p><a class="link-underline">headline</a> — summary</p> after the services
+   grid and inside the retainer pricing card. Its markup is owned by another
+   lane, so the callout is hooked from the parents: it is the only class-less
+   <p> in either container. */
+.services-bento > .container > .services-card-grid + p:not([class]),
+.pricing-card > p:not([class]) {
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.25rem;
+  background: var(--purple-bg);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: left; /* the pricing card centres its copy */
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.services-bento > .container > .services-card-grid + p:not([class]) {
+  max-width: 72ch;
+}
+
+.services-bento > .container > .services-card-grid + p:not([class]) > a.link-underline,
+.pricing-card > p:not([class]) > a.link-underline {
+  display: inline;
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.services-bento > .container > .services-card-grid + p:not([class]) > a.link-underline:hover,
+.services-bento > .container > .services-card-grid + p:not([class]) > a.link-underline:focus-visible,
+.pricing-card > p:not([class]) > a.link-underline:hover,
+.pricing-card > p:not([class]) > a.link-underline:focus-visible {
+  color: var(--purple-dark);
 }
 
 .pricing-disclaimer {
@@ -4826,11 +4944,15 @@ section.home-results-panel--editorial {
   color: var(--accent-gold);
 }
 
+/* WI-3 (2026-09-07): footer re-skin on the mist/forest token system.
+   The skyline raster is an opaque near-white PNG-style webp; blending it in
+   multiply mode dissolves that white rectangle into the tinted band so the
+   image no longer reads as a seam above the footer. */
 .footer-skyline {
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(180deg, #f4f7f1 0%, #e7ede3 100%);
-  border-top: 1px solid #d8e1d5;
+  background: linear-gradient(180deg, var(--off-white) 0%, var(--warm-bg) 100%);
+  border-top: 1px solid var(--border-light);
   min-height: clamp(120px, 16vw, 220px);
   display: flex;
   align-items: flex-end;
@@ -4851,16 +4973,17 @@ section.home-results-panel--editorial {
   display: block;
   filter: grayscale(45%) saturate(0.78) contrast(1.02) brightness(0.98);
   opacity: 0.95;
+  mix-blend-mode: multiply;
 }
 
 .site-footer {
-  background: #efe6d8;
-  color: #504030;
-  border-top: 1px solid #dccfbc;
+  background: var(--warm-bg-alt);
+  color: var(--text-body);
+  border-top: 1px solid var(--warm-border);
 }
 
 .footer-offices {
-  border-bottom: 1px solid rgba(88, 72, 52, 0.17);
+  border-bottom: 1px solid var(--warm-border);
 }
 
 .footer-offices .container {
@@ -4872,14 +4995,17 @@ section.home-results-panel--editorial {
 }
 
 .footer-main {
-  border-bottom: 1px solid rgba(88, 72, 52, 0.14);
+  border-bottom: 1px solid var(--warm-border);
 }
 
+/* Brand block owns its own column; the four link columns share one row on
+   desktop (>1024px). Tablet collapses to a 2-column wrap, phone to one. */
 .footer-main-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(280px, 1.4fr) repeat(4, minmax(0, 1fr));
   gap: clamp(1.4rem, 2.2vw, 2.2rem);
   padding: 1.95rem 0 1.75rem;
+  align-items: start;
 }
 
 .footer-main-intro {
@@ -4894,13 +5020,13 @@ section.home-results-panel--editorial {
   font-size: clamp(1.08rem, 0.65vw + 0.96rem, 1.34rem);
   font-weight: 600;
   letter-spacing: -0.03em;
-  color: #2c2115;
+  color: var(--purple-dark);
 }
 
 .footer-main-note {
   margin: 0;
   font-size: 0.95rem;
-  color: rgba(70, 57, 40, 0.84);
+  color: var(--text-body);
   line-height: 1.82;
   letter-spacing: -0.015em;
 }
@@ -4913,7 +5039,7 @@ section.home-results-panel--editorial {
 
 .footer-consultation-email-label {
   margin: 0;
-  color: #382b1d;
+  color: var(--purple-dark);
   font-size: 0.82rem;
   font-weight: 600;
 }
@@ -4948,9 +5074,9 @@ section.home-results-panel--editorial {
   gap: 0.35rem;
   min-height: 44px;
   padding: 0.4rem 0.7rem;
-  border: 1px solid rgba(22, 56, 45, 0.32); /* WI-2: --purple @ .32 */
+  border: 1px solid var(--purple-border);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.32);
+  background: var(--white);
   color: var(--purple);
   cursor: pointer;
   font: inherit;
@@ -4964,8 +5090,8 @@ section.home-results-panel--editorial {
 
 .footer-consultation-email-copy:hover,
 .footer-consultation-email-copy:focus-visible {
-  border-color: rgba(22, 56, 45, 0.62);
-  background: rgba(255, 255, 255, 0.58);
+  border-color: var(--purple);
+  background: var(--purple-bg);
   color: var(--purple-dark);
 }
 
@@ -4981,9 +5107,15 @@ section.home-results-panel--editorial {
   border: 0;
 }
 
+/* Flex column (not grid): a stretched grid item would distribute the row's
+   spare height between the title and list tracks and push the first link
+   ~100px below its title. */
 .footer-link-column {
-  display: grid;
-  gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 0;
 }
 
 .footer-link-title {
@@ -4991,7 +5123,7 @@ section.home-results-panel--editorial {
   font-size: 0.93rem;
   font-weight: 600;
   letter-spacing: -0.015em;
-  color: #382b1d;
+  color: var(--purple-dark);
 }
 
 .footer-link-list {
@@ -5002,14 +5134,16 @@ section.home-results-panel--editorial {
 .footer-link-list a {
   font-size: 0.94rem;
   line-height: 1.65;
-  color: rgba(70, 57, 40, 0.8);
+  color: var(--text-body);
   text-decoration: none;
   transition: color 180ms ease;
 }
 
 .footer-link-list a:hover,
 .footer-link-list a:focus-visible {
-  color: #2a2012;
+  color: var(--purple);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .office-links {
@@ -5025,7 +5159,7 @@ section.home-results-panel--editorial {
   font-weight: 600;
   font-size: 0.84rem;
   letter-spacing: -0.01em;
-  color: #3f3324;
+  color: var(--purple-dark);
   margin-right: 1.2rem;
   white-space: nowrap;
 }
@@ -5035,7 +5169,7 @@ section.home-results-panel--editorial {
   align-content: center;
   gap: 0.22rem;
   font-size: 0.92rem;
-  color: rgba(76, 62, 44, 0.8);
+  color: var(--text-body);
   text-decoration: none;
   padding: 0.5rem 0.95rem;
   white-space: nowrap;
@@ -5044,21 +5178,23 @@ section.home-results-panel--editorial {
 }
 
 .office-link-name {
-  color: #3f3324;
+  color: var(--text-heading);
   font-weight: 650;
 }
 
 .office-link-address {
-  color: #665642;
+  color: var(--text-meta);
   font-size: 0.75rem; /* WI-5: 12px floor */
   line-height: 1.45;
   overflow-wrap: anywhere;
   white-space: normal;
 }
 
-.office-link:hover,
-.office-link:focus-visible {
-  color: #2a2012;
+.office-link:hover .office-link-name,
+.office-link:focus-visible .office-link-name {
+  color: var(--purple);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .office-link + .office-link::before {
@@ -5069,7 +5205,7 @@ section.home-results-panel--editorial {
   transform: translateY(-50%);
   width: 1px;
   height: 12px;
-  background: rgba(88, 72, 52, 0.18);
+  background: var(--warm-border);
 }
 
 .footer-bottom-bar {
@@ -5096,14 +5232,16 @@ section.home-results-panel--editorial {
 .footer-legal-links a {
   font-size: 0.84rem;
   letter-spacing: -0.005em;
-  color: #4c3e2c;
+  color: var(--text-meta); /* 4.83:1 on --warm-bg-alt */
   text-decoration: none;
   transition: color 180ms ease;
 }
 
 .footer-legal-links a:hover,
 .footer-legal-links a:focus-visible {
-  color: #2a2012;
+  color: var(--purple);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .footer-locale-switch {
@@ -5121,7 +5259,7 @@ section.home-results-panel--editorial {
 }
 
 .footer-locale-switch a[aria-current='page'] {
-  color: #2a2012;
+  color: var(--purple-dark);
   font-weight: 700;
 }
 
@@ -5134,7 +5272,7 @@ section.home-results-panel--editorial {
 .social-label {
   font-size: 0.84rem;
   letter-spacing: -0.005em;
-  color: #594a38;
+  color: var(--text-meta);
 }
 
 [data-locale='ko'] .footer-link-title,
@@ -5170,30 +5308,36 @@ section.home-results-panel--editorial {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 44px; /* WI-3: 44px tap target */
+  height: 44px;
   border-radius: 999px;
-  border: 1px solid rgba(88, 72, 52, 0.24);
-  color: rgba(76, 62, 44, 0.82);
+  border: 1px solid var(--warm-border);
+  background: var(--white);
+  color: var(--purple);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8rem;
-  transition: all 180ms ease;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.social-icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .social-icon:hover,
 .social-icon:focus-visible {
-  border-color: rgba(70, 55, 36, 0.5);
-  color: #2a2012;
-  background: rgba(140, 112, 76, 0.08);
+  border-color: var(--purple);
+  color: var(--purple-dark);
+  background: var(--purple-bg);
 }
 
 .footer-copyright-row {
   font-size: 0.75rem;
-  color: #62533f;
+  color: var(--text-meta);
   margin: 1rem 0 0;
   padding-top: 1rem;
-  border-top: 1px solid rgba(88, 72, 52, 0.16);
+  border-top: 1px solid var(--warm-border);
 }
 
 .header {
@@ -6963,6 +7107,63 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   color: rgba(255, 255, 255, 0.85);
 }
 
+/* WI-4 (2026-09-07): the primary email card had no surface of its own —
+   only --kakao / --line carried background + border, so the email variant
+   rendered as floating text. Give it a card surface on the brand tokens. */
+.messenger-card--email {
+  grid-column: 1 / -1; /* single card: line up with the features panel below */
+  background: var(--white);
+  border: 1px solid var(--purple-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  color: var(--text-heading);
+  box-shadow: var(--shadow-sm);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.messenger-card--email .messenger-card-platform {
+  color: var(--text-meta);
+  opacity: 1;
+}
+
+.messenger-card--email .messenger-card-desc {
+  color: var(--purple);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.messenger-card--email .messenger-card-arrow {
+  margin-left: auto;
+  align-self: center;
+  color: var(--purple);
+  opacity: 0.75;
+}
+
+.messenger-card--email:hover,
+.messenger-card--email:focus-visible {
+  border-color: var(--purple);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Contact-page card buttons (copy email / AI intake guide): the default
+   secondary gradient is nearly invisible on a white card, so use the forest
+   outline treatment here. */
+.contact-grid .card .button.secondary {
+  background: var(--white);
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+.contact-grid .card .button.secondary:hover,
+.contact-grid .card .button.secondary:focus-visible {
+  background: var(--purple-bg);
+  border-color: var(--purple-dark);
+  color: var(--purple-dark);
+}
+
 .messenger-card-icon {
   flex-shrink: 0;
   width: 52px;
@@ -8685,6 +8886,18 @@ html.js .reveal.is-visible .reveal-stagger > * {
     gap: 2rem;
   }
 
+  /* WI-3: tablet — brand block spans the full first row, link columns wrap
+     two per row beneath it. */
+  .footer-main-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem 2rem;
+  }
+
+  .footer-main-intro {
+    grid-column: 1 / -1;
+    max-width: 40rem;
+  }
+
   .section-dots {
     right: calc((54px / 2 - 18px) + var(--edge-safe-right));
     top: 44%;
@@ -8931,8 +9144,10 @@ html.js .reveal.is-visible .reveal-stagger > * {
     align-items: flex-start;
   }
 
+  /* WI-3: keep the two-column link wrap from the 1024px block; the single
+     column only starts at 640px. */
   .footer-main-grid {
-    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .office-links {
@@ -9000,6 +9215,12 @@ html.js .reveal.is-visible .reveal-stagger > * {
 @media (max-width: 640px) {
   .office-links {
     grid-template-columns: 1fr;
+  }
+
+  /* WI-3: phone — single footer column. */
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .header-main .logo-mark {
@@ -9841,16 +10062,10 @@ html.js .reveal.is-visible .reveal-stagger > * {
 .column-markdown h3.blog-heading {
   border-top: 0;
   padding-top: 0;
-  margin-top: 1.75rem;
+  margin-top: 2rem;
 }
 .column-markdown blockquote { margin-inline: 0; }
 .column-markdown blockquote ul { padding-inline-start: 1.25rem; }
-.column-markdown .blog-paragraph a.link-underline {
-  display: inline;
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
-.column-markdown .blog-paragraph a.link-underline::after { display: none; }
 .column-img-wrap { display: block; margin: 1.5rem 0; }
 .column-table-wrap {
   overflow-x: auto;
@@ -9869,8 +10084,8 @@ html.js .reveal.is-visible .reveal-stagger > * {
   padding: 0.5rem 0.75rem;
   font-size: 0.75rem;
   line-height: 1.45;
-  color: #3d4f63;
-  background: rgba(22, 58, 95, 0.06);
+  color: var(--text-meta);
+  background: var(--purple-bg);
   border-bottom: 1px solid var(--neutral-200);
 }
 .column-table-wrap table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
@@ -9880,8 +10095,65 @@ html.js .reveal.is-visible .reveal-stagger > * {
   white-space: normal;
   overflow-wrap: break-word;
 }
-.column-table-wrap th { background: rgba(22,58,95,0.05); padding: 0.6rem 1rem; text-align: left; font-weight: 600; }
-.column-table-wrap td { padding: 0.6rem 1rem; border-top: 1px solid var(--neutral-100); }
+.column-table-wrap th { background: var(--purple-bg); color: var(--text-heading); padding: 0.6rem 0.8rem; text-align: left; font-weight: 600; }
+.column-table-wrap td { padding: 0.6rem 0.8rem; border-top: 1px solid var(--neutral-100); }
+
+/* WI-7 (2026-09-07): article hierarchy. H2 and H3 both rendered at 20px
+   before; the body keeps the typography-preset size (17px default) instead
+   of the older 0.98rem override. Heading font-family stays with the
+   sans allowlist rule + column presets further down. */
+.blog-body h2.blog-heading {
+  font-size: 1.55rem;
+  line-height: 1.3;
+  margin: 2.5rem 0 1rem;
+}
+.blog-body h3.blog-heading {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin: 2rem 0 0.75rem;
+}
+.column-markdown h4 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin: 1.5rem 0 0.5rem;
+}
+.column-markdown > h2.blog-heading:first-child,
+.column-markdown > h3.blog-heading:first-child {
+  margin-top: 0;
+}
+.column-markdown .blog-paragraph {
+  font-size: inherit;
+}
+.column-markdown ul,
+.column-markdown ol {
+  margin: 0 0 1.25rem;
+  padding-inline-start: 1.4rem;
+}
+.column-markdown li + li {
+  margin-top: 0.35rem;
+}
+.column-markdown li > ul,
+.column-markdown li > ol {
+  margin: 0.35rem 0 0;
+}
+.column-markdown blockquote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 3px solid var(--gold);
+  background: var(--off-white);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text-body);
+}
+.column-markdown blockquote > :last-child {
+  margin-bottom: 0;
+}
+.column-markdown hr {
+  border: 0;
+  border-top: 1px solid var(--border-light);
+  margin: 2rem 0;
+}
 
 /* ===== BUTTON OUTLINE VARIANT ===== */
 .button--outline {

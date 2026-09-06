@@ -124,7 +124,7 @@ export default function ColumnContent({
             );
           },
           h2: ({ children }) => <h2 className="blog-heading">{children}</h2>,
-          h3: ({ children }) => <h3 className="blog-heading" style={{ fontSize: '1.25rem' }}>{children}</h3>,
+          h3: ({ children }) => <h3 className="blog-heading">{children}</h3>,
           p: ({ children }) => {
             // Imported spacer-only paragraphs must not add blank reading lines.
             if (typeof children === 'string' && /^[\s\u200B]*$/.test(children)) return null;

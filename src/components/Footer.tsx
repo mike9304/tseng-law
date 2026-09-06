@@ -176,19 +176,19 @@ export default function Footer({
             <div className="footer-social">
               <span className="social-label">{locale === 'ko' ? '팔로우' : locale === 'zh-hant' ? '追蹤我們' : locale === 'ja' ? 'フォロー' : 'Follow'}</span>
               <div className="social-icons">
-                <a className="social-icon" href="https://blog.naver.com/wei_lawyer/223461663913" aria-label={socialLabels.blog} target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href="https://blog.naver.com/wei_lawyer/223461663913" aria-label={socialLabels.blog} title={socialLabels.blog} target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <path d="M14 2.5l3.5 3.5L7 16.5l-4.5 1 1-4.5L14 2.5z" />
                     <path d="M12 5l3 3" />
                   </svg>
                 </a>
-                <a className="social-icon" href="https://www.youtube.com/@weilawyer" aria-label={socialLabels.youtube} target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href="https://www.youtube.com/@weilawyer" aria-label={socialLabels.youtube} title={socialLabels.youtube} target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <rect x="2" y="4" width="16" height="12" rx="3" />
                     <polygon points="8,7.5 13,10 8,12.5" fill="currentColor" stroke="none" />
                   </svg>
                 </a>
-                <a className="social-icon" href="https://tseng-law.com/" aria-label={socialLabels.website} target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href="https://tseng-law.com/" aria-label={socialLabels.website} title={socialLabels.website} target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <circle cx="10" cy="10" r="8" />
                     <ellipse cx="10" cy="10" rx="3.5" ry="8" />

@@ -36,6 +36,20 @@ function luminance(hex: string): number {
   return 0.2126 * channel(rgb[0]) + 0.7152 * channel(rgb[1]) + 0.0722 * channel(rgb[2]);
 }
 
+const rootTokens = new Map<string, string>();
+for (const match of css.matchAll(/(--[a-z0-9-]+):\s*([^;]+);/gi)) {
+  if (!rootTokens.has(match[1])) rootTokens.set(match[1], match[2].trim());
+}
+
+/** Resolve a literal hex or a var(--token) chain (as declared on :root) to a hex colour. */
+function resolveCssColor(value: string | undefined, depth = 0): string | undefined {
+  if (!value || depth > 8) return undefined;
+  const trimmed = value.trim().replace(/\s*\/\*.*?\*\/\s*$/, '').trim();
+  const ref = trimmed.match(/^var\((--[a-z0-9-]+)\)$/i);
+  if (ref) return resolveCssColor(rootTokens.get(ref[1]), depth + 1);
+  return /^#[0-9a-f]{6}$/i.test(trimmed) ? trimmed : undefined;
+}
+
 function contrastRatio(foreground: string, background: string): number {
   const a = luminance(foreground);
   const b = luminance(background);
@@ -44,11 +58,17 @@ function contrastRatio(foreground: string, background: string): number {
 
 describe('WO-1 accessibility remediation contracts', () => {
   it('1-9 gives footer legal and locale links at least 4.5:1 contrast', () => {
-    const color = css.match(/\.footer-legal-links a\s*\{[\s\S]*?color:\s*(#[0-9a-f]{6});/i)?.[1];
-    const background = css.match(/\.site-footer\s*\{[\s\S]*?background:\s*(#[0-9a-f]{6});/i)?.[1];
+    // WI-3 (2026-09-07): the footer is token-driven now, so resolve
+    // var(--token) references against :root before measuring contrast.
+    const color = resolveCssColor(
+      css.match(/\.footer-legal-links a\s*\{[\s\S]*?color:\s*([^;]+);/i)?.[1],
+    );
+    const background = resolveCssColor(
+      css.match(/\.site-footer\s*\{[\s\S]*?background:\s*([^;]+);/i)?.[1],
+    );
 
-    expect(color).toBeTruthy();
-    expect(background).toBeTruthy();
+    expect(color).toMatch(/^#[0-9a-f]{6}$/i);
+    expect(background).toMatch(/^#[0-9a-f]{6}$/i);
     expect(contrastRatio(color!, background!)).toBeGreaterThanOrEqual(4.5);
   });
 

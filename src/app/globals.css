@@ -48,6 +48,11 @@
   --text-body: #355145;
   --text-secondary: #5f7869;
   --text-caption: #86968b;
+  /* WI-5: AA-safe colour for 12–13px meta text (dates, read-time, breadcrumb,
+     kickers). #556b5c measures 5.76:1 on --white, 5.48:1 on --off-white,
+     5.42:1 on --gray-50, 5.16:1 on --cream (WCAG 2.x, ≥ 4.5:1 everywhere).
+     --gray-400 / --text-caption stay for borders, dividers and decoration. */
+  --text-meta: #556b5c;
   --text-link: #234d3c;
   --text-link-hover: #35634d;
 
@@ -296,9 +301,20 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  word-break: keep-all;
   overflow-wrap: break-word;
   scroll-behavior: smooth;
+}
+
+/* WI-1 (2026-09-06): `word-break: keep-all` is a Korean-only typesetting rule
+   (never split an 어절). Japanese / Traditional Chinese have no inter-word
+   spaces, so keep-all turns every clause into one unbreakable token and the
+   text wraps only at punctuation. English needs nothing beyond the default.
+   Scope keep-all to ko here and per-element below; ja / zh-Hant get
+   `word-break: normal; line-break: strict` in the locale block near the end
+   of this file (after the mobile/desktop CJK overrides). */
+html[lang='ko'],
+.site[data-locale='ko'] {
+  word-break: keep-all;
 }
 
 body {
@@ -321,6 +337,9 @@ a {
 
 p {
   margin: 0;
+}
+
+:where(html[lang='ko']) p {
   word-break: keep-all;
 }
 
@@ -378,8 +397,11 @@ h6 {
   letter-spacing: -0.02em;
   margin: 0;
   line-height: 1.18;
-  word-break: keep-all;
   text-wrap: balance;
+}
+
+:where(html[lang='ko']) :is(h1, h2, h3, h4, h5, h6) {
+  word-break: keep-all;
 }
 
 p,
@@ -709,7 +731,7 @@ h1, h2, h3 {
   align-items: center;
   gap: 0.55rem;
   font-size: 0.82rem;
-  color: var(--text-caption);
+  color: var(--text-meta);
   margin-bottom: var(--space-4);
 }
 
@@ -1062,6 +1084,9 @@ section.home-results-panel--editorial {
   line-height: 1.35;
   color: var(--text-heading);
   margin: 0 0 1.25rem;
+}
+
+:where(html[lang='ko']) .split-title {
   word-break: keep-all;
 }
 
@@ -1078,6 +1103,9 @@ section.home-results-panel--editorial {
   line-height: 1.8;
   color: var(--text-secondary);
   max-width: 540px;
+}
+
+:where(html[lang='ko']) .split-text {
   word-break: keep-all;
 }
 
@@ -2037,7 +2065,7 @@ section.home-results-panel--editorial {
   background: rgba(7, 19, 27, 0.72);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   font: inherit;
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 650;
   line-height: 1.2;
   text-align: left;
@@ -2106,7 +2134,7 @@ section.home-results-panel--editorial {
 .hero-title {
   font-size: clamp(2rem, 4.2vw, 3.3rem);
   line-height: 1.16;
-  font-weight: 400;
+  font-weight: 600; /* WI-9: unified across locales (variable Noto Serif covers 600) */
   margin: 0 0 var(--space-4);
   color: rgba(247, 252, 247, 0.96);
   text-shadow:
@@ -2147,7 +2175,7 @@ section.home-results-panel--editorial {
 .caption {
   font-size: 0.8125rem;
   line-height: 1.5;
-  color: var(--text-caption);
+  color: var(--text-meta);
 }
 
 .hero-typing {
@@ -2194,7 +2222,7 @@ section.home-results-panel--editorial {
 }
 
 .search-input::placeholder {
-  color: var(--text-caption);
+  color: var(--text-meta);
 }
 
 .search-input:focus {
@@ -2215,7 +2243,7 @@ section.home-results-panel--editorial {
 }
 
 .input::placeholder {
-  color: var(--text-caption);
+  color: var(--text-meta);
 }
 
 .input:hover {
@@ -2394,10 +2422,10 @@ section.home-results-panel--editorial {
 }
 
 .hero-highlight-meta {
-  font-size: 0.7rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--text-caption);
+  color: var(--text-meta);
   font-weight: 600;
 }
 
@@ -2583,7 +2611,7 @@ section.home-results-panel--editorial {
 }
 
 .stat-number {
-  font-family: var(--font-mono);
+  font-family: var(--font-body); /* WI-5: no monospace for numerals */
   font-variant-numeric: tabular-nums;
   font-size: clamp(1.45rem, 1vw + 1rem, 2.35rem);
   line-height: 1.2;
@@ -2593,9 +2621,9 @@ section.home-results-panel--editorial {
 .counter,
 .year,
 .phone-number {
-  font-family: var(--font-mono);
+  font-family: var(--font-body); /* WI-5: no monospace for numerals / phone numbers */
   font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .stat-label {
@@ -2744,7 +2772,7 @@ section.home-results-panel--editorial {
   border-top: 1px solid var(--border-light); padding-top: 1rem; margin-top: 0.5rem;
 }
 .services-detail-columns-label {
-  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
   color: var(--accent); display: block; margin-bottom: 0.5rem;
 }
 .services-detail-columns-list {
@@ -2882,7 +2910,7 @@ section.home-results-panel--editorial {
   display: inline-block; width: fit-content;
   padding: 0.2rem 0.6rem; border-radius: 999px;
   background: rgba(255,255,255,0.9); color: var(--accent);
-  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.02em;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em;
   position: absolute;
   left: 1rem;
   bottom: 1rem;
@@ -2900,7 +2928,7 @@ section.home-results-panel--editorial {
   padding: 0 1.4rem;
 }
 .svc-col-card-meta {
-  display: flex; gap: 0.8rem; font-size: 0.75rem; color: var(--text-caption);
+  display: flex; gap: 0.8rem; font-size: 0.75rem; color: var(--text-meta);
   padding: 0 1.4rem;
 }
 .svc-col-card-link {
@@ -2967,7 +2995,7 @@ section.home-results-panel--editorial {
 }
 
 .authority-card-eyebrow {
-  font-size: 0.74rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
@@ -3391,7 +3419,7 @@ section.home-results-panel--editorial {
   display: flex;
   justify-content: space-between;
   font-size: 0.82rem;
-  color: var(--text-caption);
+  color: var(--text-meta);
 }
 
 .feature-title,
@@ -3428,7 +3456,7 @@ section.home-results-panel--editorial {
 
 .major-meta {
   font-size: 0.82rem;
-  color: var(--text-caption);
+  color: var(--text-meta);
   margin-bottom: var(--space-2);
 }
 
@@ -3516,7 +3544,7 @@ section.home-results-panel--editorial {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #fff;
@@ -3541,9 +3569,10 @@ section.home-results-panel--editorial {
 
 .insights-date,
 .insights-readtime {
-  font-family: var(--font-mono);
+  font-family: var(--font-body); /* WI-5: no monospace for dates */
+  font-variant-numeric: tabular-nums;
   font-size: 0.75rem;
-  color: var(--text-secondary);
+  color: var(--text-meta);
 }
 
 .insights-featured-title {
@@ -3673,7 +3702,7 @@ section.home-results-panel--editorial {
   top: auto;
   left: 0.75rem;
   bottom: 0.75rem;
-  font-size: 0.66rem;
+  font-size: 0.75rem; /* WI-5: 12px floor (was 10.56px) */
   padding: 0.24rem 0.56rem;
 }
 
@@ -3752,7 +3781,7 @@ section.home-results-panel--editorial {
 .video-item-meta,
 .search-results-total,
 .search-result-meta {
-  color: var(--text-caption);
+  color: var(--text-meta);
   font-size: 0.82rem;
 }
 
@@ -3765,7 +3794,7 @@ section.home-results-panel--editorial {
   border: 1px solid var(--border-light);
   border-radius: 999px;
   background: var(--gray-50);
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: var(--text-secondary);
 }
 
@@ -4189,7 +4218,7 @@ section.home-results-panel--editorial {
 .firm-intro-source {
   margin: 1rem 0 0;
   font-size: 0.8rem;
-  color: var(--text-caption);
+  color: var(--text-meta);
 }
 
 .firm-intro-source a {
@@ -4362,7 +4391,7 @@ section.home-results-panel--editorial {
 .attorney-card-role { margin: 0.3rem 0 0; font-weight: 600; color: var(--accent); font-size: 0.95rem; }
 .attorney-card-email { font-size: 0.85rem; color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
 .attorney-card-section { margin-top: 0.85rem; }
-.attorney-card-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.3rem; }
+.attorney-card-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.3rem; }
 .attorney-card-source { margin-top: 0.75rem; font-size: 0.75rem; color: var(--text-muted); }
 .attorney-card-cta { margin-top: 0.75rem; }
 .attorney-card-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
@@ -4586,7 +4615,7 @@ section.home-results-panel--editorial {
 }
 
 .warning-label {
-  font-size: 0.73rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-secondary);
@@ -4960,7 +4989,7 @@ section.home-results-panel--editorial {
 
 .office-link-address {
   color: #665642;
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   line-height: 1.45;
   overflow-wrap: anywhere;
   white-space: normal;
@@ -6610,7 +6639,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 
 .office-map-fallback-kicker {
   color: var(--purple);
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 800;
 }
 
@@ -7021,8 +7050,8 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   min-height: 44px;
 }
 
-.faq-question button > span:first-child,
-.faq-question[role='button'] > span:first-child {
+:where(html[lang='ko']) .faq-question button > span:first-child,
+:where(html[lang='ko']) .faq-question[role='button'] > span:first-child {
   word-break: keep-all;
 }
 
@@ -7241,7 +7270,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 .year-end-popup-pill span {
   flex: 0 0 auto;
   color: var(--gold-dim);
-  font-size: 0.7rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 800;
 }
 
@@ -7273,7 +7302,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   background: linear-gradient(135deg, var(--gold) 0%, #d4ab5a 100%);
   color: #fff;
   border: none;
-  font-size: 0.7rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 800;
   letter-spacing: 0.1em;
   box-shadow: 0 2px 8px rgba(181, 140, 66, 0.3);
@@ -7437,7 +7466,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   justify-content: center;
   background: linear-gradient(135deg, var(--gold), #d4ab5a);
   color: #fff;
-  font-size: 0.7rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 700;
 }
 
@@ -7476,7 +7505,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 .year-end-popup-link {
   border: none;
   background: transparent;
-  color: var(--text-caption);
+  color: var(--text-meta);
   font-size: 0.84rem;
   cursor: pointer;
   text-decoration: underline;
@@ -7662,7 +7691,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 }
 
 .quick-contact-list a span {
-  color: var(--text-caption);
+  color: var(--text-meta);
   font-size: 0.75rem;
 }
 
@@ -7693,7 +7722,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 }
 
 .quick-contact-action-btn span {
-  color: var(--text-caption);
+  color: var(--text-meta);
   font-size: 0.75rem;
 }
 
@@ -7810,7 +7839,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 }
 
 .floating-ai-chat-title span {
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -7872,7 +7901,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 
 .floating-ai-chat-contact-item span {
   color: var(--text-secondary);
-  font-size: 0.62rem;
+  font-size: 0.75rem; /* WI-5: 12px floor (was 9.92px) */
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
@@ -8050,7 +8079,7 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .floating-ai-chat-cta-card span {
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: rgba(255, 255, 255, 0.78);
 }
 
@@ -8115,7 +8144,7 @@ a.floating-ai-chat-contact-item:hover strong {
   display: flex;
   align-items: flex-start;
   gap: 0.45rem;
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: var(--text-secondary);
   line-height: 1.5;
   cursor: pointer;
@@ -8126,7 +8155,7 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .floating-ai-chat-error {
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: #b91c1c;
   margin: 0;
 }
@@ -8160,7 +8189,7 @@ a.floating-ai-chat-contact-item:hover strong {
   color: var(--accent-purple);
   border-radius: 4px;
   padding: 0 0.7rem;
-  font-size: 0.7rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
@@ -9083,7 +9112,7 @@ a.floating-ai-chat-contact-item:hover strong {
   display: inline-block;
   background: var(--wine);
   color: #fff;
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -9384,18 +9413,19 @@ a.floating-ai-chat-contact-item:hover strong {
 .columns-card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
 .columns-card-meta { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.75rem; }
 .columns-category-badge {
-  display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.7rem;
+  display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 600; background: rgba(181,140,66,0.12); color: var(--accent);
 }
 .columns-category-badge--image {
   background: rgba(255, 255, 255, 0.9);
   color: var(--accent);
 }
-.columns-date { font-size: 0.75rem; color: var(--neutral-400); }
+.columns-date { font-size: 0.75rem; color: var(--text-meta); font-variant-numeric: tabular-nums; }
 .columns-card-datechip {
-  font-size: 0.74rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: rgba(255, 255, 255, 0.92);
-  font-family: var(--font-mono);
+  font-family: var(--font-body); /* WI-5: no monospace for dates */
+  font-variant-numeric: tabular-nums;
   /* White text on a transparent chip was invisible over bright cover images
      (measured contrast 1.17). Give it the same dark translucent fill family
      as the image overlay so the date stays readable on any cover. */
@@ -9422,7 +9452,7 @@ a.floating-ai-chat-contact-item:hover strong {
   font-size: 0.85rem; color: var(--neutral-500); line-height: 1.6;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; flex: 1;
 }
-.columns-readtime { font-size: 0.75rem; color: var(--neutral-400); margin-top: 0.75rem; }
+.columns-readtime { font-size: 0.75rem; color: var(--text-meta); margin-top: 0.75rem; }
 .columns-card-linkhint {
   display: inline-flex;
   width: fit-content;
@@ -18847,14 +18877,14 @@ button.builder-canvas-coach-pill {
     0 12px 36px rgba(0, 0, 0, 0.36);
 }
 
-:root[data-locale='en'] .hero-title,
+.site[data-locale='en'] .hero-title,
 html[lang='en'] .hero-title {
   font-family: var(--font-heading-en);
   font-weight: 600;
   letter-spacing: 0;
 }
 
-:root[data-locale='zh-hant'] .hero-title,
+.site[data-locale='zh-hant'] .hero-title,
 html[lang='zh-hant'] .hero-title,
 html[lang='zh-Hant'] .hero-title {
   font-family: var(--font-heading-zh);
@@ -19088,10 +19118,10 @@ html[lang='en'] .hero-title,
 html[lang='en'] .page-header-title,
 html[lang='en'] h1.blog-hero-title,
 html[lang='en'] h1.svc-hero-title,
-:root[data-locale='en'] .hero-title,
-:root[data-locale='en'] .page-header-title,
-:root[data-locale='en'] h1.blog-hero-title,
-:root[data-locale='en'] h1.svc-hero-title,
+.site[data-locale='en'] .hero-title,
+.site[data-locale='en'] .page-header-title,
+.site[data-locale='en'] h1.blog-hero-title,
+.site[data-locale='en'] h1.svc-hero-title,
 .site[data-locale='en'] .hero-title,
 .site[data-locale='en'] .page-header-title,
 .site[data-locale='en'] h1.blog-hero-title,
@@ -19107,10 +19137,10 @@ html[lang='zh-hant'] h1.blog-hero-title,
 html[lang='zh-Hant'] h1.blog-hero-title,
 html[lang='zh-hant'] h1.svc-hero-title,
 html[lang='zh-Hant'] h1.svc-hero-title,
-:root[data-locale='zh-hant'] .hero-title,
-:root[data-locale='zh-hant'] .page-header-title,
-:root[data-locale='zh-hant'] h1.blog-hero-title,
-:root[data-locale='zh-hant'] h1.svc-hero-title,
+.site[data-locale='zh-hant'] .hero-title,
+.site[data-locale='zh-hant'] .page-header-title,
+.site[data-locale='zh-hant'] h1.blog-hero-title,
+.site[data-locale='zh-hant'] h1.svc-hero-title,
 .site[data-locale='zh-hant'] .hero-title,
 .site[data-locale='zh-hant'] .page-header-title,
 .site[data-locale='zh-hant'] h1.blog-hero-title,
@@ -22442,10 +22472,15 @@ body:has([data-builder-published-page='true']) {
    ──────────────────────────────────────────────── */
 
 .hero-title {
-  font-weight: 500;
+  /* WI-9: one weight for ko/en/ja/zh-hant (was 500 here, 600 for en only),
+     plus a subtle legibility shadow so the serif holds up over bright video. */
+  font-weight: 600;
   letter-spacing: 0;
   font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
   text-wrap: balance;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.55),
+    0 10px 30px rgba(0, 0, 0, 0.32);
 }
 
 .hero-subtitle {
@@ -24097,7 +24132,9 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
 
 /* ---------------------------------------------------------------------------
  * ja / zh-Hant mobile word-break fix
- * The global `word-break: keep-all` rules above are correct for Korean but
+ * (History: the `word-break: keep-all` rules above were global until WI-1
+ * scoped them to ko; this block is kept as a belt-and-braces mobile override.)
+ * keep-all is correct for Korean but
  * wrong for Japanese and Traditional Chinese: those scripts have no spaces,
  * so an entire sentence becomes one unbreakable token and its min-content
  * width blows out grid tracks past the 390px viewport (horizontal overflow,
@@ -24270,6 +24307,67 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
   word-break: normal;
   overflow-wrap: anywhere;
   min-width: 0;
+}
+
+/* ---------------------------------------------------------------------------
+ * WI-1 (2026-09-06): ja / zh-Hant typesetting at every viewport
+ * keep-all is now Korean-only (see the html[lang='ko'] rules near the top),
+ * so Japanese and Traditional Chinese inherit normal CJK breaking again.
+ * Declare it explicitly on body-text elements so nothing upstream can leak
+ * keep-all back in, add strict kinsoku (`line-break: strict`) and let long
+ * Latin tokens / URLs wrap anywhere. Japanese headings use phrase-aware
+ * breaking (`word-break: auto-phrase`, Chrome 119+) behind a @supports guard;
+ * the fallback stays `normal`. Placed after the mobile/desktop CJK overrides
+ * above so it wins at equal specificity.
+ * ------------------------------------------------------------------------- */
+html[lang='ja'],
+html[lang='zh-Hant'],
+html[lang='zh-hant'],
+.site[data-locale='ja'],
+.site[data-locale='zh-hant'] {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+:where(html[lang='ja'], html[lang='zh-Hant'], html[lang='zh-hant'], .site[data-locale='ja'], .site[data-locale='zh-hant'])
+  :is(p, li, dd, dt, td, th, blockquote, figcaption, summary, .card-text, .card-desc, .split-text, .hero-subtitle, .section-lead, .columns-card-summary, .insights-list-summary, .builder-pub-node) {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+:where(html[lang='ja'], html[lang='zh-Hant'], html[lang='zh-hant'], .site[data-locale='ja'], .site[data-locale='zh-hant'])
+  :is(h1, h2, h3, h4, h5, h6, .hero-title, .split-title, .section-title, .card-title) {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+@supports (word-break: auto-phrase) {
+  :where(html[lang='ja'], .site[data-locale='ja'])
+    :is(h1, h2, h3, h4, h5, h6, .hero-title, .split-title, .section-title, .card-title) {
+    word-break: auto-phrase;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * WI-14 (2026-09-06): eyebrow / kicker / badge tracking on CJK locales
+ * `letter-spacing: 0.12em` + uppercase is a Latin small-caps idiom; applied
+ * to Hangul / Kana / Hanzi runs it reads as scattered glyphs. On ko / ja /
+ * zh-hant pages cap the tracking of the label families at 0.04em. Latin
+ * eyebrows on those pages may stay uppercase — only the tracking changes.
+ * ------------------------------------------------------------------------- */
+:where(html[lang='ko'], html[lang='ja'], html[lang='zh-Hant'], html[lang='zh-hant'],
+       .site[data-locale='ko'], .site[data-locale='ja'], .site[data-locale='zh-hant'])
+  :is(.section-label, .hero .section-label, .hero-highlight-meta, .services-detail-columns-label,
+      .authority-card-eyebrow, .authority-card-label, .insights-category-badge, .insights-page-indicator,
+      .attorney-card-label, .warning-label, .year-end-popup-badge, .blog-category-badge,
+      .svc-col-badge, .columns-category-badge, .home-results-label, .review-label,
+      .review-summary-label, .stat-label, .media-stat-label, .attorney-group-badge,
+      .office-label, .messenger-card-label, .contact-label-spaced, .office-map-fallback-kicker,
+      .consultation-ai-badge, .floating-ai-chat-title span, .floating-ai-chat-contact-item span) {
+  letter-spacing: 0.04em;
 }
 
 /* ==========================================================================

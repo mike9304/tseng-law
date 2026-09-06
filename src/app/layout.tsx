@@ -80,7 +80,19 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {/* WI-13: flag JS availability before any content paints so
+            `html.js .reveal` (globals.css) can hide sections only for real
+            browsers. A plain synchronous inline <script> is required here —
+            next/script `beforeInteractive` defers inline code into the Next
+            runtime queue (`__next_s`), which runs after first paint and would
+            flash content. CSP already allows 'unsafe-inline' for script-src. */}
+        <script
+          id="js-flag"
+          dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

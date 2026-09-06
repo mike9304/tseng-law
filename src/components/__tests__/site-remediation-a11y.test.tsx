@@ -117,7 +117,10 @@ describe('WO-1 accessibility remediation contracts', () => {
   it('1-15 applies sticky-header anchor margins and a safe mobile control stack', () => {
     expect(css).toContain('.site main :where([id])');
     expect(css).toContain('scroll-margin-top: calc(var(--header-offset-desktop) + 16px);');
-    expect(css).toContain(".site:has(.scroll-top[data-visible='true']) main");
+    // WI-12: the back-to-top button is fixed and must not toggle document
+    // height; only the persistent quick-contact stack reserves space.
+    expect(css).toContain('.site:has(.quick-contact) main');
+    expect(css).not.toContain(".site:has(.scroll-top[data-visible='true']) main");
     expect(css).toContain('bottom: calc(4.75rem + env(safe-area-inset-bottom));');
     expect(css).toContain('bottom: calc(1rem + env(safe-area-inset-bottom));');
   });

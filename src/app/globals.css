@@ -991,7 +991,7 @@ h1, h2, h3 {
   border: 1px solid rgba(214, 196, 169, 0.24);
   background:
     radial-gradient(circle at top right, rgba(181, 140, 66, 0.14), transparent 22%),
-    linear-gradient(135deg, #071224 0%, #0a1630 48%, #0c1832 100%);
+    linear-gradient(135deg, var(--purple-dark) 0%, var(--dark-bg) 48%, var(--purple) 100%); /* WI-2: forest plate */
 }
 
 /* Editorial split (composite HomeCaseResultsSplit): image left, ink copy right */
@@ -1000,7 +1000,7 @@ h1, h2, h3 {
   min-height: 786px;
   grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
   border: 1px solid rgba(214, 196, 169, 0.24);
-  background: #071224;
+  background: var(--purple-dark); /* WI-2 */
 }
 
 /* Beat later equal-specificity `.section { padding: clamp(...) }` (and mobile
@@ -1035,7 +1035,7 @@ section.home-results-panel--editorial {
 .home-results-panel--editorial .home-results-content {
   max-width: none;
   justify-content: center;
-  background: #071224;
+  background: var(--purple-dark); /* WI-2 */
 }
 
 .home-results-content {
@@ -1899,7 +1899,7 @@ section.home-results-panel--editorial {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(135deg, #071224 0%, #123b63 100%);
+  background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 100%); /* WI-2 */
   background-position: center;
   background-size: cover;
 }
@@ -4679,6 +4679,67 @@ section.home-results-panel--editorial {
   box-shadow: none;
 }
 
+/* WI-8: home closing CONTACT band — one filled primary action, quieter
+   ghost/secondary siblings, and breathing room before the fine print.
+   Markup (HomeContactCta.tsx + builder decompose-contact) renders the first
+   action as `.button.ghost`; builder-published pages reuse these classes, so
+   both the direct-child and the ghost-class hooks are covered. */
+.home-contact-cta .home-contact-actions {
+  gap: 0.75rem 0.9rem;
+  align-items: center;
+}
+
+/* Inverted primary: the band itself is forest (#0c1c14→#12291d), so a
+   `--purple` fill measured ~1.2:1 against it and read as a third outline
+   button. Off-white fill + forest text keeps the brand colour on the label
+   and gives the only clearly "filled" action in the row. */
+.home-contact-cta .home-contact-actions > .button:first-child,
+.home-contact-cta .button.ghost {
+  background: var(--off-white);
+  border-color: var(--off-white);
+  color: var(--purple);
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.home-contact-cta .home-contact-actions > .button:first-child:hover,
+.home-contact-cta .home-contact-actions > .button:first-child:focus-visible,
+.home-contact-cta .button.ghost:hover,
+.home-contact-cta .button.ghost:focus-visible {
+  background: #fff;
+  border-color: #fff;
+  color: var(--purple-dark);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+}
+
+.home-contact-cta .home-contact-actions > .button:not(:first-child),
+.home-contact-cta .button.secondary {
+  background: transparent;
+  border-color: rgba(233, 242, 234, 0.36);
+  color: rgba(255, 255, 255, 0.92);
+  box-shadow: none;
+}
+
+.home-contact-cta .home-contact-actions > .button:not(:first-child):hover,
+.home-contact-cta .home-contact-actions > .button:not(:first-child):focus-visible,
+.home-contact-cta .button.secondary:hover,
+.home-contact-cta .button.secondary:focus-visible {
+  background: rgba(233, 242, 234, 0.1);
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #fff;
+}
+
+/* Fine print / AI-intake supporting copy sits under the button row. */
+.home-contact-cta .home-contact-actions + .section-lede,
+.home-contact-cta .home-contact-actions ~ p {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  max-width: 62ch;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(233, 242, 234, 0.72);
+}
+
 .footer {
   background:
     radial-gradient(circle at top right, rgba(137, 167, 125, 0.12), transparent 28%),
@@ -4865,18 +4926,18 @@ section.home-results-panel--editorial {
 }
 
 .footer-consultation-email-link {
-  color: #123b63;
+  color: var(--purple); /* WI-2 */
   font-size: 0.92rem;
   font-weight: 650;
   overflow-wrap: anywhere;
   text-decoration: underline;
-  text-decoration-color: rgba(18, 59, 99, 0.4);
+  text-decoration-color: var(--purple-light);
   text-underline-offset: 0.22em;
 }
 
 .footer-consultation-email-link:hover,
 .footer-consultation-email-link:focus-visible {
-  color: #0b2c4b;
+  color: var(--purple-dark);
   text-decoration-color: currentColor;
 }
 
@@ -4887,10 +4948,10 @@ section.home-results-panel--editorial {
   gap: 0.35rem;
   min-height: 44px;
   padding: 0.4rem 0.7rem;
-  border: 1px solid rgba(18, 59, 99, 0.32);
+  border: 1px solid rgba(22, 56, 45, 0.32); /* WI-2: --purple @ .32 */
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.32);
-  color: #123b63;
+  color: var(--purple);
   cursor: pointer;
   font: inherit;
   font-size: 0.78rem;
@@ -4903,9 +4964,9 @@ section.home-results-panel--editorial {
 
 .footer-consultation-email-copy:hover,
 .footer-consultation-email-copy:focus-visible {
-  border-color: rgba(18, 59, 99, 0.62);
+  border-color: rgba(22, 56, 45, 0.62);
   background: rgba(255, 255, 255, 0.58);
-  color: #0b2c4b;
+  color: var(--purple-dark);
 }
 
 .footer-consultation-email-status {
@@ -5544,17 +5605,17 @@ section.home-results-panel--editorial {
   border-radius: 4px;
   font-size: 0.85rem;
   white-space: nowrap;
-  background: #1c3e2f;
+  background: var(--purple); /* WI-2: single primary (= .hero-cta-primary) */
   color: #f4f8f1;
-  border: 1px solid #1c3e2f;
+  border: 1px solid var(--purple);
   box-shadow: none;
   transform: none;
 }
 
 .nav-cta.button:hover,
 .nav-cta.button:focus-visible {
-  background: #0b1d14;
-  border-color: #0b1d14;
+  background: var(--purple-dark);
+  border-color: var(--purple-dark);
   color: #fff;
   box-shadow: none;
   transform: none;
@@ -8251,13 +8312,16 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .scroll-top {
+  /* WI-2/WI-12: brand token, 44px target, fixed with zero layout footprint */
   position: fixed;
   right: var(--right-rail-offset);
   bottom: clamp(1rem, 2vw, 2rem);
   width: 44px;
   height: 44px;
+  margin: 0;
   border: none;
-  background: rgba(13, 24, 39, 0.88);
+  border-radius: 4px;
+  background: var(--purple);
   color: #fff;
   font-size: 1.1rem;
   display: inline-flex;
@@ -8280,7 +8344,7 @@ a.floating-ai-chat-contact-item:hover strong {
 
 .scroll-top:hover,
 .scroll-top:focus-visible {
-  background: var(--purple);
+  background: var(--purple-dark);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -8434,35 +8498,45 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translate3d(0, 10px, 0);
-  pointer-events: none;
   transition:
     opacity 420ms cubic-bezier(0.16, 1, 0.3, 1),
     transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal.is-visible {
+/* WI-13: progressive enhancement — the hidden pre-reveal pose is gated on
+   `html.js`, which the root layout sets with a synchronous inline script
+   before first paint. Without JS (or before it runs, in reader modes, in
+   print) content ships visible in the SSR HTML. */
+html.js .reveal {
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  pointer-events: none;
+}
+
+html.js .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
 .reveal-stagger > * {
-  opacity: 0;
-  transform: translate3d(0, 14px, 0);
   transition:
     opacity 380ms cubic-bezier(0.16, 1, 0.3, 1),
     transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal-stagger.visible > *,
-.reveal-stagger.is-visible > * {
+html.js .reveal-stagger > * {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+}
+
+html.js .reveal-stagger.visible > *,
+html.js .reveal-stagger.is-visible > * {
   opacity: 1;
   transform: translateY(0);
 }
 
-.reveal.is-visible .reveal-stagger > * {
+html.js .reveal.is-visible .reveal-stagger > * {
   opacity: 1;
   transform: translateY(0);
 }
@@ -8510,6 +8584,16 @@ a.floating-ai-chat-contact-item:hover strong {
     transform: none;
     pointer-events: auto;
     transition: none;
+  }
+}
+
+@media print {
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    transition: none !important;
   }
 }
 
@@ -8713,8 +8797,10 @@ a.floating-ai-chat-contact-item:hover strong {
     scroll-margin-top: 88px;
   }
 
-  .site:has(.quick-contact) main,
-  .site:has(.scroll-top[data-visible='true']) main {
+  /* WI-12: the back-to-top button is position:fixed and must not change
+     document height when it appears — only the (persistent) quick-contact
+     stack reserves space below <main>. */
+  .site:has(.quick-contact) main {
     padding-bottom: calc(7rem + env(safe-area-inset-bottom));
   }
 
@@ -8724,8 +8810,13 @@ a.floating-ai-chat-contact-item:hover strong {
   }
 
   .scroll-top {
-    right: max(1.3rem, env(safe-area-inset-right));
+    right: max(1rem, env(safe-area-inset-right));
     bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+
+  /* Keep the last footer line clear of the fixed back-to-top button. */
+  .footer-copyright-row {
+    padding-right: 3.75rem;
   }
 
   .floating-ai-chat {
@@ -9002,6 +9093,37 @@ a.floating-ai-chat-contact-item:hover strong {
   }
 }
 
+/* WI-12: mobile tap targets (≤640px) — footer legal links, drawer utility
+   chips (the desktop utility bar is display:none below 1024px, the drawer
+   chips are its mobile counterpart) and FAQ toggles reach a 44px hit area
+   without touching desktop density. */
+@media (max-width: 640px) {
+  .footer-legal-links {
+    gap: 0.25rem 1rem;
+  }
+
+  .footer-legal-links a,
+  .footer-legal-links .footer-locale-switch {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .drawer-utilities .chip {
+    min-height: 44px;
+  }
+
+  .drawer-member-nav a,
+  .drawer-member-nav button {
+    min-height: 44px;
+  }
+
+  .faq-question button,
+  .faq-question[role='button'] {
+    min-height: 48px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-brain-canvas {
     opacity: 0.34;
@@ -9025,6 +9147,7 @@ a.floating-ai-chat-contact-item:hover strong {
     animation-iteration-count: 1 !important;
   }
 
+  html.js .reveal,
   .reveal {
     opacity: 1;
     transform: none;
@@ -9032,6 +9155,7 @@ a.floating-ai-chat-contact-item:hover strong {
     transition: none;
   }
 
+  html.js .reveal-stagger > *,
   .reveal-stagger > * {
     opacity: 1;
     transform: none;
@@ -14464,7 +14588,7 @@ a.floating-ai-chat-contact-item:hover strong {
 
 .builder-shell-button:hover:not(:disabled) {
   border-color: rgba(45, 92, 72, 0.32);
-  color: #123b63;
+  color: var(--purple);
 }
 
 .builder-shell-button:disabled {
@@ -24380,9 +24504,10 @@ html[lang='zh-hant'],
 /* Keep a lightweight resilient fallback when image playback is unavailable.
    The overlay remains darkest at the copy edge. */
 .hero-media {
+  /* WI-2: forest scrim over a neutral plate (navy retired) */
   background:
-    linear-gradient(135deg, rgba(18, 59, 99, 0.46), rgba(52, 72, 87, 0.16)),
-    #81939d;
+    linear-gradient(135deg, rgba(22, 56, 45, 0.46), rgba(56, 77, 63, 0.16)),
+    var(--gray-500);
   background-position: center 48%;
 }
 
@@ -24390,10 +24515,10 @@ html[lang='zh-hant'],
   background:
     linear-gradient(
       90deg,
-      rgba(5, 18, 35, 0.80) 0%,
-      rgba(7, 25, 46, 0.68) 38%,
-      rgba(8, 28, 50, 0.40) 64%,
-      rgba(8, 28, 50, 0.14) 100%
+      rgba(8, 22, 16, 0.80) 0%,
+      rgba(13, 34, 26, 0.68) 38%,
+      rgba(13, 34, 26, 0.40) 64%,
+      rgba(13, 34, 26, 0.14) 100%
     );
 }
 
@@ -24401,8 +24526,8 @@ html[lang='zh-hant'],
   .hero::before {
     background: linear-gradient(
       90deg,
-      rgba(5, 18, 35, 0.74),
-      rgba(8, 28, 50, 0.62)
+      rgba(8, 22, 16, 0.74),
+      rgba(13, 34, 26, 0.62)
     );
   }
 }
@@ -24444,23 +24569,24 @@ html[lang='zh-hant'],
 }
 
 .hero-cta-primary {
+  /* WI-2: one primary — same token as the header CTA (.nav-cta.button) */
   color: #fff;
-  background: #123b63;
-  border: 1px solid #123b63;
-  box-shadow: 0 10px 24px rgba(4, 18, 34, 0.24);
+  background: var(--purple);
+  border: 1px solid var(--purple);
+  box-shadow: 0 10px 24px rgba(6, 18, 12, 0.24);
 }
 
 .hero-cta-primary:hover,
 .hero-cta-primary:focus-visible {
   color: #fff;
-  background: #0d2f50;
-  border-color: #dce8f2;
-  box-shadow: 0 12px 28px rgba(4, 18, 34, 0.3);
+  background: var(--purple-dark);
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 28px rgba(6, 18, 12, 0.3);
 }
 
 .hero-cta-secondary {
   color: #fff;
-  background: rgba(7, 25, 46, 0.2);
+  background: rgba(13, 34, 26, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.82);
   box-shadow: none;
 }
@@ -24556,7 +24682,7 @@ html[lang='zh-hant'],
   flex-direction: column;
   padding: 1.35rem;
   background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(18, 59, 99, 0.14);
+  border: 1px solid rgba(22, 56, 45, 0.14); /* WI-2 */
   border-radius: 8px;
   overflow: visible;
   transition:
@@ -24570,8 +24696,8 @@ html[lang='zh-hant'],
 :is(#practice, .services-bento) .services-card:focus-within {
   transform: translateY(-4px);
   background: #fff;
-  border-color: rgba(18, 59, 99, 0.3);
-  box-shadow: 0 14px 30px rgba(7, 25, 46, 0.1);
+  border-color: rgba(22, 56, 45, 0.3);
+  box-shadow: 0 14px 30px rgba(12, 24, 17, 0.1);
 }
 
 :is(#practice, .services-bento) .services-card-header {
@@ -24616,14 +24742,14 @@ html[lang='zh-hant'],
   padding: 0;
   border-radius: 0;
   background: transparent;
-  color: #123b63;
+  color: var(--purple); /* WI-2 */
   font-size: 0.86rem;
   font-weight: 700;
 }
 
 :is(#practice, .services-bento) .services-card-link:hover,
 :is(#practice, .services-bento) .services-card-link:focus-visible {
-  color: #0d2f50;
+  color: var(--purple-dark);
   background: transparent;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -24645,16 +24771,16 @@ html[lang='zh-hant'],
   position: relative;
   min-height: 100%;
   background:
-    linear-gradient(135deg, rgba(18, 59, 99, 0.26), rgba(7, 18, 36, 0.08)),
-    #d7dde2;
+    linear-gradient(135deg, rgba(22, 56, 45, 0.26), rgba(13, 34, 26, 0.08)),
+    var(--gray-200); /* WI-2 */
 }
 
 .home-results-media-fallback {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(120deg, rgba(18, 59, 99, 0.3), rgba(7, 18, 36, 0.08)),
-    #d7dde2;
+    linear-gradient(120deg, rgba(22, 56, 45, 0.3), rgba(13, 34, 26, 0.08)),
+    var(--gray-200); /* WI-2 */
 }
 
 .home-results-panel--editorial .home-results-media-img {

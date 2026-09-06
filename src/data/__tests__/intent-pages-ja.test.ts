@@ -67,6 +67,15 @@ describe('Japanese intent landing pages', () => {
       '대만 소송 변호사 | 민사·형사·노동 한국어 대응',
     );
   });
+
+  it.each(intentPageSlugs)('separates a brief first email from later documents for %s', (slug) => {
+    const page = getIntentPage('ja', slug);
+
+    expect(page?.prepareChecklist[0]).toContain('初回の簡潔な概要');
+    expect(page?.prepareChecklist.slice(1).join(' ')).toContain('後ほど');
+    expect(page?.prepareChecklist[0]).not.toContain('診断書');
+    expect(page?.prepareChecklist[0]).not.toContain('旅券');
+  });
 });
 
 describe('Japanese Taiwan company setup guide', () => {

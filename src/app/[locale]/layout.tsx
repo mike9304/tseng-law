@@ -9,7 +9,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollTopButton from '@/components/ScrollTopButton';
 import QuickContactWidget from '@/components/QuickContactWidget';
-import YearEndEventPopup from '@/components/YearEndEventPopup';
 import CinematicRouteShell from '@/components/CinematicRouteShell';
 import VisitTracker from '@/components/metrics/VisitTracker';
 import {
@@ -93,11 +92,6 @@ export default async function LocaleLayout(
           ) : null
         }
         scrollTop={<ScrollTopButton locale={locale as never} />}
-        eventPopup={
-          !hideJaProductChrome ? (
-            <YearEndEventPopup locale={toBuilderLocale(locale)} />
-          ) : null
-        }
       >
         {children}
       </CinematicRouteShell>

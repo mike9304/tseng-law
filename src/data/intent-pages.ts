@@ -422,20 +422,20 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     'taiwan-lawyer': {
       slug: 'taiwan-lawyer',
       label: 'SEARCH GUIDE',
-      title: 'Taiwan Lawyer Guide',
+      title: 'Taiwan Lawyer for Litigation, Company Setup & Business Advice',
       description:
-        'English-speaking Taiwan lawyer for expats and foreigners in Taiwan: consultation scope, process, and related services for company setup, investment, and disputes.',
-      keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners', 'English speaking lawyer in Taipei'],
-      searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for Korean clients', 'English speaking lawyer Taipei'],
+        'Taiwan legal support for overseas companies and individuals on litigation, company setup, and business advice, with consultations in English.',
+      keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for overseas clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners', 'English speaking lawyer in Taipei'],
+      searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for overseas clients', 'English speaking lawyer Taipei'],
       heroPoints: [
-        'This page connects Korean and international clients to Taiwan legal support for company setup, investment, and disputes.',
+        'This page connects overseas and international clients to Taiwan legal support for company setup, investment, and disputes.',
         'Initial fact review, document analysis, procedure planning, and dispute handling can be assessed in one flow.',
         'You can review Attorney Wei Tseng’s profile, columns, and public channels from the same entry point.',
         'The firm is based in Taipei and works with international clients on Taiwan company setup, disputes, employment, and regulatory matters.',
         'Consultations are available in English, in person or by video.',
       ],
       idealFor: [
-        'Clients who want Taiwan legal issues explained in Korean or multilingual terms',
+        'Clients who want Taiwan legal issues explained in English or another working language',
         'Businesses that need a Taiwan lawyer for incorporation or investment matters',
         'Individuals dealing with civil, criminal, traffic, divorce, or inheritance disputes in Taiwan',
         'Anyone who wants to understand consultation steps and materials before reaching out',
@@ -444,7 +444,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       reviewPoints: [
         'Jurisdiction, timing, and evidence strategy vary by case type.',
-        'For Korean companies, Taiwan procedure often needs to be aligned with head-office structure.',
+        'For overseas companies, Taiwan procedure often needs to be aligned with headquarters or home-jurisdiction structure.',
         'Foreign-national matters frequently require attention to service, powers of attorney, and immigration issues.',
         'Legal analysis and practical enforceability should be reviewed together.',
       ],
@@ -454,13 +454,13 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'After consultation, split the matter into items that can move immediately and items that still require fact or document confirmation.',
       ],
       prepareChecklist: [
-        'Contracts, emails, chat records, quotations, and payment records',
-        'Counterparty identity, company name, address, and representative details',
-        'Key dates, current status, and any urgent deadlines',
-        'Photos, videos, medical records, registry documents, or other core evidence',
+        'Brief initial summary: the issue or business model, the Taiwan connection, key dates or a deadline, preferred language, and how we can reach you',
+        'Organize for later attorney instructions: contracts, emails, chat records, quotations, and payment records — do not send originals in the first email',
+        'Organize for later: counterparty identity, company name, address, and representative details',
+        'Organize for later: photos, videos, registry documents, or other core evidence; medical or bank records only after the attorney asks for them',
       ],
       cautionPoints: [
-        'A process that feels standard in Korea may work differently in Taiwan.',
+        'A process that feels standard in a home jurisdiction may work differently in Taiwan.',
         'Clients often focus on translation but miss format or power-of-attorney requirements.',
         'If early contact records are not organized, later proof becomes harder.',
         'Visa or immigration status can sometimes affect litigation or meeting logistics.',
@@ -471,7 +471,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: 'What should I check first when looking for a Taiwan lawyer?',
           answer:
-            'Start with the case type and the lawyer’s language and procedural fit. For Korean clients, Korean communication, Taiwan local procedure experience, and document-handling capability all matter.',
+            'Start with the case type and the lawyer’s language and procedural fit. For overseas and international clients, English or multilingual communication, Taiwan local procedure experience, and document-handling capability all matter.',
         },
         {
           question: 'Can consultation begin while I am still outside Taiwan?',
@@ -481,7 +481,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: 'What materials are useful before consultation?',
           answer:
-            'Contracts, notices, counterpart details, timelines, and key evidence such as photos, videos, or medical records are the most useful starting materials.',
+            'Start with a brief summary of the issue or business, the Taiwan connection, key dates or a deadline, preferred language, and contact details. Contracts, notices, counterpart details, and other evidence can be organized for later attorney instructions.',
         },
         {
           question: 'How much does a consultation cost?',
@@ -496,17 +496,17 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     'taiwan-company-setup-lawyer': {
       slug: 'taiwan-company-setup-lawyer',
       label: 'SEARCH GUIDE',
-      title: 'Taiwan Company Setup Lawyer Guide',
-      description: 'A focused guide on how a Taiwan company setup lawyer helps with investment approval, entity choice, permits, and operating risk.',
+      title: 'Taiwan Company Setup Lawyer for Overseas Businesses',
+      description: 'A focused guide on how a Taiwan company setup lawyer helps overseas businesses with entity choice, investment approval, registration, and operating contracts.',
       keywords: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer', 'Wei Tseng attorney', 'Taiwan subsidiary branch'],
       searchTerms: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer'],
       heroPoints: [
-        'Entity choice, investment approval, capital remittance, registration, and permits should be reviewed as one process.',
-        'The guide explains subsidiary, branch, and representative-office choices from the perspective of Korean clients entering Taiwan.',
+        'Entity choice, investment approval, capital remittance, registration, and operating contracts should be reviewed as one process.',
+        'The guide explains subsidiary, branch, and representative-office choices from the perspective of overseas parents and investors entering Taiwan.',
         'Post-incorporation issues such as visas, trademarks, contracts, and labor risk can be planned from the start.',
       ],
       idealFor: [
-        'Businesses deciding which Taiwan entity structure fits the Korean parent',
+        'Businesses deciding which Taiwan entity structure fits the overseas parent or investor',
         'Teams comparing branch versus subsidiary setup',
         'Companies entering regulated sectors such as cosmetics or logistics',
         'Clients who want setup, visas, trademarks, and employment issues reviewed together',
@@ -523,10 +523,10 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'Map the sequence after registration as well, including banking, tax, visas, trademarks, and employment documents.',
       ],
       prepareChecklist: [
-        'Korean parent-company registry documents, shareholder structure, and director details',
-        'Planned business scope, operating model, and candidate Taiwan address',
-        'Expected capital amount, remittance plan, and hiring plan in Taiwan',
-        'Any permit, product, or sector-specific regulatory information already identified',
+        'Brief initial summary: the planned Taiwan business model, the overseas parent or investor, key dates or a deadline, preferred language, and contact details',
+        'Organize for later attorney instructions: overseas parent or investor registry documents, shareholder structure, and director details — do not send originals in the first email',
+        'Organize for later: planned business scope, operating model, candidate Taiwan address, and operating contracts',
+        'Organize for later: expected capital amount, remittance plan, hiring plan in Taiwan, and any permit or sector-specific information already identified',
       ],
       cautionPoints: [
         'If the industry code does not match the real business model, permit work may stall later.',
@@ -562,19 +562,19 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     'taiwan-litigation-lawyer': {
       slug: 'taiwan-litigation-lawyer',
       label: 'SEARCH GUIDE',
-      title: 'Taiwan Litigation Lawyer Guide',
-      description: 'A practical guide for clients looking for a Taiwan litigation lawyer for civil claims, damages, criminal matters, and family disputes.',
+      title: 'Taiwan Litigation Lawyer for Contract Disputes & Civil Claims',
+      description: 'A practical guide for overseas companies and individuals looking for a Taiwan litigation lawyer for contract disputes, unpaid invoices, civil claims, criminal matters, and family disputes.',
       keywords: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan criminal lawyer', 'Wei Tseng attorney', 'sue a company in Taiwan', 'Taiwan debt recovery lawyer', 'Taiwan commercial dispute lawyer'],
       searchTerms: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan debt recovery', 'sue a Taiwanese company'],
       heroPoints: [
-        'The page covers civil litigation, damages claims, traffic accidents, criminal procedure, and family disputes.',
+        'We handle Taiwan contract disputes and unpaid invoices, as well as civil claims, criminal matters, and family disputes according to the case.',
         'Foreign-national matters often require combined review of evidence, translation, service, and immigration-related issues.',
         'Attorney Wei Tseng’s related case references and columns are linked directly for context.',
       ],
       idealFor: [
         'Clients dealing with accidents, damages, or contract disputes in Taiwan',
         'People who need criminal-complaint strategy or police-investigation support',
-        'Cross-border divorce, custody, or inheritance matters involving Korea and Taiwan',
+        'Cross-border divorce, custody, or inheritance matters involving a home jurisdiction and Taiwan',
         'Cases where pre-litigation settlement and evidence strategy need to be reviewed early',
         'Overseas companies with unpaid invoices or contract breaches by a Taiwanese counterparty',
         'International clients who need a Taiwan court or settlement strategy managed remotely',
@@ -591,10 +591,10 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'Review settlement potential, evidence gaps, and attendance requirements before choosing the first procedural step.',
       ],
       prepareChecklist: [
-        'A written timeline, contracts, and call or chat records',
-        'Medical reports, photos, videos, receipts, and police materials',
-        'Counterparty personal or company identification details',
-        'Any existing investigation, court case, or settlement discussion already underway',
+        'Brief initial summary: the contract or claim issue, the Taiwan connection, key dates or a deadline, preferred language, and contact details',
+        'Organize for later attorney instructions: a written timeline, contracts, and call or chat records — do not send originals in the first email',
+        'Organize for later: counterparty personal or company identification details needed for the matter',
+        'Organize for later: photos, videos, receipts, police materials, and any existing investigation, court case, or settlement discussion; medical or bank records only after the attorney asks for them',
       ],
       cautionPoints: [
         'If the first narrative changes later, credibility can drop quickly.',
@@ -611,7 +611,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       faq: [
         {
-          question: 'Can a Taiwan litigation matter start while I am still in Korea?',
+          question: 'Can a Taiwan litigation matter start while I am still overseas?',
           answer:
             'Yes. Early review can begin remotely once the core documents, timeline, and authorization structure are organized.',
         },
@@ -675,10 +675,10 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '相談後すぐに進められる段階と追加確認が必要な段階に分けて、実際の実行順序をご提案します。',
       ],
       prepareChecklist: [
-        '契約書、メール、メッセンジャーのやり取り、見積書、送金記録',
-        '相手方の基本情報と会社名・住所・代表者情報',
-        '事件発生日、現在の進行状況、急ぎのスケジュール',
-        '写真・動画・診断書・登記簿などの核心となる証拠',
+        '初回の簡潔な概要：争点または事業モデル、台湾との接点、重要な日付・期限、希望言語、連絡先',
+        '後ほど弁護士の案内に従って整理する資料：契約書、メール、メッセンジャーのやり取り、見積書、送金記録（原本は初回メールに添付しない）',
+        '後ほど整理する情報：相手方の基本情報と会社名・住所・代表者情報',
+        '後ほど整理する証拠：写真・動画・登記簿などの核心資料。診断書や口座情報などの機微情報は、弁護士の指示後にのみご提出ください',
       ],
       cautionPoints: [
         '日本で一般的な方法が台湾の手続きと異なる場合があります。',
@@ -733,10 +733,10 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '登記後の銀行、税務、ビザ、商標、雇用契約まで続くスケジュールを一度に設計します。',
       ],
       prepareChecklist: [
-        '日本本社の登記書類、株主構成、代表者情報',
-        '予定業種、営業モデル、台湾の営業住所候補',
-        '予定資本金、送金計画、現地人材採用の有無',
-        '必要な許認可または製品・サービス規制情報',
+        '初回の簡潔な概要：予定している台湾の事業モデル、海外の親会社または投資者、重要な日付・期限、希望言語、連絡先',
+        '後ほど弁護士の案内に従って整理する資料：日本本社または海外投資者の登記書類、株主構成、代表者情報（原本は初回メールに添付しない）',
+        '後ほど整理する情報：予定業種、営業モデル、台湾の営業住所候補、運営契約',
+        '後ほど整理する情報：予定資本金、送金計画、現地人材採用の有無、必要な許認可または製品・サービス規制情報',
       ],
       cautionPoints: [
         '業種コードと実際の事業内容が異なると許可段階で遅れることがあります。',
@@ -773,11 +773,11 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       slug: 'taiwan-litigation-lawyer',
       label: '検索ガイド',
       title: '台湾訴訟弁護士｜民事・労働・家事 日本語対応',
-      description: '台湾での民事訴訟、損害賠償、労働紛争、刑事対応、離婚・相続について、日本企業・在台日本人の方が最初に確認すべきポイントをまとめました。日本語で直接ご相談いただけます。',
+      description: '台湾での契約紛争・未払い請求、民事訴訟、損害賠償、労働紛争、刑事対応、離婚・相続について、日本企業・在台日本人の方が最初に確認すべきポイントをまとめました。日本語で直接ご相談いただけます。',
       keywords: ['台湾訴訟弁護士', '台湾民事訴訟弁護士', '台湾損害賠償弁護士', '台湾刑事訴訟弁護士', '曾雋崴弁護士'],
       searchTerms: ['台湾訴訟弁護士', '台湾民事訴訟弁護士', '台湾損害賠償弁護士'],
       heroPoints: [
-        '民事訴訟、損害賠償、交通事故、刑事手続き、離婚・相続紛争まで案件類型別の対応の流れを整理します。',
+        '台湾の契約紛争・未払い請求のほか、民事訴訟、損害賠償、交通事故、刑事手続き、離婚・相続紛争まで、案件類型別の対応の流れを整理します。',
         '外国人案件は証拠確保、翻訳、送達、出入国の問題をあわせて検討する必要があります。',
         '曾雋崴台湾弁護士の関連事例とコラムをあわせてつなぎ、実際の判断基準をご確認いただけます。',
       ],
@@ -799,10 +799,10 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '示談の可能性、証拠の不足部分、出席が必要な段階まであわせて検討し、対応戦略を分けます。',
       ],
       prepareChecklist: [
-        '事件経緯書、契約書、通話・メッセンジャー記録',
-        '診断書、写真、動画、領収書、警察資料',
-        '相手方の身分事項または会社情報',
-        '現在進行中の捜査・裁判・示談の有無',
+        '初回の簡潔な概要：契約または請求の争点、台湾との接点、重要な日付・期限、希望言語、連絡先',
+        '後ほど弁護士の案内に従って整理する資料：事件経緯書、契約書、通話・メッセンジャー記録（原本は初回メールに添付しない）',
+        '後ほど整理する情報：相手方の身分事項または会社情報',
+        '後ほど整理する証拠：写真、動画、領収書、警察資料、現在進行中の捜査・裁判・示談の有無。診断書や口座情報などの機微情報は、弁護士の指示後にのみご提出ください',
       ],
       cautionPoints: [
         '初期の陳述と提出資料が覆ると信頼性が大きく下がります。',

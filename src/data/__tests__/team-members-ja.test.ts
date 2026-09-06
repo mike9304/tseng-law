@@ -99,7 +99,7 @@ describe('Japanese team content', () => {
 
     expect(japanese.description).toContain('パラリーガル');
     expect(japanese.story[0]).toBe(
-      '昊鼎国際法律事務所では、韓国・日本のクライアントによる台湾への投資や、台湾での訴訟・法律相談を支援する実務チームを編成しています。',
+      '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。英語・日本語・韓国語・中国語でご相談いただけます。',
     );
     expect(lead?.intro[1]).toBe(
       '韓国人留学生のジムでの負傷に関する損害賠償請求事件を代理し、一審で157万TWDの損害賠償を認める判決を得た実績があります。',
@@ -128,7 +128,7 @@ describe('Japanese team content', () => {
       education: ['東海大學法律學系學士'],
     });
     expect(teamContent.en.story[0]).toBe(
-      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for Korean and Japanese clients.',
+      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Japanese, Korean, and Chinese available.',
     );
   });
 });

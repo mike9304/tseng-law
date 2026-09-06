@@ -63,7 +63,7 @@ const expectedJapaneseFaq = [
   {
     question: '相談はどのような方式で行われますか？',
     answer:
-      '台北事務所での対面相談またはビデオ通話による相談に対応しており、韓国語・中国語・日本語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずお問い合わせページから案件の概要と主な資料を送り、日程、相談方法、担当言語および費用をご確認ください。連絡はメールから行えます。',
+      '台北事務所での対面相談またはビデオ通話による相談に対応しており、英語・韓国語・中国語・日本語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずは案件の簡潔な概要をお送りください。その他の資料は弁護士の案内後にご提出ください。連絡はメールから行えます。',
   },
   {
     question: '物流・化粧品などの規制業種でも台湾で会社を設立できますか？',
@@ -75,8 +75,10 @@ const expectedJapaneseFaq = [
 const untouchedLocaleHashes = {
   ko: '2dc44723fac9451b002a0e04564453951cd508581fb375806277ecd6f8016c93',
   'zh-hant': '01fe893af3d34bc3e2edcd1ac94ec903df2c29a715f8e11825dfcba47175dd4f',
-  en: '0107771e2445146b36c8cf59bf7e9fe93abac4e909e3ccb24fb014314e010cc5',
 } as const;
+
+const reviewedEnglishFaqBaselineHash =
+  '39c439fc82130aafcb59df45377e72c28c1c25bed5a7ac7447cc66327e7cad40';
 
 const forbiddenRegressions = [
   '①投資許可の申請 → ②会社名',
@@ -102,7 +104,7 @@ describe('Japanese public FAQ factual consistency', () => {
     expect(faqContent.ja).toEqual(expectedJapaneseFaq);
   });
 
-  it('keeps the Korean, Traditional Chinese, and English FAQ data byte-stable', () => {
+  it('keeps the Korean and Traditional Chinese FAQ data byte-stable', () => {
     for (const [locale, expectedHash] of Object.entries(untouchedLocaleHashes)) {
       const digest = createHash('sha256')
         .update(JSON.stringify(faqContent[locale as keyof typeof untouchedLocaleHashes]))
@@ -110,6 +112,23 @@ describe('Japanese public FAQ factual consistency', () => {
 
       expect(digest, `${locale} FAQ content changed`).toBe(expectedHash);
     }
+  });
+
+  it('keeps the reviewed English FAQ baseline byte-stable', () => {
+    const digest = createHash('sha256')
+      .update(JSON.stringify(faqContent.en))
+      .digest('hex');
+
+    expect(digest, 'reviewed English FAQ baseline changed').toBe(reviewedEnglishFaqBaselineHash);
+  });
+
+  it('adds English to the public EN consultation FAQ without dropping appointment format', () => {
+    const consultation = faqContent.en.find((item) => item.question === 'How are consultations conducted?');
+
+    expect(consultation?.answer).toContain('English, Korean, Chinese, and Japanese');
+    expect(consultation?.answer).toContain('Appointments are required and scheduled in one-hour units');
+    expect(consultation?.answer).toContain('brief summary');
+    expect(consultation?.answer).not.toContain('Sending relevant documents in advance');
   });
 
   it('preserves the required legal and regulatory distinctions', () => {

@@ -27,7 +27,7 @@ const copyByLocale = {
   },
   en: {
     label: 'ABOUT',
-    title: 'Attorney Wei Tseng, Taiwan Legal Partner for Korean Clients',
+    title: 'Attorney Wei Tseng, Taiwan Legal Partner for International Clients',
     summary:
       'With experience in court litigation and corporate legal advisory work, Attorney Wei Tseng has provided legal commentary and advice to SBS News and continues to publish legal information through WEI Lawyer.',
     cta: 'View Lawyer Profile',

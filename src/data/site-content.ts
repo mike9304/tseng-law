@@ -1926,10 +1926,11 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       label: 'ABOUT',
       title: 'Cross-Border Practice at a Glance',
       description:
-        'Based on the official attorney profile: four Taiwan offices, three working languages—Chinese, Korean, and Japanese—seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1.',
+        'The firm provides Taiwan legal services in four languages: English, Chinese, Korean, and Japanese. Based on the official attorney profile: four Taiwan offices, seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1.',
       highlightWords: [
         'four Taiwan offices',
-        'three working languages',
+        'four languages',
+        'English',
         'Chinese',
         'Korean',
         'Japanese',
@@ -1939,7 +1940,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       ],
       items: [
         { target: 4, label: 'Taiwan Offices' },
-        { target: 3, label: 'Working Languages' },
+        { target: 4, label: 'Working Languages' },
         { target: 7, label: 'Principal Practice Areas' },
         { target: 2, label: 'Top-Level Language Qualifications' }
       ]
@@ -2162,7 +2163,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     },
     homeAttorney: {
       label: 'ABOUT',
-      title: 'Attorney Wei Tseng, Taiwan Legal Partner for Korean Clients',
+      title: 'Attorney Wei Tseng, Taiwan Legal Partner for International Clients',
       summary: 'With experience in court litigation and corporate legal advisory work, Attorney Wei Tseng has provided legal commentary and advice to SBS News and continues to publish legal information through WEI Lawyer.',
       ctaLabel: 'View Lawyer Profile'
     },
@@ -2684,9 +2685,11 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       label: 'ABOUT',
       title: '公式プロフィールで見る国際業務の基盤',
       description:
-        '公式弁護士プロフィールに基づき、台湾4拠点、中国語・韓国語・日本語の3言語、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。',
+        '当事務所では英語・中国語・韓国語・日本語の4言語で台湾の法律相談に対応しています。公式弁護士プロフィールに基づき、台湾4拠点、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。',
       highlightWords: [
         '台湾4拠点',
+        '4言語',
+        '英語',
         '中国語',
         '韓国語',
         '日本語',
@@ -2696,7 +2699,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       ],
       items: [
         { target: 4, label: '台湾の事務所' },
-        { target: 3, label: '業務対応言語' },
+        { target: 4, label: '業務対応言語' },
         { target: 7, label: '主要取扱分野' },
         { target: 2, label: '最上位級の語学資格' }
       ]

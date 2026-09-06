@@ -6,6 +6,8 @@ import PageHeader from '@/components/PageHeader';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
+import CorporateAdvisorySection from '@/components/CorporateAdvisorySection';
+import { CORPORATE_ADVISORY_ANCHOR, getCorporateAdvisory } from '@/data/corporate-advisory';
 import { getIntentPage, type IntentPageSlug } from '@/data/intent-pages';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { getColumnPost } from '@/lib/columns';
@@ -16,6 +18,7 @@ import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildPersonJsonLd } f
 import {
   getConsultationCtaLabel,
   getConsultationPublicMailto,
+  getSensitiveInformationWarning,
 } from '@/lib/consultation/public-contact';
 
 function summarize(text: string, maxLength = 180) {
@@ -83,7 +86,7 @@ const labels = {
     detailLabel: 'PROCESS',
     detailTitle: 'Workflow and Preparation',
     process: 'Consultation flow',
-    prepare: 'Materials to prepare',
+    prepare: 'Initial summary and documents to organize later',
     caution: 'Points that are often missed',
     servicesLabel: 'RELATED SERVICES',
     servicesTitle: 'Related Services',
@@ -96,10 +99,10 @@ const labels = {
     attorneyHeading: 'Lead attorney most relevant to this search',
     ctaLabel: 'NEXT STEP',
     ctaTitle: 'If you want the direction clarified quickly',
-    ctaText: 'Company setup, investment, litigation, and family disputes all need different early-stage structuring. Send the core materials first and we can route the matter into the right consultation flow.',
-    contact: 'Book Consultation',
+    ctaText: 'Company setup, investment, litigation, and family disputes all need different early-stage structuring. Email a brief initial summary of the matter, any deadline, and how we can reach you. Other documents can follow after attorney instructions.',
+    contact: 'Email about your Taiwan matter',
     profile: 'View Wei Tseng Profile',
-    pricing: 'View Pricing',
+    pricing: 'Fees and scope',
   },
   ja: {
     terms: '関連検索キーワード',
@@ -109,7 +112,7 @@ const labels = {
     detailLabel: '手続きの流れ',
     detailTitle: '進め方と準備資料',
     process: '相談・手続きの進め方',
-    prepare: '事前に準備するとよい資料',
+    prepare: '初回の概要と、後ほど整理する資料',
     caution: '見落としやすいポイント',
     servicesLabel: '関連サービス',
     servicesTitle: '関連サービス',
@@ -122,12 +125,29 @@ const labels = {
     attorneyHeading: 'この検索テーマに最も近い担当台湾弁護士',
     ctaLabel: '次のステップ',
     ctaTitle: '案件に合った方向性をすぐ整理したい場合',
-    ctaText: '会社設立、投資、訴訟、家族間の紛争など、性質の異なる案件は初期の組み立て方が異なります。資料をお送りいただければ、曾雋崴台湾弁護士につながる相談の流れをまずご案内します。',
-    contact: '相談のお問い合わせ',
+    ctaText: '会社設立、投資、訴訟、家族間の紛争など、性質の異なる案件は初期の組み立て方が異なります。まずは案件の簡潔な概要、期限、連絡先をメールでお送りください。その他の資料は弁護士の案内後にご提出ください。',
+    contact: '台湾の法律問題をメールで相談',
     profile: '曾雋崴台湾弁護士のプロフィールを見る',
-    pricing: '費用案内を見る',
+    pricing: '費用・対応範囲',
   },
 } as const;
+
+const intentDirectContact = {
+  en: {
+    support: 'Consultations in English, Japanese, and Korean. Chinese is also available.',
+    initialNote:
+      'First email: a brief overview of the issue or business, any deadline, and how we can reach you. Sensitive materials only after attorney instructions.',
+  },
+  ja: {
+    support: '英語・日本語・韓国語でご相談いただけます。中国語での相談にも対応しています。',
+    initialNote:
+      '初回メールでは、争点または事業の簡潔な概要、期限、連絡先のみをお送りください。機微情報は弁護士の指示後に提出してください。',
+  },
+} as const;
+
+function isDirectContactLocale(locale: SiteLocale): locale is 'en' | 'ja' {
+  return locale === 'en' || locale === 'ja';
+}
 
 const relatedResources: Record<
   IntentPageSlug,
@@ -221,6 +241,62 @@ const relatedResources: Record<
     },
   ],
 };
+
+const advisoryResource: {
+  href: string;
+  label: Record<SiteLocale, string>;
+} = {
+  href: `taiwan-lawyer#${CORPORATE_ADVISORY_ANCHOR}`,
+  label: {
+    ko: '대만 기업 법무 자문',
+    'zh-hant': '台灣企業法務顧問',
+    en: 'Taiwan corporate legal advisory',
+    ja: '台湾の企業法務・法律顧問',
+  },
+};
+
+function relatedResourceByHref(
+  slug: IntentPageSlug,
+  href: string,
+) {
+  return relatedResources[slug].find((item) => item.href === href);
+}
+
+function relatedResourcesFor(locale: SiteLocale, slug: IntentPageSlug) {
+  const base = relatedResources[slug];
+  const advisory = getCorporateAdvisory(locale) ? advisoryResource : null;
+
+  if (locale === 'en') {
+    if (slug === 'taiwan-lawyer') {
+      return [
+        relatedResourceByHref(slug, 'taiwan-company-setup-lawyer'),
+        relatedResourceByHref(slug, 'taiwan-litigation-lawyer'),
+        advisory,
+        relatedResourceByHref(slug, 'guides/taiwan-company-setup'),
+        relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
+      ].filter((item): item is NonNullable<typeof item> => item != null);
+    }
+    if (slug === 'taiwan-company-setup-lawyer') {
+      return [
+        relatedResourceByHref(slug, 'guides/taiwan-company-setup'),
+        relatedResourceByHref(slug, 'taiwan-lawyer'),
+        advisory,
+        relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
+      ].filter((item): item is NonNullable<typeof item> => item != null);
+    }
+    return [
+      relatedResourceByHref(slug, 'taiwan-lawyer'),
+      advisory,
+      relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
+    ].filter((item): item is NonNullable<typeof item> => item != null);
+  }
+
+  if (advisory) {
+    return [...base, advisory];
+  }
+
+  return base;
+}
 
 export default function IntentLandingPage({
   locale,
@@ -326,13 +402,28 @@ export default function IntentLandingPage({
       <JsonLd data={faqSchema} />
 
       <PageHeader locale={locale} label={page.label} title={page.title} description={page.description}>
-        <div className="intent-chip-wrap" aria-label={l.terms}>
-          {page.searchTerms.map((term) => (
-            <span key={term} className="intent-chip">
-              {term}
-            </span>
-          ))}
-        </div>
+        {isDirectContactLocale(locale) ? (
+          <div className="contact-email-actions">
+            <p className="contact-email-actions__label">{intentDirectContact[locale].support}</p>
+            <div className="contact-email-actions__row">
+              <a href={getConsultationPublicMailto(locale)} className="button">
+                {l.contact}
+              </a>
+              <Link href={`/${locale}/pricing`} className="button button--outline">
+                {l.pricing}
+              </Link>
+            </div>
+            <p className="contact-email-actions__note">{intentDirectContact[locale].initialNote}</p>
+          </div>
+        ) : (
+          <div className="intent-chip-wrap" aria-label={l.terms}>
+            {page.searchTerms.map((term) => (
+              <span key={term} className="intent-chip">
+                {term}
+              </span>
+            ))}
+          </div>
+        )}
       </PageHeader>
 
       <section className="section section--light">
@@ -374,6 +465,10 @@ export default function IntentLandingPage({
         </div>
       </section>
 
+      {slug === 'taiwan-lawyer' && (locale === 'en' || locale === 'ja') ? (
+        <CorporateAdvisorySection locale={locale} />
+      ) : null}
+
       <section className="section section--gray">
         <div className="container">
           <SectionLabel>{l.detailLabel}</SectionLabel>
@@ -396,6 +491,9 @@ export default function IntentLandingPage({
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+              {isDirectContactLocale(locale) ? (
+                <p className="contact-email-actions__note">{getSensitiveInformationWarning(locale)}</p>
+              ) : null}
             </article>
 
             <article className="intent-panel">
@@ -466,7 +564,7 @@ export default function IntentLandingPage({
           <OrnamentDivider />
           <article className="intent-panel">
             <ul className="intent-article-list">
-              {relatedResources[slug].map((item) => (
+              {relatedResourcesFor(locale, slug).map((item) => (
                 <li key={item.href}>
                   <Link href={`/${locale}/${item.href}`} className="link-underline">
                     {item.label[locale]}
@@ -503,6 +601,9 @@ export default function IntentLandingPage({
                 </Link>
               ) : null}
             </div>
+            {isDirectContactLocale(locale) ? (
+              <p className="contact-email-actions__note">{intentDirectContact[locale].initialNote}</p>
+            ) : null}
           </div>
         </div>
       </section>

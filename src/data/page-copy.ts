@@ -129,7 +129,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: 'About Hovering',
-      description: 'Learn our story and meet the Korea-Taiwan legal team.'
+      description: 'Learn about our international Taiwan practice and meet the team.'
     },
     services: {
       label: 'SERVICES',
@@ -181,7 +181,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎について',
-      description: '事務所の概要と韓国・台湾チームをご紹介します。'
+      description: '台湾を拠点とする国際的な法律実務と、当事務所のチームをご紹介します。'
     },
     services: {
       label: 'SERVICES',

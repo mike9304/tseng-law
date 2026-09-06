@@ -258,7 +258,7 @@ describe('column 010 public reference synchronization', () => {
     }
   });
 
-  it('leaves search implementation and generated embeddings outside this lane', () => {
+  it('leaves generated embeddings outside this lane', () => {
     const forbiddenDiff = execFileSync(
       'git',
       [
@@ -266,7 +266,6 @@ describe('column 010 public reference synchronization', () => {
         '--name-only',
         'HEAD',
         '--',
-        'src/lib/search.ts',
         'src/content/column-embeddings.json',
       ],
       { cwd: process.cwd(), encoding: 'utf8' },

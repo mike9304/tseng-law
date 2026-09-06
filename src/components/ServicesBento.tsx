@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import { getServiceSlugs } from '@/data/service-details';
+import CorporateAdvisoryLink from '@/components/CorporateAdvisoryLink';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import ServicePracticeIcon from '@/components/ServicePracticeIcon';
@@ -101,6 +102,7 @@ export default function ServicesBento({
             );
           })}
         </div>
+        <CorporateAdvisoryLink locale={locale} />
       </div>
     </section>
   );

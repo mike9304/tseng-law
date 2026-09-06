@@ -84,6 +84,39 @@ describe('homepage attorney factual summary', () => {
     expect(html).toContain(`href="/${locale}/lawyers/wei-tseng"`);
   });
 
+  it('uses the reviewed English international-client title and firm language intro', () => {
+    const html = renderToStaticMarkup(<HomeAttorneySplit locale="en" />);
+    const titleNode = createAttorneyDecomposedNodes(0, 'en', 0).find(
+      ({ id }) => id === 'home-attorney-title',
+    );
+    const introNode = createAttorneyDecomposedNodes(0, 'en', 0).find(
+      ({ id }) => id === 'home-attorney-intro-1',
+    );
+
+    expect(siteContent.en.homeAttorney.title).toBe(
+      'Attorney Wei Tseng, Taiwan Legal Partner for International Clients',
+    );
+    expect(html).toContain('Attorney Wei Tseng, Taiwan Legal Partner for International Clients');
+    expect(html).toContain(
+      'The firm supports Taiwan corporate and individual matters in English, Japanese, Korean, and Chinese.',
+    );
+    expect(html).toContain('Represented a Korean student in a gym injury case');
+    expect(html).not.toContain('Taiwan Legal Partner for Korean Clients');
+    expect(titleNode).toMatchObject({
+      kind: 'text',
+      content: { text: 'Attorney Wei Tseng, Taiwan Legal Partner for International Clients' },
+    });
+    expect(siteContent.en.homeAttorney.title).toBe(
+      titleNode && titleNode.kind === 'text' ? titleNode.content.text : '',
+    );
+    expect(introNode).toMatchObject({
+      kind: 'text',
+      content: {
+        text: 'The firm supports Taiwan corporate and individual matters in English, Japanese, Korean, and Chinese.',
+      },
+    });
+  });
+
   it.each(locales)('keeps builder summary synchronized for %s', (locale) => {
     expect(getBuilderSummary(locale)).toBe(reviewedSummaries[locale]);
   });

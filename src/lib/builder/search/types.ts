@@ -1,4 +1,4 @@
-import type { Locale, SiteLocale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
 export const SEARCH_DOC_KINDS = ['page', 'blog', 'faq', 'portfolio'] as const;
 
@@ -38,7 +38,7 @@ export interface SearchHit {
 
 export interface SearchQueryLog {
   query: string;
-  locale: Locale;
+  locale: SiteLocale;
   hits: number;
   hitId?: string;
   at: string;

@@ -1,5 +1,6 @@
 import { siteContent } from '@/data/site-content';
 import { insightsArchive } from '@/data/insights-archive';
+import { getPublicIntentSearchDocs } from '@/lib/builder/search/public-intent-docs';
 import type { Locale } from '@/lib/locales';
 
 export type SearchCategory = 'services' | 'insights' | 'videos' | 'faq';
@@ -154,7 +155,23 @@ export function getSearchIndex(locale: Locale): SearchItem[] {
     });
   });
 
-  return items;
+  if (locale !== 'en') {
+    return items;
+  }
+
+  const existingHrefs = new Set(items.map((item) => item.href));
+  const prepended = getPublicIntentSearchDocs('en')
+    .filter((doc) => !existingHrefs.has(doc.url))
+    .map((doc) => ({
+      id: doc.id,
+      title: doc.title,
+      description: doc.summary ?? '',
+      href: doc.url,
+      category: 'services' as const,
+      tags: [doc.body],
+    }));
+
+  return prepended.length ? [...prepended, ...items] : items;
 }
 
 function normalize(value: string) {

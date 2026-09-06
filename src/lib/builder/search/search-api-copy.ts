@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import type { SiteLocale } from '@/lib/locales';
 
 export type PublicSearchApiErrorCode =
   | 'too_many_requests'
@@ -11,7 +11,7 @@ export interface PublicSearchApiErrorPayload {
   errorCode: PublicSearchApiErrorCode;
 }
 
-const publicSearchApiErrorMessages: Record<Locale, Record<PublicSearchApiErrorCode, string>> = {
+const publicSearchApiErrorMessages: Record<SiteLocale, Record<PublicSearchApiErrorCode, string>> = {
   ko: {
     too_many_requests: '검색 요청이 너무 많습니다. 잠시 후 다시 시도해 주세요.',
     rate_limit_unavailable: '검색 보호 시스템을 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도해 주세요.',
@@ -30,10 +30,16 @@ const publicSearchApiErrorMessages: Record<Locale, Record<PublicSearchApiErrorCo
     search_index_failed: 'Unable to load the search index.',
     search_query_failed: 'Unable to complete the search.',
   },
+  ja: {
+    too_many_requests: '検索リクエストが多すぎます。しばらくしてからもう一度お試しください。',
+    rate_limit_unavailable: '検索保護システムを一時的に利用できません。しばらくしてからもう一度お試しください。',
+    search_index_failed: '検索インデックスを読み込めませんでした。',
+    search_query_failed: '検索を完了できませんでした。',
+  },
 };
 
 export function getPublicSearchApiErrorPayload(
-  locale: Locale,
+  locale: SiteLocale,
   errorCode: PublicSearchApiErrorCode,
 ): PublicSearchApiErrorPayload {
   return { error: publicSearchApiErrorMessages[locale][errorCode], errorCode };

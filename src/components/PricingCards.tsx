@@ -1,4 +1,5 @@
 import type { SiteLocale } from '@/lib/locales';
+import CorporateAdvisoryLink from '@/components/CorporateAdvisoryLink';
 import PricingIcon, { type PricingIconName } from '@/components/PricingIcon';
 import {
   getConsultationCtaLabel,
@@ -293,6 +294,7 @@ export default function PricingCards({ locale }: { locale: SiteLocale }) {
                 ))}
               </ul>
               {item.note && <p className="pricing-card-note">{item.note}</p>}
+              {item.icon === 'retainer' ? <CorporateAdvisoryLink locale={locale} /> : null}
             </div>
           ))}
         </div>

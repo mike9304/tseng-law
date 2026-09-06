@@ -55,11 +55,15 @@ const docs: SearchDoc[] = [
 
 const fixtureIndex: SearchIndex = buildSearchIndex(docs);
 
-async function renderSearch(locale: string, q: string): Promise<string> {
+async function renderSearch(
+  locale: string,
+  q: string,
+  extra: { tab?: string; kinds?: string } = {},
+): Promise<string> {
   return renderToStaticMarkup(
     await SearchPage({
       params: Promise.resolve({ locale: locale as never }),
-      searchParams: Promise.resolve({ q }),
+      searchParams: Promise.resolve({ q, ...extra }),
     }),
   );
 }
@@ -83,13 +87,17 @@ describe('/ja/search localization', () => {
     // Japanese title, search UI, and total count.
     expect(html).toContain('検索結果');
     expect(html).toContain('どのようにお手伝いできますか？');
-    expect(html).toContain('全 1 件');
+    expect(html).toContain('全 5 件');
     expect(html).toContain('すべて');
     expect(html).toContain('コラム');
     expect(html).toContain('おすすめ');
     // Result card links stay under /ja/.
     expect(html).toContain('href="/ja/columns/taiwan-company-establishment-basics"');
     expect(html).toContain('台湾会社設立の基本');
+    expect(html).toContain('href="/ja/taiwan-company-setup-lawyer"');
+    expect(html).toMatch(/href="\/ja\/taiwan-lawyer"/);
+    expect(html).toContain('href="/ja/taiwan-lawyer#corporate-advisory"');
+    expect(html).toContain('href="/ja/taiwan-litigation-lawyer"');
     // No Korean UI copy leaks onto the ja surface.
     expect(html).not.toContain('총 1건');
     expect(html).not.toContain('어떻게 도와드릴까요?');
@@ -110,7 +118,6 @@ describe('/ja/search localization', () => {
   it.each([
     { locale: 'ko', q: '회사', title: '검색 결과', total: '총 1건', url: '/ko/columns/company-setup' },
     { locale: 'zh-hant', q: '公司', title: '搜尋結果', total: '共 1 筆', url: '/zh-hant/columns/company-setup' },
-    { locale: 'en', q: 'company', title: 'Search Results', total: 'Total 1', url: '/en/columns/company-setup' },
   ])('keeps the /%s/search render unchanged', async ({ locale, q, title, total, url }) => {
     const metadata = await generateMetadata({ params: Promise.resolve({ locale: locale as never }) });
     expect(String(metadata.title)).toContain(title);
@@ -119,5 +126,39 @@ describe('/ja/search localization', () => {
     expect(html).toContain(title);
     expect(html).toContain(total);
     expect(html).toContain(`href="${url}"`);
+    expect(html).not.toContain('href="/en/taiwan-company-setup-lawyer"');
+  });
+
+  it('keeps the stored EN column hit and surfaces public intent pages plus the corporate anchor', async () => {
+    const metadata = await generateMetadata({ params: Promise.resolve({ locale: 'en' as never }) });
+    expect(String(metadata.title)).toContain('Search Results');
+    expect(metadata.robots).toMatchObject({ index: false });
+
+    const html = await renderSearch('en', 'company');
+    expect(html).toContain('Search Results');
+    expect(html).toContain('Total 5');
+    expect(html).toContain('href="/en/columns/company-setup"');
+    expect(html).toContain('href="/en/taiwan-company-setup-lawyer"');
+    expect(html).toMatch(/href="\/en\/taiwan-lawyer"/);
+    expect(html).toContain('href="/en/taiwan-lawyer#corporate-advisory"');
+    expect(html).toContain('href="/en/taiwan-litigation-lawyer"');
+  });
+
+  it('excludes static intent pages from JA kinds=blog while keeping noindex metadata', async () => {
+    const metadata = await generateMetadata({ params: Promise.resolve({ locale: 'ja' as never }) });
+    expect(metadata.robots).toMatchObject({ index: false });
+
+    const html = await renderSearch('ja', '会社', { kinds: 'blog' });
+    expect(html).toContain('全 1 件');
+    expect(html).toContain('href="/ja/columns/taiwan-company-establishment-basics"');
+    expect(html).not.toContain('href="/ja/taiwan-company-setup-lawyer"');
+    expect(html).not.toContain('href="/ja/taiwan-lawyer#corporate-advisory"');
+    expect(html).not.toContain('href="/ja/taiwan-litigation-lawyer"');
+  });
+
+  it('renders the JA corporate advisory anchor from a stored index that never contained it', async () => {
+    const html = await renderSearch('ja', '法律顧問');
+    expect(html).toContain('href="/ja/taiwan-lawyer#corporate-advisory"');
+    expect(html).toContain('台湾の企業法務・法律顧問');
   });
 });

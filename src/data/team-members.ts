@@ -197,10 +197,10 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   en: {
     label: 'OUR TEAM',
-    title: 'Hovering Korea-Taiwan Legal Team',
+    title: 'Hovering Taiwan Legal Team',
     description: 'Profiles of Hovering lawyers, operations manager, and accounting partner.',
     story: [
-      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for Korean and Japanese clients.',
+      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Japanese, Korean, and Chinese available.',
       'By combining legal, accounting, tax, and operational workflows, we provide consistent strategy from initial review through dispute handling.'
     ],
     members: [
@@ -213,7 +213,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          'Handles a wide range of corporate and individual matters with Korean and Japanese consultation support.',
+          'The firm supports Taiwan corporate and individual matters in English, Japanese, Korean, and Chinese.',
           'Represented a Korean student in a gym injury case and obtained a TWD 1.57M damages ruling.'
         ],
         education: [
@@ -283,10 +283,10 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   ja: {
     label: 'チーム紹介',
-    title: '昊鼎 韓国・台湾業務チーム',
+    title: '昊鼎国際法律事務所のチーム',
     description: '昊鼎国際法律事務所の弁護士、パラリーガル、事務長、提携会計士をご紹介します。',
     story: [
-      '昊鼎国際法律事務所では、韓国・日本のクライアントによる台湾への投資や、台湾での訴訟・法律相談を支援する実務チームを編成しています。',
+      '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。英語・日本語・韓国語・中国語でご相談いただけます。',
       '法律・会計・税務・行政の各実務を連携させ、案件の初期検討から紛争対応まで、一貫した方針でサポートします。',
     ],
     members: [

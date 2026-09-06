@@ -10,6 +10,8 @@ import { loadSearchIndex } from '@/lib/builder/search/index-storage';
 import { buildSearchIndex } from '@/lib/builder/search/index-builder';
 import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
 import { runSearchQuery } from '@/lib/builder/search/query-engine';
+import { augmentStaticDocs } from '@/lib/builder/search/augment-static-docs';
+import { getPublicIntentSearchDocs } from '@/lib/builder/search/public-intent-docs';
 import type { SearchDocKind } from '@/lib/builder/search/types';
 
 export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
@@ -93,7 +95,8 @@ export default async function SearchPage(
       : locale === 'ja'
         ? '検索結果が見つかりませんでした。'
         : 'No search results found.';
-  const index = await loadNativeSearchIndex();
+  const nativeIndex = await loadNativeSearchIndex();
+  const index = augmentStaticDocs(nativeIndex, locale, getPublicIntentSearchDocs(locale));
   const hits = query
     ? runSearchQuery({
         index,

@@ -350,7 +350,7 @@ export const CINEMATIC_OPENING_COPY: Record<
     secondary: 'ATTORNEYS AT LAW IN TAIWAN',
     scroll: 'Scroll to continue',
     mediaAlt: 'Bright aerial flight over Taiwan’s Central Mountain Range and sea of clouds',
-    service: 'Taiwan legal advice · Korean and Japanese communication',
+    service: 'Taiwan legal support · English, Japanese & Korean',
     contact: 'Contact the firm',
   },
   ja: {
@@ -358,7 +358,7 @@ export const CINEMATIC_OPENING_COPY: Record<
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '下にスクロール',
     mediaAlt: '明るい自然光の中、台湾中央山脈と雲海の上空を飛ぶ空撮風景',
-    service: '台湾の法律相談 · 韓国語・日本語でのコミュニケーション',
+    service: '台湾の法律相談 · 日本語・英語・韓国語で対応',
     contact: '相談窓口',
   },
 };

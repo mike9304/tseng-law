@@ -13,6 +13,7 @@ import {
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import { getServiceArea } from '@/data/service-details';
+import { projectInternationalPublicCopy } from '@/lib/services/international-public-copy';
 import { getColumnPost } from '@/lib/columns';
 import JsonLd from '@/components/JsonLd';
 import {
@@ -90,7 +91,7 @@ const copy: Record<SiteLocale, {
     columnsLabel: 'Related Columns — Learn More',
     readMore: 'Read full article →',
     contactLabel: 'Book Consultation',
-    contactDesc: 'If you have any questions about this practice area, please contact us anytime.',
+    contactDesc: `Email a brief summary of your question to ${CONSULTATION_EMAIL}. Sensitive files should follow after attorney instructions.`,
     contactBtn: 'Contact Us',
     emptyMsg: 'Columns for this practice area are being prepared.',
     reviewLead: 'This page is reviewed by ',
@@ -104,7 +105,7 @@ const copy: Record<SiteLocale, {
     columnsLabel: '関連コラム — 詳しく見る',
     readMore: '記事を読む →',
     contactLabel: '法律相談',
-    contactDesc: 'この分野に関するご相談は、お問い合わせフォームからお申し込みください。',
+    contactDesc: `${CONSULTATION_EMAIL} へ、ご相談内容の簡潔な概要をメールでお送りください。機微情報は弁護士の指示後にご提出ください。`,
     contactBtn: 'お問い合わせ',
     emptyMsg: 'この分野の関連コラムを準備中です。',
     reviewLead: 'このページは',
@@ -161,14 +162,14 @@ async function getServiceRecord(
     return null;
   }
 
-  return {
+  return projectInternationalPublicCopy(locale, {
     slug: area.slug,
     title: area.title[locale],
     subtitle: area.subtitle[locale],
     intro: area.intro[locale],
     keyPoints: area.keyPoints[locale],
     columnSlugs: area.columnSlugs,
-  };
+  });
 }
 
 export async function generateStaticParams() {

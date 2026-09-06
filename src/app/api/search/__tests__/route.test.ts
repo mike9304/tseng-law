@@ -527,4 +527,203 @@ describe('/api/search', () => {
     expect(consoleError).toHaveBeenCalledWith('[public/search] query failed:', expect.any(Error));
     consoleError.mockRestore();
   });
+
+  it('returns empty hits for blank JA queries without loading the index or adding locale', async () => {
+    const response = await GET(request('locale=ja&q='));
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload).toEqual({
+      ok: true,
+      query: '',
+      hits: [],
+      total: 0,
+    });
+    expect(loadSearchIndexMock).not.toHaveBeenCalled();
+    expect(runSearchQueryMock).not.toHaveBeenCalled();
+  });
+
+  it('caps Unicode JA queries at 200 code points before search and logging', async () => {
+    const query = '😀'.repeat(201);
+
+    const response = await GET(request(`locale=ja&q=${encodeURIComponent(query)}`));
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(Array.from(payload.query)).toHaveLength(200);
+    expect(runSearchQueryMock).toHaveBeenCalledWith(
+      expect.objectContaining({ query: '😀'.repeat(200), locale: 'ja' }),
+    );
+    expect(appendQueryLogMock).toHaveBeenCalledWith(
+      expect.objectContaining({ query: '😀'.repeat(200), locale: 'ja' }),
+    );
+  });
+
+  it('returns localized JA rate-limit errors for genuine throttle', async () => {
+    checkRateLimitMock.mockResolvedValueOnce({
+      allowed: false,
+      retryAfterMs: 3100,
+    } as never);
+
+    const response = await GET(request('locale=ja&q=会社'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(429);
+    expect(response.headers.get('Retry-After')).toBe('4');
+    expect(payload).toEqual({
+      ok: false,
+      error: '検索リクエストが多すぎます。しばらくしてからもう一度お試しください。',
+      errorCode: 'too_many_requests',
+    });
+    expect(loadSearchIndexMock).not.toHaveBeenCalled();
+  });
+
+  it('returns localized JA 503 when rate-limit backend is unavailable', async () => {
+    checkRateLimitMock.mockResolvedValueOnce({
+      allowed: false,
+      retryAfterMs: 0,
+      reason: 'backend_unavailable',
+    } as never);
+
+    const response = await GET(request('locale=ja&q=会社'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(response.headers.get('Retry-After')).toBeNull();
+    expect(payload).toEqual({
+      ok: false,
+      error: '検索保護システムを一時的に利用できません。しばらくしてからもう一度お試しください。',
+      errorCode: 'rate_limit_unavailable',
+    });
+  });
+
+  it('returns localized JA index failures without leaking exception details', async () => {
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    loadSearchIndexMock.mockRejectedValueOnce(new Error('search index secret leaked'));
+
+    const response = await GET(request('locale=ja&q=会社'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(payload).toEqual({
+      ok: false,
+      error: '検索インデックスを読み込めませんでした。',
+      errorCode: 'search_index_failed',
+    });
+    expect(JSON.stringify(payload)).not.toContain('search index secret leaked');
+    expect(consoleError).toHaveBeenCalledWith('[public/search] index load failed:', expect.any(Error));
+    consoleError.mockRestore();
+  });
+
+  it('returns localized JA query failures without leaking exception details', async () => {
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    runSearchQueryMock.mockImplementationOnce(() => {
+      throw new Error('search query secret leaked');
+    });
+
+    const response = await GET(request('locale=ja&q=会社'));
+    const payload = await response.json();
+
+    expect(response.status).toBe(500);
+    expect(payload).toEqual({
+      ok: false,
+      error: '検索を完了できませんでした。',
+      errorCode: 'search_query_failed',
+    });
+    expect(JSON.stringify(payload)).not.toContain('search query secret leaked');
+    expect(consoleError).toHaveBeenCalledWith('[public/search] query failed:', expect.any(Error));
+    consoleError.mockRestore();
+  });
+
+  it('serves JA intent and corporate URLs from an old stored index without collecting or saving', async () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-06-03T00:05:00.000Z'));
+
+    try {
+      const { buildSearchIndex: actualBuild } = await vi.importActual<
+        typeof import('@/lib/builder/search/index-builder')
+      >('@/lib/builder/search/index-builder');
+      const { runSearchQuery: actualQuery } = await vi.importActual<
+        typeof import('@/lib/builder/search/query-engine')
+      >('@/lib/builder/search/query-engine');
+      buildSearchIndexMock.mockImplementation(actualBuild);
+      runSearchQueryMock.mockImplementation(actualQuery);
+
+      const jaBlog: SearchDoc = {
+        id: 'blog:ja:taiwan-company-establishment-basics',
+        kind: 'blog',
+        locale: 'ja',
+        title: '台湾会社設立の基本',
+        url: '/ja/columns/taiwan-company-establishment-basics',
+        summary: '台湾での会社設立の流れを解説します。',
+        body: '台湾での会社設立の手順と留意点をまとめました。',
+      };
+      const koFaq: SearchDoc = {
+        id: 'faq:ko:consult',
+        kind: 'faq',
+        locale: 'ko',
+        title: '상담 FAQ',
+        url: '/ko/faq#consult',
+        summary: '상담 요약',
+        body: '상담 시간과 예약 안내.',
+      };
+      const portfolioEn: SearchDoc = {
+        id: 'portfolio:en:pf-1',
+        kind: 'portfolio',
+        locale: 'en',
+        title: 'Portfolio One',
+        url: '/en/portfolio/portfolio-one',
+        summary: 'Portfolio summary',
+        body: 'Portfolio body',
+      };
+      const oldIndex: SearchIndex = {
+        ...actualBuild([jaBlog, koFaq, portfolioEn]),
+        builtAt: '2026-06-03T00:04:00.000Z',
+      };
+      loadSearchIndexMock.mockResolvedValue(oldIndex);
+
+      const response = await GET(request(`locale=ja&q=${encodeURIComponent('会社設立')}`));
+      const payload = await response.json();
+      const urls = payload.hits.map((hit: { url: string }) => hit.url);
+
+      expect(response.status).toBe(200);
+      expect(payload.ok).toBe(true);
+      expect(payload.locale).toBe('ja');
+      expect(payload.total).toBeGreaterThan(1);
+      expect(urls).toEqual(
+        expect.arrayContaining([
+          '/ja/columns/taiwan-company-establishment-basics',
+          '/ja/taiwan-company-setup-lawyer',
+          '/ja/taiwan-lawyer',
+          '/ja/taiwan-lawyer#corporate-advisory',
+        ]),
+      );
+      expect(appendQueryLogMock).toHaveBeenCalledWith(
+        expect.objectContaining({
+          query: '会社設立',
+          locale: 'ja',
+          hits: payload.total,
+        }),
+      );
+
+      const blogOnly = await GET(request(`locale=ja&q=${encodeURIComponent('会社')}&kinds=blog`));
+      const blogPayload = await blogOnly.json();
+      expect(blogPayload.hits.every((hit: { kind: string }) => hit.kind === 'blog')).toBe(true);
+      expect(blogPayload.hits.map((hit: { url: string }) => hit.url)).toEqual([
+        '/ja/columns/taiwan-company-establishment-basics',
+      ]);
+      expect(blogPayload.hits.some((hit: { url: string }) => hit.url.includes('taiwan-company-setup-lawyer'))).toBe(
+        false,
+      );
+
+      const koResponse = await GET(request(`locale=ko&q=${encodeURIComponent('상담')}`));
+      const koPayload = await koResponse.json();
+      expect(koPayload.locale).toBe('ko');
+      expect(koPayload.hits.map((hit: { id: string }) => hit.id)).toContain('faq:ko:consult');
+      expect(collectAllSearchDocsMock).not.toHaveBeenCalled();
+      expect(saveSearchIndexMock).not.toHaveBeenCalled();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
 });

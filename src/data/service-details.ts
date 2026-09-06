@@ -18,12 +18,12 @@ export const serviceAreas: ServiceArea[] = [
     subtitle: {
       ko: '한국 기업의 대만 진출을 위한 법인 설립 전 과정 지원',
       'zh-hant': '協助韓國企業在台落地的全流程法律服務',
-      en: 'End-to-end legal support for Korean companies expanding into Taiwan'
+      en: 'Legal support for overseas companies and investors entering or operating in Taiwan'
     },
     intro: {
       ko: '법무법인 호정은 한국 기업의 대만 시장 진출을 위해 법인 형태 선택부터 투자심의위원회 승인, 자본금 송금, 은행 계좌 개설, 영업장소 확보, 업종별 인허가까지 전 과정을 한국어로 밀착 지원합니다.',
       'zh-hant': '昊鼎國際法律事務所協助韓國企業選擇公司型態、投審會審查、資本匯入、銀行開戶、營業場所確認及特殊行業許可，提供韓語全程對接服務。',
-      en: 'Hovering supports Korean businesses across the full market-entry process in Taiwan, including entity structuring, investment approval, capital remittance, bank setup, business premises review, and industry-specific licensing.'
+      en: 'Hovering supports overseas companies and investors entering or operating in Taiwan, including entity structuring, investment approval, registration, capital remittance, banking, and permitted-business review.'
     },
     keyPoints: {
       ko: [
@@ -47,14 +47,12 @@ export const serviceAreas: ServiceArea[] = [
         '停止營運時須經解散清算程序，違法抽逃資金最高處5年有期徒刑。',
       ],
       en: [
-        'Entity options include subsidiary, branch, and representative office, with different implications for tax, liability, and operations.',
-        'Typical setup includes around 10 steps over roughly 3 months: name reservation, POA notarization, investment review filing, banking, capital remittance, company registration, and tax registration.',
-        'For a single shareholder work permit case, practical minimum capital is often TWD 500,000, and maintaining work authorization may require annual revenue over TWD 3M.',
-        'Capital remittance usually requires in-person processing by the investor at the Korean bank branch, together with outbound investment reporting.',
-        'Business address compliance should be checked in advance through local zoning and use regulations.',
-        'For cosmetics sales, PIF registration is mandatory, and advertising violations can trigger fines up to TWD 5M.',
-        'Logistics licensing may require TWD 25M capital and vehicle requirements; acquisition or outsourcing can be alternatives.',
-        'When closing operations, dissolution and liquidation are mandatory. Illegal capital withdrawal can lead to serious criminal penalties.'
+        'Entity choice among a Taiwan subsidiary, a branch of the overseas parent, or a representative office affects legal personality and responsibility.',
+        'The filing sequence and timing depend on the chosen entity, the investor, the industry, the banks involved, and the documents available; they are not a single fixed process.',
+        'Work permission and residency are separate from company formation, and the applicable criteria are case-specific.',
+        'Capital-remittance requirements depend on the origin country and the Taiwan banks involved; they should be checked before funds are transferred.',
+        'The business address and industry permits should be reviewed separately from the incorporation filing.',
+        'Company closure and any distribution of remaining assets require a review of debts, taxes, and the applicable procedure.',
       ]
     },
     columnSlugs: [
@@ -169,7 +167,7 @@ export const serviceAreas: ServiceArea[] = [
     intro: {
       ko: '대만의 퇴직금(資遣費) 제도는 한국과 적용 사유와 산정 방식이 다릅니다. 계약 종료의 법적 근거, 신제와 구제(舊制)가 적용되는 근속기간, 예고와 기간 제한을 구분해 검토해야 하며, 법무법인 호정은 한국 기업과 한국인 근로자 양측에 해고·퇴직금·근로계약 분쟁 자문을 제공합니다.',
       'zh-hant': '台灣資遣費制度與韓國在適用事由及計算方式上不同，應依契約終止的法定依據、新舊制年資、預告與期間限制分別檢視。昊鼎協助韓國企業及韓籍勞工處理解僱、資遣費與勞動契約爭議。',
-      en: 'Taiwan’s severance rules differ from Korea’s in both qualifying grounds and calculation methods. The legal basis for ending the contract, service under the new and old systems, notice requirements, and statutory time limits must be reviewed separately. We advise Korean employers and employees on dismissal, severance, and employment-contract disputes in Taiwan.'
+      en: 'Taiwan’s severance rules require separate review of the legal basis for ending the contract, service under the new and old systems, notice requirements, and statutory time limits. We advise employers and employees on dismissal, severance, and employment-contract disputes in Taiwan.'
     },
     keyPoints: {
       ko: [
@@ -252,7 +250,7 @@ export const serviceAreas: ServiceArea[] = [
     intro: {
       ko: '대만에 진출하는 한국 기업의 브랜드 보호와 지적재산 관리, 금융·투자 관련 분쟁을 지원합니다.',
       'zh-hant': '協助在台韓國企業之品牌保護、智慧財產管理，以及金融投資相關爭議。',
-      en: 'We support brand protection and IP management for Korean businesses entering Taiwan, as well as disputes involving financial products and investment contracts.'
+      en: 'We support brand protection and IP management for international businesses entering Taiwan, as well as disputes involving financial products and investment contracts.'
     },
     keyPoints: {
       ko: [

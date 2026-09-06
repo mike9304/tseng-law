@@ -5,7 +5,10 @@ import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profile
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import { getServiceArea } from '@/data/service-details';
 import { getColumnPost } from '@/lib/columns';
-import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import {
+  CONSULTATION_EMAIL,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
 import ServiceDetailPage, { generateMetadata } from '../page';
 
 const SITE_URL = 'https://tseng-law.com';
@@ -137,7 +140,7 @@ describe('Japanese labor service-detail route', () => {
       '関連コラム — 詳しく見る',
       '記事を読む →',
       '法律相談',
-      'この分野に関するご相談は、お問い合わせフォームからお申し込みください。',
+      `${CONSULTATION_EMAIL} へ、ご相談内容の簡潔な概要をメールでお送りください。機微情報は弁護士の指示後にご提出ください。`,
       'お問い合わせ',
       'このページは',
       'が内容を確認し、関連コラムと相談窓口をご案内しています。',
@@ -150,6 +153,8 @@ describe('Japanese labor service-detail route', () => {
     expect(html).toContain(attorney!.name);
     expect(html).toContain('href="/ja/lawyers/wei-tseng"');
     expect(html).toContain(`href="${CONSULTATION_MAILTO_HREF}"`);
+    expect(CONSULTATION_MAILTO_HREF.startsWith(`mailto:${CONSULTATION_EMAIL}?`)).toBe(true);
+    expect(html).not.toContain('お問い合わせフォームからお申し込みください');
     expect(html).not.toContain('href="tel:');
     expect(html).not.toMatch(/kakao|line\.me|lin\.ee/i);
     for (const slug of LABOR_COLUMN_SLUGS) {

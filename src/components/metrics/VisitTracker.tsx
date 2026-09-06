@@ -3,8 +3,18 @@
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
+import {
+  shouldTrackOfficialConsultationMailtoClick,
+  toContactIntentPath,
+} from '@/lib/metrics/client/contact-intent';
 import { createDwellTracker, type DwellFlush } from '@/lib/metrics/client/dwell-tracker';
-import type { EngagementEvent, PageviewEvent, VisitUtm } from '@/lib/metrics/visit-schema';
+import type {
+  ContactIntentEvent,
+  EngagementEvent,
+  PageviewEvent,
+  VisitEvent,
+  VisitUtm,
+} from '@/lib/metrics/visit-schema';
 
 const COLLECT_ENDPOINT = '/api/metrics/collect';
 const SESSION_STORAGE_KEY = 'tl_vm_sid';
@@ -40,7 +50,7 @@ export default function VisitTracker({ locale }: { locale: string }) {
   useEffect(() => {
     const currentPath = pathname || window.location.pathname || '/';
 
-    const postWithFetch = (event: PageviewEvent | EngagementEvent) => {
+    const postWithFetch = (event: VisitEvent) => {
       void window.fetch(COLLECT_ENDPOINT, {
         method: 'POST',
         keepalive: true,
@@ -109,6 +119,23 @@ export default function VisitTracker({ locale }: { locale: string }) {
         lang: navigator.language.slice(0, 16),
         vw: window.innerWidth,
         firstLoad,
+        contactTracking: 1,
+      };
+      postWithFetch(event);
+    };
+
+    const sendContactIntent = (runtime: ActiveRuntime) => {
+      const path = toContactIntentPath(runtime.activePath);
+      if (!path) return;
+
+      const event: ContactIntentEvent = {
+        v: 1,
+        sid: runtime.sid,
+        ts: new Date().toISOString(),
+        type: 'contact_intent',
+        action: 'email_compose',
+        path,
+        locale: localeForPath(path, locale),
       };
       postWithFetch(event);
     };
@@ -211,15 +238,22 @@ export default function VisitTracker({ locale }: { locale: string }) {
         sendEngagement(runtime, runtime.tracker.flush());
       }
     };
+    const handleDocumentClick = (event: MouseEvent) => {
+      if (runtime.activePath === null) return;
+      if (!shouldTrackOfficialConsultationMailtoClick(event.target)) return;
+      sendContactIntent(runtime);
+    };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('pagehide', handlePageHide);
+    document.addEventListener('click', handleDocumentClick);
 
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('pagehide', handlePageHide);
+      document.removeEventListener('click', handleDocumentClick);
       if (scrollTimer !== null) window.clearTimeout(scrollTimer);
     };
   }, [locale, pathname]);

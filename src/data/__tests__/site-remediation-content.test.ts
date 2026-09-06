@@ -116,10 +116,11 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(insightsArchive.en.posts.every((post) => post.keywords.every((keyword) => !korean.test(keyword)))).toBe(true);
   });
 
-  it('1-3 limits the English consultation language claim to Korean, Chinese, and Japanese', () => {
+  it('1-3 states English, Korean, Chinese, and Japanese as available consultation languages', () => {
     const consultation = faqContent.en.find((item) => item.question === 'How are consultations conducted?');
-    expect(consultation?.answer).toContain('Korean, Chinese, and Japanese');
-    expect(consultation?.answer).not.toContain('English');
+    expect(consultation?.answer).toContain('English, Korean, Chinese, and Japanese');
+    expect(consultation?.answer).toContain('brief summary');
+    expect(consultation?.answer).not.toContain('Sending relevant documents in advance');
   });
 
   it('1-4 hides Jungmin Son email in every locale while preserving the managing attorney email', () => {

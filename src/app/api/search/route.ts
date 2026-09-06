@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'node:crypto';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { mapPublicRateLimitDenial } from '@/lib/builder/security/public-rate-limit-response';
-import { normalizeLocale, type Locale } from '@/lib/locales';
+import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
 import {
   getPublicSearchApiErrorPayload,
   type PublicSearchApiErrorCode,
@@ -15,6 +15,8 @@ import {
 } from '@/lib/builder/search/index-storage';
 import { buildSearchIndex } from '@/lib/builder/search/index-builder';
 import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
+import { augmentStaticDocs } from '@/lib/builder/search/augment-static-docs';
+import { getPublicIntentSearchDocs } from '@/lib/builder/search/public-intent-docs';
 import { SEARCH_DOC_KINDS, type SearchDocKind, type SearchIndex } from '@/lib/builder/search/types';
 
 export const runtime = 'nodejs';
@@ -30,7 +32,7 @@ function normalizeSearchQuery(value: string): string {
 }
 
 function errorResponse(
-  locale: Locale,
+  locale: SiteLocale,
   errorCode: PublicSearchApiErrorCode,
   status: number,
   init?: ResponseInit,
@@ -86,7 +88,7 @@ function refreshSearchIndex(): Promise<SearchIndex> {
 export async function GET(request: NextRequest) {
   const query = normalizeSearchQuery(request.nextUrl.searchParams.get('q') ?? '');
   const localeParam = request.nextUrl.searchParams.get('locale') ?? 'ko';
-  const locale = normalizeLocale(localeParam);
+  const locale = normalizeSiteLocale(localeParam);
   const kindsParam = request.nextUrl.searchParams.get('kinds') ?? '';
   const limit = Math.max(1, Math.min(50, Number(request.nextUrl.searchParams.get('limit')) || 20));
 
@@ -124,7 +126,14 @@ export async function GET(request: NextRequest) {
 
   let hits: ReturnType<typeof runSearchQuery>;
   try {
-    hits = runSearchQuery({ index, query, locale, limit, kinds: kinds.length > 0 ? kinds : undefined });
+    const indexForQuery = augmentStaticDocs(index, locale, getPublicIntentSearchDocs(locale));
+    hits = runSearchQuery({
+      index: indexForQuery,
+      query,
+      locale,
+      limit,
+      kinds: kinds.length > 0 ? kinds : undefined,
+    });
   } catch (error) {
     console.error('[public/search] query failed:', error);
     return errorResponse(locale, 'search_query_failed', 500);

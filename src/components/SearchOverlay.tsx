@@ -8,6 +8,7 @@ import type { Locale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
 import { filterSearchIndex, getSearchIndex, type SearchCategory } from '@/lib/search';
 import {
+  cancelScheduledOverlayScrollRestores,
   resolvePublishedOverlayOpener,
   usePublishedOverlayFocus,
 } from '@/components/builder/published/overlayFocus';
@@ -28,6 +29,7 @@ export default function SearchOverlay({
   const inputRef = useRef<HTMLInputElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const openerRef = useRef<HTMLElement | null>(null);
+  const closedByNavigationRef = useRef(false);
   const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const index = useMemo(() => getSearchIndex(locale), [locale]);
   const activeCategory = activeTab as SearchCategory;
@@ -38,6 +40,7 @@ export default function SearchOverlay({
 
   useEffect(() => {
     if (!open) return;
+    closedByNavigationRef.current = false;
     openerRef.current = resolvePublishedOverlayOpener();
     setActiveTab(content.tabs[0].id);
     setQuery('');
@@ -48,7 +51,19 @@ export default function SearchOverlay({
     overlayRef,
     initialFocusRef: inputRef,
     openerRef,
+    skipRestoreRef: closedByNavigationRef,
   });
+
+  const closeAfterInternalNavigation = useCallback(() => {
+    closedByNavigationRef.current = true;
+    cancelScheduledOverlayScrollRestores();
+    onClose();
+  }, [onClose]);
+
+  const handleInternalNavigate = useCallback((event: { preventDefault: () => void; defaultPrevented?: boolean }) => {
+    if (event.defaultPrevented) return;
+    closeAfterInternalNavigation();
+  }, [closeAfterInternalNavigation]);
 
   useEffect(() => {
     if (!open) return;
@@ -116,7 +131,19 @@ export default function SearchOverlay({
             {closeLabel}
           </button>
         </header>
-        <form className="search-bar" action={`/${locale}/search`} method="get">
+        <form
+          className="search-bar"
+          action={`/${locale}/search`}
+          method="get"
+          onSubmit={(event) => {
+            if (event.defaultPrevented) return;
+            closedByNavigationRef.current = true;
+            cancelScheduledOverlayScrollRestores();
+            window.setTimeout(() => {
+              onClose();
+            }, 0);
+          }}
+        >
           <input
             ref={inputRef}
             className="search-input"
@@ -163,10 +190,22 @@ export default function SearchOverlay({
           >
             {results.length ? (
               results.map((item) => (
-                <SmartLink key={item.id} className="search-result" href={item.href}>
-                  <span>{item.title}</span>
-                  <span className="search-result-meta">{tabLabel}</span>
-                </SmartLink>
+                item.href.startsWith('http') ? (
+                  <SmartLink key={item.id} className="search-result" href={item.href}>
+                    <span>{item.title}</span>
+                    <span className="search-result-meta">{tabLabel}</span>
+                  </SmartLink>
+                ) : (
+                  <Link
+                    key={item.id}
+                    className="search-result"
+                    href={item.href}
+                    onNavigate={handleInternalNavigate}
+                  >
+                    <span>{item.title}</span>
+                    <span className="search-result-meta">{tabLabel}</span>
+                  </Link>
+                )
               ))
             ) : (
               <div className="search-empty">{emptyLabel}</div>
@@ -177,7 +216,12 @@ export default function SearchOverlay({
             <div className="section-label">{popularLabel}</div>
             <div className="chip-group">
               {suggestionItems.map((item) => (
-                <Link key={item} href={`/${locale}/search?q=${encodeURIComponent(item)}&tab=${activeTab}`} className="chip">
+                <Link
+                  key={item}
+                  href={`/${locale}/search?q=${encodeURIComponent(item)}&tab=${activeTab}`}
+                  className="chip"
+                  onNavigate={handleInternalNavigate}
+                >
                   {item}
                 </Link>
               ))}

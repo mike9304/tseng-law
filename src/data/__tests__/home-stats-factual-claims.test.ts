@@ -46,10 +46,11 @@ const expectedStats = {
   en: {
     title: 'Cross-Border Practice at a Glance',
     description:
-      'Based on the official attorney profile: four Taiwan offices, three working languages—Chinese, Korean, and Japanese—seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1.',
+      'The firm provides Taiwan legal services in four languages: English, Chinese, Korean, and Japanese. Based on the official attorney profile: four Taiwan offices, seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1.',
     highlightWords: [
       'four Taiwan offices',
-      'three working languages',
+      'four languages',
+      'English',
       'Chinese',
       'Korean',
       'Japanese',
@@ -59,7 +60,7 @@ const expectedStats = {
     ],
     items: [
       { target: 4, label: 'Taiwan Offices' },
-      { target: 3, label: 'Working Languages' },
+      { target: 4, label: 'Working Languages' },
       { target: 7, label: 'Principal Practice Areas' },
       { target: 2, label: 'Top-Level Language Qualifications' },
     ],
@@ -67,9 +68,11 @@ const expectedStats = {
   ja: {
     title: '公式プロフィールで見る国際業務の基盤',
     description:
-      '公式弁護士プロフィールに基づき、台湾4拠点、中国語・韓国語・日本語の3言語、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。',
+      '当事務所では英語・中国語・韓国語・日本語の4言語で台湾の法律相談に対応しています。公式弁護士プロフィールに基づき、台湾4拠点、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。',
     highlightWords: [
       '台湾4拠点',
+      '4言語',
+      '英語',
       '中国語',
       '韓国語',
       '日本語',
@@ -79,7 +82,7 @@ const expectedStats = {
     ],
     items: [
       { target: 4, label: '台湾の事務所' },
-      { target: 3, label: '業務対応言語' },
+      { target: 4, label: '業務対応言語' },
       { target: 7, label: '主要取扱分野' },
       { target: 2, label: '最上位級の語学資格' },
     ],
@@ -94,7 +97,8 @@ const requiredDescriptionTerms: Record<SiteLocale, readonly string[]> = {
   'zh-hant': ['4個台灣辦公據點', '中文', '韓文', '日文', '7項主要執業領域', 'TOPIK 6級', 'JLPT N1'],
   en: [
     'four Taiwan offices',
-    'three working languages',
+    'four languages',
+    'English',
     'Chinese',
     'Korean',
     'Japanese',
@@ -102,7 +106,7 @@ const requiredDescriptionTerms: Record<SiteLocale, readonly string[]> = {
     'TOPIK Level 6',
     'JLPT N1',
   ],
-  ja: ['台湾4拠点', '中国語', '韓国語', '日本語', '7つの主要取扱分野', 'TOPIK 6級', 'JLPT N1'],
+  ja: ['台湾4拠点', '4言語', '英語', '中国語', '韓国語', '日本語', '7つの主要取扱分野', 'TOPIK 6級', 'JLPT N1'],
 };
 
 const unsupportedClaims = [
@@ -114,8 +118,6 @@ const unsupportedClaims = [
   /5 Office Locations/i,
   /5 辦公據點/i,
   /5 オフィス/i,
-  /four languages/i,
-  /4 Languages/i,
   /4 語言/i,
   /4 対応言語/i,
   /원스톱/i,
@@ -157,7 +159,8 @@ describe('homepage stats factual claims', () => {
   it.each(siteLocales)('uses four distinct unsuffixed factual counters for %s', (locale) => {
     const items = siteContent[locale].stats.items;
 
-    expect(items.map(({ target }) => target)).toEqual([4, 3, 7, 2]);
+    const expectedTargets = locale === 'en' || locale === 'ja' ? [4, 4, 7, 2] : [4, 3, 7, 2];
+    expect(items.map(({ target }) => target)).toEqual(expectedTargets);
     expect(items[0].target).toBe(siteContent[locale].contact.locations.length);
     expect(items.every((item) => !('suffix' in item))).toBe(true);
     expect(new Set(items.map(({ label }) => label)).size).toBe(items.length);
@@ -176,6 +179,10 @@ describe('homepage stats factual claims', () => {
 
     for (const claim of unsupportedClaims) {
       expect(serializedStats).not.toMatch(claim);
+    }
+    if (locale === 'ko' || locale === 'zh-hant') {
+      expect(serializedStats).not.toMatch(/four languages/i);
+      expect(serializedStats).not.toMatch(/4 Languages/i);
     }
   });
 });

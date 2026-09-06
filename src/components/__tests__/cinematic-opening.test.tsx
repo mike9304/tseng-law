@@ -53,7 +53,7 @@ const expectedOpeningCopy = {
     secondary: 'ATTORNEYS AT LAW IN TAIWAN',
     scroll: 'Scroll to continue',
     mediaAlt: 'Bright aerial flight over Taiwan’s Central Mountain Range and sea of clouds',
-    service: 'Taiwan legal advice · Korean and Japanese communication',
+    service: 'Taiwan legal support · English, Japanese & Korean',
     contact: 'Contact the firm',
   },
   ja: {
@@ -61,10 +61,14 @@ const expectedOpeningCopy = {
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '下にスクロール',
     mediaAlt: '明るい自然光の中、台湾中央山脈と雲海の上空を飛ぶ空撮風景',
-    service: '台湾の法律相談 · 韓国語・日本語でのコミュニケーション',
+    service: '台湾の法律相談 · 日本語・英語・韓国語で対応',
     contact: '相談窓口',
   },
 } as const;
+
+function htmlEncodedText(value: string): string {
+  return value.replace(/&/g, '&amp;');
+}
 
 function renderRouteShell(pathname: string | null, locale: (typeof locales)[number] = 'ko') {
   navigationState.pathname = pathname;
@@ -242,7 +246,11 @@ describe('cinematic opening content and semantics', () => {
     expect(html).toContain(copy.primary);
     expect(html).toContain(copy.secondary);
     expect(html).toContain(copy.scroll);
-    expect(html).toContain(copy.service);
+    const serviceParagraph = html.match(
+      /class="cinematic-opening__service"[^>]*>([^<]*)</,
+    )?.[1] ?? '';
+    expect(serviceParagraph.replace(/&amp;/g, '&')).toBe(copy.service);
+    expect(html).toContain(htmlEncodedText(copy.service));
     expect(html).toContain(copy.contact);
     expect(html).toContain(`href="/${locale}/contact"`);
     expect(html).toContain(`alt="${copy.mediaAlt}"`);

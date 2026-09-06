@@ -31,7 +31,7 @@ const copyByLocale = {
   },
   en: {
     label: 'ABOUT',
-    title: 'Attorney Wei Tseng, Taiwan Legal Partner for Korean Clients',
+    title: 'Attorney Wei Tseng, Taiwan Legal Partner for International Clients',
     description:
       'Attorney Wei Tseng provides integrated strategy across investment, incorporation, and litigation with Korean, Japanese, and Chinese communication support.',
     summary:

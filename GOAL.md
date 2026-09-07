@@ -31,7 +31,7 @@ Updated: 2026-09-06 KST · Owner: Fable 5.1 (son7-df) · 워크트리: `~/Projec
 - [사이클 4 · 2026-09-07 09:5x] 배치 5(716315db): R1 밝은 배경 H1 섀도 제거(`.page-header .hero-title{text-shadow:none}`), R2 밑줄 콘텐츠 링크 한정, R3/R7 문의 안내문 `flex:1 1 100%`, R4 EN keep-all 복원·JA/ZH 제목 balance·본문 제목 pretty·모바일 H2 1.35rem, R5 콜아웃 전폭, R6 스크롤톱 푸터 근처 숨김+FAQ 토글 여백. 프로브 전 항목 통과. 최종 `npm run qa`: 1차 실행은 builder 마이그레이션 테스트(src/lib, 이 브랜치 무변경) 5초 타임아웃으로 exit 1 → 단독 재실행 39/39 통과, 전체 재실행 exit 0(1,203파일 9,462테스트). build 성공. **GOAL COMPLETE(에이전트 산출 기준)** — push/배포는 사용자 결정 대기.
 
 ## Open
-- push/배포: ASK-20260907-design-audit-fixes-push-claude 대기(push 시 main 자동 배포 주의, 성장팀 단일 릴리스 순서 옵션).
+- ~~push/배포~~ ✅ 2026-09-07 09:26 사용자 "배포해" → origin/main 3186ca60→c227f90e fast-forward, Vercel 성공 09:28:43(dpl 9fhM65wv…). 라이브 실측: ja p word-break normal/strict, ko keep-all, 히어로 CTA=헤더 CTA rgb(22,56,45), 히어로 600, 푸터 rgb(230,237,227), 12px 미만 0, html.js, 문의 이메일 카드 흰 면, 페이지 H1 섀도 none, 재방문 시 오프닝 미표시, pageerror 0.
 - 자산/콘텐츠(사용자): About 배너 로고 타사명, 초상 2종, 미디어센터 영상. 통보(성장): privacy AI 초안 문구. 통보(디자인): KO/ZH 빌더 발행본 결함.
 - 후속 후보(P2): ko 인터펑트 행두 배치, 문의 페이지 동일 이메일 카드 4개(ContactBlocks 구조), 내비 IA(About/Contact 1차 메뉴·Log in 숨김), 홈 영상 4개 15~17MB·관리자 CSS 공개 번들 분리.
 - 디스크: `~/Projects/tseng-law/.next-*` 191GB 삭제 여부(ASK-20260906-disk-full-stale-next-builds-claude).

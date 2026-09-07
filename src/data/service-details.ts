@@ -23,7 +23,7 @@ export const serviceAreas: ServiceArea[] = [
     intro: {
       ko: '법무법인 호정은 한국 기업의 대만 시장 진출을 위해 법인 형태 선택부터 투자심의위원회 승인, 자본금 송금, 은행 계좌 개설, 영업장소 확보, 업종별 인허가까지 전 과정을 한국어로 밀착 지원합니다.',
       'zh-hant': '昊鼎國際法律事務所協助韓國企業選擇公司型態、投審會審查、資本匯入、銀行開戶、營業場所確認及特殊行業許可，提供韓語全程對接服務。',
-      en: 'Hovering supports overseas companies and investors entering or operating in Taiwan, including entity structuring, investment approval, registration, capital remittance, banking, and permitted-business review.'
+      en: 'Hovering supports overseas companies and investors entering or operating in Taiwan, including entity structuring, investment approval, registration, capital remittance, banking, and permitted-business review. We also assist with the tax and accounting matters that arise from establishing and operating a Taiwan company, coordinating with external accountants where needed.'
     },
     keyPoints: {
       ko: [

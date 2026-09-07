@@ -58,6 +58,21 @@ function ipFromContext(ctx: McpRequestContext): string {
   return 'unknown';
 }
 
+function toolResult(
+  structuredContent: object,
+  humanReadableText: string,
+  isError?: boolean,
+): CallToolResult {
+  return {
+    ...(isError ? { isError: true } : {}),
+    content: [
+      { type: 'text', text: humanReadableText },
+      { type: 'text', text: JSON.stringify(structuredContent) },
+    ],
+    structuredContent: structuredContent as CallToolResult['structuredContent'],
+  };
+}
+
 function toolError(
   code: AiIntakeErrorCode,
   message: string,
@@ -76,11 +91,7 @@ function toolError(
   if (extra?.intakeId) structuredContent.intakeId = extra.intakeId;
   if (extra?.status) structuredContent.status = extra.status;
   if (extra?.duplicate !== undefined) structuredContent.duplicate = extra.duplicate;
-  return {
-    isError: true,
-    content: [{ type: 'text', text: message }],
-    structuredContent,
-  };
+  return toolResult(structuredContent, message, true);
 }
 
 function rateToolError(rate: Extract<AiIntakeRateDecision, { allowed: false }>): CallToolResult {
@@ -94,6 +105,21 @@ function rateToolError(rate: Extract<AiIntakeRateDecision, { allowed: false }>):
 
 function unexpectedToolError(): CallToolResult {
   return toolError('BACKEND_UNAVAILABLE', GENERIC_TOOL_ERROR);
+}
+
+function requirementsHumanReadableText(
+  payload: ReturnType<typeof buildRequirementsPayload>,
+): string {
+  return [
+    payload.confirmationInstruction,
+    '',
+    'Required visitor facts if missing: name, email, and a short summary. Do not invent them.',
+    'Client-generated required fields: locale and a UUID idempotencyKey. Do not ask the visitor for these.',
+    'Suggested questions and optional fields (residence, urgency, preferred contact/time, and others) are not mandatory. Do not require all of them.',
+    'Later submit needs two distinct literal-true approvals: privacyConsent and userApprovedExactPreview.',
+    '',
+    payload.questions.join('\n'),
+  ].join('\n');
 }
 
 export function registerAiIntakeMcpTools(server: McpServer, ctx: McpRequestContext): void {
@@ -125,13 +151,7 @@ export function registerAiIntakeMcpTools(server: McpServer, ctx: McpRequestConte
         if (!payload.success) {
           return toolError('BACKEND_UNAVAILABLE', 'Intake requirements are not available.');
         }
-        return {
-          content: [{
-            type: 'text',
-            text: `${payload.data.confirmationInstruction}\n\n${payload.data.questions.join('\n')}`,
-          }],
-          structuredContent: payload.data,
-        };
+        return toolResult(payload.data, requirementsHumanReadableText(payload.data));
       } catch {
         return unexpectedToolError();
       }
@@ -165,19 +185,18 @@ export function registerAiIntakeMcpTools(server: McpServer, ctx: McpRequestConte
         if (!result.ok) {
           return toolError(result.code, result.message, { findings: result.findings });
         }
-        return {
-          content: [{
-            type: 'text',
-            text: [
-              AI_INTAKE_MCP_PREVIEW_RESULT_INSTRUCTION,
-              '',
-              `Subject: ${result.response.subject}`,
-              '',
-              result.response.body,
-            ].join('\n'),
-          }],
-          structuredContent: result.response,
-        };
+        return toolResult(
+          result.response,
+          [
+            AI_INTAKE_MCP_PREVIEW_RESULT_INSTRUCTION,
+            '',
+            `Subject: ${result.response.subject}`,
+            '',
+            result.response.body,
+            '',
+            'Caller protocol metadata (confirmationToken, digest, expiresAt, requirementsVersion) is in the JSON text block only. It is not part of the verbatim subject and body shown to the visitor.',
+          ].join('\n'),
+        );
       } catch {
         return unexpectedToolError();
       }
@@ -225,10 +244,7 @@ export function registerAiIntakeMcpTools(server: McpServer, ctx: McpRequestConte
             duplicate: result.duplicate,
           });
         }
-        return {
-          content: [{ type: 'text', text: result.response.message }],
-          structuredContent: result.response,
-        };
+        return toolResult(result.response, result.response.message);
       } catch {
         return unexpectedToolError();
       }

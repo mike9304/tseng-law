@@ -157,6 +157,45 @@ function leakScan(raw: string): void {
   expect(raw).not.toContain('TRACE');
 }
 
+function mcpCallResult(payload: Record<string, unknown>): {
+  isError?: boolean;
+  content: Array<{ type?: string; text?: string }>;
+  structuredContent: Record<string, unknown>;
+} {
+  return payload.result as {
+    isError?: boolean;
+    content: Array<{ type?: string; text?: string }>;
+    structuredContent: Record<string, unknown>;
+  };
+}
+
+function parseJsonOnlyTextBlock(
+  content: Array<{ type?: string; text?: string }> | undefined,
+): Record<string, unknown> {
+  const parsed: Record<string, unknown>[] = [];
+  for (const block of content ?? []) {
+    if (typeof block.text !== 'string') continue;
+    try {
+      const value = JSON.parse(block.text) as unknown;
+      if (value && typeof value === 'object' && !Array.isArray(value)) {
+        parsed.push(value as Record<string, unknown>);
+      }
+    } catch {
+      // human-readable prose
+    }
+  }
+  expect(parsed).toHaveLength(1);
+  return parsed[0]!;
+}
+
+function fieldNames(group: unknown): string[] {
+  if (!Array.isArray(group)) return [];
+  return group.flatMap((field) => {
+    if (!field || typeof field !== 'object' || !('name' in field)) return [];
+    return [String((field as { name: unknown }).name)];
+  });
+}
+
 describe('POST /api/ai/mcp', () => {
   beforeEach(() => {
     stubMcpEnv();
@@ -557,5 +596,123 @@ describe('POST /api/ai/mcp', () => {
     expect(response.headers.get('cache-control')).toMatch(/no-store/i);
     expect(response.headers.get('x-content-type-options')).toBe('nosniff');
     expect(sendMail).not.toHaveBeenCalled();
+  });
+
+  it('lets a text-only client recover EN and JA requirements from JSON text', async () => {
+    for (const locale of ['en', 'ja'] as const) {
+      const parsed = await modernCall('get_consultation_intake_requirements', { locale, category: 'labor' });
+      expect(parsed.status).toBe(200);
+      const result = mcpCallResult(parsed.payload);
+      const fromText = parseJsonOnlyTextBlock(result.content);
+      expect(fromText).toEqual(result.structuredContent);
+      expect(fieldNames((fromText.fields as { required?: unknown }).required)).toEqual(
+        expect.arrayContaining(['name', 'email', 'summary']),
+      );
+      expect(fieldNames((fromText.fields as { optional?: unknown }).optional)).toEqual(
+        expect.arrayContaining(['countryOrResidence', 'urgency', 'preferredContact', 'preferredTime']),
+      );
+      expect(fromText.privacyUrl).toEqual(expect.stringMatching(new RegExp(`/${locale}/privacy$`)));
+      const prose = result.content[0]?.text ?? '';
+      expect(prose).toMatch(/name, email, and a short summary/i);
+      expect(prose).toMatch(/locale and a UUID/i);
+      expect(prose).toMatch(/not mandatory/i);
+      expect(prose).toContain('privacyConsent');
+      expect(prose).toContain('userApprovedExactPreview');
+      if (locale === 'ja') expect(JSON.stringify(fromText.questions)).toContain('お名前');
+      leakScan(parsed.raw);
+    }
+    expect(sendMail).not.toHaveBeenCalled();
+  });
+
+  it('lets a text-only client recover preview subject, body, token, digest, and expiry', async () => {
+    const parsed = await modernCall('preview_consultation_email', validPreviewBody());
+    expect(parsed.status).toBe(200);
+    const result = mcpCallResult(parsed.payload);
+    const fromText = parseJsonOnlyTextBlock(result.content);
+    expect(fromText).toEqual(result.structuredContent);
+    expect(fromText.subject).toBe(result.structuredContent.subject);
+    expect(fromText.body).toBe(result.structuredContent.body);
+    expect(fromText.confirmationToken).toBe(result.structuredContent.confirmationToken);
+    expect(fromText.digest).toBe(result.structuredContent.digest);
+    expect(fromText.expiresAt).toBe(result.structuredContent.expiresAt);
+    const prose = result.content[0]?.text ?? '';
+    expect(prose).toContain(AI_INTAKE_MCP_PREVIEW_RESULT_INSTRUCTION);
+    expect(prose).toContain(String(fromText.subject));
+    expect(prose).toContain(String(fromText.body));
+    expect(prose).not.toContain(String(fromText.confirmationToken));
+    expect(sendMail).not.toHaveBeenCalled();
+    leakScan(parsed.raw);
+  });
+
+  it('lets a text-only client recover approval, consent, and sensitive errors without echoing secrets', async () => {
+    const preview = await modernCall('preview_consultation_email', validPreviewBody());
+    const token = String(mcpCallResult(preview.payload).structuredContent.confirmationToken);
+    const base = { ...validPreviewBody(), confirmationToken: token };
+
+    const approval = await modernCall('submit_consultation_email', { ...base, privacyConsent: true });
+    const approvalResult = mcpCallResult(approval.payload);
+    const approvalText = parseJsonOnlyTextBlock(approvalResult.content);
+    expect(approvalText).toEqual(approvalResult.structuredContent);
+    expect(approvalResult.isError).toBe(true);
+    expect((approvalText.error as { code: string }).code).toBe('APPROVAL_REQUIRED');
+
+    const consent = await modernCall('submit_consultation_email', {
+      ...base,
+      userApprovedExactPreview: true,
+      privacyConsent: 'true',
+    });
+    const consentResult = mcpCallResult(consent.payload);
+    const consentText = parseJsonOnlyTextBlock(consentResult.content);
+    expect(consentText).toEqual(consentResult.structuredContent);
+    expect(consentResult.isError).toBe(true);
+    expect((consentText.error as { code: string }).code).toBe('CONSENT_REQUIRED');
+
+    const sensitive = await modernCall('preview_consultation_email', validPreviewBody({
+      phoneOrMessenger: 'GB82 WEST 1234 5698 7654 32',
+    }));
+    const sensitiveResult = mcpCallResult(sensitive.payload);
+    const sensitiveText = parseJsonOnlyTextBlock(sensitiveResult.content);
+    expect(sensitiveText).toEqual(sensitiveResult.structuredContent);
+    expect(sensitiveResult.isError).toBe(true);
+    expect((sensitiveText.error as { code: string }).code).toBe('SENSITIVE_DATA_REJECTED');
+    expect(sensitive.raw).not.toContain('GB82');
+    expect(JSON.stringify(sensitiveText)).not.toContain('GB82');
+    expect(submitAiIntake).not.toHaveBeenCalled();
+    expect(sendMail).not.toHaveBeenCalled();
+    leakScan(approval.raw);
+    leakScan(consent.raw);
+    leakScan(sensitive.raw);
+  });
+
+  it('lets a text-only client recover mocked sent and duplicate submit state', async () => {
+    const preview = await modernCall('preview_consultation_email', validPreviewBody());
+    const previewed = mcpCallResult(preview.payload).structuredContent;
+    const submitBody = {
+      ...validPreviewBody(),
+      confirmationToken: String(previewed.confirmationToken),
+      privacyConsent: true,
+      userApprovedExactPreview: true,
+    };
+
+    const submitted = await modernCall('submit_consultation_email', submitBody);
+    const first = mcpCallResult(submitted.payload);
+    const firstText = parseJsonOnlyTextBlock(first.content);
+    expect(firstText).toEqual(first.structuredContent);
+    expect(first.isError).toBeFalsy();
+    expect(firstText.ok).toBe(true);
+    expect(firstText.status).toBe('sent');
+    expect(firstText.duplicate).toBe(false);
+    expect(sendMail).toHaveBeenCalledTimes(1);
+
+    const replay = await modernCall('submit_consultation_email', submitBody);
+    const second = mcpCallResult(replay.payload);
+    const secondText = parseJsonOnlyTextBlock(second.content);
+    expect(secondText).toEqual(second.structuredContent);
+    expect(secondText.status).toBe('sent');
+    expect(secondText.duplicate).toBe(true);
+    expect(secondText.intakeId).toBe(firstText.intakeId);
+    expect(sendMail).toHaveBeenCalledTimes(1);
+    leakScan(submitted.raw);
+    leakScan(replay.raw);
   });
 });

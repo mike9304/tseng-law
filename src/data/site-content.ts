@@ -2,6 +2,10 @@ import {
   getConsultationPublicEmail,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import {
+  EN_HOME_HERO_SUBTITLE,
+  EN_HOME_SERVICES_DESCRIPTION,
+} from '@/data/en-service-scope';
 
 export type NavItem = {
   label: string;
@@ -1809,8 +1813,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       ...base.hero,
       label: 'TAIWAN LEGAL',
       title: 'Taiwan Law, Clearly Explained.',
-      subtitle:
-        'Our multilingual legal team provides practical guidance for Taiwan investment, disputes, and cross-border matters.',
+      subtitle: EN_HOME_HERO_SUBTITLE,
       typingPhrases: [
         'Start Your Taiwan Expansion with Confidence',
         'Practical Litigation Experience in Taiwan',
@@ -2065,7 +2068,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       ...base.services,
       label: 'SERVICES',
       title: 'Main Services',
-      description: 'Structured support for investment, litigation, and advisory matters in Taiwan.',
+      description: EN_HOME_SERVICES_DESCRIPTION,
       items: [
         {
           title: 'Investment & Incorporation',

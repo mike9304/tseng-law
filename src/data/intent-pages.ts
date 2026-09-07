@@ -425,14 +425,15 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       title: 'Taiwan Lawyer for Litigation, Company Setup & Business Advice',
       description:
         'Taiwan legal support for overseas companies and individuals on litigation, company setup, and business advice, with consultations in English.',
-      keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for overseas clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners', 'English speaking lawyer in Taipei'],
+      keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for overseas clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners', 'English speaking lawyer in Taipei', 'Taiwan residence permit assistance', 'Taiwan tax accounting assistance'],
       searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for overseas clients', 'English speaking lawyer Taipei'],
       heroPoints: [
         'This page connects overseas and international clients to Taiwan legal support for company setup, investment, and disputes.',
+        'English-speaking attorneys are available for consultation, in person or by video. Japanese, Korean, and Chinese are also available.',
+        'The firm assists with Taiwan company formation, litigation across practice areas, residence-permit procedures, and tax-accounting assistance.',
         'Initial fact review, document analysis, procedure planning, and dispute handling can be assessed in one flow.',
         'You can review Attorney Wei Tseng’s profile, columns, and public channels from the same entry point.',
         'The firm is based in Taipei and works with international clients on Taiwan company setup, disputes, employment, and regulatory matters.',
-        'Consultations are available in English, in person or by video.',
       ],
       idealFor: [
         'Clients who want Taiwan legal issues explained in English or another working language',
@@ -441,20 +442,24 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'Anyone who wants to understand consultation steps and materials before reaching out',
         'Foreign residents and business owners in Taiwan who need a local law firm in Taipei',
         'Overseas companies entering Taiwan or facing a dispute with a Taiwanese counterparty',
+        'Clients who need residence-permit assistance connected to a Taiwan matter',
+        'Clients who need tax-accounting assistance for a Taiwan company or dispute',
       ],
       reviewPoints: [
         'Jurisdiction, timing, and evidence strategy vary by case type.',
         'For overseas companies, Taiwan procedure often needs to be aligned with headquarters or home-jurisdiction structure.',
         'Foreign-national matters frequently require attention to service, powers of attorney, and immigration issues.',
         'Legal analysis and practical enforceability should be reviewed together.',
+        'Official government pages linked from this guide are reference destinations. They do not decide eligibility, acceptance, or outcome.',
       ],
       processFlow: [
-        'Start by clarifying the business goal or dispute posture and identifying what contracts or evidence already exist.',
+        'Start with a brief first email: the issue or business goal, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional.',
         'Separate jurisdiction, procedure, timing, and appearance requirements under Taiwan practice before the first action is taken.',
         'After consultation, split the matter into items that can move immediately and items that still require fact or document confirmation.',
       ],
       prepareChecklist: [
         'Brief initial summary: the issue or business model, the Taiwan connection, key dates or a deadline, preferred language, and how we can reach you',
+        'Optional: time zone or preferred contact window, and how you found this page',
         'Organize for later attorney instructions: contracts, emails, chat records, quotations, and payment records — do not send originals in the first email',
         'Organize for later: counterparty identity, company name, address, and representative details',
         'Organize for later: photos, videos, registry documents, or other core evidence; medical or bank records only after the attorney asks for them',
@@ -491,6 +496,20 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
           question: 'Do I need to visit Taipei for the first consultation?',
           answer: 'No. Consultations are available in person or by video, so an initial review can usually be completed from overseas once your documents and timeline are organized.',
         },
+        {
+          question: 'Do you assist with Taiwan residence permits?',
+          answer:
+            'Yes. The firm assists with Taiwan residence-permit procedures connected to a Taiwan matter, such as post-incorporation work and stay arrangements. Related official reference links are listed on this page.',
+        },
+        {
+          question: 'Do you assist with Taiwan tax and accounting issues?',
+          answer:
+            'Yes. The firm assists with Taiwan tax and accounting matters for a company or dispute. Related official reference links are listed on this page.',
+        },
+        {
+          question: 'Do you advise on the law of another country?',
+          answer: 'This is a Taiwan law firm. We advise on Taiwan law.',
+        },
       ],
     },
     'taiwan-company-setup-lawyer': {
@@ -498,32 +517,38 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       label: 'SEARCH GUIDE',
       title: 'Taiwan Company Setup Lawyer for Overseas Businesses',
       description: 'A focused guide on how a Taiwan company setup lawyer helps overseas businesses with entity choice, investment approval, registration, and operating contracts.',
-      keywords: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer', 'Wei Tseng attorney', 'Taiwan subsidiary branch'],
-      searchTerms: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer'],
+      keywords: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer', 'Wei Tseng attorney', 'Taiwan subsidiary branch', 'Taiwan branch vs subsidiary', 'Taiwan residence permit assistance', 'Taiwan tax accounting assistance'],
+      searchTerms: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer', 'Taiwan branch vs subsidiary'],
       heroPoints: [
-        'Entity choice, investment approval, capital remittance, registration, and operating contracts should be reviewed as one process.',
-        'The guide explains subsidiary, branch, and representative-office choices from the perspective of overseas parents and investors entering Taiwan.',
-        'Post-incorporation issues such as visas, trademarks, contracts, and labor risk can be planned from the start.',
+        'Entity choice, investment approval, capital remittance, registration, and operating contracts should be reviewed as one Taiwan-law process.',
+        'The guide explains subsidiary, branch, and representative-office choices from the perspective of overseas parents and investors entering Taiwan — not limited to one home country.',
+        'English-speaking attorneys are available for consultation, in person or by video. Initial review can start remotely.',
+        'After registration, the firm can assist with residence-permit procedures and tax-accounting assistance for the Taiwan operation.',
+        'Official government pages are linked as reference destinations; they do not decide eligibility on their own.',
       ],
       idealFor: [
-        'Businesses deciding which Taiwan entity structure fits the overseas parent or investor',
-        'Teams comparing branch versus subsidiary setup',
+        'Overseas companies choosing a Taiwan subsidiary, branch, or representative office',
+        'Teams comparing branch versus subsidiary setup against the parent’s commercial goal',
         'Companies entering regulated sectors such as cosmetics or logistics',
-        'Clients who want setup, visas, trademarks, and employment issues reviewed together',
+        'Clients who want setup, residence-permit assistance, trademarks, and employment issues reviewed together',
+        'Clients who need tax-accounting assistance for the Taiwan entity',
       ],
       reviewPoints: [
         'Investment approval and capital-remittance steps are often the most timing-sensitive.',
         'Business address, industry code, and actual operating model need to match.',
         'Regulated sectors require more than incorporation alone.',
         'Contracts, labor structure, and trademarks should be considered at the setup stage.',
+        'Official Invest Taiwan, immigration, and tax pages linked from this guide are reference destinations.',
       ],
       processFlow: [
-        'Compare subsidiary, branch, and representative-office structures based on the commercial goal and revenue flow.',
+        'Compare subsidiary, branch, and representative-office structures based on the commercial goal and revenue flow of the overseas parent or investor.',
         'Confirm investment review needs, capital amount, shareholder structure, and business address before filing.',
-        'Map the sequence after registration as well, including banking, tax, visas, trademarks, and employment documents.',
+        'Map the sequence after registration as well, including banking, tax-accounting assistance, residence-permit assistance, trademarks, and employment documents.',
+        'Initial review can start by email or video from outside Taiwan; local filings are mapped after the first consultation.',
       ],
       prepareChecklist: [
-        'Brief initial summary: the planned Taiwan business model, the overseas parent or investor, key dates or a deadline, preferred language, and contact details',
+        'Brief initial summary: the planned Taiwan business model, the overseas parent or investor, the Taiwan connection, key dates or a deadline, preferred language, and contact details',
+        'Optional: time zone or preferred contact window, and how you found this page',
         'Organize for later attorney instructions: overseas parent or investor registry documents, shareholder structure, and director details — do not send originals in the first email',
         'Organize for later: planned business scope, operating model, candidate Taiwan address, and operating contracts',
         'Organize for later: expected capital amount, remittance plan, hiring plan in Taiwan, and any permit or sector-specific information already identified',
@@ -555,7 +580,26 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: 'Is company registration alone enough?',
           answer:
-            'Usually not. Banking, tax, visas, trademarks, labor arrangements, and industry permits often follow immediately after registration.',
+            'Usually not. Banking, tax-accounting assistance, residence-permit assistance, trademarks, labor arrangements, and industry permits often follow immediately after registration.',
+        },
+        {
+          question: 'Can company setup review start while the parent is still outside Taiwan?',
+          answer:
+            'Yes. English-speaking attorneys can begin an initial review by email or video. Local filings, bank work, and in-person steps are mapped after that first consultation. Current consultation structure is on the Service Fees page.',
+        },
+        {
+          question: 'Do you assist with residence permits after company setup?',
+          answer:
+            'Yes. The firm assists with Taiwan residence-permit procedures connected to the company or assignment. Related official reference links are listed on this page.',
+        },
+        {
+          question: 'Do you assist with tax and accounting for the Taiwan entity?',
+          answer:
+            'Yes. The firm assists with Taiwan tax and accounting matters for the entity. Related official reference links are listed on this page.',
+        },
+        {
+          question: 'Where can I see current company-setup fees?',
+          answer: 'See the Service Fees page for the current consultation and company-setup fee structure.',
         },
       ],
     },
@@ -563,12 +607,13 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       slug: 'taiwan-litigation-lawyer',
       label: 'SEARCH GUIDE',
       title: 'Taiwan Litigation Lawyer for Contract Disputes & Civil Claims',
-      description: 'A practical guide for overseas companies and individuals looking for a Taiwan litigation lawyer for contract disputes, unpaid invoices, civil claims, criminal matters, and family disputes.',
+      description: 'A practical guide for overseas companies and individuals looking for a Taiwan litigation lawyer for contract disputes, unpaid invoices, civil claims, criminal matters, and family disputes. English-speaking attorneys are available.',
       keywords: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan criminal lawyer', 'Wei Tseng attorney', 'sue a company in Taiwan', 'Taiwan debt recovery lawyer', 'Taiwan commercial dispute lawyer'],
       searchTerms: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan debt recovery', 'sue a Taiwanese company'],
       heroPoints: [
         'We handle Taiwan contract disputes and unpaid invoices, as well as civil claims, criminal matters, and family disputes according to the case.',
-        'Foreign-national matters often require combined review of evidence, translation, service, and immigration-related issues.',
+        'English-speaking attorneys are available for consultation, in person or by video. Early review can start from outside Taiwan.',
+        'Foreign-national matters often require combined review of evidence, translation, service, deadlines, and immigration-related issues.',
         'Attorney Wei Tseng’s related case references and columns are linked directly for context.',
       ],
       idealFor: [
@@ -584,14 +629,16 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'Civil damages and criminal procedure sometimes need to be designed together.',
         'For foreign clients, timeline control is often as important as translation.',
         'Settlement should be evaluated only after liability and damages are analyzed.',
+        'The first email should identify the Taiwan counterparty or other Taiwan connection and any deadline.',
       ],
       processFlow: [
-        'First organize the facts, counterpart information, and damage scope in chronological order.',
+        'Send a brief first email covering the contract or claim issue, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional.',
         'Then determine which parts belong in civil, criminal, or family procedure and whether any of them should move together.',
         'Review settlement potential, evidence gaps, and attendance requirements before choosing the first procedural step.',
       ],
       prepareChecklist: [
         'Brief initial summary: the contract or claim issue, the Taiwan connection, key dates or a deadline, preferred language, and contact details',
+        'Optional: time zone or preferred contact window, and how you found this page',
         'Organize for later attorney instructions: a written timeline, contracts, and call or chat records — do not send originals in the first email',
         'Organize for later: counterparty personal or company identification details needed for the matter',
         'Organize for later: photos, videos, receipts, police materials, and any existing investigation, court case, or settlement discussion; medical or bank records only after the attorney asks for them',
@@ -640,6 +687,11 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: 'Can you tell me whether my dispute is worth pursuing before I commit?',
           answer: 'Yes. The first step is an assessment of liability, evidence, and likely recovery against cost and timeline — and we will tell you plainly when a claim is not worth pursuing.',
+        },
+        {
+          question: 'What should the first email include?',
+          answer:
+            'A brief description of the issue, the Taiwan connection, any deadline, preferred language, and how we can reach you. Time zone and how you found us are optional. Sensitive IDs can wait until the attorney asks.',
         },
       ],
     },

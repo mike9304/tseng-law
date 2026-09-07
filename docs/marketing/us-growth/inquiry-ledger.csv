@@ -1,0 +1,1 @@
+inquiry_id,received_at,record_kind,duplicate_of,entry_route_if_known,traced_source,self_reported_source,source_conflict,country_self_reported_optional,language,matter_area,qualified,qualified_at,conflict_check,capacity_ok,capacity_checked_at,paid_consult,paid_consult_at,engaged,engaged_at,closed_at,closed_reason

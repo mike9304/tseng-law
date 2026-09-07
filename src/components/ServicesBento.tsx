@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
+import { EN_HOME_SERVICES_ASSISTANCE } from '@/data/en-service-scope';
 import { getServiceSlugs } from '@/data/service-details';
 import CorporateAdvisoryLink from '@/components/CorporateAdvisoryLink';
 import SectionLabel from '@/components/SectionLabel';
@@ -114,6 +115,15 @@ export default function ServicesBento({
             );
           })}
         </div>
+        {locale === 'en' ? (
+          <p>
+            {EN_HOME_SERVICES_ASSISTANCE.beforeContact}
+            <Link href={`/${locale}/contact`}>
+              {EN_HOME_SERVICES_ASSISTANCE.contactLabel}
+            </Link>
+            {EN_HOME_SERVICES_ASSISTANCE.afterContact}
+          </p>
+        ) : null}
         <CorporateAdvisoryLink locale={locale} />
       </div>
     </section>

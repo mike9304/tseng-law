@@ -101,7 +101,7 @@ const labels = {
     attorneyHeading: 'Lead attorney most relevant to this search',
     ctaLabel: 'NEXT STEP',
     ctaTitle: 'If you want the direction clarified quickly',
-    ctaText: 'Company setup, investment, litigation, and family disputes all need different early-stage structuring. Email a brief initial summary of the matter, any deadline, and how we can reach you. Other documents can follow after attorney instructions.',
+    ctaText: 'Company setup, litigation, residence-permit assistance, and tax-accounting assistance are reviewed as Taiwan-law matters. Email a brief initial summary of the issue, the Taiwan connection, any deadline, and how we can reach you. Other documents can follow after attorney instructions. Use Fees and scope for the current consultation structure.',
     contact: 'Email about your Taiwan matter',
     profile: 'View Wei Tseng Profile',
     pricing: 'Fees and scope',
@@ -138,7 +138,7 @@ const intentDirectContact = {
   en: {
     support: 'Consultations in English, Japanese, and Korean. Chinese is also available.',
     initialNote:
-      'First email: a brief overview of the issue or business, any deadline, and how we can reach you. Sensitive materials only after attorney instructions.',
+      'First email: a brief overview of the issue or business, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional. Sensitive materials only after attorney instructions.',
   },
   ja: {
     support: '英語・日本語・韓国語でご相談いただけます。中国語での相談にも対応しています。',
@@ -264,17 +264,83 @@ function relatedResourceByHref(
   return relatedResources[slug].find((item) => item.href === href);
 }
 
+const enAssistanceResources: Array<{ href: string; label: Record<SiteLocale, string> }> = [
+  {
+    href: 'services/investment',
+    label: {
+      ko: 'Company formation and tax-accounting assistance',
+      'zh-hant': 'Company formation and tax-accounting assistance',
+      en: 'Company formation and tax-accounting assistance',
+      ja: 'Company formation and tax-accounting assistance',
+    },
+  },
+  {
+    href: 'contact',
+    label: {
+      ko: 'Residence-permit assistance',
+      'zh-hant': 'Residence-permit assistance',
+      en: 'Residence-permit assistance',
+      ja: 'Residence-permit assistance',
+    },
+  },
+];
+
+const enOfficialReferences: Array<{ href: string; label: Record<SiteLocale, string> }> = [
+  {
+    href: 'https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01',
+    label: {
+      ko: 'Invest Taiwan — official investment information (reference)',
+      'zh-hant': 'Invest Taiwan — official investment information (reference)',
+      en: 'Invest Taiwan — official investment information (reference)',
+      ja: 'Invest Taiwan — official investment information (reference)',
+    },
+  },
+  {
+    href: 'https://www.immigration.gov.tw/5475/5478/141465/141469/',
+    label: {
+      ko: 'National Immigration Agency — residence information (reference)',
+      'zh-hant': 'National Immigration Agency — residence information (reference)',
+      en: 'National Immigration Agency — residence information (reference)',
+      ja: 'National Immigration Agency — residence information (reference)',
+    },
+  },
+  {
+    href: 'https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax',
+    label: {
+      ko: 'Ministry of Finance eTax — profit-seeking enterprise income tax Q&A (reference)',
+      'zh-hant': 'Ministry of Finance eTax — profit-seeking enterprise income tax Q&A (reference)',
+      en: 'Ministry of Finance eTax — profit-seeking enterprise income tax Q&A (reference)',
+      ja: 'Ministry of Finance eTax — profit-seeking enterprise income tax Q&A (reference)',
+    },
+  },
+];
+
+function isExternalHref(href: string) {
+  return href.startsWith('https://') || href.startsWith('http://');
+}
+
+function resourceHref(locale: SiteLocale, href: string) {
+  return isExternalHref(href) ? href : `/${locale}/${href}`;
+}
+
 function relatedResourcesFor(locale: SiteLocale, slug: IntentPageSlug) {
   const base = relatedResources[slug];
   const advisory = getCorporateAdvisory(locale) ? advisoryResource : null;
 
   if (locale === 'en') {
+    const assistance =
+      slug === 'taiwan-litigation-lawyer' ? [] : enAssistanceResources;
+    const official =
+      slug === 'taiwan-litigation-lawyer' ? [] : enOfficialReferences;
+
     if (slug === 'taiwan-lawyer') {
       return [
         relatedResourceByHref(slug, 'taiwan-company-setup-lawyer'),
         relatedResourceByHref(slug, 'taiwan-litigation-lawyer'),
         advisory,
         relatedResourceByHref(slug, 'guides/taiwan-company-setup'),
+        ...assistance,
+        ...official,
         relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
       ].filter((item): item is NonNullable<typeof item> => item != null);
     }
@@ -283,12 +349,15 @@ function relatedResourcesFor(locale: SiteLocale, slug: IntentPageSlug) {
         relatedResourceByHref(slug, 'guides/taiwan-company-setup'),
         relatedResourceByHref(slug, 'taiwan-lawyer'),
         advisory,
+        ...assistance,
+        ...official,
         relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
       ].filter((item): item is NonNullable<typeof item> => item != null);
     }
     return [
       relatedResourceByHref(slug, 'taiwan-lawyer'),
       advisory,
+      ...assistance,
       relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
     ].filter((item): item is NonNullable<typeof item> => item != null);
   }
@@ -567,13 +636,23 @@ export default function IntentLandingPage({
           <OrnamentDivider />
           <article className={`intent-panel ${styles.resources}`}>
             <ul className="intent-article-list">
-              {relatedResourcesFor(locale, slug).map((item) => (
-                <li key={item.href}>
-                  <Link href={`/${locale}/${item.href}`} className="link-underline">
-                    {item.label[locale]}
-                  </Link>
-                </li>
-              ))}
+              {relatedResourcesFor(locale, slug).map((item) => {
+                const href = resourceHref(locale, item.href);
+                const label = item.label[locale];
+                return (
+                  <li key={item.href}>
+                    {isExternalHref(item.href) ? (
+                      <a href={href} className="link-underline" target="_blank" rel="noopener noreferrer">
+                        {label}
+                      </a>
+                    ) : (
+                      <Link href={href} className="link-underline">
+                        {label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </article>
         </div>

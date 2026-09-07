@@ -27,6 +27,7 @@ import { projectLegacyZhHantHomeOffices } from '@/lib/builder/site/legacy-zh-han
 import { getLegacyZhHantFluidContainerStyle, hasLegacyJulyZhHantHomeDualTree, normalizeLegacyZhHantHomeRead } from '@/lib/builder/canvas/home-zh-hant-parity';
 import { hasLegacyColumnsScaffold } from '@/lib/builder/canvas/legacy-columns-scaffold';
 import { projectPublishedHomeInsightsArchiveIntro } from '@/lib/insights/archive-copy';
+import { projectPublishedEnHomeCopy } from '@/lib/builder/site/en-home-copy';
 import {
   computeTopLevelFlowSectionMetrics,
   compareTopLevelStacking,
@@ -816,13 +817,17 @@ export async function PublishedSitePageView({
   ): JSX.Element {
     const decorativeAltNode = projectPublishedStockZhHeroDecorativeAlt(node, legacyZhTabletParity);
     const localeProjectedNode = projectImageNodeForLocale(decorativeAltNode, locale);
-    const renderedNode = projectPublishedHomeInsightsArchiveIntro(
-      projectPublishedHomeCaseResultsPoster(
-        projectPublishedHomeHeroPoster(
-          applyBuilderDatasetBindingToNode(localeProjectedNode, bindingContext),
+    const renderedNode = projectPublishedEnHomeCopy(
+      projectPublishedHomeInsightsArchiveIntro(
+        projectPublishedHomeCaseResultsPoster(
+          projectPublishedHomeHeroPoster(
+            applyBuilderDatasetBindingToNode(localeProjectedNode, bindingContext),
+          ),
         ),
+        slugPath,
       ),
       slugPath,
+      locale,
     );
     const component = getComponent(renderedNode.kind);
     const legacyZhFluidStyle = isHomePage ? getLegacyZhHantFluidContainerStyle(renderedNode, locale) : undefined;

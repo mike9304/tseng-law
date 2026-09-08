@@ -452,6 +452,13 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
               'Trang này không nêu một thời hạn lưu trữ cố định, vì thời hạn thực tế phụ thuộc vào việc vụ việc có được tiếp tục hay không và các nghĩa vụ lưu giữ liên quan. Nếu bạn muốn thông tin của mình được xóa sớm hơn, hãy nêu yêu cầu đó khi liên hệ.',
             ],
           },
+          {
+            heading: 'Những chi tiết còn chờ văn phòng xác nhận',
+            paragraphs: [
+              'Trang này chưa nêu tên pháp lý của bên thu thập thông tin, tiêu chí về thời hạn lưu trữ và thời điểm xóa, cũng như nhà cung cấp dịch vụ lưu trữ web và thư điện tử cùng khu vực đặt dữ liệu. Những chi tiết đó đang chờ văn phòng vận hành trang này xác nhận, và chỉ được ghi ở đây sau khi đã được xác nhận.',
+              'Chừng nào những chi tiết đó chưa được xác nhận, xin hãy hỏi trước qua địa chỉ thư điện tử trên trang liên hệ rồi mới gửi thông tin nhạy cảm.',
+            ],
+          },
         ],
       },
       disclaimer: {
@@ -914,6 +921,13 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             paragraphs: [
               'Anda dapat meminta akses, perbaikan, atau penghapusan data Anda, atau menarik persetujuan, melalui alamat surel yang tertera pada halaman kontak. Jika ada kewajiban penyimpanan menurut ketentuan yang berlaku atau karena perkara yang sedang berjalan, kami akan menerangkan alasan pembatasannya.',
               'Halaman ini tidak menyebutkan jangka waktu penyimpanan yang tetap, karena jangka waktu sebenarnya bergantung pada dilanjutkan atau tidaknya perkara serta kewajiban penyimpanan yang terkait. Jika Anda ingin data Anda dihapus lebih awal, sampaikan permintaan itu ketika menghubungi kami.',
+            ],
+          },
+          {
+            heading: 'Rincian yang masih menunggu konfirmasi kantor',
+            paragraphs: [
+              'Halaman ini belum menyebutkan nama resmi pihak yang mengumpulkan data, patokan jangka waktu penyimpanan dan saat penghapusannya, maupun penyedia layanan hosting dan surel yang dipakai beserta wilayah penyimpanan datanya. Rincian itu masih menunggu konfirmasi dari kantor yang mengelola situs ini, dan baru akan dicantumkan di sini setelah dikonfirmasi.',
+              'Selama rincian itu belum dikonfirmasi, tanyakan lebih dahulu melalui alamat surel pada halaman kontak sebelum Anda mengirimkan informasi yang bersifat sensitif.',
             ],
           },
         ],
@@ -1380,6 +1394,13 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
               'หน้านี้ไม่ได้ระบุระยะเวลาเก็บรักษาที่ตายตัว เพราะระยะเวลาจริงขึ้นอยู่กับว่าเรื่องนั้นดำเนินต่อไปหรือไม่ และหน้าที่ในการเก็บรักษาที่เกี่ยวข้อง หากท่านประสงค์ให้ลบข้อมูลของท่านเร็วกว่านั้น โปรดแจ้งความประสงค์ดังกล่าวเมื่อติดต่อเข้ามา',
             ],
           },
+          {
+            heading: 'รายละเอียดที่ยังรอการยืนยันจากสำนักงาน',
+            paragraphs: [
+              'หน้านี้ยังไม่ได้ระบุชื่อตามกฎหมายของผู้เก็บรวบรวมข้อมูล เกณฑ์ของระยะเวลาเก็บรักษาและเวลาที่จะลบข้อมูล ตลอดจนผู้ให้บริการโฮสติงและอีเมลที่ใช้ รวมทั้งภูมิภาคที่จัดเก็บข้อมูล รายละเอียดเหล่านี้ยังรอการยืนยันจากสำนักงานที่ดูแลเว็บไซต์นี้ และจะระบุไว้ที่นี่ต่อเมื่อได้รับการยืนยันแล้ว',
+              'ตราบใดที่รายละเอียดดังกล่าวยังไม่ได้รับการยืนยัน โปรดสอบถามทางอีเมลตามที่อยู่ในหน้าติดต่อก่อน แล้วจึงส่งข้อมูลที่มีความอ่อนไหว',
+            ],
+          },
         ],
       },
       disclaimer: {
@@ -1842,6 +1863,13 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             paragraphs: [
               'Maaari kang humiling na makita, maitama, o mabura ang impormasyon mo, o bawiin ang pagsang-ayon mo, sa pamamagitan ng email address na nasa pahina ng kontak. Kung may tungkuling mag-ingat ng talaan alinsunod sa mga umiiral na tuntunin, o dahil sa isang usaping kasalukuyang isinasagawa, ipapaliwanag namin ang dahilan ng limitasyon.',
               'Hindi nagsasaad ang pahinang ito ng nakatakdang haba ng pag-iingat, dahil nakadepende ang aktwal na haba kung magpapatuloy ba ang usapin at kung anong tungkuling mag-ingat ang kaugnay nito. Kung nais mong mabura nang mas maaga ang impormasyon mo, banggitin mo ang kahilingang iyon kapag nakipag-ugnayan ka.',
+            ],
+          },
+          {
+            heading: 'Mga detalyeng hinihintay pang kumpirmahin ng tanggapan',
+            paragraphs: [
+              'Hindi pa nakasaad sa pahinang ito ang legal na pangalan ng nangongolekta ng impormasyon, ang batayan ng haba ng pag-iingat at ng oras ng pagbura, at ang mga tagapaglaan ng hosting at email na ginagamit pati ang rehiyon ng imbakan. Hinihintay pang kumpirmahin ang mga detalyeng ito ng tanggapang nagpapatakbo ng website na ito, at isasaad lamang dito matapos makumpirma.',
+              'Hangga\'t hindi pa nakukumpirma ang mga detalyeng iyon, magtanong ka muna sa pamamagitan ng email address na nasa pahina ng kontak bago ka magpadala ng sensitibong impormasyon.',
             ],
           },
         ],

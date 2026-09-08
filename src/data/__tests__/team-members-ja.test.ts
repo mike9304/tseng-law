@@ -118,7 +118,7 @@ describe('Japanese team content', () => {
   });
 
   it('preserves representative Korean, Traditional Chinese, and English copy', () => {
-    expect(teamContent.ko.title).toBe('호정 한국·대만 업무팀');
+    expect(teamContent.ko.title).toBe('호정 국제팀');
     expect(teamContent.ko.members[0].intro[1]).toBe(
       '한국 유학생 헬스장 손해배상 사건에서 157만 대만달러 배상 판결을 이끈 사례가 있습니다.',
     );

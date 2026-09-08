@@ -5,6 +5,7 @@ import {
   getConsultationCtaLabel,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import styles from './PricingCards.module.css';
 
 type PricingItem = {
   icon: PricingIconName;
@@ -273,7 +274,7 @@ export default function PricingCards({ locale }: { locale: SiteLocale }) {
   const data = pricingData[locale];
 
   return (
-    <section className="section pricing-section">
+    <section className={`section pricing-section ${styles.root}`}>
       <div className="container">
         <p className="pricing-currency">{data.currency}</p>
 
@@ -311,7 +312,7 @@ export default function PricingCards({ locale }: { locale: SiteLocale }) {
           >
             {data.ctaLabel}
           </a>
-          <div className="pricing-disclaimer" style={{ marginTop: '0.75rem' }}>
+          <div className="pricing-disclaimer">
             <p>{data.ctaNote}</p>
           </div>
         </div>

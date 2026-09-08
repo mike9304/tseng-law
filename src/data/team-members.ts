@@ -26,7 +26,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
     label: 'OUR TEAM',
     title: '호정 한국·대만 업무팀',
     description:
-      '법무법인 호정의 변호사·사무장·회계사 프로필입니다.',
+      '변호사·법무전문원·사무장·협력 회계사를 소개합니다.',
     story: [
       '법무법인 호정은 한국·일본 고객의 대만 투자, 소송, 법률 자문을 지원하는 통합 실무팀을 운영합니다.',
       '법률, 회계, 세무 및 행정 실무를 연결해 사건 초기 검토부터 분쟁 대응까지 일관된 전략을 제공합니다.',
@@ -111,7 +111,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   'zh-hant': {
     label: 'OUR TEAM',
-    title: '昊鼎 韓國·台灣 業務團隊',
+    title: '昊鼎業務團隊',
     description: '昊鼎國際法律事務所律師、事務長及會計師簡介。',
     story: [
       '昊鼎提供韓文、日文及英文溝通的在台法律服務，涵蓋公司設立、訴訟與合規顧問。',
@@ -197,8 +197,8 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   en: {
     label: 'OUR TEAM',
-    title: 'Hovering Taiwan Legal Team',
-    description: 'Profiles of Hovering lawyers, operations manager, and accounting partner.',
+    title: 'Hovering International Team',
+    description: 'Profiles of our lawyers, paralegal, operations manager, and accounting partner.',
     story: [
       'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Japanese, Korean, and Chinese available.',
       'By combining legal, accounting, tax, and operational workflows, we provide consistent strategy from initial review through dispute handling.'
@@ -283,7 +283,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   ja: {
     label: 'チーム紹介',
-    title: '昊鼎国際法律事務所のチーム',
+    title: '昊鼎 日本チーム',
     description: '昊鼎国際法律事務所の弁護士、パラリーガル、事務長、提携会計士をご紹介します。',
     story: [
       '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。英語・日本語・韓国語・中国語でご相談いただけます。',

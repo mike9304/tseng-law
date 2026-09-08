@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import styles from './VideoChannel.module.css';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
@@ -14,7 +15,7 @@ export default function VideoChannel({ locale }: { locale: SiteLocale }) {
   // ancestor and callers don't provide one.
   return (
     <Reveal>
-    <section className="section alt" id="videos" data-tone="light">
+    <section className={`section alt ${styles.root}`} id="videos" data-tone="light">
       <div className="container">
         <SectionLabel>{videos.label}</SectionLabel>
         <h2 className="section-title">{videos.title}</h2>

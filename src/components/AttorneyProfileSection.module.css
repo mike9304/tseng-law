@@ -1,0 +1,429 @@
+.root:global(.section):global(.section--light):global(.attorney-team-section) {
+  padding-top: 3rem;
+  padding-bottom: 3.25rem;
+}
+
+@media (min-width: 768px) {
+  .root:global(.section):global(.section--light):global(.attorney-team-section) {
+    padding-top: 3rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+.root :global(.container) {
+  min-width: 0;
+}
+
+.root :global(.section-label) {
+  margin: 0 0 0.5rem;
+}
+
+.root :global(.section-title) {
+  margin: 0 0 0.75rem;
+  font-size: 1.625rem;
+  line-height: 2.125rem;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+@media (min-width: 768px) {
+  .root :global(.section-title) {
+    font-size: 2.125rem;
+    line-height: 2.625rem;
+  }
+}
+
+.root :global(.section-lede) {
+  margin: 0 0 2rem;
+  max-width: 42.5rem;
+  font-size: 1rem;
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+@media (min-width: 768px) {
+  .root :global(.section-lede) {
+    font-size: 1.125rem;
+    line-height: 1.875;
+  }
+}
+
+.root :global(.attorney-lead-wrap),
+.root :global(.attorney-staff-wrap),
+.root :global(.attorney-partner-wrap) {
+  min-width: 0;
+}
+
+.root :global(.container) > :global(.attorney-lead-wrap):first-child,
+.root :global(.container) > :global(.attorney-staff-wrap):first-child,
+.root :global(.container) > :global(.attorney-partner-wrap):first-child {
+  margin-top: 0;
+}
+
+.root :global(.attorney-staff-wrap),
+.root :global(.attorney-partner-wrap) {
+  margin-top: 2.5rem;
+}
+
+.root :global(.attorney-group-title) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+  font-size: 1.125rem;
+  line-height: 1.625;
+  font-weight: 700;
+  color: var(--primary);
+  overflow-wrap: anywhere;
+}
+
+.root :global(.attorney-group-badge) {
+  display: inline-block;
+  padding: 0.25rem 0.85rem;
+  border: 1px solid var(--purple-border, #cfddd3);
+  border-radius: 999px;
+  background: var(--purple-bg, #edf5ef);
+  color: var(--primary);
+  font-size: 0.75rem;
+  line-height: 1.333;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.root :global(.attorney-card--lead),
+.root :global(.attorney-card--sub) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  min-width: 0;
+  overflow: visible;
+  background: #fff;
+  border: 1px solid var(--warm-border, var(--border-light));
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.root :global(.attorney-staff-grid) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .root :global(.attorney-staff-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.identity {
+  display: grid;
+  grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  min-width: 0;
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.root :global(.attorney-card--sub) .identity {
+  grid-template-columns: minmax(0, 12.5rem) minmax(0, 1fr);
+  gap: 1.25rem;
+  padding: 1.25rem 1.25rem 0.35rem;
+}
+
+.person {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.leadCopy {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.root :global(.attorney-card-photo--lead),
+.root :global(.attorney-card-photo--sub) {
+  position: relative;
+  align-self: start;
+  justify-self: start;
+  width: 100%;
+  max-width: 20rem;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--off-white, #f7faf6);
+  border-radius: 8px;
+}
+
+.root :global(.attorney-card-photo--lead)::after,
+.root :global(.attorney-card-photo--sub)::after {
+  content: none;
+  display: none;
+}
+
+.root :global(.attorney-card-photo--sub) {
+  max-width: 12.5rem;
+}
+
+.root :global(.attorney-card-info) {
+  min-width: 0;
+  max-width: 100%;
+  padding: 0.5rem 1.5rem 1.5rem;
+}
+
+.root :global(.attorney-card--sub) :global(.attorney-card-info) {
+  padding: 0.35rem 1.25rem 1.25rem;
+}
+
+.root :global(.attorney-card--lead) :global(.attorney-card-info) {
+  padding: 0;
+}
+
+.root :global(.attorney-card--lead) .identity {
+  padding: 1.5rem;
+}
+
+.root :global(.attorney-card-name) {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--text-heading, var(--text-strong));
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.root :global(.attorney-card-name--lead) {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.root :global(.attorney-card--sub) :global(.attorney-card-name) {
+  font-size: 1.125rem;
+}
+
+.root :global(.attorney-card-name-link) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.root :global(.attorney-card-name-link):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.root :global(.attorney-card-role) {
+  margin: 0.35rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--primary);
+  white-space: normal;
+}
+
+.root :global(.attorney-card-email) {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.attorney-card-section) {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--warm-border, var(--border-light));
+}
+
+.root :global(.attorney-card--sub) :global(.attorney-card-section) {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+}
+
+.root :global(.attorney-card-label) {
+  margin-bottom: 0.35rem;
+  font-size: 0.75rem;
+  line-height: 1.333;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.root :global(.attorney-list) {
+  margin: 0;
+  padding-left: 1.15rem;
+  font-size: 1rem;
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+.root :global(.attorney-card--sub) :global(.attorney-list) {
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+.root :global(.attorney-list) li {
+  overflow-wrap: anywhere;
+  max-height: none;
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .root :global(.attorney-list),
+  .root :global(.attorney-card--sub) :global(.attorney-list) {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+}
+
+.root :global(.attorney-card-actions) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.root :global(.attorney-card-cta) {
+  margin-top: 0;
+  min-height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  white-space: normal;
+  line-height: 1.5;
+}
+
+.root :global(.attorney-card-cta):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (max-width: 899px) {
+  .root :global(.attorney-card--lead) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .root :global(.attorney-card-photo--lead) {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 899px) {
+  .root :global(.attorney-card--lead) .leadCopy {
+    display: contents;
+  }
+
+  .root :global(.attorney-card--lead) :global(.attorney-card-info) {
+    grid-column: 1 / -1;
+    padding-top: 0.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .root :global(.attorney-card--lead) .identity {
+    display: grid;
+    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+    align-items: start;
+    align-content: start;
+    column-gap: 1.5rem;
+    row-gap: 0;
+    padding: 1.5rem;
+  }
+
+  .root :global(.attorney-card--lead) .leadCopy {
+    display: block;
+    min-width: 0;
+    max-width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .root :global(.attorney-card--lead) :global(.attorney-card-photo--lead) {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    justify-self: start;
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+  }
+
+  .root :global(.attorney-card--lead) :global(.attorney-card-info) {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .identity,
+  .root :global(.attorney-card--sub) .identity {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.25rem 1.25rem 0.35rem;
+  }
+
+  .root :global(.attorney-card--lead),
+  .root :global(.attorney-card--sub) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .root :global(.attorney-card-photo--lead),
+  .root :global(.attorney-card-photo--sub) {
+    width: 100%;
+    max-width: 20rem;
+    min-height: 0;
+    margin: 0;
+    aspect-ratio: 4 / 5;
+  }
+
+  .root :global(.attorney-card-info),
+  .root :global(.attorney-card--sub) :global(.attorney-card-info) {
+    padding: 0.35rem 1.25rem 1.25rem;
+  }
+
+  .root :global(.attorney-card-actions) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .root :global(.attorney-card-cta) {
+    width: 100%;
+    min-width: 0;
+    min-height: 3.25rem;
+  }
+
+  .root :global(.attorney-staff-grid) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .root :global(.attorney-card--lead) .identity {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .root :global(.attorney-card-role) {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+:global(:lang(ko)) .root :where(h3, p, li, a) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+:global(:lang(ja)) .root :where(h3, p, li, a),
+:global(:lang(zh-Hant)) .root :where(h3, p, li, a),
+:global(:lang(zh-hant)) .root :where(h3, p, li, a) {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}

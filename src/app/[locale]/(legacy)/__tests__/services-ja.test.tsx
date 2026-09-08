@@ -150,6 +150,7 @@ describe('Japanese services-list integration', () => {
 
       expect(html).toContain(detailLabel);
       expect(html).toContain(`href="${detailHref}"`);
+      expect(html).toContain('data-presentation="editorial"');
     },
   );
 });

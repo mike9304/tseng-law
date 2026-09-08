@@ -25,7 +25,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
       label: 'ABOUT',
       title: '호정 소개',
       description:
-        '호정의 스토리와 한국 업무팀 구성원을 확인할 수 있습니다.'
+        '호정의 이야기와 한국·대만 업무팀 구성원을 소개합니다.'
     },
     services: {
       label: 'SERVICES',
@@ -77,7 +77,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎介紹',
-      description: '查看昊鼎團隊背景與韓國業務團隊成員。'
+      description: '認識昊鼎的團隊背景與專業成員。'
     },
     services: {
       label: 'SERVICES',
@@ -86,12 +86,12 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '昊鼎 韓國·台灣 業務團隊',
-      description: '查看律師、韓國事務長與會計師的完整資料。'
+      title: '昊鼎業務團隊',
+      description: '查看律師、法務專員、事務長與會計師的完整資料。'
     },
     insights: {
       label: 'INSIGHTS',
-      title: '洞見',
+      title: '專欄',
       description: '依分類整理昊鼎專欄文章，快速查看重點主題。'
     },
     videos: {
@@ -138,7 +138,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: 'Hovering Korea-Taiwan Team',
+      title: 'Hovering International Team',
       description: 'View profiles of our lawyers, operations manager, and accounting partner.'
     },
     insights: {
@@ -148,7 +148,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     videos: {
       label: 'VIDEOS',
-      title: 'Attorney Wei Tseng Media / Channels',
+      title: 'Attorney Wei Tseng: Media & Channels',
       description: 'Review Attorney Wei Tseng’s official profile, YouTube channel, blog, and external references in one place.'
     },
     faq: {
@@ -181,7 +181,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎について',
-      description: '台湾を拠点とする国際的な法律実務と、当事務所のチームをご紹介します。'
+      description: '台湾を拠点とする国際的な法律実務と、昊鼎 日本チームをご紹介します。'
     },
     services: {
       label: 'SERVICES',
@@ -190,7 +190,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '韓国・台湾業務チーム',
+      title: '昊鼎 日本チーム',
       description: '弁護士・事務長・会計士の経歴と専門分野をご確認ください。'
     },
     insights: {

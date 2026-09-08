@@ -68,7 +68,43 @@ const copyByLocale = {
   },
 } as const;
 
-export default function HomeCaseResultsSplit({ locale }: { locale: SiteLocale }) {
+function protectCaseHeadingUnits(line: string) {
+  const units = ['控訴審', '和解'];
+  type Piece = { value: string; locked: boolean };
+  let pieces: Piece[] = [{ value: line, locked: false }];
+  for (const unit of units) {
+    const next: Piece[] = [];
+    for (const piece of pieces) {
+      if (piece.locked) {
+        next.push(piece);
+        continue;
+      }
+      const parts = piece.value.split(unit);
+      parts.forEach((part, index) => {
+        if (part) next.push({ value: part, locked: false });
+        if (index < parts.length - 1) next.push({ value: unit, locked: true });
+      });
+    }
+    pieces = next;
+  }
+  return pieces.map((piece, index) =>
+    piece.locked ? (
+      <span key={`${piece.value}-${index}`} style={{ whiteSpace: 'nowrap' }}>
+        {piece.value}
+      </span>
+    ) : (
+      piece.value
+    ),
+  );
+}
+
+export default function HomeCaseResultsSplit({
+  locale,
+  presentation,
+}: {
+  locale: SiteLocale;
+  presentation?: 'editorial';
+}) {
   const copy = copyByLocale[locale];
 
   return (
@@ -111,7 +147,9 @@ export default function HomeCaseResultsSplit({ locale }: { locale: SiteLocale })
           <SurfaceText surfaceKey={homeResultsTextSurfaceIds[1]}>
             {copy.title.split('\n').map((line) => (
               <span key={line}>
-                {line}
+                {presentation === 'editorial' && locale === 'ja'
+                  ? protectCaseHeadingUnits(line)
+                  : line}
                 <br />
               </span>
             ))}

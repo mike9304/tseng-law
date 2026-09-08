@@ -12,6 +12,7 @@ import {
   getOfficialConsultationEmailLabel,
 } from '@/lib/consultation/public-contact';
 import { copyEmailAddress } from '@/lib/consultation/copy-email';
+import styles from './ContactEditorial.module.css';
 
 const INITIAL_INQUIRY_NOTES: Record<SiteLocale, string> = {
   ko: '초기 문의에는 사건 개요와 연락처만 보내 주세요. 민감정보는 제외해 주세요. 당사무소에서는 한국어·일본어·영어로 소통하실 수 있습니다.',
@@ -22,6 +23,7 @@ const INITIAL_INQUIRY_NOTES: Record<SiteLocale, string> = {
 
 export default function ContactEmailActions({ locale }: { locale: SiteLocale }) {
   const [copyNotice, setCopyNotice] = useState('');
+  const [copySucceeded, setCopySucceeded] = useState<boolean | null>(null);
   const consultationMailto = getConsultationPublicMailto(locale);
   const consultationCtaLabel = getConsultationCtaLabel(locale);
   const copyLabel = getCopyEmailLabel(locale);
@@ -29,16 +31,18 @@ export default function ContactEmailActions({ locale }: { locale: SiteLocale }) 
   async function handleCopyEmail() {
     try {
       const copied = await copyEmailAddress(CONSULTATION_EMAIL);
+      setCopySucceeded(copied);
       setCopyNotice(
         copied ? getEmailCopiedMessage(locale) : getCopyEmailFailureMessage(locale),
       );
     } catch {
+      setCopySucceeded(false);
       setCopyNotice(getCopyEmailFailureMessage(locale));
     }
   }
 
   return (
-    <div className="contact-email-actions">
+    <div className={`contact-email-actions ${styles.emailActions}`}>
       <p className="contact-email-actions__label">
         {getOfficialConsultationEmailLabel(locale)}
       </p>
@@ -61,16 +65,20 @@ export default function ContactEmailActions({ locale }: { locale: SiteLocale }) 
         >
           {copyLabel}
         </button>
+        <p
+          className={
+            copySucceeded === true
+              ? 'contact-email-actions__status contact-email-actions__status--success'
+              : copySucceeded === false
+                ? 'contact-email-actions__status contact-email-actions__status--error'
+                : 'contact-email-actions__status'
+          }
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >{copyNotice}</p>
         <p className="contact-email-actions__note">{INITIAL_INQUIRY_NOTES[locale]}</p>
       </div>
-      <p
-        className="contact-email-actions__status"
-        role="status"
-        aria-live="polite"
-        aria-atomic="true"
-      >
-        {copyNotice}
-      </p>
     </div>
   );
 }

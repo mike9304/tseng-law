@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import { buildLocalePath, stripLocaleFromPath } from '@/lib/path-utils';
 import { jaLanguageSwitchTarget, restrictedPublicFamilyListPath } from '@/lib/public-route-policy';
+import styles from './PublicChrome.module.css';
 
 export const LOCALE_FLAG_OPTIONS = [
   {
@@ -37,6 +38,13 @@ export const LOCALE_FLAG_OPTIONS = [
   flag: string;
   label: string;
 }[];
+
+const LOCALE_VISIBLE_NAMES: Record<SiteLocale, string> = {
+  ko: '한국어',
+  ja: '日本語',
+  'zh-hant': '繁體中文',
+  en: 'English',
+};
 
 const switcherLabels: Record<SiteLocale, string> = {
   ko: '언어 선택',
@@ -80,7 +88,7 @@ export default function LocaleFlagSwitcher({
   onLocaleSelect?: (targetLocale: SiteLocale) => void;
 }) {
   const pathname = usePathname() ?? `/${locale}`;
-  const rootClassName = ['locale-flag-switcher', className].filter(Boolean).join(' ');
+  const rootClassName = ['locale-flag-switcher', styles.localeSwitcher, className].filter(Boolean).join(' ');
   const itemClassName = ['locale-flag-switcher-link', linkClassName].filter(Boolean).join(' ');
 
   return (
@@ -97,8 +105,8 @@ export default function LocaleFlagSwitcher({
           <span className="locale-flag-switcher-flag" aria-hidden="true">
             {option.flag}
           </span>
-          <span className="locale-flag-switcher-code" aria-hidden="true">
-            {option.code}
+          <span className={`locale-flag-switcher-code ${styles.localeName}`} aria-hidden="true">
+            {LOCALE_VISIBLE_NAMES[option.locale]}
           </span>
         </Link>
       ))}

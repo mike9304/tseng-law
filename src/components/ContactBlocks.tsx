@@ -20,6 +20,7 @@ import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import Reveal from '@/components/Reveal';
 import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
+import styles from './ContactEditorial.module.css';
 
 const INQUIRY_EMAIL_RE = /[\w.+-]+@[\w-]+(?:\.[\w-]+)+/;
 const INQUIRY_PHONE_RE = /\+\d[\d-]{5,}\d/;
@@ -99,7 +100,7 @@ export default function ContactBlocks({
   // contact/about bodies) don't wrap it the way home-legacy does.
   return (
     <Reveal>
-    <section className="section">
+    <section className={`section ${styles.blocks}`}>
       <div className="container">
         {showMainHeader ? (
           <>

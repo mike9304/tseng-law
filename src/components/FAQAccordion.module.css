@@ -1,0 +1,205 @@
+.root {
+  min-width: 0;
+  color: #1c241f;
+}
+
+:global(.section).root {
+  padding-block-start: 48px;
+}
+
+.root :global(.container) {
+  min-width: 0;
+}
+
+.root :global(.section-label) {
+  color: #725f38;
+  max-width: 680px;
+}
+
+.root :global(.section-title) {
+  color: #1c241f;
+  max-width: 680px;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.root :global(.faq-list) {
+  display: grid;
+  width: 100%;
+  max-width: 680px;
+  margin: 24px 0 0;
+  min-width: 0;
+}
+
+.root :global(.faq-item),
+.root :global(.faq-item.is-open),
+.root :global(.faq-item):hover {
+  min-width: 0;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #d7e0d8;
+  background: transparent;
+  box-shadow: none;
+}
+
+.root :global(.faq-question) {
+  margin: 0;
+}
+
+.root :global(.faq-question) :global(button) {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  min-height: 48px;
+  min-width: 0;
+  height: auto;
+  padding: 12px 0;
+  border: 0;
+  background: transparent;
+  color: #1c241f;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.root :global(.faq-question) :global(button) > :global(span:first-child) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.faq-question) :global(button):focus-visible {
+  outline: 2px solid #16382d;
+  outline-offset: 2px;
+}
+
+.indicator,
+.root :global(.faq-arrow) {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: #16382d;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  transform: none;
+}
+
+.root :global(.faq-item.is-open) :global(.faq-arrow),
+.root :global(.is-open) :global(.faq-arrow),
+.root :global(.faq-item.is-open) .indicator,
+.root :global(.is-open) .indicator {
+  transform: none;
+}
+
+.root :global(.faq-answer-wrap),
+.root :global(.faq-answer-wrap.is-open) {
+  max-height: none;
+  height: auto;
+  overflow: visible;
+  padding-inline: 0;
+}
+
+.root :global(.faq-answer-wrap[hidden]) {
+  display: none;
+}
+
+.root :global(.faq-answer) {
+  margin: 0;
+  padding: 0 0 16px;
+  color: #3d4740;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.root[data-tone='dark'] {
+  color: #f3f6f3;
+}
+
+.root[data-tone='dark'] :global(.section-label) {
+  color: #d9c48a;
+}
+
+.root[data-tone='dark'] :global(.section-title),
+.root[data-tone='dark'] :global(.faq-question) :global(button) {
+  color: #f3f6f3;
+}
+
+.root[data-tone='dark'] :global(.faq-answer) {
+  color: #d7e0d8;
+}
+
+.root[data-tone='dark'] :global(.faq-item) {
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+}
+
+.root[data-tone='dark'] .indicator,
+.root[data-tone='dark'] :global(.faq-arrow) {
+  color: #fff;
+}
+
+.root[data-tone='dark'] :global(.faq-question) :global(button):focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+:global(:lang(en)) .root :global(.section-label),
+:global(:lang(en)) .root :global(.section-title),
+:global(:lang(en)) .root :global(.faq-list) {
+  max-width: 760px;
+}
+
+:global(:lang(ko)) .root :global(.faq-question) :global(button),
+:global(:lang(ko)) .root :global(.faq-answer) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+:global(:lang(ja)) .root :global(.faq-question) :global(button),
+:global(:lang(zh-Hant)) .root :global(.faq-question) :global(button),
+:global(:lang(ja)) .root :global(.faq-answer),
+:global(:lang(zh-Hant)) .root :global(.faq-answer) {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+:global(:lang(en)) .root :global(.faq-question) :global(button),
+:global(:lang(en)) .root :global(.faq-answer) {
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 680px) {
+  :global(.section).root {
+    padding-block-start: 40px;
+  }
+
+  .root :global(.faq-question) :global(button) {
+    font-size: 1rem;
+    min-height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .indicator,
+  .root :global(.faq-arrow),
+  .root :global(.faq-item),
+  .root :global(.faq-answer-wrap),
+  .root :global(.faq-question) :global(button) {
+    transition: none;
+    animation: none;
+    transform: none;
+  }
+}

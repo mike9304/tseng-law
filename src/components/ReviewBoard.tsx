@@ -396,7 +396,7 @@ export default function ReviewBoard({ locale }: { locale: SiteLocale }) {
       : '0.0';
 
   return (
-    <section className="section review-section">
+    <section className={`section review-section ${styles.root}`}>
       <div className="container">
         {/* ── Review Form ── */}
         <div className="review-form-wrap">

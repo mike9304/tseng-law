@@ -35,10 +35,10 @@ describe('LocaleFlagSwitcher', () => {
 
     const links = renderedLinks('ko');
     const expected = [
-      { href: '/ko/services', code: 'KR', flag: '🇰🇷', label: '한국어 (대한민국)' },
-      { href: '/ja/services', code: 'JP', flag: '🇯🇵', label: '日本語 (日本)' },
-      { href: '/zh-hant/services', code: 'TW', flag: '🇹🇼', label: '繁體中文 (台灣)' },
-      { href: '/en/services', code: 'EN', flag: '🇺🇸', label: 'English (United States)' },
+      { href: '/ko/services', code: 'KR', flag: '🇰🇷', label: '한국어 (대한민국)', visible: '한국어' },
+      { href: '/ja/services', code: 'JP', flag: '🇯🇵', label: '日本語 (日本)', visible: '日本語' },
+      { href: '/zh-hant/services', code: 'TW', flag: '🇹🇼', label: '繁體中文 (台灣)', visible: '繁體中文' },
+      { href: '/en/services', code: 'EN', flag: '🇺🇸', label: 'English (United States)', visible: 'English' },
     ];
 
     expect(links).toHaveLength(expected.length);
@@ -46,7 +46,7 @@ describe('LocaleFlagSwitcher', () => {
       expect(links[index]).toContain(`href="${option.href}"`);
       expect(links[index]).toContain(`aria-label="${option.label}"`);
       expect(links[index]).toContain(option.flag);
-      expect(links[index]).toContain(`>${option.code}</span>`);
+      expect(links[index]).toContain(`>${option.visible}</span>`);
     });
   });
 

@@ -728,3 +728,116 @@
     text-align: start;
   }
 }
+
+.authPage {
+  background: var(--off-white, #f7faf6);
+  color: var(--warm-text-dark, #435446);
+  padding-top: 48px;
+}
+
+.authIntro {
+  background: #ffffff;
+  border-color: var(--warm-border, #cad5c7);
+  box-shadow: none;
+}
+
+.authIntro p {
+  color: var(--gold-dim, #725f38);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 16px;
+}
+
+.authIntro p::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold, #9f8752);
+  margin-bottom: 8px;
+}
+
+.authIntro h1 {
+  font-family: var(--font-display, var(--font-heading));
+  color: var(--text-heading);
+  font-size: 34px;
+  line-height: 42px;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.authIntro span {
+  color: var(--warm-text-dark, #435446);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.authForm {
+  background: #ffffff;
+  border-color: var(--warm-border, #cad5c7);
+}
+
+.authForm label {
+  color: var(--warm-text-dark, #435446);
+}
+
+.authForm input {
+  min-height: 48px;
+  border: 1px solid var(--warm-border, #cad5c7);
+  border-radius: 4px;
+  color: var(--warm-text-dark, #435446);
+  background: #ffffff;
+}
+
+.authForm input:disabled {
+  background: var(--cream, #eef4ee);
+  color: var(--warm-text-dark, #435446);
+  opacity: 1;
+}
+
+.authForm input:focus-visible,
+.authForm button:focus-visible {
+  outline: 2px solid var(--primary, #16382d);
+  outline-offset: 2px;
+}
+
+.authForm button {
+  min-height: 48px;
+  border: 1px solid var(--primary, #16382d);
+  border-radius: 4px;
+  padding: 0 20px;
+  background: var(--primary, #16382d);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.authForm button:disabled {
+  cursor: wait;
+  opacity: 1;
+  background: var(--warm-border, #cad5c7);
+  border-color: var(--warm-border, #cad5c7);
+  color: var(--warm-text-dark, #435446);
+}
+
+.authForm .error,
+.authPage .error {
+  border: 1px solid #fecdd3;
+  border-radius: 4px;
+  background: #fff1f2;
+  color: #9f1239;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (max-width: 780px) {
+  .authPage {
+    padding-top: 48px;
+  }
+
+  .authForm button {
+    width: 100%;
+    min-height: 52px;
+  }
+}

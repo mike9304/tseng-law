@@ -158,9 +158,11 @@ const copyByLocale = {
 export default function InsightsArchiveSection({
   locale,
   posts,
+  presentation,
 }: {
   locale: SiteLocale;
   posts: ArchivePost[];
+  presentation?: 'editorial';
 }) {
   const copy = copyByLocale[locale];
   const authorLabel =
@@ -172,6 +174,37 @@ export default function InsightsArchiveSection({
           ? '曾雋崴弁護士監修'
           : 'Reviewed by Wei Tseng';
   const authorHref = getAttorneyProfilePath(locale);
+  const protectInsightTitle = (title: string) => {
+    if (presentation !== 'editorial') return title;
+    const units = locale === 'ja' ? ['選択', '支店', '財産'] : locale === 'zh-hant' ? ['進口'] : [];
+    if (units.length === 0) return title;
+    type Piece = { value: string; locked: boolean };
+    let pieces: Piece[] = [{ value: title, locked: false }];
+    for (const unit of units) {
+      const next: Piece[] = [];
+      for (const piece of pieces) {
+        if (piece.locked) {
+          next.push(piece);
+          continue;
+        }
+        const parts = piece.value.split(unit);
+        parts.forEach((part, index) => {
+          if (part) next.push({ value: part, locked: false });
+          if (index < parts.length - 1) next.push({ value: unit, locked: true });
+        });
+      }
+      pieces = next;
+    }
+    return pieces.map((piece, index) =>
+      piece.locked ? (
+        <span key={`${piece.value}-${index}`} style={{ whiteSpace: 'nowrap' }}>
+          {piece.value}
+        </span>
+      ) : (
+        piece.value
+      ),
+    );
+  };
   const sortedPosts = useMemo(() => sortInsightsPostsNewestFirst(posts), [posts]);
   const [featured, ...rest] = sortedPosts;
   const listItems = rest;
@@ -233,7 +266,7 @@ export default function InsightsArchiveSection({
               <SmartLink className="insights-byline" href={authorHref}>
                 {authorLabel}
               </SmartLink>
-              <h3 className="insights-featured-title">{featured.title}</h3>
+              <h3 className="insights-featured-title">{protectInsightTitle(featured.title)}</h3>
               <p className="insights-featured-summary">{featured.summary}</p>
               <SmartLink className="link-underline" href={`/${locale}/columns/${featured.slug}`}>
                 {copy.readMore} →
@@ -283,10 +316,15 @@ export default function InsightsArchiveSection({
                       height={160}
                       surfaceKey={homeInsightsImageSurfaceIds[index + 1]}
                     />
-                    <span className="insights-category-badge insights-category-badge--compact">{post.categoryLabel}</span>
+                    {presentation === 'editorial' ? null : (
+                      <span className="insights-category-badge insights-category-badge--compact">{post.categoryLabel}</span>
+                    )}
                   </div>
                   <div className="insights-list-copy">
                     <div className="insights-meta-row">
+                      {presentation === 'editorial' ? (
+                        <span className="insights-category-badge">{post.categoryLabel}</span>
+                      ) : null}
                       <time className="insights-date" dateTime={resolveInsightsDateTime(post)}>
                         {post.dateDisplay || post.date || copy.dateFallback}
                       </time>
@@ -297,7 +335,7 @@ export default function InsightsArchiveSection({
                     </SmartLink>
                     <h4 className="insights-list-title">
                       <SmartLink className="link-underline" href={`/${locale}/columns/${post.slug}`}>
-                        {post.title}
+                        {protectInsightTitle(post.title)}
                       </SmartLink>
                     </h4>
                     <p className="insights-list-summary">{post.summary}</p>

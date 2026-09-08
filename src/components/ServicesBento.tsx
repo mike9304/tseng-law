@@ -8,6 +8,7 @@ import OrnamentDivider from '@/components/OrnamentDivider';
 import ServicePracticeIcon from '@/components/ServicePracticeIcon';
 import { homeServicesTextSurfaceIds } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
+import styles from './HomeEditorial.module.css';
 
 function compactServiceSummary(description: string, maxLength = 120): string {
   const text = description.replace(/\s+/g, ' ').trim();
@@ -28,15 +29,18 @@ export default function ServicesBento({
   id,
   variant = 'alt',
   tone = 'light',
-  showHeader = true
+  showHeader = true,
+  presentation,
 }: {
   locale: SiteLocale;
   id?: string;
   variant?: 'default' | 'alt';
   tone?: 'light' | 'dark';
   showHeader?: boolean;
+  presentation?: 'editorial';
 }) {
   const { services } = siteContent[locale];
+  const editorial = presentation === 'editorial';
   const sectionClass = variant === 'alt' ? 'section section--gray alt' : 'section section--light';
   const HeadingTag: 'h2' | 'h3' = showHeader ? 'h3' : 'h2';
   const detailLabel = locale === 'ko'
@@ -56,9 +60,10 @@ export default function ServicesBento({
 
   return (
     <section
-      className={`${sectionClass} services-bento`}
+      className={`${sectionClass} services-bento${editorial ? ` ${styles.servicesEditorial}` : ''}`}
       id={id}
       data-tone={tone}
+      data-presentation={editorial ? 'editorial' : undefined}
       aria-label={showHeader ? undefined : services.title}
     >
       <div className="container">
@@ -97,7 +102,7 @@ export default function ServicesBento({
                   </div>
                   <div className="services-detail-body services-card-body">
                     <p className="services-detail-desc services-card-summary">
-                      {compactServiceSummary(item.description)}
+                      {editorial ? item.description : compactServiceSummary(item.description)}
                     </p>
                     {serviceSlugs[index] && (
                       <Link

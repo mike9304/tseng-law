@@ -120,7 +120,7 @@ describe('footer social localization', () => {
     });
 
     const switcher = html.match(
-      /<div class="locale-flag-switcher footer-locale-switch"[\s\S]*?<\/div>/,
+      /<div class="(?:[^" ]+ )*locale-flag-switcher(?: [^" ]+)* footer-locale-switch(?: [^" ]+)*"[\s\S]*?<\/div>/,
     )?.[0];
 
     expect(switcher).toContain('aria-label="言語選択"');
@@ -128,11 +128,11 @@ describe('footer social localization', () => {
     expect(
       Array.from(
         switcher?.matchAll(
-          /class="locale-flag-switcher-code" aria-hidden="true">([^<]+)<\/span>/g,
+          /class="(?:[^" ]+ )*locale-flag-switcher-code(?: [^" ]+)*" aria-hidden="true">([^<]+)<\/span>/g,
         ) ?? [],
         (match) => match[1],
       ),
-    ).toEqual(['KR', 'JP', 'TW', 'EN']);
+    ).toEqual(['한국어', '日本語', '繁體中文', 'English']);
     expect(switcher).toContain('🇰🇷');
     expect(switcher).toContain('🇯🇵');
     expect(switcher).toContain('🇹🇼');

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -11,6 +11,8 @@ import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 import SearchOverlay from '@/components/SearchOverlay';
 import MobileNavDrawer from '@/components/MobileNavDrawer';
 import SmartLink from '@/components/SmartLink';
+import styles from './PublicChrome.module.css';
+import { installResponsiveHeaderFocus } from './responsive-header-focus';
 import {
   captureOverlayScrollSnapshots,
   scheduleOverlayScrollRestore,
@@ -93,11 +95,136 @@ export function installPublicHeaderOffset(header: HTMLElement): () => void {
   };
 }
 
+export function installPublicHeaderContentFit(header: HTMLElement): () => void {
+  const probe = header.querySelector<HTMLElement>('[data-header-content-fit-probe]');
+  const slot = header.querySelector<HTMLElement>('[data-header-content-fit-slot]');
+  if (!probe || !slot) return () => {};
+
+  const doc = header.ownerDocument;
+  const toggleSelector = 'button.mobile-toggle';
+  const drawerSelector = '#public-mobile-nav-drawer';
+  const hiddenDesktopControls =
+    '.main-nav .nav-link, .header-actions .nav-cta, .header-utility a, .header-utility button';
+  const primaryLinkCandidates = [
+    '.main-nav .nav-link[aria-current="page"]',
+    '.main-nav .nav-link:not([aria-haspopup])',
+    '.main-nav .nav-link',
+  ];
+
+  const isElement = (node: unknown): node is HTMLElement =>
+    !!node && typeof (node as HTMLElement).matches === 'function';
+
+  const focusTarget = (target: HTMLElement | null) => {
+    if (!target || typeof target.focus !== 'function') return;
+    target.focus({ preventScroll: true });
+  };
+
+  const moveFocusForCompact = (active: Element | null) => {
+    if (!isElement(active) || typeof header.contains !== 'function' || !header.contains(active)) return;
+    if (typeof probe.contains === 'function' && probe.contains(active)) return;
+    const drawer = header.querySelector(drawerSelector);
+    if (drawer && typeof drawer.contains === 'function' && drawer.contains(active)) return;
+    if (!active.matches(hiddenDesktopControls)) return;
+    const toggle = header.querySelector<HTMLElement>(toggleSelector);
+    if (!toggle || typeof toggle.getAttribute !== 'function' || toggle.getAttribute('aria-expanded') === 'true') {
+      return;
+    }
+    focusTarget(toggle);
+  };
+
+  const moveFocusForDesktop = (active: Element | null) => {
+    const toggle = header.querySelector<HTMLElement>(toggleSelector);
+    if (!toggle || active !== toggle) return;
+    if (typeof toggle.getAttribute === 'function' && toggle.getAttribute('aria-expanded') === 'true') return;
+    for (const selector of primaryLinkCandidates) {
+      const link = header.querySelector<HTMLElement>(selector);
+      if (link) {
+        focusTarget(link);
+        return;
+      }
+    }
+  };
+
+  const media = typeof window.matchMedia === 'function' ? window.matchMedia('(min-width: 75rem)') : null;
+  const property = 'data-header-content-fit';
+  let frame: number | null = null;
+  let disposed = false;
+  let writtenValue = '';
+
+  const release = () => {
+    if (writtenValue && header.getAttribute(property) === writtenValue) {
+      header.removeAttribute(property);
+    }
+    writtenValue = '';
+  };
+
+  const measure = () => {
+    frame = null;
+    if (disposed) return;
+    const active = doc?.activeElement ?? null;
+    if (!media?.matches) {
+      release();
+      return;
+    }
+
+    const needed = probe.scrollWidth;
+    const available = slot.clientWidth;
+    if (!Number.isFinite(needed) || !Number.isFinite(available) || available <= 0) {
+      return;
+    }
+
+    // Hidden compact nav can report scrollWidth 0; that is not a fit.
+    // Only a measurable desktop candidate may restore the full header.
+    if (needed <= 0) {
+      return;
+    }
+
+    const nextValue = needed > available ? 'compact' : '';
+    if (nextValue === writtenValue) return;
+    if (nextValue) {
+      header.setAttribute(property, nextValue);
+      writtenValue = nextValue;
+      moveFocusForCompact(active);
+      return;
+    }
+    release();
+    moveFocusForDesktop(active);
+  };
+
+  const scheduleMeasure = () => {
+    if (!disposed && frame === null) frame = window.requestAnimationFrame(measure);
+  };
+
+  const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(scheduleMeasure);
+  observer?.observe(probe);
+  observer?.observe(slot);
+  window.addEventListener('resize', scheduleMeasure);
+  media?.addEventListener('change', scheduleMeasure);
+
+  const fonts = header.ownerDocument?.fonts;
+  fonts?.addEventListener?.('loadingdone', scheduleMeasure);
+  void fonts?.ready?.then(() => {
+    if (!disposed) scheduleMeasure();
+  });
+
+  measure();
+
+  return () => {
+    disposed = true;
+    observer?.disconnect();
+    window.removeEventListener('resize', scheduleMeasure);
+    media?.removeEventListener('change', scheduleMeasure);
+    fonts?.removeEventListener?.('loadingdone', scheduleMeasure);
+    if (frame !== null) window.cancelAnimationFrame(frame);
+    release();
+  };
+}
+
 function buildMainNavItems(locale: SiteLocale): MainNavItem[] {
   if (locale === 'ja') {
     return [
       { key: 'services', label: '取扱業務', href: '/ja/services' },
-      { key: 'lawyers', label: '弁護士紹介', href: '/ja/lawyers' },
+      { key: 'lawyers', label: '日本チーム', href: '/ja/lawyers' },
       { key: 'pricing', label: '費用案内', href: '/ja/pricing' },
       { key: 'insights', label: 'コラム', href: '/ja/columns' },
       { key: 'videos', label: 'メディア', href: '/ja/videos' },
@@ -128,7 +255,7 @@ function buildMainNavItems(locale: SiteLocale): MainNavItem[] {
 
   return [
     { key: 'services', label: 'Services', href: '/en/services' },
-    { key: 'lawyers', label: 'Lawyers', href: '/en/lawyers' },
+    { key: 'lawyers', label: 'Our Team', href: '/en/lawyers' },
     { key: 'pricing', label: 'Pricing', href: '/en/pricing' },
     { key: 'insights', label: 'Columns', href: '/en/columns' },
     { key: 'videos', label: 'Media Center', href: '/en/videos' },
@@ -263,7 +390,7 @@ function buildMegaPanels(locale: SiteLocale): MegaPanel[] {
       title: 'About',
       links: [
         { label: 'Firm Overview', href: '/en/about' },
-        { label: 'Lawyers', href: '/en/lawyers' },
+        { label: 'International Team', href: '/en/lawyers' },
         { label: 'Office Locations', href: '/en/contact#offices' },
         { label: 'Contact Us', href: getConsultationPublicMailto('en') }
       ]
@@ -301,13 +428,27 @@ export default function Header({ locale }: { locale: SiteLocale }) {
     if (!headerRef.current) return;
     return installPublicHeaderOffset(headerRef.current);
   }, []);
-  const menuLabel = locale === 'ko' ? '메뉴' : locale === 'zh-hant' ? '選單' : locale === 'ja' ? 'メニュー' : 'Menu';
+  useLayoutEffect(() => {
+    if (!headerRef.current) return;
+    const header = headerRef.current;
+    const cleanupFit = installPublicHeaderContentFit(header);
+    const cleanupFocus = installResponsiveHeaderFocus(header, {
+      desktopControlSelector: '.main-nav .nav-link, .header-actions .nav-cta, .header-utility a, .header-utility button',
+      desktopRestoreSelector: '.main-nav a.nav-link',
+      toggleSelector: 'button.mobile-toggle',
+      drawerSelector: '#public-mobile-nav-drawer',
+    });
+    return () => {
+      cleanupFocus();
+      cleanupFit();
+    };
+  }, [locale]);
   const openMenuLabel = locale === 'ko' ? '메뉴 열기' : locale === 'zh-hant' ? '開啟選單' : locale === 'ja' ? 'メニューを開く' : 'Open menu';
   const closeMenuLabel = locale === 'ko' ? '메뉴 닫기' : locale === 'zh-hant' ? '關閉選單' : locale === 'ja' ? 'メニューを閉じる' : 'Close menu';
   const searchLabel = locale === 'ko' ? '검색 열기' : locale === 'zh-hant' ? '開啟搜尋' : locale === 'ja' ? '検索を開く' : 'Open search';
   const skipLabel = locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : locale === 'ja' ? '本文へ' : 'Skip to main content';
   const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
-  const mainNavLabel = locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : locale === 'ja' ? 'メインメニュー' : 'Main';
+  const mainNavLabel = locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : locale === 'ja' ? 'メインメニュー' : 'Main menu';
   const memberLabels =
     locale === 'ko'
       ? { login: '로그인', account: '내 계정', premium: '프리미엄', logout: '로그아웃' }
@@ -333,7 +474,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
               { label: 'アクセス', href: '/ja/contact#offices' }
             ]
           : [
-              { label: 'Contact information', href: '/en/contact' },
+              { label: 'Contact', href: '/en/contact' },
               { label: 'Offices', href: '/en/contact#offices' }
             ];
 
@@ -505,11 +646,11 @@ export default function Header({ locale }: { locale: SiteLocale }) {
   }, [closeMegaMenuNow, openMenu]);
 
   return (
-    <header ref={headerRef} data-public-site-header className={`header scrolled${openMenu ? ' mega-open' : ''}`}>
+    <header ref={headerRef} data-public-site-header className={`header scrolled${openMenu ? ' mega-open' : ''} ${styles.header}`}>
       <a className="skip-link" href="#main">
         {skipLabel}
       </a>
-      <div className="header-utility">
+      <div className={`header-utility ${styles.headerUtility}`}>
         <div className="container">
           <nav
             className="utility-nav"
@@ -556,13 +697,48 @@ export default function Header({ locale }: { locale: SiteLocale }) {
         </div>
       </div>
 
-      <div className="header-main">
-        <div className="container header-main-inner">
-          <Link className="header-logo" href={`/${locale}`} aria-label={homeLabel}>
-            <span className="logo-mark" aria-hidden>
+      <div className={`header-main ${styles.headerMain}`}>
+        <div className={`container header-main-inner ${styles.headerMainInner}`} data-header-content-fit-slot>
+          <div className={styles.contentFitProbe} data-header-content-fit-probe aria-hidden="true">
+            <span className={styles.contentFitProbeLogo}>
+              <span className={styles.contentFitProbeMark} />
+              {locale === 'en' ? (
+                <span className={styles.contentFitProbeBrand}>
+                  <span className={styles.brandWord}>Hovering</span>
+                  {' '}
+                  <span className={styles.brandWord}>International</span>
+                  {' '}
+                  <span className={styles.brandUnit}>Law Firm</span>
+                </span>
+              ) : (
+                <span className={styles.contentFitProbeBrand}>{brandText}</span>
+              )}
+            </span>
+            <span className={styles.contentFitProbeNav}>
+              {mainNavItems.map((item) => (
+                <span key={item.key} className="nav-link">{item.label}</span>
+              ))}
+            </span>
+            <span className={styles.contentFitProbeActions}>
+              <span className={styles.contentFitProbeSearch} />
+              <span className="button nav-cta">{content.nav.cta.label}</span>
+            </span>
+          </div>
+          <Link className={`header-logo ${styles.headerLogo}`} href={`/${locale}`} aria-label={homeLabel}>
+            <span className={`logo-mark ${styles.logoMark}`} aria-hidden>
               <Image src="/images/brand/hovering-seal-official.png" alt="" width={40} height={40} />
             </span>
-            <span className="logo-kr">{brandText}</span>
+            {locale === 'en' ? (
+              <span className={`logo-kr ${styles.brandText} ${styles.brandTextEn}`}>
+                <span className={styles.brandWord}>Hovering</span>
+                {' '}
+                <span className={styles.brandWord}>International</span>
+                {' '}
+                <span className={styles.brandUnit}>Law Firm</span>
+              </span>
+            ) : (
+              <span className={`logo-kr ${styles.brandText}`}>{brandText}</span>
+            )}
           </Link>
 
           <nav
@@ -632,7 +808,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
             </ul>
           </nav>
 
-          <div className="header-actions">
+          <div className={`header-actions ${styles.headerActions}`}>
             {locale === 'ja' ? (
               <Link className="header-search-btn" href={`/${locale}/search`} aria-label={searchLabel}>
                 <svg className="header-search-icon" viewBox="0 0 24 24" aria-hidden>
@@ -657,7 +833,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
               {content.nav.cta.label}
             </Link>
             <button
-              className="icon-button mobile-toggle"
+              className={`icon-button mobile-toggle ${styles.menuToggle}`}
               type="button"
               ref={mobileToggleRef}
               onClick={openMobileDrawer}
@@ -665,7 +841,11 @@ export default function Header({ locale }: { locale: SiteLocale }) {
               aria-expanded={drawerOpen}
               aria-controls="public-mobile-nav-drawer"
             >
-              {menuLabel}
+              <svg className={styles.menuIcon} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <line x1="4" y1="7" x2="20" y2="7" />
+                <line x1="4" y1="12" x2="20" y2="12" />
+                <line x1="4" y1="17" x2="20" y2="17" />
+              </svg>
             </button>
           </div>
         </div>

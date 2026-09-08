@@ -7,6 +7,7 @@ import type { Locale } from '@/lib/locales';
 import { CopyLinkButton } from '@/components/members/CopyLinkButton';
 import { RenewPaymentLinkButton } from '@/components/members/RenewPaymentLinkButton';
 import { SendDocumentEmailButton } from '@/components/members/SendDocumentEmailButton';
+import styles from './BillingPortalView.module.css';
 
 type CopyBundle = {
   title: string;
@@ -141,17 +142,17 @@ export const BILLING_COPY: Record<Locale, CopyBundle> = {
 };
 
 const containerStyle: React.CSSProperties = {
-  maxWidth: 920,
+  maxWidth: 680,
   margin: '0 auto',
   padding: '32px 20px',
-  fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
-  color: '#0f172a',
+  color: 'var(--warm-text-dark, #435446)',
+  background: 'var(--off-white, #f7faf6)',
 };
 
 const sectionStyle: React.CSSProperties = {
   marginTop: 28,
   background: '#ffffff',
-  border: '1px solid #e2e8f0',
+  border: '1px solid var(--warm-border, #cad5c7)',
   borderRadius: 12,
   padding: 20,
 };
@@ -161,34 +162,39 @@ const cardStyle: React.CSSProperties = {
   flexDirection: 'column',
   gap: 6,
   padding: 16,
-  border: '1px solid #e2e8f0',
-  borderRadius: 10,
+  border: '1px solid var(--warm-border, #cad5c7)',
+  borderRadius: 12,
   marginTop: 12,
-  background: '#f8fafc',
+  background: 'var(--cream, #eef4ee)',
+  overflowWrap: 'anywhere',
 };
 
 const linkButton: React.CSSProperties = {
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: '8px 12px',
-  borderRadius: 8,
-  background: '#1d4ed8',
+  minHeight: 48,
+  padding: '12px 20px',
+  borderRadius: 4,
+  background: 'var(--primary, #16382d)',
   color: '#ffffff',
-  fontWeight: 600,
+  fontWeight: 700,
   textDecoration: 'none',
-  fontSize: 13,
+  fontSize: 16,
+  lineHeight: '24px',
+  border: '1px solid var(--primary, #16382d)',
 };
 
 const secondaryLink: React.CSSProperties = {
   ...linkButton,
-  background: '#e2e8f0',
-  color: '#1e293b',
+  background: '#ffffff',
+  color: 'var(--primary, #16382d)',
 };
 
 const mutedStyle: React.CSSProperties = {
-  color: '#64748b',
+  color: 'var(--warm-text-dark, #435446)',
   fontSize: 13,
+  lineHeight: '18px',
 };
 
 function DocumentCard({ document, copy }: { document: CustomerBillingDocumentDto; copy: CopyBundle }): JSX.Element {
@@ -200,24 +206,24 @@ function DocumentCard({ document, copy }: { document: CustomerBillingDocumentDto
     && (document.paymentLinkRenewalNeeded ? copy.renewNeeded : copy.noLink);
   const showRenew = document.type === 'invoice' && document.balanceDue > 0 && (!document.paymentLinkPath || document.paymentLinkRenewalNeeded);
   return (
-    <article style={cardStyle} data-billing-document-card={document.documentId}>
+    <article style={cardStyle} className={styles.card} data-billing-document-card={document.documentId}>
       <header style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
-        <strong style={{ fontSize: 15 }}>{document.typeLabel} · {document.number}</strong>
+        <strong className={styles.cardTitle}>{document.typeLabel} · {document.number}</strong>
         <span style={mutedStyle}>{document.statusLabel}</span>
       </header>
       <div style={mutedStyle}>{document.contextLabel}</div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6, marginTop: 4 }}>
+      <div className={styles.amounts}>
         <div>
           <div style={mutedStyle}>{copy.totalLabel}</div>
-          <div style={{ fontWeight: 600 }}>{document.totalLabel}</div>
+          <div className={styles.amountValue}>{document.totalLabel}</div>
         </div>
         <div>
           <div style={mutedStyle}>{copy.balanceLabel}</div>
-          <div style={{ fontWeight: 600 }}>{document.balanceDueLabel}</div>
+          <div className={styles.amountValue}>{document.balanceDueLabel}</div>
         </div>
       </div>
       <div style={mutedStyle}>{copy.issuedLabel}: {issued}</div>
-      <div style={{ display: 'flex', gap: 8, marginTop: 10, flexWrap: 'wrap' }}>
+      <div className={styles.actions}>
         {document.sharePath ? (
           <a href={document.sharePath} style={secondaryLink} target="_blank" rel="noreferrer">
             {copy.openLabel}
@@ -251,7 +257,7 @@ function DocumentCard({ document, copy }: { document: CustomerBillingDocumentDto
           />
         ) : null}
         {showPay ? (
-          <a href={document.paymentLinkPath} style={linkButton} data-billing-pay-link={document.documentId}>
+          <a href={document.paymentLinkPath} style={linkButton} className={styles.primary} data-billing-pay-link={document.documentId}>
             {copy.payLabel}
           </a>
         ) : null}
@@ -292,8 +298,8 @@ function DocumentSection({
 }): JSX.Element | null {
   if (documents.length === 0) return null;
   return (
-    <section style={sectionStyle}>
-      <h2 style={{ margin: 0, fontSize: 18 }}>{heading}</h2>
+    <section style={sectionStyle} className={styles.section}>
+      <h2 style={{ margin: 0, fontSize: 20, lineHeight: '28px' }}>{heading}</h2>
       {documents.map((document) => (
         <DocumentCard key={document.documentId} document={document} copy={copy} />
       ))}
@@ -319,10 +325,10 @@ export function BillingPortalView({
   const copy = BILLING_COPY[locale];
   if (signedOut) {
     return (
-      <Root style={containerStyle} data-billing-portal-state="signed-out">
+      <Root style={containerStyle} className={styles.root} data-billing-portal-state="signed-out">
         <h1 style={{ marginTop: 0 }}>{copy.title}</h1>
         <p>{copy.signedOut}</p>
-        <Link href={signInHref ?? `/${locale}/login?next=${encodeURIComponent('/account/billing')}`} style={linkButton}>
+        <Link href={signInHref ?? `/${locale}/login?next=${encodeURIComponent('/account/billing')}`} style={linkButton} className={styles.primary}>
           {copy.signInCta}
         </Link>
       </Root>
@@ -332,14 +338,14 @@ export function BillingPortalView({
   const { unpaidInvoices, paidReceipts, archived } = partitionCustomerBillingDocuments(documents);
 
   return (
-    <Root style={containerStyle} data-billing-portal-state="signed-in">
+    <Root style={containerStyle} className={styles.root} data-billing-portal-state="signed-in">
       <header>
         <h1 style={{ marginTop: 0 }}>{copy.title}</h1>
         <p style={mutedStyle}>{copy.memberEmailLabel}: {memberEmail ?? ''}</p>
       </header>
       {documents.length === 0 ? (
-        <section style={sectionStyle}>
-          <p style={{ margin: 0 }}>{copy.empty}</p>
+        <section style={sectionStyle} className={styles.section}>
+          <p className={styles.empty}>{copy.empty}</p>
         </section>
       ) : (
         <>
@@ -348,7 +354,7 @@ export function BillingPortalView({
           <DocumentSection heading={copy.archivedHeading} documents={archived} copy={copy} />
         </>
       )}
-      <footer style={{ marginTop: 28 }}>
+      <footer className={styles.footer}>
         <p style={mutedStyle}>{copy.contactUs}</p>
       </footer>
     </Root>

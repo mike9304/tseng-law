@@ -447,7 +447,9 @@ describe('AI-intake discovery CTAs', () => {
       const html = renderToStaticMarkup(<ContactLegacyPageBody locale={locale} />);
 
       expect(countNeedle(html, `<p class="contact-email-actions__label">${officialLabel}</p>`)).toBe(1);
-      expect(countNeedle(html, 'class="contact-email-actions"')).toBe(1);
+      expect([...html.matchAll(/<div\b[^>]*>/g)].filter((match) =>
+        attr(match[0], 'class')?.split(/\s+/).includes('contact-email-actions'),
+      )).toHaveLength(1);
       expect(originalEmailAiGrid(html)).not.toContain(officialLabel);
       expect(countNeedle(html, copyLabel)).toBe(2);
       expect(countNeedle(html, 'role="status"')).toBe(1);

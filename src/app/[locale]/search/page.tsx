@@ -13,6 +13,7 @@ import { runSearchQuery } from '@/lib/builder/search/query-engine';
 import { augmentStaticDocs } from '@/lib/builder/search/augment-static-docs';
 import { getPublicIntentSearchDocs } from '@/lib/builder/search/public-intent-docs';
 import type { SearchDocKind } from '@/lib/builder/search/types';
+import styles from './SearchPage.module.css';
 
 export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
   const params = await props.params;
@@ -135,7 +136,7 @@ export default async function SearchPage(
   return (
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
-        <form className="search-bar" action={`/${locale}/search`} method="get">
+        <form className={`search-bar ${styles.searchBar}`} action={`/${locale}/search`} method="get">
           <input
             className="search-input"
             type="search"
@@ -151,7 +152,7 @@ export default async function SearchPage(
           </button>
         </form>
       </PageHeader>
-      <section className="section search-results-section">
+      <section className={`section search-results-section ${styles.results}`}>
         <div className="container">
           <div className="search-tabs">
             {tabs.map((tab) => (

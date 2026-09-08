@@ -7,6 +7,7 @@ import {
   getConsultationCtaLabel,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import styles from './AttorneyProfileSection.module.css';
 
 const labels = {
   ko: {
@@ -59,33 +60,26 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Site
     ? `${member.role.includes('변호사') ? '대만변호사' : member.role} ${member.name} — 법무법인 호정 ${member.role}`
     : `${member.name} ${member.role}`;
 
-  return (
-    <article id={member.id} className={`attorney-card ${isLarge ? 'attorney-card--lead' : 'attorney-card--sub'}`}>
-      <div className={`attorney-card-photo ${isLarge ? 'attorney-card-photo--lead' : 'attorney-card-photo--sub'}`}>
-        <Image
-          src={member.photo}
-          alt={imageAlt}
-          fill
-          className="person-photo"
-          style={{ objectFit: 'cover' }}
-          sizes={isLarge ? '(max-width: 768px) 100vw, 400px' : '(max-width: 768px) 100vw, 200px'}
-        />
-      </div>
-      <div className="attorney-card-info">
-        <h3 className={`attorney-card-name ${isLarge ? 'attorney-card-name--lead' : ''}`}>
-          {profileHref ? (
-            <Link href={profileHref} className="attorney-card-name-link">
-              {member.name}
-            </Link>
-          ) : (
-            member.name
-          )}
-        </h3>
-        <p className="attorney-card-role">{member.role}</p>
-        {member.email ? (
-          <a href={`mailto:${member.email}`} className="attorney-card-email">{member.email}</a>
-        ) : null}
+  const person = (
+        <div className={styles.person}>
+          <h3 className={`attorney-card-name ${isLarge ? 'attorney-card-name--lead' : ''}`}>
+            {profileHref ? (
+              <Link href={profileHref} className="attorney-card-name-link">
+                {member.name}
+              </Link>
+            ) : (
+              member.name
+            )}
+          </h3>
+          <p className="attorney-card-role">{member.role}</p>
+          {member.email ? (
+            <a href={`mailto:${member.email}`} className="attorney-card-email">{member.email}</a>
+          ) : null}
+        </div>
+  );
 
+  const info = (
+      <div className="attorney-card-info">
         <div className="attorney-card-section">
           <div className="attorney-card-label">{l.intro}</div>
           <ul className="attorney-list">
@@ -122,6 +116,31 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Site
           </a>
         </div>
       </div>
+  );
+
+  return (
+    <article id={member.id} className={`attorney-card ${isLarge ? 'attorney-card--lead' : 'attorney-card--sub'}`}>
+      <div className={styles.identity}>
+        <div className={`attorney-card-photo ${isLarge ? 'attorney-card-photo--lead' : 'attorney-card-photo--sub'}`}>
+          <Image
+            src={member.photo}
+            alt={imageAlt}
+            fill
+            className="person-photo"
+            style={{ objectFit: 'cover' }}
+            sizes={isLarge ? '(max-width: 768px) 100vw, 400px' : '(max-width: 768px) 100vw, 200px'}
+          />
+        </div>
+        {isLarge ? (
+          <div className={styles.leadCopy}>
+            {person}
+            {info}
+          </div>
+        ) : (
+          person
+        )}
+      </div>
+      {isLarge ? null : info}
     </article>
   );
 }
@@ -142,7 +161,7 @@ export default function AttorneyProfileSection({
   const accountant = members.find((m) => m.id === 'huang-shengping');
 
   return (
-    <section className="section section--light attorney-team-section">
+    <section className={`section section--light attorney-team-section ${styles.root}`}>
       <div className="container">
         {showIntro ? (
           <>

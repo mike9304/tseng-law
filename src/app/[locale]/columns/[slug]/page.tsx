@@ -20,6 +20,7 @@ import {
 import { resolveTypography } from '@/lib/builder/columns/typography';
 import type { ColumnTypography } from '@/lib/builder/columns/types';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
+import styles from './ColumnDetail.module.css';
 
 export const dynamic = 'force-dynamic';
 
@@ -231,7 +232,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
       ) : null}
       {showSeo && faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       {showHero ? (
-        <section className="blog-hero" data-tone="dark">
+        <section className={`blog-hero ${styles.hero}`} data-tone="dark">
           <div className="blog-hero-bg">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={post.featuredImage} alt={post.title} className="blog-hero-img" />
@@ -253,7 +254,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
       ) : null}
 
       {showBody ? (
-        <article className="blog-article">
+        <article className={`blog-article ${styles.article}`}>
           <div className="container blog-container">
             <div
               className={`blog-body ${typography.className}`}
@@ -309,7 +310,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
 
       {/* Prev / Next Navigation */}
       {showBody && (prevPost || nextPost) && (
-        <nav className="container column-post-nav" style={{
+        <nav className={`container column-post-nav ${styles.postNav}`} style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'stretch',

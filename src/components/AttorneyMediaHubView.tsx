@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from './AttorneyMediaHubView.module.css';
 import type { SiteLocale } from '@/lib/locales';
 import { serviceAreas } from '@/data/service-details';
 import { getAttorneyProfile, getAttorneyProfilePath, primaryAttorneySlug } from '@/data/attorney-profiles';
@@ -102,7 +103,7 @@ export default function AttorneyMediaHubView({
   ];
 
   return (
-    <section className="section section--light media-hub-section">
+    <section className={`section section--light media-hub-section ${styles.root}`}>
       <div className="container">
         <div className="media-hub-hero">
           <div className="media-hub-profile">
@@ -122,9 +123,6 @@ export default function AttorneyMediaHubView({
               <p className="section-lede">{labels.description}</p>
               <p className="media-hub-role">{profile.name} · {profile.role}</p>
               <div className="media-hub-actions">
-                <Link href={profileHref} className="button button--outline">
-                  {labels.profile}
-                </Link>
                 <a
                   href={getConsultationPublicMailto(locale)}
                   className="button"
@@ -132,6 +130,9 @@ export default function AttorneyMediaHubView({
                 >
                   {labels.contact}
                 </a>
+                <Link href={profileHref} className="button button--outline">
+                  {labels.profile}
+                </Link>
               </div>
             </div>
           </div>

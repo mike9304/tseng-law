@@ -19631,6 +19631,20 @@ html[lang='zh-Hant'] h1.svc-hero-title,
   margin-bottom: 1rem;
 }
 
+.page-header + .services-bento,
+.page-header + .pricing-section,
+.page-header + .reveal > .consultation-guide-section {
+  padding-top: 48px;
+}
+
+@media (max-width: 640px) {
+  .page-header + .services-bento,
+  .page-header + .pricing-section,
+  .page-header + .reveal > .consultation-guide-section {
+    padding-top: 40px;
+  }
+}
+
 /* Closed serif allowlist entry: page H1 */
 .page-header-title {
   font-family: var(--font-display, var(--font-heading-ko));

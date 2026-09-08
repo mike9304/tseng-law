@@ -128,7 +128,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       role: '台灣律師 · 代表律師',
       title: '曾雋崴台灣律師簡介',
       description:
-        '整理曾雋崴台灣律師的學經歷、主要服務領域與代表案件，聚焦韓國客戶在台公司設立、投資、訴訟、簽證與智慧財產等法律需求。事務所可提供韓文、中文、日文、英文諮詢。',
+        '整理曾雋崴台灣律師的學經歷、主要服務領域與代表案件，涵蓋在台公司設立、投資、訴訟、簽證與智慧財產等法律需求。事務所可提供韓文、中文、日文、英文諮詢。',
       email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
@@ -167,7 +167,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       keywords: ['曾雋崴 律師', '曾雋崴台灣律師', '台灣律師', '韓文 台灣律師', '台灣公司設立 律師', '台灣訴訟 律師'],
       searchTerms: ['曾雋崴台灣律師', '曾雋崴 律師', '韓文 台灣律師', '台灣公司設立 律師 曾雋崴'],
       proofPoints: [
-        '可用韓文、中文、日文、英文直接對接韓國客戶與台灣在地程序。',
+        '可用韓文、中文、日文、英文直接對接客戶與台灣在地程序。',
         '處理台灣公司設立、投資、訴訟、簽證與智慧財產等跨境法律需求。',
         '曾代理韓國留學生健身房受傷求償案件，取得 157 萬 TWD 一審判決。',
         '昊鼎官方頁面、個人網站、YouTube 與 Naver Blog 都可交叉驗證律師資訊。',
@@ -176,7 +176,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         {
           question: '曾雋崴律師主要處理哪些案件？',
           answer:
-            '以韓國客戶常見的台灣公司設立、投資法律顧問、民事訴訟與損害賠償、商標專利、簽證居留、家事與勞動爭議為核心。',
+            '以台灣公司設立、投資法律顧問、民事訴訟與損害賠償、商標專利、簽證居留、家事與勞動爭議為核心。',
         },
         {
           question: '可以用韓文與曾雋崴律師諮詢嗎？',

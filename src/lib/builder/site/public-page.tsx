@@ -23,8 +23,22 @@ import {
   matchLegacyContactScaffold,
 } from '@/lib/builder/canvas/legacy-contact-scaffold';
 import { buildPublishedResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
+import {
+  LEGACY_EDITORIAL_COMPOSITE_LAYOUT_CSS,
+  matchLegacyEditorialCompositeLayout,
+} from '@/lib/builder/site/legacy-editorial-composite-layout';
 import { projectLegacyZhHantHomeOffices } from '@/lib/builder/site/legacy-zh-hant-home-offices';
 import { getLegacyZhHantFluidContainerStyle, hasLegacyJulyZhHantHomeDualTree, normalizeLegacyZhHantHomeRead } from '@/lib/builder/canvas/home-zh-hant-parity';
+import homeEditorialStyles from '@/components/HomeEditorial.module.css';
+import {
+  CURRENT9_PUBLISHED_HOME_EDITORIAL_CSS,
+  JULY_PUBLISHED_HOME_EDITORIAL_CSS,
+  deriveJulyHeroEditorialPresentation,
+  isSafeNormalizedDocumentEnvelope,
+  matchCurrent9PublishedHomeEditorial,
+  publishedHomeEditorialCompositeProps,
+  reorderCurrent9PublishedHomeNodes,
+} from '@/lib/builder/site/published-home-editorial';
 import { hasLegacyColumnsScaffold } from '@/lib/builder/canvas/legacy-columns-scaffold';
 import { projectPublishedHomeInsightsArchiveIntro } from '@/lib/insights/archive-copy';
 import {
@@ -683,12 +697,29 @@ export async function PublishedSitePageView({
   // :root and cascade into both themes.
   const customColorCssVars = buildCustomColorCssVars(settings?.brand?.customColors);
   const normalizedHomeCanvas = await normalizeLegacyZhHantHomeRead(canvas, locale, isHomePage);
-  const legacyZhTabletParity = await hasLegacyJulyZhHantHomeDualTree(normalizedHomeCanvas, locale, isHomePage);
+  const current9PublishedHomeEditorial = matchCurrent9PublishedHomeEditorial({
+    document: canvas,
+    locale,
+    slugPath,
+  });
+  const julyEnvelopeOk = isSafeNormalizedDocumentEnvelope(normalizedHomeCanvas);
+  const legacyZhTabletParity = julyEnvelopeOk
+    ? await hasLegacyJulyZhHantHomeDualTree(normalizedHomeCanvas, locale, isHomePage)
+    : false;
+  const julyPublishedHomeEditorial =
+    !current9PublishedHomeEditorial && slugPath === '' && legacyZhTabletParity
+      ? deriveJulyHeroEditorialPresentation(normalizedHomeCanvas, locale)
+      : null;
   const publishedNodes = projectLegacyZhHantHomeOffices(normalizedHomeCanvas.nodes, locale, isHomePage);
   const visibleNodes = publishedNodes.filter((node) => node.visible !== false);
   const responsiveStylesheet = buildPublishedResponsiveStylesheet(publishedNodes);
   const legacyContactScaffold =
     slugPath === 'contact' ? matchLegacyContactScaffold(canvas.nodes) : null;
+  const legacyEditorialCompositeLayout = matchLegacyEditorialCompositeLayout(
+    canvas,
+    locale,
+    slugPath,
+  );
   const childrenMap = buildChildrenMap(visibleNodes);
   const nodesById = new Map(publishedNodes.map((node) => [node.id, node]));
   const siteUrl = getSiteUrl();
@@ -754,10 +785,12 @@ export async function PublishedSitePageView({
   // min-height (observed on home-services-root / home-faq-root). Scoped to
   // desktop (min-width:1024) so the responsive tablet/mobile stylesheet
   // (narrower breakpoints) still overrides on smaller viewports.
-  const desktopFlowSectionMinHeightCss = [...flowSectionMetrics.entries()]
-    .filter(([, metric]) => Boolean(metric) && metric.minHeight > 0)
-    .map(([id, metric]) => `[data-node-id="${id}"]{min-height:${metric.minHeight}px !important}`)
-    .join('\n');
+  const desktopFlowSectionMinHeightCss = current9PublishedHomeEditorial
+    ? ''
+    : [...flowSectionMetrics.entries()]
+      .filter(([, metric]) => Boolean(metric) && metric.minHeight > 0)
+      .map(([id, metric]) => `[data-node-id="${id}"]{min-height:${metric.minHeight}px !important}`)
+      .join('\n');
 
   // Render composites first (they participate in document flow with
   // computed margin-top), then absolute non-composites on top. Without
@@ -767,7 +800,10 @@ export async function PublishedSitePageView({
   // when z-indexes match. The comparator is shared with the editor stage
   // (CanvasStageNodes) via flow.compareTopLevelStacking so the two cannot
   // drift apart.
-  const renderedTopLevelNodes = [...topLevelNodes].sort(compareTopLevelStacking);
+  const stackedTopLevelNodes = [...topLevelNodes].sort(compareTopLevelStacking);
+  const renderedTopLevelNodes = current9PublishedHomeEditorial
+    ? reorderCurrent9PublishedHomeNodes(stackedTopLevelNodes)
+    : stackedTopLevelNodes;
   const heritageInterludeInsertionNodeId =
     resolveHeritageInterludeInsertionNodeId(
       isHomePage,
@@ -915,6 +951,10 @@ export async function PublishedSitePageView({
         faqCategories: resolved.faqCategories,
         faqItems: resolved.faqItems,
         searchParams,
+        ...publishedHomeEditorialCompositeProps(renderedNode, {
+          current9: Boolean(current9PublishedHomeEditorial),
+          july: julyPublishedHomeEditorial,
+        }),
       }
       : {};
     const renderedChildren = isRepeaterTemplate && repeaterRecordCount > 0
@@ -1101,13 +1141,15 @@ export async function PublishedSitePageView({
               : renderedNode.rect.height,
           // Use the designer's rect.height as a floor for flow composites and
           // text-shaped widgets; content can grow without clipping.
-          minHeight: useLegacyContactScaffold
-            ? renderedNode.rect.height
-            : flowAsSection
-              ? (flowSectionMetric?.minHeight ?? renderedNode.rect.height)
-              : isTextShapedKind(renderedNode.kind)
-                ? renderedNode.rect.height
-                : undefined,
+          minHeight: current9PublishedHomeEditorial && flowAsSection
+            ? undefined
+            : useLegacyContactScaffold
+              ? renderedNode.rect.height
+              : flowAsSection
+                ? (flowSectionMetric?.minHeight ?? renderedNode.rect.height)
+                : isTextShapedKind(renderedNode.kind)
+                  ? renderedNode.rect.height
+                  : undefined,
           // Always emit marginTop (even 0) for flow composites so the CSS
           // fallback at globals.css:19245 never silently injects a clamp gap
           // when the designer intended adjacent sections.
@@ -2177,6 +2219,12 @@ export async function PublishedSitePageView({
           mobileHamburger={headerFooterConfig.mobileHamburger}
         />
       ) : null}
+      {current9PublishedHomeEditorial ? (
+        <style data-home-editorial="current9" dangerouslySetInnerHTML={{ __html: CURRENT9_PUBLISHED_HOME_EDITORIAL_CSS }} />
+      ) : null}
+      {julyPublishedHomeEditorial ? (
+        <style data-home-editorial="july" dangerouslySetInnerHTML={{ __html: JULY_PUBLISHED_HOME_EDITORIAL_CSS }} />
+      ) : null}
       {legacyZhTabletParity ? <style data-builder-zh-tablet-parity="true" dangerouslySetInnerHTML={{ __html: `
         @media (min-width: 769px) and (max-width: 1023px) {
           .builder-pub-main[data-builder-zh-tablet-parity='true'] {
@@ -2200,11 +2248,16 @@ export async function PublishedSitePageView({
           .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-contact-root'] { display: none !important; }
         }
       ` }} /> : null}
+      {legacyEditorialCompositeLayout ? (
+        <style data-builder-legacy-editorial-composite="true" dangerouslySetInnerHTML={{ __html: LEGACY_EDITORIAL_COMPOSITE_LAYOUT_CSS }} />
+      ) : null}
       <div
-        className="builder-pub-main"
+        className={['builder-pub-main', current9PublishedHomeEditorial ? homeEditorialStyles.root : undefined].filter(Boolean).join(' ')}
         data-builder-zh-tablet-parity={legacyZhTabletParity ? 'true' : undefined}
         data-builder-legacy-columns-flow={hasLegacyColumnsScaffold(canvas, locale, slugPath) ? 'true' : undefined}
+        data-builder-legacy-editorial-composite={legacyEditorialCompositeLayout ? 'true' : undefined}
         data-builder-chrome={useBuilderChrome ? 'true' : 'false'}
+        data-home-editorial={current9PublishedHomeEditorial ? 'current9' : julyPublishedHomeEditorial ? 'july' : undefined}
         style={{
           // Canvas stage width is 1280 (see canvas/responsive.ts).
           // Published main used to be 1200, so any widget the designer
@@ -2213,7 +2266,7 @@ export async function PublishedSitePageView({
           maxWidth: hasTopLevelComposite ? undefined : 1280,
           margin: '0 auto',
           position: 'relative',
-          minHeight: Math.max(publishedContentHeight, 720),
+          minHeight: current9PublishedHomeEditorial || legacyEditorialCompositeLayout ? undefined : Math.max(publishedContentHeight, 720),
           // Light mode: inherit color/background/font from body so the
           // public green theme (globals.css) is used, not the builder's
           // blue/gray fallback vars. Dark mode overrides these via the

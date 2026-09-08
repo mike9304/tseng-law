@@ -9,6 +9,10 @@ import {
   BUILDER_SERVICES_ACCORDION_CARD_HEIGHT,
   BUILDER_SERVICES_ACCORDION_SECTION_HEIGHT,
 } from '@/lib/builder/canvas/accordion-preview';
+import {
+  applyJulySafeExpandedGeometry,
+  shouldSkipJulyPublishedGeometry,
+} from '@/lib/builder/site/published-home-editorial';
 
 function findByNodeIdPattern(pattern: RegExp): HTMLElement[] {
   return Array.from(document.querySelectorAll<HTMLElement>('[data-node-id]'))
@@ -71,6 +75,11 @@ function setImportantPixelStyle(element: HTMLElement, property: string, value: n
 }
 
 function setExpandedElementSize(element: HTMLElement, minimumHeight: number, isOpen: boolean): void {
+  if (shouldSkipJulyPublishedGeometry(element)) {
+    applyJulySafeExpandedGeometry(element.style, isOpen);
+    return;
+  }
+
   const position = window.getComputedStyle(element).position;
   if (!isOpen) {
     element.style.removeProperty('height');
@@ -103,6 +112,7 @@ function logicalSiblingStack(elements: HTMLElement[]): HTMLElement[] {
 
 function applyExpandedSiblingStack(elements: HTMLElement[]): void {
   if (elements.length === 0) return;
+  if (elements.some((element) => shouldSkipJulyPublishedGeometry(element))) return;
   const stack = logicalSiblingStack(elements);
   rememberBaseStackMetrics(elements);
   let offset = 0;
@@ -135,6 +145,12 @@ function applyExpandedSiblingStack(elements: HTMLElement[]): void {
 function setExpandedSectionHeight(sectionNodeId: string, expandedHeight: number, isOpen: boolean): void {
   const section = findNodeElement(sectionNodeId);
   if (!section) return;
+  if (shouldSkipJulyPublishedGeometry(section)) {
+    section.dataset.builderExpanded = isOpen ? 'true' : 'false';
+    if (isOpen) section.dataset.builderExpandedHeight = String(expandedHeight);
+    else delete section.dataset.builderExpandedHeight;
+    return;
+  }
   section.dataset.builderExpanded = isOpen ? 'true' : 'false';
   if (isOpen) {
     section.dataset.builderExpandedHeight = String(expandedHeight);

@@ -1,0 +1,456 @@
+.hero:global(.blog-hero) {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 0;
+  height: auto;
+  overflow: visible;
+}
+
+.hero :global(.blog-hero-bg) {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--purple-dark, #0d221a);
+}
+
+.hero :global(.blog-hero-img) {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.hero :global(.blog-hero-overlay) {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgb(13, 34, 26) 0%,
+    rgba(13, 34, 26, 0.72) 48%,
+    rgba(13, 34, 26, 0.38) 100%
+  );
+}
+
+.hero :global(.blog-hero-inner) {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.hero :global(.blog-back-link) {
+  color: #fff;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.hero :global(.blog-back-link):focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.hero :global(.blog-category-badge) {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.hero :global(.blog-hero-title) {
+  color: #fff;
+  font-size: 52px;
+  line-height: 60px;
+  font-weight: var(--column-typo-heading-weight, 700);
+  max-width: 760px;
+  margin: 0 0 1rem;
+  overflow: visible;
+  max-height: none;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.hero:lang(ko) :global(.blog-hero-title),
+.hero:lang(ja) :global(.blog-hero-title),
+.hero:lang(zh) :global(.blog-hero-title),
+.hero:lang(zh-Hant) :global(.blog-hero-title) {
+  max-width: 680px;
+}
+
+.hero :global(.blog-meta) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.82rem;
+  min-width: 0;
+}
+
+.hero :global(.blog-meta) :global(a),
+.hero :global(.blog-meta) :global(time),
+.hero :global(.blog-meta) :global(span) {
+  color: inherit;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  max-width: 100%;
+}
+
+.hero :global(.blog-meta) :global(a):focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.article:global(.blog-article) {
+  background: var(--off-white, #f7faf6);
+  overflow: visible;
+}
+
+.article :global(.blog-container) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 320px);
+  gap: 24px;
+  align-items: start;
+  max-width: 1200px;
+}
+
+.article :global(.blog-container) > * {
+  min-width: 0;
+}
+
+.article :global(.blog-body) {
+  min-width: 0;
+  max-width: 760px;
+  width: 100%;
+  padding: 0;
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  color: var(--text-body);
+}
+
+.article:lang(ko) :global(.blog-body),
+.article:lang(ja) :global(.blog-body),
+.article:lang(zh) :global(.blog-body),
+.article:lang(zh-Hant) :global(.blog-body) {
+  max-width: 680px;
+}
+
+.article :global(.column-markdown) {
+  min-width: 0;
+  overflow: visible;
+}
+
+.article :global(.column-markdown) :global(h2.blog-heading),
+.article :global(.column-faq-heading) {
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: var(--column-typo-heading-weight, 700);
+  color: var(--text-heading);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-top: 0;
+  border-top: 0;
+  overflow-wrap: anywhere;
+  max-height: none;
+  overflow: visible;
+  word-break: normal;
+}
+
+.article :global(.column-markdown) :global(h3.blog-heading) {
+  font-weight: var(--column-typo-heading-weight, 600);
+  color: var(--text-heading);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  padding-top: 0;
+  border-top: 0;
+  overflow-wrap: anywhere;
+  max-height: none;
+  overflow: visible;
+  word-break: normal;
+}
+
+.article :global(.blog-paragraph) {
+  color: var(--text-body);
+  overflow: visible;
+  max-height: none;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.article :global(.column-markdown) :global(a.link-underline) {
+  display: inline;
+  min-height: 0;
+  padding: 0;
+  white-space: inherit;
+}
+
+.article :global(.column-markdown) :global(ul),
+.article :global(.column-markdown) :global(ol) {
+  margin: 0 0 1.2rem;
+  padding-inline-start: 1.5rem;
+  overflow-wrap: break-word;
+}
+
+.article :global(.column-markdown) :global(blockquote) {
+  margin: 1.25rem 0;
+  margin-inline: 0;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--purple-border, #cfddd3);
+  background: var(--cream, #eef4ee);
+  color: var(--text-body);
+}
+
+.article :global(.column-markdown) :global(blockquote) :global(ul) {
+  padding-inline-start: 1.25rem;
+}
+
+.article :global(.column-img-wrap) {
+  display: block;
+  margin: 1.5rem 0;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.article :global(.column-img-wrap) :global(img) {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.article :global(.column-table-wrap) {
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
+  margin: 1.5rem 0;
+}
+
+.article :global(.column-table-wrap):focus-visible {
+  outline: 3px solid #87aa9d;
+  outline-offset: 2px;
+}
+
+.article :global(.column-table-scroll-hint) {
+  display: block;
+  color: var(--text-body);
+  background: var(--purple-bg, #edf5ef);
+}
+
+.article :global(.column-table-wrap) :global(table) {
+  width: 100%;
+}
+
+.article :global(.column-table-wrap) :global(th),
+.article :global(.column-table-wrap) :global(td) {
+  min-width: 9rem;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.article :global(.column-faq) {
+  margin-top: 2rem;
+  min-width: 0;
+}
+
+.article :global(.column-faq-list) {
+  margin: 0;
+}
+
+.article :global(.column-faq-item) + :global(.column-faq-item) {
+  margin-top: 1.25rem;
+}
+
+.article :global(.column-faq-question) {
+  font-weight: var(--column-typo-heading-weight, 600);
+  color: var(--text-heading);
+  overflow-wrap: anywhere;
+}
+
+.article :global(.column-faq-answer) {
+  margin: 0.5rem 0 0;
+  color: var(--text-body);
+  overflow-wrap: anywhere;
+}
+
+.article :global(.blog-sidebar) {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+  width: 100%;
+  max-width: 320px;
+}
+
+.article :global(.blog-sidebar-card) {
+  background: #fff;
+  border: 1px solid var(--purple-border, #cfddd3);
+  border-radius: 4px;
+  box-shadow: none;
+  padding: 1.5rem;
+}
+
+.article :global(.blog-sidebar-card--attorney) {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.article :global(.blog-sidebar-title) {
+  color: var(--text-heading);
+  overflow-wrap: anywhere;
+}
+
+.article :global(.blog-sidebar-text) {
+  color: var(--text-body);
+  overflow-wrap: anywhere;
+}
+
+.article :global(.blog-sidebar-btn) {
+  min-height: 48px;
+  height: auto;
+  width: 100%;
+  border-radius: 4px;
+  background: var(--purple, #16382d);
+  color: #fff;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.article :global(.blog-sidebar-btn):hover {
+  background: var(--purple-light, #2d5c48);
+}
+
+.article :global(.blog-sidebar-btn):active {
+  background: var(--purple-dark, #0d221a);
+}
+
+.article :global(.blog-sidebar-btn):focus-visible {
+  outline: 2px solid var(--purple, #16382d);
+  outline-offset: 2px;
+}
+
+.article :global(.blog-related-list) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article :global(.blog-related-link) {
+  display: block;
+  color: var(--purple, #16382d);
+  overflow-wrap: anywhere;
+  white-space: normal;
+  min-height: 44px;
+}
+
+.article :global(.blog-related-link):hover {
+  color: var(--purple-light, #2d5c48);
+}
+
+.article :global(.blog-related-link):active {
+  color: var(--purple-dark, #0d221a);
+}
+
+.article :global(.blog-related-link):focus-visible {
+  outline: 2px solid var(--purple, #16382d);
+  outline-offset: 2px;
+}
+
+.postNav:global(.column-post-nav) {
+  min-width: 0;
+  width: 100%;
+}
+
+.postNav:global(.column-post-nav) > :global(a),
+.postNav:global(.column-post-nav) > :global(span) {
+  min-width: 0;
+}
+
+.postNav:global(.column-post-nav) > :global(a) {
+  /* Inline nav cards use 8px radius and gray border; flatten to editorial 4px. */
+  border-radius: 4px !important;
+  border-color: var(--purple-border, #cfddd3) !important;
+  overflow-wrap: anywhere;
+}
+
+.postNav:global(.column-post-nav) > :global(a) :global(span) {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+.postNav:global(.column-post-nav) > :global(a):hover {
+  /* Inline style owns border-color; hover must beat it locally. */
+  border-color: var(--purple, #16382d) !important;
+}
+
+.postNav:global(.column-post-nav) > :global(a):focus-visible {
+  outline: 2px solid var(--purple, #16382d);
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  .hero:global(.blog-hero) {
+    min-height: 0;
+  }
+
+  .hero :global(.blog-hero-title) {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .article :global(.blog-container) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .article :global(.blog-body) {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .article :global(.column-markdown) :global(h2.blog-heading),
+  .article :global(.column-faq-heading) {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .article :global(.blog-sidebar) {
+    position: static;
+    max-width: none;
+  }
+
+  .article :global(.blog-sidebar-btn) {
+    min-height: 52px;
+  }
+
+  .postNav:global(.column-post-nav) {
+    flex-direction: column;
+    /* Inline maxWidth:900 would keep a narrow centered pair while stacked. */
+    max-width: 100% !important;
+  }
+
+  .postNav:global(.column-post-nav) > :global(a) {
+    /* Next column is inline textAlign right / alignItems flex-end. */
+    text-align: left !important;
+    align-items: flex-start !important;
+    width: 100%;
+  }
+
+  .postNav:global(.column-post-nav) > :global(span) {
+    /* Empty flex:1 spacer is for desktop pairing; don't leave a stacked hole. */
+    flex: 0 0 0 !important;
+    min-height: 0 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero :global(.blog-back-link),
+  .article :global(.blog-sidebar-btn),
+  .article :global(.blog-related-link),
+  .postNav:global(.column-post-nav) > :global(a) {
+    transition: none;
+  }
+}

@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { SiteLocale } from '@/lib/locales';
@@ -5,6 +6,7 @@ import { siteContent } from '@/data/site-content';
 import { getPublishedBaseFooterColumns } from '@/components/footer-link-policy';
 import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 import FooterEmailCopyButton from '@/components/FooterEmailCopyButton';
+import styles from './PublicChrome.module.css';
 import {
   CONSULTATION_EMAIL,
   getConsultationCtaLabel,
@@ -21,6 +23,48 @@ export type FooterLinkColumn = {
   readonly title: string;
   readonly links: readonly FooterLink[];
 };
+
+const OFFICE_NUMERIC_UNIT = /\d+(?:樓之\d+|F-\d+|[號号樓])/g;
+
+function renderOfficeAddress(address: string): ReactNode {
+  const pattern = new RegExp(OFFICE_NUMERIC_UNIT.source, 'g');
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = pattern.exec(address)) !== null) {
+    if (match.index > lastIndex) {
+      nodes.push(address.slice(lastIndex, match.index));
+    }
+    nodes.push(
+      <span className={styles.officeNumeric} key={`office-numeric-${match.index}`}>
+        {match[0]}
+      </span>,
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex === 0) {
+    return address;
+  }
+  if (lastIndex < address.length) {
+    nodes.push(address.slice(lastIndex));
+  }
+  return nodes;
+}
+
+function renderConsultationEmail(email: string): ReactNode {
+  const atIndex = email.indexOf('@');
+  if (atIndex === -1) {
+    return email;
+  }
+
+  return (
+    <>
+      {email.slice(0, atIndex + 1)}
+      <wbr />
+      {email.slice(atIndex + 1)}
+    </>
+  );
+}
 
 export default function Footer({
   locale,
@@ -95,7 +139,7 @@ export default function Footer({
 
   return (
     <>
-      <section className="footer-skyline" aria-hidden>
+      <section className={`footer-skyline ${styles.skyline}`} aria-hidden>
         <div className="skyline-image">
           <Image
             src="/images/footer-ground-skyline-v2.webp"
@@ -108,7 +152,7 @@ export default function Footer({
           />
         </div>
       </section>
-      <footer className="site-footer">
+      <footer className={`site-footer ${styles.footer}`}>
         <div className="footer-offices">
           <div className="container">
             <nav className="office-links" aria-label={officeQuickLinksLabel}>
@@ -116,7 +160,7 @@ export default function Footer({
               {offices.map((office) => (
                 <Link key={office.label} href={office.href} className="office-link">
                   <span className="office-link-name">{office.label}</span>
-                  <span className="office-link-address">{office.address}</span>
+                  <span className="office-link-address">{renderOfficeAddress(office.address)}</span>
                 </Link>
               ))}
             </nav>
@@ -137,7 +181,7 @@ export default function Footer({
                     href={consultationMailto}
                     aria-label={`${consultationCtaLabel}: ${CONSULTATION_EMAIL}`}
                   >
-                    {CONSULTATION_EMAIL}
+                    {renderConsultationEmail(CONSULTATION_EMAIL)}
                   </a>
                   <FooterEmailCopyButton locale={locale} />
                 </div>

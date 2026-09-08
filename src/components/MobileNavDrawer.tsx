@@ -8,6 +8,7 @@ import { siteContent } from '@/data/site-content';
 import type { SiteLocale } from '@/lib/locales';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
+import styles from './PublicChrome.module.css';
 
 type MemberNavState = {
   status: 'loading' | 'signed-out' | 'signed-in';
@@ -152,7 +153,7 @@ export default function MobileNavDrawer({
 
   return (
     <div
-      className="drawer"
+      className={`drawer ${styles.drawer}`}
       id="public-mobile-nav-drawer"
       data-open={open}
       role="dialog"
@@ -161,15 +162,25 @@ export default function MobileNavDrawer({
       ref={dialogRef}
       onClick={onClose}
     >
-      <div className="drawer-panel" ref={panelRef} onClick={(event) => event.stopPropagation()}>
+      <div className={`drawer-panel ${styles.drawerPanel}`} ref={panelRef} onClick={(event) => event.stopPropagation()}>
         <div className="drawer-header">
           <Link className="header-logo drawer-brand" href={`/${locale}`} onClick={onClose}>
             <span className="logo-mark" aria-hidden>
               <Image src="/images/brand/hovering-seal-official.png" alt="" width={40} height={40} />
             </span>
-            <span className="logo-kr">{brandText}</span>
+            {locale === 'en' ? (
+              <span className={`logo-kr ${styles.brandText} ${styles.brandTextEn}`}>
+                <span className={styles.brandWord}>Hovering</span>
+                {' '}
+                <span className={styles.brandWord}>International</span>
+                {' '}
+                <span className={styles.brandUnit}>Law Firm</span>
+              </span>
+            ) : (
+              <span className={`logo-kr ${styles.brandText}`}>{brandText}</span>
+            )}
           </Link>
-          <button className="icon-button" type="button" onClick={onClose} aria-label={closeLabel} ref={closeButtonRef}>
+          <button className={`icon-button ${styles.drawerClose}`} type="button" onClick={onClose} aria-label={closeLabel} ref={closeButtonRef}>
             ×
           </button>
         </div>

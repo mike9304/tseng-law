@@ -22,7 +22,7 @@ const copyByLocale = {
   },
   'zh-hant': {
     label: 'ABOUT',
-    title: '曾雋崴律師，專注服務韓國客戶的台灣法律夥伴',
+    title: '曾雋崴律師，在地與跨境客戶的台灣法律夥伴',
     description:
       '曾雋崴律師具備韓語、日語、中文溝通能力，協助投資、公司設立與訴訟策略整合。',
     summary:
@@ -49,7 +49,25 @@ const copyByLocale = {
   },
 } as const;
 
-export default function HomeAttorneySplit({ locale }: { locale: SiteLocale }) {
+function protectAboutHeadingUnit(title: string, unit: string) {
+  const index = title.indexOf(unit);
+  if (index < 0) return title;
+  return (
+    <>
+      {title.slice(0, index)}
+      <span style={{ whiteSpace: 'nowrap' }}>{unit}</span>
+      {title.slice(index + unit.length)}
+    </>
+  );
+}
+
+export default function HomeAttorneySplit({
+  locale,
+  presentation,
+}: {
+  locale: SiteLocale;
+  presentation?: 'editorial';
+}) {
   const copy = copyByLocale[locale];
   const profilePath = getAttorneyProfilePath(locale);
   const lead = teamContent[locale].members[0];
@@ -85,7 +103,13 @@ export default function HomeAttorneySplit({ locale }: { locale: SiteLocale }) {
           <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[0]}>{copy.label}</SurfaceText>
         </div>
         <h2 className="split-title" data-builder-surface-key={homeAttorneyTextSurfaceIds[1]}>
-          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[1]}>{copy.title}</SurfaceText>
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[1]}>
+            {presentation === 'editorial' && locale === 'ja'
+              ? protectAboutHeadingUnit(copy.title, '相談')
+              : presentation === 'editorial' && locale === 'zh-hant'
+                ? protectAboutHeadingUnit(copy.title, '韓國')
+                : copy.title}
+          </SurfaceText>
         </h2>
         <div className="split-divider" />
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[2]}>

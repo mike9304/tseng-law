@@ -1,3 +1,120 @@
+.root:global(.section.legal-page-section) {
+  padding: 24px 0 72px;
+  background: var(--off-white);
+}
+
+.effectiveDate:global(.legal-effective-date) {
+  color: var(--warm-text-dark);
+  font-size: 14px;
+  line-height: 20px;
+  overflow-wrap: anywhere;
+}
+
+:lang(ko) .effectiveDate {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+:lang(ja) .effectiveDate,
+:lang(zh-Hant) .effectiveDate {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+.grid:global(.contact-grid) {
+  gap: 24px;
+  align-content: start;
+}
+
+.grid > :global(.card.legal-card) {
+  box-sizing: border-box;
+  min-width: 0;
+  align-content: start;
+  height: auto;
+  border: 1px solid var(--warm-border);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: none;
+}
+
+.grid > :global(.card.legal-card)::before,
+.grid > :global(.card.legal-card)::after {
+  content: none;
+  display: none;
+}
+
+.grid > :global(.card.legal-card):hover,
+.grid > :global(.card.legal-card):focus-within {
+  transform: none;
+  border-color: var(--border-medium);
+  background: var(--white);
+  box-shadow: none;
+}
+
+.root :global(.card-title) {
+  margin: 0;
+  color: var(--text-heading);
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.legal-card-copy),
+.root :global(.legal-card-copy p),
+.root :global(.legal-card-list) {
+  max-width: 680px;
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.root :global(.legal-card-copy p),
+.root :global(.legal-card-list li) {
+  overflow-wrap: anywhere;
+}
+
+.root:lang(en) :global(.legal-card-copy),
+.root:lang(en) :global(.legal-card-copy p),
+.root:lang(en) :global(.legal-card-list) {
+  max-width: 760px;
+}
+
+.root:lang(ja) :global(.card-title),
+.root:lang(ja) :global(.legal-card-copy),
+.root:lang(ja) :global(.legal-card-list) {
+  font-family: var(--font-body-ja);
+}
+
+.root:lang(zh-Hant) :global(.card-title),
+.root:lang(zh-Hant) :global(.legal-card-copy),
+.root:lang(zh-Hant) :global(.legal-card-list) {
+  font-family: var(--font-body-zh);
+}
+
+.root:lang(ko) :global(.legal-card h2),
+.root:lang(ko) :global(.legal-card p),
+.root:lang(ko) :global(.legal-card li) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.root:lang(ja) :global(.legal-card h2),
+.root:lang(ja) :global(.legal-card p),
+.root:lang(ja) :global(.legal-card li),
+.root:lang(zh-Hant) :global(.legal-card h2),
+.root:lang(zh-Hant) :global(.legal-card p),
+.root:lang(zh-Hant) :global(.legal-card li) {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
 .privacyGrid.privacyGrid {
   grid-template-columns: minmax(0, 1fr);
 }
@@ -5,5 +122,19 @@
 @media (min-width: 960px) {
   .privacyGrid.privacyGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .root :global(.card-title) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .root :global(.legal-card-copy),
+  .root :global(.legal-card-copy p),
+  .root :global(.legal-card-list) {
+    font-size: 16px;
+    line-height: 26px;
   }
 }

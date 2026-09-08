@@ -7,6 +7,7 @@ import {
   CONSULTATION_EMAIL,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import styles from './NotFound.module.css';
 
 async function requestLocale(): Promise<SiteLocale> {
   const pathname = (await headers()).get('x-tseng-pathname') ?? '';
@@ -23,12 +24,12 @@ export default async function LocalizedNotFound() {
   const copy = notFoundCopyByLocale[locale];
 
   return (
-    <section className="not-found-page" aria-labelledby="not-found-title">
+    <section className={`not-found-page ${styles.root}`} aria-labelledby="not-found-title">
       <div className="container not-found-card">
         <p className="not-found-code" aria-hidden="true">404</p>
         <h1 id="not-found-title">{copy.title}</h1>
         <p>{copy.description}</p>
-        <div className="not-found-actions">
+        <div className={`not-found-actions ${styles.actions}`}>
           <Link className="button" href={`/${locale}`}>{copy.home}</Link>
           <a
             className="button button--outline"

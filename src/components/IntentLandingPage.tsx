@@ -429,10 +429,10 @@ export default function IntentLandingPage({
         )}
       </PageHeader>
 
-      <section className="section section--light">
-        <div className="container intent-layout">
-          <div className="intent-main">
-            <article className="intent-panel">
+      <section className={`section section--light ${styles.root}`}>
+        <div className={`container intent-layout ${styles.layout}`}>
+          <div className={`intent-main ${styles.main}${locale === 'en' ? ` ${styles.mainWide}` : ''}`}>
+            <article className={`intent-panel ${styles.panel}`}>
               <h2 className="profile-card-title">{l.overview}</h2>
               <ul className="intent-article-list">
                 {page.heroPoints.map((item) => (
@@ -441,8 +441,8 @@ export default function IntentLandingPage({
               </ul>
             </article>
 
-            <div className="intent-subgrid">
-              <article className="intent-panel">
+            <div className={`intent-subgrid ${styles.subgrid}`}>
+              <article className={`intent-panel ${styles.panel}`}>
                 <h2 className="profile-card-title">{l.fit}</h2>
                 <ul className="intent-article-list">
                   {page.idealFor.map((item) => (
@@ -451,7 +451,7 @@ export default function IntentLandingPage({
                 </ul>
               </article>
 
-              <article className="intent-panel">
+              <article className={`intent-panel ${styles.panel}`}>
                 <h2 className="profile-card-title">{l.points}</h2>
                 <ul className="intent-article-list">
                   {page.reviewPoints.map((item) => (
@@ -462,7 +462,7 @@ export default function IntentLandingPage({
             </div>
           </div>
 
-          <aside className="intent-sidebar">
+          <aside className={`intent-sidebar ${styles.sidebar}`}>
             <AttorneyAuthorityCard locale={locale} heading={l.attorneyHeading} />
           </aside>
         </div>
@@ -472,13 +472,13 @@ export default function IntentLandingPage({
         <CorporateAdvisorySection locale={locale} />
       ) : null}
 
-      <section className="section section--gray">
+      <section className={`section section--gray ${styles.root}`}>
         <div className="container">
           <SectionLabel>{l.detailLabel}</SectionLabel>
           <h2 className="section-title">{l.detailTitle}</h2>
           <OrnamentDivider />
-          <div className="intent-triple-grid">
-            <article className="intent-panel">
+          <div className={`intent-triple-grid ${styles.triple}`}>
+            <article className={`intent-panel ${styles.panel}`}>
               <h3 className="profile-card-title">{l.process}</h3>
               <ul className="intent-article-list">
                 {page.processFlow.map((item) => (
@@ -487,7 +487,7 @@ export default function IntentLandingPage({
               </ul>
             </article>
 
-            <article className="intent-panel">
+            <article className={`intent-panel ${styles.panel}`}>
               <h3 className="profile-card-title">{l.prepare}</h3>
               <ul className="intent-article-list">
                 {page.prepareChecklist.map((item) => (
@@ -499,7 +499,7 @@ export default function IntentLandingPage({
               ) : null}
             </article>
 
-            <article className="intent-panel">
+            <article className={`intent-panel ${styles.panel}`}>
               <h3 className="profile-card-title">{l.caution}</h3>
               <ul className="intent-article-list">
                 {page.cautionPoints.map((item) => (
@@ -511,7 +511,7 @@ export default function IntentLandingPage({
         </div>
       </section>
 
-      <section className="section section--gray">
+      <section className={`section section--gray ${styles.root}`}>
         <div className="container">
           <SectionLabel>{l.servicesLabel}</SectionLabel>
           <h2 className="section-title">{l.servicesTitle}</h2>
@@ -533,7 +533,7 @@ export default function IntentLandingPage({
       </section>
 
       {columns.length > 0 ? (
-        <section className="section section--light">
+        <section className={`section section--light ${styles.root}`}>
           <div className="container">
             <SectionLabel>{l.columnsLabel}</SectionLabel>
             <h2 className="section-title">{l.columnsTitle}</h2>
@@ -560,7 +560,7 @@ export default function IntentLandingPage({
         </section>
       ) : null}
 
-      <section className="section section--light">
+      <section className={`section section--light ${styles.root}`}>
         <div className="container">
           <SectionLabel>{l.resourcesLabel}</SectionLabel>
           <h2 className="section-title">{l.resourcesTitle}</h2>
@@ -581,7 +581,7 @@ export default function IntentLandingPage({
 
       <FAQAccordion locale={locale} items={page.faq} sectionClassName="section section--gray" />
 
-      <section className="section section--light">
+      <section className={`section section--light ${styles.root}`}>
         <div className="container">
           <div className={`intent-cta-card ${styles.ctaCard}`}>
             <SectionLabel>{l.ctaLabel}</SectionLabel>

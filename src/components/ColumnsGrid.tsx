@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import type { SiteLocale } from '@/lib/locales';
+import styles from './ColumnsGrid.module.css';
 
 const searchCopy = {
   ko: {
@@ -216,7 +217,7 @@ export default function ColumnsGrid({
   const hasActiveFilters = activeFilters.length > 0;
 
   return (
-    <section className="section section--light">
+    <section className={`section section--light ${styles.root}`}>
       <div className="container">
         <form
           className="columns-search"

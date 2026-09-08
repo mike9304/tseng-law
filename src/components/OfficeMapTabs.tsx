@@ -244,6 +244,7 @@ export default function OfficeMapTabs({
   tone = 'light',
   labelSurfaceId = 'section-label',
   titleSurfaceId = 'headline',
+  presentation,
 }: {
   locale: SiteLocale;
   id?: string;
@@ -251,6 +252,7 @@ export default function OfficeMapTabs({
   tone?: 'light' | 'dark';
   labelSurfaceId?: string;
   titleSurfaceId?: string;
+  presentation?: 'editorial';
 }) {
   const offices = taiwanOfficeData[locale];
   const koreaOffice = koreaOfficeData[locale];
@@ -350,8 +352,12 @@ export default function OfficeMapTabs({
                 <span className="office-map-fallback-kicker">
                   {current.embedUrl ? mapPreviewLabel : addressCardLabel}
                 </span>
-                <strong>{current.title}</strong>
-                <span>{current.address}</span>
+                {presentation === 'editorial' ? null : (
+                  <>
+                    <strong>{current.title}</strong>
+                    <span>{current.address}</span>
+                  </>
+                )}
                 <a
                   className="office-map-fallback-link"
                   href={current.mapsUrl}
@@ -419,28 +425,10 @@ export default function OfficeMapTabs({
 
         <div className="office-korea">
           <div className="section-label">{officeLabel}</div>
-          <h3 className="card-title office-korea-title">{koreaOffice.title}</h3>
-          <div className="office-layout">
-            {/* 네이버 공식 임베드는 플레이스 등록 후 가능(map.naver.com/p/embed/place/{id}) —
-                등록 전까지는 주소 카드 + 네이버 링크로 대체. NAVER_EMBED_URL은 등록 후 전환용으로 보존. */}
-            <div className="office-map-wrap office-map-wrap--address office-map-wrap--naver">
-              <div className="office-address-card">
-                <div className="office-map-fallback-panel">
-                  <span className="office-map-fallback-kicker">{addressCardLabel}</span>
-                  <strong>{koreaOffice.title}</strong>
-                  <span>{koreaOffice.address}</span>
-                  <a
-                    className="office-map-fallback-link"
-                    href={koreaOffice.mapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {koreaOffice.mapLinkLabel}
-                  </a>
-                </div>
-              </div>
-            </div>
+          {presentation === 'editorial' ? (
             <article className="card office-card">
+              <span className="office-map-fallback-kicker">{addressCardLabel}</span>
+              <h3 className="card-title office-korea-title">{koreaOffice.title}</h3>
               <p className="card-copy">{koreaOffice.address}</p>
               {koreaOffice.phone ? (
                 <p className="card-copy">
@@ -459,7 +447,51 @@ export default function OfficeMapTabs({
                 {koreaOffice.mapLinkLabel}
               </a>
             </article>
-          </div>
+          ) : (
+            <>
+              <h3 className="card-title office-korea-title">{koreaOffice.title}</h3>
+              <div className="office-layout">
+                {/* 네이버 공식 임베드는 플레이스 등록 후 가능(map.naver.com/p/embed/place/{id}) —
+                    등록 전까지는 주소 카드 + 네이버 링크로 대체. NAVER_EMBED_URL은 등록 후 전환용으로 보존. */}
+                <div className="office-map-wrap office-map-wrap--address office-map-wrap--naver">
+                  <div className="office-address-card">
+                    <div className="office-map-fallback-panel">
+                      <span className="office-map-fallback-kicker">{addressCardLabel}</span>
+                      <strong>{koreaOffice.title}</strong>
+                      <span>{koreaOffice.address}</span>
+                      <a
+                        className="office-map-fallback-link"
+                        href={koreaOffice.mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {koreaOffice.mapLinkLabel}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <article className="card office-card">
+                  <p className="card-copy">{koreaOffice.address}</p>
+                  {koreaOffice.phone ? (
+                    <p className="card-copy">
+                      {telLabel}:{' '}
+                      <a className="link-underline phone-number" href={`tel:${koreaOffice.phone.replace(/-/g, '')}`}>
+                        {koreaOffice.phone}
+                      </a>
+                    </p>
+                  ) : null}
+                  <a
+                    className="button office-map-link"
+                    href={koreaOffice.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {koreaOffice.mapLinkLabel}
+                  </a>
+                </article>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </section>

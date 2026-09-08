@@ -123,7 +123,9 @@ describe('Japanese mobile navigation drawer', () => {
       expect(html).toContain(`aria-label="${close}"`);
       expect(html).toContain(`aria-label="${drawer}"`);
       expect(html).toContain(`aria-label="${nav}"`);
-      expect(html).toContain(brand);
+      const brandLink = html.match(/<a class="header-logo drawer-brand"[^>]*>([\s\S]*?)<\/a>/)?.[1];
+      expect(brandLink).toBeDefined();
+      expect(brandLink?.replace(/<[^>]*>/g, '')).toBe(brand);
       expect(html).toContain(`aria-label="${content.nav.searchLabel}"`);
       expect(html).toContain('class="utility-member-nav drawer-member-nav"');
       expect(html).toContain('data-member-role-link="login"');

@@ -1744,7 +1744,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       ...base.nav,
       primary: [
         { label: 'Services', href: '/en/services' },
-        { label: 'Lawyers', href: '/en/lawyers' },
+        { label: 'Our Team', href: '/en/lawyers' },
         { label: 'Pricing', href: '/en/pricing' },
         { label: 'Columns', href: '/en/columns' },
         { label: 'Media Center', href: '/en/videos' },
@@ -1771,7 +1771,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           },
           {
             title: 'Multilingual Communication',
-            description: 'We provide clear legal communication in Korean, Japanese, and English.',
+            description: 'We provide clear legal communication in English, Chinese, Japanese, and Korean.',
             href: '/en/about'
           }
         ],
@@ -1824,7 +1824,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       quickLinksLabel: 'Quick Links',
       quickLinks: [
         { label: 'Services', href: '/en/services' },
-        { label: 'Lawyers', href: '/en/lawyers' },
+        { label: 'International Team', href: '/en/lawyers' },
         { label: 'Columns', href: '/en/columns' },
         { label: 'Videos', href: '/en/videos' },
         { label: 'FAQ', href: '/en/faq' }
@@ -2125,7 +2125,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: 'Labor & Employment',
-          description: 'Advice on dismissal, severance, and employment-contract disputes in Taiwan. We separate the legal ground for termination from notice, severance, and time limits; calculate new- and old-system service separately; and assess worker-initiated termination, the statutory basis and reasonableness of minimum-service-period clauses, repayment, and attribution from the governing contract and evidence.',
+          description: 'Professional legal support for dismissal, severance, and employment-contract disputes in Taiwan, including questions that arise from minimum-service commitments.',
           href: '/en/services#labor',
           details: [
             'Severance calculations under Taiwan’s new and old systems',
@@ -2435,13 +2435,13 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     },
     footer: {
       ...base.footer,
-      note: 'Taiwan legal support for cross-border advisory work and disputes in Korean, Japanese, and English.',
+      note: 'Taiwan legal support for cross-border advisory work and disputes in English, Chinese, Japanese, and Korean.',
       columns: [
         {
           title: 'Firm',
           links: [
             { label: 'About', href: '/en/about' },
-            { label: 'Lawyers', href: '/en/lawyers' },
+            { label: 'International Team', href: '/en/lawyers' },
             { label: 'Email Consultation', href: consultationMailto.en }
           ]
         },
@@ -2503,7 +2503,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       ...base.nav,
       primary: [
         { label: '取扱業務', href: '/ja/services' },
-        { label: '弁護士紹介', href: '/ja/lawyers' },
+        { label: '日本チーム', href: '/ja/lawyers' },
         { label: '費用案内', href: '/ja/pricing' },
         { label: 'コラム', href: '/ja/columns' },
         { label: 'メディアセンター', href: '/ja/videos' },
@@ -2583,7 +2583,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       quickLinksLabel: 'クイックリンク',
       quickLinks: [
         { label: '取扱業務', href: '/ja/services' },
-        { label: '弁護士', href: '/ja/lawyers' },
+        { label: '日本チーム', href: '/ja/lawyers' },
         { label: 'コラム', href: '/ja/columns' },
         { label: '動画', href: '/ja/videos' },
         { label: 'FAQ', href: '/ja/faq' }
@@ -3202,7 +3202,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           title: '事務所',
           links: [
             { label: '事務所紹介', href: '/ja/about' },
-            { label: '弁護士', href: '/ja/lawyers' },
+            { label: '日本チーム', href: '/ja/lawyers' },
             { label: 'メールで相談', href: consultationMailto.ja }
           ]
         },

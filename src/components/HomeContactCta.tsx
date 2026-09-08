@@ -12,6 +12,7 @@ import {
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
 import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
+import styles from './ContactEditorial.module.css';
 
 const emailConsultationLabels: Record<SiteLocale, string> = {
   ko: '이메일 상담',
@@ -30,7 +31,7 @@ export default function HomeContactCta({ locale }: { locale: SiteLocale }) {
   const ai = getAiIntakeDiscovery(locale);
 
   return (
-    <section className="section section--dark home-contact-cta" id="contact" data-tone="dark">
+    <section className={`section section--dark home-contact-cta ${styles.homeCta}`} id="contact" data-tone="dark">
       <div className="container">
         <div data-builder-node-key="copy">
           <div className="section-label" data-builder-surface-key={homeContactTextSurfaceIds[0]}>

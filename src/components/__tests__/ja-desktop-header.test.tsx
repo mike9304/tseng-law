@@ -28,7 +28,7 @@ describe('Japanese desktop header', () => {
   it('renders Japanese branding, home and utility links, and the shared flag switcher', () => {
     const html = renderHeader('ja');
 
-    expect(html).toMatch(/class="header-logo"[^>]*href="\/ja"/);
+    expect(html).toMatch(/class="(?:[^" ]+ )*header-logo(?: [^" ]+)*"[^>]*href="\/ja"/);
     expect(html).toContain('昊鼎国際法律事務所');
     expect(html).toContain('aria-label="補助メニュー"');
     expect(html).toContain('href="/ja/contact">連絡先</a>');

@@ -265,15 +265,18 @@ function applyRuntime(fixture: Fixture): void {
 describe.sequential('qa runtime attestation v3', () => {
   it('normalizes macOS-style ancestor aliases but rejects a symlink TMPDIR leaf', () => {
     restoreProcess();
-    const logicalTmp = path.resolve(originalEnvironment.TMPDIR?.trim() || os.tmpdir());
-    const physicalTmp = realpathSync(logicalTmp);
+    const fixture = makeFixture();
+    const physicalTmp = realpathSync(fixture.tmpDir);
+    const logicalTmp = process.platform === 'darwin' && physicalTmp.startsWith('/private/')
+      ? physicalTmp.slice('/private'.length)
+      : physicalTmp;
     process.env.TMPDIR = logicalTmp;
     const fromLogicalTmp = resolveQaIsolationManifestPath({
-      repositoryRoot: originalCwd,
+      repositoryRoot: fixture.repositoryRoot,
       baseUrl: 'http://127.0.0.1:4173',
     });
     const fromPhysicalOverride = resolveQaIsolationManifestPath({
-      repositoryRoot: originalCwd,
+      repositoryRoot: fixture.repositoryRoot,
       baseUrl: 'http://127.0.0.1:4173',
       tmpDir: physicalTmp,
     });
@@ -288,7 +291,7 @@ describe.sequential('qa runtime attestation v3', () => {
     symlinkSync(target, symlink);
     process.env.TMPDIR = symlink;
     expect(() => resolveQaIsolationManifestPath({
-      repositoryRoot: originalCwd,
+      repositoryRoot: fixture.repositoryRoot,
       baseUrl: 'http://127.0.0.1:4173',
     })).toThrow(/TMPDIR must be a real directory, not a symlink/u);
   });

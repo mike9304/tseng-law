@@ -35,6 +35,50 @@ function renderFooter(locale: SiteLocale): string {
   return renderToStaticMarkup(<Footer locale={locale} />);
 }
 
+function collectOfficeAddressBlocks(html: string): string[] {
+  const blocks: string[] = [];
+  const open = '<span class="office-link-address">';
+  let cursor = 0;
+  while (cursor < html.length) {
+    const start = html.indexOf(open, cursor);
+    if (start === -1) {
+      break;
+    }
+    let depth = 1;
+    let index = start + open.length;
+    while (index < html.length && depth > 0) {
+      const nextOpen = html.indexOf('<span', index);
+      const nextClose = html.indexOf('</span>', index);
+      if (nextClose === -1) {
+        break;
+      }
+      if (nextOpen !== -1 && nextOpen < nextClose) {
+        depth += 1;
+        index = nextOpen + 5;
+      } else {
+        depth -= 1;
+        if (depth === 0) {
+          blocks.push(html.slice(start, nextClose + 7));
+        }
+        index = nextClose + 7;
+      }
+    }
+    cursor = start + open.length;
+  }
+  return blocks;
+}
+
+function visibleOfficeAddress(addressBlock: string): string {
+  const inner = addressBlock
+    .replace(/^<span class="office-link-address">/, '')
+    .replace(/<\/span>$/, '');
+  return inner.replace(/<span\b[^>]*>/g, '').replace(/<\/span>/g, '');
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 afterEach(() => {
   vi.unstubAllGlobals();
 });
@@ -50,11 +94,29 @@ describe('footer office and consultation contact', () => {
       expect(html).toContain(`aria-label="${quickLinksLabel}"`);
       for (const office of siteContent[locale].contact.locations) {
         expect(html).toContain(`<span class="office-link-name">${office.title}</span>`);
-        expect(html).toContain(`<span class="office-link-address">${office.details[0]}</span>`);
+        const originalAddress = office.details[0];
+        const addressBlock = collectOfficeAddressBlocks(html).find(
+          (block) => visibleOfficeAddress(block) === originalAddress,
+        );
+        expect(addressBlock).toBeDefined();
+        expect(visibleOfficeAddress(addressBlock ?? '')).toBe(originalAddress);
+        const inner = (addressBlock ?? '')
+          .replace(/^<span class="office-link-address">/, '')
+          .replace(/<\/span>$/, '');
+        const units = originalAddress.match(/\d+(?:樓之\d+|F-\d+|[號号樓])/g) ?? [];
+        if (units.length === 0) {
+          expect(inner).toBe(originalAddress);
+        } else {
+          units.forEach((unit) => {
+            expect(inner).toMatch(
+              new RegExp(`<span class="[^"]+">${escapeRegExp(unit)}<\/span>`),
+            );
+          });
+        }
       }
       expect(html).toContain(getOfficialConsultationEmailLabel(locale));
       expect(html).toContain(`href="${getConsultationPublicMailto(locale).replace(/&/g, '&amp;')}"`);
-      expect(html).toContain(`>${CONSULTATION_EMAIL}</a>`);
+      expect(html.replace(/<wbr\s*\/?>/gi, '')).toContain(`>${CONSULTATION_EMAIL}</a>`);
       expect(html).toContain(
         `aria-label="${getConsultationCtaLabel(locale)}: ${CONSULTATION_EMAIL}"`,
       );

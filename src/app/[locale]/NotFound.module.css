@@ -1,0 +1,154 @@
+.root:global(.not-found-page) {
+  display: grid;
+  align-items: center;
+  justify-items: stretch;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: min(70vh, 760px);
+  padding: 72px 0 96px;
+  background: var(--off-white);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 28px;
+}
+
+.root :global(.not-found-card) {
+  max-width: none;
+  text-align: left;
+}
+
+.root :global(.not-found-code) {
+  margin: 0;
+  color: var(--gold-dim);
+  font-family: var(--font-heading-en);
+}
+
+.root :global(#not-found-title) {
+  max-width: 680px;
+  margin: 24px 0 16px;
+  color: var(--text-heading);
+  font-family: var(--font-heading-ko);
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 60px;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.not-found-card) > p:last-of-type {
+  max-width: 680px;
+  margin: 0;
+  color: var(--text-body);
+  font-size: 17px;
+  line-height: 28px;
+  overflow-wrap: anywhere;
+}
+
+.root:lang(en) :global(#not-found-title),
+.root:lang(en) :global(.not-found-card) > p:last-of-type {
+  max-width: 760px;
+}
+
+.root:lang(en) :global(#not-found-title) {
+  font-family: var(--font-heading-en);
+}
+
+.root:lang(ja) {
+  font-family: var(--font-body-ja);
+}
+
+.root:lang(ja) :global(#not-found-title) {
+  font-family: var(--font-heading-ja);
+}
+
+.root:lang(zh-Hant) {
+  font-family: var(--font-body-zh);
+}
+
+.root:lang(zh-Hant) :global(#not-found-title) {
+  font-family: var(--font-heading-zh);
+}
+
+.root:lang(ko) :global(#not-found-title),
+.root:lang(ko) :global(.not-found-card) p,
+.root:lang(ko) :global(.button) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.root:lang(ja) :global(#not-found-title),
+.root:lang(ja) :global(.not-found-card) p,
+.root:lang(ja) :global(.button),
+.root:lang(zh-Hant) :global(#not-found-title),
+.root:lang(zh-Hant) :global(.not-found-card) p,
+.root:lang(zh-Hant) :global(.button) {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+.actions:global(.not-found-actions) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 12px;
+  max-width: 100%;
+  margin-top: 32px;
+}
+
+.root :global(.button) {
+  display: inline-flex;
+  box-sizing: border-box;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  max-width: 100%;
+  height: auto;
+  padding: 12px 20px;
+  overflow: visible;
+  border: 1px solid var(--primary, var(--purple));
+  border-radius: 4px;
+  background: var(--primary, var(--purple));
+  color: var(--white);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  white-space: normal;
+}
+
+.root :global(.button--outline) {
+  background: transparent;
+  color: var(--primary, var(--purple));
+}
+
+.root :global(.button):focus-visible {
+  outline: 2px solid var(--primary, var(--purple));
+  outline-offset: 2px;
+}
+
+@media (max-width: 639px) {
+  .root:global(.not-found-page) {
+    padding: 56px 0 72px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .root :global(#not-found-title) {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .root :global(.not-found-card) > p:last-of-type {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .root :global(.button:not(.button--outline)) {
+    min-height: 52px;
+  }
+}

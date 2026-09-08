@@ -1,0 +1,312 @@
+@font-face {
+  font-family: 'Guidance Noto Sans Thai';
+  src: local('Noto Sans Thai'), local('NotoSansThai'), local('Thonburi'), local('Leelawadee UI');
+  font-style: normal;
+  font-weight: 400 700;
+  unicode-range: U+0E00-0E7F;
+}
+
+@font-face {
+  font-family: 'Guidance Latin Vietnamese';
+  src: local('Noto Sans'), local('Noto Sans Vietnamese'), local('Segoe UI'), local('Helvetica Neue');
+  font-style: normal;
+  font-weight: 400 700;
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01B0, U+1EA0-1EF9;
+}
+
+.shell {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  color: var(--text-body);
+  background:
+    radial-gradient(circle at top left, rgba(112, 143, 99, 0.12), transparent 22%),
+    linear-gradient(180deg, var(--off-white) 0%, var(--white) 220px);
+}
+
+.shell[data-locale='th'] {
+  font-family:
+    'Guidance Noto Sans Thai',
+    var(--font-noto-sans-thai-loaded, 'Noto Sans Thai'),
+    var(--font-noto-sans-latin-loaded, var(--font-sans)),
+    'Thonburi',
+    'Leelawadee UI',
+    sans-serif;
+}
+
+.shell[data-locale='vi'],
+.shell[data-locale='id'],
+.shell[data-locale='fil'] {
+  font-family:
+    'Guidance Latin Vietnamese',
+    var(--font-noto-sans-latin-loaded, var(--font-sans)),
+    'Segoe UI',
+    'Helvetica Neue',
+    sans-serif;
+}
+
+.inner {
+  box-sizing: border-box;
+  width: min(72rem, 100%);
+  min-width: 0;
+  margin: 0 auto;
+  padding:
+    1.25rem
+    max(1rem, env(safe-area-inset-right, 0px))
+    3rem
+    max(1rem, env(safe-area-inset-left, 0px));
+}
+
+.header,
+.footer,
+.hero,
+.section,
+.cta,
+.sourceList,
+.faqList,
+.formBlock {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.brand {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--text-heading);
+  font-family: var(--font-display, var(--font-sans));
+  text-decoration: none;
+}
+
+.brand :global(img) {
+  flex: none;
+  width: 40px;
+  height: 40px;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.15rem;
+}
+
+.firmName {
+  min-width: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
+}
+
+.languageName {
+  min-width: 0;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.languageSwitcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.7rem;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.languageSwitcher :global(a),
+.languageSwitcher :global([aria-disabled='true']) {
+  display: inline-block;
+  max-width: 100%;
+  color: var(--text-link);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.languageSwitcher :global(a[aria-current='page']) {
+  color: var(--text-heading);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.languageSwitcher :global([aria-disabled='true']) {
+  color: var(--text-caption);
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.nav {
+  margin: 1rem 0 0;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.navList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.navList a {
+  display: inline-block;
+  max-width: 100%;
+  color: var(--text-link);
+  overflow-wrap: anywhere;
+}
+
+.navList a[aria-current='page'] {
+  color: var(--text-heading);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.main {
+  min-width: 0;
+  max-width: 100%;
+  padding-top: 1.75rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--gold-dim);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.title,
+.sectionHeading,
+.faqQuestion,
+.notFoundTitle {
+  margin: 0;
+  color: var(--text-heading);
+  font-family: var(--font-display, var(--font-sans));
+  font-weight: 650;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.title,
+.notFoundTitle {
+  font-size: clamp(1.65rem, 6vw, 2.6rem);
+}
+
+.sectionHeading,
+.faqQuestion {
+  font-size: clamp(1.15rem, 3.6vw, 1.45rem);
+}
+
+.description,
+.intro,
+.paragraph,
+.faqAnswer,
+.footerNotice,
+.notFoundText,
+.sourceNotice {
+  margin: 0.75rem 0 0;
+  color: var(--text-body);
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.items {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.items li {
+  margin: 0.35rem 0;
+  overflow-wrap: anywhere;
+}
+
+.section + .section,
+.faqItem + .faqItem,
+.sourceItem + .sourceItem {
+  margin-top: 1.75rem;
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.ctaLink {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.formBlock,
+.noticeBlock {
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 1.5rem;
+}
+
+.sourceList,
+.faqList {
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sourceLink {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 0.35rem;
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  margin-top: 2.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.footerNotice {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 360px) {
+  .inner {
+    padding-left: max(0.85rem, env(safe-area-inset-left, 0px));
+    padding-right: max(0.85rem, env(safe-area-inset-right, 0px));
+  }
+
+  .header,
+  .cta,
+  .navList,
+  .languageSwitcher {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -1,14 +1,24 @@
 import { expect, test, type APIRequestContext, type Page } from '@playwright/test';
 import { openBuilder, openCatalogDrawer } from './helpers/editor';
 
+const SITE_ID = 'pw-add-panel-widget-drag';
+
 function mutationHeaders(scope: string): Record<string, string> {
   const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'add-panel-widget-drag';
   return { 'x-forwarded-for': `pw-${safeScope}` };
 }
 
+function isolatedSiteQuery(): string {
+  return new URLSearchParams({ locale: 'ko', siteId: SITE_ID }).toString();
+}
+
+function isolatedEditorPath(pageId: string, extra: Record<string, string>): string {
+  return `/ko/admin-builder?${new URLSearchParams({ pageId, siteId: SITE_ID, ...extra }).toString()}`;
+}
+
 async function createBuilderPage(request: APIRequestContext, slug: string, title: string): Promise<string> {
-  const response = await request.post('/api/builder/site/pages', {
-    data: { locale: 'ko', slug, title, blank: true },
+  const response = await request.post(`/api/builder/site/pages?${isolatedSiteQuery()}`, {
+    data: { locale: 'ko', slug, title, blank: true, siteId: SITE_ID },
     headers: mutationHeaders(slug),
   });
   expect(response.status()).toBe(200);
@@ -88,7 +98,7 @@ test.describe('/ko/admin-builder Add panel widget preset drag/drop', () => {
 
     try {
       pageId = await createBuilderPage(page.request, slug, `Widget Drag ${token}`);
-      await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&widgetDrag=${token}`);
+      await openBuilder(page, isolatedEditorPath(pageId, { widgetDrag: token }));
       await page.keyboard.press('Escape');
 
       const drawer = await openCatalogDrawer(page);
@@ -124,14 +134,14 @@ test.describe('/ko/admin-builder Add panel widget preset drag/drop', () => {
       await expect(page.locator('[data-save-status-chip="error"]')).toHaveCount(0);
       await expect(page.locator('[data-save-status-chip]')).toBeHidden({ timeout: 30_000 });
 
-      await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&widgetDragReload=${token}`);
+      await openBuilder(page, isolatedEditorPath(pageId, { widgetDragReload: token }));
       await expect(page.locator('[data-node-id^="text-"]').filter({ hasText: '굵게, 기울임' }).first()).toBeVisible();
       await expect(page.locator('[data-builder-media-widget="before-after"]').first()).toBeAttached();
       await expect(page.locator('[data-builder-gallery-layout="slider"]').first()).toBeAttached();
       await expect(page.locator('[data-builder-nav-widget="anchor-menu"]').first()).toBeVisible();
     } finally {
       if (pageId) {
-        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?${isolatedSiteQuery()}`, {
           failOnStatusCode: false,
           headers: mutationHeaders(slug),
         });

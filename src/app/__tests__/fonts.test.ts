@@ -12,6 +12,8 @@ const fontLoaders = vi.hoisted(() => {
     Noto_Sans_KR: createFontLoader(),
     Noto_Sans_JP: createFontLoader(),
     Noto_Sans_TC: createFontLoader(),
+    Noto_Sans_Thai: createFontLoader(),
+    Noto_Sans: createFontLoader(),
     Noto_Serif_KR: createFontLoader(),
     Noto_Serif_JP: createFontLoader(),
     Noto_Serif_TC: createFontLoader(),
@@ -54,10 +56,55 @@ describe('locale font configuration', () => {
 
   it('includes all three pairs in the managed set so locale transitions remove stale font classes', () => {
     const managed = getManagedLocaleFontClassNames();
-    expect(managed).toHaveLength(6);
-    expect(new Set(managed).size).toBe(6);
+    expect(managed).toEqual(expect.arrayContaining([
+      '--font-noto-sans-kr-loaded',
+      '--font-noto-serif-kr-loaded',
+      '--font-noto-sans-tc-loaded',
+      '--font-noto-serif-tc-loaded',
+      '--font-noto-sans-jp-loaded',
+      '--font-noto-serif-jp-loaded',
+    ]));
+    expect(managed).toHaveLength(8);
+    expect(new Set(managed).size).toBe(8);
     for (const locale of ['ko', 'en', 'zh-Hant', 'ja'] as const) {
       for (const fontClass of getLocaleFontClassName(locale).split(' ')) {
+        expect(managed).toContain(fontClass);
+      }
+    }
+  });
+
+  it('requests Thai and latin/Vietnamese payloads for the eight document languages', () => {
+    expect(fontLoaders.Noto_Sans_Thai).toHaveBeenCalledOnce();
+    expect(fontLoaders.Noto_Sans_Thai).toHaveBeenCalledWith({
+      display: 'swap',
+      preload: false,
+      variable: '--font-noto-sans-thai-loaded',
+      weight: 'variable',
+    });
+    expect(fontLoaders.Noto_Sans).toHaveBeenCalledOnce();
+    expect(fontLoaders.Noto_Sans).toHaveBeenCalledWith({
+      display: 'swap',
+      preload: false,
+      variable: '--font-noto-sans-latin-loaded',
+      weight: 'variable',
+      subsets: ['latin', 'latin-ext', 'vietnamese'],
+    });
+
+    const managed = getManagedLocaleFontClassNames();
+    expect(managed).toEqual(expect.arrayContaining([
+      '--font-noto-sans-thai-loaded',
+      '--font-noto-sans-latin-loaded',
+    ]));
+    expect(getLocaleFontClassName('th')).toContain('--font-noto-sans-thai-loaded');
+    expect(getLocaleFontClassName('th')).toContain('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('vi')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('id')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('fil')).toBe('--font-noto-sans-latin-loaded');
+
+    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil'] as const;
+    expect(documentLanguages).toHaveLength(8);
+    for (const language of documentLanguages) {
+      for (const fontClass of getLocaleFontClassName(language).split(' ').filter(Boolean)) {
         expect(managed).toContain(fontClass);
       }
     }

@@ -53,7 +53,7 @@ import {
   resolveBackgroundStyle,
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
-import { buildPageSeo } from '@/lib/builder/seo/seo-model';
+import { buildPageSeo, normalizeCanonicalUrl } from '@/lib/builder/seo/seo-model';
 import {
   isPublishedDynamicItemRecordRoutable,
   resolvePublishedDynamicItemRecordJsonLd,
@@ -85,6 +85,11 @@ import {
   getSiteUrl,
   stripOrganizationNameSuffix,
 } from '@/lib/seo';
+import {
+  buildGuidanceCoreLanguageAlternates,
+  guidancePageKeyFromSlugPath,
+} from '@/lib/public-guidance';
+import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
 import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
 import { filterNavigationForLocale } from '@/lib/builder/site/navigation';
@@ -560,6 +565,40 @@ export async function buildPublishedSitePageMetadata(
   for (const alt of seoData.hreflang) {
     languages[alt.hreflang] = alt.href;
   }
+
+  const indexabilityPath = resolved.slugPath ? `/${resolved.slugPath}` : '/';
+  const englishNoindex = locale === 'en' && isEnglishNoindexPath(indexabilityPath);
+  if (englishNoindex) {
+    seoData.noIndex = true;
+  }
+
+  const corePageKey = guidancePageKeyFromSlugPath(resolved.slugPath);
+  const defaultCanonical = resolveAbsoluteSeoUrl(
+    siteUrl,
+    resolved.slugPath ? `/${locale}/${resolved.slugPath}` : `/${locale}`,
+  );
+  const hasCustomCanonical = Boolean(seoData.canonical)
+    && normalizeCanonicalUrl(resolveAbsoluteSeoUrl(siteUrl, seoData.canonical))
+      !== normalizeCanonicalUrl(defaultCanonical);
+  const isDynamicRecord = Boolean(resolved.dynamicItemRecordSlug);
+  const shouldMergeGuidanceAlternates = Boolean(corePageKey)
+    && !isDynamicRecord
+    && !seoData.noIndex
+    && !hasCustomCanonical;
+
+  if (shouldMergeGuidanceAlternates && corePageKey) {
+    const guidanceLanguages = buildGuidanceCoreLanguageAlternates(corePageKey, siteUrl);
+    for (const key of Object.keys(languages)) {
+      delete languages[key];
+    }
+    Object.assign(languages, guidanceLanguages);
+  } else if (englishNoindex) {
+    delete languages.en;
+    if (languages.ko) {
+      languages['x-default'] = languages.ko;
+    }
+  }
+
   const otherMeta: Record<string, string> = {};
   for (const tag of seoData.additionalMetaTags) {
     const name = tag.name.trim();

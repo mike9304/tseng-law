@@ -262,7 +262,7 @@ const FOLLOW_UP_MAP_KO: Record<FollowUpKey, FollowUpSuggestion[]> = {
     { label: '창고 임대', message: '대만에서 물류 창고를 임대하려고 하는데 계약 시 주의할 조항이 무엇인가요?' },
   ],
   cosmetics: [
-    { label: 'PIF 등록', message: '대만 화장품 PIF 등록 절차와 기간, 필요 서류는 어떻게 되나요?' },
+    { label: '제품등록·PIF', message: '대만 화장품 제품등록 절차와 기간, 그리고 PIF 작성·보관에 필요한 서류는 어떻게 되나요?' },
     { label: '광고 규제', message: '화장품 광고에서 효능·효과 표현은 어디까지 허용되고 금지되는 표현은 무엇인가요?' },
     { label: '라벨 표기', message: '제품 라벨에 한자·성분표·원산지 표기 요건은 어떻게 되나요?' },
   ],
@@ -314,7 +314,7 @@ const FOLLOW_UP_MAP_ZH: Record<FollowUpKey, FollowUpSuggestion[]> = {
     { label: '倉儲租賃', message: '在台灣租賃物流倉庫時應注意的合約條款有哪些？' },
   ],
   cosmetics: [
-    { label: 'PIF 登錄', message: '台灣化妝品 PIF 登錄流程、期程與必要文件為何？' },
+    { label: '產品登錄·PIF', message: '台灣化妝品的產品登錄流程與期程，以及 PIF 建立、保存所需文件為何？' },
     { label: '廣告規範', message: '化妝品廣告的功效表現能到哪個界線？哪些用詞禁止？' },
     { label: '標示要求', message: '產品標示在成分、原產地與中文標示上有何要求？' },
   ],

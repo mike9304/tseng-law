@@ -46,6 +46,10 @@ describe('Japanese services-list integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/services`,
       en: `${SITE_URL}/en/services`,
       ja: `${SITE_URL}/ja/services`,
+      vi: `${SITE_URL}/vi/services`,
+      id: `${SITE_URL}/id/services`,
+      th: `${SITE_URL}/th/services`,
+      fil: `${SITE_URL}/fil/services`,
       'x-default': `${SITE_URL}/en/services`,
     });
     expect(metadata.keywords).toEqual([

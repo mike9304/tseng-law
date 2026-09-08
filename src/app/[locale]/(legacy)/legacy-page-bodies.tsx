@@ -30,6 +30,7 @@ import {
 import type { Locale, SiteLocale } from '@/lib/locales';
 import type { ColumnPost } from '@/lib/columns';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
+import InternationalInquiryForm from '@/components/InternationalInquiryForm';
 
 type ColumnsSearchParams = Record<string, string | string[] | undefined>;
 
@@ -88,6 +89,11 @@ export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
         <ContactEmailActions locale={locale} />
       </PageHeader>
+      <section className="section">
+        <div className="container">
+          <InternationalInquiryForm locale={locale} />
+        </div>
+      </section>
       <ConsultationGuideSection locale={locale} />
       <MessengerChatSection locale={locale} />
       <ContactBlocks locale={locale} showMainHeader={false} showEmailActions={false} />

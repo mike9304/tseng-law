@@ -37,6 +37,10 @@ describe('Japanese privacy integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/privacy`,
       en: `${SITE_URL}/en/privacy`,
       ja: `${SITE_URL}/ja/privacy`,
+      vi: `${SITE_URL}/vi/privacy`,
+      id: `${SITE_URL}/id/privacy`,
+      th: `${SITE_URL}/th/privacy`,
+      fil: `${SITE_URL}/fil/privacy`,
       'x-default': `${SITE_URL}/en/privacy`,
     });
   });
@@ -129,9 +133,12 @@ describe('Japanese privacy integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/privacy`,
       en: `${SITE_URL}/en/privacy`,
       ja: `${SITE_URL}/ja/privacy`,
+      vi: `${SITE_URL}/vi/privacy`,
+      id: `${SITE_URL}/id/privacy`,
+      th: `${SITE_URL}/th/privacy`,
+      fil: `${SITE_URL}/fil/privacy`,
       'x-default': `${SITE_URL}/en/privacy`,
     });
-    // WO#3: /ja/privacy is a live Japanese page, so ja must be advertised.
     expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/privacy`);
   });
 

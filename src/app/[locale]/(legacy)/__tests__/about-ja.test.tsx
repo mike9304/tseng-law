@@ -31,6 +31,10 @@ describe('Japanese About integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/about`,
       en: `${SITE_URL}/en/about`,
       ja: `${SITE_URL}/ja/about`,
+      vi: `${SITE_URL}/vi/about`,
+      id: `${SITE_URL}/id/about`,
+      th: `${SITE_URL}/th/about`,
+      fil: `${SITE_URL}/fil/about`,
       'x-default': `${SITE_URL}/en/about`,
     });
     expect(metadata.keywords).toEqual([
@@ -116,7 +120,17 @@ describe('Japanese About integration', () => {
     expect(metadata.title).toBe(title);
     expect(metadata.description).toBe(description);
     expect(metadata.alternates?.canonical).toBe(`${SITE_URL}/${locale}/about`);
-    // WO#3: /ja/about is a live Japanese page, so ja must be advertised.
+    expect(metadata.alternates?.languages).toEqual({
+      ko: `${SITE_URL}/ko/about`,
+      'zh-Hant': `${SITE_URL}/zh-hant/about`,
+      en: `${SITE_URL}/en/about`,
+      ja: `${SITE_URL}/ja/about`,
+      vi: `${SITE_URL}/vi/about`,
+      id: `${SITE_URL}/id/about`,
+      th: `${SITE_URL}/th/about`,
+      fil: `${SITE_URL}/fil/about`,
+      'x-default': `${SITE_URL}/en/about`,
+    });
     expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/about`);
   });
 });

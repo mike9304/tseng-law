@@ -7,6 +7,13 @@ import {
   CONSULTATION_EMAIL,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import InternationalGuidance from '@/components/InternationalGuidance';
+import { guidanceContent } from '@/data/international-guidance-content';
+import { isGuidanceLocale4 } from '@/lib/public-guidance';
+
+async function requestPathname(): Promise<string> {
+  return (await headers()).get('x-tseng-pathname') ?? '';
+}
 
 async function requestLocale(): Promise<SiteLocale> {
   const pathname = (await headers()).get('x-tseng-pathname') ?? '';
@@ -15,10 +22,26 @@ async function requestLocale(): Promise<SiteLocale> {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
+  const pathname = await requestPathname();
+  const raw = pathname.split('/').filter(Boolean)[0];
+  if (isGuidanceLocale4(raw)) {
+    const pack = guidanceContent[raw];
+    return {
+      title: { absolute: pack.notFoundTitle },
+      description: pack.notFoundText,
+      robots: { index: false, follow: false },
+    };
+  }
   return buildLocalizedNotFoundMetadata(await requestLocale());
 }
 
 export default async function LocalizedNotFound() {
+  const pathname = await requestPathname();
+  const raw = pathname.split('/').filter(Boolean)[0];
+  if (isGuidanceLocale4(raw)) {
+    return <InternationalGuidance locale={raw} unavailable />;
+  }
+
   const locale = await requestLocale();
   const copy = notFoundCopyByLocale[locale];
 

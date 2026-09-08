@@ -45,6 +45,10 @@ describe('Japanese lawyers-list integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/lawyers`,
       en: `${SITE_URL}/en/lawyers`,
       ja: `${SITE_URL}/ja/lawyers`,
+      vi: `${SITE_URL}/vi/lawyers`,
+      id: `${SITE_URL}/id/lawyers`,
+      th: `${SITE_URL}/th/lawyers`,
+      fil: `${SITE_URL}/fil/lawyers`,
       'x-default': `${SITE_URL}/en/lawyers`,
     });
     expect(metadata.keywords).toEqual([
@@ -116,6 +120,10 @@ describe('Japanese lawyers-list integration', () => {
         'zh-Hant': `${SITE_URL}/zh-hant/lawyers`,
         en: `${SITE_URL}/en/lawyers`,
         ja: `${SITE_URL}/ja/lawyers`,
+        vi: `${SITE_URL}/vi/lawyers`,
+        id: `${SITE_URL}/id/lawyers`,
+        th: `${SITE_URL}/th/lawyers`,
+        fil: `${SITE_URL}/fil/lawyers`,
         'x-default': `${SITE_URL}/en/lawyers`,
       });
     },

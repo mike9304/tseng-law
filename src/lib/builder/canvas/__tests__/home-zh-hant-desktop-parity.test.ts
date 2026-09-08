@@ -17,6 +17,25 @@ const approvedLanguageCopy = {
   'home-attorney-intro-1': '專精企業與個人案件。事務所可提供韓文、中文、日文、英文法律溝通。',
   'home-faq-item-11-answer': '可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。韓語、中文、日語、英語皆可諮詢，須事先預約，以一小時為單位。若事先提供相關資料，可獲得更具體的建議。',
 };
+const priorApprovedLanguageCopy = {
+  ...approvedLanguageCopy,
+  'home-stats-description': '依官方律師簡介整理：4個台灣辦公據點、中文／韓文／日文／英文4種業務溝通語言、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
+};
+
+function applyStockLanguageCopy(doc: BuilderCanvasDocument, copy: Record<string, string>) {
+  for (const [id, text] of Object.entries(copy)) {
+    const node = byId(doc, id);
+    if (node.kind !== 'text') throw new Error('stock text expected');
+    node.content.text = text;
+  }
+}
+
+async function normalizedSavedV5(): Promise<BuilderCanvasDocument> {
+  const projected = await normalizeLegacyZhHantHomeRead(normalizeLegacyZhHantHome(fixture(), 'zh-hant', true), 'zh-hant', true);
+  const doc = normalizeCanvasDocument(structuredClone(projected), 'zh-hant');
+  applyStockLanguageCopy(doc, priorApprovedLanguageCopy);
+  return doc;
+}
 
 afterEach(() => vi.unstubAllEnvs());
 
@@ -50,7 +69,7 @@ describe('exact stock ZH desktop read parity', () => {
     if (count >= 422) doc = normalizeLegacyZhHantHome(doc, 'zh-hant', true);
     if (count === 424) {
       doc = await normalizeLegacyZhHantHomeRead(doc, 'zh-hant', true);
-      // Reproduce the already issued v5 read with its original saved texts.
+      // Keep the projected 424 tree, but restore the July stock language group.
       for (const id of Object.keys(approvedLanguageCopy)) {
         const node = byId(doc, id); const saved = byId(fixture(), id);
         if (node.kind !== 'text' || saved.kind !== 'text') throw new Error('stock text expected');
@@ -78,6 +97,91 @@ describe('exact stock ZH desktop read parity', () => {
     expect(doc).toEqual(original);
     expect({ ...next, nodes: [] }).toEqual({ ...original, nodes: [] });
     expect(original.nodes.every((node) => next.nodes.some((item) => item.id === node.id))).toBe(true);
+  });
+
+  it.each([422, 424])('updates the exact saved v5 %i-node approved after group to the current approved copy', async (count) => {
+    let doc = normalizeLegacyZhHantHome(fixture(), 'zh-hant', true);
+    if (count === 424) doc = await normalizeLegacyZhHantHomeRead(doc, 'zh-hant', true);
+    applyStockLanguageCopy(doc, priorApprovedLanguageCopy);
+    expect(doc.nodes).toHaveLength(count);
+    const original = structuredClone(doc);
+    const next = await normalizeLegacyZhHantHomeRead(doc, 'zh-hant', true);
+    expect(byId(next, 'home-stats-number-1').content).toMatchObject({ text: '4' });
+    expect(byId(next, 'home-stats-description').content).toMatchObject({ text: siteContent['zh-hant'].stats.description });
+    expect(siteContent['zh-hant'].stats.description).not.toBe(priorApprovedLanguageCopy['home-stats-description']);
+    expect(siteContent['zh-hant'].stats.description).toContain('中文／韓文／日文／英文4種');
+    for (const [id, text] of Object.entries(approvedLanguageCopy)) {
+      const node = byId(next, id); const prior = byId(original, id);
+      expect(node.content).toMatchObject({ text });
+      expect({ ...node, content: undefined }).toEqual({ ...prior, content: undefined });
+      expect({ ...node.content, text: undefined }).toEqual({ ...prior.content, text: undefined });
+    }
+    expect(next.nodes).toHaveLength(424);
+    expect(byId(next, 'home-contact-ai-guide').content).toMatchObject({ href: '/zh-hant/ai-intake' });
+    expect(getLegacyZhHantFluidContainerStyle(byId(next, 'home-hero-search-wrapper'), 'zh-hant'))
+      .toEqual(getLegacyZhHantFluidContainerStyle(byId(next, 'home-hero-inner'), 'zh-hant'));
+    expect(await hasLegacyJulyZhHantHomeDualTree(next, 'zh-hant', true)).toBe(true);
+    expect(await normalizeLegacyZhHantHomeRead(next, 'zh-hant', true)).toBe(next);
+    expect(doc).toEqual(original);
+    expect({ ...next, nodes: [] }).toEqual({ ...original, nodes: [] });
+    expect(original.nodes.every((node) => next.nodes.some((item) => item.id === node.id))).toBe(true);
+  });
+
+  it('updates the normalizeCanvasDocument-saved v5 stock to the current approved copy without mutating input', async () => {
+    const doc = await normalizedSavedV5();
+    const original = structuredClone(doc);
+    const next = await normalizeLegacyZhHantHomeRead(doc, 'zh-hant', true);
+    expect(byId(next, 'home-stats-description').content).toMatchObject({ text: siteContent['zh-hant'].stats.description });
+    expect(byId(next, 'home-stats-number-1').content).toMatchObject({ text: '4' });
+    for (const [id, text] of Object.entries(approvedLanguageCopy)) {
+      const node = byId(next, id); const prior = byId(original, id);
+      expect(node.content).toMatchObject({ text });
+      expect({ ...node, content: undefined }).toEqual({ ...prior, content: undefined });
+      expect({ ...node.content, text: undefined }).toEqual({ ...prior.content, text: undefined });
+    }
+    expect(next.nodes).toHaveLength(424);
+    expect(await hasLegacyJulyZhHantHomeDualTree(next, 'zh-hant', true)).toBe(true);
+    expect(await normalizeLegacyZhHantHomeRead(next, 'zh-hant', true)).toBe(next);
+    expect(doc).toEqual(original);
+    expect({ ...next, nodes: [] }).toEqual({ ...original, nodes: [] });
+  });
+
+  it.each(['activeIndex-1', 'sticky-true', 'custom-text', 'geometry', 'reorder'] as const)(
+    'keeps a normalizeCanvasDocument-saved stock with authored group %s outside the projection', async (change) => {
+      const doc = await normalizedSavedV5();
+      const group = byId(doc, 'home-attorney-detail-flow');
+      if (group.kind !== 'container') throw new Error('inserted group expected');
+      if (change === 'activeIndex-1') group.content.activeIndex = 1;
+      if (change === 'sticky-true') group.content.sticky = true;
+      if (change === 'custom-text') group.content.label = '作者指定的群組標籤';
+      if (change === 'geometry') group.rect.width = 551;
+      if (change === 'reorder') {
+        const index = doc.nodes.findIndex((node) => node.id === group.id);
+        const swap = doc.nodes[index + 1];
+        if (!swap) throw new Error('reorder neighbor expected');
+        doc.nodes[index] = swap;
+        doc.nodes[index + 1] = group;
+      }
+      const original = structuredClone(doc);
+      expect(await hasLegacyJulyZhHantHomeDualTree(doc, 'zh-hant', true)).toBe(false);
+      expect(await normalizeLegacyZhHantHomeRead(doc, 'zh-hant', true)).toBe(doc);
+      expect(byId(doc, 'home-stats-description').content).toMatchObject({
+        text: priorApprovedLanguageCopy['home-stats-description'],
+      });
+      expect(doc).toEqual(original);
+    },
+  );
+
+  it('preserves a mixed prior-after group plus authored attorney copy instead of treating it as stock', async () => {
+    const doc = await normalizeLegacyZhHantHomeRead(fixture(), 'zh-hant', true);
+    applyStockLanguageCopy(doc, priorApprovedLanguageCopy);
+    const intro = byId(doc, 'home-attorney-intro-1');
+    if (intro.kind !== 'text') throw new Error('stock text expected');
+    intro.content.text = '作者指定的中文說明';
+    const original = structuredClone(doc);
+    expect(await hasLegacyJulyZhHantHomeDualTree(doc, 'zh-hant', true)).toBe(false);
+    expect(await normalizeLegacyZhHantHomeRead(doc, 'zh-hant', true)).toBe(doc);
+    expect(doc).toEqual(original);
   });
 
   it.each(['counter', 'description', 'intro', 'faq', 'style', 'geometry', 'binding', 'extra-node', 'other-content'])(

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { isSiteLocale, type SiteLocale, siteLocales, toBuilderLocale } from '@/lib/locales';
+import { isSiteLocale, type SiteLocale, toBuilderLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import JsonLd from '@/components/JsonLd';
 import DocumentLocaleSync from '@/components/DocumentLocaleSync';
@@ -17,6 +17,14 @@ import {
   type DocumentLanguage,
 } from '@/app/fonts';
 import { buildLegalServiceJsonLd, buildWebsiteJsonLd, getOrganizationName } from '@/lib/seo';
+import { guidanceContent } from '@/data/international-guidance-content';
+import {
+  PUBLIC_LOCALES_8,
+  isGuidanceLocale4,
+  isPublicLocale8,
+  publicDocumentLanguage,
+  type PublicLocale8,
+} from '@/lib/public-guidance';
 
 export const dynamicParams = false;
 
@@ -27,6 +35,14 @@ const documentLanguageByLocale: Record<SiteLocale, DocumentLanguage> = {
   ja: 'ja',
 };
 
+function resolvePublicLocaleOrNotFound(locale: string): PublicLocale8 {
+  if (!isPublicLocale8(locale)) {
+    notFound();
+  }
+
+  return locale;
+}
+
 function resolveLocaleOrNotFound(locale: string): SiteLocale {
   if (!isSiteLocale(locale)) {
     notFound();
@@ -36,12 +52,30 @@ function resolveLocaleOrNotFound(locale: string): SiteLocale {
 }
 
 export function generateStaticParams() {
-  return siteLocales.map((locale) => ({ locale }));
+  return PUBLIC_LOCALES_8.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
-  const locale = resolveLocaleOrNotFound(params.locale);
+  const publicLocale = resolvePublicLocaleOrNotFound(params.locale);
+
+  if (isGuidanceLocale4(publicLocale)) {
+    const home = guidanceContent[publicLocale].pages.home;
+    const organizationName = 'Hovering International Law Firm';
+    return {
+      title: {
+        default: home.title,
+        template: '%s',
+      },
+      description: home.description,
+      applicationName: organizationName,
+      authors: [{ name: organizationName }],
+      creator: organizationName,
+      publisher: organizationName,
+    };
+  }
+
+  const locale = resolveLocaleOrNotFound(publicLocale);
   const content = siteContent[locale];
   const organizationName = getOrganizationName(locale);
   return {
@@ -69,7 +103,23 @@ export default async function LocaleLayout(
     children
   } = props;
 
-  const locale = resolveLocaleOrNotFound(params.locale);
+  const publicLocale = resolvePublicLocaleOrNotFound(params.locale);
+
+  if (isGuidanceLocale4(publicLocale)) {
+    const language = publicDocumentLanguage(publicLocale);
+    return (
+      <>
+        <DocumentLocaleSync
+          language={language}
+          fontClassName={getLocaleFontClassName(language)}
+          managedFontClassNames={getManagedLocaleFontClassNames()}
+        />
+        {children}
+      </>
+    );
+  }
+
+  const locale = resolveLocaleOrNotFound(publicLocale);
   const language = documentLanguageByLocale[locale];
   // Hide non-JA product widgets on Japanese public surface (plan: columns+core pages first).
   const hideJaProductChrome = locale === 'ja';

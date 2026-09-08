@@ -119,23 +119,41 @@ describe('footer social localization', () => {
       expect(html).not.toContain(`href="${href}"`);
     });
 
-    const switcher = html.match(
-      /<div class="locale-flag-switcher footer-locale-switch"[\s\S]*?<\/div>/,
-    )?.[0];
-
-    expect(switcher).toContain('aria-label="言語選択"');
-    expect(switcher).toContain('aria-current="page"');
-    expect(
-      Array.from(
-        switcher?.matchAll(
-          /class="locale-flag-switcher-code" aria-hidden="true">([^<]+)<\/span>/g,
-        ) ?? [],
-        (match) => match[1],
-      ),
-    ).toEqual(['KR', 'JP', 'TW', 'EN']);
-    expect(switcher).toContain('🇰🇷');
-    expect(switcher).toContain('🇯🇵');
-    expect(switcher).toContain('🇹🇼');
-    expect(switcher).toContain('🇺🇸');
+    expect(html).toContain('footer-locale-switch');
+    expect(html).toContain('aria-label="言語選択"');
+    expect(html).toContain('aria-current="page"');
+    expect(html).toContain('<details');
+    for (const autonym of [
+      '한국어',
+      '繁體中文',
+      'English',
+      '日本語',
+      'Tiếng Việt',
+      'Bahasa Indonesia',
+      'ไทย',
+      'Filipino',
+    ] as const) {
+      expect(html).toContain(autonym);
+    }
+    for (const href of [
+      '/ko/columns',
+      '/zh-hant/columns',
+      '/en/columns',
+      '/ja/columns',
+      '/vi/columns',
+      '/id/columns',
+      '/th/columns',
+      '/fil/columns',
+    ] as const) {
+      expect(html).toContain(`href="${href}"`);
+    }
+    expect(html).not.toContain('🇰🇷');
+    expect(html).not.toContain('🇯🇵');
+    expect(html).not.toContain('🇹🇼');
+    expect(html).not.toContain('🇺🇸');
+    expect(html).not.toContain('>KR</span>');
+    expect(html).not.toContain('>JP</span>');
+    expect(html).not.toContain('>TW</span>');
+    expect(html).not.toContain('>EN</span>');
   });
 });

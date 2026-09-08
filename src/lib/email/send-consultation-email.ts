@@ -6,6 +6,7 @@ import {
   getConsultationCopy,
   getConsultationRiskLabel,
 } from '@/lib/consultation/copy';
+import type { InternationalInquiryRecord } from '@/lib/consultation/international-inquiry-store';
 import type {
   ConsultationCategory,
   ConsultationCollectedFields,
@@ -409,4 +410,104 @@ export async function sendNegativeFeedbackAlert(
       </div>
     `,
   });
+}
+
+export class InternationalInquiryMailConfigError extends Error {
+  readonly code = 'mail_config';
+  constructor() {
+    super('international_inquiry_mail_config');
+    this.name = 'InternationalInquiryMailConfigError';
+  }
+}
+
+const INTERNATIONAL_INQUIRY_SUBJECT_PREFIX = '[Hovering international inquiry]';
+
+function assertSmtpDelivery(result: {
+  messageId?: unknown;
+  accepted?: unknown;
+  rejected?: unknown;
+}): void {
+  if (typeof result.messageId !== 'string' || result.messageId.length === 0) {
+    throw new Error('SMTP returned no messageId');
+  }
+  const accepted = result.accepted;
+  const rejected = result.rejected;
+  if (
+    Array.isArray(accepted)
+    && accepted.length === 0
+    && Array.isArray(rejected)
+    && rejected.length > 0
+  ) {
+    throw new Error('SMTP rejected recipients');
+  }
+}
+
+function internationalInquiryText(record: InternationalInquiryRecord): string {
+  const payload = record.payload;
+  return [
+    'International inquiry',
+    '',
+    `Intake ID: ${record.intakeId}`,
+    `Received at: ${record.receivedAt}`,
+    `Name: ${payload.name}`,
+    `Email: ${payload.email}`,
+    `UI locale: ${payload.uiLocale}`,
+    `Original language: ${payload.originalLanguage}`,
+    `Preferred consultation language: ${payload.preferredConsultationLanguage}`,
+    '',
+    'Original text:',
+    payload.originalText,
+  ].join('\n');
+}
+
+function internationalInquiryHtml(record: InternationalInquiryRecord): string {
+  const payload = record.payload;
+  const row = (label: string, value: string) => (
+    `<tr><td style="padding:10px 12px;background:#f4f7fb;font-weight:700;width:220px;">${escapeHtml(label)}</td><td style="padding:10px 12px;">${escapeHtml(value)}</td></tr>`
+  );
+  return `
+      <div style="font-family:Arial,sans-serif;max-width:760px;margin:0 auto;padding:24px;color:#1f2937;">
+        <h2 style="margin:0 0 16px;font-size:22px;color:#123b63;">International inquiry</h2>
+        <table style="width:100%;border-collapse:collapse;border:1px solid #d6e0eb;margin-bottom:20px;">
+          <tbody>
+            ${row('Intake ID', record.intakeId)}
+            ${row('Received at', record.receivedAt)}
+            ${row('Name', payload.name)}
+            ${row('Email', payload.email)}
+            ${row('UI locale', payload.uiLocale)}
+            ${row('Original language', payload.originalLanguage)}
+            ${row('Preferred consultation language', payload.preferredConsultationLanguage)}
+          </tbody>
+        </table>
+        <h3 style="margin:20px 0 8px;font-size:16px;color:#123b63;">Original text</h3>
+        <pre style="white-space:pre-wrap;border:1px solid #d6e0eb;background:#ffffff;padding:14px;line-height:1.65;margin:0;">${escapeHtml(payload.originalText)}</pre>
+      </div>
+    `;
+}
+
+export async function sendInternationalInquiryNotification(
+  record: InternationalInquiryRecord,
+): Promise<void> {
+  let transporter: ReturnType<typeof createTransporter>;
+  try {
+    transporter = createTransporter();
+  } catch {
+    throw new InternationalInquiryMailConfigError();
+  }
+
+  const subject = `${INTERNATIONAL_INQUIRY_SUBJECT_PREFIX} ${record.intakeId}`;
+  if (/[\r\n]/.test(subject) || /[\r\n]/.test(record.intakeId)) {
+    throw new Error('invalid_international_inquiry_subject');
+  }
+
+  const smtp = resolveSmtpRuntime();
+  const result = await transporter.sendMail({
+    from: `"Hovering International Inquiry" <${smtp.user}>`,
+    to: smtp.notify,
+    replyTo: isSafeEmailHeader(record.payload.email) ? record.payload.email : officialReplyEmail(),
+    subject,
+    text: internationalInquiryText(record),
+    html: internationalInquiryHtml(record),
+  });
+  assertSmtpDelivery(result);
 }

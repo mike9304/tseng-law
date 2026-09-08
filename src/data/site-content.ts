@@ -241,7 +241,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
   ko: {
     meta: {
       title: '법무법인 호정 (昊鼎國際法律事務所)',
-      description: '대만 법률을 한국어로 명확하게 안내합니다. 한국어·일본어·영어 상담 가능.'
+      description: '대만 법률을 한국어로 명확하게 안내합니다. 한국어·중국어·일본어·영어 상담 가능.'
     },
     nav: {
       primary: [
@@ -271,8 +271,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             href: '/ko/services'
           },
           {
-            title: '한국어·일본어·영어 커뮤니케이션',
-            description: '한국어·일본어·영어로 명확한 법률 설명을 제공합니다.',
+            title: '한국어·중국어·일본어·영어 커뮤니케이션',
+            description: '한국어·중국어·일본어·영어로 명확한 법률 설명을 제공합니다.',
             href: '/ko/about'
           }
         ],
@@ -309,11 +309,11 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       label: 'TAIWAN LEGAL',
       title: '대만 법률을 한국어로 명확하게.',
       subtitle:
-        '한국어·일본어·영어로 소통하며 복잡한 대만 법률 문제를 명확하게 안내해드립니다.',
+        '한국어·중국어·일본어·영어로 소통하며 복잡한 대만 법률 문제를 명확하게 안내해드립니다.',
       typingPhrases: [
         '대만 투자, 법인설립의 시작',
         '대만 소송, 승소의 경험',
-        '대만 유일의 한국어 법률서비스',
+        '한국어로 상담 가능한 대만 법률서비스',
         '한국 기업의 대만 진출 파트너'
       ],
       searchPlaceholder: '어떻게 도와드릴까요?',
@@ -424,7 +424,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       label: 'ABOUT',
       title: '공식 프로필로 확인하는 국제 업무 기반',
       description:
-        '대만 4개 사무소와 중국어·한국어·일본어·영어 실무 대응, 7개 주요 업무 분야, TOPIK 6급·JLPT N1 자격을 기준으로 정리했습니다.',
+        '당사무소는 한국어·중국어·일본어·영어 4개 언어로 대만 법률 상담을 제공합니다. 공식 변호사 프로필을 기준으로 대만 4개 사무소, 7개 주요 업무 분야, TOPIK 6급·JLPT N1 두 개의 최상위급 어학 자격을 정리했습니다.',
       highlightWords: [
         '대만 4개 사무소',
         '중국어',
@@ -584,14 +584,14 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '민사소송·손해배상',
-          description: '계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 대만달러 손해배상 판결을 이끌어낸 실적이 있으며, 외국인 의뢰인의 대만 소송 절차를 한국어로 밀착 지원합니다.',
+          description: '계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 대만달러 손해배상 판결을 이끌어낸 실적이 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
           href: '/ko/services#civil',
           details: [
             '손해배상 청구 소송 (인신사고·재산피해)',
             '계약 불이행·상사 분쟁 대응',
             '소비자 피해 구제 및 기업 상대 소송',
             '교통사고 과실 비율 분석 및 배상 청구',
-            '외국인 의뢰인 대상 한국어 소송 지원',
+            '외국인 의뢰인 소송 지원 (사무소 상담 언어: 한국어·중국어·일본어·영어)',
           ],
           relatedColumns: [
             { title: '대만 헬스장 부상 손해배상: 1심 사례·청구기한·증거·배상항목', slug: 'taiwan-gym-injury-lawsuit' },
@@ -639,7 +639,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             '형사 수사 단계 변호인 접견·자문',
             '피해자 대리 및 고소·고발 절차',
             '규제 위반 형사 리스크 사전 점검',
-            '외국인 피의자 한국어 통역 지원 소송',
+            '외국인 피의자·피고인 상담 대응 (사무소 상담 언어: 한국어·중국어·일본어·영어)',
           ]
         },
         {
@@ -933,7 +933,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       description: '사업·소송·법인설립 문의를 유형별로 빠르게 연결해드립니다.'
     },
     footer: {
-      note: '한국어·일본어·영어 소통을 바탕으로 대만 전역의 자문과 분쟁 업무를 맡고 있습니다.',
+      note: '한국어·중국어·일본어·영어 소통을 바탕으로 대만 전역의 자문과 분쟁 업무를 맡고 있습니다.',
       columns: [
         {
           title: '사무소',
@@ -987,7 +987,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
   'zh-hant': {
     meta: {
       title: '昊鼎國際法律事務所',
-      description: '深耕韓國、日本企業來台投資與訴訟需求，提供在地化台灣法律專業協助。'
+      description: '提供台灣在地與跨境法律服務，並具備協助韓國、日本企業來台投資與訴訟的實務經驗。'
     },
     nav: {
       primary: [
@@ -1169,7 +1169,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       label: 'ABOUT',
       title: '從官方資料看跨境服務基礎',
       description:
-        '依官方律師簡介整理：4個台灣辦公據點、中文／韓文／日文／英文4種業務溝通語言、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
+        '事務所提供中文／韓文／日文／英文4種語言的台灣法律諮詢。並依官方律師簡介整理：4個台灣辦公據點、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
       highlightWords: [
         '4個台灣辦公據點',
         '中文',
@@ -1306,7 +1306,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       items: [
         {
           title: '投資·公司設立',
-          description: '從公司型態選擇（子公司、分公司、有限公司）到投審會審查、資本匯入、銀行開戶、營業場所確認，全程協助韓國企業落地台灣。涵蓋化妝品 PIF 登錄、物流業運輸執照等特殊行業許可，以及解散清算程序。',
+          description: '從公司型態選擇（子公司、分公司、有限公司）到投審會審查、資本匯入、銀行開戶、營業場所確認，全程協助外國投資人（包含韓國企業）在台落地。涵蓋化妝品產品登錄與PIF建立、保存，物流業運輸執照等特殊行業許可，以及解散清算程序。',
           href: '/zh-hant/services#investment',
           details: [
             '公司型態比較：子公司、分公司、有限公司',
@@ -1329,14 +1329,14 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '民事訴訟·損害賠償',
-          description: '處理契約糾紛、損害賠償、消費者權益等民事案件。曾代理韓國留學生健身房受傷案，於一審獲判新台幣 157 萬元賠償。以中韓雙語全程支援外國當事人之台灣訴訟程序。',
+          description: '處理契約糾紛、損害賠償、消費者權益等民事案件。曾代理韓國留學生健身房受傷案，於一審獲判新台幣 157 萬元賠償。以事務所諮詢語言（中文、韓文、日文、英文）全程支援外國當事人之台灣訴訟程序。',
           href: '/zh-hant/services#civil',
           details: [
             '人身傷害與財產損害賠償訴訟',
             '契約違約與商務糾紛應對',
             '消費者保護與企業訴訟',
             '交通事故過失比例分析與求償',
-            '外國當事人韓語訴訟支援',
+            '外國當事人訴訟支援（事務所諮詢語言：中文、韓文、日文、英文）',
           ],
           relatedColumns: [
             { title: '台灣健身房受傷求償：一審案例、期限、證據與賠償項目', slug: 'taiwan-gym-injury-lawsuit' },
@@ -1346,7 +1346,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '家事訴訟',
-          description: '處理離婚、財產分配、親權、繼承等家事案件。因應韓台跨國婚姻增加，協助協議離婚程序、法院調解與裁判離婚，外籍配偶戶籍登記問題，以及法定繼承順位與剩餘財產分配請求。',
+          description: '處理離婚、財產分配、親權、繼承等家事案件。因應跨國婚姻增加，協助協議離婚程序、法院調解與裁判離婚，外籍配偶戶籍登記問題，以及法定繼承順位與剩餘財產分配請求。',
           href: '/zh-hant/services#family',
           details: [
             '協議離婚：二位證人及戶政登記',
@@ -1368,7 +1368,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             '依新舊制年資分段計算資遣費並檢視法定上限',
             '勞工依第14條終止契約：法定事由、期間限制與資遣費',
             '最低服務年限約定：擇一法定基礎、合理範圍、費用返還及責任歸屬審查',
-            '韓國企業在台僱用相關勞動法諮詢',
+            '在台外國企業（含韓國企業）僱用相關勞動法諮詢',
           ],
           relatedColumns: [
             { title: '台灣資遣費制度比較', slug: 'taiwan-labor-severance-law' },
@@ -1384,7 +1384,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             '偵查階段律師接見與諮詢',
             '被害人代理與告訴程序',
             '法規違反刑事風險預檢',
-            '外籍被告韓語口譯訴訟支援',
+            '外籍被告與被害人諮詢對應（事務所諮詢語言：中文、韓文、日文、英文）',
           ]
         },
         {
@@ -1402,7 +1402,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     homeAttorney: {
       label: 'ABOUT',
-      title: '曾雋崴律師，韓國、台灣跨境法律的實務夥伴',
+      title: '曾雋崴律師，台灣在地與跨境法律的實務夥伴',
       summary: '具備法院訴訟實務與企業法律顧問經驗，曾為 SBS 新聞提供法律意見與解說，並持續透過 WEI Lawyer 發布法律資訊。',
       ctaLabel: '查看律師簡介'
     },
@@ -1683,7 +1683,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       description: '依案件類型安排投資、訴訟與公司設立諮詢流程。'
     },
     footer: {
-      note: '深耕韓國、日本跨境法律事務，承辦台灣各地的法律顧問與爭議案件。',
+      note: '承辦台灣各地的法律顧問與爭議案件，並具備韓國、日本跨境案件的實務經驗。',
       columns: [
         {
           title: '事務所',
@@ -1775,7 +1775,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           },
           {
             title: 'Multilingual Communication',
-            description: 'We provide clear legal communication in Korean, Japanese, and English.',
+            description: 'We provide clear legal communication in English, Chinese, Korean, and Japanese.',
             href: '/en/about'
           }
         ],
@@ -2102,7 +2102,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Breach-of-contract and commercial dispute representation',
             'Consumer remedies and litigation against businesses',
             'Fault analysis and compensation claims after traffic accidents',
-            'Korean-language litigation support for foreign clients'
+            'Litigation support for foreign clients, with client communication in English, Chinese, Korean, or Japanese'
           ],
           relatedColumns: [
             { title: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages', slug: 'taiwan-gym-injury-lawsuit' },
@@ -2134,7 +2134,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Severance calculations under Taiwan’s new and old systems',
             'Worker-initiated termination under Article 14: statutory grounds, time limits, and severance',
             'Minimum-service-period clauses: alternative statutory bases, reasonable scope, repayment, and attribution',
-            'Taiwan employment-law advice for Korean businesses'
+            'Taiwan employment-law advice for international employers, including Korean businesses'
           ],
           relatedColumns: [
             { title: 'Taiwan Severance Law', slug: 'taiwan-labor-severance-law' },
@@ -2150,7 +2150,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Counsel and representation during criminal investigations',
             'Victim representation and criminal complaint procedures',
             'Advance assessment of regulatory and criminal exposure',
-            'Korean-language interpretation support for foreign defendants'
+            'Support for foreign defendants, with firm consultations available in English, Chinese, Korean, and Japanese'
           ]
         },
         {
@@ -2438,7 +2438,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     },
     footer: {
       ...base.footer,
-      note: 'Taiwan legal support for cross-border advisory work and disputes in Korean, Japanese, and English.',
+      note: 'Taiwan legal support for cross-border advisory work and disputes in English, Chinese, Korean, and Japanese.',
       columns: [
         {
           title: 'Firm',

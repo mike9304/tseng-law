@@ -5,7 +5,17 @@ import { readAttorneyProfileSourceRecords } from '@/lib/builder/lawyers/source';
 import { readServiceAreaSourceRecords } from '@/lib/builder/services/source';
 import { getAllColumnPosts, getAliasSlugs, resolveSlug } from '@/lib/columns';
 import { locales, siteLocales } from '@/lib/locales';
-import { buildAbsoluteUrl, getLanguageAlternates, getLocalizedPath } from '@/lib/seo';
+import {
+  GUIDANCE_LOCALES_4,
+  GUIDANCE_PAGE_KEYS,
+  buildGuidanceCoreLanguageAlternates,
+  guidanceCanonicalUrl,
+  guidancePageKeyFromSlugPath,
+  isGuidanceCoreSlugPath,
+  isPublicLocale8,
+  type PublicLocale8,
+} from '@/lib/public-guidance';
+import { buildAbsoluteUrl, getLanguageAlternates, getLocalizedPath, getSiteUrl } from '@/lib/seo';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 import { collectAllBuilderSitemapEntries } from '@/lib/builder/seo/sitemap-builder';
 
@@ -33,7 +43,7 @@ const STATIC_PATHS = [
 ] as const;
 
 type LocalizedSitemapRoute = {
-  locale: (typeof siteLocales)[number];
+  locale: PublicLocale8;
   path: string;
 };
 
@@ -46,7 +56,7 @@ function getLocalizedSitemapRoute(url: string): LocalizedSitemapRoute | null {
   }
 
   const [locale, ...segments] = pathname.split('/').filter(Boolean);
-  if (locale !== 'ko' && locale !== 'zh-hant' && locale !== 'en' && locale !== 'ja') {
+  if (!isPublicLocale8(locale)) {
     return null;
   }
 
@@ -54,6 +64,81 @@ function getLocalizedSitemapRoute(url: string): LocalizedSitemapRoute | null {
     locale,
     path: segments.length === 0 ? '' : `/${segments.join('/')}`,
   };
+}
+
+function sitemapSlugPath(path: string): string {
+  if (!path || path === '/') return '';
+  return path.replace(/^\//, '');
+}
+
+function isGuidanceLocaleHreflang(tag: string): boolean {
+  const lower = tag.toLowerCase();
+  return lower === 'vi' || lower === 'id' || lower === 'th' || lower === 'fil';
+}
+
+function appendGuidanceLocaleSitemapEntries(pages: MetadataRoute.Sitemap): void {
+  const siteUrl = getSiteUrl();
+  for (const locale of GUIDANCE_LOCALES_4) {
+    for (const pageKey of GUIDANCE_PAGE_KEYS) {
+      pages.push({
+        url: guidanceCanonicalUrl(locale, pageKey, siteUrl),
+        priority: pageKey === 'home' ? 1 : 0.8,
+        alternates: {
+          languages: buildGuidanceCoreLanguageAlternates(pageKey, siteUrl),
+        },
+      });
+    }
+  }
+}
+
+/**
+ * Core pages advertise the actual eight-language cluster only when that URL
+ * exists and is still indexable. Non-core entries keep the existing four-language
+ * set (and prior JA/indexability filters) and only drop untrue vi/id/th/fil.
+ */
+function reconcileGuidanceLanguageAlternates(
+  entries: MetadataRoute.Sitemap,
+): MetadataRoute.Sitemap {
+  const publishedUrls = new Set(entries.map((entry) => entry.url));
+  const siteUrl = getSiteUrl();
+
+  return entries.map((entry) => {
+    const route = getLocalizedSitemapRoute(entry.url);
+    const slugPath = route ? sitemapSlugPath(route.path) : null;
+    const isCore = slugPath !== null && isGuidanceCoreSlugPath(slugPath);
+    const existingLanguages = entry.alternates?.languages ?? {};
+    const nextLanguages: Record<string, string> = {};
+
+    for (const [tag, url] of Object.entries(existingLanguages)) {
+      if (typeof url !== 'string') continue;
+      if (isGuidanceLocaleHreflang(tag) && !isCore) continue;
+      if (isCore && !publishedUrls.has(url)) continue;
+      nextLanguages[tag] = url;
+    }
+
+    if (isCore && slugPath !== null) {
+      const pageKey = guidancePageKeyFromSlugPath(slugPath);
+      if (pageKey) {
+        for (const [tag, url] of Object.entries(buildGuidanceCoreLanguageAlternates(pageKey, siteUrl))) {
+          if (typeof url === 'string' && publishedUrls.has(url)) {
+            nextLanguages[tag] = url;
+          }
+        }
+      }
+    }
+
+    if (!entry.alternates && Object.keys(nextLanguages).length === 0) {
+      return entry;
+    }
+
+    return {
+      ...entry,
+      alternates: {
+        ...entry.alternates,
+        languages: nextLanguages,
+      },
+    };
+  });
 }
 
 /**
@@ -368,6 +453,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     );
   }
 
+  // Actual new-four core URLs only. Dictionary page identities — never the
+  // internal rewrite keys, and never invented article translations.
+  appendGuidanceLocaleSitemapEntries(pages);
+
   // SEO maturity — append builder-published pages. Failures here must
   // never block the rest of the sitemap from rendering, so swallow + log
   // any unexpected error.
@@ -405,7 +494,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (takeNew) byUrl.set(entry.url, entry);
   }
 
-  return applyLocaleIndexabilityRules(
-    addReciprocalJapaneseAlternates([...byUrl.values()]),
+  return reconcileGuidanceLanguageAlternates(
+    applyLocaleIndexabilityRules(
+      addReciprocalJapaneseAlternates([...byUrl.values()]),
+    ),
   );
 }

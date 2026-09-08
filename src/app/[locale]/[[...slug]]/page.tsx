@@ -13,6 +13,16 @@ import { getLegacyPageMetadata, renderLegacyPage } from '../(legacy)';
 import { OPEN_GRAPH_LOCALE } from '@/lib/builder/seo/seo-model';
 import { isJaFullStaticPath, isJaUnsupportedPath, JA_SAFE_FALLBACK } from '@/lib/public-route-policy';
 import { buildLocalizedNotFoundMetadata } from '@/lib/not-found-copy';
+import InternationalGuidance from '@/components/InternationalGuidance';
+import { guidanceContent } from '@/data/international-guidance-content';
+import {
+  buildGuidanceCoreLanguageAlternates,
+  classifyGuidanceSlug,
+  guidanceCanonicalUrl,
+  isGuidanceLocale4,
+  type GuidanceLocale4,
+} from '@/lib/public-guidance';
+import { getSiteUrl } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -43,12 +53,41 @@ function resolvePublicLocale(raw: string): SiteLocale {
   return normalizeSiteLocale(raw);
 }
 
+function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Metadata {
+  const classified = classifyGuidanceSlug(slug);
+  if (classified.kind !== 'page') {
+    const pack = guidanceContent[locale];
+    return {
+      title: { absolute: pack.notFoundTitle },
+      description: pack.notFoundText,
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const page = guidanceContent[locale].pages[classified.pageKey];
+  const siteUrl = getSiteUrl();
+  return {
+    title: { absolute: page.title },
+    description: page.description,
+    alternates: {
+      canonical: guidanceCanonicalUrl(locale, classified.pageKey, siteUrl),
+      languages: buildGuidanceCoreLanguageAlternates(classified.pageKey, siteUrl),
+    },
+    robots: { index: true, follow: true },
+  };
+}
+
 export async function generateMetadata(
   props: {
     params: Promise<{ locale: string; slug?: string[] }>;
   }
 ): Promise<Metadata> {
   const params = await props.params;
+
+  if (isGuidanceLocale4(params.locale)) {
+    return buildGuidancePageMetadata(params.locale, params.slug);
+  }
+
   const locale = resolvePublicLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
 
@@ -80,6 +119,15 @@ export default async function MainSiteCatchAllPage(
 ) {
   const searchParams = await props.searchParams;
   const params = await props.params;
+
+  if (isGuidanceLocale4(params.locale)) {
+    const classified = classifyGuidanceSlug(params.slug);
+    if (classified.kind !== 'page') {
+      notFound();
+    }
+    return <InternationalGuidance locale={params.locale} pageKey={classified.pageKey} />;
+  }
+
   const locale = resolvePublicLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
 

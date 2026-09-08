@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import type { Locale, SiteLocale } from '@/lib/locales';
 import { defaultLocale, siteLocales } from '@/lib/locales';
+import {
+  buildGuidanceCoreLanguageAlternates,
+  guidancePageKeyFromSlugPath,
+} from '@/lib/public-guidance';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 
 type ImageInput =
@@ -197,13 +201,28 @@ function normalizeImages(images?: ImageInput | ImageInput[]) {
   });
 }
 
+function seoPathToSlugPath(path = ''): string {
+  if (!path || path === '/') return '';
+  return path.replace(/^\/+|\/+$/g, '');
+}
+
+/**
+ * Legacy hreflang helper. The actual eight-language cluster is reserved for
+ * the ten published core paths; untranslated details, US landings, account,
+ * store, and other real surfaces keep the caller-specified availability set.
+ */
 export function getLanguageAlternates(
   path = '',
   alternateLocales: readonly (Locale | SiteLocale)[] = siteLocales,
 ): Record<string, string> {
-  // English-noindex routes (e.g. /faq) must never emit an `en` alternate,
-  // no matter which alternateLocales the caller passed — including via
-  // x-default, which falls back to the default locale on those routes.
+  const pageKey = guidancePageKeyFromSlugPath(seoPathToSlugPath(path));
+  if (pageKey) {
+    return buildGuidanceCoreLanguageAlternates(pageKey, getSiteUrl());
+  }
+
+  // English-noindex non-core routes (e.g. /store) must never emit an `en`
+  // alternate, no matter which alternateLocales the caller passed — including
+  // via x-default, which falls back to the default locale on those routes.
   const englishNoindex = isEnglishNoindexPath(path);
   const effectiveLocales = englishNoindex
     ? alternateLocales.filter((locale) => getLocaleLanguageTag(locale).toLowerCase() !== 'en')

@@ -1,6 +1,15 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getAllColumnPosts } from '@/lib/columns';
 import type { BuilderSitemapEntry } from '@/lib/builder/seo/sitemap-builder';
+import {
+  GUIDANCE_LOCALES_4,
+  GUIDANCE_PAGE_KEYS,
+  buildGuidanceCoreLanguageAlternates,
+  guidanceCanonicalUrl,
+  guidancePublicPath,
+  hreflangTagForPublicLocale,
+  isPublicLocale8,
+} from '@/lib/public-guidance';
 
 const sourceMocks = vi.hoisted(() => ({
   readAttorneyProfileSourceRecords: vi.fn(async () => []),
@@ -107,8 +116,9 @@ describe('sitemap column lastModified', () => {
       // /korean-lawyer-in-taiwan, /ai-intake, /guides/taiwan-company-setup,
       // /columns archive, 17 JA column details, and all six JA service
       // details (+41). Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 171,
-      afterFiltering: 162,
+      // Plus 40 new-four core URLs (4 locales × 10 dictionary pages).
+      beforeFiltering: 211,
+      afterFiltering: 202,
       removed: 9,
     });
 
@@ -171,7 +181,7 @@ describe('sitemap column lastModified', () => {
     expect(urls.has(sentinelUrl)).toBe(true);
   });
 
-  it('publishes Japanese About exactly once with four-language alternates', async () => {
+  it('publishes Japanese About exactly once with eight-language core alternates', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
     const japaneseAboutEntries = entries.filter(
@@ -179,13 +189,9 @@ describe('sitemap column lastModified', () => {
     );
 
     expect(japaneseAboutEntries).toHaveLength(1);
-    expect(japaneseAboutEntries[0]?.alternates?.languages).toEqual({
-      ko: 'https://tseng-law.com/ko/about',
-      'zh-Hant': 'https://tseng-law.com/zh-hant/about',
-      en: 'https://tseng-law.com/en/about',
-      ja: 'https://tseng-law.com/ja/about',
-      'x-default': 'https://tseng-law.com/en/about',
-    });
+    expect(japaneseAboutEntries[0]?.alternates?.languages).toEqual(
+      buildGuidanceCoreLanguageAlternates('about'),
+    );
   });
 
   it('publishes AI-intake in all four locales exactly once with four-language alternates', async () => {
@@ -208,7 +214,7 @@ describe('sitemap column lastModified', () => {
     }
   });
 
-  it('publishes Japanese services exactly once with four-language alternates', async () => {
+  it('publishes Japanese services exactly once with eight-language core alternates', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
     const japaneseServicesEntries = entries.filter(
@@ -216,13 +222,9 @@ describe('sitemap column lastModified', () => {
     );
 
     expect(japaneseServicesEntries).toHaveLength(1);
-    expect(japaneseServicesEntries[0]?.alternates?.languages).toEqual({
-      ko: 'https://tseng-law.com/ko/services',
-      'zh-Hant': 'https://tseng-law.com/zh-hant/services',
-      en: 'https://tseng-law.com/en/services',
-      ja: 'https://tseng-law.com/ja/services',
-      'x-default': 'https://tseng-law.com/en/services',
-    });
+    expect(japaneseServicesEntries[0]?.alternates?.languages).toEqual(
+      buildGuidanceCoreLanguageAlternates('services'),
+    );
   });
 
   it('publishes only the approved Japanese service details with exact alternates', async () => {
@@ -246,7 +248,7 @@ describe('sitemap column lastModified', () => {
     }
   });
 
-  it('publishes Japanese pricing exactly once with four-language alternates', async () => {
+  it('publishes Japanese pricing exactly once with eight-language core alternates', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
     const japanesePricingEntries = entries.filter(
@@ -254,16 +256,12 @@ describe('sitemap column lastModified', () => {
     );
 
     expect(japanesePricingEntries).toHaveLength(1);
-    expect(japanesePricingEntries[0]?.alternates?.languages).toEqual({
-      ko: 'https://tseng-law.com/ko/pricing',
-      'zh-Hant': 'https://tseng-law.com/zh-hant/pricing',
-      en: 'https://tseng-law.com/en/pricing',
-      ja: 'https://tseng-law.com/ja/pricing',
-      'x-default': 'https://tseng-law.com/en/pricing',
-    });
+    expect(japanesePricingEntries[0]?.alternates?.languages).toEqual(
+      buildGuidanceCoreLanguageAlternates('pricing'),
+    );
   });
 
-  it('publishes Japanese contact exactly once with four-language alternates', async () => {
+  it('publishes Japanese contact exactly once with eight-language core alternates', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
     const japaneseContactEntries = entries.filter(
@@ -272,33 +270,43 @@ describe('sitemap column lastModified', () => {
 
     expect(japaneseContactEntries).toHaveLength(1);
     expect(japaneseContactEntries[0]?.priority).toBe(0.8);
-    expect(japaneseContactEntries[0]?.alternates?.languages).toEqual({
-      ko: 'https://tseng-law.com/ko/contact',
-      'zh-Hant': 'https://tseng-law.com/zh-hant/contact',
-      en: 'https://tseng-law.com/en/contact',
-      ja: 'https://tseng-law.com/ja/contact',
-      'x-default': 'https://tseng-law.com/en/contact',
-    });
+    expect(japaneseContactEntries[0]?.alternates?.languages).toEqual(
+      buildGuidanceCoreLanguageAlternates('contact'),
+    );
   });
 
-  it.each([
-    '/lawyers',
-    '/lawyers/wei-tseng',
-  ])('publishes Japanese %s exactly once with four-language alternates', async (path) => {
+  it('publishes Japanese /lawyers exactly once with eight-language core alternates', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
     const japaneseEntries = entries.filter(
-      (entry) => entry.url === `https://tseng-law.com/ja${path}`,
+      (entry) => entry.url === 'https://tseng-law.com/ja/lawyers',
+    );
+
+    expect(japaneseEntries).toHaveLength(1);
+    expect(japaneseEntries[0]?.alternates?.languages).toEqual(
+      buildGuidanceCoreLanguageAlternates('lawyers'),
+    );
+  });
+
+  it('publishes Japanese /lawyers/wei-tseng exactly once with four-language alternates', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const japaneseEntries = entries.filter(
+      (entry) => entry.url === 'https://tseng-law.com/ja/lawyers/wei-tseng',
     );
 
     expect(japaneseEntries).toHaveLength(1);
     expect(japaneseEntries[0]?.alternates?.languages).toEqual({
-      ko: `https://tseng-law.com/ko${path}`,
-      'zh-Hant': `https://tseng-law.com/zh-hant${path}`,
-      en: `https://tseng-law.com/en${path}`,
-      ja: `https://tseng-law.com/ja${path}`,
-      'x-default': `https://tseng-law.com/en${path}`,
+      ko: 'https://tseng-law.com/ko/lawyers/wei-tseng',
+      'zh-Hant': 'https://tseng-law.com/zh-hant/lawyers/wei-tseng',
+      en: 'https://tseng-law.com/en/lawyers/wei-tseng',
+      ja: 'https://tseng-law.com/ja/lawyers/wei-tseng',
+      'x-default': 'https://tseng-law.com/en/lawyers/wei-tseng',
     });
+    expect(japaneseEntries[0]?.alternates?.languages).not.toHaveProperty('vi');
+    expect(japaneseEntries[0]?.alternates?.languages).not.toHaveProperty('id');
+    expect(japaneseEntries[0]?.alternates?.languages).not.toHaveProperty('th');
+    expect(japaneseEntries[0]?.alternates?.languages).not.toHaveProperty('fil');
   });
 
   it.each([
@@ -334,12 +342,10 @@ describe('sitemap column lastModified', () => {
     );
 
     expect(japaneseFaq).toBeDefined();
-    expect(japaneseFaq?.alternates?.languages).toEqual({
-      ko: 'https://tseng-law.com/ko/faq',
-      'zh-Hant': 'https://tseng-law.com/zh-hant/faq',
-      ja: 'https://tseng-law.com/ja/faq',
-      'x-default': 'https://tseng-law.com/ko/faq',
-    });
+    expect(japaneseFaq?.alternates?.languages).toEqual(
+      buildGuidanceCoreLanguageAlternates('faq'),
+    );
+    expect(japaneseFaq?.alternates?.languages).not.toHaveProperty('en');
   });
 
   it('keeps Japanese store/portfolio/events routes out of the sitemap', async () => {
@@ -375,5 +381,117 @@ describe('sitemap column lastModified', () => {
         ).toBe(japaneseEntry.url);
       }
     }
+  });
+
+  it('publishes eight reciprocal languages for home and contact core URLs', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+
+    for (const pageKey of ['home', 'contact'] as const) {
+      const expected = buildGuidanceCoreLanguageAlternates(pageKey);
+      expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(8);
+      for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'id', 'th', 'fil'] as const) {
+        const url = `https://tseng-law.com${guidancePublicPath(locale, pageKey)}`;
+        const matches = entries.filter((entry) => entry.url === url);
+        expect(matches).toHaveLength(1);
+        expect(matches[0]?.alternates?.languages).toEqual(expected);
+        const homeContactLanguages = matches[0]?.alternates?.languages as
+          | Record<string, string>
+          | undefined;
+        expect(homeContactLanguages?.[hreflangTagForPublicLocale(locale)]).toBe(url);
+      }
+    }
+  });
+
+  it('publishes seven FAQ languages excluding English', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const expected = buildGuidanceCoreLanguageAlternates('faq');
+
+    expect(expected).not.toHaveProperty('en');
+    expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(7);
+    expect(entries.some((entry) => entry.url === 'https://tseng-law.com/en/faq')).toBe(false);
+
+    for (const locale of ['ko', 'zh-hant', 'ja', 'vi', 'id', 'th', 'fil'] as const) {
+      const url = `https://tseng-law.com${guidancePublicPath(locale, 'faq')}`;
+      const matches = entries.filter((entry) => entry.url === url);
+      expect(matches).toHaveLength(1);
+      expect(matches[0]?.alternates?.languages).toEqual(expected);
+    }
+  });
+
+  it('does not invent vi/id/th/fil URLs or hreflang for deep articles or US landings', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const urls = entries.map((entry) => entry.url);
+    const posts = getAllColumnPosts('ko');
+    const firstArticle = posts[0];
+    expect(firstArticle?.slug).toBeTruthy();
+
+    const usLandings = [
+      '/taiwan-lawyer',
+      '/taiwan-company-setup-lawyer',
+      '/taiwan-litigation-lawyer',
+      '/korean-lawyer-in-taiwan',
+    ];
+
+    for (const locale of GUIDANCE_LOCALES_4) {
+      expect(urls.some((url) => url.includes(`/${locale}/columns/${firstArticle!.slug}`))).toBe(false);
+      for (const path of usLandings) {
+        expect(urls).not.toContain(`https://tseng-law.com/${locale}${path}`);
+      }
+    }
+
+    const articleEntry = entries.find(
+      (entry) => entry.url === `https://tseng-law.com/ko/columns/${firstArticle!.slug}`,
+    );
+    expect(articleEntry).toBeDefined();
+    expect(articleEntry?.alternates?.languages).not.toHaveProperty('vi');
+    expect(articleEntry?.alternates?.languages).not.toHaveProperty('id');
+    expect(articleEntry?.alternates?.languages).not.toHaveProperty('th');
+    expect(articleEntry?.alternates?.languages).not.toHaveProperty('fil');
+
+    const usLanding = entries.find((entry) => entry.url === 'https://tseng-law.com/en/taiwan-lawyer');
+    expect(usLanding).toBeDefined();
+    expect(usLanding?.alternates?.languages).not.toHaveProperty('vi');
+    expect(usLanding?.alternates?.languages).not.toHaveProperty('id');
+    expect(usLanding?.alternates?.languages).not.toHaveProperty('th');
+    expect(usLanding?.alternates?.languages).not.toHaveProperty('fil');
+  });
+
+  it('appends exactly 40 unique self-canonical new-four core URLs and retains non-core routes', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const urls = entries.map((entry) => entry.url);
+    const newUrls = GUIDANCE_LOCALES_4.flatMap((locale) =>
+      GUIDANCE_PAGE_KEYS.map((pageKey) => guidanceCanonicalUrl(locale, pageKey)),
+    );
+
+    expect(GUIDANCE_LOCALES_4).toHaveLength(4);
+    expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
+    expect(newUrls).toHaveLength(40);
+    expect(new Set(newUrls).size).toBe(40);
+    expect(urls.some((url) => url.includes('__public-guidance'))).toBe(false);
+
+    for (const url of newUrls) {
+      const matches = entries.filter((entry) => entry.url === url);
+      expect(matches).toHaveLength(1);
+      expect(matches[0]?.lastModified).toBeUndefined();
+      const route = new URL(url);
+      const locale = route.pathname.split('/').filter(Boolean)[0];
+      expect(isPublicLocale8(locale)).toBe(true);
+      if (isPublicLocale8(locale)) {
+        const newCoreLanguages = matches[0]?.alternates?.languages as
+          | Record<string, string>
+          | undefined;
+        expect(newCoreLanguages?.[hreflangTagForPublicLocale(locale)]).toBe(url);
+      }
+    }
+
+    expect(urls).toContain('https://tseng-law.com/ko/videos');
+    expect(urls).toContain('https://tseng-law.com/en/taiwan-lawyer');
+    expect(urls).toContain('https://tseng-law.com/ja/ai-intake');
+    expect(urls).toContain('https://tseng-law.com/ko/accessibility');
+    expect(urls).toContain('https://tseng-law.com/ja/lawyers/wei-tseng');
   });
 });

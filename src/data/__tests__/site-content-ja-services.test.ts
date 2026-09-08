@@ -201,6 +201,9 @@ describe('Japanese services-list copy', () => {
       '한국 기업의 대만 진출',
     );
     expect(siteContent['zh-hant'].services.items[0]?.description).toContain(
+      '全程協助外國投資人（包含韓國企業）在台落地',
+    );
+    expect(siteContent['zh-hant'].services.items[0]?.description).not.toContain(
       '全程協助韓國企業落地台灣',
     );
     expect(siteContent.en.services.items[0]?.description).toBe(

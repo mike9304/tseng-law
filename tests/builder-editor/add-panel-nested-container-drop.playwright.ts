@@ -21,9 +21,19 @@ const BASE_STYLE = {
   opacity: 100,
 } as const;
 
+const SITE_ID = 'pw-add-panel-nested-container-drop';
+
 function mutationHeaders(scope: string): Record<string, string> {
   const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'nested-container-drop';
   return { 'x-forwarded-for': `pw-${safeScope}` };
+}
+
+function isolatedSiteQuery(): string {
+  return new URLSearchParams({ locale: 'ko', siteId: SITE_ID }).toString();
+}
+
+function isolatedEditorPath(pageId: string, extra: Record<string, string>): string {
+  return `/ko/admin-builder?${new URLSearchParams({ pageId, siteId: SITE_ID, ...extra }).toString()}`;
 }
 
 function makeContainerNode(
@@ -72,8 +82,8 @@ function makeNestedDropDocument(token: string): BuilderCanvasDocument {
 }
 
 async function createBuilderPage(request: APIRequestContext, slug: string): Promise<string> {
-  const response = await request.post('/api/builder/site/pages', {
-    data: { locale: 'ko', slug, title: `Nested container drop ${slug}`, blank: true },
+  const response = await request.post(`/api/builder/site/pages?${isolatedSiteQuery()}`, {
+    data: { locale: 'ko', slug, title: `Nested container drop ${slug}`, blank: true, siteId: SITE_ID },
     headers: mutationHeaders(slug),
   });
   expect(response.status()).toBe(200);
@@ -89,16 +99,17 @@ async function seedDraftDocument(
   slug: string,
   document: BuilderCanvasDocument,
 ): Promise<void> {
-  const current = await request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+  const current = await request.get(`/api/builder/site/pages/${pageId}/draft?${isolatedSiteQuery()}`, {
     headers: mutationHeaders(slug),
   });
   expect(current.status()).toBe(200);
   const currentPayload = (await current.json()) as DraftPayload;
   const expectedRevision = currentPayload.draft?.revision;
 
-  const response = await request.put(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+  const response = await request.put(`/api/builder/site/pages/${pageId}/draft?${isolatedSiteQuery()}`, {
     headers: mutationHeaders(slug),
     data: {
+      siteId: SITE_ID,
       document,
       ...(typeof expectedRevision === 'number' ? { expectedRevision } : {}),
     },
@@ -130,7 +141,7 @@ async function dragCatalogPresetToCanvas(
 }
 
 async function getDraftDocument(page: Page, pageId: string, slug: string): Promise<BuilderCanvasDocument> {
-  const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+  const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?${isolatedSiteQuery()}`, {
     headers: mutationHeaders(slug),
   });
   expect(response.status()).toBe(200);
@@ -160,7 +171,7 @@ test.describe('/ko/admin-builder Add panel nested container drop', () => {
       pageId = await createBuilderPage(page.request, slug);
       await seedDraftDocument(page.request, pageId, slug, makeNestedDropDocument(token));
 
-      await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&nestedDrop=${token}`);
+      await openBuilder(page, isolatedEditorPath(pageId, { nestedDrop: token }));
       await page.keyboard.press('Escape');
       await expect(page.locator(`[data-node-id="${targetId}"]`)).toBeVisible({ timeout: 30_000 });
       const drawer = await openCatalogDrawer(page);
@@ -181,11 +192,11 @@ test.describe('/ko/admin-builder Add panel nested container drop', () => {
 
       await page.screenshot({ path: '/tmp/tseng-add-panel-nested-container-drop.png', fullPage: false });
 
-      await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&nestedDropReload=${token}`);
+      await openBuilder(page, isolatedEditorPath(pageId, { nestedDropReload: token }));
       await expect(page.locator(`[data-node-id="${targetId}"] [data-node-id^="text-"]`).filter({ hasText: '굵게, 기울임' }).last()).toBeVisible();
     } finally {
       if (pageId) {
-        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?${isolatedSiteQuery()}`, {
           headers: mutationHeaders(slug),
           failOnStatusCode: false,
         });

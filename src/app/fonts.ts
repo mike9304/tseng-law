@@ -1,7 +1,9 @@
 import {
+  Noto_Sans,
   Noto_Sans_KR,
   Noto_Sans_JP,
   Noto_Sans_TC,
+  Noto_Sans_Thai,
   Noto_Serif_KR,
   Noto_Serif_JP,
   Noto_Serif_TC,
@@ -15,6 +17,9 @@ import {
  * Variable Noto files cover the public CSS weight matrix:
  * - sans 400/500/600/700 (body, UI, H2/H3, buttons; no public 300)
  * - serif 500/600/700 (closed display allowlist; no light faces)
+ *
+ * Guidance locales (vi/id/th/fil) add self-hosted Noto Sans Thai and
+ * latin/Vietnamese Noto Sans. No extra runtime font CDN.
  */
 
 const sansKorean = Noto_Sans_KR({
@@ -59,7 +64,22 @@ const serifJapanese = Noto_Serif_JP({
   variable: '--font-noto-serif-jp-loaded',
 });
 
-export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en' | 'ja';
+const sansThai = Noto_Sans_Thai({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-thai-loaded',
+});
+
+const sansLatin = Noto_Sans({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-latin-loaded',
+  subsets: ['latin', 'latin-ext', 'vietnamese'],
+});
+
+export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en' | 'ja' | 'vi' | 'id' | 'th' | 'fil';
 
 const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
 const traditionalChineseFontClassName = [
@@ -67,6 +87,8 @@ const traditionalChineseFontClassName = [
   serifTraditionalChinese.variable,
 ].join(' ');
 const japaneseFontClassName = [sansJapanese.variable, serifJapanese.variable].join(' ');
+const thaiFontClassName = [sansThai.variable, sansLatin.variable].join(' ');
+const latinExtendedFontClassName = sansLatin.variable;
 
 /**
  * CSS-variable class names for the active locale pair.
@@ -80,6 +102,12 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
   if (language === 'ja') {
     return japaneseFontClassName;
   }
+  if (language === 'th') {
+    return thaiFontClassName;
+  }
+  if (language === 'vi' || language === 'id' || language === 'fil') {
+    return latinExtendedFontClassName;
+  }
   // Korean and English retain their existing shared pair.
   return koreanFontClassName;
 }
@@ -87,9 +115,13 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
 export function getManagedLocaleFontClassNames(): string[] {
   return Array.from(
     new Set(
-      [koreanFontClassName, traditionalChineseFontClassName, japaneseFontClassName].flatMap((className) =>
-        className.split(/\s+/).filter(Boolean),
-      ),
+      [
+        koreanFontClassName,
+        traditionalChineseFontClassName,
+        japaneseFontClassName,
+        thaiFontClassName,
+        latinExtendedFontClassName,
+      ].flatMap((className) => className.split(/\s+/).filter(Boolean)),
     ),
   );
 }

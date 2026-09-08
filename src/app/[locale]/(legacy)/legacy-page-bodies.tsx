@@ -219,7 +219,7 @@ export function LawyersLegacyPageBody({
                   locale,
                   path: `/${locale}/lawyers/${profile.slug}`,
                   // One canonical Person node across ko/zh-hant/ja lawyers pages.
-                  id: ATTORNEY_PERSON_ID,
+                  id: locale === 'en' ? undefined : ATTORNEY_PERSON_ID,
                   name: profile.name,
                   alternateName: profile.alternateNames,
                   description: profile.description,

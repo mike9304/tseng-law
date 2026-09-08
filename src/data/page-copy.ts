@@ -25,7 +25,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
       label: 'ABOUT',
       title: '호정 소개',
       description:
-        '호정의 스토리와 한국 업무팀 구성원을 확인할 수 있습니다.'
+        '호정의 스토리와 국제팀 구성원을 확인할 수 있습니다.'
     },
     services: {
       label: 'SERVICES',
@@ -34,7 +34,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '호정 한국·대만 업무팀',
+      title: '호정 국제팀',
       description: '변호사·사무장·회계사의 이력과 실무 분야를 확인합니다.'
     },
     insights: {
@@ -77,7 +77,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎介紹',
-      description: '查看昊鼎團隊背景與韓國業務團隊成員。'
+      description: '查看昊鼎團隊背景與國際團隊成員。'
     },
     services: {
       label: 'SERVICES',
@@ -86,7 +86,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '昊鼎 韓國·台灣 業務團隊',
+      title: '昊鼎國際團隊',
       description: '查看律師、韓國事務長與會計師的完整資料。'
     },
     insights: {
@@ -129,7 +129,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: 'About Hovering',
-      description: 'Learn about our international Taiwan practice and meet the team.'
+      description: 'Learn about Hovering\'s background and meet the International Team.'
     },
     services: {
       label: 'SERVICES',
@@ -138,7 +138,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: 'Hovering Korea-Taiwan Team',
+      title: 'Hovering International Team',
       description: 'View profiles of our lawyers, operations manager, and accounting partner.'
     },
     insights: {
@@ -181,7 +181,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎について',
-      description: '台湾を拠点とする国際的な法律実務と、当事務所のチームをご紹介します。'
+      description: '当事務所の背景と国際チームをご紹介します。'
     },
     services: {
       label: 'SERVICES',
@@ -190,7 +190,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '韓国・台湾業務チーム',
+      title: '昊鼎国際チーム',
       description: '弁護士・事務長・会計士の経歴と専門分野をご確認ください。'
     },
     insights: {

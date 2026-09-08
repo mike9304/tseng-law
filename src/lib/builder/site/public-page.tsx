@@ -28,6 +28,7 @@ import { getLegacyZhHantFluidContainerStyle, hasLegacyJulyZhHantHomeDualTree, no
 import { hasLegacyColumnsScaffold } from '@/lib/builder/canvas/legacy-columns-scaffold';
 import { projectPublishedHomeInsightsArchiveIntro } from '@/lib/insights/archive-copy';
 import { projectPublishedEnHomeCopy } from '@/lib/builder/site/en-home-copy';
+import { projectTeamBreadcrumbLabel } from '@/lib/builder/site/team-breadcrumb-label';
 import {
   computeTopLevelFlowSectionMetrics,
   compareTopLevelStacking,
@@ -756,7 +757,7 @@ export async function PublishedSitePageView({
           url: `${siteUrl}/${locale}`,
         },
         {
-          name: resolved.pageMeta.title?.[locale] || slugPath || site.name || 'Page',
+          name: projectTeamBreadcrumbLabel(locale, slugPath, resolved.pageMeta.title?.[locale] || slugPath || site.name || 'Page'),
           url: `${siteUrl}${pagePath}`,
         },
       ])

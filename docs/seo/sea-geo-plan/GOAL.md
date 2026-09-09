@@ -29,8 +29,8 @@
 - [x] 2026-09-09 S2b-3 통합 게이트: typecheck·build(8 llms.txt prerender)·렌더 16URL(LegalService availableLanguage 4개 고정, faq FAQPage 8문항 파싱, hreflang 18, canonical self)·/vi|id|th|fil/llms.txt 200 text/plain·루트 카탈로그 8 → evidence/render-S2-integrated.txt. 커밋 915614df(R2)+b1002186(R1)+99fde7eb
 
 ### S3 신규 인텐트 페이지 (S1-c 결과 수만큼)
-- [x] 2026-09-09 S3-C1-1 Opus 완료 → **drafts 브랜치 seo/sea-s3-drafts-20260909 커밋 0ff814e6**(배포 라인 격리): 4로케일 랜딩+라우트+sitemap+테스트, 마커 36(로케일당 9). 허용 밖 IntentLandingPage.tsx +39(exhaustive Record 필수, 수용). 기존 테스트 3개 깨짐 예상(슬러그 수 2·ja 한글금지 1=마커 게이트) → **S2b-R2 커밋 후 별도 브랜치 seo/sea-s3-drafts-20260909 로 분리 커밋**(main 배포 라인과 격리) → [ ] S3-C1-2 Grok 검토 → [ ] S3-C1-3 게이트·브랜치 커밋(마커 → main 금지)
-- [x] 2026-09-09 S3-KEY-1 Opus 완료 → drafts 커밋 11ce641d (vitest 248·tsc 0, 마커 60, 코어 키 `work-permit-renewal` 11번째, GUIDANCE_PAGE_KEYS 10 유지): public-guidance 코어 키 `work-permit-renewal` 추가 + src/data/international-guidance-extra.ts(vi/id/th/fil 본문·마커) + 사이트맵·hreflang → [~] 12:56 S3-KEY-2 + S3-C1-2 통합 Grok 검토(WO-S3-review, drafts evidence/grok-S3-review.log) → [ ] S3-3 R1 반영·drafts 커밋
+- [x] 2026-09-09 S3-C1-1 EN 갱신 랜딩 4로케일 초안 → drafts 0ff814e6 · [x] S3-C1-2 Grok 통합검토(S3-REVIEW, FAIL 3) · [x] S3-C1-3 R1 반영 drafts 7f87e3a9(마커 44, 수치 0, 내부링크 4) — **초안 보관, main 금지**
+- [x] 2026-09-09 S3-KEY-1 안내 4언어 work-permit-renewal(C2~C5) → drafts 11ce641d · [x] S3-KEY-2 Grok 검토 · [x] S3-KEY-3 R1(x-default 제거·현지어 교정·인바운드 링크) drafts 7f87e3a9 — **초안 보관, main 금지**
 
 ### S4 색인
 - [x] 2026-09-09 S4-a 로컬 40URL 실측 BAD 0/40(200·canonical self·hreflang 9·x-default en) → evidence/s4-local-hreflang.txt
@@ -53,7 +53,8 @@
 ## B. 미결·ASK 대기 (승계자는 여기부터)
 - S0-e: 손빗 AI 인용 실측 예정(S0-b 직후). geo-sea-baseline-2026-09.md 는 손빗 소유 중 — 쓰기 금지.
 - S1-b: Grok 검토 중. S1-c 판정 시 주의: C2~C5(/vi|id|th|fil/work-permit)는 international-guidance-content.ts(번역 레인 파일)에 본문이 필요 → 하드룰 4 충돌. 대안=별도 데이터 파일+코어 키 확장, 또는 번역 레인 요청. C1(EN 랜딩)은 intent-pages.ts 4로케일 동시 작성 필요.
-- 13:16: 배포 ASK 답 대기. drafts 워크트리에서 WO-S3-R1(Opus) 진행 중 → 끝나면 게이트·drafts 커밋 → S3 종결(초안 보관, 병합 조건은 변호사 검수).
+- 13:3x: S3 스트림 종결(초안 브랜치 seo/sea-s3-drafts-20260909 HEAD 7f87e3a9, 워크트리 ~/Projects/tseng-law-sea-s3-drafts-20260909). 배포 ASK 답 대기. 손빗 AI 인용 실측(S0-e) 대기.
+- **S3 초안 인수 조건**(사용자·변호사): ① 변호사가 마커 96건(C1 44·C2~C5 52) 검수 ② 마커 제거 ③ 테스트 4파일 갱신(intent 수 4→5 ×3, intent-pages-ja 한글 게이트) ④ 배포 라인 위로 리베이스(WO-REBASE-1 방식) ⑤ 배포 ASK.
 - 주의: drafts 브랜치는 구 베이스(6022bdcc 계열) 기반. 배포 라인 병합 시 리베이스 필요(WO-REBASE-1 방식 재사용).
 - drafts 브랜치 커밋: 0ff814e6(C1)·9f466e7b·11ce641d(C2~C5)·1ac3467f. 배포 라인과 별도. 병합 조건은 변호사 검수·마커 제거·테스트 3개 갱신.
 - drafts 브랜치 0ff814e6 인수 조건: 변호사 검수 후 마커 제거 → 테스트 3개(intent-pages-en-growth 슬러그 수·public-intent-docs 카운트·intent-pages-ja 한글금지) 갱신 → 배포 라인 병합. 셋 다 끝나면 통합 게이트(build+렌더) 1회 → 커밋 → Grok 검토 S2b·S3-C1 발주 → WO-S3-GUIDANCE-KEY.

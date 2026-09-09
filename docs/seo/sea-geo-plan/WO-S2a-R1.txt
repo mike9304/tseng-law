@@ -1,0 +1,16 @@
+# WO-S2a-R1 — 답변형 블록 반려 수정 (Opus 5, 소형)
+
+## 공통 규칙
+작업트리 ~/Projects/tseng-law-sea-seo-20260909 만. 허용 파일: src/data/international-guidance-answers.ts, src/lib/__tests__/international-guidance-answers.test.ts 두 개뿐. 다른 워커가 src/lib/seo.ts·llms-txt.ts·InternationalGuidance.tsx·intent-pages.ts·sitemap.ts 를 편집 중 — 절대 건드리지 말 것. 커밋·빌드·전체 스위트 금지. 언어 계약·광고 규정 동일.
+
+## 목표
+docs/seo/reviews/S2a-REVIEW.md 항목 1(FAIL)을 반영한다.
+1. services 4로케일(vi 46·id 78·th 110·fil 142행 부근) 답변에서 "수리 여부(có nhận…/diterima…/รับเรื่อง…/pagtanggap…)" 문장을 제거하고, 그 페이지 본문(international-guidance-content.ts vi 188·id 659·th 1130·fil 1601)의 "범위 확정" 문장으로 교체. 수리 여부 문장은 faq 답변에만 남긴다.
+2. vi/services 그룹명을 본문 제목(150·158)과 맞춘다: "Tranh chấp dân sự và yêu cầu bồi thường", "Hôn nhân, gia đình và thừa kế".
+3. REVIEW §1 말미 "치명 아님" 권고(vi/about 밀도 등)는 선택 — 하면 보고, 안 하면 미해결로 적는다.
+4. 테스트: services 4로케일 답변에 "범위 확정" 동사(xác nhận riêng / lingkup / ขอบเขต / saklaw)가 포함되고 "수리 여부" 표현이 없음을 단언하는 케이스 1개 추가.
+
+## 완료 기준
+1. npx vitest run src/lib/__tests__/international-guidance-answers.test.ts 통과(출력 첨부, 케이스 수 증가)
+2. 단어수 규칙(40~80, th 120~400자) 유지
+3. 보고: 변경 4문장 전/후, 명령·출력, PASS/FAIL, 미해결

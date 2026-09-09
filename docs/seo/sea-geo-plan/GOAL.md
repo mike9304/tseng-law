@@ -17,8 +17,8 @@
 
 ### S1 인텐트 지도
 - [x] 2026-09-09 S1-a 42셀·H9/M19/L14·후보 C1~C5 → docs/seo/sea-intent-map-2026-09.md 커밋 3077b6ae (미결: MY/SG ①⑤ 근거 미확인, C2~C5는 guidance 코어 키 확장 필요 §3.1)
-- [~] S1-b Grok 검토 완료 → 총평 FAIL 5(docs/seo/sea-intent-map-2026-09.REVIEW.md, 716002c7) → WO-S1-R1 Opus 수정 중(12:0x). 재검토 후 [x] → `.REVIEW.md` FAIL 0 (FAIL 있으면 WO-S1-R1 반려)
-- [ ] S1-c 총괄 판정: "없음+H" 셀 확정 → `WO-S3-<slug>.txt` 생성(페이지당 1개)
+- [x] 2026-09-09 S1-b Grok FAIL 5(716002c7) → R1 Opus 전부 반영 커밋 c8512969 (미결: 원표 칸값·원어민 미검수, C1~C5 마커 7)
+- [x] 2026-09-09 S1-c 판정: C1(EN 갱신 랜딩)=WO-S3-C1 발주(336bf0ee). C2~C5(vi/id/th/fil work-permit-renewal)=코어 키 확장 필요 → S2b 커밋 후 WO-S3-GUIDANCE-KEY(구조+별도 데이터 파일 4언어) 1건으로
 
 ### S2 GEO 구조 (S2a ∥ S2b 병렬 가능)
 - [x] 2026-09-09 S2a-1 Opus 구현 → vitest 7/7
@@ -29,7 +29,8 @@
 - [ ] S2b-3 총괄 게이트 → 커밋 SHA
 
 ### S3 신규 인텐트 페이지 (S1-c 결과 수만큼)
-- [ ] S3-<slug>-1 초안(Opus) → -2 검토(Grok) → -3 게이트·브랜치 커밋(마커 유지, main 금지)  ※ S1-c 후 slug별 행 추가
+- [~] 12:2x S3-C1-1 Opus 진행 중(EN+3로케일 랜딩 /taiwan-work-permit-renewal-lawyer) → [ ] S3-C1-2 Grok 검토 → [ ] S3-C1-3 게이트·브랜치 커밋(마커 → main 금지)
+- [ ] S3-KEY-1 WO-S3-GUIDANCE-KEY(Opus, S2b 후): public-guidance 코어 키 `work-permit-renewal` 추가 + src/data/international-guidance-extra.ts(vi/id/th/fil 본문·마커) + 사이트맵·hreflang → [ ] S3-KEY-2 Grok 검토 → [ ] S3-KEY-3 게이트·커밋
 
 ### S4 색인
 - [ ] S4-a 로컬 실측: RUNBOOK §3 ⑤ 렌더 40 URL → evidence/s4-local-render.txt

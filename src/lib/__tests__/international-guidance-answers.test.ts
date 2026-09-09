@@ -84,6 +84,44 @@ const FORBIDDEN_COMBINATIONS: ReadonlyArray<readonly [string, RegExp, RegExp]> =
   ['Tagalog + konsultasyon', /\bTagalog\b/i, /konsultasyon/i],
 ];
 
+/**
+ * `services` must restate its own page, not the FAQ page.
+ *
+ * The services page says the scope of each matter is confirmed separately after
+ * an attorney reviews the message ("Phạm vi và cách xác nhận" / "Lingkup dan
+ * cara memastikannya" / "ขอบเขตและการยืนยัน" / "Saklaw at kung paano ito
+ * kinukumpirma"). Whether a matter is accepted at all is a different sentence
+ * that lives on the FAQ page, so it may not be lifted into a services answer.
+ */
+const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
+  vi: ['xác nhận riêng', /xác nhận riêng/i],
+  id: ['lingkup', /lingkup/i],
+  th: ['ขอบเขต', /ขอบเขต/],
+  fil: ['saklaw', /saklaw/i],
+};
+
+const SERVICES_ACCEPTANCE_PATTERNS: Record<
+  string,
+  ReadonlyArray<readonly [string, RegExp]>
+> = {
+  vi: [
+    ['có nhận (một vụ việc)', /có nhận/i],
+    ['được quyết định', /được quyết định/i],
+  ],
+  id: [
+    ['diterima atau tidaknya', /diterima atau tidaknya/i],
+    ['diputuskan', /diputuskan/i],
+  ],
+  th: [
+    ['รับเรื่องใดเรื่องหนึ่ง', /รับเรื่องใดเรื่องหนึ่ง/],
+    ['พิจารณาหลังจาก', /พิจารณาหลังจาก/],
+  ],
+  fil: [
+    ['pagtanggap', /pagtanggap/i],
+    ['napagpapasyahan', /napagpapasyahan/i],
+  ],
+};
+
 /** Every site-internal path an answer may cite. */
 const ALLOWED_SOURCES = new Set<string>([
   ...PUBLIC_LOCALES_8.flatMap((locale) =>
@@ -150,6 +188,26 @@ describe('guidanceAnswers', () => {
         const words = wordCount(answer);
         expect(words, `${locale}/${key} words=${words}`).toBeGreaterThanOrEqual(MIN_WORDS);
         expect(words, `${locale}/${key} words=${words}`).toBeLessThanOrEqual(MAX_WORDS);
+      }
+    }
+  });
+
+  it('answers services with its own scope sentence, not the FAQ acceptance sentence', () => {
+    for (const locale of GUIDANCE_LOCALES_4) {
+      const answer = guidanceAnswers[locale].services?.answer ?? '';
+      expect(answer.length, `${locale}/services answer missing`).toBeGreaterThan(0);
+
+      const [scopeLabel, scopePattern] = SERVICES_SCOPE_TERMS[locale];
+      expect(
+        scopePattern.test(answer),
+        `${locale}/services must confirm the scope of each matter ("${scopeLabel}")`,
+      ).toBe(true);
+
+      for (const [label, pattern] of SERVICES_ACCEPTANCE_PATTERNS[locale]) {
+        expect(
+          pattern.test(answer),
+          `${locale}/services must not carry the FAQ acceptance wording "${label}"`,
+        ).toBe(false);
       }
     }
   });

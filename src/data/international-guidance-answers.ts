@@ -43,7 +43,7 @@ export const guidanceAnswers: Record<
   vi: {
     services: {
       answer:
-        'Văn phòng nhận sáu nhóm việc theo pháp luật Đài Loan: đầu tư và thành lập doanh nghiệp, tranh chấp dân sự, hôn nhân gia đình và thừa kế, tranh chấp lao động, vụ việc hình sự và sở hữu trí tuệ. Có nhận một vụ việc hay không được quyết định sau khi luật sư xem xét nội dung bạn gửi. Việc tư vấn được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.',
+        'Văn phòng nhận sáu nhóm công việc theo pháp luật Đài Loan: đầu tư, thành lập doanh nghiệp, tranh chấp dân sự và yêu cầu bồi thường, hôn nhân, gia đình và thừa kế, tranh chấp lao động, hình sự và sở hữu trí tuệ. Phạm vi từng vụ việc được xác nhận riêng sau khi luật sư xem xét nội dung bạn gửi. Tư vấn được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.',
       sources: ['/vi/faq', '/vi/contact'],
     },
     about: {
@@ -53,7 +53,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Yêu cầu gửi từ nước ngoài do văn phòng tiếp nhận và xem xét, không tự động chuyển cho một luật sư nhất định. Luật sư Wei Tseng (曾雋崴) hành nghề tại Đài Loan, gia nhập văn phòng năm 2024, làm việc với khách hàng Hàn Quốc và Nhật Bản. Việc tư vấn được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.',
+        'Yêu cầu gửi từ nước ngoài do văn phòng tiếp nhận và xem xét, không tự động chuyển cho một luật sư nhất định. Luật sư Wei Tseng (曾雋崴) hành nghề tại Đài Loan, gia nhập văn phòng năm 2024, làm việc với khách hàng Hàn Quốc và Nhật Bản. Việc tư vấn tại văn phòng được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.',
       sources: ['/vi/about', '/vi/contact'],
     },
     pricing: {
@@ -75,7 +75,7 @@ export const guidanceAnswers: Record<
   id: {
     services: {
       answer:
-        'Kantor menangani enam kelompok perkara berdasarkan hukum Taiwan: investasi dan pendirian perusahaan di Taiwan, sengketa perdata dan ganti rugi, perkara perkawinan, keluarga, dan waris, sengketa ketenagakerjaan, perkara pidana, serta kekayaan intelektual. Diterima atau tidaknya suatu perkara diputuskan setelah advokat meninjau isi pesan Anda, dan lingkup tiap perkara dipastikan tersendiri. Konsultasi dengan advokat dilayani dalam bahasa Inggris, Tionghoa, Jepang, dan Korea.',
+        'Kantor menangani enam kelompok perkara berdasarkan hukum Taiwan: investasi dan pendirian perusahaan di Taiwan, sengketa perdata dan ganti rugi, perkara perkawinan, keluarga, dan waris, sengketa ketenagakerjaan, perkara pidana, serta kekayaan intelektual. Lingkup setiap perkara dipastikan tersendiri setelah advokat meninjau isi pesan Anda. Konsultasi dengan advokat dilayani dalam bahasa Inggris, Tionghoa, Jepang, dan Korea.',
       sources: ['/id/faq', '/id/contact'],
     },
     about: {
@@ -107,7 +107,7 @@ export const guidanceAnswers: Record<
   th: {
     services: {
       answer:
-        'สำนักงานรับดำเนินการงาน 6 กลุ่มภายใต้กฎหมายไต้หวัน ได้แก่ การลงทุนและการจัดตั้งบริษัทในไต้หวัน ข้อพิพาททางแพ่งและการเรียกค่าเสียหาย คดีครอบครัวและมรดก ข้อพิพาทแรงงาน คดีอาญา และทรัพย์สินทางปัญญา ส่วนการจะรับเรื่องใดเรื่องหนึ่งหรือไม่ พิจารณาหลังจากทนายความตรวจสอบเนื้อหาที่ท่านส่งมาแล้ว การให้คำปรึกษาดำเนินการเป็นภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี',
+        'สำนักงานรับดำเนินการงาน 6 กลุ่มภายใต้กฎหมายไต้หวัน ได้แก่ การลงทุนและการจัดตั้งบริษัทในไต้หวัน ข้อพิพาททางแพ่งและการเรียกค่าเสียหาย คดีครอบครัวและมรดก ข้อพิพาทแรงงาน คดีอาญา และทรัพย์สินทางปัญญา ส่วนขอบเขตของแต่ละเรื่องจะได้รับการยืนยันเป็นการเฉพาะ หลังจากทนายความตรวจสอบเนื้อหาที่ท่านส่งมาแล้ว การให้คำปรึกษาดำเนินการเป็นภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี',
       sources: ['/th/faq', '/th/contact'],
     },
     about: {
@@ -139,7 +139,7 @@ export const guidanceAnswers: Record<
   fil: {
     services: {
       answer:
-        'Anim na pangkat ng usapin ang hinahawakan ng tanggapan sa ilalim ng batas ng Taiwan: pamumuhunan at pagtatatag ng kompanya sa Taiwan, sibil na hidwaan at danyos, usaping pampamilya at pagmamana, hidwaan sa paggawa, usaping kriminal, at intelektuwal na ari-arian. Napagpapasyahan ang pagtanggap sa isang usapin matapos suriin ng abogado ang ipinadala mo. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.',
+        'Anim na pangkat ng usapin ang hinahawakan ng tanggapan sa ilalim ng batas ng Taiwan: pamumuhunan at pagtatatag ng kompanya sa Taiwan, sibil na hidwaan at danyos, usaping pampamilya at pagmamana, hidwaan sa paggawa, usaping kriminal, at intelektuwal na ari-arian. Hiwalay na kinukumpirma ang saklaw ng bawat usapin matapos suriin ng abogado ang ipinadala mo. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.',
       sources: ['/fil/faq', '/fil/contact'],
     },
     about: {
@@ -149,7 +149,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Ang tanggapan ang tumatanggap at sumusuri sa mga usaping mula sa ibang bansa, at walang awtomatikong pagkakatalaga sa isang tiyak na abogado. Si Wei Tseng (曾雋崴) ay abogadong kwalipikadong magpraktis sa Taiwan na sumali sa tanggapan noong 2024 at gumagawa para sa mga kliyenteng Koreano at Hapon. Isinasagawa ang konsultasyon sa abogado sa apat na wika: Ingles, Tsino, Hapon, at Koreano.',
+        'Ang tanggapan ang tumatanggap at sumusuri sa mga usaping mula sa ibang bansa, at walang awtomatikong pagkakatalaga sa isang tiyak na abogado. Si Wei Tseng (曾雋崴) ay abogadong kwalipikadong magpraktis sa Taiwan na sumali sa tanggapan noong 2024 at gumagawa para sa mga kliyenteng Koreano at Hapon. Isinasagawa ang konsultasyon sa tanggapan sa apat na wika: Ingles, Tsino, Hapon, at Koreano. Saklaw ito ng buong tanggapan, hindi ng isang tiyak na abogado.',
       sources: ['/fil/about', '/fil/contact'],
     },
     pricing: {

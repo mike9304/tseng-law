@@ -294,10 +294,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     originalTextLabel: 'Tóm tắt vụ việc (bằng ngôn ngữ của quý vị)',
     originalTextPlaceholder:
       'Hãy cho biết chuyện gì đã xảy ra, quý vị cần hỗ trợ điều gì và thời hạn nếu có. Xin đừng ghi số hộ chiếu, số giấy tờ tùy thân hoặc thông tin tài khoản ngân hàng.',
-    nameLabel: 'Tên (cá nhân hoặc tổ chức)',
+    nameLabel: 'Tên',
     emailLabel: 'Thư điện tử',
     consentLabel:
-      'Tôi đã đọc phần thông tin về dữ liệu thu thập qua biểu mẫu liên hệ và đồng ý gửi yêu cầu này.',
+      'Tôi đã đọc chính sách quyền riêng tư và đồng ý gửi yêu cầu này.',
     privacyLinkLabel: 'Chính sách quyền riêng tư',
     requiredMessage: 'Mục này là bắt buộc.',
     invalidEmailMessage: 'Vui lòng nhập địa chỉ email hợp lệ.',
@@ -322,7 +322,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Konsultasi dilayani dalam empat bahasa: bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.',
     methodConfirmationNotice:
-      'Jika tidak satu pun dari keempat bahasa itu dapat Anda gunakan, pilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan cara berkomunikasi, tetapi layanan dalam bahasa lain tidak dijamin.',
+      'Jika tidak satu pun dari keempat bahasa itu dapat Anda gunakan, pilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan cara berkomunikasi jika ada cara yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.',
     preparationNotice:
       'Anda boleh menulis ringkasan perkara dalam bahasa Anda sendiri. Teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.',
     heading: 'Kirim permintaan konsultasi',
@@ -372,7 +372,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'การให้คำปรึกษาจริงดำเนินการใน 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี',
     methodConfirmationNotice:
-      'หากท่านไม่สะดวกทั้ง 4 ภาษา กรุณาเลือก “ต้องยืนยันวิธีติดต่อ” เราจะตอบกลับเพื่อยืนยันวิธีการสื่อสาร แต่ไม่รับประกันว่าจะรองรับภาษาอื่นได้',
+      'หากท่านไม่สะดวกทั้ง 4 ภาษา กรุณาเลือก “ต้องยืนยันวิธีติดต่อ” เราจะตอบกลับเพื่อยืนยันวิธีการสื่อสารที่เป็นไปได้ แต่ไม่รับประกันว่าจะรองรับภาษาอื่นได้ และไม่รับประกันระยะเวลาตอบกลับ',
     preparationNotice:
       'ท่านเขียนสรุปเรื่องด้วยภาษาของท่านเองได้ ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิม และไม่มีการแปลโดยอัตโนมัติ',
     heading: 'ส่งเรื่องเพื่อขอคำปรึกษา',

@@ -155,7 +155,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         description:
           'Giới thiệu chung bằng tiếng Việt về phạm vi công việc của Hovering International Law Firm tại Đài Loan, ngôn ngữ tư vấn và cách bắt đầu liên hệ.',
         intro:
-          'Hovering International Law Firm hỗ trợ khách hàng nước ngoài trong các vụ việc theo pháp luật Đài Loan: đầu tư và thành lập doanh nghiệp, tranh chấp dân sự, hôn nhân và gia đình, lao động, hình sự và sở hữu trí tuệ. Phần tiếng Việt này giúp quý vị nắm được công việc nào thuộc phạm vi hỗ trợ, cần chuẩn bị gì và liên hệ ra sao. Đây là thông tin chung, không phải ý kiến pháp lý cho vụ việc riêng của quý vị.',
+          'Hovering International Law Firm hỗ trợ khách hàng nước ngoài, kể cả những người đang ở Đài Loan, trong các vụ việc theo pháp luật Đài Loan: đầu tư và thành lập doanh nghiệp, tranh chấp dân sự, hôn nhân và gia đình, lao động, hình sự và sở hữu trí tuệ. Phần tiếng Việt này giúp quý vị nắm được công việc nào thuộc phạm vi hỗ trợ, cần chuẩn bị gì và liên hệ ra sao. Đây là thông tin chung, không phải ý kiến pháp lý cho vụ việc riêng của quý vị.',
         sections: [
           {
             heading: 'Văn phòng hỗ trợ những gì',
@@ -180,7 +180,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
               'Đầu tư và thành lập doanh nghiệp tại Đài Loan',
               'Tranh chấp dân sự và yêu cầu bồi thường',
               'Vụ việc hôn nhân, gia đình và thừa kế',
-              'Tranh chấp lao động',
+              'Tranh chấp lao động và việc làm',
               'Vụ việc hình sự',
               'Sở hữu trí tuệ: nhãn hiệu, sáng chế và quyền tác giả',
             ],
@@ -219,12 +219,12 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Hôn nhân, gia đình và thừa kế',
             paragraphs: [
-              'Văn phòng nhận các vụ việc về ly hôn, phân chia tài sản, việc thực hiện và gánh vác quyền, nghĩa vụ đối với con chưa thành niên (未成年子女權利義務之行使或負擔), thăm nom con (會面交往) và thừa kế (繼承), kể cả khi các bên hoặc tài sản ở nhiều quốc gia khác nhau. Những vụ việc có yếu tố nước ngoài thường cần xem xét thêm về giấy tờ hộ tịch (戶籍), hình thức văn bản và cách chứng minh tại Đài Loan.',
+              'Văn phòng nhận các vụ việc về ly hôn (離婚), phân chia tài sản, việc thực hiện và gánh vác quyền, nghĩa vụ đối với con chưa thành niên (未成年子女權利義務之行使或負擔), thăm nom con (會面交往) và thừa kế (繼承), kể cả khi các bên hoặc tài sản ở nhiều quốc gia khác nhau. Những vụ việc có yếu tố nước ngoài thường cần xem xét thêm về giấy tờ hộ tịch (戶籍), hình thức văn bản và cách chứng minh tại Đài Loan.',
               'Vì các vấn đề gia đình thường đi kèm thời hạn và nhiều thủ tục song song, phần tóm tắt ban đầu nên nêu rõ quan hệ giữa các bên, nơi cư trú hiện tại và những thủ tục đã hoặc đang tiến hành.',
             ],
           },
           {
-            heading: 'Tranh chấp lao động',
+            heading: 'Tranh chấp lao động và việc làm',
             paragraphs: [
               'Nhóm này gồm chấm dứt hợp đồng lao động (勞動契約), trợ cấp thôi việc theo pháp luật Đài Loan (資遣費; xin đừng coi là đồng nhất với các chế độ tương tự của nước khác), tiền lương và các tranh chấp phát sinh từ điều khoản của hợp đồng lao động, cho cả phía người lao động và phía người sử dụng lao động. Khi xem xét, chúng tôi tách bạch căn cứ chấm dứt quan hệ lao động với các vấn đề về thông báo, khoản phải trả và thời hạn.',
               'Hợp đồng lao động, nội quy lao động (工作規則), bảng lương và trao đổi giữa hai bên thường là tài liệu quyết định. Nếu quý vị còn giữ những tài liệu này, hãy nêu trong phần tóm tắt để việc xem xét ban đầu chính xác hơn.',
@@ -233,7 +233,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Vụ việc hình sự',
             paragraphs: [
-              'Văn phòng hỗ trợ ở giai đoạn điều tra và giai đoạn xét xử, cho cả người bị buộc tội và người bị hại, cũng như đánh giá rủi ro hình sự phát sinh trong hoạt động kinh doanh.',
+              'Văn phòng hỗ trợ ở giai đoạn điều tra và giai đoạn xét xử, cho cả người bị tình nghi hoặc bị cáo và người bị hại, cũng như đánh giá rủi ro hình sự phát sinh trong hoạt động kinh doanh.',
               'Vụ việc hình sự thường có thời hạn ngắn và các mốc thủ tục cố định, vì vậy nếu quý vị đã nhận được giấy tờ của cơ quan có thẩm quyền, hãy nêu ngày ghi trên giấy tờ đó ngay khi liên hệ để nội dung được xem xét đúng thứ tự ưu tiên.',
             ],
           },
@@ -248,7 +248,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Phạm vi và cách xác nhận',
             paragraphs: [
               'Văn phòng làm việc theo pháp luật Đài Loan và nhận những vụ việc thuộc các nhóm nêu trên. Phạm vi cụ thể của từng vụ việc được xác nhận riêng sau khi luật sư xem xét nội dung quý vị gửi.',
-              'Tư cách cư trú và giấy phép làm việc được xem xét trên cơ sở hồ sơ và tình tiết của từng người, chứ không suy ra từ quốc tịch. Nếu vụ việc có phần liên quan đến các nội dung này, quý vị nên nêu rõ khi liên hệ để luật sư xác định đúng nhóm việc; trang này không cam kết kết quả hay thời gian phản hồi.',
+              'Tư cách cư trú, giấy phép làm việc và những vấn đề tương tự được xem xét trên cơ sở hồ sơ và tình tiết của từng người, chứ không suy ra từ quốc tịch. Nếu vụ việc có phần liên quan đến các nội dung này, quý vị nên nêu rõ khi liên hệ để luật sư xác định đúng nhóm việc; trang này không cam kết kết quả hay thời gian phản hồi.',
             ],
           },
         ],
@@ -264,7 +264,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Thành lập và cơ cấu',
             paragraphs: [
-              'Hovering International Law Firm được thành lập năm 2016 bởi các luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學). Tên gọi trong tiếng Trung ghép chữ 昊 mang nghĩa “bầu trời rộng lớn” và chữ 鼎 mang nghĩa “nền móng vững chắc”, thể hiện định hướng của văn phòng khi thành lập.',
+              'Hovering International Law Firm (昊鼎國際法律事務所) được thành lập năm 2016 bởi các luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學). Tên gọi trong tiếng Trung ghép chữ 昊 mang nghĩa “bầu trời rộng lớn” và chữ 鼎 mang nghĩa “nền móng vững chắc”, thể hiện định hướng của văn phòng khi thành lập.',
               'Văn phòng có các cơ sở tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Cơ sở Cao Hùng tập trung vào quản trị doanh nghiệp và các tranh chấp dân sự, hình sự, hành chính thông thường. Cơ sở Đài Trung xử lý các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Cơ sở Bình Đông được mở năm 2017 để phục vụ nhu cầu của địa phương.',
               'Bên cạnh hoạt động luật sư, năm 2020 văn phòng kế toán Hovering Accounting Office được thành lập, cung cấp dịch vụ kế toán và hoạch định thuế cho chủ doanh nghiệp và cá nhân có tài sản lớn.',
             ],
@@ -272,7 +272,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Công việc có yếu tố nước ngoài',
             paragraphs: [
-              'Công việc có yếu tố nước ngoài của văn phòng gồm thành lập công ty, hồ sơ thị thực, đăng ký nhãn hiệu và sáng chế, đánh giá rủi ro pháp lý và tư vấn thuế doanh nghiệp. Cơ sở Đài Trung chuyên trách các công việc liên quan đến Hàn Quốc và Nhật Bản. Luật sư Wei Tseng (曾雋崴) phụ trách khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế khác trong các nhóm việc nêu trên.',
+              'Công việc có yếu tố nước ngoài của văn phòng gồm thành lập công ty, hồ sơ thị thực, đăng ký nhãn hiệu và sáng chế, đánh giá rủi ro pháp lý và tư vấn thuế doanh nghiệp. Cơ sở Đài Trung chuyên trách các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Luật sư Wei Tseng (曾雋崴) phụ trách khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế khác trong các nhóm việc nêu trên.',
               'Việc chúng tôi có thể tiếp nhận một vụ việc hay không phụ thuộc vào nội dung vụ việc và ngôn ngữ trao đổi. Nếu vụ việc của quý vị thuộc các nhóm công việc nêu trên và có thể trao đổi bằng một trong bốn ngôn ngữ tư vấn, quý vị có thể gửi tóm tắt để luật sư xem xét.',
             ],
           },
@@ -280,7 +280,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Khi quý vị liên hệ với văn phòng',
             paragraphs: [
               'Sau khi nhận được tóm tắt của quý vị, luật sư sẽ xem xét nội dung rồi trao đổi về phạm vi công việc có thể thực hiện, tài liệu cần bổ sung và các bước tiếp theo. Với những vụ việc phát sinh vấn đề kế toán hoặc thuế, văn phòng có thể phối hợp cùng bộ phận kế toán để xử lý trong cùng một quy trình.',
-              'Kết quả của mỗi vụ việc phụ thuộc vào tình tiết và hồ sơ cụ thể, nên chúng tôi không đưa ra cam kết về kết quả. Khi quý vị cần một câu trả lời chắc chắn cho trường hợp của mình, cách duy nhất là trao đổi trực tiếp với luật sư về hồ sơ đó.',
+              'Kết quả của mỗi vụ việc phụ thuộc vào tình tiết và hồ sơ cụ thể, nên chúng tôi không đưa ra cam kết về kết quả. Khi quý vị cần một câu trả lời chắc chắn cho trường hợp của mình, cách duy nhất là trao đổi trực tiếp với luật sư về hồ sơ đó bằng một trong bốn ngôn ngữ tư vấn.',
             ],
           },
         ],
@@ -372,7 +372,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Những điều trang này không bảo đảm',
             paragraphs: [
-              'Chúng tôi không cam kết thời gian phản hồi, không xác nhận lịch hẹn qua trang này, không cam kết một luật sư nhất định sẽ phụ trách vụ việc và không bố trí phiên dịch.',
+              'Chúng tôi không cam kết thời gian phản hồi, không xác nhận lịch hẹn qua trang này, không cam kết một luật sư nhất định sẽ phụ trách vụ việc và không bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: tin nhắn quý vị gửi không được dịch tự động.',
               'Khi quý vị gửi yêu cầu, nội dung được lưu lại và chờ xem xét. Nếu sau một thời gian quý vị chưa nhận được phản hồi, quý vị có thể gửi lại qua địa chỉ thư điện tử được nêu trên trang liên hệ.',
             ],
           },
@@ -407,7 +407,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'Tôi có thể được tư vấn bằng tiếng Việt không?',
             answer:
-              'Không. Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn. Chúng tôi cũng không cam kết bố trí phiên dịch.',
+              'Không. Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn. Chúng tôi cũng không cam kết bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: nội dung gốc quý vị viết được lưu giữ nguyên văn và không được dịch tự động.',
           },
           {
             question: 'Nếu tôi không dùng được cả bốn ngôn ngữ đó thì sao?',
@@ -628,7 +628,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         description:
           'Penjelasan umum dalam bahasa Indonesia mengenai lingkup pekerjaan Hovering International Law Firm di Taiwan, bahasa konsultasi, dan cara memulai kontak.',
         intro:
-          'Hovering International Law Firm mendampingi klien dari luar negeri dalam perkara menurut hukum Taiwan: investasi dan pendirian perusahaan, sengketa perdata, perkara keluarga, ketenagakerjaan, pidana, dan kekayaan intelektual. Bagian berbahasa Indonesia ini membantu Anda mengetahui pekerjaan apa yang termasuk dalam lingkup kami, apa yang perlu disiapkan, dan bagaimana cara menghubungi kami. Ini keterangan umum, bukan nasihat hukum untuk perkara Anda sendiri.',
+          'Hovering International Law Firm mendampingi klien dari luar negeri, termasuk mereka yang berada di Taiwan, dalam perkara menurut hukum Taiwan: investasi dan pendirian perusahaan, sengketa perdata, perkara perkawinan dan keluarga, ketenagakerjaan, pidana, dan kekayaan intelektual. Bagian berbahasa Indonesia ini membantu Anda mengetahui pekerjaan apa yang termasuk dalam lingkup kami, apa yang perlu disiapkan, dan bagaimana cara menghubungi kami. Ini keterangan umum, bukan nasihat hukum untuk perkara Anda sendiri.',
         sections: [
           {
             heading: 'Apa yang kami kerjakan',
@@ -653,7 +653,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
               'Investasi dan pendirian perusahaan di Taiwan',
               'Sengketa perdata dan tuntutan ganti rugi',
               'Perkara perkawinan, keluarga, dan waris',
-              'Sengketa ketenagakerjaan',
+              'Sengketa ketenagakerjaan dan hubungan kerja',
               'Perkara pidana',
               'Kekayaan intelektual: merek, paten, dan hak cipta',
             ],
@@ -686,18 +686,18 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Sengketa perdata dan ganti rugi',
             paragraphs: [
               'Kelompok ini mencakup sengketa perjanjian, tuntutan ganti rugi atas perbuatan melawan hukum, dan sengketa konsumen. Pekerjaan biasanya dimulai dengan menyusun kronologi kejadian, memeriksa dokumen dan bukti yang ada, baru kemudian membahas langkah penyelesaian.',
-              'Tenggat waktu dan kelengkapan bukti sangat memengaruhi jalannya perkara perdata, jadi sebutkanlah sejak awal tanggal-tanggal yang Anda ketahui. Jika Anda masih menyimpan perjanjian, percakapan, bukti pembayaran, atau foto keadaan di lapangan, sebutkan hal itu sejak pesan pertama.',
+              'Tenggat waktu, termasuk jangka waktu yang ditetapkan undang-undang untuk mengajukan gugatan, dan kelengkapan bukti sangat memengaruhi jalannya perkara perdata, jadi sebutkanlah sejak awal tanggal-tanggal yang Anda ketahui. Jika Anda masih menyimpan perjanjian, percakapan, bukti pembayaran, atau foto keadaan di lapangan, sebutkan hal itu sejak pesan pertama.',
             ],
           },
           {
             heading: 'Perkawinan, keluarga, dan waris',
             paragraphs: [
-              'Kami menangani perkara perceraian, pembagian harta, pelaksanaan dan pemikulan hak serta kewajiban terhadap anak yang belum dewasa (未成年子女權利義務之行使或負擔), hak menjenguk anak (會面交往), dan waris (繼承), termasuk ketika para pihak atau hartanya berada di negara yang berbeda. Perkara keluarga lintas negara umumnya memerlukan pemeriksaan tambahan atas dokumen kependudukan (戶籍), bentuk surat, dan cara pembuktiannya di Taiwan.',
+              'Kami menangani perkara perceraian (離婚), pembagian harta, pelaksanaan dan pemikulan hak serta kewajiban terhadap anak yang belum dewasa (未成年子女權利義務之行使或負擔), hak menjenguk anak (會面交往), dan waris (繼承), termasuk ketika para pihak atau hartanya berada di negara yang berbeda. Perkara keluarga lintas negara umumnya memerlukan pemeriksaan tambahan atas dokumen kependudukan (戶籍), bentuk surat, dan cara pembuktiannya di Taiwan.',
               'Karena perkara keluarga sering disertai tenggat waktu dan beberapa prosedur yang berjalan bersamaan, ringkasan awal sebaiknya menyebutkan hubungan antarpihak, tempat tinggal saat ini, dan prosedur yang sudah atau sedang berjalan.',
             ],
           },
           {
-            heading: 'Sengketa ketenagakerjaan',
+            heading: 'Sengketa ketenagakerjaan dan hubungan kerja',
             paragraphs: [
               'Kelompok ini mencakup pemutusan hubungan kerja, pesangon menurut hukum Taiwan (資遣費; jangan disamakan dengan lembaga serupa di negara lain), upah, dan sengketa yang timbul dari ketentuan perjanjian kerja (勞動契約), baik dari sisi pekerja maupun sisi pemberi kerja. Dalam meninjau perkara, kami memisahkan dasar pemutusan hubungan kerja dari persoalan pemberitahuan, pembayaran, dan tenggat waktu.',
               'Perjanjian kerja, peraturan perusahaan (工作規則), slip gaji, dan percakapan antara kedua pihak biasanya menjadi dokumen yang menentukan. Jika Anda masih menyimpannya, sebutkan hal itu dalam ringkasan agar peninjauan awal lebih tepat.',
@@ -721,7 +721,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Lingkup dan cara memastikannya',
             paragraphs: [
               'Kantor kami bekerja berdasarkan hukum Taiwan dan menangani perkara yang termasuk dalam kelompok di atas. Lingkup setiap perkara dipastikan tersendiri setelah advokat meninjau isi pesan Anda.',
-              'Status tinggal dan izin kerja dinilai dari berkas dan keadaan masing-masing orang, tidak disimpulkan dari kewarganegaraan. Jika ada bagian perkara Anda yang menyangkut hal-hal itu, sebutkanlah saat menghubungi kami agar advokat dapat menentukan kelompok pekerjaannya; halaman ini tidak menjanjikan hasil maupun waktu balasan.',
+              'Status tinggal, izin kerja, dan hal-hal sejenis dinilai dari berkas dan keadaan masing-masing orang, tidak disimpulkan dari kewarganegaraan. Jika ada bagian perkara Anda yang menyangkut hal-hal itu, sebutkanlah saat menghubungi kami agar advokat dapat menentukan kelompok pekerjaannya; halaman ini tidak menjanjikan hasil maupun waktu balasan.',
             ],
           },
         ],
@@ -831,7 +831,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Jika keempat bahasa konsultasi itu tidak dapat Anda gunakan',
             paragraphs: [
-              'Pada formulir kontak Anda dapat memilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan cara berkomunikasi, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.',
+              'Pada formulir kontak Anda dapat memilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan cara berkomunikasi jika ada cara yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.',
               'Ini hanyalah langkah pemastian, bukan janji. Kami tidak menjanjikan penerjemah, tidak menjanjikan layanan dalam bahasa Indonesia atau bahasa lain di luar keempat bahasa tersebut, dan tidak menjanjikan bahwa setiap perkara dapat kami terima.',
             ],
           },
@@ -845,7 +845,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Hal-hal yang tidak dijamin halaman ini',
             paragraphs: [
-              'Kami tidak menjanjikan waktu balasan, tidak memastikan janji temu melalui halaman ini, tidak menjanjikan advokat tertentu yang akan menangani perkara, dan tidak menyediakan penerjemah.',
+              'Kami tidak menjanjikan waktu balasan, tidak memastikan janji temu melalui halaman ini, tidak menjanjikan advokat tertentu yang akan menangani perkara, dan tidak menyediakan penerjemah. Penerjemahan tulisan adalah hal terpisah: pesan yang Anda kirim tidak diterjemahkan secara otomatis.',
               'Ketika Anda mengirim permintaan, isinya tersimpan dan menunggu ditinjau. Jika setelah beberapa waktu Anda belum menerima balasan, Anda dapat mengirim ulang melalui alamat email yang tertera pada halaman kontak.',
             ],
           },
@@ -880,7 +880,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'Bisakah saya berkonsultasi dalam bahasa Indonesia?',
             answer:
-              'Tidak. Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea. Kami juga tidak menjanjikan penerjemah.',
+              'Tidak. Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea. Kami juga tidak menjanjikan penerjemah. Penerjemahan tulisan adalah hal terpisah: teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.',
           },
           {
             question: 'Bagaimana jika keempat bahasa itu tidak dapat saya gunakan?',
@@ -1041,7 +1041,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Sejauh mana artikel dapat dijadikan acuan',
             paragraphs: [
               'Artikel ditulis sebagai keterangan umum pada saat penerbitannya. Ketentuan dan cara penerapannya dapat berubah, dan sebuah artikel tidak memuat seluruh keadaan dalam perkara Anda.',
-              'Karena itu, mohon jangan menjadikan sebuah artikel sebagai dasar untuk bertindak dalam perkara yang sebenarnya. Gunakan artikel untuk memahami gambaran umumnya, lalu bicarakan berkas Anda secara tersendiri dengan advokat.',
+              'Karena itu, mohon jangan menjadikan sebuah artikel sebagai dasar untuk bertindak dalam perkara yang sebenarnya. Gunakan artikel untuk memahami gambaran umumnya, lalu bicarakan berkas Anda secara tersendiri dengan advokat; halaman ini bukan tahap konsultasi.',
             ],
           },
         ],
@@ -1101,12 +1101,12 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         description:
           'คำอธิบายทั่วไปเป็นภาษาไทยเกี่ยวกับขอบเขตงานของ Hovering International Law Firm ในไต้หวัน ภาษาที่ใช้ให้คำปรึกษา และวิธีเริ่มต้นติดต่อ',
         intro:
-          'Hovering International Law Firm ให้ความช่วยเหลือแก่ลูกความจากต่างประเทศในเรื่องที่อยู่ภายใต้กฎหมายไต้หวัน ได้แก่ การลงทุนและการจัดตั้งบริษัท ข้อพิพาททางแพ่ง คดีครอบครัว ข้อพิพาทแรงงาน คดีอาญา และทรัพย์สินทางปัญญา ส่วนภาษาไทยนี้ช่วยให้ท่านทราบว่างานใดอยู่ในขอบเขตที่เรารับดำเนินการ ควรเตรียมสิ่งใด และติดต่อได้อย่างไร เนื้อหานี้เป็นข้อมูลทั่วไป ไม่ใช่ความเห็นทางกฎหมายสำหรับเรื่องเฉพาะของท่าน',
+          'Hovering International Law Firm ให้ความช่วยเหลือแก่ลูกความจากต่างประเทศ รวมถึงผู้ที่อยู่ในไต้หวัน ในเรื่องที่อยู่ภายใต้กฎหมายไต้หวัน ได้แก่ การลงทุนและการจัดตั้งบริษัท ข้อพิพาททางแพ่ง คดีการสมรสและครอบครัว ข้อพิพาทแรงงาน คดีอาญา และทรัพย์สินทางปัญญา ส่วนภาษาไทยนี้ช่วยให้ท่านทราบว่างานใดอยู่ในขอบเขตที่เรารับดำเนินการ ควรเตรียมสิ่งใด และติดต่อได้อย่างไร เนื้อหานี้เป็นข้อมูลทั่วไป ไม่ใช่ความเห็นทางกฎหมายสำหรับเรื่องเฉพาะของท่าน',
         sections: [
           {
             heading: 'สำนักงานให้ความช่วยเหลือด้านใดบ้าง',
             paragraphs: [
-              'Hovering International Law Firm เป็นสำนักงานกฎหมายที่ตั้งอยู่ในไต้หวัน ทำงานภายใต้กฎหมายไต้หวัน และมีที่ทำการที่ไทเป เกาสง ไถจง และผิงตง สำนักงานรับทั้งงานที่ปรึกษาสำหรับองค์กรธุรกิจและงานคดีในศาล พร้อมทั้งช่วยเหลือลูกความจากต่างประเทศในกระบวนการที่ต้องดำเนินการในไต้หวัน',
+              'Hovering International Law Firm เป็นสำนักงานกฎหมายที่ตั้งอยู่ในไต้หวัน ทำงานภายใต้กฎหมายไต้หวัน และมีที่ทำการที่ไทเป (臺北) เกาสง (高雄) ไถจง (臺中) และผิงตง (屏東) สำนักงานรับทั้งงานที่ปรึกษาสำหรับองค์กรธุรกิจและงานคดีในศาล พร้อมทั้งช่วยเหลือลูกความจากต่างประเทศในกระบวนการที่ต้องดำเนินการในไต้หวัน',
               'เนื้อหาทั้งหมดในหน้านี้เป็นข้อมูลทั่วไป ผลของแต่ละเรื่องขึ้นอยู่กับข้อเท็จจริง กฎเกณฑ์ที่ใช้บังคับ และช่วงเวลาที่เกิดเหตุ ข้อมูลแนะนำนี้จึงไม่อาจใช้แทนการพูดคุยกับทนายความเกี่ยวกับเอกสารและข้อเท็จจริงของท่านโดยตรง',
             ],
           },
@@ -1125,8 +1125,8 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             items: [
               'การลงทุนและการจัดตั้งบริษัทในไต้หวัน',
               'ข้อพิพาททางแพ่งและการเรียกค่าสินไหมทดแทน',
-              'คดีครอบครัวและมรดก',
-              'ข้อพิพาทแรงงาน',
+              'คดีการสมรส ครอบครัว และมรดก',
+              'ข้อพิพาทแรงงานและการจ้างงาน',
               'คดีอาญา',
               'ทรัพย์สินทางปัญญา ได้แก่ เครื่องหมายการค้า สิทธิบัตร และลิขสิทธิ์',
             ],
@@ -1163,14 +1163,14 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             ],
           },
           {
-            heading: 'คดีครอบครัวและมรดก',
+            heading: 'คดีการสมรส ครอบครัว และมรดก',
             paragraphs: [
-              'สำนักงานรับดำเนินการเรื่องการหย่า การแบ่งทรัพย์สิน การใช้และการรับภาระสิทธิและหน้าที่ต่อบุตรผู้เยาว์ (未成年子女權利義務之行使或負擔) การพบและติดต่อกับบุตร (會面交往) และมรดก (繼承) รวมถึงกรณีที่คู่กรณีหรือทรัพย์สินอยู่คนละประเทศ คดีครอบครัวที่มีองค์ประกอบต่างประเทศมักต้องตรวจสอบเพิ่มเติมเกี่ยวกับเอกสารทะเบียนราษฎร (戶籍) รูปแบบของเอกสาร และวิธีพิสูจน์ในไต้หวัน',
+              'สำนักงานรับดำเนินการเรื่องการหย่า (離婚) การแบ่งทรัพย์สิน การใช้และการรับภาระสิทธิและหน้าที่ต่อบุตรผู้เยาว์ (未成年子女權利義務之行使或負擔) การพบและติดต่อกับบุตร (會面交往) และมรดก (繼承) รวมถึงกรณีที่คู่กรณีหรือทรัพย์สินอยู่คนละประเทศ คดีครอบครัวที่มีองค์ประกอบต่างประเทศมักต้องตรวจสอบเพิ่มเติมเกี่ยวกับเอกสารทะเบียนราษฎร (戶籍) รูปแบบของเอกสาร และวิธีพิสูจน์ในไต้หวัน',
               'เนื่องจากเรื่องครอบครัวมักมีกำหนดเวลาและมีหลายกระบวนการดำเนินไปพร้อมกัน สรุปเรื่องในครั้งแรกจึงควรระบุความสัมพันธ์ระหว่างคู่กรณี ที่อยู่ปัจจุบัน และกระบวนการที่ดำเนินไปแล้วหรือกำลังดำเนินอยู่',
             ],
           },
           {
-            heading: 'ข้อพิพาทแรงงาน',
+            heading: 'ข้อพิพาทแรงงานและการจ้างงาน',
             paragraphs: [
               'กลุ่มนี้ครอบคลุมการเลิกจ้าง ค่าชดเชยตามกฎหมายไต้หวัน (資遣費 ซึ่งไม่ควรถือว่าเหมือนกับระบบทำนองเดียวกันของประเทศอื่น) ค่าจ้าง และข้อพิพาทที่เกิดจากข้อกำหนดในสัญญาจ้างแรงงาน (勞動契約) ทั้งในฝ่ายลูกจ้างและฝ่ายนายจ้าง ในการตรวจสอบ เราจะแยกเหตุแห่งการเลิกจ้างออกจากประเด็นเรื่องการบอกกล่าว เงินที่ต้องจ่าย และกำหนดเวลา',
               'สัญญาจ้างแรงงาน ข้อบังคับเกี่ยวกับการทำงาน (工作規則) สลิปเงินเดือน และข้อความที่ติดต่อกันระหว่างสองฝ่าย มักเป็นเอกสารสำคัญ หากท่านยังเก็บเอกสารเหล่านี้ไว้ โปรดระบุไว้ในสรุปเรื่องด้วย เพื่อให้การตรวจสอบเบื้องต้นแม่นยำขึ้น',
@@ -1179,7 +1179,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'คดีอาญา',
             paragraphs: [
-              'สำนักงานให้ความช่วยเหลือทั้งในชั้นสอบสวนและชั้นพิจารณาของศาล ทั้งฝ่ายผู้ถูกกล่าวหาและฝ่ายผู้เสียหาย รวมถึงการประเมินความเสี่ยงทางอาญาที่เกิดขึ้นในการประกอบธุรกิจ',
+              'สำนักงานให้ความช่วยเหลือทั้งในชั้นสอบสวนและชั้นพิจารณาของศาล ทั้งฝ่ายผู้ถูกกล่าวหาหรือจำเลย และฝ่ายผู้เสียหาย รวมถึงการประเมินความเสี่ยงทางอาญาที่เกิดขึ้นในการประกอบธุรกิจ',
               'คดีอาญามักมีกำหนดเวลาสั้นและมีขั้นตอนที่กำหนดไว้แน่นอน หากท่านได้รับหมายหรือหนังสือจากเจ้าพนักงานแล้ว โปรดแจ้งวันที่ปรากฏในเอกสารนั้นตั้งแต่ต้น เพื่อให้เรื่องได้รับการตรวจสอบตามลำดับความเร่งด่วน',
             ],
           },
@@ -1194,7 +1194,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'ขอบเขตและการยืนยัน',
             paragraphs: [
               'สำนักงานทำงานภายใต้กฎหมายไต้หวัน และรับเรื่องที่อยู่ในกลุ่มงานข้างต้น ส่วนขอบเขตของแต่ละเรื่องจะได้รับการยืนยันเป็นการเฉพาะ หลังจากทนายความตรวจสอบเนื้อหาที่ท่านส่งมาแล้ว',
-              'สถานะการพำนัก สถานะการทำงาน และเรื่องทำนองเดียวกัน พิจารณาจากเอกสารและข้อเท็จจริงของแต่ละราย ไม่ได้อนุมานจากสัญชาติ หากเรื่องของท่านมีส่วนที่เกี่ยวข้องกับประเด็นเหล่านี้ โปรดระบุไว้เมื่อติดต่อเข้ามา เพื่อให้คำแนะนำตรงกับกรณีของท่าน',
+              'สถานะการพำนัก ใบอนุญาตทำงาน และเรื่องทำนองเดียวกัน พิจารณาจากเอกสารและข้อเท็จจริงของแต่ละราย ไม่ได้อนุมานจากสัญชาติ หากเรื่องของท่านมีส่วนที่เกี่ยวข้องกับประเด็นเหล่านี้ โปรดระบุไว้เมื่อติดต่อเข้ามา เพื่อให้คำแนะนำตรงกับกรณีของท่าน ทั้งนี้ หน้านี้ไม่รับประกันผลและไม่รับประกันระยะเวลาตอบกลับ',
             ],
           },
         ],
@@ -1211,7 +1211,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'การก่อตั้งและโครงสร้าง',
             paragraphs: [
               'Hovering International Law Firm (昊鼎國際法律事務所) ก่อตั้งขึ้นในปี 2016 โดยกลุ่มทนายความที่จบการศึกษาจากมหาวิทยาลัยแห่งชาติไต้หวัน (國立臺灣大學) ชื่อภาษาจีนของสำนักงานประกอบด้วยอักษรสองตัว คือ 昊 หมายถึงท้องฟ้าอันกว้างใหญ่ และ 鼎 หมายถึงรากฐานอันมั่นคง ซึ่งสะท้อนแนวทางของสำนักงานตั้งแต่เริ่มก่อตั้ง',
-              'สำนักงานมีที่ทำการที่ไทเป เกาสง ไถจง และผิงตง สาขาเกาสงเน้นงานด้านการกำกับดูแลกิจการ พร้อมทั้งรับข้อพิพาททางแพ่ง อาญา และปกครองทั่วไป สาขาไถจงรับงานก่อสร้าง ทรัพย์สินทางปัญญา และงานที่เกี่ยวข้องกับเกาหลีและญี่ปุ่น ส่วนสาขาผิงตงเปิดขึ้นในปี 2017 เพื่อรองรับความต้องการในพื้นที่',
+              'สำนักงานมีที่ทำการที่ไทเป (臺北) เกาสง (高雄) ไถจง (臺中) และผิงตง (屏東) สาขาเกาสงเน้นงานด้านการกำกับดูแลกิจการ พร้อมทั้งรับข้อพิพาททางแพ่ง อาญา และปกครองทั่วไป สาขาไถจงรับงานก่อสร้าง ทรัพย์สินทางปัญญา และงานที่เกี่ยวข้องกับเกาหลีและญี่ปุ่น ส่วนสาขาผิงตงเปิดขึ้นในปี 2017 เพื่อรองรับความต้องการในพื้นที่',
               'นอกจากงานด้านทนายความแล้ว ในปี 2020 ได้มีการก่อตั้ง Hovering Accounting Office ซึ่งให้บริการด้านบัญชีและการวางแผนภาษีแก่เจ้าของกิจการและบุคคลที่มีสินทรัพย์สูง',
             ],
           },
@@ -1226,7 +1226,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'เมื่อท่านติดต่อเข้ามา',
             paragraphs: [
               'เมื่อได้รับสรุปเรื่องของท่านแล้ว ทนายความจะตรวจสอบเนื้อหา จากนั้นจึงหารือเกี่ยวกับขอบเขตงานที่ดำเนินการได้ เอกสารที่ยังต้องเพิ่มเติม และขั้นตอนถัดไป สำหรับเรื่องที่มีประเด็นด้านบัญชีหรือภาษี สำนักงานสามารถทำงานร่วมกับส่วนงานบัญชีในกระบวนการเดียวกันได้',
-              'ผลของแต่ละเรื่องขึ้นอยู่กับข้อเท็จจริงและเอกสารเฉพาะราย เราจึงไม่รับประกันผล หากท่านต้องการคำตอบที่แน่นอนสำหรับกรณีของท่าน วิธีเดียวคือการปรึกษาทนายความโดยตรงจากเอกสารและข้อเท็จจริงนั้น',
+              'ผลของแต่ละเรื่องขึ้นอยู่กับข้อเท็จจริงและเอกสารเฉพาะราย เราจึงไม่รับประกันผล หากท่านต้องการคำตอบที่แน่นอนสำหรับกรณีของท่าน วิธีเดียวคือการปรึกษาทนายความโดยตรงจากเอกสารและข้อเท็จจริงนั้น ในภาษาใดภาษาหนึ่งจาก 4 ภาษาที่ใช้ให้คำปรึกษา',
             ],
           },
         ],
@@ -1304,7 +1304,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'หากท่านไม่สะดวกทั้ง 4 ภาษาที่ใช้ให้คำปรึกษา',
             paragraphs: [
-              'ในแบบฟอร์มติดต่อ ท่านสามารถเลือก “ต้องยืนยันวิธีติดต่อ” ได้ จากนั้นเราจะตอบกลับเพื่อยืนยันวิธีสื่อสารที่เป็นไปได้ร่วมกับท่าน',
+              'ในแบบฟอร์มติดต่อ ท่านสามารถเลือก “ต้องยืนยันวิธีติดต่อ” ได้ จากนั้นเราจะตอบกลับเพื่อยืนยันวิธีสื่อสารที่เป็นไปได้ร่วมกับท่าน ทั้งนี้ เราไม่รับประกันว่าจะรองรับภาษาอื่นได้ และไม่รับประกันระยะเวลาตอบกลับ',
               'ขั้นตอนนี้เป็นเพียงการยืนยัน ไม่ใช่คำมั่นสัญญา เราไม่รับประกันว่าจะจัดล่ามให้ ไม่รับประกันว่าจะให้บริการเป็นภาษาไทยหรือภาษาอื่นนอกเหนือจาก 4 ภาษาข้างต้น และไม่รับประกันว่าจะรับดำเนินการได้ทุกเรื่อง',
             ],
           },
@@ -1318,7 +1318,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'สิ่งที่หน้านี้ไม่ได้รับประกัน',
             paragraphs: [
-              'เราไม่รับประกันระยะเวลาในการตอบกลับ ไม่ได้ยืนยันการนัดหมายผ่านหน้านี้ ไม่รับประกันว่าทนายความคนใดจะเป็นผู้รับผิดชอบเรื่อง และไม่ได้จัดล่ามให้',
+              'เราไม่รับประกันระยะเวลาในการตอบกลับ ไม่ได้ยืนยันการนัดหมายผ่านหน้านี้ ไม่รับประกันว่าทนายความคนใดจะเป็นผู้รับผิดชอบเรื่อง และไม่ได้จัดล่ามให้ ส่วนการแปลข้อความเป็นคนละเรื่องกัน ข้อความที่ท่านส่งมาจะไม่ถูกแปลโดยอัตโนมัติ',
               'เมื่อท่านส่งเรื่องเข้ามา เนื้อหาจะถูกบันทึกไว้และรอการตรวจสอบ หากผ่านไประยะหนึ่งแล้วท่านยังไม่ได้รับการติดต่อกลับ ท่านสามารถส่งเรื่องซ้ำได้ทางอีเมลตามที่อยู่ในหน้าติดต่อ',
             ],
           },
@@ -1343,7 +1343,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'สำนักงานรับเรื่องประเภทใดบ้าง',
             answer:
-              'สำนักงานรับงาน 6 กลุ่ม ได้แก่ การลงทุนและการจัดตั้งบริษัทในไต้หวัน ข้อพิพาททางแพ่งและการเรียกค่าสินไหมทดแทน คดีครอบครัวและมรดก ข้อพิพาทแรงงาน คดีอาญา และทรัพย์สินทางปัญญา ส่วนการจะรับเรื่องใดเรื่องหนึ่งหรือไม่ จะพิจารณาหลังตรวจสอบเนื้อหาแล้ว',
+              'สำนักงานรับงาน 6 กลุ่ม ได้แก่ การลงทุนและการจัดตั้งบริษัทในไต้หวัน ข้อพิพาททางแพ่งและการเรียกค่าสินไหมทดแทน คดีการสมรส ครอบครัว และมรดก ข้อพิพาทแรงงาน คดีอาญา และทรัพย์สินทางปัญญา ส่วนการจะรับเรื่องใดเรื่องหนึ่งหรือไม่ จะพิจารณาหลังตรวจสอบเนื้อหาแล้ว',
           },
           {
             question: 'ควรเตรียมอะไรก่อนติดต่อ',
@@ -1353,7 +1353,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'ปรึกษาเป็นภาษาไทยได้หรือไม่',
             answer:
-              'ไม่ได้ ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย แต่การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี ทั้งนี้ สำนักงานไม่ได้จัดล่ามให้',
+              'ไม่ได้ ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย แต่การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี ทั้งนี้ สำนักงานไม่ได้จัดล่ามให้ ส่วนการแปลข้อความเป็นคนละเรื่องกัน ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิมและไม่มีการแปลโดยอัตโนมัติ',
           },
           {
             question: 'หากไม่สะดวกทั้ง 4 ภาษานั้นจะทำอย่างไร',
@@ -1514,7 +1514,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'บทความใช้อ้างอิงได้เพียงใด',
             paragraphs: [
               'บทความเขียนขึ้นเพื่อให้ข้อมูลทั่วไป ณ เวลาที่เผยแพร่ กฎเกณฑ์และแนวทางการปรับใช้อาจเปลี่ยนแปลงได้ และบทความหนึ่งย่อมไม่ครอบคลุมข้อเท็จจริงทั้งหมดในเรื่องของท่าน',
-              'ด้วยเหตุนี้ โปรดอย่าใช้บทความเป็นเกณฑ์ตัดสินใจดำเนินการในเรื่องจริง ขอให้ใช้บทความเพื่อทำความเข้าใจภาพรวม แล้วจึงปรึกษาเกี่ยวกับเอกสารและข้อเท็จจริงของท่านเป็นการเฉพาะ',
+              'ด้วยเหตุนี้ โปรดอย่าใช้บทความเป็นเกณฑ์ตัดสินใจดำเนินการในเรื่องจริง ขอให้ใช้บทความเพื่อทำความเข้าใจภาพรวม แล้วจึงปรึกษาเกี่ยวกับเอกสารและข้อเท็จจริงของท่านเป็นการเฉพาะ ทั้งนี้ หน้านี้ไม่ใช่ขั้นตอนการให้คำปรึกษา',
             ],
           },
         ],
@@ -1574,7 +1574,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         description:
           'Pangkalahatang paliwanag sa Filipino tungkol sa saklaw ng gawain ng Hovering International Law Firm sa Taiwan, ang mga wika ng konsultasyon, at kung paano magsimulang makipag-ugnayan.',
         intro:
-          'Tumutulong ang Hovering International Law Firm sa mga dayuhang kliyente, kabilang ang mga nasa Taiwan, para sa mga usaping nasa ilalim ng batas ng Taiwan: pamumuhunan at pagtatatag ng kompanya, sibil na alitan, usaping pampamilya, paggawa, kriminal, at intelektuwal na ari-arian. Tutulungan kayo ng bahaging Filipino na ito na malaman kung anong gawain ang saklaw namin, ano ang dapat ihanda, at paano makipag-ugnayan. Pangkalahatang impormasyon ito, hindi legal na payo para sa sarili ninyong usapin.',
+          'Tumutulong ang Hovering International Law Firm sa mga dayuhang kliyente, kabilang ang mga nasa Taiwan, para sa mga usaping nasa ilalim ng batas ng Taiwan: pamumuhunan at pagtatatag ng kompanya, sibil na alitan, usaping pag-aasawa at pampamilya, paggawa, kriminal, at intelektuwal na ari-arian. Tutulungan kayo ng bahaging Filipino na ito na malaman kung anong gawain ang saklaw namin, ano ang dapat ihanda, at paano makipag-ugnayan. Pangkalahatang impormasyon ito, hindi legal na payo para sa sarili ninyong usapin.',
         sections: [
           {
             heading: 'Ano ang tinutulungan namin',
@@ -1598,7 +1598,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             items: [
               'Pamumuhunan at pagtatatag ng kompanya sa Taiwan',
               'Sibil na alitan at paghahabol ng danyos',
-              'Usaping pampamilya at pagmamana',
+              'Usaping pag-aasawa, pampamilya, at pagmamana',
               'Alitan sa paggawa at empleo',
               'Usaping kriminal',
               'Intelektuwal na ari-arian: trademark (marka ng kalakal), patent (patente), at copyright (karapatang-sipi)',
@@ -1632,27 +1632,27 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Sibil na alitan at paghahabol ng danyos',
             paragraphs: [
               'Kabilang dito ang mga alitan sa kontrata, paghahabol ng danyos dahil sa tort o pagkakasala sa labas ng kontrata, at mga alitan ng mamimili. Karaniwang nagsisimula ang trabaho sa muling pagsasaayos ng pagkakasunod-sunod ng mga pangyayari at sa pagtingin sa mga dokumento at ebidensiyang nasa kamay, saka lamang pag-uusapan ang paraan ng pagharap dito.',
-              'Malaki ang epekto ng mga takdang panahon at ng kabuuan ng ebidensiya sa isang sibil na usapin, kaya banggitin agad ang mga petsang alam ninyo. Kung nasa inyo pa ang kontrata, ang mga palitan ng mensahe, ang patunay ng bayad, o mga larawan ng pangyayari, sabihin ninyo ito mula sa unang mensahe.',
+              'Malaki ang epekto ng mga takdang panahon, kasama ang panahong itinakda ng batas para maghain ng kaso, at ng kabuuan ng ebidensiya sa isang sibil na usapin, kaya banggitin agad ang mga petsang alam ninyo. Kung nasa inyo pa ang kontrata, ang mga palitan ng mensahe, ang patunay ng bayad, o mga larawan ng pangyayari, sabihin ninyo ito mula sa unang mensahe.',
             ],
           },
           {
-            heading: 'Usaping pampamilya at pagmamana',
+            heading: 'Usaping pag-aasawa, pampamilya, at pagmamana',
             paragraphs: [
-              'Hinahawakan ng tanggapan ang mga usapin ng diborsiyo sa ilalim ng batas ng Taiwan (離婚), paghahati ng ari-arian, paggamit at pagtupad ng karapatan at tungkulin sa menor de edad na anak (未成年子女權利義務之行使或負擔), pagdalaw sa anak (會面交往), at pagmamana (繼承), pati na kapag nasa magkaibang bansa ang mga panig o ang ari-arian. Ang mga usaping pampamilyang may kaugnayan sa ibang bansa ay karaniwang nangangailangan ng dagdag na pagsusuri sa mga dokumento ng katayuang sibil, sa anyo ng mga papeles, at sa paraan ng pagpapatunay ng mga ito sa Taiwan.',
+              'Hinahawakan ng tanggapan ang mga usapin ng diborsiyo sa ilalim ng batas ng Taiwan (離婚), paghahati ng ari-arian, paggamit at pagtupad ng karapatan at tungkulin sa menor de edad na anak (未成年子女權利義務之行使或負擔), pagdalaw sa anak (會面交往), at pagmamana (繼承), pati na kapag nasa magkaibang bansa ang mga panig o ang ari-arian. Ang mga usaping pampamilyang may kaugnayan sa ibang bansa ay karaniwang nangangailangan ng dagdag na pagsusuri sa mga dokumento ng katayuang sibil (戶籍), sa anyo ng mga papeles, at sa paraan ng pagpapatunay ng mga ito sa Taiwan.',
               'Dahil madalas may takdang panahon ang mga usaping pampamilya at sabay-sabay ang ilang hakbang, mabuting banggitin sa unang buod ang ugnayan ng mga panig, ang kasalukuyang tirahan, at ang mga hakbang na natapos o kasalukuyang isinasagawa.',
             ],
           },
           {
             heading: 'Alitan sa paggawa at empleo',
             paragraphs: [
-              'Kabilang dito ang pagtatapos ng empleo, ang separation pay sa ilalim ng batas ng Taiwan (資遣費, na huwag ituring na katumbas ng katulad na sistema sa ibang bansa), sahod, at mga alitang nagmumula sa mga probisyon ng kontrata sa trabaho, para man sa panig ng manggagawa o ng employer. Sa pagsusuri, hiwalay naming tinitingnan ang batayan ng pagtatapos ng empleo at ang mga usapin ng abiso, ng dapat bayaran, at ng takdang panahon.',
+              'Kabilang dito ang pagtatapos ng empleo, ang separation pay sa ilalim ng batas ng Taiwan (資遣費, na huwag ituring na katumbas ng katulad na sistema sa ibang bansa), sahod, at mga alitang nagmumula sa mga probisyon ng kontrata sa trabaho (勞動契約), para man sa panig ng manggagawa o ng employer. Sa pagsusuri, hiwalay naming tinitingnan ang batayan ng pagtatapos ng empleo at ang mga usapin ng abiso, ng dapat bayaran, at ng takdang panahon.',
               'Karaniwang ang kontrata sa trabaho, ang patakaran sa trabaho (工作規則), ang talaan ng sahod, at ang mga palitan ng mensahe ng dalawang panig ang nagpapasya sa usapin. Kung nasa inyo pa ang mga ito, banggitin ninyo sa buod upang mas maging tumpak ang paunang pagsusuri.',
             ],
           },
           {
             heading: 'Usaping kriminal',
             paragraphs: [
-              'Tumutulong ang tanggapan sa yugto ng imbestigasyon at sa yugto ng paglilitis, para sa panig ng pinararatangan at para rin sa panig ng biktima, pati sa pagtaya ng panganib na kriminal na maaaring lumitaw sa pagnenegosyo.',
+              'Tumutulong ang tanggapan sa yugto ng imbestigasyon at sa yugto ng paglilitis, para sa panig ng pinararatangan o nasasakdal at para rin sa panig ng biktima, pati sa pagtaya ng panganib na kriminal na maaaring lumitaw sa pagnenegosyo.',
               'Karaniwang maikli ang mga takdang panahon sa usaping kriminal at nakatakda ang mga yugto nito, kaya kung may natanggap na kayong papeles mula sa awtoridad, banggitin ninyo agad ang petsang nakasulat doon upang masuri ang usapin ayon sa pagkaapurahan nito.',
             ],
           },
@@ -1667,7 +1667,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Saklaw at kung paano ito kinukumpirma',
             paragraphs: [
               'Gumagawa ang tanggapan sa ilalim ng batas ng Taiwan at tumatanggap ng mga usaping kabilang sa mga pangkat sa itaas. Hiwalay na kinukumpirma ang saklaw ng bawat usapin matapos suriin ng abogado ang ipinadala ninyo.',
-              'Ang katayuan sa paninirahan, ang katayuan sa trabaho, at ang mga katulad nito ay sinusuri batay sa mga dokumento at pangyayaring natatangi sa bawat tao, hindi hinuhugot sa pagkamamamayan. Kung may bahagi ng usapin ninyo na may kinalaman dito, banggitin ninyo kapag nakipag-ugnayan kayo upang tumpak ang maibibigay na patnubay.',
+              'Ang katayuan sa paninirahan, ang permiso sa trabaho, at ang mga katulad nito ay sinusuri batay sa mga dokumento at pangyayaring natatangi sa bawat tao, hindi hinuhugot sa pagkamamamayan. Kung may bahagi ng usapin ninyo na may kinalaman dito, banggitin ninyo kapag nakipag-ugnayan kayo upang tumpak ang maibibigay na patnubay; walang ipinapangakong resulta at walang ipinapangakong panahon ng pagsagot ang pahinang ito.',
             ],
           },
         ],
@@ -1699,7 +1699,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Kapag nakipag-ugnayan kayo sa amin',
             paragraphs: [
               'Matapos matanggap ang buod ninyo, sinusuri ito ng abogado at saka pag-uusapan ang saklaw ng trabahong maaaring gawin, ang mga dokumentong kailangan pa, at ang susunod na hakbang. Sa mga usaping may kaakibat na tanong sa akawnting o buwis, maaaring makipagtulungan ang tanggapan sa bahaging pang-akawnting sa loob ng iisang daloy ng pagtatrabaho.',
-              'Nakadepende sa mga pangyayari at sa mga dokumento ang kalalabasan ng bawat usapin, kaya wala kaming ipinapangakong resulta. Kung kailangan ninyo ng tiyak na sagot para sa sitwasyon ninyo, ang tanging paraan ay ang tuwirang pag-uusap sa abogado batay sa mga dokumentong iyon.',
+              'Nakadepende sa mga pangyayari at sa mga dokumento ang kalalabasan ng bawat usapin, kaya wala kaming ipinapangakong resulta. Kung kailangan ninyo ng tiyak na sagot para sa sitwasyon ninyo, ang tanging paraan ay ang tuwirang pag-uusap sa abogado batay sa mga dokumentong iyon, sa isa sa apat na wika ng konsultasyon.',
             ],
           },
         ],
@@ -1777,7 +1777,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Kung hindi ninyo magagamit ang apat na wika ng konsultasyon',
             paragraphs: [
-              'Sa form ng kontak, maaari ninyong piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang magkasamang kumpirmahin kung paano tayo maaaring mag-usap.',
+              'Sa form ng kontak, maaari ninyong piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang magkasamang kumpirmahin kung paano tayo makakapag-usap kung may posibleng paraan, ngunit hindi garantisado ang serbisyo sa ibang wika at walang pangako sa panahon ng pagsagot.',
               'Hakbang lamang ito ng pagkumpirma, hindi pangako. Hindi kami nangangako ng interpreter para sa pasalitang pag-uusap, hindi kami nangangako ng serbisyo sa Filipino o sa alinmang wikang wala sa apat na nabanggit, at hindi kami nangangakong matatanggap ang bawat usapin.',
             ],
           },
@@ -1816,7 +1816,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'Anong mga usapin ang tinatanggap ng tanggapan?',
             answer:
-              'Tumatanggap ang tanggapan ng anim na pangkat ng usapin: pamumuhunan at pagtatatag ng kompanya sa Taiwan, sibil na alitan at danyos, usaping pampamilya at pagmamana, alitan sa paggawa, usaping kriminal, at intelektuwal na ari-arian. Ang pagtanggap sa isang tiyak na usapin ay napagpapasyahan pagkatapos suriin ang nilalaman nito.',
+              'Tumatanggap ang tanggapan ng anim na pangkat ng usapin: pamumuhunan at pagtatatag ng kompanya sa Taiwan, sibil na alitan at danyos, usaping pag-aasawa, pampamilya, at pagmamana, alitan sa paggawa, usaping kriminal, at intelektuwal na ari-arian. Ang pagtanggap sa isang tiyak na usapin ay napagpapasyahan pagkatapos suriin ang nilalaman nito.',
           },
           {
             question: 'Ano ang dapat kong ihanda bago makipag-ugnayan?',

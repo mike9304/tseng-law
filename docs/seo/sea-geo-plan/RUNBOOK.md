@@ -48,7 +48,7 @@ question: (한 줄)
 context: (두 줄 이내)
 options: (실제 선택지)
 ```
-답: `ls ~/.local/share/son-bridge/in/ | grep -v '\.done$' | grep sea-seo`. 손빗이 SendMessage로 직접 중계하기도 함. 답 전 추측 진행 금지. 재질문 금지: 交流協会·유료광고.
+답: `ls ~/.local/share/son-bridge/in/ | grep -v '\.done$' | grep sea-seo`. 손빗이 SendMessage로 직접 중계하기도 함. 답 전 추측 진행 금지. 재질문 금지: 交流協会·유료광고·색인요청(GSC/IndexNow).
 
 ## §6 승계 체크리스트 (새 총괄 첫 10분)
 1. PROMPT.md §2 → GOAL.md §A 첫 미완·§B 미결

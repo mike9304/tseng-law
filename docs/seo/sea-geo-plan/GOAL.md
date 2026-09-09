@@ -35,7 +35,7 @@
 ### S4 색인
 - [ ] S4-a 로컬 실측: RUNBOOK §3 ⑤ 렌더 40 URL → evidence/s4-local-render.txt
 - [ ] S4-b 배포 후(사용자 승인 시) `live-seo-scan` + `verify:multilingual-live` → evidence/s4-live-*.log
-- [~] 12:09 S4-c **앞당김**: ASK-20260909-1209-sea-seo-indexing(sitemap 재제출+Request Indexing 16URL+IndexNow 40URL) 답 대기. 승인 시 IndexNow는 총괄이 `--dry-run` 후 실행, GSC는 손빗
+- [x] 2026-09-09 S4-c **보류 종결(사용자 스킵 12:2x, 재질문 금지)**: sitemap 재제출·Request Indexing·IndexNow 전부 안 함. 색인은 구글 자연 크롤에 맡김. S4-d(2주 뒤 색인 재확인)만 유지. 4로케일 색인 0이 지속되면 반증 조건 3(기술 문제 아님, 사용자 결정에 의한 미요청)으로 기록
 - [ ] S4-d 2주 뒤 색인 재확인(손빗)
 
 ### S5 권위
@@ -51,7 +51,6 @@
 - [ ] `git log origin/main..HEAD` 정리 → `RELEASE-CHECK.md` → ASK 배포 승인 → 승인 시 RUNBOOK §4-b
 
 ## B. 미결·ASK 대기 (승계자는 여기부터)
-- S4-c 색인 ASK 답 대기(12:09).
 - S0-e: 손빗 AI 인용 실측 예정(S0-b 직후). geo-sea-baseline-2026-09.md 는 손빗 소유 중 — 쓰기 금지.
 - S1-b: Grok 검토 중. S1-c 판정 시 주의: C2~C5(/vi|id|th|fil/work-permit)는 international-guidance-content.ts(번역 레인 파일)에 본문이 필요 → 하드룰 4 충돌. 대안=별도 데이터 파일+코어 키 확장, 또는 번역 레인 요청. C1(EN 랜딩)은 intent-pages.ts 4로케일 동시 작성 필요.
 - S1-R1 Opus·S2a-review Grok·S2b Opus 병렬 진행 중(12:08). node_modules는 12:05 npm ci 재설치 완료.
@@ -70,5 +69,6 @@
 ## D. 세션 로그
 - 2026-09-09 · Fable 5.1 · PROMPT v2·GOAL·RUNBOOK·WO 작성(Documents).
 - 2026-09-09 11:25 · Fable 5.1 · /goal 가동. S0-a 완료, S0-b ASK 발송(승인), S0-c 완료, S0-d 커밋 05363645, S0-e 실측 0건→사용자 보류 종결, S5 커밋 551d2815, S1 Opus 진행 중.
+- 2026-09-09 12:2x · 사용자(손빗 중계) · 색인 요청(GSC·IndexNow) 보류, 재질문 금지.
 - 2026-09-09 11:5x · 사용자(손빗 중계 정정) · AI 인용 실측 승인(전부), 손빗 실행.
 - 2026-09-09 11:5x · Fable 5.1 · Documents TCC 차단 → 정본을 레포 docs/seo/sea-geo-plan/ 으로 이전·재생성.

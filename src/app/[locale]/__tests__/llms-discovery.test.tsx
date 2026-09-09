@@ -5,16 +5,20 @@ import { guidanceContent } from '@/data/international-guidance-content';
 import {
   GUIDANCE_LLMS_NOTICES,
   LOCALE_LLMS_TXT_MAX_BYTES,
+  ROOT_LLMS_TXT_MAX_BYTES,
   buildGuidanceLlmsTxt,
+  buildRootLlmsTxt,
   validateLlmsTxt,
 } from '@/lib/llms-txt';
 import { siteLocales } from '@/lib/locales';
 import {
   GUIDANCE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
+  PUBLIC_LANGUAGE_AUTONYMS,
   guidancePublicPath,
 } from '@/lib/public-guidance';
 import LocaleLayout from '../layout';
+import { GET as getLocaleLlmsTxt } from '../llms.txt/route';
 
 vi.mock('next/navigation', () => ({
   notFound: () => {
@@ -31,6 +35,9 @@ vi.mock('@/lib/seo', () => ({
   buildWebsiteJsonLd: () => ({ '@type': 'WebSite' }),
   buildLegalServiceJsonLd: () => ({ '@type': 'LegalService' }),
   getOrganizationName: () => 'Test Org',
+  // Same shape as the real helper; the root llms.txt builder needs it.
+  getLocalizedPath: (locale: string, path = '') =>
+    (!path || path === '/' ? `/${locale}` : `/${locale}${path.startsWith('/') ? path : `/${path}`}`),
 }));
 
 vi.mock('@/components/JsonLd', () => ({ default: () => null }));
@@ -136,5 +143,104 @@ describe('guidance locale llms.txt catalogs', () => {
     expect(() => validateLlmsTxt(body, LOCALE_LLMS_TXT_MAX_BYTES)).not.toThrow();
     expect(body.endsWith('\n')).toBe(true);
     expect(body.split('\n').filter((line) => line.startsWith('# '))).toHaveLength(1);
+  });
+});
+
+function requestLlmsTxt(locale: string) {
+  return getLocaleLlmsTxt(new Request(`https://tseng-law.com/${locale}/llms.txt`), {
+    params: Promise.resolve({ locale }),
+  });
+}
+
+describe('/[locale]/llms.txt route — guidance four', () => {
+  it.each(GUIDANCE_LOCALES_4)('serves the %s guidance catalog as plain UTF-8 text', async (locale) => {
+    const response = await requestLlmsTxt(locale);
+    const body = await response.text();
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get('content-type')).toBe('text/plain; charset=utf-8');
+    expect(response.headers.get('content-language')).toBe(locale);
+    expect(response.headers.get('cache-control')).toMatch(/^public,/u);
+    expect(response.headers.get('x-content-type-options')).toBe('nosniff');
+    expect(body).toBe(buildGuidanceLlmsTxt(locale));
+  });
+
+  it.each(GUIDANCE_LOCALES_4)('lists the ten %s guidance URLs exactly once each', async (locale) => {
+    const body = await (await requestLlmsTxt(locale)).text();
+    const urls = GUIDANCE_PAGE_KEYS.map(
+      (pageKey) => `https://tseng-law.com${guidancePublicPath(locale, pageKey)}`,
+    );
+
+    expect(urls).toHaveLength(10);
+    expect(new Set(urls).size).toBe(10);
+    for (const url of urls) {
+      expect(body.split(`](${url}):`).length - 1, url).toBe(1);
+    }
+  });
+
+  it.each(siteLocales)('keeps the existing %s locale manifest and headers unchanged', async (locale) => {
+    const response = await requestLlmsTxt(locale);
+    const body = await response.text();
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get('content-type')).toBe('text/plain; charset=utf-8');
+    expect(response.headers.get('cache-control')).toMatch(/^public,/u);
+    expect(response.headers.get('x-content-type-options')).toBe('nosniff');
+    expect(() => validateLlmsTxt(body, LOCALE_LLMS_TXT_MAX_BYTES)).not.toThrow();
+    for (const guidanceLocale of GUIDANCE_LOCALES_4) {
+      expect(body).not.toContain(`https://tseng-law.com/${guidanceLocale}`);
+    }
+  });
+
+  it.each(['fr', 'xx', 'vi-VN', 'zh'])('keeps returning 404 for the unsupported locale %s', async (locale) => {
+    const response = await requestLlmsTxt(locale);
+    const body = await response.text();
+
+    expect(response.status).toBe(404);
+    expect(response.headers.get('x-content-type-options')).toBe('nosniff');
+    expect(body).toBe('Not Found\n');
+    expect(body).not.toContain('/ko/');
+  });
+});
+
+describe('root llms.txt guidance catalog links', () => {
+  it('stays inside the 8 KiB root budget and the documented grammar', () => {
+    const body = buildRootLlmsTxt();
+
+    expect(new TextEncoder().encode(body).byteLength).toBeLessThanOrEqual(ROOT_LLMS_TXT_MAX_BYTES);
+    expect(() => validateLlmsTxt(body, ROOT_LLMS_TXT_MAX_BYTES)).not.toThrow();
+    expect(body.match(/^## [^\n]+$/gmu)).toEqual([
+      '## Locale catalogs',
+      '## Public AI consultation interfaces',
+    ]);
+  });
+
+  it('lists four site-locale catalogs and four guidance catalogs', () => {
+    const body = buildRootLlmsTxt();
+    const catalogUrls = Array.from(
+      body.matchAll(/\]\((https:\/\/tseng-law\.com\/[a-z-]+\/llms\.txt)\):/gu),
+      (match) => match[1],
+    );
+
+    expect(catalogUrls).toEqual([
+      ...siteLocales.map((locale) => `https://tseng-law.com/${locale}/llms.txt`),
+      ...GUIDANCE_LOCALES_4.map((locale) => `https://tseng-law.com/${locale}/llms.txt`),
+    ]);
+    expect(catalogUrls).toHaveLength(8);
+  });
+
+  it('labels each guidance catalog in its own language without widening consultation languages', () => {
+    const body = buildRootLlmsTxt();
+    const lines = body.split('\n');
+
+    for (const locale of GUIDANCE_LOCALES_4) {
+      const line = lines.find((candidate) =>
+        candidate.includes(`](https://tseng-law.com/${locale}/llms.txt):`));
+      expect(line, locale).toBeDefined();
+      expect(line).toContain(PUBLIC_LANGUAGE_AUTONYMS[locale]);
+      expect(line).toContain(
+        'Consultations are conducted only in English, Chinese, Japanese, and Korean.',
+      );
+    }
   });
 });

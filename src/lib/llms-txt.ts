@@ -3,7 +3,9 @@ import { guidanceContent } from '@/data/international-guidance-content';
 import { getAllColumnPosts } from '@/lib/columns';
 import { siteLocales, type SiteLocale } from '@/lib/locales';
 import {
+  GUIDANCE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
+  PUBLIC_LANGUAGE_AUTONYMS,
   guidancePublicPath,
   type GuidanceLocale4,
 } from '@/lib/public-guidance';
@@ -322,6 +324,20 @@ function finalizeLlmsTxt(lines: readonly string[], maxBytes: number): string {
   return body;
 }
 
+/**
+ * Root-file annotations for the four guidance-language catalogs.
+ *
+ * The guidance four are a reading surface only: every line restates, in the
+ * root file's own English, that consultations run in English, Chinese,
+ * Japanese and Korean. Never widen this to imply vi/id/th/fil consultation.
+ */
+const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
+  vi: 'Vietnamese',
+  id: 'Indonesian',
+  th: 'Thai',
+  fil: 'Filipino',
+};
+
 export function buildRootLlmsTxt(): string {
   const localeEntries = siteLocales.map((locale) => ({
     title: `${getOrganizationName(locale)} — ${locale} catalog`,
@@ -329,14 +345,20 @@ export function buildRootLlmsTxt(): string {
     annotation: `Public ${locale} site and legal-column discovery catalog.`,
   }));
 
-  if (localeEntries.length !== 4) {
-    throw new Error('Root llms.txt requires exactly four locale catalogs');
+  const guidanceEntries = GUIDANCE_LOCALES_4.map((locale) => ({
+    title: `${PUBLIC_LANGUAGE_AUTONYMS[locale]} — ${locale} guidance catalog`,
+    path: `/${locale}/llms.txt`,
+    annotation: `Public ${GUIDANCE_CATALOG_LANGUAGE_NAMES[locale]}-language guidance catalog. Consultations are conducted only in English, Chinese, Japanese, and Korean.`,
+  }));
+
+  if (localeEntries.length !== 4 || guidanceEntries.length !== 4) {
+    throw new Error('Root llms.txt requires exactly four site locale catalogs and four guidance catalogs');
   }
 
   const sections: LlmsSection[] = [
     {
       heading: 'Locale catalogs',
-      entries: localeEntries,
+      entries: [...localeEntries, ...guidanceEntries],
     },
     {
       heading: 'Public AI consultation interfaces',

@@ -41,7 +41,7 @@ function fixtureModule(entries: Array<[locale: string, key: string, value: strin
 }
 
 describe('guidance data country-name gate', () => {
-  it('reports zero violations across the four guidance data modules', () => {
+  it('reports zero violations across every guidance data module', () => {
     const result = scanGuidanceCountryMentions();
     expect(
       result.violations,

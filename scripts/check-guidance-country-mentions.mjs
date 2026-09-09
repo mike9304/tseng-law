@@ -38,6 +38,10 @@ export const GUIDANCE_DATA_FILES = [
   'src/data/international-guidance-answers.ts',
   'src/data/international-guidance-team.ts',
   'src/data/international-inquiry-copy.ts',
+  // The office band and footer chrome for the guidance locales: city names,
+  // field labels and photo alt text, all reader-facing. It was outside the gate
+  // until WO-O35 even though it is the same class of file as the four above.
+  'src/data/international-guidance-offices.ts',
 ];
 
 export const GUIDANCE_LOCALES = ['vi', 'id', 'th', 'fil'];

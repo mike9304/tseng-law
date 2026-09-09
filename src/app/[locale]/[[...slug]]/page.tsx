@@ -14,10 +14,6 @@ import { OPEN_GRAPH_LOCALE } from '@/lib/builder/seo/seo-model';
 import { isJaFullStaticPath, isJaUnsupportedPath, JA_SAFE_FALLBACK } from '@/lib/public-route-policy';
 import { buildLocalizedNotFoundMetadata } from '@/lib/not-found-copy';
 import GuidancePageBody from '@/components/GuidancePageBody';
-import GuidanceHomeBody, {
-  resolveGuidanceHomeColumns,
-} from '@/components/GuidanceHomeBody';
-import { getAllColumnPosts } from '@/lib/columns';
 import { guidanceContent } from '@/data/international-guidance-content';
 import {
   buildGuidanceCoreLanguageAlternates,
@@ -128,16 +124,6 @@ export default async function MainSiteCatchAllPage(
     const classified = classifyGuidanceSlug(params.slug);
     if (classified.kind !== 'page') {
       notFound();
-    }
-    if (classified.pageKey === 'home') {
-      // Same section sequence as the English home. Columns come from the
-      // locale's own files when the translation pipeline has written any, and
-      // otherwise from the first source language that has files, always behind
-      // an explicit "original language" badge.
-      const columns = resolveGuidanceHomeColumns(params.locale, (source) =>
-        getAllColumnPosts(source),
-      );
-      return <GuidanceHomeBody locale={params.locale} columns={columns} />;
     }
     return <GuidancePageBody locale={params.locale} pageKey={classified.pageKey} />;
   }

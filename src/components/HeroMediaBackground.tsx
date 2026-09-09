@@ -3,7 +3,6 @@
 import DecorativeAutoplayVideo, {
   DECORATIVE_VIDEO_CONTROL_LABELS,
 } from '@/components/DecorativeAutoplayVideo';
-import type { DecorativeVideoControlLabels } from '@/components/decorative-video-controls';
 import type { SiteLocale } from '@/lib/locales';
 
 type HeroMediaSlide = {
@@ -32,15 +31,7 @@ const defaultSlides: HeroMediaSlide[] = [
 // 전 로케일 공통: ko 사이트 기준 로테이터 (2026-07-28 사용자 지시 — zh-hant 야경 단일컷 예외 폐지)
 const slidesByLocale: Partial<Record<SiteLocale, HeroMediaSlide[]>> = {};
 
-/**
- * `controlLabels` lets the guidance locales (vi/id/th/fil) reuse this exact
- * markup with their own decorative-video labels. Omitting it keeps the
- * existing four-language output byte-for-byte identical.
- */
-export default function HeroMediaBackground({
-  locale,
-  controlLabels,
-}: { locale?: SiteLocale; controlLabels?: DecorativeVideoControlLabels } = {}) {
+export default function HeroMediaBackground({ locale }: { locale?: SiteLocale } = {}) {
   const slides = (locale && slidesByLocale[locale]) || defaultSlides;
   const slide = slides[0];
 
@@ -62,7 +53,7 @@ export default function HeroMediaBackground({
             sizes="100vw"
             rootMargin="-1px 0px"
             controlLabels={
-              controlLabels ?? DECORATIVE_VIDEO_CONTROL_LABELS[locale ?? 'ko']
+              DECORATIVE_VIDEO_CONTROL_LABELS[locale ?? 'ko']
             }
           />
         </div>

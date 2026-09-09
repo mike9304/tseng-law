@@ -1,8 +1,5 @@
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
-import {
-  DECORATIVE_VIDEO_CONTROL_LABELS,
-  type DecorativeVideoControlLabels,
-} from '@/components/decorative-video-controls';
+import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
 import type { SiteLocale } from '@/lib/locales';
 
 export const TAIWAN_HERITAGE_INTERLUDE_MEDIA = {
@@ -51,19 +48,10 @@ const copyByLocale = {
   }
 >;
 
-/**
- * `mediaAlt` / `controlLabels` let the guidance locales (vi/id/th/fil) render
- * the same editorial band with their own strings. When both are omitted the
- * existing four-language output is unchanged.
- */
 export default function TaiwanHeritageInterlude({
   locale,
-  mediaAlt,
-  controlLabels,
 }: {
   locale: SiteLocale;
-  mediaAlt?: string;
-  controlLabels?: DecorativeVideoControlLabels;
 }) {
   const copy = copyByLocale[locale];
 
@@ -74,14 +62,14 @@ export default function TaiwanHeritageInterlude({
     >
       <DecorativeAutoplayVideo
         {...TAIWAN_HERITAGE_INTERLUDE_MEDIA}
-        alt={mediaAlt ?? copy.mediaAlt}
+        alt={copy.mediaAlt}
         className="taiwan-heritage-interlude__media"
         imageClassName="taiwan-heritage-interlude__poster"
         videoClassName="taiwan-heritage-interlude__video"
         sizes="100vw"
         priority={false}
         rootMargin="240px 0px"
-        controlLabels={controlLabels ?? DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
+        controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
       />
     </div>
   );

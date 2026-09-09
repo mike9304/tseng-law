@@ -48,12 +48,13 @@
   각 주: 손빗 GSC(국가별 7일·생성형AI) ASK + 방문 7일 리포트 → metrics-log 1행 + 반증 조건 점검 + 다음 WO 결정
 
 ### 배포
-- [ ] `git log origin/main..HEAD` 정리 → `RELEASE-CHECK.md` → ASK 배포 승인 → 승인 시 RUNBOOK §4-b
+- [~] 13:16 origin/main(ad2da25a) 리베이스 완료(WO-REBASE-1, 답변블록·JSON-LD를 GuidancePageBody/GuidanceHomeBody로 이식), RELEASE-CHECK.md 작성(8698aab5), **배포 ASK 발송(ASK-20260909-1316-sea-seo-deploy)** → 답 대기. 승인 시 RUNBOOK §4-b
 
 ## B. 미결·ASK 대기 (승계자는 여기부터)
 - S0-e: 손빗 AI 인용 실측 예정(S0-b 직후). geo-sea-baseline-2026-09.md 는 손빗 소유 중 — 쓰기 금지.
 - S1-b: Grok 검토 중. S1-c 판정 시 주의: C2~C5(/vi|id|th|fil/work-permit)는 international-guidance-content.ts(번역 레인 파일)에 본문이 필요 → 하드룰 4 충돌. 대안=별도 데이터 파일+코어 키 확장, 또는 번역 레인 요청. C1(EN 랜딩)은 intent-pages.ts 4로케일 동시 작성 필요.
-- 12:56: S3 통합 Grok 검토 진행 중(drafts 워크트리). 이후 R1 반영 → S3 종결(초안 보관). 배포 라인은 배포 ASK 준비(RELEASE-CHECK.md).
+- 13:16: 배포 ASK 답 대기. drafts 워크트리에서 WO-S3-R1(Opus) 진행 중 → 끝나면 게이트·drafts 커밋 → S3 종결(초안 보관, 병합 조건은 변호사 검수).
+- 주의: drafts 브랜치는 구 베이스(6022bdcc 계열) 기반. 배포 라인 병합 시 리베이스 필요(WO-REBASE-1 방식 재사용).
 - drafts 브랜치 커밋: 0ff814e6(C1)·9f466e7b·11ce641d(C2~C5)·1ac3467f. 배포 라인과 별도. 병합 조건은 변호사 검수·마커 제거·테스트 3개 갱신.
 - drafts 브랜치 0ff814e6 인수 조건: 변호사 검수 후 마커 제거 → 테스트 3개(intent-pages-en-growth 슬러그 수·public-intent-docs 카운트·intent-pages-ja 한글금지) 갱신 → 배포 라인 병합. 셋 다 끝나면 통합 게이트(build+렌더) 1회 → 커밋 → Grok 검토 S2b·S3-C1 발주 → WO-S3-GUIDANCE-KEY.
 - 손빗 AI 인용 실측 진행 중(geo-sea-baseline-2026-09.md 쓰기 금지).

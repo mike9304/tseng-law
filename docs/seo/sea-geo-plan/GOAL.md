@@ -30,7 +30,7 @@
 
 ### S3 신규 인텐트 페이지 (S1-c 결과 수만큼)
 - [x] 2026-09-09 S3-C1-1 Opus 완료 → **drafts 브랜치 seo/sea-s3-drafts-20260909 커밋 0ff814e6**(배포 라인 격리): 4로케일 랜딩+라우트+sitemap+테스트, 마커 36(로케일당 9). 허용 밖 IntentLandingPage.tsx +39(exhaustive Record 필수, 수용). 기존 테스트 3개 깨짐 예상(슬러그 수 2·ja 한글금지 1=마커 게이트) → **S2b-R2 커밋 후 별도 브랜치 seo/sea-s3-drafts-20260909 로 분리 커밋**(main 배포 라인과 격리) → [ ] S3-C1-2 Grok 검토 → [ ] S3-C1-3 게이트·브랜치 커밋(마커 → main 금지)
-- [~] 12:4x S3-KEY-1 WO-S3-GUIDANCE-KEY Opus 진행 중(drafts 워크트리, 발주안 9f466e7b): public-guidance 코어 키 `work-permit-renewal` 추가 + src/data/international-guidance-extra.ts(vi/id/th/fil 본문·마커) + 사이트맵·hreflang → [ ] S3-KEY-2 Grok 검토 → [ ] S3-KEY-3 게이트·커밋
+- [x] 2026-09-09 S3-KEY-1 Opus 완료 → drafts 커밋 11ce641d (vitest 248·tsc 0, 마커 60, 코어 키 `work-permit-renewal` 11번째, GUIDANCE_PAGE_KEYS 10 유지): public-guidance 코어 키 `work-permit-renewal` 추가 + src/data/international-guidance-extra.ts(vi/id/th/fil 본문·마커) + 사이트맵·hreflang → [~] 12:56 S3-KEY-2 + S3-C1-2 통합 Grok 검토(WO-S3-review, drafts evidence/grok-S3-review.log) → [ ] S3-3 R1 반영·drafts 커밋
 
 ### S4 색인
 - [x] 2026-09-09 S4-a 로컬 40URL 실측 BAD 0/40(200·canonical self·hreflang 9·x-default en) → evidence/s4-local-hreflang.txt
@@ -53,7 +53,8 @@
 ## B. 미결·ASK 대기 (승계자는 여기부터)
 - S0-e: 손빗 AI 인용 실측 예정(S0-b 직후). geo-sea-baseline-2026-09.md 는 손빗 소유 중 — 쓰기 금지.
 - S1-b: Grok 검토 중. S1-c 판정 시 주의: C2~C5(/vi|id|th|fil/work-permit)는 international-guidance-content.ts(번역 레인 파일)에 본문이 필요 → 하드룰 4 충돌. 대안=별도 데이터 파일+코어 키 확장, 또는 번역 레인 요청. C1(EN 랜딩)은 intent-pages.ts 4로케일 동시 작성 필요.
-- 12:4x: S2 스트림 완료. drafts 워크트리 ~/Projects/tseng-law-sea-s3-drafts-20260909 에서 WO-S3-GUIDANCE-KEY(Opus) 진행 중. 끝나면 S3-C1·S3-KEY Grok 검토(drafts 워크트리 대상) → S4-a 로컬 hreflang 실측 → S5-c 발송 ASK.
+- 12:56: S3 통합 Grok 검토 진행 중(drafts 워크트리). 이후 R1 반영 → S3 종결(초안 보관). 배포 라인은 배포 ASK 준비(RELEASE-CHECK.md).
+- drafts 브랜치 커밋: 0ff814e6(C1)·9f466e7b·11ce641d(C2~C5)·1ac3467f. 배포 라인과 별도. 병합 조건은 변호사 검수·마커 제거·테스트 3개 갱신.
 - drafts 브랜치 0ff814e6 인수 조건: 변호사 검수 후 마커 제거 → 테스트 3개(intent-pages-en-growth 슬러그 수·public-intent-docs 카운트·intent-pages-ja 한글금지) 갱신 → 배포 라인 병합. 셋 다 끝나면 통합 게이트(build+렌더) 1회 → 커밋 → Grok 검토 S2b·S3-C1 발주 → WO-S3-GUIDANCE-KEY.
 - 손빗 AI 인용 실측 진행 중(geo-sea-baseline-2026-09.md 쓰기 금지).
 - S5-c: 발송 승인 ASK 미발송(S0-b 정리 후).

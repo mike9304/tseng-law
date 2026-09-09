@@ -157,6 +157,41 @@ describe('allowed 40 guidance route pairs', () => {
     expect(resolveGuidanceMiddlewareRewrite('/ko')).toBeNull();
   });
 
+  it.each(GUIDANCE_LOCALES_4)('lets /%s/llms.txt through without rewriting it', (locale) => {
+    expect(resolveGuidanceMiddlewareRewrite(`/${locale}/llms.txt`)).toEqual({
+      allowed: true,
+      internalPath: `/${locale}/llms.txt`,
+    });
+    expect(resolveGuidanceMiddlewareRewrite(`/${locale}/llms.txt?utm=1`)).toEqual({
+      allowed: true,
+      internalPath: `/${locale}/llms.txt`,
+    });
+    expect(resolveGuidanceMiddlewareRewrite(`/${locale}/llms.txt/`)).toEqual({
+      allowed: true,
+      internalPath: `/${locale}/llms.txt`,
+    });
+  });
+
+  it('keeps every other guidance path on its existing behaviour', () => {
+    expect(resolveGuidanceMiddlewareRewrite('/vi/services')).toEqual({
+      allowed: true,
+      internalPath: `/vi/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/services`,
+    });
+    expect(resolveGuidanceMiddlewareRewrite('/vi')).toEqual({
+      allowed: true,
+      internalPath: `/vi/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}`,
+    });
+    expect(resolveGuidanceMiddlewareRewrite('/vi/robots.txt')).toEqual({
+      allowed: false,
+      internalPath: `/vi/${PUBLIC_GUIDANCE_INTERNAL_UNAVAILABLE_SEGMENT}/robots.txt`,
+    });
+    expect(resolveGuidanceMiddlewareRewrite('/vi/store')).toEqual({
+      allowed: false,
+      internalPath: `/vi/${PUBLIC_GUIDANCE_INTERNAL_UNAVAILABLE_SEGMENT}/store`,
+    });
+    expect(resolveGuidanceMiddlewareRewrite('/ko/llms.txt')).toBeNull();
+  });
+
   it('does not double-rewrite internal catch-all prefixes', () => {
     expect(
       resolveGuidanceMiddlewareRewrite(`/${'vi'}/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/services`),

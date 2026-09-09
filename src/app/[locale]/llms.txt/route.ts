@@ -5,6 +5,7 @@ import {
   buildLocaleLlmsTxt,
 } from '@/lib/llms-txt';
 import {
+  GUIDANCE_LOCALES_4,
   isGuidanceLocale4,
   type PublicLocale8,
 } from '@/lib/public-guidance';
@@ -23,8 +24,10 @@ const contentLanguage: Record<PublicLocale8, string> = {
   fil: 'fil',
 };
 
+// `dynamicParams = false`, so every locale that GET can answer must be listed
+// here: the existing four plus the guidance four (vi/id/th/fil).
 export function generateStaticParams() {
-  return siteLocales.map((locale) => ({ locale }));
+  return [...siteLocales, ...GUIDANCE_LOCALES_4].map((locale) => ({ locale }));
 }
 
 function llmsTxtResponse(body: string, locale: PublicLocale8): Response {

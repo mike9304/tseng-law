@@ -196,6 +196,13 @@ export type GuidanceMiddlewareRewrite = {
   readonly internalPath: string;
 };
 
+/**
+ * Machine-readable files that must reach their own route handler untouched.
+ * Only `llms.txt` for now: every other dotted path keeps the unavailable
+ * guard, so this list is deliberately not a generic "has a dot" rule.
+ */
+const GUIDANCE_PASSTHROUGH_FILES: readonly string[] = ['llms.txt'];
+
 export function resolveGuidanceMiddlewareRewrite(pathname: string): GuidanceMiddlewareRewrite | null {
   const normalized = normalizePublicPathname(pathname);
   const locale = parsePublicLocaleFromPathname(normalized);
@@ -210,6 +217,15 @@ export function resolveGuidanceMiddlewareRewrite(pathname: string): GuidanceMidd
     || first === PUBLIC_GUIDANCE_INTERNAL_UNAVAILABLE_SEGMENT
   ) {
     return null;
+  }
+
+  // `/{vi|id|th|fil}/llms.txt` is served by its own route handler. Rewriting it
+  // onto the guidance catch-all would replace the manifest with the
+  // "unavailable" page, so keep the original path and let it through.
+  const slugSegments = slugPath.split('/');
+  const lastSegment = slugSegments[slugSegments.length - 1] ?? '';
+  if (GUIDANCE_PASSTHROUGH_FILES.includes(lastSegment)) {
+    return { allowed: true, internalPath: normalized };
   }
 
   // File routes own `/columns` and `/columns/[slug]` so translations can

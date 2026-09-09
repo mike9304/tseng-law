@@ -279,12 +279,18 @@ export async function middleware(request: NextRequest) {
   // New guidance four: rewrite onto the locale catch-all before SEO redirect
   // rules can remap into KO, and before sibling file routes (store, columns
   // detail, services/[slug], …) that normalize unknown locales into KO.
+  // A resolution whose target is the incoming path (`/{vi|id|th|fil}/llms.txt`,
+  // served by its own route handler) is a pass-through: continue without a
+  // rewrite, while still skipping the redirect lookup below.
   const guidanceRewrite = resolveGuidanceMiddlewareRewrite(pathname);
   if (guidanceRewrite) {
-    const url = request.nextUrl.clone();
-    url.pathname = guidanceRewrite.internalPath;
     const requestHeaders = new Headers(request.headers);
     requestHeaders.set('x-tseng-pathname', pathname);
+    if (guidanceRewrite.internalPath === pathname.replace(/\/+$/, '')) {
+      return NextResponse.next({ request: { headers: requestHeaders } });
+    }
+    const url = request.nextUrl.clone();
+    url.pathname = guidanceRewrite.internalPath;
     return NextResponse.rewrite(url, { request: { headers: requestHeaders } });
   }
 

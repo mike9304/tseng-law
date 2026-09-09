@@ -6,6 +6,7 @@ import {
   validateLlmsTxt,
 } from '@/lib/llms-txt';
 import { siteLocales, type SiteLocale } from '@/lib/locales';
+import { GUIDANCE_LOCALES_4, PUBLIC_LOCALES_8 } from '@/lib/public-guidance';
 import { getOrganizationName } from '@/lib/seo';
 import { GET, generateStaticParams } from '../route';
 
@@ -120,8 +121,11 @@ afterEach(() => {
 });
 
 describe('/[locale]/llms.txt', () => {
-  it('statically enumerates only the four public locales in canonical order', () => {
-    expect(generateStaticParams()).toEqual(siteLocales.map((locale) => ({ locale })));
+  it('statically enumerates all eight public locales in canonical order', () => {
+    expect(generateStaticParams()).toEqual(
+      [...siteLocales, ...GUIDANCE_LOCALES_4].map((locale) => ({ locale })),
+    );
+    expect(generateStaticParams().map((param) => param.locale)).toEqual([...PUBLIC_LOCALES_8]);
   });
 
   it.each(siteLocales)('serves a bounded valid %s manifest with locale headers', async (locale) => {

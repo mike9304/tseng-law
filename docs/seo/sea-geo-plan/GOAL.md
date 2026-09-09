@@ -22,20 +22,20 @@
 
 ### S2 GEO 구조 (S2a ∥ S2b 병렬 가능)
 - [x] 2026-09-09 S2a-1 Opus 구현 → vitest 7/7
-- [~] 12:07 S2a-2 Grok 검토 중(evidence/grok-S2a-review.log)
+- [x] 2026-09-09 S2a-2 Grok FAIL 1(services FAQ 문장 혼입, docs/seo/reviews/S2a-REVIEW.md) → WO-S2a-R1 Opus 반영 커밋 a506a7c1 (vitest 8/8, 미결: vi/about 밀도 보강은 길이 상한으로 보류)
 - [x] 2026-09-09 S2a-3 게이트(typecheck·vitest 75·build·렌더 8URL evidence/render-S2a.txt·계약 grep) → 커밋 1d5577ca (Grok 검토 FAIL 시 R1 후속 커밋)
-- [~] 12:08 S2b-1 Opus 진행 중
-- [ ] S2b-2 WO-S2b-review (Grok) → availableLanguage 위반 0, JSON-LD 파싱 0오류
-- [ ] S2b-3 총괄 게이트 → 커밋 SHA
+- [x] 2026-09-09 S2b-1 Opus 구현 → vitest 60·tsc 0 → 커밋 99fde7eb (llms.txt 라우트 배선은 WO-S2b-R1 진행 중 12:3x)
+- [ ] S2b-2 WO-S2b-review (Grok) — S2b-R1 커밋 후 발주
+- [ ] S2b-3 총괄 통합 게이트(build·렌더 JSON-LD·/vi/llms.txt curl) — S2a-R1·S2b-R1·S3-C1 워커 종료 후 1회
 
 ### S3 신규 인텐트 페이지 (S1-c 결과 수만큼)
-- [~] 12:2x S3-C1-1 Opus 진행 중(EN+3로케일 랜딩 /taiwan-work-permit-renewal-lawyer) → [ ] S3-C1-2 Grok 검토 → [ ] S3-C1-3 게이트·브랜치 커밋(마커 → main 금지)
+- [~] S3-C1-1 Opus 완료(미커밋, 12:5x): 4로케일 랜딩+라우트+sitemap+테스트, 마커 36(로케일당 9). 허용 밖 IntentLandingPage.tsx +39(exhaustive Record 필수, 수용). 기존 테스트 3개 깨짐 예상(슬러그 수 2·ja 한글금지 1=마커 게이트) → **S2b-R2 커밋 후 별도 브랜치 seo/sea-s3-drafts-20260909 로 분리 커밋**(main 배포 라인과 격리) → [ ] S3-C1-2 Grok 검토 → [ ] S3-C1-3 게이트·브랜치 커밋(마커 → main 금지)
 - [ ] S3-KEY-1 WO-S3-GUIDANCE-KEY(Opus, S2b 후): public-guidance 코어 키 `work-permit-renewal` 추가 + src/data/international-guidance-extra.ts(vi/id/th/fil 본문·마커) + 사이트맵·hreflang → [ ] S3-KEY-2 Grok 검토 → [ ] S3-KEY-3 게이트·커밋
 
 ### S4 색인
 - [ ] S4-a 로컬 실측: RUNBOOK §3 ⑤ 렌더 40 URL → evidence/s4-local-render.txt
 - [ ] S4-b 배포 후(사용자 승인 시) `live-seo-scan` + `verify:multilingual-live` → evidence/s4-live-*.log
-- [x] 2026-09-09 S4-c **보류 종결(사용자 스킵 12:2x, 재질문 금지)**: sitemap 재제출·Request Indexing·IndexNow 전부 안 함. 색인은 구글 자연 크롤에 맡김. S4-d(2주 뒤 색인 재확인)만 유지. 4로케일 색인 0이 지속되면 반증 조건 3(기술 문제 아님, 사용자 결정에 의한 미요청)으로 기록
+- [~] S4-c 색인 요청: 12:2x 보류 → **13:0x 사용자 정정=둘 다 승인**. 손빗이 GSC sitemap 재제출 + 16URL Request Indexing + IndexNow 40URL 실행 중(총괄은 중복 제출 방지 위해 실행 안 함). 손빗 완료 보고 오면 evidence/s4-indexing.md 에 기록 → [x]
 - [ ] S4-d 2주 뒤 색인 재확인(손빗)
 
 ### S5 권위
@@ -53,7 +53,8 @@
 ## B. 미결·ASK 대기 (승계자는 여기부터)
 - S0-e: 손빗 AI 인용 실측 예정(S0-b 직후). geo-sea-baseline-2026-09.md 는 손빗 소유 중 — 쓰기 금지.
 - S1-b: Grok 검토 중. S1-c 판정 시 주의: C2~C5(/vi|id|th|fil/work-permit)는 international-guidance-content.ts(번역 레인 파일)에 본문이 필요 → 하드룰 4 충돌. 대안=별도 데이터 파일+코어 키 확장, 또는 번역 레인 요청. C1(EN 랜딩)은 intent-pages.ts 4로케일 동시 작성 필요.
-- S1-R1 Opus·S2a-review Grok·S2b Opus 병렬 진행 중(12:08). node_modules는 12:05 npm ci 재설치 완료.
+- 12:5x 워커: S2b-R2(Opus) 진행 중. 끝나면 ① S2b-R2 커밋 ② S3-C1 파일을 drafts 브랜치로 분리 ③ 통합 게이트(build·렌더) ④ Grok 검토 S2b·S3-C1. 셋 다 끝나면 통합 게이트(build+렌더) 1회 → 커밋 → Grok 검토 S2b·S3-C1 발주 → WO-S3-GUIDANCE-KEY.
+- 손빗 AI 인용 실측 진행 중(geo-sea-baseline-2026-09.md 쓰기 금지).
 - S5-c: 발송 승인 ASK 미발송(S0-b 정리 후).
 - Documents 폴더 TCC 차단(11:4x~): 구 정본 접근 불가. 이 폴더가 정본.
 
@@ -69,6 +70,7 @@
 ## D. 세션 로그
 - 2026-09-09 · Fable 5.1 · PROMPT v2·GOAL·RUNBOOK·WO 작성(Documents).
 - 2026-09-09 11:25 · Fable 5.1 · /goal 가동. S0-a 완료, S0-b ASK 발송(승인), S0-c 완료, S0-d 커밋 05363645, S0-e 실측 0건→사용자 보류 종결, S5 커밋 551d2815, S1 Opus 진행 중.
-- 2026-09-09 12:2x · 사용자(손빗 중계) · 색인 요청(GSC·IndexNow) 보류, 재질문 금지.
+- 2026-09-09 13:0x · 사용자(손빗 중계 정정) · 색인 요청 둘 다 승인, 손빗 실행.
+- 2026-09-09 12:2x · 사용자(손빗 중계) · 색인 요청 보류(→13:0x 철회).
 - 2026-09-09 11:5x · 사용자(손빗 중계 정정) · AI 인용 실측 승인(전부), 손빗 실행.
 - 2026-09-09 11:5x · Fable 5.1 · Documents TCC 차단 → 정본을 레포 docs/seo/sea-geo-plan/ 으로 이전·재생성.

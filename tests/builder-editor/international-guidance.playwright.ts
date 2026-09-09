@@ -273,7 +273,12 @@ async function assertCorePage(
     const pack = guidanceContent[locale];
     const localized = pack.pages[pageKey];
     await expect(h1).toHaveText(localized.title);
-    const article = guidanceShell(page).locator('article').first();
+    // O16: the home page now opens on the shared hero (title + description) and
+    // carries its intro and section cards further down, so the guidance copy is
+    // no longer inside a single leading <article>. The three assertions below
+    // are unchanged; only their scope moved from that article to the guidance
+    // shell, which is still guidance-only content.
+    const article = guidanceShell(page);
     await expect(article).toContainText(localized.description);
     await expect(article).toContainText(localized.intro);
     await expect(article).toContainText(localized.sections[0]?.heading ?? localized.title);

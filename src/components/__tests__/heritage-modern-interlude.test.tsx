@@ -116,9 +116,13 @@ describe('TaiwanHeritageInterlude', () => {
       'utf8',
     );
 
+    // O16 added optional `mediaAlt` / `controlLabels` overrides so the guidance
+    // locales can reuse this band; with the props omitted the four site locales
+    // still resolve their own labels from DECORATIVE_VIDEO_CONTROL_LABELS.
     expect(source).toContain(
-      'controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}',
+      'controlLabels={controlLabels ?? DECORATIVE_VIDEO_CONTROL_LABELS[locale]}',
     );
+    expect(source).toContain('alt={mediaAlt ?? copy.mediaAlt}');
   });
 
   it('sits between services and the attorney profile in the legacy home flow', () => {

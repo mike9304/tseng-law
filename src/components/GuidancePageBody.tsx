@@ -128,32 +128,50 @@ export default function GuidancePageBody({
         </Reveal>
       ) : null}
 
-      <Reveal>
-        <section className="section section--dark home-contact-cta" id="contact" data-tone="dark">
-          <div className="container">
-            <div className="section-label">{pack.nav.contact}</div>
-            <h2 className="section-title">{pack.contactCta}</h2>
-            <div className="section-lede">
-              <InternationalInquiryNotice locale={locale} showContactLink={!isContact} />
-            </div>
-            <div className="home-contact-actions">
-              {isContact ? (
-                <a className="button ghost" href={`mailto:${CONSULTATION_EMAIL}`}>
-                  {CONSULTATION_EMAIL}
-                </a>
-              ) : (
-                <Link className="button ghost" href={guidancePublicPath(locale, 'contact')}>
-                  {pack.contactCta}
-                </Link>
-              )}
-              <a className="button secondary" href={`mailto:${CONSULTATION_EMAIL}`}>
+      <GuidanceContactBand locale={locale} isContact={isContact} />
+    </div>
+  );
+}
+
+/**
+ * Closing contact band shared by every guidance page, including the home page.
+ * Extracted verbatim so the home body can reuse it without duplicating the
+ * four-consultation-languages notice.
+ */
+export function GuidanceContactBand({
+  locale,
+  isContact,
+}: {
+  locale: GuidanceLocale;
+  isContact: boolean;
+}) {
+  const pack = guidanceContent[locale];
+  return (
+    <Reveal>
+      <section className="section section--dark home-contact-cta" id="contact" data-tone="dark">
+        <div className="container">
+          <div className="section-label">{pack.nav.contact}</div>
+          <h2 className="section-title">{pack.contactCta}</h2>
+          <div className="section-lede">
+            <InternationalInquiryNotice locale={locale} showContactLink={!isContact} />
+          </div>
+          <div className="home-contact-actions">
+            {isContact ? (
+              <a className="button ghost" href={`mailto:${CONSULTATION_EMAIL}`}>
                 {CONSULTATION_EMAIL}
               </a>
-            </div>
+            ) : (
+              <Link className="button ghost" href={guidancePublicPath(locale, 'contact')}>
+                {pack.contactCta}
+              </Link>
+            )}
+            <a className="button secondary" href={`mailto:${CONSULTATION_EMAIL}`}>
+              {CONSULTATION_EMAIL}
+            </a>
           </div>
-        </section>
-      </Reveal>
-    </div>
+        </div>
+      </section>
+    </Reveal>
   );
 }
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import InternationalInquiryForm, {
   InternationalInquiryNotice,
 } from '@/components/InternationalInquiryForm';
-import PublicLanguageSwitcher from '@/components/PublicLanguageSwitcher';
+import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 import {
   guidanceContent,
   type GuidanceLocale,
@@ -54,7 +54,10 @@ export default function InternationalGuidance({
             </span>
           </Link>
           <div className={styles.languageBlock} aria-label={pack.languageLabel}>
-            <PublicLanguageSwitcher locale={locale} className={styles.languageSwitcher} />
+            <LocaleFlagSwitcher
+              locale={locale}
+              className={`public-language-switcher ${styles.languageSwitcher}`}
+            />
           </div>
           <nav className={styles.nav} aria-label={pack.menuLabel}>
             <ul className={styles.navList}>

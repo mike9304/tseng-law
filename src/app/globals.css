@@ -5403,7 +5403,10 @@ section.home-results-panel--editorial {
   background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid rgba(148, 163, 184, 0.14);
   position: relative;
-  z-index: 2;
+  /* Above .header-main (z-index: 5) so the language dropdown is not covered by
+     .nav-cta / logo / search in the main bar. Layout is unchanged: the two
+     bars do not overlap; only overflowing descendants need this stack. */
+  z-index: 6;
   backdrop-filter: blur(16px);
 }
 
@@ -5477,7 +5480,7 @@ section.home-results-panel--editorial {
   border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: 999px;
   background: rgba(248, 250, 252, 0.94);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .locale-flag-switcher-link {
@@ -6365,6 +6368,7 @@ section.home-results-panel--editorial {
 #public-mobile-nav-drawer .locale-flag-switcher--mobile {
   min-width: 0;
   max-width: 100%;
+  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -6422,6 +6426,8 @@ section.home-results-panel--editorial {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.55rem;
+  position: relative;
+  z-index: 2;
 }
 
 .locale-flag-switcher--mobile {

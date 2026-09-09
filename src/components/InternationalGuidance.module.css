@@ -120,6 +120,20 @@
   overflow-wrap: anywhere;
 }
 
+.languageBlock {
+  min-width: 0;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+
+@media (max-width: 640px) {
+  .languageBlock {
+    flex: 1 1 100%;
+  }
+}
+
 .languageSwitcher {
   display: flex;
   flex-wrap: wrap;

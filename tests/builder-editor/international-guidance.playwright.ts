@@ -163,8 +163,13 @@ async function clickLanguage(
 ): Promise<void> {
   const autonym = PUBLIC_LANGUAGE_AUTONYMS[targetLocale];
   if (isGuidanceLocale4(currentLocale)) {
-    const switcher = guidanceShell(page).locator('.public-language-switcher');
-    await expect(switcher).toBeVisible();
+    const switcher = guidanceShell(page).locator('.locale-flag-switcher');
+    const details = switcher.locator('details');
+    await expect(details).toBeVisible();
+    if ((await details.getAttribute('open')) === null) {
+      await details.locator('summary').click();
+    }
+    await expect(details).toHaveAttribute('open', '');
     await switcher.getByRole('link', { name: autonym, exact: true }).click();
     return;
   }

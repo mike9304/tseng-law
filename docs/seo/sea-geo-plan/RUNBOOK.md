@@ -38,7 +38,7 @@ grep -rn "\[변호사 검수 필요\]" $(git diff --name-only)                  
 
 ## §4 커밋·배포
 a) `git add <파일명>` → `git commit -m "seo(sea): <내용>" -m "구현: <워커> · 검수: <총괄>" -m "Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>"`. SHA를 GOAL.md에 기록하고 GOAL.md도 함께 커밋.
-b) 배포(ASK 승인 후만): `git fetch origin && git rebase origin/main`(충돌 시 중단·ASK) → ②~⑥ 재실행 → `git push origin seo/sea-geo-20260909:main` → `gh api repos/mike9304/tseng-law/commits/$(git rev-parse HEAD)/status | grep -m1 state` success → 라이브 스캔 → IndexNow. 롤백 `git revert`. 강제 push 금지.
+b) 배포(ASK 승인 후만). **주의: Claude Code 세션의 `git push`는 권한 분류기에 차단됨(9/9 실측) → 승인 후 push는 ASK로 손빗/사용자에게 1커맨드 위임, 총괄은 Vercel 상태·라이브 스캔만.** `git fetch origin && git rebase origin/main`(충돌 시 중단·ASK) → ②~⑥ 재실행 → `git push origin seo/sea-geo-20260909:main` → `gh api repos/mike9304/tseng-law/commits/$(git rev-parse HEAD)/status | grep -m1 state` success → 라이브 스캔 → IndexNow. 롤백 `git revert`. 강제 push 금지.
 
 ## §5 ASK
 `~/.local/share/son-bridge/ask/ASK-<YYYYMMDD-HHMM>-sea-seo-<주제>-claude.md`

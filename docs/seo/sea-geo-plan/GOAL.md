@@ -34,7 +34,7 @@
 
 ### S4 색인
 - [x] 2026-09-09 S4-a 로컬 40URL 실측 BAD 0/40(200·canonical self·hreflang 9·x-default en) → evidence/s4-local-hreflang.txt
-- [ ] S4-b 배포 후(사용자 승인 시) `live-seo-scan` + `verify:multilingual-live` → evidence/s4-live-*.log
+- [x] 2026-09-09 S4-b verify:multilingual-live PASS 400/0 · live-seo-scan 28URL 중 2건(/ko·/zh-hant 홈 'body too short') = 빌더 캔버스 홈의 스캐너 휴리스틱 오탐(600KB/2.2MB·title·h1 정상, 이 배포 diff는 ko/zh-hant 홈 미접촉) → evidence/s4-live-seo.log. 추적 항목으로만 유지
 - [x] 2026-09-09 S4-c 손빗 실행: IndexNow 40URL 200, sitemap Success(재제출 불필요), Request Indexing 8 요청/3 거부(홈)/3 오류/2 미시도(할당량) → evidence/s4-indexing.md. 잔여 7URL·거부 사유는 S4-d에서
 - [ ] S4-d 2026-09-23 손빗 ASK: 40URL 색인 상태 + 거부 3홈 사유(URL 검사) + 잔여 7URL 재요청
 
@@ -48,11 +48,12 @@
   각 주: 손빗 GSC(국가별 7일·생성형AI) ASK + 방문 7일 리포트 → metrics-log 1행 + 반증 조건 점검 + 다음 WO 결정
 
 ### 배포
-- [~] 13:16 origin/main(ad2da25a) 리베이스 완료(WO-REBASE-1, 답변블록·JSON-LD를 GuidancePageBody/GuidanceHomeBody로 이식), RELEASE-CHECK.md 작성(8698aab5), **배포 ASK 발송(ASK-20260909-1316-sea-seo-deploy)** → 답 대기. 승인 시 RUNBOOK §4-b
+- [x] 2026-09-09 15:07 **배포 완료**: 사용자 승인(ASK-1316) → Claude push 차단 → 손빗이 push(97c33510..3799c41d FF) → Vercel success(Bod7Ygt3…) → 라이브 검증 evidence/s4-live-curl.txt(4로케일 llms.txt 200·JSON-LD availableLanguage 4개·summary 블록·FAQPage) + s4-live-multilingual.log(overall PASS 400/0)
 
 ## B. 미결·ASK 대기 (승계자는 여기부터)
 - S0-e: 손빗 AI 인용 실측 예정(S0-b 직후). geo-sea-baseline-2026-09.md 는 손빗 소유 중 — 쓰기 금지.
 - S1-b: Grok 검토 중. S1-c 판정 시 주의: C2~C5(/vi|id|th|fil/work-permit)는 international-guidance-content.ts(번역 레인 파일)에 본문이 필요 → 하드룰 4 충돌. 대안=별도 데이터 파일+코어 키 확장, 또는 번역 레인 요청. C1(EN 랜딩)은 intent-pages.ts 4로케일 동시 작성 필요.
+- 15:08: **배포 라이브(3799c41d)**. 잔여=S0-e 손빗 AI 인용 실측, S6 W1(9/16), S4-d(9/23). Claude Code 세션은 git push 권한 분류기 차단 → push는 손빗/사용자.
 - 13:3x: S3 스트림 종결(초안 브랜치 seo/sea-s3-drafts-20260909 HEAD 7f87e3a9, 워크트리 ~/Projects/tseng-law-sea-s3-drafts-20260909). 배포 ASK 답 대기. 손빗 AI 인용 실측(S0-e) 대기.
 - **S3 초안 인수 조건**(사용자·변호사): ① 변호사가 마커 96건(C1 44·C2~C5 52) 검수 ② 마커 제거 ③ 테스트 4파일 갱신(intent 수 4→5 ×3, intent-pages-ja 한글 게이트) ④ 배포 라인 위로 리베이스(WO-REBASE-1 방식) ⑤ 배포 ASK.
 - 주의: drafts 브랜치는 구 베이스(6022bdcc 계열) 기반. 배포 라인 병합 시 리베이스 필요(WO-REBASE-1 방식 재사용).
@@ -74,6 +75,7 @@
 ## D. 세션 로그
 - 2026-09-09 · Fable 5.1 · PROMPT v2·GOAL·RUNBOOK·WO 작성(Documents).
 - 2026-09-09 11:25 · Fable 5.1 · /goal 가동. S0-a 완료, S0-b ASK 발송(승인), S0-c 완료, S0-d 커밋 05363645, S0-e 실측 0건→사용자 보류 종결, S5 커밋 551d2815, S1 Opus 진행 중.
+- 2026-09-09 15:0x · 사용자(손빗 중계) · 배포 승인 → 손빗 push → Vercel 라이브 3799c41d.
 - 2026-09-09 12:4x · 사용자(손빗 중계) · 권위 등재 발송 보류, 재질문 금지.
 - 2026-09-09 12:3x · 사용자(손빗 중계 정정) · 색인 요청 둘 다 승인, 손빗 실행.
 - 2026-09-09 12:2x · 사용자(손빗 중계) · 색인 요청 보류(→13:0x 철회).

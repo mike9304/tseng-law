@@ -22,6 +22,7 @@
     "audit:release": "node scripts/run-release-audit.mjs",
     "audit:w-checkpoints": "node scripts/run-w-checkpoint-audit.mjs",
     "check:r02-stubs": "node scripts/run-production-stub-registry.mjs --check",
+    "check:column-translation": "node scripts/check-column-translation.mjs",
     "qa:agent": "node scripts/run-qa-agent.mjs",
     "qa:sweep": "node scripts/run-qa-sweep.mjs",
     "gate:handoff-blockers": "node scripts/handoff-blockers-gate.mjs",

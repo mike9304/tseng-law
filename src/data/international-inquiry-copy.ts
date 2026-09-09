@@ -10,6 +10,8 @@
  * `SiteLocale` union is still four languages, and this copy must not widen it.
  */
 
+import { ID_PRIVACY_POLICY_LABEL } from '@/data/guidance-privacy-label';
+
 export type InquiryCopyLocale =
   | 'ko'
   | 'zh-hant'
@@ -346,7 +348,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     emailLabel: 'Email',
     consentLabel:
       'Saya sudah membaca kebijakan privasi dan setuju untuk mengirim permintaan ini.',
-    privacyLinkLabel: 'Kebijakan privasi',
+    privacyLinkLabel: ID_PRIVACY_POLICY_LABEL,
     requiredMessage: 'Kolom ini wajib diisi.',
     invalidEmailMessage: 'Masukkan alamat email yang valid.',
     tooLongMessage: 'Teks ini terlalu panjang. Persingkat lalu kirim lagi.',

@@ -15,6 +15,8 @@
  * `SiteLocale` union is still four languages, and this content must not widen it.
  */
 
+import { ID_PRIVACY_POLICY_LABEL } from '@/data/guidance-privacy-label';
+
 export type GuidanceLocale = 'vi' | 'id' | 'th' | 'fil';
 
 export type GuidancePageKey =
@@ -602,7 +604,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       pricing: 'Lingkup dan biaya',
       contact: 'Kontak',
       faq: 'Pertanyaan umum',
-      privacy: 'Privasi',
+      privacy: ID_PRIVACY_POLICY_LABEL,
       disclaimer: 'Penafian',
       columns: 'Artikel',
     },

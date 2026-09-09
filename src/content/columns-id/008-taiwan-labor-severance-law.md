@@ -200,7 +200,7 @@ atau menempatkan karyawan pada posisi yang tidak wajar,
 
 **catatan kerja lembur, catatan pencapaian kerja,**
 
-**peraturan perusahaan, catatan surel dengan rekan kerja dan atasan,**
+**peraturan perusahaan, catatan email dengan rekan kerja dan atasan,**
 
 **serta rekaman percakapan dengan atasan Anda —**
 

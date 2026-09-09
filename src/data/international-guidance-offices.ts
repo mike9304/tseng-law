@@ -182,9 +182,9 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
     blogLabel: 'Blog',
     websiteLabel: 'Situs resmi',
     sitemapLabel: 'Peta situs',
-    copyEmailLabel: 'Salin alamat surel',
-    emailCopiedMessage: 'Alamat surel telah disalin.',
-    officialConsultationEmailLabel: 'Surel resmi untuk konsultasi',
+    copyEmailLabel: 'Salin alamat email',
+    emailCopiedMessage: 'Alamat email telah disalin.',
+    officialConsultationEmailLabel: 'Email resmi untuk konsultasi',
   },
   th: {
     officeLabel: 'สำนักงาน',

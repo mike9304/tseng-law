@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import type { SiteLocale } from '@/lib/locales';
+import type { PublicLocale8 } from '@/lib/public-guidance';
 import styles from './Breadcrumbs.module.css';
 
-export default function Breadcrumbs({ locale, current }: { locale: SiteLocale; current: string }) {
+export default function Breadcrumbs({ locale, current }: { locale: PublicLocale8; current: string }) {
   const homeLabel =
     locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
   const navLabel =

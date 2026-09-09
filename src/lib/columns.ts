@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import type { Locale, SiteLocale } from './locales';
+import { COLUMN_CONTENT_DIR_BY_LOCALE, getColumnAlternateLocales } from './column-locales';
+import { isGuidanceLocale4, isPublicLocale8, type PublicLocale8 } from './public-guidance';
 import { insightsArchive } from '../data/insights-archive';
 import {
   formatColumnPublicationDate,
@@ -48,30 +50,32 @@ export function normalizeColumnFaq(raw: unknown): ColumnFaqItem[] {
     .filter((item): item is ColumnFaqItem => item !== null);
 }
 
-const COLUMNS_DIR = path.join(process.cwd(), 'src/content/columns');
-const COLUMNS_ZH_DIR = path.join(process.cwd(), 'src/content/columns-zh');
-const COLUMNS_EN_DIR = path.join(process.cwd(), 'src/content/columns-en');
-const COLUMNS_JA_DIR = path.join(process.cwd(), 'src/content/columns-ja');
+export type ColumnContentLocale = Locale | SiteLocale | PublicLocale8;
 
-function getColumnsDir(locale: Locale | SiteLocale): string {
-  if (locale === 'zh-hant') {
-    if (!fs.existsSync(COLUMNS_ZH_DIR)) {
-      throw new Error('Missing Chinese column directory: src/content/columns-zh');
-    }
-    return COLUMNS_ZH_DIR;
+export type ColumnLoadOptions = {
+  /** Absolute markdown directory. Test hook — production omits this. */
+  columnsDir?: string;
+  cwd?: string;
+};
+
+const COLUMNS_DIR = path.join(process.cwd(), 'src/content/columns');
+
+function getColumnsDir(locale: ColumnContentLocale, options?: ColumnLoadOptions): string | null {
+  if (options?.columnsDir) {
+    return fs.existsSync(options.columnsDir) ? options.columnsDir : null;
   }
-  if (locale === 'en') {
-    if (!fs.existsSync(COLUMNS_EN_DIR)) {
-      throw new Error('Missing English column directory: src/content/columns-en');
+
+  if (isPublicLocale8(locale)) {
+    const dir = path.join(options?.cwd ?? process.cwd(), COLUMN_CONTENT_DIR_BY_LOCALE[locale]);
+    if (isGuidanceLocale4(locale)) {
+      return fs.existsSync(dir) ? dir : null;
     }
-    return COLUMNS_EN_DIR;
-  }
-  if (locale === 'ja') {
-    if (!fs.existsSync(COLUMNS_JA_DIR)) {
-      throw new Error('Missing Japanese column directory: src/content/columns-ja');
+    if (!fs.existsSync(dir)) {
+      throw new Error(`Missing column directory: ${COLUMN_CONTENT_DIR_BY_LOCALE[locale]}`);
     }
-    return COLUMNS_JA_DIR;
+    return dir;
   }
+
   return COLUMNS_DIR;
 }
 
@@ -95,7 +99,11 @@ function categoryFromString(cat: string): ColumnCategory {
   return 'legal';
 }
 
-function categoryLabelFn(cat: ColumnCategory, locale: Locale | SiteLocale): string {
+function categoryLabelFn(cat: ColumnCategory, locale: ColumnContentLocale): string {
+  if (isGuidanceLocale4(locale)) {
+    const map: Record<ColumnCategory, string> = { formation: 'Company Setup', legal: 'Legal Information', case: 'Case Study' };
+    return map[cat];
+  }
   if (locale === 'zh-hant') {
     const map: Record<ColumnCategory, string> = { formation: '公司設立', legal: '法律資訊', case: '訴訟案例' };
     return map[cat];
@@ -181,8 +189,12 @@ export function getAliasSlugs(): string[] {
   return Object.keys(SLUG_ALIASES);
 }
 
-export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPost[] {
-  const dir = getColumnsDir(locale);
+export function getAllColumnPosts(
+  locale: ColumnContentLocale = 'ko',
+  options?: ColumnLoadOptions,
+): ColumnPost[] {
+  const dir = getColumnsDir(locale, options);
+  if (!dir) return [];
   const files = fs.readdirSync(dir)
     .filter((f) => f.endsWith('.md'))
     .sort((a, b) => a.localeCompare(b, 'en'));
@@ -257,15 +269,34 @@ export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPos
   );
 }
 
-export function getColumnPost(slug: string, locale: Locale | SiteLocale = 'ko'): ColumnPost | undefined {
+export function getColumnPost(
+  slug: string,
+  locale: ColumnContentLocale = 'ko',
+  options?: ColumnLoadOptions,
+): ColumnPost | undefined {
   const realSlug = resolveSlug(slug);
-  return getAllColumnPosts(locale).find((p) => p.slug === realSlug);
+  return getAllColumnPosts(locale, options).find((p) => p.slug === realSlug);
+}
+
+export function hasColumnTranslation(
+  locale: ColumnContentLocale,
+  slug: string,
+  options?: ColumnLoadOptions,
+): boolean {
+  return Boolean(getColumnPost(slug, locale, options));
 }
 
 export function getColumnSlugs(): string[] {
   return getAllColumnPosts('ko').map((p) => p.slug);
 }
 
-export function getFeaturedColumns(count = 6, locale: Locale | SiteLocale = 'ko'): ColumnPost[] {
+export function getFeaturedColumns(count = 6, locale: ColumnContentLocale = 'ko'): ColumnPost[] {
   return getAllColumnPosts(locale).slice(0, count);
+}
+
+export function fileBackedColumnAlternateLocales(slug: string): PublicLocale8[] {
+  const realSlug = resolveSlug(slug);
+  return getColumnAlternateLocales(realSlug, {
+    hasTranslation: (locale, value) => hasColumnTranslation(locale, value),
+  });
 }

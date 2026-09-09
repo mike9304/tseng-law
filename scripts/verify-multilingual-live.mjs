@@ -289,6 +289,7 @@ export function formatHumanReport(result) {
     ['c', checks.c_hreflang],
     ['d', checks.d_consultation_notice],
     ['e', checks.e_privacy_memo],
+    ['f', checks.f_translated_columns],
   ];
   for (const [item, check] of order) {
     const notes = [];
@@ -406,6 +407,7 @@ export async function runMultilingualLiveCheck({
     c_hreflang: emptyCheck('c', 'hreflang 8 locales + x-default'),
     d_consultation_notice: emptyCheck('d', 'consultation language notice'),
     e_privacy_memo: emptyCheck('e', 'privacy internal-memo phrases'),
+    f_translated_columns: emptyCheck('f', 'translated columns 200 + hreflang'),
   };
 
   const sitemapUrl = `${origin}/sitemap.xml`;
@@ -555,6 +557,53 @@ export async function runMultilingualLiveCheck({
       });
     } else {
       addPass(checks.e_privacy_memo);
+    }
+  }
+
+  const originUrl = new URL(origin);
+  for (const locale of GUIDANCE_LOCALES_4) {
+    const columnsPath = guidancePublicPath(locale, 'columns');
+    const columnsPage = corePages.find((item) => item.locale === locale && item.pageKey === 'columns');
+    if (!columnsPage?.result?.ok) {
+      addFailure(checks.f_translated_columns, {
+        url: columnsPage?.url || `${origin}${columnsPath}`,
+        message: `${locale} /columns not 200; cannot check translated slugs`,
+      });
+      continue;
+    }
+    addPass(checks.f_translated_columns);
+
+    const localePrefix = `/${locale}/columns/`;
+    const slugLocs = locs.filter((loc) => {
+      try {
+        const parsed = new URL(loc);
+        if (parsed.origin !== originUrl.origin) return false;
+        const pathname = parsed.pathname.replace(/\/+$/, '') || '/';
+        return pathname.startsWith(localePrefix) && pathname !== columnsPath;
+      } catch {
+        return false;
+      }
+    });
+
+    for (const loc of slugLocs) {
+      const result = await request(loc, { method: 'GET', wantBody: true });
+      if (!result.ok) {
+        addFailure(checks.f_translated_columns, {
+          url: loc,
+          message: `${locale} translated slug GET ${result.status || result.error || 'error'}`,
+        });
+        continue;
+      }
+      const tag = hreflangTagForPublicLocale(locale);
+      const alternates = parseHreflangAlternates(result.body);
+      if (!alternates.has(tag)) {
+        addFailure(checks.f_translated_columns, {
+          url: loc,
+          message: `${locale} translated slug missing hreflang ${tag}`,
+        });
+      } else {
+        addPass(checks.f_translated_columns);
+      }
     }
   }
 

@@ -19,8 +19,18 @@ import {
 } from '@/lib/builder/dynamic-template-drafts';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { checkAccess } from '@/lib/builder/members/members-engine';
-import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildSeoMetadata } from '@/lib/seo';
+import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildSeoMetadata, getSiteUrl } from '@/lib/seo';
 import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
+import InternationalGuidance, {
+  OriginalLanguageColumnsSection,
+} from '@/components/InternationalGuidance';
+import { guidanceContent } from '@/data/international-guidance-content';
+import {
+  buildGuidanceCoreLanguageAlternates,
+  guidanceCanonicalUrl,
+  isGuidanceLocale4,
+  type GuidanceLocale4,
+} from '@/lib/public-guidance';
 
 export const dynamic = 'force-dynamic';
 
@@ -60,8 +70,35 @@ const columnKeywords: Record<SiteLocale, string[]> = {
   ja: ['台湾法律コラム', '台湾会社設立', '台湾訴訟事例', '台湾労働法', '台湾弁護士ブログ'],
 };
 
-export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
+function guidanceColumnsMetadata(locale: GuidanceLocale4) {
+  const page = guidanceContent[locale].pages.columns;
+  const siteUrl = getSiteUrl();
+  return {
+    title: { absolute: page.title },
+    description: page.description,
+    alternates: {
+      canonical: guidanceCanonicalUrl(locale, 'columns', siteUrl),
+      languages: buildGuidanceCoreLanguageAlternates('columns', siteUrl),
+    },
+    robots: { index: true, follow: true },
+  };
+}
+
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
+  if (isGuidanceLocale4(params.locale)) {
+    const posts = getAllColumnPosts(params.locale);
+    if (posts.length === 0) return guidanceColumnsMetadata(params.locale);
+    const copy = guidanceContent[params.locale].pages.columns;
+    return buildSeoMetadata({
+      locale: params.locale,
+      title: copy.title,
+      description: copy.description,
+      path: '/columns',
+      keywords: [copy.title],
+    });
+  }
+
   const locale = normalizeSiteLocale(params.locale);
   // JA is file-backed only — never project a KO builder page onto /ja/columns.
   if (locale !== 'ja') {
@@ -83,12 +120,62 @@ export async function generateMetadata(props: { params: Promise<{ locale: SiteLo
 
 export default async function ColumnsPage(
   props: {
-    params: Promise<{ locale: SiteLocale }>;
+    params: Promise<{ locale: string }>;
     searchParams?: Promise<ColumnsSearchParams>;
   }
 ) {
   const searchParams = await props.searchParams;
   const params = await props.params;
+
+  if (isGuidanceLocale4(params.locale)) {
+    const locale = params.locale;
+    const posts = getAllColumnPosts(locale);
+    const copy = guidanceContent[locale].pages.columns;
+    if (posts.length === 0) {
+      return <InternationalGuidance locale={locale} pageKey="columns" />;
+    }
+
+    const translatedSlugs = new Set(posts.map((post) => post.slug));
+    const remainingPosts = getAllColumnPosts('ko')
+      .filter((post) => !translatedSlugs.has(post.slug))
+      .map((post) => ({ slug: post.slug, title: post.title }));
+    const byline = 'Attorney Wei Tseng';
+
+    return (
+      <>
+        <JsonLd
+          data={buildBreadcrumbJsonLd('en', [
+            { name: 'Home', path: `/${locale}` },
+            { name: copy.title, path: `/${locale}/columns` },
+          ])}
+        />
+        <JsonLd
+          data={buildCollectionPageJsonLd({
+            locale,
+            path: `/${locale}/columns`,
+            name: copy.title,
+            description: copy.description,
+            items: posts.slice(0, 20).map((post) => ({
+              name: `${post.title} · ${byline}`,
+              path: `/${locale}/columns/${post.slug}`,
+              description: post.summary,
+            })),
+          })}
+        />
+        <PageHeader
+          locale={locale}
+          label={guidanceContent[locale].nav.columns}
+          title={copy.title}
+          description={copy.description}
+        />
+        <ColumnsGrid locale={locale} posts={posts} initialFilters={toColumnGridFilters(searchParams)} />
+        <div className="container">
+          <OriginalLanguageColumnsSection locale={locale} remainingPosts={remainingPosts} />
+        </div>
+      </>
+    );
+  }
+
   const locale = normalizeSiteLocale(params.locale);
 
   const publishedPage =

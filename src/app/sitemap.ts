@@ -4,7 +4,8 @@ import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { readAttorneyProfileSourceRecords } from '@/lib/builder/lawyers/source';
 import { readServiceAreaSourceRecords } from '@/lib/builder/services/source';
 import { getAllColumnPosts, getAliasSlugs, resolveSlug } from '@/lib/columns';
-import { locales, siteLocales } from '@/lib/locales';
+import { collectColumnSitemapRecords } from '@/lib/column-locales';
+import { locales } from '@/lib/locales';
 import {
   GUIDANCE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
@@ -111,7 +112,7 @@ function reconcileGuidanceLanguageAlternates(
 
     for (const [tag, url] of Object.entries(existingLanguages)) {
       if (typeof url !== 'string') continue;
-      if (isGuidanceLocaleHreflang(tag) && !isCore) continue;
+      if (isGuidanceLocaleHreflang(tag) && !publishedUrls.has(url)) continue;
       if (isCore && !publishedUrls.has(url)) continue;
       nextLanguages[tag] = url;
     }
@@ -230,12 +231,12 @@ function addReciprocalJapaneseAlternates(
 }
 
 function createEntry(
-  locale: (typeof siteLocales)[number],
+  locale: PublicLocale8,
   path: string,
   options?: {
     lastModified?: string | Date;
     priority?: number;
-    alternateLocales?: readonly (typeof siteLocales)[number][];
+    alternateLocales?: readonly PublicLocale8[];
   }
 ): MetadataRoute.Sitemap[number] {
   return {
@@ -250,7 +251,6 @@ function createEntry(
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages: MetadataRoute.Sitemap = [];
-  const columns = getAllColumnPosts('ko');
   const serviceAreaRecords = await readServiceAreaSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko');
   const attorneyRecords = await readAttorneyProfileSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko');
 
@@ -278,16 +278,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         })
       );
     }
+  }
 
-    for (const post of columns) {
-      pages.push(
-        createEntry(locale, `/columns/${post.slug}`, {
-          lastModified: post.date || undefined,
-          priority: 0.68,
-          alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
-        })
-      );
-    }
+  const columnRecords = collectColumnSitemapRecords({
+    postsForLocale: (locale) =>
+      getAllColumnPosts(locale).map((post) => ({ slug: post.slug, date: post.date })),
+  });
+  for (const record of columnRecords) {
+    pages.push(
+      createEntry(record.locale, record.path, {
+        lastModified: record.lastModified || undefined,
+        priority: 0.68,
+        alternateLocales: record.alternateLocales,
+      }),
+    );
   }
 
   // Japanese public static and file-backed surfaces.
@@ -443,15 +447,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
     }),
   );
-  for (const post of columns) {
-    pages.push(
-      createEntry('ja', `/columns/${post.slug}`, {
-        lastModified: post.date || undefined,
-        priority: 0.68,
-        alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
-      }),
-    );
-  }
 
   // Actual new-four core URLs only. Dictionary page identities — never the
   // internal rewrite keys, and never invented article translations.

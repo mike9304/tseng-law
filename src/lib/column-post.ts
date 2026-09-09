@@ -86,7 +86,7 @@ export function parseColumnPublicationDate(value: string | null | undefined): st
 
 export function formatColumnPublicationDate(
   publicationDate: string,
-  locale: Locale | SiteLocale,
+  locale: Locale | SiteLocale | string,
   fallback = '',
 ): string {
   const isoDate = parseColumnPublicationDate(publicationDate);

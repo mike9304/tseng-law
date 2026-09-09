@@ -24,6 +24,44 @@ type InternationalGuidanceProps = {
   unavailable?: boolean;
 };
 
+type OriginalLanguageColumnsSectionProps = {
+  locale: GuidanceLocale;
+  remainingPosts?: ReadonlyArray<{ slug: string; title: string }>;
+};
+
+export function OriginalLanguageColumnsSection({
+  locale,
+  remainingPosts = [],
+}: OriginalLanguageColumnsSectionProps) {
+  const pack = guidanceContent[locale];
+  return (
+    <section className={styles.section} aria-label={pack.readSourceLabel} data-columns-original-language="true">
+      <h2 className={styles.sectionHeading}>{pack.readSourceLabel}</h2>
+      {remainingPosts.length > 0 ? (
+        <ul className={styles.items}>
+          {remainingPosts.map((post) => (
+            <li key={post.slug}>
+              <Link href={`/ko/columns/${post.slug}`}>{post.title}</Link>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      <ul className={styles.sourceList}>
+        {EXISTING_SITE_LOCALES_4.map((sourceLocale) => {
+          const languageName = PUBLIC_LANGUAGE_AUTONYMS[sourceLocale];
+          return (
+            <li key={sourceLocale} className={styles.sourceItem}>
+              <Link className={styles.sourceLink} href={`/${sourceLocale}/columns`}>
+                {languageName}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
 export default function InternationalGuidance({
   locale,
   pageKey,
@@ -132,21 +170,7 @@ export default function InternationalGuidance({
                 ) : null}
 
                 {pageKey === 'columns' ? (
-                  <section className={styles.section} aria-label={pack.readSourceLabel}>
-                    <h2 className={styles.sectionHeading}>{pack.readSourceLabel}</h2>
-                    <ul className={styles.sourceList}>
-                      {EXISTING_SITE_LOCALES_4.map((sourceLocale) => {
-                        const languageName = PUBLIC_LANGUAGE_AUTONYMS[sourceLocale];
-                        return (
-                          <li key={sourceLocale} className={styles.sourceItem}>
-                            <Link className={styles.sourceLink} href={`/${sourceLocale}/columns`}>
-                              {languageName}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </section>
+                  <OriginalLanguageColumnsSection locale={locale} />
                 ) : null}
               </article>
 

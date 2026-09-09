@@ -39,6 +39,9 @@ const ALLOWED_ROUTE_PAIRS = GUIDANCE_LOCALES_4.flatMap((locale) =>
   })),
 );
 
+/** Catch-all rewrites except `/columns` + `/columns/*` (file routes own those). */
+const REWRITTEN_ROUTE_PAIRS = ALLOWED_ROUTE_PAIRS.filter((pair) => pair.route !== 'columns');
+
 describe('public eight-locale helper isolation', () => {
   it('does not widen Locale3 or SiteLocale4', () => {
     expect(locales).toEqual(['ko', 'zh-hant', 'en']);
@@ -122,7 +125,7 @@ describe('allowed 40 guidance route pairs', () => {
     expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
   });
 
-  it.each(ALLOWED_ROUTE_PAIRS)(
+  it.each(REWRITTEN_ROUTE_PAIRS)(
     'rewrites $publicPath to the locale catch-all page segment',
     ({ locale, route, publicPath, internalPath }) => {
       expect(isGuidanceLocale4(locale)).toBe(true);
@@ -137,6 +140,14 @@ describe('allowed 40 guidance route pairs', () => {
       });
     },
   );
+
+  it('does not rewrite new-four /columns or /columns/[slug] (file routes)', () => {
+    for (const locale of GUIDANCE_LOCALES_4) {
+      expect(resolveGuidanceMiddlewareRewrite(`/${locale}/columns`)).toBeNull();
+      expect(resolveGuidanceMiddlewareRewrite(`/${locale}/columns/taiwan-gym-injury-lawsuit`)).toBeNull();
+      expect(resolveGuidanceMiddlewareRewrite(`/${locale}/columns/missing`)).toBeNull();
+    }
+  });
 
   it('does not rewrite existing four-locale routes', () => {
     expect(resolveGuidanceMiddlewareRewrite('/ko/services/civil')).toBeNull();
@@ -161,12 +172,10 @@ describe('allowed 40 guidance route pairs', () => {
 describe('unsupported nested-path guard', () => {
   it.each([
     ['/vi/services/civil', '/vi/__public-guidance-unavailable/services/civil'],
-    ['/th/columns/slug', '/th/__public-guidance-unavailable/columns/slug'],
     ['/fil/store', '/fil/__public-guidance-unavailable/store'],
     ['/id/lawyers/wei-tseng', '/id/__public-guidance-unavailable/lawyers/wei-tseng'],
     ['/vi/account', '/vi/__public-guidance-unavailable/account'],
     ['/fil/store/products/guide', '/fil/__public-guidance-unavailable/store/products/guide'],
-    ['/th/columns/taiwan-company-establishment-basics', '/th/__public-guidance-unavailable/columns/taiwan-company-establishment-basics'],
     ['/id/admin-builder', '/id/__public-guidance-unavailable/admin-builder'],
   ] as const)('maps %s to unavailable catch-all %s', (publicPath, internalPath) => {
     expect(resolveGuidanceMiddlewareRewrite(publicPath)).toEqual({

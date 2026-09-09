@@ -80,8 +80,10 @@ function makeFetch({
   missingHreflangPath = null,
   notFoundPath = null,
   memoPrivacyLocales = [],
+  extraLocs = [],
+  translatedSlug = '',
 } = {}) {
-  const locs = allCoreLocs();
+  const locs = [...allCoreLocs(), ...extraLocs];
   return async (url, init = {}) => {
     const parsed = new URL(url);
     const method = (init.method || 'GET').toUpperCase();
@@ -101,12 +103,17 @@ function makeFetch({
     const pageKey = segments[1] || 'home';
     const isGuidanceHomeOrContact =
       GUIDANCE_LOCALES_4.includes(locale) && (pageKey === 'home' || pageKey === 'contact');
+    const isTranslatedColumn =
+      Boolean(translatedSlug) && pageKey === 'columns' && segments[2] === translatedSlug;
     const html = pageHtml({
       locale,
-      pageKey,
+      pageKey: isTranslatedColumn ? 'columns' : pageKey,
       hreflang: missingHreflangPath ? path !== missingHreflangPath : true,
       memo: pageKey === 'privacy' && memoPrivacyLocales.includes(locale),
       notice: isGuidanceHomeOrContact ? notices[locale] : '',
+      extraHreflang: isTranslatedColumn
+        ? `<link rel="alternate" hreflang="${hreflangTagForPublicLocale(locale)}" href="${BASE}${path}">`
+        : '',
     });
 
     if (method === 'HEAD') return htmlResponse('', 200);
@@ -197,4 +204,23 @@ test('privacy memo phrases are detected as FAIL', async () => {
       String(item.message).includes('operator confirmation'),
     ),
   );
+});
+
+test('item f: new-four /columns 200 and sitemap translation slugs are 200 with hreflang', async () => {
+  const notices = await loadConsultationNeedles();
+  const translatedSlug = 'taiwan-gym-injury-lawsuit';
+  const extraLocs = GUIDANCE_LOCALES_4.map(
+    (locale) => `${BASE}/${locale}/columns/${translatedSlug}`,
+  );
+
+  const result = await runMultilingualLiveCheck({
+    baseUrl: BASE,
+    fetchImpl: makeFetch({ notices, extraLocs, translatedSlug }),
+    consultationNeedles: notices,
+  });
+
+  assert.equal(result.ok, true);
+  assert.equal(result.checks.f_translated_columns.fail, 0);
+  assert.ok(result.checks.f_translated_columns.pass >= GUIDANCE_LOCALES_4.length);
+  assert.match(formatHumanReport(result), /f_translated_columns|translated columns/);
 });

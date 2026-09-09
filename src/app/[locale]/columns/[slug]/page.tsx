@@ -5,7 +5,7 @@ import Link from 'next/link';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import { normalizeSiteLocale, type SiteLocale, toBuilderLocale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
-import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
+import { fileBackedColumnAlternateLocales, getAllColumnPosts, getColumnPost } from '@/lib/columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import ColumnContent from '@/components/ColumnContent';
 import JsonLd from '@/components/JsonLd';
@@ -20,6 +20,9 @@ import {
 import { resolveTypography } from '@/lib/builder/columns/typography';
 import type { ColumnTypography } from '@/lib/builder/columns/types';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
+import { isGuidanceLocale4 } from '@/lib/public-guidance';
+import { guidancePublicPath } from '@/lib/public-guidance';
+import { guidanceContent } from '@/data/international-guidance-content';
 
 export const dynamic = 'force-dynamic';
 
@@ -70,8 +73,25 @@ const copy: Record<SiteLocale, {
   },
 };
 
-export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale; slug: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const params = await props.params;
+
+  if (isGuidanceLocale4(params.locale)) {
+    const post = getColumnPost(params.slug, params.locale);
+    if (!post) return {};
+    return buildSeoMetadata({
+      locale: params.locale,
+      title: post.title,
+      description: post.summary,
+      path: `/columns/${post.slug}`,
+      keywords: [post.title, post.categoryLabel, 'Taiwan law'],
+      images: post.featuredImage,
+      type: 'article',
+      noindex: false,
+      alternateLocales: fileBackedColumnAlternateLocales(post.slug),
+    });
+  }
+
   const locale = normalizeSiteLocale(params.locale);
 
   // Try file-based first (fast, sync), then fall back to blob-aware reader.
@@ -105,19 +125,22 @@ export async function generateMetadata(props: { params: Promise<{ locale: SiteLo
     images: post.featuredImage,
     type: 'article',
     noindex: false,
-    alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    alternateLocales: fileBackedColumnAlternateLocales(post.slug),
   });
 }
 
-export default async function ColumnDetailPage(props: { params: Promise<{ locale: SiteLocale; slug: string }> }) {
+export default async function ColumnDetailPage(props: { params: Promise<{ locale: string; slug: string }> }) {
   const params = await props.params;
-  const locale = normalizeSiteLocale(params.locale);
+  const rawLocale = params.locale;
+  const guidanceLocale = isGuidanceLocale4(rawLocale) ? rawLocale : null;
+  const locale: SiteLocale = guidanceLocale ? 'en' : normalizeSiteLocale(rawLocale);
+  const urlLocale = guidanceLocale ?? locale;
 
   // Get all posts including Blob — single source of truth for content + prev/next
-  // Japanese: file-backed columns-ja only (no builder/Blob ja locale).
+  // Japanese + new four: file-backed only (no builder/Blob contract).
   const allPosts =
-    locale === 'ja'
-      ? getAllColumnPosts('ja')
+    locale === 'ja' || guidanceLocale
+      ? getAllColumnPosts(urlLocale)
       : await getAllColumnPostsIncludingBlob(toBuilderLocale(locale));
   const post = allPosts.find((p) => p.slug === params.slug);
   if (!post) return notFound();
@@ -136,8 +159,16 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
           ? '曾雋崴弁護士'
           : 'Attorney Wei Tseng';
   const authorProfilePath = getAttorneyProfilePath(locale);
+  const authorHref = guidanceLocale
+    ? guidancePublicPath(guidanceLocale, 'lawyers')
+    : authorProfilePath;
   const guideLinks =
-    locale === 'ja'
+    guidanceLocale
+      ? [
+          { href: guidancePublicPath(guidanceLocale, 'services'), label: guidanceContent[guidanceLocale].nav.services },
+          { href: guidancePublicPath(guidanceLocale, 'lawyers'), label: guidanceContent[guidanceLocale].nav.lawyers },
+        ]
+      : locale === 'ja'
       ? post.category === 'formation'
         ? [
             { href: '/ja/services#investment', label: '台湾投資・会社設立' },
@@ -201,22 +232,22 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
         <>
           <JsonLd
             data={buildBreadcrumbJsonLd(locale, [
-              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${locale}` },
-              { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Columns', path: `/${locale}/columns` },
-              { name: post.title, path: `/${locale}/columns/${post.slug}` },
+              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${urlLocale}` },
+              { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Columns', path: `/${urlLocale}/columns` },
+              { name: post.title, path: `/${urlLocale}/columns/${post.slug}` },
             ])}
           />
           <JsonLd
             data={buildArticleJsonLd({
-              locale,
+              locale: urlLocale,
               title: post.title,
               description: post.summary,
-              path: `/${locale}/columns/${post.slug}`,
+              path: `/${urlLocale}/columns/${post.slug}`,
               image: post.featuredImage,
               datePublished: post.publicationDate || post.date,
               dateModified: post.date,
               authorName,
-              authorUrl: authorProfilePath,
+              authorUrl: authorHref,
               authorSameAs: [
                 'https://www.hoveringlaw.com.tw/en/wei.html',
                 'https://www.wei-wei-lawyer.com/lawyertseng',
@@ -238,11 +269,11 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
             <div className="blog-hero-overlay" />
           </div>
           <div className="container blog-hero-inner">
-            <Link href={`/${locale}/columns`} className="blog-back-link">{t.backLabel}</Link>
+            <Link href={`/${urlLocale}/columns`} className="blog-back-link">{t.backLabel}</Link>
             <span className="blog-category-badge">{post.categoryLabel}</span>
             <h1 className="blog-hero-title">{post.title}</h1>
             <div className="blog-meta">
-              <Link href={authorProfilePath} className="link-underline">
+              <Link href={authorHref} className="link-underline">
                 {authorName}
               </Link>
               <time>{post.dateDisplay || post.date}</time>
@@ -320,7 +351,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
         }}>
           {prevPost ? (
             <Link
-              href={`/${locale}/columns/${prevPost.slug}`}
+              href={`/${urlLocale}/columns/${prevPost.slug}`}
               style={{
                 flex: 1,
                 padding: '1rem 1.25rem',
@@ -340,7 +371,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
           ) : <span style={{ flex: 1 }} />}
           {nextPost ? (
             <Link
-              href={`/${locale}/columns/${nextPost.slug}`}
+              href={`/${urlLocale}/columns/${nextPost.slug}`}
               style={{
                 flex: 1,
                 padding: '1rem 1.25rem',

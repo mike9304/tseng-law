@@ -212,6 +212,13 @@ export function resolveGuidanceMiddlewareRewrite(pathname: string): GuidanceMidd
     return null;
   }
 
+  // File routes own `/columns` and `/columns/[slug]` so translations can
+  // render (or 404) without the catch-all folding unknown locales into KO.
+  const firstSegment = slugPath.split('/')[0] ?? '';
+  if (firstSegment === 'columns') {
+    return null;
+  }
+
   if (isGuidanceCoreSlugPath(slugPath)) {
     const internalRest = slugPath ? `/${slugPath}` : '';
     return {

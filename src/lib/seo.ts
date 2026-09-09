@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import type { Locale, SiteLocale } from '@/lib/locales';
-import { defaultLocale, siteLocales } from '@/lib/locales';
+import { defaultLocale, siteLocales, isSiteLocale } from '@/lib/locales';
 import {
   buildGuidanceCoreLanguageAlternates,
   guidancePageKeyFromSlugPath,
+  type PublicLocale8,
 } from '@/lib/public-guidance';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 
@@ -17,8 +18,10 @@ type ImageInput =
       alt?: string;
     };
 
+type PublicSeoLocale = Locale | SiteLocale | PublicLocale8;
+
 type SeoMetadataInput = {
-  locale: Locale | SiteLocale;
+  locale: PublicSeoLocale;
   title: string;
   description: string;
   path?: string;
@@ -26,7 +29,7 @@ type SeoMetadataInput = {
   images?: ImageInput | ImageInput[];
   noindex?: boolean;
   type?: 'website' | 'article';
-  alternateLocales?: readonly (Locale | SiteLocale)[];
+  alternateLocales?: readonly PublicSeoLocale[];
 };
 
 type BreadcrumbItem = {
@@ -35,7 +38,7 @@ type BreadcrumbItem = {
 };
 
 type ArticleJsonLdInput = {
-  locale: SiteLocale;
+  locale: PublicSeoLocale;
   title: string;
   description: string;
   path: string;
@@ -71,7 +74,7 @@ type PersonProfileJsonLdInput = {
 };
 
 type CollectionPageJsonLdInput = {
-  locale: SiteLocale;
+  locale: PublicSeoLocale;
   path: string;
   name: string;
   description?: string;
@@ -127,6 +130,22 @@ const openGraphLocale: Record<SiteLocale, string> = {
   ja: 'ja_JP',
 };
 
+const guidanceOpenGraphLocale: Record<string, string> = {
+  vi: 'vi_VN',
+  id: 'id_ID',
+  th: 'th_TH',
+  fil: 'fil_PH',
+};
+
+function chromeSiteLocale(locale: PublicSeoLocale): SiteLocale {
+  return isSiteLocale(locale) ? locale : 'en';
+}
+
+function openGraphLocaleFor(locale: PublicSeoLocale): string {
+  if (isSiteLocale(locale)) return openGraphLocale[locale];
+  return guidanceOpenGraphLocale[locale] ?? openGraphLocale.en;
+}
+
 const organizationLanguageTags = ['ko', 'zh-Hant', 'en', 'ja'];
 const organizationAddress: Record<SiteLocale, string> = {
   ko: '타이베이시 다퉁구 청더로 1단 35호 7층의2',
@@ -166,12 +185,12 @@ export function getSearchEngineVerification(): Metadata['verification'] | undefi
   };
 }
 
-export function getLocaleLanguageTag(locale: Locale | SiteLocale): string {
+export function getLocaleLanguageTag(locale: PublicSeoLocale): string {
   if (locale === 'zh-hant') return 'zh-Hant';
   return locale;
 }
 
-export function getLocalizedPath(locale: Locale | SiteLocale, path = ''): string {
+export function getLocalizedPath(locale: PublicSeoLocale, path = ''): string {
   if (!path || path === '/') {
     return `/${locale}`;
   }
@@ -213,7 +232,7 @@ function seoPathToSlugPath(path = ''): string {
  */
 export function getLanguageAlternates(
   path = '',
-  alternateLocales: readonly (Locale | SiteLocale)[] = siteLocales,
+  alternateLocales: readonly PublicSeoLocale[] = siteLocales,
 ): Record<string, string> {
   const pageKey = guidancePageKeyFromSlugPath(seoPathToSlugPath(path));
   if (pageKey) {
@@ -245,6 +264,7 @@ export function buildSeoMetadata({
   type = 'website',
   alternateLocales = siteLocales,
 }: SeoMetadataInput): Metadata {
+  const chromeLocale = chromeSiteLocale(locale);
   const canonicalPath = getLocalizedPath(locale, path);
   const canonicalUrl = buildAbsoluteUrl(canonicalPath);
   const socialImages = normalizeImages(images);
@@ -254,7 +274,7 @@ export function buildSeoMetadata({
     metadataBase: new URL(getSiteUrl()),
     // The locale layout owns the localized `%s | Brand` template. Keeping the
     // page portion here prevents Next from applying a second brand suffix.
-    title: pageTitle || { absolute: getOrganizationName(locale) },
+    title: pageTitle || { absolute: getOrganizationName(chromeLocale) },
     description,
     keywords,
     other: {
@@ -268,8 +288,8 @@ export function buildSeoMetadata({
       title,
       description,
       url: canonicalUrl,
-      siteName: organizationName[locale],
-      locale: openGraphLocale[locale],
+      siteName: organizationName[chromeLocale],
+      locale: openGraphLocaleFor(locale),
       type,
       images: socialImages,
     },
@@ -439,7 +459,7 @@ export function buildArticleJsonLd({
     },
     publisher: {
       '@type': 'Organization',
-      name: organizationName[locale],
+      name: organizationName[chromeSiteLocale(locale)],
       logo: {
         '@type': 'ImageObject',
         url: buildAbsoluteUrl(LOGO_IMAGE),
@@ -574,8 +594,8 @@ export function buildCollectionPageJsonLd({
   };
 }
 
-export function getOrganizationName(locale: Locale | SiteLocale): string {
-  return organizationName[locale];
+export function getOrganizationName(locale: PublicSeoLocale): string {
+  return organizationName[chromeSiteLocale(locale)];
 }
 
 /**
@@ -609,7 +629,7 @@ export function stripOrganizationNameSuffix(title: string): string {
 
 export function buildLocalizedPageTitle(
   title: string,
-  locale: Locale | SiteLocale,
+  locale: PublicSeoLocale,
 ): string {
   const brand = getOrganizationName(locale);
   const pageTitle = stripOrganizationNameSuffix(title);
@@ -625,7 +645,7 @@ export function buildLocalizedPageTitle(
  * Returns `null` when there are no valid items so callers can skip injecting
  * an empty FAQPage block (Google rich-result eligibility requires ≥1 Q/A).
  */
-export function buildFaqJsonLd(items: FaqJsonLdItem[], locale?: SiteLocale) {
+export function buildFaqJsonLd(items: FaqJsonLdItem[], locale?: PublicSeoLocale) {
   const valid = (Array.isArray(items) ? items : [])
     .filter((item): item is FaqJsonLdItem => Boolean(item && item.q && item.a))
     .map((item) => ({ q: String(item.q), a: String(item.a) }));

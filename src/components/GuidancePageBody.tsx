@@ -3,6 +3,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import InternationalInquiryForm, {
   InternationalInquiryNotice,
 } from '@/components/InternationalInquiryForm';
+import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/Reveal';
 import SectionLabel from '@/components/SectionLabel';
@@ -17,8 +18,15 @@ import {
   EXISTING_SITE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
   PUBLIC_LANGUAGE_AUTONYMS,
+  guidanceCanonicalUrl,
   guidancePublicPath,
+  publicDocumentLanguage,
 } from '@/lib/public-guidance';
+import {
+  buildGuidanceFaqJsonLd,
+  buildGuidanceLegalServiceJsonLd,
+  getSiteUrl,
+} from '@/lib/seo';
 
 /**
  * Guidance pages rendered with the same layout primitives the other four
@@ -43,9 +51,26 @@ export default function GuidancePageBody({
   // (services, about, lawyers, pricing, contact, faq). home, privacy,
   // disclaimer and columns render nothing extra.
   const answer = guidanceAnswers[locale][pageKey];
+  // Structured data. `inLanguage` is the page language; the consultation
+  // languages inside the LegalService node stay en/zh-Hant/ja/ko. The localized
+  // 404 body (`GuidanceNotFoundBody`) deliberately emits none.
+  const documentLanguage = publicDocumentLanguage(locale);
+  const legalServiceJsonLd = buildGuidanceLegalServiceJsonLd({
+    inLanguage: documentLanguage,
+    url: guidanceCanonicalUrl(locale, pageKey, getSiteUrl()),
+    description: page.description,
+  });
+  // FAQPage carries the visible questions and answers verbatim. `FAQAccordion`
+  // below renders the same items, so the JSON-LD adds no duplicate copy.
+  const faqJsonLd = page.faqs?.length
+    ? buildGuidanceFaqJsonLd(page.faqs, documentLanguage)
+    : null;
 
   return (
     <div data-guidance-shell="true" data-locale={locale} data-guidance-page={pageKey}>
+      <JsonLd data={legalServiceJsonLd} />
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
+
       {/* One outer <article> keeps the page's guidance copy in a single
           document node, matching the previous guidance contract. */}
       <article data-guidance-article="true">

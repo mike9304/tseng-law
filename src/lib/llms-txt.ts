@@ -1,6 +1,12 @@
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
+import { guidanceContent } from '@/data/international-guidance-content';
 import { getAllColumnPosts } from '@/lib/columns';
 import { siteLocales, type SiteLocale } from '@/lib/locales';
+import {
+  GUIDANCE_PAGE_KEYS,
+  guidancePublicPath,
+  type GuidanceLocale4,
+} from '@/lib/public-guidance';
 import { getOrganizationName, getLocalizedPath } from '@/lib/seo';
 
 export const ROOT_LLMS_TXT_MAX_BYTES = 8 * 1024;
@@ -434,5 +440,105 @@ export function buildLocaleLlmsTxt(locale: SiteLocale): string {
     copy.confidentialNotice,
     '',
     ...renderSections(sections),
+  ], LOCALE_LLMS_TXT_MAX_BYTES);
+}
+
+type GuidanceLlmsNotices = {
+  /**
+   * The page language is not a consultation language. Copied verbatim from the
+   * published FAQ answer of the same locale, so the file cannot drift from what
+   * the site itself says.
+   */
+  consultationNotice: string;
+  /** No ranking, endorsement, or visibility is promised by this file. */
+  discoveryNotice: string;
+  /** Copied verbatim from the published privacy page of the same locale. */
+  confidentialNotice: string;
+};
+
+/**
+ * Notice lines for the four guidance locales, in the page's own language.
+ * `consultationNotice` and `confidentialNotice` are verbatim sentences already
+ * published in `guidanceContent`; only `discoveryNotice` (which describes this
+ * file itself) is new, and it mirrors the existing four-locale wording.
+ */
+export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices> = {
+  vi: {
+    consultationNotice:
+      'Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.',
+    discoveryNotice:
+      'Tệp llms.txt này chỉ là bản đồ tra cứu các trang công khai; nó không hứa hẹn thứ hạng tìm kiếm, sự chứng thực, khuyến nghị của AI hay việc được hiển thị.',
+    confidentialNotice:
+      'Vì nội dung gốc được lưu giữ, xin đừng viết những thông tin chưa cần thiết ở bước đầu, chẳng hạn số hộ chiếu, số giấy tờ tùy thân hay thông tin tài khoản ngân hàng.',
+  },
+  id: {
+    consultationNotice:
+      'Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, Tionghoa, Jepang, dan Korea.',
+    discoveryNotice:
+      'Berkas llms.txt ini hanya peta penelusuran halaman publik; berkas ini tidak menjanjikan peringkat pencarian, dukungan, rekomendasi AI, atau jaminan untuk ditampilkan.',
+    confidentialNotice:
+      'Karena teks asli disimpan, mohon jangan menuliskan hal yang belum diperlukan pada tahap awal, seperti nomor paspor, nomor identitas, atau data rekening bank.',
+  },
+  th: {
+    consultationNotice:
+      'ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย แต่การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี',
+    discoveryNotice:
+      'ไฟล์ llms.txt นี้เป็นเพียงแผนผังสำหรับค้นหน้าเว็บสาธารณะ ไม่ได้รับประกันอันดับการค้นหา การรับรอง การแนะนำโดย AI หรือการแสดงผล',
+    confidentialNotice:
+      'เนื่องจากข้อความต้นฉบับถูกเก็บไว้ จึงขอความกรุณาอย่าเขียนข้อมูลที่ยังไม่จำเป็นในขั้นแรก เช่น เลขหนังสือเดินทาง เลขบัตรประจำตัว หรือข้อมูลบัญชีธนาคาร',
+  },
+  fil: {
+    consultationNotice:
+      'Nakasulat sa Filipino ang gabay na ito, ngunit ang konsultasyon sa abogado ay isinasagawa lamang sa Ingles, Tsino, Hapon, at Koreano.',
+    discoveryNotice:
+      'Mapa lamang ng mga pampublikong pahina ang llms.txt na ito; hindi ito nangangako ng ranggo sa paghahanap, pag-endorso, rekomendasyon ng AI, o garantisadong paglabas.',
+    confidentialNotice:
+      'Dahil iniingatan ang orihinal na teksto, huwag munang isulat ang mga bagay na hindi pa kailangan sa unang yugto, gaya ng numero ng pasaporte, numero ng ID, o detalye ng bank account.',
+  },
+};
+
+/**
+ * Per-locale llms.txt for the four guidance languages (vi / id / th / fil).
+ *
+ * Same shape as {@link buildLocaleLlmsTxt}: one H1, a one-line blockquote, the
+ * notice block, then annotated file-list bullets — here the ten guidance core
+ * pages, titled and annotated with the locale's own published copy. Consultation
+ * languages are never widened: the notice block states in the page language that
+ * consultations run only in English, Chinese, Japanese and Korean.
+ */
+export function buildGuidanceLlmsTxt(locale: GuidanceLocale4): string {
+  const pack = guidanceContent[locale];
+  const notices = GUIDANCE_LLMS_NOTICES[locale];
+  if (!pack || !notices) {
+    throw new Error(`Missing required llms.txt guidance data: ${locale}`);
+  }
+
+  const entries: LlmsEntry[] = GUIDANCE_PAGE_KEYS.map((pageKey) => {
+    const page = pack.pages[pageKey];
+    if (!page?.title || !page?.description) {
+      throw new Error(`Incomplete guidance page metadata for llms.txt: ${locale}/${pageKey}`);
+    }
+    return {
+      title: page.title,
+      path: guidancePublicPath(locale, pageKey),
+      annotation: page.description,
+    };
+  });
+
+  if (entries.length !== GUIDANCE_PAGE_KEYS.length) {
+    throw new Error(`Guidance llms.txt requires all ${GUIDANCE_PAGE_KEYS.length} core pages: ${locale}`);
+  }
+
+  return finalizeLlmsTxt([
+    `# ${getOrganizationName('en')} — ${pack.languageName}`,
+    '',
+    `> ${pack.pages.home.description}`,
+    '',
+    pack.footerNotice,
+    notices.consultationNotice,
+    notices.discoveryNotice,
+    notices.confidentialNotice,
+    '',
+    ...renderSections([{ heading: pack.menuLabel, entries }]),
   ], LOCALE_LLMS_TXT_MAX_BYTES);
 }

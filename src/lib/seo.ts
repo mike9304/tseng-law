@@ -5,6 +5,7 @@ import { defaultLocale, siteLocales, isSiteLocale } from '@/lib/locales';
 import {
   buildGuidanceCoreLanguageAlternates,
   guidancePageKeyFromSlugPath,
+  type PublicDocumentLanguage,
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
@@ -727,4 +728,85 @@ export function buildHowToJsonLd({ name, description, steps, totalTime, locale }
   }
 
   return node;
+}
+
+/**
+ * Consultation languages the firm actually works in. The vi/id/th/fil guidance
+ * pages are *page* languages only, so this list is fixed and must never grow to
+ * include a guidance locale: `availableLanguage` is read by answer engines as a
+ * promise that the firm can be consulted in that language.
+ */
+export const GUIDANCE_CONSULTATION_LANGUAGES = ['en', 'zh-Hant', 'ja', 'ko'] as const;
+
+type GuidanceFaqItem = {
+  question: string;
+  answer: string;
+};
+
+type GuidanceLegalServiceInput = {
+  /** BCP-47 tag of the page the node is emitted on (vi / id / th / fil). */
+  inLanguage: PublicDocumentLanguage;
+  /** Absolute canonical URL of the guidance page. */
+  url: string;
+  description?: string;
+};
+
+/**
+ * `FAQPage` JSON-LD for a guidance page. Reuses {@link buildFaqJsonLd} so the
+ * Question/Answer shape stays identical to the column pages; only the
+ * `{ question, answer }` field names and the wider `inLanguage` set differ
+ * (guidance locales are outside `SiteLocale`).
+ *
+ * Text is passed through verbatim — never summarised — so the JSON-LD and the
+ * visible answer are the same sentences.
+ */
+export function buildGuidanceFaqJsonLd(
+  items: readonly GuidanceFaqItem[] | undefined,
+  inLanguage: PublicDocumentLanguage,
+) {
+  const source = Array.isArray(items) ? items : [];
+  const node = buildFaqJsonLd(
+    source.map((item) => ({ q: item?.question, a: item?.answer })) as FaqJsonLdItem[],
+  );
+  if (!node) return null;
+
+  node.inLanguage = inLanguage;
+  return node;
+}
+
+/**
+ * `LegalService` JSON-LD for a guidance page. It reuses the existing
+ * organization `@id` and {@link ATTORNEY_PERSON_ID} rather than minting a new
+ * entity, so the eight-language surface stays one firm and one attorney.
+ *
+ * `availableLanguage` is pinned to {@link GUIDANCE_CONSULTATION_LANGUAGES};
+ * `inLanguage` (the language of the page itself) is the only place a guidance
+ * locale may appear.
+ */
+export function buildGuidanceLegalServiceJsonLd({
+  inLanguage,
+  url,
+  description,
+}: GuidanceLegalServiceInput) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LegalService',
+    '@id': ORGANIZATION_ID,
+    name: getOrganizationName('en'),
+    ...(description ? { description } : {}),
+    url,
+    inLanguage,
+    email: CONSULTATION_EMAIL,
+    availableLanguage: [...GUIDANCE_CONSULTATION_LANGUAGES],
+    provider: {
+      '@type': 'Person',
+      '@id': ATTORNEY_PERSON_ID,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: organizationAddress.en,
+      addressLocality: 'Taipei City',
+      addressCountry: 'TW',
+    },
+  };
 }

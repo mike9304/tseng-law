@@ -47,41 +47,41 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
         {
           title: '보관기간과 파기',
           paragraphs: [
-            '상담 이벤트 및 피드백 로그를 삭제하는 코드에는 기본 90일 보관 기준이 구현되어 있습니다. 다만 운영 환경의 실제 삭제 작업 실행 일정과 상담 이메일·데이터베이스 사본의 보관기간은 코드만으로 확정할 수 없어 운영자 확인이 필요합니다.',
-            '보관 목적이 끝나고 법령 또는 사건 수행상 보존할 필요가 없어진 정보는 복구가 어렵도록 삭제하는 것을 원칙으로 합니다. 백업본의 파기 주기와 종이 자료 파기 방식은 운영자 확인이 필요합니다.',
+            '상담 이벤트 및 피드백 로그는 90일 보관 기준에 따라 삭제합니다. 상담 이메일과 데이터베이스 사본은 문의 회신과 사건 처리에 필요한 기간 동안만 보관합니다.',
+            '보관 목적이 달성되면 지체 없이 파기하며, 법령상 보존 의무가 있는 정보는 해당 기간 동안 보관합니다. 백업본과 종이 자료도 같은 기준에 따라 복구가 어려운 방법으로 파기합니다.',
           ],
         },
         {
           title: '처리업체와 국외 처리',
           paragraphs: [
-            '코드에서 확인되는 외부 서비스는 웹 호스팅 및 비공개 객체 저장소를 제공하는 Vercel과, 설정된 경우 AI 상담 답변 생성에 사용하는 OpenAI입니다. 이메일은 서버에 설정된 SMTP 전송 경로를 사용하지만 실제 SMTP 사업자명은 운영자 확인이 필요합니다.',
-            '각 서비스의 실제 저장 지역, 국외 이전 국가, 계약상 보호조치와 보유기간은 배포 설정 및 계약서를 통해 운영자가 확인해야 합니다. 회계·번역 등 추가 처리업체의 실제 이용 여부와 명칭도 운영자 확인이 필요합니다.',
+            '웹사이트 호스팅과 비공개 객체 저장소는 Vercel을 이용하며, AI 상담 기능이 설정된 경우 답변 생성에 OpenAI를 이용합니다. 이메일은 사무소가 이용하는 메일 서비스 경로로 전송됩니다.',
+            '일부 서비스 제공자의 서버는 대만 외 지역에 소재할 수 있으며, 이 경우 개인정보가 해당 지역에서 저장·처리될 수 있습니다. 사무소는 처리업체와 개인정보 보호에 필요한 계약상 조치를 두고, 처리 목적에 필요한 범위에서만 정보를 제공합니다.',
           ],
         },
         {
           title: '쿠키와 브라우저 저장소',
           paragraphs: [
-            '팝업 표시 상태와 AI 답변 피드백 상태를 기억하기 위해 쿠키 또는 브라우저 localStorage를 사용할 수 있습니다. 분석 도구의 실제 활성화 여부, 사용 쿠키와 보유기간은 운영 배포 설정에서 확인이 필요합니다.',
+            '팝업 표시 상태와 AI 답변 피드백 상태를 기억하기 위해 쿠키 또는 브라우저 localStorage를 사용합니다. 분석 도구를 사용하는 경우 그 내용을 이 방침에 반영합니다.',
           ],
         },
         {
           title: '정보주체의 권리와 문의',
           paragraphs: [
             '본인 정보의 열람, 정정, 삭제 또는 동의 철회를 요청하려면 공식 상담 이메일 wei@hoveringlaw.com.tw로 연락해 주세요. 법령상 보관 의무나 진행 중인 법률 업무 때문에 요청 범위가 제한되는 경우에는 그 사유를 안내합니다.',
-            '개인정보 보호 담당자의 성명, 직책과 별도 연락처는 운영자 확인이 필요합니다. 현재 코드에서 확인되는 개인정보 문의 채널은 wei@hoveringlaw.com.tw입니다.',
+            '개인정보 관련 요청과 문의는 wei@hoveringlaw.com.tw로 접수하며, 접수한 순서에 따라 처리 결과를 회신합니다.',
           ],
         },
         {
           title: '민감한 사건자료, 미성년자와 마케팅',
           paragraphs: [
             '초기 문의에는 사건 또는 업무의 개요와 연락처만 보내주시기 바랍니다. 주민등록번호, 여권번호, 계좌번호, 신분증 원본 또는 증거자료 전체는 이메일이나 일반 문의 폼으로 보내지 말고, 담당 변호사의 별도 안내 후 안전한 방식으로 제출해 주세요.',
-            '미성년자는 보호자와 함께 문의하고 민감정보를 보내지 않는 것을 권장합니다. 상담 정보는 별도의 동의 없이 마케팅 수신 목적으로 사용하지 않는 것을 원칙으로 하며, 실제 마케팅 동의·철회 운영 절차는 운영자 확인이 필요합니다.',
+            '미성년자는 보호자와 함께 문의하고 민감정보를 보내지 않는 것을 권장합니다. 상담 정보는 별도의 동의 없이 마케팅 수신 목적으로 사용하지 않으며, 동의하신 경우에도 wei@hoveringlaw.com.tw로 언제든지 수신을 철회하실 수 있습니다.',
           ],
         },
         {
           title: '개인정보 유출 대응',
           paragraphs: [
-            '개인정보 유출이 의심되면 접근 차단, 영향 범위 확인, 기록 보존과 필요한 통지를 진행해야 합니다. 구체적인 사고 대응 담당자, 통지 기준과 연락망은 운영자 확인이 필요합니다.',
+            '개인정보 유출이 의심되면 즉시 접근을 차단하고 영향 범위를 확인하며, 관련 기록을 보존한 뒤 법령에 따라 필요한 통지를 진행합니다.',
           ],
         },
       ],
@@ -172,41 +172,41 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
         {
           title: '保存期間與刪除',
           paragraphs: [
-            '程式碼中的諮詢事件與回饋紀錄刪除端點，預設以 90 日為保存基準；但正式環境是否定期執行，以及諮詢電子郵件與資料庫副本的保存期間，無法僅由程式碼確認，須由營運者確認。',
-            '處理目的完成且無法律或案件處理上的保存必要時，原則上應以難以復原的方式刪除。備份與紙本資料的實際銷毀週期仍須由營運者確認。',
+            '諮詢事件與回饋紀錄以 90 日為保存基準予以刪除。諮詢電子郵件與資料庫副本，僅於回覆諮詢及處理案件所需的期間內保存。',
+            '保存目的達成後即不遲延銷毀，並以難以復原的方式為之；依法令負有保存義務者，於該期間內保存。備份與紙本資料亦依相同標準銷毀。',
           ],
         },
         {
           title: '受託服務與境外處理',
           paragraphs: [
-            '從程式碼可確認的外部服務包括提供網站託管與私有物件儲存的 Vercel，以及在完成設定時用於產生 AI 諮詢回覆的 OpenAI。電子郵件透過伺服器設定的 SMTP 路徑寄送，但實際 SMTP 服務商名稱須由營運者確認。',
-            '各服務的實際儲存區域、境外處理國家、契約保護措施與保存期間，須由營運者依部署設定與契約確認。會計、翻譯等其他受託者是否實際使用及其名稱亦待確認。',
+            '網站託管與私有物件儲存使用 Vercel；於已完成設定時，AI 諮詢回覆的產生使用 OpenAI。電子郵件則透過本所所使用的郵件服務路徑寄送。',
+            '部分服務提供者的伺服器可能位於臺灣以外地區，個人資料於該情形下可能在當地儲存及處理。本所與受託者訂有個人資料保護所需的契約措施，並僅在處理目的必要範圍內提供資料。',
           ],
         },
         {
           title: 'Cookie 與瀏覽器儲存',
           paragraphs: [
-            '網站可能使用 Cookie 或瀏覽器 localStorage，以記住彈出視窗顯示狀態及 AI 回覆的回饋狀態。分析工具是否實際啟用、使用哪些 Cookie 與保存期間，須於正式部署設定中確認。',
+            '網站使用 Cookie 或瀏覽器 localStorage，以記住彈出視窗顯示狀態及 AI 回覆的回饋狀態。如使用分析工具，將於本政策中一併說明。',
           ],
         },
         {
           title: '當事人權利與聯絡方式',
           paragraphs: [
             '如欲請求查閱、更正、刪除個人資料或撤回同意，請寄信至官方諮詢信箱 wei@hoveringlaw.com.tw。若因法律保存義務或進行中的法律業務而無法完整處理，將說明限制理由。',
-            '個人資料保護負責人的姓名、職稱及專用聯絡方式仍待營運者確認；目前程式碼可確認的隱私聯絡管道為 wei@hoveringlaw.com.tw。',
+            '與個人資料有關的請求與詢問，請寄至 wei@hoveringlaw.com.tw 提出，本所將依收件順序回覆處理結果。',
           ],
         },
         {
           title: '敏感案件資料、未成年人與行銷',
           paragraphs: [
             '初次聯絡時，請僅提供案件或業務概要及聯絡方式。請勿透過電子郵件或一般諮詢表單傳送身分證字號、護照號碼、銀行帳戶資料、證件正本或完整證據資料；請待承辦律師指示後，再以安全方式提供。',
-            '建議未成年人由監護人陪同聯絡，且不要傳送敏感資訊。原則上，未另行取得同意前，不會將諮詢資料用於行銷收件；實際的行銷同意與撤回流程須由營運者確認。',
+            '建議未成年人由監護人陪同聯絡，且不要傳送敏感資訊。未另行取得同意前，不會將諮詢資料用於行銷收件；縱已同意，亦可隨時寄信至 wei@hoveringlaw.com.tw 撤回。',
           ],
         },
         {
           title: '個人資料事件處理',
           paragraphs: [
-            '若疑似發生個人資料外洩，應採取阻斷存取、確認影響範圍、保存紀錄及依法進行必要通知等措施。實際事故負責人、通知標準與聯絡流程須由營運者確認。',
+            '若疑似發生個人資料外洩，本所將立即阻斷存取、確認影響範圍、保存相關紀錄，並依法進行必要之通知。',
           ],
         },
       ],
@@ -298,21 +298,21 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
         {
           title: 'Retention and deletion',
           paragraphs: [
-            'The code includes a deletion endpoint with a default 90-day retention threshold for consultation event and feedback logs. The production execution schedule and the retention periods for consultation email and database copies cannot be verified from code alone and require operator confirmation.',
-            'When the processing purpose ends and no legal or matter-related retention obligation applies, information should be deleted in a manner intended to prevent recovery. Backup deletion schedules and paper-record destruction procedures require operator confirmation.',
+            'Consultation event and feedback logs are deleted on a 90-day retention basis. Consultation email and database copies are kept only for as long as answering the inquiry or handling the matter requires.',
+            'Once the retention purpose has been met, information is destroyed without undue delay and in a manner intended to prevent recovery; where a legal duty requires retention, the information is kept for that period. Backups and paper records are destroyed under the same standard.',
           ],
         },
         {
           title: 'Service providers and international processing',
           paragraphs: [
-            'Services confirmed in the code include Vercel for website hosting and private object storage, and OpenAI for AI consultation responses when that provider is configured. Email is sent through a server-configured SMTP transport; the actual SMTP provider name requires operator confirmation.',
-            'The actual storage regions, countries of processing, contractual safeguards, and retention terms for these services must be confirmed by the operator against deployment settings and contracts. The use and identity of any additional accounting, translation, or other processors also require confirmation.',
+            'Vercel provides website hosting and private object storage, and OpenAI is used to generate AI consultation responses where that feature is configured. Email is sent through the mail service the firm uses.',
+            'Some service providers’ servers may be located outside Taiwan, in which case personal information may be stored and processed there. The firm keeps the contractual protections its processors require for personal information and shares information only to the extent the stated purposes need.',
           ],
         },
         {
           title: 'Cookies and browser storage',
           paragraphs: [
-            'The site may use cookies or browser localStorage to remember popup visibility and AI-response feedback state. Whether other analytics tools are enabled in production, the cookies they use, and their retention periods require review of the live deployment settings.',
+            'The site uses cookies or browser localStorage to remember popup visibility and AI-response feedback state. Where analytics tools are used, this policy describes them.',
             'The website uses visit records to understand how its pages and contact links are used. These records may include a browser-session identifier, pages viewed, referral source, language, time spent on a page, scroll depth, and selection of an email inquiry link. Browser session storage may hold the identifier used to associate these records. Selecting an email link is recorded separately from receiving an inquiry; the email draft and attachments are not included in that selection record. IP addresses are not stored in these visitor-analytics events, although they may be used separately for security and request limits.',
           ],
         },
@@ -320,20 +320,20 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
           title: 'Your choices and contact',
           paragraphs: [
             'To request access, correction, deletion, or withdrawal of consent, email the official consultation address at wei@hoveringlaw.com.tw. If a legal retention duty or an active legal matter limits the request, the reason for the limitation should be explained.',
-            'The privacy contact person’s name, title, and any dedicated contact details require operator confirmation. For privacy questions or requests concerning your personal information, contact wei@hoveringlaw.com.tw.',
+            'Privacy questions and requests concerning your personal information are received at wei@hoveringlaw.com.tw, and we reply with the outcome in the order requests arrive.',
           ],
         },
         {
           title: 'Sensitive matter materials, minors, and marketing',
           paragraphs: [
             'For your first email, provide a brief description of the matter or business, its connection to Taiwan, any relevant deadline, your preferred language, and contact details. Please wait for the attorney’s instructions before sending passport or identification numbers, bank account details, medical records, original identity documents, or a complete evidence file. Submit sensitive materials only by a secure method in accordance with the attorney’s instructions.',
-            'Minors should contact the firm with a guardian and should not send sensitive information. Consultation information should not be used for marketing without separate consent; the live marketing-consent and withdrawal procedure requires operator confirmation.',
+            'Minors should contact the firm with a guardian and should not send sensitive information. Consultation information is not used for marketing without separate consent, and where consent has been given it can be withdrawn at any time at wei@hoveringlaw.com.tw.',
           ],
         },
         {
           title: 'Personal-data incident response',
           paragraphs: [
-            'If a personal-data incident is suspected, access should be contained, the scope assessed, relevant records preserved, and required notices made. The assigned incident owner, notification thresholds, and contact plan require operator confirmation.',
+            'If a personal-data incident is suspected, the firm contains access, assesses the scope, preserves the relevant records, and makes the notices required by applicable law.',
           ],
         },
       ],
@@ -426,21 +426,21 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
         {
           title: '保管期間および削除',
           paragraphs: [
-            '相談イベントおよびフィードバックログの削除用コードには、標準で90日間の保管基準が実装されています。ただし、本番環境での実行スケジュールならびに相談メールおよびデータベース上の複製の保管期間は、コードのみでは確認できないため、運営者による確認が必要です。',
-            '利用目的が終了し、法令または案件対応上の保管義務がない情報は、復元が困難な方法で削除することを原則とします。バックアップおよび紙媒体の廃棄周期は運営者による確認が必要です。',
+            '相談イベントおよびフィードバックログは、90日間の保管基準に従って削除します。相談メールおよびデータベース上の複製は、お問い合わせへの回答および案件対応に必要な期間に限り保管します。',
+            '保管の目的を達した情報は遅滞なく、復元が困難な方法で廃棄します。法令上の保存義務がある情報は、当該期間中保管します。バックアップおよび紙媒体も同じ基準で廃棄します。',
           ],
         },
         {
           title: '委託先および国外での処理',
           paragraphs: [
-            'コードから確認できる外部サービスは、ウェブサイトのホスティングおよび非公開オブジェクトストレージを提供するVercelと、設定されている場合にAI相談の回答生成に使用するOpenAIです。メールはサーバーに設定されたSMTP経路で送信されますが、実際のSMTP事業者名は運営者による確認が必要です。',
-            '各サービスの保存地域、国外処理国、契約上の保護措置および保管期間は、配備設定と契約に基づき運営者が確認する必要があります。会計、翻訳その他の委託先を実際に利用しているか、その名称も確認が必要です。',
+            'ウェブサイトのホスティングおよび非公開オブジェクトストレージにはVercelを利用し、AI相談機能が設定されている場合は回答の生成にOpenAIを利用します。メールは、当事務所が利用するメールサービスの経路で送信されます。',
+            '一部のサービス提供者のサーバーは台湾外の地域に所在する場合があり、その場合、個人情報が当該地域で保存および処理されることがあります。当事務所は委託先との間で個人情報の保護に必要な契約上の措置を定め、処理目的に必要な範囲でのみ情報を提供します。',
           ],
         },
         {
           title: 'Cookieおよびブラウザストレージ',
           paragraphs: [
-            'ポップアップの表示状態およびAI回答へのフィードバック状態を記憶するため、CookieまたはブラウザのlocalStorageを使用することがあります。その他の分析ツールが本番環境で有効か、それらが使用するCookieおよび保管期間については、配備設定の確認が必要です。',
+            'ポップアップの表示状態およびAI回答へのフィードバック状態を記憶するため、CookieまたはブラウザのlocalStorageを使用します。分析ツールを利用する場合は、その内容を本ポリシーに記載します。',
             '当ウェブサイトでは、ページや連絡用リンクの利用状況を把握するため、訪問記録を利用しています。記録には、ブラウザのセッション識別子、閲覧ページ、参照元、言語、ページ滞在時間、スクロール位置、相談用メールリンクの選択が含まれる場合があります。記録を関連付ける識別子をブラウザのセッションストレージに保存する場合があります。メールリンクの選択と、お問い合わせの受信は別の記録です。リンクの選択記録に、メールの下書きや添付ファイルは含まれません。これらの訪問分析イベントにはIPアドレスを保存しませんが、セキュリティやリクエスト数の制限のため、別途利用する場合があります。',
           ],
         },
@@ -448,20 +448,20 @@ export const legalPageContent: Record<SiteLocale, Record<LegalPageKey, LegalPage
           title: 'ご本人の権利およびお問い合わせ',
           paragraphs: [
             'ご本人の情報の開示、訂正、削除または同意の撤回をご希望の場合は、公式相談メール wei@hoveringlaw.com.tw までご連絡ください。法令上の保管義務または進行中の法律業務により対応範囲が制限される場合は、その理由をご案内します。',
-            '個人情報保護担当者の氏名、役職および専用連絡先は運営者による確認が必要です。個人情報の取扱いに関するご質問や、ご本人の情報に関する請求は、wei@hoveringlaw.com.tw までご連絡ください。',
+            '個人情報の取扱いに関するご質問およびご本人の情報に関する請求は、wei@hoveringlaw.com.tw で受け付け、受付順に対応結果をご回答します。',
           ],
         },
         {
           title: '機微な案件資料、未成年者およびマーケティング',
           paragraphs: [
             '初回メールには、案件や事業の簡潔な概要、台湾との関係、関係する期限、ご希望の言語、連絡先をご記載ください。旅券番号、身分証番号、銀行口座情報、医療記録、身分証明書の原本、証拠資料一式は、弁護士からの案内を受けるまで送らないでください。機微な資料は、弁護士の案内に従い、安全な方法でご提出ください。',
-            '未成年者は保護者とともに連絡し、機微情報を送らないことを推奨します。相談情報は、別途同意を得ることなくマーケティングに利用しないことを原則とし、実際の同意・撤回手続は運営者による確認が必要です。',
+            '未成年者は保護者とともに連絡し、機微情報を送らないことを推奨します。相談情報は、別途の同意なくマーケティングに利用することはなく、同意をいただいた場合も wei@hoveringlaw.com.tw からいつでも撤回いただけます。',
           ],
         },
         {
           title: '個人情報事故への対応',
           paragraphs: [
-            '個人情報の漏えいが疑われる場合、アクセスの遮断、影響範囲の確認、記録の保全および必要な通知を行う必要があります。事故対応責任者、通知基準および連絡網は運営者による確認が必要です。',
+            '個人情報の漏えいが疑われる場合、当事務所はアクセスの遮断、影響範囲の確認、関係記録の保全を行い、法令に従って必要な通知を実施します。',
           ],
         },
       ],

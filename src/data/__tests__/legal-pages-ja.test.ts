@@ -68,10 +68,10 @@ describe('Japanese legal-page content', () => {
       'ウェブサイトの安全性、運営および利用体験の改善',
     ]);
     expect(japanese.privacy.sections[2]?.paragraphs[0]).toBe(
-      '相談イベントおよびフィードバックログの削除用コードには、標準で90日間の保管基準が実装されています。ただし、本番環境での実行スケジュールならびに相談メールおよびデータベース上の複製の保管期間は、コードのみでは確認できないため、運営者による確認が必要です。',
+      '相談イベントおよびフィードバックログは、90日間の保管基準に従って削除します。相談メールおよびデータベース上の複製は、お問い合わせへの回答および案件対応に必要な期間に限り保管します。',
     );
     expect(japanese.privacy.sections[3]?.paragraphs[0]).toBe(
-      'コードから確認できる外部サービスは、ウェブサイトのホスティングおよび非公開オブジェクトストレージを提供するVercelと、設定されている場合にAI相談の回答生成に使用するOpenAIです。メールはサーバーに設定されたSMTP経路で送信されますが、実際のSMTP事業者名は運営者による確認が必要です。',
+      'ウェブサイトのホスティングおよび非公開オブジェクトストレージにはVercelを利用し、AI相談機能が設定されている場合は回答の生成にOpenAIを利用します。メールは、当事務所が利用するメールサービスの経路で送信されます。',
     );
     expect(japanese.privacy.sections[5]?.paragraphs[0]).toBe(
       'ご本人の情報の開示、訂正、削除または同意の撤回をご希望の場合は、公式相談メール wei@hoveringlaw.com.tw までご連絡ください。法令上の保管義務または進行中の法律業務により対応範囲が制限される場合は、その理由をご案内します。',
@@ -80,7 +80,7 @@ describe('Japanese legal-page content', () => {
       '初回メールには、案件や事業の簡潔な概要、台湾との関係、関係する期限、ご希望の言語、連絡先をご記載ください。旅券番号、身分証番号、銀行口座情報、医療記録、身分証明書の原本、証拠資料一式は、弁護士からの案内を受けるまで送らないでください。機微な資料は、弁護士の案内に従い、安全な方法でご提出ください。',
     );
     expect(japanese.privacy.sections[7]?.paragraphs[0]).toContain(
-      '事故対応責任者、通知基準および連絡網は運営者による確認が必要です。',
+      '法令に従って必要な通知を実施します。',
     );
     expect(japanese.accessibility.sections[0]?.paragraphs[0]).toBe(
       '昊鼎国際法律事務所は、主要な情報をより理解しやすく、利用しやすくするため、キーボード操作、見出し構造、文字と背景のコントラストおよびページの読みやすさの改善に継続して取り組んでいます。',
@@ -126,21 +126,21 @@ describe('Japanese legal-page content', () => {
       '상담 폼에서는 이름 또는 회사명, 회신 이메일, 문의 분야, 문의 개요, 개인정보 처리 동의를 받고 전화번호는 선택 사항입니다. AI 상담을 이용하면 대화 내용, 세션 식별자, 분류 결과와 피드백도 처리될 수 있습니다.',
     );
     expect(legalPageContent.ko.privacy.sections[3]?.paragraphs[0]).toContain(
-      'Vercel과, 설정된 경우 AI 상담 답변 생성에 사용하는 OpenAI',
+      'Vercel을 이용하며, AI 상담 기능이 설정된 경우 답변 생성에 OpenAI를 이용합니다',
     );
 
     expect(legalPageContent['zh-hant'].privacy.sections[2]?.paragraphs[0]).toContain(
-      '預設以 90 日為保存基準',
+      '以 90 日為保存基準予以刪除',
     );
     expect(legalPageContent['zh-hant'].privacy.sections[6]?.paragraphs[0]).toContain(
       '請勿透過電子郵件或一般諮詢表單傳送身分證字號、護照號碼、銀行帳戶資料',
     );
 
     expect(legalPageContent.en.privacy.sections[3]?.paragraphs[0]).toBe(
-      'Services confirmed in the code include Vercel for website hosting and private object storage, and OpenAI for AI consultation responses when that provider is configured. Email is sent through a server-configured SMTP transport; the actual SMTP provider name requires operator confirmation.',
+      'Vercel provides website hosting and private object storage, and OpenAI is used to generate AI consultation responses where that feature is configured. Email is sent through the mail service the firm uses.',
     );
     expect(legalPageContent.en.privacy.sections[7]?.paragraphs[0]).toContain(
-      'The assigned incident owner, notification thresholds, and contact plan require operator confirmation.',
+      'makes the notices required by applicable law.',
     );
   });
 });

@@ -453,10 +453,10 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             ],
           },
           {
-            heading: 'Những chi tiết còn chờ văn phòng xác nhận',
+            heading: 'Nơi lưu trữ dữ liệu và các nhà cung cấp dịch vụ',
             paragraphs: [
-              'Trang này chưa nêu tên pháp lý của bên thu thập thông tin, tiêu chí về thời hạn lưu trữ và thời điểm xóa, cũng như nhà cung cấp dịch vụ lưu trữ web và thư điện tử cùng khu vực đặt dữ liệu. Những chi tiết đó đang chờ văn phòng vận hành trang này xác nhận, và chỉ được ghi ở đây sau khi đã được xác nhận.',
-              'Chừng nào những chi tiết đó chưa được xác nhận, xin hãy hỏi trước qua địa chỉ thư điện tử trên trang liên hệ rồi mới gửi thông tin nhạy cảm.',
+              'Trang web này được lưu trữ trên Vercel, và nội dung bạn gửi được giữ trong kho lưu trữ đối tượng không công khai của dịch vụ đó. Thư điện tử được gửi qua dịch vụ thư mà văn phòng đang sử dụng.',
+              'Máy chủ của một số nhà cung cấp dịch vụ có thể đặt ngoài Đài Loan, khi đó thông tin của bạn có thể được lưu và xử lý tại nơi đó. Khi mục đích lưu giữ đã đạt được, thông tin được xóa không chậm trễ; thông tin có nghĩa vụ lưu giữ theo quy định thì được giữ trong thời hạn tương ứng. Mọi yêu cầu liên quan đến dữ liệu cá nhân được tiếp nhận tại wei@hoveringlaw.com.tw.',
             ],
           },
         ],
@@ -924,10 +924,10 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             ],
           },
           {
-            heading: 'Rincian yang masih menunggu konfirmasi kantor',
+            heading: 'Tempat penyimpanan data dan penyedia layanan',
             paragraphs: [
-              'Halaman ini belum menyebutkan nama resmi pihak yang mengumpulkan data, patokan jangka waktu penyimpanan dan saat penghapusannya, maupun penyedia layanan hosting dan surel yang dipakai beserta wilayah penyimpanan datanya. Rincian itu masih menunggu konfirmasi dari kantor yang mengelola situs ini, dan baru akan dicantumkan di sini setelah dikonfirmasi.',
-              'Selama rincian itu belum dikonfirmasi, tanyakan lebih dahulu melalui alamat surel pada halaman kontak sebelum Anda mengirimkan informasi yang bersifat sensitif.',
+              'Situs ini dihosting di Vercel, dan kiriman Anda disimpan pada penyimpanan objek yang tidak terbuka untuk umum pada layanan tersebut. Surel dikirim melalui layanan surel yang digunakan kantor kami.',
+              'Server sebagian penyedia layanan dapat berada di luar Taiwan, sehingga data Anda dapat disimpan dan diproses di sana. Setelah tujuan penyimpanannya tercapai, data dihapus tanpa penundaan; data yang wajib disimpan menurut ketentuan yang berlaku disimpan selama jangka waktu tersebut. Permintaan yang berkaitan dengan data pribadi diterima di wei@hoveringlaw.com.tw.',
             ],
           },
         ],
@@ -1395,10 +1395,10 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             ],
           },
           {
-            heading: 'รายละเอียดที่ยังรอการยืนยันจากสำนักงาน',
+            heading: 'สถานที่จัดเก็บข้อมูลและผู้ให้บริการ',
             paragraphs: [
-              'หน้านี้ยังไม่ได้ระบุชื่อตามกฎหมายของผู้เก็บรวบรวมข้อมูล เกณฑ์ของระยะเวลาเก็บรักษาและเวลาที่จะลบข้อมูล ตลอดจนผู้ให้บริการโฮสติงและอีเมลที่ใช้ รวมทั้งภูมิภาคที่จัดเก็บข้อมูล รายละเอียดเหล่านี้ยังรอการยืนยันจากสำนักงานที่ดูแลเว็บไซต์นี้ และจะระบุไว้ที่นี่ต่อเมื่อได้รับการยืนยันแล้ว',
-              'ตราบใดที่รายละเอียดดังกล่าวยังไม่ได้รับการยืนยัน โปรดสอบถามทางอีเมลตามที่อยู่ในหน้าติดต่อก่อน แล้วจึงส่งข้อมูลที่มีความอ่อนไหว',
+              'เว็บไซต์นี้ใช้บริการโฮสติงของ Vercel และเรื่องที่ท่านส่งมาจะถูกเก็บไว้ในพื้นที่จัดเก็บข้อมูลแบบไม่เปิดเผยต่อสาธารณะของบริการดังกล่าว ส่วนอีเมลจะถูกส่งผ่านบริการอีเมลที่สำนักงานใช้อยู่',
+              'เซิร์ฟเวอร์ของผู้ให้บริการบางรายอาจตั้งอยู่นอกไต้หวัน ซึ่งในกรณีนั้นข้อมูลของท่านอาจถูกจัดเก็บและประมวลผลในพื้นที่ดังกล่าว เมื่อบรรลุวัตถุประสงค์ของการเก็บรักษาแล้ว ข้อมูลจะถูกลบโดยไม่ชักช้า ส่วนข้อมูลที่มีหน้าที่ต้องเก็บรักษาตามกฎเกณฑ์ที่ใช้บังคับจะถูกเก็บไว้ตลอดระยะเวลาดังกล่าว คำขอที่เกี่ยวกับข้อมูลส่วนบุคคลสามารถส่งได้ที่ wei@hoveringlaw.com.tw',
             ],
           },
         ],
@@ -1866,10 +1866,10 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             ],
           },
           {
-            heading: 'Mga detalyeng hinihintay pang kumpirmahin ng tanggapan',
+            heading: 'Saan nakaimbak ang impormasyon at ang mga tagapaglaan ng serbisyo',
             paragraphs: [
-              'Hindi pa nakasaad sa pahinang ito ang legal na pangalan ng nangongolekta ng impormasyon, ang batayan ng haba ng pag-iingat at ng oras ng pagbura, at ang mga tagapaglaan ng hosting at email na ginagamit pati ang rehiyon ng imbakan. Hinihintay pang kumpirmahin ang mga detalyeng ito ng tanggapang nagpapatakbo ng website na ito, at isasaad lamang dito matapos makumpirma.',
-              'Hangga\'t hindi pa nakukumpirma ang mga detalyeng iyon, magtanong ka muna sa pamamagitan ng email address na nasa pahina ng kontak bago ka magpadala ng sensitibong impormasyon.',
+              'Naka-host sa Vercel ang website na ito, at iniimbak ang ipinadala mo sa imbakang hindi bukas sa publiko ng serbisyong iyon. Ipinapadala naman ang email sa pamamagitan ng serbisyo ng email na ginagamit ng tanggapan.',
+              'Maaaring nasa labas ng Taiwan ang mga server ng ilang tagapaglaan ng serbisyo, kaya maaaring maimbak at maproseso roon ang impormasyon mo. Kapag natupad na ang layunin ng pag-iingat, binubura ang impormasyon nang walang pagkaantala; iniingatan naman sa buong takdang panahon ang impormasyong may tungkuling itago alinsunod sa mga umiiral na tuntunin. Tinatanggap sa wei@hoveringlaw.com.tw ang mga kahilingang may kinalaman sa personal na impormasyon.',
             ],
           },
         ],

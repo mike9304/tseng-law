@@ -266,36 +266,36 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
   },
   vi: {
     guidanceNotice:
-      'Trang này được viết bằng tiếng Việt để cung cấp thông tin hướng dẫn chung, không phải ý kiến pháp lý cho vụ việc cụ thể của bạn.',
+      'Trang này được viết bằng tiếng Việt để cung cấp thông tin hướng dẫn chung, không phải ý kiến pháp lý cho vụ việc cụ thể của quý vị.',
     consultationNotice:
       'Việc tư vấn được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.',
     methodConfirmationNotice:
-      'Nếu bạn không dùng được ngôn ngữ nào trong bốn ngôn ngữ đó, hãy chọn “Cần xác nhận cách liên hệ”. Chúng tôi sẽ trả lời để xác nhận cách trao đổi, nhưng không bảo đảm có thể hỗ trợ bằng ngôn ngữ khác.',
+      'Nếu quý vị không dùng được ngôn ngữ nào trong bốn ngôn ngữ đó, hãy chọn “Cần xác nhận cách liên hệ”. Văn phòng xác nhận phương thức trao đổi bằng thư trả lời khi có phương thức khả thi; không bảo đảm hỗ trợ bằng ngôn ngữ khác và không cam kết thời gian phản hồi.',
     preparationNotice:
-      'Bạn có thể viết tóm tắt vụ việc bằng ngôn ngữ của mình. Phần nội dung gốc bạn viết được giữ nguyên và không được dịch tự động.',
+      'Quý vị có thể viết tóm tắt vụ việc bằng ngôn ngữ của mình. Phần nội dung gốc quý vị viết được giữ nguyên và không được dịch tự động.',
     heading: 'Gửi yêu cầu tư vấn',
     intro:
-      'Vui lòng mô tả ngắn gọn vụ việc của bạn. Luật sư sẽ xem xét nội dung trước khi trao đổi về bước tiếp theo.',
+      'Vui lòng mô tả ngắn gọn vụ việc của quý vị. Luật sư sẽ xem xét nội dung trước khi trao đổi về bước tiếp theo.',
     submitLabel: 'Gửi yêu cầu',
     submittingLabel: 'Đang gửi…',
     successMessage:
-      'Chúng tôi đã nhận được yêu cầu của bạn và đang chờ xem xét. Điều này không có nghĩa là buổi tư vấn đã diễn ra hay lịch hẹn đã được xác nhận.',
+      'Chúng tôi đã nhận được yêu cầu của quý vị và đang chờ xem xét. Điều này không có nghĩa là buổi tư vấn đã diễn ra hay lịch hẹn đã được xác nhận.',
     savedNotificationPendingMessage:
-      'Yêu cầu của bạn đã được lưu, nhưng chưa xác nhận được thông báo gửi tới văn phòng. Nội dung bạn viết không bị mất. Nếu chưa nhận được phản hồi, bạn cũng có thể gửi thư tới địa chỉ email trên trang liên hệ.',
+      'Yêu cầu của quý vị đã được lưu, nhưng chưa xác nhận được thông báo gửi tới văn phòng. Nội dung quý vị viết không bị mất. Nếu chưa nhận được phản hồi, quý vị cũng có thể gửi thư tới địa chỉ email trên trang liên hệ.',
     receiptIdLabel: 'Mã tiếp nhận',
     failureMessage:
-      'Không gửi được yêu cầu của bạn. Vui lòng thử lại, hoặc gửi tới địa chỉ email trên trang liên hệ.',
-    originalLanguageLabel: 'Ngôn ngữ bạn dùng để viết',
+      'Không gửi được yêu cầu của quý vị. Vui lòng thử lại, hoặc gửi tới địa chỉ email trên trang liên hệ.',
+    originalLanguageLabel: 'Ngôn ngữ quý vị dùng để viết',
     originalLanguagePlaceholder:
       'Ví dụ: tiếng Việt, tiếng Indonesia, tiếng Thái, tiếng Filipino hoặc ngôn ngữ khác',
-    preferredConsultationLanguageLabel: 'Ngôn ngữ bạn muốn dùng khi tư vấn',
-    originalTextLabel: 'Tóm tắt vụ việc (bằng ngôn ngữ của bạn)',
+    preferredConsultationLanguageLabel: 'Ngôn ngữ quý vị muốn dùng khi tư vấn',
+    originalTextLabel: 'Tóm tắt vụ việc (bằng ngôn ngữ của quý vị)',
     originalTextPlaceholder:
-      'Hãy cho biết chuyện gì đã xảy ra, bạn cần hỗ trợ điều gì và thời hạn nếu có. Xin đừng ghi số hộ chiếu, số giấy tờ tùy thân hoặc thông tin tài khoản ngân hàng.',
-    nameLabel: 'Họ và tên',
-    emailLabel: 'Email',
+      'Hãy cho biết chuyện gì đã xảy ra, quý vị cần hỗ trợ điều gì và thời hạn nếu có. Xin đừng ghi số hộ chiếu, số giấy tờ tùy thân hoặc thông tin tài khoản ngân hàng.',
+    nameLabel: 'Tên (cá nhân hoặc tổ chức)',
+    emailLabel: 'Thư điện tử',
     consentLabel:
-      'Tôi đã đọc chính sách quyền riêng tư và đồng ý gửi yêu cầu này.',
+      'Tôi đã đọc phần thông tin về dữ liệu thu thập qua biểu mẫu liên hệ và đồng ý gửi yêu cầu này.',
     privacyLinkLabel: 'Chính sách quyền riêng tư',
     requiredMessage: 'Mục này là bắt buộc.',
     invalidEmailMessage: 'Vui lòng nhập địa chỉ email hợp lệ.',
@@ -303,7 +303,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     sourceLanguageNotice:
       'Bài viết này chỉ có bằng {language}, và liên kết sẽ mở trang gốc đó.',
     unavailableTranslationNotice:
-      'Mục này chưa được dịch sang ngôn ngữ của trang này. Một liên kết có ghi rõ ngôn ngữ gốc sẽ mở bài viết gốc.',
+      'Bài viết này chưa được dịch sang ngôn ngữ của trang này. Một liên kết có ghi rõ ngôn ngữ gốc sẽ mở bài viết gốc.',
     unavailableLanguageNotice: 'Trang này không được cung cấp bằng {language}.',
     languageOptions: {
       en: 'Tiếng Anh (English)',
@@ -318,7 +318,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Halaman ini ditulis dalam bahasa Indonesia sebagai panduan umum, bukan nasihat hukum untuk perkara Anda sendiri.',
     consultationNotice:
-      'Konsultasi dilayani dalam empat bahasa: Inggris, Tionghoa, Jepang, dan Korea.',
+      'Konsultasi dilayani dalam empat bahasa: bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.',
     methodConfirmationNotice:
       'Jika tidak satu pun dari keempat bahasa itu dapat Anda gunakan, pilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan cara berkomunikasi, tetapi layanan dalam bahasa lain tidak dijamin.',
     preparationNotice:
@@ -326,7 +326,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     heading: 'Kirim permintaan konsultasi',
     intro:
       'Jelaskan perkara Anda secara singkat. Advokat meninjau isi pesan Anda sebelum langkah berikutnya dibicarakan.',
-    submitLabel: 'Kirim permintaan',
+    submitLabel: 'Kirim permintaan konsultasi',
     submittingLabel: 'Mengirim…',
     successMessage:
       'Permintaan Anda telah kami terima dan menunggu ditinjau. Ini tidak berarti konsultasi sudah berlangsung atau janji temu sudah dipastikan.',
@@ -337,7 +337,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Permintaan Anda tidak terkirim. Silakan coba lagi, atau kirim ke alamat email pada halaman kontak.',
     originalLanguageLabel: 'Bahasa yang Anda pakai untuk menulis',
     originalLanguagePlaceholder:
-      'Misalnya: bahasa Indonesia, Vietnam, Thai, Filipino, atau bahasa lain',
+      'Misalnya: bahasa Indonesia, bahasa Vietnam, bahasa Thai, bahasa Filipino, atau bahasa lain',
     preferredConsultationLanguageLabel: 'Bahasa konsultasi yang Anda inginkan',
     originalTextLabel: 'Ringkasan perkara (dalam bahasa Anda sendiri)',
     originalTextPlaceholder:
@@ -345,7 +345,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     nameLabel: 'Nama',
     emailLabel: 'Email',
     consentLabel:
-      'Saya sudah membaca kebijakan privasi dan setuju mengirim permintaan ini.',
+      'Saya sudah membaca kebijakan privasi dan setuju untuk mengirim permintaan ini.',
     privacyLinkLabel: 'Kebijakan privasi',
     requiredMessage: 'Kolom ini wajib diisi.',
     invalidEmailMessage: 'Masukkan alamat email yang valid.',
@@ -353,7 +353,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     sourceLanguageNotice:
       'Artikel ini hanya tersedia dalam {language}, dan tautannya membuka halaman asli tersebut.',
     unavailableTranslationNotice:
-      'Item ini belum diterjemahkan ke bahasa halaman ini. Tautan yang mencantumkan bahasa aslinya akan membuka teks asli tersebut.',
+      'Tulisan ini belum diterjemahkan ke bahasa halaman ini. Tautan yang mencantumkan bahasa aslinya akan membuka teks asli tersebut.',
     unavailableLanguageNotice: 'Halaman ini tidak tersedia dalam {language}.',
     languageOptions: {
       en: 'Inggris (English)',
@@ -361,7 +361,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Jepang (日本語)',
       ko: 'Korea (한국어)',
       'needs-method-confirmation':
-        'Keempat bahasa itu tidak bisa saya pakai — perlu konfirmasi cara berkomunikasi',
+        'Keempat bahasa itu tidak dapat saya gunakan — perlu konfirmasi cara berkomunikasi',
     },
   },
   th: {
@@ -397,50 +397,50 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consentLabel:
       'ข้าพเจ้าได้อ่านนโยบายความเป็นส่วนตัวแล้ว และยินยอมส่งเรื่องนี้',
     privacyLinkLabel: 'นโยบายความเป็นส่วนตัว',
-    requiredMessage: 'ต้องกรอกช่องนี้',
+    requiredMessage: 'กรุณากรอกช่องนี้',
     invalidEmailMessage: 'กรุณากรอกที่อยู่อีเมลให้ถูกต้อง',
     tooLongMessage: 'ข้อความยาวเกินไป กรุณาย่อให้สั้นลงแล้วส่งใหม่',
     sourceLanguageNotice:
-      'บทความนี้มีเฉพาะ{language}เท่านั้น และลิงก์จะเปิดหน้าต้นฉบับดังกล่าว',
+      'บทความนี้มีเฉพาะภาษา {language} เท่านั้น และลิงก์จะเปิดหน้าต้นฉบับนั้น',
     unavailableTranslationNotice:
-      'รายการนี้ยังไม่ได้แปลเป็นภาษาของหน้านี้ ลิงก์ที่ระบุภาษาต้นฉบับไว้ชัดเจนจะเปิดหน้าต้นฉบับให้ท่านอ่าน',
-    unavailableLanguageNotice: 'หน้านี้ไม่มีให้บริการเป็น{language}',
+      'บทความนี้ยังไม่ได้แปลเป็นภาษาของหน้านี้ ลิงก์ที่ระบุภาษาต้นฉบับไว้ชัดเจนจะเปิดหน้าต้นฉบับให้ท่านอ่าน',
+    unavailableLanguageNotice: 'หน้านี้ไม่มีให้บริการเป็นภาษา {language}',
     languageOptions: {
-      en: 'อังกฤษ (English)',
-      'zh-hant': 'จีน (中文)',
-      ja: 'ญี่ปุ่น (日本語)',
-      ko: 'เกาหลี (한국어)',
-      'needs-method-confirmation': 'ใช้ทั้ง 4 ภาษาไม่ได้ — ต้องยืนยันวิธีติดต่อ',
+      en: 'ภาษาอังกฤษ (English)',
+      'zh-hant': 'ภาษาจีน (中文)',
+      ja: 'ภาษาญี่ปุ่น (日本語)',
+      ko: 'ภาษาเกาหลี (한국어)',
+      'needs-method-confirmation': 'ใช้ภาษาใดใน 4 ภาษานี้ไม่ได้ — ต้องยืนยันวิธีติดต่อ',
     },
   },
   fil: {
     guidanceNotice:
-      'Nakasulat sa Filipino ang pahinang ito bilang pangkalahatang gabay. Hindi ito legal na payo para sa tiyak na usapin mo.',
+      'Nakasulat sa Filipino ang pahinang ito bilang pangkalahatang gabay. Hindi ito legal na payo para sa tiyak na usapin ninyo.',
     consultationNotice:
       'Ang aktwal na konsultasyon ay isinasagawa sa apat na wika: Ingles, Tsino, Hapon, at Koreano.',
     methodConfirmationNotice:
-      'Kung wala sa apat na wikang iyon ang kaya mong gamitin, piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang kumpirmahin kung paano tayo makakapag-usap, ngunit hindi garantisado ang serbisyo sa ibang wika.',
+      'Kung wala sa apat na wikang iyon ang kaya ninyong gamitin, piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang kumpirmahin kung paano tayo makakapag-usap kung may posibleng paraan, ngunit hindi garantisado ang serbisyo sa ibang wika at walang pangako sa panahon ng pagsagot.',
     preparationNotice:
-      'Maaari mong isulat ang buod ng usapin mo sa sarili mong wika. Iniingatan ang orihinal mong teksto gaya ng pagkakasulat mo, at hindi ito awtomatikong isinasalin.',
-    heading: 'Ipadala ang iyong usapin',
+      'Maaari ninyong isulat ang buod ng usapin ninyo sa sarili ninyong wika. Iniingatan ang orihinal ninyong teksto gaya ng pagkakasulat ninyo, at hindi ito awtomatikong isinasalin.',
+    heading: 'Ipadala ang inyong katanungan',
     intro:
-      'Ipaliwanag nang maikli ang usapin mo. Sinusuri ito ng abogado bago pag-usapan ang susunod na hakbang.',
-    submitLabel: 'Ipadala ang usapin',
+      'Ipaliwanag nang maikli ang usapin ninyo. Sinusuri ito ng abogado bago pag-usapan ang susunod na hakbang.',
+    submitLabel: 'Ipadala ang katanungan',
     submittingLabel: 'Ipinapadala…',
     successMessage:
-      'Natanggap namin ang mensahe mo at naghihintay ito ng pagsusuri. Hindi ito nangangahulugang naganap na ang konsultasyon o kumpirmado na ang appointment.',
+      'Natanggap namin ang mensahe ninyo at naghihintay ito ng pagsusuri. Hindi ito nangangahulugang naganap na ang konsultasyon o kumpirmado na ang appointment.',
     savedNotificationPendingMessage:
-      'Naitala na ang mensahe mo, ngunit hindi pa nakukumpirma ang abiso papunta sa opisina. Hindi nawala ang isinulat mo. Kung wala kang matanggap na sagot, maaari ka ring sumulat sa email address na nasa pahina ng kontak.',
-    receiptIdLabel: 'Numero ng sanggunian',
+      'Naitala na ang mensahe ninyo, ngunit hindi pa nakukumpirma ang abiso papunta sa opisina. Hindi nawala ang isinulat ninyo. Kung wala kayong matanggap na sagot, maaari rin kayong sumulat sa email address na nasa pahina ng kontak.',
+    receiptIdLabel: 'Numero ng pagtanggap (reference number)',
     failureMessage:
-      'Hindi naipadala ang mensahe mo. Pakisubukan muli, o ipadala ito sa email address na nasa pahina ng kontak.',
-    originalLanguageLabel: 'Wikang ginagamit mo sa pagsulat',
+      'Hindi naipadala ang mensahe ninyo. Pakisubukan muli, o ipadala ito sa email address na nasa pahina ng kontak.',
+    originalLanguageLabel: 'Wikang ginagamit ninyo sa pagsulat',
     originalLanguagePlaceholder:
       'Halimbawa: Filipino, Vietnamese, Indonesian, Thai, o ibang wika',
-    preferredConsultationLanguageLabel: 'Wikang nais mo para sa konsultasyon',
-    originalTextLabel: 'Buod ng usapin mo (sa sarili mong wika)',
+    preferredConsultationLanguageLabel: 'Wikang nais ninyo para sa konsultasyon',
+    originalTextLabel: 'Buod ng usapin ninyo (sa sarili ninyong wika)',
     originalTextPlaceholder:
-      'Isulat kung ano ang nangyari, anong tulong ang kailangan mo, at kung may takdang petsa. Huwag ilagay ang numero ng pasaporte, numero ng ID, o detalye ng bank account.',
+      'Isulat kung ano ang nangyari, anong tulong ang kailangan ninyo, at kung may takdang petsa. Huwag ilagay ang numero ng pasaporte, numero ng ID, o detalye ng bank account.',
     nameLabel: 'Pangalan',
     emailLabel: 'Email',
     consentLabel:
@@ -448,11 +448,11 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     privacyLinkLabel: 'Patakaran sa pribasiya',
     requiredMessage: 'Kailangang punan ang bahaging ito.',
     invalidEmailMessage: 'Maglagay ng wastong email address.',
-    tooLongMessage: 'Masyadong mahaba ang tekstong ito. Paikliin at ipadala muli.',
+    tooLongMessage: 'Masyadong mahaba ang tekstong ito. Paikliin ninyo ito at ipadala muli.',
     sourceLanguageNotice:
       'Ang artikulong ito ay makukuha lamang sa {language}, at bubuksan ng link ang orihinal na pahinang iyon.',
     unavailableTranslationNotice:
-      'Hindi pa naisasalin ang aytem na ito sa wika ng pahinang ito. Bubuksan ng link na malinaw na nakasaad ang wikang pinagmulan ang orihinal na teksto.',
+      'Hindi pa naisasalin ang bahaging ito sa wika ng pahinang ito. May link na malinaw na nagsasaad ng wikang pinagmulan; bubuksan nito ang orihinal na teksto.',
     unavailableLanguageNotice: 'Hindi makukuha ang pahinang ito sa {language}.',
     languageOptions: {
       en: 'Ingles (English)',

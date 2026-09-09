@@ -495,7 +495,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
   },
   id: {
     consultationNotice:
-      'Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, Tionghoa, Jepang, dan Korea.',
+      'Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.',
     discoveryNotice:
       'Berkas llms.txt ini hanya peta penelusuran halaman publik; berkas ini tidak menjanjikan peringkat pencarian, dukungan, rekomendasi AI, atau jaminan untuk ditampilkan.',
     confidentialNotice:

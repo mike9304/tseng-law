@@ -12,12 +12,20 @@ import {
   type GuidancePageKey,
 } from '@/data/international-guidance-content';
 import { GUIDANCE_LOCALES_4, guidanceCanonicalUrl } from '@/lib/public-guidance';
+import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
+import {
+  GUIDANCE_TEAM_MEMBER_IDS,
+  guidanceTeamCopy,
+} from '@/data/international-guidance-team';
+import { teamContent } from '@/data/team-members';
 import {
   ATTORNEY_PERSON_ID,
   GUIDANCE_CONSULTATION_LANGUAGES,
   buildGuidanceFaqJsonLd,
   buildGuidanceLegalServiceJsonLd,
+  buildGuidanceWebsiteJsonLd,
   buildLegalServiceJsonLd,
+  buildWebsiteJsonLd,
 } from '@/lib/seo';
 
 const CONSULTATION_LANGUAGES = ['en', 'zh-Hant', 'ja', 'ko'];
@@ -199,7 +207,10 @@ describe('guidance LegalService JSON-LD', () => {
       expect(guidanceContent[locale].pages.home.faqs).toBeUndefined();
       const markup = renderGuidanceHome(locale);
       expect(nodesOfType(markup, 'FAQPage'), `${locale} home FAQPage`).toHaveLength(0);
-      expect(parseJsonLdNodes(markup), `${locale} home JSON-LD nodes`).toHaveLength(1);
+      // WO-O28 added the attorney `Person` node the English home already
+      // emits, so the home body now ships exactly LegalService + Person.
+      expect(parseJsonLdNodes(markup), `${locale} home JSON-LD nodes`).toHaveLength(2);
+      expect(nodesOfType(markup, 'Person'), `${locale} home Person`).toHaveLength(1);
     }
   });
 
@@ -212,5 +223,98 @@ describe('guidance LegalService JSON-LD', () => {
     expect(node.availableLanguage).toEqual(CONSULTATION_LANGUAGES);
     expect(node.provider).toEqual({ '@type': 'Person', '@id': ATTORNEY_PERSON_ID });
     expect(node).not.toHaveProperty('description');
+  });
+});
+
+/**
+ * WO-O28. The remaining `@type` gap against `/en` was structural, not textual:
+ * the guidance pages carried no `BreadcrumbList`, `Person` or `CollectionPage`
+ * node. These assertions pin the shape at the render path; the live `@type`
+ * set is compared against `/en` in `international-guidance.playwright.ts`.
+ */
+describe('guidance breadcrumb / person / collection JSON-LD', () => {
+  it.each(GUIDANCE_LOCALES_4)('emits a localized two-step breadcrumb on %s', (locale) => {
+    const breadcrumb = nodeOfType(renderGuidance(locale, 'pricing'), 'BreadcrumbList');
+    expect(breadcrumb).toBeDefined();
+
+    const items = breadcrumb!.itemListElement as Array<Record<string, unknown>>;
+    expect(items).toHaveLength(2);
+    expect(items[0]['@type']).toBe('ListItem');
+    // Names come from this locale's own nav / page copy, never from English.
+    expect(items[0].name).toBe(guidanceContent[locale].nav.home);
+    expect(items[0].item).toBe(guidanceCanonicalUrl(locale, 'home'));
+    expect(items[1].name).toBe(guidanceContent[locale].pages.pricing.title);
+    expect(items[1].item).toBe(guidanceCanonicalUrl(locale, 'pricing'));
+  });
+
+  it.each(GUIDANCE_LOCALES_4)('pins the %s roster Person to the canonical entity', (locale) => {
+    for (const pageKey of ['lawyers', 'about'] as const) {
+      const person = nodeOfType(renderGuidance(locale, pageKey), 'Person');
+      expect(person, `${locale}/${pageKey} Person`).toBeDefined();
+      expect(person!['@id']).toBe(ATTORNEY_PERSON_ID);
+
+      const profile = getAttorneyProfile('en', primaryAttorneySlug)!;
+      // No invented translation: the biography stays the canonical English one.
+      expect(person!.name).toBe(profile.name);
+      expect(person!.description).toBe(profile.description);
+      // The one language-dependent field the firm does publish per locale.
+      expect(person!.jobTitle).toBe(guidanceTeamCopy[locale].roles['tseng-junwei']);
+      // `/{guidance locale}/lawyers/{slug}` is a 404, so the English profile
+      // route is used — the same URL the visible roster link points at.
+      expect(person!.url).toBe(`https://tseng-law.com/en/lawyers/${profile.slug}`);
+      const alumni = person!.alumniOf as Array<Record<string, unknown>>;
+      expect(alumni.length).toBeGreaterThan(0);
+      expect(alumni[0]['@type']).toBe('CollegeOrUniversity');
+    }
+  });
+
+  it.each(GUIDANCE_LOCALES_4)('lists the %s roster in a CollectionPage', (locale) => {
+    const collection = nodeOfType(renderGuidance(locale, 'lawyers'), 'CollectionPage');
+    expect(collection).toBeDefined();
+    expect(collection!.url).toBe(guidanceCanonicalUrl(locale, 'lawyers'));
+    expect(collection!.inLanguage).toBe(locale);
+
+    const list = collection!.mainEntity as Record<string, unknown>;
+    expect(list['@type']).toBe('ItemList');
+    const items = list.itemListElement as Array<Record<string, unknown>>;
+    expect(items).toHaveLength(GUIDANCE_TEAM_MEMBER_IDS.length);
+    items.forEach((item, index) => {
+      const memberId = GUIDANCE_TEAM_MEMBER_IDS[index];
+      expect(item['@type']).toBe('ListItem');
+      expect(item.name).toBe(teamContent.en.members.find((m) => m.id === memberId)!.name);
+      expect(item.description).toBe(guidanceTeamCopy[locale].roles[memberId]);
+      // Every item points at the card actually rendered on this locale's page.
+      expect(item.url).toBe(`${guidanceCanonicalUrl(locale, 'lawyers')}#${memberId}`);
+    });
+  });
+
+  it.each(GUIDANCE_LOCALES_4)('carries a ContactPoint on the %s LegalService', (locale) => {
+    const legalService = nodeOfType(renderGuidance(locale, 'about'), 'LegalService');
+    const contactPoint = legalService!.contactPoint as Array<Record<string, unknown>>;
+    expect(contactPoint).toHaveLength(1);
+    expect(contactPoint[0]['@type']).toBe('ContactPoint');
+    // The consultation languages, not the page language.
+    expect(contactPoint[0].availableLanguage).toEqual(CONSULTATION_LANGUAGES);
+    expect(contactPoint[0].url).toBe(guidanceCanonicalUrl(locale, 'contact'));
+  });
+
+  it.each(GUIDANCE_LOCALES_4)('emits a %s WebSite node without a SearchAction', (locale) => {
+    const website = buildGuidanceWebsiteJsonLd(locale) as Record<string, unknown>;
+    expect(website['@type']).toBe('WebSite');
+    expect(website.inLanguage).toBe(locale);
+    expect(website.url).toBe(guidanceCanonicalUrl(locale, 'home'));
+    // Explicit exception to the parity rule: no `/search` route exists here.
+    expect(website).not.toHaveProperty('potentialAction');
+
+    const publisher = website.publisher as Record<string, unknown>;
+    expect(publisher['@type']).toBe('Organization');
+    expect((publisher.logo as Record<string, unknown>)['@type']).toBe('ImageObject');
+  });
+
+  it('keeps the SearchAction on the four site locales', () => {
+    for (const siteLocale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+      const website = buildWebsiteJsonLd(siteLocale) as Record<string, unknown>;
+      expect(website.potentialAction, `${siteLocale} SearchAction`).toBeDefined();
+    }
   });
 });

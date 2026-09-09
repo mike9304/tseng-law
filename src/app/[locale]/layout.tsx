@@ -18,7 +18,12 @@ import {
   getManagedLocaleFontClassNames,
   type DocumentLanguage,
 } from '@/app/fonts';
-import { buildLegalServiceJsonLd, buildWebsiteJsonLd, getOrganizationName } from '@/lib/seo';
+import {
+  buildGuidanceWebsiteJsonLd,
+  buildLegalServiceJsonLd,
+  buildWebsiteJsonLd,
+  getOrganizationName,
+} from '@/lib/seo';
 import { guidanceContent } from '@/data/international-guidance-content';
 import {
   PUBLIC_LOCALES_8,
@@ -118,6 +123,11 @@ export default async function LocaleLayout(
     const language = publicDocumentLanguage(publicLocale);
     return (
       <PublicColumnSlugsProvider slugsByLocale={columnSlugsByLocale}>
+        {/* WO-O28: the site-wide `WebSite` / `Organization` / logo
+            `ImageObject` the four site locales emit below. Without it every
+            guidance page was missing those three types. `SearchAction` is
+            deliberately omitted — vi/id/th/fil publish no `/search` route. */}
+        <JsonLd data={buildGuidanceWebsiteJsonLd(publicLocale)} />
         <DocumentLocaleSync
           language={language}
           fontClassName={getLocaleFontClassName(language)}

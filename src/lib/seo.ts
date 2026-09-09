@@ -54,7 +54,14 @@ type ArticleJsonLdInput = {
 };
 
 type PersonProfileJsonLdInput = {
-  locale: SiteLocale;
+  /**
+   * Page locale. Widened from `SiteLocale` to `PublicSeoLocale` for WO-O28 so
+   * the guidance surface (vi/id/th/fil) can emit the same Person node. The
+   * locale is only read through {@link getOrganizationName} and
+   * {@link getLocalizedPath}, both of which already accept eight locales, so
+   * the four site locales keep byte-identical output.
+   */
+  locale: PublicSeoLocale;
   path: string;
   /**
    * Optional explicit `@id` for the Person node. Pass `ATTORNEY_PERSON_ID` to
@@ -323,7 +330,12 @@ export function buildSeoMetadata({
   };
 }
 
-export function buildBreadcrumbJsonLd(locale: SiteLocale, items: BreadcrumbItem[]) {
+/**
+ * `locale` is not read: breadcrumb names and paths are passed in already
+ * localized. The parameter type was widened to {@link PublicSeoLocale} for
+ * WO-O28 so guidance-locale callers stop having to pass a false `'en'`.
+ */
+export function buildBreadcrumbJsonLd(locale: PublicSeoLocale, items: BreadcrumbItem[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -336,7 +348,22 @@ export function buildBreadcrumbJsonLd(locale: SiteLocale, items: BreadcrumbItem[
   };
 }
 
-export function buildWebsiteJsonLd(locale: SiteLocale) {
+/**
+ * `WebSite` (with its publisher `Organization` and the logo `ImageObject`).
+ *
+ * WO-O28 widened `locale` to {@link PublicSeoLocale} and added
+ * `includeSearchAction`. Both are additive: `getOrganizationName` and
+ * `getLocaleLanguageTag` already accept eight locales and are the identity on
+ * the four site locales, and the option defaults to `true`, so every existing
+ * caller keeps byte-identical output. The guidance surface passes `false`
+ * because vi/id/th/fil publish no `/search` route — advertising a
+ * `SearchAction` that 404s would be a false capability claim.
+ */
+export function buildWebsiteJsonLd(
+  locale: PublicSeoLocale,
+  options?: { includeSearchAction?: boolean },
+) {
+  const includeSearchAction = options?.includeSearchAction ?? true;
   const websiteUrl = buildAbsoluteUrl(getLocalizedPath(locale));
   const localizedOrganizationName = getOrganizationName(locale);
   const localizedAlternateNames = organizationAlternateNames.filter(
@@ -363,11 +390,15 @@ export function buildWebsiteJsonLd(locale: SiteLocale) {
       },
       sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913', 'https://www.threads.com/@lawyer.wei'],
     },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${buildAbsoluteUrl(getLocalizedPath(locale, '/search'))}?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
+    ...(includeSearchAction
+      ? {
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: `${buildAbsoluteUrl(getLocalizedPath(locale, '/search'))}?q={search_term_string}`,
+            'query-input': 'required name=search_term_string',
+          },
+        }
+      : {}),
   };
 }
 
@@ -503,7 +534,7 @@ export function buildPersonJsonLd({
     worksFor: {
       '@type': 'Organization',
       '@id': ORGANIZATION_ID,
-      name: organizationName[locale],
+      name: getOrganizationName(locale),
       url: buildAbsoluteUrl(getLocalizedPath(locale)),
     },
     alumniOf: alumniOf?.map((school) => ({
@@ -557,7 +588,7 @@ export function buildProfilePageJsonLd({
       worksFor: {
         '@type': 'Organization',
         '@id': ORGANIZATION_ID,
-        name: organizationName[locale],
+        name: getOrganizationName(locale),
         url: buildAbsoluteUrl(getLocalizedPath(locale)),
       },
       alumniOf: alumniOf?.map((school) => ({
@@ -749,6 +780,12 @@ type GuidanceLegalServiceInput = {
   /** Absolute canonical URL of the guidance page. */
   url: string;
   description?: string;
+  /**
+   * Absolute URL of this locale's own contact page. When given, the node
+   * carries the same `ContactPoint` the four site locales emit through
+   * {@link buildLegalServiceJsonLd}, pointed at the guidance contact route.
+   */
+  contactUrl?: string;
 };
 
 /**
@@ -787,6 +824,7 @@ export function buildGuidanceLegalServiceJsonLd({
   inLanguage,
   url,
   description,
+  contactUrl,
 }: GuidanceLegalServiceInput) {
   return {
     '@context': 'https://schema.org',
@@ -798,6 +836,17 @@ export function buildGuidanceLegalServiceJsonLd({
     inLanguage,
     email: CONSULTATION_EMAIL,
     availableLanguage: [...GUIDANCE_CONSULTATION_LANGUAGES],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        email: CONSULTATION_EMAIL,
+        // The four consultation languages, never the page language: this is a
+        // promise about how the firm can be reached, not about the document.
+        availableLanguage: [...GUIDANCE_CONSULTATION_LANGUAGES],
+        ...(contactUrl ? { url: contactUrl } : {}),
+      },
+    ],
     provider: {
       '@type': 'Person',
       '@id': ATTORNEY_PERSON_ID,
@@ -809,4 +858,18 @@ export function buildGuidanceLegalServiceJsonLd({
       addressCountry: 'TW',
     },
   };
+}
+
+/**
+ * Site-wide `WebSite` node for a guidance locale (vi/id/th/fil).
+ *
+ * The four site locales get this from `[locale]/layout.tsx`; the guidance
+ * branch of that layout emitted nothing, which is why `WebSite`,
+ * `Organization` and the logo `ImageObject` were missing from every guidance
+ * page. The only deliberate difference from the four site locales is the
+ * omitted `SearchAction`: the guidance surface publishes ten pages and no
+ * `/search` route.
+ */
+export function buildGuidanceWebsiteJsonLd(locale: PublicLocale8) {
+  return buildWebsiteJsonLd(locale, { includeSearchAction: false });
 }

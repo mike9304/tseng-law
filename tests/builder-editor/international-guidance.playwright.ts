@@ -679,20 +679,24 @@ async function readCountVector(page: Page, path: string): Promise<CountVector> {
  *   - home `teamImages`: the English home runs `HomeAttorneySplit`, a
  *     single-portrait editorial block whose copy has no guidance-language
  *     source. The roster lives on /lawyers and /about instead.
- *   - JSON-LD: the guidance pages emit `LegalService` (+`FAQPage` where the
- *     page has questions). `Person`, `BreadcrumbList` and `CollectionPage`
- *     builders are typed to the four site locales; widening them is a separate
- *     change and is recorded as outstanding in evidence/O19-AUDIT.md.
+ *   - JSON-LD: closed by WO-O28. The guidance pages now emit the English
+ *     `@type` set minus {@link JSON_LD_TYPE_EXCEPTIONS}.
  */
 const O19_ALLOWANCES: Partial<
   Record<string, Partial<Record<keyof CountVector, 'skip'>>>
 > = {
-  home: { teamImages: 'skip', jsonLdTypes: 'skip' },
-  services: { jsonLdTypes: 'skip' },
-  about: { jsonLdTypes: 'skip' },
-  lawyers: { jsonLdTypes: 'skip' },
-  contact: { jsonLdTypes: 'skip' },
+  home: { teamImages: 'skip' },
 };
+
+/**
+ * `@type` values `/en` emits that a guidance page must NOT reproduce.
+ *
+ * `SearchAction` is the single entry: the four site locales advertise
+ * `/{locale}/search`, and the guidance surface publishes ten pages and no
+ * search route. Emitting the action anyway would point crawlers and answer
+ * engines at a 404 and claim a capability the page does not have.
+ */
+const JSON_LD_TYPE_EXCEPTIONS = new Set(['SearchAction']);
 
 test.describe('O19 count vectors vs /en', () => {
   const VECTOR_PAGES = ['home', 'services', 'about', 'lawyers', 'contact'] as const;
@@ -734,8 +738,57 @@ test.describe('O19 count vectors vs /en', () => {
 
         if (allowance.jsonLdTypes !== 'skip') {
           for (const type of expected.jsonLdTypes) {
+            if (JSON_LD_TYPE_EXCEPTIONS.has(type)) continue;
             expect(actual.jsonLdTypes, `${locale}/${pageKey} JSON-LD @type`).toContain(type);
           }
+        }
+      });
+    }
+  }
+
+  /**
+   * WO-O28. The `@type` comparison, over all ten published guidance pages.
+   * The expected set is read from the matching `/en` page in the same run —
+   * nothing is hard-coded — and the guidance page must be a superset of it
+   * once {@link JSON_LD_TYPE_EXCEPTIONS} is removed.
+   */
+  const JSON_LD_PAGES: readonly GuidancePageKey[] = [
+    'home',
+    'services',
+    'about',
+    'lawyers',
+    'pricing',
+    'contact',
+    'faq',
+    'privacy',
+    'disclaimer',
+    'columns',
+  ];
+
+  for (const pageKey of JSON_LD_PAGES) {
+    for (const locale of GUIDANCE_LOCALES_4) {
+      test(`${locale} /${pageKey} JSON-LD @type set covers /en`, async ({ page }) => {
+        const enPath = pageKey === 'home' ? '/en' : `/en/${pageKey}`;
+        const expected = await readCountVector(page, enPath);
+        const actual = await readCountVector(page, guidancePublicPath(locale, pageKey));
+
+        const required = expected.jsonLdTypes.filter(
+          (type) => !JSON_LD_TYPE_EXCEPTIONS.has(type),
+        );
+        expect(required.length, `/en/${pageKey} must publish structured data`).toBeGreaterThan(0);
+
+        const missing = required.filter((type) => !actual.jsonLdTypes.includes(type));
+        expect(
+          missing,
+          `${locale}/${pageKey} missing @type (en=${expected.jsonLdTypes.join(',')}, actual=${actual.jsonLdTypes.join(',')})`,
+        ).toEqual([]);
+
+        // The exception must actually be absent, not merely tolerated.
+        for (const excepted of JSON_LD_TYPE_EXCEPTIONS) {
+          expect(
+            actual.jsonLdTypes,
+            `${locale}/${pageKey} must not emit ${excepted}`,
+          ).not.toContain(excepted);
         }
       });
     }

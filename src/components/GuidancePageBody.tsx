@@ -26,10 +26,15 @@ import {
   publicDocumentLanguage,
 } from '@/lib/public-guidance';
 import {
+  buildBreadcrumbJsonLd,
   buildGuidanceFaqJsonLd,
   buildGuidanceLegalServiceJsonLd,
   getSiteUrl,
 } from '@/lib/seo';
+import {
+  buildGuidancePersonJsonLd,
+  buildGuidanceTeamCollectionPageJsonLd,
+} from '@/lib/guidance-structured-data';
 
 /**
  * Guidance pages rendered with the same layout primitives the other four
@@ -62,7 +67,26 @@ export default function GuidancePageBody({
     inLanguage: documentLanguage,
     url: guidanceCanonicalUrl(locale, pageKey, getSiteUrl()),
     description: page.description,
+    contactUrl: guidanceCanonicalUrl(locale, 'contact', getSiteUrl()),
   });
+  // WO-O28. `/en` emits a two-step breadcrumb on its inner pages; the guidance
+  // pages emitted none. Names and paths are this locale's own.
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: pack.nav.home, path: guidancePublicPath(locale, 'home') },
+    { name: page.title, path: guidancePublicPath(locale, pageKey) },
+  ]);
+  // Roster pages only, matching `/en/lawyers`: the attorney Person entity and
+  // the CollectionPage/ItemList over the team cards rendered further down.
+  const isRosterPage = pageKey === 'lawyers' || pageKey === 'about';
+  const personJsonLd = isRosterPage ? buildGuidancePersonJsonLd(locale) : null;
+  const teamCollectionJsonLd = isRosterPage
+    ? buildGuidanceTeamCollectionPageJsonLd({
+        locale,
+        pageKey,
+        name: page.title,
+        description: page.description,
+      })
+    : null;
   // FAQPage carries the visible questions and answers verbatim. `FAQAccordion`
   // below renders the same items, so the JSON-LD adds no duplicate copy.
   const faqJsonLd = page.faqs?.length
@@ -72,6 +96,9 @@ export default function GuidancePageBody({
   return (
     <div data-guidance-shell="true" data-locale={locale} data-guidance-page={pageKey}>
       <JsonLd data={legalServiceJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
+      {personJsonLd ? <JsonLd data={personJsonLd} /> : null}
+      {teamCollectionJsonLd ? <JsonLd data={teamCollectionJsonLd} /> : null}
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
 
       {/* One outer <article> keeps the page's guidance copy in a single

@@ -26,6 +26,7 @@ import {
   type ExistingSiteLocale4,
 } from '@/lib/public-guidance';
 import { buildGuidanceLegalServiceJsonLd, getSiteUrl } from '@/lib/seo';
+import { buildGuidancePersonJsonLd } from '@/lib/guidance-structured-data';
 
 /**
  * Home page for the four guidance locales (vi/id/th/fil).
@@ -453,12 +454,18 @@ export default function GuidanceHomeBody({
     inLanguage: publicDocumentLanguage(locale),
     url: guidanceCanonicalUrl(locale, 'home', getSiteUrl()),
     description: pack.pages.home.description,
+    contactUrl: guidanceCanonicalUrl(locale, 'contact', getSiteUrl()),
   });
+  // WO-O28. The English home emits the attorney `Person` node (and with it the
+  // `Organization` / `CollegeOrUniversity` nodes it nests); the guidance home
+  // emitted none. No breadcrumb here — `/en` emits none on its home either.
+  const personJsonLd = buildGuidancePersonJsonLd(locale);
 
   return (
     <div data-guidance-shell="true" data-locale={locale} data-guidance-page="home">
       {/* First child so the home design-parity landmark sequence is unchanged. */}
       <JsonLd data={legalServiceJsonLd} />
+      {personJsonLd ? <JsonLd data={personJsonLd} /> : null}
       <GuidanceHero locale={locale} />
       <Reveal>
         <GuidanceColumnArchive locale={locale} source={columns} />

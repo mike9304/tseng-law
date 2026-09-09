@@ -19,7 +19,13 @@ import {
 } from '@/lib/builder/dynamic-template-drafts';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { checkAccess } from '@/lib/builder/members/members-engine';
-import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildSeoMetadata, getSiteUrl } from '@/lib/seo';
+import {
+  buildBreadcrumbJsonLd,
+  buildCollectionPageJsonLd,
+  buildGuidanceLegalServiceJsonLd,
+  buildSeoMetadata,
+  getSiteUrl,
+} from '@/lib/seo';
 import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
 import GuidancePageBody from '@/components/GuidancePageBody';
 import { OriginalLanguageColumnsSection } from '@/components/InternationalGuidance';
@@ -28,6 +34,7 @@ import {
   buildGuidanceCoreLanguageAlternates,
   guidanceCanonicalUrl,
   isGuidanceLocale4,
+  publicDocumentLanguage,
   type GuidanceLocale4,
 } from '@/lib/public-guidance';
 
@@ -144,9 +151,21 @@ export default async function ColumnsPage(
 
     return (
       <>
+        {/* WO-O28: this route renders its own body, so the guidance
+            `LegalService` (and the `ContactPoint` / `PostalAddress` / provider
+            `Person` it nests) has to be emitted here too — `GuidancePageBody`
+            only runs on the empty-archive branch above. */}
         <JsonLd
-          data={buildBreadcrumbJsonLd('en', [
-            { name: 'Home', path: `/${locale}` },
+          data={buildGuidanceLegalServiceJsonLd({
+            inLanguage: publicDocumentLanguage(locale),
+            url: guidanceCanonicalUrl(locale, 'columns', getSiteUrl()),
+            description: copy.description,
+            contactUrl: guidanceCanonicalUrl(locale, 'contact', getSiteUrl()),
+          })}
+        />
+        <JsonLd
+          data={buildBreadcrumbJsonLd(locale, [
+            { name: guidanceContent[locale].nav.home, path: `/${locale}` },
             { name: copy.title, path: `/${locale}/columns` },
           ])}
         />

@@ -192,8 +192,11 @@ describe('guidance home matches the English home composition', () => {
       const nodes = [...markup.matchAll(scriptPattern)].map(
         (match) => JSON.parse(match[1]) as Record<string, unknown>,
       );
-      expect(nodes, `${locale} json-ld node count`).toHaveLength(1);
+      // WO-O28 added the attorney `Person` node the English home already
+      // emits. LegalService stays first, so the landmark sequence is unchanged.
+      expect(nodes, `${locale} json-ld node count`).toHaveLength(2);
       expect(nodes[0]['@type'], `${locale} json-ld type`).toBe('LegalService');
+      expect(nodes[1]['@type'], `${locale} second json-ld type`).toBe('Person');
 
       const availableLanguage = nodes[0].availableLanguage as string[];
       expect(availableLanguage, `${locale} consultation languages`).toEqual([

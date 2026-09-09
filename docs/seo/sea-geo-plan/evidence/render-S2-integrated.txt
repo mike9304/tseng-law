@@ -1,0 +1,26 @@
+200 http://localhost:4351/vi ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/vi/services ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/vi/faq ld=2 faq=1 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/vi/contact ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/id ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/id/services ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/id/faq ld=2 faq=1 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/id/contact ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/th ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/th/services ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/th/faq ld=2 faq=1 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/th/contact ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/fil ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/fil/services ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/fil/faq ld=2 faq=1 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/fil/contact ld=1 faq=0 hreflang=18(hrefLang 대소문자, 재확인) "availableLanguage":["en","zh-Hant","ja","ko"]
+200 /vi/llms.txt lines=      21 urls=9 ct=X-Content-Type-Options: nosniff
+content-type: text/plain; charset=utf-8
+200 /id/llms.txt lines=      21 urls=9 ct=X-Content-Type-Options: nosniff
+content-type: text/plain; charset=utf-8
+200 /th/llms.txt lines=      21 urls=9 ct=X-Content-Type-Options: nosniff
+content-type: text/plain; charset=utf-8
+200 /fil/llms.txt lines=      21 urls=9 ct=X-Content-Type-Options: nosniff
+content-type: text/plain; charset=utf-8
+root catalogs=8
+FAQPage parse ok, mainEntity 8 inLanguage th

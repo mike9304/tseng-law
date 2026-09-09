@@ -25,11 +25,11 @@
 - [x] 2026-09-09 S2a-2 Grok FAIL 1(services FAQ 문장 혼입, docs/seo/reviews/S2a-REVIEW.md) → WO-S2a-R1 Opus 반영 커밋 a506a7c1 (vitest 8/8, 미결: vi/about 밀도 보강은 길이 상한으로 보류)
 - [x] 2026-09-09 S2a-3 게이트(typecheck·vitest 75·build·렌더 8URL evidence/render-S2a.txt·계약 grep) → 커밋 1d5577ca (Grok 검토 FAIL 시 R1 후속 커밋)
 - [x] 2026-09-09 S2b-1 Opus 구현 → vitest 60·tsc 0 → 커밋 99fde7eb (llms.txt 라우트 배선은 WO-S2b-R1 진행 중 12:3x)
-- [ ] S2b-2 WO-S2b-review (Grok) — S2b-R1 커밋 후 발주
-- [ ] S2b-3 총괄 통합 게이트(build·렌더 JSON-LD·/vi/llms.txt curl) — S2a-R1·S2b-R1·S3-C1 워커 종료 후 1회
+- [~] 13:1x S2b-2 Grok 검토 발주(evidence/grok-S2b-review.log)
+- [x] 2026-09-09 S2b-3 통합 게이트: typecheck·build(8 llms.txt prerender)·렌더 16URL(LegalService availableLanguage 4개 고정, faq FAQPage 8문항 파싱, hreflang 18, canonical self)·/vi|id|th|fil/llms.txt 200 text/plain·루트 카탈로그 8 → evidence/render-S2-integrated.txt. 커밋 915614df(R2)+b1002186(R1)+99fde7eb
 
 ### S3 신규 인텐트 페이지 (S1-c 결과 수만큼)
-- [~] S3-C1-1 Opus 완료(미커밋, 12:5x): 4로케일 랜딩+라우트+sitemap+테스트, 마커 36(로케일당 9). 허용 밖 IntentLandingPage.tsx +39(exhaustive Record 필수, 수용). 기존 테스트 3개 깨짐 예상(슬러그 수 2·ja 한글금지 1=마커 게이트) → **S2b-R2 커밋 후 별도 브랜치 seo/sea-s3-drafts-20260909 로 분리 커밋**(main 배포 라인과 격리) → [ ] S3-C1-2 Grok 검토 → [ ] S3-C1-3 게이트·브랜치 커밋(마커 → main 금지)
+- [x] 2026-09-09 S3-C1-1 Opus 완료 → **drafts 브랜치 seo/sea-s3-drafts-20260909 커밋 0ff814e6**(배포 라인 격리): 4로케일 랜딩+라우트+sitemap+테스트, 마커 36(로케일당 9). 허용 밖 IntentLandingPage.tsx +39(exhaustive Record 필수, 수용). 기존 테스트 3개 깨짐 예상(슬러그 수 2·ja 한글금지 1=마커 게이트) → **S2b-R2 커밋 후 별도 브랜치 seo/sea-s3-drafts-20260909 로 분리 커밋**(main 배포 라인과 격리) → [ ] S3-C1-2 Grok 검토 → [ ] S3-C1-3 게이트·브랜치 커밋(마커 → main 금지)
 - [ ] S3-KEY-1 WO-S3-GUIDANCE-KEY(Opus, S2b 후): public-guidance 코어 키 `work-permit-renewal` 추가 + src/data/international-guidance-extra.ts(vi/id/th/fil 본문·마커) + 사이트맵·hreflang → [ ] S3-KEY-2 Grok 검토 → [ ] S3-KEY-3 게이트·커밋
 
 ### S4 색인
@@ -53,7 +53,8 @@
 ## B. 미결·ASK 대기 (승계자는 여기부터)
 - S0-e: 손빗 AI 인용 실측 예정(S0-b 직후). geo-sea-baseline-2026-09.md 는 손빗 소유 중 — 쓰기 금지.
 - S1-b: Grok 검토 중. S1-c 판정 시 주의: C2~C5(/vi|id|th|fil/work-permit)는 international-guidance-content.ts(번역 레인 파일)에 본문이 필요 → 하드룰 4 충돌. 대안=별도 데이터 파일+코어 키 확장, 또는 번역 레인 요청. C1(EN 랜딩)은 intent-pages.ts 4로케일 동시 작성 필요.
-- 12:5x 워커: S2b-R2(Opus) 진행 중. 끝나면 ① S2b-R2 커밋 ② S3-C1 파일을 drafts 브랜치로 분리 ③ 통합 게이트(build·렌더) ④ Grok 검토 S2b·S3-C1. 셋 다 끝나면 통합 게이트(build+렌더) 1회 → 커밋 → Grok 검토 S2b·S3-C1 발주 → WO-S3-GUIDANCE-KEY.
+- 13:1x: S2b Grok 검토 진행 중. 다음 = S3-C1 Grok 검토(drafts 브랜치 체크아웃 필요 → 워커 동시 편집 없을 때) → WO-S3-GUIDANCE-KEY.
+- drafts 브랜치 0ff814e6 인수 조건: 변호사 검수 후 마커 제거 → 테스트 3개(intent-pages-en-growth 슬러그 수·public-intent-docs 카운트·intent-pages-ja 한글금지) 갱신 → 배포 라인 병합. 셋 다 끝나면 통합 게이트(build+렌더) 1회 → 커밋 → Grok 검토 S2b·S3-C1 발주 → WO-S3-GUIDANCE-KEY.
 - 손빗 AI 인용 실측 진행 중(geo-sea-baseline-2026-09.md 쓰기 금지).
 - S5-c: 발송 승인 ASK 미발송(S0-b 정리 후).
 - Documents 폴더 TCC 차단(11:4x~): 구 정본 접근 불가. 이 폴더가 정본.

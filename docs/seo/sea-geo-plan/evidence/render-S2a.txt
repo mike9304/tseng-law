@@ -1,0 +1,8 @@
+200 http://localhost:4351/vi/services summary=1
+200 http://localhost:4351/vi/faq summary=1
+200 http://localhost:4351/id/services summary=1
+200 http://localhost:4351/id/faq summary=1
+200 http://localhost:4351/th/services summary=1
+200 http://localhost:4351/th/faq summary=1
+200 http://localhost:4351/fil/services summary=1
+200 http://localhost:4351/fil/faq summary=1

@@ -11,9 +11,11 @@ import {
   type GuidanceLocale,
   type GuidancePageKey,
 } from '@/data/international-guidance-content';
+import { guidanceAnswers } from '@/data/international-guidance-answers';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import {
   EXISTING_SITE_LOCALES_4,
+  GUIDANCE_PAGE_KEYS,
   PUBLIC_LANGUAGE_AUTONYMS,
   guidancePublicPath,
 } from '@/lib/public-guidance';
@@ -37,6 +39,10 @@ export default function GuidancePageBody({
   const pack = guidanceContent[locale];
   const page = pack.pages[pageKey];
   const isContact = pageKey === 'contact';
+  // Answer-first block: only the page keys present in `guidanceAnswers` get one
+  // (services, about, lawyers, pricing, contact, faq). home, privacy,
+  // disclaimer and columns render nothing extra.
+  const answer = guidanceAnswers[locale][pageKey];
 
   return (
     <div data-guidance-shell="true" data-locale={locale} data-guidance-page={pageKey}>
@@ -49,6 +55,32 @@ export default function GuidancePageBody({
           title={page.title}
           description={page.description}
         />
+
+        {answer ? (
+          <Reveal>
+            <section className="section section--light" aria-label="summary">
+              <div className="container">
+                <div className="guidance-answer">
+                  <p className="section-lede">{answer.answer}</p>
+                  {answer.sources.length > 0 ? (
+                    <ul className="contact-list">
+                      {answer.sources.map((href) => {
+                        const sourceKey = GUIDANCE_PAGE_KEYS.find(
+                          (key) => guidancePublicPath(locale, key) === href,
+                        );
+                        return (
+                          <li key={href}>
+                            <Link href={href}>{sourceKey ? pack.nav[sourceKey] : href}</Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : null}
+                </div>
+              </div>
+            </section>
+          </Reveal>
+        ) : null}
 
         <Reveal>
           <section className="section section--light">

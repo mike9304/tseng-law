@@ -1,0 +1,835 @@
+
+> sejong-law@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.21
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+
+
+Retrying 1/3...
+ ✓ Compiled successfully in 29.5s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/599) ...
+   Generating static pages (149/599) 
+   Generating static pages (299/599) 
+   Generating static pages (449/599) 
+ ✓ Generating static pages (599/599)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                                                                                      Size  First Load JS
+┌ ƒ /                                                                                                          1.1 kB         130 kB
+├ ƒ /_not-found                                                                                                  1 kB         130 kB
+├ ƒ /[locale]/[[...slug]]                                                                                       733 B         624 kB
+├ ● /[locale]/accessibility                                                                                   1.39 kB         134 kB
+├   ├ /ko/accessibility
+├   ├ /zh-hant/accessibility
+├   ├ /en/accessibility
+├   └ [+5 more paths]
+├ ● /[locale]/account                                                                                         1.04 kB         139 kB
+├   ├ /ko/account
+├   ├ /zh-hant/account
+├   ├ /en/account
+├   └ [+5 more paths]
+├ ● /[locale]/account/billing                                                                                 1.53 kB         134 kB
+├   ├ /ko/account/billing
+├   ├ /zh-hant/account/billing
+├   ├ /en/account/billing
+├   └ [+5 more paths]
+├ ƒ /[locale]/account/billing/documents/[documentId]/payment-link                                              1.1 kB         130 kB
+├ ● /[locale]/account/bookings                                                                                3.04 kB         136 kB
+├   ├ /ko/account/bookings
+├   ├ /zh-hant/account/bookings
+├   ├ /en/account/bookings
+├   └ [+5 more paths]
+├ ƒ /[locale]/account/bookings/[bookingId]                                                                    2.55 kB         148 kB
+├ ƒ /[locale]/account/bookings/[bookingId]/calendar                                                            1.1 kB         130 kB
+├ ƒ /[locale]/account/bookings/[bookingId]/cancel                                                              1.1 kB         130 kB
+├ ƒ /[locale]/account/bookings/[bookingId]/documents/[documentId]/email                                        1.1 kB         130 kB
+├ ƒ /[locale]/account/bookings/[bookingId]/reschedule                                                          1.1 kB         130 kB
+├ ƒ /[locale]/account/bookings/export                                                                          1.1 kB         130 kB
+├ ● /[locale]/account/premium                                                                                 1.04 kB         134 kB
+├   ├ /ko/account/premium
+├   ├ /zh-hant/account/premium
+├   ├ /en/account/premium
+├   └ [+5 more paths]
+├ ● /[locale]/account/profile                                                                                 4.08 kB         139 kB
+├   ├ /ko/account/profile
+├   ├ /zh-hant/account/profile
+├   ├ /en/account/profile
+├   └ [+5 more paths]
+├ ● /[locale]/admin-builder                                                                                    157 kB        1.26 MB
+├   ├ /ko/admin-builder
+├   ├ /zh-hant/admin-builder
+├   └ /en/admin-builder
+├ ● /[locale]/admin-builder/_dev/flex                                                                             0 B            0 B
+├   ├ /ko/admin-builder/_dev/flex
+├   ├ /zh-hant/admin-builder/_dev/flex
+├   └ /en/admin-builder/_dev/flex
+├ ● /[locale]/admin-builder/_dev/functions                                                                        0 B            0 B
+├   ├ /ko/admin-builder/_dev/functions
+├   ├ /zh-hant/admin-builder/_dev/functions
+├   └ /en/admin-builder/_dev/functions
+├ ● /[locale]/admin-builder/_dev/logs                                                                             0 B            0 B
+├   ├ /ko/admin-builder/_dev/logs
+├   ├ /zh-hant/admin-builder/_dev/logs
+├   └ /en/admin-builder/_dev/logs
+├ ● /[locale]/admin-builder/_dev/sdk                                                                              0 B            0 B
+├   ├ /ko/admin-builder/_dev/sdk
+├   ├ /zh-hant/admin-builder/_dev/sdk
+├   └ /en/admin-builder/_dev/sdk
+├ ● /[locale]/admin-builder/_dev/secrets                                                                          0 B            0 B
+├   ├ /ko/admin-builder/_dev/secrets
+├   ├ /zh-hant/admin-builder/_dev/secrets
+├   └ /en/admin-builder/_dev/secrets
+├ ● /[locale]/admin-builder/ai-generator                                                                      36.9 kB         166 kB
+├   ├ /ko/admin-builder/ai-generator
+├   ├ /zh-hant/admin-builder/ai-generator
+├   └ /en/admin-builder/ai-generator
+├ ● /[locale]/admin-builder/apps                                                                              8.53 kB         141 kB
+├   ├ /ko/admin-builder/apps
+├   ├ /zh-hant/admin-builder/apps
+├   └ /en/admin-builder/apps
+├ ● /[locale]/admin-builder/backups                                                                           2.37 kB         132 kB
+├   ├ /ko/admin-builder/backups
+├   ├ /zh-hant/admin-builder/backups
+├   └ /en/admin-builder/backups
+├ ● /[locale]/admin-builder/bookings                                                                           1.1 kB         130 kB
+├   ├ /ko/admin-builder/bookings
+├   ├ /zh-hant/admin-builder/bookings
+├   └ /en/admin-builder/bookings
+├ ● /[locale]/admin-builder/bookings/calendar                                                                 8.09 kB         143 kB
+├   ├ /ko/admin-builder/bookings/calendar
+├   ├ /zh-hant/admin-builder/bookings/calendar
+├   └ /en/admin-builder/bookings/calendar
+├ ● /[locale]/admin-builder/bookings/calendar-sync                                                            4.88 kB         134 kB
+├   ├ /ko/admin-builder/bookings/calendar-sync
+├   ├ /zh-hant/admin-builder/bookings/calendar-sync
+├   └ /en/admin-builder/bookings/calendar-sync
+├ ● /[locale]/admin-builder/bookings/dashboard                                                                  20 kB         155 kB
+├   ├ /ko/admin-builder/bookings/dashboard
+├   ├ /zh-hant/admin-builder/bookings/dashboard
+├   └ /en/admin-builder/bookings/dashboard
+├ ● /[locale]/admin-builder/bookings/email-templates                                                          6.58 kB         139 kB
+├   ├ /ko/admin-builder/bookings/email-templates
+├   ├ /zh-hant/admin-builder/bookings/email-templates
+├   └ /en/admin-builder/bookings/email-templates
+├ ● /[locale]/admin-builder/bookings/packages                                                                 7.15 kB         142 kB
+├   ├ /ko/admin-builder/bookings/packages
+├   ├ /zh-hant/admin-builder/bookings/packages
+├   └ /en/admin-builder/bookings/packages
+├ ● /[locale]/admin-builder/bookings/policies                                                                  4.8 kB         137 kB
+├   ├ /ko/admin-builder/bookings/policies
+├   ├ /zh-hant/admin-builder/bookings/policies
+├   └ /en/admin-builder/bookings/policies
+├ ● /[locale]/admin-builder/bookings/resources                                                                8.82 kB         144 kB
+├   ├ /ko/admin-builder/bookings/resources
+├   ├ /zh-hant/admin-builder/bookings/resources
+├   └ /en/admin-builder/bookings/resources
+├ ● /[locale]/admin-builder/bookings/services                                                                 11.9 kB         147 kB
+├   ├ /ko/admin-builder/bookings/services
+├   ├ /zh-hant/admin-builder/bookings/services
+├   └ /en/admin-builder/bookings/services
+├ ● /[locale]/admin-builder/bookings/staff                                                                    4.59 kB         140 kB
+├   ├ /ko/admin-builder/bookings/staff
+├   ├ /zh-hant/admin-builder/bookings/staff
+├   └ /en/admin-builder/bookings/staff
+├ ƒ /[locale]/admin-builder/bookings/staff/[id]/availability                                                  7.11 kB         142 kB
+├ ● /[locale]/admin-builder/cms                                                                               52.4 kB         200 kB
+├   ├ /ko/admin-builder/cms
+├   ├ /zh-hant/admin-builder/cms
+├   └ /en/admin-builder/cms
+├ ● /[locale]/admin-builder/columns                                                                           7.63 kB         140 kB
+├   ├ /ko/admin-builder/columns
+├   ├ /zh-hant/admin-builder/columns
+├   └ /en/admin-builder/columns
+├ ƒ /[locale]/admin-builder/columns/[slug]/edit                                                                 29 kB         334 kB
+├ ● /[locale]/admin-builder/commerce                                                                            136 B         143 kB
+├   ├ /ko/admin-builder/commerce
+├   ├ /zh-hant/admin-builder/commerce
+├   └ /en/admin-builder/commerce
+├ ● /[locale]/admin-builder/commerce/currency                                                                 3.99 kB         137 kB
+├   ├ /ko/admin-builder/commerce/currency
+├   ├ /zh-hant/admin-builder/commerce/currency
+├   └ /en/admin-builder/commerce/currency
+├ ● /[locale]/admin-builder/commerce/documents                                                                15.2 kB         148 kB
+├   ├ /ko/admin-builder/commerce/documents
+├   ├ /zh-hant/admin-builder/commerce/documents
+├   └ /en/admin-builder/commerce/documents
+├ ● /[locale]/admin-builder/commerce/notifications                                                            4.48 kB         137 kB
+├   ├ /ko/admin-builder/commerce/notifications
+├   ├ /zh-hant/admin-builder/commerce/notifications
+├   └ /en/admin-builder/commerce/notifications
+├ ● /[locale]/admin-builder/commerce/orders                                                                   6.16 kB         139 kB
+├   ├ /ko/admin-builder/commerce/orders
+├   ├ /zh-hant/admin-builder/commerce/orders
+├   └ /en/admin-builder/commerce/orders
+├ ● /[locale]/admin-builder/commerce/payments                                                                 1.72 kB         134 kB
+├   ├ /ko/admin-builder/commerce/payments
+├   ├ /zh-hant/admin-builder/commerce/payments
+├   └ /en/admin-builder/commerce/payments
+├ ● /[locale]/admin-builder/commerce/products                                                                   134 B         143 kB
+├   ├ /ko/admin-builder/commerce/products
+├   ├ /zh-hant/admin-builder/commerce/products
+├   └ /en/admin-builder/commerce/products
+├ ● /[locale]/admin-builder/commerce/shipping                                                                 2.01 kB         135 kB
+├   ├ /ko/admin-builder/commerce/shipping
+├   ├ /zh-hant/admin-builder/commerce/shipping
+├   └ /en/admin-builder/commerce/shipping
+├ ● /[locale]/admin-builder/commerce/tax                                                                       1.9 kB         135 kB
+├   ├ /ko/admin-builder/commerce/tax
+├   ├ /zh-hant/admin-builder/commerce/tax
+├   └ /en/admin-builder/commerce/tax
+├ ● /[locale]/admin-builder/commerce/webhooks                                                                 4.88 kB         138 kB
+├   ├ /ko/admin-builder/commerce/webhooks
+├   ├ /zh-hant/admin-builder/commerce/webhooks
+├   └ /en/admin-builder/commerce/webhooks
+├ ● /[locale]/admin-builder/crm                                                                               7.82 kB         137 kB
+├   ├ /ko/admin-builder/crm
+├   ├ /zh-hant/admin-builder/crm
+├   └ /en/admin-builder/crm
+├ ● /[locale]/admin-builder/custom-code                                                                       2.65 kB         134 kB
+├   ├ /ko/admin-builder/custom-code
+├   ├ /zh-hant/admin-builder/custom-code
+├   └ /en/admin-builder/custom-code
+├ ● /[locale]/admin-builder/dev/sdk                                                                            1.1 kB         130 kB
+├   ├ /ko/admin-builder/dev/sdk
+├   ├ /zh-hant/admin-builder/dev/sdk
+├   └ /en/admin-builder/dev/sdk
+├ ● /[locale]/admin-builder/domains                                                                           2.97 kB         132 kB
+├   ├ /ko/admin-builder/domains
+├   ├ /zh-hant/admin-builder/domains
+├   └ /en/admin-builder/domains
+├ ● /[locale]/admin-builder/errors                                                                            1.99 kB         131 kB
+├   ├ /ko/admin-builder/errors
+├   ├ /zh-hant/admin-builder/errors
+├   └ /en/admin-builder/errors
+├ ● /[locale]/admin-builder/events                                                                            4.36 kB         134 kB
+├   ├ /ko/admin-builder/events
+├   ├ /zh-hant/admin-builder/events
+├   └ /en/admin-builder/events
+├ ● /[locale]/admin-builder/experiments                                                                       2.92 kB         132 kB
+├   ├ /ko/admin-builder/experiments
+├   ├ /zh-hant/admin-builder/experiments
+├   └ /en/admin-builder/experiments
+├ ● /[locale]/admin-builder/faq                                                                               4.01 kB         133 kB
+├   ├ /ko/admin-builder/faq
+├   ├ /zh-hant/admin-builder/faq
+├   └ /en/admin-builder/faq
+├ ● /[locale]/admin-builder/footer                                                                              221 B        1.14 MB
+├   ├ /ko/admin-builder/footer
+├   ├ /zh-hant/admin-builder/footer
+├   └ /en/admin-builder/footer
+├ ● /[locale]/admin-builder/forms                                                                             5.71 kB         138 kB
+├   ├ /ko/admin-builder/forms
+├   ├ /zh-hant/admin-builder/forms
+├   └ /en/admin-builder/forms
+├ ● /[locale]/admin-builder/forms-flow                                                                          169 B         133 kB
+├   ├ /ko/admin-builder/forms-flow
+├   ├ /zh-hant/admin-builder/forms-flow
+├   └ /en/admin-builder/forms-flow
+├ ƒ /[locale]/admin-builder/forms/builder/[formId]                                                            6.48 kB         136 kB
+├ ● /[locale]/admin-builder/forms/submissions                                                                 4.69 kB         134 kB
+├   ├ /ko/admin-builder/forms/submissions
+├   ├ /zh-hant/admin-builder/forms/submissions
+├   └ /en/admin-builder/forms/submissions
+├ ● /[locale]/admin-builder/header                                                                              221 B        1.14 MB
+├   ├ /ko/admin-builder/header
+├   ├ /zh-hant/admin-builder/header
+├   └ /en/admin-builder/header
+├ ● /[locale]/admin-builder/inbox                                                                             3.73 kB         133 kB
+├   ├ /ko/admin-builder/inbox
+├   ├ /zh-hant/admin-builder/inbox
+├   └ /en/admin-builder/inbox
+├ ● /[locale]/admin-builder/lawyers                                                                           12.2 kB         157 kB
+├   ├ /ko/admin-builder/lawyers
+├   ├ /zh-hant/admin-builder/lawyers
+├   └ /en/admin-builder/lawyers
+├ ● /[locale]/admin-builder/lightboxes                                                                        2.64 kB         135 kB
+├   ├ /ko/admin-builder/lightboxes
+├   ├ /zh-hant/admin-builder/lightboxes
+├   └ /en/admin-builder/lightboxes
+├ ƒ /[locale]/admin-builder/lightboxes/[id]/edit                                                              7.54 kB        1.14 MB
+├ ● /[locale]/admin-builder/marketing                                                                         5.05 kB         138 kB
+├   ├ /ko/admin-builder/marketing
+├   ├ /zh-hant/admin-builder/marketing
+├   └ /en/admin-builder/marketing
+├ ƒ /[locale]/admin-builder/marketing/campaigns/[campaignId]/edit                                             5.62 kB         138 kB
+├ ● /[locale]/admin-builder/marketing/subscribers                                                             2.44 kB         135 kB
+├   ├ /ko/admin-builder/marketing/subscribers
+├   ├ /zh-hant/admin-builder/marketing/subscribers
+├   └ /en/admin-builder/marketing/subscribers
+├ ● /[locale]/admin-builder/marketing/templates                                                               1.88 kB         135 kB
+├   ├ /ko/admin-builder/marketing/templates
+├   ├ /zh-hant/admin-builder/marketing/templates
+├   └ /en/admin-builder/marketing/templates
+├ ƒ /[locale]/admin-builder/marketing/templates/[templateId]/edit                                             4.81 kB         137 kB
+├ ● /[locale]/admin-builder/members                                                                           3.73 kB         133 kB
+├   ├ /ko/admin-builder/members
+├   ├ /zh-hant/admin-builder/members
+├   └ /en/admin-builder/members
+├ ● /[locale]/admin-builder/migrations                                                                        2.33 kB         132 kB
+├   ├ /ko/admin-builder/migrations
+├   ├ /zh-hant/admin-builder/migrations
+├   └ /en/admin-builder/migrations
+├ ● /[locale]/admin-builder/ops                                                                               11.9 kB         145 kB
+├   ├ /ko/admin-builder/ops
+├   ├ /zh-hant/admin-builder/ops
+├   └ /en/admin-builder/ops
+├ ● /[locale]/admin-builder/portfolio                                                                         4.42 kB         134 kB
+├   ├ /ko/admin-builder/portfolio
+├   ├ /zh-hant/admin-builder/portfolio
+├   └ /en/admin-builder/portfolio
+├ ● /[locale]/admin-builder/reviews                                                                           2.89 kB         132 kB
+├   ├ /ko/admin-builder/reviews
+├   ├ /zh-hant/admin-builder/reviews
+├   └ /en/admin-builder/reviews
+├ ● /[locale]/admin-builder/sandbox                                                                            1.1 kB         130 kB
+├   ├ /ko/admin-builder/sandbox
+├   ├ /zh-hant/admin-builder/sandbox
+├   └ /en/admin-builder/sandbox
+├ ● /[locale]/admin-builder/search                                                                            2.88 kB         132 kB
+├   ├ /ko/admin-builder/search
+├   ├ /zh-hant/admin-builder/search
+├   └ /en/admin-builder/search
+├ ● /[locale]/admin-builder/seo                                                                               9.22 kB         138 kB
+├   ├ /ko/admin-builder/seo
+├   ├ /zh-hant/admin-builder/seo
+├   └ /en/admin-builder/seo
+├ ● /[locale]/admin-builder/seo/redirects                                                                     5.11 kB         134 kB
+├   ├ /ko/admin-builder/seo/redirects
+├   ├ /zh-hant/admin-builder/seo/redirects
+├   └ /en/admin-builder/seo/redirects
+├ ● /[locale]/admin-builder/services                                                                          3.39 kB         139 kB
+├   ├ /ko/admin-builder/services
+├   ├ /zh-hant/admin-builder/services
+├   └ /en/admin-builder/services
+├ ● /[locale]/admin-builder/translations                                                                      11.1 kB         152 kB
+├   ├ /ko/admin-builder/translations
+├   ├ /zh-hant/admin-builder/translations
+├   └ /en/admin-builder/translations
+├ ƒ /[locale]/admin-builder/translations/[pageId]                                                             10.7 kB         151 kB
+├ ● /[locale]/admin-builder/translations/dashboard                                                            5.18 kB         146 kB
+├   ├ /ko/admin-builder/translations/dashboard
+├   ├ /zh-hant/admin-builder/translations/dashboard
+├   └ /en/admin-builder/translations/dashboard
+├ ● /[locale]/admin-builder/users                                                                             3.41 kB         133 kB
+├   ├ /ko/admin-builder/users
+├   ├ /zh-hant/admin-builder/users
+├   └ /en/admin-builder/users
+├ ● /[locale]/admin-builder/webhooks                                                                          3.03 kB         136 kB
+├   ├ /ko/admin-builder/webhooks
+├   ├ /zh-hant/admin-builder/webhooks
+├   └ /en/admin-builder/webhooks
+├ ƒ /[locale]/admin-builder/webhooks/[webhookId]                                                              2.01 kB         131 kB
+├ ● /[locale]/admin-builder/workspace                                                                         4.18 kB         137 kB
+├   ├ /ko/admin-builder/workspace
+├   ├ /zh-hant/admin-builder/workspace
+├   └ /en/admin-builder/workspace
+├ ● /[locale]/admin-consultation                                                                               1.1 kB         130 kB
+├   ├ /ko/admin-consultation
+├   ├ /zh-hant/admin-consultation
+├   ├ /en/admin-consultation
+├   └ [+5 more paths]
+├ ● /[locale]/ai-intake                                                                                         449 B         133 kB
+├   ├ /ko/ai-intake
+├   ├ /zh-hant/ai-intake
+├   ├ /en/ai-intake
+├   └ [+5 more paths]
+├ ƒ /[locale]/bookings/manage/[token]                                                                         5.87 kB         139 kB
+├ ● /[locale]/builder                                                                                         1.39 kB         134 kB
+├   ├ /ko/builder
+├   ├ /zh-hant/builder
+├   └ /en/builder
+├ ● /[locale]/builder-fixtures/decomposed-home                                                                  695 B         624 kB
+├   ├ /ko/builder-fixtures/decomposed-home
+├   ├ /zh-hant/builder-fixtures/decomposed-home
+├   ├ /en/builder-fixtures/decomposed-home
+├   └ [+5 more paths]
+├ ● /[locale]/builder-preview                                                                                  1.1 kB         130 kB
+├   ├ /ko/builder-preview
+├   ├ /zh-hant/builder-preview
+├   └ /en/builder-preview
+├ ● /[locale]/builder-preview/about                                                                            1.1 kB         130 kB
+├   ├ /ko/builder-preview/about
+├   ├ /zh-hant/builder-preview/about
+├   └ /en/builder-preview/about
+├ ● /[locale]/builder-preview/contact                                                                          1.1 kB         130 kB
+├   ├ /ko/builder-preview/contact
+├   ├ /zh-hant/builder-preview/contact
+├   └ /en/builder-preview/contact
+├ ƒ /[locale]/builder/[pageKey]                                                                               52.3 kB         325 kB
+├ ƒ /[locale]/builder/[pageKey]/datasets                                                                      5.79 kB         135 kB
+├ ƒ /[locale]/builder/[pageKey]/scene                                                                         17.5 kB         176 kB
+├ ƒ /[locale]/builder/collections/[collectionId]                                                              1.96 kB         135 kB
+├ ƒ /[locale]/builder/dynamic-routes/[routeId]                                                                  172 B         133 kB
+├ ƒ /[locale]/builder/dynamic-templates/[templateId]                                                          2.81 kB         135 kB
+├ ƒ /[locale]/builder/starter-templates/[templateId]                                                            172 B         133 kB
+├ ● /[locale]/columns                                                                                           884 B         624 kB
+├   ├ /ko/columns
+├   ├ /zh-hant/columns
+├   ├ /en/columns
+├   └ [+5 more paths]
+├ ƒ /[locale]/columns/[slug]                                                                                  4.61 kB         185 kB
+├ ƒ /[locale]/design-preview                                                                                  9.46 kB         144 kB
+├ ● /[locale]/events                                                                                            866 B         134 kB
+├   ├ /ko/events
+├   ├ /zh-hant/events
+├   ├ /en/events
+├   └ [+5 more paths]
+├ ƒ /[locale]/events/[slug]                                                                                     984 B         138 kB
+├ ● /[locale]/faq                                                                                               698 B         624 kB
+├   ├ /ko/faq
+├   ├ /zh-hant/faq
+├   ├ /en/faq
+├   └ [+5 more paths]
+├ ● /[locale]/guides/taiwan-company-setup                                                                       593 B         133 kB
+├   ├ /ko/guides/taiwan-company-setup
+├   ├ /zh-hant/guides/taiwan-company-setup
+├   ├ /en/guides/taiwan-company-setup
+├   └ [+5 more paths]
+├ ● /[locale]/insights                                                                                         1.1 kB         130 kB
+├   ├ /ko/insights
+├   ├ /zh-hant/insights
+├   ├ /en/insights
+├   └ [+5 more paths]
+├ ● /[locale]/insights/[slug]                                                                                  1.1 kB         130 kB
+├   ├ /ko/insights/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide
+├   ├ /ko/insights/taiwan-company-establishment-basics
+├   ├ /ko/insights/withdraw-capital-taiwan-company
+├   └ [+133 more paths]
+├ ● /[locale]/korean-lawyer-in-taiwan                                                                           566 B         133 kB
+├   ├ /ko/korean-lawyer-in-taiwan
+├   ├ /zh-hant/korean-lawyer-in-taiwan
+├   ├ /en/korean-lawyer-in-taiwan
+├   └ [+5 more paths]
+├ ● /[locale]/lawyers/[slug]                                                                                    208 B         209 kB
+├   ├ /ko/lawyers/wei-tseng
+├   ├ /zh-hant/lawyers/wei-tseng
+├   ├ /en/lawyers/wei-tseng
+├   └ /ja/lawyers/wei-tseng
+├ ● /[locale]/llms.txt                                                                                         1.1 kB         130 kB
+├   ├ /ko/llms.txt
+├   ├ /zh-hant/llms.txt
+├   ├ /en/llms.txt
+├   └ [+5 more paths]
+├ ● /[locale]/login                                                                                           2.41 kB         132 kB
+├   ├ /ko/login
+├   ├ /zh-hant/login
+├   ├ /en/login
+├   └ [+5 more paths]
+├ ƒ /[locale]/p/[[...slug]]                                                                                    1.1 kB         130 kB
+├ ● /[locale]/portfolio                                                                                         933 B         139 kB
+├   ├ /ko/portfolio
+├   ├ /zh-hant/portfolio
+├   ├ /en/portfolio
+├   └ [+5 more paths]
+├ ƒ /[locale]/portfolio/[slug]                                                                                  933 B         139 kB
+├ ● /[locale]/search                                                                                            634 B         133 kB
+├   ├ /ko/search
+├   ├ /zh-hant/search
+├   ├ /en/search
+├   └ [+5 more paths]
+├ ● /[locale]/services/[slug]                                                                                   181 B         138 kB
+├   ├ /ko/services/investment
+├   ├ /ko/services/civil
+├   ├ /ko/services/family
+├   └ [+21 more paths]
+├ ● /[locale]/store                                                                                             882 B         139 kB
+├   ├ /ko/store
+├   ├ /zh-hant/store
+├   ├ /en/store
+├   └ [+5 more paths]
+├ ƒ /[locale]/store/categories/[slug]                                                                           882 B         139 kB
+├ ● /[locale]/store/checkout                                                                                   9.2 kB         142 kB
+├   ├ /ko/store/checkout
+├   ├ /zh-hant/store/checkout
+├   ├ /en/store/checkout
+├   └ [+5 more paths]
+├ ƒ /[locale]/store/products/[slug]                                                                           7.58 kB         145 kB
+├ ● /[locale]/taiwan-company-setup-lawyer                                                                       343 B         209 kB
+├   ├ /ko/taiwan-company-setup-lawyer
+├   ├ /zh-hant/taiwan-company-setup-lawyer
+├   ├ /en/taiwan-company-setup-lawyer
+├   └ [+5 more paths]
+├ ● /[locale]/taiwan-lawyer                                                                                     343 B         209 kB
+├   ├ /ko/taiwan-lawyer
+├   ├ /zh-hant/taiwan-lawyer
+├   ├ /en/taiwan-lawyer
+├   └ [+5 more paths]
+├ ● /[locale]/taiwan-litigation-lawyer                                                                          343 B         209 kB
+├   ├ /ko/taiwan-litigation-lawyer
+├   ├ /zh-hant/taiwan-litigation-lawyer
+├   ├ /en/taiwan-litigation-lawyer
+├   └ [+5 more paths]
+├ ● /[locale]/videos                                                                                            696 B         624 kB
+├   ├ /ko/videos
+├   ├ /zh-hant/videos
+├   ├ /en/videos
+├   └ [+5 more paths]
+├ ƒ /account/billing                                                                                          1.14 kB         134 kB
+├ ƒ /api/ai/intake/preview                                                                                     1.1 kB         130 kB
+├ ƒ /api/ai/intake/requirements                                                                                1.1 kB         130 kB
+├ ƒ /api/ai/intake/submit                                                                                      1.1 kB         130 kB
+├ ƒ /api/ai/mcp                                                                                                1.1 kB         130 kB
+├ ƒ /api/ai/openapi.json                                                                                       1.1 kB         130 kB
+├ ƒ /api/billing-documents/[source]/[ownerId]/[documentId]                                                     1.1 kB         130 kB
+├ ƒ /api/billing-documents/[source]/[ownerId]/[documentId]/pay                                                 1.1 kB         130 kB
+├ ƒ /api/billing-documents/stripe-webhook                                                                      1.1 kB         130 kB
+├ ƒ /api/booking/availability                                                                                  1.1 kB         130 kB
+├ ƒ /api/booking/book                                                                                          1.1 kB         130 kB
+├ ƒ /api/booking/cancel                                                                                        1.1 kB         130 kB
+├ ƒ /api/booking/email-reminders                                                                               1.1 kB         130 kB
+├ ƒ /api/booking/manage/[token]                                                                                1.1 kB         130 kB
+├ ƒ /api/booking/payment-intent                                                                                1.1 kB         130 kB
+├ ƒ /api/booking/services                                                                                      1.1 kB         130 kB
+├ ƒ /api/booking/sms-reminders                                                                                 1.1 kB         130 kB
+├ ƒ /api/booking/staff                                                                                         1.1 kB         130 kB
+├ ƒ /api/booking/stripe-webhook                                                                                1.1 kB         130 kB
+├ ƒ /api/booking/waitlist                                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/_qa/attestation                                                                                  0 B            0 B
+├ ƒ /api/builder/ai-generator                                                                                  1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/apply                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/brand-voice                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/code                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/image                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/image-prompt                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/image/edit                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/page-spec                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/responsive                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/section                                                                          1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/style-score                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/text                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/theme                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/versions                                                                         1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/versions/[id]                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/versions/[id]/diff/[otherId]                                                     1.1 kB         130 kB
+├ ƒ /api/builder/ai-generator/versions/[id]/restore                                                            1.1 kB         130 kB
+├ ƒ /api/builder/approvals                                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/approvals/[id]                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/apps/catalog                                                                                  1.1 kB         130 kB
+├ ƒ /api/builder/apps/hooks                                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/apps/hooks/deliveries                                                                         1.1 kB         130 kB
+├ ƒ /api/builder/apps/hooks/deliveries/[deliveryId]/retry                                                      1.1 kB         130 kB
+├ ƒ /api/builder/apps/hooks/invoke                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/apps/installations                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/apps/installations/[appId]                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/apps/installations/[appId]/cms/collections                                                    1.1 kB         130 kB
+├ ƒ /api/builder/apps/installations/[appId]/settings                                                           1.1 kB         130 kB
+├ ƒ /api/builder/assets                                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/assets/[locale]/[...assetPath]                                                                1.1 kB         130 kB
+├ ƒ /api/builder/backups                                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/backups/[backupId]                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/backups/[backupId]/restore                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents/[source]/[ownerId]/[documentId]/download                                    1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents/[source]/[ownerId]/[documentId]/lifecycle                                   1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents/[source]/[ownerId]/[documentId]/manual-payments                             1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents/[source]/[ownerId]/[documentId]/payment-link                                1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents/[source]/[ownerId]/[documentId]/share-link                                  1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents/bulk                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents/settings                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents/templates                                                                   1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents/templates/[id]                                                              1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents/webhooks                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/billing-documents/webhooks/events/[eventId]/replay                                            1.1 kB         130 kB
+├ ƒ /api/builder/blog/admin                                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/blog/posts                                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/bookings/[id]                                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/bookings/[id]/documents                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/bookings/[id]/manual-payments                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/bookings/admin-create                                                                         1.1 kB         130 kB
+├ ƒ /api/builder/bookings/analytics                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/bookings/calendar                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/bookings/calendar-sync/connect/google                                                         1.1 kB         130 kB
+├ ƒ /api/builder/bookings/calendar-sync/connect/outlook                                                        1.1 kB         130 kB
+├ ƒ /api/builder/bookings/calendar-sync/oauth-callback                                                         1.1 kB         130 kB
+├ ƒ /api/builder/bookings/calendar-sync/recurring-rrule                                                        1.1 kB         130 kB
+├ ƒ /api/builder/bookings/calendar-sync/sync-now                                                               1.1 kB         130 kB
+├ ƒ /api/builder/bookings/cancellation-policies                                                                1.1 kB         130 kB
+├ ƒ /api/builder/bookings/cancellation-policies/[id]                                                           1.1 kB         130 kB
+├ ƒ /api/builder/bookings/email-templates                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/bookings/email-templates/[type]                                                               1.1 kB         130 kB
+├ ƒ /api/builder/bookings/notification-templates                                                               1.1 kB         130 kB
+├ ƒ /api/builder/bookings/notification-templates/[id]                                                          1.1 kB         130 kB
+├ ƒ /api/builder/bookings/package-credits                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/bookings/package-credits/[id]                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/bookings/packages                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/bookings/packages/[id]                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/bookings/resources                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/bookings/resources/[id]                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/bookings/services                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/bookings/services/[id]                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/bookings/staff                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/bookings/staff/[id]                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/bookings/staff/[id]/availability                                                              1.1 kB         130 kB
+├ ƒ /api/builder/bookings/waitlist/[id]                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/bookings/waitlist/[id]/promote                                                                1.1 kB         130 kB
+├ ƒ /api/builder/branches                                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/branches/[id]                                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/branches/[id]/merge                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/collab/comments                                                                               1.1 kB         130 kB
+├ ƒ /api/builder/collab/comments/[id]                                                                          1.1 kB         130 kB
+├ ƒ /api/builder/collab/cursors                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/collab/presence                                                                               1.1 kB         130 kB
+├ ƒ /api/builder/collab/review-markers                                                                         1.1 kB         130 kB
+├ ƒ /api/builder/collab/review-markers/[id]                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/columns                                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/columns/[slug]                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/columns/[slug]/publish                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/commerce/cart-recovery                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/commerce/categories                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/commerce/checkout                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/commerce/currency-settings                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/commerce/notifications                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/commerce/orders                                                                               1.1 kB         130 kB
+├ ƒ /api/builder/commerce/orders/[orderId]                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/commerce/orders/[orderId]/documents                                                           1.1 kB         130 kB
+├ ƒ /api/builder/commerce/orders/[orderId]/manual-payments                                                     1.1 kB         130 kB
+├ ƒ /api/builder/commerce/orders/[orderId]/refunds                                                             1.1 kB         130 kB
+├ ƒ /api/builder/commerce/payment-intents                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/commerce/payment-webhooks                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/commerce/payment-webhooks/[provider]                                                          1.1 kB         130 kB
+├ ƒ /api/builder/commerce/payment-webhooks/events/[eventId]/replay                                             1.1 kB         130 kB
+├ ƒ /api/builder/commerce/products                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/commerce/products/[productId]                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/commerce/shipping-rules                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/commerce/subscriptions                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/commerce/subscriptions/[id]                                                                   1.1 kB         130 kB
+├ ƒ /api/builder/commerce/tax-rules                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/crm/automations                                                                               1.1 kB         130 kB
+├ ƒ /api/builder/crm/automations/[id]                                                                          1.1 kB         130 kB
+├ ƒ /api/builder/crm/contacts                                                                                  1.1 kB         130 kB
+├ ƒ /api/builder/crm/contacts/[id]                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/crm/integrations                                                                              1.1 kB         130 kB
+├ ƒ /api/builder/crm/integrations/[id]                                                                         1.1 kB         130 kB
+├ ƒ /api/builder/crm/outbox                                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/crm/segments                                                                                  1.1 kB         130 kB
+├ ƒ /api/builder/crm/send-queue                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/crm/tracking/click/[token]                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/crm/tracking/open/[token]                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/dev/code-slots/run                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/dev/functions                                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/dev/functions/[id]                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/dev/functions/[id]/invoke                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/dev/logs                                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/dev/sdk                                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/dev/secrets                                                                                   1.1 kB         130 kB
+├ ƒ /api/builder/dev/secrets/[id]                                                                              1.1 kB         130 kB
+├ ƒ /api/builder/domains                                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/domains/[domain]                                                                              1.1 kB         130 kB
+├ ƒ /api/builder/domains/[domain]/verify                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/errors                                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/events                                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/events/[eventId]                                                                              1.1 kB         130 kB
+├ ƒ /api/builder/events/[eventId]/rsvp                                                                         1.1 kB         130 kB
+├ ƒ /api/builder/experiments                                                                                   1.1 kB         130 kB
+├ ƒ /api/builder/experiments/[experimentId]                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/experiments/[experimentId]/results                                                            1.1 kB         130 kB
+├ ƒ /api/builder/faq                                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/faq/[faqId]                                                                                   1.1 kB         130 kB
+├ ƒ /api/builder/forms/funnel                                                                                  1.1 kB         130 kB
+├ ƒ /api/builder/forms/schemas                                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/forms/schemas/[formId]                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/forms/submissions                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/home                                                                                          1.1 kB         130 kB
+├ ƒ /api/builder/home/publish                                                                                  1.1 kB         130 kB
+├ ƒ /api/builder/home/publish-checks                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/home/revisions                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/home/revisions/rollback                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/lawyers/[slug]                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/live-chat                                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/live-chat/[conversationId]                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/live-chat/[conversationId]/send                                                               1.1 kB         130 kB
+├ ƒ /api/builder/live-chat/[conversationId]/stream                                                             1.1 kB         130 kB
+├ ƒ /api/builder/marketing/campaigns                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/marketing/campaigns/[campaignId]                                                              1.1 kB         130 kB
+├ ƒ /api/builder/marketing/campaigns/[campaignId]/send                                                         1.1 kB         130 kB
+├ ƒ /api/builder/marketing/campaigns/[campaignId]/stats                                                        1.1 kB         130 kB
+├ ƒ /api/builder/marketing/deliverability                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/marketing/subscribers                                                                         1.1 kB         130 kB
+├ ƒ /api/builder/marketing/subscribers/import                                                                  1.1 kB         130 kB
+├ ƒ /api/builder/marketing/templates                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/marketing/templates/[templateId]                                                              1.1 kB         130 kB
+├ ƒ /api/builder/members                                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/members/[memberId]                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/migrations                                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/notifications                                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/notifications/[id]                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/ops/backups                                                                                   1.1 kB         130 kB
+├ ƒ /api/builder/ops/backups/[id]/restore                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/ops/backups/drill                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/ops/cache                                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/ops/dashboard                                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/ops/health                                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/ops/logs                                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/ops/perf                                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/ops/security                                                                                  1.1 kB         130 kB
+├ ƒ /api/builder/portfolio                                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/portfolio/[projectId]                                                                         1.1 kB         130 kB
+├ ƒ /api/builder/publish/atomic                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/publish/validate                                                                              1.1 kB         130 kB
+├ ƒ /api/builder/review-sessions                                                                               1.1 kB         130 kB
+├ ƒ /api/builder/review-sessions/[token]                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/reviews                                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/sandbox/draft                                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/search/queries                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/search/rebuild                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/security/users                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/security/users/[username]                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/services/[slug]                                                                               1.1 kB         130 kB
+├ ƒ /api/builder/site/audit                                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/site/brand-kit                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/site/custom-code                                                                              1.1 kB         130 kB
+├ ƒ /api/builder/site/footer/draft                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/site/header/draft                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/site/lightboxes                                                                               1.1 kB         130 kB
+├ ƒ /api/builder/site/lightboxes/[id]                                                                          1.1 kB         130 kB
+├ ƒ /api/builder/site/lightboxes/[id]/draft                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/site/navigation                                                                               1.1 kB         130 kB
+├ ƒ /api/builder/site/pages                                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/[pageId]                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/[pageId]/custom-code                                                               1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/[pageId]/draft                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/[pageId]/linked                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/[pageId]/move-from                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/[pageId]/publish                                                                   1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/[pageId]/revisions                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/[pageId]/revisions/rollback                                                        1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/[pageId]/scheduled-publish                                                         1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/[pageId]/seo                                                                       1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/[pageId]/seo-assistant                                                             1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/decompose                                                                          1.1 kB         130 kB
+├ ƒ /api/builder/site/pages/order                                                                              1.1 kB         130 kB
+├ ƒ /api/builder/site/publish-checks                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/site/redirects                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/site/redirects/[id]                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/site/redirects/public                                                                         1.1 kB         130 kB
+├ ƒ /api/builder/site/section-library                                                                          1.1 kB         130 kB
+├ ƒ /api/builder/site/section-library/[sectionId]                                                              1.1 kB         130 kB
+├ ƒ /api/builder/site/seed                                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/site/seo-bulk                                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/site/seo-checklist                                                                            1.1 kB         130 kB
+├ ƒ /api/builder/site/seo-overview                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/site/seo-preview                                                                              1.1 kB         130 kB
+├ ƒ /api/builder/site/seo-settings                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/site/settings                                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/site/translation-release-approvals                                                            1.1 kB         130 kB
+├ ƒ /api/builder/site/translation-release-approvals/[id]                                                       1.1 kB         130 kB
+├ ƒ /api/builder/site/translation-release-policy                                                               1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]                                                                                1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/collections                                                                    1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/collections/[collectionId]                                                     1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/collections/[collectionId]/dynamic-item-route-policies/[pageId]                1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/collections/[collectionId]/dynamic-item-route-policies/[pageId]/schedule       1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/collections/[collectionId]/records                                             1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]                                  1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/duplicate                        1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/revisions/[revisionId]/restore   1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/collections/[collectionId]/records/bulk                                        1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/collections/[collectionId]/records/csv                                         1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/dynamic-routes                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/dynamic-routes/[routeId]                                                       1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/dynamic-templates                                                              1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/dynamic-templates/[templateId]                                                 1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/dynamic-templates/[templateId]/publish                                         1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/pages/[pageKey]                                                                1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/pages/[pageKey]/datasets                                                       1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/pages/[pageKey]/datasets/preview                                               1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed                                                  1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/pages/[pageKey]/draft                                                          1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/pages/[pageKey]/publish                                                        1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/pages/[pageKey]/publish-checks                                                 1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/pages/[pageKey]/revisions                                                      1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/pages/[pageKey]/revisions/rollback                                             1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/pages/[pageKey]/scene                                                          1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/starter-templates                                                              1.1 kB         130 kB
+├ ƒ /api/builder/sites/[siteId]/starter-templates/[templateId]                                                 1.1 kB         130 kB
+├ ƒ /api/builder/translations                                                                                  1.1 kB         130 kB
+├ ƒ /api/builder/translations/auto-translate                                                                   1.1 kB         130 kB
+├ ƒ /api/builder/translations/dashboard                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/translations/edit                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/translations/providers                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/translations/publish-warnings                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/translations/translate                                                                        1.1 kB         130 kB
+├ ƒ /api/builder/translations/translate-batch                                                                  1.1 kB         130 kB
+├ ƒ /api/builder/translations/translate-batch/stream                                                           1.1 kB         130 kB
+├ ƒ /api/builder/webhooks                                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/webhooks/[id]                                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/webhooks/[id]/deliveries                                                                      1.1 kB         130 kB
+├ ƒ /api/builder/webhooks/[id]/retry                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/workspace/account                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/workspace/analytics                                                                           1.1 kB         130 kB
+├ ƒ /api/builder/workspace/assets                                                                              1.1 kB         130 kB
+├ ƒ /api/builder/workspace/assets/[filename]                                                                   1.1 kB         130 kB
+├ ƒ /api/builder/workspace/cms                                                                                 1.1 kB         130 kB
+├ ƒ /api/builder/workspace/members                                                                             1.1 kB         130 kB
+├ ƒ /api/builder/workspace/members/[email]                                                                     1.1 kB         130 kB
+├ ƒ /api/builder/workspace/sites                                                                               1.1 kB         130 kB
+├ ƒ /api/consultation/build-embeddings                                                                         1.1 kB         130 kB
+├ ƒ /api/consultation/chat                                                                                     1.1 kB         130 kB
+├ ƒ /api/consultation/data/delete                                                                              1.1 kB         130 kB
+├ ƒ /api/consultation/data/export                                                                              1.1 kB         130 kB
+├ ƒ /api/consultation/data/purge                                                                               1.1 kB         130 kB
+├ ƒ /api/consultation/eval                                                                                     1.1 kB         130 kB
+├ ƒ /api/consultation/event                                                                                    1.1 kB         130 kB
+├ ƒ /api/consultation/feedback                                                                                 1.1 kB         130 kB
+├ ƒ /api/consultation/international                                                                            1.1 kB         130 kB
+├ ƒ /api/consultation/knowledge                                                                                1.1 kB         130 kB
+├ ƒ /api/consultation/submit                                                                                   1.1 kB         130 kB
+├ ƒ /api/cron/app-hooks-retry                                                                                  1.1 kB         130 kB
+├ ƒ /api/cron/backup                                                                                           1.1 kB         130 kB
+├ ƒ /api/cron/calendar-sync                                                                                    1.1 kB         130 kB
+├ ƒ /api/cron/cms-dynamic-item-lifecycle-policies                                                              1.1 kB         130 kB
+├ ƒ /api/cron/metrics-rollup                                                                                   1.1 kB         130 kB
+├ ƒ /api/cron/scheduled-publish                                                                                1.1 kB         130 kB
+├ ƒ /api/cron/translation-provider-smoke                                                                       1.1 kB         130 kB
+├ ƒ /api/cron/webhooks-retry                                                                                   1.1 kB         130 kB
+├ ƒ /api/experiments/assign                                                                                    1.1 kB         130 kB
+├ ƒ /api/experiments/event                                                                                     1.1 kB         130 kB
+├ ƒ /api/faq                                                                                                   1.1 kB         130 kB
+├ ƒ /api/forms/stripe-checkout                                                                                 1.1 kB         130 kB
+├ ƒ /api/forms/submit                                                                                          1.1 kB         130 kB
+├ ƒ /api/forms/track                                                                                           1.1 kB         130 kB
+├ ƒ /api/forms/uploads                                                                                         1.1 kB         130 kB
+├ ƒ /api/forms/uploads/[locale]/[filename]                                                                     1.1 kB         130 kB
+├ ƒ /api/line                                                                                                  1.1 kB         130 kB
+├ ƒ /api/live-chat/send                                                                                        1.1 kB         130 kB
+├ ƒ /api/live-chat/start                                                                                       1.1 kB         130 kB
+├ ƒ /api/live-chat/stream                                                                                      1.1 kB         130 kB
+├ ƒ /api/marketing/cron/dispatch                                                                               1.1 kB         130 kB
+├ ƒ /api/marketing/subscribe                                                                                   1.1 kB         130 kB
+├ ƒ /api/marketing/track                                                                                       1.1 kB         130 kB
+├ ƒ /api/marketing/track/pixel                                                                                 1.1 kB         130 kB
+├ ƒ /api/marketing/unsubscribe                                                                                 1.1 kB         130 kB
+├ ƒ /api/marketing/verify                                                                                      1.1 kB         130 kB
+├ ƒ /api/members/bookings                                                                                      1.1 kB         130 kB
+├ ƒ /api/members/login                                                                                         1.1 kB         130 kB
+├ ƒ /api/members/logout                                                                                        1.1 kB         130 kB
+├ ƒ /api/members/me                                                                                            1.1 kB         130 kB
+├ ƒ /api/members/signup                                                                                        1.1 kB         130 kB
+├ ƒ /api/metrics/collect                                                                                       1.1 kB         130 kB
+├ ƒ /api/reviews                                                                                               1.1 kB         130 kB
+├ ƒ /api/search                                                                                                1.1 kB         130 kB
+├ ○ /apple-icon.png                                                                                               0 B            0 B
+├ ○ /icon.png                                                                                                     0 B            0 B
+├ ○ /llms.txt                                                                                                  1.1 kB         130 kB
+├ ○ /manifest.webmanifest                                                                                      1.1 kB         130 kB
+├ ƒ /review/[token]                                                                                            1.1 kB         130 kB
+├ ƒ /robots.txt                                                                                                1.1 kB         130 kB
+└ ƒ /sitemap.xml                                                                                               1.1 kB         130 kB
++ First Load JS shared by all                                                                                  129 kB
+  ├ chunks/4bd1b696-2135e4d8b8354323.js                                                                       54.2 kB
+  ├ chunks/7222-6f34d2767914ef8c.js                                                                             72 kB
+  └ other shared chunks (total)                                                                                  3 kB
+
+
+ƒ Middleware                                                                                                    35 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

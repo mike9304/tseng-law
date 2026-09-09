@@ -1,0 +1,26 @@
+[WO-S2a-review 시작 Wed Sep  9 12:07:33 KST 2026]
+총평은 **FAIL**입니다. 원본 답변·컴포넌트는 건드리지 않았고, `docs/seo/reviews/S2a-REVIEW.md`만 새로 썼습니다.
+
+**항목 1만 FAIL**입니다. 24개 중 20개는 해당 페이지 본문과 맞지만, **services 4건**(vi/id/th/fil)이 그 페이지의 “범위 확정” 문장 대신 FAQ의 “수리 여부” 문장을 옮겨 왔습니다. 예: 태국 답변은 `answers.ts` 110행이 FAQ 1299행(“จะรับเรื่องหรือไม่”)이고, services 본문 1130행은 “ขอบเขต…ยืนยัน”. 베트남 services는 본문 150·158의 배상·쉼표도 빠져 있습니다. lawyers 블록은 Wei Tseng 바로 뒤에 사무실 4언어가 붙어 영어 상담으로 이어 읽힐 여지가 있어 수정안만 적었습니다.
+
+언어 계약·광고 규정·sources 경로·답변 없는 페이지 렌더는 **PASS**입니다. 안내 언어명·통역 제안·승소/최고 표현은 본문에 없고, `/{locale}/faq|contact|…`는 `guidancePublicPath`·sitemap·catch-all과 일치하며, `answer`가 없으면 `answerBlock` 섹션이 마운트되지 않습니다.
+
+### (1) 변경 파일 목록
+- `docs/seo/reviews/S2a-REVIEW.md` (신규)
+- 원본 answers/tsx/content **미수정**
+
+### (2) 실행한 명령과 마지막 출력 3줄
+Bash 금지라 명령을 실행하지 않았습니다. vitest도 돌리지 않았습니다.
+
+### (3) 완료 기준
+1. 24개 자연+본문 일치 — **FAIL**  
+2. 언어 계약 0 — **PASS**  
+3. 광고 규정 0 — **PASS**  
+4. sources 실존 — **PASS** (코드 대조, HTTP 없음)  
+5. 무답변 렌더 영향 0 — **PASS**
+
+### (4) 못 한 것
+vitest 길이 창, HTTP GET, 브라우저 확인은 하지 못했습니다.
+
+총평 FAIL (FAIL 1건 / 항목 5)
+=== WO-S2a-review 종료 code=0 Wed Sep  9 12:13:23 KST 2026 ===

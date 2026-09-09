@@ -3,11 +3,12 @@ import Link from 'next/link';
 
 import { guidanceContent, type GuidanceLocale } from '@/data/international-guidance-content';
 import {
+  guidanceMemberLanguages,
+  guidanceTeamBios,
   guidanceTeamCopy,
   isGuidanceTeamMemberId,
   type GuidanceTeamMemberId,
 } from '@/data/international-guidance-team';
-import { getAttorneyProfile } from '@/data/attorney-profiles';
 import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
 import { teamContent, type TeamMember } from '@/data/team-members';
 import { guidancePublicPath } from '@/lib/public-guidance';
@@ -25,9 +26,13 @@ import { guidancePublicPath } from '@/lib/public-guidance';
  * rewritten here:
  *   - names, e-mail addresses and photographs: used verbatim;
  *   - job titles: the published English titles, in the page language;
- *   - intro / education / experience: the English original, rendered inside a
- *     block introduced by `sourceLanguageNote` so the reader is told, in their
- *     own language, that those lines are not translated.
+ *   - intro / education / experience: `guidanceTeamBios`, the page-language
+ *     edition of the same canonical lines. WO-O33 replaced the earlier
+ *     English-original-plus-notice arrangement: ko, zh-hant and ja already
+ *     translate these lines in `team-members.ts`, so leaving four languages on
+ *     the English text was the exception, not the rule. The line counts, the
+ *     preserved institution names and the figures are pinned to
+ *     `teamContent.en` by `src/data/__tests__/guidance-team-bios.test.ts`.
  *
  * A member without a photograph in the canonical record would be skipped
  * rather than given a placeholder; today all five have one.
@@ -41,7 +46,8 @@ import { guidancePublicPath } from '@/lib/public-guidance';
  * cards, reusing `internationalInquiryCopy[locale].consultationNotice`
  * verbatim (English, Chinese, Japanese, Korean). Individual cards carry only a
  * neutral "working languages" noun label sourced from `attorney-profiles.ts`,
- * never a verb, and only for the member the canonical record has it for.
+ * never a verb, and only for the member the canonical record has it for. The
+ * list is canonical; only the language names are in the page language.
  */
 
 function GuidanceMemberCard({
@@ -57,6 +63,7 @@ function GuidanceMemberCard({
 }) {
   const copy = guidanceTeamCopy[locale];
   const pack = guidanceContent[locale];
+  const bio = guidanceTeamBios[locale][memberId];
   const isLarge = size === 'large';
   const role = copy.roles[memberId];
   // Language list, canonical only. `attorney-profiles.ts` records it for the
@@ -64,9 +71,7 @@ function GuidanceMemberCard({
   // instead of being padded with a guess. The label is a noun ("working
   // languages"), never a verb: it states what a person reads and writes, not
   // what language a consultation is held in.
-  const workingLanguages = member.profileSlug
-    ? getAttorneyProfile('en', member.profileSlug)?.languages ?? []
-    : [];
+  const workingLanguages = guidanceMemberLanguages(locale, member.profileSlug);
   // The `/{locale}/lawyers/{slug}` route is built for the four site locales
   // only — a guidance-locale URL there is a 404 — so the full profile link
   // points at the English page and says so in its label.
@@ -106,7 +111,7 @@ function GuidanceMemberCard({
         <div className="attorney-card-section">
           <div className="attorney-card-label">{copy.introLabel}</div>
           <ul className="attorney-list">
-            {member.intro.map((line) => (
+            {bio.intro.map((line) => (
               <li key={line}>{line}</li>
             ))}
           </ul>
@@ -115,7 +120,7 @@ function GuidanceMemberCard({
         <div className="attorney-card-section">
           <div className="attorney-card-label">{copy.educationLabel}</div>
           <ul className="attorney-list">
-            {member.education.map((line) => (
+            {bio.education.map((line) => (
               <li key={line}>{line}</li>
             ))}
           </ul>
@@ -124,7 +129,7 @@ function GuidanceMemberCard({
         <div className="attorney-card-section">
           <div className="attorney-card-label">{copy.experienceLabel}</div>
           <ul className="attorney-list">
-            {member.experience.map((line) => (
+            {bio.experience.map((line) => (
               <li key={line}>{line}</li>
             ))}
           </ul>
@@ -159,9 +164,17 @@ function GuidanceMemberCard({
   );
 }
 
-export default function GuidanceTeamRoster({ locale }: { locale: GuidanceLocale }) {
+export default function GuidanceTeamRoster({
+  locale,
+  showIntro = true,
+}: {
+  locale: GuidanceLocale;
+  showIntro?: boolean;
+}) {
   const copy = guidanceTeamCopy[locale];
-  // Canonical record. `en` is the source of every biographical line below.
+  // Canonical roster: `teamContent.en` supplies the members, their order,
+  // their names, e-mail addresses and photographs. The biography sentences for
+  // those members are read from `guidanceTeamBios[locale]`.
   const members = teamContent.en.members.filter(
     (member): member is TeamMember & { id: GuidanceTeamMemberId } =>
       isGuidanceTeamMemberId(member.id) && Boolean(member.photo),
@@ -179,15 +192,21 @@ export default function GuidanceTeamRoster({ locale }: { locale: GuidanceLocale 
     <section
       className="section section--light attorney-team-section"
       data-guidance-team="true"
+      data-page-block="roster"
       data-locale={locale}
     >
       <div className="container">
-        <div className="section-label">{copy.label}</div>
-        <h2 className="section-title">{copy.title}</h2>
-        <p className="section-lede">{copy.description}</p>
-        <p className="section-lede" data-guidance-team-source-language="en">
-          {copy.sourceLanguageNote}
-        </p>
+        {/* `/en/lawyers` renders `AttorneyProfileSection` with `showIntro`
+            false — the page header already names the team — and `/en/about`
+            renders it with the label, heading and lede. The guidance pages
+            follow the same split so the heading counts match. */}
+        {showIntro ? (
+          <>
+            <div className="section-label">{copy.label}</div>
+            <h2 className="section-title">{copy.title}</h2>
+            <p className="section-lede">{copy.description}</p>
+          </>
+        ) : null}
         {/* Office policy on consultation languages, stated once above the
             roster and reused verbatim from the inquiry copy rather than
             rewritten here. Individual cards carry a neutral language label

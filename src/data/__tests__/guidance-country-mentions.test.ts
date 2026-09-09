@@ -52,8 +52,18 @@ describe('guidance data country-name gate', () => {
   it('scans all four locale blocks in every guidance data module', () => {
     const result = scanGuidanceCountryMentions();
     expect(result.scannedFiles.map((entry) => entry.file)).toEqual([...GUIDANCE_DATA_FILES]);
+    // A module may export more than one per-locale record — WO-O33 added
+    // `guidanceTeamBios` next to `guidanceTeamCopy` — so a file yields one
+    // vi/id/th/fil cycle per record. Every record must still carry all four
+    // locales, in the same order: a missing or reordered block would mean a
+    // locale whose copy the country gate never reads.
     for (const entry of result.scannedFiles) {
-      expect(entry.locales, `${entry.file} locale blocks`).toEqual(['vi', 'id', 'th', 'fil']);
+      const cycle = ['vi', 'id', 'th', 'fil'] as const;
+      expect(entry.locales.length, `${entry.file} locale blocks`).toBeGreaterThan(0);
+      expect(entry.locales.length % cycle.length, `${entry.file} partial locale record`).toBe(0);
+      expect(entry.locales, `${entry.file} locale blocks`).toEqual(
+        entry.locales.map((_, index) => cycle[index % cycle.length]),
+      );
     }
     expect(result.scannedLines).toBeGreaterThan(1000);
   });

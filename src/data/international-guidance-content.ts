@@ -287,35 +287,16 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
       lawyers: {
         eyebrow: 'LUẬT SƯ',
-        title: 'Luật sư và cách văn phòng tiếp nhận yêu cầu',
+        title: 'Đội ngũ quốc tế Hovering',
         description:
-          'Cách văn phòng tiếp nhận và phân công các yêu cầu gửi từ nước ngoài, thông tin về luật sư Wei Tseng và ngôn ngữ trao đổi.',
-        intro:
-          'Các yêu cầu gửi đến từ nước ngoài được văn phòng tiếp nhận và xem xét. Không có việc tự động chuyển cho một luật sư nhất định: người phụ trách được xác định theo nội dung vụ việc và tình hình công việc tại thời điểm đó.',
-        sections: [
-          {
-            heading: 'Luật sư Wei Tseng',
-            paragraphs: [
-              'Luật sư Wei Tseng (曾雋崴) có tư cách hành nghề tại Đài Loan và chính thức gia nhập Hovering International Law Firm năm 2024.',
-              'Theo giới thiệu chính thức của văn phòng, luật sư Wei Tseng làm việc với khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế khác trong những công việc như thành lập công ty, hồ sơ thị thực, đăng ký nhãn hiệu và sáng chế, đánh giá rủi ro pháp lý và tư vấn thuế doanh nghiệp, bên cạnh các vụ việc tranh tụng.',
-              'Luật sư Wei Tseng trao đổi bằng tiếng Trung, tiếng Nhật và tiếng Hàn. Đây là thông tin về cá nhân luật sư, khác với danh sách ngôn ngữ tư vấn của cả văn phòng nêu ở phần dưới.',
-            ],
-          },
-          {
-            heading: 'Ngôn ngữ trao đổi',
-            paragraphs: [
-              'Việc tư vấn tại văn phòng được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn. Đây là phạm vi của cả văn phòng, không phải năng lực ngôn ngữ của một luật sư cụ thể; ngôn ngữ của từng buổi trao đổi được xác nhận theo vụ việc.',
-              'Trang này không cam kết một luật sư nhất định sẽ nhận vụ việc của quý vị, cũng không cam kết về khả năng sắp xếp thời gian của bất kỳ luật sư nào. Việc phân công phụ thuộc vào nội dung vụ việc và tình hình công việc tại thời điểm đó.',
-            ],
-          },
-          {
-            heading: 'Giới hạn khi liên hệ',
-            paragraphs: [
-              'Văn phòng xem xét nội dung quý vị gửi trước khi bàn đến bước tiếp theo. Việc gửi tin nhắn hay thư điện tử không tự nó tạo lập quan hệ giữa luật sư và khách hàng, và cũng không xác nhận một lịch hẹn.',
-              'Luật sư Wei Tseng có tư cách hành nghề tại Đài Loan, và các trang này giới thiệu dịch vụ pháp lý theo pháp luật Đài Loan. Nội dung ở đây không phải ý kiến pháp lý theo pháp luật nơi quý vị đang sinh sống hay theo pháp luật của bất kỳ nước nào khác ngoài Đài Loan. Nếu vụ việc của quý vị có phần liên quan đến pháp luật của một nước khác, chúng tôi sẽ cùng quý vị xác nhận phần đó cần đến chuyên gia có tư cách phù hợp nào.',
-            ],
-          },
-        ],
+          'Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán viên hợp tác của Hovering.',
+        // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
+        // prose cards this page used to carry were a duplicate of the key-facts
+        // rows, a third copy of the consultation-language notice, and a
+        // jurisdiction disclaimer that belongs on the disclaimer page, so the
+        // card grid is gone. With no cards there is no lede above them either.
+        intro: '',
+        sections: [],
       },
       pricing: {
         eyebrow: 'PHẠM VI VÀ CHI PHÍ',
@@ -779,35 +760,16 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
       lawyers: {
         eyebrow: 'ADVOKAT',
-        title: 'Advokat dan cara permintaan Anda ditangani',
+        title: 'Tim Internasional Hovering',
         description:
-          'Cara kantor menerima dan membagi permintaan dari luar negeri, keterangan tentang Advokat Wei Tseng, dan bahasa yang digunakan.',
-        intro:
-          'Permintaan yang datang dari luar negeri diterima dan ditinjau oleh kantor. Tidak ada penugasan otomatis kepada advokat tertentu: siapa yang menangani ditentukan menurut isi perkara dan keadaan pekerjaan pada saat itu.',
-        sections: [
-          {
-            heading: 'Advokat Wei Tseng',
-            paragraphs: [
-              'Wei Tseng (曾雋崴) adalah advokat yang memiliki izin praktik di Taiwan dan resmi bergabung dengan Hovering International Law Firm pada 2024.',
-              'Menurut keterangan resmi kantor, ia bekerja untuk klien dari Korea, Jepang, dan klien internasional lainnya dalam pekerjaan seperti pendirian perusahaan, pengurusan visa, pendaftaran merek dan paten, penilaian risiko hukum, dan konsultasi pajak perusahaan, di samping perkara yang beracara di pengadilan.',
-              'Advokat Wei Tseng berkomunikasi dalam bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea. Ini keterangan tentang kemampuan bahasa advokat tersebut, berbeda dari daftar bahasa konsultasi kantor yang disebut di bawah.',
-            ],
-          },
-          {
-            heading: 'Bahasa yang digunakan',
-            paragraphs: [
-              'Konsultasi di kantor kami dilayani dalam empat bahasa: bahasa Inggris, bahasa Tionghoa, bahasa Jepang, dan bahasa Korea. Itu adalah lingkup kantor secara keseluruhan, bukan kemampuan bahasa satu advokat tertentu; bahasa untuk suatu pembicaraan dipastikan menurut perkaranya masing-masing.',
-              'Halaman ini tidak menjanjikan bahwa advokat tertentu akan menangani perkara Anda, dan tidak menjanjikan ketersediaan waktu advokat mana pun. Penugasan bergantung pada isi perkara dan keadaan pekerjaan pada saat itu.',
-            ],
-          },
-          {
-            heading: 'Batasan saat menghubungi kami',
-            paragraphs: [
-              'Kantor meninjau isi pesan Anda sebelum langkah berikutnya dibicarakan. Mengirim pesan atau email dengan sendirinya tidak membentuk hubungan antara advokat dan klien, dan tidak memastikan janji temu.',
-              'Wei Tseng memiliki izin praktik di Taiwan, dan halaman-halaman ini menguraikan layanan hukum menurut hukum Taiwan. Isinya bukan nasihat menurut hukum negara tempat Anda berada maupun menurut hukum negara mana pun selain Taiwan. Jika ada bagian perkara Anda yang tunduk pada hukum negara lain, kami akan memastikan bersama Anda profesional berkualifikasi mana yang diperlukan untuk bagian itu.',
-            ],
-          },
-        ],
+          'Profil para advokat, manajer operasional, dan akuntan mitra Hovering.',
+        // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
+        // prose cards this page used to carry were a duplicate of the key-facts
+        // rows, a third copy of the consultation-language notice, and a
+        // jurisdiction disclaimer that belongs on the disclaimer page, so the
+        // card grid is gone. With no cards there is no lede above them either.
+        intro: '',
+        sections: [],
       },
       pricing: {
         eyebrow: 'LINGKUP DAN BIAYA',
@@ -1271,35 +1233,16 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
       lawyers: {
         eyebrow: 'ทนายความ',
-        title: 'ทนายความ และวิธีที่สำนักงานรับเรื่องของท่าน',
+        title: 'ทีมงานระหว่างประเทศ Hovering',
         description:
-          'วิธีที่สำนักงานรับและมอบหมายเรื่องที่ติดต่อมาจากต่างประเทศ ข้อมูลเกี่ยวกับทนายความ Wei Tseng และภาษาที่ใช้ในการปรึกษา',
-        intro:
-          'เรื่องที่ติดต่อเข้ามาจากต่างประเทศ สำนักงานจะเป็นผู้รับเรื่องและตรวจสอบ ไม่มีการมอบหมายให้ทนายความคนใดคนหนึ่งโดยอัตโนมัติ ผู้รับผิดชอบจะกำหนดตามเนื้อหาของเรื่องและปริมาณงานในขณะนั้น',
-        sections: [
-          {
-            heading: 'ทนายความ Wei Tseng',
-            paragraphs: [
-              'Wei Tseng (曾雋崴) เป็นทนายความที่มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และเข้าร่วมกับ Hovering International Law Firm อย่างเป็นทางการในปี 2024',
-              'ตามข้อมูลทางการของสำนักงาน ทนายความผู้นี้ทำงานให้แก่ลูกความชาวเกาหลี ชาวญี่ปุ่น และลูกความต่างชาติอื่น ๆ ในงานอย่างเช่น การจัดตั้งบริษัท การยื่นขอวีซ่า การจดทะเบียนเครื่องหมายการค้าและสิทธิบัตร การประเมินความเสี่ยงทางกฎหมาย และการให้คำปรึกษาด้านภาษีนิติบุคคล ควบคู่ไปกับงานคดีในศาล',
-              'ทนายความ Wei Tseng สื่อสารด้วยภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี ข้อมูลนี้เป็นความสามารถทางภาษาของทนายความผู้นี้เอง ซึ่งต่างจากภาษาที่ใช้ให้คำปรึกษาของสำนักงานที่ระบุไว้ในหัวข้อถัดไป',
-            ],
-          },
-          {
-            heading: 'ภาษาที่ใช้ในการปรึกษา',
-            paragraphs: [
-              'การให้คำปรึกษาของสำนักงานดำเนินการใน 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี ทั้งนี้เป็นขอบเขตของสำนักงานโดยรวม ไม่ใช่ความสามารถทางภาษาของทนายความคนใดคนหนึ่ง ส่วนภาษาที่จะใช้ในการปรึกษาแต่ละครั้งจะยืนยันกันเป็นรายเรื่อง',
-              'หน้านี้ไม่ได้รับประกันว่าทนายความคนใดคนหนึ่งจะเป็นผู้รับผิดชอบเรื่องของท่าน และไม่ได้รับประกันว่าทนายความคนใดจะมีเวลาว่าง การมอบหมายงานขึ้นอยู่กับเนื้อหาของเรื่องและปริมาณงานในขณะนั้น',
-            ],
-          },
-          {
-            heading: 'ข้อจำกัดเมื่อติดต่อเข้ามา',
-            paragraphs: [
-              'สำนักงานจะตรวจสอบเนื้อหาที่ท่านส่งมาก่อน แล้วจึงหารือเกี่ยวกับขั้นตอนถัดไป การส่งข้อความหรืออีเมลเพียงอย่างเดียวไม่ได้ทำให้เกิดความสัมพันธ์ระหว่างทนายความกับลูกความ และไม่ได้เป็นการยืนยันการนัดหมาย',
-              'ทนายความ Wei Tseng มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และหน้าเหล่านี้อธิบายบริการทางกฎหมายภายใต้กฎหมายไต้หวัน เนื้อหาในหน้าเหล่านี้ไม่ใช่ความเห็นตามกฎหมายของประเทศที่ท่านพำนักอยู่ หรือกฎหมายของประเทศอื่นใดนอกจากไต้หวัน หากปรากฏว่าเรื่องของท่านมีส่วนที่อยู่ภายใต้กฎหมายของประเทศอื่น เราจะยืนยันร่วมกับท่านว่าส่วนนั้นต้องอาศัยผู้เชี่ยวชาญที่มีคุณสมบัติเหมาะสมด้านใด',
-            ],
-          },
-        ],
+          'ประวัติของทนายความ ผู้จัดการงาน และผู้สอบบัญชีพันธมิตรของ Hovering',
+        // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
+        // prose cards this page used to carry were a duplicate of the key-facts
+        // rows, a third copy of the consultation-language notice, and a
+        // jurisdiction disclaimer that belongs on the disclaimer page, so the
+        // card grid is gone. With no cards there is no lede above them either.
+        intro: '',
+        sections: [],
       },
       pricing: {
         eyebrow: 'ขอบเขตและค่าใช้จ่าย',
@@ -1763,35 +1706,16 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
       lawyers: {
         eyebrow: 'MGA ABOGADO',
-        title: 'Ang abogado at kung paano tinatanggap ang usapin ninyo',
+        title: 'Pandaigdigang koponan ng Hovering',
         description:
-          'Kung paano tinatanggap at ipinapatungkol ng tanggapan ang mga usaping mula sa ibang bansa, ang impormasyon tungkol kay Abogado Wei Tseng, at ang mga wikang ginagamit.',
-        intro:
-          'Ang tanggapan ang tumatanggap at sumusuri sa mga usaping ipinapadala mula sa ibang bansa. Walang awtomatikong pagkakatalaga sa isang tiyak na abogado: ang hahawak nito ay itinatakda ayon sa nilalaman ng usapin at sa dami ng trabaho sa panahong iyon.',
-        sections: [
-          {
-            heading: 'Abogado Wei Tseng',
-            paragraphs: [
-              'Si Wei Tseng (曾雋崴) ay abogadong kwalipikadong magpraktis sa Taiwan at opisyal na sumali sa Hovering International Law Firm noong 2024.',
-              'Ayon sa opisyal na paglalahad ng tanggapan, gumagawa siya para sa mga kliyenteng Koreano, Hapon, at iba pang internasyonal na kliyente sa mga bagay gaya ng pagtatatag ng kompanya, aplikasyon sa visa, pagpaparehistro ng marka ng kalakal at patente, pagtaya ng panganib na legal, at konsultasyon sa buwis ng kompanya, kasabay ng mga usaping dinadala sa korte.',
-              'Nakikipag-usap si Abogado Wei Tseng sa Tsino (中文), Hapon, at Koreano. Tungkol ito sa kakayahan sa wika ng abogado mismo, at kaiba ito sa listahan ng mga wika ng konsultasyon ng buong tanggapan na nasa ibaba.',
-            ],
-          },
-          {
-            heading: 'Mga wikang ginagamit',
-            paragraphs: [
-              'Ang konsultasyon sa tanggapan ay isinasagawa sa apat na wika: Ingles, Tsino, Hapon, at Koreano. Saklaw ito ng buong tanggapan, hindi ng kakayahan sa wika ng isang tiyak na abogado; ang wikang gagamitin sa isang partikular na pag-uusap ay kinukumpirma ayon sa bawat usapin.',
-              'Hindi ipinapangako ng pahinang ito na isang tiyak na abogado ang hahawak ng usapin ninyo, at hindi rin ipinapangako ang pagkakaroon ng oras ng sinumang abogado. Nakadepende sa nilalaman ng usapin at sa dami ng trabaho sa panahong iyon kung sino ang iaatas dito.',
-            ],
-          },
-          {
-            heading: 'Mga limitasyon kapag nakipag-ugnayan kayo',
-            paragraphs: [
-              'Sinusuri muna ng tanggapan ang ipinadala ninyo bago pag-usapan ang susunod na hakbang. Ang pagpapadala ng mensahe o email ay hindi bumubuo ng ugnayan ng abogado at kliyente, at hindi rin ito kumpirmasyon ng appointment.',
-              'Kwalipikadong magpraktis sa Taiwan si Abogado Wei Tseng, at naglalahad ang mga pahinang ito ng serbisyong legal sa ilalim ng batas ng Taiwan. Hindi payo ang nilalaman nito sa ilalim ng batas ng bansang kinaroroonan ninyo o ng batas ng alinmang ibang bansa maliban sa Taiwan. Kung may bahagi ng usapin ninyo na nasa ilalim ng batas ng ibang bansa, kukumpirmahin naming kasama kayo kung anong propesyonal na may tamang kwalipikasyon ang kailangan para sa bahaging iyon.',
-            ],
-          },
-        ],
+          'Mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong akawntant ng Hovering.',
+        // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
+        // prose cards this page used to carry were a duplicate of the key-facts
+        // rows, a third copy of the consultation-language notice, and a
+        // jurisdiction disclaimer that belongs on the disclaimer page, so the
+        // card grid is gone. With no cards there is no lede above them either.
+        intro: '',
+        sections: [],
       },
       pricing: {
         eyebrow: 'SAKLAW AT BAYARIN',

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import { GuidanceServices } from '@/components/GuidanceHomeBody';
+import GuidanceAttorneyFacts from '@/components/GuidanceAttorneyFacts';
 import GuidanceTeamRoster from '@/components/GuidanceTeamRoster';
 import InternationalInquiryForm, {
   InternationalInquiryNotice,
@@ -113,7 +114,11 @@ export default function GuidancePageBody({
 
         {answer ? (
           <Reveal>
-            <section className="section section--light" aria-label="summary">
+            <section
+              className="section section--light"
+              aria-label="summary"
+              data-page-block="answer-summary"
+            >
               <div className="container">
                 <div className="guidance-answer">
                   <p className="section-lede">{answer.answer}</p>
@@ -147,40 +152,56 @@ export default function GuidancePageBody({
           </Reveal>
         ) : null}
 
-        <Reveal>
-          <section className="section section--light">
-            <div className="container">
-              <p className="section-lede">{page.intro}</p>
-              <div className="grid-bento contact-grid reveal-stagger">
-                {page.sections.map((section) => (
-                  <div key={section.heading} className="card legal-card">
-                    <h2 className="card-title">{section.heading}</h2>
-                    <div className="legal-card-copy">
-                      {section.paragraphs.map((paragraph) => (
-                        <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-                      ))}
-                    </div>
-                    {section.items && section.items.length > 0 ? (
-                      <ul className="contact-list legal-card-list">
-                        {section.items.map((item) => (
-                          <li key={item}>{item}</li>
+        {/* WO-O33: `lawyers` publishes no cards any more, so the card grid and
+            the lede that introduces it are skipped rather than rendered empty. */}
+        {page.sections.length > 0 ? (
+          <Reveal>
+            <section className="section section--light" data-page-block="page-sections">
+              <div className="container">
+                <p className="section-lede">{page.intro}</p>
+                <div className="grid-bento contact-grid reveal-stagger">
+                  {page.sections.map((section) => (
+                    <div key={section.heading} className="card legal-card">
+                      <h2 className="card-title">{section.heading}</h2>
+                      <div className="legal-card-copy">
+                        {section.paragraphs.map((paragraph) => (
+                          <p key={paragraph.slice(0, 48)}>{paragraph}</p>
                         ))}
-                      </ul>
-                    ) : null}
-                  </div>
-                ))}
+                      </div>
+                      {section.items && section.items.length > 0 ? (
+                        <ul className="contact-list legal-card-list">
+                          {section.items.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          </section>
-        </Reveal>
+            </section>
+          </Reveal>
+        ) : null}
 
         {/* Team roster. The English `lawyers` and `about` pages both render
             `AttorneyProfileSection`; before this the guidance locales showed no
-            portrait on either page. Placed after the page's own copy so the
-            localized explanation and its limits are read first. */}
-        {pageKey === 'lawyers' || pageKey === 'about' ? (
+            portrait on either page. WO-O33: on `lawyers` the roster is now the
+            first section under the header, exactly as on `/en/lawyers`, and it
+            drops its own eyebrow/heading/lede there for the same reason `/en`
+            passes `showIntro={false}` — the page header already names the team. */}
+        {isRosterPage ? (
           <Reveal>
-            <GuidanceTeamRoster locale={locale} />
+            <GuidanceTeamRoster locale={locale} showIntro={pageKey !== 'lawyers'} />
+          </Reveal>
+        ) : null}
+
+        {/* Key facts, the localized `AttorneyFactSummary`. `/en/lawyers` closes
+            with it and the guidance pages had no equivalent; the three prose
+            cards that used to stand in for it are gone. `/en/about` does not
+            render it, so neither does this one. */}
+        {pageKey === 'lawyers' ? (
+          <Reveal>
+            <GuidanceAttorneyFacts locale={locale} />
           </Reveal>
         ) : null}
 
@@ -260,7 +281,12 @@ export function GuidanceContactBand({
   const pack = guidanceContent[locale];
   return (
     <Reveal>
-      <section className="section section--dark home-contact-cta" id="contact" data-tone="dark">
+      <section
+        className="section section--dark home-contact-cta"
+        id="contact"
+        data-tone="dark"
+        data-page-block="contact-band"
+      >
         <div className="container">
           <div className="section-label">{pack.nav.contact}</div>
           <h2 className="section-title">{pack.contactCta}</h2>
@@ -301,7 +327,12 @@ export function GuidanceNotFoundBody({ locale }: { locale: GuidanceLocale }) {
         />
       </article>
       <Reveal>
-        <section className="section section--dark home-contact-cta" id="contact" data-tone="dark">
+        <section
+        className="section section--dark home-contact-cta"
+        id="contact"
+        data-tone="dark"
+        data-page-block="contact-band"
+      >
           <div className="container">
             <div className="section-lede">
               <InternationalInquiryNotice locale={locale} showContactLink />

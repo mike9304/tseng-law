@@ -22,8 +22,19 @@ import {
 } from '@/lib/public-guidance';
 import { getSiteUrl } from '@/lib/seo';
 import { guidanceOfficeCopy } from '@/data/international-guidance-offices';
-import { guidanceTeamCopy } from '@/data/international-guidance-team';
+import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
+import {
+  GUIDANCE_BIO_PRESERVED_TERMS,
+  guidanceTeamBios,
+  guidanceTeamCopy,
+  isGuidanceTeamMemberId,
+} from '@/data/international-guidance-team';
 import { teamContent } from '@/data/team-members';
+import { buildGuidanceAttorneyFacts } from '@/lib/guidance-attorney-facts';
+import {
+  guidanceRosterTextBlocks,
+  normalizeGuidanceTextBlock,
+} from '@/lib/guidance-roster-text';
 import { listColumnSlugsFromFs } from './column-corpus';
 
 const DESKTOP = { width: 1440, height: 1000 } as const;
@@ -519,18 +530,47 @@ test.describe('O19 guidance asset parity with /en', () => {
 
         // Roster headings and labels are in the page language, not English.
         const copy = guidanceTeamCopy[locale];
-        await expect(roster).toContainText(copy.title);
+        // `/en/lawyers` renders the roster with `showIntro={false}` — the page
+        // header already names the team — and `/en/about` renders the eyebrow,
+        // heading and lede. The guidance pages follow the same split, so the
+        // roster heading is asserted where `/en` has one and the page `h1`
+        // carries the team name on `lawyers`.
+        if (pageKey === 'about') {
+          await expect(roster).toContainText(copy.title);
+          await expect(roster).toContainText(copy.description);
+        } else {
+          await expect(page.getByRole('heading', { level: 1 })).toHaveText(copy.title);
+        }
         await expect(roster).toContainText(copy.representativeTitle);
         await expect(roster).toContainText(copy.teamTitle);
         await expect(roster).toContainText(copy.partnerTitle);
         await expect(roster).toContainText(copy.introLabel);
         await expect(roster).toContainText(copy.educationLabel);
         await expect(roster).toContainText(copy.experienceLabel);
-        // The English-original biography lines are declared as such, in the
-        // page language, instead of being passed off as a translation.
-        await expect(roster.locator('[data-guidance-team-source-language="en"]')).toContainText(
-          copy.sourceLanguageNote,
-        );
+
+        // WO-O33 reversed this assertion. The roster used to render the
+        // English canonical biography lines and declare them as such through
+        // `sourceLanguageNote`; it now renders this locale's own translation,
+        // so the English original must be absent from the rendered text.
+        const rosterCopy = ((await roster.textContent()) ?? '').replace(/\s+/g, ' ');
+        for (const member of teamContent.en.members) {
+          if (!isGuidanceTeamMemberId(member.id)) continue;
+          for (const field of ['intro', 'education'] as const) {
+            for (const line of member[field]) {
+              expect(
+                rosterCopy.includes(line.replace(/\s+/g, ' ')),
+                `${locale}/${pageKey} still renders the English line: ${line}`,
+              ).toBe(false);
+            }
+          }
+          // …and the localized line for the same member is what is rendered.
+          for (const line of guidanceTeamBios[locale][member.id].intro) {
+            expect(
+              rosterCopy.includes(line.replace(/\s+/g, ' ')),
+              `${locale}/${pageKey} must render its own intro line: ${line}`,
+            ).toBe(true);
+          }
+        }
 
         // Names come from the canonical record unchanged.
         for (const member of teamContent.en.members) {
@@ -924,6 +964,387 @@ test.describe('O29 og:locale across the eight public locales', () => {
               ?.getAttribute('content') ?? null,
         );
         expect(value, `${locale}/${pageKey} og:locale`).toBe(EXPECTED_OG_LOCALE[locale]);
+      }
+    });
+  }
+});
+
+/**
+ * WO-O33 — `/lawyers` composition parity with `/en`.
+ *
+ * The three prose cards the guidance `lawyers` page used to carry were a
+ * duplicate of the English key-facts rows, a third copy of the consultation
+ * language notice, and a jurisdiction disclaimer that belongs on the
+ * disclaimer page. They pushed the roster two screens down and made the page
+ * body roughly twice the length of `/en`. This suite is the gate that keeps
+ * the two surfaces the same shape.
+ *
+ * Every expected value is READ FROM `/en` in the same run. Nothing below is a
+ * hard-coded count, a hard-coded block order, or a hard-coded name.
+ */
+test.describe('O33 /lawyers composition parity with /en', () => {
+  /**
+   * Role vocabulary. A block's role is its `data-page-block` attribute when it
+   * has one, otherwise the stable class name the shared components already
+   * carry. Reading the class is deliberate: `/en` is byte-frozen for this work
+   * order, so the four site locales are not given new attributes just to be
+   * measured. Both surfaces are resolved through this one map, so the English
+   * sequence is measured, not assumed.
+   */
+  const BLOCK_ROLE_BY_CLASS: ReadonlyArray<readonly [string, string]> = [
+    ['page-header', 'header'],
+    ['attorney-team-section', 'roster'],
+    ['attorney-facts-section', 'attorney-facts'],
+    ['home-contact-cta', 'contact-band'],
+  ];
+
+  /**
+   * Blocks a guidance page may add to the English sequence, and why:
+   *   - `answer-summary`: the answer-first paragraph all six answerable
+   *     guidance pages carry for generative engines. Capped at one paragraph.
+   *   - `contact-band`: the closing CTA band every guidance page ends with,
+   *     including the home page. `/en/lawyers` has no equivalent.
+   */
+  const ALLOWED_INSERTIONS = new Set(['answer-summary', 'contact-band']);
+
+  type PageShape = {
+    roles: string[];
+    headingCount: number;
+    articleHeadingCount: number;
+    textLength: number;
+    comparableTextLength: number;
+    insertedTextLength: number;
+    answerParagraphs: number;
+    firstBodySectionTeamImages: number;
+    rosterText: string;
+  };
+
+  async function readPageShape(page: Page, path: string): Promise<PageShape> {
+    await page.goto(path, { waitUntil: 'domcontentloaded' });
+    return page.evaluate(
+      ({ roleMap, insertions }) => {
+        const decoded = (value: string) => {
+          try {
+            return decodeURIComponent(value);
+          } catch {
+            return value;
+          }
+        };
+        const main = document.querySelector('main#main');
+        if (!main) throw new Error('page has no <main id="main"> landmark');
+
+        const sections = Array.from(main.querySelectorAll('section')).filter(
+          (section) => !section.closest('nav'),
+        );
+        const roleOf = (section: Element): string => {
+          const explicit = section.getAttribute('data-page-block');
+          if (explicit) return explicit;
+          for (const [className, role] of roleMap) {
+            if (section.classList.contains(className)) return role;
+          }
+          return `unknown:${section.className}`;
+        };
+        const roles = sections.map(roleOf);
+
+        // K2: the first block that is neither the header nor an allowed
+        // answer paragraph must be the one carrying the portraits.
+        const firstBody = sections.find((section) => {
+          const role = roleOf(section);
+          return role !== 'header' && insertions.includes(role) === false;
+        });
+        const teamImages = firstBody
+          ? Array.from(firstBody.querySelectorAll('img')).filter((img) =>
+              decoded(img.getAttribute('src') ?? '').includes('/images/team/'),
+            ).length
+          : 0;
+
+        const headings = Array.from(main.querySelectorAll('h1,h2,h3')).filter(
+          (node) => !node.closest('nav'),
+        );
+        // The guidance pages wrap their own copy in one <article>; `/en` has no
+        // such wrapper, so its whole <main> is the equivalent region. The
+        // closing contact band sits outside the article in both readings.
+        const article = main.querySelector('article[data-guidance-article="true"]');
+        const articleHeadings = Array.from(
+          (article ?? main).querySelectorAll('h1,h2,h3'),
+        ).filter((node) => !node.closest('nav'));
+
+        const blockText = (node: Element) =>
+          ((node as HTMLElement).innerText || '').replace(/\s+/g, ' ').trim().length;
+        // K3 compares like with like: the blocks that have an English
+        // counterpart. The two allowed insertions are measured separately and
+        // capped, so they cannot grow into a second page body unnoticed.
+        const comparableTextLength = sections
+          .filter((section) => !insertions.includes(roleOf(section)))
+          .reduce((total, section) => total + blockText(section), 0);
+        const insertedTextLength = sections
+          .filter((section) => insertions.includes(roleOf(section)))
+          .reduce((total, section) => total + blockText(section), 0);
+
+        const answerBlock = main.querySelector('[data-page-block="answer-summary"]');
+        const answerParagraphs = answerBlock ? answerBlock.querySelectorAll('p').length : 0;
+
+        const rosterNodes = Array.from(
+          main.querySelectorAll('.attorney-team-section, .attorney-facts-section'),
+        );
+
+        return {
+          roles,
+          headingCount: headings.length,
+          articleHeadingCount: articleHeadings.length,
+          textLength: ((main as HTMLElement).innerText || '').replace(/\s+/g, ' ').trim().length,
+          comparableTextLength,
+          insertedTextLength,
+          answerParagraphs,
+          firstBodySectionTeamImages: teamImages,
+          rosterText: rosterNodes
+            .map((node) => (node as HTMLElement).innerText || '')
+            .join('\n\n'),
+        };
+      },
+      { roleMap: BLOCK_ROLE_BY_CLASS, insertions: [...ALLOWED_INSERTIONS] },
+    );
+  }
+
+  /** Leaf text blocks, the rendered equivalent of the checker's markdown blocks. */
+  function textBlocks(text: string): string[] {
+    return text
+      .split('\n')
+      .map((line) => line.trim())
+      .filter(Boolean);
+  }
+
+  /**
+   * K6 token universe: the values that must survive translation unchanged.
+   * Emails and years are found by pattern; the institution and firm names come
+   * from `GUIDANCE_BIO_PRESERVED_TERMS`, which the unit gate asserts is a
+   * subset of `teamContent.en` — so no name here is invented either.
+   */
+  function factTokens(text: string): string[] {
+    const flat = text.replace(/\s+/g, ' ');
+    const emails = flat.match(/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/gu) ?? [];
+    const years = flat.match(/\b(?:19|20)\d{2}\b/gu) ?? [];
+    const names = GUIDANCE_BIO_PRESERVED_TERMS.filter((term) => flat.includes(term));
+    return Array.from(new Set([...emails, ...years, ...names])).sort();
+  }
+
+  for (const locale of GUIDANCE_LOCALES_4) {
+    test(`${locale} /lawyers K1 block sequence equals /en plus allowed insertions`, async ({
+      page,
+    }) => {
+      await page.setViewportSize(DESKTOP);
+      const en = await readPageShape(page, '/en/lawyers');
+      const actual = await readPageShape(page, guidancePublicPath(locale, 'lawyers'));
+
+      expect(en.roles.filter((role) => role.startsWith('unknown:')), '/en block roles').toEqual([]);
+      expect(
+        actual.roles.filter((role) => role.startsWith('unknown:')),
+        `${locale} block roles`,
+      ).toEqual([]);
+      expect(en.roles.length, '/en/lawyers must publish blocks to compare against')
+        .toBeGreaterThan(0);
+
+      // Sequence, not set and not count: the defect the previous gate missed
+      // was that the roster came after two screens of prose.
+      expect(
+        actual.roles.filter((role) => !ALLOWED_INSERTIONS.has(role)),
+        `${locale}/lawyers block sequence (en=${en.roles.join(' > ')}, actual=${actual.roles.join(' > ')})`,
+      ).toEqual(en.roles);
+
+      // The answer block is one paragraph, never a second body of copy.
+      expect(actual.answerParagraphs, `${locale}/lawyers answer paragraphs`).toBeLessThanOrEqual(1);
+    });
+
+    test(`${locale} /lawyers K2 first body block carries the portraits`, async ({ page }) => {
+      await page.setViewportSize(DESKTOP);
+      const en = await readPageShape(page, '/en/lawyers');
+      const actual = await readPageShape(page, guidancePublicPath(locale, 'lawyers'));
+      expect(en.firstBodySectionTeamImages, '/en first body block portraits').toBeGreaterThan(0);
+      expect(
+        actual.firstBodySectionTeamImages,
+        `${locale}/lawyers first body block portraits`,
+      ).toBe(en.firstBodySectionTeamImages);
+    });
+
+    /**
+     * K3. The blocks that have an English counterpart — everything except the
+     * two insertions K1 allows — must stay within 0.7-1.4x of `/en`. That is
+     * the measurement the defect was about: the guidance body was roughly
+     * twice `/en` because of three prose cards, and it is now 1.15-1.30x,
+     * which is ordinary Vietnamese / Indonesian / Thai / Filipino expansion
+     * over English rather than extra content.
+     *
+     * `/en/lawyers` has no answer paragraph and no contact band at all, so
+     * including them would compare a page against a page that does not exist
+     * and would fail for a reason unrelated to the defect. They are bounded
+     * instead: together they may never be more than 40% of the page's own
+     * body, so neither can quietly become a second body of copy.
+     */
+    test(`${locale} /lawyers K3 body length stays within 0.7-1.4x of /en`, async ({ page }) => {
+      await page.setViewportSize(DESKTOP);
+      const en = await readPageShape(page, '/en/lawyers');
+      const actual = await readPageShape(page, guidancePublicPath(locale, 'lawyers'));
+      expect(en.insertedTextLength, '/en/lawyers has no insertable block').toBe(0);
+
+      const ratio = actual.comparableTextLength / en.comparableTextLength;
+      const detail = `${locale}/lawyers comparable text ${actual.comparableTextLength} vs /en ${en.comparableTextLength}`
+        + ` (ratio ${ratio.toFixed(3)}; whole main ${actual.textLength} vs ${en.textLength})`;
+      expect(ratio, detail).toBeGreaterThanOrEqual(0.7);
+      expect(ratio, detail).toBeLessThanOrEqual(1.4);
+
+      const insertedShare = actual.insertedTextLength / actual.textLength;
+      expect(
+        insertedShare,
+        `${locale}/lawyers answer + contact band are ${(insertedShare * 100).toFixed(1)}% of the page body`,
+      ).toBeLessThanOrEqual(0.4);
+    });
+
+    /**
+     * K4. Two halves, and both are needed.
+     *
+     * The column checker's `english` and `forbidden` rules are pure functions
+     * over strings, and the unit gate
+     * (`src/data/__tests__/guidance-team-bios.test.ts`) runs them over
+     * `guidanceRosterTextBlocks(locale)` — the exact list of blocks these two
+     * sections render. What a browser adds is proof that the page renders
+     * that list and nothing else: every rendered line must be a member of it,
+     * so a string cannot reach a reader without having passed the rules.
+     * Comparison is case-insensitive because CSS uppercases the field labels.
+     */
+    test(`${locale} /lawyers K4 roster and key facts are in the page language`, async ({
+      page,
+    }) => {
+      await page.setViewportSize(DESKTOP);
+      const en = await readPageShape(page, '/en/lawyers');
+      const actual = await readPageShape(page, guidancePublicPath(locale, 'lawyers'));
+      expect(en.rosterText.length, '/en roster text').toBeGreaterThan(0);
+      expect(actual.rosterText.length, `${locale} roster text`).toBeGreaterThan(0);
+
+      const vetted = new Set(
+        guidanceRosterTextBlocks(locale, { showIntro: false, includeFacts: true }).map(
+          normalizeGuidanceTextBlock,
+        ),
+      );
+      const rendered = textBlocks(actual.rosterText).map(normalizeGuidanceTextBlock);
+      expect(rendered.length, `${locale} rendered roster lines`).toBeGreaterThan(0);
+      expect(
+        rendered.filter((line) => !vetted.has(line)),
+        `${locale}/lawyers renders text the language gate never checked`,
+      ).toEqual([]);
+
+      // The English canonical biography lines must be gone from the page.
+      for (const member of teamContent.en.members) {
+        if (!isGuidanceTeamMemberId(member.id)) continue;
+        for (const field of ['intro', 'education'] as const) {
+          for (const line of member[field]) {
+            expect(
+              actual.rosterText.replace(/\s+/g, ' ').includes(line.replace(/\s+/g, ' ')),
+              `${locale}/lawyers still renders the English line: ${line}`,
+            ).toBe(false);
+          }
+        }
+      }
+
+      // Allowances: the institution and firm names the canonical record
+      // publishes, e-mail addresses, and the "(English)" label on the English
+      // profile link are the only Latin runs the page may carry.
+      expect(/[가-힣]/u.test(actual.rosterText), `${locale} roster must contain no Hangul`).toBe(
+        false,
+      );
+      // Han is allowed only where `/en` renders it (today: nowhere) or where
+      // this locale's own published consultation notice already carries it —
+      // the Indonesian notice writes "bahasa Tionghoa (中文)" because that is
+      // how an Indonesian reader is told which Chinese is meant. A Han
+      // character from anywhere else would mean a biography drifted.
+      const allowedHan = new Set([
+        ...(en.rosterText.match(/\p{Script=Han}/gu) ?? []),
+        ...(internationalInquiryCopy[locale].consultationNotice.match(/\p{Script=Han}/gu) ?? []),
+      ]);
+      const actualHan = Array.from(new Set(actual.rosterText.match(/\p{Script=Han}/gu) ?? []))
+        .sort();
+      expect(
+        actualHan.filter((character) => !allowedHan.has(character)),
+        `${locale} roster Han characters (allowed=${[...allowedHan].join('')})`,
+      ).toEqual([]);
+    });
+
+    test(`${locale} /lawyers K5 heading count equals /en`, async ({ page }) => {
+      await page.setViewportSize(DESKTOP);
+      const en = await readPageShape(page, '/en/lawyers');
+      const actual = await readPageShape(page, guidancePublicPath(locale, 'lawyers'));
+      expect(en.articleHeadingCount, '/en heading count').toBeGreaterThan(0);
+      expect(actual.articleHeadingCount, `${locale}/lawyers h1-h3 count`).toBe(
+        en.articleHeadingCount,
+      );
+    });
+
+    test(`${locale} /lawyers K6 renders the same facts as /en`, async ({ page }) => {
+      await page.setViewportSize(DESKTOP);
+      const en = await readPageShape(page, '/en/lawyers');
+      const actual = await readPageShape(page, guidancePublicPath(locale, 'lawyers'));
+      const expected = factTokens(en.rosterText);
+      expect(expected.length, '/en must publish facts to compare against').toBeGreaterThan(0);
+      expect(factTokens(actual.rosterText), `${locale}/lawyers fact tokens`).toEqual(expected);
+
+      // The localized key-facts block states the same three rows `/en` does.
+      const facts = buildGuidanceAttorneyFacts(locale);
+      expect(facts, `${locale} key facts`).toBeTruthy();
+      const factsBlock = page.locator('[data-guidance-attorney-facts="true"]');
+      await expect(factsBlock).toHaveCount(1);
+      await expect(factsBlock).toContainText(facts?.heading ?? '');
+      await expect(factsBlock).toContainText(facts?.qualification ?? '');
+      for (const area of facts?.practiceAreas ?? []) {
+        await expect(factsBlock).toContainText(area);
+      }
+      for (const language of facts?.languages ?? []) {
+        await expect(factsBlock).toContainText(language);
+      }
+    });
+  }
+
+  /**
+   * K7. The same shape across the four guidance languages, on all ten
+   * published pages — not just `lawyers`. A page that gains a block or a
+   * heading in one language only is the defect this catches.
+   */
+  const ALL_GUIDANCE_PAGES: readonly GuidancePageKey[] = [
+    'home',
+    'services',
+    'about',
+    'lawyers',
+    'pricing',
+    'contact',
+    'faq',
+    'privacy',
+    'disclaimer',
+    'columns',
+  ];
+
+  for (const pageKey of ALL_GUIDANCE_PAGES) {
+    test(`K7 /${pageKey} has the same shape in vi, id, th and fil`, async ({ page }) => {
+      await page.setViewportSize(DESKTOP);
+      const shapes: Array<{ locale: GuidanceLocale4; shape: PageShape; sections: number }> = [];
+      for (const locale of GUIDANCE_LOCALES_4) {
+        shapes.push({
+          locale,
+          shape: await readPageShape(page, guidancePublicPath(locale, pageKey)),
+          sections: guidanceContent[locale].pages[pageKey].sections.length,
+        });
+      }
+      const [first, ...rest] = shapes;
+      for (const entry of rest) {
+        expect(
+          entry.shape.roles,
+          `/${pageKey} block sequence ${entry.locale} vs ${first.locale}`,
+        ).toEqual(first.shape.roles);
+        expect(
+          entry.shape.articleHeadingCount,
+          `/${pageKey} heading count ${entry.locale} vs ${first.locale}`,
+        ).toBe(first.shape.articleHeadingCount);
+        expect(
+          entry.sections,
+          `/${pageKey} sections ${entry.locale} vs ${first.locale}`,
+        ).toBe(first.sections);
       }
     });
   }

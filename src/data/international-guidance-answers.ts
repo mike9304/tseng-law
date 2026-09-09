@@ -53,7 +53,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Yêu cầu gửi từ nước ngoài do văn phòng tiếp nhận và xem xét, không tự động chuyển cho một luật sư nhất định. Luật sư Wei Tseng (曾雋崴) hành nghề tại Đài Loan, gia nhập văn phòng năm 2024, làm việc với khách hàng Hàn Quốc và Nhật Bản. Việc tư vấn tại văn phòng được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.',
+        'Yêu cầu gửi từ nước ngoài do văn phòng tiếp nhận và xem xét, không tự động chuyển cho một luật sư nhất định. Luật sư Wei Tseng (曾雋崴) có tư cách hành nghề tại Đài Loan và là luật sư điều hành của văn phòng, làm việc với khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế. Việc tư vấn được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.',
       sources: ['/vi/about', '/vi/contact'],
     },
     pricing: {
@@ -85,7 +85,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Permintaan dari luar negeri diterima dan ditinjau oleh kantor, tanpa penugasan otomatis kepada advokat tertentu. Wei Tseng (曾雋崴) adalah advokat berizin praktik di Taiwan yang bergabung dengan Hovering International Law Firm pada 2024 dan bekerja untuk klien dari Korea dan Jepang. Konsultasi di kantor dilayani dalam empat bahasa: bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea, dan itu adalah lingkup kantor secara keseluruhan.',
+        'Permintaan dari luar negeri diterima dan ditinjau oleh kantor, tanpa penugasan otomatis kepada advokat tertentu. Wei Tseng (曾雋崴) adalah advokat berizin praktik di Taiwan dan advokat pengelola di Hovering International Law Firm, yang bekerja untuk klien dari Korea, Jepang, dan klien internasional lainnya. Konsultasi di kantor dilayani dalam empat bahasa: bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea, dan itu adalah lingkup kantor secara keseluruhan.',
       sources: ['/id/about', '/id/contact'],
     },
     pricing: {
@@ -117,7 +117,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'เรื่องที่ติดต่อเข้ามาจากต่างประเทศ สำนักงานเป็นผู้รับเรื่องและตรวจสอบ ไม่มีการมอบหมายให้ทนายความคนใดคนหนึ่งโดยอัตโนมัติ Wei Tseng (曾雋崴) เป็นทนายความที่มีคุณสมบัติประกอบวิชาชีพในไต้หวัน เข้าร่วมสำนักงานอย่างเป็นทางการในปี 2024 และทำงานให้แก่ลูกความชาวเกาหลีและชาวญี่ปุ่น การให้คำปรึกษาของสำนักงานดำเนินการใน 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี',
+        'เรื่องที่ติดต่อเข้ามาจากต่างประเทศ สำนักงานเป็นผู้รับเรื่องและตรวจสอบ ไม่มีการมอบหมายให้ทนายความคนใดคนหนึ่งโดยอัตโนมัติ Wei Tseng (曾雋崴) เป็นทนายความที่มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และเป็นทนายความผู้บริหารของสำนักงาน ทำงานให้แก่ลูกความชาวเกาหลี ชาวญี่ปุ่น และลูกความต่างชาติรายอื่น การให้คำปรึกษาของสำนักงานดำเนินการใน 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี',
       sources: ['/th/about', '/th/contact'],
     },
     pricing: {
@@ -149,7 +149,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Ang tanggapan ang tumatanggap at sumusuri sa mga usaping mula sa ibang bansa, at walang awtomatikong pagkakatalaga sa isang tiyak na abogado. Si Wei Tseng (曾雋崴) ay abogadong kwalipikadong magpraktis sa Taiwan na sumali sa tanggapan noong 2024 at gumagawa para sa mga kliyenteng Koreano at Hapon. Isinasagawa ang konsultasyon sa tanggapan sa apat na wika: Ingles, Tsino, Hapon, at Koreano. Saklaw ito ng buong tanggapan, hindi ng isang tiyak na abogado.',
+        'Ang tanggapan ang tumatanggap at sumusuri sa mga usaping mula sa ibang bansa, at walang awtomatikong pagkakatalaga sa isang tiyak na abogado. Si Wei Tseng (曾雋崴) ay abogadong kwalipikadong magpraktis sa Taiwan at ang namamahalang abogado ng tanggapan, na gumagawa para sa mga kliyenteng Koreano, Hapon, at iba pang dayuhang kliyente. Isinasagawa ang konsultasyon sa tanggapan sa apat na wika: Ingles, Tsino, Hapon, at Koreano. Saklaw ito ng buong tanggapan, hindi ng isang tiyak na abogado.',
       sources: ['/fil/about', '/fil/contact'],
     },
     pricing: {

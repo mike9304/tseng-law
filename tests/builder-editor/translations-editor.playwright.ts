@@ -2,6 +2,7 @@ import { expect, test, type APIRequestContext } from '@playwright/test';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { getTranslationCopy } from '@/components/builder/translations/translation-copy';
+import { ensureAuthoredLocaleHome } from './helpers/translations-rich-text';
 
 const SITE_ID = 'default';
 const LOCALE = 'ko';
@@ -178,6 +179,7 @@ async function createBuilderPage(
   document: BuilderCanvasDocument,
   scope: string,
 ): Promise<string> {
+  await ensureAuthoredLocaleHome(request, locale);
   const response = await request.post('/api/builder/site/pages', {
     headers: mutationHeaders(scope),
     data: { locale, slug, title, document },

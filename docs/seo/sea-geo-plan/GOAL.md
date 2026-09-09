@@ -9,22 +9,22 @@
 
 ### S0 베이스라인
 - [x] 2026-09-09 S0-a 워크트리 생성 (6022bdcc, seo/sea-geo-20260909)
-- [~] S0-b 손빗 GSC 베이스라인: ASK-20260909-1124 사용자 승인(전부), 손빗 작성 중 → 파일 `~/Projects/tseng-law/docs/seo/FROM-GROK-BOT-SEA-2026-09.md`(main 작업트리) 생기면 `cp`로 워크트리 `docs/seo/`에 복사 → 커밋 → [x]
+- [x] 2026-09-09 S0-b 손빗 GSC 실측 → docs/seo/FROM-GROK-BOT-SEA-2026-09.md 커밋 b0a1b8e9 (6국 노출30·클릭2, 생성형AI 34/0, 4로케일 40URL 미등록)
 - [x] 2026-09-09 S0-c 방문 리포트 → evidence/visit-28d.md (실데이터 9/1~9/7만: 세션 58, SEA=SG 2·VN 1, AI 경유 1(chatgpt→/ko), GSC CSV 미병합)
 - [x] 2026-09-09 S0-d AI 인용 문항 세트 31행 → docs/seo/geo-sea-baseline-2026-09.md 커밋 05363645 (미결: 엔진 로그인 여부·원어민 검수)
 - [~] S0-e AI 인용 1차 실측: 워커 0건(6엔진 403, 551d2815) → 11:37 손빗 ASK → 11:4x 보류 → **11:5x 사용자 정정=완료(전부)**. 손빗이 GSC 문서 후 Perplexity+Google(+ChatGPT/Gemini)로 31문항 실측, 이 워크트리의 docs/seo/geo-sea-baseline-2026-09.md 에 직접 기록 예정. **그 파일은 손빗이 쓰는 동안 총괄이 건드리지 않는다.** 도착 후 diff 확인→커밋→[x]
-- [ ] S0-f 베이스라인 요약을 `docs/seo/metrics-log.md`에 1행 추가 + §C 목표수치 확정(S0-b 파일 도착 후. 목표수치는 ASK로 사용자 확인 1회)
+- [x] 2026-09-09 S0-f metrics-log SEA 베이스라인 행 추가(b0a1b8e9). §C 베이스라인 기입. 12주 목표치는 색인 완료 후 W2에 정함(색인 0 상태에서 목표 수치 무의미)
 
 ### S1 인텐트 지도
 - [x] 2026-09-09 S1-a 42셀·H9/M19/L14·후보 C1~C5 → docs/seo/sea-intent-map-2026-09.md 커밋 3077b6ae (미결: MY/SG ①⑤ 근거 미확인, C2~C5는 guidance 코어 키 확장 필요 §3.1)
-- [~] 11:53 S1-b Grok 검토 진행 중(evidence/grok-S1-review.log). 원 항목: WO-S1-review (Grok) → `.REVIEW.md` FAIL 0 (FAIL 있으면 WO-S1-R1 반려)
+- [~] S1-b Grok 검토 완료 → 총평 FAIL 5(docs/seo/sea-intent-map-2026-09.REVIEW.md, 716002c7) → WO-S1-R1 Opus 수정 중(12:0x). 재검토 후 [x] → `.REVIEW.md` FAIL 0 (FAIL 있으면 WO-S1-R1 반려)
 - [ ] S1-c 총괄 판정: "없음+H" 셀 확정 → `WO-S3-<slug>.txt` 생성(페이지당 1개)
 
 ### S2 GEO 구조 (S2a ∥ S2b 병렬 가능)
-- [~] 11:55 S2a-1 Opus 진행 중. 원 항목: WO-S2a 답변형 블록 → diff·vitest
-- [ ] S2a-2 WO-S2a-review (Grok) → REVIEW FAIL 0
-- [ ] S2a-3 총괄 게이트 ①~⑦ → 커밋 SHA
-- [ ] S2b-1 WO-S2b (Opus) llms.txt 4로케일 + FAQPage JSON-LD + @id 참조 → diff·vitest
+- [x] 2026-09-09 S2a-1 Opus 구현 → vitest 7/7
+- [~] 12:07 S2a-2 Grok 검토 중(evidence/grok-S2a-review.log)
+- [x] 2026-09-09 S2a-3 게이트(typecheck·vitest 75·build·렌더 8URL evidence/render-S2a.txt·계약 grep) → 커밋 1d5577ca (Grok 검토 FAIL 시 R1 후속 커밋)
+- [~] 12:08 S2b-1 Opus 진행 중
 - [ ] S2b-2 WO-S2b-review (Grok) → availableLanguage 위반 0, JSON-LD 파싱 0오류
 - [ ] S2b-3 총괄 게이트 → 커밋 SHA
 
@@ -34,7 +34,7 @@
 ### S4 색인
 - [ ] S4-a 로컬 실측: RUNBOOK §3 ⑤ 렌더 40 URL → evidence/s4-local-render.txt
 - [ ] S4-b 배포 후(사용자 승인 시) `live-seo-scan` + `verify:multilingual-live` → evidence/s4-live-*.log
-- [ ] S4-c IndexNow(변경 URL, `--dry-run` 먼저) + 손빗 GSC 색인요청 ASK
+- [~] 12:09 S4-c **앞당김**: ASK-20260909-1209-sea-seo-indexing(sitemap 재제출+Request Indexing 16URL+IndexNow 40URL) 답 대기. 승인 시 IndexNow는 총괄이 `--dry-run` 후 실행, GSC는 손빗
 - [ ] S4-d 2주 뒤 색인 재확인(손빗)
 
 ### S5 권위
@@ -50,20 +50,20 @@
 - [ ] `git log origin/main..HEAD` 정리 → `RELEASE-CHECK.md` → ASK 배포 승인 → 승인 시 RUNBOOK §4-b
 
 ## B. 미결·ASK 대기 (승계자는 여기부터)
-- S0-b: 손빗 GSC 작성 중(11:3x). 파일은 main 작업트리에 생김.
+- S4-c 색인 ASK 답 대기(12:09).
 - S0-e: 손빗 AI 인용 실측 예정(S0-b 직후). geo-sea-baseline-2026-09.md 는 손빗 소유 중 — 쓰기 금지.
 - S1-b: Grok 검토 중. S1-c 판정 시 주의: C2~C5(/vi|id|th|fil/work-permit)는 international-guidance-content.ts(번역 레인 파일)에 본문이 필요 → 하드룰 4 충돌. 대안=별도 데이터 파일+코어 키 확장, 또는 번역 레인 요청. C1(EN 랜딩)은 intent-pages.ts 4로케일 동시 작성 필요.
-- S2a-1: Opus 진행 중. S2b는 S2a 커밋 후 발주(InternationalGuidance.tsx 겹침).
+- S1-R1 Opus·S2a-review Grok·S2b Opus 병렬 진행 중(12:08). node_modules는 12:05 npm ci 재설치 완료.
 - S5-c: 발송 승인 ASK 미발송(S0-b 정리 후).
 - Documents 폴더 TCC 차단(11:4x~): 구 정본 접근 불가. 이 폴더가 정본.
 
 ## C. 목표 수치 (S0-f 후 기입)
 | 지표 | 베이스라인(날짜) | 12주 목표 | 출처 |
 |---|---|---|---|
-| GSC SEA 6국 노출/28일 | | | FROM-GROK-BOT-SEA |
-| GSC SEA 6국 클릭/28일 | | | |
-| GSC 생성형AI 노출/28일 | | | |
-| 4로케일 URL 색인율 | | | |
+| GSC SEA 6국 노출/28일 | 30 (2026-09-09) | W2에 확정 | FROM-GROK-BOT-SEA |
+| GSC SEA 6국 클릭/28일 | 2 (SG, zh-hant 가이드) | | |
+| GSC 생성형AI 노출/28일 | 34 / 클릭 0 | | |
+| 4로케일 URL 색인율 | 0/14 검사(26 미확인) | | |
 | 방문 SEA 세션 · AI 채널 세션 (28일) | 9/1~9/7: SEA 3(SG2·VN1) · AI 1 | | visit-28d |
 
 ## D. 세션 로그

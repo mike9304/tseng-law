@@ -1,13 +1,13 @@
 # GEO 동남아 인용 베이스라인 — 2026-09 (S0d)
 
 작성: 2026-09-09 · 워크오더 WO-S0d · 작업트리 `tseng-law-sea-seo-20260909`
-목적: 동남아 사용자가 대만 법률 문제를 생성형 AI에 물을 때 `tseng-law.com`이 인용되는지를 **분모부터 고정**한다. 이 문서는 채점표이며, 결과 칸은 실측 전까지 전부 비어 있다.
+목적: 동남아 사용자가 대만 법률 문제를 생성형 AI에 물을 때 `tseng-law.com`이 인용되는지를 **분모부터 고정**한다. 이 문서는 채점표다. 2026-09-09 WO-S0e 1차 실측 시도 결과 **6엔진 전부 접근 차단으로 미실측** — 결과 칸은 채워졌으나 인용 관측은 여전히 0건이다(§2.5·§6).
 재실측 예정일: **2026-12-02**(작성일 +12주). 같은 문항·같은 판정 기준으로 1회 더 돌린다.
 
 ## 0. 이 문서가 주장하지 않는 것
 
 - 검색량·트래픽·점유율·ROI 수치는 **한 건도 적지 않는다**(WO 금지 항목). 이 문서에 숫자가 없는 것은 누락이 아니라 규칙이다.
-- 인용 결과는 **미리 채우지 않는다**. `인용 여부` / `인용 순위·문맥` / `테스트일` 칸이 비어 있는 것이 정상 상태다.
+- 인용 결과는 **미리 채우지 않는다**. `인용 여부` / `인용 순위·문맥` / `테스트일` 칸에는 실제로 관측한 값 또는 `미실측(사유)` 만 들어간다. (2026-09-09 WO-S0e 시도 결과 31행 전부 `미실측` — 추정으로 채운 값이 아니다. §2.5 참조.)
 - 엔진 접근 조건(로그인·지역 제한 등)은 2026-09-09 시점 **미검증**이다. §2 표의 해당 칸은 실측 1회차에 실제로 확인한 뒤 갱신한다.
 
 ## 1. 언어 계약 (이 문서 전체에 적용)
@@ -23,12 +23,12 @@
 
 | 코드 | 엔진 | 접근 경로 | 로그인 필요 여부 | 비고 |
 |---|---|---|---|---|
-| CG | ChatGPT | chatgpt.com 웹 | **확인 필요**(실측 1회차에 기록) | 웹 검색 도구 사용 여부를 응답마다 기록 |
-| GM | Gemini | gemini.google.com 웹 | **확인 필요** | 응답에 붙는 출처 카드까지 기록 |
-| PP | Perplexity | perplexity.ai 웹 | **확인 필요** | 출처 목록이 명시되므로 순위 기록이 가장 쉬움 |
-| CL | Claude | claude.ai 웹 | **확인 필요** | 웹 검색이 꺼진 상태면 그 사실을 함께 기록 |
-| GR | Grok | grok.com 또는 X 내 Grok | **확인 필요** | 접근 불가 시 "미실측(접근 불가)" |
-| AIO | Google AI Overviews / AI Mode | google.com 검색 결과 상단 | 로그인 없이 관측 가능한 범위만 | **발동 자체가 조건부** — 미발동이면 "미실측(AIO 미발동)" |
+| CG | ChatGPT | chatgpt.com 웹 | **여전히 확인 필요** — 2026-09-09 HTTP 403(비브라우저 차단), 사람 브라우저 기준 미검증 | 웹 검색 도구 사용 여부를 응답마다 기록 |
+| GM | Gemini | gemini.google.com 웹 | **여전히 확인 필요** — 2026-09-09 응답 헤더 오버플로/JS 셸, 구글 로그인 필요 추정(미검증) | 응답에 붙는 출처 카드까지 기록 |
+| PP | Perplexity | perplexity.ai 웹 | **여전히 확인 필요** — 2026-09-09 HTTP 403(비브라우저 차단), 사람 브라우저 기준 미검증 | 출처 목록이 명시되므로 순위 기록이 가장 쉬움 |
+| CL | Claude | claude.ai 웹 | **여전히 확인 필요** — 2026-09-09 HTTP 403, 익명 새 대화 불가 | 웹 검색이 꺼진 상태면 그 사실을 함께 기록 |
+| GR | Grok | grok.com 또는 X 내 Grok | **여전히 확인 필요** — 2026-09-09 HTTP 403(비브라우저 차단) | 접근 불가 시 "미실측(접근 불가)" |
+| AIO | Google AI Overviews / AI Mode | google.com 검색 결과 상단 | 2026-09-09 SERP 자체가 오류 페이지로 반환되어 AIO 발동 여부조차 관측 불가 | **발동 자체가 조건부** — 미발동이면 "미실측(AIO 미발동)" |
 
 ### 2.2 실행 규칙
 
@@ -50,43 +50,69 @@
 
 `인용 여부` 칸에는 엔진별로 `CG=Y GM=N PP=Y CL=N GR=미실측(접근 불가) AIO=미실측(AIO 미발동)` 형태로 6개 값을 모두 적는다. 하나라도 빠지면 그 행은 미완으로 본다.
 
+### 2.5 1회차 실측 시도 로그 (2026-09-09 · WO-S0e)
+
+**결과: 6엔진 전부 미실측. 판정 가능 관측 0건.** 아래는 추정이 아니라 실제로 실행한 요청과 서버 응답이다.
+
+| 엔진 | 시도한 접근 | 서버 응답(실측) | 판정 |
+|---|---|---|---|
+| PP | `WebFetch https://www.perplexity.ai/search?q=…`(S0-01 영어 변형) | HTTP 403 Forbidden, 본문 미취득 | 미실측(접근 차단) |
+| AIO | `WebFetch https://www.google.com/search?q=…`(S0-01 영어 변형) | 검색 결과가 아닌 한국어 오류/접근 안내 페이지. AI Overview 블록 없음 | 미실측(SERP 접근 차단 — AIO 미발동과 구분됨) |
+| CG | `WebFetch https://chatgpt.com/?q=…` | HTTP 403 Forbidden | 미실측(접근 차단) |
+| GM | `WebFetch https://gemini.google.com/app` | Parse Error: Header overflow(JS 셸/로그인 리디렉션) | 미실측(접근 차단) |
+| GR | `WebFetch https://grok.com/` | HTTP 403 Forbidden | 미실측(접근 차단) |
+| CL | `WebFetch https://claude.ai/new` | HTTP 403 Forbidden. 익명 새 대화 개설 불가 | 미실측(로그인 필요) |
+
+도구 환경 확인(실측):
+
+- 브라우저 자동화 도구(`claude-in-chrome` MCP)는 이 세션에 **연결되어 있지 않다.** 도구 검색 2회(`claude-in-chrome`, 개별 툴명 지정) 모두 0건.
+- `computer-use` MCP는 있으나 브라우저는 **read 티어**로 클릭·타이핑이 차단된다. 즉 크롬 창을 볼 수는 있어도 질문을 입력할 수 없다.
+- 따라서 §2.2 규칙 1("문항 1개 = 엔진 1개 = 새 대화 1회")을 만족하는 실행 경로가 이 세션에 **존재하지 않았다.**
+
+이 로그가 주장하지 않는 것:
+
+- 위 403은 **비브라우저 HTTP 클라이언트에 대한 차단**이다. 사람이 실제 브라우저에서 해당 엔진을 로그인 없이 쓸 수 있는지 여부는 **여전히 미검증**이다. §2.1의 `로그인 필요 여부` 칸을 "로그인 필요"로 확정하지 않은 이유가 이것이다.
+- 엔진이 tseng-law.com을 인용하지 않았다는 뜻이 **아니다.** 인용 여부는 관측되지 않았고, 미인용(N)이 아니라 미실측이다.
+
+재시도 조건: 크롬 확장(claude-in-chrome) 연결 또는 사람이 직접 브라우저에서 §3 표의 질문을 그대로 입력. 재시도 시 이 표의 `시도한 접근` 열에 회차를 덧붙이고 §3 표를 갱신한다.
+
 ## 3. 문항 세트 (31행 · 5언어 × 6주제)
 
 엔진 코드: **CG**=ChatGPT · **GM**=Gemini · **PP**=Perplexity · **CL**=Claude · **GR**=Grok · **AIO**=Google AI Overviews. 모든 행은 6엔진 전부를 대상으로 한다.
 
 | id | 언어 | 국가 가정 | 주제 | 질문 현지어 | 질문 영어 변형 | 기대 타깃 URL | 엔진 | 인용 여부 | 인용 순위·문맥 | 테스트일 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| S0-01 | en | SG | 회사설립·투자 | How do I set up a Taiwan subsidiary from Singapore, and do I need a local lawyer? | Setting up a Taiwan subsidiary as a Singapore company — is a Taiwanese lawyer required? | https://tseng-law.com/en/taiwan-company-setup-lawyer | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-02 | en | MY | 취업·거류비자 | If my company opens a Taiwan branch, does that automatically get me a work permit? | Does registering a Taiwan branch give the founder a work permit and residence status? | https://tseng-law.com/en/columns/taiwan-company-establishment-basics | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-03 | en | PH | 이주노동자 권리 | I am a Filipino worker in Taiwan and my employer terminated me — am I entitled to severance? | Severance pay rules in Taiwan for a foreign employee dismissed by the employer | https://tseng-law.com/en/columns/taiwan-labor-severance-law | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-04 | en | SG | 국제결혼·가족·상속 | My father died in Taiwan and I live in Singapore — how does Taiwanese inheritance work for foreign heirs? | Taiwan inheritance procedure when the heirs live outside Taiwan | https://tseng-law.com/en/columns/taiwan-inheritance-custody-analysis | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-05 | en | MY | 계약·미수금 | A Taiwanese supplier will not pay our invoice — can we sue them in Taiwan from Malaysia? | Suing a Taiwanese company for unpaid invoices as an overseas creditor | https://tseng-law.com/en/taiwan-litigation-lawyer | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-06 | en | PH | 형사·사고 | I was in a scooter accident in Taiwan and received a police summons — what happens next? | Taiwan traffic accident procedure for a foreigner who received a police summons | https://tseng-law.com/en/columns/taiwan-traffic-accident-procedure | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-07 | en | SG | 취업·거류비자 | Is there an English-speaking lawyer in Taiwan who handles expat employment problems? | English-speaking law firm in Taiwan for expatriate employment matters | https://tseng-law.com/en/taiwan-lawyer | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-08 | vi | VN | 회사설립·투자 | Người Việt muốn mở công ty ở Đài Loan cần luật sư không? | Does a Vietnamese founder need a lawyer to open a company in Taiwan? | https://tseng-law.com/vi/services | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-09 | vi | VN | 취업·거류비자 | Trước khi hỏi luật sư Đài Loan về giấy tờ cư trú và giấy phép lao động thì cần chuẩn bị gì? | What should I prepare before asking a Taiwanese lawyer about residence and work permit paperwork? | https://tseng-law.com/vi/faq | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-10 | vi | VN | 이주노동자 권리 | Lao động Việt ở Đài Loan bị nợ lương, thuê luật sư tốn khoảng bao nhiêu? | How is a lawyer's fee decided for a Vietnamese worker in Taiwan chasing unpaid wages? | https://tseng-law.com/vi/pricing | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-11 | vi | VN | 국제결혼·가족·상속 | Ly hôn với chồng người Đài Loan thì quyền nuôi con và chia tài sản thế nào? | Divorce from a Taiwanese spouse — how are custody and property division handled? | https://tseng-law.com/vi/services | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-12 | vi | VN | 계약·미수금 | Công ty Đài Loan không trả tiền hàng, liên hệ văn phòng luật sư ở Đài Loan kiểu gì? | A Taiwanese company will not pay for goods — how do I contact a law office in Taiwan? | https://tseng-law.com/vi/contact | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-13 | vi | VN | 형사·사고 | Bị tai nạn giao thông ở Đài Loan và nhận giấy triệu tập, luật sư nào bên đó nhận vụ hình sự? | Which lawyer in Taiwan takes criminal matters after a traffic accident summons? | https://tseng-law.com/vi/lawyers | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-14 | id | ID | 회사설립·투자 | Orang Indonesia mau buka perusahaan di Taiwan, perlu pengacara Taiwan nggak? | Does an Indonesian founder need a Taiwanese lawyer to open a company in Taiwan? | https://tseng-law.com/id/services | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-15 | id | ID | 취업·거류비자 | Sebelum tanya pengacara soal izin kerja dan izin tinggal di Taiwan, dokumen apa yang harus disiapkan? | What documents should I prepare before asking a lawyer about a Taiwan work and residence permit? | https://tseng-law.com/id/faq | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-16 | id | ID | 이주노동자 권리 | Pekerja migran Indonesia di Taiwan diberhentikan sepihak, pesangonnya gimana? | An Indonesian migrant worker in Taiwan was dismissed — what about severance? | https://tseng-law.com/id/services | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-17 | id | ID | 국제결혼·가족·상속 | Kantor hukum di Taiwan mana yang biasa menangani klien asing untuk perceraian dan waris? | Which law firm in Taiwan regularly handles divorce and inheritance for foreign clients? | https://tseng-law.com/id/about | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-18 | id | ID | 계약·미수금 | Nagih utang ke perusahaan Taiwan lewat pengacara, biayanya dihitung gimana? | How is the fee calculated when a lawyer pursues a debt against a Taiwanese company? | https://tseng-law.com/id/pricing | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-19 | id | ID | 형사·사고 | Saya kena kasus kecelakaan di Taiwan, gimana cara menghubungi pengacara di sana? | I am involved in an accident case in Taiwan — how do I reach a lawyer there? | https://tseng-law.com/id/contact | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-20 | th | TH | 회사설립·투자 | คนไทยจะไปเปิดบริษัทที่ไต้หวัน ต้องจ้างทนายไต้หวันไหม | Does a Thai founder have to hire a Taiwanese lawyer to open a company in Taiwan? | https://tseng-law.com/th/services | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-21 | th | TH | 취업·거류비자 | เปิดบริษัทที่ไต้หวันแล้วได้วีซ่าทำงานกับใบถิ่นที่อยู่เลยไหม | After registering a company in Taiwan, do I automatically get a work visa and residence permit? | https://tseng-law.com/th/services | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-22 | th | TH | 이주노동자 권리 | แรงงานไทยในไต้หวันโดนค้างค่าจ้าง จ้างทนายคิดค่าใช้จ่ายยังไง | A Thai worker in Taiwan has unpaid wages — how are lawyer's fees determined? | https://tseng-law.com/th/pricing | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-23 | th | TH | 국제결혼·가족·상속 | แต่งงานกับคนไต้หวันแล้วจะหย่า ลูกกับทรัพย์สินแบ่งยังไง | Divorcing a Taiwanese spouse — how are the children and the property dealt with? | https://tseng-law.com/th/services | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-24 | th | TH | 계약·미수금 | บริษัทไต้หวันไม่จ่ายค่าสินค้า จะติดต่อสำนักงานทนายที่ไต้หวันทางไหน | A Taiwanese company has not paid for goods — how do I contact a law office in Taiwan? | https://tseng-law.com/th/contact | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-25 | th | TH | 형사·사고 | โดนหมายเรียกจากตำรวจไต้หวันเรื่องอุบัติเหตุ ต้องเตรียมเอกสารอะไรก่อนคุยกับทนาย | I received a Taiwanese police summons about an accident — what should I prepare before talking to a lawyer? | https://tseng-law.com/th/faq | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-26 | fil | PH | 회사설립·투자 | Gusto kong magtayo ng kumpanya sa Taiwan, kailangan ko ba ng abogado doon? | I want to set up a company in Taiwan — do I need a lawyer there? | https://tseng-law.com/fil/services | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-27 | fil | PH | 취업·거류비자 | Bago ako magtanong sa abogado tungkol sa work permit at ARC sa Taiwan, ano ang ihahanda ko? | What do I prepare before asking a lawyer about a Taiwan work permit and ARC? | https://tseng-law.com/fil/faq | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-28 | fil | PH | 이주노동자 권리 | OFW ako sa Taiwan at bigla akong tinanggal, may separation pay ba ako? | I am an OFW in Taiwan and was suddenly dismissed — do I get separation pay? | https://tseng-law.com/fil/services | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-29 | fil | PH | 국제결혼·가족·상속 | Sino ang abogado sa Taiwan na humahawak ng diborsyo at kustodiya para sa mga dayuhan? | Which lawyer in Taiwan handles divorce and child custody for foreigners? | https://tseng-law.com/fil/lawyers | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-30 | fil | PH | 계약·미수금 | Magkano ang abogado sa Taiwan kapag sinisingil ang isang kumpanyang Taiwanese? | How is a lawyer's fee set in Taiwan when collecting from a Taiwanese company? | https://tseng-law.com/fil/pricing | CG·GM·PP·CL·GR·AIO |  |  |  |
-| S0-31 | fil | PH | 형사·사고 | Naaksidente ako sa Taiwan at tinawagan ako ng pulis, paano ako makakakuha ng abogado doon? | I had an accident in Taiwan and the police called me — how do I get a lawyer there? | https://tseng-law.com/fil/contact | CG·GM·PP·CL·GR·AIO |  |  |  |
+| S0-01 | en | SG | 회사설립·투자 | How do I set up a Taiwan subsidiary from Singapore, and do I need a local lawyer? | Setting up a Taiwan subsidiary as a Singapore company — is a Taiwanese lawyer required? | https://tseng-law.com/en/taiwan-company-setup-lawyer | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-02 | en | MY | 취업·거류비자 | If my company opens a Taiwan branch, does that automatically get me a work permit? | Does registering a Taiwan branch give the founder a work permit and residence status? | https://tseng-law.com/en/columns/taiwan-company-establishment-basics | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-03 | en | PH | 이주노동자 권리 | I am a Filipino worker in Taiwan and my employer terminated me — am I entitled to severance? | Severance pay rules in Taiwan for a foreign employee dismissed by the employer | https://tseng-law.com/en/columns/taiwan-labor-severance-law | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-04 | en | SG | 국제결혼·가족·상속 | My father died in Taiwan and I live in Singapore — how does Taiwanese inheritance work for foreign heirs? | Taiwan inheritance procedure when the heirs live outside Taiwan | https://tseng-law.com/en/columns/taiwan-inheritance-custody-analysis | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-05 | en | MY | 계약·미수금 | A Taiwanese supplier will not pay our invoice — can we sue them in Taiwan from Malaysia? | Suing a Taiwanese company for unpaid invoices as an overseas creditor | https://tseng-law.com/en/taiwan-litigation-lawyer | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-06 | en | PH | 형사·사고 | I was in a scooter accident in Taiwan and received a police summons — what happens next? | Taiwan traffic accident procedure for a foreigner who received a police summons | https://tseng-law.com/en/columns/taiwan-traffic-accident-procedure | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-07 | en | SG | 취업·거류비자 | Is there an English-speaking lawyer in Taiwan who handles expat employment problems? | English-speaking law firm in Taiwan for expatriate employment matters | https://tseng-law.com/en/taiwan-lawyer | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-08 | vi | VN | 회사설립·투자 | Người Việt muốn mở công ty ở Đài Loan cần luật sư không? | Does a Vietnamese founder need a lawyer to open a company in Taiwan? | https://tseng-law.com/vi/services | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-09 | vi | VN | 취업·거류비자 | Trước khi hỏi luật sư Đài Loan về giấy tờ cư trú và giấy phép lao động thì cần chuẩn bị gì? | What should I prepare before asking a Taiwanese lawyer about residence and work permit paperwork? | https://tseng-law.com/vi/faq | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-10 | vi | VN | 이주노동자 권리 | Lao động Việt ở Đài Loan bị nợ lương, thuê luật sư tốn khoảng bao nhiêu? | How is a lawyer's fee decided for a Vietnamese worker in Taiwan chasing unpaid wages? | https://tseng-law.com/vi/pricing | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-11 | vi | VN | 국제결혼·가족·상속 | Ly hôn với chồng người Đài Loan thì quyền nuôi con và chia tài sản thế nào? | Divorce from a Taiwanese spouse — how are custody and property division handled? | https://tseng-law.com/vi/services | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-12 | vi | VN | 계약·미수금 | Công ty Đài Loan không trả tiền hàng, liên hệ văn phòng luật sư ở Đài Loan kiểu gì? | A Taiwanese company will not pay for goods — how do I contact a law office in Taiwan? | https://tseng-law.com/vi/contact | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-13 | vi | VN | 형사·사고 | Bị tai nạn giao thông ở Đài Loan và nhận giấy triệu tập, luật sư nào bên đó nhận vụ hình sự? | Which lawyer in Taiwan takes criminal matters after a traffic accident summons? | https://tseng-law.com/vi/lawyers | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-14 | id | ID | 회사설립·투자 | Orang Indonesia mau buka perusahaan di Taiwan, perlu pengacara Taiwan nggak? | Does an Indonesian founder need a Taiwanese lawyer to open a company in Taiwan? | https://tseng-law.com/id/services | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-15 | id | ID | 취업·거류비자 | Sebelum tanya pengacara soal izin kerja dan izin tinggal di Taiwan, dokumen apa yang harus disiapkan? | What documents should I prepare before asking a lawyer about a Taiwan work and residence permit? | https://tseng-law.com/id/faq | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-16 | id | ID | 이주노동자 권리 | Pekerja migran Indonesia di Taiwan diberhentikan sepihak, pesangonnya gimana? | An Indonesian migrant worker in Taiwan was dismissed — what about severance? | https://tseng-law.com/id/services | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-17 | id | ID | 국제결혼·가족·상속 | Kantor hukum di Taiwan mana yang biasa menangani klien asing untuk perceraian dan waris? | Which law firm in Taiwan regularly handles divorce and inheritance for foreign clients? | https://tseng-law.com/id/about | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-18 | id | ID | 계약·미수금 | Nagih utang ke perusahaan Taiwan lewat pengacara, biayanya dihitung gimana? | How is the fee calculated when a lawyer pursues a debt against a Taiwanese company? | https://tseng-law.com/id/pricing | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-19 | id | ID | 형사·사고 | Saya kena kasus kecelakaan di Taiwan, gimana cara menghubungi pengacara di sana? | I am involved in an accident case in Taiwan — how do I reach a lawyer there? | https://tseng-law.com/id/contact | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-20 | th | TH | 회사설립·투자 | คนไทยจะไปเปิดบริษัทที่ไต้หวัน ต้องจ้างทนายไต้หวันไหม | Does a Thai founder have to hire a Taiwanese lawyer to open a company in Taiwan? | https://tseng-law.com/th/services | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-21 | th | TH | 취업·거류비자 | เปิดบริษัทที่ไต้หวันแล้วได้วีซ่าทำงานกับใบถิ่นที่อยู่เลยไหม | After registering a company in Taiwan, do I automatically get a work visa and residence permit? | https://tseng-law.com/th/services | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-22 | th | TH | 이주노동자 권리 | แรงงานไทยในไต้หวันโดนค้างค่าจ้าง จ้างทนายคิดค่าใช้จ่ายยังไง | A Thai worker in Taiwan has unpaid wages — how are lawyer's fees determined? | https://tseng-law.com/th/pricing | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-23 | th | TH | 국제결혼·가족·상속 | แต่งงานกับคนไต้หวันแล้วจะหย่า ลูกกับทรัพย์สินแบ่งยังไง | Divorcing a Taiwanese spouse — how are the children and the property dealt with? | https://tseng-law.com/th/services | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-24 | th | TH | 계약·미수금 | บริษัทไต้หวันไม่จ่ายค่าสินค้า จะติดต่อสำนักงานทนายที่ไต้หวันทางไหน | A Taiwanese company has not paid for goods — how do I contact a law office in Taiwan? | https://tseng-law.com/th/contact | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-25 | th | TH | 형사·사고 | โดนหมายเรียกจากตำรวจไต้หวันเรื่องอุบัติเหตุ ต้องเตรียมเอกสารอะไรก่อนคุยกับทนาย | I received a Taiwanese police summons about an accident — what should I prepare before talking to a lawyer? | https://tseng-law.com/th/faq | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-26 | fil | PH | 회사설립·투자 | Gusto kong magtayo ng kumpanya sa Taiwan, kailangan ko ba ng abogado doon? | I want to set up a company in Taiwan — do I need a lawyer there? | https://tseng-law.com/fil/services | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-27 | fil | PH | 취업·거류비자 | Bago ako magtanong sa abogado tungkol sa work permit at ARC sa Taiwan, ano ang ihahanda ko? | What do I prepare before asking a lawyer about a Taiwan work permit and ARC? | https://tseng-law.com/fil/faq | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-28 | fil | PH | 이주노동자 권리 | OFW ako sa Taiwan at bigla akong tinanggal, may separation pay ba ako? | I am an OFW in Taiwan and was suddenly dismissed — do I get separation pay? | https://tseng-law.com/fil/services | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-29 | fil | PH | 국제결혼·가족·상속 | Sino ang abogado sa Taiwan na humahawak ng diborsyo at kustodiya para sa mga dayuhan? | Which lawyer in Taiwan handles divorce and child custody for foreigners? | https://tseng-law.com/fil/lawyers | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-30 | fil | PH | 계약·미수금 | Magkano ang abogado sa Taiwan kapag sinisingil ang isang kumpanyang Taiwanese? | How is a lawyer's fee set in Taiwan when collecting from a Taiwanese company? | https://tseng-law.com/fil/pricing | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
+| S0-31 | fil | PH | 형사·사고 | Naaksidente ako sa Taiwan at tinawagan ako ng pulis, paano ako makakakuha ng abogado doon? | I had an accident in Taiwan and the police called me — how do I get a lawyer there? | https://tseng-law.com/fil/contact | CG·GM·PP·CL·GR·AIO | CG=미실측(403) GM=미실측(로그인 필요) PP=미실측(403) CL=미실측(403) GR=미실측(403) AIO=미실측(SERP 접근 차단) | 판정 불가(응답 미취득) · 사유 §2.5 | 2026-09-09 시도 · 전건 미실측 |
 
 언어별 행수: en 7 · vi 6 · id 6 · th 6 · fil 6 = **31행**. 주제별 행수: 회사설립·투자 5 · 취업·거류비자 6 · 이주노동자 권리 5 · 국제결혼·가족·상속 5 · 계약·미수금 5 · 형사·사고 5.
 
@@ -147,6 +173,21 @@
 - **반증 조건 초안**: 2026-12-02 회차에서 안내 4언어(vi·id·th·fil) 행의 인용이 **0으로 유지**되면 "안내 언어 페이지 → 현지어 AI 질의 인용" 가설을 기각하고, 동남아 축의 투자를 EN 표면(랜딩·칼럼)과 인용원 확보로 재배분한다. 확정 문구는 1회차 실측 후 수치를 보고 고정한다.
 - 이 문서의 분모(31행·6엔진·판정 기준)는 1회차 실측 이후 **변경하지 않는다**. 바꿔야 할 사유가 생기면 새 문서로 분리하고 이 문서는 원형 보존한다.
 
-## 6. 변경 이력
+## 6. 1차 요약 (2026-09-09 · 1회차)
+
+WO-S0e 요구 항목을 실측값으로만 채운다. 관측이 0건이므로 비율은 **계산하지 않는다**(0을 분모로 쓰거나 0%로 표기하면 "인용되지 않았다"는 허위 주장이 된다).
+
+- **인용 수 / 문항 수**: 인용(Y) **0건** / 판정 가능 관측 **0건**. 설계 분모 186 관측(31행 × 6엔진) 중 **186건 전부 미실측**. 인용률은 **산출 불가**.
+- **엔진별 인용 수**: CG 0(판정 가능 0) · GM 0(0) · PP 0(0) · CL 0(0) · GR 0(0) · AIO 0(0). 여섯 엔진 모두 판정 가능 관측이 0이므로 엔진 간 비교도 성립하지 않는다.
+- **경쟁 도메인 상위 5(빈도)**: **관측 없음.** 응답을 한 건도 취득하지 못해 동반 인용 도메인 표본이 0이다. 여기에 예상 경쟁사를 적지 않는다 — 그것은 실측이 아니다.
+- **언어별·주제별 분해**: 전부 미실측이므로 분해하지 않는다.
+- **raw 폴더**: `docs/seo/geo-sea-baseline-2026-09.raw/` 는 **의도적으로 비어 있다**(파일 0개 = 실측 셀 0개). 저장할 응답 원문이 없었다.
+
+미실측 사유는 §2.5에 요청·응답 단위로 기록했다. 사유는 전 행 공통이므로 §3 표의 각 셀에는 축약형(`403` / `로그인 필요` / `SERP 접근 차단`)으로 적고 §2.5를 참조한다.
+
+**§5 반증 조건에 대한 영향**: 안내 4언어(vi·id·th·fil) 행의 인용이 0으로 유지되는지는 이번 회차로 **판정되지 않았다.** 1회차는 사실상 실행되지 않았으므로, 2026-12-02 회차를 2회차가 아니라 **1회차로 취급**하거나, 그 전에 브라우저 접근이 확보되는 시점에 1회차를 다시 실행한다. 분모(31행·6엔진·판정 기준)는 변경하지 않는다.
+
+## 7. 변경 이력
 
 - 2026-09-09 — 최초 작성(WO-S0d). 결과 칸 전부 공란, 실측 0회.
+- 2026-09-09 — WO-S0e 1차 실측 시도. 6엔진 전부 접근 차단으로 **미실측**, 판정 가능 관측 0건. §2.1 접근 조건 칸·§2.5 시도 로그·§6 1차 요약 추가, §3 표 31행의 결과 3칸을 미실측 값으로 채움. 인용 결과는 여전히 0회 실측.

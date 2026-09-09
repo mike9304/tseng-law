@@ -90,7 +90,15 @@ describe('consultation email and four-office content contracts', () => {
 
 describe('WO-1 trust, localization, and performance content contracts', () => {
   it('1-1 removes incorrect Taipei 04 numbers and preserves Taichung 04 / Kaohsiung 07', () => {
-    const officeTabs = readFileSync(path.join(root, 'src/components/OfficeMapTabs.tsx'), 'utf8');
+    // The office records moved to `src/data/office-locations.ts` so the
+    // server-rendered guidance office band could read them (a server component
+    // importing a value out of a `'use client'` module gets a client reference,
+    // not the value). The contracts below are unchanged; they now apply to the
+    // component and its data module together.
+    const officeTabs = [
+      readFileSync(path.join(root, 'src/components/OfficeMapTabs.tsx'), 'utf8'),
+      readFileSync(path.join(root, 'src/data/office-locations.ts'), 'utf8'),
+    ].join('\n');
     expect(officeTabs).not.toContain("phoneLabel: '대표전화(타이중 본소)'");
     expect(officeTabs).not.toContain("phoneLabel: '代表電話（台中本所）'");
     expect(officeTabs).not.toContain("phoneLabel: 'Main line (Taichung headquarters)'");
@@ -271,7 +279,15 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
   });
 
   it('1b-4 and 1b-5 keep all four Taiwan offices in official order and split out a standalone Korea office', () => {
-    const officeTabs = readFileSync(path.join(root, 'src/components/OfficeMapTabs.tsx'), 'utf8');
+    // The office records moved to `src/data/office-locations.ts` so the
+    // server-rendered guidance office band could read them (a server component
+    // importing a value out of a `'use client'` module gets a client reference,
+    // not the value). The contracts below are unchanged; they now apply to the
+    // component and its data module together.
+    const officeTabs = [
+      readFileSync(path.join(root, 'src/components/OfficeMapTabs.tsx'), 'utf8'),
+      readFileSync(path.join(root, 'src/data/office-locations.ts'), 'utf8'),
+    ].join('\n');
     expect(officeTabs).toContain("const TAIPEI_EMBED_URL = 'https://maps.google.com/maps?q=25.0510767,121.5173077&z=16&output=embed'");
     expect(officeTabs).toContain("const TAIPEI_MAPS_URL = 'https://maps.app.goo.gl/mULpyAnQGz3M1GoQ6'");
     expect(officeTabs).toContain("mapLinkLabel: '네이버 지도에서 보기'");

@@ -56,7 +56,7 @@ describe('Japanese lawyers-list integration', () => {
       '台湾弁護士',
       '昊鼎国際法律事務所',
       '韓国語対応の台湾弁護士',
-      '昊鼎国際チーム',
+      '昊鼎日本語チーム',
     ]);
   });
 

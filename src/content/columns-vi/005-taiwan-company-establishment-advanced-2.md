@@ -68,7 +68,7 @@ Một số ngân hàng có thể đặt thêm yêu cầu, chẳng hạn tài kho
 
 **​**
 
-**5. Công ty có thể tuyển dụng người nước ngoài, chẳng hạn người mang quốc tịch Việt Nam, làm nhân viên không?**
+**5. Công ty có thể tuyển dụng người nước ngoài làm nhân viên không?**
 
 A. Nhân viên thứ nhất không bị hạn chế: công việc quản lý tại doanh nghiệp có vốn đầu tư của Hoa kiều hoặc người nước ngoài (一般僑外投資事業主管工作)
 

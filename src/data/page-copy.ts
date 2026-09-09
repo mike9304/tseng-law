@@ -1,4 +1,5 @@
 import type { SiteLocale } from '@/lib/locales';
+import { TEAM_NAME_BY_LOCALE } from '@/data/team-name';
 
 type PageSectionCopy = {
   label: string;
@@ -25,7 +26,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
       label: 'ABOUT',
       title: '호정 소개',
       description:
-        '호정의 스토리와 국제팀 구성원을 확인할 수 있습니다.'
+        `호정의 스토리와 ${TEAM_NAME_BY_LOCALE['ko']} 구성원을 확인할 수 있습니다.`
     },
     services: {
       label: 'SERVICES',
@@ -34,7 +35,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '호정 국제팀',
+      title: TEAM_NAME_BY_LOCALE['ko'],
       description: '변호사·사무장·회계사의 이력과 실무 분야를 확인합니다.'
     },
     insights: {
@@ -77,7 +78,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎介紹',
-      description: '查看昊鼎團隊背景與國際團隊成員。'
+      description: `查看昊鼎團隊背景與${TEAM_NAME_BY_LOCALE['zh-hant']}成員。`
     },
     services: {
       label: 'SERVICES',
@@ -86,7 +87,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '昊鼎國際團隊',
+      title: TEAM_NAME_BY_LOCALE['zh-hant'],
       description: '查看律師、韓國事務長與會計師的完整資料。'
     },
     insights: {
@@ -129,7 +130,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: 'About Hovering',
-      description: 'Learn about Hovering\'s background and meet the International Team.'
+      description: `Learn about Hovering's background and meet the ${TEAM_NAME_BY_LOCALE['en']}.`
     },
     services: {
       label: 'SERVICES',
@@ -138,7 +139,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: 'Hovering International Team',
+      title: TEAM_NAME_BY_LOCALE['en'],
       description: 'View profiles of our lawyers, operations manager, and accounting partner.'
     },
     insights: {
@@ -181,7 +182,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎について',
-      description: '当事務所の背景と国際チームをご紹介します。'
+      description: `当事務所の背景と${TEAM_NAME_BY_LOCALE['ja']}をご紹介します。`
     },
     services: {
       label: 'SERVICES',
@@ -190,7 +191,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '昊鼎国際チーム',
+      title: TEAM_NAME_BY_LOCALE['ja'],
       description: '弁護士・事務長・会計士の経歴と専門分野をご確認ください。'
     },
     insights: {

@@ -250,13 +250,57 @@ export function resolveGuidanceMiddlewareRewrite(pathname: string): GuidanceMidd
   };
 }
 
-export type PublicLanguageSwitchTarget =
-  | { status: 'available'; href: string }
-  | { status: 'unavailable' };
+/**
+ * WO-O22 A: the switcher must offer all eight languages on every public page
+ * and must never link to a 404. When the exact page does not exist in the
+ * target language we degrade to the nearest page that does, and say so:
+ *
+ *   `exact`        — the same page in the target language
+ *   `columns-list` — the target language's `/columns` index
+ *   `home`         — the target language's home page
+ */
+export type PublicLanguageSwitchFallback = 'exact' | 'columns-list' | 'home';
+
+export type PublicLanguageSwitchTarget = {
+  status: 'available';
+  href: string;
+  fallback: PublicLanguageSwitchFallback;
+};
+
+export type PublicLanguageSwitchOptions = {
+  /**
+   * Column slugs that actually have a markdown file in the target language.
+   * Injected by the caller (the public layout reads them off disk) so this
+   * module stays pure and client-safe. When it is omitted the resolver refuses
+   * to guess an article URL and lands on the target language's column index
+   * instead — a real page, never a 404.
+   */
+  readonly columnSlugsByLocale?: Partial<
+    Record<PublicLocale8, readonly string[] | ReadonlySet<string>>
+  >;
+};
+
+function hasKnownColumnSlug(
+  options: PublicLanguageSwitchOptions | undefined,
+  targetLocale: PublicLocale8,
+  slug: string,
+): boolean {
+  const known = options?.columnSlugsByLocale?.[targetLocale];
+  if (!known) return false;
+  return known instanceof Set ? known.has(slug) : (known as readonly string[]).includes(slug);
+}
+
+/** `columns/<slug>` → `<slug>`; anything deeper or shorter → null. */
+function columnDetailSlug(slugPath: string): string | null {
+  const segments = slugPath.split('/');
+  if (segments.length !== 2 || segments[0] !== 'columns' || !segments[1]) return null;
+  return segments[1];
+}
 
 export function resolvePublicLanguageSwitchTarget(
   pathname: string,
   targetLocale: PublicLocale8,
+  options?: PublicLanguageSwitchOptions,
 ): PublicLanguageSwitchTarget {
   const visible = visiblePublicPathname(pathname);
   const currentLocale = parsePublicLocaleFromPathname(visible);
@@ -264,26 +308,56 @@ export function resolvePublicLanguageSwitchTarget(
   const slugPath = pathWithoutLocale === '/' ? '' : pathWithoutLocale.replace(/^\//, '');
 
   if (currentLocale === targetLocale) {
-    return { status: 'available', href: visible || `/${targetLocale}` };
+    return { status: 'available', href: visible || `/${targetLocale}`, fallback: 'exact' };
   }
 
   if (isGuidanceLocale4(targetLocale)) {
     const pageKey = guidancePageKeyFromSlugPath(slugPath);
-    if (!pageKey) return { status: 'unavailable' };
-    return { status: 'available', href: guidancePublicPath(targetLocale, pageKey) };
+    if (pageKey) {
+      return {
+        status: 'available',
+        href: guidancePublicPath(targetLocale, pageKey),
+        fallback: 'exact',
+      };
+    }
+
+    const columnSlug = columnDetailSlug(slugPath);
+    if (columnSlug && hasKnownColumnSlug(options, targetLocale, columnSlug)) {
+      return {
+        status: 'available',
+        href: `/${targetLocale}/columns/${columnSlug}`,
+        fallback: 'exact',
+      };
+    }
+    if (slugPath === 'columns' || slugPath.startsWith('columns/')) {
+      return {
+        status: 'available',
+        href: guidancePublicPath(targetLocale, 'columns'),
+        fallback: 'columns-list',
+      };
+    }
+
+    return {
+      status: 'available',
+      href: guidancePublicPath(targetLocale, 'home'),
+      fallback: 'home',
+    };
   }
 
+  // The existing four keep the behaviour they already shipped: their targets are
+  // resolved by `public-route-policy` and are labelled `exact` so the switcher
+  // markup for ko/zh-hant/en/ja is unchanged.
   if (targetLocale === 'ja') {
-    return { status: 'available', href: jaLanguageSwitchTarget(pathWithoutLocale) };
+    return { status: 'available', href: jaLanguageSwitchTarget(pathWithoutLocale), fallback: 'exact' };
   }
 
   const familyList = restrictedPublicFamilyListPath(pathWithoutLocale);
   if (familyList) {
-    return { status: 'available', href: `/${targetLocale}${familyList}` };
+    return { status: 'available', href: `/${targetLocale}${familyList}`, fallback: 'exact' };
   }
 
   const suffix = slugPath ? `/${slugPath}` : '';
-  return { status: 'available', href: `/${targetLocale}${suffix}` };
+  return { status: 'available', href: `/${targetLocale}${suffix}`, fallback: 'exact' };
 }
 
 export function hreflangTagForPublicLocale(locale: PublicLocale8): string {

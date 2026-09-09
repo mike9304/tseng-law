@@ -3,8 +3,8 @@ import { projectTeamBreadcrumbLabel } from '../team-breadcrumb-label';
 
 describe('published team breadcrumb stock-label migration', () => {
   it.each([
-    ['ko', '호정 한국·대만 업무팀', '호정 국제팀'],
-    ['zh-hant', '昊鼎 韓國·台灣 業務團隊', '昊鼎國際團隊'],
+    ['ko', '호정 한국·대만 업무팀', '호정 대만·한국 팀'],
+    ['zh-hant', '昊鼎 韓國·台灣 業務團隊', '昊鼎韓國台灣團隊'],
   ] as const)('projects only the verified %s lawyers stock label', (locale, oldTitle, newTitle) => {
     expect(projectTeamBreadcrumbLabel(locale, 'lawyers', oldTitle)).toBe(newTitle);
     expect(projectTeamBreadcrumbLabel(locale, 'about', oldTitle)).toBe(oldTitle);

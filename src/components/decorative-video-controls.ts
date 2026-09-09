@@ -1,4 +1,4 @@
-import type { SiteLocale } from '@/lib/locales';
+import type { PublicLocale8 } from '@/lib/public-guidance';
 
 export type DecorativeVideoControlLabels = {
   pause: string;
@@ -27,4 +27,27 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: '動画を再生',
     replay: '動画をもう一度再生',
   },
-} as const satisfies Record<SiteLocale, DecorativeVideoControlLabels>;
+  // WO-O22 B: the new four reuse the labels their guidance pack already ships
+  // (`guidanceContent[locale].home.video*Label`), so the cinematic opening's
+  // video controls are announced in the page language without new copy.
+  vi: {
+    pause: 'Tạm dừng video',
+    play: 'Phát video',
+    replay: 'Phát lại video',
+  },
+  id: {
+    pause: 'Jeda video',
+    play: 'Putar video',
+    replay: 'Putar ulang video',
+  },
+  th: {
+    pause: 'หยุดวิดีโอชั่วคราว',
+    play: 'เล่นวิดีโอ',
+    replay: 'เล่นวิดีโออีกครั้ง',
+  },
+  fil: {
+    pause: 'I-pause ang video',
+    play: 'I-play ang video',
+    replay: 'I-play muli ang video',
+  },
+} as const satisfies Record<PublicLocale8, DecorativeVideoControlLabels>;

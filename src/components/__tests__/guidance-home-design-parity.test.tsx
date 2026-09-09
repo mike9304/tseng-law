@@ -135,10 +135,11 @@ describe('guidance home matches the English home composition', () => {
   it('keeps the guidance homes structurally identical to one another', () => {
     const shapes = GUIDANCE_LOCALES_4.map((locale) =>
       renderGuidanceHome(locale)
-        // Text nodes, alt/aria copy and the locale segment differ by language;
-        // everything structural must not.
+        // Text nodes and human-readable attributes (alt, aria-label and the
+        // iframe accessible name) differ by language, as does the locale
+        // segment; everything structural must not.
         .replace(/>[^<]*</g, '><')
-        .replace(/(alt|aria-label)="[^"]*"/g, '$1=""')
+        .replace(/(alt|aria-label|title)="[^"]*"/g, '$1=""')
         .replace(new RegExp(`"/${locale}/`, 'g'), '"/{locale}/')
         .replace(new RegExp(`(data-locale|lang)="${locale}"`, 'g'), '$1="{locale}"'),
     );

@@ -9,6 +9,7 @@ import SectionLabel from '@/components/SectionLabel';
 import ServicePracticeIcon from '@/components/ServicePracticeIcon';
 import SmartLink from '@/components/SmartLink';
 import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
+import GuidanceOfficeBand from '@/components/GuidanceOfficeBand';
 import { GuidanceContactBand } from '@/components/GuidancePageBody';
 import { resolveInsightsImageSrc } from '@/components/insights-image';
 import {
@@ -327,7 +328,18 @@ export function guidanceHomeServiceCards(locale: GuidanceLocale) {
   }));
 }
 
-function GuidanceServices({ locale }: { locale: GuidanceLocale }) {
+/**
+ * The six practice-area cards with their icons. Exported so the guidance
+ * `services` page renders the same six cards the English services page does —
+ * before this it showed only the plain text card grid.
+ */
+export function GuidanceServices({
+  locale,
+  showHeader = true,
+}: {
+  locale: GuidanceLocale;
+  showHeader?: boolean;
+}) {
   const pack = guidanceContent[locale];
   const servicesPage = pack.pages.services;
   const cards = guidanceHomeServiceCards(locale);
@@ -335,9 +347,13 @@ function GuidanceServices({ locale }: { locale: GuidanceLocale }) {
   return (
     <section className="section section--light services-bento" id="practice" data-tone="light">
       <div className="container">
-        <SectionLabel>{servicesPage.eyebrow}</SectionLabel>
-        <h2 className="section-title">{servicesPage.title}</h2>
-        <p className="section-lede">{servicesPage.description}</p>
+        {showHeader ? (
+          <>
+            <SectionLabel>{servicesPage.eyebrow}</SectionLabel>
+            <h2 className="section-title">{servicesPage.title}</h2>
+            <p className="section-lede">{servicesPage.description}</p>
+          </>
+        ) : null}
         <OrnamentDivider />
         <div className="services-detail-list services-card-grid">
           {cards.map((card, index) => (
@@ -460,6 +476,11 @@ export default function GuidanceHomeBody({
         }}
       />
       <GuidanceHomeDetail locale={locale} />
+      {/* The English home ends with `OfficeMapTabs`; the guidance home had no
+          office photograph, address, phone number or map at all. */}
+      <Reveal>
+        <GuidanceOfficeBand locale={locale} />
+      </Reveal>
       <GuidanceContactBand locale={locale} isContact={false} />
     </div>
   );

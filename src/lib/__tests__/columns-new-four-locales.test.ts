@@ -103,7 +103,16 @@ describe('new-four column loader (temp dir, no repo fixtures)', () => {
     expect(viPosts.map((post) => post.slug).sort()).toEqual(
       viFiles.map((name) => name.replace(/\.md$/, '').replace(/^\d{3}-/, '')).sort(),
     );
-    expect(viPosts.length).not.toBe(getAllColumnPosts('ko').length);
+    // WO-O22 D: vi now has a file for every Korean slug, so "did not leak the
+    // Korean corpus" can no longer be a count comparison. Assert the stronger
+    // property instead: same slugs, but the body really is the vi file.
+    const koPosts = getAllColumnPosts('ko');
+    expect(viPosts.length).toBe(koPosts.length);
+    for (const viPost of viPosts) {
+      const koPost = koPosts.find((post) => post.slug === viPost.slug);
+      expect(koPost, `ko counterpart for ${viPost.slug}`).toBeDefined();
+      expect(viPost.title, `${viPost.slug} title is not the Korean one`).not.toBe(koPost!.title);
+    }
   });
 });
 

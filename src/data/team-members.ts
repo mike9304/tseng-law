@@ -1,4 +1,5 @@
 import type { SiteLocale } from '@/lib/locales';
+import { TEAM_NAME_BY_LOCALE } from '@/data/team-name';
 
 export type TeamMember = {
   id: string;
@@ -24,7 +25,7 @@ export type TeamContent = {
 export const teamContent: Record<SiteLocale, TeamContent> = {
   ko: {
     label: 'OUR TEAM',
-    title: '호정 국제팀',
+    title: TEAM_NAME_BY_LOCALE['ko'],
     description:
       '법무법인 호정의 변호사·사무장·회계사 프로필입니다.',
     story: [
@@ -111,7 +112,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   'zh-hant': {
     label: 'OUR TEAM',
-    title: '昊鼎國際團隊',
+    title: TEAM_NAME_BY_LOCALE['zh-hant'],
     description: '昊鼎國際法律事務所律師、事務長及會計師簡介。',
     story: [
       '昊鼎提供中文、韓文、日文及英文溝通的在台法律服務，涵蓋公司設立、訴訟與合規顧問。',
@@ -197,7 +198,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   en: {
     label: 'OUR TEAM',
-    title: 'Hovering International Team',
+    title: TEAM_NAME_BY_LOCALE['en'],
     description: 'Profiles of Hovering lawyers, operations manager, and accounting partner.',
     story: [
       'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Japanese, Korean, and Chinese available.',
@@ -283,7 +284,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   ja: {
     label: 'チーム紹介',
-    title: '昊鼎国際チーム',
+    title: TEAM_NAME_BY_LOCALE['ja'],
     description: '昊鼎国際法律事務所の弁護士、パラリーガル、事務長、提携会計士をご紹介します。',
     story: [
       '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。英語・日本語・韓国語・中国語でご相談いただけます。',

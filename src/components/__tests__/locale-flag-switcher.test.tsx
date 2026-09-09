@@ -12,6 +12,7 @@ vi.mock('next/navigation', () => ({
 
 import LocaleFlagSwitcher, {
   LOCALE_FLAG_OPTIONS,
+  LocaleFlagSwitcherView,
   localeFlagHref,
 } from '@/components/LocaleFlagSwitcher';
 import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
@@ -27,6 +28,15 @@ function renderedHtml(locale: PublicLocale8): string {
 
 function renderedLinks(locale: PublicLocale8): string[] {
   return renderedHtml(locale).match(/<a\b[\s\S]*?<\/a>/g) ?? [];
+}
+
+/** WO-O22 A: the pure view, with no provider — the conservative fallback path. */
+function switcherTree(locale: PublicLocale8, onLocaleSelect?: (target: PublicLocale8) => void) {
+  return LocaleFlagSwitcherView({
+    locale,
+    pathname: navigationState.pathname,
+    onLocaleSelect,
+  });
 }
 
 function collectElements(node: ReactNode): ReactElement[] {
@@ -92,24 +102,30 @@ describe('LocaleFlagSwitcher', () => {
     });
   });
 
-  it('uses the JA fail-closed fallback while preserving unsupported paths for complete locales', () => {
+  it('uses the JA fail-closed fallback and sends the new four to their home page', () => {
     navigationState.pathname = '/en/account/settings';
 
     expect(localeFlagHref(navigationState.pathname, 'ko')).toBe('/ko/account/settings');
     expect(localeFlagHref(navigationState.pathname, 'zh-hant')).toBe('/zh-hant/account/settings');
     expect(localeFlagHref(navigationState.pathname, 'en')).toBe('/en/account/settings');
     expect(localeFlagHref(navigationState.pathname, 'ja')).toBe('/ja/columns');
-    expect(localeFlagHref(navigationState.pathname, 'vi')).toBe('');
-    expect(localeFlagHref(navigationState.pathname, 'id')).toBe('');
-    expect(localeFlagHref(navigationState.pathname, 'th')).toBe('');
-    expect(localeFlagHref(navigationState.pathname, 'fil')).toBe('');
+    // WO-O22 A: `/vi/account/settings` does not exist, so the switcher lands on
+    // the nearest page that does — the language home — never a 404.
+    expect(localeFlagHref(navigationState.pathname, 'vi')).toBe('/vi');
+    expect(localeFlagHref(navigationState.pathname, 'id')).toBe('/id');
+    expect(localeFlagHref(navigationState.pathname, 'th')).toBe('/th');
+    expect(localeFlagHref(navigationState.pathname, 'fil')).toBe('/fil');
 
     const links = renderedLinks('en');
+    expect(links).toHaveLength(PUBLIC_LOCALES_8.length);
     expect(links.some((link) => link.includes('href="/ja/columns"'))).toBe(true);
-    expect(links.some((link) => link.includes('href="/vi/'))).toBe(false);
-    expect(links.some((link) => link.includes('href="/id/'))).toBe(false);
-    expect(links.some((link) => link.includes('href="/th/'))).toBe(false);
-    expect(links.some((link) => link.includes('href="/fil/'))).toBe(false);
+    for (const locale of ['vi', 'id', 'th', 'fil'] as const) {
+      const link = links.find((candidate) => candidate.includes(`href="/${locale}"`));
+      expect(link, `${locale} fallback link`).toBeDefined();
+      expect(link).toContain('data-locale-switch-fallback="home"');
+      expect(link).toContain('aria-label=');
+    }
+    expect(links.some((link) => /href="\/(vi|id|th|fil)\/account/.test(link))).toBe(false);
   });
 
   it('preserves the translated Wei Tseng lawyer detail across the four source languages', () => {
@@ -121,9 +137,15 @@ describe('LocaleFlagSwitcher', () => {
       '/zh-hant/lawyers/wei-tseng',
       '/en/lawyers/wei-tseng',
       '/ja/lawyers/wei-tseng',
+      // WO-O22 A: the new four have no lawyer detail page, so they keep their
+      // slot in the switcher and link to their own home page instead.
+      '/vi',
+      '/id',
+      '/th',
+      '/fil',
     ];
 
-    expect(links).toHaveLength(expectedHrefs.length);
+    expect(links).toHaveLength(PUBLIC_LOCALES_8.length);
     expectedHrefs.forEach((href) => {
       expect(links.some((link) => link.includes(`href="${href}"`))).toBe(true);
     });
@@ -133,8 +155,8 @@ describe('LocaleFlagSwitcher', () => {
     expect(links.find((link) => link.includes('href="/ko/lawyers/wei-tseng"'))).not.toContain(
       'aria-current',
     );
-    expect(localeFlagHref(navigationState.pathname, 'vi')).toBe('');
-    expect(renderedHtml('ja')).toContain('aria-disabled="true"');
+    expect(localeFlagHref(navigationState.pathname, 'vi')).toBe('/vi');
+    expect(renderedHtml('ja')).not.toContain('aria-disabled');
     expect(renderedHtml('ja')).not.toContain('href="/vi/lawyers/wei-tseng"');
   });
 
@@ -143,7 +165,7 @@ describe('LocaleFlagSwitcher', () => {
 
     expect(localeFlagHref(navigationState.pathname, 'ja')).toBe('/ja/lawyers');
     expect(renderedLinks('en').some((link) => link.includes('href="/ja/lawyers"'))).toBe(true);
-    expect(localeFlagHref(navigationState.pathname, 'vi')).toBe('');
+    expect(localeFlagHref(navigationState.pathname, 'vi')).toBe('/vi');
   });
 
   it('marks only the active locale as the current page', () => {
@@ -159,44 +181,52 @@ describe('LocaleFlagSwitcher', () => {
     expect(links.some((link) => link.includes('href="/vi/columns/taiwan-investment"'))).toBe(false);
   });
 
-  it('calls the mobile close callback after an available language choice only', () => {
+  it('calls the mobile close callback for every language, including the new four', () => {
     const onLocaleSelect = vi.fn();
-    const switcher = LocaleFlagSwitcher({ locale: 'ko', onLocaleSelect });
-    const zhHantLink = collectElements(switcher).find(
-      (element) => element.props.href === '/zh-hant/services',
-    );
-    const disabled = collectElements(switcher).filter(
-      (element) => element.props['aria-disabled'] === true,
+    const switcher = switcherTree('ko', onLocaleSelect);
+    const elements = collectElements(switcher);
+    const zhHantLink = elements.find((element) => element.props.href === '/zh-hant/services');
+    const viLink = elements.find((element) => element.props.href === '/vi/services');
+    const disabled = elements.filter(
+      (element) => element.props['aria-disabled'] !== undefined,
     );
 
     expect(zhHantLink).toBeDefined();
     zhHantLink?.props.onClick?.();
-    expect(onLocaleSelect).toHaveBeenCalledOnce();
     expect(onLocaleSelect).toHaveBeenCalledWith('zh-hant');
+
+    expect(viLink).toBeDefined();
+    viLink?.props.onClick?.();
+    expect(onLocaleSelect).toHaveBeenCalledWith('vi');
+    expect(onLocaleSelect).toHaveBeenCalledTimes(2);
 
     expect(disabled).toHaveLength(0);
   });
 
-  it('does not invoke onLocaleSelect for unavailable guidance languages', () => {
+  it('keeps every guidance language selectable on a column detail page', () => {
     navigationState.pathname = '/ko/columns/taiwan-investment';
     const onLocaleSelect = vi.fn();
-    const switcher = LocaleFlagSwitcher({ locale: 'ko', onLocaleSelect });
-    const disabled = collectElements(switcher).filter(
-      (element) => element.props['aria-disabled'] === 'true',
+    const switcher = switcherTree('ko', onLocaleSelect);
+    const elements = collectElements(switcher);
+    // No provider here, so the switcher refuses to guess an article URL and
+    // degrades to each language's column index — a real page, never a 404.
+    const fallbackLinks = elements.filter(
+      (element) => element.props['data-locale-switch-fallback'] === 'columns-list',
     );
 
-    expect(disabled).toHaveLength(4);
-    disabled.forEach((element) => {
-      expect(element.type).toBe('span');
-      expect(element.props.href).toBeUndefined();
-      expect(element.props.onClick).toBeUndefined();
+    expect(fallbackLinks).toHaveLength(4);
+    fallbackLinks.forEach((element) => {
+      expect(element.props['aria-disabled']).toBeUndefined();
+      expect(element.props.href).toMatch(/^\/(vi|id|th|fil)\/columns$/);
       element.props.onClick?.();
     });
-    expect(onLocaleSelect).not.toHaveBeenCalled();
-    expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil)\//.test(link))).toBe(false);
+    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil']);
+    expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil)\/columns\//.test(link))).toBe(
+      false,
+    );
   });
 
-  it('uses the target autonym in the unavailable-language notice, not this page language', () => {
+  it('names the target language in the fallback notice, not this page language', () => {
     navigationState.pathname = '/ko/columns/taiwan-investment';
     const html = renderedHtml('ko');
     const expected = internationalInquiryCopy.ko.unavailableLanguageNotice
@@ -205,26 +235,44 @@ describe('LocaleFlagSwitcher', () => {
     const currentLanguageNotice = internationalInquiryCopy.ko.unavailableLanguageNotice
       .split('{language}')
       .join(PUBLIC_LANGUAGE_AUTONYMS.ko);
-    const switcher = LocaleFlagSwitcher({ locale: 'ko' });
-    const viDisabled = collectElements(switcher).find(
-      (element) =>
-        element.props['aria-disabled'] === 'true'
-        && element.props['aria-label'] === PUBLIC_LANGUAGE_AUTONYMS.vi,
+    const viFallback = collectElements(switcherTree('ko')).find(
+      (element) => element.props.href === '/vi/columns',
     );
 
     expect(expected).toContain('Tiếng Việt');
     expect(expected).not.toBe(currentLanguageNotice);
-    expect(html).toContain(`aria-description="${expected}"`);
-    expect(html).toContain(expected);
-    expect(html).toContain(`aria-label="${PUBLIC_LANGUAGE_AUTONYMS.vi}"`);
+    expect(html).toContain(`title="${expected}"`);
+    expect(html).toContain(`aria-label="${PUBLIC_LANGUAGE_AUTONYMS.vi}. ${expected}"`);
     expect(html).toContain(PUBLIC_LANGUAGE_AUTONYMS.vi);
     expect(html).not.toContain(internationalInquiryCopy.ko.unavailableTranslationNotice);
     expect(html).not.toContain(currentLanguageNotice);
-    expect(viDisabled).toBeDefined();
-    expect(viDisabled?.type).toBe('span');
-    expect(viDisabled?.props.href).toBeUndefined();
-    expect(viDisabled?.props.onClick).toBeUndefined();
-    expect(viDisabled?.props['aria-description']).toBe(expected);
-    expect(renderedLinks('ko').some((link) => link.includes('href="/vi/'))).toBe(false);
+    expect(viFallback).toBeDefined();
+    expect(viFallback?.props['aria-label']).toBe(`${PUBLIC_LANGUAGE_AUTONYMS.vi}. ${expected}`);
+    expect(viFallback?.props.title).toBe(expected);
+    expect(renderedLinks('ko').some((link) => link.includes('href="/vi/columns/'))).toBe(false);
+  });
+
+  it('links a column detail straight to the same article when the translation exists', () => {
+    navigationState.pathname = '/ja/columns/taiwan-labor-severance-law';
+    const switcher = LocaleFlagSwitcherView({
+      locale: 'ja',
+      pathname: navigationState.pathname,
+      columnSlugsByLocale: {
+        vi: ['taiwan-labor-severance-law'],
+        id: ['taiwan-labor-severance-law'],
+        th: ['taiwan-labor-severance-law'],
+        fil: ['taiwan-labor-severance-law'],
+      },
+    });
+    const elements = collectElements(switcher);
+
+    for (const locale of ['vi', 'id', 'th', 'fil'] as const) {
+      const link = elements.find(
+        (element) => element.props.href === `/${locale}/columns/taiwan-labor-severance-law`,
+      );
+      expect(link, `${locale} same-slug link`).toBeDefined();
+      expect(link?.props['data-locale-switch-fallback']).toBeUndefined();
+      expect(link?.props['aria-label']).toBeUndefined();
+    }
   });
 });

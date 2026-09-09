@@ -2,6 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
 import {
+  guidanceFooterCopy,
+  guidanceOfficeCopy,
+  type GuidanceOfficeId,
+} from '@/data/international-guidance-offices';
+import {
   chromeSiteLocale,
   guidanceLegalLinks,
   publicSiteContent,
@@ -45,18 +50,35 @@ export default function Footer({
         : locale === 'ja'
           ? '昊鼎国際法律事務所'
           : 'Hovering International Law Firm';
+  // Guidance locales share the English chrome structure, so without these
+  // overrides the footer kept six English labels on a fully localized page.
+  const guidanceFooter = isGuidanceLocale4(locale) ? guidanceFooterCopy[locale] : null;
+  const guidanceOffices = isGuidanceLocale4(locale) ? guidanceOfficeCopy[locale] : null;
   const officeLabel =
-    locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : locale === 'ja' ? '事務所' : 'Offices';
+    guidanceFooter?.officeLabel ??
+    (locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : locale === 'ja' ? '事務所' : 'Offices');
   const officeQuickLinksLabel =
-    locale === 'ko'
+    guidanceFooter?.officeQuickLinksLabel ??
+    (locale === 'ko'
       ? '사무소 위치 바로가기'
       : locale === 'zh-hant'
         ? '事務所據點快速連結'
         : locale === 'ja'
           ? '事務所所在地へのクイックリンク'
-          : 'Quick links to office locations';
-  const offices = content.contact.locations.map((office) => ({
-    label: office.title,
+          : 'Quick links to office locations');
+  // Office order in `contact.locations` is taipei / taichung / kaohsiung /
+  // pingtung, the same order `guidanceOfficeCopy.officeTitles` declares.
+  const guidanceOfficeOrder: readonly GuidanceOfficeId[] = [
+    'taipei',
+    'taichung',
+    'kaohsiung',
+    'pingtung',
+  ];
+  const offices = content.contact.locations.map((office, index) => ({
+    label:
+      guidanceOffices && guidanceOfficeOrder[index]
+        ? guidanceOffices.officeTitles[guidanceOfficeOrder[index]]
+        : office.title,
     address: office.details[0],
     href: `/${locale}/contact#offices`,
   }));
@@ -98,6 +120,12 @@ export default function Footer({
         ? { blog: '部落格', youtube: 'YouTube', website: '官方網站' }
         : locale === 'ja'
           ? { blog: 'ブログ', youtube: 'YouTube', website: '公式サイト' }
+        : guidanceFooter
+          ? {
+              blog: guidanceFooter.blogLabel,
+              youtube: 'YouTube',
+              website: guidanceFooter.websiteLabel,
+            }
         : { blog: 'Blog', youtube: 'YouTube', website: 'Website' };
 
   return (
@@ -136,7 +164,8 @@ export default function Footer({
               <p className="footer-main-note">{footerContent.note}</p>
               <div className="footer-consultation-email">
                 <p className="footer-consultation-email-label">
-                  {getOfficialConsultationEmailLabel(chromeLocale)}
+                  {guidanceFooter?.officialConsultationEmailLabel
+                    ?? getOfficialConsultationEmailLabel(chromeLocale)}
                 </p>
                 <div className="footer-consultation-email-actions">
                   <a
@@ -146,7 +175,11 @@ export default function Footer({
                   >
                     {CONSULTATION_EMAIL}
                   </a>
-                  <FooterEmailCopyButton locale={chromeLocale} />
+                  <FooterEmailCopyButton
+                    locale={chromeLocale}
+                    copyLabel={guidanceFooter?.copyEmailLabel}
+                    copiedMessage={guidanceFooter?.emailCopiedMessage}
+                  />
                 </div>
               </div>
             </div>
@@ -181,7 +214,7 @@ export default function Footer({
               <LocaleFlagSwitcher locale={locale} className="footer-locale-switch" />
             </div>
             <div className="footer-social">
-              <span className="social-label">{locale === 'ko' ? '팔로우' : locale === 'zh-hant' ? '追蹤我們' : locale === 'ja' ? 'フォロー' : 'Follow'}</span>
+              <span className="social-label">{guidanceFooter?.followLabel ?? (locale === 'ko' ? '팔로우' : locale === 'zh-hant' ? '追蹤我們' : locale === 'ja' ? 'フォロー' : 'Follow')}</span>
               <div className="social-icons">
                 <a className="social-icon" href="https://blog.naver.com/wei_lawyer/223461663913" aria-label={socialLabels.blog} title={socialLabels.blog} target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>

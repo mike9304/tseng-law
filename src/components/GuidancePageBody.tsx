@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import FAQAccordion from '@/components/FAQAccordion';
+import GuidanceOfficeBand from '@/components/GuidanceOfficeBand';
+import { GuidanceServices } from '@/components/GuidanceHomeBody';
+import GuidanceTeamRoster from '@/components/GuidanceTeamRoster';
 import InternationalInquiryForm, {
   InternationalInquiryNotice,
 } from '@/components/InternationalInquiryForm';
@@ -107,6 +110,16 @@ export default function GuidancePageBody({
           </Reveal>
         ) : null}
 
+        {/* The English services page renders six practice-area cards with
+            icons; the guidance services page showed only the plain text card
+            grid. Same cards, same copy — the titles and summaries are already
+            derived from this locale's own services sections. */}
+        {pageKey === 'services' ? (
+          <Reveal>
+            <GuidanceServices locale={locale} showHeader={false} />
+          </Reveal>
+        ) : null}
+
         <Reveal>
           <section className="section section--light">
             <div className="container">
@@ -133,6 +146,16 @@ export default function GuidancePageBody({
             </div>
           </section>
         </Reveal>
+
+        {/* Team roster. The English `lawyers` and `about` pages both render
+            `AttorneyProfileSection`; before this the guidance locales showed no
+            portrait on either page. Placed after the page's own copy so the
+            localized explanation and its limits are read first. */}
+        {pageKey === 'lawyers' || pageKey === 'about' ? (
+          <Reveal>
+            <GuidanceTeamRoster locale={locale} />
+          </Reveal>
+        ) : null}
 
         {page.faqs && page.faqs.length > 0 ? (
           <Reveal>
@@ -174,6 +197,14 @@ export default function GuidancePageBody({
           </Reveal>
         ) : null}
       </article>
+
+      {/* Office photographs and addresses. The English contact page carries
+          them through `OfficeMapTabs`; the guidance contact page had neither. */}
+      {isContact ? (
+        <Reveal>
+          <GuidanceOfficeBand locale={locale} />
+        </Reveal>
+      ) : null}
 
       {isContact ? (
         <Reveal>

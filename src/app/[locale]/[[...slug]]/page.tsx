@@ -26,7 +26,7 @@ import {
   isGuidanceLocale4,
   type GuidanceLocale4,
 } from '@/lib/public-guidance';
-import { getSiteUrl } from '@/lib/seo';
+import { getOrganizationName, getSiteUrl } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -62,7 +62,7 @@ function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Me
   if (classified.kind !== 'page') {
     const pack = guidanceContent[locale];
     return {
-      title: { absolute: pack.notFoundTitle },
+      title: { absolute: `${pack.notFoundTitle} | ${getOrganizationName('en')}` },
       description: pack.notFoundText,
       robots: { index: false, follow: false },
     };
@@ -70,8 +70,11 @@ function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Me
 
   const page = guidanceContent[locale].pages[classified.pageKey];
   const siteUrl = getSiteUrl();
+  // Same "<page> | <firm>" shape the four site locales publish. The guidance
+  // titles carried the page name alone, so a search result showed no firm.
+  const brandName = getOrganizationName('en');
   return {
-    title: { absolute: page.title },
+    title: { absolute: `${page.title} | ${brandName}` },
     description: page.description,
     alternates: {
       canonical: guidanceCanonicalUrl(locale, classified.pageKey, siteUrl),

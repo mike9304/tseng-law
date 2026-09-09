@@ -13,8 +13,13 @@ import {
   isGuidanceLocale4,
   parsePublicLocaleFromPathname,
   resolvePublicLanguageSwitchTarget,
+  type PublicLanguageSwitchOptions,
   type PublicLocale8,
 } from '@/lib/public-guidance';
+import {
+  usePublicColumnSlugs,
+  type PublicColumnSlugsByLocale,
+} from '@/components/PublicColumnSlugsContext';
 import { jaLanguageSwitchTarget, restrictedPublicFamilyListPath } from '@/lib/public-route-policy';
 import styles from './LocaleFlagSwitcher.module.css';
 
@@ -45,16 +50,26 @@ function switcherGroupLabel(locale: PublicLocale8): string {
   return switcherLabels[locale];
 }
 
-function unavailableLanguageNotice(locale: PublicLocale8, targetLocale: PublicLocale8): string {
+/**
+ * WO-O22 A: shown when the selected language does not publish this exact page,
+ * so the link lands on the nearest page that does exist. Written in the page's
+ * own language and naming the target language, reusing the copy that already
+ * ships for all eight locales — no new sentence is invented here.
+ */
+export function fallbackLanguageNotice(
+  locale: PublicLocale8,
+  targetLocale: PublicLocale8,
+): string {
   const template = internationalInquiryCopy[locale as InquiryCopyLocale].unavailableLanguageNotice;
   return template.split('{language}').join(PUBLIC_LANGUAGE_AUTONYMS[targetLocale]);
 }
 
-export function localeFlagHref(pathname: string, targetLocale: PublicLocale8): string {
-  const switchTarget = resolvePublicLanguageSwitchTarget(pathname, targetLocale);
-  if (switchTarget.status === 'unavailable') {
-    return '';
-  }
+export function localeFlagHref(
+  pathname: string,
+  targetLocale: PublicLocale8,
+  options?: PublicLanguageSwitchOptions,
+): string {
+  const switchTarget = resolvePublicLanguageSwitchTarget(pathname, targetLocale, options);
 
   const currentLocale = parsePublicLocaleFromPathname(pathname);
   if (isGuidanceLocale4(targetLocale)) {
@@ -80,18 +95,32 @@ export function localeFlagHref(pathname: string, targetLocale: PublicLocale8): s
   return buildLocalePath(pathname, targetLocale);
 }
 
-export default function LocaleFlagSwitcher({
-  locale,
-  className,
-  linkClassName,
-  onLocaleSelect,
-}: {
+export type LocaleFlagSwitcherProps = {
   locale: PublicLocale8;
   className?: string;
   linkClassName?: string;
   onLocaleSelect?: (targetLocale: PublicLocale8) => void;
+};
+
+/**
+ * Pure view: takes the resolved pathname and column availability instead of
+ * reading them from hooks, so the markup can be exercised directly in unit
+ * tests. `LocaleFlagSwitcher` is the hook-reading wrapper the app renders.
+ */
+export function LocaleFlagSwitcherView({
+  locale,
+  pathname,
+  columnSlugsByLocale,
+  className,
+  linkClassName,
+  onLocaleSelect,
+}: LocaleFlagSwitcherProps & {
+  pathname: string;
+  columnSlugsByLocale?: PublicColumnSlugsByLocale | null;
 }) {
-  const pathname = usePathname() ?? `/${locale}`;
+  const switchOptions: PublicLanguageSwitchOptions | undefined = columnSlugsByLocale
+    ? { columnSlugsByLocale }
+    : undefined;
   const rootClassName = ['locale-flag-switcher', styles.root, className].filter(Boolean).join(' ');
   const itemClassName = ['locale-flag-switcher-link', styles.option, linkClassName]
     .filter(Boolean)
@@ -106,31 +135,28 @@ export default function LocaleFlagSwitcher({
         </summary>
         <ul className={styles.menu}>
           {LOCALE_FLAG_OPTIONS.map((option) => {
-            const switchTarget = resolvePublicLanguageSwitchTarget(pathname, option.locale);
+            const switchTarget = resolvePublicLanguageSwitchTarget(
+              pathname,
+              option.locale,
+              switchOptions,
+            );
             const isCurrent = locale === option.locale;
-            if (switchTarget.status === 'unavailable') {
-              const notice = unavailableLanguageNotice(locale, option.locale);
-              return (
-                <li key={option.locale}>
-                  <span
-                    className={`${itemClassName} ${styles.disabled}`}
-                    aria-disabled="true"
-                    aria-label={option.label}
-                    aria-description={notice}
-                  >
-                    <span className={styles.optionLabel}>{option.label}</span>
-                    <span className={styles.unavailableNotice}>{notice}</span>
-                  </span>
-                </li>
-              );
-            }
+            // WO-O22 A: every locale is always a real link. When the exact page
+            // is missing in that language the href degrades to the nearest
+            // existing page and the label says so — never a 404, never a
+            // dropped option.
+            const isFallback = switchTarget.fallback !== 'exact';
+            const notice = isFallback ? fallbackLanguageNotice(locale, option.locale) : undefined;
 
             return (
               <li key={option.locale}>
                 <Link
-                  href={localeFlagHref(pathname, option.locale)}
+                  href={localeFlagHref(pathname, option.locale, switchOptions)}
                   className={itemClassName}
+                  data-locale-switch-fallback={isFallback ? switchTarget.fallback : undefined}
                   aria-current={isCurrent ? 'page' : undefined}
+                  aria-label={notice ? `${option.label}. ${notice}` : undefined}
+                  title={notice}
                   onClick={() => onLocaleSelect?.(option.locale)}
                 >
                   {option.label}
@@ -141,5 +167,17 @@ export default function LocaleFlagSwitcher({
         </ul>
       </details>
     </div>
+  );
+}
+
+export default function LocaleFlagSwitcher(props: LocaleFlagSwitcherProps) {
+  const pathname = usePathname() ?? `/${props.locale}`;
+  const columnSlugsByLocale = usePublicColumnSlugs();
+  return (
+    <LocaleFlagSwitcherView
+      {...props}
+      pathname={pathname}
+      columnSlugsByLocale={columnSlugsByLocale}
+    />
   );
 }

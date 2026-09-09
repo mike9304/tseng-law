@@ -11,7 +11,7 @@ import {
   type MouseEvent,
   type ReactNode,
 } from 'react';
-import type { SiteLocale } from '@/lib/locales';
+import type { PublicLocale8 } from '@/lib/public-guidance';
 import DecorativeAutoplayVideo, {
   DECORATIVE_VIDEO_CONTROL_LABELS,
 } from '@/components/DecorativeAutoplayVideo';
@@ -409,8 +409,14 @@ export function hasPositiveIntersection(entry: IntersectionObserverEntry): boole
   );
 }
 
+/**
+ * WO-O22 B: the opening now plays in all eight public languages. The existing
+ * four entries are unchanged byte for byte; the new four are translations of
+ * the English brand copy above (firm name, tagline and UI affordances only —
+ * no figure, credential or track record is introduced here).
+ */
 export const CINEMATIC_OPENING_COPY: Record<
-  SiteLocale,
+  PublicLocale8,
   {
     primary: string;
     secondary: string;
@@ -457,13 +463,53 @@ export const CINEMATIC_OPENING_COPY: Record<
     service: '台湾の法律相談 · 日本語・英語・韓国語で対応',
     contact: '相談窓口',
   },
+  vi: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'VĂN PHÒNG LUẬT SƯ TẠI ĐÀI LOAN',
+    scroll: 'Cuộn xuống',
+    skip: 'Bỏ qua phần mở đầu',
+    mediaAlt:
+      'Cảnh quay trên không dưới ánh sáng tự nhiên, bay qua dãy Trung Ương Sơn Mạch và biển mây của Đài Loan',
+    service: 'Hỗ trợ pháp lý tại Đài Loan · Tiếng Anh, tiếng Nhật và tiếng Hàn',
+    contact: 'Liên hệ văn phòng',
+  },
+  id: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'KANTOR HUKUM DI TAIWAN',
+    scroll: 'Gulir ke bawah',
+    skip: 'Lewati intro',
+    mediaAlt:
+      'Rekaman udara dalam cahaya alami yang terang, melintasi Pegunungan Tengah Taiwan dan lautan awan',
+    service: 'Dukungan hukum Taiwan · Bahasa Inggris, Jepang, dan Korea',
+    contact: 'Hubungi kantor kami',
+  },
+  th: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'สำนักงานกฎหมายในไต้หวัน',
+    scroll: 'เลื่อนลง',
+    skip: 'ข้ามบทนำ',
+    mediaAlt:
+      'ภาพมุมสูงใต้แสงธรรมชาติที่สว่าง บินเหนือเทือกเขาตอนกลางของไต้หวันและทะเลหมอก',
+    service: 'บริการทางกฎหมายในไต้หวัน · ภาษาอังกฤษ ญี่ปุ่น และเกาหลี',
+    contact: 'ติดต่อสำนักงาน',
+  },
+  fil: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'MGA ABOGADO SA TAIWAN',
+    scroll: 'Mag-scroll pababa',
+    skip: 'Laktawan ang intro',
+    mediaAlt:
+      'Maliwanag na aerial na kuha sa natural na liwanag, lumilipad sa ibabaw ng Central Mountain Range ng Taiwan at dagat ng mga ulap',
+    service: 'Legal na suporta sa Taiwan · Ingles, Hapon at Koreano',
+    contact: 'Makipag-ugnayan sa firm',
+  },
 };
 
 export default function CinematicOpening({
   locale,
   deferredContent,
 }: {
-  locale: SiteLocale;
+  locale: PublicLocale8;
   deferredContent?: ReactNode;
 }) {
   const sectionRef = useRef<HTMLElement>(null);

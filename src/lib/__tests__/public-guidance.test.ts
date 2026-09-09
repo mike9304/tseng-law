@@ -244,26 +244,32 @@ describe('language switch targets', () => {
     expect(resolvePublicLanguageSwitchTarget('/vi/about', 'ko')).toEqual({
       status: 'available',
       href: '/ko/about',
+      fallback: 'exact',
     });
     expect(resolvePublicLanguageSwitchTarget('/ko/about', 'vi')).toEqual({
       status: 'available',
       href: '/vi/about',
+      fallback: 'exact',
     });
     expect(resolvePublicLanguageSwitchTarget('/en/faq', 'th')).toEqual({
       status: 'available',
       href: '/th/faq',
+      fallback: 'exact',
     });
     expect(resolvePublicLanguageSwitchTarget('/vi/columns', 'zh-hant')).toEqual({
       status: 'available',
       href: '/zh-hant/columns',
+      fallback: 'exact',
     });
     expect(resolvePublicLanguageSwitchTarget('/id', 'ja')).toEqual({
       status: 'available',
       href: '/ja',
+      fallback: 'exact',
     });
     expect(resolvePublicLanguageSwitchTarget('/fil/contact', 'en')).toEqual({
       status: 'available',
       href: '/en/contact',
+      fallback: 'exact',
     });
   });
 
@@ -271,33 +277,86 @@ describe('language switch targets', () => {
     expect(resolvePublicLanguageSwitchTarget('/vi/services', 'vi')).toEqual({
       status: 'available',
       href: '/vi/services',
+      fallback: 'exact',
     });
     expect(resolvePublicLanguageSwitchTarget('/ko/about', 'ko')).toEqual({
       status: 'available',
       href: '/ko/about',
+      fallback: 'exact',
     });
   });
 
-  it('marks deep non-translated targets into the new four as unavailable', () => {
+  /**
+   * WO-O22 A: the switcher must offer all eight languages on every public page
+   * and must never link to a 404. A page the new four do not publish therefore
+   * resolves to the nearest page that does exist, flagged as a fallback so the
+   * UI can say so in its accessible label.
+   */
+  it('lands deep non-translated targets on the nearest existing new-four page', () => {
     expect(resolvePublicLanguageSwitchTarget('/ko/services/civil', 'vi')).toEqual({
-      status: 'unavailable',
+      status: 'available',
+      href: '/vi',
+      fallback: 'home',
     });
-    expect(resolvePublicLanguageSwitchTarget('/ja/columns/taiwan-company-establishment-basics', 'th')).toEqual({
-      status: 'unavailable',
+    expect(
+      resolvePublicLanguageSwitchTarget('/ja/columns/taiwan-company-establishment-basics', 'th'),
+    ).toEqual({
+      status: 'available',
+      href: '/th/columns',
+      fallback: 'columns-list',
     });
     expect(resolvePublicLanguageSwitchTarget('/en/store', 'fil')).toEqual({
-      status: 'unavailable',
+      status: 'available',
+      href: '/fil',
+      fallback: 'home',
     });
     expect(resolvePublicLanguageSwitchTarget('/zh-hant/lawyers/wei-tseng', 'id')).toEqual({
-      status: 'unavailable',
+      status: 'available',
+      href: '/id',
+      fallback: 'home',
     });
-    expect(resolvePublicLanguageSwitchTarget('/ko/columns/some-slug', 'vi')).toEqual({
-      status: 'unavailable',
+  });
+
+  it('links the same article when the target language has that translation on disk', () => {
+    const columnSlugsByLocale = { vi: ['taiwan-labor-severance-law'], th: [] };
+    expect(
+      resolvePublicLanguageSwitchTarget('/ja/columns/taiwan-labor-severance-law', 'vi', {
+        columnSlugsByLocale,
+      }),
+    ).toEqual({
+      status: 'available',
+      href: '/vi/columns/taiwan-labor-severance-law',
+      fallback: 'exact',
+    });
+    // th has no such file, so it degrades to the th column index, not a 404.
+    expect(
+      resolvePublicLanguageSwitchTarget('/ja/columns/taiwan-labor-severance-law', 'th', {
+        columnSlugsByLocale,
+      }),
+    ).toEqual({
+      status: 'available',
+      href: '/th/columns',
+      fallback: 'columns-list',
     });
   });
 
   it('does not invent same-language fake article links for the new four', () => {
-    expect(resolvePublicLanguageSwitchTarget('/ko/columns/some-slug', 'vi').status).toBe('unavailable');
+    // Nothing declares `some-slug` in vi, so the resolver refuses to build
+    // `/vi/columns/some-slug` and points at the vi column index instead.
+    expect(resolvePublicLanguageSwitchTarget('/ko/columns/some-slug', 'vi')).toEqual({
+      status: 'available',
+      href: '/vi/columns',
+      fallback: 'columns-list',
+    });
+    expect(
+      resolvePublicLanguageSwitchTarget('/ko/columns/some-slug', 'vi', {
+        columnSlugsByLocale: { vi: ['taiwan-labor-severance-law'] },
+      }),
+    ).toEqual({
+      status: 'available',
+      href: '/vi/columns',
+      fallback: 'columns-list',
+    });
     expect(guidancePublicPath('vi', 'columns')).toBe('/vi/columns');
     expect(guidancePublicPath('vi', 'home')).toBe('/vi');
   });
@@ -306,18 +365,22 @@ describe('language switch targets', () => {
     expect(resolvePublicLanguageSwitchTarget('/ko/services/civil', 'ja')).toEqual({
       status: 'available',
       href: '/ja/services/civil',
+      fallback: 'exact',
     });
     expect(resolvePublicLanguageSwitchTarget('/vi/about', 'ja')).toEqual({
       status: 'available',
       href: '/ja/about',
+      fallback: 'exact',
     });
     expect(resolvePublicLanguageSwitchTarget('/en/store/products/taiwan-business-guide', 'ja')).toEqual({
       status: 'available',
       href: '/ja/columns',
+      fallback: 'exact',
     });
     expect(resolvePublicLanguageSwitchTarget('/ko/taiwan-lawyer', 'ja')).toEqual({
       status: 'available',
       href: '/ja/taiwan-lawyer',
+      fallback: 'exact',
     });
   });
 
@@ -325,14 +388,17 @@ describe('language switch targets', () => {
     expect(resolvePublicLanguageSwitchTarget('/ko/about', 'zh-hant')).toEqual({
       status: 'available',
       href: '/zh-hant/about',
+      fallback: 'exact',
     });
     expect(resolvePublicLanguageSwitchTarget('/en/portfolio/item', 'ko')).toEqual({
       status: 'available',
       href: '/ko/portfolio',
+      fallback: 'exact',
     });
     expect(resolvePublicLanguageSwitchTarget('/zh-hant/store/products/guide', 'en')).toEqual({
       status: 'available',
       href: '/en/store',
+      fallback: 'exact',
     });
   });
 
@@ -342,10 +408,10 @@ describe('language switch targets', () => {
     ).toBe('/vi/services');
     expect(
       resolvePublicLanguageSwitchTarget('/vi/__public-guidance/services', 'ko'),
-    ).toEqual({ status: 'available', href: '/ko/services' });
+    ).toEqual({ status: 'available', href: '/ko/services', fallback: 'exact' });
     expect(
       resolvePublicLanguageSwitchTarget('/th/__public-guidance-unavailable/store', 'fil'),
-    ).toEqual({ status: 'unavailable' });
+    ).toEqual({ status: 'available', href: '/fil', fallback: 'home' });
   });
 });
 

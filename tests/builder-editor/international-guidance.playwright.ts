@@ -21,6 +21,9 @@ import {
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import { getSiteUrl } from '@/lib/seo';
+import { guidanceOfficeCopy } from '@/data/international-guidance-offices';
+import { guidanceTeamCopy } from '@/data/international-guidance-team';
+import { teamContent } from '@/data/team-members';
 import { listColumnSlugsFromFs } from './column-corpus';
 
 const DESKTOP = { width: 1440, height: 1000 } as const;
@@ -457,5 +460,327 @@ test.describe('international guidance public surface', () => {
         await attachViewportScreenshot(page, `guidance-404-${locale}-${viewport.width}`);
       });
     }
+  }
+});
+
+/**
+ * O19 — asset parity between the four guidance locales and the English pages.
+ *
+ * The reported defect: `/{vi,id,th,fil}/lawyers` rendered no attorney
+ * photograph or profile card while `/en/lawyers` renders five. The audit
+ * (evidence/O19-AUDIT.md) found the same roster missing from `/about`, and the
+ * office photographs and addresses missing from `/contact`.
+ *
+ * Every count below is READ FROM THE ENGLISH PAGE and compared, so the
+ * assertions keep holding when a team member or an office is added or removed.
+ */
+test.describe('O19 guidance asset parity with /en', () => {
+  const ROSTER_PAGES = ['lawyers', 'about'] as const;
+
+  async function englishRosterCounts(page: Page, pageKey: string) {
+    await page.goto(`/en/${pageKey}`, { waitUntil: 'domcontentloaded' });
+    const roster = page.locator('section.attorney-team-section');
+    await expect(roster.first()).toBeVisible();
+    const cards = await roster.locator('article.attorney-card').count();
+    const images = await roster.locator('img').count();
+    return { cards, images };
+  }
+
+  for (const pageKey of ROSTER_PAGES) {
+    for (const locale of GUIDANCE_LOCALES_4) {
+      test(`${locale} /${pageKey} renders the same team roster as /en`, async ({ page }) => {
+        await page.setViewportSize(DESKTOP);
+        const expected = await englishRosterCounts(page, pageKey);
+        expect(expected.cards, `/en/${pageKey} must have team cards to compare against`)
+          .toBeGreaterThan(0);
+        expect(expected.images, `/en/${pageKey} must have team photos to compare against`)
+          .toBeGreaterThan(0);
+
+        await page.goto(guidancePublicPath(locale, pageKey as GuidancePageKey), {
+          waitUntil: 'domcontentloaded',
+        });
+        const roster = page.locator('section[data-guidance-team="true"]');
+        await expect(roster).toBeVisible();
+        await expect(roster.locator('article.attorney-card')).toHaveCount(expected.cards);
+        await expect(roster.locator('img')).toHaveCount(expected.images);
+
+        // Every portrait resolves to a real file, and its alt text is not empty.
+        const images = roster.locator('img');
+        for (let i = 0; i < expected.images; i += 1) {
+          const img = images.nth(i);
+          await expect(img).toHaveAttribute('alt', /\S/);
+          // next/image lazy-loads below the fold, so the portrait has to be
+          // scrolled to before `naturalWidth` means anything.
+          await img.scrollIntoViewIfNeeded();
+          await expect
+            .poll(async () => img.evaluate((node) => (node as HTMLImageElement).naturalWidth))
+            .toBeGreaterThan(0);
+        }
+
+        // Roster headings and labels are in the page language, not English.
+        const copy = guidanceTeamCopy[locale];
+        await expect(roster).toContainText(copy.title);
+        await expect(roster).toContainText(copy.representativeTitle);
+        await expect(roster).toContainText(copy.teamTitle);
+        await expect(roster).toContainText(copy.partnerTitle);
+        await expect(roster).toContainText(copy.introLabel);
+        await expect(roster).toContainText(copy.educationLabel);
+        await expect(roster).toContainText(copy.experienceLabel);
+        // The English-original biography lines are declared as such, in the
+        // page language, instead of being passed off as a translation.
+        await expect(roster.locator('[data-guidance-team-source-language="en"]')).toContainText(
+          copy.sourceLanguageNote,
+        );
+
+        // Names come from the canonical record unchanged.
+        for (const member of teamContent.en.members) {
+          await expect(roster).toContainText(member.name);
+        }
+
+        // No other guidance locale's roster copy leaked onto this page.
+        for (const other of GUIDANCE_LOCALES_4) {
+          if (other === locale) continue;
+          await expect(roster).not.toContainText(guidanceTeamCopy[other].representativeTitle);
+        }
+
+        // The roster must not link to /{guidance locale}/lawyers/{slug}: that
+        // route serves the four site locales only.
+        await expect(
+          roster.locator(`a[href^="/${locale}/lawyers/"]`),
+        ).toHaveCount(0);
+
+        await expect.poll(() => documentOverflowPx(page)).toBeLessThanOrEqual(1);
+      });
+    }
+  }
+
+  for (const locale of GUIDANCE_LOCALES_4) {
+    test(`${locale} /contact renders office photos and addresses like /en`, async ({ page }) => {
+      await page.setViewportSize(DESKTOP);
+
+      await page.goto('/en/contact', { waitUntil: 'domcontentloaded' });
+      const enOffices = page.locator('#offices');
+      await expect(enOffices.first()).toBeVisible();
+      const expectedOffices = await enOffices.locator('[role="tab"]').count();
+      const expectedPhotos = await enOffices.locator('img').count();
+      expect(expectedOffices, '/en/contact must list offices to compare against').toBeGreaterThan(0);
+      expect(expectedPhotos, '/en/contact must show office photos to compare against')
+        .toBeGreaterThan(0);
+
+      await page.goto(guidancePublicPath(locale, 'contact'), { waitUntil: 'domcontentloaded' });
+      const band = page.locator('section[data-guidance-offices="true"]');
+      await expect(band).toBeVisible();
+      await expect(band.locator('[data-guidance-office]')).toHaveCount(expectedOffices);
+      await expect(band.locator('[data-guidance-office-photo] img')).toHaveCount(expectedPhotos);
+
+      const copy = guidanceOfficeCopy[locale];
+      await expect(band).toContainText(copy.title);
+      await expect(band).toContainText(copy.mapLinkLabel);
+      for (const title of Object.values(copy.officeTitles)) {
+        await expect(band).toContainText(title);
+      }
+
+      const photos = band.locator('[data-guidance-office-photo] img');
+      for (let i = 0; i < expectedPhotos; i += 1) {
+        const img = photos.nth(i);
+        await expect(img).toHaveAttribute('alt', /\S/);
+        await img.scrollIntoViewIfNeeded();
+        await expect
+          .poll(async () => img.evaluate((node) => (node as HTMLImageElement).naturalWidth))
+          .toBeGreaterThan(0);
+      }
+
+      await expect.poll(() => documentOverflowPx(page)).toBeLessThanOrEqual(1);
+    });
+  }
+
+  /**
+   * The roster must never read as "we can consult in this language". The four
+   * consultation languages notice is the only language claim on the page.
+   */
+  for (const locale of GUIDANCE_LOCALES_4) {
+    test(`${locale} /lawyers roster adds no consultation-language claim`, async ({ page }) => {
+      await page.setViewportSize(DESKTOP);
+      await page.goto(guidancePublicPath(locale, 'lawyers'), { waitUntil: 'domcontentloaded' });
+      const roster = page.locator('section[data-guidance-team="true"]');
+      await expect(roster).toBeVisible();
+      const rosterText = ((await roster.textContent()) ?? '').toLowerCase();
+      // Only the four NEW languages are checked. The canonical English bio
+      // does mention English / Chinese / Japanese / Korean — those are the
+      // firm's four consultation languages and saying so is correct. What must
+      // never appear is a guidance language presented as a working language.
+      for (const guidance of GUIDANCE_LOCALES_4) {
+        const autonym = PUBLIC_LANGUAGE_AUTONYMS[guidance];
+        expect(
+          rosterText.includes(autonym.toLowerCase()),
+          `roster must not name ${autonym} as a working language`,
+        ).toBe(false);
+      }
+    });
+  }
+});
+
+/**
+ * O19 count vectors. Every expected number is read from the English page in
+ * the same run, so nothing here is hard-coded to today's content.
+ *
+ * `allowances` records the differences the audit found to be deliberate and
+ * says why. A page not listed must match /en exactly on every vector.
+ */
+type CountVector = {
+  teamImages: number;
+  serviceCards: number;
+  iframes: number;
+  telLinks: number;
+  mapLinks: number;
+  jsonLdTypes: string[];
+};
+
+async function readCountVector(page: Page, path: string): Promise<CountVector> {
+  await page.goto(path, { waitUntil: 'domcontentloaded' });
+  return page.evaluate(() => {
+    const decoded = (value: string) => {
+      try {
+        return decodeURIComponent(value);
+      } catch {
+        return value;
+      }
+    };
+    const images = Array.from(document.querySelectorAll('img'));
+    const jsonLdTypes = new Set<string>();
+    for (const node of Array.from(
+      document.querySelectorAll('script[type="application/ld+json"]'),
+    )) {
+      try {
+        const parsed = JSON.parse(node.textContent ?? '');
+        for (const entry of Array.isArray(parsed) ? parsed : [parsed]) {
+          const type = entry?.['@type'];
+          for (const value of Array.isArray(type) ? type : [type]) {
+            if (typeof value === 'string') jsonLdTypes.add(value);
+          }
+        }
+      } catch {
+        /* a malformed block is caught by the SEO suite, not here */
+      }
+    }
+    return {
+      teamImages: images.filter((img) => decoded(img.getAttribute('src') ?? '').includes('/images/team/')).length,
+      serviceCards: document.querySelectorAll('.services-detail-card').length,
+      iframes: document.querySelectorAll('iframe').length,
+      telLinks: document.querySelectorAll('a[href^="tel:"]').length,
+      mapLinks: document.querySelectorAll('a[href*="google.com/maps"], a[href*="maps.app.goo.gl"]').length,
+      jsonLdTypes: Array.from(jsonLdTypes).sort(),
+    };
+  });
+}
+
+/**
+ * Deliberate differences, with the reason. Anything not listed must match /en.
+ *   - home `teamImages`: the English home runs `HomeAttorneySplit`, a
+ *     single-portrait editorial block whose copy has no guidance-language
+ *     source. The roster lives on /lawyers and /about instead.
+ *   - JSON-LD: the guidance pages emit `LegalService` (+`FAQPage` where the
+ *     page has questions). `Person`, `BreadcrumbList` and `CollectionPage`
+ *     builders are typed to the four site locales; widening them is a separate
+ *     change and is recorded as outstanding in evidence/O19-AUDIT.md.
+ */
+const O19_ALLOWANCES: Partial<
+  Record<string, Partial<Record<keyof CountVector, 'skip'>>>
+> = {
+  home: { teamImages: 'skip', jsonLdTypes: 'skip' },
+  services: { jsonLdTypes: 'skip' },
+  about: { jsonLdTypes: 'skip' },
+  lawyers: { jsonLdTypes: 'skip' },
+  contact: { jsonLdTypes: 'skip' },
+};
+
+test.describe('O19 count vectors vs /en', () => {
+  const VECTOR_PAGES = ['home', 'services', 'about', 'lawyers', 'contact'] as const;
+
+  for (const pageKey of VECTOR_PAGES) {
+    for (const locale of GUIDANCE_LOCALES_4) {
+      test(`${locale} /${pageKey} matches the /en count vector`, async ({ page }) => {
+        await page.setViewportSize(DESKTOP);
+        const enPath = pageKey === 'home' ? '/en' : `/en/${pageKey}`;
+        const expected = await readCountVector(page, enPath);
+        const actual = await readCountVector(
+          page,
+          guidancePublicPath(locale, pageKey as GuidancePageKey),
+        );
+        const allowance = O19_ALLOWANCES[pageKey] ?? {};
+
+        for (const key of ['teamImages', 'serviceCards', 'iframes'] as const) {
+          if (allowance[key] === 'skip') continue;
+          expect(actual[key], `${locale}/${pageKey} ${key} (en=${expected[key]})`).toBe(
+            expected[key],
+          );
+        }
+
+        // `OfficeMapTabs` puts three of the four offices behind inactive tabs,
+        // so the English page exposes one office's phone number and map link at
+        // a time. The guidance band lists all four at once, which is a superset,
+        // never fewer. Equality here would force the guidance page to hide
+        // canonical contact details it already renders correctly.
+        for (const key of ['telLinks', 'mapLinks'] as const) {
+          if (allowance[key] === 'skip') continue;
+          expect(
+            actual[key],
+            `${locale}/${pageKey} ${key} must be at least the en count (en=${expected[key]})`,
+          ).toBeGreaterThanOrEqual(expected[key]);
+          if (expected[key] > 0) {
+            expect(actual[key], `${locale}/${pageKey} ${key} must not be zero`).toBeGreaterThan(0);
+          }
+        }
+
+        if (allowance.jsonLdTypes !== 'skip') {
+          for (const type of expected.jsonLdTypes) {
+            expect(actual.jsonLdTypes, `${locale}/${pageKey} JSON-LD @type`).toContain(type);
+          }
+        }
+      });
+    }
+  }
+
+  /**
+   * English chrome labels that used to survive on the guidance pages. Proper
+   * nouns, e-mail addresses and Taiwan addresses are exempt and are not listed.
+   */
+  const ENGLISH_CHROME_RESIDUE = [
+    'Offices',
+    'Taipei Office',
+    'Official consultation email',
+    'Copy email address',
+    'Follow',
+    'Sitemap',
+  ] as const;
+
+  for (const locale of GUIDANCE_LOCALES_4) {
+    test(`${locale} footer carries no English chrome label`, async ({ page }) => {
+      await page.setViewportSize(DESKTOP);
+      await page.goto(guidancePublicPath(locale, 'home'), { waitUntil: 'domcontentloaded' });
+      const footerHtml = await page.evaluate(() => {
+        const footer = document.querySelector('footer.site-footer');
+        if (!footer) return '';
+        // aria-labels and titles count: they are read out loud.
+        return `${footer.outerHTML}`;
+      });
+      expect(footerHtml, 'the public footer must render').not.toBe('');
+      for (const label of ENGLISH_CHROME_RESIDUE) {
+        expect(footerHtml.includes(label), `footer must not contain "${label}"`).toBe(false);
+      }
+    });
+
+    test(`${locale} page titles carry the firm name`, async ({ page }) => {
+      await page.setViewportSize(DESKTOP);
+      await page.goto('/en/lawyers', { waitUntil: 'domcontentloaded' });
+      const enTitle = await page.title();
+      const brand = enTitle.split('|').pop()?.trim() ?? '';
+      expect(brand, '/en/lawyers title must carry a brand suffix').not.toBe('');
+
+      for (const pageKey of ['home', 'lawyers', 'contact'] as const) {
+        await page.goto(guidancePublicPath(locale, pageKey), { waitUntil: 'domcontentloaded' });
+        expect(await page.title(), `${locale}/${pageKey} title`).toContain(brand);
+      }
+    });
   }
 });

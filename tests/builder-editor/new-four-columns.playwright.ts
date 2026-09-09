@@ -78,11 +78,14 @@ test.describe('new-four columns with translations', () => {
     }
   });
 
-  test('WO-G23: untranslated vi slug is localized 404', async ({ page }) => {
+  test('WO-O22 D: a slug with no markdown file anywhere is a localized vi 404', async ({ page }) => {
     const pack = guidanceContent[LOCALE];
-    const translated = new Set(listColumnSlugsFromFs(LOCALE));
-    const missing = listColumnSlugsFromFs('ko').find((slug) => !translated.has(slug));
-    expect(missing, 'at least one untranslated Korean slug').toBeTruthy();
+    // Every Korean slug now has a vi translation, so the "unknown slug 404s"
+    // contract is probed with a slug that has no file in any locale. The
+    // contract is unchanged; only the probe is.
+    const missing = 'nonexistent-article';
+    expect(listColumnSlugsFromFs('ko')).not.toContain(missing);
+    expect(listColumnSlugsFromFs(LOCALE)).not.toContain(missing);
 
     const path = `/${LOCALE}/columns/${missing}`;
     const detail = await page.goto(path, { waitUntil: 'domcontentloaded' });
@@ -92,5 +95,71 @@ test.describe('new-four columns with translations', () => {
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(pack.notFoundTitle);
     const robots = await page.locator('meta[name="robots"]').getAttribute('content');
     expect(robots?.toLowerCase()).toMatch(/noindex/);
+  });
+
+  /**
+   * WO-O22 A: the switcher offers all eight languages on every public page,
+   * including the JA column detail and the JA-only routes that used to show
+   * four, and none of those links may 404.
+   */
+  test('WO-O22 A: every public page offers all eight languages with live links', async ({
+    page,
+  }) => {
+    const translatedSlugs = listColumnSlugsFromFs(LOCALE);
+    const sampleSlug = translatedSlugs[0];
+    expect(sampleSlug, 'a vi-translated slug').toBeTruthy();
+
+    const paths = [
+      `/ja/columns/${sampleSlug}`,
+      '/ja/videos',
+      '/ja/korean-lawyer-in-taiwan',
+      '/ja',
+      '/ja/columns',
+    ];
+
+    for (const path of paths) {
+      const response = await page.goto(path, { waitUntil: 'domcontentloaded' });
+      expect(response?.status(), path).toBe(200);
+
+      const switcher = page
+        .locator('header[data-public-site-header] .locale-flag-switcher')
+        .first();
+      const options = switcher.locator('.locale-flag-switcher-link');
+      await expect(options, `${path} switcher option count`).toHaveCount(8);
+
+      const hrefs = await options.evaluateAll((nodes) =>
+        nodes.map((node) => node.getAttribute('href') ?? ''),
+      );
+      expect(hrefs.filter(Boolean), `${path} every option is a link`).toHaveLength(8);
+      for (const locale of ['vi', 'id', 'th', 'fil'] as const) {
+        expect(
+          hrefs.some((href) => href === `/${locale}` || href.startsWith(`/${locale}/`)),
+          `${path} -> ${locale}`,
+        ).toBe(true);
+      }
+
+      // No option may point at a 404.
+      for (const href of hrefs) {
+        const probe = await page.request.get(href);
+        expect(probe.status(), `${path} -> ${href}`).toBe(200);
+      }
+    }
+  });
+
+  test('WO-O22 A: a JA column detail links the same article in the new four', async ({ page }) => {
+    const sampleSlug = listColumnSlugsFromFs(LOCALE)[0];
+    const response = await page.goto(`/ja/columns/${sampleSlug}`, {
+      waitUntil: 'domcontentloaded',
+    });
+    expect(response?.status()).toBe(200);
+
+    for (const locale of ['vi', 'id', 'th', 'fil'] as const) {
+      await expect(
+        page.locator(
+          `header[data-public-site-header] .locale-flag-switcher a[href="/${locale}/columns/${sampleSlug}"]`,
+        ),
+        `${locale} same-slug switcher link`,
+      ).toHaveCount(1);
+    }
   });
 });

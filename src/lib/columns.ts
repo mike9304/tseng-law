@@ -3,7 +3,12 @@ import path from 'path';
 import matter from 'gray-matter';
 import type { Locale, SiteLocale } from './locales';
 import { COLUMN_CONTENT_DIR_BY_LOCALE, getColumnAlternateLocales } from './column-locales';
-import { isGuidanceLocale4, isPublicLocale8, type PublicLocale8 } from './public-guidance';
+import {
+  PUBLIC_LOCALES_8,
+  isGuidanceLocale4,
+  isPublicLocale8,
+  type PublicLocale8,
+} from './public-guidance';
 import { insightsArchive } from '../data/insights-archive';
 import {
   formatColumnPublicationDate,
@@ -288,6 +293,18 @@ export function hasColumnTranslation(
 
 export function getColumnSlugs(): string[] {
   return getAllColumnPosts('ko').map((p) => p.slug);
+}
+
+/**
+ * WO-O22 A: on-disk column slugs per public locale, for the language switcher.
+ * Server-only (reads `src/content/columns-*`); the public locale layout hands
+ * the result to `PublicColumnSlugsProvider` so a client switcher can link the
+ * same article in another language without ever guessing a 404 URL.
+ */
+export function publicColumnSlugsByLocale(): Record<PublicLocale8, string[]> {
+  return Object.fromEntries(
+    PUBLIC_LOCALES_8.map((locale) => [locale, getAllColumnPosts(locale).map((post) => post.slug)]),
+  ) as Record<PublicLocale8, string[]>;
 }
 
 export function getFeaturedColumns(count = 6, locale: ColumnContentLocale = 'ko'): ColumnPost[] {

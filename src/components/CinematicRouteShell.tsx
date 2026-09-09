@@ -2,8 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import type { ReactNode } from 'react';
-import type { SiteLocale } from '@/lib/locales';
-import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
+import { type PublicLocale8 } from '@/lib/public-guidance';
 import CinematicOpening from '@/components/CinematicOpening';
 
 export const CINEMATIC_CHROME_ATTRIBUTE = 'data-cinematic-chrome';
@@ -35,11 +34,10 @@ export default function CinematicRouteShell({
   children: ReactNode;
 }) {
   const pathname = usePathname();
-  // The cinematic opening is scripted per site locale (CINEMATIC_OPENING_COPY);
-  // guidance locales have no such script, so their home page opens directly on
-  // the hero instead of playing an untranslated intro.
-  const showCinematicOpening =
-    !isGuidanceLocale4(locale) && isCinematicHomepagePath(pathname, locale);
+  // WO-O22 B: CINEMATIC_OPENING_COPY now covers all eight public languages, so
+  // vi/id/th/fil play the same opening as ko/zh-hant/en/ja instead of dropping
+  // straight onto the hero.
+  const showCinematicOpening = isCinematicHomepagePath(pathname, locale);
 
   return (
     <div
@@ -81,7 +79,7 @@ export default function CinematicRouteShell({
               }
             `}</style>
           </noscript>
-          <CinematicOpening locale={locale as SiteLocale} deferredContent={eventPopup} />
+          <CinematicOpening locale={locale} deferredContent={eventPopup} />
         </>
       ) : null}
       <main id="main">

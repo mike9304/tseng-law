@@ -11,6 +11,8 @@ import ScrollTopButton from '@/components/ScrollTopButton';
 import QuickContactWidget from '@/components/QuickContactWidget';
 import CinematicRouteShell from '@/components/CinematicRouteShell';
 import VisitTracker from '@/components/metrics/VisitTracker';
+import { PublicColumnSlugsProvider } from '@/components/PublicColumnSlugsContext';
+import { publicColumnSlugsByLocale } from '@/lib/columns';
 import {
   getLocaleFontClassName,
   getManagedLocaleFontClassNames,
@@ -104,6 +106,9 @@ export default async function LocaleLayout(
   } = props;
 
   const publicLocale = resolvePublicLocaleOrNotFound(params.locale);
+  // WO-O22 A: read once per render so the client language switcher can point at
+  // the same article in every language instead of dropping four options.
+  const columnSlugsByLocale = publicColumnSlugsByLocale();
 
   if (isGuidanceLocale4(publicLocale)) {
     // Same chrome as the other four languages: shared header, footer and
@@ -112,7 +117,7 @@ export default async function LocaleLayout(
     // guidance surface publishes ten pages and no member/search routes.
     const language = publicDocumentLanguage(publicLocale);
     return (
-      <>
+      <PublicColumnSlugsProvider slugsByLocale={columnSlugsByLocale}>
         <DocumentLocaleSync
           language={language}
           fontClassName={getLocaleFontClassName(language)}
@@ -126,7 +131,7 @@ export default async function LocaleLayout(
         >
           {children}
         </CinematicRouteShell>
-      </>
+      </PublicColumnSlugsProvider>
     );
   }
 
@@ -135,7 +140,7 @@ export default async function LocaleLayout(
   // Hide non-JA product widgets on Japanese public surface (plan: columns+core pages first).
   const hideJaProductChrome = locale === 'ja';
   return (
-    <>
+    <PublicColumnSlugsProvider slugsByLocale={columnSlugsByLocale}>
       <link rel="describedby" href={`/${locale}/llms.txt`} />
       <DocumentLocaleSync
         language={language}
@@ -158,6 +163,6 @@ export default async function LocaleLayout(
         {children}
       </CinematicRouteShell>
       <VisitTracker locale={locale} />
-    </>
+    </PublicColumnSlugsProvider>
   );
 }

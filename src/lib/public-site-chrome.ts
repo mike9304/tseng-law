@@ -1,5 +1,6 @@
 import type { SiteContent } from '@/data/site-content';
 import { siteContent } from '@/data/site-content';
+import { guidanceFooterCopy } from '@/data/international-guidance-offices';
 import { guidanceContent } from '@/data/international-guidance-content';
 import type { SiteLocale } from '@/lib/locales';
 import {
@@ -132,6 +133,6 @@ export function guidanceLegalLinks(
     { label: pack.nav.privacy, href: guidancePublicPath(locale, 'privacy') },
     { label: pack.nav.disclaimer, href: guidancePublicPath(locale, 'disclaimer') },
     { label: pack.nav.faq, href: guidancePublicPath(locale, 'faq') },
-    { label: 'Sitemap', href: '/sitemap.xml' },
+    { label: guidanceFooterCopy[locale].sitemapLabel, href: '/sitemap.xml' },
   ];
 }

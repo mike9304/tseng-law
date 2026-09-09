@@ -71,7 +71,9 @@ describe('public module locale family switching', () => {
     for (const [pathname, target, expected] of twelveEnZhCases) {
       expect(localeFlagHref(pathname, target)).toBe(expected);
       expect(localeFlagHref(pathname.replace('/ko/', '/ja/'), target)).toBe(expected);
-      expect(localeFlagHref(pathname, 'vi')).toBe('');
+      // WO-O22 A: the new four never publish a product/portfolio detail, so
+      // the switcher keeps the option and lands on their home page.
+      expect(localeFlagHref(pathname, 'vi')).toBe('/vi');
     }
   });
 
@@ -86,7 +88,7 @@ describe('public module locale family switching', () => {
     expect(localeFlagHref('/ko/events/seminar-2026', 'zh-hant')).toBe('/zh-hant/events');
     expect(localeFlagHref('/ko/events/seminar-2026', 'ja')).toBe('/ja/events');
     expect(localeFlagHref('/ko/events/seminar-2026', 'ko')).toBe('/ko/events/seminar-2026');
-    expect(localeFlagHref('/ko/events/seminar-2026', 'vi')).toBe('');
+    expect(localeFlagHref('/ko/events/seminar-2026', 'vi')).toBe('/vi');
   });
 
   it('preserves JA login and JA family list roots', () => {
@@ -95,26 +97,28 @@ describe('public module locale family switching', () => {
     expect(localeFlagHref('/ko/store', 'ja')).toBe('/ja/store');
     expect(localeFlagHref('/ko/portfolio', 'ja')).toBe('/ja/portfolio');
     expect(localeFlagHref('/ko/events', 'ja')).toBe('/ja/events');
-    expect(localeFlagHref('/en/login', 'vi')).toBe('');
-    expect(localeFlagHref('/ko/store', 'vi')).toBe('');
+    expect(localeFlagHref('/en/login', 'vi')).toBe('/vi');
+    expect(localeFlagHref('/ko/store', 'vi')).toBe('/vi');
   });
 
   it('preserves core article, service, and profile counterparts', () => {
     expect(localeFlagHref('/ko/columns/taiwan-investment', 'ja')).toBe('/ja/columns/taiwan-investment');
     expect(localeFlagHref('/ko/columns/taiwan-investment', 'en')).toBe('/en/columns/taiwan-investment');
-    expect(localeFlagHref('/ko/columns/taiwan-investment', 'vi')).toBe('');
+    // No translation list is injected here, so the resolver refuses to guess an
+    // article URL and points at the vi column index instead of a 404.
+    expect(localeFlagHref('/ko/columns/taiwan-investment', 'vi')).toBe('/vi/columns');
     expect(localeFlagHref('/ko/services/investment', 'ja')).toBe('/ja/services/investment');
     expect(localeFlagHref('/ko/services/investment', 'zh-hant')).toBe('/zh-hant/services/investment');
-    expect(localeFlagHref('/ko/services/investment', 'fil')).toBe('');
+    expect(localeFlagHref('/ko/services/investment', 'fil')).toBe('/fil');
     expect(localeFlagHref('/en/lawyers/wei-tseng', 'ja')).toBe('/ja/lawyers/wei-tseng');
     expect(localeFlagHref('/ja/lawyers/wei-tseng', 'en')).toBe('/en/lawyers/wei-tseng');
-    expect(localeFlagHref('/en/lawyers/wei-tseng', 'th')).toBe('');
+    expect(localeFlagHref('/en/lawyers/wei-tseng', 'th')).toBe('/th');
   });
 
   it('keeps the existing account/settings JA safe fallback', () => {
     expect(localeFlagHref('/en/account/settings', 'ja')).toBe('/ja/columns');
     expect(localeFlagHref('/en/account/settings', 'ko')).toBe('/ko/account/settings');
-    expect(localeFlagHref('/en/account/settings', 'id')).toBe('');
+    expect(localeFlagHref('/en/account/settings', 'id')).toBe('/id');
   });
 
   it('links the exact billing and booking utilities to JA without changing their token or query', () => {
@@ -124,7 +128,7 @@ describe('public module locale family switching', () => {
     expect(localeFlagHref('/en/bookings/manage/audit%2Fopaque-token?view=summary#details', 'ja')).toBe('/ja/bookings/manage/audit%2Fopaque-token?view=summary#details');
     const currentPath = '/ja/bookings/manage/audit-invalid-token?view=summary';
     expect(localeFlagHref(currentPath, 'ja')).toBe(currentPath);
-    expect(localeFlagHref('/en/account/billing?view=summary#details', 'vi')).toBe('');
+    expect(localeFlagHref('/en/account/billing?view=summary#details', 'vi')).toBe('/vi');
   });
 
   it('keeps other account and booking paths on the existing JA fallback', () => {
@@ -136,7 +140,7 @@ describe('public module locale family switching', () => {
       '/en/bookings/create/audit-invalid-token',
     ]) {
       expect(localeFlagHref(path, 'ja')).toBe('/ja/columns');
-      expect(localeFlagHref(path, 'vi')).toBe('');
+      expect(localeFlagHref(path, 'vi')).toBe('/vi');
     }
   });
 
@@ -163,6 +167,12 @@ describe('public module locale family switching', () => {
     expect(html).not.toContain('/zh-hant/store/products/taiwan-startup-guide');
     expect(html).not.toContain('href="/vi/store');
     expect(html).not.toContain('href="/vi/store/products/taiwan-startup-guide');
-    expect(html).toContain('aria-disabled="true"');
+    // WO-O22 A: no option is disabled any more — vi/id/th/fil stay clickable and
+    // are flagged as fallbacks so the label can explain where they land.
+    expect(html).not.toContain('aria-disabled');
+    expect(links.filter((link) => link.includes('data-locale-switch-fallback="home"'))).toHaveLength(
+      4,
+    );
+    expect(links.some((link) => link.includes('href="/vi"'))).toBe(true);
   });
 });

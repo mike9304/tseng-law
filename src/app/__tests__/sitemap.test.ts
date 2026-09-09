@@ -439,13 +439,11 @@ describe('sitemap column lastModified', () => {
     const entries = await sitemap();
     const urls = entries.map((entry) => entry.url);
     const posts = getAllColumnPosts('ko');
-    // Derived, not frozen: pick a column that still has no vi/id/th/fil markdown
-    // file, so landing new translations extends the sitemap instead of breaking
-    // this "never invent an untranslated URL" guard.
-    const firstArticle = posts.find(
-      (post) => presentOptionalColumnLocales(post.slug).length === 0,
-    );
-    expect(firstArticle?.slug, 'expected a column with no vi/id/th/fil file').toBeTruthy();
+    // WO-O22 D: every Korean column now has a vi/id/th/fil file, so the guard
+    // is probed with a slug that has no markdown file in any locale. The
+    // contract is unchanged — a URL is only ever emitted for a file on disk.
+    const unwrittenSlug = 'nonexistent-article';
+    expect(posts.some((post) => post.slug === unwrittenSlug)).toBe(false);
 
     const usLandings = [
       '/taiwan-lawyer',
@@ -455,19 +453,16 @@ describe('sitemap column lastModified', () => {
     ];
 
     for (const locale of GUIDANCE_LOCALES_4) {
-      expect(urls.some((url) => url.includes(`/${locale}/columns/${firstArticle!.slug}`))).toBe(false);
+      expect(urls.some((url) => url.includes(`/${locale}/columns/${unwrittenSlug}`))).toBe(false);
       for (const path of usLandings) {
         expect(urls).not.toContain(`https://tseng-law.com/${locale}${path}`);
       }
     }
 
-    const articleEntry = entries.find(
-      (entry) => entry.url === `https://tseng-law.com/ko/columns/${firstArticle!.slug}`,
-    );
-    expect(articleEntry).toBeDefined();
-    for (const locale of GUIDANCE_LOCALES_4) {
-      expect(articleEntry?.alternates?.languages).not.toHaveProperty(locale);
-    }
+    // No file anywhere means no row anywhere, not even for the Korean original.
+    expect(
+      entries.some((entry) => entry.url.endsWith(`/columns/${unwrittenSlug}`)),
+    ).toBe(false);
 
     // Every other column advertises exactly the new-locale files that exist.
     for (const post of posts) {

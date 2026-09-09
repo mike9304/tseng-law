@@ -1,5 +1,5 @@
 ---
-title: "Minimum Service Period Clause (最低服務年限約定) sa Taiwan: Bisa, Training Costs (訓練費用), at Contractual Penalty (違約金)"
+title: "Kasunduan sa Pinakamababang Panahon ng Paglilingkod (最低服務年限約定) sa Taiwan: Bisa, Gastos sa Pagsasanay (訓練費用), at Multa sa Paglabag ng Kontrata (違約金)"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
 date_display: "Setyembre 13, 2025"
@@ -18,7 +18,7 @@ faq:
     a: "Itinatakda ng Artikulo 15-1, talata 4 ng Labor Standards Act ng Taiwan na kapag natapos ang kontrata sa paggawa bago matapos ang minimum service period dahil sa dahilang hindi maipapataw sa manggagawa, hindi mananagot ang manggagawa sa paglabag sa minimum service period clause ni sa pagsasauli ng training costs. Gayunman, ang dahilan ng pagtatapos at ang pagpapataw ng pananagutan ay dapat pasyahan batay sa tiyak na ebidensiya gaya ng abiso ng pagtanggal, ng paglalahad ng intensiyong magbitiw, at ng mga dokumento hinggil sa paglabag sa kondisyon sa paggawa."
 ---
 
-# Minimum Service Period Clause (最低服務年限約定) sa Taiwan: Bisa, Training Costs (訓練費用), at Contractual Penalty (違約金)
+# Kasunduan sa Pinakamababang Panahon ng Paglilingkod (最低服務年限約定) sa Taiwan: Bisa, Gastos sa Pagsasanay (訓練費用), at Multa sa Paglabag ng Kontrata (違約金)
 
 ![Larawang nagpapaliwanag sa minimum service period sa kontrata sa paggawa at sa pagsasauli ng gastos](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 

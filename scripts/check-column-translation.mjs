@@ -1466,7 +1466,12 @@ export function matchOrdinalExpressions(sourceText, targetText, lang) {
   };
 }
 
-function blankRegexes(text, patterns) {
+/**
+ * Replace every match of `patterns` with same-length spaces so later term
+ * scans cannot see it. Exported so other gates (guidance-data country gate)
+ * reuse the same "language-name PASS" mechanism instead of re-deriving it.
+ */
+export function blankRegexes(text, patterns) {
   let s = String(text);
   for (const re of patterns) {
     const flags = re.global ? re.flags : `${re.flags}g`;

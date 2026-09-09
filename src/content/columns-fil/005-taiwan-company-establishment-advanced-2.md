@@ -25,7 +25,7 @@ Umaasa kaming makakatulong din ang Q&A sa ibaba sa mga nag-iisip na magtatag ng 
 
 ​
 
-**1. Ano ang dapat pag-ingatan kapag nagpapadala ng kapital mula sa Korea patungo sa preparatory office account (公司籌備處帳戶) ng kompanya sa Taiwan?**
+**1. Ano ang dapat pag-ingatan kapag nagpapadala ng kapital mula sa Korea patungo sa preparatory office account (公司籌備處帳戶) ng kompanya sa Taiwan? (tinatalakay sa bahaging ito ang sistema ng Korea at ang praktika ng mga bangko sa Korea)**
 
 Sa pangkalahatan, hinihingi ng mga bangko sa Korea na ang mamumuhunan **mismo** ang personal na pumunta sa bangko sa Korea at magpadala ng pondo mula sa sarili niyang account.
 

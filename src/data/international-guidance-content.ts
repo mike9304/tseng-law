@@ -226,7 +226,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Tranh chấp lao động',
             paragraphs: [
-              'Nhóm này gồm chấm dứt hợp đồng lao động (勞動契約), trợ cấp thôi việc theo pháp luật Đài Loan (資遣費; không đồng nhất với trợ cấp thôi việc theo pháp luật Việt Nam), tiền lương và các tranh chấp phát sinh từ điều khoản của hợp đồng lao động, cho cả phía người lao động và phía người sử dụng lao động. Khi xem xét, chúng tôi tách bạch căn cứ chấm dứt quan hệ lao động với các vấn đề về thông báo, khoản phải trả và thời hạn.',
+              'Nhóm này gồm chấm dứt hợp đồng lao động (勞動契約), trợ cấp thôi việc theo pháp luật Đài Loan (資遣費; xin đừng coi là đồng nhất với các chế độ tương tự của nước khác), tiền lương và các tranh chấp phát sinh từ điều khoản của hợp đồng lao động, cho cả phía người lao động và phía người sử dụng lao động. Khi xem xét, chúng tôi tách bạch căn cứ chấm dứt quan hệ lao động với các vấn đề về thông báo, khoản phải trả và thời hạn.',
               'Hợp đồng lao động, nội quy lao động (工作規則), bảng lương và trao đổi giữa hai bên thường là tài liệu quyết định. Nếu quý vị còn giữ những tài liệu này, hãy nêu trong phần tóm tắt để việc xem xét ban đầu chính xác hơn.',
             ],
           },
@@ -542,7 +542,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Phạm vi pháp luật',
             paragraphs: [
               'Văn phòng hành nghề theo pháp luật Đài Loan, và các trang này chỉ nói về công việc trong phạm vi đó.',
-              'Nội dung trên các trang này không phải ý kiến pháp lý theo pháp luật Việt Nam hay theo pháp luật của bất kỳ thẩm quyền nào khác ngoài Đài Loan. Nếu vụ việc của quý vị có phần thuộc thẩm quyền của nước khác, chúng tôi sẽ cùng quý vị xác nhận phần đó cần đến chuyên gia có tư cách phù hợp nào.',
+              'Nội dung trên các trang này không phải ý kiến pháp lý theo pháp luật của bất kỳ thẩm quyền nào khác ngoài Đài Loan, kể cả pháp luật nơi quý vị cư trú. Nếu vụ việc của quý vị có phần thuộc thẩm quyền của nước khác, chúng tôi sẽ cùng quý vị xác nhận phần đó cần đến chuyên gia có tư cách phù hợp nào.',
             ],
           },
           {
@@ -565,15 +565,15 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'BÀI VIẾT',
         title: 'Bài viết về pháp luật Đài Loan',
         description:
-          'Bốn danh mục bài viết theo ngôn ngữ gốc: mỗi liên kết được ghi rõ ngôn ngữ và mở danh mục bài viết bằng chính ngôn ngữ đó.',
+          'Các bài viết bằng tiếng Việt giải thích những chủ đề pháp luật Đài Loan thường gặp. Đây là thông tin chung tại thời điểm đăng, không phải ý kiến pháp lý cho vụ việc của quý vị.',
         intro:
-          'Văn phòng có đăng các bài viết giải thích những chủ đề pháp luật Đài Loan thường gặp. Các bài viết đó được xuất bản bằng ngôn ngữ gốc và không được dịch sang tiếng Việt. Ở mục này, quý vị sẽ thấy bốn liên kết, mỗi liên kết mở danh mục bài viết của một ngôn ngữ.',
+          'Văn phòng có đăng các bài viết giải thích những chủ đề pháp luật Đài Loan thường gặp. Những bài đã có bằng tiếng Việt được liệt kê ngay trên trang này; ngoài ra còn có bốn liên kết, mỗi liên kết mở danh mục bài viết của một ngôn ngữ gốc.',
         sections: [
           {
             heading: 'Bốn danh mục theo ngôn ngữ',
             paragraphs: [
               'Mục này gồm bốn liên kết: danh mục bài viết tiếng Hàn, danh mục tiếng Trung, danh mục tiếng Anh và danh mục tiếng Nhật. Mỗi liên kết ghi rõ ngôn ngữ của danh mục đó, để quý vị biết trước mình sẽ mở nội dung bằng ngôn ngữ nào.',
-              'Đây không phải danh sách các bài đã được dịch. Trang này không liệt kê từng bài viết bằng tiếng Việt và không tạo bản dịch cho bất kỳ bài nào.',
+              'Bốn danh mục đó là danh mục theo ngôn ngữ gốc, không phải danh sách bản dịch. Những bài đã có bằng tiếng Việt được liệt kê riêng ngay trên trang này.',
             ],
           },
           {
@@ -718,7 +718,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Sengketa ketenagakerjaan',
             paragraphs: [
-              'Kelompok ini mencakup pemutusan hubungan kerja, pesangon menurut hukum Taiwan (資遣費; tidak sama dengan pesangon menurut hukum Indonesia), upah, dan sengketa yang timbul dari ketentuan perjanjian kerja (勞動契約), baik dari sisi pekerja maupun sisi pemberi kerja. Dalam meninjau perkara, kami memisahkan dasar pemutusan hubungan kerja dari persoalan pemberitahuan, pembayaran, dan tenggat waktu.',
+              'Kelompok ini mencakup pemutusan hubungan kerja, pesangon menurut hukum Taiwan (資遣費; jangan disamakan dengan lembaga serupa di negara lain), upah, dan sengketa yang timbul dari ketentuan perjanjian kerja (勞動契約), baik dari sisi pekerja maupun sisi pemberi kerja. Dalam meninjau perkara, kami memisahkan dasar pemutusan hubungan kerja dari persoalan pemberitahuan, pembayaran, dan tenggat waktu.',
               'Perjanjian kerja, peraturan perusahaan (工作規則), slip gaji, dan percakapan antara kedua pihak biasanya menjadi dokumen yang menentukan. Jika Anda masih menyimpannya, sebutkan hal itu dalam ringkasan agar peninjauan awal lebih tepat.',
             ],
           },
@@ -1034,7 +1034,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Lingkup hukum',
             paragraphs: [
               'Kantor kami berpraktik menurut hukum Taiwan, dan halaman ini hanya membicarakan pekerjaan dalam lingkup itu.',
-              'Isi halaman-halaman ini bukan nasihat menurut hukum Indonesia maupun menurut hukum yurisdiksi mana pun selain Taiwan. Jika ada bagian perkara Anda yang tunduk pada yurisdiksi lain, kami memastikan bersama Anda tenaga profesional berkualifikasi mana yang diperlukan untuk bagian tersebut.',
+              'Isi halaman-halaman ini bukan nasihat menurut hukum yurisdiksi mana pun selain Taiwan, termasuk hukum tempat Anda tinggal. Jika ada bagian perkara Anda yang tunduk pada yurisdiksi lain, kami memastikan bersama Anda tenaga profesional berkualifikasi mana yang diperlukan untuk bagian tersebut.',
             ],
           },
           {
@@ -1057,15 +1057,15 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'ARTIKEL',
         title: 'Artikel tentang hukum Taiwan',
         description:
-          'Empat daftar artikel menurut bahasa aslinya: setiap tautan mencantumkan bahasanya dan membuka daftar artikel dalam bahasa itu.',
+          'Artikel berbahasa Indonesia yang menjelaskan topik hukum Taiwan yang sering ditanyakan. Isinya keterangan umum pada saat penerbitannya, bukan nasihat hukum untuk perkara Anda.',
         intro:
-          'Kantor kami memuat artikel yang menjelaskan topik hukum Taiwan yang sering ditanyakan. Artikel-artikel itu terbit dalam bahasa aslinya dan tidak diterjemahkan ke bahasa Indonesia. Di bagian ini Anda akan menemukan empat tautan, masing-masing membuka daftar artikel untuk satu bahasa.',
+          'Kantor kami memuat artikel yang menjelaskan topik hukum Taiwan yang sering ditanyakan. Artikel yang sudah tersedia dalam bahasa Indonesia dimuat di halaman ini; selain itu ada empat tautan, masing-masing membuka daftar artikel untuk satu bahasa aslinya.',
         sections: [
           {
             heading: 'Empat daftar menurut bahasa',
             paragraphs: [
               'Bagian ini berisi empat tautan: daftar artikel berbahasa Korea, daftar berbahasa Tionghoa, daftar berbahasa Inggris, dan daftar berbahasa Jepang. Setiap tautan mencantumkan bahasa daftarnya, sehingga Anda tahu lebih dulu isi dalam bahasa apa yang akan terbuka.',
-              'Ini bukan daftar tulisan yang sudah diterjemahkan. Halaman ini tidak menyebut satu per satu artikelnya dalam bahasa Indonesia dan tidak membuat terjemahan bagi artikel mana pun.',
+              'Keempat daftar itu adalah daftar menurut bahasa asli artikelnya, bukan daftar terjemahan. Artikel yang sudah tersedia dalam bahasa Indonesia dimuat tersendiri di halaman ini.',
             ],
           },
           {
@@ -1210,7 +1210,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'ข้อพิพาทแรงงาน',
             paragraphs: [
-              'กลุ่มนี้ครอบคลุมการเลิกจ้าง ค่าชดเชยตามกฎหมายไต้หวัน (資遣費 ซึ่งไม่เหมือนกับค่าชดเชยตามกฎหมายไทย) ค่าจ้าง และข้อพิพาทที่เกิดจากข้อกำหนดในสัญญาจ้างแรงงาน (勞動契約) ทั้งในฝ่ายลูกจ้างและฝ่ายนายจ้าง ในการตรวจสอบ เราจะแยกเหตุแห่งการเลิกจ้างออกจากประเด็นเรื่องการบอกกล่าว เงินที่ต้องจ่าย และกำหนดเวลา',
+              'กลุ่มนี้ครอบคลุมการเลิกจ้าง ค่าชดเชยตามกฎหมายไต้หวัน (資遣費 ซึ่งไม่ควรถือว่าเหมือนกับระบบทำนองเดียวกันของประเทศอื่น) ค่าจ้าง และข้อพิพาทที่เกิดจากข้อกำหนดในสัญญาจ้างแรงงาน (勞動契約) ทั้งในฝ่ายลูกจ้างและฝ่ายนายจ้าง ในการตรวจสอบ เราจะแยกเหตุแห่งการเลิกจ้างออกจากประเด็นเรื่องการบอกกล่าว เงินที่ต้องจ่าย และกำหนดเวลา',
               'สัญญาจ้างแรงงาน ข้อบังคับเกี่ยวกับการทำงาน (工作規則) สลิปเงินเดือน และข้อความที่ติดต่อกันระหว่างสองฝ่าย มักเป็นเอกสารสำคัญ หากท่านยังเก็บเอกสารเหล่านี้ไว้ โปรดระบุไว้ในสรุปเรื่องด้วย เพื่อให้การตรวจสอบเบื้องต้นแม่นยำขึ้น',
             ],
           },
@@ -1526,7 +1526,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'ขอบเขตของกฎหมาย',
             paragraphs: [
               'สำนักงานประกอบวิชาชีพภายใต้กฎหมายไต้หวัน และหน้าเหล่านี้กล่าวถึงงานภายในขอบเขตดังกล่าวเท่านั้น',
-              'เนื้อหาในหน้าเหล่านี้ไม่ใช่ความเห็นตามกฎหมายไทย หรือกฎหมายของเขตอำนาจอื่นใดนอกจากไต้หวัน หากเรื่องของท่านมีส่วนที่อยู่ภายใต้เขตอำนาจอื่น เราจะยืนยันร่วมกับท่านว่าส่วนนั้นต้องอาศัยผู้เชี่ยวชาญที่มีคุณสมบัติเหมาะสมด้านใด',
+              'เนื้อหาในหน้าเหล่านี้ไม่ใช่ความเห็นตามกฎหมายของเขตอำนาจอื่นใดนอกจากไต้หวัน รวมถึงกฎหมายของประเทศที่ท่านพำนักอยู่ หากเรื่องของท่านมีส่วนที่อยู่ภายใต้เขตอำนาจอื่น เราจะยืนยันร่วมกับท่านว่าส่วนนั้นต้องอาศัยผู้เชี่ยวชาญที่มีคุณสมบัติเหมาะสมด้านใด',
             ],
           },
           {
@@ -1549,15 +1549,15 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'บทความ',
         title: 'บทความเกี่ยวกับกฎหมายไต้หวัน',
         description:
-          'สารบัญบทความ 4 ภาษาตามภาษาต้นฉบับ แต่ละลิงก์ระบุภาษาไว้ชัดเจน และจะเปิดสารบัญบทความในภาษานั้น',
+          'บทความภาษาไทยที่อธิบายหัวข้อกฎหมายไต้หวันซึ่งมีผู้สอบถามบ่อย เป็นข้อมูลทั่วไป ณ เวลาที่เผยแพร่ ไม่ใช่ความเห็นทางกฎหมายสำหรับเรื่องของท่าน',
         intro:
-          'สำนักงานเผยแพร่บทความอธิบายหัวข้อกฎหมายไต้หวันที่มีผู้สอบถามบ่อย บทความเหล่านี้เผยแพร่ในภาษาต้นฉบับ และไม่ได้แปลเป็นภาษาไทย ในส่วนนี้ท่านจะพบลิงก์ 4 รายการ โดยแต่ละลิงก์จะเปิดสารบัญบทความของหนึ่งภาษา',
+          'สำนักงานเผยแพร่บทความอธิบายหัวข้อกฎหมายไต้หวันที่มีผู้สอบถามบ่อย บทความที่มีฉบับภาษาไทยแล้วจะแสดงอยู่ในหน้านี้ นอกจากนี้ยังมีลิงก์ 4 รายการ โดยแต่ละลิงก์จะเปิดสารบัญบทความของภาษาต้นฉบับหนึ่งภาษา',
         sections: [
           {
             heading: 'สารบัญ 4 ภาษา',
             paragraphs: [
               'ส่วนนี้ประกอบด้วยลิงก์ 4 รายการ ได้แก่ สารบัญบทความภาษาเกาหลี สารบัญภาษาจีน สารบัญภาษาอังกฤษ และสารบัญภาษาญี่ปุ่น แต่ละลิงก์ระบุภาษาของสารบัญนั้นไว้ เพื่อให้ท่านทราบล่วงหน้าว่ากำลังจะเปิดเนื้อหาในภาษาใด',
-              'ส่วนนี้ไม่ใช่รายการบทความที่แปลแล้ว หน้านี้ไม่ได้แสดงรายชื่อบทความทีละชิ้นเป็นภาษาไทย และไม่ได้จัดทำคำแปลของบทความใด',
+              'สารบัญทั้ง 4 รายการนี้เป็นสารบัญตามภาษาต้นฉบับ ไม่ใช่รายการคำแปล ส่วนบทความที่มีฉบับภาษาไทยแล้วจะแสดงแยกไว้ในหน้านี้',
             ],
           },
           {
@@ -1702,7 +1702,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Alitan sa paggawa at empleo',
             paragraphs: [
-              'Kabilang dito ang pagtatapos ng empleo, ang separation pay sa ilalim ng batas ng Taiwan (資遣費, na hindi katumbas ng separation pay o danyos sa ilalim ng batas ng Pilipinas), sahod, at mga alitang nagmumula sa mga probisyon ng kontrata sa trabaho, para man sa panig ng manggagawa o ng employer. Sa pagsusuri, hiwalay naming tinitingnan ang batayan ng pagtatapos ng empleo at ang mga usapin ng abiso, ng dapat bayaran, at ng takdang panahon.',
+              'Kabilang dito ang pagtatapos ng empleo, ang separation pay sa ilalim ng batas ng Taiwan (資遣費, na huwag ituring na katumbas ng katulad na sistema sa ibang bansa), sahod, at mga alitang nagmumula sa mga probisyon ng kontrata sa trabaho, para man sa panig ng manggagawa o ng employer. Sa pagsusuri, hiwalay naming tinitingnan ang batayan ng pagtatapos ng empleo at ang mga usapin ng abiso, ng dapat bayaran, at ng takdang panahon.',
               'Karaniwang ang kontrata sa trabaho, ang patakaran sa trabaho (工作規則), ang talaan ng sahod, at ang mga palitan ng mensahe ng dalawang panig ang nagpapasya sa usapin. Kung nasa inyo pa ang mga ito, banggitin ninyo sa buod upang mas maging tumpak ang paunang pagsusuri.',
             ],
           },
@@ -2018,7 +2018,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Saklaw ng batas',
             paragraphs: [
               'Nagpapraktis ang tanggapan sa ilalim ng batas ng Taiwan, at tungkol lamang sa gawaing nasa saklaw na iyon ang mga pahinang ito.',
-              'Hindi payo ang nilalaman ng mga pahinang ito sa ilalim ng batas ng Pilipinas o ng batas ng alinmang ibang hurisdiksiyon maliban sa Taiwan. Kung may bahagi ng usapin ninyo na nasa ilalim ng ibang hurisdiksiyon, kukumpirmahin naming kasama kayo kung anong propesyonal na may tamang kwalipikasyon ang kailangan para roon.',
+              'Hindi payo ang nilalaman ng mga pahinang ito sa ilalim ng batas ng alinmang hurisdiksiyon maliban sa Taiwan, kabilang ang batas ng lugar na tinitirhan ninyo. Kung may bahagi ng usapin ninyo na nasa ilalim ng ibang hurisdiksiyon, kukumpirmahin naming kasama kayo kung anong propesyonal na may tamang kwalipikasyon ang kailangan para roon.',
             ],
           },
           {
@@ -2041,15 +2041,15 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'MGA ARTIKULO',
         title: 'Mga artikulo tungkol sa batas ng Taiwan',
         description:
-          'Apat na talaan ng artikulo ayon sa orihinal na wika: nakasaad sa bawat link ang wika nito, at bubuksan nito ang talaan ng mga artikulo sa wikang iyon.',
+          'Mga artikulo sa Filipino na nagpapaliwanag ng mga paksa sa batas ng Taiwan na madalas itanong. Pangkalahatang impormasyon ito noong panahong inilathala, hindi legal na payo para sa usapin ninyo.',
         intro:
-          'Naglalathala ang tanggapan ng mga artikulong nagpapaliwanag ng mga paksa sa batas ng Taiwan na madalas itanong. Nakalathala ang mga ito sa orihinal nilang wika at hindi isinasalin sa Filipino. Sa bahaging ito ay makikita ninyo ang apat na link, at bubuksan ng bawat isa ang talaan ng mga artikulo para sa isang wika.',
+          'Naglalathala ang tanggapan ng mga artikulong nagpapaliwanag ng mga paksa sa batas ng Taiwan na madalas itanong. Nakalista sa pahinang ito ang mga artikulong mayroon nang bersyon sa Filipino; bukod doon ay may apat na link, at bubuksan ng bawat isa ang talaan ng mga artikulo para sa isang orihinal na wika.',
         sections: [
           {
             heading: 'Apat na talaan ayon sa wika',
             paragraphs: [
               'Apat na link ang nasa bahaging ito: ang talaan ng mga artikulong Koreano, ang talaang Tsino, ang talaang Ingles, at ang talaang Hapon. Nakasaad sa bawat link ang wika ng talaang iyon, upang alam ninyo na kaagad kung anong wika ang bubuksan ninyo.',
-              'Hindi ito listahan ng mga naisaling artikulo. Hindi isa-isang inililista ng pahinang ito ang mga artikulo sa Filipino, at wala itong ginagawang salin para sa alinmang artikulo.',
+              'Talaan ayon sa orihinal na wika ang apat na ito, hindi listahan ng mga salin. Hiwalay na nakalista sa pahinang ito ang mga artikulong mayroon nang bersyon sa Filipino.',
             ],
           },
           {

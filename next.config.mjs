@@ -50,6 +50,13 @@ const sensitiveRouteSources = [
 const nextConfig = {
   distDir,
   reactStrictMode: true,
+  // Column markdown is resolved through a locale→directory map (src/lib/column-locales.ts),
+  // so Vercel's file tracing can no longer see the directories statically. Without this,
+  // production lambdas lack src/content/columns-* and en/ja/zh-hant home + /columns 500
+  // (2026-09-09 outage after 81a4cfe1). Keep every column locale directory bundled.
+  outputFileTracingIncludes: {
+    '/**': ['./src/content/columns*/**/*'],
+  },
   webpack(config, { dev }) {
     if (dev) {
       config.watchOptions = {

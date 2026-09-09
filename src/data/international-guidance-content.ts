@@ -158,7 +158,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Văn phòng hỗ trợ những gì',
             paragraphs: [
-              'Hovering International Law Firm là văn phòng luật sư có trụ sở tại Đài Loan, hành nghề theo pháp luật Đài Loan và có các cơ sở tại Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Văn phòng nhận cả công việc tư vấn cho doanh nghiệp lẫn các vụ việc tranh tụng, và hỗ trợ khách hàng nước ngoài trong những thủ tục cần thực hiện tại Đài Loan.',
+              'Hovering International Law Firm là văn phòng luật sư có trụ sở tại Đài Loan, hành nghề theo pháp luật Đài Loan và có các cơ sở tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Văn phòng nhận cả công việc tư vấn cho doanh nghiệp lẫn các vụ việc tranh tụng, và hỗ trợ khách hàng nước ngoài trong những thủ tục cần thực hiện tại Đài Loan.',
               'Toàn bộ nội dung ở đây mang tính tham khảo chung. Kết luận của một vụ việc phụ thuộc vào tình tiết cụ thể, quy định được áp dụng và thời điểm phát sinh, nên phần hướng dẫn này không thay thế cho việc trao đổi trực tiếp với luật sư về hồ sơ của quý vị.',
             ],
           },
@@ -263,7 +263,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Thành lập và cơ cấu',
             paragraphs: [
               'Hovering International Law Firm được thành lập năm 2016 bởi các luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學). Tên gọi trong tiếng Trung ghép chữ 昊 mang nghĩa “bầu trời rộng lớn” và chữ 鼎 mang nghĩa “nền móng vững chắc”, thể hiện định hướng của văn phòng khi thành lập.',
-              'Văn phòng có các cơ sở tại Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Cơ sở Cao Hùng tập trung vào quản trị doanh nghiệp và các tranh chấp dân sự, hình sự, hành chính thông thường. Cơ sở Đài Trung xử lý các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Cơ sở Bình Đông được mở năm 2017 để phục vụ nhu cầu của địa phương.',
+              'Văn phòng có các cơ sở tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Cơ sở Cao Hùng tập trung vào quản trị doanh nghiệp và các tranh chấp dân sự, hình sự, hành chính thông thường. Cơ sở Đài Trung xử lý các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Cơ sở Bình Đông được mở năm 2017 để phục vụ nhu cầu của địa phương.',
               'Bên cạnh hoạt động luật sư, năm 2020 văn phòng kế toán Hovering Accounting Office được thành lập, cung cấp dịch vụ kế toán và hoạch định thuế cho chủ doanh nghiệp và cá nhân có tài sản lớn.',
             ],
           },
@@ -650,7 +650,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Apa yang kami kerjakan',
             paragraphs: [
-              'Hovering International Law Firm adalah kantor advokat yang berkedudukan di Taiwan, bekerja berdasarkan hukum Taiwan, dan memiliki cabang di Kaohsiung, Taichung, serta Pingtung. Kami menangani konsultasi hukum bagi perusahaan sekaligus perkara yang beracara di pengadilan, dan mendampingi klien dari luar negeri dalam proses yang harus ditempuh di Taiwan.',
+              'Hovering International Law Firm adalah kantor advokat yang berkedudukan di Taiwan, bekerja berdasarkan hukum Taiwan, dan memiliki kantor di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), serta Pingtung (屏東). Kami menangani konsultasi hukum bagi perusahaan sekaligus perkara yang beracara di pengadilan, dan mendampingi klien dari luar negeri dalam proses yang harus ditempuh di Taiwan.',
               'Seluruh isi di sini bersifat umum. Kesimpulan sebuah perkara bergantung pada fakta, ketentuan yang berlaku, dan waktunya, sehingga panduan ini tidak menggantikan pembicaraan langsung dengan advokat mengenai berkas Anda.',
             ],
           },
@@ -755,7 +755,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Pendirian dan susunan kantor',
             paragraphs: [
               'Hovering International Law Firm (昊鼎國際法律事務所) didirikan pada 2016 oleh para advokat lulusan Universitas Nasional Taiwan (國立臺灣大學). Nama Tionghoanya, 昊鼎, menggabungkan aksara 昊 yang berarti “langit yang luas” dan aksara 鼎 yang berarti “dasar yang kokoh”, yang mencerminkan arah kantor sejak awal berdiri.',
-              'Kantor memiliki kantor di Kaohsiung (高雄), Taichung (臺中), dan Pingtung (屏東). Kantor Kaohsiung berfokus pada tata kelola perusahaan dan menangani sengketa perdata, pidana, serta administrasi secara umum. Kantor Taichung menangani perkara konstruksi, kekayaan intelektual, dan urusan yang berkaitan dengan Korea dan Jepang. Kantor Pingtung dibuka pada 2017 untuk melayani kebutuhan setempat.',
+              'Kami memiliki kantor di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), dan Pingtung (屏東). Kantor Kaohsiung berfokus pada tata kelola perusahaan dan menangani sengketa perdata, pidana, serta administrasi secara umum. Kantor Taichung menangani perkara konstruksi, kekayaan intelektual, dan urusan yang berkaitan dengan Korea dan Jepang. Kantor Pingtung dibuka pada 2017 untuk melayani kebutuhan setempat.',
               'Selain pekerjaan advokat, pada 2020 berdiri pula Hovering Accounting Office, yang menyediakan layanan akuntansi dan perencanaan pajak bagi pemilik usaha dan perorangan berkekayaan besar.',
             ],
           },
@@ -1142,7 +1142,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'สำนักงานให้ความช่วยเหลือด้านใดบ้าง',
             paragraphs: [
-              'Hovering International Law Firm เป็นสำนักงานกฎหมายที่ตั้งอยู่ในไต้หวัน ทำงานภายใต้กฎหมายไต้หวัน และมีสาขาที่เกาสง ไถจง และผิงตง สำนักงานรับทั้งงานที่ปรึกษาสำหรับองค์กรธุรกิจและงานคดีในศาล พร้อมทั้งช่วยเหลือลูกความจากต่างประเทศในกระบวนการที่ต้องดำเนินการในไต้หวัน',
+              'Hovering International Law Firm เป็นสำนักงานกฎหมายที่ตั้งอยู่ในไต้หวัน ทำงานภายใต้กฎหมายไต้หวัน และมีที่ทำการที่ไทเป เกาสง ไถจง และผิงตง สำนักงานรับทั้งงานที่ปรึกษาสำหรับองค์กรธุรกิจและงานคดีในศาล พร้อมทั้งช่วยเหลือลูกความจากต่างประเทศในกระบวนการที่ต้องดำเนินการในไต้หวัน',
               'เนื้อหาทั้งหมดในหน้านี้เป็นข้อมูลทั่วไป ผลของแต่ละเรื่องขึ้นอยู่กับข้อเท็จจริง กฎเกณฑ์ที่ใช้บังคับ และช่วงเวลาที่เกิดเหตุ ข้อมูลแนะนำนี้จึงไม่อาจใช้แทนการพูดคุยกับทนายความเกี่ยวกับเอกสารและข้อเท็จจริงของท่านโดยตรง',
             ],
           },
@@ -1247,7 +1247,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'การก่อตั้งและโครงสร้าง',
             paragraphs: [
               'Hovering International Law Firm (昊鼎國際法律事務所) ก่อตั้งขึ้นในปี 2016 โดยกลุ่มทนายความที่จบการศึกษาจากมหาวิทยาลัยแห่งชาติไต้หวัน (國立臺灣大學) ชื่อภาษาจีนของสำนักงานประกอบด้วยอักษรสองตัว คือ 昊 หมายถึงท้องฟ้าอันกว้างใหญ่ และ 鼎 หมายถึงรากฐานอันมั่นคง ซึ่งสะท้อนแนวทางของสำนักงานตั้งแต่เริ่มก่อตั้ง',
-              'สำนักงานมีสาขาที่เกาสง ไถจง และผิงตง สาขาเกาสงเน้นงานด้านการกำกับดูแลกิจการ พร้อมทั้งรับข้อพิพาททางแพ่ง อาญา และปกครองทั่วไป สาขาไถจงรับงานก่อสร้าง ทรัพย์สินทางปัญญา และงานที่เกี่ยวข้องกับเกาหลีและญี่ปุ่น ส่วนสาขาผิงตงเปิดขึ้นในปี 2017 เพื่อรองรับความต้องการในพื้นที่',
+              'สำนักงานมีที่ทำการที่ไทเป เกาสง ไถจง และผิงตง สาขาเกาสงเน้นงานด้านการกำกับดูแลกิจการ พร้อมทั้งรับข้อพิพาททางแพ่ง อาญา และปกครองทั่วไป สาขาไถจงรับงานก่อสร้าง ทรัพย์สินทางปัญญา และงานที่เกี่ยวข้องกับเกาหลีและญี่ปุ่น ส่วนสาขาผิงตงเปิดขึ้นในปี 2017 เพื่อรองรับความต้องการในพื้นที่',
               'นอกจากงานด้านทนายความแล้ว ในปี 2020 ได้มีการก่อตั้ง Hovering Accounting Office ซึ่งให้บริการด้านบัญชีและการวางแผนภาษีแก่เจ้าของกิจการและบุคคลที่มีสินทรัพย์สูง',
             ],
           },
@@ -1634,7 +1634,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Ano ang tinutulungan namin',
             paragraphs: [
-              'Ang Hovering International Law Firm ay tanggapan ng mga abogadong nakabase sa Taiwan, gumagawa sa ilalim ng batas ng Taiwan, at may mga tanggapan sa Kaohsiung (高雄), Taichung (臺中), at Pingtung (屏東). Humahawak kami ng gawaing pagpapayo para sa mga kompanya at gayundin ng mga usaping dinadala sa korte, at tumutulong kami sa mga dayuhang kliyente sa mga hakbang na kailangang gawin sa Taiwan.',
+              'Ang Hovering International Law Firm ay tanggapan ng mga abogadong nakabase sa Taiwan, gumagawa sa ilalim ng batas ng Taiwan, at may mga tanggapan sa Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), at Pingtung (屏東). Humahawak kami ng gawaing pagpapayo para sa mga kompanya at gayundin ng mga usaping dinadala sa korte, at tumutulong kami sa mga dayuhang kliyente sa mga hakbang na kailangang gawin sa Taiwan.',
               'Pangkalahatan ang lahat ng nilalaman dito. Ang kalalabasan ng isang usapin ay nakadepende sa mga totoong pangyayari, sa mga tuntuning umiiral, at sa panahong naganap ito. Kaya hindi kayang palitan ng gabay na ito ang tuwirang pag-uusap sa abogado tungkol sa mga dokumento ninyo.',
             ],
           },
@@ -1739,7 +1739,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Pagkakatatag at kaayusan',
             paragraphs: [
               'Itinatag ang Hovering International Law Firm (昊鼎國際法律事務所) noong 2016 ng mga abogadong nagmula sa National Taiwan University (國立臺灣大學). Pinagsasama ng pangalang Tsino nito ang dalawang karakter na 昊 (“malawak na kalangitan”) at 鼎 (“matatag na pundasyon”), na sumasalamin sa direksiyon ng tanggapan mula sa simula.',
-              'May mga tanggapan ito sa Kaohsiung (高雄), Taichung (臺中), at Pingtung (屏東). Nakatuon ang tanggapan sa Kaohsiung sa corporate governance (pamamahalang pangkorporasyon) at humahawak din ng karaniwang sibil, kriminal, at administratibong alitan; hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksiyon, intelektuwal na ari-arian, at gawaing may kaugnayan sa Korea at Japan; binuksan naman noong 2017 ang tanggapan sa Pingtung para sa pangangailangan ng lugar na iyon.',
+              'May mga tanggapan ito sa Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), at Pingtung (屏東). Nakatuon ang tanggapan sa Kaohsiung sa corporate governance (pamamahalang pangkorporasyon) at humahawak din ng karaniwang sibil, kriminal, at administratibong alitan; hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksiyon, intelektuwal na ari-arian, at gawaing may kaugnayan sa Korea at Japan; binuksan naman noong 2017 ang tanggapan sa Pingtung para sa pangangailangan ng lugar na iyon.',
               'Bukod sa gawaing legal, itinatag noong 2020 ang Hovering Accounting Office, na nagbibigay ng serbisyong pang-akawnting at pagpaplano sa buwis para sa mga may-ari ng negosyo at sa mga indibidwal na may malaking ari-arian.',
             ],
           },

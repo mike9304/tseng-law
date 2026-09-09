@@ -9,7 +9,7 @@ import SectionLabel from '@/components/SectionLabel';
 import ServicePracticeIcon from '@/components/ServicePracticeIcon';
 import SmartLink from '@/components/SmartLink';
 import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
-import GuidanceOfficeBand from '@/components/GuidanceOfficeBand';
+import OfficeMapTabs from '@/components/OfficeMapTabs';
 import { GuidanceContactBand } from '@/components/GuidancePageBody';
 import { resolveInsightsImageSrc } from '@/components/insights-image';
 import {
@@ -483,11 +483,10 @@ export default function GuidanceHomeBody({
         }}
       />
       <GuidanceHomeDetail locale={locale} />
-      {/* The English home ends with `OfficeMapTabs`; the guidance home had no
-          office photograph, address, phone number or map at all. */}
-      <Reveal>
-        <GuidanceOfficeBand locale={locale} />
-      </Reveal>
+      {/* WO-O29 A: the English home ends with `OfficeMapTabs`; the guidance
+          home now renders that same component, unwrapped exactly as `/en`
+          does, so the two home pages agree element for element. */}
+      <OfficeMapTabs locale={locale} id="offices" sectionClassName="section section--light" />
       <GuidanceContactBand locale={locale} isContact={false} />
     </div>
   );

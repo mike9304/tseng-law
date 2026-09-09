@@ -20,9 +20,19 @@ export interface GuidanceOfficeCopy {
   label: string;
   title: string;
   description: string;
+  /** Singular kicker above an office card ("Office" on /en). */
+  officeLabel: string;
   phoneLabel: string;
   faxLabel: string;
   mapLinkLabel: string;
+  /** Kicker over the embedded Google map preview panel. */
+  mapPreviewLabel: string;
+  /** Tab-panel labels for the Korea office block the English tabs also render. */
+  koreaOfficeTitle: string;
+  koreaAddressCardLabel: string;
+  koreaMapLinkLabel: string;
+  /** Word after the Google review count ("reviews" on /en). */
+  reviewCountWord: string;
   /** alt text for `/images/office/taipei-01..03.jpg`, in that order. */
   photoAlts: [string, string, string];
   officeTitles: Record<GuidanceOfficeId, string>;
@@ -33,6 +43,12 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     label: 'OFFICES',
     title: 'Văn phòng',
     description: 'Địa chỉ các văn phòng tại Đài Loan của Hovering International Law Firm.',
+    officeLabel: 'Văn phòng',
+    mapPreviewLabel: 'Xem trước bản đồ',
+    koreaOfficeTitle: 'Văn phòng Hàn Quốc',
+    koreaAddressCardLabel: 'Địa chỉ văn phòng Hàn Quốc',
+    koreaMapLinkLabel: 'Xem trên Naver Map',
+    reviewCountWord: 'đánh giá',
     phoneLabel: 'Điện thoại',
     faxLabel: 'Fax',
     mapLinkLabel: 'Xem trên bản đồ',
@@ -52,6 +68,12 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     label: 'OFFICES',
     title: 'Kantor',
     description: 'Alamat kantor Hovering International Law Firm di Taiwan.',
+    officeLabel: 'Kantor',
+    mapPreviewLabel: 'Pratinjau peta',
+    koreaOfficeTitle: 'Kantor Korea',
+    koreaAddressCardLabel: 'Alamat kantor Korea',
+    koreaMapLinkLabel: 'Lihat di Naver Map',
+    reviewCountWord: 'ulasan',
     phoneLabel: 'Telepon',
     faxLabel: 'Faks',
     mapLinkLabel: 'Lihat di peta',
@@ -71,6 +93,12 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     label: 'OFFICES',
     title: 'สำนักงาน',
     description: 'ที่อยู่สำนักงานของ Hovering International Law Firm ในไต้หวัน',
+    officeLabel: 'สำนักงาน',
+    mapPreviewLabel: 'ตัวอย่างแผนที่',
+    koreaOfficeTitle: 'สำนักงานเกาหลี',
+    koreaAddressCardLabel: 'ที่อยู่สำนักงานเกาหลี',
+    koreaMapLinkLabel: 'ดูบน Naver Map',
+    reviewCountWord: 'รีวิว',
     phoneLabel: 'โทรศัพท์',
     faxLabel: 'โทรสาร',
     mapLinkLabel: 'ดูบนแผนที่',
@@ -90,6 +118,12 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     label: 'OFFICES',
     title: 'Mga tanggapan',
     description: 'Mga address ng tanggapan ng Hovering International Law Firm sa Taiwan.',
+    officeLabel: 'Tanggapan',
+    mapPreviewLabel: 'Preview ng mapa',
+    koreaOfficeTitle: 'Tanggapan sa Korea',
+    koreaAddressCardLabel: 'Address ng tanggapan sa Korea',
+    koreaMapLinkLabel: 'Tingnan sa Naver Map',
+    reviewCountWord: 'review',
     phoneLabel: 'Telepono',
     faxLabel: 'Fax',
     mapLinkLabel: 'Tingnan sa mapa',

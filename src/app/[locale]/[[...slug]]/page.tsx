@@ -26,7 +26,7 @@ import {
   isGuidanceLocale4,
   type GuidanceLocale4,
 } from '@/lib/public-guidance';
-import { getOrganizationName, getSiteUrl } from '@/lib/seo';
+import { getOpenGraphLocale, getOrganizationName, getSiteUrl } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -73,12 +73,24 @@ function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Me
   // Same "<page> | <firm>" shape the four site locales publish. The guidance
   // titles carried the page name alone, so a search result showed no firm.
   const brandName = getOrganizationName('en');
+  const canonicalUrl = guidanceCanonicalUrl(locale, classified.pageKey, siteUrl);
   return {
     title: { absolute: `${page.title} | ${brandName}` },
     description: page.description,
     alternates: {
-      canonical: guidanceCanonicalUrl(locale, classified.pageKey, siteUrl),
+      canonical: canonicalUrl,
       languages: buildGuidanceCoreLanguageAlternates(classified.pageKey, siteUrl),
+    },
+    // WO-O29 C: ko/zh-hant/en/ja publish `og:locale`; these ten guidance pages
+    // published no Open Graph block at all. `og:locale:alternate` stays absent
+    // because the four site locales emit none either.
+    openGraph: {
+      title: `${page.title} | ${brandName}`,
+      description: page.description,
+      url: canonicalUrl,
+      siteName: brandName,
+      locale: getOpenGraphLocale(locale),
+      type: 'website',
     },
     robots: { index: true, follow: true },
   };

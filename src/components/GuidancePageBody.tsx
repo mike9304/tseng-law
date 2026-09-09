@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import FAQAccordion from '@/components/FAQAccordion';
-import GuidanceOfficeBand from '@/components/GuidanceOfficeBand';
+import OfficeMapTabs from '@/components/OfficeMapTabs';
 import { GuidanceServices } from '@/components/GuidanceHomeBody';
 import GuidanceTeamRoster from '@/components/GuidanceTeamRoster';
 import InternationalInquiryForm, {
@@ -225,13 +225,10 @@ export default function GuidancePageBody({
         ) : null}
       </article>
 
-      {/* Office photographs and addresses. The English contact page carries
-          them through `OfficeMapTabs`; the guidance contact page had neither. */}
-      {isContact ? (
-        <Reveal>
-          <GuidanceOfficeBand locale={locale} />
-        </Reveal>
-      ) : null}
+      {/* WO-O29 A: the same `OfficeMapTabs` the English contact page renders,
+          so the office section is structurally identical in all eight
+          languages instead of a flat band with different element counts. */}
+      {isContact ? <OfficeMapTabs locale={locale} /> : null}
 
       {isContact ? (
         <Reveal>

@@ -24,6 +24,7 @@ import {
   buildCollectionPageJsonLd,
   buildGuidanceLegalServiceJsonLd,
   buildSeoMetadata,
+  getOpenGraphLocale,
   getSiteUrl,
 } from '@/lib/seo';
 import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
@@ -79,12 +80,21 @@ const columnKeywords: Record<SiteLocale, string[]> = {
 function guidanceColumnsMetadata(locale: GuidanceLocale4) {
   const page = guidanceContent[locale].pages.columns;
   const siteUrl = getSiteUrl();
+  const canonicalUrl = guidanceCanonicalUrl(locale, 'columns', siteUrl);
   return {
     title: { absolute: page.title },
     description: page.description,
     alternates: {
-      canonical: guidanceCanonicalUrl(locale, 'columns', siteUrl),
+      canonical: canonicalUrl,
       languages: buildGuidanceCoreLanguageAlternates('columns', siteUrl),
+    },
+    // WO-O29 C: same `og:locale` the other nine guidance pages now publish.
+    openGraph: {
+      title: page.title,
+      description: page.description,
+      url: canonicalUrl,
+      locale: getOpenGraphLocale(locale),
+      type: 'website' as const,
     },
     robots: { index: true, follow: true },
   };

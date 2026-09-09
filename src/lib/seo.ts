@@ -154,6 +154,15 @@ function openGraphLocaleFor(locale: PublicSeoLocale): string {
   return guidanceOpenGraphLocale[locale] ?? openGraphLocale.en;
 }
 
+/**
+ * WO-O29 C. `og:locale` for any of the eight public locales. The four guidance
+ * routes build their metadata by hand and emitted no `openGraph` block at all,
+ * so vi/id/th/fil published no `og:locale` while ko/zh-hant/en/ja did.
+ */
+export function getOpenGraphLocale(locale: PublicSeoLocale): string {
+  return openGraphLocaleFor(locale);
+}
+
 const organizationLanguageTags = ['ko', 'zh-Hant', 'en', 'ja'];
 const organizationAddress: Record<SiteLocale, string> = {
   ko: '타이베이시 다퉁구 청더로 1단 35호 7층의2',

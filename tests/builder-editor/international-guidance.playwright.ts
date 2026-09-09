@@ -554,44 +554,89 @@ test.describe('O19 guidance asset parity with /en', () => {
     }
   }
 
-  for (const locale of GUIDANCE_LOCALES_4) {
-    test(`${locale} /contact renders office photos and addresses like /en`, async ({ page }) => {
-      await page.setViewportSize(DESKTOP);
+  /**
+   * WO-O29 A. The guidance locales used to render a flat band listing all four
+   * offices at once, which could never match the `/en` element counts because
+   * `/en` renders `OfficeMapTabs` and shows one office at a time. All eight
+   * locales now render that same component, so the structure is compared
+   * directly and every office must still be reachable by clicking its tab.
+   */
+  for (const pageKey of ['home', 'contact'] as const) {
+    for (const locale of GUIDANCE_LOCALES_4) {
+      test(`${locale} /${pageKey} renders the same office tabs as /en`, async ({ page }) => {
+        await page.setViewportSize(DESKTOP);
 
-      await page.goto('/en/contact', { waitUntil: 'domcontentloaded' });
-      const enOffices = page.locator('#offices');
-      await expect(enOffices.first()).toBeVisible();
-      const expectedOffices = await enOffices.locator('[role="tab"]').count();
-      const expectedPhotos = await enOffices.locator('img').count();
-      expect(expectedOffices, '/en/contact must list offices to compare against').toBeGreaterThan(0);
-      expect(expectedPhotos, '/en/contact must show office photos to compare against')
-        .toBeGreaterThan(0);
-
-      await page.goto(guidancePublicPath(locale, 'contact'), { waitUntil: 'domcontentloaded' });
-      const band = page.locator('section[data-guidance-offices="true"]');
-      await expect(band).toBeVisible();
-      await expect(band.locator('[data-guidance-office]')).toHaveCount(expectedOffices);
-      await expect(band.locator('[data-guidance-office-photo] img')).toHaveCount(expectedPhotos);
-
-      const copy = guidanceOfficeCopy[locale];
-      await expect(band).toContainText(copy.title);
-      await expect(band).toContainText(copy.mapLinkLabel);
-      for (const title of Object.values(copy.officeTitles)) {
-        await expect(band).toContainText(title);
-      }
-
-      const photos = band.locator('[data-guidance-office-photo] img');
-      for (let i = 0; i < expectedPhotos; i += 1) {
-        const img = photos.nth(i);
-        await expect(img).toHaveAttribute('alt', /\S/);
-        await img.scrollIntoViewIfNeeded();
-        await expect
-          .poll(async () => img.evaluate((node) => (node as HTMLImageElement).naturalWidth))
+        const enPath = pageKey === 'home' ? '/en' : '/en/contact';
+        await page.goto(enPath, { waitUntil: 'domcontentloaded' });
+        // Counts only — the English home wraps this section in a scroll
+        // `reveal` wrapper, so assert it is in the DOM rather than on screen.
+        const enOffices = page.locator('#offices').first();
+        await expect(enOffices).toBeAttached();
+        const expectedTabs = await enOffices.locator('[role="tab"]').count();
+        const expectedPhotos = await enOffices.locator('img').count();
+        const expectedIframes = await enOffices.locator('iframe').count();
+        const expectedTel = await enOffices.locator('a[href^="tel:"]').count();
+        expect(expectedTabs, `${enPath} must list office tabs to compare against`).toBe(4);
+        expect(expectedPhotos, `${enPath} must show office photos to compare against`)
           .toBeGreaterThan(0);
-      }
 
-      await expect.poll(() => documentOverflowPx(page)).toBeLessThanOrEqual(1);
-    });
+        await page.goto(guidancePublicPath(locale, pageKey), { waitUntil: 'domcontentloaded' });
+        const band = page.locator('section[data-guidance-offices="true"]');
+        await expect(band).toBeAttached();
+        await expect(band).toHaveAttribute('id', 'offices');
+        await expect(band.locator('[role="tab"]')).toHaveCount(expectedTabs);
+        await expect(band.locator('img')).toHaveCount(expectedPhotos);
+        await expect(band.locator('iframe')).toHaveCount(expectedIframes);
+        await expect(band.locator('a[href^="tel:"]')).toHaveCount(expectedTel);
+
+        const copy = guidanceOfficeCopy[locale];
+        await expect(band).toContainText(copy.title);
+        for (const title of Object.values(copy.officeTitles)) {
+          await expect(band.locator('[role="tab"]', { hasText: title })).toHaveCount(1);
+        }
+
+        // The home page runs inside the cinematic scroll shell `/en` also uses,
+        // so the click-through below is asserted on the contact page, where the
+        // section sits in normal document flow in every language.
+        if (pageKey !== 'contact') return;
+
+        await band.scrollIntoViewIfNeeded();
+        await expect(band).toBeVisible();
+
+        // No information is lost to the tabs: every office's canonical address
+        // (and its phone number, where the record has one) is reachable by
+        // clicking that office's tab.
+        for (const [officeId, title] of Object.entries(copy.officeTitles)) {
+          await band.locator('[role="tab"]', { hasText: title }).click();
+          const card = band.locator('[data-guidance-office]');
+          await expect(card).toHaveAttribute('data-guidance-office', officeId);
+          await expect(card.locator('.card-title')).toHaveText(title);
+          const address = ((await card.locator('.card-copy').first().textContent()) ?? '').trim();
+          expect(address.length, `${locale} ${officeId} address`).toBeGreaterThan(10);
+          if (officeId !== 'taipei') {
+            await expect(
+              card.locator('a[href^="tel:"]'),
+              `${locale} ${officeId} phone number`,
+            ).toHaveCount(1);
+          }
+        }
+
+        // Taipei is the opening tab and carries the three office photographs.
+        await band.locator('[role="tab"]', { hasText: copy.officeTitles.taipei }).click();
+        const photos = band.locator('[data-guidance-office-photo] img');
+        await expect(photos).toHaveCount(expectedPhotos);
+        for (let i = 0; i < expectedPhotos; i += 1) {
+          const img = photos.nth(i);
+          await expect(img).toHaveAttribute('alt', /\S/);
+          await img.scrollIntoViewIfNeeded();
+          await expect
+            .poll(async () => img.evaluate((node) => (node as HTMLImageElement).naturalWidth))
+            .toBeGreaterThan(0);
+        }
+
+        await expect.poll(() => documentOverflowPx(page)).toBeLessThanOrEqual(1);
+      });
+    }
   }
 
   /**
@@ -713,27 +758,21 @@ test.describe('O19 count vectors vs /en', () => {
         );
         const allowance = O19_ALLOWANCES[pageKey] ?? {};
 
-        for (const key of ['teamImages', 'serviceCards', 'iframes'] as const) {
+        // WO-O29 A: `telLinks` and `mapLinks` are compared exactly, like the
+        // rest. They used to be a `>=` comparison because the guidance pages
+        // rendered a flat office band while `/en` renders `OfficeMapTabs`; all
+        // eight locales now render the same tabs, so the counts must agree.
+        for (const key of [
+          'teamImages',
+          'serviceCards',
+          'iframes',
+          'telLinks',
+          'mapLinks',
+        ] as const) {
           if (allowance[key] === 'skip') continue;
           expect(actual[key], `${locale}/${pageKey} ${key} (en=${expected[key]})`).toBe(
             expected[key],
           );
-        }
-
-        // `OfficeMapTabs` puts three of the four offices behind inactive tabs,
-        // so the English page exposes one office's phone number and map link at
-        // a time. The guidance band lists all four at once, which is a superset,
-        // never fewer. Equality here would force the guidance page to hide
-        // canonical contact details it already renders correctly.
-        for (const key of ['telLinks', 'mapLinks'] as const) {
-          if (allowance[key] === 'skip') continue;
-          expect(
-            actual[key],
-            `${locale}/${pageKey} ${key} must be at least the en count (en=${expected[key]})`,
-          ).toBeGreaterThanOrEqual(expected[key]);
-          if (expected[key] > 0) {
-            expect(actual[key], `${locale}/${pageKey} ${key} must not be zero`).toBeGreaterThan(0);
-          }
         }
 
         if (allowance.jsonLdTypes !== 'skip') {
@@ -833,6 +872,58 @@ test.describe('O19 count vectors vs /en', () => {
       for (const pageKey of ['home', 'lawyers', 'contact'] as const) {
         await page.goto(guidancePublicPath(locale, pageKey), { waitUntil: 'domcontentloaded' });
         expect(await page.title(), `${locale}/${pageKey} title`).toContain(brand);
+      }
+    });
+  }
+});
+
+/**
+ * WO-O29 C. `og:locale` was published by ko/zh-hant/en/ja and by no guidance
+ * page, because the guidance routes build their metadata by hand and emitted
+ * no Open Graph block at all. `og:locale:alternate` must stay absent in all
+ * eight languages: the four site locales emit none, and parity is "at least
+ * the /en set".
+ */
+test.describe('O29 og:locale across the eight public locales', () => {
+  const EXPECTED_OG_LOCALE: Record<PublicLocale8, string> = {
+    ko: 'ko_KR',
+    'zh-hant': 'zh_TW',
+    en: 'en_US',
+    ja: 'ja_JP',
+    vi: 'vi_VN',
+    id: 'id_ID',
+    th: 'th_TH',
+    fil: 'fil_PH',
+  };
+
+  for (const locale of PUBLIC_LOCALES_8) {
+    test(`${locale} home publishes og:locale ${EXPECTED_OG_LOCALE[locale]}`, async ({ page }) => {
+      await page.goto(`/${locale}`, { waitUntil: 'domcontentloaded' });
+      const values = await page.evaluate(() =>
+        Array.from(document.querySelectorAll('meta[property="og:locale"]')).map((node) =>
+          node.getAttribute('content'),
+        ),
+      );
+      expect(values, `/${locale} og:locale`).toEqual([EXPECTED_OG_LOCALE[locale]]);
+
+      const alternates = await page.evaluate(
+        () => document.querySelectorAll('meta[property="og:locale:alternate"]').length,
+      );
+      expect(alternates, `/${locale} og:locale:alternate`).toBe(0);
+    });
+  }
+
+  for (const locale of GUIDANCE_LOCALES_4) {
+    test(`${locale} inner guidance pages publish og:locale`, async ({ page }) => {
+      for (const pageKey of ['contact', 'columns'] as const) {
+        await page.goto(guidancePublicPath(locale, pageKey), { waitUntil: 'domcontentloaded' });
+        const value = await page.evaluate(
+          () =>
+            document
+              .querySelector('meta[property="og:locale"]')
+              ?.getAttribute('content') ?? null,
+        );
+        expect(value, `${locale}/${pageKey} og:locale`).toBe(EXPECTED_OG_LOCALE[locale]);
       }
     });
   }

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import HeroMediaBackground from '@/components/HeroMediaBackground';
+import JsonLd from '@/components/JsonLd';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import Reveal from '@/components/Reveal';
 import SectionLabel from '@/components/SectionLabel';
@@ -18,9 +19,12 @@ import type { ColumnPost } from '@/lib/column-post';
 import {
   EXISTING_SITE_LOCALES_4,
   PUBLIC_LANGUAGE_AUTONYMS,
+  guidanceCanonicalUrl,
   guidancePublicPath,
+  publicDocumentLanguage,
   type ExistingSiteLocale4,
 } from '@/lib/public-guidance';
+import { buildGuidanceLegalServiceJsonLd, getSiteUrl } from '@/lib/seo';
 
 /**
  * Home page for the four guidance locales (vi/id/th/fil).
@@ -422,9 +426,23 @@ export default function GuidanceHomeBody({
   columns: GuidanceHomeColumnSource;
 }) {
   const pack = guidanceContent[locale];
+  // Structured data, built the same way `GuidancePageBody` builds it for the
+  // other guidance pages: `inLanguage` is the page language while the
+  // consultation languages inside the node stay the fixed four
+  // (GUIDANCE_CONSULTATION_LANGUAGES = en/zh-Hant/ja/ko).
+  //
+  // No FAQPage here: the home pack carries no `faqs`, and the visible FAQ lives
+  // on `/{locale}/faq`, which already emits that node.
+  const legalServiceJsonLd = buildGuidanceLegalServiceJsonLd({
+    inLanguage: publicDocumentLanguage(locale),
+    url: guidanceCanonicalUrl(locale, 'home', getSiteUrl()),
+    description: pack.pages.home.description,
+  });
 
   return (
     <div data-guidance-shell="true" data-locale={locale} data-guidance-page="home">
+      {/* First child so the home design-parity landmark sequence is unchanged. */}
+      <JsonLd data={legalServiceJsonLd} />
       <GuidanceHero locale={locale} />
       <Reveal>
         <GuidanceColumnArchive locale={locale} source={columns} />

@@ -176,6 +176,39 @@ describe('guidance home matches the English home composition', () => {
     expect(markup).toContain('/vi/columns/column-1');
   });
 
+  it('carries the LegalService JSON-LD as the first child, ahead of the hero', () => {
+    // S2b: the home now emits structured data. It must sit before every
+    // landmark so the section sequence asserted above is untouched, and the
+    // consultation languages must stay the fixed four (page language != a
+    // language the firm can be consulted in).
+    const scriptPattern = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
+    for (const locale of GUIDANCE_LOCALES_4) {
+      const markup = renderGuidanceHome(locale);
+      expect(markup, `${locale} json-ld is the first child`).toMatch(
+        /^<div data-guidance-shell="true"[^>]*><script type="application\/ld\+json">/,
+      );
+
+      const nodes = [...markup.matchAll(scriptPattern)].map(
+        (match) => JSON.parse(match[1]) as Record<string, unknown>,
+      );
+      expect(nodes, `${locale} json-ld node count`).toHaveLength(1);
+      expect(nodes[0]['@type'], `${locale} json-ld type`).toBe('LegalService');
+
+      const availableLanguage = nodes[0].availableLanguage as string[];
+      expect(availableLanguage, `${locale} consultation languages`).toEqual([
+        'en',
+        'zh-Hant',
+        'ja',
+        'ko',
+      ]);
+      expect(availableLanguage, `${locale} consultation language count`).toHaveLength(4);
+
+      expect(homeLandmarkSequence(markup), `${locale} landmarks after json-ld`).toEqual(
+        EXPECTED_SEQUENCE,
+      );
+    }
+  });
+
   it('omits the hero search bar, which has no index or route for these locales', () => {
     for (const locale of GUIDANCE_LOCALES_4) {
       const markup = renderGuidanceHome(locale);

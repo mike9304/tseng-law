@@ -1,6 +1,9 @@
 import type { ReactElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
+import GuidanceHomeBody, {
+  type GuidanceHomeColumnSource,
+} from '@/components/GuidanceHomeBody';
 import GuidancePageBody, { GuidanceNotFoundBody } from '@/components/GuidancePageBody';
 import JsonLd from '@/components/JsonLd';
 import {
@@ -31,6 +34,24 @@ function renderGuidance(locale: GuidanceLocale, pageKey: GuidancePageKey): strin
   return renderToStaticMarkup(GuidancePageBody({ locale, pageKey }) as ReactElement);
 }
 
+/**
+ * The guidance home is served by `GuidanceHomeBody`, not `GuidancePageBody`, so
+ * its structured data has to be asserted against its own render path. An empty
+ * column source keeps the archive section (and `next/image`) out of the markup;
+ * the JSON-LD does not depend on it.
+ */
+const EMPTY_COLUMN_SOURCE: GuidanceHomeColumnSource = {
+  sourceLocale: 'en',
+  isOriginalLanguage: true,
+  posts: [],
+};
+
+function renderGuidanceHome(locale: GuidanceLocale): string {
+  return renderToStaticMarkup(
+    GuidanceHomeBody({ locale, columns: EMPTY_COLUMN_SOURCE }) as ReactElement,
+  );
+}
+
 /** The localized 404 body, which must stay free of structured data. */
 function renderNotFound(locale: GuidanceLocale): string {
   return renderToStaticMarkup(GuidanceNotFoundBody({ locale }) as ReactElement);
@@ -47,6 +68,10 @@ function parseJsonLdNodes(markup: string): Array<Record<string, unknown>> {
 
 function nodeOfType(markup: string, type: string): Record<string, unknown> | undefined {
   return parseJsonLdNodes(markup).find((node) => node['@type'] === type);
+}
+
+function nodesOfType(markup: string, type: string): Array<Record<string, unknown>> {
+  return parseJsonLdNodes(markup).filter((node) => node['@type'] === type);
 }
 
 describe('guidance FAQPage JSON-LD', () => {
@@ -146,6 +171,36 @@ describe('guidance LegalService JSON-LD', () => {
     expect(legalService!.inLanguage).toBe(locale);
     expect(legalService!.url).toBe(guidanceCanonicalUrl(locale, 'pricing'));
     expect(legalService!.description).toBe(guidanceContent[locale].pages.pricing.description);
+  });
+
+  it.each(GUIDANCE_LOCALES_4)('emits exactly one LegalService on the %s home', (locale) => {
+    const markup = renderGuidanceHome(locale);
+    const legalServices = nodesOfType(markup, 'LegalService');
+    expect(legalServices, `${locale} home LegalService count`).toHaveLength(1);
+
+    const availableLanguage = legalServices[0].availableLanguage as string[];
+    expect(availableLanguage).toEqual(CONSULTATION_LANGUAGES);
+    expect(availableLanguage, `${locale} home consultation languages`).toHaveLength(4);
+    for (const guidanceLocale of GUIDANCE_LOCALES_4) {
+      expect(availableLanguage).not.toContain(guidanceLocale);
+    }
+  });
+
+  it.each(GUIDANCE_LOCALES_4)('sets inLanguage, url and description from the %s home', (locale) => {
+    const legalService = nodeOfType(renderGuidanceHome(locale), 'LegalService');
+    expect(legalService!.inLanguage).toBe(locale);
+    expect(legalService!.url).toBe(guidanceCanonicalUrl(locale, 'home'));
+    expect(legalService!.description).toBe(guidanceContent[locale].pages.home.description);
+    expect((legalService!.provider as Record<string, unknown>)['@id']).toBe(ATTORNEY_PERSON_ID);
+  });
+
+  it('emits no FAQPage on the guidance home, which carries no FAQs', () => {
+    for (const locale of GUIDANCE_LOCALES_4) {
+      expect(guidanceContent[locale].pages.home.faqs).toBeUndefined();
+      const markup = renderGuidanceHome(locale);
+      expect(nodesOfType(markup, 'FAQPage'), `${locale} home FAQPage`).toHaveLength(0);
+      expect(parseJsonLdNodes(markup), `${locale} home JSON-LD nodes`).toHaveLength(1);
+    }
   });
 
   it('builds the same node shape outside the component', () => {

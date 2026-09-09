@@ -33,7 +33,7 @@
 - [~] 12:4x S3-KEY-1 WO-S3-GUIDANCE-KEY Opus 진행 중(drafts 워크트리, 발주안 9f466e7b): public-guidance 코어 키 `work-permit-renewal` 추가 + src/data/international-guidance-extra.ts(vi/id/th/fil 본문·마커) + 사이트맵·hreflang → [ ] S3-KEY-2 Grok 검토 → [ ] S3-KEY-3 게이트·커밋
 
 ### S4 색인
-- [ ] S4-a 로컬 실측: RUNBOOK §3 ⑤ 렌더 40 URL → evidence/s4-local-render.txt
+- [x] 2026-09-09 S4-a 로컬 40URL 실측 BAD 0/40(200·canonical self·hreflang 9·x-default en) → evidence/s4-local-hreflang.txt
 - [ ] S4-b 배포 후(사용자 승인 시) `live-seo-scan` + `verify:multilingual-live` → evidence/s4-live-*.log
 - [~] S4-c 색인 요청: 12:2x 보류 → **13:0x 사용자 정정=둘 다 승인**. 손빗이 GSC sitemap 재제출 + 16URL Request Indexing + IndexNow 40URL 실행 중(총괄은 중복 제출 방지 위해 실행 안 함). 손빗 완료 보고 오면 evidence/s4-indexing.md 에 기록 → [x]
 - [ ] S4-d 2주 뒤 색인 재확인(손빗)
@@ -41,7 +41,7 @@
 ### S5 권위
 - [x] 2026-09-09 S5-a Grok 후보 40건·6국 → docs/marketing/SEA-AUTHORITY-CANDIDATES-2026-09.md
 - [x] 2026-09-09 S5-b 검수(유료·交流協会 제외, 광고·계약 grep 0, 발송 0) → 커밋 551d2815
-- [ ] S5-c ASK "발송 승인 항목 선택"(문서 §4 상위 10이 선택지). S0-b 정리 후 발송. 승인 전 발송 금지
+- [~] 12:5x S5-c ASK 발송(ASK-…-sea-seo-outreach): 상위 10 중 선택. 답 오면 선택 항목을 문서 §4에 표시하고 [x] (발송 자체는 사무소·사용자 액션, 총괄은 문안 확정까지)
 
 ### S6 측정 루프 (매주 화)
 - [ ] W1 09-16 · [ ] W2 09-23 · [ ] W3 09-30 · [ ] W4 10-07 · [ ] W5 10-14 · [ ] W6 10-21 · [ ] W7 10-28 · [ ] W8 11-04 · [ ] W9 11-11 · [ ] W10 11-18 · [ ] W11 11-25 · [ ] 판정 12-02

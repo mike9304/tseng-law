@@ -7,7 +7,7 @@ import {
   CONSULTATION_EMAIL,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
-import InternationalGuidance from '@/components/InternationalGuidance';
+import { GuidanceNotFoundBody } from '@/components/GuidancePageBody';
 import { guidanceContent } from '@/data/international-guidance-content';
 import { isGuidanceLocale4 } from '@/lib/public-guidance';
 
@@ -39,7 +39,7 @@ export default async function LocalizedNotFound() {
   const pathname = await requestPathname();
   const raw = pathname.split('/').filter(Boolean)[0];
   if (isGuidanceLocale4(raw)) {
-    return <InternationalGuidance locale={raw} unavailable />;
+    return <GuidanceNotFoundBody locale={raw} />;
   }
 
   const locale = await requestLocale();

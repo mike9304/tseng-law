@@ -86,8 +86,10 @@ describe('Japanese desktop header', () => {
     expect(headerSource).toMatch(
       /if \(locale === 'ja'\) \{[\s\S]*?return;[\s\S]*?fetch\(`\/api\/members\/me\?locale=\$\{locale\}`/,
     );
+    // O14: the guidance four also render this header and have no search index,
+    // so the overlay guard now excludes them as well. JA still never gets it.
     expect(headerSource).toContain(
-      "{locale !== 'ja' ? (\n        <SearchOverlay",
+      "{locale !== 'ja' && !isGuidance ? (\n        <SearchOverlay",
     );
   });
 

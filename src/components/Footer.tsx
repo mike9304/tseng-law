@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { SiteLocale } from '@/lib/locales';
-import { siteContent } from '@/data/site-content';
+import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
+import {
+  chromeSiteLocale,
+  guidanceLegalLinks,
+  publicSiteContent,
+} from '@/lib/public-site-chrome';
 import { getPublishedBaseFooterColumns } from '@/components/footer-link-policy';
 import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 import FooterEmailCopyButton from '@/components/FooterEmailCopyButton';
@@ -26,10 +30,12 @@ export default function Footer({
   locale,
   extraColumns = [],
 }: {
-  locale: SiteLocale;
+  locale: PublicLocale8;
   extraColumns?: readonly FooterLinkColumn[];
 }) {
-  const footerContent = siteContent[locale].footer;
+  const content = publicSiteContent(locale);
+  const chromeLocale = chromeSiteLocale(locale);
+  const footerContent = content.footer;
   const publishedBaseColumns = getPublishedBaseFooterColumns(footerContent.columns);
   const brandName =
     locale === 'ko'
@@ -49,15 +55,16 @@ export default function Footer({
         : locale === 'ja'
           ? '事務所所在地へのクイックリンク'
           : 'Quick links to office locations';
-  const offices = siteContent[locale].contact.locations.map((office) => ({
+  const offices = content.contact.locations.map((office) => ({
     label: office.title,
     address: office.details[0],
     href: `/${locale}/contact#offices`,
   }));
-  const consultationMailto = getConsultationPublicMailto(locale);
-  const consultationCtaLabel = getConsultationCtaLabel(locale);
-  const legalLinks =
-    locale === 'ko'
+  const consultationMailto = getConsultationPublicMailto(chromeLocale);
+  const consultationCtaLabel = getConsultationCtaLabel(chromeLocale);
+  const legalLinks = isGuidanceLocale4(locale)
+    ? guidanceLegalLinks(locale)
+    : locale === 'ko'
       ? [
           { label: '개인정보처리방침', href: '/ko/privacy' },
           { label: '면책 고지', href: '/ko/disclaimer' },
@@ -129,7 +136,7 @@ export default function Footer({
               <p className="footer-main-note">{footerContent.note}</p>
               <div className="footer-consultation-email">
                 <p className="footer-consultation-email-label">
-                  {getOfficialConsultationEmailLabel(locale)}
+                  {getOfficialConsultationEmailLabel(chromeLocale)}
                 </p>
                 <div className="footer-consultation-email-actions">
                   <a
@@ -139,7 +146,7 @@ export default function Footer({
                   >
                     {CONSULTATION_EMAIL}
                   </a>
-                  <FooterEmailCopyButton locale={locale} />
+                  <FooterEmailCopyButton locale={chromeLocale} />
                 </div>
               </div>
             </div>

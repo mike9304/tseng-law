@@ -21,9 +21,8 @@ import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { checkAccess } from '@/lib/builder/members/members-engine';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildSeoMetadata, getSiteUrl } from '@/lib/seo';
 import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
-import InternationalGuidance, {
-  OriginalLanguageColumnsSection,
-} from '@/components/InternationalGuidance';
+import GuidancePageBody from '@/components/GuidancePageBody';
+import { OriginalLanguageColumnsSection } from '@/components/InternationalGuidance';
 import { guidanceContent } from '@/data/international-guidance-content';
 import {
   buildGuidanceCoreLanguageAlternates,
@@ -132,7 +131,9 @@ export default async function ColumnsPage(
     const posts = getAllColumnPosts(locale);
     const copy = guidanceContent[locale].pages.columns;
     if (posts.length === 0) {
-      return <InternationalGuidance locale={locale} pageKey="columns" />;
+      // Body only: `[locale]/layout.tsx` already wraps guidance locales in the
+      // shared site chrome (header incl. the single language switcher, footer).
+      return <GuidancePageBody locale={locale} pageKey="columns" />;
     }
 
     const translatedSlugs = new Set(posts.map((post) => post.slug));

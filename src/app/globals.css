@@ -5403,9 +5403,18 @@ section.home-results-panel--editorial {
   background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid rgba(148, 163, 184, 0.14);
   position: relative;
-  /* Above .header-main (z-index: 5) so the language dropdown is not covered by
-     .nav-cta / logo / search in the main bar. Layout is unchanged: the two
-     bars do not overlap; only overflowing descendants need this stack. */
+  /* Language-dropdown stacking (single source of truth).
+     `.header-utility` is a stacking context, so the open language menu can
+     never escape it — `.menu { z-index: 90 }` only orders siblings inside this
+     bar. With the historic `z-index: 2` the whole bar painted under
+     `.header-main` (z-index 5), so the dropdown ended up behind `.nav-cta` /
+     logo / search and its lower options were unclickable. Found twice: on the
+     old four locales once the switcher sat far enough right (G21), and on the
+     guidance four, where there are no member links to push it left (O14).
+     Lifting the bar to 6 unconditionally fixes both; it is preferred over a
+     `:has(details[open])` variant because the two bars never overlap (layout is
+     unchanged either way) and this needs no `:has()` support. `.utility-lang`
+     must also stay `overflow: visible` for the menu to leave the pill. */
   z-index: 6;
   backdrop-filter: blur(16px);
 }

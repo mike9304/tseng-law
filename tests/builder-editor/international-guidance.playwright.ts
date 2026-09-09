@@ -26,12 +26,14 @@ const MOBILE = { width: 390, height: 844 } as const;
 const VIEWPORTS = [DESKTOP, MOBILE] as const;
 const UNSUPPORTED_COLUMNS_MISSING = 'columns/missing' as const;
 
-const OLD4_UTILITY_CONTACT_HREF: Record<ExistingSiteLocale4, string> = {
-  ko: '/ko/contact',
-  'zh-hant': '/zh-hant/contact',
-  en: '/en/contact',
-  ja: '/ja/contact',
-};
+/**
+ * O14: every public locale — the guidance four included — now renders the same
+ * site header/footer chrome, so the menu/language/brand interactions below use
+ * the real header for all eight locales instead of a guidance-only shell.
+ */
+function utilityContactHref(locale: PublicLocale8): string {
+  return `/${locale}/contact`;
+}
 
 type SeoSnapshot = {
   lang: string;
@@ -118,30 +120,36 @@ async function attachViewportScreenshot(
   });
 }
 
-async function openOld4LanguageSwitcher(
+async function openHeaderLanguageSwitcher(
   page: Page,
-  locale: ExistingSiteLocale4,
+  locale: PublicLocale8,
   viewportWidth: number,
 ): Promise<Locator> {
+  // The site header owns the switcher for all eight locales now; the page body
+  // must never render a second one (the removed in-component guidance dropdown).
+  await expect(
+    page.locator('header[data-public-site-header] .header-utility .locale-flag-switcher'),
+    `${locale} @${viewportWidth} header switcher count`,
+  ).toHaveCount(1);
+  await expect(
+    page.locator('[data-guidance-shell="true"] .locale-flag-switcher'),
+    `${locale} @${viewportWidth} duplicate switcher in page body`,
+  ).toHaveCount(0);
+
+  let switcher: Locator;
+
   if (viewportWidth <= MOBILE.width) {
     const toggle = old4Header(page).locator('button.mobile-toggle');
     await expect(toggle).toBeVisible();
     await toggle.click();
     const drawer = page.locator('#public-mobile-nav-drawer');
     await expect(drawer).toBeVisible();
-    const switcher = drawer.locator('.locale-flag-switcher');
-    const details = switcher.locator('details');
-    await expect(details).toBeVisible();
-    if ((await details.getAttribute('open')) === null) {
-      await details.locator('summary').click();
-    }
-    await expect(details).toHaveAttribute('open', '');
-    await expect(switcher.getByRole('link', { name: PUBLIC_LANGUAGE_AUTONYMS[locale], exact: true })).toBeVisible();
-    await expect(switcher.locator('.locale-flag-switcher-flag')).toHaveCount(0);
-    return switcher;
+    switcher = drawer.locator('.locale-flag-switcher');
+    await expect(switcher, `${locale} @${viewportWidth} drawer switcher count`).toHaveCount(1);
+  } else {
+    switcher = old4Header(page).locator('.locale-flag-switcher').first();
   }
 
-  const switcher = old4Header(page).locator('.locale-flag-switcher').first();
   const details = switcher.locator('details');
   await expect(details).toBeVisible();
   if ((await details.getAttribute('open')) === null) {
@@ -152,6 +160,18 @@ async function openOld4LanguageSwitcher(
     switcher.getByRole('link', { name: PUBLIC_LANGUAGE_AUTONYMS[locale], exact: true }),
   ).toBeVisible();
   await expect(switcher.locator('.locale-flag-switcher-flag')).toHaveCount(0);
+  // G21 contract kept: the open menu offers all eight languages, and every one
+  // of them is actually visible (not painted behind the header CTA).
+  const options = switcher.locator('.locale-flag-switcher-link');
+  await expect(options, `${locale} @${viewportWidth} language options`).toHaveCount(
+    PUBLIC_LOCALES_8.length,
+  );
+  for (const [index, optionLocale] of PUBLIC_LOCALES_8.entries()) {
+    await expect(
+      options.nth(index),
+      `${locale} @${viewportWidth} option ${optionLocale}`,
+    ).toBeVisible();
+  }
   return switcher;
 }
 
@@ -162,19 +182,7 @@ async function clickLanguage(
   viewportWidth: number,
 ): Promise<void> {
   const autonym = PUBLIC_LANGUAGE_AUTONYMS[targetLocale];
-  if (isGuidanceLocale4(currentLocale)) {
-    const switcher = guidanceShell(page).locator('.locale-flag-switcher');
-    const details = switcher.locator('details');
-    await expect(details).toBeVisible();
-    if ((await details.getAttribute('open')) === null) {
-      await details.locator('summary').click();
-    }
-    await expect(details).toHaveAttribute('open', '');
-    await switcher.getByRole('link', { name: autonym, exact: true }).click();
-    return;
-  }
-
-  const switcher = await openOld4LanguageSwitcher(
+  const switcher = await openHeaderLanguageSwitcher(
     page,
     currentLocale,
     viewportWidth,
@@ -187,15 +195,6 @@ async function clickMenuToContact(
   locale: PublicLocale8,
   viewportWidth: number,
 ): Promise<void> {
-  if (isGuidanceLocale4(locale)) {
-    const pack = guidanceContent[locale];
-    const nav = guidanceShell(page).locator('nav').filter({
-      has: page.getByRole('link', { name: pack.nav.contact, exact: true }),
-    });
-    await nav.getByRole('link', { name: pack.nav.contact, exact: true }).click();
-    return;
-  }
-
   if (viewportWidth <= MOBILE.width) {
     const toggle = old4Header(page).locator('button.mobile-toggle');
     await expect(toggle).toBeVisible();
@@ -208,20 +207,11 @@ async function clickMenuToContact(
 
   await old4Header(page)
     .locator('nav.utility-nav')
-    .locator(`a[href="${OLD4_UTILITY_CONTACT_HREF[locale]}"]`)
+    .locator(`a[href="${utilityContactHref(locale)}"]`)
     .click();
 }
 
 async function clickBrandHome(page: Page, locale: PublicLocale8): Promise<void> {
-  if (isGuidanceLocale4(locale)) {
-    await guidanceShell(page)
-      .locator('header')
-      .locator(`a[href="${guidancePublicPath(locale, 'home')}"]`)
-      .first()
-      .click();
-    return;
-  }
-
   await old4Header(page).locator('a.header-logo').click();
 }
 
@@ -270,7 +260,7 @@ async function assertCorePage(
   await expect(page.locator('html')).toHaveAttribute('lang', publicDocumentLanguage(locale));
   await expect(page).toHaveURL(new RegExp(`${path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?:/)?(?:[?#]|$)`));
 
-  if (pageKey === 'home' && isExistingSiteLocale4(locale)) {
+  if (pageKey === 'home') {
     await dismissOld4HomeChrome(page);
   }
 
@@ -329,9 +319,7 @@ test.describe('international guidance public surface', () => {
         }
 
         await page.goto(guidancePublicPath(locale, 'home'), { waitUntil: 'domcontentloaded' });
-        if (isExistingSiteLocale4(locale)) {
-          await dismissOld4HomeChrome(page);
-        }
+        await dismissOld4HomeChrome(page);
         await attachViewportScreenshot(page, `guidance-${locale}-${viewport.width}`);
       });
 
@@ -340,9 +328,7 @@ test.describe('international guidance public surface', () => {
       }) => {
         await page.setViewportSize(viewport);
         await page.goto(guidancePublicPath(locale, 'home'), { waitUntil: 'domcontentloaded' });
-        if (isExistingSiteLocale4(locale)) {
-          await dismissOld4HomeChrome(page);
-        }
+        await dismissOld4HomeChrome(page);
 
         await clickMenuToContact(page, locale, viewport.width);
         await expect(page).toHaveURL(new RegExp(`/${locale}/contact`));

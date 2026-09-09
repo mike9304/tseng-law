@@ -24,22 +24,16 @@ async function dismissCinematic(page: Page): Promise<void> {
   });
 }
 
+/**
+ * O14 folded the guidance locales into the shared site chrome, so /vi is driven
+ * through the very same header switcher as /ko — there is no guidance-only
+ * dropdown to target any more. The page-level duplicate that used to live in
+ * `InternationalGuidance` was removed with it.
+ */
 async function openLocaleFlagSwitcher(
   page: Page,
-  locale: (typeof LOCALES)[number],
   viewportWidth: number,
 ): Promise<Locator> {
-  if (locale === 'vi') {
-    const switcher = page.locator('[data-guidance-shell="true"] .locale-flag-switcher').first();
-    const details = switcher.locator('details');
-    await expect(details).toBeVisible();
-    if ((await details.getAttribute('open')) === null) {
-      await details.locator('summary').click();
-    }
-    await expect(details).toHaveAttribute('open', '');
-    return switcher;
-  }
-
   await dismissCinematic(page);
 
   if (viewportWidth <= MOBILE_NAV_MAX_WIDTH) {
@@ -79,7 +73,7 @@ test.describe('locale flag switcher visibility', () => {
         expect(response?.ok(), `/${locale} status`).toBeTruthy();
         await page.waitForLoadState('load');
 
-        const switcher = await openLocaleFlagSwitcher(page, locale, viewport.width);
+        const switcher = await openLocaleFlagSwitcher(page, viewport.width);
         const options = switcher.locator('.locale-flag-switcher-link');
         await expect(options).toHaveCount(PUBLIC_LOCALES_8.length);
 

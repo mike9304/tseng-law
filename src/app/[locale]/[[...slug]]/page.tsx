@@ -13,7 +13,7 @@ import { getLegacyPageMetadata, renderLegacyPage } from '../(legacy)';
 import { OPEN_GRAPH_LOCALE } from '@/lib/builder/seo/seo-model';
 import { isJaFullStaticPath, isJaUnsupportedPath, JA_SAFE_FALLBACK } from '@/lib/public-route-policy';
 import { buildLocalizedNotFoundMetadata } from '@/lib/not-found-copy';
-import InternationalGuidance from '@/components/InternationalGuidance';
+import GuidancePageBody from '@/components/GuidancePageBody';
 import { guidanceContent } from '@/data/international-guidance-content';
 import {
   buildGuidanceCoreLanguageAlternates,
@@ -125,7 +125,7 @@ export default async function MainSiteCatchAllPage(
     if (classified.kind !== 'page') {
       notFound();
     }
-    return <InternationalGuidance locale={params.locale} pageKey={classified.pageKey} />;
+    return <GuidancePageBody locale={params.locale} pageKey={classified.pageKey} />;
   }
 
   const locale = resolvePublicLocale(params.locale);

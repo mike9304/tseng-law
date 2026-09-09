@@ -106,6 +106,10 @@ export default async function LocaleLayout(
   const publicLocale = resolvePublicLocaleOrNotFound(params.locale);
 
   if (isGuidanceLocale4(publicLocale)) {
+    // Same chrome as the other four languages: shared header, footer and
+    // scroll-top inside `CinematicRouteShell`. Only locale-scoped product
+    // widgets (search overlay, members, quick contact) stay off, because the
+    // guidance surface publishes ten pages and no member/search routes.
     const language = publicDocumentLanguage(publicLocale);
     return (
       <>
@@ -114,7 +118,14 @@ export default async function LocaleLayout(
           fontClassName={getLocaleFontClassName(language)}
           managedFontClassNames={getManagedLocaleFontClassNames()}
         />
-        {children}
+        <CinematicRouteShell
+          locale={publicLocale}
+          header={<Header locale={publicLocale} />}
+          footer={<Footer locale={publicLocale} />}
+          scrollTop={<ScrollTopButton locale={publicLocale} />}
+        >
+          {children}
+        </CinematicRouteShell>
       </>
     );
   }
@@ -136,13 +147,13 @@ export default async function LocaleLayout(
       <CinematicRouteShell
         locale={locale}
         header={<Header locale={locale} />}
-        footer={<Footer locale={locale as never} />}
+        footer={<Footer locale={locale} />}
         quickContact={
           !hideJaProductChrome ? (
             <QuickContactWidget locale={toBuilderLocale(locale)} />
           ) : null
         }
-        scrollTop={<ScrollTopButton locale={locale as never} />}
+        scrollTop={<ScrollTopButton locale={locale} />}
       >
         {children}
       </CinematicRouteShell>

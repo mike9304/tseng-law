@@ -45,6 +45,44 @@ export interface GuidancePage {
   }>;
 }
 
+/**
+ * Home-page-only copy for the guidance locales.
+ *
+ * The guidance home renders the same section sequence as the English home
+ * (hero -> column archive -> services -> image band -> closing bands). Every
+ * other string on that page is reused from `pages.home`, `pages.services` and
+ * `pages.columns`; the fields below are the ones the shared home layout needs
+ * and the guidance pages did not already provide.
+ *
+ * Same limits as the rest of this module: no interpreting promise, no reply
+ * time, no appointment, no fee figure, no case result, and no claim that the
+ * columns exist in the page language when they do not.
+ */
+export interface GuidanceHomeCopy {
+  /** aria-label of the hero scroll arrow. */
+  heroScrollLabel: string;
+  /** Secondary hero button pointing at the locale column index. */
+  heroColumnsCtaLabel: string;
+  /** Per-card link label on the six service cards. */
+  servicesDetailLabel: string;
+  /** Sentence under the service cards, split around the contact link. */
+  servicesAssistanceBefore: string;
+  servicesAssistanceLinkLabel: string;
+  servicesAssistanceAfter: string;
+  /** Column archive labels. */
+  columnsViewAllLabel: string;
+  columnsReadMoreLabel: string;
+  columnsReviewLabel: string;
+  /** Badge + note shown when the listed columns are still in their source language. */
+  columnsOriginalLanguageBadge: string;
+  columnsOriginalLanguageNote: string;
+  /** Alt text and video control labels for the editorial image band. */
+  imageBandAlt: string;
+  videoPauseLabel: string;
+  videoPlayLabel: string;
+  videoReplayLabel: string;
+}
+
 export interface GuidanceLocaleContent {
   languageName: string;
   nav: Record<GuidancePageKey, string>;
@@ -57,6 +95,7 @@ export interface GuidanceLocaleContent {
   notFoundText: string;
   backHomeLabel: string;
   readSourceLabel: string;
+  home: GuidanceHomeCopy;
   pages: Record<GuidancePageKey, GuidancePage>;
 }
 
@@ -86,6 +125,27 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       'Trang bạn tìm không tồn tại hoặc đã chuyển sang địa chỉ khác. Bạn có thể quay lại trang chính tiếng Việt để xem các mục hướng dẫn hiện có.',
     backHomeLabel: 'Quay lại trang chính',
     readSourceLabel: 'Mở danh mục bài viết bằng ngôn ngữ gốc',
+    home: {
+      heroScrollLabel: 'Cuộn xuống',
+      heroColumnsCtaLabel: 'Xem bài viết',
+      servicesDetailLabel: 'Xem chi tiết',
+      servicesAssistanceBefore:
+        'Nếu bạn chưa rõ vụ việc của mình thuộc nhóm nào, trang ',
+      servicesAssistanceLinkLabel: 'Liên hệ',
+      servicesAssistanceAfter:
+        ' hướng dẫn cách viết phần tóm tắt để luật sư xem xét.',
+      columnsViewAllLabel: 'Xem tất cả bài viết',
+      columnsReadMoreLabel: 'Đọc tiếp',
+      columnsReviewLabel: 'Do luật sư Wei Tseng xem xét',
+      columnsOriginalLanguageBadge: 'Ngôn ngữ gốc',
+      columnsOriginalLanguageNote:
+        'Các bài viết dưới đây chưa có bản tiếng Việt. Danh sách giữ nguyên ngôn ngữ gốc và mở ra trang bằng ngôn ngữ đó; nội dung không được dịch tự động.',
+      imageBandAlt:
+        'Nhà tam hợp viện truyền thống Đài Loan (三合院) bên cạnh gian nhà hiện đại dưới ánh sáng ban ngày',
+      videoPauseLabel: 'Tạm dừng video',
+      videoPlayLabel: 'Phát video',
+      videoReplayLabel: 'Phát lại video',
+    },
     pages: {
       home: {
         eyebrow: 'HƯỚNG DẪN',
@@ -557,6 +617,27 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       'Halaman yang Anda cari tidak ada atau sudah dipindahkan ke alamat lain. Anda dapat kembali ke beranda berbahasa Indonesia untuk melihat panduan yang tersedia.',
     backHomeLabel: 'Kembali ke beranda',
     readSourceLabel: 'Buka daftar artikel dalam bahasa aslinya',
+    home: {
+      heroScrollLabel: 'Gulir ke bawah',
+      heroColumnsCtaLabel: 'Lihat artikel',
+      servicesDetailLabel: 'Lihat detail',
+      servicesAssistanceBefore:
+        'Jika Anda belum yakin perkara Anda termasuk kelompok yang mana, halaman ',
+      servicesAssistanceLinkLabel: 'Kontak',
+      servicesAssistanceAfter:
+        ' menjelaskan cara menyusun ringkasan yang akan ditinjau advokat.',
+      columnsViewAllLabel: 'Lihat semua artikel',
+      columnsReadMoreLabel: 'Baca selengkapnya',
+      columnsReviewLabel: 'Ditinjau oleh Advokat Wei Tseng',
+      columnsOriginalLanguageBadge: 'Bahasa asli',
+      columnsOriginalLanguageNote:
+        'Artikel di bawah ini belum tersedia dalam bahasa Indonesia. Daftar ini tetap dalam bahasa aslinya dan terbuka pada halaman berbahasa tersebut; isinya tidak diterjemahkan secara otomatis.',
+      imageBandAlt:
+        'Rumah tradisional Taiwan (三合院) dan paviliun modern dalam cahaya siang hari',
+      videoPauseLabel: 'Jeda video',
+      videoPlayLabel: 'Putar video',
+      videoReplayLabel: 'Putar ulang video',
+    },
     pages: {
       home: {
         eyebrow: 'PANDUAN',
@@ -1028,6 +1109,27 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       'หน้าที่ท่านค้นหาไม่มีอยู่ หรือถูกย้ายไปยังที่อยู่อื่นแล้ว ท่านสามารถกลับไปยังหน้าแรกภาษาไทยเพื่อดูหัวข้อแนะนำที่มีอยู่ในขณะนี้',
     backHomeLabel: 'กลับไปหน้าแรก',
     readSourceLabel: 'เปิดสารบัญบทความในภาษาต้นฉบับ',
+    home: {
+      heroScrollLabel: 'เลื่อนลง',
+      heroColumnsCtaLabel: 'ดูบทความ',
+      servicesDetailLabel: 'ดูรายละเอียด',
+      servicesAssistanceBefore:
+        'หากยังไม่แน่ใจว่าเรื่องของท่านอยู่ในกลุ่มงานใด หน้า ',
+      servicesAssistanceLinkLabel: 'ติดต่อ',
+      servicesAssistanceAfter:
+        ' อธิบายวิธีเขียนสรุปเรื่องเพื่อให้ทนายความพิจารณา',
+      columnsViewAllLabel: 'ดูบทความทั้งหมด',
+      columnsReadMoreLabel: 'อ่านต่อ',
+      columnsReviewLabel: 'ตรวจทานโดยทนายความ Wei Tseng',
+      columnsOriginalLanguageBadge: 'ภาษาต้นฉบับ',
+      columnsOriginalLanguageNote:
+        'บทความด้านล่างยังไม่มีฉบับภาษาไทย รายการนี้คงไว้ตามภาษาต้นฉบับและจะเปิดหน้าในภาษานั้น เนื้อหาไม่ได้ผ่านการแปลอัตโนมัติ',
+      imageBandAlt:
+        'บ้านสามหลังแบบดั้งเดิมของไต้หวัน (三合院) และศาลาสมัยใหม่ในแสงกลางวัน',
+      videoPauseLabel: 'หยุดวิดีโอชั่วคราว',
+      videoPlayLabel: 'เล่นวิดีโอ',
+      videoReplayLabel: 'เล่นวิดีโออีกครั้ง',
+    },
     pages: {
       home: {
         eyebrow: 'ข้อมูลแนะนำ',
@@ -1499,6 +1601,27 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       'Wala ang pahinang hinahanap mo o inilipat na ito sa ibang address. Maaari kang bumalik sa unang pahina sa Filipino upang makita ang mga bahaging magagamit ngayon.',
     backHomeLabel: 'Bumalik sa unang pahina',
     readSourceLabel: 'Buksan ang talaan ng mga artikulo sa orihinal na wika',
+    home: {
+      heroScrollLabel: 'Mag-scroll pababa',
+      heroColumnsCtaLabel: 'Tingnan ang mga artikulo',
+      servicesDetailLabel: 'Tingnan ang detalye',
+      servicesAssistanceBefore:
+        'Kung hindi pa tiyak kung saang grupo nabibilang ang inyong usapin, ipinapaliwanag ng pahinang ',
+      servicesAssistanceLinkLabel: 'Kontak',
+      servicesAssistanceAfter:
+        ' kung paano isulat ang buod na susuriin ng abogado.',
+      columnsViewAllLabel: 'Tingnan ang lahat ng artikulo',
+      columnsReadMoreLabel: 'Basahin pa',
+      columnsReviewLabel: 'Sinuri ni Atty. Wei Tseng',
+      columnsOriginalLanguageBadge: 'Orihinal na wika (original language)',
+      columnsOriginalLanguageNote:
+        'Wala pang bersyong Filipino ng mga artikulo sa ibaba. Nananatili sa orihinal na wika ang listahan at bubukas ito sa pahina sa wikang iyon; hindi ito awtomatikong isinalin.',
+      imageBandAlt:
+        'Tradisyunal na Taiwanese na sanheyuan (三合院) at makabagong pavilion sa liwanag ng araw',
+      videoPauseLabel: 'I-pause ang video',
+      videoPlayLabel: 'I-play ang video',
+      videoReplayLabel: 'I-play muli ang video',
+    },
     pages: {
       home: {
         eyebrow: 'GABAY',

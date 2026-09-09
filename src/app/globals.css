@@ -3843,6 +3843,26 @@ section.home-results-panel--editorial {
   min-width: 0;
 }
 
+/* O16: the guidance home marks source-language columns. The badge sits in the
+   corner opposite the category badge so neither overlay is covered; compact
+   list rows use the inline tag below instead of a second overlay. */
+.insights-category-badge--language {
+  left: auto;
+  right: 1rem;
+  max-width: calc(100% - 2rem);
+  text-align: right;
+}
+
+.insights-language-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted, #5b6b62);
+  border: 1px solid currentColor;
+  border-radius: var(--radius-xs);
+  padding: 0.1rem 0.42rem;
+}
+
 .insights-category-badge--compact {
   top: auto;
   left: 0.75rem;

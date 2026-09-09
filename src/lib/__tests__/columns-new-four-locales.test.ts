@@ -66,6 +66,8 @@ describe('new-four column directory mapping', () => {
 });
 
 describe('new-four column loader (temp dir, no repo fixtures)', () => {
+  // Empty-corpus contract for the new four: missing/empty dirs return [] and
+  // never leak Korean posts. Browser specs no longer cover the empty path.
   it('returns an empty list when the optional locale directory is missing', () => {
     const missing = path.join(os.tmpdir(), 'g19-columns-missing-does-not-exist');
     expect(fs.existsSync(missing)).toBe(false);
@@ -91,11 +93,17 @@ describe('new-four column loader (temp dir, no repo fixtures)', () => {
     expect(hasColumnTranslation('vi', 'taiwan-company-establishment-basics', { columnsDir: present })).toBe(false);
   });
 
-  it('does not leak the Korean corpus when no new-four files exist in the repo', () => {
-    expect(fs.existsSync(path.join(process.cwd(), 'src/content/columns-vi'))).toBe(false);
+  it('loads only the on-disk optional-locale files and never leaks the Korean corpus', () => {
+    const viDir = path.join(process.cwd(), 'src/content/columns-vi');
+    const viFiles = fs.existsSync(viDir)
+      ? fs.readdirSync(viDir).filter((name) => name.endsWith('.md'))
+      : [];
     const viPosts = getAllColumnPosts('vi');
-    expect(viPosts).toEqual([]);
-    expect(viPosts).not.toHaveLength(getAllColumnPosts('ko').length);
+    expect(viPosts).toHaveLength(viFiles.length);
+    expect(viPosts.map((post) => post.slug).sort()).toEqual(
+      viFiles.map((name) => name.replace(/\.md$/, '').replace(/^\d{3}-/, '')).sort(),
+    );
+    expect(viPosts.length).not.toBe(getAllColumnPosts('ko').length);
   });
 });
 

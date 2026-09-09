@@ -9,6 +9,7 @@
  * Node 24 built-in fetch only — no extra dependencies, no tsx.
  */
 
+import { existsSync, readdirSync } from 'node:fs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -86,6 +87,28 @@ export function publicDocumentLanguage(locale) {
 
 export function guidancePublicPath(locale, pageKey) {
   return pageKey === 'home' ? `/${locale}` : `/${locale}/${pageKey}`;
+}
+
+/** Mirrors src/lib/column-locales.ts `COLUMN_CONTENT_DIR_BY_LOCALE`. */
+export function columnContentDirRelative(locale) {
+  if (locale === 'ko') return 'src/content/columns';
+  if (locale === 'zh-hant') return 'src/content/columns-zh';
+  return `src/content/columns-${locale}`;
+}
+
+/** Same strip as src/lib/columns.ts `slugFromFilename`. */
+export function slugFromColumnFilename(filename) {
+  return filename.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+}
+
+/** On-disk translated slugs for a locale. Missing dirs are an empty corpus. */
+export function listTranslatedColumnSlugs(locale, repoRoot = REPO_ROOT) {
+  const dir = join(repoRoot, columnContentDirRelative(locale));
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter((name) => name.endsWith('.md'))
+    .map(slugFromColumnFilename)
+    .sort((a, b) => a.localeCompare(b, 'en'));
 }
 
 export function requiredHreflangTags(pageKey) {
@@ -294,6 +317,13 @@ export function formatHumanReport(result) {
   for (const [item, check] of order) {
     const notes = [];
     if (check.extras?.locCount != null) notes.push(`locs=${check.extras.locCount}`);
+    if (check.extras?.translatedByLocale) {
+      notes.push(
+        `disk=${Object.entries(check.extras.translatedByLocale)
+          .map(([locale, count]) => `${locale}:${count}`)
+          .join(',')}`,
+      );
+    }
     if (check.warning) notes.push(check.warning);
     if (check.failures.length) {
       const preview = check.failures.slice(0, 3).map((item) => item.message || item.url || JSON.stringify(item));
@@ -561,6 +591,7 @@ export async function runMultilingualLiveCheck({
   }
 
   const originUrl = new URL(origin);
+  const translatedByLocale = {};
   for (const locale of GUIDANCE_LOCALES_4) {
     const columnsPath = guidancePublicPath(locale, 'columns');
     const columnsPage = corePages.find((item) => item.locale === locale && item.pageKey === 'columns');
@@ -572,6 +603,9 @@ export async function runMultilingualLiveCheck({
       continue;
     }
     addPass(checks.f_translated_columns);
+
+    const diskSlugs = listTranslatedColumnSlugs(locale, repoRoot);
+    translatedByLocale[locale] = diskSlugs.length;
 
     const localePrefix = `/${locale}/columns/`;
     const slugLocs = locs.filter((loc) => {
@@ -585,7 +619,21 @@ export async function runMultilingualLiveCheck({
       }
     });
 
+    const sitemapSlugs = [];
     for (const loc of slugLocs) {
+      try {
+        const parsed = new URL(loc);
+        const pathname = parsed.pathname.replace(/\/+$/, '') || '/';
+        const slug = pathname.slice(localePrefix.length);
+        if (slug && !slug.includes('/')) sitemapSlugs.push(slug);
+      } catch {
+        // ignore malformed sitemap loc
+      }
+    }
+
+    const slugsToCheck = [...new Set([...diskSlugs, ...sitemapSlugs])];
+    for (const slug of slugsToCheck) {
+      const loc = `${origin}/${locale}/columns/${slug}`;
       const result = await request(loc, { method: 'GET', wantBody: true });
       if (!result.ok) {
         addFailure(checks.f_translated_columns, {
@@ -606,6 +654,7 @@ export async function runMultilingualLiveCheck({
       }
     }
   }
+  checks.f_translated_columns.extras.translatedByLocale = translatedByLocale;
 
   const ok = Object.values(checks).every((check) => check.ok);
 

@@ -1,4 +1,7 @@
 import assert from 'node:assert/strict';
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { test } from 'node:test';
 
 import {
@@ -8,12 +11,14 @@ import {
   formatHumanReport,
   guidancePublicPath,
   hreflangTagForPublicLocale,
+  listTranslatedColumnSlugs,
   loadConsultationNeedles,
   parseHreflangAlternates,
   parseHtmlLang,
   parseSitemapLocs,
   requiredHreflangTags,
   runMultilingualLiveCheck,
+  slugFromColumnFilename,
 } from './verify-multilingual-live.mjs';
 
 const BASE = 'http://live-check.test';
@@ -223,4 +228,49 @@ test('item f: new-four /columns 200 and sitemap translation slugs are 200 with h
   assert.equal(result.checks.f_translated_columns.fail, 0);
   assert.ok(result.checks.f_translated_columns.pass >= GUIDANCE_LOCALES_4.length);
   assert.match(formatHumanReport(result), /f_translated_columns|translated columns/);
+});
+
+test('slugFromColumnFilename strips numeric prefixes the same way as columns.ts', () => {
+  assert.equal(slugFromColumnFilename('008-taiwan-labor-severance-law.md'), 'taiwan-labor-severance-law');
+  assert.equal(slugFromColumnFilename('taiwan-gym-injury-lawsuit.md'), 'taiwan-gym-injury-lawsuit');
+});
+
+test('item f: on-disk translation slugs must be 200 with hreflang even if sitemap omits them', async () => {
+  const notices = await loadConsultationNeedles();
+  const tmp = mkdtempSync(join(tmpdir(), 'g23-columns-'));
+  try {
+    const viDir = join(tmp, 'src/content/columns-vi');
+    mkdirSync(viDir, { recursive: true });
+    writeFileSync(join(viDir, '008-taiwan-labor-severance-law.md'), '# vi\n', 'utf8');
+    assert.deepEqual(listTranslatedColumnSlugs('vi', tmp), ['taiwan-labor-severance-law']);
+    assert.deepEqual(listTranslatedColumnSlugs('th', tmp), []);
+
+    const missingPath = '/vi/columns/taiwan-labor-severance-law';
+    const failResult = await runMultilingualLiveCheck({
+      baseUrl: BASE,
+      fetchImpl: makeFetch({ notices, notFoundPath: missingPath }),
+      consultationNeedles: notices,
+      repoRoot: tmp,
+    });
+    assert.equal(failResult.ok, false);
+    assert.equal(failResult.checks.f_translated_columns.ok, false);
+    assert.ok(
+      failResult.checks.f_translated_columns.failures.some((item) =>
+        String(item.url).endsWith(missingPath),
+      ),
+    );
+
+    const passResult = await runMultilingualLiveCheck({
+      baseUrl: BASE,
+      fetchImpl: makeFetch({ notices, translatedSlug: 'taiwan-labor-severance-law' }),
+      consultationNeedles: notices,
+      repoRoot: tmp,
+    });
+    assert.equal(passResult.ok, true);
+    assert.equal(passResult.checks.f_translated_columns.fail, 0);
+    assert.equal(passResult.checks.f_translated_columns.extras.translatedByLocale.vi, 1);
+    assert.ok(passResult.checks.f_translated_columns.pass >= GUIDANCE_LOCALES_4.length + 1);
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
 });

@@ -1,4 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { readdirSync, existsSync } from 'node:fs';
+import path from 'node:path';
 import { getAllColumnPosts } from '@/lib/columns';
 import type { BuilderSitemapEntry } from '@/lib/builder/seo/sitemap-builder';
 import {
@@ -30,6 +32,12 @@ vi.mock('@/lib/builder/services/source', () => ({
 vi.mock('@/lib/builder/seo/sitemap-builder', () => ({
   collectAllBuilderSitemapEntries: sourceMocks.collectAllBuilderSitemapEntries,
 }));
+
+const newFourTranslatedColumnCount = ['vi', 'id', 'th', 'fil'].reduce((total, locale) => {
+  const dir = path.join(process.cwd(), 'src/content', `columns-${locale}`);
+  if (!existsSync(dir)) return total;
+  return total + readdirSync(dir).filter((name) => name.endsWith('.md')).length;
+}, 0);
 
 describe('sitemap column lastModified', () => {
   beforeEach(() => {
@@ -116,9 +124,11 @@ describe('sitemap column lastModified', () => {
       // /korean-lawyer-in-taiwan, /ai-intake, /guides/taiwan-company-setup,
       // /columns archive, 17 JA column details, and all six JA service
       // details (+41). Builder fixtures still drop 9 EN-only noindex routes.
-      // Plus 40 new-four core URLs (4 locales × 10 dictionary pages).
-      beforeFiltering: 211,
-      afterFiltering: 202,
+      // Plus 40 new-four core URLs (4 locales × 10 dictionary pages), plus one
+      // URL per translated column file present in src/content/columns-{vi,id,th,fil}
+      // (counted from disk so this assertion tracks the growing SEA corpus).
+      beforeFiltering: 211 + newFourTranslatedColumnCount,
+      afterFiltering: 202 + newFourTranslatedColumnCount,
       removed: 9,
     });
 

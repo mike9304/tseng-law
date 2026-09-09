@@ -16,10 +16,12 @@ import {
   isGuidanceLocale4,
   publicDocumentLanguage,
   type ExistingSiteLocale4,
+  type GuidanceLocale4,
   type GuidancePageKey,
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import { getSiteUrl } from '@/lib/seo';
+import { listColumnSlugsFromFs } from './column-corpus';
 
 const DESKTOP = { width: 1440, height: 1000 } as const;
 const MOBILE = { width: 390, height: 844 } as const;
@@ -49,6 +51,13 @@ function siteUrl(): string {
 function hrefPathname(href: string, base: string): string {
   const url = new URL(href, base);
   return url.pathname.replace(/\/+$/, '') || '/';
+}
+
+async function locatorPathnames(locator: Locator, base: string): Promise<string[]> {
+  const hrefs = await locator.evaluateAll((nodes) =>
+    nodes.map((node) => (node as HTMLAnchorElement).getAttribute('href') ?? ''),
+  );
+  return hrefs.map((href) => hrefPathname(href, base)).sort((a, b) => a.localeCompare(b, 'en'));
 }
 
 function guidanceShell(page: Page): Locator {
@@ -247,6 +256,55 @@ function assertHreflangContract(
   }
 }
 
+async function assertTranslatedColumnsIndex(
+  page: Page,
+  locale: GuidanceLocale4,
+  path: string,
+): Promise<void> {
+  const translatedSlugs = listColumnSlugsFromFs(locale);
+  const koSlugs = listColumnSlugsFromFs('ko');
+  const expectedCardHrefs = translatedSlugs.map((slug) => `/${locale}/columns/${slug}`);
+  const untranslatedSlugs = koSlugs.filter((slug) => !translatedSlugs.includes(slug));
+  const expectedOriginalHrefs = untranslatedSlugs.map((slug) => `/ko/columns/${slug}`);
+
+  await expect(
+    page.locator('[data-guidance-shell="true"]'),
+    `${path} must leave the empty-corpus guidance shell`,
+  ).toHaveCount(0);
+  await expect(page.locator('.columns-grid'), `${path} ColumnsGrid`).toBeVisible();
+  const cards = page.locator('.columns-grid a.columns-card');
+  await expect(cards, `${path} translated card count`).toHaveCount(translatedSlugs.length);
+  expect(await locatorPathnames(cards, page.url()), `${path} card hrefs`).toEqual(
+    expectedCardHrefs.sort((a, b) => a.localeCompare(b, 'en')),
+  );
+
+  for (const href of expectedCardHrefs) {
+    const detail = await page.request.get(href);
+    expect(detail.status(), `${href} translated detail`).toBe(200);
+  }
+
+  const originalSection = page.locator('[data-columns-original-language="true"]');
+  await expect(originalSection, `${path} original-language section`).toBeVisible();
+  const remaining = originalSection.locator('a[href*="/ko/columns/"]');
+  await expect(remaining, `${path} untranslated slug count`).toHaveCount(untranslatedSlugs.length);
+  expect(await locatorPathnames(remaining, page.url()), `${path} untranslated hrefs`).toEqual(
+    expectedOriginalHrefs.sort((a, b) => a.localeCompare(b, 'en')),
+  );
+}
+
+async function assertEmptyColumnsGuidance(
+  page: Page,
+  locale: GuidanceLocale4,
+  path: string,
+): Promise<void> {
+  const localized = guidanceContent[locale].pages.columns;
+  const article = guidanceShell(page);
+  await expect(article, `${path} empty-corpus guidance shell`).toBeVisible();
+  await expect(article).toContainText(localized.description);
+  await expect(article).toContainText(localized.intro);
+  await expect(article).toContainText(localized.sections[0]?.heading ?? localized.title);
+}
+
 async function assertCorePage(
   page: Page,
   locale: PublicLocale8,
@@ -273,15 +331,25 @@ async function assertCorePage(
     const pack = guidanceContent[locale];
     const localized = pack.pages[pageKey];
     await expect(h1).toHaveText(localized.title);
-    // O16: the home page now opens on the shared hero (title + description) and
-    // carries its intro and section cards further down, so the guidance copy is
-    // no longer inside a single leading <article>. The three assertions below
-    // are unchanged; only their scope moved from that article to the guidance
-    // shell, which is still guidance-only content.
-    const article = guidanceShell(page);
-    await expect(article).toContainText(localized.description);
-    await expect(article).toContainText(localized.intro);
-    await expect(article).toContainText(localized.sections[0]?.heading ?? localized.title);
+
+    if (pageKey === 'columns') {
+      const translatedCount = listColumnSlugsFromFs(locale).length;
+      if (translatedCount > 0) {
+        await assertTranslatedColumnsIndex(page, locale, path);
+      } else {
+        await assertEmptyColumnsGuidance(page, locale, path);
+      }
+    } else {
+      // O16: the home page now opens on the shared hero (title + description) and
+      // carries its intro and section cards further down, so the guidance copy is
+      // no longer inside a single leading <article>. The three assertions below
+      // are unchanged; only their scope moved from that article to the guidance
+      // shell, which is still guidance-only content.
+      const article = guidanceShell(page);
+      await expect(article).toContainText(localized.description);
+      await expect(article).toContainText(localized.intro);
+      await expect(article).toContainText(localized.sections[0]?.heading ?? localized.title);
+    }
 
     for (const other of GUIDANCE_LOCALES_4) {
       if (other === locale) continue;

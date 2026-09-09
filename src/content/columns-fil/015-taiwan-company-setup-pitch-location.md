@@ -61,15 +61,15 @@ Kaya nga, sa katunayan ay hindi kailangang gawan ng prior inquiry ang lahat ng b
 
 Ayon sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng Lugar ng Negosyo ng Lungsod ng Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知),
 
-sa mga business item lamang na kabilang sa "business items subject to proactive inquiry" (主動查詢之營業項目) **kinakailangang** magsagawa muna ng prior inquiry,
+sa mga business item lamang na kabilang sa "mga business item na kailangang unang itanong" (主動查詢之營業項目) **kinakailangang** magsagawa muna ng prior inquiry,
 
 at kapag nagrerehistro ng kompanya, kailangang isumite ang resulta ng prior inquiry na iyon sa Pamahalaan ng Lungsod ng Taipei (臺北市政府) kasama ng aplikasyon.
 
 Kung magbubukas sa lugar na hindi pinahihintulutan ang operasyon ng restawran, maaari kayong patawan sa hinaharap ng administrative fine (罰鍰) ng ahensiyang may hurisdiksiyon.
 
-!["business items subject to proactive inquiry" (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+!["mga business item na kailangang unang itanong" (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-"business items subject to proactive inquiry" (主動查詢之營業項目)
+"mga business item na kailangang unang itanong" (主動查詢之營業項目)
 
 Hanggang dito ang gabay; kung mayroon pa kayong katanungan, huwag mag-atubiling magtanong anumang oras sa abogadong Taiwanese.
 

@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Apakah karyawan yang mengundurkan diri atas kemauan sendiri di Taiwan tetap menerima pesangon?"
-    a: "Tidak. Di Taiwan, kewajiban membayar pesangon (資遣費) baru timbul apabila perusahaan yang memutuskan hubungan kerja dengan karyawan; apabila karyawan mengundurkan diri atas kemauan sendiri, perusahaan tidak wajib membayar pesangon."
+    a: "Tidak. Di Taiwan, kewajiban membayar pesangon (資遣費) baru timbul apabila perusahaannya sendiri yang memutuskan hubungan kerja dengan karyawan; apabila karyawan mengundurkan diri atas kemauan sendiri, perusahaan tidak wajib membayar pesangon."
   - q: "Dalam hal pemecatan karena pelanggaran, apakah perusahaan tetap wajib membayar pesangon?"
     a: "Tidak. Apabila karyawan melakukan perbuatan melawan hukum, melanggar peraturan perusahaan, atau mangkir tanpa alasan sah selama 3 hari atau lebih (Pasal 12 Undang-Undang Standar Ketenagakerjaan Taiwan, 勞動基準法第12條), perusahaan dapat memutuskan hubungan kerja tanpa pemberitahuan sebelumnya dan tidak wajib membayar pesangon. Sebaliknya, pemutusan hubungan kerja karena alasan ekonomi (Pasal 11) mengharuskan adanya pemberitahuan sebelumnya dan pembayaran pesangon."
   - q: "Bagaimana cara menghitung pesangon di Taiwan?"

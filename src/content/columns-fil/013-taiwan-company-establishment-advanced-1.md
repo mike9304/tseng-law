@@ -29,7 +29,7 @@ Kapag ang isang dayuhan ay nagtatatag ng kompanya sa Taiwan, kailangan niyang ma
 
 Kailangan kasing tiyakin ng Department of Investment Review kung talagang gagamitin sa layuning pamumuhunan ang kapital na iyon,
 
-at kung hindi ipinapasok ng dayuhang pwersa ang pondo sa ilalim ng ibang pretext o pangalan ng layunin.
+at kung hindi ipinapasok ng dayuhang pwersa ang pondo sa ilalim ng ibang pangalan o layunin.
 
 Sa pagsulat ng plano ng pamumuhunan, hindi kailangang ilagay ang eksaktong adres ng kompanya; sapat na ang pagtukoy sa lugar (halimbawa, Lungsod ng Taipei). ​
 

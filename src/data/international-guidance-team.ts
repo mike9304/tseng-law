@@ -227,6 +227,60 @@ export const guidanceLanguageNames: Record<GuidanceLocale, Record<string, string
   fil: { Korean: 'Koreano', Chinese: 'Tsino', Japanese: 'Hapon' },
 };
 
+/**
+ * Localized names for the canonical practice areas (WO-O34, task 1).
+ *
+ * `/en/lawyers` publishes `attorney-profiles.en.practiceAreas` under "CORE
+ * PRACTICE AREAS", and ko/zh-hant/ja each publish the same six areas in the
+ * same order. WO-O33 built the guidance key-facts block out of the services
+ * page's own section headings instead, which is a different taxonomy: it
+ * drops "Visa and residency" and splits family and labour into two rows. The
+ * key-facts block now uses this table, so the six areas are the same
+ * classification in every language.
+ *
+ * Keyed by the exact English value in `attorney-profiles.en.practiceAreas`,
+ * for the same reason `guidanceLanguageNames` is: the unit test asserts the
+ * key set equals that record, so an area added to or renamed in the canonical
+ * profile fails the build until it is named in all four guidance languages,
+ * and an area that is not canonical cannot be rendered at all. Each value is
+ * a translation of the canonical area — no new classification is invented,
+ * and the services page keeps its own section headings unchanged.
+ */
+export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, string>> = {
+  vi: {
+    'Taiwan company setup': 'Thành lập công ty tại Đài Loan',
+    'Taiwan investment counsel': 'Tư vấn pháp lý đầu tư vào Đài Loan',
+    'Civil litigation and damages': 'Tranh chấp dân sự và bồi thường thiệt hại',
+    'Trademark and patent filings': 'Đăng ký nhãn hiệu và sáng chế',
+    'Visa and residency': 'Thị thực và cư trú',
+    'Family and labor disputes': 'Tranh chấp gia đình và lao động',
+  },
+  id: {
+    'Taiwan company setup': 'Pendirian perusahaan di Taiwan',
+    'Taiwan investment counsel': 'Konsultasi hukum investasi di Taiwan',
+    'Civil litigation and damages': 'Litigasi perdata dan ganti rugi',
+    'Trademark and patent filings': 'Pendaftaran merek dan paten',
+    'Visa and residency': 'Visa dan izin tinggal',
+    'Family and labor disputes': 'Sengketa keluarga dan ketenagakerjaan',
+  },
+  th: {
+    'Taiwan company setup': 'การจัดตั้งบริษัทในไต้หวัน',
+    'Taiwan investment counsel': 'ที่ปรึกษากฎหมายด้านการลงทุนในไต้หวัน',
+    'Civil litigation and damages': 'คดีแพ่งและค่าสินไหมทดแทน',
+    'Trademark and patent filings': 'การยื่นจดทะเบียนเครื่องหมายการค้าและสิทธิบัตร',
+    'Visa and residency': 'วีซ่าและการมีถิ่นที่อยู่',
+    'Family and labor disputes': 'ข้อพิพาทครอบครัวและแรงงาน',
+  },
+  fil: {
+    'Taiwan company setup': 'Pagtatatag ng kompanya sa Taiwan',
+    'Taiwan investment counsel': 'Payong legal sa pamumuhunan sa Taiwan',
+    'Civil litigation and damages': 'Sibil na paglilitis at danyos',
+    'Trademark and patent filings': 'Paghahain ng trademark at patente',
+    'Visa and residency': 'Visa at paninirahan',
+    'Family and labor disputes': 'Alitan sa pamilya at paggawa',
+  },
+};
+
 /** One member's biography, line for line with `teamContent.en`. */
 export interface GuidanceTeamBio {
   intro: string[];
@@ -491,7 +545,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Beteranong paralegal na maraming taon nang nagsilbing senior paralegal sa ilang tanggapan ng abogado, sumasaklaw sa suporta sa litigasyon, gawaing pangkorporasyon, at usapin ng dayuhang pamumuhunan.',
+        'Beteranong paralegal na may maraming taóng karanasan bilang senior na paralegal sa ilang tanggapan ng abogado, sumasaklaw sa suporta sa litigasyon, gawaing pangkorporasyon, at usapin ng dayuhang pamumuhunan.',
         'Sumusuporta sa litigasyon, pagtatatag ng kompanya, pag-apruba ng dayuhang pamumuhunan, aplikasyon ng permiso, at komunikasyong Korea-Taiwan.',
       ],
       education: ['Batsilyer sa Batas (LL.B.), Tunghai University'],

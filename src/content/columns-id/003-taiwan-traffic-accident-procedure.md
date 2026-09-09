@@ -259,7 +259,7 @@ Q18. Apabila berdamai dengan pihak lain, dapatkah pengaduan pidana dicabut?
 
 ​
 
-Melukai karena kelalaian dan melukai berat karena kelalaian termasuk "tindak pidana yang pengaduannya dapat dicabut" (告訴乃論之罪), sehingga pengaduan pidana dapat dicabut.
+Melukai karena kelalaian dan melukai berat karena kelalaian termasuk delik aduan (告訴乃論之罪), sehingga pengaduan pidana dapat dicabut.
 
 ​
 

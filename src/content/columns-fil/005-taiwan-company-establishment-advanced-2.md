@@ -83,5 +83,5 @@ Kung mayroon pa kayong karagdagang katanungan, mangyaring magtanong anumang oras
 
 > Karagdagang babasahin:
 > - [Komprehensibong Gabay sa Pagtatatag ng Kompanya sa Taiwan — Mga Hakbang, Gastos at Anyo ng Legal na Persona](/ko/guides/taiwan-company-setup)
-> - [Abogadong Taiwanes na Marunong ng Wikang Koreano](/ko/korean-lawyer-in-taiwan)
+> - [Abogadong Taiwanese na Marunong ng Wikang Koreano](/ko/korean-lawyer-in-taiwan)
 > - [Gabay sa Abogado para sa Pagtatatag ng Kompanya at Legal na Persona sa Taiwan](/ko/taiwan-company-setup-lawyer)

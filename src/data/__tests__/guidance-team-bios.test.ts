@@ -41,6 +41,7 @@ import {
   buildGuidanceQualificationSentence,
   guidanceLanguageNames,
   guidanceMemberLanguages,
+  guidancePracticeAreaNames,
   guidanceTeamBios,
   guidanceTeamCopy,
   isGuidanceTeamMemberId,
@@ -244,25 +245,41 @@ describe('guidance key facts', () => {
   });
 
   /**
-   * The practice list is this locale's own published service headings. The
-   * last section of the services page is the "scope and confirmation" block,
-   * not a practice area, so the list is cut to the canonical `practiceAreas`
-   * length. That only holds while the services page has exactly one trailing
-   * non-practice section — asserted here rather than assumed.
+   * WO-O34. The practice list is the canonical `practiceAreas` array from
+   * `attorney-profiles.en` — the same six areas, in the same order, that
+   * `/en/lawyers` publishes — named in the page language. It is NOT the
+   * services page's section headings, which are a different classification
+   * (no "Visa and residency"; family and labour split in two).
    */
-  it.each(LOCALES)('%s services page has one section more than the canonical areas', (locale) => {
-    expect(guidanceContent[locale].pages.services.sections).toHaveLength(
-      (profile?.practiceAreas.length ?? 0) + 1,
-    );
+  it.each(LOCALES)('%s names exactly the canonical practice areas, no more and no fewer', (locale) => {
+    expect(Object.keys(guidancePracticeAreaNames[locale])).toEqual(profile?.practiceAreas);
   });
 
-  it.each(LOCALES)('%s practice list is the locale services headings, minus the scope block', (locale) => {
+  it.each(LOCALES)('%s practice list is the canonical six, in canonical order', (locale) => {
     const facts = buildGuidanceAttorneyFacts(locale);
-    const sections = guidanceContent[locale].pages.services.sections;
     expect(facts?.practiceAreas).toEqual(
-      sections.slice(0, profile?.practiceAreas.length ?? 0).map((section) => section.heading),
+      (profile?.practiceAreas ?? []).map((area) => guidancePracticeAreaNames[locale][area]),
     );
-    expect(facts?.practiceAreas).not.toContain(sections.at(-1)?.heading);
+    expect(facts?.practiceAreas).toHaveLength(profile?.practiceAreas.length ?? 0);
+    for (const area of facts?.practiceAreas ?? []) {
+      expect(area.trim()).not.toBe('');
+    }
+  });
+
+  /**
+   * The classification must be the same one in every language: the guidance
+   * key facts may not fall back to the services headings, which is the defect
+   * WO-O34 fixed.
+   */
+  it.each(LOCALES)('%s practice list is not the services page headings', (locale) => {
+    const facts = buildGuidanceAttorneyFacts(locale);
+    const headings = guidanceContent[locale].pages.services.sections.map((s) => s.heading);
+    expect(facts?.practiceAreas).not.toEqual(headings.slice(0, facts?.practiceAreas.length ?? 0));
+  });
+
+  it.each(LOCALES)('%s practice values are distinct', (locale) => {
+    const values = Object.values(guidancePracticeAreaNames[locale]);
+    expect(new Set(values).size).toBe(values.length);
   });
 });
 

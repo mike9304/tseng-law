@@ -99,7 +99,7 @@ Sekurang-kurangnya hal-hal berikut harus dipastikan secara substantif dengan men
 - Persetujuan tempat usaha dan fasilitas parkir, hak milik atau hak pakainya, serta sistem perawatannya
 - Keanggotaan asosiasi usaha sejenis, tindakan administratif (行政處分), serta ada tidaknya tunggakan pajak, biaya, dan denda administratif (罰鍰)
 - Hubungan kerja pengemudi dan pekerja lain, syarat kerjanya, izin kerja, serta asuransi sosialnya
-- Asuransi kendaraan, barang, dan tanggung jawab ganti rugi, hak jaminan, leasing, serta pembiayaan
+- Asuransi kendaraan, barang, dan tanggung jawab ganti rugi, hak jaminan, sewa guna usaha, serta pembiayaan
 - Perjanjian penting dan klausul perubahan pengendalian yang berkaitan dengan pemilik barang, pelaku usaha penerima pengalihdayaan, sistem, dan gudang
 
 Di dalam perjanjian ditetapkan pernyataan dan penjaminan, syarat pendahuluan, penanganan apabila perizinan tidak diperoleh, penyesuaian harga, ganti rugi, penyerahan, modal kerja, serta cara pengalihan kendaraan dan perjanjiannya. Urutan persetujuan investasi asing yang diperlukan, persetujuan bidang usaha dari Kementerian Perhubungan, persetujuan perubahan dari instansi jalan raya yang berwenang, dan prosedur perusahaannya harus diselaraskan dengan syarat penyelesaian transaksi.

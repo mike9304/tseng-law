@@ -48,7 +48,7 @@ Dù chọn cấu trúc nào thì chủ thể chịu trách nhiệm trung tâm th
 
 ## 2. Đăng ký sản phẩm và PIF là hai chế độ khác nhau
 
-Không phải là cùng một thủ tục. Đăng ký sản phẩm là một thủ tục riêng biệt được thực hiện trên nền tảng đăng ký sản phẩm mỹ phẩm của TFDA. PIF là hồ sơ tập hợp các tài liệu về chất lượng, tính an toàn, thành phần, công dụng được công bố, phương pháp sản xuất, kết quả thử nghiệm và đánh giá tính an toàn, do cơ sở sản xuất hoặc nhập khẩu mỹ phẩm lập, cập nhật và lưu giữ; bản thân PIF không thuộc chế độ phải nộp trước cho TFDA. Từ ngày 1 tháng 7 năm 2026, về nguyên tắc toàn bộ mỹ phẩm đều thuộc đối tượng áp dụng của chế độ PIF, và ngoại lệ là xà phòng thủ công dạng rắn được sản xuất tại cơ sở sản xuất được miễn đăng ký nhà máy.
+Không phải là cùng một thủ tục. Đăng ký sản phẩm là một thủ tục riêng biệt được thực hiện trên nền tảng đăng ký sản phẩm mỹ phẩm của TFDA. PIF là hồ sơ tập hợp các tài liệu về chất lượng, tính an toàn, thành phần, công dụng được công bố, phương pháp sản xuất, kết quả thử nghiệm và đánh giá tính an toàn, do cơ sở sản xuất hoặc nhập khẩu mỹ phẩm lập, cập nhật và lưu giữ; bản thân PIF không thuộc chế độ phải nộp trước cho TFDA. Từ ngày 1 tháng 7 năm 2026, về nguyên tắc toàn bộ mỹ phẩm đều thuộc đối tượng áp dụng của chế độ PIF, và ngoại lệ là xà phòng thủ công dạng rắn được sản xuất tại địa điểm sản xuất được miễn đăng ký nhà máy.
 
 ### Thời điểm đăng ký sản phẩm và thời hạn hiệu lực
 

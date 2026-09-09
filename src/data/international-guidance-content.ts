@@ -312,7 +312,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Giới hạn khi liên hệ',
             paragraphs: [
               'Văn phòng xem xét nội dung quý vị gửi trước khi bàn đến bước tiếp theo. Việc gửi tin nhắn hay thư điện tử không tự nó tạo lập quan hệ giữa luật sư và khách hàng, và cũng không xác nhận một lịch hẹn.',
-              'Luật sư Wei Tseng có tư cách hành nghề tại Đài Loan, và các trang này giới thiệu dịch vụ pháp lý theo pháp luật Đài Loan. Nội dung ở đây không phải ý kiến pháp lý theo pháp luật Hoa Kỳ hay pháp luật nơi quý vị đang sinh sống. Nếu vụ việc của quý vị có phần liên quan đến pháp luật của một nước khác, chúng tôi sẽ cùng quý vị xác nhận phần đó cần đến chuyên gia có tư cách phù hợp nào.',
+              'Luật sư Wei Tseng có tư cách hành nghề tại Đài Loan, và các trang này giới thiệu dịch vụ pháp lý theo pháp luật Đài Loan. Nội dung ở đây không phải ý kiến pháp lý theo pháp luật nơi quý vị đang sinh sống hay theo pháp luật của bất kỳ nước nào khác ngoài Đài Loan. Nếu vụ việc của quý vị có phần liên quan đến pháp luật của một nước khác, chúng tôi sẽ cùng quý vị xác nhận phần đó cần đến chuyên gia có tư cách phù hợp nào.',
             ],
           },
         ],
@@ -542,7 +542,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Phạm vi pháp luật',
             paragraphs: [
               'Văn phòng hành nghề theo pháp luật Đài Loan, và các trang này chỉ nói về công việc trong phạm vi đó.',
-              'Nội dung trên các trang này không phải ý kiến pháp lý theo pháp luật Hoa Kỳ, pháp luật Việt Nam hay pháp luật nơi quý vị đang sinh sống. Nếu vụ việc của quý vị có phần thuộc thẩm quyền của nước khác, chúng tôi sẽ cùng quý vị xác nhận phần đó cần đến chuyên gia có tư cách phù hợp nào.',
+              'Nội dung trên các trang này không phải ý kiến pháp lý theo pháp luật Việt Nam hay theo pháp luật của bất kỳ thẩm quyền nào khác ngoài Đài Loan. Nếu vụ việc của quý vị có phần thuộc thẩm quyền của nước khác, chúng tôi sẽ cùng quý vị xác nhận phần đó cần đến chuyên gia có tư cách phù hợp nào.',
             ],
           },
           {
@@ -804,7 +804,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Batasan saat menghubungi kami',
             paragraphs: [
               'Kantor meninjau isi pesan Anda sebelum langkah berikutnya dibicarakan. Mengirim pesan atau email dengan sendirinya tidak membentuk hubungan antara advokat dan klien, dan tidak memastikan janji temu.',
-              'Wei Tseng memiliki izin praktik di Taiwan, dan halaman-halaman ini menguraikan layanan hukum menurut hukum Taiwan. Isinya bukan nasihat menurut hukum Amerika Serikat maupun menurut hukum negara tempat Anda berada. Jika ada bagian perkara Anda yang tunduk pada hukum negara lain, kami akan memastikan bersama Anda profesional berkualifikasi mana yang diperlukan untuk bagian itu.',
+              'Wei Tseng memiliki izin praktik di Taiwan, dan halaman-halaman ini menguraikan layanan hukum menurut hukum Taiwan. Isinya bukan nasihat menurut hukum negara tempat Anda berada maupun menurut hukum negara mana pun selain Taiwan. Jika ada bagian perkara Anda yang tunduk pada hukum negara lain, kami akan memastikan bersama Anda profesional berkualifikasi mana yang diperlukan untuk bagian itu.',
             ],
           },
         ],
@@ -1034,7 +1034,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Lingkup hukum',
             paragraphs: [
               'Kantor kami berpraktik menurut hukum Taiwan, dan halaman ini hanya membicarakan pekerjaan dalam lingkup itu.',
-              'Isi halaman-halaman ini bukan nasihat menurut hukum Amerika Serikat, hukum Indonesia, atau hukum yurisdiksi lain mana pun. Jika ada bagian perkara Anda yang tunduk pada yurisdiksi lain, kami memastikan bersama Anda tenaga profesional berkualifikasi mana yang diperlukan untuk bagian tersebut.',
+              'Isi halaman-halaman ini bukan nasihat menurut hukum Indonesia maupun menurut hukum yurisdiksi mana pun selain Taiwan. Jika ada bagian perkara Anda yang tunduk pada yurisdiksi lain, kami memastikan bersama Anda tenaga profesional berkualifikasi mana yang diperlukan untuk bagian tersebut.',
             ],
           },
           {
@@ -1296,7 +1296,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'ข้อจำกัดเมื่อติดต่อเข้ามา',
             paragraphs: [
               'สำนักงานจะตรวจสอบเนื้อหาที่ท่านส่งมาก่อน แล้วจึงหารือเกี่ยวกับขั้นตอนถัดไป การส่งข้อความหรืออีเมลเพียงอย่างเดียวไม่ได้ทำให้เกิดความสัมพันธ์ระหว่างทนายความกับลูกความ และไม่ได้เป็นการยืนยันการนัดหมาย',
-              'ทนายความ Wei Tseng มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และหน้าเหล่านี้อธิบายบริการทางกฎหมายภายใต้กฎหมายไต้หวัน เนื้อหาในหน้าเหล่านี้ไม่ใช่ความเห็นตามกฎหมายสหรัฐอเมริกาหรือกฎหมายของประเทศที่ท่านพำนักอยู่ หากปรากฏว่าเรื่องของท่านมีส่วนที่อยู่ภายใต้กฎหมายของประเทศอื่น เราจะยืนยันร่วมกับท่านว่าส่วนนั้นต้องอาศัยผู้เชี่ยวชาญที่มีคุณสมบัติเหมาะสมด้านใด',
+              'ทนายความ Wei Tseng มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และหน้าเหล่านี้อธิบายบริการทางกฎหมายภายใต้กฎหมายไต้หวัน เนื้อหาในหน้าเหล่านี้ไม่ใช่ความเห็นตามกฎหมายของประเทศที่ท่านพำนักอยู่ หรือกฎหมายของประเทศอื่นใดนอกจากไต้หวัน หากปรากฏว่าเรื่องของท่านมีส่วนที่อยู่ภายใต้กฎหมายของประเทศอื่น เราจะยืนยันร่วมกับท่านว่าส่วนนั้นต้องอาศัยผู้เชี่ยวชาญที่มีคุณสมบัติเหมาะสมด้านใด',
             ],
           },
         ],
@@ -1526,7 +1526,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'ขอบเขตของกฎหมาย',
             paragraphs: [
               'สำนักงานประกอบวิชาชีพภายใต้กฎหมายไต้หวัน และหน้าเหล่านี้กล่าวถึงงานภายในขอบเขตดังกล่าวเท่านั้น',
-              'เนื้อหาในหน้าเหล่านี้ไม่ใช่ความเห็นตามกฎหมายสหรัฐอเมริกา กฎหมายไทย หรือกฎหมายของเขตอำนาจอื่นใด หากเรื่องของท่านมีส่วนที่อยู่ภายใต้เขตอำนาจอื่น เราจะยืนยันร่วมกับท่านว่าส่วนนั้นต้องอาศัยผู้เชี่ยวชาญที่มีคุณสมบัติเหมาะสมด้านใด',
+              'เนื้อหาในหน้าเหล่านี้ไม่ใช่ความเห็นตามกฎหมายไทย หรือกฎหมายของเขตอำนาจอื่นใดนอกจากไต้หวัน หากเรื่องของท่านมีส่วนที่อยู่ภายใต้เขตอำนาจอื่น เราจะยืนยันร่วมกับท่านว่าส่วนนั้นต้องอาศัยผู้เชี่ยวชาญที่มีคุณสมบัติเหมาะสมด้านใด',
             ],
           },
           {
@@ -1788,7 +1788,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Mga limitasyon kapag nakipag-ugnayan kayo',
             paragraphs: [
               'Sinusuri muna ng tanggapan ang ipinadala ninyo bago pag-usapan ang susunod na hakbang. Ang pagpapadala ng mensahe o email ay hindi bumubuo ng ugnayan ng abogado at kliyente, at hindi rin ito kumpirmasyon ng appointment.',
-              'Kwalipikadong magpraktis sa Taiwan si Abogado Wei Tseng, at naglalahad ang mga pahinang ito ng serbisyong legal sa ilalim ng batas ng Taiwan. Hindi payo ang nilalaman nito sa ilalim ng batas ng Estados Unidos o ng batas ng bansang kinaroroonan ninyo. Kung may bahagi ng usapin ninyo na nasa ilalim ng batas ng ibang bansa, kukumpirmahin naming kasama kayo kung anong propesyonal na may tamang kwalipikasyon ang kailangan para sa bahaging iyon.',
+              'Kwalipikadong magpraktis sa Taiwan si Abogado Wei Tseng, at naglalahad ang mga pahinang ito ng serbisyong legal sa ilalim ng batas ng Taiwan. Hindi payo ang nilalaman nito sa ilalim ng batas ng bansang kinaroroonan ninyo o ng batas ng alinmang ibang bansa maliban sa Taiwan. Kung may bahagi ng usapin ninyo na nasa ilalim ng batas ng ibang bansa, kukumpirmahin naming kasama kayo kung anong propesyonal na may tamang kwalipikasyon ang kailangan para sa bahaging iyon.',
             ],
           },
         ],
@@ -2018,7 +2018,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Saklaw ng batas',
             paragraphs: [
               'Nagpapraktis ang tanggapan sa ilalim ng batas ng Taiwan, at tungkol lamang sa gawaing nasa saklaw na iyon ang mga pahinang ito.',
-              'Hindi payo ang nilalaman ng mga pahinang ito sa ilalim ng batas ng Estados Unidos, ng batas ng Pilipinas, o ng batas ng alinmang ibang hurisdiksiyon. Kung may bahagi ng usapin ninyo na nasa ilalim ng ibang hurisdiksiyon, kukumpirmahin naming kasama kayo kung anong propesyonal na may tamang kwalipikasyon ang kailangan para roon.',
+              'Hindi payo ang nilalaman ng mga pahinang ito sa ilalim ng batas ng Pilipinas o ng batas ng alinmang ibang hurisdiksiyon maliban sa Taiwan. Kung may bahagi ng usapin ninyo na nasa ilalim ng ibang hurisdiksiyon, kukumpirmahin naming kasama kayo kung anong propesyonal na may tamang kwalipikasyon ang kailangan para roon.',
             ],
           },
           {

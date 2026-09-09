@@ -12,6 +12,10 @@ import {
   hreflangTagForPublicLocale,
   isPublicLocale8,
 } from '@/lib/public-guidance';
+import {
+  absentOptionalColumnLocales,
+  presentOptionalColumnLocales,
+} from '@/data/__tests__/column-alternate-expectations';
 
 const sourceMocks = vi.hoisted(() => ({
   readAttorneyProfileSourceRecords: vi.fn(async () => []),
@@ -435,8 +439,13 @@ describe('sitemap column lastModified', () => {
     const entries = await sitemap();
     const urls = entries.map((entry) => entry.url);
     const posts = getAllColumnPosts('ko');
-    const firstArticle = posts[0];
-    expect(firstArticle?.slug).toBeTruthy();
+    // Derived, not frozen: pick a column that still has no vi/id/th/fil markdown
+    // file, so landing new translations extends the sitemap instead of breaking
+    // this "never invent an untranslated URL" guard.
+    const firstArticle = posts.find(
+      (post) => presentOptionalColumnLocales(post.slug).length === 0,
+    );
+    expect(firstArticle?.slug, 'expected a column with no vi/id/th/fil file').toBeTruthy();
 
     const usLandings = [
       '/taiwan-lawyer',
@@ -456,10 +465,33 @@ describe('sitemap column lastModified', () => {
       (entry) => entry.url === `https://tseng-law.com/ko/columns/${firstArticle!.slug}`,
     );
     expect(articleEntry).toBeDefined();
-    expect(articleEntry?.alternates?.languages).not.toHaveProperty('vi');
-    expect(articleEntry?.alternates?.languages).not.toHaveProperty('id');
-    expect(articleEntry?.alternates?.languages).not.toHaveProperty('th');
-    expect(articleEntry?.alternates?.languages).not.toHaveProperty('fil');
+    for (const locale of GUIDANCE_LOCALES_4) {
+      expect(articleEntry?.alternates?.languages).not.toHaveProperty(locale);
+    }
+
+    // Every other column advertises exactly the new-locale files that exist.
+    for (const post of posts) {
+      const entry = entries.find(
+        (candidate) => candidate.url === `https://tseng-law.com/ko/columns/${post.slug}`,
+      );
+      if (!entry) continue;
+      const languages: Record<string, unknown> = { ...(entry.alternates?.languages ?? {}) };
+
+      for (const locale of presentOptionalColumnLocales(post.slug)) {
+        expect(languages[locale], `${post.slug} -> ${locale}`).toBe(
+          `https://tseng-law.com/${locale}/columns/${post.slug}`,
+        );
+        expect(urls, `${post.slug} -> ${locale}`).toContain(
+          `https://tseng-law.com/${locale}/columns/${post.slug}`,
+        );
+      }
+      for (const locale of absentOptionalColumnLocales(post.slug)) {
+        expect(Object.keys(languages), `${post.slug} -> ${locale}`).not.toContain(locale);
+        expect(urls, `${post.slug} -> ${locale}`).not.toContain(
+          `https://tseng-law.com/${locale}/columns/${post.slug}`,
+        );
+      }
+    }
 
     const usLanding = entries.find((entry) => entry.url === 'https://tseng-law.com/en/taiwan-lawyer');
     expect(usLanding).toBeDefined();

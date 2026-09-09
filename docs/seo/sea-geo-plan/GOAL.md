@@ -35,8 +35,8 @@
 ### S4 색인
 - [x] 2026-09-09 S4-a 로컬 40URL 실측 BAD 0/40(200·canonical self·hreflang 9·x-default en) → evidence/s4-local-hreflang.txt
 - [ ] S4-b 배포 후(사용자 승인 시) `live-seo-scan` + `verify:multilingual-live` → evidence/s4-live-*.log
-- [~] S4-c 색인 요청: 12:2x 보류 → **13:0x 사용자 정정=둘 다 승인**. 손빗이 GSC sitemap 재제출 + 16URL Request Indexing + IndexNow 40URL 실행 중(총괄은 중복 제출 방지 위해 실행 안 함). 손빗 완료 보고 오면 evidence/s4-indexing.md 에 기록 → [x]
-- [ ] S4-d 2주 뒤 색인 재확인(손빗)
+- [x] 2026-09-09 S4-c 손빗 실행: IndexNow 40URL 200, sitemap Success(재제출 불필요), Request Indexing 8 요청/3 거부(홈)/3 오류/2 미시도(할당량) → evidence/s4-indexing.md. 잔여 7URL·거부 사유는 S4-d에서
+- [ ] S4-d 2026-09-23 손빗 ASK: 40URL 색인 상태 + 거부 3홈 사유(URL 검사) + 잔여 7URL 재요청
 
 ### S5 권위
 - [x] 2026-09-09 S5-a Grok 후보 40건·6국 → docs/marketing/SEA-AUTHORITY-CANDIDATES-2026-09.md

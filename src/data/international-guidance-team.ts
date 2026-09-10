@@ -90,9 +90,30 @@ export interface GuidanceTeamCopy {
    * publishes in English, followed by that English title in brackets so the
    * canonical wording travels with it. Exception: where the borrowed English
    * word IS that language's own standard term for the role — "Paralegal" in
-   * Indonesian (Permenkumham 1/2018) and in Filipino (IBP/PAO usage) — the
-   * bracket is omitted, because a gloss repeating the same word is noise and
-   * a coined descriptive phrase would read as less native, not more.
+   * Filipino and in Indonesian — the bracket is omitted, because a gloss
+   * repeating the same word is noise and a coined descriptive phrase would
+   * read as less native, not more.
+   *
+   * The two exceptions rest on SEPARATE grounds; do not merge them into one
+   * rule, because the fil ground does not exist in Indonesian:
+   *
+   *   fil — Philippine legal and administrative writing is conducted in
+   *     English, so the English term is itself the professional register and
+   *     no Filipino equivalent is established (IBP / PAO usage).
+   *
+   *   id — Indonesian statutes are NOT written in English, so the register
+   *     argument above must not be carried over. The ground here is that
+   *     `paralegal` is a loanword absorbed into Indonesian and a defined term
+   *     of Indonesian law — Permenkumham 3/2021 art. 1(5), which replaced the
+   *     repealed Permenkumham 1/2018. The same loanword rule is already
+   *     applied to id elsewhere in this project (the Latin `mutatis mutandis`
+   *     is kept, not paraphrased), and the existing-language precedent ja
+   *     「パラリーガル」 (`src/data/team-members.ts`) is likewise a loanword
+   *     job title.
+   *
+   * Neither ground reaches vi or th: both have an established native term
+   * for the role, so those two keep translation + English bracket. Do not
+   * extend the bare-English form to them.
    *
    * The two attorney titles carry an explicit "in Taiwan" qualifier because
    * the only qualification claimed anywhere on this site is a Taiwan one; the

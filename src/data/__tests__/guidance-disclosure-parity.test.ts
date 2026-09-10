@@ -401,14 +401,14 @@ describe('guidance disclosure elements are the same set in all four languages', 
      * The answer-first summary blocks are a second published surface: a
      * generative engine may quote `guidanceAnswers[locale][key].answer`
      * verbatim, without the page body around it. Comparing only the page copy
-     * left that surface unchecked, and WO-O38 found the gap in practice \u2014
-     * `\u570b\u7acb\u81fa\u7063\u5927\u5b78` was annotated in the Indonesian and Thai `about` answers but
+     * left that surface unchecked, and WO-O38 found the gap in practice —
+     * `國立臺灣大學` was annotated in the Indonesian and Thai `about` answers but
      * not in the Vietnamese and Filipino ones, while all four pages annotated
      * it. Answers are compared as their own set, not merged into the page set,
      * so an omission on one surface cannot be masked by the other.
      *
      * No answers-only exemption is needed: `HANJA_WORDING_EXEMPTIONS` above
-     * covers the Indonesian `\u4e2d\u6587` habit, which recurs in the Indonesian
+     * covers the Indonesian `中文` habit, which recurs in the Indonesian
      * answers for the same reason it recurs in the Indonesian pages.
      */
     const answerGlossesOf = (locale: GuidanceLocale, key: GuidancePageKey) =>

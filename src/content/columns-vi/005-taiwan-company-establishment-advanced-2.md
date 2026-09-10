@@ -1,7 +1,7 @@
 ---
 title: "Thành lập công ty tại Đài Loan — Phần chuyên sâu 2"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "2 phút đọc"
 categories:
@@ -70,7 +70,7 @@ Một số ngân hàng có thể đặt thêm yêu cầu, chẳng hạn tài kho
 
 **5. Công ty có thể tuyển dụng người nước ngoài làm nhân viên không?**
 
-A. Nhân viên thứ nhất không bị hạn chế: công việc quản lý tại doanh nghiệp có vốn đầu tư của Hoa kiều hoặc người nước ngoài (一般僑外投資事業主管工作)
+A. Nhân viên thứ nhất: công việc quản lý tại doanh nghiệp có vốn đầu tư của Hoa kiều hoặc người nước ngoài (一般僑外投資事業主管工作). Tiêu chí "công việc chuyên môn hoặc kỹ thuật" nêu ở mục B dưới đây không áp dụng, nhưng vẫn áp dụng các yêu cầu về đối tượng (như người quản lý (經理人) của công ty có phần vốn của Hoa kiều hoặc người nước ngoài vượt quá một phần ba) và các yêu cầu về vốn, doanh thu của người sử dụng lao động (Điều 38 và Điều 39 Tiêu chuẩn thẩm định).
 
 B. Từ nhân viên thứ hai trở đi thì có hạn chế: trường hợp từ 1 người trở lên, học vấn và kinh nghiệm liên quan của người lao động, quy định về mức lương bình quân khi tuyển dụng, cùng quy định về vốn điều lệ và doanh thu của công ty đều được xử lý theo tiêu chuẩn của “công việc chuyên môn hoặc kỹ thuật” (專門性或技術性工作).
 

@@ -1,7 +1,7 @@
 ---
 title: "Paano Pangangasiwaan ang Kapital at ang Ari-arian ng Kompanya Kapag Winawakasan ang Kompanya sa Taiwan?"
 url: "https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company"
-lastmod: "2026-07-25"
+lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
 read_time: "15 minutong pagbabasa"
 categories:
@@ -13,7 +13,7 @@ faq:
   - q: "Ano ang kinakailangan sa resolusyon at ang deadline ng rehistro para sa pagbubuwag ng kompanya?"
     a: "Para sa limited company (有限公司), kailangan ang pagsang-ayon ng dalawang katlo pataas ng karapatang bumoto (voting rights, 表決權) ng mga shareholder. Para sa company limited by shares (股份有限公司), sa prinsipyo ay kailangang dumalo ang mga shareholder na kumakatawan sa dalawang katlo pataas ng kabuuang inisyung shares (已發行股份總數), at maipasiya ito ng mahigit kalahati ng karapatang bumoto ng mga dumalong shareholder. Kung hindi naabot ng publicly offered company (公開發行公司) ang nabanggit na kinakailangan sa pagdalo, maaaring dumalo ang mga shareholder na kumakatawan sa mahigit kalahati ng kabuuang inisyung shares at maipasiya ito ng dalawang katlo pataas ng karapatang bumoto ng mga dumalong shareholder. Maaaring magtakda ng mas mataas na kinakailangan ang articles of incorporation (章程). Ang rehistro ng pagbubuwag ay kailangang iaplay sa loob ng labinlimang araw matapos ang pagbubuwag."
   - q: "Maaari bang hindi agad magbuwag at pansamantala munang ihinto ang negosyo?"
-    a: "Ang kompanyang hihinto sa negosyo nang isang buwan pataas ay kailangang mag-aplay ng rehistro ng pansamantalang paghinto ng negosyo (停業) bago ang paghinto o sa loob ng labinlimang araw mula sa araw ng pagsisimula ng paghinto, at ang bawat panahon ng paghinto ay hindi maaaring lumampas sa isang taon. Gayunman, may obligasyon pa ring isagawa ang taunang income-tax return (年度所得稅結算申報) kahit sa taong huminto ang negosyo, kaya hindi lahat ng pag-uulat sa buwis ay pantay na naaalis. Kailangang indibidwal na tiyakin ang obligasyon ayon sa uri ng buwis, sa hawak na ari-arian, sa mga empleyado at sa iba pang kalagayan."
+    a: "Ang kompanyang hihinto sa negosyo nang isang buwan pataas ay kailangang mag-aplay ng rehistro ng pansamantalang paghinto ng negosyo (停業) bago ang paghinto o sa loob ng labinlimang araw (maliban kung naiulat na ang paghinto sa awtoridad sa buwis at naitala ito sa ilalim ng Business Tax Act — probiso sa Artikulo 3, talata 1 ng Regulations Governing Company Registration) mula sa araw ng pagsisimula ng paghinto, at ang bawat panahon ng paghinto ay hindi maaaring lumampas sa isang taon. Gayunman, may obligasyon pa ring isagawa ang taunang income-tax return (年度所得稅結算申報) kahit sa taong huminto ang negosyo, kaya hindi lahat ng pag-uulat sa buwis ay pantay na naaalis. Kailangang indibidwal na tiyakin ang obligasyon ayon sa uri ng buwis, sa hawak na ari-arian, sa mga empleyado at sa iba pang kalagayan."
 ---
 
 # Paano Pangangasiwaan ang Kapital at ang Ari-arian ng Kompanya Kapag Winawakasan ang Kompanya sa Taiwan?
@@ -114,7 +114,7 @@ Sa huli, ang pagbawas ng kapital, ang gastos, ang dibidendo at ang pagbabayad ng
 
 ## 5. Pansamantalang Paghinto ng Negosyo Kapag Hindi Agad Winawakasan
 
-Ang kompanyang hihinto sa negosyo nang isang buwan pataas ay kailangang mag-aplay ng rehistro ng pansamantalang paghinto ng negosyo bago ang paghinto o sa loob ng labinlimang araw mula sa araw ng pagsisimula ng paghinto, at ang bawat panahon ng paghinto ay hindi maaaring lumampas sa isang taon. Gayunman, may obligasyon pa ring isagawa ang taunang income-tax return (年度所得稅結算申報) kahit sa taong huminto ang negosyo, kaya hindi lahat ng pag-uulat sa buwis ay pantay na naaalis. Kailangang indibidwal na tiyakin ang obligasyon ayon sa uri ng buwis, sa hawak na ari-arian, sa mga empleyado at sa iba pang kalagayan.
+Ang kompanyang hihinto sa negosyo nang isang buwan pataas ay kailangang mag-aplay ng rehistro ng pansamantalang paghinto ng negosyo bago ang paghinto o sa loob ng labinlimang araw (maliban kung naiulat na ang paghinto sa awtoridad sa buwis at naitala ito sa ilalim ng Business Tax Act — probiso sa Artikulo 3, talata 1 ng Regulations Governing Company Registration) mula sa araw ng pagsisimula ng paghinto, at ang bawat panahon ng paghinto ay hindi maaaring lumampas sa isang taon. Gayunman, may obligasyon pa ring isagawa ang taunang income-tax return (年度所得稅結算申報) kahit sa taong huminto ang negosyo, kaya hindi lahat ng pag-uulat sa buwis ay pantay na naaalis. Kailangang indibidwal na tiyakin ang obligasyon ayon sa uri ng buwis, sa hawak na ari-arian, sa mga empleyado at sa iba pang kalagayan.
 
 Ang pansamantalang paghinto ng negosyo ay pagpiling ihinto ang operasyon sa loob ng tiyak na panahon habang pinananatili ang legal na pagkatao ng kompanya. Magagamit ito kapag sinusuri ang posibilidad na muling buksan ang negosyo o kapag kailangan ng panahon upang ayusin ang mga kontrata at ari-arian, ngunit wala itong epektong pumapawi sa kompanya o nag-aayos nang sabay-sabay sa umiiral nang mga karapatan at obligasyon. Kailangang itakda ang araw ng pagsisimula at ang inaasahang araw ng pagtatapos ng paghinto, at tiyakin sa kasalukuyang kalagayan kung magkahiwalay bang kailangan ang rehistro ng kompanya at ang pag-uulat kaugnay ng business tax.
 

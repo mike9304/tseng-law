@@ -1,7 +1,7 @@
 ---
 title: "Pendirian Perusahaan di Taiwan — Panduan Lanjutan 1"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "13 September 2025"
 read_time: "4 menit membaca"
 categories:
@@ -49,7 +49,7 @@ Karena peninjauan rencana investasi juga memakan waktu,
 
 sebaiknya penyusunan rencana investasi dan pencarian alamat pendaftaran perusahaan Anda jalankan secara bersamaan.
 
-Departemen Peninjauan Investasi menetapkan bahwa modal harus dikirimkan dalam waktu 1 tahun setelah persetujuan investasi,
+Menurut Pasal 9 Peraturan Penanaman Modal oleh Orang Asing (外國人投資條例), setoran modal yang telah disetujui harus tiba seluruhnya dalam jangka waktu yang ditetapkan instansi berwenang (核定期限); jangka waktu sebenarnya harus dipastikan pada dokumen persetujuan masing-masing (dalam praktik sering ditetapkan sekitar 1 tahun).
 
 sehingga setelah Anda mencari alamat perusahaan dan menandatangani perjanjian sewa,
 

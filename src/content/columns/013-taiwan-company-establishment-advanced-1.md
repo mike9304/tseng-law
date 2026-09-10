@@ -1,7 +1,7 @@
 ---
 title: "대만 회사설립 -심화편-1"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "2025년 9월 13일"
 read_time: "2분 분량"
 categories:
@@ -49,9 +49,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 투자계획서 작성과 회사 등록 주소지 물색을 동시에 진행하시는 것입니다.
 
-투자심의위원회는 투자 승인 후 1년 내에 자본금을 송금하도록 규정하고 있어,
+외국인투자조례(外國人投資條例) 제9조에 따라 승인된 출자는 주무기관이 정한 기한(核定期限) 안에 전액 도착해야 하며, 그 기한은 개별 승인 문서에서 확인해야 합니다(실무상 1년 안팎으로 정해지는 경우가 많습니다).
 
-회사 주소지를 찾아 임대계약을 체결한 후,
+그 기한 안에 회사 주소지를 찾아 임대계약을 체결한 후,
 
 은행에서 회사 준비계좌를 개설하고 자본금을 송금할 충분한 시간이 있습니다.
 

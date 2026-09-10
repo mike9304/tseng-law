@@ -19,7 +19,7 @@ const exitFaqAnswer =
 const resolutionFaqAnswer =
   '유한회사는 주주 의결권 3분의 2 이상의 동의가 필요합니다. 주식회사는 원칙적으로 발행주식 총수 3분의 2 이상을 대표하는 주주가 출석하고, 출석 주주 의결권 과반수로 결의합니다. 공개발행회사가 위 출석 요건을 충족하지 못한 경우에는 발행주식 총수 과반수를 대표하는 주주가 출석하고, 출석 주주 의결권 3분의 2 이상으로 결의할 수 있습니다. 정관이 더 높은 요건을 정할 수 있습니다. 해산등기는 해산 후 15일 이내에 신청해야 합니다.';
 const suspensionFaqAnswer =
-  '1개월 이상 휴업하는 회사는 휴업 전 또는 휴업 시작일부터 15일 이내에 휴업등기를 신청해야 하며, 1회 휴업 기간은 1년을 넘을 수 없습니다. 다만 휴업한 연도에도 연간 소득세 결산신고 의무가 있으므로 세무신고가 일률적으로 면제되는 것은 아닙니다. 세목, 보유 자산, 근로자와 그 밖의 사정에 따른 의무를 개별적으로 확인해야 합니다.';
+  '1개월 이상 휴업하는 회사는 휴업 전 또는 휴업 시작일부터 15일 이내에 휴업등기를 신청해야 하며(이미 영업세법에 따라 세무기관에 휴업을 신고·核備한 경우에는 이 등기가 필요하지 않습니다 — 회사등기방법(公司登記辦法) 제3조 제1항 단서), 1회 휴업 기간은 1년을 넘을 수 없습니다. 다만 휴업한 연도에도 연간 소득세 결산신고 의무가 있으므로 세무신고가 일률적으로 면제되는 것은 아닙니다. 세목, 보유 자산, 근로자와 그 밖의 사정에 따른 의무를 개별적으로 확인해야 합니다.';
 const article9Paragraph =
   '대만 「회사법」 제9조는 회사가 납입받아야 할 주금에 관하여 실제로 납입되지 않았는데도 전액 납입된 것으로 표시한 경우, 또는 등기 후 주금을 주주에게 반환하거나 주주가 회수하도록 허용한 경우에 5년 이하의 유기징역·구류 또는 50만 대만달러 이상 250만 대만달러 이하의 벌금을 규정합니다. 통상적인 적법한 회사 자금 사용 일반을 처벌하는 조항은 아닙니다.';
 const article90Paragraph =
@@ -69,7 +69,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-25');
+    expect(parsed.data.lastmod).toBe('2026-09-10');
     expect(parsed.data.date_display).toBe('2025년 9월 13일');
     expect(parsed.data.categories).toEqual(['대만 법인설립']);
     expect(parsed.data.featured_image).toBe(
@@ -81,7 +81,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
 
     expect(post?.slug).toBe('withdraw-capital-taiwan-company');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-07-25');
+    expect(post?.date).toBe('2026-09-10');
     expect(post?.dateDisplay).toBe('2025년 9월 13일');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('법인설립');
@@ -262,7 +262,7 @@ describe('Korean investment column 002 — company exit and capital return', () 
     const calculatedMinutes = Math.ceil(eojeolCount / 180);
 
     expect(eojeolCount).toBeGreaterThanOrEqual(1_000);
-    expect(eojeolCount).toBe(2_461);
+    expect(eojeolCount).toBe(2_476);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
   });

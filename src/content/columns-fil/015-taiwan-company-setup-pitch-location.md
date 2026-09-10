@@ -1,7 +1,7 @@
 ---
 title: "Pagtatatag ng Kompanya sa Taiwan -Masusing Bahagi-3 Paghahanap ng Lugar ng Negosyo"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
 read_time: "2 minutong pagbabasa"
 categories:
@@ -59,11 +59,11 @@ Gayunman, madalas na maraming business item ang inirerehistro kapag nagrerehistr
 
 Kaya nga, sa katunayan ay hindi kailangang gawan ng prior inquiry ang lahat ng business item kapag nagrerehistro ng kompanya.
 
-Ayon sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng Lugar ng Negosyo ng Lungsod ng Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知),
+Ayon sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng Lugar ng Negosyo ng Lungsod ng Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知) at ayon sa kasalukuyang paunawa ng Lungsod ng Taipei,
 
-sa mga business item lamang na kabilang sa "mga business item na kailangang unang itanong" (主動查詢之營業項目) **kinakailangang** magsagawa muna ng prior inquiry,
+mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng business item ng kompanya o negosyo (kasama ang sangay (分公司) at sub-sangay (分支機構)) ay **kinakailangang** maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang business item.
 
-at kapag nagrerehistro ng kompanya, kailangang isumite ang resulta ng prior inquiry na iyon sa Pamahalaan ng Lungsod ng Taipei (臺北市政府) kasama ng aplikasyon.
+Ang listahan ng "mga business item na kailangang unang itanong" (主動查詢之營業項目) sa ibaba ay ang mga item na kusang sinusuri ng Department of Commerce habang isinasagawa ang pagsusuri sa pagpaparehistro (隨案主動查詢) kapag nakasaad ang item na iyon sa aplikasyon ngunit wala ito sa nakalakip na resulta; hindi nangangahulugang exempted sa pagsusuri ang item na wala sa listahang ito.
 
 Kung magbubukas sa lugar na hindi pinahihintulutan ang operasyon ng restawran, maaari kayong patawan sa hinaharap ng administrative fine (罰鍰) ng ahensiyang may hurisdiksiyon.
 

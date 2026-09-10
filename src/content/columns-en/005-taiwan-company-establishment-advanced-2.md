@@ -1,7 +1,7 @@
 ---
 title: "Taiwan Company Formation: Capital Remittance, Banking, and Foreign Hiring"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
-lastmod: "2026-07-27"
+lastmod: "2026-09-10"
 date_display: "September 13, 2025"
 read_time: "3 min read"
 categories:
@@ -55,7 +55,7 @@ Some banks may impose additional requirements, such as requiring the account to 
 
 **5. Can the company employ Korean nationals?**
 
-A. No restriction applies to the first employee: Manager of a General Overseas Chinese or Foreign Invested Business (一般僑外投資事業主管工作).
+A. First employee: Manager of a General Overseas Chinese or Foreign Invested Business (一般僑外投資事業主管工作). The "specialized or technical work" criteria in B below do not apply, but the eligibility requirements (such as being a manager (經理人) of a company in which overseas-Chinese or foreign investors hold more than one third) and the employer's capital and turnover requirements (Review Standards Articles 38 and 39) still apply.
 
 B. Restrictions apply from the second employee onward: when employing more than one foreign national, the employee's relevant education and work experience, the average-salary requirement, and the company's capital and revenue requirements are handled in accordance with the standards for "specialized or technical work" (專門性或技術性工作).
 

@@ -26,7 +26,7 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-24');
+    expect(parsed.data.lastmod).toBe('2026-09-10');
     expect(parsed.data.date_display).toBe('2025年9月13日');
     expect(parsed.data.read_time).toBe('約4分');
     expect(parsed.data.categories).toEqual(['台湾会社設立']);
@@ -37,7 +37,7 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
 
     expect(post?.slug).toBe('taiwan-company-establishment-advanced-1');
     expect(post?.title).toBe(parsed.data.title);
-    expect(post?.date).toBe('2026-07-24');
+    expect(post?.date).toBe('2026-09-10');
     expect(post?.dateDisplay).toBe('2025年9月13日');
     expect(post?.readTime).toBe('約4分');
     expect(post?.faq).toBeUndefined();
@@ -66,7 +66,7 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
       '口座開設は最も難しい手続だとおっしゃっていましたが、私も同感です。',
       '台湾ではマネーロンダリングの事例が非常に多いため',
       '投資計画書の作成と会社の登記住所探しを同時に進めることです。',
-      '投資承認後1年以内に資本金を送金するよう定めているため',
+      '外国人投資条例（外國人投資條例）第9条により、承認された出資は主務機関が定めた期限（核定期限）内に全額到達しなければならず、その期限は個別の承認文書で確認する必要があります（実務上は1年前後と定められることが多いです）。',
       '銀行で会社準備口座を開設し、資本金を送金するまでに十分な時間があります。',
     ];
 
@@ -161,7 +161,6 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
 
   it('excludes the previous unsourced rewrite and contains substantial Japanese text', () => {
     const unsourcedLiterals = [
-      '外国人投資条例（Statute for Investment by Foreign Nationals）第9条',
       '労働部労働力発展署（WDA）',
       'オンライン申請は7営業日、書面申請は12営業日',
       '台北市の営業場所事前照会',
@@ -174,6 +173,9 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
     for (const literal of unsourcedLiterals) {
       expect(raw).not.toContain(literal);
     }
+
+    // lead4-6 G-5: same proposition as G-1
+    expect(!raw.includes('第9条') || raw.includes('核定期限')).toBe(true);
     expect(raw).not.toMatch(/[\uac00-\ud7af]/);
     expect(parsed.data.title).not.toMatch(/[\uac00-\ud7af]/);
     expect(post?.content).not.toMatch(/[\uac00-\ud7af]/);
@@ -200,8 +202,8 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
     ).length;
     const calculatedMinutes = Math.ceil(visibleJapaneseCount / 500);
 
-    expect(visibleJapaneseCount).toBe(1_700);
-    expect(visibleKanaCount).toBe(894);
+    expect(visibleJapaneseCount).toBe(1_767);
+    expect(visibleKanaCount).toBe(924);
     expect(calculatedMinutes).toBe(4);
     expect(parsed.data.read_time).toBe(`約${calculatedMinutes}分`);
     expect(post?.readTime).toBe(`約${calculatedMinutes}分`);

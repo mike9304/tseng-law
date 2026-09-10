@@ -1,7 +1,7 @@
 ---
 title: "Taiwan Company Formation — Advanced Guide 1"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
-lastmod: "2026-07-27"
+lastmod: "2026-09-10"
 date_display: "September 13, 2025"
 read_time: "4 min read"
 categories:
@@ -49,7 +49,7 @@ Because the investment-plan review also takes time,
 
 prepare the investment plan while looking for a registered office address.
 
-The Investment Commission requires the capital to be remitted within one year after investment approval,
+Under Article 9 of the Statute for Investment by Foreign Nationals, the approved capital contribution must arrive in full within the period set by the competent authority (核定期限); confirm the actual deadline in the individual approval document (in practice it is often set at around one year).
 
 so you will have enough time to find an address, sign a lease,
 

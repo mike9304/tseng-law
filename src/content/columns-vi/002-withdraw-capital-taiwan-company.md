@@ -1,7 +1,7 @@
 ---
 title: "Khi chấm dứt công ty tại Đài Loan, vốn điều lệ và tài sản của công ty được xử lý như thế nào?"
 url: "https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company"
-lastmod: "2026-07-25"
+lastmod: "2026-09-10"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "18 phút đọc"
 categories:
@@ -13,7 +13,7 @@ faq:
   - q: "Điều kiện thông qua nghị quyết giải thể công ty và thời hạn đăng ký được quy định như thế nào?"
     a: "Công ty trách nhiệm hữu hạn (有限公司) cần có sự đồng ý của cổ đông nắm từ hai phần ba quyền biểu quyết trở lên. Công ty cổ phần (股份有限公司) về nguyên tắc phải có các cổ đông đại diện từ hai phần ba tổng số cổ phần đã phát hành trở lên tham dự, và phải được quá bán quyền biểu quyết của cổ đông tham dự tán thành. Nếu công ty đại chúng (公開發行公司) không đáp ứng được điều kiện tham dự nêu trên thì có thể thông qua nghị quyết với sự tham dự của các cổ đông đại diện quá bán tổng số cổ phần đã phát hành và sự tán thành của từ hai phần ba quyền biểu quyết của cổ đông tham dự trở lên. Điều lệ công ty có thể quy định điều kiện cao hơn. Đăng ký giải thể phải được nộp trong vòng 15 ngày kể từ khi giải thể."
   - q: "Có thể tạm ngừng kinh doanh thay vì giải thể ngay hay không?"
-    a: "Công ty tạm ngừng kinh doanh (停業) từ một tháng trở lên phải nộp đăng ký tạm ngừng kinh doanh trước khi tạm ngừng hoặc trong vòng 15 ngày kể từ ngày bắt đầu tạm ngừng, và mỗi lần tạm ngừng không được quá một năm. Tuy nhiên, trong năm tạm ngừng vẫn có nghĩa vụ kê khai quyết toán thuế thu nhập hằng năm (結算申報), nên không phải mọi nghĩa vụ kê khai thuế đều được miễn. Quý vị phải xác nhận riêng từng nghĩa vụ theo sắc thuế, tài sản đang nắm giữ, người lao động và các tình tiết khác."
+    a: "Công ty tạm ngừng kinh doanh (停業) từ một tháng trở lên phải nộp đăng ký tạm ngừng kinh doanh trước khi tạm ngừng hoặc trong vòng 15 ngày (trừ trường hợp đã khai báo và được cơ quan thuế ghi nhận theo Luật Thuế doanh thu — điểm loại trừ tại Điều 3 khoản 1 Quy tắc đăng ký công ty) kể từ ngày bắt đầu tạm ngừng, và mỗi lần tạm ngừng không được quá một năm. Tuy nhiên, trong năm tạm ngừng vẫn có nghĩa vụ kê khai quyết toán thuế thu nhập hằng năm (結算申報), nên không phải mọi nghĩa vụ kê khai thuế đều được miễn. Quý vị phải xác nhận riêng từng nghĩa vụ theo sắc thuế, tài sản đang nắm giữ, người lao động và các tình tiết khác."
 ---
 
 # Khi chấm dứt công ty tại Đài Loan, vốn điều lệ và tài sản của công ty được xử lý như thế nào?
@@ -114,7 +114,7 @@ Tóm lại, giảm vốn, chi phí, cổ tức và việc hoàn trả khoản va
 
 ## 5. Tạm ngừng kinh doanh trong trường hợp chưa chấm dứt ngay
 
-Công ty tạm ngừng kinh doanh từ một tháng trở lên phải nộp đăng ký tạm ngừng kinh doanh (停業登記) trước khi tạm ngừng hoặc trong vòng 15 ngày kể từ ngày bắt đầu tạm ngừng, và mỗi lần tạm ngừng không được quá một năm. Tuy nhiên, trong năm tạm ngừng vẫn có nghĩa vụ kê khai quyết toán thuế thu nhập hằng năm, nên không phải mọi nghĩa vụ kê khai thuế đều được miễn. Quý vị phải xác nhận riêng từng nghĩa vụ theo sắc thuế, tài sản đang nắm giữ, người lao động và các tình tiết khác.
+Công ty tạm ngừng kinh doanh từ một tháng trở lên phải nộp đăng ký tạm ngừng kinh doanh (停業登記) trước khi tạm ngừng hoặc trong vòng 15 ngày (trừ trường hợp đã khai báo và được cơ quan thuế ghi nhận theo Luật Thuế doanh thu — điểm loại trừ tại Điều 3 khoản 1 Quy tắc đăng ký công ty) kể từ ngày bắt đầu tạm ngừng, và mỗi lần tạm ngừng không được quá một năm. Tuy nhiên, trong năm tạm ngừng vẫn có nghĩa vụ kê khai quyết toán thuế thu nhập hằng năm, nên không phải mọi nghĩa vụ kê khai thuế đều được miễn. Quý vị phải xác nhận riêng từng nghĩa vụ theo sắc thuế, tài sản đang nắm giữ, người lao động và các tình tiết khác.
 
 Tạm ngừng kinh doanh là lựa chọn theo đó công ty dừng hoạt động kinh doanh trong một khoảng thời gian nhất định nhưng vẫn giữ tư cách pháp nhân. Quý vị có thể sử dụng lựa chọn này khi cần thời gian để xem xét khả năng khởi động lại hoạt động kinh doanh hoặc để sắp xếp hợp đồng và tài sản, nhưng nó không có hiệu lực làm công ty biến mất hay giải quyết trọn gói các quyền và nghĩa vụ hiện có. Quý vị phải ấn định ngày bắt đầu và ngày dự kiến kết thúc tạm ngừng, đồng thời xác nhận tình trạng hiện tại xem việc đăng ký công ty và việc kê khai liên quan đến thuế kinh doanh có cần thực hiện riêng hay không.
 

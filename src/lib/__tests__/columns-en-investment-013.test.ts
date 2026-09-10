@@ -78,7 +78,7 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
     expect(parsed.data).toMatchObject({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1',
-      lastmod: '2026-07-27',
+      lastmod: '2026-09-10',
       date_display: 'September 13, 2025',
       read_time: '4 min read',
       categories: ['Taiwan Company Formation'],
@@ -89,7 +89,7 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
     expect(post).toMatchObject({
       slug: 'taiwan-company-establishment-advanced-1',
       title,
-      date: '2026-07-27',
+      date: '2026-09-10',
       dateDisplay: 'September 13, 2025',
       readTime: '4 min read',
       categoryLabel: 'Company Setup',
@@ -141,7 +141,7 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
       'opening a bank account was the most difficult part of the process',
       'many money-laundering cases',
       'prepare the investment plan while looking for a registered office address',
-      'within one year after investment approval',
+      'Under Article 9 of the Statute for Investment by Foreign Nationals, the approved capital contribution must arrive in full within the period set by the competent authority (核定期限); confirm the actual deadline in the individual approval document (in practice it is often set at around one year).',
       'open a preparatory company account, and remit the capital',
     ];
     for (const phrase of required) {
@@ -239,8 +239,6 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
     expect(internalLinks).toEqual(internalTargets);
 
     const forbidden = [
-      'Department of Investment Review',
-      'Article 9 of the Statute for Investment by Foreign Nationals',
       'land-use zoning',
       'building-management',
       'Workforce Development Agency',
@@ -258,6 +256,12 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
     for (const phrase of forbidden) {
       expect(raw).not.toContain(phrase);
     }
+
+    // lead4-6 G-1: forbidden→source-paired. 外國人投資條例 §9「核定期限內全部到達」(law.moj J0040002, lead4-5 §0-1)
+    expect(!raw.includes('Article 9 of the Statute for Investment by Foreign Nationals') || raw.includes('核定期限')).toBe(true);
+
+    // lead4-6 G-3: forbidden→source-paired. 2023-09-26 投審會→投審司, 코퍼스 표준 001·011·017(lead4-5 §2-6)
+    expect(!raw.includes('Department of Investment Review') || raw.includes('經濟部投資審議司')).toBe(true);
     expect(raw).toContain('Wei Tseng (曾雋崴), Taiwan Attorney');
     expect(raw).not.toMatch(
       /[\p{Script=Hangul}\p{Script=Hiragana}\p{Script=Katakana}]/u,
@@ -283,7 +287,7 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
         item.locale === 'en',
     );
 
-    expect(visibleWordCount).toBe(761);
+    expect(visibleWordCount).toBe(792);
     expect(calculatedMinutes).toBe(4);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

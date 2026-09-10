@@ -1,7 +1,7 @@
 ---
 title: "Thành lập công ty tại Đài Loan – Chuyên sâu 3: Tìm địa điểm kinh doanh"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "3 phút đọc"
 categories:
@@ -59,11 +59,11 @@ Tuy nhiên, khi đăng ký công ty, doanh nghiệp thường đăng ký nhiều
 
 Do đó, trên thực tế, khi đăng ký công ty, không nhất thiết phải tra cứu toàn bộ các ngành nghề.
 
-Theo "[Hướng dẫn nghiệp vụ hỗ trợ tra cứu địa điểm kinh doanh thành phố Đài Bắc](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知),
+Theo "[Hướng dẫn nghiệp vụ hỗ trợ tra cứu địa điểm kinh doanh thành phố Đài Bắc](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知) và theo hướng dẫn hiện hành của thành phố Đài Bắc,
 
-chỉ khi ngành nghề đó thuộc "ngành nghề kinh doanh thuộc diện tra cứu chủ động" (主動查詢之營業項目) thì mới **bắt buộc** phải tra cứu, và sau khi tra cứu,
+từ ngày 1 tháng 1 năm 2023, khi đăng ký thành lập, chuyển địa điểm hoặc bổ sung ngành nghề kinh doanh của công ty hoặc hộ kinh doanh (bao gồm chi nhánh (分公司) và cơ sở trực thuộc (分支機構)), **bắt buộc** phải nộp kèm kết quả tra cứu trước địa điểm kinh doanh, không phân biệt ngành nghề.
 
-quý vị phải nộp kết quả tra cứu đó cho Chính quyền thành phố Đài Bắc (臺北市政府) cùng với hồ sơ đăng ký công ty.
+Danh mục "ngành nghề kinh doanh thuộc diện tra cứu chủ động" (主動查詢之營業項目) dưới đây là đối tượng mà Sở Thương mại tự mình tra cứu bổ sung trong quá trình thẩm tra đăng ký (隨案主動查詢) khi hồ sơ có ngành nghề đó nhưng kết quả tra cứu nộp kèm lại thiếu; ngành nghề không có trong danh mục này không vì thế mà được miễn tra cứu.
 
 Nếu mở cửa hàng tại nơi không được phép kinh doanh nhà hàng, về sau quý vị có thể bị cơ quan chủ quản áp dụng tiền phạt hành chính (罰鍰).
 

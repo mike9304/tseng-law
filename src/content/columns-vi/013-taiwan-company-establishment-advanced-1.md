@@ -1,7 +1,7 @@
 ---
 title: "Thành lập công ty tại Đài Loan — Chuyên sâu 1"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "4 phút đọc"
 categories:
@@ -49,7 +49,7 @@ Vì việc thẩm định kế hoạch đầu tư cũng mất thời gian,
 
 quý vị nên vừa soạn bản kế hoạch đầu tư vừa đồng thời tìm địa chỉ đăng ký của công ty.
 
-Cục Thẩm định Đầu tư quy định phải chuyển vốn điều lệ vào Đài Loan trong vòng 1 năm kể từ khi được chấp thuận đầu tư,
+Theo Điều 9 Điều lệ Đầu tư của người nước ngoài (外國人投資條例), phần vốn góp đã được chấp thuận phải về đủ trong thời hạn do cơ quan chủ quản ấn định (核定期限); thời hạn thực tế cần được xác nhận trong văn bản chấp thuận riêng (trên thực tế thường được ấn định khoảng 1 năm).
 
 nên sau khi tìm được địa chỉ công ty và ký hợp đồng thuê,
 

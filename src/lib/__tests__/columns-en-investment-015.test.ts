@@ -56,7 +56,7 @@ describe('English investment column 015 — Taipei business-location inquiry', (
     expect(parsed.data).toEqual({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location',
-      lastmod: '2026-07-27',
+      lastmod: '2026-09-10',
       date_display: 'September 13, 2025',
       read_time: '3 min read',
       categories: ['Taiwan Company Formation'],
@@ -67,7 +67,7 @@ describe('English investment column 015 — Taipei business-location inquiry', (
     expect(post).toMatchObject({
       slug: 'taiwan-company-setup-pitch-location',
       title,
-      date: '2026-07-27',
+      date: '2026-09-10',
       dateDisplay: 'September 13, 2025',
       readTime: '3 min read',
       categoryLabel: 'Company Setup',
@@ -150,8 +150,8 @@ describe('English investment column 015 — Taipei business-location inquiry', (
       'companies commonly register multiple business items',
       'around ten items at once',
       'it is not necessary to conduct an inquiry for every business item',
-      'an inquiry is **mandatory** only for a business item classified as a "business item subject to proactive inquiry"',
-      'the inquiry result must be submitted to the Taipei City Government together with the company registration application',
+      'since January 1, 2023 an application to register the establishment, relocation, or addition of business items of a company or business (including branches and sub-branch offices) **must** attach the business-location pre-inquiry result, whatever the business item.',
+      'The list of "business items subject to proactive inquiry" (主動查詢之營業項目) below covers the items the Department of Commerce queries on its own initiative during registration review (隨案主動查詢) when the application names such an item but the attached inquiry result omits it; an item absent from this list is not exempt from the inquiry.',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -192,7 +192,6 @@ describe('English investment column 015 — Taipei business-location inquiry', (
 
   it('removes invented legal claims and all unapproved locale leakage', () => {
     const forbidden = [
-      'from January 1, 2023',
       'five calendar days',
       'eleven calendar days',
       'valid for six months',
@@ -214,11 +213,15 @@ describe('English investment column 015 — Taipei business-location inquiry', (
       expect(raw).not.toContain(phrase);
     }
 
+    // lead4-6 G-4: same proposition as G-2
+    expect(!raw.includes('January 1, 2023') || raw.includes('臺北市營業場所協助查詢服務作業須知')).toBe(true);
+
     const withoutAllowedHan = raw
       .replace(/建物登記第二類謄本/g, '')
       .replace(/地政事務所/g, '')
       .replace(/臺北市營業場所協助查詢服務作業須知/g, '')
       .replace(/主動查詢之營業項目/g, '')
+      .replace(/隨案主動查詢/g, '')
       .replace(/曾雋崴/g, '');
     expect(withoutAllowedHan).not.toMatch(
       /[\p{Script=Han}\p{Script=Hangul}\p{Script=Hiragana}\p{Script=Katakana}]/u,
@@ -231,7 +234,7 @@ describe('English investment column 015 — Taipei business-location inquiry', (
     const visibleWordCount = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWordCount / 200);
 
-    expect(visibleWordCount).toBe(434);
+    expect(visibleWordCount).toBe(490);
     expect(calculatedMinutes).toBe(3);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

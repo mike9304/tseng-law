@@ -1,7 +1,7 @@
 ---
 title: "Bagaimana Memperlakukan Modal dan Harta Perusahaan Ketika Menutup Perusahaan di Taiwan?"
 url: "https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company"
-lastmod: "2026-07-25"
+lastmod: "2026-09-10"
 date_display: "13 September 2025"
 read_time: "15 menit membaca"
 categories:
@@ -13,7 +13,7 @@ faq:
   - q: "Bagaimana syarat pengambilan keputusan pembubaran perusahaan dan batas waktu pendaftarannya?"
     a: "Untuk pembubaran perseroan terbatas (有限公司) diperlukan persetujuan pemegang saham yang mewakili dua pertiga atau lebih hak suara (表決權). Pada perseroan terbatas berbasis saham (股份有限公司), pada prinsipnya keputusan diambil dengan dihadiri pemegang saham yang mewakili dua pertiga atau lebih dari jumlah saham yang diterbitkan (已發行股份總數) dan disetujui lebih dari setengah hak suara pemegang saham yang hadir. Apabila perusahaan yang menawarkan saham kepada publik (公開發行公司) tidak memenuhi syarat kehadiran tersebut, keputusan dapat diambil dengan dihadiri pemegang saham yang mewakili lebih dari setengah jumlah saham yang diterbitkan dan disetujui dua pertiga atau lebih hak suara pemegang saham yang hadir. Anggaran dasar (章程) dapat menetapkan syarat yang lebih tinggi. Pendaftaran pembubaran harus diajukan dalam waktu 15 hari setelah pembubaran."
   - q: "Apakah perusahaan dapat menghentikan usahanya sementara tanpa langsung membubarkan diri?"
-    a: "Perusahaan yang menghentikan sementara usahanya selama satu bulan atau lebih harus mengajukan pendaftaran penghentian sementara usaha (停業登記) sebelum penghentian itu atau dalam waktu 15 hari sejak tanggal dimulainya penghentian, dan satu kali masa penghentian sementara tidak boleh melebihi satu tahun. Namun, karena pada tahun terjadinya penghentian sementara pun tetap ada kewajiban pelaporan penghitungan tahunan pajak penghasilan (年度所得稅結算申報), tidak berarti seluruh pelaporan pajak dibebaskan secara seragam. Kewajiban yang timbul menurut jenis pajak, aset yang dimiliki, pekerja, dan keadaan lainnya harus dipastikan satu per satu."
+    a: "Perusahaan yang menghentikan sementara usahanya selama satu bulan atau lebih harus mengajukan pendaftaran penghentian sementara usaha (停業登記) sebelum penghentian itu atau (kecuali penghentian itu telah dilaporkan dan dicatat oleh instansi pajak menurut Undang-Undang Pajak Usaha — pengecualian pada Pasal 3 ayat 1 Peraturan Pendaftaran Perusahaan) dalam waktu 15 hari sejak tanggal dimulainya penghentian, dan satu kali masa penghentian sementara tidak boleh melebihi satu tahun. Namun, karena pada tahun terjadinya penghentian sementara pun tetap ada kewajiban pelaporan penghitungan tahunan pajak penghasilan (年度所得稅結算申報), tidak berarti seluruh pelaporan pajak dibebaskan secara seragam. Kewajiban yang timbul menurut jenis pajak, aset yang dimiliki, pekerja, dan keadaan lainnya harus dipastikan satu per satu."
 ---
 
 # Bagaimana Memperlakukan Modal dan Harta Perusahaan Ketika Menutup Perusahaan di Taiwan?
@@ -114,7 +114,7 @@ Pada akhirnya, pengurangan modal, biaya, dividen, dan pelunasan pinjaman masing-
 
 ## 5. Penghentian Sementara Usaha Ketika Perusahaan Tidak Ditutup Sekarang Juga
 
-Perusahaan yang menghentikan sementara usahanya selama satu bulan atau lebih harus mengajukan pendaftaran penghentian sementara usaha (停業登記) sebelum penghentian itu atau dalam waktu 15 hari sejak tanggal dimulainya penghentian, dan satu kali masa penghentian sementara tidak boleh melebihi satu tahun. Namun, karena pada tahun terjadinya penghentian sementara pun tetap ada kewajiban pelaporan penghitungan tahunan pajak penghasilan (年度所得稅結算申報), tidak berarti seluruh pelaporan pajak dibebaskan secara seragam. Kewajiban yang timbul menurut jenis pajak, aset yang dimiliki, pekerja, dan keadaan lainnya harus dipastikan satu per satu.
+Perusahaan yang menghentikan sementara usahanya selama satu bulan atau lebih harus mengajukan pendaftaran penghentian sementara usaha (停業登記) sebelum penghentian itu atau (kecuali penghentian itu telah dilaporkan dan dicatat oleh instansi pajak menurut Undang-Undang Pajak Usaha — pengecualian pada Pasal 3 ayat 1 Peraturan Pendaftaran Perusahaan) dalam waktu 15 hari sejak tanggal dimulainya penghentian, dan satu kali masa penghentian sementara tidak boleh melebihi satu tahun. Namun, karena pada tahun terjadinya penghentian sementara pun tetap ada kewajiban pelaporan penghitungan tahunan pajak penghasilan (年度所得稅結算申報), tidak berarti seluruh pelaporan pajak dibebaskan secara seragam. Kewajiban yang timbul menurut jenis pajak, aset yang dimiliki, pekerja, dan keadaan lainnya harus dipastikan satu per satu.
 
 Penghentian sementara usaha adalah pilihan ketika perusahaan berhenti berusaha selama jangka waktu tertentu tetapi tetap mempertahankan kepribadian hukumnya. Pilihan ini dapat dimanfaatkan ketika Anda meninjau kemungkinan memulai kembali usaha atau ketika penataan perjanjian dan aset membutuhkan waktu, tetapi tidak berakibat lenyapnya perusahaan atau tertatanya sekaligus hak dan kewajiban yang sudah ada. Tanggal mulai dan tanggal berakhir yang direncanakan harus ditetapkan, dan perlu tidaknya pendaftaran perusahaan serta pelaporan yang berkaitan dengan pajak usaha masing-masing harus dipastikan menurut keadaan saat itu.
 

@@ -1,7 +1,7 @@
 ---
 title: "Pagtatatag ng Kompanya sa Taiwan -Masusing Bahagi-1"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
 read_time: "3 minutong pagbabasa"
 categories:
@@ -49,7 +49,7 @@ Dahil nangangailangan din ng panahon ang pagsusuri sa plano ng pamumuhunan,
 
 sabay na isagawa ang paghahanda ng plano ng pamumuhunan at ang paghahanap ng adres para sa rehistro ng kompanya.
 
-Itinatakda ng Department of Investment Review na dapat ipadala ang kapital sa loob ng 1 taon matapos maaprubahan ang pamumuhunan,
+Ayon sa Artikulo 9 ng Statute for Investment by Foreign Nationals (外國人投資條例), ang naaprubahang ambag na kapital ay dapat dumating nang buo sa loob ng panahong itinakda ng awtoridad (核定期限); kumpirmahin ang aktwal na takdang panahon sa indibidwal na dokumento ng pag-apruba (sa praktika ay madalas itong nasa palibot ng 1 taon).
 
 kaya matapos makahanap ng adres ng kompanya at makapagpirma ng kontrata sa upa,
 

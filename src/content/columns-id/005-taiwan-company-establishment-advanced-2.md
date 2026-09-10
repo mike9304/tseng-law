@@ -1,7 +1,7 @@
 ---
 title: "Pendirian Perusahaan di Taiwan – Bagian Lanjutan 2"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "13 September 2025"
 read_time: "3 menit membaca"
 categories:
@@ -69,7 +69,7 @@ Sebagian bank dapat menetapkan persyaratan tambahan, misalnya masa penggunaan re
 
 **5. Dapatkah perusahaan mempekerjakan orang asing sebagai karyawan**
 
-A. Karyawan pertama tanpa pembatasan : pekerjaan manajerial pada usaha penanaman modal jenis umum oleh orang Tionghoa perantauan atau orang asing (一般僑外投資事業主管工作)
+A. Karyawan pertama : pekerjaan manajerial pada usaha penanaman modal jenis umum oleh orang Tionghoa perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria "pekerjaan yang bersifat khusus atau teknis" pada bagian B di bawah tidak berlaku, tetapi persyaratan objek (seperti manajer (經理人) perusahaan yang penyertaan modal Tionghoa perantauan atau asingnya melebihi sepertiga) dan persyaratan kinerja pemberi kerja berupa modal dan omzet (Pasal 38 dan Pasal 39 Standar Penelaahan) tetap berlaku.
 
 B. Mulai karyawan asing kedua terdapat pembatasan : apabila mempekerjakan 1 orang atau lebih sejak karyawan kedua, latar belakang pendidikan dan pengalaman kerja karyawan yang relevan, ketentuan gaji rata-rata pada saat mempekerjakan, serta ketentuan modal dan omzet perusahaan diproses menurut "pekerjaan spesialis atau teknis" (專門性或技術性工作).
 

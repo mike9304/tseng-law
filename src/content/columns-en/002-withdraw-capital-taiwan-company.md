@@ -1,7 +1,7 @@
 ---
 title: "Closing a Taiwan Company: What Happens to Capital and Company Assets?"
 url: "https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company"
-lastmod: "2026-07-25"
+lastmod: "2026-09-10"
 date_display: "September 13, 2025"
 read_time: "22 min read"
 categories:
@@ -13,7 +13,7 @@ faq:
   - q: "What approval requirements and registration deadline apply to a company dissolution?"
     a: "A limited company requires the approval of shareholders holding at least two-thirds of the voting rights. A company limited by shares, as a general rule, requires the attendance of shareholders representing at least two-thirds of all issued shares and a resolution approved by a majority of the voting rights represented by the attending shareholders. If a company that has made a public offering of shares does not meet that attendance requirement, it may adopt the resolution with shareholders representing a majority of all issued shares in attendance and at least two-thirds of the voting rights represented by the attending shareholders in favor. The articles of incorporation may impose higher requirements. An application for dissolution registration must be filed within 15 days after dissolution."
   - q: "Can a company suspend business instead of dissolving immediately?"
-    a: "A company suspending business for at least one month must apply for business-suspension registration before the suspension or within 15 days after the suspension begins, and each suspension period may not exceed one year. However, the company must still file its annual income tax return for a year in which it suspends business, so suspension does not categorically exempt it from tax filings. Its obligations must be checked individually based on the types of tax involved, the assets it holds, its employees, and other circumstances."
+    a: "A company suspending business for at least one month must apply for business-suspension registration before the suspension or within 15 days after the suspension begins (unless the suspension has already been reported to and recorded by the tax authority under the Business Tax Act — proviso to Article 3, paragraph 1 of the Regulations Governing Company Registration), and each suspension period may not exceed one year. However, the company must still file its annual income tax return for a year in which it suspends business, so suspension does not categorically exempt it from tax filings. Its obligations must be checked individually based on the types of tax involved, the assets it holds, its employees, and other circumstances."
 ---
 
 # Closing a Taiwan Company: What Happens to Capital and Company Assets?
@@ -114,7 +114,7 @@ Ultimately, a capital reduction, expenses, dividends, and loan repayments each r
 
 ## 5. Business Suspension When the Company Will Not Close Immediately
 
-A company suspending business for at least one month must apply for business-suspension registration before the suspension or within 15 days after the suspension begins, and each suspension period may not exceed one year. However, the company must still file its annual income tax return for a year in which it suspends business, so suspension does not categorically exempt it from tax filings. Its obligations must be checked individually based on the types of tax involved, the assets it holds, its employees, and other circumstances.
+A company suspending business for at least one month must apply for business-suspension registration before the suspension or within 15 days after the suspension begins (unless the suspension has already been reported to and recorded by the tax authority under the Business Tax Act — proviso to Article 3, paragraph 1 of the Regulations Governing Company Registration), and each suspension period may not exceed one year. However, the company must still file its annual income tax return for a year in which it suspends business, so suspension does not categorically exempt it from tax filings. Its obligations must be checked individually based on the types of tax involved, the assets it holds, its employees, and other circumstances.
 
 Business suspension allows a company to stop operating for a period while retaining its legal personality. It may be used when the possibility of resuming business is under consideration or when time is needed to settle contracts and assets, but it does not extinguish the company or settle all existing rights and obligations. The suspension start date and planned end date should be set, and the company’s current status should be checked to determine whether separate company-registration and business-tax filings are required.
 

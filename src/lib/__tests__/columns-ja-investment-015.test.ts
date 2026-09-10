@@ -67,9 +67,9 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
     expect(jaParsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location',
     );
-    expect(jaParsed.data.lastmod).toBe('2026-07-24');
+    expect(jaParsed.data.lastmod).toBe('2026-09-10');
     expect(jaParsed.data.date_display).toBe('2025年9月13日');
-    expect(jaParsed.data.read_time).toBe('約2分');
+    expect(jaParsed.data.read_time).toBe('約3分');
     expect(jaParsed.data.categories).toEqual(['台湾会社設立']);
     expect(jaParsed.data.featured_image).toBe(
       '../images/015-taiwan-company-setup-pitch-location/featured-01.jpg',
@@ -78,9 +78,9 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
 
     expect(post?.slug).toBe('taiwan-company-setup-pitch-location');
     expect(post?.title).toBe(jaParsed.data.title);
-    expect(post?.date).toBe('2026-07-24');
+    expect(post?.date).toBe('2026-09-10');
     expect(post?.dateDisplay).toBe('2025年9月13日');
-    expect(post?.readTime).toBe('約2分');
+    expect(post?.readTime).toBe('約3分');
     expect(post?.categoryLabel).toBe('台湾会社設立');
     expect(post?.faq).toBeUndefined();
     expect(post?.featuredImage).toBe(
@@ -138,8 +138,8 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
       'すべての業種について、必ず「営業場所事前照会」システムで営業の可否を確認することをお勧めします。',
       '一度に10項目ほど登録したい場合も少なくありません。',
       '実際には会社登記の際にすべての業種を照会する必要はありません。',
-      '「自発的照会対象業種」（主動查詢之營業項目）に該当する業種の場合に限り、**必ず**照会を行ったうえで、',
-      'その照会結果を台北市政府へ併せて提出しなければなりません。',
+      '2023年1月1日から、会社・商業（分公司・分支機構を含む）の設立、所在地移転、営業項目追加の登記を申請する際は、業種を問わず営業場所事前照会の結果を**必ず**登記申請に添付しなければなりません。',
+      '下記の「自発的照会対象業種」（主動查詢之營業項目）の一覧は、登記申請書にその業種が記載されているのに添付した照会結果に含まれていない場合に、商業処が登記審査の中で職権により追加照会を行う（隨案主動查詢）対象であり、この一覧にない業種であっても照会が免除されるわけではありません。',
       '後に管轄機関から罰金を科される可能性もあります。',
     ];
 
@@ -189,7 +189,6 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
   it('removes the prior version’s unsupported sections, rules, and links', () => {
     const forbiddenLiterals = [
       'faq:',
-      '2023年1月1日',
       '発行後3か月以内',
       '最大5項目',
       '5日（暦日）',
@@ -210,6 +209,9 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
       expect(jaRaw).not.toContain(forbidden);
       expect(post?.content).not.toContain(forbidden);
     }
+
+    // lead4-6 G-2: forbidden→source-paired. BLBQS「自112年1月1日起…全面預審」·須知 제4점(lead4-5 §0-1)
+    expect(!jaRaw.includes('2023年1月1日') || jaRaw.includes('臺北市營業場所協助查詢服務作業須知')).toBe(true);
     expect(jaRaw).not.toMatch(
       /不適合[^。\n]*(?:必ず|常に|一律)[^。\n]*登記[^。\n]*(?:拒否|できない)/,
     );
@@ -237,7 +239,7 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
     expect(post?.content).not.toMatch(/[\uac00-\ud7af]/);
     expect(jaRaw).not.toContain('曾俊瑋');
     expect(jaRaw.match(kana)?.length ?? 0).toBeGreaterThan(400);
-    expect(visibleJapaneseCount).toBe(990);
+    expect(visibleJapaneseCount).toBe(1_148);
     expect(jaParsed.data.read_time).toBe(`約${calculatedMinutes}分`);
   });
 

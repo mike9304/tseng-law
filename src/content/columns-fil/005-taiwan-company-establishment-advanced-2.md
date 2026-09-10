@@ -1,7 +1,7 @@
 ---
 title: "Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 2"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
 read_time: "3 minutong pagbabasa"
 categories:
@@ -69,7 +69,7 @@ Maaaring may karagdagang kinakailangan ang ilang bangko, gaya ng anim na buwan p
 
 **5. Maaari bang tanggapin ng kompanya ang mga dayuhan bilang empleyado**
 
-A. Walang paghihigpit sa unang empleyado: pangkalahatang gawaing pamamahala sa negosyong may pamumuhunan ng Overseas Chinese (華僑) o ng dayuhan (一般僑外投資事業主管工作)
+A. Unang empleyado: pangkalahatang gawaing pamamahala sa negosyong may pamumuhunan ng Overseas Chinese (華僑) o ng dayuhan (一般僑外投資事業主管工作). Hindi nalalapat ang pamantayang "espesyalisado o teknikal na trabaho" sa B sa ibaba, ngunit nananatiling nalalapat ang mga kwalipikasyon sa tao (halimbawa, pagiging manager (經理人) ng kompanyang mahigit isang katlo ang bahagi ng Overseas Chinese o dayuhan) at ang mga kinakailangang kapital at benta ng employer (Artikulo 38 at Artikulo 39 ng Review Standards).
 
 B. May paghihigpit mula sa ikalawang empleyado: kapag isa pataas, ang kaugnay na antas ng pinag-aralan at karanasan ng empleyado, ang regulasyon sa average na sahod sa pag-empleyo, at ang regulasyon sa kapital at sa halaga ng benta ng kompanya ay pinangangasiwaan ayon sa "specialized o technical work" (專門性或技術性工作).
 

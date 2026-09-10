@@ -1,9 +1,9 @@
 ---
 title: "台湾会社設立―応用編3：営業場所を探す"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
-lastmod: "2026-07-24"
+lastmod: "2026-09-10"
 date_display: "2025年9月13日"
-read_time: "約2分"
+read_time: "約3分"
 categories:
   - "台湾会社設立"
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
@@ -53,11 +53,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 したがって、実際には会社登記の際にすべての業種を照会する必要はありません。
 
-「[台北市営業場所照会サービス運用指針](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)」（臺北市營業場所協助查詢服務作業須知）によると、
+「[台北市営業場所照会サービス運用指針](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)」（臺北市營業場所協助查詢服務作業須知）と台北市の現行案内によれば、
 
-「自発的照会対象業種」（主動查詢之營業項目）に該当する業種の場合に限り、**必ず**照会を行ったうえで、
+2023年1月1日から、会社・商業（分公司・分支機構を含む）の設立、所在地移転、営業項目追加の登記を申請する際は、業種を問わず営業場所事前照会の結果を**必ず**登記申請に添付しなければなりません。
 
-会社登記の際に、その照会結果を台北市政府へ併せて提出しなければなりません。
+下記の「自発的照会対象業種」（主動查詢之營業項目）の一覧は、登記申請書にその業種が記載されているのに添付した照会結果に含まれていない場合に、商業処が登記審査の中で職権により追加照会を行う（隨案主動查詢）対象であり、この一覧にない業種であっても照会が免除されるわけではありません。
 
 飲食店を営業できない場所で開業すると、後に管轄機関から罰金を科される可能性もあります。
 

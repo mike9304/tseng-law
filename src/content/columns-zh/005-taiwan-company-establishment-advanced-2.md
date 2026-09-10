@@ -1,7 +1,7 @@
 ---
 title: "台灣公司設立：資本金匯款、銀行帳戶與外國人聘僱實務Q&A"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
-lastmod: "2026-07-27"
+lastmod: "2026-09-10"
 date_display: "2025年9月13日"
 read_time: "10分鐘閱讀"
 categories:

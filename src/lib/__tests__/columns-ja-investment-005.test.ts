@@ -46,7 +46,7 @@ describe('Japanese column 005 — Korean-canonical mirror', () => {
     expect(parsed.data).toEqual({
       title: '台湾会社設立―応用編2',
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2',
-      lastmod: '2026-07-24',
+      lastmod: '2026-09-10',
       date_display: '2025年9月13日',
       read_time: '約2分',
       categories: ['台湾会社設立'],
@@ -55,7 +55,7 @@ describe('Japanese column 005 — Korean-canonical mirror', () => {
     });
     expect(post?.slug).toBe('taiwan-company-establishment-advanced-2');
     expect(post?.title).toBe(parsed.data.title);
-    expect(post?.date).toBe('2026-07-24');
+    expect(post?.date).toBe('2026-09-10');
     expect(post?.dateDisplay).toBe('2025年9月13日');
     expect(post?.readTime).toBe('約2分');
     expect(post?.categoryLabel).toBe('台湾会社設立');
@@ -128,7 +128,7 @@ describe('Japanese column 005 — Korean-canonical mirror', () => {
 
   it('faithfully restores the two-tier Korean-employee rule and official reference', () => {
     const requiredPhrases = [
-      '1人目の従業員には制限なし',
+      '1人目の従業員：一般僑外投資事業主管業務（一般僑外投資事業主管工作）。下記Bの「専門性または技術性を要する業務」の基準は適用されませんが、僑外出資が3分の1を超える会社の経理人等の対象要件と、雇用主の資本金・売上高等の実績要件（審査基準第38条・第39条）は適用されます。',
       '一般僑外投資事業主管業務（一般僑外投資事業主管工作）',
       '2人目以降の従業員には制限あり',
       '従業員の関連する学歴および職歴、平均給与に関する雇用基準',

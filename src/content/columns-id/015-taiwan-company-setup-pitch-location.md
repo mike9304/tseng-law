@@ -1,7 +1,7 @@
 ---
 title: "Pendirian Perusahaan di Taiwan — Panduan Lanjutan 3: Mencari Lokasi Usaha"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "13 September 2025"
 read_time: "3 menit membaca"
 categories:
@@ -59,11 +59,11 @@ Namun, pada saat pendaftaran perusahaan sering kali beberapa bidang usaha didaft
 
 Karena itu, dalam praktiknya tidak semua bidang usaha perlu diperiksa pada saat pendaftaran perusahaan.
 
-Menurut "[Petunjuk Pelaksanaan Layanan Bantuan Pemeriksaan Lokasi Usaha Kota Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知),
+Menurut "[Petunjuk Pelaksanaan Layanan Bantuan Pemeriksaan Lokasi Usaha Kota Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知) dan menurut pengumuman terkini Kota Taipei,
 
-hanya bidang usaha yang termasuk "bidang usaha yang menjadi objek pemeriksaan atas inisiatif instansi" (主動查詢之營業項目) yang **wajib** diperiksa terlebih dahulu,
+sejak 1 Januari 2023, permohonan pendaftaran pendirian, pemindahan lokasi, atau penambahan bidang usaha perusahaan maupun usaha dagang (termasuk kantor cabang (分公司) dan cabang pembantu (分支機構)) **wajib** melampirkan hasil pemeriksaan awal lokasi usaha, tanpa memandang bidang usahanya.
 
-dan pada saat pendaftaran perusahaan hasil pemeriksaan itu harus diserahkan bersama permohonan pendaftaran kepada Pemerintah Kota Taipei (臺北市政府).
+Daftar "bidang usaha yang menjadi objek pemeriksaan atas inisiatif instansi" (主動查詢之營業項目) di bawah ini adalah bidang usaha yang diperiksa sendiri oleh Dinas Perdagangan dalam proses penelaahan pendaftaran (隨案主動查詢) apabila permohonan mencantumkan bidang usaha tersebut tetapi hasil pemeriksaan yang dilampirkan tidak memuatnya; bidang usaha yang tidak ada dalam daftar ini tidak berarti bebas dari kewajiban pemeriksaan.
 
 Apabila usaha dibuka di tempat yang tidak memperbolehkan usaha rumah makan, kemudian dapat dijatuhkan denda administratif (罰鍰) oleh instansi yang berwenang.
 

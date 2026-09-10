@@ -88,10 +88,16 @@ export interface GuidanceTeamCopy {
   /**
    * Job titles. Each is a plain translation of the title the firm already
    * publishes in English, followed by that English title in brackets so the
-   * canonical wording travels with it. The two attorney titles carry an
-   * explicit "in Taiwan" qualifier because the only qualification claimed
-   * anywhere on this site is a Taiwan one; the paralegal, operations manager
-   * and CPA titles are NOT raised into attorney vocabulary.
+   * canonical wording travels with it. Exception: where the borrowed English
+   * word IS that language's own standard term for the role — "Paralegal" in
+   * Indonesian (Permenkumham 1/2018) and in Filipino (IBP/PAO usage) — the
+   * bracket is omitted, because a gloss repeating the same word is noise and
+   * a coined descriptive phrase would read as less native, not more.
+   *
+   * The two attorney titles carry an explicit "in Taiwan" qualifier because
+   * the only qualification claimed anywhere on this site is a Taiwan one; the
+   * paralegal, operations manager and CPA titles are NOT raised into attorney
+   * vocabulary.
    */
   roles: Record<GuidanceTeamMemberId, string>;
 }
@@ -102,7 +108,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'Đội ngũ quốc tế Hovering',
     description:
       'Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán viên hợp tác của Hovering.',
-    representativeTitle: 'Luật sư đại diện',
+    representativeTitle: 'Luật sư điều hành',
     teamTitle: 'Luật sư và nhân viên',
     partnerTitle: 'Kế toán viên hợp tác',
     introLabel: 'Giới thiệu',
@@ -148,7 +154,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Advokat pengelola di Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Advokat di Taiwan (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal (Paralegal)',
+      'chang-fangyu': 'Paralegal',
       'son-jungmin': 'Manajer operasional Korea (Korea Operations Manager)',
       'huang-shengping': 'Akuntan mitra (Partner CPA)',
     },
@@ -204,8 +210,8 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Namamahalang abogado sa Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Abogado sa Taiwan (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal (Paralegal)',
-      'son-jungmin': 'Tagapamahala ng operasyon sa Korea (Korea Operations Manager)',
+      'chang-fangyu': 'Paralegal',
+      'son-jungmin': 'Tagapamahala ng operasyong Korea (Korea Operations Manager)',
       'huang-shengping': 'Kasosyong akawntant (Partner CPA)',
     },
   },
@@ -250,7 +256,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
   vi: {
     'Taiwan company setup': 'Thành lập công ty tại Đài Loan',
     'Taiwan investment counsel': 'Tư vấn pháp lý đầu tư vào Đài Loan',
-    'Civil litigation and damages': 'Tranh chấp dân sự và bồi thường thiệt hại',
+    'Civil litigation and damages': 'Tố tụng dân sự và bồi thường thiệt hại',
     'Trademark and patent filings': 'Đăng ký nhãn hiệu và sáng chế',
     'Visa and residency': 'Thị thực và cư trú',
     'Family and labor disputes': 'Tranh chấp gia đình và lao động',
@@ -342,7 +348,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Văn phòng nhận các vụ việc doanh nghiệp và cá nhân tại Đài Loan, làm việc bằng tiếng Anh, tiếng Nhật, tiếng Hàn và tiếng Trung.',
-        'Đã đại diện một du học sinh Hàn Quốc trong vụ việc bồi thường thương tích tại phòng tập và đạt được bản án sơ thẩm buộc bồi thường TWD 1.57M.',
+        'Đã đại diện một sinh viên Hàn Quốc trong vụ việc bồi thường thương tích tại phòng tập và đạt được bản án sơ thẩm buộc bồi thường TWD 1.57M.',
       ],
       education: [
         'Thạc sĩ (M.S.), Institute of Finance, National Taiwan University',
@@ -427,7 +433,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal senior dengan pengalaman bertahun-tahun di beberapa kantor advokat, meliputi dukungan litigasi, hukum korporasi, dan perkara penanaman modal asing.',
+        'Paralegal berpengalaman yang bertahun-tahun menjabat paralegal senior di beberapa kantor advokat, meliputi dukungan litigasi, hukum korporasi, dan perkara penanaman modal asing.',
         'Mendukung litigasi, pendirian perusahaan, persetujuan penanaman modal asing, permohonan izin, serta komunikasi Korea-Taiwan.',
       ],
       education: ['Sarjana Hukum (LL.B.), Tunghai University'],
@@ -501,7 +507,7 @@ export const guidanceTeamBios: Record<
         'สนับสนุนการสื่อสารระหว่างทีมด้วยระบบเอกสารและระบบงาน โดยอาศัยพื้นฐานด้านวิทยาการคอมพิวเตอร์',
       ],
       education: ['วิทยาศาสตรบัณฑิต (B.S.) สาขาวิทยาการคอมพิวเตอร์, National Cheng Kung University'],
-      experience: ['ทีมงานเกาหลี, Hovering International Law Firm'],
+      experience: ['ทีมงานธุรกิจเกาหลี, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
@@ -522,7 +528,7 @@ export const guidanceTeamBios: Record<
         'Kinatawan nito ang isang mag-aaral mula sa Korea sa usapin ng pinsalang natamo sa gym, na nagbunga ng hatol sa unang hukuman para sa danyos na TWD 1.57M.',
       ],
       education: [
-        'Master (M.S.), Institute of Finance, National Taiwan University',
+        'Masterado (M.S.), Institute of Finance, National Taiwan University',
         'Batsilyer (B.A.) na doble ang medyor sa Batas at Pananalapi, National Chengchi University',
         'Palitang mag-aaral, Kobe University at Waseda University',
       ],
@@ -545,7 +551,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Beteranong paralegal na may maraming taóng karanasan bilang senior na paralegal sa ilang tanggapan ng abogado, sumasaklaw sa suporta sa litigasyon, gawaing pangkorporasyon, at usapin ng dayuhang pamumuhunan.',
+        'Beteranong paralegal na may maraming taóng karanasan bilang senior na paralegal sa ilang tanggapan ng abogado, sumasaklaw sa suporta sa litigasyon, gawaing legal na pangkorporasyon, at usapin ng dayuhang pamumuhunan.',
         'Sumusuporta sa litigasyon, pagtatatag ng kompanya, pag-apruba ng dayuhang pamumuhunan, aplikasyon ng permiso, at komunikasyong Korea-Taiwan.',
       ],
       education: ['Batsilyer sa Batas (LL.B.), Tunghai University'],
@@ -564,11 +570,11 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Natapos ang mga programang batsilyer at master sa akawnting sa National Chengchi University, at kasalukuyang namumuno sa isang tanggapan ng akawntant.',
+        'Natapos ang mga programang batsilyer at masterado sa akawnting sa National Chengchi University, at kasalukuyang namumuno sa isang tanggapan ng akawntant.',
         'Sumusuporta sa pinagsanib na pagsusuri ng panganib na legal, pambuwis, at pampinansiya para sa mga kliyenteng korporasyon.',
       ],
       education: [
-        'Master (M.A.) sa Akawnting, National Chengchi University',
+        'Masterado (M.A.) sa Akawnting, National Chengchi University',
         'Batsilyer (B.A.) sa Akawnting, National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],

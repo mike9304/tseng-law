@@ -71,7 +71,7 @@ Sebagian bank dapat menetapkan persyaratan tambahan, misalnya masa penggunaan re
 
 A. Karyawan pertama : pekerjaan manajerial pada usaha penanaman modal jenis umum oleh orang Tionghoa perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria "pekerjaan yang bersifat khusus atau teknis" pada bagian B di bawah tidak berlaku, tetapi persyaratan objek (seperti manajer (經理人) perusahaan yang penyertaan modal Tionghoa perantauan atau asingnya melebihi sepertiga) dan persyaratan kinerja pemberi kerja berupa modal dan omzet (Pasal 38 dan Pasal 39 Standar Penelaahan) tetap berlaku.
 
-B. Mulai karyawan asing kedua terdapat pembatasan : apabila mempekerjakan 1 orang atau lebih sejak karyawan kedua, latar belakang pendidikan dan pengalaman kerja karyawan yang relevan, ketentuan gaji rata-rata pada saat mempekerjakan, serta ketentuan modal dan omzet perusahaan diproses menurut "pekerjaan spesialis atau teknis" (專門性或技術性工作).
+B. Mulai karyawan asing kedua terdapat pembatasan : apabila jumlah pekerja yang dipekerjakan melebihi 1 orang, latar belakang pendidikan dan pengalaman kerja karyawan yang relevan, ketentuan gaji rata-rata pada saat mempekerjakan, serta ketentuan modal dan omzet perusahaan diproses menurut "pekerjaan spesialis atau teknis" (專門性或技術性工作).
 
 Lihat situs Kementerian Ketenagakerjaan Taiwan (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

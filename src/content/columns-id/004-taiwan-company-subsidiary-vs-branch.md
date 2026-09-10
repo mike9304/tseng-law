@@ -172,7 +172,7 @@ Pilihan akhirnya lebih aman ditinjau dalam keadaan para ahli di Taiwan dan di te
 ## Sumber Resmi
 
 - [Basis data peraturan Kementerian Kehakiman Taiwan — Undang-Undang Perusahaan](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Basis data peraturan Kementerian Kehakiman Taiwan — Pasal 10 Undang-Undang Pajak Usaha (營業稅法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [Basis data peraturan Kementerian Kehakiman Taiwan — Pasal 10 Undang-Undang Pajak Usaha (營業稅法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Basis data peraturan Kementerian Kehakiman Taiwan — Undang-Undang Pajak Penghasilan](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Kementerian Keuangan Taiwan — Panduan pemotongan pajak atas dividen bagi pemegang saham di luar negeri](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Kementerian Keuangan Taiwan — Penafsiran mengenai laba kantor cabang perusahaan asing](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

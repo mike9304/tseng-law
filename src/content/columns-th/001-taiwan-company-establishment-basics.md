@@ -131,7 +131,7 @@ faq:
 - [คำแนะนำการจดทะเบียนบริษัทและพาณิชย์ กรมพัฒนาการพาณิชย์ กระทรวงเศรษฐกิจไต้หวัน (經濟部商業發展署)](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [คู่มือปฏิบัติงานใบอนุญาตทำงานสำหรับผู้บริหารกิจการที่มีทุนต่างชาติ](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [ข้อมูลความตกลงภาษีเงินได้ไต้หวัน–เกาหลีใต้ กระทรวงการคลังไต้หวัน (財政部)](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
-- [กฎเกณฑ์เกี่ยวกับอัตราหักภาษี ณ ที่จ่ายของเงินปันผลที่จ่ายแก่ผู้มิได้มีถิ่นที่อยู่](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [กฎเกณฑ์เกี่ยวกับอัตราหักภาษี ณ ที่จ่ายของเงินปันผลที่จ่ายแก่ผู้มิได้มีถิ่นที่อยู่](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [คำอธิบายรอบระยะเวลายื่นแบบภาษีธุรกิจของไต้หวัน](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
 - [คำอธิบายอัตราภาษีเงินได้นิติบุคคลของไต้หวัน](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
 - [คำอธิบายการจัดเก็บภาษีจากเงินได้ประเภทเงินปันผลของคนต่างชาติ](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)

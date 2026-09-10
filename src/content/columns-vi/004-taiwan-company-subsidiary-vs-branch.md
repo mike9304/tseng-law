@@ -172,7 +172,7 @@ Lựa chọn cuối cùng sẽ an toàn hơn nếu được xem xét trong đi�
 ## Tài liệu chính thức
 
 - [Cơ sở dữ liệu pháp luật của Bộ Tư pháp Đài Loan (法務部) — Luật Công ty (公司法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Cơ sở dữ liệu pháp luật của Bộ Tư pháp Đài Loan — Điều 10 Luật Thuế Kinh doanh (營業稅法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [Cơ sở dữ liệu pháp luật của Bộ Tư pháp Đài Loan — Điều 10 Luật Thuế Kinh doanh (營業稅法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Cơ sở dữ liệu pháp luật của Bộ Tư pháp Đài Loan — Luật Thuế Thu nhập (所得稅法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Bộ Tài chính Đài Loan — hướng dẫn khấu trừ tại nguồn đối với cổ tức trả cho cổ đông ở nước ngoài](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Bộ Tài chính Đài Loan — giải thích liên quan đến lợi nhuận của chi nhánh công ty nước ngoài](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

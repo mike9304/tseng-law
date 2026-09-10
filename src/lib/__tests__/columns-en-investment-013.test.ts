@@ -131,7 +131,7 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
 
   it('keeps every source claim about the address and investment review', () => {
     const required = [
-      "Taiwan's Investment Commission for review",
+      'the Department of Investment Review, MOEA (經濟部投資審議司) for review',
       'capital will actually be used for investment',
       'foreign parties are not bringing funds into Taiwan under another pretext',
       "does not need to state the company's exact address",
@@ -287,7 +287,7 @@ describe('English investment column 013 — source-faithful company Q&A', () => 
         item.locale === 'en',
     );
 
-    expect(visibleWordCount).toBe(792);
+    expect(visibleWordCount).toBe(794);
     expect(calculatedMinutes).toBe(4);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

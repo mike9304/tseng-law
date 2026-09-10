@@ -25,9 +25,9 @@ I hope the Q&A below will help anyone considering forming a company in Taiwan. �
 
 **1. I want to form a company, but I have not yet found a registered office address. Can I still proceed?**
 
-When a foreign national forms a company in Taiwan, an investment plan must be submitted to Taiwan's Investment Commission for review.
+When a foreign national forms a company in Taiwan, an investment plan must be submitted to the Department of Investment Review, MOEA (經濟部投資審議司) for review.
 
-The Investment Commission must verify that the capital will actually be used for investment
+The Department must verify that the capital will actually be used for investment
 
 and that foreign parties are not bringing funds into Taiwan under another pretext.
 

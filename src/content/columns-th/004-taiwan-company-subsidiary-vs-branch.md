@@ -172,7 +172,7 @@ faq:
 ## เอกสารทางการ
 
 - [ฐานข้อมูลกฎหมาย กระทรวงยุติธรรมไต้หวัน (法務部) — พระราชบัญญัติบริษัท](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [ฐานข้อมูลกฎหมาย กระทรวงยุติธรรมไต้หวัน — พระราชบัญญัติภาษีธุรกิจ (營業稅法) มาตรา 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [ฐานข้อมูลกฎหมาย กระทรวงยุติธรรมไต้หวัน — พระราชบัญญัติภาษีธุรกิจ (營業稅法) มาตรา 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [ฐานข้อมูลกฎหมาย กระทรวงยุติธรรมไต้หวัน — พระราชบัญญัติภาษีเงินได้](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [กระทรวงการคลังไต้หวัน — คำแนะนำการหักภาษี ณ ที่จ่ายของเงินปันผลที่จ่ายแก่ผู้ถือหุ้นในต่างประเทศ](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [กระทรวงการคลังไต้หวัน — คำวินิจฉัยเกี่ยวกับกำไรของสาขาในไต้หวันของบริษัทต่างชาติ](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

@@ -131,7 +131,7 @@ Thuế suất giới hạn theo hiệp định không tự động được áp 
 - [Hướng dẫn đăng ký công ty và đăng ký thương mại của Cục Phát triển Thương mại, Bộ Kinh tế (商業發展署)](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [Sổ tay nghiệp vụ về giấy phép làm việc cho người quản lý doanh nghiệp có vốn đầu tư của Hoa kiều hoặc người nước ngoài](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [Hướng dẫn của Bộ Tài chính Đài Loan (財政部) về Hiệp định thuế thu nhập Đài Loan–Hàn Quốc](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
-- [Quy định về thuế suất khấu trừ tại nguồn đối với cổ tức trả cho người không cư trú](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [Quy định về thuế suất khấu trừ tại nguồn đối với cổ tức trả cho người không cư trú](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Hướng dẫn về kỳ kê khai thuế kinh doanh của Đài Loan](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
 - [Hướng dẫn về thuế suất thuế thu nhập doanh nghiệp của Đài Loan](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
 - [Hướng dẫn về thuế đối với thu nhập cổ tức của người nước ngoài](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)

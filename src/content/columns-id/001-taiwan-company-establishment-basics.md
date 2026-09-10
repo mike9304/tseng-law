@@ -131,7 +131,7 @@ Tarif terbatas menurut perjanjian tidak diterapkan secara otomatis hanya karena 
 - [Panduan pendaftaran perusahaan dan pendaftaran usaha, Badan Pengembangan Perdagangan Kementerian Ekonomi Taiwan (商業發展署)](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [Buku panduan kerja untuk izin kerja bagi manajer perusahaan penanaman modal asing](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [Panduan Kementerian Keuangan Taiwan mengenai perjanjian pajak penghasilan Taiwan–Korea](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
-- [Ketentuan mengenai tarif pemotongan pajak atas dividen bagi bukan penduduk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [Ketentuan mengenai tarif pemotongan pajak atas dividen bagi bukan penduduk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Panduan siklus pelaporan pajak usaha Taiwan](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
 - [Panduan tarif pajak penghasilan badan usaha Taiwan](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
 - [Panduan pengenaan pajak atas penghasilan dividen bagi orang asing](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)

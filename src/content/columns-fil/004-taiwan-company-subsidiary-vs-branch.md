@@ -172,7 +172,7 @@ Mas ligtas na isagawa ang panghuling pagpili habang magkatulad ang katotohanang 
 ## Mga Opisyal na Sanggunian
 
 - [Batayang Datos ng mga Batas at Regulasyon ng Ministri ng Katarungan (Ministry of Justice, 法務部) ng Taiwan — Company Act (公司法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Batayang Datos ng mga Batas at Regulasyon ng Ministri ng Katarungan ng Taiwan — Artikulo 10 ng Business Tax Act (營業稅法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [Batayang Datos ng mga Batas at Regulasyon ng Ministri ng Katarungan ng Taiwan — Artikulo 10 ng Business Tax Act (營業稅法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Batayang Datos ng mga Batas at Regulasyon ng Ministri ng Katarungan ng Taiwan — Income Tax Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Ministri ng Pananalapi ng Taiwan — Gabay sa withholding sa dibidendo ng shareholder sa ibang bansa](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Ministri ng Pananalapi ng Taiwan — Interpretasyon hinggil sa tubo ng branch ng dayuhang kompanya](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

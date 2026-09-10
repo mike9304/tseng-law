@@ -1194,7 +1194,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'ขอบเขตและการยืนยัน',
             paragraphs: [
               'สำนักงานทำงานภายใต้กฎหมายไต้หวัน และรับเรื่องที่อยู่ในกลุ่มงานข้างต้น ส่วนขอบเขตของแต่ละเรื่องจะได้รับการยืนยันเป็นการเฉพาะ หลังจากทนายความตรวจสอบเนื้อหาที่ท่านส่งมาแล้ว',
-              'สถานะการพำนัก ใบอนุญาตทำงาน และเรื่องทำนองเดียวกัน พิจารณาจากเอกสารและข้อเท็จจริงของแต่ละราย ไม่ได้อนุมานจากสัญชาติ หากเรื่องของท่านมีส่วนที่เกี่ยวข้องกับประเด็นเหล่านี้ โปรดระบุไว้เมื่อติดต่อเข้ามา เพื่อให้คำแนะนำตรงกับกรณีของท่าน ทั้งนี้ หน้านี้ไม่รับประกันผลและไม่รับประกันระยะเวลาตอบกลับ',
+              'สถานะการพำนัก ใบอนุญาตทำงาน และเรื่องทำนองเดียวกัน พิจารณาจากเอกสารและข้อเท็จจริงของแต่ละราย ไม่ได้อนุมานจากสัญชาติ หากเรื่องของท่านมีส่วนที่เกี่ยวข้องกับประเด็นเหล่านี้ โปรดระบุไว้เมื่อติดต่อเข้ามา เพื่อให้ทนายความพิจารณาได้ว่าเรื่องของท่านอยู่ในกลุ่มงานใด ทั้งนี้ หน้านี้ไม่รับประกันผลและไม่รับประกันระยะเวลาตอบกลับ',
             ],
           },
         ],
@@ -1667,7 +1667,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Saklaw at kung paano ito kinukumpirma',
             paragraphs: [
               'Gumagawa ang tanggapan sa ilalim ng batas ng Taiwan at tumatanggap ng mga usaping kabilang sa mga pangkat sa itaas. Hiwalay na kinukumpirma ang saklaw ng bawat usapin matapos suriin ng abogado ang ipinadala ninyo.',
-              'Ang katayuan sa paninirahan, ang permiso sa trabaho, at ang mga katulad nito ay sinusuri batay sa mga dokumento at pangyayaring natatangi sa bawat tao, hindi hinuhugot sa pagkamamamayan. Kung may bahagi ng usapin ninyo na may kinalaman dito, banggitin ninyo kapag nakipag-ugnayan kayo upang tumpak ang maibibigay na patnubay; walang ipinapangakong resulta at walang ipinapangakong panahon ng pagsagot ang pahinang ito.',
+              'Ang katayuan sa paninirahan, ang permiso sa trabaho, at ang mga katulad nito ay sinusuri batay sa mga dokumento at pangyayaring natatangi sa bawat tao, hindi hinuhugot sa pagkamamamayan. Kung may bahagi ng usapin ninyo na may kinalaman dito, banggitin ninyo kapag nakipag-ugnayan kayo upang matukoy ng abogado kung saang pangkat ng gawain kabilang ang usapin ninyo; walang ipinapangakong resulta at walang ipinapangakong panahon ng pagsagot ang pahinang ito.',
             ],
           },
         ],

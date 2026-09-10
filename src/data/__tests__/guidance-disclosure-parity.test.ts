@@ -378,28 +378,53 @@ describe('guidance disclosure elements are the same set in all four languages', 
 
   it('annotates the same Chinese-character terms in all four languages', () => {
     const CJK = /[\u3400-\u4dbf\u4e00-\u9fff]+/g;
-    const glossesOf = (locale: GuidanceLocale, key: GuidancePageKey) => {
-      const page = guidanceContent[locale].pages[key];
-      const text = [
-        page.eyebrow,
-        page.title,
-        page.description,
-        page.intro,
-        ...page.sections.flatMap((s) => [s.heading, ...s.paragraphs, ...(s.items ?? [])]),
-        ...(page.faqs ?? []).flatMap((f) => [f.question, f.answer]),
-      ].join(' ');
-      return [...new Set(text.match(CJK) ?? [])]
+    const glossesIn = (text: string) =>
+      [...new Set(text.match(CJK) ?? [])]
         .filter((token) => !HANJA_WORDING_EXEMPTIONS.has(token))
         .sort();
+
+    const pageGlossesOf = (locale: GuidanceLocale, key: GuidancePageKey) => {
+      const page = guidanceContent[locale].pages[key];
+      return glossesIn(
+        [
+          page.eyebrow,
+          page.title,
+          page.description,
+          page.intro,
+          ...page.sections.flatMap((s) => [s.heading, ...s.paragraphs, ...(s.items ?? [])]),
+          ...(page.faqs ?? []).flatMap((f) => [f.question, f.answer]),
+        ].join(' '),
+      );
     };
+
+    /**
+     * The answer-first summary blocks are a second published surface: a
+     * generative engine may quote `guidanceAnswers[locale][key].answer`
+     * verbatim, without the page body around it. Comparing only the page copy
+     * left that surface unchecked, and WO-O38 found the gap in practice \u2014
+     * `\u570b\u7acb\u81fa\u7063\u5927\u5b78` was annotated in the Indonesian and Thai `about` answers but
+     * not in the Vietnamese and Filipino ones, while all four pages annotated
+     * it. Answers are compared as their own set, not merged into the page set,
+     * so an omission on one surface cannot be masked by the other.
+     *
+     * No answers-only exemption is needed: `HANJA_WORDING_EXEMPTIONS` above
+     * covers the Indonesian `\u4e2d\u6587` habit, which recurs in the Indonesian
+     * answers for the same reason it recurs in the Indonesian pages.
+     */
+    const answerGlossesOf = (locale: GuidanceLocale, key: GuidancePageKey) =>
+      glossesIn(guidanceAnswers[locale][key]?.answer ?? '');
 
     const [reference, ...others] = LOCALES;
     for (const key of Object.keys(guidanceContent[reference].pages) as GuidancePageKey[]) {
       for (const locale of others) {
         expect(
-          glossesOf(locale, key),
+          pageGlossesOf(locale, key),
           `${key}: ${locale} annotates a different set of Chinese-character terms than ${reference}`,
-        ).toEqual(glossesOf(reference, key));
+        ).toEqual(pageGlossesOf(reference, key));
+        expect(
+          answerGlossesOf(locale, key),
+          `${key} answer: ${locale} annotates a different set of Chinese-character terms than ${reference}`,
+        ).toEqual(answerGlossesOf(reference, key));
       }
     }
   });

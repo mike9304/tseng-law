@@ -114,6 +114,7 @@ export const CHECK_IDS = [
   'numbers',
   'nationality',
   'langid',
+  'currency',
 ];
 
 export const DEFAULT_ADAPT_DIR = '/Users/son7/Projects/tseng-law-sea-state/columns/work';
@@ -1296,6 +1297,46 @@ export function checkLangid(target, lang) {
   );
 }
 
+/**
+ * currency — 통화 단위가 한정어 없이 쓰인 곳을 잡는다.
+ *
+ * 총괄 지시(GOAL-4 lead4-4 §2-3)로 신설. 003 ko가 대만 元의 역어로 「원」을
+ * 한정어 없이 써서 한국 독자에게 원화로 읽히던 것이 실례다. 숫자는 조문과
+ * 같으므로 `numbers` 항목이 잡지 못하고, 통화 한정어의 부재는 형식 문제라
+ * 별도 레인이 필요하다.
+ *
+ * 한국어는 「원」 앞 12자 이내에 대만 통화를 가리키는 말이 있어야 한다.
+ * 다른 언어는 TWD·NT$·新臺幣 같은 명시 표기를 쓰므로 대상이 아니다.
+ */
+const CURRENCY_KO_QUALIFIERS = /(신타이완달러|신대만달러|대만달러|대만|타이완|TWD|NT\$|新臺幣|新台幣)/u;
+
+export function findCurrencyHits(body, startLine, lang) {
+  if (lang !== 'ko') return [];
+  const hits = [];
+  const lines = body.split('\n');
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i];
+    if (!/[\d][\d,.]*\s*(?:만|억)?\s*원/u.test(line)) continue;
+    // 문장 단위로 본다. 열거문("1,000원, 2,000원 또는 3,000원")에서 한정어가
+    // 앞머리에만 오는 것이 정상이므로 고정 폭 창으로는 판정할 수 없다.
+    for (const sentence of line.split(/(?<=[.。!?])\s+/u)) {
+      if (!/[\d][\d,.]*\s*(?:만|억)?\s*원/u.test(sentence)) continue;
+      if (CURRENCY_KO_QUALIFIERS.test(sentence)) continue;
+      hits.push({ line: startLine + i, text: sentence.trim().slice(0, 90) });
+    }
+  }
+  return hits;
+}
+
+export function checkCurrency(target, lang) {
+  const hits = findCurrencyHits(target.body, target.bodyStartLine, lang);
+  if (hits.length === 0) return pass('currency');
+  return warn(
+    'currency',
+    hits.map((hit) => `L${hit.line} 통화 한정어 없는 「원」: …${hit.text.trim()}`),
+  );
+}
+
 export function checkHanzi(target) {
   const count = countHanzi(target.body);
   if (count >= HANZI_MIN) return pass('hanzi', [`han=${count}`]);
@@ -1695,6 +1736,7 @@ export function checkPair({ sourceRaw, targetRaw, sourcePath, targetPath, lang, 
     ['numbers', () => checkNumbers(source, target, lang)],
     ['nationality', () => checkNationality(source, target, lang, adaptLog)],
     ['langid', () => checkLangid(target, lang)],
+    ['currency', () => checkCurrency(target, lang)],
   ];
   const results = catalog.filter(([id]) => wanted.has(id)).map(([, run]) => run());
   const failed = results.some((check) => check.status === 'FAIL');

@@ -8,6 +8,7 @@ import { test } from 'node:test';
 
 import {
   CHECK_IDS,
+  findCurrencyHits,
   findLangidHits,
   FORBIDDEN_PHRASES,
   checkPair,
@@ -728,6 +729,7 @@ test('checker includes nationality alongside the existing 9+1 ids', () => {
     'numbers',
     'nationality',
     'langid',
+    'currency',
   ]);
 });
 
@@ -878,4 +880,25 @@ test('langid: 베트남어 고유 결합 문자가 다른 라틴 로케일에 �
   const hits = findLangidHits('Pesangon diberikan berdasarkan thời hạn kerja', 1, 'id');
   assert.equal(hits.length, 1);
   assert.equal(hits[0].script, 'vi');
+});
+
+
+// currency — 대만 元의 역어 「원」이 한정어 없이 쓰이면 한국 독자가 원화로
+// 읽는다. 숫자는 조문과 같으므로 numbers 항목이 잡지 못한다(GOAL-4 lead4-4 §2-3).
+test('currency: 한정어 없는 「원」을 잡는다', () => {
+  assert.equal(findCurrencyHits('과태료는 4만 원입니다.', 1, 'ko').length, 1);
+  assert.equal(findCurrencyHits('벌금 1,000원당 1일로 계산합니다.', 1, 'ko').length, 1);
+});
+
+test('currency: 같은 문장에 한정어가 있으면 통과한다', () => {
+  assert.deepEqual(findCurrencyHits('신대만달러 1,000원, 2,000원 또는 3,000원.', 1, 'ko'), []);
+  assert.deepEqual(findCurrencyHits('납입자본금 50만 신타이완달러 이상.', 1, 'ko'), []);
+});
+
+test('currency: 한국어 외에는 대상이 아니다', () => {
+  assert.deepEqual(findCurrencyHits('과태료는 4만 원입니다.', 1, 'vi'), []);
+});
+
+test('currency: 금액이 아닌 숫자는 잡지 않는다', () => {
+  assert.deepEqual(findCurrencyHits('5년의 기간이 적용됩니다.', 1, 'ko'), []);
 });

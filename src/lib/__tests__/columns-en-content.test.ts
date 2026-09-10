@@ -97,11 +97,11 @@ describe('English full column corpus', () => {
     expect(raw.match(/^title:\s*"([^"]+)"$/m)?.[1]).toBe(exactTitle);
     expect(raw.match(/^#\s.+$/gm)).toEqual([`# ${exactTitle}`]);
     expect(post!.title).toBe(exactTitle);
-    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2026-07-26');
+    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2026-09-10');
     expect(raw.match(/^date_display:\s*"([^"]+)"$/m)?.[1]).toBe(
       'September 13, 2025',
     );
-    expect(post!.date).toBe('2026-07-26');
+    expect(post!.date).toBe('2026-09-10');
     expect(post!.dateDisplay).toBe('September 13, 2025');
 
     const loadedPublicContent = `${post!.title}\n${post!.content}`;
@@ -117,7 +117,7 @@ describe('English full column corpus', () => {
     const sourceUrl =
       'https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability';
     const officialRegulationsUrl =
-      'https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455';
+      'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101';
     const supplementaryUrl = 'https://gonews.com.tw/car/daily/21934/';
     const featuredImage =
       '../images/012-taiwan-overtaking-accident-liability/featured-01.jpg';

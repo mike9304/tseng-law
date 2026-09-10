@@ -149,7 +149,7 @@ const article10301AdjustmentParagraph =
 const article1056SubsectionHeading =
   '### Article 1056, Article 1057, and child support';
 const article1056Paragraph =
-  '**Article 1056** provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met. The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.';
+  '**Article 1056** provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met (paragraph 2 proviso: the claimant must be without fault). The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.';
 const completeParentalRightsSubsectionHeading =
   '### Complete parental rights and duties, not “custody” as an umbrella';
 const childScopeParagraph =
@@ -195,16 +195,16 @@ const frozenBeforeFilingDocumentsSha256 =
 const frozenCourtResultsSubsectionSha256 =
   '180f59abec39bf4cf6aefe84b3c9733c7dffa49e8d505c65db22aa75dd1ceebf';
 const frozenSection3OnwardSha256 =
-  'c25737685e62acf2eec8b3a05d4f0f61d3d031b4fb4c6d698510d0728a8c0a3c';
+  '9d3873b2036c80039630af2d171ff24516644066bb330b300a359c50b4313296';
 const frozenSection4OutsideArticle1052IntroSha256 =
   '6d21299c224a5ff4d86880622d8d47f69f3f7ccebfa2a78861d08032ee49d8ef';
 const frozenSection5OnwardSha256 =
-  '16a3ead372d16c96127261c90a6f2f1367f3e2fa69468dfedf7c27204d8d5b9d';
+  '172b2892b1d1f4c4ab2d6c700a34804f710979bc0b0580ae61084abd69f14754';
 const frozenSection1OnwardSha256 =
-  '54f87a6aef1dc43c9ce7e54256a97fefcd0ac53bad3e22cdfdc33ae2e025479f';
-const frozenVisibleWordCount = 5_818;
+  'b64f3368517a247872fe3f0d3cd7f0a60eeb52843c12bf5ee3b2cf985546d4dd';
+const frozenVisibleWordCount = 5_827;
 const frozenSourceSha256 =
-  'fb6838230608c4948497bad2d66e3255988c84c04093d0e57cdaa560dab68ae8';
+  '8f312555bfcad70766e9c82c5c7a594a2c09bc9cdf2ca27105394c5280321a94';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -250,7 +250,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-25',
+      lastmod: '2026-09-10',
       date_display: 'September 13, 2025',
       read_time: '30 min read',
       categories: ['Taiwan Legal Information'],
@@ -261,7 +261,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-25',
+      date: '2026-09-10',
       dateDisplay: 'September 13, 2025',
       readTime: '30 min read',
       category: 'legal',

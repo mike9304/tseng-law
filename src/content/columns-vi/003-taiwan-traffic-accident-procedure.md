@@ -1,7 +1,7 @@
 ---
 title: "Hỏi đáp về tai nạn giao thông tại Đài Loan: xử trí hiện trường, lỗi, thỏa thuận và bồi thường thiệt hại"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-07-26"
+lastmod: "2026-09-10"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "13 phút đọc"
 categories:
@@ -41,7 +41,7 @@ Về văn bản của cảnh sát, tại hiện trường quý vị có thể nh
 
 Với bồi thường thiệt hại dân sự, theo Điều 197 Bộ luật Dân sự (民法), quý vị không còn quyền yêu cầu khi đã qua 2 năm kể từ ngày biết được thiệt hại và người có nghĩa vụ bồi thường, hoặc đã qua 10 năm kể từ ngày xảy ra hành vi trái pháp luật. Những tình tiết nào ảnh hưởng tới thời hiệu khởi kiện thì phải xem xét riêng.
 
-Người chịu thiệt hại do tội phạm có thể khởi kiện dân sự trong vụ án hình sự (刑事附帶民事訴訟) theo Điều 487 Bộ luật Tố tụng Hình sự. Khi vụ án hình sự đang được xét xử, có thể nộp đơn trước lúc kết thúc tranh luận tại phiên tòa phúc thẩm theo quy định tại Điều 488 Bộ luật Tố tụng Hình sự. Thông thường quý vị tránh được việc phải nộp riêng án phí, nhưng không phải mọi kết cục đều khép lại mà không phát sinh chi phí. Ví dụ, nếu vụ án hình sự bị bác và vụ việc được chuyển sang tòa án dân sự theo đề nghị của nguyên đơn, quý vị có thể phải chịu án phí theo Điều 503 Bộ luật Tố tụng Hình sự; quy định về việc chuyển hồ sơ và thủ tục tại Điều 504 cũng phải được xác nhận cùng lúc.
+Người chịu thiệt hại do tội phạm có thể khởi kiện dân sự trong vụ án hình sự (刑事附帶民事訴訟) theo Điều 487 Bộ luật Tố tụng Hình sự. Khi vụ án hình sự đang được xét xử, có thể nộp đơn trước lúc kết thúc tranh luận tại phiên tòa phúc thẩm theo quy định tại Điều 488 Bộ luật Tố tụng Hình sự, nhưng không được nộp trong khoảng thời gian sau khi kết thúc tranh luận tại phiên sơ thẩm và trước khi kháng cáo được nộp. Thông thường quý vị tránh được việc phải nộp riêng án phí, nhưng không phải mọi kết cục đều khép lại mà không phát sinh chi phí. Ví dụ, nếu vụ án hình sự bị bác và vụ việc được chuyển sang tòa án dân sự theo đề nghị của nguyên đơn, quý vị có thể phải chịu án phí theo Điều 503 Bộ luật Tố tụng Hình sự; quy định về việc chuyển hồ sơ và thủ tục tại Điều 504 cũng phải được xác nhận cùng lúc.
 
 Lựa chọn sẽ khác nhau tùy việc thời hiệu có bị gián đoạn hay không, tùy phạm vi bị đơn, chứng cứ, bảo hiểm và thẩm quyền. Vì vậy, không có một thủ tục nào tốt nhất áp dụng đồng loạt cho mọi vụ việc.
 
@@ -239,7 +239,7 @@ Trong trường hợp gây thương tích do vô ý, hiện nay tòa án tuyên 
 
 ​
 
-Nếu chuyển sang nộp tiền thay thế hình phạt tù (易科罰金), mức tính là TWD 1,000 cho mỗi ngày; với mức án 3 tháng thì phải nộp 3\*30\*1,000=90,000 Đài tệ (TWD).
+Nếu chuyển sang nộp tiền thay thế hình phạt tù (易科罰金), Điều 41 khoản 1 Bộ luật Hình sự quy định quy đổi TWD 1,000, 2,000 hoặc 3,000 cho mỗi ngày; tính theo mức TWD 1,000 mỗi ngày thì mức án 3 tháng là 3\*30\*1,000=90,000 Đài tệ (TWD).
 
 ​
 

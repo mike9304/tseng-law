@@ -1,7 +1,7 @@
 ---
 title: "대만 추월 사고의 책임은 어떻게 판단하나요?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
-lastmod: "2026-07-26"
+lastmod: "2026-09-10"
 date_display: "2025년 9월 13일"
 read_time: "4분 분량"
 categories:
@@ -17,9 +17,9 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ## 도로교통안전규칙 제101조가 정한 추월 요건
 
-[대만 도로교통안전규칙 제101조](https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455)는 추월이 금지되는 조건과, 같은 차로에서 추월이 허용될 때 따라야 하는 순서를 함께 정하고 있습니다.
+[대만 도로교통안전규칙 제101조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101)는 추월이 금지되는 조건과, 같은 차로에서 추월이 허용될 때 따라야 하는 순서를 함께 정하고 있습니다.
 
-제101조는 굽은 도로, 급경사, 좁은 다리, 터널, 교차로를 알리는 표지가 있는 구간과 철도 건널목, 공사장에서는 추월을 금지합니다.
+제101조는 굽은 도로, 급경사, 좁은 다리, 터널 또는 교차로를 나타내는 표지가 설치된 구간, 철도 건널목, 도로 공사 구간에서는 추월을 금지합니다.
 
 또한 학교나 병원 표지가 있는 장소나 구간, 그 밖의 추월 금지 표지 또는 표시가 있는 곳, 마주 오는 차량이 접근하는 경우, 앞쪽에 두 대 이상의 차량이 연속해 달리고 있는 경우에도 추월할 수 없습니다.
 

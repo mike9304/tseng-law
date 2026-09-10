@@ -18,7 +18,7 @@ const title = '台灣超車事故的責任如何判斷？';
 const sourceUrl =
   'https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability';
 const officialUrl =
-  'https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455';
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101';
 const supplementaryUrl = 'https://gonews.com.tw/car/daily/21934/';
 const featuredImage =
   '../images/012-taiwan-overtaking-accident-liability/featured-01.jpg';
@@ -85,7 +85,7 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-26',
+      lastmod: '2026-09-10',
       date_display: '2025年9月13日',
       read_time: '3分鐘閱讀',
       categories: ['台灣法律資訊'],
@@ -210,7 +210,7 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-26',
+      date: '2026-09-10',
       dateDisplay: '2025年9月13日',
       readTime: '3分鐘閱讀',
       category: 'legal',

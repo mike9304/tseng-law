@@ -1,7 +1,7 @@
 ---
 title: "Q&A sa Proseso ng Diborsiyo sa Taiwan: Mediation, Litigasyon, Paghahati ng Ari-arian, Anak"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
-lastmod: "2026-07-25"
+lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
 read_time: "18 minutong pagbabasa"
 categories:
@@ -111,7 +111,7 @@ Napapawi ang claim na ito kung hindi ito gagamitin sa loob ng dalawang taon mula
 
 Hindi magkaparehong karapatan ang mga ito. Magkaiba ang mga elemento ng pagkakaroon, ang pagkalkula at ang panahon ng claim para sa paghahati sa pagkakaiba ng residual property sa ilalim ng Artikulo 1030-1 ng Kodigo Sibil, ng danyos dahil sa judicial divorce sa ilalim ng Artikulo 1056, ng post-divorce spousal support para sa asawang walang pagkakamali sa ilalim ng Artikulo 1057, at ng sustento sa anak para sa menor de edad na anak. Sa claim para sa paghahati sa pagkakaiba ng residual property ay inilalapat ang dalawang taon mula nang malaman ang pagkakaiba at limang taon mula nang matapos ang statutory matrimonial property regime, ngunit hindi ito dapat ilipat nang tuwiran sa ibang claim.
 
-Ang danyos sa ilalim ng Artikulo 1056 ng Kodigo Sibil ay isang karapatang sinusuri nang magkahiwalay ang pinsalang pang-ari-arian at ang pinsalang hindi pang-ari-arian na tumutupad sa mga elementong itinakda ng batas, laban sa kabilang panig na may pananagutan sa judicial divorce. Kailangang suportahan ng ebidensiya ang aktong may pananagutan, ang pinsala, ang ugnayang sanhi-at-bunga, at ang hiwalay na elemento ng claim na hindi pang-ari-arian. Hindi natutukoy ang isang tiyak na halaga, ni napapalitan ang ibang claim sa ari-arian, dahil lamang sa may katotohanang may kinalaman sa pagkasira ng pagsasama.
+Ang danyos sa ilalim ng Artikulo 1056 ng Kodigo Sibil ay isang karapatang sinusuri nang magkahiwalay ang pinsalang pang-ari-arian at ang pinsalang hindi pang-ari-arian na tumutupad sa mga elementong itinakda ng batas (probiso sa talata 2: dapat walang pagkakamali ang naghahabol), laban sa kabilang panig na may pananagutan sa judicial divorce. Kailangang suportahan ng ebidensiya ang aktong may pananagutan, ang pinsala, ang ugnayang sanhi-at-bunga, at ang hiwalay na elemento ng claim na hindi pang-ari-arian. Hindi natutukoy ang isang tiyak na halaga, ni napapalitan ang ibang claim sa ari-arian, dahil lamang sa may katotohanang may kinalaman sa pagkasira ng pagsasama.
 
 Ang post-divorce spousal support sa ilalim ng Artikulo 1057 ng Kodigo Sibil ay may paunang kondisyong nahulog sa kahirapan sa pamumuhay ang asawang walang pagkakamali dahil sa judicial divorce. Kailangan munang tiyakin kung ito ay diborsiyo sa magkasundong pahintulot o judicial divorce, kung walang pagkakamali ang humihiling, at kung talagang nahulog siya sa kahirapan dahil sa diborsiyo; saka hatulan ang saklaw batay sa kongkretong datos gaya ng pangangailangan at ng kakayahang pinansiyal. Hindi maaaring gawing may-bisang pormula ang katamtamang gastusin sa pagkonsumo ayon sa istatistika ng pamahalaan o ang pagkakamali lamang ng kabilang panig.
 

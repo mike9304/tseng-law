@@ -1,7 +1,7 @@
 ---
 title: "How Is Liability Assessed After an Overtaking Accident in Taiwan?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
-lastmod: "2026-07-26"
+lastmod: "2026-09-10"
 date_display: "September 13, 2025"
 read_time: "4 min read"
 categories:
@@ -17,7 +17,7 @@ Overtaking can appear routine when a vehicle ahead is moving slowly, but it crea
 
 ## What Article 101 requires
 
-[Article 101 of Taiwan's Road Traffic Safety Regulations](https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455) sets out both the circumstances in which overtaking is prohibited and the sequence drivers must follow when overtaking in the same lane is permitted.
+[Article 101 of Taiwan's Road Traffic Safety Regulations](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) sets out both the circumstances in which overtaking is prohibited and the sequence drivers must follow when overtaking in the same lane is permitted.
 
 Article 101 prohibits overtaking on road sections with signs for bends, steep slopes, narrow bridges, tunnels, or intersections, and at railroad crossings or roadwork areas.
 

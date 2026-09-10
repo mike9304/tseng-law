@@ -1,7 +1,7 @@
 ---
 title: "Bagaimana Tanggung Jawab Kecelakaan akibat Mendahului di Taiwan Dinilai?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
-lastmod: "2026-07-26"
+lastmod: "2026-09-10"
 date_display: "13 September 2025"
 read_time: "5 menit membaca"
 categories:
@@ -17,7 +17,7 @@ Ketika kendaraan di depan berjalan lambat, mendahului (超車) dapat terlihat se
 
 ## Syarat mendahului yang ditetapkan Pasal 101 Peraturan Keselamatan Lalu Lintas Jalan Raya (道路交通安全規則)
 
-[Pasal 101 Peraturan Keselamatan Lalu Lintas Jalan Raya Taiwan](https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455) sekaligus mengatur keadaan-keadaan yang melarang tindakan mendahului dan urutan yang harus diikuti apabila mendahului pada jalur yang sama diperbolehkan.
+[Pasal 101 Peraturan Keselamatan Lalu Lintas Jalan Raya Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) sekaligus mengatur keadaan-keadaan yang melarang tindakan mendahului dan urutan yang harus diikuti apabila mendahului pada jalur yang sama diperbolehkan.
 
 Pasal 101 melarang tindakan mendahului pada ruas jalan yang dilengkapi rambu yang menandai tikungan, tanjakan atau turunan curam, jembatan sempit, terowongan, dan persimpangan, serta pada perlintasan sebidang kereta api dan lokasi pekerjaan jalan.
 

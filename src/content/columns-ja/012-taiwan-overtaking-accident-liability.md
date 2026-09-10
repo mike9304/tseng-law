@@ -1,7 +1,7 @@
 ---
 title: "台湾の追い越し事故、責任はどう判断されるか"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
-lastmod: "2026-07-26"
+lastmod: "2026-09-10"
 date_display: "2025年9月13日"
 read_time: "約4分"
 categories:
@@ -17,7 +17,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ## 道路交通安全規則第101条が定める追い越しの要件
 
-[台湾の「道路交通安全規則」第101条](https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455)は、追い越しが禁止される条件と、同一車道で前車を追い越すときに守るべき順序を、あわせて定めています。
+[台湾の「道路交通安全規則」第101条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101)は、追い越しが禁止される条件と、同一車道で前車を追い越すときに守るべき順序を、あわせて定めています。
 
 第101条によれば、曲線、急勾配、狭橋、トンネル、交差点を示す標識が設けられた区間、ならびに鉄道の踏切や道路工事区間では、追い越しは禁止されます。
 

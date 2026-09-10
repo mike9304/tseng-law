@@ -31,13 +31,13 @@ const introParagraphs = [
 const legacyGenericIntro =
   '本稿は、台湾における離婚の経路、戸籍登記、裁判所手続、裁判離婚の事由について、中立的な法律情報として整理するものです。一般的な教育情報であり、個別事案への法的助言ではありません。裁判管轄、準拠法、外国の身分行為や裁判の承認、事実と証拠、既存の合意や裁判所の判断、および現行の公式規則により、結論は異なり得ます。';
 const frozenH2BodySha256 =
-  '34859b4d0da16b141c8179edd193635e8c15b193eff697419aae8ea14d74a99b';
+  'a1221cbbb28c909bcc21fbd8dc7d9d6c7fe598f8452e806d2c957ca49b9b26f1';
 const responsibleSpousePhrase = '有責配偶者';
 const staleResponsibleSpousePhrase = '唯一の有責配偶者';
 const frozenNormalizedSection4Sha256 =
   '9fb0c4e46cb78a3ebfa3003abcb3b4d6c48aa5061cf2c7c4a0f79ca6c5c995af';
 const frozenSection5OnwardSha256 =
-  'b8c8c28df4f4578017332334fa6931119d2267a68f30bc326e65d9a8139c248d';
+  '29d44588ee0f2106aeff5cecf8612392ec706b3e308c624863bc4acc4366dbdf';
 
 const faq1Answer =
   '台湾民法第1050条によれば、協議離婚は書面により行い、双方に離婚の真意があることを確認した2名以上の証人が署名し、戸政機関に離婚登記をして初めて効力が生じます。署名済みの合意書だけで離婚が成立するわけではなく、外国的要素がある場合は、準拠法、文書の認証・翻訳および他国・地域での届出も別途確認する必要があります。';
@@ -127,11 +127,11 @@ ${disclaimer}
 
 ${author}`;
 
-const frozenVisibleJapaneseCount = 12_231;
-const frozenVisibleKanaCount = 5_417;
+const frozenVisibleJapaneseCount = 12_248;
+const frozenVisibleKanaCount = 5_423;
 const frozenCalculatedMinutes = 25;
 const frozenSourceSha256 =
-  '21755d96ab6b7bd186d7342b4c44bbc7c6de14b6e3fc72cdeefac50fd9b7ed02';
+  'f74952894f069913428069632d3ef18b13f6080488e3a4f58339a5c241c56d98';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -169,7 +169,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-25',
+      lastmod: '2026-09-10',
       date_display: '2025年9月13日',
       read_time: '約25分',
       categories: ['台湾法律情報'],
@@ -180,7 +180,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-25',
+      date: '2026-09-10',
       dateDisplay: '2025年9月13日',
       readTime: '約25分',
       category: 'legal',
@@ -585,7 +585,7 @@ describe('Japanese family column 007 — Taiwan divorce procedure Q&A', () => {
     const section = sectionBody(parsed.content, headings[6]);
     const requiredPhrases = [
       faq5Answer,
-      '**民法第1056条**の損害賠償は、裁判離婚について責任を負う相手方に対する財産上の損害と、法定要件を満たす非財産上の損害とを区別して検討する権利です。',
+      '**民法第1056条**の損害賠償は、裁判離婚について責任を負う相手方に対する財産上の損害と、法定要件（同条第2項但書：請求者に過失がないこと）を満たす非財産上の損害とを区別して検討する権利です。',
       '**民法第1057条**は、無過失の配偶者が裁判離婚により生活困難となる場合の離婚後の扶養を規律します。',
       '**民法第1116条の2**は、離婚後も父母が未成年の子に対して扶養義務を負い続けることを明らかにします。',
       '子の養育費は、第1057条の離婚後扶養とは別の義務です。',

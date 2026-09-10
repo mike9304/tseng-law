@@ -83,15 +83,15 @@ const approvedQ20EngagementWarningSentence =
   '要注意那些誇大案情、主張不要和解而要透過民事、刑事程序打到底，只是為了爭取委任而這樣主張的律師。';
 const staleQ20EngagementWarningSentence =
   '要注意那些誇大案情、主張不要和解而要透過民事刑事打到底、只為了接案而接案的律師。';
-const immutablePrefixBytes = 7_327;
+const immutablePrefixBytes = 7_390;
 const immutablePrefixSha256 =
-  '197f63e765b499260bf6fff7f4335903765068f37bbe754bc25b40d23410b129';
-const immutableQ1ToQ10PrefixBytes = 12_443;
+  'ae7a50d944479d356e3647f0d7f65e52fc87e96a1d49948114659da7d38bde1a';
+const immutableQ1ToQ10PrefixBytes = 12_506;
 const immutableQ1ToQ10PrefixSha256 =
-  'd192ef7c7264954fc3fc2e7595f01608f196fe4d4dcde39c0761885d18c44c9b';
-const immutableQ16TailBytes = 3_395;
+  '4e626cc70ba67236f1609cfe2208865ffeed280d0f2dd8d892702cea8dfc325b';
+const immutableQ16TailBytes = 3_482;
 const immutableQ16TailSha256 =
-  'f78ed12fa5cefb68d72a951b46fcceff97f11032ab7bae67100e386307db12ad';
+  '0580c35452a7bc5b60667cdcea79d09c5edb62309e7114b9696979a0ac75b5f3';
 const relatedReadingFooter = `> 延伸閱讀：
 > - [台灣訴訟律師指南](/zh-hant/taiwan-litigation-lawyer)
 > - [可用韓語溝通的台灣律師](/zh-hant/korean-lawyer-in-taiwan)
@@ -406,7 +406,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-26',
+      lastmod: '2026-09-10',
       date_display: '2025年9月13日',
       read_time: '13分鐘閱讀',
       categories: ['台灣法律資訊'],

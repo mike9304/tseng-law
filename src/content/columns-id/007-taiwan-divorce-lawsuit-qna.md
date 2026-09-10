@@ -1,7 +1,7 @@
 ---
 title: "Q&A Prosedur Perceraian di Taiwan: Mediasi, Litigasi, Pembagian Harta, dan Anak"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
-lastmod: "2026-07-25"
+lastmod: "2026-09-10"
 date_display: "13 September 2025"
 read_time: "18 menit membaca"
 categories:
@@ -111,7 +111,7 @@ Hak menuntut ini hapus apabila tidak dilaksanakan dalam 2 tahun sejak diketahui 
 
 Bukan hak yang sama. Hak menuntut pembagian selisih sisa harta menurut Pasal 1030-1 Kitab Undang-Undang Hukum Perdata Taiwan, ganti rugi karena cerai melalui putusan pengadilan menurut Pasal 1056, nafkah pasangan setelah cerai bagi pasangan yang tidak bersalah menurut Pasal 1057, dan nafkah anak bagi anak di bawah umur memiliki syarat lahirnya hak, cara perhitungan, dan jangka waktu yang berbeda-beda. Terhadap hak menuntut pembagian selisih sisa harta berlaku jangka waktu 2 tahun sejak diketahuinya selisih itu dan 5 tahun sejak berakhirnya rezim harta menurut undang-undang, tetapi jangka waktu tersebut tidak boleh dipindahkan begitu saja kepada tuntutan yang lain.
 
-Ganti rugi menurut Pasal 1056 Kitab Undang-Undang Hukum Perdata Taiwan adalah hak yang dikaji dengan membedakan kerugian atas harta dan kerugian bukan atas harta yang memenuhi syarat undang-undang, terhadap pihak lawan yang bersalah dalam cerai melalui putusan pengadilan. Perbuatan yang menimbulkan tanggung jawab, kerugian, hubungan sebab akibat, serta syarat tersendiri bagi tuntutan atas kerugian bukan harta harus didukung dengan bukti. Hanya karena terdapat fakta yang berkaitan dengan keretakan perkawinan, jumlah tertentu tidak menjadi pasti, dan tuntutan harta lainnya juga tidak lantas berdiri sebagai penggantinya.
+Ganti rugi menurut Pasal 1056 Kitab Undang-Undang Hukum Perdata Taiwan adalah hak yang dikaji dengan membedakan kerugian atas harta dan kerugian bukan atas harta yang memenuhi syarat undang-undang (pengecualian pada ayat 2: pihak yang menuntut harus tidak bersalah), terhadap pihak lawan yang bersalah dalam cerai melalui putusan pengadilan. Perbuatan yang menimbulkan tanggung jawab, kerugian, hubungan sebab akibat, serta syarat tersendiri bagi tuntutan atas kerugian bukan harta harus didukung dengan bukti. Hanya karena terdapat fakta yang berkaitan dengan keretakan perkawinan, jumlah tertentu tidak menjadi pasti, dan tuntutan harta lainnya juga tidak lantas berdiri sebagai penggantinya.
 
 Nafkah pasangan setelah cerai menurut Pasal 1057 Kitab Undang-Undang Hukum Perdata Taiwan mensyaratkan bahwa pasangan yang tidak bersalah jatuh dalam kesulitan hidup karena cerai melalui putusan pengadilan. Harus dipastikan lebih dahulu apakah perceraiannya melalui putusan pengadilan atau atas kesepakatan bersama, apakah pihak yang menuntut tidak bersalah, dan apakah ia benar-benar jatuh dalam kesulitan karena perceraian itu, lalu ruang lingkupnya dinilai berdasarkan data yang konkret seperti kebutuhan dan kemampuan ekonomi. Rata-rata pengeluaran konsumsi menurut statistik pemerintah, atau kesalahan pihak lawan semata, tidak dapat dijadikan rumus perhitungan yang mengikat.
 

@@ -1,7 +1,7 @@
 ---
 title: "Q&A sa Aksidente sa Trapiko sa Taiwan: Aksyon sa Pinangyarihan, Kapabayaan, Kasunduang Pag-aayos, Danyos"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-07-26"
+lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
 read_time: "8 minutong pagbabasa"
 categories:
@@ -41,7 +41,7 @@ Itinatakda ng Artikulo 284 ng Kodigo Penal ang negligent injury (過失傷害) p
 
 Ang danyos (damages, 損害賠償) sa sibil ay hindi na maaaring habulin ayon sa Artikulo 197 ng Kodigo Sibil (民法) kapag lumipas ang 2 taon mula nang malaman ang pinsala pati ang taong may obligasyong magbayad, o kapag lumipas ang 10 taon mula nang maganap ang labag sa batas na gawain. Hiwalay na dapat suriin kung anong mga pangyayari ang nakaaapekto sa prescription (消滅時效).
 
-Ang taong napinsala ng isang krimen ay maaaring maghain ng civil action na kalakip ng kasong kriminal (刑事附帶民事訴訟) ayon sa Artikulo 487 ng Kodigo ng Pamamaraang Kriminal. Habang nakabinbin ang paglilitis na kriminal, maihahain ito hanggang sa pagtatapos ng oral argument (言詞辯論終結) sa second instance na itinakda ng Artikulo 488 ng Kodigo ng Pamamaraang Kriminal. Karaniwang naiiwasan nito ang hiwalay na bayad sa korte (court fee, 裁判費), ngunit hindi lahat ng kalalabasan ay nagtatapos nang walang gastos. Halimbawa, kapag ibinasura ang kasong kriminal at inilipat ito sa hukumang sibil sa hiling ng naghahabla, maaaring pasanin ang gastos sa paglilitis ayon sa Artikulo 503 ng Kodigo ng Pamamaraang Kriminal, kaya dapat ding tingnan ang panuntunan sa paglilipat pati sa pamamaraan sa Artikulo 504.
+Ang taong napinsala ng isang krimen ay maaaring maghain ng civil action na kalakip ng kasong kriminal (刑事附帶民事訴訟) ayon sa Artikulo 487 ng Kodigo ng Pamamaraang Kriminal. Habang nakabinbin ang paglilitis na kriminal, maihahain ito hanggang sa pagtatapos ng oral argument (言詞辯論終結) sa second instance na itinakda ng Artikulo 488 ng Kodigo ng Pamamaraang Kriminal, ngunit hindi ito maihahain matapos ang pagtatapos ng oral argument sa first instance at bago maihain ang apela. Karaniwang naiiwasan nito ang hiwalay na bayad sa korte (court fee, 裁判費), ngunit hindi lahat ng kalalabasan ay nagtatapos nang walang gastos. Halimbawa, kapag ibinasura ang kasong kriminal at inilipat ito sa hukumang sibil sa hiling ng naghahabla, maaaring pasanin ang gastos sa paglilitis ayon sa Artikulo 503 ng Kodigo ng Pamamaraang Kriminal, kaya dapat ding tingnan ang panuntunan sa paglilipat pati sa pamamaraan sa Artikulo 504.
 
 Nag-iiba ang pagpipilian depende sa kung naputol at muling nagsimula (時效中斷) ang takbo ng prescription o hindi, sa saklaw ng mga inihahabla, sa ebidensya, sa seguro, gayundin sa hurisdiksyon. Kaya walang iisang pamamaraang pinakamainam sa lahat ng kaso.
 
@@ -239,7 +239,7 @@ Sa kaso ng negligent injury, humigit-kumulang 3 buwang pagkakakulong ang ipinapa
 
 ​
 
-Kapag pinalitan ito ng fine in lieu of imprisonment (易科罰金), kinakalkula ito nang 1 araw kada TWD 1,000, kaya sa 3 buwang hatol ay kailangang bayaran ang 3\*30\*1,000=90,000 na TWD.
+Kapag pinalitan ito ng fine in lieu of imprisonment (易科罰金), itinatakda ng Artikulo 41, talata 1 ng Kodigo Penal ang halaga na TWD 1,000, 2,000, o 3,000 kada araw; sa TWD 1,000 kada araw, ang 3 buwang hatol ay 3\*30\*1,000=90,000 na TWD.
 
 ​
 

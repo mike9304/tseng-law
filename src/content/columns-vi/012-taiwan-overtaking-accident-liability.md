@@ -1,7 +1,7 @@
 ---
 title: "Trách nhiệm trong vụ tai nạn khi vượt xe tại Đài Loan được phán định như thế nào?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
-lastmod: "2026-07-26"
+lastmod: "2026-09-10"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "4 phút đọc"
 categories:
@@ -17,7 +17,7 @@ Khi xe phía trước chạy chậm, việc vượt xe (超車) có thể trông
 
 ## Các yêu cầu về vượt xe theo Điều 101 Quy tắc An toàn Giao thông Đường bộ
 
-[Điều 101 Quy tắc An toàn Giao thông Đường bộ Đài Loan (道路交通安全規則)](https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455) quy định đồng thời những điều kiện cấm vượt xe và trình tự phải tuân theo khi được phép vượt trong cùng một làn đường.
+[Điều 101 Quy tắc An toàn Giao thông Đường bộ Đài Loan (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) quy định đồng thời những điều kiện cấm vượt xe và trình tự phải tuân theo khi được phép vượt trong cùng một làn đường.
 
 Điều 101 cấm vượt xe tại các đoạn đường có biển báo chỉ đường cong, dốc đứng, cầu hẹp, đường hầm hoặc giao lộ, cũng như tại đường ngang giao cắt với đường sắt và đoạn đường đang thi công.
 

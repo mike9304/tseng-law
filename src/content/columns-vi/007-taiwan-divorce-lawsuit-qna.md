@@ -1,7 +1,7 @@
 ---
 title: "Hỏi đáp về thủ tục ly hôn tại Đài Loan: hòa giải, tố tụng, phân chia tài sản và con cái"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
-lastmod: "2026-07-25"
+lastmod: "2026-09-10"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "20 phút đọc"
 categories:
@@ -111,7 +111,7 @@ Quyền yêu cầu này sẽ chấm dứt nếu không được thực hiện tr
 
 Đây không phải cùng một quyền. Quyền yêu cầu phân chia phần chênh lệch tài sản còn lại theo Điều 1030-1 Bộ luật Dân sự, bồi thường thiệt hại khi ly hôn theo bản án của tòa án theo Điều 1056, khoản cấp dưỡng cho vợ/chồng sau ly hôn (贍養費) dành cho người phối ngẫu không có lỗi theo Điều 1057, và tiền cấp dưỡng nuôi con đối với con chưa thành niên có điều kiện phát sinh, cách tính và thời hạn khác nhau. Quyền yêu cầu phân chia phần chênh lệch tài sản còn lại chịu thời hạn hai năm kể từ ngày biết có phần chênh lệch và năm năm kể từ khi chế độ tài sản pháp định (法定財產制) chấm dứt, nhưng không được đem thời hạn đó áp dụng nguyên xi cho các yêu cầu khác.
 
-Bồi thường thiệt hại theo Điều 1056 Bộ luật Dân sự là quyền được xem xét trong vụ ly hôn theo bản án của tòa án, đối với bên kia là người có lỗi, bằng cách phân biệt thiệt hại về tài sản với thiệt hại phi tài sản đáp ứng điều kiện luật định. Quý vị phải dùng chứng cứ để chứng minh hành vi có lỗi, thiệt hại, quan hệ nhân quả và các điều kiện riêng của yêu cầu bồi thường phi tài sản. Chỉ vì có tình tiết liên quan đến việc đổ vỡ hôn nhân thì không vì thế mà một số tiền nhất định được ấn định, hay một yêu cầu tài sản khác thành lập để thay thế.
+Bồi thường thiệt hại theo Điều 1056 Bộ luật Dân sự là quyền được xem xét trong vụ ly hôn theo bản án của tòa án, đối với bên kia là người có lỗi, bằng cách phân biệt thiệt hại về tài sản với thiệt hại phi tài sản đáp ứng điều kiện luật định (điểm loại trừ tại khoản 2: bên yêu cầu phải không có lỗi). Quý vị phải dùng chứng cứ để chứng minh hành vi có lỗi, thiệt hại, quan hệ nhân quả và các điều kiện riêng của yêu cầu bồi thường phi tài sản. Chỉ vì có tình tiết liên quan đến việc đổ vỡ hôn nhân thì không vì thế mà một số tiền nhất định được ấn định, hay một yêu cầu tài sản khác thành lập để thay thế.
 
 Khoản cấp dưỡng cho vợ/chồng sau ly hôn theo Điều 1057 Bộ luật Dân sự lấy tiền đề là việc ly hôn theo bản án của tòa án khiến người phối ngẫu không có lỗi lâm vào cảnh sống túng quẫn. Trước hết phải xác nhận đó là ly hôn thuận tình hay ly hôn theo bản án của tòa án, người yêu cầu có lỗi hay không, và người đó có thực sự lâm vào cảnh túng quẫn vì việc ly hôn hay không; sau đó mới phán định phạm vi bằng tài liệu cụ thể về nhu cầu và khả năng tài chính. Không thể lấy mức chi tiêu bình quân trong thống kê của chính phủ hay lỗi của bên kia làm công thức tính có giá trị ràng buộc.
 

@@ -1,7 +1,7 @@
 ---
 title: "Q&A Kecelakaan Lalu Lintas di Taiwan: Tindakan di Lokasi, Kelalaian, Perdamaian, dan Ganti Rugi"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-07-26"
+lastmod: "2026-09-10"
 date_display: "13 September 2025"
 read_time: "8 menit membaca"
 categories:
@@ -41,7 +41,7 @@ Pasal 284 Kitab Undang-Undang Hukum Pidana mengatur perbuatan melukai karena kel
 
 Untuk ganti rugi perdata (損害賠償), menurut Pasal 197 Kitab Undang-Undang Hukum Perdata Taiwan (民法) tuntutan tidak dapat lagi diajukan apabila telah lewat 2 tahun sejak hari diketahuinya kerugian dan pihak yang wajib mengganti, atau 10 tahun sejak hari terjadinya perbuatan melawan hukum. Fakta mana yang berpengaruh terhadap daluwarsa (消滅時效) harus dikaji secara tersendiri.
 
-Orang yang dirugikan oleh suatu tindak pidana dapat mengajukan gugatan perdata yang digabung dalam perkara pidana (刑事附帶民事訴訟) berdasarkan Pasal 487 Kitab Undang-Undang Hukum Acara Pidana. Selama pemeriksaan perkara pidana masih berlangsung, gugatan itu dapat diajukan paling lambat sebelum penutupan persidangan lisan (言詞辯論終結) tingkat banding sebagaimana ditentukan Pasal 488 Kitab Undang-Undang Hukum Acara Pidana. Pada umumnya cara ini dapat menghindarkan pembayaran biaya perkara (裁判費) tersendiri, tetapi tidak semua hasilnya berakhir tanpa biaya. Misalnya, apabila perkara pidana ditolak dan atas permohonan penggugat perkara dilimpahkan ke pengadilan perdata, berdasarkan Pasal 503 Kitab Undang-Undang Hukum Acara Pidana biaya perkara dapat dibebankan kepada Anda, dan ketentuan mengenai pelimpahan serta prosedur dalam Pasal 504 juga perlu diperiksa bersamaan.
+Orang yang dirugikan oleh suatu tindak pidana dapat mengajukan gugatan perdata yang digabung dalam perkara pidana (刑事附帶民事訴訟) berdasarkan Pasal 487 Kitab Undang-Undang Hukum Acara Pidana. Selama pemeriksaan perkara pidana masih berlangsung, gugatan itu dapat diajukan paling lambat sebelum penutupan persidangan lisan (言詞辯論終結) tingkat banding sebagaimana ditentukan Pasal 488 Kitab Undang-Undang Hukum Acara Pidana, tetapi tidak dapat diajukan setelah penutupan persidangan lisan tingkat pertama dan sebelum banding diajukan. Pada umumnya cara ini dapat menghindarkan pembayaran biaya perkara (裁判費) tersendiri, tetapi tidak semua hasilnya berakhir tanpa biaya. Misalnya, apabila perkara pidana ditolak dan atas permohonan penggugat perkara dilimpahkan ke pengadilan perdata, berdasarkan Pasal 503 Kitab Undang-Undang Hukum Acara Pidana biaya perkara dapat dibebankan kepada Anda, dan ketentuan mengenai pelimpahan serta prosedur dalam Pasal 504 juga perlu diperiksa bersamaan.
 
 Pilihan yang tepat berbeda-beda menurut ada tidaknya terputusnya daluwarsa (時效中斷), lingkup pihak tergugat, bukti, asuransi, dan kewenangan mengadili. Karena itu tidak ada satu prosedur yang secara seragam paling baik untuk semua perkara.
 
@@ -239,7 +239,7 @@ Dalam hal melukai karena kelalaian, saat ini pengadilan pada umumnya menjatuhkan
 
 ​
 
-Apabila pidana itu dialihkan menjadi uang pengganti pidana penjara (易科罰金), perhitungannya adalah TWD 1.000 untuk 1 hari, sehingga untuk pidana 3 bulan harus dibayar 3 × 30 × TWD 1.000 = TWD 90.000.
+Apabila pidana itu dialihkan menjadi uang pengganti pidana penjara (易科罰金), Pasal 41 ayat 1 Kitab Undang-Undang Hukum Pidana menetapkan konversi TWD 1.000, 2.000, atau 3.000 untuk 1 hari; dengan perhitungan TWD 1.000 per hari, pidana 3 bulan menjadi 3 × 30 × TWD 1.000 = TWD 90.000.
 
 ​
 

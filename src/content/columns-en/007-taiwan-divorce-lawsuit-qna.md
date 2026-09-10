@@ -1,7 +1,7 @@
 ---
 title: "Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
-lastmod: "2026-07-25"
+lastmod: "2026-09-10"
 date_display: "September 13, 2025"
 read_time: "30 min read"
 categories:
@@ -193,7 +193,7 @@ No. A claim for distribution of the residual-property difference under Civil Cod
 
 ### Article 1056, Article 1057, and child support
 
-**Article 1056** provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met. The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.
+**Article 1056** provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met (paragraph 2 proviso: the claimant must be without fault). The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.
 
 **Article 1057** concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce. The analysis must first confirm that the divorce was judicial rather than by mutual consent, that the claimant was without fault, and that the divorce actually caused the financial hardship. The scope of support must then be assessed from concrete evidence, including the claimant’s needs and financial resources. It is not residual-property distribution, child support, or a fixed penalty attached to every finding of fault.
 

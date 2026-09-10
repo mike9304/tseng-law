@@ -1,7 +1,7 @@
 ---
 title: "Paano Hinuhusgahan ang Pananagutan sa Aksidente sa Paglampas (Overtaking) sa Taiwan?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
-lastmod: "2026-07-26"
+lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
 read_time: "4 minutong pagbabasa"
 categories:
@@ -17,7 +17,7 @@ Kapag mabagal ang takbo ng sasakyan sa unahan ay maaaring mukhang pangkaraniwang
 
 ## Ang mga kinakailangan sa paglampas ayon sa Artikulo 101 ng Alituntunin sa Kaligtasan ng Trapiko sa Kalsada (道路交通安全規則)
 
-Ang [Artikulo 101 ng Alituntunin sa Kaligtasan ng Trapiko sa Kalsada ng Taiwan](https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455) ay magkasabay na nagtatakda ng mga kalagayang ipinagbabawal ang paglampas, gayundin ng pagkakasunod-sunod na dapat sundin kapag pinahihintulutan ang paglampas sa iisang lane.
+Ang [Artikulo 101 ng Alituntunin sa Kaligtasan ng Trapiko sa Kalsada ng Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) ay magkasabay na nagtatakda ng mga kalagayang ipinagbabawal ang paglampas, gayundin ng pagkakasunod-sunod na dapat sundin kapag pinahihintulutan ang paglampas sa iisang lane.
 
 Ipinagbabawal ng Artikulo 101 ang paglampas sa mga bahagi ng kalsadang may karatulang nagbababala ng liko (彎道), matarik na dalisdis (陡坡), makipot na tulay (狹橋), tunel (隧道) o interseksyon (交岔路口), gayundin sa mga tawiran ng riles (鐵路平交道) at sa mga lugar na may isinasagawang konstruksyon sa kalsada (道路施工地段).
 

@@ -19,7 +19,7 @@ const title = '台湾の追い越し事故、責任はどう判断されるか';
 const sourceUrl =
   'https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability';
 const officialUrl =
-  'https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455';
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101';
 const supplementaryUrl = 'https://gonews.com.tw/car/daily/21934/';
 const featuredImage =
   '../images/012-taiwan-overtaking-accident-liability/featured-01.jpg';
@@ -57,7 +57,7 @@ const EXPECTED_VISIBLE_JAPANESE = 1_863;
 const EXPECTED_VISIBLE_KANA = 948;
 const EXPECTED_READ_MINUTES = 4;
 const EXPECTED_SOURCE_SHA256 =
-  '570b43101fa5d00caf3ba01b7cd67e2aad0aed66c856afdf3fe0b97a6fe9f3e0';
+  '77a7edfc505385b2c4b0ba6ba191ae171b2f59fe260526d61cd51a3aca842c5c';
 
 const article101Groups = [
   '曲線、急勾配、狭橋、トンネル、交差点を示す標識が設けられた区間、ならびに鉄道の踏切や道路工事区間では、追い越しは禁止されます。',
@@ -128,7 +128,7 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-26',
+      lastmod: '2026-09-10',
       date_display: '2025年9月13日',
       read_time: `約${EXPECTED_READ_MINUTES}分`,
       categories: ['台湾法律情報'],
@@ -256,7 +256,7 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-26',
+      date: '2026-09-10',
       dateDisplay: '2025年9月13日',
       readTime: `約${EXPECTED_READ_MINUTES}分`,
       category: 'legal',

@@ -1,7 +1,7 @@
 ---
 title: "台灣超車事故的責任如何判斷？"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
-lastmod: "2026-07-26"
+lastmod: "2026-09-10"
 date_display: "2025年9月13日"
 read_time: "3分鐘閱讀"
 categories:
@@ -17,7 +17,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ## 道路交通安全規則第101條的超車要件
 
-[臺灣《道路交通安全規則》第101條](https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455)同時規定超車禁止條件，以及在同一車道超車時應遵守的順序。
+[臺灣《道路交通安全規則》第101條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101)同時規定超車禁止條件，以及在同一車道超車時應遵守的順序。
 
 第101條規定，行經設有彎道、陡坡、狹橋、隧道、交岔路口標誌之路段，或鐵路平交道、道路施工地段，不得超車。
 

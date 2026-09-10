@@ -18,7 +18,7 @@ const title = '대만 추월 사고의 책임은 어떻게 판단하나요?';
 const sourceUrl =
   'https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability';
 const officialUrl =
-  'https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455';
+  'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101';
 const supplementaryUrl = 'https://gonews.com.tw/car/daily/21934/';
 const featuredImage =
   '../images/012-taiwan-overtaking-accident-liability/featured-01.jpg';
@@ -52,7 +52,7 @@ const internalLinks = [
 const disclaimer =
   '이 글은 대만의 추월 규정과 사고 책임 판단에 관한 일반적인 법률정보이며, 특정 사건에 대한 법률자문이나 결과 보장이 아닙니다. 실제 책임은 사고 장소, 차량 움직임, 속도, 신호, 증거, 감정 및 최신 법령에 따라 달라질 수 있으므로 구체적인 사건은 관련 자료를 바탕으로 개별 검토해야 합니다.';
 
-const EXPECTED_VISIBLE_EOJEOL = 586;
+const EXPECTED_VISIBLE_EOJEOL = 589;
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -90,7 +90,7 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-26',
+      lastmod: '2026-09-10',
       date_display: '2025년 9월 13일',
       read_time: '4분 분량',
       categories: ['대만 법률정보'],
@@ -135,7 +135,7 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
     expect(post?.content).toContain(`(${officialUrl})`);
 
     const article101Rules = [
-      '제101조는 굽은 도로, 급경사, 좁은 다리, 터널, 교차로를 알리는 표지가 있는 구간과 철도 건널목, 공사장에서는 추월을 금지합니다.',
+      '제101조는 굽은 도로, 급경사, 좁은 다리, 터널 또는 교차로를 나타내는 표지가 설치된 구간, 철도 건널목, 도로 공사 구간에서는 추월을 금지합니다.',
       '또한 학교나 병원 표지가 있는 장소나 구간, 그 밖의 추월 금지 표지 또는 표시가 있는 곳, 마주 오는 차량이 접근하는 경우, 앞쪽에 두 대 이상의 차량이 연속해 달리고 있는 경우에도 추월할 수 없습니다.',
       '같은 차로에서 앞 차량을 앞지르려면 뒤 차량 운전자는 먼저 경적을 짧게 두 번 울리거나 전조등을 한 번 깜빡여야 합니다.',
       '앞 차량이 양보하도록 강요하기 위해 경적이나 전조등을 반복적으로 사용해서는 안 됩니다.',
@@ -216,7 +216,7 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-26',
+      date: '2026-09-10',
       dateDisplay: '2025년 9월 13일',
       readTime: '4분 분량',
       category: 'legal',

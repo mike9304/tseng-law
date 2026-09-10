@@ -1,7 +1,7 @@
 ---
 title: "Mga Eksepsiyon Kung Saan Makakakuha pa rin ng Separation Pay (資遣費) ang Empleyadong Kusang Nagbitiw"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
 read_time: "2 minutong pagbabasa"
 categories:
@@ -19,7 +19,7 @@ Gaya ng nabanggit ko na noon, hindi madali para sa isang empleyado sa Taiwan na 
 
 Lalo na kung kusang-loob na nagbitiw (自請離職) ang empleyado,
 
-hindi siya makakatanggap ng separation pay,
+hindi siya makakatanggap ng separation pay (Artikulo 18 ng Labor Standards Act),
 
 at ito ay naiiba sa Korea.
 
@@ -29,7 +29,7 @@ Ngunit may mga **eksepsiyonal na sitwasyon**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Sa mga sumusunod na natatanging sitwasyon, kailangan pa ring bayaran ng employer ang manggagawa ng separation pay kahit kusang-loob itong nagbitiw — ayon sa Artikulo 14 at Artikulo 18 ng Labor Standards Act (勞動基準法):
+Sa mga sumusunod na natatanging sitwasyon, kailangan pa ring bayaran ng employer ang manggagawa ng separation pay kahit kusang-loob itong nagbitiw — ayon sa Artikulo 14 ng Labor Standards Act, na nag-aaplay ng Artikulo 17 nang mutatis mutandis (勞動基準法):
 
 1. Kung sa pagpasok sa kontrata sa paggawa (labor contract, 勞動契約) ay gumawa ang employer ng hindi totoong paglalahad (虛偽之意思表示), kaya't naniwala nang mali ang manggagawa at may panganib siyang magdusa ng pinsala
 
@@ -65,7 +65,7 @@ kung nais ng manggagawa na wakasan ang kontrata sa paggawa batay sa bilang 1 o b
 
 kailangan niyang wakasan ito sa loob ng **30 araw** mula nang malaman niya ang naturang sitwasyon,
 
-o sa loob ng **30 araw** mula nang malaman niya ang naging pinsala.
+o, sa kaso ng bilang 6, sa loob ng **30 araw** mula nang malaman niya ang naging pinsala.
 
 Kaya't kailangang bantayang mabuti ng manggagawa ang panahon.
 

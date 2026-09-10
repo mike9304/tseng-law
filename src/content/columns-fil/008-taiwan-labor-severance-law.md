@@ -13,7 +13,7 @@ faq:
   - q: "Sa kaso ba ng disciplinary dismissal (懲戒解僱) ay kailangan pa ring magbayad ng separation pay ang kompanya?"
     a: "Hindi. Kapag ang empleyado ay gumawa ng gawaing labag sa batas, lumabag sa mga tuntunin ng kompanya (工作規則), o lumiban nang walang makatwirang dahilan (曠工) nang 3 sunod na araw (Artikulo 12 ng Labor Standards Act 勞動基準法), maaari siyang tanggalin ng kompanya nang walang paunang abiso at hindi kailangang bayaran ng separation pay. Sa kabaligtaran, sa economic dismissal (經濟解僱, Artikulo 11) ay kailangan ang paunang abiso at ang pagbabayad ng separation pay."
   - q: "Paano kinakalkula ang separation pay sa Taiwan?"
-    a: "Sa bawat 1 taon ng natapos na haba ng serbisyo ng empleyado, kailangang magbayad ang employer ng separation pay na katumbas ng 0.5 buwan ng average wage (平均工資), at 6 na buwang sahod ang pinakamataas na hangganan."
+    a: "Sa bawat 1 taon ng natapos na haba ng serbisyo ng empleyado, kailangang magbayad ang employer ng separation pay na katumbas ng 0.5 buwan ng average wage (平均工資), at 6 na buwang sahod ang pinakamataas na hangganan. Ito ang pormula para sa panahon ng paglilingkod na saklaw ng Artikulo 12 ng Labor Pension Act (勞工退休金條例); para sa panahon ng paglilingkod na saklaw ng Artikulo 17 ng Labor Standards Act (勞動基準法), ang separation pay ay isang buwang katamtamang sahod bawat buong taon nang walang takda."
 ---
 
 # Batas Paggawa ng Taiwan: Mahirap Ba Talagang Makakuha ng Separation Pay (資遣費) sa Taiwan??
@@ -62,7 +62,7 @@ Ibubuod ko ito sa inyo sa pamamagitan ng isang simpleng talahanayan.
 
 > Sa Taiwan, sa bawat 1 taon ng natapos na haba ng serbisyo ng empleyado,
 > kailangang magbayad ang employer ng separation pay na katumbas ng 0.5 buwan ng average wage (平均工資).
-> (Hanggang 6 na buwang sahod lamang)
+> (Hanggang 6 na buwang sahod lamang) Ito ang pormula para sa panahon ng paglilingkod na saklaw ng Artikulo 12 ng Labor Pension Act (勞工退休金條例); para sa panahon ng paglilingkod na saklaw ng Artikulo 17 ng Labor Standards Act (勞動基準法), ang separation pay ay isang buwang katamtamang sahod bawat buong taon nang walang takda.
 
 ​
 

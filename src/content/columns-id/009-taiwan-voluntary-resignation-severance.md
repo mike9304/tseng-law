@@ -1,7 +1,7 @@
 ---
 title: "Pengecualian yang Memungkinkan Karyawan Tetap Menerima Pesangon (資遣費) Meski Mengundurkan Diri atas Kemauan Sendiri"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "13 September 2025"
 read_time: "3 menit membaca"
 categories:
@@ -19,7 +19,7 @@ Seperti yang telah saya sampaikan sebelumnya, di Taiwan tidak mudah bagi karyawa
 
 Khususnya apabila karyawan mengundurkan diri atas kemauan sendiri (自請離職),
 
-karyawan tersebut tidak dapat memperoleh pesangon,
+karyawan tersebut tidak dapat memperoleh pesangon (Pasal 18 Undang-Undang Standar Ketenagakerjaan Taiwan),
 
 dan hal ini berbeda dari anggapan umum bahwa pesangon otomatis diterima setiap kali seseorang berhenti bekerja.
 
@@ -29,7 +29,7 @@ Namun terdapat **keadaan-keadaan pengecualian**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Dalam keadaan khusus berikut ini, sekalipun pekerja mengundurkan diri atas kemauan sendiri, pemberi kerja tetap wajib membayar pesangon kepada pekerja tersebut (Pasal 14 dan Pasal 18 Undang-Undang Standar Ketenagakerjaan Taiwan, 勞動基準法第14條、第18條):
+Dalam keadaan khusus berikut ini, sekalipun pekerja mengundurkan diri atas kemauan sendiri, pemberi kerja tetap wajib membayar pesangon kepada pekerja tersebut (Pasal 14 Undang-Undang Standar Ketenagakerjaan Taiwan, yang memberlakukan Pasal 17 secara mutatis mutandis, 勞動基準法第14條):
 
 1. Apabila pemberi kerja, pada saat mengadakan perjanjian kerja (勞動契約), membuat pernyataan kehendak yang tidak benar (虛偽意思表示) sehingga pekerja keliru mempercayainya dan timbul kekhawatiran bahwa pekerja akan menderita kerugian
 
@@ -61,11 +61,11 @@ Dalam keadaan seperti ini, sekalipun pekerja sendiri yang mengakhiri perjanjian 
 
 Namun Undang-Undang Standar Ketenagakerjaan menentukan bahwa
 
-apabila pekerja hendak mengakhiri perjanjian kerja berdasarkan angka 1 dan 6 di atas (misalnya karena hendak mengakhiri perjanjian kerja akibat tidak didaftarkan pada asuransi),
+apabila pekerja hendak mengakhiri perjanjian kerja berdasarkan angka 1 atau angka 6 di atas (misalnya karena hendak mengakhiri perjanjian kerja akibat tidak didaftarkan pada asuransi),
 
 pekerja harus mengakhiri perjanjian kerja dalam waktu **30 hari** sejak hari ia mengetahui keadaan tersebut,
 
-atau dalam waktu **30 hari** sejak hari ia mengetahui akibat kerugian tersebut.
+atau, dalam hal angka 6, dalam waktu **30 hari** sejak hari ia mengetahui akibat kerugian tersebut.
 
 Karena itu pekerja harus mencermati tenggat waktunya dengan baik.
 

@@ -13,7 +13,7 @@ faq:
   - q: "Trong trường hợp sa thải kỷ luật, công ty có phải chi trả trợ cấp thôi việc không?"
     a: "Không. Khi người lao động có hành vi vi phạm pháp luật, vi phạm nội quy lao động (工作規則), hoặc vắng mặt không có lý do chính đáng (曠工) liên tục 3 ngày (Điều 12 Luật Tiêu chuẩn Lao động (勞動基準法)), công ty được chấm dứt hợp đồng mà không cần báo trước và không phải chi trả trợ cấp thôi việc. Ngược lại, trường hợp cho thôi việc vì lý do kinh tế (Điều 11) thì phải báo trước và phải chi trả trợ cấp thôi việc."
   - q: "Trợ cấp thôi việc tại Đài Loan được tính như thế nào?"
-    a: "Cứ mỗi một năm thâm niên công tác đầy đủ của người lao động, người sử dụng lao động phải chi trả 0,5 tháng tiền lương bình quân (平均工資) làm trợ cấp thôi việc, tối đa không quá 6 tháng tiền lương."
+    a: "Cứ mỗi một năm thâm niên công tác đầy đủ của người lao động, người sử dụng lao động phải chi trả 0,5 tháng tiền lương bình quân (平均工資) làm trợ cấp thôi việc, tối đa không quá 6 tháng tiền lương. Đây là công thức cho thời gian làm việc thuộc phạm vi điều chỉnh của Điều 12 Điều lệ Quỹ hưu trí lao động (勞工退休金條例); đối với thời gian làm việc thuộc Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法), trợ cấp là một tháng lương bình quân cho mỗi năm làm việc và không có mức trần."
 ---
 
 # Luật lao động Đài Loan: Nhận trợ cấp thôi việc (資遣費) ở Đài Loan thật sự khó đến vậy sao??
@@ -62,7 +62,7 @@ Tôi xin tổng hợp lại bằng một bảng đơn giản như sau.
 
 > Tại Đài Loan, cứ mỗi một năm thâm niên công tác đầy đủ của người lao động,
 > người sử dụng lao động phải chi trả 0,5 tháng tiền lương bình quân (平均工資) làm trợ cấp thôi việc.
-> (Tối đa không quá 6 tháng tiền lương)
+> (Tối đa không quá 6 tháng tiền lương) Đây là công thức cho thời gian làm việc thuộc phạm vi điều chỉnh của Điều 12 Điều lệ Quỹ hưu trí lao động (勞工退休金條例); đối với thời gian làm việc thuộc Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法), trợ cấp là một tháng lương bình quân cho mỗi năm làm việc và không có mức trần.
 
 ​
 

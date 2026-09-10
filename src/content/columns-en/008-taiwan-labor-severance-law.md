@@ -13,7 +13,7 @@ faq:
   - q: "Does the company still have to pay severance in a disciplinary dismissal?"
     a: "No. If the employee commits an unlawful act, violates company rules, or is absent from work without justification for three consecutive days (Labor Standards Act Article 12), the company may dismiss the employee without prior notice and need not pay severance. By contrast, an economic dismissal under Article 11 requires prior notice and payment of severance."
   - q: "How is Taiwan severance pay calculated?"
-    a: "For each full year of service, the employer must pay severance equal to 0.5 months of the employee’s average wages, up to a maximum of six months’ wages."
+    a: "For each full year of service, the employer must pay severance equal to 0.5 months of the employee’s average wages, up to a maximum of six months’ wages. This is the formula for years of service governed by Article 12 of the Labor Pension Act; for years of service governed by Article 17 of the Labor Standards Act, severance is one month of average wages per full year with no cap."
 ---
 
 # Taiwan Labor Law: Is Severance Pay Hard to Get in Taiwan??
@@ -58,7 +58,7 @@ I will summarize this in a simple table.
 
 > In Taiwan, for each full year of an employee’s service,
 > the employer must pay severance equal to 0.5 months of average wages.
-> (Up to a maximum of six months’ wages)
+> (Up to a maximum of six months’ wages) This is the formula for years of service governed by Article 12 of the Labor Pension Act; for years of service governed by Article 17 of the Labor Standards Act, severance is one month of average wages per full year with no cap.
 
 When an employee has both a high salary and substantial length of service,
 

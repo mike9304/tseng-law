@@ -1,7 +1,7 @@
 ---
 title: "Những trường hợp ngoại lệ: người lao động tự xin nghỉ việc vẫn được nhận trợ cấp thôi việc (資遣費)"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "3 phút đọc"
 categories:
@@ -19,7 +19,7 @@ Như tôi đã trình bày trong bài trước, tại Đài Loan việc người
 
 Đặc biệt, trong trường hợp người lao động tự xin nghỉ việc (自請離職),
 
-người lao động không được nhận trợ cấp thôi việc, vì nghĩa vụ chi trả khoản này về nguyên tắc chỉ phát sinh khi công ty chủ động cho người lao động thôi việc,
+người lao động không được nhận trợ cấp thôi việc (Điều 18 Luật Tiêu chuẩn Lao động), vì nghĩa vụ chi trả khoản này về nguyên tắc chỉ phát sinh khi công ty chủ động cho người lao động thôi việc,
 
 và điểm này khác với Hàn Quốc.
 
@@ -29,7 +29,7 @@ Tuy nhiên, vẫn có **những trường hợp ngoại lệ**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Trong những tình huống đặc biệt sau đây, dù người lao động tự xin nghỉ việc, người sử dụng lao động vẫn phải chi trả trợ cấp thôi việc cho người lao động (Điều 14 và Điều 18 Luật Tiêu chuẩn Lao động (勞動基準法)):
+Trong những tình huống đặc biệt sau đây, dù người lao động tự xin nghỉ việc, người sử dụng lao động vẫn phải chi trả trợ cấp thôi việc cho người lao động (Điều 14 Luật Tiêu chuẩn Lao động (勞動基準法), điều này áp dụng tương tự Điều 17):
 
 1. Khi giao kết hợp đồng lao động (勞動契約), người sử dụng lao động biểu thị ý chí không đúng sự thật (虛偽意思表示), khiến người lao động tin nhầm và có nguy cơ phải chịu thiệt hại
 
@@ -65,7 +65,7 @@ nếu người lao động muốn chấm dứt hợp đồng lao động theo kh
 
 thì phải chấm dứt hợp đồng lao động trong vòng **30 ngày** kể từ ngày biết được tình huống đó,
 
-hoặc trong vòng **30 ngày** kể từ ngày biết được hậu quả thiệt hại.
+hoặc, trong trường hợp khoản 6, trong vòng **30 ngày** kể từ ngày biết được hậu quả thiệt hại.
 
 Vì vậy, người lao động phải nắm chắc thời hạn.
 

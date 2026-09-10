@@ -13,7 +13,7 @@ faq:
   - q: "Dalam hal pemecatan karena pelanggaran, apakah perusahaan tetap wajib membayar pesangon?"
     a: "Tidak. Apabila karyawan melakukan perbuatan melawan hukum, melanggar peraturan perusahaan, atau mangkir tanpa alasan sah selama 3 hari berturut-turut (Pasal 12 Undang-Undang Standar Ketenagakerjaan Taiwan, 勞動基準法第12條), perusahaan dapat memutuskan hubungan kerja tanpa pemberitahuan sebelumnya dan tidak wajib membayar pesangon. Sebaliknya, pemutusan hubungan kerja karena alasan ekonomi (Pasal 11) mengharuskan adanya pemberitahuan sebelumnya dan pembayaran pesangon."
   - q: "Bagaimana cara menghitung pesangon di Taiwan?"
-    a: "Setiap kali karyawan menggenapi satu tahun masa kerja (年資), pemberi kerja wajib membayar pesangon sebesar 0,5 bulan upah rata-rata (平均工資), dengan batas maksimum 6 bulan upah."
+    a: "Setiap kali karyawan menggenapi satu tahun masa kerja (年資), pemberi kerja wajib membayar pesangon sebesar 0,5 bulan upah rata-rata (平均工資), dengan batas maksimum 6 bulan upah. Ini adalah rumus untuk masa kerja yang tunduk pada Pasal 12 Peraturan Dana Pensiun Pekerja (勞工退休金條例); untuk masa kerja yang tunduk pada Pasal 17 Undang-Undang Standar Ketenagakerjaan (勞動基準法), pesangon adalah satu bulan upah rata-rata per tahun penuh tanpa batas atas."
 ---
 
 # Hukum Ketenagakerjaan Taiwan: Benarkah Pesangon (資遣費) Sulit Diperoleh di Taiwan??
@@ -62,7 +62,7 @@ Saya akan merangkumnya untuk Anda dalam sebuah tabel sederhana.
 
 > Di Taiwan, setiap kali karyawan menggenapi satu tahun masa kerja (年資),
 > pemberi kerja wajib membayar pesangon sebesar 0,5 bulan upah rata-rata (平均工資).
-> (dengan batas maksimum 6 bulan upah)
+> (dengan batas maksimum 6 bulan upah) Ini adalah rumus untuk masa kerja yang tunduk pada Pasal 12 Peraturan Dana Pensiun Pekerja (勞工退休金條例); untuk masa kerja yang tunduk pada Pasal 17 Undang-Undang Standar Ketenagakerjaan (勞動基準法), pesangon adalah satu bulan upah rata-rata per tahun penuh tanpa batas atas.
 
 ​
 

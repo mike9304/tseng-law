@@ -1,7 +1,7 @@
 ---
 title: "Exceptions Where Employees Can Still Receive Severance After Voluntary Resignation"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "September 13, 2025"
 read_time: "3 min read"
 categories:
@@ -19,7 +19,7 @@ As noted previously, it is generally difficult for employees in Taiwan to receiv
 
 In particular, when employees resign voluntarily,
 
-they are generally not entitled to severance pay,
+they are generally not entitled to severance pay (Article 18 of the Labor Standards Act),
 
 unlike in Korea.
 
@@ -29,7 +29,7 @@ There are, however, **exceptions**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-In the following exceptional circumstances, an employer must pay severance even if an employee resigns voluntarily (Articles 14 and 18 of the Labor Standards Act):
+In the following exceptional circumstances, an employer must pay severance even if an employee resigns voluntarily (Article 14 of the Labor Standards Act, which applies Article 17 mutatis mutandis):
 
 1. Where, when entering into the labor contract, the employer makes a false representation that misleads the employee and creates a risk that the employee will suffer harm
 
@@ -65,7 +65,7 @@ if an employee wishes to terminate the labor contract on either ground 1 or 6 ab
 
 the employee must terminate the labor contract within **30 days** after becoming aware of the circumstances,
 
-or within **30 days** after becoming aware of the resulting harm.
+or, in the case of ground 6, within **30 days** after becoming aware of the resulting harm.
 
 Employees must therefore pay close attention to these deadlines.
 

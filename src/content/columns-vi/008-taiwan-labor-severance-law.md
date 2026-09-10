@@ -1,7 +1,7 @@
 ---
 title: "Luật lao động Đài Loan: Nhận trợ cấp thôi việc (資遣費) ở Đài Loan thật sự khó đến vậy sao??"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2025-09-18"
+lastmod: "2026-09-10"
 date_display: "Ngày 13 tháng 9 năm 2025"
 read_time: "5 phút đọc"
 categories:
@@ -11,7 +11,7 @@ faq:
   - q: "Tại Đài Loan, người lao động tự xin nghỉ việc có được nhận trợ cấp thôi việc (資遣費) không?"
     a: "Không. Tại Đài Loan, khác với Hàn Quốc, nghĩa vụ chi trả trợ cấp thôi việc chỉ phát sinh khi công ty chủ động cho người lao động thôi việc; nếu người lao động tự xin nghỉ việc thì công ty không phải chi trả khoản này."
   - q: "Trong trường hợp sa thải kỷ luật, công ty có phải chi trả trợ cấp thôi việc không?"
-    a: "Không. Khi người lao động có hành vi vi phạm pháp luật, vi phạm nội quy lao động (工作規則), hoặc vắng mặt không có lý do chính đáng (曠工) từ 3 ngày trở lên (Điều 12 Luật Tiêu chuẩn Lao động (勞動基準法)), công ty được chấm dứt hợp đồng mà không cần báo trước và không phải chi trả trợ cấp thôi việc. Ngược lại, trường hợp cho thôi việc vì lý do kinh tế (Điều 11) thì phải báo trước và phải chi trả trợ cấp thôi việc."
+    a: "Không. Khi người lao động có hành vi vi phạm pháp luật, vi phạm nội quy lao động (工作規則), hoặc vắng mặt không có lý do chính đáng (曠工) liên tục 3 ngày (Điều 12 Luật Tiêu chuẩn Lao động (勞動基準法)), công ty được chấm dứt hợp đồng mà không cần báo trước và không phải chi trả trợ cấp thôi việc. Ngược lại, trường hợp cho thôi việc vì lý do kinh tế (Điều 11) thì phải báo trước và phải chi trả trợ cấp thôi việc."
   - q: "Trợ cấp thôi việc tại Đài Loan được tính như thế nào?"
     a: "Cứ mỗi một năm thâm niên công tác đầy đủ của người lao động, người sử dụng lao động phải chi trả 0,5 tháng tiền lương bình quân (平均工資) làm trợ cấp thôi việc, tối đa không quá 6 tháng tiền lương."
 ---
@@ -42,7 +42,7 @@ Tuy nhiên, nếu người lao động có hành vi vi phạm pháp luật,
 
 **vi phạm nội quy lao động,**
 
-**hoặc vắng mặt không có lý do chính đáng (曠工) từ 3 ngày trở lên,**
+**hoặc vắng mặt không có lý do chính đáng (曠工) liên tục 3 ngày,**
 
 công ty có thể sa thải người lao động mà không phải chi trả trợ cấp thôi việc.
 

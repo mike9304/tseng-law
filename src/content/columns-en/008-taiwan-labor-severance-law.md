@@ -1,7 +1,7 @@
 ---
 title: "Taiwan Labor Law: Is Severance Pay Hard to Get in Taiwan??"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2025-09-18"
+lastmod: "2026-09-10"
 date_display: "September 13, 2025"
 read_time: "6 min read"
 categories:
@@ -11,7 +11,7 @@ faq:
   - q: "In Taiwan, does an employee who resigns voluntarily receive severance pay?"
     a: "No. Unlike Korea, Taiwan requires a company to pay severance only when the company dismisses the employee. If the employee resigns voluntarily, the company does not need to pay severance."
   - q: "Does the company still have to pay severance in a disciplinary dismissal?"
-    a: "No. If the employee commits an unlawful act, violates company rules, or is absent from work without justification for three or more days (Labor Standards Act Article 12), the company may dismiss the employee without prior notice and need not pay severance. By contrast, an economic dismissal under Article 11 requires prior notice and payment of severance."
+    a: "No. If the employee commits an unlawful act, violates company rules, or is absent from work without justification for three consecutive days (Labor Standards Act Article 12), the company may dismiss the employee without prior notice and need not pay severance. By contrast, an economic dismissal under Article 11 requires prior notice and payment of severance."
   - q: "How is Taiwan severance pay calculated?"
     a: "For each full year of service, the employer must pay severance equal to 0.5 months of the employee’s average wages, up to a maximum of six months’ wages."
 ---
@@ -40,7 +40,7 @@ However, if the employee engages in unlawful conduct,
 
 **violates company rules,**
 
-**or is absent from work without justification for three or more days,**
+**or is absent from work without justification for three consecutive days,**
 
 the company may dismiss the employee without paying severance.
 
@@ -54,7 +54,7 @@ I will summarize this in a simple table.
 | Prior notice | Required | Not required | Required |
 | Difficulty | Easy | Difficult | Easy |
 | Whether the company must pay severance (資遣費) | Required | Not required | Not required |
-|  | Taiwan Labor Standards Act Article 11 (勞動基準法第11條): Except in one of the following circumstances, an employer may not terminate a labor contract even after giving the worker prior notice.  1. The employer’s business is suspended or transferred  2. The employer’s business incurs operating losses or undergoes a business contraction  3. Force majeure necessitates suspending business for one month or more  4. A change in the nature of the business makes a workforce reduction necessary, and the terminated employee cannot be reassigned to another suitable position  5. A particular worker is unable to perform the work required for the position satisfactorily | Taiwan Labor Standards Act Article 12 (勞動基準法第12條): An employer may dismiss a worker without prior notice in any of the following circumstances.  1. The worker misrepresents facts when entering into the labor contract, thereby misleading the employer and creating a risk of harm to the business  2. The worker commits violence against or seriously insults the employer, a member of the employer’s family, the employer’s agent, or another coworker  3. The worker receives a final sentence of imprisonment or a more severe penalty and is neither granted a suspended sentence nor permitted to commute the sentence to a fine  4. The worker seriously violates the labor contract or work rules  5. The worker intentionally damages or consumes machinery, tools, raw materials, products, or other property owned by the employer, or intentionally discloses the employer’s technical or business secrets, thereby causing damage to the employer  6. The worker is absent without justification for three consecutive days or for six or more days in one month |  |
+|  | Taiwan Labor Standards Act Article 11 (勞動基準法第11條): Except in one of the following circumstances, an employer may not terminate a labor contract even after giving the worker prior notice.  1. The employer’s business is suspended or transferred  2. The employer’s business incurs operating losses or undergoes a business contraction  3. Force majeure necessitates suspending business for one month or more  4. A change in the nature of the business makes a workforce reduction necessary, and the terminated employee cannot be reassigned to another suitable position  5. A particular worker is unable to perform the work required for the position satisfactorily | Taiwan Labor Standards Act Article 12 (勞動基準法第12條): An employer may dismiss a worker without prior notice in any of the following circumstances.  1. The worker misrepresents facts when entering into the labor contract, thereby misleading the employer and creating a risk of harm to the business  2. The worker commits violence against or seriously insults the employer, a member of the employer’s family, the employer’s agent, or another coworker  3. The worker receives a final sentence of fixed-term imprisonment or a more severe penalty and is neither granted a suspended sentence nor permitted to commute the sentence to a fine  4. The worker seriously violates the labor contract or work rules  5. The worker intentionally damages or consumes machinery, tools, raw materials, products, or other property owned by the employer, or intentionally discloses the employer’s technical or business secrets, thereby causing damage to the employer  6. The worker is absent without justification for three consecutive days or for six or more days in one month |  |
 
 > In Taiwan, for each full year of an employee’s service,
 > the employer must pay severance equal to 0.5 months of average wages.

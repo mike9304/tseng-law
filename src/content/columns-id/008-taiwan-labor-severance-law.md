@@ -1,7 +1,7 @@
 ---
 title: "Hukum Ketenagakerjaan Taiwan: Benarkah Pesangon (資遣費) Sulit Diperoleh di Taiwan??"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
-lastmod: "2025-09-18"
+lastmod: "2026-09-10"
 date_display: "13 September 2025"
 read_time: "6 menit membaca"
 categories:
@@ -11,7 +11,7 @@ faq:
   - q: "Apakah karyawan yang mengundurkan diri atas kemauan sendiri di Taiwan tetap menerima pesangon?"
     a: "Tidak. Di Taiwan, kewajiban membayar pesangon (資遣費) baru timbul apabila perusahaannya sendiri yang memutuskan hubungan kerja dengan karyawan; apabila karyawan mengundurkan diri atas kemauan sendiri, perusahaan tidak wajib membayar pesangon."
   - q: "Dalam hal pemecatan karena pelanggaran, apakah perusahaan tetap wajib membayar pesangon?"
-    a: "Tidak. Apabila karyawan melakukan perbuatan melawan hukum, melanggar peraturan perusahaan, atau mangkir tanpa alasan sah selama 3 hari atau lebih (Pasal 12 Undang-Undang Standar Ketenagakerjaan Taiwan, 勞動基準法第12條), perusahaan dapat memutuskan hubungan kerja tanpa pemberitahuan sebelumnya dan tidak wajib membayar pesangon. Sebaliknya, pemutusan hubungan kerja karena alasan ekonomi (Pasal 11) mengharuskan adanya pemberitahuan sebelumnya dan pembayaran pesangon."
+    a: "Tidak. Apabila karyawan melakukan perbuatan melawan hukum, melanggar peraturan perusahaan, atau mangkir tanpa alasan sah selama 3 hari berturut-turut (Pasal 12 Undang-Undang Standar Ketenagakerjaan Taiwan, 勞動基準法第12條), perusahaan dapat memutuskan hubungan kerja tanpa pemberitahuan sebelumnya dan tidak wajib membayar pesangon. Sebaliknya, pemutusan hubungan kerja karena alasan ekonomi (Pasal 11) mengharuskan adanya pemberitahuan sebelumnya dan pembayaran pesangon."
   - q: "Bagaimana cara menghitung pesangon di Taiwan?"
     a: "Setiap kali karyawan menggenapi satu tahun masa kerja (年資), pemberi kerja wajib membayar pesangon sebesar 0,5 bulan upah rata-rata (平均工資), dengan batas maksimum 6 bulan upah."
 ---
@@ -42,7 +42,7 @@ Namun apabila karyawan melakukan perbuatan melawan hukum,
 
 **melanggar peraturan perusahaan (工作規則),**
 
-**atau mangkir tanpa alasan sah (曠工) selama 3 hari atau lebih,**
+**atau mangkir tanpa alasan sah (曠工) selama 3 hari berturut-turut,**
 
 perusahaan dapat memberhentikan karyawan tersebut tanpa membayar pesangon.
 

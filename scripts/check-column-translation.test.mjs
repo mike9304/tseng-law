@@ -8,6 +8,7 @@ import { test } from 'node:test';
 
 import {
   CHECK_IDS,
+  findLangidHits,
   FORBIDDEN_PHRASES,
   checkPair,
   main,
@@ -726,6 +727,7 @@ test('checker includes nationality alongside the existing 9+1 ids', () => {
     'hanzi',
     'numbers',
     'nationality',
+    'langid',
   ]);
 });
 
@@ -846,4 +848,34 @@ test('CLI --check nationality runs that gate and prints it in the table', async 
   } finally {
     await rm(dir, { recursive: true, force: true });
   }
+});
+
+// langid — 로케일 블록에 다른 대상 언어의 고유 문자가 섞이는 것을 잡는다.
+// 기존 hangul은 한글만, english는 영어 문장만 봤고 동남아 언어 간 혼입은
+// 어떤 항목도 보지 않는 구조적 공백이었다.
+test('langid: 다른 대상 언어 문자 혼입을 FAIL로 잡는다', () => {
+  const hits = findLangidHits('Công ty ระเบียบ tại Đài Loan', 1, 'vi');
+  assert.equal(hits.length, 1);
+  assert.equal(hits[0].script, 'thai');
+});
+
+test('langid: 한자 병기는 혼입으로 보지 않는다', () => {
+  assert.deepEqual(findLangidHits('trợ cấp thôi việc (資遣費) theo luật', 1, 'vi'), []);
+});
+
+test('langid: URL 안의 문자는 판정에서 제외한다', () => {
+  assert.deepEqual(
+    findLangidHits('อ้างอิง https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040001', 1, 'th'),
+    [],
+  );
+});
+
+test('langid: 자기 언어 문자는 잡지 않는다', () => {
+  assert.deepEqual(findLangidHits('พระราชบัญญัติมาตรฐานแรงงาน', 1, 'th'), []);
+});
+
+test('langid: 베트남어 고유 결합 문자가 다른 라틴 로케일에 오면 잡는다', () => {
+  const hits = findLangidHits('Pesangon diberikan berdasarkan thời hạn kerja', 1, 'id');
+  assert.equal(hits.length, 1);
+  assert.equal(hits[0].script, 'vi');
 });

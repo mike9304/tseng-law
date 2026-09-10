@@ -113,6 +113,7 @@ export const CHECK_IDS = [
   'hanzi',
   'numbers',
   'nationality',
+  'langid',
 ];
 
 export const DEFAULT_ADAPT_DIR = '/Users/son7/Projects/tseng-law-sea-state/columns/work';
@@ -1241,6 +1242,60 @@ export function checkForbidden(target, lang) {
   );
 }
 
+/**
+ * langid — 로케일 블록에 다른 대상 언어의 고유 문자가 섞여 들어간 것을 잡는다.
+ *
+ * 구조적 공백이었다. 기존 `hangul`은 한글만, `english`는 영어 문장만 본다.
+ * 한 로케일 파일에 다른 동남아 언어 문자열이 들어가도 어떤 항목도 실패하지
+ * 않았다. 유니코드 스크립트 기준으로만 판정하며, 한자 병기는 이 사이트의
+ * 관례이므로 제외한다(별도 `hanzi` 항목이 담당).
+ *
+ * 라틴 문자를 공유하는 id와 fil은 스크립트로 가를 수 없어 이 항목의 대상이
+ * 아니다. 그쪽은 `english` 항목과 용어집 대조가 맡는다.
+ */
+const LANGID_SCRIPTS = [
+  { id: 'thai', lang: 'th', re: /[\u0E00-\u0E7F]/u, label: '태국 문자' },
+  { id: 'hangul', lang: 'ko', re: /[\uAC00-\uD7A3]/u, label: '한글' },
+  { id: 'kana', lang: 'ja', re: /[\u3040-\u30FF]/u, label: '가나' },
+];
+
+// 베트남어 고유 결합 문자(다른 라틴 로케일에 나타나면 혼입)
+const LANGID_VI_RE = /[\u01A0\u01A1\u01AF\u01B0\u0110\u0111\u1EA0-\u1EF9]/u;
+
+export function findLangidHits(body, startLine, lang) {
+  const hits = [];
+  const lines = body.split('\n');
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i];
+    if (!line.trim()) continue;
+    // 한자 병기 괄호와 URL은 판정에서 제외한다
+    const scrubbed = line
+      .replace(/https?:\/\/\S+/gu, ' ')
+      .replace(/\([^)]*[\u4E00-\u9FFF][^)]*\)/gu, ' ')
+      .replace(/（[^）]*[\u4E00-\u9FFF][^）]*）/gu, ' ');
+    for (const script of LANGID_SCRIPTS) {
+      if (script.lang === lang) continue;
+      const m = scrubbed.match(script.re);
+      if (m) hits.push({ line: startLine + i, script: script.id, label: script.label, text: line });
+    }
+    if (lang !== 'vi' && LANGID_VI_RE.test(scrubbed)) {
+      hits.push({ line: startLine + i, script: 'vi', label: '베트남어 고유 문자', text: line });
+    }
+  }
+  return hits;
+}
+
+export function checkLangid(target, lang) {
+  const hits = findLangidHits(target.body, target.bodyStartLine, lang);
+  if (hits.length === 0) return pass('langid');
+  // 총괄 판정(GOAL-4 P3): 현 코퍼스 68편에 오탐 0이므로 WARN이 아니라 FAIL로 둔다.
+  // 다른 대상 언어의 고유 문자가 들어오는 것은 정상적인 번역 결과가 아니다.
+  return fail(
+    'langid',
+    hits.map((hit) => `L${hit.line} ${hit.label} 혼입: ${hit.text.trim().slice(0, 90)}`),
+  );
+}
+
 export function checkHanzi(target) {
   const count = countHanzi(target.body);
   if (count >= HANZI_MIN) return pass('hanzi', [`han=${count}`]);
@@ -1639,6 +1694,7 @@ export function checkPair({ sourceRaw, targetRaw, sourcePath, targetPath, lang, 
     ['hanzi', () => checkHanzi(target)],
     ['numbers', () => checkNumbers(source, target, lang)],
     ['nationality', () => checkNationality(source, target, lang, adaptLog)],
+    ['langid', () => checkLangid(target, lang)],
   ];
   const results = catalog.filter(([id]) => wanted.has(id)).map(([, run]) => run());
   const failed = results.some((check) => check.status === 'FAIL');

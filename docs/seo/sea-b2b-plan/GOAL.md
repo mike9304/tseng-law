@@ -16,13 +16,13 @@ S1 인텐트 지도(`docs/seo/sea-intent-map-2026-09.md`)는 "대만 내 체류 
 
 ### S7-C 구현 (안내 4언어 ①⑤ 전용 페이지 — 기게재 사실 번역만, 새 법률 주장 0)
 - [x] 2026-09-11 S7-C1 WO-B2B-1 → 커밋 7f585835 (Opus 구현) — 8 URL 200, FAQPage/LegalService(availableLanguage 4 고정), 답변 블록, 관련 안내 내부링크(home·services·pricing·contact), llms.txt, sitemap 8. 게이트: typecheck 0·vitest 184·eslint 0·build 0·evidence/render-C1.txt·마커 0·금액 0
-- [~] S7-C2-R1 WO-B2B-R1(Opus 진행 중 15:4x): ① 마지막 FAQ 질문 원문 일치(8건) ② company-setup 허브에 ① 칼럼 링크 ③ hreflang 8언어 클러스터+x-default=en 상호참조(EN 랜딩↔4로케일) ④ 4로케일 칼럼 FAQPage inLanguage 결함 수정
-- [ ] S7-C3 독립 검토(Grok 4.6 또는 Opus 검토자) → FAIL 시 R2
-- [ ] S7-C4 리베이스·RELEASE-CHECK → 배포 ASK(사용자, U2) + 색인 확대 ASK(U1)
+- [x] 2026-09-11 S7-C2-R1 → 9117c4c5(리베이스 후): 마지막 FAQ 원문 일치 · company-setup 허브 ① 칼럼 8편 링크 · 8언어 hreflang+x-default=en 상호참조 · 칼럼 FAQPage inLanguage 수정 — evidence/render-R1.txt
+- [x] 2026-09-11 S7-C3 독립 검토 Grok 4.6 `reviews/S7-C-REVIEW.md` PASS 0 BLOCK·FIX 6 → R2 852a4e69 반영(전환기 역방향·th/id/fil 교정·debt-collection 준비목록 B2B 정리·출처추적 테스트). NOTE #8 클러스터 유지(총괄 결정, RELEASE-CHECK 참조)
+- [x] 2026-09-11 S7-C4 origin/main f110b2bc 리베이스 · 전체 lint 0·unit(기존 attestation 1건 외 전부)·build 0·렌더 evidence/render-release.txt → `RELEASE-CHECK.md`. **배포·색인 확대는 사용자 결정(U1·U2) 대기**
 
 ### S7-M 측정
 - [x] 2026-09-11 S7-M1 metrics-log "SEA B2B(S7)" 표 + `AI-CITATION-QUESTIONS-B2B-PROPOSAL.md`(①⑤ 10문항 제안) → 7686f4ee
-- [ ] S7-M2 볼트 갱신(`20-Projects/tseng-law/SEO-작업-로그.md` + `AI-MEMORY-INDEX.md`)
+- [x] 2026-09-11 S7-M2 볼트 갱신 — SEO-작업-로그 2026-09-11 절 + AI-MEMORY-INDEX updated/최근결정
 
 ## B. 미결·ASK
 - 배포·외부 발송·유료 광고는 사용자. 재질문 금지 항목(PROMPT §4-9) 준수.
@@ -35,3 +35,4 @@ SEA 6국 28일: 클릭 2·노출 30(SG zh-hant 가이드). 생성형AI 34/0. /vi
 ## D. 세션 로그
 - 2026-09-11 14:40 · Cursor Fable 5.1 · /goal 가동. 워크트리 생성. S7-R1~R3 병렬 발주, WO-B2B-1 작성.
 - 2026-09-11 15:3x · Cursor Fable 5.1 · R1~R4 커밋 c05ec4ea, M1 7686f4ee, C1 7f585835(게이트 전부 통과). WO-B2B-R1 발주.
+- 2026-09-11 16:3x · Cursor Fable 5.1 · C2-R1·C3·R2·C4 완료, RELEASE-CHECK 작성. 남은 것 = 사용자 결정 U1~U11(배포·색인·원장 등) → 배포 후 S6 주간 루프에 B2B 4행 추가(W1 09-16).

@@ -9,6 +9,7 @@ import {
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
+import { taiwanOfficeSeoRecords } from '@/data/office-locations';
 
 type ImageInput =
   | string
@@ -411,6 +412,39 @@ export function buildWebsiteJsonLd(
   };
 }
 
+/**
+ * The four Taiwan offices as `Place` nodes.
+ *
+ * Without these the only phone number the site exposes to a crawler is the
+ * Korean mobile on the contact page, so a Taiwan law firm publishes no Taiwan
+ * telephone, no branch address and no coordinates. Every value comes from
+ * `taiwanOfficeSeoRecords`, which mirrors what `/{locale}/contact` already
+ * shows; offices missing a phone or coordinates simply omit the property.
+ */
+function buildTaiwanOfficePlaces() {
+  return taiwanOfficeSeoRecords.map((office) => ({
+    '@type': 'Place' as const,
+    '@id': `${ORGANIZATION_ID}-office-${office.id}`,
+    address: {
+      '@type': 'PostalAddress' as const,
+      streetAddress: office.address,
+      addressLocality: office.addressLocality,
+      postalCode: office.postalCode,
+      addressCountry: 'TW',
+    },
+    ...(office.telephone ? { telephone: office.telephone } : {}),
+    ...(office.geo
+      ? {
+          geo: {
+            '@type': 'GeoCoordinates' as const,
+            latitude: office.geo.latitude,
+            longitude: office.geo.longitude,
+          },
+        }
+      : {}),
+  }));
+}
+
 export function buildLegalServiceJsonLd(
   locale: SiteLocale,
   options?: {
@@ -462,6 +496,7 @@ export function buildLegalServiceJsonLd(
       addressLocality: 'Taipei City',
       addressCountry: 'TW',
     },
+    location: buildTaiwanOfficePlaces(),
   };
 }
 

@@ -6,6 +6,7 @@ import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import {
   taipeiPhotos,
   taiwanOfficeData,
+  taiwanOfficeSeoRecords,
   TAIPEI_MAPS_URL,
   YANGJU_NAVER_MAP_URL,
   type OfficeInfo,
@@ -84,6 +85,21 @@ function taiwanOfficesFor(locale: PublicLocale8, guidance: GuidanceOfficeCopy | 
 }
 
 /** Canonical Korea record, with only its heading and map-link label localized. */
+/**
+ * Dial-able href for a published office number.
+ *
+ * The card keeps showing the number as the office publishes it (`04-2326-1862`
+ * is what is on their letterhead), but `tel:0423261862` only connects from
+ * inside Taiwan — and most of this firm's callers are not. Taiwan offices
+ * therefore dial the E.164 form from `taiwanOfficeSeoRecords`; the Korea office
+ * already stores E.164, so it falls through unchanged.
+ */
+function telHref(office: OfficeInfo): string {
+  const taiwan = taiwanOfficeSeoRecords.find((record) => record.id === office.id);
+  const dial = taiwan?.telephone ?? office.phone ?? '';
+  return `tel:${dial.replace(/[^+\d]/g, '')}`;
+}
+
 function koreaOfficeFor(locale: PublicLocale8, guidance: GuidanceOfficeCopy | null): OfficeInfo {
   if (!guidance || isSiteLocale(locale)) return koreaOfficeData[locale as SiteLocale];
   return {
@@ -246,7 +262,7 @@ export default function OfficeMapTabs({
             {current.phone ? (
               <p className="card-copy">
                 {current.phoneLabel ?? telLabel}:{' '}
-                <a className="link-underline phone-number" href={`tel:${current.phone.replace(/-/g, '')}`}>{current.phone}</a>
+                <a className="link-underline phone-number" href={telHref(current)}>{current.phone}</a>
               </p>
             ) : null}
             {current.fax && (
@@ -329,7 +345,7 @@ export default function OfficeMapTabs({
               {koreaOffice.phone ? (
                 <p className="card-copy">
                   {telLabel}:{' '}
-                  <a className="link-underline phone-number" href={`tel:${koreaOffice.phone.replace(/-/g, '')}`}>
+                  <a className="link-underline phone-number" href={telHref(koreaOffice)}>
                     {koreaOffice.phone}
                   </a>
                 </p>

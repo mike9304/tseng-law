@@ -114,6 +114,62 @@ const japaneseTaiwanOfficeAddresses: Record<TaiwanOfficeId, string> = {
   pingtung: '90443 屏東県九如郷九如路三段46号',
 };
 
+/**
+ * Local-search signals for the four Taiwan offices.
+ *
+ * Nothing here is new information: the addresses and the three branch phone
+ * numbers are already published on `/{locale}/contact`, and each coordinate is
+ * read off the office's own Google Maps embed URL above
+ * (`q=<lat>,<lng>` for Taipei, `!2d<lng>!3d<lat>` for Taichung/Kaohsiung).
+ * Pingtung's embed carries an address query with no coordinates, so it has no
+ * `geo` — an omission, never a guess.
+ *
+ * Phones are the published local numbers in E.164 (`04-...` -> `+886-4-...`).
+ * Taipei publishes no phone, so it has none here.
+ */
+export type TaiwanOfficeSeoRecord = {
+  id: TaiwanOfficeId;
+  /** Canonical zh-Hant postal address, matching `zhHantTaiwanOffices`. */
+  address: string;
+  addressLocality: string;
+  postalCode: string;
+  telephone?: string;
+  geo?: { latitude: number; longitude: number };
+};
+
+export const taiwanOfficeSeoRecords: readonly TaiwanOfficeSeoRecord[] = [
+  {
+    id: 'taipei',
+    address: '臺北市大同區承德路一段35號7樓之2',
+    addressLocality: '臺北市',
+    postalCode: '103',
+    geo: { latitude: 25.0510767, longitude: 121.5173077 },
+  },
+  {
+    id: 'taichung',
+    address: '臺中市北區館前路19號6樓之1',
+    addressLocality: '臺中市',
+    postalCode: '40453',
+    telephone: '+886-4-2326-1862',
+    geo: { latitude: 24.1554306, longitude: 120.6658294 },
+  },
+  {
+    id: 'kaohsiung',
+    address: '高雄市左營區安吉街233號',
+    addressLocality: '高雄市',
+    postalCode: '81358',
+    telephone: '+886-7-557-9797',
+    geo: { latitude: 22.6620929, longitude: 120.3078343 },
+  },
+  {
+    id: 'pingtung',
+    address: '屏東縣九如鄉九如路三段46號',
+    addressLocality: '屏東縣',
+    postalCode: '90443',
+    telephone: '+886-8-739-1689',
+  },
+];
+
 export const taiwanOfficeData: Record<SiteLocale, OfficeInfo[]> = {
   ko: [
     {

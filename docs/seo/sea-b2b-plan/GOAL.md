@@ -9,26 +9,29 @@ S1 인텐트 지도(`docs/seo/sea-intent-map-2026-09.md`)는 "대만 내 체류 
 
 ## A. 진행 보드
 ### S7-R 리서치 (증거등급 A~E·조회일 필수, 수치 창작 금지)
-- [ ] S7-R1 SEO·GEO 진단(seo-geo-expert): VN·ID·PH(+TH·MY·SG) B2B ①⑤ — 검색 표면·질의 언어·GEO·경쟁·처방 순위 → `research-seo-geo-2026-09-11.md`
-- [ ] S7-R2 시장 사실(generalPurpose 웹리서치): 검색엔진 점유·비즈니스 검색 언어·AI 도구 사용·대만↔3국 투자/무역 A급 통계·경쟁 로펌 현지어 표면·0원 등재처 → `research-market-facts-2026-09-11.md`
-- [ ] S7-R3 채널 처방(marketing-expert): audience/offer/channel/constraint → 0원/유료 분리 순위·측정 설계 → `research-channels-2026-09-11.md`
-- [ ] S7-R4 총괄 합성 → `SEA-B2B-PLAN-2026-09-11.md` (사용자 결정 항목 분리)
+- [x] 2026-09-11 S7-R1 SEO·GEO 진단 → `research-seo-geo-2026-09-11.md` (c05ec4ea) — 병목=색인(40URL 0/14, 사이트 미색인 148), ① 현지어 칼럼 17×4 이미 존재, ⑤ 현지어 표면 0, 6국 Google 90%+, PH·MY·SG=EN(SG는 간체 질의 실측→zh-hant 병행)
+- [x] 2026-09-11 S7-R2 시장 사실 → `research-market-facts-2026-09-11.md` (c05ec4ea) — SEA→대만 인바운드 투자 SG 외 미미(VN 누적 US$79M), 對VN 수입 +80.6%·對ID 순수입 → ⑤ 수요 근거 > ①. 대만 로펌 현지어 표면 0(공백). 0원 채널 실체=VTBA 등
+- [x] 2026-09-11 S7-R3 채널 처방 → `research-channels-2026-09-11.md` (c05ec4ea) — 소개 뒤 웹 검증 표면·문의 원장 분모 부재·0원/유료 분리·H1~H6 반증 조건
+- [x] 2026-09-11 S7-R4 합성 → `SEA-B2B-PLAN-2026-09-11.md` (c05ec4ea) — 총괄 결정 D1~D8, 사용자 결정 U1~U10
 
 ### S7-C 구현 (안내 4언어 ①⑤ 전용 페이지 — 기게재 사실 번역만, 새 법률 주장 0)
-- [ ] S7-C1 WO-B2B-1: `GUIDANCE_EXTRA_PAGE_KEYS` 메커니즘(drafts 11ce641d 방식 재구현) + `company-setup`·`debt-collection` 2키 × vi/id/th/fil 본문(EN 인텐트 랜딩 기게재 사실만) + 답변 블록 + FAQPage JSON-LD + sitemap + llms.txt + 테스트
-- [ ] S7-C2 검수 게이트(RUNBOOK §3: diff 범위·typecheck·vitest·build·렌더 8URL·계약/광고 grep·마커 0) → 커밋
-- [ ] S7-C3 독립 검토(Grok 또는 Opus 검토자) → FAIL 시 R1
-- [ ] S7-C4 리베이스·RELEASE-CHECK → 배포 ASK(사용자)
+- [x] 2026-09-11 S7-C1 WO-B2B-1 → 커밋 7f585835 (Opus 구현) — 8 URL 200, FAQPage/LegalService(availableLanguage 4 고정), 답변 블록, 관련 안내 내부링크(home·services·pricing·contact), llms.txt, sitemap 8. 게이트: typecheck 0·vitest 184·eslint 0·build 0·evidence/render-C1.txt·마커 0·금액 0
+- [~] S7-C2-R1 WO-B2B-R1(Opus 진행 중 15:4x): ① 마지막 FAQ 질문 원문 일치(8건) ② company-setup 허브에 ① 칼럼 링크 ③ hreflang 8언어 클러스터+x-default=en 상호참조(EN 랜딩↔4로케일) ④ 4로케일 칼럼 FAQPage inLanguage 결함 수정
+- [ ] S7-C3 독립 검토(Grok 4.6 또는 Opus 검토자) → FAIL 시 R2
+- [ ] S7-C4 리베이스·RELEASE-CHECK → 배포 ASK(사용자, U2) + 색인 확대 ASK(U1)
 
 ### S7-M 측정
-- [ ] S7-M1 metrics-log에 B2B 분모 행(GSC 국가별 ①⑤ 쿼리·신규 8URL 색인) + geo-sea-baseline 문항 세트에 ①⑤ 현지어 문항 보강 제안(손빗 소유 파일은 직접 수정 금지 → 제안 문서)
+- [x] 2026-09-11 S7-M1 metrics-log "SEA B2B(S7)" 표 + `AI-CITATION-QUESTIONS-B2B-PROPOSAL.md`(①⑤ 10문항 제안) → 7686f4ee
 - [ ] S7-M2 볼트 갱신(`20-Projects/tseng-law/SEO-작업-로그.md` + `AI-MEMORY-INDEX.md`)
 
 ## B. 미결·ASK
 - 배포·외부 발송·유료 광고는 사용자. 재질문 금지 항목(PROMPT §4-9) 준수.
+- 사용자 결정 묶음 U1~U10은 `SEA-B2B-PLAN-2026-09-11.md` §3. 추가: **U11 Person `knowsLanguage`에 English 추가 여부**(현재 Korean·Chinese·Japanese — 변호사 본인 사실 확인 필요, 총괄이 임의 추가하지 않음).
+- 환경: 워크트리 node_modules는 `~/Projects/tseng-law-sea-seo-20260909/node_modules` 심링크(main의 것은 `@modelcontextprotocol/server` 누락으로 typecheck 실패).
 
 ## C. 베이스라인 (FROM-GROK-BOT-SEA-2026-09 2026-09-09)
 SEA 6국 28일: 클릭 2·노출 30(SG zh-hant 가이드). 생성형AI 34/0. /vi /id /th /fil 40URL 색인 0(확인 14). VN 1·ID 1·PH 1 노출.
 
 ## D. 세션 로그
 - 2026-09-11 14:40 · Cursor Fable 5.1 · /goal 가동. 워크트리 생성. S7-R1~R3 병렬 발주, WO-B2B-1 작성.
+- 2026-09-11 15:3x · Cursor Fable 5.1 · R1~R4 커밋 c05ec4ea, M1 7686f4ee, C1 7f585835(게이트 전부 통과). WO-B2B-R1 발주.

@@ -13,19 +13,27 @@ import { getLegacyPageMetadata, renderLegacyPage } from '../(legacy)';
 import { OPEN_GRAPH_LOCALE } from '@/lib/builder/seo/seo-model';
 import { isJaFullStaticPath, isJaUnsupportedPath, JA_SAFE_FALLBACK } from '@/lib/public-route-policy';
 import { buildLocalizedNotFoundMetadata } from '@/lib/not-found-copy';
-import GuidancePageBody, { GuidanceRelatedGuides } from '@/components/GuidancePageBody';
+import GuidancePageBody, {
+  GuidanceRelatedGuides,
+  type GuidanceRelatedColumn,
+} from '@/components/GuidancePageBody';
 import GuidanceHomeBody, {
   resolveGuidanceHomeColumns,
 } from '@/components/GuidanceHomeBody';
 import { getAllColumnPosts } from '@/lib/columns';
 import { guidanceContent } from '@/data/international-guidance-content';
-import { getGuidancePage } from '@/data/international-guidance-extra';
+import {
+  GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS,
+  getGuidancePage,
+} from '@/data/international-guidance-extra';
 import {
   buildGuidanceCoreLanguageAlternates,
   classifyGuidanceSlug,
   guidanceCanonicalUrl,
+  isGuidanceExtraPageKey,
   isGuidanceLocale4,
   type GuidanceLocale4,
+  type GuidancePageKey,
 } from '@/lib/public-guidance';
 import { getOpenGraphLocale, getOrganizationName, getSiteUrl } from '@/lib/seo';
 
@@ -56,6 +64,33 @@ function resolvePublicLocale(raw: string): SiteLocale {
     notFound();
   }
   return normalizeSiteLocale(raw);
+}
+
+/**
+ * This locale's own columns on a hub page's subject, in the editorial order of
+ * {@link GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS}.
+ *
+ * Titles come from each file's own frontmatter, so the list is in the reader's
+ * language without anything being translated here. A slug with no markdown file
+ * in this locale is dropped rather than linked: `/{locale}/columns/<slug>` 404s
+ * when the file is absent, and the block must not manufacture that URL.
+ */
+function resolveGuidanceRelatedColumns(
+  locale: GuidanceLocale4,
+  pageKey: GuidancePageKey,
+): GuidanceRelatedColumn[] {
+  if (!isGuidanceExtraPageKey(pageKey)) return [];
+
+  const slugs = GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS[pageKey];
+  if (slugs.length === 0) return [];
+
+  const titleBySlug = new Map(
+    getAllColumnPosts(locale).map((post) => [post.slug, post.title]),
+  );
+  return slugs.flatMap((slug) => {
+    const title = titleBySlug.get(slug);
+    return title ? [{ href: `/${locale}/columns/${slug}`, title }] : [];
+  });
 }
 
 function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Metadata {
@@ -165,7 +200,13 @@ export default async function MainSiteCatchAllPage(
         </>
       );
     }
-    return <GuidancePageBody locale={params.locale} pageKey={classified.pageKey} />;
+    return (
+      <GuidancePageBody
+        locale={params.locale}
+        pageKey={classified.pageKey}
+        relatedColumns={resolveGuidanceRelatedColumns(params.locale, classified.pageKey)}
+      />
+    );
   }
 
   const locale = resolvePublicLocale(params.locale);

@@ -4,6 +4,7 @@ import type { Locale, SiteLocale } from '@/lib/locales';
 import { defaultLocale, siteLocales, isSiteLocale } from '@/lib/locales';
 import {
   buildGuidanceCoreLanguageAlternates,
+  guidanceExtraSiteCounterpartLanguageAlternates,
   guidancePageKeyFromSlugPath,
   type PublicDocumentLanguage,
   type PublicLocale8,
@@ -245,8 +246,10 @@ function seoPathToSlugPath(path = ''): string {
 
 /**
  * Legacy hreflang helper. The actual eight-language cluster is reserved for
- * the ten published core paths; untranslated details, US landings, account,
- * store, and other real surfaces keep the caller-specified availability set.
+ * the ten published core paths and for the two intent landings that stand in
+ * for a guidance page outside those ten; untranslated details, other US
+ * landings, account, store, and other real surfaces keep the caller-specified
+ * availability set.
  */
 export function getLanguageAlternates(
   path = '',
@@ -267,6 +270,12 @@ export function getLanguageAlternates(
   const entries = effectiveLocales.map((locale) => [getLocaleLanguageTag(locale), buildAbsoluteUrl(getLocalizedPath(locale, path))]);
   return {
     ...Object.fromEntries(entries),
+    // WO-B2B-R1 §3-b. `/taiwan-company-setup-lawyer` and
+    // `/taiwan-litigation-lawyer` are the ko/zh-hant/en/ja half of a guidance
+    // page's cluster, so they have to name the four vi/id/th/fil URLs back or
+    // the claim is one-directional and gets discarded. Every other path gets an
+    // empty object here and keeps the set it already published.
+    ...guidanceExtraSiteCounterpartLanguageAlternates(path, getSiteUrl()),
     'x-default': buildAbsoluteUrl(getLocalizedPath(englishNoindex ? defaultLocale : HREFLANG_X_DEFAULT_LOCALE, path)),
   };
 }

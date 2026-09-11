@@ -1,16 +1,21 @@
+import { existsSync, readdirSync } from 'node:fs';
+import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { guidanceContent, type GuidanceLocale } from '@/data/international-guidance-content';
 import {
   GUIDANCE_EXTRA_ENGLISH_LANDING_PATHS,
+  GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS,
   getGuidancePage,
   guidanceExtraContent,
   guidanceExtraEnglishLandingLabel,
   guidanceExtraLinkLabels,
   guidanceExtraRelated,
+  guidanceExtraRelatedColumnsLabel,
   guidanceExtraRelatedLabel,
 } from '@/data/international-guidance-extra';
 import {
   GUIDANCE_EXTRA_PAGE_KEYS,
+  GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS,
   GUIDANCE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
 } from '@/lib/public-guidance';
@@ -52,10 +57,11 @@ function pageText(locale: GuidanceLocale, pageKey: (typeof GUIDANCE_EXTRA_PAGE_K
 }
 
 /**
- * The locale's own published refusal answer, located in the live FAQ page by
- * the "this page is written in <guidance language>" clause it opens with. Read
- * out of the data rather than written down here, so the test proves the extra
- * pages reuse the published sentence instead of a copy that has since drifted.
+ * The locale's own published refusal Q&A, located in the live FAQ page by the
+ * "this page is written in <guidance language>" clause the answer opens with.
+ * Read out of the data rather than written down here, so the test proves the
+ * extra pages reuse the published pair instead of a copy that has since
+ * drifted.
  */
 const WRITTEN_IN_GUIDANCE_LANGUAGE: Record<GuidanceLocale, RegExp> = {
   vi: /viết bằng tiếng Việt/,
@@ -64,12 +70,12 @@ const WRITTEN_IN_GUIDANCE_LANGUAGE: Record<GuidanceLocale, RegExp> = {
   fil: /Nakasulat sa Filipino/,
 };
 
-function publishedRefusalAnswer(locale: GuidanceLocale): string {
+function publishedRefusalFaq(locale: GuidanceLocale): { question: string; answer: string } {
   const matches = (guidanceContent[locale].pages.faq.faqs ?? []).filter((faq) =>
     WRITTEN_IN_GUIDANCE_LANGUAGE[locale].test(faq.answer),
   );
   expect(matches, `${locale} refusal answer not found in the FAQ page`).toHaveLength(1);
-  return matches[0]!.answer;
+  return matches[0]!;
 }
 
 /**
@@ -195,21 +201,21 @@ describe('guidanceExtraContent', () => {
     }
   });
 
-  it('closes every page with the locale’s own published refusal answer, verbatim', () => {
+  /**
+   * WO-B2B-R1 §1. The closing answer was the published refusal ("No. …") but
+   * the question had been reworded to "which language is it held in?", which
+   * that answer does not answer. Both halves now come from the published pair,
+   * so the question the refusal refuses is the one a reader sees above it.
+   */
+  it('closes every page with the locale’s own published refusal Q&A, verbatim', () => {
     for (const { locale, pageKey, page } of pages) {
       const faqs = page.faqs ?? [];
       const last = faqs[faqs.length - 1];
       expect(last, `${locale}/${pageKey} has no closing FAQ`).toBeDefined();
-      expect(last?.answer, `${locale}/${pageKey} closing FAQ is not the published refusal`).toBe(
-        publishedRefusalAnswer(locale),
-      );
-      // The question itself must not carry the claim the answer refuses.
-      for (const [label, pattern] of GUIDANCE_LANGUAGE_CONSULTATION_TOKENS[locale]) {
-        expect(
-          new RegExp(pattern.source, pattern.flags.replace('g', '')).test(last?.question ?? ''),
-          `${locale}/${pageKey} closing question contains "${label}"`,
-        ).toBe(false);
-      }
+      expect(
+        { question: last?.question, answer: last?.answer },
+        `${locale}/${pageKey} closing FAQ is not the published refusal pair`,
+      ).toEqual(publishedRefusalFaq(locale));
     }
   });
 
@@ -245,10 +251,16 @@ describe('guidanceExtraContent', () => {
     }
   });
 
-  it('never implies a consultation in the page language outside the refusal answer', () => {
+  it('never implies a consultation in the page language outside the refusal Q&A', () => {
     for (const { locale, pageKey } of pages) {
-      const refusal = publishedRefusalAnswer(locale);
-      const text = pageText(locale, pageKey).split(refusal).join('\n');
+      const refusal = publishedRefusalFaq(locale);
+      // Both halves of the published pair are exempt: the question asks for the
+      // thing ("can I be advised in Vietnamese?") and the answer denies it, and
+      // they are published together on the locale's own FAQ page. Anywhere else
+      // the phrase would be an offer, so it is removed before the count.
+      const text = pageText(locale, pageKey)
+        .split(refusal.answer).join('\n')
+        .split(refusal.question).join('\n');
       for (const [label, pattern] of GUIDANCE_LANGUAGE_CONSULTATION_TOKENS[locale]) {
         const hits = text.match(pattern) ?? [];
         expect(hits.length, `${locale}/${pageKey} implies a consultation via "${label}"`).toBe(0);
@@ -281,6 +293,69 @@ describe('guidanceExtraContent', () => {
         expect(guidanceExtraLinkLabels[locale][pageKey].trim().length).toBeGreaterThan(0);
       }
     }
+  });
+
+  /**
+   * WO-B2B-R1 §2. The related-columns block renders a `/{locale}/columns/<slug>`
+   * link per slug, and that route 404s when the markdown file is absent — so
+   * every slug is checked against the four guidance column directories, not the
+   * `ko` one. A slug that stops existing has to fail here rather than ship a
+   * broken link in four languages.
+   */
+  it('names only columns that exist in all four guidance locales', () => {
+    expect(Object.keys(GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS).sort()).toEqual(
+      [...GUIDANCE_EXTRA_PAGE_KEYS].sort(),
+    );
+    expect(GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS['company-setup']).toHaveLength(8);
+    // No debt-collection column is published, so the block renders nothing
+    // there rather than borrowing a company-setup article.
+    expect(GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS['debt-collection']).toEqual([]);
+
+    const slugsByLocale = new Map(
+      GUIDANCE_LOCALES_4.map((locale) => {
+        const dir = path.join(process.cwd(), 'src/content', `columns-${locale}`);
+        expect(existsSync(dir), `${dir} must exist`).toBe(true);
+        return [
+          locale,
+          new Set(
+            readdirSync(dir)
+              .filter((name) => name.endsWith('.md'))
+              .map((name) => name.replace(/\.md$/, '').replace(/^\d{3}-/, '')),
+          ),
+        ] as const;
+      }),
+    );
+
+    for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+      const slugs = GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS[pageKey];
+      expect(new Set(slugs).size, `${pageKey} slugs must be unique`).toBe(slugs.length);
+      for (const slug of slugs) {
+        for (const locale of GUIDANCE_LOCALES_4) {
+          expect(
+            slugsByLocale.get(locale)!.has(slug),
+            `${pageKey}: columns-${locale} has no ${slug}.md`,
+          ).toBe(true);
+        }
+      }
+    }
+
+    for (const locale of GUIDANCE_LOCALES_4) {
+      expect(guidanceExtraRelatedColumnsLabel[locale].trim().length).toBeGreaterThan(0);
+      // Two distinct blocks on the same page, so two distinct headings.
+      expect(guidanceExtraRelatedColumnsLabel[locale]).not.toBe(guidanceExtraRelatedLabel[locale]);
+    }
+  });
+
+  it('derives the English landing paths from the site-locale counterpart mapping', () => {
+    for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+      expect(GUIDANCE_EXTRA_ENGLISH_LANDING_PATHS[pageKey]).toBe(
+        `/en${GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS[pageKey]}`,
+      );
+    }
+    expect(GUIDANCE_EXTRA_ENGLISH_LANDING_PATHS).toEqual({
+      'company-setup': '/en/taiwan-company-setup-lawyer',
+      'debt-collection': '/en/taiwan-litigation-lawyer',
+    });
   });
 
   it('resolves both key families through one lookup', () => {

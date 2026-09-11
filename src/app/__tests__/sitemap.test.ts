@@ -6,6 +6,7 @@ import type { BuilderSitemapEntry } from '@/lib/builder/seo/sitemap-builder';
 import {
   GUIDANCE_ALL_PAGE_KEYS,
   GUIDANCE_EXTRA_PAGE_KEYS,
+  GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS,
   GUIDANCE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
   buildGuidanceCoreLanguageAlternates,
@@ -437,7 +438,14 @@ describe('sitemap column lastModified', () => {
     }
   });
 
-  it('publishes the eight new-key URLs with a four-language reciprocal cluster', async () => {
+  /**
+   * WO-B2B-R1 §3. The eight guidance URLs and the two intent landings are one
+   * cluster per intent, so the reciprocity is asserted in both directions: the
+   * vi/company-setup row must name the en landing, and the en landing row must
+   * name vi/company-setup. A one-directional claim is discarded by search
+   * engines, which is the whole failure mode this guards.
+   */
+  it('publishes the eight new-key URLs in an eight-language cluster with their intent landing', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
 
@@ -447,9 +455,10 @@ describe('sitemap column lastModified', () => {
     expect(newKeyUrls).toHaveLength(8);
 
     for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+      const counterpart = GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS[pageKey];
       const expected = buildGuidanceCoreLanguageAlternates(pageKey);
-      expect(Object.keys(expected)).toHaveLength(4);
-      expect(expected).not.toHaveProperty('x-default');
+      expect(Object.keys(expected)).toHaveLength(9);
+      expect(expected['x-default']).toBe(`https://tseng-law.com/en${counterpart}`);
 
       for (const locale of GUIDANCE_LOCALES_4) {
         const url = `https://tseng-law.com${guidancePublicPath(locale, pageKey)}`;
@@ -457,6 +466,35 @@ describe('sitemap column lastModified', () => {
         expect(matches, url).toHaveLength(1);
         expect(matches[0]?.priority, url).toBe(0.8);
         expect(matches[0]?.alternates?.languages, url).toEqual(expected);
+        // Forward half: the guidance row names all four landings.
+        for (const siteLocale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+          expect(
+            Object.values(matches[0]?.alternates?.languages ?? {}),
+            `${url} -> ${siteLocale}${counterpart}`,
+          ).toContain(`https://tseng-law.com/${siteLocale}${counterpart}`);
+        }
+      }
+
+      // Reverse half: every landing row names all four guidance URLs, and the
+      // ja entry (which is pushed separately from the STATIC_PATHS loop) is
+      // included so both code paths are covered.
+      for (const siteLocale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+        const landingUrl = `https://tseng-law.com/${siteLocale}${counterpart}`;
+        const landing = entries.filter((entry) => entry.url === landingUrl);
+        expect(landing, landingUrl).toHaveLength(1);
+        const languages = landing[0]?.alternates?.languages as Record<string, string> | undefined;
+        for (const guidanceLocale of GUIDANCE_LOCALES_4) {
+          expect(languages?.[hreflangTagForPublicLocale(guidanceLocale)], landingUrl).toBe(
+            `https://tseng-law.com${guidancePublicPath(guidanceLocale, pageKey)}`,
+          );
+        }
+        for (const tag of ['ko', 'zh-Hant', 'en', 'ja']) {
+          expect(languages, `${landingUrl} -> ${tag}`).toHaveProperty(tag);
+        }
+        expect(languages?.['x-default'], landingUrl).toBe(
+          `https://tseng-law.com/en${counterpart}`,
+        );
+        expect(Object.keys(languages ?? {}), landingUrl).toHaveLength(9);
       }
     }
 

@@ -50,11 +50,33 @@ export type GuidanceCorePageKey = (typeof GUIDANCE_PAGE_KEYS)[number];
  *     because the translation lane owns `international-guidance-content.ts`;
  *   - it never appears in the header nav or the footer columns, whose labels
  *     come from that same translation-lane module;
- *   - its hreflang cluster is the guidance four and nothing else — see
+ *   - its hreflang cluster is the guidance four plus the ko/zh-hant/en/ja
+ *     page named in {@link GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS} — see
  *     {@link buildGuidanceCoreLanguageAlternates}.
  */
 export const GUIDANCE_EXTRA_PAGE_KEYS = ['company-setup', 'debt-collection'] as const;
 export type GuidanceExtraPageKey = (typeof GUIDANCE_EXTRA_PAGE_KEYS)[number];
+
+/**
+ * The ko/zh-hant/en/ja intent landing that answers the same question as each
+ * guidance page outside the original ten. Paths are locale-less: prefix with
+ * `/{siteLocale}`.
+ *
+ * WO-B2B-R1 §3. These pages have no `/{siteLocale}/company-setup` URL, so
+ * before this the cluster was the guidance four alone and the eight editions of
+ * one intent were read as two unrelated groups. The landing is not a
+ * translation of the guidance page, but it is the same intent for the same
+ * reader, which is what an alternate claims — and it is where the consultation
+ * itself happens, so it is also the honest `x-default`.
+ *
+ * The mapping lives here rather than in `international-guidance-extra.ts`
+ * because that module already imports this one; the reverse direction would be
+ * a cycle. `GUIDANCE_EXTRA_ENGLISH_LANDING_PATHS` is derived from it there.
+ */
+export const GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS: Record<GuidanceExtraPageKey, string> = {
+  'company-setup': '/taiwan-company-setup-lawyer',
+  'debt-collection': '/taiwan-litigation-lawyer',
+};
 
 export type GuidancePageKey = GuidanceCorePageKey | GuidanceExtraPageKey;
 
@@ -381,10 +403,18 @@ export function resolvePublicLanguageSwitchTarget(
   }
 
   // A guidance page outside the original ten has no ko/zh-hant/en/ja URL at the
-  // same path, so the switcher must not link one into existence. It degrades to
-  // the target language's home page, the same way a deep untranslated path does.
+  // same path, so the switcher must not link one into existence. It goes to the
+  // intent landing named in GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS instead of
+  // the home page: that landing is the same intent in the target language, and
+  // the hreflang cluster already declares the two reciprocal alternates, so the
+  // switcher and the cluster now name the same URL. `exact` for the same reason
+  // — the reader lands on the page they asked for, not a degraded stand-in.
   if (isGuidanceExtraPageKey(slugPath)) {
-    return { status: 'available', href: `/${targetLocale}`, fallback: 'home' };
+    return {
+      status: 'available',
+      href: `/${targetLocale}${GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS[slugPath]}`,
+      fallback: 'exact',
+    };
   }
 
   // The existing four keep the behaviour they already shipped: their targets are
@@ -413,15 +443,22 @@ export function buildGuidanceCoreLanguageAlternates(
 ): Record<string, string> {
   const origin = siteUrl.replace(/\/+$/, '');
 
-  // Pages outside the original ten exist in the guidance four only. The cluster
-  // is therefore the four reciprocal vi/id/th/fil URLs and nothing else: no
-  // ko/zh-hant/en/ja alternate (no such URL exists) and no x-default either,
-  // because a non-reciprocal x-default would point outside its own cluster.
+  // Pages outside the original ten publish no `/{siteLocale}/<key>` URL, so the
+  // ko/zh-hant/en/ja half of the cluster is the intent landing that answers the
+  // same question — see GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS. `getLanguageAlternates`
+  // adds the four guidance URLs to that landing's own cluster, which is what
+  // makes the eight reciprocal. x-default is the English landing, the one page
+  // of the eight where the consultation itself is held.
   if (isGuidanceExtraPageKey(pageKey)) {
+    const counterpart = GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS[pageKey];
     const extraLanguages: Record<string, string> = {};
     for (const locale of GUIDANCE_LOCALES_4) {
       extraLanguages[hreflangTagForPublicLocale(locale)] = `${origin}${guidancePublicPath(locale, pageKey)}`;
     }
+    for (const locale of EXISTING_SITE_LOCALES_4) {
+      extraLanguages[hreflangTagForPublicLocale(locale)] = `${origin}/${locale}${counterpart}`;
+    }
+    extraLanguages['x-default'] = `${origin}/en${counterpart}`;
     return extraLanguages;
   }
 
@@ -438,6 +475,46 @@ export function buildGuidanceCoreLanguageAlternates(
 
   const xDefaultLocale = englishNoindex ? 'ko' : 'en';
   languages['x-default'] = `${origin}${guidancePublicPath(xDefaultLocale, pageKey)}`;
+  return languages;
+}
+
+/**
+ * The guidance page key whose cluster a ko/zh-hant/en/ja path belongs to, or
+ * `null` for every other path. `path` is locale-less, the same shape
+ * {@link getLanguageAlternates} takes.
+ */
+export function guidanceExtraPageKeyFromSiteCounterpartPath(
+  path: string,
+): GuidanceExtraPageKey | null {
+  const normalized = normalizePublicPathname(path);
+  return GUIDANCE_EXTRA_PAGE_KEYS.find(
+    (pageKey) => GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS[pageKey] === normalized,
+  ) ?? null;
+}
+
+/**
+ * The vi/id/th/fil half of the cluster, for the ko/zh-hant/en/ja counterpart
+ * landing at `path`. Empty for any other path.
+ *
+ * Hreflang has to be reciprocal to be believed, so the landing that
+ * {@link buildGuidanceCoreLanguageAlternates} names as the guidance page's
+ * ko/zh-hant/en/ja alternate has to name the four guidance URLs back. This is
+ * the second half; `getLanguageAlternates` merges it into the landing's
+ * existing set rather than replacing it, so the four site locales and the
+ * x-default that path already published are untouched.
+ */
+export function guidanceExtraSiteCounterpartLanguageAlternates(
+  path: string,
+  siteUrl: string = DEFAULT_SITE_URL,
+): Record<string, string> {
+  const pageKey = guidanceExtraPageKeyFromSiteCounterpartPath(path);
+  if (!pageKey) return {};
+
+  const origin = siteUrl.replace(/\/+$/, '');
+  const languages: Record<string, string> = {};
+  for (const locale of GUIDANCE_LOCALES_4) {
+    languages[hreflangTagForPublicLocale(locale)] = `${origin}${guidancePublicPath(locale, pageKey)}`;
+  }
   return languages;
 }
 

@@ -6,6 +6,7 @@ import {
   GUIDANCE_ALL_PAGE_KEYS,
   GUIDANCE_CORE_ROUTE_KEYS,
   GUIDANCE_EXTRA_PAGE_KEYS,
+  GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS,
   GUIDANCE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
   PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT,
@@ -15,6 +16,8 @@ import {
   buildGuidanceCoreLanguageAlternates,
   classifyGuidanceSlug,
   guidanceCanonicalUrl,
+  guidanceExtraPageKeyFromSiteCounterpartPath,
+  guidanceExtraSiteCounterpartLanguageAlternates,
   guidancePageKeyFromSlugPath,
   guidancePublicPath,
   hreflangTagForPublicLocale,
@@ -455,20 +458,61 @@ describe('core hreflang helper', () => {
     });
   });
 
-  it('keeps a page outside the core ten inside the guidance four, with no x-default', () => {
+  /**
+   * WO-B2B-R1 §3-a. The cluster used to stop at the guidance four, which split
+   * the eight editions of one intent into two unrelated groups. The ko/zh-hant/
+   * en/ja half is the intent landing, because no `/{siteLocale}/company-setup`
+   * URL exists — and the English landing is the x-default, since it is the one
+   * page of the eight where the consultation is actually held.
+   */
+  it('clusters a page outside the core ten with its intent landing, x-default en', () => {
+    expect(GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS).toEqual({
+      'company-setup': '/taiwan-company-setup-lawyer',
+      'debt-collection': '/taiwan-litigation-lawyer',
+    });
+
     for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+      const counterpart = GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS[pageKey];
       const languages = buildGuidanceCoreLanguageAlternates(pageKey);
       expect(languages).toEqual({
         vi: `https://tseng-law.com/vi/${pageKey}`,
         id: `https://tseng-law.com/id/${pageKey}`,
         th: `https://tseng-law.com/th/${pageKey}`,
         fil: `https://tseng-law.com/fil/${pageKey}`,
+        ko: `https://tseng-law.com/ko${counterpart}`,
+        'zh-Hant': `https://tseng-law.com/zh-hant${counterpart}`,
+        en: `https://tseng-law.com/en${counterpart}`,
+        ja: `https://tseng-law.com/ja${counterpart}`,
+        'x-default': `https://tseng-law.com/en${counterpart}`,
       });
-      // No ko/zh-Hant/ja/en URL exists at this path, and an x-default pointing
-      // outside the cluster would not be reciprocal — so neither is claimed.
-      for (const tag of ['ko', 'zh-Hant', 'ja', 'en', 'x-default']) {
-        expect(languages, `${pageKey} must not claim ${tag}`).not.toHaveProperty(tag);
+      expect(Object.keys(languages)).toHaveLength(9);
+      expect(Object.keys(languages).filter((tag) => tag !== 'x-default')).toHaveLength(8);
+      expect(languages['x-default']).toBe(languages.en);
+      // The URL is the landing, never an invented `/{siteLocale}/<key>` path.
+      for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+        expect(Object.values(languages)).not.toContain(
+          `https://tseng-law.com/${locale}/${pageKey}`,
+        );
       }
+    }
+  });
+
+  it('gives the intent landing the reciprocal guidance half of the same cluster', () => {
+    for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+      const counterpart = GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS[pageKey];
+      expect(guidanceExtraPageKeyFromSiteCounterpartPath(counterpart)).toBe(pageKey);
+      expect(guidanceExtraSiteCounterpartLanguageAlternates(counterpart)).toEqual({
+        vi: `https://tseng-law.com/vi/${pageKey}`,
+        id: `https://tseng-law.com/id/${pageKey}`,
+        th: `https://tseng-law.com/th/${pageKey}`,
+        fil: `https://tseng-law.com/fil/${pageKey}`,
+      });
+    }
+
+    // Every other path, including the third intent landing, is untouched.
+    for (const path of ['/taiwan-lawyer', '/korean-lawyer-in-taiwan', '/about', '', '/store']) {
+      expect(guidanceExtraPageKeyFromSiteCounterpartPath(path)).toBeNull();
+      expect(guidanceExtraSiteCounterpartLanguageAlternates(path)).toEqual({});
     }
   });
 
@@ -506,13 +550,28 @@ describe('core hreflang helper', () => {
     }
   });
 
-  it('never switches a new-key page into a locale that has no such URL', () => {
+  /**
+   * WO-B2B-R1 §3-c. The switcher used to drop the reader on the target
+   * language's home page, which threw away the intent. It now names the same
+   * landing the hreflang cluster claims, so the two cannot disagree — and never
+   * the `/{siteLocale}/<key>` URL, which does not exist.
+   */
+  it('switches a new-key page to its intent landing, never to an invented URL', () => {
     for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+      const counterpart = GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS[pageKey];
       for (const target of ['ko', 'zh-hant', 'en', 'ja'] as const) {
         expect(
           resolvePublicLanguageSwitchTarget(`/vi/${pageKey}`, target),
           `${pageKey} -> ${target}`,
-        ).toEqual({ status: 'available', href: `/${target}`, fallback: 'home' });
+        ).toEqual({
+          status: 'available',
+          href: `/${target}${counterpart}`,
+          fallback: 'exact',
+        });
+        expect(
+          buildGuidanceCoreLanguageAlternates(pageKey)[hreflangTagForPublicLocale(target)],
+          `${pageKey} -> ${target} must match the hreflang cluster`,
+        ).toBe(`https://tseng-law.com/${target}${counterpart}`);
       }
       expect(resolvePublicLanguageSwitchTarget(`/vi/${pageKey}`, 'th')).toEqual({
         status: 'available',

@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { getColumnPost } from '@/lib/columns';
 import { buildFaqJsonLd } from '@/lib/seo';
 
 describe('buildFaqJsonLd', () => {
@@ -71,5 +72,28 @@ describe('buildFaqJsonLd', () => {
   it('adds inLanguage=zh-Hant when the zh-hant locale is supplied', () => {
     const node = buildFaqJsonLd([{ q: '問題', a: '回答' }], 'zh-hant');
     expect(node!.inLanguage).toBe('zh-Hant');
+  });
+
+  /**
+   * WO-B2B-R1 §4. The guidance column route normalizes its `SiteLocale` to `en`
+   * so the copy tables resolve, and it used to pass that value here — so
+   * `/vi/columns/*` published an FAQPage declaring `inLanguage: "en"` over
+   * Vietnamese answers. The helper itself already accepted the guidance four;
+   * the page now passes the URL locale.
+   */
+  it('adds the guidance locale itself, never the normalized en', () => {
+    const post = getColumnPost('taiwan-company-establishment-basics', 'vi');
+    expect(post?.faq?.length, 'vi fixture column must carry FAQ frontmatter').toBeGreaterThan(0);
+
+    const node = buildFaqJsonLd(
+      (post!.faq ?? []).map((item) => ({ q: item.q, a: item.a })),
+      'vi',
+    );
+    expect(node!.inLanguage).toBe('vi');
+    expect(node!.inLanguage).not.toBe('en');
+
+    for (const locale of ['id', 'th', 'fil'] as const) {
+      expect(buildFaqJsonLd([{ q: 'q', a: 'a' }], locale)!.inLanguage).toBe(locale);
+    }
   });
 });

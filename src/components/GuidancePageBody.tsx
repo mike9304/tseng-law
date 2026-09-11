@@ -21,6 +21,7 @@ import {
   guidanceExtraEnglishLandingLabel,
   guidanceExtraLinkLabels,
   guidanceExtraRelated,
+  guidanceExtraRelatedColumnsLabel,
   guidanceExtraRelatedLabel,
 } from '@/data/international-guidance-extra';
 import { guidanceAnswers } from '@/data/international-guidance-answers';
@@ -46,6 +47,12 @@ import {
   buildGuidanceTeamCollectionPageJsonLd,
 } from '@/lib/guidance-structured-data';
 
+/** One `/{locale}/columns/<slug>` link, with the title from that file's own frontmatter. */
+export type GuidanceRelatedColumn = {
+  href: string;
+  title: string;
+};
+
 /**
  * Guidance pages rendered with the same layout primitives the other four
  * languages use (`PageHeader` + `.section` / `.container` / `.grid-bento` card
@@ -58,9 +65,16 @@ import {
 export default function GuidancePageBody({
   locale,
   pageKey,
+  relatedColumns = [],
 }: {
   locale: GuidanceLocale;
   pageKey: GuidancePageKey;
+  /**
+   * This locale's own long-form columns on the page's subject, already read off
+   * disk by the route so this component stays free of `fs`. Only the slugs with
+   * a markdown file in this language reach here, so no link can 404.
+   */
+  relatedColumns?: readonly GuidanceRelatedColumn[];
 }) {
   const pack = guidanceContent[locale];
   // Core page bodies live in the translation-lane content module; page keys
@@ -228,6 +242,31 @@ export default function GuidancePageBody({
               headingLabel="FAQ"
               headingTitle={pack.nav.faq}
             />
+          </Reveal>
+        ) : null}
+
+        {/* WO-B2B-R1 §2. The practice-specific hub pages sit on top of a corpus
+            of long-form columns this locale already publishes on the same
+            subject, with no route between the two. */}
+        {relatedColumns.length > 0 ? (
+          <Reveal>
+            <section
+              className="section section--light"
+              data-page-block="related-columns"
+            >
+              <div className="container">
+                <SectionLabel>{guidanceExtraRelatedColumnsLabel[locale]}</SectionLabel>
+                <nav aria-label={guidanceExtraRelatedColumnsLabel[locale]}>
+                  <ul className="contact-list">
+                    {relatedColumns.map((column) => (
+                      <li key={column.href}>
+                        <Link href={column.href}>{column.title}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+            </section>
           </Reveal>
         ) : null}
 

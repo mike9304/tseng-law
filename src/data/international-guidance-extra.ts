@@ -13,9 +13,9 @@
  * Language contract (identical to the core pages): the page is written in the
  * guidance language, but a consultation with an attorney is held only in
  * English, Chinese, Japanese and Korean. Each page closes with the locale's own
- * published refusal answer, copied verbatim from the FAQ page, so nothing here
- * can be read as an offer of a consultation, interpreting, or support in
- * Vietnamese, Indonesian, Thai or Filipino.
+ * published refusal question *and* answer, both copied verbatim from the FAQ
+ * page, so nothing here can be read as an offer of a consultation,
+ * interpreting, or support in Vietnamese, Indonesian, Thai or Filipino.
  *
  * Source of every proposition below (hard rule 3 / YMYL): the English intent
  * pages already published at `/en/taiwan-company-setup-lawyer` and
@@ -33,6 +33,8 @@ import {
   type GuidancePage,
 } from '@/data/international-guidance-content';
 import {
+  GUIDANCE_EXTRA_PAGE_KEYS,
+  GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS,
   isGuidanceExtraPageKey,
   type GuidanceCorePageKey,
   type GuidanceExtraPageKey,
@@ -43,10 +45,43 @@ import {
  * The English landing each guidance page names in its own body copy. These are
  * the pages whose published facts the four translations restate, and the only
  * place a reader can hold the consultation itself.
+ *
+ * Derived from {@link GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS} rather than
+ * written out again: the hreflang cluster claims the same counterpart in all
+ * four site locales, and a second copy of the path here could drift from it.
  */
-export const GUIDANCE_EXTRA_ENGLISH_LANDING_PATHS: Record<GuidanceExtraPageKey, string> = {
-  'company-setup': '/en/taiwan-company-setup-lawyer',
-  'debt-collection': '/en/taiwan-litigation-lawyer',
+export const GUIDANCE_EXTRA_ENGLISH_LANDING_PATHS = Object.fromEntries(
+  GUIDANCE_EXTRA_PAGE_KEYS.map((pageKey) => [
+    pageKey,
+    `/en${GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS[pageKey]}`,
+  ]),
+) as Record<GuidanceExtraPageKey, string>;
+
+/**
+ * Long-form columns this locale already publishes on the hub page's subject.
+ *
+ * These are existing `/{locale}/columns/<slug>` articles, so the block is an
+ * internal link list and states nothing new. The order is editorial — basics
+ * first, then the structure choice, then the specific sectors — and a slug
+ * whose markdown file is missing in a locale is skipped by the caller rather
+ * than linked, so no entry can resolve to a 404. `debt-collection` has no
+ * counterpart column, hence the empty list.
+ */
+export const GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS: Record<
+  GuidanceExtraPageKey,
+  readonly string[]
+> = {
+  'company-setup': [
+    'taiwan-company-establishment-basics',
+    'taiwan-company-subsidiary-vs-branch',
+    'withdraw-capital-taiwan-company',
+    'taiwan-company-establishment-advanced-1',
+    'taiwan-company-establishment-advanced-2',
+    'taiwan-company-setup-pitch-location',
+    'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
+    'taiwan-logistics-business-setup',
+  ],
+  'debt-collection': [],
 };
 
 export const guidanceExtraContent: Record<
@@ -149,7 +184,7 @@ export const guidanceExtraContent: Record<
             'Xem trang “Phạm vi và chi phí” tại /vi/pricing. Trang này không công bố con số; phạm vi công việc được xác định trước, sau đó mức phí và cách tính phí được xác nhận với quý vị trước khi công việc bắt đầu.',
         },
         {
-          question: 'Buổi trao đổi với luật sư được thực hiện bằng ngôn ngữ nào?',
+          question: 'Tôi có thể được tư vấn bằng tiếng Việt không?',
           answer:
             'Không. Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn. Chúng tôi cũng không cam kết bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: nội dung gốc quý vị viết được lưu giữ nguyên văn và không được dịch tự động.',
         },
@@ -245,7 +280,7 @@ export const guidanceExtraContent: Record<
             'Một mô tả ngắn về vấn đề, mối liên hệ với Đài Loan, thời hạn nếu có và cách liên hệ với quý vị. Múi giờ và cách quý vị tìm thấy trang này là thông tin không bắt buộc. Giấy tờ định danh có thể chờ đến khi luật sư yêu cầu.',
         },
         {
-          question: 'Buổi trao đổi với luật sư được thực hiện bằng ngôn ngữ nào?',
+          question: 'Tôi có thể được tư vấn bằng tiếng Việt không?',
           answer:
             'Không. Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn. Chúng tôi cũng không cam kết bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: nội dung gốc quý vị viết được lưu giữ nguyên văn và không được dịch tự động.',
         },
@@ -348,7 +383,7 @@ export const guidanceExtraContent: Record<
             'Lihat halaman “Lingkup dan biaya” di /id/pricing. Halaman ini tidak memuat angka; lingkup pekerjaan ditetapkan lebih dulu, lalu besaran dan cara penghitungan biaya dipastikan bersama Anda sebelum pekerjaan dimulai.',
         },
         {
-          question: 'Dalam bahasa apa pertemuan dengan advokat dilakukan?',
+          question: 'Bisakah saya berkonsultasi dalam bahasa Indonesia?',
           answer:
             'Tidak. Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea. Kami juga tidak menjanjikan penerjemah. Penerjemahan tulisan adalah hal terpisah: teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.',
         },
@@ -444,7 +479,7 @@ export const guidanceExtraContent: Record<
             'Uraian singkat tentang persoalannya, kaitannya dengan Taiwan, tenggat waktu bila ada, dan cara kami menghubungi Anda. Zona waktu dan dari mana Anda menemukan halaman ini tidak wajib. Nomor identitas dapat menunggu sampai advokat memintanya.',
         },
         {
-          question: 'Dalam bahasa apa pertemuan dengan advokat dilakukan?',
+          question: 'Bisakah saya berkonsultasi dalam bahasa Indonesia?',
           answer:
             'Tidak. Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea. Kami juga tidak menjanjikan penerjemah. Penerjemahan tulisan adalah hal terpisah: teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.',
         },
@@ -547,7 +582,7 @@ export const guidanceExtraContent: Record<
             'ดูที่หน้า “ขอบเขตและค่าใช้จ่าย” ที่ /th/pricing หน้านี้ไม่แสดงตัวเลข สำนักงานจะกำหนดขอบเขตงานก่อน จากนั้นจำนวนเงินและวิธีคิดค่าใช้จ่ายจะได้รับการยืนยันกับท่านก่อนเริ่มงาน',
         },
         {
-          question: 'การพูดคุยกับทนายความดำเนินการด้วยภาษาใด',
+          question: 'ปรึกษาเป็นภาษาไทยได้หรือไม่',
           answer:
             'ไม่ได้ ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย แต่การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี ทั้งนี้ สำนักงานไม่ได้จัดล่ามให้ ส่วนการแปลข้อความเป็นคนละเรื่องกัน ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิมและไม่มีการแปลโดยอัตโนมัติ',
         },
@@ -643,7 +678,7 @@ export const guidanceExtraContent: Record<
             'คำอธิบายสั้น ๆ เกี่ยวกับเรื่องที่เกิดขึ้น ความเกี่ยวข้องกับไต้หวัน กำหนดเวลาหากมี และช่องทางติดต่อท่าน ส่วนเขตเวลาและการที่ท่านพบหน้านี้ได้อย่างไร ไม่จำเป็นต้องระบุ ส่วนเลขประจำตัวต่าง ๆ รอจนกว่าทนายความจะขอก็ได้',
         },
         {
-          question: 'การพูดคุยกับทนายความดำเนินการด้วยภาษาใด',
+          question: 'ปรึกษาเป็นภาษาไทยได้หรือไม่',
           answer:
             'ไม่ได้ ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย แต่การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี ทั้งนี้ สำนักงานไม่ได้จัดล่ามให้ ส่วนการแปลข้อความเป็นคนละเรื่องกัน ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิมและไม่มีการแปลโดยอัตโนมัติ',
         },
@@ -746,7 +781,7 @@ export const guidanceExtraContent: Record<
             'Tingnan ang pahinang “Saklaw at bayarin” sa /fil/pricing. Walang bilang na nakasaad dito; itinatakda muna ang saklaw ng trabaho, saka kinukumpirma kasama kayo ang halaga at ang paraan ng pagkuwenta bago magsimula ang trabaho.',
         },
         {
-          question: 'Anong wika ginagamit sa pag-uusap sa abogado?',
+          question: 'Maaari ba ang konsultasyon sa Filipino?',
           answer:
             'Hindi. Nakasulat sa Filipino ang gabay na ito, ngunit ang konsultasyon sa abogado ay isinasagawa lamang sa Ingles, Tsino, Hapon, at Koreano. Hindi rin kami nangangako ng interpreter para sa pasalitang pag-uusap. Hiwalay dito ang nakasulat na salin: iniingatan ang orihinal na teksto gaya ng pagkakasulat ninyo, at hindi ito awtomatikong isinasalin.',
         },
@@ -842,7 +877,7 @@ export const guidanceExtraContent: Record<
             'Maikling paglalarawan ng usapin, ang kaugnayan nito sa Taiwan, ang takdang panahon kung mayroon, at kung paano kayo maaabot. Hindi kailangan ang time zone at kung saan ninyo natagpuan ang pahinang ito. Ang mga sensitibong numero ng pagkakakilanlan ay maaaring hintayin hanggang hingin ng abogado.',
         },
         {
-          question: 'Anong wika ginagamit sa pag-uusap sa abogado?',
+          question: 'Maaari ba ang konsultasyon sa Filipino?',
           answer:
             'Hindi. Nakasulat sa Filipino ang gabay na ito, ngunit ang konsultasyon sa abogado ay isinasagawa lamang sa Ingles, Tsino, Hapon, at Koreano. Hindi rin kami nangangako ng interpreter para sa pasalitang pag-uusap. Hiwalay dito ang nakasulat na salin: iniingatan ang orihinal na teksto gaya ng pagkakasulat ninyo, at hindi ito awtomatikong isinasalin.',
         },
@@ -874,6 +909,18 @@ export const guidanceExtraRelatedLabel: Record<GuidanceLocale, string> = {
   id: 'Panduan terkait',
   th: 'ข้อมูลแนะนำที่เกี่ยวข้อง',
   fil: 'Mga kaugnay na gabay',
+};
+
+/**
+ * Heading of the related-columns block, in each guidance language. Separate
+ * from {@link guidanceExtraRelatedLabel}: that block lists guidance pages,
+ * this one lists articles.
+ */
+export const guidanceExtraRelatedColumnsLabel: Record<GuidanceLocale, string> = {
+  vi: 'Bài viết liên quan',
+  id: 'Artikel terkait',
+  th: 'บทความที่เกี่ยวข้อง',
+  fil: 'Mga kaugnay na artikulo',
 };
 
 /**

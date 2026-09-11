@@ -36,3 +36,4 @@ SEA 6국 28일: 클릭 2·노출 30(SG zh-hant 가이드). 생성형AI 34/0. /vi
 - 2026-09-11 14:40 · Cursor Fable 5.1 · /goal 가동. 워크트리 생성. S7-R1~R3 병렬 발주, WO-B2B-1 작성.
 - 2026-09-11 15:3x · Cursor Fable 5.1 · R1~R4 커밋 c05ec4ea, M1 7686f4ee, C1 7f585835(게이트 전부 통과). WO-B2B-R1 발주.
 - 2026-09-11 16:3x · Cursor Fable 5.1 · C2-R1·C3·R2·C4 완료, RELEASE-CHECK 작성. 남은 것 = 사용자 결정 U1~U11(배포·색인·원장 등) → 배포 후 S6 주간 루프에 B2B 4행 추가(W1 09-16).
+- 2026-09-11 16:3x · Cursor Fable 5.1 · `npm run qa` exit 0(1231 파일 전부 통과 — attestation 실패 원인은 `data/audit/` 부재, 환경 수정). fil gloss·결제증빙 복원 소수정.

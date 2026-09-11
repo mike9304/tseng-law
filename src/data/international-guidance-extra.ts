@@ -234,7 +234,7 @@ export const guidanceExtraContent: Record<
           items: [
             'Tóm tắt ngắn: vấn đề hợp đồng hoặc khoản yêu cầu thanh toán, mối liên hệ với Đài Loan, mốc thời gian hoặc thời hạn nếu có, và cách liên hệ với quý vị',
             'Không bắt buộc: múi giờ hoặc khung giờ thuận tiện, và cách quý vị tìm thấy trang này',
-            'Chuẩn bị cho bước sau theo hướng dẫn của luật sư: hợp đồng, hóa đơn và ghi nhận thư từ, cuộc gọi hoặc tin nhắn trao đổi — chưa gửi bản gốc trong email đầu tiên',
+            'Chuẩn bị cho bước sau theo hướng dẫn của luật sư: hợp đồng, hóa đơn, chứng từ thanh toán và ghi nhận thư từ, cuộc gọi hoặc tin nhắn trao đổi — chưa gửi bản gốc trong email đầu tiên',
             'Chuẩn bị cho bước sau: thông tin công ty của đối tác tại Đài Loan, ở mức vụ việc cần đến',
             'Chuẩn bị cho bước sau: giấy ủy quyền, nếu giai đoạn đầu được xử lý từ xa; giấy tờ định danh có thể chờ đến khi luật sư yêu cầu',
           ],
@@ -433,7 +433,7 @@ export const guidanceExtraContent: Record<
           items: [
             'Ringkasan singkat: persoalan perjanjian atau tagihannya, kaitannya dengan Taiwan, tanggal penting atau tenggat waktu bila ada, dan cara kami menghubungi Anda',
             'Tidak wajib: zona waktu atau waktu yang Anda kehendaki untuk dihubungi, dan dari mana Anda menemukan halaman ini',
-            'Siapkan untuk tahap berikutnya menurut arahan advokat: perjanjian, tagihan, serta catatan surat-menyurat, percakapan telepon, atau pesan — jangan kirim dokumen asli pada pesan pertama',
+            'Siapkan untuk tahap berikutnya menurut arahan advokat: perjanjian, tagihan, bukti pembayaran, serta catatan surat-menyurat, percakapan telepon, atau pesan — jangan kirim dokumen asli pada pesan pertama',
             'Siapkan untuk tahap berikutnya: keterangan identitas perusahaan pihak lawan di Taiwan sejauh diperlukan perkara',
             'Siapkan untuk tahap berikutnya: surat kuasa, bila tahap awal ditangani dari jarak jauh; nomor identitas dapat menunggu sampai advokat memintanya',
           ],
@@ -632,7 +632,7 @@ export const guidanceExtraContent: Record<
           items: [
             'สรุปเรื่องอย่างย่อ ประเด็นตามสัญญาหรือจำนวนที่เรียกร้อง ความเกี่ยวข้องกับไต้หวัน วันสำคัญหรือกำหนดเวลาหากมี และช่องทางติดต่อท่าน',
             'ไม่บังคับ เขตเวลาหรือช่วงเวลาที่สะดวกให้ติดต่อ และท่านพบหน้านี้ได้อย่างไร',
-            'เตรียมไว้สำหรับขั้นตอนถัดไปตามที่ทนายความแจ้ง สัญญา ใบแจ้งหนี้ และบันทึกหนังสือโต้ตอบ การโทร หรือข้อความที่ติดต่อกัน โดยยังไม่ต้องส่งต้นฉบับในอีเมลฉบับแรก',
+            'เตรียมไว้สำหรับขั้นตอนถัดไปตามที่ทนายความแจ้ง สัญญา ใบแจ้งหนี้ หลักฐานการชำระเงิน และบันทึกหนังสือโต้ตอบ การโทร หรือข้อความที่ติดต่อกัน โดยยังไม่ต้องส่งต้นฉบับในอีเมลฉบับแรก',
             'เตรียมไว้สำหรับขั้นตอนถัดไป ข้อมูลบริษัทของคู่สัญญาในไต้หวัน เท่าที่เรื่องจำเป็นต้องใช้',
             'เตรียมไว้สำหรับขั้นตอนถัดไป หนังสือมอบอำนาจ หากช่วงต้นของเรื่องดำเนินการจากระยะไกล ส่วนเลขประจำตัวต่าง ๆ รอจนกว่าทนายความจะขอก็ได้',
           ],
@@ -692,7 +692,7 @@ export const guidanceExtraContent: Record<
       description:
         'Gabay para sa mga dayuhang kompanya sa pagpili ng anyo ng entidad, pagsusuri sa pamumuhunan, pagpapadala ng puhunan, pagpaparehistro, at mga hakbang pagkatapos.',
       intro:
-        'Ang pagpili ng anyo ng entidad, ang pagsusuri sa pamumuhunan, ang pagpapadala ng puhunan, ang pagpaparehistro, at ang mga kontrata sa pagpapatakbo ay mabuting tingnan bilang isang proseso sa ilalim ng batas ng Taiwan. Inilalahad ng pahinang ito ang pagpili sa pagitan ng subsidiary, sangay, at representative office mula sa pananaw ng dayuhang punong kompanya at mamumuhunang papasok sa Taiwan, at hindi ito nakatali sa iisang bansang pinagmulan. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.',
+        'Ang pagpili ng anyo ng entidad, ang pagsusuri sa pamumuhunan, ang pagpapadala ng puhunan, ang pagpaparehistro, at ang mga kontrata sa pagpapatakbo ay mabuting tingnan bilang isang proseso sa ilalim ng batas ng Taiwan. Inilalahad ng pahinang ito ang pagpili sa pagitan ng subsidiary (anak na kompanya), sangay, at representative office (opisina ng kinatawan) mula sa pananaw ng dayuhang punong kompanya at mamumuhunang papasok sa Taiwan, at hindi ito nakatali sa iisang bansang pinagmulan. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.',
       sections: [
         {
           heading: 'Pagpili ng anyo ng entidad: subsidiary (anak na kompanya), sangay, o representative office (opisina ng kinatawan)',
@@ -831,7 +831,7 @@ export const guidanceExtraContent: Record<
           items: [
             'Maikling buod: ang usapin sa kontrata o ang inihahabol, ang kaugnayan nito sa Taiwan, ang mahahalagang petsa o takdang panahon kung mayroon, at kung paano kayo maaabot',
             'Hindi kailangan: ang time zone o ang oras na nais ninyong makontak, at kung saan ninyo natagpuan ang pahinang ito',
-            'Ihanda para sa susunod na yugto ayon sa bilin ng abogado: ang mga kontrata, ang mga invoice, at ang talaan ng sulatan, tawag, o chat — huwag ipadala ang orihinal sa unang mensahe',
+            'Ihanda para sa susunod na yugto ayon sa bilin ng abogado: ang mga kontrata, ang mga invoice, ang mga resibo ng bayad, at ang talaan ng sulatan, tawag, o chat — huwag ipadala ang orihinal sa unang mensahe',
             'Ihanda para sa susunod na yugto: ang detalye ng kompanyang kabilang panig sa Taiwan, hanggang sa kailangan ng usapin',
             'Ihanda para sa susunod na yugto: ang power of attorney, kung mula sa malayo hahawakan ang unang yugto; ang mga sensitibong numero ng pagkakakilanlan ay maaaring hintayin hanggang hingin ng abogado',
           ],

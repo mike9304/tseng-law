@@ -9,11 +9,12 @@
 4. 내부링크: 안내 home·services·pricing·contact 하단 "관련 안내" 블록 → 신규 2페이지; services 답변 블록 sources에 2경로 추가. 헤더 네비 불변(코어 10).
 5. `/{l}/llms.txt`에 2항목 추가. 사이트맵 +8.
 6. **기존 결함 수정**: 4로케일 칼럼(`/vi/columns/...` 등)의 FAQPage `inLanguage`가 'en'으로 나가던 것 → 페이지 언어.
+7. R2 후속: fil intro 용어 gloss, debt-collection 준비 목록에 결제 증빙 항목 복원(4로케일).
 **포함 안 됨**: 번역 레인 파일(`international-guidance-content.ts`·`intent-pages.ts`·`content/**`) 변경 0. EN 랜딩 본문 변경 0. Person knowsLanguage 변경 0(U11 사용자 결정).
 
 ## 게이트
 - typecheck 0 · lint 0(`evidence/lint-release.log`) · security:builder-routes OK · build exit 0(`evidence/build-release.log`)
-- 관련 vitest 191/191(+ ja 소스검사 7·칼럼 inLanguage 페이지 테스트 4) · 전체 unit 1231파일 중 실패 1 = qa-runtime-attestation(TMPDIR 심링크 환경 의존, 9/9 RELEASE-CHECK와 동일 기존 건) — `evidence/unit-full-release.log`
+- **`npm run qa` exit 0** — typecheck·lint·test:unit **1231/1231 파일·10102 테스트 통과**·security:builder-routes (`evidence/qa-release.log`). 9/9 릴리스에서 "환경 의존 실패"로 기록됐던 qa-runtime-attestation은 워크트리에 gitignore된 `data/audit/` 런타임 디렉터리가 없어서였음(`mkdir -p data/audit`로 해소, 테스트 약화 없음)
 - 렌더 8 URL 200·canonical self·JSON-LD 3종·언어전환 역방향·사이트맵 8·llms 2×4 — `evidence/render-release.txt`(+ `render-C1.txt`·`render-R1.txt`)
 - 독립 검토 Grok 4.6 `reviews/S7-C-REVIEW.md` PASS 0 BLOCK → FIX 6·NOTE 반영(R2 852a4e69). NOTE #8(debt-collection↔소송 랜딩 클러스터 의미 정합)은 총괄 결정으로 유지: 소송 랜딩 제목이 "Contract Disputes & Civil Claims"이고 idealFor에 해외기업 미수금이 명시돼 같은 인텐트의 SEA 판으로 본다. 12주 판정에서 ⑤ 쿼리 노출이 랜딩에 잡히지 않으면 재검토.
 - 계약 grep: 마커 0 · NT$/천단위 0 · 승소율/보장/최고/유일 0 · availableLanguage 안내언어 0.
